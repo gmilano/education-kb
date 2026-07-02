@@ -1,0 +1,13 @@
+{
+  "topics": ["edtech", "learning-management", "educational-ai", "tutoring", "e-learning"],
+  "agentKeywords": "AI tutor education personalized learning assessment agent open source",
+  "repoKeywords": "educational AI tutoring LMS learning open source",
+  "verticalKeywords": "learning management system LMS course platform open source",
+  "minStars": 200,
+  "licenses": ["MIT", "Apache-2.0", "GPL-3.0"],
+  "keywords": {
+    "agents": ["AI tutor", "quiz generator", "learning path agent", "grading assistant"],
+    "repos": ["Moodle", "Open edX", "Canvas LMS", "Khanmigo", "educational NLP"],
+    "verticals": ["Moodle", "Open edX", "Canvas LMS", "ILIAS", "Chamilo"]
+  }
+}
