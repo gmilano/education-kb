@@ -1,6 +1,6 @@
 # 🗺️ Mapa de mercado — Education
 
-> Players, oportunidades, posicionamiento. Foco LATAM + global.
+> Key players, opportunities, positioning. Focus by region: North America · EMEA · APAC · LATAM.
 
 ## Players globales
 
@@ -8,10 +8,23 @@
 |---------|------|-----------|-----------|
 | — | — | — | Por completar |
 
-## Oportunidades AI en LATAM
+## Opportunities by region
+
+### North America
+
+- To research
+
+### EMEA
+
+- To research
+
+### APAC
+
+- To research
+
+### LATAM
 
 - Por identificar
-
 ## Posicionamiento Globant
 
 - Por definir
