@@ -80,6 +80,74 @@ Nota metodológica: **estas cifras vienen de fuentes distintas y no suman al tot
 
 **El dato de gobernanza es el más vendible de esta pasada:** **sólo 20% de las universidades tiene política formal de AI** (Coursera, feb-2026), contra **84% de estudiantes que ya la usan** y **93% de educadores que piden regulación**. Es la misma tijera que la KB ya documentó en K-12 de EE. UU. (18% de docentes con política escrita), ahora confirmada en educación superior y a escala global. El producto que cierra esa tijera es el mismo: **policy pack + gate técnico**, no un modelo.
 
+### Agregado en el pase 5 del 2026-09-30 — North America tiene cifra propia, y su CAGR no se parece al global
+
+| Métrica | Valor | Fuente |
+|---------|-------|--------|
+| **North America, AI en educación** | **$951M (2024) → $2.303,2M (2029)** | MarketsandMarkets |
+| **CAGR North America** | **15,9%** | idem |
+| Participación de North America en el mercado global | **36%** | idem |
+
+⚠️ **La cuarta discrepancia metodológica de esta KB, y hay que declararla igual que la de APAC.** El CAGR global que registran las otras fuentes está entre **31,9% (Europa)** y **40,9% (global)**. North America aparece con **15,9%** — menos de la mitad. Un mercado que es el 36% del total no puede crecer a menos de la mitad del ritmo del total sin que el resto crezca a velocidades imposibles, así que **las series no son comparables**: casi con seguridad miden canastas distintas (software solo vs. software + servicios + hardware) o parten de bases distintas.
+
+**Qué hacer con esto en material de cliente:** usar el **tamaño** de North America (es la única cifra regional de NA que tiene la KB) y **no usar su CAGR junto al global en la misma tabla o gráfico**. Es el mismo criterio que la KB ya aplicó a APAC en el pase 4: declarar la contradicción, no promediarla.
+
+### Agregado en el pase 5 — el dato institucional de LATAM que faltaba, y reencuadra la oportunidad
+
+Hasta el pase 4, la evidencia de LATAM era de **uso individual**: 92% de estudiantes y 79% de docentes usando AI (Digital Education Council). Faltaba el lado institucional, y es el que decide si hay presupuesto.
+
+**UNESCO IESALC — *AI Implementation in Higher Education in Latin America and the Caribbean*** (Arianna Valentini, publicado septiembre 2026). Encuesta a **200 instituciones de educación superior en 19 países**, trabajo de campo **agosto–octubre 2025**, sobre cinco dimensiones.
+
+**Adopción por dimensión:**
+
+| Dimensión | Instituciones que la implementan |
+|-----------|--------------------------------|
+| Enseñanza y aprendizaje | **73,5%** |
+| Investigación | **57,0%** |
+| Administración | **34,1%** |
+| Vinculación con la comunidad | **20,0%** |
+
+**Gobernanza — y acá está el hallazgo:**
+
+| Capacidad institucional | Instituciones que la tienen |
+|-------------------------|----------------------------|
+| Estrategia formal de AI | **26,0%** |
+| Política institucional transversal | **18,5%** |
+| **Presupuesto asignado a AI** | **8,0%** |
+| **Mecanismo formal de evaluación** | **9,0%** |
+
+**Por tipo de institución:** privadas sin fines de lucro **84%**, públicas **68%**, privadas con fines de lucro **52%**.
+
+**Lo que esto cambia en la lectura de LATAM.** El pase 4 concluyó que *"la región no tiene un gap de adopción; tiene un gap de oferta open source propia"*. Sigue siendo cierto y ahora hay un segundo gap, más accionable: **73,5% enseña con AI y 9% tiene forma de saber si funciona.** Esa tijera —64 puntos entre hacer y medir— es más ancha que cualquier otra que esta KB haya documentado en ninguna región.
+
+Y encaja exactamente con lo que apareció en el mismo pase 5: **la capa de evaluación pedagógica ahora existe y es MIT** (`EduBench`, `SafeTutors`, `pyBKT`, `rubric`). O sea que el producto que cierra la tijera de LATAM **ya no hay que construirlo desde cero, hay que integrarlo** — y es un proyecto de semanas, no de trimestres. Ver el patrón **P11** y el **P13**.
+
+⚠️ El **8% con presupuesto asignado** es la advertencia comercial que acompaña al dato: la necesidad es real y **el presupuesto dedicado casi no existe**. Vender esto como línea nueva de gasto va a fallar. Entra por el presupuesto que ya está aprobado —acreditación, aseguramiento de la calidad, cumplimiento— que es donde un "mecanismo formal de evaluación" ya tiene partida.
+
+### Agregado en el pase 5 — África entra a EMEA con datos propios
+
+La KB venía tratando EMEA como Europa más MBZUAI y Marruecos. Falta la mitad del acrónimo, y hay evidencia dura:
+
+- **AfriLabs + WISE, *Harnessing AI for Higher Education in Africa*** (noviembre 2025): **3.875 encuestados**, **47 instituciones de educación superior** y **199 empresas edtech**. Es el estudio de base de la región.
+- **North-West University (Sudáfrica)** se convirtió en la **primera universidad sudafricana con política oficial de AI**, el **2026-01-15**. Un solo caso en el país más desarrollado del continente en educación superior: el punto de partida de gobernanza es casi cero, igual que en LATAM.
+- **Department of Higher Education and Training (Sudáfrica) ↔ Microsoft SA**: MoU firmado el **2025-10-07** para desarrollo de habilidades digitales y AI. El patrón dominante de la región es **acuerdo ministerio–big tech**, no adquisición institucional.
+- **N-ATLAS (Nigeria)**: LLM multilingüe open source para las lenguas nigerianas. El equivalente africano de Latam-GPT: activo soberano de modelo, no framework de tutoría.
+- Marco continental: **AU Digital Transformation Strategy (2020–2030)**, con hojas de ruta nacionales que ponen **2026 como año de modernización curricular** y de pilotos de centros de excelencia en AI.
+
+**La lectura para una propuesta africana:** el comprador es el **ministerio**, no la institución; el diferencial técnico es **multilingüe + baja conectividad** (`Kolibri`, `Project NOMAD`, Ollama local, y el TTS/avatar que TutorIA usa por ruralidad); y el competidor no es otro integrador sino **un MoU con Microsoft o Google ya firmado**. Donde eso deja espacio es en lo que un MoU de big tech no cubre: contenido curricular local, lenguas nacionales y operación offline.
+
+### Agregado en el pase 5 — el instrumento regulatorio europeo que la KB no tenía
+
+Además del EU AI Act, **el Consejo de Europa tiene una línea de trabajo específica sobre AI y educación**, y es la que produce el lenguaje que después usan los ministerios:
+
+- **2ª Working Conference** sobre regulación del uso de sistemas de AI en educación: **24–25 de octubre de 2024**.
+- **3ª Working Conference**, *"Artificial intelligence and education: ensuring quality education in the AI era"*: **8–9 de octubre de 2025**, Estrasburgo.
+- En esa línea se presentó el **Council of Europe Compass for AI and Education**.
+
+⚠️ **Corrección de una suposición propia:** esta pasada buscó una conferencia de octubre de 2026 y **no existe** — la última realizada es la 3ª, de octubre de 2025. Se registra para que una pasada futura no invente un evento que no ocurrió.
+
+**Por qué importa aunque no sea vinculante.** El AI Act dice *qué* está prohibido y qué es alto riesgo; el Consejo de Europa produce el **marco de derechos y el vocabulario de calidad educativa** que los ministerios copian en sus propios pliegos. Para una propuesta europea, citar el Compass junto al Annex III es lo que diferencia una respuesta de cumplimiento de una respuesta de política educativa — y el comprador público responde mucho mejor a la segunda. Nota: el Consejo de Europa tiene **46 estados miembros**, bastante más que la UE, así que el marco aplica también en jurisdicciones donde el AI Act no.
+
 ## Players globales
 
 | Empresa | Tipo | Fortaleza | Debilidad |
@@ -101,10 +169,10 @@ Dónde se produce el software educativo abierto, que no es donde está la demand
 
 | Región | Qué produce |
 |--------|-------------|
-| **APAC** | **Domina la oferta de agentes, y desde el pase 4 también el modelado.** DeepTutor (HKU, 40.6k ★), OpenMAIC (Tsinghua, 39.7k ★), Educhain (India), Moodle (Australia), Frappe LMS + OpenEduCat (India), **GegoK12** (MIT, Madurai India — SIS permisivo, pase 3), **pyKT** (MIT, 441 ★, Jinan University — knowledge tracing, pase 4) |
-| **North America** | Plataformas e investigación: Open edX (MIT/Harvard), Canvas, Oppia, OATutor (UC Berkeley), Kolibri, Project NOMAD (38.8k ★). **Agregado en el pase 4: Claw-ED** (MIT, 59 ★) — el perfil no declara ubicación, pero sus repos hermanos son un portal del *NYS Seal of Civic Readiness* para **Great Neck Public Schools** y un juego de repaso de **Regents**, ambas instituciones del estado de Nueva York. *Inferido de artefactos, no declarado* |
-| **EMEA** | **Produce la capa de medición y de conformidad, no tutores** *(formulación corregida en el pase 4)*. Plataformas: OpenOLAT (Suiza), Chamilo (Bélgica/España), Richie (Francia), H5P (Noruega). Evaluación: **MathTutorBench** (CC BY 4.0, 42 ★, org `eth-lre`, EMNLP 2025), **UnifyingAITutorEvaluation** + AITutor-EvalKit (MBZUAI, Abu Dhabi, NAACL 2025). Esquemas y skills: **OpenDidactia** (España, LOMLOE), education-agent-skills (UK). Tutores: **OpenTutorAI-CE** (BSD-3, 107 ★, **Marruecos** — región cerrada en el pase 4) |
-| **LATAM** | **Gap refinado en el pase 4: hay producción institucional, no hay tracción.** **TutorIA** (MIT, 0 ★, Grupo Sirius / Universidad Tecnológica de Pereira, **Colombia**) — tutor dentro de Open edX para educación superior rural, con licencia y respaldo universitario. Antes: `professor-agent` (Brasil, MIT, 0 ★) y `StudyAgent` (Brasil, **sin licencia**, 2 ★). Activo regional no-agéntico: **Latam-GPT** (CENIA, Chile). Ver el gap 2 |
+| **APAC** | **Domina la oferta de agentes, el modelado y —desde el pase 5— también los modelos fundacionales.** *Pase 5:* **OmniEdu** (Universidad de Pekín + UCAS + Zhongguancun Academy — familia 4B/9B/27B para K-12, ⚠️ sin licencia declarada) y **EduBench** (MIT, 29 ★, ACL 2026 — el benchmark pedagógico transversal a materia).  DeepTutor (HKU, 40.6k ★), OpenMAIC (Tsinghua, 39.7k ★), Educhain (India), Moodle (Australia), Frappe LMS + OpenEduCat (India), **GegoK12** (MIT, Madurai India — SIS permisivo, pase 3), **pyKT** (MIT, 441 ★, Jinan University — knowledge tracing, pase 4) |
+| **North America** | Plataformas e investigación: Open edX (MIT/Harvard), Canvas, Oppia, OATutor (UC Berkeley), Kolibri, Project NOMAD (38.8k ★). **Agregado en el pase 5: `pyBKT`** (MIT, 281 ★, CAHLR/UC Berkeley, EDM 2021) — knowledge tracing bayesiano, **la alternativa de procedencia estadounidense a pyKT**, y la respuesta concreta al gap 4 en la capa de modelado. También `llmgrader` (NYU, 240 commits, ⚠️ licencia de investigación custom, no reutilizable) y `Autograder.io` (U. de Michigan, ~5.000 alumnos/semestre, determinista). **Agregado en el pase 4: Claw-ED** (MIT, 59 ★) — el perfil no declara ubicación, pero sus repos hermanos son un portal del *NYS Seal of Civic Readiness* para **Great Neck Public Schools** y un juego de repaso de **Regents**, ambas instituciones del estado de Nueva York. *Inferido de artefactos, no declarado* |
+| **EMEA** | **Produce la capa de medición y de conformidad, y desde el pase 5 también la mejor referencia teacher-facing** *(formulación corregida en el pase 4 y ampliada en el pase 5)*. **Pase 5: `Aila`** (MIT, 35 ★, **1.188 commits**, Oak National Academy, Reino Unido) — asistente de planificación docente **en producción**, la única pieza teacher-facing open source de esta KB con respaldo institucional y escala real (⚠️ "internal use", usar como referencia de arquitectura). También **EduFrameTrap** (TUM/MCML, Alemania — sycophancy en 6 materias, sin repo público) y, en África, **N-ATLAS** (Nigeria, LLM multilingüe open source).  Plataformas: OpenOLAT (Suiza), Chamilo (Bélgica/España), Richie (Francia), H5P (Noruega). Evaluación: **MathTutorBench** (CC BY 4.0, 42 ★, org `eth-lre`, EMNLP 2025), **UnifyingAITutorEvaluation** + AITutor-EvalKit (MBZUAI, Abu Dhabi, NAACL 2025). Esquemas y skills: **OpenDidactia** (España, LOMLOE), education-agent-skills (UK). Tutores: **OpenTutorAI-CE** (BSD-3, 107 ★, **Marruecos** — región cerrada en el pase 4) |
+| **LATAM** | **Gap sin cambios en el pase 5: se volvió a buscar en español y portugués y no apareció nada por encima de TutorIA.** Lo que sí cambió es el contexto institucional: UNESCO IESALC (200 instituciones, 19 países) mide **73,5% enseñando con AI y 9% con mecanismo formal de evaluación**. La región no produce tutores y **tampoco tiene con qué medir los que usa** — y esa segunda parte sí se puede resolver con piezas MIT que ya existen. **Gap refinado en el pase 4: hay producción institucional, no hay tracción.** **TutorIA** (MIT, 0 ★, Grupo Sirius / Universidad Tecnológica de Pereira, **Colombia**) — tutor dentro de Open edX para educación superior rural, con licencia y respaldo universitario. Antes: `professor-agent` (Brasil, MIT, 0 ★) y `StudyAgent` (Brasil, **sin licencia**, 2 ★). Activo regional no-agéntico: **Latam-GPT** (CENIA, Chile). Ver el gap 2 |
 | **Sin región verificada** | **AI-Teaching-Agent** (MIT, 0 ★), **Bloom** (MIT, 278 ★), **OpenTutor** (MIT, 127 ★), **tutor-mcp** (MIT, 42 ★), **gradescope-mcp** (MIT, 8 ★), **FreeLingo** (AGPL, 150 ★), **mentar** (AGPL, 1 ★). Se buscó explícitamente la ubicación en el perfil y en el repo de cada uno en el pase 4 y **ninguno la declara**. Se registra el hueco en vez de inventar la procedencia: son repos de autor individual sin afiliación institucional publicada |
 
 ## Opportunities by region
@@ -146,6 +214,21 @@ Dónde se produce el software educativo abierto, que no es donde está la demand
 - **Los estados con framework de AI literacy previo y un responsable de AI designado en su Department of Education — Texas, Florida y Utah — están captando una porción desproporcionada de los grants federales de AI en educación.** Es una señal operativa concreta: en la captura de fondos federales, lo que discrimina no es el proyecto sino **tener la estructura de gobernanza montada antes de la convocatoria**. Un studio puede vender exactamente eso, y en esos tres estados el comprador ya demostró que paga por ello.
 
 
+
+**Agregado en el pase 5 — separar la nota del modelo, que es lo que la regulación estatal realmente pide.**
+
+Los estatutos de EE. UU. que la KB ya documentó (Ohio, Virginia, Oklahoma) y los que vienen no prohíben la AI en evaluación: prohíben que **la decisión de calificación** sea automática. La distinción es implementable y casi nadie la está vendiendo bien.
+
+La arquitectura que cumple sin perder el beneficio: **la nota la pone un componente determinista** (casos de test, rúbrica, checker) y **el LLM sólo explica** por qué. Hay tres piezas verificadas para armarlo:
+
+- **Autograder.io** (U. de Michigan, ~5.000 alumnos/semestre) — corrección determinista por tests, en producción a escala. La nota sale de acá.
+- **`paper-instruments/rubric`** (MIT, 75 ★) — rúbricas ponderadas cuando el criterio no es un test.
+- **`gradescope-mcp`** (MIT, 8 ★) — para el cliente que ya tiene Gradescope y no lo va a cambiar.
+
+Y el argumento de por qué encima hace falta medir: **el modo de falla dominante de los LLM como docentes no es la toxicidad, es la incompetencia** (EduGuardBench, 14 modelos). El riesgo que un distrito debe auditar es pedagógico, y ahora es medible con `EduBench` y `SafeTutors`, las dos MIT.
+
+🚫 **No usar `llmgrader`** (NYU) aunque sea el más maduro de la categoría: su licencia es la "PySilicon Research License", no OSI. Sirve como referencia de diseño, no como componente.
+
 ### EMEA
 
 **Contexto.** Regulación primero, adopción después — lo inverso a Norteamérica. La fecha de aplicación de sistemas de alto riesgo del Annex III del EU AI Act (que **incluye AI en evaluación**) se corrió de 2026-08-02 a **2027-12-02** por el acuerdo del Digital Omnibus on AI. Las escuelas quedan responsables de auditar el uso de AI. Casos que caen en alto riesgo: **corrección automática de exámenes, aprendizaje adaptativo, proctoring y predicción de deserción** — o sea, casi todo lo interesante. La Comisión Europea con la OCDE y aval del G7 publicó un borrador de AI Literacy Framework para primaria y secundaria.
@@ -185,6 +268,20 @@ MEA es **4,7x más chico que Europa pero crece más rápido**. Sumados, ~$3,2B d
 **Por qué esto invierte el orden de la conversación con un cliente EMEA.** La lectura fácil del Omnibus es "el AI Act se pospuso, lo vemos en 2027". La lectura correcta es: **lo que exige ingeniería pesada se pospuso; lo que exige decir la verdad al usuario ya está vigente, y el watermarking vence en dos meses.** Un cliente europeo con un tutor en producción hoy tiene una obligación activa de transparencia y una fecha de diciembre encima, mientras cree que tiene hasta 2027.
 
 Eso es una oferta de entrada con urgencia real y alcance chico — divulgación, etiquetado de contenido generado, watermarking — que además deja instalado el expediente técnico que el alto riesgo va a pedir en 2027-12-02. **Vender el Artículo 50 ahora y el Annex III después, en ese orden.** Ver la variante de plazos en el patrón P4.
+
+
+**Agregado en el pase 5 — el expediente europeo ahora se puede armar entero con piezas MIT.**
+
+El patrón P4 de esta KB vende evaluación auditable bajo EU AI Act, y hasta el pase 4 tenía un problema incómodo: los dos benchmarks pedagógicos disponibles eran Creative Commons, uno de ellos **share-alike** (`UnifyingAITutorEvaluation`, CC BY-SA), que es justo la licencia que muerde cuando se deriva un benchmark con datos del cliente. Eso se resuelve: **`EduBench` y `SafeTutors` son MIT**, y **`pyBKT`** (MIT) aporta el modelo de mastery interpretable.
+
+Dos ángulos nuevos para una propuesta europea:
+
+1. **Vender seguridad pedagógica, no exactitud.** `SafeTutors` da una taxonomía de **11 dimensiones de daño y 48 sub-riesgos** derivada de ciencias del aprendizaje. Para un sistema de Annex III eso no es una métrica de calidad: es la estructura del análisis de riesgos que el AI Act pide. Llegar con la taxonomía ya mapeada es una ventaja competitiva concreta frente a un integrador que llega con "medimos accuracy".
+2. **Hablar el idioma del Consejo de Europa, no sólo el del AI Act.** El **Compass for AI and Education** y las Working Conferences (la 3ª, octubre 2025, Estrasburgo) producen el vocabulario de calidad educativa que los ministerios copian en sus pliegos. Aplica en **46 estados miembros**, más que la UE. Citar el Compass junto al Annex III convierte una respuesta de cumplimiento en una de política educativa, que es a lo que responde el comprador público.
+
+**Y el argumento técnico que cierra:** el hallazgo de anti-correlación de ELBench (los modelos más seguros enseñan peor) es la mejor respuesta a "¿por qué no usamos directamente el modelo más grande?". Si se sostiene, la conformidad **exige** componer modelo docente + gate de seguridad medido aparte. Eso es arquitectura facturable, y está justificada por evidencia y no por preferencia. Ver **P11**.
+
+**África dentro de EMEA:** el comprador es el ministerio, el diferencial es multilingüe + offline, y el competidor es un MoU con big tech ya firmado (Sudáfrica–Microsoft, 2025-10-07). El espacio está en lo que el MoU no cubre: currículo local, lenguas nacionales y operación sin conectividad — `Kolibri` (MIT) y `Project NOMAD` (Apache-2.0) son la base.
 
 ### APAC
 
@@ -236,6 +333,18 @@ Con esto, **APAC pasa a tener tres regímenes con fecha de entrada en vigor (Cor
 Tamaño: ver la advertencia en "Tamaño de mercado" — esta pasada encontró **$2,85B para APAC 2026 (→ $9,7B en 2030, CAGR 35,3%)** contra el **$987M** que la KB venía registrando. **Citar el rango, no elegir uno.** Datos de demanda que sí son consistentes: **86% de los estudiantes de 16 países APAC ya usa AI** y **96% de las organizaciones planea aumentar su inversión**.
 
 Players de referencia que la KB no listaba para la región: **Google, Microsoft, IBM, Pearson y Byju's**. China lidera por respaldo estatal, India por plataformas de educación online, y Japón empuja AI en educación por presión demográfica — envejecimiento y escasez docente, que es un driver distinto al del resto de la región y conviene tratarlo aparte.
+
+
+**Agregado en el pase 5 — APAC dejó de exportar sólo agentes: ahora exporta modelos, y eso agrava el riesgo de procedencia.**
+
+`OmniEdu` (Universidad de Pekín + UCAS + Zhongguancun Academy) publica una familia de modelos fundacionales educativos **4B / 9B / 27B** con el corpus de instrucciones abierto. Sumado a DeepTutor (HKU), OpenMAIC (Tsinghua), pyKT (Jinan University) y EduBench, **las cuatro capas del stack educativo open source —modelo, modelado del alumno, agente y evaluación— tienen ahora su artefacto de referencia en instituciones chinas.**
+
+Dos consecuencias opuestas, y las dos son oportunidad:
+
+1. **Para un cliente APAC sin restricción de procedencia:** es el mejor stack disponible y es local. El argumento de costo es fuerte — un modelo de 27B especializado compitiendo con genéricos mucho mayores (78,74% en el setting Scaffold de MathTutorBench) es una diferencia real de costo por alumno en inferencia, que es *la* métrica que decide un despliegue a escala de sistema educativo.
+2. **Para un cliente con restricción de procedencia** (y el pase 4 ya marcó que hay que declararla temprano, no descubrirla en due diligence): el pase 5 da por primera vez una ruta alternativa **completa**, aunque menos potente — `pyBKT` (UC Berkeley) en modelado, `Aila` (Reino Unido) como referencia teacher-facing, `MathTutorBench` (ETH) y `SafeTutors` en evaluación, `OpenOLAT`/`Kolibri`/`Oppia` en plataforma. **Que exista la ruta no la vuelve gratis:** hay que decir que se paga en capacidad de modelo y en madurez de agente.
+
+⚠️ `OmniEdu` **no se puede desplegar** en ningún caso: sin licencia declarada y con herencia de licencia de las bases Qwen. Es evidencia y receta, no componente. Y el dato regulatorio del pase 4 sigue mandando: con la soberanía como eje de 2026 en APAC, un modelo chico entrenable localmente es una propuesta mejor que una API grande, independientemente de la procedencia del repo.
 
 ### LATAM
 
@@ -300,6 +409,27 @@ La brecha real de la región no es adopción, es **gobernanza y calidad**: 65% d
 
 **Regulación, actualización:** el mapa se sigue fragmentando — **proyecto de ley de AI en Brasil, marco de Chile, CONPES de AI en Colombia y reglas sectoriales en México, avanzando a velocidades distintas.** Para un cliente multinacional eso es sobrecarga de cumplimiento que un jugador de un solo país no tiene, y es exactamente el argumento del patrón P5 aplicado a LATAM en vez de a APAC.
 
+
+
+**Agregado en el pase 5 — la oportunidad de LATAM se reencuadra: no es construir el tutor, es construir la medición.**
+
+Es el hallazgo regional más fuerte de esta pasada, y viene con fuente citable: **UNESCO IESALC**, 200 instituciones de educación superior en 19 países (trabajo de campo agosto–octubre 2025).
+
+| Lo que las instituciones hacen | Lo que tienen para saber si funciona |
+|---|---|
+| **73,5%** implementa AI en enseñanza y aprendizaje | **9,0%** tiene mecanismo formal de evaluación |
+| **57,0%** en investigación | **18,5%** tiene política institucional transversal |
+| **34,1%** en administración | **26,0%** tiene estrategia formal de AI |
+
+**64 puntos entre enseñar con AI y poder medirla.** Es la tijera más ancha que esta KB documentó en cualquier región, y es más accionable que el gap de oferta que el pase 4 identificó — porque **cerrar el gap de oferta es construir un tutor competitivo contra DeepTutor, y cerrar el gap de medición es integrar cuatro librerías MIT que ya existen.**
+
+La oferta concreta, con las piezas del pase 5: `EduBench` (MIT — transversal a materia, cubre escenarios de alumno y de docente) + `SafeTutors` (MIT — 11 dimensiones de daño) + `pyBKT` (MIT — mastery interpretable, y de procedencia no-china, que en licitación pública importa) + `rubric` (MIT). Ver **P13**.
+
+⚠️ **Y la advertencia comercial, que es la mitad del hallazgo: sólo 8,0% de las instituciones tiene presupuesto asignado a AI.** La necesidad está y la partida no. Esto **no se vende como línea nueva de gasto**. Entra por presupuesto ya aprobado — **acreditación, aseguramiento de la calidad, cumplimiento, reporte a ministerio** — donde "mecanismo formal de evaluación" ya tiene rubro y dueño.
+
+**El otro dato que orienta a quién golpear primero:** adopción por tipo de institución — privadas sin fines de lucro **84%**, públicas **68%**, privadas con fines de lucro **52%**. Las privadas sin fines de lucro son el segmento más maduro y el de ciclo de compra más corto; el sector público es el volumen y el ciclo largo.
+
+**Sin cambios:** se volvió a buscar agente educativo de origen LATAM en español y portugués y no hay nada por encima de TutorIA (MIT, 0 ★, UTP Pereira). El gap 2 se mantiene.
 
 ## Posicionamiento Globant
 
