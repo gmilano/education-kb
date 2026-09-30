@@ -59,15 +59,39 @@ Chegg, Course Hero, Quizlet y Study.com — que dominaron el ranking de Google e
 
 Lección para el pitch: en educación, el foso es la **integración institucional y el dato de progreso del alumno**, no el contenido ni el tráfico.
 
+## 8. El mandato de política escrita choca con un 82% de incumplimiento (agregado 2026-09-30, pase 2)
+
+El hallazgo más accionable de esta pasada sale de cruzar dos datos que circulan por separado:
+
+- **Oklahoma S.B. 1734** obliga a **cada distrito** a tener una política de AI **escrita** antes del ciclo escolar **2027-28**. Maryland (S.B. 720) exige política distrital alineada más un **AI coordinator** designado; Idaho (S.B. 1227) exige framework estatal completo.
+- **Sólo 18% de los docentes de EE. UU. reporta tener alguna política escrita** sobre uso de AI (marzo 2026).
+
+Un mandato con fecha contra **82% de incumplimiento**, en un país donde además hay **77 proyectos de ley sobre AI en instrucción de aula en 27 estados** en 2026. La demanda no hay que crearla: está legislada.
+
+**Lo que esto cambia en la forma de vender.** El entregable no es un tutor. Es un **policy pack**: política escrita defendible, formación docente, y — la parte que sólo un studio puede hacer — los **gates de human-in-the-loop efectivamente configurados en el LMS** con evidencia de auditoría. Oklahoma prohíbe explícitamente que la AI sea base primaria de calificación, disciplina o placement: eso es una restricción de *arquitectura*, no un párrafo de un documento. Quien entrega el documento sin el gate técnico no cumple, y no puede demostrar que cumple.
+
+Es además el trabajo más replicable de la KB: mismo pack, distrito por distrito, con variación por estado. Ver **P7** en `compose/patterns.md`.
+
+## 9. La pedagogía se distribuye como skill, y el harness se vuelve el producto (agregado 2026-09-30, pase 2)
+
+La tendencia 6 (pedagogía empaquetada como skills) se confirmó con un segundo caso independiente y más fuerte: **Bloom** (MIT, 278 ★) se distribuye como **skill de Claude Code sin backend**, además de como app web self-hosted.
+
+El patrón importa por economía, no por novedad técnica: si la tutoría viaja como skill, el costo de un piloto baja de "desplegar y operar una plataforma" a "instalar una skill". Para un studio eso cambia el punto de entrada de un engagement — se puede demostrar valor pedagógico antes de discutir infraestructura. La contracara es que el diferenciador se corre: si el harness es commodity, lo defendible es la pedagogía y los datos del aprendiz, no el código del agente.
+
 ## Gaps declarados
 
 Huecos confirmados tras buscar, no ausencias por no haber buscado. Un gap informado es información; el silencio se parece demasiado a la cobertura.
 
 1. **No hay evaluador pedagógico open source con tracción.** `AITutor-EvalKit` (MIT, MBZUAI, demo en EACL 2026) es el único que encontramos y tiene **3 estrellas**. No existe el "LegalBench de educación". Cualquiera que despliegue un tutor bajo EU AI Act va a necesitar evidencia de calidad pedagógica y hoy no hay estándar. **Es la oportunidad más limpia que vimos en toda la ventana.**
-2. **LATAM no produce agentes educativos open source.** Cero repos de origen latinoamericano con tracción medible. Latam-GPT es un modelo fundacional, no un framework de tutoría. Espacio abierto.
+2. **LATAM produce agentes educativos, pero ninguno sale de la fase cero.** *Refinado en el pase 2 del 2026-09-30: antes decía "cero repos".* Buscando explícitamente en español y portugués aparecen iniciativas reales y técnicamente ambiciosas — `H1bertto/professor-agent` (Brasil, MIT, **0 ★**) y `ANTONIOALGMAR/StudyAgent` (Brasil, **sin licencia**, 2 ★, tutor multimodal local completo sobre Ollama) — y **ninguna pasa de 2 estrellas**; una no tiene licencia, así que no es reutilizable. `studyield/studyield` **da 404**. Latam-GPT sigue siendo un modelo fundacional, no un framework de tutoría. La conclusión no cambia y el diagnóstico mejora: **no falta interés de constructores, falta masa crítica y gobernanza de proyecto** (empezando por poner una licencia). Espacio abierto, y ahora con evidencia de que hay gente intentándolo.
 3. **EMEA tampoco produce agentes, produce plataformas.** La contribución europea es compliance y contenido (OpenOLAT, Chamilo, Richie, H5P), no agentes. El único artefacto agéntico EMEA que encontramos es `AITutor-EvalKit` (Abu Dhabi) y `education-agent-skills` (UK), ambos chicos.
 4. **La oferta de agentes está concentrada en APAC.** DeepTutor (HKU) y OpenMAIC (Tsinghua) son ~80k ★ combinadas y las dos vienen de instituciones chinas. Para un cliente con restricciones de procedencia de software, esto es un riesgo a declarar temprano, no a descubrir en due diligence.
 5. **No hay integración madura entre knowledge tracing y agentes LLM.** `py-fsrs` (MIT, 499 ★) y OATutor (BKT) resuelven retención y mastery; los agentes grandes resuelven conversación. Nadie los cosió bien. Es el hueco técnico concreto del patrón P1.
+
+6. **No hay agente de grading open source con tracción** *(agregado en el pase 2)*. Se buscó específicamente corrección y assessment automatizado con licencia permisiva. La capa de grading sigue siendo **propietaria**: Gradescope (Turnitin), Codio, Kangaroos AI. En abierto hay *papers* (arXiv 2601.00730, 2607.02432, 2506.07955), no repos con adopción. Consecuencia directa para propuestas: **no prometer reemplazar Gradescope; prometer orquestarlo** — por eso `gradescope-mcp` (MIT, 8 ★) vale seguirlo pese a su tamaño. Es el camino realista hacia grading agéntico hoy.
+
+7. **No hay SIS open source permisivo y vivo** *(agregado en el pase 2)*. Toda la capa de Student Information System open source es PHP y copyleft: RosarioSIS (GPL-2.0, 644 ★), openSIS (GPL, 343 ★), OpenEduCat (LGPL-3.0). La única opción con licencia permisiva, **Fedena (Apache-2.0, 547 ★)**, está **muerta desde el 2016-07-20** y sigue recomendada en listicles. Ver la advertencia en `verticals/solutions.md`. Consecuencia arquitectónica: en el lado administrativo el agente **siempre** va afuera, leyendo por API. No es preferencia de diseño, es la única opción limpia.
+
 
 ## Fuentes
 
