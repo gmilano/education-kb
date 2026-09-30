@@ -1,19 +1,51 @@
-# 🏗️ Repos fundacionales
+---
+industry: education
+region: Global
+updated: 2026-09-30
+---
 
-> Bases sobre las cuales construir. Licencia abierta, comunidad activa.
-> Última actualización: 2026-07-02
+# 🏗️ Repos fundacionales — education
+
+> Bases sobre las cuales construir. Verificado repo por repo vía WebFetch el 2026-09-30.
+> Leer la columna **Licencia** antes de proponer: media KB de educación es GPL/AGPL, no permisiva.
 
 ## Plataformas y frameworks base
 
-| Repo | Licencia | Descripción | ¿Base para AI? |
-|------|----------|-------------|----------------|
-| [ddev](https://github.com/ddev/ddev) | Apache-2.0 | Docker-based local PHP+Node.js web development environments | Sí — 3.7k ★ |
-| [moodleapp](https://github.com/moodlehq/moodleapp) | Apache-2.0 | The Moodle App | Sí — 979 ★ |
-| [richie](https://github.com/openfun/richie) | MIT | :pencil: An opensource CMS to build education portals | Sí — 311 ★ |
-| [XBlock](https://github.com/openedx/XBlock) | Apache-2.0 | Framework for building custom learning components that run in the Open edX LMS! | Sí — 468 ★ |
-| [awesome-courses](https://github.com/fffaraz/awesome-courses) | Unlicense | List of free online programming/CS courses [Massive Open Online Courses] | Sí — 415 ★ |
-| [edx-app-android](https://github.com/openedx-unsupported/edx-app-android) | Apache-2.0 | The Open edX mobile app for Android! | Sí — 299 ★ |
-| [edx-app-ios](https://github.com/openedx-unsupported/edx-app-ios) | Apache-2.0 | The Open edX mobile app for iOS! | Sí — 231 ★ |
+12 repos reales verificados.
+
+| Repo | URL | Licencia | Stars | Lenguaje | ¿Base para AI? | Origen |
+|------|-----|----------|-------|----------|----------------|--------|
+| Open edX platform | https://github.com/openedx/openedx-platform | AGPL-3.0 ⚠️ | 8.2k | Python | Sí — LMS + Studio de escala; extender vía XBlock en vez de tocar el core. **Repo renombrado de `edx-platform` a `openedx-platform`** | North America (MIT + Harvard origin) |
+| Moodle | https://github.com/moodle/moodle | GPL-3.0 ⚠️ | 7.4k | PHP | **Sí, la mejor apuesta** — AI subsystem nativo con provider plugins (OpenAI, Azure, Ollama, DeepSeek, Gemini, Bedrock). No hay que inventar la capa de integración | APAC (Moodle HQ, Australia) |
+| Oppia | https://github.com/oppia/oppia | Apache-2.0 ✅ | 6.8k | Python | Sí — licencia permisiva + modelo de "explorations" interactivas, buen fit para contenido generado por agente | North America (origen Google) |
+| Canvas LMS | https://github.com/instructure/canvas-lms | AGPL-3.0 ⚠️ | 6.8k | Ruby | Sí — dominante en higher-ed de EE. UU.; integrar vía LTI/API antes que forkear | North America (Instructure) |
+| Frappe LMS | https://github.com/frappe/lms | AGPL-3.0 ⚠️ | 3.3k | Python | Sí — liviano, sobre el framework Frappe (mismo stack que ERPNext) | APAC (Frappe, India) |
+| Kolibri | https://github.com/learningequality/kolibri | MIT ✅ | 1.1k | Python | **Sí** — offline-first sin requerir internet. Licencia permisiva. La base para mercados de baja conectividad | North America (Learning Equality) |
+| Chamilo | https://github.com/chamilo/chamilo-lms | GPL-3.0 ⚠️ | 1.0k | PHP | Sí — el más liviano de self-hostear; fuerte en LATAM y EMEA hispanohablante/francófona | EMEA (Bélgica/España) |
+| py-fsrs | https://github.com/open-spaced-repetition/py-fsrs | MIT ✅ | 499 | Python | Sí — scheduler de repetición espaciada (modelo DSR, 21 parámetros). Convierte un chatbot en un sistema que *retiene* | Global |
+| XBlock | https://github.com/openedx/XBlock | Apache-2.0 ✅ | 470 | Python | **Sí** — el punto de extensión *permisivo* de Open edX. Tu componente AI vive acá, aislado del core AGPL | North America |
+| OpenOLAT | https://github.com/OpenOLAT/OpenOLAT | Apache-2.0 ✅ | 444 | Java | Sí — LMS con licencia permisiva, evaluación y assessment sólidos. Referencia para el mercado DACH | EMEA (Suiza) |
+| Richie | https://github.com/openfun/richie | MIT ✅ | 316 | Python | Sí — CMS para portales educativos (catálogo de cursos), complementa un LMS en vez de reemplazarlo | EMEA (OpenFUN, Francia) |
+| H5P core | https://github.com/h5p/h5p-php-library | GPL-3.0 ⚠️ | 150 | PHP | Parcial — contenido interactivo embebible en Moodle/edX/Canvas. Útil como *target de salida* para un agente autor | EMEA (Noruega) |
+
+## Repos de alfabetización AI (upskilling)
+
+No son plataformas educativas, son el material con el que se forma gente en AI. Relevantes para engagements de *capability building*, que en educación corporativa es la mitad de la demanda.
+
+| Repo | URL | Licencia | Stars | Uso |
+|------|-----|----------|-------|-----|
+| LLMs-from-scratch | https://github.com/rasbt/LLMs-from-scratch | Apache-2.0 ✅ | 105.8k | Implementar un LLM tipo ChatGPT en PyTorch paso a paso. El recurso de referencia para entender transformers |
+| minimind | https://github.com/jingyaogong/minimind | Apache-2.0 ✅ | 63k | Entrenar un LLM de 64M parámetros desde cero en ~2h en hardware de consumo: pretraining + SFT + RL completos |
+
+## Nota sobre licencias — leer antes de cotizar
+
+El núcleo de las plataformas educativas open source es **copyleft fuerte**: Open edX, Canvas y Frappe LMS son AGPL-3.0; Moodle, Chamilo y H5P son GPL-3.0. AGPL alcanza el uso en red: si se modifica el core y se sirve por SaaS, hay obligación de publicar el fuente modificado.
+
+El patrón que evita el problema:
+
+1. **No forkear el core copyleft.** Integrar por los puntos de extensión: XBlock (Apache-2.0) en Open edX, plugins del AI subsystem en Moodle, LTI 1.3 / REST en Canvas.
+2. **La lógica propietaria vive en un servicio aparte** — el agente es un proceso separado con su propia licencia, hablando por API/MCP.
+3. Cuando la propiedad del código importa, arrancar de **Oppia, OpenOLAT, Kolibri o Richie** (Apache-2.0 / MIT).
 
 ---
-*Ver también: `verticals/solutions.md` para plataformas verticales completas.*
+*Ver también: `verticals/solutions.md` para plataformas verticales completas y `compose/patterns.md` para el wiring concreto.*

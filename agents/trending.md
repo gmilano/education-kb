@@ -1,6 +1,35 @@
-# 📈 Repos trending
+---
+industry: education
+region: Global
+updated: 2026-09-30
+---
 
-> Última actualización: 2026-07-02
+# 📈 Agentes trending — education
+
+> **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
+> No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
+
+## 2026-09-30 — verificado a mano (WebFetch, repo por repo)
+
+Lo nuevo y lo que se movió en esta ventana:
+
+| Agente | Repo | Licencia | Stars (2026-09-30) | Qué cambió |
+|--------|------|----------|--------------------|------------|
+| DeepTutor | https://github.com/HKUDS/DeepTutor | Apache-2.0 | 40.6k | v1.6.12 el 2026-09-27. Cadencia de release semanal, 2.386 commits. Pasó de ~20k ★ (abr-2026, 111 días desde el lanzamiento) a 40.6k: duplicó en ~5 meses |
+| OpenMAIC | https://github.com/THU-MAIC/OpenMAIC | MIT | 39.7k | v1.1.2 el 2026-09-28, release de **seguridad** (validación en provider routing y descarga de media). Señal de madurez: ya recibe reportes de seguridad, no sólo features |
+| Project NOMAD | https://github.com/Crosstalk-Solutions/project-nomad | Apache-2.0 | 38.8k | ~34.4k ★ en jul-2026 → 38.8k ahora (+4.4k en ~2 meses). Educación offline-first con AI local es una categoría en crecimiento real, no un nicho |
+| education-agent-skills | https://github.com/GarethManning/education-agent-skills | CC BY-SA 4.0 ⚠️ | 814 | 165 skills pedagógicas consumibles por Claude Code / MCP / Codex / Hermes. Primer caso que vemos de *pedagogía empaquetada como skills de agente* en lugar de como prompt |
+| gradescope-mcp | https://github.com/Yuanpeng-Li/gradescope-mcp | MIT | 8 | Nuevo y minúsculo, pero es el primer MCP que vemos sobre un sistema de grading de producción real (Gradescope, 34 tools). Vale seguirlo, no usarlo todavía |
+
+**Los tres líderes (DeepTutor, OpenMAIC, NOMAD) están los tres entre 38k y 41k ★ y ninguno existía con esa masa hace un año.** La tutoría open source dejó de ser terreno académico de bajo star-count.
+
+### Corrección importante de esta corrida
+
+Los star counts de ciclos anteriores estaban inflados por el pipeline, no medidos. Educhain se había registrado con ~12k ★ y tiene **389**; OATutor con ~1.5k y tiene **265**; OpenTutor con ~900 y tiene **127**. Ver la tabla de corrección en `agents/top.md`.
+
+## 2026-07-02 — pipeline automático (histórico, sin verificar)
+
+⚠️ Salida cruda del pipeline. Conservada como historia. Varias filas son repos de 0–2 estrellas y al menos una (`claude-war-room`, `aulalibre`) no es de educación. No usar como recomendación.
 
 | Nombre | Licencia | Descripción | Stars |
 |--------|----------|-------------|-------|
@@ -16,4 +45,4 @@
 | [aulalibre](https://github.com/loqganesh-hue/aulalibre) | MIT | Access Denmark's Aula with Rust tools, a CLI, and a FUSE mount for messages, fil | 0 |
 
 ---
-*Pipeline automático — se actualiza cada hora.*
+*Historia conservada. Append-only: agregar arriba, nunca sobrescribir.*

@@ -1,21 +1,56 @@
+---
+industry: education
+region: Global
+updated: 2026-09-30
+---
+
 # 🎯 Agentes AI — education
 
-> Agentes y herramientas AI open source para la industria. Foco: MIT / Apache 2.0.
-> Última actualización: 2026-07-02
+> Agentes y herramientas AI open source para educación. Foco: MIT / Apache 2.0 / BSD.
+> Verificado repo por repo vía WebFetch el 2026-09-30 (stars y licencia leídos de la página del repo).
 
 ## Agentes y herramientas destacadas
 
-| Nombre | Licencia | Descripción | Stars |
-|--------|----------|-------------|-------|
-| [Awesome-AIGC-Tutorials](https://github.com/luban-agi/Awesome-AIGC-Tutorials) | MIT | Curated tutorials and resources for Large Language Models, AI Painting | 4.5k |
-| [Tensorflow-Tutorial](https://github.com/MorvanZhou/Tensorflow-Tutorial) | MIT | Tensorflow tutorial from basic to hard, 莫烦Python 中文AI教学 | 4.3k |
-| [Java-Interview-Tutorial](https://github.com/Java-Edge/Java-Interview-Tutorial) | Apache-2.0 | 请star，勿fork，因为爱force push！涵盖国际大厂Java/数据库/DDD/设计模式/微服务/中间件/AI大模型应用/区块链开 | 2.9k |
-| [django-lms](https://github.com/adilmohak/django-lms) | MIT | A learning management system using django web framework. Course add an | 726 |
-| [SkyLearn](https://github.com/SkyCascade/SkyLearn) | MIT | The world’s lightweight learning management system. Using django web f | 636 |
-| [Major-project-list](https://github.com/ManojKumarPatnaik/Major-project-list) | MIT | A list of practical projects that anyone can solve in any programming  | 238 |
-| [obsidian-quiz-generator](https://github.com/ECuiDev/obsidian-quiz-generator) | MIT | Generate interactive flashcards from your notes using models from Open | 175 |
-| [jupyterquiz](https://github.com/jmshea/jupyterquiz) | MIT | An interactive Quiz generator for Jupyter notebooks and Jupyter Book  | 166 |
-| [MLH-Quizzet](https://github.com/PragatiVerma18/MLH-Quizzet) | MIT | This is a smart Quiz Generator that generates a dynamic quiz from any  | 98 |
+10 agentes reales verificados. Ordenados por stars.
+
+| Nombre | Repo | Licencia | Stars | Lenguaje | Descripción | Origen (región) |
+|--------|------|----------|-------|----------|-------------|-----------------|
+| DeepTutor | https://github.com/HKUDS/DeepTutor | Apache-2.0 | 40.6k | Python | Tutoría personalizada "lifelong"; workspace agent-native con 8 superficies (Chat, Partners, Co-Writer, Book, Knowledge, Space, Memory), memoria en 3 capas y RAG multi-engine. v1.6.12 del 2026-09-27, releases semanales | APAC (HKU Data Intelligence Lab, Hong Kong) |
+| OpenMAIC | https://github.com/THU-MAIC/OpenMAIC | MIT | 39.7k | TypeScript | Open Multi-Agent Interactive Classroom: convierte un tema o documento en una clase interactiva multi-agente. Agent workbench, sesiones durables de course-building, skills reutilizables, persistencia pluggable. v1.1.2 del 2026-09-28 | APAC (Tsinghua / THU-MAIC, China) |
+| Project NOMAD | https://github.com/Crosstalk-Solutions/project-nomad | Apache-2.0 | 38.8k | JavaScript | Servidor de conocimiento y educación offline-first: Wikipedia, libros, cursos, mapas y AI local opcional, todo en Docker sobre hardware propio, sin internet. ~5 GB disco, <1 GB RAM sin el módulo AI | North America (Crosstalk Solutions, EE. UU.) |
+| education-agent-skills | https://github.com/GarethManning/education-agent-skills | CC BY-SA 4.0 ⚠️ | 814 | Markdown/YAML | 165 skills pedagógicas evidence-grounded en 20 dominios (pedagogía, learning science, currículo, evaluación) para orquestar agentes. Corre en Claude Code, Claude.ai vía MCP, Codex y Hermes | EMEA (autor UK) |
+| py-fsrs | https://github.com/open-spaced-repetition/py-fsrs | MIT | 499 | Python | Free Spaced Repetition Scheduler: modelo DSR (Difficulty, Stability, Retrievability) con 21 parámetros optimizables. La pieza de scheduling que le falta a casi todo tutor LLM | Global (org open-spaced-repetition) |
+| Educhain | https://github.com/satvik314/educhain | MIT | 389 | Python | Genera contenido educativo con GenAI: MCQs, lesson plans con 8 enfoques pedagógicos, flashcards. Ingesta desde YouTube, imágenes, URLs y PDFs | APAC (Build Fast with AI, India) |
+| OATutor | https://github.com/CAHLR/OATutor | MIT | 265 | JavaScript | Intelligent Tutoring System con Bayesian Knowledge Tracing para estimar mastery. Deploy en dos clicks a GitHub Pages, A/B testing incorporado, 3 libros de contenido curado (OpenStax) en JSON | North America (CAHLR, UC Berkeley) |
+| OpenTutor | https://github.com/zijinz456/OpenTutor | MIT | 127 | Python | Workspace de aprendizaje adaptativo block-based que corre local: subís material → notas, quizzes, flashcards y tutor adaptativo. FSRS + detección de carga cognitiva, 10+ providers LLM | Sin región verificada |
+| tutor-mcp | https://github.com/ArnaudGuiovanna/tutor-mcp | MIT | 42 | Go | Servidor MCP que convierte cualquier LLM en un ITS: estado durable del aprendiz, scheduling de repaso, memoria de sesión, misconceptions, metacognición y decisiones pedagógicas auditables | Sin región verificada |
+| gradescope-mcp | https://github.com/Yuanpeng-Li/gradescope-mcp | MIT | 8 | Python | Servidor MCP para Gradescope: 34 tools de gestión de cursos, batch grading, CRUD de rúbricas y regrade review. Escrituras detrás de confirmación explícita | Sin región verificada |
+
+## Investigación / evaluación
+
+| Nombre | Repo | Licencia | Stars | Nota |
+|--------|------|----------|-------|------|
+| AITutor-EvalKit | https://github.com/kaushal0494/AITutor-EvalKit | MIT | 3 | Framework de evaluación de la calidad *pedagógica* de tutores LLM en matemática: 4 dimensiones (Mistake Identification, Mistake Location, Providing Guidance, Actionability), modelo LoMTL (LoRA multi-task), dataset MRBench (491 diálogos). Demo en EACL 2026 (Rabat). Origen: MBZUAI, Abu Dhabi → EMEA |
+
+⚠️ **Sólo 3 stars.** Se incluye porque es el único evaluador pedagógico open source que encontramos, no porque tenga tracción. Ver el gap declarado en `intel/trends.md`.
+
+## Advertencias de licencia
+
+- **education-agent-skills es CC BY-SA 4.0**, no una licencia de código permisiva. Es contenido con *share-alike*: los derivados de esas skills heredan la obligación de licenciarse igual. Usable como referencia pedagógica; **revisar con legal antes de empaquetarlo en un entregable cerrado de cliente.**
+- Todo el resto de la tabla principal es MIT o Apache-2.0 → construible por Globant sin fricción.
+
+## Corrección sobre ciclos anteriores
+
+Los star counts registrados en ciclos previos de esta KB estaban **inflados por el pipeline**, no medidos. Valores reales verificados hoy contra los que se habían registrado antes:
+
+| Repo | Registrado antes | Real 2026-09-30 |
+|------|------------------|-----------------|
+| Educhain | ~12k ★ | **389 ★** |
+| OATutor | ~1.5k ★ | **265 ★** |
+| OpenTutor | ~900 ★ | **127 ★** |
+| DeepTutor | ~24k ★ | **40.6k ★** (subestimado) |
+
+Los tres primeros estaban sobreestimados entre 7x y 30x. Tratar cualquier cifra de ciclos anteriores no re-verificada como no confiable.
 
 ---
-*Actualizado automáticamente por el pipeline de ingest.*
+*Verificado manualmente vía WebFetch, no por el pipeline automático. Última verificación: 2026-09-30.*
