@@ -467,6 +467,69 @@ primera encuesta nacionalmente representativa de AI en K-12) mide que el uso doc
 enseñanza pasó del 25% al 53% en un año**. Encaja con el patrón que esta KB viene sosteniendo: **lo teacher-facing es
 el ángulo menos disputado y el de adopción más rápida** (ver **P8**).
 
+### Agregado en el pase 21 del 2026-10-01 — el barrido regional se agotó por tercera vez consecutiva, y la oportunidad nueva no es de mercado sino de cumplimiento: cambió de signo
+
+**Lo primero, porque afecta a las cuatro regiones y a lo que se le dice a un cliente.** El pase 21 leyó el código de
+los tres LRS y **refutó el gap 33**: el almacén de telemetría permisivo que esta KB recomienda (`lrsql`, Apache-2.0)
+**sí borra el dato del alumno**, por identidad y en cascada. Las menciones del gap 33 en North America, EMEA y LATAM de
+este archivo **quedaron corregidas en su lugar**. La oportunidad **no desaparece: se abarata y se vuelve verificable**,
+y eso la hace más fácil de cerrar, no menos:
+
+| | Antes del pase 21 | Después |
+|---|---|---|
+| **El pitch** | «su almacén de aprendizaje no puede borrar: hay que intervenirlo» | «su almacén **puede** borrar, **viene apagado** y **no deja prueba de haberlo hecho**» |
+| **El alcance** | Desarrollo sobre el almacén | **Config** (una variable de entorno) + **expediente de evidencia** (gap 36) + **disparador** (P40, lo único que es desarrollo) |
+| **La verificabilidad** | Afirmación sobre documentación ausente | **Código citable con archivo y línea** |
+
+**Y aparece un criterio de arquitectura con consecuencia regulatoria que este archivo no tenía:** si el cliente corre
+**Ralph sobre ClickHouse** —la combinación que se elige para analítica de aprendizaje a escala— **el borrado es
+imposible por esa vía**, porque ClickHouse declara `DELETE` como operación no soportada. Esa decisión se toma al
+principio del proyecto y se paga al final. **Es una pregunta de *due diligence* para las cuatro regiones**, y se suma
+al entregable de **P21**.
+
+#### El barrido regional, y por qué se registra como gap y no como silencio
+
+Las cuatro búsquedas mandatadas (`AI education {región} 2026 adoption regulation players`) devolvieron, por **tercer
+pase consecutivo**, **AI empresarial y no educativa**: prioridades de CIO, gobernanza de directorios, soberanía de
+infraestructura, *reskilling* corporativo. **La consulta regional genérica está agotada para esta vertical.** Lo que se
+pudo extraer, con el nivel de evidencia declarado:
+
+**North America** — 🟡 confirmación, nada nuevo. Las cifras vuelven a aparecer consistentes con lo ya registrado
+(North America ~**36 %** de participación en adopción y ~**41,7 %** del crecimiento global del mercado educativo de AI
+hasta 2030, MarketsandMarkets/Technavio). El dato de encuadre que sí conviene retener es **regulatorio y negativo**:
+las fuentes del sector describen la AI educativa operando en un **vacío relativo de supervisión** —no hay un equivalente
+de la FDA para EdTech y la decisión de adoptar la toma cada escuela o distrito—, con el régimen estatal fragmentado.
+**Eso es exactamente lo que vuelve vendible un expediente propio**: el cliente no tiene a quién pedirle el marco, así
+que se lo tiene que construir (**P7**, **P35**, **P44**).
+
+**EMEA** — 🟡 un dato nuevo de presupuesto y un mapa de *players*. El **Reino Unido** comprometió **£200M+** en adopción
+de AI, con **£100M** a la expansión de **Bridge AI** y **£53M** a iniciativas regionales, con socios de entrega
+corporativos. No es presupuesto educativo en sentido estricto —es adopción y *skills*— pero **es la bolsa de la que
+salen los programas de alfabetización**, y conecta con **P6**. Como mapa de interlocutores aparece el **Europe EdTech
+200** y la **London EdTech Week 2026**, que es el lugar natural para una conversación de Studios en la región. El
+**Consejo de Europa** sigue siendo el foro regulatorio de referencia. **Sin cifra de mercado educativo nueva para EMEA
+en esta ventana.**
+
+**APAC** — 🔴 **gap declarado, por tercera vez.** La búsqueda regional devolvió gobernanza corporativa
+(~**48 %** de los líderes de gobernanza con la adopción de AI como prioridad 2026; ~**57 %** de organizaciones con AI
+en alguna operación) y **soberanía de infraestructura**, no educación. **APAC no tiene cifra de mercado educativo propia
+en esta ventana**, igual que en los pases 19 y 20. Lo aprovechable de la región sigue apareciendo **sólo buscando por
+país** (India con mandato curricular nacional, Singapur con el Student Learning Space y el marco de IMDA del pase 20,
+Vietnam con la Decisión 33 del pase 19, Corea del Sur con la AI Basic Act). **La regla del pase 20 queda confirmada
+como la única vía: si la región no devuelve nada, el nombre que falta es el de un país.**
+
+**LATAM** — 🟡 confirmación institucional, sin cifra nueva. Reaparece el estudio de **UNESCO IESALC / UNU** sobre
+educación superior en América Latina y el Caribe (**200 instituciones, 19 países**, relevamiento ago–oct 2025) y el
+marco del **BID**. El encuadre que vuelve en las fuentes de este pase es la **fragmentación regulatoria** como riesgo
+de inconsistencia normativa para operaciones transfronterizas — que es, dicho al revés, **el argumento de un
+entregable regional único** (**P5**). Como *players* locales de EdTech con AI aparece nombrada **Ednova (Chile)**.
+⚠️ **Sin verificar de primera mano y sin repo localizado: se registra como pista, no como hallazgo.**
+
+⚠️ **Nivel de evidencia de toda esta sección: 🔴 resultados de búsqueda, ninguna fuente abierta de primera mano.**
+Las cifras de £200M/£100M/£53M del Reino Unido, los porcentajes de APAC y los de North America **no se leyeron en el
+documento original**. No usar en material de cliente sin abrir la fuente. Lo único 🟢 de este pase está en el código de
+los tres LRS, y vive en `repos/foundations.md`, `verticals/solutions.md` y las tendencias **54**–**56**.
+
 ## Players globales
 
 | Empresa | Tipo | Fortaleza | Debilidad |
@@ -515,7 +578,11 @@ Dónde se produce el software educativo abierto, que no es donde está la demand
 `AB 1159` (operativa **2027-07-01**) prohíbe **entrenar** con dato de alumno; la cadena de **borrado** es el otro lado de
 la misma venta y el pase 19 la midió entera: el LMS borra (Privacy API, **GPL-3.0**), el **modelo** sabe desaprender
 (**OpenUnlearning**, MIT, 607 ★) y **la telemetría no borra** (gap 33: `lrsql` y Ralph no lo documentan; xAPI no lo
-define). **Eso es un diagnóstico que ningún competidor está haciendo** y que un distrito multi-estado necesita antes de
+define).
+🔴 **CORREGIDO EN EL PASE 21.** La telemetría **sí borra**: `lrsql` expone `DELETE /admin/agents` por actor. Sigue
+siendo cierto que **xAPI no lo define** (es extensión propia, no portable) y que **no hay evidencia ni disparador**.
+Para una venta a distrito bajo **AB 1159** el diagnóstico correcto es más fuerte, no más débil: las tres capas
+**pueden** borrar y **ninguna puede demostrarlo** — eso es el **gap 36** y el entregable sigue siendo **P40**/**P44**. **Eso es un diagnóstico que ningún competidor está haciendo** y que un distrito multi-estado necesita antes de
 firmar. Entregable: **P40**. Y el dato de gobernanza que lo hace urgente: **el 34 % de los docentes no recibe ninguna
 orientación y sólo el 18 % tiene política escrita** (Gallup, marzo 2026) — no hay nadie del lado del cliente que pueda
 responder «¿y si un padre pide que borren todo?».
@@ -929,7 +996,11 @@ transparencia del Art. 50 **ya venció** (2026-08-02). **La asimetría es el arg
 barato (marcar con **SynthID-Text**, Apache-2.0 → **P33**) y lo que vence en 14 meses es caro (expediente del Anexo III
 → **P4**). Un cliente que leyó «el AI Act se pospuso» tiene **una obligación vencida y una a dos meses**. Y se suma el
 gap 33: bajo art. 17 del GDPR, **el LRS permisivo que esta KB recomienda no sabe borrar** — hay que decirlo antes de
-elegir LRS, no después. Región cerrada en este pase: **lumen** (GPL-3.0, Essen, Alemania).
+elegir LRS, no después.
+🔴 **CORREGIDO EN EL PASE 21: eso es falso y hay que dejar de decirlo.** `lrsql` (Apache-2.0) **sí borra**, por
+`actor-ifi` y en cascada. Lo que se sostiene, y vende mejor porque es verificable y chico, es que **viene apagado**
+(`LRSQL_ENABLE_ADMIN_DELETE_ACTOR=false`) y **no deja evidencia del borrado** (**gap 36**): una revisión de
+configuración más un expediente, no un proyecto de almacén. Ver la tendencia **54** y **P44**. Región cerrada en este pase: **lumen** (GPL-3.0, Essen, Alemania).
 
 **Contexto.** Regulación primero, adopción después — lo inverso a Norteamérica. La fecha de aplicación de sistemas de alto riesgo del Annex III del EU AI Act (que **incluye AI en evaluación**) se corrió de 2026-08-02 a **2027-12-02** por el acuerdo del Digital Omnibus on AI. Las escuelas quedan responsables de auditar el uso de AI. Casos que caen en alto riesgo: **corrección automática de exámenes, aprendizaje adaptativo, proctoring y predicción de deserción** — o sea, casi todo lo interesante. La Comisión Europea con la OCDE y aval del G7 publicó un borrador de AI Literacy Framework para primaria y secundaria.
 
@@ -1760,8 +1831,9 @@ individual está resuelta; **la institucional es el mercado**. Socios del estudi
 y **Tecnológico de Monterrey**, con AIGEN y RIE360 — y son los interlocutores naturales de una conversación de Studios.
 
 **Lo que el pase 19 agrega como alcance concreto:** bajo el derecho de supresión de la **Ley 21.719** chilena y el marco
-brasileño, la cadena de borrado del gap 33 aplica igual que en EMEA, **y la región ya tiene la contraparte local de la
-capa docente** (`tero`, MIT, Chile, anclado a MINEDUC y Decreto 83). El trabajo es **P40** con instrumento local en
+brasileño, la cadena de borrado del gap 33 aplica igual que en EMEA —🔴 **con la corrección del pase 21: el borrado en
+el LRS existe y es permisivo; lo que falta es la evidencia (gap 36) y el disparador**— **y la región ya tiene la
+contraparte local de la capa docente** (`tero`, MIT, Chile, anclado a MINEDUC y Decreto 83). El trabajo es **P40** con instrumento local en
 lugar de GDPR.
 
 **Contexto.** 47% de despliegue de AI empresarial en 2026. Solo **Brasil (65.89), Chile (63.19) y Uruguay (62.21)** entran en el top 50 global de AI readiness. El dato que define la oportunidad: **13 de los 19 países de América Latina y el Caribe no enseñan adopción temprana de AI en las escuelas**, con un cuello de botella declarado en formación avanzada que limita la capacidad de la región de producir sus propias soluciones.

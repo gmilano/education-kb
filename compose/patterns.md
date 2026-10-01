@@ -2132,3 +2132,100 @@ sintético producido por *unlearning* **no es dato de alumno**.
   34**, y su camino es **P38** / **P40**.
 - **El alumno simulado no reemplaza la validación con alumnos reales** para un despliegue. Reemplaza la **iteración**:
   permite cien corridas antes de la primera clase, no evitar la primera clase.
+
+## P44 — La supresión del alumno en la telemetría, que resulta que ya estaba implementada: encenderla, evidenciarla y propagarla (agregado en el pase 21; **EMEA primero por art. 17, North America por AB 1159, LATAM con la Ley 21.719 chilena**)
+
+**Problema.** Esta KB vendió durante seis pasadas que el almacén de telemetría del alumno **no sabía borrar**, y que
+intervenirlo era alcance a medida. **Es falso**, y el pase 21 lo verificó leyendo el código de los tres LRS (ver la
+tendencia **54**). El trabajo real es otro, es mucho más chico, y es el que este patrón empaqueta: **encender una
+capacidad que viene apagada, producir la evidencia que la capacidad no produce, y conectar el disparador que
+efectivamente no existe.**
+
+**Por qué es el patrón de menor costo de entrada de toda esta KB.** No hay que construir el borrado. Hay que
+configurar, instrumentar y conectar.
+
+### Las piezas, todas ya verificadas en esta KB
+
+| Pieza | Licencia | Rol en este patrón |
+|---|---|---|
+| **`lrsql`** (Yet Analytics) | **Apache-2.0** ✅ | El almacén. **Trae el primitivo**: `DELETE /admin/agents` por `actor-ifi`, cascada sobre 7 tablas, transaccional |
+| **Moodle** `tool_dataprivacy` | GPL-3.0 ⚠️ | El lado donde el pedido de supresión **se registra y se aprueba** (pase 19). No forkear: plugin |
+| **`learnmcp-xapi`** | **MIT** ✅ | El puente agente ↔ LRS que esta KB ya recomienda. Declara `lrsql` como backend |
+| **OpenUnlearning** | **MIT** ✅ | Sólo si el alcance incluye el modelo. Es el **gap 34**, y no hay que prometerlo acá |
+
+### El wiring, en tres pasos, y el tercero es el único que es desarrollo
+
+**Paso 1 — encender el primitivo. Es una variable de entorno, no una historia de usuario.**
+
+```bash
+# lrsql, config de producción: viene en false
+LRSQL_ENABLE_ADMIN_DELETE_ACTOR=true
+```
+
+Con el flag apagado **la ruta no se registra** (`routes.clj:407`), así que el síntoma es un 404 y no un 403 — conviene
+saberlo antes de depurarlo. Encendido, la supresión de un alumno es **una llamada**:
+
+```
+DELETE /admin/agents        body: { "actor-ifi": "mbox::mailto:alumno@escuela.edu" }
+  └─> delete-actor-and-dependents!   (una transacción, 7 tablas)
+        statement_to_statement · statement_to_activity · attachment · xapi_statement
+        agent_profile_document · state_document · actor
+        └─> statement_to_actor se borra por ON DELETE CASCADE
+```
+
+**Paso 2 — producir la evidencia, porque el producto no la produce.** Acá se cierra el **gap 36**. `lrsql` responde
+`200` con el `actor-ifi` que le mandaste y **descarta el conteo de filas afectadas**, que el SQL ya calcula
+(`-- :result :affected`). Dos caminos, y conviene hacer los dos:
+
+- **El entregable del cliente:** envolver la llamada en un servicio propio que, **antes** de borrar, cuente los
+  statements del actor (`GET /xapi/statements?agent=…`), **después** vuelva a contar, y registre el par
+  *(antes, después, timestamp, operador, id del pedido en `tool_dataprivacy`)* en un registro append-only. **Eso es el
+  expediente del art. 17**, y es lo que un régimen de alto riesgo audita.
+- **La contribución hacia arriba:** devolver el `:affected` en el body del interceptor. Son pocas líneas sobre un repo
+  **Apache-2.0**, el dato ya existe, y convierte un entregable de cliente en posicionamiento público — el mismo
+  movimiento que el pase 20 identificó para el gap 35.
+
+**Paso 3 — el disparador, que es el único trabajo real y hay que cotizarlo como integración.**
+
+```
+Moodle tool_dataprivacy              ⚠️ ESTE PASO NO EXISTE — es el trabajo de integración
+  pedido aprobado  ──────────?──────────▶  DELETE /admin/agents   ──▶  ✅ borra
+       │                                                                    │
+       │ no hay evento de "borrado completado"                              │ no hay evento
+       │ (pase 19, verificado en el árbol de Moodle)                        │ (pase 21)
+       ▼                                                                    ▼
+  hay que sondear tool_dataprivacy_request.status            hay que registrar el conteo uno mismo
+```
+
+Ninguno de los dos extremos emite evento, así que el pegamento es **un sondeo más un registro**, no una suscripción.
+**Y la limitación está reconocida por un proveedor, lo que la vuelve defendible en una propuesta:** el Feature Wiki de
+**ILIAS** declara por escrito que al borrar un objeto xAPI/cmi5 el dato personal **persiste en el LRS** y que ILIAS
+**no tiene forma de borrarlo** (tendencia **55**). No es una carencia que invente esta KB.
+
+### Cómo se cotiza, que es lo que cambió
+
+| | Lo que esta KB cotizaba hasta el pase 20 | Lo que corresponde cotizar |
+|---|---|---|
+| Borrado en el LRS | **Desarrollo a medida** sobre el almacén, o asumir copyleft | **Configuración.** Una variable de entorno |
+| Evidencia | No estaba identificada | **Servicio chico + registro append-only** (gap 36) |
+| Disparador LMS→LRS | Desarrollo | **Desarrollo** — sigue siendo esto, y es lo único |
+
+### ⚠️ Lo que este patrón NO promete
+
+- **No alcanza al modelo.** Borra el **registro** (statements, documentos de estado y perfil, el actor). **No borra la
+  influencia del dato sobre el estimador de *mastery***: eso es el **gap 34** y el camino es **P38**. Prometer "derecho
+  al olvido" sin decir esto es prometer de más.
+- **No es conformidad con el estándar, y hay que escribirlo en el contrato.** **xAPI / IEEE 9274.1.1 no define
+  supresión** —define *voiding*, que marca sin borrar—. El endpoint de `lrsql` es **extensión propia del producto**: si
+  el cliente cambia de LRS, **esto no es portable**.
+- **Con Ralph sobre ClickHouse, este patrón no se puede ejecutar.** ClickHouse declara `DELETE` como operación no
+  soportada. Si el cliente ya eligió ese backend por analítica, **la decisión hay que revisarla antes de la
+  arquitectura**, no al llegar al expediente de privacidad.
+- **Con Learning Locker, cuatro condiciones más:** el flag `ENABLE_STATEMENT_DELETION` (en `false` el worker descarta
+  el job **en silencio**), la **ventana UTC** de borrado y la dependencia del proceso *scheduler* que rescata los jobs
+  fuera de ventana, el hecho de que **`done:true` no significa borrado** (hay que comparar `deleteCount` contra
+  `total`), y que **`terminate` no es rollback**. Más el dato que decide: **el código no se mueve desde el
+  2021-11-16** (tendencia **56**).
+- **El borrado no es reversible y no hay confirmación previa.** `delete-actor-and-dependents!` corre en una
+  transacción y no tiene *dry-run*. El conteo previo del paso 2 cumple además esa función: **es la única oportunidad de
+  ver qué se va a borrar antes de borrarlo.**

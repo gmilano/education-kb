@@ -9,6 +9,75 @@ updated: 2026-10-01
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 > No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
 
+## 2026-10-01 (pase 21) — tercer pase consecutivo sin agregar agentes a la tabla, y el primero que corrige una afirmación que esta KB venía vendiendo al revés: el almacén permisivo que recomienda sí sabe borrar al alumno
+
+**La tabla principal sigue en 37 filas.** Este pase no buscó agentes: fue a **ejecutar la acción 1 del pase 19** —
+confirmar la API de borrado de la capa de telemetría (**gap 33**)—, declarada ahí como la pregunta de mayor rendimiento
+y salteada por el pase 20. Se ejecutó **clonando los tres LRS y leyendo el código fuente**. El resultado invierte el
+argumento de **P38**, **P40** y de la lectura de EMEA/LATAM en `intel/market.md`.
+
+### 🔴 El hallazgo: `lrsql` (Apache-2.0) tiene el mejor primitivo de borrado de la capa, y esta KB decía que no tenía ninguno
+
+El artefacto que esta KB recomienda como **almacén por default** para el agente educativo —`lrsql`, Apache-2.0, en la
+KB desde el pase 6 y base de **P15**, **P1**, **P10** y **P14**— expone un endpoint hecho exactamente para el
+art. 17 del GDPR:
+
+| | |
+|---|---|
+| **Endpoint** | `DELETE /admin/agents` (`src/main/lrsql/admin/routes.clj:331`) |
+| **Parámetro** | **uno solo: `actor-ifi`** — el identificador xAPI del alumno (`spec/admin.clj:191`) |
+| **Qué borra** | cascada sobre **7 tablas** en **una transacción**: `statement_to_statement`, `statement_to_activity`, `attachment`, `xapi_statement`, `agent_profile_document`, `state_document`, `actor` |
+| **La 8.ª tabla** | `statement_to_actor` se borra por **`ON DELETE CASCADE`**, agregado por una migración con guarda y comentario explícito del mantenedor |
+| ⚠️ **Estado de fábrica** | **apagado**: `LRSQL_ENABLE_ADMIN_DELETE_ACTOR` default **`false`** en la config de producción. La ruta no se registra si el flag está apagado |
+
+**No es un desarrollo: es una variable de entorno.** Y como el borrado es **por actor**, es el único de los tres que
+responde un pedido de supresión sin pasos intermedios.
+
+### El gap 36, que es lo que queda del gap 33 después de leerlo bien
+
+`lrsql` **borra de forma completa y atómica, y no deja evidencia de haberlo hecho.** El interceptor responde
+`{:status 200 :body params}` — o sea **devuelve el `actor-ifi` que le mandaste**. Y el SQL está declarado
+`-- :result :affected`, así que **el número de filas afectadas se calcula y se descarta**. No hay registro de
+auditoría, no hay evento, no hay conteo.
+
+Para un expediente del art. 17 —o de **AB 1159** en California, operativa el **2027-07-01**— eso significa que el
+borrado ocurre y **lo único que queda como prueba es un `200` con tu propio input adentro**. El gap 36 es, por lejos,
+**el más chico y más upstreameable que tuvo esta KB**: el dato ya está calculado en la capa SQL, falta devolverlo y
+registrarlo, sobre un repo **Apache-2.0**. Ver **P44** y la tendencia **54**.
+
+### Lo que esto le hace a los patrones que ya estaban vendidos
+
+- **P40** (propagar la supresión del LMS a la telemetría y al modelo) **mejora y se abarata**: el extremo del LRS
+  **deja de ser desarrollo** y pasa a ser una llamada HTTP con un flag encendido. Lo que sigue sin existir es **el
+  disparador**, igual que el pase 19 encontró en Moodle: `lrsql` no tiene evento de borrado y Learning Locker tampoco
+  —expone `total`/`deleteCount`/`processing`/`done` para **sondear**, no para notificar.
+- **P38** (derecho al olvido que alcanza al modelo) **cambia de forma**: la mitad «registro» está resuelta en el LRS
+  permisivo; la mitad «modelo» sigue siendo el **gap 34**.
+- **El argumento de EMEA pierde una pata y gana otra.** `intel/market.md` dice que bajo el art. 17 *«el LRS permisivo
+  que esta KB recomienda no sabe borrar»*. **Es falso y hay que corregirlo.** Lo que sí se sostiene, y es más vendible,
+  es que **viene apagado** y **no deja evidencia**: eso es una revisión de configuración y un parche chico, no un
+  proyecto.
+
+### Ralph y Learning Locker, en una línea cada uno (el detalle está en `repos/trending.md`)
+
+- **Ralph** (MIT, HEAD 2026-09-07, **activo**): **no hay `@router.delete` en ningún router** — sólo GET/PUT/POST. El
+  borrado existe en el *data backend*, **por ID de statement**, así que hay que consultar primero. Y
+  🔴 **el backend ClickHouse declara `DELETE` como no soportado**: el backend que se elige para analítica a escala es
+  el que no puede borrar.
+- **Learning Locker** (GPL-3.0): la API de borrado **existe y está confirmada** (`POST /api/v2/batchdelete/initialise`,
+  por filtro), después de dos pasadas atribuyéndola a fuente secundaria. Pero **el código no se mueve desde el
+  2021-11-16** (`HEAD` = tag v7.1.1) aunque el repo **no está archivado** y su README habla de oferta comercial.
+  **«No archivado» no es «mantenido».**
+
+### Lo que este pase NO hizo, dicho explícitamente
+
+- **No agregó agentes.** La búsqueda de agentes educativos nuevos no devolvió ninguno con licencia permisiva y
+  tracción que no estuviera ya en la tabla. Se reverificó **DeepTutor** de primera mano por tercera vez
+  (**40.6k ★**, Apache-2.0, **2.386 commits**, **v1.6.12 del 2026-09-27**), que **coincide** con lo que registró el
+  pase 20 — dos verificaciones independientes concordantes.
+- **No cerró los gaps 31, 34 ni 35.** Ninguno se tocó en este pase.
+- **No verificó ILIAS de primera mano en su Feature Wiki.** Ver la nota de método del pase 21 en `intel/trends.md`.
+
 ## 2026-10-01 (pase 20) — diecinueve pasadas vendieron un expediente de conformidad sin registrar una sola herramienta de testing: existe, es Apache-2.0, la publica un regulador, y su catálogo cubre derecho, medicina y finanzas
 
 **Este pase no agregó agentes a la tabla principal, y es el segundo que termina así a propósito** (el pase 17 fue el

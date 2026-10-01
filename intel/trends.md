@@ -1881,7 +1881,15 @@ Huecos confirmados tras buscar, no ausencias por no haber buscado. Un gap inform
 
     ⚠️ **Y lo que este gap no promete.** Para deep knowledge tracing el *unlearning* es **aproximado**: queda residuo medible. El entregable es el borrado **más la métrica de verificación**. No vender «olvido garantizado» sobre un modelo deep; si el cliente necesita garantía absoluta, la respuesta honesta es reentrenar — o elegir BKT desde el principio, que es la recomendación de **P38**.
 
-33. **Ningún LRS permisivo implementa el borrado, y el estándar xAPI tampoco lo contempla** *(agregado en el pase 19 del 2026-10-01)*. Es el **eslabón del medio** de la cadena de supresión que esta KB venía construyendo, y el único que falla.
+33. ~~**Ningún LRS permisivo implementa el borrado, y el estándar xAPI tampoco lo contempla**~~ 🔴 **CERRADO POR REFUTACIÓN EN EL PASE 21** *(abierto en el pase 19 del 2026-10-01, cerrado el 2026-10-01)*.
+
+    🔴 **La primera mitad era falsa, y se detectó leyendo el código en vez de la documentación.** **`lrsql` (Apache-2.0) implementa `DELETE /admin/agents`**: borrado **por `actor-ifi`** —la identidad xAPI del alumno— en cascada sobre **7 tablas** y dentro de **una transacción**, más una migración `ON DELETE CASCADE` puesta a propósito para que no quede residuo en `statement_to_actor`. ⚠️ **Viene apagado**: `LRSQL_ENABLE_ADMIN_DELETE_ACTOR=false` por default en producción. **Learning Locker** también borra (por filtro), confirmado. **Ralph** no en la API del LRS, pero sí en su *data backend* por ID de statement — y 🔴 **con backend ClickHouse es imposible**.
+
+    **La segunda mitad se sostiene, y es lo único que queda del gap:** **xAPI / IEEE 9274.1.1 no define supresión** (define *voiding*), así que todo borrado acá es **extensión propia de cada implementación y no es portable entre LRS**. Lo que queda abierto es la **evidencia** (**gap 36**) y el **disparador LMS→LRS** (**P40**, ahora con la limitación declarada por escrito por ILIAS — ver tendencia **55**), **no la capacidad**. Ver las tendencias **54**, **55** y **56**, el patrón **P44**, y la corrección completa en `repos/foundations.md`.
+
+    **El registro original del pase 19 se conserva abajo, porque el error de método es el hallazgo:** un gap declarado sobre documentación no es un gap, es una lectura pendiente.
+
+    **Formulación original (pase 19):** Es el **eslabón del medio** de la cadena de supresión que esta KB venía construyendo, y el único que falla.
 
     **Empieza arriba de los repos, en la especificación.** **xAPI —hoy IEEE 9274.1.1— no define una operación de supresión de *statements*.** Define ***voiding***: un statement nuevo con verbo `voided` que declara obsoleto al anterior **dejándolo donde está**. Eso es lo contrario del art. 17 del GDPR, de la Ley 21.719 chilena y del derecho de supresión que reconocen Vietnam, Corea y Brasil.
 
@@ -1911,7 +1919,236 @@ Huecos confirmados tras buscar, no ausencias por no haber buscado. Un gap inform
     **La acción escrita, para el pase que la ejecute:** las dos puntas son MIT y Apache-2.0, así que la contribución puede ir **hacia arriba** —a repos de un regulador nacional y de ETH Zürich—, lo que convierte un entregable de cliente en posicionamiento público. ⚠️ **Y los cuatro límites que no hay que cruzar:** ninguna de estas herramientas **certifica** (`aiverify` declara por escrito que no garantiza ausencia de riesgo o sesgo); el marco de Singapur es **voluntario** y el europeo no; **no hay crosswalk directo de AI Verify al EU AI Act** (sólo a **NIST AI RMF**, oct-2023, y a **ISO/IEC 42001:2023**, jun-2024 — al AI Act se llega indirecto por ISO 42001); y `aiverify` evalúa **modelos supervisados tabulares y de imagen, no agentes**.
 
 
+## 54. El almacén permisivo que esta KB recomienda sabe borrar al alumno desde antes de que esta KB existiera, y seis pasadas vendieron lo contrario por leer documentación en vez de código (agregado 2026-10-01, pase 21)
+
+**Ésta no es una tendencia del mercado: es una corrección de esta KB, y se registra como tendencia porque cambia el
+argumento de venta de tres patrones y de dos regiones.**
+
+Desde el pase 6, esta KB sostiene que la cadena de supresión del dato del alumno **se rompe en la telemetría**. Sobre
+esa afirmación construyó la tendencia **49**, el **gap 33**, el patrón **P40**, media argumentación de EMEA y la
+contraparte LATAM en `intel/market.md`. El pase 19 la midió del lado de Moodle y dejó escrita la acción:
+*«Confirmar la API de borrado de Learning Locker (gap 33). Es la pregunta de mayor rendimiento del pase.»* El pase 20
+no la tomó. **El pase 21 la ejecutó, y la afirmación es falsa.**
+
+**Lo que hay, leído en el código fuente de los tres LRS:**
+
+| LRS | ¿Borra? | Granularidad | Dónde está |
+|---|---|---|---|
+| **`lrsql`** (**Apache-2.0**) | ✅ **Sí, y es el mejor primitivo de la capa** | **por `actor-ifi`** — la identidad xAPI del alumno | `DELETE /admin/agents` → `delete-actor-and-dependents!` |
+| **Learning Locker** (GPL-3.0) | ✅ Sí | por **filtro** de statements | `POST /api/v2/batchdelete/initialise` + worker paginado |
+| **Ralph** (MIT) | ⚠️ No en la API del LRS | por **ID de statement** | `write(operation_type=DELETE)` en el *data backend* |
+
+**El primitivo de `lrsql` es exactamente la forma del art. 17.** Recibe **un solo parámetro** y borra en cascada,
+dentro de una transacción, de **siete tablas** —`statement_to_statement`, `statement_to_activity`, `attachment`,
+`xapi_statement`, `agent_profile_document`, `state_document`, `actor`—. Y la octava, `statement_to_actor`, que es la
+que **contiene el IFI del alumno junto a cada statement**, se borra por una **`ON DELETE CASCADE`** que una migración
+con guarda agrega a propósito, con el comentario del mantenedor explicando para qué. **Alguien pensó este caso y lo
+cerró**, años antes de que esta KB declarara que no existía.
+
+⚠️ **Y viene apagado de fábrica:** `LRSQL_ENABLE_ADMIN_DELETE_ACTOR` es **`false`** por default en la configuración de
+producción, y la ruta **no se registra** con el flag apagado. **Eso no es un desarrollo: es una variable de entorno.**
+
+**Por qué esto es una tendencia y no una errata.** El error no estuvo en la búsqueda: estuvo en **confundir el silencio
+de la documentación con la ausencia de la capacidad** — y esta KB lo tenía anotado. La nota de límite al pie de la
+tabla del gap 33 decía, textual, que el «no» era *«ausencia en la documentación publicada, no una prueba de que la
+operación sea imposible»*. **La nota tenía razón y nadie la ejecutó durante catorce pasadas.** El costo no fue un repo
+que faltaba en una tabla: fue **venderle a un cliente la ausencia de una capacidad que el producto recomendado ya
+tenía**, y cobrarle como alcance propio una intervención de almacén que son dos líneas de configuración.
+
+**La regla que queda, y es la quinta de la serie de método de esta KB:** pase 5 — buscar la pieza, no la categoría;
+pase 7 — la palabra del mercado, no la del paper; pase 8 — por quién es el alumno; pase 9 — el final del recorrido;
+**pase 21 — leer el código, no la documentación. Un gap declarado sobre documentación no es un gap: es una tarea de
+lectura pendiente, y hay que marcarla como tal para que no se cotice como ausencia.**
+
+**Lo que esto no arregla, y es lo que queda vendible.** El borrado existe; **la evidencia y el disparador no.** Ningún
+LRS de los tres emite evento de finalización, y `lrsql` **no devuelve ni el conteo de lo borrado** (**gap 36**). Y
+arriba de los tres, **xAPI / IEEE 9274.1.1 sigue sin definir supresión**: todo esto es extensión propia de cada
+implementación, **no portable**. Ver **P44**, y la corrección completa en `repos/foundations.md`.
+
+
+## 55. El agujero de la cadena de borrado no está en el almacén: está en el enlace LMS → LRS, y lo documenta por escrito un LMS europeo de primera mano (agregado 2026-10-01, pase 21)
+
+Con la tendencia 54, el diagnóstico de la cadena de supresión se reordena entero, y **el hueco se corre un eslabón**:
+
+```
+LMS (Moodle, Open edX, ILIAS)     LRS (lrsql, Learning Locker)     Modelo (pyKT / mastery)
+   ✅ aprueba y ejecuta      ──?──▶   ✅ sabe borrar por actor    ──?──▶   🚫 gap 34
+   el borrado del registro          (pase 21: existe y funciona)         (unlearning sin
+   (pase 19: Privacy API)                                                 benchmark educativo)
+                                 ▲
+                      🔴 ACÁ está el agujero: no hay disparador,
+                         no hay evento, y no es un problema de
+                         capacidad sino de integración
+```
+
+**Lo nuevo de este pase es que el eslabón faltante está documentado por una de las partes.** El Feature Wiki de
+**ILIAS** —LMS GPL-3.0 de referencia en DACH, 506 ★, 426 forks, rama `release_11` con **76.385 commits**— dice que al
+borrar un objeto xAPI/cmi5 **el dato personal de los *statements* persiste en el LRS**, que una vez comunicado el dato
+al LRS **ILIAS no tiene control sobre su borrado**, y que **no hay forma de borrar datos del LRS desde ILIAS**.
+
+**Por qué vale más que un hallazgo de repo.** Hasta ahora el gap de propagación era **inferencia de esta KB**: el pase
+19 lo midió en el árbol de Moodle y no encontró evento. Ahora hay **un segundo LMS, independiente, que lo declara por
+escrito en su propia documentación de producto**. Dos implementaciones distintas, misma conclusión, y una de las dos
+la publica como limitación conocida. **Eso convierte P40 de hipótesis técnica en limitación reconocida por el
+proveedor** — que es exactamente lo que se necesita para ponerlo en el alcance de una propuesta sin que suene a
+invento.
+
+**Y hay una segunda mitad, puramente técnica, que decide arquitecturas antes de escribirlas.** En **Ralph** el borrado
+no depende del LRS sino **del backend de datos elegido**: Mongo y Elasticsearch lo soportan, y
+🔴 **ClickHouse lo declara explícitamente no soportado**, junto con `APPEND` y `UPDATE`. ClickHouse es el backend que
+se elige **para analítica de aprendizaje a escala**. O sea: **el backend que se elige por performance es el que vuelve
+imposible el art. 17**, y la decisión se toma al principio del proyecto, cuando nadie está mirando el GDPR.
+
+⚠️ **Límite de verificación:** `docu.ilias.de` **está bloqueado por el proxy de egreso** de esta sesión. Lo de ILIAS
+viene de **resultados de búsqueda sobre su Feature Wiki**, no de la página abierta; el repo sí se verificó de primera
+mano vía WebFetch. **Antes de citar la limitación de ILIAS ante un cliente hay que abrir el wiki.** Lo de Ralph,
+Learning Locker y `lrsql` está leído en el código y no tiene esa marca.
+
+
+## 56. «No archivado» no es «mantenido»: el LRS más instalado del sector tiene cinco años sin un commit y se presenta como producto vivo (agregado 2026-10-01, pase 21)
+
+**Learning Locker** es, según esta KB desde el pase 6, *«el LRS más adoptado de la categoría»*. Su repositorio
+**no está archivado**, no tiene aviso de fin de vida, su README describe *«The Open Source Learning Record Store.
+Started in 2014»* y remite a la oferta **comunitaria y comercial de Learning Pool** (585 ★, 294 forks, GPL-3.0,
+verificado vía WebFetch el 2026-10-01).
+
+**Y `git log` dice que el código no se mueve desde el 2021-11-16.** `HEAD` coincide exactamente con el tag **v7.1.1**,
+el último publicado. Son **casi cinco años** — y en esos cinco años pasaron el art. 17 aplicado a EdTech, la COPPA
+enmendada, el EU AI Act, AB 1159 y el incidente de Canvas.
+
+**Las dos cosas son verdad al mismo tiempo y hay que decirlas juntas:** la API de borrado de Learning Locker
+**existe, es correcta y este pase la verificó línea por línea**; y el software que la implementa **no recibe
+mantenimiento**. Un cliente que ya lo tiene instalado —que es el caso más probable, por eso está en esta KB— tiene la
+capacidad de cumplir el art. 17 y **no tiene a quién reportarle un bug de seguridad**.
+
+**La regla, que es la contracara de la del pase 8.** Ahí la lección fue *leer el archivo `LICENSE`, no el badge*,
+porque el badge mentía. **Acá es: leer el `git log`, no el banner de archivado.** GitHub marca «archivado» sólo cuando
+el mantenedor decide marcarlo, y **el abandono silencioso no tiene insignia**. Para toda pieza que esta KB proponga
+como **infraestructura instalada** —no como librería que se copia— la fecha del último commit es un dato de
+elegibilidad, no un detalle de color. Es el mismo problema que el pase 12 encontró con `Continue` archivado y el pase
+9 con las tres implementaciones de referencia de credenciales retiradas, pero **invertido**: ahí el proyecto avisó;
+acá no.
+
+36. **El borrado del LRS permisivo no deja evidencia de haber ocurrido** *(agregado en el pase 21 del 2026-10-01)*. Es lo que queda del gap 33 después de refutarlo, y es **el gap más chico, más concreto y más upstreameable que tuvo esta KB en veintiún pasadas.**
+
+    **El hallazgo, leído en el código.** `lrsql` borra de forma completa y atómica — y **no devuelve ni registra nada sobre lo que borró**. El SQL `delete-actor-and-dependents!` está declarado `-- :result :affected`, así que **el conteo de filas afectadas se calcula y se descarta**; el interceptor responde `{:status 200 :body params}`, que es **el `actor-ifi` que mandó el cliente**. No hay registro de auditoría, no hay evento, no hay conteo. Learning Locker está un escalón mejor —expone `total`, `deleteCount`, `processing` y `done` para **sondear**— pero tampoco notifica, y 🔴 **su `done:true` no significa «borrado»**: tres caminos de error marcan el job terminado con `deleteCount` en `null`.
+
+    **Por qué importa comercialmente, y es la parte que no es técnica.** El art. 17 del GDPR, **AB 1159** (California, operativa el **2027-07-01**) y la Ley 21.719 chilena no piden borrar: piden **poder demostrar que se borró**. Con `lrsql` tal como viene, la única prueba de una supresión es **un `200` con el input del propio pedido adentro**. Eso no es un expediente: es un recibo que el cliente se escribió a sí mismo.
+
+    **Por qué es distinto de los gaps 31, 34 y 35.** Los gaps 31 y 34 esperan que un grupo de investigación libere código; el 35 es empaquetado de dos mitades que existen. **Éste es un parche de pocas líneas sobre un repo Apache-2.0**: el dato ya está calculado en la capa SQL y se tira. **No requiere investigación, no requiere ensamblado, y se contribuye hacia arriba** — a Yet Analytics, con lo que un entregable de cliente se convierte en posicionamiento público, igual que el camino que el pase 20 identificó para el gap 35. Ver **P44**.
+
+    ⚠️ **Y los dos límites de alcance, para no venderlo más grande de lo que es.** Primero: devolver el conteo **no** resuelve el disparador LMS→LRS, que sigue siendo integración (**P40**). Segundo: el conteo de filas afectadas **no es** una prueba criptográfica de borrado — es telemetría de la operación. Para un régimen de alto riesgo hay que combinarlo con el registro del pedido en el LMS (`tool_dataprivacy`, pase 19) y con el expediente de **P35**.
+
 ## Fuentes
+
+Cadena de borrado en la capa de telemetría — **pase 21 (2026-10-01)**. 🟢 **Verificado de primera mano leyendo el
+código fuente**, clonando cada repo con `git clone --depth 1 --filter=blob:none` y leyendo los archivos citados (no vía
+WebFetch, no vía documentación):
+
+- [yetanalytics/lrsql](https://github.com/yetanalytics/lrsql) — **Apache-2.0**, HEAD `2d24f2d` del **2026-09-04**.
+  Leídos: `src/main/lrsql/admin/routes.clj` (ruta `["/admin/agents" :delete …]`, línea 331, y el registro condicional
+  de la línea 407), `src/main/lrsql/admin/interceptors/lrs_management.clj` (la respuesta
+  `{:status 200 :body params}`), `src/main/lrsql/spec/admin.clj` (`delete-actor-spec`, un solo campo `actor-ifi`),
+  `src/main/lrsql/system/lrs.clj` (`-delete-actor`, dentro de `jdbc/with-transaction`),
+  `src/main/lrsql/ops/command/statement.clj` (`delete-actor!`),
+  **`src/db/postgres/lrsql/postgres/sql/delete.sql`** (`delete-actor-and-dependents!`, las 7 sentencias `DELETE` y la
+  declaración `-- :result :affected`), `src/db/postgres/lrsql/postgres/sql/ddl.sql` (DDL de `statement_to_actor` y la
+  migración `check-statement-to-actor-cascading-delete` / `add-statement-to-actor-cascading-delete!`),
+  `resources/lrsql/config/prod/default/webserver.edn` (**`LRSQL_ENABLE_ADMIN_DELETE_ACTOR` default `false`**) y
+  `LICENSE`.
+- [LearningLocker/learninglocker](https://github.com/LearningLocker/learninglocker) — **GPL-3.0**, HEAD `5fec948`,
+  que **coincide con el tag `v7.1.1`**, del **2021-11-16** (verificado con `git log -1` y `git ls-remote --tags`).
+  Leídos: `api/src/routes/HttpRoutes.js`, `lib/constants/routes.js` (las rutas
+  `/batchdelete/initialise|terminate/:id|terminate/all`), `api/src/controllers/BatchDeleteController.js`,
+  `worker/src/handlers/batchStatementDeletion/batchStatementDeletion.js` (`Statement.deleteMany`, el `markDone` de los
+  tres caminos de error, el re-encolado por páginas), `lib/models/batchDelete.js` (`total`, `deleteCount`,
+  `processing`, `done`, `pageSize` 1000, y las funciones de ventana), `lib/models/siteSettings.js` (los tres campos
+  `batchDeleteWindow*`) y `cli/src/scheduler/batchDelete.js` (el rescate de los jobs fuera de ventana).
+- [openfun/ralph](https://github.com/openfun/ralph) — **MIT** (`LICENSE.md`, France Université Numérique), HEAD
+  `53cc58c` del **2026-09-07**. Leídos: `src/ralph/api/routers/statements.py` (**sólo `@router.get`, `@router.put` y
+  `@router.post`; no existe `@router.delete` en ningún router**), `src/ralph/backends/data/base.py`
+  (`BaseOperationType`), `src/ralph/backends/data/mongo.py` (`_bulk_delete`, `unsupported_operation_types`),
+  `src/ralph/backends/data/es.py` y **`src/ralph/backends/data/clickhouse.py`** (`DELETE` dentro de
+  `unsupported_operation_types` y el docstring que lo declara).
+
+Verificado vía **WebFetch** el 2026-10-01 (estrellas, forks, licencia y estado del repo leídos en la página):
+[learninglocker](https://github.com/LearningLocker/learninglocker) (585 ★, 294 forks, GPL-3.0, **no archivado y sin
+aviso de fin de vida** — ver tendencia 56) · [ILIAS-eLearning/ILIAS](https://github.com/ILIAS-eLearning/ILIAS)
+(506 ★, 426 forks, **GPL-3.0**, PHP, rama `release_11`, 76.385 commits) ·
+[HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) (reverificación independiente: **40.6k ★**, Apache-2.0,
+**2.386 commits**, **v1.6.12 del 2026-09-27** — coincide con el pase 20).
+
+🔴 **No verificado de primera mano en el pase 21:** la limitación de **ILIAS** sobre xAPI/cmi5 y el LRS
+(*«el dato personal de los statements persiste en el LRS»*, *«no hay forma de borrar datos en el LRS desde ILIAS»*)
+viene del **Feature Wiki de ILIAS vía resultados de búsqueda**: **`docu.ilias.de` está bloqueado por el proxy de
+egreso** (`EGRESS_BLOCKED`, reintentado en este pase). Es la afirmación que sostiene la mitad documental de la
+tendencia **55** y **hay que abrir el wiki antes de citarla ante un cliente**. Contexto adicional sobre xAPI y GDPR
+tomado de fuentes secundarias concordantes: [Learning Pool — cómo xAPI ayuda con
+GDPR](https://learningpool.com/how-xapi-helps-solve-for-gdpr-requirements) · [Watershed — GDPR, xAPI y
+herramientas](https://www.watershedlrs.com/blog/product/news/what-is-gdpr/) · [Rustici — GDPR en SCORM
+Cloud](https://rusticisoftware.com/products/gdpr/).
+
+Barrido regional del pase 21 (🔴 **ninguna fuente abierta de primera mano; todo de resultados de búsqueda**):
+[MarketsandMarkets — North America AI in Education](https://www.marketsandmarkets.com/Market-Reports/geography/ai-in-education-market/North-America) ·
+[Technavio — AI en el sector educativo](https://technavio.com/report/artificial-intelligence-market-in-the-education-sector-industry-analysis) ·
+[CompTIA — tendencias EMEA 2026](https://www.comptia.org/en/blog/five-tech-trends-shaping-emeas-it-strategy-in-2026/) ·
+[Consejo de Europa — dimensiones regulatorias de la AI en educación](https://coe.int/web/education/-/key-stakeholders-across-europe-will-explore-the-regulatory-dimensions-of-ai-in-education-at-the-2nd-working-conference-in-october) ·
+[QS — Europe EdTech 200 y London EdTech Week 2026](https://newsletters.qs.com/announcing-the-2026-europe-edtech-200-plus-london-edtech-week-ai-skills-and-policy-moves/) ·
+[IntelligentCIO APAC — brechas de gobernanza de AI en directorios APAC 2026](https://www.intelligentcio.com/apac/2025/12/09/ai-governance-gaps-widen-as-apac-boards-prioritise-innovation-for-2026/) ·
+[UNU/UNESCO — AI en educación superior en LAC](https://unu.edu/publication/ai-implementation-higher-education-latin-america-and-caribbean) ·
+[BID — marco regulatorio habilitante para AI en LAC](https://publications.iadb.org/publications/english/document/An-Enabling-Regulatory-Framework-for-Artificial-Intelligence-in-Latin-America-and-the-Caribbean.pdf) ·
+[Barchart — adopción de AI en LATAM, expectativas 2026](https://www.barchart.com/story/news/36012717/industry-demand-is-driving-ai-adoption-from-the-ground-up-in-latin-america-heres-what-to-expect-in-2026)
+
+## Nota de método del pase 21 (2026-10-01) — el pase que ejecutó la acción escrita hace dos pasadas, y encontró que la KB se había equivocado a su propio favor comercial
+
+**Lo que se hizo distinto, y es la razón por la que funcionó.** Veinte pasadas verificaron repos **abriendo su página en
+GitHub**: licencia, estrellas, forks, commits, descripción. Eso alcanza para saber **qué es** un repo y **no alcanza
+para saber qué hace**. Este pase **clonó tres repositorios y leyó el código fuente**, que es lo que el pase 19 había
+hecho una sola vez —sobre el árbol de Moodle— y que resultó, las dos veces, el método más productivo de esta KB.
+
+**El resultado incómodo, dicho sin suavizar.** El **gap 33** —vigente desde el pase 19, citado en la tendencia 49, en
+**P38**, en **P40**, en `verticals/solutions.md`, en `repos/foundations.md` y en los argumentos de EMEA y LATAM de
+`intel/market.md`— **era falso en su mitad principal**. El LRS permisivo que esta KB recomienda como default
+(`lrsql`, Apache-2.0) tiene el mejor primitivo de borrado de toda la capa, y lo tenía desde antes de que esta KB
+existiera. **Y la propia KB tenía escrita la nota que lo advertía**, al pie de la tabla: *«el "no" es ausencia en la
+documentación publicada, no una prueba de que la operación sea imposible»*. **La nota tenía razón y sobrevivió catorce
+pasadas sin que nadie la ejecutara.**
+
+**Por qué el error fue en esta dirección y no en otra, que es lo que conviene no repetir.** Un gap declarado es
+**vendible**: justifica alcance, justifica horas, justifica un patrón. Una capacidad que ya existe en el producto
+recomendado **no factura nada**. No hubo mala fe —hubo una tabla construida sobre documentación y una nota al pie que
+nadie convirtió en tarea— pero el sesgo es estructural: **los gaps se revisan menos que los hallazgos, porque nadie
+tiene incentivo para cerrar uno.** La contramedida concreta, para los pases que vienen: **todo gap cuya evidencia sea
+"no está documentado" se marca como lectura pendiente, no como ausencia**, y no entra a un entregable de cliente hasta
+que alguien haya leído el código.
+
+**Qué está verificado y con qué fuerza, en tres niveles distintos.**
+
+1. 🟢 **Leído en el código fuente** (la evidencia más fuerte que produce esta KB): todo lo que afirman las tendencias
+   **54** y **56**, la mitad técnica de la **55**, el **gap 36**, la matriz corregida de `verticals/solutions.md`, la
+   tabla corregida de `repos/foundations.md` y el patrón **P44**. Incluye las rutas, los nombres de archivo y los
+   números de línea, para que el próximo pase pueda contradecirlo sin volver a buscar.
+2. 🟡 **Leído en la página del repo vía WebFetch**: estrellas, forks, licencias y el hecho de que Learning Locker
+   **no** está archivado. La reverificación de **DeepTutor** coincide con la del pase 20 — dos lecturas independientes
+   concordantes, que es lo más cerca de "confirmado" que llega esta KB sin la API.
+3. 🔴 **Resultados de búsqueda, sin fuente primaria**: la limitación de **ILIAS** (`docu.ilias.de` bloqueado) y
+   **todo el barrido regional**. No usar en material de cliente sin abrir la fuente.
+
+**El barrido regional dio el mismo resultado que en los pases 19 y 20, y por tercera vez consecutiva se registra como
+gap informado y no como silencio.** Las cuatro búsquedas regionales (`AI {industry} {region} 2026 adoption regulation
+players`) devolvieron **AI empresarial, no educativa**: prioridades de CIO, gobernanza de directorios, soberanía de
+infraestructura, inversión en *reskilling* corporativo. **La consulta regional genérica está agotada para esta
+vertical** — y la regla del pase 20 sigue siendo la salida: *si la región no devuelve nada, el nombre que falta es el
+de un país*. Lo poco aprovechable apareció así: Reino Unido con **£200M+** comprometidos en adopción de AI (del cual
+£100M a Bridge AI y £53M a iniciativas regionales), el **Europe EdTech 200** y la London EdTech Week como mapa de
+*players* de EMEA, y la constatación de que **APAC y LATAM no tienen cifra de mercado educativo propia en esta
+ventana**. Se detalla por región en `intel/market.md`.
+
+**Una limitación de entorno que cambió, y conviene registrarla.** Veinte pasadas anotaron que `curl -sI` devuelve 403
+contra `github.com` y que la API de GitHub está fuera de alcance. **Las dos siguen siendo verdad, y las dos dejaron de
+importar para lo que decide este archivo:** `git clone --depth 1 --filter=blob:none` **funciona a través del proxy**,
+y leer un archivo del árbol clonado es evidencia más fuerte que cualquier cosa que devuelva la API. **La verificación
+de capacidad se hace clonando, no consultando.** Es la recomendación de método más reutilizable de este pase.
 
 Testing de conformidad y evaluación regulatoria — **pase 20 (2026-10-01)**. Repos verificados de primera mano vía WebFetch (licencia, estrellas, forks, alcance declarado): [inspect_ai (UK AISI)](https://github.com/UKGovernmentBEIS/inspect_ai) · [moonshot](https://github.com/aiverify-foundation/moonshot) · [compl-ai](https://github.com/compl-ai/compl-ai) · [aiverify](https://github.com/aiverify-foundation/aiverify) · [moonshot-data](https://github.com/aiverify-foundation/moonshot-data) · [LLM-Evals-Catalogue](https://github.com/aiverify-foundation/LLM-Evals-Catalogue) · [awesome-eu-ai-act](https://github.com/morganrcu/awesome-eu-ai-act) · [moonshot-cicd](https://github.com/aiverify-foundation/moonshot-cicd) · [moonshot-ui](https://github.com/aiverify-foundation/moonshot-ui) · [aiverify-developer-tools](https://github.com/aiverify-foundation/aiverify-developer-tools) · [organización aiverify-foundation](https://github.com/aiverify-foundation)
 

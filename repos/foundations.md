@@ -122,25 +122,80 @@ cambia el patrón **P38** y abre el **gap 33**, y empieza un nivel más arriba q
 > `voided` que marca al anterior como obsoleto. **El dato original sigue ahí**, y eso es lo contrario de lo que pide
 > el art. 17 del GDPR o el derecho de supresión de la Ley 21.719 chilena.
 
+### 🔴 CORREGIDO EN EL PASE 21 — esta tabla estaba mal, y el error era el que más convenía comercialmente
+
+> **Lo que sigue es la auditoría original (pases 6→20), hecha sobre la documentación publicada. El pase 21 clonó los
+> tres LRS y leyó el código fuente, y dos de las tres filas se caen.** La tabla se conserva porque el error de método
+> es el hallazgo: **un gap declarado sobre documentación no es un gap, es una lectura pendiente** — y esta KB lo dejó
+> pendiente catorce pasadas, con la nota de límite ya escrita al pie.
+
+| LRS | Licencia | ★ | Lo que afirmó la auditoría de documentación | **Lo que dice el código (pase 21)** |
+|---|---|---|---|---|
+| **SQL LRS (`lrsql`)** | **Apache-2.0** ✅ | 144 | 🚫 «No. Nada sobre *delete*, *erasure* ni retención» | 🔴 **REFUTADO.** `DELETE /admin/agents` borra **por `actor-ifi`** en cascada sobre **7 tablas** en una transacción. **Es el mejor primitivo de art. 17 de toda la capa.** ⚠️ viene **apagado**: `LRSQL_ENABLE_ADMIN_DELETE_ACTOR=false` por default en producción |
+| **Ralph** | **MIT** ✅ | 51 | 🚫 «No. Nada sobre *delete*, endpoint DELETE ni GDPR/erasure» | ⚠️ **PARCIAL.** Confirmado que **no hay `@router.delete`** en la API del LRS, pero el *data backend* implementa `OperationType.DELETE` **por ID de statement** (hay que consultar primero). 🔴 **El backend ClickHouse lo declara no soportado** |
+| **Learning Locker** | **GPL-3.0** ⚠️ | 585 | ✅ «Se le *atribuye* una API especial de borrado» (fuente secundaria) | ✅ **CONFIRMADO.** `POST /api/v2/batchdelete/initialise`, **por filtro**, worker paginado. ⚠️ **el código no se mueve desde el 2021-11-16** (HEAD = tag v7.1.1) aunque el repo **no está archivado** |
+
+**Las rutas exactas, para que el próximo pase no tenga que volver a buscarlas:** `lrsql` →
+`src/main/lrsql/admin/routes.clj:331` + `src/db/postgres/lrsql/postgres/sql/delete.sql:119`
+(`delete-actor-and-dependents!`) + la migración `ON DELETE CASCADE` de `statement_to_actor` en `ddl.sql:443-456`.
+Learning Locker → `api/src/controllers/BatchDeleteController.js` +
+`worker/src/handlers/batchStatementDeletion/batchStatementDeletion.js` + `cli/src/scheduler/batchDelete.js`.
+Ralph → `src/ralph/api/routers/statements.py` (sin DELETE) + `src/ralph/backends/data/clickhouse.py:128-131`
+(`unsupported_operation_types`).
+
+**Lo que sí sobrevive de la lectura original, y es lo único que hay que seguir diciéndole al cliente:**
+
+1. **El estándar sigue sin contemplar el borrado.** xAPI / IEEE 9274.1.1 define *voiding*, no supresión. Todo lo que
+   borra acá es **extensión propia de cada implementación**, no conformidad con el estándar — así que no es portable
+   entre LRS y hay que escribirlo en el contrato.
+2. **Ninguno notifica.** No hay evento ni webhook de borrado en ninguno de los tres. `lrsql` no devuelve ni el conteo;
+   Learning Locker expone `total`/`deleteCount`/`processing`/`done` para **sondear**. El disparador LMS → LRS sigue
+   sin existir, igual que el pase 19 lo encontró del lado de Moodle. **Eso es P40, y sigue siendo trabajo de
+   integración.**
+3. **El residuo real es la evidencia, no el dato.** `lrsql` borra bien y **no deja prueba**: el SQL está declarado
+   `:result :affected` y **el conteo se descarta**; la respuesta es `200` con el `actor-ifi` que mandaste. Ése es el
+   **gap 36**, y es el más chico y upstreameable de esta KB.
+
+**Y el patrón de licencia de esta capa se da vuelta, que era el argumento de la tendencia 45.** La lectura anterior
+decía: *«los dos LRS permisivos no borran y el único que borra es GPL-3.0»*. **Es al revés.** El que mejor borra es
+**`lrsql`, Apache-2.0** —por actor, en cascada, transaccional— y el GPL-3.0 borra por filtro con un código congelado
+desde 2021. Esta capa es, junto con la de privacidad (tendencia 39), **una de las dos de esta KB donde lo permisivo es
+además lo mejor**. Lo que falla no es la licencia: es el default y la evidencia.
+
+**La corrección alcanza a `learnmcp-xapi` (MIT), y a favor.** Sus backends declarados son `lrsql`, Ralph y Veracity.
+El stack que esta KB recomienda —`learnmcp-xapi` + `lrsql`— **sí puede sacar la historia de aprendizaje del alumno**:
+una llamada, un flag de entorno. Lo que hay que agregar es el expediente, no el borrado.
+
+---
+
+**Auditoría original (pases 6→20), conservada como registro del error de método:**
+
 Auditado en este pase sobre la documentación publicada de cada backend:
 
 | LRS | Licencia | ★ | ¿Documenta borrado de *statements*? |
 |---|---|---|---|
-| **SQL LRS (`lrsql`)** | **Apache-2.0** ✅ | 144 | 🚫 **No.** Nada sobre *delete*, *erasure* ni retención en la documentación publicada |
-| **Ralph** | **MIT** ✅ | 51 | 🚫 **No.** Nada sobre *delete*, endpoint DELETE ni GDPR/erasure |
+| **SQL LRS (`lrsql`)** | **Apache-2.0** ✅ | 144 | 🚫 **No.** Nada sobre *delete*, *erasure* ni retención en la documentación publicada — 🔴 **REFUTADO POR CÓDIGO EN EL PASE 21, ver arriba** |
+| **Ralph** | **MIT** ✅ | 51 | 🚫 **No.** Nada sobre *delete*, endpoint DELETE ni GDPR/erasure — ⚠️ **matizado en el pase 21: cierto para la API del LRS, falso para el data backend** |
 | **Learning Locker** | **GPL-3.0** ⚠️ | 584 | ✅ **Sí** — es el único de la capa al que se le atribuye una **API especial de borrado** de statements |
 
 **El patrón que se repite por tercera vez en esta KB, y ya no puede llamarse coincidencia.** La tendencia 45 lo
 encontró en el LMS (lo que borra es copyleft) y la capa de *unlearning* parecía invertirlo (lo que desaprende es
 permisivo). Acá vuelve a la forma del LMS: **los dos LRS permisivos no borran y el único que borra es GPL-3.0.**
+🔴 **REFUTADO EN EL PASE 21 leyendo el código: es exactamente al revés.** El mejor primitivo de borrado de la capa es
+`lrsql` (**Apache-2.0**), por actor y en cascada; el GPL-3.0 borra por filtro con código congelado desde 2021. Ver la
+corrección arriba y la tendencia **54**.
 
 **Y pega donde más duele, porque pega sobre una fila de la tabla principal de esta KB.** `learnmcp-xapi` (MIT) es el
 único artefacto que conecta un agente con IEEE 9274.1.1, y sus backends declarados son **`lrsql`, Ralph y Veracity**
 — es decir, **los permisivos, que son los que no borran**. Un tutor construido con el stack que esta KB viene
 recomendando (`learnmcp-xapi` + `lrsql`) escribe la historia de aprendizaje del alumno en un almacén **del que no
 hay forma estándar de sacarla**.
+🔴 **CORREGIDO EN EL PASE 21.** Sigue siendo cierto que **no hay forma *estándar*** —xAPI no define supresión— pero
+**sí hay forma**: `lrsql` expone `DELETE /admin/agents` por `actor-ifi`. El stack recomendado puede borrar; lo que le
+falta es el flag encendido y el expediente de evidencia (**gap 36**).
 
-⚠️ **Límite de verificación declarado.** El «no» de `lrsql` y Ralph es **ausencia en la documentación publicada**, no
+⚠️ **Límite de verificación declarado — y es la nota que tenía razón y nadie ejecutó durante catorce pasadas.** El
+«no» de `lrsql` y Ralph es **ausencia en la documentación publicada**, no
 una prueba de que la operación sea imposible: las dos son bases de datos SQL/Elasticsearch y un `DELETE` a mano
 siempre es posible. La afirmación exacta es: **ninguno de los dos ofrece borrado como operación soportada y
 documentada**, y por lo tanto ninguno de los dos se puede poner en un expediente de privacidad como el componente
@@ -1093,11 +1148,25 @@ OpenUnlearning y `MachineUnlearning` (licencia, estrellas, métodos leídos del 
   ataque. Los dos lados del mismo problema —cómo se extrae el dato del alumno de un CDM y cómo se lo saca— están
   publicados por el mismo entorno y **ninguno de los dos publica implementación**. Ver el bloque de P-MIA arriba.
 
-- **Gap 33 (nuevo en el pase 19)** — **ningún LRS permisivo implementa el borrado, y el estándar tampoco lo
-  contempla.** `lrsql` (Apache-2.0) y Ralph (MIT) no documentan supresión de *statements*; el único de la capa con
-  API de borrado es **Learning Locker (GPL-3.0)**. Y arriba de los repos, el propio **xAPI / IEEE 9274.1.1 no define
-  una operación de supresión** — define *voiding*, que marca sin borrar. Ver la auditoría de borrado en la capa de
-  telemetría de este mismo archivo.
+- **Gap 33 (abierto en el pase 19) — 🔴 CERRADO POR REFUTACIÓN EN EL PASE 21.** La formulación original era:
+  *«ningún LRS permisivo implementa el borrado, y el estándar tampoco lo contempla»*. **La primera mitad es falsa.**
+  El pase 21 clonó los tres LRS y leyó el código: **`lrsql` (Apache-2.0) implementa `DELETE /admin/agents`**, borrado
+  **por `actor-ifi`** en cascada sobre 7 tablas y en una transacción — **el mejor primitivo de art. 17 de la capa**,
+  y **viene apagado** (`LRSQL_ENABLE_ADMIN_DELETE_ACTOR=false`). Ralph **no** lo expone en la API del LRS pero sí en
+  su *data backend* por ID de statement (y **ClickHouse lo declara no soportado**). Learning Locker **sí** lo tiene,
+  confirmado, con el código congelado desde el 2021-11-16.
+  **La segunda mitad se sostiene y es lo único que queda:** **xAPI / IEEE 9274.1.1 no define supresión** —define
+  *voiding*, que marca sin borrar—, así que todo borrado acá es **extensión propia, no portable entre LRS**. Lo que
+  queda abierto es la **evidencia** (gap 36) y el **disparador** (P40), no la capacidad. Ver la corrección completa en
+  la auditoría de borrado de este mismo archivo y la tendencia **54**.
+
+- **Gap 36 (nuevo en el pase 21)** — **el borrado del LRS permisivo no deja evidencia.** `lrsql` borra de forma
+  completa y atómica y **no devuelve ni registra nada**: el SQL está declarado `-- :result :affected`, así que **el
+  conteo de filas afectadas se calcula y se descarta**, y el interceptor responde `{:status 200 :body params}` — el
+  `actor-ifi` que mandaste. No hay registro de auditoría ni evento. Para un expediente del art. 17 o de **AB 1159**
+  (operativa el 2027-07-01) la única prueba del borrado es un `200` con tu propio input adentro.
+  **Es el gap más chico y más upstreameable de esta KB:** el dato ya existe en la capa SQL, falta devolverlo y
+  registrarlo, sobre un repo **Apache-2.0**. No requiere investigación. Ver **P44**.
 
 - **Gap 34 (nuevo en el pase 19)** — ***unlearning* evaluado sobre modelos del alumno.** Formulación precisa, que es
   lo que queda del gap 32 después de medirlo: la capa de *unlearning* de LLMs está resuelta y es MIT

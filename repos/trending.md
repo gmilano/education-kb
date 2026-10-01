@@ -8,6 +8,130 @@ updated: 2026-10-01
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 
+## 2026-10-01 (pase 21) — el LRS permisivo que esta KB recomienda sí sabe borrar, tiene el mejor primitivo de borrado de toda la capa, y viene apagado de fábrica: seis pasadas afirmaron lo contrario leyendo documentación en vez de código
+
+**Cero repos nuevos en esta sección, y es el punto.** Este pase no buscó repos: **ejecutó la acción 1 que dejó escrita
+el pase 19** —«confirmar la API de borrado de Learning Locker (gap 33)», declarada ahí como *la pregunta de mayor
+rendimiento del pase*— y que el pase 20 no tomó. Se ejecutó **clonando los tres LRS y leyendo el código**, no la
+documentación. Los tres resultados contradicen lo que esta KB tiene escrito, y el más importante lo contradice **al
+revés de lo que convenía**.
+
+### Lo que dice la tabla del gap 33 en `repos/foundations.md`, y lo que dice el código
+
+| LRS | Lo que esta KB afirmó (pases 6→20) | Lo que dice el código, leído en este pase | Veredicto |
+|---|---|---|---|
+| **`lrsql`** (Apache-2.0) | 🚫 «Nada sobre *delete*, *erasure* ni retención» | ✅ **`DELETE /admin/agents`**, borrado **por actor IFI** en cascada sobre **7 tablas**, en **una transacción** | 🔴 **REFUTADO.** Es el mejor primitivo de la capa |
+| **Learning Locker** (GPL-3.0) | ✅ «Se le *atribuye* una API especial de borrado» (fuente secundaria, sin verificar) | ✅ **`POST /api/v2/batchdelete/initialise`**, borrado **por filtro**, worker paginado | ✅ **CONFIRMADO**, con cuatro condiciones operativas |
+| **Ralph** (MIT) | 🚫 «Nada sobre *delete*, endpoint DELETE ni GDPR/erasure» | ⚠️ **No hay DELETE en la API del LRS** (sólo GET/PUT/POST), pero el *data backend* implementa `OperationType.DELETE` **por ID de statement** | ⚠️ **PARCIAL** — y el backend elegido decide si se puede borrar |
+
+**Verificado de primera mano, clonando y leyendo el archivo** (`git clone --depth 1 --filter=blob:none`), no vía
+WebFetch ni documentación:
+
+- **`lrsql`** — HEAD `2d24f2d` del **2026-09-04**. Ruta en `src/main/lrsql/admin/routes.clj:331`
+  (`["/admin/agents" :delete …]`), interceptor en `admin/interceptors/lrs_management.clj`, implementación en
+  `system/lrs.clj:459`, y el SQL en **`src/db/postgres/lrsql/postgres/sql/delete.sql:119`**
+  (`delete-actor-and-dependents!`).
+- **Learning Locker** — HEAD `5fec948` = tag **v7.1.1**, del **2021-11-16**. Ruta en
+  `api/src/routes/HttpRoutes.js:277`, controlador `api/src/controllers/BatchDeleteController.js`, worker
+  `worker/src/handlers/batchStatementDeletion/batchStatementDeletion.js`, modelo `lib/models/batchDelete.js`,
+  scheduler `cli/src/scheduler/batchDelete.js`.
+- **Ralph** — HEAD `53cc58c` del **2026-09-07**. `src/ralph/api/routers/statements.py` declara **sólo**
+  `@router.get`, `@router.put` y `@router.post` — **no existe `@router.delete` en ningún router**. El borrado vive en
+  `src/ralph/backends/data/mongo.py:403` (`_bulk_delete`) y `es.py:397`.
+
+### El primitivo de `lrsql`, que es el hallazgo que da vuelta la lectura de la capa
+
+`delete-actor-and-dependents!` recibe **un solo parámetro, `:actor-ifi`** —el identificador xAPI del alumno— y borra en
+cascada, dentro de una transacción (`jdbc/with-transaction`), de **siete tablas**:
+
+```
+statement_to_statement   (aristas ancestor_id y descendant_id)
+statement_to_activity
+attachment
+xapi_statement
+agent_profile_document
+state_document
+actor
+```
+
+**Y la octava tabla se borra sola, por diseño explícito.** `statement_to_actor` —la tabla que mapea statement → actor,
+o sea **la que contiene el IFI del alumno junto a cada statement**— no aparece en la lista, y la primera lectura
+sugería un residuo de privacidad. **No lo es:** el DDL trae una migración con guarda
+(`check-statement-to-actor-cascading-delete` / `add-statement-to-actor-cascading-delete!`, `ddl.sql:443-456`) que
+cambia la FK a **`ON DELETE CASCADE`**, con el comentario del mantenedor diciendo para qué:
+*«Adds a cascading delete to delete st2actor entries when corresponding statements are deleted»*. O sea: **alguien en
+Yet Analytics pensó este caso y lo cerró.** Se registra el camino completo porque la tentación era escribir el residuo.
+
+⚠️ **Viene apagado.** `resources/lrsql/config/prod/default/webserver.edn:36` define
+`:enable-admin-delete-actor #boolean #or [#env LRSQL_ENABLE_ADMIN_DELETE_ACTOR false]` — **default `false` en
+producción** (en la config de test está en `true`). La ruta **no se registra** si el flag está apagado
+(`routes.clj:407`). **Es una variable de entorno, no un desarrollo:** `LRSQL_ENABLE_ADMIN_DELETE_ACTOR=true`.
+
+### Learning Locker: la API existe, y las cuatro condiciones que hay que poner en el contrato
+
+`POST /api/v2/batchdelete/initialise` con un `filter` en el body crea un job `BatchDelete` y lo publica en la cola
+`BATCH_STATEMENT_DELETION_QUEUE`. El worker hace `Statement.deleteMany` **por páginas** (`pageSize`, default **1000**)
+y se re-encola hasta que `deletedCount === 0`. Es un borrado duro de Mongo, no un flag. Las cuatro condiciones:
+
+1. **Flag de entorno.** `ENABLE_STATEMENT_DELETION` (default `true`) se chequea en **la API, el worker y el
+   scheduler**. En `false`, la API rechaza con error, pero **el worker descarta el job en silencio** (`jobDone()` sin
+   trabajo y sin error).
+2. **Ventana UTC.** `batchDeleteWindowUTCHour` / `…UTCMinutes` / `…DurationSeconds` (default **3600 s**) en
+   `SiteSettings`. Fuera de ventana el worker **abandona el job y no lo re-encola**. Lo rescata el **scheduler del
+   CLI**, que al inicio de la ventana siguiente re-publica todo `{done:false, processing:false}` — así que
+   **el proceso scheduler es una dependencia de cumplimiento, no un detalle de despliegue**: sin él, un pedido hecho
+   fuera de ventana no se reintenta nunca. Con hora y minuto en `null` (el default) `inWindow` devuelve `true`, o sea
+   que de fábrica la ventana está siempre abierta.
+3. **`done: true` NO significa «borrado».** Tres caminos marcan el job como terminado **sin borrar nada**: filtro
+   imparseable, filtro vacío y `NoAccessError` de scope — los tres llaman `markDone` y dejan `deleteCount` en `null`.
+   **Para evidenciar un borrado hay que comparar `deleteCount` contra `total`,** no leer `done`.
+4. **`terminate` no es un rollback.** `POST /batchdelete/terminate/:id` pone `done: true` y detiene las páginas
+   siguientes; **lo ya borrado queda borrado.**
+
+**Progreso consultable, no notificado.** El documento `BatchDelete` expone `total`, `deleteCount`, `processing` y
+`done` — o sea **se puede sondear**, pero **no hay evento, webhook ni callback de finalización**. Es exactamente la
+misma forma que el pase 19 encontró en Moodle, y confirma el diagnóstico de **P40** por el otro extremo de la cadena.
+
+### 🔴 Ralph: el backend que elegirías para analítica es el único que no puede borrar
+
+Ralph **no expone borrado en la API del LRS**. Lo que tiene es una operación `DELETE` en la capa de *data backend*,
+**por ID de statement** (`collection.delete_many({"_source.id": {"$in": batch}})`) — así que para cumplir el art. 17
+hay que **primero consultar** los statements del alumno y **después** pasar esos IDs a un `write`. No existe un
+«borrar donde actor = X». Y el detalle que decide una arquitectura:
+
+| Backend de Ralph | `OperationType.DELETE` |
+|---|---|
+| MongoDB | ✅ soportado (`mongo.py:285`) |
+| Elasticsearch | ✅ soportado (`es.py:397`) |
+| **ClickHouse** | 🚫 **declarado en `unsupported_operation_types`** (`clickhouse.py:128-131`), junto con `APPEND` y `UPDATE` |
+
+El docstring lo dice textual: *«BackendParameterException: If the `operation_type` is `APPEND`, `UPDATE` or `DELETE`
+as it is not supported»*. **ClickHouse es el backend orientado a analítica** —el que se elige para learning analytics
+a escala— **y es el que no puede borrar.** La elección de backend de Ralph es una decisión de cumplimiento, y en esta
+KB no estaba escrita.
+
+### «No archivado» no es lo mismo que «mantenido»: el estado real de Learning Locker
+
+Learning Locker **no está archivado** y su README no tiene aviso de fin de vida — habla de oferta comunitaria y
+comercial de Learning Pool (585 ★, 294 forks, GPL-3.0, verificado vía WebFetch el 2026-10-01). Pero
+**`git log` dice que el código no se mueve desde el 2021-11-16**, y `HEAD` coincide con el tag **v7.1.1**, el último.
+Son casi **cinco años**. La capacidad de borrado existe y funciona; el software que la implementa no recibe
+mantenimiento. **Las dos cosas hay que decirlas juntas**, y es la contracara de la regla del pase 8: ahí fue *leer el
+`LICENSE`, no el badge*; acá es **leer el `git log`, no el banner de archivado**.
+
+### La lección de método, que es la quinta de esta serie y la más cara hasta ahora
+
+Pase 5 — buscar la pieza técnica, no la categoría. Pase 7 — buscar la palabra del mercado, no la del paper. Pase 8 —
+buscar por quién es el alumno. Pase 9 — buscar el final del recorrido, no el principio. **Pase 21 — leer el código, no
+la documentación.**
+
+El gap 33 nació en el pase 6 y sobrevivió hasta el 20 con una nota de límite escrita por la propia KB
+(`foundations.md`): *«El "no" de `lrsql` y Ralph es ausencia en la documentación publicada, no [ausencia en el
+código]»*. **La nota estaba bien y nadie la ejecutó durante catorce pasadas.** El costo no fue un repo que faltaba:
+fue **vender a un cliente la ausencia de una capacidad que el producto recomendado tenía**, y construir sobre esa
+ausencia una tendencia (**49**), un gap (**33**), un patrón (**P40**) y un argumento de mercado en EMEA y LATAM.
+**Un gap declarado sobre documentación no es un gap: es una tarea de lectura pendiente.**
+
 ## 2026-10-01 (pase 20) — el repo de testing de conformidad más grande de esta capa es MIT, tiene 2.900 ★ y lo mantiene un gobierno; el catálogo que lo acompaña cubre derecho, medicina y finanzas y no educación
 
 **Diez repos nuevos, verificados uno por uno vía WebFetch el 2026-10-01.** Ninguno se presenta como educativo, y es

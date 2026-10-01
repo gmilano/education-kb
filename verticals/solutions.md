@@ -13,7 +13,7 @@ updated: 2026-10-01
 
 ## Plataformas recomendadas
 
-11 plataformas reales verificadas, más 4 en la capa SIS y **1 en la capa de autograding agregada en el pase 5**: 3 de SIS se agregaron en la segunda pasada del 2026-09-30 y **GegoK12 en la tercera**. El equivalente educativo de "Odoo para ERP" es **Moodle**: dominante, extensible, y desde 2026 con subsistema AI nativo.
+**12** plataformas reales verificadas (**ILIAS** entra en el pase 21), más 4 en la capa SIS y **1 en la capa de autograding agregada en el pase 5**: 3 de SIS se agregaron en la segunda pasada del 2026-09-30 y **GegoK12 en la tercera**. El equivalente educativo de "Odoo para ERP" es **Moodle**: dominante, extensible, y desde 2026 con subsistema AI nativo.
 
 | Plataforma | Licencia | URL | Stack | Caso de uso | Nota AI |
 |------------|----------|-----|-------|-------------|---------|
@@ -27,6 +27,7 @@ updated: 2026-10-01
 | **Frappe LMS** | AGPL-3.0 | https://github.com/frappe/lms | Python (Frappe) | LMS liviano sobre el stack Frappe | Si el cliente ya usa ERPNext, comparte stack y modelo de datos |
 | **OpenEduCat** | LGPL-3.0 | https://github.com/openeducat/openeducat_erp | Python (Odoo) | **ERP educativo**: admisiones, matrícula, asistencia, exámenes, biblioteca | Es literalmente el Odoo de educación (corre como módulos Odoo). Cubre el lado administrativo que un LMS no toca |
 | **BigBlueButton** | LGPL-3.0 | https://github.com/bigbluebutton/bigbluebutton | JavaScript/Node + Scala | Aula virtual en tiempo real: audio, video, pizarra, screen sharing | Fuente de transcripciones y señales de engagement para agentes de analítica |
+| **ILIAS** | GPL-3.0 | https://github.com/ILIAS-eLearning/ILIAS | PHP | LMS maduro de referencia en **DACH** (universidades y administración pública alemanas, suizas y austríacas); rama `release_11`, **76.385 commits**, 506 ★ / 426 forks | **Agregado en el pase 21.** Sin subsistema AI nativo comparable al de Moodle: se integra por LTI. 🔴 **Su propio Feature Wiki documenta el agujero de P40**: al borrar un objeto xAPI/cmi5, el dato personal de los *statements* **persiste en el LRS** y ILIAS *«no tiene forma de borrar datos en el LRS»* (⚠️ fuente secundaria: `docu.ilias.de` está bloqueado por el proxy) |
 | **Richie** | MIT | https://github.com/openfun/richie | Python/Django | CMS de portal educativo: catálogo, marketing de cursos, SEO | MIT. Complementa un LMS; es la capa pública de descubrimiento |
 
 
@@ -72,19 +73,29 @@ base. Lo que ya se envió al proveedor está fuera del alcance del Privacy API, 
 siete plugins de proveedor.»* Ésa es la frontera, y conviene escribirla en el expediente (**P35**) en vez de descubrirla
 en una auditoría. Ver la tendencia **48** y el patrón **P39**.
 
-### Y el eslabón de telemetría de esta misma pila no borra — matriz para elegir LRS
+### 🔴 El eslabón de telemetría SÍ borra — matriz corregida en el pase 21, leyendo el código de los tres LRS
 
-| LRS | Licencia | ★ | ¿Borrado soportado y documentado? |
-|---|---|---|---|
-| **SQL LRS (`lrsql`)** | **Apache-2.0** ✅ | 144 | 🚫 **No** |
-| **Ralph** | **MIT** ✅ | 51 | 🚫 **No** |
-| **Learning Locker** | **GPL-3.0** ⚠️ | 584 | ✅ **Sí** (API especial) — ⚠️ no verificada por esta KB |
+> **Esta matriz decía lo contrario hasta el pase 20, y era el dato más consultado de este archivo.** Se rehizo
+> clonando los tres repos y leyendo el código fuente, no la documentación. **Dos de las tres filas cambian.**
 
-Y arriba de los tres: **el estándar xAPI / IEEE 9274.1.1 no define una operación de supresión** — define *voiding*, que
-marca sin borrar. **Consecuencia para la elección de plataforma, que es lo que decide este archivo:** si el proyecto
-tiene obligación de supresión (art. 17 del GDPR, **AB 1159**, Ley 21.719 chilena), el LRS permisivo **no la cumple de
-fábrica** y hay que cotizar la intervención en el almacén como alcance propio (**P40**), o asumir copyleft. Ver el
-**gap 33**.
+| LRS | Licencia | ★ | ¿Borra? | Granularidad | Lo que hay que configurar o saber |
+|---|---|---|---|---|---|
+| **SQL LRS (`lrsql`)** | **Apache-2.0** ✅ | 144 | ✅ **Sí — el mejor de la capa** | **por `actor-ifi`** (el alumno), cascada sobre 7 tablas, transaccional | ⚠️ **viene apagado**: `LRSQL_ENABLE_ADMIN_DELETE_ACTOR=true`. No devuelve conteo ni deja auditoría (**gap 36**) |
+| **Ralph** | **MIT** ✅ | 51 | ⚠️ **No en la API del LRS** | **por ID de statement**, vía *data backend* — hay que consultar primero | 🔴 **con backend ClickHouse es imposible**: declara `DELETE` como no soportado. Con Mongo o Elasticsearch, sí |
+| **Learning Locker** | **GPL-3.0** ⚠️ | 585 | ✅ **Sí**, confirmado por código | **por filtro** de statements | ⚠️ código **congelado desde el 2021-11-16**; flag `ENABLE_STATEMENT_DELETION`; ventana UTC; **`done:true` no significa borrado** |
+
+**Lo que sigue siendo cierto, y es lo único que hay que advertirle al cliente:** **el estándar xAPI / IEEE 9274.1.1 no
+define una operación de supresión** — define *voiding*, que marca sin borrar. Así que **todo borrado de esta tabla es
+extensión propia de cada implementación**: funciona, pero **no es portable entre LRS** y hay que escribirlo en el
+contrato como dependencia de producto, no como conformidad con el estándar.
+
+**Consecuencia para la elección de plataforma, que es lo que decide este archivo, y cambió de signo.** Si el proyecto
+tiene obligación de supresión (art. 17 del GDPR, **AB 1159** operativa el 2027-07-01, Ley 21.719 chilena):
+**elegir `lrsql` y encender el flag** — es la opción permisiva, la más granular y la única que borra por identidad del
+alumno en una sola llamada. Lo que hay que cotizar **no es el borrado**, es el **expediente de evidencia** (gap 36) y
+el **disparador desde el LMS** (**P40**), que sigue sin existir en ninguno de los tres. **Si el cliente pide
+ClickHouse para analítica, el borrado deja de ser posible por esa vía** y hay que decidirlo antes de la arquitectura,
+no después. Ver el **gap 33** (cerrado por refutación), el **gap 36** y **P44**.
 
 ## Capa SIS — el lado administrativo, verificado 2026-09-30 (pases 2 y 3)
 

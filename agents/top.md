@@ -15,6 +15,19 @@ updated: 2026-10-01
 **37 filas = 35 agentes + 2 bibliotecas de skills.** Ordenados por stars. El conteo se hizo a mano en el pase 19 y
 se explica abajo, porque es la cuarta vez que esta KB se pelea con este número.
 
+> *Pase 21 del 2026-10-01:* **la tabla principal sigue en 37 filas, y es el tercer pase consecutivo que no agrega
+> agentes a propósito.** Este pase ejecutó la acción que el pase 19 dejó escrita como «la pregunta de mayor rendimiento»
+> y que el pase 20 no tomó: **confirmar el borrado en la capa de telemetría (gap 33)**. Se ejecutó **clonando los tres
+> LRS y leyendo el código fuente**, y 🔴 **el gap 33 se cierra refutado**: `lrsql` (**Apache-2.0**), el almacén que esta
+> KB recomienda como default para **P1**, **P10**, **P14** y **P15**, expone `DELETE /admin/agents` —borrado **por
+> `actor-ifi`**, en cascada sobre 7 tablas, transaccional— y **viene apagado de fábrica**. Durante catorce pasadas esta
+> KB afirmó lo contrario **leyendo documentación en vez de código**, y tenía la nota de límite escrita al pie que lo
+> advertía. Lo que queda abierto es la **evidencia** (**gap 36**, el más chico y upstreameable de esta KB) y el
+> **disparador LMS→LRS** (**P40**), no la capacidad. Entra **ILIAS** a `verticals/solutions.md`, cuyo Feature Wiki
+> documenta ese mismo agujero por escrito. Se reverificó **DeepTutor** de primera mano (**40.6k ★**, Apache-2.0,
+> **v1.6.12** del 2026-09-27), coincidente con el pase 20. Ver las tendencias **54**, **55** y **56**, el **gap 36** y
+> el patrón **P44**.
+
 > *Pase 20 del 2026-10-01:* **no se agregó ninguna fila a la tabla principal — la tabla sigue teniendo 37 filas**, y
 > eso es deliberado. Este pase no buscó tutores: buscó **la máquina que prueba que un tutor cumple**, que es lo que
 > esta KB viene prometiendo en `P4`, `P10`, `P11`, `P17` y `P39` desde el pase 4 **sin tener registrada una sola
