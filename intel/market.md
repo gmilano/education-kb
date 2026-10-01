@@ -567,6 +567,44 @@ superior en North America eso significa que **la infraestructura ya está instal
 y lo que falta encima es exactamente lo que esta región **no puede comprar cerrado** por la prohibición de decisión
 automatizada: **feedback formativo con evidencia y humano en el lazo**. Ver el patrón **P29**.
 
+#### Agregado en el pase 14 del 2026-10-01 — la sesión legislativa tiene número consolidado, y el currículo estatal ya está publicado como API con licencia Apache
+
+**El número de la sesión 2026, consolidado:** **134 proyectos de ley sobre AI en educación introducidos en 31
+estados.** El pase 13 registró la sesión con cifras parciales; esta es la cifra de la sesión completa, y agrupa en
+tres ejes que importan distinto para una propuesta:
+
+- **Privacidad del dato del alumno:** California e Idaho **prohíben usar datos de alumnos para entrenar modelos** y
+  exigen protecciones específicas para herramientas con AI.
+- **Uso en el aula:** Oklahoma y Maryland **exigen supervisión humana y prohíben que la AI tome decisiones de alto
+  impacto sobre un alumno.** Es la misma prohibición que el pase 11 identificó como «la regulación de North America
+  prohíbe exactamente el producto que la región más compra», y ahora tiene dos estados más nombrados.
+- **Currículo:** Georgia y Mississippi **exigen créditos de computación que incluyan AI** a partir de fines de la década.
+
+**Lo institucional nuevo de la ventana:**
+
+- **Nueva York publicó guía preliminar en marzo de 2026 con un *Traffic Light Framework*** y un *Playbook* completo
+  previsto para junio de 2026. Es el distrito escolar más grande de EE. UU.: su marco se copia.
+- **Maryland tiene piloto de tutoría K-12 en curso** midiendo valor instruccional con **Khanmigo**, con **~4.350
+  alumnos en dos condados**. Es una de las pocas mediciones públicas de efecto de un tutor AI a escala de estado.
+- **Agosto de 2026: alumnos de los 50 estados produjeron un marco nacional** de uso responsable de AI en escuelas
+  (AASA). Para una propuesta, es material de legitimación poco habitual: el *stakeholder* que normalmente no firma.
+- **60% de los docentes dice que su distrito no le aclaró la política de AI**, y **93% de los educadores afirma que
+  hace falta regulación.** La brecha entre el mandato escrito (ver patrón **P7**) y lo que llega al aula sigue abierta.
+
+#### 🔴 Y el activo curricular de la región ya está publicado, con licencia apta para uso comercial
+
+El pase 13 dejó los estándares estatales de EE. UU. como candidato **sin verificar** del gap 19. **Verificado:**
+[`commonstandardsproject/api`](https://github.com/commonstandardsproject/api) — **Apache-2.0, 44 ★** — publica los
+estándares académicos de **los 50 estados** más organizaciones, distritos y escuelas, en JSON pensado para proveedores
+K-12, con **API en vivo** y alta de claves.
+
+**Lo que esto cambia en una propuesta de North America:** el eje curricular de los 50 estados **no es alcance a
+cotizar**. La alineación de material a estándar estatal —que es exactamente lo que el mandato de política distrital
+del pase 12 vuelve exigible— parte de un dato Apache-2.0 que ya existe. Y si el cliente necesita **publicar** su
+propio marco de forma interoperable, la capa CASE del mismo pase (`OpenCASE`, Apache-2.0, certificado 2026-02-17) lo
+sirve con conformidad auditable. **La combinación es la base del patrón P31.**
+
+
 ### EMEA
 
 **Contexto.** Regulación primero, adopción después — lo inverso a Norteamérica. La fecha de aplicación de sistemas de alto riesgo del Annex III del EU AI Act (que **incluye AI en evaluación**) se corrió de 2026-08-02 a **2027-12-02** por el acuerdo del Digital Omnibus on AI. Las escuelas quedan responsables de auditar el uso de AI. Casos que caen en alto riesgo: **corrección automática de exámenes, aprendizaje adaptativo, proctoring y predicción de deserción** — o sea, casi todo lo interesante. La Comisión Europea con la OCDE y aval del G7 publicó un borrador de AI Literacy Framework para primaria y secundaria.
@@ -761,6 +799,49 @@ produce la propuesta EMEA más limpia de esta KB: **la infraestructura ya está 
 y lo que el cliente necesita comprar es el expediente de conformidad sobre ella** —gestión de riesgo, documentación
 técnica, supervisión humana demostrable— que es justamente el entregable del patrón **P4** aplicado al **P29**. No hay
 que migrar nada: hay que volver auditable lo que ya corre.
+
+#### Agregado en el pase 14 del 2026-10-01 — el reloj europeo ya está en manos de la autoridad, y el artefacto curricular más rico del mundo es inglés y tiene 0 estrellas
+
+**Lo regulatorio, con la precisión que esta capa exige:**
+
+- **Desde el 2026-08-02 la AI Office y las autoridades nacionales están aplicando el AI Act.** No es una fecha futura:
+  la estructura de aplicación está operativa.
+- **El *Digital Omnibus on AI* entró en vigor en julio de 2026** y es el instrumento que corrió los plazos de los
+  sistemas de alto riesgo. La KB ya registra el vencimiento del **Anexo III en 2027-12-02** (ver tendencia 25); esto
+  confirma el instrumento, no cambia la fecha.
+- **La clasificación no cambió:** los sistemas de AI usados en educación y formación profesional que **determinan
+  acceso, evalúan resultados de aprendizaje o influyen en la trayectoria educativa** de una persona caen de lleno en
+  alto riesgo, con gestión de riesgo, gobernanza de datos, supervisión humana, transparencia y evaluación de
+  conformidad **antes** del despliegue.
+- **El estado real del mercado es pre-conformidad:** la mayoría de las instituciones está en modo piloto, no en
+  cumplimiento pleno. La adopción empresarial en la UE es de **19,95%** y **70,89% de las organizaciones declara falta
+  de expertise** como barrera. **Esa barrera es el *servicio*, no el obstáculo.**
+- **Alemania tiene compromiso de inversión en AI de €20.000 millones (2025-2030)**, y los nórdicos (Suecia, Dinamarca,
+  Finlandia, Noruega) están por encima del promedio UE en adopción.
+- **UNESCO** (*Guidance for Generative AI in Education and Research*) y los **Principios de AI de la OCDE** son el
+  marco que la mayoría de los ministerios europeos cita en sus estrategias nacionales: material de encuadre útil para
+  una propuesta de ministerio.
+
+#### 🔴 Y el hallazgo del pase para EMEA: Inglaterra publicó el artefacto pedagógico más caro de reproducir del mundo, con licencia comercial
+
+[`fh-yarbouh/oak-curriculum-ontology`](https://github.com/fh-yarbouh/oak-curriculum-ontology) — **OGL-3.0** (datos) +
+**MIT** (código), **0 ★** — es la ontología del currículo de Oak National Academy alineada al *National Curriculum for
+England (2014)*, y contiene:
+
+**50.948 *key learning points*, 11.207 *misconceptions*, 7.432 requisitos de conocimiento previo, 12.517 *pupil lesson
+outcomes*, 13.012 *keywords*, 160 *threads* de progresión transversal, 12 materias** — con 31 clases, 75 propiedades y
+**38 *shapes* SHACL** de validación, en Turtle, JSON-LD, RDF/XML, N-Triples, SQLite y JSONL de grafo.
+
+**Las 11.207 *misconceptions* son el dato comercial.** Un *key learning point* se puede derivar de un documento
+oficial con un *script*. **Saber qué se equivoca típicamente un alumno en cada punto del currículo no se deriva de
+nada: se construye con docentes, materia por materia.** Es conocimiento de diagnóstico pedagógico, es lo que
+distingue un tutor que corrige de uno que responde, y **es lo que ningún modelo puede inventar sin alucinar.**
+
+**Está publicado con licencia que permite uso comercial, con atribución, y tiene 0 estrellas.** EMEA sigue siendo la
+región que produce la capa que mide y acredita (gap 3) — y este pase agrega que **también produce la que diagnostica**,
+con el mismo problema de siempre: nadie lo está mirando. Es la base del patrón **P31** y el insumo que le faltaba a
+**P8** (fábrica de lecciones en la voz del docente) para dejar de depender de prompt y pasar a depender de datos.
+
 
 ### APAC
 
@@ -999,6 +1080,54 @@ escala real y bilingüe, y encaja sobre el patrón **P26** (agente docente confo
 con supervisión humana obligatoria y **no apto para despliegue comercial sin validación extensa**. **Se cita como
 evidencia; no se cotiza como componente.** 🔴 La cifra de 1.043 docentes viene de literatura secundaria y del sitio del
 proyecto, **no** de un documento del Gobierno de Karnataka.
+
+#### Agregado en el pase 14 del 2026-10-01 — la región tiene cifra propia y es la que más crece; y hay que corregir lo que esta KB dijo sobre Taiwán
+
+**La cifra regional, que esta KB no tenía desagregada así:** APAC es **la región de mayor crecimiento** del sector,
+con **35,3% de CAGR**, un mercado estimado en **US$ 2.850 millones en 2026** y proyección a **US$ 9.700 millones en
+2030**. **86% de los estudiantes en 16 países ya usan AI** en sus estudios y **~66% de las organizaciones de la región
+está pilotando o adoptando sistemáticamente**. Los players nombrados son Google, Microsoft, IBM, Pearson y Byju's, con
+China, India y Japón concentrando el gasto.
+
+#### 🔴 Corrección a la tendencia 11: Taiwán **no** tiene conformidad exigible, y esta KB lo afirmó
+
+La tendencia 11 (actualizada en el pase 11, con el párrafo de segundo orden del pase 13) dice que *«la conformidad exigible hoy está en Asia, no en Europa»* y que *«quien construya
+el expediente en un despliegue coreano o taiwanés llega a diciembre de 2027 con el trabajo hecho»*, listando
+**Taiwán 2026-01-14** junto con Corea del Sur y Vietnam. **La fecha es correcta y la conclusión, para Taiwán, no.**
+
+Verificado: la *AI Basic Act* taiwanesa fue aprobada por el Yuan Legislativo el **2025-12-23** y promulgada el
+**2026-01-14**. Pero:
+
+- **No tiene disposiciones sancionatorias.** No hay penalidades en ninguna parte del estatuto — son 20 artículos de
+  ley marco.
+- **No define qué es «alto riesgo».** El artículo 5 exige etiquetado y advertencias para aplicaciones de alto riesgo,
+  pero **ningún artículo define el término**: la tarea está delegada al **Ministry of Digital Affairs (MODA)** por el
+  artículo 16, y **el marco de clasificación de riesgo todavía no existe** (MODA apuntaba públicamente a Q1 2026).
+- **Lo único específico de educación** es la consideración del interés superior de niños y adolescentes, con
+  etiquetado de productos de alto riesgo.
+
+**Consecuencia operativa, y es lo contrario de lo que la KB sugería:** un despliegue taiwanés **no** produce hoy un
+expediente de conformidad reutilizable, porque **no hay contra qué conformar**. Corea del Sur (Ley Marco de AI en
+vigor desde enero de 2026, con alcance extraterritorial, transparencia, evaluación de riesgo, supervisión humana y
+documentación) y **Vietnam** (ley nacional de AI adoptada en diciembre de 2025, **en vigor desde marzo de 2026**, con
+evaluación automatizada y monitoreo de comportamiento tipificados como alto riesgo) **sí**. **Taiwán es intención
+legislativa, no obligación: hay que seguirlo, no venderlo.**
+
+#### El activo curricular de APAC, y acá la KB tiene un hueco de verificación que declara
+
+Corea del Sur sigue siendo el mejor caso de la capa (`DECK6/korean-elementary-learning-map`, **MIT**, con grafo de
+prerrequisitos y validación SHACL — ver `repos/foundations.md`).
+
+🔴 **Australia no se pudo verificar.** El *Machine Readable Australian Curriculum* (MRAC) de ACARA publica el currículo
+**v9.0** en RDF/XML, manifiestos JSON y endpoint SPARQL (`rdf.australiancurriculum.edu.au/api/sparql`), confirmado por
+fuentes secundarias coincidentes. **Pero `www.australiancurriculum.edu.au` está bloqueado por el proxy de egress de
+esta sesión y los términos de reuso no se pudieron leer.** Es el mismo tipo de hueco que el gap 14 (pase 9) y tiene
+la misma regla: **no cotizar MRAC sin abrir antes los términos de uso de ACARA.** Se declara en vez de callarse
+porque afecta directamente a cualquier propuesta australiana.
+
+**Singapur, que el gap 19 listaba como candidato, no apareció.** Es el único de los cinco candidatos del pase 13 que
+**no** se confirmó: no hay esquema curricular singapurense estructurado y publicado abiertamente.
+
 
 ### LATAM
 
@@ -1314,6 +1443,60 @@ MinTIC, **México** con directrices del INAI más el Plan Nacional, y **Argentin
 todavía — lo que, leído junto con el **2027-09-01 de Vietnam** y el **2027-12-02 del Anexo III**, significa que **LATAM es
 hoy la región donde se puede construir sin expediente de conformidad obligatorio, y la que va a tener que retrofitearlo**.
 Diseñar ahora con el patrón **P4** cuesta lo mismo y evita rehacerlo.
+
+#### Agregado en el pase 14 del 2026-10-01 — la encuesta regional tiene N y es grande; y Brasil es el único país de la región con su currículo nacional como dato abierto verificado
+
+**El dato de adopción con muestra, que es lo que faltaba:** la encuesta *AI in Higher Education LATAM 2026* del
+Digital Education Council reúne **más de 30.000 respuestas en 29 instituciones de educación superior** de la región:
+
+- **92% de los estudiantes y 79% del cuerpo docente** usan AI activamente.
+- **88% del cuerpo docente declara un uso «mínimo» a «moderado»**: la adopción es ancha y **superficial**.
+- **76% del cuerpo docente** teme dependencia excesiva del alumno; **70%** se preocupa por sesgo y exactitud.
+- **Sólo 30% de los estudiantes** dice que el uso institucional de AI cumple sus expectativas.
+
+**Esa es la tijera del pase 13 medida de nuevo con otra fuente y otro N, y en el mismo sentido:** no hay problema de
+adopción en LATAM, hay **problema de gobernanza y de profundidad de uso**. El 88% de uso superficial y el 30% de
+satisfacción institucional son, juntos, la mejor justificación comercial de los patrones **P13** y **P27**: lo que
+falta no es que la gente use AI, es que la institución la use **bien y de forma defendible**.
+
+**Lo institucional de la ventana:**
+
+- **UNESCO lanzó el 14 de abril el Observatorio de AI en Educación para América Latina y el Caribe**, plataforma
+  regional para apoyar a los Estados en integrar AI en sus sistemas educativos, y **reforzó su alianza con CENIA**
+  (Chile) con foco en educación.
+- **Latam-GPT se está poniendo a disposición de los Ministerios de Educación** y es herramienta declarada del
+  Observatorio. Sigue siendo **modelo fundacional, no framework de tutoría** — la lectura del gap 2 no cambia.
+- **Los marcos regulatorios avanzan a velocidades distintas:** proyecto de ley de AI en Brasil, marco en Chile,
+  **CONPES 4144 de Colombia (política nacional de AI, febrero de 2025)** y reglas sectoriales en México. **Ninguna
+  jurisdicción de LATAM tiene todavía educación tipificada como alto riesgo con fecha exigible**, a diferencia de
+  Corea del Sur y Vietnam. Eso es una ventana, no una carencia: se puede construir el expediente antes de que obligue.
+
+#### 🔴 Y el hallazgo del pase para LATAM: Brasil publicó su currículo nacional como dato abierto verificado, y es el único de la región
+
+El gap 19 y el patrón P26 decían, textualmente, que *«la BNCC de Brasil es el equivalente obvio y nadie verificó si
+está publicada en formato estructurado»*, y que si no lo estaba, construirla era *«exactamente el tipo de aporte que
+el gap 2 recomienda»*. **Verificado, y está publicada:**
+
+- [`bncc-dev/bncc-dados`](https://github.com/bncc-dev/bncc-dados) — **MIT** (código) + **CC BY 4.0** (datos), **19 ★**:
+  **1.721 aprendizagens** en JSON, SQLite y CSV (1.580 de educación básica + **141 de Computação**), con
+  **proveniencia por registro**, pipeline de extracción reproducible y verificación carácter por carácter contra el
+  documento oficial del MEC.
+- [`dfdb76/bncc-mcp`](https://github.com/dfdb76/bncc-mcp) — **MIT**, **14 ★**: servidor **MCP** con cinco
+  herramientas que expone **1.717 habilidades** y, lo que más importa, **las 396 habilidades priorizadas por el Mapa
+  de Foco del Instituto Reúna** con su capa pedagógica.
+
+**Lo que esto cambia para la región, en dos frases.** Primero: **LATAM tiene, por fin, una pieza de currículo
+nacional que es permisiva, está verificada y tiene un puente MCP a agentes** — y es la que el gap 15 decía que no
+existía en ninguna región. Segundo: **Brasil es el único.** Se buscó en español currículo nacional estructurado de
+México, Colombia, Argentina, Chile y Perú: **nada.** Eso convierte a `bncc-dados` en **modelo replicable con autoría
+local**, que es la recomendación del gap 2 con un ejemplo concreto en la mano: el pipeline existe, es MIT, y
+replicarlo para otro país es trabajo de extracción verificable, no de investigación.
+
+⚠️ **Y la contracara, que es la del gap 2 por tercera vez:** la pieza pedagógicamente más fina que LATAM produjo en
+este pase —`vilcaaguilerandrea-oss/carrera-lectora`, fluidez lectora para 1.º-4.º básico en Chile, con pedagogía
+intercultural y procesamiento en el dispositivo— **no tiene licencia, así que no se puede usar.** Es el vacío más
+barato de cerrar de esta KB después del gap 20: **no hay que construir nada, hay que pedir una licencia.**
+
 
 ## Posicionamiento Globant
 

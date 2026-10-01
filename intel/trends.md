@@ -131,6 +131,21 @@ Para un studio esto es la mejor forma de entrada que hay en EMEA ahora mismo: al
 
 **Consecuencia de segundo orden, que importa más a mediano plazo:** los 16 meses de gracia europeos llegan justo cuando **APAC pone tres regímenes en vigor** (Corea del Sur enero 2026, **Taiwán 2026-01-14**, y **Vietnam con evaluación automatizada y monitoreo de comportamiento tipificados como alto riesgo**). La secuencia se dio vuelta respecto de lo que esta KB asumía en los pases 1 y 2: **la conformidad exigible hoy está en Asia, no en Europa.** Quien construya el expediente en un despliegue coreano o taiwanés llega a diciembre de 2027 con el trabajo hecho y reutilizable.
 
+> 🔴 **CORREGIDO EN EL PASE 14 DEL 2026-10-01 — Taiwán no cuenta, y este párrafo lo contaba.** La afirmación de arriba
+> lista **tres** regímenes «en vigor» y recomienda construir el expediente «en un despliegue coreano **o taiwanés**».
+> **Para Taiwán es incorrecto, y la fecha 2026-01-14 —que es correcta— lo hace parecer exigible.** Verificado: la
+> *AI Basic Act* taiwanesa fue aprobada por el Yuan Legislativo el **2025-12-23** y promulgada el **2026-01-14**, pero
+> **(a)** son **20 artículos de ley marco sin ninguna disposición sancionatoria**; **(b)** el artículo 5 exige etiquetar
+> las aplicaciones de alto riesgo pero **ningún artículo define «alto riesgo»**: la tarea está delegada al **MODA** por
+> el artículo 16 y **el marco de clasificación de riesgo todavía no existe** (MODA apuntaba a Q1 2026); **(c)** lo único
+> específico de educación es la consideración del interés superior de niños y adolescentes.
+>
+> **Consecuencia operativa, y es la inversa de lo que el párrafo recomienda:** un despliegue taiwanés **no** produce hoy
+> expediente de conformidad reutilizable, porque **no hay contra qué conformar**. **Corea del Sur y Vietnam sí** —el
+> coreano con alcance extraterritorial, evaluación de riesgo, supervisión humana y documentación desde enero de 2026;
+> el vietnamita con **evaluación automatizada y monitoreo de comportamiento tipificados como alto riesgo**, en vigor
+> desde marzo de 2026—. **Los regímenes exigibles de APAC son dos, no tres. Taiwán se sigue, no se vende.**
+
 > **Actualizado en el pase 11 del 2026-10-01 — identificadores citables.** El instrumento es el **Reglamento (UE) 2026/1744**: propuesto por la Comisión el **2025-11-19**, aprobado por el Parlamento Europeo el **2026-06-16**, adoptado por el Consejo el **2026-06-29**, **en vigor el 2026-07-27**. Modifica, entre otros, los artículos **9, 17, 18, 28, 43 y 50** del Reglamento (UE) 2024/1689. La fecha del Anexo III *stand-alone* es **2027-12-02** y la del alto riesgo embebido en productos regulados, **2028-08-02**. Ver la tendencia **25** para la tabla completa y el nivel de evidencia.
 
 ## 12. La seguridad pedagógica se volvió medible, y la métrica que importa no es la exactitud (agregado 2026-09-30, pase 5)
@@ -651,6 +666,98 @@ AI* docente sin registrar, sin política de datos y sin criterio de evaluación.
 el **inventario + la política + el criterio de evaluación pedagógica** (patrones **P10**, **P11** y **P13**). Es un
 proyecto corto, repetible en 19 países, y es la puerta de entrada al resto.
 
+## 33. La capa curricular tenía un estándar de interoperabilidad desde antes que esta KB existiera, y catorce pasadas lo saltearon (agregado 2026-10-01, pase 14)
+
+El gap 19 trataba los esquemas curriculares nacionales como artefactos sueltos a coleccionar país por país. Esa era
+la mitad del problema. La otra mitad: **1EdTech publica CASE® (*Competencies and Academic Standards Exchange*), el
+estándar que define cómo se publica, versiona e intercambia un marco de competencias o de estándares académicos, y
+tiene implementaciones open source certificadas.**
+
+El pase 9 abrió la familia 1EdTech por las **credenciales** (Open Badges, CLR) y no miró los **estándares**, que son
+la misma familia de especificaciones. Catorce pasadas después, la capa aparece completa:
+
+| Repo | Licencia | ★ | Conformidad |
+|---|---|---|---|
+| `opensalt/opensalt` | MIT | **45** | ⚠️ estable 3.2.0 (sept 2023) → **CASE v1.0** |
+| `1EdTech/OpenCASE` | Apache-2.0 | **9** | ✅ **certificado CASE Service v1.0 y CASE v1.1 — 2026-02-17** |
+| `infosign/compeito` | Apache-2.0 | **3** | ✅ *Provider* CASE v1.1 |
+| `conform-ed/conform-ed` | MIT | **2** | ✅ **once estándares a la vez** |
+
+**Y es la tercera vez que esta KB mide el mismo fenómeno: la pieza con más estrellas es la que está más atrás del
+estándar.** OpenSALT tiene 45 ★ y su último estable es de septiembre de 2023 contra CASE v1.0; OpenCASE tiene 9 ★ y
+está certificado contra v1.1 con fecha de febrero de 2026. El pase 10 lo midió con Sunbird (41 ★ sirviendo 180
+millones de alumnos) y el pase 11 con Apereo. **Deja de ser anécdota y pasa a ser regla de método: en capas de
+estándar el criterio de selección es la fecha de certificación, no la estrella.**
+
+**La consecuencia de arquitectura, que es lo que importa comercialmente:** los cuatro esquemas curriculares
+nacionales verificados se publican cada uno en su formato —RDF el inglés y el coreano, JSON propio el brasileño y el
+estadounidense—. Un cliente no quiere cuatro parsers: quiere un endpoint. **CASE es ese endpoint, y hay dos
+servidores Apache-2.0 que lo sirven.**
+
+---
+
+## 34. La capa donde el alumno habla no existía en esta KB, y es la que decide si un tutor sirve en primaria (agregado 2026-10-01, pase 14)
+
+Trece pasadas buscaron por el rol del software, por la capa y por el alumno. **Ninguna buscó por el canal**, y todo
+lo que esta KB tenía asumía un alumno que **escribe**: el notebook del pase 13, el SRS del pase 12, el LRS del pase 6.
+
+**En alfabetización inicial, la medición que usan los sistemas educativos no es un cuestionario: es que el chico lea
+en voz alta y se le midan palabras por minuto y exactitud.** Es la métrica de las evaluaciones de lectura en las
+cuatro regiones, y hasta este pase esta KB —31 agentes, catorce capas— no tenía una sola pieza para capturarla.
+
+La capa, medida:
+
+- **`Halleck45/OpenPronounce` (MIT, 85 ★)** es la única pieza permisiva, educativa y utilizable: evaluación fonema a
+  fonema con Wav2Vec2, PER/WER, confianza por palabra, DTW y prosodia (F0 y energía), **corriendo local sin API key**.
+  Se posiciona explícitamente como la alternativa autoalojada a Azure Pronunciation Assessment.
+- **`kaldi-asr/kaldi` (Apache-2.0, 15.5k ★)** es lo maduro, y es ASR genérico: no sabe nada de pedagogía.
+- **`jimbozhang/speechocean762` (198 ★)** es el corpus de referencia —5.000 oraciones, **mitad niños**— y **no tiene
+  archivo de licencia**.
+- El resto de la capa son *papers*.
+
+**Es el patrón base de esta KB otra vez, con un signo que mejora el caso:** lo maduro es genérico y lo educativo es
+chico, igual que en accesibilidad (pase 8) y en *skills* (pase 12) — pero acá **la pieza educativa chica es MIT y corre
+local**, así que el obstáculo no es la licencia ni la soberanía del dato. Es que nadie la empaquetó para un sistema
+educativo.
+
+**Y hay un hueco de mercado que conviene nombrar con número: ~600 millones de hispanohablantes y lusohablantes sin
+pieza permisiva de evaluación de fluidez lectora.** El corpus de referencia es inglés con L1 mandarín; lo único de
+LATAM (`carrera-lectora`, Chile) no tiene licencia. **Los puntajes publicados sobre `speechocean762` no son
+transferibles a un despliegue en español o portugués sin recalibración**, y eso es alcance y presupuesto propios, no
+un detalle de implementación.
+
+---
+
+## 35. Lo curricular no es copyleft, y esta KB lo venía asumiendo mal (agregado 2026-10-01, pase 14)
+
+Cuatro pases seguidos (8, 9, 10 y 11) encontraron la misma forma: **lo maduro es copyleft, lo permisivo no tiene
+tracción.** Accesibilidad (OptiKey GPL-3.0, Cboard GPL-3.0), interoperabilidad, contenido abierto (donde además
+apareció el agravante NonCommercial), analítica institucional. El gap 19 leyó la capa curricular con ese mismo filtro
+y sacó una conclusión regional: el coreano es MIT y el español CC BY-SA, *ergo* «el artefacto de APAC es mejor
+técnicamente y más barato legalmente», espejo del gap 4.
+
+**Con cuatro artefactos más verificados, el patrón se cae, y en el buen sentido:**
+
+| País | Artefacto | Licencia de datos | Uso comercial |
+|---|---|---|---|
+| Inglaterra | `oak-curriculum-ontology` | **OGL-3.0** | ✅ con atribución |
+| Brasil | `bncc-dados` | **CC BY 4.0** | ✅ con atribución |
+| EE. UU. | `commonstandardsproject/api` | **Apache-2.0** | ✅ |
+| Corea del Sur | `korean-elementary-learning-map` | **MIT** | ✅ |
+| España | `OpenDidactia` | ⚠️ CC BY-SA 4.0 | ⚠️ *share-alike* |
+
+**Hay permisivo apto para uso comercial en las cuatro regiones, y el único *share-alike* es el español.** La
+conclusión útil no es «APAC gana»: es que **la capa curricular es, por licencia, la más limpia de toda esta KB**, y
+que el filtro mental de los pases 8-11 —«si es educativo y maduro, va a ser copyleft»— **produce falsos negativos
+caros** en esta capa.
+
+**La regla nueva que este pase agrega, y vale para toda la KB:** en artefactos de datos, **la licencia del código y
+la del dato son dos licencias distintas y casi nunca coinciden.** `bncc-dados` es MIT en código y CC BY 4.0 en datos;
+`oak-curriculum-ontology` es MIT en código y OGL-3.0 en ontología. Leer sólo el badge del repo —que muestra la del
+código— hace creer que el dato es MIT. **No lo es, y la atribución es una obligación de entregable.**
+
+---
+
 ## Gaps declarados
 
 Huecos confirmados tras buscar, no ausencias por no haber buscado. Un gap informado es información; el silencio se parece demasiado a la cobertura.
@@ -1009,7 +1116,7 @@ Huecos confirmados tras buscar, no ausencias por no haber buscado. Un gap inform
     ⚠️ **La trampa que hay que evitar al cotizar:** el número `4.424` aparece en decenas de esos 110 repos porque **es el mismo dataset portugués de hace una década**. La capa entera está entrenada sobre 4.424 alumnos de una institución europea. Para un cliente de cualquier otra región, eso es un punto de partida metodológico y **no un modelo que se pueda presentar como funcionando**.
 
     **Y la dimensión regional, que reencuadra el gap 2.** Esta capa falta en las cuatro regiones, pero falta distinto: **North America** tiene el mercado y su único aporte open source es de 2018 con licencia irreconocible; **EMEA** tiene la regulación que lo exige y los dos datasets CC BY; **APAC** produce el repo con mejor stack y lo abandona después del hackathon; **LATAM** produce el **método publicado y revisado por pares** —revisión sistemática de 11 estudios 2022-2026 sobre riesgo de evasión en primaria (UFPE), tesis de UNIFEI, estudios de caso en institutos federales con Random Forest y XGBoost, ausentismo como predictor dominante— **y ningún repositorio**. El gap 2 dice que LATAM produce repos sin comunidad; en esta capa produce ciencia sin código. **Son los dos lados del mismo déficit, y juntos dicen que el problema no es regional: es que nadie convierte el resultado en artefacto mantenido.**
-19. **Los esquemas curriculares nacionales existen, son la pieza más cara de construir, y esta KB encontró dos de casualidad en dos pasadas distintas** *(agregado en el pase 11 del 2026-10-01)*. No es un gap de oferta: es un **gap de búsqueda**, y se declara para que la próxima pasada lo cierre a propósito.
+19. ~~**Los esquemas curriculares nacionales existen, son la pieza más cara de construir, y esta KB encontró dos de casualidad en dos pasadas distintas**~~ → **GAP CERRADO EN EL PASE 14 DEL 2026-10-01.** Se ejecutó la acción que este gap pedía (buscar por país, en el idioma del país). **De las cinco candidatas, cuatro existen y están verificadas** —Brasil (`bncc-dados`, MIT+CC BY 4.0), Inglaterra (`oak-curriculum-ontology`, MIT+OGL-3.0, con **11.207 *misconceptions***), EE. UU. (`commonstandardsproject/api`, Apache-2.0, los 50 estados) y Corea del Sur (ya registrada)—; **Australia (MRAC/ACARA) existe pero su licencia no se pudo verificar** (dominio bloqueado por el proxy) y **Singapur no apareció**. Además aparecieron dos cosas que el gap no anticipaba: **el estándar CASE con implementaciones certificadas** (tendencia 33) y **que esta capa no es copyleft** (tendencia 35, que corrige la lectura regional de abajo). El inventario completo está en `repos/foundations.md`. **Lo que queda abierto pasa al gap 23.** El texto original se conserva: **Los esquemas curriculares nacionales existen, son la pieza más cara de construir, y esta KB encontró dos de casualidad en dos pasadas distintas** *(agregado en el pase 11 del 2026-10-01)*. No es un gap de oferta: es un **gap de búsqueda**, y se declara para que la próxima pasada lo cierre a propósito.
 
     Lo que hay, sin haberlo buscado sistemáticamente:
 
@@ -1059,6 +1166,22 @@ Huecos confirmados tras buscar, no ausencias por no haber buscado. Un gap inform
 
     ⚠️ **Los límites, y son los mismos de todo `pedagogy-benchmark`:** mide conocimiento **declarativo** (responder un examen de habilitación), no calidad de intervención con un alumno real; son 12 ★ y 5 commits, así que es vara de medición en un entregable, **no dependencia de producto**; y el paper no se pudo abrir en este pase (`arxiv.org` bloqueado por el proxy), aunque licencia, conteos y composición **sí** están verificados en la página del repo.
 
+
+23. **Ningún ministerio publica su currículo nacional *como* marco CASE, y es el último tramo que falta de la capa que el pase 14 cerró** *(agregado en el pase 14 del 2026-10-01)*. Es el gap que abre el cierre del gap 19, y es chico, concreto y caro de ignorar.
+
+    Los cuatro esquemas curriculares nacionales verificados se publican **cada uno en su propio formato**: RDF/Turtle el inglés y el coreano, JSON propio el brasileño, JSON para proveedores K-12 el estadounidense. Las implementaciones de **CASE** que existen (`OpenCASE` Apache-2.0 certificado v1.1, `compeito` Apache-2.0, `opensalt` MIT) son **herramientas de publicación sin marcos nacionales publicados en ellas**.
+
+    **Nadie cerró el círculo.** El estándar existe, los datos existen, las dos cosas no se tocan — y es exactamente la misma forma del gap 13 (*«ningún agente open source emite ni consume credenciales verificables: el stack del alumno y el stack de la credencial no se tocan»*). **Dos capas distintas, el mismo diagnóstico: la KB tiene las piezas y nadie las conectó.**
+
+    **Por qué es una oportunidad y no una queja:** publicar la BNCC o los estándares de un estado de EE. UU. como marco CASE conforme es trabajo de **días**, no de meses — los datos están en JSON con proveniencia y el servidor es Apache-2.0 con certificación de febrero de 2026. El resultado es un activo reutilizable en todo el país y auditable contra un estándar. Es el patrón **P31**.
+
+24. **La capa de habla y la capa de agente no se tocan: ninguno de los 31 agentes de esta KB tiene voz** *(agregado en el pase 14 del 2026-10-01)*. Se verificó contra la tabla principal de `agents/top.md`, agente por agente: **ni DeepTutor, ni Educhain, ni OpenTutor, ni OpenTutorAI-CE, ni Bloom, ni ninguno de los demás tiene entrada ni salida de voz.**
+
+    Y tampoco existe el puente: **no hay ningún servidor MCP que exponga evaluación de pronunciación o de fluidez lectora**, aunque el patrón está probado en esta misma KB y en este mismo pase (`bncc-mcp`, MIT, expone un currículo nacional completo por MCP).
+
+    **Las dos mitades existen y son permisivas:** `OpenPronounce` (MIT, 85 ★) mide fonema a fonema con prosodia y corre local; los agentes de la tabla saben conversar, planificar y recordar. **Lo que no existe es el servidor MCP de cinco herramientas que los une** — y es, por tamaño de trabajo, comparable al que `bncc-mcp` ya resolvió para currículo con 14 ★.
+
+    **Es, después del gap 20 y del pedido de licencia a `carrera-lectora`, el tercer vacío más barato de cerrar de los veinticuatro declarados**, y el único que habilita una vertical entera que esta KB no puede atender hoy: **alfabetización inicial y enseñanza de idiomas.** Sin voz, un tutor no sirve en los primeros años de escolaridad, que es donde los sistemas educativos de las cuatro regiones ponen la mayor parte del presupuesto de evaluación.
 
 ## Fuentes
 
@@ -1148,6 +1271,75 @@ Capa de telemetría (LRS / xAPI) — agregado en el pase 6, **todo verificado de
 Evaluación — agregado en el pase 6, 🔴 **no verificado de primera mano** (dominios bloqueados por el proxy): L2-Bench (arXiv 2607.08842) · metodología de L2-Bench (arXiv 2603.20088) · `benchmarks.elt.edu.oup.com` · dataset en HuggingFace bajo `OUP/`
 
 Regulación y mercado por región — agregado en el pase 6: [MultiState — AI in Education Legislation: 2026 State Policy Trends](https://www.multistate.us/insider/2026/4/9/how-states-are-regulating-ai-in-education-this-legislative-session) · [NASBE — States Take Next Steps on Governing AI Use in Schools](https://www.nasbe.org/states-take-next-steps-on-governing-ai-use-in-schools/) · [ExcelinEd — State K-12 AI Policy in 2026](https://excelined.org/2026/05/26/state-k-12-ai-policy-in-2026-milestones/) · [Latham & Watkins — AI Regulation in APAC](https://www.lw.com/en/insights/ai-regulation-in-apac-diverging-approaches-across-the-region) · [Xenoss — APAC AI regulations](https://xenoss.io/blog/asia-pacific-apac-ai-regulations) · [UNESCO — Observatory on AI in Education for LAC](https://www.unesco.org/en/articles/unesco-launches-observatory-artificial-intelligence-education-latin-america-and-caribbean) · [Compliance & Risks — LATAM AI legislation](https://www.complianceandrisks.com/blog/shaping-the-future-ai-legislative-initiatives-across-latin-america/) · [IDB — An Enabling Regulatory Framework for AI in LAC](https://publications.iadb.org/publications/english/document/An-Enabling-Regulatory-Framework-for-Artificial-Intelligence-in-Latin-America-and-the-Caribbean.pdf) · [Azumo — AI in Education Statistics 2026](https://azumo.com/artificial-intelligence/ai-insights/ai-in-education-statistics) · [Grand View Research — AI Tutors Market](https://www.grandviewresearch.com/industry-analysis/ai-tutors-market-report) · [EdTech Hub — AI in Education in MENA](https://docs.edtechhub.org/lib/EPJAMMH9/download/BHXDDPBB)
+
+## Nota de método del pase 14 (2026-10-01) — el primer pase que ejecutó la acción que un gap anterior le dejó escrita, y funcionó
+
+Los pases 8 a 13 abrieron una capa nueva cada uno preguntándose qué no se había preguntado todavía. **Este pase no
+tuvo que inventar la pregunta: el gap 19 la había dejado escrita en el pase 11**, con la acción textual *«buscar
+explícitamente `curriculum ontology`, `achievement standards`, `learning map` y `prerequisite graph` por país, en el
+idioma del país, en vez de esperar que aparezcan buscando agentes»*.
+
+**Se ejecutó literalmente, y el rendimiento fue el más alto por búsqueda de los catorce pases:** cuatro de cinco
+candidatas confirmadas, más un estándar de interoperabilidad con cuatro implementaciones que nadie había visto, más
+una corrección de encuadre que afecta a cómo se leyeron cuatro pases anteriores. **La lección de método es que un gap
+bien escrito es más productivo que una pregunta nueva**, y conviene que los próximos pases revisen la lista de gaps
+antes de buscar un ángulo inédito: los gaps **20** (medir las *skills* educativas con los benchmarks que esta KB ya
+tiene), **23** y **24** están escritos con el mismo nivel de detalle y siguen abiertos.
+
+### Lo que este pase buscó por canal y no por rol, y por eso encontró la capa de voz
+
+El segundo hallazgo (capa de habla y lectura oral, tendencia 34) salió de una pregunta distinta y vale registrarla:
+**no «qué hace el software» ni «quién es el alumno», sino «por qué canal entra y sale el trabajo del alumno».**
+Trece pasadas asumieron texto. Preguntado por el canal, aparece que la habilidad más evaluada en los primeros años
+de escolaridad del mundo —leer en voz alta, medida en palabras por minuto y exactitud— **no tenía una sola pieza en
+esta KB.**
+
+### ⚠️ Advertencia 1 — una fecha correcta puede sostener una conclusión falsa, y pasó con Taiwán
+
+El pase 13 escribió que *«la conformidad exigible hoy está en Asia»* y recomendó construir el expediente en un
+despliegue **«coreano o taiwanés»**, listando Taiwán con la fecha **2026-01-14**. **La fecha es correcta: la ley se
+promulgó ese día.** La conclusión no, porque la ley **no tiene sanciones y no define «alto riesgo»** — delega la
+clasificación al MODA y ese marco todavía no existe.
+
+**La trampa es específica y va a volver a pasar:** en seguimiento regulatorio, *promulgada* no es *exigible*, y una
+fecha de promulgación verificada le da a una afirmación una solidez que el contenido de la ley no respalda. **Regla
+para los próximos pases: junto a cada fecha regulatoria hay que registrar (a) si hay régimen sancionatorio y (b) si
+las definiciones operativas están publicadas o delegadas.** Con esos dos campos, Taiwán se habría registrado bien en
+el pase 13. Corregido en la tendencia 11 y en `intel/market.md` → `### APAC`.
+
+### ⚠️ Advertencia 2 — el badge de licencia del repo es la licencia del código, no la del dato
+
+En artefactos de datos las dos licencias son distintas y casi nunca coinciden: `bncc-dados` es **MIT en código y
+CC BY 4.0 en datos**; `oak-curriculum-ontology` es **MIT en código y OGL-3.0 en la ontología**. **Leer sólo el badge
+hace creer que el dato es MIT.** Las dos combinaciones permiten uso comercial, pero **con atribución**, y eso es una
+obligación que viaja al entregable. Es la continuación directa de la trampa que el pase 10 documentó para OER, y
+ahora se declara como regla general de la KB (tendencia 35).
+
+### ⚠️ Advertencia 3 — dos dominios bloqueados por el proxy, y los dos afectan a entregables
+
+- **`www.australiancurriculum.edu.au` bloqueado:** existencia, formatos (RDF/XML, JSON, SPARQL) y versión (9.0) del
+  MRAC están confirmados por fuentes secundarias coincidentes; **la licencia de reuso no se pudo leer**. No cotizar
+  MRAC sin abrir antes los términos de ACARA.
+- **`arxiv.org` bloqueado, igual que en el pase 13:** la literatura de ASR infantil —incluido el caso en bambara
+  (`arXiv 2606.31508`, 55 horas de lectura de 60 niños con *benchmark* público declarado)— **no se pudo verificar en
+  origen** y queda como pista, no como hallazgo. Es la única vía que vimos hacia evaluación de fluidez en lenguas
+  africanas, así que conviene que un pase futuro con otro proxy la abra.
+- **`curl` contra `github.com` devuelve 403 por el proxy, no 404.** La verificación de los catorce repos de este pase
+  se hizo íntegramente vía WebFetch, leyendo estrellas y licencia de la página del repo. **El pase 12 ya dejó escrita
+  esta advertencia y sigue vigente: un 403 no es un repo inexistente.**
+
+### Lo que este pase NO hizo, declarado como tal
+
+- **No agregó ninguna fila a la tabla principal de `agents/top.md`.** El conteo de **31** se mantiene y se verificó.
+  Las piezas nuevas entran como capas al final del archivo, porque no son agentes: son componentes y datos.
+- **No verificó Singapur como ausencia definitiva.** Se buscó y no apareció esquema curricular estructurado y
+  publicado abiertamente; eso es «no encontrado», no «no existe».
+- **No abrió los términos de uso de ACARA** (dominio bloqueado), así que MRAC queda registrado sin licencia verificada.
+- **No midió el efecto pedagógico de ninguna pieza de la capa de voz.** `OpenPronounce` devuelve métricas acústicas
+  (PER, WER, prosodia); **que esas métricas mejoren el aprendizaje de lectura es una hipótesis, no un dato de este
+  pase.** El gap 20 y los benchmarks del pase 4 siguen siendo el camino para medirlo.
+- **No replicó el pipeline de `bncc-dados` para ningún otro país de LATAM.** Se verificó que ninguno lo tiene; que sea
+  replicable es una lectura razonada del pipeline publicado, no una prueba de ejecución.
 
 ## Nota de método del pase 13 (2026-10-01) — trece pasadas buscando por el rol del software, y la pregunta que faltaba era dónde trabaja el alumno
 

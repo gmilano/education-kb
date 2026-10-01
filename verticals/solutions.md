@@ -351,6 +351,63 @@ tiene instalado** es otra cosa.
 Como **capa de retención del alumno** encima de cualquiera de los LMS de esta KB: el LMS acredita, el agente enseña, y
 **Anki es donde el conocimiento se queda** — sin que el cliente opere un servidor más. Ver el patrón **P28**.
 
+## Capa de publicación de competencias conforme a CASE — agregada en el pase 14 del 2026-10-01
+
+Esta es la capa que convierte «tenemos el currículo en un JSON» en «el currículo está publicado en un endpoint que
+cualquier herramienta educativa certificada puede consumir». El estándar es **CASE® (1EdTech)** y hay tres servidores
+open source, uno de ellos certificado este año.
+
+| Plataforma | Licencia | ★ | Stack | Cuándo proponerla |
+|---|---|---|---|---|
+| [`1EdTech/OpenCASE`](https://github.com/1EdTech/OpenCASE) | **Apache-2.0** ✅ | 9 | Servidor + editor visual, multi-tenant | ✅ **Opción por defecto.** Es del organismo de estándares y está **certificado para CASE Service v1.0 y CASE v1.1 (2026-02-17)**. Cuando el entregable tiene que pasar una auditoría de conformidad |
+| [`infosign/compeito`](https://github.com/infosign/compeito) | **Apache-2.0** ✅ | 3 | Python 3.12 / FastAPI / PostgreSQL / HTMX / Docker | ✅ Cuando el equipo del cliente es Python y hay que **importar** marcos existentes: lee CFPackages de OpenSALT y OpenCASE, e importa/exporta CSV compatible OpenSALT |
+| [`opensalt/opensalt`](https://github.com/opensalt/opensalt) | **MIT** ✅ | 45 | PHP / Symfony / MySQL / Docker | ⚠️ Cuando pesa la **autoría y el *crosswalk*** con interfaz madura y el cliente ya es PHP. **Su último estable (3.2.0, sept 2023) apunta a CASE v1.0**; v1.1 está en `develop` |
+
+### 🔴 La regla de selección de esta capa, y contradice el criterio del resto de la KB
+
+**Acá no se elige por estrellas: se elige por fecha de certificación.** OpenSALT tiene **5× más estrellas** que
+OpenCASE y está **una versión mayor del estándar más atrás**. Si el cliente necesita CASE v1.1 —y lo necesita si va a
+interoperar con herramientas certificadas recientes— la elección es OpenCASE o `compeito`, y OpenSALT entra sólo como
+herramienta de autoría.
+
+Es la tercera capa de esta KB donde la popularidad apunta a la pieza equivocada (Sunbird con 41 ★ en el pase 10,
+Apereo en el pase 11). **Conviene tratarlo como regla y no como anécdota.**
+
+### La pieza que vuelve auditable cualquier propuesta de esta capa, y de otras cuatro
+
+[`conform-ed/conform-ed`](https://github.com/conform-ed/conform-ed) — **MIT**, 2 ★. Verifica conformidad contra
+**once** estándares: CASE 1.1, xAPI (1.0.3 e IEEE 2.0), QTI 2.1/2.2/3.0.1, LTI 1.3 con *Deep Linking*, AGS, NRPS y
+*Proctoring*, OneRoster 1.2, Common Cartridge 1.3/1.4, CLR 2.0, Open Badges 3.0, Caliper 1.2, cmi5 y W3C Verifiable
+Credentials 2.0.
+
+**No es una pieza de esta capa: es la pieza de cinco capas de esta KB a la vez** — telemetría (pase 6), credenciales
+y evaluación QTI (pase 9), SIS/OneRoster (pases 2-3) y currículo (este pase). Convierte el *due diligence* de
+interoperabilidad del patrón **P21** de revisión manual en *pipeline* ejecutable. **Con 2 ★ se usa con el commit
+pineado, pero se usa.**
+
+---
+
+## Capa de lectura oral — agregada en el pase 14 del 2026-10-01
+
+No hay una «plataforma» de lectura oral open source desplegable, y conviene decirlo así en vez de inventarla.
+**Lo que hay es un componente y un *toolkit*:**
+
+| Pieza | Licencia | ★ | Rol |
+|---|---|---|---|
+| [`Halleck45/OpenPronounce`](https://github.com/Halleck45/OpenPronounce) | **MIT** ✅ | 85 | **Componente de evaluación.** Se despliega autoalojado como reemplazo de Azure Pronunciation Assessment. Corre local: puntaje, PER/WER, confianza por palabra, DTW y prosodia |
+| [`kaldi-asr/kaldi`](https://github.com/kaldi-asr/kaldi) | **Apache-2.0** ✅ | 15.5k | **Infraestructura ASR.** Para cuando hay que entrenar o adaptar modelos a un idioma o a voz infantil |
+
+### ⚠️ Lo que no hay que prometer en esta capa
+
+- **No hay plataforma.** No existe el «Moodle de la lectura oral». Lo que se propone es un componente dentro del
+  LMS o de la app del cliente, no un sistema llave en mano.
+- **No hay corpus permisivo en español ni en portugués.** El de referencia (`speechocean762`, 198 ★) es inglés con
+  L1 mandarín **y no tiene archivo de licencia**. **No prometer cifras de precisión para un despliegue en LATAM**
+  basadas en resultados publicados sobre ese corpus: hay que recalibrar con datos locales, y eso es alcance y
+  presupuesto propios.
+- **La pieza más fina de la región no se puede usar.** `carrera-lectora` (Chile, 1.º-4.º básico, PPM y exactitud,
+  procesamiento en dispositivo) **no tiene licencia**. No proponerla; a lo sumo, pedir que la pongan.
+
 ## Cómo elegir
 
 | Si el cliente necesita… | Arrancar de |

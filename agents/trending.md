@@ -9,6 +9,74 @@ updated: 2026-10-01
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 > No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
 
+## 2026-10-01 (pase 14) — trece pasadas trataron el aprendizaje como texto: aparece la capa donde el alumno **habla**, y es la que decide si un tutor sirve en primaria
+
+Las trece pasadas anteriores buscaron por el rol del software (agente, tutor, evaluador, predictor), por la capa
+(contenido, telemetría, credencial, práctica) y por el alumno (educación especial). **Ninguna buscó por el canal.**
+Todo lo que esta KB tiene asume que el alumno **escribe**: el notebook del pase 13, el SRS del pase 12, el LRS del
+pase 6, los *skills* pedagógicos del pase 12. Buscado directamente, aparece una capa entera y tiene consecuencias.
+
+### 🔴 El hallazgo del pase: la habilidad que más se evalúa en primaria en el mundo es la lectura oral, y esta KB no tenía una sola pieza para medirla
+
+En los primeros años de escolaridad la medición que usan los sistemas educativos **no es un cuestionario: es que el
+chico lea en voz alta y se le midan palabras por minuto y exactitud.** Es la métrica de las evaluaciones de
+alfabetización inicial en las cuatro regiones. Hasta este pase, esta KB —con 31 agentes y catorce capas— **no tenía
+ninguna forma de capturar, puntuar ni devolver *feedback* sobre voz.**
+
+| Pieza | Licencia | ★ | Qué hace | Utilizable |
+|---|---|---|---|---|
+| [`Halleck45/OpenPronounce`](https://github.com/Halleck45/OpenPronounce) | **MIT** ✅ | **85** | Evaluación de pronunciación **a nivel de fonema** contra el texto esperado. Wav2Vec2 (`facebook/wav2vec2-lv-60-espeak-cv-ft` para fonemas, `wav2vec2-large-960h` para palabras, XLSR por idioma). Devuelve **puntaje 0-100, *phoneme error rate*, *word error rate*, confianza por palabra, distancia acústica por DTW y prosodia (F0 y energía)**. Corre **local, sin API key ni nube** | ✅ **Sí. Es la pieza vendible de la capa** |
+| [`jimbozhang/speechocean762`](https://github.com/jimbozhang/speechocean762) | ⚠️ **sin archivo LICENSE** (ver abajo) | **198** | Corpus de inglés no nativo para *pronunciation scoring*: **5.000 oraciones, la mitad de los hablantes son niños**, L1 mandarín. Puntajes de exactitud, completitud, fluidez y prosodia a nivel fonema, palabra y oración | ⚠️ **Con cautela.** Es el dataset de referencia de la tarea |
+| [`kaldi-asr/kaldi`](https://github.com/kaldi-asr/kaldi) | **Apache-2.0** ✅ | **15.5k** | *Toolkit* de ASR de grado industrial, C++/CUDA. Es la base sobre la que la literatura académica construye los tutores de lectura (holandés, bambara) | ✅ Sí, pero **es infraestructura genérica, no educativa** |
+| [`vilcaaguilerandrea-oss/carrera-lectora`](https://github.com/vilcaaguilerandrea-oss/carrera-lectora) | 🔴 **SIN LICENCIA** | **0** | PWA chilena de fluidez lectora para **1.º a 4.º básico**: 40 textos diferenciados (10 por nivel), mide **PPM y exactitud**, pedagogía intercultural, Web Speech API en el dispositivo, sin registro ni telemetría | 🔴 **No. No es reutilizable** |
+
+### La forma de la capa, y es el patrón base de esta KB otra vez
+
+**Lo maduro es genérico y lo educativo es chico.** Kaldi tiene **15.500 ★** y no sabe nada de pedagogía;
+OpenPronounce tiene **85 ★** y es lo único permisivo que mide lo que un docente necesita; el resto de la capa son
+*papers*. Es exactamente la forma que el pase 8 encontró en accesibilidad y el pase 12 en *skills*, con una
+diferencia que mejora el caso: **acá la pieza educativa chica es MIT y corre local**, así que el obstáculo no es la
+licencia ni la soberanía del dato — es que nadie la empaquetó para un sistema educativo.
+
+### ⚠️ La trampa de licencia del pase, y es la del pase 10 repetida en otra capa
+
+`speechocean762` tiene **198 ★** y su README dice que el corpus está *«available for free download for both
+commercial and non-commercial purposes»*. **No hay archivo `LICENSE` en el repositorio.** El pase 10 documentó
+exactamente esta forma —la licencia declarada en el README no es la licencia del repositorio— y dejó una regla
+operativa. **Se aplica igual acá: una afirmación en prosa del README no es un instrumento de licencia que un
+cliente pueda auditar.** Antes de meter este corpus en un entregable hay que conseguir los términos del titular
+(SpeechOcean) por escrito. **Con 198 ★ y sin `LICENSE`, es la pieza con mejor relación tracción/riesgo mal medido de
+toda esta capa.**
+
+### 🔴 El segundo hallazgo: LATAM vuelve a producir la pieza correcta sin licencia, y van tres
+
+El gap 2 dice, desde el pase 2, que *«LATAM produce agentes educativos, pero ninguno sale de la fase cero… no falta
+interés de constructores, falta masa crítica y gobernanza de proyecto (empezando por poner una licencia)»*. Las dos
+evidencias eran `H1bertto/professor-agent` (MIT, 0 ★) y `ANTONIOALGMAR/StudyAgent` (sin licencia, 2 ★).
+
+**`carrera-lectora` es la tercera, y es la más dolorosa de las tres.** Es pedagógicamente la más fina que vimos de la
+región: 40 textos graduados por nivel, pedagogía intercultural explícita, procesamiento **en el dispositivo** sin
+telemetría —que es la arquitectura que el Anexo III del EU AI Act y los estatutos de privacidad de EE. UU. piden— y
+mide la métrica que el sistema escolar chileno efectivamente usa. **Y no se puede usar, porque no tiene licencia.**
+
+El dato que lo vuelve accionable y no una lamentación: **es el vacío más barato de cerrar de esta KB después del
+gap 20.** No hay que construir nada — hay que abrir un *issue* pidiendo una licencia.
+
+### Lo que esta pasada buscó y no encontró
+
+- **Ningún agente de los 31 de `agents/top.md` tiene entrada ni salida de voz.** Se verificó contra la tabla. Ni
+  DeepTutor, ni Educhain, ni OpenTutor. **La capa de habla y la capa de agente no se tocan** — gap 24 de este pase.
+- **Ningún servidor MCP de evaluación de pronunciación.** Existe el patrón (`bncc-mcp` del mismo pase lo hace para
+  currículo), pero nadie expuso OpenPronounce ni equivalente por MCP.
+- **Nada en portugués ni en español con licencia utilizable.** `carrera-lectora` (sin licencia) es lo único de LATAM.
+  Para evaluación de fluidez en español y portugués **no hay pieza permisiva**, y son ~600 millones de hablantes.
+- **Ninguna evaluación de fluidez en lenguas indígenas o africanas con repo verificable.** La literatura registra un
+  caso en bambara (`arXiv 2606.31508`, 55 horas de lectura de 60 niños, con *benchmark* público declarado) pero
+  **`arxiv.org` está bloqueado por el proxy de esta sesión** y no se pudo abrir el paper ni localizar el repo. Se
+  declara como pista, no como hallazgo.
+- **Sin movimiento en los dos grandes, y van seis pases.** DeepTutor y Educhain no registran cambio de versión ni
+  salto de estrellas en esta ventana.
+
 ## 2026-10-01 (pase 13) — doce pasadas preguntaron qué hace el agente; ninguna preguntó dónde hace el alumno el trabajo, y la respuesta corrige el gap 6
 
 Decimotercera corrida. Las doce anteriores recorrieron el tutor, el modelado del conocimiento, la evaluación pedagógica,

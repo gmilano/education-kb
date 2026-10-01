@@ -19,6 +19,10 @@ updated: 2026-10-01
 > skills de agente** al final del archivo: es la primera capa de esta KB que se mide contra otra vertical, y la
 > educación pierde 58× contra la científica en el mismo canal. El conteo de 29 de la tabla principal se verificó a
 > mano en este pase y **estaba bien**.
+> *Pase 14 del 2026-10-01:* **no se agregó ninguna fila a la tabla principal; el conteo de 31 se mantiene.**
+> Este pase abre dos capas nuevas al final del archivo —**lectura oral y pronunciación** (la primera capa de voz
+> de esta KB) y **puente agente↔currículo nacional** (que mueve el gap 15)— y cierra el **gap 19** con cuatro
+> esquemas curriculares nacionales verificados, que viven en `repos/foundations.md`.
 > *Corrección de conteo del pase 10:* el encabezado decía **24** y la tabla tenía **25** filas antes de este pase. El desfasaje venía de pasadas anteriores que agregaron filas sin actualizar el total. Contado a mano: **26** con la fila que agrega el pase 10.
 > Bloom y OpenTutorAI-CE se agregaron en la segunda pasada del 2026-09-30.
 > **Claw-ED** se agregó en la tercera pasada del 2026-09-30 — es el primer agente *teacher-facing* open source de la KB.
@@ -525,3 +529,61 @@ semántico, sin suite de regresión y sin medición de efecto pedagógico. La ca
 pase 4 (MathTutorBench, UnifyingAITutorEvaluation, EduBench, EduGuardBench) **nunca se aplicó a una skill**: evalúa
 tutores con backend. Es decir: la capa más barata de distribuir es también la única sin control de calidad, y las
 herramientas para medirla ya existen en esta misma KB y no están conectadas. Ver el patrón **P27**.
+
+---
+
+## Capa de lectura oral y pronunciación — agregada en el pase 14 del 2026-10-01
+
+Trece pasadas construyeron agente, modelado, evaluación, seguridad, telemetría, datos, accesibilidad, credenciales,
+contenido, predicción, *skills* y práctica. **Todas asumieron que el alumno escribe.** En alfabetización inicial —y en
+enseñanza de idiomas, que es el otro gran mercado de esta vertical— lo que se evalúa es que el alumno **hable**.
+
+| Pieza | Repo | Licencia | ★ | Qué mide |
+|---|---|---|---|---|
+| **OpenPronounce** | [`Halleck45/OpenPronounce`](https://github.com/Halleck45/OpenPronounce) | **MIT** ✅ | **85** | Fonema a fonema contra el texto esperado: puntaje 0-100, *phoneme error rate*, *word error rate*, confianza por palabra (0-1), distancia acústica por DTW, prosodia (F0 y energía). Wav2Vec2 + XLSR por idioma. **Local, sin API key ni nube** |
+| **speechocean762** | [`jimbozhang/speechocean762`](https://github.com/jimbozhang/speechocean762) | ⚠️ **sin `LICENSE`** | **198** | Corpus de referencia: 5.000 oraciones, **mitad de hablantes son niños**, L1 mandarín. Exactitud, completitud, **fluidez** y prosodia en tres niveles |
+| **Kaldi** | [`kaldi-asr/kaldi`](https://github.com/kaldi-asr/kaldi) | **Apache-2.0** ✅ | **15.5k** | ASR genérico de grado industrial. Base de los tutores de lectura de la literatura. **No es educativo** |
+| **Carrera Lectora** | [`vilcaaguilerandrea-oss/carrera-lectora`](https://github.com/vilcaaguilerandrea-oss/carrera-lectora) | 🔴 **SIN LICENCIA** | **0** | PWA chilena, 1.º-4.º básico: **PPM y exactitud** sobre 40 textos graduados, pedagogía intercultural, Web Speech API en dispositivo, sin telemetría. **No reutilizable** |
+
+### Por qué OpenPronounce es la pieza vendible y no el corpus ni Kaldi
+
+Tiene **85 ★** —no es tracción— pero es la única de la capa que cumple las cuatro condiciones a la vez: **licencia
+permisiva** (MIT), **métrica que un docente entiende** (fonema mal pronunciado, con transcripción IPA), **ejecución
+local** —que es lo que vuelve proponible un despliegue con menores de edad bajo Anexo III del EU AI Act y bajo los
+estatutos de privacidad estudiantil de EE. UU.— y **cobertura multilingüe** por XLSR.
+
+**El posicionamiento comercial es explícito en el propio repo: es la alternativa autoalojada a Azure Pronunciation
+Assessment.** Eso es exactamente el tipo de sustitución que esta vertical sabe vender: el incumbente es un servicio
+de nube por uso, y el reemplazo es un componente MIT que corre en la infraestructura del cliente.
+
+### 🔴 Lo que esta capa no tiene, y es el gap que abre el pase 14
+
+**Ningún agente de los 31 de la tabla principal tiene entrada ni salida de voz.** Se verificó contra la tabla: ni
+DeepTutor, ni Educhain, ni OpenTutor, ni OpenTutorAI-CE, ni Bloom. **La capa de habla y la capa de agente no se
+tocan** — y tampoco hay ningún servidor MCP que exponga evaluación de pronunciación, aunque el patrón MCP ya está
+probado en esta KB (ver `bncc-mcp`, abajo, del mismo pase). Es el gap 24.
+
+**Y para español y portugués no hay nada utilizable.** `carrera-lectora` es pedagógicamente lo más fino de la región
+—y no tiene licencia—; el corpus de referencia es inglés con L1 mandarín. **~600 millones de hablantes sin pieza
+permisiva de evaluación de fluidez.**
+
+---
+
+## Capa de puente agente↔currículo nacional — agregada en el pase 14 del 2026-10-01
+
+El gap 15 (pase 10) decía que *«ningún puente agente↔contenido curricular tiene tracción, y el único que existe
+declara mal la licencia de lo que sirve»*. **Este pase encuentra el puente que faltaba, es MIT, y es de LATAM.**
+
+| Pieza | Repo | Licencia | ★ | Qué expone |
+|---|---|---|---|---|
+| **bncc-mcp** | [`dfdb76/bncc-mcp`](https://github.com/dfdb76/bncc-mcp) | **MIT** ✅ | **14** | Servidor **MCP** de la BNCC brasileña, cinco herramientas: `bncc_lookup`, `bncc_buscar`, `bncc_listar`, `bncc_mapa_de_foco`, `bncc_estatisticas`. **1.717 habilidades** (1.408 Fundamental, 104 Infantil, 205 Médio), 141 de Computação por ejes, y **396 habilidades priorizadas por el Mapa de Foco del Instituto Reúna** con capa pedagógica |
+| **curriculum-bncc** | [`aprincar/curriculum-bncc`](https://github.com/aprincar/curriculum-bncc) | ⚠️ **AGPL-3.0** | **0** | *Crosswalk* de IDs propios a referencias BNCC con cuatro relaciones: `direct`, `partial`, `supports`, `prerequisite`, validado contra catálogos versionados |
+
+**Lo que hace valioso a `bncc-mcp` no es el currículo: es el Mapa de Foco.** Exponer 1.717 habilidades por MCP es
+un trabajo de ingeniería; exponer **cuáles 396 son prioritarias y con qué capa pedagógica** es un **juicio curricular
+de una institución** (Instituto Reúna). Eso es la clase de activo que un cliente no puede generar solo y que ningún
+modelo puede inventar sin alucinar. **Con 14 ★ no es tracción — es la pieza que faltaba, y está en la región de origen
+de Globant.**
+
+⚠️ **`curriculum-bncc` es AGPL-3.0 y tiene 0 ★:** sirve como referencia de **cómo modelar** un *crosswalk* (los cuatro
+tipos de relación son el diseño correcto), **no como dependencia** de un producto comercial.

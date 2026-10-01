@@ -8,6 +8,76 @@ updated: 2026-10-01
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 
+## 2026-10-01 (pase 14) — el gap 19 se cerró a propósito: las cuatro piezas que el pase 13 dejó sin verificar existen, y la capa ya tenía un estándar de interoperabilidad que catorce pasadas no vieron
+
+Este pase hizo lo que el gap 19 pedía textualmente: *«buscar explícitamente `curriculum ontology`, `achievement
+standards`, `learning map` y `prerequisite graph` por país, en el idioma del país, en vez de esperar que aparezcan
+buscando agentes.»* Se buscó así. **Las cuatro candidatas que el pase 13 listó como "sin verificar" existen las cuatro**,
+y aparecieron dos cosas que el gap no anticipaba.
+
+### 🔴 El hallazgo del pase: esta capa no es un conjunto de artefactos sueltos, es un estándar con implementaciones certificadas
+
+El gap 19 trataba los esquemas curriculares como artefactos nacionales independientes —el coreano, el español— y la
+acción que proponía era coleccionarlos país por país. **Eso era la mitad del problema.** La otra mitad es que
+**1EdTech publica desde hace años el estándar que define cómo se publica e intercambia un marco curricular
+—CASE®, *Competencies and Academic Standards Exchange*— y tiene implementaciones open source certificadas.**
+
+Catorce pasadas no lo vieron, y el pase 9 pasó al lado: abrió la capa 1EdTech de **credenciales** (Open Badges, CLR) y
+no miró la de **competencias y estándares**, que es la misma familia de especificaciones.
+
+| Repo | Licencia | ★ | Qué es | Estado de conformidad |
+|---|---|---|---|---|
+| [`opensalt/opensalt`](https://github.com/opensalt/opensalt) | **MIT** ✅ | **45** | *Standards Alignment Tool*: autoría, gestión, alineación y *crosswalk* de marcos de competencias. PHP/Symfony, MySQL, Docker | ⚠️ Último estable **3.2.0 (sept 2023)**, apunta a **CASE v1.0**; v1.1 en rama `develop` |
+| [`1EdTech/OpenCASE`](https://github.com/1EdTech/OpenCASE) | **Apache-2.0** ✅ | **9** | Servidor + editor visual CASE del propio organismo de estándares. Multi-tenant, API de publicación | ✅ **v0.2 certificado para CASE Service v1.0 y CASE v1.1, certificaciones con fecha 2026-02-17** |
+| [`infosign/compeito`](https://github.com/infosign/compeito) | **Apache-2.0** ✅ | **3** | Servidor CASE v1.1 moderno: Python 3.12/FastAPI, PostgreSQL, HTMX, import/export CSV compatible OpenSALT, Docker | ✅ Endpoints *Provider* CASE v1.1; importa CFPackages de OpenSALT y OpenCASE |
+| [`conform-ed/conform-ed`](https://github.com/conform-ed/conform-ed) | **MIT** ✅ | **2** | Herramienta de verificación de conformidad a **once** estándares educativos a la vez | ✅ CASE 1.1, xAPI (1.0.3 + IEEE 2.0), QTI 2.1/2.2/3.0.1, LTI 1.3 (+DL/AGS/NRPS/Proctoring), OneRoster 1.2, Common Cartridge 1.3/1.4, CLR 2.0, Open Badges 3.0, Caliper 1.2, cmi5, W3C VC 2.0 |
+
+**Y la distribución de estrellas repite exactamente el patrón que el pase 10 encontró con Sunbird (41 ★) y el pase 9 con
+los estándares de interoperabilidad: la pieza con más estrellas es la que está más atrás del estándar.** OpenSALT tiene
+**45 ★** y su último estable es de **septiembre de 2023** contra **CASE v1.0**; OpenCASE tiene **9 ★** y está
+**certificado contra v1.1 con fecha de febrero de 2026**. Un filtro por popularidad elige la pieza vieja. Es la tercera
+vez que esta KB mide lo mismo, y conviene dejar de llamarlo coincidencia.
+
+### Las cuatro piezas que el pase 13 dejó sin verificar, verificadas una por una
+
+| Artefacto | Región | País | Licencia | Contenido verificado | ★ |
+|---|---|---|---|---|---|
+| [`bncc-dev/bncc-dados`](https://github.com/bncc-dev/bncc-dados) | **LATAM** | Brasil | **MIT** (código) + **CC BY 4.0** (datos) ✅ | **1.721 aprendizagens** en JSON, SQLite y CSV — 1.580 de las tres etapas de educación básica + **141 de Computação** (Parecer CNE/CEB 2/2022). Desglose: 93 Educação Infantil, 1.304 Fundamental, 183 Médio, 5 perfiles de referencia, 20 marcos legales. **Proveniencia por registro** y pipeline de extracción reproducible, verificado carácter por carácter contra el documento oficial del MEC | **19** |
+| [`fh-yarbouh/oak-curriculum-ontology`](https://github.com/fh-yarbouh/oak-curriculum-ontology) | **EMEA** | Inglaterra | **OGL-3.0** (ontología/datos) + **MIT** (código) ✅ | Oak National Academy alineado al *National Curriculum for England (2014)*. **50.948 *key learning points*, 11.207 *misconceptions*, 7.432 prerrequisitos, 12.517 *pupil lesson outcomes*, 13.012 *keywords*, 160 *threads* de progresión, 12 materias.** 31 clases, 75 propiedades, **38 *shapes* SHACL**. Turtle, JSON-LD, RDF/XML, N-Triples, SQLite y JSONL de grafo de propiedades | **0** |
+| [`commonstandardsproject/api`](https://github.com/commonstandardsproject/api) | **North America** | EE. UU. | **Apache-2.0** ✅ | Estándares académicos de **los 50 estados** más organizaciones, distritos y escuelas, en JSON formateado para empresas de tecnología educativa K-12. **API en vivo** en `api.commonstandardsproject.com` con alta de API keys | **44** |
+| **MRAC** — *Machine Readable Australian Curriculum* (ACARA) | **APAC** | Australia | ⚠️ **NO VERIFICABLE EN ESTA SESIÓN** | Currículo australiano **v9.0** publicado en RDF/XML, manifiestos JSON y endpoint SPARQL en `rdf.australiancurriculum.edu.au/api/sparql` | n/a |
+
+🔴 **La cuarta no se pudo verificar y se declara en vez de callarse:** `www.australiancurriculum.edu.au` está
+**bloqueado por el proxy de egress de esta sesión**. La existencia, los formatos y el endpoint SPARQL están
+confirmados por fuentes secundarias coincidentes; **la licencia de reuso no**. Es el mismo tipo de hueco que el
+pase 9 declaró como gap 14, y tiene la misma regla: **no cotizar MRAC sin abrir antes los términos de uso de ACARA.**
+
+### Los dos puentes agente↔currículo de Brasil, y uno de ellos mueve el gap 15
+
+| Repo | Licencia | ★ | Qué hace |
+|---|---|---|---|
+| [`dfdb76/bncc-mcp`](https://github.com/dfdb76/bncc-mcp) | **MIT** ✅ | **14** | **Servidor MCP** de la BNCC con cinco herramientas: `bncc_lookup`, `bncc_buscar`, `bncc_listar`, `bncc_mapa_de_foco`, `bncc_estatisticas`. **1.717 habilidades** (1.408 Fundamental, 104 Infantil, 205 Médio), **141 de Computação** por ejes, y **396 habilidades priorizadas** por el **Mapa de Foco del Instituto Reúna** con capa pedagógica |
+| [`aprincar/curriculum-bncc`](https://github.com/aprincar/curriculum-bncc) | ⚠️ **AGPL-3.0** | **0** | *Crosswalk* de IDs de habilidad propios a referencias BNCC con cuatro tipos de relación: `direct`, `partial`, `supports`, `prerequisite`, validado contra catálogos versionados |
+
+**`bncc-mcp` es el dato comercial del pase.** El gap 15 dice que *«ningún puente agente↔contenido curricular tiene
+tracción, y el único que existe declara mal la licencia»*. Acá hay un puente **MIT**, con **proveniencia declarada**,
+que expone un currículo nacional completo por MCP **y además la capa de priorización pedagógica** —que es un juicio
+curricular, no un dato—. Con **14 ★** no es tracción, pero **sí es la pieza que faltaba**, y es de **LATAM**.
+
+### Lo que esta pasada buscó y no encontró
+
+- **Singapur:** el gap 19 lo listaba como candidato. **No aparece ningún esquema curricular singapurense estructurado y
+  publicado abiertamente.** Es el único de los cinco candidatos del pase 13 que **no** se confirmó.
+- **México, Colombia, Argentina, Chile, Perú:** se buscó en español por currículo nacional estructurado. **Nada.**
+  Brasil es, por ahora, **el único país de LATAM con su currículo nacional publicado como datos abiertos verificados.**
+  Eso convierte a `bncc-dados` en el modelo replicable, no en el caso aislado.
+- **Un esquema curricular publicado *como* marco CASE por un ministerio.** Las piezas que publican CASE son
+  herramientas; los marcos nacionales que encontramos se publican en RDF (Australia, Inglaterra, Corea) o en JSON
+  propio (Brasil, EE. UU.). **Nadie cerró el círculo**, y ese es el gap 23 que abre este pase.
+- **`arxiv.org` sigue bloqueado por el proxy** —igual que en el pase 13—, así que la literatura de ASR infantil
+  (incluido `arXiv 2606.31508`, solución ASR para lectura infantil en bambara) **no se pudo verificar en origen** y
+  queda registrada como referencia secundaria, no como hallazgo.
+
 ## 2026-10-01 (pase 13) — el repo con más estrellas de toda esta KB no se presenta como educativo, y es el aula de STEM desde 2014
 
 Decimotercera corrida. El pase 10 cambió el indicador (estrellas → despliegue real), el 11 cambió el filtro (licencias

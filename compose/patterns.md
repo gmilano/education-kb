@@ -1277,3 +1277,162 @@ pase 7 marcó con `ProHist-Bench`.
 - 🔴 **El paper (arXiv 2506.18710) no se pudo abrir** en el pase 13 —`arxiv.org` bloqueado por el proxy—. Licencia,
   conteos, composición CDPK/SEND y la atribución a Chile **sí** están verificados en la página del repo. **Abrir el paper
   antes de citar metodología en un entregable.**
+
+---
+
+## P31 — Publicar el currículo nacional como marco CASE conforme, y usarlo de eje del agente docente (agregado en el pase 14; **las cuatro regiones, con artefacto distinto en cada una**)
+
+Es el patrón que cierra el gap 19 y abre el 23. Resuelve el problema más caro de cualquier agente docente —el mapa de
+qué se enseña, en qué grado, en qué orden y con qué prerrequisitos— **sin construirlo**, y lo deja publicado contra un
+estándar auditable en vez de en un JSON propietario del proyecto.
+
+### Las piezas, todas verificadas vía WebFetch el 2026-10-01
+
+**Capa 0 — el esquema curricular, uno por región:**
+
+| Región | Artefacto | Licencia | Qué trae |
+|---|---|---|---|
+| **EMEA** | [`fh-yarbouh/oak-curriculum-ontology`](https://github.com/fh-yarbouh/oak-curriculum-ontology) (0 ★) | **OGL-3.0** datos + **MIT** código | 50.948 *key learning points*, **11.207 *misconceptions***, 7.432 prerrequisitos, 160 *threads*, 12 materias, 38 *shapes* SHACL |
+| **LATAM** | [`bncc-dev/bncc-dados`](https://github.com/bncc-dev/bncc-dados) (19 ★) | **MIT** código + **CC BY 4.0** datos | 1.721 aprendizagens, JSON/SQLite/CSV, proveniencia por registro |
+| **North America** | [`commonstandardsproject/api`](https://github.com/commonstandardsproject/api) (44 ★) | **Apache-2.0** | Estándares de los 50 estados + distritos, API en vivo |
+| **APAC** | [`DECK6/korean-elementary-learning-map`](https://github.com/DECK6/korean-elementary-learning-map) | **MIT** | 620 anclas, 1.956 temas, **2.293 prerrequisitos**, SPARQL + SHACL |
+
+**Capa 1 — publicación conforme:** [`1EdTech/OpenCASE`](https://github.com/1EdTech/OpenCASE) (**Apache-2.0**, 9 ★),
+**certificado para CASE Service v1.0 y CASE v1.1 con fecha 2026-02-17**. Alternativa Python:
+[`infosign/compeito`](https://github.com/infosign/compeito) (**Apache-2.0**, 3 ★), que además importa CFPackages de
+OpenSALT/OpenCASE y CSV compatible OpenSALT.
+
+**Capa 2 — verificación:** [`conform-ed/conform-ed`](https://github.com/conform-ed/conform-ed) (**MIT**, 2 ★), que
+valida CASE 1.1 y otros diez estándares en el mismo *pipeline*.
+
+**Capa 3 — puente al agente:** [`dfdb76/bncc-mcp`](https://github.com/dfdb76/bncc-mcp) (**MIT**, 14 ★) es la
+**implementación de referencia** del puente: cinco herramientas MCP (`bncc_lookup`, `bncc_buscar`, `bncc_listar`,
+`bncc_mapa_de_foco`, `bncc_estatisticas`) sobre 1.717 habilidades. Para los otros tres países **hay que escribirlo**, y
+este repo es el molde.
+
+**Capa 4 — el agente:** cualquiera de la tabla principal de `agents/top.md`. Para generación de material docente, la
+referencia sigue siendo el patrón **P8**.
+
+### El wiring
+
+1. **Ingerir el esquema de la región** en su formato nativo (RDF para Inglaterra y Corea, JSON para Brasil y EE. UU.).
+   Pinear el commit o la versión del *dump*: el currículo cambia por acto administrativo y hay que poder decir contra
+   qué versión se generó cada material.
+2. **Cargar el marco en OpenCASE** y publicarlo por su API CASE v1.1. Acá se gana lo que ningún JSON propio da: el
+   currículo queda **direccionable por URI estable, versionado y consumible por cualquier herramienta certificada**.
+3. **Pasar `conform-ed`** como *gate* de CI sobre el endpoint publicado. Entregable: reporte de conformidad firmado.
+4. **Exponerlo al agente por MCP**, siguiendo el diseño de `bncc-mcp`: *lookup* por código, búsqueda por palabra clave
+   con filtros, listado por componente y año, y —la herramienta que de verdad importa— **la capa de priorización**.
+5. **Anclar cada artefacto que el agente genere** (lección, ítem de evaluación, *feedback*) **al URI CASE del punto
+   curricular**. Eso es lo que convierte «el agente generó una lección» en «la lección cubre el estándar X.Y.Z, y acá
+   está la traza».
+
+### Por qué este patrón se vende, en una frase por región
+
+- **EMEA:** las **11.207 *misconceptions*** inglesas son conocimiento de diagnóstico que no se deriva de un documento
+  oficial con un *script* — se construye con docentes. Es el insumo que le faltaba a **P8** para dejar de depender de
+  prompt y pasar a depender de datos, y está publicado con licencia comercial.
+- **North America:** el mandato de política distrital (pase 12, patrón **P7**) exige material **alineado a estándar
+  estatal y auditable**. El eje de los 50 estados ya existe en Apache-2.0: deja de ser alcance a cotizar.
+- **LATAM:** el **Mapa de Foco del Instituto Reúna** (396 habilidades priorizadas con capa pedagógica) es un juicio
+  curricular institucional que ningún modelo puede inventar sin alucinar, y ya está expuesto por MCP con licencia MIT.
+- **APAC:** el coreano trae **2.293 relaciones de prerrequisito**, que es lo que un tutor adaptativo necesita para
+  secuenciar (ver **P1** y **P26**).
+
+### Plazo y alcance
+
+- **3-4 semanas** donde el esquema ya existe y hay puente MCP (Brasil).
+- **5-7 semanas** donde el esquema existe y hay que escribir el puente MCP (Inglaterra, EE. UU., Corea).
+- **El gap 23 es el entregable vendible por sí solo:** publicar un currículo nacional como marco CASE conforme es
+  trabajo de **días** una vez ingerido el dato, y **nadie lo hizo todavía en ningún país**. Es un activo reutilizable
+  en todo el sistema educativo y auditable contra estándar.
+
+### ⚠️ Los límites, y van en la primera página
+
+- **Atribución obligatoria, y no es cosmética.** OGL-3.0 y CC BY 4.0 exigen acreditar a Oak National Academy y al MEC
+  **en el producto**. Es una obligación de entregable: hay que diseñarla, no descubrirla en revisión legal.
+- **La licencia del código no es la del dato.** Ver advertencia 2 de la nota de método del pase 14.
+- 🔴 **Australia queda afuera hasta verificar licencia.** MRAC existe (RDF/XML, JSON, SPARQL, v9.0) pero
+  `www.australiancurriculum.edu.au` está **bloqueado por el proxy de esta sesión** y los términos de reuso **no se
+  leyeron**. No cotizar MRAC sin abrirlos.
+- **España es *share-alike*.** `OpenDidactia` es **CC BY-SA 4.0**: contamina derivados. Para un entregable comercial en
+  España, tratarlo como referencia, no como dependencia.
+- **0 estrellas no es 0 valor, pero sí es 0 soporte.** `oak-curriculum-ontology` tiene 0 ★: se *forkea* y se pinea, y
+  el cliente tiene que saber que el mantenimiento es del proyecto, no de una comunidad.
+- **No se eligió OpenSALT, y es a propósito:** tiene 45 ★ —cinco veces más que OpenCASE— pero su último estable
+  (3.2.0, septiembre de 2023) apunta a **CASE v1.0**. En capas de estándar el criterio es la fecha de certificación,
+  no la estrella (tendencia 33).
+
+---
+
+## P32 — Evaluación de lectura oral que corre en el aula y no sale del dispositivo (agregado en el pase 14; **LATAM y APAC primero por volumen, EMEA y North America por régimen de privacidad**)
+
+Es el primer patrón de esta KB con voz, y ataca la habilidad más evaluada de los primeros años de escolaridad del
+mundo: **leer en voz alta, medida en palabras por minuto y exactitud.** Hasta el pase 14 esta KB no tenía ninguna
+pieza para eso (ver gap 24).
+
+### Las piezas, verificadas el 2026-10-01
+
+| Rol | Pieza | Licencia | ★ |
+|---|---|---|---|
+| **Evaluación de pronunciación y fluidez** | [`Halleck45/OpenPronounce`](https://github.com/Halleck45/OpenPronounce) | **MIT** ✅ | **85** |
+| **ASR base / adaptación a voz infantil** | [`kaldi-asr/kaldi`](https://github.com/kaldi-asr/kaldi) | **Apache-2.0** ✅ | **15.5k** |
+| **Memoria de aprendizaje conforme a estándar** | LRS xAPI de la capa del pase 6 (ver **P15**) | — | — |
+| **Eje curricular** | el artefacto de **P31** de la región | ver P31 | — |
+| **Corpus de referencia** | [`jimbozhang/speechocean762`](https://github.com/jimbozhang/speechocean762) | 🔴 **sin `LICENSE`** | 198 |
+
+### El wiring, con el límite adelante
+
+1. **El texto a leer sale del eje curricular de P31**, no de una lista suelta: el nivel de dificultad queda anclado
+   al punto curricular y al grado, y eso es lo que vuelve comparable la medición entre aulas y entre años.
+2. **La captura y el puntaje corren en el dispositivo**, con `OpenPronounce` autoalojado. Devuelve puntaje 0-100,
+   **PER y WER**, confianza por palabra (0-1), distancia acústica por **DTW** y **prosodia (F0 y energía)**. De ahí se
+   derivan las dos métricas que el sistema escolar usa: **palabras por minuto y exactitud**.
+3. **🔴 El audio del menor no sale del dispositivo. Nunca.** Lo que se envía al LRS es **la métrica**, no la voz: PPM,
+   exactitud, puntaje por fonema y el URI curricular. Esto no es una preferencia de arquitectura — es la condición
+   que vuelve el despliegue proponible (ver límites).
+4. **Persistir en el LRS vía xAPI** (**P15**), de modo que la progresión de fluidez sea una serie temporal auditable y
+   no una captura de pantalla de una app.
+5. **El docente decide la intervención.** El sistema devuelve *qué fonemas y qué palabras fallan*, con transcripción
+   IPA; **no clasifica al alumno, no le asigna nivel y no deriva a educación especial.** Ver límites.
+6. **Opcional, y es donde hay trabajo nuevo:** envolver el paso 2 en un **servidor MCP de cinco herramientas**
+   siguiendo el molde de `bncc-mcp`, para que un agente de `agents/top.md` pueda pedir la evaluación y razonar sobre
+   el resultado. **Eso no existe hoy en ninguna parte — es el gap 24**, y es la pieza que convierte este patrón en un
+   tutor de lectura en vez de un instrumento de medición.
+
+### Plazo y alcance
+
+- **4-6 semanas** para el instrumento de medición en inglés (pasos 1-5), que es donde el corpus y los modelos están.
+- **+6-10 semanas** para español o portugués, **y la mayor parte es recalibración**, no desarrollo: hay que construir
+  un conjunto de validación local con voz infantil. **Es alcance propio y presupuesto propio.**
+- **+3-4 semanas** para el servidor MCP del paso 6.
+
+### Dónde se vende primero
+
+- **LATAM y APAC por volumen y por política:** la alfabetización inicial es prioridad declarada de los sistemas
+  educativos de las dos regiones, y **la arquitectura en el dispositivo encaja con despliegues de conectividad
+  intermitente** — que es el mismo argumento del patrón **P3** (offline-first) y de Kolibri.
+- **EMEA y North America por régimen:** procesar voz de menores **sin que el audio salga del dispositivo** es
+  exactamente lo que piden el Anexo III del EU AI Act y los estatutos estatales de EE. UU. que prohíben usar datos de
+  alumnos para entrenar modelos (**California e Idaho**, pase 14). Un competidor que use un servicio de nube por uso
+  tiene que justificar la transferencia; este patrón no tiene que justificar nada porque no transfiere.
+
+### ⚠️ Los límites, y son más duros que en el resto de los patrones
+
+- 🔴 **No hay corpus permisivo en español ni en portugués.** El de referencia (`speechocean762`, 198 ★) es **inglés con
+  L1 mandarín y no tiene archivo de licencia** — el README afirma uso comercial permitido, pero eso es prosa, no un
+  instrumento auditable. **Conseguir los términos por escrito antes de cotizar, y no prometer cifras de precisión en
+  español o portugués basadas en resultados publicados sobre ese corpus.**
+- 🔴 **Fluidez no es comprensión, y confundirlas es el error pedagógico clásico de esta capa.** PPM y exactitud miden
+  decodificación. Un alumno puede leer rápido y preciso sin entender nada. **El instrumento mide una cosa y hay que
+  decir cuál.**
+- 🔴 **Esto no diagnostica dislexia ni ninguna condición, y no deriva a educación especial.** La capa del pase 8 dejó
+  escrito que el open source de educación especial «apunta a la tarea que se está prohibiendo»: redactar o decidir
+  sobre el alumno con discapacidad. **Este patrón produce una métrica para que un humano decida** (ver **P18**), y esa
+  frontera va en la primera página de la propuesta, no en un anexo.
+- **Sesgo de acento y de variedad dialectal.** Un modelo entrenado con una variedad del español penaliza a hablantes
+  de otra, y en LATAM eso se superpone con nivel socioeconómico y con población indígena. **Es riesgo de equidad
+  medible y hay que medirlo**, no declararlo resuelto.
+- **La pieza más fina de la región no se puede usar:** `carrera-lectora` (Chile, 1.º-4.º básico, 40 textos graduados,
+  pedagogía intercultural, en el dispositivo) **no tiene licencia**. No proponerla. Pedir que la pongan es, por costo
+  sobre beneficio, una de las mejores acciones disponibles en esta KB.

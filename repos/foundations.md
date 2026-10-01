@@ -514,6 +514,109 @@ mastery, el LRS del pase 6 guarda la evidencia, y **esta capa es la que la produ
 JupyterHub, el intercambio de archivos y el flujo de entrega se complican rápido. Si el cliente no va a correr
 JupyterHub, `otter-grader` es la pieza correcta, no nbgrader.
 
+## Capa de esquema curricular nacional — agregada en el pase 14 del 2026-10-01, y cierra el gap 19
+
+El gap 19 (pase 11) decía que los esquemas curriculares nacionales *«existen, son la pieza más cara de construir, y
+esta KB encontró dos de casualidad en dos pasadas distintas»*, y dejó una acción explícita: buscarlos por país, en el
+idioma del país. **Este pase lo hizo. De las cinco candidatas que el pase 13 listó, cuatro existen y una no.**
+
+Es la pieza más cara de cualquier agente docente: el mapa de qué se enseña, en qué grado, en qué orden y con qué
+prerrequisitos. **Ningún cliente quiere pagarla dos veces, y en cuatro países ya está publicada.**
+
+| Artefacto | Región | País | Licencia | ★ | Contenido |
+|---|---|---|---|---|---|
+| [`fh-yarbouh/oak-curriculum-ontology`](https://github.com/fh-yarbouh/oak-curriculum-ontology) | **EMEA** | Inglaterra | **OGL-3.0** (datos) + **MIT** (código) ✅ | 0 | **50.948 *key learning points*, 11.207 *misconceptions*, 7.432 prerrequisitos, 12.517 *outcomes*, 13.012 *keywords*, 160 *threads*, 12 materias.** 31 clases, 75 propiedades, **38 *shapes* SHACL**. Turtle / JSON-LD / RDF-XML / N-Triples / SQLite / JSONL |
+| [`bncc-dev/bncc-dados`](https://github.com/bncc-dev/bncc-dados) | **LATAM** | Brasil | **MIT** (código) + **CC BY 4.0** (datos) ✅ | 19 | **1.721 aprendizagens** (1.580 de educación básica + **141 de Computação**, Parecer CNE/CEB 2/2022): 93 Infantil, 1.304 Fundamental, 183 Médio, 5 perfiles, 20 marcos legales. JSON / SQLite / CSV, **proveniencia por registro** y pipeline reproducible |
+| [`commonstandardsproject/api`](https://github.com/commonstandardsproject/api) | **North America** | EE. UU. | **Apache-2.0** ✅ | 44 | Estándares académicos de **los 50 estados** + organizaciones, distritos y escuelas. JSON pensado para proveedores K-12. **API en vivo** (`api.commonstandardsproject.com`) |
+| [`DECK6/korean-elementary-learning-map`](https://github.com/DECK6/korean-elementary-learning-map) *(pase 11)* | **APAC** | Corea del Sur | **MIT** ✅ | — | 620 anclas de estándares de logro, 1.956 temas, **2.293 relaciones de prerrequisito**, 152 clusters, 11 materias, grados 1-6. JSON y RDF/Turtle con *competency questions* SPARQL y restricciones SHACL |
+| [`nmarafo/OpenDidactia`](https://github.com/nmarafo/OpenDidactia) *(pase 3)* | **EMEA** | España | ⚠️ **CC BY-SA 4.0** *share-alike* | — | Programación Didáctica y Situación de Aprendizaje para 17 comunidades + 2 ciudades autónomas, de Infantil a Bachillerato, FP y régimen especial |
+| **MRAC** (ACARA) — `rdf.australiancurriculum.edu.au` | **APAC** | Australia | 🔴 **no verificable en esta sesión** | n/a | Currículo australiano **v9.0** en RDF/XML, manifiestos JSON y endpoint SPARQL (`/api/sparql`) |
+
+### Lo que el pase 14 le agrega a la lectura de esta capa
+
+**El artefacto inglés es el más rico del mundo en lo que de verdad cuesta, y tiene 0 estrellas.** Las 11.207
+*misconceptions* y los 7.432 prerrequisitos de `oak-curriculum-ontology` son **conocimiento pedagógico de diagnóstico**:
+qué se equivoca típicamente un alumno en cada punto del currículo. Eso no se deriva de un documento oficial con un
+*script* — se construye con docentes. **Es, con diferencia, el artefacto más caro de reproducir de toda esta KB, y
+está publicado con licencia que permite uso comercial** (OGL-3.0 para datos, MIT para el código).
+
+**Y la comparación de licencias corrige la lección del gap 19.** El gap decía que el coreano (MIT) era «mejor
+técnicamente y más barato legalmente» que el español (CC BY-SA), y lo tomaba como espejo del gap 4 (concentración en
+APAC). Con cuatro artefactos más medidos, **el patrón ya no es regional**: hay permisivo apto para uso comercial en
+las cuatro regiones —Inglaterra (OGL-3.0+MIT), Brasil (MIT+CC BY 4.0), EE. UU. (Apache-2.0), Corea (MIT)— y **el único
+*share-alike* es el español**. La conclusión útil no es «APAC gana», es: **esta capa es, por licencia, la más limpia de
+toda la KB, y hay que dejar de asumir que lo curricular es copyleft.**
+
+### ⚠️ La regla de esta capa, y no es la misma que la del resto de la KB
+
+**La licencia del código y la licencia de los datos son dos licencias distintas, y acá casi siempre difieren.**
+`bncc-dados` es MIT en código y **CC BY 4.0** en datos; `oak-curriculum-ontology` es MIT en código y **OGL-3.0** en
+ontología. Las dos combinaciones permiten uso comercial **con atribución**, que es una obligación de entregable, no un
+detalle: hay que acreditar al MEC y a Oak National Academy en el producto. El pase 10 ya había abierto esta distinción
+para contenido (OER); **este pase la confirma como la regla general de todo lo curricular.**
+
+---
+
+## Capa del estándar CASE (1EdTech) — agregada en el pase 14 del 2026-10-01
+
+Lo que el gap 19 no anticipaba: **esta capa ya tiene un estándar de interoperabilidad con implementaciones
+certificadas.** CASE® (*Competencies and Academic Standards Exchange*) define cómo se publica, se versiona y se
+intercambia un marco de competencias o de estándares académicos, y cómo se alinea contenido contra él. El pase 9 abrió
+la familia 1EdTech por el lado de las **credenciales** (Open Badges, CLR) y no miró el de los **estándares**.
+
+| Repo | Licencia | ★ | Stack | Conformidad verificada |
+|---|---|---|---|---|
+| [`opensalt/opensalt`](https://github.com/opensalt/opensalt) | **MIT** ✅ | **45** (27 forks) | PHP/Symfony, MySQL, Docker, Node/Yarn | ⚠️ Estable **3.2.0 (sept 2023)** → **CASE v1.0**; v1.1 en `develop` |
+| [`1EdTech/OpenCASE`](https://github.com/1EdTech/OpenCASE) | **Apache-2.0** ✅ | **9** (3 forks) | Servidor + editor visual, multi-tenant | ✅ **v0.2 certificado CASE Service v1.0 y CASE v1.1 — certificaciones 2026-02-17** |
+| [`infosign/compeito`](https://github.com/infosign/compeito) | **Apache-2.0** ✅ | **3** | Python 3.12, FastAPI, SQLAlchemy async, PostgreSQL, HTMX, Tailwind, Docker | ✅ *Provider* CASE v1.1; importa CFPackages de OpenSALT y OpenCASE; CSV compatible OpenSALT |
+| [`conform-ed/conform-ed`](https://github.com/conform-ed/conform-ed) | **MIT** ✅ | **2** | Verificador de conformidad | ✅ **Once estándares:** CASE 1.1, xAPI 1.0.3 + IEEE 2.0, QTI 2.1/2.2/3.0.1, LTI 1.3 (+DL/AGS/NRPS/Proctoring), OneRoster 1.2, Common Cartridge 1.3/1.4, CLR 2.0, Open Badges 3.0, Caliper 1.2, cmi5, W3C VC 2.0 |
+
+### 🔴 Por qué esta capa cambia una decisión de arquitectura, y no es un detalle de ingeniería
+
+**Primero, el filtro por estrellas elige mal, y es la tercera vez que esta KB lo mide.** OpenSALT tiene 45 ★ y su
+último estable es de septiembre de 2023 contra **CASE v1.0**. OpenCASE tiene 9 ★ y está **certificado contra v1.1 en
+febrero de 2026**. Si el criterio de selección es popularidad, se elige la implementación que está una versión mayor
+atrás del estándar. Es el mismo error que el pase 10 documentó con Sunbird (41 ★ sirviendo 180 millones de alumnos) y
+el pase 11 con Apereo. **Regla: en capas de estándar, el criterio es la fecha de certificación, no la estrella.**
+
+**Segundo, `conform-ed` es la pieza transversal más útil que apareció en catorce pasadas, y tiene 2 estrellas.**
+Verifica **once** estándares de los que esta KB ya depende en cuatro capas distintas: xAPI (pase 6, patrón P15),
+QTI (pase 9, patrón P20), Open Badges y W3C VC (pase 9, patrón P19), OneRoster y Common Cartridge (capa SIS, pases
+2-3) y ahora CASE. **Hasta este pase, el "due diligence de interoperabilidad" del patrón P21 era trabajo manual.**
+Con `conform-ed` es un *pipeline* ejecutable — y es MIT.
+
+**Tercero, resuelve el problema de publicación que la capa curricular tiene abierto.** Los cuatro esquemas nacionales
+verificados se publican cada uno en su formato (RDF el inglés y el coreano, JSON propio el brasileño y el
+estadounidense). Un cliente que quiera **un** currículo consumible por sus herramientas no quiere cuatro parsers:
+quiere un endpoint CASE. **Ese es exactamente lo que OpenCASE y `compeito` sirven**, y `compeito` además importa CSV
+compatible con OpenSALT, que es el formato en que viven los estándares estatales de EE. UU.
+
+---
+
+## Capa de habla y lectura oral — agregada en el pase 14 del 2026-10-01
+
+Trece pasadas asumieron que el alumno **escribe**. En alfabetización inicial la medición que usan los sistemas
+educativos es que el chico **lea en voz alta** y se le midan palabras por minuto y exactitud. Esta capa es la
+infraestructura para eso, y es nueva en esta KB.
+
+| Repo | Licencia | ★ | Qué aporta |
+|---|---|---|---|
+| [`kaldi-asr/kaldi`](https://github.com/kaldi-asr/kaldi) | **Apache-2.0** ✅ *(archivo `COPYING`; el badge de GitHub no lo muestra)* | **15.5k** | *Toolkit* ASR de grado industrial (C++/CUDA, Android, WASM). Es la base sobre la que la literatura construye tutores de lectura. **Genérico: no sabe nada de pedagogía** |
+| [`Halleck45/OpenPronounce`](https://github.com/Halleck45/OpenPronounce) | **MIT** ✅ | **85** | Evaluación **fonema a fonema** contra texto esperado, con Wav2Vec2 (`wav2vec2-lv-60-espeak-cv-ft` fonemas, `wav2vec2-large-960h` palabras, XLSR por idioma). Devuelve puntaje 0-100, **PER y WER**, confianza por palabra, distancia acústica por **DTW** y **prosodia (F0 y energía)**. **Corre local, sin API key** |
+| [`jimbozhang/speechocean762`](https://github.com/jimbozhang/speechocean762) | ⚠️ **sin archivo `LICENSE`** | **198** | Corpus de referencia de la tarea: **5.000 oraciones, la mitad de hablantes son niños**, L1 mandarín. Puntajes de exactitud, completitud, **fluidez** y prosodia a nivel fonema/palabra/oración |
+
+### ⚠️ Antes de usar nada de esta capa
+
+- **`speechocean762` no tiene archivo de licencia.** El README afirma disponibilidad *«for both commercial and
+  non-commercial purposes»*. **Eso es prosa, no un instrumento auditable** — es la misma trampa que el pase 10
+  documentó para contenido abierto. Pedir los términos a SpeechOcean por escrito antes de cotizar.
+- **OpenPronounce es la única pieza permisiva, educativa y utilizable de la capa**, y tiene 85 ★: se usa como
+  componente con el commit pineado, no como dependencia de producto sin revisar.
+- **El corpus es inglés con L1 mandarín.** Para español y portugués **no hay corpus permisivo verificado**; los
+  puntajes de un modelo evaluado contra `speechocean762` **no son transferibles** a un despliegue en LATAM sin
+  recalibración. Declararlo antes de prometer precisión.
+- **Kaldi es Apache-2.0 y es lo que hay de maduro**, pero todo lo pedagógico hay que construirlo arriba.
+
 ## Nota sobre licencias — leer antes de cotizar
 
 El núcleo de las plataformas educativas open source es **copyleft fuerte**: Open edX, Canvas y Frappe LMS son AGPL-3.0; Moodle, Chamilo y H5P son GPL-3.0. AGPL alcanza el uso en red: si se modifica el core y se sirve por SaaS, hay obligación de publicar el fuente modificado.
