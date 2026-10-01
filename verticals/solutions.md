@@ -578,5 +578,66 @@ despliegue Moodle hay una excepción, y es obligatoria: **el plugin de AI que se
    **CC BY-NC-SA** en su `LICENSE` mientras dos repos que los consumen declaran **CC BY 4.0** en su README. Ver **P22**.
 8. **Separar la nota del modelo.** Donde haya calificación, que la decisión la tome un componente determinista (test, rúbrica, checker) y que el LLM explique. Es lo que hace `mentar` con su checker, lo que hace Autograder.io por diseño, y lo que exigen las jurisdicciones que prohíben el grading automático.
 
+## El subsistema de AI del LMS instalado y su postura de privacidad — agregado en el pase 18 del 2026-10-01
+
+El pase 17 documentó que la máquina de privacidad del alumno ya está instalada en el LMS. Este pase verifica **qué
+trae el núcleo del lado del subsistema de AI**, que es lo que decide el alcance de un engagement sobre Moodle.
+
+### Moodle (GPL-3.0) — el subsistema de AI del núcleo trae tres proveedores, y los tres traen `privacy provider`
+
+Verificado por código HTTP contra `raw.githubusercontent.com`, rama `MOODLE_500_STABLE` (y confirmado en
+`MOODLE_405_STABLE` para OpenAI):
+
+| Proveedor en el núcleo | ¿Está en el núcleo? | ¿`classes/privacy/provider.php`? |
+|---|---|---|
+| `aiprovider_openai` | ✅ | ✅ declara `prompttext`, `model`, `numberimages`, `responseformat` |
+| `aiprovider_azureai` | ✅ | ✅ |
+| `aiprovider_ollama` | ✅ | ✅ declara `prompttext`, `model` |
+| `aiprovider_bedrock` | 🚫 **404** | — |
+| `aiprovider_anthropic` | 🚫 **404** | — |
+
+**Las dos consecuencias prácticas para una propuesta:**
+
+1. **Si el cliente quiere OpenAI, Azure OpenAI u Ollama, el conector ya está en el núcleo** y ya viene con su
+   declaración de privacidad. No se cotiza. Lo que se cotiza es la actividad pedagógica arriba.
+2. **Si el cliente quiere Bedrock o Anthropic, el proveedor no está en el núcleo** y hay que traerlo de terceros o
+   construirlo — **y entonces el `privacy provider` es alcance propio y obligatorio**, porque el núcleo lo exige a
+   todo plugin. El patrón a copiar es `ai/provider/openai/classes/privacy/provider.php`, que es exactamente lo que
+   hizo la Università di Ferrara para Gemini (ver `agents/top.md`).
+
+🔴 **Y la línea de `aiprovider_ollama` que hay que leer antes de prometer «el dato no sale del cliente».** Aun el
+proveedor local declara un envío externo, y su cadena de idioma dice: *«No user data is **explicitly** sent to
+Ollama or stored in Moodle LMS by this plugin.»* El plugin no adjunta identidad; **`prompttext` sí viaja y el
+prompt lleva lo que el alumno escribió**. La declaración del núcleo es **exacta sobre la identidad y silenciosa
+sobre el contenido**, y acotar el contenido del prompt es responsabilidad de la actividad que lo construye — o
+sea, del entregable. Esa frase va en el expediente de **P35**.
+
+### La arquitectura que sí deja el dato adentro, y es BSD-2-Clause
+
+`sngdtechnologies/ai-moodle-security` (**BSD-2-Clause**, 0 ★, 103 commits) no es un plugin y no tiene privacy
+provider: es un **diagrama de despliegue** y vale por eso. Phi-3-mini vía Ollama **100% on-site**, 7 contenedores,
+5 redes Docker, **sólo el proxy expuesto en 443**, Moodle y Ollama en redes internas **sin egreso a internet**,
+Caddy + WAF Coraza (OWASP CRS). Es un prototipo de tesis de maestría, con lo que eso implica de continuidad —pero
+es la referencia de red que vuelve verdadera, y no sólo declarada, la promesa de residencia del dato. Combina con
+el argumento FERPA en los bordes que esta KB ya hace para `openeducat_erp` autohospedado.
+
+### La corrección sobre qué repo proponer
+
+**`moodlehq/moodle-tool_dataprivacy` está archivado desde el 2020-09-24 y es read-only.** La funcionalidad **se
+mudó al núcleo** (Moodle 3.3.8 / 3.4.5 / 3.5 y posteriores), y se verificó: `admin/tool/dataprivacy/version.php` y
+`admin/tool/policy/version.php` dan **200** en `MOODLE_500_STABLE`. **No proponer el repo archivado como
+dependencia.** La máquina de pedidos de acceso y borrado, el delegado de protección de datos y la política de
+retención **ya están instalados** en cualquier Moodle soportado.
+
+### Lo que sigue sin existir, por plataforma
+
+- **Moodle** → el `privacy provider` ya tiene referencia (tres, en el núcleo). **Lo que falta es el disparador:**
+  nada conecta un pedido de borrado aprobado con un reajuste del modelo de *mastery*. Es el **gap 32**.
+- **Open edX** (AGPL-3.0) → los seis scripts de retiro y la API REST de retiro masivo existen (pase 17). **No
+  tiene equivalente de `privacy provider` para un plugin de AI** porque no tiene un subsistema de AI en el núcleo
+  comparable al de Moodle 4.5+. Tratarlo como alcance a dimensionar.
+- **Canvas** (AGPL-3.0) → sigue **no verificado** un toolset de retiro equivalente. El pase 17 lo declaró no
+  encontrado y este pase **no lo auditó tampoco**. Se mantiene como *no encontrado, no inexistente*.
+
 ---
 *Ver `compose/patterns.md` para las recetas concretas con repos y tiempos.*

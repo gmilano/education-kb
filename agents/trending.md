@@ -9,6 +9,111 @@ updated: 2026-10-01
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 > No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
 
+## 2026-10-01 (pase 18) — el gap 29 se cerró con la pieza del propio vendor, y las dos mitades del derecho al olvido tienen licencias opuestas
+
+El **gap 29** del pase 17 pedía *«un `privacy provider` de referencia para un plugin de AI»* y lo declaraba
+inexistente después de buscarlo. **Existe desde Moodle 4.5 y está en el núcleo**: `ai/provider/openai`,
+`ai/provider/azureai` y `ai/provider/ollama` traen cada uno su `classes/privacy/provider.php`. El gap era
+**verdadero cuando se escribió sobre terceros y falso sobre el núcleo**, y la diferencia la explica un detalle
+mecánico que vale más que el hallazgo.
+
+### 🔴 Por qué el pase 17 no lo encontró, y es una lección de método reutilizable
+
+El pase 17 escribió, con honestidad, que intentó el árbol de Moodle *«por cuatro rutas (`main` y `master`, árbol y
+archivo) y las cuatro dieron 404»*. La causa:
+
+> **`moodle/moodle` no tiene rama `main` ni rama `master`.** Las ramas son `MOODLE_405_STABLE`,
+> `MOODLE_500_STABLE`, etc. Un fetch contra `main` da 404 aunque el archivo exista.
+
+Medido en este pase por código HTTP: `ai/provider/openai/classes/privacy/provider.php` da **404 en `main`**, **404
+en `master`** y **200 en `MOODLE_405_STABLE` y `MOODLE_500_STABLE`**. Lo mismo
+`admin/tool/dataprivacy/version.php` y `admin/tool/policy/version.php`, que pasan a **verificados de primera
+mano**.
+
+**La generalización, porque va a volver a pasar:** cuando un 404 contra un repo grande y vivo contradice la
+documentación del vendor, **el 404 es sobre la rama, no sobre el archivo**. Antes de declarar una ausencia en un
+repo con releases versionadas, probar la rama de release.
+
+### Lo que se midió de la capa de la comunidad, y el reparto es el dato
+
+Seis piezas abiertas una por una mirando `classes/privacy/`. **Tres tienen `provider.php` y tres no.** Y el
+ranking de completitud no sigue el de estrellas ni el del PIB:
+
+| Pieza | Interfaces implementadas | Licencia | ★ | Región del autor |
+|---|---|---|---|---|
+| `jeanlucio/moodle-local_aihub` | **4** (incluye `user_preference_provider`) | GPL-3.0 | 0 | **LATAM — Instituto Federal do Sertão Pernambucano, Brasil** |
+| `Universita-di-Ferrara/moodle-aiprovider_gemini` | 3 | GPL-3.0 | 3 | EMEA — Università di Ferrara, Italia |
+| `alvarogregori/moodle-ai-graded-assignment` | 3 | 🚫 sin `LICENSE` | 0 | no declarada |
+| `sngdtechnologies/ai-moodle-security` | 🚫 ninguna | **BSD-2-Clause** | 0 | no declarada |
+| `marcusgreen/moodle-tool_aiconnect` | 🚫 no vista | 🚫 no mostrada | 10 | EMEA — Catalyst EU |
+| `moodlehq/moodle-tool_dataprivacy` | — (es la máquina) | GPL-3.0 | 8 | EMEA — archivado 2020-09-24, **se mudó al núcleo** |
+
+**La más completa de la capa es la brasileña**, y por un margen real: declara tabla de base, **6 preferencias de
+usuario** y **4 enlaces externos**, con CI, tests y docs en el repo. El **gap 2** de esta KB dice desde el pase 2
+que *«LATAM produce agentes educativos, pero ninguno sale de la fase cero»*. Esta pieza tiene 0 estrellas —fase
+cero en adopción— y **disciplina de ingeniería por encima de todo el resto de la capa**. El pase 13 ya había
+reencuadrado el gap 2 diciendo que el aporte de LATAM no era el repo sino el instrumento. Acá es otra cosa: **es
+el repo, y es el mejor de su capa.** Lo que le falta no es calidad: es visibilidad.
+
+### 🔴 La línea de `aiprovider_ollama` que hay que leer antes de vender «el dato no sale»
+
+El proveedor Ollama del núcleo es el que un cliente elige para que nada salga. Y el núcleo **le declara un envío
+externo igual**. La cadena literal: *«No user data is **explicitly** sent to Ollama or stored in Moodle LMS by this
+plugin.»*
+
+**«Explicitly» es la palabra.** El plugin no manda identidad; `prompttext` sí viaja, y el prompt lleva lo que el
+alumno escribió. **La declaración es exacta sobre la identidad y silenciosa sobre el contenido.** Es una línea en
+el expediente de **P35** y ahorra la discusión entera.
+
+### La capa nueva: *unlearning*, y confirma la predicción del pase 17 palabra por palabra
+
+El pase 17 dejó escrito: *«`machine unlearning` es el término que este pase no buscó y es el que podría tener
+oferta madura: si existe una librería permisiva de *unlearning* aplicable a modelos de knowledge tracing, el gap 30
+cambia de forma»*. Se buscó. **Existe y es grande:** `tamlhp/awesome-machine-unlearning` **MIT 970 ★**,
+`jjbrophy47/machine_unlearning` 965 ★, `chrisliu298/awesome-llm-unlearning` **Apache-2.0 627 ★**,
+`locuslab/open-unlearning` **MIT 607 ★**, `OPTML-Group/Unlearn-Saliency` **MIT 154 ★** (ICLR 2024 Spotlight),
+`Harry24k/machine-unlearning-pytorch` **MIT 12 ★** (NeurIPS 2025), `cisco-ai-defense/model-provenance-kit`
+**Apache-2.0 104 ★**, `Data-Provenance-Initiative/Data-Provenance-Collection` **Apache-2.0 281 ★**.
+
+**El contraste con el pase 17 es el hallazgo, y es exacto:**
+
+| Mitad del derecho al olvido | Dónde vive | Licencia | ¿La usa la educación? |
+|---|---|---|---|
+| Borrar **el registro** del alumno | Instalado en el LMS (Privacy API, `tool_dataprivacy`, retiro de Open edX) | **Toda copyleft** (GPL-3.0 / AGPL-3.0) | Sí, viene de fábrica |
+| Borrar **la influencia sobre el modelo** | Librerías horizontales de ML | **Toda MIT / Apache-2.0** | **No. Cero.** |
+
+Los dos agregadores más grandes de la capa —970 ★ y 627 ★— **no mencionan educación, dato de alumno ni knowledge
+tracing en ninguna parte**. Verificado buscando los términos.
+
+### Y el paper que sí es de esta industria no publica código
+
+**PrivacyCD** (arXiv **2511.03966**) se declara *el primer estudio sistemático de data unlearning para modelos de
+cognitive diagnosis* —la **misma capa** de `pyBKT` y `pyKT`— y aporta **HIF**, con el argumento de que los métodos
+genéricos son subóptimos frente a la estructura heterogénea de los modelos de CD. **No se ubicó repositorio
+público.** Tercera capa de esta KB donde la pieza más específica es la que no publica (pases 10, 11 y ahora 18).
+
+### La conclusión de ingeniería del pase, y decide qué se promete
+
+- **`pyKT` es PyTorch** → `torchunlearn` y `SalUn` son aplicables. Integración, no investigación.
+- **`pyBKT` no es PyTorch** (BKT por EM) → ninguna librería lo alcanza, y la respuesta correcta **no es
+  unlearning: es reajustar sin el alumno**. Para BKT es barato y además es ***exact unlearning***, la garantía más
+  fuerte que existe. **Mejor resultado legal por menos trabajo.**
+
+### ⚠️ Dos notas de verificación de este pase
+
+1. **La primera búsqueda de `open-unlearning` devolvió un fork con 0 ★** (`aflah02/open-unlearning`) en lugar del
+   canónico `locuslab` con 607 ★. README idéntico, licencia idéntica, lista de métodos idéntica. Lo único que lo
+   delata es «forked from» y el contador en cero. **Ningún repo entra a esta KB sin mirar si es fork.**
+2. **La lectura de la página rendida se contradijo con el fuente, y el fuente ganó.** El resumen de la página de
+   `aiprovider_gemini` afirmaba que el provider tenía *todos* los métodos vacíos y por tanto no declaraba el envío
+   externo. **Leyendo el `.php` crudo, declara `add_external_location_link` con cuatro campos.** La conclusión
+   contraria se iba a escribir como hallazgo del pase. **Para una afirmación de cumplimiento, leer el fuente, no
+   el resumen.**
+
+Ver los **gaps 31 y 32**, las tendencias **45**, **46** y **47**, y los patrones **P38** y **P39**.
+
+---
+
 ## 2026-10-01 (pase 17) — el gap 20 se cerró: ya existe skill educativa con eval publicada, es Apache-2.0, y el techo permisivo del canal subió de 299 a 541 estrellas
 
 El **gap 26** del pase 15 dejó una acción textual: *«medir el canal otra vez, pero buscando por `SKILL.md` +

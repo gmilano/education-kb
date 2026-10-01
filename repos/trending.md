@@ -8,6 +8,67 @@ updated: 2026-10-01
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 
+## 2026-10-01 (pase 18) — la capa que borra la influencia del dato sobre el modelo es toda permisiva, tiene 2.700+ estrellas combinadas y no menciona educación
+
+Este pase ejecuta la segunda acción escrita por el pase 17 y la confirma. La capa existe, es grande, es
+**permisiva** —al revés que todo lo que esta KB encontró en privacidad del LMS— y **la educación no la toca**.
+
+### Los repos nuevos, verificados uno por uno
+
+| Repo | Licencia | ★ | Forks | Qué aporta |
+|---|---|---|---|---|
+| https://github.com/tamlhp/awesome-machine-unlearning | **MIT** ✅ | **970** | 79 | Mapa de la capa + datasets. Survey **ACM TIST 2025**, DOI `10.1145/3749987` |
+| https://github.com/jjbrophy47/machine_unlearning | 🚫 **sin licencia declarada** | 965 | 117 | Segundo agregador por tamaño: literatura de *unlearning* desde pre-2017 hasta 2025 (AAAI, ACL, CVPR, NeurIPS). **No muestra licencia** → no cotizar sobre él; corresponde abrir un *issue* pidiendo el archivo |
+| https://github.com/chrisliu298/awesome-llm-unlearning | **Apache-2.0** ✅ | 627 | 33 | 616 papers, 18 surveys, 3 frameworks |
+| https://github.com/locuslab/open-unlearning | **MIT** ✅ | **607** | 164 | **El framework ejecutable.** TOFU/MUSE/WMDP, 12 métodos, 10+ métricas, 7+ arquitecturas. arXiv 2506.12618 |
+| https://github.com/Data-Provenance-Initiative/Data-Provenance-Collection | **Apache-2.0** ✅ | 281 | 48 | Auditoría de 44 colecciones / 1800+ datasets de finetuning; **fichas de procedencia** legibles. arXiv 2310.16787 |
+| https://github.com/OPTML-Group/Unlearn-Saliency | **MIT** ✅ | 154 | 29 | **SalUn**, *weight saliency* para unlearning. **ICLR 2024 Spotlight**, arXiv 2310.12508 |
+| https://github.com/cisco-ai-defense/model-provenance-kit | **Apache-2.0** ✅ | 104 | 22 | **Cisco AI Defense.** 8 señales de procedencia en un score; `compare` y `scan` contra ~150 modelos base de 45+ familias; streaming +20 GB |
+| https://github.com/Harry24k/machine-unlearning-pytorch | **MIT** ✅ | 12 | 2 | **torchunlearn.** Interfaz unificada estilo PyTorch. **NeurIPS 2025**, *Unlearning-Aware Minimization* |
+| https://github.com/hxxdtd/Awesome-Diffusion-Model-Unlearning | 🚫 **sin licencia declarada** | 67 | 3 | Recorte de difusión: artículos, recursos y datasets de *unlearning* de conceptos en modelos de difusión. **No muestra licencia** |
+
+**2.700+ estrellas combinadas, ocho de nueve piezas con licencia verificada y las seis con licencia leída son MIT o
+Apache-2.0.** Es la segunda capa de esta KB —después de la de privacidad horizontal del pase 16— donde lo maduro
+es permisivo. En las otras once, lo maduro es copyleft.
+
+### Lo que cambia en el núcleo de Moodle, verificado por código HTTP
+
+| Ruta en `moodle/moodle` | `main` | `master` | `MOODLE_405_STABLE` | `MOODLE_500_STABLE` |
+|---|---|---|---|---|
+| `ai/provider/openai/classes/privacy/provider.php` | 404 | 404 | **200** | **200** |
+| `ai/provider/azureai/classes/privacy/provider.php` | — | — | — | **200** |
+| `ai/provider/ollama/classes/privacy/provider.php` | — | — | — | **200** |
+| `ai/provider/bedrock/version.php` | — | — | — | **404** (no está en el núcleo) |
+| `ai/provider/anthropic/version.php` | — | — | — | **404** (no está en el núcleo) |
+| `admin/tool/dataprivacy/version.php` | — | — | — | **200** |
+| `admin/tool/policy/version.php` | — | — | — | **200** |
+
+🔴 **`moodle/moodle` no tiene rama `main` ni `master`.** Los cuatro 404 que el pase 17 registró midieron el nombre
+de la rama, no una ausencia. Con esto, `tool_dataprivacy` y `tool_policy` pasan de *documentados por snippet* a
+**verificados de primera mano en el núcleo**, y el **gap 29 se cierra**.
+
+Y una baja que hay que registrar: **`moodlehq/moodle-tool_dataprivacy` está ARCHIVADO desde el 2020-09-24**
+(GPL-3.0, 8 ★, 11 forks, 199 commits, read-only). No está muerto —**se mudó al núcleo** en Moodle 3.3.8/3.4.5/3.5—
+pero **no se propone como dependencia**: se propone la versión del núcleo. Es la segunda vez que esta KB encuentra
+implementaciones de referencia apagándose mientras el estándar sigue vivo; la primera fue el pase 9 con las
+credenciales europeas.
+
+### Lo que esta capa NO tiene, y es el gap 31
+
+**Ninguna de las nueve piezas menciona educación, dato de alumno ni knowledge tracing.** Verificado buscando los
+términos en los dos agregadores grandes (970 ★ y 627 ★): cero apariciones. Lo específicamente educativo es
+**PrivacyCD** (arXiv 2511.03966), que ataca exactamente los modelos de *cognitive diagnosis* —la capa de `pyBKT` y
+`pyKT`— con el algoritmo **HIF**, y **no publica código**.
+
+**El reparto regional de la capa, declarado:** **North America** concentra la oferta (`locuslab`/CMU,
+`OPTML-Group`/Michigan State, `cisco-ai-defense`, `Data-Provenance-Initiative`/MIT Media Lab); **APAC** es segunda
+y tiene lo único educativo (`torchunlearn` Corea, `tamlhp` Australia, autores de PrivacyCD); **EMEA** 🚫 **nada
+encontrado**, lo que es llamativo porque es donde el derecho de supresión del **GDPR art. 17** es directamente
+exigible; **LATAM** 🚫 **nada encontrado** en unlearning, aunque aporta el mejor `privacy provider` de la capa
+hermana (`local_aihub`, Brasil). Declarado como **no encontrado, no inexistente**.
+
+---
+
 ## 2026-10-01 (pase 17) — la máquina de privacidad del dato del alumno ya estaba instalada en el LMS, es toda copyleft, y el proveedor canónico declara por escrito que no garantiza cumplimiento
 
 El pase 16 abrió la capa de privacidad y la midió **del lado de las librerías** —DP, federado, datos sintéticos— y

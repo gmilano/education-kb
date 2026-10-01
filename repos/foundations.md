@@ -950,5 +950,54 @@ infraestructura está, el puente al aula no— después de procedencia (pase 15)
 - **El cliente quiere residencia de dato y ser el responsable** → `openeducat_erp` autohospedado, y el argumento
   es FERPA en los bordes: sin SaaS de terceros no hay acuerdo de terceros que negociar.
 
+## Capa de borrado del modelo (*unlearning* y procedencia) — agregada en el pase 18 del 2026-10-01
+
+Esta capa responde a una pregunta que las diecisiete pasadas anteriores no hicieron: **cuando el alumno ejerce el
+derecho al olvido, ¿qué pasa con el modelo que ya aprendió de él?** El pase 17 dejó la mitad resuelta —el Privacy
+API del LMS borra el registro— y dejó escrito que *«borra el registro, no el modelo»*. Estas son las piezas que
+borran el modelo.
+
+**Son todas permisivas, y eso es la excepción en esta KB.** Leer la columna de licencia de los otros bloques de
+este archivo: media KB educativa es GPL/AGPL. Acá, las seis con licencia verificada son **MIT o Apache-2.0**.
+
+| Repo | Licencia | ★ | Para qué se usa en un engagement |
+|---|---|---|---|
+| https://github.com/tamlhp/awesome-machine-unlearning | **MIT** ✅ | 970 | **Punto de entrada.** Mapa de métodos, métricas y datasets. Respalda la survey *A Survey of Machine Unlearning*, ACM TIST 2025, DOI `10.1145/3749987` |
+| https://github.com/locuslab/open-unlearning | **MIT** ✅ | 607 | **La base ejecutable si el modelo es un LLM.** Benchmarks TOFU/MUSE/WMDP y 12 métodos (`GradAscent`, `GradDiff`, `NPO`, `SimNPO`, `DPO`, `RMU`, `UNDIAL`, `AltPO`, `SatImp`, `WGA`, `CE-U`, `PDU`). 164 forks. arXiv 2506.12618. ⚠️ **Usar `locuslab`, no el fork `aflah02` de 0 ★** |
+| https://github.com/chrisliu298/awesome-llm-unlearning | **Apache-2.0** ✅ | 627 | Recorte de LLM: 616 papers, 18 surveys, 3 frameworks |
+| https://github.com/OPTML-Group/Unlearn-Saliency | **MIT** ✅ | 154 | **El método con mejor relación resultado/costo publicado.** SalUn, *weight saliency* por gradiente, clasificación y generación. ICLR 2024 **Spotlight**, arXiv 2310.12508 |
+| https://github.com/Harry24k/machine-unlearning-pytorch | **MIT** ✅ | 12 | **La pieza que alcanza a un modelo de *knowledge tracing***. `torchunlearn`: interfaz unificada estilo PyTorch. NeurIPS 2025, *Unlearning-Aware Minimization*. Baja tracción: 12 ★, 51 commits — registrar como pieza técnica, no como dependencia con garantía de continuidad |
+| https://github.com/cisco-ai-defense/model-provenance-kit | **Apache-2.0** ✅ | 104 | **La evidencia que el gap 30 pedía, por el lado del modelo.** Determina si dos modelos comparten origen con 8 señales (metadatos de arquitectura, estructura del tokenizer, *fingerprints* de pesos). Modos `compare` y `scan` contra ~150 modelos base de 45+ familias; streaming para +20 GB |
+| https://github.com/Data-Provenance-Initiative/Data-Provenance-Collection | **Apache-2.0** ✅ | 281 | **La evidencia por el lado del dataset.** Auditoría de 44 colecciones / 1800+ datasets de finetuning con fuente, licencia y creador, y **generación de fichas de procedencia legibles** — el formato del entregable de **P37**. arXiv 2310.16787 |
+| https://github.com/jjbrophy47/machine_unlearning | 🚫 **sin licencia declarada** | 965 | Segundo agregador por tamaño (117 forks): literatura de *unlearning* desde pre-2017 hasta 2025. **No muestra licencia** → a efectos de cotización se trata como sin licencia; lo que corresponde es abrir un *issue*. Usable como bibliografía, no como dependencia |
+| https://github.com/hxxdtd/Awesome-Diffusion-Model-Unlearning | 🚫 **sin licencia declarada** | 67 | Recorte de difusión (3 forks): artículos, recursos y datasets de borrado de conceptos en modelos de difusión. **No muestra licencia** |
+
+### Cómo se elige entre estas piezas, y lo decide el tipo de modelo, no el presupuesto
+
+Esta KB tiene dos estimadores de dominio en sus fundacionales y **el *unlearning* los alcanza distinto**:
+
+| Modelo de *mastery* | ¿Alcanzable por esta capa? | Qué se hace | Garantía que se puede prometer |
+|---|---|---|---|
+| **`pyBKT`** (MIT) — BKT ajustado por EM, **no es PyTorch** | 🚫 Ninguna librería de la tabla lo alcanza | **Reajustar desde cero sin el alumno.** Pocos parámetros, EM sobre la secuencia: es barato | ***Exact unlearning*** — la garantía más fuerte que existe. **Mejor resultado legal por menos trabajo** |
+| **`pyKT`** (MIT) — deep knowledge tracing, **es PyTorch** | ✅ `torchunlearn` y `SalUn` son aplicables en principio | *Unlearning* aproximado sobre los pesos | **Aproximada.** El entregable **tiene que incluir la métrica de verificación**, no sólo el borrado |
+
+**La regla operativa en una línea:** *si el modelo de dominio es BKT, el derecho al olvido se cumple reentrenando y
+se puede probar; si es deep knowledge tracing, hay que hacer unlearning aproximado y el entregable incluye la
+verificación.* Esa frase es la que decide el alcance de **P38**.
+
+### Lo que falta, y son los gaps 31 y 32
+
+- **Gap 31** — **ninguna de estas piezas menciona educación.** Los dos agregadores grandes (970 ★ y 627 ★) no
+  tienen una sola aparición de educación, dato de alumno o knowledge tracing. El único trabajo específico,
+  **PrivacyCD / HIF** (arXiv 2511.03966) sobre modelos de *cognitive diagnosis*, **no publica código**.
+- **Gap 32** — **nada conecta el pedido de borrado del LMS con un trabajo de *unlearning* del modelo.** El Privacy
+  API de Moodle produce un pedido aprobado y borra filas; ningún *hook*, plugin ni servidor MCP dispara a partir de
+  ahí un reajuste o un *unlearning* del estimador de *mastery*. Es la **quinta capa consecutiva** con el mismo
+  diagnóstico: infraestructura resuelta, puente al aula ausente.
+
+⚠️ **Nivel de evidencia:** los repos de la tabla se verificaron de primera mano (licencia, estrellas, forks, fork
+sí/no). Los metadatos de los papers vienen de **snippets concordantes**: `arxiv.org` está bloqueado por el proxy de
+egreso de esta sesión, igual que `blogs.cisco.com` y `helpnetsecurity.com`.
+
 ---
 *Ver también: `verticals/solutions.md` para plataformas verticales completas y `compose/patterns.md` para el wiring concreto.*

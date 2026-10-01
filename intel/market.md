@@ -745,6 +745,37 @@ y el **audio con la voz de un chico ya estaba cubierto antes de las enmiendas** 
 propósito. Vender «esto es nuevo desde abril» es vender mal: en la mitad que más importa, el cliente **ya estaba
 incumpliendo antes**.
 
+**Actualización 2026-10-01 (pase 18) — la remediación como producto, porque la prohibición de entrenar ya está firmada y los modelos ya están entrenados.**
+
+El pase 17 registró **California AB 1159** (firmada 2026-09-13): prohíbe usar información cubierta del alumno para
+entrenar AI generativa o desarrollar modelos, salvo propósito educativo en beneficio de la institución, con
+**HESIPA** extendiéndolo a educación superior desde el **2027-07-01**. Lo que este pase agrega es **la tecnología
+de salida**, y es permisiva.
+
+- **La oportunidad nueva: remediación, no sólo prevención.** Un distrito o una universidad que ya tiene un modelo
+  entrenado con dato que hoy no debería haber entrado no necesita una política: necesita **sacar ese dato del
+  modelo y poder probarlo**. Esa capa existe y es MIT/Apache-2.0 — `open-unlearning` (MIT, 607 ★),
+  `SalUn` (MIT, 154 ★), `torchunlearn` (MIT, 12 ★), `model-provenance-kit` de Cisco (Apache-2.0, 104 ★),
+  `Data-Provenance-Collection` (Apache-2.0, 281 ★). **North America concentra la oferta de esta capa** (CMU,
+  Michigan State, Cisco, MIT Media Lab), lo que la hace fácil de defender ante un comprador local.
+- **El argumento de arquitectura que cierra la venta, y es aritmético.** Con **BKT** (`pyBKT`, MIT) el borrado es
+  **exacto** —se reajusta sin el alumno, pocos parámetros, EM— y por tanto **demostrable ante un regulador**. Con
+  deep knowledge tracing es aproximado y hay que presupuestar la verificación. En el estado que acaba de prohibir
+  el insumo, **elegir el modelo más simple es la decisión de cumplimiento correcta**. Ver **P38**.
+- **Contexto de adopción sin gobernanza, que es el que financia esto.** **134 proyectos de ley sobre AI en
+  educación en 31 estados** en 2026 (77 de ellos sobre instrucción de aula, en 27 estados); **Idaho SB 1227** exige
+  protecciones de privacidad del dato para herramientas de AI; **Oklahoma y Maryland** exigen supervisión humana y
+  prohíben decisiones de alto impacto automatizadas. A nivel federal, el **K-12 AI Literacy and Readiness Act of
+  2026 (H.R. 8747)** avanzó en *markup* del House Education and Workforce Committee el **21 de julio**, y
+  permitiría usar fondos federales para currículo y alfabetización en AI. Y la brecha que convierte todo esto en
+  pipeline: Gallup encontró que **34% de los docentes de EE. UU. no recibe ninguna guía** sobre AI en diez tareas
+  distintas, y **sólo 18% tiene alguna política escrita** (marzo 2026).
+- **Tamaño.** North America fue **38% del mercado de AI en educación en 2025** y sigue siendo la región dominante,
+  con APAC creciendo más rápido.
+- **El entregable concreto:** el **expediente de borrado** —qué se borró del registro, qué se borró del modelo, con
+  qué método y con qué métrica de verificación— como anexo del *policy pack* que esta KB ya vende en esta región.
+  Ver **P37**, **P38** y **P39**.
+
 ### EMEA
 
 **Contexto.** Regulación primero, adopción después — lo inverso a Norteamérica. La fecha de aplicación de sistemas de alto riesgo del Annex III del EU AI Act (que **incluye AI en evaluación**) se corrió de 2026-08-02 a **2027-12-02** por el acuerdo del Digital Omnibus on AI. Las escuelas quedan responsables de auditar el uso de AI. Casos que caen en alto riesgo: **corrección automática de exámenes, aprendizaje adaptativo, proctoring y predicción de deserción** — o sea, casi todo lo interesante. La Comisión Europea con la OCDE y aval del G7 publicó un borrador de AI Literacy Framework para primaria y secundaria.
@@ -1072,6 +1103,38 @@ CAGR más bajo de las cuatro regiones de esta KB** —contra 41,5 % global— y 
 o la metodología es más conservadora, o Europa está comprando más despacio de lo que su regulación sugiere.
 Tratarla como cifra de una sola fuente. Mercados que lideran la adopción: **Reino Unido, Alemania, Francia y
 Escandinavia**.
+
+**Actualización 2026-10-01 (pase 18) — el régimen de supresión más fuerte del mundo, y cero oferta regional de la tecnología que lo cumple.**
+
+- 🚫 **El gap regional del pase, y se declara en vez de omitirse.** El barrido de la capa de *unlearning* **no
+  encontró ninguna pieza de origen EMEA**. La oferta está en North America (CMU, Michigan State, Cisco, MIT Media
+  Lab) y en APAC (Corea, Australia, el grupo de PrivacyCD). Se declara **no encontrada, no inexistente**. Es
+  llamativo porque EMEA es donde el **derecho de supresión del GDPR art. 17** es directamente exigible y no
+  distingue entre borrar la fila y borrar el modelo: **el régimen más exigente y la menor producción propia de la
+  tecnología que lo satisface.**
+- **La oportunidad que eso abre, y es de posicionamiento.** Un proveedor que llega a un comprador europeo con
+  *«borramos el registro y además el modelo, con método publicado y métrica de verificación»* está respondiendo una
+  pregunta que el comprador europeo **tiene que hacerse por ley** y que el mercado todavía no sabe responder. Las
+  piezas son MIT/Apache-2.0, así que la barrera no es la licencia: es que nadie lo armó. Ver **P38**.
+- **Lo que EMEA sí aportó a este pase.** La **Università di Ferrara** (Italia) publicó `aiprovider_gemini`
+  (GPL-3.0, 3 ★, Moodle 4.5+), que es una adaptación correcta del `privacy provider` del núcleo de Moodle para
+  Gemini. Es poco volumen pero es la prueba de que el patrón del núcleo se copia bien y funciona. Y
+  `tool_aiconnect` lleva nota de consultoría a **Catalyst EU**, Moodle Partner — el canal de servicios de Moodle en
+  la región está activo y es por donde entra este tipo de trabajo.
+- **Reloj regulatorio.** El **EU AI Act** tiene su fecha de aplicación general el **2026-08-02** —ya vencida— y el
+  Anexo III para la capa educativa corrido al **2027-12-02** (Reglamento (UE) 2026/1744, en vigor 2026-07-27), como
+  registró el pase 11.
+- **Tamaño, con las dos mitades de EMEA separadas porque no se deben promediar.** El mercado europeo de AI en
+  educación se estima en **USD 2,64 mil millones en 2026** con proyección a **USD 8,0 mil millones en 2030**
+  (**CAGR 31,9%**), con **Finlandia, Estonia y Países Bajos** liderando la integración en K-12. **Middle East &
+  Africa** es un mercado distinto en escala y en velocidad: **USD 0,56 mil millones en 2026** hacia **USD 1,6 mil
+  millones en 2030** (**CAGR 34,3%**) — más chico y creciendo más rápido. En el Golfo, **Emiratos Árabes Unidos**
+  fue el primer país con **currículo de AI obligatorio a nivel nacional para K-12** (mayo 2025) y registra ~**70,1%
+  de adopción de AI** en población en edad laboral; **Arabia Saudita, EAU y Qatar** tienen estrategias nacionales
+  avanzadas, mientras **Egipto, Marruecos y Jordania** construyen capacidad vía asociaciones público-privadas.
+- ⚠️ **Nivel de evidencia:** las cifras de mercado y de adopción de este bloque provienen de fuentes secundarias
+  concordantes, **no de la fuente primaria** (el proxy de esta sesión bloquea varios de esos dominios). Reportarlas
+  con rango y con fuente, nunca como número puntual.
 
 ### APAC
 
@@ -1435,6 +1498,38 @@ de entrada natural de la capa de privacidad del pase 17 en la región.
 ⚠️ **Advertencia de vigencia sobre las dos cifras de arriba:** el informe de Human Rights Watch es de **2022** y
 el de UNESCO de **2023**. Se citan porque son las mediciones de referencia del sector y no se encontró una
 actualización, **no porque describan 2026**. Si una propuesta se apoya en ellas, decir el año.
+
+**Actualización 2026-10-01 (pase 18) — APAC tiene lo único específicamente educativo de la capa de *unlearning*, y no publica código.**
+
+- **El dato del pase.** De toda la capa de borrado del modelo, **lo único que ataca modelos educativos sale de
+  APAC**: **PrivacyCD** (arXiv **2511.03966**), que se declara *el primer estudio sistemático de data unlearning
+  para modelos de cognitive diagnosis* y aporta el algoritmo **HIF**, con autores del entorno de Jinan University y
+  TAL (Mingliang Hou, Teng Guo, **Zitao Liu**, Mi Tian, **Weiqi Luo**, entre otros) — el mismo entorno del que sale
+  `pyKT`. **No publica código.** Se suma `torchunlearn` (MIT, Corea, NeurIPS 2025) y
+  `tamlhp/awesome-machine-unlearning` (MIT, 970 ★, Australia).
+- **Por qué importa para esta KB.** Extiende el **gap 4**, que desde el pase 7 viene registrando que las piezas de
+  evaluación con licencia limpia son todas de origen APAC/China. Ahora el patrón se repite en la capa de
+  cumplimiento: **APAC produce el trabajo específico de la industria y lo publica como paper, no como repo.** Para
+  Studios eso significa que la ventaja competitiva no está en la investigación —está disponible para todos— sino en
+  **ser el primero en implementarla**, y la acción está escrita en el gap 31.
+- **Reloj regulatorio, y la educación está nombrada explícitamente.** **Corea del Sur**: la *Framework Act on the
+  Development of Artificial Intelligence and the Creation of a Foundation for Trust* (AI Framework Act / AI Basic
+  Act) **entró en vigor el 2026-01-22**. **Vietnam** identificó sistemas de AI de alto riesgo en seis sectores e
+  **incluye educación de forma explícita**, nombrando *evaluación automatizada* y *monitoreo de comportamiento* —
+  que son, literalmente, las dos capas que esta KB vende (grading y early warning). **Japón y Corea** tienen desde
+  2023 regímenes de protección de datos específicos para AI en sistemas educativos, con cifrado obligatorio del
+  dato de estudiantes y penalidades por incumplimiento.
+- **La oportunidad, y es de arquitectura.** Donde la *evaluación automatizada* está clasificada como alto riesgo
+  (Vietnam) y el dato de estudiante tiene cifrado obligatorio (Japón, Corea), el entregable vendible no es el
+  modelo: es **el gate humano más el expediente de borrado**. El diseño de `mod_aigradedassign` —el resultado de la
+  AI no afecta nota ni compleción hasta que un tutor aprueba o edita— es exactamente lo que estos regímenes piden.
+  Ver **P18**, **P38** y **P39**.
+- **Escala y velocidad.** ~**530 millones de estudiantes K-12 en Asia** (2024) y la proyección de adopción de AI
+  más alta de las cuatro regiones (**80–90%** para 2026 según estimaciones regionales), con **China, India y Japón**
+  dominando el mercado de AI en educación y **Google, Microsoft, IBM, Pearson y Byju's** como los players citados.
+  APAC es la región de mayor crecimiento proyectado, por encima de North America.
+- ⚠️ **Nivel de evidencia:** cifras de adopción y de mercado de fuentes secundarias concordantes; los metadatos de
+  PrivacyCD, de snippets de búsqueda — `arxiv.org` está bloqueado por el proxy de esta sesión.
 
 ### LATAM
 
@@ -1926,6 +2021,46 @@ el único caso en esta KB donde el vacío normativo **no encarece** la propuesta
 compañeros** — preocupación de integridad y equidad que la capa de autoría y procedencia del pase 15 atiende, y
 que acá tiene medición propia. La advertencia de la fuente conviene citarla literal: **adopción no es
 preparación**; hay una generación usando AI sin necesariamente entenderla.
+
+**Actualización 2026-10-01 (pase 18) — LATAM produjo la mejor implementación de su capa y nadie la ve, y eso es una oportunidad de posicionamiento, no un gap de capacidad.**
+
+- 🔴 **El hallazgo regional del pase.** De las seis piezas de la comunidad que implementan el `privacy provider` de
+  Moodle para un plugin de AI, **la más completa es brasileña**: `jeanlucio/moodle-local_aihub` (GPL-3.0), de
+  **Jean Lúcio, Instituto Federal do Sertão Pernambucano**. Implementa **cuatro** interfaces del Privacy API
+  —incluida `user_preference_provider`, que ninguna otra tiene, ni las tres referencias del núcleo de Moodle— y
+  declara tabla de base, 6 preferencias de usuario y 4 enlaces externos. Trae CI, tests y docs. **Tiene 0
+  estrellas.**
+- **Por qué esto reencuadra el gap 2.** El **gap 2** dice desde el pase 2 que LATAM produce pero no sale de la fase
+  cero *por falta de continuidad*. Acá la continuidad y la disciplina de ingeniería **están**, y lo que falta es
+  **visibilidad**. La formulación nueva: **LATAM también produce trabajo mejor que el promedio de su capa y no lo
+  distribuye.** La acción no es construir: es **señalar** — dos líneas en el directorio de plugins de Moodle. Ver
+  la tendencia **47**.
+- **La lectura comercial, y es el argumento de *nearshore* con evidencia.** Un cliente de EMEA o North America que
+  pida un plugin de AI con expediente de privacidad va a recibir como mejor referencia técnica disponible una pieza
+  **mantenida por un instituto federal público brasileño**. Eso se presenta con el repo, no con una lámina.
+- 🚫 **Y el gap que se declara:** el barrido de la capa de *unlearning* **no encontró ninguna pieza de origen
+  LATAM**. Declarado como **no encontrado, no inexistente**. LATAM aporta a la mitad del borrado que vive en el LMS,
+  no a la que vive en el modelo.
+- **Contexto de adopción, que es el más alto de las cuatro regiones y el peor acompañado.** La encuesta **AI in
+  Higher Education LATAM 2026** del Digital Education Council —**30.000+ respuestas, 29 instituciones**— reporta
+  **92% de estudiantes** y **79% de docentes** usando AI activamente, y **94% de docentes** esperando usarla en su
+  práctica futura. Contra eso: **sólo 30% de los estudiantes dice que el uso institucional de AI cumple sus
+  expectativas.** Adopción individual casi total y adopción institucional en su punto más débil — que es,
+  exactamente, el hueco que un studio llena.
+- **Reloj regulatorio, fragmentado y con oportunidad de homogeneizar.** **Uruguay** fue el primer país de la región
+  en firmar el **Convenio Marco del Consejo de Europa** sobre AI y derechos humanos, democracia y Estado de
+  derecho. **Perú** publicó el reglamento de la **Ley 31814**, con estructura basada en riesgo, prácticas
+  prohibidas y **supervisión humana obligatoria para usos de alto riesgo**. **Chile** tiene proyecto de ley de
+  gobierno con la misma gramática de riesgo adaptada a instituciones locales, y **CENIA** como actor regional.
+  **Brasil** (proyecto de ley de AI), **Colombia** (CONPES de AI) y **México** (reglas sectoriales) avanzan a
+  velocidades distintas. **UNESCO** lanzó el **Observatorio de Inteligencia Artificial en la Educación para América
+  Latina y el Caribe** el **2026-04-14** en la sede de CEPAL, Santiago de Chile.
+- **La oportunidad concreta, y combina las dos cosas de arriba.** Donde Perú exige supervisión humana para alto
+  riesgo y la adopción docente ya es del 79%, el entregable es el **plugin con gate humano y expediente de
+  privacidad sobre el LMS instalado** — y la referencia técnica de ese entregable ya es regional. Ver **P39**.
+- ⚠️ **Nivel de evidencia:** la encuesta del Digital Education Council y las referencias regulatorias provienen de
+  fuentes secundarias concordantes, **no leídas en la fuente primaria** (proxy de egreso). Verificar antes de citar
+  en material de cliente.
 
 ## Posicionamiento Globant
 

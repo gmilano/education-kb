@@ -1773,3 +1773,112 @@ midió el costo de producir la evidencia** sobre una arquitectura federada real.
 de **North America** como anticipación (**134 proyectos en 31 estados** en 2026). Y **EMEA** como argumento
 complementario: no hay prohibición de insumo equivalente, pero el **GDPR ya se aplica directamente** al
 procesamiento de dato de alumnos y la base legal del entrenamiento es la misma pregunta con otro nombre.
+
+## P38 — El derecho al olvido que alcanza al modelo, no sólo al registro (agregado en el pase 18; **EMEA primero por GDPR art. 17, North America segundo por AB 1159**)
+
+**El problema, y es una promesa que el sector ya está haciendo sin poder cumplirla.** Una institución con un tutor
+adaptativo en producción recibe un pedido de supresión. Ejecuta el flujo del LMS —`tool_dataprivacy` en Moodle, los
+scripts de retiro en Open edX— y borra las filas del alumno. **El estimador de *mastery* sigue conteniendo lo que
+aprendió de ese alumno.** El pase 17 lo escribió en una línea: *«borra el registro, no el modelo»*. Este patrón es
+la parte que faltaba.
+
+**Por qué ahora.** En **EMEA** el derecho de supresión del **GDPR art. 17** es directamente exigible y no distingue
+entre la fila y el modelo. En **North America**, **California AB 1159** (firmada 2026-09-13) prohíbe usar
+información cubierta del alumno para entrenar AI generativa o desarrollar modelos salvo la excepción de propósito
+educativo, con **HESIPA** extendiéndolo a educación superior desde el **2027-07-01**: un modelo ya entrenado con
+dato que no debía entrar necesita una vía de remediación, y la remediación es esta.
+
+**El wiring, y bifurca según el modelo de dominio — esto es lo que decide el presupuesto:**
+
+```
+                 ┌─ pedido de supresión aprobado ─┐
+   Moodle núcleo │  admin/tool/dataprivacy        │  (GPL-3.0, YA INSTALADO)
+   (4.5+ / 5.0)  │  classes/privacy/provider.php  │  patrón: ai/provider/openai
+                 └────────────┬───────────────────┘
+                              │  ⚠️ este disparador NO EXISTE (gap 32) — es el trabajo de integración
+                              ▼
+                 ┌────────────────────────────────┐
+                 │  orquestador de borrado        │  ← lo que se construye
+                 └───────┬────────────────┬───────┘
+                         │                │
+        modelo = BKT ────┘                └──── modelo = deep KT
+        pyBKT (MIT)                             pyKT (MIT)
+             │                                       │
+             ▼                                       ▼
+   REAJUSTE sin el alumno                   torchunlearn (MIT) · SalUn (MIT)
+   (EM, pocos parámetros, barato)           unlearning aproximado sobre pesos
+             │                                       │
+             ▼                                       ▼
+   ✅ EXACT UNLEARNING                     ⚠️ APROXIMADO → el entregable
+   la garantía más fuerte                  incluye la MÉTRICA DE VERIFICACIÓN
+```
+
+**Las piezas, todas con licencia verificada:**
+
+| Rol | Pieza | Licencia |
+|---|---|---|
+| Pedido de borrado y declaración | Moodle núcleo: `admin/tool/dataprivacy`, `admin/tool/policy`, patrón `ai/provider/openai/classes/privacy/provider.php` | GPL-3.0 (ya instalado) |
+| Referencia de `privacy provider` más completa de la comunidad | https://github.com/jeanlucio/moodle-local_aihub (4 interfaces) | GPL-3.0 |
+| Estimador BKT → reajuste exacto | `pyBKT` | MIT |
+| Estimador deep KT → unlearning aproximado | `pyKT` + https://github.com/Harry24k/machine-unlearning-pytorch | MIT + MIT |
+| Método de unlearning con mejor costo/resultado | https://github.com/OPTML-Group/Unlearn-Saliency (SalUn, ICLR 2024 Spotlight) | MIT |
+| Si el componente es un LLM afinado | https://github.com/locuslab/open-unlearning (12 métodos, TOFU/MUSE/WMDP) | MIT |
+| Métricas de verificación del olvido | `open-unlearning` (10+ métricas) + https://github.com/tamlhp/awesome-machine-unlearning | MIT |
+
+**La decisión de arquitectura que este patrón fuerza, y es contraintuitiva:** **elegir BKT en vez de deep knowledge
+tracing puede ser la decisión de cumplimiento correcta aun si predice algo peor.** Con BKT el borrado es exacto,
+barato y demostrable ante un regulador; con deep KT es aproximado y hay que presupuestar la verificación. Esta KB
+venía recomendando `pyBKT` por madurez y licencia (pase 5, **P12**); este pase le agrega el argumento legal.
+
+⚠️ **Lo que este patrón NO promete.** El disparador LMS → modelo **no existe en abierto** (gap 32): es trabajo de
+integración de tamaño acotado, no una pieza que se instala. Y para deep KT, *«unlearning aproximado»* significa que
+**queda residuo medible**: el entregable es el borrado **más** la métrica, y si el cliente necesita garantía
+absoluta sobre un modelo deep, la única respuesta honesta sigue siendo reentrenar. No vender «olvido garantizado»
+sobre deep KT.
+
+⚠️ **Y el algoritmo específico de esta industria no está disponible.** **PrivacyCD / HIF** (arXiv 2511.03966) hace
+exactamente esto para modelos de *cognitive diagnosis* y argumenta que los métodos genéricos son subóptimos frente
+a su estructura heterogénea. **No publica código** (gap 31). Si aparece, este patrón cambia de forma y mejora.
+
+---
+
+## P39 — Plugin de AI para el LMS del cliente con el expediente de privacidad incluido de fábrica (agregado en el pase 18; **transversal, y es la venta más chica que cierra el gap 29**)
+
+**El problema.** El cliente ya tiene Moodle y quiere una capacidad agéntica propia —no la del núcleo— sobre el
+dato que ya tiene. El pase 17 estableció que el `privacy provider` no es opcional: el núcleo **lo exige a todo
+plugin**. Hasta este pase, esta KB tenía que decir que no había referencia publicada. **Ahora hay cuatro, y tres
+están en el núcleo.**
+
+**La receta, y el orden importa porque la capa 0 es la declaración, no la funcionalidad:**
+
+1. **Elegir el proveedor contra lo que el núcleo ya trae.** `openai`, `azureai` y `ollama` **están en el núcleo
+   con su `privacy provider`** → no se cotizan. `bedrock` y `anthropic` **no están** (verificado, 404) → el
+   proveedor y su `privacy provider` son alcance propio.
+2. **Copiar el patrón canónico del núcleo:** `ai/provider/openai/classes/privacy/provider.php`. Tres interfaces
+   —`metadata\provider`, `request\core_userlist_provider`, `request\plugin\provider`— y, **si el plugin no guarda
+   nada local**, los seis métodos de export/borrado vacíos y sólo `add_external_location_link` poblado. Es
+   exactamente lo que hizo Ferrara para Gemini, y funciona.
+3. **Si el plugin SÍ guarda, no copiar esa forma.** Hay que implementar los seis de verdad. La referencia completa
+   es `jeanlucio/moodle-local_aihub` (GPL-3.0, Brasil), que es la única de la capa con **cuatro** interfaces
+   —agrega `user_preference_provider`— y declara tabla de base, 6 preferencias de usuario y 4 enlaces externos.
+4. **Poner el gate humano en el camino de escritura**, no después. `mod_aigradedassign` lo tiene resuelto: el
+   resultado de la AI **no afecta nota ni compleción hasta que un tutor aprueba o edita** la nota y el texto. Es
+   el diseño de **P18** y es lo que exigen Oklahoma S.B. 1734 y Maryland S.B. 720.
+5. **Si la promesa es que el dato no sale, usar la arquitectura de red, no una declaración.**
+   `sngdtechnologies/ai-moodle-security` (**BSD-2-Clause** — la única licencia permisiva de la capa) es la
+   referencia: Ollama on-site, Moodle y el modelo en redes internas **sin egreso**, sólo el proxy expuesto.
+6. **Escribir la línea de «explicitly» en el expediente.** Incluso `aiprovider_ollama` declara envío externo, y la
+   cadena del núcleo dice *«No user data is explicitly sent»*: no manda identidad, pero `prompttext` viaja.
+   **Acotar el contenido del prompt es responsabilidad del entregable**, y decirlo por escrito evita la discusión.
+
+**Por qué es la venta más chica de esta KB y conviene ofrecerla primero.** No requiere modelo propio, ni dato de
+entrenamiento, ni infraestructura nueva: es un plugin con su declaración de privacidad bien hecha sobre un LMS que
+el cliente ya opera. Es la **capa 0** de **P1**, **P15**, **P16** y **P34** (ver **P36**), y es el único entregable
+de esta KB que se puede completar y auditar sin tocar el modelo del alumno.
+
+⚠️ **Advertencia de licencia que decide la cotización.** De las piezas de la comunidad en esta capa, **las dos
+usables son GPL-3.0** (`local_aihub`, `aiprovider_gemini`) — lo cual es lo esperable y lo correcto para un plugin
+de Moodle, porque el núcleo es GPL-3.0+ y lo exige. `mod_aigradedassign` **no tiene archivo `LICENSE`** (sólo el
+header GPL en el fuente) y `tool_aiconnect` **no muestra licencia**: a efectos de cotización se tratan como **sin
+licencia**, y lo que corresponde es abrir un *issue* pidiendo el archivo. **Un plugin derivado de Moodle va a ser
+GPL-3.0 de todos modos** — eso no es un obstáculo para el engagement, pero sí hay que decirlo antes de firmar.

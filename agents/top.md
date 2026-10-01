@@ -19,6 +19,14 @@ updated: 2026-10-01
 > skills de agente** al final del archivo: es la primera capa de esta KB que se mide contra otra vertical, y la
 > educación pierde 58× contra la científica en el mismo canal. El conteo de 29 de la tabla principal se verificó a
 > mano en este pase y **estaba bien**.
+> *Pase 18 del 2026-10-01:* se cierra el **gap 29** y **no lo cierra un tercero: lo cierra el núcleo de Moodle**, que
+> trae **tres** `privacy provider` de referencia para plugins de AI (`openai`, `azureai`, `ollama`). Se corrige por qué
+> el pase 17 no los vio —**`moodle/moodle` no tiene rama `main` ni `master`**, y sus cuatro 404 midieron el nombre de
+> la rama, no una ausencia— y con eso el Privacy API pasa de *documentado por snippet* a **verificado de primera
+> mano**. Se abre además la **capa de *unlearning***, que ejecuta la segunda acción escrita del pase 17 y confirma su
+> predicción: la oferta existe, es grande y es **toda MIT/Apache**, al revés que la capa de borrado del LMS. La pieza
+> más completa de `privacy provider` de toda la capa es **brasileña** (`local_aihub`), lo que mueve el **gap 2** otra
+> vez. Se abren el **gap 31** y el **gap 32**. Ver las tendencias **45**, **46** y **47**, y los patrones **P38** y **P39**.
 > *Pase 17 del 2026-10-01:* **no se agregó ninguna fila a la tabla principal.** Se contó a mano y **la tabla tiene
 > 32 filas, no 31** — pero el encabezado es defendible y conviene registrar por qué, porque es la tercera vez que
 > esta KB se pelea con este conteo: **una de las 32 filas no es un agente.** `education-agent-skills` es una
@@ -758,3 +766,205 @@ capa de memoria (DeepTutor tiene memoria en tres capas, `learnmcp-xapi` persiste
 proponga para menores, la postura de privacidad **hay que construirla en el proyecto** — no viene con el repo. El
 presupuesto de un despliegue educativo con datos reales incluye esa capa, y hasta este pase esta KB la daba por
 gratis. Las piezas están en `repos/foundations.md` y el wiring en **P34** y **P35**.
+
+## Capa de borrado efectivo — agregada en el pase 18 del 2026-10-01
+
+El **gap 29** (pase 17) pedía una pieza concreta: *«ningún `privacy provider` de referencia para un plugin de AI,
+que es justamente lo que el núcleo de Moodle exige de cualquier plugin que guarde dato del alumno»*. **Existe, y no
+la escribió un tercero: la escribió Moodle.** El núcleo trae **tres** implementaciones de referencia, una por cada
+proveedor de AI que embute. El gap se cierra, y se cierra con la pieza más defendible posible ante un cliente: la
+del propio vendor.
+
+### 🔴 El hallazgo del pase: la referencia estaba en el núcleo, y el pase 17 no la vio por una razón mecánica
+
+El pase 17 dejó escrito que intentó el árbol de `admin/tool/dataprivacy` dentro de `moodle/moodle` *«por cuatro
+rutas (`main` y `master`, árbol y archivo) y las cuatro dieron 404»*, y por eso registró el Privacy API como
+**documentado por snippet, no verificado de primera mano**. La causa es trivial y conviene dejarla escrita porque
+afecta a cualquier pase futuro:
+
+> **`moodle/moodle` no tiene rama `main` ni rama `master`.** Sus ramas son `MOODLE_XXX_STABLE`. Cualquier fetch
+> contra `main` o `master` da 404 **con independencia de que el archivo exista**. Los cuatro 404 del pase 17 no
+> midieron ausencia: midieron el nombre de la rama.
+
+Verificado en este pase por código HTTP contra `raw.githubusercontent.com`, rama por rama:
+
+| Ruta en `moodle/moodle` | `main` | `master` | `MOODLE_405_STABLE` | `MOODLE_500_STABLE` |
+|---|---|---|---|---|
+| `ai/provider/openai/version.php` | 404 | 404 | **200** | **200** |
+| `ai/provider/openai/classes/privacy/provider.php` | 404 | 404 | **200** | **200** |
+| `admin/tool/dataprivacy/version.php` | — | — | — | **200** |
+| `admin/tool/policy/version.php` | — | — | — | **200** |
+
+**Entonces se corrige el registro de evidencia del pase 17:** el Privacy API, `tool_dataprivacy` y `tool_policy`
+pasan de *«documentados por snippet»* a **verificados de primera mano en el núcleo**.
+
+### Las tres referencias del núcleo, y una de ellas es la que cambia la conversación
+
+Verificadas leyendo el archivo fuente, no la página del repo. Las tres implementan las mismas tres interfaces
+—`metadata\provider`, `request\core_userlist_provider`, `request\plugin\provider`— con `#[\Override]`, copyright
+**2024 Matt Porritt (moodle.com)**, licencia **GPL-3.0-or-later**:
+
+| Proveedor en el núcleo | ¿Trae `privacy/provider.php`? | Qué declara `get_metadata()` |
+|---|---|---|
+| `ai/provider/openai` | ✅ **200** | `add_external_location_link` con `prompttext`, `model`, `numberimages`, `responseformat` |
+| `ai/provider/azureai` | ✅ **200** | ídem patrón |
+| `ai/provider/ollama` | ✅ **200** | `add_external_location_link` con `prompttext`, `model` |
+| `ai/provider/bedrock` | 🚫 **404** — no está en el núcleo | — |
+| `ai/provider/anthropic` | 🚫 **404** — no está en el núcleo | — |
+
+**El patrón canónico, y es contraintuitivo:** los seis métodos de export y borrado están **vacíos a propósito**, y
+`get_contexts_for_userid()` devuelve un `contextlist` vacío. No es código sin terminar. Es la forma correcta para un
+plugin que **no guarda nada localmente y sólo transmite**: lo único que tiene que declarar es el envío externo. Un
+plugin de AI que *sí* guarde —un log de uso, una nota, una conversación— **no puede copiar esta forma**: tiene que
+implementar los seis.
+
+### 🔴 La línea que hay que leer antes de poner cualquiera de las tres en un expediente de privacidad
+
+`aiprovider_ollama` es el caso que importa, porque es el que un cliente elige **justamente** para que el dato no
+salga. Y aun así el núcleo le declara un envío externo. La cadena de idioma, citada literal:
+
+> `privacy:metadata` → «The Ollama API provider plugin does not store any personal data.»
+>
+> `privacy:metadata:aiprovider_ollama:externalpurpose` → «This information is sent to the Ollama API in order for a
+> response to be generated. Your Ollama account settings may change how Ollama stores and retains this data. **No
+> user data is explicitly sent** to Ollama or stored in Moodle LMS by this plugin.»
+
+**La palabra que carga el peso es «explicitly».** El plugin no adjunta identidad —no manda `userid`, ni nombre, ni
+email— y en ese sentido la frase es verdadera. Pero `prompttext` **sí** se declara como lo que viaja, y el prompt
+lleva lo que el alumno escribió, que puede ser cualquier cosa. **La declaración del núcleo es exacta sobre la
+identidad y silenciosa sobre el contenido.** En un expediente de privacidad (ver **P35**) esa distinción se escribe
+en una línea y evita la discusión entera: *«el plugin no envía identificadores; el cuerpo del prompt no está
+acotado por el plugin y su contenido es responsabilidad de la actividad que lo construye»*.
+
+### Lo que la comunidad construyó arriba, y sólo tres piezas de seis tienen `privacy/provider.php`
+
+Verificado abriendo `classes/privacy/` en cada repo. Ordenado por completitud de la implementación, no por estrellas.
+
+| Pieza | Repo | Licencia | ★ | Interfaces en `privacy/provider.php` | Región del autor | Nota |
+|---|---|---|---|---|---|---|
+| **local_aihub** | https://github.com/jeanlucio/moodle-local_aihub | **GPL-3.0** ⚠️ | 0 (1 fork, 60 commits) | **Cuatro** — `metadata\provider`, `core_userlist_provider`, `plugin\provider` y **`user_preference_provider`** | **LATAM** — Jean Lúcio, **Instituto Federal do Sertão Pernambucano, Brasil** | **La implementación más completa de la capa, y es la única que declara las tres cosas a la vez:** tabla de base (`local_aihub_log`, 9 columnas), **6 preferencias de usuario** y **4 enlaces externos** (`deepseek`, `google_gemini`, `groq`, `openai_compatible`). Broker BYOK con *SSRF guard*, escalera de proveedores y *key store*; «the hub never contacts a provider on its own»; la API key es opcional y el plugin instala y funciona sin ninguna. Trae `.github/workflows/`, `tests/` y `docs/` |
+| **aiprovider_gemini** | https://github.com/Universita-di-Ferrara/moodle-aiprovider_gemini | **GPL-3.0** ⚠️ | 3 (3 forks, 12 commits) | Tres — las mismas del núcleo | **EMEA** — Andrea Bertelli, **Università di Ferrara, Italia** | Moodle **4.5+**; v2.2.0 agrega Gemini 3 e imagen nativa. **Es una adaptación casi literal del `provider.php` del núcleo**: mismos cuatro campos (`prompttext`, `model`, `numberimages`, `responseformat`), misma estructura, y el docblock **todavía dice «Privacy provider implementation for OpenAI provider»**. No es una crítica: es la prueba de que el patrón del núcleo es el que la comunidad copia, y de que copiarlo funciona |
+| **mod_aigradedassign** | https://github.com/alvarogregori/moodle-ai-graded-assignment | 🚫 **sin archivo `LICENSE`** — el header del fuente dice GPL-3.0-or-later | 0 (0 forks, 14 commits) | Tres — `metadata\provider`, `plugin\provider`, `core_userlist_provider` (`final class`) | No declarada en el perfil | Actividad de entrega en texto plano con feedback automático (Mistral, OpenAI, Anthropic, endpoints compatibles, y un *mock* determinista local). **Es el único de la capa que corre sobre dato de alumno de verdad** y lo declara: con proveedor remoto salen «the student submission, activity instructions, private rubric, and private evaluated examples». Gate de validación docente: el resultado de la AI **no afecta nota ni compleción hasta que un tutor aprueba o edita** — el diseño de **P18**. ⚠️ **Tercer caso de licencia de esta KB:** no está en el sidebar ni en el README, sólo en el header del archivo. Ver la advertencia de método abajo |
+| **ai-moodle-security** | https://github.com/sngdtechnologies/ai-moodle-security | **BSD-2-Clause** ✅ | 0 (0 forks, 103 commits) | 🚫 **No tiene `classes/privacy/`** | No declarada (autor: SOB NGHAMI Gilles Descartes; prototipo de tesis de maestría) | **La única licencia permisiva de la capa, y la única pieza sin privacy provider.** No es un plugin: es una **arquitectura de despliegue** — Phi-3-mini vía Ollama 100% on-site, 7 contenedores, 5 redes Docker, sólo el proxy expuesto (443), Moodle y Ollama en redes internas **sin egreso a internet**, Caddy + WAF Coraza (OWASP CRS). Vale por el diagrama de red, no por el código |
+| **tool_aiconnect** | https://github.com/marcusgreen/moodle-tool_aiconnect | 🚫 licencia no mostrada | 10 (4 forks, 37 commits) | 🚫 No se vio directorio `privacy/` | **EMEA** — nota de consultoría a **Catalyst EU** (Moodle Partner) | Fork de `local_ai_connector` para múltiples proveedores LLM incluido Ollama; quita generación de imagen; se integra con `moodle-qtype_aitext` |
+| **tool_dataprivacy** (el repo) | https://github.com/moodlehq/moodle-tool_dataprivacy | **GPL-3.0** ⚠️ | 8 (11 forks, 199 commits) | — (es la máquina, no un plugin de AI) | EMEA — `moodlehq` | 🔴 **ARCHIVADO el 2020-09-24, read-only.** No está muerto: **se mudó al núcleo**. Moodle 3.3.8 / 3.4.5 / 3.5 y posteriores ya lo traen de fábrica, y por eso `admin/tool/dataprivacy/version.php` da 200 en `MOODLE_500_STABLE`. **No proponer este repo como dependencia** — proponer la versión del núcleo |
+
+### ⚠️ Advertencia de método — el tercer lugar donde puede estar la licencia
+
+Esta KB ya aprendió dos veces que la licencia no se lee donde parece. El pase 10 pasó del README al archivo
+`LICENSE`; el pase 16 encontró dos casos (`diffprivlib`, `SDV`) donde el sidebar de GitHub no alcanzaba.
+`mod_aigradedassign` agrega el tercero: **no hay `LICENSE`, no hay licencia en el sidebar, no hay nota en el
+README — y el header de cada archivo `.php` declara GPL-3.0-or-later.** Para un plugin de Moodle eso es lo
+esperable (el núcleo lo exige), pero **un header de archivo no es una concesión de licencia del repositorio**.
+Regla operativa: **si no hay `LICENSE`, se trata como sin licencia a efectos de cotización**, y lo que corresponde
+es abrir un *issue* pidiendo el archivo. Es el mismo movimiento de dos líneas que el pase 13 recomendó para el
+gap 20.
+
+### ⚠️ Y la nota de diseño sobre `local_aihub`, porque es la pieza que esta KB va a recomendar
+
+El provider declara **6 preferencias de usuario** que incluyen las claves BYOK (`local_aihub_deepseek_key`,
+`local_aihub_gemini_key`, `local_aihub_groq_key`, `local_aihub_openai_key`) vía `add_user_preference`. Declararlas
+es **lo correcto** —son dato personal del usuario y el Privacy API las tiene que conocer—, pero tiene una
+consecuencia que conviene prever: **un pedido de exportación de datos devuelve al usuario sus propias claves de
+API en el export**. No es una vulnerabilidad y el diseño es honesto; es una consideración de manejo del artefacto
+de export, que en un despliegue institucional circula por correo o por descarga. Se anota, no se descuenta.
+
+---
+
+## Capa de *unlearning* — agregada en el pase 18 del 2026-10-01
+
+El **gap 30** (pase 17) dejó una acción textual: *«buscar procedencia de dato de entrenamiento por los términos del
+dominio de ML, no de educación… **`machine unlearning` es el término que este pase no buscó** y es el que podría
+tener oferta madura»*. Se buscó. **La predicción era correcta: la oferta existe, es madura y es toda permisiva.**
+
+Y produce el contraste más limpio de esta KB. El pase 17 midió que la máquina para **borrar el registro** del
+alumno está instalada en el LMS y es **toda copyleft**. Esta capa borra la otra mitad —**la influencia del dato
+sobre el modelo**— y es **toda MIT o Apache-2.0**. Las dos mitades del derecho al olvido tienen licencias
+opuestas, y la permisiva es la que la educación no usa.
+
+### Lo horizontal: real, permisivo, publicado y con tracción
+
+| Pieza | Repo | Licencia | ★ | Qué es |
+|---|---|---|---|---|
+| **awesome-machine-unlearning** | https://github.com/tamlhp/awesome-machine-unlearning | **MIT** ✅ | 970 (79 forks) | El mapa de la capa: artículos, metodologías y **datasets**. Respalda la survey *«A Survey of Machine Unlearning»*, **ACM TIST 2025**, DOI `10.1145/3749987` (arXiv 2209.02299). Es el punto de entrada |
+| **machine_unlearning** | https://github.com/jjbrophy47/machine_unlearning | 🚫 **sin licencia declarada** | 965 (117 forks) | Literatura existente sobre *unlearning*, de pre-2017 a 2025 (AAAI, ACL, CVPR, NeurIPS). Segundo agregador por tamaño. **No muestra licencia** → bibliografía sí, dependencia no |
+| **awesome-llm-unlearning** | https://github.com/chrisliu298/awesome-llm-unlearning | **Apache-2.0** ✅ | 627 (33 forks) | 616 papers, 18 surveys, 3 frameworks. Es el recorte de LLM |
+| **open-unlearning** | https://github.com/locuslab/open-unlearning | **MIT** ✅ | **607** (164 forks, 90 commits, Python) | **El framework ejecutable de la capa.** Benchmarks **TOFU, MUSE, WMDP**; métodos `GradAscent`, `GradDiff`, `NPO`, `SimNPO`, `DPO`, `RMU`, `UNDIAL`, `AltPO`, `SatImp`, `WGA`, `CE-U`, `PDU`; 5+ datasets, 10+ métricas, 7+ arquitecturas. Reporte técnico arXiv **2506.12618** |
+| **Unlearn-Saliency (SalUn)** | https://github.com/OPTML-Group/Unlearn-Saliency | **MIT** ✅ | 154 (29 forks) | *Weight saliency* por gradiente para *unlearning*, en clasificación **y** generación (difusión, Stable Diffusion). **ICLR 2024 Spotlight**, arXiv 2310.12508. Es el método con mejor relación resultado/costo publicado |
+| **torchunlearn** | https://github.com/Harry24k/machine-unlearning-pytorch | **MIT** ✅ | 12 (2 forks, 51 commits) | *«A PyTorch library for efficient machine unlearning — make your models forget, on demand.»* Interfaz unificada estilo PyTorch sobre algoritmos del estado del arte. **NeurIPS 2025**, *«Unlearning-Aware Minimization»* (Kim et al.). **Es la pieza de esta tabla que alcanza a un modelo de *knowledge tracing*** — ver abajo |
+| **model-provenance-kit** | https://github.com/cisco-ai-defense/model-provenance-kit | **Apache-2.0** ✅ | 104 (22 forks) | **Cisco AI Defense.** Toolkit y CLI en Python que determina si dos modelos comparten origen: metadatos de arquitectura, estructura del tokenizer y *fingerprints* a nivel de pesos, **8 señales agregadas en un score**. Modos `compare` (par a par) y `scan` contra una base de ~**150 modelos base de 45+ familias**. *Streaming* para modelos de +20 GB |
+| **Data-Provenance-Collection** | https://github.com/Data-Provenance-Initiative/Data-Provenance-Collection | **Apache-2.0** ✅ | 281 (48 forks) | Auditoría de **44 colecciones / 1800+ datasets** de *finetuning* con metadatos de fuente, licencia y creador; genera **fichas de procedencia legibles**. arXiv 2310.16787 |
+
+🔴 **Y una trampa de verificación que este pase casi escribe mal.** La primera búsqueda devolvió
+`aflah02/open-unlearning` como el repo de la librería. **Es un fork con 0 ★ y 0 forks**; el canónico es
+`locuslab/open-unlearning` con **607 ★**. Un buscador devuelve el fork y el fork se ve idéntico al original: mismo
+README, misma licencia, misma lista de métodos. **Lo único que lo delata es el campo «forked from» y el contador
+de estrellas en cero.** Es la misma clase de error que el pase 7 cometió con MRBench y el pase 12 con la
+distribución por *skills*. Regla: **ningún repo entra a una tabla de esta KB sin mirar si es fork.**
+
+### 🔴 El hallazgo del pase: el algoritmo que la educación necesita existe, es exactamente de su capa de *mastery*, y no publica código
+
+Buscando *unlearning* contra educación aparece **PrivacyCD** — *«PrivacyCD: Hierarchical Unlearning for Protecting
+Student Privacy in Cognitive Diagnosis»*, **arXiv 2511.03966**. Y no es un paper tangencial:
+
+- Se declara **el primer estudio sistemático del problema de *data unlearning* para modelos de *cognitive
+  diagnosis***, y los modelos de CD son **la misma capa de estimación de dominio** que esta KB viene documentando
+  desde el pase 4 con `pyBKT` y `pyKT`.
+- El argumento de partida es exactamente el que esta KB necesitaba verificar: *«aplicar directamente algoritmos de
+  *unlearning* de propósito general es subóptimo, porque no logran balancear completitud del olvido, utilidad del
+  modelo y eficiencia frente a la estructura heterogénea de los modelos de CD»*.
+- Aporta **HIF** (*hierarchical importance-guided forgetting*): la importancia de los parámetros en modelos de CD
+  tiene características **por capa**, y un mecanismo de suavizado combina importancia individual y de capa para
+  distinguir mejor los parámetros asociados al dato a olvidar. Evaluado en **tres datasets reales**.
+- Autores: Mingliang Hou, Yinuo Wang, Teng Guo, Zitao Liu, Wenzhou Dou, Jiaqi Zheng, Renqiang Luo, Mi Tian,
+  Weiqi Luo.
+
+**No se ubicó repositorio público.** Se buscó explícitamente por el nombre del método y del paper. Es el patrón
+que esta KB ya nombró en la capa predictiva (pase 11) y en la de contenido (pase 10): **la pieza más específica y
+más valiosa es la que no publica código.**
+
+Hay más literatura en la misma dirección, y conviene registrarla como señal de que la categoría se está formando:
+*«Making AI Forget You: Removing Educational Data from Intelligent Education Models»* (capítulo Springer, DOI
+`10.1007/978-981-95-1525-7_8`), *«Exploring Fairness in Educational Data Mining in the Context of the Right to be
+Forgotten»* (arXiv 2405.16798), *«Trustworthy Intelligent Education: A Systematic Perspective»* (arXiv 2601.21837)
+y *«Lifting Data-Tracing Machine Unlearning to Knowledge»* (OpenReview `ScvUCNMdYN`).
+
+⚠️ **Nivel de evidencia:** `arxiv.org` está **bloqueado por el proxy de egreso de esta sesión** (mismo bloqueo que
+el gap 17; también cayeron `blogs.cisco.com` y `helpnetsecurity.com`). Los metadatos de estos papers vienen de
+**snippets de búsqueda concordantes, no de la fuente primaria**. Los repos de la tabla de arriba **sí** se
+verificaron de primera mano, incluida la condición de fork y la ausencia de licencia donde se declara.
+No citar un número de paper en material de cliente sin abrir el PDF.
+
+### La conclusión de ingeniería, y es la que decide qué se puede prometer
+
+Esta KB tiene dos estimadores de *mastery* en su tabla de fundacionales, y **el *unlearning* los alcanza de forma
+distinta**:
+
+- **`pyKT` (MIT) es PyTorch.** Entonces `torchunlearn` y `SalUn` son **aplicables en principio**: hay una interfaz
+  y un conjunto de pesos sobre los cuales operar. Es integración con riesgo técnico, no investigación.
+- **`pyBKT` (MIT) no es un modelo PyTorch** — es BKT ajustado por EM. **Ninguna librería de esta tabla lo
+  alcanza**, y la respuesta honesta para `pyBKT` **no es *unlearning*: es reajustar desde cero sin el alumno**.
+  Para BKT eso es barato —pocos parámetros, EM sobre la secuencia— y además es *exact unlearning*, que es la
+  garantía más fuerte que existe. **Es mejor resultado legal por menos trabajo.**
+
+**La regla operativa, en una línea:** *si el modelo de dominio es BKT, el derecho al olvido se cumple
+reentrenando y se puede probar; si es deep knowledge tracing, hay que hacer unlearning aproximado y el entregable
+incluye la métrica de verificación, no sólo el borrado.*
+
+### Lo que esta capa no tiene, por región, y es un gap informado
+
+El barrido regional de esta capa da un resultado desparejo que conviene escribir en vez de dejar en silencio:
+
+- **North America** — es donde vive la oferta: `locuslab` (CMU), `OPTML-Group` (Michigan State),
+  `cisco-ai-defense`, `Data-Provenance-Initiative` (MIT Media Lab).
+- **APAC** — la segunda concentración, y es la que tiene **lo específicamente educativo**: `torchunlearn` (Corea),
+  `tamlhp` (Australia) y los autores de **PrivacyCD**. Extiende el patrón que el gap 4 viene anotando desde el
+  pase 7.
+- **EMEA** — 🚫 **no se encontró ninguna pieza de *unlearning*** en este barrido. Se declara **no encontrada, no
+  inexistente**. Es llamativo porque EMEA es la región donde el **derecho de supresión (GDPR art. 17)** es
+  directamente exigible: el régimen más fuerte del mundo y cero oferta propia de la tecnología que lo cumple.
+- **LATAM** — 🚫 **no se encontró ninguna pieza de *unlearning***. Pero LATAM **sí** aporta a la otra mitad de este
+  pase, y es la pieza más completa de toda la capa de `privacy provider`: **`local_aihub`, de un instituto federal
+  brasileño**. Ver el **gap 2**, que este pase vuelve a mover.
+
+Ver los **gaps 31 y 32**, las tendencias **45**, **46** y **47**, y los patrones **P38** y **P39**.
