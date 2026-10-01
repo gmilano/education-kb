@@ -9,6 +9,11 @@ updated: 2026-10-01
 > Plataformas verticales reales, en producción, customizables con AI.
 > Modelo: partir de algo que ya funciona y que ya tiene los datos, y agregar la capa agéntica arriba.
 > Verificado vía WebFetch el 2026-09-30; las capas del pase 11, el 2026-10-01.
+> **Pase 26:** entra **una vertical entera que veinticinco pasadas no buscaron — la biblioteca (ILS/OPAC)** — y entra
+> con una opción **permisiva y grande**: **FOLIO** (Apache-2.0, 3.096 commits, multi-tenant, bus de Kafka). Se agregan
+> además **admisiones** y ***student success*** 🔴 **para decir que no hay qué proponer en permisivo**: lo que sirve es
+> GPL/LGPL y lo permisivo son proyectos de portafolio; en *student success* lo open source es de **2013–2014** y no vive
+> en GitHub.
 > **Pase 25:** entran tres capas — **horarios institucionales** (`UniTime`, Apache-2.0, 349 ★), **aserción de
 > competencias** (`CaSS`, Apache-2.0, la pieza que la capa CASE del pase 14 no tenía) y **supervisión remota de exámenes**,
 > que se agrega 🔴 **para decir que no hay qué proponer**: las cinco piezas que existen son copyleft o tienen pesos de uso
@@ -922,3 +927,58 @@ discusión de licencia. Es el patrón **P49**, y el **gap 39** registra lo que f
 
 ---
 *Ver `compose/patterns.md` para las recetas concretas con repos y tiempos.*
+
+## 📚 Biblioteca — ILS / OPAC (agregada en el pase 26 del 2026-10-01)
+
+**La vertical que faltaba, y es de las que más datos tiene.** En una universidad, el sistema de biblioteca sabe qué
+está leyendo realmente cada alumno — y veinticinco pasadas de esta KB no lo buscaron. Es la vertical clásica de
+"partir de algo que ya funciona, que ya tiene los datos, y agregar la capa agéntica arriba", que es el modelo de este
+archivo.
+
+| Plataforma | Licencia | Señal | Cómo se le pone AI arriba |
+|-----------|----------|-------|---------------------------|
+| **FOLIO** (`folio-org/platform-complete`) | **Apache-2.0** ✅ | 3.096 commits, 27 forks, consorcio de bibliotecas universitarias | **La opción permisiva.** Plataforma **modular y multi-tenant** con **bus de eventos Kafka** en `mod-inventory`. La capa agéntica se engancha **como módulo y como consumidor de Kafka — sin parchear el core**. Es la forma que un agente necesita |
+| **Koha** | ⚠️ **GPL-3.0+** | El ILS open source más adoptado y el primero de la categoría | **El caso más probable en un cliente instalado.** OPAC, circulación, catalogación, adquisiciones, seriadas, reservas, socios. La capa AI se construye **contra su interfaz**, y hay que leer la **GPL-3.0** antes de tocar el core |
+
+**La regla de decisión, en una línea.** Cliente **con Koha instalado** → capa AI por fuera, contra la interfaz, con la
+GPL leída. Cliente **eligiendo o migrando** → **FOLIO**, porque es Apache-2.0 **y** porque su arquitectura de módulos
++ Kafka es la única de esta vertical que admite un agente sin tocar el núcleo.
+
+⚠️ **No aplicar el umbral de estrellas acá.** `platform-complete` tiene **15 ★** y `mod-inventory` **4 ★**, con 3.096 y
+2.402 commits. **Es software de consorcio: las estrellas miden moda, los commits y las implantaciones miden vida.**
+Mismo patrón que Apereo y `UniTime` en esta KB.
+
+🔴 **Y el hueco, declarado: no existe ninguna pieza agéntica ni conector MCP de biblioteca.** Ni FOLIO ni Koha tienen
+uno. FOLIO —que ya publica eventos en Kafka— es **el candidato más obvio de toda esta KB** para construirlo. Ver el
+**gap 45** y el patrón **P52**.
+
+## 🧾 Admisiones (agregada en el pase 26 🔴 para decir que no hay permisivo)
+
+Se buscó por consigna del pase 26. **El resultado es un gap informado.**
+
+| Plataforma | Licencia | Lectura |
+|-----------|----------|---------|
+| **OpenEduCat** | ⚠️ **LGPL-3.0** | Pipeline completo: consulta → solicitud online → verificación de documentos → entrevista → carta de oferta → alta en el SIS. Self-hosted, **sin fee por postulante**. Módulo **Odoo** |
+| **openSIS Classic** (`OS4ED/openSIS-Classic`) | ⚠️ **GPL** | SIS de K-12/trade/superior con la admisión adentro. Requiere Apache 2.4+ |
+| https://github.com/CollinsTatang/admissionSystem | **MIT** | **Permisivo, sí — y tiene 4 commits, 6 ★, 0 forks.** PHP/MySQL, verificado de primera mano. No es base de producción |
+
+🔴 **No hay plataforma de admisiones permisiva y productiva.** **La salida practicable es LGPL-3.0 sobre OpenEduCat**, y
+para un módulo Odoo eso es manejable: la **LGPL permite el módulo propietario al lado** sin contaminar, que es
+exactamente la forma en que se entrega un módulo Odoo. Es la recomendación de este archivo para la vertical. La
+alternativa es presupuestar **desarrollo**. Ver el **gap 46**.
+
+## 🎓 *Student success* / alumni (agregada en el pase 26 🔴 y es la peor abastecida de esta KB)
+
+| Plataforma | Licencia | Estado real |
+|-----------|----------|-------------|
+| **FlightPath Academics** | ⚠️ **GPLv3+** | Asesoría académica, *degree audit*, *student success*, ***early alerts*** y *Academic Priority* para alumnos en riesgo. PHP. Liberada el **2013-03-13** (University of Louisiana at Monroe). 🔴 **Sin repositorio en GitHub** — se distribuye desde su sitio |
+| **Student Success Plan (SSP)** | open source (Unicon) | *Case management* + *early alert* con modelo de coaching. **Referencias verificables sólo de 2013–2014** |
+| **Marist College early alert dashboard** | open source | Open Academic Analytics Initiative, Educause NGLC. **Misma época** |
+
+🔴 **La lectura incómoda, y es doble.** Esta vertical es **la más vieja y peor abastecida** de las que inventarió esta
+KB: lo que existe es de **2013–2014**, es **GPL**, y **no vive en GitHub**. Y es, al mismo tiempo, **la que tiene más
+presión regulatoria encima**: predecir qué alumno va a fracasar es precisamente la decisión automatizada sobre el alumno
+que el **Annex III** del EU AI Act clasifica de alto riesgo y que **Oklahoma y Maryland prohíben** tomar de forma
+autónoma (ver `intel/market.md`). **Hueco de mercado grande y riesgo regulatorio alto en la misma celda** — que es
+justamente el perfil donde un *studio* agrega valor, porque el entregable que se puede defender no es el modelo
+predictivo sino el flujo **con humano decidiendo**. Ver el **gap 47**, la tendencia **68** y el patrón **P53**.

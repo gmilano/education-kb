@@ -654,6 +654,65 @@ concordantes** (informes de consultoras y prensa sectorial). Los **12 repos** de
 (ver `repos/trending.md`). **`unu.edu`, `coe.int` y `www.iesalc.unesco.org` están bloqueados por el proxy de egreso**,
 así que las cifras de LAC de más abajo **no** se leyeron en la fuente primaria.
 
+### Agregado en el pase 26 del 2026-10-01 — el barrido regional se agota por sexta vez consecutiva, y el dato nuevo es regulatorio y de método: dos estados más legislan, y las tres fuentes primarias de LATAM siguen bloqueadas
+
+Se corrieron las cuatro búsquedas regionales con el año **calculado** (2026). **Sexta pasada consecutiva sin cifras de
+mercado nuevas**: volvieron las mismas y se confirman otra vez — global **$7,52B (2025) → $10,6B (2026)** al **40,9 %**
+y **$79,6B a 2034**; North America **$951M (2024) → $2.303,2M (2029)** al **15,9 %**. La dispersión entre consultoras
+sigue siendo el dato, y sigue registrada arriba.
+
+**Lo nuevo es regulatorio, y agrega dos nombres al mapa de North America.** El barrido trae que **Colorado y Texas**
+introdujeron requisitos *piecemeal* sobre AI, y lo enmarca con una frase que conviene llevar a una conversación
+comercial tal cual: **la AI educativa opera en un vacío regulatorio relativo — no existe un equivalente a la FDA para
+edtech, y la decisión de adopción la toma cada escuela, distrito o universidad con supervisión externa mínima.** Ésa es
+la razón estructural por la que el comprador de este mercado es fragmentado y el ciclo de venta es institución por
+institución. Súmese a **Oklahoma y Maryland** (prohibición de decisión autónoma sobre el alumno, pase 23) y a
+**Delaware y Nueva York** (prohibiciones de IEP, pase 3): **seis estados con instrumento propio**, ninguno armonizado.
+
+### 🔴 La contradicción del calendario del AI Act vuelve por sexta vez, y es la que más caro sale en una reunión
+
+El barrido devolvió, otra vez y en dos regiones distintas, que **«el EU AI Act entra en vigor plenamente en agosto de
+2026 y clasifica la AI educativa como de alto riesgo»**. **Esta KB tiene el dato más preciso y hay que defenderlo:** el
+reloj del **Anexo III** se corrió a **2027-12-02** por el **Reglamento (UE) 2026/1744** (en vigor 2026-07-27), como se
+registra en el pase 11 y en la corrección del pase 22.
+
+**El valor comercial de esto no es tener razón: es saber qué leyó el cliente.** Los resúmenes genéricos siguen diciendo
+agosto de 2026 en las cuatro regiones, así que **el cliente va a llegar a la reunión con la fecha vieja** — y con ella,
+o con una urgencia que no corresponde, o con un presupuesto de cumplimiento mal fechado. **Llevar el número del
+Reglamento.** Es la sexta confirmación de que esta discrepancia no se está corrigiendo en el canal público.
+
+### ⚠️ La advertencia de método que este pase extiende, y es sobre la evidencia de LATAM
+
+El pase 25 registró que `unu.edu`, `coe.int` y `www.iesalc.unesco.org` están **bloqueados por el proxy de egreso**, y
+que por eso las cifras del estudio **UNESCO IESALC / UNU-IAS** vienen de resúmenes de buscador concordantes y no de la
+fuente primaria. **Este pase lo reintentó y lo amplía, con el detalle del bloqueo:**
+
+- `unu.edu` → **`EGRESS_BLOCKED`** (WebFetch, por nombre de dominio).
+- `publications.iadb.org` → **`EGRESS_BLOCKED`**. **Es un dominio nuevo y dolía perderlo:** el barrido LATAM devolvió
+  *«An Enabling Regulatory Framework for Artificial Intelligence in Latin America and the Caribbean»* (**BID/IADB**),
+  que es **exactamente la fuente primaria regulatoria regional** que esta KB no tiene.
+- `coe.int` → **HTTP 000** por el túnel. La **2.ª conferencia de trabajo del Consejo de Europa** sobre las dimensiones
+  regulatorias de la AI en educación **sigue sin verificar**; el barrido la ubica **en octubre**.
+
+🔴 **Dicho sin suavizar: la base de evidencia regulatoria de LATAM y la europea institucional no son verificables desde
+este entorno, y van dos pases seguidos.** Son **tres dominios institucionales** sobre los que esta KB apoya afirmaciones
+regionales. **No es una laguna de investigación: es un límite del entorno**, y hay que levantarlo desde una red sin este
+proxy antes de usar cualquiera de estas cifras con un cliente.
+
+**Lo que sí mejoró, y es la muestra del estudio LATAM.** El barrido de este pase devolvió el **tamaño de muestra**, que
+el pase 25 no tenía: **200 instituciones de educación superior en 19 países**, trabajo de campo entre **agosto y octubre
+de 2025**, sobre **cinco dimensiones** (enseñanza y aprendizaje, investigación, vinculación con el medio, administración
+y gobernanza). **Sigue siendo resumen de buscador, no fuente primaria** — pero una muestra declarada de 200/19 es
+auditable y acota el margen. **Y confirma la advertencia de fechado del pase 25:** encuesta **de campo 2025**, lanzada
+en 2026. Escribir *«encuesta de 2025, publicada en 2026»*; citar *«datos 2026»* sobredata la evidencia un año.
+
+**Y confirma, con las cifras a la vista, la advertencia de poblaciones mezcladas.** El barrido volvió a traer juntos el
+**87 %** de instituciones de educación superior con AI en al menos un área (IESALC) y el **99 % de las *startups*
+latinoamericanas que usa alguna solución de AI** con el **85 % que la integra de forma nativa en su producto**. **No son
+la misma medición ni la misma población:** una es de **universidades**, las otras de **empresas y startups**.
+Promediarlas o usarlas de refuerzo mutuo es un error de lectura. **Para un engagement educativo la cifra es la de
+instituciones.**
+
 ## Players globales
 
 | Empresa | Tipo | Fortaleza | Debilidad |
@@ -697,6 +756,17 @@ Dónde se produce el software educativo abierto, que no es donde está la demand
 ## Opportunities by region
 
 ### North America
+
+**Pase 26 (2026-10-01) — dos estados más, y el encuadre estructural del comprador.** El barrido agrega **Colorado y
+Texas** con requisitos *piecemeal* sobre AI, y el encuadre que explica el ciclo de venta de esta región: **no hay
+equivalente a la FDA para edtech**, y la adopción la decide **cada escuela, distrito o universidad** con supervisión
+externa mínima. Con Oklahoma y Maryland (decisión autónoma sobre el alumno) y Delaware y Nueva York (IEP), van **seis
+estados con instrumento propio y ninguna armonización**. **Oportunidad:** el entregable que se vende acá no es el
+modelo, es **el flujo auditable institución por institución** — y el **mapa de cumplimiento multi-estado** es
+facturable por sí mismo, porque ningún producto lo trae resuelto. Cifra regional reconfirmada por sexta vez:
+**$951M (2024) → $2.303,2M (2029)**, CAGR **15,9 %** — **menos de la mitad del CAGR global (40,9 %)**: es un mercado
+grande y maduro, no uno que explota.
+
 
 **Agregado en el pase 23 (2026-10-01) — la capa predictiva pasó de «mal abastecida» a «parcialmente prohibida», y eso cambia qué se puede vender.** El barrido regional de este pase trae el número que faltaba para dimensionar la ola legislativa: **134 proyectos de ley sobre AI en educación introducidos en 31 estados en la sesión 2026**. Cuatro estados —**Maryland, Idaho, Oklahoma y Virginia**— ya tienen **leyes de 2026 que exigen las dos cosas a la vez**: guía estatal **y** adopción obligatoria de política de AI a nivel distrito. Los ejes:
 
@@ -1184,6 +1254,18 @@ sello de 1EdTech cubre la entrega, no la autoría** — decirlo explícitamente,
 
 ### EMEA
 
+**Pase 26 (2026-10-01) — el dinero público británico tiene cifra y tiene currículum.** El barrido trae el primer
+**AI Adoption Summit** del Reino Unido con **£200m+** comprometidos para adopción de AI, **Big Tech como socios de
+entrega** (Cisco, IBM, BT, Rolls-Royce) y **Skills England fijando el marco curricular**. Señal de forma, no sólo de
+monto: **el Estado define el currículum y la industria entrega**, que es un modelo de contratación en el que un *studio*
+entra como integrador. Se agrega el **«Europe EdTech 200»** de QS (edición 2026) como índice de players regionales.
+Y el contraste que ordena la oportunidad: **94 %** de las organizaciones declara probable invertir en formación en AI
+en 2026, pero **38 % de las organizaciones EMEA todavía no empezó a pilotear**. **Oportunidad:** la brecha entre
+intención declarada y piloto inexistente es el mercado — y en EMEA el argumento de entrada es el **cumplimiento**, no
+la capacidad. ⚠️ **La 2.ª conferencia de trabajo del Consejo de Europa** sobre dimensiones regulatorias de la AI en
+educación, ubicada **en octubre**, **sigue sin verificar: `coe.int` está bloqueado por el proxy** (dos pases).
+
+
 **Agregado en el pase 23 (2026-10-01) — el reloj del AI Act, reconfirmado desde la fuente regulatoria, y la vía de residencia del dato.** El barrido regional reconfirma lo que el pase 11 ya había corregido y le pone las dos fechas juntas: el **AI Act** entró en vigor en **agosto de 2024**, su **fecha de aplicación general fue el 2 de agosto de 2026**, y el **Digital Omnibus sobre AI** —derecho vigente desde **julio de 2026**— corrió los plazos de la mitad cara (Anexo III al **2027-12-02**, Reglamento (UE) 2026/1744). **La clasificación de educación no se movió:** acceso y evaluación —**decisiones de admisión, evaluación del alumno y corrección de exámenes**— siguen siendo **alto riesgo**, con obligación de gestión de riesgo, gobernanza de datos, supervisión humana, transparencia y evaluación de conformidad **antes del despliegue**.
 
 **El dato nuevo, y es de arquitectura, no de norma.** El barrido muestra que el despliegue real en la región se parte en dos: la mayoría de las implementaciones educativas usan **API de OpenAI o Anthropic**, y **los distritos con requisitos estrictos de residencia del dato autoalojan un modelo de pesos abiertos** (Llama 3, Mistral). Eso convalida de fuente externa la tendencia **3** de esta KB (*offline-first con AI local es una categoría real*) y le da el motivo de compra que faltaba: **no es conectividad, es residencia del dato.** Para EMEA la pila **Kolibri (MIT) + Ollama**, o cualquier LMS con proveedor local, deja de ser el caso de baja conectividad y pasa a ser **el caso de cumplimiento** — que tiene presupuesto mucho mayor.
@@ -1642,6 +1724,19 @@ europea, que normalmente puede aceptar copyleft, **el sello vale más que la per
 puede poner las dos opciones sobre la mesa en vez de declarar el hueco (ver `repos/foundations.md`).
 
 ### APAC
+
+**Pase 26 (2026-10-01) — la región tiene players nombrables, y hay que leer de qué mercado son.** El barrido devuelve
+**NIIT MTS** (top-20 de desarrolladores de contenido custom 2026), **TCS + Pearson** (alianza plurianual de *AI
+learning*), **Alteryx Academy** relanzada con rutas personalizadas y **LearnUpon** abriendo HQ en **Sídney** con
+*Create+* de autoría de cursos. 🔴 **La lectura que hay que poner, porque el nombre engaña:** **los cuatro son
+*corporate L&D*, no software de K-12 ni de educación superior.** Un barrido de «AI education APAC» devuelve el mercado
+de capacitación corporativa, que es **otro comprador, otro ciclo y otro presupuesto**. Registrarlos como players de
+*L&D*, no de educación formal. En gobernanza: **48 %** de los líderes de *governance* de APAC pone la adopción de AI
+como prioridad estratégica 2026, con los marcos de gobernanza **corriendo detrás** de la implementación; las consultas
+de **Singapur** que aparecen son **sobre instituciones financieras, no educación** — no transferir el dato.
+**Oportunidad:** el segmento *corporate L&D* de APAC está **mejor financiado y menos regulado** que el educativo formal
+(el Annex III no lo alcanza), y esta KB lo tenía sin nombrar. Es la vía de entrada más corta de la región.
+
 
 **Agregado en el pase 22 (2026-10-01) — la región de crecimiento más rápido, y ahora la pila permisiva está completa.**
 Se reconfirma **$591,6M (2024) → $1.848,1M (2029), CAGR 20,9%** y el marco regulatorio **fragmentado** con foco en
@@ -2127,6 +2222,21 @@ entrada en una región donde el tutor y la evaluación sí están alcanzados. Y 
 están moviendo acá este año (**LearnUpon** con sede nueva en Sídney, **TCS + Pearson**, **NIIT MTS**).
 
 ### LATAM
+
+**Pase 26 (2026-10-01) — el estudio institucional ya tiene muestra, y la evidencia regulatoria regional sigue
+inalcanzable.** El estudio **UNESCO IESALC / UNU-IAS** gana el dato que faltaba: **200 instituciones de educación
+superior en 19 países**, campo **agosto–octubre de 2025**, cinco dimensiones (enseñanza y aprendizaje, investigación,
+vinculación, administración, gobernanza). **Citar como «encuesta de 2025, publicada en 2026».** 🔴 **Y la advertencia
+de poblaciones, con las cifras juntas para que no se mezclen:** **87 %** es de **instituciones** (IESALC); **99 %** de
+*startups* que usan AI y **85 %** que la integra nativamente son de **empresas**. Para un engagement educativo la cifra
+es **la de instituciones**. ⚠️ **Límite de verificación, y empeora:** `unu.edu` y ahora también
+**`publications.iadb.org`** devuelven **`EGRESS_BLOCKED`**. El segundo dolía: el barrido ubicó *«An Enabling Regulatory
+Framework for Artificial Intelligence in Latin America and the Caribbean»* (**BID**), que es **la fuente primaria
+regulatoria regional que esta KB no tiene**. **Van dos pases con las tres fuentes primarias de LATAM bloqueadas: es un
+límite del entorno, no una laguna de investigación.** **Oportunidad:** con regulación fragmentada o inexistente según
+el país, el diferenciador regional **no es el cumplimiento sino la pedagogía defendible** — y el pase 23 ya trajo el
+argumento del usuario final, **65 % de los alumnos teme el aprendizaje superficial**.
+
 
 **Agregado en el pase 22 (2026-10-01) — el hallazgo del pase le pega de lleno a la base instalada de la región.** La
 tijera de LATAM no cambia y sigue siendo la más ancha que esta KB documentó: **73,5% enseña con AI y 9,0% tiene

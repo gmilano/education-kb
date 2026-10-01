@@ -8,6 +8,54 @@ updated: 2026-10-01
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 
+## 2026-10-01 (pase 26) — el eje conector rinde por segunda vez: el conector MIT de 102 tools, la biblioteca permisiva que veinticinco pasadas no buscaron, y dos capas que se buscaron y salieron vacías
+
+**7 repos verificados de primera mano, 6 nuevos para esta KB** (el re-verificado es `learnmcp-xapi`). Uno entra en la
+tabla principal de `agents/top.md` — **se corta la racha de siete pases sin altas**.
+
+| Repo | Licencia | ★ | Forks | Commits | Señal | Por qué importa |
+|------|----------|---|-------|---------|-------|-----------------|
+| https://github.com/vishalsachdev/canvas-mcp | **MIT** ✅ | **269** | 92 | 815 | El conector permisivo de LMS más grande de esta KB | **Hasta 102–103 tools** + 8 *agent skills*. Alumno **y docente**. `search_canvas_tools` para descubrimiento. *Learning Designer* con **chequeo WCAG** |
+| https://github.com/folio-org/platform-complete | **Apache-2.0** ✅ | 15 | 27 | **3.096** | Ensamblado de plataforma de un consorcio de bibliotecas | **Abre la capa biblioteca/ILS**, permisiva y grande. Fija el conjunto compatible de releases + infra Docker |
+| https://github.com/folio-org/mod-inventory | **Apache-2.0** ✅ | 4 | 15 | **2.402** | Módulo núcleo de FOLIO | Inventario (*instances*/*holdings*/*items*), **Kafka**, **MARC**, *authority linking*, **multi-tenant** |
+| https://github.com/cassproject/CASS | **Apache-2.0** ✅ | 62 | — | — | **Cartucho MCP ejecutado** | **6 tools + 3 resource templates medidos.** `record_evidence` + `get_learner_profile` = los dos pasos de **P48**. Cierra el **gap 40** |
+| https://github.com/macewan-cs/lti | **MIT** ✅ | 8 | 2 | 89 | Candidato *platform-side* **refutado** | Go, MIT — pero *«partially implements»* y **es tool-side**. El resumen de búsqueda sugería el lado LMS; la página dice que no |
+| https://github.com/csmediapro/moodle-mcp-server | 🔴 **AGPL-3.0** | **0** | **0** | 57 | **Corrección de licencia** | Único conector MCP de Moodle. **Open-core:** 10 tools de lectura abiertos, *Reporting*/*Analytics*/*Directory*/*Compliance* **premium aparte** |
+| https://github.com/DavidLMS/learnmcp-xapi | **MIT** ✅ | 15 | 4 | 32 | **Re-verificado: no se movió** | Idénticos ★ y commits que en el pase 6. La ficha era correcta, y el estancamiento confirma su propia advertencia |
+
+### Lo que el eje conector devolvió por estándar, incluidos los vacíos
+
+El pase 25 mandó cruzar `MCP server` con cada estándar inventariado. **Resultado, estándar por estándar:**
+
+| Estándar | Resultado | Qué se registra |
+|----------|-----------|-----------------|
+| **xAPI** | ✅ `learnmcp-xapi` (MIT) | Ya estaba desde el pase 6. Re-verificado |
+| **LTI** | ✅ `canvas-mcp` (MIT), `moodle-mcp-server` (AGPL) | Vía conectores de LMS, no del estándar en sí |
+| **CASE** | 🔴 **nada verificable** | **Y el término colisiona:** la búsqueda se llena de *certificaciones* de MCP (MCPA del Linux Foundation, certs de Claude). **Segunda colisión de término medida por esta KB**, después de `education` = «cursos sobre AI» |
+| **OneRoster** | 🔴 **nada** | Ni un repo. Declarado como vacío, no como no buscado |
+| **QTI** | 🔴 **nada verificable** | Apareció un *Question Bank MCP Server* listado en Glama **sin repo de GitHub localizable**. **No se registra como hallazgo** (gap **44**) |
+
+### Las dos capas que se buscaron por consigna y salieron sin permisivo
+
+- **Admisiones:** `openSIS-Classic` (**GPL**) y **OpenEduCat** (**LGPL-3.0**) son lo que sirve, y ya estaban. Lo
+  permisivo que apareció —`CollinsTatang/admissionSystem` (MIT), `OrgSchool-portfolio-project`— son **proyectos de una
+  persona**, con «portfolio-project» en el nombre de uno de ellos. **No hay plataforma de admisiones permisiva y
+  productiva** (gap **46**).
+- ***Student success* / alumni:** **FlightPath Academics** (PHP, **GPLv3+**, liberada el **2013-03-13**, *early alerts*
+  y *Academic Priority*) **no tiene repo en GitHub**; **Student Success Plan** (Unicon) y el *dashboard* de **Marist
+  College** tienen referencias verificables sólo de **2013–2014**. 🔴 **Es la capa más vieja y peor abastecida de esta
+  KB — y la que más presión regulatoria tiene encima** (Annex III, prohibiciones de Oklahoma y Maryland sobre la
+  decisión autónoma acerca del alumno). Gap **47**, tendencia **68**.
+
+### Nota de método: por qué acá no se verifica con `curl -sI`
+
+**`curl -sI` contra `github.com` devuelve `403` para todas las URLs en esta sesión**, incluidas las que existen y están
+en esta KB desde el pase 1 — el proxy de egreso corta el `HEAD`. Verificar con `curl` acá **fabricaría 404s falsos sobre
+repos reales**, que es justamente el error que la consigna quiere evitar. **Toda verificación de este pase se hizo con
+WebFetch sobre la página del repo**, leyendo licencia, ★, forks y commits de la página. Y una advertencia sobre el
+umbral de estrellas: **FOLIO tiene 15 ★ y 3.096 commits.** Para software de consorcio las estrellas miden moda y los
+commits miden vida — **no aplicar el umbral de estrellas a infraestructura institucional.**
+
 ## 2026-10-01 (pase 25) — la consigna del pase 24 rindió el haul más grande del eje artefacto, y corrigió dos conclusiones que el pase 24 había escrito con confianza: el repo que declaró 404 existe, y el lado *platform* sí es permisivo
 
 **18 repos verificados de primera mano, 17 nuevos para esta KB** (el único ya conocido es `amp-up-io/qti3-item-player`, re-verificado para comparar con el QTI 3 nuevo). Ninguno es un agente —`agents/top.md` sigue en

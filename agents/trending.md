@@ -9,6 +9,106 @@ updated: 2026-10-01
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 > No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
 
+## 2026-10-01 (pase 26) — se corta la racha de siete pases sin altas, y se corta en el conector: el gap 40 se cierra ejecutando y el lado LMS se cierra midiendo que no existe
+
+**La tabla principal pasa de 37 a 38 filas.** Entra `vishalsachdev/canvas-mcp` (**MIT**, 269 ★, 92 forks, 815 commits,
+**hasta 102–103 tools** y 8 *agent skills*). Es **el conector permisivo de LMS más grande que registró esta KB** y el
+primero que cubre **el lado docente** además del del alumno: corrección, analítica de alumnos, mensajería, gestión de
+módulos y páginas, y un *Learning Designer* con **escaneo de accesibilidad y chequeo WCAG** — la capa que el pase 8
+abrió, llegando por fin al conector. Trae `search_canvas_tools`, que es la respuesta de diseño a tener cien
+herramientas: **el agente descubre la tool en vez de recibir las cien en el contexto.**
+
+**Y entró por donde el pase 25 dijo que había que buscar.** La consigna era literal: *«cambiar el eje de búsqueda al
+conector, que es donde este pase mostró tracción: `MCP server` + cada estándar que esta KB ya inventarió»*. **La
+consigna rindió en su primer uso, por segunda vez consecutiva** (el pase 24 ya había validado el eje
+artefacto/estándar). El barrido obligatorio —cuatro globales y cuatro regionales, con el año **calculado** (2026)—
+volvió a dar **cero agentes nuevos por octava vez**: la capa genérica (openclaw 385k ★, browser-use, Mem0, AutoGen) y
+material didáctico *sobre* AI. **Ocho pases confirman la medición del pase 23: en GitHub `education` es «cursos sobre
+AI», no «software que educa». El canal de descubrimiento por esa palabra está agotado y conviene dejar de pagarlo.**
+
+### El gap 40 se cierra ejecutando, y no hacía falta la base de datos
+
+El pase 25 dejó el **gap 40** abierto porque CaSS *declaraba* MCP en el README y nadie había listado una tool. Este pase
+listó las seis. **No levantando el servidor** —necesita Elasticsearch y en este entorno **no hay demonio de Docker**
+(el CLI está, `/var/run/docker.sock` no existe)— sino por donde la arquitectura del propio proyecto lo permite: las
+tools se generan con `generateTools(spec)` sobre el OpenAPI que `swagger-jsdoc` arma desde los comentarios del código,
+**y eso es puro y corre sin base de datos.** Se replicaron las opciones exactas de `src/main/server.js`, se validó el
+spec con el mismo `openapi-schema-validator` que el servidor usa al arrancar, y se corrió el generador real.
+
+**51 paths, 0 errores de validación, 6 tools, 3 resource templates.** Las dos que importan:
+**`record_evidence`** (`POST /api/xapi/statement`) y **`get_learner_profile`** (`GET /api/profile/latest`) — *entrar
+evidencia xAPI, sacar perfil de competencia, por MCP, Apache-2.0*. Son **exactamente los dos pasos que el paso 4 de
+P48 tenía inferidos de una línea de README**. La tendencia **65** deja de ser promesa y pasa a capacidad medida
+(tendencia **66**). Tabla completa en `agents/top.md`.
+
+**El hallazgo de diseño, que corrige una suposición razonable:** de los 51 paths, el cartucho expone **6**. Hay **45
+`x-mcp-ignore: true`** puestos uno por uno en el código. **La superficie MCP de CaSS está curada, no volcada** — y lo
+que queda afuera incluye `POST /api/xapi/statements`, el *bulk* del LRS. **Por MCP se escribe un statement por llamada,
+no lotes.** Quien cotice ingestión masiva por esta puerta cotiza mal (**gap 41**).
+
+### El lado LMS: la acción del pase 25 quedó bloqueada por el entorno, y la pregunta de fondo igual se contestó
+
+La acción 1 era *«levantar `LtiAdvantagePlatform` (MIT) contra `ltijs` y medir si el launch OIDC cierra»*. **Bloqueada,
+y se dice por qué:** es **ASP.NET Core 10**, acá **no hay `dotnet`**, y no se puede instalar porque
+`https://dot.net/v1/dotnet-install.sh` devuelve **`CONNECT tunnel failed, 403`** por el proxy. El *launch* de punta a
+punta **sigue sin medirse** y queda como acción.
+
+**Lo que sí se midió es la pregunta que estaba debajo.** Se instaló `ltijs` (**5.9.9, Apache-2.0**) y se inspeccionaron
+sus exports: **`[ 'Provider' ]`**, uno solo, sin clase de *platform*; y su `package.json` dice *«turn your web
+application into a LTI 1.3 **Learning Tool**»*. **`ltijs` es tool-side y nada más, medido.** Con eso, y verificando dos
+candidatos nuevos, el mapa del lado plataforma queda completo sobre **seis** piezas — y la respuesta es **que no existe
+permisivo y productivo**: las dos permisivas se autodenominan *«Sample»* y *«example»*, la única completa y **certificada
+1EdTech** es **GPL-2.0** (`oat-sa`), y `macewan-cs/lti` (**MIT**, 8 ★) resultó ser **tool-side**, no el lado LMS que el
+resumen de búsqueda sugería. **Esta KB no puede proponer el lado LMS con licencia permisiva, y ahora está medido sobre
+seis candidatos en vez de supuesto sobre dos** (gap **42**, tendencia **67**).
+
+### La corrección de licencia del pase, sobre el único conector MCP de Moodle que existe
+
+El resumen de búsqueda vendía `csmediapro/moodle-mcp-server` como *«open-source, plugin-extensible, LLM-agnostic»* con
+instalación por `npx`. **La página del repo dice dos cosas peores:** es **AGPL-3.0** —la licencia que más molesta en un
+entregable SaaS— y es **open-core**: los diez tools abiertos son **sólo de lectura**, y *Advanced Reporting*, *User
+Analytics*, *User Directory* y *Compliance Pack* son **plugins premium que se venden aparte**. Con **0 ★ y 0 forks**.
+**Moodle es el LMS más instalado del planeta y su único conector MCP es AGPL con lo útil cerrado** (gap **43**, patrón
+**P51**).
+
+### Re-verificación que vale como señal de vida: `learnmcp-xapi` no se movió
+
+Se re-verificó el puente xAPI que esta KB tiene desde el pase 6: **MIT, 15 ★, 4 forks, 32 commits, 3 tools**, backends
+`lrsql`/Ralph/Veracity. **Idénticos a los registrados.** La ficha de la KB era correcta — y el hecho de que no haya
+movido ni una estrella ni un commit es el dato: **sigue siendo referencia de integración, no dependencia de producción**,
+tal como la fila lo advierte.
+
+### Lo que este pase NO hizo, declarado como tal
+
+- **No hizo *handshake* MCP real** con el cartucho de CaSS: se midió la **generación** de las tools (determinista y pura
+  sobre el spec), no su **invocación**, que necesita Elasticsearch y por lo tanto Docker. Queda como acción.
+- **No midió el launch LTI de punta a punta**: sin `dotnet` y con dot.net bloqueado por el proxy.
+- **No encontró nada en dos de los cinco estándares del eje conector**, y se declara: `MCP server` + **OneRoster** y
+  `MCP server` + **CASE** no devolvieron ningún repo verificable. Peor: **`CASE` colisiona como término** —la búsqueda
+  se llena de *certificaciones* de MCP (MCPA del Linux Foundation, certs de Claude), igual que `education` colisiona con
+  *cursos sobre AI*. **Es la segunda colisión de término medida por esta KB.** Para QTI apareció un *Question Bank MCP
+  Server* listado en Glama **sin repo de GitHub localizable: no se registra como hallazgo** (gap **44**).
+- **No verificó fecha de último commit** de ninguno de los repos nuevos: la página no la expone de forma legible vía
+  WebFetch en esta sesión. Las señales de vida son commits totales, forks y ★.
+
+## 🔵 Las tres acciones que este pase deja escritas para el siguiente
+
+1. **Hacer el *handshake* MCP real contra el cartucho de CaSS.** Es lo que falta para que el cierre del gap 40 sea de
+   punta a punta. Necesita Elasticsearch: o un entorno con demonio de Docker, o un ES embebido/stub que satisfaga a
+   `SkyrepMigrate` (el log se queda en *«Waiting for Elasticsearch to appear at http://localhost:9200»*, así que el
+   punto exacto a destrabar está localizado). Con el servidor arriba, `POST /api/mcp` e `initialize` → `tools/list`
+   y comparar contra las **6** medidas acá. **Si coinciden, P48 y P50 se pueden cotizar sin asterisco.**
+2. **Seguir el eje conector en los tres estándares que quedaron sin barrer**: `MCP server` + **Open Badges**,
+   + **SCORM**, + **Caliper** (sabiendo que Caliper dejó de ser open source el 2023-06-17, así que ahí el hallazgo
+   esperable es la **ausencia**, y hay que escribirla). Y **buscar `canvas-mcp` como patrón, no como repo**: si existe
+   un conector MIT de 102 tools para Canvas, preguntar explícitamente por el equivalente de **Moodle** y de
+   **Open edX** — el gap 43 dice que para Moodle no existe, y Open edX **no se buscó**.
+3. **Cerrar el lado *platform* por el único camino que queda abierto:** leer la licencia y el estado real de la
+   **implementación de referencia de 1EdTech en Ruby on Rails** (platform + tool), que apareció en el barrido de este
+   pase y **no se verificó**. Es la última candidata no mirada; si también es copyleft o *sample*, el gap 42 pasa de
+   «medido sobre seis» a **cerrado por agotamiento**, y eso habilita decirle a un cliente *«el lado LMS se presupuesta
+   como desarrollo»* con la evidencia puesta.
+
 ## 2026-10-01 (pase 25) — séptimo pase sin altas de agentes, y el pase que encontró la puerta de agente donde no la buscaba: un estándar educativo con cartucho MCP
 
 **La tabla principal sigue en 37 filas.** Se corrió el barrido completo obligatorio —las cuatro búsquedas globales y las

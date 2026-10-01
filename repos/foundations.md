@@ -10,6 +10,11 @@ updated: 2026-10-01
 > Leer la columna **Licencia** antes de proponer: media KB de educación es GPL/AGPL, no permisiva.
 > **Pase 11 del 2026-10-01:** aparece una licencia que las diez pasadas anteriores filtraban sin saberlo — **ECL-2.0**, con la que licencia todo Apereo (Sakai, Opencast, OpenLRW). Es Apache-2.0 con el alcance de patentes acotado, aprobada por OSI y FSF, y **es apta para construir arriba**. Ver la capa de analítica institucional, abajo.
 
+> **Pase 26 del 2026-10-01:** entra una capa que **veinticinco pasadas no buscaron** — **la biblioteca** (ILS/OPAC) — y
+> entra permisiva: **FOLIO** es **Apache-2.0** con 3.096 commits en el ensamblado de plataforma. Es la primera pieza de
+> infraestructura institucional *grande* y *permisiva* de esta KB que no es ni LMS ni LRS. Y se cierra por medición el
+> **lado *platform* de LTI** (gap 42): no hay implementación permisiva y productiva, medido sobre seis candidatos.
+> Ver la capa de biblioteca y la de conectores, abajo.
 > **Pase 25 del 2026-10-01:** cuatro capas nuevas —**evaluación** (autoría/banco/entrega QTI 3), **horarios**
 > (`UniTime`, Apache-2.0, 349 ★), **aserción de competencias** (`CaSS`, Apache-2.0, con cartucho **MCP**) y la
 > **decisión de estándar de analítica**— y **dos correcciones**: el lado ***platform*** de LTI **sí** se puede construir
@@ -1561,3 +1566,91 @@ implementaciones no son open source desde junio de 2023**, y se cotiza el adapta
 
 ---
 *Ver también: `verticals/solutions.md` para plataformas verticales completas y `compose/patterns.md` para el wiring concreto.*
+
+## 📚 La capa de biblioteca — ILS/OPAC, agregada en el pase 26 del 2026-10-01
+
+Veinticinco pasadas inventariaron el LMS, el LRS, el SIS, la evaluación, los horarios, las competencias y las
+credenciales. **Ninguna buscó la biblioteca** — y es, en una universidad, uno de los dos o tres sistemas con más datos
+sobre qué está estudiando realmente cada alumno. Era parte de la consigna explícita del pase 26 (*«los artefactos
+`admissions`, `library`/OPAC ni `alumni`/student success: quedan como consigna del pase 26»*).
+
+**El hallazgo es que esta capa, al contrario de casi todas las demás de esta KB, tiene una opción permisiva y grande.**
+
+| Repo | Licencia | ★ | Forks | Commits | Lenguaje | Qué es |
+|------|----------|---|-------|---------|----------|--------|
+| https://github.com/folio-org/platform-complete | **Apache-2.0** ✅ | 15 | 27 | **3.096** | JavaScript | **El ensamblado de la plataforma FOLIO.** *«Complete set of Stripes modules for FOLIO»* — el `package.json` + `stripes.config.js` + `yarn.lock` que fija **el conjunto compatible de releases** y la infra Docker. Es el punto de entrada canónico, no un módulo |
+| https://github.com/folio-org/mod-inventory | **Apache-2.0** ✅ | 4 | 15 | **2.402** | Java | El módulo de **inventario**: *instances*, *holdings*, *items*. Import por **Kafka**, *authority record linking*, procesamiento **MARC** bibliográfico y operaciones batch. API HTTP **multi-tenant** |
+| Koha | ⚠️ **GPL-3.0+** | — | — | — | Perl | **El ILS open source más adoptado**, el primero de la categoría. OPAC, circulación, catalogación, adquisiciones, publicaciones periódicas, reservas, gestión de socios. Estándares web (XHTML/CSS/JS) |
+
+**Cómo leer esta capa en un *engagement*, en una línea.** Si el cliente **ya tiene Koha** —y es el caso más probable,
+porque es el más instalado— la capa AI se construye **contra su interfaz**, y hay que leer la **GPL-3.0** antes de
+tocar el core. Si el cliente está **eligiendo** o migrando, **FOLIO es Apache-2.0** y además está diseñado como
+**plataforma modular multi-tenant con bus de eventos Kafka**, que es exactamente la forma que un agente necesita para
+engancharse sin parchear el core. **FOLIO es, en esta KB, el caso raro: la pieza grande, institucional y permisiva.**
+
+⚠️ **La advertencia de lectura, porque las estrellas acá engañan y mucho.** `platform-complete` tiene **15 ★** y
+`mod-inventory` **4 ★**. Con el criterio de estrellas que esta KB usa para agentes, se descartarían. **Sería un error:
+3.096 y 2.402 commits, 27 y 15 forks, y un consorcio de bibliotecas universitarias detrás.** FOLIO es un proyecto de
+consorcio, y los consorcios no acumulan estrellas de GitHub: acumulan **implantaciones**. Es el mismo patrón que esta KB
+ya registró en Apereo y en `UniTime` — **para infraestructura institucional, los commits y los forks miden vida; las
+estrellas miden moda.** Regla que conviene fijar: *no aplicar el umbral de estrellas a software de consorcio*.
+
+🔴 **Lo que NO hay en esta capa, declarado:** **ningún conector MCP ni pieza agéntica** para biblioteca. Ni para FOLIO
+ni para Koha. La búsqueda del eje conector no devolvió nada, y FOLIO —que tiene el bus de Kafka servido— es el candidato
+más obvio de esta KB para construirlo. Ver el **gap 45** y el patrón **P52**.
+
+## 🧾 Admisiones y *student success* — las dos capas que se buscaron y salieron vacías de permisivo (pase 26)
+
+Las otras dos consignas del pase 26. **Se buscaron y se declara el resultado, que es un gap informado, no un hallazgo.**
+
+**Admisiones / matrícula.** Lo que existe es copyleft o es un trabajo de estudiante:
+
+| Pieza | Licencia | Lectura |
+|------|----------|---------|
+| `OS4ED/openSIS-Classic` | ⚠️ **GPL** | SIS de K-12/superior con el pipeline de admisión adentro. **Ya estaba en esta KB.** Copyleft |
+| **OpenEduCat** | ⚠️ **LGPL-3.0** | Pipeline completo de admisiones (consulta → solicitud → verificación de documentos → entrevista → carta de oferta → alta en el SIS), self-hosted, sin fee por postulante. **Ya estaba.** Copyleft |
+| https://github.com/CollinsTatang/admissionSystem | **MIT** | **MIT, sí — y tiene 4 commits, 6 ★ y 0 forks.** PHP/MySQL. Verificado de primera mano: *«allows the user to create an account and applied for admission»*. **No es base de producción, y el conteo de commits lo dice solo** |
+
+🔴 **Conclusión: no hay plataforma de admisiones permisiva y productiva.** Las dos que sirven son **GPL y LGPL**, y lo
+único permisivo verificado tiene **4 commits**.
+
+⚠️ **Y un no-hallazgo que se declara en vez de arrastrarse:** el barrido devolvió también
+`WalaEddine01/OrgSchool-portfolio-project` presentado como *«Open Source Software about student Management System»*.
+**Verificado: 404.** No existe en esa ruta, así que **no se registra como hallazgo** — un 404 no es un repo, y esta KB
+ya tiene registrada la regla de que *un 404 dice «no está donde preguntaste»*: si el proyecto existe con otro nombre,
+hay que encontrarlo antes de citarlo. **Para un engagement de admisiones, el camino es LGPL-3.0 sobre OpenEduCat** —que
+para un módulo Odoo es manejable, porque la LGPL permite el módulo propietario al lado— **o desarrollo.** Ver el **gap 46**.
+
+***Student success* / alumni.** Peor, y con un dato de antigüedad que importa:
+
+- **FlightPath Academics** — plataforma open source de **asesoría académica, *degree audit* y *student success*** con
+  *early alerts* y *Academic Priority* para detectar alumnos en riesgo. **PHP, GPLv3+**, originada en la University of
+  Louisiana at Monroe, liberada el **2013-03-13**. 🔴 **No se encontró repositorio en GitHub** — el 404 de
+  `Cerebro-Tech/FlightPath` es de WebFetch. Se distribuye desde su propio sitio.
+- **Student Success Plan (SSP)** — modelo de *coaching* e intervención con *case management* y *early alert*, open
+  source, sostenido por **Unicon**. Las referencias verificables son de **2013–2014** (St. Petersburg College,
+  Educause NGLC). **Sin señal de vida reciente.**
+- **Marist College early alert dashboard** — open source, del Open Academic Analytics Initiative. **Misma época.**
+
+🔴 **Conclusión: la capa de *student success* open source es de 2013–2014, es GPL, y no vive en GitHub.** Es la capa
+**más vieja y peor abastecida** de todas las que inventarió esta KB en veintiséis pasadas — y es, simultáneamente, la
+que el **Annex III** del EU AI Act y las prohibiciones de **Oklahoma y Maryland** ponen bajo más presión regulatoria,
+porque *predecir qué alumno va a fracasar* es exactamente la decisión automatizada sobre el alumno que esas normas
+acotan. **Hueco de mercado real y riesgo regulatorio alto en la misma celda.** Ver el **gap 47** y la tendencia **68**.
+
+## 🔌 Conectores de LMS y el cierre del lado *platform* — pase 26
+
+Detalle completo, tabla de los seis candidatos LTI y la medición de `ltijs` en `agents/top.md` (capa conector).
+Resumen para esta vista:
+
+| Repo | Licencia | ★ | Commits | Lado | Lectura |
+|------|----------|---|---------|------|---------|
+| https://github.com/vishalsachdev/canvas-mcp | **MIT** ✅ | 269 | 815 | *tool* | **Hasta 102–103 tools** + 8 skills. Alumno **y docente**. Entra en la tabla principal de `agents/top.md` |
+| https://github.com/macewan-cs/lti | **MIT** ✅ | 8 | 89 | *tool* | Go. *«partially implements»*. **Verificado: es tool-side**, no el lado LMS |
+| https://github.com/csmediapro/moodle-mcp-server | 🔴 **AGPL-3.0** | 0 | 57 | *tool* | **Open-core:** 10 tools de lectura abiertos, *Reporting*/*Analytics*/*Directory*/*Compliance* **premium aparte** |
+
+**Y el dato medido sobre `ltijs` (Apache-2.0, 5.9.9), que cambia cómo se lee toda la capa LTI de esta KB:** instalado
+desde npm, sus exports de primer nivel son **`[ 'Provider' ]`** — uno solo, sin clase de *platform*; y su `package.json`
+se describe como *«turn your web application into a LTI 1.3 **Learning Tool**»*. **Es tool-side y nada más, medido, no
+leído.** Con los seis candidatos verificados, el **gap 42** queda: **no existe implementación *platform-side* de LTI 1.3
+permisiva y productiva.**

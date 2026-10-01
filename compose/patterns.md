@@ -8,6 +8,10 @@ updated: 2026-10-01
 
 > Recetas concretas: repos nombrados, licencias verificadas, wiring explícito y estimación.
 > Todos los repos citados fueron verificados vía WebFetch el 2026-09-30; los del pase 11, el 2026-10-01 (ver `agents/top.md`).
+> **Pase 26:** +4 patrones — **P50** (el perfil de competencia por MCP, con las 6 tools de CaSS **medidas** en vez de
+> inferidas), **P51** (el conector MCP de Moodle que no existe, construido sobre el patrón del que sí existe para
+> Canvas), **P52** (la capa agéntica de biblioteca sobre el bus de Kafka de FOLIO, Apache-2.0) y **P53** (*early warning*
+> con humano decidiendo, que es el único envoltorio facturable de la capa predictiva en las cuatro regiones).
 > **Pase 25:** +2 patrones — **P48** (del acervo QTI viejo a la aserción de competencia: migración → banco de ítems →
 > entrega **certificada** → evidencia xAPI filtrada → competencia en CaSS, **todo MIT/Apache-2.0**) y **P49** (integridad
 > de examen **sin** AI de vigilancia, que saca el entregable del **Annex III** en vez de buscar la pieza de proctoring que
@@ -2610,3 +2614,197 @@ en las otras regiones se vende por **licencia y por costo**.
 - **No elimina el fraude, cambia su economía.** Un candidato con ayuda externa presencial no es detectado. **Lo que elimina es la copia escalable** — y eso hay que decirlo, porque un cliente que necesite certificación de alto riesgo (habilitaciones profesionales, exámenes de estado) **probablemente siga necesitando proctoring supervisado**, y entonces la respuesta honesta es un proveedor comercial cerrado, no open source.
 - **La aleatorización por variantes no está medida en esta KB.** Que `LongsightGroup/qti3` escriba paquetes de banco de ítems está **verificado**; que su *writer* soporte el patrón de familias de variantes que pide el paso 1 **está inferido de la descripción de los paquetes**, no probado. **Es el gap 39.**
 - **La equivalencia psicométrica entre variantes es trabajo propio** y no lo cubre ninguna pieza de esta tabla: si las variantes no son de dificultad equivalente, la nota deja de ser comparable. Para un examen de consecuencia alta, eso requiere análisis de ítems que esta cadena no incluye.
+
+## P50 — Perfil de competencia por MCP, con las tools medidas (pase 26)
+
+**Problema que resuelve.** Un cliente con un acervo de cursos quiere responder, por alumno, *«¿qué sabe esta persona?»*
+— no *«¿qué cursos aprobó?»*. Es la pregunta que paga un proyecto de competencias, y hasta el pase 25 esta KB la
+describía sin tener con qué ejecutarla: la capa CASE hospeda marcos y **no registra logro**.
+
+**Qué cambia respecto de P48.** P48 tenía el paso 4 **inferido de una línea de README**. **Este pase lo midió:** el
+cartucho MCP de CaSS genera **6 tools y 3 resource templates** (51 paths en el spec, 0 errores de validación), y dos de
+ellas son exactamente los extremos de la cadena. **P50 es P48 con el paso 4 verificado y cotizable.**
+
+**Piezas, todas verificadas y todas permisivas:**
+
+| Pieza | Licencia | Rol |
+|------|----------|-----|
+| `cassproject/CASS` | **Apache-2.0** ✅ | Marcos de competencia + **aserciones de logro** + cómputo de perfil. **Expone MCP en `/api/mcp`** |
+| `DavidLMS/learnmcp-xapi` | **MIT** ✅ | Puente MCP hacia el LRS: registra statements y consulta progreso |
+| `yetanalytics/lrsql` | **Apache-2.0** ✅ | El LRS de almacenamiento (xAPI 2.0 / IEEE 9274.1.1) |
+| `vishalsachdev/canvas-mcp` | **MIT** ✅ | Si el cliente es Canvas: trae la actividad real (entregas, notas, módulos) |
+
+**Wiring, con los nombres de tool medidos:**
+
+```
+Actividad del alumno (Canvas vía canvas-mcp  |  o el LMS del cliente)
+        │
+        ▼
+  [Agente orquestador]  ── record_evidence ──▶  CaSS   POST /api/xapi/statement
+        │                  (xAPI statement: actor + verb + competencia)
+        │
+        ├── learnmcp-xapi ─▶ lrsql        (historial crudo, consulta de progreso)
+        │
+        ▼
+  get_learner_profile ──▶ CaSS   GET /api/profile/latest
+        (frameworkId, subject, targetDateTime)  ──▶  perfil de competencia computado
+```
+
+**Las dos llamadas que cierran el patrón, con su firma real:**
+
+- `record_evidence` → `POST /api/xapi/statement`, requiere `body`. `readOnlyHint: false`.
+- `get_learner_profile` → `GET /api/profile/latest`, parámetros `frameworkId`, `subject`, `flushCache`, `cache`,
+  `targetDateTime`. `readOnlyHint: true`, `idempotentHint: true` → **se puede cachear y reintentar sin efectos**.
+
+**`targetDateTime` es el parámetro que hay que vender.** Permite preguntar *«¿qué sabía esta persona en tal fecha?»* —
+es decir, **el perfil es histórico, no sólo actual**. Eso habilita el entregable que un área de RRHH o una acreditadora
+pide y que casi ningún producto da: *la evolución de la competencia en el tiempo*, con evidencia trazable detrás.
+
+🔴 **Las dos restricciones de cotización, y no son menores:**
+
+1. **Por MCP se escribe un statement por llamada.** `POST /api/xapi/statements` (el *bulk*) está **`x-mcp-ignore`**, como
+   otros 44 paths. **No cotizar ingestión masiva de telemetría por esta puerta**: para lotes, API REST por fuera de MCP.
+   Ver el **gap 41**.
+2. **El *handshake* MCP real no está medido.** Se midió la **generación** de las tools (determinista, y confirmada por
+   tres fuentes independientes), no su **invocación**: eso necesita Elasticsearch. **Antes de firmar, hacer
+   `initialize` + `tools/list` contra `/api/mcp`** — es la acción 1 del pase 27. Estimación: una tarde con Docker.
+
+**Estimación.** 3–4 semanas para el circuito completo sobre un marco de competencias existente, asumiendo que el LMS ya
+expone la actividad. El riesgo no es técnico: es **tener el marco de competencias del cliente en CASE**, que suele ser
+el trabajo de verdad.
+
+## P51 — El conector MCP de Moodle que no existe, construido sobre el que sí existe (pase 26)
+
+**El hueco, medido.** `canvas-mcp` (**MIT**, 269 ★, 815 commits) da **hasta 102–103 tools** sobre Canvas, con lado
+alumno y lado docente. **Para Moodle —el LMS más instalado del planeta— el único conector MCP es `csmediapro/moodle-mcp-server`:
+AGPL-3.0, 0 ★, 0 forks, 10 tools sólo de lectura, y las capas útiles (*Reporting*, *Analytics*, *Directory*,
+*Compliance*) son plugins premium que se venden aparte.** Ver el **gap 43**.
+
+**Por qué es patrón y no sólo oportunidad: `canvas-mcp` ya resolvió los problemas de diseño.** No hay que inventar la
+arquitectura, hay que portarla:
+
+| Decisión de diseño de `canvas-mcp` | Por qué importa al portarla a Moodle |
+|-----------------------------------|--------------------------------------|
+| **`search_canvas_tools`** — descubrimiento de tools | Con 100+ tools **no se puede volcar el catálogo al contexto**. El agente busca la herramienta. Moodle Web Services tiene **cientos** de funciones: sin esto, el conector es inusable |
+| **Separación alumno / docente / *learning designer*** | Son tres perfiles con permisos distintos. Moodle tiene *capabilities* por rol: el mapeo es directo |
+| **8 *agent skills* además de las tools** | Las tareas compuestas (corregir una tanda, armar un módulo) no son una tool: son un procedimiento |
+| ***Learning Designer*** con **chequeo WCAG** | Conecta con la capa de accesibilidad del pase 8 y con el **EAA** (vigente 2025-06-28). Es el diferenciador regulatorio en EMEA |
+
+**Wiring:**
+
+```
+[Agente]  ──MCP──▶  moodle-mcp (a construir, licencia a elegir)
+                        │
+                        ▼
+                Moodle Web Services (REST/token)   ◀── sin modificar el LMS
+                        │
+                        ├── core_course_*, core_enrol_*, mod_assign_*, gradereport_*
+                        └── capabilities por rol → perfiles alumno / docente
+
+  Opcional, y es el combo que esta KB recomienda:
+  [Agente] ──MCP──▶ learnmcp-xapi ──▶ lrsql     (telemetría conforme al estándar)
+  [Agente] ──MCP──▶ CaSS                        (competencia, P50)
+```
+
+⚠️ **La decisión de licencia hay que tomarla a conciencia, y es la trampa del patrón.** **El core de Moodle es GPL-3.0**,
+pero **un conector que habla con Moodle Web Services por HTTP no es obra derivada de Moodle**: es un cliente de su API.
+**Se puede licenciar permisivo.** Lo que **no** se puede es forkear `moodle-mcp-server` (AGPL-3.0) y relicenciar. **El
+camino limpio es construir desde cero contra la API documentada**, tomando de `canvas-mcp` (MIT) las decisiones de
+diseño —que es legítimo— y no su código si no se respeta el MIT (que es trivial de respetar: atribución).
+
+**Estimación.** 4–6 semanas para un conector de ~30 tools útiles con descubrimiento. **El valor no está en el número de
+tools: está en `search_canvas_tools`** — sin descubrimiento, un conector de Moodle es un catálogo que no entra en el
+contexto.
+
+## P52 — La capa agéntica de biblioteca sobre el bus de eventos que ya está puesto (pase 26)
+
+**La vertical que esta KB abrió en el pase 26 y que no tiene ni una pieza agéntica.** Y es la más fácil de todas las que
+inventarió esta base, por un motivo concreto: **FOLIO ya publica los eventos.**
+
+| Pieza | Licencia | Rol |
+|------|----------|-----|
+| `folio-org/platform-complete` | **Apache-2.0** ✅ | Ensamblado de la plataforma: fija el conjunto compatible de releases + infra Docker |
+| `folio-org/mod-inventory` | **Apache-2.0** ✅ | *Instances* / *holdings* / *items*, **import por Kafka**, **MARC**, *authority linking*, **multi-tenant** |
+| `DavidLMS/learnmcp-xapi` + `lrsql` | **MIT** / **Apache-2.0** ✅ | Si se quiere registrar el uso como evidencia de aprendizaje |
+
+**Wiring — y el punto es que no se parchea nada:**
+
+```
+FOLIO (Apache-2.0, multi-tenant)
+   │
+   ├── mod-inventory ──Kafka──▶  [consumidor agéntico]   ◀── NO se parchea el core
+   │                                   │
+   │                                   ├─ recomendación por curso/competencia
+   │                                   ├─ enriquecimiento de catálogo (MARC → lenguaje natural)
+   │                                   └─ descubrimiento conversacional sobre el OPAC
+   │
+   └── API HTTP por tenant ──▶ lectura de holdings/items
+                                        │
+                     opcional ──────────▼
+                        learnmcp-xapi ──▶ lrsql  (el préstamo como statement xAPI)
+```
+
+**Por qué el modelo de despliegue de FOLIO es la mitad del valor.** Es **modular y multi-tenant por diseño**: el módulo
+agéntico se despliega **al lado**, consume Kafka y expone su propia API, **sin tocar el core y sin bloquear upgrades**.
+Es la diferencia con Koha (**GPL-3.0+**, Perl, monolítico), donde la capa AI va necesariamente por fuera contra la
+interfaz y hay que leer la GPL antes de tocar algo.
+
+⚠️ **La advertencia de lectura que hay que poner en la propuesta.** `platform-complete` tiene **15 ★** y `mod-inventory`
+**4 ★**. **No aplicar el umbral de estrellas:** son 3.096 y 2.402 commits, 27 y 15 forks, y un consorcio de bibliotecas
+universitarias detrás. **Para software de consorcio las estrellas miden moda; los commits y las implantaciones miden
+vida.** Mismo patrón que Apereo y `UniTime`.
+
+**Regla de decisión.** Cliente **con Koha** → capa AI por fuera, GPL leída. Cliente **eligiendo o migrando** → **FOLIO**,
+por la licencia **y** por el bus. **Estimación:** 3 semanas para el consumidor de Kafka + descubrimiento conversacional
+sobre un tenant de prueba. Ver el **gap 45**.
+
+## P53 — *Early warning* con humano decidiendo: el único envoltorio facturable de la capa predictiva (pase 26)
+
+**El problema de forma, y es el patrón más importante de este pase.** La capa de *student success* open source es de
+**2013–2014**, es **GPL**, y no vive en GitHub (**gap 47**). Y es **la que más presión regulatoria tiene encima**: el
+**Annex III** del EU AI Act la clasifica de alto riesgo, **Oklahoma y Maryland prohíben la decisión autónoma sobre el
+alumno**, **Delaware y Nueva York** prohíben el IEP automatizado, y **Colorado y Texas** agregaron requisitos. **Seis
+estados y un reglamento europeo sobre una capa cuyo software libre tiene doce años.**
+
+🔴 **La trampa que este patrón evita, dicha sin suavizar.** *La misma pieza técnica tiene dos envoltorios, y sólo uno se
+puede facturar.* Un modelo que predice riesgo de abandono y **dispara una acción** —baja de curso, reasignación, alerta
+automática al tutor con recomendación— **es ilegal en dos estados y de alto riesgo en EMEA**. El mismo modelo que
+**ordena una cola de revisión humana** no cae en la prohibición de decisión autónoma. **No es un matiz de redacción: es
+la diferencia entre un entregable y un pasivo.**
+
+**Piezas (y hay que decir que la de modelado es permisiva y la de producto no existe):**
+
+| Pieza | Licencia | Rol |
+|------|----------|-----|
+| `pykt-team/pykt-toolkit` / `pyBKT` | **MIT** ✅ | El modelado del alumno. **Permisivo** — pero ⚠️ **verificar la licencia de los *datasets*** (casi todos **CC BY-NC**, ver gap 11) |
+| `lrsql` + `learnmcp-xapi` | **Apache-2.0** / **MIT** ✅ | La telemetría conforme al estándar que alimenta el modelo |
+| Capa de producto (*early alert*, cola, expediente) | 🔴 **no existe permisiva** | **FlightPath** es GPLv3+ de 2013 y sin repo en GitHub. **Esto es el desarrollo** |
+
+**Wiring — y el recuadro del medio es el patrón:**
+
+```
+LMS / SIS  ──▶  lrsql (xAPI)  ──▶  pyKT / pyBKT   ──▶  score de riesgo
+                                                            │
+                                   ┌────────────────────────▼─────────────────────────┐
+                                   │  COLA DE REVISIÓN HUMANA                         │
+                                   │  · ordena por riesgo, NO actúa                   │
+                                   │  · muestra los features que pesaron              │
+                                   │  · exige decisión de un tutor identificado       │
+                                   │  · escribe expediente: quién, cuándo, por qué    │
+                                   └────────────────────────┬─────────────────────────┘
+                                                            ▼
+                                            intervención (humana) + statement xAPI
+```
+
+**Las cuatro propiedades que hacen al entregable defendible en las cuatro regiones**, y conviene listarlas así en la
+propuesta: **(1)** el sistema **ordena**, no decide; **(2)** la decisión la toma **una persona identificada**;
+**(3)** el alumno puede saber **qué features pesaron** (explicabilidad, que es lo que el Annex III pide);
+**(4)** queda **expediente** de quién decidió qué y cuándo — que es lo que convierte una inspección en un trámite.
+
+**Y el argumento de venta que viene del usuario final, no del regulador:** el pase 23 midió que **65 % de los alumnos
+en LATAM teme el aprendizaje superficial**. Un sistema que explícitamente pone un humano a decidir sobre su caso **es
+también el argumento pedagógico**, no sólo el de cumplimiento. **En LATAM esto se vende por pedagogía defendible; en
+EMEA y North America, por cumplimiento.** Mismo entregable, dos relatos.
+
+**Estimación.** 6–8 semanas: 2 de modelado sobre datos del cliente (con la licencia de los datasets verificada) y 4–6
+de la capa de cola + expediente, **que es la que no existe y es la que se factura**. Ver el **gap 47** y la tendencia **68**.

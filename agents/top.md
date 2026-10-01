@@ -14,11 +14,18 @@ updated: 2026-10-01
 > `cassproject/CASS` (**Apache-2.0**, 62 ★) expone **MCP** entre sus cartuchos — **la primera pieza de estándar educativo
 > de esta KB con puerta nativa de agente**, y la que además hace las **aserciones** de competencia que las cuatro piezas
 > CASE de esta base no hacían. Ver la tendencia **65**, el patrón **P48** y el **gap 40** (está declarado, no medido).
+> **Pase 26 del 2026-10-01:** **la tabla pasa a 38 filas — se corta la racha de siete pases sin altas**, y se corta
+> por donde el pase 25 dijo que había que buscar: **el conector, no el agente.** Entra `vishalsachdev/canvas-mcp`
+> (**MIT**, 269 ★, 815 commits, **hasta 102–103 tools** + 8 *agent skills*), que es **el conector permisivo de LMS más
+> grande que vio esta KB** y el primero que cubre el lado docente además del del alumno. Y el **gap 40 se cierra
+> ejecutando**: el cartucho MCP de CaSS **genera 6 tools y 3 resource templates** medidos con el propio generador del
+> proyecto — entre ellos `record_evidence` y `get_learner_profile`, que son **exactamente los dos pasos que el patrón
+> P48 necesitaba**. Ver la tendencia **66**, el **gap 40 (CERRADO)** y la sección nueva de la capa conector, abajo.
 > **Pase 10 del 2026-10-01:** para el contenido, la verificación se hizo contra el archivo `LICENSE`, no contra el README — y por eso apareció la contradicción que documenta la capa de contenido curricular, abajo.
 
 ## Agentes y herramientas destacadas
 
-**37 filas = 35 agentes + 2 bibliotecas de skills.** Ordenados por stars. El conteo se hizo a mano en el pase 19 y
+**38 filas = 36 agentes + 2 bibliotecas de skills.** (37 → 38 en el pase 26: entra `canvas-mcp`.) Ordenados por stars. El conteo se hizo a mano en el pase 19 y
 se explica abajo, porque es la cuarta vez que esta KB se pelea con este número.
 
 > *Pase 25 del 2026-10-01:* **séptimo pase sin altas, y el eje de búsqueda que el pase 23 diagnosticó sigue siendo el que
@@ -223,6 +230,7 @@ se explica abajo, porque es la cuarta vez que esta KB se pelea con este número.
 | algo-sensei | https://github.com/karanb192/algo-sensei | **MIT** ✅ | 281 | Markdown (multi-lenguaje: Python, Java, C++, JS, Go) | Mentor de estructuras de datos y algoritmos que **se niega a dar la solución**: sistema de pistas de **cinco niveles** escalonados —desde la observación más suave hasta el esqueleto en pseudocódigo—, entrenamiento en reconocimiento dinámico de patrones (no plantillas memorizadas), método socrático declarado (*«learn through questions, not lectures»*) y cinco modos (Tutor, Hint, Review, Interview, Pattern Mapper). Su filosofía escrita es *«productive struggle with guidance»*. Corre en Claude Code y Claude.ai. **Sólo 8 commits:** es una especificación pedagógica, no un producto — el mismo perfil que `Alvarmethod`, y el andamiaje graduado es la contraparte operativa de lo que `Gnos` instrumenta como evidencia. *Agregado en el pase 19* | Sin región declarada |
 | universal-diagnostic-tutor-skill | https://github.com/SenmuuuuW/universal-diagnostic-tutor-skill | **MIT** ✅ | 235 | Markdown | Tutor *diagnosis-first* para STEM, matemática, programación y AI/CS: antes de enseñar **determina dónde está trabado el alumno**, con un ciclo de clarificar objetivo → localizar el hueco en cuatro niveles (materia → sistema de conocimiento → subtema → conceptos núcleo) → instrucción mínima dirigida → verificación → decisión de avance por mastery demostrada. Continuidad entre conversaciones mediante **«Learning State Cards» visibles** —el estado del alumno es inspeccionable por el alumno, no sólo por el sistema—, enrutamiento en lenguaje natural sin menús de modo y análisis cualitativo de error. v2.0.0 reduce ~41 % el contexto respecto de v1.9.2. Skill oficial de DeepSeek Harness, con variante *Lite Prompt* para chat estándar. 57 commits. *Agregado en el pase 19* | Sin región declarada |
 | lumen | https://github.com/ahmedEid1/lumen | **GPL-3.0** ⚠️ | 88 | Python/TypeScript | Plataforma donde el alumno describe su objetivo y un orquestador multi-agente propio (**sin LangChain**) le construye el curso. **Modelo *learner-owned* declarado:** *«every signed-in user runs the whole loop themselves; `admin` only moderates and configures»* — el alumno define, construye, aprende, comparte y remezcla en un catálogo moderado. RAG **con alcance por curso y citación, detrás de un único autorizador**, con aislamiento explícito para que cursos privados y clonados no filtren datos. BYOK con credenciales cifradas, servidor MCP con 9 tools, PostgreSQL 17 + pgvector, decisiones del agente auditables en una tabla `llm_calls`. 828 commits, 1.421 tests de backend y 468 de frontend. **La decisión que lo hace citable:** su *eval harness* **publica también los puntajes malos** — es el único artefacto de esta KB que documenta sus propias debilidades medidas. ⚠️ GPL-3.0: referencia de arquitectura y despliegue propio, no base de un entregable cerrado. *Agregado en el pase 19* | **EMEA (Essen, Alemania)** — el perfil del autor (Ahmed Hobeishy) declara `Essen, Germany`. *Región cerrada en el pase 19* |
+| canvas-mcp | https://github.com/vishalsachdev/canvas-mcp | **MIT** ✅ | 269 | TypeScript | **El conector permisivo de LMS más grande de esta KB.** Servidor MCP sobre la API de Canvas con **hasta 102–103 tools** (el README dice «up to 102» en el encabezado y «up to 103» en el resumen: se transcribe la ambigüedad del propio repo) y **8 *agent skills***. Es el primero de esta base que cubre **las dos puntas**: lado alumno (entregas, notas, TODO, *peer review*) y **lado docente** (gestión de tareas, corrección, analítica de alumnos, mensajería), más módulos, páginas, archivos, y un *Learning Designer* que incluye **escaneo de accesibilidad y chequeo WCAG** — la capa del pase 8 llega al conector. Trae `search_canvas_tools` para **descubrimiento de tools**, que es la respuesta a tener 100+: el agente busca la herramienta en vez de recibir las cien. 815 commits, 92 forks. ⚠️ Es *tool-side* sobre la API de Canvas: **no reemplaza el lado LMS** (ver el cierre del lado *platform*, abajo). *Agregado en el pase 26* | Sin región verificada |
 
 ## ⚠️ Colisión de nombres: hay dos "Bloom" y son proyectos distintos (pase 7)
 
@@ -1296,3 +1304,114 @@ que el pase 5 ya había aprendido para los benchmarks y que esta KB vuelve a red
   está legislando la auditoría y no está construyendo la herramienta que la ejecuta.
 
 Ver el **gap 35**, las tendencias **51**, **52** y **53**, y los patrones **P42** y **P43**.
+
+## 🔌 La capa conector — agregada en el pase 26 del 2026-10-01
+
+Veinticinco pasadas buscaron **agentes**. Esta buscó **la puerta por la que el agente entra al sistema instalado**, que
+es lo que el pase 25 dejó escrito como eje (*«cambiar el eje de búsqueda al conector»*). Es la primera vez que esta KB
+mide una capa en vez de inventariarla: **el cartucho MCP de CaSS se ejecutó**, y el resultado cierra el gap 40.
+
+### El cartucho MCP de CaSS, medido — el gap 40 se cierra
+
+El pase 25 registró que CaSS *declara* MCP entre sus cartuchos y marcó el **gap 40** porque nadie había levantado el
+servidor ni listado una sola herramienta. **Este pase las listó.** No levantando el servidor —que necesita Elasticsearch
+y en este entorno **no hay demonio de Docker**— sino por el camino que la propia arquitectura del proyecto permite:
+el adaptador genera las tools con `generateTools(spec)` sobre el OpenAPI que `swagger-jsdoc` construye desde los
+comentarios del código, **y eso corre sin base de datos**. Se reprodujeron las opciones exactas de `src/main/server.js`,
+se generó el spec, se validó con el mismo `openapi-schema-validator` que el servidor usa al arrancar, y se ejecutó el
+generador real del repo.
+
+**Resultado medido:** spec de **51 paths**, **0 errores de validación**, y **6 tools + 3 resource templates**.
+
+| Tool | Método y path | Parámetros | Requeridos | `readOnlyHint` |
+|------|---------------|------------|------------|----------------|
+| `server_status` | `GET /api/ping` | `fields` | — | ✅ true |
+| `search_data` | `GET /api/data/` | `q`, `start`, `size`, `index_hint` | — | ✅ true |
+| `get_object` | `GET /api/data/{uid}` | `uid`, `history` | `uid` | ✅ true |
+| `save_object` | `POST /api/data/{uid}` | `uid` | `uid` | ❌ false |
+| `record_evidence` | `POST /api/xapi/statement` | *(body)* | `body` | ❌ false |
+| `get_learner_profile` | `GET /api/profile/latest` | `frameworkId`, `subject`, `flushCache`, `cache`, `targetDateTime` | — | ✅ true |
+
+Resource templates: `CaSS JSON-LD Object`, `CaSS JSON-LD Object (Versioned)`, `CaSS Object by UID`.
+
+**Por qué esto cambia el patrón P48 y no sólo cierra un gap.** Las dos tools que importan son `record_evidence`
+(`POST /api/xapi/statement`) y `get_learner_profile` (`GET /api/profile/latest`): **entrar evidencia xAPI y sacar
+perfil de competencia, por MCP, bajo Apache-2.0.** Ésos son exactamente los dos pasos que el paso 4 de **P48** tenía
+inferidos desde una línea de README. La descripción que el propio repo le pone a `get_learner_profile` —*«use this tool
+to answer the question "what does this person know?"»*— es la operación que esta KB viene describiendo desde el pase 14
+sin tener con qué ejecutarla. Ver la tendencia **66** y el patrón **P50**.
+
+**Y hay un hallazgo de diseño que corrige una suposición razonable.** De los **51 paths** del spec, el cartucho expone
+**6**. No es una limitación: son **45 paths marcados `x-mcp-ignore: true`** uno por uno en el código, con anotaciones
+`x-mcp-tool-name` y `x-mcp-description` escritas a mano en los 6 que sí salen. **La superficie MCP de CaSS está curada,
+no volcada.** Lo que queda deliberadamente afuera incluye `POST /api/xapi/statements` (el *bulk* del LRS),
+`GET /api/xapi/endpoint`, el `multiPut`/`multiDelete`/`multiGet` de skyRepo y todo `skyId`. **Consecuencia práctica:**
+por MCP se escribe **un statement por llamada**, no lotes — quien cotice ingestión masiva de telemetría por esta puerta
+está cotizando mal. Ver el **gap 41**.
+
+⚠️ **Lo que esta medición NO es.** No se levantó el servidor HTTP ni se hizo *handshake* MCP con un cliente real: se
+midió la **generación** de las tools, que es determinista y pura sobre el spec, no su **invocación**, que necesita
+Elasticsearch. Las 13 aserciones de `5.mcp.json-schema-to-zod.test.js` pasan (13/13); `5.mcp.openapi-to-tools.test.js`
+**no se pudo correr tal cual** porque su `before` hace `fetch` a `localhost:80/api/swagger.json`. El conteo de 6 coincide
+con lo que ese test afirma (*«generates exactly 6 tools from the current spec»*) y con las **6** anotaciones
+`x-mcp-tool-name` del árbol. **Tres fuentes independientes dan 6.** Queda como acción del pase 27 el *handshake* real.
+
+### El lado *platform* (LMS) se cierra por medición, y la respuesta es que no existe permisivo
+
+El pase 25 dejó como acción *«levantar `LtiAdvantagePlatform` (MIT) contra `ltijs` y medir si el launch OIDC cierra»*.
+**La ejecución está bloqueada por el entorno y hay que decirlo:** `LtiAdvantagePlatform` es **ASP.NET Core 10**, en esta
+sesión **no hay `dotnet`**, y no se puede instalar — `https://dot.net/v1/dotnet-install.sh` responde
+**`CONNECT tunnel failed, 403`** por el proxy de egreso. El *launch* de punta a punta sigue sin medirse.
+
+**Pero la pregunta de fondo sí se pudo contestar, y por primera vez con evidencia de primera mano en los seis
+candidatos.** Se instaló `ltijs` desde npm (**5.9.9, Apache-2.0**) y se inspeccionaron sus exports:
+
+```
+top-level exports: [ 'Provider' ]
+```
+
+**Un solo export, `Provider`.** No hay clase de *consumer*/*platform*. Y su propio `package.json` dice
+*«Easily turn your web application into a LTI 1.3 **Learning Tool**»*. **`ltijs` es tool-side y nada más**, medido, no
+leído de la documentación.
+
+| Pieza | Licencia | ★ | Lado | Estado real |
+|------|----------|---|------|-------------|
+| `ltijs` | **Apache-2.0** ✅ | 373 | *tool* | Producción. **Sólo exporta `Provider`** (medido en el pase 26) |
+| `oat-sa/lib-lti1p3-core` | ⚠️ **GPL-2.0** | 37 | *platform* **y** *tool* | **El único completo y certificado 1EdTech** — y copyleft |
+| `macewan-cs/lti` | **MIT** ✅ | 8 | *tool* | Go. *«partially implements»*, **tool-side** — no es el lado LMS |
+| `LtiLibrary/LtiAdvantagePlatform` | **MIT** ✅ | — | *platform* | Se describe **«Sample»**. ⛔ No ejecutable acá: sin `dotnet`, dot.net bloqueado |
+| `Citolab/lti-1p3-platform-example` | ⚠️ **GPL-3.0+** | — | *platform* | *«example»* en el nombre. .NET + React |
+| `UOC/java-lti-1.3-platform` | ⚠️ **sin licencia** | 0 | *platform* | *«**will** implement»* (pase 24) |
+
+🔴 **La conclusión, dicha sin suavizar: no hay implementación *platform-side* de LTI 1.3 que sea permisiva **y**
+productiva.** Las dos permisivas se autodenominan *«Sample»* y *«example»*; la única completa y certificada por 1EdTech
+es **GPL-2.0**; la única que prometía serlo en Java no declara licencia y habla en futuro. **Esta KB no puede proponer
+el lado LMS con licencia permisiva**, y ahora eso está **medido sobre seis candidatos**, no supuesto. Para un
+*engagement* que necesite el lado plataforma la salida honesta es una de tres: aceptar **GPL-2.0** (TAO, certificada),
+integrarse como *tool* contra un LMS que el cliente ya tiene (que es donde esta KB sí es fuerte: `ltijs` + `canvas-mcp`),
+o presupuestar el lado plataforma como **desarrollo**, no como integración. Ver el **gap 42** y la tendencia **67**.
+
+### Los conectores de LMS que trajo el eje, y la corrección de licencia que hay que leer antes de proponer
+
+| Pieza | Licencia | ★ | Forks | Commits | Tools | Lectura |
+|------|----------|---|-------|---------|-------|---------|
+| `vishalsachdev/canvas-mcp` | **MIT** ✅ | 269 | 92 | 815 | **hasta 102–103** + 8 skills | **Entra en la tabla principal.** Las dos puntas (alumno y docente), descubrimiento de tools, escaneo WCAG |
+| `csmediapro/moodle-mcp-server` | 🔴 **AGPL-3.0** | **0** | **0** | 57 | **10**, sólo lectura | ⛔ **No proponer.** Ver la corrección abajo |
+| `DavidLMS/learnmcp-xapi` | **MIT** ✅ | 15 | 4 | 32 | 3 | Ya estaba (pase 6). **Re-verificado: idénticos 15 ★ y 32 commits** → el proyecto no se movió |
+
+🔴 **La corrección de licencia del pase, y es sobre el único conector de Moodle que existe.** El resumen de búsqueda
+presentaba `moodle-mcp-server` como *«open-source MCP server, plugin-extensible, LLM-agnostic»* e invitaba a instalarlo
+con `npx`. **La página del repo dice otra cosa en dos frentes:** la licencia es **AGPL-3.0** —no permisiva, y la AGPL es
+la que más molesta en un entregable SaaS— y el modelo es **open-core**: los diez tools abiertos son **sólo de lectura**
+(`list_courses`, `get_course`, `list_course_users`, `list_assignments`, `list_categories`, `get_site_info`, `get_user`,
+`list_user_courses`, `search_users`, `search_courses_by_name`) y las capas que un cliente pediría —*Advanced Reporting*,
+*User Analytics*, *User Directory*, *Compliance Pack*— son **plugins premium que se venden aparte**. Súmese **0 ★ y 0
+forks**: no hay adopción que respalde el riesgo. **Moodle es el LMS más instalado del mundo y su único conector MCP es
+AGPL con las partes útiles cerradas.** Ése es el hueco, y es un hueco de oportunidad: ver el **gap 43** y el patrón **P51**.
+
+⚠️ **Nota de método sobre la verificación de URLs en este pase.** La consigna pide `curl -sI` por URL. **En esta sesión
+`curl -sI` contra `github.com` devuelve `403` para *todas* las URLs** —incluidas las que existen y están en esta KB desde
+el pase 1— porque el proxy de egreso corta el `HEAD`. Verificar con `curl` acá produciría **404s falsos sobre repos
+reales**, que es el error que la consigna quiere evitar. Por eso **toda verificación de este pase se hizo con WebFetch
+sobre la página del repo** (licencia, ★, forks, commits leídos de la página), y el único 404 que se reporta —
+`Cerebro-Tech/FlightPath` — es un 404 **de WebFetch**, no de `curl`.

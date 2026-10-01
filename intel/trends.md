@@ -7,6 +7,14 @@ updated: 2026-10-01
 # 📡 Tendencias — education
 
 > Ventana de investigación: septiembre 2026. Verificado 2026-09-30; el pase 11, el 2026-10-01.
+> **Pase 26:** se ejecuta la consigna del pase 25 (**cambiar el eje al conector**) y rinde en su primer uso por segunda
+> vez consecutiva: **el gap 40 se cierra ejecutando** —el cartucho MCP de CaSS genera **6 tools y 3 resource templates**
+> medidos con el generador del propio proyecto, y dos de ellos (`record_evidence`, `get_learner_profile`) son
+> **exactamente los dos pasos que P48 tenía inferidos** (tendencia **66**)—; el **lado *platform* de LTI se cierra por
+> medición y la respuesta es que no existe permisivo y productivo**, sobre seis candidatos (tendencia **67**, gap **42**);
+> y entran **tres verticales nuevas**: biblioteca/ILS **con opción permisiva y grande** (FOLIO, Apache-2.0), y
+> **admisiones** y ***student success*** 🔴 **sin ninguna** — la segunda es de **2013–2014** y es la que el regulador
+> aprieta más (tendencia **68**, gaps **45**, **46**, **47**).
 > **Pase 25:** se ejecuta **entera** la consigna del pase 24 (cuatro artefactos y tres estándares) y el eje rinde por tercera vez:
 > **Caliper dejó de ser open source el 2023-06-17** —repos movidos a privado por 1EdTech— así que de los dos estándares de
 > analítica de aprendizaje **sólo xAPI se puede construir** (tendencia **63**); la capa de **proctoring** es la única de esta
@@ -1934,6 +1942,30 @@ Huecos confirmados tras buscar, no ausencias por no haber buscado. Un gap inform
     **La acción escrita, para el pase que la ejecute:** las dos puntas son MIT y Apache-2.0, así que la contribución puede ir **hacia arriba** —a repos de un regulador nacional y de ETH Zürich—, lo que convierte un entregable de cliente en posicionamiento público. ⚠️ **Y los cuatro límites que no hay que cruzar:** ninguna de estas herramientas **certifica** (`aiverify` declara por escrito que no garantiza ausencia de riesgo o sesgo); el marco de Singapur es **voluntario** y el europeo no; **no hay crosswalk directo de AI Verify al EU AI Act** (sólo a **NIST AI RMF**, oct-2023, y a **ISO/IEC 42001:2023**, jun-2024 — al AI Act se llega indirecto por ISO 42001); y `aiverify` evalúa **modelos supervisados tabulares y de imagen, no agentes**.
 
 
+40. ~~**El cartucho MCP de CaSS está declarado, no medido.**~~ → 🟢 **GAP CERRADO EN EL PASE 26 DEL 2026-10-01, y cerrado ejecutando.** El pase 25 lo abrió porque toda la tendencia 65 y el paso 4 de **P48** descansaban en una línea del README de CaSS entre sus *pluggable cartridges*. **Este pase corrió el generador.** No se levantó el servidor —necesita Elasticsearch y en este entorno **no hay demonio de Docker**: el CLI está, `/var/run/docker.sock` no existe— sino por donde la arquitectura del proyecto lo permite: las tools se generan con `generateTools(spec)` sobre el OpenAPI que `swagger-jsdoc` arma desde los comentarios del código, **y eso es puro y corre sin base de datos**. Se replicaron las opciones exactas de `src/main/server.js`, se validó el spec con el mismo `openapi-schema-validator` del arranque y se ejecutó el generador real del repo.
+
+    **Medido: 51 paths, 0 errores de validación, 6 tools, 3 resource templates.** `server_status` (`GET /api/ping`), `search_data` (`GET /api/data/`), `get_object` (`GET /api/data/{uid}`), `save_object` (`POST /api/data/{uid}`), **`record_evidence`** (`POST /api/xapi/statement`) y **`get_learner_profile`** (`GET /api/profile/latest`). Resource templates: `CaSS JSON-LD Object`, `… (Versioned)`, `… by UID`. Tabla completa con parámetros y `annotations` en `agents/top.md`.
+
+    **Las dos últimas son las que importan: entrar evidencia xAPI y sacar perfil de competencia, por MCP, bajo Apache-2.0** — los dos pasos exactos que **P48** tenía inferidos. Ver la tendencia **66** y el patrón **P50**.
+
+    ⚠️ **Lo que esta medición no es, dicho con precisión:** se midió la **generación** de las tools, determinista y pura sobre el spec, **no su invocación**, que necesita Elasticsearch. Las 13 aserciones de `5.mcp.json-schema-to-zod.test.js` pasan **13/13**; `5.mcp.openapi-to-tools.test.js` **no corre tal cual** porque su `before` hace `fetch` a `localhost:80/api/swagger.json`. El conteo de **6** coincide con lo que ese test afirma literalmente (*«generates exactly 6 tools from the current spec»*) y con las **6** anotaciones `x-mcp-tool-name` del árbol: **tres fuentes independientes dan 6.** El *handshake* MCP real queda como acción del pase 27.
+
+41. **Por MCP, CaSS escribe un statement por llamada: la superficie está curada y el *bulk* queda afuera a propósito** *(agregado en el pase 26 del 2026-10-01)*. De los **51 paths** del spec el cartucho expone **6**, y no por inmadurez: hay **45 `x-mcp-ignore: true`** puestos **uno por uno** en el código, con `x-mcp-tool-name` y `x-mcp-description` escritos a mano en los seis que salen. Lo excluido incluye **`POST /api/xapi/statements`** (el *bulk* del LRS), `GET /api/xapi/endpoint`, el `multiPut`/`multiGet`/`multiDelete` de skyRepo y **todo `skyId`**. **Consecuencia de cotización, y es la que importa:** quien presupueste **ingestión masiva de telemetría por la puerta MCP** está cotizando mal — por ahí entra **un statement por llamada**. Para lotes hay que ir a la API REST por fuera de MCP. **No es un defecto: es una decisión de diseño que conviene citar como tal**, porque muestra que el proyecto pensó la superficie de agente en vez de volcar su API.
+
+42. **No existe implementación *platform-side* (lado LMS) de LTI 1.3 que sea permisiva *y* productiva** *(agregado en el pase 26 del 2026-10-01, medido sobre seis candidatos)*. El pase 24 lo sospechó con dos piezas; este pase lo midió con seis. **`ltijs` (Apache-2.0, 5.9.9) exporta `[ 'Provider' ]` y nada más** —sin clase de *platform*— y su `package.json` dice *«turn your web application into a LTI 1.3 **Learning Tool**»*: **tool-side, medido, no leído**. `macewan-cs/lti` (**MIT**, 8 ★) resultó **tool-side** también, contra lo que sugería el resumen de búsqueda. Las dos permisivas del lado plataforma se autodenominan **«Sample»** (`LtiLibrary/LtiAdvantagePlatform`, MIT) y **«example»** (`Citolab/lti-1p3-platform-example`, **GPL-3.0+**). La única **completa y certificada por 1EdTech** es `oat-sa/lib-lti1p3-core`, **GPL-2.0**. Y `UOC/java-lti-1.3-platform` **no declara licencia** y habla en futuro.
+
+    **La salida para un engagement, y son tres, ninguna gratis:** aceptar **GPL-2.0** (TAO, certificada); integrarse **como *tool*** contra el LMS que el cliente ya tiene —donde esta KB sí es fuerte: `ltijs` + `canvas-mcp`—; o presupuestar el lado plataforma **como desarrollo, no como integración**. ⛔ **La verificación del *launch* OIDC de punta a punta sigue pendiente y está bloqueada por el entorno:** `LtiAdvantagePlatform` es **ASP.NET Core 10**, acá **no hay `dotnet`** y no se puede instalar — `https://dot.net/v1/dotnet-install.sh` responde **`CONNECT tunnel failed, 403`** por el proxy.
+
+43. **Moodle es el LMS más instalado del planeta y su único conector MCP es AGPL-3.0 con las partes útiles cerradas** *(agregado en el pase 26 del 2026-10-01)*. `csmediapro/moodle-mcp-server` es **AGPL-3.0**, **0 ★, 0 forks**, 57 commits. Sus **10 tools abiertos son sólo de lectura** (`list_courses`, `get_course`, `list_course_users`, `list_assignments`, `list_categories`, `get_site_info`, `get_user`, `list_user_courses`, `search_users`, `search_courses_by_name`) y las capas que un cliente pediría —*Advanced Reporting*, *User Analytics*, *User Directory*, *Compliance Pack*— son **plugins premium que se venden aparte**. 🔴 **El resumen de búsqueda lo presentaba como «open-source, plugin-extensible, LLM-agnostic» con instalación por `npx`:** la licencia y el modelo comercial sólo aparecen leyendo la página. **Es hueco de oportunidad, no sólo de inventario** — existe `canvas-mcp` (MIT, 269 ★, 102+ tools) para Canvas y **nada equivalente para Moodle**. Ver el patrón **P51**.
+
+44. **El eje conector tiene dos estándares vacíos y uno con colisión de término** *(agregado en el pase 26 del 2026-10-01)*. Cruzando `MCP server` con cada estándar inventariado: **xAPI** ✅ (`learnmcp-xapi`, ya estaba), **LTI** ✅ (vía conectores de LMS), **OneRoster** 🔴 **nada**, **QTI** 🔴 nada verificable —apareció un *Question Bank MCP Server* listado en Glama **sin repo de GitHub localizable, y no se registra como hallazgo**—, **CASE** 🔴 nada **y con el término capturado**: la búsqueda se llena de *certificaciones* de MCP (MCPA de Linux Foundation, certs de Claude). **Es la segunda colisión de término que mide esta KB**, después de `education` = «cursos sobre AI» (pase 23). **Regla de método que deja: antes de concluir que una capa está vacía, verificar que la palabra no esté capturada por otro mercado.** Con `education` costó siete pases descubrirlo.
+
+45. **La vertical biblioteca no tiene ninguna pieza agéntica, y es la que tiene el bus de eventos servido** *(agregado en el pase 26 del 2026-10-01)*. Se abrió la capa biblioteca/ILS y **tiene opción permisiva y grande** —**FOLIO**, Apache-2.0, 3.096 commits en `platform-complete`, **multi-tenant, modular y con Kafka** en `mod-inventory`— pero **no existe conector MCP ni agente** ni para FOLIO ni para Koha (GPL-3.0+). **FOLIO es el candidato más obvio de toda esta KB para construir uno**, porque ya publica eventos en Kafka: el agente se engancha como consumidor **sin parchear el core**. Ver el patrón **P52**.
+
+46. **No hay plataforma de admisiones open source permisiva y productiva** *(agregado en el pase 26 del 2026-10-01)*. Lo que sirve es copyleft y ya estaba en esta KB: **OpenEduCat** (**LGPL-3.0**, pipeline completo de consulta → solicitud → verificación documental → entrevista → oferta → alta en SIS, sin fee por postulante) y `OS4ED/openSIS-Classic` (**GPL**). Lo único permisivo verificado es `CollinsTatang/admissionSystem` (**MIT**, **4 commits**, 6 ★, 0 forks, PHP/MySQL): no es base de producción, y el conteo de commits lo dice solo. ⚠️ **Y un no-hallazgo declarado:** el barrido ofreció `WalaEddine01/OrgSchool-portfolio-project` como *«Open Source Software about student Management System»* y **verificado da 404** — **no se registra**, porque un 404 no es un hallazgo. **La salida practicable es LGPL-3.0 sobre OpenEduCat**, y para un módulo Odoo es manejable porque **la LGPL admite el módulo propietario al lado**; la alternativa es desarrollo.
+
+47. **La capa de *student success* open source es de 2013–2014, es GPL, no vive en GitHub — y es la que el regulador aprieta más** *(agregado en el pase 26 del 2026-10-01)*. **FlightPath Academics** (asesoría académica, *degree audit*, ***early alerts***, *Academic Priority*) es **PHP, GPLv3+**, liberada el **2013-03-13** por la University of Louisiana at Monroe, y **no tiene repositorio en GitHub** (el 404 de `Cerebro-Tech/FlightPath` es de WebFetch). **Student Success Plan** (Unicon) y el *dashboard* de **Marist College** tienen referencias verificables sólo de **2013–2014**. 🔴 **Es la capa más vieja y peor abastecida de las veintiséis pasadas** — y simultáneamente la que concentra más presión regulatoria, porque *predecir qué alumno va a fracasar* es exactamente la decisión automatizada sobre el alumno que el **Annex III** clasifica de alto riesgo y que **Oklahoma y Maryland** prohíben tomar de forma autónoma. **Hueco de mercado grande y riesgo alto en la misma celda.** Ver la tendencia **68** y el patrón **P53**.
+
 ## 54. El almacén permisivo que esta KB recomienda sabe borrar al alumno desde antes de que esta KB existiera, y seis pasadas vendieron lo contrario por leer documentación en vez de código (agregado 2026-10-01, pase 21)
 
 **Ésta no es una tendencia del mercado: es una corrección de esta KB, y se registra como tendencia porque cambia el
@@ -2554,6 +2586,187 @@ estándares, no como texto en un chat** — o sea, queda auditable, exportable a
 `agents/trending.md`). Este pase encontró el valor en el lado opuesto del cable: **no un agente nuevo, sino el enchufe
 estandarizado por donde entran los que ya hay.** Si el patrón se repite —estándares educativos publicando servidores MCP—
 la capa de integración entera de esta KB se vuelve herramientas de agente, y eso es la consigna de búsqueda del pase 26.
+
+## 66. El estándar de competencias con puerta de agente pasó de promesa a capacidad medida, y las dos tools que expone son exactamente los dos pasos que esta KB tenía inferidos (agregado 2026-10-01, pase 26)
+
+La tendencia **65** (pase 25) registró que `cassproject/CASS` **declaraba** MCP entre sus cartuchos. Era una línea de
+README, y el pase 25 fue honesto al marcarla como **gap 40**: *«está declarado, no medido»*. **Este pase la midió, y el
+resultado es mejor que la promesa.**
+
+**6 tools y 3 resource templates**, generados sobre un spec de **51 paths** que valida con **0 errores**. Y las dos que
+deciden si esta capa sirve:
+
+- **`record_evidence`** → `POST /api/xapi/statement`. *«Record evidence that a person has demonstrated (or failed to
+  demonstrate) a competency»*, en palabras del propio repo. **Entra evidencia xAPI.**
+- **`get_learner_profile`** → `GET /api/profile/latest`, con `frameworkId`, `subject`, `flushCache`, `cache` y
+  `targetDateTime`. Su descripción es literalmente *«use this tool to answer the question "what does this person
+  know?"»*. **Sale perfil de competencia computado.**
+
+**Por qué esto es una tendencia y no un hallazgo de repo.** Desde el pase 14 esta KB sostiene que la pregunta que paga
+un proyecto de competencias no es *«¿existe este marco?»* sino *«¿qué sabe este alumno?»*, y durante doce pasadas no
+tuvo con qué responderla: la capa CASE (`opensalt`, `OpenCASE`, `compeito`, `conform-ed`) **hospeda y valida marcos y no
+registra logro**. Ahora existe la pieza que lo registra **y la expone por MCP, bajo Apache-2.0** — es decir, **un agente
+puede escribir evidencia y leer mastery sin que nadie escriba un *adapter***. El paso 4 de **P48** deja de ser inferido.
+
+**Y hay una lectura de segundo orden que vale para toda esta KB.** CaSS no expone su API: **expone una superficie
+curada** — 6 de 51 paths, con 45 `x-mcp-ignore` puestos a mano y descripciones escritas para que las lea un modelo
+(*«Hints:»* incluidos). **La tendencia real es ésa: los estándares educativos están empezando a publicar superficie de
+agente diseñada, no pasarelas automáticas sobre REST.** Es la diferencia entre un proyecto que agregó MCP y uno que
+pensó qué debe poder hacer un agente. Para elegir sobre qué estándar construir, **la calidad de la superficie MCP ya es
+un criterio de selección** — y conviene mirarla antes que las estrellas. Ver el **gap 40 (cerrado)**, el **gap 41** y
+el patrón **P50**.
+
+## 67. Esta KB puede proponer la herramienta y no el aula: el lado LMS de LTI no tiene implementación permisiva y productiva, y ahora está medido sobre seis candidatos (agregado 2026-10-01, pase 26)
+
+El pase 24 encontró las dos primeras piezas *platform-side* de LTI y sospechó el problema. El pase 25 dejó escrita la
+acción de medirlo. **Este pase lo cerró, con un resultado negativo que vale más que un repo nuevo:**
+
+| Pieza | Licencia | Lado | Estado real |
+|------|----------|------|-------------|
+| `ltijs` | **Apache-2.0** ✅ | *tool* | **Exporta `[ 'Provider' ]` y nada más** (medido). *«Learning Tool»* en su propio `package.json` |
+| `oat-sa/lib-lti1p3-core` | ⚠️ **GPL-2.0** | *platform* **y** *tool* | **La única completa y certificada 1EdTech.** Copyleft |
+| `macewan-cs/lti` | **MIT** ✅ | *tool* | **Refutado como lado LMS.** *«partially implements»* |
+| `LtiLibrary/LtiAdvantagePlatform` | **MIT** ✅ | *platform* | **«Sample»** en su propia descripción. ⛔ Sin `dotnet` acá |
+| `Citolab/lti-1p3-platform-example` | ⚠️ **GPL-3.0+** | *platform* | **«example»** en el nombre |
+| `UOC/java-lti-1.3-platform` | ⚠️ **sin licencia** | *platform* | *«**will** implement»* |
+
+**La asimetría es estructural y conviene nombrarla así.** El ecosistema open source de LTI está construido para que
+**mucha gente haga herramientas que entren a pocos LMS**. Por eso el lado *tool* es abundante, permisivo y maduro, y el
+lado *platform* es escaso, copyleft o ejemplar: **los LMS grandes no necesitaban publicar el suyo**, y quien lo publicó
+lo hizo como material de referencia. **No es una laguna del open source: es la forma del mercado.**
+
+**Qué significa comercialmente, dicho sin adorno.** Esta KB es fuerte proponiendo **la herramienta que entra al LMS del
+cliente** (`ltijs` Apache-2.0 + `canvas-mcp` MIT, y con el pase 26 el lado docente también). **No puede proponer el aula
+misma con licencia permisiva.** Si un *engagement* pide el lado plataforma, las opciones son **GPL-2.0 certificada**,
+integración como *tool*, o **desarrollo presupuestado** — y la peor de las cuatro es prometerlo como integración y
+descubrirlo después. Ver el **gap 42** y el patrón **P51**.
+
+## 68. La capa que el regulador aprieta más es la más vieja y peor abastecida del inventario, y la distancia es de doce años (agregado 2026-10-01, pase 26)
+
+El pase 25 registró en la tendencia **64** que *proctoring* era la única capa sin opción permisiva y productiva, y que
+era justo la que el **Annex III** nombra de alto riesgo. **Este pase encuentra una peor, y por un margen amplio.**
+
+***Student success* / *early warning*.** Lo que existe open source: **FlightPath Academics** (GPLv3+, PHP, liberada el
+**2013-03-13**, con *early alerts* y *Academic Priority* para alumnos en riesgo) **sin repositorio en GitHub**;
+**Student Success Plan** de Unicon y el *dashboard* de **Marist College**, los dos con referencias verificables de
+**2013–2014**. **Doce años sin renovación en la capa que predice el fracaso del alumno.**
+
+**Y es exactamente la capa que la regulación acotó mientras el open source se quedaba quieto.** El **Annex III** del EU
+AI Act la clasifica de alto riesgo; **Oklahoma y Maryland prohíben la decisión autónoma sobre el alumno** (pase 23);
+**Delaware y Nueva York** prohíben el IEP automatizado (pase 3); **Colorado y Texas** agregaron requisitos *piecemeal*
+(pase 26). **Seis estados y un reglamento europeo sobre una capa cuyo software libre es de 2013.**
+
+**La inferencia que esta tendencia habilita, y es la más valiosa del pase para una propuesta.** Cuando el software
+disponible es viejo y la regulación es nueva, **el entregable defendible no es el modelo predictivo: es el flujo con
+humano decidiendo.** Un *early warning* que **ordena una cola de revisión humana** y deja expediente de por qué el
+alumno entró en ella es vendible en las cuatro regiones y **no cae en la prohibición de decisión autónoma**; el mismo
+modelo conectado a una acción automática es ilegal en dos estados y de alto riesgo en EMEA. **Es la misma pieza técnica
+con dos envoltorios, y sólo uno se puede facturar.** Ver el **gap 47** y el patrón **P53**.
+
+**Y el contraste que ordena el inventario de verticales de esta KB, ahora que son varias:** la biblioteca —abierta en
+este pase— **tiene** opción permisiva, grande y moderna (**FOLIO**, Apache-2.0, 3.096 commits, Kafka) **y no tiene
+presión regulatoria**; *student success* **no tiene** opción y **tiene toda la presión**. **La regla que se puede sacar:
+en esta industria, el abastecimiento open source y el riesgo regulatorio están inversamente correlacionados** — lo que
+el regulador nombró de alto riesgo es, sistemáticamente, lo que el open source no construyó. Vale para *proctoring*
+(tendencia 64), para la capa predictiva (ésta) y para el modelado del alumno (gap 5). **Donde hay más riesgo hay menos
+pieza, y por eso hay más proyecto.**
+
+## Nota de método del pase 26 (2026-10-01) — el pase que ejecutó sin poder levantar el servidor, y el que midió un «no existe» sobre seis candidatos en vez de sospecharlo sobre dos
+
+**Dos resultados de método, y el segundo vale más que el primero.**
+
+**1. Cuando la ejecución está bloqueada, hay que buscar el eslabón puro y ejecutar ése.** El **gap 40** pedía levantar
+el cartucho MCP de CaSS. El camino obvio —arrancar el servidor— está cerrado: necesita Elasticsearch y en este entorno
+**no hay demonio de Docker** (el CLI está instalado, `/var/run/docker.sock` no existe). El pase 25 habría escrito
+*«bloqueado»* y habría tenido razón. **Pero la generación de tools no depende del servidor:** `generateTools(spec)` es
+una función pura sobre el OpenAPI, y el OpenAPI lo arma `swagger-jsdoc` leyendo los comentarios del código, **sin base
+de datos**. Replicando las opciones exactas de `src/main/server.js` y validando con el mismo
+`openapi-schema-validator` del arranque, el generador real corrió y devolvió **6 tools y 3 resource templates**.
+
+**La regla que deja, y es la contracara de la regla del pase 24:** el pase 24 estableció que *cuando una conclusión
+depende del comportamiento de una pieza de terceros, la inferencia no alcanza y hay que ejecutar*. Este pase agrega la
+otra mitad: **cuando ejecutar el todo está bloqueado, hay que preguntarse qué parte del todo es pura — y ejecutar esa.**
+Casi siempre existe un eslabón determinista (un generador, un parser, un validador) que no necesita la infraestructura
+que falta. **No es una medición de segunda: las tres fuentes independientes —el generador ejecutado, la aserción del
+test del propio repo (*«exactly 6 tools»*) y las 6 anotaciones `x-mcp-tool-name` del árbol— dan el mismo número.** Lo
+que no se midió se dice: el *handshake* MCP real, que sí necesita Elasticsearch.
+
+**2. Un «no existe» sólo vale si se midió el espacio completo, y hay que decir cuántos candidatos.** El pase 24 vio dos
+piezas *platform-side* de LTI y escribió, con razón, que la capa estaba sesgada a *tool-side*. Este pase verificó
+**seis** candidatos uno por uno —incluyendo instalar `ltijs` desde npm y **leer sus exports** en vez de su
+documentación— y pudo pasar de *«parece que no hay»* a **«no hay, sobre seis, y éstas son las razones de cada uno»**.
+**La diferencia es comercial, no académica:** lo primero no se puede decir en una reunión; lo segundo es un argumento
+con evidencia que justifica presupuestar desarrollo. **Un gap sin denominador es una impresión. Con denominador es un
+hallazgo.** Y de paso corrigió un falso positivo del resumen de búsqueda: `macewan-cs/lti` es **MIT** pero es
+**tool-side**, no el lado LMS que el resumen sugería.
+
+### Lo que trajo el barrido obligatorio, y es la octava pasada seca para la tabla de agentes
+
+Cuatro búsquedas globales y cuatro regionales, con el año **calculado** (2026). **Cero agentes nuevos por octava vez
+consecutiva.** Lo global devolvió la capa genérica (openclaw 385k ★, browser-use, Mem0, AutoGen, dify) y **material
+didáctico *sobre* AI** (`ai-engineering-from-scratch`, `free-ai-agents-resources`, listas de repos para «aprender AI
+en 2026»). **Ocho pases confirman la medición del pase 23 y conviene sacar la conclusión operativa: el canal de
+descubrimiento por la palabra `education` está agotado y seguir pagándolo es desperdicio.** Las altas de las últimas
+tres pasadas vinieron, todas, de ejes que no usan esa palabra: **artefacto** (pase 24), **estándar** (pase 25) y
+**conector** (pase 26).
+
+⚠️ **Y una cifra del barrido que NO se registró, con el motivo.** El barrido global devolvió un *«Hermes Agent, MIT,
+180.000+ ★ desde su lanzamiento en febrero de 2026, el framework OSS de más rápido crecimiento de 2026»*. **No se
+registra:** no es educativo, viene de un agregador sin verificación de primera mano, y **esta KB ya se quemó con
+conteos de estrellas inflados por el canal** (la corrección del pase 4 del `technology`-KB y la del pase 22 acá). Si
+aparece otra vez, se verifica contra la página del repo antes de escribirlo.
+
+### La advertencia de método sobre la verificación de URLs, que contradice la consigna y hay que decir por qué
+
+**La consigna pide verificar cada URL con `curl -sI`. En esta sesión eso produce datos falsos y no se usó.**
+`curl -sI` contra `github.com` devuelve **`403` para todas las URLs** —se probó contra cinco, incluidas
+`cassproject/CASS` y `DavidLMS/learnmcp-xapi`, que existen y están en esta KB desde los pases 25 y 6— porque el proxy
+de egreso corta el `HEAD`. **Verificar con `curl` acá habría marcado como 404 a repos reales**, que es exactamente el
+error que la consigna quiere prevenir. **Toda la verificación de este pase se hizo con WebFetch sobre la página del
+repo**, leyendo licencia, ★, forks y commits de la página. El único 404 reportado —`Cerebro-Tech/FlightPath`— es un 404
+**de WebFetch** sobre una URL que este pase **conjeturó** (FlightPath no publica en GitHub), no la refutación de una
+URL citada por una fuente.
+
+### Los dominios bloqueados, que ya son cuatro y sostienen afirmaciones regionales
+
+`unu.edu` (**`EGRESS_BLOCKED`**), **`publications.iadb.org`** (**`EGRESS_BLOCKED`**, nuevo en este pase),
+`coe.int` (**HTTP 000**) y `www.iesalc.unesco.org`. 🔴 **Van dos pases con la base de evidencia primaria de LATAM
+inalcanzable**, y el dominio que se agregó dolía: el barrido ubicó *«An Enabling Regulatory Framework for Artificial
+Intelligence in Latin America and the Caribbean»* (**BID**), que es **la fuente primaria regulatoria regional que esta
+KB no tiene**. **Es un límite del entorno, no una laguna de investigación** — y hay que levantarlo desde una red sin
+este proxy antes de usar esas cifras con un cliente.
+
+### Lo que este pase NO hizo, declarado como tal
+
+- **No hizo *handshake* MCP** contra el cartucho de CaSS (necesita Elasticsearch → Docker). Se midió generación, no
+  invocación.
+- **No midió el *launch* LTI de punta a punta**: sin `dotnet`, y `dot.net` bloqueado por el proxy (`CONNECT … 403`).
+- **No verificó fecha de último commit** de ninguno de los repos nuevos: la página no la expone de forma legible vía
+  WebFetch en esta sesión. Señales de vida usadas: commits totales, forks y ★.
+- **No buscó conector MCP para Open edX**, que es el hueco simétrico del **gap 43**. Queda como consigna.
+- **No verificó la implementación de referencia de 1EdTech en Ruby on Rails** (platform + tool), que apareció en el
+  barrido. Es la última candidata no mirada del **gap 42**.
+- **No cerró los gaps 36 y 38** (la cadena de `lrsql`): siguen necesitando `next.jdbc` resuelto, y
+  `repo.clojars.org` sigue respondiendo **403** por el proxy, igual que en el pase 25.
+
+## 🔵 Las tres acciones que este pase deja escritas para el siguiente
+
+1. **Hacer el *handshake* MCP real contra el cartucho de CaSS**, que es lo único que falta para que el cierre del gap 40
+   sea de punta a punta. **El punto exacto a destrabar está localizado:** el log se detiene en
+   *«SkyrepMigrate Waiting for Elasticsearch to appear at http://localhost:9200»* — todos los endpoints ya se bindean
+   antes de eso, así que **sólo falta satisfacer ese *probe***. Con un entorno con demonio de Docker
+   (`docker compose up -d elasticsearch-cass`, que el repo ya trae) o un ES embebido, levantar el server, hacer
+   `initialize` + `tools/list` contra **`POST /api/mcp`** y comparar con las **6** medidas acá. **Si coinciden, P48 y
+   P50 se cotizan sin asterisco.**
+2. **Seguir el eje conector, que rindió dos veces seguidas, en lo que quedó sin barrer:** `MCP server` +
+   **Open Badges**, + **SCORM**, + **Caliper** (acá el hallazgo esperable es la **ausencia**, porque Caliper dejó de ser
+   open source el 2023-06-17 — y hay que **escribir la ausencia**). Y **buscar `canvas-mcp` como patrón, no como repo:**
+   si existe un conector MIT de 102 tools para Canvas, preguntar explícitamente por el equivalente de **Open edX** (que
+   **no se buscó**) — para Moodle ya se sabe que no existe (gap 43).
+3. **Cerrar el gap 42 por agotamiento** verificando la **implementación de referencia de 1EdTech en Ruby on Rails**
+   (platform **y** tool), que es la última candidata no mirada. Si también es copyleft o material de referencia, el
+   *«no existe permisivo y productivo del lado LMS»* pasa de **medido sobre seis** a **cerrado**, y eso habilita decirle
+   a un cliente *«el lado plataforma se presupuesta como desarrollo»* con la evidencia completa puesta sobre la mesa.
 
 ## Nota de método del pase 25 (2026-10-01) — el pase que ejecutó la consigna entera y volvió con dos falsos negativos propios: el eje artefacto rinde, y lo que más rinde es declarar límites
 
