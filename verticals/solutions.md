@@ -20,6 +20,36 @@ updated: 2026-10-01
 > no comercial, y es justo la capa que el **Annex III** nombra de alto riesgo. La alternativa que sí se vende es **P49**.
 > **Pase 23:** entra **Frappe Education** en la capa SIS y **se cierra la pregunta del pase 21 sobre dónde vive el módulo educativo de ERPNext** — es una app aparte, `frappe/education`, GPL-3.0.
 > **Pase 11:** entra la capa **Apereo (ECL-2.0)** —Sakai, Opencast, uPortal, OpenLRW—, que diez pasadas descartaron por un filtro de licencia mal aplicado, y se documenta qué **no** proponer cuando el cliente pide *early warning*.
+> **Pase 27 del 2026-10-01:** se agrega **la columna que faltaba en veintiséis pasadas — ¿la vertical tiene puerta de agente?** Moodle **sí** (dos conectores **MIT**, uno que escribe notas) y Canvas **sí**; 🔴 **Open edX no tiene ninguna**, y es la de mayor huella pública en LATAM e India. **Las LMS son copyleft pero las puertas son MIT**, y por eso se pueden componer. Ver la sección del pase 27, abajo.
+
+
+## La columna que faltaba en este archivo: ¿la vertical tiene puerta de agente? — agregada en el pase 27 del 2026-10-01
+
+Veintiséis pasadas inventariaron **qué plataformas se pueden customizar**. Ninguna anotó **si existe ya la puerta por
+la que entra el agente** — y es lo que decide si el proyecto empieza integrando o empieza construyendo el conector.
+**El pase 27 la midió para las verticales de LMS**, y el resultado corrige la lectura del pase 26.
+
+| Vertical | Plataforma | Licencia | Puerta MCP existente | Licencia de la puerta | Qué significa para un proyecto |
+|---|---|---|---|---|---|
+| **LMS** | **Moodle** | GPL-3.0+ | ✅ **Sí, dos permisivas** — `peancor/moodle-mcp-server`, `MarcosNahuel/moodle-mcp` | **MIT** ✅ | **Se empieza integrando.** Una de las dos **escribe nota y devolución**: ver **P54** |
+| **LMS** | **Canvas** | AGPL-3.0 | ✅ Sí — `vishalsachdev/canvas-mcp` | **MIT** ✅ | La más madura de la capa |
+| **LMS** | 🔴 **Open edX** | **AGPL-3.0** | 🔴 **No. Ninguna** | — | **Se empieza construyendo la puerta.** Gap **48**, patrón **P55** |
+| **Contenido empaquetado** | **SCORM** (2004 4.ª ed. / 1.2) | estándar | ✅ Sí — `giacomomaria81/scorm-mcp-server` | **MIT** ✅ | **La vía sin integración:** el LMS importa, no se conecta. **P56** |
+| **Competencias** | **CaSS** | Apache-2.0 | ⚠️ **Parcial** — 6 operaciones de 61 | Apache-2.0 | Evidencia y perfil sí; **insignias y autoría de marcos no**. **P57** |
+| **Biblioteca / ILS** | **FOLIO** | Apache-2.0 | 🔴 No, **pero publica eventos en Kafka** | — | El agente entra **como consumidor**, sin parchear el core. **P52** (pase 26) |
+| **ERP / SIS** | **OpenEduCat** | LGPL-3.0 | 🔴 No | — | Módulo Odoo al lado; la LGPL lo admite (gap 46) |
+
+🔴 **La asimetría que hay que leer antes de elegir plataforma en una propuesta.** Las tres LMS son copyleft —GPL o
+AGPL— **pero las puertas son MIT**, y eso es lo que las vuelve utilizables: el conector es un proceso aparte que habla
+por API con token, **no un derivado del LMS**. Es la misma forma que esta KB encontró en accesibilidad (pase 8) y en
+credenciales (pase 9): **lo maduro es copyleft, lo que se compone es permisivo**. Y aplica en concreto: se puede
+entregar un conector propietario sobre Moodle o Canvas **sin tocar la licencia del LMS**.
+
+**Lo que esto cambia para el cliente que ya eligió plataforma.** Si corre **Moodle o Canvas**, el proyecto arranca en
+la semana uno sobre una puerta existente. Si corre **Open edX** —y es el caso de la huella pública grande de **LATAM e
+India**— **hay una fase previa que hay que cotizar**, y conviene decirlo al principio y no al medio. La alternativa que
+evita esa fase por completo es **P56**: entregar el contenido como paquete SCORM, que Open edX importa igual que
+cualquier LMS.
 
 ## Plataformas recomendadas
 

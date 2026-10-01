@@ -21,6 +21,43 @@ updated: 2026-10-01
 > con licencia permisiva (`LtiAdvantagePlatform`, MIT), y la capa LTI tiene **cinco stacks**, con `ltijs` (Apache-2.0,
 > **373 ★**) como la más traccionada y ausente de esta KB durante seis pases. 🔴 **Y un estándar se cayó del open source:**
 > **Caliper pasó a repos privados el 2023-06-17** — desde este pase se propone **xAPI**.
+> **Pase 27 del 2026-10-01:** **el gap 42 cierra** — la séptima y última candidata, la implementación de referencia de 1EdTech, **no es una implementación**: `1EdTech/ltibootcamp` es una colección de enlaces **sin licencia declarada**, y el código Ruby de la RI está **detrás de la membresía**. *«Esta KB propone la herramienta, no el aula»* queda **cerrado sobre siete candidatas**. Y entra **Open edX como la base de mayor huella pública sin puerta de agente** (**gap 48**). Ver la sección del pase 27, abajo.
+
+
+## El lado plataforma de LTI queda cerrado, y Open edX queda como la base sin puerta — agregado en el pase 27 del 2026-10-01
+
+**Dos cosas se cierran en este pase y las dos acotan qué se puede prometer sobre bases de terceros.**
+
+### 1. El gap 42 cierra: no hay implementación *platform-side* de LTI 1.3 permisiva y productiva
+
+El pase 26 lo midió sobre seis candidatas. Este pase verificó **la séptima y última, la implementación de referencia de
+1EdTech** — y **no es una implementación**:
+
+| Repo | Licencia | ★ | Forks | Commits | Qué es realmente |
+|------|----------|---|-------|---------|------------------|
+| [`1EdTech/ltibootcamp`](https://github.com/1EdTech/ltibootcamp) | 🚫 **ninguna declarada** | 127 | 19 | 47 | **Colección de enlaces.** El README dice que *«junta links que se relacionan con entender e implementar Tools y Platforms LTI»* |
+
+El código Ruby de la implementación de referencia real de 1EdTech (platform **y** tool) vive **en el repositorio de
+Contributing Members**, es decir **detrás de la membresía**. 🔴 **Conclusión, ahora completa sobre siete candidatas
+incluida la referencia oficial: esta KB puede proponer la herramienta (*tool-side*) y no el aula (*platform-side*).**
+El lado plataforma **se presupuesta como desarrollo**, y eso se puede decir con la evidencia entera sobre la mesa.
+Ver el **gap 42**.
+
+### 2. Open edX: la base de mayor huella pública, y la única sin puerta de agente
+
+| Base | Licencia | Qué aporta | Estado de la puerta |
+|---|---|---|---|
+| **Open edX** (`openedx/edx-platform`) | **AGPL-3.0** | La plataforma de los programas educativos públicos grandes —**LATAM e India**—, con **Aspects** (Apache-2.0) como analítica y **Ralph sobre ClickHouse** por default | 🔴 **Ningún conector MCP.** Búsqueda extendida: nada. **Gap 48 · P55** |
+
+**Por qué entra en *foundations* y no sólo en *verticals*.** Lo que falta no es un plugin: es **la superficie de agente
+de la base**. Y hay una verificación pendiente que decide si el patrón **P55** es de 6–8 semanas o es un hallazgo
+negativo — **si Open edX expone una API REST estable y versionada** equivalente a los Web Services de Moodle
+(*Course Blocks*, *Enrollment*, *Grades*, Studio/CMS). **Es la acción 1 que el pase 27 deja escrita, y no se cotiza
+nada antes de ejecutarla.**
+
+⚠️ **Nota de licencia que conviene tener presente al proponer sobre Open edX:** la plataforma es **AGPL-3.0**, pero
+—igual que con Moodle y Canvas— **un conector que habla por API con token es un proceso aparte, no un derivado**. Las
+puertas verificadas de las otras dos LMS son **MIT**. La vía permisiva existe; lo que no existe todavía es la pieza.
 
 ## Plataformas y frameworks base
 

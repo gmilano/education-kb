@@ -22,10 +22,11 @@ updated: 2026-10-01
 > proyecto — entre ellos `record_evidence` y `get_learner_profile`, que son **exactamente los dos pasos que el patrón
 > P48 necesitaba**. Ver la tendencia **66**, el **gap 40 (CERRADO)** y la sección nueva de la capa conector, abajo.
 > **Pase 10 del 2026-10-01:** para el contenido, la verificación se hizo contra el archivo `LICENSE`, no contra el README — y por eso apareció la contradicción que documenta la capa de contenido curricular, abajo.
+> **Pase 27 del 2026-10-01:** **la tabla pasa de 38 a 41 filas**, y las tres altas son conectores: 🔴 **el pase 26 declaró que Moodle no tenía conector MCP permisivo (gap 43) y es falso** — hay **dos MIT**, y `peancor/moodle-mcp-server` **escribe nota y devolución** (`provide_assignment_feedback`), la primera pieza permisiva que toca el **gap 6** desde el pase 2. Entra también `scorm-mcp-server` (MIT, offline). El hueco real del eje conector **es Open edX**, el único LMS grande sin puerta de agente (**gap 48**). Y la superficie MCP de CaSS queda medida por adaptador: **CASE, CEASN y Open Badges están enteros fuera de MCP**, y el Open Badges de CaSS es **OB 2.0, no 3.0**. Ver la capa de conectores, abajo.
 
 ## Agentes y herramientas destacadas
 
-**38 filas = 36 agentes + 2 bibliotecas de skills.** (37 → 38 en el pase 26: entra `canvas-mcp`.) Ordenados por stars. El conteo se hizo a mano en el pase 19 y
+**41 filas = 39 agentes y conectores + 2 bibliotecas de skills.** (37 → 38 en el pase 26: entra `canvas-mcp`; **38 → 41 en el pase 27**: entran `peancor/moodle-mcp-server`, `MarcosNahuel/moodle-mcp` y `scorm-mcp-server` — las tres son **conectores MCP**, y las tres son **MIT**.) Ordenados por stars. El conteo se hizo a mano en el pase 19 y
 se explica abajo, porque es la cuarta vez que esta KB se pelea con este número.
 
 > *Pase 25 del 2026-10-01:* **séptimo pase sin altas, y el eje de búsqueda que el pase 23 diagnosticó sigue siendo el que
@@ -231,7 +232,63 @@ se explica abajo, porque es la cuarta vez que esta KB se pelea con este número.
 | universal-diagnostic-tutor-skill | https://github.com/SenmuuuuW/universal-diagnostic-tutor-skill | **MIT** ✅ | 235 | Markdown | Tutor *diagnosis-first* para STEM, matemática, programación y AI/CS: antes de enseñar **determina dónde está trabado el alumno**, con un ciclo de clarificar objetivo → localizar el hueco en cuatro niveles (materia → sistema de conocimiento → subtema → conceptos núcleo) → instrucción mínima dirigida → verificación → decisión de avance por mastery demostrada. Continuidad entre conversaciones mediante **«Learning State Cards» visibles** —el estado del alumno es inspeccionable por el alumno, no sólo por el sistema—, enrutamiento en lenguaje natural sin menús de modo y análisis cualitativo de error. v2.0.0 reduce ~41 % el contexto respecto de v1.9.2. Skill oficial de DeepSeek Harness, con variante *Lite Prompt* para chat estándar. 57 commits. *Agregado en el pase 19* | Sin región declarada |
 | lumen | https://github.com/ahmedEid1/lumen | **GPL-3.0** ⚠️ | 88 | Python/TypeScript | Plataforma donde el alumno describe su objetivo y un orquestador multi-agente propio (**sin LangChain**) le construye el curso. **Modelo *learner-owned* declarado:** *«every signed-in user runs the whole loop themselves; `admin` only moderates and configures»* — el alumno define, construye, aprende, comparte y remezcla en un catálogo moderado. RAG **con alcance por curso y citación, detrás de un único autorizador**, con aislamiento explícito para que cursos privados y clonados no filtren datos. BYOK con credenciales cifradas, servidor MCP con 9 tools, PostgreSQL 17 + pgvector, decisiones del agente auditables en una tabla `llm_calls`. 828 commits, 1.421 tests de backend y 468 de frontend. **La decisión que lo hace citable:** su *eval harness* **publica también los puntajes malos** — es el único artefacto de esta KB que documenta sus propias debilidades medidas. ⚠️ GPL-3.0: referencia de arquitectura y despliegue propio, no base de un entregable cerrado. *Agregado en el pase 19* | **EMEA (Essen, Alemania)** — el perfil del autor (Ahmed Hobeishy) declara `Essen, Germany`. *Región cerrada en el pase 19* |
 | canvas-mcp | https://github.com/vishalsachdev/canvas-mcp | **MIT** ✅ | 269 | TypeScript | **El conector permisivo de LMS más grande de esta KB.** Servidor MCP sobre la API de Canvas con **hasta 102–103 tools** (el README dice «up to 102» en el encabezado y «up to 103» en el resumen: se transcribe la ambigüedad del propio repo) y **8 *agent skills***. Es el primero de esta base que cubre **las dos puntas**: lado alumno (entregas, notas, TODO, *peer review*) y **lado docente** (gestión de tareas, corrección, analítica de alumnos, mensajería), más módulos, páginas, archivos, y un *Learning Designer* que incluye **escaneo de accesibilidad y chequeo WCAG** — la capa del pase 8 llega al conector. Trae `search_canvas_tools` para **descubrimiento de tools**, que es la respuesta a tener 100+: el agente busca la herramienta en vez de recibir las cien. 815 commits, 92 forks. ⚠️ Es *tool-side* sobre la API de Canvas: **no reemplaza el lado LMS** (ver el cierre del lado *platform*, abajo). *Agregado en el pase 26* | Sin región verificada |
+| moodle-mcp-server (peancor) | https://github.com/peancor/moodle-mcp-server | **MIT** ✅ | 43 | TypeScript | **La primera pieza permisiva de esta KB que escribe nota y devolución dentro de un LMS de producción**, y por eso la primera que toca el **gap 6** (corrección, abierto desde el pase 2) del lado del verbo correcto. **8 tools, cuatro de escritura:** `get_courses`, `list_students`, `get_assignments`, `get_student_submissions`, **`provide_assignment_feedback`** (pone nota y comentario en la tarea), `get_quizzes`, `get_quiz_attempts`, **`provide_quiz_feedback`**. Habla **Moodle Web Services** por token: **no se modifica el LMS**. 13 forks, 10 commits. ⚠️ **10 commits no son una base de producción** — es el punto de partida del último tramo, no el sistema de corrección. 🔴 Desmiente el **gap 43** del pase 26, que lo declaraba inexistente. *Agregado en el pase 27* | Sin región verificada |
+| moodle-mcp (MarcosNahuel) | https://github.com/MarcosNahuel/moodle-mcp | **MIT** ✅ | 1 | TypeScript | **El conector MCP de Moodle más completo que existe, y tiene 1 estrella** — el caso más puro del **gap 49** (los directorios rankean por promoción, no por capacidad). **40 tools** en 10 dominios: Curso (crear, actualizar, duplicar, archivar), Secciones, Contenido (publicar material, generar video), Evaluación (configurar quiz, importar GIFT), Alumnos (matrícula, grupos, roles), Gradebook, Comunicación (mensajería, anuncios de foro), Calendario, Badges — **más `ws_raw`, un escape hatch a Web Services crudo** que es la decisión de diseño que conviene portar. v0.5.2 (wrapper) + v0.5.0 (plugin); el README declara **«~80 % operable desde un agente LLM»** y deja salvedades abiertas en subida de archivos y creación de secciones. 59 commits, 1 fork. ⚠️ **Pre-producción declarada por el propio autor.** *Agregado en el pase 27* | Sin región verificada |
+| scorm-mcp-server | https://github.com/giacomomaria81/scorm-mcp-server | **MIT** ✅ | 6 | TypeScript | **El puente al LMS que el cliente ya tiene instalado, en el formato que ese LMS ya sabe importar.** Convierte HTML (o *bundles* de diseño) en paquetes **SCORM 2004 4.ª edición y SCORM 1.2**, versión elegible por parámetro. **3 tools:** `scorm_package`, `scorm_validate` (conformidad de un paquete existente), `scorm_selftest`. **Inlinea cada asset —CSS, fuentes, JS, imágenes— como data URI, así que el paquete corre 100 % offline**, e inyecta el *runtime* que reporta *completion*, progreso, tiempo y **resume entre sesiones**. Autohospedable; la demo online es opcional. 0 forks, 11 commits. **Es la pieza de salida que a la capa generativa de esta KB (OpenMAIC, Educhain) le faltaba para aterrizar en un LMS sin integrarse con él.** Ver **P56**. *Agregado en el pase 27* | Sin región verificada |
 
+
+## Capa de conectores MCP por LMS y por estándar — agregada en el pase 27 del 2026-10-01
+
+**Lo que este pase corrige antes de agregar nada.** El pase 26 cerró afirmando que **Moodle no tenía conector MCP
+permisivo** (gap 43) y construyó el patrón **P51** sobre eso. **Es falso**, y lo desmintió una búsqueda. La tabla de
+arriba suma las tres piezas nuevas; acá queda el mapa completo, que es lo que se lleva a una conversación con cliente.
+
+### El mapa, por LMS
+
+| LMS | Licencia del LMS | Conector MCP | Licencia | Escribe | Madurez |
+|---|---|---|---|---|---|
+| **Canvas** | AGPL-3.0 | `vishalsachdev/canvas-mcp` | **MIT** ✅ | Sí | El más maduro. Ver la advertencia de cifra, abajo |
+| **Moodle** | GPL-3.0+ | `peancor/moodle-mcp-server` | **MIT** ✅ | **Sí — nota y devolución** | 43 ★, 13 forks, **10 commits** |
+| **Moodle** | GPL-3.0+ | `MarcosNahuel/moodle-mcp` | **MIT** ✅ | Sí, 40 tools | 59 commits, **1 ★**, pre-producción declarada |
+| **Moodle** | GPL-3.0+ | `csmediapro/moodle-mcp-server` | ⚠️ **AGPL-3.0** | No (lectura) | Capas útiles = **plugins premium de pago** |
+| 🔴 **Open edX** | **AGPL-3.0** | **ninguno** | — | — | **Hueco. Gap 48 · P55** |
+| **SCORM** (formato) | — | `giacomomaria81/scorm-mcp-server` | **MIT** ✅ | Genera paquetes | 3 tools, offline. **P56** |
+
+⚠️ **Advertencia de cifra sobre `canvas-mcp`, y vale como regla.** La fila de la tabla principal registra **269 ★,
+815 commits y «102–103 tools»**, verificado de primera mano en el pase 26. Este pase **no reconfirmó esas cifras** y
+encontró que **el conteo de tools varía según la versión** que se consulte: se declaran **40+**, **80+** y **116** en
+distintos puntos. 🔴 **El número de tools de este repo no es citable como cifra fija en un entregable** — se cita la
+capacidad («más de cuarenta herramientas, lado alumno y lado docente»), no el número.
+
+### El mapa, por estándar educativo — y acá la medición es de primera mano sobre el código
+
+Cruzando `MCP server` con cada estándar que esta KB inventarió. **Lo nuevo de este pase es la columna de la derecha:
+qué decidió exponer, y qué decidió ocultar, el proyecto de referencia de cada estándar.**
+
+| Estándar | Conector MCP de terceros | En `cassproject/CASS` (medido por anotación) |
+|---|---|---|
+| **xAPI** | ✅ `learnmcp-xapi` (desde el pase 6) | **1 expuesta** (`record_evidence`) / 4 ocultas — **un statement por llamada** |
+| **Competencias / perfil** | — | **1 expuesta** (`get_learner_profile`) / 0 ocultas |
+| 🔴 **CASE** | **nada** (y el término está capturado, gap 44) | **0 expuestas / 13 ocultas** — autoría de marcos **cerrada a MCP** |
+| 🔴 **CEASN** | **nada** | **0 expuestas / 6 ocultas** |
+| 🔴 **Open Badges** | **nada del estándar** — lo que aparece es SaaS comercial (`IssueBadge`) y generadores de *badges* de README (**tercera colisión de término**) | **0 expuestas / 5 ocultas**, y **ancladas a `w3id.org/openbadges/v2` → OB 2.0, no 3.0** |
+| 🔴 **Caliper** | **nada**, consistente con que dejó de ser open source el **2023-06-17**. **La ausencia está escrita, no inferida** | — |
+| 🔴 **OneRoster · QTI** | Declaradas vacías en el pase 26 **por consulta a un directorio** → **sin medir de verdad**, ver **gap 49** | — |
+
+**Las dos frases que esto habilita, y las dos que prohíbe.** Habilita: *«la evidencia de aprendizaje entra por MCP, de
+a un statement»* y *«el perfil de competencia se lee por MCP»*. 🔴 Prohíbe: *«emitimos insignias por MCP»* y
+*«autoramos el marco de competencias por MCP»* — **las dos están excluidas a propósito** por el proyecto de
+referencia, y van por REST **fuera** de la superficie de agente. Y si el cliente pide credenciales **OB 3.0 / W3C VC**,
+**CaSS no es la pieza que las emite**.
+
+### La trampa de despliegue que decide si hay superficie MCP o no
+
+Leído de primera mano en `src/main/server/cartridge/adapter/mcp.js`: el adaptador **no lee el spec del disco**, lo pide
+**por loopback** — `fetch(CASS_LOOPBACK + '/swagger.json')`, default **`http://localhost/api/`**, puerto **80**. Si ese
+`fetch` falla o no devuelve `ok`, el adaptador **loguea y hace `return`**: 🔴 **la ruta `/api/mcp` no se monta, y el
+servidor arranca normalmente.** Con proxy, puerto no estándar o HTTPS mal resuelto, **la superficie de agente
+desaparece en silencio**. Se apaga además con `DISABLED_ADAPTERS=mcp`. **Es lo primero que hay que mirar si un cliente
+reporta que no ve herramientas.**
 ## ⚠️ Colisión de nombres: hay dos "Bloom" y son proyectos distintos (pase 7)
 
 | Cuál | Repo / marca | Licencia | Stars | Qué es |

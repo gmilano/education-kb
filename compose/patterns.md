@@ -17,6 +17,7 @@ updated: 2026-10-01
 > de examen **sin** AI de vigilancia, que saca el entregable del **Annex III** en vez de buscar la pieza de proctoring que
 > no existe en open source permisivo).
 > **Pase 11:** +2 patrones — **P25** (riesgo de abandono conforme al Anexo III, la capa con presupuesto ya asignado y sin oferta open source) y **P26** (agente docente sobre la ontología curricular nacional ya publicada).
+> **Pase 27:** **+4 patrones y una corrección.** 🔴 **P51 queda con premisa falsa** —el conector MCP de Moodle **sí existe y es MIT**— y lo reemplazan **P54** (corrección y devolución sobre Moodle con **compuerta humana**, el último tramo del gap 6, con piezas que ya escriben), **P55** (el conector de **Open edX**, que es el único que de verdad no existe), **P56** (**SCORM** como formato de salida de la capa generativa: cero integración, offline) y **P57** (evidencia por MCP cotizada sobre lo que CaSS **realmente** expone — 6 de 61 operaciones, con insignias y autoría de marcos **fuera**).
 
 ## Patrón base
 
@@ -2673,7 +2674,13 @@ pide y que casi ningún producto da: *la evolución de la competencia en el tiem
 expone la actividad. El riesgo no es técnico: es **tener el marco de competencias del cliente en CASE**, que suele ser
 el trabajo de verdad.
 
-## P51 — El conector MCP de Moodle que no existe, construido sobre el que sí existe (pase 26)
+## P51 — ~~El conector MCP de Moodle que no existe, construido sobre el que sí existe~~ 🔴 **PREMISA FALSA — CORREGIDO EN EL PASE 27** (pase 26)
+
+> 🔴 **Este patrón se construyó sobre una afirmación falsa y queda reemplazado por P54 y P55.** El pase 26 declaró que *«el único conector MCP de Moodle es `csmediapro/moodle-mcp-server`, AGPL-3.0, 10 tools sólo de lectura»*. **Existen al menos tres, y dos son MIT:** `peancor/moodle-mcp-server` (**MIT**, 43 ★, 13 forks, **8 tools, cuatro de escritura**, incluidas `provide_assignment_feedback` y `provide_quiz_feedback`) y `MarcosNahuel/moodle-mcp` (**MIT**, 59 commits, **40 tools** en 10 dominios **+ `ws_raw`**). El error fue de **muestreo** —los directorios de MCP rankean por promoción, **gap 49**—, no de lectura: lo que el pase 26 dijo de `csmediapro` es correcto.
+>
+> **Qué hacer en su lugar:** para Moodle, **no hay que construir el conector — hay que endurecer y componer los dos que existen**, que es un proyecto mucho más corto: ver **P54** (corrección y devolución con compuerta humana). La ausencia real del eje conector **está en Open edX** (**gap 48**): ver **P55**.
+>
+> **Lo que de este patrón sigue siendo válido y por eso se conserva entero abajo:** la tabla de decisiones de diseño de `canvas-mcp` —descubrimiento de tools, separación de perfiles, *agent skills*, chequeo WCAG— **es exactamente lo que hay que portar**, y ahora se porta a Open edX en vez de a Moodle. ⚠️ Con una salvedad de cifra: el conteo de tools de `canvas-mcp` **varía por versión** (40+, 80+, 116) y **no es citable como número fijo**; «102–103» era la lectura del README en el pase 26.
 
 **El hueco, medido.** `canvas-mcp` (**MIT**, 269 ★, 815 commits) da **hasta 102–103 tools** sobre Canvas, con lado
 alumno y lado docente. **Para Moodle —el LMS más instalado del planeta— el único conector MCP es `csmediapro/moodle-mcp-server`:
@@ -2808,3 +2815,173 @@ EMEA y North America, por cumplimiento.** Mismo entregable, dos relatos.
 
 **Estimación.** 6–8 semanas: 2 de modelado sobre datos del cliente (con la licencia de los datasets verificada) y 4–6
 de la capa de cola + expediente, **que es la que no existe y es la que se factura**. Ver el **gap 47** y la tendencia **68**.
+
+
+## P54 — Asistente de corrección sobre Moodle con compuerta humana: el último tramo del gap 6, con piezas MIT que ya escriben (pase 27)
+
+**Por qué este patrón existe recién ahora.** El **gap 6** —corrección y devolución— lleva abierto desde el pase 2 con
+el mismo diagnóstico: la demanda está probada (Singapur construyó tres asistentes de devolución, cerrados) y la oferta
+open source **analizaba sin escribir**. El resultado del análisis **no volvía al expediente del alumno**, y ese último
+tramo se cotizaba como desarrollo. **El pase 27 encontró la pieza que lo cierra**, y es MIT.
+
+**Las piezas, todas verificadas:**
+
+| Pieza | Licencia | Rol |
+|---|---|---|
+| [`peancor/moodle-mcp-server`](https://github.com/peancor/moodle-mcp-server) | **MIT** ✅ | **El que escribe.** `get_student_submissions` → `provide_assignment_feedback` / `provide_quiz_feedback` |
+| [`MarcosNahuel/moodle-mcp`](https://github.com/MarcosNahuel/moodle-mcp) | **MIT** ✅ | **El que cubre el resto**: 40 tools (gradebook, grupos, calendario) **+ `ws_raw`** para lo que falte |
+| **Moodle** | GPL-3.0+ | El LMS, **sin modificar** — todo entra por Web Services con token |
+| `MathTutorBench` / `pedagogy-benchmark` | MIT | **El *eval* pedagógico**, para medir la calidad de la devolución (gap 1, P10) |
+| `learnmcp-xapi` + **lrsql** | permisivas | **La evidencia append-only** de cada devolución escrita |
+
+**Wiring, y la compuerta es el punto del patrón:**
+
+```
+[Docente] ──── revisa y firma ────┐
+                                  │  (nada se escribe sin este paso)
+[Agente] ──MCP──▶ moodle-mcp-server ──▶ Moodle Web Services ──▶ nota + comentario
+   │                                         (LMS sin modificar)
+   ├──MCP──▶ moodle-mcp (40 tools) ──▶ gradebook / grupos / calendario
+   ├──▶ eval pedagógico (MathTutorBench) ──▶ puntaje de la devolución, antes de mostrarla
+   └──MCP──▶ learnmcp-xapi ──▶ lrsql  ──▶ statement por cada escritura (quién, qué, cuándo)
+```
+
+🔴 **La razón regulatoria por la que la compuerta no es opcional ni es un detalle de UX.** **Oklahoma y Maryland
+prohíben que la AI tome decisiones de alto impacto sobre un alumno**, y una nota lo es. El patrón **no es «la AI
+corrige»**: es **«la AI instruye el expediente y la persona firma»** —exactamente el encuadre que el bloque de North
+America viene sosteniendo— y el `provide_*_feedback` es **el punto donde se inserta la firma**. En **North America**
+eso lo hace vendible; en **APAC** la compuerta **ya es política pública** (plataforma estatal + supervisión docente), así
+que no hay que argumentarla, hay que instrumentarla.
+
+**Estimación: 4–6 semanas.** ⚠️ **Lo que hay que decirle al cliente sin maquillar:** `peancor/moodle-mcp-server` tiene
+**10 commits** y 8 tools — **es el punto de partida del último tramo, no un sistema de corrección**. El trabajo real
+del proyecto es la compuerta, el *eval* y la evidencia; el conector se endurece, no se adopta tal cual.
+
+## P55 — El conector MCP de Open edX, que es el único que de verdad no existe (pase 27)
+
+**Reemplaza a P51**, cuyo premisa era falsa (ver la corrección al final de este archivo). **Acá la ausencia está
+medida y es real:** búsqueda en modo extendido, **ningún conector MCP para Open edX** (**gap 48**).
+
+**Por qué es el patrón de mayor valor comercial de esta KB en este momento:**
+
+1. **Es el LMS de la huella pública grande** — los programas nacionales de **LATAM e India** corren sobre Open edX.
+2. **Es la región de menor presupuesto.** En LATAM, **8 % de instituciones tiene presupuesto dedicado a AI** y
+   **73,5 % ya enseña con AI**: el entregable tiene que correr **sobre lo que ya está pagado**, y eso es Open edX.
+3. **La arquitectura está resuelta dos veces** (Canvas y Moodle): no hay que diseñar, hay que portar.
+4. **El cliente ya llega con telemetría impuesta:** si corre Open edX con analítica, corre **Aspects → Ralph sobre
+   ClickHouse sin haberlo elegido** (pase 22). El conector es la puerta que falta sobre un stack ya decidido.
+
+**La decisión de diseño a portar, que es lo que hace esto barato — de `MarcosNahuel/moodle-mcp`:**
+
+| Decisión | Por qué importa en Open edX |
+|---|---|
+| **Fachadas de alto nivel, no un tool por endpoint** | 40 tools en 10 dominios en vez de cientos. Un catálogo volcado **no cabe en el contexto** y vuelve el conector inusable |
+| **`ws_raw` como escape hatch** | Lo que la fachada no cubra sigue alcanzable **sin esperar una release**. Es la válvula que evita el bloqueo |
+| **Descubrimiento de tools** (`search_canvas_tools` en `canvas-mcp`) | Con catálogo grande, el agente **busca** la herramienta |
+| **Separación alumno / docente / diseñador** | Open edX tiene roles por curso: el mapeo es directo |
+
+**Wiring:**
+
+```
+[Agente] ──MCP──▶ openedx-mcp (A CONSTRUIR — licencia a elegir, MIT recomendada)
+                       │
+                       ▼
+        APIs REST de Open edX  ◀── sin parchear la plataforma
+        (Course Blocks · Enrollment · Grades · Studio/CMS)
+                       │
+                       ▼
+        Aspects / Ralph / ClickHouse  ◀── la analítica que el cliente ya tiene
+```
+
+🔴 **Lo que hay que medir ANTES de cotizar, y es la acción 1 que el pase 27 deja escrita:** si Open edX expone una
+**superficie REST estable y versionada** equivalente a los Web Services de Moodle. **Si la hay, este patrón se cotiza a
+6–8 semanas. Si no la hay, ésa es la razón por la que nadie lo construyó** — y es un hallazgo igual de valioso que el
+conector. **No se promete el patrón antes de esa verificación.**
+
+## P56 — SCORM como formato de salida de la capa generativa: aterrizar en el LMS que el cliente ya tiene, sin integrarse con él (pase 27)
+
+**El problema que resuelve, y es el más común de todos.** Esta KB tiene una capa generativa fuerte —**OpenMAIC** (MIT,
+tema → clase interactiva multi-agente), **Educhain** (MIT, YouTube → curso)— y un cliente que dice *«muy bien, y cómo
+entra esto a mi LMS»*. La respuesta por integración es un conector por plataforma. **La respuesta por formato es un
+paquete que cualquier LMS importa desde hace veinte años.**
+
+| Pieza | Licencia | Rol |
+|---|---|---|
+| **OpenMAIC** / **Educhain** | MIT ✅ | Generan el contenido |
+| [`giacomomaria81/scorm-mcp-server`](https://github.com/giacomomaria81/scorm-mcp-server) | **MIT** ✅ | `scorm_package` (HTML → SCORM **2004 4.ª ed.** o **1.2**), `scorm_validate`, `scorm_selftest` |
+| **Moodle · Open edX · Canvas · cualquier LMS** | — | **Importan SCORM sin desarrollo** |
+
+**Wiring:**
+
+```
+[tema / PDF / video]
+      │
+      ▼
+OpenMAIC · Educhain ──▶ HTML del módulo
+      │
+      ▼
+scorm_package  ──▶  .zip SCORM (assets inlineados como data URI → 100 % offline,
+      │               runtime que reporta completion, progreso, tiempo y resume)
+      ▼
+scorm_validate ──▶  conformidad verificada ANTES de entregar
+      │
+      ▼
+[LMS del cliente]  ◀── importación estándar, cero integración
+```
+
+**Las tres razones por las que este patrón gana más seguido de lo que parece:**
+
+1. **Cero integración, cero permisos.** No hay token de API, no hay plugin, no hay revisión de seguridad del LMS. Es el
+   camino más corto del laboratorio al aula.
+2. 🔴 **El `resume` y el reporte de progreso vienen puestos.** El paquete reporta *completion*, progreso y tiempo — es
+   decir **produce la telemetría mínima** sin que haya que montar un LRS en la primera etapa.
+3. **Offline de verdad.** Al inlinear cada asset como data URI, el módulo corre sin red. Conecta directo con
+   **Project NOMAD** (Apache-2.0, servidor de conocimiento offline) y con los despliegues de baja conectividad — que es
+   buena parte de la huella educativa pública de **LATAM** y **APAC**.
+
+**Estimación: 2–3 semanas** para el primer módulo validado de punta a punta. ⚠️ **El límite a declarar:** SCORM
+**no lleva la conversación de vuelta** — es contenido empaquetado, no un tutor en vivo. Para interacción con el alumno
+hace falta el conector del LMS (**P54**, **P55**) o xAPI. **SCORM es la vía de entrada, no el destino.**
+
+## P57 — Evidencia de competencia por MCP, cotizada sobre la superficie que CaSS realmente expone (pase 27)
+
+**Refina P50** con la medición por adaptador del pase 27, que es lo que separa una propuesta cotizable de una promesa.
+
+**Lo que SÍ entra por MCP en `cassproject/CASS`** (Apache-2.0, medido por anotación, **2 canales**):
+
+| Tool | Operación | Uso |
+|---|---|---|
+| `get_learner_profile` | `GET /api/profile/latest` | Leer el perfil de competencia computado |
+| **`record_evidence`** | `POST /api/xapi/statement` | **Escribir evidencia — un statement por llamada** |
+| `search_data` · `get_object` · `save_object` | CRUD JSON-LD | Marcos y objetos |
+| `server_status` | `GET /api/ping` | Salud |
+
+🔴 **Lo que NO entra, y hay que decirlo en la propuesta porque está excluido a propósito:**
+
+| Capa | Operaciones ocultas | Consecuencia de cotización |
+|---|---|---|
+| **CASE** (`caseAdapter` + `caseIngest`) | **13** | **Autoría de marcos de competencia: por REST, fuera de MCP** |
+| **CEASN** | 6 | Fuera de MCP |
+| **Open Badges** | **5** | 🔴 **Emisión de insignias: fuera de MCP.** Y el adaptador es **OB 2.0** (`w3id.org/openbadges/v2`), **no 3.0** |
+| **Bulk xAPI** (`POST /api/xapi/statements`) | — | 🔴 **Ingestión masiva de telemetría NO entra por MCP.** Un statement por llamada |
+
+**Las frases que se pueden decir y las que no.** ✅ *«El perfil de competencia se lee por MCP»*, *«la evidencia se
+registra por MCP, de a un statement»*. 🔴 *«Emitimos insignias por MCP»*, *«autoramos el marco por MCP»*, *«ingestamos
+la telemetría histórica por MCP»* — **las tres son falsas**. Y si el cliente pide **OB 3.0 / W3C VC**, **CaSS no es la
+pieza que las emite.**
+
+**Checklist de despliegue — y el primer ítem es el que hace fallar esto en silencio:**
+
+1. 🔴 **Verificar `CASS_LOOPBACK` antes que nada.** El adaptador pide el spec por loopback
+   (`fetch(CASS_LOOPBACK + '/swagger.json')`, default `http://localhost/api/`, **puerto 80**). Si ese `fetch` falla,
+   **hace `return` y la ruta `/api/mcp` no se monta — con el servidor arrancando normalmente.** El síntoma es *«no veo
+   herramientas»*, no *«no arranca»*. Con proxy, puerto no estándar o HTTPS mal resuelto, **la superficie de agente
+   desaparece sin error visible**.
+2. Verificar que `DISABLED_ADAPTERS` **no** contenga `mcp`.
+3. Elasticsearch en `:9200` — el *probe* sólo pide `GET /` y salud **`yellow`/`green`**.
+4. `initialize` + `tools/list` contra **`POST /api/mcp`** y **comparar con las 6 declaradas**.
+
+⚠️ **El asterisco que este patrón todavía lleva, dicho con precisión:** las 6 tools están confirmadas **por
+declaración en el código, por dos métodos independientes** (ejecución del generador en el pase 26, conteo estático de
+anotaciones en el pase 27) — **no por invocación**. Nadie hizo el `tools/list` real. **Alcanza para cotizar el catálogo
+y el alcance; no alcanza para prometer latencia, forma de respuesta ni comportamiento de sesión.** Ver el **gap 40**.

@@ -9,6 +9,59 @@ updated: 2026-10-01
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 > No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
 
+## 2026-10-01 (pase 27) — el eje conector rinde por tercera vez, y lo que devuelve es una corrección: el conector MCP de Moodle **sí existe, es MIT y escribe notas**, y el hueco real se corre a Open edX
+
+**5 repos verificados de primera mano, 4 nuevos para esta KB, 1 inexistente.** Este pase no agrega una capa: **corrige
+la premisa del pase anterior.** El **gap 43** y el patrón **P51** del pase 26 se construyeron sobre la afirmación *«el
+único conector MCP de Moodle es `csmediapro/moodle-mcp-server`, AGPL-3.0, 0 ★, 10 tools sólo de lectura»*. **Es falsa.**
+Hay al menos **dos conectores MIT** que el pase 26 no vio, y uno de ellos **escribe notas y devoluciones**.
+
+| Repo | Licencia | ★ | Forks | Commits | Lenguaje | Qué expone | Estado |
+|------|----------|---|-------|---------|----------|------------|--------|
+| [`peancor/moodle-mcp-server`](https://github.com/peancor/moodle-mcp-server) | **MIT** ✅ | 43 | 13 | 10 | TypeScript | **8 tools, y cuatro son de escritura**: `get_courses`, `list_students`, `get_assignments`, `get_student_submissions`, **`provide_assignment_feedback`**, `get_quizzes`, `get_quiz_attempts`, **`provide_quiz_feedback`** | **El más traccionado de la capa.** Es el primer artefacto permisivo de esta KB que **pone nota y devolución dentro de un LMS de producción** |
+| [`MarcosNahuel/moodle-mcp`](https://github.com/MarcosNahuel/moodle-mcp) | **MIT** ✅ | 1 | 1 | 59 | TypeScript | **40 tools** en 10 dominios (Curso, Secciones, Contenido, Evaluación, Alumnos, Gradebook, Comunicación, Calendario, Badges) **+ `ws_raw`**, escape hatch a Web Services crudo | v0.5.2; el README declara **«~80 % operable desde un agente LLM»** y deja salvedades en subida de archivos y creación de secciones. **Pre-producción, no MVP** |
+| [`giacomomaria81/scorm-mcp-server`](https://github.com/giacomomaria81/scorm-mcp-server) | **MIT** ✅ | 6 | 0 | 11 | TypeScript | **3 tools**: `scorm_package`, `scorm_validate`, `scorm_selftest`. SCORM **2004 4.ª ed. y 1.2**, versión elegible por parámetro | Empaqueta HTML a SCORM **inlineando cada asset como data URI → 100 % offline**. Es el puente al LMS que ya está instalado |
+| [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | **MIT** ✅ | — | — | — | Python | Re-verificado. ⚠️ **El conteo de tools no es citable como cifra fija**: según versión se declaran **40+**, **80+** y **116** (una implementación TypeScript) | Ver la corrección de abajo: el pase 26 escribió «102–103 tools» |
+| `Snaw80/mcp-moodle` | — | — | — | — | — | — | 🔴 **No existe. HTTP 404.** Apareció en el resumen de búsqueda con licencia MIT y lista de tools. **Falso positivo del canal de búsqueda** |
+
+### 🔴 La corrección, dicha con precisión
+
+El pase 26 no inventó el dato: **leyó bien el repo que encontró**. `csmediapro/moodle-mcp-server` es efectivamente
+AGPL-3.0 con plugins premium. **El error fue el cuantificador** — *«el único»* — y tiene una causa de método que vale
+más que el hallazgo:
+
+> **Los directorios de MCP rankean por promoción, no por licencia ni por capacidad.** El conector que se vende a sí
+> mismo (dominio propio, paquete npm con nombre de producto, *premium plugins*) aparece primero. Los dos MIT tienen
+> **1 ★ y 43 ★ y ningún material de marketing**, y por eso no salieron. **Regla: cuando una búsqueda de directorio
+> devuelve un solo candidato y además es el único con sitio comercial, la capa no está medida — está mal muestreada.**
+
+Es hermana de la regla del pase 26 (*verificar que el término no esté capturado por otro mercado*) y de la del pase 6
+(*si un gap sobrevive, revisar el método antes que la conclusión*). **Tres pases consecutivos en que el error estuvo en
+el muestreo y no en la fuente.**
+
+### Lo que esto le hace al inventario
+
+- **El gap 6 (grading), abierto desde el pase 2, cambia de estado por primera vez.** El gap decía que la demanda de
+  corrección y devolución está probada y la oferta open source es nula. **`provide_assignment_feedback` y
+  `provide_quiz_feedback` son esa oferta, son MIT, y escriben contra Moodle sin modificar el LMS.** No cierra el gap
+  —8 tools no son un sistema de corrección— pero **deja de poder decirse que no hay nada permisivo del lado de la
+  escritura.** Ver **P54**.
+- **El hueco real se corre a Open edX.** Búsqueda extendida: **no hay conector MCP para Open edX.** Y es la ausencia
+  que más importa, porque Open edX es el LMS de los despliegues públicos grandes de LATAM e India. Ver el **gap 48** y
+  **P55**.
+- **Open Badges y Caliper siguen vacíos, y de Open Badges ahora hay medición de primera mano** (abajo, en la nota de
+  CaSS).
+
+### Lo que se buscó y salió vacío, escrito como tal
+
+| Estándar | Consulta | Resultado |
+|---|---|---|
+| **Open Badges** | `"MCP server" Open Badges Open Badges 3.0 github open source connector` | 🔴 **Nada del estándar.** Lo que aparece es `IssueBadge` (SaaS comercial de insignias) y `MCP Badges` (genera *badges* de README — **tercera colisión de término** de esta KB) |
+| **Caliper** | `"MCP server" Caliper Analytics IMS learning analytics open source` | 🔴 **Nada.** Consistente con que Caliper dejó de ser open source el **2023-06-17**. La ausencia está **escrita**, no inferida |
+| **Open edX** | `"Open edX" MCP server github repository connector tools Studio API` (modo extendido) | 🔴 **Nada.** Ver **gap 48** |
+
+---
+
 ## 2026-10-01 (pase 26) — se corta la racha de siete pases sin altas, y se corta en el conector: el gap 40 se cierra ejecutando y el lado LMS se cierra midiendo que no existe
 
 **La tabla principal pasa de 37 a 38 filas.** Entra `vishalsachdev/canvas-mcp` (**MIT**, 269 ★, 92 forks, 815 commits,

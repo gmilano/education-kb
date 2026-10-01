@@ -8,6 +8,92 @@ updated: 2026-10-01
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 
+## 2026-10-01 (pase 27) — la superficie MCP de CaSS medida por anotación: **6 expuestas y 55 ocultas sobre 61 operaciones**, y el «45» del pase 26 era aritmética, no conteo
+
+**Dos repos abiertos de primera mano sobre el árbol clonado** (`cassproject/CASS` v1.7.7, Apache-2.0) **y uno verificado
+por página** (`1EdTech/ltibootcamp`). Este pase **no pudo ejecutar el generador** (ver la nota de método) y entonces
+midió la misma cosa por el otro canal disponible: **contar las anotaciones en el código fuente**. El resultado
+**confirma las seis tools del pase 26 nombre por nombre** y **corrige el conteo de lo excluido**.
+
+### Las seis expuestas, confirmadas por segundo canal independiente
+
+`grep` de `x-mcp-tool-name` sobre `src/main` devuelve **exactamente seis nombres distintos**, y son los seis que el pase
+26 obtuvo corriendo `generateTools(spec)`: `server_status`, `search_data`, `get_object`, `save_object`,
+**`record_evidence`**, **`get_learner_profile`**. **Dos métodos independientes, el mismo resultado** — el cierre del
+gap 40 queda corroborado en lo que afirma sobre el catálogo.
+
+### La corrección: 55 ocultas, no 45
+
+El pase 26 escribió **«45 `x-mcp-ignore: true` puestos uno por uno»**. El conteo real de declaraciones es **55**
+(`grep -c "x-mcp-ignore: true"`, excluyendo la librería que *lee* la anotación). **El 45 era `51 − 6`** —paths del spec
+menos tools— y ahí está el error, que es conceptual y no de aritmética:
+
+> **`x-mcp-ignore` se declara por operación, no por path.** Un path con `GET`, `POST` y `DELETE` lleva **tres**
+> anotaciones. De ahí que **51 paths contengan 61 operaciones**: 6 expuestas + 55 ocultas. **Restar tools de paths no
+> da operaciones ocultas**, y la diferencia (10) es exactamente el número de paths multi-método.
+
+**Por qué importa más allá del número:** refuerza, no debilita, la lectura del pase 26. La curaduría es **más**
+deliberada de lo que se creía — **55 decisiones de exclusión escritas a mano**, no 45.
+
+### El desglose por adaptador, que es el dato nuevo y el que se cotiza
+
+| Adaptador / módulo | Expuestas | Ocultas | Qué significa |
+|---|---|---|---|
+| `skyRepo/data.js` | **3** | 3 | El CRUD JSON-LD, mitad expuesto |
+| `cartridge/adapter/xapi.js` | **1** | 4 | **Sólo `record_evidence`.** El *bulk* queda afuera (hallazgo del pase 26) |
+| `cartridge/adapter/profile.js` | **1** | 0 | `get_learner_profile`, íntegro |
+| `skyRepo/ping.js` | **1** | 0 | `server_status` |
+| `cartridge/adapter/caseAdapter.js` | 0 | **11** | 🔴 **CASE entero, fuera de MCP** |
+| `cartridge/adapter/ceasn.js` | 0 | **6** | 🔴 CEASN entero, fuera |
+| **`cartridge/adapter/openbadges.js`** | 0 | **5** | 🔴 **Open Badges entero, fuera** — ver abajo |
+| `skyId.js` · `util.js` | 0 | 4 · 4 | Identidad y utilidades |
+| `cartridge/adapter/mcp.js` | 0 | 3 | El propio adaptador no se expone |
+| `caseIngest.js` · `asn.js` · `pna.js` · `search.js` | 0 | 2 cada uno | Ingesta, ASN, PNA, búsqueda |
+| `multiput` · `multiget` · `multidelete` · `admin` · `ollama` · `scd` · `jsonLd` | 0 | 1 cada uno | Lotes, admin, Ollama, SCD, JSON-LD |
+| **TOTAL** | **6** | **55** | **61 operaciones** |
+
+### 🔴 El hallazgo que responde la pregunta de Open Badges desde adentro
+
+La consigna del pase 26 pedía buscar `MCP server` + **Open Badges**. La búsqueda web no devolvió nada del estándar
+(arriba). **Pero el árbol de CaSS tiene `cartridge/adapter/openbadges.js`, y sus cinco operaciones están todas
+`x-mcp-ignore: true`.** Dos cosas, las dos citables:
+
+1. **La implementación más relevante del estándar en esta KB tiene el adaptador y lo excluyó a propósito de su
+   superficie de agente.** La respuesta a *«¿hay conector MCP de Open Badges?»* no es sólo «no se encontró»: es **«la
+   pieza existe y la puerta está cerrada por decisión de diseño»**. Es una ausencia **medida**, no inferida.
+2. **El adaptador está anclado a `https://w3id.org/openbadges/v2` — Open Badges 2.0, no 3.0.** Aparece en cuatro
+   `@context` del archivo. Importa para credenciales verificables: **el stack de OB 3.0 / W3C VC no es lo que CaSS
+   emite**, y un entregable que lo prometa sobre CaSS está prometiendo de más.
+
+### La trampa de despliegue que hay que poner en el checklist
+
+Leyendo `cartridge/adapter/mcp.js` de primera mano aparece algo que ninguna pasada registró y que **decide si el
+cliente tiene superficie MCP o no**:
+
+- El adaptador **no lee el spec del disco: lo busca por loopback** — `fetch(CASS_LOOPBACK + '/swagger.json')`, default
+  **`http://localhost/api/`** (puerto **80**).
+- Si ese `fetch` falla o no devuelve `ok`, el adaptador **loguea el error y hace `return`**. 🔴 **La ruta `/api/mcp`
+  nunca se monta** — y el servidor **arranca normalmente**. El síntoma es *«el MCP no existe»*, no *«el servidor no
+  levanta»*.
+- Se apaga además por `DISABLED_ADAPTERS` (clave `mcp`).
+
+**Consecuencia:** en un despliegue con proxy, puerto no estándar o HTTPS mal resuelto, **la superficie de agente
+desaparece en silencio**. Va a **P57** como ítem de verificación, y es lo primero que hay que mirar si un cliente
+reporta que no ve tools.
+
+### `1EdTech/ltibootcamp` — y con esto el gap 42 cierra por agotamiento
+
+| Repo | Licencia | ★ | Forks | Commits | Qué es |
+|------|----------|---|-------|---------|--------|
+| [`1EdTech/ltibootcamp`](https://github.com/1EdTech/ltibootcamp) | 🚫 **ninguna declarada en la página** | 127 | 19 | 47 | **Colección de enlaces, no implementación.** El README dice literalmente que *«esta página junta links que se relacionan con entender e implementar Tools y Platforms LTI»* |
+
+Era la última candidata sin mirar del **gap 42**. **No es la implementación de referencia en Ruby on Rails**: es
+material de referencia, y **sin licencia declarada**. La implementación de referencia real de 1EdTech (platform *y*
+tool, con código Ruby) está **en el repositorio de Contributing Members** — es decir, **detrás de la membresía**.
+Ver el **gap 42**, ahora cerrado.
+
+---
+
 ## 2026-10-01 (pase 26) — el eje conector rinde por segunda vez: el conector MIT de 102 tools, la biblioteca permisiva que veinticinco pasadas no buscaron, y dos capas que se buscaron y salieron vacías
 
 **7 repos verificados de primera mano, 6 nuevos para esta KB** (el re-verificado es `learnmcp-xapi`). Uno entra en la

@@ -7,6 +7,17 @@ updated: 2026-10-01
 # 📡 Tendencias — education
 
 > Ventana de investigación: septiembre 2026. Verificado 2026-09-30; el pase 11, el 2026-10-01.
+> **Pase 27 del 2026-10-01:** el eje conector rinde por **tercera vez**, y esta vez lo que devuelve es una
+> **corrección del pase anterior**: el **gap 43** afirmaba que el único conector MCP de Moodle era AGPL-3.0 con
+> las partes útiles cerradas, y **es falso** — hay **dos MIT**, y uno **escribe notas y devoluciones**
+> (`provide_assignment_feedback`), que es la primera pieza permisiva que toca el **gap 6** desde el pase 2
+> (tendencias **69** y **70**). El hueco real **se corre a Open edX**, el único LMS grande sin puerta de agente
+> (tendencia **71**, gap **48**). La superficie MCP de CaSS queda medida por anotación —**6 expuestas, 55 ocultas,
+> 61 operaciones**— lo que **corrige el «45» del pase 26** (era `51 − 6`, y `x-mcp-ignore` se declara por
+> operación) y revela que **CASE, CEASN y Open Badges están enteros fuera de MCP** (tendencia **72**). El
+> **gap 42 cierra** por agotamiento y se abre el **gap 49**, que es de método: los directorios de MCP rankean por
+> promoción. 🔴 **El *handshake* MCP sigue sin hacerse y el bloqueo cambió de naturaleza** — ya no es Docker, es
+> que este entorno no permite instalar dependencias de terceros: ver la nota de método del pase 27.
 > **Pase 26:** se ejecuta la consigna del pase 25 (**cambiar el eje al conector**) y rinde en su primer uso por segunda
 > vez consecutiva: **el gap 40 se cierra ejecutando** —el cartucho MCP de CaSS genera **6 tools y 3 resource templates**
 > medidos con el generador del propio proyecto, y dos de ellos (`record_evidence`, `get_learner_profile`) son
@@ -1942,7 +1953,7 @@ Huecos confirmados tras buscar, no ausencias por no haber buscado. Un gap inform
     **La acción escrita, para el pase que la ejecute:** las dos puntas son MIT y Apache-2.0, así que la contribución puede ir **hacia arriba** —a repos de un regulador nacional y de ETH Zürich—, lo que convierte un entregable de cliente en posicionamiento público. ⚠️ **Y los cuatro límites que no hay que cruzar:** ninguna de estas herramientas **certifica** (`aiverify` declara por escrito que no garantiza ausencia de riesgo o sesgo); el marco de Singapur es **voluntario** y el europeo no; **no hay crosswalk directo de AI Verify al EU AI Act** (sólo a **NIST AI RMF**, oct-2023, y a **ISO/IEC 42001:2023**, jun-2024 — al AI Act se llega indirecto por ISO 42001); y `aiverify` evalúa **modelos supervisados tabulares y de imagen, no agentes**.
 
 
-40. ~~**El cartucho MCP de CaSS está declarado, no medido.**~~ → 🟢 **GAP CERRADO EN EL PASE 26 DEL 2026-10-01, y cerrado ejecutando.** El pase 25 lo abrió porque toda la tendencia 65 y el paso 4 de **P48** descansaban en una línea del README de CaSS entre sus *pluggable cartridges*. **Este pase corrió el generador.** No se levantó el servidor —necesita Elasticsearch y en este entorno **no hay demonio de Docker**: el CLI está, `/var/run/docker.sock` no existe— sino por donde la arquitectura del proyecto lo permite: las tools se generan con `generateTools(spec)` sobre el OpenAPI que `swagger-jsdoc` arma desde los comentarios del código, **y eso es puro y corre sin base de datos**. Se replicaron las opciones exactas de `src/main/server.js`, se validó el spec con el mismo `openapi-schema-validator` del arranque y se ejecutó el generador real del repo.
+40. ~~**El cartucho MCP de CaSS está declarado, no medido.**~~ → 🟢 **GAP CERRADO EN EL PASE 26 DEL 2026-10-01, y cerrado ejecutando.** El pase 25 lo abrió porque toda la tendencia 65 y el paso 4 de **P48** descansaban en una línea del README de CaSS entre sus *pluggable cartridges*. **Este pase corrió el generador.** No se levantó el servidor —necesita Elasticsearch y en este entorno **no hay demonio de Docker**: el CLI está, `/var/run/docker.sock` no existe— sino por donde la arquitectura del proyecto lo permite: las tools se generan con `generateTools(spec)` sobre el OpenAPI que `swagger-jsdoc` arma desde los comentarios del código, **y eso es puro y corre sin base de datos**. Se replicaron las opciones exactas de `src/main/server.js`, se validó el spec con el mismo `openapi-schema-validator` del arranque y se ejecutó el generador real del repo. 🔴 **REABIERTO EN SU TRAMO DE INVOCACIÓN EN EL PASE 27 DEL 2026-10-01.** Lo que está cerrado es el **catálogo**, y ahora por **dos canales independientes**: el pase 26 corrió `generateTools(spec)`; el pase 27 contó las anotaciones `x-mcp-tool-name` en el árbol clonado y obtuvo **los mismos seis nombres**. Lo que sigue **sin medir es la invocación**: nadie hizo `initialize` + `tools/list` contra **`POST /api/mcp`**. El bloqueo **cambió de naturaleza** y hay que decirlo: el pase 26 no pudo por **falta de demonio de Docker**; el pase 27 localizó el camino (el *probe* de `util.js` sólo pide `GET /` y salud `yellow`/`green`, y `server.js:452` carga los cartuchos en el evento `listening`, **antes** de que termine la migración) pero **no pudo instalar el árbol de dependencias de un repositorio de terceros en este entorno**, y `artifacts.elastic.co` responde **403** por el proxy. **No es un límite de red ni de infraestructura: es del entorno de ejecución**, y se levanta corriendo el pase donde esté permitido instalar y ejecutar código de terceros. **Consecuencia para cotizar:** el catálogo se cita; la latencia, la forma de respuesta y el comportamiento de sesión **no**.
 
     **Medido: 51 paths, 0 errores de validación, 6 tools, 3 resource templates.** `server_status` (`GET /api/ping`), `search_data` (`GET /api/data/`), `get_object` (`GET /api/data/{uid}`), `save_object` (`POST /api/data/{uid}`), **`record_evidence`** (`POST /api/xapi/statement`) y **`get_learner_profile`** (`GET /api/profile/latest`). Resource templates: `CaSS JSON-LD Object`, `… (Versioned)`, `… by UID`. Tabla completa con parámetros y `annotations` en `agents/top.md`.
 
@@ -1950,13 +1961,13 @@ Huecos confirmados tras buscar, no ausencias por no haber buscado. Un gap inform
 
     ⚠️ **Lo que esta medición no es, dicho con precisión:** se midió la **generación** de las tools, determinista y pura sobre el spec, **no su invocación**, que necesita Elasticsearch. Las 13 aserciones de `5.mcp.json-schema-to-zod.test.js` pasan **13/13**; `5.mcp.openapi-to-tools.test.js` **no corre tal cual** porque su `before` hace `fetch` a `localhost:80/api/swagger.json`. El conteo de **6** coincide con lo que ese test afirma literalmente (*«generates exactly 6 tools from the current spec»*) y con las **6** anotaciones `x-mcp-tool-name` del árbol: **tres fuentes independientes dan 6.** El *handshake* MCP real queda como acción del pase 27.
 
-41. **Por MCP, CaSS escribe un statement por llamada: la superficie está curada y el *bulk* queda afuera a propósito** *(agregado en el pase 26 del 2026-10-01)*. De los **51 paths** del spec el cartucho expone **6**, y no por inmadurez: hay **45 `x-mcp-ignore: true`** puestos **uno por uno** en el código, con `x-mcp-tool-name` y `x-mcp-description` escritos a mano en los seis que salen. Lo excluido incluye **`POST /api/xapi/statements`** (el *bulk* del LRS), `GET /api/xapi/endpoint`, el `multiPut`/`multiGet`/`multiDelete` de skyRepo y **todo `skyId`**. **Consecuencia de cotización, y es la que importa:** quien presupueste **ingestión masiva de telemetría por la puerta MCP** está cotizando mal — por ahí entra **un statement por llamada**. Para lotes hay que ir a la API REST por fuera de MCP. **No es un defecto: es una decisión de diseño que conviene citar como tal**, porque muestra que el proyecto pensó la superficie de agente en vez de volcar su API.
+41. **Por MCP, CaSS escribe un statement por llamada: la superficie está curada y el *bulk* queda afuera a propósito** *(agregado en el pase 26 del 2026-10-01)*. De los **51 paths** del spec el cartucho expone **6**, y no por inmadurez: hay **45 `x-mcp-ignore: true`** puestos **uno por uno** en el código, con `x-mcp-tool-name` y `x-mcp-description` escritos a mano en los seis que salen. Lo excluido incluye **`POST /api/xapi/statements`** (el *bulk* del LRS), `GET /api/xapi/endpoint`, el `multiPut`/`multiGet`/`multiDelete` de skyRepo y **todo `skyId`**. **Consecuencia de cotización, y es la que importa:** quien presupueste **ingestión masiva de telemetría por la puerta MCP** está cotizando mal — por ahí entra **un statement por llamada**. Para lotes hay que ir a la API REST por fuera de MCP. **No es un defecto: es una decisión de diseño que conviene citar como tal**, porque muestra que el proyecto pensó la superficie de agente en vez de volcar su API. 🔴 **CORREGIDO EN EL PASE 27 DEL 2026-10-01: las ocultas son 55, no 45, y el error es conceptual.** El 45 era **`51 paths − 6 tools`** —aritmética, no conteo—, y **`x-mcp-ignore` se declara por operación, no por path**: un path con `GET`, `POST` y `DELETE` lleva **tres** anotaciones. El conteo real de `x-mcp-ignore: true` sobre `src/main` (excluyendo la librería que *lee* la anotación) da **55**, de modo que los **51 paths contienen 61 operaciones**: **6 expuestas + 55 ocultas**. **La corrección refuerza la lectura de este gap en vez de debilitarla:** son **55 decisiones de exclusión escritas a mano**. El desglose por adaptador —y el hallazgo de que **CASE (13), CEASN (6) y Open Badges (5) están enteros fuera de MCP**— está en la tendencia **72**. **Todo lo que este gap afirma sobre el *bulk* de xAPI sigue en pie:** `record_evidence` es la única puerta de evidencia y entra **un statement por llamada**.
 
-42. **No existe implementación *platform-side* (lado LMS) de LTI 1.3 que sea permisiva *y* productiva** *(agregado en el pase 26 del 2026-10-01, medido sobre seis candidatos)*. El pase 24 lo sospechó con dos piezas; este pase lo midió con seis. **`ltijs` (Apache-2.0, 5.9.9) exporta `[ 'Provider' ]` y nada más** —sin clase de *platform*— y su `package.json` dice *«turn your web application into a LTI 1.3 **Learning Tool**»*: **tool-side, medido, no leído**. `macewan-cs/lti` (**MIT**, 8 ★) resultó **tool-side** también, contra lo que sugería el resumen de búsqueda. Las dos permisivas del lado plataforma se autodenominan **«Sample»** (`LtiLibrary/LtiAdvantagePlatform`, MIT) y **«example»** (`Citolab/lti-1p3-platform-example`, **GPL-3.0+**). La única **completa y certificada por 1EdTech** es `oat-sa/lib-lti1p3-core`, **GPL-2.0**. Y `UOC/java-lti-1.3-platform` **no declara licencia** y habla en futuro.
+42. **No existe implementación *platform-side* (lado LMS) de LTI 1.3 que sea permisiva *y* productiva** *(agregado en el pase 26 del 2026-10-01, medido sobre seis candidatos)*. El pase 24 lo sospechó con dos piezas; este pase lo midió con seis. **`ltijs` (Apache-2.0, 5.9.9) exporta `[ 'Provider' ]` y nada más** —sin clase de *platform*— y su `package.json` dice *«turn your web application into a LTI 1.3 **Learning Tool**»*: **tool-side, medido, no leído**. `macewan-cs/lti` (**MIT**, 8 ★) resultó **tool-side** también, contra lo que sugería el resumen de búsqueda. Las dos permisivas del lado plataforma se autodenominan **«Sample»** (`LtiLibrary/LtiAdvantagePlatform`, MIT) y **«example»** (`Citolab/lti-1p3-platform-example`, **GPL-3.0+**). La única **completa y certificada por 1EdTech** es `oat-sa/lib-lti1p3-core`, **GPL-2.0**. Y `UOC/java-lti-1.3-platform` **no declara licencia** y habla en futuro. → 🟢 **GAP CERRADO POR AGOTAMIENTO EN EL PASE 27 DEL 2026-10-01.** Se verificó la última candidata sin mirar, la **implementación de referencia de 1EdTech en Ruby on Rails**, y **no es una implementación**: [`1EdTech/ltibootcamp`](https://github.com/1EdTech/ltibootcamp) (**127 ★, 19 forks, 47 commits**) es una **colección de enlaces** —su README dice que *«junta links que se relacionan con entender e implementar Tools y Platforms LTI»*— y **no declara licencia en la página**. El código Ruby de la RI real de 1EdTech (platform *y* tool) está **en el repositorio de Contributing Members**, es decir **detrás de la membresía**. Con eso el *«no existe permisivo y productivo del lado plataforma»* pasa de **medido sobre seis** a **cerrado sobre siete, incluida la referencia oficial**, y habilita decirle a un cliente **«el lado plataforma se presupuesta como desarrollo»** con la evidencia completa sobre la mesa.
 
     **La salida para un engagement, y son tres, ninguna gratis:** aceptar **GPL-2.0** (TAO, certificada); integrarse **como *tool*** contra el LMS que el cliente ya tiene —donde esta KB sí es fuerte: `ltijs` + `canvas-mcp`—; o presupuestar el lado plataforma **como desarrollo, no como integración**. ⛔ **La verificación del *launch* OIDC de punta a punta sigue pendiente y está bloqueada por el entorno:** `LtiAdvantagePlatform` es **ASP.NET Core 10**, acá **no hay `dotnet`** y no se puede instalar — `https://dot.net/v1/dotnet-install.sh` responde **`CONNECT tunnel failed, 403`** por el proxy.
 
-43. **Moodle es el LMS más instalado del planeta y su único conector MCP es AGPL-3.0 con las partes útiles cerradas** *(agregado en el pase 26 del 2026-10-01)*. `csmediapro/moodle-mcp-server` es **AGPL-3.0**, **0 ★, 0 forks**, 57 commits. Sus **10 tools abiertos son sólo de lectura** (`list_courses`, `get_course`, `list_course_users`, `list_assignments`, `list_categories`, `get_site_info`, `get_user`, `list_user_courses`, `search_users`, `search_courses_by_name`) y las capas que un cliente pediría —*Advanced Reporting*, *User Analytics*, *User Directory*, *Compliance Pack*— son **plugins premium que se venden aparte**. 🔴 **El resumen de búsqueda lo presentaba como «open-source, plugin-extensible, LLM-agnostic» con instalación por `npx`:** la licencia y el modelo comercial sólo aparecen leyendo la página. **Es hueco de oportunidad, no sólo de inventario** — existe `canvas-mcp` (MIT, 269 ★, 102+ tools) para Canvas y **nada equivalente para Moodle**. Ver el patrón **P51**.
+43. ~~**Moodle es el LMS más instalado del planeta y su único conector MCP es AGPL-3.0 con las partes útiles cerradas**~~ → 🔴 **GAP RETIRADO EN EL PASE 27 DEL 2026-10-01: LA AFIRMACIÓN ERA FALSA.** No es que el gap se haya cerrado construyendo nada — **el cuantificador estaba mal y una sola búsqueda lo desmintió**. Existen al menos **tres** conectores MCP de Moodle, y **dos son MIT**: [`peancor/moodle-mcp-server`](https://github.com/peancor/moodle-mcp-server) (**MIT**, **43 ★, 13 forks**, 10 commits, TypeScript, **8 tools de las cuales cuatro escriben** — incluidas **`provide_assignment_feedback`** y **`provide_quiz_feedback`**) y [`MarcosNahuel/moodle-mcp`](https://github.com/MarcosNahuel/moodle-mcp) (**MIT**, 1 ★, 1 fork, 59 commits, TypeScript, **40 tools** en 10 dominios **+ `ws_raw`**, v0.5.2, *«~80 % operable desde un agente LLM»*). **Las dos afirmaciones subsidiarias también caen:** que *«los tools abiertos son sólo de lectura»* (hay cuatro de escritura) y que *«no hay nada equivalente a `canvas-mcp` para Moodle»* (40 tools es el orden del escalón bajo de `canvas-mcp`). **Lo que sigue siendo cierto** es lo que el pase 26 leyó bien del repo que sí encontró: `csmediapro/moodle-mcp-server` **es** AGPL-3.0 con capas de pago. **El error fue de muestreo, no de lectura**, y está declarado como **gap 49**: los directorios de MCP rankean por promoción. 🔴 **El patrón P51 se construyó sobre esta premisa y quedó corregido en el mismo pase.** El hueco real del eje conector **se corre a Open edX** (**gap 48**). Ver las tendencias **69**, **70** y **71** y los patrones **P54** y **P55**. El texto original se conserva arriba tachado, con su registro de origen: *(agregado en el pase 26 del 2026-10-01)*.
 
 44. **El eje conector tiene dos estándares vacíos y uno con colisión de término** *(agregado en el pase 26 del 2026-10-01)*. Cruzando `MCP server` con cada estándar inventariado: **xAPI** ✅ (`learnmcp-xapi`, ya estaba), **LTI** ✅ (vía conectores de LMS), **OneRoster** 🔴 **nada**, **QTI** 🔴 nada verificable —apareció un *Question Bank MCP Server* listado en Glama **sin repo de GitHub localizable, y no se registra como hallazgo**—, **CASE** 🔴 nada **y con el término capturado**: la búsqueda se llena de *certificaciones* de MCP (MCPA de Linux Foundation, certs de Claude). **Es la segunda colisión de término que mide esta KB**, después de `education` = «cursos sobre AI» (pase 23). **Regla de método que deja: antes de concluir que una capa está vacía, verificar que la palabra no esté capturada por otro mercado.** Con `education` costó siete pases descubrirlo.
 
@@ -1965,6 +1976,10 @@ Huecos confirmados tras buscar, no ausencias por no haber buscado. Un gap inform
 46. **No hay plataforma de admisiones open source permisiva y productiva** *(agregado en el pase 26 del 2026-10-01)*. Lo que sirve es copyleft y ya estaba en esta KB: **OpenEduCat** (**LGPL-3.0**, pipeline completo de consulta → solicitud → verificación documental → entrevista → oferta → alta en SIS, sin fee por postulante) y `OS4ED/openSIS-Classic` (**GPL**). Lo único permisivo verificado es `CollinsTatang/admissionSystem` (**MIT**, **4 commits**, 6 ★, 0 forks, PHP/MySQL): no es base de producción, y el conteo de commits lo dice solo. ⚠️ **Y un no-hallazgo declarado:** el barrido ofreció `WalaEddine01/OrgSchool-portfolio-project` como *«Open Source Software about student Management System»* y **verificado da 404** — **no se registra**, porque un 404 no es un hallazgo. **La salida practicable es LGPL-3.0 sobre OpenEduCat**, y para un módulo Odoo es manejable porque **la LGPL admite el módulo propietario al lado**; la alternativa es desarrollo.
 
 47. **La capa de *student success* open source es de 2013–2014, es GPL, no vive en GitHub — y es la que el regulador aprieta más** *(agregado en el pase 26 del 2026-10-01)*. **FlightPath Academics** (asesoría académica, *degree audit*, ***early alerts***, *Academic Priority*) es **PHP, GPLv3+**, liberada el **2013-03-13** por la University of Louisiana at Monroe, y **no tiene repositorio en GitHub** (el 404 de `Cerebro-Tech/FlightPath` es de WebFetch). **Student Success Plan** (Unicon) y el *dashboard* de **Marist College** tienen referencias verificables sólo de **2013–2014**. 🔴 **Es la capa más vieja y peor abastecida de las veintiséis pasadas** — y simultáneamente la que concentra más presión regulatoria, porque *predecir qué alumno va a fracasar* es exactamente la decisión automatizada sobre el alumno que el **Annex III** clasifica de alto riesgo y que **Oklahoma y Maryland** prohíben tomar de forma autónoma. **Hueco de mercado grande y riesgo alto en la misma celda.** Ver la tendencia **68** y el patrón **P53**.
+
+48. 🔴 **Open edX es el LMS grande sin conector MCP, y es el de la huella pública más grande** *(agregado en el pase 27 del 2026-10-01)*. Búsqueda **en modo extendido** de `"Open edX" MCP server github repository connector tools Studio API`: **nada**. Es el hueco que el **gap 43 creía tener en Moodle** y que resultó falso: Canvas tiene `vishalsachdev/canvas-mcp` (**MIT**), Moodle tiene **dos conectores MIT** (`peancor/moodle-mcp-server`, `MarcosNahuel/moodle-mcp`), SCORM tiene `giacomomaria81/scorm-mcp-server` (**MIT**) — **Open edX no tiene ninguno**. **Por qué es el mejor perfil de oportunidad de esta KB:** es el stack de los programas públicos grandes de **LATAM e India**, y esta KB ya tiene registrado que si el cliente corre Open edX con analítica **corre Aspects → Ralph sobre ClickHouse sin haberlo elegido** (pase 22) — o sea, llega con una configuración de telemetría impuesta y sin puerta de agente. Y es **barato**, porque la arquitectura está resuelta dos veces: `MarcosNahuel/moodle-mcp` publica la decisión a portar —**fachadas de alto nivel sobre la API, más un `ws_raw` de escape**, en vez de volcar cientos de endpoints. **Lo que falta medir antes de cotizar:** si Open edX expone una superficie REST estable y versionada equivalente a los Web Services de Moodle. Es la **acción 1** de este pase. Ver la tendencia **71** y el patrón **P55**.
+
+49. **Los directorios de MCP rankean por promoción, y esta KB midió tres capas con ese sesgo** *(agregado en el pase 27 del 2026-10-01)*. No es un gap de oferta: es un **gap de método**, y se declara porque ya produjo una conclusión falsa publicada. El **gap 43** afirmó *«el único conector MCP de Moodle»* tras consultar un directorio que devolvió **un** candidato — el único de los tres con **sitio comercial propio, paquete npm con nombre de producto y *premium plugins***. Los dos MIT, con **1 ★ y 43 ★ y cero marketing**, no aparecieron. 🔴 **Las capas que el pase 26 declaró vacías por el mismo canal y que por lo tanto están sin medir de verdad: `OneRoster`, `QTI` y `CASE`** (gap 44). **La regla:** cuando una búsqueda de directorio devuelve un único candidato y ese candidato es además el único con presencia comercial, **la capa no está medida — está mal muestreada**; hay que repreguntar al *host* del repositorio por patrón de nombre (`*-mcp`, `mcp-*`, `mcp-server` + estándar). Es la **acción 2** de este pase. Ver la tendencia **69**.
 
 ## 54. El almacén permisivo que esta KB recomienda sabe borrar al alumno desde antes de que esta KB existiera, y seis pasadas vendieron lo contrario por leer documentación en vez de código (agregado 2026-10-01, pase 21)
 
@@ -2670,6 +2685,200 @@ en esta industria, el abastecimiento open source y el riesgo regulatorio están 
 el regulador nombró de alto riesgo es, sistemáticamente, lo que el open source no construyó. Vale para *proctoring*
 (tendencia 64), para la capa predictiva (ésta) y para el modelado del alumno (gap 5). **Donde hay más riesgo hay menos
 pieza, y por eso hay más proyecto.**
+
+## 69. El «no existe» más citado de los últimos dos pases era un error de muestreo, y lo que existe escribe notas (agregado 2026-10-01, pase 27)
+
+El pase 26 cerró con una afirmación fuerte y muy accionable: *«Moodle es el LMS más instalado del planeta y su único
+conector MCP es AGPL-3.0 con las partes útiles cerradas»*. Sobre eso construyó el **gap 43** y el patrón **P51**, cuyo
+título es, literalmente, *«el conector MCP de Moodle que no existe»*. **Este pase la desmintió en una búsqueda.**
+
+| Lo que el pase 26 afirmó | Lo que está verificado ahora |
+|---|---|
+| *«El único conector MCP de Moodle»* | **Hay al menos tres.** Dos son **MIT** |
+| *«AGPL-3.0, partes útiles cerradas»* | Cierto **de `csmediapro`**, falso de la capa |
+| *«Los 10 tools abiertos son sólo de lectura»* | **`peancor/moodle-mcp-server` (MIT, 43 ★, 13 forks) tiene cuatro tools de escritura**, dos de ellas de **nota y devolución** |
+| *«Nada equivalente a `canvas-mcp` para Moodle»* | **`MarcosNahuel/moodle-mcp` (MIT) expone 40 tools** en 10 dominios **+ `ws_raw`** — el mismo orden de magnitud que el escalón bajo de `canvas-mcp` |
+
+**La causa, que es lo que hay que llevarse:** las tres veces se consultó un **directorio de MCP**, y los directorios
+**rankean por promoción**. `csmediapro` tiene sitio propio, paquete npm con nombre de producto y *premium plugins* —
+aparece primero. Los dos MIT tienen **1 ★ y 43 ★ y cero marketing**. 🔴 **Regla operativa nueva: si una búsqueda de
+directorio devuelve un único candidato y ese candidato es además el único con sitio comercial, la capa no está medida,
+está mal muestreada.** Hay que repreguntar por el *host* del repositorio y por patrón de nombre.
+
+Es el tercer pase consecutivo en que el error estuvo en el **muestreo** y no en la fuente: pase 25 (dos falsos
+negativos propios), pase 26 (el término `CASE` capturado por otro mercado), pase 27 (el directorio que rankea por
+promoción). **La KB está aprendiendo más de cómo busca que de lo que encuentra.**
+
+## 70. El gap 6 —corrección y devolución, abierto desde el pase 2— tiene por primera vez una pieza permisiva que escribe, y aterriza justo donde el regulador exige que firme una persona (agregado 2026-10-01, pase 27)
+
+Veinticinco pasadas sostuvieron el **gap 6** con la misma forma: *la demanda de corrección está probada —Singapur la
+construyó cerrada, tres de sus seis funciones del alumno son asistentes de devolución— y la oferta open source es
+nula*. **Este pase encuentra la primera excepción permisiva**, y es pequeña pero del lado correcto del verbo:
+
+`peancor/moodle-mcp-server` (**MIT**, 43 ★, 13 forks, 10 commits, TypeScript) expone ocho tools y **cuatro escriben**:
+
+- `get_student_submissions` → leer la entrega
+- **`provide_assignment_feedback`** → **poner nota y comentario en la tarea**
+- `get_quiz_attempts` → leer el intento
+- **`provide_quiz_feedback`** → **comentar el intento**
+
+**Por qué es la pieza que faltaba y no sólo un repo más.** La capa de corrección open source que esta KB venía
+inventariando era toda **lectura y análisis**: evaluaba, puntuaba, estimaba *mastery* — y después **el resultado no
+volvía al expediente del alumno**. El *«último tramo»* —escribir la nota en el LMS de producción— se cotizaba como
+desarrollo. **Ahora hay un artefacto MIT que lo hace sin tocar el LMS**, por Web Services.
+
+🔴 **Y encaja exactamente con la restricción regulatoria de North America, que es lo que lo hace vendible.** Oklahoma y
+Maryland **prohíben que la AI tome decisiones de alto impacto sobre un alumno**; la tendencia 26 y el bloque regional
+vienen diciendo que el entregable rentable es *«el sistema instruye el expediente y la persona firma»*. Una tool
+llamada `provide_assignment_feedback` **es precisamente el punto donde se mete la compuerta de aprobación humana**: el
+agente prepara, el docente confirma, la escritura queda registrada. **No cierra el gap 6** —ocho tools no son un
+sistema de corrección, y 10 commits no son una base de producción— pero **deja de ser verdad que no hay nada permisivo
+del lado de la escritura**. Ver **P54**.
+
+## 71. El hueco del eje conector no estaba en Moodle: está en Open edX, y es el único LMS grande sin puerta de agente (agregado 2026-10-01, pase 27)
+
+Con Moodle corregido, el mapa del eje conector por LMS queda así —y la asimetría es el hallazgo:
+
+| LMS | Licencia del LMS | Conector MCP | Licencia | Estado |
+|---|---|---|---|---|
+| **Canvas** | AGPL-3.0 | `vishalsachdev/canvas-mcp` | **MIT** ✅ | El más maduro de la capa. ⚠️ El conteo de tools **varía por versión** (40+, 80+, 116): **no es cifra citable** |
+| **Moodle** | GPL-3.0+ | `peancor/moodle-mcp-server` · `MarcosNahuel/moodle-mcp` | **MIT** ✅ ×2 | Existe, con escritura. Pre-producción |
+| **Moodle** | — | `csmediapro/moodle-mcp-server` | AGPL-3.0 | Núcleo abierto, capas útiles de pago |
+| 🔴 **Open edX** | **AGPL-3.0** | **ninguno** | — | **Búsqueda extendida: nada.** Ver **gap 48** |
+| **SCORM** (formato, no LMS) | — | `giacomomaria81/scorm-mcp-server` | **MIT** ✅ | 3 tools, offline. Ver **P56** |
+
+**Por qué la ausencia de Open edX importa más que la de Moodle que resultó falsa.** Open edX es la plataforma de los
+despliegues públicos grandes: es el stack sobre el que se montan los programas nacionales, y esta KB ya tiene
+registrado que **si el cliente corre Open edX con analítica, corre Aspects y por lo tanto Ralph sobre ClickHouse sin
+haberlo elegido**. Es decir: **el LMS con la huella institucional más grande en LATAM e India es el único sin puerta de
+agente**, y además el que llega con una configuración de telemetría impuesta por default. **Hueco de oferta y
+necesidad concreta en la misma celda** — que es el perfil de oportunidad más limpio que puede registrar esta KB.
+
+El dato adicional que lo hace barato: **la arquitectura ya está resuelta dos veces** (Canvas y Moodle), y
+`MarcosNahuel/moodle-mcp` publica la decisión de diseño que importa portar — **fachadas de alto nivel sobre Web
+Services, más un `ws_raw` como escape hatch**, en vez de volcar cientos de endpoints como tools. Ver **P55**.
+
+## 72. Lo que un estándar educativo decide *no* exponer a los agentes es información de producto, y en Open Badges la puerta está cerrada a propósito (agregado 2026-10-01, pase 27)
+
+El pase 26 abrió esta idea (*«CaSS no expone su API: expone una superficie curada»*). Este pase la midió entera, por
+conteo de anotaciones sobre el árbol de `cassproject/CASS` v1.7.7: **6 operaciones expuestas y 55 excluidas, 61 en
+total**. Y el desglose por estándar dice algo que ninguna cifra agregada mostraba:
+
+| Estándar / capa en CaSS | Expuesto a MCP | Oculto | Lectura |
+|---|---|---|---|
+| **xAPI** | 1 (`record_evidence`) | 4 | La puerta de evidencia está abierta, **de a un statement** |
+| **Perfil de competencia** | 1 (`get_learner_profile`) | 0 | Íntegro |
+| **CRUD JSON-LD** | 3 | 3 | Mitad |
+| 🔴 **CASE** (`caseAdapter` + `caseIngest`) | **0** | **13** | **Autoría de marcos: cerrada** |
+| 🔴 **CEASN** | **0** | 6 | Cerrada |
+| 🔴 **Open Badges** | **0** | **5** | **Cerrada, y anclada a OB 2.0** |
+
+**Las dos consecuencias de cotización:**
+
+1. **Un entregable que prometa emisión de insignias o autoría de marcos de competencia «por MCP» sobre CaSS está
+   prometiendo algo que el proyecto excluyó deliberadamente.** Eso va por REST, **fuera** de la superficie de agente.
+   La pregunta *«¿hay conector MCP de Open Badges?»* tiene ahora una respuesta mejor que *«no se encontró»*: **la pieza
+   existe en el proyecto de referencia y la puerta está cerrada por diseño.**
+2. **El adaptador de Open Badges de CaSS es `w3id.org/openbadges/v2` — OB 2.0, no 3.0.** Para un cliente que pide
+   credenciales verificables al día (W3C VC / OB 3.0), **CaSS no es la pieza que lo emite**. Es la clase de detalle que
+   sólo aparece leyendo el `@context` en el código, y que cambia una propuesta.
+
+**La regla de método que generaliza:** cuando un proyecto anota exclusiones una por una, **la lista de exclusiones es
+una declaración de alcance más confiable que su README** — y conviene leerla antes de las estrellas. Es la misma
+lectura del pase 26, ahora con el desglose que permite usarla por capa.
+
+## Nota de método del pase 27 (2026-10-01) — el pase que no pudo ejecutar y por eso midió lo mismo por otro canal, y el que corrigió la premisa de su propio pase anterior
+
+**Lo que se hizo:** el barrido obligatorio completo —**cuatro búsquedas globales y cuatro regionales**, con el año
+**calculado** (2026)— más las **tres acciones** que el pase 26 dejó escritas. Dos se ejecutaron y dieron resultado; la
+primera quedó bloqueada **por un límite nuevo**, y es lo primero que hay que declarar.
+
+### 🔴 El bloqueo de la acción 1 se movió, y el nuevo límite no es de infraestructura
+
+El pase 26 no pudo hacer el *handshake* MCP porque **no hay demonio de Docker** y Elasticsearch no se podía levantar.
+Este pase localizó el camino —`src/main/server/util.js` muestra que el *probe* sólo pide `GET /` y
+`GET /_cluster/health` en `yellow`/`green`, y `src/main/server.js:452` muestra que **los cartuchos se cargan en el
+evento `listening`, antes de que la migración termine**, así que la ruta podía existir mientras el *probe* reintenta—
+pero **se detuvo antes**: para arrancar el servidor hay que instalar el árbol de dependencias de CaSS, y en este
+entorno **instalar dependencias de un repositorio de terceros no está permitido** (la operación fue rechazada como
+*código externo*). **No se intentó eludirlo.**
+
+**Es un límite distinto del de todos los pases anteriores, y conviene anotarlo como tal:** los bloqueos registrados
+hasta acá eran **del proxy de egreso** (dominios inalcanzables) o **de infraestructura** (sin Docker). Éste es **del
+entorno de ejecución**, y **no se levanta consiguiendo una red mejor**: se levanta corriendo el pase donde esté
+permitido instalar y ejecutar código de terceros. Lo mismo bloqueó, de paso, la verificación del *launch* LTI.
+**`artifacts.elastic.co` responde 403** por el proxy, así que la vía del tarball tampoco estaba.
+
+### Lo que se hizo en su lugar, y por qué el resultado vale
+
+En vez de dejar la acción sin resultado, se midió **la misma cosa por el canal que sí estaba disponible**: **contar las
+anotaciones `x-mcp-*` en el código fuente clonado**. Eso da:
+
+- ✅ **Las seis tools confirmadas nombre por nombre**, por un método independiente del que usó el pase 26
+  (conteo estático vs. ejecución del generador). **Dos canales, el mismo resultado.**
+- ✅ **Una corrección**: las ocultas son **55**, no 45. El 45 era **`51 paths − 6 tools`**, y `x-mcp-ignore` se declara
+  **por operación**. 61 operaciones en 51 paths.
+- ✅ **El desglose por adaptador**, que la ejecución del generador no daba y que es lo que se cotiza (tendencia 72).
+- ✅ **Una trampa de despliegue** que nadie había registrado: el adaptador carga el spec **por loopback**
+  (`CASS_LOOPBACK`, default `http://localhost/api/`) y **si ese `fetch` falla hace `return` sin montar `/api/mcp`**,
+  con el servidor arrancando normalmente. Falla **en silencio**.
+
+**Lo que sigue sin estar medido, dicho sin ambigüedad:** **nadie hizo `initialize` + `tools/list` contra
+`POST /api/mcp`.** La superficie está confirmada **por declaración en el código, dos veces**; **no por invocación**.
+Para P50, P54 y P57 eso alcanza para cotizar el catálogo y **no** alcanza para prometer latencia, forma de respuesta ni
+comportamiento de sesión.
+
+### Canal de verificación — confirmado otra vez, y con un control negativo
+
+🔴 **`curl -sI` no verifica nada contra `github.com` en este entorno, y este pase lo probó con un control negativo que las pasadas anteriores no tenían.** Se chequearon cuatro URLs: las **tres reales** y la **inexistente** (`Snaw80/mcp-moodle`). **Las cuatro devolvieron `403`.** Es decir: el 403 del proxy **no distingue un repo vivo de uno que no existe**, y usarlo como verificación habría registrado un repo fantasma como hallazgo. **WebFetch sí discrimina**: devolvió la página real de las tres y **`HTTP 404 Not Found`** de la cuarta. **Toda la verificación de este pase se hizo por WebFetch**, y la regla de la KB —verificar antes de escribir— se cumple por ese canal, no por `curl`. Confirma lo que los pases 23 a 26 venían anotando, ahora con la prueba en los dos sentidos.
+
+### Las dos acciones que sí se ejecutaron
+
+**Acción 2 (eje conector), ejecutada entera y es la que corrigió al pase anterior.** Open Badges, SCORM, Caliper y el
+equivalente de Open edX. Resultado: **dos conectores MIT de Moodle que el pase 26 no vio** (tendencia 69), **uno de
+SCORM** (MIT, 3 tools, offline), **ausencia confirmada en Open edX** por búsqueda extendida (gap 48), **ausencia en
+Caliper** —consistente con que dejó de ser open source el 2023-06-17— y **ausencia en Open Badges por búsqueda, pero
+exclusión deliberada medida en CaSS** (tendencia 72). **Tercera colisión de término de esta KB**: `MCP` + *badges*
+devuelve generadores de *badges* de README.
+
+**Acción 3 (gap 42), ejecutada y el gap cierra.** `1EdTech/ltibootcamp` (127 ★, 19 forks, 47 commits) **no es la
+implementación de referencia**: es una **colección de enlaces**, y **sin licencia declarada**. El código Ruby de la RI
+de 1EdTech está **detrás de la membresía de Contributing Members**. Con eso, *«no existe implementación platform-side
+permisiva y productiva»* pasa de **medido sobre seis** a **cerrado**.
+
+### Lo que este pase NO hizo, declarado como tal
+
+- **No hizo el *handshake* MCP** (arriba). El gap 40 **vuelve a abrirse en su tramo de invocación**.
+- **No verificó `edumints SCORM MCP`**: aparece listado en un directorio **sin repositorio de GitHub localizable**, y
+  por la regla de la KB **no se registra como hallazgo**.
+- **No verificó estrellas, forks ni commits de `vishalsachdev/canvas-mcp`** de primera mano en este pase: se
+  re-verificó que es **MIT** y que **el conteo de tools varía por versión**. Las cifras «269 ★, 815 commits,
+  102–103 tools» del pase 26 **quedan sin reconfirmar**, y el conteo de tools **no debe citarse como número fijo**.
+- **No midió el *bulk* de Open Badges ni de CASE por REST**: se midió que **no están en MCP**, no cómo se comportan por
+  fuera.
+- **No cerró los gaps 36 y 38** (cadena de `lrsql`): sin ejecución de dependencias de terceros, siguen bloqueados.
+- **`Snaw80/mcp-moodle` dio 404** y no se registra. Es el **segundo falso positivo del canal de búsqueda** en dos
+  pases (el pase 26 tuvo `WalaEddine01/OrgSchool-portfolio-project`).
+
+## 🔵 Las tres acciones que este pase deja escritas para el siguiente
+
+1. **Construir el conector MCP de Open edX, o medir por qué nadie lo hizo** (gap 48). Es la acción de mayor valor
+   comercial de esta KB en este momento: **el LMS con la huella pública más grande de LATAM e India es el único sin
+   puerta de agente**, y la arquitectura **ya está resuelta dos veces** (Canvas y Moodle). Lo concreto para el próximo
+   pase: **verificar si Open edX expone una API REST suficiente** —`openedx/edx-platform`, APIs de *Course Blocks*,
+   *Enrollment*, *Grades* y Studio (CMS)— y **si existe el equivalente de los Web Services de Moodle como superficie
+   estable y versionada**. Si lo hay, **P55** se cotiza; si no lo hay, **esa es la razón de la ausencia** y es un
+   hallazgo igual de bueno.
+2. **Repetir el eje conector con la regla de muestreo nueva** (tendencia 69), que es lo único que este pase probó que
+   funciona: **no preguntarle a un directorio de MCP, preguntarle al host del repositorio por patrón de nombre.**
+   Concretamente, repetir **OneRoster, QTI y CASE** —las tres que el pase 26 declaró vacías **consultando un
+   directorio**— buscando `*-mcp`, `mcp-*` y `mcp-server` + el nombre del estándar. **Dos de las tres ausencias de ese
+   pase podrían ser del mismo tipo que la de Moodle**, y cuesta una búsqueda descubrirlo.
+3. **Cerrar el tramo de invocación del gap 40 donde esté permitido instalar dependencias de terceros**: `npm install`
+   en `cassproject/CASS`, un Elasticsearch cualquiera en `:9200` (el *probe* sólo pide `GET /` y salud
+   `yellow`/`green`), `CASS_LOOPBACK` apuntado al puerto real —**y verificar primero la trampa del loopback**, porque
+   si ese `fetch` falla la ruta no se monta y el síntoma parece otro— y después `initialize` + `tools/list` contra
+   **`POST /api/mcp`**. **Comparar con las 6 declaradas.** Si coinciden, P50, P54 y P57 se cotizan sin asterisco.
 
 ## Nota de método del pase 26 (2026-10-01) — el pase que ejecutó sin poder levantar el servidor, y el que midió un «no existe» sobre seis candidatos en vez de sospecharlo sobre dos
 
