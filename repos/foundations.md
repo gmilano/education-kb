@@ -852,5 +852,103 @@ primera mano.
 - **Necesitás un dataset para desarrollar, demostrar o licitar sin tocar dato real** → `synthcity` (Apache-2.0, con DP adentro). **Nunca `SDV`.**
 - **Es específicamente knowledge tracing federado** → `FedGKT` como **referencia de arquitectura**, no como dependencia: no tiene licencia.
 
+## Capa de privacidad del dato en el LMS ya instalado — agregada en el pase 17 del 2026-10-01
+
+El **pase 16** abrió la capa de privacidad por el lado de las **librerías** (DP, federado, datos sintéticos) y
+cerró pidiendo lo que falta: *«No se revisó la capa de privacidad de los LMS ya instalados (Moodle, Open edX,
+Canvas). Es el paso siguiente obvio: el dato del alumno ya está ahí, no en el agente.»* Esta capa es eso.
+
+**Y la forma del hallazgo es la inversa de la del pase 16.** Ahí lo maduro era permisivo y lo educativo tenía
+techo de 10 ★. Acá **lo educativo es lo maduro** —está desplegado en decenas de miles de instituciones, lleva
+años en producción y tiene API— **y es todo copyleft fuerte.**
+
+### Las piezas, verificadas vía WebFetch el 2026-10-01
+
+| Repo | Licencia | Stars | Qué trae para privacidad |
+|---|---|---|---|
+| https://github.com/openedx/edx-platform | **AGPL-3.0** ⚠️ | 8.2k | `scripts/user_retirement` (6 scripts, verificados por nombre) + `lms/djangoapps/bulk_user_retirement` (`urls.py`, `views.py`, `tests`): API REST de retiro masivo. 4.4k forks |
+| https://github.com/moodle/moodle | **GPL-3.0** ⚠️ | 7.5k | **Privacy API** en el núcleo, con la propiedad que ninguna otra plataforma de esta KB tiene: **obliga a los plugins** a declarar qué dato guardan y a saber exportarlo y borrarlo. 123.147 commits |
+| https://github.com/instructure/canvas-lms | **AGPL-3.0** ⚠️ | 6.9k | «The open LMS by Instructure, Inc.» Es el código de la plataforma con ~41 % de la educación superior del continente. ⚠️ No se ubicó en abierto un toolset de retiro comparable al de Open edX — ver la advertencia |
+| https://github.com/openeducat/openeducat_erp | **LGPL-3.0** ⚠️ | 881 | ERP educativo sobre Odoo. Entra por privacidad, no por ERP: **autohospedable**, la institución queda como responsable del dato y **no hay acuerdo con terceros** que complique FERPA en los bordes |
+
+Los seis scripts de retiro de Open edX, leídos del árbol del repo: `get_learners_to_retire.py`,
+`retire_one_learner.py`, `replace_usernames.py`, `retirement_archive_and_cleanup.py`,
+`retirement_bulk_status_update.py`, `retirement_partner_report.py`. Según su `README`, fueron migrados del repo
+`tubular` y pueden invocarse desde cualquier framework de automatización o despliegue continuo.
+
+### Lo que el Privacy API de Moodle hace, y por qué es la pieza arquitectónicamente más interesante de la capa
+
+Documentado por Moodle (ver la advertencia de verificación abajo): el API cubre **exportar y borrar** todo el dato
+personal de un usuario por contexto, **detectar** qué usuarios tienen dato personal en un contexto dado, y borrar
+el dato de todos los usuarios de un contexto. El cumplimiento **se extiende a los plugins instalados, incluidos
+los de terceros**, que tienen que poder reportar qué guardan y responder a un pedido de borrado. Del lado
+funcional, el núcleo trae dos herramientas: **Policies** (`tool_policy`) y **Data Privacy** (`tool_dataprivacy`),
+que es la que da el flujo de pedidos de acceso y borrado, el rol de delegado de protección de datos y la
+configuración de **período de retención**.
+
+**Por qué importa para una propuesta y no es un detalle de ingeniería:** significa que en un despliegue Moodle,
+**el plugin de AI que Studios entregue tiene la obligación de implementar un `privacy provider`.** No es opcional
+ni es una buena práctica: es el contrato del punto de extensión. Un agente educativo entregado como plugin de
+Moodle **sin** `privacy provider` es un plugin incompleto, y es exactamente lo que el **gap 27** midió del lado de
+los agentes: ninguno de los 31 declara qué hace con el dato del alumno.
+
+### 🔴 La buena noticia de licencia, y es la primera de dieciséis pasadas
+
+Esta KB viene registrando el copyleft como la mala noticia de casi todas sus capas —accesibilidad, contenido,
+analítica institucional, LMS—. **Acá no lo es, y conviene entender por qué para no descartar la capa por reflejo
+de filtro de licencia.**
+
+**No hay que forkear ni redistribuir la plataforma.** Las dos mecánicas son de extensión e invocación:
+
+- **Moodle**: se implementa un *provider* **en el plugin propio**. Lo que se distribuye es el plugin. La pregunta
+  de licencia se mueve del LMS al plugin — y ahí hay que elegir con cuidado, porque un plugin de Moodle que
+  enlaza al núcleo GPL-3.0 es, en la lectura conservadora, obra derivada.
+- **Open edX**: el retiro se **invoca** —seis scripts y un endpoint REST—. Invocar un programa AGPL desde una
+  automatización no convierte la automatización en derivada. Lo entregable es **la configuración, el expediente y
+  la operación**.
+
+**La consecuencia comercial:** el entregable de esta capa **no es software**, o es muy poco software. Es
+configuración, evidencia y procedimiento. Eso es más barato de construir y más difícil de copiar que un plugin,
+y es lo que P36 empaqueta.
+
+### ⚠️ Antes de cotizar nada de esta capa: el proveedor declara que no garantiza cumplimiento
+
+La documentación de Open edX dice, textualmente: **«User retirement is not a compliance guarantee. The Open edX
+software makes no claim of satisfying any law or regulation. It is a configurable toolset that site operators can
+use to help meet the obligations apply to them specifically.»**
+
+**Hay que leerla en el sentido correcto, porque no es una advertencia contra la herramienta: es la definición del
+alcance vendible.** El cumplimiento es responsabilidad del **operador del sitio**. Configurar, evidenciar y operar
+esa responsabilidad es trabajo, es facturable, y es la única parte que un cliente no puede bajar de GitHub.
+
+🔴 **De dónde sale la cita, declarado:** `docs.openedx.org`, `docs.moodle.org` y `moodle.org` están **bloqueados
+por el proxy de egreso de esta sesión**. La frase se leyó en el **snippet de búsqueda** de esa página, **no en un
+fetch de primera mano**, y el `README` de `scripts/user_retirement` en GitHub —que sí se verificó— **no la
+contiene**. Resolver contra la fuente oficial antes de ponerla en un documento para un cliente. Lo verificado de
+primera mano es el **código**: los seis scripts y el Django app existen.
+
+Por el mismo bloqueo, **el Privacy API, `tool_dataprivacy` y `tool_policy` se registran como documentados por
+Moodle vía snippet, no verificados de primera mano.** Se intentó el árbol de `admin/tool/dataprivacy` dentro de
+`moodle/moodle` por **cuatro rutas** (`main` y `master`, árbol y archivo) y **las cuatro dieron 404 vía
+WebFetch**. Lo verificado de primera mano del repo es licencia, estrellas y commits.
+
+### Lo que esta capa no tiene, y es el gap 29
+
+**Ninguna de las piezas habla con un agente.** No hay servidor MCP, ni herramienta LTI, ni plugin publicado que
+conecte un agente al Privacy API de Moodle o al retiro de Open edX, y no hay `privacy provider` de referencia
+para un plugin de AI. Se buscó explícitamente. Es la **tercera capa consecutiva** con el mismo diagnóstico —la
+infraestructura está, el puente al aula no— después de procedencia (pase 15) y privacidad horizontal (pase 16).
+
+### Cómo se usa esta capa, en una línea por pieza
+
+- **El cliente ya tiene Moodle y quiere un agente** → el plugin **tiene** que traer `privacy provider`. No es
+  opcional. Es la primera línea del alcance, no la última.
+- **El cliente ya tiene Open edX y necesita responder pedidos de borrado** → los seis scripts y el endpoint REST
+  ya existen; lo que falta es orquestación, evidencia y política de retención.
+- **El cliente tiene Canvas** → la plataforma es AGPL-3.0 y **no se verificó** un toolset de retiro equivalente.
+  Tratarlo como trabajo a dimensionar, no como capacidad existente.
+- **El cliente quiere residencia de dato y ser el responsable** → `openeducat_erp` autohospedado, y el argumento
+  es FERPA en los bordes: sin SaaS de terceros no hay acuerdo de terceros que negociar.
+
 ---
 *Ver también: `verticals/solutions.md` para plataformas verticales completas y `compose/patterns.md` para el wiring concreto.*

@@ -8,6 +8,95 @@ updated: 2026-10-01
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 
+## 2026-10-01 (pase 17) — la máquina de privacidad del dato del alumno ya estaba instalada en el LMS, es toda copyleft, y el proveedor canónico declara por escrito que no garantiza cumplimiento
+
+El pase 16 abrió la capa de privacidad y la midió **del lado de las librerías** —DP, federado, datos sintéticos— y
+cerró con una acción escrita: *«No se revisó la capa de privacidad de los LMS ya instalados (Moodle, Open edX,
+Canvas). Es el paso siguiente obvio: el dato del alumno ya está ahí, no en el agente.»* **Este pase ejecutó esa
+acción**, y además la que el **gap 26** había dejado escrita. Las dos pagaron, y van dos pases seguidos (14 y 17)
+en que ejecutar una acción escrita por un gap anterior rinde más que inventar la pregunta de cero.
+
+**El hallazgo da vuelta la forma del pase 16.** Ahí, lo maduro era permisivo (ocho librerías horizontales,
+26.000+ ★, Apache-2.0/MIT) y lo educativo tenía techo de 10 ★. Acá es exactamente al revés: **lo educativo es
+maduro, está desplegado en decenas de miles de instituciones, y es todo copyleft.**
+
+### Los repos nuevos, verificados vía WebFetch el 2026-10-01
+
+**Seis repos.** No son seis hallazgos independientes: son las tres plataformas que concentran el dato real del
+alumno, más la pieza administrativa, más los dos paquetes de *skills* que cierran el gap 20.
+
+| Repo | Licencia | Stars | Qué aporta a esta capa |
+|---|---|---|---|
+| https://github.com/openedx/edx-platform | **AGPL-3.0** ⚠️ | 8.2k | *«version 3 of the AGPL unless otherwise noted»*. Trae el toolset de retiro de usuario más completo del sector: `scripts/user_retirement` (seis scripts) + `lms/djangoapps/bulk_user_retirement` (API REST). 4.4k forks |
+| https://github.com/moodle/moodle | **GPL-3.0** ⚠️ | 7.5k | *«version 3 of the GNU General Public License»*. 123.147 commits. El **Privacy API** es núcleo y **obliga a los plugins**, que es la propiedad que ninguna otra plataforma de esta KB tiene |
+| https://github.com/instructure/canvas-lms | **AGPL-3.0** ⚠️ | 6.9k | «The open LMS by Instructure, Inc.» El código del LMS con ~41 % de la educación superior del continente — y el del incidente del 2026-04-29 (ver abajo) |
+| https://github.com/openeducat/openeducat_erp | **LGPL-3.0** ⚠️ | 881 | ERP educativo sobre Odoo. Entra en esta capa por una razón de privacidad, no de ERP: **autohospedado, la institución sigue siendo el responsable del dato** y no hay acuerdo de terceros que complique FERPA en los bordes |
+| https://github.com/anthropics/k12-teacher-skills | **Apache-2.0** ✅ | **541** | «Skills and eval rubrics for K-12 teachers, co-developed with Learning Commons». Cuatro skills **y una carpeta `evals/`** |
+| https://github.com/learning-commons-org/agent-skills | **Apache-2.0** ✅ | 35 | Las mismas cuatro skills del lado del consorcio educativo, con `evals/` de rúbricas de **pedagogía, rigor, formato y andamiaje del modelo** |
+
+### 🔴 El hallazgo de licencia, y es el que decide si esta capa se puede proponer
+
+**Las tres plataformas que tienen el dato son copyleft fuerte: GPL-3.0, AGPL-3.0, AGPL-3.0.** Y AGPL-3.0 es la
+licencia que esta KB viene marcando como la más difícil de toda su «Nota sobre licencias», porque la cláusula de
+red alcanza al servicio, no sólo al binario distribuido.
+
+**Pero acá el copyleft no bloquea el entregable, y conviene decir por qué**, porque es el único caso de dieciséis
+pasadas en que el copyleft **no** es la mala noticia: no hay que forkear ni redistribuir la plataforma. El Privacy
+API de Moodle es un **punto de extensión** —se implementa un *provider* en un plugin— y el retiro de Open edX se
+**invoca**: seis scripts y un endpoint REST. Lo que se entrega es el plugin, el expediente y la operación, no una
+derivada del LMS. La pregunta de licencia se mueve del LMS al plugin, y ahí sí hay que elegir.
+
+### Lo que esta capa NO tiene, y es el gap 29
+
+Ninguna de las seis piezas habla con un agente. **No hay servidor MCP, ni herramienta LTI, ni plugin que conecte
+un agente al Privacy API de Moodle ni al retiro de Open edX.** Se buscó explícitamente. Es la misma forma que el
+pase 15 encontró en procedencia —la infraestructura está, el puente al aula no— y van tres capas seguidas con
+exactamente ese diagnóstico.
+
+### ⚠️ La advertencia que hay que leer antes de cotizar: el proveedor declara que no garantiza cumplimiento
+
+La documentación de Open edX dice, textualmente: **«User retirement is not a compliance guarantee. The Open edX
+software makes no claim of satisfying any law or regulation. It is a configurable toolset that site operators can
+use to help meet the obligations apply to them specifically.»**
+
+Es la frase más útil de este pase para una propuesta, y hay que usarla en el sentido correcto: **no dice que la
+herramienta sea mala, dice que el cumplimiento es del operador del sitio.** Eso es precisamente el alcance que se
+vende —configurar, evidenciar y operar— y es la razón por la que P36 existe.
+
+🔴 **Y hay que declarar de dónde sale la cita.** `docs.openedx.org`, `docs.moodle.org` y `moodle.org` están
+**bloqueados por el proxy de egreso de esta sesión**. La frase se leyó en el snippet de búsqueda que devuelve esa
+página, **no en un fetch de primera mano**, y el `README` del directorio `scripts/user_retirement` en GitHub —que
+sí se verificó— **no la contiene**. Antes de ponerla en un documento para un cliente, resolverla contra la fuente
+oficial. Lo verificado de primera mano es el **código**: los seis scripts y el Django app existen y están
+nombrados arriba.
+
+### Lo que esta pasada buscó y no encontró
+
+- **Un plugin de LMS que haga gobernanza de AI** (registro de qué modelo tocó qué dato de qué alumno): no existe
+  en abierto, ni en Moodle ni en Open edX. Lo que hay en el directorio de Moodle para privacidad es
+  **cumplimiento de GDPR del dato propio del LMS**, no del dato que sale hacia un modelo.
+- **Un `privacy provider` de referencia para un plugin de AI**: no se encontró ninguno publicado. Es la pieza más
+  chica y más vendible de esta capa, y la nombra P36.
+- **Equivalente de retiro de usuario en Canvas**: no se ubicó en abierto un toolset comparable al de Open edX. Se
+  declara como no encontrado, no como inexistente: `canvas-lms` es un repo de 6.9k ★ y no se auditó su árbol
+  completo en este pase.
+
+### Nota de método de este pase
+
+**`curl -sI` no sirve para verificar en esta sesión y hay que dejar de intentarlo.** Se probó contra tres repos
+reales y contra uno deliberadamente inexistente
+(`github.com/this-definitely-does-not-exist-xyz123/nope`): **los cuatro devolvieron 403.** El proxy responde 403
+antes de llegar a GitHub, así que un 403 no distingue un repo vivo de uno que no existe. El pase 16 ya lo había
+anotado; este pase lo probó con un control negativo. **La verificación de este pase es WebFetch contra la página
+del repo**, y cuatro dominios dieron bloqueo de egreso: `moodle.org`, `docs.moodle.org`, `docs.openedx.org`,
+`privacyrights.org`, `calmatters.org` y `leginfo.legislature.ca.gov`.
+
+**Y una corrección de alcance sobre el propio pase:** se intentó verificar el árbol de `admin/tool/dataprivacy`
+dentro de `moodle/moodle` por cuatro rutas distintas (`main` y `master`, árbol y archivo) y **las cuatro dieron
+404 vía WebFetch**. Por eso este pase **no afirma de primera mano** la existencia de ese directorio: afirma lo que
+verificó —licencia, estrellas y commits del repo— y registra el Privacy API y el plugin Data Privacy como
+**documentados por Moodle vía snippet de búsqueda**, con el mismo descuento que la cita de Open edX.
+
 ## 2026-10-01 (pase 16) — la capa que decide si las otras quince pueden tocar dato real: lo horizontal es maduro y permisivo, lo educativo tiene techo de 10 estrellas, y la herramienta canónica dejó de ser open source
 
 Dieciséis pasadas. Esta KB tiene agente, modelado, evaluación, seguridad, telemetría, datos, accesibilidad,

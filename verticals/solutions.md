@@ -487,6 +487,65 @@ y el único permisivo del grupo tiene **3**.
 Eso convierte esta capa en la de mejor relación esfuerzo/defensa de toda la KB: la infraestructura no se construye,
 se conecta.
 
+## Capa de operación de privacidad sobre el LMS instalado — agregada en el pase 17 del 2026-10-01
+
+La capa del pase 16 (privacidad y datos sintéticos) resuelve **cómo entrenar sin exponer**. Esta resuelve lo
+anterior: **el dato del alumno ya está en el LMS, y el LMS ya tiene la máquina para gobernarlo.** Lo que no tiene
+es operación, evidencia ni conexión con el agente.
+
+### Las plataformas y lo que ya traen
+
+| Plataforma | Licencia | Stars | Capacidad de privacidad instalada |
+|---|---|---|---|
+| **Moodle** — https://github.com/moodle/moodle | GPL-3.0 ⚠️ | 7.5k | **Privacy API en el núcleo**, que **obliga a los plugins** (incluidos los de terceros) a exportar y borrar. Más `tool_dataprivacy` (flujo de pedidos, delegado de protección de datos, período de retención) y `tool_policy` |
+| **Open edX** — https://github.com/openedx/edx-platform | AGPL-3.0 ⚠️ | 8.2k | **User retirement**: 6 scripts + API REST de retiro masivo. Borra u ofusca PII a través de LMS, foros, credenciales y las demás IDAs, y puede alcanzar sistemas externos |
+| **Canvas** — https://github.com/instructure/canvas-lms | AGPL-3.0 ⚠️ | 6.9k | ⚠️ **No verificado.** No se ubicó en abierto un toolset de retiro equivalente. Dimensionar como trabajo, no asumirlo como capacidad |
+| **OpenEduCat** — https://github.com/openeducat/openeducat_erp | LGPL-3.0 ⚠️ | 881 | Autohospedado: **la institución es el responsable del dato**. Sin SaaS de terceros no hay acuerdo de terceros que negociar — el argumento FERPA más corto de esta KB |
+
+### 🔴 El disparador comercial de esta capa no es la regulación: es la brecha de Canvas
+
+Esta KB viene vendiendo capas de cumplimiento contra **fechas** —Artículo 50, Anexo III, COPPA—. Esta se vende
+contra un **hecho ya ocurrido**, y es la primera así:
+
+- **2026-04-29**: primer incidente en Instructure. **2026-05-07**: segundo, con cambios no autorizados en páginas
+  de Canvas. Interrumpió clases y exámenes finales en EE. UU., incluidas varias **HBCU**.
+- **ShinyHunters** reclamó ~**275 millones de registros** de alumnos, docentes y personal. Lo expuesto, según lo
+  reportado: **nombres, correos, números de identificación de alumno y mensajes privados** de Canvas. **No** hay
+  indicio de números de seguridad social, fechas de nacimiento ni contraseñas.
+- Canvas sostiene ~**41 %** de las instituciones de educación superior del continente y **miles de distritos
+  K-12**, lo que lo vuelve el incidente de mayor alcance que haya tocado al sector.
+- **2026-05-11**: Instructure informó haber **llegado a un acuerdo con los atacantes** para que la información
+  robada fuera devuelta y destruida, y declaró que recibió *«shred logs»* como prueba de borrado permanente.
+
+⚠️ **Y cómo se usa este dato en una conversación con un cliente, porque usarlo mal es contraproducente.** No se
+vende como «su proveedor es inseguro»: se vende como **la pregunta que el incidente dejó sin respuesta**. Un
+acuerdo con el atacante y un log de borrado **no son verificables por la institución**: el responsable del dato
+sigue siendo la institución, y no tiene forma propia de probar qué se exfiltró de *sus* alumnos ni qué se borró.
+Lo vendible es la capacidad que la institución **no** tenía el 2026-04-29: saber qué dato de qué alumno vive en
+qué sistema, poder exportarlo y poder borrarlo con evidencia. Eso es exactamente el Privacy API de Moodle y el
+retiro de Open edX, operados.
+
+### ⚠️ Lo que NO hay que proponer en esta capa
+
+- **No prometer cumplimiento como producto.** Open edX lo dice por escrito: *«User retirement is not a compliance
+  guarantee. The Open edX software makes no claim of satisfying any law or regulation.»* El cumplimiento es del
+  operador del sitio. Vender «lo dejamos compliant» es vender algo que el propio proveedor del software niega.
+  (Cita tomada de snippet de búsqueda; `docs.openedx.org` está bloqueado en esta sesión — resolver contra la
+  fuente oficial antes de citarla a un cliente.)
+- **No proponer un fork del LMS para agregar privacidad.** No hace falta y es el camino caro: Moodle se extiende
+  con un plugin, Open edX se invoca. Un fork de AGPL-3.0 es el peor resultado posible de esta capa.
+- **No asumir que Canvas tiene lo que tiene Open edX.** No se verificó. Si el cliente está en Canvas, el retiro
+  es alcance a dimensionar.
+- **No prometer borrado de lo que ya salió hacia un modelo.** Si el dato del alumno se usó para entrenar, el
+  Privacy API del LMS no lo alcanza: borra el registro, no el modelo. Esa es la razón de P37 y del gap 30.
+
+### La regla de esta capa, y es la que la hace defendible
+
+**El entregable es configuración, evidencia y procedimiento — casi no es software.** Es más barato de construir
+que un plugin, más difícil de copiar, y es lo único de esta capa que el cliente no puede bajar de GitHub. Para un
+despliegue Moodle hay una excepción, y es obligatoria: **el plugin de AI que se entregue tiene que traer su
+`privacy provider`**, porque el núcleo lo exige a todos los plugins. Esa línea va primera en el alcance.
+
 ## Cómo elegir
 
 | Si el cliente necesita… | Arrancar de |

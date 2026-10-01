@@ -9,6 +9,84 @@ updated: 2026-10-01
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 > No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
 
+## 2026-10-01 (pase 17) — el gap 20 se cerró: ya existe skill educativa con eval publicada, es Apache-2.0, y el techo permisivo del canal subió de 299 a 541 estrellas
+
+El **gap 26** del pase 15 dejó una acción textual: *«medir el canal otra vez, pero buscando por `SKILL.md` +
+dominio educativo en vez de por repos educativos — que es el error de método que el pase 12 ya documentó».* **Este
+pase la ejecutó y encontró lo que doce y quince no vieron**, por el mismo motivo que el pase 14: la consulta
+estaba mal, no el canal.
+
+**La tabla principal de `agents/top.md` no cambió y el conteo sigue en 31.** Lo nuevo son paquetes de *skills*,
+no agentes, y van a la capa de distribución por *skills* al final de ese archivo. Decirlo importa porque el pase
+12 abrió esa capa y el pase 17 la cierra en su mitad peor: la de la licencia y la de la evidencia.
+
+### 🔴 El hallazgo del pase: el gap 20 era verdadero cuando se escribió y es falso ahora
+
+El **gap 20** del pase 12 decía: *«Ninguna skill educativa del mundo tiene eval publicada, y esta KB tiene las
+herramientas para medirlas sin usarlas.»* Se verificó contra los siete paquetes de entonces y era correcto.
+
+**Ya no lo es** — y hay que decir con precisión qué parte es hallazgo nuevo y qué parte es error de medición
+propio, porque **uno de los dos repos ya estaba en la KB**. El gap 20 enumeraba siete paquetes e incluía
+`learning-commons-org/agent-skills` (35 ★), concluyendo que todos eran *«texto de prompt sin versionado
+semántico, sin suite de regresión y sin medición de efecto pedagógico»*. **Ese repo tiene una carpeta `evals/`
+con rúbricas, verificada de primera mano en este pase.** Lo que no se puede afirmar es *desde cuándo*: este pase
+no pudo datar la carpeta, así que **no se sabe si el pase 12 la pasó por alto o si es posterior**. Se registra la
+duda en vez de resolverla a favor propio.
+
+Lo que sí es inequívocamente nuevo en esta KB es el otro repo, y es el grande:
+
+| Repo | Licencia | Stars | Skills | Eval publicada |
+|---|---|---|---|---|
+| https://github.com/anthropics/k12-teacher-skills | **Apache-2.0** ✅ | **541** | 4 | **Sí** — carpeta `evals/` con el framework de evaluación y cómo adaptarlo |
+| https://github.com/learning-commons-org/agent-skills | **Apache-2.0** ✅ | 35 | 4 | **Sí** — `evals/` con rúbricas de **pedagogía, rigor, formato y andamiaje del modelo** |
+
+Las cuatro skills son las mismas en los dos repos y están **co-desarrolladas**: `k12-lesson-plan-creation`
+(plan de clase alineado a estándar), `k12-lesson-differentiation` (versiones por nivel de competencia y por
+necesidad del alumno), `k12-lesson-prep` (socio de preparación sobre una clase existente) y
+`k12-check-for-understanding` (chequeos formativos de 1 a 3 ítems para estándares de matemática, **con
+distractores y guía docente**). El repo de Learning Commons declara que el conjunto inicial de skills y de
+rúbricas evaluadoras se co-desarrolló con Anthropic; el de Anthropic lo declara al revés, «co-developed with
+Learning Commons».
+
+### Los dos números que cambian, y conviene no sobrevenderlos
+
+**El techo permisivo del canal educativo subió 1,8×: de 299 ★ a 541 ★.** Hasta este pase, el mejor activo
+educativo con licencia permisiva del canal era `universal-examprep-skill` (MIT, 299 ★). Ahora es
+`k12-teacher-skills` (Apache-2.0, 541 ★).
+
+**Lo que NO cambia: el activo educativo más grande del canal sigue siendo el que no se puede empaquetar.**
+`education-agent-skills` sigue en **815 ★** y sigue siendo **CC BY-SA 4.0** —se reverificó en este pase y además
+creció de 152 a **165 skills en 20 dominios**—. Y la comparación con la vertical científica sigue perdida:
+`scientific-agent-skills` tiene **47.2k ★ con MIT**, que son **87×** el nuevo techo permisivo educativo. El pase
+12 midió 58× contra el activo *share-alike*; medido contra el mejor permisivo, la brecha es peor, no mejor.
+
+**Entonces el gap 20 se cierra y el 26 no.** Son dos afirmaciones distintas y el pase 12 las había mezclado:
+- *«no hay eval publicada»* → **falso desde este pase.** Hay dos repos Apache-2.0 con `evals/`.
+- *«la educación no ocupó el canal»* → **sigue siendo cierto.** 541 ★ contra 47.200 ★ no es ocupar un canal.
+
+### Por qué esto cambia una propuesta, y no es un detalle de licencia
+
+Esta KB tiene desde el pase 4 una capa de evaluación pedagógica premiada y sin adoptar (`MathTutorBench` 42 ★,
+`UnifyingAITutorEvaluation` 32 ★ — gap 1), y desde el pase 12 una capa de distribución sin evidencia (gap 20).
+**Los dos repos de este pase son el primer caso del sector en que el artefacto distribuible y su rúbrica de
+evaluación viajan en el mismo paquete, con licencia permisiva.** Para un entregable de Studios eso es la
+diferencia entre «le entregamos 4 skills» y «le entregamos 4 skills y el instrumento con que se verifica que
+hacen lo que dicen» — que es exactamente el argumento de **P10** y de **P30**, y hasta hoy había que construirlo
+a mano.
+
+⚠️ **Y el límite, que hay que decir antes de que lo pregunte el cliente:** son **cuatro** skills, de **K-12**, y
+el chequeo formativo está acotado a **matemática**. Comparado con los 165 dominios de `education-agent-skills`,
+es un conjunto chico. El valor de este pase es la **licencia y la eval**, no la cobertura.
+
+### Lo que esta pasada buscó y no encontró
+
+- **Una skill educativa con eval publicada que no venga de este par de repos:** ninguna. Los siete paquetes del
+  pase 12 se revisaron de nuevo y siguen sin `evals/`.
+- **Una eval de skill atada a un estándar curricular nacional** (la unión natural con la capa CASE del pase 14):
+  no existe. Las rúbricas nuevas evalúan calidad pedagógica, no alineación verificable a un marco.
+- **Un agente de la tabla principal que consuma estas skills:** ninguno de los 31 las referencia. Es la misma
+  desconexión que el gap 24 anotó para la voz y el gap 13 para las credenciales.
+
 ## 2026-10-01 (pase 16) — ninguno de los 31 agentes de esta KB declara qué hace con el dato del alumno, y desde abril la voz de un chico es dato biométrico regulado en EE. UU.
 
 El pase 15 abrió la capa que prueba **quién escribió** el trabajo. Este pase abre la que decide **con qué derecho

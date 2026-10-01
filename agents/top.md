@@ -19,6 +19,18 @@ updated: 2026-10-01
 > skills de agente** al final del archivo: es la primera capa de esta KB que se mide contra otra vertical, y la
 > educación pierde 58× contra la científica en el mismo canal. El conteo de 29 de la tabla principal se verificó a
 > mano en este pase y **estaba bien**.
+> *Pase 17 del 2026-10-01:* **no se agregó ninguna fila a la tabla principal.** Se contó a mano y **la tabla tiene
+> 32 filas, no 31** — pero el encabezado es defendible y conviene registrar por qué, porque es la tercera vez que
+> esta KB se pelea con este conteo: **una de las 32 filas no es un agente.** `education-agent-skills` es una
+> biblioteca de Markdown/YAML y está además listada en la capa de distribución por *skills* de este mismo archivo.
+> **32 filas = 31 agentes + 1 paquete de skills duplicado de otra capa.** Se deja la fila donde está (sirve de
+> puntero) y se deja anotado que no cuenta como agente. Se **cierra el gap 20**: ya existe skill educativa con *eval* publicada, es **Apache-2.0** y son
+> dos repos co-desarrollados (`anthropics/k12-teacher-skills` **541 ★**, nuevo en esta KB, y
+> `learning-commons-org/agent-skills` **35 ★**, que **ya estaba** en la enumeración del gap 20 y sí tiene
+> `evals/` — el gap lo había dado por carente). Los dos con carpeta `evals/` verificada. Entran en la **capa de distribución por skills** al final del archivo,
+> que sube su techo permisivo de **299 a 541 ★**. Se reverificó **DeepTutor**: **40.6k ★**, v1.6.12 del
+> **2026-09-27** — la fila ya estaba correcta. Y se refina el encuadre COPPA del pase 16: ver la corrección abajo.
+> Se abren el **gap 29** y el **gap 30**. Ver las tendencias **42**, **43** y **44**, y los patrones **P36** y **P37**.
 > *Pase 16 del 2026-10-01:* **no se agregó ninguna fila a la tabla principal; el conteo de 31 se mantiene.**
 > Se abre la **capa de privacidad del dato del alumno** en `repos/foundations.md` —DP, federado y datos
 > sintéticos—, y **no entra acá a propósito: no son agentes, son librerías horizontales**, y ése es parte del
@@ -245,6 +257,37 @@ El diagnóstico del pase 5 fue que ninguno de los cinco servidores MCP de master
 **Y la advertencia que este pase agrega sobre toda la tabla:** las tres entradas nuevas son 🚫 / AGPL-3.0 / GPL-3.0. Al día de hoy, **las únicas bases de tutor open source permisivas y de escala siguen siendo las dos de APAC** — `DeepTutor` (Apache-2.0, 40.6k ★) y `OpenMAIC` (MIT, 39.7k ★). Eso ya no es una suposición por falta de búsqueda: está medido contra las alternativas.
 
 ## Corrección sobre ciclos anteriores
+
+### Corrección del pase 17 — la voz del menor sí está regulada, pero no por la vía que el pase 16 escribió
+
+El **pase 16** anotó, acá arriba y en el **gap 28**, que *«desde el 2026-04-22 la voz de un menor es dato
+biométrico regulado bajo la regla COPPA enmendada»*. **La conclusión práctica es correcta y la vía no.** La
+distinción cambia qué se escribe en un expediente de cumplimiento, así que se corrige en vez de dejarla pasar:
+
+- **Lo que sí hizo la regla enmendada:** agregó a la definición de información personal *«a biometric identifier
+  that can be used for the automated or semi-automated recognition of an individual»*, y la enumeración **incluye
+  `voiceprints`** junto con huellas, patrones de retina e iris, datos genéticos, marcha, plantillas faciales y
+  *faceprints*. Exigible en pleno desde el **2026-04-22**.
+- **Lo que la FTC explícitamente NO incluyó:** los datos **derivados** de voz, de rostro y de marcha
+  (*voice-derived, facial-derived, gait-derived data*). Estaban propuestos en el NPRM de 2024 y **se quitaron de
+  la regla final** tras los comentarios por amplitud excesiva.
+- **Y el dato que vuelve más vieja la exposición, no más nueva:** un **archivo de audio con la voz de un chico ya
+  estaba cubierto** como categoría propia de información personal bajo **16 CFR 312.2 antes de las enmiendas**.
+
+**Las dos consecuencias operativas:**
+
+1. **`voiceprint` ≠ grabación de voz.** Un *voiceprint* es una plantilla para reconocer a la persona. Un tutor de
+   lectura oral que transcribe y puntúa pronunciación **sin construir ni almacenar plantilla de identificación**
+   no entra por la puerta biométrica — entra por la de audio del menor, que es la que ya existía.
+2. **La fecha a citar no es el 2026-04-22 para todo.** Para la grabación de voz la obligación **precede** a las
+   enmiendas; lo que el 2026-04-22 agrega es la **política escrita de retención**, la **prohibición de retención
+   indefinida** y el borrado una vez cumplido el propósito. Vender «esto es nuevo desde abril» es vender mal: en
+   la mitad que más importa, el cliente **ya estaba incumpliendo antes**.
+
+⚠️ **Lo que no cambia:** si el despliegue construye plantillas de identificación por voz, o toca **Illinois**
+(**BIPA**, consentimiento escrito, daños estatutarios de 1.000–5.000 USD por violación), el encuadre del pase 16
+aplica entero. El **gap 28** se mantiene abierto con esta precisión incorporada.
+
 
 Los star counts registrados en ciclos previos de esta KB estaban **inflados por el pipeline**, no medidos. Valores reales verificados hoy contra los que se habían registrado antes:
 
@@ -483,6 +526,8 @@ de primera mano contra la página de cada repo el 2026-10-01:
 | https://github.com/virgiliojr94/book-to-skill | Genérico (libro → skill) | **MIT** ✅ | **33.2k** | Convierte PDF/EPUB/DOCX en skill estructurada con carga por capítulo y cheatsheet |
 | https://github.com/GarethManning/education-agent-skills | **Educación** | **CC BY-SA 4.0** ⚠️ | **815** | 165 skills pedagógicas evidence-grounded en 20 dominios |
 | https://github.com/ZeKaiNie/universal-examprep-skill | **Educación** | **MIT** ✅ | **299** | Tutor de examen que enseña desde las diapositivas de la cátedra, con cita de página |
+| https://github.com/anthropics/k12-teacher-skills | **Educación** | **Apache-2.0** ✅ | **541** | 4 skills K-12 **+ carpeta `evals/`**. «Skills and eval rubrics for K-12 teachers, co-developed with Learning Commons». *Agregado en el pase 17 — nuevo techo permisivo del canal educativo* |
+| https://github.com/learning-commons-org/agent-skills | **Educación** | **Apache-2.0** ✅ | 35 | Las mismas 4 skills del lado del consorcio, con `evals/` de rúbricas de pedagogía, rigor, formato y andamiaje. *Agregado en el pase 17* |
 
 **Los dos números del pase son 58× y 158×.** La biblioteca de skills de la vertical científica tiene **58 veces** las
 estrellas de la educativa, y **158 veces** las del mejor artefacto educativo con licencia permisiva. No es que el

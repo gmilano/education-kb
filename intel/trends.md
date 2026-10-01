@@ -964,6 +964,99 @@ hace **sin garantía de privacidad declarada y sin evaluación de utilidad** —
 
 ---
 
+## 42. La máquina para gobernar el dato del alumno ya estaba instalada, lleva años en producción y es toda copyleft (agregado 2026-10-01, pase 17)
+
+Es la tendencia que da vuelta la del pase 16, y las dos juntas describen la capa completa.
+
+**La tendencia 39 dijo**: la infraestructura de privacidad es la única capa de esta KB donde lo maduro es
+permisivo, y la educación no la usa. Eso era cierto **de las librerías horizontales** —DP, federado, sintéticos—.
+
+**Lo que faltaba mirar es el LMS**, y ahí la forma es la inversa: **Moodle** (GPL-3.0, 7.5k ★, 123.147 commits)
+tiene un **Privacy API en el núcleo que obliga a todos los plugins** a saber exportar y borrar el dato que
+guardan; **Open edX** (AGPL-3.0, 8.2k ★) tiene un toolset de retiro de usuario con seis scripts y API REST de
+retiro masivo que alcanza LMS, foros, credenciales y las demás IDAs. **No es incipiente: está desplegado en
+decenas de miles de instituciones y lleva años en producción.**
+
+**Por qué esto cambia el diagnóstico de la KB y no sólo lo amplía.** Dieciséis pasadas trataron la privacidad
+educativa como una capa **faltante**. No falta: **falta operarla.** El `grep` del pase 16 sobre los ocho archivos
+—`COPPA` 0, `differential privacy` 0, `federated` 0, `FERPA` 1— medía correctamente la ausencia en la KB, y de
+ahí se concluyó ausencia en el sector. **Era ausencia de la KB.**
+
+**Y el copyleft, por única vez en dieciséis pasadas, no es la mala noticia.** No hay que forkear: Moodle se
+**extiende** (un `privacy provider` en el plugin propio) y Open edX se **invoca** (scripts y un endpoint). Lo que
+se entrega es plugin, configuración, evidencia y operación — no una derivada del LMS. El entregable de esta capa
+**casi no es software**, y eso la hace más barata de construir y más difícil de copiar. Ver **P36**.
+
+⚠️ **El límite, y está declarado por el propio proveedor:** *«User retirement is not a compliance guarantee. The
+Open edX software makes no claim of satisfying any law or regulation. It is a configurable toolset that site
+operators can use to help meet the obligations apply to them specifically.»* El cumplimiento es del **operador
+del sitio** — que es precisamente el alcance vendible, y la razón por la que esta capa es servicio y no producto.
+
+## 43. Norteamérica pasó del mandato de política a la prohibición de entrenamiento, y es la primera ley que le toca el modelo de negocio al sector (agregado 2026-10-01, pase 17)
+
+Las tendencias 8 y 40 registraron el reloj regulatorio de Norteamérica como **obligación de tener política
+escrita** (COPPA enmendada, 2026-04-22) y como **exposición ya vencida**. Este pase registra el salto siguiente, y
+es de otra naturaleza.
+
+**California AB 1159** (Asambleísta **Dawn Addis**) pasó la Legislatura el **2026-08-31** y **el gobernador la
+firmó el 2026-09-13**. Lo que hace:
+
+- **Prohíbe** usar información cubierta del alumno —**incluidos identificadores únicos persistentes**— para
+  **entrenar sistemas de AI generativa o desarrollar modelos de AI**, *salvo* que el uso sea **estrictamente en
+  función de un propósito educativo y en beneficio de la institución educativa correspondiente**.
+- **Prohíbe la venta** de datos de alumnos, y pone límites de compartición y retención.
+- Crea la **HESIPA** (*Higher Education Student Information Protection Act*), que **entra en vigor el
+  2027-07-01** y extiende por primera vez el régimen a **educación superior**: ~**2,9 millones** de estudiantes
+  universitarios de California.
+- Mejora **KOPIPA** y **ELPIPA**, y protege categorías sensibles: **estatus migratorio, identidad LGBTQ+ y salud
+  reproductiva**.
+
+**Por qué esto es distinto de todo el reloj regulatorio que esta KB tiene registrado.** El AI Act europeo, la ley
+coreana y la vietnamita regulan **cómo** se usa el sistema: expediente de conformidad, supervisión humana,
+transparencia. **AB 1159 prohíbe un insumo.** No pide documentar el entrenamiento sobre dato del alumno: lo
+prohíbe, con una excepción acotada.
+
+🔴 **Y le pega a un patrón propio de esta KB.** El **P16** —entrenar el estimador de *mastery*— y el **P1** —tutor
+adaptativo con retención real— se apoyan en entrenar modelado del alumno con dato del alumno. **A partir del
+2027-07-01 en California eso es ilícito salvo que se pruebe la excepción**, y la excepción no es «es educativo»
+en abstracto: es **propósito educativo estricto y beneficio de esa institución**. Entrenar un modelo central con
+dato de muchas instituciones para servir a todas **no cae obviamente dentro**, y es la arquitectura por defecto
+de la industria.
+
+**La lectura comercial, y es buena noticia para la arquitectura que esta KB ya eligió:** la excepción es
+exactamente lo que el **aprendizaje federado** y el **entrenamiento on-premise** permiten defender —el dato no
+sale de la institución y el beneficio es de la institución—. El pase 16 abrió esa capa (tendencia 39, **P34**) sin
+saber que dieciocho días antes se había firmado la ley que la vuelve obligatoria en el mercado educativo más
+grande de los Estados Unidos. Ver **P37** y el **gap 30**.
+
+## 44. El incidente de Canvas movió el presupuesto de privacidad educativa más que cualquier fecha regulatoria (agregado 2026-10-01, pase 17)
+
+Esta KB vende cumplimiento contra fechas. Esta tendencia registra que, en Norteamérica, **lo que abrió el
+presupuesto fue un hecho consumado**.
+
+**2026-04-29** y **2026-05-07**: dos incidentes en **Instructure**, con cambios no autorizados en páginas de
+Canvas en el segundo. Interrumpió clases y exámenes finales en EE. UU., incluidas varias **HBCU**.
+**ShinyHunters** reclamó ~**275 millones de registros** de alumnos, docentes y personal: nombres, correos,
+**números de identificación de alumno** y **mensajes privados**. Sin indicio de SSN, fechas de nacimiento ni
+contraseñas. **2026-05-11**: Instructure informó un **acuerdo con los atacantes** para devolución y destrucción
+del dato, con *«shred logs»* como prueba de borrado.
+
+**Canvas sostiene ~41 % de la educación superior del continente y miles de distritos K-12.** Por alcance, es el
+incidente más consecuente que haya tocado al sector.
+
+**Lo que esto cambia en una conversación de venta, y conviene no usarlo mal.** El argumento no es «su proveedor
+es inseguro». Es que **el incidente dejó una pregunta sin respuesta que la institución no puede contestar sola**:
+un acuerdo con el atacante y un log de borrado **no son verificables por la institución**, que sigue siendo la
+responsable del dato y no tiene forma propia de saber qué se exfiltró de *sus* alumnos. La capacidad que faltaba
+el 2026-04-29 —saber qué dato de qué alumno vive en qué sistema, exportarlo y borrarlo con evidencia— es
+exactamente el Privacy API de Moodle y el retiro de Open edX, **operados**.
+
+**Y el contexto que lo vuelve estructural, no anecdótico:** sólo el **11 %** de los distritos de EE. UU. aplica
+medidas rigurosas de evaluación de privacidad antes de adoptar una herramienta de AI, y la violación de FERPA más
+común de 2026 es **docentes pegando dato de alumnos en herramientas de AI de propósito general** sin acuerdo de
+tratamiento — que no ocurre por imprudencia, sino porque **no hay herramienta conforme disponible en el
+distrito**. El incidente de Canvas puso presupuesto donde ya había exposición.
+
 ## Gaps declarados
 
 Huecos confirmados tras buscar, no ausencias por no haber buscado. Un gap informado es información; el silencio se parece demasiado a la cobertura.
@@ -1338,7 +1431,18 @@ Huecos confirmados tras buscar, no ausencias por no haber buscado. Un gap inform
     **La acción para el próximo pase:** buscar explícitamente `curriculum ontology`, `achievement standards`, `learning map` y `prerequisite graph` por país, en el idioma del país, en vez de esperar que aparezcan buscando agentes.
 
 
-20. **Ninguna skill educativa del mundo tiene *eval* publicada, y esta KB tiene las herramientas para medirlas sin usarlas** *(agregado en el pase 12 del 2026-10-01)*. Los **siete** paquetes pedagógicos verificados en este pase —`education-agent-skills` (815 ★), `human-skill-tree` (562 ★), `universal-examprep-skill` (299 ★), `algo-sensei` (281 ★), `universal-diagnostic-tutor-skill` (234 ★), `kaogong-skill` (147 ★), `learning-commons-org/agent-skills` (35 ★)— son **texto de prompt sin versionado semántico, sin suite de regresión y sin medición de efecto pedagógico.**
+20. ~~**Ninguna skill educativa del mundo tiene *eval* publicada, y esta KB tiene las herramientas para medirlas sin usarlas**~~ → **GAP CERRADO EN EL PASE 17 DEL 2026-10-01**, ejecutando la acción que el **gap 26** había dejado escrita (*buscar por `SKILL.md` + dominio educativo, no por repos educativos*). Ya existe skill educativa con *eval* publicada y es **Apache-2.0**:
+
+    - **`anthropics/k12-teacher-skills`** (https://github.com/anthropics/k12-teacher-skills, **Apache-2.0**, **541 ★**) — *«Skills and eval rubrics for K-12 teachers, co-developed with Learning Commons»*. Cuatro skills y una carpeta **`evals/`** con el framework de evaluación y cómo adaptarlo. **Nuevo en esta KB, y es el nuevo techo permisivo del canal educativo: 541 ★ contra los 299 ★ de `universal-examprep-skill`.**
+    - **`learning-commons-org/agent-skills`** (https://github.com/learning-commons-org/agent-skills, **Apache-2.0**, **35 ★**) — las mismas cuatro skills del lado del consorcio, con `evals/` de rúbricas de **pedagogía, rigor, formato y andamiaje del modelo**.
+
+    Las cuatro skills: `k12-lesson-plan-creation`, `k12-lesson-differentiation`, `k12-lesson-prep` y `k12-check-for-understanding` (chequeos formativos de 1–3 ítems para estándares de matemática, con distractores y guía docente).
+
+    ⚠️ **Y el gap se cierra con una corrección propia incorporada, no limpiamente.** Este gap **ya enumeraba** `learning-commons-org/agent-skills` entre sus siete paquetes y lo declaraba *«texto de prompt sin versionado semántico, sin suite de regresión y sin medición de efecto pedagógico»*. **Ese repo tiene `evals/`.** El pase 17 no pudo datar la carpeta, así que **no se sabe si el pase 12 la pasó por alto o si es posterior al pase 12** — se registra la duda en vez de resolverla a favor propio. Lo inequívocamente nuevo es el repo de 541 ★.
+
+    **Lo que el cierre de este gap NO cierra:** el **gap 26** sigue abierto. *«No hay eval publicada»* es falso desde este pase; *«la educación no ocupó el canal»* sigue siendo cierto — **541 ★ contra las 47.200 ★ de `scientific-agent-skills` (MIT) son 87×**, peor que el 58× que midió el pase 12 contra el activo *share-alike*. Y el conjunto nuevo es chico: **cuatro** skills, **K-12**, con el chequeo formativo acotado a **matemática**. El valor es la **licencia y la eval**, no la cobertura.
+
+    *Texto original del gap, conservado:* Los **siete** paquetes pedagógicos verificados en el pase 12 —`education-agent-skills` (815 ★), `human-skill-tree` (562 ★), `universal-examprep-skill` (299 ★), `algo-sensei` (281 ★), `universal-diagnostic-tutor-skill` (234 ★), `kaogong-skill` (147 ★), `learning-commons-org/agent-skills` (35 ★)— Los **siete** paquetes pedagógicos verificados en este pase —`education-agent-skills` (815 ★), `human-skill-tree` (562 ★), `universal-examprep-skill` (299 ★), `algo-sensei` (281 ★), `universal-diagnostic-tutor-skill` (234 ★), `kaogong-skill` (147 ★), `learning-commons-org/agent-skills` (35 ★)— son **texto de prompt sin versionado semántico, sin suite de regresión y sin medición de efecto pedagógico.**
 
     Y lo que lo vuelve un gap y no una queja: **la capa de evaluación para medirlos ya está en esta KB desde el pase 4** —MathTutorBench, UnifyingAITutorEvaluation, EduBench, EduGuardBench— construida para **tutores con backend** y **nunca aplicada a una skill**. Las dos piezas están en el mismo repositorio de conocimiento y no se tocan.
 
@@ -1435,7 +1539,34 @@ Huecos confirmados tras buscar, no ausencias por no haber buscado. Un gap inform
     ⚠️ **Y la generalización que conviene hacer, porque va a volver a pasar:** esta KB abre capas por *capacidad* —qué sabe hacer el software— y recién después, si alguien pregunta, por *régimen*. Pasó con el watermarking en el pase 15 (la KB vendía un deadline sin implementación) y pasó acá al revés (la KB registró una implementación sin su deadline). **Toda capa nueva que toque a un menor necesita las dos lecturas en la misma pasada.**
 
 
+29. **La máquina de privacidad del LMS no habla con ningún agente, y es la tercera capa consecutiva con ese mismo diagnóstico** *(agregado en el pase 17 del 2026-10-01)*. No es un gap de oferta ni de licencia: es un **gap de puente**, del tamaño conocido, y es el tercero idéntico seguido.
+
+    Lo que existe y está maduro: el **Privacy API** de Moodle en el núcleo, que **obliga a todos los plugins** —incluidos los de terceros— a declarar qué dato guardan y a saber exportarlo y borrarlo, más `tool_dataprivacy` (flujo de pedidos, delegado de protección de datos, retención) y `tool_policy`. Y el **user retirement** de Open edX: seis scripts verificados por nombre más `lms/djangoapps/bulk_user_retirement` (API REST de retiro masivo), que alcanza LMS, foros, credenciales y las demás IDAs.
+
+    **Lo que no existe, buscado explícitamente en este pase:** ningún servidor MCP, ninguna herramienta LTI, ningún plugin publicado que conecte un agente al Privacy API de Moodle o al retiro de Open edX. Y —la pieza más chica y más vendible— **ningún `privacy provider` de referencia para un plugin de AI**, que es justamente lo que el núcleo de Moodle exige de cualquier plugin que guarde dato del alumno.
+
+    **Por qué es la tercera vez:** el pase 15 encontró la misma forma en procedencia (SynthID-Text y C2PA existen y son permisivos; el puente al aula no existe) y el pase 16 en privacidad horizontal (ocho librerías maduras, 26.000+ ★, ningún adaptador educativo). **Tres capas seguidas donde la infraestructura está resuelta y lo que falta es integración de tamaño acotado.** Eso ya no es una coincidencia de tres capas: es la descripción del mercado en el que Studios entra. Ver **P36**.
+
+    ⚠️ **Y la mitad que este pase no pudo cerrar:** no se ubicó en abierto un toolset de retiro equivalente para **Canvas** (AGPL-3.0, 6.9k ★). Se declara **no encontrado, no inexistente** — no se auditó el árbol completo del repo en este pase.
+
+30. **Ninguna pieza open source puede probar con qué dato se entrenó un modelo educativo, y California acaba de convertir eso en el requisito que decide si el modelo es legal** *(agregado en el pase 17 del 2026-10-01)*. Es el gap con la **consecuencia arquitectónica más directa** sobre los patrones propios de esta KB, y el primero que nace de una ley ya firmada en lugar de una fecha futura.
+
+    **El requisito.** **California AB 1159**, firmada el **2026-09-13**, prohíbe usar información cubierta del alumno —incluidos **identificadores únicos persistentes**— para **entrenar AI generativa o desarrollar modelos**, *salvo* que el uso sea **estrictamente en función de un propósito educativo y en beneficio de la institución educativa correspondiente**. La **HESIPA** extiende el régimen a **educación superior** desde el **2027-07-01** (~2,9 millones de estudiantes).
+
+    **Lo que falta, y se buscó:** no hay en abierto ninguna pieza que produzca **procedencia del dato de entrenamiento a nivel de alumno y de institución** — ni *manifest* por corrida de entrenamiento, ni atestación de qué registros entraron, ni forma de demostrar que un modelo entrenado se benefició *de esa* institución y no de un agregado multi-institución. El **Privacy API del LMS no alcanza**: borra el registro, **no el modelo**.
+
+    🔴 **Y le pega a dos patrones propios.** **P1** (tutor adaptativo con retención real) y **P16** (entrenar el estimador de *mastery*) se apoyan en entrenar modelado del alumno con dato del alumno. La arquitectura por defecto de la industria —un modelo central entrenado con dato de muchas instituciones para servir a todas— **no cae obviamente dentro de la excepción**. Esta KB tiene que dejar de ofrecer P1 y P16 en California sin la cláusula de procedencia adelante.
+
+    **La buena noticia, y es que la arquitectura ya estaba elegida antes de conocerse la ley.** La excepción es exactamente lo que el **aprendizaje federado** y el **entrenamiento on-premise** permiten defender: el dato no sale de la institución y el beneficio es de la institución. El pase 16 abrió esa capa (**P34**) **dieciocho días después** de que se firmara la ley que la vuelve obligatoria en el mercado educativo más grande de EE. UU., y sin registrarla. Lo que falta no es la arquitectura: es **la evidencia**. Ver **P37** y la tendencia **43**.
+
+
 ## Fuentes
+
+Privacidad del dato en el LMS instalado y canal de *skills* — pase 17 (2026-10-01), repos verificados vía WebFetch: [edx-platform](https://github.com/openedx/edx-platform) y su [scripts/user_retirement](https://github.com/openedx/edx-platform/tree/master/scripts/user_retirement) y [lms/djangoapps/bulk_user_retirement](https://github.com/openedx/edx-platform/tree/master/lms/djangoapps/bulk_user_retirement) · [moodle](https://github.com/moodle/moodle) · [canvas-lms](https://github.com/instructure/canvas-lms) · [openeducat_erp](https://github.com/openeducat/openeducat_erp) · [k12-teacher-skills](https://github.com/anthropics/k12-teacher-skills) · [learning-commons-org/agent-skills](https://github.com/learning-commons-org/agent-skills) · [DeepTutor](https://github.com/HKUDS/DeepTutor) · [education-agent-skills](https://github.com/GarethManning/education-agent-skills)
+
+Regulación y incidentes — pase 17: **California AB 1159 / HESIPA** (firmada 2026-09-13; [comunicado de la oficina de la asambleísta Addis](https://addis.asmdc.org/press-releases/20260910-addis-bill-bolstering-student-data-protection-signed-law), [análisis del comité APCP](https://apcp.assembly.ca.gov/system/files/2026-01/ab-1159-addis-apcp-analysis.pdf), [Golden Data](https://medium.com/golden-data/ab-1159-extending-student-data-privacy-protections-to-higher-education-8676161660e1), [Captain Compliance](https://captaincompliance.com/education/california-ab-1159-a-landmark-student-privacy-bill-that-fixes-the-past-while-struggling-to-catch-the-present/)) · **COPPA enmendada, precisión del pase 17** ([Finnegan](https://www.finnegan.com/en/insights/articles/the-ftcs-updated-coppa-rule-redefining-childrens-digital-privacy-protection.html), [National Law Review](https://natlawreview.com/article/ftc-publishes-final-coppa-rule-amendments), [promise.legal](https://blog.promise.legal/coppa-april-2026-amendments-edtech/)) · **incidente Instructure/Canvas** abril–mayo 2026 ([TechRepublic](https://www.techrepublic.com/fr/article/news-canvas-breach-hackers-deal-275m-records-stolen/), [JD Supra](https://www.jdsupra.com/legalnews/client-alert-instructure-data-breach-7807251/), [Nasdaq](https://www.nasdaq.com/articles/canvas-parent-instructure-hit-cyberattack)) · **Anexo III del AI Act diferido al 2027-12-02** ([Reed Smith](https://www.reedsmith.com/our-insights/blogs/technology-law-dispatch/102nfi5/eu-ai-act-next-level-applies-as-of-2-august-2026/), [sota.io para EdTech](https://sota.io/blog/eu-ai-act-edtech-educational-software-developer-compliance-2026)) · **gobernanza de AI en educación en EE. UU.** ([informe Kiteworks 2026](https://www.kiteworks.com/sites/default/files/resources/kiteworks-report-education-ai-governance-data-security-compliance-2026-report.pdf), [MultiState: cómo los estados regulan la AI en educación](https://multistate.us/insider/2026/4/9/how-states-are-regulating-ai-in-education-this-legislative-session)) · **adopción LATAM** ([Digital Education Council, encuesta LATAM 2026](https://www.digitaleducationcouncil.com/post/92-of-students-and-79-of-faculty-actively-engaging-with-ai-findings-from-ai-in-higher-education-latam-survey-2026)) · **directrices éticas de la Comisión Europea para docentes** ([BABL AI](https://babl.ai/european-commission-updates-ai-ethics-guidelines-to-help-teachers-navigate-ai-and-data-use-in-schools/))
+
+⚠️ *Del pase 17: **`moodle.org`, `docs.moodle.org`, `docs.openedx.org`, `privacyrights.org`, `calmatters.org` y `leginfo.legislature.ca.gov` están bloqueados por el proxy de egreso.** En consecuencia: (a) la cita «User retirement is not a compliance guarantee…» viene de **snippet de búsqueda**, no de fetch de primera mano, y el `README` del directorio en GitHub no la contiene; (b) el **Privacy API de Moodle**, `tool_dataprivacy` y `tool_policy` están **documentados por Moodle vía snippet**, no verificados de primera mano —el árbol de `admin/tool/dataprivacy` dio 404 por cuatro rutas distintas—; (c) **AB 1159** no se leyó en la fuente legislativa oficial: fechas, autoría y texto de la prohibición provienen de múltiples fuentes concordantes. **`curl -sI` devolvió 403 incluso para un repo deliberadamente inexistente**, así que no verifica nada en esta sesión; ver la nota de método del pase 17.*
 
 Privacidad y datos del alumno — pase 16 (2026-10-01), repos verificados vía WebFetch: [PySyft](https://github.com/OpenMined/PySyft) · [Flower](https://github.com/adap/flower) · [OpenFL (deprecado)](https://github.com/securefederatedai/openfl) · [Google DP](https://github.com/google/differential-privacy) · [Opacus](https://github.com/pytorch/opacus) · [TensorFlow Privacy](https://github.com/tensorflow/privacy) · [diffprivlib](https://github.com/IBM/differential-privacy-library) · [OpenDP](https://github.com/opendp/opendp) · [synthcity](https://github.com/vanderschaarlab/synthcity) · [ydata-synthetic](https://github.com/ydataai/ydata-synthetic) · [SDV](https://github.com/sdv-dev/SDV) y su [LICENSE (BUSL 1.1)](https://github.com/sdv-dev/SDV/blob/main/LICENSE) · [PrivGen](https://github.com/Akulen/PrivGen) · [FedGKT](https://github.com/TarunRaina/FedGNN-for-Personalized-Knowledge-Tracing) · [federated-deep-knowledge-tracing](https://github.com/hxwujinze/federated-deep-knowledge-tracing) · [SynEdu-HEDL](https://github.com/drsanjayagal/SynEdu-HEDL)
 
@@ -1542,6 +1673,98 @@ Capa de telemetría (LRS / xAPI) — agregado en el pase 6, **todo verificado de
 Evaluación — agregado en el pase 6, 🔴 **no verificado de primera mano** (dominios bloqueados por el proxy): L2-Bench (arXiv 2607.08842) · metodología de L2-Bench (arXiv 2603.20088) · `benchmarks.elt.edu.oup.com` · dataset en HuggingFace bajo `OUP/`
 
 Regulación y mercado por región — agregado en el pase 6: [MultiState — AI in Education Legislation: 2026 State Policy Trends](https://www.multistate.us/insider/2026/4/9/how-states-are-regulating-ai-in-education-this-legislative-session) · [NASBE — States Take Next Steps on Governing AI Use in Schools](https://www.nasbe.org/states-take-next-steps-on-governing-ai-use-in-schools/) · [ExcelinEd — State K-12 AI Policy in 2026](https://excelined.org/2026/05/26/state-k-12-ai-policy-in-2026-milestones/) · [Latham & Watkins — AI Regulation in APAC](https://www.lw.com/en/insights/ai-regulation-in-apac-diverging-approaches-across-the-region) · [Xenoss — APAC AI regulations](https://xenoss.io/blog/asia-pacific-apac-ai-regulations) · [UNESCO — Observatory on AI in Education for LAC](https://www.unesco.org/en/articles/unesco-launches-observatory-artificial-intelligence-education-latin-america-and-caribbean) · [Compliance & Risks — LATAM AI legislation](https://www.complianceandrisks.com/blog/shaping-the-future-ai-legislative-initiatives-across-latin-america/) · [IDB — An Enabling Regulatory Framework for AI in LAC](https://publications.iadb.org/publications/english/document/An-Enabling-Regulatory-Framework-for-Artificial-Intelligence-in-Latin-America-and-the-Caribbean.pdf) · [Azumo — AI in Education Statistics 2026](https://azumo.com/artificial-intelligence/ai-insights/ai-in-education-statistics) · [Grand View Research — AI Tutors Market](https://www.grandviewresearch.com/industry-analysis/ai-tutors-market-report) · [EdTech Hub — AI in Education in MENA](https://docs.edtechhub.org/lib/EPJAMMH9/download/BHXDDPBB)
+
+## Nota de método del pase 17 (2026-10-01) — el segundo pase que ejecuta una acción escrita por un gap anterior, y van dos de dos
+
+El pase 14 dejó registrado que **no tuvo que inventar la pregunta**: el gap 19 se la había dejado escrita, y
+cerrarla funcionó. Este pase repitió el método **con dos acciones escritas a la vez**, y las dos pagaron:
+
+1. **La del gap 26 (pase 15):** *«medir el canal otra vez, pero buscando por `SKILL.md` + dominio educativo en
+   vez de por repos educativos».* Resultado: **el gap 20 se cerró** y el techo permisivo del canal educativo pasó
+   de 299 a 541 ★.
+2. **La del cierre del pase 16:** *«No se revisó la capa de privacidad de los LMS ya instalados (Moodle, Open
+   edX, Canvas). Es el paso siguiente obvio: el dato del alumno ya está ahí, no en el agente.»* Resultado: una
+   **capa nueva** y dos gaps nuevos (29 y 30).
+
+**La conclusión de método, y ya tiene tres pasadas de evidencia (14, 17 y el fracaso relativo de las que
+inventaron la pregunta):** cuando un gap deja escrita una acción concreta, ejecutarla rinde más que abrir una capa
+nueva por intuición. **Conviene que cada pase cierre dejando una acción textual**, y este pase deja dos, abajo.
+
+### Lo que se verificó de primera mano
+
+Vía **WebFetch contra la página del repo** el 2026-10-01: `openedx/edx-platform` (AGPL-3.0, 8.2k ★, 4.4k forks) y
+su árbol `scripts/user_retirement` (seis scripts leídos por nombre) y `lms/djangoapps/bulk_user_retirement` ·
+`moodle/moodle` (GPL-3.0, 7.5k ★, 123.147 commits) · `instructure/canvas-lms` (AGPL-3.0, 6.9k ★) ·
+`openeducat/openeducat_erp` (LGPL-3.0, 881 ★) · `anthropics/k12-teacher-skills` (Apache-2.0, 541 ★, `evals/`) ·
+`learning-commons-org/agent-skills` (Apache-2.0, 35 ★, `evals/`) · `HKUDS/DeepTutor` (Apache-2.0, **40.6k ★**,
+v1.6.12 del **2026-09-27** — **la fila de la KB ya estaba correcta**).
+
+### ⚠️ Advertencia 1 — `curl -sI` no verifica nada en esta sesión, y ahora está probado con control negativo
+
+El pase 16 anotó que `curl -sI` devolvió 403 en catorce repos y que ninguno era un 404. **Este pase lo probó
+bien:** se consultaron tres repos reales (`instructure/canvas-lms`, `openedx/edx-platform`, `moodle/moodle`) y
+**uno deliberadamente inexistente** (`github.com/this-definitely-does-not-exist-xyz123/nope`). **Los cuatro
+devolvieron 403.** El proxy responde antes de llegar a GitHub, así que **un 403 no distingue un repo vivo de uno
+que no existe** y `curl` no puede usarse para cumplir la regla de «verificar toda URL». La verificación válida en
+esta sesión es **WebFetch contra la página del repo**. Dejar de intentar `curl` ahorra tiempo en cada pase.
+
+### ⚠️ Advertencia 2 — seis dominios bloqueados, y dos afectan a citas que van a una propuesta
+
+Bloqueados por el proxy de egreso en este pase: **`moodle.org`**, **`docs.moodle.org`**, **`docs.openedx.org`**,
+**`privacyrights.org`**, **`calmatters.org`** y **`leginfo.legislature.ca.gov`**.
+
+Las dos consecuencias que importan:
+
+- **La cita de Open edX** (*«User retirement is not a compliance guarantee…»*) se leyó en el **snippet de
+  búsqueda** de `docs.openedx.org`, **no en un fetch de primera mano**, y el `README` del directorio en GitHub
+  —que sí se verificó— **no la contiene**. Se usa en tres archivos de esta KB: resolver contra la fuente oficial
+  antes de ponerla en un documento para un cliente.
+- **El Privacy API de Moodle, `tool_dataprivacy` y `tool_policy`** quedan registrados como **documentados por
+  Moodle vía snippet**, no verificados de primera mano. Se intentó el árbol de `admin/tool/dataprivacy` por
+  **cuatro rutas** (`main` y `master`, árbol y archivo) y **las cuatro dieron 404 vía WebFetch**. Del repo se
+  verificó licencia, estrellas y commits.
+- **AB 1159** no se pudo leer en `leginfo.legislature.ca.gov` ni en las dos fuentes de la organización
+  patrocinante. Fechas, autoría, el texto de la prohibición y la vigencia de HESIPA provienen de **búsqueda
+  extendida con múltiples fuentes concordantes** (incluido el comunicado de la oficina de la asambleísta), no de
+  la fuente legislativa oficial. **Antes de citar la ley en un contrato, leer el texto chaptered.**
+
+### ⚠️ Advertencia 3 — dos correcciones de este pase son sobre la propia KB, no sobre el mercado
+
+- **El conteo de `agents/top.md`.** El encabezado dice 31 y la tabla tiene **32 filas**. No es un error nuevo: es
+  la tercera vez que esta KB se pelea con este conteo (ver la corrección del pase 10). **La reconciliación es que
+  una fila no es un agente:** `education-agent-skills` es una biblioteca de Markdown/YAML y está además en la capa
+  de distribución por *skills* del mismo archivo. **32 filas = 31 agentes + 1 duplicado de otra capa.**
+- **El encuadre COPPA del pase 16.** *«La voz de un menor es dato biométrico regulado desde el 2026-04-22»* tiene
+  la conclusión correcta y la vía equivocada: la FTC **excluyó explícitamente** de la regla final los datos
+  *derivados* de voz, rostro y marcha (estaban en el NPRM de 2024 y se quitaron por amplitud excesiva), mientras
+  **`voiceprints` sí está en la enumeración**. Y un **archivo de audio con la voz de un chico ya estaba cubierto
+  bajo 16 CFR 312.2 antes de las enmiendas** — la exposición es **más vieja**, no más nueva. Ver la corrección
+  completa en `agents/top.md`.
+
+### Lo que este pase NO hizo, declarado como tal
+
+- **No se auditó el árbol de `canvas-lms`.** La ausencia de un toolset de retiro comparable al de Open edX se
+  declara como **no encontrada**, no como inexistente.
+- **No se verificó si `learning-commons-org/agent-skills` tenía `evals/` al momento del pase 12.** No se pudo
+  datar la carpeta. Por eso el cierre del gap 20 registra la duda en vez de culpar al pase 12 o absolverlo.
+- **No se midió el costo de cumplir AB 1159 sobre una arquitectura federada.** Se sabe que la excepción de la ley
+  y el federado encajan conceptualmente; **cuánto cuesta producir la evidencia nadie lo midió acá**, y P37 lo dice
+  en su advertencia en vez de prometer números.
+- **No se buscó jurisprudencia ni sanciones aplicadas** — igual que el pase 16, se registró qué exige cada régimen
+  y desde cuándo, no cómo se está aplicando.
+- **No se revisó el directorio completo de plugins de Moodle.** `moodle.org` está bloqueado; lo que se afirma del
+  ecosistema de plugins viene de snippets.
+
+### 🔵 Las dos acciones que este pase deja escritas para el siguiente
+
+1. **Construir y medir el `privacy provider` de referencia** para un plugin de AI de Moodle (gap 29). Es la pieza
+   más chica de la capa, el núcleo la **exige** a todos los plugins, y no existe publicada. Buscar primero
+   `moodle privacy provider ai plugin` y `moodle local plugin privacy provider example` antes de darla por
+   inexistente.
+2. **Buscar procedencia de dato de entrenamiento** (gap 30) por los términos del dominio de ML, no de educación:
+   `training data provenance`, `dataset attestation`, `model card training data lineage`, `machine unlearning`.
+   **`machine unlearning` es el término que este pase no buscó** y es el que podría tener oferta madura: si existe
+   una librería permisiva de *unlearning* aplicable a modelos de knowledge tracing, el gap 30 cambia de forma.
 
 ## Nota de método del pase 16 (2026-10-01) — dieciséis pasadas preguntando qué sabe hacer el software, y la pregunta que faltaba era con qué derecho toca al alumno
 

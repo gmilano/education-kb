@@ -328,6 +328,35 @@ sobre la base de 2026 de otra firma puede errar por un múltiplo.
 **tutoría inteligente, aprendizaje personalizado, automatización administrativa, evaluación asistida por AI y asistentes
 virtuales de aprendizaje** — las cinco capas que esta KB ya tiene mapeadas.
 
+
+### Agregado en el pase 17 del 2026-10-01 — la dispersión de las cifras globales sigue siendo el dato, y hay una cifra regional que no se debe promediar
+
+Este pase no sale a buscar una cifra global nueva: el pase 13 ya estableció que **la dispersión entre consultoras
+es el dato, no el promedio**, y este pase la confirma sin reducirla. Lo medido en esta ventana, con su fuente
+separada:
+
+| Medición | Valor | Horizonte |
+|---|---|---|
+| AI en educación, global | **6,4 B USD (2025)** → **79,6 B USD (2034)** | CAGR **31,35 %** (2026-2034) |
+| AI en educación, global (otra consultora) | **7,52 B USD (2025)** → **10,6 B USD (2026)** | CAGR **40,9 %** |
+| Tutores AI (submercado) | **1,63 B USD (2024)** → **7,99 B USD (2030)** | — |
+| **Europa** (AI en educación) | **512,6 M USD (2024)** → **1.328,8 M USD (2029)** | CAGR **17,2 %** |
+
+**Las dos cifras globales no son conciliables y no hay que conciliarlas:** una proyecta 79,6 B para 2034 con
+31,35 %, la otra 10,6 B ya en 2026 con 40,9 %. Están midiendo perímetros distintos. **Usar una, citar la fuente,
+y no promediar** — es la regla que el pase 13 dejó y sigue valiendo.
+
+🔴 **Y la cifra que hay que tratar con cuidado especial es la europea.** Un **CAGR de 17,2 %** contra el **41,5 %**
+global que esta KB viene usando no es una variación de método: es menos de la mitad. O el perímetro europeo es más
+conservador, o **Europa está comprando bastante más despacio de lo que su propia regulación haría suponer** —que
+sería coherente con el diferimiento del Anexo III al 2027-12-02—. Se registra como **cifra de una sola fuente** y
+no se promedia con nada. Si una propuesta para EMEA se apoya en el crecimiento del mercado, este número lo
+contradice y conviene saberlo antes de que lo traiga el cliente.
+
+**El dato de adopción que sí es consistente entre fuentes:** el uso estudiantil global pasó de **66 % en 2024** a
+**92 % en 2025**, con ~**86 %** de los estudiantes de educación superior usando AI como socio principal de
+investigación y de generación de ideas al comenzar 2026. La adopción no es el cuello de botella en ninguna región.
+
 ## Players globales
 
 | Empresa | Tipo | Fortaleza | Debilidad |
@@ -670,6 +699,52 @@ jurídico y no innovación, y el ciclo es más corto. Es la única de las cuatro
 depende de convencer a nadie de que la fecha va a llegar. El entregable está empaquetado en **P35**.
 
 
+
+#### Agregado en el pase 17 del 2026-10-01 — el reloj dejó de pedir política y empezó a prohibir un insumo, y hay una brecha ya consumada que movió presupuesto
+
+**Lo nuevo y es lo más importante del pase para esta región: California AB 1159, firmada el 2026-09-13.**
+Prohíbe usar información cubierta del alumno —incluidos **identificadores únicos persistentes**— para
+**entrenar AI generativa o desarrollar modelos**, salvo uso **estrictamente de propósito educativo y en beneficio
+de la institución correspondiente**. Prohíbe además la **venta** de datos de alumnos y pone límites de
+compartición y retención. Crea la **HESIPA**, que **entra en vigor el 2027-07-01** y extiende el régimen por
+primera vez a **educación superior**: ~**2,9 millones** de estudiantes universitarios de California. Mejora
+**KOPIPA** y **ELPIPA** y protege estatus migratorio, identidad LGBTQ+ y salud reproductiva. Autoría:
+Asambleísta **Dawn Addis**; pasó la Legislatura el **2026-08-31**.
+
+**Por qué reencuadra la oportunidad de North America.** Hasta este pase, esta KB vendía a la región *policy packs*
+de cumplimiento distrital (**P7**) — es decir, **documentos**. AB 1159 no se cumple con un documento: **restringe
+una arquitectura**. Un modelo central entrenado con dato de muchas instituciones para servir a todas **no cae
+obviamente dentro de la excepción**, y es la arquitectura por defecto de la industria. Lo vendible pasa a ser
+**federado/on-premise + evidencia de procedencia** (ver **P37** y el **gap 30**).
+
+**El contexto legislativo de la región, medido:** **134 proyectos de ley** sobre AI en educación introducidos en
+**31 estados** en 2026, concentrados en privacidad del dato, restricciones de uso en el aula e integración
+curricular. Además de AB 1159, **Idaho SB 1227** exige protecciones de privacidad del dato para herramientas de
+AI en escuelas.
+
+**El hecho consumado que abrió presupuesto, y no es una fecha:** el incidente de **Instructure/Canvas**
+(**2026-04-29** y **2026-05-07**), con ~**275 millones de registros** reclamados por **ShinyHunters** —nombres,
+correos, **números de identificación de alumno** y **mensajes privados**—, sobre una plataforma que sostiene
+~**41 %** de la educación superior del continente y miles de distritos K-12. El **2026-05-11** Instructure informó
+un **acuerdo con los atacantes** para devolución y destrucción del dato, con *«shred logs»*. Ver la tendencia
+**44** para cómo usar este dato sin que sea contraproducente.
+
+**Adopción, y es alta con gobernanza baja:** **83 %** de los docentes de K-12 usa AI generativa de alguna forma
+(los de secundaria son los más activos, **69 %**), **30 %** de los alumnos de K-12 la usa a diario, y la adopción
+estudiantil general es de **92 %**. Contra eso: **sólo el 11 %** de los distritos de EE. UU. aplica medidas
+rigurosas de evaluación antes de adoptar una herramienta de AI, y **60 %** de los educadores dice que su distrito
+no dejó claras las políticas. La violación de FERPA más común de 2026 es **docentes pegando dato de alumnos en
+herramientas de AI de propósito general** sin acuerdo de tratamiento — y la fuente es explícita en que **no
+ocurre por imprudencia, sino porque no hay herramienta conforme disponible en el distrito**. Esa frase es la
+oportunidad entera de la región en una línea.
+
+**Y la corrección de encuadre del pase 17 sobre COPPA**, que afecta a cómo se cotiza la capa de voz acá: la FTC
+**excluyó** de la regla final los datos *derivados* de voz, rostro y marcha; **`voiceprints` sí está enumerado**;
+y el **audio con la voz de un chico ya estaba cubierto antes de las enmiendas** (16 CFR 312.2). Lo que agrega el
+**2026-04-22** es **política escrita de retención**, prohibición de retención indefinida y borrado al cumplirse el
+propósito. Vender «esto es nuevo desde abril» es vender mal: en la mitad que más importa, el cliente **ya estaba
+incumpliendo antes**.
+
 ### EMEA
 
 **Contexto.** Regulación primero, adopción después — lo inverso a Norteamérica. La fecha de aplicación de sistemas de alto riesgo del Annex III del EU AI Act (que **incluye AI en evaluación**) se corrió de 2026-08-02 a **2027-12-02** por el acuerdo del Digital Omnibus on AI. Las escuelas quedan responsables de auditar el uso de AI. Casos que caen en alto riesgo: **corrección automática de exámenes, aprendizaje adaptativo, proctoring y predicción de deserción** — o sea, casi todo lo interesante. La Comisión Europea con la OCDE y aval del G7 publicó un borrador de AI Literacy Framework para primaria y secundaria.
@@ -966,6 +1041,37 @@ aprendizaje adaptativo, el proctoring y la **predicción de deserción**. El DPI
 conformidad del Anexo III **se construyen con la misma evidencia**, así que el trabajo del primero se capitaliza
 en el segundo.
 
+
+
+#### Agregado en el pase 17 del 2026-10-01 — el diferimiento del Anexo III se confirma por la vía institucional, y la Comisión publicó guía de datos para docentes
+
+**Confirmación, no novedad, y conviene tenerla con la traza institucional completa** porque esta KB la viene
+usando desde el pase 11 para ordenar el *pitch*: el diferimiento de las obligaciones de alto riesgo para los
+sistemas **autónomos del Anexo III** —que es donde cae educación— del **2026-08-02** al **2027-12-02** quedó
+cerrado con el **Parlamento Europeo endosando el acuerdo el 2026-06-16** y el **Consejo dando luz verde final el
+2026-06-29**, sobre el acuerdo político provisional del **2026-05-07**. El instrumento es el **Digital Omnibus on
+AI**, enmienda dirigida al Reglamento (UE) 2024/1689 presentada el **2025-11-19**, cuyo propósito declarado es
+esperar a que los **estándares técnicos armonizados** se pongan al día.
+
+**La lectura comercial no cambia y el pase 17 la refuerza:** el diferimiento **quita el precipicio, no la
+obligación**. Para una institución con AI en admisiones, evaluación o *proctoring*, el expediente de conformidad
+sigue siendo obligatorio — con 14 meses más. Lo que sí sigue **exigible hoy** es la **alfabetización en AI del
+Artículo 4**, aplicable desde el **2025-02-02** a proveedores y *deployers*, lo que incluye a **docentes y
+administrativos**: es la obligación de EMEA que se puede vender sin esperar nada.
+
+**Lo nuevo del pase:** la **Comisión Europea actualizó sus directrices éticas sobre el uso de AI y de datos en la
+enseñanza, dirigidas a docentes**. Importa para el encuadre de una propuesta: la guía de la Comisión trata la AI
+y **el dato** como un mismo problema, que es exactamente la unión que la capa nueva de este pase (privacidad en
+el LMS instalado) permite entregar. Y el recordatorio que la propia guía hace explícito: **el GDPR ya se aplica
+directamente** a cualquier sistema de AI que procese información de alumnos o de personal, **sin esperar al AI
+Act**.
+
+**Cifra de mercado de la región, con su límite declarado:** el mercado europeo de AI en educación se midió en
+**512,6 M USD en 2024** con proyección a **1.328,8 M USD en 2029** (**CAGR 17,2 %**). ⚠️ **Es, con diferencia, el
+CAGR más bajo de las cuatro regiones de esta KB** —contra 41,5 % global— y conviene no promediarlo con el resto:
+o la metodología es más conservadora, o Europa está comprando más despacio de lo que su regulación sugiere.
+Tratarla como cifra de una sola fuente. Mercados que lideran la adopción: **Reino Unido, Alemania, Francia y
+Escandinavia**.
 
 ### APAC
 
@@ -1300,6 +1406,35 @@ El resto del encuadre regional refuerza lo mismo: **sovereignty** es el criterio
 infraestructura insuficiente para procesamiento de datos en tiempo real como barrera. Las dos cosas empujan hacia
 arquitecturas donde el dato se queda quieto.
 
+
+
+#### Agregado en el pase 17 del 2026-10-01 — la región con el currículo obligatorio más agresivo es la que tiene el régimen de dato del alumno más desparejo
+
+**Lo que está mandatado, y es la demanda más firme de las cuatro regiones:** **China** integró la AI al
+**currículo nacional obligatorio** de primaria y secundaria **desde septiembre de 2025** —robótica, pensamiento
+algorítmico y machine learning—. **Corea del Sur** desplegó **libros de texto digitales con AI** para matemática,
+inglés y computación en **marzo de 2025**, con **70 M USD** de infraestructura digital y **760 M USD** de
+formación docente. **Hong Kong** exige **10 a 14 horas** de educación en AI para secundaria básica **desde 2023**,
+cubriendo equidad algorítmica y herramientas generativas; una encuesta local reporta que **más del 90 % de los
+docentes y el 95 % de los alumnos** usan AI a diario. **Australia** aprobó el **National Framework for Generative
+AI in Schools** a fines de 2023, con despliegue por fases desde 2024.
+
+**Y el contrapunto, que es el hallazgo del pase para esta región:** el régimen de protección del dato del alumno
+**no acompaña a la obligación curricular**. Dos cifras que conviene llevar juntas:
+
+- **89 % de 163 aplicaciones educativas** revisadas recolectaba datos de chicos (Human Rights Watch).
+- **84 % de los países carece de marco legal integral** para proteger el dato del alumno (UNESCO, *Global
+  Education Monitoring*).
+
+**Dónde sí hay ejecución, y es el dato accionable de la región:** en **Australia**, la **Privacy Act** y el
+esquema de **Notifiable Data Breaches** están **en aplicación efectiva**, y la **OAIC** viene publicando
+resultados que **cambiaron cómo los proveedores educativos piensan los flujos de datos hacia terceros**. Es el
+único régimen de APAC donde esta KB puede señalar **consecuencia aplicada**, no sólo texto — y por eso es el punto
+de entrada natural de la capa de privacidad del pase 17 en la región.
+
+⚠️ **Advertencia de vigencia sobre las dos cifras de arriba:** el informe de Human Rights Watch es de **2022** y
+el de UNESCO de **2023**. Se citan porque son las mediciones de referencia del sector y no se encontró una
+actualización, **no porque describan 2026**. Si una propuesta se apoya en ellas, decir el año.
 
 ### LATAM
 
@@ -1759,6 +1894,38 @@ periodística y resúmenes institucionales, **no del PDF del MEC**. La fecha, la
 dos posiciones sobre educación infantil y reconocimiento facial son consistentes en todas las fuentes
 localizadas; **el texto exacto de las recomendaciones, no**. Vale una pasada que abra el documento oficial.
 
+
+
+#### Agregado en el pase 17 del 2026-10-01 — la adopción se confirma con una medición grande, y el vacío regulatorio se vuelve el argumento de venta en vez del obstáculo
+
+**La medición nueva, y es la más grande que esta KB tiene para la región:** la encuesta **AI in Higher Education
+LATAM 2026** del **Digital Education Council**, con **más de 30.000 respuestas**, reporta **92 % de los alumnos**
+usando AI en su aprendizaje y **79 % de los docentes** usándola en su enseñanza. La propia fuente observa que
+LATAM aparece **por encima de la tendencia global** en la curva de adopción.
+
+**Esto confirma —con muestra grande— la tijera que esta KB viene describiendo desde el pase 5**, y conviene
+decirla ahora con el número nuevo: la región **no tiene un problema de adopción**. Tiene un problema de
+**gobernanza**, y la tendencia 32 ya le había puesto cifra institucional.
+
+**El vacío, descrito por las fuentes regionales:** ausencia de marcos regulatorios específicos, con
+**heterogeneidad y vacío normativo** que deja sin resolver la responsabilidad por errores algorítmicos, la
+seguridad del dato del alumno y el acceso equitativo. **Paraguay** es el caso límite documentado en este pase:
+**sin estrategia nacional ni ley específica** de AI aplicada a educación, con un **primer proyecto (SOPAIA)
+presentado en 2025**. Las recomendaciones regionales piden estándares éticos y de protección del dato **adaptados
+a la realidad latinoamericana** y regulación **diferenciada y progresiva según capacidad institucional**.
+
+🔴 **Y acá está el giro de encuadre del pase 17, que es la parte accionable.** Catorce pasadas trataron el vacío
+regulatorio de LATAM como un **obstáculo** («no hay marco al que certificar»). **Para la capa de privacidad de
+este pase es lo contrario, y es el mejor argumento comercial de la región:** las piezas que el pase 17 encontró
+—Privacy API de Moodle, retiro de Open edX, autohospedaje con la institución como responsable del dato— **no
+requieren ningún régimen que certificar**. Entregan **capacidad verificable**: saber qué dato de qué alumno vive
+dónde, exportarlo y borrarlo con evidencia. Eso se vende igual de bien sin ley, y **anticipa** la que venga. Es
+el único caso en esta KB donde el vacío normativo **no encarece** la propuesta.
+
+**Y el dato de demanda que lo acompaña:** **61 % de los alumnos teme el mal uso de la AI por parte de sus
+compañeros** — preocupación de integridad y equidad que la capa de autoría y procedencia del pase 15 atiende, y
+que acá tiene medición propia. La advertencia de la fuente conviene citarla literal: **adopción no es
+preparación**; hay una generación usando AI sin necesariamente entenderla.
 
 ## Posicionamiento Globant
 

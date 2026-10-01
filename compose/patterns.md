@@ -1658,3 +1658,118 @@ presentarlos a la **ANPD**.
   trazabilidad; quien declara conformidad es el operador.
 - **No proponer este patrón solo en mercados sin obligación.** Donde no hay regla exigible, el argumento es
   exposición legal y no cumplimiento, y se vende distinto.
+
+---
+
+## P36 — El `privacy provider` del LMS como capa 0 del agente (agregado en el pase 17; **transversal, y es condición de posibilidad de P1, P15, P16 y P34**)
+
+**El problema que resuelve, en una línea:** el dato del alumno ya está en el LMS y el LMS ya tiene la máquina para
+gobernarlo, pero **ningún agente la usa** (gap 29). Y en Moodle no es opcional: el núcleo **obliga a todo plugin**
+que guarde dato del alumno a saber declararlo, exportarlo y borrarlo.
+
+**Por qué es «capa 0» y no un patrón más:** P1, P15, P16 y P34 tocan dato real del alumno. **Ninguno es
+desplegable en una institución que tome en serio un pedido de borrado si el plugin que los sostiene no implementa
+el contrato de privacidad del LMS.** Esto va antes, no después.
+
+### Las piezas, verificadas en el pase 17
+
+| Pieza | Licencia | Rol |
+|---|---|---|
+| https://github.com/moodle/moodle | GPL-3.0 ⚠️ | Privacy API en el núcleo (obliga a los plugins) + `tool_dataprivacy` (pedidos, delegado de protección de datos, retención) + `tool_policy` |
+| https://github.com/openedx/edx-platform | AGPL-3.0 ⚠️ | `scripts/user_retirement` (6 scripts) + `lms/djangoapps/bulk_user_retirement` (API REST de retiro masivo) |
+| https://github.com/openeducat/openeducat_erp | LGPL-3.0 ⚠️ | Variante autohospedada donde **la institución es el responsable del dato**: el argumento FERPA más corto de esta KB |
+| `learnmcp-xapi` + el LRS de la capa del pase 6 | ver `repos/foundations.md` | Donde queda la evidencia de aprendizaje, que es **también** dato personal y entra en el mismo expediente |
+
+### El wiring
+
+1. **Inventario de contextos.** Enumerar dónde vive dato del alumno: LMS, LRS (xAPI), memoria del agente, logs de
+   inferencia. **La memoria del agente es la que siempre se olvida**, y el gap 27 ya midió que ninguno de los 31
+   agentes declara qué hace con ella.
+2. **Implementar el `privacy provider` en el plugin propio** (Moodle): declarar metadatos de qué se guarda,
+   exportar por contexto y borrar por usuario y por contexto. Para un plugin que **no** persiste nada, el
+   `null_provider` es la declaración correcta — y declararlo es trabajo, no es nada.
+3. **Conectar el retiro** (Open edX): orquestar los seis scripts y el endpoint REST desde la automatización del
+   cliente; definir qué pasa con el dato en sistemas externos.
+4. **Política de retención escrita**, con período configurado en `tool_dataprivacy` y borrado al cumplirse el
+   propósito. Es lo que COPPA enmendada exige desde el **2026-04-22** y lo que AB 1159 refuerza.
+5. **Expediente de evidencia:** por cada pedido, qué se exportó, qué se borró, de qué contextos y cuándo.
+
+### Plazo y alcance
+
+**4 a 6 semanas** para una institución con un LMS y un agente. **Casi no es software**: el `privacy provider` es
+la única pieza de código y es chica. El resto es inventario, configuración, política y evidencia — más barato de
+construir y más difícil de copiar que un plugin.
+
+### Dónde se vende primero
+
+**North America**, por dos razones concretas y no por madurez de mercado: el incidente de **Instructure/Canvas**
+(tendencia 44) dejó a las instituciones sin poder responder qué dato de sus alumnos se expuso, y **sólo el 11 %**
+de los distritos tiene evaluación rigurosa de privacidad. Después **LATAM**, donde el **vacío regulatorio juega a
+favor** por única vez: este patrón entrega capacidad verificable sin ningún régimen que certificar (ver
+`intel/market.md`, `### LATAM`). Y **APAC vía Australia**, el único régimen de la región con **consecuencia
+aplicada** (Privacy Act + Notifiable Data Breaches, con resultados publicados por la OAIC).
+
+### ⚠️ Lo que no hay que prometer en este patrón
+
+- **No prometer cumplimiento.** Open edX lo niega por escrito: *«User retirement is not a compliance guarantee.
+  The Open edX software makes no claim of satisfying any law or regulation.»* El cumplimiento es del **operador
+  del sitio**. (Cita de snippet; `docs.openedx.org` bloqueado en esta sesión — resolver contra la fuente oficial
+  antes de citarla.)
+- **No forkear el LMS.** Moodle se extiende, Open edX se invoca. Un fork de AGPL-3.0 es el peor resultado posible.
+- **No asumir paridad en Canvas.** No se verificó un toolset de retiro equivalente. Es alcance a dimensionar.
+- **No prometer borrado de lo que ya salió hacia un modelo.** El Privacy API borra el registro, **no el modelo**.
+  Eso es P37.
+
+---
+
+## P37 — Expediente de procedencia del dato de entrenamiento (agregado en el pase 17; **North America primero, y es obligatorio en California desde el 2027-07-01**)
+
+**El problema:** **California AB 1159** (firmada **2026-09-13**) prohíbe usar información cubierta del alumno
+—incluidos **identificadores únicos persistentes**— para **entrenar AI generativa o desarrollar modelos**, salvo
+uso **estrictamente de propósito educativo y en beneficio de la institución correspondiente**. La **HESIPA**
+extiende el régimen a **educación superior** desde el **2027-07-01**.
+
+**Por qué esto es un patrón y no una nota legal:** la excepción es defendible **sólo si se puede probar**, y
+**ninguna pieza open source produce esa prueba** (gap 30). Entrenar un modelo central con dato de muchas
+instituciones para servir a todas —la arquitectura por defecto de la industria— **no cae obviamente dentro**.
+
+### Las piezas
+
+| Pieza | Licencia | Rol |
+|---|---|---|
+| `Flower` (capa del pase 16) | Apache-2.0 ✅ | Entrenamiento federado: el dato **no sale** de la institución. Es la mitad arquitectónica de la excepción |
+| `Opacus` / `diffprivlib` / Google DP (capa del pase 16) | Apache-2.0 / MIT ✅ | Presupuesto de privacidad medible sobre el entrenamiento |
+| `pyKT` / `pyBKT` | MIT ✅ | El modelo de *mastery* que se entrena, y el que AB 1159 toca |
+| Privacy API de Moodle / retiro de Open edX (**P36**) | GPL-3.0 / AGPL-3.0 ⚠️ | De dónde sale el inventario de qué dato de qué alumno entró |
+| `synthcity` | Apache-2.0 ✅ | Para demo, licitación y desarrollo **sin tocar dato real**: saca de alcance la pregunta entera |
+
+### El wiring
+
+1. **Clasificar el propósito, por institución.** La excepción es *propósito educativo estricto* **y** *beneficio
+   de esa institución*. Si el modelo sirve a varias, hay que poder sostener el beneficio de cada una.
+2. **Federado por defecto** donde haya dato de alumno de California: el dato no sale, el modelo viaja.
+3. **Manifiesto por corrida de entrenamiento:** qué institución, qué contextos, qué rango temporal, qué
+   identificadores (y la constancia de que **no** entraron identificadores únicos persistentes fuera de la
+   excepción), qué presupuesto de privacidad.
+4. **Atar el manifiesto al inventario de P36**, que es la única fuente que sabe qué dato existía.
+5. **Ruta de borrado del modelo**, no sólo del registro: qué pasa cuando un alumno pide borrado y su dato entró a
+   un entrenamiento.
+
+### Plazo y alcance
+
+**6 a 8 semanas** sobre una arquitectura federada que ya exista; **12 a 14** si hay que migrar de entrenamiento
+central a federado.
+
+⚠️ **Lo que este patrón NO puede prometer todavía, y hay que decirlo antes de cotizar:** el paso 5 —deshacer el
+entrenamiento— **no tiene solución verificada en esta KB**. El pase 17 **no buscó `machine unlearning`** y lo deja
+anotado como la acción del próximo pase (ver la nota de método). Hasta entonces, la respuesta honesta a «¿y si un
+alumno pide borrado después de que su dato entrenó el modelo?» es **reentrenar sin ese dato**, con el costo que
+eso tenga, y el manifiesto del paso 3 es lo que vuelve ese reentrenamiento acotado en vez de total. **Tampoco se
+midió el costo de producir la evidencia** sobre una arquitectura federada real.
+
+### Dónde se vende primero
+
+**California**, por fecha: **2027-07-01** para educación superior, ~2,9 millones de estudiantes. Después el resto
+de **North America** como anticipación (**134 proyectos en 31 estados** en 2026). Y **EMEA** como argumento
+complementario: no hay prohibición de insumo equivalente, pero el **GDPR ya se aplica directamente** al
+procesamiento de dato de alumnos y la base legal del entrenamiento es la misma pregunta con otro nombre.
