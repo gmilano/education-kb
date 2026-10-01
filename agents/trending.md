@@ -9,6 +9,82 @@ updated: 2026-10-01
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 > No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
 
+## 2026-10-01 (pase 12) — once pasadas midieron la educación contra sí misma: medida contra la vertical científica, pierde 58× en el canal más barato
+
+Duodécima corrida. Las once anteriores compararon repos educativos **entre sí** —el mejor tutor, el mejor benchmark, el
+mejor LMS— y de ahí salieron todos los "techos" de esta KB. Este pase cambia el denominador: **compara la vertical
+educativa contra otra vertical en el mismo canal de distribución**, y el resultado es el peor número que registró esta KB.
+
+### 🔴 El hallazgo del pase, y es una división
+
+Canal: **Agent Skills**, el estándar de paquetes de instrucciones que cargan Claude Code, Codex, Cursor, Antigravity y
+Gemini CLI. Sin backend, sin despliegue, sin infraestructura: un repo de Markdown. Verificado contra la página de cada
+repo el 2026-10-01.
+
+| Biblioteca de skills | Vertical | Licencia | Stars |
+|---|---|---|---|
+| https://github.com/K-Dense-AI/scientific-agent-skills | Ciencia | **MIT** ✅ | **47.200** |
+| https://github.com/virgiliojr94/book-to-skill | Genérico | **MIT** ✅ | **33.200** |
+| https://github.com/GarethManning/education-agent-skills | **Educación** | CC BY-SA 4.0 ⚠️ | **815** |
+| https://github.com/ZeKaiNie/universal-examprep-skill | **Educación** | **MIT** ✅ | **299** |
+
+**58× contra el activo educativo más grande. 158× contra el mejor educativo que se puede empaquetar.**
+
+La vertical científica construyó en este canal una biblioteca de **181 skills + 100 bases de datos** con licencia MIT
+que declara 160.000 científicos usuarios. La vertical educativa, con un mercado más grande y una base de usuarios
+incomparablemente mayor, puso **165 skills con *share-alike*** y nada más de tamaño comparable.
+
+### Por qué esto no es una curiosidad de estrellas
+
+Las once pasadas anteriores vinieron documentando que lo bueno en educación es **caro de desplegar** (plataformas),
+**copyleft** (accesibilidad, pase 8), **archivado** (analítica institucional, pase 11) o **de licencia trampa**
+(contenido OER, pase 10). El canal de skills no tiene ninguno de esos problemas: es texto, es permisivo en su mayoría,
+no se despliega y **la arquitectura de referencia es pública y MIT**. Es decir: **la capa donde la educación está más
+atrasada es justo la que tiene la barrera de entrada más baja de toda esta KB.**
+
+Para un studio eso invierte la pregunta. No es *"¿qué plataforma adaptamos?"* sino *"¿por qué el activo pedagógico
+permisivo de referencia no existe todavía, si cuesta Markdown?"*
+
+### Los seis paquetes educativos nuevos, verificados uno por uno
+
+| Repo | Licencia | Stars | Qué agrega que la KB no tenía | Región |
+|---|---|---|---|---|
+| https://github.com/24kchengYe/human-skill-tree | **AGPL-3.0** ⚠️ | 562 | Híbrido skills + app: 33 competencias de K-12 a carrera, con repetición espaciada y aula multi-agente. v2.0 del 2026-03-18 | APAC |
+| https://github.com/ZeKaiNie/universal-examprep-skill | **MIT** ✅ | 299 | **Cita de página sobre la diapositiva de la cátedra** — el único de la capa con atribución a la fuente como mecanismo anti-alucinación. Memoria entre sesiones | Global (bilingüe EN/zh) |
+| https://github.com/karanb192/algo-sensei | **MIT** ✅ | 281 | Pistas progresivas en vez de solución + mock interview. Es *empleabilidad*, no currículo | Global |
+| https://github.com/SenmuuuuW/universal-diagnostic-tutor-skill | **MIT** ✅ | 234 | **Diagnóstico antes de instrucción**, sin menú de modos: el agente decide el próximo paso útil | Global |
+| https://github.com/KeWang0622/kaogong-skill | **MIT** ✅ | 147 | Examen de servicio civil chino: 3,7 M de postulantes/año contra cursos de 10–30 k CNY. **Caso claro de skill como sustituto de un mercado de preparación pago** | APAC (China) |
+| https://github.com/learning-commons-org/agent-skills | **Apache-2.0** ✅ | 35 | Material docente **alineado a estándares K-12** con *guardrails* por workflow. El único de la capa pensado para cumplimiento curricular | North America |
+
+Cinco de seis son MIT o Apache-2.0. Suman **996 ★** y ninguno tiene backend.
+
+### El segundo hallazgo, y corrige una conclusión del pase 5
+
+El pase 5 cerró la **capa MCP de mastery** diciendo que eran "cinco reinvenciones del mismo patrón" con techo de **1 ★**.
+Eso sigue siendo cierto para los cinco, y es incompleto: existe
+**[anki-mcp-server](https://github.com/ankimcp/anki-mcp-server) — MIT, 499 ★, 254 commits, v0.22.0**, puente MCP hacia
+**Anki**.
+
+La diferencia no es calidad: **los cinco inventan su modelo de dominio y Anki ya es el estándar instalado.** Leído con
+`py-fsrs` (MIT, el algoritmo que reemplaza a SM-2, ya en la KB), la conclusión operativa cambia de signo: **no construir
+el motor de repetición espaciada; conectarse al que el alumno ya tiene abierto.** Ver **P28**.
+
+### Lo que este pase deja abierto
+
+**Ninguna de las siete skills educativas tiene *eval* publicada.** Son prompts sin versionado semántico, sin suite de
+regresión y sin medición de efecto. Y esta KB **ya tiene** la capa de evaluación para medirlas (MathTutorBench,
+UnifyingAITutorEvaluation, EduBench, EduGuardBench, del pase 4) — construida para tutores con backend y **nunca aplicada
+a una skill**. Las dos piezas están en el mismo repositorio de conocimiento y no se tocan. Ese es el gap 20.
+
+### Nota de método, para que un pase futuro no se equivoque
+
+- **El agregador de estrellas miente en esta categoría.** Los dos repos baseline dieron **26.5k** y **13.7k** vía
+  agregadores de terceros, y **47.2k** y **33.2k** en la página del repo el mismo día. Con `book-to-skill` sumando
+  +6.3k ★/mes, el dato de tercero no está viejo: **está mal**. Sólo vale la página del repo.
+- **Un 403 de `curl` no es un 404.** Se pasaron las **164 URLs de GitHub de toda esta KB** por `curl -sL` y
+  **las 164 dieron 403**: es el proxy del entorno, no *link rot*. **Esas 164 URLs no quedaron revalidadas en este pase**
+  — no hay evidencia de que estén caídas ni de que estén vivas. La verificación de primera mano se hace con **WebFetch**.
+
 ## 2026-10-01 (pase 11) — diez pasadas preguntaron qué hace el agente y ninguna qué decide: aparece la capa predictiva, y es la peor abastecida de la KB
 
 Undécima corrida. Las diez anteriores cubrieron el agente, su contenido, su telemetría, su evaluación, su seguridad

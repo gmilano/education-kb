@@ -278,6 +278,50 @@ la intervención reduce el abandono, y **casi ninguno puede probarlo** porque no
 el diseño experimental *y* la protección de datos del comité de ética ya resueltos. Convierte un entregable de
 opinión en un entregable con evidencia, y el costo de agregarlo es un plug-in.
 
+## Capa de repetición espaciada (SRS) desplegada — agregada en el pase 12 del 2026-10-01
+
+Once pasadas registraron el LMS (Moodle, Open edX, Sakai, Canvas), el SIS (OpenSIS, RosarioSIS, GegoK12), el
+autograding, la telemetría, el video y el portal. **Ninguna registró la pieza que el alumno abre todos los días por
+decisión propia:** el sistema de repetición espaciada. Es la única plataforma de esta KB cuya adopción no la decide la
+institución.
+
+### La plataforma, verificada el 2026-10-01
+
+| Plataforma | Repo | Licencia | Stars | Qué es | Superficie de customización |
+|---|---|---|---|---|---|
+| **Anki** | https://github.com/ankitects/anki | **AGPL-3.0-or-later** ⚠️ (porciones de contribuyentes bajo BSD-3; verificado en el archivo `LICENSE`, no en el README) | **31.7k** | El SRS de facto: active recall + repetición espaciada. Rust + Python + TypeScript. **+3 M de usuarios sólo en Android** | **AnkiConnect** (add-on, v25.11.9.0 del 2025-11-02): API HTTP local sobre la que hablan las integraciones externas |
+| **anki-mcp-server** | https://github.com/ankimcp/anki-mcp-server | **MIT** ✅ | **499** | Puente MCP: crear, leer y revisar mazos en lenguaje natural desde un agente. TypeScript, v0.22.0, 254 commits | Es él mismo la capa de integración |
+
+### 🔴 La condición de licencia, y es la que decide si esto se puede proponer
+
+**Anki es AGPL-3.0-or-later.** Eso, en el resto de esta KB, sería motivo de advertencia fuerte (ver la «Nota sobre
+licencias» en `repos/foundations.md`). Acá no lo es, y la razón es arquitectónica, no legal-creativa:
+
+- **No se forkea Anki ni se enlaza contra su código.** Se le habla por **AnkiConnect**, que es una API HTTP sobre
+  `localhost`, desde un **proceso separado** (`anki-mcp-server`, MIT).
+- Esa es exactamente la regla 2 que esta KB ya tenía escrita: *«la lógica propietaria vive en un servicio aparte — el
+  agente es un proceso separado con su propia licencia, hablando por API/MCP»*.
+- **Anki corre en la máquina del alumno, no en infraestructura del cliente.** No hay distribución de un derivado y no
+  hay servicio de red operado por el cliente: los dos disparadores de la AGPL quedan afuera.
+
+⚠️ **Lo que sí hay que revisar con legal:** empaquetar, redistribuir o preinstalar Anki (o un derivado, o un *fork* con
+marca del cliente) como parte del entregable. Ahí la AGPL aplica de lleno. Proponerlo como **cliente que el alumno ya
+tiene instalado** es otra cosa.
+
+### Por qué esta capa conecta con dos piezas que la KB ya tenía sueltas
+
+1. **`py-fsrs` (MIT) ya estaba en `agents/top.md` y no tenía dónde enchufarse.** FSRS —el *Free Spaced Repetition
+   Scheduler*, que reemplaza a SM-2— **está integrado en Anki desde la versión 23.10 (2023)** como opción del
+   programador. Es decir: el algoritmo moderno que esta KB venía citando **ya está desplegado en millones de
+   dispositivos**, y `py-fsrs` sirve para razonar/simular del lado del servidor, no para reimplantarlo.
+2. **La capa MCP de mastery del pase 5 tenía techo de 1 ★.** Sus cinco repos inventan grafo, scheduler y esquema
+   propios. `anki-mcp-server` (499 ★) no inventa nada: expone el que ya existe. **Es la corrección práctica del gap 5.**
+
+### Cómo se propone, en una línea
+
+Como **capa de retención del alumno** encima de cualquiera de los LMS de esta KB: el LMS acredita, el agente enseña, y
+**Anki es donde el conocimiento se queda** — sin que el cliente opere un servidor más. Ver el patrón **P28**.
+
 ## Cómo elegir
 
 | Si el cliente necesita… | Arrancar de |

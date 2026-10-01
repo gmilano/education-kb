@@ -272,6 +272,41 @@ programa de conformidad, y es el argumento del patrón **P25**. 🔴 **Verificad
 independientes y coincidentes; `eur-lex.europa.eu` y `digital-strategy.ec.europa.eu` están bloqueados por el proxy
 de egreso de esta sesión, así que el texto primario no se leyó.**
 
+### Agregado en el pase 12 del 2026-10-01 — el canal nuevo no tiene cifra de mercado, y el barrido regional llegó a saturación
+
+Dos cosas que conviene registrar como tales, porque las dos cambian cómo se lee el resto de esta sección.
+
+**1. La capa de distribución por *skills* de agente no tiene *market size*, y no es un dato que falte: es que no es un
+mercado.** Es un canal. Nadie cobra por una skill —son repos de Markdown bajo MIT— así que no hay TAM que citar y
+sería inventar una cifra ponerle una. Lo que sí es medible es la **ocupación del canal**, y ahí el número es duro
+(verificado contra la página de cada repo el 2026-10-01):
+
+| Vertical | Biblioteca de referencia | Licencia | Stars |
+|---|---|---|---|
+| Ciencia | `K-Dense-AI/scientific-agent-skills` | **MIT** ✅ | **47.200** |
+| Genérico | `virgiliojr94/book-to-skill` | **MIT** ✅ | **33.200** |
+| **Educación** | `GarethManning/education-agent-skills` | CC BY-SA 4.0 ⚠️ | **815** |
+| **Educación (mejor permisivo)** | `ZeKaiNie/universal-examprep-skill` | **MIT** ✅ | **299** |
+
+**58× y 158×.** La implicancia comercial no es de tamaño de mercado sino de **costo de entrada**: construir el activo
+que falta cuesta contenido pedagógico y Markdown, no plataforma. Ver `agents/top.md` y `repos/trending.md`.
+
+**2. El barrido regulatorio por región de este pase confirmó lo que la KB ya tenía y no agregó nada nuevo — salvo en
+APAC.** Se corrieron las cuatro consultas regionales (North America, EMEA, APAC, LATAM) sobre adopción, regulación y
+players 2026. Resultado honesto:
+
+| Región | Qué devolvió el barrido del pase 12 |
+|---|---|
+| North America | **Confirmación.** 134 proyectos de ley en 31 estados, los mandatos de MD/ID/OK/VA, el 86% de adopción, el marco estudiantil de AASA — **todo ya estaba registrado.** Nada nuevo |
+| EMEA | **Confirmación.** Anexo III alto riesgo, Digital Omnibus, fechas 2027-12-02 / 2028-08-02 — ya estaba, y con identificadores citables (Reglamento (UE) 2026/1744). Nada nuevo |
+| APAC | **Un hallazgo nuevo:** la oficialización de los libros de texto digitales en Japón (abajo, en `### APAC`) |
+| LATAM | **Confirmación** (Observatorio UNESCO, sandbox de la ANPD brasileña, Uruguay y el Convenio del Consejo de Europa, CENIA). Y **un vacío nuevo y medido** en la capa de skills (abajo, en `### LATAM`) |
+
+Esto no es un pase fallido: es la señal de que **la capa regulatoria de esta KB está saturada para esta cadencia.** Doce
+pasadas en dos días sobre las mismas cuatro consultas devuelven lo mismo. El valor marginal ahora está en capas nuevas
+(como la de este pase), no en repetir el barrido. **Conviene bajar la frecuencia del barrido regulatorio a semanal** y
+gastar las corridas en capas sin cubrir.
+
 ## Players globales
 
 | Empresa | Tipo | Fortaleza | Debilidad |
@@ -451,6 +486,29 @@ modelo), que ya resolvía esta misma forma en la capa de grading.
 Good, Universidad de Chicago, 70 ★) — **licencia `NOASSERTION` y último push 2018**, así que su valor es
 metodológico. La región que tiene el mercado no tiene el software mantenido.
 
+#### Agregado en el pase 12 del 2026-10-01 — el mandato de política distrital crea demanda de material auditable, y hay un repo Apache-2.0 hecho para eso
+
+El barrido regulatorio de este pase **confirmó** el cuadro que la KB ya tenía para North America (134 proyectos en 31
+estados; MD, ID, OK y VA exigiendo guía estatal **y** adopción obligatoria de política distrital; OK y MD exigiendo
+supervisión humana y prohibiendo que la AI decida sobre el alumno en instancias de alto impacto; CA e ID sobre
+privacidad de datos del alumno y prohibición de entrenar modelos con ellos). **No apareció nada nuevo.**
+
+Lo que sí cambia es que ahora hay una pieza open source que se mapea directo contra ese mandato:
+
+**[learning-commons-org/agent-skills](https://github.com/learning-commons-org/agent-skills) — Apache-2.0 ✅, 35 ★.**
+Skills para que un asistente produzca material docente **alineado a estándares K-12**, donde cada skill empaqueta
+instrucciones, referencias y *guardrails* del workflow. Es el único artefacto de la capa de skills pensado para
+**cumplimiento curricular** y no para rendimiento del alumno.
+
+**Por qué encaja con la demanda de esta región y no con otra.** Un distrito con política de AI obligatoria tiene que
+poder responder tres preguntas sobre cualquier material generado: contra qué estándar se alineó, qué fuente usó y quién
+lo revisó. Un tutor conversacional no responde ninguna. Una skill con *guardrails* y referencias explícitas responde
+las tres, y **deja rastro en texto revisable** — que es exactamente la forma de evidencia que pide un mandato de
+supervisión humana. Apache-2.0 permite empaquetarla en un entregable cerrado.
+
+**Tamaño de la oportunidad, en una línea:** 35 ★ es nada. El mandato es de cuatro estados y creciendo. **La brecha
+entre la demanda regulada y la oferta open source en esta capa es la más grande de la región.** Ver **P27**.
+
 ### EMEA
 
 **Contexto.** Regulación primero, adopción después — lo inverso a Norteamérica. La fecha de aplicación de sistemas de alto riesgo del Annex III del EU AI Act (que **incluye AI en evaluación**) se corrió de 2026-08-02 a **2027-12-02** por el acuerdo del Digital Omnibus on AI. Las escuelas quedan responsables de auditar el uso de AI. Casos que caen en alto riesgo: **corrección automática de exámenes, aprendizaje adaptativo, proctoring y predicción de deserción** — o sea, casi todo lo interesante. La Comisión Europea con la OCDE y aval del G7 publicó un borrador de AI Literacy Framework para primaria y secundaria.
@@ -595,6 +653,32 @@ transparencia y evaluación de conformidad. **Eso es el entregable, y tiene fech
 producto. Es la misma forma que el pase 8 encontró en accesibilidad (P17) y el pase 4 en evaluación auditable (P4),
 y ahora aplica a la capa con más presupuesto del sector. **Con una ventaja que las otras dos no tienen: acá los
 datos de referencia ya son europeos y ya son CC BY.**
+
+#### Agregado en el pase 12 del 2026-10-01 — EMEA es dueña de la categoría educativa de skills a nivel mundial, y su activo no se puede empaquetar
+
+El barrido regulatorio de este pase **confirmó** sin agregar: Anexo III de alto riesgo sobre educación, Digital Omnibus
+(Reglamento (UE) 2026/1744) y las fechas 2027-12-02 y 2028-08-02 ya estaban registradas con identificadores citables.
+**Nada nuevo en regulación EMEA.**
+
+El hallazgo de este pase para la región es de oferta, y es incómodo:
+
+**La biblioteca de skills educativas más grande del mundo es europea, y es la que no se puede usar en un entregable
+cerrado.** [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) —autor del
+Reino Unido, **815 ★, 165 skills en 20 dominios**— es **CC BY-SA 4.0**: *share-alike*, los derivados heredan la
+obligación. Es 2,7× el siguiente activo educativo de la capa y **58× más chico** que la biblioteca científica
+equivalente, que sí es MIT.
+
+Esto **refuerza** la lectura que el pase 4 dejó escrita para la región (*«EMEA produce la capa de evaluación y de
+conformidad, no productos de tutoría»*) y le agrega un matiz: EMEA también produce **la capa pedagógica**, y la publica
+con licencia de contenido cultural en vez de licencia de software. Es coherente con una región donde el instrumento
+dominante es regulatorio, no comercial.
+
+**La oportunidad, y es específica de EMEA:** el Anexo III exige, para evaluación de resultados de aprendizaje,
+trazabilidad de **cómo** se tomó la decisión pedagógica. Una skill es texto auditable —se lee, se versiona, se
+diferencia— y por eso es el artefacto **más fácil de documentar** frente a un auditor del AI Act, mucho más que un
+modelo fine-tuneado. Pero con *share-alike* encima, el derivado tiene que publicarse igual. **El entregable EMEA
+defendible es una biblioteca pedagógica permisiva propia, construida con la arquitectura de la científica (MIT) y no
+derivada de la europea.** Ver **P27**.
 
 ### APAC
 
@@ -741,6 +825,46 @@ declarada. En APAC hay **política y plataforma**, y se encuentran buscando por 
 **un engagement de currículo nacional en APAC ya tiene la ontología MIT publicada y validada formalmente.** Y del
 lado de FP, el software existe con 374 estrellas y lo único que le falta es gobernanza — exactamente el aporte que
 el gap 2 recomienda para LATAM, aplicable acá.
+
+#### Agregado en el pase 12 del 2026-10-01 — 🔴 Japón oficializó el libro de texto digital por ley, y es el único hallazgo regulatorio nuevo de las cuatro regiones
+
+**El dato.** Japón modificó la **Ley de Educación Escolar** para poner el libro de texto digital **en igualdad legal
+con el papel**. Secuencia verificada:
+
+| Hito | Fecha |
+|---|---|
+| Aprobación del proyecto en Gabinete | **2026-04-07** |
+| Sanción parlamentaria (plenario de la Cámara de Consejeros) | **junio de 2026** |
+| Entrada en vigor de la ley | **abril de 2027** |
+| Directrices del **MEXT** con grados y materias habilitadas | **otoño de 2026** (anunciadas) |
+| Aplicación plena en primaria | **año académico 2030** |
+
+Dos consecuencias operativas, y las dos son de negocio:
+
+1. **El libro de texto digital pasa a ser elegible para distribución gratuita** en primaria, secundaria básica y media
+   pública. Es presupuesto público asignado a contenido digital, no a pilotos.
+2. **Quien elige formato es el consejo educativo local** —papel, digital o **híbrido**—, no el ministerio. Es decir:
+   **cientos de decisiones de compra descentralizadas** entre 2027 y 2030, cada una necesitando material digital que
+   cumpla la directriz del MEXT.
+
+**Por qué esto es el complemento exacto de lo que el pase 10 encontró.** El pase 10 abrió la capa de contenido
+curricular (OER) y su trampa de licencia. Japón acaba de convertir el contenido curricular digital en **objeto de
+compra pública con calendario legal**. Y el pase 12 trae la máquina que lo procesa:
+[`book-to-skill`](https://github.com/virgiliojr94/book-to-skill) (MIT, 33.2k ★) convierte un título en skill
+estructurada con carga por capítulo. ⚠️ Con la advertencia del pase 10 intacta: **la licencia de la fuente se verifica
+antes de convertir, porque el Markdown de salida no arrastra el `LICENSE`.**
+
+#### Y APAC es donde se está construyendo la capa de skills educativas
+
+Cuatro de los siete paquetes educativos verificados en este pase son de origen APAC o bilingüe EN/zh:
+`human-skill-tree` (562 ★, **AGPL-3.0** ⚠️), `Study-Mate` (482 ★, **MIT** ✅), `universal-examprep-skill` (299 ★,
+**MIT** ✅, con material de MIT 6.006 y Yale PSYC 110) y `kaogong-skill` (147 ★, **MIT** ✅).
+
+`kaogong-skill` merece una línea aparte como **caso de sustitución de mercado**: apunta al examen de servicio civil
+chino —**3,7 millones de postulantes por año contra cursos presenciales de 10.000 a 30.000 CNY**— y se publica gratis
+bajo MIT. Es el ejemplo más claro de esta KB de una skill atacando directamente el precio de un mercado de preparación
+pago. Sumado a que DeepTutor (Hong Kong, 40.6k ★) y OpenMAIC (Tsinghua, 39.7k ★) ya lideran la tabla principal:
+**APAC no está adoptando esta capa, la está produciendo.**
 
 ### LATAM
 
@@ -945,6 +1069,41 @@ hace para los tutores, aplicada a la capa que la universidad sí tiene presupues
 
 Y hay una contraparte institucional para sostenerlo más allá del día 90: el **Observatorio de IA en Educación para
 América Latina y el Caribe** de UNESCO (lanzado 2026-04-14 en la CEPAL), ya registrado en el pase 7.
+
+#### Agregado en el pase 12 del 2026-10-01 — 🔴 El vacío más barato de cerrar de toda esta KB, y está en la región de origen de Globant
+
+El barrido regulatorio de este pase **confirmó** el cuadro LATAM que la KB ya tenía (Observatorio de UNESCO sobre AI en
+Educación para América Latina y el Caribe, lanzado el **2026-04-14**; *sandbox* regulatorio de la **ANPD** brasileña
+vigente **hasta diciembre de 2026**; Uruguay como primer país de la región en firmar el Convenio Marco del Consejo de
+Europa sobre AI; **CENIA** en Chile; y los instrumentos de Brasil, Chile, Colombia y México avanzando a velocidades
+distintas). **Nada nuevo en regulación.**
+
+El hallazgo del pase para LATAM es un **vacío, y está medido**:
+
+**No existe ninguna biblioteca de skills educativas de origen LATAM, ni ninguna en español.** De los siete paquetes
+pedagógicos verificados en este pase, el desglose por región es: **EMEA 1** (Reino Unido, 815 ★), **APAC 2–4**
+(562, 482, 299, 147 ★), **North America 1** (35 ★), **LATAM 0**.
+
+**Qué se buscó, para que el vacío sea informado y no silencio.** Se consultó explícitamente por skills educativas en
+español y de origen LATAM. Lo que devuelve la consulta es **material en español *sobre* skills** —tutoriales, guías de
+inicio, el `README.es.md` de `awesome-agent-skills`— y **ninguna biblioteca de skills pedagógicas en español**. O sea:
+la región ya consume la documentación del estándar y no publicó contenido vertical en él.
+
+**Por qué este vacío vale más que los otros once que registró esta KB.** Todos los gaps anteriores de LATAM exigían
+algo caro: plataforma desplegada (pase 10), dataset con licencia (pase 11), implementación de estándar certificada
+(pase 9), tecnología asistiva (pase 8). **Este exige Markdown.** Y los tres insumos están disponibles:
+
+1. **La arquitectura de referencia es pública y MIT** — `scientific-agent-skills` (47.2k ★) muestra cómo se estructura
+   una biblioteca vertical de 181 skills; se copia la forma, no el contenido.
+2. **El contenido pedagógico en español existe en la región** y es donde Globant ya opera.
+3. **La única pieza educativa LATAM que la KB tiene con licencia limpia marca el camino:** `tero` (MIT, Chile, K-12
+   chileno, *offline-first*) ya demostró que un artefacto educativo chico y permisivo de origen chileno entra en esta
+   KB por mérito propio.
+
+⚠️ **Y la advertencia que vuelve creíble la propuesta:** ninguna de las siete skills educativas del mundo tiene *eval*
+publicada (gap 20). Una biblioteca LATAM que **nazca con suite de evaluación** —usando lo que esta KB ya mapeó en el
+pase 4: MathTutorBench, UnifyingAITutorEvaluation, EduBench, EduGuardBench— no sería la octava de la lista: sería **la
+primera medible**. Ese es el diferencial, no el idioma. Ver **P27**.
 
 ## Posicionamiento Globant
 

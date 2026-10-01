@@ -14,6 +14,11 @@ updated: 2026-10-01
 
 **29 agentes reales verificados.** Ordenados por stars.
 > *Pase 11 del 2026-10-01:* +3 en la tabla principal (**learn**, **Gnos**, **Alvarmethod**) y una **capa predictiva / early warning** nueva al final del archivo, que es la capa peor abastecida de esta KB y la que el Anexo III del EU AI Act nombra de forma explícita.
+> *Pase 12 del 2026-10-01:* +1 en la tabla principal (**Study-Mate**), +1 en la capa MCP (**anki-mcp-server**, que
+> multiplica por 499 el techo de esa capa) y +1 en evaluación (**ArguLens**). Se abre la **capa de distribución por
+> skills de agente** al final del archivo: es la primera capa de esta KB que se mide contra otra vertical, y la
+> educación pierde 58× contra la científica en el mismo canal. El conteo de 29 de la tabla principal se verificó a
+> mano en este pase y **estaba bien**.
 > *Corrección de conteo del pase 10:* el encabezado decía **24** y la tabla tenía **25** filas antes de este pase. El desfasaje venía de pasadas anteriores que agregaron filas sin actualizar el total. Contado a mano: **26** con la fila que agrega el pase 10.
 > Bloom y OpenTutorAI-CE se agregaron en la segunda pasada del 2026-09-30.
 > **Claw-ED** se agregó en la tercera pasada del 2026-09-30 — es el primer agente *teacher-facing* open source de la KB.
@@ -38,7 +43,7 @@ updated: 2026-10-01
 | llamatutor | https://github.com/Nutlope/llamatutor | 🚫 **sin licencia** | 2.1k | TypeScript | Tutor personal sobre **Llama 3 70B + Together.ai**: Next.js + Tailwind, Exa.js para búsqueda web y Helicone para observabilidad. Es una aplicación de producción, no una librería. 132 commits. 🚫 **No reutilizable:** se pidió `/blob/main/LICENSE` y devuelve **404** — sin archivo de licencia el default legal es todos los derechos reservados, con 2.1k estrellas o con ninguna. *Agregado en el pase 7* | Sin región declarada |
 | ChatTutor | https://github.com/HugeCatLab/ChatTutor | **AGPL-3.0** ⚠️ | 1.3k | TypeScript | Tutor **visual e interactivo**: canvas de matemática para ecuaciones y diagramas y mapas mentales para visualizar conocimiento, **expuestos al LLM como herramientas que usa mientras explica** — es el único agente de esta KB que le da al modelo instrumentos de pizarrón en vez de sólo texto. Desplegado en `chattutor.app` con API key del usuario. README bilingüe inglés/中文. *Agregado en el pase 7* | Sin país declarado (documentación EN/中文) |
 | tutor-gpt | https://github.com/plastic-labs/tutor-gpt | **GPL-3.0** ⚠️ | 931 | TypeScript | Compañero de aprendizaje con **razonamiento de teoría de la mente**: modela el estado mental del alumno —qué entiende, qué cree mal, con qué intención pregunta— y **reescribe sus propios prompts** en función de eso. Es un eje **complementario** al knowledge tracing de `pyKT`/`pyBKT`, no un sustituto: aquél modela qué conceptos domina, éste qué está pensando. Next.js + Supabase, inferencia vía OpenRouter, personalización delegada a **`Honcho`** (ver `repos/foundations.md`). 356 commits. ⚠️ Su versión hospedada se llama **"Bloom"** — **no es el `Bloom` de esta tabla**, ver la advertencia abajo. *Agregado en el pase 7* | **North America (EE. UU.)** — el perfil de la organización declara `United States of America` y `plasticlabs.ai` |
-| education-agent-skills | https://github.com/GarethManning/education-agent-skills | CC BY-SA 4.0 ⚠️ | 814 | Markdown/YAML | 165 skills pedagógicas evidence-grounded en 20 dominios (pedagogía, learning science, currículo, evaluación) para orquestar agentes. Corre en Claude Code, Claude.ai vía MCP, Codex y Hermes | EMEA (autor UK) |
+| education-agent-skills | https://github.com/GarethManning/education-agent-skills | CC BY-SA 4.0 ⚠️ | 815 | Markdown/YAML | 165 skills pedagógicas evidence-grounded en 20 dominios (pedagogía, learning science, currículo, evaluación) para orquestar agentes. Corre en Claude Code, Claude.ai vía MCP, Codex y Hermes | EMEA (autor UK) |
 | py-fsrs | https://github.com/open-spaced-repetition/py-fsrs | MIT | 499 | Python | Free Spaced Repetition Scheduler: modelo DSR (Difficulty, Stability, Retrievability) con 21 parámetros optimizables. La pieza de scheduling que le falta a casi todo tutor LLM | Global (org open-spaced-repetition) |
 | Educhain | https://github.com/satvik314/educhain | MIT | 389 | Python | Genera contenido educativo con GenAI: MCQs, lesson plans con 8 enfoques pedagógicos, flashcards. Ingesta desde YouTube, imágenes, URLs y PDFs | APAC (Build Fast with AI, India) |
 | pyKT | https://github.com/pykt-team/pykt-toolkit | MIT | 441 | Python | Librería de **knowledge tracing** sobre PyTorch: preprocesamiento estandarizado de 7+ datasets, 5 escenarios de predicción y 10+ modelos DLKT comparables entre sí. 811 commits. **No es un agente: es la pieza que le falta a los agentes** — el modelo de estado del alumno que ningún tutor LLM tiene | APAC (Jinan University / Guangdong Institute of Smart Education, China) |
@@ -60,6 +65,7 @@ updated: 2026-10-01
 | OpenDidactia | https://github.com/nmarafo/OpenDidactia | CC BY-SA 4.0 ⚠️ | 0 | Markdown/YAML | Esquemas curriculares estructurados (estándar OKF) para que un agente genere **Programaciones Didácticas y Situaciones de Aprendizaje** conformes a la ley educativa española LOMLOE. Cubre las 17 comunidades autónomas y 2 ciudades autónomas, de Infantil a Bachillerato, FP y enseñanzas de régimen especial, con DUA y rúbricas analíticas. No es código: es el *esquema de salida* que hace auditable a un agente docente | EMEA (España) |
 | mentar | https://github.com/avps82/mentar | **AGPL-3.0-only** ⚠️ | 1 | Python | Tutor local-first para chicos: corre entero en la máquina del hogar, sin cuentas ni datos que salgan del dispositivo. 934 nodos de concepto en 157 plantillas curriculares (Australia ACARA v9, India, Singapur, EE. UU.). **El detalle de diseño que importa:** el LLM sólo explica y un *checker determinístico* corrige cada respuesta, así que el modelo no puede darle por buena una respuesta incorrecta a un chico. Último commit 2026-08-26 | Sin región verificada (currículo AU primero, pero el repo no declara ubicación) |
 | tero | https://github.com/marcorojasb/tero | **MIT** ✅ | 0 | Python | Agente docente de aula para K-12 **chileno**, de terminal y **offline-first**, sobre AWS Bedrock + Strands Agents SDK. Prepara material pedagógico y **adapta contenido para alumnos con necesidades especiales**. La decisión de diseño que lo hace citable: *«el agente propone, el docente decide»* — **el modelo no escribe archivos sin aprobación humana**. Anclado a instrumentos nacionales: MINEDUC, **Decreto 83** (educación especial) y **Ley 21.719** (protección de datos). 111 commits. **0 ★: referencia de arquitectura y contraparte local, no dependencia de producto.** *Agregado en el pase 8* | LATAM (Chile) |
+| Study-Mate | https://github.com/Miaotofu01/Study-Mate | **MIT** ✅ | 482 | Python | Compañero de estudio con planificación curricular, instrucción y aprendizaje por proyectos en matemática y CS. *Workflow* integrado + motor de cursos HTML; corre sobre DeepSeek Harness, Google Antigravity y plugins de ChatGPT. 298 commits | APAC |
 
 ## ⚠️ Colisión de nombres: hay dos "Bloom" y son proyectos distintos (pase 7)
 
@@ -82,6 +88,7 @@ Las dos aluden a Benjamin Bloom, así que la colisión va a seguir apareciendo e
 |--------|------|----------|-------|-----------|
 | **pyKT** | https://github.com/pykt-team/pykt-toolkit | MIT ✅ | 441 | *(también en la tabla principal)* Benchmark de **knowledge tracing**, no de calidad conversacional: 10+ modelos DLKT sobre 7+ datasets con preprocesamiento estandarizado. Es el más maduro de esta capa por un orden de magnitud |
 | **MathTutorBench** | https://github.com/eth-lre/mathtutorbench | CC BY 4.0 ⚠️ | 42 | Capacidades pedagógicas *abiertas* de un tutor LLM en matemática: 3 habilidades docentes de alto nivel y 7 tareas concretas, con reward models entrenados para medir calidad de enseñanza y leaderboard publicado. **EMNLP 2025 (Oral)** |
+| **ArguLens** | https://github.com/wwrwbs/AI_AWE | Apache-2.0 ✅ | 2 | **Scoring automático de ensayo argumentativo + feedback *label-aware***, descompuesto en tres piezas auditables: clasificador de *discourse moves* (Qwen2.5-7B con LoRA), scorer LightGBM sobre 31 features lingüísticas y generador de feedback (Qwen2.5-14B). UI Gradio con scoring por lote y desglose descargable. Respaldo: arXiv 2608.17356. ⚠️ **2 ★ y 2 commits — grado investigación, no producción**; su valor es la arquitectura separada scorer/feedback, no el repo |
 | **UnifyingAITutorEvaluation** | https://github.com/kaushal0494/UnifyingAITutorEvaluation | CC BY-SA 4.0 ⚠️ | 32 | Taxonomía de 8 dimensiones pedagógicas para respuestas de tutor ante el error de un alumno. Publica **MRBench** en tres versiones: V1 (192 diálogos × 8 dim.), V2 (200 × 8), V3 (300 × 4). **NAACL 2025, Senior Area Chair Award** |
 | **EduBench** | https://github.com/ybai-nlp/EduBench | MIT ✅ | 29 | **El primer benchmark pedagógico de esta KB que no es de matemática y no tiene fricción de licencia.** 9 contextos educativos y 4.000+ situaciones, evaluadas en 12 dimensiones agrupadas en adaptabilidad al escenario, exactitud factual/razonamiento y aplicación pedagógica. Cinco escenarios de alumno (QA, corrección de error, provisión de ideas, apoyo personalizado, apoyo emocional) y **cuatro de docente**, entre ellos generación de preguntas y **Automatic Grading**. Publica modelo (`DirectionAI/EDU-Qwen2.5-7B`) y dataset. **ACL 2026**. *Agregado en el pase 5* |
 | **SafeTutors** | https://github.com/RadiantCrystal/SafeTutors | MIT ✅ | 0 | **Seguridad pedagógica**, categoría nueva: no mide si el tutor acierta, mide si enseña mal siendo amable. Taxonomía de **11 dimensiones de daño y 48 sub-riesgos** derivada de ciencias del aprendizaje, sobre **5.955 instancias** (3.135 single-turn + 2.820 diálogos multi-turn) en matemática, física y química. 11 modelos evaluados (10 open-weight, 1 cerrado), de 3.8B a 72B. **EMNLP 2026**. *Agregado en el pase 5* |
@@ -132,6 +139,9 @@ El pase 4 cerró el gap 5 diciendo: *"El hueco exacto es `pyKT` detrás de MCP, 
 | https://github.com/tejpalvirk/student | MIT ✅ | 1 | 6 | Grafo de conocimiento académico (cursos, trabajos, exámenes, conceptos) con persistencia entre sesiones |
 | https://github.com/znecho9/knowledge-forest-mcp | Apache-2.0 ✅ | 0 | 3 | Árboles de prerequisitos + **mastery con evidencia obligatoria**: exige desempeño novedoso, sin asistencia y a libro cerrado antes de declarar dominio |
 | https://github.com/radhepa/Teacher-MCP | MIT ✅ | 0 | 2 | MCP-first con memoria SQLite persistente, personas docentes y andamiaje en tres niveles. Incluye un Claude Skill que corre solo o contra el server |
+| https://github.com/ankimcp/anki-mcp-server | **MIT** ✅ | **499** | 254 | Puente MCP hacia **Anki**, el SRS de facto: crear, leer y revisar mazos en lenguaje natural. TypeScript, v0.22.0, en beta declarada. **No es un servidor de mastery: es el único de esta capa con tracción real** |
+
+> **Agregado en el pase 12 del 2026-10-01 — el techo de esta capa no era 1 ★, y la diferencia es de qué lado está el estándar.** Las cinco reinvenciones de mastery no pasan de 1 ★; `anki-mcp-server` tiene **499 ★ y 254 commits**. La diferencia no es calidad de código: es que los cinco **inventan** su modelo de dominio (grafo propio, SM-2 propio, esquema propio) mientras Anki **ya es el estándar instalado** de repetición espaciada y el MCP sólo lo expone. Leído junto con `py-fsrs` (MIT, en la tabla principal, que es el algoritmo moderno que reemplaza a SM-2), la lectura para un studio se invierte: **no construir el motor de mastery, conectarse al que el alumno ya usa.** Ver el patrón **P28**.
 
 **Cómo leerlo.** Cinco autores sin relación llegaron al mismo patrón en la misma ventana: eso es **validación de mercado**, no ruido. Y el hueco de ingeniería queda mejor documentado que antes: los tres más grandes suman **3 estrellas y 23 commits**, y se verificó de primera mano en este pase que **`pyKT` sigue sin mencionar MCP ni interfaz de serving** (441 ★, 811 commits).
 
@@ -388,3 +398,82 @@ datasets de knowledge tracing son NonCommercial (gap 11). **En esta capa es exac
 exportar la conclusión de una capa a la otra.** Ver `repos/foundations.md`, capa de datos de deserción: los dos
 corpus canónicos de predicción de abandono son **CC BY 4.0**, con uso comercial permitido. Acá no falta el dato:
 **falta el software, y falta quien lo mantenga.**
+
+## Capa de distribución por *skills* de agente — agregada en el pase 12 del 2026-10-01
+
+Las pasadas 7 y 8 anotaron dos veces, al pasar, que había pedagogía distribuida **como skill de agente** en vez de
+como producto (`education-agent-skills` primero, `Bloom` en modo CLI después), y las dos veces lo trataron como la
+anécdota de un repo. **Este pase la trata como una capa y la mide.** El resultado es un número, no una impresión.
+
+### 🔴 El hallazgo del pase: la vertical científica construyó en este canal una biblioteca de 47.2k ★ con MIT; la educativa tiene 815 ★ y es *share-alike*
+
+Mismo estándar (**Agent Skills**), mismos harnesses (Claude Code, Codex, Cursor, Antigravity, Gemini CLI), misma
+mecánica de distribución —un repo de Markdown, sin backend, sin despliegue, sin dependencias que auditar—. Verificado
+de primera mano contra la página de cada repo el 2026-10-01:
+
+| Biblioteca | Vertical | Licencia | Stars | Contenido |
+|---|---|---|---|---|
+| https://github.com/K-Dense-AI/scientific-agent-skills | Ciencia | **MIT** ✅ | **47.2k** | 181 skills + 100+ bases de datos científicas + 70+ workflows de paquetes Python. Declara 160.000+ científicos usuarios |
+| https://github.com/virgiliojr94/book-to-skill | Genérico (libro → skill) | **MIT** ✅ | **33.2k** | Convierte PDF/EPUB/DOCX en skill estructurada con carga por capítulo y cheatsheet |
+| https://github.com/GarethManning/education-agent-skills | **Educación** | **CC BY-SA 4.0** ⚠️ | **815** | 165 skills pedagógicas evidence-grounded en 20 dominios |
+| https://github.com/ZeKaiNie/universal-examprep-skill | **Educación** | **MIT** ✅ | **299** | Tutor de examen que enseña desde las diapositivas de la cátedra, con cita de página |
+
+**Los dos números del pase son 58× y 158×.** La biblioteca de skills de la vertical científica tiene **58 veces** las
+estrellas de la educativa, y **158 veces** las del mejor artefacto educativo con licencia permisiva. No es que el
+canal no funcione para educación: es que **la educación no lo ocupó.**
+
+**Y el techo educativo es justamente el que no se puede empaquetar.** `education-agent-skills` —815 ★, 165 skills, el
+activo más grande de esta capa— es **CC BY-SA 4.0**: *share-alike*, los derivados heredan la obligación. Esta KB ya lo
+tenía marcado en «Advertencias de licencia», pero no había registrado la consecuencia estructural: **el mejor activo
+de la capa de distribución más barata de la industria es el que no entra en un entregable cerrado**, y el mejor
+permisivo es un orden de magnitud más chico.
+
+### Los paquetes educativos verificados, y seis de los siete son nuevos en esta KB
+
+Todos verificados vía WebFetch contra la página del repo el 2026-10-01 (licencia, stars y descripción leídas de
+primera mano):
+
+| Nombre | Repo | Licencia | Stars | Lenguaje | Qué hace | Origen (región) |
+|---|---|---|---|---|---|---|
+| education-agent-skills | https://github.com/GarethManning/education-agent-skills | CC BY-SA 4.0 ⚠️ | 815 | Markdown/YAML | 165 skills pedagógicas en 20 dominios. El dominio 20 es *student-facing*, el resto apunta a docentes y diseñadores | EMEA (autor UK) — *ya estaba en la KB* |
+| human-skill-tree | https://github.com/24kchengYe/human-skill-tree | **AGPL-3.0** ⚠️ | 562 | TypeScript | 33 skills de K-12 a carrera e inteligencia social, sobre ciencia cognitiva. Híbrido: skills **+** app web (aula multi-agente, repetición espaciada). v2.0 del 2026-03-18 | APAC |
+| universal-examprep-skill | https://github.com/ZeKaiNie/universal-examprep-skill | **MIT** ✅ | 299 | Markdown | Enseña desde las diapositivas de la cátedra **citando página**, recorta figuras, evalúa con la práctica real y mantiene memoria entre sesiones. Optimizado para modelos chicos y baratos | Global (bilingüe EN/zh; material de MIT 6.006 y Yale PSYC 110) |
+| algo-sensei | https://github.com/karanb192/algo-sensei | **MIT** ✅ | 281 | Markdown | Mentor de algoritmos y DSA: pistas progresivas y reconocimiento de patrones en vez de la solución. Mock interviews, code review, 5 lenguajes | Global |
+| universal-diagnostic-tutor-skill | https://github.com/SenmuuuuW/universal-diagnostic-tutor-skill | **MIT** ✅ | 234 | Markdown | Tutor *diagnosis-first* para STEM y CS: decide el próximo paso útil, verifica comprensión y construye dominio. Sin menú de modos ni comandos | Global |
+| kaogong-skill | https://github.com/KeWang0622/kaogong-skill | **MIT** ✅ | 147 | Markdown | Tutor para el **examen de servicio civil chino**: aptitud, redacción, entrevista, actualidad. Declara compatibilidad con 40+ clientes de agente | APAC (China) |
+| agent-skills (Learning Commons) | https://github.com/learning-commons-org/agent-skills | **Apache-2.0** ✅ | 35 | — | Skills para que un asistente produzca material docente **alineado a estándares K-12**. Cada skill empaqueta instrucciones, referencias y *guardrails* de un workflow docente | North America (foco estándares K-12 de EE. UU.) |
+
+**Cinco de los siete son MIT o Apache-2.0 y suman 996 ★.** Son empaquetables. El problema no es la licencia del
+conjunto: es que **el único que tiene cobertura curricular ancha (165 skills) es el que tiene *share-alike*.**
+
+### La forma del segmento, y repite el patrón de los pases 8 y 9 con el signo invertido
+
+Los pases 8 (accesibilidad) y 9 (credenciales) encontraron la misma figura: *lo maduro es copyleft, lo permisivo es
+diminuto*. Esta capa la repite —`education-agent-skills` (815 ★, CC BY-SA) y `human-skill-tree` (562 ★, AGPL-3.0)
+arriba; MIT abajo—, **pero con una diferencia que la vuelve la capa más accionable de la KB:** acá el costo de
+construir el activo permisivo que falta no es una plataforma ni un dataset. Es **Markdown**. La biblioteca científica
+de 47.2k ★ es texto estructurado, y su estructura es pública y MIT: se puede copiar la arquitectura sin copiar el
+contenido.
+
+### La nota de método del pase, y hay que dejarla escrita porque va a volver a pasar
+
+Dos advertencias de verificación, las dos verificadas contra la fuente:
+
+1. **Los agregadores de estrellas van atrasados, y en esta categoría el atraso es de ~2×.** Para los dos repos
+   baseline, la búsqueda web devolvió cifras de terceros (ossinsight, sourcepulse) de **26.5k** y **13.7k**, mientras
+   la página del repo —leída el mismo día— dice **47.2k** y **33.2k**. En una categoría que crece a +6.3k ★/mes,
+   **la cifra del agregador no es una cifra vieja: es una cifra equivocada.** Regla: en esta capa, sólo vale la página
+   del repo.
+2. **`curl` no sirve para verificar URLs en este entorno, y un 403 no es un 404.** Se corrieron las **164 URLs de
+   GitHub de toda esta KB** por `curl -sL`: **las 164 devolvieron 403**, uniformemente — es el proxy del entorno
+   bloqueando `curl` hacia github.com, no *link rot*. **No hay ninguna evidencia de que esas 164 URLs estén caídas, y
+   tampoco se las revalidó en este pase.** La verificación de primera mano en esta KB se hace con **WebFetch**, que
+   sí resuelve. Un pase futuro que vea 403 masivos no debe interpretarlos como enlaces muertos.
+
+### Lo que esta capa no tiene, y es el gap que abre el pase 12
+
+**No hay una sola skill educativa con *eval* publicada.** Los siete paquetes son texto de prompt sin versionado
+semántico, sin suite de regresión y sin medición de efecto pedagógico. La capa de evaluación que esta KB mapeó en el
+pase 4 (MathTutorBench, UnifyingAITutorEvaluation, EduBench, EduGuardBench) **nunca se aplicó a una skill**: evalúa
+tutores con backend. Es decir: la capa más barata de distribuir es también la única sin control de calidad, y las
+herramientas para medirla ya existen en esta misma KB y no están conectadas. Ver el patrón **P27**.

@@ -8,6 +8,66 @@ updated: 2026-10-01
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 
+## 2026-10-01 (pase 12) — el repo educativo que más crece no es una plataforma ni un tutor: es un archivo Markdown, y la vertical científica ya ocupó ese canal
+
+Duodécima corrida. El pase 10 cambió el indicador (estrellas → despliegue real) y el 11 cambió el filtro (licencias
+permisivas más allá de MIT/Apache/BSD). **Este pase cambia la unidad de análisis: deja de contar repos que se
+despliegan y empieza a contar repos que se *cargan*.**
+
+### 🔴 El hallazgo del pase, y es una comparación entre verticales
+
+El estándar **Agent Skills** —bundles de instrucciones que el agente carga on-demand, leídos por Claude Code, Codex,
+Cursor, Antigravity, Gemini CLI y Copilot CLI— es hoy el canal de distribución de conocimiento de dominio con la
+barrera de entrada más baja que existe: **sin backend, sin despliegue, sin dependencias.** Verificado contra la página
+de cada repo el 2026-10-01:
+
+| Repo | Vertical | Licencia | Stars | Velocidad |
+|---|---|---|---|---|
+| https://github.com/K-Dense-AI/scientific-agent-skills | Ciencia | **MIT** ✅ | **47.200** | Lanzado en octubre de 2025; declara 160.000+ científicos usuarios |
+| https://github.com/virgiliojr94/book-to-skill | Genérico | **MIT** ✅ | **33.200** | **+6.300 ★ en 30 días** |
+| https://github.com/GarethManning/education-agent-skills | **Educación** | CC BY-SA 4.0 ⚠️ | **815** | 149 commits, mantenimiento activo |
+| https://github.com/ZeKaiNie/universal-examprep-skill | **Educación** | **MIT** ✅ | **299** | — |
+
+**La vertical científica construyó acá una biblioteca MIT de 47.200 ★ con 181 skills y 100+ bases de datos. La
+educativa tiene 815 ★ con *share-alike*.** Es 58×, y 158× contra el mejor educativo empaquetable.
+
+### Por qué un repo de 33.200 ★ que "sólo convierte PDFs" es el hallazgo estructural
+
+`book-to-skill` convierte PDF/EPUB/DOCX en una skill estructurada —`SKILL.md` con modelos mentales (~4k tokens), un
+archivo por capítulo cargado on-demand, glosario, patrones, cheatsheet— y **procesa local, sin subir la fuente**.
+
+Puesto al lado de lo que esta KB ya sabe, cierra un circuito que estaba abierto:
+
+- El **pase 10** encontró la capa de contenido curricular (OER) y su trampa de licencia: los bundles de OpenStax en
+  GitHub dicen **CC BY-NC-SA** en los tres títulos revisados.
+- El **pase 12** encuentra la máquina que convierte ese contenido en artefacto de agente.
+- **Y la trampa del pase 10 se vuelve más cara acá, no menos:** `book-to-skill` es la vía más rápida para convertir un
+  libro en skill, y por eso es también la vía más rápida para **empaquetar contenido NonCommercial dentro de un
+  entregable de cliente sin que se note**. El output es Markdown: no arrastra el archivo `LICENSE` de la fuente.
+  **Regla operativa: la licencia se verifica en la fuente antes de convertir, porque después de convertir no se ve.**
+
+### El segundo hallazgo: la capa MCP de mastery tenía techo de 1 ★ porque se buscó mal
+
+El pase 5 registró cinco servidores MCP de mastery (0–1 ★ cada uno) y concluyó "cinco reinvenciones del mismo patrón".
+Correcto y parcial: existe **https://github.com/ankimcp/anki-mcp-server — MIT, 499 ★, 254 commits, v0.22.0**.
+
+Los cinco **inventan** el modelo de dominio (grafo propio, SM-2 propio, esquema propio). Anki **ya está instalado** en
+la máquina del alumno y el MCP sólo lo expone. Con `py-fsrs` (MIT, el algoritmo moderno que reemplaza SM-2, ya en la
+KB), la recomendación se invierte: **no construir el motor de repaso, conectarse al que el alumno ya usa.** Ver **P28**.
+
+### Nota de método, y corrige cómo se leyeron las cifras en pasadas anteriores
+
+| Repo | Agregador de terceros | Página del repo (mismo día) | Error |
+|---|---|---|---|
+| `K-Dense-AI/scientific-agent-skills` | 26.500 ★ (ossinsight) | **47.200 ★** | −44% |
+| `virgiliojr94/book-to-skill` | 13.700 ★ (sourcepulse) | **33.200 ★** | −59% |
+
+**En una categoría que suma +6.300 ★/mes, el dato del agregador no está viejo: está mal.** Sólo vale la página del repo.
+
+Y el entorno: **`curl` hacia github.com devuelve 403 acá.** Se pasaron las **164 URLs de GitHub de toda esta KB** y
+**las 164 dieron 403**, uniformemente — proxy, no *link rot*. **Esas 164 URLs quedan sin revalidar en este pase**: no
+hay evidencia de que estén caídas ni de que estén vivas. La verificación de primera mano se hace con **WebFetch**.
+
 ## 2026-10-01 (pase 11) — el LMS que faltaba estaba a la vista y lo escondía una línea de licencia: ECL-2.0
 
 Undécima corrida. El pase 10 cambió el indicador —de estrellas a despliegue real— y encontró Sunbird y Ed-Fi.

@@ -973,3 +973,157 @@ el que ningún ministerio quiere pagar dos veces. **El pase 11 encontró que, pa
 - **APAC:** es la única región con la pieza **MIT**, completa y formalmente validada. Un engagement de currículo nacional empieza con el artefacto más caro ya resuelto y sin fricción de licencia.
 - **EMEA:** España tiene el esquema, pero es **CC BY-SA**. Se puede usar como referencia y **hay que decidir adelante** si el esquema derivado se publica o se construye uno propio — es una decisión comercial, no técnica, y tomarla tarde cuesta.
 - **LATAM:** la BNCC de Brasil es el equivalente obvio y **nadie verificó si está publicada en formato estructurado.** Si no lo está, construirla con autoría local es exactamente el tipo de aporte que el gap 2 recomienda, y es reusable en todo el país.
+
+## P27 — Biblioteca de skills pedagógicas permisiva y con *eval* desde el día uno (agregado en el pase 12; **LATAM primero por autoría, North America y EMEA por demanda regulada**)
+
+**El problema que resuelve.** Todos los patrones anteriores de esta KB arrancan desplegando algo: Moodle con plugin
+(P1), OpenMAIC (P1), Sunbird forkeado (P23), Ed-Fi como columna de datos (P24). Eso pone el primer entregable a
+semanas de distancia y mete al cliente en costo de infraestructura antes de que haya visto valor pedagógico. **El
+estándar Agent Skills permite entregar pedagogía sin desplegar nada** —el artefacto es Markdown y corre en el harness
+que el cliente ya paga— y el pase 12 midió que **la vertical educativa no ocupó ese canal: pierde 58× contra la
+científica.** El hueco no es técnico ni de licencia: está vacío.
+
+**Y el diferencial del patrón no es publicar la biblioteca: es publicarla medida.** Ninguno de los siete paquetes
+pedagógicos que existen en el mundo tiene *eval* (gap 20). Una biblioteca que nazca con suite de evaluación no es la
+octava de la lista: es la primera medible.
+
+### Las piezas
+
+| Pieza | Licencia | Qué aporta |
+|---|---|---|
+| **scientific-agent-skills** · https://github.com/K-Dense-AI/scientific-agent-skills | **MIT** ✅ | **La arquitectura de referencia**, y es copiable: 181 skills + 100+ bases de datos + 70+ workflows, con 47.2k ★ de validación. **Se copia la estructura, no el contenido** |
+| **learning-commons-org/agent-skills** · https://github.com/learning-commons-org/agent-skills | **Apache-2.0** ✅ | El patrón de *guardrails* por workflow docente y alineación a estándares K-12. Es el único de la capa pensado para cumplimiento curricular, y es empaquetable |
+| **book-to-skill** · https://github.com/virgiliojr94/book-to-skill | **MIT** ✅ | Pipeline contenido → skill: `SKILL.md` con modelos mentales (~4k tokens), un archivo por capítulo on-demand, glosario, patrones, cheatsheet. **Procesa local** |
+| **UnifyingAITutorEvaluation** · https://github.com/kaushal0494/UnifyingAITutorEvaluation | CC BY-SA 4.0 ⚠️ | Taxonomía de evaluación de tutor. **Usar para medir internamente, no empaquetar** |
+| **MathTutorBench** · https://github.com/eth-lre/mathtutorbench | CC BY 4.0 ⚠️ | Capacidades pedagógicas abiertas en matemática. Atribución, sin *share-alike* |
+| **EduGuardBench** · https://github.com/YL1N/EduGuardBench · **EduBench** · https://github.com/ybai-nlp/EduBench | ver sus filas en `agents/top.md` | Seguridad pedagógica y cobertura de escenarios educativos |
+| **universal-examprep-skill** · https://github.com/ZeKaiNie/universal-examprep-skill | **MIT** ✅ | Referencia de **cita de página sobre la fuente** como mecanismo anti-alucinación. Es el patrón a copiar, y es permisivo |
+| ⚠️ **education-agent-skills** · https://github.com/GarethManning/education-agent-skills | **CC BY-SA 4.0** ⚠️ | 165 skills en 20 dominios. **Referencia de cobertura de dominios — NO derivar de acá si el entregable es cerrado** |
+
+### El wiring
+
+1. **Fijar la taxonomía de dominios antes de escribir una skill.** Se lee `education-agent-skills` (20 dominios) y
+   `scientific-agent-skills` (181 skills) **como mapa de cobertura**, y se decide el subconjunto propio. ⚠️ Leer no es
+   derivar: el texto se escribe de cero con autoría propia, porque CC BY-SA contamina el derivado.
+2. **Estructura por skill, copiada de la arquitectura MIT:** `SKILL.md` con el modelo mental y el índice (~4k tokens),
+   un archivo por sub-tema cargado on-demand, glosario, patrones y cheatsheet de decisión. Es lo que hace que una
+   biblioteca de 100+ skills no reviente el contexto.
+3. **Los *guardrails* van en la skill, no en el prompt del usuario**, con el patrón de `learning-commons-org/agent-skills`
+   (Apache-2.0, derivable): qué verificar primero, qué ignorar, qué formato de salida, contra qué estándar se alineó.
+4. **Atribución obligatoria a la fuente**, con el patrón de `universal-examprep-skill`: toda afirmación curricular cita
+   el material de origen con página. Es lo que convierte la skill en artefacto auditable y no en opinión del modelo.
+5. **Contenido:** `book-to-skill` convierte el corpus del cliente —o un OER con licencia apta— en skill estructurada.
+   ⚠️ **La advertencia del pase 10 es acá donde más pega:** la licencia de la fuente se verifica **antes** de convertir,
+   porque el Markdown de salida **no arrastra el archivo `LICENSE`** y después no se ve. Los bundles de OpenStax en
+   GitHub dicen **CC BY-NC-SA** en los tres títulos revisados.
+6. **La suite de eval es parte del repo, no un anexo.** Cada release corre MathTutorBench (capacidad pedagógica),
+   EduGuardBench (seguridad) y la taxonomía de UnifyingAITutorEvaluation (calidad de feedback) **contra las skills**,
+   y publica el resultado versionado. Esto no existe hoy en ninguna de las siete bibliotecas del mundo.
+7. **Versionado semántico y changelog pedagógico.** Una skill es un artefacto de comportamiento: si cambia, cambia la
+   enseñanza. Sin SemVer no hay forma de que una escuela declare qué versión usó en el ciclo.
+
+### Plazo y alcance
+
+- **2-3 semanas** para una biblioteca vertical de 10-15 skills de una materia y un nivel, con eval corriendo en CI.
+  **No hay infraestructura que desplegar**, y ése es el punto: es el entregable más rápido de toda esta KB.
+- **8-10 semanas** para cobertura de 60-80 skills multi-materia con suite de eval completa y changelog pedagógico.
+- **Costo de infraestructura: cero.** Corre en Claude Code, Codex, Cursor, Antigravity, Gemini CLI o Copilot CLI — los
+  seis leen el mismo `SKILL.md`, así que el artefacto es portable y no genera *lock-in* de harness.
+
+⚠️ **Lo que este patrón NO entrega, y hay que decirlo antes de cotizar.** Una skill no produce evidencia de
+aprendizaje: no hay telemetría, no hay credencial y no hay registro institucional. Si el cliente necesita acreditar,
+este patrón es la **capa pedagógica** y hay que combinarlo con P15 (telemetría a LRS) y P19-P21 (credenciales). Un
+piloto de skills es barato de empezar y **no es acreditable tal como viene.**
+
+### Dónde se vende primero
+
+- **LATAM:** es el vacío medido del pase 12 —**cero** bibliotecas de skills educativas de origen LATAM o en español,
+  contra 1 de EMEA, 4 de APAC y 1 de North America— y es la región de origen de Globant, donde el contenido pedagógico
+  en español ya está. Es el gap más barato de cerrar de los veinte declarados y el único donde la autoría regional es
+  en sí misma el diferencial. `tero` (MIT, Chile) ya demostró que un artefacto chico y permisivo de origen chileno
+  entra en esta KB por mérito propio.
+- **North America:** es donde está la **demanda regulada**. Cuatro estados (MD, ID, OK, VA) exigen política distrital
+  de AI con supervisión humana, y una skill con *guardrails* y atribución **deja rastro en texto revisable** — la forma
+  de evidencia que ese mandato pide. La oferta open source en esa capa es un repo de 35 ★.
+- **EMEA:** el Anexo III exige trazabilidad de **cómo** se tomó la decisión pedagógica, y una skill es texto auditable
+  —se lee, se versiona, se diferencia—, mucho más fácil de documentar frente a un auditor que un modelo fine-tuneado.
+  Pero el activo europeo de referencia es **CC BY-SA**, así que el entregable defendible es una biblioteca permisiva
+  propia, no un derivado del británico.
+- **APAC:** es la región que **ya está produciendo** esta capa (4 de 7 paquetes). Entrar acá es competir, no llenar un
+  hueco. El ángulo distinto es el eval: ninguno de los cuatro lo tiene.
+
+## P28 — Retención del alumno sobre el SRS que ya está instalado, en vez de construir el motor (agregado en el pase 12; **transversal a las cuatro regiones**)
+
+**El problema que resuelve.** El pase 5 encontró **cinco servidores MCP de mastery** —grafo de prerrequisitos,
+scheduler, esquema de progreso— construidos por cinco autores sin relación, **ninguno arriba de 1 ★**. La lectura de
+entonces fue "validación de mercado". El pase 12 agrega el término de comparación que faltaba y da vuelta la
+conclusión: **`anki-mcp-server` tiene 499 ★ con la misma tecnología y la misma licencia**, y la diferencia es que no
+inventa el modelo de dominio: expone el que el alumno **ya tiene instalado**.
+
+Dicho de otro modo: el motor de repetición espaciada es un problema resuelto, desplegado en más de 3 millones de
+dispositivos sólo en Android, y con el algoritmo moderno (**FSRS**) integrado de fábrica desde la versión 23.10 (2023).
+**Construirlo de nuevo es la forma más cara de llegar a peor.**
+
+### Las piezas
+
+| Pieza | Licencia | Qué aporta |
+|---|---|---|
+| **Anki** · https://github.com/ankitects/anki | **AGPL-3.0-or-later** ⚠️ (porciones de contribuyentes BSD-3; verificado en el archivo `LICENSE`) | El SRS de facto: 31.7k ★, **+3 M de usuarios sólo en Android**, FSRS integrado desde 23.10. **Corre en la máquina del alumno** |
+| **anki-mcp-server** · https://github.com/ankimcp/anki-mcp-server | **MIT** ✅ | 499 ★, 254 commits, v0.22.0 (beta declarada). Puente MCP: crear, leer y revisar mazos en lenguaje natural desde el agente |
+| **AnkiConnect** (add-on, v25.11.9.0 del 2025-11-02) | — | La API HTTP local sobre `localhost` que es **la frontera de proceso** del patrón |
+| **py-fsrs** · https://github.com/open-spaced-repetition/py-fsrs | **MIT** ✅ | FSRS del lado del servidor **para razonar y simular**, no para reimplantar el scheduler |
+| **pyBKT** · https://github.com/CAHLR/pyBKT · **pyKT** · https://github.com/pykt-team/pykt-toolkit | **MIT** ✅ | Mastery por concepto, que es la pregunta que el SRS **no** responde (el SRS sabe cuándo repasar una tarjeta, no si el alumno domina el tema) |
+| **Gnos** · https://github.com/madhvantyagi/Gnos | **MIT** ✅ | Registro de evidencia con los tres niveles de ayuda ("vio la explicación" / "resolvió con ayuda" / "resolvió solo") |
+
+### 🔴 La condición de licencia, y es la que hace viable el patrón
+
+**Anki es AGPL-3.0-or-later.** En el resto de esta KB eso sería una advertencia fuerte. Acá no lo es, por arquitectura:
+
+- **No se forkea Anki ni se enlaza contra su código.** Se le habla por **AnkiConnect**, una API HTTP sobre `localhost`,
+  desde un **proceso separado** (`anki-mcp-server`, MIT).
+- Es exactamente la regla 2 que esta KB ya tenía escrita en `repos/foundations.md`: *«la lógica propietaria vive en un
+  servicio aparte — el agente es un proceso separado con su propia licencia, hablando por API/MCP»*.
+- **Anki corre en el dispositivo del alumno, no en infraestructura del cliente.** No hay distribución de un derivado y
+  no hay servicio de red operado por el cliente: los dos disparadores de la AGPL quedan afuera.
+
+⚠️ **Lo que sí hay que revisar con legal:** empaquetar, redistribuir o preinstalar Anki —o un *fork* con marca del
+cliente— como parte del entregable. Ahí la AGPL aplica de lleno. Proponerlo como **cliente que el alumno ya tiene**
+es otra cosa.
+
+### El wiring
+
+1. **El agente enseña; Anki retiene.** Terminada una sesión de tutoría (cualquiera de los tutores de P1, P7 o P27), el
+   agente emite las tarjetas de lo trabajado **vía `anki-mcp-server`** al mazo del alumno. No hay base de datos de
+   repaso del lado del cliente.
+2. **El scheduler no se toca.** FSRS ya está en Anki. `py-fsrs` se usa del lado servidor **sólo para simular** —"¿cuánta
+   carga de repaso genera este plan de estudio en 8 semanas?"— y para dimensionar el currículo, nunca para decidir el
+   intervalo. Esa decisión queda en el cliente del alumno.
+3. **El mastery es otra pregunta y necesita otra pieza.** `pyBKT` estima dominio **por concepto** a partir de la
+   evidencia; el SRS sólo sabe de tarjetas. Las dos señales se combinan: *tarjeta vencida* (Anki) + *concepto no
+   dominado* (pyBKT) = el tema vuelve a la sesión de tutoría, no sólo al mazo.
+4. **La evidencia se captura con la distinción de `Gnos`**, porque "respondió bien" sin saber si fue con ayuda hace que
+   el mastery estimado valga poco.
+5. **La telemetría institucional va por LRS (P15), no por Anki.** Anki es del alumno y es local: lo que la institución
+   necesita saber —cobertura, progreso, riesgo— se emite como xAPI desde el agente, no leyendo el mazo. **Esto es
+   también lo que mantiene el patrón del lado correcto de la privacidad:** el historial de repaso nunca sale del
+   dispositivo.
+
+### Plazo y alcance
+
+- **2-3 semanas** para enchufar `anki-mcp-server` a un tutor existente y tener emisión de tarjetas funcionando.
+- **5-7 semanas** con mastery (`pyBKT`) y captura de evidencia (`Gnos`) combinados, más la emisión xAPI al LRS.
+- ⚠️ **`anki-mcp-server` declara estado beta (v0.22.0).** Es la pieza más joven del patrón y la que hay que fijar por
+  versión y cubrir con tests de integración propios antes de ponerla en un entregable.
+
+### Dónde se vende primero
+
+**Es transversal a las cuatro regiones**, y es uno de los pocos patrones de esta KB del que se puede decir eso con
+fundamento: Anki no depende de currículo nacional, de estándar de interoperabilidad ni de régimen regulatorio, porque
+corre del lado del alumno.
+
+- **Donde más rinde** es en preparación de examen y certificación profesional, que es donde el SRS ya es la herramienta
+  que el alumno elige solo. `kaogong-skill` (APAC) y `universal-examprep-skill` son la evidencia de que ese segmento
+  está demandando exactamente esto.
+- **Y donde conviene decirlo explícitamente en la propuesta** es en EMEA: el historial de repaso **no sale del
+  dispositivo**, así que la capa de retención no agrega superficie de alto riesgo bajo el Anexo III ni datos personales
+  nuevos que gobernar. Es un argumento de arquitectura, no de cumplimiento, y es más fuerte por eso.

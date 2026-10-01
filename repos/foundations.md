@@ -397,6 +397,54 @@ aprobar un sistema de riesgo: se puede predecir sin usar los atributos protegido
 mano** (`arxiv.org` sigue bloqueado por el proxy en este pase) y **las fuentes localizadas reportan que el link al
 repositorio del paper está roto**, así que no hay código que auditar.
 
+## Capa de empaquetado de conocimiento en *skills* (estándar Agent Skills) — agregada en el pase 12 del 2026-10-01
+
+Las once pasadas anteriores buscaron *plataformas* (lo que se despliega), *modelos* (lo que infiere), *datasets* (con
+qué se entrena) y *estándares* (con qué se interopera). Falta la capa que convierte **conocimiento de dominio en algo
+que un agente carga**: el estándar **Agent Skills** —bundles de instrucciones, referencias y scripts que el agente
+carga sólo cuando la tarea los pide—, que leen Claude Code, Codex, Cursor, Antigravity, Gemini CLI y Copilot CLI.
+
+No es una capa educativa: es infraestructura genérica, y por eso va acá y no en `agents/top.md`. Lo que sí es
+educativo —los paquetes pedagógicos— está en `agents/top.md`, sección «Capa de distribución por skills de agente».
+
+### Los repos fundacionales, verificados vía WebFetch el 2026-10-01
+
+| Repo | Licencia | Stars | Lenguaje | Por qué es fundacional acá |
+|---|---|---|---|---|
+| https://github.com/K-Dense-AI/scientific-agent-skills | **MIT** ✅ | **47.2k** | Python | **La arquitectura de referencia de una biblioteca vertical de skills**, y es MIT: 181 skills + 100+ bases de datos + 70+ workflows de paquetes. Para esta KB vale por su *estructura*, no por su contenido: es el molde de lo que la educación no construyó |
+| https://github.com/virgiliojr94/book-to-skill | **MIT** ✅ | **33.2k** | Python | **Pipeline de contenido → skill**: convierte PDF/EPUB/DOCX en skill estructurada (SKILL.md con modelos mentales ~4k tokens, un archivo por capítulo on-demand, glosario, patrones, cheatsheet). Es la pieza que conecta la **capa de contenido curricular del pase 10** con esta capa, y procesa local |
+| https://github.com/ankimcp/anki-mcp-server | **MIT** ✅ | **499** | TypeScript | Puente MCP hacia **Anki**, el SRS instalado de facto. Crear, leer y revisar mazos en lenguaje natural. v0.22.0, beta declarada, 254 commits |
+
+### Por qué estos tres cambian una decisión de arquitectura de esta KB
+
+El patrón **P1** y los que lo siguen asumen que un piloto de tutoría empieza por **desplegar algo** (Moodle + plugin,
+OpenMAIC, un LMS). Esta capa ofrece un camino que no despliega nada:
+
+1. **`book-to-skill`** toma el material del cliente —o un corpus OER con licencia apta, de los que el pase 10
+   identificó— y lo convierte en skill con carga por capítulo.
+2. La skill se instala en el harness que el cliente **ya paga** (Claude Code, Codex, Copilot CLI: los tres leen el
+   mismo `SKILL.md`).
+3. **`anki-mcp-server`** le da persistencia de repaso del lado del alumno sin que nadie opere un backend.
+
+**El costo de infraestructura de ese piloto es cero** y el *lock-in* también: el artefacto es Markdown portable entre
+harnesses. Es el contrapunto más barato que tiene esta KB frente a la capa de plataformas.
+
+⚠️ **Y la contracara, que hay que decir antes de cotizarlo.** No hay *runtime* que garantice nada: sin eval, sin
+versionado semántico y sin telemetría, una skill no produce evidencia de aprendizaje. Todo lo que esta KB construyó en
+las capas de **telemetría (pase 6)**, **evaluación (pase 4)** y **credenciales (pase 9)** sigue haciendo falta, y
+ninguna de las siete skills educativas verificadas lo tiene conectado. Un piloto de skills es barato de empezar y
+**no es acreditable tal como viene**.
+
+### La regla de verificación que este pase agrega, y vale para toda la KB
+
+En esta categoría **los agregadores de estrellas de terceros van ~2× atrasados**: los dos repos de arriba dieron
+**26.5k** y **13.7k** vía agregadores y **47.2k** y **33.2k** en la página del repo, el mismo día. Con `book-to-skill`
+sumando +6.3k ★/mes, el dato de tercero no está viejo, **está mal**. Sólo vale la página del repo.
+
+Y una advertencia operativa sobre el entorno: **`curl` hacia github.com devuelve 403 en este entorno** —se probaron las
+**164 URLs de GitHub de esta KB y las 164 dieron 403**, uniformemente—. Es el proxy, no *link rot*. La verificación de
+primera mano se hace con **WebFetch**. **Esas 164 URLs no quedaron revalidadas en este pase.**
+
 ## Nota sobre licencias — leer antes de cotizar
 
 El núcleo de las plataformas educativas open source es **copyleft fuerte**: Open edX, Canvas y Frappe LMS son AGPL-3.0; Moodle, Chamilo y H5P son GPL-3.0. AGPL alcanza el uso en red: si se modifica el core y se sirve por SaaS, hay obligación de publicar el fuente modificado.

@@ -7,6 +7,10 @@ updated: 2026-10-01
 # 📡 Tendencias — education
 
 > Ventana de investigación: septiembre 2026. Verificado 2026-09-30; el pase 11, el 2026-10-01.
+> **Pase 12:** la educación pierde **58×** contra la vertical científica en el canal de distribución más barato de la
+> industria (tendencia 28), se nombra el patrón *estándar instalado vs. modelo propio* que se repite en cinco capas
+> (tendencia 29), se abre el **gap 20** y se registran dos advertencias de verificación: los agregadores de estrellas
+> están mal por ~2× y **un 403 de `curl` no es un 404**. Ver la nota de método del pase 12.
 > **Pase 11:** el Digital Omnibus es derecho vigente (tendencia 25), aparece la capa predictiva y está vacía (tendencia 26), y se corrige un error de método de diez pasadas sobre licencias permisivas (tendencia 27).
 
 ## 1. El giro agéntico ya pasó de generativo a autónomo
@@ -486,6 +490,67 @@ educación tiene ECL, y es probable que haya equivalentes en salud e investigaci
 modificación, cierre del derivado y redistribución, ECL-2.0 se comporta como Apache-2.0 ✅. **Para un entregable con
 cesión de patentes o un cliente con due diligence de patentes, es una pregunta de legal, no una respuesta.** ⚠️
 
+## 28. La educación perdió el canal de distribución más barato de la industria, y la vertical científica se lo quedó (agregado 2026-10-01, pase 12)
+
+El estándar **Agent Skills** —bundles de instrucciones, referencias y scripts que un agente carga sólo cuando la tarea
+los pide, leídos por Claude Code, Codex, Cursor, Antigravity, Gemini CLI y Copilot CLI— es hoy la vía de distribución de
+conocimiento de dominio con la barrera de entrada más baja que existe: **sin backend, sin despliegue, sin dependencias
+que auditar.** Un repo de Markdown.
+
+**Las once pasadas anteriores de esta KB midieron la educación contra sí misma.** Esta la mide contra otra vertical en
+el mismo canal, y el resultado es el peor número registrado. Verificado contra la página de cada repo el 2026-10-01:
+
+| Biblioteca | Vertical | Licencia | Stars | Contenido |
+|---|---|---|---|---|
+| `K-Dense-AI/scientific-agent-skills` | Ciencia | **MIT** ✅ | **47.200** | 181 skills + 100+ bases de datos + 70+ workflows. Declara 160.000 científicos usuarios |
+| `virgiliojr94/book-to-skill` | Genérico | **MIT** ✅ | **33.200** | Pipeline documento → skill. **+6.300 ★ en 30 días** |
+| `GarethManning/education-agent-skills` | **Educación** | CC BY-SA 4.0 ⚠️ | **815** | 165 skills pedagógicas en 20 dominios |
+| `ZeKaiNie/universal-examprep-skill` | **Educación** | **MIT** ✅ | **299** | Tutor de examen con cita de página |
+
+**58× contra el activo educativo más grande; 158× contra el mejor educativo empaquetable.**
+
+**Y la asimetría de licencia es el núcleo de la tendencia, no un detalle.** El activo educativo más grande de la capa
+es **CC BY-SA 4.0** —*share-alike*, el derivado hereda la obligación— mientras el científico equivalente es **MIT**. Es
+decir: la vertical científica publicó su conocimiento como **software**, y la educativa como **obra cultural**. Las dos
+decisiones son coherentes con su cultura de origen, y sólo una de las dos se puede empaquetar en un entregable cerrado.
+
+**Por qué esto es una tendencia y no una anécdota de estrellas.** Las once pasadas anteriores documentaron que lo bueno
+en educación es caro de desplegar (plataformas), copyleft (accesibilidad, pase 8), archivado (analítica institucional,
+pase 11) o de licencia trampa (contenido OER, pase 10). **Este canal no tiene ninguno de esos problemas** y la
+educación igual no lo ocupó. La conclusión incómoda: el retraso de la capa educativa no se explica por barreras
+técnicas ni de licencia, porque acá no hay ninguna. Ver `agents/top.md` y el **gap 20**.
+
+## 29. El patrón que se repite en cinco capas de esta KB: lo que inventa su propio modelo de dominio no escala, lo que se conecta al estándar instalado sí (agregado 2026-10-01, pase 12)
+
+El pase 5 registró **cinco servidores MCP de mastery** y concluyó "cinco reinvenciones del mismo patrón", con techo de
+**1 ★**. El pase 12 encuentra el término de comparación que faltaba:
+**`ankimcp/anki-mcp-server` — MIT, 499 ★, 254 commits, v0.22.0.**
+
+| Enfoque | Repos | Techo |
+|---|---|---|
+| **Inventar** el modelo de dominio (grafo propio, scheduler propio, esquema propio) | los 5 MCP de mastery del pase 5 | **1 ★** |
+| **Exponer** el estándar ya instalado (Anki, AGPL-3.0, +3 M de usuarios sólo en Android) | `anki-mcp-server` | **499 ★** |
+
+Son ~500× con la misma tecnología (MCP), la misma licencia permisiva y la misma ventana temporal. La diferencia es de
+dónde está el modelo de dominio.
+
+**Y el patrón ya había aparecido cuatro veces en esta KB sin que se lo nombrara:**
+
+- **Pase 9, credenciales:** las implementaciones de referencia de los estándares se retiran (`badgr-server`,
+  `caliper-php`, `caliper-python`) y **el estándar sigue obligatorio**. Lo que sobrevive es lo que habla el estándar,
+  no lo que lo reimplementa.
+- **Pase 10, infraestructura desplegada:** Sunbird (MIT) tiene **41 ★** y 180 M de alumnos. La adopción no vive en la
+  estrella; vive en el despliegue.
+- **Pase 11, analítica institucional:** de los 21 repos de Apereo el único vivo es **`OpenLRW`**, y es precisamente el
+  que habla **xAPI + Caliper + OneRoster a la vez**. Los que inventaban dashboard propio están archivados.
+- **Pase 12, FSRS:** el algoritmo moderno de repetición espaciada **ya está integrado en Anki desde la versión 23.10
+  (2023)**. `py-fsrs` (MIT, en esta KB) sirve para razonar y simular del lado del servidor, **no para reimplantarlo**.
+
+**La regla operativa que esto deja, y aplica a cualquier propuesta de esta KB:** antes de construir el motor de un
+subsistema educativo —mastery, repaso, credencial, telemetría, datos de alumno— verificar si existe el estándar
+instalado y si hay un puente hacia él. **El valor del studio está en el puente y en la pedagogía, no en el motor.**
+Ver **P28**.
+
 ## Gaps declarados
 
 Huecos confirmados tras buscar, no ausencias por no haber buscado. Un gap informado es información; el silencio se parece demasiado a la cobertura.
@@ -848,6 +913,13 @@ Huecos confirmados tras buscar, no ausencias por no haber buscado. Un gap inform
 
     **La acción para el próximo pase:** buscar explícitamente `curriculum ontology`, `achievement standards`, `learning map` y `prerequisite graph` por país, en el idioma del país, en vez de esperar que aparezcan buscando agentes.
 
+
+20. **Ninguna skill educativa del mundo tiene *eval* publicada, y esta KB tiene las herramientas para medirlas sin usarlas** *(agregado en el pase 12 del 2026-10-01)*. Los **siete** paquetes pedagógicos verificados en este pase —`education-agent-skills` (815 ★), `human-skill-tree` (562 ★), `universal-examprep-skill` (299 ★), `algo-sensei` (281 ★), `universal-diagnostic-tutor-skill` (234 ★), `kaogong-skill` (147 ★), `learning-commons-org/agent-skills` (35 ★)— son **texto de prompt sin versionado semántico, sin suite de regresión y sin medición de efecto pedagógico.**
+
+    Y lo que lo vuelve un gap y no una queja: **la capa de evaluación para medirlos ya está en esta KB desde el pase 4** —MathTutorBench, UnifyingAITutorEvaluation, EduBench, EduGuardBench— construida para **tutores con backend** y **nunca aplicada a una skill**. Las dos piezas están en el mismo repositorio de conocimiento y no se tocan.
+
+    **Es el gap más barato de cerrar de los veinte declarados**: no requiere plataforma, dataset licenciado ni implementación de estándar certificada. Requiere correr benchmarks que ya existen contra artefactos que ya existen. Es también el diferencial de la propuesta LATAM del pase 12 (ver `intel/market.md`, `### LATAM`) y del patrón **P27**.
+
 ## Fuentes
 
 Mercado y players: [Grand View Research](https://www.grandviewresearch.com/industry-analysis/artificial-intelligence-ai-education-market-report) · [Research and Markets](https://www.researchandmarkets.com/reports/5896034/ai-in-education-market-report) · [AI Tutors Market](https://www.grandviewresearch.com/industry-analysis/ai-tutors-market-report) · [5WPR EdTech AI Visibility Index 2026](https://www.5wpr.com/research/edtech-ai-visibility-index-2026/) · [Khan Academy / Duolingo agents](https://callsphere.ai/blog/ai-agents-education-khan-academy-duolingo-autonomous-tutoring)
@@ -926,6 +998,61 @@ Capa de telemetría (LRS / xAPI) — agregado en el pase 6, **todo verificado de
 Evaluación — agregado en el pase 6, 🔴 **no verificado de primera mano** (dominios bloqueados por el proxy): L2-Bench (arXiv 2607.08842) · metodología de L2-Bench (arXiv 2603.20088) · `benchmarks.elt.edu.oup.com` · dataset en HuggingFace bajo `OUP/`
 
 Regulación y mercado por región — agregado en el pase 6: [MultiState — AI in Education Legislation: 2026 State Policy Trends](https://www.multistate.us/insider/2026/4/9/how-states-are-regulating-ai-in-education-this-legislative-session) · [NASBE — States Take Next Steps on Governing AI Use in Schools](https://www.nasbe.org/states-take-next-steps-on-governing-ai-use-in-schools/) · [ExcelinEd — State K-12 AI Policy in 2026](https://excelined.org/2026/05/26/state-k-12-ai-policy-in-2026-milestones/) · [Latham & Watkins — AI Regulation in APAC](https://www.lw.com/en/insights/ai-regulation-in-apac-diverging-approaches-across-the-region) · [Xenoss — APAC AI regulations](https://xenoss.io/blog/asia-pacific-apac-ai-regulations) · [UNESCO — Observatory on AI in Education for LAC](https://www.unesco.org/en/articles/unesco-launches-observatory-artificial-intelligence-education-latin-america-and-caribbean) · [Compliance & Risks — LATAM AI legislation](https://www.complianceandrisks.com/blog/shaping-the-future-ai-legislative-initiatives-across-latin-america/) · [IDB — An Enabling Regulatory Framework for AI in LAC](https://publications.iadb.org/publications/english/document/An-Enabling-Regulatory-Framework-for-Artificial-Intelligence-in-Latin-America-and-the-Caribbean.pdf) · [Azumo — AI in Education Statistics 2026](https://azumo.com/artificial-intelligence/ai-insights/ai-in-education-statistics) · [Grand View Research — AI Tutors Market](https://www.grandviewresearch.com/industry-analysis/ai-tutors-market-report) · [EdTech Hub — AI in Education in MENA](https://docs.edtechhub.org/lib/EPJAMMH9/download/BHXDDPBB)
+
+## Nota de método del pase 12 (2026-10-01) — doce pasadas comparando la educación consigo misma, y dos advertencias de verificación que van a volver a pasar
+
+**El cambio de método del pase.** Las once pasadas anteriores compararon artefactos educativos **entre sí**: de ahí
+salieron todos los "techos" de esta KB (el techo de la capa predictiva, el de accesibilidad permisiva, el de los MCP de
+mastery). Este pase cambió el denominador y comparó **la vertical educativa contra otra vertical en el mismo canal de
+distribución**. Es lo que produjo la tendencia 28, y no se podía ver desde adentro de la vertical.
+
+**Qué se verificó de primera mano.** Los **diez repos nuevos** de este pase (los siete paquetes pedagógicos, los dos
+baseline de otras verticales y `anki-mcp-server`), más Anki y DeepTutor: licencia, estrellas, lenguaje y descripción
+leídos vía **WebFetch contra la página del repo** el 2026-10-01. La licencia de Anki se verificó **en el archivo
+`LICENSE`**, no en el README —**AGPL-3.0-or-later**, con porciones de contribuyentes bajo BSD-3—, siguiendo la regla
+que el pase 10 dejó escrita.
+
+### ⚠️ Advertencia 1 — los agregadores de estrellas de terceros están mal, no viejos
+
+| Repo | Agregador de terceros | Página del repo (mismo día) | Error |
+|---|---|---|---|
+| `K-Dense-AI/scientific-agent-skills` | 26.500 ★ (ossinsight) | **47.200 ★** | **−44%** |
+| `virgiliojr94/book-to-skill` | 13.700 ★ (sourcepulse) | **33.200 ★** | **−59%** |
+
+En una categoría que suma **+6.300 ★/mes**, el dato del agregador no es una cifra vieja: es una cifra equivocada, y por
+un factor cercano a 2. **Regla: en esta capa sólo vale la página del repo.** Esto concuerda con la corrección que
+`rotation.json` ya registraba sobre ciclos anteriores de esta KB ("star counts were pipeline-inflated"): el problema
+nunca fue el sentido del error, fue confiar en una fuente intermedia.
+
+### ⚠️ Advertencia 2 — un 403 de `curl` no es un 404, y acá son 164
+
+Se pasaron **las 164 URLs de GitHub de toda esta KB** por `curl -sL` para auditar enlaces muertos. **Las 164 devolvieron
+403**, uniformemente — incluidas las de repos que el mismo día se verificaron vivos vía WebFetch (`HKUDS/DeepTutor`,
+`moodle/moodle`, `instructure/canvas-lms`). Es **el proxy del entorno bloqueando `curl` hacia github.com**, no *link
+rot*.
+
+Dos consecuencias que hay que dejar escritas:
+
+1. **Esas 164 URLs quedan sin revalidar en este pase.** No hay evidencia de que estén caídas **ni de que estén vivas**.
+   La auditoría masiva de enlaces de esta KB sigue pendiente.
+2. **Un pase futuro que vea 403 masivos no debe interpretarlos como enlaces muertos** ni borrar filas por eso. La
+   verificación de primera mano en este entorno se hace con **WebFetch**, que sí resuelve github.com. Es la misma
+   restricción que el pase 5 registró sobre el proxy de egreso, ahora medida.
+
+### Lo que este pase NO hizo, declarado como tal
+
+- **No revalidó el inventario histórico de la KB** (ver advertencia 2).
+- **No encontró nada nuevo en el barrido regulatorio de North America, EMEA ni LATAM.** Las cuatro consultas regionales
+  se corrieron y devolvieron lo que la KB ya tenía registrado. El único hallazgo regulatorio nuevo de las cuatro
+  regiones es **la oficialización del libro de texto digital en Japón** (ver `intel/market.md`, `### APAC`). Esto se
+  registra como **saturación de la capa regulatoria para esta cadencia**, no como cobertura: doce pasadas en dos días
+  sobre las mismas cuatro consultas devuelven lo mismo. **Recomendación: bajar el barrido regulatorio a frecuencia
+  semanal** y gastar las corridas en capas sin cubrir.
+- **No se midió el tamaño de la capa de skills con una consulta de GitHub Search.** La página `github.com/topics/agent-skills`
+  declara **28.111 repos** con ese topic, pero la cifra viene de la misma página cuyos conteos de estrellas resultaron
+  inflados, así que **se registra como no verificada y no se usa para ninguna conclusión**. Las conclusiones del pase
+  descansan sólo en los repos leídos uno por uno.
+- **`github.com/topics/claude-skill` devuelve 404** — ese topic no existe; el canónico es `agent-skills`.
 
 ## Nota de método del pase 11 (2026-10-01) — once pasadas preguntando qué hace el software, y la pregunta que faltaba era qué decide
 
