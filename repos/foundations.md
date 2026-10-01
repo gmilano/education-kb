@@ -8,6 +8,7 @@ updated: 2026-10-01
 
 > Bases sobre las cuales construir. Verificado repo por repo vía WebFetch el 2026-09-30 (capas del pase 10, el 2026-10-01).
 > Leer la columna **Licencia** antes de proponer: media KB de educación es GPL/AGPL, no permisiva.
+> **Pase 11 del 2026-10-01:** aparece una licencia que las diez pasadas anteriores filtraban sin saberlo — **ECL-2.0**, con la que licencia todo Apereo (Sakai, Opencast, OpenLRW). Es Apache-2.0 con el alcance de patentes acotado, aprobada por OSI y FSF, y **es apta para construir arriba**. Ver la capa de analítica institucional, abajo.
 
 ## Plataformas y frameworks base
 
@@ -35,7 +36,7 @@ updated: 2026-10-01
 
 No son plataformas educativas, son el material con el que se forma gente en AI. Relevantes para engagements de *capability building*, que en educación corporativa es la mitad de la demanda.
 
-5 repos, todos MIT o Apache-2.0. Cubren las tres capas de una formación seria, y conviene elegir por capa y no por estrellas:
+6 repos, todos MIT o Apache-2.0. Cubren las tres capas de una formación seria, y conviene elegir por capa y no por estrellas (el sexto, agregado en el pase 11, cubre las tres a la vez):
 
 - **entender el modelo** → `LLMs-from-scratch`, `minimind`
 - **construir con agentes** → `ai-engineering-from-scratch` (currículum secuenciado), `learn-claude-code` (harness)
@@ -48,6 +49,7 @@ No son plataformas educativas, son el material con el que se forma gente en AI. 
 | ai-engineering-from-scratch | https://github.com/rohitg00/ai-engineering-from-scratch | MIT ✅ | 62.1k | **523 lecciones en 20 fases**, de fundamentos matemáticos a agent engineering. Exige implementar a mano antes de usar frameworks; cada lección deja un artefacto reusable (prompts, skills, agents, MCP servers). Lo más cercano a un programa de capability building listo para usar |
 | learn-claude-code | https://github.com/shareAI-lab/learn-claude-code | MIT ✅ | 77.8k | Tutorial de 17 capítulos sobre cómo se construye un *harness* de agente: tools, gestión de conocimiento, sistema de tareas, coordinación de equipos. Material de referencia de facto del tema |
 | tiny-llm | https://github.com/skyzh/tiny-llm | Apache-2.0 ✅ | 4.7k | Curso de **serving** e inferencia: KV cache, continuous batching, flash attention, paged attention. Construye una vLLM en miniatura sobre Qwen3. ⚠️ Usa **MLX (macOS ARM64)** — obliga a hardware Apple como material de aula |
+| ai-builders-curriculum | https://github.com/ai-builders-foundation/ai-builders-curriculum | MIT ✅ | 1.4k | **Currículum vendor-neutral de AI full-stack**, de la **AI Builders Foundation (501(c)(3))**: 6 módulos (Data & Storage, Auth & Users, Functions & APIs, AI & Agents, Deploy, Transparent AI) y **3 starter kits ejecutables** (`ai-app-starter`, `rag-starter`, `glassbox`) en Node.js + SQLite sin framework. Creado el 2026-07-05 y ya en 1.4k ★. **Es el único de esta tabla pensado como programa de formación de una organización sin ánimo de lucro en vez de como libro de un autor** — y la neutralidad de proveedor es declarada y verificable en los starter kits. *Agregado en el pase 11* |
 
 ## Capa de medición — agregada en el pase 4 del 2026-09-30
 
@@ -253,6 +255,20 @@ NonCommercial**, por decisión explícita de tratar la educación como bien púb
 *discovery* comercial sobre el metadato de OER Commons. **No es el contenido el que está bloqueado: es el catálogo.** Y el
 catálogo es justamente lo que uno querría para no tener que curar a mano. Ver el **gap 16**.
 
+### El contrapunto APAC del pase 11, y es permisivo donde el europeo no lo es
+
+| Repo | Licencia | Stars | Qué es |
+|---|---|---|---|
+| https://github.com/DECK6/korean-elementary-learning-map | **MIT** ✅ | 117 | Ontología curricular completa de la **educación primaria coreana (currículo revisado 2022)**: **620 anclas de estándares de logro, 1.956 temas de aprendizaje, 2.293 relaciones de prerrequisito y 152 clusters** sobre **11 materias** (coreano, matemática, ciencias, ciencias sociales, inglés como lengua extranjera, ética, artes prácticas/IT, materias integradas, arte, música y educación física) de **1.º a 6.º grado**. Sale en **JSON y RDF/Turtle**, con pipeline de validación, *competency questions* en **SPARQL** y restricciones **SHACL**. 17 commits. ⚠️ **Construcción independiente, no producto oficial del Ministerio de Educación**, armada desde fuentes curriculares públicas |
+
+**Por qué esto cambia algo concreto.** Hasta este pase, el único esquema curricular nacional de la KB era
+`OpenDidactia` (España, LOMLOE) y es **CC BY-SA 4.0** — share-alike, es decir, derivar el esquema del cliente
+dispara la obligación. El coreano es **MIT**, y además viene con el grafo de prerrequisitos y la validación formal
+que al español le faltan. **Para el patrón de "agente que genera planificación conforme al currículo nacional", APAC
+tiene hoy la mejor pieza y es la más barata de licenciar.** Y hay una lectura de método: dos pasadas distintas
+encontraron el mismo artefacto en dos regiones, lo que sugiere que el resto de los currículos nacionales también
+están ahí y nadie los buscó. Ver el gap 19.
+
 ## Capa de infraestructura pública desplegada — agregada en el pase 10 del 2026-10-01
 
 Dos plataformas que esta KB no tenía en nueve pasadas, **las dos permisivas**, y las dos invisibles a una búsqueda
@@ -298,6 +314,88 @@ ese cambio los repos privados se hicieron públicos.
 (eventos), QTI (ítems) y Open Badges (credencial), **y no cubrió el expediente longitudinal del alumno**, que en EE. UU.
 es Ed-Fi y está adoptado a nivel estatal. **Es la pieza que un proyecto K-12 en North America necesita antes que
 cualquier agente**, y es permisiva. Ver **P24**.
+
+## Capa de analítica institucional (Apereo) y la licencia que esta KB no tenía — agregada en el pase 11 del 2026-10-01
+
+### 🔴 Primero la licencia, porque cambia el filtro con que se leyó esta KB diez pasadas
+
+Las diez pasadas anteriores filtraron por **MIT / Apache-2.0 / BSD**. Ese filtro deja afuera, en silencio, al
+**stack completo de Apereo Foundation** — la fundación que sostiene la infraestructura open source de la educación
+superior en EE. UU. y Europa — porque Apereo no licencia con Apache: licencia con **ECL-2.0**.
+
+**ECL-2.0 (Educational Community License 2.0) es Apache-2.0 con una sola modificación: el alcance de la concesión de
+patentes de la sección 3.** Está **aprobada por OSI y por la FSF**, salió del *Licensing and Policy Summit* de 2006
+convocado por la comunidad académica, y existe porque las universidades no podían conceder el paquete de patentes
+amplio que pide Apache-2.0 sobre código escrito con fondos de investigación.
+
+**Lo que esto significa operativamente, y conviene decirlo con precisión:**
+
+- **Para usar, modificar, redistribuir y cerrar un derivado:** se comporta como Apache-2.0. No es copyleft. No hay
+  obligación de publicar el derivado. ✅ **Globant puede construir arriba.**
+- **Para la *patent peace*:** la concesión es más angosta — cubre la contribución en sí, no las combinaciones. El
+  propio README de `LearningAnalyticsProcessor` lo describe como *"a slightly less permissive Apache2"*. ⚠️ **En un
+  cliente con due diligence de patentes, esto es una pregunta de legal, no una respuesta.**
+
+**La regla operativa para esta KB:** ECL-2.0 entra en la misma categoría que MIT/Apache/BSD para cotizar trabajo
+derivado, y se marca con ⚠️ únicamente cuando el entregable incluya cesión de patentes.
+
+### Y ahora el hallazgo, que no es bueno: la capa de analítica institucional de Apereo está abandonada
+
+La organización `Apereo-Learning-Analytics-Initiative` tiene **21 repos**. Verificado uno por uno el 2026-10-01:
+
+| Repo | Licencia | Stars | Último push | Estado |
+|---|---|---|---|---|
+| https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRW | **ECL-2.0** ✅ | **62** | **2026-08-04** | ✅ **La única pieza viva.** *Learning record warehouse* en Java compatible con **xAPI, IMS Caliper e IMS OneRoster** a la vez — es el único artefacto de esta KB que habla los tres estándares. 424 commits, badge *"Apereo incubating"*, lista `openlrs-user@apereo.org` |
+| https://github.com/Apereo-Learning-Analytics-Initiative/LearningAnalyticsProcessor | **ECL-2.0** ✅ | 23 | 2023-01-19 | ⚠️ **Dormido.** El *workflow manager* de analítica en Java. 25 forks. Es la pieza que debería orquestar el pipeline predictivo, y no se toca desde enero de 2023 |
+| https://github.com/Apereo-Learning-Analytics-Initiative/Larissa | **Apache-2.0** ✅ | 8 | 2025-09-18 | ⚠️ LRS alternativo. Permisivo y con señal de vida, pero 8 estrellas |
+| https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRS | n/d | 47 | 2023-01-28 | 🔴 **Archivado por sus autores, y su descripción es literalmente la palabra `Deprecated`** |
+| https://github.com/Apereo-Learning-Analytics-Initiative/OpenDashboard-legacy | n/d | 47 | — | 🔴 **`(Deprecated)`** en la propia descripción. El framework de visualización de la capa |
+| https://github.com/Apereo-Learning-Analytics-Initiative/OpenDashboard-ux | n/d | 1 | **2020-02-29** | 🔴 El reemplazo de OpenDashboard. **Creado el 2020-02-12, último movimiento 17 días después.** Front React |
+| https://github.com/Apereo-Learning-Analytics-Initiative/OpenDashboard-api | n/d | 0 | **2020-03-09** | 🔴 La otra mitad del reemplazo. Mismo patrón: creado el 2020-02-12, abandonado en marzo |
+| https://github.com/Apereo-Learning-Analytics-Initiative/SakaiXAPI-Provider | n/d | 11 | 2024-11-30 | Integración xAPI para Sakai |
+| https://github.com/Apereo-Learning-Analytics-Initiative/LAP-Sakai-Extractor | **Apache-2.0** ✅ | 2 | 2016-11-09 | 🔴 El extractor de datos de Sakai hacia el procesador. 2016 |
+
+**Lo que hay que leer de esa tabla, y no es la lista:** el reemplazo del dashboard —las dos mitades, `-ux` y `-api`—
+se creó el mismo día de febrero de 2020 y se abandonó dentro del mes siguiente. **La capa no se murió de a poco:
+se intentó reescribir una vez y el intento duró tres semanas.**
+
+**Y falta la pieza más citada del segmento:** *Student Success Plan* (SSP), el producto de *case management* de
+advising que Apereo sostuvo con despliegues reales (St. Petersburg College, Sinclair Community College, soporte
+comercial de Unicon). 🔴 **No tiene repositorio localizable en 2026 y el rastro público se corta alrededor de
+2014-2015, en SSP 2.4.** Se registra como ausencia verificada, no como omisión.
+
+### La capa que sí está viva de Apereo, y es la que conviene proponer
+
+| Repo | Licencia | Stars | Forks | Último push | Qué es |
+|---|---|---|---|---|---|
+| https://github.com/sakaiproject/sakai | **ECL-2.0** ✅ | **1.234** | 1.014 | **2026-09-30** | **El LMS que a esta KB le faltaba después de diez pasadas.** Suite de enseñanza, investigación y colaboración en Java, usada por universidades de investigación. Mantiene **dos ramas a la vez**: tags `25.2` (2026-06-02) de la línea nueva y `23.5` (2026-06-30) de mantenimiento. ⚠️ No publica *GitHub Releases*: la versión se lee en los tags |
+| https://github.com/opencast/opencast | **ECL-2.0** ✅ | 505 | 260 | **2026-09-30** | Captura y distribución automatizada de **video de clase** a escala. Es la capa multimodal que ningún otro repo de esta KB cubre: si el entregable incluye transcripción, indexado o resumen de clases grabadas, este es el punto de partida y no hay que construirlo |
+| https://github.com/uPortal-Project/uPortal | **Apache-2.0** ✅ | 286 | 278 | 2026-09-22 | Portal empresarial de educación superior. Es la superficie donde una universidad ya expone sus servicios al alumno — el lugar natural donde montar un agente sin pedirle al alumno otra aplicación |
+
+## Capa de datos de deserción — agregada en el pase 11 del 2026-10-01, y da vuelta el diagnóstico del gap 11
+
+El gap 11 (pase 7) dice que **los datasets con que se entrena el modelado del alumno son NonCommercial**. Es cierto
+para *knowledge tracing*. **Para predicción de abandono es al revés, y el dato es bueno.**
+
+| Dataset | Licencia | Tamaño | Procedencia | Estado de verificación |
+|---|---|---|---|---|
+| **OULAD** — Open University Learning Analytics Dataset · `https://analyse.kmi.open.ac.uk/open_dataset` | **CC BY 4.0** ✅ *(uso comercial permitido)* | **22 cursos, 32.593 alumnos, 10.655.280 registros diarios de clicks en el VLE**, más demografía y resultados de evaluación | **EMEA (The Open University, Reino Unido — Knowledge Media Institute).** Publicado en *Scientific Data* (2017) | 🔴 **No verificado de primera mano:** el proxy de egreso de esta sesión bloquea `analyse.kmi.open.ac.uk`. Licencia y cifras provienen de múltiples fuentes secundarias coincidentes |
+| **UCI 697** — *Predict Students' Dropout and Academic Success* · `https://archive.ics.uci.edu/dataset/697` | CC BY 4.0 ⚠️ **confirmar** | **4.424 instancias × 36 features**; clasificación en 3 clases (*dropout* / *enrolled* / *graduate*) al final de la duración normal de la carrera | **EMEA (Portugal).** Datos de una institución de educación superior sobre agronomía, diseño, educación, enfermería, periodismo, gestión, servicio social y tecnologías; financiado por el programa **SATDAP – Capacitação da Administração Pública**, grant `POCI-05-5762-FSE-000191` | 🔴 `archive.ics.uci.edu` **bloqueado por el proxy**. Tamaño, features y procedencia verificados contra el descriptor de datos publicado; **la licencia exacta hay que confirmarla en la ficha de UCI antes de facturar** |
+
+**Por qué esto importa para una propuesta.** El `4.424` que aparece en decenas de los 110 repos MIT de la capa
+predictiva es *este* dataset: la capa entera está entrenada sobre 4.424 alumnos portugueses de hace una década.
+**Para un cliente de otra región eso no es un modelo, es un punto de partida metodológico** — y el trabajo real,
+el que se cotiza, es re-entrenar sobre los datos del cliente. La buena noticia es que la licencia no lo bloquea.
+
+**Y hay un benchmark nuevo de esta capa que conviene conocer:** *A Unified Survival Benchmark for Temporal Dropout
+Risk Prediction in Learning Analytics* (arXiv **2604.08870**, Eastern University; v1 2026-04-10, v3 2026-07-21),
+que corre sobre OULAD y compara dos familias de modelos —semanales dinámicos en representación *person-period*
+contra estáticos de ventana temprana—. **Su conclusión es la más vendible del pase:** en ablación y
+explicabilidad, todos los modelos convergen en que **la señal predictiva dominante es temporal y conductual, no
+demográfica ni estructural.** Eso es exactamente el argumento que necesita un comité de ética o un DPO para
+aprobar un sistema de riesgo: se puede predecir sin usar los atributos protegidos. 🔴 **No verificado de primera
+mano** (`arxiv.org` sigue bloqueado por el proxy en este pase) y **las fuentes localizadas reportan que el link al
+repositorio del paper está roto**, así que no hay código que auditar.
 
 ## Nota sobre licencias — leer antes de cotizar
 

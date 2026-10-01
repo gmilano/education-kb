@@ -6,7 +6,8 @@ updated: 2026-10-01
 
 # 📡 Tendencias — education
 
-> Ventana de investigación: septiembre 2026. Verificado 2026-09-30.
+> Ventana de investigación: septiembre 2026. Verificado 2026-09-30; el pase 11, el 2026-10-01.
+> **Pase 11:** el Digital Omnibus es derecho vigente (tendencia 25), aparece la capa predictiva y está vacía (tendencia 26), y se corrige un error de método de diez pasadas sobre licencias permisivas (tendencia 27).
 
 ## 1. El giro agéntico ya pasó de generativo a autónomo
 
@@ -125,6 +126,8 @@ El efecto práctico es una inversión de prioridades que la mayoría de los clie
 Para un studio esto es la mejor forma de entrada que hay en EMEA ahora mismo: alcance chico, urgencia real, fecha verificable, y deja instalado el expediente técnico que en 2027-12-02 va a hacer falta completo. Ver P4 en `compose/patterns.md`.
 
 **Consecuencia de segundo orden, que importa más a mediano plazo:** los 16 meses de gracia europeos llegan justo cuando **APAC pone tres regímenes en vigor** (Corea del Sur enero 2026, **Taiwán 2026-01-14**, y **Vietnam con evaluación automatizada y monitoreo de comportamiento tipificados como alto riesgo**). La secuencia se dio vuelta respecto de lo que esta KB asumía en los pases 1 y 2: **la conformidad exigible hoy está en Asia, no en Europa.** Quien construya el expediente en un despliegue coreano o taiwanés llega a diciembre de 2027 con el trabajo hecho y reutilizable.
+
+> **Actualizado en el pase 11 del 2026-10-01 — identificadores citables.** El instrumento es el **Reglamento (UE) 2026/1744**: propuesto por la Comisión el **2025-11-19**, aprobado por el Parlamento Europeo el **2026-06-16**, adoptado por el Consejo el **2026-06-29**, **en vigor el 2026-07-27**. Modifica, entre otros, los artículos **9, 17, 18, 28, 43 y 50** del Reglamento (UE) 2024/1689. La fecha del Anexo III *stand-alone* es **2027-12-02** y la del alto riesgo embebido en productos regulados, **2028-08-02**. Ver la tendencia **25** para la tabla completa y el nivel de evidencia.
 
 ## 12. La seguridad pedagógica se volvió medible, y la métrica que importa no es la exactitud (agregado 2026-09-30, pase 5)
 
@@ -378,6 +381,110 @@ Hasta este pase, la respuesta de esta KB a «plataforma para un ministerio» era
 **La consecuencia para el posicionamiento, que es lo vendible:** el argumento de «open source para soberanía educativa» dejó
 de tener la contradicción de licencia que tenía. Antes había que explicarle a un ministerio que la plataforma abierta que le
 proponíamos lo obligaba a publicar sus modificaciones. **Con Sunbird y Ed-Fi no.** Ver **P23** y **P24**.
+
+## 25. El Digital Omnibus dejó de ser propuesta y es derecho vigente: el Anexo III vence el 2027-12-02 (agregado 2026-10-01, pase 11)
+
+La tendencia 11 (pase 4) ya registró que el Digital Omnibus entró en vigor el 2026-07-27 y que corrió la mitad cara
+del AI Act dejando corriendo la barata. **Esa lectura se confirma y no se corrige.** Lo que este pase agrega es lo
+que faltaba para poder citarlo en un documento de cliente: **el número de reglamento, la cronología legislativa
+completa y los artículos modificados.**
+
+**Reglamento (UE) 2026/1744** — *Digital Omnibus on AI*:
+
+| Hito | Fecha |
+|---|---|
+| Propuesta de la Comisión Europea | **2025-11-19** |
+| Aprobación del Parlamento Europeo | **2026-06-16** |
+| Adopción final del Consejo | **2026-06-29** |
+| **Entrada en vigor** | **2026-07-27** |
+
+Modifica, entre otros, los artículos **9, 17, 18, 28, 43 y 50** del Reglamento (UE) 2024/1689, y también el
+Reglamento (UE) 2018/1139 (seguridad aérea) y el 2023/1230 (máquinas).
+
+**Lo que se movió y lo que no:**
+
+| Obligación | Antes | Ahora |
+|---|---|---|
+| **Anexo III alto riesgo *stand-alone*** — incluye evaluación de resultados de aprendizaje, screening de postulantes y monitoreo de exámenes | 2026-08-02 | **2027-12-02** |
+| Alto riesgo embebido en productos regulados | 2027-08-02 | **2028-08-02** |
+| **Prácticas prohibidas**, entre ellas el **reconocimiento de emociones en instituciones educativas** | vigente | **vigente, sin cambio** |
+| **Alfabetización en AI** (art. 4) | desde 2025-02-02 | **vigente, sin cambio** |
+
+**Por qué esto no es "hay más tiempo" sino lo contrario, comercialmente.** 16 meses de corrimiento sobre la mitad
+cara del expediente es exactamente el plazo en que un comprador institucional aprueba y contrata un programa de
+conformidad. Antes del Omnibus, la fecha estaba tan encima que el comprador la trataba como imposible y la ignoraba;
+ahora es alcanzable, y por lo tanto exigible internamente. **La ventana de compra se abrió al correrse la fecha, no
+se cerró.** Y lo que ya es exigible —prohibiciones y alfabetización— sigue siendo la puerta de entrada barata al
+mismo cliente. Ver **P4** y el patrón nuevo **P25**.
+
+🔴 **Nivel de evidencia:** verificado en **múltiples fuentes legales secundarias independientes y coincidentes**
+(firmas de abogados y publicaciones de cumplimiento que citan el número de reglamento, las fechas de votación y las
+nuevas fechas de aplicación). **El texto primario no se leyó:** `eur-lex.europa.eu` y
+`digital-strategy.ec.europa.eu` están bloqueados por el proxy de egreso de esta sesión. **Confirmar en EUR-Lex antes
+de poner la fecha en un documento de cliente.**
+
+## 26. La capa que decide sobre el alumno es la más regulada del sector y la peor abastecida de open source (agregado 2026-10-01, pase 11)
+
+Once pasadas de esta KB describieron capas con oferta chica. **Esta es distinta: acá la oferta no es chica, es
+inexistente, y se puede demostrar con dos consultas.**
+
+| Consulta en GitHub, 2026-10-01 | Resultado | Techo de estrellas |
+|---|---|---|
+| `topic:learning-analytics stars:>50` | **2 repos en todo GitHub** | 169 ★, y es un blog de notas de papers |
+| `dropout prediction student license:mit pushed:>2026-01-01` | **110 repos** | **6 ★** |
+
+El único repo real del primer resultado es **`OpenLRW`** (62 ★), que almacena datos y no predice nada. El tope del
+segundo entrena con **datos sintéticos**. Y el stack institucional que esta capa tuvo —la **Apereo Learning
+Analytics Initiative**— está archivado: `OpenLRS` dice `Deprecated` en su descripción, `OpenDashboard-legacy` dice
+`(Deprecated)`, el reemplazo (`-ux` y `-api`) **se creó el 2020-02-12 y se abandonó dentro del mes**, y
+*Student Success Plan* —el producto de advising con despliegues reales— **no tiene repositorio localizable** desde
+alrededor de 2015.
+
+**La asimetría que hay que leer.** En todas las capas anteriores de esta KB, la ausencia de open source coincidía con
+ausencia de demanda o con demanda incipiente. Acá no: *student success* es **categoría de compra consolidada**, con
+incumbentes propietarios y presupuesto asignado en cada universidad. **Es la única capa de esta KB donde la demanda
+está madura, el presupuesto existe, y la oferta open source es cero.**
+
+**Y la segunda asimetría, que es la útil:** el cuello de botella **no es el dato**. Los dos corpus canónicos de la
+capa —**OULAD** (32.593 alumnos, 10.655.280 registros de clicks, The Open University) y **UCI 697** (4.424 × 36,
+Portugal)— son **CC BY 4.0, con uso comercial permitido**. Es lo contrario del diagnóstico del gap 11 para knowledge
+tracing, y la conclusión de una capa no se puede exportar a la otra. **Acá falta el software y falta quien lo
+mantenga: las dos cosas que una consultora vende.**
+
+Una nota técnica que vale para la propuesta: el benchmark de supervivencia sobre OULAD (arXiv 2604.08870, Eastern
+University) reporta que, en ablación y explicabilidad, **la señal predictiva dominante es temporal y conductual, no
+demográfica ni estructural**. Es el argumento que hace aprobable un sistema de riesgo ante un DPO o un comité de
+ética: **se puede predecir sin apoyarse en atributos protegidos.** 🔴 Sin verificar de primera mano (`arxiv.org`
+bloqueado) y las fuentes reportan que el link al repositorio del paper está roto.
+
+## 27. ECL-2.0: una licencia permisiva que los filtros de licencia descartan por desconocida (agregado 2026-10-01, pase 11)
+
+**Esta tendencia es un error propio documentado, y por eso es la más reutilizable del pase.** Diez pasadas de esta KB
+filtraron por **MIT / Apache-2.0 / BSD** y, al hacerlo, descartaron en silencio el stack completo de la **Apereo
+Foundation**, que licencia con **ECL-2.0 (Educational Community License 2.0)**.
+
+**Qué es ECL-2.0, con precisión:** Apache-2.0 con **una** modificación — el alcance de la concesión de patentes de la
+sección 3, acotado a la contribución en vez de a las combinaciones. Salió del *Licensing and Policy Summit*
+convocado por la comunidad académica en 2006, porque las universidades no podían conceder el paquete amplio de
+Apache-2.0 sobre código escrito con fondos de investigación. **Aprobada por OSI y por la FSF. No es copyleft.** El
+propio README de `LearningAnalyticsProcessor` la describe como *"a slightly less permissive Apache2"*.
+
+**Lo que el filtro dejaba afuera:** `sakaiproject/sakai` (**1.234 ★**, 1.014 forks, push del 2026-09-30, dos ramas
+mantenidas), `opencast/opencast` (**505 ★**, la única capa de video de clase open source a escala),
+`Apereo-Learning-Analytics-Initiative/OpenLRW` (62 ★, el único artefacto de esta KB que habla xAPI, Caliper y
+OneRoster a la vez). **Un LMS de educación superior de primera línea no apareció en diez pasadas por una línea de
+licencia que nadie leyó.**
+
+**La generalización, y es la parte que sirve fuera de educación.** Un filtro de licencias por lista blanca de nombres
+produce falsos negativos silenciosos, y los falsos negativos de un filtro no dejan rastro: no hay forma de notar lo
+que no apareció. **La regla correcta no es "MIT / Apache / BSD" sino "permisiva, aprobada por OSI, sin obligación de
+publicar el derivado"** — y cuando aparece una licencia desconocida, se lee en vez de descartarse. En educación esto
+pega más fuerte que en otros sectores, porque los sectores con fundaciones académicas tienen licencias propias:
+educación tiene ECL, y es probable que haya equivalentes en salud e investigación que esta KB tampoco vio.
+
+**La contracara honesta que hay que decirle al cliente:** la concesión de patentes más angosta es real. Para uso,
+modificación, cierre del derivado y redistribución, ECL-2.0 se comporta como Apache-2.0 ✅. **Para un entregable con
+cesión de patentes o un cliente con due diligence de patentes, es una pregunta de legal, no una respuesta.** ⚠️
 
 ## Gaps declarados
 
@@ -708,9 +815,50 @@ Huecos confirmados tras buscar, no ausencias por no haber buscado. Un gap inform
     README de OATutor y del servidor MCP). **Lo que falta es el lado del editor.** Antes de llevar a un cliente cualquier
     afirmación de licencia de contenido de este pase, abrir esos tres dominios y confirmarla en la fuente del editor.
 
+18. **No existe un sistema de early warning / student success open source mantenido, en ninguna región — y es la única capa de esta KB donde la demanda está madura y la oferta es cero** *(agregado en el pase 11 del 2026-10-01)*. No es un gap de tracción como el 1 ni de licencia como el 11: es **ausencia de producto**, medida.
+
+    **Lo que se buscó y lo que devolvió, con la sintaxis exacta para que la próxima pasada pueda repetirlo:**
+
+    | Consulta en GitHub, 2026-10-01 | Resultado | Techo de estrellas |
+    |---|---|---|
+    | `topic:learning-analytics stars:>50` | **2 repos en todo GitHub** | 169 ★ — `AkihikoWatanabe/paper_notes`, un blog de notas de papers |
+    | `dropout prediction student license:mit pushed:>2026-01-01` | **110 repos** | **6 ★** |
+
+    **El estado de los tres artefactos que importan** (detalle en `agents/top.md`): `Aliipou/Student-Retention-Prediction` (MIT, 6 ★) es el tope de la capa y **entrena con datos sintéticos generados por el propio repo**, sin auditoría de fairness; `dssg/student-early-warning` (70 ★, Data Science for Social Good, Universidad de Chicago) tiene licencia **`NOASSERTION`** y **último push 2018-08-22**; `novatrix-2030/SIH-2026` ("DropGuard", Smart India Hackathon 2026) tiene el mejor stack del grupo —LightGBM + XGBoost + SHAP + Groq— y **ninguna licencia**.
+
+    **Y el stack institucional que la capa tuvo está archivado**, verificado repo por repo en los 21 de la organización `Apereo-Learning-Analytics-Initiative`: `OpenLRS` **archivado con la descripción `Deprecated`**; `OpenDashboard-legacy` **`(Deprecated)`**; el reemplazo `OpenDashboard-ux` + `OpenDashboard-api` **creado el 2020-02-12 y abandonado dentro del mes** (1 ★ y 0 ★); `LearningAnalyticsProcessor`, que es el orquestador del pipeline, **sin push desde 2023-01-19**; y **`OpenLRW` como única pieza viva** (62 ★, ECL-2.0, push del 2026-08-04). Falta además **Student Success Plan (SSP)**, el producto de *case management* de advising de Apereo con despliegues reales (St. Petersburg College, Sinclair Community College, soporte de Unicon): 🔴 **sin repositorio localizable en 2026; el rastro público se corta cerca de 2014-2015, en SSP 2.4.**
+
+    **Por qué este gap es el más vendible de los 19, y no el más preocupante.** En todos los demás, la ausencia de oferta acompaña a una demanda incipiente. Acá la demanda está **presupuestada**: *student success* es categoría de compra consolidada en educación superior, con incumbentes propietarios. Y las dos condiciones que normalmente bloquean un engagement **no se cumplen**: los datos de referencia son **CC BY 4.0** con uso comercial (OULAD y UCI 697, ver `repos/foundations.md`) y la base técnica existe en el core de Moodle (*Analytics API*, GPL-3.0, con el target de alumno en riesgo incluido) o sobre OpenLRW. **Lo que falta es exactamente lo que se factura: ingeniería, mantenimiento y expediente de conformidad.** Ver **P25**.
+
+    ⚠️ **La trampa que hay que evitar al cotizar:** el número `4.424` aparece en decenas de esos 110 repos porque **es el mismo dataset portugués de hace una década**. La capa entera está entrenada sobre 4.424 alumnos de una institución europea. Para un cliente de cualquier otra región, eso es un punto de partida metodológico y **no un modelo que se pueda presentar como funcionando**.
+
+    **Y la dimensión regional, que reencuadra el gap 2.** Esta capa falta en las cuatro regiones, pero falta distinto: **North America** tiene el mercado y su único aporte open source es de 2018 con licencia irreconocible; **EMEA** tiene la regulación que lo exige y los dos datasets CC BY; **APAC** produce el repo con mejor stack y lo abandona después del hackathon; **LATAM** produce el **método publicado y revisado por pares** —revisión sistemática de 11 estudios 2022-2026 sobre riesgo de evasión en primaria (UFPE), tesis de UNIFEI, estudios de caso en institutos federales con Random Forest y XGBoost, ausentismo como predictor dominante— **y ningún repositorio**. El gap 2 dice que LATAM produce repos sin comunidad; en esta capa produce ciencia sin código. **Son los dos lados del mismo déficit, y juntos dicen que el problema no es regional: es que nadie convierte el resultado en artefacto mantenido.**
+19. **Los esquemas curriculares nacionales existen, son la pieza más cara de construir, y esta KB encontró dos de casualidad en dos pasadas distintas** *(agregado en el pase 11 del 2026-10-01)*. No es un gap de oferta: es un **gap de búsqueda**, y se declara para que la próxima pasada lo cierre a propósito.
+
+    Lo que hay, sin haberlo buscado sistemáticamente:
+
+    | Artefacto | Región | Licencia | Contenido |
+    |---|---|---|---|
+    | `nmarafo/OpenDidactia` *(pase 3)* | EMEA (España, LOMLOE) | **CC BY-SA 4.0** ⚠️ *share-alike* | Esquemas de Programación Didáctica y Situación de Aprendizaje para 17 comunidades + 2 ciudades autónomas, de Infantil a Bachillerato, FP y régimen especial |
+    | `DECK6/korean-elementary-learning-map` *(pase 11)* | APAC (Corea del Sur, currículo revisado 2022) | **MIT** ✅ | **620 anclas de estándares de logro, 1.956 temas, 2.293 relaciones de prerrequisito, 152 clusters**, 11 materias, grados 1-6, en JSON y RDF/Turtle con *competency questions* SPARQL y restricciones SHACL |
+
+    **Dos pasadas separadas por ocho ciclos encontraron el mismo tipo de artefacto en dos regiones distintas, y ninguna lo estaba buscando.** Eso es evidencia de que el resto probablemente exista: el *Common Core* y los estándares estatales de EE. UU., el *National Curriculum* británico, la BNCC de Brasil, los currículos de ACARA (Australia, que `mentar` ya consume en 157 plantillas) y de Singapur. **Si están publicados en formato estructurado, cada uno vale lo mismo que estos dos: es la pieza más cara de cualquier agente docente y la que ningún cliente quiere pagar dos veces.**
+
+    **Y la comparación entre los dos que hay es la lección de método:** el coreano es **MIT** y trae el grafo de prerrequisitos y la validación formal; el español es **CC BY-SA** y no trae ninguna de las dos. **El artefacto de APAC es mejor técnicamente y más barato legalmente**, lo cual es el espejo del gap 4 — pero acá, por una vez, la concentración en APAC juega a favor del cliente y no en contra.
+
+    **La acción para el próximo pase:** buscar explícitamente `curriculum ontology`, `achievement standards`, `learning map` y `prerequisite graph` por país, en el idioma del país, en vez de esperar que aparezcan buscando agentes.
+
 ## Fuentes
 
 Mercado y players: [Grand View Research](https://www.grandviewresearch.com/industry-analysis/artificial-intelligence-ai-education-market-report) · [Research and Markets](https://www.researchandmarkets.com/reports/5896034/ai-in-education-market-report) · [AI Tutors Market](https://www.grandviewresearch.com/industry-analysis/ai-tutors-market-report) · [5WPR EdTech AI Visibility Index 2026](https://www.5wpr.com/research/edtech-ai-visibility-index-2026/) · [Khan Academy / Duolingo agents](https://callsphere.ai/blog/ai-agents-education-khan-academy-duolingo-autonomous-tutoring)
+
+Capa predictiva, Apereo y licencia ECL-2.0 — agregado en el pase 11: [sakai](https://github.com/sakaiproject/sakai) · [opencast](https://github.com/opencast/opencast) · [uPortal](https://github.com/uPortal-Project/uPortal) · [OpenLRW](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRW) · [LearningAnalyticsProcessor](https://github.com/Apereo-Learning-Analytics-Initiative/LearningAnalyticsProcessor) · [OpenLRS (archivado)](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRS) · [OpenDashboard-legacy](https://github.com/Apereo-Learning-Analytics-Initiative/OpenDashboard-legacy) · [OpenDashboard-ux](https://github.com/Apereo-Learning-Analytics-Initiative/OpenDashboard-ux) · [OpenDashboard-api](https://github.com/Apereo-Learning-Analytics-Initiative/OpenDashboard-api) · [Larissa](https://github.com/Apereo-Learning-Analytics-Initiative/Larissa) · [terracotta](https://github.com/terracotta-education/terracotta) · [aira](https://github.com/GoogleCloudPlatform/aira) · [Student-Retention-Prediction](https://github.com/Aliipou/Student-Retention-Prediction) · [student-early-warning](https://github.com/dssg/student-early-warning) · [SIH-2026 / DropGuard](https://github.com/novatrix-2030/SIH-2026) · licencia: [SPDX ECL-2.0](https://spdx.org/licenses/ECL-2.0.html)
+
+Nuevos en el pase 11 — agentes, currículo y plataformas: [Gnos](https://github.com/madhvantyagi/Gnos) · [Alvarmethod](https://github.com/vasanthsreeram/Alvarmethod) · [learn](https://github.com/amosblomqvist/learn) · [korean-elementary-learning-map](https://github.com/DECK6/korean-elementary-learning-map) · [ai-builders-curriculum](https://github.com/ai-builders-foundation/ai-builders-curriculum) · [classmoji](https://github.com/classmoji/classmoji) · [Milky-institute-online](https://github.com/jude-miller-dev/Milky-institute-online) · [tadreeblms](https://github.com/Tadreeb-LMS/tadreeblms) · [dsh-openmaic](https://github.com/THU-MAIC/dsh-openmaic)
+
+Datos de deserción — agregado en el pase 11 (🔴 ninguno leído de primera mano, dominios bloqueados por el proxy): OULAD · `https://analyse.kmi.open.ac.uk/open_dataset` · UCI 697 · `https://archive.ics.uci.edu/dataset/697` · benchmark de supervivencia · `arXiv 2604.08870`
+
+Regulación del pase 11 (🔴 fuentes secundarias coincidentes; primarias bloqueadas): Reglamento (UE) 2026/1744 (Digital Omnibus on AI) · EU AI Act Anexo III · legislación estatal de EE. UU. 2026 (134 proyectos en 31 estados; MD, ID, OK, VA; California AB 1159; Idaho SB 1227) · Ley Básica de IA de Taiwán (en vigor 2026-01-14) · sectores de alto riesgo de Vietnam · UNESCO IESALC (200 instituciones, 19 países) · Digital Education Council LATAM 2026 (30.000+ respuestas, 29 instituciones)
 
 Credenciales verificables e interoperabilidad — agregado en el pase 9: [learner-credential-wallet](https://github.com/digitalcredentials/learner-credential-wallet) · [verifier-plus](https://github.com/digitalcredentials/verifier-plus) · [issuer-coordinator](https://github.com/digitalcredentials/issuer-coordinator) · [qti3-item-player](https://github.com/amp-up-io/qti3-item-player) · [esco-skill-extractor](https://github.com/KonstantinosPetrakis/esco-skill-extractor) · [oneroster (TypeScript)](https://github.com/LongsightGroup/oneroster) · [lti-1-3-php-library](https://github.com/1EdTech/lti-1-3-php-library) · [openbadges-specification](https://github.com/1EdTech/openbadges-specification) · [tao-core](https://github.com/oat-sa/tao-core) · [openbadgeslib](https://github.com/luisgf/openbadgeslib) · [caliper-php-public (U. de Michigan)](https://github.com/tl-its-umich-edu/caliper-php-public) · [European Learning Model (archivado)](https://github.com/european-commission-empl/European-Learning-Model) · [European Digital Credentials (archivado)](https://github.com/european-commission-empl/european-digital-credentials) · [Open Badges 3.0 — guía de implementación 1EdTech](https://standards.1edtech.org/open-badges/guides/standards/v3p0/impl) · [Europass — información para desarrolladores](https://europass.europa.eu/en/information-developers)
 
@@ -778,6 +926,42 @@ Capa de telemetría (LRS / xAPI) — agregado en el pase 6, **todo verificado de
 Evaluación — agregado en el pase 6, 🔴 **no verificado de primera mano** (dominios bloqueados por el proxy): L2-Bench (arXiv 2607.08842) · metodología de L2-Bench (arXiv 2603.20088) · `benchmarks.elt.edu.oup.com` · dataset en HuggingFace bajo `OUP/`
 
 Regulación y mercado por región — agregado en el pase 6: [MultiState — AI in Education Legislation: 2026 State Policy Trends](https://www.multistate.us/insider/2026/4/9/how-states-are-regulating-ai-in-education-this-legislative-session) · [NASBE — States Take Next Steps on Governing AI Use in Schools](https://www.nasbe.org/states-take-next-steps-on-governing-ai-use-in-schools/) · [ExcelinEd — State K-12 AI Policy in 2026](https://excelined.org/2026/05/26/state-k-12-ai-policy-in-2026-milestones/) · [Latham & Watkins — AI Regulation in APAC](https://www.lw.com/en/insights/ai-regulation-in-apac-diverging-approaches-across-the-region) · [Xenoss — APAC AI regulations](https://xenoss.io/blog/asia-pacific-apac-ai-regulations) · [UNESCO — Observatory on AI in Education for LAC](https://www.unesco.org/en/articles/unesco-launches-observatory-artificial-intelligence-education-latin-america-and-caribbean) · [Compliance & Risks — LATAM AI legislation](https://www.complianceandrisks.com/blog/shaping-the-future-ai-legislative-initiatives-across-latin-america/) · [IDB — An Enabling Regulatory Framework for AI in LAC](https://publications.iadb.org/publications/english/document/An-Enabling-Regulatory-Framework-for-Artificial-Intelligence-in-Latin-America-and-the-Caribbean.pdf) · [Azumo — AI in Education Statistics 2026](https://azumo.com/artificial-intelligence/ai-insights/ai-in-education-statistics) · [Grand View Research — AI Tutors Market](https://www.grandviewresearch.com/industry-analysis/ai-tutors-market-report) · [EdTech Hub — AI in Education in MENA](https://docs.edtechhub.org/lib/EPJAMMH9/download/BHXDDPBB)
+
+## Nota de método del pase 11 (2026-10-01) — once pasadas preguntando qué hace el software, y la pregunta que faltaba era qué decide
+
+**El cambio de pregunta.** El pase 10 cambió el indicador (de estrellas a despliegue real). Este pase cambia el
+**sujeto**: las diez pasadas anteriores preguntaron qué hace el software *con* el alumno —le enseña, lo mide, lo
+acredita, lo hace accesible—. Ninguna preguntó qué software **decide sobre** el alumno. Esa es la capa de riesgo de
+abandono y *student success*, es la que la institución ya tiene presupuestada, es la que el Anexo III del EU AI Act
+nombra literalmente, y está vacía. Ver el gap 18 y las tendencias 25 y 26.
+
+**El error propio que este pase encontró, y es más importante que el hallazgo.** La KB filtraba por **MIT /
+Apache-2.0 / BSD**. Ese filtro descartó durante diez pasadas el stack completo de Apereo —**Sakai, 1.234 ★, push de
+ayer**— porque su licencia es **ECL-2.0**, que es permisiva, aprobada por OSI y FSF, y no estaba en la lista.
+**Un filtro por lista blanca de nombres produce falsos negativos que no dejan rastro:** lo que no apareció no se
+puede auditar. La regla corregida está en `repos/foundations.md` y la generalización en la tendencia 27.
+
+**Canales de verificación de este pase, en orden de confianza:**
+
+1. **Metadatos de repo** (estrellas, licencia SPDX, `archived`, último push, forks, fecha de creación) leídos vía la **API de búsqueda de GitHub**. Es la fuente de todas las cifras de repos de este pase. ⚠️ `curl` directo a `api.github.com/repos/...` está **restringido al repositorio de la sesión**, así que no se usó para nada: eso también significa que **no se pudo leer el archivo `LICENSE` por API** en repos de terceros.
+2. **Página del repo abierta y leída** para licencia exacta, README, conteo de commits y advertencias del autor. Así se confirmaron ECL-2.0 en Sakai, Opencast, OpenLRW y LearningAnalyticsProcessor, el *proof-of-concept only* de `aira`, y los datos sintéticos de `Student-Retention-Prediction`.
+3. **Consultas cuantitativas con sintaxis registrada**, para que valgan como serie y no como anécdota: `topic:learning-analytics stars:>50` y `dropout prediction student license:mit pushed:>2026-01-01`. La próxima pasada debería repetirlas tal cual.
+4. **Fuentes secundarias múltiples y coincidentes**, para lo regulatorio y de mercado. Marcado 🔴 cuando es el único canal disponible.
+
+**🔴 Bloqueado por el proxy de egreso en este pase** — todo lo que dependa de estas fuentes está marcado como no
+verificado de primera mano: `eur-lex.europa.eu` y `digital-strategy.ec.europa.eu` (texto del Reglamento (UE)
+2026/1744), `archive.ics.uci.edu` (licencia exacta del dataset UCI 697), `analyse.kmi.open.ac.uk` (ficha de OULAD),
+`arxiv.org` (benchmark de supervivencia 2604.08870), `zenodo.org`, `en.wikipedia.org`.
+
+**Lo que este pase afirma con menos fuerza de la que parecería, a propósito:**
+
+- **La licencia del dataset UCI 697** se registra como "CC BY 4.0 ⚠️ confirmar". El tamaño, las features y la procedencia están verificados contra el descriptor publicado; la licencia, no. **Es la clase de dato que el pase 10 aprendió a no dar por bueno** (ver la tendencia 22).
+- **Las fechas del Reglamento (UE) 2026/1744** son consistentes en todas las fuentes secundarias consultadas, con número de reglamento, fechas de votación y fechas de aplicación coincidentes. Aun así: **confirmar en EUR-Lex antes de ponerlas en un documento de cliente.**
+- **El benchmark de supervivencia** se registra con su conclusión (señal temporal y conductual, no demográfica) porque es exactamente el argumento que un DPO necesita, y **con la advertencia de que su repositorio está reportado como link roto**: no hay código que auditar.
+
+**Lo que no se buscó y se declara como tal:** los esquemas curriculares nacionales (gap 19). Este pase encontró el
+coreano **de casualidad**, igual que el pase 3 encontró el español. Dos hallazgos accidentales del mismo tipo de
+artefacto en dos regiones son suficiente evidencia para buscarlo a propósito, y no se hizo en esta corrida.
 
 ## Nota de método del pase 10 (2026-10-01) — diez pasadas preguntando qué hace el agente, y la pregunta que faltaba era de qué lee
 

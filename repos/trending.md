@@ -8,6 +8,94 @@ updated: 2026-10-01
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 
+## 2026-10-01 (pase 11) — el LMS que faltaba estaba a la vista y lo escondía una línea de licencia: ECL-2.0
+
+Undécima corrida. El pase 10 cambió el indicador —de estrellas a despliegue real— y encontró Sunbird y Ed-Fi.
+**Este pase cambia el filtro, no el indicador, y el resultado es peor de admitir:** había infraestructura de primera
+línea que esta KB nunca registró **porque su licencia no estaba en la lista de permitidas**, aunque es permisiva.
+
+### 🔴 El hallazgo del pase, y es un error de método de diez pasadas
+
+Esta KB filtra por **MIT / Apache-2.0 / BSD**. La **Apereo Foundation** —la fundación que sostiene la infraestructura
+open source de la educación superior en EE. UU. y Europa— no usa ninguna de las tres: usa **ECL-2.0, Educational
+Community License 2.0**, que es **Apache-2.0 con el alcance de la concesión de patentes de la sección 3 acotado**,
+nacida en el *Licensing and Policy Summit* académico de 2006 y **aprobada por OSI y por la FSF**. No es copyleft: se
+puede usar, modificar, cerrar el derivado y redistribuir.
+
+Lo que ese filtro dejaba afuera, verificado el 2026-10-01:
+
+| Repo | Licencia | Stars | Forks | Último push | Qué es |
+|---|---|---|---|---|---|
+| https://github.com/sakaiproject/sakai | **ECL-2.0** ✅ | **1.234** | 1.014 | **2026-09-30** | LMS de educación superior en Java, con **dos ramas mantenidas a la vez**: tags `25.2` (2026-06-02) y `23.5` (2026-06-30). ⚠️ No publica *GitHub Releases*; la versión se lee en los tags |
+| https://github.com/opencast/opencast | **ECL-2.0** ✅ | 505 | 260 | **2026-09-30** | Captura y distribución automatizada de **video de clase** a escala. **La capa multimodal que ningún otro repo de esta KB cubre** |
+| https://github.com/uPortal-Project/uPortal | **Apache-2.0** ✅ | 286 | 278 | 2026-09-22 | Portal empresarial de educación superior: la superficie donde la universidad ya le habla al alumno |
+| https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRW | **ECL-2.0** ✅ | 62 | 25 | 2026-08-04 | *Learning record warehouse* que habla **xAPI, IMS Caliper e IMS OneRoster a la vez** — el único artefacto de esta KB con los tres |
+
+**Sakai es un LMS de 1.234 estrellas con 1.014 forks y push de ayer. No faltaba por no haber buscado: faltaba por una
+regla de licencia aplicada sin leerla.** La regla corregida está en `repos/foundations.md`.
+
+### El cementerio: la capa de analítica institucional de Apereo, repo por repo
+
+La organización `Apereo-Learning-Analytics-Initiative` tiene **21 repos** y uno solo está vivo:
+
+| Repo | Stars | Último push | Estado |
+|---|---|---|---|
+| `OpenLRW` | 62 | **2026-08-04** | ✅ Vivo, *Apereo incubating*, 424 commits |
+| `LearningAnalyticsProcessor` | 23 | 2023-01-19 | ⚠️ Dormido — y es el orquestador del pipeline predictivo |
+| `Larissa` (LRS alternativo, Apache-2.0) | 8 | 2025-09-18 | ⚠️ Señal de vida, 8 ★ |
+| `OpenLRS` | 47 | 2023-01-28 | 🔴 **Archivado. Su descripción es la palabra `Deprecated`** |
+| `OpenDashboard-legacy` | 47 | — | 🔴 **`(Deprecated)`** declarado |
+| `OpenDashboard-ux` | 1 | **2020-02-29** | 🔴 Creado el 2020-02-12 |
+| `OpenDashboard-api` | 0 | **2020-03-09** | 🔴 Creado el 2020-02-12 |
+| `LAP-Sakai-Extractor` | 2 | 2016-11-09 | 🔴 El extractor desde Sakai |
+
+**El dato que hay que llevar a una propuesta:** el reemplazo del dashboard se creó en dos repos el mismo día de
+febrero de 2020 y se abandonó dentro del mes. Y **Student Success Plan** (SSP), el producto de advising de Apereo con
+despliegues reales y soporte comercial de Unicon, **no tiene repositorio localizable en 2026**: el rastro público se
+corta cerca de 2014-2015, en SSP 2.4. Ausencia verificada, no omitida.
+
+### La capa predictiva, medida en vez de descrita
+
+| Consulta en GitHub, 2026-10-01 | Resultado | Techo |
+|---|---|---|
+| `topic:learning-analytics stars:>50` | **2 repos en todo GitHub** | 169 ★, y es un blog de notas de papers |
+| `dropout prediction student license:mit pushed:>2026-01-01` | **110 repos** | **6 ★** |
+
+Los tres que importan de esos 110 están en `agents/top.md`. El resumen: el tope es MIT y **entrena con datos
+sintéticos**; el más estrellado en absoluto (`dssg/student-early-warning`, 70 ★, del Data Science for Social Good de
+la Universidad de Chicago) tiene licencia **"Other" (NOASSERTION)** y último push de **2018**; y la entrega del
+**Smart India Hackathon 2026** con el mejor stack del grupo no tiene licencia.
+
+### Lo que da vuelta el gap 11, y es la mejor noticia del pase
+
+El gap 11 dice que los datasets del modelado del alumno son **NonCommercial**. **En esta capa son CC BY 4.0.**
+
+| Dataset | Licencia | Tamaño | Región |
+|---|---|---|---|
+| **OULAD** (The Open University, UK) | **CC BY 4.0** ✅ | 22 cursos, **32.593 alumnos, 10.655.280 registros de clicks** | EMEA |
+| **UCI 697** *Predict Students' Dropout and Academic Success* | CC BY 4.0 ⚠️ confirmar | **4.424 × 36 features**, 3 clases | EMEA (Portugal, grant `POCI-05-5762-FSE-000191`) |
+
+🔴 **Los dos están sin verificar de primera mano:** `analyse.kmi.open.ac.uk` y `archive.ics.uci.edu` están bloqueados
+por el proxy de egreso de esta sesión. Tamaños y procedencia salen de fuentes secundarias coincidentes y del
+descriptor de datos publicado; **la licencia de UCI hay que confirmarla en la ficha antes de facturar.**
+
+**Y el dato de método que esto obliga a decir en una propuesta:** el número `4.424` que aparece en decenas de esos
+110 repos es *el mismo* dataset portugués. **La capa entera está entrenada sobre 4.424 alumnos de una institución
+europea de hace una década.** Para cualquier otra región eso es un punto de partida metodológico, no un modelo.
+
+### Dos repos chicos que confirman el patrón de derivación
+
+| Repo | Licencia | Stars | Por qué |
+|---|---|---|---|
+| https://github.com/terracotta-education/terracotta | **Apache-2.0** ✅ | 21 | RCTs dentro del LMS con consentimiento y anonimización resueltos. 2.572 commits, push del 2026-09-30. **La pieza que convierte "creemos que funcionó" en evidencia** |
+| https://github.com/GoogleCloudPlatform/aira | **Apache-2.0** ✅ | 24 | Evaluación automática de **fluidez lectora** (Pre-reader / Reader / Advanced) por Education Engineers de Google Cloud. ⚠️ El repo declara ser *proof-of-concept only*, no producto soportado, **sin datos personales y no para menores de 13** — en una herramienta de alfabetización inicial |
+
+### Nota de método de este pase
+
+- **Canal de verificación:** metadatos (estrellas, licencia SPDX, `archived`, último push, forks) leídos vía la API de búsqueda de GitHub; licencias y README confirmados abriendo la página del repo. `curl` directo a `api.github.com` está restringido al repositorio de la sesión, así que **no se usó**: cada cifra de esta sección viene de una de esas dos vías.
+- **Las dos consultas cuantitativas se dejan escritas con su sintaxis exacta** para que la próxima pasada pueda repetirlas y ver la serie, que es lo que un "110 repos, techo 6 ★" vale: nada la primera vez, mucho la tercera.
+- **Bloqueado por el proxy en este pase:** `arxiv.org`, `eur-lex.europa.eu`, `digital-strategy.ec.europa.eu`, `archive.ics.uci.edu`, `zenodo.org`, `en.wikipedia.org`. Todo lo que dependa de esas fuentes está marcado 🔴.
+
 ## 2026-10-01 (pase 10) — la infraestructura educativa más desplegada del mundo es permisiva, y tiene 41 estrellas
 
 Décima corrida. Las nueve anteriores ordenaron por estrellas. **Este pase cambia el indicador y aparecen dos plataformas

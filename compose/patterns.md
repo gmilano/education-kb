@@ -7,7 +7,8 @@ updated: 2026-10-01
 # 🧩 Patrones de composición — Education
 
 > Recetas concretas: repos nombrados, licencias verificadas, wiring explícito y estimación.
-> Todos los repos citados fueron verificados vía WebFetch el 2026-09-30 (ver `agents/top.md`).
+> Todos los repos citados fueron verificados vía WebFetch el 2026-09-30; los del pase 11, el 2026-10-01 (ver `agents/top.md`).
+> **Pase 11:** +2 patrones — **P25** (riesgo de abandono conforme al Anexo III, la capa con presupuesto ya asignado y sin oferta open source) y **P26** (agente docente sobre la ontología curricular nacional ya publicada).
 
 ## Patrón base
 
@@ -880,3 +881,95 @@ incumbente: **soberanía del dato del alumno, sobre un estándar que el estado y
 
 ---
 *Ver `intel/market.md` para la oportunidad por región y `intel/trends.md` para los gaps que estos patrones atacan.*
+
+## P25 — Riesgo de abandono conforme al Anexo III, con el humano en el lazo (agregado en el pase 11; **EMEA y North America primero**, y es la capa con presupuesto ya asignado)
+
+**El problema que resuelve, y es el único de esta KB donde el cliente ya tiene la partida abierta.** Toda institución
+de educación superior compra *student success* / *early alert*. El open source de esa capa **no existe** (gap 18:
+110 repos MIT con techo de 6 ★, el tope entrenado con datos sintéticos, el stack de Apereo archivado). Y la
+regulación lo nombra: el **Anexo III del EU AI Act** cubre la evaluación de resultados de aprendizaje, el screening
+de postulantes y el monitoreo de exámenes, con fecha **2027-12-02** (Reglamento (UE) 2026/1744). En EE. UU.,
+**Oklahoma y Maryland exigen supervisión humana y prohíben que la AI tome decisiones de alto impacto sobre un
+alumno**, y **California AB 1159 prohíbe usar datos de alumnos para entrenar modelos**.
+
+**La consecuencia de diseño, y hay que ponerla adelante: el entregable no es el modelo, es el expediente.** Un
+modelo de riesgo sin expediente de conformidad es invendible en las dos regiones donde está el dinero.
+
+### Las piezas, todas verificadas en el pase 11
+
+| Capa | Pieza | Licencia | Por qué esta |
+|---|---|---|---|
+| Motor predictivo | **Analytics API del core de Moodle** | GPL-3.0 (es el core) | Define modelos como *indicadores + target*, los evalúa y entrena internamente, con el target de alumno en riesgo incluido. **Es la base más sólida que existe hoy**, y se extiende por los puntos de extensión del core sin forkear |
+| Alternativa / almacén | **OpenLRW** · https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRW | **ECL-2.0** ✅ | Si el cliente no es Moodle: *learning record warehouse* que habla **xAPI + IMS Caliper + IMS OneRoster** a la vez — los tres formatos que una universidad realmente tiene. 62 ★, push del 2026-08-04 |
+| Telemetría de origen | `yetanalytics/lrsql` o `openfun/ralph` *(capa del pase 6)* | Apache-2.0 ✅ | Donde el agente y el LMS escriben los statements que alimentan el modelo. Ver **P15** |
+| Estado del alumno | **pyBKT** (MIT) o **pyKT** (MIT) *(capa del pase 5)* | MIT ✅ | El riesgo de abandono y el mastery son ejes distintos y se venden juntos: un alumno que no domina el prerrequisito es la explicación del riesgo, no un dato aparte. ⚠️ Pero leer el gap 11: **los datasets de knowledge tracing son NonCommercial**, y el entrenamiento se hace con datos del cliente |
+| Explicabilidad | **SHAP** por caso | Apache-2.0/MIT ✅ | No opcional: es lo que convierte "el sistema marcó a este alumno" en algo que un tutor puede discutir y un auditor puede revisar |
+| **Evidencia de que la intervención sirve** | **Terracotta** · https://github.com/terracotta-education/terracotta | **Apache-2.0** ✅ | RCT dentro del LMS con **consentimiento informado oculto al docente**, filtrado de no-consintientes y remoción de identificadores en las exportaciones. 2.572 commits, push del 2026-09-30 |
+| Datos de arranque | **OULAD** (CC BY 4.0) y **UCI 697** (CC BY 4.0 ⚠️ confirmar) | CC BY 4.0 ✅ | Para calibrar el pipeline antes de tocar datos del cliente. ⚠️ **No son el modelo final:** UCI 697 son 4.424 alumnos portugueses de hace una década |
+| Expediente | **P4** / **P17** de esta KB | — | La forma del entregable de conformidad ya está resuelta en esta KB para evaluación auditable y accesibilidad. Acá se reusa |
+
+### El wiring
+
+1. **Capa 0 — telemetría antes que modelo.** LRS o OpenLRW recibiendo eventos del LMS y del agente. Sin esto no hay features temporales, y las features temporales son las que predicen (ver abajo).
+2. **Features conductuales y temporales, explícitamente sin atributos protegidos.** Logins, asistencia, entrega de trabajos, latencia de entrega, racha de inactividad. **El benchmark de supervivencia sobre OULAD reporta que la señal dominante es temporal y conductual, no demográfica ni estructural** (arXiv 2604.08870 🔴 sin verificar de primera mano). Eso no es una restricción ética que cueste performance: **es el hallazgo que permite no usar los atributos protegidos sin perder exactitud**, y es el argumento que aprueba el sistema ante un DPO.
+3. **Modelo en la Analytics API de Moodle** (indicadores + target) o pipeline propio sobre OpenLRW. **Entrenado con datos del cliente, nunca con los del alumno en jurisdicciones donde eso está prohibido** — en California, AB 1159 lo prohíbe de frente.
+4. **Salida a persona, no a sistema.** El score va a la bandeja de un tutor con su explicación SHAP y una acción sugerida. **El sistema nunca ejecuta la consecuencia** — ni baja al alumno de categoría, ni cambia su inscripción, ni le manda la notificación automática. Esto es simultáneamente el requisito de supervisión humana del Anexo III y la prohibición de Oklahoma y Maryland: **una sola decisión de arquitectura cubre las dos regulaciones.**
+5. **Auditoría de equidad como artefacto publicado, no como párrafo.** Métricas por subgrupo, con el resultado en el expediente. **Ninguno de los repos verificados en el pase 11 publica esto**, y es la diferencia entre un entregable y un notebook.
+6. **Terracotta para medir la intervención.** Grupo de tratamiento y control sobre la misma tarea, con el consentimiento ya resuelto. Al final del ciclo se puede decir cuánto bajó el abandono **y con qué intervalo de confianza**, en vez de mostrar la curva del modelo.
+
+### Plazo y alcance
+
+- **Fase 1 — telemetría + expediente (6-8 semanas).** LRS/OpenLRW desplegado, inventario de features, evaluación de impacto y diseño de supervisión humana firmados. **Esta fase se puede vender sola y es la que el cliente aprueba sin discutir**, porque es lo que ya le exige su propio comité.
+- **Fase 2 — modelo + explicabilidad + auditoría de equidad (8-10 semanas).**
+- **Fase 3 — RCT con Terracotta y medición del efecto (un ciclo académico).** Es la fase que produce el caso de referencia.
+
+### Dónde se vende primero
+
+- **EMEA:** la fecha es el driver. **2027-12-02** son ~14 meses, exactamente el plazo de un programa de conformidad institucional. Y los dos datasets de referencia son europeos y CC BY.
+- **North America:** el driver no es una fecha sino una prohibición vigente que deja al cliente con presupuesto y sin forma legal de gastarlo como pensaba. **La fase 1 y el punto 4 del wiring son literalmente el producto.** 38% del mercado global.
+- **LATAM:** el método ya existe y es local —papers brasileños con features validadas sobre datos reales de institutos federales, ausentismo como predictor dominante— y el dato está en el SIS. Lo que falta es la ingeniería. Ver `intel/market.md`.
+- **APAC:** Vietnam ya nombró la **evaluación automatizada y el monitoreo del comportamiento** como alto riesgo en educación; se vende como P5 multi-jurisdicción con este patrón adentro.
+
+### ⚠️ Lo que no hay que prometer en este patrón
+
+- **No proponer ningún repo de la capa predictiva de GitHub como base de producto.** Techo de 6 ★, datos sintéticos, licencias ausentes o `NOASSERTION`. Sirven para leer feature engineering, nada más.
+- **No proponer Apereo SSP, OpenDashboard ni LearningAnalyticsProcessor.** Verificado en el pase 11: el primero no tiene repo localizable, el segundo está declarado *(Deprecated)* y su reemplazo se abandonó en 2020, el tercero no tiene push desde enero de 2023.
+- **No presentar métricas de los papers como métricas esperables.** Los accuracy de 0,87 y los AUC de 0,96 que circulan en esta capa están medidos sobre 4.424 registros de una institución europea. Con los datos del cliente, el número se mide; no se promete.
+
+## P26 — Agente docente conforme al currículo nacional, con la ontología ya publicada (agregado en el pase 11; **APAC primero, EMEA segundo**)
+
+**El problema que resuelve.** El patrón **P8** (fábrica de lecciones en la voz del docente) y el **P6** (AI literacy a
+escala de sistema educativo) chocan siempre con la misma pieza: **el currículo nacional estructurado.** Es el artefacto
+más caro de construir de un agente docente —hay que leer el currículo oficial, modelarlo, validarlo y mantenerlo— y es
+el que ningún ministerio quiere pagar dos veces. **El pase 11 encontró que, para dos países, ya está publicado.**
+
+### Las piezas
+
+| Pieza | Licencia | Región | Qué aporta |
+|---|---|---|---|
+| **korean-elementary-learning-map** · https://github.com/DECK6/korean-elementary-learning-map | **MIT** ✅ | APAC (Corea del Sur, currículo revisado 2022) | **620 anclas de estándares de logro, 1.956 temas, 2.293 relaciones de prerrequisito, 152 clusters**, 11 materias, grados 1-6. **JSON y RDF/Turtle**, con *competency questions* en **SPARQL** y restricciones **SHACL**. ⚠️ Construcción independiente, **no producto oficial del Ministerio** |
+| **OpenDidactia** · https://github.com/nmarafo/OpenDidactia | CC BY-SA 4.0 ⚠️ | EMEA (España, LOMLOE) | Esquemas de Programación Didáctica y Situación de Aprendizaje para 17 comunidades + 2 ciudades autónomas, con DUA y rúbricas. ⚠️ **Share-alike:** derivar el esquema para el cliente dispara la obligación de publicar |
+| **mentar** · https://github.com/avps82/mentar | AGPL-3.0-only ⚠️ | — | Referencia de cómo se consume: **934 nodos de concepto en 157 plantillas curriculares** (ACARA v9 de Australia, India, Singapur, EE. UU.) con **checker determinístico** en vez de dejar que el modelo valide |
+| **Gnos** · https://github.com/madhvantyagi/Gnos | **MIT** ✅ | — | *Teaching harness* cuyo registro de evidencia distingue **"vio la explicación" / "resolvió con ayuda" / "resolvió solo"** — la granularidad que el grafo de prerrequisitos necesita para decidir el siguiente nodo |
+| **Alvarmethod** · https://github.com/vasanthsreeram/Alvarmethod | **MIT** ✅ | — | El loop pedagógico como skill portable: *probe → plan (DAG) → teach → lock-in*. **El `plan` es exactamente un recorrido sobre el grafo de prerrequisitos**, así que las dos piezas encajan sin adaptador |
+| **pyBKT** / **pyKT** | MIT ✅ | — | Estimación de mastery por nodo del grafo |
+
+### El wiring
+
+1. **El grafo de prerrequisitos es la fuente de verdad, no el prompt.** Se carga la ontología (JSON para la aplicación, RDF/Turtle si el cliente ya tiene triple store) y se validan las restricciones **SHACL** en CI: si el ministerio cambia el currículo, el build falla antes que el agente alucine.
+2. **`Alvarmethod` para el loop, con el `plan` recorriendo el grafo** en vez de pidiéndole al LLM que invente la secuencia. La diferencia es auditable: el plan de estudio queda trazado contra anclas de estándares oficiales.
+3. **`pyBKT` estima mastery por nodo**, y las *competency questions* SPARQL de la ontología se reusan como consultas de cobertura: "¿qué estándares de 4.º grado cubrió este alumno?" es una consulta, no un reporte a mano.
+4. **`Gnos` para la captura de evidencia** con la distinción de los tres niveles de ayuda. Sin eso, el mastery se estima sobre "respondió bien" y vale poco.
+5. **El checker determinístico de `mentar` como patrón** —no como dependencia, que es AGPL—: **el LLM explica, un verificador no-LLM corrige.** Es la única forma de que el agente no le dé por bueno un error a un chico.
+6. **Telemetría a LRS** (P15) para que la cobertura curricular sea un dato consultable por el ministerio y no una captura de pantalla.
+
+### Plazo y alcance
+
+- **6-8 semanas** para un piloto de una materia y un grado sobre un currículo **que ya tiene ontología publicada** (Corea del Sur hoy; España con la advertencia de licencia).
+- **12-16 semanas** si hay que **construir la ontología** del país. Esa es la fase cara, y el gap 19 dice que conviene mirar primero si alguien ya la publicó: Brasil (BNCC), Reino Unido, Australia (ACARA, que `mentar` ya consume) y los estándares estatales de EE. UU. son candidatos sin verificar.
+
+### Dónde se vende primero
+
+- **APAC:** es la única región con la pieza **MIT**, completa y formalmente validada. Un engagement de currículo nacional empieza con el artefacto más caro ya resuelto y sin fricción de licencia.
+- **EMEA:** España tiene el esquema, pero es **CC BY-SA**. Se puede usar como referencia y **hay que decidir adelante** si el esquema derivado se publica o se construye uno propio — es una decisión comercial, no técnica, y tomarla tarde cuesta.
+- **LATAM:** la BNCC de Brasil es el equivalente obvio y **nadie verificó si está publicada en formato estructurado.** Si no lo está, construirla con autoría local es exactamente el tipo de aporte que el gap 2 recomienda, y es reusable en todo el país.

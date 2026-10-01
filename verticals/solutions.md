@@ -8,7 +8,8 @@ updated: 2026-10-01
 
 > Plataformas verticales reales, en producción, customizables con AI.
 > Modelo: partir de algo que ya funciona y que ya tiene los datos, y agregar la capa agéntica arriba.
-> Verificado vía WebFetch el 2026-09-30.
+> Verificado vía WebFetch el 2026-09-30; las capas del pase 11, el 2026-10-01.
+> **Pase 11:** entra la capa **Apereo (ECL-2.0)** —Sakai, Opencast, uPortal, OpenLRW—, que diez pasadas descartaron por un filtro de licencia mal aplicado, y se documenta qué **no** proponer cuando el cliente pide *early warning*.
 
 ## Plataformas recomendadas
 
@@ -235,6 +236,47 @@ explícita, y su asistente `Aila` es **MIT**. **Es el único caso de esta KB don
 utilizables en un entregable facturado.** ⚠️ Dos reservas: `support.thenational.academy` está **bloqueado por el proxy**
 (la licencia viene de prensa británica, no del documento), y hay indicios de **restricción geográfica al Reino Unido** que
 hay que confirmar antes de proponer el corpus fuera de UK.
+
+## Capa Apereo — LMS, video y portal de educación superior (ECL-2.0) — agregada en el pase 11 del 2026-10-01
+
+Esta capa no estaba por un error de filtro, no por falta de madurez: **Apereo licencia con ECL-2.0**, que es
+Apache-2.0 con la concesión de patentes acotada, aprobada por OSI y FSF y **no copyleft** (ver `repos/foundations.md`).
+Son plataformas en producción en universidades de investigación, customizables con AI arriba.
+
+| Plataforma | Repo | Licencia | Stars | Para qué partir de acá |
+|---|---|---|---|---|
+| **Sakai** | https://github.com/sakaiproject/sakai | **ECL-2.0** ✅ | 1.234 | LMS completo de educación superior en Java, con **dos ramas mantenidas en paralelo** (`25.2` del 2026-06-02 y `23.5` del 2026-06-30) y push del 2026-09-30. Alternativa a Moodle y Canvas **sin la fricción GPL/AGPL del primero y sin el vendor del segundo**. ⚠️ La diferencia que decide: **no tiene un subsistema de AI como el de Moodle 4.5+** — sobre Moodle la AI se configura, sobre Sakai se construye. Eso es trabajo facturable, y también es riesgo de plazo |
+| **Opencast** | https://github.com/opencast/opencast | **ECL-2.0** ✅ | 505 | Captura, procesamiento y publicación automatizada de **video de clase** a escala. **Si el entregable incluye transcripción, indexado semántico, búsqueda dentro de la clase grabada o resumen automático, esta es la capa de ingestión y ya existe.** Es la única pieza multimodal de esta KB |
+| **uPortal** | https://github.com/uPortal-Project/uPortal | **Apache-2.0** ✅ | 286 | Portal institucional: la superficie donde la universidad ya expone servicios al alumno. **El lugar más barato para montar un agente** — no hay que conseguir que el alumno adopte otra aplicación |
+| **OpenLRW** | https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRW | **ECL-2.0** ✅ | 62 | *Learning record warehouse* que habla **xAPI + IMS Caliper + IMS OneRoster** a la vez. Complementa la capa de telemetría del pase 6: los LRS de ahí almacenan xAPI; éste además consume Caliper y el roster, que es lo que una universidad realmente tiene |
+
+### ⚠️ Lo que NO hay que proponer en la capa predictiva, y es casi todo
+
+La capa de *early warning* / *student success* es la que el cliente pide por nombre y **no tiene open source
+proponible.** Verificado en el pase 11:
+
+| Lo que un cliente va a nombrar | Estado real | Qué decir |
+|---|---|---|
+| **Apereo Student Success Plan (SSP)** | 🔴 **Sin repositorio localizable.** Rastro público hasta ~2014-2015 (SSP 2.4, Unicon, St. Petersburg College, Sinclair) | No existe como componente. Si el cliente lo menciona, está citando bibliografía de hace una década |
+| **Apereo OpenDashboard** | 🔴 `-legacy` declarado *(Deprecated)*; el reemplazo (`-ux` + `-api`) **abandonado un mes después de crearse, en 2020** | No proponerlo ni como base a forkear |
+| **Apereo LearningAnalyticsProcessor** | ⚠️ 23 ★, **sin push desde 2023-01** | Sólo como referencia de arquitectura de pipeline |
+| **Los 110 repos MIT de dropout prediction** | ⚠️ Techo **6 ★**; el tope entrena con **datos sintéticos**; el más estrellado en absoluto es de 2018 con licencia `NOASSERTION` | Son andamios y notebooks, no productos. Útiles para feature engineering; no para prometer un sistema |
+| **Analítica predictiva de Moodle** | ✅ **Existe y es lo más sólido disponible:** la *Analytics API* del core define modelos como *indicadores + target*, los evalúa y entrena internamente, con el target de alumno en riesgo incluido. GPL-3.0 (es el core de Moodle) | **Es la respuesta correcta a esta necesidad hoy.** Se extiende por los puntos de extensión del core y la lógica propietaria vive afuera (ver la nota de licencias en `repos/foundations.md`) |
+
+**La regla de esta capa:** cuando el cliente pide *early warning*, **la base es la Analytics API de Moodle o el
+pipeline propio sobre OpenLRW**, nunca un repo de la capa predictiva de GitHub. Y el entregable que se vende no es el
+modelo: es el **expediente de conformidad** del modelo, porque el Anexo III lo exige. Ver el patrón **P25**.
+
+### Y la pieza que vuelve defendible cualquier propuesta de esta capa
+
+| Plataforma | Repo | Licencia | Stars | Para qué |
+|---|---|---|---|---|
+| **Terracotta** | https://github.com/terracotta-education/terracotta | **Apache-2.0** ✅ | 21 | Plug-in de LMS para **ensayos controlados aleatorizados dentro del aula**: variantes de tratamiento por tarea, asignación al azar, **consentimiento informado oculto al docente**, filtrado de no-consintientes en los reportes y remoción de identificadores en las exportaciones. 2.572 commits, push del 2026-09-30 |
+
+**Por qué importa comercialmente y no sólo metodológicamente:** todo proyecto de esta capa se vende prometiendo que
+la intervención reduce el abandono, y **casi ninguno puede probarlo** porque no hay grupo de control. Terracotta trae
+el diseño experimental *y* la protección de datos del comité de ética ya resueltos. Convierte un entregable de
+opinión en un entregable con evidencia, y el costo de agregarlo es un plug-in.
 
 ## Cómo elegir
 

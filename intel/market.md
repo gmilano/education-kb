@@ -7,7 +7,8 @@ updated: 2026-10-01
 # 🗺️ Mapa de mercado — Education
 
 > Key players, market map y oportunidades por región.
-> Investigado 2026-09-30. Las estimaciones de tamaño de mercado varían mucho entre firmas: se listan todas con su fuente en vez de elegir una.
+> Investigado 2026-09-30; el pase 11, el 2026-10-01. Las estimaciones de tamaño de mercado varían mucho entre firmas: se listan todas con su fuente en vez de elegir una.
+> **Pase 11:** el reloj del Anexo III del EU AI Act se corrió a **2027-12-02** (Reglamento (UE) 2026/1744, en vigor 2026-07-27) y las cuatro regiones tienen bloque propio sobre la **capa predictiva / early warning**.
 
 ## Tamaño de mercado
 
@@ -243,6 +244,34 @@ mano es el repo**: MIT, **41 ★, 317 forks, 38.046 commits**. Ver `repos/founda
 K-12 de EE. UU., es **Apache-2.0** desde abril de 2020. Es la pieza que un proyecto K-12 estadounidense necesita **antes**
 del agente, y el pase 9 no la había cubierto. Ver **P24**.
 
+### Agregado en el pase 11 del 2026-10-01 — el submercado que el cliente ya tiene presupuestado, y el reloj regulatorio que se corrió 16 meses
+
+**Lo confirmado de la ventana, con su fuente:**
+
+- **Mercado global de AI en educación: USD 7,52 B (2025) → USD 10,6 B (2026), CAGR 40,9%, proyección USD 42,48 B a 2030** (Research and Markets). Es consistente en orden de magnitud con las cifras de los pases anteriores, que se conservan arriba con sus fuentes.
+- **North America: 38% del mercado global en 2025.** Educación superior es el *end use* más grande y **formación corporativa el de crecimiento más rápido** — lo que vuelve a colocar el *capability building* (ver `repos/foundations.md`, capa de alfabetización AI) como demanda de primera línea y no como accesorio.
+- **Sólo 20% de las universidades tiene una política formal de AI**, con la adopción corriendo muy por delante de la gobernanza (encuesta Coursera, febrero de 2026). El número es el mismo fenómeno que el 26% de LATAM del pase 5, medido globalmente: **no hay un gap de adopción, hay un gap de gobernanza, y la gobernanza es entregable.**
+
+**🔴 El cambio regulatorio del pase, y corrige lo que esta KB venía afirmando.** El **Digital Omnibus on AI** dejó
+de ser propuesta y es derecho vigente: **Reglamento (UE) 2026/1744**, propuesto por la Comisión el **2025-11-19**,
+aprobado por el Parlamento Europeo el **2026-06-16**, adoptado por el Consejo el **2026-06-29** y **en vigor desde el
+2026-07-27**. Modifica, entre otros, los artículos 9, 17, 18, 28, 43 y 50 del Reglamento (UE) 2024/1689.
+
+| Obligación | Fecha anterior | Fecha vigente |
+|---|---|---|
+| **Anexo III, alto riesgo *stand-alone*** (incluye educación: evaluación de resultados de aprendizaje, screening de postulantes, monitoreo de exámenes) | 2026-08-02 | **2027-12-02** |
+| Alto riesgo **embebido en productos regulados** | 2027-08-02 | **2028-08-02** |
+| **Prácticas prohibidas** — entre ellas el **reconocimiento de emociones en instituciones educativas** | ya aplicaba | **sin cambio: ya aplica** |
+| **Alfabetización en AI** (art. 4) | desde 2025-02-02 | **sin cambio: ya aplica** |
+
+**Lo que esto significa para una propuesta, y no es "hay más tiempo".** El corrimiento a **2027-12-02** es de la
+mitad **cara** del expediente (gestión de riesgos, gobernanza de datos, evaluación de conformidad). La mitad
+**barata y ya exigible** —prohibiciones y alfabetización— no se movió. **La ventana comercial que esto abre es de
+preparación, no de postergación:** 14 meses es exactamente el plazo en que un comprador institucional contrata un
+programa de conformidad, y es el argumento del patrón **P25**. 🔴 **Verificado en fuentes legales secundarias
+independientes y coincidentes; `eur-lex.europa.eu` y `digital-strategy.ec.europa.eu` están bloqueados por el proxy
+de egreso de esta sesión, así que el texto primario no se leyó.**
+
 ## Players globales
 
 | Empresa | Tipo | Fortaleza | Debilidad |
@@ -398,6 +427,30 @@ Caliper, QTI y Open Badges y **dejó afuera el expediente longitudinal del alumn
 **Ed-Fi es anterior al agente**. Ver **P24**.
 
 
+#### Pase 11 del 2026-10-01 — la regulación de North America prohíbe exactamente el producto que la región más compra
+
+Esta es la región donde *student success* y *early alert* son categoría de compra consolidada, con incumbentes
+propietarios. Y es la región cuya regulación 2026 **limita de frente el uso automatizado de ese scoring:**
+
+- **134 proyectos de ley sobre AI en educación en 31 estados** en la sesión 2026, concentrados en privacidad de datos del alumno, límites de uso en el aula e integración curricular.
+- **Cuatro estados con ley que exige a la vez guía estatal y adopción obligatoria de política a nivel distrital: Maryland, Idaho, Oklahoma y Virginia.**
+- **Oklahoma y Maryland exigen supervisión humana y prohíben que la AI tome decisiones de alto impacto sobre un alumno.** Eso no prohíbe el modelo de riesgo: **prohíbe que el modelo decida.** El entregable vendible es el que pone al humano en el lazo y lo documenta.
+- **California AB 1159 prohíbe usar datos de alumnos para entrenar modelos de AI.** Es el que más duele comercialmente: **elimina la propuesta de "entrenamos un modelo con los datos de su institución"** en el estado más grande. Lo que queda en pie es modelo entrenado afuera + inferencia local, o modelos cuya mejora no implique entrenamiento con datos del alumno.
+- **Idaho SB 1227** exige protecciones de privacidad para las herramientas de AI en escuelas.
+- **NYC Public Schools** publicó guía preliminar en **marzo de 2026** con un **Traffic Light Framework** (usos permitidos / con precaución / prohibidos) y un *Playbook* completo previsto para junio de 2026. Es el distrito más grande del país: su marco se copia.
+- A nivel federal, la administración publicó en **marzo de 2026** *A National Policy Framework for Artificial Intelligence*, que pide al Congreso "proteger a los chicos" y "empoderar a los padres" para monitorear el uso de AI.
+- Y hay un dato de legitimidad que sirve en una propuesta: estudiantes de **los 50 estados** produjeron en agosto de 2026 un marco nacional propio para el uso responsable de AI en K-12, con énfasis en aprendizaje auténtico, privacidad, equidad y juicio humano.
+
+**La oportunidad concreta, y es distinta de la de EMEA.** En EMEA el driver es una fecha regulatoria; **acá es una
+prohibición ya vigente que deja al cliente con el presupuesto asignado y sin forma legal de gastarlo como pensaba.**
+El producto es: scoring de riesgo con **supervisión humana documentada**, sin entrenar sobre datos del alumno, con
+explicabilidad por caso y auditoría de equidad. Ver **P25** y el patrón **P14** (calificar sin que califique el
+modelo), que ya resolvía esta misma forma en la capa de grading.
+
+**Y la pieza de oferta que North America aporta a esta capa:** `dssg/student-early-warning` (Data Science for Social
+Good, Universidad de Chicago, 70 ★) — **licencia `NOASSERTION` y último push 2018**, así que su valor es
+metodológico. La región que tiene el mercado no tiene el software mantenido.
+
 ### EMEA
 
 **Contexto.** Regulación primero, adopción después — lo inverso a Norteamérica. La fecha de aplicación de sistemas de alto riesgo del Annex III del EU AI Act (que **incluye AI en evaluación**) se corrió de 2026-08-02 a **2027-12-02** por el acuerdo del Digital Omnibus on AI. Las escuelas quedan responsables de auditar el uso de AI. Casos que caen en alto riesgo: **corrección automática de exámenes, aprendizaje adaptativo, proctoring y predicción de deserción** — o sea, casi todo lo interesante. La Comisión Europea con la OCDE y aval del G7 publicó un borrador de AI Literacy Framework para primaria y secundaria.
@@ -517,6 +570,31 @@ declara que invertirá en formación de AI en 2026 — la demanda está en **for
 comprometió **£200 M+** en su Cumbre de Adopción de AI con **Skills England** definiendo el marco curricular, bajo el patrón
 **gobierno financia / big tech entrega / sindicatos legitiman**: para entrar hay que ser el socio de entrega, no el vendor.
 
+
+#### Pase 11 del 2026-10-01 — EMEA es la región que fija el reloj de esta capa, y el reloj se movió a 2027-12-02
+
+**El cambio, en una línea:** el **Reglamento (UE) 2026/1744** (Digital Omnibus on AI, en vigor **2026-07-27**) mueve
+la fecha de cumplimiento del **Anexo III** de 2026-08-02 a **2027-12-02**, y la del alto riesgo embebido en productos
+regulados a 2028-08-02. Las prohibiciones —incluido el **reconocimiento de emociones en instituciones educativas**— y
+la obligación de **alfabetización en AI** del artículo 4 **siguen vigentes y no se movieron**. Ver `intel/trends.md`,
+tendencia 25, y la tabla de fechas en la sección de tamaño de mercado.
+
+**Por qué EMEA es la región donde esta capa se vende primero.** El Anexo III nombra la evaluación de resultados de
+aprendizaje, el screening de postulantes y el monitoreo de exámenes. **El sistema de riesgo de abandono es, sin
+discusión interpretativa, un sistema de alto riesgo** — y a diferencia de las obligaciones difusas, acá hay un
+expediente concreto que alguien tiene que armar: gestión de riesgos, gobernanza de datos, supervisión humana,
+transparencia y evaluación de conformidad. **Eso es el entregable, y tiene fecha.**
+
+**Lo que EMEA aporta del lado de la oferta, y es más de lo que parecía:**
+
+- **Los dos datasets canónicos de la capa son europeos y son CC BY 4.0:** **OULAD** (The Open University, Reino Unido — 22 cursos, 32.593 alumnos, 10.655.280 registros de clicks) y **UCI 697** (Portugal, 4.424 × 36 features, financiado por el programa SATDAP, grant `POCI-05-5762-FSE-000191`). **La región que impone la regulación es también la que publicó los datos con los que se construye el modelo, y con licencia comercial.** Ver `repos/foundations.md`.
+- **El stack institucional de educación superior es de aquí y de North America, y es ECL-2.0:** Sakai (1.234 ★), Opencast (505 ★), uPortal (286 ★), OpenLRW (62 ★). Permisivo, en producción, y fuera del radar de esta KB hasta este pase.
+- Y una pieza chica con peso regional: **Tadreeb LMS** (https://github.com/Tadreeb-LMS/tadreeblms, **AGPL-3.0** ⚠️, 34 ★ y **83 forks**, PHP/Laravel, interfaz **inglés y árabe**, 616 commits, actividad al 2026-09-29). Es el único LMS de esta KB con soporte árabe nativo; su relación forks/stars dice que se usa como base de proyectos, no como producto. Copyleft, así que el derivado se publica.
+
+**La lectura comercial.** EMEA compra **conformidad**, no predicción: el modelo es el medio y el expediente es el
+producto. Es la misma forma que el pase 8 encontró en accesibilidad (P17) y el pase 4 en evaluación auditable (P4),
+y ahora aplica a la capa con más presupuesto del sector. **Con una ventaja que las otras dos no tienen: acá los
+datos de referencia ya son europeos y ya son CC BY.**
 
 ### APAC
 
@@ -643,6 +721,26 @@ es APAC. Ver **P23**.
 **APAC no tiene cifra de mercado educativo propia en esta ventana**; las que tiene la KB son del pase 4 con su discrepancia
 declarada. En APAC hay **política y plataforma**, y se encuentran buscando por país.
 
+
+#### Pase 11 del 2026-10-01 — APAC ya nombró el riesgo de esta capa en su regulación, y produce el repo que nadie sostiene
+
+**Regulación, lo nuevo de la ventana:**
+
+- **Vietnam** identificó los sistemas de AI de alto riesgo en **seis sectores, y educación es uno**, nombrando explícitamente **la evaluación automatizada y el monitoreo del comportamiento**. Es la mención más directa que existe hoy, fuera de la UE, del producto de esta capa.
+- **Taiwán:** la **Ley Básica de Inteligencia Artificial entró en vigor el 2026-01-14**. Son **20 artículos** y es una ley marco, no un régimen completo — fija principios, no obligaciones operativas.
+- **India:** en **julio de 2026** el gobierno señaló que puede ir a una **legislación de AI dedicada**, con un modelo basado en riesgo para usos de alto riesgo. Es la economía educativa más grande de la región y hasta ahora iba por guías sectoriales.
+- Esto extiende la tendencia 17: **la ola regulatoria de APAC dejó de ser Corea del Sur sola**, y ahora tres jurisdicciones más tienen instrumento con fecha.
+
+**Oferta — y el patrón que se repite:**
+
+- **`DECK6/korean-elementary-learning-map`** (**MIT** ✅, 117 ★): ontología completa del **currículo primario coreano revisado 2022** — 620 anclas de estándares, 1.956 temas, **2.293 relaciones de prerrequisito**, 152 clusters, 11 materias, grados 1-6, en JSON y RDF/Turtle con SPARQL y SHACL. **Es la mejor pieza de su clase en toda la KB y la más barata de licenciar**: el equivalente español (`OpenDidactia`) es CC BY-SA y no trae grafo de prerrequisitos. ⚠️ Construcción independiente, no producto del Ministerio.
+- **`jude-miller-dev/Milky-institute-online`** (🚫 **sin licencia**, 374 ★): plataforma de **formación profesional para adultos** sobre SpringCloud Alibaba + **Spring AI**, con agente de recomendación de cursos. **Es el artefacto de formación profesional más grande que encontró esta KB en once pasadas** — y el gap 10 sigue abierto por licencia, no por ausencia de software.
+- **`novatrix-2030/SIH-2026`** ("DropGuard", 🚫 **sin licencia**, 0 ★): early warning explicable para instituciones de la India, con LightGBM + XGBoost + SHAP + Groq/Llama-3.3-70B sobre FastAPI y Next.js 14. Entrega del **Smart India Hackathon 2026** (`SIH-2026-13-002`, categoría *Smart Education*). **Es el patrón del gap 2 —hackathon, buen diseño, cero continuidad— replicado fuera de LATAM**, y eso obliga a reformular el gap 2 como un problema de ecosistema y no de región (ver gap 2 y gap 18).
+
+**La oportunidad.** Multi-jurisdicción sigue siendo el ángulo (P5), pero este pase le agrega una pieza concreta:
+**un engagement de currículo nacional en APAC ya tiene la ontología MIT publicada y validada formalmente.** Y del
+lado de FP, el software existe con 374 estrellas y lo único que le falta es gobernanza — exactamente el aporte que
+el gap 2 recomienda para LATAM, aplicable acá.
 
 ### LATAM
 
@@ -816,6 +914,38 @@ que forkear Moodle, y el precedente de los estados indios es el argumento de ven
 **Ednova (Chile)** aparece citada como caso de personalización, lo que suma a la concentración chilena que registró el pase 8.
 
 
+#### Pase 11 del 2026-10-01 — en esta capa LATAM produce el paper y no el repo, que es el espejo exacto del gap 2
+
+**Lo que confirma la ventana sobre adopción y gobernanza:**
+
+- **UNESCO IESALC:** estudio regional sobre **200 instituciones de educación superior de 19 países** — adopción de AI generalizada y **sólo 26% con una estrategia formal de AI**, con menos todavía con políticas, estructuras de gobernanza y marcos de monitoreo y evaluación. La agencia advierte que la ausencia de lineamientos institucionales aumenta el riesgo de mal uso.
+- **Digital Education Council (LATAM, 2026):** **30.000+ respuestas en 29 instituciones**, **92% de estudiantes y 79% de docentes** usando AI, contra 86% del *Global AI Student Survey* de 2024.
+- **Regulación a distintas velocidades:** Brasil lidera en madurez, regulación y experimentación; México sigue en comportamiento de consumo y comercio. El proyecto de ley de Brasil, el marco de Chile, el **CONPES de AI de Colombia** y las reglas sectoriales de México avanzan a ritmos distintos — es decir, **no hay una fecha regulatoria regional que sirva de driver comercial, como sí la hay en EMEA.**
+
+**El hallazgo del pase para la región, y es específico de esta capa.** Se buscó software de early warning y
+predicción de deserción en **portugués y español**. Lo que aparece es **producción académica, no repositorios**:
+revisión sistemática de **11 estudios publicados entre 2022 y 2026** sobre identificación temprana de riesgo de
+evasión en primaria (UFPE), tesis de maestría sobre predicción de evasión universitaria (UNIFEI), estudios de caso
+en institutos federales con Random Forest y XGBoost, y trabajo publicado sobre sistemas de alerta temprana en
+educación superior. **Random Forest es el algoritmo más frecuente y el ausentismo el predictor de mayor importancia
+en los estudios con datos conductuales individuales.** No se localizó un sistema open source gubernamental.
+
+**Por qué esto es información y no una ausencia.** El gap 2 dice que LATAM **produce repos sin comunidad**. En esta
+capa pasa lo contrario: **produce método publicado y revisado por pares, sin código.** Son los dos lados del mismo
+déficit —no hay quien convierta el resultado en artefacto mantenido— y juntos describen la oportunidad mejor que
+cualquiera de los dos por separado:
+
+**La oportunidad, y es la más defendible de la región.** El trabajo analítico ya está hecho y es local: hay papers
+brasileños con features validadas sobre datos reales de institutos federales, y el predictor más importante que
+reportan —ausentismo— es un dato que **ya está en el SIS** (ver la capa SIS en `verticals/solutions.md`). Lo que
+falta es la ingeniería: tomar el método publicado, implementarlo sobre la Analytics API de Moodle o un pipeline
+propio sobre OpenLRW, y envolverlo en el expediente de supervisión humana. **Es un engagement con autoría regional
+en la metodología y valor agregado en la ejecución, no una importación** — y es la misma recomendación que el gap 2
+hace para los tutores, aplicada a la capa que la universidad sí tiene presupuestada.
+
+Y hay una contraparte institucional para sostenerlo más allá del día 90: el **Observatorio de IA en Educación para
+América Latina y el Caribe** de UNESCO (lanzado 2026-04-14 en la CEPAL), ya registrado en el pase 7.
+
 ## Posicionamiento Globant
 
 **Dónde el studio gana en educación:**
@@ -824,6 +954,14 @@ que forkear Moodle, y el precedente de los estados indios es el argumento de ven
 2. **Compliance como entregable, no como checklist.** EU AI Act Annex III en 2027-12-02 y 134 proyectos de ley estatales en EE. UU. crean demanda de arquitecturas auditables. El expediente de conformidad es el producto.
 3. **Ventaja de huella global real.** La oferta open source está en APAC, la demanda regulada en EMEA y Norteamérica, y el gap de capacidades en LATAM. Globant tiene presencia en las cuatro. Portar DeepTutor/OpenMAIC (APAC) a un marco de conformidad EMEA, o a un programa de ministerio LATAM, es arbitraje que un player regional no puede hacer.
 4. **LATAM con producto propio.** Es el único de los cuatro donde no hay incumbente open source. Latam-GPT + Kolibri/NOMAD offline + currículo de AI literacy es una oferta que se puede construir una vez y vender a varios ministerios.
+5. **La capa predictiva, que es la que el cliente ya tiene presupuestada y no tiene con qué construir** *(agregado en el pase 11)*. *Early warning* y *student success* son categoría de compra consolidada en educación superior, y el open source disponible es un techo de **6 estrellas entrenado con datos sintéticos** más un stack institucional archivado (ver `agents/top.md` y `repos/foundations.md`). Al mismo tiempo, los dos datasets de referencia son **CC BY 4.0** y la regulación que lo gobierna tiene fecha: **Anexo III el 2027-12-02**, ya en derecho vigente por el **Reglamento (UE) 2026/1744**. Es la combinación más favorable que registró esta KB: demanda presupuestada, oferta inexistente, datos licenciables y una fecha que fuerza la decisión de compra. Ver **P25**.
+6. **Apereo y ECL-2.0 como capacidad diferencial** *(agregado en el pase 11)*. Sakai, Opencast, uPortal y OpenLRW son infraestructura de educación superior en producción, permisiva, y **sistemáticamente descartada por equipos que leen "ECL-2.0" como licencia desconocida**. Saber que es Apache-2.0 con la concesión de patentes acotada —aprobada por OSI y FSF— habilita un stack entero que la competencia descarta, y en particular **Opencast, que es la única capa de video de clase open source a escala**: cualquier entregable de transcripción, indexado o resumen de clase grabada parte de ahí en vez de construirse.
+
+**Antecedentes propios verificables en educación superior** *(agregado en el pase 11)*:
+
+- **Plataforma de AI para estudiantes universitarios neurodivergentes o con ansiedad**, con Cascadience y Viability (anunciada en mayo de 2026): herramienta web y móvil de organización de tareas, apoyo a la toma de decisiones y fortalecimiento de vínculos sociales. **Globant aportó la arquitectura de AI y el desarrollo, con conformidad WCAG 2.1 AA y cumplimiento de HIPAA y FERPA.** Es el antecedente directo de la capa de accesibilidad del pase 8 (ver **P18**) y la referencia más fuerte para cualquier propuesta de esta KB en North America: **accesibilidad y privacidad educativa ya entregadas, no prometidas.**
+- **Máster en AI aplicada a Marketing, Comunicación y Medios con la Universidad Complutense de Madrid** (2024): primera empresa en participar de una titulación especializada en AI con una universidad pública española. Antecedente de EMEA para la línea de *capability building*.
+- **Acuerdo marco con la Universidad del CEMA** (Argentina) en la carrera de Digital Business. Antecedente LATAM del mismo tipo.
 
 ---
 *Fuentes en `intel/trends.md`. Cifras de mercado con rango explícito: no reportar un número puntual sin la fuente.*
