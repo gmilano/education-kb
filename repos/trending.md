@@ -8,6 +8,66 @@ updated: 2026-10-01
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 
+## 2026-10-01 (pase 9) — los estándares de interoperabilidad siguen obligatorios y su código de referencia se está retirando
+
+Novena corrida. Los pases 4–8 construyeron el stack del alumno capa por capa y el patrón repetido fue *la pieza es
+permisiva, el trabajo es integración*. Este pase mira la capa que falta al final —**acreditar** el aprendizaje— y
+encuentra el patrón inverso, que es el hallazgo: **la especificación está viva y el código de referencia se está apagando.**
+
+### Lo que no resuelve, verificado URL por URL
+
+| Qué era | URL canónica | Estado 2026-10-01 |
+|---|---|---|
+| Badgr — implementación de referencia de Open Badges | `concentricsky/badgr-server` | 🔴 **404** + búsqueda de la organización por `badgr` → *«No repositories matched your search»*. La organización verifica hoy **`instructure.com`** |
+| caliper-php — cliente PHP oficial de Caliper Analytics | `1EdTech/caliper-php` | 🔴 **404.** Causa nombrada por el fork de la U. de Michigan, textual: *«unarchived following 1EdTech making its caliper-php private»* |
+| caliper-python — Sensor API de referencia | `IMSGlobal/caliper-python` | 🔴 **404** |
+| European Digital Credentials (Issuer/Viewer/Wallet) | `european-commission-empl/european-digital-credentials` | 🔴 **Archivado 2024-02-02** (EUPL-1.2, 6 ★, 31 commits). Aviso textual: *«For the latest versions go to: https://code.europa.eu/qualifications-courses-and-credentials/»* |
+| European Learning Model (modelo de datos) | `european-commission-empl/European-Learning-Model` | 🔴 **Archivado 2024-02-14** (EUPL-1.2, 54 ★, 199 commits) |
+
+Un 404 no distingue borrado de privado de renombrado: lo afirmado es que **las URL no resuelven**, con la señal
+independiente en `badgr-server` y la causa nombrada por un tercero en `caliper-php`. Nada más.
+
+### Los repos que sostienen la capa hoy
+
+| Repo | Licencia | Stars | Commits | Por qué está acá |
+|------|----------|-------|---------|------------------|
+| https://github.com/1EdTech/openbadges-specification | ⚠️ no declarada | **205** | **2.266** | La **especificación** OB 3.0 / 2.1 / 2.0 + **CLR 2.0**. Es el repo con más estrellas de la capa, y **no es código** |
+| https://github.com/1EdTech/lti-1-3-php-library | **Apache-2.0** ✅ | 124 | 110 | **LTI 1.3** — la pieza oficial que sigue pública y permisiva |
+| https://github.com/digitalcredentials/learner-credential-wallet | **MIT** ✅ | 88 | **1.309** | Billetera del alumno. ⚠️ Último release como DCC at MIT (v2.2.10, jun-2026) → **OpenWallet Foundation Labs** |
+| https://github.com/oat-sa/tao-core | **GPL-2.0** ⚠️ | 64 | **22.533** | **TAO** (U. de Luxemburgo + OAT). Por volumen de trabajo, la pieza más madura de toda esta KB |
+| https://github.com/KonstantinosPetrakis/esco-skill-extractor | **MIT** ✅ | 32 | 29 | Texto → competencias **ESCO** / ocupaciones **ISCO** |
+| https://github.com/amp-up-io/qti3-item-player | **MIT** ✅ | 30 | 596 | **QTI 3** con **certificación de conformidad Basic y Advanced «Delivery» de 1EdTech** |
+| https://github.com/digitalcredentials/verifier-plus | **MIT** ✅ | 18 | 395 | Verificación y visualización (incluido QR) |
+| https://github.com/digitalcredentials/issuer-coordinator | **MIT** ✅ | 12 | 55 | Emisión + revocación por **W3C VC API**, formato **OB 3.0** |
+| https://github.com/tl-its-umich-edu/caliper-php-public | **LGPL-3.0** ⚠️ | 3 | 365 | Fork de la **U. de Michigan**; hoy es el cliente PHP de Caliper accesible |
+| https://github.com/luisgf/openbadgeslib | **LGPLv3** / BSD-2-Clause ⚠️ | **1** | **404** | Emisor OB 3.0 completo: JWT-VC, `did:web`, **Bitstring Status Lists**. v4.0.0 (2026-07-22) |
+
+### La distribución de estrellas de esta capa dice algo que conviene leer
+
+El repo más estrellado es **una especificación** (205 ★) y no código. El de más commits es **copyleft GPL-2.0** (22.533).
+El emisor OB 3.0 más completo tiene **404 commits y 1 estrella**. Y la pieza con **certificación de conformidad de 1EdTech**
+tiene **30 estrellas**.
+
+**Cómo leerlo para una propuesta:** esta capa **no se elige por popularidad** — la señal de calidad acá no son las
+estrellas, es la **certificación de conformidad** y el **conteo de commits**. Es la primera capa de esta KB donde eso pasa,
+y es coherente con que su consumidor sea institucional y no un desarrollador que la descubre en GitHub Trending.
+
+### Por qué esto cambia una propuesta, y no es un detalle de ingeniería
+
+La obligación de interoperar no se fue con el código. Un cliente que compra «credenciales digitales» o «analítica
+conforme» sigue necesitando OB 3.0, Caliper, QTI y OneRoster. Lo que cambió es **de dónde sale la implementación**: de
+terceros certificados, consorcios universitarios y forks de universidad. Eso convierte en entregable vendible algo que
+antes era obvio y gratis: **saber cuál de estas piezas sigue viva, con qué licencia y con qué certificación.** Ver **P21**.
+
+### Nota de método de este pase
+
+`curl -sI` contra `github.com` **sigue devolviendo 403** a través del proxy de egreso, y `api.github.com` también **403**
+—igual que en los pases 5 a 8—, así que toda verificación se hizo con **WebFetch contra la página del repo**, y en dos
+casos contra el archivo (`LICENSE` de `qti3-item-player`, `README.md` del fork de Michigan). Se marcaron como no
+verificadas las afirmaciones que dependen de dominios bloqueados: **`code.europa.eu`** (donde vive hoy el stack europeo
+de credenciales), **`moodle.org`**, y los tres sitios de prensa con el detalle de precios de Instructure
+(`constellationr.com`, `nasdaq.com`, `aijourn.com`). Ver `intel/trends.md`, gap 14 y la nota de método del pase 9.
+
 ## 2026-10-01 (pase 8) — la capa de conformidad de accesibilidad: más tracción que la de evaluación pedagógica, licencia limpia, y no es educativa
 
 Octava corrida. Los pases 4–7 construyeron el stack de medición —modelado (`pyKT`, `pyBKT`), evaluación (`EduBench`, `MathTutorBench`), telemetría (`lrsql`, `Ralph`) y datos de entrenamiento— y el patrón repetido fue: *la pieza es permisiva, el trabajo es integración*. El pase 7 encontró el agujero (los datasets son NonCommercial).

@@ -182,6 +182,33 @@ La KB venía tratando EMEA como un bloque con un dato agregado. Este pase lo sep
 
 ⚠️ **Dato de contexto para North America:** retuvo **38% del mercado global de AI en educación en 2025**. Sigue siendo la región de mayor gasto absoluto, y el pase 5 ya registró que su CAGR no acompaña al global.
 
+### Agregado en el pase 9 del 2026-10-01 — la microcredencial tiene cifra de adopción, y el incumbente puso su AI detrás de un paywall
+
+**Cifras de mercado de esta ventana** (de resultados de búsqueda, no de los informes originales): el mercado de AI en
+educación va de **USD 7.520 M (2025) a USD 10.600 M (2026)**, con CAGR del **40,9%**, y proyección de **USD 79.600 M
+para 2034** (31,35% en 2026-2034). Uso estudiantil de AI: **66% (2024) → 92% (2025)**, y **86% de los estudiantes de
+educación superior** la usan como herramienta principal de investigación y *brainstorming* al arrancar 2026. **K-12 es el
+45,62%** de la adopción total; **STEM el 34,78%** de los ingresos; y **la enseñanza de idiomas es el segmento de mayor
+crecimiento**. Las soluciones cloud eran el 71,22% del share en 2024.
+
+**La cifra nueva, y es la que importa para P19:** **46% de las instituciones de LATAM y el Caribe ya ofrecen
+microcredenciales**. Los tres obstáculos declarados del segmento a nivel global son **estandarización (82%)**,
+**preparación institucional (76%)** y **reconocimiento formal (71%)** — los tres se atacan con conformidad al estándar,
+no con producto nuevo.
+
+🔴 **El dato con fecha, y está sin verificar de primera mano.** Según resultados de búsqueda concordantes, el acceso
+gratuito de **Instructure** a las funciones avanzadas de **IgniteAI** (Grading Assistance y el **IgniteAI Agent**,
+lanzado el **2026-03-15** sobre **Amazon Bedrock**) terminó el **2026-06-30 en EE. UU.** y el **2026-09-30 en el resto
+del mundo**; después hace falta subir a **Canvas Plus** o **Canvas Next** (los niveles nuevos son **Core / Plus / Next**).
+**Hoy es el 2026-10-01: la ventana mundial se cerró ayer.** Los tres sitios con el detalle —`constellationr.com`,
+`nasdaq.com`, `aijourn.com`— están **bloqueados por el proxy de egreso**, así que esto **no se lleva a un cliente sin
+confirmarlo en el anuncio oficial**. Ver el **trend 21**.
+
+**El hilo que conecta las dos cosas:** el mismo vendor que acaba de poner su AI detrás de un nivel de pago es el que
+absorbió **Badgr** —la implementación de referencia de Open Badges, hoy **404 en GitHub**— convertida en **Canvas
+Credentials** y después en **Parchment Digital Badges**. Credenciales y AI del mismo incumbente se cerraron en la misma
+ventana. Para una propuesta eso es un argumento de **soberanía**, no de precio. Ver el **trend 19**.
+
 ## Players globales
 
 | Empresa | Tipo | Fortaleza | Debilidad |
@@ -299,6 +326,26 @@ El panorama legislativo del año: **134 proyectos de ley sobre AI en educación 
 
 **Y una obligación de accesibilidad que ya existía y la KB no estaba usando:** IDEA exige materiales accesibles y empuja **UDL** (Universal Design for Learning). Eso habilita **P17** en North America sin depender del EAA europeo. *(Dato de contexto del pase 7, confirmado: el piloto de tutoría K-12 de Maryland con Khanmigo alcanzó ~4.350 alumnos en dos condados — escala de piloto, no de sistema.)*
 
+
+**Oportunidad del pase 9 — y es la región donde la ventana tiene fecha.** 🔴 Si el dato del **trend 21** se confirma, el
+acceso gratuito de **IgniteAI** terminó en EE. UU. el **2026-06-30** (y a nivel mundial el **2026-09-30**), de modo que
+hay instituciones que ya están pagando **Canvas Plus** o **Canvas Next** por capacidades que, en parte, se cubren con
+piezas MIT al lado del Canvas que ya tienen: **P8** (material docente en la voz del docente), **P14** (calificar sin que
+califique el modelo) y **P20** (evaluación conforme a QTI 3 por LTI, sin tocar el LMS). **No es un argumento de
+reemplazo del LMS** —nadie quiere esa conversación— sino de recuperar capacidad sin subir de nivel de licencia.
+
+**La capa de credenciales es mayoritariamente de esta región, y eso es una ventaja de procedencia poco común en esta KB.**
+`digitalcredentials/*` (MIT) es del consorcio con sede en el **MIT**, con financiamiento inicial del **U.S. Department of
+Education**. ⚠️ Pero la gobernanza se mudó: la **v2.2.10 (junio 2026)** es el último release como *DCC at MIT* y el
+proyecto pasó a **OpenWallet Foundation Labs**, con la organización renombrada a **Digital Credentials Commons**
+(`dccommons.org`). Fijar versión y confirmar dónde vive el mantenimiento antes de proponerla.
+
+**Contexto de esta ventana:** el mercado de North America va de **USD 951 M (2024)** a **USD 2.303,2 M (2029)**, CAGR
+**15,9%** — bastante por debajo del CAGR global, como ya registró el pase 5. El panorama regulatorio sigue
+**fragmentado** (Colorado y Texas con requisitos parciales) frente al EU AI Act, y **sólo 10% de las instituciones tiene
+pautas formales de AI**, que es la brecha de gobernanza donde entra **P7**. **OpenAI** lanzó un programa educativo a
+nivel país con **ocho socios nacionales** en el Q1 de 2026.
+
 ### EMEA
 
 **Contexto.** Regulación primero, adopción después — lo inverso a Norteamérica. La fecha de aplicación de sistemas de alto riesgo del Annex III del EU AI Act (que **incluye AI en evaluación**) se corrió de 2026-08-02 a **2027-12-02** por el acuerdo del Digital Omnibus on AI. Las escuelas quedan responsables de auditar el uso de AI. Casos que caen en alto riesgo: **corrección automática de exámenes, aprendizaje adaptativo, proctoring y predicción de deserción** — o sea, casi todo lo interesante. La Comisión Europea con la OCDE y aval del G7 publicó un borrador de AI Literacy Framework para primaria y secundaria.
@@ -385,6 +432,26 @@ Esta KB venía construyendo la propuesta EMEA sobre el **EU AI Act**, cuyo Annex
 
 **Dónde entrar primero:** **Finlandia, Estonia y Países Bajos** lideran la integración de AI en K-12 europeo, así que una primera referencia ahí vale más que una en un mercado grande. Y el argumento de **soberanía tecnológica** del pase 6 se refuerza: a la cadena de un solo origen regional (Ralph + Richie de OpenFun, `learnmcp-xapi` de España) se le puede sumar ahora la capa de conformidad sin salir de licencias permisivas.
 
+
+**Oportunidad del pase 9 — credenciales verificables y FP, y es la región donde mejor encaja.** `esco-skill-extractor`
+(MIT) mapea a **ESCO/ISCO**, que es el vocabulario europeo de competencias: P19 entrega en EMEA una credencial
+*reconocible* y no sólo *verificable*. Hay política pública empujando: el stack **Europass/EBSI**, el **Micro-credentials
+Masterclass** (Ámsterdam, 24–26 de febrero de 2026) con reguladores y proveedores de FP, **AI4VET** (Erasmus+ KA210-VET
+2026, curso abierto de upskilling docente probado en Portugal y Rumania), y el informe de la **OCDE** sobre desarrollar
+FP con AI. La **2ª conferencia de trabajo del Consejo de Europa** sobre las dimensiones regulatorias de la AI en
+educación se realiza en **octubre**, y el **Europe EdTech 200** de QS marca el mapa de players.
+
+🔴 **La advertencia que condiciona todo lo anterior.** El stack de credenciales de la Comisión Europea
+(`european-digital-credentials`, `European-Learning-Model`) está **archivado en GitHub** desde febrero de 2024 y el
+código vivo se mudó a **`code.europa.eu`, que esta sesión no puede alcanzar** (gap 14). Es, muy posiblemente, la oferta
+más relevante del mundo para P19 en esta región, y es la que no se pudo verificar. **Un cliente europeo exige abrirlo
+antes de cotizar.**
+
+**Contexto de demanda de esta ventana:** **94% de las organizaciones** declara que es al menos algo probable que invierta
+en formación específica en AI en 2026; el Reino Unido comprometió **£200M+** en su primer **AI Adoption Summit** (8 de
+junio) con Skills England fijando el marco curricular y big tech como socios de ejecución; y **Anthropic** anunció
+**Claude Corps**, programa de becas de **USD 150M** para formar 1.000 trabajadores de carrera temprana.
+
 ### APAC
 
 **Contexto.** Mercado de **$987M**, con China, India y Japón dominando por inversión e infraestructura. Regulación heterogénea y ése es el punto:
@@ -468,6 +535,25 @@ El **Ipsos Education Monitor 2026** mide algo que esta KB venía tratando como h
 **Por qué importa para una propuesta.** La KB ya documentó que APAC tiene cuatro regímenes regulatorios incompatibles (Vietnam, Corea, Japón, Singapur) y que por eso no existe «una propuesta APAC». Este dato agrega una segunda línea de fractura que **no es regulatoria sino de licencia social**, y corre por otro lado: **ANZ no se agrupa con Asia en esto.** En Australia y Nueva Zelanda el riesgo del proyecto no es el cumplimiento — es la aceptación de padres y docentes. Eso cambia el entregable: ahí la evaluación pedagógica y la seguridad (**P10**, **P11**) no son expediente regulatorio, son **el instrumento de legitimación pública** del despliegue, y hay que presupuestar comunicación y evidencia desde el día uno.
 
 **Oferta nueva de la región en este pase:** **`Swar-Setu`** (MIT, 15 ★, India) — detección temprana multilingüe de dislexia, disgrafia y discalculia con dashboards para padres y docentes. Es el repo de educación especial **con más tracción y licencia permisiva** que encontró el pase 8, lo que extiende el **gap 4** a una capa más: también en educación especial, lo poco permisivo que hay viene de APAC. También **`EyeEP`** (Taiwán, gestión de IEP) — **sin licencia**, no reutilizable.
+
+
+**Oportunidad del pase 9 — la microcredencial en formación profesional, con política pública ya en marcha.** Es la
+segunda región para P19 y en FP posiblemente la primera: **Filipinas** tiene microcredenciales en **TVET** vía **TESDA** y
+un marco de la **CHED** en consulta pública para estandarizarlas en educación superior; el consorcio **MICROCASA**
+articula España, Italia, **Indonesia, Malasia y Filipinas** en estándares, tecnología y marcos de reconocimiento. Eso
+convierte a la región en el lugar donde el **gap 10** (formación profesional) se puede atacar por la vía de la
+acreditación y no por la del tutor, que sigue sin existir.
+
+**Y la asimetría de procedencia del gap 4 se repite acá con un matiz nuevo:** las dos bases de tutor open source
+permisivas y de escala siguen siendo de APAC (`DeepTutor`, `OpenMAIC`), pero **la capa de credenciales no tiene nada de
+APAC** — es norteamericana (`digitalcredentials/*`, MIT) y europea (Europass, EUPL). Para un cliente de APAC con
+restricción de procedencia, por primera vez la recomendación se invierte según la capa: tutor local, acreditación importada.
+
+**Contexto de esta ventana:** **48%** de los líderes de gobernanza de APAC ponen la adopción de AI como prioridad
+estratégica para 2026 y **57%** de las organizaciones de Asia ya la tienen en al menos un área. **Singapur** abrió
+consultas sobre uso de AI en instituciones financieras centradas en transparencia, responsabilidad y supervisión del
+riesgo — el patrón regulatorio que suele propagarse después a otros sectores. La **soberanía** moldea las decisiones de
+infraestructura de cerca de la mitad de las firmas de APAC, lo que favorece despliegues self-hosted como los de P19.
 
 ### LATAM
 
@@ -599,6 +685,28 @@ Sumados a **Latam-GPT** (CENIA, Chile) y al **Observatorio UNESCO lanzado en la 
 **Y el argumento de costo nuevo, que no es de AI.** La propuesta del **Open edX Proctoring Toolset** (Arizona State University + OpenCraft) declara explícitamente que la falta de proctoring integrado y gratuito **afecta de manera desproporcionada a instituciones del Sur Global y de bajo presupuesto**, obligadas hoy a contratar Respondus, Wheebox o ProctorU. Para una institución latinoamericana sobre Open edX eso convierte una discusión técnica en una decisión de presupuesto. ⚠️ **Es una propuesta con release objetivo (Verawood), no código desplegable:** sirve para recomendar **no firmar tres años de proctoring propietario ahora**, no para cotizar. Ver `verticals/solutions.md`.
 
 **El contexto de gobernanza, con cifra:** **45% de las instituciones de América Latina y el Caribe** tienen guía de AI publicada o en desarrollo, **contra ~70% en Europa y North America**. Junto al 73,5% que ya enseña con AI, la región usa más de lo que gobierna — y eso, como la tijera de medición del pase 5, **entra por presupuesto de acreditación y cumplimiento, no por presupuesto de innovación**.
+
+
+**Oportunidad del pase 9 — y por una vez LATAM no arranca desde atrás.** **46% de las instituciones de LATAM y el Caribe
+ya ofrecen microcredenciales**: la región tiene **demanda instalada** en la capa que este pase documenta, lo que no pasa
+con ninguna de las ocho capas anteriores. El problema local declarado es la **fragmentación del reconocimiento** —
+investigación de 2026 desde Ecuador describe una implementación fragmentada y propone marcos que operacionalicen la
+definición de microcredencial de UNESCO e integren insignias verificadas con los requisitos de las agencias de
+acreditación de la región.
+
+**El argumento de venta es, entonces, distinto al del resto de la KB:** acá no se vende personalización ni tutoría, se
+vende **conformidad al estándar como atajo al reconocimiento transfronterizo**. P19 entrega eso con piezas MIT y sin
+dependencia de un vendor. Es alcance chico, presupuesto accesible y encaja con el perfil de comprador institucional de la
+región.
+
+**Contexto de esta ventana:** el documento de trabajo de **UNESCO** mapea la adopción de AI en universidades de América
+Latina y el Caribe sobre **200 instituciones de educación superior en 19 países** (agosto–octubre de 2025) en cinco
+dimensiones — enseñanza y aprendizaje, investigación, vinculación con el medio, administración y gobernanza. El **BID**
+publicó un marco regulatorio habilitante para AI en la región. La fragmentación regulatoria sigue siendo el riesgo
+estructural: múltiples países con marcos distintos o inexistentes, con el *trilema* de proteger derechos, fomentar
+innovación y mantener soberanía. En el ecosistema privado, **99% de las startups de LATAM** usa alguna solución de AI en
+operaciones internas y **85%** la integra de forma nativa en su producto; en edtech se menciona **Ednova (Chile)**, lo que
+refuerza la lectura del pase 8 sobre Chile como nodo técnico regional.
 
 ## Posicionamiento Globant
 

@@ -601,5 +601,144 @@ Hasta este pase la KB no tenía con qué responder. Ahora sí, y las piezas son 
 | **Sin licencia declarada** 🚫 | **EduGuardBench**, **OmniEdu**, `awesome-ai-llm4education` | *Pase 5.* Sin LICENSE el default es todos los derechos reservados. Leer y citar sí; **empaquetar no**. En P11, EduGuardBench se usa para diseñar, no se incorpora |
 | **Licencia de investigación custom** 🚫 | **llmgrader** (NYU) | *Pase 5.* "PySilicon Research License", © 2026 Sundeep Rangan, leída en el archivo. No es OSI. Es el grading agéntico más maduro que existe y **no se puede usar** — referencia de diseño en P14, nada más |
 
+## P19 — De la evidencia de aprendizaje a la credencial verificable (agregado en el pase 9; **transversal, se vende primero en EMEA y APAC**)
+
+**El problema que resuelve.** El cliente puede demostrar que el alumno estudió y no puede demostrar que el alumno
+**sabe** de una forma que un tercero verifique sin llamarlo por teléfono. Es el tramo que cierra todo lo que esta KB
+viene construyendo: el LRS registra la evidencia (P15), el estimador de mastery decide si hay dominio (P16), y hasta este
+pase **nadie convertía esa decisión en un artefacto portable y verificable**. Ese hueco es el **gap 13**.
+
+**Por qué es vendible ahora y no antes.** Las piezas de emisión y verificación son **MIT** y existen; lo que no existe es
+el pegamento. Y la demanda está medida: **46% de las instituciones de LATAM y el Caribe ya ofrecen microcredenciales**, y
+los tres obstáculos declarados del segmento son **estandarización (82%)**, **preparación institucional (76%)** y
+**reconocimiento formal (71%)** — los tres se atacan con conformidad al estándar, que es exactamente lo que este patrón entrega.
+
+### Las piezas, todas verificadas en el pase 9
+
+| Capa | Pieza | Licencia | Por qué esta |
+|------|-------|----------|--------------|
+| Evidencia | `lrsql` o `Ralph` (LRS xAPI) | Apache-2.0 ✅ | Ya es la capa 0 de P15. **Es la que fabrica el dato**, no un anexo de conformidad |
+| Dominio | `pyBKT` (MIT, 281 ★) o `pyKT` (MIT, 441 ★) | MIT ✅ | La decisión «domina / no domina» tiene que salir de un modelo publicado y reproducible, no de un LLM. ⚠️ Entrenar con datos del cliente — ver **gap 11** y **P16** |
+| Competencia | `esco-skill-extractor` | **MIT** ✅ | Traduce el objetivo de aprendizaje del cliente al vocabulario **ESCO/ISCO**. **Es la pieza que hace reconocible la credencial fuera de la institución** |
+| Emisión | `digitalcredentials/issuer-coordinator` | **MIT** ✅ | **W3C VC API** + formato **Open Badges 3.0**, con revocación y suspensión desde el día uno |
+| Verificación | `digitalcredentials/verifier-plus` | **MIT** ✅ | El lado del empleador: copiar/pegar, archivo, URL o **QR** |
+| Billetera | `digitalcredentials/learner-credential-wallet` | **MIT** ✅ | El lado del alumno. ⚠️ **Fijar versión**: la gobernanza pasó a OpenWallet Foundation Labs tras la v2.2.10 |
+| Entrada al LMS | `1EdTech/lti-1-3-php-library` | Apache-2.0 ✅ | El agente entra como herramienta LTI 1.3 conforme, sin forkear el LMS |
+
+### El wiring
+
+1. **El LRS es la fuente de verdad.** Toda interacción se escribe como statement xAPI (P15). Sin esto el resto no tiene insumo.
+2. **El estimador decide, no el modelo de lenguaje.** `pyBKT` consume las secuencias del LRS y emite una probabilidad de
+   dominio por concepto. El LLM explica y acompaña; **no firma el juicio**.
+3. **El mapa a ESCO se hace una vez, en diseño.** `esco-skill-extractor` corre sobre los objetivos de aprendizaje del
+   cliente —no sobre cada alumno— y produce la tabla «concepto interno → competencia ESCO». Esa tabla es un entregable
+   revisable por el cliente y es lo que hace la credencial legible para un empleador.
+4. **El umbral es una decisión humana documentada.** «Dominio ≥ 0,85 sostenido en dos evaluaciones separadas» se define
+   con el cliente y se versiona. Es el corazón del expediente de conformidad.
+5. **`issuer-coordinator` emite la credencial** cuando se cruza el umbral: OB 3.0 firmado, con la competencia ESCO adentro.
+6. **Revocación desde el primer día.** Se configura el servicio de estado antes de emitir la primera credencial — un
+   esquema de credenciales sin revocación es inauditable, y reconstruirlo después obliga a reemitir todo.
+7. **Billetera y verificador** cierran el circuito hacia alumno y empleador.
+
+### Plazo y alcance
+
+**8–10 semanas** para un piloto con un programa y un conjunto acotado de competencias, suponiendo LRS ya desplegado
+(si no, sumar las 3–4 semanas de P15). El trabajo real no es criptográfico —eso lo resuelven las piezas MIT— sino
+**el mapa a ESCO y la definición del umbral**, que son conversaciones con el cliente.
+
+### Dónde se vende primero
+
+**EMEA**, porque ESCO es el vocabulario europeo y porque el marco de credenciales está en política pública (⚠️ el stack
+de la Comisión está archivado en GitHub y vive en `code.europa.eu`, bloqueado para esta sesión — **abrirlo antes de
+cotizar**, gap 14). Después **APAC**, donde Filipinas tiene microcredenciales en TVET vía **TESDA** y un marco de la
+**CHED** en consulta pública, y donde el consorcio **MICROCASA** articula España, Italia, Indonesia, Malasia y Filipinas.
+**LATAM** tiene el 46% de instituciones ya ofreciendo microcredenciales y fragmentación de reconocimiento: el argumento
+ahí es conformidad al estándar como atajo al reconocimiento transfronterizo.
+
+---
+
+## P20 — Evaluación conforme a QTI 3 con autoría asistida (agregado en el pase 9; **transversal, y es el camino de entrada al cliente institucional grande**)
+
+**El problema que resuelve.** El cliente quiere generar evaluaciones con AI y necesita que los ítems **vivan en su
+plataforma de examen y sobrevivan a un cambio de proveedor**. Generar preguntas con un LLM a un formato propio es un
+callejón: no entra en el LMS, no se audita y no migra. QTI 3 es el formato que sí.
+
+**La decisión de arquitectura que define el patrón.** La plataforma QTI madura es **TAO** (`oat-sa/tao-core`,
+**22.533 commits**) y es **GPL-2.0**. Hay dos caminos y conviene elegirlo explícito:
+
+- **Camino A — TAO desplegada tal cual.** Cuando el cliente quiere plataforma completa (autoría, entrega, scoring,
+  roles). **No se forkea**: se despliega y la AI va al lado, entregando QTI XML por webhook/LTI. Misma receta que Moodle.
+- **Camino B — componente embebido, sin fricción de licencia.** Cuando el entregable es producto del cliente,
+  **`amp-up-io/qti3-item-player`** (**MIT**, **certificación de conformidad QTI 3 Basic y Advanced «Delivery» de
+  1EdTech**) es el runtime de entrega y la autoría se construye arriba. **Es la única pieza certificada de toda esta KB**,
+  y es el argumento más fuerte que existe para decir «conforme» sin que sea una afirmación propia.
+
+### Las piezas
+
+| Función | Pieza | Licencia |
+|---------|-------|----------|
+| Generación de ítems | `Educhain` (MCQs, lesson plans, flashcards desde PDF/URL/YouTube) | MIT ✅ |
+| Entrega y scoring | `amp-up-io/qti3-item-player` (camino B) o **TAO** (camino A) | MIT ✅ / GPL-2.0 ⚠️ |
+| Gate de calidad pedagógica | `EduBench` (transversal a materia, incluye **Automatic Grading** y generación de preguntas) | MIT ✅ |
+| Gate de seguridad pedagógica | `SafeTutors` (11 dimensiones de daño, 48 sub-riesgos) | MIT ✅ |
+| Matrícula y devolución de notas | `LongsightGroup/oneroster` (OneRoster 1.1/1.2) | MIT ✅ |
+| Montaje en el LMS del cliente | `1EdTech/lti-1-3-php-library` | Apache-2.0 ✅ |
+
+### El wiring
+
+1. `Educhain` genera ítems candidatos desde el material del cliente.
+2. **Se serializan a QTI 3 XML** — no a un JSON propio. Este paso es el que hace portable todo lo demás.
+3. `EduBench` y `SafeTutors` corren como **gate automático** sobre el lote: el ítem que no pasa no llega al revisor.
+4. **Revisión humana obligatoria** del lote que pasó el gate. El docente aprueba; el modelo propone (la postura de `tero`).
+5. El ítem aprobado se carga en el runtime QTI y **el response processing lo ejecuta la plataforma**, no el LLM — lo que
+   mantiene la nota fuera del modelo, que es lo que exigen las jurisdicciones con prohibición de grading automático (P14).
+6. `oneroster` devuelve las notas al SIS; LTI 1.3 monta la experiencia dentro del LMS.
+
+### Plazo y alcance
+
+**6–8 semanas** por el camino B con un banco de ítems de una materia. El camino A depende del despliegue de TAO y suma
+2–3 semanas. Lo que no hay que subestimar es la **serialización a QTI 3**: el estándar es grande y conviene acotar los
+tipos de interacción soportados en el alcance (elección múltiple, respuesta corta y emparejamiento cubren la mayoría).
+
+### Dónde se vende primero
+
+Donde ya hay plataforma de examen y obligación de auditoría: **EMEA** (expediente EU AI Act, P4) y **North America**
+(distritos y estados con prohibición de calificación automática, P7 y P14). Es además el patrón que mejor convive con un
+incumbente: no reemplaza el LMS, se le enchufa por LTI.
+
+---
+
+## P21 — Due diligence de interoperabilidad: el entregable que el pase 9 convirtió en vendible (agregado en el pase 9; transversal)
+
+**El problema que resuelve, y es real porque esta KB se lo encontró de frente.** La documentación del sector sigue
+citando como «la implementación open source» de estos estándares a repos que **ya no existen**. Verificado el 2026-10-01:
+`concentricsky/badgr-server` → **404**; `1EdTech/caliper-php` → **404** (puesto en privado por 1EdTech, según el banner
+del fork de la Universidad de Michigan); `IMSGlobal/caliper-python` → **404**; los dos repos de credenciales de la
+Comisión Europea → **archivados** y mudados a un dominio distinto.
+
+Un equipo que arranca un proyecto de credenciales o de analítica conforme leyendo listicles **va a construir sobre una
+URL muerta**, y lo va a descubrir después de haber cotizado.
+
+**El entregable.** Un informe corto y fechado, por estándar (OB 3.0 / W3C VC, QTI, OneRoster, Caliper, LTI, xAPI), con:
+
+1. **Qué URL resuelve hoy** y qué devuelve la que todo el mundo cita. Verificado, no inferido.
+2. **La licencia leída en el archivo `LICENSE`**, no la del README ni la del listicle. Esta KB lleva registradas tres
+   trampas de este tipo: `FreeLingo` (prensa dice MIT, el repo dice AGPL-3.0), `Teacher-Hub` (*«MIT — free for
+   non-commercial use»*, que se contradice), y `openbadgeslib` (**licencia partida**: LGPLv3 la librería, BSD-2-Clause el CLI).
+3. **La conformidad certificada**, donde exista. En esta capa vale más que las estrellas: `qti3-item-player` tiene
+   **30 ★** y certificación de 1EdTech; el repo de 205 ★ de la capa **es una especificación, no código**.
+4. **La cadena de custodia.** Quién mantiene hoy. `learner-credential-wallet` pasó del **DCC at MIT** a **OpenWallet
+   Foundation Labs** tras la v2.2.10 (jun-2026), y la organización se renombró a **Digital Credentials Commons**.
+5. **La recomendación de pinneo**: versión fijada y, donde el riesgo lo justifique, **fork propio en el repositorio del
+   cliente** — que es precisamente lo que tuvo que hacer la Universidad de Michigan con Caliper.
+
+**Plazo:** 1–2 semanas. **Cuándo venderlo:** como fase 0 de P19 o P20, o suelto ante un cliente que ya tiene un proyecto
+de credenciales en marcha y no sabe sobre qué está construido.
+
+**Por qué es defendible cobrarlo.** No es una búsqueda en GitHub: es **verificación de primera mano de la URL, del archivo
+de licencia y del estado de mantenimiento**, en una capa donde las tres cosas cambiaron en los últimos dos años y donde
+la fuente secundaria está desactualizada de forma sistemática. Y el costo de no hacerlo se paga entero en implementación.
+
+
 ---
 *Ver `intel/market.md` para la oportunidad por región y `intel/trends.md` para los gaps que estos patrones atacan.*

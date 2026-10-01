@@ -229,6 +229,87 @@ Lo que lo hace distinto de todo lo demás de esta lista:
 
 ⚠️ **Lo que no hay que confundir, y es la mitad del trend.** WCAG mide **acceso técnico**: que el lector de pantalla llegue, que el contraste alcance, que el teclado navegue. **No mide si el contenido es comprensible para un alumno con discapacidad cognitiva.** Esa segunda mitad no tiene oferta open source — es el **gap 12** — y es la que un cliente de educación especial realmente pide. Venderlas juntas es prometer de más; venderlas en ese orden es un camino.
 
+## 19. Los estándares de interoperabilidad educativa siguen siendo obligatorios y su código de referencia se está retirando (agregado 2026-10-01, pase 9)
+
+Es el trend más incómodo de esta KB porque va en contra de la dirección que llevan los dieciocho anteriores. En todas las
+capas anteriores la historia era *aparece oferta open source nueva*. Acá la historia es **se retira oferta open source que
+existía**, y los estándares que esa oferta implementaba siguen siendo condición de compra institucional.
+
+Verificado URL por URL el 2026-10-01:
+
+| Qué era | URL que la documentación del sector sigue citando | Estado |
+|---|---|---|
+| **Badgr**, la implementación de referencia de Open Badges | `concentricsky/badgr-server` | **404**, y la búsqueda de repos de la organización por `badgr` devuelve *«No repositories matched your search»*. La organización verifica hoy el dominio **`instructure.com`**: Badgr → **Canvas Credentials** → **Parchment Digital Badges** |
+| **caliper-php**, cliente oficial de Caliper Analytics | `1EdTech/caliper-php` | **404.** Causa nombrada por el fork de la **Universidad de Michigan**, textual: *«This had been archived, but has been unarchived following 1EdTech making its caliper-php private.»* |
+| **caliper-python**, Sensor API de referencia | `IMSGlobal/caliper-python` | **404** |
+| **European Digital Credentials** (Issuer/Viewer/Wallet) y **European Learning Model** | `european-commission-empl/*` | **Archivados** (2024-02-02 y 2024-02-14, EUPL-1.2), con aviso de mudanza a `code.europa.eu` — fuera de GitHub |
+
+**El rigor que corresponde:** un 404 no distingue borrado de renombrado de privado. Lo afirmado es que **las URL no
+resuelven**, con una señal independiente en `badgr-server` y la causa nombrada por un tercero en `caliper-php`.
+
+**Lo que esto significa, y es lo vendible.** La obligación de interoperar no se fue con el código. El cliente que compra
+credenciales digitales o analítica de aprendizaje conforme sigue necesitando **OB 3.0, QTI, OneRoster y Caliper**. Lo que
+cambió es de dónde sale la implementación: ya no del organismo de estándares ni del vendor de referencia, sino de
+**terceros certificados** (`amp-up-io/qti3-item-player`, MIT, con certificación de conformidad de 1EdTech),
+**consorcios universitarios** (`digitalcredentials/*`, MIT) y **forks de universidad** (`caliper-php-public`, LGPL-3.0).
+
+**El corolario de método, que vale para cualquier propuesta de esta capa:** acá **la señal de calidad no son las
+estrellas**. El repo más estrellado de la capa (205 ★) es **una especificación, no código**; el de más commits (22.533)
+es **GPL-2.0**; el único con **certificación de conformidad** tiene **30 ★**; y el emisor OB 3.0 más completo tiene
+**404 commits y 1 estrella**. Se elige por conformidad y por licencia leída en el archivo. Ver **P21**.
+
+## 20. La credencial es la vía por la que la formación profesional entra por fin a esta KB (agregado 2026-10-01, pase 9)
+
+El **gap 10** lleva tres pasadas diciendo que la formación profesional no tiene *nada* open source con tracción: ni
+plataforma, ni agente, ni benchmark. Cero de tres. Eso sigue siendo cierto **si se busca «plataforma de FP»**.
+
+Buscando por el instrumento que la FP realmente usa —la **microcredencial**— el segmento no está vacío: tiene estándar
+(**Open Badges 3.0 / W3C VC**), tiene vocabulario de competencias (**ESCO/ISCO**), tiene implementaciones **MIT** de
+emisión, verificación y billetera, y tiene demanda medida. **46% de las instituciones de LATAM y el Caribe ya ofrecen
+microcredenciales.** Y los tres obstáculos declarados del segmento son **estandarización (82%)**, **preparación
+institucional (76%)** y **reconocimiento formal (71%)** — los tres se atacan con conformidad al estándar.
+
+**Política pública que lo empuja, por región.** En **APAC**: Filipinas tiene microcredenciales en TVET vía **TESDA** y un
+marco de la **CHED** en consulta pública; el consorcio **MICROCASA** articula España, Italia, Indonesia, Malasia y
+Filipinas. En **EMEA**: el stack de credenciales es política europea (Europass/EBSI) y hay un **Micro-credentials
+Masterclass** (Ámsterdam, 24–26 de febrero de 2026) con reguladores y proveedores de FP; **AI4VET**, Erasmus+ KA210-VET
+2026, publica un curso de upskilling docente abierto probado en Portugal y Rumania. La **OCDE** publicó un informe sobre
+desarrollar FP con AI, de mapeo de competencias a redacción asistida de currículo.
+
+**Cómo reformula el gap 10 sin cerrarlo.** El gap era «no hay oferta». La formulación correcta es: **la oferta existe en
+la capa de acreditación y no en la capa de aprendizaje**. Para un cliente de FP, el producto defendible hoy no es un
+tutor de oficios —eso sigue sin existir— sino **acreditar de forma verificable y reconocible lo que el cliente ya
+enseña**. Es un alcance más chico, más barato y mucho más vendible. Ver **P19**.
+
+## 21. El fin del período gratuito de AI del incumbente abre una ventana de compra, y se cerró ayer (agregado 2026-10-01, pase 9)
+
+🔴 **No verificado de primera mano — leer la advertencia antes de usarlo con un cliente.**
+
+Según resultados de búsqueda concordantes, **Instructure** lanzó **IgniteAI Agent** para Canvas el **2026-03-15**,
+construido sobre **Amazon Bedrock**: arma módulos, diseña páginas, genera rúbricas, revisa discusiones y organiza flujos
+de trabajo docentes y administrativos. Y reestructuró Canvas en tres niveles —**Canvas Core, Canvas Plus y Canvas
+Next**— donde las capacidades agénticas avanzadas viven en los dos de arriba.
+
+**El dato con fecha:** el acceso gratuito a las funciones avanzadas (IgniteAI Grading Assistance y IgniteAI Agent)
+terminó el **2026-06-30 en EE. UU.** y el **2026-09-30 en el resto del mundo**. Después hace falta subir a Canvas Plus o
+Canvas Next.
+
+**Hoy es el 2026-10-01.** Si el dato es correcto, la ventana se cerró **ayer** a nivel mundial, y hay una población de
+instituciones que acaba de descubrir que la AI que venía usando sin costo ahora es una línea de presupuesto. Eso es un
+momento de conversación —no un argumento de reemplazo del LMS, que nadie quiere— sobre **qué parte de esa capacidad se
+puede cubrir con piezas MIT al lado del Canvas que ya tienen**: P8 para material docente, P14 para corrección sin que
+califique el modelo, P20 para evaluación conforme por LTI.
+
+**Y el hilo que conecta este trend con el 19, que es lo más interesante:** el mismo vendor que acaba de poner su AI
+detrás de un nivel de pago es el que absorbió **Badgr**, la implementación de referencia de Open Badges que hoy devuelve
+404. **La capa de credenciales y la capa de AI del mismo incumbente se cerraron en la misma ventana de tiempo.** Para una
+propuesta, ese es un argumento de soberanía, no de precio.
+
+⚠️ **Por qué está marcado como no verificado.** Los tres sitios con el detalle —`constellationr.com`, `nasdaq.com` y
+`aijourn.com`— están **bloqueados por el proxy de egreso de esta sesión**. Fechas, nombres de niveles y condiciones
+vienen de texto de resultados de búsqueda concordantes entre sí, **no de leer la fuente**. Es el dato más accionable del
+pase y el peor verificado: **confirmarlo en el anuncio oficial de Instructure antes de llevarlo a un cliente.**
+
 ## Gaps declarados
 
 Huecos confirmados tras buscar, no ausencias por no haber buscado. Un gap informado es información; el silencio se parece demasiado a la cobertura.
@@ -499,9 +580,26 @@ Huecos confirmados tras buscar, no ausencias por no haber buscado. Un gap inform
 
    **Lo que sí cambia respecto del gap 2:** de los repos nuevos de este pase, **dos son chilenos** — `tero` (MIT) y `Ronda` (GPL-3.0) — y los dos están anclados a instrumentos nacionales reales (Decreto 83, Ley 21.719, Marco para la Buena Enseñanza) en vez de a un currículo genérico. Ver la actualización del gap 2 y `intel/market.md`.
 
+13. **Ningún agente open source emite ni consume credenciales verificables — el stack del alumno y el stack de la credencial no se tocan** *(agregado en el pase 9 del 2026-10-01)*. Se buscó explícitamente. Ninguno de los 25+ agentes de la tabla principal de `agents/top.md` escribe un Open Badge ni una credencial W3C VC, y ninguna de las ocho piezas de la capa de credenciales tiene interfaz de agente ni servidor MCP.
+
+    **Por qué este gap es mejor noticia que los anteriores.** Las dos puntas existen y son **MIT**: del lado de la decisión, `pyBKT` (281 ★) y `pyKT` (441 ★) sobre un LRS conforme (pase 6); del lado de la emisión, `issuer-coordinator`, `verifier-plus` y `learner-credential-wallet`. Falta **el pegamento**, y el pegamento es una regla de umbral más un mapa de competencias —no es investigación. La pieza que traduce objetivos de aprendizaje a vocabulario **ESCO/ISCO** también existe y es MIT (`esco-skill-extractor`, 32 ★).
+
+    **La formulación precisa del gap, para que la próxima pasada lo mida y no lo repita:** no falta tecnología, falta **un artefacto que convierta una estimación de dominio en una credencial verificable** con el umbral declarado y auditable. Eso es exactamente **P19**, y es el patrón más corto de construir de los tres que agrega este pase.
+
+14. **El stack europeo de credenciales salió de GitHub y esta sesión no puede verificarlo** *(agregado en el pase 9 del 2026-10-01)*. No es un gap de oferta: es un **gap de verificación**, y se declara en vez de callarlo porque afecta directamente a cualquier propuesta en EMEA.
+
+    Los dos repos de la Comisión Europea —`european-digital-credentials` (Issuer, Viewer, Wallet; EUPL-1.2, 6 ★, 31 commits) y `European-Learning-Model` (EUPL-1.2, 54 ★, 199 commits)— están **archivados** (2024-02-02 y 2024-02-14) y declaran, textual: *«For the latest versions go to: https://code.europa.eu/qualifications-courses-and-credentials/»*.
+
+    **`code.europa.eu` está bloqueado por el proxy de egreso de esta sesión** (`EGRESS_BLOCKED`, verificado). Así que del stack europeo de credenciales esta KB puede afirmar **sólo lo que quedó archivado en GitHub**: que existe, su licencia EUPL-1.2, su modelo de datos compatible con W3C VC, y que el código vivo está en otro lado. **Versión actual, estado de mantenimiento y licencia vigente no están verificados.**
+
+    **La consecuencia de método, que generaliza.** El pase 6 dejó escrito que *el proxy de egreso decide qué se puede afirmar*, y el pase 7 agregó que *también decide qué se puede cerrar*. Este pase agrega la tercera forma: **también decide qué regiones se pueden cubrir bien.** El stack europeo de credenciales es, muy posiblemente, la oferta más relevante del mundo para P19 en EMEA, y es la que esta sesión no puede mirar. Un cliente europeo exige abrir `code.europa.eu` **antes** de cotizar.
+
+
 ## Fuentes
 
 Mercado y players: [Grand View Research](https://www.grandviewresearch.com/industry-analysis/artificial-intelligence-ai-education-market-report) · [Research and Markets](https://www.researchandmarkets.com/reports/5896034/ai-in-education-market-report) · [AI Tutors Market](https://www.grandviewresearch.com/industry-analysis/ai-tutors-market-report) · [5WPR EdTech AI Visibility Index 2026](https://www.5wpr.com/research/edtech-ai-visibility-index-2026/) · [Khan Academy / Duolingo agents](https://callsphere.ai/blog/ai-agents-education-khan-academy-duolingo-autonomous-tutoring)
+
+Credenciales verificables e interoperabilidad — agregado en el pase 9: [learner-credential-wallet](https://github.com/digitalcredentials/learner-credential-wallet) · [verifier-plus](https://github.com/digitalcredentials/verifier-plus) · [issuer-coordinator](https://github.com/digitalcredentials/issuer-coordinator) · [qti3-item-player](https://github.com/amp-up-io/qti3-item-player) · [esco-skill-extractor](https://github.com/KonstantinosPetrakis/esco-skill-extractor) · [oneroster (TypeScript)](https://github.com/LongsightGroup/oneroster) · [lti-1-3-php-library](https://github.com/1EdTech/lti-1-3-php-library) · [openbadges-specification](https://github.com/1EdTech/openbadges-specification) · [tao-core](https://github.com/oat-sa/tao-core) · [openbadgeslib](https://github.com/luisgf/openbadgeslib) · [caliper-php-public (U. de Michigan)](https://github.com/tl-its-umich-edu/caliper-php-public) · [European Learning Model (archivado)](https://github.com/european-commission-empl/European-Learning-Model) · [European Digital Credentials (archivado)](https://github.com/european-commission-empl/european-digital-credentials) · [Open Badges 3.0 — guía de implementación 1EdTech](https://standards.1edtech.org/open-badges/guides/standards/v3p0/impl) · [Europass — información para desarrolladores](https://europass.europa.eu/en/information-developers)
 
 Evaluación y seguridad pedagógica — agregado en el pase 5: [SafeTutors (repo)](https://github.com/RadiantCrystal/SafeTutors) · [EduBench (repo)](https://github.com/ybai-nlp/EduBench) · [EduGuardBench (repo)](https://github.com/YL1N/EduGuardBench) · [EduFrameTrap / sycophancy (arXiv 2605.14604)](https://arxiv.org/abs/2605.14604) · [ELBench (arXiv 2608.09548)](https://arxiv.org/abs/2608.09548) · [SafeTutors (arXiv 2603.17373)](https://arxiv.org/abs/2603.17373) · [EduGuardBench (arXiv 2511.06890)](https://arxiv.org/abs/2511.06890)
 
@@ -561,6 +659,52 @@ Capa de telemetría (LRS / xAPI) — agregado en el pase 6, **todo verificado de
 Evaluación — agregado en el pase 6, 🔴 **no verificado de primera mano** (dominios bloqueados por el proxy): L2-Bench (arXiv 2607.08842) · metodología de L2-Bench (arXiv 2603.20088) · `benchmarks.elt.edu.oup.com` · dataset en HuggingFace bajo `OUP/`
 
 Regulación y mercado por región — agregado en el pase 6: [MultiState — AI in Education Legislation: 2026 State Policy Trends](https://www.multistate.us/insider/2026/4/9/how-states-are-regulating-ai-in-education-this-legislative-session) · [NASBE — States Take Next Steps on Governing AI Use in Schools](https://www.nasbe.org/states-take-next-steps-on-governing-ai-use-in-schools/) · [ExcelinEd — State K-12 AI Policy in 2026](https://excelined.org/2026/05/26/state-k-12-ai-policy-in-2026-milestones/) · [Latham & Watkins — AI Regulation in APAC](https://www.lw.com/en/insights/ai-regulation-in-apac-diverging-approaches-across-the-region) · [Xenoss — APAC AI regulations](https://xenoss.io/blog/asia-pacific-apac-ai-regulations) · [UNESCO — Observatory on AI in Education for LAC](https://www.unesco.org/en/articles/unesco-launches-observatory-artificial-intelligence-education-latin-america-and-caribbean) · [Compliance & Risks — LATAM AI legislation](https://www.complianceandrisks.com/blog/shaping-the-future-ai-legislative-initiatives-across-latin-america/) · [IDB — An Enabling Regulatory Framework for AI in LAC](https://publications.iadb.org/publications/english/document/An-Enabling-Regulatory-Framework-for-Artificial-Intelligence-in-Latin-America-and-the-Caribbean.pdf) · [Azumo — AI in Education Statistics 2026](https://azumo.com/artificial-intelligence/ai-insights/ai-in-education-statistics) · [Grand View Research — AI Tutors Market](https://www.grandviewresearch.com/industry-analysis/ai-tutors-market-report) · [EdTech Hub — AI in Education in MENA](https://docs.edtechhub.org/lib/EPJAMMH9/download/BHXDDPBB)
+
+## Nota de método del pase 9 (2026-10-01) — nueve pasadas buscando el principio del recorrido, y la capa que faltaba era el final
+
+**Lo que este pase hizo distinto.** Las ocho pasadas anteriores buscaron por **capa técnica** (agente, modelado,
+evaluación, telemetría, datos), por **categoría de producto** (tutor, plataforma, benchmark) y, en el pase 8, por
+**población de alumnos**. Ninguna buscó por **el final del recorrido**: qué pasa cuando el aprendizaje termina y hay que
+acreditarlo ante un tercero. Esa capa existe desde hace más de una década, tiene estándares con certificación de
+conformidad, y no estaba en la KB porque **no se llama «agente» ni «tutor»** — se llama Open Badges 3.0, W3C Verifiable
+Credentials, QTI, OneRoster y Caliper.
+
+Es la **cuarta** aplicación de la regla que dejó escrita el pase 6: *cuando un gap sobrevive varias pasadas, revisar si la
+pieza que falta tiene un nombre que uno no está usando.* La regla sigue siendo la más productiva de esta KB.
+
+**Verificado de primera mano** (WebFetch contra la página del repo en github.com, y en dos casos contra el archivo):
+las ocho piezas vivas de la capa (`learner-credential-wallet`, `verifier-plus`, `issuer-coordinator`,
+`qti3-item-player`, `esco-skill-extractor`, `LongsightGroup/oneroster`, `lti-1-3-php-library`,
+`openbadges-specification`), las cuatro copyleft/archivadas (`tao-core`, `openbadgeslib`, `caliper-php-public`, los dos
+de la Comisión Europea), el **archivo `LICENSE`** de `qti3-item-player` (`Copyright (c) 2022-2024 Amp-up.io, LLC`), el
+**banner y la descripción** del fork de la Universidad de Michigan, y las **tres URL que devuelven 404**
+(`concentricsky/badgr-server`, `1EdTech/caliper-php`, `IMSGlobal/caliper-python`), más la búsqueda de repositorios de la
+organización `concentricsky` por el término `badgr`, que devuelve *«No repositories matched your search»*.
+
+**Lo que NO está verificado, y está marcado en rojo donde aparece:**
+
+1. **Todo el trend 21** (IgniteAI, niveles de Canvas, fechas de fin del acceso gratuito). Los tres sitios con el detalle
+   —`constellationr.com`, `nasdaq.com`, `aijourn.com`— están **bloqueados por el proxy**. Es el dato más accionable del
+   pase y el peor verificado.
+2. **El estado actual del stack europeo de credenciales**: `code.europa.eu` está bloqueado (gap 14).
+3. **`moodle.org`** está bloqueado, así que el plugin `enrol_oneroster` de Moodle se menciona sólo como contexto de que
+   la integración OneRoster existe en el LMS, sin verificar licencia ni versión.
+4. `curl -sI` contra `github.com` **sigue devolviendo 403** y `api.github.com` también **403**, igual que en los pases
+   5 a 8. No hubo forma de confirmar fechas de último commit; se registran los **conteos de commits**, que sí aparecen
+   en la página.
+
+**La honestidad que exige un 404.** Un repo que devuelve 404 en GitHub puede estar borrado, renombrado o puesto en
+privado, y desde afuera son indistinguibles. Este pase afirma únicamente que **las URL no resuelven** — y donde hay más,
+lo cita: en `caliper-php` el mantenedor de un fork **nombra la causa**, y en `badgr-server` hay una **segunda señal
+independiente**. La tentación era escribir «1EdTech y Instructure retiraron su código open source»; eso es una
+interpretación, y sólo una de las dos mitades tiene a alguien que la respalde por escrito.
+
+**Una corrección de proceso que vale registrar.** La primera lectura de la página del fork de Michigan devolvió la
+afirmación sobre 1EdTech, pero una segunda lectura **dirigida al `README.md`** no la encontró. En vez de escribirla como
+verificada o descartarla, se hizo una tercera consulta dirigida a la **descripción «About» y al banner** del repo, que es
+donde efectivamente está, y recién entonces se citó textual. **El nivel de la página en que vive una afirmación importa:**
+descripción, banner, README y archivo `LICENSE` son cuatro fuentes distintas con cuatro grados de autoridad distintos.
+
 
 ## Nota de método del pase 8 (2026-10-01) — una población entera que siete pasadas no buscaron, y una sigla que colisiona
 

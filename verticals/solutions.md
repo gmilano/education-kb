@@ -153,6 +153,40 @@ Capa que la KB no tenía y que aparece en toda conversación de evaluación suma
 
 ⚠️ **Lo que hay fuera de Open edX no es proponible.** La búsqueda de proctoring open source devuelve mayoritariamente **proyectos de estudiante y de trabajo final** — detección de rostro y de objetos con YOLO, seguimiento de mirada, bloqueo de pestañas — sin licencia clara, sin mantenimiento y sin evaluación de sesgo. **Y el sesgo es el punto que hunde la categoría entera:** un sistema de vigilancia biométrica sobre alumnos es, bajo el EU AI Act, exactamente el tipo de sistema de **alto riesgo** del Annex III en acceso y evaluación educativa. Proponer un proctoring sin expediente de conformidad es ofrecerle al cliente el riesgo regulatorio, no la solución. Ver **P4**.
 
+## Capa de credenciales y evaluación conforme a estándar — agregada en el pase 9 del 2026-10-01
+
+Plataformas reales que se despliegan y se customizan con AI al lado, para el tramo que acredita el aprendizaje.
+Es la misma receta que esta KB aplica a Moodle y Open edX, y acá es **obligatoria** porque las dos piezas maduras son copyleft.
+
+| Plataforma | Repo | Licencia | Qué cubre | Cómo se customiza con AI |
+|-----------|------|----------|-----------|--------------------------|
+| **TAO** | https://github.com/oat-sa/tao-core | **GPL-2.0** ⚠️ | Plataforma de evaluación **QTI + LTI** completa: autoría de ítems, entrega de exámenes, scoring, control de acceso por roles, webhooks, feature flags, colas de tareas. **22.533 commits**, origen Universidad de Luxemburgo, mantenida por Open Assessment Technologies | **Desplegar tal cual, no forkear.** La generación de ítems (`Educhain`, MIT) y el gate de calidad pedagógica (`EduBench`/`SafeTutors`, MIT) corren **afuera** y entregan QTI XML. La integración es por webhooks y LTI, que TAO ya expone |
+| **Reproductor QTI 3 embebible** | https://github.com/amp-up-io/qti3-item-player | **MIT** ✅ | Runtime de ítems QTI 3 con response processing y scoring, ítems adaptativos, template processing. **Certificación de conformidad QTI 3 Basic y Advanced «Delivery» de 1EdTech** | **Es la alternativa a TAO cuando la licencia importa.** No es una plataforma: es el componente de entrega. Se embebe en producto propio y se le agrega autoría e inteligencia arriba, **sin fricción de licencia y con conformidad certificada** |
+| **Stack de credenciales DCC** | `digitalcredentials/issuer-coordinator` + `verifier-plus` + `learner-credential-wallet` | **MIT** ✅ (los tres) | Emisión (W3C **VC API**, formato **Open Badges 3.0**), revocación y suspensión, verificación con QR, y billetera móvil del alumno | Es el único tramo **enteramente MIT** de esta capa. La AI no va adentro: va **antes**, decidiendo si corresponde emitir (ver **P19**) |
+| **Emisor OB 3.0 en Python** | https://github.com/luisgf/openbadgeslib | **LGPLv3** / BSD-2-Clause ⚠️ | Ciclo completo de emisor: JWT-VC y Data Integrity, horneado en SVG/PNG, `did:web`, **Bitstring Status Lists** para revocar y suspender. Soporta OB 3.0, 2.0 estricto y 1.0 legacy | Alternativa al `issuer-coordinator` cuando el stack es Python. ⚠️ **LGPL: enlazar sí, modificar y distribuir no** — y los perfiles de badge son justo lo que uno quiere modificar |
+| **LTI 1.3 como vía de entrada** | https://github.com/1EdTech/lti-1-3-php-library | **Apache-2.0** ✅ | Tool provider LTI 1.3: login OIDC, deep linking, envío de notas, lectura del roster | **Es el modo correcto de meter un agente en un LMS que no es nuestro.** Evita el fork de Moodle/Canvas/Open edX por completo: el agente es una herramienta externa conforme |
+| **OneRoster para matrícula y notas** | https://github.com/LongsightGroup/oneroster | **MIT** ✅ | OneRoster 1.1/1.2 por CSV y REST, Node/Deno/navegador | Sincroniza alumnos, cursos, secciones y notas con el SIS sin integración a medida. 0 ★ — tratarlo como referencia y fijar la versión |
+
+### ⚠️ Lo que no hay que proponer en esta capa
+
+- **Badgr** (`concentricsky/badgr-server`) — **404 verificado**, y la búsqueda de repos de la organización por `badgr` no
+  devuelve nada. Es **Canvas Credentials** de Instructure y después **Parchment Digital Badges**: propietario. Toda la
+  documentación del sector lo sigue citando como «la implementación open source de Open Badges». **Ya no lo es.**
+- **European Digital Credentials** (`european-commission-empl/*`) — **archivados** (feb-2024, EUPL-1.2). El código vivo
+  está en `code.europa.eu`, que **esta sesión no puede alcanzar**: para un cliente europeo hay que abrirlo y verificarlo
+  antes de cotizar (gap 14).
+- **Caliper** vía las URL oficiales (`1EdTech/caliper-php`, `IMSGlobal/caliper-python`) — las dos **404**. Para PHP, la
+  pieza accesible hoy es el fork de la **Universidad de Michigan** (`tl-its-umich-edu/caliper-php-public`, LGPL-3.0).
+  Para telemetría nueva, **preferir xAPI y un LRS** (`lrsql`, `Ralph` — ver `repos/foundations.md`), que es la capa
+  hermana y está viva.
+
+### La regla de esta capa, y es distinta a la del resto de la KB
+
+En las ocho capas anteriores la señal de calidad eran las estrellas y los commits. Acá no: el repo más estrellado es
+**una especificación** (205 ★, no código), el de más commits es **GPL-2.0**, y la pieza con **certificación de
+conformidad de 1EdTech tiene 30 estrellas**. **En credenciales e interoperabilidad se elige por conformidad certificada
+y por licencia, no por popularidad** — y se **verifica que la URL resuelva** antes de ponerla en una propuesta.
+
 ## Cómo elegir
 
 | Si el cliente necesita… | Arrancar de |
