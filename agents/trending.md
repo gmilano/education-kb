@@ -9,6 +9,68 @@ updated: 2026-10-01
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 > No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
 
+## 2026-10-01 (pase 24) — sexto pase sin altas de agentes, pero el pase que dejó de leer código y lo ejecutó: la medición corrigió una conclusión que la KB había escrito con confianza
+
+**La tabla principal sigue en 37 filas.** Se corrió el barrido completo obligatorio —las cuatro búsquedas globales y las
+cuatro regionales, con el año **calculado** (2026)— y **no apareció ni un agente educativo que esta KB no tuviera.** Es la
+sexta pasada consecutiva sin altas. Candidato por candidato:
+
+| Candidato que trajo la búsqueda | Qué es | Por qué no entra en `agents/top.md` |
+|---|---|---|
+| **openclaw** (385.407 ★), **browser-use** (108.128 ★), **Mem0** (62.735 ★), **AutoGen** (60.284 ★), **Flowise**, **dify** (151.639 ★) | Agentes y orquestadores de propósito general | **Ya en la KB o fuera de dominio.** El barrido global de *«open source AI agents»* devuelve la capa genérica por sexta vez |
+| **`rohitg00/ai-engineering-from-scratch`** (#1 en GitHub Trending el 2026-05-24), **`free-ai-agents-resources`**, **Awesome LLM Apps** (133k ★), **Prompt Engineering Guide** (77,6k ★) | Cursos y colecciones **sobre** AI | **No es software que educa: es material didáctico sobre AI.** Es exactamente el fenómeno que el pase 23 midió, y este pase lo vuelve a confirmar sin excepción |
+| **Hermes Agent** (Nous Research), **Aider**, **Cline**, **CrewAI**, **LangGraph** | Agentes de código y frameworks multi-agente | Fuera de dominio |
+| **LearnUpon**, **NIIT MTS**, **TCS + Pearson**, **Alteryx Academy** (del barrido APAC) | Plataformas y alianzas **comerciales** de formación corporativa | **No son open source.** Van a `intel/market.md` como *players*, no acá |
+| **Ednova** (Chile), **Kredi**, **MindHealth LATAM** (del barrido LATAM) | Startups de edtech/fintech/healthtech | **No son open source.** Ednova queda registrada en `intel/market.md` como edtech LATAM nombrada en la fuente |
+
+🔴 **Y la consigna del pase 23 rindió en su primer uso, lo cual es el dato de método del pase.** La instrucción era:
+*«no alcanza con cambiar el sustantivo — hay que evitar la palabra `education` y buscar por el artefacto del dominio o por
+el estándar instalado»*. Se hizo: cuatro búsquedas por `gradebook`+OneRoster+LTI, por QTI 3 *item bank*, por IEP y por
+SIS/matrícula/asistencia/legajo. **Trajeron seis repos verificados de primera mano, cinco nuevos** — y el hallazgo de
+encuadre del pase: **la capa LTI de esta KB era íntegramente PHP** y existe una **familia Java/Spring MIT** publicada por
+la Universitat Oberta de Catalunya. Ver `repos/trending.md` y la sección nueva de esta misma tabla.
+
+**La consigna para el pase 25 es una continuación, no un cambio de eje** —porque el eje no se agotó, rindió—: quedan sin
+barrer los artefactos **`item bank`**, **`proctoring`**, **`timetable`** y **`competency framework`/CASE**, y los
+estándares **Caliper**, **CASE** y **xAPI Profiles**. Y una consigna específica: **buscar `LTI platform` explícitamente**,
+porque todo lo que esta KB registró en seis pases es *tool-side* (el lado de la herramienta) y las dos únicas piezas
+*platform-side* aparecieron en este pase — **una de ellas sin licencia declarada**. Un stack que sólo sabe ser herramienta
+no puede proponer el lado LMS.
+
+### El pase no vino a buscar agentes: vino a ejecutar la acción del pase 23, y la ejecución corrigió al pase 23
+
+El pase 23 dejó escrita una acción precisa: *«levantar `lrsql` sobre PostgreSQL, borrar un actor con datos en las siete
+tablas y leer el valor»*. **Se hizo —PostgreSQL 16.14 y MariaDB 10.11.14 levantados, esquema creado con el DDL propio de
+lrsql, el SQL literal de `delete.sql`— y el resultado invierte la conclusión arquitectónica del pase 23.**
+
+| | Lo que el pase 23 dedujo leyendo | Lo que el pase 24 midió ejecutando |
+|---|---|---|
+| **¿Se puede obtener el desglose por tabla?** | «No, sin **partir el SQL** en siete queries con nombre» | 🔴 **Sí, y sin tocar el SQL.** El driver parte él mismo la cadena y entrega los siete conteos en orden: `[7, 2, 3, 8, 5, 6, 1]` por el bucle `getMoreResults()`, que es JDBC estándar |
+| **¿Cuál de los siete números se ve hoy?** | «Un solo valor; cuál de los siete **no se midió y no se infiere**» | **El del PRIMER `DELETE`** (`statement_to_statement`). `executeUpdate()` devuelve el mismo |
+| **Tamaño del parche del gap 36** | «4 archivos de 3 backends más el interceptor; refactor de SQL en dos» | **Más chico:** sólo la capa que recoge el resultado. El SQL queda igual y los tres backends simétricos |
+
+🔴 **Y el número que hoy se ve vale `0` para el alumno típico.** El primer `DELETE` de la secuencia es el de
+`statement_to_statement`, tabla que sólo tiene filas si las sentencias tienen anidamiento o *voiding*. Medido con el mismo
+actor sin esas filas: **25 filas borradas y el único testigo disponible dice `0`**. Eso cambia el consejo: **cablear el
+conteo «porque ya está» produce un expediente que afirma algo falso**, y un `0` falso es peor que el `200` vacío del pase
+21, porque el `200` no afirma nada. Ver la tendencia **61** y el patrón **P47**.
+
+### El hallazgo que no se buscó, y es el más accionable del pase: en MariaDB el borrado no es inexacto, no ocurre
+
+Armando el fixture sobre MariaDB apareció el **gap 38**. Con `allowMultiQueries` en el default del driver (`false`),
+`delete-actor-and-dependents!` **falla entera**: error **1064 / SQLState 42000** en el segundo de los siete `DELETE`.
+lrsql trae el parámetro, pero como *fallback* de aero —
+`:db-properties #or [#env LRSQL_DB_PROPERTIES "allowMultiQueries=true"]`— así que **cualquier** uso de
+`LRSQL_DB_PROPERTIES`, o de `LRSQL_DB_JDBC_URL`, **lo reemplaza y lo apaga en silencio**. Y `doc/env_vars.md` la describe
+como *«Optional **additional** DB properties»* con default *«Not set»*: **inexacto en los dos campos** para MariaDB y MySQL.
+
+**Por qué importa más que todo lo anterior de esta cadena:** es el primer hueco de esta KB cuyo síntoma es **la ausencia
+del borrado** y no la ausencia de su prueba. El despliegue ingiere, consulta y pasa el *health check* con normalidad,
+porque el borrado de actor es la única operación del producto que manda varias sentencias en un paquete. **El fallo
+aparece la primera vez que alguien ejerce el derecho al olvido** — el día en que hay expediente abierto y plazo corriendo.
+Ver la tendencia **62** y el **paso 0** de **P47**.
+
+
 ## 2026-10-01 (pase 23) — quinto pase sin altas de agentes, y el barrido confirmó el diagnóstico del pase 22: lo que aparece ya no es agente, es plataforma administrativa
 
 **La tabla principal sigue en 37 filas.** Se corrió el barrido completo obligatorio —las cuatro búsquedas globales y las

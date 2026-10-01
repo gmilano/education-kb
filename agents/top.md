@@ -501,6 +501,35 @@ Hay una segunda señal del mismo movimiento: la organización de GitHub ya no se
 
 **Qué significa para una propuesta.** No es un abandono — un traspaso a una fundación neutral es, en general, señal de madurez y de continuidad (es lo mismo que esta KB registró para `goose` al pasar a la Linux Foundation). Pero **sí significa que la cadena de custodia cambió en los últimos cuatro meses**, y que la documentación, los issues y la hoja de ruta van a mudar de lugar. Al proponer esta pieza hay que **fijar la versión y confirmar dónde vive el mantenimiento activo**, no citar el repo del MIT como si nada hubiera pasado.
 
+### La vía de entrada deja de ser sólo PHP, y el lado LMS sigue vacío — agregado en el pase 24 del 2026-10-01
+
+**Sexto pase sin agentes nuevos** (la tabla principal sigue en 37 filas reales, sin relleno), pero el barrido por
+**estándar instalado** —la consigna que dejó el pase 23— destapó un sesgo de esta KB que afectaba a tres patrones:
+**toda la capacidad LTI registrada era PHP**, porque la KB sólo había encontrado `1EdTech/lti-1-3-php-library`.
+
+| Nombre | Repo | Licencia | ★ | Forks | Lenguaje | Qué es | Región |
+|---|---|---|---|---|---|---|---|
+| java-lti-1.3 | https://github.com/UOC/java-lti-1.3 | **MIT** ✅ | 21 | 14 | Java | Librería **LTI Advantage** completa, v**1.0.0**. La de más tracción de la familia UOC | EMEA (Universitat Oberta de Catalunya, Barcelona) |
+| spring-boot-lti-advantage | https://github.com/UOC/spring-boot-lti-advantage | **MIT** ✅ | 16 | 17 | Java | LTI Advantage para **Spring Boot**: Spring Security valida los *launches* y trae `RestTemplate` de **AGS** (Line Item, Result, Score), **NRPS** y *Deep Linking* por el *launch* OIDC | EMEA (UOC) |
+| java-lti-1.3-platform | https://github.com/UOC/java-lti-1.3-platform | ⚠️ **sin licencia declarada** | 0 | 1 | Java | *«Library that **will** implement a full LTI Advantage platform»* — **el lado LMS**. El tiempo futuro del README es el dato: es intención | EMEA (UOC) |
+| lti-1-3-php-library (Packback) | https://github.com/packbackbooks/lti-1-3-php-library | **Apache-2.0** ✅ | 53 | 25 | PHP | Segundo *tool provider* LTI 1.3 en PHP, **1.038 commits**. **Independiente** del de 1EdTech, no un fork | North America (Packback, Chicago) |
+| OpenAssessmentsClient | https://github.com/gnowledge/OpenAssessmentsClient | **Apache-2.0** ✅ | 0 | 3 | JavaScript (React) | Cliente **QTI 1.x y 2.x**. **No es QTI 3**: para QTI 3 sigue siendo `amp-up-io/qti3-item-player`, el único artefacto certificado por 1EdTech de esta KB | APAC (gnowledge) |
+
+🔴 **El asterisco, y es el que hay que levantar en el *discovery*.** De los 14 repos LTI de la UOC, **13 son *tool-side***
+—construyen la herramienta que entra al LMS— y **el único *platform-side* no declara licencia y dice que «implementará»**.
+Lo mismo vale para todo lo que esta KB registró en nueve pases: es capacidad de **entrar** a un LMS, no de **ser** uno.
+**Si el engagement pide el lado plataforma, esta KB no tiene con qué y hay que decirlo antes de la propuesta, no después.**
+
+**Por qué entran con 21 y 16 estrellas.** Es código que una universidad pública europea usa en su propio campus — el mismo
+criterio por el que el pase 22 aceptó `tutor-contrib-aspects` con 14 ★. Para un cliente de educación superior europea con
+stack Java/Spring, **la alternativa era meterle PHP al diagrama por una limitación de esta base de conocimiento.**
+
+⚠️ **Corrección de procedencia verificada en este pase.** La hipótesis natural —que la librería de 1EdTech fuera una
+donación de Packback y que esta KB apuntara al *fork*— **es falsa**: el README de 1EdTech dice que *«This library was
+initially created by @MartinLenord from **Turnitin**»*. Son dos librerías PHP independientes, las dos Apache-2.0. La fila
+de la KB está bien apuntada; lo que faltaba era saber que hay una segunda, que importa para decidir dónde abrir un *issue*.
+
+
 ### Lo que esta capa **no** tiene, y es el gap que abre el pase 9
 
 Se buscó explícitamente un agente que **emita o consuma** credenciales verificables, y no existe. Ninguno de los 25+ agentes de la tabla principal escribe un Open Badge, y ninguna de las piezas de credenciales tiene interfaz de agente ni servidor MCP.

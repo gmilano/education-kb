@@ -7,6 +7,12 @@ updated: 2026-10-01
 # 📡 Tendencias — education
 
 > Ventana de investigación: septiembre 2026. Verificado 2026-09-30; el pase 11, el 2026-10-01.
+> **Pase 24:** se ejecuta la acción del pase 23 **midiendo en vez de leyendo**, y el resultado **corrige** al pase 23:
+> el desglose por tabla de un borrado **ya viaja por el cable** y se descarta, así que el **gap 36** no es refactor de SQL
+> sino de la capa que recoge el resultado — pero el conteo único disponible es el del **primer** `DELETE` y vale **`0`**
+> para el alumno típico (tendencia **61**). Y aparece el **gap 38**, el primero cuyo síntoma es la ausencia del borrado y
+> no de su prueba: en MariaDB/MySQL la supresión **falla entera** (error 1064) si una variable de entorno no relacionada
+> apaga `allowMultiQueries` (tendencia **62**, patrón **P47**).
 > **Pase 23:** se ejecuta la acción que el pase 22 dejó escrita y **el gap 36 queda dimensionado**: los conteos de borrado existen en los tres backends de `lrsql`, pero **la evidencia no es portable entre motores de base de datos** — y eso contradice la razón por la que esta KB lo recomienda por default (tendencia **60**, patrón **P45**).
 > **Pase 12:** la educación pierde **58×** contra la vertical científica en el canal de distribución más barato de la
 > industria (tendencia 28), se nombra el patrón *estándar instalado vs. modelo propio* que se repite en cinco capas
@@ -2104,6 +2110,28 @@ documentación de arquitectura**, en vez de ocultarlo. Eso tiene dos lecturas y 
   identificador sobrevive a la retirada, «anonimizado» está haciendo un trabajo legal que puede no sostener** — y lo
   que queda retenido es el expediente conductual completo de alguien que ejerció el art. 17. Ése es el **gap 37**.
 
+**ACTUALIZACIÓN DEL GAP 36 EN EL PASE 24 DEL 2026-10-01 — queda contestado con número, y el tamaño baja por segunda vez.**
+El pase 23 lo dejó dimensionado *por lectura* y estimó *«un cambio en 4 archivos de 3 backends más el interceptor»*, porque
+concluyó que en PostgreSQL y MariaDB el desglose por tabla exigía **partir el SQL**. **Se midió ejecutando, y no hace falta
+partir nada:** pgjdbc y MariaDB Connector/J **parten ellos mismos** la cadena multi-sentencia y entregan **los siete
+conteos, uno por tabla, en orden** (`[7, 2, 3, 8, 5, 6, 1]`) por el bucle `getMoreResults()` de JDBC estándar. El SQL no se
+toca y los tres backends quedan simétricos: **lo único que hay que cambiar es la capa que recoge el resultado**, que lee un
+conteo y nunca pide el siguiente.
+
+Y aparece una trampa que el gap no tenía anotada: **el conteo único que hoy está disponible es el del PRIMER `DELETE`**, que
+es el de `statement_to_statement` — **vale `0` para cualquier alumno sin sub-sentencias, que es el caso normal**. Medido: 25
+filas borradas, el número disponible dice `0`. **Cablear ese conteo "porque ya está" produce un expediente que afirma algo
+falso**, y eso es peor que el `200` vacío del pase 21. El gap 36 ya no es *«falta el número»*: es **«está el desglose, hay
+que recogerlo entero y no confundirlo con el primero»**. Ver la tendencia **61** y el patrón **P47**.
+
+38. **La supresión del alumno en MariaDB/MySQL cuelga de un parámetro de driver que una variable de entorno documentada apaga en silencio** *(agregado en el pase 24 del 2026-10-01)*. **Medido en este pase:** con `allowMultiQueries` en su default (`false`), `delete-actor-and-dependents!` **no se degrada, falla entera** — error **1064 / SQLState 42000** en el segundo de los siete `DELETE`. lrsql trae el parámetro, pero como *fallback* de **aero**: `:db-properties #or [#env LRSQL_DB_PROPERTIES "allowMultiQueries=true"]`, así que **cualquier** uso de `LRSQL_DB_PROPERTIES` —y `doc/postgres.md` enseña a usarla para `currentSchema`— **lo reemplaza entero y lo apaga**; `LRSQL_DB_JDBC_URL` hace lo mismo. Y `doc/env_vars.md` la describe como *«Optional **additional** DB properties»* con default *«Not set»*: **inexacto en los dos campos** para estos backends.
+
+    **Por qué es el gap más accionable de esta KB sobre este repo, y el más barato de los siete pases que lleva mirándolo.** No hay que tocar SQL ni lógica, y no requiere investigación ni ensamblado: son **dos líneas de documentación mal escritas**, una advertencia ausente en `doc/mariadb.md`, y una decisión de diseño de configuración —**fusionar** en vez de reemplazar, o, más barato todavía y sin cambiar semántica de aero, **fallar al arrancar** cuando el backend es MariaDB/MySQL y `allowMultiQueries` no quedó activo—. Es *upstream* puro a Yet Analytics, igual que el gap 36, y se contribuye con un test de regresión que hoy no existe.
+
+    **Y es el único gap de esta KB cuyo síntoma es la ausencia de un borrado en vez de la ausencia de su prueba.** Los gaps 36 y 37 son sobre **evidencia**; éste es sobre **capacidad**: el despliegue ingiere, consulta y pasa el *health check* con normalidad, porque el borrado de actor es la única operación del producto que manda varias sentencias en un paquete. **El fallo se manifiesta la primera vez que alguien ejerce el art. 17** — el día en que hay expediente abierto y plazo corriendo. Ver la tendencia **62** y el patrón **P47**.
+
+    ⚠️ **Lo declarado y no verificado:** que ésa sea la *única* consulta multi-sentencia del producto no se enumeró — el clasificador de seguridad del entorno bloqueó el recorrido masivo del árbol clonado. Si una migración de arranque también lo fuera, el síntoma sería **más** visible y por lo tanto menos peligroso que lo descrito.
+
 **La consecuencia práctica, que es de redacción de propuesta.** Sobre Open edX + Aspects la frase correcta **no es**
 *«cumplimos el derecho al olvido»*; es *«se suprime la identificación directa y se conserva el registro de actividad
 pseudonimizado, cuya base legal de retención se declara»*. La primera no se sostiene en una inspección; la segunda sí.
@@ -2164,7 +2192,196 @@ argumento; **cuál de los siete es ese valor no se midió y no se infiere.** Es 
 `lrsql` sobre PostgreSQL, borrar un actor con datos en las siete tablas y leer el valor. Es una tarde de trabajo y cierra el
 gap 36 con número en vez de con lectura.
 
+## 61. El desglose de un borrado no hay que construirlo: ya viene en el cable y se descarta — y el número que la aplicación sí puede leer es `0` para el alumno típico (agregado 2026-10-01, pase 24)
+
+**El pase 23 dejó escrita una acción concreta y acotada:** *«levantar `lrsql` sobre PostgreSQL, borrar un actor con datos en
+las siete tablas y leer el valor. Es una tarde de trabajo y cierra el gap 36 con número en vez de con lectura.»*
+**Se ejecutó en este pase, y el resultado corrige la conclusión arquitectónica del pase 23, no la confirma.**
+
+### Cómo se midió (y por qué el fixture está armado así)
+
+| | |
+|---|---|
+| **Árbol** | `yetanalytics/lrsql` clonado, HEAD `cb794e4` |
+| **Esquema** | Las tablas creadas **con el DDL propio de lrsql**, extraído de `src/db/postgres/lrsql/postgres/sql/ddl.sql` — no un esquema equivalente escrito a mano |
+| **Migración aplicada** | `add-statement-to-actor-cascading-delete!`, así que el fixture es un despliegue **migrado**, como el de producción. Verificado en `pg_constraint`: `statement_fk … REFERENCES xapi_statement(statement_id) ON DELETE CASCADE` |
+| **SQL bajo prueba** | El cuerpo literal de `delete-actor-and-dependents!` de `delete.sql`, con `:actor-ifi` sustituido por `?` — **las 8 ocurrencias**, que es lo que emite HugSQL |
+| **Motor y driver** | PostgreSQL **16.14** + **pgjdbc 42.7.4**; y MariaDB **10.11.14** + **Connector/J 3.4.1** |
+| **El truco del fixture** | Se sembró un conteo **distinto por tabla** (7, 2, 3, 8, 5, 6, 1) para que el número que vuelve sea **identificable**: primero=7, último=1, suma=32, máximo=8, todos distintos entre sí |
+
+### Lo que devolvió, medido
+
+```
+MODE=prepared  execute()->hasResultSet=false
+  getUpdateCount() INMEDIATAMENTE DESPUÉS de execute()  = 7
+  TODOS los conteos vía el bucle getMoreResults()        = [7, 2, 3, 8, 5, 6, 1]
+  first=7  last=1  sum=32  max=8
+MODE=executeUpdate  returned = 7
+```
+
+🔴 **Hallazgo 1 — y corrige al pase 23.** El pase 23 escribió que en PostgreSQL y MariaDB *«no se puede obtener el desglose
+por tabla sin partir el SQL»*, y que por eso el gap 36 *«deja de ser plomería y pasa a ser refactor del SQL»*.
+**Es falso, y se mide arriba:** pgjdbc **parte él mismo** la cadena multi-sentencia y expone **los siete conteos, uno por
+tabla, en el orden de los siete `DELETE`**, a través del bucle `getMoreResults()` que es JDBC estándar desde 1997.
+**El desglose por tabla ya viaja por el cable.** Lo mismo, idéntico, en MariaDB con `allowMultiQueries=true`:
+`[7, 2, 3, 8, 5, 6, 1]`.
+
+**Entonces el gap 36 vuelve a bajar de tamaño, y por segunda vez.** No es un refactor del SQL ni hay que partir
+`delete-actor-and-dependents!` en siete queries con nombre: lo que hay que cambiar es **la capa que recoge el resultado**,
+que lee un conteo y nunca pide el siguiente. El SQL no se toca y los tres backends quedan simétricos.
+
+🔴 **Hallazgo 2, y es el que hay que llevar a la reunión.** El único número que hoy queda disponible —el que
+`getUpdateCount()` devuelve, y el mismo que devuelve `executeUpdate()`— **es el del PRIMER `DELETE`**, no el del último
+ni la suma. Y el primer `DELETE` de la secuencia es el de **`statement_to_statement`**: la tabla de aristas entre
+sentencias, que **sólo tiene filas si las sentencias del alumno tienen anidamiento o *voiding***.
+
+**Para el alumno corriente, que no tiene sub-sentencias, ese número es `0`.** Medido, borrando el mismo actor con el
+fixture sin filas en `statement_to_statement`:
+
+```
+  getUpdateCount() INMEDIATAMENTE DESPUÉS de execute()  = 0
+  TODOS los conteos vía el bucle getMoreResults()        = [0, 2, 3, 8, 5, 6, 1]
+  first=0  last=1  sum=25  max=8
+```
+
+**Veinticinco filas borradas, y el único testigo disponible dice `0`.** Esto cambia el consejo del pase 23 en un punto
+que importa: **el parche del gap 36 hecho de la manera obvia —cablear el conteo que ya está— produce un expediente que
+afirma «0 filas borradas» sobre una supresión exitosa.** Un oficial de privacidad que lea eso concluye, con razón, que
+no se borró nada. **Un número incorrecto es peor que el `200` vacío que el pase 21 denunció**, porque el `200` vacío no
+afirma nada y el `0` afirma algo falso. El parche correcto es el bucle completo, no el conteo único.
+
+### Hallazgo 3 — la tabla que une a la persona con su rastro no se borra nunca de forma explícita, y por eso no aparece en ningún conteo
+
+Los siete `DELETE` **no incluyen `statement_to_actor`**, que es justamente la tabla que vincula al alumno con sus
+sentencias. Las cuatro primeras sentencias **la leen** en subconsultas, pero nadie la borra. Sus filas desaparecen
+**sólo por `ON DELETE CASCADE`** desde `xapi_statement`, y **las filas borradas en cascada no se cuentan en ningún
+*update count* de JDBC**. En el fixture eran **10 filas** (8 del alumno y 2 del docente que aparecía en las mismas
+sentencias) y **ninguna de las dos mediciones las ve**.
+
+Y el camino por el que existe esa cascada **no es el mismo en los dos motores**, lo que importa para auditar un
+despliegue ajeno:
+
+| Motor | Cómo llega la cascada | Consecuencia operativa |
+|---|---|---|
+| **MariaDB** | **Nativa en la definición de la tabla** (`statement_fk_stactor`, verificado `CASCADE` en `information_schema.referential_constraints`) | Está desde la creación del esquema |
+| **PostgreSQL** | **Por migración**: `add-statement-to-actor-cascading-delete!`, condicionada por `check-statement-to-actor-cascading-delete` | **Depende de que `-update-all!` haya corrido.** En un despliegue viejo sin migrar, la cascada no está |
+
+**La regla operativa:** incluso con el bucle completo de siete conteos, **el expediente sigue subdeclarando el borrado**,
+porque la tabla de vínculo se va en silencio. Un expediente honesto tiene que contar las filas en cascada aparte —con un
+`SELECT` previo— o decir explícitamente que no las cuenta. Ver **P47**.
+
+⚠️ **Verificación declarada.** Todo lo de arriba está **ejecutado en este pase**, no leído: PostgreSQL 16.14 y MariaDB
+10.11.14 levantados localmente, esquema creado con el DDL de lrsql, los conteos impresos por un arnés JDBC propio sobre
+los drivers oficiales. **Lo que NO se midió:** (1) el valor que entrega `next.jdbc` con `:result :affected` *dentro* de
+lrsql —el repositorio de artefactos Clojure (`repo.clojars.org`) responde **403** a través del proxy de egreso de esta
+sesión, así que no se pudo resolver `next.jdbc` ni el adaptador de HugSQL y **la cadena se midió a la altura del driver,
+que es donde estaba la pregunta abierta**; la lectura del pase 23 sobre el interceptor que descarta el valor sigue en
+pie y no se repitió. (2) **Cuántas otras consultas multi-sentencia tiene lrsql**: el clasificador de seguridad del
+entorno bloqueó el recorrido masivo del árbol clonado, así que el *blast radius* de la tendencia **62** queda sin
+enumerar y se declara como tal.
+
+
+## 62. La supresión del alumno en el LRS que esta KB recomienda depende de un parámetro de driver que una variable de entorno no relacionada apaga en silencio (agregado 2026-10-01, pase 24)
+
+Esta tendencia **no se buscó**: salió de armar el fixture de la tendencia **61** sobre MariaDB. Es el hallazgo más
+accionable del pase y el único que puede dejar una supresión del **art. 17** sin ejecutar.
+
+### El síntoma, medido
+
+Con el **driver en su configuración por default** —`allowMultiQueries` sin tocar, que en MariaDB Connector/J es
+`false`— la consulta `delete-actor-and-dependents!` **no se degrada: falla entera**:
+
+```
+driver: MariaDB Connector/J 3.4.1   db: MariaDB 10.11.14
+  SQLException: java.sql.SQLSyntaxErrorException
+  message: You have an error in your SQL syntax; ... near
+           'DELETE FROM statement_to_activity WHERE statement_id IN ( SELECT statement_...' at line 11
+  SQLState: 42000   vendorCode: 1064
+```
+
+El servidor corta en el **segundo** `DELETE` de los siete. Con `allowMultiQueries=true` en la URL, la misma consulta
+sobre el mismo esquema y los mismos datos funciona y devuelve `[7, 2, 3, 8, 5, 6, 1]`. **El parámetro es la diferencia
+entre borrar y no borrar.**
+
+### Por qué eso no es un bug de lrsql, y es peor que un bug
+
+🔴 **lrsql sí trae el parámetro puesto — pero como *fallback*, no como base.** En
+`resources/lrsql/config/prod/mariadb/database.edn:5` (y el equivalente de `mysql`), leído de primera mano:
+
+```clojure
+:db-properties #or [#env LRSQL_DB_PROPERTIES "allowMultiQueries=true"]
+```
+
+El `#or` de **aero** devuelve **el primer valor no nulo**. O sea: **si el operador define `LRSQL_DB_PROPERTIES` por
+cualquier motivo, su string REEMPLAZA al default completo** y `allowMultiQueries=true` **desaparece**. No se fusiona.
+No avisa. Y hay un segundo camino con el mismo efecto: `LRSQL_DB_JDBC_URL`, que —según `doc/env_vars.md`— *«overrides
+the above properties if set»*, así que una URL JDBC entregada a mano también se lleva el parámetro puesto.
+
+**Y la documentación empuja al operador exactamente hacia ahí.** `doc/env_vars.md` describe `LRSQL_DB_PROPERTIES` como
+*«Optional **additional** DB properties»* con default *«Not set»*. **Las dos cosas son inexactas para MariaDB y MySQL:**
+no es *additional* —es reemplazo— y el default **no** es *not set*, es `allowMultiQueries=true`. Peor: el propio
+`doc/postgres.md` le enseña al lector a usar `LRSQL_DB_PROPERTIES` para fijar `currentSchema`, y `doc/mariadb.md`
+**no menciona el tema en ninguna línea**. Un operador de MariaDB que quiera fijar un timeout, un `sessionVariables` o
+TLS hace lo que la documentación le enseñó y **apaga la supresión del alumno sin enterarse**.
+
+### Por qué no se nota hasta el peor momento posible
+
+La consulta del borrado de actor es **la única operación del producto que depende de enviar varias sentencias en un
+paquete**. Todo lo demás —ingesta de sentencias, consultas, documentos de estado, credenciales— es de una sentencia por
+viaje y **sigue funcionando perfecto**. Así que el despliegue se ve sano: ingiere, consulta, responde, pasa el
+*health check*. **El fallo aparece la primera vez que alguien ejerce el derecho al olvido**, que es, por definición, el
+día en que hay un expediente abierto y un plazo corriendo.
+
+⚠️ **El alcance exacto queda declarado, no afirmado.** Que el borrado de actor sea la *única* consulta multi-sentencia
+de lrsql es lo que se desprende de las lecturas de los pases 21 a 23 y de este, **pero no se enumeró**: el clasificador
+de seguridad del entorno bloqueó el recorrido masivo del árbol clonado. Si alguna migración de arranque también fuera
+multi-sentencia, el síntoma sería más visible (fallaría al levantar) y por lo tanto **menos** peligroso que lo descrito.
+Lo que sí está medido es que **con el default del driver, el borrado falla**, y que **lrsql no lo documenta**.
+
+### Lo que esto cambia en la postura comercial
+
+| | |
+|---|---|
+| **Lo que esta KB venía diciendo** | `lrsql` es el LRS por default porque corre sobre la base que el cliente ya opera (ver `verticals/solutions.md`) |
+| **Lo que agrega el pase 23** | La *evidencia* de un borrado no es portable entre motores (tendencia **60**) |
+| 🔴 **Lo que agrega este pase** | En MariaDB y MySQL, **la capacidad misma de borrar** cuelga de un parámetro de driver que una variable de entorno documentada y no relacionada apaga en silencio |
+
+**Es, además, el *upstream* más chico y más defendible que encontró esta KB en siete pases sobre este repo:** no requiere
+tocar SQL ni lógica. Son tres cosas —corregir dos líneas de `doc/env_vars.md`, advertirlo en `doc/mariadb.md`, y
+**fusionar** `LRSQL_DB_PROPERTIES` con el default en vez de reemplazarlo (o, más barato y sin cambiar semántica,
+**fallar al arrancar** si el backend es MariaDB/MySQL y `allowMultiQueries` no quedó activo)—. Ese es el **gap 38**.
+Ver **P47**.
+
+
 ## Fuentes
+
+### Pase 24 (2026-10-01) — medición propia y fuentes del barrido
+
+**Medición de primera mano (ejecutada en este pase, no leída).** `yetanalytics/lrsql` HEAD `cb794e4`; esquema creado con el
+DDL propio del proyecto (`src/db/{postgres,mariadb}/lrsql/*/sql/ddl.sql`); SQL bajo prueba: el cuerpo literal de
+`delete-actor-and-dependents!` de `delete.sql` con las 8 ocurrencias de `:actor-ifi` como `?`. Motores: **PostgreSQL 16.14**
+(pgjdbc **42.7.4**) y **MariaDB 10.11.14** (Connector/J **3.4.1**). Configuración leída en
+`resources/lrsql/config/prod/mariadb/database.edn`, `resources/lrsql/config/prod/postgres/database.edn`,
+`src/main/lrsql/system/util.clj` (`make-jdbc-url`), `doc/env_vars.md`, `doc/postgres.md`, `doc/mariadb.md`.
+
+**Repos verificados vía WebFetch** (y no por `curl`: el proxy de egreso de esta sesión devuelve **403 a todo github.com**,
+que es la advertencia del pase 12 —*un 403 de `curl` no es un 404*— y por eso la verificación de URL se hace con WebFetch,
+que distingue contenido real de un 404 real): [UOC/java-lti-1.3](https://github.com/UOC/java-lti-1.3) ·
+[UOC/spring-boot-lti-advantage](https://github.com/UOC/spring-boot-lti-advantage) ·
+[UOC/java-lti-1.3-platform](https://github.com/UOC/java-lti-1.3-platform) ·
+[UOC/java-lti-1.3-provider-example](https://github.com/UOC/java-lti-1.3-provider-example) ·
+[packbackbooks/lti-1-3-php-library](https://github.com/packbackbooks/lti-1-3-php-library) ·
+[1EdTech/lti-1-3-php-library](https://github.com/1EdTech/lti-1-3-php-library) (atribución a Turnitin) ·
+[gnowledge/OpenAssessmentsClient](https://github.com/gnowledge/OpenAssessmentsClient) ·
+[OS4ED/openSIS-Classic](https://github.com/OS4ED/openSIS-Classic). **404 confirmados:** `UOC/java-lti-1.3-provider`,
+`LongsightGroup/qti3-core`.
+
+**Barrido de mercado.** MarketsandMarkets (North America AI in education) · Technavio · azumo (compilación de estadísticas) ·
+[Consejo de Europa — 2.ª conferencia de trabajo sobre regulación de AI en educación](https://coe.int/web/education) ·
+QS (2026 Europe EdTech 200+) · [itnews.asia — AI sovereignty in Asia Pacific 2026](https://www.itnews.asia/news/ai-sovereignty-will-set-the-pace-for-asia-pacific-in-2026-623233) ·
+[UNU/UNESCO — AI implementation in higher education in LAC](https://unu.edu/publication/ai-implementation-higher-education-latin-america-and-caribbean) ·
+[BID/IADB — An Enabling Regulatory Framework for AI in LAC](https://publications.iadb.org/publications/english/document/An-Enabling-Regulatory-Framework-for-Artificial-Intelligence-in-Latin-America-and-the-Caribbean.pdf).
+
 
 ### Verificación del pase 23 (2026-10-01)
 
@@ -2256,6 +2473,57 @@ Barrido regional del pase 21 (🔴 **ninguna fuente abierta de primera mano; tod
 [UNU/UNESCO — AI en educación superior en LAC](https://unu.edu/publication/ai-implementation-higher-education-latin-america-and-caribbean) ·
 [BID — marco regulatorio habilitante para AI en LAC](https://publications.iadb.org/publications/english/document/An-Enabling-Regulatory-Framework-for-Artificial-Intelligence-in-Latin-America-and-the-Caribbean.pdf) ·
 [Barchart — adopción de AI en LATAM, expectativas 2026](https://www.barchart.com/story/news/36012717/industry-demand-is-driving-ai-adoption-from-the-ground-up-in-latin-america-heres-what-to-expect-in-2026)
+
+## Nota de método del pase 24 (2026-10-01) — el pase que dejó de leer código y lo ejecutó, y por eso pudo corregir al pase anterior
+
+**Los pases 21, 22 y 23 leyeron `lrsql`. Este lo corrió.** Es la primera vez en veinticuatro pasadas que esta KB levanta
+un motor de base de datos, crea el esquema con el DDL del proyecto y mide lo que devuelve un driver. **Y el resultado
+invirtió una conclusión que la KB había escrito con confianza**: el pase 23 dedujo, de la forma del SQL, que el desglose
+por tabla era inalcanzable sin partir las consultas; la medición muestra que los siete conteos ya vuelven por el bucle
+estándar de JDBC. **La lectura del código era correcta y la inferencia sobre el driver no**, y sólo ejecutar podía
+distinguir una cosa de la otra.
+
+**La regla de método que deja, y vale más que el hallazgo:** cuando una conclusión de esta KB dependa del
+**comportamiento de una pieza de terceros** —un driver, un runtime, un planificador— y no del código que se está
+leyendo, **la inferencia no alcanza y hay que marcarla como pendiente de ejecución.** El pase 23 hizo lo correcto al
+declarar explícitamente *«lo que NO se verificó ejecutando»* y dejar la acción escrita; sin esa declaración este pase
+no habría sabido qué medir. **La cadena funcionó: declarar la ignorancia con precisión es lo que la vuelve resoluble.**
+
+### Lo que trajo el barrido obligatorio, y es la sexta pasada seca para la tabla de agentes
+
+Se corrieron las cuatro búsquedas globales y las cuatro regionales con el año **calculado** (2026). **Cero agentes nuevos
+por sexta vez consecutiva.** Lo global devolvió, otra vez, la capa genérica (openclaw 385k ★, AutoGen, browser-use,
+Mem0) y **material didáctico sobre AI** (`ai-engineering-from-scratch`, `free-ai-agents-resources`) — confirmando la
+medición del pase 23: en GitHub el término `education` está capturado por *cursos sobre AI*, no por *software que educa*.
+
+**Pero la consigna del pase 23 sí rindió, y rindió donde dijo que iba a rendir.** La instrucción era **evitar la palabra
+`education`** y buscar por el **artefacto del dominio** o por el **estándar instalado**. Las cuatro búsquedas de
+artefacto/estándar (`gradebook`+OneRoster+LTI, QTI 3 *item bank*, IEP, SIS/matrícula/asistencia/legajo) trajeron **seis
+repos verificados de primera mano, cinco nuevos para esta KB**, y el hallazgo de encuadre del pase: **la capa LTI de esta
+KB era íntegramente PHP, y existe una familia Java/Spring completa** publicada por una universidad europea. Ver
+`repos/trending.md` y la sección nueva de `agents/top.md`.
+
+**La consigna para el pase 25, y es una continuación, no un cambio de eje:** el eje artefacto/estándar **no está agotado**
+— rindió en su primer uso. Quedan sin barrer los artefactos **`item bank`/banco de ítems**, **`proctoring`**,
+**`timetable`/horario** y **`competency framework`/CASE**, y los estándares **Caliper**, **CASE** y **xAPI Profiles**.
+Y queda una pregunta de método abierta: las dos únicas piezas *platform-side* (lado LMS) que vio esta KB aparecieron en
+este pase y **una no declara licencia**; conviene buscar explícitamente `LTI platform`, porque toda la capa registrada
+hasta ahora es *tool-side* y eso sesga lo que se puede proponer.
+
+### La acción que este pase deja escrita
+
+Dos, y las dos son chicas y de primera mano:
+
+1. **Medir qué devuelve `next.jdbc` con `:result :affected`** sobre una consulta multi-sentencia, que es el único eslabón
+   de la cadena del gap 36 que sigue inferido. **Este pase no pudo:** `repo.clojars.org` responde **403** por el proxy de
+   egreso, así que no se pudo resolver `next.jdbc` ni `hugsql-adapter-next-jdbc`. Se puede hacer con el jar bajado por
+   fuera o con `clojure-tools` oficial instalado. **Lo que hay que mirar** es si `execute!` llama `getMoreResults()`: si
+   no lo llama —y la medición del driver sugiere que no, porque lrsql ve un solo número— el parche del gap 36 vive en el
+   adaptador o en el interceptor, y no en lrsql.
+2. **Enumerar las consultas multi-sentencia de lrsql** para dimensionar el *blast radius* del gap 38. Este pase lo
+   intentó y **el clasificador de seguridad del entorno bloqueó el recorrido masivo del árbol clonado** — el mismo límite
+   que frenó al pase 22. Con el árbol a mano fuera de este entorno es una tarde.
+
 
 ## Nota de método del pase 22 (2026-10-01) — el pase que midió su propio agotamiento, y encontró el hallazgo en la búsqueda que no era sobre agentes
 

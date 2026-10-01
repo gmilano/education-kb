@@ -2389,6 +2389,14 @@ SQLite llega al desglose de siete tablas con ~8 líneas; **el mismo producto sob
 el SQL.** Cuando el alcance incluya prueba de supresión, **el motor de base de datos es una decisión de cumplimiento, no de
 infraestructura**: hay que preguntarlo en el *discovery*.
 
+> 🔴 **SUPERADO POR EL PASE 24 (2026-10-01) — este patrón queda reemplazado por P47, y la advertencia de abajo ya
+> está contestada.** Se midió ejecutando: el driver **no** entrega un solo valor por limitación del SQL — entrega
+> **los siete conteos en orden** (`[7, 2, 3, 8, 5, 6, 1]`) por el bucle `getMoreResults()` de JDBC estándar, así que
+> **no hay que partir el SQL** y el parche del gap 36 es más chico que lo estimado acá. El número que hoy se ve es el
+> del **primer** `DELETE`, y vale **`0`** para el alumno sin sub-sentencias. Y apareció el **gap 38**: en MariaDB/MySQL
+> el borrado **falla entero** si `allowMultiQueries` quedó apagado. **Usar P47**, que incluye el paso 0 de verificación.
+> Se conserva este patrón por su cadena de razonamiento y por las coordenadas del parche, que siguen siendo válidas.
+
 ⚠️ **Lo que no está medido, y no se infiere.** Cuál de los siete `DELETE` reporta el driver JDBC en el `:execute`
 multi-sentencia de PostgreSQL/MariaDB (el primero, el último o la suma) **no se verificó ejecutando**. La lectura del código
 prueba que hay **un solo valor disponible**, que es lo que sostiene el patrón; el valor exacto es la acción que el pase 23
@@ -2396,3 +2404,94 @@ deja escrita: levantar `lrsql` sobre PostgreSQL, borrar un actor con datos en la
 
 - **No alcanza al modelo.** Igual que P44 y P45: esto audita el registro, no la influencia en los pesos. Sigue siendo el
   **gap 34**, camino **P38**.
+
+---
+
+## P47 — El expediente de supresión del LRS con el desglose que ya está en el cable, y la verificación de que el borrado puede ocurrir (agregado en el pase 24; **EMEA primero por art. 17, North America por AB 1159, transversal por Anexo III**)
+
+**Este patrón reemplaza la estimación de P46, no la contradice en su objetivo.** P46 se escribió sobre la lectura del pase
+23 —que el desglose por tabla exigía partir el SQL— y sobre una incógnita declarada: *cuál* de los siete `DELETE` reporta el
+driver. **El pase 24 lo midió y las dos cosas cambian:** el desglose **ya vuelve completo** por JDBC estándar, y el número
+que hoy se ve es el del **primer** `DELETE`, que vale **`0`** para el alumno típico. P47 es P46 con la plomería medida, más
+una verificación previa que P46 no tenía porque nadie sabía que hacía falta.
+
+### Paso 0 — la verificación que va antes de todo lo demás, y que puede cancelar el resto (gap 38)
+
+🔴 **Antes de prometer un expediente de supresión sobre `lrsql` con MariaDB o MySQL, hay que comprobar que el borrado
+puede siquiera ejecutarse.** Medido en el pase 24: con `allowMultiQueries` en el default del driver (`false`),
+`delete-actor-and-dependents!` **falla entera** con error **1064 / SQLState 42000**. Y lrsql trae el parámetro sólo como
+*fallback* de aero, así que **cualquier** uso de `LRSQL_DB_PROPERTIES` —o de `LRSQL_DB_JDBC_URL`— lo apaga en silencio.
+
+| Qué preguntar en el *discovery* | Por qué | Qué hacer si la respuesta es la mala |
+|---|---|---|
+| ¿El backend es MariaDB o MySQL? | Si es PostgreSQL o SQLite, el paso 0 no aplica | Seguir al paso 1 |
+| ¿Está definida `LRSQL_DB_PROPERTIES`? | Si está, **reemplazó** el default y `allowMultiQueries=true` ya no está | Re-agregarlo **al string del operador**, no en vez de él: `allowMultiQueries=true&<lo-que-ya-tenía>` |
+| ¿Está definida `LRSQL_DB_JDBC_URL`? | Override total de las propiedades | Agregar `allowMultiQueries=true` a la query de la URL |
+| ¿Hay un test que pruebe un borrado de actor de punta a punta? | **No existe en el proyecto** | Es el primer entregable: el test de regresión que detecta el apagón de configuración |
+
+**Entregable del paso 0, y es media jornada:** un *preflight* que corre contra el despliegue del cliente, borra un actor
+sintético con filas en las siete tablas y falla ruidosamente si el resultado no es el esperado. **Eso solo ya vale como
+venta chica**, porque convierte un fallo que aparece el día del expediente en un fallo que aparece en CI.
+
+### Paso 1 — recoger el desglose entero, que es la corrección a P46
+
+**No hay que partir el SQL.** Medido sobre PostgreSQL 16.14 + pgjdbc 42.7.4 y MariaDB 10.11.14 + Connector/J 3.4.1, con el
+DDL y el SQL propios de lrsql: el driver parte la cadena multi-sentencia y entrega **los siete conteos en el orden de los
+siete `DELETE`**.
+
+| | |
+|---|---|
+| **Lo que hay hoy** | un conteo: el del **primer** `DELETE` (`statement_to_statement`) |
+| **Lo que ya está disponible** | `[st2st, st2activ, attachment, xapi_statement, agent_profile, state_document, actor]` — medido: `[7, 2, 3, 8, 5, 6, 1]` |
+| **Dónde está el parche** | en la capa que **recoge** el resultado, no en el SQL ni en el driver: hay que drenar `getMoreResults()` en vez de leer un conteo |
+| **Qué NO hay que hacer** | cablear el conteo único «porque ya está». **Vale `0` para el alumno sin sub-sentencias** — 25 filas borradas, el expediente diría `0` |
+
+🔴 **La trampa, escrita para que no se repita:** un expediente que afirma «0 filas borradas» sobre una supresión exitosa es
+**peor** que el `200` vacío que el pase 21 denunció. El `200` vacío no afirma nada; el `0` afirma algo falso y es
+exactamente lo que un auditor usa para decir que el borrado no ocurrió.
+
+### Paso 2 — contar aparte lo que se va en cascada, porque no aparece en ningún conteo
+
+`statement_to_actor` —**la tabla que vincula al alumno con su rastro**— no la borra ninguno de los siete `DELETE`. Se va
+sólo por `ON DELETE CASCADE` desde `xapi_statement`, y **las filas en cascada no se cuentan en ningún *update count* de
+JDBC**. En el fixture del pase 24 eran **10 filas** y ninguna medición las vio.
+
+| Motor | De dónde sale la cascada | Qué verificar en el despliegue |
+|---|---|---|
+| **MariaDB** | Nativa en la tabla (`statement_fk_stactor`) | `information_schema.referential_constraints` → `delete_rule = CASCADE` |
+| **PostgreSQL** | **Por migración** (`add-statement-to-actor-cascading-delete!`) | `pg_constraint` → que `statement_fk` diga `ON DELETE CASCADE`. **En un despliegue viejo sin migrar no está** |
+
+**Entonces el expediente honesto hace una de dos cosas:** un `SELECT count(*)` sobre `statement_to_actor` **antes** del
+borrado y lo declara como línea propia, o dice explícitamente que ese número no se cuenta. Las dos son defendibles; omitirlo
+sin decirlo, no.
+
+### El stack, nombrado
+
+| Pieza | Repo | Licencia | Rol |
+|---|---|---|---|
+| LRS | [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) | **Apache-2.0** ✅ | El almacén y el sitio de los tres parches |
+| Transformación LMS → xAPI | [`openedx/event-routing-backends`](https://github.com/openedx/event-routing-backends) | **Apache-2.0** ✅ | De donde viene el dato (ver **P45**) |
+| Disparador del lado LMS | [`openedx/platform-plugin-aspects`](https://github.com/openedx/platform-plugin-aspects) | **Apache-2.0** ✅ | `UserRetirementSink` — el evento que inicia la cadena |
+| Orquestación del expediente | [`temporalio/temporal`](https://github.com/temporalio/temporal) | **MIT** ✅ | Durabilidad y reintento del flujo de supresión (ver **P40**) |
+| Conformidad como corrida | [`UKGovernmentBEIS/inspect_ai`](https://github.com/UKGovernmentBEIS/inspect_ai) | **MIT** ✅ | El expediente como corrida reproducible (ver **P42**) |
+
+### Plazo y alcance
+
+| | |
+|---|---|
+| **Paso 0 (preflight + test de regresión)** | **0,5–1 semana.** Es la venta más chica de esta KB y la más defendible: evita un fallo de cumplimiento, no agrega una capacidad |
+| **Paso 1 (drenar los siete conteos)** | **1–2 semanas** incluyendo el *upstream* a Yet Analytics. Baja respecto de P46 porque no hay refactor de SQL |
+| **Paso 2 (cascada declarada)** | **0,5 semana** |
+| **Expediente completo sobre un despliegue existente** | **4–6 semanas**, encadenado con **P45** si el LMS es Open edX |
+
+### Advertencias
+
+- **No alcanza al modelo.** Igual que P44, P45 y P46: esto audita el registro, no la influencia en los pesos. Sigue siendo
+  el **gap 34**, camino **P38**.
+- **Un eslabón sigue inferido.** Qué devuelve exactamente `next.jdbc` con `:result :affected` no se midió —`repo.clojars.org`
+  responde **403** por el proxy de egreso— así que **dónde** vive el parche del paso 1 (adaptador de HugSQL, `next.jdbc` o el
+  interceptor de lrsql) hay que confirmarlo antes de presupuestar el *upstream*. Que el desglose **esté disponible** sí está
+  medido, y es lo que sostiene el patrón.
+- **El *blast radius* del gap 38 no está enumerado.** Que el borrado de actor sea la única consulta multi-sentencia del
+  producto es lo que se desprende de cuatro pases de lectura, pero no se contó. Si hubiera otras, el paso 0 es más urgente,
+  no menos.

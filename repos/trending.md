@@ -8,6 +8,73 @@ updated: 2026-10-01
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 
+## 2026-10-01 (pase 24) — la consigna del pase 23 rindió en su primer uso: buscar por el estándar instalado destapó que la capa LTI de esta KB era íntegramente PHP, y existe una familia Java/Spring de una universidad europea
+
+**Seis repos verificados de primera mano, cinco nuevos para esta KB.** Ninguno es un agente —la tabla de `agents/top.md`
+sigue en 37 filas y van seis pases sin altas— pero todos son **infraestructura de interoperabilidad**, que es la capa por
+la que un agente entra al LMS del cliente.
+
+### Los nuevos, verificados uno por uno
+
+| Repo | Licencia | ★ | Forks | Lenguaje | Qué es | Región |
+|---|---|---|---|---|---|---|
+| https://github.com/UOC/java-lti-1.3 | **MIT** ✅ | 21 | 14 | Java | Librería **LTI Advantage** completa del lado *tool*, v**1.0.0**. **La pieza con más estrellas de la familia** | EMEA (Universitat Oberta de Catalunya, Barcelona) |
+| https://github.com/UOC/spring-boot-lti-advantage | **MIT** ✅ | 16 | 17 | Java | LTI Advantage para **Spring Boot**: configura Spring Security para validar los *launches*, y trae implementaciones `RestTemplate` de **AGS** (Line Item, Result, Score), **NRPS** y *Deep Linking* por el manejo del *launch* OIDC. Lado *tool* | EMEA (UOC) |
+| https://github.com/UOC/java-lti-1.3-platform | ⚠️ **sin licencia declarada** | 0 | 1 | Java | *«Library that will implement a full LTI Advantage platform»* — **lado *platform*, o sea el lado del LMS**. El tiempo futuro del README es el dato: es intención, no producto | EMEA (UOC) |
+| https://github.com/packbackbooks/lti-1-3-php-library | **Apache-2.0** ✅ | 53 | 25 | PHP | *Tool provider* LTI 1.3 certificable, **1.038 commits**, mantenida por Packback | North America (Packback, Chicago) |
+| https://github.com/gnowledge/OpenAssessmentsClient | **Apache-2.0** ✅ | 0 | 3 | JavaScript (React) | Cliente **QTI 1.x y 2.x**: intérprete de ítems y varios tipos de pregunta. **No es QTI 3** | APAC (gnowledge) |
+| https://github.com/OS4ED/openSIS-Classic | **GPL** ⚠️ (en `docs/License.txt`) | 344 | 286 | PHP | SIS completo de K-12 y superior: legajo de alumno y de personal, *course manager*, horarios, **asistencia, notas, gradebook docente y legajos/transcripts** | North America (OS4ED) |
+
+### 🔴 El hallazgo de encuadre: toda la capa LTI de esta KB era PHP, y eso sesgaba lo que se podía proponer
+
+Hasta este pase, la única vía de entrada a un LMS que registraba esta KB era `1EdTech/lti-1-3-php-library` (Apache-2.0,
+124 ★) — y está en **cinco** archivos, incluidos **P20, P21** y la fila *«LTI 1.3 como vía de entrada»* de
+`verticals/solutions.md`. **El problema no era la pieza: era que la KB no sabía que había alternativa de stack.** Un
+cliente con plataforma Java/Spring —que en educación superior europea es la norma, no la excepción— recibía una
+propuesta que le metía PHP en el diagrama por una razón que no era técnica sino de cobertura de esta KB.
+
+**Ahora hay familia Java completa y permisiva (MIT), de una universidad pública catalana,** con 14 repos LTI en la
+organización. Los dos que importan están arriba; los otros que vale nombrar son `java-lti-1.3-core` (4 ★),
+`java-lti-1.3-jwt` (firma), `spring-boot-lti-advantage-jkws` (JKWS) y, fuera de Java, `django-uocLTI` e `ims_lti_py`
+para stacks Python. **Las estrellas acá miden poco** —21 y 16— pero es código de una institución que lo usa en
+producción para su propio campus, que es el mismo criterio por el que el pase 22 aceptó `tutor-contrib-aspects` con 14.
+
+### ⚠️ Corrección de procedencia, y evita escribirla mal en una propuesta
+
+Al ver `packbackbooks/lti-1-3-php-library` la hipótesis natural era que la librería de 1EdTech fuera una donación de
+Packback, y que la fila de esta KB estuviera apuntando al *fork* en vez del *upstream*. **Se verificó y es falso.** El
+README de `1EdTech/lti-1-3-php-library` dice textualmente:
+
+> *«This library was initially created by @MartinLenord from **Turnitin** to help prove out the LTI 1.3 specification and
+> accelerate tool development.»*
+
+**Son dos librerías PHP de LTI 1.3 independientes, las dos Apache-2.0**: la de 1EdTech (origen Turnitin, 124 ★) y la de
+Packback (53 ★, 1.038 commits). La fila de esta KB está bien apuntada; lo que faltaba era saber que existe una segunda,
+que importa cuando la primera no cubre un caso o cuando hay que elegir dónde abrir un *issue*.
+
+### El dato de `openSIS` que confirma el diagnóstico del pase 2 con números propios
+
+El pase 2 concluyó que *«todo el SIS open source es PHP y copyleft»* y el pase 23 reforzó el hueco al mostrar que el ERP
+permisivo de 12k ★ (AureusERP, MIT) **no tiene módulo educativo**. `openSIS-Classic` lo cierra con la medición que
+faltaba: **344 ★ y 286 forks, PHP, GPL** — es **el SIS open source más traccionado que vio esta KB**, y es copyleft.
+Al lado, el único permisivo del segmento sigue siendo **GegoK12 (MIT, 54 ★)**. **La asimetría es de un orden de
+magnitud y no es un descuido de búsqueda: es la forma del mercado.**
+
+### Los no-hallazgos, declarados en vez de omitidos
+
+Las dos URL que las búsquedas sugerían y **no existen** — verificado, **404**, no es un 403 de proxy:
+
+| URL que la búsqueda insinuaba | Resultado | Por qué queda escrito |
+|---|---|---|
+| `github.com/UOC/java-lti-1.3-provider` | **404** | El repo real es `java-lti-1.3-provider-example` (MIT, 8 ★, 12 forks, Java). El nombre sin `-example` no existe |
+| `github.com/LongsightGroup/qti3-core` | **404** | Los resultados hablaban de los paquetes npm `@longsightgroup/qti3-core` y `qti3-player` y de un «QFlow»; **el repo GitHub con ese nombre no existe.** Si el código está publicado, no está ahí, y para esta KB **QTI 3 sigue siendo `amp-up-io/qti3-item-player`**, que además es el único artefacto certificado por 1EdTech de toda la base |
+
+**Y la confirmación de precisión, que ya es costumbre:** `LongsightGroup/oneroster` apareció otra vez en el barrido
+presentado como novedad (*«0.3.0 agrega REST y CSV»*). **Esta KB lo tiene desde el pase 9 con 0 ★ y 33 commits**, y con
+el dato que la fuente no da: que **0 ★ significa referencia de integración, no dependencia de producción.** Tercer pase
+consecutivo en que la KB está más precisa que la web sobre un repo que la web presenta como nuevo.
+
+
 ## 2026-10-01 (pase 23) — el módulo educativo de ERPNext existe, es una app aparte y tiene 657 ★: la pregunta que el pase 21 dejó abierta queda cerrada con el repo en la mano
 
 **Un repo nuevo verificado, y una no-novedad que vale escribir porque llegó por la misma búsqueda.**

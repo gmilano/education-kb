@@ -285,6 +285,47 @@ y se buscó por la misma razón: el estándar existe desde hace años y la KB no
 | https://github.com/KonstantinosPetrakis/esco-skill-extractor | **MIT** ✅ | 32 | 29 | Texto libre → competencias **ESCO** y ocupaciones **ISCO** con sentence transformers. El puente entre «terminó el módulo» y «acredita la competencia» |
 | https://github.com/1EdTech/openbadges-specification | ⚠️ no declarada | 205 | 2.266 | La **especificación** (OB 3.0 / 2.1 / 2.0 + **CLR 2.0**), no código. Es el documento normativo al que hay que programar |
 
+### La vía de entrada al LMS deja de ser sólo PHP — agregado en el pase 24 del 2026-10-01
+
+Hasta el pase 23 esta KB tenía **una sola** pieza de entrada LTI, y era PHP (`1EdTech/lti-1-3-php-library`). Eso aparecía
+en **P20**, **P21** y en `verticals/solutions.md`, así que un cliente con plataforma Java/Spring recibía PHP en el diagrama
+por una limitación de cobertura de esta base, no por una razón técnica. **Verificado de primera mano en este pase:**
+
+| Repo | Licencia | ★ | Forks | Qué es | Lado |
+|---|---|---|---|---|---|
+| https://github.com/UOC/java-lti-1.3 | **MIT** ✅ | 21 | 14 | Librería **LTI Advantage** completa en Java, v**1.0.0**. La de más tracción de la familia | *tool* |
+| https://github.com/UOC/spring-boot-lti-advantage | **MIT** ✅ | 16 | 17 | LTI Advantage para **Spring Boot**: Spring Security valida los *launches*; trae `RestTemplate` para **AGS** (Line Item, Result, Score), **NRPS** y *Deep Linking* | *tool* |
+| https://github.com/UOC/java-lti-1.3-platform | ⚠️ **sin licencia declarada** | 0 | 1 | *«Library that **will** implement a full LTI Advantage platform»* — **lado LMS**. El tiempo futuro del README es el dato | *platform* |
+| https://github.com/packbackbooks/lti-1-3-php-library | **Apache-2.0** ✅ | 53 | 25 | Segundo *tool provider* LTI 1.3 en PHP, **1.038 commits**. **Independiente** del de 1EdTech | *tool* |
+| https://github.com/gnowledge/OpenAssessmentsClient | **Apache-2.0** ✅ | 0 | 3 | Cliente **QTI 1.x/2.x** en React. **No es QTI 3** — para QTI 3 sigue siendo `amp-up-io/qti3-item-player` | — |
+
+**Las tres piezas Java son de la Universitat Oberta de Catalunya** (Barcelona, EMEA), que publica 14 repos LTI; los otros
+que vale nombrar son `java-lti-1.3-core` (4 ★), `java-lti-1.3-jwt` (firma), `spring-boot-lti-advantage-jkws`, y para
+stacks Python `django-uocLTI` e `ims_lti_py`. **Las estrellas miden poco acá** (21 y 16): es código que una universidad
+pública usa en su propio campus, el mismo criterio por el que el pase 22 aceptó `tutor-contrib-aspects` con 14 ★.
+
+🔴 **El asterisco que hay que leer antes de prometer el lado LMS.** De los 14 repos, **13 son *tool-side*** —construyen la
+herramienta que entra al LMS— y **el único *platform-side* no declara licencia y dice que «implementará»**. Toda la
+capacidad LTI que registró esta KB en nueve pases es del lado herramienta. **Si un engagement pide el lado plataforma
+—ser el LMS, no entrar en él— esta KB no tiene con qué, y hay que decirlo en el *discovery*.**
+
+⚠️ **Corrección de procedencia.** La hipótesis razonable era que la librería de 1EdTech fuera una donación de Packback y
+que esta KB estuviera apuntando a un *fork*. **Es falso:** el README de 1EdTech dice que *«This library was initially
+created by @MartinLenord from **Turnitin**»*. Son **dos** librerías PHP independientes, las dos Apache-2.0. La fila de
+esta KB está bien apuntada.
+
+### El SIS copyleft que confirma el diagnóstico del pase 2 con números propios — agregado en el pase 24
+
+| Repo | Licencia | ★ | Forks | Qué es |
+|---|---|---|---|---|
+| https://github.com/OS4ED/openSIS-Classic | **GPL** ⚠️ (en `docs/License.txt`) | 344 | 286 | SIS de K-12 y superior: legajo de alumno y de personal, *course manager*, horarios, **asistencia, notas, gradebook docente y transcripts** |
+
+El pase 2 concluyó que *«todo el SIS open source es PHP y copyleft»*; el pase 23 mostró que el ERP permisivo de 12k ★
+(**AureusERP**, MIT) **no tiene módulo educativo**. `openSIS-Classic` pone el número que faltaba: **es el SIS open source
+más traccionado que vio esta KB y es copyleft.** El único permisivo del segmento sigue siendo **GegoK12 (MIT, 54 ★)**.
+**La asimetría es de un orden de magnitud: no es un descuido de búsqueda, es la forma del mercado.**
+
+
 ### Lo maduro, lo copyleft y lo archivado
 
 | Repo | Licencia | Stars | Commits | Nota |

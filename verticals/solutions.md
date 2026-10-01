@@ -81,7 +81,7 @@ en una auditoría. Ver la tendencia **48** y el patrón **P39**.
 
 | LRS | Licencia | ★ | ¿Borra? | Granularidad | Lo que hay que configurar o saber |
 |---|---|---|---|---|---|
-| **SQL LRS (`lrsql`)** | **Apache-2.0** ✅ | 144 | ✅ **Sí — el mejor de la capa** | **por `actor-ifi`** (el alumno), cascada sobre 7 tablas, transaccional | ⚠️ **viene apagado**: `LRSQL_ENABLE_ADMIN_DELETE_ACTOR=true`. No devuelve conteo ni deja auditoría (**gap 36**) |
+| **SQL LRS (`lrsql`)** | **Apache-2.0** ✅ | 144 | ✅ **Sí — el mejor de la capa** | **por `actor-ifi`** (el alumno), cascada sobre 7 tablas, transaccional | ⚠️ **viene apagado**: `LRSQL_ENABLE_ADMIN_DELETE_ACTOR=true`. El conteo que devuelve es el del **primer** `DELETE` y vale **`0`** para el alumno típico (**gap 36**, medido en el pase 24). 🔴 **En MariaDB/MySQL el borrado FALLA ENTERO** si una variable de entorno apagó `allowMultiQueries` (**gap 38**) |
 | **Ralph** | **MIT** ✅ | 51 | ⚠️ **No en la API del LRS** | **por ID de statement**, vía *data backend* — hay que consultar primero | 🔴 **con backend ClickHouse es imposible**: declara `DELETE` como no soportado. Con Mongo o Elasticsearch, sí |
 | **Learning Locker** | **GPL-3.0** ⚠️ | 585 | ✅ **Sí**, confirmado por código | **por filtro** de statements | ⚠️ código **congelado desde el 2021-11-16**; flag `ENABLE_STATEMENT_DELETION`; ventana UTC; **`done:true` no significa borrado** |
 
@@ -212,7 +212,7 @@ Un LMS gestiona el aprendizaje y un SIS gestiona la institución; **un LRS guard
 
 | Plataforma | Licencia | URL | Stack | Cuándo proponerla |
 |------------|----------|-----|-------|-------------------|
-| **SQL LRS (`lrsql`)** | **Apache-2.0** ✅ | https://github.com/yetanalytics/lrsql | Clojure sobre SQLite / PostgreSQL 14–18 / MariaDB / MySQL 8–9.5 | **El default.** Corre sobre la base de datos que el cliente ya opera, así que no agrega una pieza de infraestructura nueva al diagrama |
+| **SQL LRS (`lrsql`)** | **Apache-2.0** ✅ | https://github.com/yetanalytics/lrsql | Clojure sobre SQLite / PostgreSQL 14–18 / MariaDB / MySQL 8–9.5 | **El default para almacenar.** Corre sobre la base de datos que el cliente ya opera, así que no agrega una pieza nueva al diagrama. ⚠️ **Pero esa portabilidad no se extiende al cumplimiento:** ver la advertencia de abajo — en MariaDB/MySQL la supresión del alumno depende de un parámetro de driver (**gap 38**, pase 24) |
 | **Ralph** | **MIT** ✅ | https://github.com/openfun/ralph | Python/FastAPI + Elasticsearch, Docker/K8s | Cuando el cliente está sobre **Open edX**: convierte los tracking logs a xAPI de fábrica. Mismo origen (OpenFun, Francia) que Richie |
 | **Learning Locker** | GPL-3.0 ⚠️ | https://github.com/LearningLocker/learninglocker | Node.js + MongoDB | Rara vez por elección propia — pero es el más instalado de la categoría, así que es el que uno **se encuentra**. Copyleft: el servicio que lo modifique hereda la obligación |
 | **ADL_LRS** | Apache-2.0 ✅ | https://github.com/adlnet/ADL_LRS | Python/Django | Sólo para **validar conformidad** con el estándar. El repo declara ser proof-of-concept para pocos usuarios: no proponerlo como almacén de producción |
@@ -345,7 +345,29 @@ Es la misma receta que esta KB aplica a Moodle y Open edX, y acá es **obligator
 | **Stack de credenciales DCC** | `digitalcredentials/issuer-coordinator` + `verifier-plus` + `learner-credential-wallet` | **MIT** ✅ (los tres) | Emisión (W3C **VC API**, formato **Open Badges 3.0**), revocación y suspensión, verificación con QR, y billetera móvil del alumno | Es el único tramo **enteramente MIT** de esta capa. La AI no va adentro: va **antes**, decidiendo si corresponde emitir (ver **P19**) |
 | **Emisor OB 3.0 en Python** | https://github.com/luisgf/openbadgeslib | **LGPLv3** / BSD-2-Clause ⚠️ | Ciclo completo de emisor: JWT-VC y Data Integrity, horneado en SVG/PNG, `did:web`, **Bitstring Status Lists** para revocar y suspender. Soporta OB 3.0, 2.0 estricto y 1.0 legacy | Alternativa al `issuer-coordinator` cuando el stack es Python. ⚠️ **LGPL: enlazar sí, modificar y distribuir no** — y los perfiles de badge son justo lo que uno quiere modificar |
 | **LTI 1.3 como vía de entrada** | https://github.com/1EdTech/lti-1-3-php-library | **Apache-2.0** ✅ | Tool provider LTI 1.3: login OIDC, deep linking, envío de notas, lectura del roster | **Es el modo correcto de meter un agente en un LMS que no es nuestro.** Evita el fork de Moodle/Canvas/Open edX por completo: el agente es una herramienta externa conforme |
+| **LTI 1.3 en Java/Spring** | https://github.com/UOC/spring-boot-lti-advantage | **MIT** ✅ | LTI Advantage del lado *tool* para Spring Boot: valida los *launches* con Spring Security, y trae **AGS** (notas), **NRPS** (roster) y *Deep Linking* | **La alternativa cuando el cliente es Java y no PHP** — educación superior europea, típicamente. Agregado en el pase 24; antes esta KB sólo tenía la vía PHP y se la proponía por cobertura, no por criterio técnico. Hermana: `UOC/java-lti-1.3` (MIT, 21 ★) |
 | **OneRoster para matrícula y notas** | https://github.com/LongsightGroup/oneroster | **MIT** ✅ | OneRoster 1.1/1.2 por CSV y REST, Node/Deno/navegador | Sincroniza alumnos, cursos, secciones y notas con el SIS sin integración a medida. 0 ★ — tratarlo como referencia y fijar la versión |
+
+
+### 🔴 Antes de proponer `lrsql` con MariaDB o MySQL — agregado en el pase 24 del 2026-10-01
+
+Esta KB recomienda `lrsql` como default desde el pase 18, con esta razón textual: *«corre sobre la base de datos que el
+cliente ya opera»*. **Sigue siendo cierto para almacenar. Para borrar, en dos de los cuatro motores soportados, hay que
+verificar una cosa antes de prometer nada** — medido en el pase 24 sobre MariaDB 10.11.14 + Connector/J 3.4.1:
+
+| | |
+|---|---|
+| **El síntoma** | Con `allowMultiQueries` en el default del driver (`false`), `delete-actor-and-dependents!` **no se degrada: falla entera**, con error **1064 / SQLState 42000** en el segundo de los siete `DELETE` |
+| **Por qué pasa** | lrsql trae el parámetro, pero como *fallback* de aero: `:db-properties #or [#env LRSQL_DB_PROPERTIES "allowMultiQueries=true"]`. El `#or` **no fusiona** — si el operador define `LRSQL_DB_PROPERTIES` por cualquier motivo, su string **reemplaza** al default y el parámetro desaparece. `LRSQL_DB_JDBC_URL` tiene el mismo efecto |
+| **Por qué nadie lo nota** | El borrado de actor es **la única operación del producto** que manda varias sentencias en un paquete. Ingesta, consultas y documentos siguen funcionando: el despliegue pasa el *health check* |
+| **Cuándo se nota** | **La primera vez que alguien ejerce el derecho al olvido** — o sea con expediente abierto y plazo corriendo |
+| **La documentación juega en contra** | `doc/env_vars.md` la llama *«Optional **additional** DB properties»* con default *«Not set»* — **inexacto en los dos campos** para estos backends. Y `doc/postgres.md` enseña a usar esa misma variable para fijar `currentSchema` |
+
+**Las tres preguntas de *discovery*, y son de cinco minutos:** ¿el backend es MariaDB/MySQL? ¿está definida
+`LRSQL_DB_PROPERTIES`? ¿está definida `LRSQL_DB_JDBC_URL`? Si la primera es sí y alguna de las otras dos también,
+**la supresión del alumno está apagada en ese despliegue y el cliente no lo sabe.** El arreglo es re-agregar
+`allowMultiQueries=true` **al string del operador**, no en lugar de él. Ver el **paso 0 de P47** y la tendencia **62**.
+
 
 ### ⚠️ Lo que no hay que proponer en esta capa
 
