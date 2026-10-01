@@ -310,6 +310,75 @@ propuesta, ese es un argumento de soberanía, no de precio.
 vienen de texto de resultados de búsqueda concordantes entre sí, **no de leer la fuente**. Es el dato más accionable del
 pase y el peor verificado: **confirmarlo en el anuncio oficial de Instructure antes de llevarlo a un cliente.**
 
+## 22. La licencia del contenido no es la licencia del código, y en educación abierta casi nunca coinciden (agregado 2026-10-01, pase 10)
+
+Nueve pasadas de esta KB leyeron la licencia **del software**. El contenido curricular tiene **su propia licencia**, y es la
+que decide si un entregable se puede facturar. Verificado en este pase contra el archivo `LICENSE`:
+
+| Artefacto | Licencia declarada | Nivel de la página |
+|---|---|---|
+| `openstax/osbooks-calculus-bundle` | **CC BY-NC-SA** | `LICENSE` |
+| `openstax/osbooks-biology-bundle` | **CC BY-NC-SA** | `LICENSE` |
+| `openstax/osbooks-college-physics-bundle` | **CC BY-NC-SA** | `LICENSE` |
+| `CAHLR/OATutor` (cura problemas de Calculus Volume 1) | **CC BY 4.0** | README |
+| `pythpythpython/openstax-mcp-server` | **CC BY 4.0** | README |
+
+**Las dos condiciones del lado NC-SA pegan exactamente donde duele:** *NonCommercial* prohíbe el uso en un entregable
+facturado, y *ShareAlike* obliga a licenciar la derivación igual — o sea, a abrir el corpus construido para el cliente.
+
+**Lo que el trend afirma** es que **la fuente secundaria y el README son sistemáticamente menos confiables que el archivo
+`LICENSE`**, y que en la capa de contenido la diferencia cambia la viabilidad comercial del proyecto. **Lo que no afirma** es
+cuál de las dos licencias de OpenStax es la vigente: `openstax.org` está bloqueado por el proxy (gap 17).
+
+**La regla, y es barata:** el README de OATutor dice dónde está la respuesta — la licencia se declara **por ítem**, dentro de
+cada JSON. Se lee el ítem, se guarda el campo junto al dato, y **el manifiesto de licencias es el entregable** (**P22**).
+Corolario: **un corpus mezclado es del color de su ítem más restrictivo**, no del promedio.
+
+**Es la tercera vez que esta KB encuentra el mismo patrón en tres capas distintas:** pase 7, los datasets de knowledge
+tracing son NonCommercial; pase 8, la tecnología asistiva madura es copyleft; pase 10, el contenido es NC-SA y **el metadato
+del catálogo también** (gap 16). **El riesgo de licencia en educación no está en el código: está en todo lo que el código
+necesita para funcionar.**
+
+## 23. Las estrellas de GitHub esconden la infraestructura educativa que está realmente desplegada (agregado 2026-10-01, pase 10)
+
+Hallazgo de método, y es el que más cambia cómo se construye esta KB. Nueve pasadas ordenaron por estrellas. Con ese orden,
+**la plataforma educativa más grande del mundo era invisible**.
+
+| Repo | Stars | Forks | Commits | Forks/Stars |
+|---|---|---|---|---|
+| `Sunbird-Ed/SunbirdEd-portal` (sostiene DIKSHA, 180 M+ alumnos) | **41** | **317** | **38.046** | **7,7×** |
+| `project-sunbird/sunbird-devops` | 62 | **392** | — | **6,3×** |
+| `Sunbird-Ed/SunbirdEd-consumption-ngcomponents` | 3 | 64 | — | **21×** |
+| `DSpace/DSpace` | 1.1k | **1.5k** | **25.385** | 1,4× |
+| `Ed-Fi-Alliance-OSS/Ed-Fi-ODS` | 28 | 47 | 1.053 | 1,7× |
+| `HKUDS/DeepTutor` (comparación) | **40,6k** | — | — | ≪1 |
+
+**La explicación es el modelo de adopción, no la calidad:** en infraestructura pública **el fork es la unidad de
+despliegue**. Cada estado indio forkea Sunbird para levantar su instancia; cada distrito forkea Ed-Fi. La estrella mide
+*atención de desarrolladores*; el fork mide *organizaciones que lo pusieron en producción*. **Son métricas de cosas
+distintas, y para vender a un ministerio importa la segunda.**
+
+**Un proyecto con 38.046 commits y 41 estrellas no está muerto: nadie lo mira y todo el mundo lo usa.**
+
+**La regla operativa para esta KB:** en las capas de **plataforma institucional, estándar e infraestructura pública**,
+ordenar por **forks y commits**, no por estrellas. Es hermana de la regla del pase 6 (*si un gap sobrevive, revisar el
+nombre que no se está usando*) y del criterio del pase 9 (*en credenciales se elige por conformidad certificada, no por
+popularidad*). **Las tres dicen lo mismo: el indicador por defecto de GitHub mide mal lo institucional.**
+
+## 24. Hay una tercera vía para la plataforma de sistema educativo nacional, y es permisiva (agregado 2026-10-01, pase 10)
+
+Hasta este pase, la respuesta de esta KB a «plataforma para un ministerio» era **Moodle** (GPL-3.0) u **Open edX**
+(AGPL-3.0): las dos copyleft, con el agente obligado a vivir afuera o a asumir obligación de apertura. **Sunbird** cambia eso:
+**MIT**, microservicios (contenido, autenticación, rutas de aprendizaje, analítica, notificaciones), app Android con consumo
+**offline**, reconocida **Digital Public Good** por la DPGA, y **38.046 commits** de trabajo acumulado.
+
+**Y en North America el equivalente de la capa de datos ya es permisivo también:** **Ed-Fi** pasó de licencia propietaria a
+**Apache-2.0 en abril de 2020**, y con ese cambio sus repos privados se hicieron públicos.
+
+**La consecuencia para el posicionamiento, que es lo vendible:** el argumento de «open source para soberanía educativa» dejó
+de tener la contradicción de licencia que tenía. Antes había que explicarle a un ministerio que la plataforma abierta que le
+proponíamos lo obligaba a publicar sus modificaciones. **Con Sunbird y Ed-Fi no.** Ver **P23** y **P24**.
+
 ## Gaps declarados
 
 Huecos confirmados tras buscar, no ausencias por no haber buscado. Un gap informado es información; el silencio se parece demasiado a la cobertura.
@@ -595,6 +664,50 @@ Huecos confirmados tras buscar, no ausencias por no haber buscado. Un gap inform
     **La consecuencia de método, que generaliza.** El pase 6 dejó escrito que *el proxy de egreso decide qué se puede afirmar*, y el pase 7 agregó que *también decide qué se puede cerrar*. Este pase agrega la tercera forma: **también decide qué regiones se pueden cubrir bien.** El stack europeo de credenciales es, muy posiblemente, la oferta más relevante del mundo para P19 en EMEA, y es la que esta sesión no puede mirar. Un cliente europeo exige abrir `code.europa.eu` **antes** de cotizar.
 
 
+15. **Ningún puente agente↔contenido curricular tiene tracción, y el único que existe declara mal la licencia de lo que
+    sirve** *(agregado en el pase 10 del 2026-10-01)*. Se buscó explícitamente un servidor MCP o adaptador que le dé a un
+    agente acceso a contenido curricular abierto. Hay **dos**, y los dos son fase cero:
+
+    | Repo | Licencia | Stars | Commits | Problema |
+    |---|---|---|---|---|
+    | `pythpythpython/openstax-mcp-server` | **MIT** (código) ✅ | **1** | 7 | Sirve 40+ libros de OpenStax con búsqueda semántica y generación de notebooks. 🔴 **Declara en su README que el contenido es CC BY 4.0; el `LICENSE` de los bundles de OpenStax en GitHub dice CC BY-NC-SA** (3 de 3 títulos verificados) |
+    | `moarshy/mcp-tutor` | 🚫 **sin licencia** | **0** | 26 | Convierte repositorios de **documentación técnica** en cursos con DSPy. No es currículo escolar. El repo sólo dice: *«This project is experimental and intended for educational and research purposes»* |
+
+    **Es exactamente la misma forma que el pase 6 encontró en telemetría y el pase 9 en credenciales:** la capa existe desde
+    hace años, el estándar existe, y **el puente hacia el agente es un repo de una estrella**. Va tres capas seguidas con el
+    mismo diagnóstico, y eso ya no es casualidad: **el trabajo que falta en educación abierta no es construir capas, es
+    conectarlas.** Para Globant es el hueco más barato de llenar y el más defendible de cobrar — es integración verificable,
+    no investigación.
+
+    **Y hay un segundo hueco adentro del mismo gap:** ninguno de los **26 agentes** de la tabla principal de `agents/top.md`
+    **emite el metadato de licencia del material que genera o deriva**. El agente produce el artefacto sin la pieza que lo
+    hace usable ante un tercero — el mismo patrón que el gap 13 encontró con las credenciales.
+
+16. **La capa de descubrimiento de contenido abierto es NonCommercial a nivel de metadato, así que el catálogo está bloqueado
+    aunque el contenido no lo esté** *(agregado en el pase 10 del 2026-10-01)*. **OER Commons**, de **ISKME**, es la
+    biblioteca de referencia de OER (catálogo buscable K-16). **ISKME comparte el metadato del catálogo con licencia
+    NonCommercial**, por decisión explícita de tratar la educación como bien público.
+
+    **Consecuencia directa:** no se puede construir un recomendador curricular, un buscador ni una capa de *discovery*
+    comercial sobre ese catálogo. Y el catálogo es precisamente lo que uno querría para no curar a mano. **El cuello de
+    botella no es el contenido: es el índice.**
+
+    **Lo que queda como camino, y hay que decirlo en la propuesta:** curar un corpus propio y acotado al dominio del cliente,
+    con manifiesto de licencia por ítem (**P22**), guardado en un repositorio permisivo (`DSpace`, BSD-3-Clause) e ingestado
+    con herramienta permisiva (`LibreTexts/shapeshift`, MIT). Sale más caro que apoyarse en el catálogo abierto, **y es la
+    única variante que se puede facturar.**
+
+17. **La licencia declarada por el editor del contenido no es verificable desde esta sesión, y es la mitad que falta de la
+    contradicción del trend 22** *(agregado en el pase 10 del 2026-10-01)*. No es un gap de oferta: es un **gap de
+    verificación**, y se declara porque afecta a la afirmación más accionable del pase. Están **bloqueados por el proxy de
+    egreso**: `openstax.org` (catálogo con la licencia por título), `openscied.org` (que vende una **licencia comercial**
+    sobre contenido abierto — señal de mercado que valía confirmar) y `support.thenational.academy` (documento de licencia de
+    Oak National Academy, incluida la posible restricción geográfica al Reino Unido).
+
+    **Lo verificado de primera mano es el lado GitHub de cada afirmación** (archivo `LICENSE` de tres bundles de OpenStax,
+    README de OATutor y del servidor MCP). **Lo que falta es el lado del editor.** Antes de llevar a un cliente cualquier
+    afirmación de licencia de contenido de este pase, abrir esos tres dominios y confirmarla en la fuente del editor.
+
 ## Fuentes
 
 Mercado y players: [Grand View Research](https://www.grandviewresearch.com/industry-analysis/artificial-intelligence-ai-education-market-report) · [Research and Markets](https://www.researchandmarkets.com/reports/5896034/ai-in-education-market-report) · [AI Tutors Market](https://www.grandviewresearch.com/industry-analysis/ai-tutors-market-report) · [5WPR EdTech AI Visibility Index 2026](https://www.5wpr.com/research/edtech-ai-visibility-index-2026/) · [Khan Academy / Duolingo agents](https://callsphere.ai/blog/ai-agents-education-khan-academy-duolingo-autonomous-tutoring)
@@ -614,6 +727,12 @@ Capa de datos de entrenamiento (KT datasets) — agregado en el pase 7: [EdNet](
 Tutores y memoria de agente — agregado en el pase 7: [tutor-gpt](https://github.com/plastic-labs/tutor-gpt) · [Honcho](https://github.com/plastic-labs/honcho) · [ChatTutor](https://github.com/HugeCatLab/ChatTutor) · [llamatutor](https://github.com/Nutlope/llamatutor) · [ABench / ProHist-Bench](https://github.com/inclusionAI/ABench) · [ProHist-Bench (arXiv 2604.24690)](https://arxiv.org/abs/2604.24690)
 
 Seguridad pedagógica — agregado en el pase 7: [EduZone (arXiv 2608.02024)](https://arxiv.org/abs/2608.02024) · [AIriskEval-edu (arXiv 2607.01934)](https://arxiv.org/abs/2607.01934) · [L2-Bench (arXiv 2607.08842)](https://arxiv.org/abs/2607.08842) · [L2-Bench (sitio OUP)](https://benchmarks.elt.edu.oup.com/)
+
+Capa de contenido curricular (OER) — agregado en el pase 10: [osbooks-calculus-bundle](https://github.com/openstax/osbooks-calculus-bundle) · [osbooks-biology-bundle](https://github.com/openstax/osbooks-biology-bundle) · [osbooks-college-physics-bundle](https://github.com/openstax/osbooks-college-physics-bundle) · [openstax-mcp-server](https://github.com/pythpythpython/openstax-mcp-server) · [mcp-tutor](https://github.com/moarshy/mcp-tutor) · [DSpace](https://github.com/DSpace/DSpace) · [Pressbooks](https://github.com/pressbooks/pressbooks) · [Manifold](https://github.com/ManifoldScholar/manifold) · [openstax-cms](https://github.com/openstax/openstax-cms) · [LibreTexts/shapeshift](https://github.com/LibreTexts/shapeshift) · [LibreTexts/conductor](https://github.com/LibreTexts/conductor) · [Creative Commons — Using CC-Licensed Works for AI Training](https://creativecommons.org/using-cc-licensed-works-for-ai-training-2/) · [Schools Week — Oak will allow commercial use of its lessons](https://schoolsweek.co.uk/oak-national-academy-will-allow-commercial-use-of-its-lessons/)
+
+Infraestructura pública desplegada — agregado en el pase 10: [SunbirdEd-portal](https://github.com/Sunbird-Ed/SunbirdEd-portal) · [Sunbird-Ed (org)](https://github.com/Sunbird-Ed) · [project-sunbird (org)](https://github.com/project-sunbird) · [Ed-Fi-ODS](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-ODS) · [Ed-Fi-Data-Standard](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-Data-Standard) · [Ed-Fi — what is Ed-Fi](https://www.ed-fi.org/what-is-ed-fi/) · [DPI Global — DIKSHA](https://dpi.global/globaldpi/diksha) · [EkStep — DIKSHA learnings](https://ekstep.org/)
+
+Mercado y política por región — agregado en el pase 10: [Technavio — AI in the education sector](https://technavio.com/report/artificial-intelligence-market-in-the-education-sector-industry-analysis) · [Azumo — AI in education statistics 2026](https://azumo.com/artificial-intelligence/ai-insights/ai-in-education-statistics) · [TechWire Asia — India AI curriculum from Class 3](https://techwireasia.com/2025/11/india-ai-curriculum-schools-2026/) · [TechWire Asia — mandatory AI literacy: China joins UAE and India](https://techwireasia.com/2026/04/ai-literacy-national-education-workforce/) · [ABC News — why some countries are moving fast on AI in schools](https://www.abc.net.au/news/2026-05-31/schools-in-asia-embracing-ai/106703054) · [Council of Europe — AI and education](https://www.coe.int/en/web/education/artificial-intelligence-and-education) · [CompTIA — five tech trends shaping EMEA IT strategy 2026](https://www.comptia.org/en/blog/five-tech-trends-shaping-emeas-it-strategy-in-2026/) · [UNU/UNESCO — AI implementation in higher education in LAC](https://unu.edu/publication/ai-implementation-higher-education-latin-america-and-caribbean) · [BID — An Enabling Regulatory Framework for AI in LAC](https://publications.iadb.org/publications/english/document/An-Enabling-Regulatory-Framework-for-Artificial-Intelligence-in-Latin-America-and-the-Caribbean.pdf)
 
 Regulación y mercado por región — agregado en el pase 7: [MultiState — AI in Education Legislation: 2026 State Policy Trends](https://www.multistate.us/insider/2026/4/9/how-states-are-regulating-ai-in-education-this-legislative-session) · [ExcelinEd — State K-12 AI Policy in 2026](https://excelined.org/2026/05/26/state-k-12-ai-policy-in-2026-milestones/) · [NASBE — States Take Next Steps on Governing AI Use in Schools](https://www.nasbe.org/states-take-next-steps-on-governing-ai-use-in-schools/) · [AASA — National framework for AI from students in all 50 states](https://www.aasa.org/news-media/news/2026/08/03/students-produce-national-framework-for-ai-in-america's-schools) · [Latham & Watkins — AI Regulation in APAC](https://www.lw.com/en/insights/ai-regulation-in-apac-diverging-approaches-across-the-region) · [CX Network — How 9 APAC countries are regulating AI](https://www.cxnetwork.com/artificial-intelligence/articles/ai-regulation-in-apac-current-developments-and-key-areas) · [Ken Research — Asia-Pacific AI in Education Market](https://www.kenresearch.com/industry-reports/asia-pacific-ai-in-education-market) · [UNESCO — Observatory on AI in Education for LAC](https://www.unesco.org/en/articles/unesco-launches-observatory-artificial-intelligence-education-latin-america-and-caribbean) · [UNESCO — Public–private partnership advances the Regional Observatory](https://www.unesco.org/en/articles/public-private-partnership-advances-regional-observatory-artificial-intelligence-education-led) · [EU AI Act — regulatory framework](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai)
 
@@ -659,6 +778,65 @@ Capa de telemetría (LRS / xAPI) — agregado en el pase 6, **todo verificado de
 Evaluación — agregado en el pase 6, 🔴 **no verificado de primera mano** (dominios bloqueados por el proxy): L2-Bench (arXiv 2607.08842) · metodología de L2-Bench (arXiv 2603.20088) · `benchmarks.elt.edu.oup.com` · dataset en HuggingFace bajo `OUP/`
 
 Regulación y mercado por región — agregado en el pase 6: [MultiState — AI in Education Legislation: 2026 State Policy Trends](https://www.multistate.us/insider/2026/4/9/how-states-are-regulating-ai-in-education-this-legislative-session) · [NASBE — States Take Next Steps on Governing AI Use in Schools](https://www.nasbe.org/states-take-next-steps-on-governing-ai-use-in-schools/) · [ExcelinEd — State K-12 AI Policy in 2026](https://excelined.org/2026/05/26/state-k-12-ai-policy-in-2026-milestones/) · [Latham & Watkins — AI Regulation in APAC](https://www.lw.com/en/insights/ai-regulation-in-apac-diverging-approaches-across-the-region) · [Xenoss — APAC AI regulations](https://xenoss.io/blog/asia-pacific-apac-ai-regulations) · [UNESCO — Observatory on AI in Education for LAC](https://www.unesco.org/en/articles/unesco-launches-observatory-artificial-intelligence-education-latin-america-and-caribbean) · [Compliance & Risks — LATAM AI legislation](https://www.complianceandrisks.com/blog/shaping-the-future-ai-legislative-initiatives-across-latin-america/) · [IDB — An Enabling Regulatory Framework for AI in LAC](https://publications.iadb.org/publications/english/document/An-Enabling-Regulatory-Framework-for-Artificial-Intelligence-in-Latin-America-and-the-Caribbean.pdf) · [Azumo — AI in Education Statistics 2026](https://azumo.com/artificial-intelligence/ai-insights/ai-in-education-statistics) · [Grand View Research — AI Tutors Market](https://www.grandviewresearch.com/industry-analysis/ai-tutors-market-report) · [EdTech Hub — AI in Education in MENA](https://docs.edtechhub.org/lib/EPJAMMH9/download/BHXDDPBB)
+
+## Nota de método del pase 10 (2026-10-01) — diez pasadas preguntando qué hace el agente, y la pregunta que faltaba era de qué lee
+
+**Lo que este pase hizo distinto.** Las nueve anteriores buscaron por **capa técnica** (agente, modelado, evaluación,
+telemetría, datos), por **categoría de producto** (tutor, plataforma, benchmark), por **población de alumnos** (pase 8) y por
+**el final del recorrido** (pase 9, la credencial). Ninguna buscó **la entrada**: el material que el agente enseña. La palabra
+**«OER»** no aparecía ni una vez en 549 KB de KB.
+
+Es la **quinta** aplicación de la regla del pase 6 —*cuando un gap sobrevive varias pasadas, revisar si la pieza que falta
+tiene un nombre que uno no está usando*— y el nombre era **Open Educational Resources**. Sigue siendo la regla más productiva
+de esta KB.
+
+**Y este pase agrega una regla propia, que es el otro hallazgo:** *cuando una capa parece vacía, revisar si el indicador con
+el que se la está midiendo sirve para esa capa.* Ordenando por estrellas, **Sunbird —la plataforma que sostiene la educación
+escolar de India, 180 M+ alumnos, MIT— tiene 41 estrellas y era invisible.** Tiene **317 forks y 38.046 commits**. En
+infraestructura pública el **fork es la unidad de despliegue**, no una señal de interés. Ver el **trend 23**.
+
+**Verificado de primera mano** (WebFetch contra la página del repo, y contra el archivo `LICENSE` donde la afirmación es de
+licencia): los tres bundles de contenido de OpenStax (`osbooks-calculus-bundle`, `osbooks-biology-bundle`,
+`osbooks-college-physics-bundle`, **CC BY-NC-SA en los tres**), el README de `CAHLR/OATutor` y el de
+`pythpythpython/openstax-mcp-server` (**CC BY 4.0 en los dos**), `moarshy/mcp-tutor` (sin licencia), los repos de Sunbird
+(`SunbirdEd-portal`, `SunbirdEd-mobile-app`, `SunbirdEd-consumption-ngcomponents`, `sunbird-client-services`,
+`SunbirdEd-forms`, `sunbird-devops`, `sunbird-telemetry-sdk`, `sunbird-lms-mw`), los dos de Ed-Fi (`Ed-Fi-ODS`,
+`Ed-Fi-Data-Standard`, **Apache-2.0**), y la capa de contenido (`DSpace` BSD-3-Clause, `pressbooks` GPL-3.0+,
+`ManifoldScholar/manifold` GPL-3.0, `openstax/openstax-cms` **AGPL-3.0**, y el tooling MIT de LibreTexts: `shapeshift`,
+`conductor`, `davis`, `LibreOne`).
+
+**Lo que NO está verificado, y está marcado donde aparece:**
+
+1. **La licencia que declara el editor del contenido.** `openstax.org`, `openscied.org` y `support.thenational.academy` están
+   **bloqueados por el proxy**. Es la mitad que falta de la contradicción del trend 22, y por eso **la contradicción se
+   registra sin resolver**. Ver el **gap 17**.
+2. **Las cifras de DIKSHA** (180 M+ alumnos, 290.000+ contenidos, 36 idiomas, 4.950 M+ sesiones) vienen de EkStep y DPI
+   Global, fuentes secundarias. Lo verificado es el repo.
+3. **La licencia de Oak National Academy** (OGL v3.0 con uso comercial permitido) viene de prensa educativa británica, no del
+   documento de licencia. Lo mismo la posible **restricción geográfica al Reino Unido**.
+4. **Las cifras de mercado** de este pase (41,7% del crecimiento global en NA, USD 169 M, programa de OpenAI con 8 socios
+   nacionales, £200 M+ del Reino Unido, 38%/94% de EMEA) salen de resultados de búsqueda, no de los informes originales.
+5. `curl -sI` contra `github.com` **sigue devolviendo 403**, y `api.github.com` también **403** — probado otra vez en este
+   pase, igual que en los pases 5 a 9. No hubo forma de confirmar fechas de último commit; se registran **conteos de commits
+   y de forks**, que sí aparecen en la página.
+
+**La lección de método que deja la contradicción de licencia, y extiende la del pase 9.** El pase 9 dejó escrito que
+*«descripción, banner, README y archivo `LICENSE` son cuatro fuentes distintas con cuatro grados de autoridad distintos»*.
+Este pase lo confirma con un caso donde la diferencia **cambia la viabilidad comercial del proyecto**: el README dice CC BY
+4.0 y el `LICENSE` dice CC BY-NC-SA, sobre el mismo contenido. **La regla se endurece: para contenido, el README no es
+fuente.** Y en este caso ni el `LICENSE` del repo alcanza, porque la licencia real está declarada **por ítem** dentro de cada
+JSON — que es lo que hace del manifiesto por ítem un entregable y no una formalidad (**P22**).
+
+**Una tentación que se evitó, y vale registrarla.** Con tres bundles de OpenStax diciendo NC-SA, lo cómodo era escribir
+«OpenStax es NonCommercial y la industria lo viene citando mal». Eso es **una interpretación**: tres títulos no son el
+catálogo, y el catálogo no se pudo abrir. Lo que se afirma es lo que se leyó —**tres de tres bundles revisados dicen
+NC-SA**— y lo que falta se declara como gap.
+
+**Gap regional declarado, también de método.** La búsqueda regional genérica de APAC devolvió **AI empresarial, no
+educativa** (gobernanza de directorios, soberanía de infraestructura). **APAC no tiene cifra de mercado educativo propia en
+esta ventana.** Lo que sí tiene —India con mandato nacional, Singapur con integración controlada en el Student Learning
+Space, Japón en espera evaluativa, China sumándose a la alfabetización obligatoria— apareció buscando **por país**. La regla
+del pase 6 aplicada a la geografía: *si la región no devuelve nada, el nombre que falta puede ser el de un país.*
 
 ## Nota de método del pase 9 (2026-10-01) — nueve pasadas buscando el principio del recorrido, y la capa que faltaba era el final
 

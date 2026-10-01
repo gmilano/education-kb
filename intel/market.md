@@ -209,6 +209,40 @@ absorbió **Badgr** —la implementación de referencia de Open Badges, hoy **40
 Credentials** y después en **Parchment Digital Badges**. Credenciales y AI del mismo incumbente se cerraron en la misma
 ventana. Para una propuesta eso es un argumento de **soberanía**, no de precio. Ver el **trend 19**.
 
+### Agregado en el pase 10 del 2026-10-01 — lo que se confirmó, lo nuevo por región, y una plataforma de 180 millones de alumnos que la KB no tenía
+
+**Primero, lo que este pase confirmó sin cambiarlo, porque la confirmación también es información.** Las cifras globales del
+pase 9 volvieron a aparecer idénticas en búsquedas independientes: **USD 7.520 M (2025) → USD 10.600 M (2026)**, CAGR
+**40,9%**, proyección **USD 79.600 M para 2034** (31,35% en 2026-2034), uso estudiantil **66% (2024) → 92% (2025)** y **86%
+de educación superior** al arrancar 2026. La cifra de **North America** del pase 5 (**$951M 2024 → $2.303,2M 2029**, CAGR
+**15,9%**, 36% del global) también se repitió. **La discrepancia metodológica del pase 5 sigue en pie y sigue sin
+resolverse:** no usar el CAGR de NA junto al global en el mismo gráfico.
+
+**Lo nuevo, por región:**
+
+| Región | Dato nuevo de este pase | Por qué cambia una propuesta |
+|---|---|---|
+| **North America** | **41,7%** del crecimiento global del mercado proyectado para **2026-2030** (Technavio). Compromiso gubernamental de **USD 169 M** a AI responsable en educación superior en **Q1 2026**. **OpenAI lanzó un programa educativo a nivel país con 8 socios nacionales** en Q1 2026 | El dinero público nuevo está etiquetado como **«AI responsable»**, no como «AI». Eso favorece el entregable auditable (P10, P11, P17) sobre el tutor. Y el programa de OpenAI fija el *default* contra el que hay que argumentar soberanía |
+| **EMEA** | **38% de las organizaciones de EMEA todavía no empezaron a pilotear AI**, y **94%** declara que probablemente invierta en formación específica de AI en 2026. **Cumbre de Adopción de AI del Reino Unido: £200 M+** comprometidos, con **Skills England** fijando el marco curricular | El patrón de compra británico es **gobierno financia, big tech entrega, sindicatos legitiman, Skills England define currículo**. Es el mismo patrón ministerio+MoU que la KB registró en África, no el de adquisición institucional |
+| **APAC** | **India**: AI y Pensamiento Computacional **obligatorios desde 3.º grado en el ciclo 2026-27**, currículo a cargo de **IIT Madras**, formación docente dentro del programa **NISHTHA**. **Singapur**: herramientas de AI para 4.º grado **estructuradas, supervisadas por el docente y servidas dentro del Student Learning Space**, no en plataformas abiertas; formación en AI para todos los docentes **para 2026**. **Japón**: el MEXT mantiene postura **neutral** y monitorea pilotos. **China** se sumó a India y Emiratos en **alfabetización AI obligatoria** (abr-2026) | Tres modelos de compra distintos en la misma región: **mandato nacional** (India), **integración controlada en plataforma estatal** (Singapur) y **espera evaluativa** (Japón). Para Singapur el requisito técnico es explícito: el agente tiene que vivir **dentro** del SLS. Ver **P5** |
+| **LATAM** | El estudio **UNESCO IESALC / UNU** se precisa: encuesta regional a **200 instituciones de educación superior de 19 países**, relevada entre **agosto y octubre de 2025**, sobre cinco dimensiones (enseñanza y aprendizaje, investigación, vinculación con el medio, administración y gobernanza). El **BID** publicó un marco regulatorio habilitante para AI en América Latina y el Caribe. En edtech, **Ednova (Chile)** aparece citada como caso de personalización | La contraparte regional ya no es sólo el Observatorio UNESCO del pase 7: hay **instrumento de política del BID** y **línea de base medida en 19 países**. Para un ministerio, eso convierte la propuesta en «implementar el marco», no «explorar la AI» |
+
+🔴 **Gap regional declarado, y es de método.** La búsqueda genérica `AI education APAC 2026 adoption regulation players`
+devuelve **AI empresarial, no educativa**: gobernanza de directorios, soberanía de infraestructura, procesamiento en tiempo
+real. **No hay cifra de mercado educativo propia de APAC en esta ventana.** Las cifras de APAC que tiene la KB siguen siendo
+las del pase 4, con su discrepancia declarada. Lo que sí hay en APAC es **política y plataforma**, y se encontró buscando
+por país, no por región — igual que la regla del pase 6, pero aplicada a la geografía.
+
+**La plataforma que la KB no tenía, y es el dato de mercado más grande del pase.** **DIKSHA**, la plataforma escolar
+oficial de India, declara **180 millones+ de alumnos inscriptos**, **290.000+ contenidos** en **36 idiomas** y **4.950
+millones+ de sesiones de aprendizaje**. Corre sobre **Sunbird** (**MIT**, EkStep Foundation), reconocida **Digital Public
+Good** por la DPGA. ⚠️ Las cifras de DIKSHA son de fuentes secundarias (EkStep, DPI Global); **lo verificado de primera
+mano es el repo**: MIT, **41 ★, 317 forks, 38.046 commits**. Ver `repos/foundations.md` y **P23**.
+
+**Y el dato de North America equivalente:** **Ed-Fi** (Michael & Susan Dell Foundation), el estándar de datos de alumnos de
+K-12 de EE. UU., es **Apache-2.0** desde abril de 2020. Es la pieza que un proyecto K-12 estadounidense necesita **antes**
+del agente, y el pase 9 no la había cubierto. Ver **P24**.
+
 ## Players globales
 
 | Empresa | Tipo | Fortaleza | Debilidad |
@@ -346,6 +380,24 @@ proyecto pasó a **OpenWallet Foundation Labs**, con la organización renombrada
 pautas formales de AI**, que es la brecha de gobernanza donde entra **P7**. **OpenAI** lanzó un programa educativo a
 nivel país con **ocho socios nacionales** en el Q1 de 2026.
 
+
+**Agregado en el pase 10 — North America: el dinero nuevo está etiquetado «AI responsable», y falta la capa de datos.**
+**41,7%** del crecimiento global del mercado proyectado para **2026-2030** es de North America (Technavio). En **Q1 2026**
+hubo un compromiso gubernamental de **USD 169 M** a **AI responsable en educación superior**, y **OpenAI lanzó un programa
+educativo a nivel país con 8 socios nacionales**. Dos lecturas operativas:
+
+1. **El dinero público nuevo dice «responsable», no «AI».** Eso favorece el entregable **auditable** —evaluación pedagógica
+   (P10), gate de seguridad (P11), conformidad de accesibilidad (P17)— por encima del tutor. Es el mismo argumento que la KB
+   venía haciendo para EMEA, y ahora tiene presupuesto en NA.
+2. **El programa de OpenAI fija el *default*.** Cuando el incumbente entra a nivel país, la propuesta open source se vende
+   por **soberanía, auditabilidad y costo por alumno**, no por capacidad del modelo.
+
+**Y la pieza que faltaba en el stack norteamericano: `Ed-Fi`** (**Apache-2.0** desde abril de 2020, Michael & Susan Dell
+Foundation), el estándar de datos de alumnos de K-12 de EE. UU., adoptado a nivel estatal. El pase 9 cubrió OneRoster,
+Caliper, QTI y Open Badges y **dejó afuera el expediente longitudinal del alumno**. En un proyecto K-12 estadounidense
+**Ed-Fi es anterior al agente**. Ver **P24**.
+
+
 ### EMEA
 
 **Contexto.** Regulación primero, adopción después — lo inverso a Norteamérica. La fecha de aplicación de sistemas de alto riesgo del Annex III del EU AI Act (que **incluye AI en evaluación**) se corrió de 2026-08-02 a **2027-12-02** por el acuerdo del Digital Omnibus on AI. Las escuelas quedan responsables de auditar el uso de AI. Casos que caen en alto riesgo: **corrección automática de exámenes, aprendizaje adaptativo, proctoring y predicción de deserción** — o sea, casi todo lo interesante. La Comisión Europea con la OCDE y aval del G7 publicó un borrador de AI Literacy Framework para primaria y secundaria.
@@ -452,6 +504,20 @@ en formación específica en AI en 2026; el Reino Unido comprometió **£200M+**
 junio) con Skills England fijando el marco curricular y big tech como socios de ejecución; y **Anthropic** anunció
 **Claude Corps**, programa de becas de **USD 150M** para formar 1.000 trabajadores de carrera temprana.
 
+
+**Agregado en el pase 10 — la capa de contenido es la oportunidad europea que faltaba, y el caso limpio es británico.**
+**Oak National Academy** publica su currículo bajo **Open Government Licence v3.0**, que permite uso comercial de forma
+explícita, y su asistente `Aila` es **MIT**. Es el **único caso de esta KB donde el código y el contenido son los dos
+utilizables en un entregable facturado** — y los dos son de EMEA. Eso refuerza el diagnóstico del gap 3 con una vuelta más:
+EMEA no produce el tutor, produce **todo lo que lo rodea**, y ahora también **el corpus con licencia apta**.
+⚠️ Verificar la posible **restricción geográfica al Reino Unido** antes de proponer el corpus fuera de UK, y confirmar la
+licencia en el documento de Oak (`support.thenational.academy` está bloqueado por el proxy en esta sesión).
+**Datos de compra nuevos de este pase:** **38%** de las organizaciones de EMEA todavía no empezaron a pilotear AI y **94%**
+declara que invertirá en formación de AI en 2026 — la demanda está en **formación**, no en producto. El Reino Unido
+comprometió **£200 M+** en su Cumbre de Adopción de AI con **Skills England** definiendo el marco curricular, bajo el patrón
+**gobierno financia / big tech entrega / sindicatos legitiman**: para entrar hay que ser el socio de entrega, no el vendor.
+
+
 ### APAC
 
 **Contexto.** Mercado de **$987M**, con China, India y Japón dominando por inversión e infraestructura. Regulación heterogénea y ése es el punto:
@@ -554,6 +620,29 @@ estratégica para 2026 y **57%** de las organizaciones de Asia ya la tienen en a
 consultas sobre uso de AI en instituciones financieras centradas en transparencia, responsabilidad y supervisión del
 riesgo — el patrón regulatorio que suele propagarse después a otros sectores. La **soberanía** moldea las decisiones de
 infraestructura de cerca de la mitad de las firmas de APAC, lo que favorece despliegues self-hosted como los de P19.
+
+
+**Agregado en el pase 10 — la plataforma más grande del mundo es de esta región, es MIT, y la KB no la tenía.**
+**Sunbird** (EkStep Foundation, India; **MIT**; Digital Public Good de la DPGA) sostiene **DIKSHA**: **180 M+ alumnos**,
+**290.000+ contenidos**, **36 idiomas**, **4.950 M+ sesiones**. **317 forks contra 41 estrellas** y **38.046 commits**:
+el fork por jurisdicción *es* el modelo de adopción. Hasta este pase la respuesta de la KB a «plataforma de ministerio» era
+Moodle (GPL-3.0) u Open edX (AGPL-3.0), las dos copyleft. **Sunbird es la primera opción permisiva de escala nacional**, y
+es APAC. Ver **P23**.
+
+**Tres modelos de compra distintos, verificados en este pase, y conviene no mezclarlos:**
+- **India** — mandato nacional: AI y Pensamiento Computacional **obligatorios desde 3.º grado en el ciclo 2026-27**,
+  currículo de **IIT Madras**, formación docente dentro de **NISHTHA**. El vehículo es el programa de ministerio.
+- **Singapur** — integración controlada: herramientas de AI para 4.º grado **estructuradas, supervisadas por el docente y
+  servidas dentro del Student Learning Space**, no en plataformas abiertas, con formación en AI para todos los docentes
+  **para 2026**. **Requisito técnico explícito: el agente vive dentro del SLS.** Eso descarta el producto SaaS suelto.
+- **Japón** — espera evaluativa: el MEXT mantiene postura **neutral** y monitorea pilotos, preguntándose si la AI
+  generativa contribuye de verdad al desarrollo de competencias. Acá se vende **evidencia de aprendizaje**, no eficiencia.
+- **China** se sumó a India y Emiratos en **alfabetización AI obligatoria** (abr-2026).
+
+🔴 **Y el gap de datos de la región, declarado:** la búsqueda regional genérica devuelve **AI empresarial, no educativa**.
+**APAC no tiene cifra de mercado educativo propia en esta ventana**; las que tiene la KB son del pase 4 con su discrepancia
+declarada. En APAC hay **política y plataforma**, y se encuentran buscando por país.
+
 
 ### LATAM
 
@@ -707,6 +796,25 @@ estructural: múltiples países con marcos distintos o inexistentes, con el *tri
 innovación y mantener soberanía. En el ecosistema privado, **99% de las startups de LATAM** usa alguna solución de AI en
 operaciones internas y **85%** la integra de forma nativa en su producto; en edtech se menciona **Ednova (Chile)**, lo que
 refuerza la lectura del pase 8 sobre Chile como nodo técnico regional.
+
+
+**Agregado en el pase 10 — la línea de base regional ya está medida, y eso cambia el tipo de propuesta.**
+El estudio **UNESCO IESALC / UNU** se precisa en este pase: **200 instituciones de educación superior de 19 países**,
+relevadas entre **agosto y octubre de 2025**, sobre cinco dimensiones (enseñanza y aprendizaje, investigación, vinculación
+con el medio, administración y gobernanza). El **BID** publicó además un **marco regulatorio habilitante** para AI en
+América Latina y el Caribe. Sumado al **Observatorio UNESCO** del pase 7 (lanzado en la sede de la CEPAL, Santiago),
+la región pasó a tener **línea de base, marco de política y contraparte permanente**.
+
+**Lo que eso cambia, concretamente:** la propuesta deja de ser «explorar la AI» y pasa a ser **«implementar el marco»** —
+que es un expediente más corto, más defendible ante un ministerio y comparable entre países. El informe del BID señala el
+riesgo que hay que nombrar primero: **fragmentación normativa** entre países con marcos distintos o inexistentes, que es
+exactamente el problema que ataca **P5**.
+
+**Y la pieza nueva que le sirve a la región:** **Sunbird** (MIT) es la primera plataforma de escala nacional permisiva de
+esta KB, con **offline-first en el móvil** y multilingüe en producción. Para un ministerio de LATAM es un camino más corto
+que forkear Moodle, y el precedente de los estados indios es el argumento de venta. Ver **P23**. En edtech regional,
+**Ednova (Chile)** aparece citada como caso de personalización, lo que suma a la concentración chilena que registró el pase 8.
+
 
 ## Posicionamiento Globant
 

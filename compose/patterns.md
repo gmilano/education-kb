@@ -35,6 +35,7 @@ updated: 2026-10-01
 - **Estado del aprendiz:** [tutor-mcp](https://github.com/ArnaudGuiovanna/tutor-mcp) (MIT, Go) — estado durable, misconceptions, metacognición, decisiones auditables
 - **Retención:** [py-fsrs](https://github.com/open-spaced-repetition/py-fsrs) (MIT, 499 ★) — scheduling DSR con 21 parámetros optimizables
 - **Mastery:** lógica de Bayesian Knowledge Tracing de [OATutor](https://github.com/CAHLR/OATutor) (MIT) + su contenido curado de OpenStax en JSON
+  - 🔴 **Corregido en el pase 10:** el **código** de OATutor es MIT y no está en discusión; **el contenido sí**. OATutor declara en su README que su contenido es **CC BY 4.0**, y el archivo `LICENSE` de los bundles de OpenStax en GitHub dice **CC BY-NC-SA** — incluido **Calculus Volume 1**, que OATutor declara curar (verificado 3 de 3 bundles: Calculus, Biology, College Physics). **NonCommercial prohíbe el uso en un entregable facturado y ShareAlike obliga a abrir la derivación.** Antes de usar este contenido en un proyecto pago hay que leer **el campo de licencia de cada ítem JSON** —que es donde OATutor dice que está la licencia real— y producir el manifiesto de **P22**. Ver el **trend 22** y el **gap 17**
 - **Evaluación:** [AITutor-EvalKit](https://github.com/kaushal0494/AITutor-EvalKit) (MIT) — mide Mistake Identification, Mistake Location, Providing Guidance, Actionability
 
 **Wiring.** DeepTutor conversa. `tutor-mcp` se monta como servidor MCP y es la **única** fuente de verdad del estado del aprendiz — DeepTutor no guarda mastery en su memoria, la consulta. Cada intento del alumno actualiza BKT (mastery) y alimenta `py-fsrs` (cuándo repasar). `py-fsrs` emite la cola de repaso que DeepTutor usa para abrir la sesión siguiente. Todas las decisiones pedagógicas se loguean con timestamp y razón. `AITutor-EvalKit` corre en CI contra MRBench como gate de regresión pedagógica.
@@ -725,6 +726,10 @@ URL muerta**, y lo va a descubrir después de haber cotizado.
 2. **La licencia leída en el archivo `LICENSE`**, no la del README ni la del listicle. Esta KB lleva registradas tres
    trampas de este tipo: `FreeLingo` (prensa dice MIT, el repo dice AGPL-3.0), `Teacher-Hub` (*«MIT — free for
    non-commercial use»*, que se contradice), y `openbadgeslib` (**licencia partida**: LGPLv3 la librería, BSD-2-Clause el CLI).
+   **Cuarta trampa, agregada en el pase 10 y es la peor de las cuatro:** los bundles de OpenStax en GitHub dicen
+   **CC BY-NC-SA** en su `LICENSE` mientras `OATutor` y `openstax-mcp-server` declaran **CC BY 4.0** en su README, sobre el
+   mismo contenido. **Y acá el `LICENSE` del repo tampoco alcanza:** OATutor declara que la licencia está **por ítem**, dentro
+   de cada JSON. La regla se endurece — **la licencia del contenido no es la licencia del código, y se lee en el ítem**.
 3. **La conformidad certificada**, donde exista. En esta capa vale más que las estrellas: `qti3-item-player` tiene
    **30 ★** y certificación de 1EdTech; el repo de 205 ★ de la capa **es una especificación, no código**.
 4. **La cadena de custodia.** Quién mantiene hoy. `learner-credential-wallet` pasó del **DCC at MIT** a **OpenWallet
@@ -739,6 +744,139 @@ de credenciales en marcha y no sabe sobre qué está construido.
 de licencia y del estado de mantenimiento**, en una capa donde las tres cosas cambiaron en los últimos dos años y donde
 la fuente secundaria está desactualizada de forma sistemática. Y el costo de no hacerlo se paga entero en implementación.
 
+
+## P22 — Corpus curricular con licencia auditable: el manifiesto por ítem como entregable (agregado en el pase 10; **transversal, y es condición de posibilidad de P1, P8 y P10**)
+
+**El problema que resuelve.** Todo patrón de esta KB que enseñe algo asume que hay contenido. Diez pasadas no preguntaron de
+dónde sale ni con qué licencia. Cuando se pregunta, aparece esto: los bundles de OpenStax en GitHub dicen **CC BY-NC-SA** en
+su archivo `LICENSE` (3 de 3 verificados), el ITS que los curó y el servidor MCP que los sirve dicen **CC BY 4.0** en su
+README, y el **metadato** del catálogo de referencia del sector (OER Commons / ISKME) es **NonCommercial**.
+**NonCommercial prohíbe exactamente el uso de un entregable facturado; ShareAlike obliga a abrir la derivación hecha para el
+cliente.** Es el riesgo de licencia más caro de esta KB porque **se descubre después de haber ingestado el corpus**.
+
+**Las piezas, todas verificadas en el pase 10**
+
+| Pieza | Licencia | Rol |
+|---|---|---|
+| [DSpace](https://github.com/DSpace/DSpace) | **BSD-3-Clause** ✅ | El repositorio donde vive el corpus **con su metadato de licencia por ítem**. 25.385 commits: es la pieza madura y permisiva de la capa |
+| [LibreTexts/shapeshift](https://github.com/LibreTexts/shapeshift) | **MIT** ✅ | Extracción y transformación de contenido a formatos de exportación. Es el paso de ingesta, y es permisivo aunque la plataforma LibreTexts sea GPL-3.0 |
+| [openstax-mcp-server](https://github.com/pythpythpython/openstax-mcp-server) | **MIT** (código) ✅ | El puente MCP hacia el agente. **Se forkea y se le corrige la declaración de licencia**, que es incorrecta en su README |
+| Currículo de **Oak National Academy** | **OGL v3.0** (uso comercial permitido) ⚠️ verificar | El corpus de arranque limpio. Y `Aila` (MIT) es el asistente que ya lo usa |
+| [learnmcp-xapi](https://github.com/DavidLMS/learnmcp-xapi) + LRS | **MIT** ✅ | Registrar qué ítem se usó con qué alumno, que es también la evidencia de atribución |
+
+**El wiring, y el orden importa**
+
+1. **Fase 0 — inventario de licencias, antes de ingestar nada.** Por cada fuente candidata: abrir el **archivo `LICENSE`**
+   (no el README, no el badge, no el listicle) y, cuando la fuente declare licencia **por ítem**, leer el campo del ítem.
+   Clasificar en tres baldes: **apta para uso comercial** (CC BY, OGL, dominio público), **ShareAlike** (usable, contamina la
+   derivación) y **NonCommercial** (inutilizable en entregable pago).
+2. **Fase 1 — ingesta con el metadato pegado al dato.** `shapeshift` extrae; cada ítem entra a `DSpace` **con su campo de
+   licencia, su atribución y su fuente**. Un ítem sin licencia conocida no entra: se registra en la lista de excluidos.
+3. **Fase 2 — el corpus del cliente se arma sólo con el balde apto.** Regla dura: **un corpus mezclado es del color de su
+   ítem más restrictivo.** Si entra un ítem NC, el corpus entero es NC.
+4. **Fase 3 — el agente consulta vía MCP** (fork de `openstax-mcp-server` o adaptador propio contra `DSpace`), y **cada
+   respuesta puede citar la atribución del ítem que usó**, que es lo que CC BY exige y casi nadie implementa.
+5. **Fase 4 — el manifiesto es el entregable.** Un documento fechado: qué ítems, qué licencia cada uno, qué quedó afuera y
+   por qué, y qué obligaciones de atribución quedan vivas en producción.
+
+**Plazo y alcance.** Fase 0 sola: **1–2 semanas**, y se vende suelta como due diligence de contenido (es hermana de **P21**,
+que hace lo mismo con los estándares). Fases 0–4 sobre un dominio acotado: **6–8 semanas**.
+
+**Dónde se vende primero.** **EMEA**, por dos razones que se refuerzan: el expediente auditable es lo que pide el EU AI Act,
+y el único corpus con licencia explícitamente apta para uso comercial que encontró esta KB —Oak National Academy, OGL v3.0—
+es británico. Después **North America**, donde el dinero público nuevo de Q1 2026 está etiquetado **«AI responsable»**.
+
+**Por qué es defendible cobrarlo.** Porque el costo de no hacerlo es rehacer el corpus entero después de la auditoría legal
+del cliente, y porque el hallazgo que lo motiva está verificado: **dos fuentes de primera mano declaran licencias
+incompatibles sobre el mismo contenido**, y la que la industria repite es la equivocada en al menos tres títulos.
+
+## P23 — Forkear Sunbird para un sistema educativo nacional (agregado en el pase 10; **APAC, LATAM y África**)
+
+**El problema que resuelve.** Hasta el pase 9, la respuesta de esta KB a «plataforma para un ministerio» era Moodle
+(GPL-3.0) u Open edX (AGPL-3.0). Las dos obligan a explicarle al cliente que la plataforma abierta que le proponemos lo
+compromete a publicar sus modificaciones — y con AGPL, también si la sirve por red. **Sunbird elimina esa conversación.**
+
+**Por qué Sunbird y no otra cosa**
+
+- **MIT** ✅ — el agente vive **adentro**, no al lado.
+- **38.046 commits** en el portal. Es la plataforma con más trabajo acumulado de toda esta KB después de TAO, y a diferencia
+  de TAO es permisiva.
+- **El fork es el modelo de adopción, no un accidente:** **317 forks contra 41 estrellas**, porque cada estado indio levanta
+  su instancia. Eso es el precedente de venta: no hay que explicar que *se puede* forkear por jurisdicción — ya se hizo
+  decenas de veces.
+- **Escala demostrada:** sostiene **DIKSHA**, **180 M+ alumnos**, **290.000+ contenidos**, **36 idiomas**, **4.950 M+
+  sesiones**. ⚠️ Cifras de fuente secundaria; lo verificado de primera mano es el repo.
+- **Digital Public Good** reconocido por la DPGA — que ante un ministerio o un organismo multilateral es un argumento
+  de compra, no un detalle.
+
+**Las piezas**
+
+| Pieza | Licencia | Rol |
+|---|---|---|
+| [SunbirdEd-portal](https://github.com/Sunbird-Ed/SunbirdEd-portal) | **MIT** ✅ | El portal web. Se forkea al repositorio del cliente y se fija la versión por tag |
+| [sunbird-devops](https://github.com/project-sunbird/sunbird-devops) | **MIT** ✅ | El despliegue. 392 forks: es lo que ejecuta la jurisdicción |
+| [SunbirdEd-mobile-app](https://github.com/Sunbird-Ed/SunbirdEd-mobile-app) | **MIT** ✅ | Android con **consumo offline**. Es lo que hace viable el patrón en ruralidad (converge con **P3**) |
+| [sunbird-telemetry-sdk](https://github.com/project-sunbird/sunbird-telemetry-sdk) | **MIT** ✅ | Telemetría nativa, que se puentea a la capa **LRS/xAPI** del pase 6 (**P15**) |
+| [Kolibri](https://github.com/learningequality/kolibri) | **MIT** ✅ | Alternativa/complemento offline donde no haya infraestructura para Sunbird completo |
+| Agente pedagógico | según el caso | El tutor o el asistente docente, adentro de la plataforma, no como SaaS externo |
+
+**El wiring, en tres fases con corte comercial limpio**
+
+1. **Fase 1 — instancia soberana.** Fork de `SunbirdEd-portal` al repositorio del ministerio, despliegue con
+   `sunbird-devops`, versión fijada por tag. Entregable: plataforma corriendo con contenido del cliente y **sin obligación de
+   apertura de las modificaciones**.
+2. **Fase 2 — telemetría y medición.** `sunbird-telemetry-sdk` puenteado a un LRS xAPI (**P15**), que es la base para
+   cualquier medición posterior y para entrenar el estimador de mastery con datos propios (**P16**, que existe justamente
+   porque los datasets públicos son NonCommercial).
+3. **Fase 3 — el agente adentro.** Tutor o asistente docente sobre el contenido de la plataforma, con el corpus auditado por
+   **P22** y el gate de seguridad pedagógica de **P11** antes de abrirlo a alumnos.
+
+**Plazo y alcance.** Fase 1: **6–10 semanas** según integración de identidad y datos existentes. Las tres: **5–7 meses**.
+
+**Dónde se vende primero.** **APAC** —el precedente es local y verificable, y en Singapur el requisito de que la AI viva
+dentro de la plataforma estatal (Student Learning Space) empuja exactamente a esta arquitectura— y después **LATAM** y
+**África**, donde el patrón de compra es **ministerio + organismo multilateral** y el sello de Digital Public Good pesa.
+Para LATAM es además más corto que forkear Moodle, y encaja con la línea de base ya medida por UNESCO/UNU en 19 países.
+
+**La objeción que va a aparecer, y cómo se contesta.** *«41 estrellas, ¿está vivo?»* — 38.046 commits, 317 forks y la
+plataforma escolar de India corriendo encima. Ver el **trend 23**: en infraestructura pública **la estrella mide atención de
+desarrolladores y el fork mide organizaciones en producción**.
+
+## P24 — Ed-Fi como columna de datos antes del agente (agregado en el pase 10; **North America, K-12**)
+
+**El problema que resuelve.** El pase 9 cubrió los estándares que **mueven** datos educativos —OneRoster (matrícula y notas),
+Caliper (eventos), QTI (ítems), Open Badges (credencial)— y dejó afuera el que los **guarda**: el expediente longitudinal del
+alumno. En K-12 de EE. UU. eso es **Ed-Fi**, está adoptado a nivel estatal, y **es Apache-2.0**. Un proyecto que mete un
+agente en un distrito sin pasar por ahí termina construyendo un silo que el estado no puede leer.
+
+**Las piezas**
+
+| Pieza | Licencia | Rol |
+|---|---|---|
+| [Ed-Fi-ODS](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-ODS) | **Apache-2.0** ✅ | Operational Data Store + API. **Se despliega y se consume por API; no se forkea el ODS** |
+| [Ed-Fi-Data-Standard](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-Data-Standard) | **Apache-2.0** ✅ | El modelo de datos. Es el contrato al que hay que programar |
+| [LTI 1.3](https://github.com/1EdTech/lti-1-3-php-library) | **Apache-2.0** ✅ | Cómo entra el agente al LMS del distrito sin forkearlo (**P20**) |
+| LRS xAPI (`lrsql` / `Ralph`) + [learnmcp-xapi](https://github.com/DavidLMS/learnmcp-xapi) | **MIT/Apache** ✅ | La evidencia granular de aprendizaje, que es de otra granularidad que el expediente (**P15**) |
+| [tero](https://github.com/marcorojasb/tero) | **MIT** ✅ | La postura de diseño obligatoria en EE. UU.: *el agente propone, el docente decide* (**P18**) |
+
+**El wiring**
+
+1. **Leer, no escribir, al principio.** El agente consume el expediente por la **Ed-Fi ODS API** para contextualizar
+   (historia del alumno, cursos, secciones) y **no escribe nada** en el ODS en la fase 1. Es lo que hace aceptable el
+   proyecto ante el área de datos del distrito.
+2. **La evidencia nueva va al LRS, no al ODS.** xAPI para el detalle de interacción (**P15**); el ODS guarda el expediente
+   oficial. Mezclarlos es el error que hace que el distrito pierda la trazabilidad.
+3. **La decisión pedagógica queda del lado humano.** Donde haya calificación, componente determinista + explicación del
+   modelo (**P14**), porque varios estados prohíben el grading automático.
+4. **La credencial, al final** (**P19**), con Open Badges 3.0 cuando corresponda.
+
+**Plazo y alcance.** Integración de lectura contra una instancia Ed-Fi existente: **4–6 semanas**. Con despliegue del ODS:
+**3–4 meses**.
+
+**Dónde se vende primero.** **North America**, y el momento es bueno: **41,7%** del crecimiento global del mercado 2026-2030
+es de la región y el dinero público nuevo de Q1 2026 (**USD 169 M**) está etiquetado **«AI responsable»** — que es
+precisamente lo que describe esta arquitectura. Es también el contra-argumento concreto al programa a nivel país del
+incumbente: **soberanía del dato del alumno, sobre un estándar que el estado ya adoptó.**
 
 ---
 *Ver `intel/market.md` para la oportunidad por región y `intel/trends.md` para los gaps que estos patrones atacan.*

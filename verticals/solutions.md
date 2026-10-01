@@ -187,11 +187,63 @@ En las ocho capas anteriores la señal de calidad eran las estrellas y los commi
 conformidad de 1EdTech tiene 30 estrellas**. **En credenciales e interoperabilidad se elige por conformidad certificada
 y por licencia, no por popularidad** — y se **verifica que la URL resuelva** antes de ponerla en una propuesta.
 
+## Capa de plataforma de sistema educativo nacional — agregada en el pase 10 del 2026-10-01
+
+Las nueve pasadas anteriores respondían «plataforma de ministerio» con **Moodle** (GPL-3.0) u **Open edX** (AGPL-3.0): las
+dos copyleft, con el agente obligado a vivir afuera. Hay una tercera opción, es **MIT**, y sostiene el sistema escolar más
+grande del mundo.
+
+| Plataforma | Repo | Licencia | Qué cubre | Cómo se customiza con AI |
+|-----------|------|----------|-----------|--------------------------|
+| **Sunbird** (base de DIKSHA) | https://github.com/Sunbird-Ed/SunbirdEd-portal | **MIT** ✅ | Infraestructura modular de aprendizaje en microservicios: gestión de contenido, autenticación, rutas de aprendizaje, analítica, notificaciones. Portal web + **app Android con consumo offline**. **38.046 commits.** Reconocida **Digital Public Good** por la DPGA. Sostiene **DIKSHA** (India): 180 M+ alumnos, 290.000+ contenidos, 36 idiomas | **Es la única plataforma de escala nacional de esta KB que se puede forkear sin fricción de licencia.** El modelo de adopción *es* el fork: **317 forks contra 41 estrellas**, porque cada estado indio levanta su instancia. El agente va adentro, no al lado. La telemetría ya existe (`sunbird-telemetry-sdk`, MIT) y se conecta con la capa LRS/xAPI del pase 6 |
+| **Ed-Fi ODS + API** | https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-ODS | **Apache-2.0** ✅ | Almacén operativo de datos de alumnos (ODS) y su API, más el **Ed-Fi Data Standard** (modelo de datos). Michael & Susan Dell Foundation. **Relicenciado de propietario a Apache-2.0 en abril de 2020** | **En un proyecto K-12 de EE. UU. es anterior al agente.** El expediente longitudinal del alumno vive acá, no en el LMS. Se expone por su API y el agente consume; no se forkea el ODS. Es la pieza que el pase 9 no cubrió: OneRoster mueve matrícula y notas, **Ed-Fi guarda la trayectoria** |
+
+**El criterio de elección entre las tres, que es nuevo en esta KB:**
+
+| Si el cliente es… | Plataforma | Por qué |
+|---|---|---|
+| Ministerio o sistema educativo público, APAC / LATAM / África | **Sunbird** | MIT, diseñado para forkear por jurisdicción, offline-first en el móvil, multilingüe por diseño (36 idiomas en producción) |
+| Distrito o estado de EE. UU., K-12 | **Ed-Fi** primero, LMS después | Apache-2.0, es el estándar de datos que el estado probablemente ya exige |
+| Universidad o corporativo | **Moodle / Open edX / OpenOLAT** | Lo que ya estaba en esta KB. La decisión no cambia |
+
+## Capa de contenido y repositorio — agregada en el pase 10 del 2026-10-01
+
+De dónde sale el material que el agente enseña, y con qué licencia. **Leer esta sección antes de prometer un corpus.**
+
+| Plataforma | Repo | Licencia (código) | Qué cubre | Cómo se usa |
+|-----------|------|-------------------|-----------|-------------|
+| **DSpace** | https://github.com/DSpace/DSpace | **BSD-3-Clause** ✅ | Repositorio institucional (digital asset management). **25.385 commits**, 1.1k ★ / **1.5k forks** | **La pieza permisiva y madura de la capa.** Es donde se guarda el corpus **con su metadato de licencia por ítem**, que es el entregable de **P22** |
+| **Pressbooks** | https://github.com/pressbooks/pressbooks | GPL-3.0+ ⚠️ | Autoría de libros abiertos sobre WordPress multisite. Su directorio público declara **7.042 libros** de 186 organizaciones | Desplegar, no forkear. Sirve como *target de salida* de un agente autor |
+| **Extractor de LibreTexts** | https://github.com/LibreTexts/shapeshift | **MIT** ✅ | *Extracting and transforming LibreTexts content into various export formats* | **Es lo que un engagement necesita de LibreTexts** — la ingesta del corpus — y es permisivo, aunque la plataforma sea GPL-3.0 |
+| **Manifold** | https://github.com/ManifoldScholar/manifold | GPL-3.0 ⚠️ | Publicación académica como obras digitales vivas. 7.305 commits | Igual que Pressbooks: salida, no base |
+
+### ⚠️ Lo que no hay que prometer en esta capa
+
+- **«Usamos contenido abierto de OpenStax, así que no hay problema de licencia.»** Los bundles de OpenStax en GitHub dicen
+  **CC BY-NC-SA** en su archivo `LICENSE` (verificado en Calculus, Biology y College Physics: **3 de 3**), mientras el ITS
+  que los curó y el servidor MCP que los sirve declaran **CC BY 4.0** en su README. **NonCommercial prohíbe el uso en un
+  entregable facturado y ShareAlike obliga a abrir la derivación.** La contradicción está registrada sin resolver en
+  `agents/top.md`: `openstax.org` está bloqueado por el proxy (gap 17).
+- **Un recomendador o buscador curricular sobre el catálogo de OER Commons.** El **metadato** de ISKME es **NonCommercial**
+  por decisión explícita. El contenido puede estar libre y **el catálogo no lo está** (gap 16).
+- **Un corpus «mezclado» sin manifiesto.** Un corpus es del color de su ítem más restrictivo, no del promedio.
+
+### El caso limpio, y conviene conocerlo de memoria
+
+**Oak National Academy**: currículo completo bajo **Open Government Licence v3.0**, que permite uso comercial de forma
+explícita, y su asistente `Aila` es **MIT**. **Es el único caso de esta KB donde el código y el contenido son los dos
+utilizables en un entregable facturado.** ⚠️ Dos reservas: `support.thenational.academy` está **bloqueado por el proxy**
+(la licencia viene de prensa británica, no del documento), y hay indicios de **restricción geográfica al Reino Unido** que
+hay que confirmar antes de proponer el corpus fuera de UK.
+
 ## Cómo elegir
 
 | Si el cliente necesita… | Arrancar de |
 |-------------------------|-------------|
 | LMS estándar, presupuesto acotado, AI ya integrable | **Moodle** (AI subsystem nativo) |
+| **Sistema educativo nacional / ministerio (APAC, LATAM, África)** | **Sunbird** — MIT, pensado para forkear por jurisdicción *(pase 10)* |
+| **Distrito o estado de EE. UU., K-12** | **Ed-Fi ODS + API** (Apache-2.0) antes que el LMS *(pase 10)* |
+| **Corpus curricular con licencia auditable** | **DSpace** (BSD-3) + `shapeshift` (MIT) + manifiesto por ítem — ver **P22** *(pase 10)* |
 | Cursos a escala / MOOC / academia corporativa | **Open edX** + XBlock |
 | Código propietario encima, sin fricción de licencia | **Oppia**, **OpenOLAT**, **Kolibri** o **Richie** |
 | Operar sin internet confiable | **Kolibri** o **Project NOMAD** + Ollama |
@@ -210,7 +262,11 @@ y por licencia, no por popularidad** — y se **verifica que la URL resuelva** a
 4. **Agregar scheduling de retención** (`py-fsrs`) para que el sistema no sólo explique sino que haga recordar.
 5. **UI conversacional encima**, no en lugar de, los flujos existentes. Los docentes rechazan el reemplazo y aceptan el asistente.
 6. **Medir antes de entregar, y medir seguridad pedagógica además de exactitud** *(agregado en el pase 5)*. Un tutor que acierta y a la vez revela la respuesta antes de tiempo o le da la razón al alumno equivocado está fallando en lo que importa. Correr `EduBench` (MIT, transversal a materia) y `SafeTutors` (MIT, 11 dimensiones de daño) contra el agente **antes** de la entrega, y guardar el resultado: en un cliente regulado eso no es QA, es el expediente. Ver el patrón **P11**.
-7. **Separar la nota del modelo.** Donde haya calificación, que la decisión la tome un componente determinista (test, rúbrica, checker) y que el LLM explique. Es lo que hace `mentar` con su checker, lo que hace Autograder.io por diseño, y lo que exigen las jurisdicciones que prohíben el grading automático.
+7. **Verificar la licencia del *contenido*, no sólo la del código** *(agregado en el pase 10)*. Son dos licencias
+   distintas y en esta capa casi nunca coinciden. Se lee el **campo de licencia del ítem** —no el badge del repo ni el
+   README— y se guarda junto al ítem. Esta KB tiene el caso verificado: los bundles de OpenStax en GitHub dicen
+   **CC BY-NC-SA** en su `LICENSE` mientras dos repos que los consumen declaran **CC BY 4.0** en su README. Ver **P22**.
+8. **Separar la nota del modelo.** Donde haya calificación, que la decisión la tome un componente determinista (test, rúbrica, checker) y que el LLM explique. Es lo que hace `mentar` con su checker, lo que hace Autograder.io por diseño, y lo que exigen las jurisdicciones que prohíben el grading automático.
 
 ---
 *Ver `compose/patterns.md` para las recetas concretas con repos y tiempos.*

@@ -8,10 +8,12 @@ updated: 2026-10-01
 
 > Agentes y herramientas AI open source para educación. Foco: MIT / Apache 2.0 / BSD.
 > Verificado repo por repo vía WebFetch el 2026-09-30 (stars y licencia leídos de la página del repo).
+> **Pase 10 del 2026-10-01:** para el contenido, la verificación se hizo contra el archivo `LICENSE`, no contra el README — y por eso apareció la contradicción que documenta la capa de contenido curricular, abajo.
 
 ## Agentes y herramientas destacadas
 
-**24 agentes reales verificados.** Ordenados por stars.
+**26 agentes reales verificados.** Ordenados por stars.
+> *Corrección de conteo del pase 10:* el encabezado decía **24** y la tabla tenía **25** filas antes de este pase. El desfasaje venía de pasadas anteriores que agregaron filas sin actualizar el total. Contado a mano: **26** con la fila que agrega el pase 10.
 > Bloom y OpenTutorAI-CE se agregaron en la segunda pasada del 2026-09-30.
 > **Claw-ED** se agregó en la tercera pasada del 2026-09-30 — es el primer agente *teacher-facing* open source de la KB.
 > **Cuarta pasada del 2026-09-30:** +5 agentes (pyKT, FreeLingo, TutorIA, OpenDidactia, mentar) y **2 regiones cerradas** (OpenTutorAI-CE → Marruecos; Claw-ED → EE. UU.). La capa de evaluación se movió a su propia sección y se corrigió: el repo canónico es `UnifyingAITutorEvaluation` (32 ★), no `AITutor-EvalKit` (3 ★).
@@ -23,6 +25,8 @@ updated: 2026-10-01
 > **Octava pasada del 2026-10-01:** se abre una **capa que la KB no tenía en siete pasadas — accesibilidad y educación especial** (sección nueva abajo, 11 repos verificados). El hallazgo no es un repo: es la forma del segmento. **Lo maduro es copyleft** (OptiKey 4.4k ★ GPL-3.0, Cboard 759 ★ GPL-3.0) y **lo que es agéntico y permisivo no pasa de 15 estrellas**. Entra además **`tero`** (MIT, Chile) en la tabla principal, que es la primera pieza de esta KB que cierra tres gaps a la vez (2, 8 y 12). Ver el **gap 12** y el **trend 18** en `intel/trends.md`, y los patrones **P17** y **P18**.
 
 > **Novena pasada del 2026-10-01:** se abre la **capa de credenciales verificables e interoperabilidad** (sección nueva abajo). Es la capa que acredita el aprendizaje cuando termina — Open Badges 3.0, W3C Verifiable Credentials, QTI, OneRoster, Caliper — y ocho pasadas no la buscaron porque no se llama «agente» ni «tutor». **El hallazgo no es un repo: es que tres implementaciones de referencia de estos estándares ya no están** (`badgr-server` 404, `caliper-php` puesto en privado por 1EdTech según el banner del fork de la U. de Michigan, `caliper-python` 404) mientras los estándares siguen siendo obligatorios. Lo que queda vivo y permisivo es de **terceros certificados y consorcios universitarios**. Ver el **trend 19**, los **gaps 13 y 14** y los patrones **P19**, **P20** y **P21**.
+
+> **Décima pasada del 2026-10-01:** se abre la **capa de contenido curricular** — de qué lee el tutor. Nueve pasadas construyeron el agente, el modelado, la evaluación, la seguridad, la telemetría, los datos, la accesibilidad y la credencial, y **ninguna preguntó de dónde sale el material que el agente enseña**: la palabra «OER» no aparecía ni una vez en esta KB. **El hallazgo es una trampa de licencia que pega sobre el patrón P1 de esta KB**, y está verificada contra el archivo `LICENSE` de los repos: los bundles de contenido de **OpenStax publicados en GitHub dicen CC BY-NC-SA** en los tres títulos revisados, mientras el único puente agente↔contenido que existe (`openstax-mcp-server`) **anuncia en su README que el contenido es CC BY 4.0**. Entra ese puente en la tabla principal. Ver el **trend 22**, los **gaps 15 y 16** y los patrones **P22**, **P23** y **P24**.
 
 | Nombre | Repo | Licencia | Stars | Lenguaje | Descripción | Origen (región) |
 |--------|------|----------|-------|----------|-------------|-----------------|
@@ -46,6 +50,7 @@ updated: 2026-10-01
 | Aila (Oak AI Lesson Assistant) | https://github.com/oaknational/oak-ai-lesson-assistant | MIT | 35 | TypeScript | Asistente de **planificación de clases para docentes** de **Oak National Academy** (nonprofit educativa británica respaldada por el gobierno). Monorepo Turborepo: Next.js + Prisma/PostgreSQL con **pgvector**, entornos de producción y staging, versionado semántico. **1.188 commits** — es el único artefacto teacher-facing de esta KB que corre en producción real y publica su código. ⚠️ El repo declara que está *"intended primarily for internal use by Oak National Academy"*: úsese como **referencia de arquitectura**, no como base de producto (sin API estable ni soporte para terceros). *Agregado en el pase 5* | EMEA (Oak National Academy, Reino Unido) |
 | tutor-mcp | https://github.com/ArnaudGuiovanna/tutor-mcp | MIT | 42 | Go | Servidor MCP que convierte cualquier LLM en un ITS: estado durable del aprendiz, scheduling de repaso, memoria de sesión, misconceptions, metacognición y decisiones pedagógicas auditables | Sin región verificada |
 | learnmcp-xapi | https://github.com/DavidLMS/learnmcp-xapi | MIT | 15 | Python | Servidor MCP que le da a un agente memoria de aprendizaje **conforme al estándar**: tres tools sobre un Learning Record Store xAPI — registrar un statement, consultar el historial de progreso y gestionar el vocabulario de verbos/actividades. Backends: `lrsql`, `Ralph`, Veracity Learning, más arquitectura de plugins. Captura el aprendizaje de forma explícita ("practiqué bucles") o **inferida de la conversación**, y después consulta ese historial para adaptar la respuesta. **Es el único artefacto de esta KB que conecta un agente con IEEE 9274.1.1 (xAPI 2.0)** en vez de inventar su propio esquema. ⚠️ 32 commits: referencia de integración o base a forkear, no dependencia de producción. *Agregado en el pase 6* | **EMEA (España)** — el autor declara pertenecer al **IES Rafael Alberti**, instituto público de secundaria. Lo escribió un docente en ejercicio, no un laboratorio |
+| openstax-mcp-server | https://github.com/pythpythpython/openstax-mcp-server | MIT (código) ✅ | 1 | TypeScript | Servidor MCP que le da a un agente acceso a **40+ libros de texto de OpenStax**: búsqueda semántica con embeddings de Cloudflare AI, generación automática de notebooks `.ipynb` por módulo y creación de problemas de práctica. Corre en Cloudflare Workers con Workers KV para cachear el XML parseado. **Es el único puente agente↔contenido curricular que encontró esta KB** — el equivalente, en la capa de contenido, de lo que `learnmcp-xapi` es en la capa de telemetría. 🔴 **Y hay que leerlo con la advertencia puesta: su README declara que el contenido servido es «Creative Commons Attribution 4.0 International (CC BY 4.0)», y el archivo `LICENSE` de los bundles de OpenStax en GitHub dice CC BY-NC-SA** en los tres títulos que este pase verificó. El código es MIT y es reutilizable; **la afirmación de licencia del contenido no se puede usar como base de un entregable facturado sin verificar título por título.** 7 commits. *Agregado en el pase 10* | Sin región verificada |
 | gradescope-mcp | https://github.com/Yuanpeng-Li/gradescope-mcp | MIT | 8 | Python | Servidor MCP para Gradescope: 34 tools de gestión de cursos, batch grading, CRUD de rúbricas y regrade review. Escrituras detrás de confirmación explícita | Sin región verificada |
 | TutorIA | https://github.com/LabSirius/TutorIA | MIT | 0 | Python | Tutor conversacional autónomo para **educación superior rural**, integrado dentro de Open edX y con la API de Claude como motor. Chat en lenguaje natural, respuestas en audio (TTS), avatar animado, dashboard de estadísticas para el docente y persistencia de contexto entre sesiones. Materias iniciales: Programación I (Python) e Introducción a la Matemática | **LATAM (Pereira, Colombia)** — Grupo Sirius, Universidad Tecnológica de Pereira (`sirius.utp.edu.co`) |
 | OpenDidactia | https://github.com/nmarafo/OpenDidactia | CC BY-SA 4.0 ⚠️ | 0 | Markdown/YAML | Esquemas curriculares estructurados (estándar OKF) para que un agente genere **Programaciones Didácticas y Situaciones de Aprendizaje** conformes a la ley educativa española LOMLOE. Cubre las 17 comunidades autónomas y 2 ciudades autónomas, de Infantil a Bachillerato, FP y enseñanzas de régimen especial, con DUA y rúbricas analíticas. No es código: es el *esquema de salida* que hace auditable a un agente docente | EMEA (España) |
@@ -278,8 +283,61 @@ Se buscó explícitamente un agente que **emita o consuma** credenciales verific
 
 **El stack del alumno y el stack de la credencial no se tocan en ningún punto** — y la pieza que los conectaría es justamente la que ya está documentada en esta KB desde el pase 6: el Learning Record Store. El LRS registra la evidencia (xAPI), el estimador de mastery decide si hay dominio (`pyBKT`/`pyKT`, gap 5), y **nadie convierte esa decisión en una credencial verificable**, que es el artefacto que el alumno puede llevarse y el empleador puede verificar. Ver el **gap 13** y el patrón **P19**.
 
+## Capa de contenido curricular — agregada en el pase 10 del 2026-10-01
+
+Nueve pasadas preguntaron *qué hace el agente* y nunca *de qué lee*. Esta sección es la respuesta, y el hallazgo no es un
+repo: es que **la licencia del contenido no es la licencia del código, y en esta capa casi nunca coincide**.
+
+### 🔴 El hallazgo del pase: dos fuentes de primera mano que se contradicen, y las dos están en la KB
+
+| Fuente verificada | Qué dice, textual | Dónde vive la afirmación |
+|---|---|---|
+| `openstax/osbooks-calculus-bundle` | *«Calculus Volume 1, Calculus Volume 2, and Calculus Volume 3 are available under the Creative Commons Attribution-NonCommercial-ShareAlike License»* | archivo **`LICENSE`** |
+| `openstax/osbooks-biology-bundle` | *«Creative Commons Attribution-NonCommercial-ShareAlike License»* (Biology 2e, Concepts of Biology, Biology for AP®) | archivo **`LICENSE`** |
+| `openstax/osbooks-college-physics-bundle` | *«College Physics 2e and College Physics for AP® Courses 2e are available under the Creative Commons Attribution-NonCommercial-ShareAlike License»* | archivo **`LICENSE`** |
+| `CAHLR/OATutor` | *«All content in this repository is made available under the Creative Commons Attribution 4.0 International (CC BY 4.0) license. Attribution is given within each json file, indicating the authoring organization and license for each hint, scaffold, and problem»* | **README** |
+| `pythpythpython/openstax-mcp-server` | el contenido servido está *«licensed under Creative Commons Attribution 4.0 International (CC BY 4.0)»* | **README** |
+
+**Las tres primeras filas son `LICENSE`; las dos últimas son README.** Y OATutor declara curar problemas de
+**Calculus Volume 1**, que es exactamente uno de los títulos cuyo `LICENSE` dice **NonCommercial-ShareAlike**.
+
+**Lo que este pase afirma, y nada más:** las cinco citas están verificadas de primera mano, y **no son compatibles entre
+sí para material derivado** — ShareAlike obliga a licenciar la derivación igual, y NonCommercial prohíbe exactamente el uso
+que tiene un entregable facturado. Lo que este pase **no** afirma es cuál de las dos es la correcta. `openstax.org`, donde
+vive el catálogo con la licencia por título, está **bloqueado por el proxy de egreso de esta sesión** (ver el gap 17), así
+que la discrepancia se registra sin resolver.
+
+### La regla operativa, y es barata de aplicar
+
+El propio README de OATutor dice dónde está la respuesta: **la licencia está declarada por ítem, dentro de cada JSON**
+(*«indicating the authoring organization and license for each hint, scaffold, and problem»*). Entonces:
+
+1. **No usar la licencia declarada a nivel de repo** para contenido. Ni la del README, ni la del badge.
+2. **Leer el campo de licencia del ítem** que se va a ingestar, y guardarlo junto al ítem. Ese manifiesto es el entregable
+   (ver **P22**).
+3. **Un corpus mezclado es del color del ítem más restrictivo**, no del promedio.
+
+⚠️ **Esto pega directamente sobre el patrón P1 de esta KB**, que recomienda *«la lógica de BKT de OATutor + su contenido
+curado de OpenStax en JSON»*. **El código MIT de OATutor no está en discusión; el contenido sí.** P1 queda corregido en
+`compose/patterns.md`.
+
+### Los dos corpus grandes con licencia apta para uso comercial
+
+| Corpus | Licencia | Estado de verificación | Por qué importa |
+|---|---|---|---|
+| **Oak National Academy** (currículo completo, Reino Unido) | **Open Government Licence v3.0** — permite uso comercial explícitamente | ⚠️ **parcial**: `support.thenational.academy` está **bloqueado por el proxy**. La licencia y el permiso comercial vienen de prensa educativa británica (*Schools Week*), no del documento de licencia | **Es el único caso de esta KB donde el código y el contenido son los dos utilizables**: `Aila` es MIT y ya está en la tabla principal desde el pase 5, y el currículo que Aila sirve es OGL. ⚠️ Hay indicios de **restricción geográfica al Reino Unido** en la cobertura de prensa: verificar antes de proponerlo fuera de UK |
+| **OpenStax** (40+ títulos) | 🔴 **en disputa** — ver el cuadro de arriba | ⚠️ verificado en GitHub (**NC-SA** en 3 de 3), no verificado en el catálogo oficial | Es el corpus que todo el mundo asume CC BY. **Asumirlo es el riesgo.** |
+
+### Lo que esta capa no tiene, y es el gap que abre el pase 10
+
+Un puente agente↔contenido con tracción. Hay **uno** (`openstax-mcp-server`, 1 ★, 7 commits) y **declara mal la licencia
+de lo que sirve**. El segundo candidato, `moarshy/mcp-tutor` (**0 ★**, 26 commits, 🚫 **sin licencia** — el repo sólo dice
+*«This project is experimental and intended for educational and research purposes»*), convierte **repositorios de
+documentación** en cursos con DSPy y los expone por MCP: es un tutor de documentación técnica, no de currículo escolar.
+Ver el **gap 15**.
+
 ---
 
 ---
-*Verificado manualmente vía WebFetch, no por el pipeline automático. Última verificación: 2026-10-01 (pase 9).*
+*Verificado manualmente vía WebFetch, no por el pipeline automático. Última verificación: 2026-10-01 (pase 10).*
 *Nota de método del pase 5: `curl -sI` contra github.com devuelve **403** a través del proxy de egreso, así que toda verificación se hizo con WebFetch contra la página del repo. Están bloqueados `arxiv.org`, `openreview.net`, `aclanthology.org`, `huggingface.co` y `ojs.aaai.org`, por lo que **los venues, conteos de ítems y hallazgos de los papers no pudieron verificarse en la fuente primaria** — sólo lo alojado en github.com está verificado de primera mano.*

@@ -8,6 +8,84 @@ updated: 2026-10-01
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 
+## 2026-10-01 (pase 10) — la infraestructura educativa más desplegada del mundo es permisiva, y tiene 41 estrellas
+
+Décima corrida. Las nueve anteriores ordenaron por estrellas. **Este pase cambia el indicador y aparecen dos plataformas
+que la KB no tenía**, las dos permisivas, las dos sosteniendo sistemas educativos nacionales enteros.
+
+### El dato que obliga a cambiar el método
+
+| Repo | Licencia | Stars | Forks | Commits | Forks/Stars |
+|---|---|---|---|---|---|
+| `Sunbird-Ed/SunbirdEd-portal` | **MIT** ✅ | **41** | **317** | **38.046** | **7,7×** |
+| `project-sunbird/sunbird-devops` | **MIT** ✅ | 62 | **392** | — | **6,3×** |
+| `Sunbird-Ed/SunbirdEd-consumption-ngcomponents` | **MIT** ✅ | 3 | 64 | — | **21×** |
+| `project-sunbird/sunbird-telemetry-sdk` | **MIT** ✅ | 4 | 46 | — | **11,5×** |
+| `Ed-Fi-Alliance-OSS/Ed-Fi-ODS` | **Apache-2.0** ✅ | 28 | 47 | 1.053 | 1,7× |
+| `DSpace/DSpace` | **BSD-3-Clause** ✅ | 1.1k | **1.5k** | **25.385** | 1,4× |
+| — comparación — `HKUDS/DeepTutor` | Apache-2.0 | **40,6k** | — | — | ≪1 |
+
+**La regla que deja este pase, y es de método, no de mercado:** en la capa de **infraestructura pública desplegada**, el
+fork no es una señal de interés — **es la unidad de adopción**. Cada estado indio forkea Sunbird para levantar su
+instancia; cada distrito forkea Ed-Fi. Un proyecto con 38.046 commits y 41 estrellas no es un proyecto muerto: es un
+proyecto que **nadie mira y todo el mundo usa**. Nueve pasadas ordenando por estrellas lo iban a seguir enterrando.
+
+### Sunbird / DIKSHA — el hallazgo del pase
+
+**MIT**, EkStep Foundation (India), **Digital Public Good** reconocido por la DPGA. Microservicios: contenido,
+autenticación, rutas de aprendizaje, analítica, notificaciones. **64 repos** en `Sunbird-Ed` + **88** en `project-sunbird`.
+
+Sostiene **DIKSHA**, la plataforma escolar oficial de India: **180 M+ alumnos**, **290.000+ contenidos**, **36 idiomas**,
+**4.950 M+ sesiones**. ⚠️ Esas cifras son de fuentes secundarias (EkStep, DPI Global); **lo verificado de primera mano es
+el repo**: licencia MIT, 41 ★, 317 forks, 38.046 commits en master.
+
+**Por qué cambia una propuesta en APAC, LATAM y África.** Hasta este pase, la respuesta de la KB a «plataforma de
+ministerio» era Moodle (GPL-3.0) u Open edX (AGPL-3.0) — las dos copyleft, las dos con el agente obligado a vivir afuera.
+**Sunbird es MIT y está diseñado para que un gobierno lo forkee.** Ver **P23**.
+
+### Ed-Fi — el expediente longitudinal que faltaba en la capa del pase 9
+
+`Ed-Fi-ODS` (**Apache-2.0**, 28 ★, 47 forks, 1.053 commits) y `Ed-Fi-Data-Standard` (**Apache-2.0**, 46 ★, 370 commits),
+de la **Michael & Susan Dell Foundation**, **relicenciados de propietario a Apache-2.0 en abril de 2020**.
+
+El pase 9 cubrió OneRoster, Caliper, QTI y Open Badges y **dejó afuera el expediente longitudinal del alumno**, que en
+EE. UU. es Ed-Fi y está adoptado a nivel estatal. Es anterior a cualquier agente en un proyecto K-12 norteamericano. Ver **P24**.
+
+### La capa de contenido: lo maduro es copyleft otra vez, y van cuatro pases seguidos
+
+| Repo | Licencia | Stars | Commits |
+|---|---|---|---|
+| `DSpace/DSpace` | **BSD-3-Clause** ✅ | 1.1k | 25.385 |
+| `pressbooks/pressbooks` | GPL-3.0+ ⚠️ | 458 | 6.058 |
+| `ManifoldScholar/manifold` | GPL-3.0 ⚠️ | 260 | 7.305 |
+| `openstax/openstax-cms` | **AGPL-3.0** ⚠️⚠️ | 110 | 2.513 |
+| `LibreTexts/Libretext` | GPL-3.0 ⚠️ | 29 | 1.699 |
+
+**Y el hallazgo aprovechable:** el *tooling* de LibreTexts **sí es MIT** — `shapeshift` (0 ★, 339 commits, extracción y
+transformación de contenido a formatos de exportación), `conductor` (4 ★, 2.274 commits), `davis` (componentes
+*accessibility-first*, que es el puente con la capa del pase 8) y `LibreOne`. **Lo que un engagement necesita de LibreTexts
+es el extractor, no la plataforma, y el extractor es permisivo.**
+
+### 🔴 Lo que este pase encontró y no es un repo: una contradicción de licencia entre dos fuentes de primera mano
+
+Los bundles de contenido de OpenStax en GitHub dicen **CC BY-NC-SA** en su archivo `LICENSE` —verificado en
+`osbooks-calculus-bundle`, `osbooks-biology-bundle` y `osbooks-college-physics-bundle`, **3 de 3**— mientras
+`CAHLR/OATutor` y `pythpythpython/openstax-mcp-server` declaran **CC BY 4.0** en su README. OATutor cura problemas de
+**Calculus Volume 1**, uno de los títulos NC-SA.
+
+No se resuelve acá: `openstax.org` está **bloqueado por el proxy** (gap 17). Lo que sí queda es la regla: **la licencia del
+contenido se lee en el ítem, no en el badge del repo.** Ver `agents/top.md` y **P22**.
+
+### Nota de método de este pase
+
+`curl -sI` contra `github.com` **sigue devolviendo 403**, y `api.github.com` también **403** — igual que en los pases 5 a 9.
+Toda verificación de repos se hizo con WebFetch contra la página del repo, y para contenido **contra el archivo `LICENSE`**,
+que es lo que hizo visible la contradicción. **Bloqueados por el proxy en este pase:** `openstax.org`,
+`openscied.org` y `support.thenational.academy` — los tres lugares donde vive la licencia declarada *por el editor* del
+contenido, que es justamente la otra mitad de la contradicción. Ver el **gap 17**.
+
+---
+
 ## 2026-10-01 (pase 9) — los estándares de interoperabilidad siguen obligatorios y su código de referencia se está retirando
 
 Novena corrida. Los pases 4–8 construyeron el stack del alumno capa por capa y el patrón repetido fue *la pieza es
