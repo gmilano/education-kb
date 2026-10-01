@@ -2343,3 +2343,56 @@ upgrade de Aspects** en vez de envejecer — y los upgrades de Aspects son frecu
 - **Y la limitación está reconocida por dos proveedores, lo que la vuelve defendible.** El Feature Wiki de **ILIAS**
   declara por escrito que el dato personal **persiste en el LRS** al borrar un objeto xAPI/cmi5 (tendencia **55**), y
   Aspects documenta su retención **en su propia decisión de arquitectura**. **No es una carencia que invente esta KB.**
+
+## P46 — La evidencia de borrado en el LRS, parcheada por backend: el upstream chico que convierte un `200` vacío en un expediente (agregado en el pase 23; **EMEA primero por art. 17, North America por AB 1159, transversal por Anexo III**)
+
+**Qué problema resuelve.** P44 y P45 llegan los dos al mismo muro: se puede *borrar* el dato del alumno en la telemetría,
+pero no se puede *probar* qué se borró. `lrsql` responde `{:status 200 :body params}`, que es un eco del `actor-ifi` que
+mandó el cliente — **no es prueba de nada** ante un expediente del art. 17 o de **AB 1159** (operativa el **2027-07-01**).
+Este patrón es el parche, y el pase 23 lo dimensionó leyendo los tres backends (tendencia **60**).
+
+**Las piezas, todas verificadas de primera mano sobre el árbol clonado (HEAD del 2026-10-01):**
+
+| Pieza | Licencia | Rol |
+|---|---|---|
+| [yetanalytics/lrsql](https://github.com/yetanalytics/lrsql) | **Apache-2.0** ✅ | El LRS a parchear. Apache-2.0 → **el upstream es viable y el fork también** |
+| [openfun/ralph](https://github.com/openfun/ralph) | **MIT** ✅ | Alternativa de LRS si el cliente está en Open edX — **pero no tiene `DELETE` en ningún router**, así que acá no aplica: el parche es sobre `lrsql` |
+| [openedx/tutor-contrib-aspects](https://github.com/openedx/tutor-contrib-aspects) | **Apache-2.0** ✅ | Quien dispara el borrado aguas arriba (P44/P45) |
+
+**El wiring, y es distinto en cada backend — ésa es la parte que hay que presupuestar:**
+
+1. **Encender la ruta.** `LRSQL_ENABLE_ADMIN_DELETE_ACTOR=true`. Viene en `false`, y apagada el síntoma es **404, no 403**
+   (`src/main/lrsql/admin/routes.clj:407`). Sin esto no hay nada que parchear.
+2. **SQLite — recoger los siete conteos que ya se calculan.** En
+   `src/db/sqlite/lrsql/sqlite/record.clj:169–176` las siete queries se invocan como expresiones sueltas y Clojure
+   devuelve sólo la séptima. Envolver en `let`, bindear las siete y devolver un mapa por tabla
+   (`{:statement-to-statement n :statement-to-activity n :attachment n :xapi-statement n :agent-profile-document n
+   :state-document n :actor n}`). **~8 líneas, el dato ya está: sólo se está tirando.**
+3. **PostgreSQL / MariaDB — partir el SQL antes de poder recoger nada.** En los dos,
+   `delete-actor-and-dependents!` es **un** nombre HugSQL con **siete `DELETE` adentro**, así que hay un solo número
+   disponible. Para obtener el desglose hay que **partirlo en siete queries con nombre**, como SQLite ya las tiene, y
+   después aplicar el paso 2. **Es refactor de SQL, no plomería.**
+4. **Devolver el conteo en vez del eco.** En `src/main/lrsql/admin/interceptors/lrs_management.clj:23–33`, el cuerpo es
+   `(adp/-delete-actor lrs params)` **como expresión suelta cuyo retorno se descarta**, y la respuesta es
+   `{:status 200 :body params}`. Bindear ese retorno y devolverlo junto al `actor-ifi`, el timestamp y el admin que
+   ejecutó.
+5. **Persistir el expediente fuera del LRS.** El conteo en la respuesta HTTP se pierde con la sesión: escribirlo en una
+   tabla de auditoría propia (o en el `llm_calls`-style de la aplicación) con `actor-ifi` **hasheado**, timestamp, admin,
+   backend y el mapa de conteos. Eso es lo que se adjunta al expediente.
+
+**Estimación:** 2–3 semanas incluyendo el *upstream* de los pasos 2–4 (Apache-2.0, cambio chico, sin dependencias nuevas).
+Si el cliente no quiere esperar el *merge*, el fork es legal y el *rebase* es barato porque el cambio toca 4 archivos.
+
+🔴 **Lo que hay que decir en la propuesta, y es incómodo pero es el hallazgo del pase.** La ventaja que esta KB le vende a
+`lrsql` —*«corre sobre la base de datos que el cliente ya opera»*— **no se extiende a la evidencia**. Un despliegue sobre
+SQLite llega al desglose de siete tablas con ~8 líneas; **el mismo producto sobre PostgreSQL no pasa de un número sin tocar
+el SQL.** Cuando el alcance incluya prueba de supresión, **el motor de base de datos es una decisión de cumplimiento, no de
+infraestructura**: hay que preguntarlo en el *discovery*.
+
+⚠️ **Lo que no está medido, y no se infiere.** Cuál de los siete `DELETE` reporta el driver JDBC en el `:execute`
+multi-sentencia de PostgreSQL/MariaDB (el primero, el último o la suma) **no se verificó ejecutando**. La lectura del código
+prueba que hay **un solo valor disponible**, que es lo que sostiene el patrón; el valor exacto es la acción que el pase 23
+deja escrita: levantar `lrsql` sobre PostgreSQL, borrar un actor con datos en las siete tablas y leerlo.
+
+- **No alcanza al modelo.** Igual que P44 y P45: esto audita el registro, no la influencia en los pesos. Sigue siendo el
+  **gap 34**, camino **P38**.

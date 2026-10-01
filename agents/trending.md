@@ -9,6 +9,45 @@ updated: 2026-10-01
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 > No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
 
+## 2026-10-01 (pase 23) — quinto pase sin altas de agentes, y el barrido confirmó el diagnóstico del pase 22: lo que aparece ya no es agente, es plataforma administrativa
+
+**La tabla principal sigue en 37 filas.** Se corrió el barrido completo obligatorio —las cuatro búsquedas globales y las
+cuatro regionales, con el año calculado (2026), no fijado— y **no apareció ni un agente educativo que esta KB no tuviera**.
+Es la quinta pasada consecutiva sin altas. Lo que trajo el barrido, candidato por candidato:
+
+| Candidato que trajo la búsqueda | Qué es | Por qué no entra en `agents/top.md` |
+|---|---|---|
+| **Frappe Education** · https://github.com/frappe/education | Gestión académica sobre Frappe Framework. **GPL-3.0** (en `license.txt`), **657 ★**, 1.091 commits — verificado de primera mano | **No es un agente: es plataforma.** Entra en `verticals/solutions.md` (capa SIS) y en `repos/foundations.md`. Su valor es que **cierra la pregunta abierta del pase 21** sobre ERPNext |
+| **AureusERP** · https://github.com/aureuserp/aureuserp | ERP genérico. **MIT** ✅, **12k ★**, 3.794 commits, Laravel 13 + FilamentPHP 5 | **No es agente y tampoco es educativo:** no tiene ningún módulo académico. Registrado como **no-hallazgo con su razón** en `repos/trending.md` |
+| **AutoGen / AI Agents for Beginners** (Microsoft, 56k ★ cada uno) | Framework multi-agente y curso de 12 lecciones | **Ya en la KB**, y el segundo es material de formación, no un agente educativo. Aparecen en toda búsqueda de *«education AI github»* porque el sustantivo *education* en GitHub significa, mayoritariamente, **cursos sobre AI** y no **AI para educar** |
+| **OpenClaw, LangGraph, CrewAI, OpenHands, Codex** | Agentes y orquestadores de propósito general | **Ya en la KB** o fuera de dominio. El barrido global de *«open source AI agents»* devuelve la capa genérica, no la vertical |
+
+🔴 **El hallazgo de método de este pase, y es el que explica los cinco pases secos.** El pase 22 escribió que *«el
+rendimiento está en cambiar el sustantivo de la búsqueda, no la región»*. Este pase lo hizo —buscó por **plataforma** y por
+**ERP**, no por *agente*— y **volvió a rendir: los dos únicos repos nuevos del pase salieron de ahí.** Pero además dejó
+medido *por qué* el eje *«agente educativo»* está agotado: **en GitHub, `education` como término de búsqueda está capturado
+por el material didáctico sobre AI** (`AI Agents for Beginners`, `ai-engineering-from-scratch`, cursos de DeepLearning.AI)
+**y no por software que educa.** Los dos sentidos comparten la palabra y el primero tiene dos órdenes de magnitud más de
+estrellas, así que sepulta al segundo en cualquier ranking.
+
+**La consigna para el próximo pase, que es una corrección de la del pase 22, no una repetición:** no alcanza con cambiar el
+sustantivo — hay que **evitar la palabra `education`** y buscar por el **artefacto del dominio** (`gradebook`, `rubric`,
+`item bank`, `enrolment`, `attendance`, `IEP`, `transcript`) o por el **estándar instalado** (QTI, OneRoster, xAPI, LTI),
+que es cómo esta KB encontró las capas de los pases 6, 9, 11 y 22. Donde la palabra *education* no discrimina, el nombre de
+la cosa sí.
+
+### La acción que el pase 22 dejó escrita, ejecutada: el gap 36 queda dimensionado, y la respuesta no es ninguna de las dos que se esperaban
+
+El pase 22 dejó una sub-pregunta concreta y declaró que **no la pudo contestar** porque el clasificador de seguridad del
+entorno bloqueó la traza del árbol clonado: *«¿`-delete-actor` ya devuelve los conteos de filas afectadas, o hay que
+plomearlos desde la capa SQL? Si ya los devuelve, el parche es una línea; si no, hay que propagarlos.»*
+
+**Se contestó en este pase, clonando `yetanalytics/lrsql` y leyendo los tres backends.** La respuesta es **ninguna de las
+dos**, y el detalle está en `intel/trends.md` (tendencia 57) y en el patrón **P45**. En una línea: **los conteos ya existen
+en los tres backends** —toda sentencia de borrado declara `-- :result :affected`— **pero el parche es distinto en cada
+backend y en ninguno es de una línea**, porque SQLite expone siete conteos y descarta seis, mientras Postgres y MariaDB
+tienen un solo nombre HugSQL con siete `DELETE` adentro y por lo tanto **no pueden dar el desglose sin partir el SQL**.
+
 ## 2026-10-01 (pase 22) — cuarto pase consecutivo sin agregar agentes, y el barrido obligatorio se agotó por cuarta vez: los dos candidatos que trajo ya estaban en la KB, medidos con más precisión que la web
 
 **La tabla principal sigue en 37 filas.** Este pase corrió el barrido completo —las cuatro búsquedas globales y las

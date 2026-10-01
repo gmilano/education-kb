@@ -15,6 +15,24 @@ updated: 2026-10-01
 **37 filas = 35 agentes + 2 bibliotecas de skills.** Ordenados por stars. El conteo se hizo a mano en el pase 19 y
 se explica abajo, porque es la cuarta vez que esta KB se pelea con este número.
 
+> *Pase 23 del 2026-10-01:* **la tabla sigue en 37 filas — quinto pase consecutivo sin altas, y este identificó la causa
+> estructural en vez de volver a declarar el agotamiento.** Se corrió el barrido completo obligatorio (cuatro búsquedas
+> globales + cuatro regionales, con el año **calculado**). Los dos repos nuevos del pase **no son agentes**:
+> `frappe/education` (GPL-3.0, 657 ★) es plataforma y va a `verticals/solutions.md`, y `aureuserp` (MIT, 12k ★) **no tiene
+> módulo educativo** y queda como no-hallazgo declarado en `repos/trending.md`.
+> 🔴 **La causa, medida:** en GitHub el término **`education` está capturado por el material didáctico *sobre* AI**
+> (`AI Agents for Beginners` y `AutoGen`, 56k ★ cada uno; cursos de DeepLearning.AI) **y no por software que educa**. Los dos
+> sentidos comparten la palabra y el primero tiene **dos órdenes de magnitud más de estrellas**, así que sepulta al segundo en
+> cualquier ranking. **La consigna para el próximo pase corrige la del 22:** no alcanza cambiar el sustantivo — hay que
+> **evitar la palabra `education`** y buscar por el **artefacto del dominio** (`gradebook`, `rubric`, `item bank`,
+> `enrolment`, `attendance`, `IEP`, `transcript`) o por el **estándar instalado** (QTI, OneRoster, xAPI, LTI), que es cómo
+> aparecieron las capas de los pases 6, 9, 11 y 22. **Nota de método: no se agregó ninguna fila de relleno.** 37 filas reales
+> siguen siendo mejores que 40 con tres dudosas.
+> **El hallazgo del pase está en la capa de evidencia, no acá:** se ejecutó la acción que el pase 22 dejó escrita y el
+> **gap 36 quedó dimensionado** — los conteos de borrado **existen** en los tres backends de `lrsql`, pero la evidencia
+> **no es portable entre motores de base de datos**, lo que contradice la razón por la que esta KB recomienda `lrsql` por
+> default. Ver la tendencia **60** y el patrón **P46**.
+
 > *Pase 22 del 2026-10-01:* **la tabla sigue en 37 filas, y es el cuarto pase consecutivo sin altas — el primero que
 > mide el agotamiento en vez de declararlo.** Se corrió el barrido completo (cuatro búsquedas globales + cuatro
 > regionales) y **los dos únicos candidatos que trajo ya estaban acá, con más precisión que la fuente**: `OpenMAIC`

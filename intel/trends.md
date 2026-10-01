@@ -7,6 +7,7 @@ updated: 2026-10-01
 # 📡 Tendencias — education
 
 > Ventana de investigación: septiembre 2026. Verificado 2026-09-30; el pase 11, el 2026-10-01.
+> **Pase 23:** se ejecuta la acción que el pase 22 dejó escrita y **el gap 36 queda dimensionado**: los conteos de borrado existen en los tres backends de `lrsql`, pero **la evidencia no es portable entre motores de base de datos** — y eso contradice la razón por la que esta KB lo recomienda por default (tendencia **60**, patrón **P45**).
 > **Pase 12:** la educación pierde **58×** contra la vertical científica en el canal de distribución más barato de la
 > industria (tendencia 28), se nombra el patrón *estándar instalado vs. modelo propio* que se repite en cinco capas
 > (tendencia 29), se abre el **gap 20** y se registran dos advertencias de verificación: los agregadores de estrellas
@@ -2115,7 +2116,88 @@ anonimizado* viene de **snippets concordantes de búsqueda, no de lectura direct
 devolvieron 404. URL anotada para el próximo pase:
 `https://docs.openedx.org/projects/openedx-aspects/en/latest/technical_documentation/decisions/0009_pii.html`.
 
+## 60. La capacidad de probar un borrado no es portable entre bases de datos, y eso contradice la razón por la que esta KB recomienda su LRS por default (agregado 2026-10-01, pase 23)
+
+**El pase 22 dejó escrita una sub-pregunta y declaró que no la pudo contestar** (el clasificador de seguridad del entorno
+bloqueó la traza del árbol clonado): *«¿`-delete-actor` ya devuelve los conteos de filas afectadas, o hay que plomearlos
+desde la capa SQL? Si ya los devuelve, el parche es una línea; si no, hay que propagarlos.»* Este pase clonó
+`yetanalytics/lrsql` y leyó **los tres backends**. **La respuesta es ninguna de las dos opciones, y la diferencia es
+arquitectónica, no de tamaño.**
+
+Los conteos **ya existen en los tres backends**: toda sentencia de borrado de actor está declarada `-- :result :affected`.
+Lo que no existe es **una sola forma de recogerlos**:
+
+| Backend | Cómo está escrito el borrado | Cuántos conteos hay disponibles | Qué devuelve hoy |
+|---|---|---|---|
+| **SQLite** · `src/db/sqlite/lrsql/sqlite/record.clj:169–176` | **Siete queries HugSQL con nombre propio** (`delete-actor-st2st`, `-st2activ`, `-attachments`, `-statements`, `-agent-profile`, `-state-document`, `-actor`), cada una con `:result :affected` | **Siete, uno por tabla** | **Uno solo.** El cuerpo las invoca como siete expresiones sueltas en secuencia, así que Clojure **devuelve el valor de la séptima** (`delete-actor-actor`) y **descarta las otras seis** — y la séptima es la menos informativa de todas: el borrado de la fila del propio actor, que es 0 o 1 |
+| **PostgreSQL** · `postgres/record.clj:135–136` | **Un único nombre HugSQL** (`delete-actor-and-dependents!`) cuyo cuerpo son **siete `DELETE` separados por `;`** bajo un solo `:command :execute` / `:result :affected` | **Uno** | Ese uno, que el interceptor igual descarta |
+| **MariaDB** · `mariadb/record.clj:116–117` | Idéntico a PostgreSQL: un nombre, siete `DELETE` adentro | **Uno** | Ídem |
+
+🔴 **Las dos consecuencias, y la segunda es la que importa comercialmente.**
+
+**1. El parche del gap 36 no es de una línea en ningún backend, y no es el mismo parche en ninguno.** En **SQLite** es
+mecánico pero no trivial: hay que envolver las siete llamadas en un `let` y devolver un mapa por tabla (~8 líneas) — el dato
+ya está, sólo se está tirando. En **PostgreSQL y MariaDB** *no se puede obtener el desglose por tabla sin partir el SQL* en
+siete queries con nombre, como SQLite ya las tiene: deja de ser plomería y pasa a ser **refactor del SQL**. Con eso, la
+estimación honesta del gap 36 sube de *«una línea»* a **un cambio en 4 archivos de 3 backends más el interceptor**, y sigue
+siendo chico y upstreameable, pero hay que presupuestarlo como tal.
+
+**2. Y acá está el hallazgo que da vuelta un argumento de esta KB.** La fila de `lrsql` en `verticals/solutions.md` lo
+recomienda como **«el default»** con esta razón textual: *«corre sobre la base de datos que el cliente ya opera, así que no
+agrega una pieza de infraestructura nueva al diagrama»*. Eso sigue siendo cierto para **almacenar**. **Para *probar* un
+borrado no lo es:** la evidencia disponible depende del motor que el cliente eligió por motivos que no tienen nada que ver
+con privacidad. **Un despliegue sobre SQLite puede dar hoy un desglose de siete tablas con ~8 líneas; el mismo producto
+sobre PostgreSQL no puede dar más de un número sin tocar el SQL.** Para un expediente del **art. 17** o de **AB 1159**
+(operativa el **2027-07-01**), donde lo que se audita es la *prueba*, eso significa que **la portabilidad de base de datos
+—la ventaja que vendemos— es también una asimetría de cumplimiento que hay que declarar en la propuesta.**
+
+**La regla operativa que deja este pase:** cuando el alcance incluya evidencia de supresión, **el motor de base de datos
+deja de ser una decisión de infraestructura del cliente y pasa a ser una decisión de cumplimiento del proyecto.** Hay que
+preguntarlo en el *discovery*, no descubrirlo en la auditoría. Ver **P45**.
+
+⚠️ **Verificación declarada.** Los tres `record.clj`, los tres `delete.sql`, `ops/command/statement.clj`,
+`system/lrs.clj:459–463`, `admin/protocol.clj:58` y `admin/interceptors/lrs_management.clj:23–33` están **leídos de primera
+mano sobre el árbol clonado** (`git clone --depth 1`, HEAD del 2026-10-01). **Lo que NO se verificó ejecutando:** qué número
+devuelve exactamente el driver JDBC para un `:execute` multi-sentencia en PostgreSQL y MariaDB — si el del primer `DELETE`,
+el del último o la suma. La lectura del código prueba que **hay un solo valor disponible**, que es lo que sostiene el
+argumento; **cuál de los siete es ese valor no se midió y no se infiere.** Es la acción que este pase deja escrita: levantar
+`lrsql` sobre PostgreSQL, borrar un actor con datos en las siete tablas y leer el valor. Es una tarde de trabajo y cierra el
+gap 36 con número en vez de con lectura.
+
 ## Fuentes
+
+### Verificación del pase 23 (2026-10-01)
+
+🟢 **Verificado de primera mano leyendo el código fuente**, con `git clone --depth 1` sobre el árbol real (no vía WebFetch,
+no vía documentación): [yetanalytics/lrsql](https://github.com/yetanalytics/lrsql) — **Apache-2.0**. Leídos en este pase:
+**`src/db/sqlite/lrsql/sqlite/record.clj:169–176`** (las siete llamadas secuenciales y el retorno de la séptima),
+**`src/db/postgres/lrsql/postgres/record.clj:135–136`** y **`src/db/mariadb/lrsql/mariadb/record.clj:116–117`** (el nombre
+único `delete-actor-and-dependents!`), los tres **`sql/delete.sql`** (siete `DELETE` en cada backend; `:result :affected`
+declarado en **todas** las sentencias, y en SQLite **siete nombres HugSQL separados** frente a **uno** en Postgres/MariaDB),
+`src/main/lrsql/ops/command/statement.clj:74–76` (`delete-actor!` es *pass-through* a `bp/-delete-actor!`),
+`src/main/lrsql/system/lrs.clj:459–463`, `src/main/lrsql/admin/protocol.clj:58` (`-delete-actor` pertenece a
+`AdminLRSManager`), `src/main/lrsql/backend/protocol.clj:42` y
+`src/main/lrsql/admin/interceptors/lrs_management.clj:23–33`. **Esto contesta la sub-pregunta que el pase 22 dejó abierta y
+no pudo responder** (ver tendencia **60** y **P46**).
+
+🟢 **Verificado vía WebFetch** (licencia, estrellas, commits y lenguaje leídos en la página del repo el 2026-10-01):
+[frappe/education](https://github.com/frappe/education) — **657 ★, 1.091 commits, Python, rama `develop`**; la licencia **no
+aparece en la página** y se leyó en **`license.txt` (HTTP 200): «GNU GPL V3»**, aplicando la regla de método del pase 10
+(verificar contra el archivo de licencia, no contra el README) · [aureuserp/aureuserp](https://github.com/aureuserp/aureuserp)
+— **MIT, 12k ★, 3.794 commits, PHP (Laravel 13 + FilamentPHP 5)**, y **sin ningún módulo educativo** entre sus plugins.
+
+⚠️ **Nota de método, que reconfirma la del pase 12 y conviene no volver a olvidar.** `curl -sI` contra `github.com` devolvió
+**HTTP 403** para los tres repos de este pase. **Un 403 del proxy de egreso no es un 404 y no invalida un repo**: los tres se
+verificaron por vías más fuertes —`lrsql` **clonado**, los otros dos **leídos en la página vía WebFetch**— y
+`raw.githubusercontent.com` sí responde **200**. **La regla operativa: cuando `curl` da 403, cambiar de herramienta, no
+descartar el hallazgo.**
+
+🔴 **No verificado, y declarado como tal:** cuál de los siete `DELETE` reporta el driver JDBC en el `:execute`
+multi-sentencia de PostgreSQL y MariaDB (el primero, el último o la suma). **No se midió ejecutando y no se infiere.** La
+lectura del código prueba que hay **un solo valor disponible**, que es lo que sostiene la tendencia 60; el valor exacto es la
+acción escrita que este pase deja para el próximo. **Todo lo regulatorio de este pase viene de resultados de búsqueda** —los
+134 proyectos en 31 estados, Idaho SB 1227, Oregon S.B. 1546, Washington H.B. 2225, el AI Basic Act coreano (2026-01-22), la
+Decisión 33/2026/QD-TTg de Vietnam y CONPES 4144—: **hay que abrir el texto normativo antes de usarlos con un cliente.**
 
 Cadena de borrado en la capa de telemetría — **pase 21 (2026-10-01)**. 🟢 **Verificado de primera mano leyendo el
 código fuente**, clonando cada repo con `git clone --depth 1 --filter=blob:none` y leyendo los archivos citados (no vía

@@ -8,6 +8,47 @@ updated: 2026-10-01
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 
+## 2026-10-01 (pase 23) — el módulo educativo de ERPNext existe, es una app aparte y tiene 657 ★: la pregunta que el pase 21 dejó abierta queda cerrada con el repo en la mano
+
+**Un repo nuevo verificado, y una no-novedad que vale escribir porque llegó por la misma búsqueda.**
+
+| Repo | Licencia | ★ | Commits | Qué es |
+|---|---|---|---|---|
+| **Frappe Education** · https://github.com/frappe/education | **GPL-3.0** ⚠️ — leída en **`license.txt`**, porque **la página del repo no declara licencia** | 657 | 1.091 | Gestión académica sobre Frappe Framework: alumnos y docentes, admisiones, programas y cursos, asistencia, cuotas, horarios y portal del alumno |
+
+### Por qué este repo importa más por lo que aclara que por lo que es
+
+El pase 21 registró ERPNext (GPL-3.0, 39,7k ★) y dejó una advertencia explícita: *«no se pudo confirmar que el módulo de
+educación sea parte del core de ERPNext […] verificar primero en qué app vive el módulo»*. **Este pase lo verificó y la
+sospecha era correcta:**
+
+| | |
+|---|---|
+| **Dónde vive** | En `frappe/education`, una app **independiente** — no en el core de `frappe/erpnext` |
+| **Desde cuándo** | **El corte es ERPNext v14.** Hasta v13 *Education* era un *domain* del core; en v14 se extrajo |
+| **Cómo se instala** | `bench get-app education` + `bench --site <sitio> install-app education`, luego `bench build` / `migrate` / `restart` |
+| **El síntoma que lo delata** | Los foros de Frappe acumulan hilos «Education module missing in domain list v14». **No es un error de instalación: es el split.** |
+| 🔴 **El dato que cambia una propuesta** | ERPNext tiene **39,7k ★**; el módulo académico, **657**. **La tracción del ERP no se hereda al módulo que al cliente le importa**, y proponer «ERPNext para educación» implica **dos** artefactos GPL-3.0, no uno |
+
+### La no-novedad, declarada en vez de omitida: el ERP permisivo de 12k ★ no sirve para educación
+
+La búsqueda de plataforma (`open source platform education ERP CRM MIT Apache`) devolvió **AureusERP**
+(https://github.com/aureuserp/aureuserp) en posición alta, y es **el candidato más tentador que vio esta KB en la capa
+administrativa**: **MIT** ✅, **12k ★**, **3.794 commits**, PHP sobre Laravel 13 + FilamentPHP 5, arquitectura de plugins.
+Es decir: todo lo que la KB viene pidiendo desde el pase 2, cuando concluyó que *«todo el SIS open source es PHP y
+copyleft»*.
+
+🔴 **Y no sirve, por una razón que sólo aparece abriendo el repo: no tiene módulo educativo.** Sus plugins cubren
+finanzas, operaciones, RRHH, gestión de clientes y proyectos — **no hay nada académico**: ni matrícula, ni programas, ni
+asistencia, ni cuotas de alumno, ni legajo. Es un ERP genérico de PyME que aparece en búsquedas de *education ERP*
+porque el listicle que lo cita las agrupa, no porque cubra el dominio.
+
+**Queda registrado como no-hallazgo con su razón**, y no como silencio, por dos motivos: (1) va a volver a aparecer en la
+primera búsqueda de ERP permisivo que haga cualquier pase futuro, y (2) **el hueco que deja es exactamente el que GegoK12
+(MIT, 54 ★) ocupa solo** — y saber que el segundo permisivo de la categoría tiene 12k ★ y ningún módulo académico es lo
+que explica por qué un SIS permisivo con 54 estrellas sigue siendo la única opción, en vez de parecer un descuido de
+búsqueda.
+
 ## 2026-10-01 (pase 22) — el stack de analítica oficial de Open edX es Apache-2.0, trae el LRS que el pase 21 declaró imborrable, y trae además el disparador LMS→telemetría que el pase 19 probó que no existe
 
 **Dos repos nuevos, los dos Apache-2.0, los dos de la organización `openedx`.** Entre los dos corrigen una advertencia
