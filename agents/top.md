@@ -8,12 +8,27 @@ updated: 2026-10-01
 
 > Agentes y herramientas AI open source para educación. Foco: MIT / Apache 2.0 / BSD.
 > Verificado repo por repo vía WebFetch el 2026-09-30 (stars y licencia leídos de la página del repo).
+> **Pase 25 del 2026-10-01:** **la tabla sigue en 37 filas — séptimo pase consecutivo sin altas**, y el barrido completo
+> obligatorio (cuatro búsquedas globales + cuatro regionales, con el año **calculado**) devolvió por tercera vez la capa
+> genérica y el material didáctico *sobre* AI. **El hallazgo de agente del pase no es un agente: es una puerta.**
+> `cassproject/CASS` (**Apache-2.0**, 62 ★) expone **MCP** entre sus cartuchos — **la primera pieza de estándar educativo
+> de esta KB con puerta nativa de agente**, y la que además hace las **aserciones** de competencia que las cuatro piezas
+> CASE de esta base no hacían. Ver la tendencia **65**, el patrón **P48** y el **gap 40** (está declarado, no medido).
 > **Pase 10 del 2026-10-01:** para el contenido, la verificación se hizo contra el archivo `LICENSE`, no contra el README — y por eso apareció la contradicción que documenta la capa de contenido curricular, abajo.
 
 ## Agentes y herramientas destacadas
 
 **37 filas = 35 agentes + 2 bibliotecas de skills.** Ordenados por stars. El conteo se hizo a mano en el pase 19 y
 se explica abajo, porque es la cuarta vez que esta KB se pelea con este número.
+
+> *Pase 25 del 2026-10-01:* **séptimo pase sin altas, y el eje de búsqueda que el pase 23 diagnosticó sigue siendo el que
+> rinde — pero rinde infraestructura, no agentes.** Se ejecutaron los siete ítems de la consigna del pase 24 (`item bank`,
+> `proctoring`, `timetable`, `competency framework`/CASE, y los estándares Caliper, CASE y xAPI Profiles, más
+> `LTI platform`): **18 repos verificados de primera mano, 17 nuevos para esta KB, y ninguno es un agente.** Van a `repos/foundations.md` y
+> `verticals/solutions.md`. **La lectura, a esta altura, es estructural y conviene no repetirla como queja:** en educación
+> el open source produce **capas de interoperabilidad, evaluación y administración**, y los **agentes** que se usan son los
+> genéricos de la industria, customizados. Esta tabla de 37 filas es el inventario de lo que sí existe; el crecimiento de
+> esta KB está en **cómo se componen**, no en cuántos hay. Ver **P48** y **P49**.
 
 > *Pase 23 del 2026-10-01:* **la tabla sigue en 37 filas — quinto pase consecutivo sin altas, y este identificó la causa
 > estructural en vez de volver a declarar el agotamiento.** Se corrió el barrido completo obligatorio (cuatro búsquedas

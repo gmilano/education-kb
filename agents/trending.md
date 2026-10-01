@@ -9,6 +9,53 @@ updated: 2026-10-01
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 > No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
 
+## 2026-10-01 (pase 25) — séptimo pase sin altas de agentes, y el pase que encontró la puerta de agente donde no la buscaba: un estándar educativo con cartucho MCP
+
+**La tabla principal sigue en 37 filas.** Se corrió el barrido completo obligatorio —las cuatro búsquedas globales y las
+cuatro regionales, con el año **calculado** (2026)— y **no apareció ni un agente educativo que esta KB no tuviera.** Es la
+séptima pasada consecutiva sin altas, y a esta altura **el dato ya no es la ausencia: es que la ausencia se explica y la
+explicación se confirmó por tercer pase seguido.** Candidato por candidato:
+
+| Candidato que trajo la búsqueda | Qué es | Por qué no entra en `agents/top.md` |
+|---|---|---|
+| **openclaw** (385.407 ★), **dify** (151.639 ★), **browser-use** (108.128 ★), **Mem0** (62.735 ★), **AutoGen** (60.284 ★), **Flowise** (55.226 ★) | Agentes y orquestadores de propósito general | **Ya en la KB o fuera de dominio.** El barrido global de *«open source AI agents»* devuelve la capa genérica por **séptima** vez, con las mismas cifras que el pase 24 |
+| **`rohitg00/ai-engineering-from-scratch`** (#1 en GitHub Trending el 2026-05-24), **Awesome LLM Apps** (133k ★), **Prompt Engineering Guide** (77,6k ★), **`free-ai-agents-resources`**, **`speedyapply/2026-AI-College-Jobs`** (5,2k ★) | Cursos, listas y bolsas de trabajo **sobre** AI | **No es software que educa: es material didáctico sobre AI.** Tercera confirmación consecutiva del fenómeno que midió el pase 23 |
+| **Hermes Agent** (Nous Research), **Aider**, **Cline**, **CrewAI**, **LangGraph** | Agentes de código y frameworks multi-agente | Fuera de dominio |
+| **LearnUpon** (nueva sede APAC en Sídney + autoría de cursos con AI), **NIIT MTS**, **TCS + Pearson**, **Cisco / IBM / BT / Rolls-Royce** (socios del AI Adoption Summit del Reino Unido) | Plataformas y alianzas **comerciales** de formación | **No son open source.** Van a `intel/market.md` como *players* |
+| **OpenEduCat**, **CK-ERP** | ERP educativo sobre Odoo y ERP/CRM educativo de 32 módulos | **No son agentes: son plataformas.** Van a `verticals/solutions.md` |
+
+### 🔴 El hallazgo de agente del pase, y vino por la puerta de los estándares: `cassproject/CASS` expone **MCP**
+
+**Es la primera vez que esta KB encuentra una pieza de estándar educativo con puerta nativa de agente.** CaSS
+(Apache-2.0, 62 ★, 29 forks, 2.123 commits — verificado de primera mano) hospeda marcos de competencias, **registra
+aserciones de logro individual y computa perfiles del aprendiz**, y entre sus cartuchos de interoperabilidad
+—**IMS CASE, xAPI, CTDL-ASN, ASN, Open Badges 2.0**— hay uno de **MCP**.
+
+**Por qué importa más que una fila más en la tabla.** Siete pases buscaron *agentes educativos* y encontraron agentes
+genéricos. Este pase no encontró un agente nuevo: **encontró el enchufe por el que los agentes que la KB ya tiene se
+conectan al expediente de competencias del alumno.** La diferencia operativa es grande: un tutor que lee competencias por
+MCP desde CaSS **no necesita que nadie le escriba un adaptador**, y lo que devuelve queda como *aserción* en un servidor
+de estándares, no como texto en un chat. Es la pieza que faltaba entre la capa de estándares y la capa de agentes de esta
+misma KB. Ver el patrón **P48** y la tendencia **65**.
+
+### La consigna del pase 24 se ejecutó entera, y conviene registrar que rindió por segunda vez consecutiva
+
+La instrucción era precisa: barrer los artefactos **`item bank`**, **`proctoring`**, **`timetable`** y
+**`competency framework`/CASE**, y los estándares **Caliper**, **CASE** y **xAPI Profiles**, más *«buscar `LTI platform`
+explícitamente»*. **Se hizo los siete, y el rendimiento fue el más alto del eje hasta ahora: 18 repos verificados de
+primera mano, 17 nuevos para esta KB** (ver `repos/trending.md`), más **dos correcciones a conclusiones del propio pase 24** y **una decisión de
+estándar con fecha** (Caliper, tendencia **63**).
+
+🔵 **Dos de los tres resultados más valiosos del pase no son repos: son límites medidos.** Que no exista *item bank* QTI 3
+certificado en open source, y que **toda** la capa de proctoring sea copyleft o de pesos no comerciales, son hallazgos de
+decisión: ahorran una propuesta mal armada. **Un pase sin altas que mide dos límites rinde más que un pase con tres filas
+de relleno** — y van siete pases en que esta KB elige eso.
+
+**La consigna para el pase 26, y cambia de eje porque el artefacto ya rindió dos veces y queda poco sin barrer:**
+1. **Cerrar los artefactos que faltan**, que son los menos: **`admissions`/matrícula**, **`library`/OPAC** (ILS: Koha, Evergreen) y **`alumni`/*student success*** (predicción de deserción, que es Annex III).
+2. **Cambiar el eje de nuevo, y hacia donde este pase mostró tracción: el `pluggable cartridge`.** CaSS resultó valiosa por sus cartuchos, no por su core. **Buscar por el conector, no por el sistema:** `MCP server` + los estándares que esta KB ya tiene inventariados (**OneRoster, CASE, xAPI, QTI, LTI**). Si hay un servidor MCP por estándar educativo, es la capa de integración entera de esta KB convertida en herramientas de agente.
+3. **Una verificación que este pase dejó pendiente y es barata:** `LtiLibrary/LtiAdvantagePlatform` dice **ASP.NET Core 10** y es **MIT con AGS+NRPS+Deep Linking** — **levantarla contra un *tool* real** (`ltijs`, Apache-2.0, 373 ★) y medir si el *launch* cierra de punta a punta. Si cierra, esta KB puede proponer **el lado LMS** con licencia permisiva, que es lo que no podía hacer hasta el pase 24. Si no cierra, hay que escribirlo: *«sample»* está en su propia descripción.
+
 ## 2026-10-01 (pase 24) — sexto pase sin altas de agentes, pero el pase que dejó de leer código y lo ejecutó: la medición corrigió una conclusión que la KB había escrito con confianza
 
 **La tabla principal sigue en 37 filas.** Se corrió el barrido completo obligatorio —las cuatro búsquedas globales y las

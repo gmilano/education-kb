@@ -7,6 +7,14 @@ updated: 2026-10-01
 # 📡 Tendencias — education
 
 > Ventana de investigación: septiembre 2026. Verificado 2026-09-30; el pase 11, el 2026-10-01.
+> **Pase 25:** se ejecuta **entera** la consigna del pase 24 (cuatro artefactos y tres estándares) y el eje rinde por tercera vez:
+> **Caliper dejó de ser open source el 2023-06-17** —repos movidos a privado por 1EdTech— así que de los dos estándares de
+> analítica de aprendizaje **sólo xAPI se puede construir** (tendencia **63**); la capa de **proctoring** es la única de esta
+> KB **sin ninguna opción permisiva y productiva**, y es justo la que el **Annex III** nombra de alto riesgo (tendencia **64**,
+> patrón **P49**, gap **39**); y aparece la **primera pieza de estándar educativo con puerta MCP** —CaSS, Apache-2.0— que
+> además hace las **aserciones** de competencia que las cuatro piezas CASE de esta KB no hacían (tendencia **65**, patrón **P48**).
+> ⚠️ **Y dos no-hallazgos del pase 24 eran falsos negativos:** `LongsightGroup/qti3` existe (y trae el *item bank* que la
+> consigna pedía) y `yetanalytics/xapipe` es el repo de *LRSPipe*. Ver la nota de método del pase 25.
 > **Pase 24:** se ejecuta la acción del pase 23 **midiendo en vez de leyendo**, y el resultado **corrige** al pase 23:
 > el desglose por tabla de un borrado **ya viaja por el cable** y se descarta, así que el **gap 36** no es refactor de SQL
 > sino de la capa que recoge el resultado — pero el conteo único disponible es el del **primer** `DELETE` y vale **`0`**
@@ -2473,6 +2481,138 @@ Barrido regional del pase 21 (🔴 **ninguna fuente abierta de primera mano; tod
 [UNU/UNESCO — AI en educación superior en LAC](https://unu.edu/publication/ai-implementation-higher-education-latin-america-and-caribbean) ·
 [BID — marco regulatorio habilitante para AI en LAC](https://publications.iadb.org/publications/english/document/An-Enabling-Regulatory-Framework-for-Artificial-Intelligence-in-Latin-America-and-the-Caribbean.pdf) ·
 [Barchart — adopción de AI en LATAM, expectativas 2026](https://www.barchart.com/story/news/36012717/industry-demand-is-driving-ai-adoption-from-the-ground-up-in-latin-america-heres-what-to-expect-in-2026)
+
+## 63. De los dos estándares de analítica de aprendizaje, uno dejó de ser open source — con fecha, y hace tres años (agregado 2026-10-01, pase 25)
+
+**El hallazgo:** 1EdTech **movió los repositorios de Caliper Analytics a privado el 2023-06-17**, y el acceso quedó para
+*Contributing Members* y *Affiliates*. No es una inferencia: **la descripción del repo `1EdTech/caliper-java` es
+literalmente el aviso** — *«NOTICE: 1EdTech will be moving Caliper to private repositories on June 17, 2023. Access to
+the repositories will be available for 1EdTech Contributing Members and Affiliates.»*
+
+Medido contra el otro estándar de la misma función:
+
+| | **xAPI** (ADL → IEEE) | **Caliper Analytics** (1EdTech) |
+|---|---|---|
+| Especificación pública | `adlnet/xapi-profiles` — **Apache-2.0** ✅, 60 ★, 33 forks, 153 commits, viva | `1EdTech/caliper-spec` — 22 ★, **IMS Specification Document License** ⚠️ **no OSI** |
+| Implementación de referencia | **Pública y permisiva:** `yetanalytics/lrsql` + **`yetanalytics/xapipe`** (Apache-2.0, 17 ★) | 🔴 **Privada.** `caliper-java`, `caliper-js`, `caliper-python`: **404** |
+| Lo que queda público | — | `caliper-js-example` (**LGPL-3.0**, 8 ★, **©2018**) y `caliper-ontology`, **archivado** en 2019 |
+| Trabajo normativo | **IEEE p9274.2.1 activo** tras xAPI 2.0 | Caliper 1.2, con implementaciones cerradas |
+
+**Por qué es una tendencia y no un dato de catálogo.** Es la instancia más nítida del patrón *«estándar instalado vs.
+modelo propio»* que esta KB nombró en la **tendencia 29**, y con una vuelta nueva: acá **el estándar sigue instalado
+—los LMS siguen emitiendo Caliper— pero su implementación dejó de ser construible.** Eso **traslada costo al integrador**:
+el cliente tiene un LMS que habla Caliper y un proveedor que, si no es miembro del consorcio, **tiene que escribir el
+adaptador**. Y explica hacia atrás por qué toda la capa de telemetría que esta KB levantó en diez pases es xAPI: **no fue
+una preferencia de esta base, fue el único lado del que había código.**
+
+🔵 **La regla operativa, desde el pase 25:** se propone **xAPI**. Cuando el cliente pida Caliper, se le dice que **la
+especificación es legible pero las implementaciones no son open source desde junio de 2023** y se cotiza el adaptador
+como trabajo, no como configuración. Y `yetanalytics/xapipe` (*LRSPipe*) es la pieza que faltaba en el medio: **filtra
+telemetría por *statement template* y por *pattern* de un xAPI Profile**, que es el control de minimización que piden
+P40, P44, P45, P46 y P47.
+
+## 64. La única capa de esta KB sin ninguna opción permisiva y productiva es, exactamente, la que el regulador nombró de alto riesgo (agregado 2026-10-01, pase 25)
+
+Se barrió la capa de *proctoring* completa —era consigna del pase 24— y el resultado es simétrico y vale como advertencia
+de propuesta: **las cinco piezas que existen fallan el mismo filtro, por dos caminos distintos.**
+
+- **Camino copyleft:** `openedx/edx-proctoring` (**AGPL-3.0**, 68 ★), `oat-sa/lib-lti1p3-core` (**GPL-2.0**, 37 ★ — y es **la única certificada en *LTI 1.3 Proctoring Services*** de toda la base), `sudosylabs/Proctor` (**AGPL-3.0**, pre-release declarado), `kamlendras/OpenProctor` (**AGPL-3.0**, 37 commits).
+- **Camino de los pesos:** `vardanagarwal/Proctoring-AI` es **MIT y tiene 635 ★ / 352 forks** —la pieza más traccionada de la capa— **pero su modelo de *facial landmarks* está entrenado con datasets de uso no comercial**, por su propio README, y el proyecto se declara de investigación.
+
+🔴 **Y acá está la tendencia, que es la coincidencia:** el *proctoring* es **la única función educativa que el Annex III
+del EU AI Act nombra de forma explícita** entre las de alto riesgo (aplicable **2027-12-02**), y Corea del Sur ya la
+alcanza como *high-impact AI* desde el **2026-01-22**. O sea: **la capa con más exigencia regulatoria del sector es la
+que tiene cero opciones permisivas y productivas en open source.** Las dos cosas no son independientes — el riesgo
+regulatorio y de reputación es justamente lo que mantiene a los proveedores serios en modelo cerrado y deja el open
+source en manos de demos y de copyleft institucional.
+
+**La consecuencia comercial, y conviene decirla al revés de como la pide el cliente:** cuando un cliente pide
+*«proctoring con AI»*, la respuesta rentable **no es buscar la pieza**: es **sacar el entregable del Annex III**. Se
+entrega integridad de examen con **banco de ítems variabilizado y aleatorización** (`LongsightGroup/qti3` → ver
+corrección en **P49**), **entrega certificada**, **notas por AGS** y **evidencia de proceso en xAPI**. Menos riesgo
+regulatorio, licencias permisivas y un expediente defendible. Ver **P49** y el **gap 39**.
+
+## 65. Apareció la primera pieza de estándar educativo con puerta nativa de agente, y la capa de competencias de esta KB no sabía hacer aserciones (agregado 2026-10-01, pase 25)
+
+**Dos hallazgos que van juntos, los dos en `cassproject/CASS`** (Apache-2.0, 62 ★, 29 forks, 2.123 commits, verificado de
+primera mano):
+
+**(1) La capa de competencias de esta KB estaba incompleta y no lo sabía.** El pase 14 y el pase 20 levantaron la capa
+CASE —`opensalt` (MIT, 45 ★), `1EdTech/OpenCASE` (Apache-2.0, 9 ★), `compeito` (Apache-2.0, 3 ★), `conform-ed` (MIT,
+2 ★)— y las cuatro piezas **hospedan y validan marcos de competencias**. Ninguna **registra si un alumno alcanzó una
+competencia**. CaSS hace las dos: autoría de marcos **y aserciones de logro individual con cómputo de perfil del
+aprendiz**. Con 62 ★ es, además, **la más traccionada de toda la capa**. La pregunta que paga un proyecto de competencias
+no es *«¿existe este marco?»* sino *«¿qué sabe este alumno?»*, y esta KB no tenía con qué responderla.
+
+**(2) Y trae cartucho MCP.** Entre sus *«pluggable cartridges»* —**IMS CASE**, **xAPI**, CTDL-ASN, ASN, **Open Badges
+2.0**— hay uno de **MCP**. 🔵 **Es la primera vez en 25 pases que esta KB encuentra una pieza de estándar educativo que
+expone puerta nativa de agente.** La diferencia es de arquitectura, no de comodidad: un tutor de `agents/top.md` **lee el
+marco y escribe la aserción sin adaptador escrito a mano**, y lo que devuelve **queda como aserción en un servidor de
+estándares, no como texto en un chat** — o sea, queda auditable, exportable a Open Badges y comparable entre cohortes.
+
+**Por qué es tendencia:** siete pases buscando *«agentes educativos»* devolvieron agentes genéricos (ver
+`agents/trending.md`). Este pase encontró el valor en el lado opuesto del cable: **no un agente nuevo, sino el enchufe
+estandarizado por donde entran los que ya hay.** Si el patrón se repite —estándares educativos publicando servidores MCP—
+la capa de integración entera de esta KB se vuelve herramientas de agente, y eso es la consigna de búsqueda del pase 26.
+
+## Nota de método del pase 25 (2026-10-01) — el pase que ejecutó la consigna entera y volvió con dos falsos negativos propios: el eje artefacto rinde, y lo que más rinde es declarar límites
+
+**Lo que se hizo:** el barrido obligatorio completo —**cuatro búsquedas globales y cuatro regionales**, con el año
+**calculado** (2026), no fijado— **más los siete ítems de la consigna del pase 24**: los artefactos `item bank`,
+`proctoring`, `timetable` y `competency framework`/CASE, los estándares **Caliper**, **CASE** y **xAPI Profiles**, y la
+instrucción específica de *«buscar `LTI platform` explícitamente»*. **Se ejecutaron los siete.**
+
+**Resultado: 18 repos verificados de primera mano, 17 nuevos para esta KB**, 3 tendencias nuevas (**63, 64, 65**), 2 patrones nuevos
+(**P48, P49**), 2 gaps nuevos (**39, 40**) y **dos correcciones a conclusiones del pase 24**.
+
+### 🔴 Los dos falsos negativos del pase 24, y los dos tienen la misma causa
+
+| Lo que el pase 24 escribió | Lo que el pase 25 midió | La causa |
+|---|---|---|
+| *«`LongsightGroup/qti3-core` → **404** […] el repo GitHub con ese nombre no existe»* | ✅ **`LongsightGroup/qti3` existe** — MIT, 667 commits, 12 paquetes, **con *writer* de banco de ítems y migración QTI 1.2/2.x→3** | Se buscó **el nombre del paquete npm** (`@longsightgroup/qti3-core`), no el del repo. El monorepo no lleva sufijo |
+| *«`yetanalytics/lrspipe`»* (citado como la pieza de *forwarding*) | **404.** El repo real es **`yetanalytics/xapipe`** (Apache-2.0, 17 ★) | Se buscó **el nombre del producto** (*LRSPipe*), no el del repo |
+
+🔵 **La regla que este pase agrega, y vale para toda la KB:** **el nombre del producto y el nombre del paquete no son el
+nombre del repo.** Antes de escribir un 404 como no-hallazgo hay que probar **el nombre corto de la organización** —sin
+sufijos (`-core`, `-platform`) y sin el nombre comercial—. Dos de los cuatro no-hallazgos que el pase 24 declaró eran
+repos reales, y uno de ellos tenía justamente lo que la consigna del pase 25 estaba buscando. Un no-hallazgo mal medido
+**es peor que no buscar**, porque cierra la pregunta.
+
+### ⚠️ Advertencia 1 — dos dominios institucionales bloqueados, y los dos sostienen cifras regionales
+
+`unu.edu`, `coe.int` y `www.iesalc.unesco.org` están **bloqueados por el proxy de egreso** de esta sesión. Eso afecta
+directamente a dos datos que van a `intel/market.md`:
+
+- Las cifras del estudio **UNESCO IESALC / UNU-IAS** sobre AI en educación superior en LAC (**87 %**, **74 %**, **45 % vs. 70 %**) vienen de **resúmenes de buscador concordantes**, **no** de la lectura de la fuente primaria. Están etiquetadas como tales en `market.md`.
+- La **2.ª conferencia de trabajo del Consejo de Europa** sobre las dimensiones regulatorias de la AI en educación **no se pudo verificar**: queda registrada como **señal sin verificar**, con el dominio bloqueado dicho por su nombre.
+
+### ⚠️ Advertencia 2 — una tensión de fechas en la fuente LATAM que no hay que copiar mal
+
+El mismo estudio aparece con **dos fechas** según el canal: el **trabajo de campo** se declara entre **agosto y octubre de
+2025**, y el **lanzamiento** fue durante la **Digital Learning Week 2026** en la sede de UNESCO en París. **Las dos son
+correctas y no son la misma cosa.** Una propuesta que cite *«datos 2026»* para una encuesta de campo de **2025** está
+sobredatando la evidencia en un año, que en adopción de AI es mucho. Escribir: *«encuesta de 2025, publicada en 2026»*.
+
+### ⚠️ Advertencia 3 — la coincidencia de cifras LATAM es aparente, y mezcla dos poblaciones
+
+El barrido LATAM devolvió **87 %** (instituciones de educación superior con AI en al menos un área, IESALC) junto a
+**«100 % de las empresas usará AI en al menos una actividad»** y **«85 % de las empresas la integra nativamente»**. **No
+son la misma medición ni la misma población:** una es de **universidades**, las otras de **empresas**. Promediarlas o
+usarlas de refuerzo mutuo en una propuesta es un error de lectura. La cifra que sirve para un *engagement* educativo es
+la de **instituciones**.
+
+### Lo que este pase NO hizo, declarado como tal
+
+- **No levantó `LtiLibrary/LtiAdvantagePlatform` contra un *tool* real.** Es **MIT, con AGS v2 + NRPS v2 + Deep Linking 2.0 y ASP.NET Core 10**, pero **se describe a sí misma como *«Sample»***. Que el *launch* cierre de punta a punta **está leído, no medido** — y es la acción barata que el pase 26 tiene que ejecutar antes de que esta KB prometa el lado LMS.
+- **No verificó la fecha del último commit** de ninguno de los 12 repos: la página de GitHub no la expuso de forma legible vía WebFetch en esta sesión. Las señales de vida usadas son **commits totales, releases y forks**, que son más débiles.
+- **No midió si el cartucho MCP de CaSS funciona.** Está **declarado en el README** entre los *pluggable cartridges*; no se levantó el servidor ni se listó una sola herramienta. Toda la tendencia **65** y el paso 4 de **P48** descansan en una declaración del propio proyecto. **Es el gap 40.**
+- **No buscó** los artefactos `admissions`, `library`/OPAC ni `alumni`/*student success*: quedan como consigna del pase 26.
+
+### 🔵 Las tres acciones que este pase deja escritas para el siguiente
+
+1. **Levantar `LtiAdvantagePlatform` (MIT) contra `ltijs` (Apache-2.0, 373 ★) y medir si el *launch* OIDC cierra**, con AGS devolviendo una nota. Si cierra, esta KB puede proponer **el lado LMS con licencia permisiva** — capacidad que no tuvo en 24 pases. Si no cierra, escribirlo: *«Sample»* está en su propia descripción.
+2. **Levantar el cartucho MCP de CaSS y listar sus herramientas** (gap 40). Es la verificación que convierte la tendencia 65 de promesa en capacidad, y la que decide si **P48** se puede cotizar.
+3. **Cambiar el eje de búsqueda al conector**, que es donde este pase mostró tracción: `MCP server` + cada estándar que esta KB ya inventarió (**OneRoster, CASE, xAPI, QTI, LTI**). CaSS valió por sus cartuchos, no por su núcleo.
 
 ## Nota de método del pase 24 (2026-10-01) — el pase que dejó de leer código y lo ejecutó, y por eso pudo corregir al pase anterior
 

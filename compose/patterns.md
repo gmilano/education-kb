@@ -8,6 +8,10 @@ updated: 2026-10-01
 
 > Recetas concretas: repos nombrados, licencias verificadas, wiring explícito y estimación.
 > Todos los repos citados fueron verificados vía WebFetch el 2026-09-30; los del pase 11, el 2026-10-01 (ver `agents/top.md`).
+> **Pase 25:** +2 patrones — **P48** (del acervo QTI viejo a la aserción de competencia: migración → banco de ítems →
+> entrega **certificada** → evidencia xAPI filtrada → competencia en CaSS, **todo MIT/Apache-2.0**) y **P49** (integridad
+> de examen **sin** AI de vigilancia, que saca el entregable del **Annex III** en vez de buscar la pieza de proctoring que
+> no existe en open source permisivo).
 > **Pase 11:** +2 patrones — **P25** (riesgo de abandono conforme al Anexo III, la capa con presupuesto ya asignado y sin oferta open source) y **P26** (agente docente sobre la ontología curricular nacional ya publicada).
 
 ## Patrón base
@@ -2495,3 +2499,114 @@ sin decirlo, no.
 - **El *blast radius* del gap 38 no está enumerado.** Que el borrado de actor sea la única consulta multi-sentencia del
   producto es lo que se desprende de cuatro pases de lectura, pero no se contó. Si hubiera otras, el paso 0 es más urgente,
   no menos.
+
+---
+
+## P48 — Del acervo de ítems viejo a la aserción de competencia, todo permisivo: migración QTI → banco → entrega certificada → evidencia xAPI → competencia en CaSS (agregado en el pase 25; **North America primero por acervo instalado, transversal por licencia**)
+
+**Qué resuelve, en los términos en que el cliente lo pide:** *«tenemos veinte años de ítems en QTI 2.1, queremos práctica
+adaptativa y queremos poder decir qué sabe cada alumno»*. Hasta el pase 24 esta KB **no podía armar esta cadena completa**:
+le faltaban el banco de ítems, la migración y la pieza de aserción. **Las tres aparecieron este pase, y las tres son
+permisivas.**
+
+### Las piezas, todas verificadas de primera mano el 2026-10-01
+
+| Rol en la cadena | Repo | Licencia | ★ | Nota decisiva |
+|---|---|---|---|---|
+| **Migración + banco + autoría** | https://github.com/LongsightGroup/qti3 | **MIT** ✅ | 5 | 12 paquetes, 667 commits. **Migra QTI 1.2 y QTI 2.x → autoría QTI 3** y escribe **paquete de banco de ítems**. 🚫 **No certificado**, lo dice su README |
+| **Entrega al candidato** | https://github.com/amp-up-io/qti3-item-player | **MIT** ✅ | **30** | ✅ **Certificado 1EdTech: QTI 3 Basic *y* Advanced «Delivery»**. Sólo entrega — no autoría, no banco |
+| **Entrada al LMS** | https://github.com/Cvmcosta/ltijs | **Apache-2.0** ✅ | **373** | Node/TS. Launches, Deep Linking, **AGS** (devolver notas), NRPS, Dynamic Registration. **La más traccionada de su capa** |
+| *(alternativa por stack)* | `UOC/spring-boot-lti-advantage` (MIT, Java) · `dmitry-viskov/pylti1.3` (MIT, 138 ★, Python) · `1EdTech/lti-1-3-php-library` (Apache-2.0, 124 ★, PHP) | ✅ | — | **Elegir por el stack del cliente, no por el de esta KB** (es el sesgo que corrigió el pase 25) |
+| **Telemetría** | `yetanalytics/lrsql` *(ya en la KB)* | **Apache-2.0** ✅ | — | LRS xAPI. ⚠️ **Leer antes el paso 0 de P47** si va con MariaDB/MySQL (gap 38) |
+| **Minimización de telemetría** | https://github.com/yetanalytics/xapipe | **Apache-2.0** ✅ | 17 | *LRSPipe*. **Filtra por *statement template* y por *pattern* de un xAPI Profile**: decide qué sale y qué no |
+| **Perfil xAPI** | https://github.com/adlnet/xapi-profiles | **Apache-2.0** ✅ | 60 | La especificación. Grupo **IEEE p9274.2.1** activo |
+| **Aserción de competencia** | https://github.com/cassproject/CASS | **Apache-2.0** ✅ | **62** | Marcos + **aserciones de logro** + perfil del aprendiz. Cartuchos **IMS CASE**, **xAPI**, **Open Badges 2.0** y 🔵 **MCP** |
+| **Modelo de qué sabe el alumno** | `pykt-team/pykt-toolkit` *(ya en la KB)* | **MIT** ✅ | 441 | *Knowledge tracing* profundo, para elegir el próximo ítem |
+
+### El wiring, en cinco pasos, y sólo dos son desarrollo
+
+1. **Migrar e inventariar (`LongsightGroup/qti3`).** Correr el paquete de migración sobre el acervo QTI 1.2/2.x y escribir el **paquete de banco de ítems**. Salida: ítems QTI 3 de autoría, con *«typed diagnostics»* — o sea, **el inventario de lo que no migró limpio es parte del entregable**, y eso es lo que se le reporta al cliente por volumen.
+2. **Entregar con la pieza certificada (`amp-up-io/qti3-item-player`).** El banco alimenta al *player* certificado. ⚠️ **Esta separación es el núcleo del patrón y va escrita en la propuesta:** el sello de 1EdTech cubre **la entrega**, que es lo que el cliente audita; la autoría y el banco van con la pieza no certificada. Prometer *«todo certificado»* es falso.
+3. **Montar como *tool* LTI (`ltijs`).** *Launch* OIDC desde el LMS del cliente, y **las notas vuelven por AGS** al *gradebook* — sin exportaciones manuales. Es configuración más pegamento, no desarrollo de plataforma.
+4. **Drenar evidencia de proceso a xAPI, filtrada (`lrsql` + `xapipe`).** Las interacciones con el ítem salen como sentencias xAPI; **`xapipe` filtra por el *statement template* del perfil** antes de que lleguen al LRS de largo plazo. **Esto es minimización por construcción**, no una política escrita: lo que el perfil no contempla, no viaja.
+5. **Asertar la competencia (`CaSS`).** El resultado del ítem se convierte en **aserción de logro** contra el marco de competencias por el cartucho **xAPI** o **IMS CASE**, y queda disponible como **Open Badges 2.0**. 🔵 **Y por el cartucho MCP, un tutor de `agents/top.md` lee el marco y escribe la aserción sin adaptador propio** (⚠️ ver la advertencia del gap 40).
+
+**Los dos pasos que son desarrollo real son el 1 y el 5** —la limpieza del acervo migrado y el mapeo ítem→competencia—.
+Los pasos 2, 3 y 4 son integración de piezas que ya hacen lo que hace falta.
+
+### Dónde se vende primero
+
+| Región | Gancho |
+|---|---|
+| **North America** | **El acervo instalado y el costo de salida del proveedor de assessment.** El estándar curricular ya está (`commonstandardsproject/api`, 50 estados; **Ed-Fi**, Apache-2.0). Cotizable **por volumen de ítems**, unidad que el cliente ya cuenta |
+| **EMEA** | Como pieza de **P49**: integridad sin proctoring. Y el marco de competencias puede anclarse a la ontología de Oak (`oak-curriculum-ontology`, 50.948 *key learning points*) |
+| **LATAM** | Entra por **gobernanza**: el 45 % de las instituciones de LAC con guía formal de AI (vs. 70 % en Europa y North America) necesita **resultado medible**, y la aserción de competencia es exactamente eso |
+| **APAC** | ⚠️ **Con cuidado:** evaluación y aprendizaje adaptativo están alcanzados por el **AI Basic Act** coreano (vigente 2026-01-22) y por el **Annex III** europeo. Ir con el expediente de **P42** desde el día uno |
+
+### Plazo y alcance
+
+| | |
+|---|---|
+| **Piloto (un curso, un marco, sin migración)** | **4–6 semanas** |
+| **Migración de acervo** | **depende del volumen**, y se cotiza por ítem: el *diagnostics* tipado del paso 1 da la curva real tras la primera tanda |
+| **Cadena completa con aserción y badges** | **10–14 semanas** |
+
+### ⚠️ Lo que este patrón NO promete
+
+- **La certificación no cubre la cadena, cubre la entrega.** Dicho arriba, repetido acá porque es el error fácil.
+- **El cartucho MCP está declarado, no medido** (**gap 40**). El paso 5 funciona igual por xAPI o IMS CASE; **lo que no se puede prometer todavía es el *«sin adaptador»***.
+- **`LongsightGroup/qti3` tiene 5 ★.** La tracción es baja; lo que sostiene la elección son **667 commits y 12 paquetes publicados**, y que **es el único camino open source desde QTI viejo**. Si el cliente exige respaldo comercial, esto es un riesgo que se declara.
+- **No incluye proctoring**, y es deliberado: ver **P49** y la tendencia **64**.
+
+---
+
+## P49 — Integridad de examen sin AI de vigilancia: sacar el entregable del Annex III en vez de buscar la pieza que no existe (agregado en el pase 25; **EMEA primero por Annex III, APAC por el AI Basic Act coreano, transversal por licencia**)
+
+**El patrón empieza con un «no».** Cuando el cliente pide *«proctoring con AI»*, la respuesta correcta no es buscar la
+pieza: **este pase barrió la capa entera y no existe ninguna opción open source permisiva y productiva** (tendencia
+**64**). Y el *proctoring* es **la única función educativa que el Annex III del EU AI Act nombra explícitamente** como
+alto riesgo (aplicable **2027-12-02**); Corea del Sur ya la alcanza como *high-impact AI* desde el **2026-01-22**.
+
+### Lo que hay, y por qué ninguna sirve
+
+| Pieza | Licencia | ★ | Por qué se descarta |
+|---|---|---|---|
+| `vardanagarwal/Proctoring-AI` | **MIT** ✅ | **635** | 🔴 **Pesos de uso no comercial** (*facial landmarks*), por su propio README. Código permisivo, modelo no. Y es demo de investigación |
+| `openedx/edx-proctoring` | ⚠️ AGPL-3.0 | 68 | Copyleft fuerte: inviable para un SaaS multicliente |
+| `oat-sa/lib-lti1p3-core` | ⚠️ GPL-2.0 | 37 | **La única certificada en *LTI 1.3 Proctoring Services*** — y copyleft |
+| `sudosylabs/Proctor` | ⚠️ AGPL-3.0 | 0 | *«has not published a supported production release»* |
+| `kamlendras/OpenProctor` | ⚠️ AGPL-3.0 | 15 | 37 commits, sin releases |
+
+### El wiring de la alternativa, en cuatro pasos
+
+1. **Variabilizar el ítem en vez de vigilar al candidato (`LongsightGroup/qti3`, MIT).** Usar el ***writer* de banco de ítems** para generar **familias de variantes** del mismo ítem y **aleatorizar por candidato**. El fraude por copia entre pares se vuelve ineficaz **sin mirar a nadie por la cámara**.
+2. **Entregar con la pieza certificada (`amp-up-io/qti3-item-player`, MIT, certificada «Delivery»),** con límite de tiempo y navegación controlada por la propia especificación QTI 3.
+3. **Devolver notas por AGS (`ltijs`, Apache-2.0, 373 ★)** al *gradebook* del LMS: la traza de calificación queda en el sistema de registro del cliente, no en una herramienta aparte.
+4. **Evidencia de proceso en xAPI, minimizada (`lrsql` + `yetanalytics/xapipe`, los dos Apache-2.0).** Secuencia de respuestas, tiempos por ítem y revisiones — **filtrado por *statement template* del perfil**, así que **no se recoge biometría ni video**: no hay dato de categoría especial que custodiar, porque no se capturó.
+
+### Por qué es mejor negocio que el proctoring que el cliente pidió
+
+| | Proctoring con AI | P49 |
+|---|---|---|
+| **Clasificación EU AI Act** | 🔴 **Annex III, alto riesgo** (2027-12-02): expediente, evaluación de impacto, auditoría | ✅ **Fuera del Annex III** — no hay inferencia sobre la persona |
+| **Dato tratado** | Rostro, mirada, voz, ambiente — **categoría especial**, y de **menores** en K-12 | Respuestas, tiempos y secuencia: dato académico |
+| **Licencia disponible** | AGPL/GPL o pesos no comerciales | **MIT y Apache-2.0 de punta a punta** |
+| **Lo que se discute con el cliente** | Falsos positivos, sesgo, reclamos, prensa | Diseño de la evaluación |
+
+🔵 **El argumento de venta, en una línea:** *«no le instalamos vigilancia: le rediseñamos el examen para que la vigilancia
+no sea necesaria — y le sacamos el proyecto del Anexo III de paso»*. En EMEA el ahorro es **regulatorio y cuantificable**;
+en las otras regiones se vende por **licencia y por costo**.
+
+### Plazo y alcance
+
+| | |
+|---|---|
+| **Diagnóstico de integridad + diseño de variantes sobre un examen real** | **2–3 semanas** |
+| **Implementación completa (banco variabilizado + entrega + AGS + xAPI filtrado)** | **8–10 semanas** |
+| **Encadenado con P48** | Comparte los pasos 1-4: si el cliente ya va a P48, **P49 es incremental** |
+
+### ⚠️ Lo que este patrón NO promete
+
+- **No elimina el fraude, cambia su economía.** Un candidato con ayuda externa presencial no es detectado. **Lo que elimina es la copia escalable** — y eso hay que decirlo, porque un cliente que necesite certificación de alto riesgo (habilitaciones profesionales, exámenes de estado) **probablemente siga necesitando proctoring supervisado**, y entonces la respuesta honesta es un proveedor comercial cerrado, no open source.
+- **La aleatorización por variantes no está medida en esta KB.** Que `LongsightGroup/qti3` escriba paquetes de banco de ítems está **verificado**; que su *writer* soporte el patrón de familias de variantes que pide el paso 1 **está inferido de la descripción de los paquetes**, no probado. **Es el gap 39.**
+- **La equivalencia psicométrica entre variantes es trabajo propio** y no lo cubre ninguna pieza de esta tabla: si las variantes no son de dificultad equivalente, la nota deja de ser comparable. Para un examen de consecuencia alta, eso requiere análisis de ítems que esta cadena no incluye.

@@ -9,6 +9,10 @@ updated: 2026-10-01
 > Plataformas verticales reales, en producción, customizables con AI.
 > Modelo: partir de algo que ya funciona y que ya tiene los datos, y agregar la capa agéntica arriba.
 > Verificado vía WebFetch el 2026-09-30; las capas del pase 11, el 2026-10-01.
+> **Pase 25:** entran tres capas — **horarios institucionales** (`UniTime`, Apache-2.0, 349 ★), **aserción de
+> competencias** (`CaSS`, Apache-2.0, la pieza que la capa CASE del pase 14 no tenía) y **supervisión remota de exámenes**,
+> que se agrega 🔴 **para decir que no hay qué proponer**: las cinco piezas que existen son copyleft o tienen pesos de uso
+> no comercial, y es justo la capa que el **Annex III** nombra de alto riesgo. La alternativa que sí se vende es **P49**.
 > **Pase 23:** entra **Frappe Education** en la capa SIS y **se cierra la pregunta del pase 21 sobre dónde vive el módulo educativo de ERPNext** — es una app aparte, `frappe/education`, GPL-3.0.
 > **Pase 11:** entra la capa **Apereo (ECL-2.0)** —Sakai, Opencast, uPortal, OpenLRW—, que diez pasadas descartaron por un filtro de licencia mal aplicado, y se documenta qué **no** proponer cuando el cliente pide *early warning*.
 
@@ -856,6 +860,65 @@ entregable es un componente integrado con control de nivel y traza de supervisi�
 levantó —la voz de un menor como dato regulado—, resuelto por Singapur con **plataforma estatal + supervisión docente**
 en vez de con consentimiento. Es una tercera vía que esta KB no tenía registrada.
 
+
+
+## Capa de horarios institucionales (*timetabling*) — agregada en el pase 25 del 2026-10-01
+
+**La plataforma de esta capa es UniTime, y es Apache-2.0.** Verificada de primera mano el 2026-10-01.
+
+| Plataforma | Repo | Licencia | ★ | Forks | Stack | Qué resuelve en producción |
+|---|---|---|---|---|---|---|
+| **UniTime** | https://github.com/UniTime/unitime | **Apache-2.0** ✅ | **349** | **213** | Java | *«Comprehensive University Timetabling System»*: **horario de cursos y de exámenes**, *event management* con salas compartidas, **asignación de alumnos a clases individuales** y *scheduling* de docentes. **Sistema distribuido:** varios gestores departamentales coordinan y modifican un mismo horario |
+| **horarios-escolares-manager** | https://github.com/manceras/horarios-escolares-manager | **MIT** ✅ | 0 | 0 | Python (FastAPI) + React/TS | Primaria: docentes, grupos, aulas y carga semanal, resuelto con **OR-Tools CP-SAT**. Instalador Windows y AppImage |
+
+🔵 **Cómo se propone, en una línea:** para educación superior, **UniTime** es la base y es permisiva, así que el agente
+puede vivir adentro; la capa AI que tiene sentido arriba **no es generar el horario** —CP-SAT y los *solvers* de UniTime
+ya lo hacen mejor que un LLM— sino **traducir la restricción en lenguaje natural a restricción del modelo** («esta
+docente no puede los viernes», «este laboratorio necesita 90 minutos seguidos») y **explicar por qué un horario no tiene
+solución**, que es la pregunta que hoy nadie puede responder y consume semanas de secretaría académica.
+
+⚠️ **Lo que NO hay que proponer en esta capa.** **FET** y **mFET**, los dos nombres históricos del *timetabling* escolar,
+son **GPL/AGPL** — repiten la forma del segmento SIS que midió el pase 24. Y `horarios-escolares-manager` está declarado
+**«Early foundation, not production-ready»** por sus propios autores y su interfaz es **sólo en español**: sirve como
+referencia de modelado CP-SAT y para un piloto de primaria en España o LATAM, **no como base de un entregable**.
+
+## Capa de aserción de competencias — agregada en el pase 25 del 2026-10-01
+
+| Plataforma | Repo | Licencia | ★ | Forks | Qué hace que la capa CASE del pase 20 no hacía |
+|---|---|---|---|---|---|
+| **CaSS** (*Competency and Skills System*) | https://github.com/cassproject/CASS | **Apache-2.0** ✅ | **62** | **29** | **Registra aserciones de logro individual y computa el perfil del aprendiz.** Autoría de marcos con *crosswalks* e import/export en editor Vue.js. 2.123 commits. Cartuchos: **IMS CASE**, **xAPI**, CTDL-ASN, ASN, **Open Badges 2.0** y 🔵 **MCP** |
+
+🔴 **Por qué entra como plataforma y no como librería.** La capa de publicación de competencias del pase 14 —`opensalt`,
+`OpenCASE`, `compeito`, `conform-ed`— **hospeda y valida marcos**: responde *«¿existe esta competencia y está bien
+formada?»*. **Ninguna de las cuatro responde «¿este alumno la alcanzó?»**, que es la pregunta que paga el proyecto. CaSS
+responde las dos, es permisiva y es **la más traccionada de la capa**.
+
+🔵 **Y es la primera plataforma de estándares de esta KB con puerta nativa de agente.** El cartucho **MCP** significa que
+un tutor de la tabla de `agents/top.md` puede **leer el marco de competencias y escribir la aserción sin adaptador
+escrito a mano**, y que la evidencia queda como aserción en un servidor de estándares en vez de como texto en un chat.
+Ver **P48**.
+
+## Capa de supervisión remota de exámenes (*proctoring*) — agregada en el pase 25 del 2026-10-01
+
+🔴 **Esta capa se agrega para decir que NO hay qué proponer, y es la única capa de esta KB en esa condición.** Se barrió
+entera —era la consigna del pase 24— y las cinco piezas que existen fallan todas el mismo filtro:
+
+| Pieza | Licencia | ★ | Por qué no se propone |
+|---|---|---|---|
+| https://github.com/vardanagarwal/Proctoring-AI | **MIT** ✅ | **635** | 🔴 **Trampa de licencia.** Código MIT, pero el modelo de *facial landmarks* está **entrenado con datasets de uso no comercial**, según su propio README. Y es **proyecto de investigación/demo** |
+| https://github.com/openedx/edx-proctoring | ⚠️ **AGPL-3.0** | 68 | Copyleft fuerte. Vivo, pero su README **no documenta qué backends soporta** |
+| https://github.com/oat-sa/lib-lti1p3-core | ⚠️ **GPL-2.0** | 37 | **La única certificada en *LTI 1.3 Proctoring Services*** de toda la base — y es copyleft |
+| https://github.com/sudosylabs/Proctor | ⚠️ **AGPL-3.0** | 0 | *«has not published a supported production release»*, dicho por el repo |
+| https://github.com/kamlendras/OpenProctor | ⚠️ **AGPL-3.0** | 15 | 37 commits, sin releases |
+
+**La conclusión de capa, y es doble:**
+1. **No existe proctoring open source permisivo y productivo.** O AGPL/GPL —viral para un SaaS multicliente— o pesos no comerciales.
+2. **Es, además, la capa que el regulador mira más de cerca:** el proctoring está nombrado **explícitamente en el Annex III del EU AI Act** como alto riesgo (aplicable **2027-12-02**), y Corea del Sur ya lo alcanza como *high-impact AI* desde el 2026-01-22.
+
+🔵 **Qué se propone en su lugar, y es mejor negocio:** **integridad de examen sin AI de vigilancia** — banco de ítems con
+variantes y aleatorización (`LongsightGroup/qti3`, MIT), entrega certificada (`amp-up-io/qti3-item-player`, MIT),
+devolución de notas por **AGS** y evidencia de proceso en **xAPI**. Saca el entregable del Annex III y elimina la
+discusión de licencia. Es el patrón **P49**, y el **gap 39** registra lo que falta para que exista la alternativa completa.
 
 ---
 *Ver `compose/patterns.md` para las recetas concretas con repos y tiempos.*

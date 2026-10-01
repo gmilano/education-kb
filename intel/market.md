@@ -597,6 +597,63 @@ resuelto y lo que falta es auditar qué se borró; sobre Moodle el disparador ha
 diseño de referencia ya existe y es permisivo. **Eso es un entregable chico, con fecha regulatoria y con el trabajo
 acotado — exactamente el perfil que esta KB viene recomendando desde el pase 4.**
 
+### Agregado en el pase 25 del 2026-10-01 — el barrido regional se agota por quinta vez consecutiva, y el dato nuevo es de **estándares**: uno de los dos de analítica dejó de ser construible, y eso traslada costo al integrador en las cuatro regiones
+
+**Lo que se confirmó sin cambios** (quinto barrido regional consecutivo que devuelve confirmación): el mercado global de
+AI en educación sigue en la banda que esta KB viene registrando —**US$ 7,52 Md (2025) → US$ 10,6 Md (2026)**, CAGR
+declarado **40,9 %**, y una proyección a **US$ 79,6 Md en 2034** con CAGR **31,35 %** para 2026-2034—, con **North
+America al 41,7 % del crecimiento global 2026-2030** y **36 % de participación** de adopción. K-12 concentra **45,62 %**
+de la adopción, STEM **34,78 %** de los ingresos, y **idiomas es el segmento que crece más rápido**. El uso estudiantil
+global pasó de **66 % (2024)** a **92 % (2025)**, y **86 % de los estudiantes de educación superior** en 16 países
+declara usar AI como socio principal de investigación al comenzar 2026.
+
+⚠️ **La dispersión de siempre, y sigue siendo el dato:** la cifra de North America aparece también como
+**US$ 951 M (2024) → US$ 2.303,2 M (2029), CAGR 15,9 %** — **menos de la mitad del CAGR global declarado**. Esta KB ya
+registró en los pases 13 y 17 que **las cifras globales y las regionales de este mercado no son conmensurables** porque
+no miden la misma canasta. **No promediarlas.**
+
+#### 🔴 El dato nuevo del pase, y no es de tamaño de mercado: es de disponibilidad de estándar
+
+**1EdTech movió los repositorios de Caliper Analytics a privado el 2023-06-17**, con acceso para *Contributing Members* y
+*Affiliates* (ver la tendencia **63**). Esto no cambia el tamaño del mercado, **cambia quién paga la integración**, y
+aplica en las cuatro regiones por igual:
+
+- El cliente tiene un LMS que **emite Caliper** (es el estándar de analítica de 1EdTech, y los LMS grandes lo soportan).
+- El integrador que **no es miembro del consorcio** no tiene implementación de referencia: **el adaptador es desarrollo**, no configuración.
+- La alternativa, **xAPI**, tiene especificación **Apache-2.0** (`adlnet/xapi-profiles`, grupo **IEEE p9274.2.1** activo) e implementaciones permisivas y vivas (`lrsql`, `xapipe`).
+
+🔵 **La lectura comercial, y es transversal:** esta es la contracara exacta de la tendencia **2** de esta KB
+(*«el LMS se volvió host de AI y la integración dejó de ser facturable»*). **En analítica de aprendizaje la integración
+volvió a ser facturable**, y no por complejidad técnica sino **por una decisión de licenciamiento de un consorcio**. Una
+propuesta que cotice *«conectamos su analítica»* como configuración está regalando trabajo si el cliente está en Caliper.
+
+#### La corrección regulatoria del pase, y es una que un cliente va a traer mal
+
+Dos fuentes secundarias de este barrido afirman que el EU AI Act **«entra en pleno efecto en agosto de 2026»** y que
+clasifica la educación como alto riesgo desde entonces. ⚠️ **Es la fecha vieja.** Esta KB ya registró en los pases 3 y 11
+—y lo reconfirma— que el **Annex III**, que es el que incluye evaluación, corrección automática, aprendizaje adaptativo,
+proctoring y predicción de deserción, **se corrió al 2027-12-02** por el *Digital Omnibus on AI*. **Agosto de 2026 es la
+fecha que circula en prensa secundaria; diciembre de 2027 es la aplicable al Annex III.** El error favorece vender
+urgencia falsa, y conviene no usarlo: la ventana real de conformidad es de ~26 meses y es lo que se vende.
+
+#### Los *players* que el barrido nombró este pase
+
+| Región | *Player* / movimiento | Qué es |
+|---|---|---|
+| **APAC** | **LearnUpon** — nueva sede APAC en **Sídney** + herramienta de autoría de cursos con AI | Plataforma comercial de formación corporativa |
+| **APAC** | **NIIT MTS** — Top 20 de *custom content developers* 2026 de *Training Industry*, con diseño «AI-led» | Proveedor de contenido corporativo |
+| **APAC / Global** | **TCS + Pearson** — alianza plurianual de *AI learning* para cerrar brechas de *skills* | Integrador + editorial |
+| **APAC** | **OpenAI** designó a **Brent Thomas** para política en Australia y Nueva Zelanda | Señal de institucionalización regulatoria |
+| **EMEA** | **AI Adoption Summit** del Reino Unido (8 de junio): **£200 M+** comprometidos, con **Cisco, IBM, BT y Rolls-Royce** como socios de entrega | Programa estatal de *skills* con socios privados |
+| **EMEA** | **Europe EdTech 200** (QS, edición 2026) | Censo del sector edtech europeo |
+| **North America** | **IBM, Microsoft, Google** | *Players* nombrados en el barrido, sin movimiento nuevo este pase |
+| **LATAM** | **Ednova** (Chile) | Edtech nombrada en fuente; registrada desde el pase 24 |
+
+⚠️ **Nivel de evidencia de este bloque.** Las cifras de mercado y los *players* vienen de **fuentes secundarias
+concordantes** (informes de consultoras y prensa sectorial). Los **12 repos** del pase se verificaron de primera mano
+(ver `repos/trending.md`). **`unu.edu`, `coe.int` y `www.iesalc.unesco.org` están bloqueados por el proxy de egreso**,
+así que las cifras de LAC de más abajo **no** se leyeron en la fuente primaria.
+
 ## Players globales
 
 | Empresa | Tipo | Fortaleza | Debilidad |
@@ -1107,6 +1164,24 @@ mercado regulatorio en North America es el mosaico estatal, no el vacío**, y un
 regulación» se equivoca en los cuatro estados que importan.
 
 
+
+#### Oportunidad del pase 25 — el *item bank* QTI 3 y la migración del acervo de ítems, que es trabajo con presupuesto propio
+
+**El gancho:** North America es donde está instalado el acervo de ítems QTI más viejo y más grande (consorcios estatales,
+*testing* universitario, editoriales), y **hasta este pase no existía camino open source desde QTI 1.2/2.x hacia QTI 3**.
+`LongsightGroup/qti3` (**MIT**, 667 commits, 12 paquetes — verificado este pase) trae **migración de QTI 1.2 y QTI 2.x a
+ítems de autoría QTI 3** y un ***writer* de paquete de banco de ítems**.
+
+**Por qué se vende acá y no en otra región:** el comprador norteamericano ya tiene el estándar instalado
+(`commonstandardsproject/api` cubre los 50 estados, **Ed-Fi** es Apache-2.0) y **el dolor es el costo de salida del
+proveedor de assessment**, no la falta de estándar. Un proyecto de migración de ítems con banco propio **rompe ese
+encierro** y es cotizable por volumen de ítems, que es una unidad que el cliente ya sabe contar.
+
+🔵 **El combo completo y permisivo:** migración y banco con `LongsightGroup/qti3` (MIT) → **entrega con la pieza
+certificada** `amp-up-io/qti3-item-player` (MIT, **QTI 3 Basic y Advanced «Delivery»** de 1EdTech) → entrada al LMS por
+`ltijs` (Apache-2.0, 373 ★) con **AGS** devolviendo notas. **Ver P48.** Y la advertencia que va en la propuesta: **el
+sello de 1EdTech cubre la entrega, no la autoría** — decirlo explícitamente, porque es lo que el cliente audita.
+
 ### EMEA
 
 **Agregado en el pase 23 (2026-10-01) — el reloj del AI Act, reconfirmado desde la fuente regulatoria, y la vía de residencia del dato.** El barrido regional reconfirma lo que el pase 11 ya había corregido y le pone las dos fechas juntas: el **AI Act** entró en vigor en **agosto de 2024**, su **fecha de aplicación general fue el 2 de agosto de 2026**, y el **Digital Omnibus sobre AI** —derecho vigente desde **julio de 2026**— corrió los plazos de la mitad cara (Anexo III al **2027-12-02**, Reglamento (UE) 2026/1744). **La clasificación de educación no se movió:** acceso y evaluación —**decisiones de admisión, evaluación del alumno y corrección de exámenes**— siguen siendo **alto riesgo**, con obligación de gestión de riesgo, gobernanza de datos, supervisión humana, transparencia y evaluación de conformidad **antes del despliegue**.
@@ -1541,6 +1616,30 @@ Esta KB ya tiene las cifras propias de EMEA desdobladas desde el pase 8; **este 
 educación en el **Anexo III** como alto riesgo. Esta KB lo tiene con la corrección del pase 22 sobre el calendario real;
 **nada de este pase lo mueve.**
 
+
+
+#### Oportunidad del pase 25 — integridad de examen **sin** AI de proctoring, que acá es argumento regulatorio y no preferencia técnica
+
+**El gancho, y es el más limpio que dejó este pase:** el **proctoring** es la única función educativa que el **Annex III
+del EU AI Act nombra explícitamente** como alto riesgo (aplicable **2027-12-02**), y este pase midió que **no existe
+proctoring open source permisivo y productivo**: las cinco piezas que hay son AGPL/GPL o tienen **pesos de modelo de uso
+no comercial** (ver la tendencia **64** y `verticals/solutions.md`).
+
+**Entonces la venta se invierte:** al cliente europeo que pide *«proctoring con AI»* no se le busca la pieza —no la hay—
+se le ofrece **sacar el entregable del Annex III**. Integridad por **diseño de la evaluación**: banco de ítems con
+variantes y aleatorización (`LongsightGroup/qti3`, MIT), **entrega certificada** (`amp-up-io/qti3-item-player`, MIT),
+notas por **AGS** y **evidencia de proceso en xAPI** filtrada por *profile* con `yetanalytics/xapipe` (Apache-2.0). Es el
+patrón **P49**.
+
+**Por qué EMEA primero:** es la única región donde **el ahorro regulatorio es cuantificable** — evita la clasificación de
+alto riesgo, con su expediente de conformidad, su evaluación de impacto y su auditoría. En las demás regiones el mismo
+diseño se vende por costo y por licencia; acá se vende por **no entrar al Anexo**.
+
+🔵 **Y el segundo gancho EMEA del pase, de plataforma:** el lado ***platform*** de LTI ya se puede construir con licencia
+permisiva (`LtiLibrary/LtiAdvantagePlatform`, **MIT**, AGS v2 + NRPS v2 + Deep Linking 2.0, ASP.NET Core 10). La única
+alternativa **certificada** del lado plataforma es `oat-sa/lib-lti1p3-core`, **GPL-2.0** — y para una universidad pública
+europea, que normalmente puede aceptar copyleft, **el sello vale más que la permisividad**. Es la primera vez que esta KB
+puede poner las dos opciones sobre la mesa en vez de declarar el hueco (ver `repos/foundations.md`).
 
 ### APAC
 
@@ -2008,6 +2107,24 @@ y la Decisión 33 de Vietnam; **este barrido no las mejoró.**
 **El dato que esta KB sigue sosteniendo y este pase no contradice:** Singapur tiene el despliegue educativo más
 instrumentado del mundo (tendencia **52**) y es el lugar donde un piloto se puede medir contra una línea de base pública.
 
+
+
+#### Oportunidad del pase 25 — horarios institucionales con *solver*, y el reloj coreano sigue siendo el que suena primero
+
+**El gancho:** `UniTime/unitime` (**Apache-2.0**, **349 ★**, 213 forks, Java — verificado este pase) resuelve **horario de
+cursos y de exámenes, asignación de alumnos a clases y *scheduling* de docentes** en un sistema **distribuido** donde
+varios gestores departamentales coordinan el mismo horario. Es una capa que esta KB tenía **vacía** y es permisiva.
+
+**Por qué APAC:** la región concentra las instituciones de mayor **escala de matrícula** del mundo, y el horario a esa
+escala es un problema de *solver*, no de planilla. La capa AI que se vende arriba **no es generar el horario** —CP-SAT lo
+hace mejor que un LLM— sino **traducir restricciones en lenguaje natural a restricciones del modelo** y **explicar por
+qué un horario no tiene solución**, que hoy consume semanas de secretaría académica y nadie responde.
+
+⚠️ **La condición regulatoria no cambió y conviene repetirla:** Corea del Sur tiene la norma exigible más avanzada
+(**AI Basic Act**, vigente **2026-01-22**, educación como *high-impact AI*), y Vietnam su ley nacional vigente desde
+marzo de 2026. **El horario es administrativo y queda fuera del núcleo de alto riesgo** — por eso es una buena puerta de
+entrada en una región donde el tutor y la evaluación sí están alcanzados. Y los *players* de formación corporativa se
+están moviendo acá este año (**LearnUpon** con sede nueva en Sídney, **TCS + Pearson**, **NIIT MTS**).
 
 ### LATAM
 
@@ -2624,6 +2741,38 @@ gap de oferta open source propia** (gap 2). Los cuatro proyectos de fase cero de
 Tecnológica de Pereira) siguen siendo el inventario real, y la jugada sigue siendo **aportarle ingeniería y gobernanza
 a uno de ellos** en vez de construir el tutor que ya existe cuatro veces.
 
+
+
+#### Oportunidad del pase 25 — la brecha de gobernanza de la educación superior en LAC tiene número propio, y es la oportunidad
+
+**El dato** (estudio **UNESCO IESALC** con apoyo de **UNU-IAS**, *«AI Implementation in Higher Education in Latin America
+and the Caribbean»*, **200 instituciones de educación superior en 19 países**, trabajo de campo **agosto-octubre de 2025**,
+presentado en la **Digital Learning Week 2026** en la sede de UNESCO en París), sobre cinco dimensiones —docencia,
+investigación, administración, vinculación con el medio y **gobernanza**—:
+
+| Indicador | LAC | Comparación |
+|---|---|---|
+| Instituciones que usan AI **en al menos un área** | **87 %** | — |
+| Uso en **docencia y aprendizaje** | **74 %**, mayoritariamente con herramientas de propósito general (ChatGPT, Copilot, Gemini) | — |
+| Instituciones con **guía formal de AI** | 🔴 **45 %** | **70 %** en Europa y North America |
+
+🔵 **Ahí está la oportunidad, y es de gobernanza antes que de producto.** La adopción en LAC **no está atrasada** —87 % y
+74 % no son cifras de rezago— pero **la mitad de las instituciones que ya usan AI no tiene política escrita**, y la
+brecha contra Europa y North America es de **25 puntos**. Y el *cómo* agrava el *qué*: el uso corre sobre **herramientas
+genéricas de terceros**, o sea **el dato del alumno ya está saliendo de la institución** sin marco que lo regule.
+
+**Lo que se vende, en ese orden:** (1) política institucional de AI y expediente de datos del alumno — reutilizable, porque
+**Brasil converge al modelo europeo** (acuerdo de regulación AI con la UE, junio de 2026) y **México** ya tiene *opt-out*
+de decisiones automatizadas en su ley de datos; (2) reemplazo del uso genérico por una capa propia con residencia de
+datos, que es donde entran **Kolibri** (MIT) y el stack *offline-first* por conectividad y por soberanía a la vez; (3)
+**evidencia de competencias** con `cassproject/CASS` (Apache-2.0) para que el *«usamos AI»* se vuelva resultado medible.
+
+⚠️ **Dos advertencias de uso de estas cifras, las dos del pase 25.** **(a)** `unu.edu` y `www.iesalc.unesco.org` están
+**bloqueados por el proxy de egreso** de esta sesión: los números vienen de **resúmenes concordantes de buscador**, no de
+la fuente primaria. **(b)** **Es una encuesta de 2025 publicada en 2026** — citarla como *«datos 2026»* sobredata la
+evidencia en un año. Y **no** mezclarla con las cifras de **empresas** LATAM del mismo barrido (*«100 % usará AI en
+alguna actividad»*, *«85 % la integra nativamente»*): **son otra población**, y la que sirve para un *engagement*
+educativo es la de **instituciones**.
 
 ## Posicionamiento Globant
 

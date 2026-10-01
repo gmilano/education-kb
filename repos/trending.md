@@ -8,6 +8,134 @@ updated: 2026-10-01
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 
+## 2026-10-01 (pase 25) — la consigna del pase 24 rindió el haul más grande del eje artefacto, y corrigió dos conclusiones que el pase 24 había escrito con confianza: el repo que declaró 404 existe, y el lado *platform* sí es permisivo
+
+**18 repos verificados de primera mano, 17 nuevos para esta KB** (el único ya conocido es `amp-up-io/qti3-item-player`, re-verificado para comparar con el QTI 3 nuevo). Ninguno es un agente —`agents/top.md` sigue en
+37 filas, van **siete** pases sin altas— pero este pase **no vino a contar filas: vino a ejecutar los cuatro artefactos y
+los tres estándares que el pase 24 dejó sin barrer**, y los barrió todos. Dos de los resultados son correcciones a este
+mismo archivo.
+
+### 🔴 Corrección 1 — el repo que el pase 24 declaró inexistente existe, y tiene exactamente lo que la consigna pedía
+
+El pase 24 escribió, en la tabla de no-hallazgos de esta misma sección: *«`github.com/LongsightGroup/qti3-core` → **404**
+[…] para esta KB **QTI 3 sigue siendo `amp-up-io/qti3-item-player`**»*. **Es un falso negativo, y la causa es nombrar el
+paquete npm en vez del repo.** `@longsightgroup/qti3-core` es uno de los paquetes publicados; el repo es el monorepo
+`qti3`, sin sufijo:
+
+| | Lo que el pase 24 concluyó | Lo que el pase 25 midió |
+|---|---|---|
+| **¿Existe el QTI 3 de Longsight?** | «404. El repo con ese nombre no existe» | ✅ **https://github.com/LongsightGroup/qti3** — **MIT**, 5 ★, 2 forks, TypeScript, **667 commits**, **12 paquetes publicados** |
+| **¿Hay *item bank* open source?** | Pregunta abierta de la consigna del pase 25 | ✅ **Sí, y es de este repo:** *«framework-neutral QTI-shaped authoring XML and **item-bank package writer** with typed diagnostics»* |
+| **¿Hay camino desde QTI viejo?** | No registrado | ✅ **Migración `QTI 1.2` y `QTI 2.x` → ítems de autoría QTI 3**, en paquete propio |
+| **¿Cuál es *el* QTI 3 de la KB?** | `amp-up-io/qti3-item-player`, único certificado | **Los dos, y no compiten: se complementan** (ver abajo) |
+
+**El reparto, medido pieza por pieza, y es la distinción que se vende:**
+
+| | `amp-up-io/qti3-item-player` *(ya en la KB)* | `LongsightGroup/qti3` *(nuevo)* |
+|---|---|---|
+| Licencia | **MIT** ✅ | **MIT** ✅ |
+| ★ / forks | **30** / 6 | 5 / 2 |
+| Certificación 1EdTech | ✅ **QTI 3 Basic *y* Advanced «Delivery»** | 🚫 *«The project is not certified»*, dicho por el propio README |
+| Qué hace | **Sólo entrega/render.** Sin autoría ni banco de ítems | **Parseo, validación, render, *scoring*, estado, autoría, *item bank* y migración** |
+
+🔵 **La consecuencia práctica:** el certificado sabe **entregar** y no sabe **crear**; el nuevo sabe **crear, bancar y
+migrar** y no está certificado. Una propuesta que necesite las dos cosas usa los dos, y **declara cuál de los dos lleva el
+sello** — porque el sello aplica a la entrega, que es lo que el cliente audita. Ver el patrón **P48**.
+
+### 🔴 Corrección 2 — el lado *platform* de LTI no es «intención sin licencia»: hay una implementación MIT con el juego completo de servicios
+
+El pase 24 cerró así: *«las dos únicas piezas platform-side aparecieron en este pase — **una de ellas sin licencia
+declarada**. Un stack que sólo sabe ser herramienta no puede proponer el lado LMS.»* El diagnóstico del hueco era
+correcto; **la conclusión de que no había con qué llenarlo, no.**
+
+| Repo | Licencia | ★ | Forks | Lenguaje | Lado | Qué implementa | Región |
+|---|---|---|---|---|---|---|---|
+| https://github.com/LtiLibrary/LtiAdvantagePlatform | **MIT** ✅ | **35** | 18 | C# | 🔵 **platform** | *«Sample LTI 1.3 / LTI Advantage platform built with ASP.NET Core»*. **AGS v2** (line items, results, scores), **NRPS v2** (membresías), **Deep Linking 2.0**, launches con y sin contexto de curso. Stack **ASP.NET Core 10** + OpenIddict 7.x | sin ubicar (org `LtiLibrary`) |
+| https://github.com/Citolab/lti-1p3-platform-example | ⚠️ **GPL-3.0** | 0 | 0 | C# | 🔵 **platform** | API mínima .NET que **acuña y firma el `id_token`** + página React para generar URLs de *launch*. Endpoints `/lti/auth`, `/lti/jwks`, `/api/generateLtiUrl`. *«the platform side end to end»* | EMEA ⚠️ *inferida* (Citolab = laboratorio de **Cito**, instituto de evaluación neerlandés) |
+| https://github.com/oat-sa/lib-lti1p3-core | ⚠️ **GPL-2.0** | **37** | 22 | PHP | 🔵 **platform *y* tool** | *«PHP library for LTI 1.3 Core implementations as platforms and / or as tools»*. **Certificada por IMS/1EdTech:** *LTI 1.3 Advantage Complete* **y *LTI 1.3 Proctoring Services*** | EMEA (Open Assessment Technologies) |
+
+🔵 **Lo que cambia para una propuesta:** el lado LMS **sí se puede construir con licencia permisiva, y el stack es .NET**
+(`LtiAdvantagePlatform`, MIT, con AGS+NRPS+Deep Linking). La pieza **certificada** del lado *platform* existe pero es
+**GPL-2.0** (`oat-sa`), así que la elección ya no es «hay o no hay» sino **«permisivo sin sello (MIT/.NET) o sello con
+copyleft (GPL-2.0/PHP)»** — y eso es una decisión de cliente, no de esta KB. La pieza de la UOC que el pase 24 encontró
+sin licencia (`java-lti-1.3-platform`) deja de ser la única opción y pasa a ser la peor de las tres.
+
+### 🔴 Y el sesgo de stack era peor de lo que el pase 24 midió: faltaba la librería LTI con más estrellas de todas
+
+El pase 24 encuadró el problema como *«toda la capa LTI de esta KB era PHP, y ahora hay Java»*. **Medido este pase, la
+capa tiene cinco stacks y el que faltaba no era un stack marginal: era el líder por estrellas, y por 3×.**
+
+| Repo | Licencia | ★ | Forks | Stack | Lado | Nota | Región |
+|---|---|---|---|---|---|---|---|
+| https://github.com/Cvmcosta/ltijs | **Apache-2.0** ✅ | **373** | **86** | Node / TypeScript | tool | *«Easily turn your web application into a LTI® 1.3 Learning Tool»*. Launches, **Deep Linking, AGS, NRPS y Dynamic Registration**. **Es la librería LTI más traccionada que vio esta KB** | sin ubicar |
+| https://github.com/dmitry-viskov/pylti1.3 | **MIT** ✅ | **138** | 83 | Python | tool | `PyLTI1p3`, LTI 1.3 Advantage. Adaptadores **Django** y **Flask** (`DjangoOIDCLogin`, `FlaskMessageLaunch`); 178 commits. FastAPI **no** viene hecho | sin ubicar |
+| https://github.com/3iPunt/wordpress-lti-1-3 | **Apache-2.0** ✅ | 6 | 3 | PHP (WordPress) | tool | LTI 1.3 Advantage **como plugin de WordPress**: SSO, roles de membresía y notas. 54 commits. Nacido en el **IMS Europe Summit 2018** | EMEA ⚠️ *inferida* (3iPunt) |
+
+**El dato incómodo, y conviene escribirlo sin suavizar:** esta KB recomendó `1EdTech/lti-1-3-php-library` (Apache-2.0,
+124 ★) **en cinco archivos, incluidos P20, P21 y `verticals/solutions.md`**, durante seis pases. `ltijs` tiene
+**373 ★ — tres veces más — y la misma licencia permisiva**, y nunca apareció porque las búsquedas de esta KB entraban por
+*«LTI PHP»* y por *«LTI Java»*, nunca por *«LTI»* sin stack. **No es que la pieza recomendada esté mal: es que se la eligió
+sin ver el campo.** Y con `PyLTI1p3` (MIT, 138 ★) el campo permisivo queda así: **Node 373 ★ > Python 138 ★ > PHP 124 ★ >
+Java 21 ★**.
+
+### El artefacto `timetable`: la pieza permisiva grande que esta KB nunca tuvo
+
+| Repo | Licencia | ★ | Forks | Lenguaje | Qué es | Región |
+|---|---|---|---|---|---|---|
+| https://github.com/UniTime/unitime | **Apache-2.0** ✅ | **349** | **213** | Java | *«Comprehensive University Timetabling System»*. **Horarios de cursos *y* de exámenes**, *event management* con salas compartidas, **asignación de alumnos a clases** y *scheduling* de docentes. Sistema **distribuido**: varios gestores departamentales coordinan un mismo horario | North America ⚠️ *inferida* (origen universitario EE. UU.) |
+| https://github.com/manceras/horarios-escolares-manager | **MIT** ✅ | 0 | 0 | Python (FastAPI) + React/TS | Planificador de horarios de **primaria**: modela docentes, grupos, aulas y carga semanal y resuelve con **OR-Tools CP-SAT**. Instalador Windows y AppImage, 42 commits. ⚠️ *«Early foundation, not production-ready»*, y la UI es **sólo español** | EMEA (España) |
+
+🔵 **UniTime es el hallazgo de volumen del pase: 349 ★, 213 forks y Apache-2.0** para un dominio —horario de cursos y de
+exámenes en educación superior— que esta KB tenía **vacío**. Y el contraste de licencias del segmento vuelve a repetir la
+forma que el pase 24 midió en SIS: **FET y mFET, los dos nombres históricos del timetabling escolar, son GPL/AGPL.** El
+permisivo grande es UniTime; el permisivo chico y español es `horarios-escolares-manager`, y está declarado como
+no-productivo por sus propios autores.
+
+### El artefacto `competency framework`: la pieza que hace *aserciones*, no sólo hospedaje de marcos — y trae puerta de agente
+
+| Repo | Licencia | ★ | Forks | Lenguaje | Qué es | Región |
+|---|---|---|---|---|---|---|
+| https://github.com/cassproject/CASS | **Apache-2.0** ✅ | **62** | **29** | JavaScript | *«Competency and Skills System»*: **autoría de marcos de competencias, registro de aserciones de logro individual y cómputo de perfiles del aprendiz**. **2.123 commits.** Editor Vue.js con *crosswalks* e import/export. Cartuchos de interoperabilidad: **IMS CASE**, **xAPI**, **CTDL-ASN**, **ASN**, **Open Badges 2.0** y **MCP** | North America ⚠️ *inferida* |
+
+🔴 **Por qué es el hallazgo más estructural del pase, aunque no sea el de más estrellas.** La capa CASE de esta KB
+—`opensalt` (MIT, 45 ★), `1EdTech/OpenCASE` (Apache-2.0, 9 ★), `compeito` (Apache-2.0, 3 ★), `conform-ed` (MIT, 2 ★)—
+**sabe hospedar y validar marcos de competencias, y ninguna de sus cuatro piezas sabe decir si un alumno alcanzó una
+competencia.** CaSS es **la pieza de aserción**, es Apache-2.0, y con 62 ★ es **la más traccionada de toda esa capa**.
+Y el cartucho **MCP** es la primera vez que esta KB encuentra **una pieza de estándar educativo que expone puerta nativa
+de agente**: es el puente que faltaba entre la capa de estándares y la capa de agentes de esta misma KB. Ver **P48** y la
+tendencia **65**.
+
+### La capa `proctoring`, barrida entera: cinco piezas y **ninguna** es permisiva y productiva a la vez
+
+| Repo | Licencia | ★ | Forks | Lenguaje | Estado medido |
+|---|---|---|---|---|---|
+| https://github.com/openedx/edx-proctoring | ⚠️ **AGPL-3.0** | 68 | **95** | Python | Subsistema de exámenes supervisados de **Open edX**. Vivo, no archivado. El README **no documenta qué backends soporta** |
+| https://github.com/oat-sa/lib-lti1p3-core | ⚠️ **GPL-2.0** | 37 | 22 | PHP | **La única certificada en *LTI 1.3 Proctoring Services*** de toda la base. Copyleft |
+| https://github.com/vardanagarwal/Proctoring-AI | **MIT** ✅ | **635** | **352** | Python | 🔴 **Trampa de licencia (ver abajo).** Detecta rostro, *spoofing*, mirada (izq/der/arriba), apertura de boca, pose de cabeza, conteo de personas, teléfono y audio→texto. **Proyecto de investigación/demo**, por su propio README |
+| https://github.com/sudosylabs/Proctor | ⚠️ **AGPL-3.0** | 0 | 0 | Go + React | 369 commits. **Declarado pre-release:** *«has not published a supported production release»* |
+| https://github.com/kamlendras/OpenProctor | ⚠️ **AGPL-3.0** | 15 | 4 | Next.js / TS | 37 commits, sin releases. No productivo |
+
+🔴 **La trampa de `Proctoring-AI`, y es la instancia con más estrellas del error que el pase 14 dejó documentado.** El
+repo es **MIT** —el badge dice MIT, 635 ★— pero su propio README advierte que el modelo de *facial landmarks* está
+**entrenado con datasets de uso no comercial**. **Código permisivo, pesos no comerciales:** el badge del repo es la
+licencia del *código*, no la del *modelo*, y acá la diferencia es la que decide si se puede facturar. **No proponerlo en
+un entregable comercial** sin reemplazar los pesos.
+
+🔵 **La conclusión de la capa, y es de decisión, no de catálogo:** **la supervisión remota de exámenes es la única capa de
+esta KB sin ninguna opción permisiva y productiva.** O AGPL/GPL —viral para un SaaS multicliente— o un demo con pesos no
+comerciales. **Y es, al mismo tiempo, la capa que el regulador mira más de cerca:** el proctoring está nombrado
+explícitamente en el **Annex III del EU AI Act** como alto riesgo (vigente 2027-12-02). Ver la tendencia **64**, el
+**gap 39** y el patrón **P49**, que entrega integridad de examen **sin** AI de proctoring.
+
+### Los no-hallazgos del pase, declarados en vez de omitidos
+
+| Lo que se buscó | Resultado medido | Por qué queda escrito |
+|---|---|---|
+| `github.com/1EdTech/caliper-java`, `caliper-js`, `caliper-python`; `IMSGlobal/caliper-java`, `IMSGlobal/caliper-python` | **404 los cinco.** La descripción del repo `1EdTech/caliper-java` **es el aviso**: *«1EdTech will be moving Caliper to private repositories on June 17, 2023»* | 🔴 **No es un hueco de búsqueda: es una decisión del consorcio con fecha.** Es el hallazgo del estándar Caliper y está desarrollado en la tendencia **63** |
+| `github.com/yetanalytics/lrspipe` | **404.** El repo real es **`yetanalytics/xapipe`** (Apache-2.0, 17 ★, 9 forks, Clojure) | Segundo falso negativo por nombre de producto ≠ nombre de repo en dos pases seguidos. **LRSPipe es el nombre del producto; `xapipe`, el del repo** |
+| Un *item bank* QTI 3 con certificación 1EdTech | **No existe en open source.** El único certificado (`qti3-item-player`) es sólo entrega; el que banca (`LongsightGroup/qti3`) declara no estar certificado | Cierra la consigna del pase 24 sobre `item bank` con el límite medido, no con una fila |
+| `tremby/questionbank` y `tremby/eqiat` (bancos de ítems QTI históricos) | Existen pero **archivados** | No se proponen; quedan como antecedente del dominio |
+
 ## 2026-10-01 (pase 24) — la consigna del pase 23 rindió en su primer uso: buscar por el estándar instalado destapó que la capa LTI de esta KB era íntegramente PHP, y existe una familia Java/Spring de una universidad europea
 
 **Seis repos verificados de primera mano, cinco nuevos para esta KB.** Ninguno es un agente —la tabla de `agents/top.md`

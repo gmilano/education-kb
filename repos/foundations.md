@@ -10,6 +10,13 @@ updated: 2026-10-01
 > Leer la columna **Licencia** antes de proponer: media KB de educación es GPL/AGPL, no permisiva.
 > **Pase 11 del 2026-10-01:** aparece una licencia que las diez pasadas anteriores filtraban sin saberlo — **ECL-2.0**, con la que licencia todo Apereo (Sakai, Opencast, OpenLRW). Es Apache-2.0 con el alcance de patentes acotado, aprobada por OSI y FSF, y **es apta para construir arriba**. Ver la capa de analítica institucional, abajo.
 
+> **Pase 25 del 2026-10-01:** cuatro capas nuevas —**evaluación** (autoría/banco/entrega QTI 3), **horarios**
+> (`UniTime`, Apache-2.0, 349 ★), **aserción de competencias** (`CaSS`, Apache-2.0, con cartucho **MCP**) y la
+> **decisión de estándar de analítica**— y **dos correcciones**: el lado ***platform*** de LTI **sí** se puede construir
+> con licencia permisiva (`LtiAdvantagePlatform`, MIT), y la capa LTI tiene **cinco stacks**, con `ltijs` (Apache-2.0,
+> **373 ★**) como la más traccionada y ausente de esta KB durante seis pases. 🔴 **Y un estándar se cayó del open source:**
+> **Caliper pasó a repos privados el 2023-06-17** — desde este pase se propone **xAPI**.
+
 ## Plataformas y frameworks base
 
 **14 repos reales verificados.** GegoK12 se agregó en la tercera pasada del 2026-09-30; **pyKT en la cuarta**.
@@ -313,6 +320,39 @@ capacidad LTI que registró esta KB en nueve pases es del lado herramienta. **Si
 que esta KB estuviera apuntando a un *fork*. **Es falso:** el README de 1EdTech dice que *«This library was initially
 created by @MartinLenord from **Turnitin**»*. Son **dos** librerías PHP independientes, las dos Apache-2.0. La fila de
 esta KB está bien apuntada.
+
+### 🔴 CORREGIDO EN EL PASE 25 — el lado *platform* sí se puede construir con licencia permisiva, y la capa tiene cinco stacks, no dos
+
+El párrafo de arriba cierra con *«si un engagement pide el lado plataforma […] esta KB no tiene con qué, y hay que decirlo
+en el discovery»*. **El diagnóstico del hueco era correcto; la conclusión de que no había con qué llenarlo, no.** Se buscó
+`LTI platform` explícitamente, que era la consigna que el pase 24 se dejó escrita, y aparecieron **tres** implementaciones
+del lado plataforma —verificadas de primera mano el 2026-10-01—, **una de ellas MIT y con el juego completo de servicios**:
+
+| Repo | Licencia | ★ | Forks | Stack | Lado | Qué implementa |
+|---|---|---|---|---|---|---|
+| https://github.com/LtiLibrary/LtiAdvantagePlatform | **MIT** ✅ | **35** | 18 | C# / **ASP.NET Core 10** + OpenIddict 7.x | 🔵 *platform* | **AGS v2** (line items, results, scores), **NRPS v2** (membresías), **Deep Linking 2.0**, launches con y sin contexto de curso |
+| https://github.com/oat-sa/lib-lti1p3-core | ⚠️ **GPL-2.0** | **37** | 22 | PHP | 🔵 *platform* **y** *tool* | LTI 1.3 Core *«as platforms and / or as tools»*. **Certificada por 1EdTech: *LTI 1.3 Advantage Complete* y *LTI 1.3 Proctoring Services*** |
+| https://github.com/Citolab/lti-1p3-platform-example | ⚠️ **GPL-3.0** | 0 | 0 | C# / .NET | 🔵 *platform* | Acuña y firma el `id_token`; endpoints `/lti/auth` y `/lti/jwks`; React para generar URLs de *launch*. *«the platform side end to end»* |
+
+**La decisión deja de ser «hay o no hay» y pasa a ser una disyuntiva de licencia:** **permisivo sin sello**
+(`LtiAdvantagePlatform`, MIT, .NET) **o sello con copyleft** (`oat-sa`, GPL-2.0, PHP, y es la única certificada del lado
+plataforma de toda esta base). La pieza de la UOC sin licencia deja de ser la única opción y pasa a ser la peor de las tres.
+⚠️ `LtiAdvantagePlatform` se describe a sí misma como *«Sample»*: **antes de prometerla hay que levantarla contra un *tool*
+real** — es la acción que el pase 25 deja escrita para el 26.
+
+#### Y el sesgo de stack era mayor del que midió el pase 24: faltaba la librería LTI con más estrellas de todas
+
+| Repo | Licencia | ★ | Forks | Stack | Lado | Nota |
+|---|---|---|---|---|---|---|
+| https://github.com/Cvmcosta/ltijs | **Apache-2.0** ✅ | **373** | **86** | Node / TypeScript | *tool* | Launches, **Deep Linking, AGS, NRPS y Dynamic Registration**. **La librería LTI más traccionada que vio esta KB** |
+| https://github.com/dmitry-viskov/pylti1.3 | **MIT** ✅ | **138** | 83 | Python | *tool* | `PyLTI1p3`. Adaptadores **Django** y **Flask**; 178 commits. ⚠️ **FastAPI no viene hecho** |
+| https://github.com/3iPunt/wordpress-lti-1-3 | **Apache-2.0** ✅ | 6 | 3 | PHP (WordPress) | *tool* | LTI 1.3 Advantage **como plugin de WordPress**: SSO, roles y notas. 54 commits |
+
+🔴 **El dato incómodo, sin suavizar.** Esta KB recomendó `1EdTech/lti-1-3-php-library` (Apache-2.0, **124 ★**) en **cinco
+archivos** durante seis pases. **`ltijs` tiene 373 ★ —tres veces más— y la misma licencia permisiva**, y nunca apareció
+porque las búsquedas entraban por *«LTI PHP»* y *«LTI Java»*, **nunca por «LTI» sin stack**. No es que la pieza
+recomendada esté mal: **es que se la eligió sin ver el campo.** El campo permisivo del lado *tool*, ordenado:
+**Node 373 ★ > Python 138 ★ > PHP 124 ★ > Java 21 ★**.
 
 ### El SIS copyleft que confirma el diagnóstico del pase 2 con números propios — agregado en el pase 24
 
@@ -1202,6 +1242,30 @@ OpenUnlearning y `MachineUnlearning` (licencia, estrellas, métodos leídos del 
   queda abierto es la **evidencia** (gap 36) y el **disparador** (P40), no la capacidad. Ver la corrección completa en
   la auditoría de borrado de este mismo archivo y la tendencia **54**.
 
+- **Gap 39 (nuevo en el pase 25)** — **no hay banco de ítems que genere familias de variantes equivalentes, y es el
+  único eslabón no medido de P49.** Que `LongsightGroup/qti3` (**MIT**, 667 commits) escriba **paquetes de banco de
+  ítems** está verificado de primera mano; que su *writer* soporte **variantes paramétricas del mismo ítem con
+  dificultad equivalente** —que es lo que vuelve innecesario el proctoring— **está inferido de la descripción de los
+  paquetes, no probado**. Y la segunda mitad del gap es más grande que la primera: **la equivalencia psicométrica entre
+  variantes no la cubre ninguna pieza open source de esta KB**. Hay *item banking* y hay entrega certificada; **no hay
+  análisis de ítems** (TRI/IRT, calibración de dificultad) empaquetado y permisivo que cierre la cadena.
+  **Por qué importa:** sin equivalencia medida, las notas entre variantes no son comparables, y un examen de
+  consecuencia alta no puede usar el patrón. **Es acotado y construible:** escribir N variantes con el *writer*,
+  entregarlas con `qti3-item-player` y calibrar con una librería IRT de Python. No es investigación: es una medición
+  que nadie publicó para este stack. Ver **P49**.
+
+- **Gap 40 (nuevo en el pase 25)** — **el cartucho MCP de CaSS está declarado y no está medido, y de él depende la
+  tendencia 65.** `cassproject/CASS` (**Apache-2.0**, 62 ★, 2.123 commits) lista **MCP** entre sus *«pluggable
+  cartridges»*, junto a IMS CASE, xAPI, CTDL-ASN, ASN y Open Badges 2.0. **Eso es todo lo que esta KB sabe:** no se
+  levantó el servidor, **no se listó una sola herramienta**, y no se sabe si expone lectura de marcos, escritura de
+  aserciones o las dos. Es la primera pieza de estándar educativo de esta base con puerta nativa de agente, así que la
+  afirmación es valiosa **y es exactamente por eso que no se puede dejar sin medir**.
+  **Qué hay que hacer, y es el gap más barato que esta KB abrió en cinco pases:** levantar CaSS, conectar el cartucho
+  MCP y **listar las herramientas**. Si expone escritura de aserciones, el paso 5 de **P48** se cotiza como
+  configuración; **si sólo expone lectura, el mapeo ítem→competencia sigue siendo desarrollo** y el patrón se encarece.
+  Hasta entonces **no prometer el «sin adaptador»**: P48 funciona igual por xAPI o IMS CASE, que sí están verificados
+  como cartuchos declarados de un proyecto con 2.123 commits.
+
 - **Gap 36 (nuevo en el pase 21)** — **el borrado del LRS permisivo no deja evidencia.** `lrsql` borra de forma
   completa y atómica y **no devuelve ni registra nada**: el SQL está declarado `-- :result :affected`, así que **el
   conteo de filas afectadas se calcula y se descarta**, y el interceptor responde `{:status 200 :body params}` — el
@@ -1430,6 +1494,70 @@ en múltiples fuentes independientes, **no** en la lectura de la fuente primaria
 ⚠️ **Nivel de evidencia:** los repos de la tabla se verificaron de primera mano (licencia, estrellas, forks, fork
 sí/no). Los metadatos de los papers vienen de **snippets concordantes**: `arxiv.org` está bloqueado por el proxy de
 egreso de esta sesión, igual que `blogs.cisco.com` y `helpnetsecurity.com`.
+
+
+## Capa de evaluación: autoría, banco de ítems y entrega certificada — agregada en el pase 25 del 2026-10-01
+
+**Dos piezas MIT que no compiten: una está certificada y sólo entrega; la otra crea, banca y migra y no está
+certificada.** Verificadas de primera mano el 2026-10-01.
+
+| Repo | Licencia | ★ | Forks | Lenguaje | Qué hace | Certificación 1EdTech |
+|---|---|---|---|---|---|---|
+| https://github.com/amp-up-io/qti3-item-player | **MIT** ✅ | **30** | 6 | JavaScript | **Sólo entrega/render** de ítems QTI 3. Sin autoría ni banco | ✅ **QTI 3 Basic *y* Advanced «Delivery»** |
+| https://github.com/LongsightGroup/qti3 | **MIT** ✅ | 5 | 2 | TypeScript | **12 paquetes, 667 commits.** Parseo con validación tipada, *player* como web component nativo, *scoring* y *response processing*, serialización y restauración de estado, **autoría XML y *writer* de paquete de banco de ítems**, **migración de QTI 1.2 y QTI 2.x a ítems de autoría QTI 3**, transcodificación por perfil | 🚫 *«The project is not certified»*, dicho por su propio README |
+
+🔵 **La regla de propuesta que sale de acá, y es la que importa:** el sello de 1EdTech que el cliente audita cubre **la
+entrega**. Entonces el *item bank* y la autoría pueden ir con la pieza no certificada **siempre que la entrega al
+candidato la haga la certificada** — y eso hay que escribirlo en la propuesta, no dejarlo implícito. Ver **P48**.
+
+⚠️ **El límite medido, y cierra la consigna del pase 24:** **no existe banco de ítems QTI 3 certificado en open source.**
+Se buscó explícitamente. Los bancos QTI históricos (`tremby/questionbank`, `tremby/eqiat`) están **archivados**.
+
+## Capa de horarios (*timetabling*) — agregada en el pase 25 del 2026-10-01
+
+**La capa estaba vacía en esta KB, y el permisivo grande resultó ser el más traccionado del dominio.**
+
+| Repo | Licencia | ★ | Forks | Lenguaje | Alcance | Región |
+|---|---|---|---|---|---|---|
+| https://github.com/UniTime/unitime | **Apache-2.0** ✅ | **349** | **213** | Java | **Horarios de cursos y de exámenes**, *event management* con salas compartidas, **asignación de alumnos a clases**, *scheduling* de docentes. **Distribuido:** varios gestores departamentales coordinan un mismo horario | North America ⚠️ *inferida* |
+| https://github.com/manceras/horarios-escolares-manager | **MIT** ✅ | 0 | 0 | Python (FastAPI) + React/TS | Primaria: docentes, grupos, aulas y carga semanal con **OR-Tools CP-SAT**. Instalador Windows + AppImage, 42 commits. ⚠️ **«Early foundation, not production-ready»** por sus propios autores; UI **sólo en español** | EMEA (España) |
+
+⚠️ **La forma del segmento repite la del SIS que midió el pase 24:** los dos nombres históricos del *timetabling*
+escolar —**FET** y **mFET**— son **GPL/AGPL**. El permisivo grande y productivo es **UniTime**; el permisivo chico es
+español y está declarado no-productivo. Para un cliente de educación superior, **UniTime es la respuesta y es Apache-2.0**.
+
+## Capa de aserción de competencias — agregada en el pase 25 del 2026-10-01, y es la que le faltaba a la capa CASE
+
+| Repo | Licencia | ★ | Forks | Lenguaje | Qué hace | Estándares |
+|---|---|---|---|---|---|---|
+| https://github.com/cassproject/CASS | **Apache-2.0** ✅ | **62** | **29** | JavaScript | *«Competency and Skills System»*: autoría de marcos, **registro de aserciones de logro individual** y **cómputo de perfiles del aprendiz**. 2.123 commits. Editor Vue.js con *crosswalks* e import/export | **IMS CASE**, **xAPI**, CTDL-ASN, ASN, **Open Badges 2.0** y 🔵 **MCP**, por *«pluggable cartridges»* |
+
+🔴 **Lo que corrige de la lectura de esta KB.** La capa CASE que el pase 20 levantó —`opensalt` (MIT, 45 ★),
+`1EdTech/OpenCASE` (Apache-2.0, 9 ★), `compeito` (Apache-2.0, 3 ★), `conform-ed` (MIT, 2 ★)— **sabe hospedar y validar
+marcos de competencias, y ninguna de sus cuatro piezas sabe decir si un alumno alcanzó una competencia.** CaSS es la
+pieza de aserción, es permisiva, y con **62 ★ es la más traccionada de toda la capa**. Y el **cartucho MCP** la vuelve
+la **primera pieza de estándar educativo de esta KB con puerta nativa de agente**. Ver **P48** y la tendencia **65**.
+
+## Capa de analítica de aprendizaje: la decisión de estándar, con fecha — agregada en el pase 25 del 2026-10-01
+
+🔴 **De los dos estándares de analítica de aprendizaje, sólo uno se puede construir en open source.** Esto no es
+preferencia técnica: es una decisión del consorcio con fecha, y se midió este pase.
+
+| | **xAPI** (ADL / IEEE) | **Caliper Analytics** (1EdTech) |
+|---|---|---|
+| Especificación | https://github.com/adlnet/xapi-profiles — **Apache-2.0** ✅, **60 ★**, 33 forks, 153 commits, **no archivado** | https://github.com/1EdTech/caliper-spec — **22 ★**, bajo *«IMS Global Learning Consortium Specification Document License»* ⚠️ **no es licencia OSI** |
+| Implementaciones de referencia | **Públicas y permisivas:** `yetanalytics/lrsql` (ya en esta KB) y **`yetanalytics/xapipe`** / *LRSPipe* — **Apache-2.0** ✅, 17 ★, 9 forks, Clojure | 🔴 **Privadas desde el 2023-06-17.** `caliper-java`, `caliper-js` y `caliper-python` dan **404**; la descripción del repo `1EdTech/caliper-java` **es el aviso**: *«1EdTech will be moving Caliper to private repositories on June 17, 2023»*. Acceso sólo para *Contributing Members* y *Affiliates* |
+| Lo que queda público | — | `caliper-js-example` (**LGPL-3.0** ⚠️, 8 ★, ©2018) y `caliper-ontology`, **archivado** (estado del 2019-04-18) |
+| Estado normativo | **Grupo de trabajo IEEE p9274.2.1 activo** tras xAPI 2.0 | Especificación viva (Caliper 1.2) con implementaciones cerradas |
+
+**`yetanalytics/xapipe` (LRSPipe) es la pieza nueva y es la que faltaba en el medio:** *forwarder* y middleware de
+sentencias xAPI **gobernado por xAPI Profiles**, con **filtrado por *statement template*** y **por *pattern***, o reenvío
+total. Es decir: **decide qué telemetría sale de dónde según el perfil**, que es exactamente el control que piden los
+patrones de supresión y minimización de esta KB (P40, P44, P45, P46, P47).
+
+🔵 **La regla que esta KB adopta desde el pase 25:** **para analítica de aprendizaje se propone xAPI, no Caliper**, y
+cuando un cliente pida Caliper —porque su LMS lo emite— se le dice que **la especificación es legible pero las
+implementaciones no son open source desde junio de 2023**, y se cotiza el adaptador. Ver la tendencia **63**.
 
 ---
 *Ver también: `verticals/solutions.md` para plataformas verticales completas y `compose/patterns.md` para el wiring concreto.*
