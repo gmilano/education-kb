@@ -696,5 +696,89 @@ retención **ya están instalados** en cualquier Moodle soportado.
 - **Canvas** (AGPL-3.0) → sigue **no verificado** un toolset de retiro equivalente. El pase 17 lo declaró no
   encontrado y este pase **no lo auditó tampoco**. Se mantiene como *no encontrado, no inexistente*.
 
+
+## Capa de testing de conformidad sobre la vertical — agregada en el pase 20 del 2026-10-01
+
+Todas las capas anteriores de este archivo responden *qué se despliega*. Ésta responde **con qué se prueba lo
+desplegado**, que es lo que hacía falta para que los expedientes de `compose/patterns.md` (**P4**, **P10**, **P11**,
+**P17**, **P39**) dejaran de ser un documento y pasaran a ser una corrida reproducible.
+
+| Herramienta | Licencia | ★ | Qué prueba sobre la vertical | Cuándo se propone |
+|---|---|---|---|---|
+| https://github.com/aiverify-foundation/moonshot | **Apache-2.0** ✅ | 353 | *Benchmarking* + *red-teaming* del tutor: alucinación, contenido indeseable, **divulgación de datos** y vulnerabilidad adversaria | Es el *default* para un agente educativo. Informe HTML vía `moonshot-ui` |
+| https://github.com/aiverify-foundation/moonshot-cicd | **Apache-2.0** ✅ | 14 | Lo mismo, **dentro del pipeline**: Docker + S3, corre en cada actualización de modelo | Cuando el cliente ya tiene CI y el tutor va a cambiar de modelo más de una vez |
+| https://github.com/compl-ai/compl-ai | **Apache-2.0** ✅ | 211 | 29 benchmarks mapeados a **6 principios del EU AI Act** | **La pieza del expediente europeo.** Es la única de la capa con mapeo al AI Act |
+| https://github.com/UKGovernmentBEIS/inspect_ai | **MIT** ✅ | 2.900 | Sustrato de evals (200+ pre-construidas), *model-graded*, multi-turno | Cuando hay que escribir una prueba pedagógica propia desde cero |
+| https://github.com/aiverify-foundation/aiverify-developer-tools | **Apache-2.0** ✅ | 9 | Nada por sí mismo: es el **punto de extensión** para un plugin de test propio | Cuando el entregable incluye la prueba educativa que hoy no existe (gap 35) |
+
+### ⚠️ Lo que NO hay que proponer en esta capa, y son cuatro errores fáciles
+
+1. **No decir «certificamos».** `aiverify` declara por escrito que **no garantiza** que el sistema evaluado esté libre
+   de riesgos o sesgos, ni que sea seguro. Lo que se entrega es **evidencia reproducible**, que es mucho — y no es un
+   certificado.
+2. **No mezclar Singapur con Europa.** El *Model AI Governance Framework for Agentic AI* de Singapur es **voluntario**:
+   sin penalidad, sin registro, sin *enforcement*. El EU AI Act no. Moonshot es una **herramienta** válida en un
+   proyecto europeo; no es **cumplimiento** europeo.
+3. **No prometer un crosswalk que no existe.** AI Verify está mapeado a **NIST AI RMF** (oct-2023) y a **ISO/IEC
+   42001:2023** (jun-2024). **Al EU AI Act no hay mapeo directo** — se llega indirecto por ISO 42001. Para el
+   expediente europeo la pieza es **COMPL-AI**.
+4. **No proponer `aiverify` para un tutor.** Evalúa modelos supervisados **tabulares y de imagen**. Un tutor LLM se
+   prueba con **Moonshot**, **Inspect** o **COMPL-AI**. Confundirlos es prometer la herramienta equivocada en la
+   primera reunión técnica.
+
+### La regla de esta capa, en una línea
+
+**Lo que falta no es herramienta: es cobertura educativa.** Los tres catálogos de la capa declaran su alcance por
+dominio —**derecho, medicina y finanzas**— y **educación no está en ninguno**, mientras los benchmarks pedagógicos que
+esta KB tiene desde el pase 4 (`EduBench` y `SafeTutors`, **MIT**) no están empaquetados como prueba de nada. Las dos
+mitades son licencia-compatibles. Ver el **gap 35** y **P42**.
+
+## Capa de plataforma estatal instrumentada — Singapur / SLS — agregada en el pase 20 del 2026-10-01
+
+Esta KB nombró a Singapur **una vez en diecinueve pasadas** y de pasada ("el agente vive dentro del SLS"). Es poco,
+porque el **Student Learning Space** del MOE es probablemente **el despliegue educativo de AI más instrumentado del
+mundo**: no es un piloto ni un chatbot, son **ocho funciones de AI en producción nacional, seis de ellas usadas
+directamente por el alumno**, curadas, alineadas al currículo y supervisadas por el docente.
+
+| Función (SLS) | Sigla | Quién la usa | Alcance declarado |
+|---|---|---|---|
+| Adaptive Learning System | **ALS** | Alumno | **Matemática** (primaria superior y secundaria inferior) y **Geografía** (secundaria superior) |
+| Learning Assistant | **LEA** | Alumno | Asistente de aprendizaje dentro de la plataforma |
+| Feedback Assistant – Mathematics | **FA-Math** | Alumno | Devolución automática en matemática |
+| Annotated Feedback Assistant | **AFA** | Alumno | Devolución anotada sobre el trabajo del alumno |
+| Short Answer Feedback Assistant | **SAFA** | Alumno | Devolución sobre respuestas breves |
+| Speech Evaluation Tool | **SET** | Alumno | **Evaluación del habla** |
+
+⚠️ **Nivel de evidencia: fuentes secundarias concordantes, no el MOE.** `moe.gov.sg` y `learning.moe.edu.sg` están
+**bloqueados por el proxy de egreso** de esta sesión. Los nombres y siglas de las seis funciones y el alcance de ALS
+aparecen de forma coincidente en varias fuentes; **las otras dos de las ocho no quedaron nombradas**. Antes de usar
+esta tabla en material de cliente hay que abrir la fuente del MOE.
+
+### 🔴 Por qué esto importa para dos capas que esta KB declaró desabastecidas
+
+- **La capa de lectura oral del pase 14.** Ese pase escribió que *la habilidad que más se evalúa en primaria en el
+  mundo es la lectura oral y esta KB no tenía una sola pieza para medirla*. **Singapur la tiene desplegada a escala
+  nacional (SET)** — propietaria y estatal, no open source, así que **no cierra la capa**. Lo que cambia es el
+  argumento: deja de ser una apuesta y pasa a ser **una función que un sistema educativo nacional ya considera
+  indispensable**. Eso se usa en una propuesta.
+- **El gap 6 (grading), intacto desde el pase 2.** Tres de las seis funciones son **asistentes de devolución**
+  (FA-Math, AFA, SAFA). El gap 6 dice que no hay *grading* open source con tracción y que hay que orquestar al
+  incumbente propietario; Singapur confirma la demanda y **no aporta oferta open source**: lo construyó el Estado con
+  GovTech, cerrado. **El gap 6 no se mueve.**
+
+### La condición de arquitectura, que ya estaba escrita y ahora se entiende mejor
+
+El requisito que esta KB registró —**el agente tiene que vivir adentro del SLS**— no es una preferencia de compra: es
+coherente con una política de uso por nivel. Según las fuentes localizadas, **los alumnos de primaria inferior no usan
+AI directamente**, y **desde 4.º grado (Primary 4)** el uso es *estructurado, limitado, en clase y bajo supervisión
+docente*. Para un proyecto eso significa que **el producto SaaS suelto está descartado de entrada** y que el
+entregable es un componente integrado con control de nivel y traza de supervisión. Es el mismo requisito que el
+**trend 52** describe y que **P5** ya implementaba sin conocer su fundamento.
+
+**Y conecta con el pase 16:** un *Speech Evaluation Tool* usado por menores es exactamente el caso que el pase 16
+levantó —la voz de un menor como dato regulado—, resuelto por Singapur con **plataforma estatal + supervisión docente**
+en vez de con consentimiento. Es una tercera vía que esta KB no tenía registrada.
+
+
 ---
 *Ver `compose/patterns.md` para las recetas concretas con repos y tiempos.*

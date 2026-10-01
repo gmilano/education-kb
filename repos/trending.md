@@ -8,6 +8,89 @@ updated: 2026-10-01
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 
+## 2026-10-01 (pase 20) — el repo de testing de conformidad más grande de esta capa es MIT, tiene 2.900 ★ y lo mantiene un gobierno; el catálogo que lo acompaña cubre derecho, medicina y finanzas y no educación
+
+**Diez repos nuevos, verificados uno por uno vía WebFetch el 2026-10-01.** Ninguno se presenta como educativo, y es
+exactamente el motivo por el que veinte pasadas no los vieron.
+
+### Los repos nuevos, con licencia leída en la página del repo
+
+| Repo | Licencia | ★ | Forks | Qué es |
+|---|---|---|---|---|
+| `UKGovernmentBEIS/inspect_ai` | **MIT** ✅ | **2.900** | 763 | Framework de evals del **UK AI Security Institute**. 200+ evals pre-construidas. **Es el segundo repo con más estrellas de toda esta KB** |
+| `aiverify-foundation/moonshot` | **Apache-2.0** ✅ | 353 | 70 | *Benchmarking* + *red-teaming* en una herramienta. AI Verify Foundation (Singapur). 2.153 commits, v0.7.6 beta |
+| `compl-ai/compl-ai` | **Apache-2.0** ✅ | 211 | 37 | 29 benchmarks mapeados a **6 principios del EU AI Act**. ETH Zürich + INSAIT + LatticeFlow AI. 333 commits |
+| `aiverify-foundation/aiverify` | **Apache-2.0** ✅ | 97 | 31 | Plataforma de *governance testing*, 3.035 commits. ⚠️ tabular/imagen supervisado, **no agentes** |
+| `aiverify-foundation/moonshot-data` | **Apache-2.0** ✅ | 45 | 41 | Conectores, datasets (BigBench, CyberSecEval, Medical LLM, AILuminate v1.0 DEMO / MLCommons), métricas, *attack modules* |
+| `aiverify-foundation/LLM-Evals-Catalogue` | ⚠️ **sin licencia declarada** | 23 | — | Catálogo de evals en 7 categorías. **El hallazgo del pase está acá adentro** |
+| `morganrcu/awesome-eu-ai-act` | **CC0** ✅ | 21 | — | Lista curada de herramientas de conformidad al AI Act |
+| `aiverify-foundation/moonshot-cicd` | **Apache-2.0** ✅ | 14 | 4 | Moonshot GA para CI/CD: Docker, S3, AWS CodeBuild. Python 3.12 |
+| `aiverify-foundation/moonshot-ui` | **Apache-2.0** ✅ | 12 | 7 | UI Next.js; informe HTML con gráficos + export JSON |
+| `aiverify-foundation/aiverify-developer-tools` | **Apache-2.0** ✅ | 9 | 6 | Plantillas de **plugins de test propios** (v2.x) |
+| `GEMLab-HKU/Unlearn_and_Relearn` | **MIT** ✅ | 4 | 0 | *Unlearning* + *relearning* sobre modelo de alumno. **Universidad de Hong Kong**. 22 commits |
+
+### 🔴 El hallazgo del pase: la ausencia está declarada, no inferida
+
+Esta KB ya se equivocó midiendo capas por búsqueda (pases 4, 12, 18, 19). Acá no hace falta inferir: **los tres
+catálogos declaran su propia cobertura por dominio.**
+
+- **`LLM-Evals-Catalogue`** — categoría *domain-specific*: **derecho, medicina, finanzas**. **Educación ausente.**
+- **`compl-ai`** — 29 benchmarks sobre los 6 principios del AI Act, **sin mención de educación**. Y el **Anexo III del
+  propio AI Act nombra la educación como alto riesgo de forma textual**: el framework mapeado al AI Act no cubre uno
+  de los dominios que el AI Act nombra.
+- **`awesome-eu-ai-act`** — once herramientas open source listadas (Giskard 5.700 ★, DeepEval, PyRIT, Inspect,
+  Holistic AI Apache-2.0, AI Act Companion MIT, Regula Apache-2.0/EUPL-1.2, VerifyWise, AIR Blackbox, Venturalitica
+  SDK, Inkog). **Ninguna del sector educativo.**
+
+**Y el complemento está en esta KB desde el pase 4:** `EduBench` (MIT), `SafeTutors` (MIT), `MathTutorBench` (CC BY
+4.0), `UnifyingAITutorEvaluation` (CC BY-SA 4.0) — premiados en ACL, EMNLP y NAACL, **sin un solo mapeo regulatorio ni
+empaquetado como *recipe***. Es el **gap 35**: lo que falta no es un repo, es **el puente entre dos mitades que ya
+están construidas y son licencia-compatibles** (MIT ↔ Apache-2.0). Ver **P42**.
+
+### La forma de esta capa, y rompe el patrón de las diecinueve pasadas anteriores
+
+Las capas 8, 9, 10, 14 y 16 de esta KB tienen todas la misma forma: **lo maduro es copyleft, lo permisivo no pasa de
+15 estrellas**. Esta capa la invierte por completo:
+
+| | Capas 8/9/10/14/16 | Esta capa (pase 20) |
+|---|---|---|
+| Lo más grande | copyleft (GPL-3.0 / AGPL-3.0) | **MIT, 2.900 ★** (`inspect_ai`) |
+| Lo permisivo | techo de 10–15 ★ | **Apache-2.0 con 353, 211 y 97 ★** |
+| Quién lo publica | autor individual o laboratorio | **UK AISI, IMDA Singapur, ETH Zürich** |
+| Cobertura educativa | parcial | **cero, y declarada** |
+
+**La lectura comercial es directa:** no hay que pelear licencia ni madurez en esta capa. Hay que pelear **cobertura de
+dominio**, que es trabajo de integración y es lo que Globant hace. Y hay una asimetría a favor: la capa es tan
+permisiva que la contribución educativa puede ir **hacia arriba**, a los repos del regulador, lo que convierte un
+entregable de cliente en posicionamiento público.
+
+### El lado del *unlearning*, que el pase 19 dejó abierto y este acota
+
+El pase 19 cerró el gap 32 refutándolo y dejó el **gap 34** (*unlearning* evaluado sobre modelos de alumno). Este pase
+encuentra el primer repo educativo de *unlearning* **con código publicado** —`GEMLab-HKU/Unlearn_and_Relearn`, MIT— y
+**no cierra el gap**, porque el objetivo está invertido: borra para **fabricar un alumno novato** creíble (y medir
+cuánto recupera cuando se le enseña), no para **proteger** a un alumno real. **El gap 34 queda abierto con mejor
+diagnóstico:** la maquinaria existe en educación y es MIT; falta apuntarla a la supresión.
+
+### 🔴 La nota de método, y vale para toda la KB
+
+Los pases 18 y 19 buscaron código de *unlearning* sobre *knowledge tracing* y no lo encontraron. **La causa es una
+colisión de terminología, no una ausencia.** «Knowledge tracing» significa dos cosas distintas: en esta KB y en `pyKT`
+es *modelar el conocimiento del alumno*; en la literatura de *unlearning* es *rastrear qué conocimiento de un modelo
+vino de qué dato de entrenamiento* (*Lifting Data-Tracing Machine Unlearning to Knowledge-Tracing for Foundation
+Models*). La búsqueda por técnica devuelve el segundo sentido y entierra el primero. **Lo que funcionó fue buscar por
+escenario educativo** — la regla del pase 5, redescubierta en otra capa. Tercera vez que esta KB paga el mismo peaje.
+
+### Lo que esta pasada buscó y no encontró
+
+- 🚫 **Ninguna *recipe*, *cookbook* ni plugin educativo** en `moonshot-data`, `aiverify-developer-tools` ni `compl-ai`.
+  Revisado el contenido declarado de los tres. **El gap 35 está medido, no supuesto.**
+- 🚫 **Ningún caso de uso educativo documentado** de AI Verify o Moonshot.
+- 🚫 **Ninguna herramienta de conformidad de origen LATAM**, en una región donde Brasil, Chile y México tienen
+  obligaciones de auditoría algorítmica escritas o en trámite. No encontrada, **no inexistente**.
+- ⚠️ `imda.gov.sg`, `moe.gov.sg`, `learning.moe.edu.sg` y `arxiv.org` **bloqueados por el proxy de egreso**: todo lo
+  regulatorio y lo de plataforma estatal de este pase es de **fuentes secundarias concordantes**.
+
 ## 2026-10-01 (pase 19) — el ancla de la capa de *unlearning* tiene 607 ★ y es MIT, y el pase 18 midió la capa con los repos equivocados
 
 El pase 18 cerró la capa de borrado del modelo con una frase correcta — *«la oferta existe, es grande y es toda

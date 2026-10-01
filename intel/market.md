@@ -429,6 +429,44 @@ titular «el AI Act se pospuso» tiene **una obligación vencida y una a dos mes
 > conclusión —lo que importa es la fecha operativa, **2027-07-01**, que no está en disputa— pero conviene no seguir
 > escribiendo las dos.
 
+### Agregado en el pase 20 del 2026-10-01 — la cifra global vuelve a confirmarse, y el dato nuevo es regulatorio: tres regiones legislan auditoría algorítmica y una sola construye la herramienta
+
+**Lo que se confirmó, y van tres pases seguidos.** El rango global que la KB ya tiene se repite sin variación en este
+barrido: **USD 7,52 B (2025) → 10,6 B (2026)** al **40,9%** de CAGR, con proyección a **42,48 B en 2030** al 41,5%.
+**No es un dato nuevo: es el tercer pase que da lo mismo**, y eso ya es información — la dispersión entre consultoras
+que el pase 13 señaló como "el dato" se estabilizó en esta banda.
+
+**El dato de gobernanza que vuelve, con otra fuente.** *Sólo el **20%** de las universidades tiene una política formal
+de AI*, y **56%** de estudiantes y educadores considera que su institución **no está preparada** para gestionar la AI.
+Concuerda con el 82% de incumplimiento del pase 2: **la adopción le sacó varios cuerpos a la gobernanza, y el margen
+está en cerrar esa brecha, no en ampliar la adopción.**
+
+🔴 **El hallazgo regional de este pase es un desajuste entre quién regula y quién construye.** Cuatro regiones, y la
+obligación de auditar no está donde está la herramienta:
+
+| Región | Qué exige la norma | Herramienta de testing de origen local |
+|---|---|---|
+| **EMEA** | **Vinculante.** AI Act en vigor desde el **2026-07-27**; **AI Office y autoridades nacionales aplicando desde el 2026-08-02**; **Anexo III (educación) el 2027-12-02**; Anexo I el 2028-08-02. Alto riesgo educativo: evaluar alumnos, asignarlos a programas, detectar conducta prohibida en exámenes, decidir acceso a titulaciones. **Evaluación de conformidad obligatoria antes de poner en servicio**, registro en la base pública de la UE, monitoreo post-mercado y reporte de incidentes | ✅ **`compl-ai`** (ETH Zürich + INSAIT + LatticeFlow, **Apache-2.0**, 211 ★) e **`inspect_ai`** (UK AISI, **MIT**, 2.900 ★) |
+| **APAC** | **Voluntario, pero con la herramienta adentro.** Singapur: *Model AI Governance Framework for Agentic AI* **v1.5** (anunciado el **2026-01-22** en el WEF; actualizado el **2026-05-20** y el **2026-06-05**), IMDA + AI Verify Foundation, **sin penalidad ni registro ni enforcement**. Y el **Starter Kit for Testing LLM-Based Applications v1.0, enero 2026**. Corea: AI Basic Act en vigor **2026-01-22**. Vietnam: ley de AI vigente desde marzo de 2026 | ✅ **La pila completa: `moonshot`, `moonshot-cicd`, `aiverify`, `moonshot-data`** (todo **Apache-2.0**) |
+| **North America** | **Fragmentado y acelerando.** **134 proyectos de ley de AI en educación en 31 estados** en el ciclo 2026. Privacidad del dato del alumno (California **AB 1159**, que prohíbe usar dato de alumnos para **entrenar** modelos; Idaho **SB 1227**), supervisión humana obligatoria y **prohibición de decisiones de alto impacto por AI** (Oklahoma, Maryland), y currículo (Georgia y Mississippi, créditos de CS con AI) | ⚠️ **Marco, no herramienta:** el **NIST AI RMF** es la referencia contra la que AI Verify se mapeó (oct-2023). La oferta de herramienta es privada |
+| **LATAM** | **Escrito o en trámite, y pide auditoría de forma explícita.** **Brasil**: PL 2338/2023, aprobado por el Senado en dic-2024 — clasificación por riesgo, **evaluación de impacto algorítmico**, **auditorías periódicas** y registro nacional de sistemas de alto riesgo. **Chile**: **Ley 21.719** vigente (perfilamiento y decisiones automatizadas) + proyecto de AI con **cuatro niveles de riesgo**, registro, auditoría y transparencia algorítmica para alto riesgo. **México**: 85 iniciativas pendientes; obligación de **auditar al menos anualmente** los sistemas de alto riesgo para detectar sesgo discriminatorio | 🚫 **Ninguna encontrada.** Declarado **no encontrado, no inexistente** |
+
+**La lectura comercial, y es la más limpia que dio un barrido regional en veinte pases:** **LATAM está legislando
+exactamente el entregable que no tiene con qué producir.** Tres países pidiendo auditoría algorítmica, cero
+herramientas locales, y una pila **Apache-2.0** de un regulador asiático que se puede usar sin fricción de licencia.
+Eso no es un gap de la región: es **una oportunidad de servicio con obligación legal como motor de compra**.
+
+⚠️ **Y el dato mexicano que conecta con el pase 15.** En el sector educativo mexicano, **auditorías técnicas de
+herramientas de detección basadas en análisis estadístico muestran tasas de error altas**, con una crisis de
+evaluación por **falsos positivos**. Es la confirmación regional del **trend 36** ("la pregunta *¿lo escribió una AI?*
+no tiene respuesta") y del **trend 38**, ahora con la auditoría hecha por el lado del cliente. **Refuerza la postura de
+la KB: procedencia, no detección.**
+
+**El dato de North America que la KB no tenía, y es de adopción docente.** El estudio de **RAND** (presentado como la
+primera encuesta nacionalmente representativa de AI en K-12) mide que el uso docente de AI para **planificación de la
+enseñanza pasó del 25% al 53% en un año**. Encaja con el patrón que esta KB viene sosteniendo: **lo teacher-facing es
+el ángulo menos disputado y el de adopción más rápida** (ver **P8**).
+
 ## Players globales
 
 | Empresa | Tipo | Fortaleza | Debilidad |
@@ -857,6 +895,31 @@ de salida**, y es permisiva.
   qué método y con qué métrica de verificación— como anexo del *policy pack* que esta KB ya vende en esta región.
   Ver **P37**, **P38** y **P39**.
 
+#### Pase 20 del 2026-10-01 — 134 proyectos de ley en 31 estados, y lo que piden es exactamente lo que esta capa produce
+
+El ciclo legislativo 2026 trae **134 proyectos de ley sobre AI en educación en 31 estados**, agrupados en tres ejes, y
+los tres se contestan con evidencia de testing, no con producto:
+
+- **Privacidad del dato del alumno** — California **AB 1159** prohíbe usar dato de alumnos para **entrenar** modelos;
+  Idaho **SB 1227** exige protecciones de privacidad en herramientas de AI escolares.
+- **Supervisión humana y límite de decisión** — Oklahoma y Maryland exigen supervisión humana y **prohíben que la AI
+  tome decisiones de alto impacto** sobre un alumno.
+- **Currículo** — Georgia y Mississippi incorporan créditos de CS con contenido de AI.
+
+**La pieza de interoperabilidad de la región es el marco, no la herramienta:** el **NIST AI RMF** es la referencia
+contra la que **AI Verify se mapeó en octubre de 2023**, en lo que se presenta como el único ejercicio
+gobierno-a-gobierno de mapeo del mundo. **Para un cliente de North America eso es el argumento que vuelve proponible
+una herramienta de Singapur:** no es software exótico, es software mapeado al marco federal que el cliente ya conoce.
+
+**El dato de adopción docente que refuerza P8:** la encuesta de **RAND** —presentada como la primera nacionalmente
+representativa de AI en K-12— mide el uso docente de AI para **planificación de la enseñanza pasando del 25% al 53% en
+un año**. Y sigue en pie el dato de Gallup: **34% de los docentes no recibe ninguna guía** y sólo **18%** recibe
+política escrita formal. **La venta es el andamiaje de gobernanza, no la herramienta.**
+
+AB 1159 además mata una arquitectura entera: **si el dato del alumno no puede entrenar un modelo, el estimador de
+mastery no se entrena con dato del cliente** y el camino es federado / on-premise (**P34**) con evidencia de
+procedencia (**P37**), más ahora **la corrida de testing reproducible** que **P42** agrega al expediente.
+
 ### EMEA
 
 **Pase 19 (2026-10-01) — hay una obligación que vence en dos meses y el titular que le llegó al cliente dice lo contrario.**
@@ -1225,6 +1288,31 @@ Escandinavia**.
 - ⚠️ **Nivel de evidencia:** las cifras de mercado y de adopción de este bloque provienen de fuentes secundarias
   concordantes, **no de la fuente primaria** (el proxy de esta sesión bloquea varios de esos dominios). Reportarlas
   con rango y con fuente, nunca como número puntual.
+
+#### Pase 20 del 2026-10-01 — la herramienta que vuelve ejecutable el expediente del AI Act existe, es Apache-2.0 y es europea
+
+El **AI Act está en vigor desde el 2026-07-27** y **el AI Office y las autoridades nacionales aplican desde el
+2026-08-02**; el **Anexo III (educación) vence el 2027-12-02**. Para educación es alto riesgo todo sistema que
+**evalúe alumnos, los asigne a programas, detecte conducta prohibida en un examen o incida en el acceso a una
+titulación**, y la **evaluación de conformidad —interna o de tercero— es previa a la puesta en servicio**, con
+registro en la base pública de la UE, monitoreo post-mercado y reporte de incidentes.
+
+**Lo que cambia en este pase:** hasta ahora la KB vendía ese expediente **sin herramienta**. Ya la hay, y es local:
+
+- **`compl-ai`** (**Apache-2.0**, 211 ★, ETH Zürich + INSAIT + LatticeFlow AI) — **29 benchmarks organizados sobre los
+  6 principios núcleo del AI Act**. Es la única pieza de la capa con mapeo al régimen que acá es exigible.
+- **`inspect_ai`** (**MIT**, 2.900 ★, **UK AI Security Institute**) — el sustrato de evals sobre el que se escribe una
+  prueba propia; 200+ evals pre-construidas.
+
+🔴 **Y el hueco que esto abre es la oportunidad concreta de la región:** `compl-ai` **no menciona educación** en sus 29
+benchmarks, aunque el Anexo III nombra la educación de forma textual. **El framework mapeado al AI Act no cubre uno de
+los dominios que el AI Act nombra.** Cerrar eso —mapear `EduBench` (MIT) y `SafeTutors` (MIT) a los principios de
+`compl-ai`— es el **gap 35**, es trabajo de integración y **se puede contribuir hacia arriba a un repo de ETH Zürich**,
+lo que convierte un entregable de cliente en posicionamiento. Ver **P42**.
+
+⚠️ **Lo que no se puede hacer acá:** presentar el marco de Singapur como cumplimiento. Es **voluntario** y no tiene
+crosswalk directo al AI Act (sólo a NIST AI RMF y a ISO/IEC 42001). Moonshot sirve como herramienta; **COMPL-AI es la
+pieza del expediente**.
 
 ### APAC
 
@@ -1633,6 +1721,35 @@ actualización, **no porque describan 2026**. Si una propuesta se apoya en ellas
   APAC es la región de mayor crecimiento proyectado, por encima de North America.
 - ⚠️ **Nivel de evidencia:** cifras de adopción y de mercado de fuentes secundarias concordantes; los metadatos de
   PrivacyCD, de snippets de búsqueda — `arxiv.org` está bloqueado por el proxy de esta sesión.
+
+#### Pase 20 del 2026-10-01 — la región dejó de aportar sólo tutores y prototipos: aporta la infraestructura de testing, con Apache-2.0 y un regulador detrás
+
+Esto corrige el encuadre que el **gap 4** viene dando desde el pase 7. Hasta ahora "lo APAC" en esta KB era *oferta
+abundante con procedencia a explicar y a veces sin licencia*. En esta capa es lo contrario: **infraestructura publicada
+por un Estado, con licencia permisiva y gobernanza de fundación.**
+
+- **La pila de la AI Verify Foundation (Singapur), toda Apache-2.0:** `moonshot` (353 ★, *benchmarking* +
+  *red-teaming*), `moonshot-cicd` (14 ★, para pipeline), `moonshot-data` (45 ★, conectores y datasets), `aiverify`
+  (97 ★, ⚠️ tabular/imagen, **no agentes**), `moonshot-ui` (12 ★), `aiverify-developer-tools` (9 ★, plugins propios).
+- **El marco:** *Model AI Governance Framework for Agentic AI* **v1.5**, IMDA + AI Verify Foundation — anunciado el
+  **2026-01-22** en el WEF, actualizado el **2026-05-20** y el **2026-06-05**. Pide **acotar el riesgo de entrada**,
+  **checkpoints con aprobación humana**, **controles técnicos incluido testing de base** y **transparencia y
+  formación al usuario final**. ⚠️ **Es voluntario: sin penalidad, sin registro, sin enforcement.**
+- **El manual:** *Starter Kit for Testing LLM-Based Applications for Safety and Reliability* **v1.0, enero de 2026**,
+  construido con testing real de **30+ empresas** y consulta a **60+**, con la CSA y GovTech. Cubre alucinación,
+  contenido indeseable, **divulgación de datos** y prompts adversarios, enfocado en **pre-despliegue**.
+- **Interoperabilidad verificada:** crosswalk a **NIST AI RMF** (oct-2023, presentado como el único ejercicio
+  gobierno-a-gobierno del mundo) y a **ISO/IEC 42001:2023** (jun-2024). **Al EU AI Act, sólo indirecto por ISO 42001.**
+
+**La otra mitad del pase, y es la plataforma:** el **Student Learning Space** del MOE de Singapur corre **ocho funciones
+de AI en producción nacional, seis usadas directamente por el alumno** (ALS, LEA, FA-Math, AFA, SAFA, SET), curadas,
+alineadas al currículo y supervisadas por docente, con **uso directo recién desde 4.º grado**. Ver
+`verticals/solutions.md`. **Dos consecuencias para una propuesta en la región:** el **SaaS suelto está descartado** —el
+agente vive adentro de la plataforma estatal— y la demanda de *speech evaluation* y de asistentes de devolución está
+**probada a escala de sistema**, aunque resuelta con software cerrado (el **gap 6** no se mueve).
+
+**Y el único *unlearning* educativo con código es de Hong Kong** (`GEMLab-HKU/Unlearn_and_Relearn`, **MIT**, 4 ★). La
+región concentra ahora también esta capa.
 
 ### LATAM
 
@@ -2175,6 +2292,41 @@ preparación**; hay una generación usando AI sin necesariamente entenderla.
 - ⚠️ **Nivel de evidencia:** la encuesta del Digital Education Council y las referencias regulatorias provienen de
   fuentes secundarias concordantes, **no leídas en la fuente primaria** (proxy de egreso). Verificar antes de citar
   en material de cliente.
+
+#### Pase 20 del 2026-10-01 — 🔴 la región legisla la auditoría algorítmica y no construye la herramienta que la ejecuta: es el desajuste más explotable que encontró esta KB
+
+**Lo que exige la norma, por país:**
+
+- **Brasil** — **PL 2338/2023**, aprobado por el Senado en **dic-2024**: clasificación por riesgo, obligaciones de
+  transparencia, **evaluación de impacto algorítmico**, **auditorías periódicas** y **registro nacional de sistemas de
+  alto riesgo**.
+- **Chile** — **Ley 21.719** de protección de datos **ya vigente**, que regula el **perfilamiento automatizado y las
+  decisiones algorítmicas**; y un proyecto de ley de AI con **cuatro niveles de riesgo** (mínimo, limitado, alto,
+  inaceptable) donde el alto riesgo requeriría **registro, auditoría y transparencia algorítmica**.
+- **México** — **85 iniciativas pendientes**; las obligaciones incluyen evaluación de impacto, transparencia sobre
+  decisiones automatizadas y **auditoría al menos anual** de sistemas de alto riesgo para detectar sesgo
+  discriminatorio.
+
+**Y lo que la región tiene para cumplirlo:** 🚫 **ninguna herramienta de testing de conformidad de origen LATAM.**
+Declarado **no encontrado, no inexistente**, tras buscarlo de forma explícita. Es el mismo patrón que el **gap 2**
+viene anotando —la región no produce la pieza— pero por primera vez con **la obligación legal del otro lado**, y eso
+cambia el signo: **no es un gap de madurez, es una demanda sin oferta.**
+
+**La oportunidad concreta, y es inmediata:** la pila de testing es **Apache-2.0** y **MIT** (`moonshot`,
+`moonshot-cicd`, `compl-ai`, `inspect_ai`), así que **no hay fricción de licencia para instalarla y adaptarla
+localmente**. Un servicio de **auditoría algorítmica de sistemas educativos** —corrida reproducible + informe HTML
+legible por un comité, vía `moonshot-ui`— tiene en Brasil, Chile y México **motor de compra normativo** y **cero
+competencia local**. Ver **P42**.
+
+⚠️ **Y el dato mexicano que valida la postura de la KB sobre integridad académica:** en el sector educativo de México,
+**auditorías técnicas muestran que las herramientas de detección por análisis estadístico tienen tasas de error
+altas**, con una crisis de evaluación por **falsos positivos**. Es la confirmación local de los **trends 36 y 38**:
+**no vender detección; vender procedencia**, y usar esta auditoría ajena como prueba en la conversación.
+
+**La contraparte institucional ya está medida:** 92% de estudiantes y 79% de docentes usando AI (Digital Education
+Council, 30.000+ respuestas, 29 instituciones), con **65% de los estudiantes preocupado por que la AI vuelva
+superficial el aprendizaje** — que es, literalmente, la pregunta que un *harness* de evaluación pedagógica contesta con
+datos. Partners regionales: Institute for the Future of Education / **Tec de Monterrey**, **AIGEN** y **RIE360**.
 
 ## Posicionamiento Globant
 

@@ -1986,3 +1986,149 @@ entregable sirve, sin rehacerlo, para el **Anexo III** europeo (2027-12-02), par
 diferenciador —**citación con número de página y abstención fuera de alcance**— es verificable por el cliente en una
 demo de diez minutos, no en una auditoría de seis meses.
 
+
+## P42 — El expediente de conformidad como corrida reproducible, no como documento (agregado en el pase 20; **transversal, y es el que vuelve ejecutables P4, P10, P11, P17 y P39**)
+
+**El problema que resuelve, y es un problema de esta KB antes que de un cliente.** Cinco patrones de este archivo
+prometen un *expediente de conformidad* —**P4** (Anexo III europeo), **P10** (probar que el tutor enseña), **P11**
+(gate de seguridad pedagógica), **P17** (accesibilidad), **P39** (privacidad)— y hasta el pase 19 ninguno decía **con
+qué herramienta se corre la prueba**. El entregable era un documento. Un documento no se vuelve a correr cuando el
+cliente cambia de modelo, y en 2026 el cliente cambia de modelo cada trimestre.
+
+**Lo que cambia:** la máquina existe, es permisiva, y la publican reguladores. El entregable pasa de *informe* a
+**pipeline que se vuelve a correr en cada cambio de modelo y emite el mismo informe con datos nuevos**.
+
+### Las piezas, todas verificadas vía WebFetch en el pase 20
+
+| Capa | Pieza | Licencia | Rol |
+|---|---|---|---|
+| Ejecutor | `aiverify-foundation/moonshot` (353 ★) | **Apache-2.0** | *Benchmarking* + *red-teaming*: alucinación, contenido indeseable, **divulgación de dato del alumno**, vulnerabilidad adversaria |
+| Pipeline | `aiverify-foundation/moonshot-cicd` (14 ★) | **Apache-2.0** | La misma corrida dentro de CI/CD, con Docker y S3. **Es la pieza que vuelve el expediente reproducible** |
+| Mapeo regulatorio | `compl-ai/compl-ai` (211 ★) | **Apache-2.0** | 29 benchmarks sobre los **6 principios núcleo del EU AI Act**. La pieza del expediente europeo |
+| Sustrato de evals | `UKGovernmentBEIS/inspect_ai` (2.900 ★) | **MIT** | Donde se escribe la prueba pedagógica que no existe. 200+ evals pre-construidas, *model-graded* |
+| Extensión de datos | `aiverify-foundation/moonshot-data` (45 ★) | **Apache-2.0** | Donde entra el dataset educativo como *recipe* / *cookbook* |
+| Extensión de código | `aiverify-foundation/aiverify-developer-tools` (9 ★) | **Apache-2.0** | Donde entra el algoritmo de test propio |
+| Informe | `aiverify-foundation/moonshot-ui` (12 ★) | **Apache-2.0** | Salida **HTML con gráficos** + JSON: lo que lee un comité de ética o una inspección |
+| Contenido pedagógico | `EduBench` · `SafeTutors` | **MIT** | El qué se mide: 9 contextos educativos, 4.000+ situaciones, 12 dimensiones; y el daño |
+| Contenido pedagógico | `MathTutorBench` · `UnifyingAITutorEvaluation` | CC BY 4.0 / **CC BY-SA 4.0** ⚠️ | Taxonomía de 8 dimensiones y *reward models* de calidad de enseñanza. **El share-alike se dispara si se deriva un benchmark propio con dato del cliente** |
+
+### El wiring, y es el trabajo del gap 35
+
+```
+   EduBench (MIT) ─┐
+  SafeTutors (MIT) ─┼──► empaquetado como *recipe* / cookbook ──► moonshot-data (Apache-2.0)
+                    │         ⚠️ ESTE PASO NO EXISTE (gap 35) — es el trabajo de integración
+                    │
+  prueba pedagógica ┴──► plugin de test ──► aiverify-developer-tools (Apache-2.0)
+                                                      │
+   agente educativo del cliente ◄───── evalúa ────────┤
+                                                      ▼
+                                              moonshot-cicd  (corre en cada deploy)
+                                                      │
+                            ┌─────────────────────────┴────────────────────────┐
+                            ▼                                                  ▼
+                 moonshot-ui → informe HTML                      compl-ai → mapeo a los 6
+                 (comité de ética, inspección)                   principios del EU AI Act
+```
+
+**Las tres fases, con corte comercial limpio:**
+
+1. **Fase 1 — la corrida base, sin nada educativo (2–3 semanas).** `moonshot-cicd` sobre el agente del cliente con los
+   *cookbooks* del Starter Kit de IMDA ya existentes: alucinación, contenido indeseable, **divulgación de datos**,
+   prompts adversarios. **Ya entrega valor** y no depende de cerrar ningún gap. Es la demo de diez minutos.
+2. **Fase 2 — la capa pedagógica (4–6 semanas).** Empaquetar `EduBench` y `SafeTutors` (**MIT, sin fricción**) como
+   *recipes* y escribir la prueba pedagógica propia sobre `inspect_ai`. **Acá se cierra el gap 35**, y es el
+   diferenciador: nadie en el mercado tiene esto, porque los tres catálogos de la capa declaran cobertura de
+   **derecho, medicina y finanzas** y no de educación.
+3. **Fase 3 — el mapeo regulatorio (3–4 semanas, sólo EMEA).** Mapear las pruebas a los 6 principios de `compl-ai`
+   para el expediente del **Anexo III**. Sólo tiene sentido donde el régimen es exigible.
+
+**Plazo y alcance.** Fase 1: **2–3 semanas**. Las tres: **3–4 meses**.
+
+### Dónde se vende primero, y hay un orden
+
+1. **LATAM** — es donde el desajuste es mayor y la competencia, nula: **Brasil** (PL 2338/2023 pide **evaluación de
+   impacto algorítmico** y **auditorías periódicas**), **Chile** (Ley 21.719 vigente + proyecto con auditoría para alto
+   riesgo) y **México** (**auditoría al menos anual** de alto riesgo) legislan la auditoría y **la región no produce
+   una sola herramienta que la ejecute**. Motor de compra normativo + cero oferta local.
+2. **EMEA** — es donde el régimen es **vinculante** (aplicación desde el **2026-08-02**, Anexo III el **2027-12-02**) y
+   donde la pieza mapeada es local (`compl-ai`, ETH Zürich). Fase 3 obligatoria.
+3. **North America** — el argumento de entrada es el **crosswalk a NIST AI RMF**: no es software exótico, está mapeado
+   al marco federal que el cliente ya conoce. Y con **134 proyectos de ley en 31 estados**, el comprador ya tiene el
+   problema.
+4. **APAC** — es donde nació la herramienta, así que el diferenciador no es traerla: es **la capa educativa que le
+   falta**.
+
+⚠️ **Lo que este patrón NO promete, y hay que decirlo en la primera reunión.**
+
+- **No certifica.** `aiverify` declara por escrito que no define estándares éticos y **no garantiza** que el sistema
+  evaluado esté libre de riesgos o sesgos. Se entrega **evidencia reproducible**, que es lo que una auditoría pide.
+- **El marco de Singapur es voluntario** (sin penalidad, sin registro, sin *enforcement*). Moonshot es **herramienta**
+  en un proyecto europeo, nunca **cumplimiento** europeo.
+- **No hay crosswalk directo de AI Verify al EU AI Act** — sólo a **NIST AI RMF** (oct-2023) y a **ISO/IEC 42001:2023**
+  (jun-2024). Al AI Act se llega **indirecto por ISO 42001**.
+- **`aiverify` no evalúa agentes** (tabular e imagen supervisados). El tutor se prueba con Moonshot, Inspect o COMPL-AI.
+- **`LLM-Evals-Catalogue` no tiene licencia declarada**: se lee para orientarse, **no se incorpora** a un entregable.
+- **`MathTutorBench` es CC BY 4.0 y `UnifyingAITutorEvaluation` es CC BY-SA 4.0.** Derivar un benchmark propio con dato
+  del cliente **dispara el share-alike** del segundo. Las dos piezas limpias son `EduBench` y `SafeTutors` (MIT).
+
+**El bonus de posicionamiento, y no cuesta nada extra.** Como las dos puntas son MIT y Apache-2.0, la capa educativa se
+puede **contribuir hacia arriba**: a `moonshot-data`, a `compl-ai` (ETH Zürich) o al `LLM-Evals-Catalogue` del
+regulador singapurense. Un entregable de cliente se convierte en **la referencia pública de evaluación educativa de la
+industria**, que es exactamente el hueco que los tres catálogos declaran tener.
+
+## P43 — El alumno simulado que de verdad no sabe, para evaluar al tutor sin poner chicos adelante (agregado en el pase 20; **transversal, y es la pieza que le faltaba a P10**)
+
+**El problema que resuelve.** **P10** promete *probar que el tutor enseña, no que responde*, y el **gap 1** viene
+diciendo desde el pase 4 que el estándar de evaluación pedagógica **existe, está premiado en EMNLP, NAACL y ACL, y no
+se adopta en producción**. Una de las razones prácticas de esa no-adopción es que **medir enseñanza requiere un alumno
+que no sepa**, y las dos opciones conocidas son malas: poner alumnos reales (lento, caro y, con menores, regulado — ver
+el pase 16) o pedirle a un LLM que *«actúe como principiante»*, que **no funciona**: el modelo se escapa hacia
+explicaciones de experto y el diálogo deja de medir lo que se quería medir.
+
+**La pieza nueva, y es educativa.** `GEMLab-HKU/Unlearn_and_Relearn` (**MIT**, 4 ★, 22 commits, Universidad de Hong
+Kong) ataca exactamente eso: aplica **machine unlearning** para volver **genuinamente novato** a un modelo que sabe, de
+forma **configurable (10–50% de olvido)**, y después mide cuánto **recupera** cuando se le enseña. Arquitectura de tres
+etapas y un loop de tres partes **Coach / Teachable Agent / Judge**.
+
+### Las piezas
+
+| Pieza | Licencia | Rol |
+|---|---|---|
+| `GEMLab-HKU/Unlearn_and_Relearn` | **MIT** ✅ | **Arquitectura de referencia.** Unlearning por destilación con intervención → relearning → loop Coach/Teachable Agent/Judge |
+| `torchunlearn` (`machine-unlearning-pytorch`) | **MIT** ✅ | Los 20 algoritmos de *unlearning* si hay que reimplementar la etapa 1 |
+| `UnifyingAITutorEvaluation` | CC BY-SA 4.0 ⚠️ | La taxonomía de **8 dimensiones** contra la que se puntúa al tutor |
+| `MathTutorBench` | CC BY 4.0 ⚠️ | *Reward models* entrenados de calidad de enseñanza y leaderboard |
+| `EduBench` · `SafeTutors` | **MIT** ✅ | Las piezas limpias: 9 contextos educativos y seguridad pedagógica |
+| `moonshot` / `inspect_ai` | **Apache-2.0** / **MIT** ✅ | Donde corre todo esto como prueba repetible (ver **P42**) |
+
+### El wiring
+
+1. **Fabricar el alumno.** Tomar un modelo abierto y aplicarle *unlearning* sobre los **componentes de conocimiento
+   específicos** de la materia del engagement, al nivel de olvido que corresponda al curso (el repo parametriza 10–50%).
+2. **Enseñarle con el tutor del cliente.** El tutor a evaluar toma el rol de **Coach** contra el *Teachable Agent*.
+3. **Medir recuperación, no satisfacción.** La métrica es **cuánto conocimiento recupera el alumno simulado**, puntuado
+   con la taxonomía de 8 dimensiones y los *reward models* de `MathTutorBench`. **Es la métrica que P10 siempre quiso y
+   no tenía cómo producir:** no mide si la respuesta del tutor es buena, mide si **el alumno aprendió**.
+4. **Empaquetarlo como prueba.** Entra como *recipe* en **P42** y se vuelve a correr en cada cambio de modelo.
+
+**Plazo y alcance.** Prueba de concepto sobre una materia: **4–6 semanas**. Como capa de evaluación integrada a P42:
+**2–3 meses**.
+
+**Dónde se vende primero.** **EMEA** y **North America**, por la misma razón y es regulatoria: donde hay supervisión
+humana obligatoria y prohibición de decisiones de alto impacto (Oklahoma, Maryland) o evaluación de conformidad previa
+(Anexo III), **evaluar al tutor sin exponer alumnos reales es un argumento de cumplimiento, no sólo de ingeniería**. Y
+en **North America** hay un filo extra: **AB 1159 prohíbe usar dato de alumnos para entrenar modelos** — un alumno
+sintético producido por *unlearning* **no es dato de alumno**.
+
+⚠️ **Lo que este patrón NO promete.**
+
+- **4 estrellas y 0 forks.** Es **arquitectura de referencia, no dependencia** — mismo criterio con el que el pase 8
+  trató a `tero`. Hay que leer el código antes de comprometerlo en un plan.
+- **El paper no se verificó de primera mano:** `arxiv.org` y `link.springer.com` están bloqueados por el proxy de
+  egreso de esta sesión. Lo verificado es el **repo** (licencia MIT, 22 commits, autoría GEMLab-HKU).
+- **No cierra el gap 34 y no hay que presentarlo como privacidad.** Este *unlearning* es **pedagógico**: borra para
+  fabricar un alumno, no para proteger a uno. El derecho al olvido sobre el modelo de *mastery* sigue siendo el **gap
+  34**, y su camino es **P38** / **P40**.
+- **El alumno simulado no reemplaza la validación con alumnos reales** para un despliegue. Reemplaza la **iteración**:
+  permite cien corridas antes de la primera clase, no evitar la primera clase.

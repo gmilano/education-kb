@@ -1079,7 +1079,7 @@ No es una recomendación teórica: es la contramedida directa al vector que el p
 **para que el próximo pase los abra**, no para citarlos ante un cliente. Lo que sí está verificado de primera mano es
 OpenUnlearning y `MachineUnlearning` (licencia, estrellas, métodos leídos del repo).
 
-### Lo que falta — gaps 31 y 34 (el 32 se cerró en el pase 19, refutado)
+### Lo que falta — gaps 31, 34 y 35 (el 32 se cerró en el pase 19, refutado; el 35 se abre en el pase 20 y está descrito en la capa de testing de conformidad, abajo)
 
 - **Gap 31** — **SIGUE ABIERTO, y el pase 19 lo buscó con los términos que el pase 18 dejó escritos.** Se buscó
   `HIF unlearning cognitive diagnosis` y por los autores. **Autoría confirmada** (Mingliang Hou, Yinuo Wang, Teng
@@ -1135,6 +1135,80 @@ OpenUnlearning y `MachineUnlearning` (licencia, estrellas, métodos leídos del 
   **antecedente de diseño, no como dependencia**: ocho años sin actualización contra siete series mayores de Moodle.
 
   **El gap que queda abierto es más chico y más honesto, y es el gap 34.**
+
+
+## Capa de testing de conformidad y evaluación regulatoria — agregada en el pase 20 del 2026-10-01
+
+**Por qué es fundacional y no una herramienta suelta:** desde el pase 4 esta KB entrega *expedientes de conformidad*
+(**P4**, **P10**, **P11**, **P17**, **P39**) y nunca registró el *harness* con el que se corren. Esta capa es ese
+harness. Es la única capa de esta KB cuyos repos los publican **organismos de gobierno** y, con la capa de privacidad
+del pase 16, la segunda en la que **lo maduro es permisivo**.
+
+Verificado repo por repo vía WebFetch el 2026-10-01:
+
+| Repo | Licencia | ★ | Forks | Rol en la pila |
+|---|---|---|---|---|
+| https://github.com/UKGovernmentBEIS/inspect_ai | **MIT** ✅ | 2.900 | 763 | **La base.** Framework de evals del **UK AI Security Institute**, 200+ evals pre-construidas, *model-graded evals*, diálogo multi-turno, uso de herramientas. Es el sustrato sobre el que COMPL-AI se construye |
+| https://github.com/aiverify-foundation/moonshot | **Apache-2.0** ✅ | 353 | 70 | **El ejecutor.** *Benchmarking* + *red-teaming* de la AI Verify Foundation (Singapur), 2.153 commits, Python, v0.7.6 beta. Implementa el Starter Kit de IMDA como *cookbooks* |
+| https://github.com/compl-ai/compl-ai | **Apache-2.0** ✅ | 211 | 37 | **El mapeo regulatorio.** 29 benchmarks organizados sobre **6 principios núcleo del EU AI Act**. ETH Zürich + INSAIT + LatticeFlow AI, 333 commits |
+| https://github.com/aiverify-foundation/aiverify | **Apache-2.0** ✅ | 97 | 31 | Plataforma de *governance testing*, v2.0 modular, 3.035 commits. ⚠️ **Alcance: modelos supervisados tabulares y de imagen, no agentes LLM** |
+| https://github.com/aiverify-foundation/moonshot-data | **Apache-2.0** ✅ | 45 | 41 | **El almacén de assets, y el punto de extensión de datos:** conectores (OpenAI, Anthropic, Together, HuggingFace), datasets (BigBench, CyberSecEval, **Medical LLM**, **AILuminate v1.0 DEMO** / MLCommons), métricas, *attack modules*, *cookbooks* |
+| https://github.com/aiverify-foundation/moonshot-cicd | **Apache-2.0** ✅ | 14 | 4 | **La versión que se opera, no la que se demuestra:** corre en CI/CD con Docker y S3. Cuatro categorías de riesgo: alucinación, contenido indeseable, divulgación de datos, vulnerabilidad adversaria. Python 3.12 |
+| https://github.com/aiverify-foundation/moonshot-ui | **Apache-2.0** ✅ | 12 | 7 | Informe **HTML con gráficos interactivos** + export JSON. Es la salida legible por un comité de ética o una inspección |
+| https://github.com/aiverify-foundation/aiverify-developer-tools | **Apache-2.0** ✅ | 9 | 6 | **El punto de extensión de código:** plantillas para plugins de test y algoritmos propios (v2.x) |
+| https://github.com/morganrcu/awesome-eu-ai-act | **CC0** ✅ | 21 | — | Lista curada de conformidad al AI Act. Útil como mapa: nombra Giskard (5.700 ★), DeepEval, PyRIT, Holistic AI (Apache-2.0), AI Act Companion (MIT), Regula (Apache-2.0 / EUPL-1.2), VerifyWise, AIR Blackbox, Venturalitica SDK, Inkog |
+
+### 🔴 El hallazgo de esta capa es una ausencia, y está declarada por los propios catálogos
+
+**No se deduce de una búsqueda: los tres catálogos declaran su cobertura y educación no está en ninguno.**
+`LLM-Evals-Catalogue` (AI Verify Foundation, 23 ★, ⚠️ sin licencia declarada) tiene una categoría *domain-specific*
+con **derecho, medicina y finanzas**; `compl-ai` mapea 29 benchmarks al AI Act **sin mención de educación** —aunque el
+Anexo III nombra la educación de forma textual—; y `awesome-eu-ai-act` lista once herramientas open source y
+**ninguna educativa**.
+
+**Y la pieza complementaria ya está en esta KB desde el pase 4:** `EduBench` (**MIT**), `SafeTutors` (**MIT**),
+`MathTutorBench` (CC BY 4.0), `UnifyingAITutorEvaluation` (CC BY-SA 4.0). **Lo que no existe es el puente.** Es el
+**gap 35**, y las licencias de las dos puntas (MIT ↔ Apache-2.0) lo hacen el gap más barato de cerrar que tiene esta
+KB. Ver **P42**.
+
+### La condición de licencia, y por una vez no hay trampa
+
+Es la capa más limpia de esta KB junto con la del pase 13 (Jupyter). **Ocho de los nueve repos son MIT, Apache-2.0 o
+CC0.** La única excepción es `LLM-Evals-Catalogue`, **sin licencia declarada** — y es documentación, no código: se
+puede **leer** para orientarse y **no** se puede incorporar a un entregable. Que la pieza sin licencia sea justamente
+el catálogo donde falta educación es irónico pero inofensivo: lo que hay que hacer ahí es **contribuir hacia arriba**,
+no copiar hacia abajo.
+
+### El *unlearning* educativo con código, que el gap 34 venía pidiendo a medias
+
+| Repo | Licencia | ★ | Commits | Qué es |
+|---|---|---|---|---|
+| https://github.com/GEMLab-HKU/Unlearn_and_Relearn | **MIT** ✅ | 4 | 22 | GEMLab, **Universidad de Hong Kong** (Jiajia Song, Zhihan Guo, Jionghao Lin). Tres etapas: *unlearning* por destilación con intervención → *relearning* (fine-tuning o enseñanza interactiva guiada por LLM) → loop **Coach / Teachable Agent / Judge**. Olvido progresivo 10–50%. Python. Paper: Springer `10.1007/978-3-032-29744-0_42`, preprint arXiv 2603.26142 |
+
+**Lee bien para qué sirve:** aplica *unlearning* **con fin pedagógico** —fabricar un alumno novato creíble para
+*learning-by-teaching*— y **no** con fin de privacidad. El **gap 34 no se cierra**; lo que cambia es que la maquinaria
+difícil (borrar un concepto de un modelo de alumno y medir que se borró) **ya existe en un contexto educativo, con
+licencia MIT**, y lo que falta es apuntarla al objetivo de supresión. ⚠️ 4 ★ y 0 forks: **arquitectura de referencia,
+no dependencia**.
+
+### Lo que falta en esta capa — el gap 35
+
+- **Gap 35 (nuevo en el pase 20)** — **ningún benchmark pedagógico está empaquetado como prueba de conformidad, y
+  ninguna herramienta de conformidad tiene cobertura educativa.** Las dos mitades existen, están maduras y son
+  permisivas, y **nadie las unió**: no hay *recipe* ni *cookbook* de Moonshot para educación, no hay plugin educativo
+  en `aiverify-developer-tools`, no hay benchmark educativo en `compl-ai`, y `EduBench` / `SafeTutors` / `MathTutorBench`
+  no declaran mapeo a ningún requisito regulatorio. **No es investigación: es empaquetado.** Y a diferencia de los
+  gaps 31 y 34 —que esperan que alguien publique código— éste se cierra **con trabajo de integración sobre repos que
+  ya están en esta tabla**. Es el gap más construible y el de mayor valor comercial de esta KB, porque el expediente
+  que habilita es el que la KB ya vende en cinco patrones.
+
+⚠️ **Nivel de evidencia de este pase.** Los nueve repos de la tabla y el de GEMLab se verificaron **de primera mano**
+(licencia, estrellas, forks, commits, alcance declarado). Lo **regulatorio y lo de plataforma estatal** viene de
+**fuentes secundarias concordantes**: `moe.gov.sg`, `learning.moe.edu.sg`, `imda.gov.sg` y `arxiv.org` están
+bloqueados por el proxy de egreso de esta sesión. Las fechas del marco de agentes de Singapur (22-ene-2026,
+actualizaciones del 20-may y 5-jun-2026, v1.5) y los crosswalks (NIST oct-2023, ISO/IEC 42001 jun-2024) se sostienen
+en múltiples fuentes independientes, **no** en la lectura de la fuente primaria.
+
 
 ⚠️ **Nivel de evidencia:** los repos de la tabla se verificaron de primera mano (licencia, estrellas, forks, fork
 sí/no). Los metadatos de los papers vienen de **snippets concordantes**: `arxiv.org` está bloqueado por el proxy de

@@ -15,6 +15,16 @@ updated: 2026-10-01
 **37 filas = 35 agentes + 2 bibliotecas de skills.** Ordenados por stars. El conteo se hizo a mano en el pase 19 y
 se explica abajo, porque es la cuarta vez que esta KB se pelea con este número.
 
+> *Pase 20 del 2026-10-01:* **no se agregó ninguna fila a la tabla principal — la tabla sigue teniendo 37 filas**, y
+> eso es deliberado. Este pase no buscó tutores: buscó **la máquina que prueba que un tutor cumple**, que es lo que
+> esta KB viene prometiendo en `P4`, `P10`, `P11`, `P17` y `P39` desde el pase 4 **sin tener registrada una sola
+> herramienta de testing**. La máquina existe, es **Apache-2.0**, la publica **un regulador nacional** (IMDA de
+> Singapur, vía la AI Verify Foundation) y trae *benchmarking* + *red-teaming* con un **Starter Kit v1.0 de enero de
+> 2026** detrás. Y el hallazgo es lo que **no** tiene: su propio catálogo de evaluaciones cubre **derecho, medicina y
+> finanzas — educación no está**. Se abre la **capa de testing de conformidad** al final de este archivo, se abre el
+> **gap 35**, y entra **Singapur** a esta KB, que en diecinueve pasadas la nombró una sola vez y de pasada. Ver las
+> tendencias **51**, **52** y **53** y los patrones **P42** y **P43**.
+
 > *Conteo del pase 19, con la regla del pase 17 aplicada de forma consistente:* la tabla tiene **37 filas**. Dos no son
 > agentes sino **bibliotecas de skills** — `education-agent-skills` (165 skills en 20 dominios) y **`human-skill-tree`**
 > (33 skills, nuevo en este pase) —: son catálogos de pedagogía empaquetada, no un tutor. Las otras tres piezas nuevas
@@ -1075,3 +1085,124 @@ El barrido regional de esta capa da un resultado desparejo que conviene escribir
   brasileño**. Ver el **gap 2**, que este pase vuelve a mover.
 
 Ver los **gaps 31 y 32**, las tendencias **45**, **46** y **47**, y los patrones **P38** y **P39**.
+
+
+## Capa de testing de conformidad regulatoria — agregada en el pase 20 del 2026-10-01
+
+Esta es la capa que esta KB **debía tener desde el pase 4** y no tenía. Desde entonces se vende un *expediente de
+conformidad* (**P4** para el Anexo III europeo, **P10** para probar que el tutor enseña, **P11** para el gate de
+seguridad pedagógica, **P17** para accesibilidad, **P39** para privacidad) y en ningún pase se registró **con qué
+herramienta se corre la prueba**. La respuesta es que la herramienta existe, está madura, es permisiva, y la publican
+reguladores.
+
+**Verificado repo por repo vía WebFetch el 2026-10-01.** Nueve repos, todos reales, licencia leída en la página del
+repo:
+
+| Repo | Licencia | ★ | Forks | Qué es, y qué prueba |
+|---|---|---|---|---|
+| https://github.com/UKGovernmentBEIS/inspect_ai | **MIT** ✅ | 2.900 | 763 | **Lo más grande y más limpio de la capa.** Framework de evaluación de LLMs del **UK AI Security Institute** (organismo del gobierno británico). Trae **200+ evaluaciones** pre-construidas, *prompt engineering*, uso de herramientas, diálogo multi-turno y *model-graded evals*. Python |
+| https://github.com/aiverify-foundation/moonshot | **Apache-2.0** ✅ | 353 | 70 | **La pieza central para un agente educativo.** *Benchmarking* **y** *red-teaming* en una sola herramienta, de la **AI Verify Foundation** (Singapur). Implementa el **Starter Kit de IMDA** como *cookbooks* pre-armados. Web UI + CLI. Python, v0.7.6 (**beta**), 2.153 commits |
+| https://github.com/compl-ai/compl-ai | **Apache-2.0** ✅ | 211 | 37 | **La contraparte EMEA, y la única mapeada al AI Act.** Framework de evaluación organizado sobre **6 principios núcleo del EU AI Act** y sus requisitos técnicos, con **29 benchmarks** (y creciendo). De **ETH Zürich + INSAIT + LatticeFlow AI**, construido sobre Inspect. Python, 333 commits |
+| https://github.com/aiverify-foundation/aiverify | **Apache-2.0** ✅ | 97 | 31 | La plataforma de *governance testing* de AI Verify: tests estandarizados contra principios reconocidos internacionalmente. ⚠️ **Lee con cuidado el alcance: evalúa modelos de aprendizaje supervisado sobre datos tabulares e imágenes**, no agentes LLM. v2.0 modular, 3.035 commits |
+| https://github.com/aiverify-foundation/moonshot-data | **Apache-2.0** ✅ | 45 | 41 | Los *assets* de Moonshot: conectores (OpenAI, Anthropic, Together, HuggingFace), *datasets* (BigBench, CyberSecEval de PurpleLlama, benchmarks de tamil, **Medical LLM**, **AILuminate v1.0 DEMO** vía MLCommons), métricas, *attack modules*, *cookbooks* y plantillas de prompt |
+| https://github.com/aiverify-foundation/LLM-Evals-Catalogue | ⚠️ **sin licencia declarada** | 23 | — | **El repo que contiene el hallazgo del pase.** Catálogo colaborativo de frameworks, benchmarks y papers de evaluación de LLMs en 7 categorías, con una de ellas *domain-specific*: **derecho, medicina y finanzas**. **Educación no figura** |
+| https://github.com/aiverify-foundation/moonshot-cicd | **Apache-2.0** ✅ | 14 | 4 | La versión GA de Moonshot **para pipeline**: corre dentro de CI/CD, con Docker y soporte S3 nativo y guía de despliegue en AWS CodeBuild. Prueba cuatro categorías de riesgo: **alucinación, contenido indeseable, divulgación de datos y vulnerabilidad adversaria**. Python 3.12 |
+| https://github.com/aiverify-foundation/moonshot-ui | **Apache-2.0** ✅ | 12 | 7 | La interfaz web de Moonshot (Next.js). Importa para un entregable: el informe sale en **HTML con gráficos interactivos** y export JSON, que es lo que un comité de ética o una inspección educativa puede leer sin consola |
+| https://github.com/aiverify-foundation/aiverify-developer-tools | **Apache-2.0** ✅ | 9 | 6 | **La pieza que vuelve construible el gap 35:** plantillas para escribir **plugins de test y algoritmos propios** compatibles con el toolkit (v2.x). Es el punto de extensión por donde entraría una prueba pedagógica |
+
+### 🔴 El hallazgo del pase, y son tres catálogos independientes diciendo lo mismo
+
+No es una impresión de búsqueda: tres artefactos distintos, de tres jurisdicciones distintas, declaran su cobertura
+por dominio y **ninguno incluye educación**.
+
+1. **`LLM-Evals-Catalogue`** (AI Verify Foundation, Singapur) — categoría *domain-specific*: **derecho, medicina,
+   finanzas**. Educación ausente.
+2. **`compl-ai`** (ETH Zürich / INSAIT / LatticeFlow) — 29 benchmarks mapeados a los 6 principios del AI Act. **Sin
+   mención de educación**, aunque el Anexo III del propio AI Act nombra la educación como alto riesgo de forma
+   explícita.
+3. **`morganrcu/awesome-eu-ai-act`** (**CC0**, 21 ★) — lista curada de herramientas de conformidad al AI Act:
+   Giskard (5.700 ★), DeepEval, PyRIT, Inspect AI (MIT), Holistic AI (Apache-2.0), AI Act Companion (MIT), Regula
+   (Apache-2.0 / EUPL-1.2), VerifyWise, AIR Blackbox, Venturalitica SDK, Inkog. **Ninguna herramienta específica del
+   sector educativo.**
+
+**Y del otro lado, esta KB tiene desde el pase 4 justo lo que falta ahí:** `EduBench` (**MIT**), `SafeTutors`
+(**MIT**), `MathTutorBench` (CC BY 4.0), `UnifyingAITutorEvaluation` (CC BY-SA 4.0), `EduGuardBench` (sin licencia),
+`AITutor-EvalKit` (MIT). Benchmarks pedagógicos premiados en EMNLP, NAACL y ACL — **y ninguno está mapeado a un
+requisito regulatorio ni empaquetado como *recipe* de ninguna de estas herramientas.**
+
+**Ése es el gap 35, y es el más construible que tiene esta KB**, por una razón de licencia: las dos puntas son
+permisivas. `EduBench` y `SafeTutors` son MIT; Moonshot, `moonshot-data` y `aiverify-developer-tools` son Apache-2.0;
+Inspect es MIT; COMPL-AI es Apache-2.0. **No hay fricción legal en el ensamblado.** Lo que falta es el ensamblado.
+Ver **P42**.
+
+### Lo que esta capa NO es, y conviene no sobrevenderlo
+
+- **Ninguna de estas herramientas certifica nada.** `aiverify` lo dice por escrito: *no define estándares éticos de
+  AI y no garantiza que ningún sistema evaluado esté libre de riesgos o sesgos, ni que sea completamente seguro*. Es
+  **evidencia**, no conformidad.
+- **El marco de Singapur es voluntario.** El **Model AI Governance Framework for Agentic AI** no tiene cláusula de
+  penalidad, ni registro obligatorio, ni mecanismo de *enforcement*. El europeo sí. Mezclar los dos en una propuesta
+  es un error de encuadre: Moonshot sirve como **herramienta** en Europa, no como **cumplimiento** europeo.
+- **No hay crosswalk directo de AI Verify al EU AI Act.** Lo que hay verificado son dos mapeos: a **NIST AI RMF**
+  (octubre 2023 — el único ejercicio gobierno-a-gobierno del mundo) y a **ISO/IEC 42001:2023** (junio 2024). La vía
+  hacia el AI Act es **indirecta, por ISO 42001**. Para un expediente europeo la pieza mapeada es **COMPL-AI**, no
+  Moonshot.
+- **`aiverify` no evalúa agentes.** Evalúa modelos supervisados tabulares y de imagen. Para un tutor LLM la pieza es
+  **Moonshot**, **Inspect** o **COMPL-AI**. Proponer "AI Verify" a secas para un agente educativo es prometer la
+  herramienta equivocada.
+
+### El *unlearning* educativo, que llegó por la puerta de al lado
+
+| Repo | Licencia | ★ | Commits | Qué es |
+|---|---|---|---|---|
+| https://github.com/GEMLab-HKU/Unlearn_and_Relearn | **MIT** ✅ | 4 | 22 | **El primer repo de esta KB que aplica *machine unlearning* a un modelo de alumno, con código publicado.** De GEMLab, **Universidad de Hong Kong** (Jiajia Song, Zhihan Guo, Jionghao Lin). Tres etapas: *unlearning* por destilación con intervención, *relearning* (fine-tuning o enseñanza interactiva guiada por LLM) y un loop de tres partes **Coach / Teachable Agent / Judge**. Olvido progresivo configurable del **10 al 50%**. Python |
+
+🔴 **Y la distinción es el hallazgo, porque decide si mueve el gap 34 o no: no mueve.** Este repo **no usa
+*unlearning* para privacidad**. Lo usa **al revés y a propósito**: para volver *tonto* a un modelo que sabe
+demasiado, de modo que pueda hacer de **alumno novato creíble** en una dinámica de *learning-by-teaching* — el
+problema real que ataca es que un LLM al que se le pide "actuá como principiante" se escapa igual hacia
+explicaciones de experto y arruina el ejercicio. Mide si el agente **recupera** el conocimiento borrado cuando el
+alumno humano se lo enseña.
+
+**Entonces:** el **gap 34** (*unlearning* evaluado sobre modelos de alumno **por supresión de dato personal**) sigue
+abierto, y ahora con un matiz que vale escribir — **la técnica que el gap 34 pide ya está en educación, con código y
+licencia MIT; lo que no está es el uso de privacidad.** Es la misma maquinaria con el objetivo invertido. Para quien
+construya el *harness* del gap 34, esto es la mejor noticia posible: hay un precedente educativo funcionando del que
+salen las dos mitades difíciles (cómo se borra un concepto de un modelo y cómo se mide que se borró), y lo único que
+hay que cambiar es qué se borra y para qué. Ver **P43**, que lo usa por su lado pedagógico, que es el que está listo.
+
+⚠️ **4 estrellas y 0 forks.** Es un repo de laboratorio, no una dependencia. Vale como **arquitectura de
+referencia**, igual que `tero` en el pase 8.
+
+### La nota de método del pase, y explica dos pasadas de búsquedas fallidas
+
+Los pases 18 y 19 buscaron *unlearning* sobre *knowledge tracing* y no encontraron código. **Hay una colisión de
+terminología que lo explica, y conviene dejarla escrita porque va a volver a pasar.** La frase «*knowledge tracing*»
+tiene **dos significados incompatibles** en la literatura que devuelve esa búsqueda:
+
+- el de esta KB y de `pyKT`: **modelar el estado de conocimiento del alumno** a lo largo del tiempo;
+- el de la literatura de *unlearning* (p. ej. *Lifting Data-Tracing Machine Unlearning to Knowledge-Tracing for
+  Foundation Models*): **rastrear qué conocimiento de un modelo fundacional vino de qué dato de entrenamiento**.
+
+Buscar «unlearning + knowledge tracing» devuelve el segundo sentido y **entierra el primero**. La búsqueda que sí
+funcionó fue por **escenario educativo** (*novice student simulation*), no por técnica — que es exactamente la regla
+que el pase 5 ya había aprendido para los benchmarks y que esta KB vuelve a redescubrir en otra capa.
+
+### Lo que esta capa tiene por región
+
+- **APAC** — **es donde vive la oferta, y por primera vez con un regulador adentro**: toda la pila AI Verify /
+  Moonshot es de **Singapur** (IMDA + AI Verify Foundation), y el único *unlearning* educativo con código es de
+  **Hong Kong**. Extiende el **gap 4** a una capa más, y con un signo distinto a las anteriores: acá lo APAC no es
+  un prototipo sin licencia, es **infraestructura de un Estado con Apache-2.0**.
+- **EMEA** — **la única pieza mapeada al régimen que sí es exigible**: `compl-ai` (ETH Zürich + INSAIT +
+  LatticeFlow, Apache-2.0, 211 ★) e `inspect_ai` (UK AISI, **MIT**, 2.900 ★). Es el patrón que el **gap 3** viene
+  anotando desde el pase 4 —EMEA produce la capa que mide, no el tutor— y acá se cumple de forma casi caricaturesca.
+- **North America** — aporta **el puente de interoperabilidad**, no la herramienta: el **NIST AI RMF** es el marco
+  contra el que AI Verify se mapeó en 2023. La oferta de herramienta propia en esta capa es privada (LatticeFlow es
+  suiza; Giskard, francesa).
+- **LATAM** — 🚫 **no se encontró ninguna herramienta de testing de conformidad de origen LATAM** en este barrido.
+  Se declara **no encontrada, no inexistente**. Y duele más que en otras capas, porque **Brasil, Chile y México
+  tienen los tres obligaciones de auditoría algorítmica escritas o en trámite** (ver `intel/market.md`): la región
+  está legislando la auditoría y no está construyendo la herramienta que la ejecuta.
+
+Ver el **gap 35**, las tendencias **51**, **52** y **53**, y los patrones **P42** y **P43**.

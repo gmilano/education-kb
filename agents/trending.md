@@ -9,6 +9,92 @@ updated: 2026-10-01
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 > No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
 
+## 2026-10-01 (pase 20) — diecinueve pasadas vendieron un expediente de conformidad sin registrar una sola herramienta de testing: existe, es Apache-2.0, la publica un regulador, y su catálogo cubre derecho, medicina y finanzas
+
+**Este pase no agregó agentes a la tabla principal, y es el segundo que termina así a propósito** (el pase 17 fue el
+otro). Lo que buscó es la capa que a esta KB le faltaba en el medio: **con qué se corre la prueba**.
+
+### 🔴 El hallazgo: la máquina existe, y educación no está en su catálogo
+
+Desde el pase 4 esta KB vende expedientes de conformidad —**P4** (Anexo III), **P10** (probar que el tutor enseña),
+**P11** (gate de seguridad pedagógica), **P17** (accesibilidad), **P39** (privacidad)— y en diecinueve pasadas **no
+registró una sola herramienta de testing con la que ejecutarlos**. Existe, y es mejor de lo esperable:
+
+| Pieza | Licencia | ★ | Quién la publica |
+|---|---|---|---|
+| `UKGovernmentBEIS/inspect_ai` | **MIT** ✅ | 2.900 | **UK AI Security Institute** (gobierno británico), 200+ evals pre-construidas |
+| `aiverify-foundation/moonshot` | **Apache-2.0** ✅ | 353 | **AI Verify Foundation** (Singapur), *benchmarking* + *red-teaming*, v0.7.6 beta |
+| `compl-ai/compl-ai` | **Apache-2.0** ✅ | 211 | **ETH Zürich + INSAIT + LatticeFlow AI**, 29 benchmarks mapeados al EU AI Act |
+| `aiverify-foundation/aiverify` | **Apache-2.0** ✅ | 97 | AI Verify Foundation — ⚠️ tabular/imagen supervisado, **no agentes** |
+| `aiverify-foundation/moonshot-data` | **Apache-2.0** ✅ | 45 | Conectores, datasets, métricas y *attack modules* de Moonshot |
+| `aiverify-foundation/LLM-Evals-Catalogue` | ⚠️ sin licencia | 23 | **El repo con el hallazgo adentro** |
+| `aiverify-foundation/moonshot-cicd` | **Apache-2.0** ✅ | 14 | Moonshot GA para pipeline CI/CD (Docker, S3) |
+| `aiverify-foundation/moonshot-ui` | **Apache-2.0** ✅ | 12 | Informe HTML con gráficos, export JSON |
+| `aiverify-foundation/aiverify-developer-tools` | **Apache-2.0** ✅ | 9 | Plantillas para **plugins de test propios** |
+
+**Y el hallazgo es lo que falta, confirmado por tres catálogos independientes de tres jurisdicciones:**
+
+- **`LLM-Evals-Catalogue`** declara su categoría *domain-specific*: **derecho, medicina, finanzas**. Educación no.
+- **`compl-ai`** mapea 29 benchmarks a los 6 principios del AI Act **sin una mención de educación** — y el Anexo III
+  del AI Act nombra la educación como alto riesgo de forma textual.
+- **`awesome-eu-ai-act`** (**CC0**, 21 ★) lista once herramientas de conformidad open source (Giskard 5.700 ★,
+  DeepEval, PyRIT, Inspect, Holistic AI, AI Act Companion, Regula, VerifyWise, AIR Blackbox, Venturalitica SDK,
+  Inkog) y **ninguna del sector educativo**.
+
+**La otra punta ya está en esta KB desde el pase 4, y es la parte cara de construir:** `EduBench` (**MIT**, ACL 2026,
+9 contextos educativos), `SafeTutors` (**MIT**), `MathTutorBench` (CC BY 4.0, EMNLP 2025 Oral),
+`UnifyingAITutorEvaluation` (CC BY-SA 4.0, NAACL 2025). **Ninguno está mapeado a un requisito regulatorio ni
+empaquetado como *recipe* de ninguna herramienta.** Ése es el **gap 35**, y las dos puntas son permisivas: MIT de un
+lado, Apache-2.0 del otro. **No hay fricción legal en el ensamblado — falta el ensamblado.** Ver **P42**.
+
+### Lo que hay que no prometer, y son cuatro cosas
+
+1. **Ninguna de estas herramientas certifica.** `aiverify` lo declara por escrito: no define estándares éticos y **no
+   garantiza** que el sistema evaluado esté libre de riesgos o sesgos. Produce **evidencia**, no conformidad.
+2. **El régimen de Singapur es voluntario**: el *Model AI Governance Framework for Agentic AI* no tiene penalidad, ni
+   registro, ni *enforcement*. El europeo sí. Moonshot es **herramienta** en Europa, nunca **cumplimiento** europeo.
+3. **No hay crosswalk directo de AI Verify al EU AI Act.** Verificados hay dos: a **NIST AI RMF** (oct-2023, el único
+   mapeo gobierno-a-gobierno del mundo) y a **ISO/IEC 42001:2023** (jun-2024). Al AI Act se llega **indirecto por ISO
+   42001**. Para expediente europeo la pieza es **COMPL-AI**.
+4. **`aiverify` no evalúa agentes** — tabular e imagen supervisados. Para un tutor LLM: Moonshot, Inspect o COMPL-AI.
+
+### El segundo hallazgo: el *unlearning* llegó a educación, y entró por la puerta pedagógica
+
+| Repo | Licencia | ★ | Commits | Qué hace |
+|---|---|---|---|---|
+| `GEMLab-HKU/Unlearn_and_Relearn` | **MIT** ✅ | 4 | 22 | *Unlearning* + *relearning* sobre un modelo de alumno. GEMLab, **Universidad de Hong Kong**. Coach / Teachable Agent / Judge, olvido progresivo 10–50% |
+
+🔴 **No mueve el gap 34, y la razón es interesante: usa la técnica al revés.** No borra para proteger al alumno —
+**borra para fabricar un alumno**. Vuelve novato a un modelo que sabe demasiado, porque un LLM al que se le pide
+"actuá como principiante" se escapa igual hacia explicaciones de experto y arruina el *learning-by-teaching*. Después
+mide cuánto **recupera** cuando el alumno humano le enseña.
+
+**El gap 34 sigue abierto** (*unlearning* evaluado sobre modelos de alumno **por supresión de dato personal**), pero
+cambia de forma: **la técnica ya está en educación, con código y MIT. Lo que falta es el uso de privacidad, no la
+maquinaria.** Ver **P43**, que lo aprovecha por el lado que sí está listo.
+
+### 🔴 Y una nota de método que explica dos pasadas de búsquedas fallidas
+
+Los pases 18 y 19 buscaron *unlearning* sobre *knowledge tracing* y no encontraron código. **Hay una colisión de
+terminología:** «knowledge tracing» significa **dos cosas incompatibles** según la literatura. En esta KB y en `pyKT`
+es *modelar el estado de conocimiento del alumno*; en la literatura de *unlearning* es *rastrear qué conocimiento de
+un modelo fundacional vino de qué dato* (p. ej. *Lifting Data-Tracing Machine Unlearning to Knowledge-Tracing for
+Foundation Models*). Buscar por la técnica devuelve el segundo sentido y **entierra el primero**. Lo que funcionó fue
+buscar por **escenario educativo** — la misma regla que el pase 5 aprendió para benchmarks, redescubierta en otra capa.
+
+### Lo que esta pasada buscó y no encontró
+
+- 🚫 **Ninguna herramienta de testing de conformidad de origen LATAM.** No encontrada, **no inexistente**. Y es un
+  desajuste fuerte: Brasil (PL 2338/2023, evaluación de impacto algorítmico y auditorías periódicas), Chile (Ley
+  21.719 + proyecto de cuatro niveles de riesgo con auditoría) y México (auditoría **al menos anual** para alto
+  riesgo) **legislan la auditoría y no construyen la herramienta**.
+- 🚫 **Ninguna *recipe* ni plugin educativo** en `moonshot-data`, `aiverify-developer-tools` ni `compl-ai`. Se revisó
+  el contenido declarado de los tres. Es el gap 35 medido, no supuesto.
+- 🚫 **Ningún caso de uso educativo documentado** de AI Verify o Moonshot. La búsqueda devuelve casos de EdTech
+  genéricos (IU International, el tutor por WhatsApp de Ghana) sin relación con estas herramientas.
+- ⚠️ **`moe.gov.sg` y `learning.moe.edu.sg` están bloqueados por el proxy de egreso de esta sesión**, así que todo lo
+  de la plataforma SLS de Singapur de este pase viene de **fuentes secundarias concordantes**, no de leer al MOE.
+
 ## 2026-10-01 (pase 19) — cinco agentes nuevos, y el hallazgo es que el pase anterior explicó bien un dato con una causa falsa
 
 Dos cosas en este pase. La chica: **+5 en la tabla principal** y **una región cerrada**. La grande: **el pase 18 se
