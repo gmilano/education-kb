@@ -12,13 +12,45 @@ updated: 2026-10-01
 
 ## Agentes y herramientas destacadas
 
-**31 agentes reales verificados.** Ordenados por stars.
+**37 filas = 35 agentes + 2 bibliotecas de skills.** Ordenados por stars. El conteo se hizo a mano en el pase 19 y
+se explica abajo, porque es la cuarta vez que esta KB se pelea con este número.
+
+> *Conteo del pase 19, con la regla del pase 17 aplicada de forma consistente:* la tabla tiene **37 filas**. Dos no son
+> agentes sino **bibliotecas de skills** — `education-agent-skills` (165 skills en 20 dominios) y **`human-skill-tree`**
+> (33 skills, nuevo en este pase) —: son catálogos de pedagogía empaquetada, no un tutor. Las otras tres piezas nuevas
+> entregadas como skill (**universal-examprep-skill**, **universal-diagnostic-tutor-skill**, **algo-sensei**) **sí** cuentan
+> como agentes, por el mismo criterio con el que esta KB ya contaba a `Alvarmethod` y `Gnos`: cada una es **un** tutor
+> coherente con su propio loop pedagógico, no un catálogo. **37 = 35 + 2.**
 > *Pase 11 del 2026-10-01:* +3 en la tabla principal (**learn**, **Gnos**, **Alvarmethod**) y una **capa predictiva / early warning** nueva al final del archivo, que es la capa peor abastecida de esta KB y la que el Anexo III del EU AI Act nombra de forma explícita.
 > *Pase 12 del 2026-10-01:* +1 en la tabla principal (**Study-Mate**), +1 en la capa MCP (**anki-mcp-server**, que
 > multiplica por 499 el techo de esa capa) y +1 en evaluación (**ArguLens**). Se abre la **capa de distribución por
 > skills de agente** al final del archivo: es la primera capa de esta KB que se mide contra otra vertical, y la
 > educación pierde 58× contra la científica en el mismo canal. El conteo de 29 de la tabla principal se verificó a
 > mano en este pase y **estaba bien**.
+> *Pase 19 del 2026-10-01:* **+5 en la tabla principal** (**human-skill-tree**, **universal-examprep-skill**,
+> **algo-sensei**, **universal-diagnostic-tutor-skill**, **lumen**) y **una región cerrada** (lumen → Alemania).
+> Pero el trabajo principal de este pase es **corregir al pase 18, y en tres cosas distintas**, porque su hallazgo
+> central se apoyaba en una causa falsa. Verificado con `git ls-remote` y con un clon *sparse* del árbol real:
+>
+> 1. 🔴 **`moodle/moodle` SÍ tiene rama `main`.** El pase 18 escribió textualmente que *«no tiene rama `main` ni rama
+>    `master`»* y con eso explicó los cuatro 404 del pase 17. **Es falso:** `refs/heads/main` existe y apunta a
+>    `85af0b5` = **Moodle 5.3rc1**. La causa real de los 404 es otra y es más útil: **Moodle movió su *webroot* al
+>    subdirectorio `public/` en la serie 5.x.** La ruta no es `ai/provider/ollama/...` sino
+>    `public/ai/provider/ollama/...`. Los 404 midieron **la ruta**, no la rama.
+> 2. 🔴 **No son tres `privacy provider` de AI: son siete**, más uno del subsistema y dos de *placement* = **10
+>    archivos**. Los siete son `anthropic`, `awsbedrock`, `azureai`, `deepseek`, `gemini`, `ollama` y `openai`.
+> 3. 🔴 **Y los siete no sirven de plantilla de borrado, porque no borran nada.** Auditados uno por uno: 70–78 líneas
+>    cada uno, **cero** llamadas a `delete_records`/`DELETE FROM`/`add_database_table`, y **exactamente un**
+>    `add_external_location_link`. Todos sus métodos de borrado tienen **el cuerpo vacío** y están marcados
+>    `@codeCoverageIgnore`. La plantilla real existe pero es **otra**: `public/ai/classes/privacy/provider.php`
+>    (`core_ai`), ~800 líneas, **6 tablas** —incluidas `prompt` y `generatedcontent`— con `delete_records_list` de
+>    verdad. El pase 18 nombró a los shims y no a la plantilla.
+>
+> **Lo que esto significa, y es el hallazgo del pase:** los siete shims no son un descuido, son una **declaración**.
+> Lo único que hacen es declarar que el *prompt* del alumno y el modelo **salen hacia un tercero**. El núcleo de
+> Moodle documenta así, en siete lugares, el punto donde su propia maquinaria de supresión **se queda sin nada que
+> suprimir**. Ver las tendencias **48**, **49** y **50**, los patrones **P40** y **P41**, y el **gap 32**, que este
+> pase **cierra refutándolo**.
 > *Pase 18 del 2026-10-01:* se cierra el **gap 29** y **no lo cierra un tercero: lo cierra el núcleo de Moodle**, que
 > trae **tres** `privacy provider` de referencia para plugins de AI (`openai`, `azureai`, `ollama`). Se corrige por qué
 > el pase 17 no los vio —**`moodle/moodle` no tiene rama `main` ni `master`**, y sus cuatro 404 midieron el nombre de
@@ -115,6 +147,11 @@ updated: 2026-10-01
 | mentar | https://github.com/avps82/mentar | **AGPL-3.0-only** ⚠️ | 1 | Python | Tutor local-first para chicos: corre entero en la máquina del hogar, sin cuentas ni datos que salgan del dispositivo. 934 nodos de concepto en 157 plantillas curriculares (Australia ACARA v9, India, Singapur, EE. UU.). **El detalle de diseño que importa:** el LLM sólo explica y un *checker determinístico* corrige cada respuesta, así que el modelo no puede darle por buena una respuesta incorrecta a un chico. Último commit 2026-08-26 | Sin región verificada (currículo AU primero, pero el repo no declara ubicación) |
 | tero | https://github.com/marcorojasb/tero | **MIT** ✅ | 0 | Python | Agente docente de aula para K-12 **chileno**, de terminal y **offline-first**, sobre AWS Bedrock + Strands Agents SDK. Prepara material pedagógico y **adapta contenido para alumnos con necesidades especiales**. La decisión de diseño que lo hace citable: *«el agente propone, el docente decide»* — **el modelo no escribe archivos sin aprobación humana**. Anclado a instrumentos nacionales: MINEDUC, **Decreto 83** (educación especial) y **Ley 21.719** (protección de datos). 111 commits. **0 ★: referencia de arquitectura y contraparte local, no dependencia de producto.** *Agregado en el pase 8* | LATAM (Chile) |
 | Study-Mate | https://github.com/Miaotofu01/Study-Mate | **MIT** ✅ | 482 | Python | Compañero de estudio con planificación curricular, instrucción y aprendizaje por proyectos en matemática y CS. *Workflow* integrado + motor de cursos HTML; corre sobre DeepSeek Harness, Google Antigravity y plugins de ChatGPT. 298 commits | APAC |
+| human-skill-tree | https://github.com/24kchengYe/human-skill-tree | **AGPL-3.0** ⚠️ (dir. `skills/` en doble licencia MIT/AGPL-3.0) | 562 | TypeScript/Markdown | 33 skills de agente que convierten ChatGPT, Claude, Gemini y compatibles en acompañantes de aprendizaje estructurado, de K-12 a desarrollo profesional. Repetición espaciada y *active recall* explícitos, simulación de aula multi-agente, tutores socráticos y quizzes adaptativos. Declara cobertura de **15 sistemas educativos nacionales y 800+ materias** — es la pieza de mayor alcance curricular declarado de esta tabla. 36 commits. ⚠️ **La licencia es el dato que decide el uso:** el repo es AGPL-3.0 y sólo el directorio `skills/` está en doble licencia MIT/AGPL-3.0. Para un entregable cerrado **sólo es utilizable el subárbol de skills**, y conviene verificarlo archivo por archivo antes de facturar. *Agregado en el pase 19* | Sin región declarada (documentación bilingüe EN/中文) |
+| universal-examprep-skill | https://github.com/ZeKaiNie/universal-examprep-skill | **MIT** ✅ | 299 | Python | Skill de preparación de exámenes que ingiere slides, apuntes, tareas y exámenes viejos (PDF, PPTX, DOCX, Markdown) y enseña **citando `archivo p.N` en cada concepto**, extrae figuras, examina con las preguntas reales de la materia, registra errores y arma guías de estudio. Memoria entre sesiones. Instalable con `npx skills add ZeKaiNie/universal-examprep-skill` en Claude Code, Cursor, Windsurf, Codex, Antigravity, Gemini CLI y 40+ agentes. 181 commits. **La propiedad que lo hace citable, y no es pedagógica sino regulatoria:** declara **citación obligatoria con número de página y 100 % de abstención fuera de alcance**, que es exactamente lo que pide el inciso (a) de la Decisión 33 de Vietnam —contenido de autoaprendizaje con *fuentes de datos no controladas* es alto riesgo—. Ver el patrón **P41**. *Agregado en el pase 19* | Sin región declarada |
+| algo-sensei | https://github.com/karanb192/algo-sensei | **MIT** ✅ | 281 | Markdown (multi-lenguaje: Python, Java, C++, JS, Go) | Mentor de estructuras de datos y algoritmos que **se niega a dar la solución**: sistema de pistas de **cinco niveles** escalonados —desde la observación más suave hasta el esqueleto en pseudocódigo—, entrenamiento en reconocimiento dinámico de patrones (no plantillas memorizadas), método socrático declarado (*«learn through questions, not lectures»*) y cinco modos (Tutor, Hint, Review, Interview, Pattern Mapper). Su filosofía escrita es *«productive struggle with guidance»*. Corre en Claude Code y Claude.ai. **Sólo 8 commits:** es una especificación pedagógica, no un producto — el mismo perfil que `Alvarmethod`, y el andamiaje graduado es la contraparte operativa de lo que `Gnos` instrumenta como evidencia. *Agregado en el pase 19* | Sin región declarada |
+| universal-diagnostic-tutor-skill | https://github.com/SenmuuuuW/universal-diagnostic-tutor-skill | **MIT** ✅ | 235 | Markdown | Tutor *diagnosis-first* para STEM, matemática, programación y AI/CS: antes de enseñar **determina dónde está trabado el alumno**, con un ciclo de clarificar objetivo → localizar el hueco en cuatro niveles (materia → sistema de conocimiento → subtema → conceptos núcleo) → instrucción mínima dirigida → verificación → decisión de avance por mastery demostrada. Continuidad entre conversaciones mediante **«Learning State Cards» visibles** —el estado del alumno es inspeccionable por el alumno, no sólo por el sistema—, enrutamiento en lenguaje natural sin menús de modo y análisis cualitativo de error. v2.0.0 reduce ~41 % el contexto respecto de v1.9.2. Skill oficial de DeepSeek Harness, con variante *Lite Prompt* para chat estándar. 57 commits. *Agregado en el pase 19* | Sin región declarada |
+| lumen | https://github.com/ahmedEid1/lumen | **GPL-3.0** ⚠️ | 88 | Python/TypeScript | Plataforma donde el alumno describe su objetivo y un orquestador multi-agente propio (**sin LangChain**) le construye el curso. **Modelo *learner-owned* declarado:** *«every signed-in user runs the whole loop themselves; `admin` only moderates and configures»* — el alumno define, construye, aprende, comparte y remezcla en un catálogo moderado. RAG **con alcance por curso y citación, detrás de un único autorizador**, con aislamiento explícito para que cursos privados y clonados no filtren datos. BYOK con credenciales cifradas, servidor MCP con 9 tools, PostgreSQL 17 + pgvector, decisiones del agente auditables en una tabla `llm_calls`. 828 commits, 1.421 tests de backend y 468 de frontend. **La decisión que lo hace citable:** su *eval harness* **publica también los puntajes malos** — es el único artefacto de esta KB que documenta sus propias debilidades medidas. ⚠️ GPL-3.0: referencia de arquitectura y despliegue propio, no base de un entregable cerrado. *Agregado en el pase 19* | **EMEA (Essen, Alemania)** — el perfil del autor (Ahmed Hobeishy) declara `Essen, Germany`. *Región cerrada en el pase 19* |
 
 ## ⚠️ Colisión de nombres: hay dos "Bloom" y son proyectos distintos (pase 7)
 
@@ -782,7 +819,7 @@ rutas (`main` y `master`, árbol y archivo) y las cuatro dieron 404»*, y por es
 **documentado por snippet, no verificado de primera mano**. La causa es trivial y conviene dejarla escrita porque
 afecta a cualquier pase futuro:
 
-> **`moodle/moodle` no tiene rama `main` ni rama `master`.** Sus ramas son `MOODLE_XXX_STABLE`. Cualquier fetch
+> 🔴 **[FALSO — refutado en el pase 19, ver abajo]** **`moodle/moodle` no tiene rama `main` ni rama `master`.** Sus ramas son `MOODLE_XXX_STABLE`. Cualquier fetch
 > contra `main` o `master` da 404 **con independencia de que el archivo exista**. Los cuatro 404 del pase 17 no
 > midieron ausencia: midieron el nombre de la rama.
 
@@ -798,7 +835,77 @@ Verificado en este pase por código HTTP contra `raw.githubusercontent.com`, ram
 **Entonces se corrige el registro de evidencia del pase 17:** el Privacy API, `tool_dataprivacy` y `tool_policy`
 pasan de *«documentados por snippet»* a **verificados de primera mano en el núcleo**.
 
-### Las tres referencias del núcleo, y una de ellas es la que cambia la conversación
+
+### 🔴 CORRECCIÓN DEL PASE 19 (2026-10-01) — la rama existe, y la causa real es mejor que la que se escribió
+
+**Lo de arriba es falso en su premisa y hay que leerlo con esta corrección puesta.** Verificado con `git ls-remote`
+—que lista refs, no adivina— y después con un clon *sparse* del árbol real:
+
+```
+$ git ls-remote --heads https://github.com/moodle/moodle | grep -v 'MOODLE_[0-9]*_STABLE$'
+85af0b5dc354bf03c73db60079c232f004e01433    refs/heads/main
+```
+
+> **`moodle/moodle` SÍ tiene rama `main`,** y apunta a `85af0b5` = **Moodle 5.3rc1**. Lo que no tiene es `master`.
+
+**Y la causa real de los 404 es más útil que la falsa, porque se repite:** **Moodle movió su *webroot* al
+subdirectorio `public/` en la serie 5.x.** En `main` no existe `ai/` en la raíz; existe `public/ai/`. Por eso
+`ai/provider/openai/version.php` da 404 en `main` **y** 200 en `MOODLE_405_STABLE` y `MOODLE_500_STABLE`: en esas
+ramas `ai/` todavía estaba en la raíz. **La tabla de evidencia del pase 18 es correcta; su explicación no.** Los 404
+midieron **la ruta**, no el nombre de la rama — y cualquier referencia a rutas de Moodle que esta KB escriba tiene
+que decir contra qué serie se resolvió, porque la 5.x las movió todas.
+
+**Lo que hay que corregir del conteo y de la lista:**
+
+| Lo que escribió el pase 18 | Lo verificado en el pase 19 (clon sparse de `main` = 5.3rc1) |
+|---|---|
+| «El núcleo trae **tres** implementaciones» | **Siete** proveedores con `privacy/provider.php`, más **1** del subsistema (`core_ai`) y **2** de *placement* = **10 archivos** |
+| `ai/provider/bedrock` → «404, no está en el núcleo» | **Sí está**, y el nombre es `awsbedrock`, no `bedrock`. El 404 midió el nombre |
+| `ai/provider/anthropic` → «404, no está en el núcleo» | **Sí está**: `public/ai/provider/anthropic/classes/privacy/provider.php` |
+
+Los siete, auditados uno por uno sobre el fuente:
+
+| Proveedor (`public/ai/provider/…`) | Líneas | `delete_records` / `DELETE FROM` / `add_database_table` | `add_external_location_link` |
+|---|---|---|---|
+| `anthropic` | 78 | **0** | 1 |
+| `awsbedrock` | 76 | **0** | 1 |
+| `azureai` | 77 | **0** | 1 |
+| `deepseek` | 70 | **0** | 1 |
+| `gemini` | 77 | **0** | 1 |
+| `ollama` | 74 | **0** | 1 |
+| `openai` | 76 | **0** | 1 |
+
+**Lo que el pase 18 sí acertó, y conviene no perderlo en la corrección:** su lectura de que los métodos vacíos son
+*«vacíos a propósito»* y que ésa es la forma correcta para un plugin que sólo transmite **es exacta**, y la
+verificación de este pase la confirma (los siete, idénticos, con `@codeCoverageIgnore`). Lo que estaba mal es el
+titular: **siete shims de declaración no son «implementaciones de referencia» de un `privacy provider`**, porque lo
+que un plugin que guarda dato necesita copiar es precisamente lo que ellos no tienen.
+
+### ✅ La plantilla real, que el pase 18 no nombró: `core_ai`
+
+`public/ai/classes/privacy/provider.php` — **~800 líneas**, y es el artefacto que el **gap 29** pedía:
+
+- **6 tablas declaradas** en `get_metadata()`: `ai_policy_register`, `ai_action_register`,
+  `ai_action_generate_image`, `ai_action_generate_text`, `ai_action_summarise_text`, `ai_action_explain_text`.
+  Entre sus campos están **`prompt`**, **`generatedcontent`**, `responseid`, `fingerprint`, `prompttokens`,
+  `completiontokens`, `model` y `courseid`.
+- `get_contexts_for_userid()` con **SQL real** (5 consultas, una por tipo de acción), no un `contextlist` vacío.
+- `export_user_data()` que escribe de verdad vía `writer::with_context()`.
+- **Borrado real** en las tres variantes: `delete_data_for_user()` (:496), `delete_data_for_users()` (:695) y
+  `delete_data_for_all_users_in_context()` (:378), con `delete_records_list()`.
+
+**Eso es lo que hay que copiar en un plugin de AI que guarde dato del alumno** (ver **P39**, que mejora con esto), y
+lo que hay que citar ante un cliente cuando pregunte si Moodle sabe borrar lo que su AI generó. Los dos *placement*
+(`courseassist`, `editor`) son `null_provider`: declaran explícitamente que no guardan nada.
+
+**El hallazgo de encuadre, que es el que viaja a `intel/trends.md`:** la línea divisoria dentro del propio núcleo de
+Moodle no es técnica, es de **arquitectura de dato**. `core_ai` guarda el prompt y la respuesta y por eso sabe
+borrarlos. Los siete proveedores **no guardan: transmiten** — y lo único que pueden hacer es declararlo. El núcleo
+documenta así, en siete archivos idénticos, **el punto exacto donde su maquinaria de supresión se queda sin nada que
+suprimir**, porque el dato ya está en OpenAI, Anthropic, Google, AWS, Azure, DeepSeek o en el Ollama de alguien. Ver
+la tendencia **48**.
+
+### ~~Las tres referencias del núcleo~~ — ⚠️ SUPERADA POR EL PASE 19: son siete, y ninguna de las siete es la plantilla (se conserva por la cadena de idioma de `ollama`, que sigue siendo válida y citable)
 
 Verificadas leyendo el archivo fuente, no la página del repo. Las tres implementan las mismas tres interfaces
 —`metadata\provider`, `request\core_userlist_provider`, `request\plugin\provider`— con `#[\Override]`, copyright

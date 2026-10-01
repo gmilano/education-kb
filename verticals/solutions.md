@@ -29,6 +29,63 @@ updated: 2026-10-01
 | **BigBlueButton** | LGPL-3.0 | https://github.com/bigbluebutton/bigbluebutton | JavaScript/Node + Scala | Aula virtual en tiempo real: audio, video, pizarra, screen sharing | Fuente de transcripciones y señales de engagement para agentes de analítica |
 | **Richie** | MIT | https://github.com/openfun/richie | Python/Django | CMS de portal educativo: catálogo, marketing de cursos, SEO | MIT. Complementa un LMS; es la capa pública de descubrimiento |
 
+
+## ⚠️ Moodle 5.x movió su *webroot* a `public/` — agregada en el pase 19 del 2026-10-01, y rompe toda referencia de ruta
+
+**El dato operativo, verificado con un clon del árbol real (`main` = **Moodle 5.3rc1**, commit `85af0b5`):** en la serie
+5.x **el código servido vive bajo `public/`**. La raíz del repo tiene `admin/`, `lib/`, `bin/`, `scripts/` y **`public/`**,
+y es dentro de `public/` donde están `ai/`, `admin/tool/`, `mod/` y el resto.
+
+| Serie | Ruta del subsistema de AI | Ruta del Privacy API |
+|---|---|---|
+| **4.5 / 5.0** | `ai/provider/...` | `admin/tool/dataprivacy/...` |
+| **5.1+ (incl. 5.3)** | **`public/ai/provider/...`** | **`public/admin/tool/dataprivacy/...`** |
+
+**Por qué está en este archivo y no sólo en una nota de método:** cualquier guía de despliegue, script de instalación,
+`Dockerfile`, regla de *vhost* o documento de customización que esta KB produzca y que apunte a rutas de Moodle **tiene
+que declarar contra qué serie se resolvió**. Una ruta correcta para 5.0 da 404 en 5.3. Esta KB ya pagó el costo: **dos
+pasadas consecutivas (17 y 18) leyeron mal el mismo conjunto de 404** — la 17 como ausencia de la pieza, la 18 como
+nombre de rama, y la causa era esta reestructuración. Ver la nota de método del pase 19 en `intel/trends.md`.
+
+> **Y la herramienta correcta para la pregunta de la rama, que cuesta un segundo:** `git ls-remote --heads` **lista
+> refs; no las infiere**. `moodle/moodle` **tiene** `refs/heads/main` (y no tiene `master`). Preguntarle a una página
+> renderizada cuál es la rama por defecto es adivinar con buena suerte.
+
+### Corrección de la fila de Moodle de la tabla de arriba — son siete proveedores de AI, y en 5.3 están todos en el núcleo
+
+La fila dice *«Provider plugins para OpenAI, Azure OpenAI, Ollama, DeepSeek, Gemini y Amazon Bedrock»* (seis). En
+**5.3rc1 son siete**, verificados sobre el árbol: **`anthropic`**, `awsbedrock`, `azureai`, `deepseek`, `gemini`,
+`ollama`, `openai`. **`anthropic` es el que faltaba en el registro de esta KB.** Y los *placements* siguen siendo dos
+(`courseassist`, `editor`).
+
+### 🔴 Lo que hay que saber antes de prometerle a un cliente que «Moodle borra el dato de su AI»
+
+Los **siete** proveedores traen `classes/privacy/provider.php`, y **los siete tienen todos sus métodos de borrado
+vacíos** (70–78 líneas, cero `delete_records`, exactamente un `add_external_location_link`). **No es un defecto: es
+correcto**, porque un proveedor no guarda nada localmente — **transmite**. Lo que borra es el subsistema:
+**`public/ai/classes/privacy/provider.php`** (`core_ai`), ~800 líneas, **6 tablas** —`ai_policy_register`,
+`ai_action_register` y las de `generate_text`, `generate_image`, `summarise_text`, `explain_text`, con **`prompt`** y
+**`generatedcontent`** entre sus campos— y `delete_records_list()` real.
+
+**La frase exacta que se le puede decir a un cliente:** *«Moodle borra el prompt y la respuesta que guardó en su propia
+base. Lo que ya se envió al proveedor está fuera del alcance del Privacy API, y el propio núcleo lo declara así en los
+siete plugins de proveedor.»* Ésa es la frontera, y conviene escribirla en el expediente (**P35**) en vez de descubrirla
+en una auditoría. Ver la tendencia **48** y el patrón **P39**.
+
+### Y el eslabón de telemetría de esta misma pila no borra — matriz para elegir LRS
+
+| LRS | Licencia | ★ | ¿Borrado soportado y documentado? |
+|---|---|---|---|
+| **SQL LRS (`lrsql`)** | **Apache-2.0** ✅ | 144 | 🚫 **No** |
+| **Ralph** | **MIT** ✅ | 51 | 🚫 **No** |
+| **Learning Locker** | **GPL-3.0** ⚠️ | 584 | ✅ **Sí** (API especial) — ⚠️ no verificada por esta KB |
+
+Y arriba de los tres: **el estándar xAPI / IEEE 9274.1.1 no define una operación de supresión** — define *voiding*, que
+marca sin borrar. **Consecuencia para la elección de plataforma, que es lo que decide este archivo:** si el proyecto
+tiene obligación de supresión (art. 17 del GDPR, **AB 1159**, Ley 21.719 chilena), el LRS permisivo **no la cumple de
+fábrica** y hay que cotizar la intervención en el almacén como alcance propio (**P40**), o asumir copyleft. Ver el
+**gap 33**.
+
 ## Capa SIS — el lado administrativo, verificado 2026-09-30 (pases 2 y 3)
 
 Un LMS gestiona el aprendizaje; un **SIS** (Student Information System) gestiona la institución: matrícula, legajos, asistencia, notas oficiales, facturación, disciplina. Es donde viven los datos que más valen para un agente y el área que casi ningún piloto de AI toca.

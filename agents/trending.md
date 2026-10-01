@@ -9,6 +9,81 @@ updated: 2026-10-01
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 > No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
 
+## 2026-10-01 (pase 19) — cinco agentes nuevos, y el hallazgo es que el pase anterior explicó bien un dato con una causa falsa
+
+Dos cosas en este pase. La chica: **+5 en la tabla principal** y **una región cerrada**. La grande: **el pase 18 se
+apoyó en una afirmación falsa sobre `moodle/moodle`**, y corregirla deja ver lo que su hallazgo realmente era.
+
+### Los cinco nuevos, verificados uno por uno
+
+Entraron por una consulta que dieciocho pasadas no habían hecho: **el *topic* `ai-tutor` de GitHub**, que es donde el
+ecosistema se autoclasifica. Las pasadas anteriores buscaron por `agent`, `benchmark`, `tutoring system` y `tutor`;
+ninguna por la etiqueta que usan los propios autores.
+
+| Repo | Licencia | ★ | Commits | Qué aporta que la KB no tenía |
+|---|---|---|---|---|
+| **human-skill-tree** | **AGPL-3.0** ⚠️ (sólo `skills/` en doble MIT/AGPL) | 562 | 36 | 33 skills, **15 sistemas educativos nacionales y 800+ materias** declarados. El mayor alcance curricular de la tabla |
+| **universal-examprep-skill** | **MIT** ✅ | 299 | 181 | **Citación obligatoria `archivo p.N` + 100 % de abstención fuera de alcance.** Es una propiedad regulatoria, no pedagógica |
+| **algo-sensei** | **MIT** ✅ | 281 | 8 | **Pistas en 5 niveles y negativa explícita a dar la solución.** *«Productive struggle with guidance»* |
+| **universal-diagnostic-tutor-skill** | **MIT** ✅ | 235 | 57 | *Diagnosis-first*: localiza el hueco en 4 niveles antes de enseñar. **«Learning State Cards» visibles al alumno** |
+| **lumen** | **GPL-3.0** ⚠️ | 88 | 828 | RAG con alcance por curso y citación detrás de un autorizador único; MCP con 9 tools; **publica sus propios puntajes malos** |
+
+**Tres observaciones de forma, que valen más que las cinco filas:**
+
+1. **Cuatro de los cinco se entregan como *skill* instalable**, no como aplicación. La capa de distribución que abrió
+   el pase 12 ya no es una curiosidad: es **cómo se publica la pedagogía en esta ventana**.
+2. **La licencia y la tracción están desacopladas al revés de lo esperado.** Lo más estrellado del lote
+   (`human-skill-tree`, 562 ★) es **AGPL-3.0** y sólo reutilizable en su subdirectorio `skills/`; lo más reutilizable
+   es MIT y tiene **8 commits** (`algo-sensei`). Se repite el patrón del pase 7.
+3. **`lumen` cierra región: Alemania (EMEA)** — el autor declara `Essen, Germany`. Y es el único artefacto de toda
+   esta KB que **publica los resultados en los que su propio *eval* sale mal**. Eso es citable ante un cliente como
+   estándar de honestidad de medición, independientemente de si el repo se usa.
+
+### 🔴 La corrección: `moodle/moodle` sí tiene rama `main`, y los 404 medían otra cosa
+
+El pase 18 escribió, en este mismo archivo, que *«`moodle/moodle` no tiene rama `main` ni rama `master`»* y con eso
+explicó los cuatro 404 del pase 17. **Es falso.** Verificado con `git ls-remote`, que lista refs en vez de inferirlas:
+
+```
+$ git ls-remote --heads https://github.com/moodle/moodle | grep -v 'MOODLE_[0-9]*_STABLE$'
+85af0b5dc354bf03c73db60079c232f004e01433    refs/heads/main
+```
+
+`main` existe y es **Moodle 5.3rc1**. Lo que no existe es `master`. **Y la causa real de los 404 es mejor, porque es
+reutilizable:** **Moodle movió su *webroot* a `public/` en la serie 5.x.** En `main` la ruta no es
+`ai/provider/ollama/...` sino **`public/ai/provider/ollama/...`**. Eso explica, sin contradicción, la tabla de
+evidencia del pase 18: 404 en `main` (ruta movida) y 200 en `MOODLE_405_STABLE` y `MOODLE_500_STABLE` (donde `ai/`
+todavía estaba en la raíz). **Los 404 midieron la ruta, no la rama.**
+
+> **Lección de método, y es la tercera vez que esta KB tropieza con lo mismo:** un 404 nunca dice *«no existe»*, dice
+> *«no está donde preguntaste»*. El pase 17 lo leyó como ausencia, el pase 18 como nombre de rama, y era una
+> reestructuración del árbol. `git ls-remote` cuesta un segundo y responde la pregunta de la rama **sin inferir**;
+> para la ruta, lo único que sirve es mirar el árbol.
+
+### Y con la ruta correcta, el hallazgo del pase 18 cambia de tamaño y de signo
+
+No son tres proveedores de AI con `privacy provider`: son **siete** (`anthropic`, `awsbedrock`, `azureai`,
+`deepseek`, `gemini`, `ollama`, `openai`), más el del subsistema y dos de *placement* = **10 archivos**. El pase 18
+dio por ausentes a `anthropic` y `bedrock`; los dos están, y el segundo se llama **`awsbedrock`** — ese 404 también
+midió un nombre.
+
+Auditados uno por uno sobre el fuente, los siete son **idénticos**: 70–78 líneas, **cero** llamadas a
+`delete_records` / `DELETE FROM` / `add_database_table`, y **exactamente un** `add_external_location_link`. Todos sus
+métodos de borrado tienen el cuerpo vacío, con `@codeCoverageIgnore`.
+
+**El pase 18 acertó en que eso es deliberado** —y conviene no perder ese acierto en la corrección—. Lo que estaba mal
+es el titular: **siete shims de declaración no son «implementaciones de referencia» de un `privacy provider`**,
+porque lo que necesita copiar un plugin que *sí* guarda dato es exactamente lo que ellos no tienen. La plantilla real
+existe y el pase 18 no la nombró: **`public/ai/classes/privacy/provider.php`** (`core_ai`), ~800 líneas, **6 tablas**
+—con `prompt` y `generatedcontent` entre sus campos— y `delete_records_list()` de verdad en las tres variantes de
+borrado.
+
+**Y leído así, el hallazgo es más fuerte que como lo escribió el pase 18:** los siete shims no son un descuido, son
+una **declaración**. Lo único que hacen es declarar que el *prompt* del alumno sale hacia un tercero. El núcleo de
+Moodle documenta, en siete archivos idénticos, **el punto exacto donde su propia maquinaria de supresión se queda sin
+nada que suprimir** — porque el dato ya está en OpenAI, Anthropic, Google, AWS, Azure, DeepSeek o en el Ollama de
+alguien. Ver las tendencias **48**, **49** y **50**.
+
 ## 2026-10-01 (pase 18) — el gap 29 se cerró con la pieza del propio vendor, y las dos mitades del derecho al olvido tienen licencias opuestas
 
 El **gap 29** del pase 17 pedía *«un `privacy provider` de referencia para un plugin de AI»* y lo declaraba

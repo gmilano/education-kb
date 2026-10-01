@@ -1882,3 +1882,107 @@ de Moodle, porque el núcleo es GPL-3.0+ y lo exige. `mod_aigradedassign` **no t
 header GPL en el fuente) y `tool_aiconnect` **no muestra licencia**: a efectos de cotización se tratan como **sin
 licencia**, y lo que corresponde es abrir un *issue* pidiendo el archivo. **Un plugin derivado de Moodle va a ser
 GPL-3.0 de todos modos** — eso no es un obstáculo para el engagement, pero sí hay que decirlo antes de firmar.
+
+## P40 — Propagar la supresión del LMS a la telemetría y al modelo, sin evento porque no hay evento (agregado en el pase 19; **EMEA y North America primero por régimen, LATAM con instrumento local**)
+
+**Problema.** Un cliente aprueba un pedido de supresión en Moodle. El LMS borra sus filas. **El LRS sigue teniendo la
+historia de aprendizaje del alumno y el modelo de mastery sigue teniendo su influencia en los pesos.** El pase 19
+midió los tres eslabones y el del medio no borra ni en la especificación. Este patrón es el eslabón que falta,
+construido con lo que hay.
+
+**Lo que hay que saber antes de diseñarlo, y es lo que el pase 19 refutó.** No se puede hacer con un observer:
+
+- `tool_dataprivacy` **no emite ningún evento** — 187 archivos, **cero** `trigger()`.
+- `api::update_request_status()` (por donde pasa `approve_data_request()`) es **una escritura de base de datos**: setea
+  `status`, `dpo`, `dpocomment` y hace `update()`. Sin evento, sin hook, sin notificación.
+- El único observer registrado va **hacia adentro**: `\core\event\user_deleted` → **crear** un pedido.
+
+**Entonces hay dos mecanismos posibles, y el (a) es el que se cotiza.**
+
+**(a) Reloj de estado sobre `tool_dataprivacy_request` — recomendado.**
+
+1. **Plugin `local_` propio** (GPL-3.0 por derivación del núcleo; es un plugin de Moodle, no se puede evitar) con una
+   **tarea programada** (`\core\task\scheduled_task`, cada 5–15 min) que consulta
+   `tool_dataprivacy_request` por filas con `type = DATAREQUEST_TYPE_DELETE` y `status` en
+   `{APPROVED, COMPLETE, DELETED}` que aún no tengan marca propia de propagación.
+2. **Tabla de control propia** (`local_<x>_propagation`) con `requestid`, `userid`, `stage`, `attempts`, `completed`.
+   Es lo que suple la ausencia de evento: **el idempotente lo pone el plugin, no Moodle**.
+3. **Fan-out en dos ramas**, cada una con su propio reintento:
+   - **Telemetría.** `DELETE` de los *statements* del actor en el LRS. ⚠️ **Acá está el trabajo a medida, y hay que
+     cotizarlo explícitamente:** xAPI **no define supresión** y `lrsql` (Apache-2.0) y Ralph (MIT) **no la documentan**
+     (gap 33). Sobre `lrsql` es `DELETE` en SQL contra el esquema de statements; sobre Ralph, contra el backend
+     (Elasticsearch/Mongo). **No es una llamada de API soportada: es intervención en el almacén, y el cliente tiene que
+     firmar que lo entiende.** Si el cliente ya tiene **Learning Locker** (GPL-3.0), existe API de borrado — ⚠️ no
+     verificada por esta KB, confirmar antes de prometerla.
+   - **Modelo.** Si el estimador es **`pyBKT`** (MIT, no PyTorch): **reajustar desde cero sin el alumno** — barato, y da
+     ***exact unlearning***, la garantía más fuerte que existe. Si es **`pyKT`** (MIT, PyTorch): *unlearning* aproximado
+     con **`torchunlearn`** (MIT) **más la métrica de verificación con las métricas de *membership inference* de
+     `OpenUnlearning`** (MIT). **Sin esa métrica el entregable es una promesa; con ella es un número.**
+4. **Registro de auditoría** de cada etapa, con fecha y resultado, que es lo que se adjunta al expediente (**P35**).
+
+**(b) Disparar desde afuera, si el cliente ya tiene orquestación.** Exponer el borrado como web-service y llamarlo desde
+el sistema que ya coordina identidad. **Antecedente conocido:** `local_gdpr_deleteuserdata` (GPL-3.0, Dorel Manolescu),
+que expone el borrado del Privacy API como web-service. ⚠️ **Antecedente de diseño, no dependencia:** es de **2018-07-08**
+y declara requerir **Moodle 3.5** cuando el núcleo va por **5.3**; `moodle.org` está bloqueado por el proxy de esta
+sesión y **no se localizó repositorio en GitHub**. Leer el patrón, no instalar el plugin.
+
+**Contramedida obligatoria del mismo patrón, por P-MIA (tendencia 50).** Si el proyecto expone un **dashboard de
+mastery**, el vector de estado de conocimiento **no se publica crudo**: ruido o cuantización sobre el vector expuesto, o
+control de acceso por rol para que el vector completo no salga del lado docente. **Razón:** P-MIA (arXiv 2511.04716)
+revierte los vectores de estado **desde las visualizaciones de radar** y con eso infiere pertenencia al entrenamiento.
+**La decisión —cuánto ruido, qué rol ve qué— se escribe en el expediente**, porque es exactamente el tipo de
+compensación entre explicabilidad (Anexo III) y minimización (GDPR) que un auditor quiere ver justificada.
+
+**Piezas, todas verificadas en el pase 19:** Moodle 5.x (`core_ai` como plantilla de `privacy provider`, **GPL-3.0**) ·
+`lrsql` **Apache-2.0** o Ralph **MIT** · `pyBKT` **MIT** / `pyKT` **MIT** · `torchunlearn` **MIT** · `OpenUnlearning`
+**MIT** · plugin propio **GPL-3.0**.
+
+**Tiempo estimado:** 6–8 semanas para la rama de telemetría + modelo BKT; **10–12** si el estimador es deep knowledge
+tracing (la métrica de verificación es la mitad del trabajo).
+
+**Por qué se vende.** Es la respuesta a *«¿y si un padre pide que borren todo?»*, que ningún cliente puede contestar hoy
+y que **tres regímenes ya exigen**: art. 17 del GDPR (EMEA), **AB 1159** + leyes estatales (North America), **Ley 21.719**
+chilena y marco brasileño (LATAM). Y es honesto en su alcance: **no promete borrado estándar de la telemetría, porque el
+estándar no lo tiene** — cotiza la intervención en el almacén como lo que es.
+
+⚠️ **Límite declarado:** el mecanismo (a) está **verificado en el fuente** (esquema, flujo de `update_request_status()`,
+ausencia de eventos con control negativo) pero **no ejecutado contra una instancia de Moodle**. Es diseño leído del
+código, no integración probada.
+
+## P41 — Tutor con procedencia obligatoria y abstención fuera de alcance, para el inciso (1) de la Decisión 33 de Vietnam (agregado en el pase 19; **APAC primero por obligación con fecha, transversal por calidad**)
+
+**Problema.** La **Decisión 33** de Vietnam clasifica como **alto riesgo** el *«contenido automatizado para apoyar el
+autoaprendizaje del alumno usando **fuentes de datos no controladas**»*. Eso **no describe un modelo peligroso: describe
+la arquitectura por defecto de casi todo tutor LLM** — un RAG apuntado a material arbitrario, o un modelo contestando de
+memoria. Un tutor que no puede decir **de dónde salió cada afirmación** cae en el inciso.
+
+**Y esta vez la contraparte no es una recomendación: son dos repos verificados en el pase 19.**
+
+1. **Capa de enseñanza con citación obligatoria — `universal-examprep-skill`** (**MIT**, 299 ★, 181 commits). Declara
+   **citación `archivo p.N` en cada concepto enseñado** y **100 % de abstención fuera de alcance**. Ingesta PDF/PPTX/DOCX/
+   Markdown del material **del curso**, examina con las preguntas reales de la materia y registra errores. Instalable
+   como skill en 40+ agentes. **Es el inciso (1) contestado con una propiedad declarada del artefacto**, no con una
+   política.
+2. **Aislamiento del corpus — `lumen`** (GPL-3.0, 88 ★, 828 commits) como **referencia de arquitectura**: RAG **con
+   alcance por curso y citación, detrás de un único autorizador**, con aislamiento explícito para que cursos privados y
+   clonados no filtren datos, decisiones del agente auditables en una tabla `llm_calls`. ⚠️ GPL-3.0: se copia el diseño
+   (autorizador único + *scoping* por curso + log de decisiones), no el código, si el entregable es cerrado.
+3. **Procedencia del material de origen — `openstax-mcp-server`** (MIT el código) con **la advertencia del pase 10
+   puesta**: su README declara el contenido CC BY 4.0 y los bundles de OpenStax en GitHub dicen **CC BY-NC-SA** en los
+   tres títulos verificados. **«Fuente controlada» implica licencia verificada título por título**, no sólo origen
+   conocido. Para currículo nacional, los esquemas del pase 14 y **P31**.
+4. **Marcado de lo generado — SynthID-Text** (Apache-2.0, dentro de Hugging Face Transformers, **P33**): cierra el otro
+   extremo, porque lo que el tutor **genera** también tiene que ser distinguible de la fuente.
+5. **Telemetría de la decisión — `learnmcp-xapi`** (MIT) sobre `lrsql` (Apache-2.0): deja registro de qué se enseñó con
+   qué evidencia, que es lo que un régimen de alto riesgo audita. ⚠️ **Con el gap 33 declarado en el contrato:** ese
+   almacén **no sabe borrar**; si el proyecto necesita supresión, entra **P40**.
+
+**Alcance regulatorio, con fechas reales.** Vietnam: **2027-03-01** para un sistema nuevo (**5 meses desde hoy**),
+**2027-09-01** si ya operaba antes del 2026-08-15 (**11 meses**) — **el sistema nuevo tiene menos plazo**. Y el mismo
+entregable sirve, sin rehacerlo, para el **Anexo III** europeo (2027-12-02), para los mandatos de supervisión humana de
+**Oklahoma y Maryland**, y para el inciso (2) de Vietnam vía **P5**.
+
+**Tiempo estimado:** 6–8 semanas. **Por qué es la venta de entrada en APAC:** es chica, tiene fecha legal, y el
+diferenciador —**citación con número de página y abstención fuera de alcance**— es verificable por el cliente en una
+demo de diez minutos, no en una auditoría de seis meses.
+

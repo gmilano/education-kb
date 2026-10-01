@@ -357,6 +357,78 @@ contradice y conviene saberlo antes de que lo traiga el cliente.
 **92 % en 2025**, con ~**86 %** de los estudiantes de educación superior usando AI como socio principal de
 investigación y de generación de ideas al comenzar 2026. La adopción no es el cuello de botella en ninguna región.
 
+### Agregado en el pase 19 del 2026-10-01 — el barrido regional vuelve a dar confirmación, salvo en APAC, donde hay un instrumento con incisos y dos fechas
+
+Las cuatro consultas regionales mandatadas se corrieron de nuevo. **Tres de las cuatro devolvieron cifras que esta KB
+ya tenía**, y eso se registra como confirmación y no como hallazgo — el pase 12 declaró saturación del barrido y el
+pase 17 la confirmó; **ésta es la tercera confirmación consecutiva.**
+
+| Región | Resultado del barrido del pase 19 |
+|---|---|
+| **North America** | **Confirmación.** 134 proyectos de ley en 31 estados; los mandatos de MD/ID/OK/VA; California **AB 1159**; Idaho **SB 1227**; el 38 % del mercado en 2025. Todo ya estaba. *Dato nuevo menor, de gobernanza:* **Gallup (marzo 2026): el 34 % de los docentes de EE. UU. no recibe ninguna orientación sobre AI en diez tareas de trabajo, y sólo el 18 % recibe una política escrita formal.** Refuerza la brecha de gobernanza ya registrada, con número propio |
+| **EMEA** | **Confirmación, y una que importa porque esta KB la vende.** El **Reglamento (UE) 2026/1744** (Digital Omnibus on AI, en vigor 2026-07-27) corrió el **Anexo III a 2027-12-02**, y esta KB ya lo tenía con la advertencia de no hacerlo regresar. **Lo que el pase 19 agrega es la confirmación por el otro lado: el Omnibus NO tocó el Artículo 50.** Ver el recuadro abajo |
+| **APAC** | 🔵 **Único hallazgo real del barrido.** La KB tenía la clasificación de Vietnam en términos generales desde el pase 5; **no tenía el instrumento, los tres incisos ni las dos fechas.** Ver abajo |
+| **LATAM** | **Confirmación.** Encuesta LATAM 2026 del **Digital Education Council**: **92 % de alumnos y 79 % de docentes** usando AI, y **sólo el 30 % de los alumnos dice que el uso institucional de AI cumple sus expectativas** — esta última es la cifra que mejor resume la oportunidad de la región y ya estaba registrada como brecha institucional. Socios del estudio: Institute for the Future of Education y **Tecnológico de Monterrey**, con AIGEN y RIE360. Mapa regulatorio fragmentado ya registrado (PL brasileño, marco chileno, **CONPES 4144** colombiano, reglas sectoriales mexicanas) |
+
+#### 🔵 APAC — Vietnam pasa de «clasificó la evaluación automatizada como alto riesgo» a un instrumento con tres incisos y dos fechas
+
+Esto es lo único que el barrido de este pase agrega al mapa, y es accionable:
+
+- **Ley de Inteligencia Artificial N.º 134/2025/QH15**, en vigor desde el **2026-03-01**. Marco de **tres niveles** de
+  riesgo.
+- **Decisión 33** lista **46 sistemas de alto riesgo en seis sectores**, y **tres son de educación**:
+  1. **contenido automatizado para el autoaprendizaje del alumno que use *fuentes de datos no controladas*;**
+  2. **conducir exámenes de forma automática, evaluar resultados de aprendizaje o rankear alumnos;**
+  3. **monitorear y analizar el comportamiento del alumno usando datos biométricos u otros mecanismos
+     automatizados de monitoreo.**
+- **Dos fechas de cumplimiento, y la segunda es la comercialmente relevante:** obligaciones exigibles al
+  **2027-03-01**; pero los sistemas educativos **ya en operación antes del 2026-08-15** tienen período transitorio
+  hasta el **2027-09-01**.
+
+**Por qué los tres incisos valen más que la clasificación genérica que ya teníamos:**
+
+- **El inciso (1) es una exigencia de procedencia del contenido, no de seguridad del modelo.** «Fuentes de datos no
+  controladas» describe exactamente un RAG apuntado a material arbitrario — que es la arquitectura por defecto de casi
+  todo tutor LLM. **Y esta KB ya tiene la contraparte verificada:** `universal-examprep-skill` (MIT) declara
+  **citación `archivo p.N` obligatoria y 100 % de abstención fuera de alcance**, y `lumen` (GPL-3.0) hace **RAG con
+  alcance por curso detrás de un autorizador único**. Es el patrón **P41**, y es la primera vez que esta KB puede
+  responder a un inciso regulatorio de APAC con un repo verificado en vez de con una recomendación.
+- **El inciso (3) le pone jurisdicción asiática a la capa de voz y biometría** que abrió el pase 14 y que el pase 16
+  encuadró con la regla COPPA enmendada de EE. UU. **Dos regímenes, dos continentes, el mismo artefacto regulado.**
+- **El inciso (2) es el que ya estaba** y sigue siendo el que sostiene **P5**.
+
+**Ventana comercial, contada desde hoy (2026-10-01):** un sistema educativo **nuevo** tiene hasta el **2027-03-01** =
+**5 meses**. Uno **ya en operación antes del 2026-08-15** tiene hasta el **2027-09-01** = **11 meses**.
+
+> **El sistema nuevo tiene menos plazo que el ya desplegado**, que es lo contrario de lo intuitivo y es el dato que hay
+> que llevar a la conversación comercial: **un despliegue que entre en operación después del 2026-08-15 pierde el
+> período transitorio** y cae en la fecha más corta. Para un proyecto de 10–12 semanas, 5 meses es ajustado pero
+> alcanza; empezar en 2027 ya no.
+
+#### ⚠️ EMEA — lo que el Digital Omnibus NO movió, y conviene registrarlo en positivo
+
+Esta KB venía advirtiendo que un pase futuro no hiciera *regresar* la fecha del Anexo III. El riesgo simétrico es el
+que nadie anotó: que alguien asuma que **todo** se corrió. **Verificado en este pase:**
+
+| Obligación | Fecha | ¿La movió el Omnibus? |
+|---|---|---|
+| Transparencia del Art. 50 (declarar que se interactúa con AI) | **2026-08-02** — ya vencida | 🚫 **No** |
+| **Marcado / *watermarking* del Art. 50(2)** | **2026-12-02** | 🚫 **No** |
+| Anexo III alto riesgo (evaluación, adaptativo, proctoring, deserción) | **2027-12-02** | ✅ Sí, +16 meses |
+| Anexo I | 2028-08-02 | ✅ Sí |
+
+**El Artículo 50 no fue enmendado por el Omnibus.** Entonces la obligación de marcado del **2026-12-02** sigue en pie
+y **vence en dos meses**, mientras la de alto riesgo se fue a 2027. Esa asimetría es el argumento comercial más
+limpio que tiene esta KB para EMEA: **lo que vence ya es lo barato (marcar, con SynthID-Text, Apache-2.0, ver P33) y
+lo que vence en 14 meses es lo caro (el expediente de conformidad del Anexo III, P4).** Un cliente al que le llegó el
+titular «el AI Act se pospuso» tiene **una obligación vencida y una a dos meses** que el titular no menciona.
+
+> ⚠️ **Discrepancia de fecha menor, registrada para que no se propague.** Esta KB tiene la firma de **AB 1159** como
+> **2026-09-13** en sus fuentes del pase 17; la fuente consultada en este pase la da como **2026-09-10**, y el propio
+> comunicado que la KB ya citaba tiene el slug `20260910`. **La fecha más probable es 2026-09-10.** No cambia ninguna
+> conclusión —lo que importa es la fecha operativa, **2027-07-01**, que no está en disputa— pero conviene no seguir
+> escribiendo las dos.
+
 ## Players globales
 
 | Empresa | Tipo | Fortaleza | Debilidad |
@@ -400,6 +472,15 @@ Dónde se produce el software educativo abierto, que no es donde está la demand
 ## Opportunities by region
 
 ### North America
+
+**Pase 19 (2026-10-01) — la oportunidad nueva es la cadena de supresión completa, y acá tiene el disparador legal más duro.**
+`AB 1159` (operativa **2027-07-01**) prohíbe **entrenar** con dato de alumno; la cadena de **borrado** es el otro lado de
+la misma venta y el pase 19 la midió entera: el LMS borra (Privacy API, **GPL-3.0**), el **modelo** sabe desaprender
+(**OpenUnlearning**, MIT, 607 ★) y **la telemetría no borra** (gap 33: `lrsql` y Ralph no lo documentan; xAPI no lo
+define). **Eso es un diagnóstico que ningún competidor está haciendo** y que un distrito multi-estado necesita antes de
+firmar. Entregable: **P40**. Y el dato de gobernanza que lo hace urgente: **el 34 % de los docentes no recibe ninguna
+orientación y sólo el 18 % tiene política escrita** (Gallup, marzo 2026) — no hay nadie del lado del cliente que pueda
+responder «¿y si un padre pide que borren todo?».
 
 **Contexto.** Adopción ya ocurrió, sin gobernanza: el uso de AI por estudiantes saltó de 66% a **92% en un año**; ~90% de universitarios la usan como herramienta principal de investigación; 83% de los docentes K-12 usan GenAI. Regulación fragmentada: 24 estados con leyes o resoluciones desde 2025, **134 proyectos de ley en 31 estados** en 2026, y **cero estándares federales vinculantes** de currículo AI a mayo 2026. El Department of Education prioriza AI en discretionary grants desde 2026-05-13.
 
@@ -778,6 +859,15 @@ de salida**, y es permisiva.
 
 ### EMEA
 
+**Pase 19 (2026-10-01) — hay una obligación que vence en dos meses y el titular que le llegó al cliente dice lo contrario.**
+Verificado en este pase: el **Digital Omnibus (Reglamento (UE) 2026/1744)** corrió el **Anexo III a 2027-12-02** pero
+**no enmendó el Artículo 50**. Entonces el **marcado del Art. 50(2) sigue venciendo el 2026-12-02** —en dos meses— y la
+transparencia del Art. 50 **ya venció** (2026-08-02). **La asimetría es el argumento de venta:** lo que vence ya es
+barato (marcar con **SynthID-Text**, Apache-2.0 → **P33**) y lo que vence en 14 meses es caro (expediente del Anexo III
+→ **P4**). Un cliente que leyó «el AI Act se pospuso» tiene **una obligación vencida y una a dos meses**. Y se suma el
+gap 33: bajo art. 17 del GDPR, **el LRS permisivo que esta KB recomienda no sabe borrar** — hay que decirlo antes de
+elegir LRS, no después. Región cerrada en este pase: **lumen** (GPL-3.0, Essen, Alemania).
+
 **Contexto.** Regulación primero, adopción después — lo inverso a Norteamérica. La fecha de aplicación de sistemas de alto riesgo del Annex III del EU AI Act (que **incluye AI en evaluación**) se corrió de 2026-08-02 a **2027-12-02** por el acuerdo del Digital Omnibus on AI. Las escuelas quedan responsables de auditar el uso de AI. Casos que caen en alto riesgo: **corrección automática de exámenes, aprendizaje adaptativo, proctoring y predicción de deserción** — o sea, casi todo lo interesante. La Comisión Europea con la OCDE y aval del G7 publicó un borrador de AI Literacy Framework para primaria y secundaria.
 
 **Oportunidades.**
@@ -1137,6 +1227,19 @@ Escandinavia**.
   con rango y con fuente, nunca como número puntual.
 
 ### APAC
+
+**Pase 19 (2026-10-01) — Vietnam deja de ser «clasificó la evaluación automatizada» y pasa a tres incisos con dos fechas, y esta KB ya tiene el repo para uno de ellos.**
+**Ley N.º 134/2025/QH15** (en vigor 2026-03-01) + **Decisión 33**: 46 sistemas de alto riesgo en 6 sectores, **3 en
+educación** — (1) contenido de autoaprendizaje con **fuentes de datos no controladas**, (2) examen/evaluación/ranking
+automáticos, (3) monitoreo de comportamiento con **biometría**. Cumplimiento **2027-03-01**, o **2027-09-01** si el
+sistema ya operaba antes del 2026-08-15 (**ver la trampa de plazos arriba: lo nuevo tiene 5 meses, lo viejo 11**).
+
+**Lo vendible, y es la primera vez que esta KB responde a un inciso de APAC con un artefacto verificado y no con una
+recomendación:** el inciso (1) es una exigencia de **procedencia del contenido**, y `universal-examprep-skill` (**MIT**,
+299 ★) declara **citación `archivo p.N` obligatoria y 100 % de abstención fuera de alcance**, mientras `lumen` hace RAG
+**con alcance por curso detrás de un autorizador único**. Es el patrón **P41**. El inciso (3) le pone jurisdicción
+asiática a la capa de voz y biometría del pase 14. Y la región aporta pieza propia a la capa de *unlearning*:
+`MachineUnlearning` (**BSD-3-Clause**, © **Universiti Malaya**, Malasia).
 
 **Contexto.** Mercado de **$987M**, con China, India y Japón dominando por inversión e infraestructura. Regulación heterogénea y ése es el punto:
 - **China** — el marco más restrictivo y completo de la región, sobre tres leyes fundacionales.
@@ -1532,6 +1635,17 @@ actualización, **no porque describan 2026**. Si una propuesta se apoya en ellas
   PrivacyCD, de snippets de búsqueda — `arxiv.org` está bloqueado por el proxy de esta sesión.
 
 ### LATAM
+
+**Pase 19 (2026-10-01) — la cifra que define la oportunidad de la región sigue siendo la brecha, no la adopción.**
+Confirmado en este pase (Digital Education Council, encuesta LATAM 2026): **92 % de alumnos y 79 % de docentes** usan
+AI, y **sólo el 30 % de los alumnos dice que el uso institucional de AI cumple sus expectativas**. La adopción
+individual está resuelta; **la institucional es el mercado**. Socios del estudio: Institute for the Future of Education
+y **Tecnológico de Monterrey**, con AIGEN y RIE360 — y son los interlocutores naturales de una conversación de Studios.
+
+**Lo que el pase 19 agrega como alcance concreto:** bajo el derecho de supresión de la **Ley 21.719** chilena y el marco
+brasileño, la cadena de borrado del gap 33 aplica igual que en EMEA, **y la región ya tiene la contraparte local de la
+capa docente** (`tero`, MIT, Chile, anclado a MINEDUC y Decreto 83). El trabajo es **P40** con instrumento local en
+lugar de GDPR.
 
 **Contexto.** 47% de despliegue de AI empresarial en 2026. Solo **Brasil (65.89), Chile (63.19) y Uruguay (62.21)** entran en el top 50 global de AI readiness. El dato que define la oportunidad: **13 de los 19 países de América Latina y el Caribe no enseñan adopción temprana de AI en las escuelas**, con un cuello de botella declarado en formación avanzada que limita la capacidad de la región de producir sus propias soluciones.
 

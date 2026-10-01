@@ -1135,6 +1135,104 @@ expediente de privacidad va a recibir como referencia técnica una pieza **brasi
 federal público. Eso es exactamente el argumento de *nearshore* de Studios con evidencia en vez de con
 presentación.
 
+## 48. El núcleo de Moodle documenta, en siete archivos idénticos, el punto donde su propia maquinaria de borrado se queda sin nada que borrar (agregado 2026-10-01, pase 19)
+
+**El dato.** Moodle 5.3rc1 trae **siete** proveedores de AI en el núcleo (`anthropic`, `awsbedrock`, `azureai`,
+`deepseek`, `gemini`, `ollama`, `openai`), y los siete traen `classes/privacy/provider.php`. Auditados sobre el
+fuente, los siete son **idénticos en forma**: 70–78 líneas, **cero** llamadas a `delete_records`, `DELETE FROM` o
+`add_database_table`, y **exactamente un** `add_external_location_link`. Todos sus métodos de borrado y export tienen
+**el cuerpo vacío**, marcados `@codeCoverageIgnore`.
+
+**La lectura correcta, que no es «están sin terminar».** Es la forma canónica para un plugin que **no guarda nada
+localmente y sólo transmite**: lo único que tiene que declarar es el envío externo. Y por eso mismo **no sirven de
+plantilla** para un plugin que sí guarde — ésa es otra, y está en el mismo árbol:
+`public/ai/classes/privacy/provider.php` (`core_ai`), ~800 líneas, 6 tablas con `prompt` y `generatedcontent` entre
+sus campos, y `delete_records_list()` real en las tres variantes de borrado.
+
+**La tendencia, y es la que importa para una propuesta.** La línea divisoria dentro del propio núcleo de Moodle **no
+es técnica, es de arquitectura de dato**: `core_ai` guarda el prompt y la respuesta, y por eso sabe borrarlos. Los
+siete proveedores **no guardan: transmiten** — y lo único que pueden hacer es declararlo. Es decir: **el LMS más
+desplegado del mundo documenta, siete veces, el punto exacto donde el derecho de supresión deja de ser ejecutable**,
+porque el dato ya está en OpenAI, Anthropic, Google, AWS, Azure, DeepSeek o en el Ollama de un tercero.
+
+**Por qué esto se vende y no sólo se anota.** Cualquier institución que active la AI de Moodle hereda esa frontera sin
+decidirla. Un cliente que tiene que responder un pedido de supresión necesita saber **qué parte de la cadena alcanza
+su Privacy API y qué parte no**, y la respuesta está escrita en el núcleo con nombre de archivo. Eso es un expediente
+(**P35**) y un plugin (**P39**), no una discusión de principios.
+
+> ⚠️ **Y la frase del propio núcleo que hay que leer antes de citar esto como tranquilizador** (se conserva del pase
+> 18 porque sigue siendo exacta): `aiprovider_ollama` —el proveedor que un cliente elige **justamente** para que el
+> dato no salga— declara «*No user data is **explicitly** sent*». El plugin no adjunta identidad; `prompttext` **sí**
+> viaja, y el prompt lleva lo que el alumno escribió. **La declaración es exacta sobre la identidad y silenciosa
+> sobre el contenido.**
+
+## 49. La cadena de supresión tiene el agujero en la telemetría, y el estándar es el que lo abre (agregado 2026-10-01, pase 19)
+
+**El dato, de arriba hacia abajo.** Esta KB venía construyendo una cadena de borrado de tres eslabones. Medidos los
+tres en este pase:
+
+| Eslabón | ¿Sabe borrar? | Con qué |
+|---|---|---|
+| **LMS** (el registro) | ✅ Sí | Privacy API de Moodle, `core_ai` con `delete_records_list()` — **GPL-3.0** |
+| **Telemetría** (la historia del aprendizaje) | 🔴 **No** | **El estándar xAPI no define supresión.** Define *voiding*: marca sin borrar |
+| **Modelo** (la influencia del dato) | ✅ Sí | OpenUnlearning (**MIT**, 607 ★), `torchunlearn` (MIT) — pero **no para modelos del alumno**: ver gap 34 |
+
+**El eslabón del medio es el que falla, y falla en la especificación, no en las implementaciones.** xAPI —hoy IEEE
+9274.1.1— no tiene operación de borrado de *statements*. Tiene ***voiding***: un statement nuevo con verbo `voided`
+que declara obsoleto al anterior **dejándolo donde está**. Eso es exactamente lo contrario del art. 17 del GDPR, de
+la Ley 21.719 chilena y del derecho de supresión que Vietnam, Corea y Brasil reconocen.
+
+**Y abajo del estándar, el reparto de licencias repite por tercera vez el patrón de la tendencia 45:**
+
+| LRS | Licencia | ★ | ¿Borra? |
+|---|---|---|---|
+| `lrsql` | **Apache-2.0** ✅ | 144 | 🚫 No documentado |
+| Ralph | **MIT** ✅ | 51 | 🚫 No documentado |
+| Learning Locker | **GPL-3.0** ⚠️ | 584 | ✅ Sí (API especial) |
+
+**Lo permisivo no borra; lo que borra es copyleft.** Tres capas, tres veces el mismo reparto.
+
+**Y hay que decirlo en primera persona, porque pega sobre el stack que esta KB recomienda.** `learnmcp-xapi` (MIT, en
+la tabla principal) es el único artefacto de esta KB que conecta un agente con IEEE 9274.1.1, y declara como backends
+**`lrsql`, Ralph y Veracity**: los permisivos. Un tutor armado con el stack recomendado por esta KB escribe la
+historia del alumno en un almacén **del que no hay forma estándar de sacarla**. Eso no invalida el patrón: lo
+convierte en un patrón con una obligación de diseño explícita (**P40**), y en una línea que hay que escribir en el
+expediente antes de firmar.
+
+**Consecuencia comercial, que es la parte útil.** La pregunta *«¿y si un padre pide que borren todo?»* no se contesta
+con el LMS. Se contesta con **tres sistemas, tres licencias y un eslabón que hay que construir a medida** — y eso es
+alcance facturable, no un riesgo que se esconde.
+
+## 50. El dashboard que el regulador pide es la superficie de ataque que el regulador prohíbe (agregado 2026-10-01, pase 19)
+
+**El dato.** **P-MIA** (arXiv 2511.04716) es el primer trabajo sistemático de inferencia de pertenencia contra
+**modelos de *cognitive diagnosis***. Su modelo de amenaza es ***grey-box* y explota las funciones de explicabilidad
+de la plataforma**: los vectores internos de estado de conocimiento **se exponen al usuario en visualizaciones —el
+paper nombra los gráficos de radar— y se pueden revertir con precisión a partir de ellas**. Con probabilidades de
+predicción + vectores reconstruidos, **supera con claridad** a los baselines *black-box* sobre tres datasets reales
+contra CDMs mainstream. Mismo grupo que **PrivacyCD/HIF**; **ninguno de los dos publica código**.
+
+**La tensión, dicha sin adornos.** El Anexo III del EU AI Act clasifica la evaluación automatizada como alto riesgo y
+exige **transparencia y explicabilidad**. El GDPR exige **minimización**. P-MIA mide el costo de la primera en
+términos de la segunda: **cuanto mejor le explicás el modelo al docente, más fácil es extraer de él quién estuvo en el
+entrenamiento.** Las dos obligaciones aplican al mismo sistema y empujan en direcciones opuestas.
+
+**Por qué le pega a esta KB y no es un riesgo genérico.** El dashboard de mastery **es algo que esta KB viene
+recomendando**: es la salida natural de `pyKT` y `pyBKT`, es lo que `Gnos` instrumenta con su distinción
+*vio / resolvió con ayuda / resolvió solo*, y es lo que la capa predictiva del pase 11 le muestra al docente. La
+tendencia no es «hay un ataque nuevo»: es que **el artefacto que esta KB propone como entregable tiene un vector de
+ataque publicado**.
+
+**Lo que se hace al respecto, y es concreto:** ruido o cuantización en el vector de estado que se expone, o control de
+acceso por rol de forma que el vector completo no salga nunca del lado docente — **y la decisión escrita en el
+expediente de privacidad**, porque la elección entre explicabilidad y minimización es exactamente el tipo de decisión
+que el Anexo III quiere ver justificada. Ver **P40**.
+
+**Y el contrapeso, que es la buena noticia del pase:** la misma ventana trajo **OpenUnlearning** (MIT, 607 ★, CMU),
+cuyas métricas **incluyen ataques de inferencia de pertenencia**. Es decir: **ya existe, con licencia permisiva, la
+herramienta para medir si una defensa aguanta.** Lo que no existe es su aplicación a modelos del alumno — ése es el
+**gap 34**, y es ensamblado, no investigación.
+
 ## Gaps declarados
 
 Huecos confirmados tras buscar, no ausencias por no haber buscado. Un gap informado es información; el silencio se parece demasiado a la cobertura.
@@ -1650,9 +1748,21 @@ Huecos confirmados tras buscar, no ausencias por no haber buscado. Un gap inform
 
     ⚠️ **Nivel de evidencia:** los repos se verificaron de primera mano. Los metadatos de los papers vienen de **snippets concordantes**, no de la fuente primaria: `arxiv.org` está bloqueado por el proxy de esta sesión (igual que `blogs.cisco.com` y `helpnetsecurity.com`). Ver el gap 17.
 
-32. **Nada conecta el pedido de borrado del LMS con el borrado en el modelo, y es la quinta capa consecutiva con ese mismo diagnóstico** *(agregado en el pase 18 del 2026-10-01)*.
+32. ~~**Nada conecta el pedido de borrado del LMS con el borrado en el modelo**~~ → ✅ **CERRADO EN EL PASE 19 DEL 2026-10-01, REFUTANDO LA HIPÓTESIS DEL PASE 18** *(agregado en el pase 18 del 2026-10-01)*.
 
-    **Las dos puntas existen y están verificadas.** Del lado del LMS: el **Privacy API** de Moodle, `admin/tool/dataprivacy` y `admin/tool/policy` **en el núcleo** (verificado por código HTTP en `MOODLE_500_STABLE`), más tres `privacy provider` de referencia para plugins de AI y el retiro de usuario de Open edX. Del lado del modelo: la capa permisiva de *unlearning* del gap 31.
+    **El pase 18 dejó escrita «la hipótesis más barata que esta KB tiene abierta»:** que el Privacy API **emite un evento al aprobar un pedido** y que, si ese evento es observable, el puente sería un `db/events.php` de diez líneas. **Se midió sobre el árbol real de `moodle/moodle` (`main` = 5.3rc1) y la hipótesis es falsa en su dirección:**
+
+    - `public/admin/tool/dataprivacy/db/events.php` registra **exactamente un** observer, y va **hacia adentro**: escucha `\core\event\user_deleted` para **crear** un pedido de borrado (`user_deleted_observer::create_delete_data_request`, gated por la config `automaticdeletionrequests`). **Es el sentido contrario al que hacía falta.**
+    - **`tool_dataprivacy` no emite ningún evento.** Recorridos los **187 archivos** del subárbol: **cero** llamadas a `trigger()`.
+    - `api::update_request_status()` —por donde pasa `approve_data_request()`— es **una escritura de base de datos y nada más**. Sin evento, sin hook, sin notificación.
+    - *Control negativo:* el mismo `api.php` tiene **1.678 líneas** y `approve_data_request()` está en la línea **642**. El archivo existía y el grep era válido: **la ausencia es real.**
+
+    **Lo que el gap deja como resultado utilizable, y es más valioso que un «sigue abierto»:** el puente **no puede ser un observer**, y por lo tanto hay exactamente dos formas de construirlo (ver **P40**) — **(a)** sondear `tool_dataprivacy_request.status`, la única superficie observable que existe, o **(b)** disparar desde afuera vía web-service. **Eso convierte el gap en alcance cotizable con mecanismo conocido**, que es justo lo que un gap debería producir. Lo que queda de investigación abierta se reformuló como **gap 34**.
+
+    ⚠️ **Y lo que este gap no promete** (se conserva del pase 18, sigue vigente): para deep knowledge tracing el *unlearning* es **aproximado** y queda residuo medible. El entregable es el borrado **más la métrica de verificación** — que desde el pase 19 tiene herramienta permisiva: las métricas de *membership inference* de **OpenUnlearning** (MIT). No vender «olvido garantizado» sobre un modelo deep.
+
+
+    **Las dos puntas existen y están verificadas.** Del lado del LMS: el **Privacy API** de Moodle, `admin/tool/dataprivacy` y `admin/tool/policy` **en el núcleo** (verificado por código HTTP en `MOODLE_500_STABLE`), más los `privacy provider` de AI del núcleo (⚠️ **el pase 19 corrigió esto: son siete, no tres, y ninguno de los siete borra nada — la plantilla real es `core_ai`; ver la tendencia 48**) y el retiro de usuario de Open edX. Del lado del modelo: la capa permisiva de *unlearning* del gap 31.
 
     **Lo que no existe, y se buscó:** ningún *hook*, plugin, herramienta LTI ni servidor MCP que, a partir de un pedido de supresión **aprobado** en el LMS, dispare el reajuste o el *unlearning* del estimador de *mastery*. El flujo del LMS termina en el borrado de filas. **El modelo no se enteró.**
 
@@ -1660,7 +1770,35 @@ Huecos confirmados tras buscar, no ausencias por no haber buscado. Un gap inform
 
     ⚠️ **Y lo que este gap no promete.** Para deep knowledge tracing el *unlearning* es **aproximado**: queda residuo medible. El entregable es el borrado **más la métrica de verificación**. No vender «olvido garantizado» sobre un modelo deep; si el cliente necesita garantía absoluta, la respuesta honesta es reentrenar — o elegir BKT desde el principio, que es la recomendación de **P38**.
 
+33. **Ningún LRS permisivo implementa el borrado, y el estándar xAPI tampoco lo contempla** *(agregado en el pase 19 del 2026-10-01)*. Es el **eslabón del medio** de la cadena de supresión que esta KB venía construyendo, y el único que falla.
+
+    **Empieza arriba de los repos, en la especificación.** **xAPI —hoy IEEE 9274.1.1— no define una operación de supresión de *statements*.** Define ***voiding***: un statement nuevo con verbo `voided` que declara obsoleto al anterior **dejándolo donde está**. Eso es lo contrario del art. 17 del GDPR, de la Ley 21.719 chilena y del derecho de supresión que reconocen Vietnam, Corea y Brasil.
+
+    **Y abajo, el reparto de licencias repite por tercera vez el patrón de la tendencia 45:** `lrsql` (**Apache-2.0**, 144 ★) 🚫 no documenta borrado; Ralph (**MIT**, 51 ★) 🚫 tampoco; **Learning Locker (GPL-3.0, 584 ★)** ✅ es el único al que se le atribuye API de borrado. **Lo permisivo no borra; lo que borra es copyleft.**
+
+    **Por qué este gap es de esta KB y no del mercado:** `learnmcp-xapi` (MIT) está en la tabla principal como el único puente agente↔IEEE 9274.1.1, y declara como backends **`lrsql`, Ralph y Veracity** — los permisivos. **El stack que esta KB recomienda escribe la historia del alumno en un almacén del que no hay forma estándar de sacarla.** No invalida el patrón: le agrega una obligación de diseño explícita (**P40**) y una línea en el expediente.
+
+    ⚠️ **Límite de la afirmación.** El «no» es **ausencia en la documentación publicada**, no imposibilidad: las dos son bases SQL/Elasticsearch y un `DELETE` a mano siempre es posible. La afirmación exacta: **ninguno ofrece el borrado como operación soportada y documentada**, y por eso ninguno puede figurar en un expediente como el componente que cumple el art. 17 — el `DELETE` a mano es trabajo a medida y se cotiza como tal. El «sí» de Learning Locker es de fuente secundaria y **sigue sin verificarse contra su API**: es la acción 1 que este pase deja escrita.
+
+34. ***Unlearning* evaluado sobre modelos del alumno** *(agregado en el pase 19 del 2026-10-01)*. Es lo que queda del gap 32 después de medirlo, y es **el hueco más construible que tiene esta KB**.
+
+    **La asimetría, en una tabla de dos filas.** Para el **tutor LLM** la capa está resuelta y es permisiva: **OpenUnlearning** (MIT, **607 ★**, Locus Lab / CMU) trae TOFU, MUSE y WMDP, 12+ métodos y **10+ métricas que incluyen ataques de inferencia de pertenencia**. Para el **estimador de mastery** —que en educación es el modelo que contiene el dato sensible— **no hay nada**: ninguno de los tres benchmarks evalúa *knowledge tracing* ni *cognitive diagnosis*, y el único trabajo específico (**PrivacyCD/HIF**, arXiv 2511.03966) **no libera código**, igual que su contraparte de ataque (**P-MIA**, arXiv 2511.04716).
+
+    **Por qué es construible y no investigación de frontera:** las tres piezas existen y las tres son permisivas. `pyKT` es **MIT** y es PyTorch; `torchunlearn` es **MIT** y trae 20 algoritmos; las métricas de ataque de OpenUnlearning son **MIT**. **Falta el ensamblado y la medición, no el método.** El entregable es exactamente el número que hoy **P38** no puede prometer, y convierte «olvido aproximado» en «olvido aproximado con residuo medido». Es la acción 2 que este pase deja escrita.
+
+    ⚠️ **Y la razón por la que vale la pena construirlo ahora, que es nueva en este pase:** **P-MIA** mide que el **dashboard de mastery** —el artefacto que esta KB propone como entregable— **es la superficie de ataque**, porque los vectores de estado de conocimiento se pueden revertir desde las visualizaciones de radar. Ver la tendencia **50**. Sin métrica de verificación, un *unlearning* sobre `pyKT` es una promesa; con las métricas de OpenUnlearning, es un número.
+
+
 ## Fuentes
+
+Borrado, telemetría y *unlearning* — **pase 19 (2026-10-01)**. Verificado de primera mano sobre el árbol de Moodle (clon `--depth 1 --filter=blob:none --sparse`, `main` = **5.3rc1**, commit `85af0b5`): [moodle/moodle](https://github.com/moodle/moodle) — `public/ai/classes/privacy/provider.php`, los siete `public/ai/provider/*/classes/privacy/provider.php`, `public/admin/tool/dataprivacy/db/events.php`, `public/admin/tool/dataprivacy/classes/event/user_deleted_observer.php` y `public/admin/tool/dataprivacy/classes/api.php`. Rama verificada con `git ls-remote --heads`. Repos verificados vía WebFetch: [open-unlearning](https://github.com/locuslab/open-unlearning) · [machine-unlearning-pytorch (`torchunlearn`)](https://github.com/Harry24k/machine-unlearning-pytorch) · [OngWinKent/MachineUnlearning](https://github.com/OngWinKent/MachineUnlearning) · [jjbrophy47/machine_unlearning](https://github.com/jjbrophy47/machine_unlearning) · [lrsql](https://github.com/yetanalytics/lrsql) · [ralph](https://github.com/openfun/ralph) · [learninglocker](https://github.com/LearningLocker/learninglocker) · [topic `ai-tutor`](https://github.com/topics/ai-tutor)
+
+Agentes nuevos — pase 19, verificados vía WebFetch: [human-skill-tree](https://github.com/24kchengYe/human-skill-tree) · [universal-examprep-skill](https://github.com/ZeKaiNie/universal-examprep-skill) · [algo-sensei](https://github.com/karanb192/algo-sensei) · [universal-diagnostic-tutor-skill](https://github.com/SenmuuuuW/universal-diagnostic-tutor-skill) · [lumen](https://github.com/ahmedEid1/lumen)
+
+Regulación — pase 19: **Vietnam, Ley de IA N.º 134/2025/QH15 y Decisión 33** (46 sistemas de alto riesgo en 6 sectores, 3 en educación; [Allen & Gledhill](https://www.allenandgledhill.com/vn/publication/articles/33374/identifies-high-risk-ai-systems-across-six-sectors), [Vietnam Briefing](https://www.vietnam-briefing.com/news/46-high-risk-ai-systems-to-face-enhanced-regulatory-oversight-in-vietnam.html), [Tilleke & Gibbins](https://www.tilleke.com/insights/vietnam-introduces-sectoral-list-of-high-risk-ai-systems/2/)) · **Digital Omnibus / Reglamento (UE) 2026/1744 y la confirmación de que el Art. 50 no se movió** ([Usercentrics](https://usercentrics.com/knowledge-hub/eu-ai-act-high-risk-delay-article-50-transparency-consent/), [Gibson Dunn](https://www.gibsondunn.com/eu-ai-act-omnibus-agreement-postponed-high-risk-deadlines-and-other-key-changes/), [Jones Walker](https://www.joneswalker.com/en/insights/blogs/ai-law-blog/yes-august-2-still-matters-the-eu-approved-a-high-risk-ai-delay-but-most-trans.html?id=102nbon)) · **California AB 1159 / HESIPA**, firma **2026-09-10**, operativa **2027-07-01** ([F3 Law](https://www.f3law.com/insights/new-california-law-limits-technology-companies-use-of-student-data-in-ai-systems-102o16i/), [Privacy Rights Clearinghouse](https://privacyrights.org/resources-tools/articles/governor-signs-prc-sponsored-ab-1159-law-strengthening-privacy-protections)) · **gobernanza docente en EE. UU.** ([MultiState](https://www.multistate.us/insider/2026/4/9/how-states-are-regulating-ai-in-education-this-legislative-session), [AI for Education: guía estatal](https://www.aiforeducation.io/ai-resources/state-ai-guidance)) · **adopción LATAM** ([Digital Education Council, encuesta LATAM 2026](https://www.digitaleducationcouncil.com/dec-insights/92-of-students-and-79-of-faculty-actively-engaging-with-ai-findings-from-ai-in-higher-education-latam-survey-2026)) · **borrado en xAPI** ([Learning Pool: xAPI y GDPR](https://learningpool.com/how-xapi-helps-solve-for-gdpr-requirements))
+
+⚠️ *Del pase 19: **`arxiv.org` sigue bloqueado por el proxy de egreso**, igual que en los pases 6, 7, 14, 16, 17 y 18 — **PrivacyCD (arXiv 2511.03966)** y **P-MIA (arXiv 2511.04716)** se registran por **snippets concordantes**, con su número anotado para que el próximo pase los abra, **no para citarlos ante un cliente**. **`moodle.org` también sigue bloqueado**: `local_gdpr_deleteuserdata` (GPL-3.0, 2018-07-08, Moodle 3.5) **no se verificó de primera mano y no se localizó repositorio en GitHub** — se registra como antecedente de diseño, no como dependencia. La **API de borrado de Learning Locker** viene de fuente secundaria y **no se verificó contra su API**: es la acción 1 que este pase deja escrita.*
+
 
 Privacidad del dato en el LMS instalado y canal de *skills* — pase 17 (2026-10-01), repos verificados vía WebFetch: [edx-platform](https://github.com/openedx/edx-platform) y su [scripts/user_retirement](https://github.com/openedx/edx-platform/tree/master/scripts/user_retirement) y [lms/djangoapps/bulk_user_retirement](https://github.com/openedx/edx-platform/tree/master/lms/djangoapps/bulk_user_retirement) · [moodle](https://github.com/moodle/moodle) · [canvas-lms](https://github.com/instructure/canvas-lms) · [openeducat_erp](https://github.com/openeducat/openeducat_erp) · [k12-teacher-skills](https://github.com/anthropics/k12-teacher-skills) · [learning-commons-org/agent-skills](https://github.com/learning-commons-org/agent-skills) · [DeepTutor](https://github.com/HKUDS/DeepTutor) · [education-agent-skills](https://github.com/GarethManning/education-agent-skills)
 
@@ -1774,6 +1912,130 @@ Evaluación — agregado en el pase 6, 🔴 **no verificado de primera mano** (d
 
 Regulación y mercado por región — agregado en el pase 6: [MultiState — AI in Education Legislation: 2026 State Policy Trends](https://www.multistate.us/insider/2026/4/9/how-states-are-regulating-ai-in-education-this-legislative-session) · [NASBE — States Take Next Steps on Governing AI Use in Schools](https://www.nasbe.org/states-take-next-steps-on-governing-ai-use-in-schools/) · [ExcelinEd — State K-12 AI Policy in 2026](https://excelined.org/2026/05/26/state-k-12-ai-policy-in-2026-milestones/) · [Latham & Watkins — AI Regulation in APAC](https://www.lw.com/en/insights/ai-regulation-in-apac-diverging-approaches-across-the-region) · [Xenoss — APAC AI regulations](https://xenoss.io/blog/asia-pacific-apac-ai-regulations) · [UNESCO — Observatory on AI in Education for LAC](https://www.unesco.org/en/articles/unesco-launches-observatory-artificial-intelligence-education-latin-america-and-caribbean) · [Compliance & Risks — LATAM AI legislation](https://www.complianceandrisks.com/blog/shaping-the-future-ai-legislative-initiatives-across-latin-america/) · [IDB — An Enabling Regulatory Framework for AI in LAC](https://publications.iadb.org/publications/english/document/An-Enabling-Regulatory-Framework-for-Artificial-Intelligence-in-Latin-America-and-the-Caribbean.pdf) · [Azumo — AI in Education Statistics 2026](https://azumo.com/artificial-intelligence/ai-insights/ai-in-education-statistics) · [Grand View Research — AI Tutors Market](https://www.grandviewresearch.com/industry-analysis/ai-tutors-market-report) · [EdTech Hub — AI in Education in MENA](https://docs.edtechhub.org/lib/EPJAMMH9/download/BHXDDPBB)
 
+## Nota de método del pase 19 (2026-10-01) — el pase que ejecutó las dos acciones escritas, y las dos dieron "no" (que es un resultado)
+
+Tres pases consecutivos ejecutaron acciones escritas por el anterior. Éste también, y es **el primero en el que las
+dos devuelven negativo** — una refutada y una no encontrada. Las dos se registran como hallazgo, porque un negativo
+medido con control es información y el silencio se parece demasiado a la cobertura.
+
+### Acción 1 — «buscar si PrivacyCD publicó código (gap 31)» → **NO. Gap 31 sigue abierto, con la búsqueda documentada**
+
+Se buscó por los términos que el pase 18 dejó escritos. **Lo que confirmó:** la autoría completa (Mingliang Hou,
+Yinuo Wang, Teng Guo, Zitao Liu, Wenzhou Dou, Jiaqi Zheng, Renqiang Luo, Mi Tian, Weiqi Luo — los tres nombres que el
+pase 18 anticipó están en la lista) y el algoritmo **HIF** (*hierarchical importance-guided forgetting*: explota que
+la importancia de parámetros en un CDM tiene estructura por capas, con suavizado que combina importancia individual y
+de capa; experimentos sobre tres datasets reales). **Lo que no apareció: código.** Ni repo localizable ni enlace en
+los resultados.
+
+**Y la búsqueda devolvió algo que no se buscaba, que es el verdadero aporte de esta acción:** **P-MIA** (arXiv
+2511.04716), del mismo grupo — el **ataque** correspondiente al **defensa** de PrivacyCD. Los dos lados del mismo
+problema, publicados por el mismo entorno, **y ninguno de los dos libera implementación**. Ver la tendencia **50**.
+
+### Acción 2 — «medir el disparador del gap 32 por el lado del evento» → **REFUTADA. La hipótesis era al revés, y el gap 32 se cierra**
+
+El pase 18 llamó a esto *«la hipótesis más barata que esta KB tiene abierta»*: que el Privacy API **emite un evento al
+aprobar un pedido** y que, si es observable, el puente es un `db/events.php` de diez líneas. **Se midió sobre el árbol
+real y es falso.** Verificado con clon *sparse* de `moodle/moodle` en `main` (= 5.3rc1):
+
+- `public/admin/tool/dataprivacy/db/events.php` registra **exactamente un** observer, y va **hacia adentro**: escucha
+  `\core\event\user_deleted` para **crear** un pedido de borrado
+  (`user_deleted_observer::create_delete_data_request`, y sólo si la config `automaticdeletionrequests` está activa).
+  **Es el sentido contrario al que hacía falta.**
+- **`tool_dataprivacy` no emite ningún evento.** Recorridos los **187 archivos** del subárbol: **cero** llamadas a
+  `trigger()`.
+- `api::update_request_status()` —por donde pasa `approve_data_request()`— es **una escritura de base de datos y nada
+  más**: setea `status`, opcionalmente `dpo` y `dpocomment`, y llama a `$datarequest->update()`. **Sin evento, sin
+  hook, sin notificación.**
+
+**Control negativo, porque la conclusión es una ausencia:** el mismo `api.php` tiene **1.678 líneas** y
+`approve_data_request()` está en la **línea 642**. El archivo existía y el grep era válido; **la ausencia es real, no
+un error de ruta** — que es precisamente el error que este pase tuvo que corregirle al anterior.
+
+**El gap 32 se cierra refutado, y deja dos caminos** (ver **P40**): **(a)** sondear `tool_dataprivacy_request.status`,
+la única superficie observable que existe, o **(b)** disparar desde afuera, como hace el único antecedente conocido,
+**`local_gdpr_deleteuserdata`** (GPL-3.0, expone el borrado del Privacy API como web-service). ⚠️ Antecedente, **no
+dependencia**: es de **2018-07-08**, declara requerir **Moodle 3.5** —el núcleo va por 5.3—, `moodle.org` está
+bloqueado por el proxy y **no se localizó repositorio en GitHub**.
+
+### Lo que se verificó de primera mano, y con qué herramienta
+
+Este pase cambió de instrumento, y conviene dejar escrito por qué: **WebFetch infiere, `git` lista.** Preguntado por
+la rama por defecto de `moodle/moodle`, WebFetch contestó «main» leyendo la página renderizada — y acertó por
+casualidad, porque la misma consulta sobre rutas devolvió dos 404 que no significaban ausencia.
+
+- ✅ **`git ls-remote --heads`** sobre `moodle/moodle`: `refs/heads/main` → `85af0b5`. **Lista refs, no infiere.** Es
+  la herramienta correcta para la pregunta de la rama y cuesta un segundo.
+- ✅ **Clon `--depth 1 --filter=blob:none --sparse`** de `moodle/moodle`: el árbol real, `main` = **Moodle 5.3rc1**.
+  Sobre él se auditaron los 10 archivos de privacidad, los 7 shims (línea por línea), `core_ai` (~800 líneas),
+  `db/events.php`, `api.php` y los 187 archivos de `tool_dataprivacy`.
+- ✅ **WebFetch** sobre los repos de GitHub: licencia, estrellas, commits y descripción de los 5 agentes nuevos,
+  OpenUnlearning, `MachineUnlearning`, `torchunlearn`, `jjbrophy47/machine_unlearning`, Ralph, `lrsql` y Learning
+  Locker.
+
+### ⚠️ Advertencia 1 — un 404 nunca dice «no existe»; dice «no está donde preguntaste». Tercera vez.
+
+El pase 17 leyó sus 404 como **ausencia de la pieza**. El pase 18 los leyó como **nombre de rama** y escribió una
+afirmación falsa (*«`moodle/moodle` no tiene rama `main` ni `master`»*). La causa real era una **tercera**: Moodle
+movió su *webroot* a **`public/`** en la serie 5.x, así que en `main` la ruta es `public/ai/...` y no `ai/...`. Los
+mismos 404 del pase 18 son consistentes con esto: 404 en `main` (ruta movida) y 200 en `MOODLE_405_STABLE` y
+`MOODLE_500_STABLE`, donde `ai/` todavía estaba en la raíz. **Su tabla de evidencia era correcta; su explicación no.**
+
+**Dos consecuencias operativas, para no repetirlo:**
+
+1. **Toda ruta de Moodle que esta KB escriba tiene que decir contra qué serie se resolvió.** La 5.x las movió todas.
+2. **Dos de los tres «404 = no está en el núcleo» del pase 18 medían un nombre, no una ausencia:** `anthropic` **sí**
+   está, y `bedrock` se llama **`awsbedrock`**.
+
+### ⚠️ Advertencia 2 — «la oferta es grande» se midió con los repos equivocados, y el error es de tamaño, no de signo
+
+El pase 18 cerró la capa de *unlearning* con *«la oferta existe, es grande y es toda MIT/Apache»*. La conclusión es
+correcta; la medición no. **Sus dos piezas ejecutables tienen 12 ★ cada una**, y lo que tenía cientos de estrellas
+(`jjbrophy47/machine_unlearning`, 965 ★, reverificado: **sigue sin licencia**) es una **bibliografía**. La pieza seria
+de la capa —**OpenUnlearning**, MIT, **607 ★**, CMU, con TOFU/MUSE/WMDP y métricas de *membership inference*— **no
+estaba registrada en esta KB**. Lección: **contar estrellas sin separar código de bibliografía produce una conclusión
+correcta por accidente**, y la próxima vez puede producir una incorrecta.
+
+### ⚠️ Advertencia 3 — el barrido regional sigue saturado, y esta vez hay un dato nuevo igual
+
+El pase 12 declaró saturación del barrido regional y el pase 17 la confirmó. Este pase la confirma otra vez: las
+cuatro consultas regionales devolvieron **cifras que la KB ya tenía** (134 proyectos en 31 estados, 92 %/79 % del
+Digital Education Council, Reglamento (UE) 2026/1744 con el Anexo III en 2027-12-02, AB 1159). **Se registra como
+confirmación, no como hallazgo.** Lo único genuinamente nuevo es **APAC**, y es preciso: la **Ley de IA de Vietnam
+N.º 134/2025/QH15** y su **Decisión 33** (ver `intel/market.md`). La KB tenía la clasificación de Vietnam en términos
+generales desde el pase 5; no tenía **el instrumento, los tres incisos ni las dos fechas de cumplimiento**.
+
+### Lo que este pase NO hizo, declarado como tal
+
+- **No se leyó ningún paper en fuente primaria.** `arxiv.org` sigue bloqueado por el proxy, igual que en los pases 6,
+  7, 14, 16, 17 y 18. **P-MIA (2511.04716) y PrivacyCD (2511.03966) vienen de snippets concordantes** y se anotan con
+  su número **para que el próximo pase los abra**, no para citarlos ante un cliente.
+- **No se verificó la API de borrado de Learning Locker.** El «sí» viene de una fuente secundaria (Learning Pool). Es
+  el único «sí» de la tabla del gap 33 y **es el que más conviene confirmar**, porque es el que decide si la única
+  salida de la capa de telemetría es copyleft.
+- **No se probó el sondeo de `tool_dataprivacy_request`.** P40 describe el mecanismo leyendo el esquema y el flujo de
+  `update_request_status()`; **no se ejecutó contra una instancia de Moodle**. Es diseño verificado en el fuente, no
+  integración probada.
+- **No se verificó `local_gdpr_deleteuserdata` de primera mano** ni se localizó su repositorio. `moodle.org` sigue
+  bloqueado y el directorio oficial de plugins sigue sin auditarse — es la cuarta pasada consecutiva con esta misma
+  limitación.
+- **No se auditó el árbol de `canvas-lms`.** Cuarta pasada que lo declara **no buscado, no inexistente**.
+- **No se verificó archivo por archivo la doble licencia de `human-skill-tree`.** El repo declara AGPL-3.0 con el
+  directorio `skills/` en doble MIT/AGPL; **eso se tomó del README**, y antes de facturar hay que leer los encabezados
+  del subárbol.
+
+### 🔵 Las tres acciones que este pase deja escritas para el siguiente
+
+1. **Confirmar la API de borrado de Learning Locker** (gap 33). Es la pregunta de mayor rendimiento del pase: si el
+   «sí» se confirma, la única forma estándar de borrar telemetría de aprendizaje es **GPL-3.0**, y eso es una
+   restricción de arquitectura que hay que decirle al cliente **antes** de elegir LRS. Buscar por
+   `learninglocker statement delete API`, por su documentación de administración y por el repo de `xapi-service`.
+2. **Construir el *harness* del gap 34**, que es lo más construible que tiene esta KB y no requiere investigación:
+   tomar `pyKT` (MIT, PyTorch), aplicarle un método de `torchunlearn` (MIT) y **medirlo con las métricas de
+   *membership inference* de OpenUnlearning** (MIT). Las tres piezas son permisivas y ya existen. El entregable es el
+   número que hoy **P38** no puede prometer.
+3. **Abrir P-MIA (2511.04716) y PrivacyCD (2511.03966) en fuente primaria** si algún pase consigue `arxiv.org`, o
+   buscar sus versiones en otro alojamiento. La tendencia 50 sostiene una recomendación de diseño —ruido o
+   cuantización en el vector de estado expuesto— sobre **snippets**, y esa recomendación va a llegar a una propuesta.
 ## Nota de método del pase 18 (2026-10-01) — el tercer pase que ejecuta acciones escritas, y el primero que descubre que una ausencia de la KB era un error de rama
 
 Este pase ejecutó **las dos acciones** que el pase 17 dejó escritas, y las dos dieron resultado. Conviene registrar

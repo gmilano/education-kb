@@ -8,6 +8,79 @@ updated: 2026-10-01
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 
+## 2026-10-01 (pase 19) — el ancla de la capa de *unlearning* tiene 607 ★ y es MIT, y el pase 18 midió la capa con los repos equivocados
+
+El pase 18 cerró la capa de borrado del modelo con una frase correcta — *«la oferta existe, es grande y es toda
+MIT/Apache»* — sostenida por los artefactos equivocados. **Sus dos piezas ejecutables tienen 12 ★ cada una**, y lo que
+tenía cientos de estrellas (`jjbrophy47/machine_unlearning`, **965 ★**, reverificado en este pase: **sigue sin archivo
+de licencia**) es una **bibliografía**, no código. La pieza seria de la capa no estaba registrada.
+
+### El repo que faltaba, y los dos que cierran licencia
+
+| Repo | Licencia | ★ | Qué es |
+|---|---|---|---|
+| **OpenUnlearning** · https://github.com/locuslab/open-unlearning | **MIT** ✅ | **607** | **El framework de referencia de *unlearning* de LLMs.** **Locus Lab (CMU)**. 3 benchmarks (**TOFU**, **MUSE**, **WMDP**), **12+ métodos** (GradAscent, GradDiff, NPO, SimNPO, DPO, RMU, UNDIAL, AltPO, SatImp, WGA, CE-U, PDU), 5+ datasets, **10+ métricas**, 7+ arquitecturas, **450+ modelos preentrenados** en HuggingFace |
+| **MachineUnlearning** · https://github.com/OngWinKent/MachineUnlearning | **BSD-3-Clause** ✅ | 12 | 9 métodos PyTorch (`gradient_ascent`, `bad_teacher`, `scrub`, `amnesiac`, `boundary`, `ntk`, `fisher`, `unsir`, `ssd`). **© Universiti Malaya → APAC (Malasia)** |
+| **machine-unlearning-pytorch** (`torchunlearn`) · https://github.com/Harry24k/machine-unlearning-pytorch | **MIT** ✅ | 12 | Reverificado: **20 algoritmos** (15 de entrenamiento + 5 sin entrenamiento, incluidos SalUn, SCRUB, SISA, FisherForget). NeurIPS 2025, *Unlearning-Aware Minimization* |
+| **machine_unlearning** · https://github.com/jjbrophy47/machine_unlearning | 🚫 **sin licencia** | 965 | Reverificado en este pase: **sigue sin `LICENSE`**. Bibliografía 2017–2025, no código. Usable como fuente, no como dependencia |
+
+**La métrica que convierte a OpenUnlearning en pieza vendible y no en herramienta de laboratorio:** entre sus 10+
+métricas hay **ataques de inferencia de pertenencia (*membership inference*) y medidas de fuerza de extracción**. No
+sólo desaprende: **mide si el desaprendizaje aguanta un ataque.** Eso es exactamente lo que el pase 18 declaró
+pendiente en la advertencia de **P38** — convertir la garantía «aproximada» de `pyKT` en un número.
+
+**Y acota el gap 31 con una distinción que hay que escribir bien, porque es la diferencia entre vender integración y
+vender investigación:** TOFU, MUSE y WMDP miden olvido de **conocimiento textual en un LLM**. **Ninguno mide un modelo
+de *knowledge tracing* ni de *cognitive diagnosis*.** Entonces el tutor LLM está cubierto y es MIT; **el estimador de
+mastery no**. Eso es el **gap 34**, nuevo en este pase y el más construible que tiene esta KB: las piezas existen
+(`pyKT` es PyTorch, `torchunlearn` es MIT, las métricas de ataque son MIT) y falta el ensamblado.
+
+### 🔴 El lado del ataque, que esta capa no tenía: por qué el dashboard de mastery es el problema
+
+Hasta este pase, toda la capa se justificaba por **obligación legal**. Ahora hay **riesgo técnico medido**, y viene del
+mismo grupo que PrivacyCD:
+
+> **P-MIA** — *A Profiled-Based Membership Inference Attack on Cognitive Diagnosis Models* (arXiv **2511.04716**).
+> Primer trabajo sistemático de inferencia de pertenencia contra **CDMs**. Modelo de amenaza ***grey-box* que explota
+> las funciones de explicabilidad de la plataforma**: los vectores internos de estado de conocimiento se exponen al
+> usuario en visualizaciones —**el paper nombra los gráficos de radar**— y **se pueden revertir con precisión desde esas
+> visualizaciones**. Combinando probabilidades de predicción + vectores reconstruidos, **supera con claridad** a los
+> baselines *black-box* sobre tres datasets reales.
+
+**Le pega a esta KB en particular, no de forma genérica:** el dashboard de mastery es la salida natural de
+`pyKT`/`pyBKT`, es lo que `Gnos` instrumenta y lo que la capa predictiva del pase 11 le muestra al docente. **Esta KB
+lo viene recomendando.** P-MIA dice que esa visualización **es la superficie de ataque**: cuanto mejor se explica el
+modelo, más fácil es extraer de él quién estuvo en el entrenamiento. **La explicabilidad que el Anexo III del EU AI
+Act exige y la minimización que el GDPR exige empujan en direcciones opuestas**, y ahora hay un paper que lo mide.
+Contramedida concreta, documentada en **P40**: ruido o cuantización en el vector de estado expuesto, o control de
+acceso por rol, **y la decisión escrita en el expediente**.
+
+### Y la auditoría que faltaba desde el pase 6: los LRS no borran
+
+Trece pasadas registraron la capa de telemetría por lo que **escribe**. Ninguna preguntó si sabe **borrar**. Empieza
+un nivel arriba de los repos: **el estándar xAPI no define una operación de supresión de *statements*** — define
+***voiding***, un statement nuevo que marca al anterior como obsoleto **dejando el original en su lugar**. Eso es lo
+contrario del art. 17 del GDPR.
+
+| LRS | Licencia | ★ | ¿Documenta borrado? |
+|---|---|---|---|
+| **SQL LRS (`lrsql`)** | **Apache-2.0** ✅ | 144 | 🚫 **No** |
+| **Ralph** | **MIT** ✅ | 51 | 🚫 **No** |
+| **Learning Locker** | **GPL-3.0** ⚠️ | 584 | ✅ **Sí** (API especial de borrado) |
+
+**Tercera aparición del mismo patrón en esta KB, y ya no es coincidencia: lo permisivo no borra y lo que borra es
+copyleft.** La tendencia 45 lo encontró en el LMS; la capa de *unlearning* parecía invertirlo; acá vuelve a la forma
+del LMS. **Y pega sobre una fila de la tabla principal:** `learnmcp-xapi` (MIT) declara como backends `lrsql`, Ralph y
+Veracity — **los permisivos, los que no borran**. El stack que esta KB recomienda escribe la historia del alumno en un
+almacén del que **no hay forma estándar de sacarla**. Ver el **gap 33**.
+
+⚠️ **Límite declarado:** el «no» es **ausencia en la documentación publicada**, no imposibilidad — las dos son bases
+SQL/Elasticsearch y un `DELETE` a mano siempre es posible. La afirmación exacta: **ninguno ofrece el borrado como
+operación soportada y documentada**, y por eso ninguno se puede poner en un expediente de privacidad como el
+componente que cumple el art. 17. El `DELETE` a mano es trabajo a medida y se cotiza como tal. El «sí» de Learning
+Locker es de fuente secundaria y **no se verificó contra su API**. `arxiv.org` sigue bloqueado: P-MIA y PrivacyCD van
+por snippets concordantes, con número de arXiv anotado para que el próximo pase los abra.
+
 ## 2026-10-01 (pase 18) — la capa que borra la influencia del dato sobre el modelo es toda permisiva, tiene 2.700+ estrellas combinadas y no menciona educación
 
 Este pase ejecuta la segunda acción escrita por el pase 17 y la confirma. La capa existe, es grande, es
