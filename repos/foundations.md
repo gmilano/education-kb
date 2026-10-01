@@ -617,6 +617,106 @@ infraestructura para eso, y es nueva en esta KB.
   recalibración. Declararlo antes de prometer precisión.
 - **Kaldi es Apache-2.0 y es lo que hay de maduro**, pero todo lo pedagógico hay que construirlo arriba.
 
+## Capa de marcado y procedencia de contenido generado — agregada en el pase 15 del 2026-10-01, y es la que el Artículo 50 exige
+
+Es la capa que esta KB venía **recomendando comercialmente desde el pase 4 sin tener una sola pieza registrada**.
+`compose/patterns.md` anota desde entonces *«Watermarking de contenido generado → 2026-12-02»* como la oferta de
+entrada a EMEA. La implementación existe, está madura y es permisiva.
+
+### Las dos capas del esquema, y no son alternativas
+
+El **Code of Practice** europeo sobre marcado y etiquetado de contenido generado por AI define un esquema **por
+capas: metadato incrustado + watermarking**, con *fingerprinting* y *logging* como medidas de apoyo — y **adopta
+las *Content Credentials* de C2PA como estándar técnico de facto** del metadato. Hay que desplegar las dos.
+
+| Capa | Pieza | Repo | Licencia | ★ | Commits |
+|---|---|---|---|---|---|
+| **Watermark (texto)** | **SynthID-Text** | `huggingface/transformers` → `src/transformers/generation/watermarking.py` | **Apache-2.0** ✅ | viaja en Transformers | — |
+| **Watermark (evaluación)** | **MarkLLM** | https://github.com/THU-BPM/MarkLLM | **Apache-2.0** ✅ | **1.100** (95 forks) | 185 |
+| **Metadato / procedencia** | **c2pa-rs** | https://github.com/contentauth/c2pa-rs | **MIT *y* Apache-2.0** (dual) ✅ | **424** (192 forks) | **1.907** |
+| **Metadato / procedencia (Python)** | **c2pa-python** | https://github.com/contentauth/c2pa-python | **Apache-2.0 *y* MIT** (dual) ✅ | 105 (35 forks) | 344 |
+
+**Lo que hay dentro de `watermarking.py`, leído en el archivo:** `SynthIDTextWatermarkLogitsProcessor` (marca
+durante la generación), `SynthIDTextWatermarkDetector`, `BayesianDetectorModel`, `BayesianDetectorConfig` y
+`BayesianDetectorWatermarkedLikelihood`. Cabecera de copyright: *«Copyright 2024 The HuggingFace Inc. team and
+Google DeepMind»*, bajo Apache-2.0.
+
+### Por qué esta capa es distinta de todas las demás de esta KB
+
+En las catorce capas anteriores el trabajo era **integración**: la pieza existía y había que conectarla. Acá el
+trabajo es **todavía menor**. Un tutor construido sobre Transformers —que es casi cualquier tutor de esta KB— no
+incorpora un proveedor nuevo ni un servicio: **agrega un `WatermarkingConfig` a la llamada de generación que ya
+hace, y el detector sale del mismo paquete**. El costo de cumplir el Artículo 50(2) en el lado del texto es, para
+ese caso, un parámetro.
+
+**C2PA es el que sí requiere ingeniería**, y es donde está el valor del entregable: firmar manifiestos implica
+decidir **con qué identidad** se firma (la *CAWG identity assertion* de la spec 2.4 existe para eso), dónde viven
+las claves y cómo se valida en el otro extremo. Eso es un proyecto chico y real, no un parámetro.
+
+### Qué rol juega **MarkLLM** y por qué no es redundante con SynthID
+
+SynthID-Text marca. MarkLLM **mide si el marcado aguanta**: sus **12 herramientas de evaluación** cubren
+detectabilidad, **robustez** e impacto en la calidad del texto, sobre **23+ algoritmos** (KGW, Unigram, SWEET,
+UPV, EWD, SIR, X-SIR, DiPmark, SemStamp, k-SemStamp, EXP/EXPGumbel, MorphMark y el propio SynthID-Text). El
+Artículo 50(2) exige que el marcado sea *«effective, interoperable, robust and reliable»*; **MarkLLM es con lo
+que se produce la evidencia de que lo es**. En un expediente de conformidad, esa evidencia es el entregable.
+
+⚠️ **Lo que esta capa NO resuelve, y hay que decirlo antes de cotizar.** El marcado sólo cubre el texto que
+generó **el sistema propio**. Un ensayo escrito con un modelo externo no lleva marca y nunca la va a llevar. La
+capa convierte un problema irresoluble (detección universal) en uno **parcial pero cierto** (verificación de lo
+propio) más un **régimen de declaración** para el resto. Ver el **gap 25** y `agents/top.md`.
+
+---
+
+## Capa de detección forense de texto generado — agregada en el pase 15 del 2026-10-01, y se registra con su contraindicación
+
+Está mejor abastecida de lo que esta KB suponía y **toda con licencia apta**. Se registra completa **porque un
+cliente va a preguntar por ella**, y porque la respuesta profesional requiere conocerla, no ignorarla.
+
+| Repo | Licencia | ★ | Forks | Commits | Qué es |
+|---|---|---|---|---|---|
+| https://github.com/baoguangsheng/fast-detect-gpt | **MIT** ✅ | **434** | 85 | 76 | **ICLR 2024**. Zero-shot por curvatura de probabilidad condicional; **340× más rápido que DetectGPT**. AUROC **0,9887** / **0,9338**. Python 3.8 + PyTorch 1.10, probado en A100 80 GB |
+| https://github.com/ahans30/Binoculars | **BSD-3-Clause** ✅ | **420** | 67 | 54 | **ICML 2024**. Zero-shot sin entrenamiento; dos modelos de pesos abiertos en inferencia |
+| https://github.com/liamdugan/raid | **MIT** ✅ | **216** | 98 | **378** | **ACL 2024**. Benchmark: **10M+ documentos**, 11 LLMs, **11 dominios**, 4 decodificaciones, **12 ataques adversarios**. Leaderboard `raid-bench.xyz` |
+| https://github.com/NLP2CT/LLM-generated-Text-Detection | **MIT** ✅ | **252** | 16 | 40 | Survey vivo: ~100+ papers, 17+ datasets (HC3, CHEAT, DetectRL, DetectRL-X), métodos y ataques. *Computational Linguistics* **51(1), 2025** |
+| https://github.com/pablocaeg/sloptotal | **MIT** ✅ | 39 | 8 | 58 | Ensamble de **23 motores** auto-hospedado, **corre en CPU**. Texto, PDF, DOCX y URLs |
+| https://github.com/Lendarixon/awesome-ai-detection | **CC0-1.0** ✅ | 0 | 0 | 4 | Catálogo con los **modos de falla medidos** |
+| https://github.com/yonatanlop/detectoria | 🚫 **Sin licencia** | 0 | 0 | 7 | El único pensado para **español**. Cuatro métodos, diseñado para el *Always Free* de Oracle Cloud. **Registrar, no proponer** |
+
+### 🔴 La contraindicación, con los números de los propios autores
+
+| Medición | Valor | Fuente |
+|---|---|---|
+| FPR sobre escritura de **no nativos de inglés** (TOEFL, 7 detectores) | **61,3 %** | Liang et al. |
+| FPR sobre universitarios **nativos** | ~2,9 % | Liang et al. |
+| FPR sobre 1.180 abstracts académicos **pre-2018** | **5,85 %** + 20 % «incierto» | `awesome-ai-detection` |
+| Texto humano mal marcado por el ensamble de 23 motores | 1 de 66 | README de SlopTotal |
+| Longitud mínima para que el score sirva | **~80 palabras**; estabiliza en ~200 | README de SlopTotal |
+| Efecto de la paráfrasis | **caídas grandes de exactitud** | RAID |
+
+**Y es estructural, no un defecto de versión:** la explicación propuesta para el 61,3 % es la **baja perplejidad**
+del texto de no nativos, por menor variabilidad léxica. Un detector mejor entrenado sigue viendo lo mismo.
+
+**La regla de uso que este pase fija para toda la KB:** un score de detección es **evidencia, no prueba**. Se usa
+para **priorizar una conversación docente**; **nunca** para disparar una sanción automática, y **nunca** como
+único insumo de una decisión disciplinaria. Para clientes cuyos alumnos escriben inglés como L2 —LATAM, EMEA no
+anglófona, buena parte de APAC— es **pasivo legal antes que producto**. Ver el **gap 25**.
+
+### El precedente institucional, que es el argumento más corto
+
+Vanderbilt calculó que **1 % de FPR sobre 75.000 trabajos son ~750 acusaciones injustas por año** y desactivó el
+detector de AI de Turnitin. **Más de 50 universidades** de EE. UU., Reino Unido, Canadá, Australia y Sudáfrica
+—Johns Hopkins, Yale, Waterloo, Curtin, Australian Catholic University— lo desactivaron, restringieron o lo
+abandonaron; **al menos 12 instituciones grandes a marzo de 2026**. El reemplazo que están adoptando es
+**evidencia de proceso, escritura en clase, defensa oral y consignas que integran AI**.
+
+⚠️ **Y ahí hay una colisión con la capa de accesibilidad del pase 8 que hay que registrar:** *«mostrá el historial
+de versiones»* **no lo puede producir un alumno que escribe hablando**. Un entregable que exija evidencia de
+proceso necesita **una vía alternativa documentada**, o es un problema de accesibilidad disfrazado de política de
+integridad. Ver la capa de accesibilidad y la capa de habla (pase 14).
+
+---
+
 ## Nota sobre licencias — leer antes de cotizar
 
 El núcleo de las plataformas educativas open source es **copyleft fuerte**: Open edX, Canvas y Frappe LMS son AGPL-3.0; Moodle, Chamilo y H5P son GPL-3.0. AGPL alcanza el uso en red: si se modifica el core y se sirve por SaaS, hay obligación de publicar el fuente modificado.

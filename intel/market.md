@@ -605,6 +605,33 @@ propio marco de forma interoperable, la capa CASE del mismo pase (`OpenCASE`, Ap
 sirve con conformidad auditable. **La combinación es la base del patrón P31.**
 
 
+
+#### Agregado en el pase 15 del 2026-10-01 — la conversación de integridad académica ya está ganada acá, y el reemplazo no existe
+
+**North America es la región donde el cliente no hay que convencerlo.** El abandono de la detección de AI nació
+acá y ya es comportamiento institucional: Vanderbilt desactivó el detector de Turnitin tras calcular que **1 % de
+falsos positivos sobre 75.000 trabajos son ~750 acusaciones injustas por año**, y **más de 50 universidades** de
+EE. UU., Reino Unido, Canadá, Australia y Sudáfrica —Johns Hopkins, Yale, Waterloo— lo desactivaron, restringieron
+o lo abandonaron; **al menos 12 instituciones grandes a marzo de 2026**.
+
+**La oportunidad es el hueco que quedó.** Las instituciones apagaron la herramienta y **no compraron nada en su
+lugar**: lo que adoptaron son prácticas (escritura en clase, defensa oral, evidencia de proceso, consignas que
+integran AI). No hay producto. Y el criterio que quedó en las políticas de 2026 —**un score no es prueba
+autónoma**, hace falta segundo detector, revisión humana y apelación— describe un **flujo con humano en el lazo**,
+que es exactamente lo que esta KB sabe construir (ver **P18**, **P25**, **P33**).
+
+⚠️ **El riesgo de proponer evidencia de proceso, y hay que ponerlo adelante:** el reemplazo más popular —*«mostrá
+el historial de versiones»*— **no lo puede producir un alumno que escribe hablando**. Choca con la capa de
+accesibilidad del pase 8, y en varios estados la restricción sobre AI en educación especial ya es normativa. Un
+entregable de integridad **necesita una vía alternativa documentada** o es un problema de accesibilidad con forma
+de política.
+
+**Contexto regulatorio sin cambios:** vacío federal y parches estatales (Colorado, Texas, Idaho SB 1227). Es la
+única de las cuatro regiones **sin obligación de marcado**, así que acá el argumento no es cumplimiento sino
+**exposición legal**: el **61,3 %** de falsos positivos sobre escritura de no nativos (tendencia 36) es
+discriminación medible contra alumnado internacional y de primera generación, y eso sí tiene consecuencia en
+EE. UU.
+
 ### EMEA
 
 **Contexto.** Regulación primero, adopción después — lo inverso a Norteamérica. La fecha de aplicación de sistemas de alto riesgo del Annex III del EU AI Act (que **incluye AI en evaluación**) se corrió de 2026-08-02 a **2027-12-02** por el acuerdo del Digital Omnibus on AI. Las escuelas quedan responsables de auditar el uso de AI. Casos que caen en alto riesgo: **corrección automática de exámenes, aprendizaje adaptativo, proctoring y predicción de deserción** — o sea, casi todo lo interesante. La Comisión Europea con la OCDE y aval del G7 publicó un borrador de AI Literacy Framework para primaria y secundaria.
@@ -842,6 +869,42 @@ región que produce la capa que mide y acredita (gap 3) — y este pase agrega q
 con el mismo problema de siempre: nadie lo está mirando. Es la base del patrón **P31** y el insumo que le faltaba a
 **P8** (fábrica de lecciones en la voz del docente) para dejar de depender de prompt y pasar a depender de datos.
 
+
+
+#### Agregado en el pase 15 del 2026-10-01 — la oferta del Artículo 50 por fin tiene código detrás, y vence en 62 días
+
+Esta KB recomienda desde el **pase 4** entrar a EMEA vendiendo el **Artículo 50** antes que el Anexo III. El
+argumento era correcto y **no tenía implementación detrás**: `watermark` aparecía cinco veces en la KB, todas en
+prosa comercial. **Queda cerrado.**
+
+| Capa del esquema | Pieza | Licencia | Madurez |
+|---|---|---|---|
+| Watermark de texto | **SynthID-Text**, dentro de `huggingface/transformers` | **Apache-2.0** ✅ | En producción; copyright HuggingFace + Google DeepMind |
+| Evidencia de robustez del watermark | **MarkLLM** | **Apache-2.0** ✅ | **1.100 ★**, 23+ algoritmos, 12 herramientas de evaluación |
+| Metadato de procedencia | **c2pa-rs** / **c2pa-python** | **MIT *y* Apache-2.0** (dual) ✅ | **1.907** y 344 commits; spec C2PA 2.4 |
+
+**Las fechas, que son el motor de la conversación.** Artículo 50 **en vigor desde el 2026-08-02**. Los sistemas de
+AI generativa **ya en el mercado** antes de esa fecha tienen hasta el **2026-12-02** para cumplir el marcado
+legible por máquina del **Artículo 50(2)**, que exige que sea *«effective, interoperable, robust and reliable»*.
+El **Code of Practice** —voluntario, pero la vía más clara para demostrar cumplimiento— define el esquema **por
+capas (metadato + watermarking**, con *fingerprinting* y *logging* de apoyo) y **adopta las *Content Credentials*
+de C2PA como estándar técnico de facto**.
+
+**Por qué el tamaño del proyecto es la ventaja comercial.** Para un tutor construido sobre Transformers, el lado
+del texto es **un `WatermarkingConfig` en la llamada de generación que ya se hace**. El trabajo real —y el
+entregable— es **C2PA** (identidad de firma, custodia de claves, validación en recepción), **MarkLLM** como
+evidencia de robustez para el expediente, y **el puente al LMS, que no existe en ninguna forma open source**. Es
+un proyecto de semanas con obligación legal detrás, y **deja instalado el registro de procedencia que el expediente
+del Anexo III va a pedir completo en 2027-12-02**. Ver **P33** y el **gap 25**.
+
+🔴 **Verificar antes de citar:** la fecha de publicación del Code of Practice aparece como **10 de junio** en una
+fuente y **20 de julio de 2026** en otra; `digital-strategy.ec.europa.eu`, `artificialintelligenceact.eu` e
+`iptc.org` están bloqueados por el proxy de egreso. Las fechas de **vigencia** (2026-08-02) y de **marcado**
+(2026-12-02) sí son consistentes en todas las fuentes.
+
+⚠️ **Y el argumento que no hay que usar en EMEA:** detección. La mayoría de los universitarios europeos escribe
+inglés como segunda lengua, y el **61,3 %** de falsos positivos de la tendencia 36 convierte cualquier propuesta
+de detección en exposición bajo régimen de no discriminación. **Marcar, no detectar.**
 
 ### APAC
 
@@ -1128,6 +1191,30 @@ porque afecta directamente a cualquier propuesta australiana.
 **Singapur, que el gap 19 listaba como candidato, no apareció.** Es el único de los cinco candidatos del pase 13 que
 **no** se confirmó: no hay esquema curricular singapurense estructurado y publicado abiertamente.
 
+
+
+#### Agregado en el pase 15 del 2026-10-01 — Australia es el punto de entrada de la capa de autoría, por organigrama
+
+**El dato accionable:** en Australia, **26 de 35 universidades (73 %) ubican su política de AI dentro de la
+política de integridad académica**. Eso significa que el presupuesto, el *owner* institucional y el proceso de
+aprobación **ya existen y ya están en el lugar correcto** — que es exactamente lo que falta en las otras tres
+regiones, donde la AI vive en innovación o en IT y la integridad en secretaría académica. Para una propuesta de
+la capa de autoría (**P33**), Australia es el camino más corto de la región.
+
+**El resto de APAC sigue fragmentado y hay que tratarlo país por país:** **Japón** con postura cautelosa y marco
+regulado por el Estado, con énfasis declarado en integridad académica y transparencia; **China** con modelo
+centralizado *top-down* que prioriza integración tecnológica por sobre estructura de política; **Singapur** con
+guías maduras de AI responsable; **India** apoyándose en legislación existente. No hay marco común y no lo va a
+haber: la convergencia que se observa es **de principios** (seguridad, transparencia, responsabilidad), ejecutados
+distinto en cada mercado.
+
+⚠️ **Y la advertencia de la tendencia 36 pega fuerte acá también:** salvo Australia y Nueva Zelanda, el alumnado
+de APAC escribe inglés como L2. El **61,3 %** de falsos positivos es, en términos prácticos, la tasa con la que un
+detector acusaría injustamente a un alumno japonés, coreano, chino o indio. **La propuesta regional es marcado y
+procedencia, con Australia como primer cliente por madurez institucional.**
+
+**Mercado:** **591,6 M USD (2024) → 1.848,1 M (2029), 20,9 % CAGR** — el de crecimiento más rápido de las cuatro
+regiones.
 
 ### LATAM
 
@@ -1497,6 +1584,47 @@ este pase —`vilcaaguilerandrea-oss/carrera-lectora`, fluidez lectora para 1.º
 intercultural y procesamiento en el dispositivo— **no tiene licencia, así que no se puede usar.** Es el vacío más
 barato de cerrar de esta KB después del gap 20: **no hay que construir nada, hay que pedir una licencia.**
 
+
+
+#### Agregado en el pase 15 del 2026-10-01 — 🟢 LATAM tiene el único régimen que el open source puede cumplir completo, y compró la herramienta que no lo cumple
+
+Es la primera vez en quince pasadas que la lectura regional de LATAM sale favorecida por el lado de la **norma**.
+
+**1. La regla latinoamericana no pide detectar: pide declarar.** **México, Colombia y Chile** exigen que el
+alumno **declare** que usó AI y para qué, con sanción por uso fraudulento como falta de honestidad académica, y
+**en algunos casos la entrega de los *prompts*** como parte de la documentación. Un régimen de **divulgación** se
+satisface con **procedencia** —marcar en el origen, firmar un manifiesto, registrar— y **no requiere acertar un
+juicio forense sobre el texto**. Es el único de los cuatro regímenes regionales que el stack permisivo existente
+(**SynthID-Text** Apache-2.0 + **C2PA** MIT/Apache-2.0 dual) **cumple hoy y completo**.
+
+**2. Y lo que está instalado es exactamente lo contrario.** **UNAM, Tec de Monterrey, UAM, BUAP y UdeG** usan
+**Turnitin Originality** como herramienta principal de detección —alta implementación en posgrado, media en
+grado—. Es el mismo tipo de producto que **más de 50 universidades anglófonas desactivaron**, aplicado sobre
+alumnos que escriben **español**, donde está aún menos validado, y en la región donde el **61,3 %** de falsos
+positivos sobre no nativos de inglés (tendencia 36) pega de lleno.
+
+**3. El contexto institucional lo vuelve una ventana de definición, no sólo de venta.** **Más del 80 % de las
+instituciones de educación superior de México no tiene marco normativo claro** sobre el uso ético y académico de
+la tecnología; hay **más de 190 universidades con programas de AI** y ~3.600 matriculados. La norma nacional
+existe en tres países, la mayoría de las instituciones **no la bajó a reglamento**, y la herramienta que compraron
+no la sirve. Quien entre ahora **escribe el reglamento y la arquitectura a la vez**.
+
+**La forma de la propuesta, y es la de menor fricción de toda esta KB para LATAM:** el cliente no necesita que lo
+convenzan de una obligación futura (como EMEA) ni de abandonar una herramienta (como North America). Necesita
+**cumplir una norma que ya lo obliga**, con software que **ya es Apache-2.0**, y dejar de pagar un detector que
+**no la cumple y lo expone**. Ver **P33**.
+
+⚠️ **Lo español de esta capa sigue el patrón de siempre, y van cuatro pasadas:** el único detector pensado
+específicamente para español —`yonatanlop/detectoria` (estilometría + `mrm8488/spanish-gpt2` + GLTR + traducción
+con `roberta-base-openai-detector`)— **no tiene licencia**, igual que `carrera-lectora` en el pase 14. **No
+proponerlo; sí pedirle la licencia al autor**, que vuelve a ser lo más barato de esta KB.
+
+🔴 **Pendiente, y es la pista más valiosa que deja este pase:** un dataset en Zenodo
+(`zenodo.org/records/22661179`) sistematiza las políticas institucionales de integridad académica y los
+lineamientos de AI generativa de las **15 universidades latinoamericanas mejor rankeadas en THE 2026** —USP,
+Unicamp, PUC Chile, UFRJ, UNESP y otras—, con documentos normativos, órganos responsables y guías vigentes o en
+desarrollo. **`zenodo.org` está bloqueado por el proxy de egreso: no se pudo verificar licencia ni contenido.** Si
+es abierto, es el mapa normativo institucional de la región servido en bandeja, y vale una pasada entera.
 
 ## Posicionamiento Globant
 

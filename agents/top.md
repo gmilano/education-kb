@@ -19,6 +19,13 @@ updated: 2026-10-01
 > skills de agente** al final del archivo: es la primera capa de esta KB que se mide contra otra vertical, y la
 > educación pierde 58× contra la científica en el mismo canal. El conteo de 29 de la tabla principal se verificó a
 > mano en este pase y **estaba bien**.
+> *Pase 15 del 2026-10-01:* **no se agregó ninguna fila a la tabla principal; el conteo de 31 se mantiene.**
+> Se abre la **capa de autoría y procedencia** al final del archivo —la mitad que le faltaba a la capa de
+> integridad académica del pase 8, que era sólo *proctoring*—. **El hallazgo es un error propio:** desde el pase 4
+> esta KB le vende a EMEA el deadline de *watermarking* del **2026-12-02** y **nunca registró una implementación**.
+> Existe, es **Apache-2.0** y viaja dentro de Hugging Face Transformers (**SynthID-Text**). Se abren el **gap 25**
+> (la detección no se puede usar para acusar: **61,3 %** de falsos positivos sobre no nativos de inglés) y el
+> **gap 26**. Ver las tendencias **36**, **37** y **38**, y el patrón **P33**.
 > *Pase 14 del 2026-10-01:* **no se agregó ninguna fila a la tabla principal; el conteo de 31 se mantiene.**
 > Este pase abre dos capas nuevas al final del archivo —**lectura oral y pronunciación** (la primera capa de voz
 > de esta KB) y **puente agente↔currículo nacional** (que mueve el gap 15)— y cierra el **gap 19** con cuatro
@@ -587,3 +594,90 @@ de Globant.**
 
 ⚠️ **`curriculum-bncc` es AGPL-3.0 y tiene 0 ★:** sirve como referencia de **cómo modelar** un *crosswalk* (los cuatro
 tipos de relación son el diseño correcto), **no como dependencia** de un producto comercial.
+
+---
+
+## Capa de autoría y procedencia — agregada en el pase 15 del 2026-10-01
+
+La KB tenía media capa de integridad académica desde el pase 8: **proctoring, y registrado como roadmap**. Esta es
+la otra mitad —**cómo se prueba quién escribió el trabajo**— y es la pregunta que todo cliente hace primero.
+Son tres familias de herramienta. **Las tres son permisivas. Sólo dos sirven.**
+
+### Familia 1 — marcado en el origen (*watermarking*): es lo que cumple el Artículo 50, y la KB lo vendía sin tenerlo
+
+| Pieza | Repo | Licencia | ★ | Qué hace |
+|---|---|---|---|---|
+| **SynthID-Text** | `huggingface/transformers` → `src/transformers/generation/watermarking.py` | **Apache-2.0** ✅ | viaja en Transformers | Marcado **y** detección en el mismo paquete. Clases verificadas en el archivo: `SynthIDTextWatermarkLogitsProcessor`, `SynthIDTextWatermarkDetector`, `BayesianDetectorModel`, `BayesianDetectorConfig`, `BayesianDetectorWatermarkedLikelihood`. Copyright **HuggingFace + Google DeepMind** |
+| **MarkLLM** | [`THU-BPM/MarkLLM`](https://github.com/THU-BPM/MarkLLM) | **Apache-2.0** ✅ | **1.100** | **23+ algoritmos** de watermarking y **12 herramientas de evaluación** (detectabilidad, robustez, impacto en calidad del texto). EMNLP 2024 Demo. 95 forks, 185 commits |
+
+**Cuál usar y por qué.** **SynthID-Text** es el de producción: no agrega un proveedor, agrega un
+`WatermarkingConfig` a la llamada de generación que el proyecto ya hace. **MarkLLM** es la herramienta de
+**evaluación y comparación** — es con lo que se demuestra, en un expediente de conformidad, que el marcado
+elegido es *«effective, interoperable, robust and reliable»* como pide el Artículo 50(2). Se usan los dos:
+uno marca, el otro prueba que el marcado aguanta.
+
+### Familia 2 — procedencia del artefacto (C2PA): el estándar que el Code of Practice europeo canonizó
+
+| Pieza | Repo | Licencia | ★ | Commits | Qué hace |
+|---|---|---|---|---|---|
+| **c2pa-rs** | [`contentauth/c2pa-rs`](https://github.com/contentauth/c2pa-rs) | **MIT *y* Apache-2.0** (dual) ✅ | **424** | **1.907** | SDK Rust del core C2PA: crear, firmar, validar e incrustar manifiestos de procedencia. Claims **C2PA v2**, spec **2.4**, *CAWG identity assertion*, API en C |
+| **c2pa-python** | [`contentauth/c2pa-python`](https://github.com/contentauth/c2pa-python) | **Apache-2.0 *y* MIT** (dual) ✅ | 105 | 344 | Binding Python, **3.10+**. Es la vía realista para un pipeline educativo que ya es Python |
+
+**Por qué esto no es opcional en EMEA.** El **Code of Practice** europeo sobre marcado y etiquetado de contenido
+generado por AI —voluntario, pero la vía más clara para demostrar cumplimiento del Artículo 50— **adopta las
+*Content Credentials* de C2PA como estándar técnico de facto** del metadato incrustado, en un esquema **por
+capas: metadato + watermarking**, con *fingerprinting* y *logging* como medidas de apoyo. Las familias 1 y 2 **no
+son alternativas: son las dos capas del mismo esquema.**
+
+### Familia 3 — detección forense: real, permisiva, publicada en ICLR/ICML/ACL, y no se puede usar para acusar
+
+| Repo | Licencia | ★ | Qué es |
+|---|---|---|---|
+| [`baoguangsheng/fast-detect-gpt`](https://github.com/baoguangsheng/fast-detect-gpt) | **MIT** ✅ | **434** | **ICLR 2024**. Zero-shot por curvatura de probabilidad condicional, **340× más rápido que DetectGPT**. AUROC **0,9887** (5 modelos) / **0,9338** (ChatGPT/GPT-4) |
+| [`ahans30/Binoculars`](https://github.com/ahans30/Binoculars) | **BSD-3-Clause** ✅ | **420** | **ICML 2024**. Zero-shot sin datos de entrenamiento; dos modelos de pesos abiertos en inferencia |
+| [`liamdugan/raid`](https://github.com/liamdugan/raid) | **MIT** ✅ | **216** | **ACL 2024**. El benchmark: **10M+ documentos**, 11 LLMs, 11 dominios, 4 decodificaciones, **12 ataques adversarios**. Leaderboard `raid-bench.xyz` |
+| [`NLP2CT/LLM-generated-Text-Detection`](https://github.com/NLP2CT/LLM-generated-Text-Detection) | **MIT** ✅ | **252** | Survey vivo, ~100+ papers y 17+ datasets. *Computational Linguistics* **51(1), 2025** |
+| [`pablocaeg/sloptotal`](https://github.com/pablocaeg/sloptotal) | **MIT** ✅ | 39 | Ensamble de **23 motores** auto-hospedado que **corre en CPU** (incluye Fast-DetectGPT y Binoculars). Acepta texto, PDF, DOCX y URLs |
+| [`Lendarixon/awesome-ai-detection`](https://github.com/Lendarixon/awesome-ai-detection) | **CC0-1.0** ✅ | 0 | Catálogo con los **modos de falla medidos** |
+| [`yonatanlop/detectoria`](https://github.com/yonatanlop/detectoria) | 🚫 **Sin licencia** | 0 | El único detector pensado para **español**: estilometría + perplejidad con `mrm8488/spanish-gpt2` + rank/entropía estilo GLTR + traducción `Helsinki-NLP/opus-mt-es-en` con `roberta-base-openai-detector`. **No proponerlo** |
+
+### 🔴 Antes de poner cualquier cosa de la familia 3 en un entregable
+
+| Medición | Valor |
+|---|---|
+| FPR sobre escritura de **no nativos de inglés** (TOEFL, 7 detectores) | **61,3 %** |
+| FPR sobre universitarios **nativos**, mismos detectores | ~2,9 % |
+| FPR sobre 1.180 abstracts académicos **anteriores a 2018** | **5,85 %** + 20 % «incierto» |
+| Umbral de longitud por debajo del cual el score no sirve | **~80 palabras**; estabiliza en ~200 |
+| Efecto de la paráfrasis | **caídas grandes de exactitud** (RAID) |
+
+**Binoculars lo dice en su propio README:** *«more proficient in detecting English language text compared to other
+languages»*, *«for academic purposes only»*, con **supervisión humana** requerida.
+
+**La regla, y vale para toda la KB:** un score de detección es **evidencia, no prueba**. Sirve para **priorizar una
+conversación docente**; nunca para disparar una sanción automática. Sobre alumnos que escriben inglés como segunda
+lengua —el alumno modal de LATAM, de EMEA no anglófona y de buena parte de APAC— el **61,3 %** convierte la
+herramienta en **pasivo legal antes que en producto**. Vanderbilt lo resolvió con una cuenta: 1 % de FPR sobre
+75.000 trabajos son **~750 acusaciones injustas por año**, y desactivó el detector. **Más de 50 universidades**
+de EE. UU., Reino Unido, Canadá, Australia y Sudáfrica hicieron lo mismo. Ver el **gap 25**.
+
+### La pieza que cambia la arquitectura, y es una pregunta distinta
+
+*«¿Esto lo escribió una AI?»* no tiene respuesta confiable y no la va a tener. *«¿Esto lo escribió **nuestro**
+tutor?»* **sí la tiene**, y es una verificación criptográfica, no una estimación. **La institución que provee el
+agente puede marcar su salida en el origen.** Eso saca la integridad del terreno forense y la mete en el terreno
+de la procedencia, donde el stack es Apache-2.0 y está maduro. Es el patrón **P33**, y es la misma forma que la
+tendencia 29 describe para otras cinco capas de esta KB.
+
+⚠️ **Y el límite honesto del marcado:** sólo cubre texto que generó **tu propio sistema**. No resuelve el ensayo
+escrito con un modelo de fuera de la institución. Lo que hace es convertir un problema sin solución —detección
+universal— en uno con solución parcial pero **cierta**, más un régimen de **declaración** para el resto. En LATAM
+ese régimen **ya es la norma legal** (ver `intel/market.md`), y por eso ahí el stack alcanza hoy.
+
+### El puente que no existe, y es el gap barato de este pase
+
+**Ninguna de las nueve piezas de arriba tiene integración educativa.** No hay plugin de LMS, herramienta LTI ni
+servidor MCP que marque o verifique la salida de un tutor. Lo que existe en el directorio de Moodle son
+**envoltorios de servicios propietarios**: Compilatio (plugin **GPL-3.0**, 821 instalaciones, release 2026-06-25),
+Originality.ai (Moodle 3.9–5.0, release 2026-07-02) y Copyleaks — plugin libre, **detector pago**. El puente es
+trabajo de días sobre infraestructura Apache-2.0. Ver **P33** y el **gap 25**.

@@ -8,6 +8,122 @@ updated: 2026-10-01
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 
+## 2026-10-01 (pase 15) — la capa que prueba la autoría: la detección es permisiva y no se puede usar, el marcado es permisiva y nadie lo usa, y el estándar que Europa canonizó tiene 1.907 commits
+
+Quince pasadas. La capa de integridad académica existía en esta KB desde el pase 8 **y era sólo proctoring** —
+registrado explícitamente como *roadmap, no componente*. La mitad que falta, la de **autoría**, es la que decide
+si un entregable de evaluación sumativa se puede defender. Este pase la abre y la verifica repo por repo.
+
+### Los diez repos nuevos, verificados vía WebFetch el 2026-10-01
+
+**Bloque 1 — marcado en el origen (*watermarking*), que es el que cumple el Artículo 50:**
+
+| Repo | Licencia | ★ | Forks | Commits | Qué es |
+|---|---|---|---|---|---|
+| `huggingface/transformers` → `src/transformers/generation/watermarking.py` | **Apache-2.0** ✅ | — | — | — | **SynthID-Text en producción.** Clases leídas en el archivo: `SynthIDTextWatermarkLogitsProcessor`, `SynthIDTextWatermarkDetector`, `BayesianDetectorModel`, `BayesianDetectorConfig`, `BayesianDetectorWatermarkedLikelihood`. Cabecera: *«Copyright 2024 The HuggingFace Inc. team and Google DeepMind»* |
+| https://github.com/THU-BPM/MarkLLM | **Apache-2.0** ✅ | **1.100** | 95 | 185 | Toolkit de watermarking: **23+ algoritmos** (KGW, Unigram, SWEET, UPV, EWD, SIR, X-SIR, DiPmark, SemStamp, k-SemStamp, EXP/EXPGumbel, **SynthID-Text**, MorphMark…) y **12 herramientas de evaluación** en detectabilidad, robustez e impacto en calidad. EMNLP 2024 Demo |
+
+**Bloque 2 — procedencia del artefacto (C2PA), que es lo que el Code of Practice europeo canonizó:**
+
+| Repo | Licencia | ★ | Forks | Commits | Qué es |
+|---|---|---|---|---|---|
+| https://github.com/contentauth/c2pa-rs | **MIT *y* Apache-2.0** (dual) ✅ | **424** | 192 | **1.907** | SDK Rust del core C2PA: crear, firmar, validar e incrustar manifiestos. Claims **C2PA v2**, spec **2.4**, *CAWG identity assertion*, API en C, callbacks de progreso y cancelación |
+| https://github.com/contentauth/c2pa-python | **Apache-2.0 *y* MIT** (dual) ✅ | 105 | 35 | 344 | Binding Python del anterior, **Python 3.10+**. Leer/validar manifiestos y crear/firmar/adjuntar. Mantenido |
+
+**Bloque 3 — detección forense, toda permisiva y toda con el mismo problema:**
+
+| Repo | Licencia | ★ | Forks | Commits | Qué es |
+|---|---|---|---|---|---|
+| https://github.com/baoguangsheng/fast-detect-gpt | **MIT** ✅ | **434** | 85 | 76 | **ICLR 2024**. Zero-shot por curvatura de probabilidad condicional, **340× más rápido que DetectGPT**. AUROC **0,9887** (5 modelos) y **0,9338** (ChatGPT/GPT-4). Python 3.8 / PyTorch 1.10, probado en A100 80 GB |
+| https://github.com/ahans30/Binoculars | **BSD-3-Clause** ✅ | **420** | 67 | 54 | **ICML 2024**. Zero-shot sin datos de entrenamiento; dos modelos de pesos abiertos en inferencia. Devuelve score + binario |
+| https://github.com/liamdugan/raid | **MIT** ✅ | **216** | 98 | **378** | **ACL 2024**. El benchmark compartido: **10M+ documentos**, 11 LLMs (ChatGPT, GPT-4, GPT-3, GPT-2 XL, Llama 2 70B, Cohere, MPT-30B, Mistral 7B), **11 dominios** (arXiv, recetas, Reddit, resúmenes de libros, noticias, poesía, reseñas, Wikipedia, código), 4 estrategias de decodificación y **12 ataques adversarios**. Leaderboard `raid-bench.xyz` |
+| https://github.com/NLP2CT/LLM-generated-Text-Detection | **MIT** ✅ | **252** | 16 | 40 | Survey vivo con ~100+ papers, 17+ datasets (HC3, CHEAT, DetectRL, DetectRL-X), métodos y **ataques adversarios**. Paper en *Computational Linguistics* **51(1), 2025** |
+| https://github.com/pablocaeg/sloptotal | **MIT** ✅ | 39 | 8 | 58 | Ensamble auto-hospedado de **23 motores** que **corre en CPU**: 8 clasificadores neuronales, 6 estadísticos (Log-Rank, GLTR, perplejidad, cross-perplejidad, **Fast-DetectGPT**, **Binoculars**, DivEye) y 7 heurísticas lingüísticas. Acepta texto, PDF, DOCX y URLs |
+| https://github.com/Lendarixon/awesome-ai-detection | **CC0-1.0** ✅ | 0 | 0 | 4 | Catálogo con los **modos de falla medidos**, que es lo único que no se consigue en el README de los detectores |
+
+### 🔴 Por qué este pase no termina en «ya tenemos detección»
+
+Los seis repos del bloque 3 son reales, permisivos y están publicados en ICLR, ICML y ACL. **Y ninguno se puede
+poner en un entregable que produzca una consecuencia para un alumno.** Los números son de los propios autores:
+
+| Medición | Valor | Fuente |
+|---|---|---|
+| FPR sobre escritura de **no nativos de inglés** (ensayos TOEFL, 7 detectores) | **61,3 %** | Liang et al. |
+| FPR sobre universitarios **nativos**, mismos detectores | ~2,9 % | Liang et al. |
+| FPR sobre 1.180 abstracts académicos **anteriores a 2018** | **5,85 %**, más 20 % en «incierto» | `awesome-ai-detection` |
+| Texto humano mal marcado por el ensamble de 23 motores | 1 de 66 | README de SlopTotal |
+| Umbral de longitud por debajo del cual el score no sirve | **~80 palabras**; estabiliza en ~200 | README de SlopTotal |
+| Efecto de la paráfrasis sobre la exactitud | **caídas grandes** | RAID |
+
+Y **Binoculars lo dice en su propio README**: *«more proficient in detecting English language text compared to
+other languages»*, *«for academic purposes only»*, con **supervisión humana** requerida.
+
+**La aritmética de Vanderbilt es la que hay que llevar a la reunión:** 1 % de FPR sobre 75.000 trabajos son
+**~750 acusaciones injustas por año**. Vanderbilt desactivó el detector de AI de Turnitin; **más de 50
+universidades** de EE. UU., Reino Unido, Canadá, Australia y Sudáfrica lo desactivaron, restringieron o lo
+abandonaron (Johns Hopkins, Yale, Waterloo, Curtin, Australian Catholic University), **al menos 12 instituciones
+grandes a marzo de 2026**.
+
+**La regla que este pase deja escrita para toda la KB:** un score de detección es **evidencia, no prueba**.
+Sirve para **priorizar una conversación docente**, nunca para disparar una sanción. Y sobre alumnos que escriben
+inglés como segunda lengua —es decir, el alumno modal de LATAM, EMEA no anglófona y buena parte de APAC— el
+61,3 % lo vuelve **pasivo legal antes que producto**. Ver el **gap 25**.
+
+### El contraste que hace útil este pase, y es el mismo patrón del pase 14 con el signo cambiado
+
+| | **Detectar** (post-hoc, forense) | **Marcar** (en el origen, procedencia) |
+|---|---|---|
+| Licencia | MIT / BSD-3 / Apache-2.0 ✅ | **Apache-2.0 / MIT dual** ✅ |
+| Madurez | ICLR, ICML, ACL; 216–434 ★ | **1.907 commits** (c2pa-rs); dentro de Transformers |
+| ¿Funciona? | **No de forma defendible**: 61,3 % FPR en no nativos, se rompe con paráfrasis | **Sí, con certeza criptográfica** |
+| Límite real | Es un **juicio probabilístico sobre texto ajeno** | Sólo cubre texto que **generó tu propio sistema** |
+| Estado regulatorio EMEA | Ninguno | **Obligatorio: Art. 50(2), 2026-12-02** |
+| Uso en educación open source | Ninguno integrado | **Ninguno** — y es el gap barato |
+
+**La lectura de arquitectura, y es el aporte conceptual del pase:** la pregunta *«¿esto lo escribió una AI?»* no
+tiene respuesta confiable y nunca la va a tener. La pregunta *«¿esto lo escribió **nuestro** tutor?»* **sí**, y
+la respuesta es una verificación, no una estimación. **Una institución que provee el agente puede marcarlo en el
+origen**, y entonces la integridad deja de ser forense. Es exactamente el patrón que esta KB ya tiene desplegado
+en otras cinco capas (tendencia 29: *lo que se conecta al estándar instalado escala*), aplicado a la autoría.
+El recetario está en **P33**.
+
+### El repo que no entra en ninguna tabla y hay que registrar igual
+
+**`ervin-mo/humanizar-es`** (https://github.com/ervin-mo/humanizar-es, **MIT**, 0 ★, 6 commits) reescribe texto
+en español para evadir detectores, usando **Binoculars y Fast-DetectGPT sobre Qwen2.5-0.5B** como guía local, y
+está empaquetado como **`SKILL.md` para Claude Code, Codex, OpenCode, Antigravity, DeepSeek Harness y Gemini
+CLI**. El autor declara 100 % → 0 % en un párrafo y 39 % en un ensayo completo, acota que la evidencia es **un
+solo ensayo** y aclara que **no está pensado para entregar trabajo calificado**.
+
+**No es el repo, es el canal.** El pase 12 midió que la educación perdió el canal de *skills* de agente frente a
+la vertical científica (815 ★ *share-alike* contra 47,2k ★ MIT). Acá aparece ese canal **ocupado en el dominio
+educativo, por el lado adversario, en español y con licencia MIT**. Es el **gap 26**.
+
+### Lo que esta pasada buscó y no encontró
+
+- **Cualquier integración educativa de watermarking.** Cero. Ni plugin de LMS, ni herramienta LTI, ni servidor
+  MCP que marque o verifique la salida de un tutor. La infraestructura es Apache-2.0 y madura; **el puente al
+  aula no existe**.
+- **Integridad académica open source de punta a punta en Moodle.** Lo del directorio son **envoltorios de
+  servicios propietarios**: Compilatio (plugin **GPL-3.0**, 821 instalaciones, release 2026-06-25),
+  Originality.ai (Moodle 3.9–5.0, release 2026-07-02), Copyleaks. Plugin libre, **detector pago**.
+- **Evidencia de proceso en abierto.** Nada: GPTZero Authorship, Grammarly Authorship, Turnitin Clarity y
+  Draftback son todos propietarios.
+- 🔴 **Nota de verificación — tres dominios bloqueados por el proxy de egreso en este pase:** `arxiv.org`
+  (quedaron sin abrir 2601.17280 sobre *timing-forgery* contra detección por pulsaciones, y 2608.26710 sobre
+  estilo como confusor en escritura de no nativos), `zenodo.org` (el dataset de políticas de integridad de las
+  15 universidades LATAM mejor rankeadas en THE 2026) y `huggingface.co`. **Todo lo de GitHub de este pase sí se
+  abrió y se leyó en la página del repo.** Las afirmaciones regulatorias vienen de resultados de búsqueda:
+  `digital-strategy.ec.europa.eu`, `artificialintelligenceact.eu` e `iptc.org` también están bloqueados.
+- 🔴 **Discrepancia de fecha sin resolver:** el **Code of Practice** europeo sobre marcado y etiquetado de
+  contenido AI aparece con fecha de publicación **10 de junio de 2026** en una fuente y **20 de julio de 2026**
+  en otra. **Resolver contra la fuente oficial antes de citarla a un cliente.** Lo que sí es consistente:
+  Artículo 50 en vigor **2026-08-02**, marcado legible por máquina para sistemas ya en mercado **2026-12-02**, y
+  **C2PA Content Credentials como estándar técnico de facto** del metadato incrustado, en esquema por capas
+  (metadato + watermarking, con fingerprinting y logging de apoyo).
+
+---
+
 ## 2026-10-01 (pase 14) — el gap 19 se cerró a propósito: las cuatro piezas que el pase 13 dejó sin verificar existen, y la capa ya tenía un estándar de interoperabilidad que catorce pasadas no vieron
 
 Este pase hizo lo que el gap 19 pedía textualmente: *«buscar explícitamente `curriculum ontology`, `achievement

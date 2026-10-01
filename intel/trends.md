@@ -758,6 +758,115 @@ código— hace creer que el dato es MIT. **No lo es, y la atribución es una ob
 
 ---
 
+## 36. La pregunta «¿lo escribió una AI?» no tiene respuesta, y la industria educativa está terminando de aceptarlo (agregado 2026-10-01, pase 15)
+
+No es una opinión sobre la tecnología: es el resultado convergente de los propios autores de los detectores, de
+sus benchmarks y del comportamiento de las instituciones.
+
+**El número que lo decide, y es el que importa para una empresa global:** siete detectores evaluados sobre
+ensayos TOEFL dan **61,3 % de falsos positivos sobre escritura de no nativos de inglés**, contra **~2,9 %** sobre
+universitarios estadounidenses nativos. La explicación propuesta —**baja perplejidad** del texto de no nativos por
+menor variabilidad léxica— implica que **es estructural**: un detector mejor entrenado sigue midiendo lo mismo.
+
+**Y el resto de los modos de falla están medidos:**
+
+| Medición | Valor | Fuente |
+|---|---|---|
+| FPR sobre 1.180 abstracts académicos **anteriores a 2018** | **5,85 %**, más 20 % en «incierto» | `Lendarixon/awesome-ai-detection` |
+| Texto humano mal marcado por un ensamble de 23 motores | 1 de 66 | README de `sloptotal` |
+| Longitud mínima para que el score signifique algo | **~80 palabras**; estabiliza en ~200 | README de `sloptotal` |
+| Efecto de la paráfrasis sobre la exactitud | **caídas grandes** | benchmark RAID (ACL 2024) |
+| Transferencia a modelos más nuevos | falla | `awesome-ai-detection` |
+
+**`Binoculars` (ICML 2024) lo escribe en su propio README:** *«more proficient in detecting English language text
+compared to other languages»*, *«none are perfect and can have multiple failure modes»*, **«for academic purposes
+only»**, con supervisión humana requerida.
+
+**El comportamiento institucional ya se movió.** Vanderbilt hizo la cuenta —**1 % de FPR sobre 75.000 trabajos
+son ~750 acusaciones injustas por año**— y desactivó el detector de AI de Turnitin. **Más de 50 universidades**
+de EE. UU., Reino Unido, Canadá, Australia y Sudáfrica (Johns Hopkins, Yale, Waterloo, Curtin, Australian
+Catholic University) lo desactivaron, restringieron o lo abandonaron; **al menos 12 instituciones grandes a marzo
+de 2026**. Y el criterio que quedó escrito en las políticas de 2026 es que **un score de detección no es prueba
+autónoma de mala conducta**: hace falta un segundo detector, revisión humana y derecho de apelación.
+
+**Qué significa para una propuesta.** No significa que la categoría desaparezca: significa que **cambia de uso**.
+Un detector sirve para **priorizar una conversación docente**, nunca para disparar una sanción. Vender detección
+como mecanismo disciplinario a un cliente cuyos alumnos escriben inglés como L2 —LATAM, EMEA no anglófona, buena
+parte de APAC— es venderle el **61,3 %**. Ver el **gap 25**, la capa en `agents/top.md` y el patrón **P33**.
+
+---
+
+## 37. La integridad se está moviendo de la detección a la procedencia, y la procedencia es Apache-2.0, obligatoria en EMEA y no la usa nadie en educación (agregado 2026-10-01, pase 15)
+
+Es la contracara de la tendencia 36 y es donde está el trabajo vendible.
+
+**La pregunta cambia de forma.** *«¿Esto lo escribió una AI?»* es un juicio probabilístico sobre texto ajeno y no
+tiene respuesta confiable. *«¿Esto lo escribió **nuestro** tutor?»* es una **verificación**, y la respuesta es
+cierta. Una institución que **provee** el agente puede marcar su salida en el origen; la integridad deja de ser
+forense. Es exactamente la forma que describe la **tendencia 29** —lo que se conecta al estándar instalado
+escala— aplicada a la autoría.
+
+**Las piezas existen, están maduras y son permisivas:**
+
+| Capa | Pieza | Licencia | Señal de madurez |
+|---|---|---|---|
+| Watermark de texto | **SynthID-Text**, dentro de `huggingface/transformers` | **Apache-2.0** | En producción en Transformers; copyright HuggingFace + **Google DeepMind** |
+| Evaluación del watermark | **MarkLLM** | **Apache-2.0** | **1.100 ★**, 23+ algoritmos, 12 herramientas de evaluación, EMNLP 2024 Demo |
+| Procedencia del artefacto | **c2pa-rs** / **c2pa-python** | **MIT *y* Apache-2.0** (dual) | **1.907 commits**; spec C2PA 2.4 con *CAWG identity assertion* |
+
+**Y en EMEA dejó de ser opcional.** El **Artículo 50** está en vigor desde el **2026-08-02**, y los sistemas de
+AI generativa **ya en el mercado** antes de esa fecha tienen hasta el **2026-12-02** para cumplir el marcado
+legible por máquina del **Artículo 50(2)**: el contenido debe estar marcado de forma *«effective, interoperable,
+robust and reliable»*. El **Code of Practice** sobre marcado y etiquetado —voluntario, pero la vía más clara para
+demostrar cumplimiento— define un esquema **por capas (metadato + watermarking**, con *fingerprinting* y
+*logging* de apoyo) y **adopta las *Content Credentials* de C2PA como estándar técnico de facto** del metadato.
+
+🔴 **Dos cosas que hay que decir con honestidad.** Primero: **esta KB venía recomendando esta oferta desde el
+pase 4 sin tener una sola pieza registrada** — `compose/patterns.md:106` anota el deadline del 2026-12-02 desde
+entonces, y `watermark` aparecía cinco veces en la KB, **todas en prosa comercial, ninguna apuntando a código**.
+Queda corregido. Segundo: **ningún proyecto educativo open source usa nada de esto.** No hay plugin de LMS,
+herramienta LTI ni servidor MCP que marque o verifique la salida de un tutor. La infraestructura está lista; **el
+puente al aula no está construido**, y es trabajo de días. Ver **P33** y el **gap 25**.
+
+⚠️ **El límite honesto:** el marcado sólo cubre el texto que generó el sistema propio. No resuelve el ensayo
+escrito con un modelo externo. Convierte un problema irresoluble en uno **parcial pero cierto**, más un régimen
+de **declaración** para el resto — que es, justamente, lo que LATAM ya exige por norma (tendencia 38).
+
+---
+
+## 38. LATAM tiene el régimen regulatorio que el open source puede cumplir hoy, y tiene instalada la herramienta que no lo cumple (agregado 2026-10-01, pase 15)
+
+Las cuatro regiones resolvieron la integridad académica de forma distinta, y **la latinoamericana es la única que
+el stack permisivo existente satisface completo**. Es la primera vez en quince pasadas que la lectura regional
+sale a favor de LATAM por el lado de la **norma** y no por el del talento.
+
+| Región | Régimen dominante | ¿Lo cumple el open source de hoy? |
+|---|---|---|
+| **North America** | Vacío federal, parches estatales (Colorado, Texas, Idaho SB 1227). **El abandono de la detección nació acá** | Parcial. No hay obligación que cumplir; hay un hueco que llenar |
+| **EMEA** | **Obligación legal con fecha**: Art. 50 en vigor 2026-08-02, marcado legible por máquina 2026-12-02 | **Sí** — y es obligatorio. SynthID-Text + C2PA |
+| **APAC** | Fragmentado, sin marco común. Japón cauteloso con marco estatal; China centralizado *top-down*; **Australia: 26 de 35 universidades (73 %) ubican la política de AI dentro de la de integridad académica** | Parcial, caso por caso |
+| **LATAM** | **Declaración obligatoria** del uso de AI en **México, Colombia y Chile**, con sanción por uso fraudulento y en algunos casos **entrega de los prompts** | 🟢 **Sí, completo.** Un régimen de divulgación se satisface con procedencia, no con forense |
+
+**El punto es la distancia entre la norma y la herramienta.** La regla latinoamericana **no pide detectar: pide
+declarar**. Eso se cumple marcando, firmando y registrando — exactamente lo que SynthID-Text y C2PA producen, con
+certeza y sin acusar a nadie. **Y lo que está instalado es detección:** UNAM, Tec de Monterrey, UAM, BUAP y UdeG
+usan **Turnitin Originality** como herramienta principal — el mismo tipo de producto que 50 universidades
+anglófonas desactivaron, aplicado sobre alumnos que escriben **español**, donde está aún menos validado, y en una
+región donde el **61,3 %** de la tendencia 36 pega de lleno.
+
+**Y el contexto institucional lo vuelve urgente:** **más del 80 % de las instituciones de educación superior de
+México no tiene marco normativo claro** sobre uso ético y académico de la tecnología. O sea: la norma nacional
+existe en tres países, la mayoría de las instituciones no la bajó a reglamento, y la herramienta que compraron no
+la sirve. Es una ventana de definición, no sólo de venta. Ver **P33** y `intel/market.md` → LATAM.
+
+⚠️ **Pendiente de verificación, y es la pista más valiosa que deja este pase:** hay un dataset en Zenodo
+(`zenodo.org/records/22661179`) con las políticas institucionales de integridad académica y lineamientos de AI
+generativa de las **15 universidades latinoamericanas mejor rankeadas en THE 2026** (USP, Unicamp, PUC Chile,
+UFRJ, UNESP…). **`zenodo.org` está bloqueado por el proxy de egreso: no se pudo verificar licencia ni contenido.**
+Si tiene licencia abierta, es el mapa de la norma institucional de la región servido en bandeja.
+
+---
+
 ## Gaps declarados
 
 Huecos confirmados tras buscar, no ausencias por no haber buscado. Un gap informado es información; el silencio se parece demasiado a la cobertura.
@@ -1183,7 +1292,46 @@ Huecos confirmados tras buscar, no ausencias por no haber buscado. Un gap inform
 
     **Es, después del gap 20 y del pedido de licencia a `carrera-lectora`, el tercer vacío más barato de cerrar de los veinticuatro declarados**, y el único que habilita una vertical entera que esta KB no puede atender hoy: **alfabetización inicial y enseñanza de idiomas.** Sin voz, un tutor no sirve en los primeros años de escolaridad, que es donde los sistemas educativos de las cuatro regiones ponen la mayor parte del presupuesto de evaluación.
 
+25. **Nada en el ecosistema educativo open source marca ni verifica la procedencia de lo que genera, y en EMEA eso es obligatorio en 62 días** *(agregado en el pase 15 del 2026-10-01)*. Es el gap con **fecha legal más cercana** de los veinticinco declarados, y el único que esta KB venía **vendiendo sin tener implementación**.
+
+    **Lo que falta no es la tecnología.** La infraestructura está lista y es permisiva: **SynthID-Text** (Apache-2.0, dentro de `huggingface/transformers`, con `SynthIDTextWatermarkLogitsProcessor` y `SynthIDTextWatermarkDetector`), **MarkLLM** (Apache-2.0, 1.100 ★, 23+ algoritmos y 12 herramientas de evaluación), **c2pa-rs** y **c2pa-python** (MIT + Apache-2.0 dual, 1.907 y 344 commits).
+
+    **Lo que falta es el puente al aula, y no existe en ninguna forma:** ni plugin de LMS, ni herramienta LTI, ni servidor MCP, ni XBlock que marque la salida de un tutor o verifique un manifiesto C2PA en una entrega. Se buscó explícitamente. Lo único que hay en el directorio de Moodle son **envoltorios de servicios propietarios** —Compilatio (plugin GPL-3.0, 821 instalaciones), Originality.ai, Copyleaks—, que además hacen lo contrario: **detectan** en vez de marcar.
+
+    **Y la mitad forense del problema no se puede usar para cerrarlo.** La capa de detección existe, es permisiva y está publicada en ICLR, ICML y ACL (`fast-detect-gpt` MIT 434 ★, `Binoculars` BSD-3 420 ★, `RAID` MIT 216 ★, `sloptotal` MIT 39 ★) — y tiene **61,3 % de falsos positivos sobre escritura de no nativos de inglés**, **5,85 %** sobre abstracts académicos anteriores a 2018, y se rompe con paráfrasis. **Un score es evidencia, no prueba.** Ver la tendencia 36.
+
+    **Por qué es el gap más barato con fecha más dura.** El **Artículo 50** está en vigor desde el **2026-08-02** y los sistemas ya en mercado tienen hasta el **2026-12-02** para el marcado legible por máquina del 50(2). Para un tutor construido sobre Transformers —casi cualquiera de esta KB— el lado del texto es **un `WatermarkingConfig` en la llamada de generación**. El trabajo real está en C2PA (identidad de firma, custodia de claves, validación) y en el puente al LMS. Es un proyecto de semanas, no de meses, con obligación legal detrás.
+
+    ⚠️ **Y la deuda propia que hay que registrar:** desde el pase 4 esta KB recomienda *«vender el Artículo 50 antes que el Anexo III»* con el deadline bien puesto. **Once pasadas con la oferta escrita y cero implementación detrás.** El gap se declara con la corrección incluida para que no vuelva a pasar: **cuando la KB recomiende cumplir una obligación, tiene que nombrar el código que la cumple.**
+
+    🔴 **Sin resolver en este pase:** la fecha de publicación del **Code of Practice** europeo sobre marcado y etiquetado aparece como **10 de junio de 2026** en una fuente y **20 de julio de 2026** en otra. `digital-strategy.ec.europa.eu`, `artificialintelligenceact.eu` e `iptc.org` están **bloqueados por el proxy de egreso**. Resolver contra la fuente oficial antes de citarla a un cliente. Lo consistente en todas las fuentes: vigencia 2026-08-02, marcado 2026-12-02, C2PA como estándar de facto del metadato en un esquema por capas.
+
+26. **La educación no usa el canal de distribución de *skills* de agente, pero la evasión de detectores sí — en español y con licencia MIT** *(agregado en el pase 15 del 2026-10-01)*. Es la continuación medida del gap que abrió el pase 12, y le da la vuelta desagradable.
+
+    El pase 12 midió que la vertical científica construyó en el canal de *skills* de agente una biblioteca de **47,2k ★ con MIT** mientras la educativa tiene **815 ★ y es *share-alike*** — 58× de diferencia en el canal de distribución más barato de la industria. La conclusión fue que la educación **no estaba usando el canal**.
+
+    **Lo está usando. Del lado adversario.** **`ervin-mo/humanizar-es`** (https://github.com/ervin-mo/humanizar-es, **MIT**, 0 ★, 6 commits) reescribe texto en **español** generado por AI para que los detectores dejen de marcarlo sin cambiar lo que dice, usando **Binoculars y Fast-DetectGPT sobre Qwen2.5-0.5B** como guía local — y está empaquetado como **`SKILL.md` para Claude Code, Codex, OpenCode, Antigravity, DeepSeek Harness y Gemini CLI**. El autor declara un párrafo pasando de **100 % a 0 % de «AI»**, acota que la evidencia es **un solo ensayo** y aclara que **no está pensado para entregar trabajo calificado**.
+
+    **No es el repo —tiene 0 estrellas— es la asimetría.** La evasión se distribuye como *skill* instalable en **seis harnesses**, en español, gratis, con los detectores de esta KB adentro. La integridad se distribuye como **plugin propietario de LMS con servicio pago detrás**. Un lado tiene costo marginal cero y alcance global; el otro tiene ciclo de compra institucional.
+
+    **Por qué esto cierra el argumento de la tendencia 36 en vez de abrir uno nuevo:** cualquier estrategia de integridad basada en detección compite contra una herramienta de evasión que **usa el mismo detector como función objetivo** y que se instala en un comando. Esa carrera no se gana. La que sí se puede ganar es la de **procedencia**, porque marcar en el origen no es un clasificador que se pueda optimizar en contra. Ver el **gap 25** y **P33**.
+
+    **La acción para la próxima pasada:** medir el canal otra vez, pero buscando por **`SKILL.md` + dominio educativo** en vez de por repos educativos — que es el error de método que el pase 12 ya documentó y que este pase confirma desde el otro lado. Si la evasión llegó al canal, la pedagogía puede.
+
+
 ## Fuentes
+
+Nuevo en el pase 15 — capa de marcado y procedencia (verificado vía WebFetch el 2026-10-01): [SynthID-Text en transformers](https://github.com/huggingface/transformers/blob/main/src/transformers/generation/watermarking.py) · [MarkLLM](https://github.com/THU-BPM/MarkLLM) · [c2pa-rs](https://github.com/contentauth/c2pa-rs) · [c2pa-python](https://github.com/contentauth/c2pa-python)
+
+Nuevo en el pase 15 — capa de detección forense (verificado vía WebFetch el 2026-10-01): [fast-detect-gpt](https://github.com/baoguangsheng/fast-detect-gpt) · [Binoculars](https://github.com/ahans30/Binoculars) · [RAID](https://github.com/liamdugan/raid) · [LLM-generated-Text-Detection (survey)](https://github.com/NLP2CT/LLM-generated-Text-Detection) · [sloptotal](https://github.com/pablocaeg/sloptotal) · [awesome-ai-detection](https://github.com/Lendarixon/awesome-ai-detection) · [detectoria (sin licencia)](https://github.com/yonatanlop/detectoria) · [humanizar-es (evasión, skill de agente)](https://github.com/ervin-mo/humanizar-es)
+
+Nuevo en el pase 15 — Artículo 50 y Code of Practice de marcado (⚠️ **todo de fuentes secundarias: los dominios oficiales están bloqueados por el proxy**, y las dos primeras discrepan en la fecha de publicación del Code of Practice —10 de junio vs. 20 de julio de 2026—): [IPTC — European AI Office releases Code of Practice on Transparency of AI-Generated Content](https://iptc.org/news/eu-ai-transparency-code-of-practice-june-2026/) · [Lewis Silkin — the EU's new AI labelling rules](https://www.lewissilkin.com/insights/2026/07/24/the-eus-new-ai-labelling-rules-what-every-organisation-needs-to-know-102ne35) · [Paul Weiss — EU finalises transparency rules for AI-generated content](https://www.paulweiss.com/insights/client-memos/eu-finalises-transparency-rules-for-ai-generated-content) · [artificialintelligenceact.eu — guía del Artículo 50 (🔴 bloqueado, no abierto)](https://artificialintelligenceact.eu/transparency-rules-article-50/)
+
+Nuevo en el pase 15 — abandono institucional de la detección: [Más de 50 universidades desactivaron la detección de AI de Turnitin](https://www.aiplagguides.com/blog/universities-disabling-turnitin-ai-detection) · [Diplo — universidades dejan de usar detectores](https://www.diplomacy.edu/updates/universities-stop-using-ai-detection-tool-such-as-turnitin/) · [GPT detectors are biased against non-native English writers (🔴 arxiv bloqueado, citado vía resultados de búsqueda)](https://arxiv.org/html/2304.02819)
+
+Nuevo en el pase 15 — integridad académica en LATAM: [Infobae — México, Colombia y Chile: declaración obligatoria del uso de AI](https://www.infobae.com/educacion/2025/08/26/las-claves-de-mexico-colombia-y-chile-para-incorporar-a-la-inteligencia-artificial-en-la-universidad/) · [Educación y Tecnología — IA en la educación en México 2026](https://educacionytecnologia.com/inteligencia-artificial-educacion-mexico-estudio-2026/) · [UNESCO ESS — autoría e integridad académica ante la IA generativa](https://ess.iesalc.unesco.org/index.php/ess3/article/view/1174) · [Zenodo — políticas de integridad de las 15 universidades LATAM mejor rankeadas en THE 2026 (🔴 bloqueado, licencia sin verificar)](https://zenodo.org/records/22661179)
+
+Nuevo en el pase 15 — plugins de integridad en Moodle (envoltorios de servicios propietarios; ⚠️ **`moodle.org` está bloqueado por el proxy: licencia, instalaciones y fechas de release provienen de resultados de búsqueda, no de la página del directorio**): [Compilatio (plugin GPL-3.0)](https://moodle.org/plugins/plagiarism_compilatio) · [Copyleaks](https://moodle.org/plugins/plagiarism_copyleaks) · [Originality.ai](https://marketplace.moodle.com/plugins/plagiarism_origai)
 
 Nuevo en el pase 13 — capa de práctica y corrección desplegada (verificado vía WebFetch el 2026-10-01): [jupyterhub](https://github.com/jupyterhub/jupyterhub) · [jupyter-ai](https://github.com/jupyterlab/jupyter-ai) · [nbgrader](https://github.com/jupyter/nbgrader) · [nbgrader releases v0.9.6](https://github.com/jupyter/nbgrader/releases) · [otter-grader](https://github.com/ucbds-infra/otter-grader) · [ltiauthenticator](https://github.com/jupyterhub/ltiauthenticator) · [jupyterhub-deploy-teaching](https://github.com/jupyterhub/jupyterhub-deploy-teaching) · [Aalto Scientific Computing — autograding](https://scicomp.aalto.fi/aalto/jupyterhub-instructors/autograding/) · [Aalto — nbgrader basics](https://scicomp.aalto.fi/aalto/jupyterhub-instructors/nbgrader/)
 

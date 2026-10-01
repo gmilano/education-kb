@@ -183,6 +183,44 @@ Capa que la KB no tenía y que aparece en toda conversación de evaluación suma
 
 ⚠️ **Lo que hay fuera de Open edX no es proponible.** La búsqueda de proctoring open source devuelve mayoritariamente **proyectos de estudiante y de trabajo final** — detección de rostro y de objetos con YOLO, seguimiento de mirada, bloqueo de pestañas — sin licencia clara, sin mantenimiento y sin evaluación de sesgo. **Y el sesgo es el punto que hunde la categoría entera:** un sistema de vigilancia biométrica sobre alumnos es, bajo el EU AI Act, exactamente el tipo de sistema de **alto riesgo** del Annex III en acceso y evaluación educativa. Proponer un proctoring sin expediente de conformidad es ofrecerle al cliente el riesgo regulatorio, no la solución. Ver **P4**.
 
+### La otra mitad de esta capa, agregada en el pase 15 del 2026-10-01 — autoría, no vigilancia
+
+Lo de arriba es **proctoring**: vigilar el examen. Pero la pregunta que el cliente hace primero no es esa, es
+**«¿cómo sé quién escribió el trabajo?»** — y con el 92 % de los alumnos usando AI, es la que decide si la
+evaluación sumativa se puede defender. El pase 15 abre esa mitad. El inventario completo está en
+`agents/top.md` y `repos/foundations.md`; acá va **qué se despliega y qué no**.
+
+| Enfoque | Qué hay en abierto | ¿Proponible? |
+|---|---|---|
+| **Marcar en el origen** (*watermarking* de la salida del propio tutor) | **SynthID-Text** (Apache-2.0, dentro de `huggingface/transformers`), **MarkLLM** (Apache-2.0, 1.100 ★) para evaluar robustez | 🟢 **Sí, y es lo primero.** Costo: un `WatermarkingConfig` en la llamada de generación que el tutor ya hace |
+| **Procedencia del artefacto** (manifiesto firmado) | **c2pa-rs** (MIT + Apache-2.0 dual, 424 ★, **1.907 commits**), **c2pa-python** (dual, 105 ★) | 🟢 **Sí.** Es el estándar que el **Code of Practice** europeo adopta de facto para el metadato incrustado. Es el tramo con ingeniería real: identidad de firma, custodia de claves, validación |
+| **Detección forense** del texto entregado | `fast-detect-gpt` (MIT, 434 ★), `Binoculars` (BSD-3, 420 ★), `RAID` (MIT, 216 ★), `sloptotal` (MIT, 39 ★) | 🔴 **No como mecanismo de sanción.** **61,3 % de falsos positivos** sobre escritura de no nativos de inglés. Sirve para **priorizar una conversación docente**, nada más |
+| **Evidencia de proceso** (pulsaciones, historial de versiones) | **Nada en abierto** — GPTZero Authorship, Grammarly Authorship, Turnitin Clarity y Draftback son propietarios | 🔴 **No.** Y choca con accesibilidad: el alumno que escribe hablando no puede producir ese artefacto |
+
+**La receta de esta capa, y es la misma de siempre en esta KB invertida una vez.** En el resto de los casos la
+regla es *desplegar el estándar instalado y poner la inteligencia al lado*. Acá la regla es: **mover la pregunta**.
+*«¿Esto lo escribió una AI?»* no tiene respuesta confiable. *«¿Esto lo escribió **nuestro** tutor?»* sí, y es una
+verificación criptográfica. Una institución que **provee** el agente puede marcar su salida y dejar de adivinar.
+El wiring concreto está en **P33**.
+
+⚠️ **Lo que hay en el directorio de Moodle no es open source de punta a punta.** Los plugins de integridad son
+**envoltorios de servicios propietarios**: **Compilatio** (el plugin es **GPL-3.0**, 821 instalaciones, release
+2026-06-25), **Originality.ai** (Moodle 3.9–5.0, release 2026-07-02) y **Copyleaks**. El código del plugin es
+libre; **el detector detrás es un servicio pago**, y es el mismo tipo de producto que 50 universidades
+desactivaron. No presentarlos como la opción abierta.
+
+🔴 **Verificación de estos tres:** `moodle.org` está **bloqueado por el proxy de egreso**, así que licencia,
+cantidad de instalaciones y fechas de release salen de resultados de búsqueda, **no de la página del
+directorio**. Confirmarlas ahí antes de ponerlas en un comparativo para un cliente. Lo que sí es de primera
+mano en esta capa son los **nueve repos de GitHub**, leídos página por página vía WebFetch el 2026-10-01.
+
+🟢 **Y la nota regional que conviene tener a mano.** **México, Colombia y Chile exigen que el alumno declare el
+uso de AI**, con sanción por uso fraudulento y en algunos casos **entrega de los prompts**. Un régimen de
+**declaración** se satisface con procedencia —marcar, firmar, registrar— y **no requiere acertar un juicio
+forense**. Es el único de los cuatro regímenes regionales que el stack permisivo de hoy **puede cumplir
+completo**. Y lo que está instalado en UNAM, Tec de Monterrey, UAM, BUAP y UdeG es **Turnitin Originality**, o
+sea detección. Esa distancia entre la norma y la herramienta es la propuesta. Ver `intel/market.md` → LATAM.
+
 ## Capa de credenciales y evaluación conforme a estándar — agregada en el pase 9 del 2026-10-01
 
 Plataformas reales que se despliegan y se customizan con AI al lado, para el tramo que acredita el aprendizaje.

@@ -9,6 +9,189 @@ updated: 2026-10-01
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 > No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
 
+## 2026-10-01 (pase 15) — la KB le vende a EMEA un deadline de *watermarking* desde el pase 4 y nunca registró una sola implementación: existe, es Apache-2.0 y viaja dentro de Hugging Face Transformers
+
+Catorce pasadas construyeron la capa que **enseña** y la capa que **evalúa**. Ninguna construyó la capa que
+**prueba quién escribió el trabajo**. La KB tenía media capa de integridad académica —la del pase 8, que es
+**proctoring y nada más**, y que ella misma registró como *roadmap, no componente*. La otra mitad, la de autoría,
+no estaba. Y es la mitad que todo cliente pregunta primero, porque el 92 % de los alumnos ya usa AI.
+
+Este pase la abre, y encuentra adentro un error de la propia KB.
+
+### 🔴 El hallazgo del pase: la KB vende una obligación que no sabe cumplir
+
+Desde el **pase 4**, `compose/patterns.md` y `intel/market.md` recomiendan la misma entrada comercial para EMEA:
+*vender el Artículo 50 antes que el Anexo III*. El argumento está bien construido y la fecha está bien puesta —
+`compose/patterns.md:106` anota **«Watermarking de contenido generado → 2026-12-02»** y `intel/trends.md:126`
+remata **«Faltan dos meses»**.
+
+**Once pasadas después, esta KB no tiene una sola pieza de watermarking registrada.** Ni un repo, ni una
+librería, ni un nombre. Se buscó `watermark` en los ocho archivos: aparece **cinco veces, todas en prosa
+comercial**, ninguna apuntando a código. La oferta de entrada a EMEA —la que la KB describe como *«alcance chico,
+urgencia real»*— no tenía implementación detrás.
+
+**La tiene, y es mejor de lo que el gap sugería:**
+
+| Pieza | Repo | Licencia | ★ | Qué resuelve exactamente |
+|---|---|---|---|---|
+| **SynthID-Text** | `huggingface/transformers` → `src/transformers/generation/watermarking.py` | **Apache-2.0** ✅ | — (viaja en Transformers) | Marcado **e**  detección. Clases verificadas en el archivo: `SynthIDTextWatermarkLogitsProcessor` (marca en generación), `SynthIDTextWatermarkDetector`, `BayesianDetectorModel`, `BayesianDetectorConfig`, `BayesianDetectorWatermarkedLikelihood`. Cabecera de copyright: **«The HuggingFace Inc. team and Google DeepMind»** |
+| **MarkLLM** | https://github.com/THU-BPM/MarkLLM | **Apache-2.0** ✅ | **1.1k** (95 forks, 185 commits) | **23+ algoritmos** de watermarking (KGW, Unigram, SWEET, SIR, DiPmark, SemStamp, **SynthID-Text**…) más **12 herramientas de evaluación** en tres ejes: detectabilidad, robustez e impacto en calidad del texto. EMNLP 2024 Demo |
+| **c2pa-rs** | https://github.com/contentauth/c2pa-rs | **MIT *y* Apache-2.0** (dual) ✅ | **424** (192 forks, **1.907 commits**) | SDK Rust del estándar **C2PA**: crear, firmar, validar e incrustar manifiestos de procedencia. Claims **C2PA v2**, spec **2.4**, más la *CAWG identity assertion*. API en C para otros lenguajes |
+| **c2pa-python** | https://github.com/contentauth/c2pa-python | **Apache-2.0 *y* MIT** (dual) ✅ | **105** (35 forks, 344 commits) | El *binding* Python del anterior. Python 3.10+. Es la vía realista para meter procedencia en un pipeline educativo que ya es Python |
+
+**Por qué `SynthID-Text` es el hallazgo y no `MarkLLM`.** MarkLLM tiene más algoritmos y es la herramienta de
+**investigación**; SynthID-Text es el que **ya está dentro de la dependencia que el proyecto va a tener igual**.
+Un tutor construido sobre Transformers no agrega un proveedor: agrega un `WatermarkingConfig` a la llamada de
+generación y un detector del mismo paquete. Eso convierte la obligación del Artículo 50 de *proyecto* en
+*parámetro*, y es exactamente el tamaño de entrada que el patrón del pase 4 prometía sin poder respaldar.
+
+⚠️ **Y C2PA dejó de ser opcional en la práctica.** El **Code of Practice** europeo sobre marcado y etiquetado de
+contenido generado por AI —voluntario, pero la vía más clara para demostrar cumplimiento— **adopta las
+*Content Credentials* de C2PA como estándar técnico de facto** para el metadato incrustado, en un esquema por
+capas: **metadato + watermarking**, con *fingerprinting* y *logging* como medidas de apoyo. O sea: las cuatro
+piezas de la tabla no son alternativas entre sí, son **las dos capas del mismo esquema**. Ver el patrón **P33**.
+
+🔴 **Discrepancia de fecha que hay que resolver antes de usarla con un cliente.** Dos fuentes secundarias dan dos
+fechas de publicación del Code of Practice: **10 de junio de 2026** (IPTC) y **20 de julio de 2026** (otra).
+`digital-strategy.ec.europa.eu`, `artificialintelligenceact.eu` e `iptc.org` están **bloqueados por el proxy de
+egreso**, así que no se pudo ir a la fuente. **Lo que sí está consistente en todas las fuentes y es lo que
+sostiene la propuesta:** Artículo 50 **en vigor desde 2026-08-02**, y los sistemas **ya en el mercado** antes de
+esa fecha tienen hasta el **2026-12-02** para cumplir el marcado legible por máquina del Artículo 50(2). Esa es
+la fecha que la KB ya tenía bien.
+
+### La otra mitad del hallazgo: la detección existe, es permisiva, y no se puede usar para acusar
+
+La capa forense está mejor abastecida de lo que la KB suponía, y **toda con licencia apta**:
+
+| Repo | Licencia | ★ | Forks | Commits | Qué es |
+|---|---|---|---|---|---|
+| https://github.com/baoguangsheng/fast-detect-gpt | **MIT** ✅ | **434** | 85 | 76 | **ICLR 2024**. Detección *zero-shot* por curvatura de probabilidad condicional. **340× más rápido que DetectGPT** sin perder exactitud. AUROC declarado **0,9887** sobre generaciones de 5 modelos y **0,9338** sobre ChatGPT/GPT-4 |
+| https://github.com/ahans30/Binoculars | **BSD-3-Clause** ✅ | **420** | 67 | 54 | **ICML 2024**. *Zero-shot* sin datos de entrenamiento; necesita dos modelos de pesos abiertos en inferencia |
+| https://github.com/liamdugan/raid | **MIT** ✅ | **216** | 98 | **378** | **ACL 2024**. El *benchmark* compartido: **10M+ documentos**, 11 modelos, 11 dominios, 4 estrategias de decodificación y **12 ataques adversarios** (homoglifos, paráfrasis, sinónimos, erratas). Leaderboard en `raid-bench.xyz` |
+| https://github.com/NLP2CT/LLM-generated-Text-Detection | **MIT** ✅ | **252** | 16 | 40 | Survey vivo: ~100+ papers, 17+ datasets, métodos estadísticos/neuronales/watermarking y la sección de **ataques adversarios**. Paper en *Computational Linguistics* **51(1), 2025** |
+| https://github.com/pablocaeg/sloptotal | **MIT** ✅ | 39 | 8 | 58 | *«VirusTotal para texto AI»*: **23 motores** (8 clasificadores neuronales, 6 estadísticos —incluidos Fast-DetectGPT y Binoculars— y 7 heurísticas lingüísticas), auto-hospedado, **corre en CPU**, score de ensamble calibrado |
+| https://github.com/Lendarixon/awesome-ai-detection | **CC0-1.0** ✅ | 0 | 0 | 4 | Catálogo chiquito pero honesto: lo que vale son los **modos de falla con número** |
+
+### 🔴 El segundo hallazgo, y es el que decide la arquitectura: la detección falla **exactamente** sobre el alumno de Globant
+
+Los números no vienen del marketing de los detectores, vienen de sus propios autores y benchmarks:
+
+- **61,3 % de falsos positivos sobre escritura de no nativos de inglés.** Liang et al. compararon siete
+  detectores sobre ensayos TOEFL: **61,3 % de FPR promedio en no nativos contra ~2,9 % en universitarios
+  estadounidenses nativos.** La explicación propuesta es la baja perplejidad del texto de no nativos, por menor
+  variabilidad léxica — o sea, **es estructural, no un bug que se arregle con otra versión**.
+- **Binoculars lo dice en su propio README:** *«more proficient in detecting English language text compared to
+  other languages»*, *«none are perfect and can have multiple failure modes»*, **«for academic purposes only»**
+  y exige **supervisión humana**.
+- **SlopTotal lo dice en el suyo:** *«Short text is unreliable below roughly 80 words and settles from about
+  200»* — con AUC global 0,974 y **1 de 66 textos humanos marcado mal**.
+- **5,85 % de FPR** sobre escritura académica genuina **anterior a 2018** (1.180 abstracts, o sea texto que no
+  pudo ser generado por un LLM), con **20 % adicional cayendo en «incierto»**.
+- **RAID muestra caídas grandes de exactitud por paráfrasis.** Un alumno que pasa el texto por un reescritor
+  rompe la detección; el detector sigue acusando al que no lo hizo.
+
+**La aritmética que cerró la discusión en North America, y conviene llevarla escrita:** Vanderbilt calculó que
+**1 % de falsos positivos sobre 75.000 trabajos son ~750 acusaciones injustas por año**, y **desactivó el
+detector de AI de Turnitin**. **Más de 50 universidades** de EE. UU., Reino Unido, Canadá, Australia y Sudáfrica
+lo desactivaron, restringieron o lo abandonaron —Johns Hopkins, Yale, Vanderbilt, Waterloo, Curtin, Australian
+Catholic University entre ellas—; **al menos 12 instituciones grandes a marzo de 2026**.
+
+**La conclusión operativa, y es una regla de propuesta, no una opinión:** un score de detección es **evidencia,
+no prueba**. Ningún entregable de Globant debería producir una decisión disciplinaria automática a partir de uno.
+Y para un cliente **LATAM o EMEA no anglófono**, el 61,3 % convierte la herramienta en **pasivo legal**, no en
+producto. Ver el **gap 25** y el patrón **P33**.
+
+### El tercer hallazgo, y conecta con el pase 12: el lado adversario **sí** usa el canal de distribución que la educación perdió
+
+El pase 12 midió que la vertical científica se quedó con el canal de *skills* de agente (47,2k ★ MIT) y que la
+educativa tiene 815 ★ *share-alike*. Este pase encontró **quién sí lo está usando en el dominio educativo**:
+
+**`ervin-mo/humanizar-es`** (https://github.com/ervin-mo/humanizar-es, **MIT** ✅, 0 ★, 6 commits) reescribe texto
+en **español** generado por AI para que los detectores dejen de marcarlo, sin cambiar lo que dice. Corre
+**Binoculars y Fast-DetectGPT localmente sobre Qwen2.5-0.5B** para guiar la reescritura. Y está empaquetado como
+**`SKILL.md` para Claude Code, Codex, OpenCode, Antigravity, DeepSeek Harness y Gemini CLI**.
+
+Resultado declarado por el propio autor: un párrafo pasó de **«100 % AI» en Grammarly a «0 % AI / 99 % humano»**
+en CleverHumanizer; el ensayo completo procesado de una sola vez quedó en **39 %**. El autor acota la evidencia
+(*un solo ensayo*) y aclara que **no está pensado para entregar trabajo calificado**.
+
+**Por qué importa más que sus 0 estrellas.** No es el repo: es la **asimetría de canal**. La evasión se
+distribuye como *skill* de agente —instalable en seis harnesses, en español, con los detectores de la KB
+adentro— y la integridad se distribuye como **plugin propietario de LMS**. El pase 12 preguntó por qué la
+educación no usa ese canal; la respuesta parcial es que **sí lo usa, del lado equivocado del problema**. Es el
+**gap 26**.
+
+### La lectura por región, y por una vez LATAM sale favorecida
+
+| Región | Régimen dominante | Qué implica para esta capa |
+|---|---|---|
+| **North America** | Vacío regulatorio federal + parches estatales (Colorado, Texas, Idaho SB 1227). **El movimiento de abandono de la detección nació acá** | La conversación ya está ganada del lado del cliente: no hay que convencerlo de no comprar detección, hay que **ofrecerle el reemplazo**. Mercado: **951 M USD (2024) → 2.303,2 M (2029), 15,9 % CAGR**, 36 % del global |
+| **EMEA** | **Artículo 50 en vigor (2026-08-02); marcado legible por máquina para sistemas ya en mercado: 2026-12-02.** Code of Practice voluntario que canoniza C2PA | Es la **única región donde esta capa es obligación legal con fecha**. Y es donde el 61,3 % pega más fuerte, porque la mayoría de los universitarios escribe inglés como L2. **Marcar, no detectar** |
+| **APAC** | Fragmentado y sin marco común. Japón cauteloso con marco estatal; China centralizado *top-down*; **Australia: 26 de 35 universidades (73 %) ubican su política de AI dentro de la política de integridad académica** | Australia es el punto de entrada: la política ya existe y ya está en el lugar correcto del organigrama. Mercado: **591,6 M (2024) → 1.848,1 M (2029), 20,9 % CAGR**, el de crecimiento más rápido |
+| **LATAM** | **Declaración obligatoria del uso de AI** en México, Colombia y Chile, con sanción por uso fraudulento y **en algunos casos entrega de los *prompts*** como documentación | 🟢 **El único régimen de los cuatro que el stack open source puede satisfacer hoy.** No pide detección: pide **divulgación y procedencia**, que es justo lo que SynthID-Text + C2PA producen. Ver abajo |
+
+### 🔴 El cuarto hallazgo: LATAM tiene el régimen correcto y la peor herramienta posible instalada
+
+Las dos cosas son ciertas a la vez y juntas son la propuesta:
+
+1. **La regla latinoamericana no pide detectar, pide declarar.** México, Colombia y Chile exigen que el alumno
+   **declare** que usó AI y para qué, y en algunos casos que **adjunte los prompts**. Un régimen de divulgación
+   se satisface con **procedencia** —marca en el origen, manifiesto firmado, log— y **no requiere acertar un
+   juicio forense sobre el texto**. Es el único de los cuatro regímenes donde la tecnología permisiva que existe
+   hoy **alcanza**.
+2. **Y sin embargo lo que está instalado es detección.** UNAM, Tec de Monterrey, UAM, BUAP y UdeG usan
+   **Turnitin Originality** como herramienta principal — el mismo tipo de producto que 50 universidades
+   anglófonas desactivaron, aplicado sobre alumnos que escriben **español**, donde los detectores están aún
+   menos validados. Y **más del 80 % de las instituciones de educación superior de México no tiene marco
+   normativo claro** sobre uso ético y académico de la tecnología.
+
+**Eso es una brecha vendible y con fecha propia:** el instrumento normativo (declaración) ya existe, la
+herramienta instalada no lo sirve, y el reemplazo es Apache-2.0. Ver **P33** y la sección LATAM de
+`intel/market.md`.
+
+**Lo español de esta capa, verificado, y vuelve el patrón de siempre:** **`yonatanlop/detectoria`**
+(https://github.com/yonatanlop/detectoria, 🚫 **sin licencia**, 0 ★, 7 commits) es el único detector
+específicamente diseñado para español que encontró este pase — cuatro métodos (estilometría, perplejidad/
+*burstiness* con `mrm8488/spanish-gpt2`, rank/entropía estilo GLTR, y traducción con `Helsinki-NLP/opus-mt-es-en`
++ `roberta-base-openai-detector`), pensado para correr en el *Always Free* de Oracle Cloud. **Y van cuatro
+pasadas seguidas en que la pieza hispanohablante correcta aparece sin licencia.** No proponerlo; sí registrarlo,
+y sí considerar pedirle al autor una licencia, que es lo más barato de esta KB.
+
+### Lo que esta pasada buscó y no encontró
+
+- **Watermarking aplicado a educación.** No existe. SynthID-Text y MarkLLM son infraestructura genérica; **ningún
+  proyecto educativo open source los usa**, y no hay plugin de LMS, servidor MCP ni integración LTI que marque o
+  verifique la salida de un tutor. El puente hay que construirlo — es chico, y es **P33**.
+- **Integridad académica open source dentro de Moodle.** Los plugins que existen en el directorio son
+  **envoltorios de servicios propietarios**: Originality.ai (Moodle 3.9–5.0, release 2026-07-02), Compilatio
+  (GPL-3.0 **el plugin**, 821 instalaciones, release 2026-06-25), Copyleaks. El código del plugin es libre; **el
+  detector detrás es un servicio pago**. No cambia el diagnóstico del pase 8: la categoría sigue siendo
+  propietaria, ahora medida también del lado de la autoría y no sólo del proctoring.
+- **Evidencia de proceso (keystroke / historial de versiones) en abierto.** Todo lo que hay es propietario —
+  GPTZero Authorship, Grammarly Authorship, Turnitin Clarity, Draftback. 🔴 **Y hay literatura de 2026 que sostiene
+  que la señal no sirve**: un análisis de *timing-forgery* argumenta que el registro de pulsaciones **no distingue
+  a quien compone de quien transcribe un borrador de ChatGPT**. **No verificable desde esta sesión —
+  `arxiv.org` está bloqueado por el proxy** (arXiv 2601.17280 y 2608.26710 quedaron sin abrir). Anotado como
+  pista, no como hallazgo.
+- ⚠️ **Y la colisión con el pase 8 que hay que registrar antes de que cueste algo:** el reemplazo que las
+  universidades están adoptando —*«mostrá el historial de versiones»*— **no lo puede producir un alumno que
+  escribe hablando**. Choca de frente con la capa de accesibilidad del pase 8 y con la de habla del pase 14. Un
+  entregable que exija evidencia de proceso **necesita una vía alternativa documentada**, o es un problema de
+  accesibilidad con forma de política de integridad.
+- **Datos LATAM de primera mano.** Hay un dataset en Zenodo (`zenodo.org/records/22661179`) con las políticas
+  institucionales de integridad académica y lineamientos de AI generativa de las **15 universidades
+  latinoamericanas mejor rankeadas en THE 2026** (USP, Unicamp, PUC Chile, UFRJ, UNESP…). 🔴 **`zenodo.org` está
+  bloqueado por el proxy: no se pudo verificar licencia ni contenido.** Es la pista más valiosa que deja este
+  pase sin cerrar.
+
+### Sin movimiento en los dos grandes, y van seis pases
+
+`DeepTutor` (Apache-2.0, 40,6k ★) y `OpenMAIC` (MIT, 39,7k ★) siguen planos. Seis pasadas consecutivas sin
+movimiento en la cima ya no es ruido: **es la forma del mercado open source educativo.** La acción está en las
+capas, no en los dos grandes.
+
+---
+
 ## 2026-10-01 (pase 14) — trece pasadas trataron el aprendizaje como texto: aparece la capa donde el alumno **habla**, y es la que decide si un tutor sirve en primaria
 
 Las trece pasadas anteriores buscaron por el rol del software (agente, tutor, evaluador, predictor), por la capa

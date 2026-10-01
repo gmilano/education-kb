@@ -1436,3 +1436,108 @@ pieza para eso (ver gap 24).
 - **La pieza más fina de la región no se puede usar:** `carrera-lectora` (Chile, 1.º-4.º básico, 40 textos graduados,
   pedagogía intercultural, en el dispositivo) **no tiene licencia**. No proponerla. Pedir que la pongan es, por costo
   sobre beneficio, una de las mejores acciones disponibles en esta KB.
+
+---
+
+## P33 — Integridad por procedencia en vez de por detección: marcar lo que el tutor genera (agregado en el pase 15; **EMEA primero por obligación legal, LATAM segundo por norma de declaración**)
+
+Es el patrón que cierra el **gap 25** y que le pone código a la oferta que esta KB recomienda desde el pase 4 sin
+tenerlo. Y es el único patrón de esta KB cuyo entregable **tiene fecha legal**: **2026-12-02**.
+
+**La idea entera en una línea:** dejar de preguntar *«¿esto lo escribió una AI?»* —que no tiene respuesta
+confiable— y empezar a preguntar *«¿esto lo escribió **nuestro** tutor?»*, que se responde con una verificación
+criptográfica.
+
+### Por qué no se hace con detectores, y conviene tenerlo escrito antes de la reunión
+
+La capa forense existe, es permisiva y está publicada en ICLR, ICML y ACL. **Y no se puede usar para producir
+una consecuencia sobre un alumno:**
+
+| Medición | Valor |
+|---|---|
+| FPR sobre escritura de **no nativos de inglés** (TOEFL, 7 detectores) | **61,3 %** |
+| FPR sobre universitarios nativos | ~2,9 % |
+| FPR sobre 1.180 abstracts académicos **pre-2018** | **5,85 %** + 20 % «incierto» |
+| Longitud mínima para que el score sirva | **~80 palabras** |
+| Efecto de la paráfrasis | **caídas grandes** (RAID) |
+
+**La cuenta de Vanderbilt:** 1 % de FPR sobre 75.000 trabajos = **~750 acusaciones injustas por año**. Desactivaron
+el detector; **más de 50 universidades** hicieron lo mismo. Y existe `humanizar-es` (MIT), que **usa Binoculars y
+Fast-DetectGPT como función objetivo** para reescribir español hasta que dejen de marcarlo, distribuido como
+*skill* para seis harnesses de agente. **Esa carrera no se gana.** La de procedencia sí, porque marcar en el
+origen no es un clasificador que se pueda optimizar en contra.
+
+### Las piezas, verificadas repo por repo vía WebFetch el 2026-10-01
+
+| Rol | Pieza | Licencia | Señal |
+|---|---|---|---|
+| **Marcar el texto en generación** | **SynthID-Text** — `huggingface/transformers` → `src/transformers/generation/watermarking.py` | **Apache-2.0** ✅ | `SynthIDTextWatermarkLogitsProcessor`, `SynthIDTextWatermarkDetector`, `BayesianDetectorModel`. Copyright HuggingFace + Google DeepMind |
+| **Probar que el marcado aguanta** | [`THU-BPM/MarkLLM`](https://github.com/THU-BPM/MarkLLM) | **Apache-2.0** ✅ | **1.100 ★**, 23+ algoritmos, **12 herramientas** de detectabilidad/robustez/calidad. EMNLP 2024 Demo |
+| **Manifiesto de procedencia firmado** | [`contentauth/c2pa-rs`](https://github.com/contentauth/c2pa-rs) · [`c2pa-python`](https://github.com/contentauth/c2pa-python) | **MIT *y* Apache-2.0** (dual) ✅ | **1.907** / 344 commits. Spec **C2PA 2.4**, *CAWG identity assertion* |
+| **Entrada al LMS sin forkearlo** | [`1EdTech/lti-1-3-php-library`](https://github.com/1EdTech/lti-1-3-php-library) (ver **P21**) | **Apache-2.0** ✅ | Ya en esta KB desde el pase 9 |
+| **Registro de la evidencia** | LRS xAPI del pase 6 — `lrsql` / `Ralph` (ver **P15**) | Apache-2.0 / MIT ✅ | Ya en esta KB |
+| **Triage, nunca sanción** | [`fast-detect-gpt`](https://github.com/baoguangsheng/fast-detect-gpt) (MIT) o [`sloptotal`](https://github.com/pablocaeg/sloptotal) (MIT, 23 motores, CPU) | MIT ✅ | **Opcional, y con el límite puesto por diseño** |
+
+### El wiring
+
+1. **El tutor marca su propia salida.** Donde el agente llama a `generate()` sobre Transformers, se agrega un
+   `WatermarkingConfig` de SynthID-Text. **No es un servicio nuevo ni un proveedor nuevo: es un parámetro.** La
+   clave de marcado es del cliente y vive donde viven sus secretos.
+2. **Cada salida sale con manifiesto C2PA firmado** (`c2pa-python`): qué modelo, qué versión, qué timestamp, bajo
+   qué identidad institucional (*CAWG identity assertion*). Esto es el tramo con ingeniería real —custodia de
+   claves y política de firma— y es el entregable que el cliente no puede hacer solo.
+3. **El LMS entrega por LTI 1.3** (P21). El alumno entrega su trabajo; el servicio de verificación corre
+   `SynthIDTextWatermarkDetector` contra la clave de la institución y valida el manifiesto C2PA si lo hay.
+4. **El resultado es una de tres cosas, y ninguna es una acusación:**
+   - **Marca válida de nuestro tutor** → uso declarado y verificado. Se registra en el LRS como evento xAPI.
+     En LATAM, **esto es el cumplimiento de la norma de declaración**, automatizado.
+   - **Sin marca** → no dice nada sobre autoría. Es el estado por defecto de todo texto humano y de todo texto
+     generado fuera de la institución.
+   - **Marca válida de otra institución o proveedor** → procedencia externa verificada.
+5. **MarkLLM produce la evidencia de robustez** —detectabilidad, resistencia a edición y paráfrasis, impacto en
+   calidad— que el **Artículo 50(2)** exige al pedir un marcado *«effective, interoperable, robust and reliable»*.
+   **Ese informe es un entregable facturable**, no un anexo técnico.
+6. **El detector forense, si entra, entra con el límite en el código:** produce **cola de revisión docente**, nunca
+   una marca en el expediente, nunca una notificación automática al alumno, y **nunca como insumo único**. El
+   umbral se fija con la institución y se documenta. Si el cliente pide sanción automática, **esa es la línea**:
+   el **61,3 %** lo convierte en discriminación medible contra el alumnado que escribe inglés como L2.
+
+### Lo que hay que construir, y es chico
+
+**El puente no existe en ninguna forma open source.** No hay plugin de Moodle, XBlock de Open edX, herramienta LTI
+ni servidor MCP que marque o verifique. Lo que hay en el directorio de Moodle son **envoltorios de servicios
+propietarios** —Compilatio (plugin GPL-3.0, 821 instalaciones), Originality.ai, Copyleaks— que además **detectan**
+en vez de marcar. El trabajo es: el servicio de verificación, la política de firma, la herramienta LTI y el
+mapeo a xAPI. **Semanas, sobre infraestructura Apache-2.0 madura.**
+
+### Plazos y por qué el orden regional es ése
+
+| Región | Gancho | Urgencia |
+|---|---|---|
+| **EMEA** | **Obligación legal**: Art. 50 en vigor 2026-08-02; marcado legible por máquina para sistemas ya en mercado **2026-12-02**. Code of Practice adopta **C2PA** como estándar de facto | 🔴 **62 días** |
+| **LATAM** | **Norma de declaración** ya vigente en México, Colombia y Chile (a veces con entrega de prompts). El paso 4 **la cumple automáticamente**. Y lo instalado (Turnitin Originality en UNAM, Tec, UAM, BUAP, UdeG) no la cumple | 🟡 Alta: >80 % de las IES mexicanas sin reglamento propio — ventana de definición |
+| **North America** | Sin obligación. El gancho es **exposición**: 50+ universidades apagaron la detección y **no compraron reemplazo** | 🟡 Hueco abierto |
+| **APAC** | **Australia**: 26 de 35 universidades (73 %) ya tienen la política de AI dentro de integridad académica — *owner* y presupuesto resueltos | 🟢 Entrada por organigrama |
+
+**Estimación:** 6-8 semanas para el tramo EMEA con el informe de robustez de MarkLLM incluido; 4-5 si el cliente
+ya tiene el tutor sobre Transformers y sólo falta C2PA + verificación + LTI.
+
+### Lo que este patrón NO resuelve, y hay que decirlo en la primera reunión
+
+- **Sólo cubre el texto que generó el sistema propio.** El ensayo escrito con un modelo externo no lleva marca y
+  nunca la va a llevar. El patrón convierte un problema irresoluble en uno **parcial pero cierto**, más un
+  **régimen de declaración** para el resto. Vender esto como «detectamos todo» es mentir y se cae en la primera
+  prueba.
+- **No reemplaza el rediseño de la evaluación.** Las instituciones que apagaron la detección adoptaron escritura
+  en clase, defensa oral y consignas que integran AI. El patrón **convive** con eso; no lo sustituye.
+- ⚠️ **No pedir evidencia de proceso sin una vía alternativa.** *«Mostrá el historial de versiones»* **no lo puede
+  producir un alumno que escribe hablando**. Choca de frente con la capa de accesibilidad del pase 8 y con la de
+  habla del pase 14. Si el entregable incluye evidencia de proceso, **el camino alternativo es parte del alcance**,
+  no una excepción a gestionar después.
+- **La detección de proceso por pulsaciones no es una opción.** Todo lo que existe es propietario (GPTZero
+  Authorship, Grammarly Authorship, Turnitin Clarity, Draftback) y hay literatura de 2026 que sostiene que la
+  señal **no distingue a quien compone de quien transcribe un borrador** — 🔴 **no verificable desde esta sesión,
+  `arxiv.org` bloqueado por el proxy**. Anotado como pista.
+- 🔴 **Verificar la fecha del Code of Practice contra la fuente oficial** antes de citarla: dos fuentes secundarias
+  dan 10 de junio y 20 de julio de 2026. Las fechas de vigencia (2026-08-02) y de marcado (2026-12-02) sí son
+  consistentes.
