@@ -20,6 +20,7 @@ updated: 2026-10-01
 > no comercial, y es justo la capa que el **Annex III** nombra de alto riesgo. La alternativa que sí se vende es **P49**.
 > **Pase 23:** entra **Frappe Education** en la capa SIS y **se cierra la pregunta del pase 21 sobre dónde vive el módulo educativo de ERPNext** — es una app aparte, `frappe/education`, GPL-3.0.
 > **Pase 11:** entra la capa **Apereo (ECL-2.0)** —Sakai, Opencast, uPortal, OpenLRW—, que diez pasadas descartaron por un filtro de licencia mal aplicado, y se documenta qué **no** proponer cuando el cliente pide *early warning*.
+> **Pase 28 del 2026-10-01:** la columna de la puerta de agente **gana una fila y pierde una certeza**. Gana **OneRoster**, que tiene puerta **0BSD** con **164 métodos y escritura** (`trilogy-group/oneroster-ts`) — el pase 26 la había declarado vacía. Y sobre **Open edX**, el «no hay puerta» se mantiene pero **ya se sabe sobre qué se construiría**: la API **escribe matrícula y notas por lote**, y el ***authoring* de Studio está declarado experimental en el repo** (**gap 50**). Ver la sección del pase 28, abajo.
 > **Pase 27 del 2026-10-01:** se agrega **la columna que faltaba en veintiséis pasadas — ¿la vertical tiene puerta de agente?** Moodle **sí** (dos conectores **MIT**, uno que escribe notas) y Canvas **sí**; 🔴 **Open edX no tiene ninguna**, y es la de mayor huella pública en LATAM e India. **Las LMS son copyleft pero las puertas son MIT**, y por eso se pueden componer. Ver la sección del pase 27, abajo.
 
 
@@ -33,8 +34,9 @@ la que entra el agente** — y es lo que decide si el proyecto empieza integrand
 |---|---|---|---|---|---|
 | **LMS** | **Moodle** | GPL-3.0+ | ✅ **Sí, dos permisivas** — `peancor/moodle-mcp-server`, `MarcosNahuel/moodle-mcp` | **MIT** ✅ | **Se empieza integrando.** Una de las dos **escribe nota y devolución**: ver **P54** |
 | **LMS** | **Canvas** | AGPL-3.0 | ✅ Sí — `vishalsachdev/canvas-mcp` | **MIT** ✅ | La más madura de la capa |
-| **LMS** | 🔴 **Open edX** | **AGPL-3.0** | 🔴 **No. Ninguna** | — | **Se empieza construyendo la puerta.** Gap **48**, patrón **P55** |
+| **LMS** | 🔴 **Open edX** | **AGPL-3.0** | 🔴 **No. Ninguna** | — | **Se empieza construyendo la puerta — y el pase 28 midió con qué.** La API **escribe matrícula y notas (con lote)**; el ***authoring* es experimental por declaración del proyecto**. Gap **48** (contestado) · **gap 50** · **P55** |
 | **Contenido empaquetado** | **SCORM** (2004 4.ª ed. / 1.2) | estándar | ✅ Sí — `giacomomaria81/scorm-mcp-server` | **MIT** ✅ | **La vía sin integración:** el LMS importa, no se conecta. **P56** |
+| **Rostering / SIS** | **OneRoster** (estándar 1EdTech) | estándar | ✅ **Sí — y el pase 28 lo encontró donde tres pases no miraron:** `trilogy-group/oneroster-ts` | **0BSD** ✅ | **164 métodos con escritura** sobre matrícula, clases, usuarios y resultados. **No es un conector: es un SDK que expone MCP.** **P59** |
 | **Competencias** | **CaSS** | Apache-2.0 | ⚠️ **Parcial** — 6 operaciones de 61 | Apache-2.0 | Evidencia y perfil sí; **insignias y autoría de marcos no**. **P57** |
 | **Biblioteca / ILS** | **FOLIO** | Apache-2.0 | 🔴 No, **pero publica eventos en Kafka** | — | El agente entra **como consumidor**, sin parchear el core. **P52** (pase 26) |
 | **ERP / SIS** | **OpenEduCat** | LGPL-3.0 | 🔴 No | — | Módulo Odoo al lado; la LGPL lo admite (gap 46) |

@@ -8,6 +8,91 @@ updated: 2026-10-01
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 
+## 2026-10-01 (pase 28) — el gap 48 queda contestado **leyendo el código fuente de Open edX**, y la respuesta es doble: la API alcanza para matrícula y notas, y **el *authoring* se declara experimental en el propio repo**
+
+**La acción 1 del pase 27 era la de mayor valor comercial de esta KB** —*«verificar si Open edX expone una API REST
+suficiente, y si lo hay, P55 se cotiza; si no, ésa es la razón de la ausencia»*. **Se ejecutó, y la respuesta no es
+«sí» ni «no»: es un corte limpio entre dos mitades de la plataforma**, y el corte explica la ausencia mejor que
+cualquiera de las dos respuestas simples.
+
+### 🔵 El canal nuevo, que es lo que hizo posible la medición
+
+🔴 **`docs.openedx.org` y `openedx.atlassian.net` están los dos bloqueados por el proxy de egreso** (dominios cinco y
+seis de la lista de esta KB), así que **la documentación oficial de la API era inalcanzable** — justo para la acción
+más valiosa del pase.
+
+✅ **Pero `raw.githubusercontent.com` responde.** Eso habilita un canal de verificación que esta KB no estaba usando:
+**leer el archivo fuente directamente, sin clonar y sin instalar nada.** Es importante más allá de este pase, porque
+**esquiva parcialmente el límite que bloqueó al pase 27** (no se puede instalar código de terceros): no permite
+*ejecutar*, pero sí **leer la declaración en el código**, que para medir superficie de API es exactamente lo que hace
+falta.
+
+**Toda la medición de abajo es lectura de primera mano de los `urls.py` del árbol `master`.** No es documentación, no
+es un resumen de búsqueda, y no es inferencia.
+
+### La mitad que alcanza: hay superficie versionada **y escribe**
+
+| Grupo de API | Archivo leído | Rutas (verbatim) | Escribe |
+|---|---|---|---|
+| **Course Blocks** | `lms/djangoapps/course_api/blocks/urls.py` | `v1/blocks/{usage_key}`, `v1/blocks/`, `v1/block_metadata/{usage_key}` **y los tres equivalentes en `v2/`** | Lectura |
+| **Enrollment** | `openedx/core/djangoapps/enrollments/urls.py` | `enrollment/{username},{course_key}`, `enrollment/{course_key}`, `enrollment`, `enrollments/`, `course/{course_key}`, **`unenroll/`**, `roles/`, **`enrollment_allowed/`** | ✅ **Sí** — `EnrollmentListView`, `UnenrollmentView`, `EnrollmentAllowedView`, `EnrollmentUserRolesView` |
+| **Grades v1** | `lms/djangoapps/grades/rest_api/v1/urls.py` | `courses/`, `courses/{course_id}/`, `policy/courses/{course_id}/`, **`gradebook/{course_id}/`**, **`gradebook/{course_id}/bulk-update`**, `gradebook/{course_id}/grading-info`, **`subsection/{subsection_id}/`**, `section_grades_breakdown/`, `submission_history/{course_id}/` | ✅ **Sí** — **`GradebookBulkUpdateView`** y **`SubsectionGradeView`** (*course_grade_overrides*) |
+
+🔵 **El dato que cotiza, y es mejor de lo que el pase 27 suponía:** **Open edX escribe notas por lote.**
+`GradebookBulkUpdateView` es el equivalente funcional de `provide_assignment_feedback` del conector MIT de Moodle —
+**y es *bulk*, que es justamente lo que el conector de Moodle no tiene** (el hallazgo del pase 27 fue que el *bulk* de
+xAPI en CaSS quedaba afuera de MCP; acá el *bulk* es el que está).
+
+**Precisión de método que conviene no saltearse:** el `urls.py` de *Enrollment* **no lleva la versión adentro**. La
+versión la monta el *URL conf* padre (`/api/enrollments/v1/`), que es cómo se citan estos endpoints. **Decir que la
+API de matrícula "no está versionada" sería leer mal el archivo**, y se deja anotado porque es el tipo de error que
+este canal nuevo facilita.
+
+### 🔴 La mitad que no alcanza, y está declarada por el propio proyecto
+
+| Grupo de API | Archivo leído | Qué hay | Estado |
+|---|---|---|---|
+| **Studio / CMS (contentstore) v1** | `cms/djangoapps/contentstore/rest_api/v1/urls.py` | 21 rutas: `xblock/`, `course_settings/{course_id}`, `course_details/{course_id}`, `course_index/{course_id}`, `course_grading/{course_id}`, `course_team/{course_id}`, `container_handler/{usage_key}`, `container/{usage_key}/children`, `course_rerun/{course_id}`, `certificates/…`, `textbooks/…`, `group_configurations/…`, `videos/…`, **`proctored_exam_settings/{course_id}`** | 🔴 **El repo declara que «the Authoring API is still experimental» y recomienda usar las versiones `v0`** |
+
+**Ésa es la razón de la ausencia, y es una razón real, no una excusa.** Un conector MCP de Open edX que haga lo que
+hace `MarcosNahuel/moodle-mcp` —crear curso, crear secciones, publicar material, armar quiz— **tendría que apoyarse en
+la única parte de la plataforma que el propio proyecto marca como inestable.** El de Moodle se apoya en Web Services,
+que es una superficie estable de hace más de una década.
+
+### La lectura, que es la que se le lleva a un cliente
+
+> **El gap 48 no era un gap técnico uniforme: era dos gaps con la misma cara.**
+> **Para matrícula, roles, bloques de curso y notas —incluido el lote— la superficie está, está versionada y escribe:
+> la ausencia del conector ahí es puro gap 49** (nadie lo publicó, no que no se pueda). **Para *authoring*, la
+> ausencia tiene causa técnica declarada por el proyecto.**
+
+**Lo que eso le hace a P55:** se cotiza **el conector de operación y evaluación** —que es además el que paga, porque es
+el que toca la nota y la matrícula— y **no** se promete *authoring* en la misma frase. El patrón queda reescrito abajo
+con ese corte.
+
+⚠️ **La licencia no es el obstáculo y conviene decirlo, porque es la primera pregunta del cliente.** Open edX es
+**AGPL-3.0**, pero **un conector que habla REST desde otro proceso no deriva de la plataforma y no hereda la AGPL** —
+es exactamente la configuración que esta KB ya tiene verificada dos veces: `canvas-mcp` (MIT) contra Canvas y los dos
+`moodle-mcp` (MIT) contra Moodle, que es **GPL-3.0**. **Las LMS son copyleft y las puertas son permisivas**; esto no
+sería la excepción.
+
+### ⚠️ Nota de nomenclatura, que corrige un detalle de catálogo de esta KB
+
+**El repo se renombró: `openedx/edx-platform` → `openedx/openedx-platform`.** Las dos URLs resuelven (la vieja
+redirige) y son el mismo árbol: **AGPL-3.0, 8.2k ★, 4.4k forks, 68.764 commits**. `repos/foundations.md` citaba el
+nombre viejo y `verticals/solutions.md` el nuevo; **las dos citas eran válidas, y ninguna era un error** — se unifica
+al canónico y se deja la nota, porque el reflejo de "corregir" la que parecía mal habría metido un error donde no
+había.
+
+### 🔵 Lo que este pase deja medido y lo que no, sobre Open edX
+
+- ✅ **Medido:** rutas, versiones y capacidad de escritura de cuatro grupos de API, **leyendo el código**.
+- ❌ **No medido:** **no se hizo ninguna llamada HTTP contra una instancia de Open edX.** No hay instancia, y levantarla
+  necesita instalar el árbol de dependencias, que es el límite declarado del pase 27. **Autenticación (OAuth2),
+  *scopes*, *rate limits* y forma real de las respuestas quedan sin verificar.**
+- ❌ **No medido:** si los endpoints `v0` de *authoring* —los que el repo recomienda— cubren lo que el `v1`
+  experimental promete. **Es la acción 1 del pase 29.**
+
 ## 2026-10-01 (pase 27) — la superficie MCP de CaSS medida por anotación: **6 expuestas y 55 ocultas sobre 61 operaciones**, y el «45» del pase 26 era aritmética, no conteo
 
 **Dos repos abiertos de primera mano sobre el árbol clonado** (`cassproject/CASS` v1.7.7, Apache-2.0) **y uno verificado

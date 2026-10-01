@@ -9,6 +9,97 @@ updated: 2026-10-01
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 > No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
 
+## 2026-10-01 (pase 28) — el eje conector rinde por **cuarta vez**, y la corrección es de método: **la puerta MCP se esconde adentro de un SDK**, no detrás de un nombre `*-mcp`
+
+**5 repos verificados de primera mano, 3 nuevos para esta KB, 1 control negativo, 1 cifra de agregador refutada en la
+dirección contraria a la esperada.** Este pase ejecutó las **acciones 1 y 2** del pase 27. Las dos rindieron, y la 2
+**volvió a corregir la premisa de un pase anterior** — es la **cuarta vez consecutiva** que el error estuvo en el
+muestreo y no en la fuente.
+
+| Repo | Licencia | ★ | Forks | Commits | Lenguaje | Qué expone | Estado |
+|------|----------|---|-------|---------|----------|------------|--------|
+| [`trilogy-group/oneroster-ts`](https://github.com/trilogy-group/oneroster-ts) | **0BSD** ✅ | 10 | 3 | 39 | TypeScript | **164 métodos** sobre 21 recursos OneRoster (`academicSessions`, `classes`, `courses`, `enrollments`, `grades`/`results`, `lineItems`, `orgs`, `schools`, `users`, `demographics`…) **expuestos como MCP tools**. **Lectura y escritura**: `createUser`, `updateClass`, `deleteEnrollment`, `postAcademicSession`. OneRoster **v1p2**, paginación por offset y `filter` de 1EdTech | 🔴 **Refuta el «OneRoster vacío» del pase 26.** **La superficie de tools más grande de esta KB** |
+| [`paulocymbaum/ed-tech-system-mcp`](https://github.com/paulocymbaum/ed-tech-system-mcp) | **MIT** ✅ | 0 | 0 | 132 | Python | **18 tools** sobre agentes LangGraph: `content_generation`, `author_lesson_pipeline`, `validate_lesson`/`_quiz`/`_project`, `search_graph_nodes`, `generate_mock_test_structure`, **`socratic_tutor`**, `project_review`, `search_youtube` | **Early-stage declarado** (0 ★ con 132 commits). **Sin integración a LMS**: backend propio en Supabase. Otro caso puro del **gap 49** |
+| [`examplary/qti`](https://github.com/examplary/qti) | **MIT** ✅ | 1 | 0 | 32 | TypeScript | QTI **3.0 (default) y 2.1**, generación y parseo de paquetes | **Control negativo del pase.** 🔴 **MCP no se menciona en ningún lugar del repo.** Ver abajo: es lo que convierte la ausencia de QTI en **medida** |
+| [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) | AGPL-3.0 | 8.2k | 4.4k | 68.764 | Python/Django | Medido **leyendo el código**, no la documentación. Ver la sección del gap 48 | ⚠️ **Nota de nomenclatura:** el repo **se renombró** — `openedx/edx-platform` es el nombre viejo y **redirige**. Las dos URLs resuelven y apuntan al mismo árbol |
+| [`NousResearch/hermes-agent`](https://github.com/NousResearch/hermes-agent) | **MIT** ✅ | **250,6k** | 53,6k | — | — | Agente genérico auto-mejorable, sucesor de OpenClaw | **No es educativo** y no entra a la tabla de agentes. Se verificó **porque el pase 27 dejó la instrucción de verificarlo si volvía a aparecer** — y volvió |
+
+### 🔴 La corrección, y esta vez la regla del pase anterior tampoco habría alcanzado
+
+El pase 26 declaró **OneRoster vacío** consultando un directorio. El pase 27 diagnosticó la causa (**gap 49**: los
+directorios rankean por promoción) y dejó escrita la regla: *«no preguntarle a un directorio de MCP, preguntarle al
+host del repositorio por patrón de nombre»* — `*-mcp`, `mcp-*`, `mcp-server` + el nombre del estándar.
+
+**Esa regla encuentra el repo, pero no por el patrón que proponía.** `trilogy-group/oneroster-ts` **no se llama
+`oneroster-mcp` ni `mcp-oneroster`**, y no aparece en ningún directorio de MCP. Se llama `-ts` porque **es un SDK**, y
+el servidor MCP es **una característica del SDK**, declarada en una sola línea del README:
+
+> *«This SDK is also an installable MCP server where the various SDK methods are exposed as tools that can be invoked
+> by AI applications.»*
+
+**La regla que sale de acá, y es la cuarta iteración de la misma lección:**
+
+> **La puerta de agente ya no se publica como producto propio: se le agrega a la biblioteca que ya hablaba el
+> estándar.** Buscar `*-mcp` encuentra a los que *quisieron* ser conectores. Para encontrar a los que *son* conectores
+> hay que buscar **el estándar + `SDK`/`client`/`library`** y **leer el README por dentro**. Un nombre no es un índice
+> de capacidad, igual que un directorio no es un índice de licencia.
+
+**Por qué importa más que el repo:** las ausencias que esta KB declaró consultando nombres y directorios —y hay
+varias— **están todas mal medidas por construcción**. La única ausencia que sobrevive a los tres métodos en este pase
+es la de QTI, y sobrevive porque **se abrió el SDK y se miró adentro**.
+
+### QTI: la ausencia pasa de muestreada a **medida**
+
+Es el único no-hallazgo de este pase que se puede firmar, y conviene decir por qué vale distinto:
+
+| Método | Resultado |
+|---|---|
+| Consulta a directorio MCP (pase 26) | vacío — **no concluyente**, es el error del gap 49 |
+| Patrón de nombre `qti-mcp` / `mcp-qti` (regla del pase 27) | vacío |
+| **Apertura del SDK permisivo** (`examplary/qti`, MIT, QTI 3.0 + 2.1) | 🔴 **MCP no aparece en el repo** |
+
+**Tres métodos independientes, el mismo resultado.** La otra pieza de la capa, `oat-sa/qti-sdk`, es **PHP** — y el
+ecosistema MCP de PHP es marginal, lo que **explica** la ausencia en vez de sólo registrarla. **Conclusión citable: el
+estándar de evaluación de 1EdTech es el único de los tres revisados que de verdad no tiene puerta de agente**, y la
+pieza sobre la que construirla es MIT y TypeScript. Ver **P59**.
+
+### CASE: cuarta colisión de término de esta KB, y la ausencia queda **sin medir**
+
+`"case-mcp"` / `"mcp-case"` devuelve **`09-CaseStudy` de `microsoft/mcp-for-beginners`**, **`Casys-AI/mcp-server`** y
+**`mcp-usecase`**. La palabra `case` está capturada por ***case study*** y ***use case***, que son dos de los términos
+más frecuentes de la documentación de MCP.
+
+Es la **cuarta colisión** registrada, y el patrón ya es un activo de método de esta KB:
+
+| # | Término | Capturado por | Pase |
+|---|---|---|---|
+| 1 | `education` | material didáctico **sobre** AI | 23 |
+| 2 | `MCP` + *badges* | generadores de *badges* de README | 27 |
+| 3 | `Bloom` | dos proyectos distintos homónimos | 7 |
+| 4 | **`case`** | ***case study*** · ***use case*** | **28** |
+
+🔵 **Se declara explícitamente: la ausencia de conector CASE NO está medida en este pase.** La colisión es demasiado
+fuerte para que el canal de búsqueda sirva, y el método que funcionó con OneRoster —abrir el SDK— **no se pudo aplicar
+porque CASE no tiene un SDK permisivo y traccionado que abrir**. Lo que sí está medido, de los pases 26 y 27, es que
+**CaSS tiene los 11 métodos de su adaptador CASE con `x-mcp-ignore: true`**, es decir **excluidos a propósito**. Queda
+como **gap 51**.
+
+### La cifra de agregador, refutada **en la dirección contraria** a la que esta KB esperaba
+
+El pase 27 registró un *«Hermes Agent, MIT, 180.000+ ★»* y **se negó a escribirlo** por venir de un agregador sin
+verificación, dejando la instrucción de verificarlo si reaparecía. **Reapareció en el barrido global de este pase, y
+con tres cifras distintas en tres fuentes: 180.000, 212.000 y 230.000.** La página del repo dice **250,6k ★ y 53,6k
+forks**.
+
+> **Las tres estaban mal, y las tres estaban mal *por debajo*.** El pase 22 y el pase 4 del `technology`-KB habían
+> encontrado agregadores **inflando** estrellas, y esta KB venía escribiendo la regla como *«los agregadores inflan»*.
+> **Es más preciso decir que los agregadores están viejos**: en un repo que crece rápido el error cae del lado bajo, y
+> en uno estancado del lado alto. **La regla correcta no es sobre la dirección del error sino sobre la fuente: la
+> cifra se lee de la página del repo o no se escribe.**
+
+**Hermes Agent no entra a la tabla de agentes de esta KB:** es un agente de propósito general, no educativo. Se
+registra acá por el método, y como nota de sucesión de OpenClaw.
+
 ## 2026-10-01 (pase 27) — el eje conector rinde por tercera vez, y lo que devuelve es una corrección: el conector MCP de Moodle **sí existe, es MIT y escribe notas**, y el hueco real se corre a Open edX
 
 **5 repos verificados de primera mano, 4 nuevos para esta KB, 1 inexistente.** Este pase no agrega una capa: **corrige

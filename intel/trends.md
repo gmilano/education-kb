@@ -7,6 +7,19 @@ updated: 2026-10-01
 # 📡 Tendencias — education
 
 > Ventana de investigación: septiembre 2026. Verificado 2026-09-30; el pase 11, el 2026-10-01.
+> **Pase 28 del 2026-10-01:** se ejecutan las acciones 1 y 2 del pase 27 y las dos rinden. **El gap 48 queda
+> contestado leyendo el código fuente de Open edX** —no la documentación, que está bloqueada— y **se parte en dos**:
+> la API **escribe matrícula, roles y notas, y las notas por lote** (más que el conector MIT de Moodle, que escribe de
+> a una), **pero el *authoring* de Studio está declarado experimental por el propio proyecto** (tendencia **74**,
+> **gap 50**). 🔴 **Y la regla de búsqueda que el pase 27 dejó escrita resultó insuficiente**: `OneRoster` **sí tenía
+> conector** —`trilogy-group/oneroster-ts`, **0BSD**, **164 métodos con escritura**— y **no se llama `*-mcp`**: es un
+> **SDK** que declara MCP en una línea del README. **La puerta de agente ya no es un producto, es una *feature* del
+> SDK** (tendencia **73**), y eso deja mal medidas todas las ausencias declaradas por etiqueta. **QTI queda medido por
+> tres métodos** (ausencia real) y **CASE queda sin medir** por la **cuarta colisión de término** de esta KB
+> (**gap 51**). En EMEA **el Annex III dejó de ser una fecha: rige desde el 2026-08-02** y la demanda de conformidad
+> está **vencida** (tendencia **75**). Se corrige la regla de estrellas: **los agregadores no inflan, atrasan**
+> (tendencia **76**). 🔵 **Hallazgo de método: `raw.githubusercontent.com` responde**, así que se puede leer código sin
+> clonar ni instalar — es lo que hizo posible medir Open edX. Ver la nota de método del pase 28.
 > **Pase 27 del 2026-10-01:** el eje conector rinde por **tercera vez**, y esta vez lo que devuelve es una
 > **corrección del pase anterior**: el **gap 43** afirmaba que el único conector MCP de Moodle era AGPL-3.0 con
 > las partes útiles cerradas, y **es falso** — hay **dos MIT**, y uno **escribe notas y devoluciones**
@@ -1977,9 +1990,12 @@ Huecos confirmados tras buscar, no ausencias por no haber buscado. Un gap inform
 
 47. **La capa de *student success* open source es de 2013–2014, es GPL, no vive en GitHub — y es la que el regulador aprieta más** *(agregado en el pase 26 del 2026-10-01)*. **FlightPath Academics** (asesoría académica, *degree audit*, ***early alerts***, *Academic Priority*) es **PHP, GPLv3+**, liberada el **2013-03-13** por la University of Louisiana at Monroe, y **no tiene repositorio en GitHub** (el 404 de `Cerebro-Tech/FlightPath` es de WebFetch). **Student Success Plan** (Unicon) y el *dashboard* de **Marist College** tienen referencias verificables sólo de **2013–2014**. 🔴 **Es la capa más vieja y peor abastecida de las veintiséis pasadas** — y simultáneamente la que concentra más presión regulatoria, porque *predecir qué alumno va a fracasar* es exactamente la decisión automatizada sobre el alumno que el **Annex III** clasifica de alto riesgo y que **Oklahoma y Maryland** prohíben tomar de forma autónoma. **Hueco de mercado grande y riesgo alto en la misma celda.** Ver la tendencia **68** y el patrón **P53**.
 
-48. 🔴 **Open edX es el LMS grande sin conector MCP, y es el de la huella pública más grande** *(agregado en el pase 27 del 2026-10-01)*. Búsqueda **en modo extendido** de `"Open edX" MCP server github repository connector tools Studio API`: **nada**. Es el hueco que el **gap 43 creía tener en Moodle** y que resultó falso: Canvas tiene `vishalsachdev/canvas-mcp` (**MIT**), Moodle tiene **dos conectores MIT** (`peancor/moodle-mcp-server`, `MarcosNahuel/moodle-mcp`), SCORM tiene `giacomomaria81/scorm-mcp-server` (**MIT**) — **Open edX no tiene ninguno**. **Por qué es el mejor perfil de oportunidad de esta KB:** es el stack de los programas públicos grandes de **LATAM e India**, y esta KB ya tiene registrado que si el cliente corre Open edX con analítica **corre Aspects → Ralph sobre ClickHouse sin haberlo elegido** (pase 22) — o sea, llega con una configuración de telemetría impuesta y sin puerta de agente. Y es **barato**, porque la arquitectura está resuelta dos veces: `MarcosNahuel/moodle-mcp` publica la decisión a portar —**fachadas de alto nivel sobre la API, más un `ws_raw` de escape**, en vez de volcar cientos de endpoints. **Lo que falta medir antes de cotizar:** si Open edX expone una superficie REST estable y versionada equivalente a los Web Services de Moodle. Es la **acción 1** de este pase. Ver la tendencia **71** y el patrón **P55**.
+48. 🔴 **Open edX es el LMS grande sin conector MCP, y es el de la huella pública más grande** *(agregado en el pase 27 del 2026-10-01)*. Búsqueda **en modo extendido** de `"Open edX" MCP server github repository connector tools Studio API`: **nada**. Es el hueco que el **gap 43 creía tener en Moodle** y que resultó falso: Canvas tiene `vishalsachdev/canvas-mcp` (**MIT**), Moodle tiene **dos conectores MIT** (`peancor/moodle-mcp-server`, `MarcosNahuel/moodle-mcp`), SCORM tiene `giacomomaria81/scorm-mcp-server` (**MIT**) — **Open edX no tiene ninguno**. **Por qué es el mejor perfil de oportunidad de esta KB:** es el stack de los programas públicos grandes de **LATAM e India**, y esta KB ya tiene registrado que si el cliente corre Open edX con analítica **corre Aspects → Ralph sobre ClickHouse sin haberlo elegido** (pase 22) — o sea, llega con una configuración de telemetría impuesta y sin puerta de agente. Y es **barato**, porque la arquitectura está resuelta dos veces: `MarcosNahuel/moodle-mcp` publica la decisión a portar —**fachadas de alto nivel sobre la API, más un `ws_raw` de escape**, en vez de volcar cientos de endpoints. ~~**Lo que falta medir antes de cotizar:** si Open edX expone una superficie REST estable y versionada equivalente a los Web Services de Moodle. Es la **acción 1** de este pase.~~ → ✅ **MEDIDO EN EL PASE 28 DEL 2026-10-01, Y EL GAP SE PARTE EN DOS.** Leyendo los `urls.py` de `master`: *Course Blocks* en **`v1` y `v2`**; *Enrollment* con **escritura** (`unenroll/`, `enrollment_allowed/`, `roles/`); *Grades v1* con **escritura y por lote** (**`gradebook/{course_id}/bulk-update`**, *course_grade_overrides*) — **más capaz que el conector MIT de Moodle, que escribe de a una**. 🔴 **Pero la API de *authoring* de Studio está declarada experimental por el proyecto** y es el **gap 50**. **Conclusión: para operación y evaluación la ausencia es puro gap 49; para autoría de curso hay causa técnica.** La AGPL **no es el obstáculo** (el conector es otro proceso que habla REST, igual que las puertas MIT de Canvas y Moodle). Ver las tendencias **71**, **73** y **74** y el patrón **P55**.
 
-49. **Los directorios de MCP rankean por promoción, y esta KB midió tres capas con ese sesgo** *(agregado en el pase 27 del 2026-10-01)*. No es un gap de oferta: es un **gap de método**, y se declara porque ya produjo una conclusión falsa publicada. El **gap 43** afirmó *«el único conector MCP de Moodle»* tras consultar un directorio que devolvió **un** candidato — el único de los tres con **sitio comercial propio, paquete npm con nombre de producto y *premium plugins***. Los dos MIT, con **1 ★ y 43 ★ y cero marketing**, no aparecieron. 🔴 **Las capas que el pase 26 declaró vacías por el mismo canal y que por lo tanto están sin medir de verdad: `OneRoster`, `QTI` y `CASE`** (gap 44). **La regla:** cuando una búsqueda de directorio devuelve un único candidato y ese candidato es además el único con presencia comercial, **la capa no está medida — está mal muestreada**; hay que repreguntar al *host* del repositorio por patrón de nombre (`*-mcp`, `mcp-*`, `mcp-server` + estándar). Es la **acción 2** de este pase. Ver la tendencia **69**.
+49. **Los directorios de MCP rankean por promoción, y esta KB midió tres capas con ese sesgo** *(agregado en el pase 27 del 2026-10-01)*. No es un gap de oferta: es un **gap de método**, y se declara porque ya produjo una conclusión falsa publicada. El **gap 43** afirmó *«el único conector MCP de Moodle»* tras consultar un directorio que devolvió **un** candidato — el único de los tres con **sitio comercial propio, paquete npm con nombre de producto y *premium plugins***. Los dos MIT, con **1 ★ y 43 ★ y cero marketing**, no aparecieron. 🔴 **Las capas que el pase 26 declaró vacías por el mismo canal y que por lo tanto están sin medir de verdad: `OneRoster`, `QTI` y `CASE`** (gap 44). **La regla:** cuando una búsqueda de directorio devuelve un único candidato y ese candidato es además el único con presencia comercial, **la capa no está medida — está mal muestreada**; hay que repreguntar al *host* del repositorio por patrón de nombre (`*-mcp`, `mcp-*`, `mcp-server` + estándar). Es la **acción 2** de este pase. Ver la tendencia **69**. → 🔴 **CONFIRMADO POR SEGUNDA VEZ EN EL PASE 28, Y LA REGLA DEL PASE 27 RESULTÓ INSUFICIENTE.** De las tres capas, **OneRoster sí tenía conector** —[`trilogy-group/oneroster-ts`](https://github.com/trilogy-group/oneroster-ts), **0BSD**, **164 métodos como MCP tools con escritura**, OneRoster v1p2— y **no se encontró por patrón de nombre**: el repo **no tiene `mcp` en el nombre**, es un **SDK** que declara el servidor en una línea del README. **La regla se extiende: hay que buscar el estándar + `SDK`/`client`/`library` y leer el README por dentro.** **QTI** quedó medido por los tres métodos (ausencia real, ver **P59**) y **CASE sigue sin medir** por colisión de término (**gap 51**). Ver la tendencia **73**.
+50. 🔴 **La API de *authoring* de Open edX está declarada experimental por el propio proyecto, y es el tramo que un conector de agente más necesita** *(agregado en el pase 28 del 2026-10-01)*. Medido leyendo `cms/djangoapps/contentstore/rest_api/v1/urls.py` del árbol `master`: hay **21 rutas** (`xblock/`, `container_handler/{usage_key}`, `container/{usage_key}/children`, `course_settings/…`, `course_details/…`, `course_grading/…`, `course_rerun/…`, `certificates/…`, `group_configurations/…`, `proctored_exam_settings/…`), **y el repo avisa que «the Authoring API is still experimental» y recomienda usar las versiones `v0`**. **Por qué es un gap y no un detalle:** este pase contestó el **gap 48** mostrando que *Enrollment* y *Grades* **están versionados y escriben** —`unenroll/`, `enrollment_allowed/`, **`gradebook/{course_id}/bulk-update`**, *course_grade_overrides*—, así que ahí la ausencia del conector es puro **gap 49**. **El *authoring* es el único tramo donde la ausencia tiene causa técnica real:** replicar lo que hace `MarcosNahuel/moodle-mcp` (crear curso, secciones, publicar material, armar quiz) obligaría a apoyarse en la parte que el mantenedor marca inestable, mientras el de Moodle se apoya en Web Services, estables desde hace más de una década. **Lo que falta medir antes de descartarlo:** si los endpoints **`v0`** —los que el repo recomienda— cubren lo que el `v1` experimental promete. Es la **acción 1 del pase 29**. Ver las tendencias **73** y **74** y el patrón **P55**.
+
+51. ⚠️ **La ausencia de conector MCP para CASE no está medida, y se declara como no medida por colisión de término** *(agregado en el pase 28 del 2026-10-01)*. La **acción 2 del pase 27** pedía repreguntar por patrón de nombre las tres capas que el pase 26 declaró vacías vía directorio. **De las tres, dos quedaron resueltas y una no:** OneRoster **tenía** conector (**gap 49 confirmado por segunda vez**, ver tendencia **73**), QTI **no lo tiene y ahora está medido por tres métodos** (directorio + patrón de nombre + **apertura del SDK permisivo**, `examplary/qti` MIT, donde MCP no se menciona), y **CASE no se pudo medir**. 🔴 **La causa es una colisión de término, la cuarta de esta KB:** `case-mcp` / `mcp-case` devuelve **`09-CaseStudy` de `microsoft/mcp-for-beginners`**, **`Casys-AI/mcp-server`** y **`mcp-usecase`**, porque ***case study*** y ***use case*** son dos de los términos más frecuentes de la documentación de MCP. Y **el método que sí funcionó con OneRoster —abrir el SDK y leer el README adentro— no se pudo aplicar, porque CASE no tiene un SDK permisivo y traccionado que abrir**. **Lo que sí está medido** (pases 26–27) es que **`cassproject/CASS` tiene las 11 operaciones de su adaptador CASE con `x-mcp-ignore: true`**, o sea excluidas a propósito. **El registro de colisiones de esta KB, que ya es un activo de método:** `education` → material didáctico *sobre* AI (pase 23); `Bloom` → dos proyectos homónimos (pase 7); `MCP` + *badges* → generadores de *badges* de README (pase 27); **`case` → *case study* / *use case* (pase 28)**. **La acción:** medir CASE por el *host* del repositorio con el nombre **completo y desambiguado** del estándar (`"Competencies and Academic Standards Exchange"`), no por la sigla. Ver la tendencia **73**.
 
 ## 54. El almacén permisivo que esta KB recomienda sabe borrar al alumno desde antes de que esta KB existiera, y seis pasadas vendieron lo contrario por leer documentación en vez de código (agregado 2026-10-01, pase 21)
 
@@ -2786,6 +2802,267 @@ total**. Y el desglose por estándar dice algo que ninguna cifra agregada mostra
 **La regla de método que generaliza:** cuando un proyecto anota exclusiones una por una, **la lista de exclusiones es
 una declaración de alcance más confiable que su README** — y conviene leerla antes de las estrellas. Es la misma
 lectura del pase 26, ahora con el desglose que permite usarla por capa.
+
+## 73. La puerta de agente dejó de ser un producto propio y pasó a ser una característica del SDK que ya hablaba el estándar — y eso invalida buscar conectores por nombre (agregado 2026-10-01, pase 28)
+
+**Es la tendencia más accionable de este pase porque cambia el método, no el inventario.**
+
+El pase 26 declaró **OneRoster sin conector MCP** consultando un directorio. El pase 27 diagnosticó el sesgo
+(**gap 49**) y dejó la regla: preguntarle al *host* del repositorio por **patrón de nombre** — `*-mcp`, `mcp-*`,
+`mcp-server` + el estándar. Este pase ejecutó eso y encontró el repo. 🔴 **Pero no lo encontró por el patrón:**
+[`trilogy-group/oneroster-ts`](https://github.com/trilogy-group/oneroster-ts) **no tiene `mcp` en el nombre**, no está
+en ningún directorio de MCP, y declara su servidor **en una línea del README**:
+
+> *«This SDK is also an installable MCP server where the various SDK methods are exposed as tools that can be invoked
+> by AI applications.»*
+
+**Y lo que hay detrás de esa línea es la superficie de herramientas más grande de esta KB: 164 métodos** sobre 21
+recursos OneRoster, **con escritura** (`createUser`, `updateClass`, `deleteEnrollment`, `postAcademicSession`), sobre
+**v1p2**, con paginación y el `filter` de 1EdTech. Para comparar: `canvas-mcp` declara entre 40 y 116 según versión, y
+`MarcosNahuel/moodle-mcp` declara 40. **Licencia: 0BSD** — la más permisiva que vio esta base, sin obligación de
+atribución.
+
+**La forma económica de esto, que es el punto:** escribir un conector MCP desde cero es trabajo; **agregarle un
+*transport* MCP a un SDK que ya cubre el estándar entero es casi gratis**, porque los métodos ya existen y el mapeo es
+mecánico. Entonces el incentivo no está en publicar `foo-mcp`: está en que **cada SDK maduro de cada estándar sume la
+puerta como una *feature* menor de su release**. Es exactamente lo que pasó acá, y es la razón por la que el conector
+tiene **10 ★**: nadie lo anuncia como conector porque **no es un conector, es un SDK**.
+
+**La regla de método que reemplaza la del pase 27 (no la corrige: la extiende):**
+
+> **Para medir si un estándar tiene puerta de agente hay que buscar el estándar + `SDK` / `client` / `library`, abrir
+> el README y buscar «MCP» adentro.** El nombre del repositorio **no es un índice de capacidad**, igual que el
+> directorio no era un índice de licencia. **Tres métodos en tres pases, y los dos primeros dieron falsos negativos.**
+
+🔴 **Consecuencia que hay que asumir sin suavizarla: todas las ausencias de puerta que esta KB declaró consultando
+nombres o directorios están mal medidas por construcción.** La única que sobrevive en este pase es **QTI**, y
+sobrevive porque **se abrió el SDK permisivo y se miró adentro** (`examplary/qti`, MIT, QTI 3.0 + 2.1: MCP no se
+menciona). Ver el **gap 50**, el **gap 51** y **P59**.
+
+## 74. El gap 48 no era un gap: eran dos con la misma cara — Open edX escribe notas por lote y declara experimental su *authoring* (agregado 2026-10-01, pase 28)
+
+El pase 27 abrió el **gap 48** —Open edX es el único LMS grande sin conector MCP— y dejó como acción medir **si la
+plataforma expone una API REST suficiente**, con el encuadre honesto de que *«si no la hay, ésa es la razón de la
+ausencia y es un hallazgo igual de bueno»*. **Se midió leyendo los `urls.py` del árbol `master`, de primera mano.** La
+respuesta no es una de las dos: **es un corte por la mitad de la plataforma.**
+
+**La mitad que alcanza, y escribe:** *Course Blocks* está en **`v1` y `v2`**; *Enrollment* expone `enrollment`,
+**`unenroll/`**, `roles/` y `enrollment_allowed/`; y *Grades v1* expone **`gradebook/{course_id}/bulk-update`**
+(`GradebookBulkUpdateView`) y **`subsection/{subsection_id}/`** (*course_grade_overrides*).
+
+🔵 **El dato que mejora la cotización respecto de lo que el pase 27 suponía: Open edX escribe notas por lote, y el
+conector MIT de Moodle no tiene lote.** `provide_assignment_feedback` es de a una. O sea que en la capacidad que más
+importa para el **gap 6**, **la plataforma sin puerta es más capaz que la que ya tiene dos puertas.**
+
+🔴 **La mitad que no alcanza, y lo declara el proyecto:** la API de *authoring* de Studio/CMS `v1` —21 rutas, entre
+ellas `xblock/`, `container/{usage_key}/children`, `course_settings/…`, `course_rerun/…`— **viene con el aviso de que
+«the Authoring API is still experimental» y la recomendación de usar `v0`**.
+
+**La lectura, y es la que separa un hallazgo de una excusa:**
+
+> **Para matrícula, roles, bloques y notas, la ausencia del conector de Open edX es puro gap 49** —nadie lo publicó, no
+> que no se pueda—. **Para *authoring*, la ausencia tiene causa técnica declarada por el propio proyecto**, y es el
+> **gap 50**. Un conector que replicara lo que hace `MarcosNahuel/moodle-mcp` (crear curso, secciones, publicar
+> material, armar quiz) **tendría que apoyarse en la única parte de la plataforma que su mantenedor marca como
+> inestable**, mientras el de Moodle se apoya en Web Services, estable desde hace más de una década.
+
+⚠️ **La licencia no es el obstáculo, y es la primera pregunta del cliente:** Open edX es **AGPL-3.0**, pero un conector
+que habla REST desde otro proceso **no deriva de la plataforma y no hereda la AGPL**. Es la configuración ya verificada
+dos veces en esta KB —`canvas-mcp` (MIT) contra Canvas, los dos `moodle-mcp` (MIT) contra Moodle GPL-3.0—: **las LMS
+son copyleft y las puertas son permisivas.** **P55** queda reescrito con el corte: se cotiza operación y evaluación, no
+autoría.
+
+## 75. El Annex III dejó de ser una fecha en el calendario: rige desde el 2026-08-02, y la demanda de conformidad en EMEA está **vencida**, no anticipada (agregado 2026-10-01, pase 28)
+
+Esta KB viene registrando el reloj regulatorio europeo en futuro desde el pase 11, y el pase 25 construyó **P49**
+sobre que el **Annex III** nombra la educación y los exámenes como alto riesgo. **Hoy el reloj se terminó:** el AI Act
+entró en vigor el **2024-08-01**, y el **2026-08-02 es la fecha en que aplica plenamente a los sistemas de alto
+riesgo**. A la fecha de este pase **lleva dos meses vigente**.
+
+Lo que un proveedor de AI educativa en la UE debe tener **ahora**: **gestión de riesgos continua**, **documentación
+técnica** exhaustiva, **mecanismos de supervisión humana**, **evaluación de conformidad antes de la puesta en el
+mercado** y **registro en la base de datos de la UE**.
+
+**Por qué es tendencia y no sólo un dato de EMEA.** El desajuste que el pase 20 nombró como el más explotable de esta
+KB —**la región legisla la auditoría algorítmica y no construye la herramienta que la ejecuta**— cambia de tiempo
+verbal. **Deja de ser una oportunidad anticipada y pasa a ser un incumplimiento en curso.** Y los cinco requisitos son
+**artefactos de ingeniería, no de legal**: la gestión de riesgos es un proceso con evidencia, la supervisión humana es
+una compuerta en el flujo —que es literalmente la forma de **P54** y **P49**—, y la documentación técnica se genera
+desde el pipeline. 🔴 **Con el agravante de que la capa de *proctoring*, que es la que el Annex III nombra más
+directamente, sigue sin ninguna opción permisiva y productiva (gap 39).**
+
+⚠️ **Y alcanza fuera de la UE por la puerta de atrás:** el régimen toca a instituciones de educación superior de
+**EE. UU.** con colaboración académica o programática con instituciones europeas. Es el argumento que vuelve vendible
+la gobernanza en North America, donde **no hay regulador sectorial** (tendencia de este pase en `intel/market.md`).
+
+## 76. Los agregadores de estrellas no inflan: están **viejos**, y el signo del error depende de la velocidad del repo (agregado 2026-10-01, pase 28)
+
+Corrección de método de esta KB, y vale porque la regla anterior estaba escrita al revés.
+
+El pase 22 y el pase 4 del `technology`-KB encontraron agregadores **sobreestimando** estrellas, y la KB venía
+operando con *«los agregadores inflan»*. El pase 27 vio pasar un *«Hermes Agent, MIT, 180.000+ ★»* y **se negó a
+escribirlo**, dejando la instrucción de verificarlo si reaparecía. **Reapareció en el barrido global de este pase, con
+tres cifras distintas en tres fuentes: 180.000, 212.000 y 230.000.** La página del repo
+([`NousResearch/hermes-agent`](https://github.com/NousResearch/hermes-agent), **MIT**) dice **250,6k ★ y 53,6k forks**.
+
+🔴 **Las tres estaban mal, y las tres estaban mal por debajo** — en la dirección contraria a la que la regla predecía.
+
+> **La formulación correcta: un agregador no sesga, atrasa.** En un repo que crece rápido el error cae **del lado
+> bajo**; en uno estancado, del **lado alto**. **Por lo tanto la regla útil no es sobre la dirección del error sino
+> sobre la fuente: la cifra se lee de la página del repo, o no se escribe.** Es la misma conclusión que la KB ya
+> aplicaba, con el fundamento arreglado.
+
+**Nota de alcance:** Hermes Agent **no entra en el inventario educativo** de esta KB — es un agente de propósito
+general, sucesor de OpenClaw. Se registra por el método y como nota de sucesión.
+
+## 77. La AI PC entra al presupuesto educativo, y es la primera cifra de *hardware* de esta KB (agregado 2026-10-01, pase 28)
+
+El barrido global trae un dato de canal que esta base no tenía en 27 pasadas: las **AI PC** serían el **15 % de los
+envíos de PC educativas en 2026** y se acercarían al **50 % de penetración en 2030**.
+
+**Por qué importa para una KB de software open source.** Fija el **piso de capacidad de cómputo local** del aula, y por
+lo tanto decide si los patrones que esta KB recomienda corren **en el dispositivo** o exigen nube. Esta base ya tiene
+inventariada la capa offline-first —`Project NOMAD` (Apache-2.0), `Kolibri` (MIT), y el empaquetado SCORM 100 %
+offline de `scorm-mcp-server` (**P56**)— y los recomendaba por **conectividad**, que es el argumento de LATAM, África
+y despliegue rural. **El dato de AI PC agrega el segundo argumento, que es el de las regiones ricas:** inferencia local
+por **costo y por privacidad del dato del menor**, no por falta de red. ⚠️ **Dicho con la cautela que corresponde:
+viene de una consultora de canal, es una proyección, y no se verificó contra una segunda fuente** — se registra como
+señal de dirección, no como base de cotización.
+
+## Nota de método del pase 28 (2026-10-01) — el pase que encontró el canal de lectura de código sin instalar nada, y el que descubrió que su propia regla de búsqueda del pase anterior era insuficiente
+
+**Lo que se hizo:** el barrido obligatorio completo —**cuatro búsquedas globales y cuatro regionales**, con el año
+**calculado** (2026)— más las **tres acciones** que el pase 27 dejó escritas. **Dos se ejecutaron y rindieron; la
+tercera sigue bloqueada por el mismo límite de entorno, y se declara sin intentar eludirlo.**
+
+### 🔵 El hallazgo de método del pase: `raw.githubusercontent.com` responde, y eso abre la lectura de código sin clonar ni instalar
+
+El pase 27 cerró con un límite nuevo y duro: **no se puede instalar el árbol de dependencias de un repositorio de
+terceros en este entorno**, lo que bloqueó el *handshake* MCP y la verificación del *launch* LTI. Ese límite sigue.
+**Pero este pase necesitaba medir la API de Open edX y encontró que se podía hacer sin ejecutar nada**, y conviene
+registrar el canal porque sirve para los pases siguientes:
+
+| Canal | Estado en este entorno |
+|---|---|
+| `docs.openedx.org` (documentación oficial de la API) | 🔴 **`EGRESS_BLOCKED`** — dominio **5** de la lista |
+| `openedx.atlassian.net` (wiki de arquitectura) | 🔴 **`EGRESS_BLOCKED`** — dominio **6** |
+| **`raw.githubusercontent.com`** | ✅ **Responde.** Devuelve el archivo fuente crudo |
+| `github.com` vía WebFetch | ✅ Responde (confirmado desde el pase 23) |
+| `curl -sI` contra `github.com` | 🔴 **403 para todo**, no discrimina — ver pase 27 |
+
+**La consecuencia práctica, y es la parte que vale heredar:** cuando la documentación está bloqueada o es ambigua,
+**la declaración está en el código y el código es legible sin clonar**. Las cuatro mediciones de Open equis de este
+pase son lecturas de `urls.py` del árbol `master`. **No permite ejecutar —no reemplaza el *handshake*— pero para medir
+superficie de API declarada es el canal correcto y además el más preciso**, porque no depende de que la documentación
+esté al día.
+
+⚠️ **Y trae su propia trampa, que este pase casi pisó.** El `urls.py` de *Enrollment* **no lleva la versión adentro**:
+la monta el *URL conf* padre (`/api/enrollments/v1/`). Leer el archivo aislado invita a concluir *«la API de matrícula
+no está versionada»*, **que es falso**. **Leer código esquiva el error de la documentación vieja y agrega el error del
+fragmento sin contexto.** Se deja anotado porque el canal se va a usar más.
+
+### 🔴 El falso negativo propio, que es el resultado más importante del pase
+
+**La regla que el pase 27 dejó escrita no alcanzaba, y lo descubrió al usarla.** La regla era: no preguntarle a un
+directorio de MCP, preguntarle al *host* del repositorio por **patrón de nombre** (`*-mcp`, `mcp-*`, `mcp-server` +
+estándar). Se ejecutó sobre las tres capas pendientes y **encontró `trilogy-group/oneroster-ts`, que no cumple el
+patrón**: no tiene `mcp` en el nombre, es un **SDK**, y declara el servidor MCP **en una línea del README**.
+
+**Tres pases, tres métodos, dos falsos negativos:**
+
+| Método | Pase | Resultado sobre OneRoster |
+|---|---|---|
+| Consulta a directorio MCP | 26 | 🔴 Falso negativo |
+| Patrón de nombre del repositorio | 27 | 🔴 Habría dado falso negativo también |
+| **Estándar + `SDK`/`client`/`library`, y abrir el README** | **28** | ✅ **Encuentra el repo** |
+
+**La lección, dicha sin suavizarla:** esta KB lleva **cuatro pases consecutivos** en que el error estuvo en el
+muestreo y no en la fuente (24→25 falsos negativos, 26→27 el cuantificador de Moodle, 27→28 el patrón de nombre). **No
+es mala suerte: es que medir ausencias es más difícil que medir presencias, y cada método de muestreo tiene su propio
+punto ciego.** La forma de la regla que sobrevive a los tres es: **una ausencia sólo se declara cuando se buscó por
+capacidad —abriendo el artefacto— y no por etiqueta.** Es lo que hace que la ausencia de **QTI** se pueda firmar y la
+de **CASE** no (**gap 51**).
+
+### Lo que se verificó y cómo
+
+**5 repos de primera mano, todos por WebFetch sobre la página o por `raw` sobre el archivo.** `oneroster-ts` (0BSD,
+10 ★, 3 forks, 39 commits), `ed-tech-system-mcp` (MIT, 0 ★, 132 commits, 18 tools), `examplary/qti` (MIT, 1 ★, 32
+commits — **control negativo: MCP no aparece**), `openedx/openedx-platform` (AGPL-3.0, 8.2k ★, 4.4k forks, 68.764
+commits) y `NousResearch/hermes-agent` (MIT, **250,6k ★**, 53,6k forks).
+
+✅ **El control negativo es deliberado.** `examplary/qti` se abrió **esperando encontrar MCP adentro** —por analogía
+con `oneroster-ts`— y **no lo tiene**. Ése es el dato que convierte la ausencia de QTI en medida en vez de muestreada.
+**Un no-hallazgo buscado donde debería estar vale más que diez búsquedas donde no.**
+
+⚠️ **La corrección de catálogo que NO se hizo, y por qué importa.** `verticals/solutions.md` citaba
+`openedx/openedx-platform` y `repos/foundations.md` citaba `openedx/edx-platform`; parecía un error de una de las dos.
+**Se verificaron las dos URLs antes de "arreglar" ninguna: las dos resuelven, el repo se renombró y la vieja
+redirige.** **Corregir por parecido habría metido un error donde no había.** Se unificó al canónico y se dejó la nota.
+
+### Lo que este pase NO hizo, declarado como tal
+
+- 🔴 **No hizo ninguna llamada HTTP contra una instancia de Open edX.** Todo lo de la tendencia **74** es **superficie
+  declarada en el código**, no comportamiento observado. **OAuth2, *scopes*, *rate limits* y forma de las respuestas
+  siguen sin verificar.** No se puede levantar una instancia sin instalar dependencias de terceros.
+- 🔴 **No cerró el tramo de invocación del gap 40** (*handshake* `initialize` + `tools/list` contra `POST /api/mcp` de
+  CaSS): **mismo límite de entorno del pase 27, sin cambios.** No se intentó eludir.
+- 🔴 **No midió los endpoints `v0` de *authoring* de Open edX**, que son los que el propio repo recomienda sobre el
+  `v1` experimental. Es lo que decide si el **gap 50** es un bloqueo o un desvío.
+- 🔴 **No midió CASE** (**gap 51**): colisión de término, y sin SDK permisivo que abrir.
+- **No verificó los 164 métodos de `oneroster-ts` uno por uno**: el número es el que declara el README, y **no se
+  ejecutó el servidor**. Se cita como *«declara 164 métodos»*, no como conteo propio. Es la misma cautela que la KB
+  aplica a `canvas-mcp`.
+- **No verificó fecha de último commit** de ninguno de los repos nuevos: la página no la expone de forma legible por
+  este canal. Señales de vida usadas: commits totales, forks y ★.
+- **No cerró los gaps 36 y 38** (cadena de `lrsql`): siguen necesitando ejecución de dependencias de terceros.
+- **La cifra de AI PC (tendencia 77) no se verificó contra una segunda fuente**: es proyección de una consultora de
+  canal y está marcada como señal de dirección, no base de cotización.
+
+### Los dominios bloqueados, que ya son **seis**, y una precisión nueva sobre el bloqueo de LATAM
+
+`unu.edu`, `publications.iadb.org`, `coe.int`, `www.iesalc.unesco.org`, **`docs.openedx.org`** y
+**`openedx.atlassian.net`** (los dos últimos, nuevos en este pase).
+
+⚠️ **La precisión nueva:** este pase intentó `unu.edu` **por WebFetch**, no sólo por `curl`, y devolvió el mismo
+**`EGRESS_BLOCKED`**. 🔴 **El bloqueo es independiente del canal: es del proxy de egreso, no de la herramienta de
+verificación.** Van **tres pases con la base de evidencia primaria de LATAM inalcanzable** —incluido el *working
+paper* de UNU *«AI Implementation in Higher Education in Latin America and the Caribbean»*, que es exactamente la
+fuente que falta—. **Es un límite del entorno, no una laguna de investigación**, y las cifras regionales de LATAM de
+este pase son **de barrido secundario**: hay que levantar esas cuatro fuentes desde una red sin este proxy antes de
+usarlas con un cliente.
+
+### El barrido obligatorio, y por qué su rendimiento ya es estructural y no una queja
+
+Las cuatro búsquedas globales devolvieron **por cuarto pase consecutivo** la capa genérica de agentes
+(`openclaw`/Hermes, `browser-use`, Mem0, AutoGen, Dify, Flowise) y **material didáctico *sobre* AI**
+(`ai-engineering-from-scratch`, Karpathy, *AI Agents for Beginners*). **Es la tendencia 29 y el diagnóstico del pase
+23 funcionando como se predijo:** en GitHub el término `education` está capturado por el material que enseña AI, no por
+el software que educa, y el primero tiene dos órdenes de magnitud más de estrellas. **Cero agentes educativos nuevos
+por esa vía, por cuarta vez.** Las dos altas de este pase salieron **las dos del eje conector/estándar**, que es el
+único que viene rindiendo desde el pase 25. **No se agregó ninguna fila de relleno:** 43 filas reales.
+
+## 🔵 Las tres acciones que este pase deja escritas para el siguiente
+
+1. **Medir los endpoints `v0` de *authoring* de Open edX** (**gap 50**), que son los que el propio repo recomienda sobre
+   el `v1` experimental. Concretamente: leer `cms/djangoapps/contentstore/rest_api/v0/urls.py` y los `views/` que
+   cuelgan, por `raw.githubusercontent.com`, y responder **si `v0` cubre crear/actualizar curso, secciones y
+   componentes**. Es lo que decide si el **gap 50** es un bloqueo real o un desvío de versión — y con eso **P55 se
+   cotiza entero o se cotiza partido**. **Es la acción de mayor valor comercial pendiente**, porque Open edX es la base
+   de la huella pública grande de **LATAM e India**.
+2. **Re-medir con el método nuevo las ausencias que esta KB declaró por etiqueta** (tendencia **73**). El método que
+   funciona es **estándar + `SDK`/`client`/`library` + abrir el README y buscar «MCP» adentro**. Prioridad por valor:
+   **Open Badges** (`openbadges` SDK/validator — y esta KB ya sabe que CaSS lo excluye a propósito y que su
+   implementación es **OB 2.0, no 3.0**), **Caliper** (aunque el estándar dejó de ser open source en 2023-06-17, los
+   SDK previos siguen publicados) y **LTI** (`ltijs`, `pylti1p3` — si alguno sumó MCP, el **gap 42**, cerrado por
+   agotamiento en el pase 27, **se reabre por una vía que nadie revisó**). Y **CASE por nombre desambiguado**
+   (`"Competencies and Academic Standards Exchange"`, no la sigla) para cerrar el **gap 51**.
+3. **Cerrar el tramo de invocación del gap 40 donde esté permitido instalar dependencias de terceros**, sin cambios
+   respecto del pase 27: `npm install` en `cassproject/CASS`, un Elasticsearch en `:9200`, **verificar primero la
+   trampa del loopback** (`CASS_LOOPBACK`, porque si el `fetch` falla la ruta no se monta y el síntoma parece otro), y
+   después `initialize` + `tools/list` contra **`POST /api/mcp`**. **Comparar con las 6 declaradas.** Si coinciden,
+   **P50, P54 y P57 se cotizan sin asterisco**. 🔵 **Y agregar al mismo entorno la verificación de `oneroster-ts`**:
+   `npx` el SDK como servidor MCP y contar las tools reales contra los **164 métodos declarados**, que es la única
+   cifra grande de este pase que no es de primera mano.
 
 ## Nota de método del pase 27 (2026-10-01) — el pase que no pudo ejecutar y por eso midió lo mismo por otro canal, y el que corrigió la premisa de su propio pase anterior
 

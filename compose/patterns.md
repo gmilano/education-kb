@@ -2857,7 +2857,7 @@ que no hay que argumentarla, hay que instrumentarla.
 **10 commits** y 8 tools — **es el punto de partida del último tramo, no un sistema de corrección**. El trabajo real
 del proyecto es la compuerta, el *eval* y la evidencia; el conector se endurece, no se adopta tal cual.
 
-## P55 — El conector MCP de Open edX, que es el único que de verdad no existe (pase 27)
+## P55 — El conector MCP de Open edX: la ausencia es real, y el pase 28 la partió en dos cotizaciones (pase 27, **medido y reescrito en el pase 28**)
 
 **Reemplaza a P51**, cuyo premisa era falsa (ver la corrección al final de este archivo). **Acá la ausencia está
 medida y es real:** búsqueda en modo extendido, **ningún conector MCP para Open edX** (**gap 48**).
@@ -2893,10 +2893,44 @@ medida y es real:** búsqueda en modo extendido, **ningún conector MCP para Ope
         Aspects / Ralph / ClickHouse  ◀── la analítica que el cliente ya tiene
 ```
 
-🔴 **Lo que hay que medir ANTES de cotizar, y es la acción 1 que el pase 27 deja escrita:** si Open edX expone una
-**superficie REST estable y versionada** equivalente a los Web Services de Moodle. **Si la hay, este patrón se cotiza a
-6–8 semanas. Si no la hay, ésa es la razón por la que nadie lo construyó** — y es un hallazgo igual de valioso que el
-conector. **No se promete el patrón antes de esa verificación.**
+### ✅ La medición se hizo en el pase 28, y el patrón queda **partido en dos cotizaciones**
+
+Se leyeron los `urls.py` del árbol `master` por `raw.githubusercontent.com` (la documentación oficial está bloqueada
+por el proxy). **La respuesta no fue «sí» ni «no»: fue un corte por la mitad de la plataforma**, y cambia cómo se
+vende este patrón.
+
+| Tramo | Superficie medida | Veredicto |
+|---|---|---|
+| **Operación** (matrícula, roles) | `enrollment`, `enrollment/{username},{course_key}`, `enrollments/`, **`unenroll/`**, `roles/`, **`enrollment_allowed/`** | ✅ **Escribe.** Cotizable |
+| **Consumo** (estructura de curso) | `v1/blocks/`, `v1/block_metadata/{usage_key}` **y los tres equivalentes en `v2/`** | ✅ **Versionado en dos versiones.** Cotizable |
+| **Evaluación** (notas) | **`gradebook/{course_id}/bulk-update`** (`GradebookBulkUpdateView`), **`subsection/{subsection_id}/`** (*course_grade_overrides*), `gradebook/{course_id}/`, `policy/courses/{course_id}/`, `submission_history/{course_id}/` | ✅ **Escribe, y POR LOTE** |
+| 🔴 **Autoría** (crear curso/contenido) | `xblock/`, `container/{usage_key}/children`, `course_settings/…`, `course_rerun/…` (21 rutas, `v1`) | 🔴 **El repo declara «the Authoring API is still experimental» y recomienda `v0`** |
+
+🔵 **El dato que mejora la propuesta respecto de lo que el pase 27 suponía: Open edX escribe notas por lote, y el
+conector MIT de Moodle no tiene lote** (`provide_assignment_feedback` es de a una). **En la capacidad que más importa
+para el gap 6, la plataforma sin puerta es más capaz que la que ya tiene dos.** Eso vuelve a este conector el camino
+más corto a un asistente de corrección a escala — ver **P54**, que es su compuerta humana.
+
+**Cómo se cotiza, entonces:**
+
+- ✅ **Conector de operación y evaluación: 6–8 semanas**, sobre superficie versionada y con escritura verificada en el
+  código. **Es el tramo que paga**, porque toca la nota y la matrícula.
+- ⚠️ **Autoría de curso: NO se promete en la misma frase.** Replicar lo que hace `MarcosNahuel/moodle-mcp` (crear
+  curso, secciones, publicar material, armar quiz) obliga a apoyarse en la única parte que el mantenedor marca
+  inestable. **Es el gap 50**, y lo que falta medir es si los endpoints **`v0`** —los que el repo recomienda— cubren
+  ese tramo. **Acción 1 del pase 29.**
+
+⚠️ **La licencia no es el obstáculo, y conviene decirlo primero porque es la primera pregunta del cliente.** Open edX
+es **AGPL-3.0**, pero **un conector que habla REST desde otro proceso no deriva de la plataforma y no hereda la
+AGPL** — es la configuración ya verificada dos veces en esta KB: `canvas-mcp` (MIT) contra Canvas y los dos
+`moodle-mcp` (MIT) contra Moodle, que es **GPL-3.0**.
+
+🔴 **Lo que sigue sin medir, y hay que decirlo en la propuesta:** **no se hizo ninguna llamada HTTP contra una
+instancia.** La superficie está **declarada en el código**, no observada. **OAuth2, *scopes*, *rate limits* y forma de
+las respuestas no están verificados**, y eso es riesgo de estimación, no de viabilidad.
+
+⚠️ **Nota de nomenclatura:** el repo es **`openedx/openedx-platform`**; `openedx/edx-platform` es el nombre viejo y
+**redirige**. Las dos URLs resuelven.
 
 ## P56 — SCORM como formato de salida de la capa generativa: aterrizar en el LMS que el cliente ya tiene, sin integrarse con él (pase 27)
 
@@ -2985,3 +3019,95 @@ pieza que las emite.**
 declaración en el código, por dos métodos independientes** (ejecución del generador en el pase 26, conteo estático de
 anotaciones en el pase 27) — **no por invocación**. Nadie hizo el `tools/list` real. **Alcanza para cotizar el catálogo
 y el alcance; no alcanza para prometer latencia, forma de respuesta ni comportamiento de sesión.** Ver el **gap 40**.
+
+## P58 — Agente de rostering y matrícula sobre OneRoster, con la puerta que ya existe y nadie publicitó (pase 28)
+
+**El patrón que este pase habilita sin construir nada**, y el más barato de arrancar de toda esta KB: la puerta ya
+está escrita, es **0BSD**, y cubre el estándar entero.
+
+**La pieza, verificada de primera mano:** [`trilogy-group/oneroster-ts`](https://github.com/trilogy-group/oneroster-ts)
+— **0BSD**, 10 ★, 3 forks, 39 commits, TypeScript. **Declara 164 métodos sobre 21 recursos OneRoster expuestos como
+MCP tools**, con **lectura y escritura** (`createUser`, `updateClass`, `deleteEnrollment`, `postAcademicSession`),
+sobre **OneRoster v1p2**, con paginación por offset y el `filter` de 1EdTech.
+
+**Por qué vale más que un conector de LMS puntual:** OneRoster **no es una plataforma, es el estándar de intercambio de
+listas** —alumnos, docentes, clases, matrículas, resultados— que el SIS le pasa al LMS. **Un agente que habla OneRoster
+no está atado al LMS del cliente**: funciona contra cualquier stack que implemente el estándar, que es el caso del
+distrito escolar típico de **North America** y de los despliegues que ya pasaron por integración de rostering.
+
+**Wiring:**
+
+```
+[Agente]
+   │
+   ├──MCP──▶ oneroster-ts  (0BSD, 164 métodos, LECTURA Y ESCRITURA)
+   │              │
+   │              ▼
+   │        SIS / LMS que implementa OneRoster v1p2
+   │        (users · classes · enrollments · results · lineItems · orgs)
+   │
+   ├──MCP──▶ moodle-mcp-server (MIT)   ◀── si el LMS es Moodle: la nota y la devolución
+   │
+   └──MCP──▶ learnmcp-xapi (MIT) ──▶ lrsql  ◀── evidencia de lo que el agente hizo
+```
+
+**Los tres entregables que esto cotiza, en orden de menor a mayor riesgo:**
+
+| # | Entregable | Por qué es de bajo riesgo |
+|---|---|---|
+| 1 | **Auditoría de rostering** (lectura): detectar matrículas huérfanas, clases sin docente, duplicados de usuario | **Sólo lee.** Es el *quick win* de semana uno y no toca datos |
+| 2 | **Altas y bajas asistidas con compuerta humana**: el agente propone el lote, una persona confirma | La escritura existe (`createUser`, `deleteEnrollment`) y **la compuerta es el requisito del Annex III** (ver **P49**, **P54**) |
+| 3 | **Reconciliación SIS ↔ LMS continua** | Es el que más paga y el que más hay que medir antes |
+
+🔴 **Las tres cautelas, y son serias:**
+
+- **Los 164 métodos son los que declara el README; este pase no ejecutó el servidor.** Se cita como *«declara 164
+  métodos»*. **Verificarlo es parte de la acción 3 del pase 29.**
+- **10 ★ y 39 commits.** Es un **caso de gap 49** —capacidad alta, promoción nula— y eso es bueno para el hallazgo y
+  **malo para el riesgo de mantenimiento**. **0BSD permite forkear sin ninguna obligación**, y para un entregable de
+  cliente **eso es exactamente lo que hay que hacer: fijar el fork**.
+- **Escribir matrícula es escribir el dato más sensible del sistema.** Ninguna de las tres fases va sin compuerta
+  humana y sin registro de evidencia.
+
+## P59 — El conector MCP de QTI, que es la única ausencia de esta KB medida por tres métodos (pase 28)
+
+**El contraste con P58 es el punto del patrón.** OneRoster parecía vacío y tenía puerta. **QTI parece vacío y está
+vacío**, y se puede afirmar porque se midió por **tres métodos independientes**:
+
+| Método | Resultado |
+|---|---|
+| Consulta a directorio MCP (pase 26) | vacío — **no concluyente** (gap 49) |
+| Patrón de nombre `qti-mcp` / `mcp-qti` (pase 27) | vacío |
+| **Apertura del SDK permisivo** (pase 28) | 🔴 **`examplary/qti` (MIT, QTI 3.0 + 2.1): MCP no se menciona en el repo** |
+
+**Y hay una explicación, que es mejor que un registro de ausencia:** la otra implementación de la capa,
+**`oat-sa/qti-sdk`, es PHP**, y el ecosistema MCP de PHP es marginal. **La ausencia no es casual: el estándar de
+evaluación de 1EdTech vive en el lenguaje donde la puerta de agente no se está construyendo.**
+
+**La pieza sobre la que construir, y es la buena noticia:** `examplary/qti` es **MIT**, **TypeScript** y cubre **QTI
+3.0 (default) y 2.1** — generación **y** parseo de paquetes. Es exactamente la forma de `oneroster-ts` antes de que
+alguien le agregara el *transport*. **El trabajo no es escribir un conector de QTI: es agregarle MCP a un SDK MIT que
+ya habla el estándar**, que es el movimiento más barato que identificó la tendencia **73**.
+
+**Wiring propuesto:**
+
+```
+[Agente autor de evaluaciones]
+        │
+        ├──MCP──▶ qti-mcp  (A CONSTRUIR sobre examplary/qti, MIT → MIT)
+        │             │  generate_item · parse_package · validate_qti3 · export_package
+        │             ▼
+        │        Paquete QTI 3.0  ──▶ banco de ítems / LMS que importa QTI
+        │
+        └──MCP──▶ scorm-mcp-server (MIT)  ◀── la vía alterna de P56 si el LMS no habla QTI
+```
+
+**Dónde encaja en lo que esta KB ya tiene:** es la pieza que le falta a **P48** (migración QTI → banco → entrega
+certificada → evidencia xAPI → competencia en CaSS), donde el primer tramo se hacía **a mano**. Con esto, el tramo de
+autoría y validación de ítems entra a la superficie de agente, y **P48 pasa a ser agéntico de punta a punta salvo la
+entrega certificada**.
+
+⚠️ **Y la cautela de encuadre:** `examplary/qti` tiene **1 ★ y 32 commits**. Es una base pequeña. **Para un entregable
+de cliente se forkea y se fija** — la MIT lo permite sin obligaciones más allá de la atribución. **Lo que no se debe
+hacer es prometer un conector de QTI como si existiera:** no existe, y éste es el patrón para construirlo, no para
+comprarlo.

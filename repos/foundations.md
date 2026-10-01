@@ -24,6 +24,8 @@ updated: 2026-10-01
 > **Pase 27 del 2026-10-01:** **el gap 42 cierra** — la séptima y última candidata, la implementación de referencia de 1EdTech, **no es una implementación**: `1EdTech/ltibootcamp` es una colección de enlaces **sin licencia declarada**, y el código Ruby de la RI está **detrás de la membresía**. *«Esta KB propone la herramienta, no el aula»* queda **cerrado sobre siete candidatas**. Y entra **Open edX como la base de mayor huella pública sin puerta de agente** (**gap 48**). Ver la sección del pase 27, abajo.
 
 
+> **Pase 28 del 2026-10-01:** **se ejecuta la acción 1 del pase 27 y el gap 48 queda contestado leyendo el código fuente**, no la documentación (`docs.openedx.org` y `openedx.atlassian.net` están **los dos bloqueados**; `raw.githubusercontent.com` **sí responde**, y es un canal de verificación nuevo para esta KB). **La respuesta es doble:** la API REST de Open edX **alcanza y escribe** para matrícula, roles, bloques de curso y **notas —incluido el lote—**, pero el ***authoring* de Studio está declarado experimental por el propio proyecto**. Eso parte el gap 48 en dos y abre el **gap 50**. Ver la sección del pase 28, abajo.
+
 ## El lado plataforma de LTI queda cerrado, y Open edX queda como la base sin puerta — agregado en el pase 27 del 2026-10-01
 
 **Dos cosas se cierran en este pase y las dos acotan qué se puede prometer sobre bases de terceros.**
@@ -47,13 +49,30 @@ Ver el **gap 42**.
 
 | Base | Licencia | Qué aporta | Estado de la puerta |
 |---|---|---|---|
-| **Open edX** (`openedx/edx-platform`) | **AGPL-3.0** | La plataforma de los programas educativos públicos grandes —**LATAM e India**—, con **Aspects** (Apache-2.0) como analítica y **Ralph sobre ClickHouse** por default | 🔴 **Ningún conector MCP.** Búsqueda extendida: nada. **Gap 48 · P55** |
+| **Open edX** (`openedx/openedx-platform`, antes `openedx/edx-platform` — **el repo se renombró y la URL vieja redirige**) | **AGPL-3.0** · 8.2k ★ · 4.4k forks · 68.764 commits | La plataforma de los programas educativos públicos grandes —**LATAM e India**—, con **Aspects** (Apache-2.0) como analítica y **Ralph sobre ClickHouse** por default | 🔴 **Ningún conector MCP** — pero el pase 28 midió la base: **la API alcanza para operación y notas, no para *authoring***. Gap 48 (contestado) · **gap 50** · P55 |
 
 **Por qué entra en *foundations* y no sólo en *verticals*.** Lo que falta no es un plugin: es **la superficie de agente
-de la base**. Y hay una verificación pendiente que decide si el patrón **P55** es de 6–8 semanas o es un hallazgo
-negativo — **si Open edX expone una API REST estable y versionada** equivalente a los Web Services de Moodle
-(*Course Blocks*, *Enrollment*, *Grades*, Studio/CMS). **Es la acción 1 que el pase 27 deja escrita, y no se cotiza
-nada antes de ejecutarla.**
+de la base**.
+
+✅ **La verificación pendiente se ejecutó en el pase 28, y el resultado parte el gap en dos.** Leyendo los `urls.py` del
+árbol `master` de primera mano:
+
+| Grupo de API | Rutas | ¿Escribe? |
+|---|---|---|
+| **Course Blocks** | `v1/blocks/`, `v1/blocks/{usage_key}`, `v1/block_metadata/{usage_key}` **y los tres en `v2/`** | Lectura |
+| **Enrollment** | `enrollment`, `enrollment/{username},{course_key}`, `enrollments/`, **`unenroll/`**, `roles/`, **`enrollment_allowed/`** | ✅ **Sí** |
+| **Grades v1** | `courses/`, `policy/courses/{course_id}/`, **`gradebook/{course_id}/`**, **`gradebook/{course_id}/bulk-update`**, **`subsection/{subsection_id}/`**, `submission_history/{course_id}/` | ✅ **Sí — y por lote** |
+| 🔴 **Studio / CMS v1** | 21 rutas (`xblock/`, `course_settings/…`, `container/{usage_key}/children`, `course_rerun/…`, `proctored_exam_settings/…`) | 🔴 **El repo declara «the Authoring API is still experimental» y recomienda `v0`** |
+
+**La lectura, que es la que se cotiza:** para **matrícula, roles, bloques y notas** la superficie está, está versionada
+y **escribe** —`GradebookBulkUpdateView` es el equivalente *bulk* de `provide_assignment_feedback`, y el conector de
+Moodle **no tiene lote**—, así que **ahí la ausencia del conector es puro gap 49**: nadie lo publicó, no que no se
+pueda. Para ***authoring*** la ausencia **tiene causa técnica declarada por el proyecto**, y es el **gap 50**.
+**P55 se cotiza por la mitad de operación y evaluación, y no promete autoría de curso en la misma frase.**
+
+⚠️ **Lo que no se midió, dicho como tal:** **no se hizo ninguna llamada HTTP contra una instancia**. OAuth2, *scopes*,
+*rate limits* y forma de las respuestas **siguen sin verificar** — levantar Open edX exige instalar dependencias de
+terceros, que es el límite de entorno declarado desde el pase 27.
 
 ⚠️ **Nota de licencia que conviene tener presente al proponer sobre Open edX:** la plataforma es **AGPL-3.0**, pero
 —igual que con Moodle y Canvas— **un conector que habla por API con token es un proceso aparte, no un derivado**. Las
