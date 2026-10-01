@@ -1897,6 +1897,21 @@ construido con lo que hay.
   `status`, `dpo`, `dpocomment` y hace `update()`. Sin evento, sin hook, sin notificación.
 - El único observer registrado va **hacia adentro**: `\core\event\user_deleted` → **crear** un pedido.
 
+> 🔴 **ACTUALIZACIÓN DEL PASE 22 — el disparador que este patrón declara inexistente SÍ existe, pero en la otra
+> plataforma, y es Apache-2.0.** Todo lo de arriba sigue siendo cierto **para Moodle**. Para **Open edX** no: el plugin
+> oficial `openedx/platform-plugin-aspects` (**Apache-2.0**, 528 commits) trae el **`UserRetirementSink`**, que
+> **escucha la señal Django `USER_RETIRE_LMS_MISC` y elimina la PII del usuario de ClickHouse** (verificado de primera
+> mano en su README). O sea: **en Open edX el disparador es una señal del framework con un listener permisivo ya
+> escrito.**
+>
+> **Lo que esto cambia en la cotización de este patrón:**
+> - **Cliente Open edX** → el extremo del disparador **deja de ser desarrollo** y pasa a ser **configuración más
+>   verificación**. Lo que hay que auditar es *qué* borra (ver abajo), no *si* dispara.
+> - **Cliente Moodle** → sigue siendo el sondeo del mecanismo (a), **pero ya no hay que diseñarlo de cero**: el
+>   `UserRetirementSink` es la **implementación de referencia**, permisiva y en producción, del lado que recibe.
+> - ⚠️ **Y no hay que sobrevenderlo:** ese sink borra **PII** (tablas de perfil), **no el registro de eventos**, que
+>   Aspects conserva con el argumento de que queda *anonimizado*. Eso es el **gap 37** y está sin resolver. Ver **P45**.
+
 **Entonces hay dos mecanismos posibles, y el (a) es el que se cotiza.**
 
 **(a) Reloj de estado sobre `tool_dataprivacy_request` — recomendado.**
@@ -2218,9 +2233,18 @@ Ninguno de los dos extremos emite evento, así que el pegamento es **un sondeo m
 - **No es conformidad con el estándar, y hay que escribirlo en el contrato.** **xAPI / IEEE 9274.1.1 no define
   supresión** —define *voiding*, que marca sin borrar—. El endpoint de `lrsql` es **extensión propia del producto**: si
   el cliente cambia de LRS, **esto no es portable**.
-- **Con Ralph sobre ClickHouse, este patrón no se puede ejecutar.** ClickHouse declara `DELETE` como operación no
-  soportada. Si el cliente ya eligió ese backend por analítica, **la decisión hay que revisarla antes de la
-  arquitectura**, no al llegar al expediente de privacidad.
+- 🔴 **Con Ralph sobre ClickHouse este patrón no se puede ejecutar — y CORRECCIÓN DEL PASE 22: eso no es una
+  elección del cliente, es el default de Open edX.** El pase 21 escribió esta advertencia como condicional (*«si el
+  cliente ya eligió ese backend por analítica»*). **No es condicional.** El plugin de analítica **oficial** de Open
+  edX —**Aspects**, `openedx/tutor-contrib-aspects`, Apache-2.0, 2.269 commits— **instala Ralph sobre ClickHouse**,
+  junto con Superset, Vector, event-routing-backends y dbt. Un cliente con Open edX y analítica **no eligió** el
+  backend difícil de borrar: lo tiene de fábrica. **Hay que levantarlo en el discovery como supuesto por default**,
+  no al llegar al expediente de privacidad.
+  **Y la razón hay que decirla bien:** ClickHouse no tiene `UPDATE`/`DELETE` de propósito general al estilo OLTP, pero
+  **sí** tiene borrado liviano sobre MergeTree detrás de un setting y mutaciones `ALTER TABLE … DELETE`. La
+  imposibilidad **práctica** se sostiene —no transaccional, dependiente de versión, y el backend ClickHouse de Ralph
+  no lo expone en la API del LRS—, pero *«el motor no puede»* es falso y un arquitecto del cliente lo va a corregir.
+  ⚠️ Dependiente de versión, no verificado de primera mano. Ver **P45** y el **gap 37**.
 - **Con Learning Locker, cuatro condiciones más:** el flag `ENABLE_STATEMENT_DELETION` (en `false` el worker descarta
   el job **en silencio**), la **ventana UTC** de borrado y la dependencia del proceso *scheduler* que rescata los jobs
   fuera de ventana, el hecho de que **`done:true` no significa borrado** (hay que comparar `deleteCount` contra
@@ -2229,3 +2253,93 @@ Ninguno de los dos extremos emite evento, así que el pegamento es **un sondeo m
 - **El borrado no es reversible y no hay confirmación previa.** `delete-actor-and-dependents!` corre en una
   transacción y no tiene *dry-run*. El conteo previo del paso 2 cumple además esa función: **es la única oportunidad de
   ver qué se va a borrar antes de borrarlo.**
+
+---
+
+## P45 — El expediente de supresión sobre Open edX + Aspects: la plataforma donde el disparador ya existe y lo que falta es la auditoría de qué se borró de verdad (agregado en el pase 22; **EMEA primero por art. 17, North America por AB 1159, transversal por Anexo III**)
+
+**Problema.** Un cliente sobre **Open edX** con analítica tiene, sin haberlo decidido, el stack oficial **Aspects**:
+Ralph sobre ClickHouse, Superset, dbt. Cuando llega un pedido del art. 17, pasan dos cosas al mismo tiempo y las dos
+hay que decirlas: **(1)** el disparador existe —el `UserRetirementSink` escucha `USER_RETIRE_LMS_MISC` y borra la PII
+de ClickHouse—, y **(2)** lo que queda en la telemetría es el **registro conductual completo**, conservado con el
+argumento de que está *anonimizado*. **El entregable de este patrón no es construir el borrado: es auditar y
+evidenciar qué se borró, y cerrar por contrato lo que no.**
+
+**Por qué es distinto de P44.** P44 es el patrón para **`lrsql`**: ahí el primitivo de borrado es excelente
+(por `actor-ifi`, 7 tablas, transaccional) y **viene apagado**. Acá el primitivo es **parcial** (PII sí, eventos no) y
+**viene encendido**. Son dos ventas distintas: P44 enciende y evidencia; **P45 audita, acota y documenta.**
+
+### Las piezas, todas verificadas en esta KB
+
+| Pieza | Licencia | Rol en este patrón |
+|---|---|---|
+| **`tutor-contrib-aspects`** · `openedx` | **Apache-2.0** ✅ | El stack que el cliente **ya tiene**: ClickHouse + Superset + Ralph + Vector + event-routing-backends + dbt |
+| **`platform-plugin-aspects`** · `openedx` | **Apache-2.0** ✅ | Donde vive el **`UserRetirementSink`** y el flag `ASPECTS_ENABLE_PII`. **Es el archivo que hay que leer**, no el que hay que escribir |
+| **Open edX** `user_retirement` | AGPL-3.0 ⚠️ | El lado donde el pedido se registra y se aprueba. **No forkear:** el sink entra por señal, es el punto de extensión limpio |
+| **`inspect_ai`** (UK AISI) | **MIT** ✅ | Para empaquetar la auditoría como **corrida reproducible** y no como documento. Es **P42** aplicado acá |
+| **OpenUnlearning** | **MIT** ✅ | Sólo si el alcance incluye el modelo. Es el **gap 34** y **no hay que prometerlo** |
+
+### El wiring, en cuatro pasos, y el único desarrollo real es el paso 3
+
+**Paso 1 — leer el sink antes de prometer nada. Es el paso que decide si el resto del patrón es vendible.**
+Hay que contestar la pregunta del **gap 37** sobre la instancia del cliente: cuando corre el `UserRetirementSink`,
+**¿qué le pasa al identificador del actor en las tablas de eventos — se borra, se rota o se deja?**
+
+```
+UserRetirementSink  ──escucha──▶  señal Django USER_RETIRE_LMS_MISC
+       │
+       ├──▶ borra PII en ClickHouse:  user_profile · external_id · auth_user
+       │                               (gobernado por ASPECTS_ENABLE_PII)
+       │
+       └──▶ ❓ tablas de eventos / statements xAPI  ── ¿actor-ifi?
+                 • si se BORRA o se ROTA  → la postura de Aspects es defendible, escribirlo así
+                 • si se DEJA             → es dato personal pseudonimizado, y hay que decirlo en el contrato
+```
+
+**Si se deja, la frase que corresponde en la propuesta no es «cumplimos el art. 17»**, es *«se suprime la
+identificación directa y se conserva el registro de actividad pseudonimizado, cuya base legal de retención hay que
+declarar»*. Esa frase es defendible; la otra no.
+
+**Paso 2 — verificar que el control de privacidad no esté sorteado.** El **PR #1328** de `tutor-contrib-aspects`
+documenta que el *job* manual de *backfill* volcaba `user_profile` / `external_id` a ClickHouse **aun con
+`ASPECTS_ENABLE_PII=False`**, *«sorteando exactamente la protección que ese setting existe para dar»*. 🔴 **Está
+cerrado sin mergear (2026-09-16).** Entonces: comprobar en la versión del cliente si el *check* de PII está en el
+camino manual **además** del automático. **Si no está, el flag no es un control y no se puede escribir como tal en un
+expediente.**
+
+**Paso 3 — producir la evidencia, porque el producto no la produce.** Es el mismo trabajo que el paso 2 de **P44** y
+es el único desarrollo: envolver la retirada en un servicio propio que **cuente antes y después** —statements del
+actor, filas en las tablas de PII— y registre el par *(antes, después, timestamp, operador, id del pedido de
+retirement)* en un registro **append-only**. Sobre ClickHouse el conteo se hace con SQL directo contra las tablas de
+eventos, que es más fácil que en P44: **la analítica ya está instalada y Superset ya está ahí para mostrarlo.** Ese
+registro **es** el expediente del art. 17.
+
+**Paso 4 — empaquetarlo como corrida reproducible (P42), no como PDF.** La auditoría de los pasos 1–3 se escribe como
+*eval* sobre **`inspect_ai`** (MIT): dado un usuario de prueba, retirarlo y **afirmar** que las tablas de PII quedaron
+vacías y que el identificador de actor hizo lo que el paso 1 determinó. Así el expediente **se vuelve a correr en cada
+upgrade de Aspects** en vez de envejecer — y los upgrades de Aspects son frecuentes (2.269 commits).
+
+### Cómo se cotiza
+
+| | Lo que parecía | Lo que corresponde cotizar |
+|---|---|---|
+| Disparador LMS → telemetría | Desarrollo (como en Moodle) | **Ya existe.** Lectura y verificación del sink |
+| Borrado de PII | Desarrollo | **Ya existe y viene encendido.** Verificación |
+| Borrado del registro de eventos | Se asumía incluido | 🔴 **NO existe.** Es decisión de retención y **cláusula contractual**, no desarrollo |
+| Evidencia | No estaba identificada | **Servicio chico + registro append-only** (igual que P44) |
+| Repetibilidad | — | ***Eval* sobre `inspect_ai`** (P42) |
+
+### ⚠️ Lo que este patrón NO promete
+
+- **No borra el registro de aprendizaje, y ésa es la parte que el cliente cree que está comprando.** Aspects conserva
+  los eventos. Si el cliente necesita supresión real del registro conductual sobre Open edX, **el stack oficial no la
+  da** y hay que discutir arquitectura: migrar la telemetría a **`lrsql`** (Apache-2.0, y entonces es **P44**, que sí
+  borra por actor en cascada) o aceptar y declarar la retención. **Esa conversación va al principio del proyecto.**
+- **No alcanza al modelo.** Igual que P44: borra registro, no influencia en los pesos. Es el **gap 34**, camino **P38**.
+- **No está cerrado el gap 37, y el paso 1 es literalmente ir a cerrarlo.** Esta KB **no verificó de primera mano** qué
+  pasa con el identificador del actor: el ADR de PII de Aspects vive en `docs.openedx.org`, bloqueado por el proxy en
+  el pase 22. **No presentar la lectura optimista ni la pesimista como hecho verificado** — el paso 1 existe para
+  contestarlo sobre la instancia real, que además es la única respuesta que importa.
+- **Y la limitación está reconocida por dos proveedores, lo que la vuelve defendible.** El Feature Wiki de **ILIAS**
+  declara por escrito que el dato personal **persiste en el LRS** al borrar un objeto xAPI/cmi5 (tendencia **55**), y
+  Aspects documenta su retención **en su propia decisión de arquitectura**. **No es una carencia que invente esta KB.**

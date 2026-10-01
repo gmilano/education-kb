@@ -221,6 +221,48 @@ Un LMS gestiona el aprendizaje y un SIS gestiona la institución; **un LRS guard
 
 ⚠️ **Lo que no se pudo confirmar, y hay que confirmarlo antes de proponerlo:** que el módulo de educación sea **parte del core de ERPNext**. En el repo lo único con ese nombre que aparece es *Frappe School*, que es una plataforma de cursos sobre el propio framework, no un módulo de gestión académica. La funcionalidad educativa de ERPNext fue históricamente una app aparte. **Registrarlo como candidato sólo cuando el cliente ya corre ERPNext** (evita meter un segundo ERP), y verificar primero en qué app vive el módulo. No desplaza a GegoK12 ni a OpenEduCat.
 
+## 🔴 Capa de analítica de Open edX — agregada en el pase 22 del 2026-10-01, y cambia el supuesto de partida de la fila de Open edX
+
+**Lo que esta KB suponía hasta acá:** que el LRS es una **elección de arquitectura** y que para un cliente Open edX
+«se recomienda Ralph» (la fila de Ralph en la capa de telemetría, arriba). **Lo que este pase encontró:** para Open edX
+no hay elección — **hay un stack de analítica oficial y trae el LRS puesto.**
+
+| Pieza | Licencia | ★ | Commits | Qué instala / qué hace |
+|---|---|---|---|---|
+| **Aspects** · https://github.com/openedx/tutor-contrib-aspects | **Apache-2.0** ✅ | 14 | 2.269 | El plugin de analítica y reporting **oficial** de Open edX. Orquesta vía Tutor: **ClickHouse** + **Apache Superset** + **Ralph** (LRS) + **Vector** + **event-routing-backends** (xAPI) + **dbt** |
+| **platform-plugin-aspects** · https://github.com/openedx/platform-plugin-aspects | **Apache-2.0** ✅ | 6 | 528 | Los *sinks* LMS/Studio → ClickHouse y los dashboards de Superset **embebidos en la interfaz del docente**. Trae el `UserRetirementSink` |
+
+**El arbitraje de licencia, y es el que esta KB busca:** Open edX es **AGPL-3.0**, pero **su capa de analítica oficial
+es Apache-2.0**. Lo que un estudio customiza —dashboards, métricas, modelos de datos, sinks— es **permisivo**; lo
+copyleft es el sustrato que no se forkea. Misma receta que el resto de este archivo, ahora con una capa entera a favor.
+
+### Lo que hay que levantar en el *discovery*, y es lo que cambió
+
+1. **Si el cliente tiene Open edX con analítica, ya está en la configuración difícil de borrar.** El pase 21 declaró
+   que **Ralph sobre ClickHouse** no puede ejecutar el borrado del alumno (**P44**), y lo planteó como un riesgo *«si
+   el cliente eligió ese backend»*. **Aspects instala exactamente eso, de fábrica.** No fue una elección: es el
+   default. Hay que preguntarlo en el discovery, no al llegar al expediente de privacidad.
+2. **Pero el disparador de supresión existe, y en Moodle no.** `UserRetirementSink` **escucha la señal Django
+   `USER_RETIRE_LMS_MISC` y borra la PII del usuario de ClickHouse** (verificado de primera mano en el README). El
+   pase 19 probó que Moodle **no emite ningún evento** al aprobar un pedido de supresión —cero `trigger()` en los 187
+   archivos de `tool_dataprivacy`—. **En esta dimensión Open edX está por delante de Moodle, y es Apache-2.0.**
+3. ⚠️ **Y borra el nombre, no la conducta.** El sink borra las tablas de perfil (`user_profile`, `external_id`,
+   `auth_user`, gobernadas por `ASPECTS_ENABLE_PII`) y **conserva el dato de eventos**, con el argumento de que queda
+   **anonimizado**. Es el **gap 37**: un *statement* xAPI indexado por un `actor-ifi` estable es **pseudonimizado, no
+   anónimo**, y eso bajo GDPR sigue siendo dato personal. **No prometer «derecho al olvido» sobre Open edX + Aspects
+   sin haber leído qué pasa con el identificador del actor.**
+4. **El control de privacidad tiene un camino documentado que lo sortea, y el parche no entró.** El **PR #1328** de
+   `tutor-contrib-aspects` describe que el *job* manual de *backfill* volcaba `user_profile` / `external_id` a
+   ClickHouse **aun con `ASPECTS_ENABLE_PII=False`**, *«sorteando exactamente la protección que ese setting existe para
+   dar»*. 🔴 **Cerrado por su autor el 2026-09-16 sin mergear.** Si una propuesta se apoya en ese flag como control,
+   **verificarlo contra la versión del cliente**.
+
+**Y es el segundo proveedor que documenta el mismo límite por escrito.** El pase 21 registró que el Feature Wiki de
+**ILIAS** declara que al borrar un objeto xAPI/cmi5 el dato personal **persiste en el LRS** y que ILIAS no tiene forma
+de borrarlo (tendencia **55**). Con Aspects, la plataforma lo documenta **en su propia decisión de arquitectura**. Eso
+es lo que vuelve el argumento defendible en una propuesta: **no es una carencia que invente esta KB, es la postura
+escrita de los proveedores.** Ver **P45**.
+
 ## Tutores desplegables — agregada en el pase 7 del 2026-10-01
 
 Esta KB venía listando tutores en `agents/top.md` sin separar los que **se despliegan y se customizan** (que es de lo que trata este archivo) de los que son librerías o referencias. El pase 7 encontró tres tutores con tracción que no estaban registrados, y los tres son **self-hosted con interfaz de usuario completa** — o sea candidatos de esta capa, no de la de agentes.

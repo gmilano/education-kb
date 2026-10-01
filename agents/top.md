@@ -15,6 +15,21 @@ updated: 2026-10-01
 **37 filas = 35 agentes + 2 bibliotecas de skills.** Ordenados por stars. El conteo se hizo a mano en el pase 19 y
 se explica abajo, porque es la cuarta vez que esta KB se pelea con este número.
 
+> *Pase 22 del 2026-10-01:* **la tabla sigue en 37 filas, y es el cuarto pase consecutivo sin altas — el primero que
+> mide el agotamiento en vez de declararlo.** Se corrió el barrido completo (cuatro búsquedas globales + cuatro
+> regionales) y **los dos únicos candidatos que trajo ya estaban acá, con más precisión que la fuente**: `OpenMAIC`
+> (la web lo da como «v1.0.0, MIT» y omite que **se relicenció de AGPL-3.0 a MIT en v0.3.0 del 2026-06-28**) y
+> `AITutor-EvalKit` (que esta KB ya corrigió en el pase 4: el repo canónico del mismo autor es
+> `UnifyingAITutorEvaluation`, 32 ★). El detalle candidato por candidato está en `agents/trending.md`.
+> **El hallazgo del pase está en la capa de infraestructura, no acá:** el stack de analítica **oficial** de Open edX
+> (**Aspects**, Apache-2.0, 2.269 commits) instala **Ralph sobre ClickHouse** —la configuración que el pase 21 declaró
+> imborrable, que resulta ser el **default de la plataforma** y no una elección del cliente— y a la vez **trae el
+> disparador de supresión LMS → telemetría que el pase 19 probó inexistente en Moodle** (`UserRetirementSink`,
+> escuchando la señal Django `USER_RETIRE_LMS_MISC`). Corrige una advertencia de **P44**, cambia el estado de **P40**
+> y abre el **gap 37**. Además se **reconfirmó el gap 36 por lectura independiente del código de `lrsql`**, con el
+> sitio exacto del parche (`interceptors/lrs_management.clj:23–33`) y con una sub-pregunta que quedó **sin contestar
+> y declarada**, no inferida.
+
 > *Pase 21 del 2026-10-01:* **la tabla principal sigue en 37 filas, y es el tercer pase consecutivo que no agrega
 > agentes a propósito.** Este pase ejecutó la acción que el pase 19 dejó escrita como «la pregunta de mayor rendimiento»
 > y que el pase 20 no tomó: **confirmar el borrado en la capa de telemetría (gap 33)**. Se ejecutó **clonando los tres

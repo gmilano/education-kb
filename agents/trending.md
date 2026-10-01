@@ -9,6 +9,62 @@ updated: 2026-10-01
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 > No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
 
+## 2026-10-01 (pase 22) — cuarto pase consecutivo sin agregar agentes, y el barrido obligatorio se agotó por cuarta vez: los dos candidatos que trajo ya estaban en la KB, medidos con más precisión que la web
+
+**La tabla principal sigue en 37 filas.** Este pase corrió el barrido completo —las cuatro búsquedas globales y las
+cuatro regionales— y **no encontró un solo agente que esta KB no tuviera**. Vale escribir cuáles trajo, porque un
+barrido agotado y documentado es información, mientras que el silencio se lee igual que la cobertura:
+
+| Candidato que trajo la búsqueda | Qué dijo la web | Qué tenía ya esta KB |
+|---|---|---|
+| **OpenMAIC** | «MIT, v1.0.0 del 2026-08-27, construido con LangGraph» | Registrado con **39,7k ★**, v**1.1.2** del 2026-09-28, 653 commits — y con **la advertencia que la web no da: relicenciado de AGPL-3.0 a MIT en v0.3.0 (2026-06-28)**, así que la licencia permisiva tiene ~3 meses y no cubre el historial |
+| **AITutor-EvalKit** | «el primer modelo open source de evaluación de calidad pedagógica, MIT» | Registrado desde el pase 1 con **3 ★**, y **corregido en el pase 4**: el repo canónico del mismo autor (Kaushal Kumar Maurya, MBZUAI) es `UnifyingAITutorEvaluation` (**32 ★**), que publica la taxonomía de 8 dimensiones y MRBench V1/V2/V3 completo |
+
+**Las dos veces la KB estaba más precisa que la fuente, y las dos veces la diferencia era material** —una licencia con
+tres meses de antigüedad y un repo canónico equivocado son exactamente los errores que hunden una propuesta—. Es la
+cuarta pasada sin altas y **la primera en la que el agotamiento está medido candidato por candidato** en vez de
+declarado: las búsquedas que el barrido prescribe ya no alcanzan material nuevo para esta vertical.
+
+**Qué habría que cambiar para que el barrido vuelva a rendir.** Los tres pases que sí movieron la tabla lo hicieron
+cambiando el **eje de búsqueda**, no insistiendo con el mismo: el pase 4 buscó *benchmark* en vez de *repo de agente*,
+el pase 17 buscó `SKILL.md` + dominio educativo, y **este pase encontró lo que encontró buscando la plataforma
+(`LMS open source`) y no el agente**. La consigna operativa para el próximo pase es la misma: **el rendimiento está en
+cambiar el sustantivo de la búsqueda, no la región.**
+
+### El pase no vino a buscar agentes: vino a reconfirmar el gap 36, y lo reconfirmó de primera mano
+
+El pase 21 cerró el **gap 33** por refutación leyendo el código de `lrsql`, y dejó el **gap 36** declarado como *«el
+más chico y más upstreameable de esta KB»*. Este pase **volvió a clonar `lrsql` y leyó el interceptor por su cuenta**,
+porque un hallazgo que invierte el argumento de tres patrones merece una segunda lectura independiente. **Se confirma,
+y ahora con el sitio exacto del parche:**
+
+| | |
+|---|---|
+| **Ruta** | `DELETE /admin/agents`, en `src/main/lrsql/admin/routes.clj:331` — registrada **sólo si** el flag está encendido (`routes.clj:407`), así que apagada el síntoma es **404 y no 403** |
+| **Protocolo** | `-delete-actor`, declarado en `src/main/lrsql/admin/protocol.clj:58` |
+| 🔴 **El sitio del parche** | `src/main/lrsql/admin/interceptors/lrs_management.clj:23–33`. El cuerpo del interceptor es `(adp/-delete-actor lrs params)` **como expresión suelta, cuyo valor de retorno se descarta**, y la respuesta es `{:status 200 :body params}` |
+| **Qué significa `params`** | es el `::data` que dejó el interceptor de validación anterior — o sea **el `actor-ifi` que mandó el cliente**. La respuesta es un eco de la entrada |
+
+**Entonces el gap 36 queda confirmado por lectura independiente y con coordenadas:** no hay registro de auditoría, no
+hay evento, y el único testigo del borrado es un `200` que repite lo que uno mandó. Para un expediente del art. 17 o de
+**AB 1159** (operativa el **2027-07-01**) eso no es prueba de nada.
+
+⚠️ **Lo que este pase NO pudo verificar, y hay que declararlo porque cambia el tamaño del parche.** Queda abierta una
+sub-pregunta concreta: **¿`-delete-actor` ya devuelve los conteos de filas afectadas, o hay que plomearlos desde la
+capa SQL?** Si ya los devuelve, el parche es **una línea** —cambiar `:body params` por el valor de retorno—; si no,
+hay que propagarlos por la implementación del protocolo. **La traza de la implementación quedó bloqueada por el
+clasificador de seguridad del entorno en este pase** (dos denegaciones al explorar el árbol clonado de terceros), así
+que la pregunta no se pudo contestar y **no se contestó por inferencia**. Es lo primero que tiene que hacer el próximo
+pase sobre este gap, y es una sola lectura: la implementación de `-delete-actor` y su `:result` en la capa SQL.
+
+### Dónde está el hallazgo grande de este pase
+
+No está en esta capa. Está en **`repos/trending.md`**: el stack de analítica **oficial** de Open edX (**Aspects**,
+Apache-2.0) instala **Ralph sobre ClickHouse** —la configuración que el pase 21 declaró imposible de borrar, que
+resulta no ser una elección del cliente sino el default de la plataforma— y al mismo tiempo **trae el disparador de
+supresión LMS → telemetría que el pase 19 probó que no existe en Moodle**, como listener Apache-2.0 de una señal
+Django. Eso corrige una advertencia de **P44**, cambia el estado de **P40**, y abre el **gap 37**.
+
 ## 2026-10-01 (pase 21) — tercer pase consecutivo sin agregar agentes a la tabla, y el primero que corrige una afirmación que esta KB venía vendiendo al revés: el almacén permisivo que recomienda sí sabe borrar al alumno
 
 **La tabla principal sigue en 37 filas.** Este pase no buscó agentes: fue a **ejecutar la acción 1 del pase 19** —

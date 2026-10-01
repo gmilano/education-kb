@@ -2039,6 +2039,82 @@ acá no.
 
     ⚠️ **Y los dos límites de alcance, para no venderlo más grande de lo que es.** Primero: devolver el conteo **no** resuelve el disparador LMS→LRS, que sigue siendo integración (**P40**). Segundo: el conteo de filas afectadas **no es** una prueba criptográfica de borrado — es telemetría de la operación. Para un régimen de alto riesgo hay que combinarlo con el registro del pedido en el LMS (`tool_dataprivacy`, pase 19) y con el expediente de **P35**.
 
+## 57. La capa de analítica del LMS open source más desplegado es permisiva mientras su núcleo es AGPL — y trae el LRS puesto, así que la «elección de arquitectura» que esta KB suponía no existe (agregado 2026-10-01, pase 22)
+
+**El dato.** **Aspects** (`openedx/tutor-contrib-aspects`, **Apache-2.0**, 14 ★, 32 forks, **2.269 commits**) es el
+plugin de analítica y reporting **oficial** de Open edX, e instala vía Tutor un stack entero: **ClickHouse** +
+**Apache Superset** + **Ralph** (el LRS) + **Vector** + **event-routing-backends** (xAPI) + **dbt**. Su complemento del
+lado LMS/Studio, `openedx/platform-plugin-aspects` (**Apache-2.0**, 528 commits), empuja el dato a ClickHouse y
+**embebe dashboards de Superset dentro de la interfaz del docente**.
+
+**Por qué es tendencia y no una ficha de repo.** Dos cosas, y las dos cambian decisiones:
+
+1. **El arbitraje de licencia se repite por tercera vez en esta KB.** Open edX es **AGPL-3.0** —el peor caso para
+   SaaS—, pero **la capa que un estudio efectivamente customiza es Apache-2.0**. Es la misma forma que el pase 14
+   encontró en la capa curricular y el pase 20 en la de conformidad: **lo que se toca es permisivo, lo copyleft es el
+   sustrato que no se forkea.** Ya no es una casualidad: es el patrón de cómo se gobierna el open source educativo
+   maduro —núcleo protegido, periferia abierta— y es a favor de quien construye.
+2. **Para Open edX, el LRS no es una decisión.** Hasta el pase 21 esta KB razonaba el almacén como elección de
+   arquitectura (`lrsql` para producción permisiva, Ralph para Open edX). **Si hay analítica oficial y trae el LRS
+   puesto, el cliente no eligió: hereda.** Y hereda, específicamente, la configuración que el pase 21 declaró
+   imposible de borrar. **El discovery tiene que preguntar qué stack de analítica corre, no qué LRS eligieron.**
+
+⚠️ **Las estrellas de esta capa no miden nada** (14 y 6) y no hay que leerlas como tracción: es infraestructura de
+plataforma, no un proyecto que compite por atención. La señal son los commits y la organización que publica.
+
+## 58. Los dos LMS open source grandes divergen en la plomería del art. 17: en Moodle el disparador de supresión no existe, en Open edX es una señal del framework con listener permisivo (agregado 2026-10-01, pase 22)
+
+**El dato, medido en los dos lados y en dos pases distintos:**
+
+| | Moodle | Open edX |
+|---|---|---|
+| ¿Emite evento al aprobar/ejecutar una supresión? | 🚫 **No.** Pase 19: **187 archivos** de `tool_dataprivacy`, **cero** `trigger()`. `api::update_request_status()` es una escritura de base y nada más | ✅ **Sí.** Señal Django **`USER_RETIRE_LMS_MISC`** |
+| ¿Hay listener que propague a la telemetría? | 🚫 No en el núcleo. El único antecedente (`local_gdpr_deleteuserdata`, GPL-3.0) **es de 2018 y pide Moodle 3.5** contra un núcleo en 5.3 | ✅ **`UserRetirementSink`** en `platform-plugin-aspects`, **Apache-2.0**, que borra la PII del usuario de ClickHouse |
+| Cómo se construye el puente | **Sondeo** de `tool_dataprivacy_request.status` — la única superficie observable | **Ya construido.** Configuración y verificación |
+
+**Por qué importa más que como detalle técnico.** Esta KB venía diciendo, desde el pase 19 y en **P40**, que el
+disparador LMS → telemetría **no existe**. Dicho así es falso: **no existe en Moodle.** En Open edX existe, está en el
+núcleo del ecosistema oficial y es permisivo. Consecuencias comerciales directas:
+
+- **La elección de LMS del cliente ahora tiene una consecuencia de cumplimiento medible**, y es un argumento que se
+  puede poner sobre la mesa en una evaluación de plataforma. No es preferencia: es cuánto cuesta el expediente del
+  art. 17 sobre cada una.
+- **Para un proyecto Moodle, el diseño ya no hay que inventarlo:** el `UserRetirementSink` es la implementación de
+  referencia, permisiva y en producción, del extremo que recibe.
+
+⚠️ **Y la simetría no es completa, así que no hay que venderla como tal:** el sink de Open edX borra **PII**, no el
+registro de eventos. Ver la tendencia 59.
+
+## 59. «Anonimizado» se está volviendo el argumento de retención por default: borrar el nombre y conservar la conducta, y ya son dos plataformas que lo documentan por escrito (agregado 2026-10-01, pase 22)
+
+**El dato.** Ante un pedido de supresión, el stack oficial de Open edX borra las tablas de **PII**
+(`user_profile`, `external_id`, `auth_user`, gobernadas por el flag `ASPECTS_ENABLE_PII`) y **conserva el dato de
+eventos del usuario retirado**, con el argumento de que **queda anonimizado**. Y el pase 21 registró que el Feature
+Wiki de **ILIAS** declara por escrito que al borrar un objeto xAPI/cmi5 el dato personal **persiste en el LRS** y que
+ILIAS no tiene forma de borrarlo (tendencia **55**).
+
+**Por qué es tendencia.** Son **dos proveedores europeos/globales de LMS que documentan el mismo límite en su propia
+documentación de arquitectura**, en vez de ocultarlo. Eso tiene dos lecturas y las dos se usan:
+
+- **A favor de una propuesta:** la carencia **no la inventa esta KB** — está escrita por el proveedor. Un argumento de
+  cumplimiento que cita la decisión de arquitectura del propio producto es defendible ante un comité.
+- **Como riesgo que hay que acotar:** un *statement* xAPI está indexado por un identificador de actor estable
+  (`actor-ifi`). Un registro **pseudonimizado no es anónimo**, y bajo GDPR sigue siendo dato personal. **Si el
+  identificador sobrevive a la retirada, «anonimizado» está haciendo un trabajo legal que puede no sostener** — y lo
+  que queda retenido es el expediente conductual completo de alguien que ejerció el art. 17. Ése es el **gap 37**.
+
+**La consecuencia práctica, que es de redacción de propuesta.** Sobre Open edX + Aspects la frase correcta **no es**
+*«cumplimos el derecho al olvido»*; es *«se suprime la identificación directa y se conserva el registro de actividad
+pseudonimizado, cuya base legal de retención se declara»*. La primera no se sostiene en una inspección; la segunda sí.
+Ver **P45**.
+
+⚠️ **Verificación declarada:** el `UserRetirementSink`, la señal y las tablas de PII están **verificados de primera
+mano** (README de `platform-plugin-aspects`). La afirmación de que *el dato de eventos se conserva porque queda
+anonimizado* viene de **snippets concordantes de búsqueda, no de lectura directa**: el ADR que la contiene está en
+`docs.openedx.org`, **bloqueado por el proxy de egreso** en este pase, y los dos caminos alternativos probados
+devolvieron 404. URL anotada para el próximo pase:
+`https://docs.openedx.org/projects/openedx-aspects/en/latest/technical_documentation/decisions/0009_pii.html`.
+
 ## Fuentes
 
 Cadena de borrado en la capa de telemetría — **pase 21 (2026-10-01)**. 🟢 **Verificado de primera mano leyendo el
@@ -2098,6 +2174,57 @@ Barrido regional del pase 21 (🔴 **ninguna fuente abierta de primera mano; tod
 [UNU/UNESCO — AI en educación superior en LAC](https://unu.edu/publication/ai-implementation-higher-education-latin-america-and-caribbean) ·
 [BID — marco regulatorio habilitante para AI en LAC](https://publications.iadb.org/publications/english/document/An-Enabling-Regulatory-Framework-for-Artificial-Intelligence-in-Latin-America-and-the-Caribbean.pdf) ·
 [Barchart — adopción de AI en LATAM, expectativas 2026](https://www.barchart.com/story/news/36012717/industry-demand-is-driving-ai-adoption-from-the-ground-up-in-latin-america-heres-what-to-expect-in-2026)
+
+## Nota de método del pase 22 (2026-10-01) — el pase que midió su propio agotamiento, y encontró el hallazgo en la búsqueda que no era sobre agentes
+
+**Qué se ejecutó.** El barrido obligatorio completo —cuatro búsquedas globales y cuatro regionales (North America,
+EMEA, APAC, LATAM)— más la reconfirmación independiente del **gap 36** leyendo el código de `lrsql`.
+
+**Resultado del barrido: agotado por cuarta vez consecutiva, y por primera vez medido candidato por candidato.**
+
+- **Cero agentes nuevos.** Los dos únicos candidatos que trajo la búsqueda ya estaban en la KB **y la KB los tenía más
+  precisos que la fuente**: `OpenMAIC` (la web lo da como «v1.0.0, MIT» y omite el **relicenciamiento de AGPL-3.0 a MIT
+  en v0.3.0 del 2026-06-28**, que es exactamente el dato que hunde una propuesta) y `AITutor-EvalKit` (ya corregido en
+  el pase 4: el repo canónico del mismo autor es `UnifyingAITutorEvaluation`, 32 ★).
+- **Cero cifras de mercado nuevas.** Las ocho que devolvió el barrido regional —global $7,52B→$10,6B al 40,9% y los
+  $79,6B a 2034; North America $951M→$2.303,2M al 15,9%; APAC $591,6M→$1.848,1M al 20,9%; la encuesta LATAM 2026 del
+  Digital Education Council con 92%/79% y la grilla de gobernanza 26,0/18,5/9,0; el programa educativo de OpenAI con 8
+  socios y los USD 169 M— **ya estaban todas en `intel/market.md`, con fuente y con las discrepancias metodológicas
+  declaradas**. Se reconfirman, no se agregan.
+- **Y una donde la KB le gana en precisión a la web, que conviene saber porque el cliente leyó la web:** las fuentes
+  generalistas dicen que el EU AI Act *«entra plenamente en vigor en agosto de 2026»* clasificando educación como alto
+  riesgo. **El calendario real que esta KB tiene es más fino** —en vigor 2026-07-27, aplicación por el AI Office desde
+  2026-08-02, **Anexo III (educación) el 2027-12-02**— y la diferencia es de **16 meses de margen** sobre la obligación
+  que al cliente más le preocupa. Hay que llevar el calendario, no la nota de prensa.
+
+**Lo que esto dice sobre el método, y es la conclusión operativa del pase.** Los tres pases que movieron la tabla lo
+hicieron **cambiando el sustantivo de la búsqueda**, no la región: el pase 4 buscó *benchmark* en vez de *repo de
+agente*, el pase 17 buscó `SKILL.md` + dominio educativo, y **este pase encontró lo que encontró buscando
+`plataforma / LMS open source` — no buscando agentes**. El barrido regional lleva cuatro pasadas dando confirmación.
+**El rendimiento está en cambiar el eje, no en insistir con el mismo y rotar el país.**
+
+**Qué se verificó de primera mano.** `tutor-contrib-aspects` y `platform-plugin-aspects` (licencia, estrellas, forks,
+commits, lenguaje, y el `UserRetirementSink` leído en el README); el **PR #1328** (título, autor, estado **cerrado sin
+mergear** el 2026-09-16, y la descripción del bypass del flag de PII); y el interceptor de `lrsql`
+(`interceptors/lrs_management.clj:23–33`, `routes.clj:331` y `:407`, `protocol.clj:58`) por lectura directa del árbol
+clonado.
+
+**Qué NO se pudo verificar, y queda declarado en vez de inferido.** Dos cosas, las dos con su causa:
+
+1. **El ADR de PII de Aspects** —la fuente de la afirmación *«el dato de eventos no se elimina porque queda
+   anonimizado»*— vive en `docs.openedx.org`, **bloqueado por el proxy de egreso**, igual que `arxiv.org` en los pases
+   6, 7, 14, 16–19 y `moodle.org` en el 19. Los dos caminos alternativos (el `.rst` crudo y el listado del directorio
+   de decisiones en GitHub) dieron **404**. La afirmación se registra por snippets concordantes, con la URL anotada.
+2. **Si `-delete-actor` ya devuelve los conteos de filas afectadas** —la sub-pregunta que decide si el parche del
+   **gap 36** es de una línea o necesita plomería—. **La traza de la implementación quedó bloqueada por el clasificador
+   de seguridad del entorno** (dos denegaciones al explorar el árbol clonado de terceros). **No se contestó por
+   inferencia**, que era la tentación obvia teniendo el resto del archivo a la vista.
+
+**La regla que este pase agrega a las de los pases 5 y 12.** El pase 5 escribió que *«el proxy de egreso decide qué se
+puede afirmar»*. Este pase agrega la otra mitad: **el entorno también decide qué se puede investigar, y cuando bloquea
+una lectura la respuesta correcta es declarar la pregunta abierta con su coordenada exacta, no completarla con lo que
+probablemente diga el código.** Las dos veces que esta KB se equivocó en grande —el gap 33 y las estrellas de los
+ciclos 1–3— fue por afirmar sin leer.
 
 ## Nota de método del pase 21 (2026-10-01) — el pase que ejecutó la acción escrita hace dos pasadas, y encontró que la KB se había equivocado a su propio favor comercial
 

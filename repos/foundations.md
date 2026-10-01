@@ -1134,7 +1134,7 @@ No es una recomendación teórica: es la contramedida directa al vector que el p
 **para que el próximo pase los abra**, no para citarlos ante un cliente. Lo que sí está verificado de primera mano es
 OpenUnlearning y `MachineUnlearning` (licencia, estrellas, métodos leídos del repo).
 
-### Lo que falta — gaps 31, 34 y 35 (el 32 se cerró en el pase 19, refutado; el 35 se abre en el pase 20 y está descrito en la capa de testing de conformidad, abajo)
+### Lo que falta — gaps 31, 34, 35, 36 y 37 (el 32 se cerró en el pase 19, refutado; el 35 se abre en el pase 20 y está descrito en la capa de testing de conformidad, abajo)
 
 - **Gap 31** — **SIGUE ABIERTO, y el pase 19 lo buscó con los términos que el pase 18 dejó escritos.** Se buscó
   `HIF unlearning cognitive diagnosis` y por los autores. **Autoría confirmada** (Mingliang Hou, Yinuo Wang, Teng
@@ -1167,6 +1167,35 @@ OpenUnlearning y `MachineUnlearning` (licencia, estrellas, métodos leídos del 
   (operativa el 2027-07-01) la única prueba del borrado es un `200` con tu propio input adentro.
   **Es el gap más chico y más upstreameable de esta KB:** el dato ya existe en la capa SQL, falta devolverlo y
   registrarlo, sobre un repo **Apache-2.0**. No requiere investigación. Ver **P44**.
+
+  **Reconfirmado por lectura independiente en el pase 22, y ahora con el sitio exacto del parche.** El pase 22 volvió
+  a clonar `lrsql` y leyó el interceptor por su cuenta —un hallazgo que invierte el argumento de tres patrones merece
+  una segunda lectura—: el sitio es **`src/main/lrsql/admin/interceptors/lrs_management.clj:23–33`**, donde
+  `(adp/-delete-actor lrs params)` aparece **como expresión suelta cuyo valor de retorno se descarta** y la respuesta
+  se arma como `{:status 200 :body params}`, siendo `params` el `::data` validado — **el `actor-ifi` que mandó el
+  cliente**. La respuesta es un eco de la entrada, confirmado ahora por dos lecturas independientes.
+
+  ⚠️ **Y queda una sub-pregunta sin contestar, que decide el tamaño del parche:** **¿`-delete-actor` ya devuelve los
+  conteos de filas afectadas, o hay que plomearlos desde la capa SQL?** Si ya los devuelve, el parche es **una línea**
+  (cambiar `:body params` por el valor de retorno); si no, hay que propagarlos por la implementación del protocolo
+  (`protocol.clj:58`). **La traza de la implementación quedó bloqueada por el clasificador de seguridad del entorno en
+  el pase 22** —dos denegaciones al explorar el árbol clonado de terceros—, así que **la pregunta no se contestó, y no
+  se contestó por inferencia**. Es una sola lectura, y es lo primero que tiene que hacer el próximo pase sobre este gap.
+
+- **Gap 37 (nuevo en el pase 22)** — **el registro de eventos que el stack oficial de Open edX conserva tras una
+  retirada, ¿es de verdad anónimo?** Aspects borra la **PII** del alumno retirado (`UserRetirementSink` →
+  `USER_RETIRE_LMS_MISC` → tablas de perfil en ClickHouse) y **conserva el dato de eventos**, con el argumento de que
+  **queda anonimizado**. Pero un *statement* xAPI está indexado por un identificador de actor estable (el
+  `actor-ifi`), y un registro **pseudonimizado —no anonimizado— sigue siendo dato personal bajo GDPR**. Si el
+  identificador sobrevive a la retirada, la palabra «anonimizado» está haciendo un trabajo legal que puede no
+  sostener, y el default de la plataforma educativa open source más desplegada del mundo **retiene el expediente
+  conductual completo de alguien que ejerció el art. 17**.
+
+  **Qué hay que leer para cerrarlo, y es acotado:** qué le pasa al `actor-ifi` / al identificador externo en las
+  tablas de eventos cuando corre el `UserRetirementSink` — **si se borra, se rota, o se deja**. **Si se deja, hay un
+  hallazgo regulatorio serio y upstreameable; si se rota o se borra, la postura de Aspects es defendible y esta KB
+  tiene que escribirlo así en vez de insinuar lo contrario.** No es investigación: es leer un sink y un esquema de
+  tablas. Junto al **gap 36**, es el gap más barato que esta KB tiene abierto. Ver **P45**.
 
 - **Gap 34 (nuevo en el pase 19)** — ***unlearning* evaluado sobre modelos del alumno.** Formulación precisa, que es
   lo que queda del gap 32 después de medirlo: la capa de *unlearning* de LLMs está resuelta y es MIT
@@ -1205,6 +1234,83 @@ OpenUnlearning y `MachineUnlearning` (licencia, estrellas, métodos leídos del 
 
   **El gap que queda abierto es más chico y más honesto, y es el gap 34.**
 
+
+## Capa de analítica de plataforma — el stack oficial de Open edX, agregada en el pase 22 del 2026-10-01
+
+**Por qué es fundacional y no una herramienta suelta:** esta KB venía razonando sobre el LRS como una **elección de
+arquitectura** —`lrsql` para producción permisiva, Ralph para clientes Open edX (línea 111 de este archivo)—. Este
+pase encontró que para Open edX **no es una elección: hay un stack oficial, y trae el LRS puesto**. Eso cambia el
+supuesto de partida de cualquier propuesta sobre esa plataforma.
+
+Verificado repo por repo vía WebFetch el 2026-10-01:
+
+| Repo | Licencia | ★ | Forks | Commits | Rol en la pila |
+|---|---|---|---|---|---|
+| https://github.com/openedx/tutor-contrib-aspects | **Apache-2.0** ✅ | 14 | 32 | 2.269 | **Aspects**, el plugin de analítica y reporting **oficial** de Open edX. Orquesta vía Tutor: **ClickHouse** (almacén), **Apache Superset** (visualización), **Ralph** (el LRS), **Vector** (forwarding), **event-routing-backends** (transformación a xAPI), **dbt** (pipeline). Python |
+| https://github.com/openedx/platform-plugin-aspects | **Apache-2.0** ✅ | 6 | 14 | 528 | Los *sinks* del lado LMS/Studio → ClickHouse, y los dashboards de Superset **embebidos en la interfaz del docente**. Contiene el `UserRetirementSink`. Python |
+
+**Las estrellas acá no miden nada y no hay que cotizarlas como señal:** es el camino de analítica oficial de una
+plataforma con decenas de miles de despliegues. La señal es **2.269 commits** y la organización que lo publica
+(`openedx`), no las 14 estrellas.
+
+### La condición de licencia, y es la arbitraje que esta KB busca
+
+Open edX es **AGPL-3.0** —copyleft de red, el peor caso para SaaS, registrado en la nota de licencias de este
+archivo—. **Su capa de analítica oficial es Apache-2.0.** O sea: la capa que un estudio customiza (dashboards,
+métricas, modelos de datos, sinks) **es permisiva**, aunque el núcleo que la aloja no lo sea. Es la misma forma que el
+pase 14 encontró en la capa curricular y el pase 20 en la de conformidad: **lo que hay que tocar es permisivo, lo
+copyleft es el sustrato que no se forkea.**
+
+### 🔴 Las dos consecuencias, y una corrige a esta KB mientras la otra la mejora
+
+**(1) La configuración «imborrable» es el default, no una elección.** El pase 21 escribió en **P44** que *«con Ralph
+sobre ClickHouse este patrón no se puede ejecutar»*, condicionado a *«si el cliente ya eligió ese backend»*. **Aspects
+instala exactamente eso.** Un cliente Open edX con analítica no eligió el backend difícil de borrar: lo tiene de
+fábrica. **El supuesto por default de un discovery sobre Open edX tiene que ser que el cliente ya está ahí.**
+
+**(2) El disparador LMS → telemetría existe, y es Apache-2.0.** `platform-plugin-aspects` declara en su README,
+verificado de primera mano: `UserRetirementSink` **escucha la señal Django `USER_RETIRE_LMS_MISC` y elimina la PII del
+usuario de ClickHouse**. El pase 19 recorrió los 187 archivos de `tool_dataprivacy` de Moodle y encontró **cero**
+`trigger()`: en Moodle ese disparador no existe. **En Open edX existe, es una señal del framework y el listener es
+permisivo.** Para **P40** eso significa que el extremo del disparador pasa de *«no existe en ningún lado»* a
+*«existe en una plataforma, y en la otra hay implementación de referencia para copiar»*.
+
+### ⚠️ Pero borra PII, no el registro de eventos — y ahí está el gap 37
+
+El sink borra las tablas de perfil (`user_profile`, `external_id`, `auth_user`), gobernadas por el flag
+`ASPECTS_ENABLE_PII`. El **dato de eventos del usuario retirado se conserva**, con el argumento de que **queda
+anonimizado**. La postura por default del stack oficial ante un art. 17, dicha sin eufemismo: **se borra el nombre y se
+conserva la conducta.** Ver el **gap 37** más abajo y **P45**.
+
+⚠️ **Verificación parcial declarada.** El sink, la señal y las tablas de PII están **verificados de primera mano** en
+el README de `platform-plugin-aspects`. La afirmación *«el dato de eventos no se elimina porque queda anonimizado»*
+viene de **snippets de búsqueda concordantes, no de lectura directa**: el ADR que la contiene vive en
+`docs.openedx.org`, **bloqueado por el proxy de egreso en este pase**, y los dos caminos alternativos probados (el
+`.rst` crudo y el listado del directorio de decisiones en GitHub) devolvieron 404. URL anotada para el próximo pase:
+`https://docs.openedx.org/projects/openedx-aspects/en/latest/technical_documentation/decisions/0009_pii.html`.
+
+### El dato de *due diligence* del pase, verificado de primera mano y con una fecha incómoda
+
+**PR #1328 de `tutor-contrib-aspects`** — *«fix: make dump-data-to-clickhouse job respect `ASPECTS_ENABLE_PII`»*, autor
+`ccantillo`. El *job* manual de *backfill* **sorteaba el flag de PII**: según la propia descripción del PR, un operador
+podía volcar `user_profile` o `external_id` a ClickHouse en una instancia que había optado explícitamente por
+`ASPECTS_ENABLE_PII=False`, *«sorteando exactamente la protección que ese setting existe para dar»*. El *check* existía
+en el camino automático por señales y faltaba en el manual.
+
+🔴 **El PR está CERRADO, no mergeado** — cerrado por su propio autor el **2026-09-16**. Consecuencia práctica: **el
+agujero descrito puede seguir abierto**, y una propuesta que ofrezca `ASPECTS_ENABLE_PII=False` como control de
+privacidad está ofreciendo un control con un camino documentado que lo sortea. **Verificar contra la versión del
+cliente antes de escribirlo en un expediente de conformidad.**
+
+### La precisión sobre ClickHouse que el pase 21 dejó demasiado absoluta
+
+El pase 21 escribió que *«ClickHouse declara `DELETE` como operación no soportada»*. **La formulación correcta es más
+estrecha:** ClickHouse no tiene `UPDATE`/`DELETE` de propósito general al estilo OLTP, pero **sí** tiene borrado
+liviano sobre MergeTree detrás de un setting (`allow_experimental_lightweight_delete`) y mutaciones
+`ALTER TABLE … DELETE`. La imposibilidad **práctica** se sostiene —no es transaccional, depende de versión, y el
+backend ClickHouse de Ralph no lo expone en la API del LRS (`src/ralph/backends/data/clickhouse.py:128-131`,
+registrado en el pase 21)—, pero la razón hay que decirla bien en una propuesta. ⚠️ **Dependiente de versión, no
+verificado de primera mano en este pase.**
 
 ## Capa de testing de conformidad y evaluación regulatoria — agregada en el pase 20 del 2026-10-01
 

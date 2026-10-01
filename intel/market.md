@@ -530,6 +530,52 @@ Las cifras de £200M/£100M/£53M del Reino Unido, los porcentajes de APAC y los
 documento original**. No usar en material de cliente sin abrir la fuente. Lo único 🟢 de este pase está en el código de
 los tres LRS, y vive en `repos/foundations.md`, `verticals/solutions.md` y las tendencias **54**–**56**.
 
+### Agregado en el pase 22 del 2026-10-01 — el barrido regional se agotó por cuarta vez consecutiva, y la oportunidad nueva es de plataforma: el default del LMS más desplegado define el costo del expediente de privacidad
+
+**El barrido regional no trajo una sola cifra nueva, y conviene escribir cuáles trajo.** Las ocho búsquedas
+—cuatro globales y una por región— devolvieron material que **ya está en este archivo, con fuente y con las
+discrepancias metodológicas declaradas**. Se reconfirma, no se agrega:
+
+| Cifra que devolvió el barrido | Dónde ya estaba |
+|---|---|
+| Global **$7,52B (2025) → $10,6B (2026)**, CAGR **40,9%**; proyección **$79,6B a 2034** (31,35%) | Pases 10, 13 y 17 — con la advertencia, que sigue en pie, de que **las dos series globales no son conciliables** |
+| **North America $951M (2024) → $2.303,2M (2029)**, CAGR **15,9%** | Pase 5 — con la **discrepancia metodológica declarada**: 15,9% contra un 40,9% global no son canastas comparables |
+| **APAC $591,6M (2024) → $1.848,1M (2029)**, CAGR **20,9%** — la región de crecimiento más rápido | Pase 19, en el bloque APAC |
+| **LATAM**: 92% de alumnos / 79% de docentes; **73,5%** enseña con AI contra **9,0%** con mecanismo formal de evaluación, **18,5%** con política transversal, **26,0%** con estrategia formal | Pases 4, 5 y 21 — encuesta LATAM 2026 del **Digital Education Council** (30.000+ respuestas, 29 instituciones) |
+| **North America**: USD **169 M** públicos a «AI responsable» en educación superior y el programa educativo de **OpenAI con 8 socios nacionales** (Q1 2026) | Pase 10 |
+| **EMEA**: adopción de AI entre **5,21% (Rumania)** y **42,03% (Dinamarca)** | Nuevo como dato puntual, **pero no cambia la lectura**: refuerza la regla del pase 17 de **no promediar EMEA**. Es adopción empresarial general, no educativa |
+
+**Cuarta pasada consecutiva de confirmación.** La conclusión del pase 12 —*«el barrido regional llegó a saturación»*—
+se sostiene por cuarta vez y ya no es provisoria: **las búsquedas de mercado por región, con estas formulaciones, no
+están produciendo información nueva para esta vertical.** Lo que sí produce es cambiar el eje (ver la nota de método
+del pase 22 en `intel/trends.md`).
+
+### ⚠️ La corrección que sí cambia una conversación comercial: el calendario del AI Act contra lo que el cliente leyó
+
+Las fuentes generalistas que devolvió este barrido dicen que el EU AI Act **«entra plenamente en vigor en agosto de
+2026»** clasificando la educación como alto riesgo. **El calendario que esta KB tiene es más fino, y la diferencia es
+de 16 meses:** en vigor **2026-07-27**, aplicación por el AI Office y las autoridades nacionales desde **2026-08-02**,
+y **Anexo III —educación— el 2027-12-02** (Reglamento (UE) 2026/1744, registrado en el pase 11).
+
+**Por qué es una oportunidad y no una nota al pie.** El cliente europeo probablemente leyó la versión de prensa y cree
+que ya está en falta o que lo estará en semanas. **Llegar con el calendario real desagregado por inciso es
+posicionamiento**: convierte una conversación de pánico en un plan con fechas, y de paso muestra que el proveedor leyó
+el Reglamento y no el titular. Lo que **sí** está vencido es la transparencia del **Art. 50** (2026-08-02) — ahí no hay
+margen y hay que decirlo con la misma precisión.
+
+### La oportunidad nueva del pase, y es transversal: el default de la plataforma decide el costo del cumplimiento
+
+Este pase encontró que **Aspects** —el stack de analítica **oficial** de Open edX, Apache-2.0— instala **Ralph sobre
+ClickHouse**, que es la configuración que el pase 21 declaró imposible de borrar, **y al mismo tiempo trae el
+disparador de supresión LMS → telemetría que el pase 19 probó inexistente en Moodle**. Ver `repos/foundations.md`,
+`verticals/solutions.md`, las tendencias **57–59** y **P45**.
+
+**La lectura comercial, en una línea:** **la elección de LMS del cliente ahora tiene una consecuencia de cumplimiento
+medible y cotizable**, y es un insumo legítimo en una evaluación de plataforma. Sobre Open edX el disparador está
+resuelto y lo que falta es auditar qué se borró; sobre Moodle el disparador hay que construirlo por sondeo pero el
+diseño de referencia ya existe y es permisivo. **Eso es un entregable chico, con fecha regulatoria y con el trabajo
+acotado — exactamente el perfil que esta KB viene recomendando desde el pase 4.**
+
 ## Players globales
 
 | Empresa | Tipo | Fortaleza | Debilidad |
@@ -573,6 +619,14 @@ Dónde se produce el software educativo abierto, que no es donde está la demand
 ## Opportunities by region
 
 ### North America
+
+**Agregado en el pase 22 (2026-10-01) — el default de Open edX y el reloj de AB 1159.** La oportunidad de esta región
+sigue siendo **la evidencia, no el borrado**: **AB 1159** es operativa el **2027-07-01** y lo que audita es la prueba.
+Este pase agrega que, si el cliente corre **Open edX con analítica**, corre **Aspects** (Apache-2.0) y por lo tanto
+**Ralph sobre ClickHouse** — la configuración que no produce evidencia de supresión— **sin haberlo elegido**. Y el
+control que parecería cubrirlo, el flag `ASPECTS_ENABLE_PII`, tiene un bypass documentado en el **PR #1328**, 🔴
+**cerrado sin mergear el 2026-09-16**. Entregable: **P45** (auditoría + registro append-only + *eval* reproducible
+sobre `inspect_ai`, MIT). Es chico, tiene fecha y es auditable — el perfil que esta región compra.
 
 **Pase 19 (2026-10-01) — la oportunidad nueva es la cadena de supresión completa, y acá tiene el disparador legal más duro.**
 `AB 1159` (operativa **2027-07-01**) prohíbe **entrenar** con dato de alumno; la cadena de **borrado** es el otro lado de
@@ -989,6 +1043,16 @@ procedencia (**P37**), más ahora **la corrida de testing reproducible** que **P
 
 ### EMEA
 
+**Agregado en el pase 22 (2026-10-01) — el art. 17 y los dos proveedores que documentan el límite.** La corrección del
+pase 21 se mantiene (**`lrsql`, Apache-2.0, sí borra por actor** y viene apagado), y este pase agrega la otra mitad
+del argumento: sobre **Open edX + Aspects** la supresión **borra la PII y conserva el registro de eventos** con el
+argumento de que queda *anonimizado* — y un *statement* xAPI indexado por un `actor-ifi` estable es
+**pseudonimizado, no anónimo** (**gap 37**). Con **ILIAS** (tendencia 55) son **dos plataformas que documentan el
+límite por escrito**, lo que vuelve el argumento defendible ante un comité en vez de especulativo.
+**El calendario, que es la venta:** Art. 50 **vencido** (2026-08-02), **Anexo III educación el 2027-12-02** — 16 meses
+de margen que la prensa generalista no distingue. **Y la regla del pase 17 se refuerza: no promediar EMEA** — la
+adopción de AI va de **5,21% (Rumania)** a **42,03% (Dinamarca)**. Entregables: **P44**, **P45**, **P42**.
+
 **Pase 19 (2026-10-01) — hay una obligación que vence en dos meses y el titular que le llegó al cliente dice lo contrario.**
 Verificado en este pase: el **Digital Omnibus (Reglamento (UE) 2026/1744)** corrió el **Anexo III a 2027-12-02** pero
 **no enmendó el Artículo 50**. Entonces el **marcado del Art. 50(2) sigue venciendo el 2026-12-02** —en dos meses— y la
@@ -1386,6 +1450,15 @@ crosswalk directo al AI Act (sólo a NIST AI RMF y a ISO/IEC 42001). Moonshot si
 pieza del expediente**.
 
 ### APAC
+
+**Agregado en el pase 22 (2026-10-01) — la región de crecimiento más rápido, y ahora la pila permisiva está completa.**
+Se reconfirma **$591,6M (2024) → $1.848,1M (2029), CAGR 20,9%** y el marco regulatorio **fragmentado** con foco en
+**soberanía** —no hay equivalente del AI Act y no lo va a haber—. Lo que este pase agrega es que **la pila entera
+puede ser permisiva**: las dos únicas bases de tutor open source permisivas y de escala siguen siendo de esta región
+—**DeepTutor** (Apache-2.0, 40,6k ★, HKU) y **OpenMAIC** (MIT, 39,7k ★, Tsinghua; ⚠️ **relicenciado de AGPL-3.0 a MIT
+recién en v0.3.0 del 2026-06-28**)— y ahora la capa de analítica y telemetría también lo es (**Aspects**,
+Apache-2.0). Para un despliegue soberano eso significa **que lo único copyleft es el núcleo del LMS, que no se
+forkea**: todo lo que el estudio customiza es permisivo y redistribuible cerrado.
 
 **Pase 19 (2026-10-01) — Vietnam deja de ser «clasificó la evaluación automatizada» y pasa a tres incisos con dos fechas, y esta KB ya tiene el repo para uno de ellos.**
 **Ley N.º 134/2025/QH15** (en vigor 2026-03-01) + **Decisión 33**: 46 sistemas de alto riesgo en 6 sectores, **3 en
@@ -1823,6 +1896,16 @@ agente vive adentro de la plataforma estatal— y la demanda de *speech evaluati
 región concentra ahora también esta capa.
 
 ### LATAM
+
+**Agregado en el pase 22 (2026-10-01) — el hallazgo del pase le pega de lleno a la base instalada de la región.** La
+tijera de LATAM no cambia y sigue siendo la más ancha que esta KB documentó: **73,5% enseña con AI y 9,0% tiene
+mecanismo formal de evaluación** (Digital Education Council, encuesta LATAM 2026). Lo que este pase agrega es
+**específico de la región**: **Open edX es plataforma de referencia en LATAM** —el único tutor de la KB con respaldo
+universitario regional, **TutorIA** (MIT, Colombia, Universidad Tecnológica de Pereira), está construido **dentro de
+Open edX**—, así que el default de **Aspects** (PII borrada, registro de eventos conservado como *anonimizado*) es el
+default que la región hereda. Con la **Ley 21.719** chilena como instrumento local con fecha, **P45 es un entregable
+de cumplimiento pequeño sobre una plataforma que las instituciones ya tienen**: no requiere migrar nada y produce
+exactamente lo que el 9,0% de arriba dice que falta — **forma de saber qué pasó y de probarlo**.
 
 **Pase 19 (2026-10-01) — la cifra que define la oportunidad de la región sigue siendo la brecha, no la adopción.**
 Confirmado en este pase (Digital Education Council, encuesta LATAM 2026): **92 % de alumnos y 79 % de docentes** usan
