@@ -446,6 +446,47 @@ No hay una «plataforma» de lectura oral open source desplegable, y conviene de
 - **La pieza más fina de la región no se puede usar.** `carrera-lectora` (Chile, 1.º-4.º básico, PPM y exactitud,
   procesamiento en dispositivo) **no tiene licencia**. No proponerla; a lo sumo, pedir que la pongan.
 
+## Capa de privacidad y datos sintéticos — agregada en el pase 16 del 2026-10-01
+
+No es una plataforma vertical: es la capa que decide si las plataformas de arriba pueden procesar dato real de
+menores. Se incluye acá porque **se propone junto con la plataforma, no después**.
+
+| Pieza | Licencia | ★ | Cuándo se propone |
+|---|---|---|---|
+| **PySyft** | Apache-2.0 ✅ | 10.0k | El dato **no puede salir** de la institución y hay varias instituciones. El cómputo viaja al dato |
+| **Flower** | Apache-2.0 ✅ | 7.2k | Entrenar un modelo across escuelas/campus **sin centralizar interacciones**. La categoría se consolidó acá: OpenFL se deprecó y remite a Flower por nombre |
+| **OpenDP** | MIT ✅ | 437 | Hay comité de ética, DPO o regulador que va a pedir garantía **formal**. Es de Harvard y eso pesa en el expediente |
+| **Opacus** | Apache-2.0 ✅ | 2.0k | Ya hay un pipeline PyTorch y hay que agregarle DP sin rehacerlo |
+| **diffprivlib** | MIT ✅ | 920 | Prototipar y **medir el costo de utilidad** de DP antes de comprometerse |
+| **synthcity** | Apache-2.0 ✅ | 687 | Hace falta un dataset para desarrollar, demostrar o **licitar** sin tocar dato real. Trae DP-GAN/PATEGAN y métricas de privacidad y utilidad |
+
+### 🔴 Lo que NO hay que proponer en esta capa
+
+- **`SDV` (Synthetic Data Vault), por mucho que el cliente lo nombre.** 3.6k ★ y origen en el **Data to AI Lab del
+  MIT**, pero hoy es **Business Source License 1.1** de **DataCebo, Inc.** — no aprobada por OSI. Prohíbe el uso en
+  producción sin licencia comercial y excluye explícitamente usarlo *«for a Synthetic Data Service»*, definido como
+  toda oferta comercial que dé a terceros acceso a sus capacidades de generación de datos sintéticos. **Eso
+  describe el trabajo de un studio.** Revierte a MIT cuatro años después de cada release. Alternativa directa:
+  **`synthcity`**.
+- **`OpenFL` como base nueva.** Apache-2.0 y 843 ★, pero su propia página declara que **ya no está en desarrollo
+  activo y que será archivado**, recomendando migrar a Flower. Si el cliente ya lo tiene, el camino es la guía de
+  migración; si se elige de cero, no hay motivo.
+- **Los tres repos educativos sin licencia** (`SynEdu-HEDL`, `federated-deep-knowledge-tracing`,
+  `FedGNN-for-Personalized-Knowledge-Tracing`). Sirven como **referencia de arquitectura** — `FedGKT` es la mejor
+  que hay, y ya corre sobre Flower — pero sin licencia declarada no son dependencia de producto.
+- **`ydata-synthetic` por la ruta vieja.** Es MIT, pero el paquete **migró**: hay que seguir la guía de migración
+  del README, no instalar el nombre viejo.
+
+### La regla de esta capa, y es distinta a la del resto de la KB
+
+En las demás capas de esta KB la regla es *lo maduro es copyleft y lo permisivo no tiene tracción*. **Acá se
+invierte: lo maduro es permisivo** —Apache-2.0 y MIT, de Harvard, Google, Meta e IBM— **y lo que falta no es
+licencia sino integración con el dato educativo**. El techo de lo específicamente educativo es de **10 estrellas**,
+y el único permisivo del grupo tiene **3**.
+
+Eso convierte esta capa en la de mejor relación esfuerzo/defensa de toda la KB: la infraestructura no se construye,
+se conecta.
+
 ## Cómo elegir
 
 | Si el cliente necesita… | Arrancar de |

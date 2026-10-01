@@ -632,6 +632,44 @@ de política.
 discriminación medible contra alumnado internacional y de primera generación, y eso sí tiene consecuencia en
 EE. UU.
 
+#### Agregado en el pase 16 del 2026-10-01 — el único reloj regulatorio vencido de las cuatro regiones, y la voz de un chico entró en él
+
+La región que esta KB describe desde el pase 3 como «vacío federal y parches estatales» **tiene desde abril una
+obligación federal exigible y concreta**, y no vino del lado de la AI sino del de la privacidad infantil.
+
+**La regla COPPA enmendada de la FTC** — primera actualización sustantiva en **doce años**:
+
+| Hito | Fecha |
+|---|---|
+| FTC anuncia las enmiendas finalizadas | enero de 2025 |
+| Publicación en el *Federal Register* | 2025-04-22 |
+| Entrada en vigor | 2025-06-23 |
+| 🔴 **Cumplimiento general exigible** | **2026-04-22** |
+
+Lo que agregó, y por qué le pega a esta KB:
+
+- **Identificadores biométricos** —**voiceprints**, faceprints, huellas dactilares y de palma— son ahora
+  **información personal**. Alcanza de lleno a la **capa de lectura oral** que abrió el pase 14.
+- **Consentimiento verificable separado** antes de compartir dato de menores con terceros.
+- **Prohibida la retención indefinida**: hace falta **política escrita** de retención y borrado en plazo.
+
+Y debajo sigue el régimen estatal que la KB ya conocía en parte: **SOPIPA** (California) prohíbe vender dato de
+alumnos y la publicidad dirigida, sin vía de consentimiento que lo habilite; **SOPPA** (Illinois) impone requisitos
+contractuales con proveedores, plazos de notificación de brecha y transparencia pública; **Nueva York** prohíbe el
+reconocimiento facial en escuelas; **BIPA** (Illinois) exige consentimiento escrito para biométricos con daños
+estatutarios de **1.000 a 5.000 USD por violación**.
+
+🔴 **Y la restricción que más condiciona el modelo de negocio:** bajo la *school official exception* de **FERPA**,
+el dato que la institución cede a un proveedor **sólo puede usarse para el fin por el que se cedió**. Usar dato de
+alumnos para **entrenar modelos con fines comerciales generales** es típicamente una violación de FERPA. Eso
+cierra la vía que el **gap 11** venía dejando abierta desde el pase 7.
+
+**Cómo cambia la venta en esta región.** En EMEA esta KB vende preparación —falta para diciembre—. **Acá el plazo
+ya venció hace más de cinco meses**, así que la conversación es de **remediación y exposición**, el comprador es
+jurídico y no innovación, y el ciclo es más corto. Es la única de las cuatro regiones donde el argumento no
+depende de convencer a nadie de que la fecha va a llegar. El entregable está empaquetado en **P35**.
+
+
 ### EMEA
 
 **Contexto.** Regulación primero, adopción después — lo inverso a Norteamérica. La fecha de aplicación de sistemas de alto riesgo del Annex III del EU AI Act (que **incluye AI en evaluación**) se corrió de 2026-08-02 a **2027-12-02** por el acuerdo del Digital Omnibus on AI. Las escuelas quedan responsables de auditar el uso de AI. Casos que caen en alto riesgo: **corrección automática de exámenes, aprendizaje adaptativo, proctoring y predicción de deserción** — o sea, casi todo lo interesante. La Comisión Europea con la OCDE y aval del G7 publicó un borrador de AI Literacy Framework para primaria y secundaria.
@@ -905,6 +943,29 @@ fuente y **20 de julio de 2026** en otra; `digital-strategy.ec.europa.eu`, `arti
 ⚠️ **Y el argumento que no hay que usar en EMEA:** detección. La mayoría de los universitarios europeos escribe
 inglés como segunda lengua, y el **61,3 %** de falsos positivos de la tendencia 36 convierte cualquier propuesta
 de detección en exposición bajo régimen de no discriminación. **Marcar, no detectar.**
+
+#### Agregado en el pase 16 del 2026-10-01 — el DPIA es obligación legal y la mayoría de las instituciones no lo tiene hecho para la AI que ya desplegó
+
+El EU AI Act es el reloj que esta KB viene administrando. **El GDPR es el que ya venció hace años y nadie
+reabrió para las herramientas de AI que entraron después.**
+
+Antes de que una institución use una herramienta de AI que procese dato de alumnos, la **evaluación de impacto
+(DPIA) es obligación legal bajo el Artículo 35 del GDPR**, y el **EDPB** recomienda además documentar formalmente
+el *balancing test* de interés legítimo por cada actividad de tratamiento. Bajo el UK GDPR la escuela es
+**data controller** y carga con la responsabilidad aunque el procesamiento lo haga un tercero.
+
+**Por qué es una oportunidad y no una traba.** La adopción de AI en aulas europeas corrió más rápido que el
+papeleo: las herramientas entraron por la vía del docente individual y del piloto, no por la de compras. Eso deja
+a un montón de instituciones **usando AI sobre dato de alumnos sin el DPIA que la norma exige desde antes de que
+la AI llegara**. El entregable es chico, está nombrado en la ley, tiene comprador identificado (el DPO) y **no
+requiere que la institución haya decidido todavía qué sistema de AI quiere** — lo que lo vuelve la puerta de
+entrada más barata de toda esta KB. Ver **P35**.
+
+Y se combina con lo que la región ya tiene: el Anexo III clasifica como alto riesgo la evaluación automatizada, el
+aprendizaje adaptativo, el proctoring y la **predicción de deserción**. El DPIA del Artículo 35 y el expediente de
+conformidad del Anexo III **se construyen con la misma evidencia**, así que el trabajo del primero se capitaliza
+en el segundo.
+
 
 ### APAC
 
@@ -1215,6 +1276,30 @@ procedencia, con Australia como primer cliente por madurez institucional.**
 
 **Mercado:** **591,6 M USD (2024) → 1.848,1 M (2029), 20,9 % CAGR** — el de crecimiento más rápido de las cuatro
 regiones.
+
+#### Agregado en el pase 16 del 2026-10-01 — India nombró el dato de aprendizaje como riesgo de perfilado, y la sanción tiene número
+
+La **DPDP Act 2023** convierte a **toda escuela que procese dato digital de alumnos en *Data Fiduciary***, y como
+los alumnos son menores aplica la **Sección 9**: consentimiento parental verificable, prohibición de seguimiento
+conductual y de publicidad dirigida a menores, y prohibición de tratamientos que puedan causarles daño.
+**Sanciones de hasta ₹200 crore** por infracción con datos de menores.
+
+🔴 **El punto que toca directamente a esta KB:** la lectura regional de esa norma es que una analítica que etiqueta
+a un alumno como *«de bajo potencial»* o que predice problemas de conducta sin salvaguardas **puede tratarse como
+perfilado dañino**. Eso es, textualmente, la **capa predictiva** que el pase 11 abrió como la de mayor demanda
+insatisfecha de la KB (gap 18, patrón **P25**). En India esa capa no está sólo desabastecida: está condicionada.
+
+**Y hay un dato de posicionamiento de mercado del mismo período** (medianama, septiembre de 2026): **Microsoft
+prohíbe contractualmente entrenar con dato de alumnos en sus acuerdos educativos; en India esa prohibición no está
+generalizada en el resto de la oferta.** Para un studio que llega con arquitectura federada y DP, esa asimetría es
+el argumento diferencial — no «somos más baratos» sino **«el dato no sale de su institución y lo podemos
+demostrar»**. Ver **P34**.
+
+El resto del encuadre regional refuerza lo mismo: **sovereignty** es el criterio que, según los relevamientos de
+2026, va a decidir la infraestructura de cerca de la mitad de las empresas de APAC, y el **49 %** declara
+infraestructura insuficiente para procesamiento de datos en tiempo real como barrera. Las dos cosas empujan hacia
+arquitecturas donde el dato se queda quieto.
+
 
 ### LATAM
 
@@ -1625,6 +1710,55 @@ lineamientos de AI generativa de las **15 universidades latinoamericanas mejor r
 Unicamp, PUC Chile, UFRJ, UNESP y otras—, con documentos normativos, órganos responsables y guías vigentes o en
 desarrollo. **`zenodo.org` está bloqueado por el proxy de egreso: no se pudo verificar licencia ni contenido.** Si
 es abierto, es el mapa normativo institucional de la región servido en bandeja, y vale una pasada entera.
+
+#### Agregado en el pase 16 del 2026-10-01 — 🔴 Brasil publicó el marco de IA educativa más explícito de la región, y desaconseja por nombre lo que la región estaba comprando
+
+El pase 15 registró que LATAM tiene el régimen que el open source puede cumplir. El pase 16 encuentra que
+**Brasil además lo escribió en un documento ministerial, con posiciones concretas sobre tecnologías específicas.**
+
+**El `Referencial para Desenvolvimento e Uso Responsável de Inteligência Artificial na Educação`**, del
+**Ministério da Educação**, elaborado por la **SEGAPE** (Secretaria de Gestão da Informação, Inovação e Avaliação
+das Políticas Educacionais):
+
+| Dato | Valor |
+|---|---|
+| Publicación | **2026-03-12** |
+| Extensión | **240 páginas** |
+| Recomendación sobre educación infantil | **veto** al uso de IA |
+| Recomendación sobre primeros años de primaria | actividades *unplugged* |
+| 🔴 Reconocimiento facial en escuelas | **desaconsejado expresamente**, en particular para control de asistencia |
+
+El documento advierte además sobre la necesidad de **transparencia algorítmica** y sobre el **sesgo algorítmico
+que reproduce y amplifica las desigualdades sociales presentes en las bases que alimentan estos sistemas** — que
+es la descripción exacta de un modelo de riesgo de deserción entrenado con histórico.
+
+**Y no quedó en recomendación.** El **Conselho Nacional de Educação aprobó el 2026-09-01** directrices para el uso
+de IA en escuelas y universidades; tras la homologación del MEC, las instituciones tienen **hasta 12 meses** para
+adecuarse. Eso pone a Brasil con un reloj institucional propio, corriendo ahora.
+
+**El caso de aplicación ya existe:** la **ANPD** ordenó la **suspensión inmediata del tratamiento de datos
+biométricos para control de frecuencia escolar en escuelas públicas de Paraná**. No es doctrina: es una
+autoridad de protección de datos parando un despliegue educativo en curso.
+
+**El resto del paquete normativo brasileño que converge en 2026:** el **Art. 14 de la LGPD** (tratamiento de datos
+de niños hasta 12 años sólo con consentimiento específico y destacado de un responsable), el **ECA Digital** y la
+**Lei 15.100/2025**. Las plataformas con más de **1 millón de usuarios menores de 18 años** deben publicar
+**informes semestrales de impacto de protección de datos** y presentarlos a la **ANPD**. Y el **PL 2775/24**, en
+trámite, pretende exigir consentimiento previo y expreso para cualquier entrenamiento de IA con datos personales y
+**prohibir el uso de datos de menores de 16 años para entrenamiento**.
+
+**La lectura comercial para la región, y es favorable.** Brasil está diciendo con nombre y apellido que no quiere
+reconocimiento facial, ni IA en educación infantil, ni cajas negras que decidan sobre alumnos. **Todo eso lo
+cumple mejor una arquitectura federada, con privacidad diferencial, con datos sintéticos para desarrollo y con el
+docente en el lazo que un producto SaaS centralizado** — y esa arquitectura es open source, permisiva y está
+descrita en **P34**. Es el mismo patrón que el pase 15 encontró con la procedencia: **la región legisla en la
+dirección en la que el open source ya está parado.**
+
+⚠️ **Lo que falta verificar antes de usarlo con un cliente:** el `Referencial` se leyó a través de cobertura
+periodística y resúmenes institucionales, **no del PDF del MEC**. La fecha, la extensión, el órgano autor y las
+dos posiciones sobre educación infantil y reconocimiento facial son consistentes en todas las fuentes
+localizadas; **el texto exacto de las recomendaciones, no**. Vale una pasada que abra el documento oficial.
+
 
 ## Posicionamiento Globant
 

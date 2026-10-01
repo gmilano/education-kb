@@ -19,6 +19,13 @@ updated: 2026-10-01
 > skills de agente** al final del archivo: es la primera capa de esta KB que se mide contra otra vertical, y la
 > educación pierde 58× contra la científica en el mismo canal. El conteo de 29 de la tabla principal se verificó a
 > mano en este pase y **estaba bien**.
+> *Pase 16 del 2026-10-01:* **no se agregó ninguna fila a la tabla principal; el conteo de 31 se mantiene.**
+> Se abre la **capa de privacidad del dato del alumno** en `repos/foundations.md` —DP, federado y datos
+> sintéticos—, y **no entra acá a propósito: no son agentes, son librerías horizontales**, y ése es parte del
+> hallazgo. Lo que sí es de esta tabla: **ninguno de los 31 agentes declara qué hace con el dato del alumno**, y
+> desde el **2026-04-22** la **voz de un menor es dato biométrico regulado** bajo la regla COPPA enmendada, lo que
+> le pone encuadre legal a la capa de voz que abrió el pase 14. Se abren el **gap 27** y el **gap 28**. Ver las
+> tendencias **39**, **40** y **41**, y los patrones **P34** y **P35**.
 > *Pase 15 del 2026-10-01:* **no se agregó ninguna fila a la tabla principal; el conteo de 31 se mantiene.**
 > Se abre la **capa de autoría y procedencia** al final del archivo —la mitad que le faltaba a la capa de
 > integridad académica del pase 8, que era sólo *proctoring*—. **El hallazgo es un error propio:** desde el pase 4
@@ -681,3 +688,28 @@ servidor MCP que marque o verifique la salida de un tutor. Lo que existe en el d
 **envoltorios de servicios propietarios**: Compilatio (plugin **GPL-3.0**, 821 instalaciones, release 2026-06-25),
 Originality.ai (Moodle 3.9–5.0, release 2026-07-02) y Copyleaks — plugin libre, **detector pago**. El puente es
 trabajo de días sobre infraestructura Apache-2.0. Ver **P33** y el **gap 25**.
+
+
+## Postura de privacidad de los agentes — agregada en el pase 16 del 2026-10-01
+
+Se revisó la tabla principal agente por agente buscando una declaración de **qué hace con el dato del alumno**:
+dónde lo guarda, si lo usa para entrenar, si se puede desplegar sin que el dato salga de la institución.
+
+**Ninguno de los 31 la tiene.** No es que declaren una política mala — no declaran ninguna. Lo más cercano es la
+capa de memoria (DeepTutor tiene memoria en tres capas, `learnmcp-xapi` persiste contra un LRS), que describe
+**dónde** queda el dato pero nunca **bajo qué base legal** ni con qué retención.
+
+**Por qué importa ahora y no antes:**
+
+| Régimen | Qué exige | Estado |
+|---|---|---|
+| **COPPA enmendada** (North America) | Biométricos —**voiceprints**, faceprints, huellas— son información personal; consentimiento parental verificable; política escrita de retención y borrado; prohibida la retención indefinida | 🔴 **Cumplimiento exigible desde 2026-04-22** |
+| **FERPA** (North America) | El dato cedido al proveedor sólo sirve para el fin cedido; **entrenar modelos comerciales generales con él es violación** | Vigente |
+| **GDPR Art. 35** (EMEA) | **DPIA obligatorio** antes de usar la herramienta; EDPB pide *balancing test* documentado | Vigente |
+| **DPDP Act § 9** (APAC, India) | Consentimiento parental verificable; sin seguimiento conductual; hasta **₹200 crore** por infracción con datos de menores | Vigente |
+| **LGPD Art. 14 + ECA Digital** (LATAM, Brasil) | Consentimiento específico y destacado de un responsable; informes semestrales de impacto a la ANPD para plataformas con +1M de usuarios menores | Vigente |
+
+**La consecuencia práctica, y es un criterio de selección nuevo para esta KB:** cuando un agente de la tabla se
+proponga para menores, la postura de privacidad **hay que construirla en el proyecto** — no viene con el repo. El
+presupuesto de un despliegue educativo con datos reales incluye esa capa, y hasta este pase esta KB la daba por
+gratis. Las piezas están en `repos/foundations.md` y el wiring en **P34** y **P35**.

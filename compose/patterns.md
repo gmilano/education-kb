@@ -1541,3 +1541,120 @@ ya tiene el tutor sobre Transformers y sólo falta C2PA + verificación + LTI.
 - 🔴 **Verificar la fecha del Code of Practice contra la fuente oficial** antes de citarla: dos fuentes secundarias
   dan 10 de junio y 20 de julio de 2026. Las fechas de vigencia (2026-08-02) y de marcado (2026-12-02) sí son
   consistentes.
+
+
+---
+
+## P34 — Entrenar el modelo de mastery sin que el dato del alumno salga de la institución (agregado en el pase 16; **transversal, y es la salida técnica al gap 11**)
+
+**El problema que resuelve, y lo venía arrastrando esta KB desde el pase 7.** El gap 11 estableció que los
+datasets de knowledge tracing son NonCommercial salvo uno (chino), y concluyó que para un cliente con restricción
+de procedencia **entrenar con los datos propios es la única opción**. El pase 16 le agrega la condición que
+faltaba: bajo la *school official exception* de **FERPA**, el dato que la institución cede al proveedor sólo
+puede usarse **para el fin por el que se cedió**, y usarlo para entrenar un modelo comercial general es
+típicamente una violación. O sea: «entrenar con los datos propios» no es una licencia para llevarse el dato.
+
+**La salida no es legal, es arquitectónica, y tiene tres variantes según lo que el cliente permita.**
+
+### Las piezas, todas verificadas en el pase 16
+
+| Pieza | Licencia | ★ | Rol |
+|---|---|---|---|
+| **Flower** | Apache-2.0 ✅ | 7.2k | Orquesta el entrenamiento federado. El modelo viaja, el dato no |
+| **PySyft** | Apache-2.0 ✅ | 10.0k | Variante más estricta: el **cómputo** viaja y el dueño del dato lo ejecuta |
+| **Opacus** | Apache-2.0 ✅ | 2.0k | DP sobre el entrenamiento PyTorch; contador de presupuesto en vivo |
+| **OpenDP** | MIT ✅ | 437 | La garantía **formal** que va en el expediente. Harvard |
+| **pyKT** / **pyBKT** | MIT ✅ | 441 / 281 | El modelo de mastery en sí (ya en esta KB desde los pases 4 y 5) |
+| **FedGKT** | ⚠️ sin licencia | 1 | **Referencia de arquitectura, no dependencia.** Ya hace exactamente esto sobre Flower |
+
+### El wiring
+
+1. **Capa 0 — el dato se queda donde está.** Cada escuela/campus corre un cliente Flower contra su propio LRS
+   (`lrsql` o Ralph, Apache-2.0/MIT, de **P15**). Ninguna interacción cruza el borde institucional.
+2. **Capa 1 — el modelo federa.** `pyKT` (o `pyBKT` si hace falta interpretabilidad ante regulador) se entrena por
+   rondas FedAvg/FedProx sobre Flower. Lo que viaja son **pesos**, no secuencias de alumno.
+3. **Capa 2 — presupuesto de privacidad.** `Opacus` sobre el entrenamiento local, con ε declarado y registrado por
+   ronda. Acá es donde el DPIA del Artículo 35 encuentra su evidencia.
+4. **Capa 3 — el expediente.** `OpenDP` para las estadísticas agregadas que se publican hacia afuera (dashboards de
+   dirección, reportes a ministerio). Es la pieza que un comité de ética reconoce sin discusión.
+5. **Capa 4 — el entregable de demostración.** `synthcity` genera el dataset sintético con el que se demuestra el
+   sistema, se licita y se hace QA, **sin tocar dato real en ningún momento del ciclo de venta**.
+
+**La arquitectura no es especulativa:** `FedGKT` ya la implementa —grafos de conocimiento personales de 722
+conceptos, 1.401 aristas de prerrequisito anotadas por expertos, FedAvg/FedProx sobre Flower, dataset Junyi de 25M
+interacciones—. Tiene **1 estrella y no declara licencia**, así que se lee y se reimplementa; no se depende de él.
+
+### Plazo y alcance
+
+**8–10 semanas** para el piloto con dos instituciones federadas, incluyendo el DPIA. El multiplicador está en que
+la institución número tres en adelante entra sin renegociar el tratamiento de datos: la arquitectura ya responde
+la pregunta.
+
+### Dónde se vende primero
+
+**EMEA** (el DPIA del Artículo 35 es obligación, no argumento) y **North America K-12** (donde FERPA + COPPA
+cierran la vía centralizada). En **APAC-India** el argumento es la Sección 9 de la DPDP y las sanciones de hasta
+₹200 crore. En **LATAM-Brasil**, el Art. 14 de la LGPD más los informes semestrales a la ANPD.
+
+### ⚠️ Lo que no hay que prometer en este patrón
+
+- **Federado no es anonimato.** Sin DP encima, los pesos filtran. Si se promete privacidad, `Opacus` no es opcional.
+- **DP cuesta exactitud.** Hay que medirla con `diffprivlib` antes de comprometer métricas de mastery, no después.
+- **No usar `SDV`** para el dataset sintético de demostración, por mucho que sea el nombre conocido: su BUSL 1.1
+  excluye explícitamente el uso comercial que este patrón hace. `synthcity`.
+
+---
+
+## P35 — El expediente de privacidad como entregable de entrada (agregado en el pase 16; **EMEA y North America primero**, y es la venta más chica de toda esta KB)
+
+**Por qué existe este patrón.** Los 34 patrones anteriores venden **capacidad**. Éste vende el permiso para
+ejercerla, y es el único de la KB cuyo alcance cabe en semanas y cuyo comprador (DPO, CISO, dirección jurídica) no
+es el mismo que el de los demás. Sirve como puerta de entrada cuando el cliente todavía no compró el sistema.
+
+### El entregable, que son cuatro artefactos y nada más
+
+1. **DPIA del Artículo 35** (EMEA) o evaluación equivalente. Es **obligación legal** antes de usar una herramienta
+   de AI que procese dato de alumnos, y el EDPB pide además el *balancing test* de interés legítimo documentado por
+   actividad de tratamiento. La mayoría de las instituciones no lo tiene hecho para sus herramientas de AI ya
+   desplegadas.
+2. **Inventario de dato biométrico**, que es el que nadie hizo. Desde el **2026-04-22** la regla COPPA enmendada
+   cuenta **voiceprints**, faceprints, huellas y huellas de palma como información personal. Cualquier función de
+   voz —y la capa de lectura oral del pase 14 es exactamente eso— entra. Si el despliegue toca **Illinois**, BIPA
+   exige consentimiento escrito con daños de **1.000 a 5.000 USD por violación**.
+3. **Política de retención y borrado por escrito.** La COPPA enmendada **prohíbe la retención indefinida** y exige
+   política escrita con borrado en plazo. Es el punto donde más despliegues educativos fallan, porque los logs de
+   LMS y LRS se guardan «por las dudas».
+4. **Matriz de base legal por flujo de dato**, incluida la frontera FERPA: qué dato se usa para prestar el servicio
+   y qué dato **no puede** ir a entrenamiento de modelo general.
+
+### Las piezas técnicas que lo vuelven demostrable
+
+El expediente no es sólo papel. Lo que lo hace defendible es poder mostrar la implementación:
+
+- **`OpenDP`** (MIT, Harvard) para las estadísticas agregadas publicadas — garantía formal, no promesa.
+- **`Opacus`** (Apache-2.0) con ε registrado si hay entrenamiento.
+- **`synthcity`** (Apache-2.0) para que los ambientes de desarrollo, demo y QA **no contengan dato real**, que es
+  la mitigación más barata y la que más impresiona en una auditoría.
+- **`Flower`** (Apache-2.0) si hay más de una institución.
+
+### Plazo y alcance
+
+**3–5 semanas.** Es el entregable más chico de esta KB y el único que se puede vender sin que el cliente haya
+decidido todavía qué sistema de AI quiere.
+
+### Dónde se vende primero
+
+**EMEA**, porque el DPIA es obligatorio y la institución ya sabe que lo debe. **North America**, porque el reloj
+COPPA **ya venció el 2026-04-22** y la conversación no es de preparación sino de exposición: a diferencia del
+Artículo 50 europeo, acá no queda plazo que administrar. **LATAM-Brasil** tiene su propia versión con fecha:
+plataformas con más de **1 millón de usuarios menores de 18** deben publicar **informes semestrales de impacto** y
+presentarlos a la **ANPD**.
+
+### ⚠️ Lo que no hay que prometer en este patrón
+
+- **No es asesoría legal.** El entregable es el expediente técnico y la evidencia de implementación; la firma
+  jurídica la pone el cliente o su estudio.
+- **No prometer «cumplimiento COPPA» como estado binario.** Se entrega el inventario, la mitigación y la
+  trazabilidad; quien declara conformidad es el operador.
+- **No proponer este patrón solo en mercados sin obligación.** Donde no hay regla exigible, el argumento es
+  exposición legal y no cumplimiento, y se vende distinto.

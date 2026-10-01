@@ -9,6 +9,80 @@ updated: 2026-10-01
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 > No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
 
+## 2026-10-01 (pase 16) — ninguno de los 31 agentes de esta KB declara qué hace con el dato del alumno, y desde abril la voz de un chico es dato biométrico regulado en EE. UU.
+
+El pase 15 abrió la capa que prueba **quién escribió** el trabajo. Este pase abre la que decide **con qué derecho
+el sistema lee al alumno**. Las dos son de cumplimiento, pero esta es anterior: sin ella, las otras quince capas
+de esta KB no se pueden desplegar sobre datos reales.
+
+**La tabla principal de `agents/top.md` no cambió en este pase y el conteo sigue en 31.** Lo que se encontró no
+son agentes: son librerías de infraestructura, y viven en `repos/foundations.md`. Decirlo es parte del hallazgo —
+**la capa de privacidad del dato educativo no tiene agentes, tiene librerías horizontales**.
+
+### 🔴 El hallazgo del pase: la KB abrió la capa de voz hace dos pasadas y no registró que la voz ya está regulada
+
+El **pase 14** abrió la capa de lectura oral y pronunciación —la primera capa de voz de esta KB— y dejó el
+**gap 24** anotando que ninguno de los 31 agentes tiene voz. El encuadre era de producto. **Le faltaba el
+encuadre regulatorio, y es el que decide si esa capa se puede vender en Norteamérica.**
+
+La **regla COPPA enmendada de la FTC** agregó los **identificadores biométricos a la definición de información
+personal**, y la enumeración incluye explícitamente **voiceprints**, faceprints, huellas y huellas de palma.
+
+| Hito | Fecha verificada |
+|---|---|
+| La FTC anuncia las enmiendas finalizadas | **enero de 2025** |
+| Publicación en el *Federal Register* | **2025-04-22** |
+| Entrada en vigor | **2025-06-23** |
+| 🔴 **Fecha de cumplimiento general** | **2026-04-22** |
+
+**Esa fecha ya pasó: hace más de cinco meses.** Y es la diferencia de postura con todo lo que esta KB viene
+escribiendo sobre EMEA: el reloj europeo del Artículo 50 **vence en diciembre** y se vende como urgencia futura;
+**el reloj norteamericano ya venció y se vende como exposición presente.**
+
+Lo que eso le hace a la capa de voz del pase 14, en concreto: un agente que escucha a un chico leer en voz alta
+para evaluar su fluidez **captura un voiceprint**, y en Norteamérica eso ahora exige consentimiento parental
+verificable bajo COPPA. Si además el despliegue toca Illinois, **BIPA** exige consentimiento escrito con daños
+estatutarios de **1.000 a 5.000 USD por violación** — por alumno, en un producto cuyo caso de uso es un aula
+entera.
+
+### Las otras tres reglas que la KB no tenía y que pegan sobre patrones ya escritos
+
+**1. FERPA prohíbe exactamente el atajo de datos que esta KB venía necesitando.** Bajo la *school official
+exception*, el dato que una institución le entrega a un proveedor **sólo puede usarse para el fin por el que se
+entregó** — prestar el servicio educativo. Usar dato de alumnos para **entrenar modelos con fines comerciales
+generales** es, típicamente, una violación de FERPA.
+
+Eso cae directo sobre el **gap 11** de esta KB, que desde el pase 7 viene diciendo que los datasets de knowledge
+tracing son NonCommercial y que, para un cliente con restricción de procedencia, **«entrenar con los datos propios
+pasa a ser la única opción»**. Sigue siendo cierto, y ahora tiene una condición que la KB no había escrito:
+*los datos propios son los del cliente, y el contrato FERPA no deja llevárselos al modelo general*. La salida no
+es legal, es técnica, y es la capa que abre este pase: **DP, federado o sintético**.
+
+**2. El dato de aprendizaje puede ser *perfilado dañino*, y en APAC está nombrado así.** Bajo la **DPDP Act 2023**
+de India, toda escuela que procese dato digital de alumnos es *Data Fiduciary*, y como los alumnos son menores
+aplica la **Sección 9**: consentimiento parental verificable, sin seguimiento conductual ni publicidad dirigida.
+Las sanciones por infracciones con datos de menores llegan a **₹200 crore**. Y la lectura que circula entre los
+analistas regionales es la que importa para esta KB: **una analítica que etiqueta a un alumno como «de bajo
+potencial» o que predice problemas de conducta sin salvaguardas puede tratarse como perfilado dañino.**
+
+Eso es, literalmente, la **capa predictiva** que el pase 11 abrió (gap 18) y el patrón **P25**.
+
+**3. GDPR convierte el despliegue en un entregable documental.** Antes de que una escuela use una herramienta de
+AI que procese dato de alumnos, el **DPIA es obligación legal bajo el Artículo 35**, y el EDPB recomienda
+documentar formalmente el *balancing test* de interés legítimo por cada actividad de tratamiento. Para un studio
+eso no es fricción: **es un entregable con nombre, alcance acotado y comprador claro**, y se vende antes del
+sistema, no después.
+
+### Lo que esto cambia en la postura comercial de la KB
+
+Quince pasadas vendieron **capacidad** (el tutor enseña, el evaluador mide, el detector marca). Este pase agrega
+la pregunta que un CISO o un DPO hace primero y que ninguna de las quince respondía: **¿dónde está el dato del
+chico y quién puede verlo?** La buena noticia del pase es que la respuesta técnica ya existe, es permisiva y no
+hay que construirla —`PySyft`, `Flower`, `OpenDP`, `Opacus`, `synthcity`—; la mala es que **nadie la conectó al
+dato educativo**: el mejor puente que se encontró, `FedGKT`, tiene **1 estrella y no declara licencia**.
+
+Ver los **trends 39, 40 y 41**, los **gaps 27 y 28**, y los patrones **P34** y **P35**.
+
 ## 2026-10-01 (pase 15) — la KB le vende a EMEA un deadline de *watermarking* desde el pase 4 y nunca registró una sola implementación: existe, es Apache-2.0 y viaja dentro de Hugging Face Transformers
 
 Catorce pasadas construyeron la capa que **enseña** y la capa que **evalúa**. Ninguna construyó la capa que

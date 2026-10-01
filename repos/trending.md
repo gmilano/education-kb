@@ -8,6 +8,85 @@ updated: 2026-10-01
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 
+## 2026-10-01 (pase 16) — la capa que decide si las otras quince pueden tocar dato real: lo horizontal es maduro y permisivo, lo educativo tiene techo de 10 estrellas, y la herramienta canónica dejó de ser open source
+
+Dieciséis pasadas. Esta KB tiene agente, modelado, evaluación, seguridad, telemetría, datos, accesibilidad,
+credencial, contenido, práctica, voz y autoría. **Ninguna pasada preguntó con qué derecho el sistema toca el dato
+real del alumno.** Se midió antes de abrir la capa, sobre los ocho archivos: `COPPA` **0 apariciones**,
+`differential privacy` / `privacidad diferencial` **0**, `federated` / `federado` **0**, `FERPA` **1**, y esa
+única aparición estaba dentro de la descripción de un repo de otra capa.
+
+### Los quince repos nuevos, verificados vía WebFetch el 2026-10-01
+
+**Bloque 1 — privacidad diferencial. Es la única capa de esta KB donde todo lo maduro es permisivo:**
+
+| Repo | Licencia | ★ | Forks | Commits | Qué es |
+|---|---|---|---|---|---|
+| https://github.com/OpenMined/PySyft | **Apache-2.0** ✅ | **10.0k** | 2.0k | **36.954** | El cómputo viaja al dato, no al revés. v0.10+ modular (`syft-rds`, datasets, jobs, permisos) |
+| https://github.com/google/differential-privacy | **Apache-2.0** ✅ | **3.4k** | 436 | — | Building blocks DP en C++/Go/Java/Python + Privacy on Beam + PipelineDP4j |
+| https://github.com/pytorch/opacus | **Apache-2.0** ✅ | **2.0k** | 398 | 814 | DP en PyTorch con ~2 líneas; contador de presupuesto en vivo. ⚠️ última actividad **2024-12-18** |
+| https://github.com/tensorflow/privacy | **Apache-2.0** ✅ | **2.0k** | 477 | — | Optimizadores DP para TF. ⚠️ última actividad **2024-02-14** (v0.9.0); no archivado |
+| https://github.com/IBM/differential-privacy-library | **MIT** ✅ | **920** | 208 | 595 | DP de propósito general con API scikit-learn. Licencia leída en `LICENSE.md`, no en el sidebar |
+| https://github.com/opendp/opendp | **MIT** ✅ | **437** | 78 | 990 | Rust + Python/R. *President and Fellows of Harvard College*. La referencia académica formal |
+
+**Bloque 2 — federado, y la categoría se consolidó en un solo nombre entre pasadas:**
+
+| Repo | Licencia | ★ | Forks | Commits | Estado |
+|---|---|---|---|---|---|
+| https://github.com/adap/flower | **Apache-2.0** ✅ | **7.2k** | 1.2k | **5.841** | Activo. Agnóstico de framework ML |
+| https://github.com/securefederatedai/openfl | **Apache-2.0** ✅ | 843 | 237 | — | 🔴 **Deprecado, y remite a Flower por nombre** |
+
+El repo de OpenFL lo dice él mismo: *«no longer under active development and will soon be archived… we recommend
+the community transitions to **Flower** framework using the migration guide created in collaboration between our
+teams»*. **Un competidor que se retira y nombra al ganador no es ruido de mercado: es la decisión técnica ya
+tomada.**
+
+**Bloque 3 — datos sintéticos, y acá está el hallazgo del pase:**
+
+| Repo | Licencia | ★ | Forks | Qué es |
+|---|---|---|---|---|
+| https://github.com/sdv-dev/SDV | 🔴 **Business Source License 1.1 — no es open source** | **3.6k** | 423 | El canónico del espacio. Nació en el **Data to AI Lab del MIT (2016)**; hoy lo desarrolla **DataCebo, Inc.** |
+| https://github.com/vanderschaarlab/synthcity | **Apache-2.0** ✅ | **687** | 98 | **DP-GAN y PATEGAN** adentro, más CTGAN/TVAE/flows/bayesianas/LLM. Series temporales y supervivencia. **Métricas de *correctness* y de *privacy*** |
+| https://github.com/ydataai/ydata-synthetic | **MIT** ✅ | **1.7k** | 257 | Tabular y series temporales con GANs sobre TF2. ⚠️ el paquete **migró** a `fg-data-synthetic`, con guía de migración en el README |
+
+**Bloque 4 — lo específico de educación, donde se cae todo:**
+
+| Repo | Licencia | ★ | Commits | Qué es |
+|---|---|---|---|---|
+| https://github.com/Akulen/PrivGen | **MIT** ✅ | **3** | 15 | RNN de generación sintética educativa, **EC-TEL 2022**. Evalúa con **IRT** y con **riesgo de reidentificación** |
+| https://github.com/hxwujinze/federated-deep-knowledge-tracing | ⚠️ **sin licencia** | **10** | 5 | Código del paper *Federated Deep Knowledge Tracing* |
+| https://github.com/TarunRaina/FedGNN-for-Personalized-Knowledge-Tracing | ⚠️ **sin licencia** | **1** | 30 | **FedGKT**: 722 conceptos, **1.401 aristas de prerrequisito anotadas por expertos**, GAT + FedAvg/FedProx **sobre Flower**, dataset Junyi (25M interacciones) |
+| https://github.com/drsanjayagal/SynEdu-HEDL | ⚠️ **sin licencia** | **1** | 2 | **20.000 alumnos sintéticos**, 180 cursos, 120k+ eventos LMS, ~300k evaluaciones, 6 tablas |
+
+### 🔴 Por qué este pase no termina en «ya tenemos con qué cumplir»
+
+**Primero: la herramienta que el cliente va a nombrar ya no se puede usar.** `SDV` es el nombre canónico de datos
+sintéticos tabulares y salió del MIT, pero su `LICENSE` es **BUSL 1.1**: licenciante **DataCebo, Inc.**, *Change
+Date* a **cuatro años de cada release**, *Change License* **MIT** recién entonces, uso en producción **prohibido**
+sin licencia comercial, y una restricción redactada así: *«You may not use the Licensed Work… for a Synthetic Data
+Service»*, definido como toda oferta comercial que dé a terceros acceso a sus capacidades de generación de datos
+sintéticos. **La BUSL no está aprobada por OSI** —es la familia de Terraform y Vault— y ese párrafo describe con
+precisión incómoda lo que hace un studio de consultoría. El reemplazo es **`synthcity`** (Apache-2.0), que además
+trae DP *dentro* del generador y métricas para demostrarlo.
+
+**Segundo: el patrón de las cinco capas anteriores se repite exacto.** Lo horizontal —DP y federado— es maduro,
+tiene decenas de miles de estrellas y es todo Apache-2.0 o MIT. Lo que es **específicamente educativo** tiene
+techo de **10 ★** y **tres de los cuatro repos no declaran licencia**, así que no son reutilizables por mucho que
+el código sirva. El único permisivo de la capa educativa, `PrivGen`, tiene **3 ★**.
+
+**Y lo que eso significa para una propuesta:** la infraestructura de privacidad **no hay que construirla** —está
+hecha, es permisiva y es de Harvard, Google, Meta e IBM—. Lo que no existe es **el puente entre esa
+infraestructura y el dato educativo**, y ese puente es trabajo de integración, que es exactamente lo que un studio
+vende. `FedGKT` muestra que es factible (ya corre sobre Flower) y muestra por qué no alcanza: 1 estrella y sin
+licencia.
+
+⚠️ **Dos fuentes bloqueadas por el proxy de egreso, y se declaran:** `nature.com` (el paper de `SynEdu-HEDL` en
+*Scientific Reports*, `s41598-026-44990-8`) y `arxiv.org` (`2604.04195`, síntesis por cópulas con marginales
+empíricas). Los números de los repos salen de sus páginas de GitHub, que sí se leyeron; **la metodología publicada
+no se verificó de primera mano.**
+
+Ver los **trends 39, 40 y 41**, los **gaps 27 y 28** y los patrones **P34** y **P35**.
+
 ## 2026-10-01 (pase 15) — la capa que prueba la autoría: la detección es permisiva y no se puede usar, el marcado es permisiva y nadie lo usa, y el estándar que Europa canonizó tiene 1.907 commits
 
 Quince pasadas. La capa de integridad académica existía en esta KB desde el pase 8 **y era sólo proctoring** —

@@ -865,6 +865,103 @@ generativa de las **15 universidades latinoamericanas mejor rankeadas en THE 202
 UFRJ, UNESP…). **`zenodo.org` está bloqueado por el proxy de egreso: no se pudo verificar licencia ni contenido.**
 Si tiene licencia abierta, es el mapa de la norma institucional de la región servido en bandeja.
 
+## 39. La infraestructura de privacidad es la única capa de esta KB donde lo maduro es permisivo, y la educación no la usa (agregado 2026-10-01, pase 16)
+
+Quince pasadas registraron la misma forma una y otra vez: lo que está desplegado es copyleft o propietario, y lo
+permisivo no pasa de unas pocas estrellas. En la capa de privacidad del dato **esa forma se invierte**.
+
+| Pieza | Licencia | ★ |
+|---|---|---|
+| PySyft (OpenMined) | Apache-2.0 | 10.0k |
+| Flower | Apache-2.0 | 7.2k |
+| Google DP | Apache-2.0 | 3.4k |
+| Opacus (PyTorch/Meta) | Apache-2.0 | 2.0k |
+| TensorFlow Privacy | Apache-2.0 | 2.0k |
+| diffprivlib (IBM) | MIT | 920 |
+| synthcity | Apache-2.0 | 687 |
+| OpenDP (Harvard) | MIT | 437 |
+
+**Más de 26.000 estrellas, todas Apache-2.0 o MIT, de Harvard, Google, Meta e IBM.** No hay fricción de licencia,
+no hay riesgo de procedencia, no hay que construir nada.
+
+**Y la educación no la toca.** Lo específicamente educativo de esta capa es `PrivGen` (MIT, **3 ★**),
+`federated-deep-knowledge-tracing` (**10 ★**, sin licencia), `FedGKT` (**1 ★**, sin licencia) y `SynEdu-HEDL`
+(**1 ★**, sin licencia). El techo es **10 estrellas** y **tres de los cuatro no son reutilizables** por no
+declarar licencia.
+
+**La lectura, y es la tendencia:** el cuello de botella de esta capa no es tecnológico ni de licencia — es de
+**integración**. La distancia entre `Flower` y un modelo de knowledge tracing federado la recorrió un repo de 1
+estrella usando piezas que cualquiera tiene disponibles. Es la capa de mejor relación esfuerzo/defensa de toda
+esta KB, y es la que nadie recorrió.
+
+## 40. El reloj de privacidad de Norteamérica ya venció, y es el primero de esta KB que se vende como exposición y no como preparación (agregado 2026-10-01, pase 16)
+
+Esta KB viene administrando relojes regulatorios futuros: el Artículo 50 del EU AI Act **vence el 2026-12-02**, el
+Anexo III **el 2027-12-02**, Vietnam y Corea con sus propias fechas. Todos se venden igual: *falta tanto, hay
+ventana de consultoría*.
+
+**La regla COPPA enmendada de la FTC rompe ese patrón porque ya pasó.**
+
+| Hito | Fecha |
+|---|---|
+| FTC anuncia las enmiendas finalizadas | enero de 2025 |
+| Publicación en el *Federal Register* | 2025-04-22 |
+| Entrada en vigor | 2025-06-23 |
+| 🔴 **Fecha de cumplimiento general** | **2026-04-22** |
+
+Es la primera actualización sustantiva de COPPA en **doce años**, y lo que agregó es exactamente lo que le pega a
+esta KB:
+
+- **Identificadores biométricos** —**voiceprints**, faceprints, huellas dactilares y de palma— pasan a ser
+  **información personal**. Eso alcanza a toda la **capa de voz** que el pase 14 abrió, y a cualquier función de
+  reconocimiento facial.
+- **Consentimiento verificable separado** antes de compartir dato de menores con terceros.
+- **Prohibida la retención indefinida**: hace falta **política escrita** de retención y borrado en plazo.
+
+Y debajo, el régimen estatal que ya existía: **SOPIPA** (California) prohíbe vender dato de alumnos y la
+publicidad dirigida sin vía de consentimiento que lo habilite; **SOPPA** (Illinois) impone requisitos
+contractuales, plazos de notificación de brecha y transparencia pública; **Nueva York** prohíbe el reconocimiento
+facial en escuelas; y **BIPA** (Illinois) exige consentimiento escrito para biométricos con daños estatutarios de
+**1.000 a 5.000 USD por violación**.
+
+**Por qué cambia el argumento comercial:** con un reloj futuro se vende un plan. Con un reloj vencido se vende
+**remediación**, el comprador es otro (jurídico y no innovación), el ciclo es más corto y la objeción «esperemos a
+ver cómo queda la norma» no existe. Es, de las cuatro regiones, la única donde esta KB puede decir hoy que el
+plazo ya se cumplió.
+
+## 41. El dato de aprendizaje empezó a nombrarse como perfilado dañino, y eso toca la capa predictiva que esta KB declaró desabastecida (agregado 2026-10-01, pase 16)
+
+El pase 11 abrió la capa predictiva —*early warning*, riesgo de deserción— y la registró como **la única capa de
+esta KB donde la demanda está madura y la oferta open source es cero** (gap 18). El encuadre era de oferta. Lo que
+el pase 16 agrega es que **la demanda de esa capa está empezando a tener techo regulatorio en tres regiones a la
+vez**, y por el mismo motivo.
+
+- **APAC (India).** Bajo la **DPDP Act 2023**, toda escuela que procese dato digital de alumnos es *Data
+  Fiduciary*, y la **Sección 9** aplica por tratarse de menores: consentimiento parental verificable, sin
+  seguimiento conductual ni publicidad dirigida, y nada de tratamiento que pueda causar daño. Sanciones de hasta
+  **₹200 crore** por infracción con datos de menores. La lectura de los analistas regionales es explícita: una
+  analítica que etiqueta a un alumno como *«de bajo potencial»* o que predice problemas de conducta sin
+  salvaguardas **puede tratarse como perfilado dañino**.
+- **EMEA.** El Anexo III del EU AI Act ya clasificaba la predicción de deserción como alto riesgo; el GDPR le suma
+  el **DPIA obligatorio del Artículo 35** antes del despliegue.
+- **LATAM (Brasil).** El **Referencial** del MEC (2026-03-12) advierte sobre la necesidad de transparencia
+  algorítmica y sobre el riesgo de **sesgo algorítmico que reproduce y amplifica desigualdades sociales presentes
+  en las bases que alimentan estos sistemas** — que es la descripción exacta de un modelo de riesgo de deserción
+  entrenado con datos históricos.
+
+**La síntesis que importa para una propuesta:** la capa predictiva no está sólo desabastecida de código — está
+quedando **condicionada a una arquitectura**. Un modelo centralizado entrenado con histórico de alumnos y que
+emite una etiqueta de riesgo por persona es exactamente el objeto que las tres regiones están nombrando. Lo que
+sobrevive a ese encuadre es la versión federada, con DP, con humano en el lazo y con el dato quieto — o sea,
+**P25 más P34**.
+
+Y hay un matiz que corrige la lectura del pase 11 sobre esta misma capa. El pase 11 anotó como debilidad que el
+repo tope de la capa (`Aliipou/Student-Retention-Prediction`, MIT, 6 ★) **entrena con datos sintéticos**. Visto
+desde este pase, entrenar con sintéticos no es la debilidad: **es la decisión correcta**. La debilidad es que lo
+hace **sin garantía de privacidad declarada y sin evaluación de utilidad** — que es precisamente lo que
+`synthcity` aporta de fábrica con sus métricas de *correctness* y *privacy*.
+
+
 ---
 
 ## Gaps declarados
@@ -1319,7 +1416,33 @@ Huecos confirmados tras buscar, no ausencias por no haber buscado. Un gap inform
     **La acción para la próxima pasada:** medir el canal otra vez, pero buscando por **`SKILL.md` + dominio educativo** en vez de por repos educativos — que es el error de método que el pase 12 ya documentó y que este pase confirma desde el otro lado. Si la evasión llegó al canal, la pedagogía puede.
 
 
+27. **Ningún agente educativo open source declara una postura de privacidad, y ninguna pieza de privacidad habla educación** *(agregado en el pase 16 del 2026-10-01)*. Es un gap de doble filo y las dos mitades se midieron en este pase.
+
+    *Mitad A — los agentes.* Se revisaron los **31** de la tabla principal de `agents/top.md` buscando una declaración de qué hacen con el dato del alumno: dónde queda, si se usa para entrenar, si se puede desplegar sin que salga de la institución. **Ninguno la tiene.** No declaran una política mala: no declaran ninguna. Lo más cercano es la capa de memoria —DeepTutor con memoria en tres capas, `learnmcp-xapi` persistiendo contra un LRS— que describe **dónde** queda el dato pero nunca bajo **qué base legal** ni con qué retención. Eso importa porque desde el **2026-04-22** la regla COPPA enmendada exige política **escrita** de retención y prohíbe la retención indefinida.
+
+    *Mitad B — las piezas de privacidad.* Las ocho librerías maduras de la capa (26.000+ ★ combinadas, todas Apache-2.0 o MIT) son **horizontales**: ninguna trae un adaptador educativo, ni plugin de LMS, ni servidor MCP, ni ejemplo con datos de knowledge tracing. Lo específicamente educativo son cuatro repos con techo de **10 ★**, y **tres no declaran licencia**.
+
+    **Por qué este gap es distinto a los otros 26:** no es falta de oferta ni trampa de licencia. La oferta existe, es enorme y es permisiva. **Lo que falta es un puente de integración de tamaño conocido**, y hay prueba de que es factible: `FedGKT` ya corre knowledge tracing federado sobre Flower con grafos de prerrequisitos anotados por expertos. Lo hizo **un repo de 1 estrella sin licencia**. Es el gap más barato de cerrar de esta KB y el que mejor se defiende ante un regulador. Ver **P34**.
+
+28. **La capa de voz que el pase 14 abrió es dato biométrico regulado en Norteamérica, y esta KB la registró sin ese encuadre** *(agregado en el pase 16 del 2026-10-01)*. Es un gap de **método propio**, como el 11 y el 25, y se declara en vez de corregirlo en silencio.
+
+    El **pase 14** abrió la capa de lectura oral y pronunciación —la primera capa de voz de esta KB— y dejó el **gap 24** anotando que ninguno de los 31 agentes tiene voz. El análisis fue íntegramente de producto: qué repos hay, qué licencia tienen, qué resuelven en primaria. **No registró que la voz de un menor ya es información personal regulada.**
+
+    Lo que faltaba: la regla COPPA enmendada agregó los **identificadores biométricos** a la definición de información personal, y la enumeración incluye **voiceprints** junto con faceprints, huellas dactilares y de palma. **Cumplimiento exigible desde el 2026-04-22.** Si el despliegue toca **Illinois**, **BIPA** suma consentimiento escrito con daños estatutarios de **1.000 a 5.000 USD por violación** — por alumno, en un producto cuyo caso de uso natural es un aula entera.
+
+    **Lo que no cambia:** la capa de voz sigue siendo una buena oportunidad y los repos del pase 14 siguen siendo los que son. **Lo que cambia es el presupuesto y el orden:** un piloto de lectura oral en Norteamérica necesita el consentimiento parental verificable y la política de retención **antes** del piloto, no después, y eso es alcance que el pase 14 no contabilizó. Ver **P35**, que lo empaqueta como entregable propio.
+
+    ⚠️ **Y la generalización que conviene hacer, porque va a volver a pasar:** esta KB abre capas por *capacidad* —qué sabe hacer el software— y recién después, si alguien pregunta, por *régimen*. Pasó con el watermarking en el pase 15 (la KB vendía un deadline sin implementación) y pasó acá al revés (la KB registró una implementación sin su deadline). **Toda capa nueva que toque a un menor necesita las dos lecturas en la misma pasada.**
+
+
 ## Fuentes
+
+Privacidad y datos del alumno — pase 16 (2026-10-01), repos verificados vía WebFetch: [PySyft](https://github.com/OpenMined/PySyft) · [Flower](https://github.com/adap/flower) · [OpenFL (deprecado)](https://github.com/securefederatedai/openfl) · [Google DP](https://github.com/google/differential-privacy) · [Opacus](https://github.com/pytorch/opacus) · [TensorFlow Privacy](https://github.com/tensorflow/privacy) · [diffprivlib](https://github.com/IBM/differential-privacy-library) · [OpenDP](https://github.com/opendp/opendp) · [synthcity](https://github.com/vanderschaarlab/synthcity) · [ydata-synthetic](https://github.com/ydataai/ydata-synthetic) · [SDV](https://github.com/sdv-dev/SDV) y su [LICENSE (BUSL 1.1)](https://github.com/sdv-dev/SDV/blob/main/LICENSE) · [PrivGen](https://github.com/Akulen/PrivGen) · [FedGKT](https://github.com/TarunRaina/FedGNN-for-Personalized-Knowledge-Tracing) · [federated-deep-knowledge-tracing](https://github.com/hxwujinze/federated-deep-knowledge-tracing) · [SynEdu-HEDL](https://github.com/drsanjayagal/SynEdu-HEDL)
+
+Regulación de privacidad educativa — pase 16: COPPA enmendada ([White & Case](https://www.whitecase.com/insight-alert/unpacking-ftcs-coppa-amendments-what-you-need-know), [Privacy & Data Security Insight](https://www.privacyanddatasecurityinsight.com/2026/04/enforcement-begins-soon-for-significant-coppa-rule-amendments/)) · FERPA y AI ([AFS Law](https://www.afslaw.com/perspectives/ai-law-blog/the-development-ai-and-protecting-student-data-privacy)) · DPDP Act India ([ORF](https://www.orfonline.org/research/governing-learner-data-risks-in-india-the-dpdp-act-and-the-case-for-edtech-specific-regulation), [medianama](https://www.medianama.com/2026/09/223-microsoft-student-data-ai-training-schools-india/)) · Brasil: Referencial do MEC ([O Tempo](https://www.otempo.com.br/educacao/2026/3/13/mec-recomenda-veto-de-ia-na-educacao-infantil-e-desaconselha-reconhecimento-facial-nas-escolas), [Jeduca](https://jeduca.org.br/noticia/ia-na-educacao-entenda-o-novo-referencial-do-mec-e-pontos-de-atencao)), ANPD y biometría en Paraná ([Data Privacy Brasil](https://www.dataprivacybr.org/anpd-suspende-o-uso-de-reconhecimento-facial-em-escolas-publicas-do-parana/), [Convergência Digital](https://convergenciadigital.com.br/governo/anpd-exige-suspensao-imediata-do-tratamento-de-dados-biometricos-na-frequencia-escolar-no-parana/)), LGPD na educação ([Confidata](https://confidata.com.br/blog/lgpd-educacao-2026-impacto-eca-digital))
+
+⚠️ *Del pase 16: se abrieron de primera mano sólo los enlaces a `github.com`. **`nature.com` y `arxiv.org` están bloqueados por el proxy de egreso**, así que el paper de `SynEdu-HEDL` (Scientific Reports `s41598-026-44990-8`) y el de síntesis por cópulas (`arXiv 2604.04195`) **no se verificaron de primera mano**. El `Referencial` del MEC se leyó vía cobertura periodística, no desde el PDF oficial. `curl -sI` devolvió **403 en los catorce repos consultados** — ninguno era un 404; ver la nota de método del pase 16.*
+
 
 Nuevo en el pase 15 — capa de marcado y procedencia (verificado vía WebFetch el 2026-10-01): [SynthID-Text en transformers](https://github.com/huggingface/transformers/blob/main/src/transformers/generation/watermarking.py) · [MarkLLM](https://github.com/THU-BPM/MarkLLM) · [c2pa-rs](https://github.com/contentauth/c2pa-rs) · [c2pa-python](https://github.com/contentauth/c2pa-python)
 
@@ -1419,6 +1542,71 @@ Capa de telemetría (LRS / xAPI) — agregado en el pase 6, **todo verificado de
 Evaluación — agregado en el pase 6, 🔴 **no verificado de primera mano** (dominios bloqueados por el proxy): L2-Bench (arXiv 2607.08842) · metodología de L2-Bench (arXiv 2603.20088) · `benchmarks.elt.edu.oup.com` · dataset en HuggingFace bajo `OUP/`
 
 Regulación y mercado por región — agregado en el pase 6: [MultiState — AI in Education Legislation: 2026 State Policy Trends](https://www.multistate.us/insider/2026/4/9/how-states-are-regulating-ai-in-education-this-legislative-session) · [NASBE — States Take Next Steps on Governing AI Use in Schools](https://www.nasbe.org/states-take-next-steps-on-governing-ai-use-in-schools/) · [ExcelinEd — State K-12 AI Policy in 2026](https://excelined.org/2026/05/26/state-k-12-ai-policy-in-2026-milestones/) · [Latham & Watkins — AI Regulation in APAC](https://www.lw.com/en/insights/ai-regulation-in-apac-diverging-approaches-across-the-region) · [Xenoss — APAC AI regulations](https://xenoss.io/blog/asia-pacific-apac-ai-regulations) · [UNESCO — Observatory on AI in Education for LAC](https://www.unesco.org/en/articles/unesco-launches-observatory-artificial-intelligence-education-latin-america-and-caribbean) · [Compliance & Risks — LATAM AI legislation](https://www.complianceandrisks.com/blog/shaping-the-future-ai-legislative-initiatives-across-latin-america/) · [IDB — An Enabling Regulatory Framework for AI in LAC](https://publications.iadb.org/publications/english/document/An-Enabling-Regulatory-Framework-for-Artificial-Intelligence-in-Latin-America-and-the-Caribbean.pdf) · [Azumo — AI in Education Statistics 2026](https://azumo.com/artificial-intelligence/ai-insights/ai-in-education-statistics) · [Grand View Research — AI Tutors Market](https://www.grandviewresearch.com/industry-analysis/ai-tutors-market-report) · [EdTech Hub — AI in Education in MENA](https://docs.edtechhub.org/lib/EPJAMMH9/download/BHXDDPBB)
+
+## Nota de método del pase 16 (2026-10-01) — dieciséis pasadas preguntando qué sabe hacer el software, y la pregunta que faltaba era con qué derecho toca al alumno
+
+Este pase no buscó una tecnología: buscó un **régimen**. El disparador fue medir el vocabulario de la propia KB
+antes de investigar nada, sobre los ocho archivos:
+
+| Término buscado | Apariciones antes del pase 16 |
+|---|---|
+| `COPPA` | **0** |
+| `differential privacy` / `privacidad diferencial` | **0** |
+| `federated` / `federado` | **0** |
+| `FERPA` | **1**, de pasada, dentro de la descripción de un repo de otra capa |
+| `sintétic` | 10, **todas como crítica** a un repo de la capa predictiva, ninguna como capacidad |
+
+Quince pasadas y cinco de los seis términos que definen el tratamiento legal del dato de un menor no aparecían.
+Ese conteo es el hallazgo del pase tanto como los repos.
+
+### Lo que se verificó de primera mano
+
+1. **Quince repos abiertos uno por uno vía WebFetch** para licencia, estrellas, forks, commits y lenguaje. Dos
+   licencias **no estaban en el sidebar de GitHub y hubo que abrir el archivo**: `diffprivlib` (`LICENSE.md` →
+   «MIT License», IBM Corporation 2018) y `SDV` (`LICENSE` → «Business Source License 1.1», licenciante DataCebo,
+   Inc.). **En los dos casos la conclusión habría sido distinta leyendo sólo la página del repo.**
+2. **El texto de la BUSL de SDV leído campo por campo** —*Change Date*, *Change License*, *Additional Use Grant*,
+   la exclusión de *Synthetic Data Service*— porque de ahí sale la recomendación de no usarlo, y una recomendación
+   negativa necesita la cita, no el resumen.
+3. **La deprecación de OpenFL citada literal** desde su propia página, incluida la recomendación de migrar a
+   Flower.
+4. **Las cuatro fechas de la regla COPPA enmendada** (anuncio enero 2025, publicación 2025-04-22, vigencia
+   2025-06-23, cumplimiento **2026-04-22**) cruzadas entre varias fuentes secundarias coincidentes.
+
+### ⚠️ Advertencia 1 — `curl -sI` dio 403 en los catorce repos, y ninguno era un 404
+
+El pase 12 ya había dejado escrito que **un 403 del proxy no es un 404**. Volvió a pasar, esta vez en el 100 % de
+los casos: `curl -sI` contra `github.com` devolvió **403 en los catorce** URLs candidatas que se le pasaron, incluidas las de
+10.000 y 7.200 estrellas. **Verificar con `curl` desde esta sesión produce una tasa de falsos negativos del 100 %
+sobre GitHub.** La verificación válida es WebFetch sobre la página del repo. Queda anotado por tercera vez porque
+es el error que más barato sale cometer y más caro sale publicar.
+
+### ⚠️ Advertencia 2 — el badge de licencia no alcanza, y acá cambió dos conclusiones
+
+Relacionado con lo anterior pero distinto: en `SDV` el README dice *«publicly available under the Business Source
+License»* y el proyecto se presenta con origen en el **MIT Data to AI Lab**, lo que invita a leerlo como permisivo.
+**No lo es.** En `diffprivlib` pasa lo contrario: GitHub no muestra licencia en el sidebar y el archivo dice MIT.
+**Para cualquier pieza de la que dependa una recomendación, abrir el archivo de licencia.**
+
+### ⚠️ Advertencia 3 — dos dominios bloqueados, y los dos afectan a la metodología, no a los datos
+
+`nature.com` (el paper de `SynEdu-HEDL` en *Scientific Reports*, `s41598-026-44990-8`) y `arxiv.org`
+(`2604.04195`, síntesis por cópulas con marginales empíricas) están **bloqueados por el proxy de egreso**. Los
+números de los repos salen de GitHub y están verificados; **la metodología publicada detrás de esos dos
+artefactos, no**. Importa poco para la recomendación —ninguno de los dos se propone como dependencia— y se declara
+igual.
+
+### Lo que este pase NO hizo, declarado como tal
+
+- **No se agregó ningún agente a `agents/top.md`.** El conteo sigue en **31** y se verificó que la tabla no cambió.
+  Lo encontrado son librerías, no agentes.
+- **No se buscó jurisprudencia ni sanciones aplicadas.** Se registró qué exige cada régimen y desde cuándo, no cómo
+  se está aplicando. Para una propuesta real eso hay que mirarlo.
+- **No se evaluó el costo de utilidad de DP sobre modelos de knowledge tracing.** Se sabe que DP cuesta exactitud y
+  que `diffprivlib` sirve para medirlo; **cuánto cuesta sobre `pyKT` o `pyBKT` nadie lo midió en este pase**, y
+  P34 lo dice en su advertencia en vez de prometer números.
+- **No se revisó la capa de privacidad de los LMS ya instalados** (Moodle, Open edX, Canvas). Es el paso siguiente
+  obvio: el dato del alumno ya está ahí, no en el agente.
 
 ## Nota de método del pase 14 (2026-10-01) — el primer pase que ejecutó la acción que un gap anterior le dejó escrita, y funcionó
 
