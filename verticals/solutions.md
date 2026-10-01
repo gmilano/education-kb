@@ -123,6 +123,22 @@ Un LMS gestiona el aprendizaje y un SIS gestiona la institución; **un LRS guard
 
 ⚠️ **Lo que no se pudo confirmar, y hay que confirmarlo antes de proponerlo:** que el módulo de educación sea **parte del core de ERPNext**. En el repo lo único con ese nombre que aparece es *Frappe School*, que es una plataforma de cursos sobre el propio framework, no un módulo de gestión académica. La funcionalidad educativa de ERPNext fue históricamente una app aparte. **Registrarlo como candidato sólo cuando el cliente ya corre ERPNext** (evita meter un segundo ERP), y verificar primero en qué app vive el módulo. No desplaza a GegoK12 ni a OpenEduCat.
 
+## Tutores desplegables — agregada en el pase 7 del 2026-10-01
+
+Esta KB venía listando tutores en `agents/top.md` sin separar los que **se despliegan y se customizan** (que es de lo que trata este archivo) de los que son librerías o referencias. El pase 7 encontró tres tutores con tracción que no estaban registrados, y los tres son **self-hosted con interfaz de usuario completa** — o sea candidatos de esta capa, no de la de agentes.
+
+**Y los tres tienen fricción de licencia.** Es la razón por la que se registran acá con la condición adelante y no en la lista de recomendados.
+
+| Tutor | Licencia | Stars | URL | Cuándo proponerlo |
+|---|---|---|---|---|
+| **ChatTutor** | **AGPL-3.0** ⚠️ | 1.3k | https://github.com/HugeCatLab/ChatTutor | Cuando lo que vende la demo es **interacción visual**: canvas de matemática y mapas mentales **expuestos al LLM como herramientas**. Es el único de la KB que le da al modelo instrumentos de pizarrón. **Desplegar sin modificar**; si se modifica y se sirve por SaaS, la AGPL obliga a publicar el fuente |
+| **tutor-gpt** | **GPL-3.0** ⚠️ | 931 | https://github.com/plastic-labs/tutor-gpt | Como **referencia de arquitectura** de modelado del estado mental del alumno (teoría de la mente + reescritura del propio prompt). GPL-3.0 no es copyleft de red: servirlo sin modificar no dispara obligación; modificarlo y distribuirlo sí. Procedencia **EE. UU.** (Plastic Labs), útil cuando hay restricción de origen |
+| **llamatutor** | 🚫 **sin licencia** | 2.1k | https://github.com/Nutlope/llamatutor | **No proponer.** Verificado en el pase 7: `/blob/main/LICENSE` devuelve **404**, así que el default legal es todos los derechos reservados. Sirve para mirar cómo resolvieron la UX, nada más |
+
+**Cómo se lee esto junto con las plataformas de arriba.** El patrón recomendado de este archivo no cambia: **no forkear el core copyleft, poner la lógica propietaria en un servicio aparte y hablar por API/MCP.** Aplicado a estos tres, significa desplegar `ChatTutor` tal cual y poner la inteligencia propia al lado, en vez de forkearlo — que es exactamente la misma receta que para Moodle y Open edX.
+
+⚠️ **Lo que sigue sin tener alternativa permisiva de escala.** Si el requisito es **empaquetar un tutor en un entregable cerrado**, las únicas bases open source de escala siguen siendo las dos de APAC: **`DeepTutor`** (Apache-2.0, 40.6k ★) y **`OpenMAIC`** (MIT, 39.7k ★). El pase 7 lo midió contra las alternativas en vez de suponerlo, y la conclusión no cambió. Para un cliente con restricción de procedencia, eso es una tensión real que hay que poner sobre la mesa temprano — ver el gap 4 en `intel/trends.md`.
+
 ## Cómo elegir
 
 | Si el cliente necesita… | Arrancar de |

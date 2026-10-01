@@ -455,7 +455,69 @@ Hasta este pase la KB no tenía con qué responder. Ahora sí, y las piezas son 
 
 ⚠️ **Lo que NO hay que prometer.** Ningún LRS estima mastery: son almacenes conformes al estándar. La inferencia es siempre desarrollo propio (paso 4). Y `learnmcp-xapi` tiene **32 commits** — sirve como referencia de integración o base a forkear (es MIT), **no como dependencia de producción sin revisarlo**. Si el cliente ya tiene un LRS, lo más probable es que sea **Learning Locker**, que es **GPL-3.0**: en ese caso el servicio propio va afuera y se habla por la API estándar, sin tocar el core.
 
+## P16 — Entrenar el estimador de mastery sin un dataset que se pueda usar (agregado en el pase 7; transversal, y es la condición de posibilidad de P1, P12 y P15)
+
+**El problema que resuelve, y es el que P15 dejó abierto sin decirlo.** P15 termina en el paso 4 —"la pieza propia: el estimador"— y lo presenta como integración de `pyBKT`, que es MIT. Lo es. Pero un modelo de knowledge tracing **no se instala: se entrena**, y cuando se va a buscar con qué, la licencia se da vuelta (ver `repos/foundations.md`, capa de datos de entrenamiento):
+
+| Dataset | Volumen | Licencia | ¿Sirve en un entregable facturado? |
+|---|---|---|---|
+| **EdNet** | 131,4M interacciones, 784k alumnos | ⚠️ **CC BY-NC 4.0** | **No** |
+| **FoundationalASSIST** | 1,7M, el único en inglés con respuestas reales y distractores | ⚠️ **CC BY-NC 4.0** + gated | **No** |
+| **XES3G5M** | 5,5M interacciones, 18k alumnos, 7.652 preguntas, 865 KC | **MIT** ✅ | **Sí**, y es **chino, matemática, tercer grado** |
+
+**La consecuencia no es legal, es de arquitectura y de cronograma:** si el dataset de producción tiene que ser el del cliente, entonces **el LRS no es la fase de conformidad, es la fase que fabrica el activo**. Y el proyecto tiene un arranque en frío que hay que presupuestar en vez de descubrirlo en la semana 10.
+
+### El wiring, en tres fases con un corte comercial limpio
+
+**Fase A — Validar la arquitectura con `XES3G5M` (2–3 semanas).** Entrenar `pyBKT` (y opcionalmente un DLKT de `pyKT`) sobre `XES3G5M`, que es **MIT** y por lo tanto el único que se puede tocar sin pasar por legal. El entregable no es un modelo: es el **pipeline probado** —ingesta, mapeo a secuencias `(alumno, skill, correcto)`, entrenamiento, métricas de AUC/accuracy, serving detrás de MCP— y la evidencia de que funciona end-to-end.
+
+⚠️ **El error que hay que evitar acá, y es fácil de cometer:** presentar el modelo entrenado sobre `XES3G5M` como el modelo del cliente. Es matemática de tercer grado en chino. Sirve para demostrar que el pipeline entrena y mide; **no transfiere** a la materia, el nivel ni el idioma del cliente. En la propuesta va escrito como *validación de arquitectura*, con esas palabras.
+
+**Fase B — Arranque en frío, con el LRS produciendo el dataset (6–10 semanas, solapada con el uso real).** Es P15 en su totalidad —`lrsql` (Apache-2.0) o `Ralph` (MIT) instrumentado desde el día 1, statements xAPI con el perfil de verbos del proyecto— y mientras el histórico se acumula, el tutor **no miente sobre lo que sabe**:
+
+1. **Arrancar con `py-fsrs`** (MIT) como única política de secuenciación. FSRS no necesita histórico de la población: funciona por alumno desde la primera interacción, con parámetros por defecto. Es la respuesta correcta al día 1.
+2. **Prerequisitos declarados a mano**, no aprendidos: un grafo de conceptos del currículo del cliente, que es trabajo de experto de dominio y no de ML. Da adaptación defendible sin ningún modelo entrenado.
+3. **Medir la cobertura del dataset propio** como KPI visible del proyecto: interacciones por skill y por alumno. `pyBKT` empieza a dar estimaciones útiles cuando hay volumen por skill, y conviene que el cliente vea crecer ese número en vez de esperar un hito opaco.
+
+**Fase C — Reentrenar con los datos del cliente y recién ahí prometer mastery (4–6 semanas, cuando la fase B dio volumen).** El mismo pipeline de la fase A, ahora sobre los statements del LRS. Acá el modelo sí es del cliente, los datos no tienen fricción de licencia porque son suyos, y la estimación es defendible ante un regulador porque es interpretable (`pyBKT` es BKT bayesiano) y porque el expediente de cómo se llegó a ella está en el LRS.
+
+### Las piezas
+
+| Rol | Pieza | Licencia | Nota |
+|---|---|---|---|
+| Dataset de validación | **`XES3G5M`** — https://github.com/ai4ed/XES3G5M | **MIT** ✅ | El único grande reutilizable. Chino, matemática, 3.er grado |
+| Estimador | **`pyBKT`** — https://github.com/CAHLR/pyBKT | MIT ✅ | Interpretable, UC Berkeley. Preferible a DLKT ante un regulador |
+| Estimador (alternativa potente) | **`pyKT`** — https://github.com/pykt-team/pykt-toolkit | MIT ✅ | 10+ modelos DLKT. Más potente, menos explicable. Origen China (gap 4) |
+| Scheduling día 1 | **`py-fsrs`** — https://github.com/open-spaced-repetition/py-fsrs | MIT ✅ | **La pieza que hace viable el arranque en frío** |
+| Almacén / fábrica de dataset | **`lrsql`** o **`Ralph`** | Apache-2.0 / MIT ✅ | Ver **P15** |
+| Transporte al agente | **`learnmcp-xapi`** | MIT ✅ | 32 commits: base a forkear, no dependencia |
+
+**Todas las piezas son permisivas.** La fricción de este patrón **no está en el código: está en los datos**, y es exactamente lo que P1, P12 y P15 no decían.
+
+### Plazo y alcance
+
+**12–19 semanas** de punta a punta, con un corte comercial limpio: la **fase A** (2–3 semanas) es un PoC vendible por separado que demuestra capacidad técnica sin comprometer plazos de producto; las **fases B+C** son el proyecto real. Vender A y B juntas y C como opción condicionada al volumen de datos es más honesto y se cotiza mejor que prometer "tutor adaptativo" en un solo bloque.
+
+### Dónde se vende primero
+
+- **Cliente con restricción de procedencia de software (cualquier región).** Acá el patrón **deja de ser opcional**. La ruta alternativa occidental que el pase 5 armó (`pyBKT` + `Aila` + `MathTutorBench` + `SafeTutors`) se sostiene en código y se rompe en datos: el único dataset permisivo es chino. Entrenar con datos propios es la **única** salida, y este patrón es cómo se hace sin que el cronograma explote. Ver gap 4.
+- **North America** — combina con **P7** y **P14**. Y hay un argumento regulatorio que cae justo: **California AB 1159 prohíbe usar datos de estudiantes para entrenar modelos**, así que la fase C necesita base legal explícita y acotada al cliente. Un patrón que ya separa validación (datos de terceros) de producción (datos propios, con consentimiento) es el que se puede defender; uno que entrena sobre todo lo que encuentra, no.
+- **EMEA** — el expediente del EU AI Act (**P4**) pide trazabilidad de los datos de entrenamiento, no sólo del modelo. Este patrón la produce como subproducto.
+- **LATAM** — es la forma de atacar la tijera de la región (**P13**) sin depender de datasets que no existen en español: el histórico se fabrica. Encaja con la institucionalidad nueva del Observatorio de UNESCO/CEPAL, que necesita precisamente referencias metodológicas.
+
+⚠️ **Lo que NO hay que prometer.** (1) Un modelo de mastery funcionando el día 1: no existe sin histórico, y decirlo temprano es más barato que corregirlo en la semana 10. (2) Que el modelo de la fase A transfiere al dominio del cliente: no transfiere. (3) Usar `EdNet` o `FoundationalASSIST` en el entregable: son **CC BY-NC** y un engagement es comercial — valen para investigación interna o un paper, nada más.
+
 ## Nota de licencias para todos los patrones
+
+⚠️ **Agregado en el pase 7 del 2026-10-01 — esta tabla cubre repos, y para los patrones que entrenan un modelo (P1, P10, P12, P15, P16) eso no alcanza.** La licencia del **dataset** es una dimensión aparte y es donde vive el riesgo con más frecuencia:
+
+| Dataset de knowledge tracing | Licencia | En un entregable facturado |
+|---|---|---|
+| **XES3G5M** | **MIT** ✅ | **Usable** — chino, matemática, 3.er grado: sirve para validar arquitectura, no para producción |
+| **EdNet** | ⚠️ CC BY-NC 4.0 | **No usable** — sólo investigación interna |
+| **FoundationalASSIST** | ⚠️ CC BY-NC 4.0 + gated | **No usable** — sólo investigación interna |
+
+**La regla práctica:** todo patrón que entrene algo entrena **con los datos del cliente**, y por eso el LRS de **P15** es dependencia de fase 1. Ver **P16**.
 
 | Licencia | Repos en estos patrones | Implicancia |
 |----------|-------------------------|-------------|

@@ -8,6 +8,73 @@ updated: 2026-10-01
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 
+## 2026-10-01 (pase 7) — la capa que hace falta para que las librerías MIT sirvan: los datos, y casi todos son NonCommercial
+
+Séptima corrida. El pase 4 encontró la capa de modelado (`pyKT`, MIT), el pase 5 le sumó la alternativa occidental (`pyBKT`, MIT) y el pase 6 agregó la capa de telemetría (xAPI/LRS). Las tres conclusiones fueron la misma: **la pieza es MIT, el trabajo es integración, no investigación.**
+
+Este pase encuentra el agujero en ese razonamiento. Un modelo de knowledge tracing **no es software que se instala, es software que se entrena**. La KB nunca registró con qué. Y cuando se mira, la licencia se da vuelta: **la capa de modelado es permisiva y la capa de datos no lo es.**
+
+### Los datasets de knowledge tracing, con su licencia
+
+| Dataset | Licencia | Volumen | Contenido | Origen |
+|---|---|---|---|---|
+| **EdNet** — https://github.com/riiid/ednet | ⚠️ **CC BY-NC 4.0** | **131.441.538** interacciones, **784.309** alumnos (441,2 por alumno), 13.169 problemas, 1.021 clases, 293 tipos de skill | Cuatro niveles jerárquicos: **KT1** (pregunta-respuesta), **KT2** (acciones: entrar, responder, enviar), **KT3** (+ actividades de aprendizaje y explicaciones), **KT4** (lista completa, incl. multimedia y eventos de pago). Recolectado durante 2 años desde abril de 2017 | **APAC (Corea del Sur)** — Riiid, desde su app **Santa**, 780k+ usuarios reales |
+| **XES3G5M** — https://github.com/ai4ed/XES3G5M | **MIT** ✅ | **5.549.635** interacciones, **18.066** alumnos, **7.652** preguntas de matemática, **865** conceptos de conocimiento | El más rico en información auxiliar: **texto de las preguntas**, relaciones entre componentes de conocimiento, tipos de pregunta y análisis de respuestas, con los KC en rutas jerárquicas. ⚠️ **Sólo en chino** y sólo matemática de tercer grado | APAC (org `ai4ed`, 61 ★ — la página del repo **no declara institución ni país**) |
+| **FoundationalASSIST** — arXiv 2602.00070 | ⚠️ **CC BY-NC 4.0** + **acceso condicionado** | **1,7M** interacciones, **5.000** alumnos | **El único en inglés que combina texto de la pregunta + la respuesta real del alumno + qué distractor eligió**, con alineación a **Common Core**. Currículo *Illustrative Mathematics*, 6.º a 8.º grado. Define dos familias de tarea: **Knowledge Tracing** y **Pedagogical Grounding** (si el LLM entiende qué hace efectivo a un ítem de evaluación) | **North America** — Eamon Worden, Cristina Heffernan, Neil Heffernan (el linaje **ASSISTments**) y Shashank Sonkar |
+| Junyi Academy | no verificada en este pase | ~16M interacciones | Tupla identificador + correcto/incorrecto | APAC (Taiwán) |
+| Eedi | no verificada en este pase | ~20M interacciones | Texto parcial de preguntas en inglés, **sin las respuestas reales** | EMEA (Reino Unido) |
+
+### Por qué esto cambia una propuesta, y no es un detalle legal
+
+Las seis pasadas anteriores dejaron escrito, con razón, que `pyKT` y `pyBKT` son **MIT** y que por lo tanto el modelado de alumno es "integración de una librería madura". **Eso sigue siendo cierto sobre el código y es insuficiente**, porque un modelo DLKT sin datos de entrenamiento no predice nada, y de los tres datasets grandes:
+
+- **EdNet** (el más grande por dos órdenes de magnitud) es **NonCommercial**.
+- **FoundationalASSIST** (el único en inglés con respuestas reales y distractores) es **NonCommercial** *y además* **gated**: hay que aceptar unas *Responsible Use Guidelines* y **entregar datos de contacto** para descargar.
+- **XES3G5M** es **MIT**, y es el único que se puede usar en un entregable comercial. Es también **chino, de matemática y de tercer grado**.
+
+**Las tres rutas reales para un engagement, dichas en orden de preferencia:**
+
+1. **Entrenar con los datos del cliente.** Es la única ruta limpia a escala, y tiene un costo que hay que presupuestar explícitamente: **arranque en frío**. No hay histórico, así que el modelo no sirve el primer día — y acá es donde la capa del pase 6 deja de ser opcional. Un LRS xAPI desplegado desde el día uno (`lrsql` o `Ralph`) **es el que genera el dataset propio**. Sin eso, el cold start no termina nunca.
+2. **`XES3G5M` (MIT) para validar la arquitectura**, no para servir al cliente: sirve para probar que el pipeline entrena, mide y responde. Que sea chino y de matemática de tercer grado no importa para eso; importa muchísimo si alguien lo confunde con el modelo de producción.
+3. **`EdNet` o `FoundationalASSIST` sólo para investigación interna o un paper**, nunca dentro de un entregable facturado. `NC` significa NonCommercial y un engagement de Globant es, por definición, comercial.
+
+**La frase que hay que poder decir en una propuesta:** *"el modelo de mastery se entrena con los datos del cliente, y por eso el Learning Record Store va en la fase 1 y no en la 3"*. Sin la capa de datos, el LRS parecía una pieza de conformidad; con ella, es la pieza que hace posible el producto. Ver **P16**.
+
+### Y el gap 4 se extiende a una quinta capa
+
+El gap 4 (concentración de la oferta en instituciones chinas) venía creciendo capa por capa: agente (DeepTutor, OpenMAIC), modelado (`pyKT`), modelo fundacional (`OmniEdu`), evaluación (`EduBench`). Este pase agrega la quinta, y con un giro desfavorable:
+
+**el único dataset de knowledge tracing con licencia permisiva es chino.** Los dos de procedencia no china que importan —EdNet (Corea) y FoundationalASSIST (EE. UU.)— son los dos NonCommercial.
+
+La ruta alternativa que el pase 5 había armado para un cliente con restricción de procedencia (`pyBKT` + `Aila` + `MathTutorBench` + `SafeTutors`, todo occidental y permisivo) **se sostiene en código y se rompe en datos**. Para ese cliente la ruta 1 —entrenar con datos propios— deja de ser la opción preferible y pasa a ser la única.
+
+### ProHist-Bench — ciencias sociales sigue siendo un gap, y ahora se sabe por qué no se cierra solo
+
+Buscando el benchmark pedagógico de ciencias sociales que el pase 6 dejó pendiente, lo que aparece es **ABench** (https://github.com/inclusionAI/ABench, **Apache-2.0** ✅, 30 ★): suite multi-dominio con seis datasets —Física (500 problemas), Actuaría, Lógica, Psicología, Derecho y **ProHist-Bench**.
+
+**ProHist-Bench**: **400 preguntas núcleo** en 4 tipos de tarea, **10.891 rúbricas redactadas por historiadores** sobre **9 dimensiones de capacidad**; versión extendida de 504 preguntas. Construido sobre materiales del **examen imperial chino**. Paper: arXiv 2604.24690.
+
+**El sub-gap NO se cierra, y la distinción es la parte útil:** ProHist-Bench mide si el modelo **sabe hacer investigación histórica** — no si **sabe enseñar historia**. Es la diferencia que el gap 1 viene sosteniendo desde el pase 4 entre un benchmark de dominio y un benchmark pedagógico: `MathTutorBench` no mide si el modelo resuelve la ecuación, mide si andamía al alumno que no la resuelve. ProHist-Bench es del primer tipo.
+
+**Qué se puede hacer igual con él, que no es poco:** 10.891 rúbricas de expertos sobre 9 dimensiones es la pieza más cara de construir en cualquier evaluación, y es **Apache-2.0**. Para un engagement de humanidades sirve como **capa de exactitud factual** debajo de una capa pedagógica que hay que aportar (`UnifyingAITutorEvaluation` para la taxonomía, `SafeTutors` para el daño). Lo que no se puede es presentarlo como evaluación de enseñanza.
+
+⚠️ **Procedencia, y pega otra vez en el gap 4:** `inclusionAI` es **la organización open source de Ant Group** — verificado en el perfil, que declara `inclusion-ai.org` y 68 repos. **APAC/China.** La única pieza de evaluación en humanidades con licencia limpia que encontró esta KB es, también, china.
+
+### Un repo chico que confirma el patrón de derivación
+
+https://github.com/dhakalaashish/knowledge_tracing_foundationalASSIST — **CC-BY-NC-4.0** ⚠️, **0 ★** (verificado de primera mano en este pase). Integra una dimensión cognitiva a knowledge tracing y diagnóstico cognitivo **sobre el código base de FoundationalASSIST**, con carpetas de código, datos y resultados precomputados.
+
+**Vale anotarlo por su licencia, no por su tamaño, y es la mejor prueba disponible de que el problema del `NC` no es teórico: el derivado heredó el `NC`.** Nadie lo eligió — se hereda. Un derivado académico así está perfectamente bien; **el mismo derivado dentro de un entregable facturado, no**, y la cadena de herencia es exactamente por donde entraría sin que nadie lo note.
+
+De paso confirma de primera mano las cifras de `FoundationalASSIST` que el resto de este pase tomó de resultados de búsqueda: **1,7M interacciones**, **5.000 alumnos** con 211–421 problemas cada uno, y **224 skills** de matemática distintos, sobre currículo *Illustrative Mathematics* de 6.º a 8.º grado, provenientes de **ASSISTments**.
+
+### Nota de método de este pase
+
+- **`curl -sI` contra github.com sigue devolviendo 403 a través del proxy**, como en los pases 4–6. Toda verificación de repo se hizo con WebFetch contra la página del repo. La verificación de licencia de `llamatutor` se hizo pidiendo `/blob/main/LICENSE` directamente: **404**, que es la confirmación positiva de que no hay archivo de licencia.
+- **`arxiv.org`, `huggingface.co` y los dominios de OUP siguen bloqueados** (se reintentaron los tres en este pase). Por eso `FoundationalASSIST`, `EduZone`, `AIriskEval-edu`, `ProHist-Bench` (el paper) y `L2-Bench` quedan con cifras de **resultados de búsqueda, no de fuente primaria**. Lo alojado en github.com —ABench, XES3G5M, EdNet, Honcho, tutor-gpt, ChatTutor— **sí está verificado de primera mano**.
+- **La API de GitHub vía MCP sirve para buscar y no para leer archivos de terceros**: está restringida a los repos de la sesión, así que `get_file_contents` sobre `Nutlope/llamatutor` fue denegado. Es la razón por la que la verificación de licencias siguió haciéndose con WebFetch.
+- **Límite de la búsqueda de GitHub que conviene dejar escrito:** `in:name` **no respeta límites de palabra**. Buscar `tutor in:name` devuelve 276 resultados dominados por `tutorial`, y un `OR` entre términos degrada la consulta entera. Para encontrar los tres tutores de este pase sirvió buscar por **descripción**, no por nombre.
+
 ## 2026-10-01 (pase 6) — la capa de datos de aprendizaje, que estaba en un estándar IEEE y no en la KB
 
 Sexta corrida del día. El hallazgo de repos de este pase no es un proyecto nuevo y llamativo: es **una capa entera de infraestructura madura que las cinco pasadas anteriores no registraron**, porque se buscaba por "agente", "tutor" y "benchmark", y esta capa no se llama así. Se llama **Learning Record Store**.

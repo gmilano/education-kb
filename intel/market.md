@@ -192,6 +192,19 @@ Dónde se produce el software educativo abierto, que no es donde está la demand
 | **LATAM** | **Gap sin cambios en el pase 5: se volvió a buscar en español y portugués y no apareció nada por encima de TutorIA.** Lo que sí cambió es el contexto institucional: UNESCO IESALC (200 instituciones, 19 países) mide **73,5% enseñando con AI y 9% con mecanismo formal de evaluación**. La región no produce tutores y **tampoco tiene con qué medir los que usa** — y esa segunda parte sí se puede resolver con piezas MIT que ya existen. **Gap refinado en el pase 4: hay producción institucional, no hay tracción.** **TutorIA** (MIT, 0 ★, Grupo Sirius / Universidad Tecnológica de Pereira, **Colombia**) — tutor dentro de Open edX para educación superior rural, con licencia y respaldo universitario. Antes: `professor-agent` (Brasil, MIT, 0 ★) y `StudyAgent` (Brasil, **sin licencia**, 2 ★). Activo regional no-agéntico: **Latam-GPT** (CENIA, Chile). Ver el gap 2 |
 | **Sin región verificada** | **AI-Teaching-Agent** (MIT, 0 ★), **Bloom** (MIT, 278 ★), **OpenTutor** (MIT, 127 ★), **tutor-mcp** (MIT, 42 ★), **gradescope-mcp** (MIT, 8 ★), **FreeLingo** (AGPL, 150 ★), **mentar** (AGPL, 1 ★). Se buscó explícitamente la ubicación en el perfil y en el repo de cada uno en el pase 4 y **ninguno la declara**. Se registra el hueco en vez de inventar la procedencia: son repos de autor individual sin afiliación institucional publicada |
 
+**Agregado en el pase 7 del 2026-10-01 — una capa más, y la que peor queda repartida.** A las capas que esta tabla ya mapea (agente, modelado, modelos fundacionales, medición, plataforma) hay que sumarle **los datasets con que el modelado se entrena**, y el reparto es el más desfavorable de todos:
+
+| Dataset de knowledge tracing | Licencia | Región |
+|---|---|---|
+| **XES3G5M** (5,5M interacciones, 18k alumnos) | **MIT** ✅ — **el único permisivo** | **APAC (China)** |
+| **EdNet** (131,4M interacciones, 784k alumnos) | ⚠️ CC BY-NC | APAC (Corea, Riiid/Santa) |
+| **FoundationalASSIST** (1,7M, el único en inglés con respuestas reales y distractores) | ⚠️ CC BY-NC + gated | **North America** (linaje ASSISTments) |
+| Junyi Academy (~16M) / Eedi (~20M) | no verificadas en este pase | APAC (Taiwán) / EMEA (Reino Unido) |
+
+**El único dataset de knowledge tracing con licencia permisiva es chino** — y es sólo matemática de tercer grado y sólo en chino. Los dos de procedencia no china que importan son **NonCommercial**, o sea inutilizables dentro de un entregable facturado.
+
+**Consecuencia comercial directa, y aplica a las cuatro regiones por igual:** no se puede ofrecer un modelo de mastery "entrenado con datasets públicos del estado del arte". Se entrena **con los datos del cliente**, lo que convierte al Learning Record Store (`lrsql` Apache-2.0 / `Ralph` MIT) en dependencia de **fase 1** y no en anexo de conformidad: es la pieza que fabrica el dataset. Para un cliente con restricciones de procedencia de software, deja de haber alternativa. Ver el **gap 11** y el **trend 16** en `intel/trends.md`, y el patrón **P16**.
+
 ## Opportunities by region
 
 ### North America
@@ -456,6 +469,22 @@ Regulación, mapa ampliado (todo converge al modelo europeo basado en riesgo):
 Se hizo en alianza con el **Institute for the Future of Education del Tecnológico de Monterrey** (miembro fundador del Council), con apoyo de distribución de **AI Global Education Network (AIGEN)** y la **Red de Innovación Educativa RIE360**.
 
 **Institucionalidad nueva:** **UNESCO lanzó el Observatorio de Inteligencia Artificial en la Educación para América Latina y el Caribe**, en la sede de la **CEPAL en Santiago de Chile**, durante el Foro de Desarrollo Sostenible 2026.
+
+**Ampliado en el pase 7 del 2026-10-01 — la fecha y, sobre todo, quiénes lo integran.** El lanzamiento fue el **2026-04-14**. Y el consorcio es el dato que más sirve para una propuesta, porque es el mapa de contrapartes regionales de la región, ya reunido en una sola mesa:
+
+| Tipo de actor | Integrantes declarados |
+|---|---|
+| **Multilateral / financiamiento** | **UNESCO**, **CEPAL**, **CAF** (Banco de Desarrollo de América Latina y el Caribe) |
+| **Investigación nacional en AI** | **CENIA** (Centro Nacional de Inteligencia Artificial de Chile — *el mismo que produce Latam-GPT*), **IRCAI** (International Research Centre on AI) |
+| **Medición y datos** | **Cetic.br / NIC.br** (Brasil) |
+| **Implementación educativa** | **Fundación Ceibal** (Uruguay — el país con el despliegue 1:1 más antiguo de la región), **ProFuturo**, **Fundación Santillana** |
+| **Académico** | **Tecnológico de Monterrey**, **Universidad del Desarrollo** (Chile) |
+
+**Y un dato de adopción docente con el que el Observatorio se presentó:** en países como **Chile y Brasil más del 50% de los docentes ya usa herramientas de AI**, mientras **menos del 10% de las instituciones de la región tiene lineamientos formales** y capacidad suficiente para integrarlas con criterio.
+
+**Por qué esto es lo más accionable del pase 7 para LATAM.** El gap 2 viene diciendo desde el pase 2 que la región produce tutores que nadie sostiene después del primer release, y el pase 6 precisó el diagnóstico: **falta continuidad, no talento**. El Observatorio es exactamente la clase de estructura que puede sostener un proyecto más allá del día 90 — con financiamiento (CAF), capacidad técnica nacional (CENIA), medición (Cetic.br) e implementación probada (Ceibal) en la misma mesa.
+
+**La lectura de posicionamiento:** la entrada a LATAM no es un contrato con un ministerio aislado, y tampoco es construir el tutor que falta. Es **ser la contraparte de ingeniería de ese consorcio** — aportar la gobernanza de proyecto, la evaluación y la capa de medición que los repos regionales no tienen (ver gap 2 y **P13**), sobre una institucionalidad que recién se creó y que por lo tanto todavía no tiene proveedor de referencia. La ventana de ese "todavía no" es corta.
 
 **Qué cambia esto en una propuesta LATAM, y es importante.** El argumento que la KB venía usando para la región era de *carencia*: 13 de 19 países sin enseñanza temprana de AI, 1,1% de la inversión global, cuello de botella de formación. Eso sigue siendo cierto del **sistema**, pero es falso del **aula**: con 92% de estudiantes y 79% de docentes ya usando AI, **LATAM no está atrasada en adopción — está a la par o por encima de las cifras que la KB registra para EE. UU.** (60% de docentes según Gallup).
 
