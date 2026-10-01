@@ -8,6 +8,130 @@ updated: 2026-10-01
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 
+## 2026-10-01 (pase 29) — el gap 50 se **reencuadra leyendo el archivo de al lado**: el aviso de «experimental» encabeza una sección vacía y es de 2023, y hay **cinco versiones de API vivas** donde el pase 28 vio tres
+
+**La acción 1 del pase 28 era verificar si los endpoints `v0` de *authoring* cubren lo que el `v1` experimental
+promete.** Se ejecutó, y **la pregunta resultó mal planteada** — no por error de quien la escribió, sino porque la
+premisa venía de **un solo archivo**. Al leer tres, la dirección del tráfico es la contraria a la que el pase 28
+supuso.
+
+### 🔵 El canal del pase 28 vuelve a rendir, y ahora se lo usa como corresponde: **varios archivos, no uno**
+
+`raw.githubusercontent.com` responde (los dos dominios de documentación de Open edX siguen bloqueados). **La lección de
+método de este pase no es sobre el canal sino sobre la muestra:** el pase 28 leyó `v1/urls.py`, encontró un aviso
+literal y verdadero, y **sacó de él una conclusión sobre el estado del proyecto**. Bastaba abrir `v0/views/xblock.py`
+—**un archivo, en el mismo paquete**— para ver que el proyecto dice lo contrario.
+
+**Toda la medición de abajo es lectura de primera mano del árbol `master`.**
+
+### La contradicción, con las citas enfrentadas
+
+| Archivo | Qué dice, textual | Fecha de la señal |
+|---|---|---|
+| `cms/djangoapps/contentstore/rest_api/v1/urls.py` | `# Authoring API` / *«Do not use under v1 yet (Nov. 23). The Authoring API is still experimental and the v0 versions should be used»* | 🔴 **Nov. 2023**, y **sin una sola ruta debajo del comentario** |
+| `cms/djangoapps/contentstore/rest_api/v0/views/xblock.py` | *«v0 xblock (DEPRECATED). These views are superseded by `XblockViewSet` in `…rest_api.v1.views.xblock`. Use `/api/contentstore/v1/xblock/` going forward. These v0 endpoints will be removed in a future release.»* | ✅ **Vigente**, con `DeprecationWarning` emitido en las 5 vistas |
+
+**Y el desempate no es interpretativo, es de código:** `v1/urls.py` **registra** el sucesor en la primera línea de sus
+`urlpatterns` —`_router.register(r'xblock', XblockViewSet, basename='xblock')`— y `v1/views/xblock.py` implementa
+**`create`, `retrieve`, `update`, `partial_update` y `destroy`**. **CRUD completo, registrado, no prometido.**
+
+### 🔵 El `XblockViewSet` de `v1` no es un parche: está construido contra un programa de ADRs con nombre
+
+El docstring enumera los ADRs de **FC-0118** que cumple: **0025** (`serializer_class`), **0026**
+(`authentication_classes` + `permission_classes` explícitas), **0028** (consolidación en un `ViewSet` vía
+`DefaultRouter`), **0029** (envelope de error estandarizado vía `StandardizedErrorMixin`), **0034**
+(`JwtAuthentication` + `SessionAuthenticationAllowInactiveUser`, elegido explícitamente para que un autor inactivo siga
+pudiendo operar mientras se verifica su sesión) y **0036**.
+
+🔵 **ADR 0036 es el hallazgo que vale más por línea leída, y no se buscó: `retrieve` acepta `?view=minimal`**, que
+*«strips the (tree-shaped) xblock response to a small set of structural fields»*. **El árbol completo de un curso es
+precisamente la respuesta que revienta la ventana de contexto de un agente**, y la plataforma **ya trae el recorte
+oficial**. Para un conector eso es trabajo que no hay que hacer ni cotizar.
+
+### La *Authoring API* real, que está en `v0` y es más grande de lo que el pase 28 registró
+
+Bajo el propio encabezado `# Authoring API` de `v0/urls.py`:
+
+| Grupo | Rutas | Escritura |
+|---|---|---|
+| **Assets / archivos** | `file_assets/{course_id}`, `file_assets/{course_id}/{asset_key}` | ✅ **create + retrieve** y **update + destroy** (`CreateAPIView`/`RetrieveAPIView`, `UpdateAPIView`/`DestroyAPIView`, leído en `v0/views/assets.py`) |
+| **Video** | `videos/uploads/{course_id}`, `videos/uploads/{course_id}/{edx_video_id}`, `videos/images/…`, `videos/encodings/…`, `videos/features` | ✅ Sube y gestiona |
+| **Transcripciones** | `video_transcripts/{course_id}`, `youtube_transcripts/{course_id}/check`, `/upload` | ✅ **Incluye el camino de YouTube** |
+| **XBlock** | `xblock/{course_id}` (create), `xblock/{course_id}/{usage_key}` (RUD) | ⚠️ Existe y escribe, **pero está deprecado en favor de `v1`** |
+| **Notas** | `grading/{course_id}` (`AuthoringGradingView`) | ✅ |
+| **Configuración** | `advanced_settings/{course_id}`, `tabs/{course_id}`, `tabs/…/settings`, `tabs/…/reorder` | ✅ |
+| **Course Optimizer** | `link_check`, `link_check_status`, `rerun_link_update`, `rerun_link_update_status` | ✅ **Verifica enlaces robados de un *rerun*** — útil para un agente de QA de curso |
+
+### 🔴 El hallazgo colateral que cambia cómo se cotiza: **`v0`, `v1`, `v2`, `v3` y `v4`, todas montadas a la vez**
+
+`rest_api/urls.py` las incluye las cinco. El pase 28 conocía tres. Lo que hay en las dos nuevas:
+
+- **`v2`** — `downstreams`: `DownstreamListView`, `DownstreamView`, `DownstreamSummaryView` y **`SyncFromUpstreamView`**;
+  más `NumericalInputValidationView` y `HomePageCoursesViewV2`. 🔵 **`SyncFromUpstream` es propagación de contenido de
+  biblioteca a los cursos que lo heredan** — la pieza exacta que necesita un agente que corrige un error una vez y lo
+  empuja a todos lados.
+- **`v3`** — `DefaultRouter` con `home`, `course_details` y **`authoring_grading`**.
+- **`v4`** — `home/courses` (`HomeCoursesViewSet`, ADR **0028**).
+
+🔴 **El costo concreto de esa rotación, en una sola capacidad: las notas están en tres versiones a la vez** —
+`grading/` (`v0`), `course_grading/` (`v1`) y `authoring_grading` (`v3`). **Un conector serio no le pega a una ruta
+fija: necesita un adaptador de versión**, y eso es una línea de la propuesta, no una sorpresa de la semana cuatro.
+
+### 🔵 El repo nuevo de estándares, y es el que cierra el hueco más viejo de esta KB
+
+[`1EdTech/OpenCASE`](https://github.com/1EdTech/OpenCASE) — **Apache-2.0** (verificado en el archivo `LICENSE`), **9 ★**,
+**3 forks**, **180 commits**. **Es la implementación de referencia de CASE, del propio organismo de estándares**, y
+esta KB llevaba cuatro pases declarando que CASE no tenía nada permisivo que abrir.
+
+Lo que es, leído de los README de sus componentes:
+
+- **Publishing Server** — implementa la **CASE Provider API oficial**, *«fully compatible with the 1EdTech
+  certification requirements»*, **CASE 1.0 y 1.1**, con el juego completo de recursos: `documents`, `items`,
+  `associations`, `rubrics`, `packages`. Soporta *field filtering*, paginación, ordenamiento y filtrado por metadatos
+  **como lo define la especificación**, más **endpoints de descubrimiento de servicio**.
+- **Visual Editor** — canvas de autoría: items como nodos, asociaciones como conexiones (*«is child of»*, *«is related
+  to»*, *«precedes»*), *layout* automático (jerarquía, radial o árbol) y publicación directa al servidor.
+- **Identidad** — **Keycloak** (OIDC, SSO) y **RBAC de cuatro niveles**: *Viewer*, *Author*, *Tenant Administrator*,
+  *System Administrator*, con **aislamiento por tenant** forzado por el token.
+- **Almacenamiento** — 🔵 **versionado inmutable en archivos, no en base de datos**: *«zero external dependencies for
+  storage»*, cada cambio es una versión nueva, **auditoría completa por diseño** y capa de storage reemplazable.
+- **Despliegue** — un solo comando, Docker, HTTPS automático detrás del reverse proxy en producción.
+
+**Superficie medida** (26 pares método+ruta distintos en `apps/opencase/docs/DEVELOPER.md`, 28 en
+`FRAMEWORK_EDITOR_BACKEND_INTEGRATION.md`): CRUD de escritura sobre **`CFDocuments`, `CFItems`, `CFAssociations` y
+`CFPackages`** en **v1p0 y v1p1** (`PUT`, `POST`, `DELETE`), administración de tenants y miembros
+(`POST/GET/PATCH/DELETE /management/tenants/{tenantId}/members/…`), **API keys**
+(`POST`/`DELETE /management/tenants/{tenantId}/api-keys`), importación de marcos (`cge/import`, `cge/subscriptions`,
+`cge/credentials`), `GET /health` y `GET /public/tenant-lookup` (sin autenticar).
+
+🔵 **Y el dato que convierte esto en el mejor negocio de la KB:
+`GET /ims/case/v1p1/discovery/imscasev1p1_openapi3_v1p0.json`.** **El servidor publica su propio OpenAPI 3.** Eso
+significa que el conector MCP **no se escribe: se genera** — exactamente el camino por el que `oneroster-ts` llegó a
+164 métodos con 39 commits. Ver **P60**.
+
+🔴 **Pero MCP no aparece en ninguna parte del repo**, y la ausencia está medida en el README crudo, no inferida. **Ver
+la colisión 5 en `agents/trending.md`: la página renderizada de GitHub sí dice «MCP», porque es el menú de GitHub.**
+
+### Lo que este pase deja medido y lo que no, sobre estos dos repos
+
+- ✅ **Medido:** cinco versiones de API de Studio, el CRUD del `XblockViewSet`, los ADRs de FC-0118 y `?view=minimal`,
+  **leyendo el código**; la superficie REST de OpenCASE y su endpoint de descubrimiento, **leyendo los docs del repo**;
+  las dos licencias, **en el archivo `LICENSE`**.
+- ❌ **No medido:** **ninguna llamada HTTP contra ninguna de las dos plataformas.** Sin instancia, y levantarla choca
+  con el límite declarado del pase 27. **OAuth2, *scopes*, *rate limits* y forma de las respuestas, sin verificar.**
+- ❌ **No medido, y es una contradicción interna del repo:** la **forma exacta** de las rutas de OpenCASE.
+  `DEVELOPER.md` escribe `/management/tenants/{tenantId}/CFItems/{id}`;
+  `FRAMEWORK_EDITOR_BACKEND_INTEGRATION.md` escribe
+  `/management/tenants/{tenantId}/ims/case/v1p1/CFItems/{itemId}`. 🔴 **Y el
+  `FRAMEWORK_MANAGEMENT_GUIDE.md` que el README principal enlaza como «Complete endpoint reference» devuelve 404 en
+  `main`.** Es el **gap 52** y la **acción 1 del pase 30**: resolverlo leyendo el código del servidor, o pidiéndole el
+  OpenAPI a su propio endpoint de descubrimiento.
+- ⚠️ **Higiene de documentación, en los dos repos nuevos del eje conector, y vale como señal de madurez:** el README de
+  `oneroster-ts` dejó el bloque de ejemplo del binario con el nombre `"Todos"` y los placeholders `{org}/{repo}` sin
+  reemplazar (residuo del generador), y OpenCASE dejó un `PUT /management/tenants/acme/cge/credentials` con el tenant
+  de ejemplo literal. **Ninguna de las dos cosas es un defecto funcional; las dos dicen que los docs no tuvieron una
+  pasada de revisión**, y eso se pondera al estimar.
+
 ## 2026-10-01 (pase 28) — el gap 48 queda contestado **leyendo el código fuente de Open edX**, y la respuesta es doble: la API alcanza para matrícula y notas, y **el *authoring* se declara experimental en el propio repo**
 
 **La acción 1 del pase 27 era la de mayor valor comercial de esta KB** —*«verificar si Open edX expone una API REST

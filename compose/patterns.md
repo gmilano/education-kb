@@ -2915,10 +2915,26 @@ más corto a un asistente de corrección a escala — ver **P54**, que es su com
 
 - ✅ **Conector de operación y evaluación: 6–8 semanas**, sobre superficie versionada y con escritura verificada en el
   código. **Es el tramo que paga**, porque toca la nota y la matrícula.
-- ⚠️ **Autoría de curso: NO se promete en la misma frase.** Replicar lo que hace `MarcosNahuel/moodle-mcp` (crear
-  curso, secciones, publicar material, armar quiz) obliga a apoyarse en la única parte que el mantenedor marca
-  inestable. **Es el gap 50**, y lo que falta medir es si los endpoints **`v0`** —los que el repo recomienda— cubren
-  ese tramo. **Acción 1 del pase 29.**
+- ✅ **Autoría de curso: el pase 29 la desbloquea, y corrige este mismo patrón.** 🔴 **Lo que decía acá —que había que
+  apoyarse en «la única parte que el mantenedor marca inestable»— es falso, y el error fue haber leído un archivo
+  donde hacían falta dos.** El aviso de «experimental» está en `v1/urls.py`, **fechado «(Nov. 23)», encabezando una
+  sección sin ninguna ruta**; `v0/views/xblock.py` declara lo contrario (**`v0` es el deprecado**, *«use
+  `/api/contentstore/v1/xblock/` going forward»*, con `DeprecationWarning` en sus 5 vistas), y **`v1/urls.py` registra
+  `XblockViewSet`** con **CRUD completo** (`create`/`retrieve`/`update`/`partial_update`/`destroy`) bajo los ADRs de
+  **FC-0118**. 🔵 **Y trae un regalo para un agente: `?view=minimal` (ADR 0036)** recorta la respuesta en árbol a
+  campos estructurales — el problema de ventana de contexto más caro de este tramo **ya está resuelto por la
+  plataforma**. **Cotización: autoría 4–6 semanas adicionales**, sobre `xblock` en `v1` más assets, video y
+  transcripciones en `v0`. **El gap 50 queda reencuadrado, no cerrado:** lo que falta no es estabilidad, es
+  **adaptador de versión** — ver abajo.
+
+- ⚠️ **La línea nueva de alcance que este pase obliga a cotizar aparte: resolución de versión.** La API de Studio monta
+  **cinco versiones a la vez** (`v0`–`v4`), y **las notas viven en tres** (`grading/` en `v0`, `course_grading/` en
+  `v1`, `authoring_grading` en `v3`) mientras **assets, video y transcripciones existen sólo en `v0`**. **No hay una
+  "API de Studio" contra la que programar: hay cinco superficies solapadas.** Se cotiza **1–2 semanas** de capa de
+  resolución de versión, y se dice en la propuesta, porque es la diferencia entre alcance declarado y sorpresa de la
+  semana cuatro. 🔵 **Bonus que aparece en `v2` y que conviene ofrecer: `SyncFromUpstreamView`** (`downstreams`)
+  propaga una corrección de biblioteca a todos los cursos que la heredan — **es el multiplicador de un agente que
+  corrige una vez**. Ver las tendencias **78** y **79**.
 
 ⚠️ **La licencia no es el obstáculo, y conviene decirlo primero porque es la primera pregunta del cliente.** Open edX
 es **AGPL-3.0**, pero **un conector que habla REST desde otro proceso no deriva de la plataforma y no hereda la
@@ -3061,8 +3077,27 @@ distrito escolar típico de **North America** y de los despliegues que ya pasaro
 
 🔴 **Las tres cautelas, y son serias:**
 
-- **Los 164 métodos son los que declara el README; este pase no ejecutó el servidor.** Se cita como *«declara 164
-  métodos»*. **Verificarlo es parte de la acción 3 del pase 29.**
+- ✅ **«Declara 164» pasó a «164 contados» en el pase 29, por dos canales independientes del propio repo:** el conteo
+  directo del índice de métodos generado devuelve **exactamente 164 entradas en 21 grupos de recurso** (los 21 que este
+  patrón ya citaba, ahora confirmados por conteo), y la tabla de errores generada —independiente del índice— repite
+  *«Applicable to **131 of 164 methods**»* para `400`, `401` y `403`. ⚠️ **Pero la distinción que esta KB aprendió con
+  CaSS sigue en pie: 164 es el conteo de métodos del SDK, no de tools observadas en `tools/list`** (CaSS: 61
+  operaciones, **6 expuestas y 55 con `x-mcp-ignore`**). 🔵 **A favor de `oneroster-ts`: no hay ninguna anotación de
+  supresión ni `scope` de tool en el repo**, que es una postura distinta de la de CaSS. **La frase citable es «164
+  métodos de SDK contados», no «164 tools MCP».** Medirlo es la **acción 2 del pase 30**.
+
+- 🔴 **Riesgo de licencia que el pase 29 descubrió y que cambia la recomendación de «forkear» de buena práctica a
+  requisito: el paquete que se instala no declara licencia.** El repo es **0BSD**; el artefacto publicado es
+  **`@superbuilders/oneroster`** y npm devuelve **`license: None`** en la raíz y en `0.7.0`. Además **los
+  *maintainers* de npm no son la organización del repo** (`abhi-superbuilders`, `hbauer`, `bjornpagen`,
+  `supersterling`, `ameeralns` contra `trilogy-group`), aunque ✅ la procedencia es rastreable por el `repository.url`
+  del paquete. **Y el último publicado es del 2026-05-04**, casi cinco meses, en versión **pre-1.0**. **Entonces el
+  entregable no depende del paquete: se fija un fork del repositorio, donde la 0BSD sí está declarada.** Ver el
+  **gap 53**.
+
+- **El `--client-id`, `--client-secret` y `--token-url` del arranque dicen la forma de la autenticación: OAuth2
+  *client credentials*.** Es lo que espera OneRoster 1.2, y es un dato de integración que se confirma con el cliente
+  **antes** de la semana uno, porque las credenciales las emite su SIS.
 - **10 ★ y 39 commits.** Es un **caso de gap 49** —capacidad alta, promoción nula— y eso es bueno para el hallazgo y
   **malo para el riesgo de mantenimiento**. **0BSD permite forkear sin ninguna obligación**, y para un entregable de
   cliente **eso es exactamente lo que hay que hacer: fijar el fork**.
@@ -3111,3 +3146,81 @@ entrega certificada**.
 de cliente se forkea y se fija** — la MIT lo permite sin obligaciones más allá de la atribución. **Lo que no se debe
 hacer es prometer un conector de QTI como si existiera:** no existe, y éste es el patrón para construirlo, no para
 comprarlo.
+
+## P60 — El conector MCP de CASE **generado, no escrito**: el patrón más barato de esta KB, y el único donde el sistema publica su propia especificación (pase 29)
+
+**El contraste con P55 y P59 es el punto del patrón.** Open edX hay que integrarlo a mano y con adaptador de versión
+(**P55**). QTI hay que construirlo desde cero (**P59**). 🔵 **CASE no: el servidor de referencia sirve su propio
+OpenAPI 3, así que el conector se genera.**
+
+### Lo que existe, y está verificado de primera mano
+
+| Pieza | Repo | Licencia | Qué aporta |
+|---|---|---|---|
+| **Servidor + editor de marcos** | [`1EdTech/OpenCASE`](https://github.com/1EdTech/OpenCASE) | **Apache-2.0** ✅ (leída del archivo `LICENSE`) | **CASE Provider API oficial**, CASE **1.0 y 1.1**, CRUD de escritura sobre `CFDocuments`/`CFItems`/`CFAssociations`/`CFPackages` en **v1p0 y v1p1**, editor visual, Keycloak (OIDC) **+ API keys**, RBAC de 4 niveles, multi-tenencia, **versionado inmutable en archivos sin base de datos externa**, despliegue de un comando en Docker |
+| **Aserción de competencia por MCP** | [`cassproject/CASS`](https://github.com/cassproject/CASS) | **Apache-2.0** ✅ | `record_evidence` y `get_learner_profile`, las dos tools que **P48** y **P57** ya usan |
+| **Evidencia xAPI** | `learnmcp-xapi` + `lrsql` | **MIT** ✅ / Apache-2.0 | El registro de lo que el agente hizo |
+
+🔵 **El dato que define el patrón:**
+`GET /ims/case/v1p1/discovery/imscasev1p1_openapi3_v1p0.json`. **El sistema al que hay que conectarse publica la
+especificación con la que se genera el conector.** No hay que inferirla de la documentación, y **no puede estar
+desactualizada respecto del servidor que la sirve**.
+
+### El precedente que prueba que el camino funciona
+
+**No es teoría: ya pasó en esta misma KB.** `trilogy-group/oneroster-ts` llegó a **164 métodos sobre 21 grupos de
+recurso con 39 commits** porque **se generó desde la especificación** (Speakeasy) y **el servidor MCP salió como un
+modo del SDK**, no como un proyecto aparte. **La proporción método/commit es imposible a mano, y es justamente la
+firma de un conector generado.**
+
+### Cómo se arma, concretamente
+
+```
+OpenCASE (Apache-2.0, Docker, 1 comando)
+   │
+   ├── GET /ims/case/v1p1/discovery/imscasev1p1_openapi3_v1p0.json   ← la especificación, servida por el propio sistema
+   │        │
+   │        └──▶ generador de SDK + servidor MCP  ──▶  conector MCP de CASE
+   │                                                      │
+   │                              (curaduría: qué se expone y qué no)
+   │                                                      │
+   ├── API keys por tenant  ◀── auth del agente ───────────┘
+   │   (POST /management/tenants/{tenantId}/api-keys)
+   │
+   └── versionado inmutable por archivo  ──▶  expediente de auditoría, sin construir nada
+
+   agente de autoría ──▶ propone items y asociaciones ──▶ editor visual ──▶ humano aprueba (P54)
+                                     │
+                                     └──MCP──▶ CaSS `record_evidence` ──▶ learnmcp-xapi ──▶ lrsql
+```
+
+### Los tres entregables, de menor a mayor riesgo
+
+| # | Entregable | Por qué es de bajo riesgo |
+|---|---|---|
+| 1 | **Lectura y consulta de marcos por MCP** (qué competencias existen, cómo se relacionan, qué prerrequisitos tiene una) | **Sólo lee**, y el filtrado por campos, la paginación y el ordenamiento ya los define la especificación. Es el *quick win* |
+| 2 | **Alineación de contenido a estándar**: el agente propone a qué competencia corresponde cada recurso, una persona confirma | Es **el caso de uso que el propio 1EdTech pone adelante**, y el versionado inmutable deja cada propuesta auditada **sin trabajo extra** |
+| 3 | **Autoría asistida de marcos**: el agente propone items y asociaciones (*is child of*, *is related to*, *precedes*) y el editor visual es la compuerta | La escritura existe en **v1p0 y v1p1**, y 🔵 **es exactamente lo que `cassproject/CASS` tiene cerrado a MCP** (0 expuestas / 13 ocultas): **este patrón abre por REST lo que el otro proyecto decidió no exponer** |
+
+### Por qué este patrón gana en EMEA y en North America
+
+- **EMEA:** el AI Act clasifica la **evaluación** como alto riesgo y exige **gobernanza de datos, supervisión humana y
+  trazabilidad**. 🔵 **El versionado inmutable por archivo es el expediente**, y el despliegue de un comando en
+  infraestructura propia resuelve **residencia de datos** en la misma jugada.
+- **North America:** Oklahoma y Maryland **prohíben la decisión autónoma sobre el alumno**, y cuatro estados obligan a
+  política distrital escrita. **Este patrón no decide sobre ningún alumno** —opera sobre el currículo, no sobre la
+  persona— y produce el registro que la política exige. **Es el de menor fricción regulatoria de toda esta KB.**
+
+### 🔴 Las tres cautelas, y son honestas
+
+- **Las rutas exactas están en contradicción entre dos documentos del repo** (`DEVELOPER.md` sin prefijo,
+  `FRAMEWORK_EDITOR_BACKEND_INTEGRATION.md` con `ims/case/v1p1/`), y **el `FRAMEWORK_MANAGEMENT_GUIDE.md` que el README
+  ofrece como referencia completa devuelve 404 en `main`**. **Es el gap 52.** **Hasta resolverlo, este patrón se
+  propone con arquitectura y costo relativo, no con rutas literales** — y la forma de resolverlo es pedirle el OpenAPI
+  al endpoint de descubrimiento con una instancia levantada.
+- **No se hizo ninguna llamada HTTP contra una instancia.** La superficie está **declarada en los docs del repo**, no
+  observada. **OAuth2/Keycloak, *scopes*, *rate limits* y forma de las respuestas, sin verificar.**
+- ⚠️ **Generar no es exponer, y ésta es la parte que se cobra.** **CaSS genera su catálogo y después oculta 55 de 61
+  operaciones a propósito.** La decisión de qué tools se exponen —y cuáles no, sobre todo las de escritura— **es
+  trabajo de producto y de riesgo, no de generador**. **9 ★ y 180 commits**: para un entregable de cliente **se fija un
+  fork**, que la Apache-2.0 permite.

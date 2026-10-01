@@ -9,6 +9,177 @@ updated: 2026-10-01
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 > No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
 
+## 2026-10-01 (pase 29) — las **dos ausencias declaradas se dan vuelta**, y las dos por el mismo error de método: **se había leído un archivo donde hacían falta dos**
+
+**4 repos verificados de primera mano, 2 nuevos para esta KB, 1 conclusión propia refutada, 1 colisión de tipo nuevo.**
+Este pase ejecutó **las tres acciones** que dejó escritas el pase 28. Las tres rindieron, y **la 1 refutó la conclusión
+del pase que la pidió** — es la **quinta vez consecutiva** que el error estaba en el muestreo y no en la fuente, y la
+**primera** en que la fuente mal muestreada era **un archivo de un repo que ya teníamos abierto**.
+
+| Repo | Licencia | ★ | Forks | Commits | Lenguaje | Qué expone | Estado |
+|------|----------|---|-------|---------|----------|------------|--------|
+| [`1EdTech/OpenCASE`](https://github.com/1EdTech/OpenCASE) | **Apache-2.0** ✅ | 9 | 3 | 180 | — (monorepo `apps/`) | **CASE 1.0 y 1.1** por la **CASE Provider API oficial**, *«ready for 1EdTech certification»*. CRUD de escritura sobre `CFDocuments`, `CFItems`, `CFAssociations`, `CFPackages` en **v1p0 y v1p1**; editor visual de marcos; Keycloak (OIDC) **+ API keys**; RBAC de 4 niveles; multi-tenencia; versionado **inmutable en archivos, sin base de datos externa**; **endpoint de descubrimiento OpenAPI 3** | 🔵 **Cierra el gap 51 y abre P60.** **Nuevo para esta KB** — y es la pieza que faltaba del lado de los estándares |
+| [`Cicatriiz/openedu-mcp`](https://github.com/Cicatriiz/openedu-mcp) | **MIT** ✅ | 13 | **10** | 21 | Python | **21 nombres de tool leídos del README crudo: 20 de dominio + 1 de transporte.** Libros (OpenLibrary), artículos (Wikipedia), vocabulario e investigación (arXiv), con filtrado educativo y adecuación por nivel de grado | **Nuevo para esta KB.** ⚠️ **No toca LMS ni estándar** — es la capa de **contenido abierto**, no un conector institucional |
+| [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) | AGPL-3.0 | 8.2k | 4.4k | 68.764 | Python/Django | **Medido leyendo cinco `urls.py` y dos `views/`**, no la documentación. 🔴 **Refuta la conclusión del pase 28** | 🔵 **La autoría NO está bloqueada.** Ver abajo |
+| [`trilogy-group/oneroster-ts`](https://github.com/trilogy-group/oneroster-ts) | **0BSD** ✅ (en el repo) | 10 | 3 | 39 | TypeScript | **164 métodos CONTADOS uno por uno** sobre **21 grupos de recurso**, no «declarados» | ✅ **Acción 3 cumplida.** 🔴 **Pero aparecieron dos riesgos nuevos que no estaban medidos** — ver abajo |
+
+### 🔴 La refutación del pase: **la autoría de Open edX no está bloqueada, y el aviso que lo decía está vacío y es de 2023**
+
+El pase 28 cerró el **gap 48** y abrió el **gap 50** con esta frase: *«el repo avisa que "the Authoring API is still
+experimental" y recomienda usar las versiones `v0`»*. **La cita es literal y está bien transcripta. La conclusión que
+se sacó de ella es falsa**, y alcanzó **leer el archivo de al lado** para verlo.
+
+**Las tres lecturas, en orden, porque el orden es el argumento:**
+
+1. **`v1/urls.py`** — el aviso existe, y está **al final del archivo**, así:
+   `# Authoring API` / `# Do not use under v1 yet (Nov. 23). The Authoring API is still experimental and the v0 versions should be used`.
+   🔴 **Esa sección no tiene ni una ruta debajo: es un comentario encabezando el vacío**, y está fechado
+   **noviembre de 2023** — casi tres años antes de este pase.
+2. **`v0/urls.py`** — acá sí está la *Authoring API* real, bajo su propio `# Authoring API`: `heartbeat`,
+   `file_assets/{course_id}` (**create/retrieve**) y `file_assets/{course_id}/{asset_key}` (**update/destroy**),
+   `videos/encodings`, `videos/features`, `videos/images`, `videos/uploads` (**create** y por `edx_video_id`),
+   `video_transcripts`, `youtube_transcripts/check` y `/upload`, `grading/{course_id}`, **`xblock/{course_id}`
+   (create) y `xblock/{course_id}/{usage_key}`**, más `advanced_settings`, `tabs` (**list/settings/reorder**) y el
+   *Course Optimizer* (`link_check`, `link_check_status`, `rerun_link_update`, `rerun_link_update_status`).
+3. **`v0/views/xblock.py`** — y acá se cierra la pinza. El docstring dice **lo contrario** del comentario de `v1`:
+   *«Public rest API endpoints for the CMS API — v0 xblock (DEPRECATED). These views are superseded by `XblockViewSet`
+   in `cms.djangoapps.contentstore.rest_api.v1.views.xblock`. Use `/api/contentstore/v1/xblock/` going forward. These
+   v0 endpoints will be removed in a future release.»* Las cinco vistas emiten `DeprecationWarning` en runtime.
+
+🔵 **Y el sucesor existe de verdad, no es una promesa.** `v1/urls.py` **registra `XblockViewSet` en su primera línea de
+`urlpatterns`** (`_router.register(r'xblock', XblockViewSet, basename='xblock')`), y `v1/views/xblock.py` tiene
+**CRUD completo**: `create`, `retrieve`, `update`, `partial_update`, `destroy`. **No es código experimental abandonado:
+está construido contra un programa de ADRs con nombre y número** — **FC-0118**, ADRs **0025** (`serializer_class`),
+**0026** (`authentication_classes`/`permission_classes` explícitas), **0028** (consolidación vía `DefaultRouter`),
+**0029** (envelope de error estandarizado), **0034** (`JwtAuthentication` +
+`SessionAuthenticationAllowInactiveUser`) y **0036**.
+
+🔵 **El detalle de ADR 0036 es el que más vale para un agente, y no se encontró buscando: estaba en el docstring.**
+`retrieve` acepta **`?view=minimal`**, que *«strips the (tree-shaped) xblock response to a small set of structural
+fields»*. **Un árbol de curso completo es exactamente la respuesta que hace explotar la ventana de contexto de un
+agente**, y la plataforma ya trae el recorte. **Eso no hay que construirlo: hay que pasar un query param.**
+
+**La conclusión, entonces, es una deprecación circular:** `v1` dice *«usá v0»* (2023) y `v0` dice *«usá v1»* (vigente,
+con `DeprecationWarning` en el código). **Cuando dos avisos del mismo repo se contradicen, gana el que está respaldado
+por rutas registradas y por un programa de ADRs activo** — y ése es `v1`. **El gap 50 no se cierra: se reencuadra.** Lo
+que queda no es *«la autoría es inestable»* sino *«la autoría está a mitad de una migración de versiones»*, que es un
+riesgo de **adaptador**, no de **viabilidad**.
+
+### 🔵 El hallazgo colateral, y es el que cambia la forma de la propuesta: **hay cinco versiones de API vivas al mismo tiempo**
+
+`rest_api/urls.py` monta **`v0/`, `v1/`, `v2/`, `v3/` y `v4/`**. El pase 28 conocía tres. Las dos nuevas:
+
+- **`v2`** — `downstreams` (`DownstreamListView`, `DownstreamView`, `DownstreamSummaryView`, **`SyncFromUpstreamView`**),
+  más `NumericalInputValidationView` y `HomePageCoursesViewV2`. 🔵 **`SyncFromUpstream` es reutilización de contenido de
+  biblioteca**: es la pieza que un agente necesita para propagar una corrección a todos los cursos que la heredan.
+- **`v3`** — ViewSets de `home`, `course_details` y **`authoring_grading`**.
+- **`v4`** — `home/courses` (`HomeCoursesViewSet`, ADR **0028**).
+
+🔴 **Y el costo de esa rotación se ve en una sola capacidad: las notas viven en tres lugares a la vez** — `grading/` en
+`v0`, `course_grading/` en `v1` y `authoring_grading` en `v3`. **Eso es lo que un conector tiene que absorber**, y es
+un argumento concreto para cobrar un adaptador de versión en vez de pegarle a una ruta fija.
+
+### ✅ La acción 3, cumplida — y **«declara 164» pasa a «164 contados»**, con dos riesgos nuevos de regalo
+
+El pase 28 escribió *«los 164 métodos son los que declara el README»* y lo dejó como cautela. **Ahora está contado por
+dos canales independientes dentro del propio repo:**
+
+1. **Conteo directo del índice de métodos generado**: **exactamente 164** entradas, repartidas en **21 grupos de
+   recurso** (`academicSessionsManagement`, `assessmentLineItemsManagement`, `assessmentResultsManagement`,
+   `categoriesManagement`, `classesManagement`, `courseComponentResourcesManagement`, `courseComponentsManagement`,
+   `coursesManagement`, `demographicsManagement`, `enrollmentsManagement`, `gradingPeriodsManagement`,
+   `lineItemsManagement`, `organizationsManagement`, `resourcesManagement`, `resultsManagement`, `schoolsManagement`,
+   `scoreScalesManagement`, `studentsManagement`, `teachersManagement`, `termsManagement`, `usersManagement`).
+   **Los 21 recursos que el pase 28 citó quedan confirmados por conteo.**
+2. **Corroboración por la tabla de errores generada**, que es independiente del índice: *«Applicable to **131 of 164
+   methods**»*, repetido para `400`, `401` y `403`.
+
+⚠️ **Lo que sigue sin medirse, y la distinción importa porque esta KB ya se quemó con ella.** 164 es el conteo de
+**métodos del SDK**, no de **tools MCP observadas en `tools/list`**. **CaSS enseñó exactamente esta diferencia**: 61
+operaciones, **6 expuestas y 55 con `x-mcp-ignore: true`**. 🔵 **A favor de `oneroster-ts`: no aparece ninguna
+anotación de supresión ni ningún `scope` de tool en el repo** — no hay indicio de ocultamiento, que es una postura
+distinta de la de CaSS, que **documentaba** sus exclusiones. **Pero la frase citable sigue siendo «164 métodos de SDK
+contados», no «164 tools MCP».**
+
+🔴 **Riesgo nuevo 1, y es el más serio para un entregable: el paquete que se instala no declara licencia.** El repo es
+**0BSD**; el artefacto publicado es **`@superbuilders/oneroster`** y el registro de npm devuelve **`license: None`**,
+tanto en la raíz como en la versión `0.7.0`. **El repo auditado y el paquete instalado no dicen lo mismo sobre el
+derecho de uso.** Para un cliente eso no es un detalle de metadatos: es lo que mira su área legal. **Refuerza la
+recomendación que ya estaba escrita —fijar un fork— y le agrega el motivo real.**
+
+🔴 **Riesgo nuevo 2: el publicador no es la organización del repo.** El repo vive en **`trilogy-group`**; los
+*maintainers* de npm son **`abhi-superbuilders`, `hbauer`, `bjornpagen`, `supersterling`, `ameeralns`**. ✅ **La
+procedencia es rastreable** —el `repository.url` del paquete apunta de vuelta a `git+https://github.com/trilogy-group/oneroster-ts.git`—
+**pero no es la misma organización**, y eso se declara en la propuesta en vez de que lo descubra el cliente.
+
+⚠️ **Y dos datos de frescura que antes no estaban: `0.7.0`, 10 versiones, publicado por última vez el 2026-05-04.**
+Eso son **casi cinco meses** a la fecha de este pase, y una versión **pre-1.0**. **El riesgo de mantenimiento del
+gap 49 deja de ser cualitativo y pasa a tener fecha.**
+
+### 🔴 La colisión número cinco, y es de un tipo que esta KB no tenía: **la que mete el propio GitHub**
+
+La **acción 2** pedía medir CASE por el nombre completo del estándar. **Funcionó** —apareció `1EdTech/OpenCASE`, que
+ninguna búsqueda por sigla había devuelto— **y después casi produjo un falso positivo de los caros.**
+
+La página renderizada de GitHub de OpenCASE **contiene la palabra «MCP»**: en el menú de navegación, bajo *AI CODE
+CREATION*, como *«MCP Registry—Integrate external tools»*. 🔴 **Eso es chrome de la interfaz de GitHub, no contenido
+del repositorio.** La lectura del **README crudo** por `raw.githubusercontent.com` devuelve **cero** menciones de
+`MCP` o `Model Context Protocol`.
+
+**El registro de colisiones de esta KB, ahora con un tipo nuevo:**
+
+| # | Colisión | Tipo | Pase |
+|---|---|---|---|
+| 1 | `Bloom` → dos proyectos homónimos | Nombre de proyecto | 7 |
+| 2 | `education` → material didáctico *sobre* AI | Término de dominio | 23 |
+| 3 | `MCP` + *badges* → generadores de *badges* de README | Término técnico | 27 |
+| 4 | `case` → *case study* / *use case* | Término técnico | 28 |
+| 5 | **`MCP` en una página de GitHub → menú de GitHub** | 🔴 **Chrome de plataforma** | **29** |
+
+**Las cuatro primeras son ambigüedades de la consulta. La quinta es una contaminación de la fuente**, y por eso la
+regla es distinta y más fuerte: **la presencia o ausencia de MCP se verifica en el README crudo, nunca en la página
+renderizada.** Vale para toda medición de esta KB hacia adelante, y **vale retroactivamente como advertencia sobre
+cualquier presencia de MCP que se haya afirmado leyendo una página de GitHub**.
+
+### El barrido obligatorio, y lo que devolvió por quinta vez consecutiva
+
+Cuatro búsquedas globales y cuatro regionales, con el año **calculado** (2026):
+
+- 🔴 **`top open source AI agents education 2026 github MIT`** y **`github trending education AI 2026`** devolvieron
+  **otra vez la capa genérica** (OpenClaw ~362k ★, `opencode` **194.461 ★**, OpenHands 70k+, CrewAI **56.723 ★**,
+  LangGraph **39.083 ★**, AutoGen **56.730 ★**) **y material didáctico *sobre* AI** (*AI Agents for Beginners* de
+  Microsoft, **56.002 ★**, 12 lecciones). **Quinta confirmación de la colisión 2.** Ninguno es un agente educativo y
+  ninguno entra a la tabla.
+- ⚠️ **`open source platform education ERP CRM MIT Apache`** devolvió **únicamente plataformas que esta KB ya tiene**
+  (OpenEduCat, ERPNext/Frappe, Moodle, RosarioSIS, Sakai, Chamilo, Kolibri, openSIS, Fedena, Open edX, OpenOLAT).
+  **Cero altas de vertical, y se escribe porque el silencio se lee igual que la cobertura.** Un solo nombre no estaba:
+  **`.LRN`/dotLRN** (LMS nacido en el MIT sobre OpenACS) — **no se verificó en este pase y no se cita hasta verificarlo**.
+- Las cuatro regionales se registran en `intel/market.md` y `intel/trends.md`.
+
+### Lo que este pase deja medido y lo que no
+
+- ✅ **Medido:** las cinco versiones de API de Studio y el CRUD de `XblockViewSet`, **leyendo el código**; los 164
+  métodos de `oneroster-ts`, **contados**; la licencia de los dos repos nuevos, **leída del archivo `LICENSE`**; la
+  ausencia de MCP en OpenCASE, **leída del README crudo**.
+- ❌ **No medido:** **ninguna llamada HTTP contra una instancia de Open edX ni de OpenCASE.** Sigue en pie el límite
+  del pase 27 (no se instala código de terceros). **OAuth2, *scopes*, *rate limits* y forma de las respuestas siguen
+  sin verificar en las dos plataformas.**
+- ❌ **No medido:** el `tools/list` real de `oneroster-ts`. **164 es conteo de métodos de SDK, no de tools servidas.**
+- ❌ **No medido:** la forma exacta de las rutas de OpenCASE. **Los dos documentos del repo se contradicen** (uno
+  muestra `/management/tenants/{tenantId}/CFItems/{id}`, el otro `/management/tenants/{tenantId}/ims/case/v1p1/CFItems/{itemId}`),
+  y **el `FRAMEWORK_MANAGEMENT_GUIDE.md` que el README enlaza como referencia de endpoints devuelve 404 en `main`**.
+  Es el **gap 52** y la **acción 1 del pase 30**.
+
+### Las tres acciones que este pase deja escritas para el 30
+
+1. **Resolver la contradicción de rutas de OpenCASE leyendo el código, no los docs** — el método que funcionó con Open
+   edX. **Y si se levanta la instancia, pedirle el OpenAPI 3 a su propio endpoint de descubrimiento**, que es la
+   medición definitiva y la que habilita **generar** el conector de **P60**.
+2. **Medir el `tools/list` de `oneroster-ts`**, que es lo único que convierte «164 métodos» en «N tools». Es el último
+   tramo abierto de la cadena que empezó en el pase 26 con CaSS.
+3. **Verificar `.LRN`/dotLRN**: si está vivo, es una vertical que esta KB no tiene; si está muerto, se declara muerto y
+   se cierra el nombre para no volver a encontrarlo cada barrido.
+
 ## 2026-10-01 (pase 28) — el eje conector rinde por **cuarta vez**, y la corrección es de método: **la puerta MCP se esconde adentro de un SDK**, no detrás de un nombre `*-mcp`
 
 **5 repos verificados de primera mano, 3 nuevos para esta KB, 1 control negativo, 1 cifra de agregador refutada en la

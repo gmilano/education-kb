@@ -781,6 +781,34 @@ la misma medición ni la misma población:** una es de **universidades**, las ot
 Promediarlas o usarlas de refuerzo mutuo es un error de lectura. **Para un engagement educativo la cifra es la de
 instituciones.**
 
+### Agregado en el pase 29 del 2026-10-01 — el barrido regional se agota por **séptima vez consecutiva**, y el dato nuevo es de incumbente, no de mercado
+
+**Cuatro búsquedas regionales con el año calculado (2026). Resultado: confirmación en las cuatro regiones y un solo
+dato que esta KB no tenía.** Se escribe el agotamiento porque **el silencio de un barrido se lee igual que la
+cobertura**, y no lo es.
+
+- ✅ **Reconfirmado sin cambio:** el agregado global **7,52 MM USD (2025) → 10,6 MM USD (2026), 40,9% CAGR**; North
+  America con **41,7%** de la expansión y **86%** de las organizaciones educativas ya usando AI generativa; los **134
+  proyectos legislativos en 31 estados**; **AB 1159** (California) y **SB 1227** (Idaho); el mandato de política
+  distrital en **Maryland, Idaho, Oklahoma y Virginia**; el marco nacional estudiantil de la **AASA**; las tres leyes
+  de APAC con fecha (**Corea 2026-01-22**, **Taiwán 2026-01-14**, **Vietnam marzo 2026**); y el bloque LATAM completo
+  de la encuesta DEC.
+- 🔵 **Lo único nuevo, y es un número de penetración de incumbente:** **Gemini for Education desplegándose en más de
+  mil *colleges* y universidades de EE. UU.** **Es la primera cifra de penetración institucional de un hiperescalar que
+  entra a esta KB.** Importa porque reencuadra la venta: el cliente grande de North America **no decide si tendrá AI —
+  ya la tiene impuesta—**, y lo que le falta es la conexión con su sistema de registro.
+- ⚠️ **Una trampa de cita detectada en APAC:** las fuentes repiten que **Corea es «el segundo país después de la UE»**
+  con legislación integral (vigente 2026-01-22), **pero la ley marco de Taiwán entró en vigor el 2026-01-14**, ocho
+  días antes. **No se usa el ordinal en un entregable: se usan las fechas.**
+- 🔴 **Y la contradicción del calendario del AI Act vuelve por séptima vez:** las fuentes secundarias describen
+  *«implementación por fases 2026-2027»*; esta KB sostiene **2027-12-02** para el Anexo III por el instrumento primario
+  (**Reglamento (UE) 2026/1744**). **Se cita el reglamento, no la nota.**
+
+**La lectura de método, después de siete barridos:** la capa de mercado y la regulatoria de esta KB **están saturadas
+para lo que una búsqueda puede devolver**. 🔵 **El rendimiento se mudó al código**: las dos conclusiones que cambiaron
+en este pase —la autoría de Open edX y la existencia de una plataforma CASE permisiva— **salieron de leer repositorios,
+no de buscar noticias**. Es la consigna operativa que se deja escrita para los próximos pases.
+
 ## Players globales
 
 | Empresa | Tipo | Fortaleza | Debilidad |
@@ -1364,6 +1392,30 @@ certificada** `amp-up-io/qti3-item-player` (MIT, **QTI 3 Basic y Advanced «Deli
 `ltijs` (Apache-2.0, 373 ★) con **AGS** devolviendo notas. **Ver P48.** Y la advertencia que va en la propuesta: **el
 sello de 1EdTech cubre la entrega, no la autoría** — decirlo explícitamente, porque es lo que el cliente audita.
 
+
+#### Agregado en el pase 29 del 2026-10-01 — el hallazgo técnico del pase aterriza acá como **cumplimiento por arquitectura**, y hay un dato de incumbente nuevo
+
+🔵 **El único dato regional nuevo de este barrido, y es de incumbente:** Google está desplegando **Gemini for
+Education en más de mil *colleges* y universidades de EE. UU.** **Es el primer número de penetración institucional de
+un hiperescalar en esta KB**, y cambia el encuadre de la conversación: el cliente norteamericano no decide *si* va a
+tener AI, ya la tiene instalada de fábrica. **Lo que no tiene es el conector a su propio sistema de registro** — que es
+exactamente lo que este pase midió.
+
+**Cómo se conecta con lo medido en el pase.** Oklahoma y Maryland **prohíben la decisión autónoma sobre el alumno**, y
+Maryland, Idaho, Oklahoma y Virginia **obligan a que el distrito adopte política propia de AI**. 🔵 **Eso vuelve
+obligatorio exactamente el artefacto que `1EdTech/OpenCASE` regala: versionado inmutable en archivos, una versión nueva
+por cada cambio y auditoría completa por diseño.** El expediente de *«quién cambió qué y cuándo»* no se construye: se
+despliega. Ver **P60**.
+
+⚠️ **Y California AB 1159 —prohibición de usar datos del alumno para entrenar modelos— no es un obstáculo para la
+arquitectura de conector de esta KB, y conviene decirlo primero:** un servidor MCP que habla REST contra el LMS
+**no entrena nada**. **La prohibición pega en la capa predictiva, no en la capa conector**, y eso convierte a la capa
+conector en el camino de menor fricción regulatoria de la región.
+
+**La oportunidad concreta, en una frase:** el cliente norteamericano típico corre **Canvas** (que ya tiene conector MIT)
+más un hiperescalar impuesto, y lo que le falta es **alineación de contenido a estándares estatales con expediente
+auditable** — OpenCASE + agente de *tagging* con compuerta humana.
+
 ### EMEA
 
 **Pase 28 (2026-10-01) — 🔴 el reloj se terminó: el régimen de alto riesgo del Annex III es derecho aplicable desde el
@@ -1895,6 +1947,29 @@ alternativa **certificada** del lado plataforma es `oat-sa/lib-lti1p3-core`, **G
 europea, que normalmente puede aceptar copyleft, **el sello vale más que la permisividad**. Es la primera vez que esta KB
 puede poner las dos opciones sobre la mesa en vez de declarar el hueco (ver `repos/foundations.md`).
 
+
+#### Agregado en el pase 29 del 2026-10-01 — la pieza que faltaba del expediente del AI Act **ya existe y es Apache-2.0**
+
+**El AI Act clasifica como alto riesgo el acceso y la evaluación educativa** (admisión, evaluación del alumno,
+corrección de exámenes), y exige **gestión de riesgo, gobernanza de datos, supervisión humana, transparencia y
+evaluación de conformidad antes del despliegue**. Esta KB ya tenía el calendario; **lo que no tenía era un componente
+permisivo que produzca la evidencia**.
+
+🔵 **`1EdTech/OpenCASE` (Apache-2.0) la produce por diseño:** almacenamiento **versionado e inmutable, sin base de datos
+externa** —*«zero external dependencies for storage»*—, **una versión nueva por cada cambio**, RBAC de cuatro niveles y
+**aislamiento por tenant forzado por el token**. Para un expediente de conformidad, *«historial completo de cada
+cambio, legible y versionable»* es una respuesta, no una promesa.
+
+🔵 **Y resuelve el otro requisito recurrente de la región, la residencia de datos:** se despliega con **un solo comando
+en Docker**, en infraestructura propia, con HTTPS automático. Combinado con lo que esta KB ya registra —distritos con
+residencia estricta autohospedando modelos de pesos abiertos (**Llama 3**, **Mistral**)— **la pila entera queda dentro
+del perímetro del cliente**, incluidas las competencias.
+
+⚠️ **La advertencia de calendario vuelve por séptima vez, y es la que más caro sale en una reunión.** Las fuentes
+secundarias de este barrido repiten *«implementación por fases a lo largo de 2026-2027»* y describen a las escuelas en
+*«pilot-and-pre-compliance»*. **Esta KB sostiene la fecha del instrumento primario para el Anexo III: 2027-12-02
+(Reglamento (UE) 2026/1744).** **No se cita la fecha de la fuente secundaria ante un cliente**; se cita el reglamento.
+
 ### APAC
 
 **Pase 27 (2026-10-01) — APAC confirma adopción y aporta un dato de arquitectura: la soberanía decide la
@@ -2422,6 +2497,27 @@ qué un horario no tiene solución**, que hoy consume semanas de secretaría aca
 marzo de 2026. **El horario es administrativo y queda fuera del núcleo de alto riesgo** — por eso es una buena puerta de
 entrada en una región donde el tutor y la evaluación sí están alcanzados. Y los *players* de formación corporativa se
 están moviendo acá este año (**LearnUpon** con sede nueva en Sídney, **TCS + Pearson**, **NIIT MTS**).
+
+
+#### Agregado en el pase 29 del 2026-10-01 — **tres regímenes con fecha** deciden qué tramo del conector se vende primero
+
+El barrido reconfirma lo que la KB ya tiene —Corea (**2026-01-22**), Taiwán (**2026-01-14**) y Vietnam (**marzo de
+2026**)— y agrega el encuadre de inversión: **96% de las organizaciones de APAC planea aumentar gasto en AI** y
+**~66% ya está piloteando o adoptando sistemáticamente**. El mercado AI regional: **~102.000 M USD (2025) → >735.000 M
+USD (2030)**, ~**34,5% CAGR**. Jugadores del submercado educativo: **Google, Microsoft, IBM, Pearson, Byju's**, con
+**China, India y Japón** dominando.
+
+⚠️ **Una trampa de cita que este pase detectó y conviene dejar escrita.** Varias fuentes secundarias afirman que
+**Corea es «el segundo país después de la UE»** con legislación integral, con vigencia **2026-01-22**. **Pero la ley
+marco de Taiwán entró en vigor ocho días antes, el 2026-01-14.** Las dos cosas pueden ser ciertas a la vez sólo si se
+distingue *ley marco* de *régimen integral*, y **las fuentes no lo distinguen**. 🔴 **Entonces no se usa el ordinal
+(«el segundo país») en un entregable: se usan las fechas**, que son verificables y no dependen de la categoría.
+
+🔵 **Y acá el hallazgo técnico del pase decide el orden comercial.** Vietnam pone el **monitoreo conductual** en alto
+riesgo, y esta KB ya registra que la capa predictiva está parcialmente prohibida en otras regiones. **El tramo que este
+pase desbloqueó —autoría de contenido, assets, video y transcripciones en Open edX— es el de menor exposición
+regulatoria de todos**: no decide sobre el alumno, no lo monitorea y no lo perfila. **Para APAC es el tramo con el que
+hay que entrar**, y la capa predictiva se discute después y por separado.
 
 ### LATAM
 
@@ -3142,6 +3238,31 @@ la fuente primaria. **(b)** **Es una encuesta de 2025 publicada en 2026** — ci
 evidencia en un año. Y **no** mezclarla con las cifras de **empresas** LATAM del mismo barrido (*«100 % usará AI en
 alguna actividad»*, *«85 % la integra nativamente»*): **son otra población**, y la que sirve para un *engagement*
 educativo es la de **instituciones**.
+
+
+#### Agregado en el pase 29 del 2026-10-01 — el hallazgo técnico del pase es, de las cuatro regiones, **el que más le sirve a LATAM**
+
+El barrido reconfirma lo que la KB ya tiene (DEC LATAM 2026: **92% de alumnos y 79% de docentes** usando AI, **94%** de
+docentes esperando usarla, **65% de alumnos** temiendo el aprendizaje superficial; 30.000+ respuestas, 29
+instituciones; IFE/Tec de Monterrey, AIGEN, RIE360; el Observatorio de UNESCO para América Latina y el Caribe lanzado
+en la sede de la CEPAL en Santiago) y el panorama regulatorio fragmentado (proyecto de Brasil, marco de Chile, CONPES
+de Colombia, reglas sectoriales de México). **Séptimo barrido regional consecutivo sin dato nuevo en LATAM: la región
+está saturada en lo que se puede medir por búsqueda.**
+
+🔵 **Pero el pase sí mueve LATAM, y lo mueve por el lado técnico, que es el que faltaba.** Esta KB ya tenía registrado
+que **Open edX es el stack de los programas públicos grandes de LATAM e India**. El pase 28 había concluido que la
+autoría de curso tenía **causa técnica** para no tener conector; **este pase mostró que no la tiene**. **El efecto
+práctico: el conector de Open edX completo —operación, evaluación y autoría— pasa de "dos tramos, uno dudoso" a
+cotizable entero, y la región que más lo necesita es ésta.**
+
+🔵 **Y el 65% que teme el aprendizaje superficial deja de ser sólo un argumento de venta y pasa a tener implementación.**
+`?view=minimal` (ADR 0036) más la compuerta humana de **P54** permiten prometer algo verificable: **el agente propone
+estructura de curso y una persona la aprueba, con cada versión registrada**. **Eso es "pedagogía defendible" en
+términos de artefactos, no de discurso** — y es la frase que el usuario final de esta región ya pidió.
+
+⚠️ **La cautela que no cambia:** las tres fuentes primarias de LATAM que esta KB necesita siguen bloqueadas por el proxy
+de egreso, así que **la evidencia regional sigue siendo de fuente secundaria**, con la advertencia de método ya
+registrada en los pases 26 y siguientes.
 
 ## Posicionamiento Globant
 

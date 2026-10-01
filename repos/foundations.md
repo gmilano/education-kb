@@ -25,6 +25,7 @@ updated: 2026-10-01
 
 
 > **Pase 28 del 2026-10-01:** **se ejecuta la acción 1 del pase 27 y el gap 48 queda contestado leyendo el código fuente**, no la documentación (`docs.openedx.org` y `openedx.atlassian.net` están **los dos bloqueados**; `raw.githubusercontent.com` **sí responde**, y es un canal de verificación nuevo para esta KB). **La respuesta es doble:** la API REST de Open edX **alcanza y escribe** para matrícula, roles, bloques de curso y **notas —incluido el lote—**, pero el ***authoring* de Studio está declarado experimental por el propio proyecto**. Eso parte el gap 48 en dos y abre el **gap 50**. Ver la sección del pase 28, abajo.
+> **Pase 29 del 2026-10-01:** **se ejecutan las tres acciones del pase 28, y la primera refuta la conclusión del pase que la pidió.** 🔴 **El *authoring* de Open edX NO está bloqueado por estado experimental.** El aviso que el pase 28 citó vive en `v1/urls.py`, **está fechado «(Nov. 23)» y encabeza una sección sin rutas**; `v0/views/xblock.py` dice **lo contrario** (*«superseded by `XblockViewSet`… use `/api/contentstore/v1/xblock/` going forward»*) y **`v1/urls.py` registra ese `XblockViewSet` con CRUD completo** bajo los ADRs de **FC-0118** —incluido un **`?view=minimal`** (ADR 0036) que recorta el árbol del curso, que es justo lo que necesita un agente. **Deprecación circular: gana la señal vigente.** Y aparece lo que el pase 28 no vio: **cinco versiones de API montadas a la vez** (`v0`–`v4`), con las notas en **tres** de ellas. ✅ **Alta nueva de base: [`1EdTech/OpenCASE`](https://github.com/1EdTech/OpenCASE) (**Apache-2.0**, 9 ★, 180 commits)** — la implementación de referencia de **CASE 1.0 y 1.1** del propio organismo, con **CASE Provider API oficial**, versionado inmutable en archivos, Keycloak + API keys, RBAC de 4 niveles y 🔵 **endpoint propio de descubrimiento OpenAPI 3**. **Cierra el gap 51** y abre el **gap 52**. Ver la sección del pase 29, abajo.
 
 ## El lado plataforma de LTI queda cerrado, y Open edX queda como la base sin puerta — agregado en el pase 27 del 2026-10-01
 
@@ -1710,3 +1711,68 @@ desde npm, sus exports de primer nivel son **`[ 'Provider' ]`** — uno solo, si
 se describe como *«turn your web application into a LTI 1.3 **Learning Tool**»*. **Es tool-side y nada más, medido, no
 leído.** Con los seis candidatos verificados, el **gap 42** queda: **no existe implementación *platform-side* de LTI 1.3
 permisiva y productiva.**
+
+## 🧭 El mapa de versiones de la API de Studio, y la base de estándares que faltaba — pase 29 del 2026-10-01
+
+**Dos bases quedan mejor medidas en este pase, y en las dos la medición se hizo leyendo el código o los docs del repo,
+sin instancia.**
+
+### Open edX — `openedx/openedx-platform` (AGPL-3.0, 8.2k ★, 4.4k forks, 68.764 commits)
+
+🔴 **Corrección del pase 28, que es de esta KB sobre sí misma.** El pase 28 escribió que *«la API de *authoring* de
+Studio está declarada experimental por el propio proyecto»* y de ahí concluyó que la ausencia de conector tenía **causa
+técnica**. **La cita era correcta; la conclusión no.** El aviso está en `v1/urls.py`, **fechado «(Nov. 23)»**, y
+**encabeza una sección vacía**. El archivo de al lado, `v0/views/xblock.py`, declara que **`v0` es el deprecado** y
+manda a `/api/contentstore/v1/xblock/`. **`v1` registra ese `XblockViewSet`** y le implementa **CRUD completo**.
+
+**El mapa completo, por versión, leído de los cinco `urls.py`:**
+
+| Versión | Qué monta | Para qué sirve a un conector |
+|---|---|---|
+| **`v0`** | La *Authoring API* real: `file_assets` (CRUD), `videos/uploads`+`images`+`encodings`+`features`, `video_transcripts`, `youtube_transcripts/check`+`/upload`, `grading/`, `advanced_settings`, `tabs` (list/settings/reorder), *Course Optimizer* (`link_check`, `rerun_link_update`), `xblock/` ⚠️ deprecado | **Assets, video y transcripciones viven sólo acá**: no hay equivalente en `v1`. Un conector **tiene** que usar `v0` para eso |
+| **`v1`** | 🔵 **`XblockViewSet`** (`create`/`retrieve`/`update`/`partial_update`/`destroy`, ADRs FC-0118, **`?view=minimal`**), `course_settings`, `course_details`, `course_index`, `course_team`, `course_grading`, `course_rerun`, `certificates`, `group_configurations`, `container_handler`, `container/{usage_key}/children`, `textbooks`, `proctored_exam_settings`, `proctoring_errors`, `course_waffle_flags`, `home`, `home/libraries` | **El destino de la autoría de bloques.** Es donde hay que pegar para crear y editar contenido |
+| **`v2`** | `downstreams` (`DownstreamList`, `Downstream`, `DownstreamSummary`, **`SyncFromUpstream`**), `NumericalInputValidation`, `HomePageCoursesViewV2` | 🔵 **Reutilización de contenido de biblioteca**: corregir una vez y propagar a todos los cursos que heredan |
+| **`v3`** | ViewSets de `home`, `course_details`, **`authoring_grading`** | Tercer domicilio de las notas |
+| **`v4`** | `home/courses` (`HomeCoursesViewSet`, ADR 0028) | El listado más nuevo |
+
+🔴 **La consecuencia operativa, y es la que se escribe en la propuesta:** **las notas viven en `v0` (`grading/`), `v1`
+(`course_grading/`) y `v3` (`authoring_grading`) al mismo tiempo**, y **assets/video/transcripciones sólo en `v0`**.
+**Un conector necesita un adaptador de versión por capacidad**, no una base URL. Eso es alcance cotizable y declarado,
+no un imprevisto.
+
+⚠️ **Autenticación, leída del ADR 0034:** `JwtAuthentication` + `SessionAuthenticationAllowInactiveUser` — elegido a
+propósito para que un autor con sesión en verificación siga operando. **No se verificó contra una instancia**: no hay
+instancia en este entorno.
+
+### CASE — `1EdTech/OpenCASE` (Apache-2.0, 9 ★, 3 forks, 180 commits) — **alta nueva**
+
+**La base de estándares que esta KB declaró inexistente durante cuatro pases.** No es de un tercero: es del **propio
+1EdTech**, y se describe como implementación de referencia *«transparent, standards-aligned, and ready to be embedded,
+extended, or deployed as-is»*.
+
+| Componente | Qué es | Dato que importa |
+|---|---|---|
+| **Publishing Server** | **CASE Provider API oficial**, CASE **1.0 y 1.1**, recursos `documents`/`items`/`associations`/`rubrics`/`packages`, *field filtering*, paginación, ordenamiento y filtrado por metadatos **según la especificación**, más endpoints de descubrimiento | *«fully compatible with the 1EdTech certification requirements»* |
+| **Visual Editor** | Canvas de autoría de marcos: nodos y asociaciones (*is child of*, *is related to*, *precedes*), *layout* automático, publicación directa al servidor | Es la pieza de **autoría de competencias** que `cassproject/CASS` tiene **cerrada a MCP** (0 expuestas / 13 ocultas) |
+| **Identidad** | **Keycloak** (OIDC, SSO) + RBAC de 4 niveles (*Viewer*, *Author*, *Tenant Administrator*, *System Administrator*) + aislamiento por tenant forzado por token | Y además **API keys propias** (`POST /management/tenants/{tenantId}/api-keys`) |
+| **Almacenamiento** | 🔵 **Archivos versionados, inmutables, sin base de datos externa.** Cada cambio es una versión nueva | *«zero external dependencies for storage»* + **auditoría completa por diseño**, que es exactamente lo que pide un expediente regulatorio |
+| **Despliegue** | Un comando, Docker, HTTPS automático en servidor | Baja la barrera de una prueba de concepto a una tarde |
+
+🔵 **Lo que la vuelve la mejor oportunidad de conector de esta KB:
+`GET /ims/case/v1p1/discovery/imscasev1p1_openapi3_v1p0.json`.** **El servidor sirve su propio OpenAPI 3**, así que el
+conector MCP se **genera** —el camino de `oneroster-ts`, 164 métodos con 39 commits— en vez de escribirse a mano. Ver
+**P60**.
+
+🔴 **Y la ausencia que la acompaña, medida y no inferida: MCP no aparece en el repo.** Cero menciones en el README
+crudo. **La página renderizada de GitHub sí dice «MCP», y es el menú de GitHub** — quinta colisión de esta KB y la
+primera por *chrome* de plataforma.
+
+⚠️ **Lo que falta medir (gap 52): la forma exacta de las rutas.** Los dos documentos del repo se contradicen —
+`DEVELOPER.md` escribe `/management/tenants/{tenantId}/CFItems/{id}` y
+`FRAMEWORK_EDITOR_BACKEND_INTEGRATION.md` escribe
+`/management/tenants/{tenantId}/ims/case/v1p1/CFItems/{itemId}`— y **el `FRAMEWORK_MANAGEMENT_GUIDE.md` que el README
+principal ofrece como referencia completa de endpoints devuelve 404 en `main`**. **Las rutas exactas que quedan
+anotadas para el pase 30, para no volver a buscarlas:**
+`apps/opencase/docs/DEVELOPER.md`, `apps/opencase/docs/FRAMEWORK_EDITOR_BACKEND_INTEGRATION.md`,
+`apps/opencase/docs/DataModel.md`, `apps/opencase/docs/RESTBindings.md` (1,5 MB, el binding REST oficial de CASE v1.1)
+y `apps/opencase/docs/Licensing.md`.

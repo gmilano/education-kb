@@ -1014,3 +1014,43 @@ que el **Annex III** del EU AI Act clasifica de alto riesgo y que **Oklahoma y M
 autónoma (ver `intel/market.md`). **Hueco de mercado grande y riesgo regulatorio alto en la misma celda** — que es
 justamente el perfil donde un *studio* agrega valor, porque el entregable que se puede defender no es el modelo
 predictivo sino el flujo **con humano decidiendo**. Ver el **gap 47**, la tendencia **68** y el patrón **P53**.
+
+## 🧩 Infraestructura de estándares de competencias, desplegable como vertical — agregada en el pase 29 del 2026-10-01
+
+**Esta KB venía tratando a CASE como un estándar y no como una vertical, y eso ocultaba que hay una plataforma entera,
+permisiva y desplegable con un comando.**
+
+| Plataforma | Repo | Licencia | ★ | Qué es | Por qué entra como vertical y no como estándar |
+|---|---|---|---|---|---|
+| **OpenCASE** | [`1EdTech/OpenCASE`](https://github.com/1EdTech/OpenCASE) | **Apache-2.0** ✅ | 9 | Servidor de publicación de marcos de competencias (**CASE 1.0 y 1.1**, *CASE Provider API* oficial) **+ editor visual de marcos + identidad multi-tenant (Keycloak) + reverse proxy**, todo en Docker con **un solo comando** y HTTPS automático | **No es una librería: es un producto operable.** Tiene usuarios con roles (*Viewer*/*Author*/*Tenant Administrator*/*System Administrator*), tenencia múltiple, auditoría y una UI de autoría. **Es customizable con AI arriba, que es el criterio de esta sección** |
+
+**Qué se customiza arriba, concretamente:**
+
+- **Autoría asistida de marcos.** El editor publica al servidor por REST; un agente puede proponer items y asociaciones
+  (*is child of*, *is related to*, *precedes*) y dejar que el humano las acepte en el canvas. 🔵 **El versionado es
+  inmutable y por archivos**, así que **cada propuesta del agente queda como una versión auditable** sin construir nada:
+  la compuerta humana y el registro de evidencia que esta KB pide en **P49** y **P54** vienen de fábrica.
+- **Alineación de contenido a estándar.** Es el caso de uso que el propio 1EdTech pone adelante: conectar recursos
+  digitales con los estándares que les aplican. Con los marcos en una API consultable, eso es un agente de
+  *tagging* con verificación contra una fuente, no una clasificación a ciegas.
+- **Importación de marcos existentes.** Hay superficie para eso (`cge/import`, `cge/subscriptions`, `cge/credentials`),
+  así que el currículo de un ministerio no hay que tipearlo.
+
+⚠️ **Lo que no se promete todavía:** **no se levantó una instancia en este pase** y **las rutas exactas están en
+contradicción entre dos documentos del repo** (**gap 52**). La plataforma se propone; el número de semanas del conector
+se cotiza después de resolver eso. Ver **P60**.
+
+🔴 **Y el dato de madurez, dicho de frente: 9 ★ y 180 commits.** Es un proyecto del organismo de estándares, no de una
+comunidad grande. **Apache-2.0 permite fijar un fork**, y para un entregable de cliente es lo que corresponde hacer.
+
+### ⚠️ El barrido de verticales de este pase salió vacío, y se escribe porque el silencio se confunde con cobertura
+
+`open source platform education ERP CRM MIT Apache` + variantes de SIS/LMS devolvió **únicamente plataformas que esta KB
+ya tiene inventariadas**: **OpenEduCat** (LGPL, sobre Odoo), **ERPNext/Frappe**, **Moodle**, **RosarioSIS**, **Sakai**,
+**Chamilo**, **Kolibri**, **openSIS**, **Fedena**, **Open edX** y **OpenOLAT**. **Cero altas por esta vía — sexto pase
+consecutivo en que la capa vertical está saturada.**
+
+**Un solo nombre apareció que no está en esta base: `.LRN` / dotLRN**, LMS nacido en el **MIT** sobre **OpenACS**.
+🔴 **No se verificó en este pase y por lo tanto no se cita ante un cliente**: la señal disponible sugiere un proyecto de
+los 2000 y hay que medir si está vivo antes de proponerlo. **Es la acción 3 del pase 30**, y la razón de anotarlo es
+que, si está muerto, conviene declararlo muerto una vez y dejar de encontrarlo en cada barrido.
