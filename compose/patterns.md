@@ -1127,3 +1127,153 @@ corre del lado del alumno.
 - **Y donde conviene decirlo explícitamente en la propuesta** es en EMEA: el historial de repaso **no sale del
   dispositivo**, así que la capa de retención no agrega superficie de alto riesgo bajo el Anexo III ni datos personales
   nuevos que gobernar. Es un argumento de arquitectura, no de cumplimiento, y es más fuerte por eso.
+
+---
+
+## P29 — Capa pedagógica sobre la pila de práctica que ya está instalada (agregado en el pase 13; **North America y EMEA primero**, y es el patrón de menor costo de entrada de toda esta KB)
+
+**El patrón invierte el orden de operaciones de P1.** P1 construye el tutor y después le busca dónde enchufarse. Acá la
+infraestructura ya existe, es **BSD-3-Clause**, está desplegada desde 2014 y **ya trae runtime de agente**: lo único que
+se construye es la capa pedagógica. Aplica a cualquier cliente donde **el trabajo del alumno sea ejecutable** —ciencia
+de datos, ingeniería, programación, estadística, física computacional, formación técnica—.
+
+### Las piezas, todas verificadas vía WebFetch en el pase 13
+
+| Pieza | Licencia | Stars | Rol |
+|---|---|---|---|
+| https://github.com/jupyterhub/ltiauthenticator | **BSD-3-Clause** ✅ | 73 | **Entrada por LTI 1.3** desde el LMS del cliente. Probado contra **Open edX, Canvas y Moodle** |
+| https://github.com/jupyterhub/jupyterhub | **BSD-3-Clause** ✅ | **8.300** | Entorno aislado por alumno, en el navegador |
+| https://github.com/jupyter/nbgrader | **BSD-3-Clause** ✅ | **1.400** | Asignación, recolección, autocorrección, **tests ocultos** y tramo de corrección **manual**. v0.9.6 del 2026-09-30 |
+| https://github.com/ucbds-infra/otter-grader | **BSD-3-Clause** ✅ | 161 | Alternativa a nbgrader **cuando el cliente no va a operar JupyterHub** |
+| https://github.com/jupyterlab/jupyter-ai | **BSD-3-Clause** ✅ | **4.400** | **La capa de agente, y no hay que construirla.** ACP + servidores MCP propios |
+| https://github.com/DavidLMS/learnmcp-xapi | MIT ✅ | 15 | Puente MCP → **xAPI**: convierte la actividad en evidencia conforme al estándar |
+| https://github.com/yetanalytics/lrsql | Apache-2.0 ✅ | — | **LRS**: el almacén de evidencia (capa 0 del patrón **P15**) |
+| https://github.com/CAHLR/pyBKT | MIT ✅ | 281 | Estimación de **mastery** sobre la evidencia (gap 5, patrón **P12**) |
+
+**Cero copyleft en la pila. Cero NonCommercial. Cero fork del core del LMS.**
+
+### El wiring
+
+1. **El alumno entra desde el LMS que ya usa.** `ltiauthenticator` con **LTI 1.3**: el alumno hace clic en la actividad
+   dentro de Moodle, Canvas u Open edX y aterriza autenticado en su entorno. **No se forkea el core AGPL/GPL del LMS**,
+   que es la regla que `repos/foundations.md` viene recomendando desde la tercera pasada.
+2. **El docente escribe el assignment una vez.** En `nbgrader`: celdas autocorregidas, **tests ocultos** que el alumno no
+   ve, y tramos marcados para corrección manual. El artefacto es del docente, así que **no hay problema de licencia de
+   contenido** (gap 15, pase 10) y **no hay fuente de datos no controlada** —que es exactamente lo que el inciso (a) de
+   la ley de Vietnam castiga (trend 31)—.
+3. **La corrección determinística corre primero, y el modelo no participa.** `nbgrader` autocorrige contra los tests. La
+   nota de esa parte **la produce código, no un LLM**. Esto es lo que vuelve el patrón defendible donde la decisión
+   automatizada está prohibida (Oklahoma, Maryland, Anexo III, Vietnam inciso (b)).
+4. **Recién acá entra el agente, y sólo para explicar.** `jupyter-ai` dentro del notebook, con un servidor **MCP** propio
+   que recibe *(el test que falló, el caso de prueba, el código del alumno)* y devuelve **feedback formativo**: qué
+   concepto falta, no cuál es la respuesta. Es el ángulo que el pase 5 ya había identificado como correcto —«explicación
+   y feedback sobre tests que ya corrieron»— y ahora tiene dónde vivir.
+5. **La evidencia sale al LRS.** `learnmcp-xapi` emite las sentencias xAPI a `lrsql`: qué intentó, cuántas veces, qué
+   test falló, qué explicación recibió. Eso es el expediente, y es la pieza que ninguna herramienta propietaria entrega.
+6. **El mastery se estima sobre evidencia real del cliente.** `pyBKT` sobre las sentencias del LRS. ⚠️ **En California,
+   AB 1159 prohíbe usar datos de estudiantes para *entrenar* modelos**: acá el uso es **estimación/inferencia**, no
+   entrenamiento, y esa distinción hay que **escribirla en la propuesta**, no asumirla.
+7. **El docente decide.** Ninguna nota sumativa se emite sin revisión humana; el tramo manual de `nbgrader` es el lugar
+   donde eso ya está previsto por diseño.
+
+### Plazo y alcance
+
+- **Fase 1 (3–4 semanas):** LTI 1.3 + JupyterHub + nbgrader sobre una materia piloto, con los assignments existentes del
+  docente migrados. Entregable: la cohorte corrige automáticamente lo ejecutable.
+- **Fase 2 (4–5 semanas):** servidor MCP de feedback formativo + `jupyter-ai` en el notebook. Entregable: explicación por
+  test fallado, con el docente revisando una muestra.
+- **Fase 3 (4–6 semanas):** `learnmcp-xapi` + `lrsql` + `pyBKT`. Entregable: tablero de mastery por concepto y expediente
+  de evidencia por alumno.
+- **Total: 11–15 semanas**, y las tres fases tienen corte comercial limpio: la fase 1 ya es valor entregado sin AI.
+
+### Dónde se vende primero
+
+- **North America.** La pila es de autoría local (Jupyter/NumFOCUS; `otter-grader` del **DSEP de UC Berkeley**) y está
+  desplegada en **UC Berkeley y Cal Poly**: la infraestructura es familiar y el argumento de no-decisión-automatizada
+  encaja con lo que **Oklahoma y Maryland** exigen y con lo que **CA AB 1159** restringe.
+- **EMEA, y es la mejor propuesta de la región.** Ya está instalada en la **Universidad de Edimburgo** y en **Aalto**. El
+  cliente no necesita migrar nada: necesita **el expediente de conformidad del Anexo III (2027-12-02)** sobre lo que ya
+  corre. Es **P4 aplicado a P29**, y se vende como auditoría + remediación, no como plataforma.
+- **APAC, con el reloj más corto.** El vencimiento educativo de **Vietnam es 2027-09-01**, antes que el europeo. El
+  diseño de los pasos 3 y 4 —corrección determinística, LLM sólo explicando— es la respuesta directa al inciso (b).
+- **LATAM.** Aplica igual, y es más barato que cualquier plataforma: dentro del **87% de instituciones que ya usan AI con
+  herramientas de propósito general** (trend 32), esto es lo primero que convierte ese uso informal en algo gobernado.
+
+### ⚠️ Dónde NO proponerlo
+
+**Si el trabajo del alumno no se ejecuta, este patrón no aplica.** Para derecho, historia, lengua o ciencias sociales no
+hay análogo —es el **gap 21**— y el incumbente de la corrección de prosa sigue siendo propietario (**gap 6**, mitad no
+cerrada): ahí el camino sigue siendo orquestar Gradescope (`gradescope-mcp`) y el patrón **P14**. Presentar P29 a una
+facultad de humanidades es un error de encaje que se detecta en la primera reunión.
+
+---
+
+## P30 — Acreditar la competencia pedagógica del asistente contra el examen del Estado (agregado en el pase 13; **LATAM primero por autoría, North America segundo por educación especial**)
+
+**El problema que resuelve.** Esta KB tiene desde el pase 4 un stack de evaluación pedagógica que nadie usa (gap 1:
+*«el estándar existe, está publicado en los venues principales, y sigue sin adoptarse»*). La razón práctica es que
+ninguno de esos benchmarks responde la pregunta que hace el comprador institucional, que no es *«¿qué tan bueno es tu
+modelo?»* sino **«¿por qué debería creer que esto sabe enseñar?»**. `pedagogy-benchmark` responde exactamente eso, porque
+**la vara no la puso un laboratorio: la puso el Estado**, y es la misma con la que se habilita a un docente humano.
+
+### Las piezas, verificadas en el pase 13 y en pasadas anteriores
+
+| Pieza | Licencia | Stars | Qué acredita |
+|---|---|---|---|
+| https://github.com/AI-for-Education/pedagogy-benchmark | **MIT** ✅ | 12 | **CDPK (920 preguntas)**: conocimiento pedagógico general, transversal a materias, edades y subdominios. **SEND (223)**: educación especial. Fuente: exámenes de habilitación docente de la **Agencia de la Calidad de la Educación** y el **CPEIP del Ministerio de Educación de Chile**. arXiv 2506.18710 |
+| https://github.com/kaushal0494/UnifyingAITutorEvaluation | CC BY-SA 4.0 ⚠️ | 32 | Taxonomía de **8 dimensiones** pedagógicas ante el error del alumno (MRBench). NAACL 2025 |
+| https://github.com/eth-lre/mathtutorbench | CC BY 4.0 ⚠️ | 42 | **Enseñanza en diálogo**: andamiaje, no resolución. EMNLP 2025 (Oral) |
+| https://github.com/ybai-nlp/EduBench | **MIT** ✅ | 29 | 9 contextos educativos, transversal a materia, con cuatro escenarios docentes |
+| https://github.com/RadiantCrystal/SafeTutors | **MIT** ✅ | 0 | **Daño pedagógico**: si enseña mal siendo amable |
+
+**El reparto de trabajo entre ellas es el punto, y es lo que ninguna sola cubre:** `pedagogy-benchmark` mide
+**conocimiento declarativo** (sabe pedagogía), `MathTutorBench` y `UnifyingAITutorEvaluation` miden **conducta en
+diálogo** (sabe enseñar), `SafeTutors` mide **daño**. Presentar una sola como «evaluación pedagógica» es el error que el
+pase 7 marcó con `ProHist-Bench`.
+
+### El wiring
+
+1. **Correr CDPK contra la configuración concreta del cliente** —el modelo elegido, con su *system prompt*, sus skills y
+   su RAG—, no contra el modelo desnudo. Lo que se acredita es **el producto**, no el proveedor del LLM.
+2. **Correr `SEND` aparte y reportarlo aparte.** Es la pieza que decide la venta en educación especial y **no conviene
+   promediarla** con CDPK: un asistente puede estar bien en pedagogía general y mal en discapacidad, y ese promedio
+   esconde exactamente el riesgo que el distrito teme.
+3. **Agregar la capa conductual**: `MathTutorBench` + las 8 dimensiones de `UnifyingAITutorEvaluation` sobre diálogos
+   reales del piloto. ⚠️ `UnifyingAITutorEvaluation` es **CC BY-SA 4.0**: derivar un benchmark propio con datos del
+   cliente **dispara el *share-alike***. Usarlo como vara de medición es limpio; derivarlo y no publicar, no.
+4. **Agregar el gate de seguridad**: `SafeTutors` (patrón **P11**) como criterio de bloqueo, no como métrica informativa.
+5. **El entregable es un expediente, no un número.** *Dossier de competencia pedagógica*: resultado por subdominio, el
+   delta contra el modelo base, los casos fallados con su transcripción, y el criterio de regresión para la próxima
+   versión. **Eso es lo que firma un ministerio o un distrito**, y es reusable como artefacto de conformidad bajo el
+   Anexo III, la ley de Vietnam y los estatutos estatales de EE. UU.
+
+### Plazo y alcance
+
+- **2 semanas** para el dossier CDPK + SEND sobre una configuración existente. Es un entregable corto y autónomo: se
+  puede vender como diagnóstico de entrada antes de cualquier desarrollo.
+- **+3 semanas** para la capa conductual y el gate de seguridad sobre diálogos del piloto.
+- **Total 5 semanas**, y es el patrón más barato de esta KB después de **P27**.
+
+### Dónde se vende primero
+
+- **LATAM, y el argumento es de autoría.** Ante un ministerio de la región el pitch no es *«les traemos una
+  herramienta»*: es **«la vara con la que el mundo está midiendo a estos modelos son los exámenes docentes de Chile, y
+  ustedes producen ese mismo activo sin capitalizarlo»**. Los exámenes de habilitación, las pruebas estandarizadas y los
+  marcos de competencias de los ministerios son datos de evaluación de altísimo costo de producción. **Extenderlos a más
+  países de la región es un entregable de política pública que no compite con ningún proveedor.** Ver el **gap 22**.
+- **North America, por educación especial.** El pase 8 documentó que redactar el IEP con AI está prohibido o restringido
+  en varios estados, y el patrón **P18** puso el límite adelante (*el agente propone, el docente decide*). Lo que le
+  faltaba a P18 era **cómo demostrarle al distrito que el asistente es competente** sin tocar la decisión protegida.
+  **`SEND` es ese instrumento**, y es MIT. Con **35+ estados con guía oficial** y **cuatro que obligan a política
+  distrital** (Maryland, Idaho, Oklahoma, Virginia), el dossier es material de cumplimiento, no marketing.
+- **EMEA y APAC** lo consumen como insumo del expediente de conformidad (**P4**), no como producto propio.
+
+### ⚠️ Los límites, y van en la primera página del dossier
+
+- **12 estrellas y 5 commits.** `pedagogy-benchmark` es un artefacto de investigación: **se usa como vara de medición en
+  un entregable, no se empaqueta como dependencia de producto.** Pinear el commit.
+- **Mide conocimiento declarativo, no calidad de intervención.** Responder un examen de habilitación no es enseñarle a
+  un chico. Por eso los pasos 3 y 4 no son opcionales.
+- 🔴 **El paper (arXiv 2506.18710) no se pudo abrir** en el pase 13 —`arxiv.org` bloqueado por el proxy—. Licencia,
+  conteos, composición CDPK/SEND y la atribución a Chile **sí** están verificados en la página del repo. **Abrir el paper
+  antes de citar metodología en un entregable.**

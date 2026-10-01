@@ -445,6 +445,75 @@ Y una advertencia operativa sobre el entorno: **`curl` hacia github.com devuelve
 **164 URLs de GitHub de esta KB y las 164 dieron 403**, uniformemente—. Es el proxy, no *link rot*. La verificación de
 primera mano se hace con **WebFetch**. **Esas 164 URLs no quedaron revalidadas en este pase.**
 
+## Capa de práctica y corrección desplegada (Jupyter) — agregada en el pase 13 del 2026-10-01
+
+**Doce pasadas preguntaron qué hace el agente. Ninguna preguntó dónde hace el alumno el trabajo.** Esta KB documentó el
+tutor, el modelado de conocimiento, la evaluación pedagógica, la seguridad, la telemetría, los datos, la accesibilidad,
+la credencial, el contenido, la predicción y el empaquetado en skills. **Nunca documentó el entorno donde el alumno
+escribe la respuesta y donde esa respuesta se corrige.** En educación superior y en formación técnica ese entorno tiene
+un nombre, está desplegado desde 2014, y **toda su pila es BSD-3-Clause**.
+
+No aparecía en esta KB porque no se llama «educación» ni «agente». Se llama **notebooks**.
+
+### La pila, verificada repo por repo vía WebFetch el 2026-10-01
+
+| Repo | Licencia | Stars | Qué aporta |
+|---|---|---|---|
+| https://github.com/jupyterhub/jupyterhub | **BSD-3-Clause** ✅ | **8.300** | Servidor multiusuario: entorno de cómputo por alumno, aislado, en el navegador. Python. La capa que hace que «entorno de práctica» sea operable para una cohorte entera |
+| https://github.com/jupyterlab/jupyter-ai | **BSD-3-Clause** ✅ | **4.400** | **El runtime de agente de esta capa, y es el hallazgo del pase.** «Connects AI agents to computational notebooks in JupyterLab». Habla **Agent Client Protocol (ACP)** y **servidores MCP propios**, y detecta automáticamente los agentes instalados: Claude, Codex, GitHub Copilot, Gemini, Goose, Kiro, Mistral Vibe y OpenCode. Diseñado explícitamente sobre estándares abiertos para no quedar atado a un proveedor |
+| https://github.com/jupyter/nbgrader | **BSD-3-Clause** ✅ | **1.400** | «A system for assigning and grading Jupyter notebooks». Celdas autocorregidas, tramos de corrección manual y **tests ocultos**, en un solo flujo: generar la versión del alumno, recolectar, autocorregir y consolidar notas. **v0.9.6 publicada el 2026-09-30** (incluye correcciones de *path traversal*). 3.477 commits |
+| https://github.com/ucbds-infra/otter-grader | **BSD-3-Clause** ✅ | 161 | Autograder modular y liviano del **Data Science Education Program de UC Berkeley**, para scripts Python y notebooks, con salida hacia varios LMS. 3.820 commits. Es la alternativa cuando no se quiere el acoplamiento de nbgrader a JupyterHub |
+| https://github.com/jupyterhub/ltiauthenticator | **BSD-3-Clause** ✅ | 73 | **El puente hacia el LMS que esta KB ya tenía documentado.** Implementa **LTI 1.3 y LTI 1.1**, y declara estar probado contra **Open edX, Canvas y Moodle** — exactamente las tres plataformas de `verticals/solutions.md`. Python |
+
+**Cinco repos, 14.334 ★, una sola familia de licencia.**
+
+### Por qué esto es el hallazgo de licencia más limpio de toda la KB
+
+Las doce pasadas anteriores construyeron un diagnóstico consistente: en educación **lo desplegable es copyleft** (Moodle
+y Chamilo GPL-3.0, Open edX y Canvas AGPL-3.0), **lo permisivo es de juguete** (los tutores de LATAM a 0–3 ★), **los
+datos son NonCommercial** (gap 11), **el contenido tiene trampa de licencia** (pase 10) y **la accesibilidad es
+copyleft** (pase 8).
+
+**Esta capa rompe el patrón entero, y es la única que lo rompe:**
+
+- Es **permisiva de punta a punta** — BSD-3-Clause en los cinco repos, sin AGPL, sin *share-alike*, sin NonCommercial.
+- Está **desplegada de verdad**, no en estrellas: nbgrader está implementado desde 2014 en **UC Berkeley, Cal Poly,
+  Universidad de Edimburgo** y **Aalto**, que publica su propia documentación de autograding para instructores.
+- Está **viva**: la release de nbgrader es del **día anterior a este pase**.
+- **Ya tiene runtime de agente con MCP**, que es precisamente la pieza que esta KB viene buscando capa por capa desde el
+  pase 5 — y acá no hay que construirla.
+- **Se conecta por un estándar que esta KB ya documentó.** La «Nota sobre licencias» de este mismo archivo recomienda
+  desde la tercera pasada integrar «por LTI 1.3 / REST» para no forkear el core copyleft. `ltiauthenticator` es
+  exactamente eso, hacia esta capa, y nadie lo había conectado.
+
+### Lo que esto corrige, y hay que decirlo con precisión
+
+El **gap 6** de esta KB dice, desde el pase 2 y sin cambios en once pasadas: *«no hay agente de grading open source con
+tracción; la capa de grading sigue siendo propietaria —Gradescope (Turnitin), Codio, Kangaroos AI—; no prometer
+reemplazar Gradescope, prometer orquestarlo»*. Esa conclusión se apoyaba en `gradescope-mcp` (8 ★), `classmoji`
+(83 ★, AGPL-3.0), `rubric` (0 ★) y `llmgrader` (licencia de investigación).
+
+**La formulación era más amplia que la evidencia.** Corregida:
+
+| Tipo de trabajo del alumno | Estado real de la corrección open source |
+|---|---|
+| **Código, notebooks, datos, cálculo numérico** | **Resuelto, permisivo y desplegado.** nbgrader + otter-grader, BSD-3-Clause, en universidades desde 2014. No hay que construirlo ni orquestar a un propietario |
+| **Prosa — ensayo, respuesta abierta, trabajo escrito** | **El gap 6 sigue en pie, y es ahí donde vive el incumbente.** Gradescope y Turnitin son dueños de esto; lo open source sigue siendo `papers` y repos pre-tracción |
+
+Es una diferencia que cambia la propuesta. Para un cliente de **STEM, ciencia de datos o formación técnica**, decirle
+«la corrección open source no existe, orquestemos Gradescope» es **falso y además caro**: la pila existe, es BSD y está
+probada a escala de cohorte. Para un cliente de **humanidades o de evaluación por escrito**, el gap 6 original se
+mantiene intacto.
+
+⚠️ **Lo que esta capa no es.** No es un tutor, no modela el conocimiento del alumno y **no evalúa pedagogía**:
+autocorrige contra tests que escribió el docente. Lo que aporta es el **sustrato de ejecución y evidencia** —el lugar
+donde el trabajo ocurre y queda registrado— debajo de las capas que esta KB ya tiene. El `pyBKT` del gap 5 estima el
+mastery, el LRS del pase 6 guarda la evidencia, y **esta capa es la que la produce**. Ver el patrón **P29**.
+
+⚠️ **El acoplamiento es real y hay que cotizarlo.** nbgrader está fuertemente acoplado al ecosistema Jupyter: fuera de
+JupyterHub, el intercambio de archivos y el flujo de entrega se complican rápido. Si el cliente no va a correr
+JupyterHub, `otter-grader` es la pieza correcta, no nbgrader.
+
 ## Nota sobre licencias — leer antes de cotizar
 
 El núcleo de las plataformas educativas open source es **copyleft fuerte**: Open edX, Canvas y Frappe LMS son AGPL-3.0; Moodle, Chamilo y H5P son GPL-3.0. AGPL alcanza el uso en red: si se modifica el core y se sirve por SaaS, hay obligación de publicar el fuente modificado.

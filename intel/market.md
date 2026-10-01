@@ -307,6 +307,27 @@ pasadas en dos días sobre las mismas cuatro consultas devuelven lo mismo. El va
 (como la de este pase), no en repetir el barrido. **Conviene bajar la frecuencia del barrido regulatorio a semanal** y
 gastar las corridas en capas sin cubrir.
 
+### Agregado en el pase 13 del 2026-10-01 — la dispersión entre consultoras es el dato, no el promedio
+
+El barrido de tamaño de mercado de este pase **no cambia la cifra que esta KB usa** ($10,6B en 2026 → $42,48B en 2030,
+CAGR 41,5%), pero sí deja registrada la **dispersión**, que es lo que hay que saber antes de poner un número en una
+propuesta:
+
+| Fuente del rango 2026 | Valor 2026 | Proyección citada |
+|---|---|---|
+| Cifra que usa esta KB (pases 1–12) | **$10,6B** | $42,48B en 2030 (CAGR 41,5%) |
+| Otras consultoras, mismo año | **$7,50B** · **$8,7B** · **$11,4B** | $100,21B en 2035 (CAGR 31,2%) · $136,79B en 2035 |
+
+**El rango 2026 va de $7,5B a $11,4B — una diferencia de 1,5×** entre firmas que miden lo mismo el mismo año. Es la misma
+advertencia que el barrido de la vertical *technology* registró para su propio mercado, y la regla operativa es la
+misma: **citar la fuente junto con el número, nunca el número solo**, y **no mezclar** la base de una consultora con la
+proyección de otra. Las CAGR también divergen fuerte (**41,5% vs 31,2%**), así que una proyección a 2035 construida
+sobre la base de 2026 de otra firma puede errar por un múltiplo.
+
+**Lo que sí es consistente entre todas las fuentes**, y por eso se puede afirmar: los vectores de crecimiento son
+**tutoría inteligente, aprendizaje personalizado, automatización administrativa, evaluación asistida por AI y asistentes
+virtuales de aprendizaje** — las cinco capas que esta KB ya tiene mapeadas.
+
 ## Players globales
 
 | Empresa | Tipo | Fortaleza | Debilidad |
@@ -509,6 +530,43 @@ supervisión humana. Apache-2.0 permite empaquetarla en un entregable cerrado.
 **Tamaño de la oportunidad, en una línea:** 35 ★ es nada. El mandato es de cuatro estados y creciendo. **La brecha
 entre la demanda regulada y la oferta open source en esta capa es la más grande de la región.** Ver **P27**.
 
+#### Agregado en el pase 13 del 2026-10-01 — la sesión legislativa 2026 tiene números, y cuatro estados ya obligan a tener política distrital
+
+El pase 11 dejó escrito que **«la regulación de North America prohíbe exactamente el producto que la región más compra»**
+y el pase 12 que **«el mandato de política distrital crea demanda de material auditable»**. Este pase les pone la escala
+de la sesión 2026:
+
+| Indicador de la sesión legislativa 2026 | Valor |
+|---|---|
+| Proyectos de ley sobre AI en educación introducidos | **134 en 31 estados** |
+| Seguimiento alternativo (FutureEd) | **68 proyectos en 27 estados**, **10 ya promulgados** en 2026 |
+| Estados con guía oficial de AI del Departamento de Educación | **35+** (a junio de 2026) |
+| Estados que obligan **guía estatal + adopción de política a nivel distrital** | **4: Maryland, Idaho, Oklahoma y Virginia** |
+
+**Los dos contenidos regulatorios nuevos, y los dos pegan sobre capas de esta KB:**
+
+- **Prohibición de decisión automatizada sobre el alumno.** Estados como **Oklahoma y Maryland** exigen **supervisión
+  humana** y **prohíben que la AI tome decisiones de alto impacto sobre alumnos**. Es, en términos locales, lo mismo que
+  el Anexo III europeo y lo mismo que el inciso (b) de Vietnam (trend 31): **tres jurisdicciones, misma prohibición.**
+  Pega directo sobre la **capa predictiva** (gap 18) y sobre el **grading** (gap 6), y confirma que el diseño vendible es
+  el de los patrones **P14**, **P25** y **P29**: *el agente evidencia, el docente decide*.
+- **Prohibición de usar datos de alumnos para entrenar modelos.** **California AB 1159** prohíbe usar datos de
+  estudiantes para entrenar modelos de AI. **Esto es una restricción de arquitectura, no de política de uso**, y rompe
+  una propuesta que esta KB venía recomendando: el pase 7 concluyó que, como los datasets de knowledge tracing son
+  NonCommercial (gap 11), *«se entrena con datos del cliente, y por eso el LRS va en la fase 1»*. **En California ese
+  camino queda cerrado para entrenamiento.** Lo que sigue siendo legal es **inferencia y estimación** sobre datos del
+  alumno (BKT ajustado en vivo, `pyBKT`) sin que esos datos entren a un entrenamiento. Es una distinción técnica fina y
+  hay que escribirla en la propuesta, no asumirla.
+- **Currículo:** **Georgia y Mississippi** incorporan créditos de ciencias de la computación con contenido de AI a los
+  estándares de graduación hacia fines de la década.
+
+**Y la oportunidad regional propia de este pase.** La capa de práctica y corrección que abre el **trend 30** es
+**íntegramente de autoría norteamericana** —proyecto Jupyter/NumFOCUS, y `otter-grader` del Data Science Education
+Program de **UC Berkeley**— y está desplegada en **UC Berkeley y Cal Poly** desde 2014. Para un cliente de educación
+superior en North America eso significa que **la infraestructura ya está instalada o es familiar**, es **BSD-3-Clause**,
+y lo que falta encima es exactamente lo que esta región **no puede comprar cerrado** por la prohibición de decisión
+automatizada: **feedback formativo con evidencia y humano en el lazo**. Ver el patrón **P29**.
+
 ### EMEA
 
 **Contexto.** Regulación primero, adopción después — lo inverso a Norteamérica. La fecha de aplicación de sistemas de alto riesgo del Annex III del EU AI Act (que **incluye AI en evaluación**) se corrió de 2026-08-02 a **2027-12-02** por el acuerdo del Digital Omnibus on AI. Las escuelas quedan responsables de auditar el uso de AI. Casos que caen en alto riesgo: **corrección automática de exámenes, aprendizaje adaptativo, proctoring y predicción de deserción** — o sea, casi todo lo interesante. La Comisión Europea con la OCDE y aval del G7 publicó un borrador de AI Literacy Framework para primaria y secundaria.
@@ -679,6 +737,30 @@ diferencia— y por eso es el artefacto **más fácil de documentar** frente a u
 modelo fine-tuneado. Pero con *share-alike* encima, el derivado tiene que publicarse igual. **El entregable EMEA
 defendible es una biblioteca pedagógica permisiva propia, construida con la arquitectura de la científica (MIT) y no
 derivada de la europea.** Ver **P27**.
+
+#### Agregado en el pase 13 del 2026-10-01 — las cifras del pase 8 se reconfirmaron por fuente independiente, y lo nuevo es institucional
+
+**Primero lo que NO es nuevo, porque declararlo vale tanto como un hallazgo.** El barrido EMEA de este pase devolvió
+**exactamente** las cifras que el pase 8 ya tenía: Europa **$2,64B (2026) → $8,0B (2030), CAGR 31,9%**; MEA **$0,56B →
+$1,6B, CAGR 34,3%**; liderazgo K-12 de **Finlandia, Estonia y Países Bajos**; y la brecha de gobernanza de **~70%
+Europa/North America contra 45% América Latina y el Caribe**. Viniendo de una fuente distinta a la del pase 8, eso es
+**reconfirmación independiente**, no dato nuevo. **La región llegó a saturación de barrido de mercado por tercer pase
+consecutivo** (el pase 12 ya lo había anotado): seguir buscando cifra agregada de EMEA no está produciendo información.
+
+**Lo nuevo es la arquitectura institucional del Golfo, que esta KB no tenía.** Los **Emiratos Árabes Unidos** tienen la
+estructura institucional de AI más desarrollada de Medio Oriente: el **AIATC** (*Artificial Intelligence and Advanced
+Technology Council*, creado en 2024, con sede en Abu Dhabi) es el órgano primario de supervisión de proyectos de AI, y
+el país tiene un **Ministro de Estado para la Inteligencia Artificial** —uno de los primeros cargos ministeriales
+dedicados del mundo—. **Para el submercado MEA eso cambia a quién se le vende:** hay una contraparte estatal única,
+identificable y con mandato, que es lo contrario de la fragmentación africana que el pase 5 documentó.
+
+**Y hay un dato de despliegue que le sirve a EMEA más que a ninguna otra región.** La pila de práctica y corrección del
+**trend 30** —toda **BSD-3-Clause**— está desplegada en **la Universidad de Edimburgo** y en **Aalto**, que publica su
+propia documentación de autograding para instructores. Combinado con el reloj del **Anexo III (2027-12-02)**, eso
+produce la propuesta EMEA más limpia de esta KB: **la infraestructura ya está instalada en la institución, es permisiva,
+y lo que el cliente necesita comprar es el expediente de conformidad sobre ella** —gestión de riesgo, documentación
+técnica, supervisión humana demostrable— que es justamente el entregable del patrón **P4** aplicado al **P29**. No hay
+que migrar nada: hay que volver auditable lo que ya corre.
 
 ### APAC
 
@@ -865,6 +947,58 @@ chino —**3,7 millones de postulantes por año contra cursos presenciales de 10
 bajo MIT. Es el ejemplo más claro de esta KB de una skill atacando directamente el precio de un mercado de preparación
 pago. Sumado a que DeepTutor (Hong Kong, 40.6k ★) y OpenMAIC (Tsinghua, 39.7k ★) ya lideran la tabla principal:
 **APAC no está adoptando esta capa, la está produciendo.**
+
+#### Agregado en el pase 13 del 2026-10-01 — 🔴 Vietnam es la cuarta jurisdicción con educación en alto riesgo, y su vencimiento cae antes que el europeo
+
+**Es el hallazgo regulatorio más importante del pase, y reordena el reloj de toda esta KB.** Detalle completo en el
+**trend 31**; acá va lo que entra en una propuesta.
+
+| Dato | Valor |
+|---|---|
+| Ley de Inteligencia Artificial de Vietnam, aprobada | **2025-12-10** (Asamblea Nacional) |
+| **En vigor** | **2026-03-01** |
+| Sistemas de alto riesgo listados por el Gobierno | **46, en seis sectores — educación es uno** |
+| Transitorio para sistemas educativos **ya en operación antes de** | **2026-08-15** |
+| **Vencimiento de cumplimiento para esos sistemas** | **2027-09-01** |
+
+**Alto riesgo en educación, según el texto:** (a) sistemas que entregan **contenido de autoaprendizaje desde fuentes de
+datos no controladas**; (b) sistemas que **evalúan, califican o rankean alumnos automáticamente**; (c) sistemas que
+**monitorean o analizan la conducta del alumno con datos biométricos** (reconocimiento facial, seguimiento de mirada).
+
+**Obligaciones:** evaluación de conformidad **antes del despliegue** y tras cada modificación significativa,
+documentación técnica, gestión de riesgo del ciclo de vida, **supervisión humana** y transparencia. Para los sistemas
+designados por el Gobierno la evaluación **debe hacerla un organismo registrado o reconocido**; para el resto se admite
+**autoevaluación del proveedor** — y esa distinción decide el costo del proyecto, así que hay que determinarla antes de
+cotizar.
+
+**Las tres consecuencias comerciales, en orden de importancia:**
+
+1. **El vencimiento educativo de Vietnam (2027-09-01) cae antes que el del Anexo III europeo (2027-12-02).** Por tercera
+   vez —Corea, y ahora Vietnam— **APAC exige antes que EMEA**. El argumento de urgencia que esta KB venía usando para
+   Europa es más fuerte acá.
+2. **El inciso (a) nombra el patrón P1 de esta KB.** «Contenido de autoaprendizaje desde fuentes no controladas» es la
+   definición de un tutor RAG sobre corpus abierto. En Vietnam **eso es lo que mete al sistema en alto riesgo**, y el
+   **manifiesto de procedencia por ítem** del patrón **P22** —inventado en el pase 10 para un problema de *licencia*—
+   pasa a ser también el expediente que demuestra control de la fuente. Mismo artefacto, dos obligaciones, dos regiones.
+3. **El inciso (c) vuelve a cerrar la categoría de proctoring**, como el pase 8 ya había concluido para EMEA. Van **tres
+   jurisdicciones** donde la vigilancia biométrica del alumno nace con conformidad obligatoria.
+
+#### Y el despliegue docente más grande de esta KB es de APAC, con 9 estrellas
+
+**`microsoft/Shiksha-Copilot`** (**MIT** ✅, **9 ★**, 12 forks, 149 commits) es de **Microsoft Research India**
+(iniciativa VELLM): planes de clase alineados al currículo, actividades y evaluaciones formativas y sumativas, con
+pipeline de ingesta curricular (MinerU, SmolDocLing, OlmOCR), datastores vectorial + grafo + documental, React y
+FastAPI. La investigación publicada documenta **1.043 docentes de Karnataka** trabajando en **inglés y kannada**.
+
+**Es la confirmación más extrema del trend 23 de esta KB** («las estrellas esconden la infraestructura realmente
+desplegada»): el pase 10 lo mostró con Sunbird (41 ★ / 180 M de alumnos); **acá son 9 estrellas y 1.043 docentes, con
+licencia MIT.** Para una propuesta en India es la referencia local de que la categoría *teacher-facing* funciona a
+escala real y bilingüe, y encaja sobre el patrón **P26** (agente docente conforme al currículo nacional).
+
+⚠️ **El límite lo pone el propio repo:** se declara *«a research prototype… not extensively tested for production use»*,
+con supervisión humana obligatoria y **no apto para despliegue comercial sin validación extensa**. **Se cita como
+evidencia; no se cotiza como componente.** 🔴 La cifra de 1.043 docentes viene de literatura secundaria y del sitio del
+proyecto, **no** de un documento del Gobierno de Karnataka.
 
 ### LATAM
 
@@ -1104,6 +1238,82 @@ algo caro: plataforma desplegada (pase 10), dataset con licencia (pase 11), impl
 publicada (gap 20). Una biblioteca LATAM que **nazca con suite de evaluación** —usando lo que esta KB ya mapeó en el
 pase 4: MathTutorBench, UnifyingAITutorEvaluation, EduBench, EduGuardBench— no sería la octava de la lista: sería **la
 primera medible**. Ese es el diferencial, no el idioma. Ver **P27**.
+
+#### Agregado en el pase 13 del 2026-10-01 — la brecha 87 → 26 es el dato comercial del pase, y el aporte de la región a la capa de evaluación es un examen del Estado chileno
+
+**1. El número institucional que faltaba, de fuente multilateral.** **UNESCO IESALC**, publicado el **2026-09-09** en la
+**UNESCO Digital Learning Week 2026**, sobre **200 instituciones de educación superior de 19 países** de América Latina
+y el Caribe:
+
+| Indicador | Valor |
+|---|---|
+| Usan AI en al menos un área de su actividad | **87%** |
+| La usan en **enseñanza y aprendizaje** | **74%** (mayormente herramientas de propósito general: ChatGPT, Copilot, Gemini) |
+| La usan para **análisis de datos e investigación** | **57%** |
+| **Tienen una estrategia formal de AI** | **26%** |
+
+Y la causa que señala el estudio: **el uso lo empujan docentes, investigadores y estudiantes, no las políticas
+institucionales.**
+
+**Qué hacer con esto, concretamente.** El pase 4 ya había concluido que *«la región no tiene un gap de adopción; tiene un
+gap de oferta open source propia»*. Esta medición lo precisa: **tampoco tiene un gap de interés — tiene un gap de
+gobernanza, y es lo que se contrata.** La brecha **87 → 26** significa que en esas 200 instituciones hay *shadow AI*
+docente sin inventariar, sin política de datos y sin criterio de evaluación pedagógica. Leído junto con el **45% de
+instituciones de LAC con guía de AI** contra **~70% de Europa y North America** (pase 8), **el primer entregable
+latinoamericano no es un tutor: es el inventario + la política + el criterio de evaluación** (patrones **P10**, **P11**
+y **P13**). Es un proyecto corto, **repetible en 19 países**, y es la puerta de entrada al resto de la cartera.
+
+🔴 **Verificación:** `www.iesalc.unesco.org` está **bloqueado por el proxy de egreso de esta sesión**. Las cifras vienen
+de **resultados de búsqueda concordantes entre sí**, no del documento. Confirmar antes de ponerlas en un entregable.
+
+**2. 🔴 México tiene Plan Nacional de IA, y uno de sus tres pilares es software público.** La **ATDT** (Agencia de
+Transformación Digital y Telecomunicaciones) presentó en **abril de 2026** el **Plan Nacional de Inteligencia
+Artificial**, que define cómo el Estado mexicano usará y regulará la AI. **Tres pilares: marco ético y legal; talento y
+software público; infraestructura de cómputo estratégica.**
+
+**Esto corrige un dato que esta KB arrastraba:** el barrido de la vertical *technology* había registrado «México — sin
+ley de AI». Sigue sin haber **ley**, pero **sí hay plan nacional con pilares declarados**, y uno de ellos —**software
+público**— es literalmente el terreno de esta KB.
+
+El componente educativo tiene números: el **Centro Público de Formación en Inteligencia Artificial** inició el
+**2026-01-26** con **10.000 estudiantes** en su primera generación y meta de **certificar gratis a 25.000 personas** al
+cierre del año; el plan contempla **duplicar la matrícula a 25.000 participantes anuales**, incorporando
+especializaciones en robótica, ciencia de datos y desarrollo sostenible. **Es un programa de AI literacy a escala de
+Estado ya en ejecución**, que es exactamente el patrón **P6**.
+
+**3. Y el reencuadre del pase, que es el hallazgo conceptual: el activo exportable de LATAM en la capa de evaluación no
+es un repo — es un instrumento de medición del Estado.**
+
+Ocho pasadas midieron la oferta LATAM **contando repos**, y el resultado fue siempre el mismo techo de 0–3 estrellas con
+proyectos que mueren en el día 90 (gap 2). **La medición estaba bien hecha y la unidad estaba mal elegida.**
+
+**`AI-for-Education/pedagogy-benchmark`** (**MIT** ✅, 12 ★) mide el conocimiento pedagógico de los LLM con **1.143
+preguntas** —**CDPK** (920, pedagogía general transversal a materias y edades) y **SEND** (223, educación especial)— y el
+repo **acredita esas preguntas a la Agencia de la Calidad de la Educación y al CPEIP del Ministerio de Educación de
+Chile**. La organización que lo publica trabaja explícitamente para **países de renta baja y media**.
+
+**Chile no puso el repo. Puso la pregunta con la que se evalúa al modelo** — que es la pieza más cara y menos replicable
+de cualquier benchmark, como el pase 7 ya había observado sobre las 10.891 rúbricas de `ProHist-Bench`. Y de paso **mueve
+el gap 4 por primera vez en seis pasadas**: la capa de evaluación con licencia limpia ya no es exclusivamente china.
+
+**La lectura comercial, y es nueva.** Ante un ministerio de la región, el argumento deja de ser *«les traemos tecnología»*
+y pasa a ser **«ustedes ya producen el activo que al resto del mundo le falta —instrumentos de medición pedagógica
+validados por el Estado— y no lo están capitalizando»**. Los exámenes de habilitación docente, las pruebas
+estandarizadas y los marcos de competencias de los ministerios de la región son, en términos de esta KB, **datos de
+evaluación de alto costo de producción y licencia potencialmente permisiva**. Eso es un entregable de política pública
+vendible, y no compite con nadie. Ver el **gap 22** y el patrón **P30**.
+
+**4. Dos referencias institucionales nuevas para la conversación de educación superior.** La **Pontificia Universidad
+Católica de Chile** lanzó **ConectIA** con Microsoft, apuntando a integración institucional completa de AI **para 2026**;
+y el **Tecnológico de Monterrey** (México) está **rediseñando más de 44 programas universitarios** para integrar AI en el
+mismo plazo. Son los dos nombres que cita la prensa regional cuando se discute AI institucional, y las dos son
+contrapartes que ya pasaron la etapa de decidir.
+
+**5. El reloj regulatorio de la región, para 2026:** **Chile** con ley de IA en trámite, **Colombia** con lineamientos del
+MinTIC, **México** con directrices del INAI más el Plan Nacional, y **Argentina** con proyecto de ley. Ninguna en vigor
+todavía — lo que, leído junto con el **2027-09-01 de Vietnam** y el **2027-12-02 del Anexo III**, significa que **LATAM es
+hoy la región donde se puede construir sin expediente de conformidad obligatorio, y la que va a tener que retrofitearlo**.
+Diseñar ahora con el patrón **P4** cuesta lo mismo y evita rehacerlo.
 
 ## Posicionamiento Globant
 

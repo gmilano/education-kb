@@ -551,6 +551,106 @@ subsistema educativo —mastery, repaso, credencial, telemetría, datos de alumn
 instalado y si hay un puente hacia él. **El valor del studio está en el puente y en la pedagogía, no en el motor.**
 Ver **P28**.
 
+## 30. La capa donde el alumno efectivamente trabaja estaba fuera del mapa, y es la de mejor licencia de todo el sector (agregado 2026-10-01, pase 13)
+
+Doce pasadas de esta KB construyeron el mapa desde el agente hacia afuera: el tutor, el modelado del conocimiento, la
+evaluación, la seguridad, la telemetría, los datos, la accesibilidad, la credencial, el contenido, la predicción y la
+distribución. **Nunca apareció el entorno donde el alumno escribe la respuesta** — y en educación superior STEM y
+formación técnica ese entorno está estandarizado desde 2014.
+
+Es **Jupyter**, y la pila completa es **BSD-3-Clause**: `jupyterhub` (8.300 ★), `jupyter-ai` (4.400 ★), `nbgrader`
+(1.400 ★, **v0.9.6 del 2026-09-30**), `otter-grader` (161 ★, UC Berkeley DSEP) y `ltiauthenticator` (73 ★, LTI 1.3
+probado contra Open edX, Canvas y Moodle). **14.334 ★, una sola familia de licencia.**
+
+**Por qué es un trend y no sólo un hallazgo de catálogo.** Esta capa viola, sola, los cinco patrones estructurales que
+esta KB documentó pase tras pase:
+
+| Patrón documentado por la KB | Esta capa |
+|---|---|
+| Lo desplegable es copyleft (Moodle GPL, Open edX y Canvas AGPL) | **Permisiva de punta a punta** |
+| Lo permisivo es pre-tracción (tutores LATAM 0–3 ★) | **8.300 ★ y despliegue universitario de una década** |
+| Los datos de entrenamiento son NonCommercial (gap 11) | **No aplica**: la evidencia la produce el alumno del cliente |
+| El runtime de agente con MCP hay que construirlo | **Ya existe, BSD, con ACP y MCP** |
+| El contenido tiene trampa de licencia (pase 10) | **No aplica**: el artefacto lo escribe el docente |
+
+**La lectura comercial es un cambio de orden de operaciones.** Esta KB venía proponiendo *construir* el agente y después
+buscarle dónde enchufarlo. En cualquier cliente de STEM, ciencia de datos, ingeniería o formación técnica **la
+infraestructura ya está instalada o es trivial de instalar, es permisiva, y el trabajo facturable es la capa pedagógica
+encima** — feedback formativo sobre tests que ya corrieron, estimación de mastery, evidencia hacia el LRS. Eso es más
+barato de vender y mucho más defendible que una plataforma nueva.
+
+**Y la causa de los doce pases de ceguera es metodológica, no de disponibilidad.** Jupyter no se presenta como producto
+educativo: se presenta como herramienta de cómputo científico. Buscar «agente educativo», «tutor», «LMS» o «grading» no
+lo devuelve nunca. Es la quinta vez que esta KB registra que **la consulta equivocada costó pasadas** (ver la nota de
+método del pase 7). La regla que queda: **buscar también por el artefacto material del alumno —el cuaderno, el
+entregable, el entorno de ejecución— y no sólo por el rol del software.**
+
+## 31. Vietnam puso en vigor lo que Europa posterga, y su texto nombra exactamente el patrón base de esta KB (agregado 2026-10-01, pase 13)
+
+El **trend 10** registró que Corea del Sur ya tenía en vigor el régimen que Europa no aplicaba, y el **trend 17**
+consolidó que «la ola regulatoria de APAC dejó de ser Corea del Sur sola». **Vietnam la extiende, y con el texto más
+específico que esta KB encontró para educación.**
+
+- La **Ley de Inteligencia Artificial** fue aprobada por la Asamblea Nacional el **2025-12-10** y está **en vigor desde
+  el 2026-03-01**. Es la primera ley integral y autónoma de AI del país, de enfoque **basado en riesgo**.
+- El Gobierno publicó una **lista sectorial de 46 sistemas de AI de alto riesgo en seis sectores**, y **educación es uno**.
+- En educación, alto riesgo incluye explícitamente tres cosas: **(a)** sistemas que entregan contenido de
+  autoaprendizaje **a partir de fuentes de datos no controladas**; **(b)** sistemas que **evalúan, califican o rankean
+  alumnos automáticamente**; **(c)** sistemas que **monitorean o analizan la conducta del alumno con datos biométricos**
+  —reconocimiento facial, seguimiento de mirada—.
+- Obligaciones: **evaluación de conformidad antes del despliegue** (y después de cada modificación significativa),
+  documentación técnica, gestión de riesgo a lo largo del ciclo de vida, **supervisión humana** y transparencia. Para
+  ciertos sistemas designados la evaluación **debe hacerla un organismo registrado o reconocido**; para el resto se
+  admite autoevaluación del proveedor.
+- **Las dos fechas que hay que llevar a una propuesta:** los sistemas de educación **ya en operación antes del
+  2026-08-15** tienen período transitorio con vencimiento **2027-09-01**.
+
+**Por qué esto reordena el reloj regulatorio de esta KB.** El vencimiento educativo de Vietnam (**2027-09-01**) cae
+**antes** que el del Anexo III europeo (**2027-12-02**, trend 25). Por tercera vez, **APAC exige antes que EMEA** — y
+esta vez con un texto más explícito que el europeo sobre qué arquitectura queda alcanzada.
+
+**Y acá está el punto que ninguna otra regulación de esta KB había escrito.** El inciso (a) —contenido de
+autoaprendizaje **desde fuentes de datos no controladas**— es, literalmente, la descripción de un **tutor RAG sobre
+corpus abierto**, que es el **patrón P1** de esta KB y lo que el pase 10 documentó al abrir la capa de contenido
+curricular. En Vietnam eso no es una buena práctica: **es la condición que mete al sistema en alto riesgo**. El
+entregable que el pase 10 inventó para un problema de licencia —el **manifiesto de procedencia por ítem** del patrón
+**P22**— resulta ser también el expediente que vuelve demostrable el control de la fuente. **El mismo artefacto sirve
+para dos obligaciones distintas en dos regiones distintas**, y eso lo vuelve mucho más fácil de justificar.
+
+El inciso (c), de paso, confirma el diagnóstico del pase 8 sobre proctoring: **la vigilancia biométrica del alumno queda
+en alto riesgo también en Vietnam.** Van tres jurisdicciones (EU Anexo III, Corea, Vietnam) donde la categoría entera
+nace con expediente de conformidad obligatorio.
+
+## 32. LATAM dejó de tener un problema de adopción y tiene uno de gobernanza, y ahora hay número institucional (agregado 2026-10-01, pase 13)
+
+El pase 4 de esta KB trajo la encuesta del Digital Education Council (92% de estudiantes y 79% de docentes de LATAM
+usando AI) y concluyó que **«la región no tiene un gap de adopción; tiene un gap de oferta open source propia»**. Ahora
+hay una medición institucional, de fuente multilateral, que precisa **dónde** está el déficit.
+
+**UNESCO IESALC, publicado el 2026-09-09 durante la UNESCO Digital Learning Week 2026**, sobre **200 instituciones de
+educación superior de 19 países** de América Latina y el Caribe:
+
+| Indicador | Valor |
+|---|---|
+| Instituciones que usan AI en al menos un área | **87%** |
+| Que la usan en enseñanza y aprendizaje | **74%** (mayormente con herramientas de propósito general: ChatGPT, Copilot, Gemini) |
+| Que la usan para análisis de datos e investigación | **57%** |
+| **Que tienen una estrategia formal de AI** | **26%** |
+
+Y el estudio señala la causa de la brecha: **el uso lo empujan docentes, investigadores y estudiantes, no las políticas
+institucionales.** Es adopción de abajo hacia arriba, sin marco.
+
+**La brecha 87 → 26 es el dato comercial del pase**, y conviene leerla junto con la cifra comparativa del pase 8: **~70%
+de las instituciones de Europa y North America tienen o están desarrollando guías de AI, contra 45% en América Latina y
+el Caribe.** La región no está atrasada en uso —está por encima de varias—; **está atrasada en gobernanza, que es
+precisamente lo que se contrata.**
+
+**Qué vende esto, concretamente.** No una plataforma: **un marco de gobernanza de AI institucional con inventario de uso
+real.** El 87% que ya usa AI con herramientas de propósito general significa que en esas 200 instituciones hay *shadow
+AI* docente sin registrar, sin política de datos y sin criterio de evaluación. El primer entregable no es un tutor: es
+el **inventario + la política + el criterio de evaluación pedagógica** (patrones **P10**, **P11** y **P13**). Es un
+proyecto corto, repetible en 19 países, y es la puerta de entrada al resto.
+
 ## Gaps declarados
 
 Huecos confirmados tras buscar, no ausencias por no haber buscado. Un gap informado es información; el silencio se parece demasiado a la cobertura.
@@ -730,6 +830,17 @@ Huecos confirmados tras buscar, no ausencias por no haber buscado. Un gap inform
    Ver el patrón nuevo **P15**.
 
 6. **No hay agente de grading open source con tracción** *(agregado en el pase 2)*. Se buscó específicamente corrección y assessment automatizado con licencia permisiva. La capa de grading sigue siendo **propietaria**: Gradescope (Turnitin), Codio, Kangaroos AI. En abierto hay *papers* (arXiv 2601.00730, 2607.02432, 2506.07955), no repos con adopción. Consecuencia directa para propuestas: **no prometer reemplazar Gradescope; prometer orquestarlo** — por eso `gradescope-mcp` (MIT, 8 ★) vale seguirlo pese a su tamaño. Es el camino realista hacia grading agéntico hoy.
+
+   **🔴 CORREGIDO EN EL PASE 13 DEL 2026-10-01 — el gap se parte en dos y una mitad estaba mal.** Once pasadas repitieron esta formulación. La evidencia que la sostenía era `gradescope-mcp` (8 ★), `classmoji` (83 ★, AGPL-3.0), `rubric` (0 ★) y `llmgrader` (licencia de investigación) — toda la capa medida **por el lado del agente**. Buscando por **el entorno donde el alumno hace el trabajo** aparece una pila entera que esta KB no tenía:
+
+   | Tipo de trabajo del alumno | Estado real de la corrección open source |
+   |---|---|
+   | **Código, notebooks, datos, cálculo numérico** | **Resuelto, permisivo y desplegado.** `nbgrader` (**BSD-3-Clause**, 1.400 ★, **v0.9.6 del 2026-09-30**) y `otter-grader` (**BSD-3-Clause**, 161 ★, UC Berkeley DSEP), sobre `jupyterhub` (**BSD-3-Clause**, 8.300 ★), con `jupyter-ai` (**BSD-3-Clause**, 4.400 ★, ACP+MCP) como capa de agente y `ltiauthenticator` (**BSD-3-Clause**, LTI 1.3 contra Open edX/Canvas/Moodle) como puente al LMS. Implementado desde 2014 en **UC Berkeley, Cal Poly, Edimburgo y Aalto** |
+   | **Prosa — ensayo, respuesta abierta, trabajo escrito** | **El gap 6 sigue intacto, y es ahí donde vive el incumbente.** Gradescope y Turnitin son dueños de esto; lo open source sigue siendo *papers* y repos pre-tracción |
+
+   **Consecuencia para propuestas, corregida:** para un cliente de **STEM, ciencia de datos, ingeniería o formación técnica**, decirle «la corrección open source no existe, orquestemos Gradescope» es **falso y además más caro que la alternativa**. Para un cliente de **humanidades o evaluación por escrito**, la recomendación original se mantiene sin cambios. Ver el **trend 30** y el patrón **P29**.
+
+   ⚠️ **Lo que esta corrección no dice:** nbgrader no evalúa pedagogía ni modela al alumno — autocorrige contra tests que escribió el docente. El **gap 1** (nadie usa los benchmarks pedagógicos que existen) y el **gap 5** (nadie conectó una librería de knowledge tracing entrenable) **no se tocan**.
 
 7. ~~**No hay SIS open source permisivo y vivo**~~ → **GAP RETIRADO en el pase 3 del 2026-09-30.** El pase 2 declaró que toda la capa SIS open source era PHP y copyleft, que la única opción permisiva (**Fedena**, Apache-2.0, 547 ★) estaba **muerta desde el 2016-07-20**, y concluyó que en el lado administrativo el agente **siempre** tiene que ir afuera. **La conclusión era incorrecta y se corrige.**
 
@@ -920,7 +1031,46 @@ Huecos confirmados tras buscar, no ausencias por no haber buscado. Un gap inform
 
     **Es el gap más barato de cerrar de los veinte declarados**: no requiere plataforma, dataset licenciado ni implementación de estándar certificada. Requiere correr benchmarks que ya existen contra artefactos que ya existen. Es también el diferencial de la propuesta LATAM del pase 12 (ver `intel/market.md`, `### LATAM`) y del patrón **P27**.
 
+21. **No existe el «notebook de la prosa»: fuera de las materias ejecutables no hay capa de práctica y corrección** *(agregado en el pase 13 del 2026-10-01)*. Es el gap que abre el hallazgo principal de este pase, y se declara **junto con** la buena noticia porque sin él la buena noticia se sobrevende.
+
+    El pase 13 encontró que para trabajo **ejecutable** —código, notebooks, datos, cálculo— la capa está resuelta, permisiva y desplegada desde 2014: `jupyterhub` + `nbgrader` + `otter-grader` + `jupyter-ai` + `ltiauthenticator`, **14.334 ★, todo BSD-3-Clause**. Funciona porque el trabajo del alumno **se puede correr**: hay un artefacto ejecutable contra el que un test se evalúa de forma determinística.
+
+    **Para un alumno de derecho, historia, lengua, filosofía o ciencias sociales no hay análogo de nada de eso.** Buscado explícitamente en este pase, no existe un entorno open source que ofrezca, para trabajo en prosa, el conjunto que Jupyter ofrece para código: entorno de trabajo por alumno, entrega versionada, corrección parcial automática, tramo de corrección manual integrado en el mismo flujo, y conexión por LTI 1.3 al LMS.
+
+    | Pieza del flujo | Trabajo ejecutable | Trabajo en prosa |
+    |---|---|---|
+    | Entorno de trabajo por alumno | **JupyterHub** (BSD, 8.300 ★) | **No existe** |
+    | Entrega y recolección | **nbgrader** (BSD) | El *assignment* del LMS, sin estructura |
+    | Corrección automática parcial | **nbgrader / otter-grader** (BSD) | **No existe en abierto** — Gradescope/Turnitin, propietarios |
+    | Corrección manual en el mismo flujo | **nbgrader** | Rúbrica suelta, fuera de la herramienta |
+    | Capa de agente | **jupyter-ai** (BSD, ACP+MCP) | `ArguLens` (Apache-2.0, **2 ★**) es lo único, y es scoring de ensayo argumentativo, no entorno |
+
+    **Es la mitad del gap 6 que este pase no cierra, vista desde el lado de la oferta en vez del de la corrección.** Y es un gap de **ausencia de producto**, como el 18: no es que lo haya y no se adopte (gap 1), ni que la licencia moleste (gap 11). No está construido.
+
+    ⚠️ **Y hay una razón para no apurarse a construirlo.** En EMEA (Anexo III, 2027-12-02), Corea y ahora **Vietnam** (trend 31), la evaluación automática del alumno es **alto riesgo con expediente de conformidad obligatorio**. Un entorno de corrección de prosa es exactamente eso. La forma defendible es la del patrón **P14** —calificar sin que califique el modelo— y la del **P29**: el agente explica y evidencia, el docente decide. Construir el autograder de ensayo «a secas» es construir el pasivo regulatorio.
+
+22. **La educación especial ya tiene con qué medirse, es permisiva, y nadie la está midiendo** *(agregado en el pase 13 del 2026-10-01)*. El pase 8 abrió la capa de accesibilidad y educación especial y dejó dos conclusiones: **lo maduro es copyleft** (OptiKey 4.4k ★ GPL-3.0, Cboard 759 ★ GPL-3.0) y **lo agéntico y permisivo no pasa de 15 estrellas**. Faltaba una tercera que no se buscó: **la capa no tenía ninguna forma de evaluarse.**
+
+    Ahora la tiene. **`SEND`**, el segundo componente de `pedagogy-benchmark` (https://github.com/AI-for-Education/pedagogy-benchmark, **MIT** ✅, 12 ★), son **223 preguntas de *Special Educational Needs and Disabilities*** tomadas de exámenes de habilitación docente, con licencia permisiva y publicadas con paper (arXiv 2506.18710).
+
+    **Es la primera pieza de evaluación de educación especial de esta KB, y tiene 12 estrellas.** O sea: la forma del gap es la del **gap 1**, no la del 18. No falta el artefacto — **falta que alguien lo use**. Y eso lo vuelve barato de cerrar: medir un asistente de educación especial contra `SEND` es integración, no investigación.
+
+    **Por qué importa más que su tamaño.** El pase 8 documentó que en North America redactar el IEP con AI está prohibido o restringido en varios estados, y que por eso el patrón **P18** pone el límite adelante (el agente propone, el docente decide). El problema de ese patrón siempre fue **cómo demostrarle al distrito que el asistente es competente** sin tocar la decisión protegida. `SEND` es exactamente ese instrumento: mide **conocimiento pedagógico de educación especial del modelo**, que es lo que se puede acreditar, y no la decisión sobre el alumno, que es lo que no se puede automatizar. Ver el patrón **P30**.
+
+    ⚠️ **Los límites, y son los mismos de todo `pedagogy-benchmark`:** mide conocimiento **declarativo** (responder un examen de habilitación), no calidad de intervención con un alumno real; son 12 ★ y 5 commits, así que es vara de medición en un entregable, **no dependencia de producto**; y el paper no se pudo abrir en este pase (`arxiv.org` bloqueado por el proxy), aunque licencia, conteos y composición **sí** están verificados en la página del repo.
+
+
 ## Fuentes
+
+Nuevo en el pase 13 — capa de práctica y corrección desplegada (verificado vía WebFetch el 2026-10-01): [jupyterhub](https://github.com/jupyterhub/jupyterhub) · [jupyter-ai](https://github.com/jupyterlab/jupyter-ai) · [nbgrader](https://github.com/jupyter/nbgrader) · [nbgrader releases v0.9.6](https://github.com/jupyter/nbgrader/releases) · [otter-grader](https://github.com/ucbds-infra/otter-grader) · [ltiauthenticator](https://github.com/jupyterhub/ltiauthenticator) · [jupyterhub-deploy-teaching](https://github.com/jupyterhub/jupyterhub-deploy-teaching) · [Aalto Scientific Computing — autograding](https://scicomp.aalto.fi/aalto/jupyterhub-instructors/autograding/) · [Aalto — nbgrader basics](https://scicomp.aalto.fi/aalto/jupyterhub-instructors/nbgrader/)
+
+Nuevo en el pase 13 — evaluación pedagógica y docente: [pedagogy-benchmark](https://github.com/AI-for-Education/pedagogy-benchmark) · [AI-for-Education (organización)](https://github.com/AI-for-Education) · [microsoft/Shiksha-Copilot](https://github.com/microsoft/Shiksha-Copilot) · [Shiksha Copilot — sitio del proyecto](https://deeshib.github.io/shiksha-copilot/) · [Microsoft Research — diseño con docentes de India](https://www.microsoft.com/en-us/research/blog/teachers-in-india-help-microsoft-research-design-ai-tool-for-creating-great-classroom-content/)
+
+Nuevo en el pase 13 — regulación de Vietnam (educación como alto riesgo): [Allen & Gledhill — marco basado en riesgo, en vigor 2026-03-01](https://www.allenandgledhill.com/vn/publication/articles/32667/s-new-law-on-artificial-intelligence-risk-based-regulatory-framework-in-force-1-march-2026) · [Allen & Gledhill — lista sectorial de alto riesgo, seis sectores](https://www.allenandgledhill.com/perspectives/articles/33373/vnkh-vietnam-identifies-high-risk-ai-systems-across-six-sectors) · [China Briefing — 46 sistemas de alto riesgo](https://www.china-briefing.com/china-outbound-news/46-high-risk-ai-systems-to-face-enhanced-regulatory-oversight-in-vietnam) · [Baker McKenzie](https://www.bakermckenzie.com/en/insight/publications/2026/02/vietnam-artificial-intelligence-law-foundation-and-outlook) · [Tilleke & Gibbins](https://www.tilleke.com/insights/a-closer-look-at-vietnams-new-ai-law-what-it-means-for-ai-businesses/51/) · [VILAF — obligaciones desde 2026-03-01](https://www.vilaf.com.vn/blog/vietnam-enacts-its-first-law-on-artificial-intelligence-key-regulatory-obligations-from-1-march-2026/)
+
+Nuevo en el pase 13 — LATAM institucional y regulatorio: [UNESCO IESALC — estudio 2026-09-09](https://www.iesalc.unesco.org/en/articles/new-unesco-iesalc-study-reveals-widespread-ai-adoption-higher-education-across-latin-america-and) 🔴 *dominio bloqueado por el proxy; las cifras vienen de resultados de búsqueda* · [UNESCO Digital Learning Week 2026](https://www.unesco.org/en/weeks/digital-learning) · [Plan Nacional de IA de México — ATDT (PDF)](https://www.portal.atdt.gob.mx/wp-content/uploads/2026/06/Plan-Nacional-de-IA.pdf) · [Polifonía — olas regulatorias LATAM 2026-2030](https://polifonia.org/2026-2030-regulacion-ia-en-america-latina/)
+
+Nuevo en el pase 13 — North America, legislación educativa: [MultiState — tendencias de política estatal 2026](https://www.multistate.us/insider/2026/4/9/how-states-are-regulating-ai-in-education-this-legislative-session) · [NASBE — gobernanza del uso de AI en escuelas](https://www.nasbe.org/states-take-next-steps-on-governing-ai-use-in-schools/) · [ExcelinEd — hitos de política K-12 2026](https://excelined.org/2026/05/26/state-k-12-ai-policy-in-2026-milestones/) · [AI for Education — guía estatal](https://www.aiforeducation.io/ai-resources/state-ai-guidance)
 
 Mercado y players: [Grand View Research](https://www.grandviewresearch.com/industry-analysis/artificial-intelligence-ai-education-market-report) · [Research and Markets](https://www.researchandmarkets.com/reports/5896034/ai-in-education-market-report) · [AI Tutors Market](https://www.grandviewresearch.com/industry-analysis/ai-tutors-market-report) · [5WPR EdTech AI Visibility Index 2026](https://www.5wpr.com/research/edtech-ai-visibility-index-2026/) · [Khan Academy / Duolingo agents](https://callsphere.ai/blog/ai-agents-education-khan-academy-duolingo-autonomous-tutoring)
 
@@ -998,6 +1148,57 @@ Capa de telemetría (LRS / xAPI) — agregado en el pase 6, **todo verificado de
 Evaluación — agregado en el pase 6, 🔴 **no verificado de primera mano** (dominios bloqueados por el proxy): L2-Bench (arXiv 2607.08842) · metodología de L2-Bench (arXiv 2603.20088) · `benchmarks.elt.edu.oup.com` · dataset en HuggingFace bajo `OUP/`
 
 Regulación y mercado por región — agregado en el pase 6: [MultiState — AI in Education Legislation: 2026 State Policy Trends](https://www.multistate.us/insider/2026/4/9/how-states-are-regulating-ai-in-education-this-legislative-session) · [NASBE — States Take Next Steps on Governing AI Use in Schools](https://www.nasbe.org/states-take-next-steps-on-governing-ai-use-in-schools/) · [ExcelinEd — State K-12 AI Policy in 2026](https://excelined.org/2026/05/26/state-k-12-ai-policy-in-2026-milestones/) · [Latham & Watkins — AI Regulation in APAC](https://www.lw.com/en/insights/ai-regulation-in-apac-diverging-approaches-across-the-region) · [Xenoss — APAC AI regulations](https://xenoss.io/blog/asia-pacific-apac-ai-regulations) · [UNESCO — Observatory on AI in Education for LAC](https://www.unesco.org/en/articles/unesco-launches-observatory-artificial-intelligence-education-latin-america-and-caribbean) · [Compliance & Risks — LATAM AI legislation](https://www.complianceandrisks.com/blog/shaping-the-future-ai-legislative-initiatives-across-latin-america/) · [IDB — An Enabling Regulatory Framework for AI in LAC](https://publications.iadb.org/publications/english/document/An-Enabling-Regulatory-Framework-for-Artificial-Intelligence-in-Latin-America-and-the-Caribbean.pdf) · [Azumo — AI in Education Statistics 2026](https://azumo.com/artificial-intelligence/ai-insights/ai-in-education-statistics) · [Grand View Research — AI Tutors Market](https://www.grandviewresearch.com/industry-analysis/ai-tutors-market-report) · [EdTech Hub — AI in Education in MENA](https://docs.edtechhub.org/lib/EPJAMMH9/download/BHXDDPBB)
+
+## Nota de método del pase 13 (2026-10-01) — trece pasadas buscando por el rol del software, y la pregunta que faltaba era dónde trabaja el alumno
+
+El pase 7 dejó escrita una regla: *«cuando un gap sobrevive varias pasadas, revisar si la pieza que falta existe con otro
+nombre»*. Este pase la aplica al gap que más había sobrevivido —el **6**, once pasadas sin cambios— y encuentra que la
+pieza no sólo existía: **era el repo con más estrellas de toda la KB.**
+
+**Qué cambió en la consulta, y es replicable.** Las doce pasadas anteriores buscaron por **el rol del software**:
+«tutor», «agente educativo», «LMS», «grading», «early warning», «skills pedagógicas». Este pase buscó por **el artefacto
+material del alumno**: dónde escribe, qué entrega, dónde se ejecuta. Esa consulta devuelve Jupyter, que no se presenta
+como producto educativo y por eso nunca apareció. **Es la quinta vez que esta KB registra que la consulta equivocada
+costó pasadas** (pases 4, 5, 6, 7 y 13).
+
+**La regla que agrega este pase, para la pasada 14 y las siguientes:** buscar al menos una vez por **el objeto físico o
+digital que el alumno produce** —el cuaderno, el entregable, el examen, el portfolio, el instrumento de medición— y no
+sólo por el rol del software que lo rodea. Las dos veces que esta KB lo hizo encontró capas enteras: el **contenido**
+(pase 10, «de qué lee el tutor») y la **práctica** (este pase, «dónde trabaja el alumno»).
+
+### ⚠️ Advertencia 1 — una fuente secundaria hizo regresar la fecha del EU AI Act, y hay que no copiarla
+
+Una guía comercial sobre el AI Act en educación, consultada en este pase, afirma que la fecha de aplicación general fue
+el **2026-08-02**. **El trend 25 de esta KB documenta, con fuentes primarias, que el Digital Omnibus on AI entró en vigor
+el 2026-07-27 y corrió el Anexo III —que es el que cubre educación— al 2027-12-02.** La discrepancia se registra
+explícitamente: **la fecha operativa sigue siendo 2027-12-02**, y una pasada futura que cite esa clase de guía sin
+contrastarla va a hacer regresar el dato más importante del archivo.
+
+### ⚠️ Advertencia 2 — el hallazgo del pase es grande y conviene no sobrevenderlo
+
+La pila Jupyter es real, permisiva y está desplegada, pero **corrige una mitad del gap 6, no el gap entero**. Lo que
+corrige: corrección de trabajo **ejecutable**. Lo que **no** corrige: prosa (sigue propietario), evaluación
+**pedagógica** (gap 1, intacto), modelado del alumno (gap 5, intacto) y formación profesional (gap 10, intacto). Y
+`nbgrader` está **fuertemente acoplado a JupyterHub**: fuera de ahí el flujo de entrega se complica, y la pieza correcta
+pasa a ser `otter-grader`. Un entregable que presente «resolvimos el grading con open source» sin esas cuatro
+limitaciones va a fallar en la primera facultad de humanidades.
+
+### Lo que este pase NO hizo, declarado como tal
+
+- **No revalidó las 179 URLs de GitHub preexistentes de esta KB.** Se verificaron de primera mano, vía WebFetch, **las
+  7 nuevas** (los 5 de la pila Jupyter, `pedagogy-benchmark` y `Shiksha-Copilot`) más la organización `AI-for-Education`.
+  La advertencia del pase 12 sigue vigente: **`curl` a github.com devuelve 403 en este entorno por el proxy, no por *link
+  rot***, y la verificación de primera mano se hace con WebFetch.
+- **No abrió el paper de `pedagogy-benchmark`** (arXiv 2506.18710): `arxiv.org` sigue bloqueado. Licencia, conteos,
+  composición CDPK/SEND y la atribución al Ministerio de Educación de Chile **sí** están leídos de la página del repo.
+- **No abrió el estudio de UNESCO IESALC**: `www.iesalc.unesco.org` está bloqueado por el proxy. Las cifras del trend 32
+  (87% / 74% / 57% / 26%, 200 instituciones, 19 países, 2026-09-09) vienen de **resultados de búsqueda concordantes**,
+  no del documento. Están marcadas como tales en `intel/market.md`.
+- **No verificó de primera mano el despliegue de 1.043 docentes de Shiksha Copilot** — viene de la literatura
+  secundaria y del sitio del proyecto, no de un documento del Gobierno de Karnataka. Lo que **sí** está verificado en la
+  página del repo es licencia MIT, 9 ★, 12 forks, 149 commits y la advertencia de no-producción.
+- **No buscó la capa de práctica para materias no ejecutables más allá de confirmar que no existe** (gap 21). Queda
+  explícitamente para la pasada 14.
 
 ## Nota de método del pase 12 (2026-10-01) — doce pasadas comparando la educación consigo misma, y dos advertencias de verificación que van a volver a pasar
 

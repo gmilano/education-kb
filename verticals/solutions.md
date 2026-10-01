@@ -99,6 +99,35 @@ Las cuatro pasadas anteriores trataron el grading sólo como un gap (no hay grad
 
 **Para la capa de juicio con LLM**, cuando haga falta construirla, el punto de partida permisivo es **`paper-instruments/rubric`** (MIT, 75 ★) — rúbricas ponderadas genéricas. No usar `llmgrader` (NYU): es el más maduro de la categoría y su licencia es de investigación, no OSI. Detalle en `repos/trending.md`, pase 5.
 
+### Ampliación del pase 13 del 2026-10-01 — la plataforma de esta capa no es Autograder.io, es JupyterHub, y es BSD-3-Clause
+
+El pase 5 abrió esta capa con `Autograder.io` porque era «el único artefacto de corrección de esta KB con volumen de
+producción verificable», y anotó que **el repo enlazado no declara licencia**. Las dos cosas quedan corregidas: hay una
+plataforma de esta capa con más despliegue, licencia permisiva declarada y **runtime de agente ya incluido**.
+
+| Plataforma | Licencia | URL | Stack | Cobertura | Nota |
+|---|---|---|---|---|---|
+| **JupyterHub** | **BSD-3-Clause** ✅ | https://github.com/jupyterhub/jupyterhub | Python | Entorno de cómputo aislado **por alumno**, en el navegador, para una cohorte entera | **8.300 ★.** Es la plataforma sobre la que se monta todo lo demás de esta fila |
+| **nbgrader** | **BSD-3-Clause** ✅ | https://github.com/jupyter/nbgrader | Python | Asignación, recolección, **autocorrección**, tramos de corrección **manual** y **tests ocultos**, con consolidación de notas | **1.400 ★. v0.9.6 del 2026-09-30.** Implementado desde 2014 en **UC Berkeley, Cal Poly, Universidad de Edimburgo** y **Aalto** |
+| **otter-grader** | **BSD-3-Clause** ✅ | https://github.com/ucbds-infra/otter-grader | Python | Autocorrección de scripts Python y notebooks, con salida hacia varios LMS | **161 ★**, del **Data Science Education Program de UC Berkeley**. La opción cuando **no** se va a correr JupyterHub |
+| **ltiauthenticator** | **BSD-3-Clause** ✅ | https://github.com/jupyterhub/ltiauthenticator | Python | **LTI 1.3 y LTI 1.1** | **73 ★.** Declara estar probado contra **Open edX, Canvas y Moodle** — las tres plataformas de la tabla de arriba de este archivo |
+| **jupyter-ai** | **BSD-3-Clause** ✅ | https://github.com/jupyterlab/jupyter-ai | Python/TS | **La capa AI, y no hay que construirla** | **4.400 ★.** ACP + servidores MCP propios; autodetecta Claude, Codex, Copilot, Gemini, Goose, Kiro, Mistral Vibe y OpenCode |
+
+**Por qué esto cambia la propuesta de esta capa.** El pase 5 dejó escrito que el ángulo AI correcto era «explicación y
+feedback formativo sobre tests que ya corrieron». **Ese ángulo sigue siendo el correcto, y ahora el lugar donde
+enchufarlo ya existe, es BSD y entra por LTI 1.3 al LMS del cliente** — sin forkear el core AGPL de Open edX ni el GPL
+de Moodle, que es exactamente la regla que `repos/foundations.md` viene recomendando desde la tercera pasada. Ver el
+patrón **P29**.
+
+⚠️ **Dónde aplica y dónde no, y es el límite que decide la venta.** Esta capa corrige **trabajo ejecutable**: código,
+notebooks, datos, cálculo numérico. **No corrige prosa.** Para evaluación por escrito el cuadro del pase 5 y el gap 6
+siguen vigentes sin cambios: el incumbente es propietario (Gradescope/Turnitin) y el camino realista es orquestarlo
+(`gradescope-mcp`). Proponer JupyterHub + nbgrader a una facultad de humanidades es un error de encaje.
+
+⚠️ **Y hay un acoplamiento que hay que cotizar.** nbgrader está fuertemente atado al ecosistema Jupyter: fuera de
+JupyterHub, el intercambio de archivos y el flujo de entrega se complican rápido. Si el cliente no va a operar
+JupyterHub, la pieza correcta es `otter-grader`, no nbgrader.
+
 ## Referencia teacher-facing — Aila (pase 5)
 
 No es una plataforma para desplegar, y se registra acá porque es la mejor referencia de arquitectura disponible para el lado docente:

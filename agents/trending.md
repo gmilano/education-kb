@@ -9,6 +9,101 @@ updated: 2026-10-01
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 > No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
 
+## 2026-10-01 (pase 13) — doce pasadas preguntaron qué hace el agente; ninguna preguntó dónde hace el alumno el trabajo, y la respuesta corrige el gap 6
+
+Decimotercera corrida. Las doce anteriores recorrieron el tutor, el modelado del conocimiento, la evaluación pedagógica,
+la seguridad, la telemetría, los datos de entrenamiento, la accesibilidad, la credencial, el contenido curricular, la
+predicción de abandono y el empaquetado en *skills*. **Ninguna documentó el entorno donde el alumno escribe la respuesta
+y donde esa respuesta se corrige.** Este pase lo busca y encuentra una capa entera que la KB no tenía — y que da vuelta
+una conclusión que sobrevivió once pasadas.
+
+### 🔴 El hallazgo del pase: la capa más desplegada y la de licencia más limpia de esta KB se llama «notebooks»
+
+Verificado repo por repo vía WebFetch el 2026-10-01.
+
+| Repo | Licencia | Stars | Rol en la capa |
+|---|---|---|---|
+| https://github.com/jupyterhub/jupyterhub | **BSD-3-Clause** ✅ | **8.300** | Entorno de cómputo aislado por alumno, en el navegador, para una cohorte entera |
+| https://github.com/jupyterlab/jupyter-ai | **BSD-3-Clause** ✅ | **4.400** | **Runtime de agente con ACP + MCP.** Autodetecta Claude, Codex, Copilot, Gemini, Goose, Kiro, Mistral Vibe, OpenCode |
+| https://github.com/jupyter/nbgrader | **BSD-3-Clause** ✅ | **1.400** | Autocorrección + corrección manual + **tests ocultos** en un flujo. **v0.9.6 del 2026-09-30** |
+| https://github.com/ucbds-infra/otter-grader | **BSD-3-Clause** ✅ | 161 | Autograder modular del **DSEP de UC Berkeley**, sin acoplarse a JupyterHub |
+| https://github.com/jupyterhub/ltiauthenticator | **BSD-3-Clause** ✅ | 73 | **LTI 1.3 / 1.1** probado contra **Open edX, Canvas y Moodle** — las tres plataformas que esta KB ya documentaba |
+
+**Cinco repos, 14.334 ★, una sola familia de licencia, y la release más reciente es del día anterior a este pase.**
+
+### Por qué no apareció en doce pasadas
+
+Porque **la consulta estaba mal formulada**, que es la quinta vez que esta KB registra lo mismo (ver la nota de método del
+pase 7). Buscar «agente educativo», «tutor», «LMS» o «grading» no devuelve Jupyter: Jupyter no se presenta como producto
+educativo. Se presenta como herramienta de cómputo científico, **y resulta ser la infraestructura docente de educación
+superior en STEM desde 2014** — nbgrader está implementado en **UC Berkeley, Cal Poly, Universidad de Edimburgo** y
+**Aalto**, que publica su propia guía de autograding para instructores.
+
+### Lo que corrige, con precisión y sin exagerar
+
+El **gap 6** dice desde el pase 2, sin cambios: *«no hay agente de grading open source con tracción; la capa sigue siendo
+propietaria —Gradescope (Turnitin), Codio, Kangaroos AI—; no prometer reemplazar Gradescope, prometer orquestarlo»*.
+
+**La afirmación era más amplia que la evidencia que la sostenía** (`gradescope-mcp` 8 ★, `classmoji` 83 ★ AGPL, `rubric`
+0 ★). Queda partida en dos, y las dos mitades son verdaderas:
+
+- **Trabajo computacional** —código, notebooks, datos, cálculo numérico—: **la corrección open source existe, es
+  BSD-3-Clause y está desplegada a escala de cohorte desde 2014.** No hay que construirla ni orquestar a un propietario.
+- **Prosa** —ensayo, respuesta abierta—: **el gap 6 sigue intacto**, y es exactamente donde vive el incumbente.
+
+Para un cliente de STEM, ciencia de datos o formación técnica, la recomendación anterior de esta KB era **falsa y además
+más cara que la alternativa**. Para uno de humanidades, sigue valiendo tal cual. Ver el patrón **P29**.
+
+### Los otros dos hallazgos del pase, y los dos son de encuadre
+
+**1. El aporte de LATAM a la capa de evaluación no es un repo: es un examen del Estado.**
+
+| Repo | Licencia | Stars | Qué es |
+|---|---|---|---|
+| https://github.com/AI-for-Education/pedagogy-benchmark | **MIT** ✅ | 12 | **1.143 preguntas de exámenes de habilitación docente**: CDPK (920, pedagogía general transversal a materias y edades) + **SEND (223, educación especial)**. El repo acredita a la **Agencia de la Calidad de la Educación** y al **CPEIP del Ministerio de Educación de Chile**. arXiv 2506.18710 |
+
+Ocho pasadas midieron LATAM contando repos y encontraron siempre el mismo techo de 0–3 ★. **Estaban midiendo la cosa
+equivocada.** El activo educativo exportable de la región que esta KB encontró con uso real no es software: es un
+**instrumento de medición pedagógica producido por el Estado**, lo bastante sólido para que un laboratorio enfocado en
+LMICs lo use de vara para medir a los LLM del mundo. Y de paso mueve el **gap 4** —la concentración china de la capa de
+evaluación limpia— por primera vez en seis pasadas. Ver el **gap 22**.
+
+**2. El despliegue docente más grande de esta KB tiene nueve estrellas.**
+
+| Repo | Licencia | Stars | Qué es |
+|---|---|---|---|
+| https://github.com/microsoft/Shiksha-Copilot | **MIT** ✅ | **9** | **Microsoft Research India** (iniciativa VELLM). Planes de clase alineados al currículo, actividades y evaluaciones. Ingesta curricular con MinerU/SmolDocLing/OlmOCR, datastores vectorial+grafo+documental, React + FastAPI. Investigación publicada sobre **1.043 docentes de Karnataka** en **inglés y kannada**. 149 commits |
+
+Es la confirmación más nítida del **trend 23** («las estrellas de GitHub esconden la infraestructura educativa realmente
+desplegada»): **9 estrellas, 1.043 docentes.** El pase 10 lo había mostrado con Sunbird (41 ★, 180 M de alumnos); acá el
+cociente es aún más extremo y encima la licencia es MIT.
+
+⚠️ **Y el límite es del propio repo, no nuestro:** declara ser *«a research prototype… not extensively tested for
+production use»*, con supervisión humana obligatoria y no apto para despliegue comercial sin validación extensa. **Se
+cita como evidencia de que la categoría funciona a escala docente real; no se cotiza como componente.**
+
+### Lo que esta pasada buscó y no encontró
+
+- **Corrección open source de prosa con licencia permisiva y tracción.** Sigue sin existir: es la mitad del gap 6 que
+  este pase **no** cierra. Lo nuevo es que ahora el gap está acotado al tipo de trabajo correcto.
+- **Una capa de práctica equivalente fuera de STEM.** JupyterHub + nbgrader sirven donde el trabajo del alumno es
+  ejecutable. **Para un alumno de derecho, historia o lengua no hay análogo**: no existe el «notebook» de la prosa, con
+  entorno aislado, entrega, autocorrección parcial y LTI. Es el **gap 21**, nuevo.
+- **Formación profesional en esta capa.** El **gap 10** sigue abierto: nbgrader vive en educación superior, no en FP.
+- **Un benchmark pedagógico de ciencias sociales.** Cuarta acotación del gap 1 sin cerrar; `pedagogy-benchmark` es
+  transversal a materias pero mide conocimiento **declarativo**, no enseñanza en diálogo.
+- **Movimiento LATAM en la capa de práctica.** Ninguno. La región aparece en este pase **como fuente del instrumento de
+  evaluación**, no como productora de la capa.
+
+### Nota de verificación del pase, y contradice una fuente secundaria
+
+Una fuente secundaria de este pase (una guía comercial sobre el EU AI Act en educación) afirma que la fecha de
+aplicación general del AI Act fue el **2026-08-02**. **Esta KB no lo adopta.** El **trend 25** tiene documentado, con
+fuentes primarias, que el **Digital Omnibus on AI entró en vigor el 2026-07-27** y corrió el **Anexo III —que es el que
+cubre educación— a 2027-12-02**. Se registra la discrepancia para que una pasada futura no haga regresar el dato: **la
+fecha del Anexo III sigue siendo 2027-12-02.** `arxiv.org`, `huggingface.co` y `www.iesalc.unesco.org` siguen bloqueados
+por el proxy de egreso; lo que vino de ahí está marcado 🔴 donde corresponde.
+
 ## 2026-10-01 (pase 12) — once pasadas midieron la educación contra sí misma: medida contra la vertical científica, pierde 58× en el canal más barato
 
 Duodécima corrida. Las once anteriores compararon repos educativos **entre sí** —el mejor tutor, el mejor benchmark, el

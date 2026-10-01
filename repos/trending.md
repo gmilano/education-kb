@@ -8,6 +8,62 @@ updated: 2026-10-01
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 
+## 2026-10-01 (pase 13) — el repo con más estrellas de toda esta KB no se presenta como educativo, y es el aula de STEM desde 2014
+
+Decimotercera corrida. El pase 10 cambió el indicador (estrellas → despliegue real), el 11 cambió el filtro (licencias
+más allá de MIT/Apache/BSD) y el 12 cambió la unidad de análisis (repos → canal de distribución). **Este pase cambia la
+consulta**: en vez de buscar «agente educativo» o «grading», busca **dónde ocurre materialmente el trabajo del alumno**.
+Y ahí aparece la capa con más estrellas, mejor licencia y mayor despliegue real de toda esta KB.
+
+### Los cinco repos nuevos, verificados vía WebFetch el 2026-10-01
+
+| Repo | Licencia | Stars | Forks | Señal |
+|---|---|---|---|---|
+| https://github.com/jupyterhub/jupyterhub | **BSD-3-Clause** ✅ | **8.300** | 2.100 | **Es el repo con más estrellas de toda esta KB**, y no figuraba. Servidor multiusuario de notebooks: un entorno aislado por alumno |
+| https://github.com/jupyterlab/jupyter-ai | **BSD-3-Clause** ✅ | **4.400** | 528 | «Connects AI agents to computational notebooks». **ACP + MCP**, autodetección de Claude, Codex, Copilot, Gemini, Goose, Kiro, Mistral Vibe y OpenCode. Declara estándares abiertos explícitamente para evitar *lock-in* de proveedor |
+| https://github.com/jupyter/nbgrader | **BSD-3-Clause** ✅ | **1.400** | 342 | **v0.9.6 publicada el 2026-09-30** — el día anterior a este pase, con *fixes* de *path traversal*. 3.477 commits. Autocorrección + tramos manuales + tests ocultos |
+| https://github.com/ucbds-infra/otter-grader | **BSD-3-Clause** ✅ | 161 | 81 | **UC Berkeley, Data Science Education Program.** 3.820 commits. La opción sin acoplamiento a JupyterHub |
+| https://github.com/jupyterhub/ltiauthenticator | **BSD-3-Clause** ✅ | 73 | 56 | **LTI 1.3 y 1.1**, probado contra **Open edX, Canvas y Moodle**. Es el puente hacia el stack que esta KB ya tenía |
+
+**14.334 ★ en una sola familia de licencia permisiva.** Para comparar con lo que esta KB venía midiendo: la capa de
+evaluación pedagógica tiene techo de 42 ★, la capa MCP de mastery techo de 42 ★, la capa predictiva techo de 6 ★ y la
+capa de *skills* educativas techo de 815 ★ con *share-alike*.
+
+### El contraste que hace útil este pase
+
+Las doce pasadas anteriores produjeron un diagnóstico muy consistente y, visto desde acá, **sesgado por la consulta**:
+
+| Lo que la KB concluyó, pase tras pase | Qué pasa en esta capa |
+|---|---|
+| «Lo desplegable es copyleft» (Moodle GPL, Open edX y Canvas AGPL) | **BSD-3-Clause en los cinco repos** |
+| «Lo permisivo es de juguete» (tutores LATAM 0–3 ★) | **8.300 ★ y despliegue universitario desde 2014** |
+| «Los datos son NonCommercial» (gap 11) | No aplica: la evidencia la genera el alumno del cliente |
+| «El runtime de agente hay que construirlo» | **Ya existe, con MCP, y es BSD** |
+| «El grading open source no existe» (gap 6, once pasadas) | **Existe para trabajo computacional, y es el incumbente real** |
+
+### Los otros dos repos nuevos del pase
+
+| Repo | Licencia | Stars | Señal |
+|---|---|---|---|
+| https://github.com/microsoft/Shiksha-Copilot | **MIT** ✅ | **9** | **9 estrellas, 1.043 docentes de Karnataka.** Microsoft Research India / VELLM. Inglés y kannada. 149 commits, 12 forks. ⚠️ El repo se autodeclara prototipo de investigación no apto para producción sin validación extensa |
+| https://github.com/AI-for-Education/pedagogy-benchmark | **MIT** ✅ | 12 | 1.143 preguntas de **exámenes de habilitación docente del Ministerio de Educación de Chile** (Agencia de la Calidad + CPEIP). Incluye **SEND**, 223 preguntas de educación especial. arXiv 2506.18710. 5 commits |
+
+La organización **AI-for-Education** («Empowering Education in LMIC's with AI», `AI-for-education.org`) tiene **21
+repos** y su techo es de **12 ★** — otros: `fabdata-llm` (9 ★, interfaz a APIs de LLM y gestión de chatbots),
+`edu-qurating` (3 ★), `fabdata-parsedoc` (2 ★). **Es el único actor que esta KB encontró con una línea de trabajo
+explícitamente orientada a países de renta baja y media, y está entero por debajo de las 12 estrellas.**
+
+### Lo que esta pasada buscó y no encontró
+
+- **Un análogo de esta capa para materias no ejecutables.** Es el **gap 21**, nuevo: no existe el «notebook de la prosa».
+- **Un autograder open source de ensayo con tracción.** Sigue sin existir (mitad no cerrada del gap 6).
+- **nbgrader o equivalente en formación profesional.** La capa vive en educación superior STEM. **Gap 10 abierto.**
+- **Un repo de esta capa originado en LATAM, EMEA o APAC.** Los cinco son de **North America** (Jupyter/NumFOCUS,
+  UC Berkeley). La adopción sí es global y verificada —Edimburgo (EMEA), Aalto (EMEA)—, **pero la autoría no lo es.**
+- **Alternativas de ERP/SIS nuevas.** La búsqueda de plataformas devolvió lo que la KB ya tiene (OpenEduCat LGPL-3.0,
+  ERPNext, RosarioSIS, openSIS) más **Gibbon**, que es GPL-3.0 y no cambia el cuadro: **la capa administrativa sigue
+  siendo copyleft salvo GegoK12**. Sin hallazgo nuevo que reportar acá.
+
 ## 2026-10-01 (pase 12) — el repo educativo que más crece no es una plataforma ni un tutor: es un archivo Markdown, y la vertical científica ya ocupó ese canal
 
 Duodécima corrida. El pase 10 cambió el indicador (estrellas → despliegue real) y el 11 cambió el filtro (licencias
