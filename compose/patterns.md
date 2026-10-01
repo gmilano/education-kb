@@ -507,6 +507,75 @@ Hasta este pase la KB no tenía con qué responder. Ahora sí, y las piezas son 
 
 ⚠️ **Lo que NO hay que prometer.** (1) Un modelo de mastery funcionando el día 1: no existe sin histórico, y decirlo temprano es más barato que corregirlo en la semana 10. (2) Que el modelo de la fase A transfiere al dominio del cliente: no transfiere. (3) Usar `EdNet` o `FoundationalASSIST` en el entregable: son **CC BY-NC** y un engagement es comercial — valen para investigación interna o un paper, nada más.
 
+## P17 — Conformidad de accesibilidad como entregable auditable (agregado en el pase 8; **EMEA primero**, y es la única obligación de esta KB con fecha ya cumplida)
+
+**El problema que resuelve.** Toda plataforma de e-learning y todo LMS que se ofrezca en la UE está alcanzado por el **European Accessibility Act**, en vigor desde el **2025-06-28**, con **WCAG 2.1 AA** como referencia técnica. A diferencia del AI Act —cuyo Annex III todavía se está escalonando— **esta fecha ya pasó**. Y a diferencia de la evaluación pedagógica, que hay que explicarle al cliente por qué la necesita, acá el cliente ya sabe que la necesita y suele no saber cómo demostrarla.
+
+**Por qué es el patrón más fácil de vender de los dieciocho.** No compite con nada: no hay incumbente open source, no hay que desplazar a un proveedor, y el presupuesto **ya existe** — vive en cumplimiento y en compras públicas, no en innovación. En licitación pública europea la accesibilidad no es un diferencial, es un criterio de admisibilidad.
+
+### Las piezas, todas verificadas en el pase 8
+
+| Pieza | Licencia | Rol |
+|---|---|---|
+| **accessibility-agents** (419 ★, 374 commits) | **MIT** ✅ | El motor. Corre dentro de Claude Code / Copilot / Codex / Gemini CLI y revisa WCAG 2.2 AA sobre código, documentos (incluye PDF y ePub, que es donde vive el material didáctico) y markdown |
+| **uisight** (128 ★) / **a11y-agents-kit** (34 ★) | **MIT** ✅ | Medición de contraste, área táctil y *theme drift*; `uisight` expone **servidor MCP**, así que el agente la consulta sin pegamento propio. **Las tres piezas de este patrón son MIT** |
+| **LRS** (`lrsql` Apache-2.0 / `Ralph` MIT) | ✅ | Donde queda el registro fechado de cada verificación. Es lo que convierte un reporte en expediente |
+| La plataforma del cliente | según caso | Moodle, Open edX, Canvas — sin forkear, como siempre |
+
+### El wiring
+
+1. **Auditoría base** con `accessibility-agents` sobre el tema del LMS, los componentes propios y el material (PDF y ePub incluidos). Sale un inventario de hallazgos WCAG 2.2 AA con severidad.
+2. **Remediación** por punto de extensión — tema y plugin, nunca el core copyleft.
+3. **Gate en CI:** los agentes corren en cada pull request, así que el código nuevo no puede volver a romper la conformidad. **Este paso es el producto**; la auditoría sola la hace cualquiera y caduca en un sprint.
+4. **Expediente:** cada corrida escribe un *statement* al LRS. Lo que se entrega no es un PDF de auditoría, es **la serie temporal que demuestra conformidad sostenida** — que es lo que un regulador pide y lo que una auditoría puntual no puede dar.
+5. **Autoría humana sobre las excepciones.** Donde la remediación automática no aplica, la decisión queda documentada y firmada por una persona.
+
+### Plazo y alcance
+**4–6 semanas** para auditoría + gate en CI + expediente sobre una plataforma. La remediación del material histórico se cotiza aparte y por volumen: es la parte grande y la que el cliente subestima siempre.
+
+### Dónde se vende primero
+**EMEA**, por el EAA, y en particular en licitación pública. **North America** entra por la vía de Section 508 y de las obligaciones de IDEA sobre materiales accesibles. **LATAM** entra más tarde y por otra puerta — la de inclusión educativa, no la de cumplimiento.
+
+⚠️ **Lo que no promete este patrón:** que la plataforma sea *pedagógicamente* accesible para un alumno con discapacidad cognitiva. WCAG mide acceso técnico. La adaptación del contenido es **P18**, es otro trabajo, y mezclarlos en una sola propuesta es prometer de más.
+
+## P18 — Asistente de educación especial donde redactar el IEP está prohibido (agregado en el pase 8; **North America primero**)
+
+**El problema que resuelve, y es un problema de encuadre antes que técnico.** El docente de educación especial es el más sobrecargado del sistema y el primero que pide ayuda de AI. Pero el open source que apareció en el pase 8 apunta casi todo a **redactar y gestionar el IEP**, y esa es precisamente la tarea que las jurisdicciones de EE. UU. están cerrando: **Delaware** prohíbe usar AI para objetivos de IEP, evaluación docente y calificación subjetiva, y el marco de **Nueva York** prohíbe usar AI para el desarrollo de planes **IEP o 504**.
+
+**La consecuencia comercial es directa: un producto que redacta IEP es invendible en los distritos más grandes del país.** Lo vendible es todo el resto del flujo, con el docente como autor de la decisión.
+
+### La arquitectura de referencia ya existe y es `tero`
+
+`tero` (MIT, 111 commits, Chile) implementa exactamente la postura que esta restricción obliga: ***el agente propone, el docente decide*** — **el modelo no escribe ningún archivo sin aprobación humana explícita**, y está anclado a instrumentos normativos nacionales (MINEDUC, Decreto 83, Ley 21.719) en vez de a un currículo genérico. Con **0 ★ no es una dependencia de producto**; es la referencia de diseño, y es reutilizable porque es MIT.
+
+### Las piezas
+
+| Pieza | Licencia | Rol |
+|---|---|---|
+| **`tero`** (0 ★, 111 commits) | **MIT** ✅ | Referencia de arquitectura del gate humano y de la vinculación a norma. Reutilizable |
+| **`Aila`** (35 ★, 1.188 commits, Oak National Academy) | **MIT** ✅ ⚠️ *"internal use"* | Referencia teacher-facing **en producción**, la única de la KB con escala real |
+| **`accessibility-agents`** (419 ★) | **MIT** ✅ | Garantiza que el material que el agente produce sea **él mismo accesible** — si el entregable para un alumno con discapacidad no cumple WCAG, el proyecto se contradice |
+| **`EduBench`** + **`SafeTutors`** | **MIT** ✅ | El expediente de calidad y de seguridad pedagógica. Ver **P10** y **P11** |
+| **LRS** (`lrsql` / `Ralph`) | Apache-2.0 / MIT ✅ | Registro de qué propuso el agente, qué aprobó el docente y qué rechazó. **Bajo IDEA, la trazabilidad de la decisión es la defensa del distrito** |
+| **`noggimigo`** (1 ★) | **MIT** ✅ | Idea reutilizable, no dependencia: **latencia de respuesta como señal de carga cognitiva** |
+
+### El wiring, con el límite adelante
+
+1. **Entrada:** la acomodación **ya decidida y ya firmada** por el equipo de IEP se carga como configuración. **El sistema nunca la genera ni la sugiere.** Este límite es la primera línea de la propuesta, no una nota al pie.
+2. **Adaptación de material** contra esa acomodación: nivel de lectura, segmentación, apoyo visual, texto-a-voz, andamiaje.
+3. **Gate humano obligatorio** al estilo `tero`: el docente aprueba, edita o rechaza antes de que algo llegue al alumno.
+4. **Verificación de accesibilidad** del artefacto producido con `accessibility-agents` (P17).
+5. **Evidencia al LRS:** propuesta, decisión docente, versión entregada, resultado.
+6. **Medición pedagógica** con `EduBench` y `SafeTutors` antes de entregar.
+
+### Plazo y alcance
+**8–10 semanas** para un piloto de una materia en un distrito. El trabajo caro no es el agente: es **mapear el vocabulario de acomodaciones del distrito** a transformaciones concretas de material, y eso es trabajo con los docentes, no con el modelo.
+
+### Dónde se vende primero
+**North America**, donde IDEA crea la obligación y la prohibición de IEP automatizado crea el encuadre. **EMEA** entra combinado con **P17** (EAA). **LATAM** entra por Chile, donde el Decreto 83 cumple el papel de IDEA y donde `tero` y `Ronda` dan contraparte técnica local — ver el **gap 2**.
+
+⚠️ **Las dos frases que no se pueden decir en esta venta:** que el sistema «escribe IEPs» y que «decide acomodaciones». Las dos están prohibidas en jurisdicciones concretas y las dos son innecesarias — el valor está en las horas de preparación de material, que es donde el docente efectivamente se consume.
+
 ## Nota de licencias para todos los patrones
 
 ⚠️ **Agregado en el pase 7 del 2026-10-01 — esta tabla cubre repos, y para los patrones que entrenan un modelo (P1, P10, P12, P15, P16) eso no alcanza.** La licencia del **dataset** es una dimensión aparte y es donde vive el riesgo con más frecuencia:

@@ -8,6 +8,47 @@ updated: 2026-10-01
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 
+## 2026-10-01 (pase 8) — la capa de conformidad de accesibilidad: más tracción que la de evaluación pedagógica, licencia limpia, y no es educativa
+
+Octava corrida. Los pases 4–7 construyeron el stack de medición —modelado (`pyKT`, `pyBKT`), evaluación (`EduBench`, `MathTutorBench`), telemetría (`lrsql`, `Ralph`) y datos de entrenamiento— y el patrón repetido fue: *la pieza es permisiva, el trabajo es integración*. El pase 7 encontró el agujero (los datasets son NonCommercial).
+
+Este pase encuentra algo distinto: **una capa entera, con obligación legal ya vencida y presupuesto de cliente ya asignado, cuya mejor herramienta tiene más estrellas que casi todo lo que la KB registra — y que no aparece en ninguna búsqueda educativa porque no es un repo educativo.**
+
+### Capa de accesibilidad y tecnología asistiva
+
+| Repo | Licencia | Stars | Commits | Rol |
+|---|---|---|---|---|
+| https://github.com/Community-Access/accessibility-agents | **MIT** ✅ | **419** | **374** | **El default de conformidad.** Revisión **WCAG 2.2 AA** desde adentro de Claude Code / Copilot / Claude Desktop / Codex / Gemini CLI. Cubre código, documentos (**PDF y ePub**, donde vive el material didáctico), markdown y add-ons de NVDA |
+| https://github.com/sololabstr/uisight | **MIT** ✅ | 128 | n/d | Medición de contraste, área táctil y *theme drift*, con **servidor MCP** |
+| https://github.com/weAAAre/a11y-agents-kit | **MIT** ✅ | 34 | n/d | Kit de skills de accesibilidad para harnesses de AI, de **weAAAre** |
+| https://github.com/OptiKey/OptiKey | **GPL-3.0** ⚠️ | **4.4k** | n/d | Control de computadora con la mirada (ELA / motoneurona) |
+| https://github.com/cboard-org/cboard | **GPL-3.0** ⚠️ | 759 | 5.531 | AAC con texto-a-voz (PWA). © Assistive Technology LLC; respaldo de UNICEF |
+
+**La asimetría que define cómo se cotiza esta capa: el producto asistivo maduro es copyleft y el tooling de conformidad es permisivo.** Lo que se puede empaquetar es la **verificación**, no el **dispositivo**.
+
+### Por qué la pieza MIT es la vendible y no los tutores
+
+| | Capa de tutoría | Capa de evaluación pedagógica | **Conformidad de accesibilidad** |
+|---|---|---|---|
+| Incumbente open source | DeepTutor 40.6k ★, OpenMAIC 39.7k ★ | academia (EMNLP, NAACL) | **ninguno** |
+| Obligación legal | no | parcial (AI Act escalonado) | **sí, y venció el 2025-06-28** |
+| Presupuesto del cliente | innovación | hay que crearlo | **ya existe** (cumplimiento / compras) |
+| Licencia de la pieza clave | Apache-2.0 / MIT | MIT, **datasets NonCommercial** | **MIT, sin dataset de por medio** |
+
+Es el único renglón de esta KB donde las cuatro filas salen a favor. Ver **P17**.
+
+### Capa de integridad académica — registrada como roadmap, no como componente
+
+**Open edX Proctoring Toolset** — propuesta con release objetivo **Verawood**, por Elizabeth Gordon, Ali Hugo y Arunmozhi Periasamy (**Arizona State University** + **OpenCraft**). Proctoring nativo con APIs estándar del navegador, verificación de identidad, revisión asistida por AI e integración opcional con **Safe Exam Browser**.
+
+**El argumento que importa:** la propuesta declara que la ausencia de proctoring integrado y gratuito **afecta desproporcionadamente a instituciones del Sur Global y de bajo presupuesto**, hoy obligadas a Respondus, Wheebox o ProctorU. 🔴 **Es una propuesta, no código desplegable** — no cotizarla; sí sirve para recomendarle a un cliente sobre Open edX que **no firme tres años de proctoring propietario ahora**.
+
+⚠️ **Lo que hay fuera de Open edX no es proponible:** la búsqueda de proctoring open source devuelve mayoritariamente trabajos finales con YOLO y seguimiento de mirada, sin licencia clara, sin mantenimiento y **sin evaluación de sesgo** — y vigilancia biométrica sobre alumnos es exactamente el alto riesgo del Annex III del EU AI Act.
+
+⚠️ **Verificación:** los cinco repos de la tabla se abrieron vía WebFetch (licencia, stars y commits leídos en la página). **`uisight` y `a11y-agents-kit` resultaron MIT**, así que la capa de conformidad es permisiva de punta a punta. La API de GitHub sigue bloqueada en esta sesión, así que no hay fechas de último commit.
+
+---
+
 ## 2026-10-01 (pase 7) — la capa que hace falta para que las librerías MIT sirvan: los datos, y casi todos son NonCommercial
 
 Séptima corrida. El pase 4 encontró la capa de modelado (`pyKT`, MIT), el pase 5 le sumó la alternativa occidental (`pyBKT`, MIT) y el pase 6 agregó la capa de telemetría (xAPI/LRS). Las tres conclusiones fueron la misma: **la pieza es MIT, el trabajo es integración, no investigación.**

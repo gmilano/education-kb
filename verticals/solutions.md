@@ -139,6 +139,20 @@ Esta KB venía listando tutores en `agents/top.md` sin separar los que **se desp
 
 ⚠️ **Lo que sigue sin tener alternativa permisiva de escala.** Si el requisito es **empaquetar un tutor en un entregable cerrado**, las únicas bases open source de escala siguen siendo las dos de APAC: **`DeepTutor`** (Apache-2.0, 40.6k ★) y **`OpenMAIC`** (MIT, 39.7k ★). El pase 7 lo midió contra las alternativas en vez de suponerlo, y la conclusión no cambió. Para un cliente con restricción de procedencia, eso es una tensión real que hay que poner sobre la mesa temprano — ver el gap 4 en `intel/trends.md`.
 
+## Capa de integridad académica — agregada en el pase 8 del 2026-10-01
+
+Capa que la KB no tenía y que aparece en toda conversación de evaluación sumativa. El estado es claro: **la integridad académica open source con calidad de producción no existe todavía, y el actor que la está construyendo es Open edX.**
+
+| Pieza | Estado | Licencia | Qué es |
+|-------|--------|----------|--------|
+| **Open edX Proctoring Toolset** | 🔴 **Propuesta, no release** — target **Verawood** | Será la de Open edX (**AGPL-3.0**) ⚠️ | Proctoring **nativo** en la plataforma usando APIs estándar del navegador: verificación de identidad, grabación por webcam con revisión manual o asistida por AI, dashboards para el instructor, e integración opcional con **Safe Exam Browser** para bloqueo de dispositivo. Autores: Elizabeth Gordon, Ali Hugo y Arunmozhi Periasamy (**Arizona State University** + **OpenCraft**) |
+
+**El dato de posicionamiento, y es el que vale.** La motivación declarada de la propuesta es que Open edX no tiene hoy una opción de proctoring integrada y gratuita, y que esa carencia **afecta desproporcionadamente a instituciones del Sur Global y a las de bajo presupuesto**, que quedan obligadas a contratar Respondus LockDown Browser, Wheebox o ProctorU. Para una propuesta en **LATAM** o en **África** eso es exactamente el argumento de costo que convierte una discusión técnica en una decisión presupuestaria.
+
+⚠️ **Cómo tratarlo hoy: como roadmap, no como componente.** Es una propuesta con release objetivo, no código que se pueda desplegar. No ponerlo en un diagrama de solución ni cotizarlo. Sí sirve para dos cosas concretas: **(a)** decirle al cliente que la categoría va a dejar de ser propietaria y que conviene no firmar tres años de proctoring cerrado ahora, y **(b)** posicionarse como el equipo que lo va a integrar cuando salga.
+
+⚠️ **Lo que hay fuera de Open edX no es proponible.** La búsqueda de proctoring open source devuelve mayoritariamente **proyectos de estudiante y de trabajo final** — detección de rostro y de objetos con YOLO, seguimiento de mirada, bloqueo de pestañas — sin licencia clara, sin mantenimiento y sin evaluación de sesgo. **Y el sesgo es el punto que hunde la categoría entera:** un sistema de vigilancia biométrica sobre alumnos es, bajo el EU AI Act, exactamente el tipo de sistema de **alto riesgo** del Annex III en acceso y evaluación educativa. Proponer un proctoring sin expediente de conformidad es ofrecerle al cliente el riesgo regulatorio, no la solución. Ver **P4**.
+
 ## Cómo elegir
 
 | Si el cliente necesita… | Arrancar de |

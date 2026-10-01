@@ -165,6 +165,23 @@ Las cinco pasadas anteriores midieron "AI en educación" como un bloque. Este pa
 
 **Dos cifras de adopción institucional del mismo pase:** la implementación **institution-wide** de AI llegó al **66%** (ya no son pilotos), y **Gartner proyecta que 40% de las aplicaciones empresariales tendrán agentes embebidos para fin de 2026**. El comprador dejó de preguntar si conviene y pasó a preguntar cómo se gobierna.
 
+### Agregado en el pase 8 del 2026-10-01 — EMEA se desdobla en dos mercados con cifra propia, y la brecha de gobernanza tiene número
+
+La KB venía tratando EMEA como un bloque con un dato agregado. Este pase lo separa, y la separación importa porque **los dos submercados crecen distinto y compran distinto**:
+
+| Submercado | 2026 | 2030 | CAGR |
+|---|---|---|---|
+| **Europa** (AI en educación) | **$2,64B** | **$8,0B** | **31,9%** |
+| **Medio Oriente y África** | **$0,56B** | **$1,6B** | **34,3%** |
+
+**MEA es cinco veces más chico y crece más rápido**, lo que confirma con números la lectura que el pase 5 hizo en prosa: son dos *motions* de venta distintas dentro de la misma región y no conviene mezclarlas en una propuesta «EMEA».
+
+**En K-12, el liderazgo europeo no está donde está el PBI:** **Finlandia, Estonia y Países Bajos** encabezan la integración de AI en K-12. Para una primera referencia europea, un piloto nórdico o báltico compra más credibilidad que uno en un mercado grande.
+
+**Y el dato que cuantifica la brecha de gobernanza entre regiones:** **~70% de las instituciones de Europa y North America** tienen guía de AI publicada o en desarrollo, **contra 45% en América Latina y el Caribe**. Leído junto con el 73,5% de LATAM que ya enseña con AI (pase 5), la tijera de la región deja de ser sólo de medición y pasa a ser **de gobernanza**: se usa más de lo que se regula, y por un margen de 25 puntos respecto del norte.
+
+⚠️ **Dato de contexto para North America:** retuvo **38% del mercado global de AI en educación en 2025**. Sigue siendo la región de mayor gasto absoluto, y el pase 5 ya registró que su CAGR no acompaña al global.
+
 ## Players globales
 
 | Empresa | Tipo | Fortaleza | Debilidad |
@@ -271,6 +288,17 @@ Y el argumento de por qué encima hace falta medir: **el modo de falla dominante
 
 **Cómo se vende esto.** El comprador de North America no compra "un tutor": compra **cumplimiento de un mandato que ya venció o está por vencer**, con supervisión humana demostrable. La capa de telemetría del pase 6 (`lrsql` + `learnmcp-xapi`) es el artefacto que produce la evidencia de esa supervisión — cada decisión del agente queda como statement xAPI auditable. Ver **P7**, **P14** y **P15**.
 
+
+**Agregado en el pase 8 del 2026-10-01 — la restricción regulatoria define el producto de educación especial, y es una buena noticia mal leída.**
+
+El panorama legislativo del año: **134 proyectos de ley sobre AI en educación presentados en 31 estados**, y **cuatro estados — Maryland, Idaho, Oklahoma y Virginia — con leyes 2026 que exigen a la vez guía estatal y adopción obligatoria de política a nivel distrital.** Dos instrumentos concretos que vale citar: **California AB 1159** prohíbe usar datos de alumnos para entrenar modelos, e **Idaho SB 1227** exige protecciones de privacidad para herramientas de AI en escuelas. A nivel federal, el Departamento de Educación publicó en **abril de 2026** su *Final Priority on Advancing Artificial Intelligence in Education* (vigente desde el 13 de mayo), que orienta las convocatorias de fondos discrecionales — o sea: **hay plata federal con criterio de AI escrito**.
+
+**El dato que cambia una propuesta de educación especial:** la guía de **Delaware** prohíbe usar AI para **objetivos de IEP, evaluación docente y calificación subjetiva**, y el marco de **Nueva York** (publicado 2026-03-24) prohíbe usar AI para el desarrollo de planes **IEP o 504**.
+
+**Cómo leerlo bien.** La lectura perezosa es «el mercado se cierra». La correcta es que **la restricción elimina al competidor equivocado y deja el trabajo caro intacto**: nadie va a vender el redactor automático de IEP, y la preparación y adaptación de material — que es donde el docente de educación especial realmente se consume las horas — queda disponible y sin prohibición. El patrón **P18** está construido sobre esa distinción, con el gate humano de `tero` como arquitectura de referencia y el LRS como trazabilidad de la decisión (que bajo **IDEA** es la defensa del distrito, no un lujo de auditoría).
+
+**Y una obligación de accesibilidad que ya existía y la KB no estaba usando:** IDEA exige materiales accesibles y empuja **UDL** (Universal Design for Learning). Eso habilita **P17** en North America sin depender del EAA europeo. *(Dato de contexto del pase 7, confirmado: el piloto de tutoría K-12 de Maryland con Khanmigo alcanzó ~4.350 alumnos en dos condados — escala de piloto, no de sistema.)*
+
 ### EMEA
 
 **Contexto.** Regulación primero, adopción después — lo inverso a Norteamérica. La fecha de aplicación de sistemas de alto riesgo del Annex III del EU AI Act (que **incluye AI en evaluación**) se corrió de 2026-08-02 a **2027-12-02** por el acuerdo del Digital Omnibus on AI. Las escuelas quedan responsables de auditar el uso de AI. Casos que caen en alto riesgo: **corrección automática de exámenes, aprendizaje adaptativo, proctoring y predicción de deserción** — o sea, casi todo lo interesante. La Comisión Europea con la OCDE y aval del G7 publicó un borrador de AI Literacy Framework para primaria y secundaria.
@@ -337,6 +365,25 @@ Dos ángulos nuevos para una propuesta europea:
 **La lectura estratégica, que refuerza el gap 3.** Europa compra **conformidad** — el artefacto que se vende es el expediente auditable, y la oferta open source local (MathTutorBench, OpenDidactia, L2-Bench, Ralph) es justamente de medición, currículo y telemetría, no de tutores. El Golfo compra **programa nacional**: contrato grande, plazo político, despliegue masivo, y la decisión no la toma una institución sino un ministerio. **Son dos motions de venta distintas dentro de la misma región, y conviene no mezclarlas en una sola propuesta EMEA.**
 
 ⚠️ **Y un dato de oferta del pase 6 que vale para EMEA:** `Ralph` (MIT, OpenFun, Francia) y `learnmcp-xapi` (MIT, IES Rafael Alberti, España) son europeos, permisivos, e integran con Open edX. Junto con Richie (MIT, OpenFun) permiten armar **una cadena vertical de un solo origen regional** — argumento de soberanía tecnológica que en licitaciones europeas puntúa.
+
+
+**Agregado en el pase 8 del 2026-10-01 — la obligación europea con la fecha ya vencida, y es la de ciclo de venta más corto de toda la KB.**
+
+Esta KB venía construyendo la propuesta EMEA sobre el **EU AI Act**, cuyo Annex III aún se escalona y cuya mitad cara el Digital Omnibus pospuso (trend 11). El pase 8 agrega un instrumento de otra clase que faltaba: el **European Accessibility Act**, **en vigor desde el 2025-06-28**, que alcanza plataformas de e-learning y LMS con **WCAG 2.1 AA** como referencia técnica, **aplica por mercado y no por domicilio** (igual que el GDPR: una empresa de fuera de la UE que sirva usuarios de la UE está adentro) y **no admite gradación por riesgo** — se cumple o no se cumple.
+
+**Por qué es la mejor puerta de entrada a EMEA que registra esta KB:**
+
+| | EU AI Act (Annex III) | **European Accessibility Act** |
+|---|---|---|
+| Fecha | se escalona; mitad pospuesta | **ya venció (2025-06-28)** |
+| Naturaleza | graduada por riesgo | **binaria** |
+| Presupuesto del cliente | hay que crearlo | **ya existe** (cumplimiento y compras) |
+| Competencia open source | capa de medición disputada | **no hay incumbente** |
+| En licitación pública | diferencial | **criterio de admisibilidad** |
+
+**La oferta concreta es `accessibility-agents` (MIT, 419 ★, 374 commits) + el LRS como expediente**, y el entregable que la hace defendible no es la auditoría sino **el gate en CI**: la serie temporal que prueba conformidad sostenida, que es lo que un regulador pide y lo que una auditoría puntual no puede dar. Ver **P17**.
+
+**Dónde entrar primero:** **Finlandia, Estonia y Países Bajos** lideran la integración de AI en K-12 europeo, así que una primera referencia ahí vale más que una en un mercado grande. Y el argumento de **soberanía tecnológica** del pase 6 se refuerza: a la cadena de un solo origen regional (Ralph + Richie de OpenFun, `learnmcp-xapi` de España) se le puede sumar ahora la capa de conformidad sin salir de licencias permisivas.
 
 ### APAC
 
@@ -412,6 +459,15 @@ Dos consecuencias opuestas, y las dos son oportunidad:
 - **Corea del Sur** empuja herramientas de AI para **aprendizaje de idiomas**, lo que conecta directo con L2-Bench (ver `agents/top.md`).
 
 **La consecuencia operativa, que es la de siempre en APAC pero ahora con un caso más:** no existe "una propuesta APAC". Entre Vietnam (educación = alto riesgo, exigible), Corea (marco integral vigente), Japón (voluntario) y Singapur (sandbox de facto) hay **cuatro regímenes incompatibles**. El patrón **P5** (orquestación multi-jurisdicción con nodos de política) es el que absorbe esa diferencia, y ahora hay que agregarle el nodo Vietnam.
+
+
+**Agregado en el pase 8 del 2026-10-01 — el consenso social sobre AI en el aula se parte dentro de APAC, y ANZ queda del otro lado.**
+
+El **Ipsos Education Monitor 2026** mide algo que esta KB venía tratando como homogéneo: **en los mercados asiáticos el apoyo a prohibir la AI en las escuelas es bajo** — más bajo que el apoyo a restringir redes sociales a menores, que sigue alto — **mientras que Australia y Nueva Zelanda registran apoyo notablemente más alto a prohibirla**.
+
+**Por qué importa para una propuesta.** La KB ya documentó que APAC tiene cuatro regímenes regulatorios incompatibles (Vietnam, Corea, Japón, Singapur) y que por eso no existe «una propuesta APAC». Este dato agrega una segunda línea de fractura que **no es regulatoria sino de licencia social**, y corre por otro lado: **ANZ no se agrupa con Asia en esto.** En Australia y Nueva Zelanda el riesgo del proyecto no es el cumplimiento — es la aceptación de padres y docentes. Eso cambia el entregable: ahí la evaluación pedagógica y la seguridad (**P10**, **P11**) no son expediente regulatorio, son **el instrumento de legitimación pública** del despliegue, y hay que presupuestar comunicación y evidencia desde el día uno.
+
+**Oferta nueva de la región en este pase:** **`Swar-Setu`** (MIT, 15 ★, India) — detección temprana multilingüe de dislexia, disgrafia y discalculia con dashboards para padres y docentes. Es el repo de educación especial **con más tracción y licencia permisiva** que encontró el pase 8, lo que extiende el **gap 4** a una capa más: también en educación especial, lo poco permisivo que hay viene de APAC. También **`EyeEP`** (Taiwán, gestión de IEP) — **sin licencia**, no reutilizable.
 
 ### LATAM
 
@@ -525,6 +581,24 @@ La oferta concreta, con las piezas del pase 5: `EduBench` (MIT — transversal a
 - **Y el contraste regional que mejor resume la oportunidad:** ~**70%** de las instituciones de Europa y North America tienen guía sobre AI, contra ~**45% en América Latina y el Caribe**. Esa brecha de 25 puntos **no es un problema de adopción** —la región usa AI tanto o más— **es un mercado de gobernanza sin atender**.
 
 **La propuesta LATAM que se desprende, y no es un tutor.** La región tiene docentes usando AI sin marco, instituciones sin lineamientos, un observatorio regional recién creado que demanda referencias, un sandbox brasileño con fecha, y un país (Uruguay) que ya se ató a un estándar europeo. **El producto es el marco de gobernanza con evidencia auditable** —política + telemetría + medición— y el tutor es lo que se despliega adentro de él, no al revés. Ver **P13** y **P15**.
+
+
+**Agregado en el pase 8 del 2026-10-01 — Chile se está volviendo el nodo técnico de la región, y hay un argumento de costo nuevo.**
+
+Buscando por accesibilidad y educación especial —ángulo que esta KB nunca había usado— los dos únicos repos latinoamericanos que aparecen son **chilenos**, y los dos están anclados a instrumentos normativos nacionales reales:
+
+| Repo | Licencia | Stars | Commits | Anclaje |
+|---|---|---|---|---|
+| **`tero`** | **MIT** ✅ | 0 | **111** | MINEDUC, **Decreto 83** (educación especial), **Ley 21.719** (datos) |
+| **`Ronda`** | GPL-3.0 ⚠️ | 3 | 17 | **Marco para la Buena Enseñanza** |
+
+Sumados a **Latam-GPT** (CENIA, Chile) y al **Observatorio UNESCO lanzado en la sede de la CEPAL en Santiago**, la región pasa de tener iniciativas dispersas a tener **una concentración geográfica**. El **gap 2 no se cierra** — `tero` tiene 0 ★ y `Ronda` 3 — pero cambia dónde conviene buscar contraparte técnica local.
+
+**El detalle que vale citar en una propuesta:** `tero` llegó, por restricción normativa chilena, **a la misma arquitectura que Delaware y Nueva York están imponiendo por prohibición** — *el agente propone, el docente decide*, sin escritura sin aprobación humana. Es un argumento inusualmente fuerte: un diseño regional que ya cumple con el régimen más restrictivo del hemisferio norte. Ver **P18**.
+
+**Y el argumento de costo nuevo, que no es de AI.** La propuesta del **Open edX Proctoring Toolset** (Arizona State University + OpenCraft) declara explícitamente que la falta de proctoring integrado y gratuito **afecta de manera desproporcionada a instituciones del Sur Global y de bajo presupuesto**, obligadas hoy a contratar Respondus, Wheebox o ProctorU. Para una institución latinoamericana sobre Open edX eso convierte una discusión técnica en una decisión de presupuesto. ⚠️ **Es una propuesta con release objetivo (Verawood), no código desplegable:** sirve para recomendar **no firmar tres años de proctoring propietario ahora**, no para cotizar. Ver `verticals/solutions.md`.
+
+**El contexto de gobernanza, con cifra:** **45% de las instituciones de América Latina y el Caribe** tienen guía de AI publicada o en desarrollo, **contra ~70% en Europa y North America**. Junto al 73,5% que ya enseña con AI, la región usa más de lo que gobierna — y eso, como la tijera de medición del pase 5, **entra por presupuesto de acreditación y cumplimiento, no por presupuesto de innovación**.
 
 ## Posicionamiento Globant
 

@@ -20,6 +20,8 @@ updated: 2026-10-01
 
 > **Séptima pasada del 2026-10-01:** +3 en la tabla principal (**llamatutor**, **ChatTutor**, **tutor-gpt**) y +1 en evaluación (**ProHist-Bench**). Los tres nuevos entraron por un cambio de consulta, no por ser nuevos: las seis pasadas anteriores buscaron `agent`, `benchmark` y `tutoring system`, **nunca `tutor`**, que es la palabra que usa el mercado. Suman 4.3k estrellas y **ninguno se puede empaquetar en un entregable cerrado** — ver las advertencias de licencia. Se registra además una **colisión de nombres** con `Bloom` y la **capa de datos de entrenamiento** (ver `repos/foundations.md`), que es la que decide si `pyKT`/`pyBKT` sirven de verdad.
 
+> **Octava pasada del 2026-10-01:** se abre una **capa que la KB no tenía en siete pasadas — accesibilidad y educación especial** (sección nueva abajo, 11 repos verificados). El hallazgo no es un repo: es la forma del segmento. **Lo maduro es copyleft** (OptiKey 4.4k ★ GPL-3.0, Cboard 759 ★ GPL-3.0) y **lo que es agéntico y permisivo no pasa de 15 estrellas**. Entra además **`tero`** (MIT, Chile) en la tabla principal, que es la primera pieza de esta KB que cierra tres gaps a la vez (2, 8 y 12). Ver el **gap 12** y el **trend 18** en `intel/trends.md`, y los patrones **P17** y **P18**.
+
 | Nombre | Repo | Licencia | Stars | Lenguaje | Descripción | Origen (región) |
 |--------|------|----------|-------|----------|-------------|-----------------|
 | DeepTutor | https://github.com/HKUDS/DeepTutor | Apache-2.0 | 40.6k | Python | Tutoría personalizada "lifelong"; workspace agent-native con 8 superficies (Chat, Partners, Co-Writer, Book, Knowledge, Space, Memory), memoria en 3 capas y RAG multi-engine. v1.6.12 del 2026-09-27, releases semanales | APAC (HKU Data Intelligence Lab, Hong Kong) |
@@ -46,6 +48,7 @@ updated: 2026-10-01
 | TutorIA | https://github.com/LabSirius/TutorIA | MIT | 0 | Python | Tutor conversacional autónomo para **educación superior rural**, integrado dentro de Open edX y con la API de Claude como motor. Chat en lenguaje natural, respuestas en audio (TTS), avatar animado, dashboard de estadísticas para el docente y persistencia de contexto entre sesiones. Materias iniciales: Programación I (Python) e Introducción a la Matemática | **LATAM (Pereira, Colombia)** — Grupo Sirius, Universidad Tecnológica de Pereira (`sirius.utp.edu.co`) |
 | OpenDidactia | https://github.com/nmarafo/OpenDidactia | CC BY-SA 4.0 ⚠️ | 0 | Markdown/YAML | Esquemas curriculares estructurados (estándar OKF) para que un agente genere **Programaciones Didácticas y Situaciones de Aprendizaje** conformes a la ley educativa española LOMLOE. Cubre las 17 comunidades autónomas y 2 ciudades autónomas, de Infantil a Bachillerato, FP y enseñanzas de régimen especial, con DUA y rúbricas analíticas. No es código: es el *esquema de salida* que hace auditable a un agente docente | EMEA (España) |
 | mentar | https://github.com/avps82/mentar | **AGPL-3.0-only** ⚠️ | 1 | Python | Tutor local-first para chicos: corre entero en la máquina del hogar, sin cuentas ni datos que salgan del dispositivo. 934 nodos de concepto en 157 plantillas curriculares (Australia ACARA v9, India, Singapur, EE. UU.). **El detalle de diseño que importa:** el LLM sólo explica y un *checker determinístico* corrige cada respuesta, así que el modelo no puede darle por buena una respuesta incorrecta a un chico. Último commit 2026-08-26 | Sin región verificada (currículo AU primero, pero el repo no declara ubicación) |
+| tero | https://github.com/marcorojasb/tero | **MIT** ✅ | 0 | Python | Agente docente de aula para K-12 **chileno**, de terminal y **offline-first**, sobre AWS Bedrock + Strands Agents SDK. Prepara material pedagógico y **adapta contenido para alumnos con necesidades especiales**. La decisión de diseño que lo hace citable: *«el agente propone, el docente decide»* — **el modelo no escribe archivos sin aprobación humana**. Anclado a instrumentos nacionales: MINEDUC, **Decreto 83** (educación especial) y **Ley 21.719** (protección de datos). 111 commits. **0 ★: referencia de arquitectura y contraparte local, no dependencia de producto.** *Agregado en el pase 8* | LATAM (Chile) |
 
 ## ⚠️ Colisión de nombres: hay dos "Bloom" y son proyectos distintos (pase 7)
 
@@ -165,6 +168,52 @@ Los star counts registrados en ciclos previos de esta KB estaban **inflados por 
 
 Los tres primeros estaban sobreestimados entre 7x y 30x, y en OpenTutorAI-CE el pipeline además reportó la licencia equivocada. Tratar cualquier cifra de ciclos anteriores no re-verificada como no confiable — y verificar la licencia junto con las stars, porque el error no se limitó a los números.
 
+## Capa de accesibilidad y educación especial — agregada en el pase 8 del 2026-10-01
+
+Siete pasadas construyeron el stack por capas —agente, modelado, evaluación, seguridad, telemetría, datos— y **ninguna miró al alumno con discapacidad**. Es el hueco de cobertura más grande que tenía esta KB, y no es un nicho: en la UE la accesibilidad de una plataforma de aprendizaje dejó de ser una característica y pasó a ser **condición de acceso al mercado** (European Accessibility Act, en vigor desde el **2025-06-28**). Ver el **trend 18**.
+
+**El hallazgo no es un repo, es la forma del segmento.** Se parte limpio en dos mitades y ninguna sirve sola:
+
+### Mitad 1 — la tecnología asistiva madura, y es toda copyleft
+
+| Repo | Licencia | Stars | Lenguaje | Qué es |
+|------|----------|-------|----------|--------|
+| https://github.com/OptiKey/OptiKey | **GPL-3.0** ⚠️ | **4.4k** | C# | Teclado en pantalla y control total de Windows **con la mirada**, para ELA / enfermedad de motoneurona. Es la pieza de tecnología asistiva más adoptada que encontró esta KB en cualquier capa |
+| https://github.com/cboard-org/cboard | **GPL-3.0** ⚠️ | **759** | JavaScript | Sistema **AAC** (comunicación aumentativa y alternativa) con texto-a-voz, PWA, para parálisis cerebral y autismo. 5.531 commits. © Assistive Technology LLC; respaldado por la iniciativa **«For every child, a voice» de UNICEF** |
+
+⚠️ **Las dos son GPL-3.0, y eso decide la arquitectura entera de un engagement de accesibilidad.** No se forkean para meterles un agente adentro. Se despliegan tal cual y la inteligencia propia va al lado — exactamente la misma receta que esta KB ya aplica a Moodle y Open edX.
+
+### Mitad 2 — lo agéntico y permisivo, y no pasa de 15 estrellas
+
+| Repo | Licencia | Stars | Commits | Qué implementa | Origen |
+|------|----------|-------|---------|----------------|--------|
+| https://github.com/AyushBinjola1/Swar-Setu | **MIT** ✅ | 15 | 4 | Detección temprana y apoyo multilingüe de **dislexia, disgrafia y discalculia**: evaluaciones interactivas, soporte por voz, dashboards por rol (padre / docente) | APAC (India — *«Built with ❤️ for India»*) |
+| https://github.com/open-behavior-analysis/aba-clinical-agent | **AGPL-3.0** ⚠️ | 7 | 7 | **29 Claude Code Skills** + base Obsidian para supervisión clínica **ABA** de punta a punta (de-identificación, intake, análisis funcional de conducta, plan de tratamiento, supervisión de staff, reporte de hitos). Es la mejor ilustración del **trend 9** — la pedagogía empaquetada como skills — fuera del aula ordinaria | Sin región declarada (© Jiamei Zhang, BCBA) |
+| https://github.com/ronda-ai/Ronda-App | **GPL-3.0** ⚠️ | 3 | 17 | Asistente pedagógico generativo para aula inclusiva: participación, coaching docente, gestión de seguridad. **Soberanía de datos por diseño** (self-hosting + cifrado en reposo). Anclado al **Marco para la Buena Enseñanza (MBE)** chileno | LATAM (Chile) |
+| https://github.com/Noggin-Labs/noggimigo | **MIT** ✅ | 1 | 19 | Motor de tutoría **socrática local** para necesidades educativas especiales, con diagnóstico de misconceptions y seguimiento de latencia de respuesta — la latencia como señal de carga cognitiva es un diseño que no aparece en ningún otro repo de la KB | Sin región declarada (Noggin Labs) |
+| https://github.com/100205ivan/EyeEP | 🚫 **sin licencia** | 1 | 12 | Gestión de **IEP** (programa educativo individualizado) asistida por AI para docentes de educación especial. Sin LICENSE no es reutilizable | APAC (Taiwán — *inferido del README en chino tradicional, no declarado*) |
+| https://github.com/SabioTechTeam/Teacher-Hub | **MIT** ⚠️ *(ver advertencia)* | 0 | 156 | Proyecto **«UnStuck»**: sistema adaptativo de matemática K-6 con test adaptativo computarizado (CAT), modelo vivo del alumno, verificación determinística de dominio y **parsing de acomodaciones IEP / 504** | Sin región declarada |
+| https://github.com/Autism-Technology-Research-Syndicate/SEALApplication | **GPL-3.0** ⚠️ | 10 | 321 | Currículo de educación especial personalizado para autismo analizando respuesta del alumno con visión por computadora. 🚫 **El repo está marcado como deprecado** | North America (AUTRS, EE. UU.) |
+| https://github.com/classifiedstudentkabir/Sign-Language-Interpreter | 🚫 **sin licencia** | 60 | 8 | *SignLens* — reconocimiento de **lengua de señas** a texto en el navegador con MediaPipe. Es el repo con más estrellas del topic `inclusive-education` y **no tiene licencia**: el default legal es todos los derechos reservados | Sin región declarada (hackathon HackNova) |
+
+⚠️ **Trampa de licencia verificada en `Teacher-Hub`, y vale como advertencia general.** El README dice literalmente *«MIT License — free for educational and non-commercial use»*. **Las dos mitades de esa frase se contradicen:** la MIT permite uso comercial sin restricción. No se sabe si el autor quiso MIT o quiso una no-comercial, y esa ambigüedad **es** el riesgo. Antes de cualquier entregable hay que leer el archivo `LICENSE` y, si sigue sin cerrar, pedirle al autor que lo aclare por escrito. Anotado porque es la segunda vez que esta KB encuentra una declaración de licencia que el texto no sostiene (la primera fue OpenTutorAI-CE, donde el pipeline reportó Apache-2.0 y era BSD-3).
+
+### La pieza transversal, y es la única con tracción y licencia limpia
+
+| Repo | Licencia | Stars | Commits | Qué implementa |
+|------|----------|-------|---------|----------------|
+| https://github.com/Community-Access/accessibility-agents | **MIT** ✅ | **419** | 374 | Agentes de revisión de accesibilidad que **corren dentro del harness de codificación**: Claude Code, GitHub Copilot, Claude Desktop, Codex, Gemini CLI. Seis skills de entrada que rutean a especialistas sobre ARIA, teclado, foco, formularios, contraste, modales, live regions, encabezados, tablas, carga cognitiva, i18n, móvil, email y visualización de datos. Cubre también documentos (Word, Excel, PowerPoint, PDF, ePub) y add-ons de NVDA. **Propósito declarado: que las herramientas de AI dejen de generar código inaccesible** |
+| https://github.com/sololabstr/uisight | **MIT** ✅ | 128 | n/d | Medición de contraste, área táctil y *theme drift* en sesiones en vivo, expuesta como **servidor MCP** |
+| https://github.com/weAAAre/a11y-agents-kit | **MIT** ✅ | 34 | n/d | Kit de skills de accesibilidad para harnesses de codificación con AI, de **weAAAre** (escuela de accesibilidad digital) |
+
+**Por qué `accessibility-agents` es el hallazgo comercial del pase 8 y no los tutores.** Es MIT, tiene 419 ★ y 374 commits — más tracción que **cualquier** pieza de educación especial de este pase y que la mayoría de la capa de evaluación — y ataca la obligación que **ya está vigente** (EAA, WCAG 2.2 AA) en vez de la que está prohibida (redacción de IEP, ver abajo). **No es un repo educativo**, y por eso ninguna búsqueda de los siete pases anteriores lo iba a encontrar. Ver el patrón **P17**.
+
+### El dato que da vuelta la lectura comercial del segmento en North America
+
+El open source de educación especial que apareció en este pase apunta mayoritariamente a **redactar o gestionar el IEP** (`EyeEP`, el parsing de IEP/504 de `Teacher-Hub`). Y esa es, específicamente, **la tarea que las jurisdicciones de EE. UU. están prohibiendo**: la guía de **Delaware** prohíbe usar AI para objetivos de IEP, evaluación docente y calificación subjetiva, y el marco de **Nueva York** prohíbe usar AI para el desarrollo de planes **IEP o 504**.
+
+**La oferta open source está apuntando al único paso del flujo que no se puede automatizar.** Lo vendible es el resto del flujo — preparar material, diferenciar contenido, adaptar lectura, documentar evidencia — con el docente como autor de la decisión. El diseño de referencia para eso ya está en esta KB y es **`tero`**: *el agente propone, el docente decide*, sin escritura de archivos sin aprobación humana. Ver el patrón **P18** y el **gap 12**.
+
 ---
-*Verificado manualmente vía WebFetch, no por el pipeline automático. Última verificación: 2026-10-01 (pase 7).*
+*Verificado manualmente vía WebFetch, no por el pipeline automático. Última verificación: 2026-10-01 (pase 8).*
 *Nota de método del pase 5: `curl -sI` contra github.com devuelve **403** a través del proxy de egreso, así que toda verificación se hizo con WebFetch contra la página del repo. Están bloqueados `arxiv.org`, `openreview.net`, `aclanthology.org`, `huggingface.co` y `ojs.aaai.org`, por lo que **los venues, conteos de ítems y hallazgos de los papers no pudieron verificarse en la fuente primaria** — sólo lo alojado en github.com está verificado de primera mano.*
