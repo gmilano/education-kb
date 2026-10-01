@@ -1,7 +1,7 @@
 ---
 industry: education
 region: Global
-updated: 2026-09-30
+updated: 2026-10-01
 ---
 
 # 🏭 Verticales de partida — Education
@@ -105,6 +105,23 @@ No es una plataforma para desplegar, y se registra acá porque es la mejor refer
 **Aila / Oak AI Lesson Assistant** — https://github.com/oaknational/oak-ai-lesson-assistant — **MIT**, 35 ★, **1.188 commits**. Monorepo Turborepo con Next.js, Prisma/PostgreSQL y **pgvector**, entornos de producción y staging. De **Oak National Academy** (nonprofit educativa británica respaldada por el gobierno).
 
 ⚠️ El propio repo dice que está *"intended primarily for internal use by Oak National Academy"*: **no hay API estable, ni soporte, ni garantía de que se despliegue fuera del contexto de Oak.** La licencia MIT permite copiar piezas, y eso es el uso correcto — ver cómo un equipo real resolvió en producción el RAG curricular, la persistencia de la conversación de planificación y la generación de recursos, en vez de rediseñarlo desde cero.
+
+## Capa de telemetría — agregada en el pase 6 del 2026-10-01
+
+Un LMS gestiona el aprendizaje y un SIS gestiona la institución; **un LRS guarda lo que efectivamente pasó**. Es la pieza que hace que el agente, el LMS y el SIS compartan una misma historia del alumno en vez de tres parciales. Estándar: **xAPI / IEEE 9274.1.1**. El inventario completo con licencias y commits está en `repos/foundations.md`; acá va sólo la decisión de plataforma.
+
+| Plataforma | Licencia | URL | Stack | Cuándo proponerla |
+|------------|----------|-----|-------|-------------------|
+| **SQL LRS (`lrsql`)** | **Apache-2.0** ✅ | https://github.com/yetanalytics/lrsql | Clojure sobre SQLite / PostgreSQL 14–18 / MariaDB / MySQL 8–9.5 | **El default.** Corre sobre la base de datos que el cliente ya opera, así que no agrega una pieza de infraestructura nueva al diagrama |
+| **Ralph** | **MIT** ✅ | https://github.com/openfun/ralph | Python/FastAPI + Elasticsearch, Docker/K8s | Cuando el cliente está sobre **Open edX**: convierte los tracking logs a xAPI de fábrica. Mismo origen (OpenFun, Francia) que Richie |
+| **Learning Locker** | GPL-3.0 ⚠️ | https://github.com/LearningLocker/learninglocker | Node.js + MongoDB | Rara vez por elección propia — pero es el más instalado de la categoría, así que es el que uno **se encuentra**. Copyleft: el servicio que lo modifique hereda la obligación |
+| **ADL_LRS** | Apache-2.0 ✅ | https://github.com/adlnet/ADL_LRS | Python/Django | Sólo para **validar conformidad** con el estándar. El repo declara ser proof-of-concept para pocos usuarios: no proponerlo como almacén de producción |
+
+**El par que hace la diferencia en una demo:** `lrsql` (o Ralph) + **`learnmcp-xapi`** (MIT, servidor MCP). Con esos dos, un agente de tutoría deja de tener memoria propia y empieza a escribir en el registro institucional — que es exactamente lo que pide un director académico cuando pregunta "¿y esto dónde queda guardado?". Wiring concreto en **P15**.
+
+**Nota sobre ERPNext, con una corrección de matiz.** Las búsquedas de "ERP educativo open source" devuelven consistentemente **ERPNext** (https://github.com/frappe/erpnext) junto a OpenEduCat, y el material comercial de Frappe lo presenta *for education*. Verificado de primera mano en el repo: **GPL-3.0, 39,7k ★**. Cae del mismo lado que OpenEduCat y RosarioSIS — copyleft, el agente va afuera.
+
+⚠️ **Lo que no se pudo confirmar, y hay que confirmarlo antes de proponerlo:** que el módulo de educación sea **parte del core de ERPNext**. En el repo lo único con ese nombre que aparece es *Frappe School*, que es una plataforma de cursos sobre el propio framework, no un módulo de gestión académica. La funcionalidad educativa de ERPNext fue históricamente una app aparte. **Registrarlo como candidato sólo cuando el cliente ya corre ERPNext** (evita meter un segundo ERP), y verificar primero en qué app vive el módulo. No desplaza a GegoK12 ni a OpenEduCat.
 
 ## Cómo elegir
 

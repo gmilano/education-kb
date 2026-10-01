@@ -1,7 +1,7 @@
 ---
 industry: education
 region: Global
-updated: 2026-09-30
+updated: 2026-10-01
 ---
 
 # 🗺️ Mapa de mercado — Education
@@ -148,6 +148,23 @@ Además del EU AI Act, **el Consejo de Europa tiene una línea de trabajo espec�
 
 **Por qué importa aunque no sea vinculante.** El AI Act dice *qué* está prohibido y qué es alto riesgo; el Consejo de Europa produce el **marco de derechos y el vocabulario de calidad educativa** que los ministerios copian en sus propios pliegos. Para una propuesta europea, citar el Compass junto al Annex III es lo que diferencia una respuesta de cumplimiento de una respuesta de política educativa — y el comprador público responde mucho mejor a la segunda. Nota: el Consejo de Europa tiene **46 estados miembros**, bastante más que la UE, así que el marco aplica también en jurisdicciones donde el AI Act no.
 
+### Agregado en el pase 6 del 2026-10-01 — el submercado de tutores tiene cifra propia, y crece más lento que el agregado
+
+Las cinco pasadas anteriores midieron "AI en educación" como un bloque. Este pase separa el submercado que realmente vende Globant en un engagement de tutoría:
+
+| Serie | 2026 | Horizonte | CAGR |
+|---|---|---|---|
+| **AI tutors** (submercado) | **USD 2,7 B** | **USD 17,7 B (2033)** | **30,5%** |
+| AI en educación (agregado) | USD 7,05 B (2025) | USD 32,27 B (2030) | ~35% |
+| **Europa** (AI en educación) | **USD 2,64 B** | **USD 8,0 B (2030)** | **31,9%** |
+| **Middle East & Africa** | **USD 0,56 B** | **USD 1,6 B (2030)** | **34,3%** |
+
+**Lo que hay que leer de esta tabla, y no es el número grande.** El submercado de **tutores crece más despacio (30,5%) que el agregado de AI en educación**. Es decir: el dinero no está creciendo más rápido donde está el producto más obvio. Las capas que crecen por encima del promedio son las administrativas, de analítica y de cumplimiento — que es exactamente donde esta KB viene encontrando los huecos de oferta open source (SIS, grading, telemetría, evaluación pedagógica).
+
+**Consecuencia para el posicionamiento:** entrar por el tutor es entrar por el segmento más disputado y de menor crecimiento relativo. Entrar por la capa de registro, medición y cumplimiento es entrar por donde el mercado crece más y la competencia open source es más débil.
+
+**Dos cifras de adopción institucional del mismo pase:** la implementación **institution-wide** de AI llegó al **66%** (ya no son pilotos), y **Gartner proyecta que 40% de las aplicaciones empresariales tendrán agentes embebidos para fin de 2026**. El comprador dejó de preguntar si conviene y pasó a preguntar cómo se gobierna.
+
 ## Players globales
 
 | Empresa | Tipo | Fortaleza | Debilidad |
@@ -229,6 +246,18 @@ Y el argumento de por qué encima hace falta medir: **el modo de falla dominante
 
 🚫 **No usar `llmgrader`** (NYU) aunque sea el más maduro de la categoría: su licencia es la "PySilicon Research License", no OSI. Sirve como referencia de diseño, no como componente.
 
+
+**Agregado en el pase 6 del 2026-10-01 — la ola regulatoria estatal ya tiene tamaño medible, y dos estados más entran al grupo exigible.**
+
+- **134 proyectos de ley sobre AI en educación introducidos en 31 estados** en la sesión legislativa 2026. Ya no es un puñado de estados pioneros: es más de la mitad del país legislando a la vez, sobre privacidad de datos, restricciones de uso en aula e integración curricular.
+- **Cuatro estados** —**Idaho, Maryland, Oklahoma y Virginia**— tienen leyes 2026 que exigen **las dos cosas**: guía estatal *y* adopción obligatoria de política a nivel distrito. El patrón **P7** de esta KB estaba armado sobre Ohio, Virginia y Oklahoma; **Idaho y Maryland se agregan al mismo expediente**.
+- El contenido regulatorio converge en dos exigencias que son técnicas, no declarativas: **supervisión humana** y **prohibición de que la AI tome decisiones de alto impacto sobre un alumno** (Oklahoma y Maryland explícitamente). Eso es un requisito de arquitectura, y es el que hace vendible el patrón **P14** (calificar sin que califique el modelo).
+- **Nueva York** publicó guía preliminar en marzo de 2026 con un **Traffic Light Framework**, y el playbook completo estaba previsto para junio de 2026. NYC Public Schools es el distrito más grande del país: su marco se copia.
+- **Currículo:** Georgia y Mississippi exigen créditos de computación que incluyen AI hacia fines de esta década.
+- **Evidencia de despliegue real, no de piloto de laboratorio:** el programa de tutoría K-12 de **Maryland** usa **Khanmigo** y alcanzó **~4.350 alumnos en dos condados**. Es una cifra útil para calibrar expectativas: el despliegue estatal de tutoría con AI en EE. UU. todavía se mide en miles, no en millones.
+
+**Cómo se vende esto.** El comprador de North America no compra "un tutor": compra **cumplimiento de un mandato que ya venció o está por vencer**, con supervisión humana demostrable. La capa de telemetría del pase 6 (`lrsql` + `learnmcp-xapi`) es el artefacto que produce la evidencia de esa supervisión — cada decisión del agente queda como statement xAPI auditable. Ver **P7**, **P14** y **P15**.
+
 ### EMEA
 
 **Contexto.** Regulación primero, adopción después — lo inverso a Norteamérica. La fecha de aplicación de sistemas de alto riesgo del Annex III del EU AI Act (que **incluye AI en evaluación**) se corrió de 2026-08-02 a **2027-12-02** por el acuerdo del Digital Omnibus on AI. Las escuelas quedan responsables de auditar el uso de AI. Casos que caen en alto riesgo: **corrección automática de exámenes, aprendizaje adaptativo, proctoring y predicción de deserción** — o sea, casi todo lo interesante. La Comisión Europea con la OCDE y aval del G7 publicó un borrador de AI Literacy Framework para primaria y secundaria.
@@ -282,6 +311,19 @@ Dos ángulos nuevos para una propuesta europea:
 **Y el argumento técnico que cierra:** el hallazgo de anti-correlación de ELBench (los modelos más seguros enseñan peor) es la mejor respuesta a "¿por qué no usamos directamente el modelo más grande?". Si se sostiene, la conformidad **exige** componer modelo docente + gate de seguridad medido aparte. Eso es arquitectura facturable, y está justificada por evidencia y no por preferencia. Ver **P11**.
 
 **África dentro de EMEA:** el comprador es el ministerio, el diferencial es multilingüe + offline, y el competidor es un MoU con big tech ya firmado (Sudáfrica–Microsoft, 2025-10-07). El espacio está en lo que el MoU no cubre: currículo local, lenguas nacionales y operación sin conectividad — `Kolibri` (MIT) y `Project NOMAD` (Apache-2.0) son la base.
+
+
+**Agregado en el pase 6 del 2026-10-01 — Europa y MEA se separan en dos mercados con dinámicas distintas, y el Golfo compra distinto que Europa.**
+
+- **Europa: USD 2,64 B (2026) → USD 8,0 B (2030), CAGR 31,9%.** Líderes en integración de AI en K-12: **Finlandia, Estonia y Países Bajos**.
+- **Middle East & Africa: USD 0,56 B (2026) → USD 1,6 B (2030), CAGR 34,3%.** Mercado cinco veces más chico que el europeo pero creciendo más rápido.
+- **La fecha que ordena el calendario europeo:** el EU AI Act entró en vigor en agosto de 2024 y su **fecha general de aplicación es el 2 de agosto de 2026** — ya pasada al momento de este pase. Combinado con lo que el pase 4 registró sobre el Digital Omnibus (se pospuso la mitad cara, no el conjunto), el mensaje comercial es: **el reloj no está por arrancar, arrancó**.
+- **Golfo — el patrón de compra que Europa no tiene.** Los **Emiratos Árabes Unidos** son el primer país del mundo con **currículo nacional obligatorio de AI para K-12** (desde mayo de 2025): cerca de **un millón de chicos** en escuelas públicas recorriendo **siete ejes curriculares**. **Arabia Saudita** es primera del mundo en adopción de AI en sector público, con alrededor de dos tercios de los empleados de gobierno usando herramientas de AI a diario.
+- **Adopción institucional:** ~**70% de las instituciones de Europa y North America** tienen o están desarrollando guía sobre AI. Es el contraste directo con LATAM (45%) que aparece más abajo.
+
+**La lectura estratégica, que refuerza el gap 3.** Europa compra **conformidad** — el artefacto que se vende es el expediente auditable, y la oferta open source local (MathTutorBench, OpenDidactia, L2-Bench, Ralph) es justamente de medición, currículo y telemetría, no de tutores. El Golfo compra **programa nacional**: contrato grande, plazo político, despliegue masivo, y la decisión no la toma una institución sino un ministerio. **Son dos motions de venta distintas dentro de la misma región, y conviene no mezclarlas en una sola propuesta EMEA.**
+
+⚠️ **Y un dato de oferta del pase 6 que vale para EMEA:** `Ralph` (MIT, OpenFun, Francia) y `learnmcp-xapi` (MIT, IES Rafael Alberti, España) son europeos, permisivos, e integran con Open edX. Junto con Richie (MIT, OpenFun) permiten armar **una cadena vertical de un solo origen regional** — argumento de soberanía tecnológica que en licitaciones europeas puntúa.
 
 ### APAC
 
@@ -345,6 +387,18 @@ Dos consecuencias opuestas, y las dos son oportunidad:
 2. **Para un cliente con restricción de procedencia** (y el pase 4 ya marcó que hay que declararla temprano, no descubrirla en due diligence): el pase 5 da por primera vez una ruta alternativa **completa**, aunque menos potente — `pyBKT` (UC Berkeley) en modelado, `Aila` (Reino Unido) como referencia teacher-facing, `MathTutorBench` (ETH) y `SafeTutors` en evaluación, `OpenOLAT`/`Kolibri`/`Oppia` en plataforma. **Que exista la ruta no la vuelve gratis:** hay que decir que se paga en capacidad de modelo y en madurez de agente.
 
 ⚠️ `OmniEdu` **no se puede desplegar** en ningún caso: sin licencia declarada y con herencia de licencia de las bases Qwen. Es evidencia y receta, no componente. Y el dato regulatorio del pase 4 sigue mandando: con la soberanía como eje de 2026 en APAC, un modelo chico entrenable localmente es una propuesta mejor que una API grande, independientemente de la procedencia del repo.
+
+
+**Agregado en el pase 6 del 2026-10-01 — aparece un cuarto reloj regulatorio, y nombra a la educación de forma explícita.**
+
+- **Vietnam** es el hallazgo del pase: su ley de AI **identifica sistemas de alto riesgo en seis sectores, y la educación es uno**, cubriendo específicamente **evaluación automatizada y monitoreo de comportamiento**. Es decir: las dos funciones que un tutor agéntico ejecuta por defecto quedan clasificadas como alto riesgo. Hasta el pase 5 la KB tenía tres relojes (EU AI Act, Corea, y el mandato de política distrital de EE. UU.); **este es el cuarto, y está fuera del radar de la mayoría de los competidores**.
+- **Corea del Sur:** el **AI Basic Act rige desde el 2026-01-22** — segundo país del mundo después de la UE con legislación integral, consolidando 19 proyectos en un marco único. Ya registrado en el pase 3, confirmado acá.
+- **Japón:** el **AI Promotion Act** (vigente desde junio de 2025) es **explícitamente no vinculante** — coordinación estratégica, transparencia y fomento de I+D, sin obligaciones exigibles. Japón se declara "el país más AI-friendly del mundo". En paralelo avanza la transición a **libros de texto digitales oficiales**.
+- **China:** registro de algoritmos ante la CAC, **etiquetado obligatorio de todo contenido generado por AI**, autoevaluaciones de seguridad, y desde enero de 2026 multas severas inmediatas por filtración de datos.
+- **Singapur:** filosofía *test-and-learn* — construir infraestructura, dar herramientas, dejar que el mercado demuestre gobernanza, e intervenir con requisitos obligatorios sólo si hace falta.
+- **Corea del Sur** empuja herramientas de AI para **aprendizaje de idiomas**, lo que conecta directo con L2-Bench (ver `agents/top.md`).
+
+**La consecuencia operativa, que es la de siempre en APAC pero ahora con un caso más:** no existe "una propuesta APAC". Entre Vietnam (educación = alto riesgo, exigible), Corea (marco integral vigente), Japón (voluntario) y Singapur (sandbox de facto) hay **cuatro regímenes incompatibles**. El patrón **P5** (orquestación multi-jurisdicción con nodos de política) es el que absorbe esa diferencia, y ahora hay que agregarle el nodo Vietnam.
 
 ### LATAM
 
@@ -430,6 +484,18 @@ La oferta concreta, con las piezas del pase 5: `EduBench` (MIT — transversal a
 **El otro dato que orienta a quién golpear primero:** adopción por tipo de institución — privadas sin fines de lucro **84%**, públicas **68%**, privadas con fines de lucro **52%**. Las privadas sin fines de lucro son el segmento más maduro y el de ciclo de compra más corto; el sector público es el volumen y el ciclo largo.
 
 **Sin cambios:** se volvió a buscar agente educativo de origen LATAM en español y portugués y no hay nada por encima de TutorIA (MIT, 0 ★, UTP Pereira). El gap 2 se mantiene.
+
+
+**Agregado en el pase 6 del 2026-10-01 — la región gana un ancla institucional regional y dos precedentes regulatorios, y la tijera del pase 5 se confirma con otra fuente.**
+
+- 🆕 **UNESCO lanzó el *Observatory on Artificial Intelligence in Education for Latin America and the Caribbean*** (14 de abril). Es la primera plataforma regional pensada para acompañar a los Estados en integrar AI en sus sistemas educativos. **Para Globant esto es un canal, no una noticia:** un ministerio que va a comprar AI educativa en la región ahora tiene un foro donde mira referencias y compara marcos. Estar presente ahí vale más que un caso aislado.
+- 🆕 **Uruguay es el primer país de América Latina en firmar el Convenio Marco del Consejo de Europa sobre IA y derechos humanos, democracia y Estado de derecho.** Precedente importante: significa que un país de la región adoptó voluntariamente un estándar europeo, lo que **abre la puerta a reutilizar el expediente de cumplimiento del EU AI Act (patrón P4) en propuestas del Cono Sur** en vez de construir uno desde cero.
+- 🆕 **Brasil: la ANPD abrió un *sandbox* regulatorio piloto de AI y protección de datos, vigente hasta diciembre de 2026.** Es una ventana concreta y con fecha para pilotear un producto educativo con AI bajo supervisión del regulador — argumento fuerte para un cliente brasileño que teme el riesgo regulatorio.
+- **El estado de la regulación regional, a distintas velocidades:** proyecto de ley de AI en Brasil, marco de Chile, CONPES de AI en Colombia, reglas sectoriales en México. **Chile, Brasil y Uruguay** son los pioneros con mejor disponibilidad de datos, gobernanza e infraestructura; **Brasil lidera en madurez y experimentación**, México sigue en comportamiento de consumo y comercio.
+- **La tijera del pase 5, confirmada con otra fuente independiente:** en **Chile y Brasil más del 50% de los docentes ya usa herramientas de AI**, mientras **menos del 10% de las instituciones de la región tiene lineamientos formales y capacidades suficientes** para integrarlas con criterio. El pase 5 lo había medido como 73,5% enseñando con AI contra 9% capaz de medirla; dos encuestas distintas dan la misma forma.
+- **Y el contraste regional que mejor resume la oportunidad:** ~**70%** de las instituciones de Europa y North America tienen guía sobre AI, contra ~**45% en América Latina y el Caribe**. Esa brecha de 25 puntos **no es un problema de adopción** —la región usa AI tanto o más— **es un mercado de gobernanza sin atender**.
+
+**La propuesta LATAM que se desprende, y no es un tutor.** La región tiene docentes usando AI sin marco, instituciones sin lineamientos, un observatorio regional recién creado que demanda referencias, un sandbox brasileño con fecha, y un país (Uruguay) que ya se ató a un estándar europeo. **El producto es el marco de gobernanza con evidencia auditable** —política + telemetría + medición— y el tutor es lo que se despliega adentro de él, no al revés. Ver **P13** y **P15**.
 
 ## Posicionamiento Globant
 
