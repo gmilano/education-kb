@@ -8,6 +8,17 @@ updated: 2026-10-02
 
 > Recetas concretas: repos nombrados, licencias verificadas, wiring explícito y estimación.
 > Todos los repos citados fueron verificados vía WebFetch el 2026-09-30; los del pase 11, el 2026-10-01 (ver `agents/top.md`).
+> **Pase 36 del 2026-10-02:** +2 patrones, y **los dos cierran una acción que el pase 35 dejó escrita.** **P76** — *el
+> manifiesto MCP de QTI 3, escrito en vez de estimado*: las **20 tools** de `qti3-cli@0.13.1` con su `inputSchema` y su
+> `readOnlyHint`, medidas en el `.tgz` y no en el README. 🔴 **Y la medición corrige tres cosas que esta KB traía: no son
+> 14 comandos sino 17, no son 14 tools sino 20 —`certification` tiene CUATRO subcomandos— y el `USAGE` del propio CLI
+> documenta sólo 2 de esos 4**, así que un envoltorio generado desde el texto de ayuda nace con **30 % de la superficie
+> afuera**. **Hay exactamente 2 rutas de escritura en el paquete entero**, así que **18 de 20 tools son de lectura**, y el
+> contrato de estado del modo adaptativo resulta **más estrecho de lo anotado**: sólo admite `outcomes` y
+> `templateValues`, **cualquier otra clave es error duro**. **P77** — *datos educativos públicos de Brasil*: 🔴 **la
+> respuesta a la acción 3 es que INEP NO publica API** —Censo Escolar es ZIP/CSV de **10-20 GB descomprimidos**— y la
+> única API de terceros es **GPL-2.0, sólo IDEB y con el dominio sin resolver**. **Por eso el patrón se cotiza en 8-12
+> semanas de pipeline y no en 2-3 de fachada**, que es la diferencia entre una propuesta honesta y una sorpresa.
 > **Pase 34 del 2026-10-02:** +2 patrones, y **P69 pasa de abierto a decidido.** **P70** — *credenciales
 > verificables con el expediente cerrado por el propio consorcio*: la capa que esta base declaraba vacía existe
 > (`Schroedinger-Hat/certo`, ⚠️ **AGPL-3.0**, **OB 3.0 + W3C VC + DIDs**) y 🟢 **el validador oficial de 1EdTech es
@@ -4127,3 +4138,92 @@ semanas**. **(b)** **Ralph está vivo en `main` y parado en PyPI desde 2024-07-1
 no se versiona en su árbol), así que **se pinnea por commit, no por versión.**
 
 ---
+
+## P76 — 🟢 El manifiesto MCP de QTI 3, ESCRITO: las 20 tools de `qti3-cli` con su corte de lectura/escritura (agregado en el pase 36 del 2026-10-02; **contribución *upstream*, transversal**)
+
+> **Acción 2 del pase 35, ejecutada. Esto cierra el gap 70 y convierte P69 de «se puede» en «acá está la especificación».**
+> Todo lo que sigue se midió **leyendo el `.tgz` de `@longsightgroup/qti3-cli@0.13.1` bajado de npm** —`src/index.ts`,
+> `src/commands/*.ts`— no el README.
+
+### 🔴 Primero, tres correcciones al conteo que esta KB traía, y las tres cambian el manifiesto
+
+| Lo que la KB decía | Medido en el artefacto | Consecuencia |
+|---|---|---|
+| «**14 comandos**» | 🔴 **17 comandos de primer nivel** (`switch` de `executeCli`) | Un envoltorio escrito contra «14» **deja 3 comandos afuera** |
+| «14 comandos» ⇒ 14 tools | 🔴 **20 tools invocables**: 16 comandos directos + **`certification` tiene 4 subcomandos** | El manifiesto es de **20 entradas**, no 14 |
+| El `USAGE` del CLI es la superficie | 🔴 **El `USAGE` documenta 2 de los 4 subcomandos de `certification`** | **`verify-validator` y `check-import-report` no figuran en el `USAGE`.** Un envoltorio generado desde el `USAGE` —que es lo natural— **nace incompleto** |
+
+🔵 **Y la lección general, que vale para cualquier CLI que esta KB envuelva: la superficie real está en el *dispatch*, no en el texto de ayuda.** Acá la diferencia es de **6 tools sobre 20 (30 %)**.
+
+### El corte lectura/escritura, medido por `grep` de efectos de disco en todo `src/`
+
+🟢 **Hay exactamente DOS rutas de escritura en el paquete entero** — `src/commands/items.ts:153,158` (`mkdir` + `writeFile`) y `src/commands/prepare-delivery.ts:56` (`writeFile`). **Todo lo demás sólo lee.** Así que **18 de 20 tools llevan `readOnlyHint: true`**, y es un dato verificado por ausencia de `writeFile`/`mkdir`/`unlink`/`rm` en los otros archivos, no una suposición por el nombre del comando.
+
+| # | Tool MCP | Comando | `inputSchema` (requeridos → opcionales) | `readOnlyHint` |
+|---|---|---|---|---|
+| 1 | `qti3_parse` | `parse <item.xml>` | `itemFile` | ✅ true |
+| 2 | `qti3_parse_dir` | `parse-dir <dir>` | `directory` | ✅ true |
+| 3 | `qti3_validate` | `validate <item.xml>` | `itemFile` | ✅ true |
+| 4 | `qti3_validate_dir` | `validate-dir <dir>` | `directory` | ✅ true |
+| 5 | `qti3_score` | `score <item.xml> --responses <r.json>` | `itemFile`, `responsesFile` | ✅ true |
+| 6 | `qti3_score_correct` | `score-correct <item.xml>` | `itemFile` | ✅ true |
+| 7 | `qti3_score_correct_dir` | `score-correct-dir <dir>` | `directory` | ✅ true |
+| 8 | `qti3_prepare_delivery` | `prepare-delivery …` | `itemFile` → `mode` (**enum** `static`\|`server-materialized-adaptive`), `stateFile`, `outputFile` | 🔴 **false si se pasa `outputFile`; true si no** — ver abajo |
+| 9 | `qti3_inspect_package` | `inspect-package <pkg.zip\|dir>` | `packagePath` | ✅ true |
+| 10 | `qti3_validate_package` | `validate-package <pkg.zip\|dir>` | `packagePath` | ✅ true |
+| 11 | `qti3_basic_item_player_report` | `basic-item-player-report [pkg …]` | — (**variádico**, 0..n rutas) | ✅ true |
+| 12 | `qti3_write_fixtures` | `write-fixtures <dir>` | `directory` | 🔴 **false — `mkdir` recursivo + `writeFile`** |
+| 13 | `qti3_support_matrix` | `support-matrix` | — (sin argumentos) | ✅ true |
+| 14 | `qti3_a11y_proof` | `a11y-proof` | — (sin argumentos) | ✅ true |
+| 15 | `qti3_assert_support` | `assert-support` | — (sin argumentos) | ✅ true |
+| 16 | `qti3_run_fixtures` | `run-fixtures` | — (sin argumentos) | ✅ true |
+| 17 | `qti3_cert_import_basic_items` | `certification import-basic-items` | `qtiRoot` → `validatorReport`, `validatorPackage`, `trustedReportSha256`, `requireValidatorEvidence` (bool) | ✅ true |
+| 18 | `qti3_cert_import_basic_tests` | `certification import-basic-tests` | `qtiRoot` | ✅ true |
+| 19 | `qti3_cert_verify_validator` | `certification verify-validator` | `validatorReport`, `validatorPackage`, `trustedReportSha256` (**los 3 obligatorios**) | ✅ true |
+| 20 | `qti3_cert_check_import_report` | `certification check-import-report` | `qtiRoot`, `savedReport` | ✅ true |
+
+**Las 20 devuelven JSON** (`jsonResult`), así que **el `content` del resultado MCP es el *stdout* sin transformar** y el `isError` se deriva del código de salida. **Cero dependencias de terceros en la cadena** — las 4 dependencias de `qti3-cli@0.13.1` son `@longsightgroup/qti3-{a11y,core,fixtures,conformance}`, **todas de la misma organización y pinneadas a la misma versión exacta** — así que el envoltorio agrega **exactamente una** (el SDK de MCP).
+
+### 🔴 El contrato de estado de `prepare-delivery`, que es lo que hay que documentar o el agente falla
+
+**El pase 35 anotó que el modo adaptativo «exige un objeto de estado con `outcomes`». Medido en `prepareAdaptiveDelivery`, el contrato es más estrecho y rechaza más cosas:**
+
+- El `--state` es un **objeto JSON** que **puede contener SÓLO dos claves: `outcomes` y `templateValues`.** 🔴 **Cualquier otra clave es error duro** — *«may contain only outcomes and templateValues»*. **No es un objeto extensible**, y ahí es donde un agente que agrega metadatos (`sessionId`, `candidate`) se estrella.
+- **`outcomes` es obligatorio** y debe ser un objeto de **QTI values** validados uno por uno (`isQtiValue`). `templateValues` es **opcional**, misma validación.
+- **Arrays y `null` se rechazan** (`typeof !== object || null || Array.isArray`).
+- 🔵 **Y la exclusión mutua que no está en el `USAGE`: `--mode static` junto con `--state` es ERROR de uso.** El estado pertenece sólo al modo adaptativo.
+- ⚠️ **La asimetría de respuesta que el envoltorio tiene que reflejar: sin `--out` el resultado JSON INCLUYE `candidateSafeXml`; con `--out` lo OMITE y agrega `outputFile`.** **Son dos formas de respuesta para una sola tool**, y es la razón por la que `readOnlyHint` acá es condicional y no fijo. **La recomendación para el manifiesto: partirla en dos tools** —`qti3_prepare_delivery` (sin `--out`, `readOnlyHint: true`, devuelve el XML en la respuesta) y `qti3_prepare_delivery_to_file` (con `--out`, `readOnlyHint: false`)— porque **una tool cuyo `readOnlyHint` depende de un argumento no se puede gobernar con una política de permisos**, que es justo lo que un cliente de educación va a pedir.
+
+### 🟢 El hallazgo lateral que vale por sí mismo: `certification` trae una primitiva de integridad de cadena de suministro
+
+**`verify-validator` toma `--trusted-report-sha256 <digest>` y verifica el reporte del validador oficial del consorcio contra un digest de confianza**, y `import-basic-items` acepta `--require-validator-evidence` para **exigir** esa evidencia. 🔵 **Es la CUARTA variante de primitiva de seguridad que esta KB encuentra reinventada** (tras el *confirm token* de `openedx-mcp`, las anotaciones + `dryRun` de `coursecode` y el techo de caudal por variable de entorno), **y es de una clase distinta a las tres: las otras tres frenan una ACCIÓN del agente; ésta ancla la CONFIANZA EN UN ARTEFACTO EXTERNO.** Para un expediente de conformidad QTI eso es exactamente lo que un auditor pide: *«¿cómo sé que este reporte de validador es el que publicó el consorcio?»* — y la respuesta es un flag.
+
+### Wiring y estimación
+
+1. **Envoltorio MCP** sobre las 20 entradas de la tabla (21 si se parte `prepare-delivery`), `stdio`, Node 20+. El `dispatch` es `spawn('qti3', [...])` + `JSON.parse` del *stdout*: **las 20 ya emiten JSON**, así que no hay capa de *parsing* que escribir.
+2. **Política de permisos**: las 18 de lectura se auto-aprueban; `write-fixtures` y `prepare-delivery_to_file` **requieren confirmación** — y conviene **acotarlas a un directorio de salida configurado**, porque `write-fixtures` hace `mkdir` recursivo sobre la ruta que reciba.
+3. **Composición con lo que esta KB ya tiene:** `qti3_validate_package` + `qti3_a11y_proof` producen la **matriz de accesibilidad con guiones VoiceOver/NVDA/JAWS** (el `a11y-proof` devuelve `target` + `interactions` + `manualAssistiveTechnologyScripts`) → **es el insumo del expediente de accesibilidad de P17**; y `coursecode_build` (`enum: cmi5|scorm2004|scorm1.2|lti`) toma la salida para empaquetar al LMS → **P66**.
+4. **Estimación: 1-2 semanas** para el envoltorio y su suite de contrato. ⚠️ **El riesgo no es el código, es la versión:** `qti3-cli` publicó **41 releases desde el 2026-05-21** y la última es del **2026-10-01**, así que el manifiesto se pinnea a `0.13.1` y se re-mide el *dispatch* en cada *minor* — **el `switch` es la fuente de verdad, y ya cambió de tamaño respecto de lo que esta KB tenía anotado.**
+
+## P77 — 🔴 Datos educativos públicos de Brasil: la oportunidad es REAL y es un pipeline de ingesta, no un servidor fachada (agregado en el pase 36 del 2026-10-02; **LATAM**)
+
+> **Acción 3 del pase 35, ejecutada — y el resultado cambia la cotización del patrón que el gap 69 insinuaba.**
+> **La pregunta era: ¿INEP expone API o sólo descargas?** Respuesta medida: **sólo descargas.**
+
+### Lo que se midió, y con qué control
+
+- 🔴 **`dados.gov.br`, `servicodados.ibge.gov.br`, `api.dados.gov.br` y `www.gov.br` responden 403 a CONNECT** en el registro del proxy, y **`WebFetch` sobre `dados.gov.br` devuelve `EGRESS_BLOCKED`** — **dos instrumentos independientes, mismo resultado.** ✅ **Control negativo corrido, porque el pase 35 pidió declarar el bloqueo en vez de dejarlo implícito:** `registry.npmjs.org` devuelve **200** desde el mismo proceso, así que **la red funciona y el bloqueo es de dominio.** 🔵 **Es la misma clase que el gap 65 (dominio legal europeo), ahora confirmada en el dominio `.gov.br`: las fuentes gubernamentales son inalcanzables por clase desde este entorno.**
+- 🟢 **Pero la pregunta se respondió por otro canal, y la respuesta es inequívoca:** la distribución oficial del **Censo Escolar** es **descarga de archivo** — **CSV delimitado por `;` dentro de ZIP, ~2-4 GB comprimidos y 10-20 GB descomprimidos por año**, organizado en **cuatro dimensiones (Escolas, Turmas, Matrículas, Docentes)**, más formato **ASCII con *input files* de SAS y SPSS**. **No hay endpoint REST oficial.**
+- 🔴 **La única API de INEP que existe es de terceros, y está muerta:** `inepdadosabertos/api` (**GPL-2.0**, 45 ★, 29 commits) con base `http://api.dadosabertosinep.org/v1`, **cubre sólo IDEB** (censo, SAEB, ENEM figuran como *roadmap* no implementado). ⚠️ **Y su dominio ya no resuelve:** `api.dadosabertosinep.org` → **sin resolución DNS**, *control* corrido en la misma corrida (`github.com` y `registry.npmjs.org` **resuelven**; `dados.gov.br` **resuelve** —su 403 es política, no DNS—; un dominio inventado **no resuelve**, igual que éste). **Está caída, no bloqueada.** 🔴 **Y además es GPL-2.0, así que ni viva serviría como base permisiva.**
+
+### 🔵 Por qué `ibge-br-mcp` pudo existir y un `inep-mcp` no es lo mismo
+
+**El contraste es el hallazgo:** el **IBGE publica API REST** (`servicodados.ibge.gov.br`), y por eso existe `ibge-br-mcp` (**MIT, 24 versiones**) como **servidor fachada**: el MCP traduce *tool call* → HTTP → JSON, sin almacenar nada. **INEP no publica API**, así que **un `inep-mcp` tiene que materializar el dato primero**. ⚠️ **Eso no es una diferencia de esfuerzo, es una diferencia de ARQUITECTURA Y DE RESPONSABILIDAD:** quien lo construye pasa a **alojar y versionar 10-20 GB por año**, con todo lo que eso arrastra (actualización anual, esquema que cambia entre años, y la pregunta de privacidad sobre microdato de matrícula).
+
+### El patrón, y es honesto sobre el plazo
+
+1. **Ingesta** (lo que no se puede evitar): descargar los ZIP anuales del Censo Escolar, normalizar las **cuatro dimensiones**, resolver el **cambio de esquema entre años** —el obstáculo real de los microdatos de INEP— y cargar a un almacén columnar (**DuckDB** o **Postgres**; DuckDB es lo correcto si el entregable es analítico y de una sola máquina).
+2. **Capa semántica**: vistas por escola / turma / matrícula / docente, con el **código INEP de escuela** como clave de *join* — que es la clave que ya aparece en portales estaduales (p. ej. el de São Paulo publica *datasets* etiquetados por *Código INEP Escola*, **CC-BY-4.0**), así que **el enriquecimiento estadual es incremental y no requiere renegociar la ingesta**.
+3. **Servidor MCP** sobre la capa semántica, **no sobre el CSV**: tools de lectura (`escolas_buscar`, `matriculas_agregar`, `docentes_por_escola`), **todas `readOnlyHint: true`**, con el rail de confirmación de **P61** innecesario porque **no hay escritura**.
+4. **Estimación honesta: 8-12 semanas**, de las cuales **la ingesta y el esquema multi-año son 6-8** — contra las **2-3 semanas** que costaría un fachada sobre una API que existiera. 🔵 **Decir esto en el *discovery* es exactamente la «línea de presupuesto escondida» que el pase 35 advirtió, y ahora tiene número.**
+5. ⚠️ **Y el pedido que hay que hacer afuera, porque este entorno no puede verificarlo:** confirmar si **`dados.gov.br` expone su API CKAN** (`/api/3/action/package_search`), que es lo habitual en ese portal. **Si la expone, el paso 1 se acorta para los *datasets* que estén publicados ahí** — pero **los microdatos del Censo Escolar se distribuyen igual como archivo**, así que el plazo del pipeline **no cambia**, sólo el descubrimiento.

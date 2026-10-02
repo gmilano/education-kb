@@ -9,6 +9,62 @@ updated: 2026-10-02
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 > No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
 
+## 2026-10-02 (pase 36) — el pase que **mide las 49 filas en vez de seis**, y encuentra que la tabla tenía **una fila repetida** que ningún conteo anterior podía ver: el agente con **la cadencia más alta del archivo tiene 60 estrellas y 240 releases**, y dos piezas que esta KB cita como vivas no publican desde **2022** y **2025**
+
+**Acción 1 del pase 35, ejecutada sobre la tabla completa.** Para cada repo se leyó el manifiesto publicado desde
+`raw.githubusercontent.com`, se extrajo el nombre de paquete **declarado por el propio repo** y se consultó el registro,
+**verificando el *backlink* registro → repo en cada coincidencia**. Detalle completo en `agents/top.md`, sección
+*Capa de despliegue medida*.
+
+### 🔴 Lo primero, porque es un defecto de esta KB y no del mercado: `Claw-ED` estaba DOS VECES
+
+`SirhanMacx/Claw-ED` figuraba con **59 ★** y con **60 ★** — mismo repo, dos filas. El pase 35 lo contó como alta cuando
+ya había entrado *«en la tercera pasada del 2026-09-30»*, **frase escrita en el historial del mismo archivo**. El conteo
+programático del pase 30 informó «52 filas» y **tenía razón**: había 52 filas. Lo que no había era 52 repos.
+🔵 **Un conteo de FILAS no puede detectar una fila repetida.** Fila eliminada; el número pasa a **51 filas = 49 repos de
+GitHub distintos + 2 entradas de PyPI**, y de acá en adelante el conteo que vale es el de **slugs distintos**
+(**gap 71**, tendencia **116**).
+
+### 🟢 Pocas estrellas, tracción real — las filas que se suben
+
+| Repo | ★ | Paquete | Releases | Última | Lectura |
+|---|---|---|---|---|---|
+| `SirhanMacx/Claw-ED` | **60** | `clawed` (PyPI) | 🟢 **240** | 2026-09-19 | **La cadencia más alta de la tabla, con uno de los conteos de estrellas más bajos de su vecindario.** *Backlink* verificado |
+| `bruchris/canvas-lms-mcp` | **8** | `canvas-lms-mcp` (npm) | **62** | 2026-09-20 | ✅ **Confirma la promoción del pase 35 por un segundo instrumento.** `v1.30.0`, **MIT leído en el registro**, 62 releases en 5 meses |
+| `bunizao/moodle-cli` | — | `moodle-cli` (npm) | **20** | 2026-09-27 | `v0.9.6`, MIT en registro, 20 releases en menos de 3 meses |
+| `Miaotofu01/Study-Mate` | 482 | `@yunmiao/studymate` (npm) | 8 | 2026-09-30 | **8 releases en 8 días** — real pero **nuevo**, no maduro |
+
+### 🔴 Estrellas sin tracción — las filas que se marcan
+
+| Repo | ★ | Paquete | Última publicación | Lectura |
+|---|---|---|---|---|
+| `pykt-team/pykt-toolkit` | **441** | `pykt-toolkit` (PyPI) | 🔴 **2022-10-16** | **Cuatro años.** *Backlink* verificado: es abandono, no colisión. Entra en las propuestas de *knowledge tracing* de esta KB |
+| `satvik314/educhain` | 389 | `educhain` (PyPI) | ⚠️ **2025-12-03** | **~10 meses.** Esta base lo cita como pieza viva **desde el ciclo 2** |
+| `MarcosNahuel/moodle-mcp` | 1 | `@nahuelalbornoz/moodle-mcp` | ⚠️ **2026-04-23** | **8 releases en 4 días y nada en 5 meses:** el patrón *ráfaga y silencio* |
+| `moon0825/jbnu-lms-student` | — | `jbnu-lms-mcp` (npm) | 2026-09-08 | **2 releases el mismo día.** Alta del pase 35, **no maduro** |
+
+### 🔴 Dos colisiones nuevas, y de clase más peligrosa que las nueve anteriores
+
+Las nueve colisiones previas eran del **buscador**. **Estas dos no:** el nombre vino **del manifiesto del propio repo**,
+la fuente más autoritativa posible, y apuntaba a otro software.
+
+- **Colisión 10 — `tero`:** `marcorojasb/tero` declara `tero`; el `tero` de PyPI es *«Configures development machines to cloud resources»* (`djaodjin/drop`).
+- **Colisión 11 — `mcp-server`:** `paulocymbaum/ed-tech-system-mcp` declara el nombre genérico **`mcp-server`**, tomado por un tercero sin `project_urls`.
+- ⚠️ **Confirmación débil declarada:** `avps82/mentar` → `mentar` **sin `project_urls`**; se acepta por coincidencia de descripción y **se marca**.
+
+🔵 **La regla nueva: la genericidad del nombre declarado es un predictor de colisión evaluable sin red** (tendencia **119**).
+
+### Lo que NO se encontró, declarado como tal
+
+**Cero altas de agentes este pase, y es el barrido completo el que lo dice:** las cuatro búsquedas globales con el año
+**calculado** (`2026`) devolvieron, por cuarta vez consecutiva, **la capa genérica de la industria** —OpenClaw (~388 k ★),
+OpenHands, CrewAI, LangChain, AutoGen— más **material didáctico *sobre* AI** (`500-AI-Agents-Projects`,
+`awesome-ai-agents-2026`, cursos de DeepLearning.AI / HuggingFace / Microsoft). ✅ **Es la confirmación directa de la causa
+que el pase 23 midió:** en GitHub el término `education` está capturado por el material que **enseña AI**, no por software
+que **educa**. Los dos candidatos nuevos que aparecieron por nombre —`HugeCatLab/ChatTutor` y `TovTechOrg/Tov-learn`— **el
+primero ya está en esta tabla** (AGPL-3.0, 1,3 k ★) y el segundo es **una skill de Claude Code**, o sea la clase que la
+tendencia **120** describe: **no se distribuye como paquete y medir su adopción por registro es la pregunta equivocada**.
+
 ## 2026-10-02 (pase 35) — el pase que **mide la adopción con el instrumento que treinta y cuatro pases no usaron**: las descargas del registro. Y el instrumento da vuelta tres filas de esta KB, entre ellas **cuál es el conector de LMS más grande que tiene** (tiene 8 ★) y **si la puerta oficial de Open edX está viva** (no publicó nada en 70 días)
 
 ⚠️ **Nota de concurrencia, primero, porque explica la numeración.** Esta corrida arrancó cuando el último pase

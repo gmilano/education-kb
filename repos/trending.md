@@ -8,6 +8,43 @@ updated: 2026-10-02
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 
+## 2026-10-02 (pase 36) — el registro se mide **en los tres canales** y resulta que sólo uno da descargas: **el *span* de releases reemplaza a las descargas**, y con él la capa PHP de evaluación y telemetría queda **fechada pieza por pieza** — la más descargada de todas no publica desde **2022**
+
+**Hallazgo de método primero, porque cambia cómo se leen las cifras del pase 35.** Las descargas por mes —el instrumento
+que el pase 35 introdujo— **sólo están disponibles en Packagist** en este entorno: `api.npmjs.org` y `pypistats.org`
+responden **403 a CONNECT**, con control positivo en la misma corrida (`registry.npmjs.org` → **200**). **Las cuatro
+cifras de descargas del pase 35 eran todas de paquetes PHP**, así que el instrumento nunca se había ejercitado fuera de
+Packagist. 🟢 **El sustituto está en los tres canales y distingue lo que las descargas no: el *span* de releases**
+(tendencia **115**).
+
+### La capa de evaluación y telemetría en PHP, medida y fechada
+
+| Paquete (Packagist) | Desc./mes | Total | Versiones | Último release | Licencia |
+|---|---|---|---|---|---|
+| `rusticisoftware/tincan` (TinCanPHP) | 🟢 **6.178** | 863.777 | 21 | 🔴 **2022-11-02** | Apache-2.0 ✅ |
+| `qtism/qtism` | 3.104 | 218.212 | **315** | 2026-07-16 | 🔴 **GPL-2.0-only** |
+| `moodle/moodle` | 2.134 | 94.453 | 485 | 🟢 **2026-10-01** | GPL-3.0 |
+| `oat-sa/extension-tao-testqti` | 950 | 117.544 | 🟢 **885** | 🟢 **2026-09-30** | 🔴 GPL-2.0-only |
+| `php-xapi/client` | 825 | 48.104 | 7 | 🔴 **2021-03-24** | **MIT** ✅ |
+| `learninglocker/learninglocker` | 🔴 **0** | 2.960 | 58 | 🔴 **2017-04-04** | GPL-3.0 |
+
+**Lo que la tabla dice y las estrellas no podían decir:**
+
+- 🔴 **La pieza xAPI más descargada de esta KB —6.178/mes, 863 mil totales— no publica desde el 2022-11-02.** ⚠️ **Y es una corrección a la cifra del pase 35**, que escribió *«congelada desde 2019»*: medido en el tiempo de versión de Packagist es **2022-11-02**. 🔵 **Es el caso que prueba la regla: las descargas miden BASE INSTALADA, no vida del proyecto.** Un cliente que ya tiene xAPI en producción probablemente corre esto.
+- ⚠️ **El único MIT de la capa xAPI, `php-xapi/client`, está parado desde el 2021-03-24** con 825 descargas/mes. **La capa xAPI en PHP es: lo permisivo está quieto y lo vivo es copyleft o está en otro lenguaje** — razón adicional para que la receta de telemetría de esta base se apoye en **Ralph (MIT)** + **`lrsql` (Apache-2.0)** + **`learnmcp-xapi` (MIT)**, que son las piezas vivas y permisivas (**P67**, **P68**).
+- 🟢 **`oat-sa/extension-tao-testqti` subió de 844 a 885 versiones** y publicó **hace dos días**: es la pieza **más activa** de la capa de evaluación, y sigue siendo **GPL-2.0-only**. ✅ **Confirma la decisión de P69/P76:** lo activo y desplegado es copyleft; **lo permisivo (`@longsightgroup/qti3-cli`, MIT) es lo nuevo** — 41 releases desde el **2026-05-21**, último el **2026-10-01**, y **cero dependencias de terceros** (sus 4 dependencias son todas `@longsightgroup/*` de la misma versión exacta).
+- ✅ **`learninglocker` queda fechado además de confirmado:** el pase 35 midió **0 descargas/mes**; ahora se sabe **desde cuándo**: **último release 2017-04-04**.
+
+### 🔴 Y una ausencia de catálogo que hay que decir: `oat-sa/qti-sdk` NO es un paquete de Packagist
+
+Esta base viene citando **`oat-sa/qti-sdk`** entre las piezas de mayor despliegue de la capa de evaluación.
+`packagist.org/packages/oat-sa/qti-sdk.json` devuelve **404**. 🔵 **No es que el proyecto no exista: es que `oat-sa/qti-sdk`
+es el nombre del REPO de GitHub y su paquete se publica como `qtism/qtism`** —el que tiene 218.212 descargas totales—.
+**La lección, que es la misma del gap 69 en otra escala: el nombre del repo y el nombre del paquete son dos
+identificadores distintos, y mezclarlos produce un 404 que parece una ausencia.** Lo mismo pasó al probar
+`1edtech/oneroster`, `imsglobal/lti-1-3-php-library` y `packbackbooks/lti-1-3-php-library`: **404 los tres**, y lo que
+corresponde escribir es *«no verificado en Packagist bajo ese nombre»*, **no** *«no existe»*.
+
 ## 2026-10-02 (pase 35) — el registro deja de responder «qué hay» y empieza a responder **«qué se usa»**: con descargas por mes, la capa de evaluación y la de telemetría **cambian de orden**, y la pieza xAPI más desplegada de esta KB resulta ser **Apache-2.0 y congelada desde 2019**
 
 **Lo medido:** consultas a **npm** (`registry.npmjs.org/-/v1/search` y documentos de paquete), **PyPI** (`/pypi/<pkg>/json`)
