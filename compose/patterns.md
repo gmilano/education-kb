@@ -229,13 +229,65 @@ abiertos uno por uno en `compose/code/aiact-50-2-spans/`.
 | Tramo | Qué entrega | Necesita | Estimación |
 |---|---|---|---|
 | 🟢 **Grueso (hoy)** | el **curso entero** marcado como generado, dentro del `imsmanifest.xml`, verificado con `xmllint` | nada que no esté escrito (**P106**) | **1 semana** |
-| ⚠️ **Medio** | `synthetic` **por turno**, separando `direct_source` del resto | una pieza que lleve la identidad de la fuente hasta la respuesta — **`project-nomad` la tiene**: `chunk_index` + `source` + `document_id` en `rag_service.ts:1137`, *«needed for citations and for recall@k scoring»* | **3-4 semanas** sobre esa pieza |
+| 🟢 **Medio (medido en el pase 48)** | `synthetic` **por turno**, nombrando los **documentos** que lo sostienen | 🟢 **nada que construir: `project-nomad` ya lo lleva hasta la pantalla.** Siete saltos trazados y aseverados (**32/32**, `compose/code/nomad-citation-trace/`): `rag_service.ts` emite `source`+`document_id`+`archive_title`, `rag_prompt.ts` rotula el contexto inyectado y arma la lista de citas, la migración `1785468975052` la **persiste** en `chat_messages.sources`, y `ChatMessageBubble.tsx` la **renderiza** | 🟢 **3-4 semanas, y ahora se sostienen: es integración** |
+| 🔴 **Medio-fino — el tramo que este patrón PROMETÍA y hay que bajar** | separar **`direct_source` de `synthetic`** por afirmación | 🔴 **desarrollo nuevo.** `ChatSource` tiene **tres campos** (`title`, `date`, `source`): **ninguno es de tramo y ninguno distingue cita textual de síntesis**, y `buildCitations` **deduplica por documento**. La unidad de procedencia de esa arquitectura **es el documento** | 🔴 **no cotizar como integración** |
 | 🔴 **Fino** | `synthetic` **por tramo**, que es lo que el componente del pase 46 sabe transportar | 🔴 **un clasificador propio, desarrollo nuevo: no hay nada que envolver** | **no cotizar sin un piloto** |
 
 🔵 **La frase citable:** *«el marcado del curso es entregable en una semana; el marcado por afirmación es desarrollo, y
 medimos que ninguna de las 33 piezas de este espacio lo habilita hoy»*. ⚠️ **Decir lo contrario es prometer una
 integración donde hay un producto por construir** — y el componente ya está escrito, así que la tentación de decir que
 está listo es real.
+
+## P109 — Marcado del Artículo 50(2) **a nivel de turno**, cableado sobre la cadena de citas que `project-nomad` YA tiene (agregado en el pase 48 del 2026-10-02)
+
+**Qué resuelve.** **P108** partió el marcado en tramos y dejó el medio como promesa. El pase 48
+lo midió de punta a punta y el resultado habilita **un entregable concreto y acotado**: marcar
+cada respuesta del tutor como generada **nombrando los documentos que la sostienen**, sin
+construir la procedencia, porque **ya está construida, persistida y renderizada**.
+
+⚠️ **Lo que este patrón NO promete, y hay que decirlo en la primera reunión:** no separa
+`direct_source` de `synthetic` **por afirmación**. Esa es la frontera que el pase 48 probó por
+ausencia (`ChatSource` = `title`, `date`, `source`; `buildCitations` deduplica por documento).
+**Granularidad del entregable: el turno y el documento.**
+
+### Las piezas, todas verificadas en esta base
+
+| Pieza | Licencia | Qué aporta |
+|---|---|---|
+| [`Crosstalk-Solutions/project-nomad`](https://github.com/Crosstalk-Solutions/project-nomad) | 🟢 **Apache-2.0** | **La cadena de procedencia completa**: `rag_service.ts` → `rag_prompt.ts` → `chat_messages.sources` → `ChatMessageBubble.tsx`. **7 saltos aseverados, 32/32** en `compose/code/nomad-citation-trace/` |
+| [`compose/code/aiact-50-2-marking/`](code/aiact-50-2-marking/README.md) | 🟢 propia, stdlib | Mapea, transporta y asevera la marca; **sobrevive `dumps`→`loads`**. **23/23** desnudo, **24/24** con `--with-xmllint` + `SCORM_SCHEMAS` |
+| [`compose/code/aiact-50-2-pack/`](code/aiact-50-2-pack/README.md) | 🟢 propia, stdlib | Inyecta el marcado **una vez** en el empaquetado SCORM, no en cada generador (**P105**). **27/27** desnudo, **37/37** con los dos directorios de esquemas |
+| [`compose/code/mcp-allowlist-gateway/`](code/mcp-allowlist-gateway/README.md) | 🟢 propia, stdlib | **Capa 0 obligatoria** si el tutor habla con el LMS por MCP: `MCP_ALLOWLIST` + `MCP_HARD_DENY`, *default deny*. **34/34** |
+
+### El cableado, en este orden
+
+1. **Leer `message.sources`, no re-implementar la recuperación.** La respuesta del asistente ya
+   llega al cliente con la lista deduplicada de documentos que la sostienen, construida **desde
+   lo inyectado al prompt** y no desde todo lo recuperado — distinción que `project-nomad` tomó
+   a propósito y que es exactamente la que un auditor quiere.
+2. **Envolver cada turno con el componente del pase 46**, usando `ChatSource.source` como
+   identidad del documento y `ChatSource.date` cuando el archivo la trae. La marca es
+   **por turno**: `synthetic` + la lista de documentos.
+3. **No marcar por afirmación.** Si el cliente lo pide, es **piloto con clasificador propio**
+   (P108, tramo fino), y se cotiza aparte.
+4. **Al cerrar el curso, inyectar el marcado UNA vez en el `imsmanifest.xml`** con
+   `aiact-50-2-pack` (**P105**), y validar con `xmllint`. ⚠️ **El comodín de SCORM 1.2 es
+   `strict`** (pase 47): el *namespace* propio hay que declararlo o el paquete se rechaza.
+5. **Si el tutor toca el LMS, el *gateway* va primero** (**P85**), con allowlist de lectura.
+
+### Cómo se cotiza, por región
+
+| Región | Qué dispara la compra | Estimación |
+|---|---|---|
+| **EMEA** | 🔴 **El art. 50(2) está VIGENTE desde el 2026-08-02**; el Anexo III (alto riesgo) entra el **2027-12-02**. La transparencia es exigible **hoy**, no en 2027 | **3-4 semanas** el tramo de turno + **1 semana** el de curso |
+| **North America** | Mandato estatal de **supervisión humana** y prohibición de decisión autónoma (OK/MD); **AB 1159** prohíbe entrenar con dato de alumno | **3-4 semanas**, y el registro de citas es el entregable que se muestra |
+| **LATAM** | **Menos del 10 % de las instituciones** tiene lineamientos formales con **más del 50 % de docentes** ya usando AI: la marca es la primera pieza de gobernanza que se puede mostrar | **3-4 semanas**, y abre la conversación de política |
+| **APAC** | Corea: **AI Framework Act vigente desde el 2026-01-22**; Vietnam clasificó la evaluación automatizada como alto riesgo | **3-4 semanas**, con el reloj de Vietnam como el que suena primero |
+
+🔵 **Por qué este patrón es defendible y P108 solo no lo era:** las cuatro piezas están
+**versionadas en este repositorio o leídas de un árbol real**, las cuatro traen aserciones que
+corren, y **la mitad más cara —llevar la identidad de la fuente hasta la pantalla— no hay que
+construirla: el upstream la construyó y dejó escrito por qué.**
 
 ## P99 — El componente transversal de marcado del Artículo 50(2): **dos filas de esta base son mitades complementarias y ninguna sabe de la otra** (agregado en el pase 45 del 2026-10-02)
 
@@ -5323,7 +5375,7 @@ configuración»**. Es la misma dependencia; el riesgo es el mismo; **la diferen
 **P82 (pase 39) describió el patrón y dejó la pieza por escribir.** Este pase la escribe y **la prueba**, que es la
 diferencia entre un patrón y un entregable. **175 líneas, sólo biblioteca estándar de Python, sin dependencias.**
 
-> 🔴 **Corrección del pase 47 (gap 103), y va arriba porque cambia lo que se puede prometer:** **el código de las «175 líneas» no está en este repositorio.** `MCP_ALLOWLIST` —la variable que esta sección documenta— aparece **únicamente en `compose/patterns.md`**, y es la única sección que cita código sin enlazar a `compose/code/`. Las dos puertas que **sí** están versionadas usan `SEB_ALLOW` y `UNITIME_ALLOW`, miden **189** y **171** líneas crudas (**145** y **145** no-blancas) y **ninguna da 175 por ninguno de los dos instrumentos**. 🟢 **El patrón es real y está probado — `compose/code/sebserver-mcp-gate/` (37/37) y `compose/code/unitime-mcp-gate/` (46) hacen exactamente esto—; lo que falta es la pieza GENÉRICA que esta sección dice tener escrita. Hasta que exista, cotizar las dos puertas concretas y no P85.**
+> 🟢 **Cierre del pase 48 (gap 103), y va arriba porque cambia lo que se puede prometer:** **la pieza genérica EXISTE y está probada: [`compose/code/mcp-allowlist-gateway/`](code/mcp-allowlist-gateway/README.md), 34/34 por ejecución, sólo biblioteca estándar.** Usa `MCP_ALLOWLIST` tal como esta sección lo documenta, agrega `MCP_HARD_DENY` —**el piso del pase 45, que el código de abajo NO tenía**— y la tabla de verificación que esta sección publicaba en prosa **son ahora aserciones que corren**. 🔴 **Dos correcciones que el cierre forzó:** (1) **«175 líneas» no lo devuelve ningún instrumento**: la pieza embarcable (`policy.py` + `gateway.py`) mide **233 crudas / 196 no-blancas / 184 no-blancas-no-comentario**, y la cifra se reemplaza en vez de rescatarse; (2) 🔴 **el pase 47 escribió que las dos puertas concretas miden «145 y 145 no-blancas» — el valor es correcto y el NOMBRE DE LA MÉTRICA no**: por `grep -cve '^[[:space:]]*$'` son **162** y **146**, y **145/145 es no-blancas-NO-COMENTARIO**. El defecto que el gap 101 nombró reapareció **dentro de la propia corrección del pase 47**. ⚠️ **Y lo que el pase 48 descubrió al intentar la extracción que la acción pedía: no se podía extraer.** Las dos puertas versionadas **SON el upstream** (sintetizan su manifiesto de un árbol medido); este *gateway* **PROXYA** un upstream de terceros que no controla. Lo que las tres comparten no es el transporte ni el manifiesto: **es la DECISIÓN**, y eso es lo que se extrajo, a `policy.py`. 🟢 **La prueba de que la extracción es fiel está medida, no afirmada: `policy.py` reproduce la partición de las dos puertas tool por tool — UniTime 26 → 13 expuestos, seb-server 341 → 162 expuestos, CERO desacuerdos, con los dos pisos no vacíos.**
 
 ### El problema, en una frase
 
@@ -5347,6 +5399,11 @@ escribe como una línea JSON con timestamp**, porque sin registro no hay nada qu
 razón de existir de la pieza.
 
 ### El código
+
+⚠️ **El bloque de abajo es el BOCETO del pase 40, y se conserva por historia.** La pieza que se
+cotiza y se entrega es la versionada: **[`compose/code/mcp-allowlist-gateway/`](code/mcp-allowlist-gateway/README.md)**,
+que agrega el piso `MCP_HARD_DENY`, separa la decisión en `policy.py` y trae las **34**
+aserciones. **No copiar este bloque a un cliente: copiar el archivo.**
 
 ```python
 #!/usr/bin/env python3

@@ -8,6 +8,20 @@ updated: 2026-10-02
 
 > Bases sobre las cuales construir. Verificado repo por repo vía WebFetch el 2026-09-30 (capas del pase 10, el 2026-10-01).
 > Leer la columna **Licencia** antes de proponer: media KB de educación es GPL/AGPL, no permisiva.
+> **Pase 48 del 2026-10-02:** 🟢 **el barrido de cifras pasó de UN archivo a los OCHO, y la escala cambia la lectura:
+> 3.611 mediciones en total, de las que 1.836 — el 50,8 % — NO son re-verificables en este entorno** (1.042 `★`, 418
+> `commits`, 326 conteos de `tools`, 50 descargas). **Más de la mitad de las cifras de esta base no se pueden refrescar
+> desde acá**, y las **1.775** que sí —líneas, aserciones, rutas, métodos, archivos— son las que valen para una
+> propuesta. 🔴 **Y el pase 47 barrió `compose/patterns.md` por ser el activo más citado: resultó el archivo con MENOR
+> densidad de cifras de los ocho (65,3 por kilolínea, contra 184,8 de `agents/top.md` y 173,4 de `intel/market.md`).**
+> `intel/market.md` + `intel/trends.md` suman **1.657 cifras — el 46 % de la base — y nunca se habían barrido.**
+> 🟢 **Tres de las cuatro cifras que «no cerraban» quedan cerradas en este pase:** «175 líneas» de **P85** ya tiene
+> artefacto (`compose/code/mcp-allowlist-gateway/`, **233** crudas / **196** no-blancas / **184**
+> no-blancas-no-comentario, así que la cifra se **reemplaza**), y «11/11» / «23 aserciones» quedaron corregidas donde
+> seguían vivas. ⚠️ **Y una corrección de este archivo:** la cifra de **20 aserciones** de `proctoring-reach-audit`
+> **no llevaba su condición** (20 con la ruta a un checkout de seb-server, **19** sin ella); ya la lleva. 🔵 **El
+> instrumento ahora es cruzado —`extract_figures.py --crossref` vuelve a correr las ocho suites y atribuye cada cita—
+> porque el defecto real no es que una cifra se venza: es que una CORRECCIÓN NO SE PROPAGA entre archivos.**
 > **Pase 47 del 2026-10-02:** 🔵 **este pase no agrega repos: le AUDITA LAS CIFRAS a los que ya están, y encontró que
 > cuatro no cierran.** El instrumento quedó escrito y es repetible —`compose/code/patterns-figure-audit/`— y mide **383**
 > cifras de `compose/patterns.md`, de las que **218 no son reproducibles en este entorno**: `★` (90), `commits` (46) y
@@ -2824,7 +2838,7 @@ el mismo árbol que sostiene la cotización de *proctoring* — **reverificado, 
 `RemoteProctoringService.java` son **130 líneas** y **14 métodos abstractos**; `JitsiProctoringService` **481 líneas de
 código** y `ZoomProctoringService` **912** — 🔵 **y la métrica queda NOMBRADA, que faltaba desde el pase 43: son
 no-blancas-no-comentario; `wc -l` da 583 y 1.116.** El alcance de red transitivo da **Jitsi 1 de 14** (correcto) y
-**Zoom 5 de 14 con 0 directos**. Detalle, grafo y 20 aserciones en
+**Zoom 5 de 14 con 0 directos**. Detalle, grafo y 20 aserciones (⚠️ **20 con la ruta a un checkout de seb-server; 19 sin ella** — condición agregada en el pase 48) en
 [`compose/code/proctoring-reach-audit/`](../compose/code/proctoring-reach-audit/README.md). **Para cotizar, P102.**
 
 ### `scorm-mcp-server` — la capa de empaquetado, ahora medida

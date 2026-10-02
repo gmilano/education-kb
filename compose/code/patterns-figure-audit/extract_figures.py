@@ -11,6 +11,9 @@ This script does the sweep, so the sweep is repeatable rather than a one-off
 list that rots:
 
     python3 extract_figures.py                 # the inventory, grouped by unit
+    python3 extract_figures.py --all           # all eight KB files, per file (pase 48)
+    python3 extract_figures.py <path>          # any one file
+    python3 extract_figures.py --crossref      # re-run every suite, find stale quotes
     python3 extract_figures.py --check         # + re-run the local instruments
     python3 extract_figures.py --tsv           # machine-readable
 
@@ -31,6 +34,19 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 KB = os.path.abspath(os.path.join(HERE, "..", ".."))
 PATTERNS = os.path.join(KB, "patterns.md")
 CODE = os.path.join(KB, "code")
+ROOT = os.path.abspath(os.path.join(KB, ".."))
+
+#: The eight KB files. Pase 47 swept only patterns.md because it is the most
+#: cited asset; pase 48 (action 2) sweeps all eight, because trends.md and
+#: market.md are the two largest files in the base and neither had ever been
+#: measured by this instrument.
+KB_FILES = [
+    "agents/top.md", "agents/trending.md",
+    "repos/foundations.md", "repos/trending.md",
+    "verticals/solutions.md",
+    "intel/market.md", "intel/trends.md",
+    "compose/patterns.md",
+]
 
 #: Units that denote a measurement. Order matters: longest match first.
 UNITS = [
@@ -158,8 +174,59 @@ def run(cmd: str) -> str:
     return (p.stdout or p.stderr).strip()
 
 
+def sweep_all() -> int:
+    """Action 2 of pase 48: the inventory per file, over the eight KB files."""
+    print("%-26s %8s %8s %8s %8s" % ("file", "lines", "KB", "figures", "per-kline"))
+    total_f = total_l = 0
+    rows = []
+    for rel in KB_FILES:
+        path = os.path.join(ROOT, rel)
+        if not os.path.exists(path):
+            print("%-26s %8s" % (rel, "MISSING"))
+            continue
+        text = open(path).read()
+        nlines = len(text.split("\n"))
+        items = inventory(text)
+        total_f += len(items)
+        total_l += nlines
+        rows.append((rel, items))
+        print("%-26s %8d %8d %8d %8.1f" % (
+            rel, nlines, round(len(text.encode()) / 1024), len(items),
+            1000.0 * len(items) / nlines))
+    print("%-26s %8d %8s %8d %8.1f" % ("TOTAL", total_l, "", total_f,
+                                       1000.0 * total_f / total_l))
+
+    print("\n-- by unit, across the eight files --")
+    agg: dict[str, int] = {}
+    for _, items in rows:
+        for it in items:
+            agg[it["unit"]] = agg.get(it["unit"], 0) + 1
+    print("%-12s %6s  %-6s %s" % ("unit", "count", "here?", "instrument"))
+    repro = norepro = 0
+    for unit, _ in UNITS:
+        n = agg.get(unit, 0)
+        if not n:
+            continue
+        instr, ok = INSTRUMENTS[unit]
+        repro += n if ok else 0
+        norepro += 0 if ok else n
+        print("%-12s %6d  %-6s %s" % (unit, n, "yes" if ok else "NO", instr.split("  ")[0]))
+    print("\nreproducible in this environment : %d" % repro)
+    print("NOT reproducible here            : %d" % norepro)
+    print("\n\u26a0 A figure counted here is a figure FOUND, not a figure VERIFIED.")
+    print("  Hand-verification is per-figure and only the ones over this base's own")
+    print("  code are reproducible; see VERIFIED below and the README.")
+    return 0
+
+
 def main() -> int:
-    text = open(PATTERNS).read()
+    if "--crossref" in sys.argv:
+        return crossref()
+    if "--all" in sys.argv:
+        return sweep_all()
+    paths = [a for a in sys.argv[1:] if not a.startswith("--")]
+    target = os.path.abspath(paths[0]) if paths else PATTERNS
+    text = open(target).read()
     items = inventory(text)
     tsv = "--tsv" in sys.argv
 
@@ -171,7 +238,7 @@ def main() -> int:
                 it["line"], it["unit"], it["value"], it["text"], "yes" if ok else "no", instr))
         return 0
 
-    print("compose/patterns.md: %d lines" % len(text.split("\n")))
+    print("%s: %d lines" % (os.path.relpath(target, ROOT), len(text.split("\n"))))
     print("measurements found : %d\n" % len(items))
     by_unit: dict[str, int] = {}
     for it in items:
@@ -217,6 +284,173 @@ def main() -> int:
              " | grep -v patterns-figure-audit | head -1 || true"),
         ):
             print("  %-26s -> %s" % (name, run(cmd) or "(nothing)"))
+    return 0
+
+
+
+
+# ---------------------------------------------------------------------------
+# --crossref: pase 48, action 2. The defect pase 47 did NOT see.
+#
+# Pase 47 found "11/11 checks" stale in compose/patterns.md and corrected it
+# THERE. The same figure was still being quoted as a live measurement in four
+# other files. The defect is therefore not "a figure goes stale when the suite
+# grows" -- it is that A CORRECTION DOES NOT PROPAGATE, because one measurement
+# is quoted in up to ten places across eight files.
+#
+# So the instrument has to be cross-file: run each suite, then find every
+# quotation of a check count anywhere in the KB and report which ones no longer
+# match. Attribution is by the suite's directory name appearing in the same
+# line; a quotation with no suite name in the line is reported as UNATTRIBUTED
+# rather than guessed, because guessing is what produced the stale figures.
+# ---------------------------------------------------------------------------
+
+#: suite directory -> (command, env/arg note). The count is MEASURED, not stored.
+SUITES = {
+    "openedx-course-generator": ("python3 test_plan.py", ""),
+    "unitime-mcp-gate": ("python3 test_gate.py", ""),
+    "sebserver-mcp-gate": ("python3 test_gate.py", ""),
+    "seb-proctoring-validator": ("sh run_test.sh", ""),
+    "aiact-50-2-marking": ("python3 test_marking.py", "24 with SCORM_SCHEMAS + --with-xmllint"),
+    "aiact-50-2-pack": ("python3 test_pack.py", "27 bare; more with --with-xmllint"),
+    "proctoring-reach-audit": ("python3 test_reach.py", "20 with a seb-server path"),
+    "mcp-allowlist-gateway": ("python3 test_gateway.py", ""),
+}
+
+#: suite -> {count: the condition that produces it}. A quotation of one of these
+#: is correct ONLY where the condition travels with it.
+CONDITIONAL = {
+    "aiact-50-2-marking": {24: "--with-xmllint + SCORM_SCHEMAS", 23: "bare"},
+    "aiact-50-2-pack": {37: "with both schema dirs", 27: "bare"},
+    "proctoring-reach-audit": {20: "with a seb-server path", 19: "bare"},
+}
+
+#: Tokens that show a condition is stated near the figure.
+COND_TOKENS = re.compile(
+    r"xmllint|SCORM_SCHEMAS|sin [ée]l|sin ellos?|bare|con los dos|"
+    r"con la ruta|with the path|condicional|exige|requiere|--with-",
+    re.I)
+
+QUOTE_RX = re.compile(
+    r"(?:\*\*)?(\d{1,3})\s*/\s*(\d{1,3})(?:\*\*)?\s*(?:checks?|aserciones?)"
+    r"|(?:\*\*)?(\d{1,3})(?:\*\*)?\s+aserciones?"
+    r"|\(\s*(?:\*\*)?(\d{1,3})(?:\*\*)?\s*\)\s*(?:checks?|aserciones?)",
+    re.I)
+
+
+def measure_suites() -> dict:
+    """Run every suite and count its PASS lines. The count is the instrument's
+    answer, never a number copied from prose."""
+    got = {}
+    for d, (cmd, note) in sorted(SUITES.items()):
+        wd = os.path.join(CODE, d)
+        if not os.path.isdir(wd):
+            got[d] = (None, "directory missing", note)
+            continue
+        p = subprocess.run(cmd, shell=True, capture_output=True, text=True,
+                           cwd=wd, timeout=300)
+        out = (p.stdout or "") + (p.stderr or "")
+        n = len([l for l in out.split("\n") if l.startswith("PASS")])
+        m = re.search(r"(\d+)\s*/\s*(\d+)\s+checks passed", out)
+        if m:
+            n = int(m.group(2))
+        got[d] = (n or None, cmd, note)
+    return got
+
+
+def crossref() -> int:
+    measured = measure_suites()
+    print("-- every suite, re-measured by running it --")
+    print("%-28s %7s  %s" % ("suite", "today", "command / condition"))
+    for d, (n, cmd, note) in measured.items():
+        print("%-28s %7s  %s%s" % (d, n if n else "ERR", cmd,
+                                   ("  [" + note + "]") if note else ""))
+
+    print("\n-- every check-count quotation in the eight files, attributed --")
+    stale = live_ok = unattributed = conditional = 0
+    findings = []
+    for rel in KB_FILES:
+        path = os.path.join(ROOT, rel)
+        if not os.path.exists(path):
+            continue
+        lines = open(path).read().split("\n")
+        for lineno, line in enumerate(lines, 1):
+            hits = list(QUOTE_RX.finditer(line))
+            if not hits:
+                continue
+            # The window FOLLOWS THE DOCUMENT'S STRUCTURE, which is the whole
+            # lesson of this instrument:
+            #   * a table row is a self-contained record -> the window is the row.
+            #     Widening it to the "paragraph" swallows the neighbouring rows,
+            #     because markdown tables carry no blank line between them, and
+            #     then every suite named in the table is attributed to every
+            #     figure in it (pase 48 measured exactly that: 3 findings became
+            #     9, and 6 of those were manufactured by the window).
+            #   * prose is hard-wrapped at ~100 chars -> the window is the
+            #     paragraph, or the condition one line down is missed.
+            if lines[lineno - 1].lstrip().startswith("|"):
+                window = lines[lineno - 1]
+            else:
+                lo = hi = lineno - 1
+                while lo > 0 and lines[lo - 1].strip() and not lines[lo - 1].lstrip().startswith("|"):
+                    lo -= 1
+                while (hi + 1 < len(lines) and lines[hi + 1].strip()
+                       and not lines[hi + 1].lstrip().startswith("|")):
+                    hi += 1
+                window = " ".join(lines[lo:hi + 1])
+            named = [d for d in SUITES if d in window]
+            for m in hits:
+                g = [x for x in m.groups() if x]
+                val = int(g[-1]) if len(g) == 1 else int(g[1])
+                if not named:
+                    unattributed += 1
+                    continue
+                # Disambiguation: a window may name several suites (pase 48 found
+                # one paragraph citing proctoring-reach-audit AND
+                # seb-proctoring-validator). A figure that matches one of them
+                # belongs to THAT one; charging it to all of them manufactures a
+                # finding. If it matches none, every named suite is reported,
+                # because then the figure is wrong for all of them.
+                owners = [d for d in named
+                          if measured.get(d, (None,))[0] == val
+                          or val in CONDITIONAL.get(d, {})]
+                if len(named) > 1 and owners:
+                    named = owners
+                for d in named:
+                    today = measured.get(d, (None,))[0]
+                    if today is None:
+                        continue
+                    alt = CONDITIONAL.get(d, {})
+                    if val == today:
+                        live_ok += 1
+                    elif val in alt:
+                        if COND_TOKENS.search(window):
+                            live_ok += 1          # correct AND conditioned
+                        else:
+                            conditional += 1
+                            findings.append(("COND", rel, lineno, d, val, today,
+                                             alt[val],
+                                             re.sub(r"\s+", " ", line)[:105]))
+                    else:
+                        stale += 1
+                        findings.append(("STALE", rel, lineno, d, val, today, "",
+                                         re.sub(r"\s+", " ", line)[:105]))
+    for kind, rel, lineno, d, val, today, cond, ctx in findings:
+        if kind == "STALE":
+            print("  STALE  %s:%d  %s quotes %s, today %s" % (rel, lineno, d, val, today))
+        else:
+            print("  COND   %s:%d  %s quotes %s -- real, but only %r, and the"
+                  " condition is NOT stated in the paragraph"
+                  % (rel, lineno, d, val, cond))
+        print("         %s" % ctx)
+    print("\nattributed and matching today : %d" % live_ok)
+    print("attributed and STALE          : %d" % stale)
+    print("attributed, real but UNCONDITIONED : %d" % conditional)
+    print("unattributed (no suite name on the line, NOT guessed) : %d" % unattributed)
+    print("\n⚠ An append-only dated section is HISTORY: a count that was true when")
+    print("  written stays. Only a LIVE reference row is a defect. This tool reports")
+    print("  the location; it does not decide, because rewriting a dated section")
+    print("  would destroy the time series those files exist to keep.")
     return 0
 
 

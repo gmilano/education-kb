@@ -8,6 +8,19 @@ updated: 2026-10-02
 
 > Agentes y herramientas AI open source para educación. Foco: MIT / Apache 2.0 / BSD.
 > Verificado repo por repo vía WebFetch el 2026-09-30 (stars y licencia leídos de la página del repo).
+> **Pase 48 del 2026-10-02:** 🔵 **la tabla sigue en 66 filas — SEXTO pase consecutivo sin altas**, y el barrido
+> completo obligatorio (cuatro búsquedas globales + cuatro regionales, con el año **calculado**: 2026) devolvió por
+> sexta vez **la capa genérica** (OpenClaw, CrewAI, LangGraph, browser-use, Dify, Flowise, AutoGen, Langflow) y
+> **material didáctico *sobre* AI** (catálogos `500-AI-Agents-Projects`, `awesome-ai-agents-2026`, currículos de
+> DeepLearning.AI / HuggingFace). 🔴 **Y la señal de saturación más clara hasta acá: el barrido devolvió DOS piezas que
+> esta base ya tiene —`lineage-skill` y `SirhanMacx/Claw-ED`— presentadas como novedad.** Cuando una búsqueda de
+> descubrimiento empieza a devolver el propio inventario, ha dejado de ser una búsqueda de descubrimiento; se sigue
+> corriendo porque es obligatoria y porque un cambio de capa hay que verlo, pero **el rendimiento marginal medido es
+> cero.** 🟢 **Controles de integridad de la tabla, corridos y en verde: 66 filas, 61 *slugs* distintos de GitHub y
+> ningún duplicado** (el control del gap 71), **y ninguna fila de encabezado filtrada como dato.** 🟢 **El valor del
+> pase está afuera de esta tabla: se cerró el gap 103 escribiendo la pieza genérica de P85
+> (`compose/code/mcp-allowlist-gateway/`, 34/34), se barrieron las 3.611 cifras de los ocho archivos y se trazó la
+> procedencia de `project-nomad` hasta la pantalla (32/32). Ver `repos/trending.md` de este pase.**
 > **Pase 47 del 2026-10-02:** 🔵 **la tabla sigue en 66 filas — QUINTO pase consecutivo sin altas**, y el barrido
 > completo obligatorio (cuatro búsquedas globales + cuatro regionales, con el año **calculado**) devolvió por quinta vez
 > **la capa genérica** (openclaw 385.407 ★, dify 151.639, browser-use 108.128, Mem0 62.735, AutoGen 60.284, Flowise

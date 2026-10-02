@@ -4974,6 +4974,73 @@ que sus fuentes secundarias publican mal.** La regla operativa no cambia y convi
 **las fechas están confirmadas por tres canales secundarios independientes y concordantes, no por fuente primaria, y
 eso se dice en la propuesta.**
 
+## 🔵 Las tendencias 211–219, del pase 48 del 2026-10-02
+
+**Las nueve salen de ejecutar las tres acciones del pase 47 y el barrido obligatorio. Cinco corrigen afirmaciones de
+esta base, y tres son defectos del propio instrumento, encontrados porque el instrumento falló primero.**
+
+| # | Tendencia | Evidencia |
+|---|---|---|
+| **211** | 🔴 **Una «extracción» puede ser la factorización equivocada, y el síntoma es arquitectónico, no estético.** La acción 1 pedía extraer el *gateway* genérico de las dos puertas concretas. **No se podía:** las dos **SON** el upstream (sintetizan su manifiesto de un árbol medido), mientras el *gateway* de P85 **PROXYA** un upstream de terceros que no controla ni puede re-medir. Lo común no es el transporte ni el manifiesto: **es la DECISIÓN** | `compose/code/mcp-allowlist-gateway/policy.py`; la tabla de contraste en su `README.md` |
+| **212** | 🟢 **Una extracción se declara fiel o se MIDE fiel, y medirla cuesta una aserción por pieza.** `policy.py` re-deriva la partición de las dos puertas **tool por tool**: UniTime **26 → 13 expuestos**, seb-server **341 → 162 expuestos**, **CERO desacuerdos**, con los dos pisos **no vacíos** para que el acuerdo no sea trivial | `test_gateway.py`, bloque (C), **34/34** |
+| **213** | 🔴 **El defecto no es que una cifra se venza: es que una CORRECCIÓN NO SE PROPAGA.** El pase 47 corrigió «11/11 checks» en `compose/patterns.md`; **la misma cifra siguió viva en otros archivos**, en una fila de catálogo que se lee como estado actual. Una sola medición se cita **hasta en diez lugares de ocho archivos** | `extract_figures.py --crossref`; corregido en `verticals/solutions.md` |
+| **214** | 🔴 **Más de la MITAD de las cifras de esta base no son re-verificables desde este entorno.** **1.836 de 3.611 — el 50,8 %**: 1.042 `★`, 418 `commits`, 326 conteos de `tools`, 50 descargas. Es propiedad del canal (403 a `curl`, negación en el cuerpo de `api.github.com`), **y hay que decirlo al citar**, porque las **1.775** restantes —líneas, aserciones, rutas, métodos— son las únicas que una propuesta puede defender hoy | `extract_figures.py --all` sobre los ocho archivos |
+| **215** | 🔵 **Barrer «el archivo más citado» no es barrer el más expuesto.** El pase 47 eligió `compose/patterns.md` y resultó **el de MENOR densidad de cifras de los ocho** (65,3 por kilolínea, contra **184,8** de `agents/top.md` y **173,4** de `intel/market.md`). `intel/market.md` + `intel/trends.md` suman **1.657 cifras — el 46 % de la base — y nunca se habían barrido** | la tabla por archivo en `repos/trending.md` del pase 48 |
+| **216** | 🔴 **La ventana de lectura de un instrumento tiene que seguir la ESTRUCTURA del documento, y las dos formas de equivocarse son simétricas.** Por **línea**, el escáner perdió la condición que vivía una línea más abajo (prosa cortada a ~100 caracteres) → **1 falso positivo**. Por **párrafo**, se comió las filas vecinas de una tabla markdown, que no llevan línea en blanco → **3 hallazgos se volvieron 9, y 6 los fabricó la ventana**. Regla: **fila de tabla ⇒ la ventana es la fila; prosa ⇒ el párrafo** | las tres corridas sucesivas de `--crossref` |
+| **217** | ⚠️ **Una cifra condicional no es una cifra vencida, y la acción es distinta: una se corrige, la otra se COMPLETA.** Tres suites de esta base dan un número distinto según un argumento o una variable (`aiact-50-2-marking` 23/24, `aiact-50-2-pack` 27/37, `proctoring-reach-audit` 19/20). El instrumento ahora distingue `STALE` de `COND` | dos condiciones agregadas en `repos/foundations.md` e `intel/trends.md` |
+| **218** | 🟢 **La mitad más cara de P108 ya la había construido el upstream, y dejó escrito por qué.** `project-nomad` lleva la identidad de la fuente por **siete saltos** hasta la pantalla, y `rag_service.ts` registra que `source` *«previously dropped here»* hacía imposible mapear un *chunk* a su documento — **lo arreglaron para citas y para `recall@k`**. El tramo medio de P108 pasa de promesa a **integración** | `compose/code/nomad-citation-trace/`, **32/32** |
+| **219** | 🔴 **La unidad de procedencia de una arquitectura RAG es el DOCUMENTO, por diseño y no por olvido — y eso fija lo que se puede prometer.** `ChatSource` tiene **tres campos** (`title`, `date`, `source`): **ninguno de tramo**, ninguno que distinga **cita textual de síntesis**; y `buildCitations` **deduplica por documento** con razón escrita (*«a dozen chunks out of one archive collapse to one entry»*). Precisa el gap 99 sin contradecirlo | `types/chat.ts` + `rag_prompt.ts`; cotización corregida en **P108**, recipe nueva en **P109** |
+
+🔵 **Y la regla transversal que dejan las tendencias 213, 216 y 217, que es la más barata de adoptar:** cuando un pase
+corrige una cifra, **la corrección es un barrido, no una edición**. Y cuando un instrumento devuelve un hallazgo, **el
+control positivo va antes de publicarlo** — de los 3 hallazgos iniciales de `--crossref`, **1 era real, 1 era una
+condición sin escribir y 1 lo había fabricado la ventana**. Es la versión aplicada a cifras de lo que el pase 31
+aprendió con las rutas.
+
+## 🔵 Estado de gaps al cierre del pase 48 del 2026-10-02
+
+**Este pase ejecutó las TRES acciones que el pase 47 dejó escritas, y las tres rindieron. Ninguna necesitó un host
+bloqueado.**
+
+| Gap | Estado | Resolución |
+|---|---|---|
+| **103** (la pieza genérica de P85, prometida y sin código) | ✅ **CERRADO con código** | **`compose/code/mcp-allowlist-gateway/`, 34/34, sólo stdlib.** Usa `MCP_ALLOWLIST` tal como P85 lo documenta, **agrega el piso `MCP_HARD_DENY` que el boceto no tenía** (pase 45), y convierte la tabla de verificación de P85 en aserciones que corren, **midiendo en el UPSTREAM** que una llamada retenida no llega. 🔴 **Y corrige dos cifras propias:** «175 líneas» **no la devuelve ningún instrumento** (la pieza embarcable mide **233** crudas / **196** no-blancas / **184** no-blancas-no-comentario), y el «145 y 145 **no-blancas**» del pase 47 **tiene el valor bien y la métrica mal** (son **162** y **146** no-blancas; **145/145 es no-blancas-no-comentario**). ⚠️ **La acción pedía extraer y la extracción era la factorización equivocada** (tendencia **211**): se extrajo **la decisión**, y su fidelidad está **medida**, no afirmada (tendencia **212**) |
+| **101** (cifras publicadas sin nombrar su métrica) | 🟢 **AMPLIADO de un archivo a los ocho, y RECLASIFICADO** | **3.611 mediciones inventariadas**; **1.836 (50,8 %) no re-verificables acá** (tendencia **214**). 🔴 **El gap deja de ser «nombrar la métrica» y pasa a ser «propagar la corrección»** (tendencia **213**): `extract_figures.py --crossref` vuelve a correr las ocho suites y atribuye cada cita. **Resultado final: 15 concuerdan, 0 vencidas, 0 sin condición**, tras corregir **1 cifra vencida real** (`verticals/solutions.md`) y **2 condiciones sin escribir**. ⚠️ **29 citas quedan `unattributed` y NO se adivinan** |
+| **104** (¿el tramo medio de P108 se puede cotizar?) | ✅ **CERRADO, y la respuesta parte en dos** | 🟢 **Sí a nivel de TURNO/DOCUMENTO: es integración, y los 3-4 semanas se sostienen.** Siete saltos trazados y aseverados (**32/32**): recuperación emite → el prompt inyectado rotula → `buildCitations` arma la lista **desde lo inyectado** → la migración `1785468975052` la persiste → se devuelve → la UI la renderiza. 🔴 **No a nivel de AFIRMACIÓN: `direct_source` vs `synthetic` es desarrollo nuevo**, probado **por ausencia** (tendencia **219**). **P108 corregido y P109 agregado con la recipe que esto habilita** |
+| **99** (nadie asigna la etiqueta por tramo) | ⚠️ **PRECISADO, no cerrado** | El pase 47 midió *«0 de 33 emiten un límite dentro del texto generado»*. El pase 48 lee **una** pieza de punta a punta y precisa **por qué**: no es que falte el límite en la salida — **la unidad de procedencia de esa arquitectura es el documento, por diseño**. Sigue abierto para el tramo fino |
+| **92** (texto consolidado del AI Act) / **65** (primarias multilaterales) | 🔴 **ABIERTOS, sin avance deliberado** | Las tres acciones tenían prioridad. 🔴 **Y este pase agrega un dominio a la clase: `multistate.us` —la primaria del conteo de proyectos de ley de North America— responde `EGRESS_BLOCKED`.** El «134 en 31 estados» sigue citado como **secundaria concordante**, igual que desde el pase 23 |
+| **69** (educación en la capa MCP brasileña) / **68** / **60** / **61** | 🔴 **ABIERTOS, sin cambios** | El barrido LATAM de este pase los re-confirmó sin dato nuevo: **INEP no publica API**, así que la oportunidad sigue siendo **pipeline de ingesta (8-12 semanas)**, no fachada |
+| **71** (duplicado en `agents/top.md`) | 🟢 **CERRADO y ahora CONTROLADO en cada pase** | El control de *slug* distinto se corrió otra vez: **66 filas, 61 *slugs* de GitHub distintos, 0 duplicados**, y **0 filas de encabezado filtradas como dato** |
+
+## 🔵 Las tres acciones que el pase 48 deja escritas para el pase 49
+
+**Las tres son ejecutables en este entorno: ninguna necesita Docker, ni instalar dependencias de terceros, ni la API de
+GitHub. La primera es la de mayor rendimiento porque ataca el 46 % de las cifras de la base que nunca se auditó; la
+segunda es la que más reputación protege; la tercera es la única que todavía puede subir una fila a una tabla.**
+
+1. 🔴 **Verificar a mano las cifras REPRODUCIBLES de `intel/market.md` e `intel/trends.md`** (**extiende gap 101**).
+   El pase 48 inventarió **1.657 cifras** entre los dos archivos —**el 46 % de la base**— y **no verificó ninguna**: la
+   acción 2 alcanzó a barrer y a cruzar los conteos de *checks*, que son 50 en total. **La acción concreta:** correr
+   `extract_figures.py intel/market.md --tsv`, filtrar por las unidades que **sí** son reproducibles acá (`lines`,
+   `assertions`, `routes`, `methods`, `files`, `rows`), y verificar las que apuntan a **código de esta base o a un árbol
+   clonable**. ⚠️ **Y declarar el denominador: las de `★`/`commits` no se tocan, porque el canal no existe acá** — eso
+   ya está medido y no hay que volver a pagarlo.
+2. 🔵 **Aplicar el control de *backlink* a las referencias de TENDENCIA, no sólo a las filas de repo.** Este pase
+   buscó la *tendencia 210* con un `grep` de encabezados, **no la encontró, y estuvo a punto de publicar un
+   «backlink colgado» que no existía**: la 210 vive en una **fila de tabla**, no en un `## `. **El falso hallazgo lo
+   atrapó el control positivo, no el instrumento** — exactamente el riesgo de la tendencia 216 en otra forma. **La
+   acción concreta:** extraer todo `tendencia N` / `tendencias N–M` citado en los ocho archivos, resolverlo contra
+   **las dos formas** en que esta base numera tendencias (encabezado y fila), y publicar las que no resuelvan.
+   🔵 **Es baratísimo y protege la cita, que es lo que un cliente sigue.**
+3. ⚠️ **Romper el empate del vacío de ORIGEN APAC cambiando el CANAL, porque la búsqueda genérica ya se midió seis
+   veces** (**gap de descubrimiento**). Seis pases consecutivos de `AI education APAC 2026 …` devuelven
+   **Google / Microsoft / IBM / Pearson / Byju's** — comerciales, ninguna open source de origen APAC más allá de
+   `DeepTutor` (HKU) y `OpenMAIC` (Tsinghua). **La acción concreta y distinta:** no buscar por región, **buscar por
+   ORGANIZACIÓN** —el método que cerró el gap 51 y rindió dos altas en el pase 34— sobre los laboratorios que ya
+   dieron una fila (`HKUDS`, `THU-MAIC`) y sus vecinos declarados en los README. 🔵 **La hipótesis es explícita y
+   falsable: si el vacío es del canal, la organización lo rompe; si la organización tampoco devuelve nada, el vacío es
+   real y se cierra en negativo con un instrumento distinto al que falló seis veces.**
+
 ## 🔵 Las tendencias 197–210, del pase 47 del 2026-10-02
 
 **Las catorce salen de ejecutar las tres acciones del pase 46 y el barrido obligatorio. Siete corrigen afirmaciones de
@@ -5053,7 +5120,7 @@ metadatos en `buildManifestFor`** (gap 100, camino largo) **y el `import` de una
 
 | Gap | Estado | Evidencia |
 |---|---|---|
-| **95** — componente transversal de marcado del Art. 50(2) especificado y sin código | ✅ **CERRADO con código** | `compose/code/aiact-50-2-marking/`, **24/24** aserciones, sólo stdlib. Las tres que pidió la acción: cita textual **no** marcada, `mentor_inference` **sí**, y la marca **sobrevive** `dumps`→`loads` del artefacto separado del sobre con los desplazamientos intactos (rango `(50, 131)`) |
+| **95** — componente transversal de marcado del Art. 50(2) especificado y sin código | ✅ **CERRADO con código** | `compose/code/aiact-50-2-marking/`, **24/24** aserciones, sólo stdlib (⚠️ **24 exige `--with-xmllint` + `SCORM_SCHEMAS`; la corrida desnuda da 23** — condición agregada en el pase 48). Las tres que pidió la acción: cita textual **no** marcada, `mentor_inference` **sí**, y la marca **sobrevive** `dumps`→`loads` del artefacto separado del sobre con los desplazamientos intactos (rango `(50, 131)`) |
 | **96** — la tercera pieza de código sin auditar con los controles | ✅ **CERRADO, y corrige P94** | `compose/code/proctoring-reach-audit/`, **20/20**. Control (c) **falló** (8 constructores); control (e) **falló contra P94**: Zoom 5 de 14 y 0 directos |
 | **97** — ¿el `pack` es el punto de marcado más barato? | ✅ **CERRADO a favor** | `metadataType` termina en `grp.any` (**9** puntos de extensión); `xmllint`: *namespace* propio **valida**, por omisión **falla**. Se inyecta **1 vez**, no 32 |
 | **98** (nuevo) 🔴 | **la firma sigue sin existir** | `sign_hook()` es una costura **declarada y vacía**. La marca viaja **con** el texto tras `detach_artifact`, pero **no está EN** el texto: copiar sólo el texto la pierde. `MarkLLM`/SynthID (**P33**) necesitan el decodificador y este módulo corre después |

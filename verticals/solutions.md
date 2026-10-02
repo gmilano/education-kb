@@ -9,6 +9,17 @@ updated: 2026-10-02
 > Plataformas verticales reales, en producción, customizables con AI.
 > Modelo: partir de algo que ya funciona y que ya tiene los datos, y agregar la capa agéntica arriba.
 > Verificado vía WebFetch el 2026-09-30; las capas del pase 11, el 2026-10-01.
+> **Pase 48 del 2026-10-02:** 🔵 **sin verticales nuevas por TERCER pase consecutivo**, y el barrido obligatorio
+> (`open source platform education LMS SIS MIT Apache self-hosted`) devolvió **siete plataformas ya medidas y en este
+> archivo** —Moodle (**400 M** de usuarios y 150.000 sitios declarados por Moodle Pty Ltd), Open edX, **OpenEduCat**
+> (LMS+SIS+aranceles sobre una sola base), Canvas, Chamilo, ILIAS y Sakai— más glosarios del propio proveedor.
+> **Cero altas, declarado como tal.** 🔴 **Y la corrección que este pase le hace a este archivo, encontrada por un
+> instrumento nuevo y no a mano:** la fila de *proctoring* SEB publicaba **«11/11 checks»** —cifra del pase 40 que el
+> pase 44 había subido a **37/37**— **en una fila de catálogo que se lee como estado actual.** El pase 47 corrigió esa
+> misma cifra en `compose/patterns.md` y **no propagó**; `extract_figures.py --crossref` la encontró acá. **Corregida,
+> con la nota de qué decía antes.** ⚠️ **La regla que queda para este archivo: una fila de catálogo no es historia.**
+> Un número en una sección fechada de `*/trending.md` era verdadero cuando se escribió y se queda; **una fila de acá se
+> lee como «hoy», así que se corrige.**
 > **Pase 47 del 2026-10-02:** 🔵 **sin verticales nuevas por segundo pase consecutivo, y el barrido obligatorio lo
 > volvió a medir:** `open source platform education ERP CRM MIT Apache` devolvió **OpenEduCat** (ya en este archivo) y
 > **CK-ERP** (rastro vivo más reciente: **2010**, medido en el pase 46), más glosarios del propio proveedor. 🔴 **Pero la
@@ -1687,7 +1698,7 @@ permisiva y probada**:
 | Capa de la vertical | Plataforma | Licencia | Puerta de agente | Estado |
 |---|---|---|---|---|
 | **Horarios, aulas, exámenes académicos** | UniTime | 🟢 **Apache-2.0** | `compose/code/unitime-mcp-gate/` | **P85** / **P92** — 26 tools, 13 expuestas |
-| **Supervisión de examen (*proctoring*, SEB)** | SEB Server | 🟢 **Apache-2.0** | `compose/code/sebserver-mcp-gate/` | 🟢 **P93 — 79 tools, 36 expuestas, 11/11 checks** |
+| **Supervisión de examen (*proctoring*, SEB)** | SEB Server | 🟢 **Apache-2.0** | `compose/code/sebserver-mcp-gate/` | 🟢 **P93 — 79 tools, 36 expuestas, 37/37 checks** (🔴 *decía «11/11» — cifra del pase 40 que el pase 44 subió a 37; corregido en el pase 48 por `extract_figures.py --crossref`*) |
 | **Validación de proveedor de proctoring de terceros** | SEB Server | 🟢 **Apache-2.0** | `compose/code/seb-proctoring-validator/` | 🟢 **Gap 90 cerrado — 21/21 checks** |
 
 🔵 **Por qué esto importa como vertical y no sólo como patrón:** es la primera capa de esta KB donde **las dos

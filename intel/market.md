@@ -1166,6 +1166,17 @@ Dónde se produce el software educativo abierto, que no es donde está la demand
 ## Opportunities by region
 
 ### North America
+#### Pase 48 del 2026-10-02 — **confirmación completa, sin dato nuevo**, y se declara como tal
+
+Búsqueda corrida: `AI education North America 2026 adoption regulation players` (año **calculado**, no fijo).
+**Todo lo devuelto ya estaba registrado en esta base:** **134 proyectos de ley en 31 estados** (pase 23), **86 %** de
+adopción institucional, California **AB 1159** (prohíbe entrenar modelos con dato de alumno), Idaho **SB 1227**, el
+*Traffic Light Framework* de Nueva York (marzo 2026), la **K-12 AI Literacy and Readiness Act of 2026** y el marco
+estudiantil **STUDENTS FIRST Act of 2026** (AASA, julio 2026).
+🔴 **Cero altas, y el límite de la vía queda escrito:** la fuente primaria (`multistate.us`) está **bloqueada por el
+proxy de egreso** de este entorno, así que el conteo de proyectos **no se puede re-verificar de primera mano acá**. Se
+sigue citando como fuente secundaria concordante, igual que desde el pase 23 (**gap 65**, límite de clase).
+
 
 #### Pase 47 del 2026-10-02 — la cifra se reconfirma sin cambios, la fecha vencida llega a **once**, y el riesgo nuevo es de **entregable**, no de mercado
 
@@ -2118,6 +2129,17 @@ Artículo 50(2) **no es exigible** en North America — pero es **el requisito m
 multi-región conviene cotizarlo contra el techo europeo y no contra el piso local (ver **P103** y **P105**).
 
 ### EMEA
+#### Pase 48 del 2026-10-02 — **confirmación completa, sin dato nuevo**, y se declara como tal
+
+Búsqueda corrida: `AI education EMEA Europe 2026 adoption regulation players`.
+**Todo confirmado y ya registrado:** educación es **Anexo III** del AI Act → alto riesgo (acceso, evaluación,
+trayectoria); la fecha operativa es **2027-12-02** tras el *Digital Omnibus* (~16 meses de corrimiento, fijado en el
+pase 36 y re-confirmado acá); la **AI Office** y las autoridades nacionales **ejecutan desde el 2026-08-02**; el
+artículo **50(2)** de transparencia está **vigente**; y los colegios europeos están en **piloto y pre-cumplimiento**,
+no en *enforcement* pleno.
+🔴 **Cero altas, y el gap 92 sigue abierto:** el **texto consolidado del Reglamento (UE) 2024/1689** sigue inalcanzable
+desde esta red. Ocho fuentes secundarias concordantes, **cero primarias**.
+
 
 #### Pase 47 del 2026-10-02 — la demanda de formación se confirma alta, aparece un **patrón de ejecución estatal** nuevo, y el marcado del Artículo 50(2) pasa de especificado a **entregable con una condición dura**
 
@@ -3198,6 +3220,17 @@ concordantes**. El Artículo 50(2) —la obligación de transparencia del conten
 este pase dejó cubierto con código.
 
 ### APAC
+#### Pase 48 del 2026-10-02 — **confirmación completa, sin dato nuevo**, y se declara como tal
+
+Búsqueda corrida: `AI education APAC Asia Pacific 2026 adoption regulation players`.
+**Confirmado y ya registrado:** la **AI Framework Act** de Corea del Sur **vigente desde el 2026-01-22** con su decreto
+de aplicación; el dominio de **China, India y Japón** por inversión estatal; **~530 millones** de alumnos K-12 en Asia;
+y la adopción regional proyectada de **65-75 % (2025) a 80-90 % (2026)**.
+🔴 **Cero altas, y el vacío de ORIGEN APAC llega a su medición más larga.** Los actores que la búsqueda devuelve son
+**Google, Microsoft, IBM, Pearson y Byju's** — **plataformas comerciales, ninguna pieza open source de origen APAC**
+más allá de las dos filas que esta base ya tiene (`DeepTutor`/HKU y `OpenMAIC`/Tsinghua). **La ausencia es del canal de
+descubrimiento, no de la región**, y por sexto pase consecutivo no se cierra con búsqueda genérica.
+
 
 #### Agregado en el pase 42 del 2026-10-02 — soberanía como eje de compra, y la brecha de gobernanza con número
 
@@ -4063,6 +4096,19 @@ desplegado + puerta MCP permisiva (`jbnu-lms-mcp`, `canvas-lms-mcp`, las cuatro 
 depende de un tercero» son el mismo argumento.**
 
 ### LATAM
+#### Pase 48 del 2026-10-02 — **confirmación completa, sin dato nuevo**, y se declara como tal
+
+Búsqueda corrida: `AI education LATAM Latin America 2026 adoption regulation players`.
+**Todo confirmado y ya registrado:** el **Observatorio de IA en la Educación para América Latina y el Caribe** de
+UNESCO, lanzado el **2026-04-14**; **más del 50 % de los docentes** de Chile y Brasil ya usan herramientas de AI contra
+**menos del 10 % de las instituciones** con lineamientos formales — la brecha que esta base cita como su mejor dato
+regional; **Brasil** al frente en madurez y regulación, con **Chile** (**CENIA**) y **Uruguay** (primer firmante
+latinoamericano del Convenio Marco del Consejo de Europa) como pioneros; y la fragmentación normativa (proyecto
+brasileño, marco chileno, **CONPES** colombiano, reglas sectoriales mexicanas) como **sobrecosto de cumplimiento** para
+un cliente multi-país.
+🔴 **Cero altas.** El **gap 69** no se mueve: **INEP no publica API**, así que la oportunidad brasileña sigue siendo de
+**pipeline de ingesta (8-12 semanas)**, no de fachada.
+
 
 #### Agregado en el pase 42 del 2026-10-02 — la primaria de IESALC reaparece por un segundo canal, y el aviso de población se extiende
 

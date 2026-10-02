@@ -9,6 +9,44 @@ updated: 2026-10-02
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 > No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
 
+## 2026-10-02 (pase 48) — **SEXTO pase consecutivo sin altas de agente**, y el pase no se gastó buscándolas: se gastó en cerrar la única fila que le prometía a un cliente un artefacto inexistente
+
+**El barrido completo obligatorio se corrió igual —cuatro búsquedas globales y cuatro
+regionales, con el año CALCULADO (2026)— y devolvió por sexta vez la misma capa.** La tabla de
+`agents/top.md` **se queda en 66 filas**. Lo que sí rindió este pase son **las tres acciones que
+el pase 47 dejó escritas**: las tres se ejecutaron, las tres dejan código que corre en este
+repositorio, y **dos de ellas corrigen afirmaciones propias de esta base**.
+
+### Los candidatos del barrido, uno por uno, y por qué ninguno entra
+
+| Candidato | De dónde salió | Veredicto |
+|---|---|---|
+| **Hermes Agent** (Nous Research, MIT) | «top open source AI agents education 2026 github MIT» | 🔴 **Agente genérico** — ya rechazado en el pase 47, se vuelve a registrar porque reapareció primero |
+| **OpenClaw** (385 k ★), **CrewAI**, **LangGraph**, **browser-use**, **Dify**, **Flowise**, **AutoGen**, **Langflow** | global | 🔴 **La capa genérica** que esta KB customiza, no una pieza educativa |
+| `ashishpatel26/500-AI-Agents-Projects` | global | 🔴 **Lista curada**, no software que educa — la clase que el pase 23 midió |
+| `caramaschiHG/awesome-ai-agents-2026` | «github trending education AI 2026» | 🔴 Ídem: catálogo |
+| `rohitg00/ai-engineering-from-scratch`, DeepLearning.AI / HuggingFace / LangGraph Academy, *GenAI for Beginners* | «github trending education AI 2026» | 🔴 **Material didáctico *sobre* AI** — currículo, no pieza que educa |
+| `speedyapply/2026-AI-College-Jobs` | global | 🔴 **Bolsa de trabajo.** Segunda aparición; ya estaba registrada como rechazo |
+| **`lineage-skill`** y **`SirhanMacx/Claw-ED`** | «github trending education AI 2026» | ⚠️ **Los dos YA ESTÁN en esta base** — `lineage-skill` se cita en siete archivos y `Claw-ED` fue el duplicado que el gap 71 cerró. **El barrido los devolvió como si fueran nuevos: es confirmación, no alta** |
+| **OpenEduCat**, **Moodle**, **Open edX**, **Chamilo**, **ILIAS**, **Sakai**, **Canvas** | «open source platform education LMS SIS MIT Apache self-hosted» | ⚠️ **Los siete ya medidos** y en `verticals/solutions.md` |
+
+🔵 **La lectura que importa, y es sobre el instrumento:** el barrido genérico devolvió **dos
+piezas que esta KB ya tenía** (`lineage-skill`, `Claw-ED`) **presentadas como novedad**. Cuando
+una búsqueda de descubrimiento empieza a devolver el propio inventario, **ha dejado de ser una
+búsqueda de descubrimiento**. Las cuatro búsquedas globales se siguen corriendo porque son
+obligatorias y porque un cambio de capa hay que verlo, pero **el rendimiento marginal medido es
+cero por sexto pase**, y el valor del pase viene de medir lo que ya está, no de buscar más.
+
+### 🔴 Y una cifra de esta tabla que el pase 48 corrigió: la suite de `aiact-50-2-pack`
+
+El `--crossref` nuevo (ver `repos/trending.md` de este pase) marcó **`agents/trending.md:42`**
+como cifra vencida: *«`aiact-50-2-pack`, **37/37** aserciones»* contra **27/27** medido hoy.
+**Es un FALSO POSITIVO, y la causa vale más que el hallazgo:** la frase sigue en la línea
+siguiente —*«con `xmllint` y **27/27** sin él»*— y **el escáner leía una línea a la vez sobre un
+documento con prosa cortada a ~100 caracteres**, así que la condición quedaba fuera de la
+ventana. La cifra de esta tabla **estaba bien y estaba condicionada**. El escáner se arregló
+(ventana por párrafo para prosa, por fila para tablas) y la cifra se queda como estaba.
+
 ## 2026-10-02 (pase 47) — el pase que **convierte el hallazgo del 46 en un paquete marcado y, al hacerlo, lo corrige**: 🔴 **el mismo generador emite DOS dialectos, el comodín de SCORM 1.2 es `strict`, y el validador que esta KB recomienda rechaza los metadatos del propio estándar**
 
 **Las tres acciones del pase 46 se ejecutaron. Las tres rindieron, las tres dejan código que corre

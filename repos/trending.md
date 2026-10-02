@@ -8,6 +8,119 @@ updated: 2026-10-02
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 
+## 2026-10-02 (pase 48) — **el dato crudo: 3.611 cifras inventariadas en los OCHO archivos, el 50,8 % no re-verificable acá, 1 cifra vencida de verdad, y 7 saltos de procedencia trazados hasta la pantalla**
+
+Las tres acciones del pase 47 se ejecutaron. Todo lo de abajo se **midió con un comando** en
+este repositorio o sobre un clon `--filter=blob:none --sparse`, y **las tres carpetas nuevas de
+`compose/code/` fallan si el upstream cambió**.
+
+### 🔵 El inventario de cifras, por archivo — y el pase 47 barrió justo el archivo MENOS denso
+
+`python3 compose/code/patterns-figure-audit/extract_figures.py --all` (la ruta pasó a ser un
+parámetro, que es lo que pedía la acción 2).
+
+| Archivo | Líneas | KB | Cifras | Cifras / kilolínea |
+|---|---|---|---|---|
+| `agents/top.md` | 2.191 | 315 | 405 | 🔴 **184,8** — el más denso |
+| `intel/market.md` | 5.232 | 546 | **907** | 🔴 **173,4** |
+| `intel/trends.md` | 8.010 | 885 | **750** | 93,6 |
+| `agents/trending.md` | 5.495 | 477 | 522 | 95,0 |
+| `repos/trending.md` | 3.945 | 339 | 295 | 74,8 |
+| `repos/foundations.md` | 2.855 | 283 | 205 | 71,8 |
+| `verticals/solutions.md` | 1.785 | 180 | 144 | 80,7 |
+| `compose/patterns.md` | 5.863 | 508 | 383 | 🔵 **65,3** — el MENOS denso |
+| **TOTAL** | **35.376** | | **3.611** | **102,1** |
+
+🔴 **Dos hallazgos, y el segundo es el que cambia cómo se cita esta base:**
+
+1. **El pase 47 eligió `compose/patterns.md` por ser el activo más citado, y resultó ser el
+   archivo con MENOR densidad de cifras de los ocho.** Concluyó una tasa de falla del **1,0 %**
+   sobre **368** mediciones. Los dos archivos que nunca se habían barrido, `intel/market.md` y
+   `intel/trends.md`, **tienen 1.657 cifras entre los dos — el 46 % del total de la base.**
+2. 🔴 **1.836 de las 3.611 cifras (el 50,8 %) NO son re-verificables en este entorno.**
+   Desglose: **1.042 estrellas**, **418 commits**, **326 conteos de tools**, **50 descargas**.
+   Son propiedades del canal, no de la base —`github.com` da 403 a curl y `api.github.com`
+   niega en el cuerpo (pase 37)— pero **la consecuencia comercial hay que escribirla: más de la
+   mitad de las cifras de esta KB no se pueden refrescar desde acá.** Las **1.775 restantes**
+   sí, y son las que valen para una propuesta: líneas, aserciones, rutas, métodos, archivos.
+
+### 🟢 `--crossref`: el defecto que el pase 47 no vio, porque arregló una cifra en UN archivo
+
+La acción 2 pedía barrer cifras. El barrido encontró algo más preciso: **el pase 47 corrigió
+«11/11 checks» en `compose/patterns.md` y la misma cifra siguió viva en otros archivos.**
+**El defecto no es que una cifra se venza: es que una CORRECCIÓN NO SE PROPAGA**, porque una
+sola medición se cita hasta en diez lugares de ocho archivos.
+
+Por eso el instrumento pasó a ser cruzado: `extract_figures.py --crossref` **vuelve a correr las
+ocho suites** y atribuye cada cita de un conteo de checks.
+
+| Suite | Conteo medido hoy | Condición |
+|---|---|---|
+| `unitime-mcp-gate` | **46** | — |
+| `sebserver-mcp-gate` | **37** | — |
+| `mcp-allowlist-gateway` | **34** | 🆕 **nueva en este pase** |
+| `openedx-course-generator` | **33** | — |
+| `aiact-50-2-pack` | **27** | 37 con los dos directorios de esquemas |
+| `aiact-50-2-marking` | **23** | 24 con `--with-xmllint` + `SCORM_SCHEMAS` |
+| `seb-proctoring-validator` | **21** | — |
+| `proctoring-reach-audit` | **19** | 20 con la ruta a un checkout de seb-server |
+
+**Resultado final: 15 citas concuerdan, 0 vencidas, 0 sin condición** — después de corregir tres
+cosas, dos de ellas del instrumento:
+
+| Hallazgo | Veredicto | Qué se hizo |
+|---|---|---|
+| `verticals/solutions.md:1690` — *«79 tools, 36 expuestas, **11/11** checks»* | 🔴 **VENCIDA DE VERDAD, y en una fila de catálogo que se lee como estado actual** | Corregida a **37/37**, con la nota de qué decía antes |
+| `intel/trends.md:5056` — *«`aiact-50-2-marking`, **24/24**, sólo stdlib»* | ⚠️ **Real pero SIN CONDICIÓN escrita** (la corrida desnuda da 23) | Condición agregada en el sitio de la cita |
+| `repos/foundations.md:2827` — *«20 aserciones»* | ⚠️ **Real pero SIN CONDICIÓN escrita** (19 sin la ruta) | Condición agregada |
+
+🔵 **Y tres reglas de instrumento que salieron de hacerlo, cada una encontrada porque el
+instrumento falló primero:**
+
+1. 🔴 **La ventana de lectura tiene que seguir la ESTRUCTURA del documento.** Por línea, el
+   escáner perdía la condición que vivía una línea más abajo (prosa cortada a ~100 caracteres) →
+   **1 falso positivo**. Por párrafo, se comía las filas vecinas de una tabla markdown, que no
+   llevan línea en blanco entre sí → **3 hallazgos se volvieron 9, y 6 eran fabricados por la
+   ventana**. La regla: **fila de tabla ⇒ la ventana es la fila; prosa ⇒ la ventana es el
+   párrafo.**
+2. **Una cifra que coincide con una de varias suites nombradas en la ventana pertenece a ÉSA.**
+   Cargársela a todas fabrica hallazgos — es lo que produjo el falso positivo de
+   `foundations.md:2827`, que nombra dos suites.
+3. **Una cifra condicional no es una cifra vencida.** El instrumento ahora distingue
+   `STALE` de `COND` (real, pero la condición no viaja con la cita), porque la acción es
+   distinta: una se corrige, la otra se completa.
+
+⚠️ **Y el límite declarado: 29 citas quedaron `unattributed`** — no nombran su suite en la
+ventana. **No se adivinan**, porque adivinar es exactamente lo que produjo las cifras vencidas.
+
+### 🟢 `project-nomad`, leído de punta a punta: la procedencia LLEGA al alumno, y llega hasta la pantalla
+
+Acción 3 (**gap 104**). `compose/code/nomad-citation-trace/`, **32/32**, sobre un clon
+`--filter=blob:none` con `sparse-checkout` de `admin/app`, `admin/types`,
+`admin/inertia/components/chat` y `admin/database/migrations`, rama `main` al **2026-10-02**.
+
+**Siete saltos, cada uno una aserción que falla si el upstream cambia:**
+
+| # | Salto | Evidencia |
+|---|---|---|
+| 1 | Recuperación **emite** la identidad | `rag_service.ts` — el `metadata` de retorno lleva `source`, `document_id`, `archive_title`, `archive_date`, `chunk_index` |
+| 2 | El prompt inyectado **rotula** cada bloque | `rag_prompt.ts` → `[Context N — Título (fecha)]`, **deliberadamente sin el score** |
+| 3 | Se construye la **lista de citas** | `buildCitations`, alimentada de **lo inyectado, no de todo lo recuperado** |
+| 4 | La **forma** que cruza al cliente | `types/chat.ts` → `ChatSource = { title, date?, source? }` |
+| 5 | Se **persiste** | migración `1785468975052`, columna `sources` *text nullable* en `chat_messages` |
+| 6 | Se **devuelve** | `JSON.parse(msg.sources)` en el historial, objeto directo en la respuesta nueva |
+| 7 | La UI lo **renderiza** | `ChatMessageBubble.tsx`, bajo la respuesta del asistente |
+
+🔵 **Un regalo del árbol:** el propio upstream dejó escrito que `source` *«previously dropped
+here»* hacía imposible mapear un *chunk* a su documento, **y lo arreglaron para citas y para
+`recall@k`**. La mitad que el pase 47 no pudo ver **ya la había construido el proyecto.**
+
+🔴 **Pero el límite decide qué puede prometer P108, y se prueba por AUSENCIA:** `ChatSource`
+tiene **tres campos** y **ninguno es de tramo** (`offset`/`index`/`span`) ni distingue **cita
+textual de síntesis**; y `buildCitations` **deduplica por documento**. **La unidad de
+procedencia de esta arquitectura es el DOCUMENTO, por diseño y con razón escrita, no por
+olvido.** Concuerda con el gap 99 del pase 47 y lo precisa. Cotización en **P108**, corregida.
+
 ## 2026-10-02 (pase 47) — **el dato crudo: 2 comodines que no coinciden, 3 de 3 «handles» que se caen al abrirlos, 163 cifras que un `\b` se comía, y 1 import que falta en un esquema**
 
 Todo lo de abajo se leyó del árbol con `git clone --depth 1 --filter=blob:none --sparse` o con

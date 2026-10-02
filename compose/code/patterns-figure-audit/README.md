@@ -19,6 +19,72 @@ python3 extract_figures.py --check    # + vuelve a correr los instrumentos local
 python3 extract_figures.py --tsv      # una fila por cifra, legible por máquina
 ```
 
+## 🟢 Pase 48: el barrido pasa de UN archivo a los OCHO, y el defecto real resulta otro
+
+```sh
+python3 extract_figures.py --all        # inventario por archivo, los ocho
+python3 extract_figures.py --crossref   # re-corre las 8 suites y atribuye cada cita
+python3 extract_figures.py <ruta>       # cualquier archivo suelto
+```
+
+**El inventario completo: 3.611 mediciones en 35.376 líneas.**
+
+| Archivo | Líneas | Cifras | Cifras / kilolínea |
+|---|---|---|---|
+| `agents/top.md` | 2.191 | 405 | 🔴 **184,8** |
+| `intel/market.md` | 5.232 | **907** | 🔴 **173,4** |
+| `agents/trending.md` | 5.495 | 522 | 95,0 |
+| `intel/trends.md` | 8.010 | **750** | 93,6 |
+| `verticals/solutions.md` | 1.785 | 144 | 80,7 |
+| `repos/trending.md` | 3.945 | 295 | 74,8 |
+| `repos/foundations.md` | 2.855 | 205 | 71,8 |
+| `compose/patterns.md` | 5.863 | 383 | 🔵 **65,3** |
+| **TOTAL** | **35.376** | **3.611** | **102,1** |
+
+🔴 **Dos hallazgos de escala:**
+
+1. **El pase 47 barrió `compose/patterns.md` por ser el activo más citado, y es el archivo con MENOR densidad de
+   cifras de los ocho.** Los dos que nunca se barrieron, `intel/market.md` e `intel/trends.md`, suman **1.657 cifras —
+   el 46 % de la base.**
+2. 🔴 **1.836 de 3.611 (el 50,8 %) NO son re-verificables en este entorno:** **1.042** `★`, **418** `commits`,
+   **326** conteos de `tools`, **50** descargas. Las **1.775** restantes sí lo son, y son las únicas que una propuesta
+   puede defender hoy.
+
+## 🟢 `--crossref`: el defecto NO era que una cifra se venza
+
+**El pase 47 corrigió «11/11 checks» en `compose/patterns.md`. La misma cifra siguió viva en otros archivos.**
+**Una corrección no se propaga**, porque una sola medición se cita hasta en diez lugares de ocho archivos. Por eso el
+instrumento ahora **vuelve a correr las ocho suites** y atribuye cada cita de un conteo de *checks*.
+
+| Suite | Hoy | Condición |
+|---|---|---|
+| `unitime-mcp-gate` | **46** | — |
+| `sebserver-mcp-gate` | **37** | — |
+| `mcp-allowlist-gateway` | **34** | nueva en el pase 48 |
+| `openedx-course-generator` | **33** | — |
+| `aiact-50-2-pack` | **27** | **37** con los dos directorios de esquemas |
+| `aiact-50-2-marking` | **23** | **24** con `--with-xmllint` + `SCORM_SCHEMAS` |
+| `seb-proctoring-validator` | **21** | — |
+| `proctoring-reach-audit` | **19** | **20** con la ruta a un checkout de seb-server |
+
+**Estado al cierre del pase 48: 15 citas concuerdan, 0 vencidas, 0 sin condición.** Se corrigieron **1 cifra vencida
+real** (`verticals/solutions.md:1690`, «11/11» → **37/37**, en una fila de catálogo que se lee como estado actual) y
+**2 condiciones sin escribir** (`repos/foundations.md`, `intel/trends.md`).
+
+### 🔴 Y tres reglas de instrumento, cada una encontrada porque el instrumento falló primero
+
+1. **La ventana de lectura sigue la ESTRUCTURA del documento.** Por **línea** se perdía la condición que vivía una
+   línea más abajo (la prosa va cortada a ~100 caracteres) → **1 falso positivo**. Por **párrafo** se comía las filas
+   vecinas de una tabla markdown, que no llevan línea en blanco entre sí → **3 hallazgos se volvieron 9, y 6 los
+   fabricó la ventana**. **Regla: fila de tabla ⇒ la ventana es la fila; prosa ⇒ el párrafo.**
+2. **Una cifra que coincide con una de varias suites nombradas en la ventana pertenece a ÉSA.** Cargársela a todas
+   fabrica hallazgos.
+3. **Condicional ≠ vencida.** `STALE` se corrige; `COND` se completa. Son acciones distintas.
+
+⚠️ **Límite declarado: 29 citas quedan `unattributed`** —no nombran su suite en la ventana— **y no se adivinan**,
+porque adivinar es lo que produjo las cifras vencidas. ⚠️ **Y una cifra CONTADA no es una cifra VERIFICADA:** el
+inventario localiza, la verificación es por cifra y sólo las que apuntan a código de esta base son reproducibles acá.
+
 ## 🔴 Lo primero que encontró el barrido fue un error del barrido
 
 La primera versión reportó **205 mediciones** sobre el archivo tal como estaba al empezar el pase. La real era
