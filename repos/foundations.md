@@ -1,7 +1,7 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-01
+updated: 2026-10-02
 ---
 
 # 🏗️ Repos fundacionales — education
@@ -26,6 +26,141 @@ updated: 2026-10-01
 
 > **Pase 28 del 2026-10-01:** **se ejecuta la acción 1 del pase 27 y el gap 48 queda contestado leyendo el código fuente**, no la documentación (`docs.openedx.org` y `openedx.atlassian.net` están **los dos bloqueados**; `raw.githubusercontent.com` **sí responde**, y es un canal de verificación nuevo para esta KB). **La respuesta es doble:** la API REST de Open edX **alcanza y escribe** para matrícula, roles, bloques de curso y **notas —incluido el lote—**, pero el ***authoring* de Studio está declarado experimental por el propio proyecto**. Eso parte el gap 48 en dos y abre el **gap 50**. Ver la sección del pase 28, abajo.
 > **Pase 29 del 2026-10-01:** **se ejecutan las tres acciones del pase 28, y la primera refuta la conclusión del pase que la pidió.** 🔴 **El *authoring* de Open edX NO está bloqueado por estado experimental.** El aviso que el pase 28 citó vive en `v1/urls.py`, **está fechado «(Nov. 23)» y encabeza una sección sin rutas**; `v0/views/xblock.py` dice **lo contrario** (*«superseded by `XblockViewSet`… use `/api/contentstore/v1/xblock/` going forward»*) y **`v1/urls.py` registra ese `XblockViewSet` con CRUD completo** bajo los ADRs de **FC-0118** —incluido un **`?view=minimal`** (ADR 0036) que recorta el árbol del curso, que es justo lo que necesita un agente. **Deprecación circular: gana la señal vigente.** Y aparece lo que el pase 28 no vio: **cinco versiones de API montadas a la vez** (`v0`–`v4`), con las notas en **tres** de ellas. ✅ **Alta nueva de base: [`1EdTech/OpenCASE`](https://github.com/1EdTech/OpenCASE) (**Apache-2.0**, 9 ★, 180 commits)** — la implementación de referencia de **CASE 1.0 y 1.1** del propio organismo, con **CASE Provider API oficial**, versionado inmutable en archivos, Keycloak + API keys, RBAC de 4 niveles y 🔵 **endpoint propio de descubrimiento OpenAPI 3**. **Cierra el gap 51** y abre el **gap 52**. Ver la sección del pase 29, abajo.
+
+> **Pase 30 del 2026-10-02:** **el gap 52 cierra leyendo cinco archivos del árbol `main` de OpenCASE, y la contradicción entre sus dos documentos tiene una regla que ninguno enuncia:** el segmento `ims/case/v1pX` aparece **sólo** cuando la operación actúa sobre una entidad del estándar CASE, nunca en las rutas de plataforma. **72 rutas contadas** (24 de lectura —el juego completo en **v1p0 y v1p1**—, 44 de management, **2 de descubrimiento** y 2 de servicio). 🔵 **Tres hallazgos abaratan P60:** hay **dos** endpoints OpenAPI (uno por versión) y **sin auth**; la lectura usa **auth opcional** (marcos públicos sin credenciales ni tenant); y aparece **CGE — CASE Global Exchange**, **11 rutas de federación** que permiten **suscribirse** a marcos del registro global en vez de cargarlos. 🔴 **Pero la escritura no es parte del estándar y lo declara el código**, así que sólo la mitad de lectura es portable. 🔴 **Open edX cambia de estado: ya tiene puerta de agente, y es AGPL-3.0 y corre EN PROCESO** (`openedx-mcp` + `tutor-contrib-openedxmcp`, 2026-07-25) — con lo que **el riesgo de adaptador de versiones del pase 29 no se paga por ese camino, y la autoría queda confirmada por implementación**. ✅ **Alta nueva:** [`instructure/qti`](https://github.com/instructure/qti) (**MIT**, 174 commits), que cubre **QTI 1.2** —el acervo legado del que parte **P48**— y que `examplary/qti` no cubría. ✅ **Y se cierran dos nombres: `.LRN` (vivo pero GPL-2.0 y en CVS) y `CK-ERP` (muerto desde 2012).** Ver la sección del pase 30, abajo.
+
+## 🧭 Las rutas de OpenCASE resueltas, la capa de federación que nadie vio, y dos nombres que se cierran — pase 30 del 2026-10-02
+
+**Tres bases quedan mejor medidas en este pase y las tres por lectura de primera mano: dos leyendo código fuente y una
+leyendo el registro de paquetes. Y entra una base nueva en la capa de evaluación.**
+
+### OpenCASE — `1EdTech/OpenCASE` (Apache-2.0, 9 ★, 180 commits) → **gap 52 CERRADO**
+
+✅ **La acción 1 del pase 29 se ejecutó leyendo cinco archivos de `main`, y la contradicción entre los dos documentos del
+repo tiene una explicación que ninguno de los dos enuncia:**
+
+> 🔵 **El segmento `ims/case/v1pX` aparece exactamente cuando la operación actúa sobre una entidad del estándar CASE.
+> Nunca aparece en las rutas de plataforma.**
+
+`FRAMEWORK_EDITOR_BACKEND_INTEGRATION.md` **es el documento correcto** (sus dos formas existen literales en el código);
+`DEVELOPER.md` **está equivocado** para entidades CASE (`PUT /management/tenants/{id}/CFItems/{id}` **no existe**). El
+error del doc se explica: **el *listado* de paquetes sí va sin prefijo** (`GET /management/tenants/{tenantId}/CFPackages`),
+porque es plataforma y no estándar.
+
+**La superficie, contada: 72 rutas.**
+
+| Bloque | Rutas | Nota |
+|---|---|---|
+| Lectura CASE `v1p1` | **12** | `CFDocuments`, `CFItems`, `CFAssociations`, `CFItemAssociations`, `CFRubrics`, `CFSubjects`, `CFConcepts`, `CFAssociationGroupings`, `CFItemTypes`, `CFLicenses`, `CFPackages` |
+| Lectura CASE `v1p0` | **12** | 🔵 **El juego completo también en 1.0** — las dos versiones del estándar están montadas enteras |
+| Management | **44** | **20 con prefijo** (escritura CASE en ambas versiones) + **24 sin prefijo** (plataforma) |
+| Descubrimiento OpenAPI 3 | **2** | 🔵 **Uno por versión**, y **sin autenticación** |
+| `public` + `health` | 2 | `GET /public/tenant-lookup`, `GET /health` |
+
+**Los tres datos que cambian la cotización de P60:**
+
+1. 🔵 **Dos endpoints de descubrimiento, no uno.** Además del `v1p1` que el pase 29 registró, existe
+   `GET /ims/case/v1p0/discovery/imscasev1p0_openapi3_v1p0.json`. Los dos se montan **antes** de los *middlewares* de
+   auth: *«Service Discovery endpoints (no auth required)»*. **Se generan dos conectores sin pedir credenciales.**
+2. 🔵 **La lectura es de autenticación OPCIONAL.** El código monta `makeOptionalAuthMiddleware` en `/ims/case`:
+   *«frameworks marked public are readable without auth… IDs are globally unique so no tenantId is needed for read
+   endpoints»*. **Un conector de sólo lectura sobre marcos públicos no necesita credenciales ni tenant** — el escalón de
+   entrada más barato de toda esta KB. `/management` sí exige auth estricta.
+3. 🔴 **La escritura NO es parte del estándar, y lo dice el código:** *«These operations are **NOT part of the CASE
+   standard specification** and are provided as extended functionality.»* **La mitad de lectura del conector es portable a
+   cualquier proveedor CASE certificado; la mitad de escritura es específica de OpenCASE.** Hay que decirlo antes de
+   cotizar.
+
+🔵 **Y la capa que nadie había registrado: CGE — CASE Global Exchange, 11 rutas de federación.** `credentials`
+(GET/PUT/DELETE) + `credentials/test`, `frameworks` y `frameworks/{id}` contra el **registro global**, `subscriptions`
+(POST/GET), `import`, `frameworks/{id}/refresh` y `cache/{docId}/items`. **Cambia el alcance de un proyecto de
+competencias de «digitalizar el currículum» a «suscribirse y alinear», que es más barato y más defendible.**
+
+| Lo demás, medido | |
+|---|---|
+| Stack | **Express 5**, TypeScript, Apache-2.0 (verificado en `package.json`) |
+| 🔵 Spec | **`swagger-jsdoc` es dependencia: el OpenAPI se genera de anotaciones del código**, así que el código es la fuente autoritativa y el spec no puede atrasarse |
+| Scopes | `case.read`, `case.write`, `case.admin`, `case.owner` (`requireScope`/`requireAnyScope`), anotados como `x-required-scopes` |
+| Ciclo de vida | 🔵 `POST .../CFPackages/{id}/restore` — archivado y restauración, que el pase 29 no tenía |
+| Cuerpo | 50 MB, coherente con importar paquetes CASE grandes |
+| 🔴 Endurecimiento obligatorio | **`cors({ origin: true, credentials: true })`** con el comentario *«restrict in production»* **en el propio código** |
+
+⚠️ **El límite honesto: no se levantó instancia.** Las 72 rutas son lectura de código de `main`, no tráfico observado, y
+**el OpenAPI generado no se pidió al endpoint de descubrimiento**. Es la **acción 2 del pase 31**, y es una tarde con
+`docker-compose up`. 🔴 **Canales: `raw.githubusercontent.com` responde; `codeload.github.com` devuelve 403** (no se puede
+bajar el tarball) y la API de GitHub está cerrada para repos fuera del alcance de la sesión.
+
+### Open edX — la base cambia de estado: **ya tiene puerta, y es AGPL y en proceso**
+
+🔴 **`openedx-mcp` (AGPL-3.0, 0.1.5) + `tutor-contrib-openedxmcp` (AGPL-3.0, 0.1.7), publicados el 2026-07-25.** Para esta
+vista de *foundations* lo que importa es la **decisión de arquitectura**, porque responde el **gap 50** que este archivo
+dejó abierto:
+
+> *«Pure Open edX: every operation is implemented against native openedx-platform **Python APIs**. No third-party stack.»*
+> *«Installs into BOTH the LMS and the CMS process via the standard Open edX djangoapp plugin entry points, because
+> course-authoring operations must run in the CMS (they touch the modulestore).»*
+
+🔵 **La rotación de versiones `v0`–`v4` que el pase 29 midió y cotizó como «riesgo de adaptador» NO se paga por este
+camino: el plugin no usa la API REST, corre adentro contra las APIs Python.** Esa es la respuesta del proyecto al problema
+que esta KB documentó. ⚠️ **Y es la misma decisión que obliga al AGPL.** ✅ **La autoría queda confirmada por
+implementación** (7 rutas en el CMS, incluida **`blocks/create-tree`**), lo que cierra en firme la refutación que el pase
+29 hizo del pase 28. **El mapa de versiones REST del pase 29 sigue siendo válido y sigue siendo el camino de cualquier
+conector permisivo *out-of-process*** — ver **P61**.
+
+### Alta nueva de base: `instructure/qti` (**MIT**, 8 ★, 10 forks, 174 commits, Ruby)
+
+**Entra porque cubre la pata que `examplary/qti` no cubre: el formato legado.**
+
+| | `examplary/qti` (pase 28) | `instructure/qti` (este pase) |
+|---|---|---|
+| Versiones QTI | **3.0** (default) y 2.1 | 🔵 **1.2** y 2.1 |
+| Dirección | Genera y parsea | ⚠️ **Sólo importa y parsea** |
+| Lenguaje | TypeScript | Ruby |
+| MCP | 🔴 No (control negativo) | 🔴 No — **0 menciones en el README crudo** |
+
+**QTI 1.2 es el formato en que están los acervos viejos**, y **P48** empieza justamente por migrar un acervo viejo.
+⚠️ **Pero conviene decir con precisión qué agrega, porque la tentación era sobrevenderlo: P48 YA nombraba herramienta para
+esa pata** —`LongsightGroup/qti3` (**MIT**, 12 paquetes, 667 commits), que además **migra** QTI 1.2/2.x a autoría QTI 3—, así
+que **`instructure/qti` no llena un hueco: es una alternativa de lectura en Ruby**. Sirve si el stack del cliente es Ruby, o
+como **segundo parser para validar la migración contra el primero**, que en un acervo grande es trabajo real. ⚠️ **Límite medido:** los
+tipos de interacción soportados son **True/False, Multiple Choice y Multiple Answer** — un banco con *matching*,
+*ordering* o respuesta construida **no entra entero** y eso es alcance, no detalle.
+
+### ✅ `.LRN` / dotLRN: el nombre se cierra, y **no por estar muerto**
+
+La **acción 3 del pase 29** pedía verificar si estaba vivo y, si no, declararlo muerto. 🔴 **El pronóstico era el
+equivocado: está vivo.** Pero el cierre igual corresponde, por otras dos razones:
+
+| Qué se midió | Resultado (lectura de primera mano del árbol git) |
+|---|---|
+| Versión real | 🔵 **dotLRN 2.10.1**, con **`<release-date>2024-09-02</release-date>`** leído de `dotlrn.info`. ⚠️ **Y eso corrige la fuente secundaria Y el borrador de este pase, que decían «2.9.0 / 2.9.1 con soporte CSP»: el árbol va una menor por delante de lo que dice la web** |
+| Antigüedad | **Dos años** desde la última release declarada. **Ni muerto ni vivo-y-activo: lento** |
+| Licencia | ✅ **GPL-2.0 verificado en `license.txt`** (*«GNU GENERAL PUBLIC LICENSE Version 2, June 1991»*), **no por fuente secundaria**. 🔴 **No pasa el filtro permisivo, y eso basta para no proponerlo** |
+| Núcleo | `openacs/openacs-core`, **GPL-2.0**, 50 ★, 19 forks, 7.600 commits. 🔵 **`acs-kernel.info` declara `6.0.0d2`** — una 6.0 en desarrollo, así que el núcleo está **más vivo** que el «5.10.1» que muestra el README (5.10.1 es la versión que dotLRN *requiere*, no la del núcleo) |
+| Metadatos | `<maturity>2</maturity>`, *«A Course Management System»*, vendor **DotLRN Consortium** |
+| VCS canónico | 🔴 **CVS** (`cvs.openacs.org`, `fisheye.openacs.org`), con el espejo en git. **Por eso ningún barrido de GitHub lo devuelve** |
+
+🔴 **Y una corrección de este pase sobre sí mismo, que conviene dejar escrita porque el error es de método.** El primer
+sondeo de este pase concluyó que el espejo `openacs/dotlrn` *«no es una fuente usable»* porque pidió `README.md` en `main`
+y `master` y las dos dieron 404. **Es falso: el repo tiene contenido y se lee bien** — lo que no tiene es un `README.md`,
+porque es un paquete **APM** de OpenACS y su metadato vive en **`dotlrn.info`**. `dotlrn.info` responde **200 en `main`,
+`master`, `HEAD` y `oacs-5-10`.
+
+> **Regla: «no hay README» no es «no hay repo».** Antes de declarar un espejo vacío hay que pedir **el archivo que ese
+> ecosistema usa** —`dotlrn.info` / `*.info` en OpenACS, `*.gemspec`, `pom.xml`, `composer.json`— y no sólo `README.md`.
+> **Es el mismo error de muestreo que esta KB viene corrigiendo desde el pase 25, ahora en el canal de verificación.**
+
+**Cierre del nombre: `.LRN` está vivo pero lento (última release 2024-09-02), es GPL-2.0 verificado, y su desarrollo
+canónico vive en CVS. No se propone —la licencia alcanza para eso— pero queda registrado con número de versión y fecha,
+que es lo que evita volver a investigarlo entero en el próximo barrido.**
+
+⚠️ **`openacs.org` devuelve 403 por el proxy** (dominio nuevo del registro de bloqueos, junto con `openedx.org`), así que
+**todo lo de arriba sale del árbol git y no de su web.**
+
+✅ **Y `CK-ERP` se declara muerto:** última release **v0.31.1 de abril de 2012**, SourceForge, conector para Drupal 7.12.
+Tenía módulos educativos reales (*Teacher, Student, Applicant, Family, Registrar, Edu Administration*), y por eso conviene
+anotarlo: **es el tipo de nombre que un barrido de «education ERP open source» va a devolver otra vez.**
+
 
 ## El lado plataforma de LTI queda cerrado, y Open edX queda como la base sin puerta — agregado en el pase 27 del 2026-10-01
 

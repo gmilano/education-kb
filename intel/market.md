@@ -1,7 +1,7 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-01
+updated: 2026-10-02
 ---
 
 # 🗺️ Mapa de mercado — Education
@@ -1416,6 +1416,24 @@ conector en el camino de menor fricción regulatoria de la región.
 más un hiperescalar impuesto, y lo que le falta es **alineación de contenido a estándares estatales con expediente
 auditable** — OpenCASE + agente de *tagging* con compuerta humana.
 
+**Pase 30 (2026-10-02) — la cifra se reconfirma y el dato nuevo es el primero de esta KB que es *curricular obligatorio*,
+no de gasto ni de prohibición.**
+El barrido devuelve otra vez **$951M (2024) → $2.303,2M (2029), CAGR 15,9 %** y **36 % de participación global** (regla
+del pase 13: se cita con fuente y año, no se promedia). Se reconfirman también **10 % de instituciones con guías formales**
+y **71 % de docentes sin formación**, y la prohibición de decisión autónoma en **Maryland** y **Oklahoma**.
+
+🔵 **Lo nuevo, y cambia el tipo de comprador:** **Boston Public Schools es el primer distrito grande de EE. UU. que
+convierte la *AI fluency* en requisito de graduación, a partir de septiembre de 2026**, y hay legislación en seguimiento en
+**25 estados** para meter ética de AI en el currículum K-12, con **California** y **New Jersey** señalados.
+
+**Por qué importa para el studio.** Las tres cifras que esta KB ya tenía describían un comprador *descentralizado y sin
+preparación*. Ésta describe algo distinto: **una obligación con fecha**. Un requisito de graduación no se satisface con una
+herramienta — necesita **currículum, evaluación de la competencia y evidencia auditable de que el alumno la alcanzó**, que
+es exactamente la cadena que esta KB tiene armada en permisivo: **CASE/OpenCASE** para declarar la competencia (con
+**CGE** se puede *suscribir* el marco en vez de redactarlo), **QTI** para los ítems —y con `instructure/qti` también el
+acervo **1.2** legado—, **xAPI** para la evidencia y **CaSS** para la aserción. **Es el primer mercado de esta KB donde el
+entregable es un expediente de competencia y no un asistente.** Ver **P48**, **P60** y **P62**.
+
 ### EMEA
 
 **Pase 28 (2026-10-01) — 🔴 el reloj se terminó: el régimen de alto riesgo del Annex III es derecho aplicable desde el
@@ -1970,6 +1988,29 @@ secundarias de este barrido repiten *«implementación por fases a lo largo de 2
 *«pilot-and-pre-compliance»*. **Esta KB sostiene la fecha del instrumento primario para el Anexo III: 2027-12-02
 (Reglamento (UE) 2026/1744).** **No se cita la fecha de la fuente secundaria ante un cliente**; se cita el reglamento.
 
+**Pase 30 (2026-10-02) — la barrera deja de ser presupuesto y pasa a ser *arranque*, y aparece el modelo de entrega que
+la región está usando para resolverlo.**
+
+- 🔴 **El dato que manda: 38 % de las organizaciones de EMEA todavía no empezó a pilotear AI**, contra **94 % que declara
+  que probablemente invierta en formación específica en AI en 2026**. **La brecha no es de intención ni de plata: es de
+  primer paso.** Para EMEA eso reordena la oferta: lo que se vende primero no es una plataforma, es **un piloto acotado con
+  criterio de salida**.
+- 🔵 **Y hay un modelo de entrega explícito, que conviene leer como plantilla de participación:** la **AI Adoption Summit**
+  del Reino Unido (8 de junio) comprometió **£200M+** con un reparto de roles declarado — **el gobierno financia, las
+  empresas grandes entregan** (Cisco, IBM, BT, Rolls-Royce) **y los sindicatos legitiman**. **Ése es el molde del gasto
+  público de AI en formación en la región, y el lugar del studio en ese molde es el de socio de entrega.**
+- **Señal institucional de regulación educativa:** el **Consejo de Europa** convocó en **octubre** su **2.ª conferencia de
+  trabajo sobre las dimensiones regulatorias de la AI en educación** — o sea, la regulación específicamente educativa
+  todavía se está escribiendo, por encima del AI Act. Y existe un **«2026 Europe EdTech 200»** (QS) como mapa de actores.
+
+🔴 **La contradicción de fechas del AI Act queda ABIERTA, y este pase la deja como contradicción declarada en vez de
+elegir una lectura.** Hay **tres** lecturas en circulación dentro y fuera de esta KB: (a) el pase 11 registró el Anexo III
+corrido a **2027-12-02** por el Reglamento (UE) 2026/1744; (b) el pase 28 escribió que **rige desde el 2026-08-02**; (c) las
+fuentes de prensa de este pase dicen que el marco entra **progresivamente desde agosto de 2026**. **No se promedian ni se
+elige la más conveniente: ante un cliente se cita la norma, no la prensa, y se verifica la fecha aplicable al caso de uso
+concreto.** **Resolverlo contra el texto consolidado es la acción 3 del pase 31**, y es la que más riesgo comercial
+descarga porque es la que un cliente europeo va a preguntar primero.
+
 ### APAC
 
 **Pase 27 (2026-10-01) — APAC confirma adopción y aporta un dato de arquitectura: la soberanía decide la
@@ -2518,6 +2559,29 @@ riesgo, y esta KB ya registra que la capa predictiva está parcialmente prohibid
 pase desbloqueó —autoría de contenido, assets, video y transcripciones en Open edX— es el de menor exposición
 regulatoria de todos**: no decide sobre el alumno, no lo monitorea y no lo perfila. **Para APAC es el tramo con el que
 hay que entrar**, y la capa predictiva se discute después y por separado.
+
+**Pase 30 (2026-10-02) — la región confirma prioridad y vuelve a declarar el mismo hueco, y ahora el hueco tiene nombre
+propio: gobernanza que no sigue el ritmo de la implementación.**
+
+- **48 % de los líderes de gobernanza de APAC** pone la adopción de AI como prioridad estratégica para 2026, y **57 % de
+  las organizaciones de Asia** ya la incorporó en al menos un área.
+- 🔴 **Y la contracara, que es la oportunidad: los marcos de gobernanza no están siguiendo el ritmo de la
+  implementación.** Es la **tercera región-pase consecutiva** en que esta KB registra el mismo patrón —adopción alta con
+  gobernanza atrasada—, y en APAC se combina con lo ya registrado: **la soberanía define la infraestructura de ~50 % de las
+  empresas**. **Singapur** sigue consultando sobre uso de AI en instituciones financieras, con foco en transparencia,
+  *accountability* y supervisión de riesgo: es el patrón regulatorio que la región copia entre sectores.
+- **Actores nuevos del pase, y son todos de *formación* más que de *aula***: **LearnUpon** abre HQ en **Sídney** con
+  *Create+* de autoría de cursos con AI; **TCS + Pearson** anunciaron una **alianza plurianual de aprendizaje con AI** para
+  cerrar brechas de *skills*; **NIIT MTS** encadena su **16.º** año en el top-20 de desarrolladores de contenido custom
+  citando diseño asistido por AI; **Alteryx** relanzó su Academy con rutas personalizadas y credenciales.
+
+**Lectura para el studio.** El comprador que se mueve en APAC es **corporativo (L&D), no el ministerio**, y lo que pide es
+**credencial verificable al final del recorrido**. Eso empuja a la capa que esta KB ya tiene medida y permisiva:
+**CLR / Open Badges** para la credencial, **xAPI** para la evidencia, y el conector de **OneRoster 0BSD con 132 tools
+medidas** para el contexto institucional. 🔵 **Y la gobernanza atrasada es vendible como entregable, no como riesgo:** los
+**cuatro rails** que este pase midió en el conector de Open edX (*dry run* + confirm token, rate limit, autoridad viva,
+auditoría previa a la escritura) **son, descriptos en términos de negocio, un marco de gobernanza de escrituras
+automatizadas** — y se pueden reimplementar en permisivo. Ver **P61**.
 
 ### LATAM
 
@@ -3263,6 +3327,32 @@ términos de artefactos, no de discurso** — y es la frase que el usuario final
 ⚠️ **La cautela que no cambia:** las tres fuentes primarias de LATAM que esta KB necesita siguen bloqueadas por el proxy
 de egreso, así que **la evidencia regional sigue siendo de fuente secundaria**, con la advertencia de método ya
 registrada en los pases 26 y siguientes.
+
+**Pase 30 (2026-10-02) — aparece la medición regional que esta KB venía necesitando, y es *siete veces* más grande que la
+que tenía registrada.**
+
+🔵 **UNESCO IESALC mapeó la adopción de AI en universidades de América Latina y el Caribe sobre 200 instituciones de
+19 países**, relevadas entre **agosto y octubre de 2025**, en **cinco dimensiones**: enseñanza y aprendizaje,
+investigación, vinculación con la comunidad, administración y **gobernanza**. Esta KB venía citando el *AI in Higher
+Education LATAM Survey 2026* (DEC) con **29+ instituciones**: **el nuevo instrumento no lo contradice, lo supera en
+muestra**, y conviene citar los dos con su fuente —regla del pase 13— pero **llevar el de 200 a una propuesta**. Hay además
+dos piezas institucionales para el expediente: un *working paper* de **UNU** sobre implementación de AI en educación
+superior en LAC y **«An Enabling Regulatory Framework for AI in Latin America and the Caribbean» del BID**.
+
+**El contexto de demanda, que sigue siendo el más fuerte de las cuatro regiones:** **99 % de las startups de LATAM** usa
+alguna solución de AI en su operación interna y **85 % la integra nativamente en su producto**; la región es el **tercer
+mercado mundial** en descargas de aplicaciones de AI generativa; en edtech aparece **Ednova (Chile)** entre los casos
+citados. Y se mantiene lo ya registrado: **73,5 % ya enseña con AI contra 8 % con presupuesto dedicado** y **9 % con
+mecanismos formales de evaluación**, más el **65 % de alumnos que teme el aprendizaje superficial**.
+
+🔴 **Y el dato de este pase que cambia la conversación en la región donde más pesa: Open edX —el stack de los programas
+públicos grandes de LATAM e India— ya tiene puerta de agente oficial, gratis y más capaz que la que esta KB iba a
+cotizar.** **La oportunidad de «construir el conector que falta» se cerró acá primero.** Lo que queda, y es más
+defendible: **la quinta dimensión del instrumento de UNESCO IESALC es gobernanza**, y es justo donde la región mide su
+propia carencia (9 % de mecanismos formales). **El entregable pasa de conector a gobierno de la automatización**: qué
+scopes se habilitan, qué escritura exige compuerta humana, qué queda auditado. **Los cuatro rails medidos en este pase son
+ese entregable, descriptos.** Ver **P61** y **P54**.
+
 
 ## Posicionamiento Globant
 

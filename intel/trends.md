@@ -1,12 +1,13 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-01
+updated: 2026-10-02
 ---
 
 # 📡 Tendencias — education
 
 > Ventana de investigación: septiembre 2026. Verificado 2026-09-30; el pase 11, el 2026-10-01.
+> **Pase 30 del 2026-10-02:** **se ejecutan las tres acciones del pase 29, las tres rinden, y el hallazgo que manda no salió de ninguna: salió de volver a preguntar por el gap 48.** 🔴 **Open edX ya tiene puerta de agente, es oficial del proyecto y es AGPL-3.0** (`openedx-mcp` + `tutor-contrib-openedxmcp`, PyPI, 2026-07-25; **35 endpoints leídos del código**, autoría incluida). **Eso cierra el gap 48 y rompe la tesis del pase 27:** esta puerta **corre en proceso** como plugin Django, así que *«las LMS son copyleft pero las puertas son MIT»* deja de valer, y la regla que lo reemplaza es que **la licencia de un conector la decide su arquitectura** (tendencias **81** y **82**, **gap 54**). 🔵 **El regalo del hallazgo son los cuatro rails de escritura**, con el modelo de amenaza escrito en el código —*«a looping agent… a retry storm that mass-enrols or deletes»*— y con la primitiva que P53 y P54 venían describiendo en prosa: ***dry run* + confirm token atado a una huella del payload** (tendencia **84**). ✅ **Gap 52 CERRADO leyendo cinco archivos de OpenCASE: 72 rutas, la regla del prefijo, dos endpoints OpenAPI y una capa CGE de federación que nadie había visto.** ✅ **Gap 53 medido ejecutando el servidor: 132 tools, y el «164» era *aliasing*, no supresión** —el 100 % de las operaciones se sirve (tendencia **83**)—, aunque 🔴 **la antigüedad era peor de lo registrado por leer `time.modified` en vez de `time[version]`** (tendencia **86**). ✅ **`.LRN` cerrado: vivo pero GPL-2.0 y en CVS**; **`CK-ERP` muerto desde 2012**. **Dos altas:** `asfai-education` (Apache-2.0, cinco estándares 1EdTech) e `instructure/qti` (MIT, QTI **1.2** legado). ⚠️ **Un falso positivo evitado, y da regla nueva: la capacidad que sólo vive en un *pull request* abierto no está en el producto** (tendencia **85**). 🔴 **Y se declara una contradicción interna de esta KB sobre el calendario del Anexo III: hay dos fechas publicadas en esta base y no son conciliables** (**gap 56**). ⚠️ **Dominios nuevos bloqueados por el proxy: `openacs.org`, `openedx.org` y `codeload.github.com`.**
 > **Pase 28 del 2026-10-01:** se ejecutan las acciones 1 y 2 del pase 27 y las dos rinden. **El gap 48 queda
 > contestado leyendo el código fuente de Open edX** —no la documentación, que está bloqueada— y **se parte en dos**:
 > la API **escribe matrícula, roles y notas, y las notas por lote** (más que el conector MIT de Moodle, que escribe de
@@ -1997,9 +1998,15 @@ Huecos confirmados tras buscar, no ausencias por no haber buscado. Un gap inform
 
 51. ⚠️ **La ausencia de conector MCP para CASE no está medida, y se declara como no medida por colisión de término** *(agregado en el pase 28 del 2026-10-01)*. La **acción 2 del pase 27** pedía repreguntar por patrón de nombre las tres capas que el pase 26 declaró vacías vía directorio. **De las tres, dos quedaron resueltas y una no:** OneRoster **tenía** conector (**gap 49 confirmado por segunda vez**, ver tendencia **73**), QTI **no lo tiene y ahora está medido por tres métodos** (directorio + patrón de nombre + **apertura del SDK permisivo**, `examplary/qti` MIT, donde MCP no se menciona), y **CASE no se pudo medir**. 🔴 **La causa es una colisión de término, la cuarta de esta KB:** `case-mcp` / `mcp-case` devuelve **`09-CaseStudy` de `microsoft/mcp-for-beginners`**, **`Casys-AI/mcp-server`** y **`mcp-usecase`**, porque ***case study*** y ***use case*** son dos de los términos más frecuentes de la documentación de MCP. Y **el método que sí funcionó con OneRoster —abrir el SDK y leer el README adentro— no se pudo aplicar, porque CASE no tiene un SDK permisivo y traccionado que abrir**. **Lo que sí está medido** (pases 26–27) es que **`cassproject/CASS` tiene las 11 operaciones de su adaptador CASE con `x-mcp-ignore: true`**, o sea excluidas a propósito. **El registro de colisiones de esta KB, que ya es un activo de método:** `education` → material didáctico *sobre* AI (pase 23); `Bloom` → dos proyectos homónimos (pase 7); `MCP` + *badges* → generadores de *badges* de README (pase 27); **`case` → *case study* / *use case* (pase 28)**. **La acción:** medir CASE por el *host* del repositorio con el nombre **completo y desambiguado** del estándar (`"Competencies and Academic Standards Exchange"`), no por la sigla. Ver la tendencia **73**. → ✅ **CERRADO EN EL PASE 29 DEL 2026-10-01, Y LAS DOS MITADES QUEDARON MEDIDAS.** La acción pedía medir CASE por el **nombre completo desambiguado** del estándar en vez de la sigla. **Funcionó, y devolvió lo que cuatro pases no habían visto:** [`1EdTech/OpenCASE`](https://github.com/1EdTech/OpenCASE) — **Apache-2.0** (verificado en el archivo `LICENSE`), **9 ★**, 3 forks, **180 commits**, del **propio organismo de estándares** —, que implementa **CASE 1.0 y 1.1** con la **CASE Provider API oficial** *«fully compatible with the 1EdTech certification requirements»*, con **CRUD de escritura** sobre `CFDocuments`/`CFItems`/`CFAssociations`/`CFPackages` en **v1p0 y v1p1**, editor visual de marcos, Keycloak (OIDC) **+ API keys propias**, RBAC de cuatro niveles, multi-tenencia y **versionado inmutable en archivos sin base de datos externa**. 🔴 **Y la ausencia de MCP pasa de «sin medir» a MEDIDA: cero menciones de `MCP` o `Model Context Protocol` en el README crudo.** ⚠️ **La trampa que casi produjo un falso positivo, y que genera la quinta colisión de esta KB —la primera por *chrome* de plataforma—: la página renderizada de GitHub de OpenCASE SÍ dice «MCP», en su menú de navegación (*AI CODE CREATION → MCP Registry*), que es interfaz de GitHub y no contenido del repositorio.** **Regla nueva y retroactiva: la presencia de MCP se verifica en el README crudo, nunca en la página renderizada.** 🔵 **Y el cierre deja la mejor oportunidad de la KB:** el servidor **publica su propio OpenAPI 3** en `GET /ims/case/v1p1/discovery/imscasev1p1_openapi3_v1p0.json`, así que **el conector se genera, no se escribe** — el camino por el que `oneroster-ts` llegó a 164 métodos con 39 commits. Ver la tendencia **80** y el patrón **P60**.
 
-52. ⚠️ **La forma exacta de las rutas de OpenCASE no está medida, y la causa es que los dos documentos del repo se contradicen entre sí** *(agregado en el pase 29 del 2026-10-01)*. El **gap 51** quedó cerrado en lo que afirma —la plataforma existe, es Apache-2.0 y no tiene MCP—, pero **la superficie quedó medida en forma, no en detalle**. Las dos fuentes del propio repositorio no coinciden: `apps/opencase/docs/DEVELOPER.md` escribe las rutas de gestión **sin** el prefijo del estándar (`PUT /management/tenants/{tenantId}/CFItems/{id}`, `DELETE /management/tenants/{tenantId}/CFDocuments/{id}`), y `apps/opencase/docs/FRAMEWORK_EDITOR_BACKEND_INTEGRATION.md` las escribe **con** prefijo y versión (`PUT /management/tenants/{tenantId}/ims/case/v1p1/CFItems/{itemId}`, `POST /management/tenants/{tenantId}/ims/case/v1p1/CFPackages/import`). 🔴 **Y el documento que el README principal ofrece como «Complete endpoint reference» —`apps/opencase/FRAMEWORK_MANAGEMENT_GUIDE.md`— devuelve 404 en `main`**: el enlace está roto en la rama por defecto. **Por qué importa y no es un detalle de documentación:** un conector generado desde una ruta equivocada falla en la primera llamada, y **el OpenAPI que el servidor publica es la única fuente que no puede estar desactualizada** porque la sirve el propio sistema. **Lo que falta:** resolverlo leyendo el código del servidor —el método que funcionó con Open edX— o pidiéndole el spec a `GET /ims/case/v1p1/discovery/imscasev1p1_openapi3_v1p0.json` con una instancia levantada. **Es la acción 1 del pase 30.** ⚠️ **Mientras esté abierto, P60 se propone con la arquitectura y el costo relativo, no con rutas literales.** Ver la tendencia **80**.
+52. ⚠️ **La forma exacta de las rutas de OpenCASE no está medida, y la causa es que los dos documentos del repo se contradicen entre sí** *(agregado en el pase 29 del 2026-10-01)*. El **gap 51** quedó cerrado en lo que afirma —la plataforma existe, es Apache-2.0 y no tiene MCP—, pero **la superficie quedó medida en forma, no en detalle**. Las dos fuentes del propio repositorio no coinciden: `apps/opencase/docs/DEVELOPER.md` escribe las rutas de gestión **sin** el prefijo del estándar (`PUT /management/tenants/{tenantId}/CFItems/{id}`, `DELETE /management/tenants/{tenantId}/CFDocuments/{id}`), y `apps/opencase/docs/FRAMEWORK_EDITOR_BACKEND_INTEGRATION.md` las escribe **con** prefijo y versión (`PUT /management/tenants/{tenantId}/ims/case/v1p1/CFItems/{itemId}`, `POST /management/tenants/{tenantId}/ims/case/v1p1/CFPackages/import`). 🔴 **Y el documento que el README principal ofrece como «Complete endpoint reference» —`apps/opencase/FRAMEWORK_MANAGEMENT_GUIDE.md`— devuelve 404 en `main`**: el enlace está roto en la rama por defecto. **Por qué importa y no es un detalle de documentación:** un conector generado desde una ruta equivocada falla en la primera llamada, y **el OpenAPI que el servidor publica es la única fuente que no puede estar desactualizada** porque la sirve el propio sistema. **Lo que falta:** resolverlo leyendo el código del servidor —el método que funcionó con Open edX— o pidiéndole el spec a `GET /ims/case/v1p1/discovery/imscasev1p1_openapi3_v1p0.json` con una instancia levantada. **Es la acción 1 del pase 30.** ⚠️ **Mientras esté abierto, P60 se propone con la arquitectura y el costo relativo, no con rutas literales.** Ver la tendencia **80**. → ✅ **CERRADO EN EL PASE 30 DEL 2026-10-02, LEYENDO EL CÓDIGO, Y LA CONTRADICCIÓN TIENE UNA REGLA QUE NINGUNO DE LOS DOS DOCUMENTOS ENUNCIA.** Se leyeron cinco archivos del árbol `main` (`package.json`, `src/main.ts`, `src/interfaces/http/server.ts`, `http-management/routes.ts` y `http-public/v1p1/routes.ts` más su gemelo `v1p0`). **La regla: el segmento `ims/case/v1pX` aparece exactamente cuando la operación actúa sobre una entidad del estándar CASE, y nunca en las rutas de plataforma.** Por lo tanto **`FRAMEWORK_EDITOR_BACKEND_INTEGRATION.md` es correcto** (sus dos formas existen literales) y **`DEVELOPER.md` está equivocado** para entidades CASE: `PUT /management/tenants/{id}/CFItems/{id}` **no corresponde a ninguna ruta registrada**. El error del doc se explica porque **el *listado* de paquetes sí va sin prefijo** (`GET /management/tenants/{tenantId}/CFPackages`), al ser operación de plataforma. ✅ **Confirmado además el 404 de `FRAMEWORK_MANAGEMENT_GUIDE.md` en `main`.** **Superficie contada: 72 rutas** — 12 de lectura en `v1p1` + **12 en `v1p0` (el juego completo en las dos versiones)** + **44 de management** (20 con prefijo, 24 sin) + **2 de descubrimiento** + `public/tenant-lookup` + `health`. 🔵 **Tres hallazgos nuevos que abaratan P60:** (a) hay **dos** endpoints OpenAPI 3, uno por versión, y los dos **sin autenticación**; (b) la lectura usa **auth opcional** —*«frameworks marked public are readable without auth… no tenantId is needed for read endpoints»*—, así que **un conector de sólo lectura no necesita credenciales**; (c) aparece **CGE — CASE Global Exchange**, **11 rutas de federación** (credenciales + `test`, `frameworks`, **`subscriptions`**, `import`, `refresh`, `cache/{docId}/items`) que permiten **suscribirse** a marcos del registro global en vez de cargarlos. 🔴 **Y el límite que hay que decir antes de cotizar: la escritura NO es parte del estándar y lo declara el código** (*«NOT part of the CASE standard specification»*), así que **sólo la mitad de lectura del conector generado es portable a otro proveedor CASE**. 🔴 **Hallazgo de seguridad para cualquier entregable: `cors({origin:true, credentials:true})`, con el comentario *«restrict in production»* en el propio código.** ⚠️ **Lo que sigue sin medirse: no se levantó instancia, así que el OpenAPI generado no se pidió al endpoint de descubrimiento. Es la acción 2 del pase 31** (una tarde con `docker-compose up`). ⚠️ **Canales: `codeload.github.com` da 403 y la API de GitHub está cerrada; `raw.githubusercontent.com` responde.** Ver las tendencias **81** y **83** y el patrón **P60**.
 
-53. 🔴 **El paquete npm de `oneroster-ts` no declara licencia, mientras el repositorio es 0BSD — y es el artefacto que un cliente instalaría** *(agregado en el pase 29 del 2026-10-01)*. Medido en el registro de npm: **`@superbuilders/oneroster`**, última versión **`0.7.0`**, 10 versiones, devuelve **`license: None`** tanto en la raíz del paquete como en la versión publicada, **mientras el repositorio `trilogy-group/oneroster-ts` declara 0BSD**. **Por qué es un gap y no una curiosidad de metadatos:** esta KB recomienda esta pieza por su licencia —0BSD es la más permisiva que inventarió— y **el artefacto que se instala con `npm add` no respalda esa recomendación por sí mismo**. Es lo primero que mira el área legal de un cliente. ⚠️ **Dos datos de procedencia que van en la misma conversación:** los *maintainers* de npm (`abhi-superbuilders`, `hbauer`, `bjornpagen`, `supersterling`, `ameeralns`) **no son la organización del repositorio**, aunque ✅ **la procedencia es rastreable** porque el `repository.url` del paquete apunta de vuelta a `git+https://github.com/trilogy-group/oneroster-ts.git`; y **el último publicado es del 2026-05-04**, casi cinco meses antes de este pase, en una versión **pre-1.0**. **La mitigación ya estaba escrita y ahora tiene fundamento concreto: fijar un fork del repositorio —0BSD lo permite sin ninguna obligación— y no depender del paquete publicado.** **Lo que falta medir:** el `tools/list` real del servidor MCP, que es lo único que convierte «164 métodos de SDK contados» en «N tools servidas». **Es la acción 2 del pase 30.** Ver **P58**.
+53. 🔴 **El paquete npm de `oneroster-ts` no declara licencia, mientras el repositorio es 0BSD — y es el artefacto que un cliente instalaría** *(agregado en el pase 29 del 2026-10-01)*. Medido en el registro de npm: **`@superbuilders/oneroster`**, última versión **`0.7.0`**, 10 versiones, devuelve **`license: None`** tanto en la raíz del paquete como en la versión publicada, **mientras el repositorio `trilogy-group/oneroster-ts` declara 0BSD**. **Por qué es un gap y no una curiosidad de metadatos:** esta KB recomienda esta pieza por su licencia —0BSD es la más permisiva que inventarió— y **el artefacto que se instala con `npm add` no respalda esa recomendación por sí mismo**. Es lo primero que mira el área legal de un cliente. ⚠️ **Dos datos de procedencia que van en la misma conversación:** los *maintainers* de npm (`abhi-superbuilders`, `hbauer`, `bjornpagen`, `supersterling`, `ameeralns`) **no son la organización del repositorio**, aunque ✅ **la procedencia es rastreable** porque el `repository.url` del paquete apunta de vuelta a `git+https://github.com/trilogy-group/oneroster-ts.git`; y **el último publicado es del 2026-05-04**, casi cinco meses antes de este pase, en una versión **pre-1.0**. **La mitigación ya estaba escrita y ahora tiene fundamento concreto: fijar un fork del repositorio —0BSD lo permite sin ninguna obligación— y no depender del paquete publicado.** **Lo que falta medir:** el `tools/list` real del servidor MCP, que es lo único que convierte «164 métodos de SDK contados» en «N tools servidas». **Es la acción 2 del pase 30.** Ver **P58**. → 🔵 **MEDIDO EN EL PASE 30 DEL 2026-10-02 EJECUTANDO EL SERVIDOR, Y LAS DOS MITADES DEL GAP SE MUEVEN EN DIRECCIONES OPUESTAS.** **(1) La mitad de licencia mejora:** medido **dentro del tarball publicado**, `package.json` **omite el campo `license` por completo** —de ahí el `None` del registro— **pero el paquete SÍ incluye un archivo `LICENSE` completo con el texto de la BSD Zero Clause License**, *«Copyright (c) 2025 Bjorn Pagen»*. **El defecto es de metadatos, no de licencia: el artefacto viaja con su 0BSD.** ✅ **Y cierra la duda de procedencia de este mismo gap:** `bjornpagen` es uno de los *maintainers* de npm que se anotaron como «no son la organización del repositorio», y es **el titular del copyright del LICENSE**, así que la cadena cierra. **(2) 🔴 La mitad de antigüedad empeora, y por un error de método de esta KB:** el «último publicado 2026-05-04» era **`time.modified`**, que es **mutación de metadatos** (un *dist-tag*, un cambio de dueño, una deprecación), **no una publicación**. La última **versión** publicada es **`0.7.0` del 2025-06-27**: **quince meses**, no cinco. **Y el patrón importa más que la fecha: 9 de las 10 versiones salieron en una ráfaga de tres días** (2025-04-29 → 2025-05-01), después `0.7.0`, y nada en quince meses — **perfil de generador corrido una vez, no de proyecto mantenido**. **Fijar un fork sigue siendo el requisito, ahora por abandono y no por licencia.** **(3) ✅ El `tools/list` que faltaba, medido:** `initialize` + `tools/list` por stdio contra `bin/mcp-server.js` devuelve **132 tools** (72 de lectura, 60 de escritura, 19 grupos) y el servidor se identifica como **`OneRoster 0.7.0`**. 🔵 **La brecha 164 → 132 NO es supresión: es *aliasing*.** El SDK documenta 164 métodos pero sólo **132 nombres distintos**, porque **32 operaciones están listadas bajo dos grupos a la vez**. **Cero anotaciones de supresión: se sirve el 100 % de las operaciones distintas**, al revés de CaSS (6 de 61). **La frase citable es «132 tools servidas, el 100 % de las operaciones del SDK».** 🔴 **Riesgo nuevo medido: el README usa como `--token-url` de ejemplo el IdP Cognito de producción de un operador concreto (`alpha-auth-production-idp…amazoncognito.com`), así que el SDK se generó contra UN despliegue** — hay que sobreescribir `--server-url`/`--token-url` y no suponer cobertura de cualquier proveedor OneRoster. 🔵 **Dos datos a favor: cero dependencias de runtime, y un flag `--tool` que permite servir un subconjunto de las 132** (control de ventana de contexto). Ver las tendencias **83** y **86** y el patrón **P58**.
+
+54. 🔴 **La ausencia de conector sobre una plataforma con fundación grande no es una oportunidad estable, y esta KB lo aprendió perdiendo la suya** *(agregado en el pase 30 del 2026-10-02)*. El **gap 48** («Open edX es el único LMS grande sin puerta de agente») se mantuvo abierto en los pases 27, 28 y 29, y esta base invirtió en él su esfuerzo principal: midió la superficie REST leyendo cinco `urls.py`, reencuadró el **gap 50**, y cotizó **P55** encima. 🔴 **El 2026-07-25 el propio proyecto publicó la puerta** —`openedx-mcp` y `tutor-contrib-openedxmcp`, los dos **AGPL-3.0**, verificados en PyPI y en el código del sdist—, **dos meses antes de que este pase lo notara**. **Por qué es un gap de método y no sólo una oportunidad perdida:** el criterio con el que esta KB priorizaba —*«buscar la ausencia de mayor huella pública»*— **selecciona justamente los casos donde el dueño de la plataforma tiene más incentivo y mejor posición para cerrarla él**, porque puede correr en proceso contra las APIs internas y saltearse la superficie REST versionada que un tercero está obligado a usar. **La regla que lo reemplaza:** las ausencias que son oportunidad estable son **las de los estándares** (CASE, QTI, el lado *platform* de LTI), porque **ningún organismo de estándares publica software de integración** — y la contrastación está en esta misma base: las tres plataformas con fundación (Moodle, Canvas, Open edX) **ya tienen puerta**; los tres estándares **siguen sin ella** desde que se midieron. **Lo que falta:** reordenar la cola de oportunidades por *tipo de dueño* y no por huella, y **revisar si alguna otra ausencia declarada de esta KB ya fue cerrada por su propio proyecto sin que el barrido lo note**. **Es la acción 1 del pase 31.** Ver las tendencias **81** y **82**.
+
+55. ⚠️ **No hay `tools/list` observado del conector oficial de Open edX, así que sus 35 rutas son superficie REST interna y no superficie de agente** *(agregado en el pase 30 del 2026-10-02)*. Lo medido de primera mano es el **código del sdist `openedx-mcp` 0.1.5**: **28 rutas en el LMS** (`whoami`, `analytics/overview`, `courses`, `users`, `grades`, `enroll`/`unenroll`/`bulk-enroll`, `users/create`, `roles/set`, `access/instructor`, `students/reset-attempts`, seis de certificados, tres de reportes asíncronos y dos de **retiro de cuenta**) y **7 en el CMS** (`outline`, `courses/settings`, `blocks/create`, **`blocks/create-tree`**, `update`, `publish`, `delete`), más **9 scopes** y **18 tools de escritura decoradas con `audited_write`**. 🔴 **Pero el servidor MCP no vive en este paquete: vive en `tutor-contrib-openedxmcp`**, y **no se levantó ninguna instancia**, así que **no se sabe cuántas tools expone ni con qué nombres**. **Por qué importa y no es un detalle:** esta KB acaba de aprender con `oneroster-ts` y con CaSS que **la distancia entre «rutas del backend» y «tools servidas» puede ser aliasing (sin pérdida) o supresión deliberada (con pérdida del 90 %)**, y que **la diferencia cuesta un `tools/list`**. Mientras no se mida, la cifra citable es **«35 endpoints de fachada REST»**, nunca «35 tools». ⚠️ **Dos límites más del mismo bloque:** es **`0.1.x`** y apunta a Open edX **Ulmo**, y **`openedx.org` está bloqueado por el proxy de egreso**, así que el anuncio oficial no se leyó —todo sale de PyPI y del código—. **Lo que falta:** `tutor plugins enable openedxmcp`, levantar el stack y hacer `initialize` + `tools/list`. **Es la acción 2 del pase 31**, junto con la de OpenCASE, y las dos son la misma tarde de trabajo. Ver las tendencias **81**, **83** y **84** y el patrón **P61**.
+
+56. 🔴 **El calendario del Anexo III del AI Act tiene tres lecturas en circulación y esta KB sostiene dos de ellas en archivos distintos** *(agregado en el pase 30 del 2026-10-02)*. Se declara como gap porque **es la primera pregunta que hace un cliente europeo** y porque **la contradicción es interna, no de las fuentes**. Las tres lecturas: **(a)** el pase 11 registró el Anexo III corrido a **2027-12-02** por el **Reglamento (UE) 2026/1744** (en vigor 2026-07-27), y lo registró **leyendo la norma**; **(b)** el pase 28 escribió en `intel/trends.md` que *«el Annex III dejó de ser una fecha: rige desde el 2026-08-02»* y que la demanda de conformidad está **vencida**, y sobre esa lectura construyó argumentación comercial de EMEA; **(c)** las fuentes de prensa de este pase dicen que el marco entra **progresivamente desde agosto de 2026**. 🔴 **(a) y (b) no son conciliables: una dice que falta más de un año y la otra que ya rige**, y las dos están publicadas en esta base. **Por qué no se resuelve eligiendo la más conservadora:** si rige, la oportunidad de cumplimiento está **vencida y caliente** y eso cambia el orden de la propuesta; si no rige hasta 2027-12-02, vender urgencia es un error que un área legal detecta. ⚠️ **Mientras esté abierto, la regla operativa es: ante un cliente se cita la norma y no la prensa, y se verifica la fecha aplicable al caso de uso concreto** (el Anexo III tiene incisos, y educación es uno). **Lo que falta:** resolverlo contra el **texto consolidado** del Reglamento y fechar cada afirmación de esta KB con el inciso que le corresponde. **Es la acción 3 del pase 31**, y es la que más riesgo comercial descarga. Ver el bloque EMEA de `intel/market.md`.
 
 
 ## 54. El almacén permisivo que esta KB recomienda sabe borrar al alumno desde antes de que esta KB existiera, y seis pasadas vendieron lo contrario por leer documentación en vez de código (agregado 2026-10-01, pase 21)
@@ -3011,6 +3018,161 @@ magnitud. **Y si no la expone, eso es lo que explica el precio**, y conviene dec
 **CaSS genera su catálogo y después oculta 55 de 61 operaciones con `x-mcp-ignore: true`.** **La decisión de qué se
 expone sigue siendo de producto, y no la resuelve el generador** — es, de hecho, la parte del trabajo que hay que
 cobrar.
+
+
+## 81. Cuando una ausencia es una buena oportunidad, el que la cierra primero es el proyecto dueño de la plataforma — y la licencia de la puerta no se hereda de la licencia del conector típico (agregado en el pase 30 del 2026-10-02)
+
+**Esta KB sostuvo tres pases que Open edX era el único LMS grande sin puerta de agente (gap 48) y lo trató como su mejor
+oportunidad comercial, con un patrón cotizado encima (P55). El 2026-07-25 el proyecto publicó la puerta.** Dos paquetes en
+PyPI, los dos **AGPL-3.0**: `openedx-mcp` (0.1.5, 5 releases) y `tutor-contrib-openedxmcp` (0.1.7, 7 releases).
+
+**La lección no es «llegamos tarde». Es una regla de pronóstico que esta KB puede aplicar a las ausencias que todavía
+tiene abiertas:**
+
+> 🔵 **Una ausencia de conector sobre una plataforma con fundación y comunidad grandes no es una oportunidad estable: es
+> una carrera contra el propio proyecto, y el proyecto tiene mejor posición** —puede correr en proceso, usar las APIs
+> internas y saltearse la superficie REST versionada—. **Las ausencias que sí son oportunidad estable son las de los
+> *estándares*, porque ningún organismo de estándares publica software de integración.**
+
+**La contrastación está en esta misma KB y es limpia:** Moodle, Canvas y Open edX —las tres plataformas con fundación—
+tienen hoy puerta. **CASE, QTI y la mitad *platform* de LTI —los tres estándares— siguen sin ella**, y llevan así todos los
+pases en que se midieron. **La cola de oportunidades se reordena a favor de los estándares y en contra de las
+plataformas**, que es lo contrario del orden que esta base usó entre los pases 27 y 29.
+
+🔴 **Y el corolario de licencia, que es el que desarma una tesis propia** (ver tendencia **82**): el pase 27 escribió que
+*«las LMS son copyleft pero las puertas son MIT, y por eso se pueden componer»*, y esa regularidad no era una coincidencia
+de licencias sino **una consecuencia de que las puertas de terceros son procesos separados**. Cuando la puerta la escribe
+el proyecto, **la escribe adentro**, y la licencia de la plataforma la alcanza.
+
+## 82. La licencia de un conector la decide su arquitectura, no su autor: *in-process* hereda el copyleft, *out-of-process* no (agregado en el pase 30 del 2026-10-02)
+
+**Es la regla que esta KB necesitaba tener explícita, y que venía usando sin enunciar.** Medido sobre las cinco puertas
+que esta base tiene inventariadas:
+
+| Puerta | Arquitectura | Licencia de la plataforma | Licencia de la puerta |
+|---|---|---|---|
+| `moodle-mcp-server`, `moodle-mcp` | **Proceso aparte** (Web Services por token) | GPL-3.0 | **MIT** |
+| `canvas-mcp` | **Proceso aparte** (REST) | AGPL-3.0 | **MIT** |
+| `oneroster-ts` | **Proceso aparte** (SDK + servidor) | — (estándar) | **0BSD** |
+| `scorm-mcp-server` | **Proceso aparte** (formato) | — | **MIT** |
+| 🔴 `openedx-mcp` | **EN PROCESO** (plugin Django en LMS y CMS) | AGPL-3.0 | 🔴 **AGPL-3.0** |
+
+**La regla, para usar antes de prometerle composición permisiva a un cliente:**
+
+> **Preguntar primero cómo se instala la puerta, no qué licencia declara.** Si se instala *dentro* del proceso de la
+> plataforma —plugin, módulo, *entry point*—, **va a tener la licencia de la plataforma y no hay forma de evitarlo**. Si
+> habla un protocolo desde afuera, **la licencia es libre y la composición es real.**
+
+**Y la razón técnica por la que el proyecto eligió adentro está en su propio código, y es buena:** la autoría de curso
+*«must run in the CMS (they touch the modulestore)»*. 🔵 **El beneficio es grande: corriendo adentro no se paga la rotación
+de versiones `v0`–`v4` que el pase 29 midió y cotizó como riesgo de adaptador.** **Capacidad y copyleft son, en este caso,
+la misma decisión.** Quien quiera una puerta permisiva de Open edX tiene que aceptar el camino REST versionado — y eso
+sigue siendo construible, con el mapa del pase 29 (ver **P61**).
+
+## 83. «Declara N operaciones» y «sirve N tools» difieren por dos causas opuestas —supresión y *aliasing*—, y hay que decir cuál antes de cotizar (agregado en el pase 30 del 2026-10-02)
+
+Esta KB aprendió con CaSS a no confiar en el conteo declarado: **61 operaciones, 6 expuestas, 55 con `x-mcp-ignore`**. Esa
+lección se aplicó —bien— como cautela sobre `oneroster-ts` («164 métodos de SDK contados, no 164 tools»). **Este pase midió
+y la causa resultó ser la opuesta.**
+
+Ejecutado el servidor (`initialize` + `tools/list`, transporte stdio), **`OneRoster 0.7.0` sirve 132 tools**: 72 de lectura
+y 60 de escritura, en 19 grupos. **Y la brecha 164 → 132 está explicada por conteo, no por hipótesis:** el SDK documenta
+164 métodos pero sólo **132 nombres distintos**, porque **32 operaciones están listadas bajo dos grupos a la vez**
+(`getStudentsForClass` en `classes` y en `students`; los cinco métodos de *course components* en `coursecomponents` y en
+`courses`; etc.). **32 alias, 32 entradas de más, una tool por operación.**
+
+| | CaSS | `oneroster-ts` |
+|---|---|---|
+| Operaciones | 61 | **132 distintas** (164 con alias) |
+| Tools servidas | **6** | 🔵 **132 — el 100 %** |
+| Causa de la brecha | 🔴 **Supresión deliberada** (`x-mcp-ignore`) | 🔵 **Aliasing de documentación** |
+
+> **La regla: las dos brechas se ven igual en una tabla y significan lo contrario.** Supresión = **la capacidad no está**,
+> y lo que falta hay que construirlo. Aliasing = **la capacidad está entera** y el número declarado estaba inflado por
+> duplicación. **Distinguirlas cuesta un `tools/list`, y es la diferencia entre cotizar un desarrollo y cotizar una
+> integración.**
+
+🔵 **Dato operativo del mismo tipo, y el que hace usable una superficie de 132:** el servidor acepta `--tool`, así que se
+puede **servir un subconjunto**. Una superficie de 132 tools no se le da entera a un agente —es ventana de contexto
+desperdiciada y riesgo de elección errónea—: **se sirve el recorte que el caso de uso necesita**, y eso es decisión de
+diseño, no limitación.
+
+## 84. El rail de escritura de un agente ya tiene forma canónica, y está implementada: *dry run* + token atado a una huella del payload (agregado en el pase 30 del 2026-10-02)
+
+**Esta KB venía describiendo «compuerta humana» en prosa en P53 y P54. Este pase la encontró implementada como primitiva
+de protocolo**, en `guards.py` de `openedx-mcp`, con el modelo de amenaza escrito en el código y nombrado:
+
+> *«An MCP key is driven by an autonomous agent, not a human clicking a button. The failure mode designed against is a
+> *looping* agent — a retry storm that mass-enrols or deletes.»*
+
+**Los cuatro rails:**
+
+1. **Autoridad re-chequeada viva en cada request.** *«A key does not cache privilege — demote the user and every key they
+   hold dies on the next call. `scopes` on a key only narrow, never widen.»*
+2. **Rate limit por (key, tool)**, ventana fija: *«turns a runaway loop into ~N calls»*. Medido: `bulk_enroll` **5/300 s**,
+   `regenerate_certificates` **5/600 s**, `request_retirement` **5/600 s**, y `create_xblock`/`update_xblock` **200/60 s**
+   — **el límite codifica el riesgo de cada operación, no un número global.**
+3. 🔵 **Confirm token.** Una escritura **sin** token **no escribe**: hace **dry run** y devuelve un *preview* más un token
+   **de un solo uso atado a una huella del payload exacto**. Se reenvía con el token para aplicar, y **cambiar el payload
+   invalida el token**. TTL **300 s**.
+4. **Auditoría *append-only* previa:** la intención se registra **antes** de la escritura y **la escritura se rechaza si el
+   registro no se puede persistir**.
+
+**Por qué el rail 3 es el hallazgo y no los otros tres.** Rate limit y auditoría son prácticas conocidas. **El confirm
+token resuelve el problema que hace inseguro a un agente con permiso de escritura: que «confirmar» y «hacer» sean el mismo
+acto.** Separarlos con un token **atado a la huella del payload** vuelve imposible el *bait-and-switch* —el agente no puede
+hacerse aprobar un *preview* y aplicar otra cosa— **sin poner un humano en cada llamada**. Es la pieza que convierte
+«agente con permiso de escritura» en algo que un comité de riesgo puede aprobar.
+
+🔴 **Y el requisito de despliegue que está en el código y no en la documentación:** *«The confirm-token store and
+rate-limit counter use the ambient Django cache. In production that must be a shared backend (Redis/memcached); under
+LocMemCache (dev) both are per-process.»* **Un despliegue multi-worker con la caché por defecto degrada los rails 2 y 3 en
+silencio** — el límite cuenta por proceso y el token puede no encontrarse. **Es una línea de infraestructura obligatoria y
+es cotizable.**
+
+⚠️ **El código es AGPL-3.0; el patrón se puede reimplementar.** Un diseño no es código, y esta KB lo propone como diseño en
+**P61**.
+
+## 85. Cuando el buscador devuelve un *pull request* como evidencia de una capacidad, la capacidad no está en el producto (agregado en el pase 30 del 2026-10-02)
+
+**Regla hermana de la del pase 29 («la presencia de MCP se verifica en el README crudo, nunca en la página
+renderizada»), y este pase la necesitó para no publicar un falso positivo.**
+
+El barrido devolvió `tutors-sdk/tutors-mono-repo` (**MIT**, 4 ★, 5 forks, **813 commits**) asociado a **xAPI** y
+**Open Badges 3.0**. **Verificado en el README crudo: 0 menciones de xAPI, 0 de Open Badges, 0 de MCP.** Todo eso vive en
+el **PR #341**, que está **ABIERTO** (última actualización 2026-09-30): `@tutors/xapi`, `@tutors/badges` (credenciales
+OB 3.0 desde un `badges.yaml`) y un `compose.yaml` con **Yet Analytics SQL LRS (Apache-2.0)** y el **DCC signing service
+(MIT)**.
+
+> **La regla: un PR abierto es intención, no capacidad.** Se anota como **vigilancia** con número de PR, y la pieza entra
+> al inventario como lo que su rama principal sostiene — en este caso **un *course reader* / LMS MIT con 813 commits**, que
+> ya es un alta legítima por sí misma.
+
+**El registro de trampas de muestreo de esta KB, que a esta altura es un activo de método:** colisión de término
+(`education`, `Bloom`, `MCP`+*badges*, `case`); *chrome* de plataforma (el menú «MCP Registry» de GitHub, pase 29); **el
+campo de fecha equivocado** (`time.modified` de npm, este pase); y **la señal que vive en un PR y no en el producto** (este
+pase).
+
+## 86. En npm la antigüedad se lee en `time[version]`, nunca en `time.modified` — y la diferencia fue de diez meses (agregado en el pase 30 del 2026-10-02)
+
+**Corrección de este pase sobre el 29, y es un error de método con nombre propio.** El pase 29 escribió que el último
+publicado de `@superbuilders/oneroster` era del **2026-05-04**, *«casi cinco meses»* antes. Ese valor es **`time.modified`**
+del registro, que cambia por un *dist-tag*, un cambio de dueño o una deprecación — **sin que se publique una línea de
+código**. La última **versión** publicada es **`0.7.0` del 2025-06-27**: **quince meses**.
+
+**Y el patrón de publicación, que es el dato que vuelve obligatorio fijar un fork:** **9 de las 10 versiones salieron en
+una ráfaga de tres días** (2025-04-29 → 2025-05-01), después `0.7.0`, y **nada en quince meses**. **Ráfaga y silencio es el
+perfil de un generador corrido una vez, no de un proyecto mantenido.**
+
+🔵 **En la dirección contraria, el mismo pase mejora el veredicto de licencia:** el pase 29 concluyó que *«el artefacto que
+se instala no respalda la recomendación de 0BSD»*. Medido dentro del tarball: **`package.json` no trae el campo `license`
+en absoluto** (de ahí el `None` del registro) **pero el paquete publicado SÍ incluye un `LICENSE` completo con el texto de
+la BSD Zero Clause License** (*Copyright (c) 2025 Bjorn Pagen*). ✅ **Y cierra la procedencia que el pase 29 dejó abierta:**
+`bjornpagen` es uno de los *maintainers* de npm que ese pase marcó como «no son la organización del repositorio», y es el
+titular del copyright del LICENSE. **El defecto es de metadatos, no de licencia.**
+
+> **Las dos reglas juntas: la licencia se verifica en el archivo `LICENSE` del artefacto publicado, y la antigüedad en
+> `time[version]`. Ninguna de las dos se lee en el resumen del registro.**
 
 
 ## Nota de método del pase 28 (2026-10-01) — el pase que encontró el canal de lectura de código sin instalar nada, y el que descubrió que su propia regla de búsqueda del pase anterior era insuficiente
@@ -4453,3 +4615,45 @@ Esta KB ya se quemó una vez con datos que el pipeline reportó sin medir (ver l
 
 ---
 *Repos (stars, licencias, releases) verificados uno por uno vía WebFetch el 2026-09-30, no por el pipeline. Afirmaciones regulatorias y de mercado del pase 3: corroboradas por múltiples fuentes concordantes, con las fuentes primarias inaccesibles desde esta sesión — ver la nota de método arriba.*
+
+## 87. «No hay README» no es «no hay repo»: cada ecosistema tiene su archivo de metadatos, y pedir el equivocado produce un falso negativo (agregado en el pase 30 del 2026-10-02)
+
+**Tercera regla de método de este pase, y la única que corrige un error cometido dentro del mismo pase.**
+
+Verificando `.LRN`, este pase pidió `README.md` al espejo `openacs/dotlrn` en `main` y en `master`, recibió **404 en las
+dos** y escribió que *«el espejo no es una fuente usable»*. **Es falso.** El repositorio tiene contenido y se lee
+perfectamente: lo que no tiene es un `README.md`, porque **es un paquete APM de OpenACS y su metadato vive en
+`dotlrn.info`** — que responde **200 en `main`, `master`, `HEAD` y `oacs-5-10`**, y que resultó **la mejor fuente de todas**:
+declara `version name="2.10.1"`, `<release-date>2024-09-02</release-date>`, `<maturity>2</maturity>` y el vendor.
+🔵 **Ese archivo corrigió además a la fuente secundaria, que decía «2.9.0 / 2.9.1».**
+
+> **La regla: antes de declarar un repositorio vacío o un espejo inútil, pedir el archivo que su ecosistema usa.**
+> `*.info` en OpenACS/APM, `*.gemspec` en Ruby, `pom.xml` en Java, `composer.json` en PHP, `pyproject.toml`/`setup.py` en
+> Python, `package.json` en Node, `Cargo.toml` en Rust. **`README.md` es una convención de GitHub, no un requisito de
+> empaquetado**, y los proyectos más viejos —justo los que esta KB evalúa para declararlos vivos o muertos— son los que
+> menos probablemente lo tengan.
+
+**Y el corolario, que es el que más valor tiene:** el archivo de empaquetado **es mejor evidencia que el README y que la
+web del proyecto**, porque **es el que el gestor de paquetes lee** y por lo tanto el que no puede estar decorativo. En este
+pase el mismo principio rindió tres veces por tres canales distintos: `dotlrn.info` para la versión de dotLRN,
+`license.txt` para su GPL-2.0, y el `LICENSE` **dentro del tarball de npm** para el 0BSD de `oneroster-ts` que el registro
+declaraba ausente (tendencia **86**).
+
+**El registro de canales de verificación de esta KB, consolidado en este pase:**
+
+| Canal | Estado | Para qué sirve |
+|---|---|---|
+| `raw.githubusercontent.com` | ✅ **Responde** | Leer código y metadatos sin clonar. **El caballo de batalla desde el pase 28** |
+| Registros de paquetes (PyPI, npm) | ✅ **Responden** | Licencia **del artefacto**, versiones y fechas reales. **El canal que descubrió el conector de Open edX** |
+| Tarball del paquete | ✅ **Responde** | **El `LICENSE` que el registro no declara**, y el código del servidor para ejecutarlo |
+| `codeload.github.com` | 🔴 **403** | Bajar el repo entero. **No disponible: hay que leer archivo por archivo** |
+| API de GitHub | 🔴 **Cerrada** fuera del alcance de la sesión | — |
+| `openacs.org`, `openedx.org` | 🔴 **403** | Documentación y anuncios oficiales. **No disponibles** |
+
+## 🔵 Las tres acciones que este pase deja escritas para el siguiente
+
+**Las tres son de medición y las tres son baratas. Dos se hacen en la misma tarde, porque son el mismo gesto —levantar un stack y pedir `tools/list`— sobre dos sistemas distintos.**
+
+1. **Revisar si alguna otra ausencia declarada de esta KB ya fue cerrada por su propio proyecto** (**gap 54**). Este pase descubrió que el gap 48 estaba cerrado **dos meses antes** y el barrido no lo había notado, porque buscaba *«conector de terceros»* y la puerta la publicó el proyecto en **PyPI**, no en GitHub con nombre `*-mcp`. **La acción concreta: para cada ausencia de conector que esta base declara abierta, consultar el registro de paquetes del lenguaje de la plataforma (PyPI, npm, Packagist, RubyGems) con el nombre del proyecto, no del protocolo.** Es el canal que este pase demostró que faltaba.
+2. **Pedir `tools/list` a los dos sistemas que quedaron medidos en el papel pero no en ejecución** (**gaps 52 y 55**): `docker-compose up` en **OpenCASE** y pedirle su **OpenAPI 3** al endpoint de descubrimiento —lo que habilita **generar** el conector de **P60** en vez de escribirlo—, y `tutor plugins enable openedxmcp` para ver **cuántas tools expone realmente** el conector oficial de Open edX frente a sus 35 rutas de fachada. **Las dos mediciones convierten cifras de documentación en cifras de protocolo**, que es la distinción que este pase estableció con `oneroster-ts` (aliasing) y CaSS (supresión).
+3. 🔴 **Resolver el calendario del Anexo III contra el texto consolidado** (**gap 56**). Es la única de las tres que no es técnica y es la que más riesgo comercial descarga: esta KB tiene **dos fechas incompatibles publicadas en archivos distintos** —2027-12-02 por el pase 11 y «rige desde 2026-08-02» por el pase 28— y **sobre la segunda se construyó argumentación de venta para EMEA**. Hay que fechar cada afirmación con **el inciso del Anexo III** que le corresponde, porque educación es uno entre varios y el calendario no es único para todos.

@@ -1,13 +1,289 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-01
+updated: 2026-10-02
 ---
 
 # 📈 Agentes trending — education
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 > No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
+
+## 2026-10-02 (pase 30) — la ausencia más valiosa de esta KB **la cerró el propio proyecto**: Open edX tiene conector MCP oficial, y es **AGPL-3.0 y en proceso**, así que lo que se rompe no es el gap sino **la tesis de composición del pase 27**
+
+**6 artefactos verificados de primera mano (4 leyendo código fuente, 1 ejecutando el servidor, 1 en el registro de
+paquetes), 3 altas, 1 tesis propia refutada, 1 conclusión propia corregida, 2 nombres cerrados.**
+Este pase ejecutó **las tres acciones** que dejó escritas el pase 29 y las tres rindieron. Pero el hallazgo que manda no
+salió de ninguna de las tres: salió de volver a preguntar por el **gap 48**, que esta KB tenía como su mejor oportunidad
+comercial. **Ya no lo es.**
+
+| Artefacto | Licencia | Versión / ★ | Canal de verificación | Qué quedó medido | Estado |
+|---|---|---|---|---|---|
+| [`openedx-mcp`](https://pypi.org/project/openedx-mcp/) | 🔴 **AGPL-3.0** | **0.1.5**, 5 releases, **2026-07-25** | **PyPI JSON + código del sdist** (`openedx.org` bloqueado) | **28 endpoints LMS**, **9 scopes**, **18 tools de escritura** con *rate limit* por tool, **4 rails de seguridad** | 🔴 **Cierra el gap 48 y mata la premisa de P55.** **Nuevo** |
+| [`tutor-contrib-openedxmcp`](https://pypi.org/project/tutor-contrib-openedxmcp/) | 🔴 **AGPL-3.0** | **0.1.7**, 7 releases, **2026-07-25** | PyPI JSON | Plugin Tutor que instala el app Django y **corre el servidor MCP**; Tutor local y Kubernetes | **Nuevo.** Es la mitad de despliegue del par |
+| [`1EdTech/OpenCASE`](https://github.com/1EdTech/OpenCASE) | **Apache-2.0** ✅ | 9 ★ | **Código fuente, 5 archivos** vía `raw.githubusercontent.com` | 🔵 **72 rutas contadas**, la regla exacta del prefijo, **2 endpoints de descubrimiento** y una **capa CGE** que nadie había visto | ✅ **Acción 1 cumplida. Gap 52 CERRADO** |
+| [`@superbuilders/oneroster`](https://www.npmjs.com/package/@superbuilders/oneroster) | **0BSD** ✅ (en el tarball) | 0.7.0 | 🔵 **Ejecutando el servidor**: `initialize` + `tools/list` | 🔵 **132 tools servidas**, y el «164» explicado: **132 operaciones + 32 alias** | ✅ **Acción 2 cumplida.** 🔴 **Y corrige dos cosas del pase 29** |
+| [`redbeard-26/asfai-education`](https://github.com/redbeard-26/asfai-education) | **Apache-2.0** ✅ | 2 ★, 0 forks, 42 commits | README **crudo** (regla del pase 29) | **9 gateways MCP** y **cinco estándares 1EdTech a la vez** | **Nuevo para esta KB.** ⚠️ Muy temprano |
+| [`instructure/qti`](https://github.com/instructure/qti) | **MIT** ✅ | 8 ★, 10 forks, 174 commits | README **crudo** | QTI **1.2 y 2.1**, *import/parse*, Ruby. **0 menciones de MCP** | **Nuevo para esta KB.** Es la pata **legada** que `examplary/qti` no cubre |
+
+---
+
+### 🔴 El hallazgo del pase: **el gap 48 lo cerró Open edX, no un tercero — y la licencia de la puerta invierte la conclusión del pase 27**
+
+Esta KB sostuvo durante tres pases que **Open edX era el único LMS grande sin puerta de agente** (gap 48), y los pases
+28 y 29 gastaron su esfuerzo principal en medir la superficie REST para cotizar el conector que faltaba (**P55**).
+**El conector existe, es oficial del proyecto, y se publicó el 2026-07-25** — dos meses antes de este pase.
+
+Son **dos paquetes**, los dos en PyPI y los dos **AGPL-3.0** (clasificador OSI leído en el JSON del registro, no en
+prosa):
+
+- **`openedx-mcp` 0.1.5** — *«Open edX admin operations exposed as an MCP facade for staff/superusers (Ulmo)»*.
+- **`tutor-contrib-openedxmcp` 0.1.7** — *«Tutor plugin: MCP server + openedx-mcp Django app»*, Tutor local y Kubernetes.
+
+🔴 **Por qué esto rompe una tesis propia y no sólo cierra un gap.** El pase 27 escribió la frase que organizó tres pases
+de trabajo: *«las LMS son copyleft pero las puertas son MIT, y por eso se pueden componer»*. Esa frase descansaba en una
+propiedad **arquitectónica**, no legal: las puertas de Moodle y Canvas son **procesos aparte que hablan REST**, así que
+llevan su propia licencia. **Esta puerta no.** Leído del propio paquete:
+
+> *«Installs into BOTH the LMS and the CMS process via the standard Open edX djangoapp plugin entry points, because
+> course-authoring operations must run in the CMS (they touch the modulestore) while people/access/analytics run in the
+> LMS.»*
+
+**Es un plugin Django que corre adentro de los procesos del LMS y del CMS, y es AGPL-3.0.** No hay escotilla de «proceso
+separado»: no queda el patrón de composición que esta KB documentó para Moodle y Canvas. **La conclusión comercial, dicha
+de frente:** para un cliente que corre Open edX, la puerta oficial es gratis y es mejor que lo que esta KB iba a cotizar,
+pero **entra con AGPL en el núcleo de su plataforma**. Lo que queda para vender no es el conector: es **el criterio y la
+operación** (ver el reencuadre de P55 y el patrón nuevo **P61**).
+
+### 🔵 Y lo que sí es un regalo: **el proyecto resolvió el riesgo que el pase 29 había dejado anotado como el costo real**
+
+El pase 29 midió **cinco versiones de API montadas a la vez** (`v0`–`v4`), con las notas en tres de ellas y
+assets/video/transcripciones sólo en `v0`, y concluyó —bien— que eso era **riesgo de adaptador, cotizable por separado**.
+**La puerta oficial no paga ese costo, porque no usa la API REST.** Del propio paquete:
+
+> *«Pure Open edX: every operation is implemented against native openedx-platform **Python APIs**. No third-party stack
+> (no Hasura, no external identity, no org multi-tenancy).»*
+
+🔵 **Corre en proceso contra las APIs Python nativas y el modulestore.** Esa decisión **evita entera** la rotación de
+versiones que el pase 29 identificó. Es la respuesta de diseño al **gap 50**, y la da el proyecto: *no integres por
+REST; corré adentro.* ⚠️ **Y es exactamente la decisión que obliga al AGPL.** Las dos caras son la misma.
+
+### ✅ La autoría de Open edX: el pase 29 tenía razón, y ahora está confirmado por implementación
+
+El pase 29 refutó al 28 mostrando que *«the Authoring API is still experimental»* encabezaba una sección vacía y de 2023,
+y que la autoría **era cotizable**. **Queda confirmado por la vía más fuerte posible: el proyecto la implementó.** Las
+**7 rutas del CMS**, leídas de `cms_urls.py`:
+
+| Ruta (CMS, bajo `^api/mcp/cms/`) | Qué hace |
+|---|---|
+| `courses/{course_id}/outline/` | Árbol del curso |
+| `courses/settings/` | Ajustes del curso |
+| `blocks/create/` | Crea un bloque |
+| 🔵 `blocks/create-tree/` | **Crea un árbol entero de bloques en una llamada** |
+| `blocks/update/` | Edita |
+| `blocks/publish/` | Publica |
+| `blocks/delete/` | Borra |
+
+🔵 **`blocks/create-tree/` es la primitiva que un agente necesita y que ningún conector de esta KB tenía:** armar
+sección → subsección → unidad en **una** operación, en vez de N llamadas encadenadas que un agente puede dejar a medias.
+
+### 🔵 El artefacto más reutilizable que encontró esta KB: **los cuatro rails de escritura**, con el modelo de amenaza escrito en el código
+
+`guards.py` documenta el diseño en primera persona, y **nombra la amenaza**: no es un humano equivocándose, es **un
+agente en bucle**.
+
+> *«An MCP key is driven by an autonomous agent, not a human clicking a button. The failure mode designed against is a
+> *looping* agent — a retry storm that mass-enrols or deletes.»*
+
+Los cuatro rails, aplicados por el decorador `audited_write`:
+
+1. **Re-chequeo de autoridad vivo** en cada request.
+2. **Rate limit por (key, tool)**, ventana fija — *«turns a runaway loop into ~N calls»*.
+3. 🔵 **Confirm token = *dry run* + token de un solo uso atado a una huella del payload exacto.** Una escritura sin token
+   **no escribe**: devuelve un *preview*. Se reenvía con el token para aplicar, y **cambiar el payload invalida el token**.
+4. **Auditoría *append-only*: la intención se registra ANTES de la escritura, y la escritura se rechaza si el registro no
+   se puede persistir.**
+
+**El rail 3 es, en una línea, la compuerta humana que los patrones P53 y P54 de esta KB venían describiendo en prosa.**
+Acá está como primitiva de protocolo, con semántica definida. ⚠️ **El patrón se puede reimplementar (un diseño no es
+código); el código es AGPL.**
+
+**Y el modelo de credenciales es mejor de lo que decía el resumen de prensa** (*«Django's own is_staff/is_superuser»* es
+cierto pero incompleto). Leído de `auth.py`: claves `X-MCP-Key` acuñadas desde el admin, **revocables, con vencimiento y
+telemetría de último uso**, y —lo que importa— *«the authorization rule is re-checked **LIVE** on every request… A key
+does not cache privilege — demote the user and every key they hold dies on the next call. `scopes` on a key only narrow,
+never widen.»*
+
+**Los 9 scopes**, leídos de `models.py`: `read`, `write:enrollment`, `write:users`, `write:roles`, **`grant:admin`**,
+`write:certificates`, `write:reports`, `write:courses` y **`destructive`** (aditivo). **18 tools de escritura** con
+límite por tool; las tres más restringidas son `bulk_enroll` (**5 cada 300 s**), `regenerate_certificates` (**5 cada
+600 s**) y `request_retirement` (**5 cada 600 s**), y la más holgada es `create_xblock`/`update_xblock` (**200 cada 60 s**),
+que es coherente con autoría asistida.
+
+🔴 **El requisito de despliegue que está en el código y no en la documentación, y que es cotizable:**
+
+> *«The confirm-token store and rate-limit counter use the ambient Django cache. In production that must be a shared
+> backend (Redis/memcached); under LocMemCache (dev) both are per-process.»*
+
+**Un despliegue multi-worker con la caché por defecto degrada los rails 2 y 3 en silencio** — el rate limit cuenta por
+proceso y el confirm token puede no encontrarse. Es una línea de infraestructura obligatoria, y es el tipo de hallazgo
+que esta KB existe para llevar a una propuesta.
+
+🔵 **Y un puente con el hilo de privacidad de esta base:** hay `retirement/status/{username}/` y `retirement/request/`.
+Open edX expone el **retiro de cuenta como operación soportada y documentada** a través de la puerta de agente — justo lo
+que los gaps 29/31/32 y **P38** registraron que **ningún LRS ofrece**.
+
+⚠️ **Lo que NO se verificó, dicho explícito:** no se levantó una instancia, así que **no hay `tools/list` observado** de
+este servidor. Las 35 rutas (**28 LMS + 7 CMS**) son lectura de `urls.py` y `cms_urls.py` del sdist 0.1.5, y el servidor
+MCP vive en el plugin Tutor, que no se corrió. **Es `0.1.x` y apunta a Open edX Ulmo.** Es la **acción 1 del pase 31**.
+⚠️ `openedx.org` quedó **bloqueado por el proxy** (nuevo dominio para el registro de bloqueos de esta KB, junto con
+`openacs.org`), así que **el blog oficial no se leyó**: todo lo de arriba sale de PyPI y del código.
+
+---
+
+### ✅ Acción 2 cumplida: **132 tools servidas**, y el «164» del pase 28 tiene por fin una explicación que no es supresión
+
+Se bajó el tarball de npm, se corrió `bin/mcp-server.js start --transport stdio` y se hizo el *handshake* real. El
+servidor se identifica como **`OneRoster 0.7.0`** y `tools/list` devuelve **132 tools** — **72 de lectura y 60 de
+escritura**, en **19 grupos de recurso**.
+
+🔵 **Y la brecha 164 → 132 no es pérdida: es *aliasing*, y está probado por conteo.** El SDK documenta **164 métodos**
+(confirmado: 186 encabezados `##` menos 22 «Overview»), pero sólo **132 nombres distintos**: hay **exactamente 32
+operaciones listadas bajo dos grupos a la vez**. Ejemplos: `getStudentsForClass` aparece en `classesmanagement` **y** en
+`studentsmanagement`; los cinco métodos de *course components* aparecen en `coursecomponentsmanagement` **y** en
+`coursesmanagement`. **32 alias, 32 entradas de más, y el servidor registra cada operación una sola vez.**
+
+| Medición | CaSS (pase 27) | `oneroster-ts` (este pase) |
+|---|---|---|
+| Operaciones del adaptador | 61 | **132 distintas** (164 con alias) |
+| Expuestas como tools | **6** | 🔵 **132 — el 100 %** |
+| Mecanismo de supresión | `x-mcp-ignore` en 55 | 🔵 **ninguno** |
+
+**La frase citable se corrige en la dirección favorable: «132 tools MCP servidas, el 100 % de las operaciones distintas
+del SDK».** No «164 tools», y tampoco la cautela del pase 29 de que podía haber supresión: **no hay nada oculto.** Sigue
+siendo **la superficie de tools más grande de esta KB** (132 contra las 102–103 de `canvas-mcp`).
+
+### 🔴 Dos correcciones al pase 29 sobre este mismo paquete, y una es un error de método nuevo
+
+**1. La fecha estaba mal, y el campo leído era el equivocado.** El pase 29 escribió que *«el último publicado es del
+2026-05-04, casi cinco meses antes de este pase»*. Ese valor es **`time.modified`** del registro de npm, que es
+**mutación de metadatos**, no publicación. La última **versión** publicada es **`0.7.0`, del 2025-06-27**: **quince
+meses** antes de este pase, no cinco.
+
+> **Regla nueva de método:** en npm la antigüedad se lee en **`time[version]`**, nunca en `time.modified`. `modified`
+> cambia por un *dist-tag*, un cambio de dueño o una deprecación, sin que se publique una línea de código.
+
+**Y el patrón de publicación, que es el dato que importa para «fijar un fork»:** **9 de las 10 versiones salieron en una
+ráfaga de tres días** (2025-04-29 → 2025-05-01), después `0.7.0` el 2025-06-27, y **nada en quince meses**.
+
+**2. 🔵 La licencia está mejor de lo que concluyó el pase 29, y la mitigación sigue siendo la correcta por otra razón.**
+El pase 29 registró `license: None` en el registro y de ahí sacó que *«el artefacto que se instala no respalda la
+recomendación»*. Medido dentro del tarball: **`package.json` no trae el campo `license` en absoluto** (de ahí el `None`
+del registro), **pero el paquete publicado SÍ incluye un archivo `LICENSE` completo con el texto de la BSD Zero Clause
+License**, *«Copyright (c) 2025 Bjorn Pagen»*. **El defecto es de metadatos, no de licencia: el artefacto sí viaja con su
+0BSD.** ✅ **Y cierra la duda de procedencia del pase 29:** `bjornpagen` es **uno de los *maintainers* de npm** que ese
+pase anotó como «no son la organización del repositorio» — es el titular del copyright en el LICENSE del tarball, así que
+la cadena cierra.
+
+🔴 **Pero aparece un riesgo de portabilidad que no estaba medido.** El README del paquete trae como URL de token de
+ejemplo `https://alpha-auth-production-idp.auth.us-west-2.amazoncognito.com/oauth2/token` — **el IdP de producción de un
+operador concreto**. El SDK se generó contra **un despliegue**, no contra la especificación en abstracto: hay que
+sobreescribir `--server-url` y `--token-url`, y conviene no suponer que cubre a cualquier proveedor OneRoster.
+⚠️ Dato menor en la misma dirección: `RUNTIMES.md` declara Node LTS **18 y 20** (se corrió sin problema en **22**).
+
+🔵 **Dos datos operativos a favor, medidos:** **cero dependencias de runtime** (`dependencies: {}` — el servidor MCP es un
+*bundle* de 3 MB que no arrastra ni el SDK de MCP), y el flag **`--tool`** permite **servir un subconjunto** de las 132,
+que es el control de ventana de contexto que un agente sobre 132 tools necesita.
+
+---
+
+### ✅ Acción 3 cumplida, y el pronóstico del pase 29 era el equivocado: **`.LRN` no está muerto — está vivo, es GPL-2.0 y vive en CVS**
+
+El pase 29 anotó el nombre con la hipótesis de que *«la señal disponible sugiere un proyecto de los 2000»* y pidió
+declararlo muerto para no volver a encontrarlo. **La medición dice lo contrario, y el cierre es mejor que «muerto».**
+
+| Qué se midió | Resultado (lectura de primera mano del árbol git) |
+|---|---|
+| Versión real | 🔵 **dotLRN 2.10.1**, con **`<release-date>2024-09-02</release-date>`** leído de `dotlrn.info`. ⚠️ **Y eso corrige la fuente secundaria Y el borrador de este pase, que decían «2.9.0 / 2.9.1 con soporte CSP»: el árbol va una menor por delante de lo que dice la web** |
+| Antigüedad | **Dos años** desde la última release declarada. **Ni muerto ni vivo-y-activo: lento** |
+| Licencia | ✅ **GPL-2.0 verificado en `license.txt`** (*«GNU GENERAL PUBLIC LICENSE Version 2, June 1991»*), **no por fuente secundaria**. 🔴 **No pasa el filtro permisivo, y eso basta para no proponerlo** |
+| Núcleo | `openacs/openacs-core`, **GPL-2.0**, 50 ★, 19 forks, 7.600 commits. 🔵 **`acs-kernel.info` declara `6.0.0d2`** — una 6.0 en desarrollo, así que el núcleo está **más vivo** que el «5.10.1» que muestra el README (5.10.1 es la versión que dotLRN *requiere*, no la del núcleo) |
+| Metadatos | `<maturity>2</maturity>`, *«A Course Management System»*, vendor **DotLRN Consortium** |
+| VCS canónico | 🔴 **CVS** (`cvs.openacs.org`, `fisheye.openacs.org`), con el espejo en git. **Por eso ningún barrido de GitHub lo devuelve** |
+
+🔴 **Y una corrección de este pase sobre sí mismo, que conviene dejar escrita porque el error es de método.** El primer
+sondeo de este pase concluyó que el espejo `openacs/dotlrn` *«no es una fuente usable»* porque pidió `README.md` en `main`
+y `master` y las dos dieron 404. **Es falso: el repo tiene contenido y se lee bien** — lo que no tiene es un `README.md`,
+porque es un paquete **APM** de OpenACS y su metadato vive en **`dotlrn.info`**. `dotlrn.info` responde **200 en `main`,
+`master`, `HEAD` y `oacs-5-10`.
+
+> **Regla: «no hay README» no es «no hay repo».** Antes de declarar un espejo vacío hay que pedir **el archivo que ese
+> ecosistema usa** —`dotlrn.info` / `*.info` en OpenACS, `*.gemspec`, `pom.xml`, `composer.json`— y no sólo `README.md`.
+> **Es el mismo error de muestreo que esta KB viene corrigiendo desde el pase 25, ahora en el canal de verificación.**
+
+**Cierre del nombre: `.LRN` está vivo pero lento (última release 2024-09-02), es GPL-2.0 verificado, y su desarrollo
+canónico vive en CVS. No se propone —la licencia alcanza para eso— pero queda registrado con número de versión y fecha,
+que es lo que evita volver a investigarlo entero en el próximo barrido.**
+
+⚠️ **`openacs.org` devuelve 403 por el proxy de egreso** (dominio nuevo del registro de bloqueos), así que **nada de lo de
+arriba sale de su web: todo sale del árbol git**, que resultó el canal más confiable de los dos.
+
+✅ **Y el nombre que apareció en el barrido vertical de este pase se cierra sin ambigüedad: `CK-ERP` está muerto.** Última
+release **v0.31.1, abril de 2012** — catorce años —, alojado en SourceForge, con conector para **Drupal 7.12**. Tenía
+módulos educativos reales (*Teacher, Counsellor, Student, Applicant, Family, Registrar, Edu Administration*), y por eso
+conviene dejarlo anotado como muerto: **es el tipo de nombre que un barrido de «education ERP open source» va a devolver
+otra vez.**
+
+---
+
+### Las dos altas de este pase, verificadas por README crudo
+
+🔵 **`redbeard-26/asfai-education` (Apache-2.0, 2 ★, 0 forks, 42 commits, TypeScript)** — **la primera pieza de esta KB
+que declara los cinco estándares 1EdTech a la vez**, y con **9 gateways MCP** (12 menciones de MCP en el README crudo):
+
+| Gateway | Qué hace |
+|---|---|
+| `asfai_capability` | Descubre capacidades y entrega guía de *workflow* |
+| `asfai_graph` | Busca en el grafo de aprendizaje; vecinos, fronteras y caminos |
+| `asfai_run` | Prepara trabajo versionado con validación y contratos de revisión |
+| `asfai_session` | Diálogo de aprendiz reanudable y *quizzes* formativos |
+| `asfai_lesson` | Autoría, validación, revisión, publicación y facilitación de lecciones |
+| `asfai_evidence` | Prepara evaluaciones y registra observaciones justificadas |
+| `asfai_resource` | Recursos del docente, aulas, *quizzes*, artefactos |
+| `asfai_storage` | Almacenamiento privado con verificación de lectura posterior |
+| `asfai_classroom` | Conecta proveedores de aula y gestiona asignaciones |
+
+Los estándares que nombra: **1EdTech QTI** (ítems y resultados portables), **xAPI / IEEE 9274.1.1** (eventos de actividad
+y evidencia), **1EdTech CASE** (marcos de competencia K–12), **LTI y OneRoster** (lanzamiento y contexto institucional) y
+**CLR + Open Badges** (logros portables). ⚠️ **Es una arquitectura de referencia, no una dependencia: 2 ★ y 42 commits.**
+Se propone como **mapa de capas**, no como pieza a instalar en un entregable de cliente.
+
+⚠️ **Y matiza —no refuta— la ausencia de QTI.** El **gap** de QTI decía que no hay conector MCP de QTI, medido por tres
+métodos. **Sigue siendo cierto en lo que afirma**: esto no es un conector de QTI, es un servidor MCP de aprendizaje que
+**declara QTI como su formato** de ítems. La ausencia de una puerta MCP *dedicada* a QTI se mantiene.
+
+🔵 **`instructure/qti` (MIT, 8 ★, 10 forks, 174 commits, Ruby)** — y la razón de que entre es que **cubre la pata que
+`examplary/qti` no cubre**. `examplary/qti` es QTI **3.0 y 2.1**; esta gema es QTI **1.2 y 2.1**, o sea **el formato
+legado**, que es exactamente el acervo que **P48** parte de migrar. ⚠️ **Con la precisión que corresponde: P48 ya nombraba
+`LongsightGroup/qti3` (MIT, 667 commits) para esa pata, y además migra 1.2/2.x a QTI 3 — así que esta gema es una
+alternativa de lectura en Ruby o un segundo parser de validación, no una pieza que faltaba.** ⚠️ **Dos límites medidos, y acotan el uso:** sólo
+**importa y parsea** (no genera), y los tipos de interacción soportados son **True/False, Multiple Choice y Multiple
+Answer**. **0 menciones de MCP** en el README crudo, lo que la vuelve otro control negativo para la ausencia de QTI.
+
+### ⚠️ Un falso positivo evitado, y se escribe porque la trampa es nueva: **la señal estaba en un *pull request*, no en el producto**
+
+El barrido devolvió `tutors-sdk/tutors-mono-repo` (**MIT**, 4 ★, 5 forks, **813 commits**, TypeScript/Svelte 5) con
+xAPI y **Open Badges 3.0**. **Verificado en el README crudo: 0 menciones de xAPI, 0 de Open Badges, 0 de MCP.** Todo eso
+vive en el **PR #341, que está ABIERTO** (última actualización **2026-09-30**), y es donde aparecen `@tutors/xapi`,
+`@tutors/badges` (credenciales **OB 3.0** desde un `badges.yaml`) y un `compose.yaml` que levanta **Yet Analytics SQL LRS
+(Apache-2.0)** y el **DCC signing service (MIT)**.
+
+> **Regla nueva, hermana de la del pase 29 sobre el README renderizado:** cuando el buscador devuelve un *pull request*
+> como evidencia de una capacidad, **la capacidad no está en el producto**. Se anota como **vigilancia**, no como alta.
+
+**`tutors-mono-repo` entra entonces como lo que sí es —un *course reader* / LMS MIT con 813 commits— y el trabajo de
+estándares queda en vigilancia** para el pase que lo encuentre mergeado.
+
 
 ## 2026-10-01 (pase 29) — las **dos ausencias declaradas se dan vuelta**, y las dos por el mismo error de método: **se había leído un archivo donde hacían falta dos**
 

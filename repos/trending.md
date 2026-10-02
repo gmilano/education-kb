@@ -1,12 +1,123 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-01
+updated: 2026-10-02
 ---
 
 # 📈 Repos trending — education
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
+
+## 2026-10-02 (pase 30) — el **gap 52 cierra leyendo el código**, y la contradicción entre los dos documentos no se resuelve eligiendo uno: **los dos describen rutas que existen, y la regla es cuál lleva el prefijo**
+
+**La acción 1 del pase 29 era resolver la forma exacta de las rutas de OpenCASE leyendo el código, no los docs** — el
+método que funcionó con Open edX. Se ejecutó sobre **cinco archivos del árbol `main`**, y el resultado es mejor que
+«gana uno»: **hay una regla, es simple, y ninguno de los dos documentos la enuncia.**
+
+### El canal, y un bloqueo nuevo que conviene anotar
+
+`raw.githubusercontent.com` **responde** (tercer pase consecutivo en que es el canal que rinde). 🔴 **Lo que NO responde:
+`codeload.github.com` devuelve 403 por el proxy**, así que **no se puede bajar el tarball del repo** y hay que leer
+archivo por archivo; y la **API de GitHub está cerrada** para repos fuera del alcance de la sesión. ⚠️ **Dos dominios
+nuevos al registro de bloqueos de esta KB: `openacs.org` y `openedx.org`.**
+
+**Todo lo de abajo es lectura de primera mano de `main`.** Los archivos: `apps/opencase/package.json`,
+`apps/opencase/src/main.ts`, `apps/opencase/src/interfaces/http/server.ts`,
+`apps/opencase/src/interfaces/http/http-management/routes.ts` y
+`apps/opencase/src/interfaces/http/http-public/v1p1/routes.ts` (más su gemelo `v1p0`), y `docs/DEVELOPMENT.md`.
+
+### ✅ La respuesta al gap 52, en una regla
+
+🔵 **El segmento `ims/case/v1pX` aparece exactamente cuando la operación actúa sobre una entidad del estándar CASE.
+No aparece nunca en las rutas de plataforma.**
+
+| Forma | Qué documento la escribía | ¿Existe en el código? |
+|---|---|---|
+| `PUT /management/tenants/{tenantId}/ims/case/v1p1/CFItems/{id}` | `FRAMEWORK_EDITOR_BACKEND_INTEGRATION.md` | ✅ **Sí, literal** |
+| `POST /management/tenants/{tenantId}/ims/case/v1p1/CFPackages/import` | `FRAMEWORK_EDITOR_BACKEND_INTEGRATION.md` | ✅ **Sí, literal** |
+| `PUT /management/tenants/{tenantId}/CFItems/{id}` | `DEVELOPER.md` | 🔴 **No. No existe ninguna ruta así** |
+| `GET /management/tenants/{tenantId}/CFPackages` | — | ✅ **Sí** — y es **la única** ruta `CFPackages` sin prefijo: el *listado* |
+
+**Veredicto: `FRAMEWORK_EDITOR_BACKEND_INTEGRATION.md` es correcto y `DEVELOPER.md` está equivocado para entidades CASE.**
+Y se ve de dónde salió el error: **el listado de paquetes sí va sin prefijo**, porque es una operación de plataforma
+—«dame los paquetes de este tenant»— y no una operación del estándar sobre una entidad versionada.
+
+✅ **Confirmado lo que el pase 29 reportó:** `apps/opencase/FRAMEWORK_MANAGEMENT_GUIDE.md`, el documento que el README
+principal ofrece como *«Complete endpoint reference»*, **sigue devolviendo 404 en `main`**. El enlace está roto en la rama
+por defecto.
+
+### La superficie completa, contada: **72 rutas**
+
+| Bloque | Rutas | Detalle |
+|---|---|---|
+| **Lectura CASE `v1p1`** | **12** | `CFDocuments` (lista y por id), `CFItems`, `CFAssociations`, `CFItemAssociations`, `CFRubrics`, `CFSubjects`, `CFConcepts`, `CFAssociationGroupings`, `CFItemTypes`, `CFLicenses`, `CFPackages` |
+| **Lectura CASE `v1p0`** | **12** | 🔵 **El mismo juego completo.** Las dos versiones del estándar están montadas enteras, no parcialmente |
+| **Management** | **44** | **20 con prefijo `ims/case/v1pX`** (escritura sobre entidades CASE, en las dos versiones) + **24 sin prefijo** (plataforma) |
+| **Descubrimiento** | **2** | 🔵 **Uno por versión**, y sin autenticación |
+| **Público** | 1 | `GET /public/tenant-lookup` |
+| **Salud** | 1 | `GET /health` |
+| **Total** | **72** | |
+
+### 🔵 Tres hallazgos que el pase 29 no tenía, y los tres cambian cómo se cotiza P60
+
+**1. Hay DOS endpoints de descubrimiento, no uno.** El pase 29 registró
+`GET /ims/case/v1p1/discovery/imscasev1p1_openapi3_v1p0.json`. También existe
+**`GET /ims/case/v1p0/discovery/imscasev1p0_openapi3_v1p0.json`**, y los dos están registrados **antes de los
+*middlewares* de autenticación**: *«Service Discovery endpoints (no auth required)»*. **Se pueden generar dos conectores,
+uno por versión del estándar, sin credenciales para leer el spec.**
+
+**2. 🔵 La lectura usa autenticación OPCIONAL, y eso abarata el conector de sólo lectura a casi cero.** El código monta
+`makeOptionalAuthMiddleware` en `/ims/case` y lo comenta así:
+
+> *«CASE Provider API — optional auth (frameworks marked public are readable without auth). IDs are globally unique so no
+> tenantId is needed for read endpoints.»*
+
+**Un conector MCP de lectura sobre marcos públicos no necesita credenciales ni tenant.** El `/management` sí: va con
+`makeAuthMiddleware` estricto.
+
+**3. 🔴 Las operaciones de escritura NO son parte del estándar, y el propio código lo declara.** El encabezado de
+`http-management/routes.ts`: *«These endpoints provide UPDATE and DELETE operations for CASE entities. These operations
+are **NOT part of the CASE standard specification** and are provided as extended functionality.»*
+**Consecuencia directa para P60: la mitad de lectura del conector generado es portable a cualquier proveedor CASE
+certificado; la mitad de escritura es específica de OpenCASE.** Eso hay que decirlo antes de cotizar, no después.
+
+### 🔵 La capa que nadie había visto: **CGE — CASE Global Exchange**, 11 rutas de federación
+
+Ni el pase 29 ni ningún otro registró esto, y es la pieza que convierte a OpenCASE de «servidor propio» en **cliente de
+un registro global de marcos**:
+
+| Ruta (bajo `/management/tenants/{tenantId}/cge/`) | Qué hace |
+|---|---|
+| `credentials` (GET / PUT / DELETE) | Credenciales contra el exchange |
+| `credentials/test` (POST) | 🔵 Prueba la credencial sin importar nada |
+| `frameworks` (GET) · `frameworks/{frameworkId}` (GET) | Lista y trae marcos **del registro global** |
+| `subscriptions` (POST / GET) | **Se suscribe a un marco** |
+| `import` (POST) | Importa desde el exchange al tenant |
+| `frameworks/{frameworkId}/refresh` (POST) | **Refresca la copia cacheada** |
+| `cache/{docId}/items` (GET) | Busca ítems en la copia cacheada |
+
+**Por qué importa comercialmente:** un cliente no tiene que **cargar** los marcos curriculares — puede **suscribirse** a
+los que ya existen en el exchange de 1EdTech y mantenerlos sincronizados. **Eso cambia el alcance de un proyecto de
+competencias de «digitalizar el currículum» a «suscribir y alinear»**, que es mucho más barato y mucho más defendible.
+
+### El resto de lo medido, en una tabla
+
+| Qué | Medición |
+|---|---|
+| Stack | **Express 5**, TypeScript, **Apache-2.0** (verificado en `package.json`) |
+| 🔵 Generación del spec | **`swagger-jsdoc`** es dependencia: **el OpenAPI se genera de anotaciones en el código**, así que el código *es* la fuente autoritativa — no hay spec que pueda atrasarse |
+| Scopes | `case.read`, `case.write`, `case.admin`, `case.owner`, vía `requireScope` / `requireAnyScope`, y **anotados como `x-required-scopes` en el OpenAPI** |
+| Ciclo de vida | 🔵 **`POST .../CFPackages/{id}/restore`** — archivado y restauración, que el pase 29 no tenía |
+| Versionado en ruta | `withCaseVersion('1.0'\|'1.1')` inyecta la versión; **Express 5 hace `req.query` de sólo lectura**, así que el proyecto la pasa por un *override* |
+| Límite de cuerpo | **50 MB** (`express.json({limit:'50mb'})`) — coherente con importar paquetes CASE grandes |
+| 🔴 Riesgo de seguridad | **`cors({ origin: true, credentials: true })`**, con el comentario *«Allow all origins (for development) - restrict in production»* **en el código**. Para un entregable de cliente es una línea de endurecimiento obligatoria |
+| Enrutamiento externo | Traefik: `/ims/*` → lectura, `/management/*` → escritura, `/public/*`, `/health`, y Keycloak en `/realms/*` y `/admin/*` |
+
+⚠️ **El límite honesto de toda esta medición: no se levantó una instancia.** Es lectura de código del árbol `main`, no
+tráfico observado, y **el OpenAPI real no se pidió al endpoint de descubrimiento** porque eso requiere el stack Docker
+corriendo. **Las rutas quedan medidas; el spec generado, no.** Es la **acción 2 del pase 31**, y ahora es una tarde de
+trabajo con `docker-compose up` y una sola llamada.
+
 
 ## 2026-10-01 (pase 29) — el gap 50 se **reencuadra leyendo el archivo de al lado**: el aviso de «experimental» encabeza una sección vacía y es de 2023, y hay **cinco versiones de API vivas** donde el pase 28 vio tres
 

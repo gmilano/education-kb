@@ -1,7 +1,7 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-01
+updated: 2026-10-02
 ---
 
 # 🏭 Verticales de partida — Education
@@ -22,6 +22,73 @@ updated: 2026-10-01
 > **Pase 11:** entra la capa **Apereo (ECL-2.0)** —Sakai, Opencast, uPortal, OpenLRW—, que diez pasadas descartaron por un filtro de licencia mal aplicado, y se documenta qué **no** proponer cuando el cliente pide *early warning*.
 > **Pase 28 del 2026-10-01:** la columna de la puerta de agente **gana una fila y pierde una certeza**. Gana **OneRoster**, que tiene puerta **0BSD** con **164 métodos y escritura** (`trilogy-group/oneroster-ts`) — el pase 26 la había declarado vacía. Y sobre **Open edX**, el «no hay puerta» se mantiene pero **ya se sabe sobre qué se construiría**: la API **escribe matrícula y notas por lote**, y el ***authoring* de Studio está declarado experimental en el repo** (**gap 50**). Ver la sección del pase 28, abajo.
 > **Pase 27 del 2026-10-01:** se agrega **la columna que faltaba en veintiséis pasadas — ¿la vertical tiene puerta de agente?** Moodle **sí** (dos conectores **MIT**, uno que escribe notas) y Canvas **sí**; 🔴 **Open edX no tiene ninguna**, y es la de mayor huella pública en LATAM e India. **Las LMS son copyleft pero las puertas son MIT**, y por eso se pueden componer. Ver la sección del pase 27, abajo.
+
+
+## 🔴 La columna de la puerta de agente se cierra: **Open edX ya la tiene, es oficial, y es AGPL en proceso** — pase 30 del 2026-10-02
+
+**El pase 27 agregó la columna «¿la vertical tiene puerta de agente?» y dejó a Open edX como el único «no» entre las LMS
+grandes. Ese «no» caducó, y lo caducó el propio proyecto.**
+
+| Vertical | Licencia de la plataforma | ¿Puerta de agente? | Licencia de la puerta | Arquitectura de la puerta |
+|---|---|---|---|---|
+| **Moodle** | GPL-3.0 | ✅ Sí, **dos** | **MIT** (ambas) | **Proceso aparte**, habla Web Services por token |
+| **Canvas** | AGPL-3.0 | ✅ Sí | **MIT** | **Proceso aparte**, habla REST |
+| **Open edX** | AGPL-3.0 | ✅ **Sí, desde el 2026-07-25 — y es oficial** | 🔴 **AGPL-3.0** | 🔴 **EN PROCESO: plugin Django dentro del LMS *y* del CMS** |
+| **SCORM (formato)** | — | ✅ Sí | **MIT** | Proceso aparte, *offline* |
+| **OneRoster (estándar)** | — | ✅ Sí | **0BSD** | SDK + servidor MCP, **132 tools medidas** |
+| **CASE (estándar)** | Apache-2.0 (OpenCASE) | 🔴 **No** | — | **La mejor oportunidad que queda: el servidor publica su propio OpenAPI** → **P60** |
+
+🔴 **Por qué esto es la corrección más consecuente del pase y no un cambio de celda.** La frase con la que el pase 27
+organizó tres pases de trabajo era: *«las LMS son copyleft pero las puertas son MIT, y por eso se pueden componer»*. Esa
+frase no describía una coincidencia de licencias: describía una **arquitectura**. Moodle y Canvas se pueden componer porque
+sus puertas son **procesos separados** que hablan un protocolo, así que llevan su propia licencia y el copyleft del LMS no
+las alcanza.
+
+**La puerta de Open edX no es un proceso separado.** Es un plugin Django que se instala **dentro** de los procesos del LMS
+y del CMS —tiene que ser así, porque la autoría toca el *modulestore*— y es **AGPL-3.0**. **No queda escotilla.** Para un
+cliente que corre Open edX:
+
+- ✅ **La puerta oficial es gratis, está mantenida por el proyecto y es más capaz que lo que esta KB iba a cotizar** (35
+  endpoints, autoría incluida, y cuatro rails de seguridad de escritura que ningún conector MIT de esta base tiene).
+- 🔴 **Entra con AGPL-3.0 en el núcleo de la plataforma.** Si el cliente ya corre Open edX, **ya está en AGPL**, así que
+  para un despliegue interno esto normalmente **no agrega una restricción nueva** — y conviene decirlo así, sin
+  dramatizar. **Donde sí importa es si el cliente pensaba ofrecer la plataforma como servicio a terceros con
+  modificaciones propias**: ahí el artículo 13 del AGPL alcanza a la obra combinada y el análisis legal es obligatorio,
+  no opcional.
+- **Lo que queda para vender no es el conector.** Es: **criterio** (qué scopes se habilitan y cuáles no —`grant:admin` y
+  `destructive` existen y son separables—), **endurecimiento** (la caché compartida que los rails necesitan en
+  producción), **operación** y **la capa pedagógica arriba**. Ver **P61**.
+
+⚠️ **Y el límite de esta fila, declarado:** es `0.1.x`, apunta a Open edX **Ulmo**, y **no se levantó una instancia**, así
+que las 35 rutas son lectura del código del sdist y **no hay `tools/list` observado**.
+
+### ✅ Dos nombres que esta vertical cierra, para no volver a encontrarlos en cada barrido
+
+- **`.LRN` / dotLRN** — 🔴 **el pronóstico del pase 29 era el equivocado: está vivo**, y la medición de primera mano del
+  árbol git da números que **también corrigen a la fuente secundaria**: `dotlrn.info` declara **dotLRN 2.10.1** con
+  **`<release-date>2024-09-02</release-date>`** (la web decía «2.9.0 / 2.9.1»), `<maturity>2</maturity>`, vendor
+  *DotLRN Consortium*, *«A Course Management System»*. **Dos años desde la última release: ni muerto ni activo, lento.**
+  **Igual no se propone, y la razón alcanza sola:** ✅ **GPL-2.0 verificado en `license.txt`** (*«GNU GENERAL PUBLIC
+  LICENSE Version 2, June 1991»*), **fuera del filtro permisivo**. Y su **VCS canónico es CVS**
+  (`cvs.openacs.org`, `fisheye.openacs.org`), que es **por qué ningún barrido de GitHub lo devuelve**. El núcleo
+  `openacs/openacs-core` es GPL-2.0, 50 ★, 19 forks, 7.600 commits, y 🔵 **su `acs-kernel.info` declara `6.0.0d2`** — una
+  6.0 en desarrollo, así que el núcleo está **más vivo** que el «5.10.1» del README (5.10.1 es la versión que dotLRN
+  *requiere*, no la del núcleo). ⚠️ **Y una corrección de este pase sobre sí mismo: el primer sondeo declaró el espejo git
+  «sin contenido usable» porque pidió `README.md` y dio 404. Es falso** — es un paquete **APM** y su metadato vive en
+  `dotlrn.info`, que responde 200 en cuatro refs. **«No hay README» no es «no hay repo».**
+  ⚠️ `openacs.org` da **403 por el proxy**, así que nada de esto sale de su web.
+- **`CK-ERP`** — ✅ **muerto**: última release **v0.31.1, abril de 2012**, en SourceForge, con conector para Drupal 7.12.
+  Tenía módulos educativos reales (*Teacher, Counsellor, Student, Applicant, Family, Registrar, Edu Administration*), que
+  es exactamente lo que lo hace reaparecer en los barridos de «education ERP open source». **Anotado como muerto.**
+
+### ⚠️ El barrido vertical de este pase: **séptimo pase consecutivo saturado**
+
+`open source platform education ERP CRM MIT Apache` devolvió **sólo plataformas ya inventariadas** —**OpenEduCat** (LGPL,
+sobre Odoo), **ERPNext/Frappe**, Moodle, Sakai, Chamilo, Kolibri, openSIS, RosarioSIS, Fedena, Open edX, OpenOLAT— más el
+único nombre nuevo, **CK-ERP**, que quedó declarado muerto arriba. **Cero altas de vertical por esta vía.**
+🔵 **Lo nuevo de este pase no vino del barrido de verticales sino del de conectores y del código**, que es el quinto pase
+consecutivo en que eso pasa. **La consecuencia de método ya es estable y conviene dejarla escrita: en educación la capa de
+plataforma está inventariada y la capa que se mueve es la de la puerta.**
 
 
 ## La columna que faltaba en este archivo: ¿la vertical tiene puerta de agente? — agregada en el pase 27 del 2026-10-01

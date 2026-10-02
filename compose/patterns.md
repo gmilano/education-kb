@@ -1,7 +1,7 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-01
+updated: 2026-10-02
 ---
 
 # 🧩 Patrones de composición — Education
@@ -18,6 +18,8 @@ updated: 2026-10-01
 > no existe en open source permisivo).
 > **Pase 11:** +2 patrones — **P25** (riesgo de abandono conforme al Anexo III, la capa con presupuesto ya asignado y sin oferta open source) y **P26** (agente docente sobre la ontología curricular nacional ya publicada).
 > **Pase 27:** **+4 patrones y una corrección.** 🔴 **P51 queda con premisa falsa** —el conector MCP de Moodle **sí existe y es MIT**— y lo reemplazan **P54** (corrección y devolución sobre Moodle con **compuerta humana**, el último tramo del gap 6, con piezas que ya escriben), **P55** (el conector de **Open edX**, que es el único que de verdad no existe), **P56** (**SCORM** como formato de salida de la capa generativa: cero integración, offline) y **P57** (evidencia por MCP cotizada sobre lo que CaSS **realmente** expone — 6 de 61 operaciones, con insignias y autoría de marcos **fuera**).
+
+> **Pase 30 del 2026-10-02:** **+2 patrones y una muerte.** 🔴 **P55 queda con premisa muerta** —el conector MCP de Open edX **existe**, es oficial y es **AGPL-3.0 corriendo en proceso**—, y lo que queda de él es el mapa REST para quien necesite una puerta permisiva *fuera* de proceso. Entran **P61** (el **rail de escritura de agente** reimplementado en permisivo: *dry run* + **confirm token atado a una huella del payload**, rate limit por tool, autoridad viva y auditoría previa — la primitiva que P53 y P54 venían describiendo en prosa, ahora medida sobre una implementación real) y **P62** (el **expediente de competencia** para el requisito de graduación de *AI fluency*, con el marco **suscripto** vía la capa **CGE** de OpenCASE en vez de redactado). ✅ **Y P58 gana precisión sin reescribirse:** pasa de «164 métodos de SDK» a **«132 tools servidas, el 100 % de las operaciones distintas»**, medido ejecutando el servidor. ⚠️ **Corrección de este pase sobre sí mismo:** se iba a escribir que **P48** *«gana por fin una herramienta nombrada para la pata legada»* con `instructure/qti`, **y es falso** — P48 ya nombraba `LongsightGroup/qti3` (**MIT**, 667 commits), que además **migra** QTI 1.2/2.x a QTI 3, mientras la gema de Instructure **sólo importa y parsea**. **`instructure/qti` entra como alternativa de lectura en Ruby, no como pieza que faltaba.**
 
 ## Patrón base
 
@@ -2857,7 +2859,18 @@ que no hay que argumentarla, hay que instrumentarla.
 **10 commits** y 8 tools — **es el punto de partida del último tramo, no un sistema de corrección**. El trabajo real
 del proyecto es la compuerta, el *eval* y la evidencia; el conector se endurece, no se adopta tal cual.
 
-## P55 — El conector MCP de Open edX: la ausencia es real, y el pase 28 la partió en dos cotizaciones (pase 27, **medido y reescrito en el pase 28**)
+## P55 — El conector MCP de Open edX (pase 27) — 🔴 **PREMISA MUERTA EN EL PASE 30: la puerta existe, es oficial y es AGPL-3.0**
+
+> 🔴 **Leer esto antes del patrón.** Este patrón se escribió sobre una ausencia —*«Open edX es el único LMS grande sin conector MCP»*— y esa ausencia **ya no existe**. El **2026-07-25** el propio proyecto publicó **`openedx-mcp`** y **`tutor-contrib-openedxmcp`** en PyPI, los dos **AGPL-3.0**, con **35 endpoints** (28 LMS + 7 CMS, **autoría incluida**) y con **cuatro rails de seguridad de escritura** que ningún conector de esta KB tenía. **Esta KB no lo notó durante dos meses: ver el gap 54.**
+>
+> **Lo que de este patrón sigue vivo, y es bastante:**
+>
+> - ✅ **Todo el mapa de la superficie REST versionada** (`v0`–`v4`, notas en tres versiones, assets y transcripciones sólo en `v0`) **sigue siendo válido y sigue siendo el único camino para un conector permisivo**, porque la puerta oficial es AGPL **y corre en proceso**. Si el cliente necesita una puerta **permisiva y fuera de proceso**, este patrón es la receta y el mapa del pase 29 es el plano.
+> - ✅ **La refutación del pase 29 quedó confirmada por implementación:** la autoría **no** estaba bloqueada, y el proyecto la implementó (`blocks/create`, 🔵 **`blocks/create-tree`**, `update`, `publish`, `delete`).
+> - 🔵 **Y lo que el proyecto enseñó gratis:** corriendo **adentro** del LMS y del CMS **no se paga la rotación de versiones** que este patrón cotizaba como riesgo de adaptador. **Capacidad y copyleft son la misma decisión** (tendencia **82**).
+>
+> **Lo que reemplaza a este patrón para un cliente que corre Open edX: no vender el conector.** Vender **criterio** (qué scopes se habilitan — `grant:admin` y `destructive` son separables), **endurecimiento** (el backend de caché compartido que los rails necesitan en producción), **operación** y **la capa pedagógica arriba**. Ver **P61**. ⚠️ **Y si el cliente ofrece la plataforma como servicio a terceros con modificaciones propias, el artículo 13 del AGPL alcanza a la obra combinada: el análisis legal es obligatorio, no opcional.**
+
 
 **Reemplaza a P51**, cuyo premisa era falsa (ver la corrección al final de este archivo). **Acá la ausencia está
 medida y es real:** búsqueda en modo extendido, **ningún conector MCP para Open edX** (**gap 48**).
@@ -3083,8 +3096,18 @@ distrito escolar típico de **North America** y de los despliegues que ya pasaro
   *«Applicable to **131 of 164 methods**»* para `400`, `401` y `403`. ⚠️ **Pero la distinción que esta KB aprendió con
   CaSS sigue en pie: 164 es el conteo de métodos del SDK, no de tools observadas en `tools/list`** (CaSS: 61
   operaciones, **6 expuestas y 55 con `x-mcp-ignore`**). 🔵 **A favor de `oneroster-ts`: no hay ninguna anotación de
-  supresión ni `scope` de tool en el repo**, que es una postura distinta de la de CaSS. **La frase citable es «164
-  métodos de SDK contados», no «164 tools MCP».** Medirlo es la **acción 2 del pase 30**.
+  supresión ni `scope` de tool en el repo**, que es una postura distinta de la de CaSS. ~~**La frase citable es «164
+  métodos de SDK contados», no «164 tools MCP».** Medirlo es la **acción 2 del pase 30**.~~
+- ✅ **MEDIDO EN EL PASE 30 EJECUTANDO EL SERVIDOR, Y LA CAUTELA SE LEVANTA EN LA DIRECCIÓN FAVORABLE.** `initialize` +
+  `tools/list` por stdio contra `bin/mcp-server.js` devuelve **132 tools** —**72 de lectura y 60 de escritura, en 19
+  grupos**— y el servidor se identifica como **`OneRoster 0.7.0`**. 🔵 **La brecha 164 → 132 no era supresión: era
+  *aliasing*.** El SDK documenta 164 métodos pero sólo **132 nombres distintos**, porque **32 operaciones están listadas
+  bajo dos grupos a la vez** (`getStudentsForClass` en `classes` **y** en `students`; los cinco de *course components* en
+  `coursecomponents` **y** en `courses`; y así 32 veces). **Cero anotaciones de supresión: se sirve el 100 % de las
+  operaciones distintas**, lo contrario de CaSS. **La frase citable definitiva: «132 tools MCP servidas, el 100 % de las
+  operaciones del SDK».** 🔵 **Y un dato de diseño que conviene usar: el servidor acepta `--tool`, así que se sirve un
+  SUBCONJUNTO.** Darle 132 tools enteras a un agente es ventana de contexto desperdiciada y riesgo de elección errónea:
+  **el recorte por caso de uso es decisión de diseño, no limitación.**
 
 - 🔴 **Riesgo de licencia que el pase 29 descubrió y que cambia la recomendación de «forkear» de buena práctica a
   requisito: el paquete que se instala no declara licencia.** El repo es **0BSD**; el artefacto publicado es
@@ -3224,3 +3247,109 @@ OpenCASE (Apache-2.0, Docker, 1 comando)
   operaciones a propósito.** La decisión de qué tools se exponen —y cuáles no, sobre todo las de escritura— **es
   trabajo de producto y de riesgo, no de generador**. **9 ★ y 180 commits**: para un entregable de cliente **se fija un
   fork**, que la Apache-2.0 permite.
+
+## P61 — El rail de escritura de agente, reimplementado en permisivo: la pieza que vuelve aprobable un agente con permiso de escritura (pase 30)
+
+**Qué problema resuelve.** Todo patrón de esta KB que escribe en un sistema de producción —P54 (corrección y devolución en
+Moodle), P53 (*early warning*), P58 (rostering sobre OneRoster), P60 (CASE)— choca con la misma objeción de un comité de
+riesgo: *«¿qué pasa si el agente entra en bucle?»*. Hasta este pase, la respuesta de esta base era **«compuerta humana»**
+descripta en prosa. **El pase 30 encontró la respuesta implementada y midió sus cuatro partes**, en `guards.py` de
+`openedx-mcp` — que es **AGPL-3.0**, así que **lo que se propone acá es el diseño reimplementado, no el código**.
+
+**El modelo de amenaza, citado del original, porque nombrarlo bien es la mitad del diseño:**
+
+> *«An MCP key is driven by an autonomous agent, not a human clicking a button. The failure mode designed against is a
+> *looping* agent — a retry storm that mass-enrols or deletes.»*
+
+**Los cuatro rails, y qué pieza permisiva usa cada uno:**
+
+| Rail | Qué hace | Implementación permisiva |
+|---|---|---|
+| **1. Autoridad viva** | La credencial **no cachea privilegio**: se re-chequea en cada llamada. Degradás al usuario y **todas sus claves mueren en la llamada siguiente** | El verificador de JWT del propio sistema + una consulta de rol por request. **Los `scopes` de una clave sólo acotan, nunca amplían** |
+| **2. Rate limit por (clave, tool)** | Convierte un bucle en ~N llamadas. **El límite codifica el riesgo de cada operación, no un número global** | Redis/memcached **compartido** (ver el riesgo abajo). Referencia medida: masivo **5/300 s**, destructivo **5/600 s**, autoría **200/60 s** |
+| 🔵 **3. Confirm token** | Una escritura **sin token no escribe**: hace **dry run**, devuelve *preview* + **token de un solo uso atado a una huella del payload exacto**. Cambiar el payload **invalida el token**. TTL 300 s | Hash del payload canonicalizado + almacén con TTL. **Es el rail que hace el trabajo** |
+| **4. Auditoría previa** | La intención se registra **antes** de escribir, y **la escritura se rechaza si el registro no se puede persistir** | Tabla *append-only*. **Nada de «loguear después»**: el log es precondición, no efecto |
+
+🔵 **Por qué el rail 3 es el que importa, dicho en una línea para una propuesta:** el problema de seguridad de un agente
+con permiso de escritura es que **«confirmar» y «hacer» son el mismo acto**. Separarlos con un token **atado a la huella del
+payload** hace imposible el *bait-and-switch* —el agente no puede hacerse aprobar un *preview* y aplicar otra cosa—
+**sin poner un humano en cada llamada**. **Eso es lo que convierte «agente que escribe» en algo aprobable.**
+
+🔴 **El riesgo de despliegue que hay que cotizar, y que está en el código del original y no en su documentación:** el
+almacén del confirm token y el contador del rate limit **tienen que ser un backend compartido**. Con caché en memoria por
+proceso y varios *workers*, **los rails 2 y 3 se degradan en silencio**: el límite cuenta por proceso y el token puede
+caer en un worker que no lo tiene. **Es una línea de infraestructura obligatoria (Redis), no un *nice to have*.**
+
+**Vocabulario de scopes que conviene copiar tal cual**, porque ya está probado contra un dominio educativo real:
+`read`, `write:enrollment`, `write:users`, `write:roles`, `write:certificates`, `write:reports`, `write:courses`,
+**`grant:admin`** y **`destructive`** (aditivo). 🔵 **Separar `grant:admin` y `destructive` del resto es la decisión que
+permite habilitar un agente útil sin habilitar un agente peligroso**, y es exactamente la conversación que un cliente
+quiere tener.
+
+**Wiring.** Cualquier conector de esta KB + este rail por delante:
+
+```
+[Agente] → [Servidor MCP del conector: moodle-mcp (MIT) / oneroster-ts (0BSD) / el de CASE generado por P60]
+              ↓  (cada tool de escritura envuelta en el decorador de rails)
+         [Rail 1 autoridad viva] → [Rail 2 rate limit (Redis)] → [Rail 3 confirm token: dry-run + huella]
+              ↓
+         [Rail 4 auditoría append-only — precondición de la escritura]
+              ↓
+         [LMS / SIS / servidor de estándares]
+```
+
+**Estimación.** **2–3 semanas** para el decorador, el almacén de tokens, el vocabulario de scopes y las pruebas de bucle
+(el *test* que importa: simular un agente en reintento y verificar que el rate limit y el token lo contienen). **Se cotiza
+una vez y se reutiliza en todos los patrones de escritura de esta KB.**
+
+**Y es vendible como entregable de gobernanza, no sólo como código** — que es justo lo que piden las dos regiones donde
+esta base midió gobernanza atrasada: **APAC** (marcos que no siguen el ritmo de la implementación) y **LATAM** (9 % de
+instituciones con mecanismos formales de evaluación).
+
+## P62 — El expediente de competencia para un requisito de graduación, con el marco *suscripto* en vez de redactado (pase 30)
+
+**Qué lo dispara, y es nuevo:** **Boston Public Schools convirtió la *AI fluency* en requisito de graduación a partir de
+septiembre de 2026**, y hay legislación en seguimiento en **25 estados**. **Un requisito de graduación no se satisface con
+un asistente**: necesita declarar la competencia, evaluarla y **dejar evidencia auditable de que el alumno la alcanzó**.
+**Es el primer caso de esta KB donde el entregable es un expediente y no una herramienta.**
+
+🔵 **La novedad de este pase que lo abarata, y es la razón de que el patrón sea nuevo y no una variante de P48:** la capa
+**CGE — CASE Global Exchange** de OpenCASE (11 rutas, medidas en el pase 30) permite **suscribirse a marcos de competencia
+del registro global de 1EdTech y mantenerlos sincronizados** (`subscriptions`, `import`, `frameworks/{id}/refresh`), en vez
+de **redactar** el marco. **El alcance cambia de «digitalizar el currículum» a «suscribir y alinear»**, que es más barato y
+mucho más defendible ante un consejo escolar: el marco no lo inventó el proveedor.
+
+**La cadena, toda permisiva y toda verificada en esta KB:**
+
+```
+[Marco de competencia] 1EdTech/OpenCASE (Apache-2.0)
+   ├── CGE: suscribir el marco del registro global  ← NO redactarlo
+   └── CASE Provider API v1p1 (lectura con AUTH OPCIONAL si el marco es público)
+          ↓
+[Ítems de evaluación]
+   ├── acervo legado QTI 1.2 → instructure/qti (MIT)      ← alta del pase 30
+   └── ítems nuevos QTI 3.0  → examplary/qti (MIT)
+          ↓
+[Entrega y evidencia] xAPI → Yet Analytics SQL LRS (Apache-2.0)
+          ↓
+[Aserción de competencia] cassproject/CaSS (Apache-2.0) — record_evidence / get_learner_profile por MCP
+          ↓
+[Credencial portable] Open Badges / CLR
+          ↓
+[Rail de escritura] P61 sobre cada paso que escribe
+```
+
+⚠️ **Los dos límites que se declaran antes de cotizar, los dos medidos en este pase:** (a) **la escritura de OpenCASE no es
+parte del estándar CASE** —lo dice su código—, así que la mitad de escritura del conector es específica de OpenCASE y **no
+portable** a otro proveedor certificado; (b) **`instructure/qti` sólo importa y parsea**, y soporta **True/False, Multiple
+Choice y Multiple Answer**: un acervo con *matching*, *ordering* o respuesta construida **no entra entero**, y eso es
+alcance declarado, no sorpresa.
+
+**Estimación.** **8–10 semanas** para una competencia y un grado, con el marco suscripto, el banco migrado, la entrega
+instrumentada y el expediente armado. **La pieza reutilizable entre competencias es el expediente; la que se repite por
+competencia es la alineación de ítems.**
+
+**Región.** **North America** es donde el disparador existe hoy con fecha. **LATAM y EMEA** comparten la mitad de
+cumplimiento del patrón pero **sin el requisito de graduación**, así que ahí se vende como *marco de gobernanza*, no como
+requisito.
+
