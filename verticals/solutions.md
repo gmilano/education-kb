@@ -37,6 +37,57 @@ updated: 2026-10-02
 > **Pase 27 del 2026-10-01:** se agrega **la columna que faltaba en veintiséis pasadas — ¿la vertical tiene puerta de agente?** Moodle **sí** (dos conectores **MIT**, uno que escribe notas) y Canvas **sí**; 🔴 **Open edX no tiene ninguna**, y es la de mayor huella pública en LATAM e India. **Las LMS son copyleft pero las puertas son MIT**, y por eso se pueden componer. Ver la sección del pase 27, abajo.
 
 
+## 🔴 La columna «puerta de agente» de esta vertical, fechada: tres de las puertas que esta KB propone están paradas (pase 37 del 2026-10-02)
+
+**El pase 27 abrió en este archivo la columna *«¿la vertical tiene puerta de agente?»*, y los pases 30 y 33 la llenaron
+hasta declararla «la capa mejor abastecida de esta KB». Sigue siendo cierto en número de puertas. Este pase les puso fecha,
+y en tres casos la fecha cambia lo que se puede prometer.**
+
+**El instrumento:** `git ls-remote` + `git fetch --depth 1` del sha de `HEAD` + `git log -1 --format=%cI`, sobre las 49
+filas de `agents/top.md`. **49 de 49 respondieron, cero 404.** Detalle completo en `repos/trending.md` (pase 37).
+
+### La capa de conectores, por LMS, con la fecha del último commit en la rama por defecto
+
+| LMS / estándar | Puerta | Licencia | `HEAD` | Estado | Qué se puede prometer |
+|---|---|---|---|---|---|
+| **Canvas** | `bruchris/canvas-lms-mcp` | **MIT** | 🟢 **2026-09-20** | 🟢 activo, 69 tags | 🟢 **Se propone sin reservas.** 165 tools, escribe |
+| **Canvas** | `vishalsachdev/canvas-mcp` | **MIT** | 🟢 **2026-10-01** | 🟢 activo, 22 tags | 🟢 Se propone. El más traccionado (269 ★) |
+| **Moodle** | `bunizao/moodle-cli` | **MIT** | 🟢 **2026-10-02** | 🟢 **el más activo de la capa** | 🟢 Se propone. Lado alumno, sin token de admin |
+| **Moodle** | `MarcosNahuel/moodle-mcp` | MIT | ⚠️ **2026-05-03** | ⚠️ tibio (5,0 m) | Se propone con reserva |
+| **Moodle** | 🔴 `peancor/moodle-mcp-server` | **MIT** | 🔴 **2026-02-22** | 🔴 **frío (7,3 m)** | 🔴 **Es la única pieza permisiva que PONE NOTA y devolución dentro de un LMS** (el tramo final del gap 6, **P54**/**P55**). **Se sigue proponiendo, pero el mantenimiento se cotiza** |
+| **Open edX** | `openedx-mcp` + `tutor-contrib-openedxmcp` | 🔴 **AGPL-3.0** | — (PyPI) | 🔴 **gap 68**: 12 releases en 2 días y nada en 70 | Oficial, en proceso, **copyleft y en proceso Django** |
+| **xAPI / LRS** | 🔴 `DavidLMS/learnmcp-xapi` | **MIT** | 🔴 **2025-08-29** | 🔴 **CONGELADO (13,1 m)**, **1 sola rama** | 🔴 **Es «la única puerta» del gap 64 y la pieza más citada de esta base (42 menciones).** Ver abajo |
+| **OneRoster** | 🔴 `trilogy-group/oneroster-ts` | **0BSD** | 🔴 **2025-06-27** | 🔴 **CONGELADO (15,2 m)**, 5 ramas de bot sin mergear | 🔴 **132 tools, la superficie más grande de esta KB — y nadie la atiende** |
+| **SCORM** | `giacomomaria81/scorm-mcp-server` | MIT | 🟢 **2026-09-03** | 🟢 activo, 6 tags | 🟢 Se propone. Offline |
+| **Open edX (Tutor)** | `ArnaudGuiovanna/tutor-mcp` | — | 🟢 **2026-10-01** | 🟢 activo, 7 tags | 🟢 Se propone |
+| **Gradescope** | `Yuanpeng-Li/gradescope-mcp` | — | ⚠️ **2026-05-13** | ⚠️ tibio (4,6 m) | Con reserva |
+| **CaSS / CASE** | `cassproject/CASS` | Apache-2.0 | (fuera de esta tabla) | — | Ver **P50**, **P57**, **P60** |
+
+### 🔴 Lo que esto cambia en una conversación con cliente, en tres frases
+
+1. 🟢 **La capa Canvas y la capa Moodle del lado alumno están sanas** — cuatro puertas MIT con commits de las últimas dos
+   semanas. **Un proyecto que entra por Canvas o por Moodle-alumno no tiene riesgo de dependencia.**
+2. 🔴 **La capa de telemetría tiene un problema que hay que poner en la propuesta, no esconder.** `learnmcp-xapi` es
+   **MIT**, hace exactamente lo que **P67** y **P68** necesitan (3 tools: 1 escribe, 2 leen), y **no recibe un commit desde
+   el 2025-08-29**. Tiene **una sola rama**, así que no hay desarrollo en otro lado. ⚠️ **No es una razón para no
+   proponerlo** —es 3 tools sobre una API estándar, la superficie más chica y estable de toda esta KB, y el estándar xAPI
+   no se mueve— **pero el mantenimiento pasa a ser una línea del presupuesto en vez de un supuesto.** 🟢 **El resto de la
+   receta P67/P68 está sano:** `lrsql` (Apache-2.0) publicó **`v0.9.9` el 2026-10-01** y **Ralph** (MIT) sigue vivo en
+   `main`.
+3. 🔴 **La capa OneRoster es la que peor está, y es la de entrada a cualquier proyecto con SIS.** `oneroster-ts` es
+   **0BSD** —la licencia más permisiva que existe, **se puede forkear sin ninguna obligación**— con **132 tools** y
+   **quince meses sin que un humano toque la rama principal**. 🔵 **Que sea 0BSD es justamente lo que vuelve esto
+   manejable: el fork no tiene costo legal.** Lo que no hay es reemplazo: el único candidato activo del registro
+   (`@timeback/oneroster`) **no declara licencia** (**gap 75**).
+
+### 🔵 La distinción de método que hay que aplicar al leer cualquier tabla como ésta
+
+**La actividad de bot no es mantenimiento.** `oneroster-ts` tiene un ref de hace cuatro meses, pero son **cuatro ramas
+`dependabot/*` y un `speakeasy-sdk-regen-*`, ninguna mergeada**. `educhain` tiene su tip más nuevo en una rama
+**`claude/*`** sin mergear, con `main` parado desde el **2025-12-03**. 🔵 **Se fecha el tip de la rama por defecto, nunca el
+ref más nuevo** — un barrido que tomara el ref más nuevo declara vivos a los dos (**gap 72**, tendencia **124**).
+
+
 ## 🎖️ La vertical de credenciales tiene por fin una implementación **OB 3.0 completa** — y es copyleft de red: `Certo` — pase 34 del 2026-10-02
 
 **Esta base venía diciendo que la capa de credenciales no tenía con qué partir:** `badgr-server` da **404**, el Open

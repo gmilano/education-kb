@@ -58,6 +58,23 @@ Rango: **$8.7B – $12.3B**. Usar el rango, no un número puntual, en material d
 
 **Señal de demanda:** 83% de las instituciones declara planes de desplegar AI teaching assistants para 2026.
 
+### Agregado en el pase 37 del 2026-10-02 — la cifra global se reconfirma con el MISMO par de números por tercera vez, y el dato nuevo es de composición: por nivel y por materia
+
+- ✅ **Reconfirmación literal, y es la tercera corrida consecutiva que devuelve el mismo par:** **US$ 7,52 B (2025) → US$ 10,6 B (2026)**, **CAGR 40,9 %**. 🔵 **Que tres barridos independientes devuelvan el mismo par le da a esta cifra el respaldo más fuerte de todo `intel/market.md`** — y conviene seguir citándola como **cifra de una firma**, no como consenso.
+- 🟢 **El dato nuevo es de COMPOSICIÓN, que es lo que faltaba para dirigir una propuesta:**
+
+| Corte | Participación |
+|---|---|
+| **K-12** sobre la adopción total | **45,62 %** |
+| **STEM** sobre los ingresos | **34,78 %** |
+| **Aprendizaje de idiomas** | **el segmento de mayor crecimiento** |
+| **Soluciones en la nube** (2024) | **71,22 %** de participación |
+
+  🔵 **Lo que esto cambia operativamente: el 45,62 % de K-12 es la justificación cuantitativa de por qué las recetas *teacher-facing* de esta base (`P8`, `P14`, `P54`) apuntan al segmento correcto**, y el **71,22 % de nube** es el contrapeso que hay que tener a mano cuando se propone el stack soberano u *offline-first* de **P3** — **ese stack va contra la corriente del mercado y se vende por requisito (soberanía APAC, Anexo III EMEA, conectividad LATAM), no por tendencia.**
+- 🟢 **Adopción del lado del alumno, con salto medido:** el uso de AI por estudiantes pasó de **66 % (2024) a 92 % (2025)**, y **86 % de los estudiantes de educación superior** la usa como su principal herramienta de investigación e *ideación* al comenzar 2026. 🔵 **Es la cifra que vuelve urgente la capa de integridad y de procedencia de esta KB (`P49`, tendencias 36 y 37): el uso ya es universal, así que la pregunta del cliente dejó de ser «¿lo permitimos?» y es «¿cómo lo evidenciamos?».**
+- ⚠️ **Y la advertencia de método, que vale para todo este archivo:** las cifras de arriba son de **firmas comerciales de *market research***, y el **gap 65** está reconfirmado en este pase —**0 de 6 dominios institucionales responden**— así que **no hay contraste primario disponible desde este entorno**. 🔵 **Matiz nuevo del pase: el buscador sí devuelve contenido institucional (UNU, BID, Consejo de Europa) aunque el dominio esté bloqueado**, lo que permite citar **origen y título** pero no inciso ni página (tendencia **130**).
+
+
 ### Agregado en la segunda pasada del 2026-09-30
 
 Más estimaciones, que ensanchan el rango en vez de cerrarlo — razón de más para no citar un número puntual:
@@ -867,6 +884,15 @@ Dónde se produce el software educativo abierto, que no es donde está la demand
 
 ### North America
 
+**Pase 37 (2026-10-02) — la región confirma sus dos cifras propias, y el dato nuevo del barrido es una ADVERTENCIA de fuente: la afirmación regulatoria que más se repite sobre esta región es la que esta KB sabe vencida.**
+
+- ✅ **Confirmación de las cifras del pase 35, sin cambios:** **US$ 951 M (2024) → US$ 2.303,2 M (2029)**, **CAGR 15,9 %**, y **36 % de la adopción global**. ⚠️ **Se sigue sin promediar con el CAGR global (40,9 %)**: son firmas distintas y cifras no conciliables.
+- ✅ **El encuadre «no hay regulador federal sectorial» se reconfirma textualmente** —*«no equivalent to the FDA exists for educational technology»*, con las decisiones de adopción en manos de cada escuela, distrito o universidad— y el barrido nombra ahora **Colorado y Texas** entre los estados con requisitos parciales, que se suman a los ya registrados por esta base.
+- 🔴 **Y la advertencia que vale más que cualquier cifra del pase, porque es la que se dice en una reunión y sale caro:** **la fuente de esta región afirma que el EU AI Act «entra en plena vigencia en agosto de 2026» y que clasifica la educación como alto riesgo.** **Esta base lo tiene medido y es falso para educación:** el **Digital Omnibus** movió el **Anexo III** —donde cae educación— a **2027-12-02** (tendencias **25** y **121**). 🔵 **Es la séptima vez que esta KB registra la contradicción, y este pase agrega el dato estructural: la fecha vencida aparece en DOS barridos regionales independientes de la misma corrida (North America y LATAM).** No es el error de una fuente: **es el estado por defecto de la capa secundaria comercial**, y el **gap 65** explica por qué esta base no puede corregirlo desde la fuente primaria. **La oportunidad comercial es literal: llegar a la reunión con el calendario correcto y el inciso, cuando el cliente leyó el otro.**
+- **Encuadre de adopción, sin cambios respecto del pase 36:** **86 %** de las organizaciones educativas declara haber adoptado AI generativa. ⚠️ **Secundarias comerciales, como todo `intel/` de esta base.**
+
+
+
 **Pase 36 (2026-10-02) — la región pasa de «colcha de retazos sin regulador» a tener volumen legislativo medido, un instrumento federal en trámite y —el dato que más cambia una venta— un estándar impuesto por el proveedor con fecha de entrada en vigor.**
 
 - 🟢 **El volumen legislativo deja de ser adjetivo y tiene número: 134 proyectos de ley sobre AI en educación introducidos en 31 estados en la sesión 2026**, concentrados en tres ejes: privacidad del dato del alumno, límites de uso en el aula, e integración curricular. **Es la cifra que le faltaba al encuadre del pase 34** («no hay equivalente a la FDA en educación»): sigue sin haber regulador federal sectorial, pero **la dispersión ya es cuantificable y es el costo de cumplimiento multi-jurisdiccional de cualquier despliegue nacional**.
@@ -1578,6 +1604,16 @@ distrital**, en North America **no se vende adopción ni piloto — se vende exp
 **inferencia autoalojada con registro de decisión y humano en el lazo**, que es exactamente el *stack* soberano que esta
 KB ya tiene mapeado para EMEA. **El mismo entregable técnico sirve a las dos regiones por razones legales distintas.**
 ### EMEA
+
+**Pase 37 (2026-10-02) — la región tiene por primera vez un número de lo que NO arrancó, un compromiso de financiamiento con monto, y —el dato de método del pase— una fuente primaria institucional que apareció por el buscador aunque su dominio siga bloqueado.**
+
+- 🔴 **El dato nuevo más útil para calificar un *pipeline*, porque es el lado negativo y casi nunca se publica: 38 % de las organizaciones de EMEA todavía no empezó a pilotear AI**, y **sólo 36,6 % despliega monitoreo de AI agéntica**. 🔵 **Leído junto al 94 % que declara intención de invertir en formación en AI en 2026, la brecha es el mercado: la intención es casi universal y la ejecución está en poco más de la mitad.** Para una propuesta, eso ubica el entregable en **«primer piloto gobernado»**, no en «optimización de lo que ya corre».
+- 🟢 **Compromiso público con monto:** el **AI Adoption Summit** del Reino Unido comprometió **£200 M+** para adopción de AI, con **Cisco, IBM, BT y Rolls-Royce** como socios de ejecución y los **sindicatos como legitimadores**. ⚠️ **Es financiamiento de habilidades, no obligación de conformidad** — la misma distinción que el pase 36 hizo para el *K-12 AI Literacy Act* de EE. UU., y conviene no venderla mal.
+- **Asimetría interna de la región, que esta base viene registrando desde el pase 8 y se reconfirma:** **Arabia Saudita y los Emiratos lideran la adopción** mientras **Europa continental queda por debajo del promedio global**. 🔵 **EMEA sigue siendo dos mercados y no se cotiza con una sola propuesta.**
+- 🔵 **El dato de método, y matiza el gap 65 a favor:** el barrido devolvió contenido del **Consejo de Europa** —la **2.ª Working Conference** sobre las dimensiones regulatorias de la AI en educación, en octubre, con los actores europeos convocados— **aunque `coe.int` siga devolviendo `000` a `curl` en esta misma corrida.** **Está bloqueado el canal de *fetch*, no el de información** (tendencia **130**). ⚠️ **Lo que no habilita: citar un inciso o una fecha exacta.** Para el calendario del Anexo III sigue valiendo **2027-12-02** por los pases 11 y 32.
+- **Marco regulatorio, sin novedades de fondo:** **AI Act** y **NIS2** como las dos obligaciones entrantes; los barreras declaradas son **complejidad de cumplimiento, gobernanza del dato e incertidumbre sobre AI responsable** — las tres son el argumento de **P4**, **P17** y **P78**.
+
+
 
 **Pase 36 (2026-10-02) — 🔴 el calendario del AI Act tiene una SEGUNDA fecha que esta KB no registraba — y la lectura correcta es la contraria de la que parece: la segunda fecha NO es la de educación, y confundirlas regala ocho meses que no existen.**
 
@@ -2342,6 +2378,16 @@ abrir el DOUE.** Queda como acción para el pase siguiente.
   source— en **requisito de licitación, no en preferencia de arquitectura**.
 ### APAC
 
+**Pase 37 (2026-10-02) — la región cambia de eje: el dato del pase no es adopción, es SOBERANÍA, y por primera vez tiene proporción.**
+
+- 🔵 **El dato nuevo y el más accionable: la soberanía va a decidir las elecciones de infraestructura de aproximadamente la MITAD de las empresas de APAC** —gobernanza, localización y auditabilidad de datos, modelos y operaciones de AI. 🟢 **Es la confirmación más directa que ha recibido la tesis de despliegue local de esta KB**, y mueve el argumento de **P3** (tutoría *offline-first*) y de la pila `Ollama`/`vLLM` + LRS propio **de «ahorro de costo» a «requisito de arquitectura»**. **Para una propuesta en APAC, el stack soberano deja de ser una variante y pasa a ser el default cotizable.**
+- **Adopción, con dos cifras que conviene no confundir:** **48 % de los líderes de gobernanza de APAC** pone la adopción de AI como prioridad estratégica para 2026, y **57 % de las organizaciones de Asia** ya la incorporó en una o más áreas. 🔵 **Una es intención de directorio y la otra es despliegue: no se promedian.**
+- 🔴 **La brecha de gobernanza que esta base registra desde el pase 8 se reconfirma y ahora con su mecanismo:** los marcos de gobernanza **no alcanzan el ritmo de la implementación**, y el patrón regulatorio de la región es **armonización de principios** —seguridad, transparencia, *accountability*— **ejecutada de manera distinta en cada mercado**. 🔵 **Eso es exactamente el supuesto de `P5` (orquestación multi-jurisdicción), y es el único argumento regional de esta KB que las fuentes confirman por tercera vez: un mismo expediente no sirve para Singapur, India, Australia y Corea, pero los principios sí se comparten — así que lo que se vende es la CAPA DE POLÍTICA parametrizable, no el expediente.**
+- **Singapur sigue siendo el que fija el molde:** sus consultas sobre uso de AI en instituciones financieras aparecen citadas como la plantilla de cómo el regulador delimita la adopción empresarial, y la región mira ese texto. ⚠️ **Es traslación por analogía, no regulación educativa** — se cita como señal, no como obligación.
+- **Mercados nombrados en este barrido:** Australia, Singapur, India y Nueva Zelanda. ⚠️ **Corea del Sur no apareció en este barrido**, pero su régimen sigue siendo el más exigible de la región por los pases 3, 7 y 10 — **la ausencia es del barrido, no del régimen.**
+
+
+
 **Pase 36 (2026-10-02) — la región tiene por primera vez cifra de intención de gasto con desglose, y el mapa regulatorio se completa con cuatro instrumentos vigentes — pero ninguno es educativo, y ésa es la lectura.**
 
 - 🟢 **Intención de gasto, que es el dato que APAC no tenía:** **96 % de las organizaciones de APAC planea aumentar su inversión en AI, en promedio un 15 % en 2026**, y **~66 % ya está piloteando o adoptando sistemáticamente**. ⚠️ **Es dato *cross-industry*, no educativo** — se cita como marco de presupuesto, no como adopción del sector.
@@ -3047,6 +3093,16 @@ monitoreo de conducta**— es exactamente lo que hace un tutor con *proctoring*.
 herramienta de evaluación con respaldo estatal de las cuatro regiones, así que **un expediente armado contra AI Verify
 sirve de borrador para el Anexo III europeo**, no sólo para APAC.
 ### LATAM
+
+**Pase 37 (2026-10-02) — la región confirma que su problema no es adopción, y el barrido devuelve por fin dos fuentes institucionales nombradas, más la misma fecha regulatoria equivocada que North America.**
+
+- 🟢 **Adopción, otra vez en el extremo alto y con tres cifras independientes:** LATAM es el **tercer mercado del mundo en descargas de aplicaciones de AI generativa**; **99 % de las startups de la región usa alguna solución de AI** internamente y **85 % la integra de forma nativa en su producto**; y **más del 85 % de las empresas latinoamericanas** declara usar AI. ✅ **Es la cuarta confirmación consecutiva de la tesis del pase 13: LATAM no tiene un problema de adopción, tiene uno de GOBERNANZA.**
+- 🔴 **Y el barrido nombra el mecanismo del problema de gobernanza, que es el que se cotiza:** *«múltiples países operan bajo marcos legales diferentes o inexistentes»*, con **riesgo de inconsistencia regulatoria para operaciones transfronterizas**. 🔵 **Para un cliente regional —que es el caso típico en LATAM— eso significa que el entregable no es un expediente nacional sino la MISMA capa de política parametrizable de `P5`, y es el argumento más fuerte que tiene esta base para vender arquitectura en vez de documentos.**
+- 🟢 **Dos fuentes institucionales nombradas, y es lo que al `intel/` de esta región le faltaba:** el *working paper* de **UNU** sobre implementación de AI en educación superior en América Latina y el Caribe, y el documento del **BID** *An Enabling Regulatory Framework for Artificial Intelligence in Latin America and the Caribbean*. ⚠️ **Los dos dominios (`unu.edu`, `publications.iadb.org`) devuelven `000` en esta misma corrida**, así que se citan **por título y origen institucional, sin inciso ni página** (tendencia **130**, **gap 65**).
+- **Edtech queda nombrada entre los sectores más disruptivos de la región** junto a fintech y healthtech, con **Ednova (Chile)** como ejemplo de edtech. ⚠️ **Es una mención de prensa, no una cifra de mercado** — se registra como señal de categoría.
+- 🔴 **La misma fecha vencida del AI Act aparece también acá** —*«el marco entró en vigor progresivamente desde agosto de 2026»*, con los cuatro niveles de riesgo—. 🔵 **Que la misma afirmación superada aparezca en el barrido de North America y en el de LATAM dentro de la misma corrida es el hallazgo transversal del pase: la capa secundaria comercial propaga la fecha anterior al Digital Omnibus en las dos regiones.** Para educación la fecha es **2027-12-02** (Anexo III).
+
+
 
 **Pase 36 (2026-10-02) — 🟢 la región deja de depender de evidencia bloqueada: aparece una encuesta regional con institución, muestra y cifras citables — y por primera vez el dato incluye la OBJECIÓN del alumno, que es lo que faltaba para vender bien.**
 

@@ -8,6 +8,138 @@ updated: 2026-10-02
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 
+## 2026-10-02 (pase 37) — **las 49 filas fechadas una por una por el commit de su rama principal**, con el instrumento que no usa registro ni API: la tabla completa, y el alta de base del pase es una librería de evaluación **ISC** con 2.226 versiones que esta KB nunca vio
+
+**El instrumento:** `git ls-remote <repo>` para los refs, `git fetch --depth 1 <sha de HEAD>` y `git log -1 --format=%cI`.
+Cero cuota de API, cero autenticación, **49 de 49 repos respondieron y ninguno dio 404**. El detalle de método, los límites
+y las correcciones que produjo están en `agents/trending.md` (pase 37); acá queda **el dato crudo**, que es lo que hay que
+poder consultar fila por fila antes de poner una dependencia en una propuesta.
+
+### La tabla completa, ordenada por antigüedad del último commit en la rama por defecto
+
+| Repo | Último commit en `HEAD` | Antigüedad | Tags | Estado |
+|---|---|---|---|---|
+| `Cicatriiz/openedu-mcp` | 2025-06-03 | **16.0 meses** | 0 | 🔴 **CONGELADO** (>12 meses) |
+| `trilogy-group/oneroster-ts` | 2025-06-27 | **15.2 meses** | 12 | 🔴 **CONGELADO** (>12 meses) |
+| `DavidLMS/learnmcp-xapi` | 2025-08-29 | **13.1 meses** | 2 | 🔴 **CONGELADO** (>12 meses) |
+| `karanb192/algo-sensei` | 2025-10-22 | **11.3 meses** | 0 | 🔴 **FRÍO** (>6 meses) |
+| `plastic-labs/tutor-gpt` | 2025-11-13 | **10.6 meses** | 0 | 🔴 **FRÍO** (>6 meses) |
+| `pythpythpython/openstax-mcp-server` | 2025-11-30 | **10.1 meses** | 0 | 🔴 **FRÍO** (>6 meses) |
+| `satvik314/educhain` | 2025-12-03 | **10.0 meses** | 0 | 🔴 **FRÍO** (>6 meses) |
+| `HugeCatLab/ChatTutor` | 2026-01-09 | **8.7 meses** | 2 | 🔴 **FRÍO** (>6 meses) |
+| `peancor/moodle-mcp-server` | 2026-02-22 | **7.3 meses** | 0 | 🔴 **FRÍO** (>6 meses) |
+| `24kchengYe/human-skill-tree` | 2026-03-25 | **6.3 meses** | 1 | 🔴 **FRÍO** (>6 meses) |
+| `MarcosNahuel/moodle-mcp` | 2026-05-03 | **5.0 meses** | 10 | ⚠️ tibio (>3 meses) |
+| `Yuanpeng-Li/gradescope-mcp` | 2026-05-13 | **4.7 meses** | 0 | ⚠️ tibio (>3 meses) |
+| `LabSirius/TutorIA` | 2026-05-20 | **4.4 meses** | 1 | ⚠️ tibio (>3 meses) |
+| `ahmedEid1/lumen` | 2026-06-07 | **3.8 meses** | 1 | ⚠️ tibio (>3 meses) |
+| `Open-TutorAi/open-tutor-ai-CE` | 2026-06-26 | **3.2 meses** | 1 | ⚠️ tibio (>3 meses) |
+| `Nutlope/llamatutor` | 2026-07-12 | **2.7 meses** | 0 | 🟢 activo |
+| `JuneYaooo/lineage-skill` | 2026-07-23 | **2.3 meses** | 0 | 🟢 activo |
+| `CAHLR/pyBKT` | 2026-08-05 | **1.9 meses** | 4 | 🟢 activo |
+| `open-spaced-repetition/py-fsrs` | 2026-08-09 | **1.8 meses** | 38 | 🟢 activo |
+| `vasanthsreeram/Alvarmethod` | 2026-08-16 | **1.5 meses** | 0 | 🟢 activo |
+| `amosblomqvist/learn` | 2026-08-26 | **1.2 meses** | 0 | 🟢 activo |
+| `GarethManning/education-agent-skills` | 2026-08-28 | **1.1 meses** | 0 | 🟢 activo |
+| `avps82/mentar` | 2026-09-03 | **1.0 meses** | 2 | 🟢 activo |
+| `giacomomaria81/scorm-mcp-server` | 2026-09-03 | **1.0 meses** | 6 | 🟢 activo |
+| `paulocymbaum/ed-tech-system-mcp` | 2026-09-06 | **0.9 meses** | 0 | 🟢 activo |
+| `moon0825/jbnu-lms-student` | 2026-09-08 | **0.8 meses** | 3 | 🟢 activo |
+| `microsoft/Shiksha-Copilot` | 2026-09-15 | **0.6 meses** | 0 | 🟢 activo |
+| `Li-Evan/Bloom` | 2026-09-17 | **0.5 meses** | 0 | 🟢 activo |
+| `SirhanMacx/Claw-ED` | 2026-09-18 | **0.5 meses** | 139 | 🟢 activo |
+| `bruchris/canvas-lms-mcp` | 2026-09-20 | **0.4 meses** | 69 | 🟢 activo |
+| `marcorojasb/tero` | 2026-09-20 | **0.4 meses** | 0 | 🟢 activo |
+| `pykt-team/pykt-toolkit` | 2026-09-22 | **0.3 meses** | 5 | 🟢 activo |
+| `SenmuuuuW/universal-diagnostic-tutor-skill` | 2026-09-24 | **0.3 meses** | 2 | 🟢 activo |
+| `artcc/freelingo` | 2026-09-25 | **0.2 meses** | 116 | 🟢 activo |
+| `nmarafo/OpenDidactia` | 2026-09-25 | **0.2 meses** | 0 | 🟢 activo |
+| `HKUDS/DeepTutor` | 2026-09-27 | **0.2 meses** | 84 | 🟢 activo |
+| `ZeKaiNie/universal-examprep-skill` | 2026-09-27 | **0.2 meses** | 7 | 🟢 activo |
+| `oaknational/oak-ai-lesson-assistant` | 2026-09-28 | **0.1 meses** | 129 | 🟢 activo |
+| `redbeard-26/asfai-education` | 2026-09-28 | **0.1 meses** | 0 | 🟢 activo |
+| `Crosstalk-Solutions/project-nomad` | 2026-09-29 | **0.1 meses** | 81 | 🟢 activo |
+| `CAHLR/OATutor` | 2026-09-30 | **0.1 meses** | 4 | 🟢 activo |
+| `jupyterlab/jupyter-ai` | 2026-10-01 | **0.0 meses** | 279 | 🟢 activo |
+| `ArnaudGuiovanna/tutor-mcp` | 2026-10-01 | **0.0 meses** | 7 | 🟢 activo |
+| `vishalsachdev/canvas-mcp` | 2026-10-01 | **0.0 meses** | 22 | 🟢 activo |
+| `zijinz456/OpenTutor` | 2026-10-01 | **0.0 meses** | 0 | 🟢 activo |
+| `Miaotofu01/Study-Mate` | 2026-10-01 | **0.0 meses** | 7 | 🟢 activo |
+| `bunizao/moodle-cli` | 2026-10-02 | **0.0 meses** | 32 | 🟢 activo |
+| `madhvantyagi/Gnos` | 2026-10-02 | **0.0 meses** | 0 | 🟢 activo |
+| `THU-MAIC/OpenMAIC` | 2026-10-02 | **0.0 meses** | 106 | 🟢 activo |
+
+**Resumen: 34 activos (< 3 meses), 5 tibios, 7 fríos, 3 congelados.** Las tres filas congeladas y las siete frías son las
+que hay que revisar antes de citarlas como vivas; **tres de ellas son load-bearing en `compose/patterns.md`**
+(`learnmcp-xapi`, `oneroster-ts`, `peancor/moodle-mcp-server`) y están tratadas en `compose/patterns.md` y
+`agents/trending.md` de este pase.
+
+⚠️ **Leer la columna «Tags» con la advertencia del pase:** **17 de las 49 filas tienen cero tags**, y para ésas el *span*
+de releases del pase 36 **no podía medir nada**. Es la razón por la que este instrumento existe.
+
+### 🟢 El alta de base del pase: `pie-framework/pie-elements` — la capa de interacciones de evaluación, permisiva y viva
+
+| Campo | Valor medido |
+|---|---|
+| Repo | [`pie-framework/pie-elements`](https://github.com/pie-framework/pie-elements) |
+| Licencia | 🟢 **ISC** (cuerpo del `LICENSE.md`, `Copyright 2019 CoreSpring Inc`) — ⚠️ **con contradicción, ver abajo** |
+| `HEAD` (rama por defecto `develop`) | 🟢 **2026-09-22** |
+| Versiones publicadas | 🔵 **2.226** en npm, desde **2019-05-31**, última modificación **2026-10-01** |
+| Refs en el repo | **51.410** |
+| Qué es | Monorepo de **interacciones de evaluación** como *web components*: `multiple-choice`, `rubric`, `complex-rubric`, `graphing`, `drawing-response`, `math-inline`, `extended-text-entry`… cada una con sub-paquetes `configure` (autoría) y `controller` (scoring) |
+
+🔵 **Por qué importa, y es la capa que esta KB tenía peor abastecida en permisivo.** El pase 36 cerró **P69** con la
+conclusión de que *«lo activo y desplegado de la capa de evaluación es copyleft»* —`qtism/qtism` **GPL-2.0-only** con
+218.212 descargas, `oat-sa/extension-tao-testqti` **GPL-2.0-only** con 885 versiones— *«y lo permisivo es lo nuevo»*
+(`@longsightgroup/qti3-cli`, MIT, desde 2026-05-21). 🟢 **`pie-elements` refuta la segunda mitad: hay una capa de
+evaluación permisiva que no es nueva — tiene siete años, 2.226 versiones y publicó ayer.**
+
+⚠️ **Y la refutación tiene un límite que hay que decir en la misma frase, porque decide si se propone:** **`pie-elements`
+no implementa QTI.** Se verificó: **cero menciones de QTI en el README crudo.** Tiene su propio modelo de ítem y su propio
+contrato de *scoring*. 🔴 **Por la tendencia 29 de esta base —*«lo que inventa su propio modelo de dominio no escala, lo que
+se conecta al estándar instalado sí»*— eso lo pone en la categoría débil**, y es exactamente el trade-off que hay que poner
+sobre la mesa: **permisivo y maduro pero propietario de modelo** (`pie-elements`) contra **permisivo y nuevo pero conforme
+al estándar** (`qti3-cli`) contra **copyleft, conforme y desplegado en producción** (`qtism` / TAO). **Las tres opciones son
+reales y ninguna domina a las otras dos** (tendencia **128**).
+
+### 🔴 La contradicción de licencia, que es de una clase que esta KB no tenía: **tres identificadores, dos respuestas, y uno vacío**
+
+| Canal | Qué declara |
+|---|---|
+| `LICENSE.md` de la rama `develop` | **cuerpo del texto ISC** (*«Permission to use, copy, modify, and/or distribute… with or without fee»*), `Copyright 2019 CoreSpring Inc` |
+| `package.json` de la raíz | 🔴 **`"license": "MIT"`** |
+| `@pie-element/rubric`, `drawing-response`, `math-inline`, `graphing`, `extended-text-entry` en npm | **`ISC`** |
+| 🔴 **`@pie-element/multiple-choice` v13.4.4** | 🔴 **NINGUNA — el campo `license` no existe** |
+
+🔵 **La regla del pase 10 de esta base era «verificar contra el archivo `LICENSE`, no contra el README». Este caso la
+extiende y la endurece: el archivo `LICENSE` le gana al MANIFIESTO, y el manifiesto es lo que leen los escáneres
+automáticos de licencia.** Un escáner que lea la raíz dice **MIT**; uno que lea los paquetes publicados dice **ISC**; y
+sobre **`multiple-choice` —la interacción más central de cualquier evaluación— no dice nada.**
+
+⚠️ **El impacto comercial real es chico pero no es cero:** ISC y MIT son las dos permisivas y las dos sirven, así que
+**el resultado no cambia**; lo que cambia es que **un *due diligence* de licencia sobre este monorepo devuelve tres
+respuestas distintas según por dónde entre**, y el paquete sin campo hay que resolverlo por el `LICENSE.md` del repo.
+🟢 **ISC es además licencia nueva para esta KB** —la tercera «permisiva que los filtros no reconocen» después de **ECL-2.0**
+(tendencia 27) y **0BSD** (pase 28)— y **es funcionalmente equivalente a MIT** (tendencia **129**, **gap 76**).
+
+### 🔴 La no-alta del pase, declarada: `@timeback/oneroster`
+
+Apareció buscando reemplazo para `oneroster-ts` (congelado hace 15 meses). **58 versiones, última 2026-09-25** — o sea
+activo. 🔴 **Pero no declara licencia, ni repositorio, ni *homepage*.** **Sin licencia no es open source: es código
+publicado**, y no entra. Queda como **gap 75**.
+
+### ⚠️ Lo que este pase NO pudo medir, y es lo mismo que el 36
+
+`api.npmjs.org` y `pypistats.org` reverificados hoy: **403 a CONNECT**, con control positivo en la misma corrida
+(`registry.npmjs.org` → **200**, `packagist.org` → **200**). **Las descargas por mes siguen existiendo sólo para
+Packagist.** Y las **once** fuentes institucionales del **gap 65** se reprobaron: **0 de 6 dominios responden hoy**
+(`coe.int`, `unesco.org`, `unu.edu`, `publications.iadb.org`, `eur-lex.europa.eu`, `digital-strategy.ec.europa.eu` →
+todos **000**). 🔵 **Matiz nuevo del gap 65, que lo reclasifica a medias:** el buscador **sí** devuelve contenido de
+`coe.int` en el cuerpo de sus resultados (la *2nd Working Conference* sobre las dimensiones regulatorias de la AI en
+educación, octubre). **Está bloqueado el canal de *fetch*, no el canal de *información*** — y una cita obtenida así es
+secundaria en la forma pero primaria en el origen, lo que conviene anotar como tal y no como fuente comercial
+(tendencia **130**).
+
 ## 2026-10-02 (pase 36) — el registro se mide **en los tres canales** y resulta que sólo uno da descargas: **el *span* de releases reemplaza a las descargas**, y con él la capa PHP de evaluación y telemetría queda **fechada pieza por pieza** — la más descargada de todas no publica desde **2022**
 
 **Hallazgo de método primero, porque cambia cómo se leen las cifras del pase 35.** Las descargas por mes —el instrumento

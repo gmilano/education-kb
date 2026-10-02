@@ -49,6 +49,21 @@ updated: 2026-10-02
 > 🔴 **Y una no-alta declarada: `yetanalytics/persephone` queda fuera** — 10 rutas de licencia, las 10 **404**, y Docker
 > parado en **2023-10-10** (**gap 70**). 🔵 **Las dos altas aparecieron por el nombre de la organización, no por término.**
 
+> **Pase 37 del 2026-10-02:** entra **`pie-framework/pie-elements`** (**ISC**, `HEAD` **2026-09-22**, **2.226 versiones**
+> publicadas desde 2019, ~50 interacciones de evaluación como *web components* con sub-paquetes `configure` y `controller`),
+> y **refuta la mitad «lo permisivo es lo nuevo» de la conclusión de P69**: hay una capa de evaluación permisiva de **siete
+> años** que publicó **ayer**. ⚠️ **Con el límite en la misma frase, porque decide si se propone: NO implementa QTI** (cero
+> menciones en el README crudo) — tiene su propio modelo de ítem, así que por la **tendencia 29** queda en la categoría
+> débil. 🔵 **El trade-off real de esta capa pasa a ser de tres patas y ninguna domina: permisivo+maduro pero modelo propio
+> (`pie-elements`) · permisivo+conforme pero nuevo (`qti3-cli`) · copyleft+conforme y desplegado (`qtism`/TAO).**
+> 🔴 **Y trae una contradicción de licencia de clase nueva: `LICENSE.md` tiene cuerpo ISC, el `package.json` de la raíz dice
+> `MIT`, y `@pie-element/multiple-choice` no declara licencia.** **La regla del pase 10 («verificar contra el archivo
+> `LICENSE`, no contra el README») se endurece: el archivo `LICENSE` le gana al MANIFIESTO, que es lo que leen los escáneres
+> automáticos** (**gap 76**). 🔵 **Y la base entera queda fechada por un instrumento nuevo:** `git ls-remote` + `fetch
+> --depth 1` dató las **49 filas** de `agents/top.md` por el commit de su rama por defecto — **49 de 49 respondieron, cero
+> 404** — y **10 están paradas hace ≥ 6 meses**, tres de ellas load-bearing. Tabla completa en `repos/trending.md` (pase 37),
+> impacto en `compose/patterns.md`.
+
 ## 🧪 Capa de conformidad y simulación xAPI, y el validador oficial de credenciales — agregada en el pase 34 del 2026-10-02
 
 **Treinta y tres pases recomendaron `lrsql` o Ralph sin tener con qué dimensionarlos.** Esta capa cierra eso. **Las dos
@@ -86,6 +101,76 @@ con `requires_dist` sin `mcp` y **0 menciones** en la descripción). **Eso es un
 un **`ralph[mcp]`** encaja en la convención del proyecto y **no requiere fork**. Ralph es **MIT** y su `LICENSE` nombra
 a **France Université Numérique**, así que es también el camino con mejor argumento institucional para EMEA. Ver **P71**
 y **gap 64 (cerrado en negativo)**.
+
+## 🧮 Capa de interacciones de evaluación — permisiva, madura y de modelo propio (agregada en el pase 37 del 2026-10-02)
+
+**Esta base tenía la capa de evaluación mal abastecida en permisivo, y lo tenía medido.** El pase 36 cerró **P69** con:
+*«lo activo y desplegado es copyleft, lo permisivo es lo nuevo»* —`qtism/qtism` **GPL-2.0-only** con 218.212 descargas y
+293 versiones, `oat-sa/extension-tao-testqti` **GPL-2.0-only** con 885 versiones y release de hace dos días, contra
+`@longsightgroup/qti3-cli` **MIT** nacido el 2026-05-21. 🟢 **La segunda mitad de esa frase queda refutada.**
+
+| Campo | Valor medido el 2026-10-02 |
+|---|---|
+| Repo | [`pie-framework/pie-elements`](https://github.com/pie-framework/pie-elements) |
+| Licencia | 🟢 **ISC** por el cuerpo de `LICENSE.md` (`Copyright 2019 CoreSpring Inc`) — ⚠️ con contradicción, abajo |
+| `HEAD` (rama por defecto `develop`) | 🟢 **2026-09-22** |
+| Publicación | 🔵 **2.226 versiones** en npm, desde **2019-05-31**; última modificación **2026-10-01** |
+| Refs en el repo | **51.410** |
+| Qué contiene | Interacciones de evaluación como *web components*, cada una con sub-paquetes **`configure`** (autoría) y **`controller`** (*scoring*): `multiple-choice` (v13.4.4), `rubric` (v8.2.4), `complex-rubric` (v7.2.4), `graphing` (v10.2.5), `drawing-response` (v12.2.4), `math-inline` (v12.2.4), `extended-text-entry` (v15.2.5)… |
+| Verificación | `ls-remote` + `fetch --depth 1`, `LICENSE.md` y `package.json` crudos, y los paquetes pedidos **por nombre exacto** a `registry.npmjs.org` |
+
+### 🔵 Qué cambia, y es un trade-off de tres patas en vez de una recomendación
+
+**Ninguna de las tres opciones domina a las otras dos, y la que se propone depende de lo que el cliente ya tenga puesto:**
+
+| Opción | Licencia | Madurez | Conforme al estándar | Cuándo se propone |
+|---|---|---|---|---|
+| `pie-elements` | 🟢 **ISC** | 🟢 **7 años, 2.226 versiones, activo** | 🔴 **No — modelo de ítem propio** | Cuando el cliente construye su propio banco y no tiene que **intercambiar** ítems con nadie |
+| `@longsightgroup/qti3-cli` + `qti3-item-player` | 🟢 **MIT** | ⚠️ **nuevo (2026-05-21)** | 🟢 **QTI 3** | Cuando hay que **importar o exportar** ítems, o la licitación pide QTI |
+| `qtism/qtism` + TAO | 🔴 **GPL-2.0-only** | 🟢 **el más desplegado del mundo** | 🟢 **QTI 2.x** | Cuando el cliente **ya corre TAO** y el copyleft no es obstáculo |
+
+🔴 **El motivo por el que `pie-elements` no desplaza a la pila QTI, y conviene decirlo antes de que lo pregunte el cliente:**
+la **tendencia 29** de esta base —medida en cinco capas— dice que *«lo que inventa su propio modelo de dominio no escala, lo
+que se conecta al estándar instalado sí»*. `pie-elements` es el caso más fuerte **a favor** que esta KB encontró
+—sobrevivió siete años con modelo propio— **y sigue siendo el lado débil cuando hay interoperabilidad en el pliego.**
+
+### 🔴 La contradicción de licencia, que es de una clase nueva para esta base: el manifiesto contra el archivo
+
+| Canal | Qué declara |
+|---|---|
+| `LICENSE.md` (`develop`) | **cuerpo del texto ISC**, `Copyright 2019 CoreSpring Inc` |
+| `package.json` de la raíz | 🔴 **`"license": "MIT"`** (y `"private": true`) |
+| `@pie-element/{rubric,drawing-response,math-inline,graphing,extended-text-entry}` | **`ISC`** |
+| 🔴 **`@pie-element/multiple-choice` v13.4.4** | 🔴 **ningún campo `license`** |
+
+🔵 **La regla del pase 10 era «verificar contra el archivo `LICENSE`, no contra el README». Este caso la endurece: el
+archivo `LICENSE` le gana al MANIFIESTO — y el manifiesto es exactamente lo que leen los escáneres de licencia
+automáticos.** Un *due diligence* devuelve **MIT** si entra por la raíz, **ISC** si entra por los paquetes, y **nada** si
+entra por `multiple-choice`, que es la interacción más central de cualquier evaluación.
+
+⚠️ **Impacto comercial: chico pero no nulo.** ISC y MIT son las dos permisivas y las dos sirven, **así que el resultado no
+cambia**; lo que cambia es que hay que **resolver el paquete sin campo por el `LICENSE.md` del repo** y dejarlo asentado en
+el expediente. 🟢 **ISC es licencia nueva para esta KB** — la tercera «permisiva que los filtros no reconocen» después de
+**ECL-2.0** (tendencia 27) y **0BSD** (pase 28), y **funcionalmente equivalente a MIT**.
+
+### 🔴 La no-alta de esta capa, declarada: `@timeback/oneroster`
+
+Apareció buscando reemplazo para `trilogy-group/oneroster-ts` (congelado hace **15,2 meses**). **58 versiones, última
+2026-09-25** — activo. 🔴 **No declara licencia, ni repositorio, ni *homepage*.** **Sin licencia declarada no es open
+source: es código publicado.** No entra (**gap 75**), y el hueco de reemplazo de OneRoster **sigue abierto**.
+
+### ⚠️ Dos límites del buscador de npm, medidos, que explican por qué el barrido por registro rinde poco
+
+- 🔴 **Dos palabras se resuelven como OR y se ordena por descargas:** `xapi mcp` → **110.769** resultados encabezados por
+  `@modelcontextprotocol/sdk` y `@storybook/addon-mcp`; **el paquete del dominio queda sepultado**.
+- 🔴 **El calificador `scope:` no está soportado:** `text=scope:pie-element` → **2.403.867** resultados, primera página
+  `locate-path`, `strip-ansi`, `@types/node`.
+
+🔵 **La regla: el registro sirve para CONFIRMAR un nombre que ya se tiene, no para DESCUBRIR.** Los nombres se descubren por
+**organización** (tendencia 112), por **README crudo** o por el **árbol de refs** — los tres canales que sí rindieron
+(tendencia **127**).
+
+
 ## 🧭 La adopción medida en descargas, no en estrellas — y tres capas de esta base cambian de orden (pase 33 del 2026-10-02)
 
 **Treinta y dos pases midieron adopción con estrellas de GitHub. El registro de paquetes publica descargas por mes, y

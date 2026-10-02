@@ -5606,6 +5606,192 @@ del pase 33** (`coursecode` sin `tools/list`, la fecha de `learnmcp-xapi`, y la 
    `raw.githubusercontent.com` **sabiendo que el 404 del repo no invalida el paquete** (tendencia 94).
 
 
+## 124. La actividad de bot no es mantenimiento, y un barrido que tome el ref más nuevo declara vivos a los proyectos muertos (agregado en el pase 37 del 2026-10-02)
+
+**El instrumento de vitalidad de este pase —`git ls-remote` + `fetch --depth 1` del sha de `HEAD`— tenía una trampa, y se
+encontró antes de publicar el número.** `trilogy-group/oneroster-ts` tiene **6 ramas y la más reciente es del 2026-05-11**:
+a cuatro meses, parecería tibio. Su rama por defecto está en el **2025-06-27**: **quince meses**. La diferencia son
+**cuatro ramas `dependabot/npm_and_yarn/*` y una `speakeasy-sdk-regen-1746144633`, ninguna mergeada.**
+
+El mismo patrón en `satvik314/educhain`: `main` en el **2025-12-03**, y el tip más nuevo del repo (**2026-05-29**) es una
+rama **`claude/relaxed-curie-mNW2l`** — generada por un agente, sin mergear.
+
+🔵 **La regla, y vale para cualquier medición de vitalidad de esta base: se fecha el tip de la RAMA POR DEFECTO, nunca el
+ref más nuevo.** Dependabot, los regeneradores de SDK y las ramas de agente mantienen vivo el grafo de refs de un proyecto
+que nadie atiende. **En `oneroster-ts` lo único que se movió en quince meses lo escribió una máquina y nadie lo revisó.**
+
+⚠️ **Por qué importa comercialmente:** un *due diligence* de dependencias hecho con la pregunta *«¿hay actividad
+reciente?»* aprueba estos dos repos. La pregunta correcta es *«¿hay un humano mergeando en la rama principal?»*. Ver el
+**gap 72**.
+
+## 125. El registro puede declarar «abandonado» un proyecto activo, y el único canal que no se equivoca es el árbol de git (agregado en el pase 37 del 2026-10-02)
+
+**Esta base ya había visto el caso una vez y lo había escrito como anécdota. Ahora es verificable, y el pase anterior se
+equivocó justamente por no tener con qué verificarlo.**
+
+El pase 33 anotó sobre **Ralph** (MIT): *«vivo en `main` y parado en el registro — último release 2024-07-11, `[Unreleased]`
+activo → se instala desde git, no desde PyPI»*. El pase 36, midiendo con el único instrumento que tenía —el registro—,
+escribió sobre `pykt-team/pykt-toolkit`: *«🔴 2022-10-16. **Cuatro años.** *Backlink* verificado: **es abandono, no
+colisión**»*, y lo etiquetó así en las propuestas de *knowledge tracing*.
+
+| Canal | `pykt-toolkit` |
+|---|---|
+| PyPI | último release **2022-10-16** |
+| Tags de git (los 5, fechados) | `v0.0.34-alpha` 2022-06-09 → **`v1.0.0` 2023-02-10** |
+| 🟢 **`HEAD` de la rama por defecto** | 🟢 **2026-09-22** — `Merge pull request #305`, `feat: add cgmkt model`, `feat: add cgmkt sweep config` |
+
+🟢 **Está vivo, y con *feature commits*, no con mantenimiento cosmético.** La afirmación «cuatro años de abandono» era
+falsa y la pieza entraba a propuestas con esa etiqueta.
+
+🔵 **La regla que esto deja, y es la jerarquía de instrumentos completa de esta base:**
+
+| Instrumento | Qué mide | Dónde falla |
+|---|---|---|
+| ★ estrellas | interés acumulado | `learninglocker`: 583 ★ / 0 descargas |
+| descargas/mes | base instalada | `TinCanPHP`: 6.178/mes, sin publicar desde 2022 |
+| *span* de releases | cadencia de publicación | **no existe para las 17 filas con cero tags** |
+| 🟢 **commit de `HEAD`** | 🟢 **si alguien escribe código** | el «último tag» por orden de versión (ver **gap 73**) |
+
+**Los cuatro miden cosas distintas y ninguno sustituye a los otros. Para decidir si una dependencia entra en una propuesta,
+el que manda es el cuarto.**
+
+## 126. La API de GitHub responde 200 y niega el acceso en el CUERPO: un probe que mire el código HTTP escribe datos vacíos creyendo que funcionó (agregado en el pase 37 del 2026-10-02)
+
+**Esta familia de KBs venía anotando *«github-api-proxy-blocked»*. Medido: es falso, y la verdad es peor.**
+
+- `api.github.com/rate_limit` → **`200`**, con `"limit": 15000, "remaining": 15000`. **Parece plenamente disponible.**
+- `api.github.com/repos/<cualquier-repo-no-adjunto>` → **`200` en la capa HTTP**, y en el cuerpo:
+  `"message": "GitHub access to this repository is not enabled for this session"`.
+
+🔴 **No es un bloqueo de red: es una compuerta de alcance, y devuelve el error en el cuerpo y no en el código de estado.**
+La API sólo contesta por los repositorios adjuntos a la sesión.
+
+⚠️ **El riesgo es de método y es grande, porque todos los probes de esta base miden `%{http_code}`.** Un barrido así sobre
+las 49 filas habría registrado «200, funciona» y escrito **49 filas de campos vacíos** —sin estrellas, sin licencia, sin
+fecha— con apariencia de medición. 🔵 **La regla: cuando un endpoint devuelve JSON, el control de disponibilidad se hace
+sobre un CAMPO ESPERADO del cuerpo, no sobre el código de estado.** Y el reemplazo sin cuota ni autenticación es
+`git ls-remote`, que **no tiene compuerta de alcance** y funcionó en las 49. Ver el **gap 74**.
+
+## 127. El registro de paquetes sirve para CONFIRMAR un nombre, no para DESCUBRIRLO — y hay dos límites medidos que lo explican (agregado en el pase 37 del 2026-10-02)
+
+**El pase 35 introdujo el barrido por registro y rindió poco fuera de Packagist. El pase 36 lo atribuyó a que las descargas
+sólo existen en Packagist. Hay una segunda causa, y es del buscador.**
+
+- 🔴 **Las consultas de varias palabras se resuelven como OR y se ordenan por descargas.** `xapi mcp` → **110.769**
+  resultados, encabezados por `@modelcontextprotocol/sdk`, `@storybook/addon-mcp` y `@upstash/context7-mcp`. **El paquete
+  del dominio queda sepultado bajo la infraestructura genérica**, que es la misma dinámica que la tendencia 23 describe
+  para las estrellas, aplicada al ranking del registro.
+- 🔴 **El calificador `scope:` no está soportado por `/-/v1/search`.** `text=scope:pie-element` → **2.403.867** resultados,
+  y la primera página son `locate-path`, `strip-ansi`, `@types/node`. **Hay que pedir el paquete por nombre exacto**
+  (`registry.npmjs.org/@pie-element/rubric`), que **sí** funciona y devuelve licencia, versión y fechas.
+
+🔵 **La regla, que consolida la del pase 33 (tendencia 112):** los nombres se descubren por **organización**, por **README
+crudo** o por el **árbol de refs**; el registro se consulta **después**, con el nombre ya en la mano, para fechar y para
+leer la licencia. **Un barrido que arme candidatos desde el buscador del registro no puede encontrar software de dominio
+en una industria cuyo término está capturado** — que es exactamente lo que le pasa a `education` en GitHub desde el pase 23.
+
+## 128. La capa de evaluación permisiva existe y tiene siete años, pero no es conforme al estándar: el trade-off es de tres patas y ninguna domina (agregado en el pase 37 del 2026-10-02)
+
+**El pase 36 cerró P69 con una frase que resultó medio falsa:** *«lo activo y desplegado de la capa de evaluación es
+copyleft, y lo permisivo es lo nuevo»*. 🟢 **La segunda mitad se refuta:** `pie-framework/pie-elements` es **ISC**, tiene
+**2.226 versiones publicadas desde 2019**, su `HEAD` es del **2026-09-22** y publicó paquetes **el 2026-10-01**. **Siete
+años, permisivo y activo.**
+
+⚠️ **Y la refutación trae su propio límite: no implementa QTI** —cero menciones en el README crudo—, tiene su propio modelo
+de ítem y su propio contrato de *scoring*. **Por la tendencia 29 de esta base —medida en cinco capas— eso lo pone del lado
+que no escala.**
+
+| Opción | Licencia | Madurez | Conforme | Cuándo gana |
+|---|---|---|---|---|
+| `pie-elements` | 🟢 **ISC** | 🟢 7 años / 2.226 versiones | 🔴 **modelo propio** | Banco propio, sin intercambio con terceros |
+| `@longsightgroup/qti3-cli` + `qti3-item-player` | 🟢 **MIT** | ⚠️ nuevo (2026-05-21) | 🟢 **QTI 3** | Hay import/export, o el pliego pide QTI |
+| `qtism/qtism` + TAO | 🔴 **GPL-2.0-only** | 🟢 el más desplegado del mundo | 🟢 QTI 2.x | El cliente ya corre TAO |
+
+🔵 **La lectura que hay que llevar a una reunión: en evaluación no hay una recomendación, hay tres, y la que corresponde la
+decide el pliego y lo que el cliente ya tiene instalado — no la licencia sola.** Es la primera capa de esta KB donde
+**licencia, madurez y conformidad no coinciden en ninguna pieza.**
+
+## 129. El archivo `LICENSE` le gana al MANIFIESTO, y el manifiesto es lo que leen los escáneres automáticos (agregado en el pase 37 del 2026-10-02)
+
+**El pase 10 de esta base estableció: «verificar contra el archivo `LICENSE`, no contra el README». Este pase lo endurece,
+porque encontró el caso donde los dos canales formales se contradicen entre sí.**
+
+En `pie-framework/pie-elements`:
+
+| Canal | Qué declara |
+|---|---|
+| `LICENSE.md` de la rama por defecto | **cuerpo del texto ISC**, `Copyright 2019 CoreSpring Inc` |
+| `package.json` de la raíz | 🔴 **`"license": "MIT"`** |
+| Paquetes publicados (`rubric`, `graphing`, `math-inline`, `drawing-response`, `extended-text-entry`) | **`ISC`** |
+| 🔴 **`@pie-element/multiple-choice` v13.4.4** | 🔴 **no declara licencia** |
+
+🔵 **Tres identificadores, dos respuestas y uno vacío — y el vacío está en la interacción más central de cualquier
+evaluación.** Un *due diligence* devuelve **MIT** si entra por la raíz, **ISC** si entra por los paquetes publicados, y
+**nada** si entra por `multiple-choice`.
+
+⚠️ **El desenlace de este caso concreto es benigno —ISC y MIT son las dos permisivas y las dos sirven— y por eso sirve como
+ejercicio:** la próxima vez la contradicción puede ser entre una permisiva y una copyleft, y entonces decide el proyecto.
+**La jerarquía queda: archivo `LICENSE` del repo > manifiesto del paquete publicado > manifiesto de la raíz > README.**
+
+🟢 **ISC entra además como licencia nueva de esta KB** — la tercera «permisiva que los filtros de licencia descartan por
+desconocida» después de **ECL-2.0** (tendencia 27) y **0BSD** (pase 28). **Es funcionalmente equivalente a MIT** y hay que
+tenerla en la lista blanca. Ver el **gap 76**.
+
+## 130. El bloqueo institucional del gap 65 es del canal de *fetch*, no del canal de información: el buscador devuelve lo que `curl` no alcanza (agregado en el pase 37 del 2026-10-02)
+
+**El gap 65 (pase 34) estableció que las fuentes primarias multilaterales son inalcanzables por clase: 0 de 11 dominios
+institucionales responden, contra 5 de 5 registros comerciales. Reverificado en este pase y se confirma:**
+
+`coe.int`, `unesco.org`, `unu.edu`, `publications.iadb.org`, `eur-lex.europa.eu`, `digital-strategy.ec.europa.eu` →
+**los 6 devuelven `000`** (falla el CONNECT), con control positivo en la misma corrida: `packagist.org` **200**,
+`registry.npmjs.org` **200**, `raw.githubusercontent.com` **200**.
+
+🟢 **Pero hay un matiz que reclasifica el gap a medias, y conviene usarlo:** el barrido regional **sí** devolvió contenido
+de `coe.int` en el cuerpo de sus resultados — la **2.ª Working Conference** del Consejo de Europa sobre las dimensiones
+regulatorias de la AI en educación, en octubre, con el listado de actores europeos convocados. **También apareció el
+*working paper* de UNU sobre implementación de AI en educación superior en América Latina y el Caribe, y el documento del
+BID sobre marco regulatorio habilitante.**
+
+🔵 **La distinción, y cambia cómo se cita en `intel/`: está bloqueado el canal de *fetch*, no el canal de información.**
+Una afirmación obtenida así es **secundaria en la forma** (no se leyó el PDF) pero **primaria en el origen** (la fuente es
+la institución, no una consultora), y **hay que anotarla como tal** en vez de meterla en la misma bolsa que las cifras de
+las firmas de *market research*.
+
+⚠️ **Lo que el matiz NO arregla:** no se puede citar un inciso, una fecha exacta ni un número de página, porque no se abre
+el documento. **Para el calendario del Anexo III —la afirmación más cara de esta base— sigue valiendo el límite del gap 65**
+y la fecha vigente sigue siendo la del pase 11 y 32: **2027-12-02**.
+
+## 131. `curl` sobre `github.com` devuelve 403 para TODO, exista el repo o no: el verificador de URLs prescripto no verifica nada (agregado en el pase 37 del 2026-10-02)
+
+**La consigna de ingesta de esta familia de KBs prescribe «verificar cada URL antes de escribirla (`curl -sI`); un 404 no
+es un hallazgo». Medido en este pase: sobre `github.com` ese control es ciego.**
+
+| URL | Existe | `curl` |
+|---|---|---|
+| `github.com/torvalds/linux` | sí | **403** |
+| `github.com/moodle/moodle` | sí | **403** |
+| `github.com/pie-framework/pie-elements` | sí | **403** |
+| 🔴 `github.com/this-org-does-not-exist-zzz9/nope` | 🔴 **no** | 🔴 **403** |
+
+🔴 **El HTML de `github.com` está bloqueado en bloque por el proxy, así que el código de estado no lleva ninguna
+información sobre la existencia del repo.** Las consecuencias son las dos, según cómo se lea el 403: **si se lo toma como
+«no 404, entonces existe», se aceptan slugs inventados; si se lo toma como fallo, se descartan repos reales.** En los dos
+casos el resultado es ruido presentado como verificación.
+
+🟢 **El discriminador correcto, con control negativo:**
+
+| Canal | Repo real | Repo inexistente |
+|---|---|---|
+| 🟢 **`git ls-remote`** | **51.410 refs** | 🔴 `fatal: could not read Username for 'https://github.com'` |
+| 🟢 `raw.githubusercontent.com/<slug>/<branch>/<archivo>` | **200** | **404** |
+| 🟢 Registro de paquetes por nombre exacto | **200** + metadatos | **404** |
+
+🔵 **La regla que reemplaza la de la consigna: la existencia de un repo de GitHub se verifica con `git ls-remote`, y el
+contenido con `raw.githubusercontent.com`. Nunca con `curl` sobre `github.com`.** ⚠️ **Y es acumulativa con la tendencia
+126:** `api.github.com` devuelve **200 con el error en el cuerpo**, y `github.com` devuelve **403 para todo**. **Los dos
+canales «obvios» para verificar un repo están rotos de maneras distintas y los dos fallan en silencio** — razón por la cual
+este pase fechó las 49 filas con el protocolo git y no con HTTP. Ver el **gap 77**.
+
 ## 🔵 Las tres acciones que este pase deja escritas para el siguiente
 
 **Las tres son de medición y las tres son baratas. Dos se hacen en la misma tarde, porque son el mismo gesto —levantar un stack y pedir `tools/list`— sobre dos sistemas distintos.**

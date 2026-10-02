@@ -9,6 +9,176 @@ updated: 2026-10-02
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 > No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
 
+## 2026-10-02 (pase 37) — el pase que deja de preguntarle al registro y le pregunta **al árbol de git**: con `git ls-remote` + un *fetch* de profundidad 1, las **49 filas quedan fechadas por su commit de `HEAD`**, y el resultado es que **10 de 49 tienen la rama principal parada hace más de seis meses — tres hace más de un año**, entre ellas **la dependencia más citada de esta KB**
+
+**El instrumento del pase, y es el primero de esta base que no depende de ningún registro ni de ninguna API.** El pase 35
+midió adopción con descargas; el 36 encontró que **las descargas sólo existen en Packagist** (`api.npmjs.org` y
+`pypistats.org` siguen dando **403 a CONNECT**, reverificado hoy) y las sustituyó por el *span* de releases. 🔴 **Pero el
+*span* de releases sólo mide los proyectos que etiquetan releases, y 17 de las 49 filas tienen CERO tags.** Para esas, esta
+base no tenía **ningún** instrumento de vitalidad.
+
+🔵 **El que funciona es `git ls-remote` sobre el repo público, más un `git fetch --depth 1` del sha de `HEAD` y
+`git log -1 --format=%cI`.** No usa cuota de API, no necesita autenticación, funciona en **las 49 filas** y mide lo único
+que ni las estrellas, ni las descargas, ni el *span* de releases pueden medir: **si alguien sigue escribiendo código en la
+rama principal.** Verificado: **49 de 49 repos respondieron, cero 404.** 🟢 **Es además el primer control de integridad
+completo de esta tabla: no hay una sola URL muerta entre las 49.**
+
+### 🔴 El resultado, y no es cómodo: el 20 % de la tabla tiene la rama principal parada
+
+| Franja | Filas | % |
+|---|---|---|
+| 🟢 Activo (< 3 meses) | **34** | 69,4 % |
+| ⚠️ Tibio (3–6 meses) | 5 | 10,2 % |
+| 🔴 Frío (6–12 meses) | 7 | 14,3 % |
+| 🔴 **Congelado (> 12 meses)** | **3** | 6,1 % |
+
+**La franja que decide una propuesta son las 10 filas de ≥ 6 meses**, porque esta KB las cita como piezas vivas en
+`compose/patterns.md`. Y **tres de esas diez son load-bearing**:
+
+### 🔴 Lo más grave del pase: la dependencia más citada de esta base está congelada hace 13 meses
+
+| Pieza | Licencia | `HEAD` | Antigüedad | Ramas | Dónde pesa |
+|---|---|---|---|---|---|
+| 🔴 **`DavidLMS/learnmcp-xapi`** | **MIT** | **2025-08-29** | **13,1 meses** | **1 sola** | 🔴 **42 menciones en `compose/patterns.md`** — es la puerta MCP de xAPI de **P4**, **P15**, **P67**, **P68** y **P69**, y el **gap 64** la declaró *«la única puerta»* |
+| 🔴 **`trilogy-group/oneroster-ts`** | **0BSD** | **2025-06-27** | **15,2 meses** | 6 (5 de bot) | **P58**, **P60**, **P64**. Es *«la superficie de tools más grande de toda esta base»* (**132 tools**, pase 30) |
+| 🔴 **`peancor/moodle-mcp-server`** | **MIT** | **2026-02-22** | **7,3 meses** | 2 | **P54**, **P55**. Es **la única pieza permisiva de esta KB que pone nota y devolución dentro de un LMS** (gap 6) |
+
+**Sobre `learnmcp-xapi` conviene ser exacto, porque es la fila que más cuesta:** se verificó que **tiene una sola rama**
+(`main`), así que **no hay desarrollo escondido en otra parte**: el 2025-08-29 es final. ✅ **Y de paso cierra la mitad
+*fecha* del gap 63, que el pase 34 declaró incerrable** tras probar *«8 rutas portadoras de versión, las 8 con 404»*:
+`ls-remote` entrega los tags y el *fetch* los fecha — **`v1.0.0` = 2025-05-25** y **`v2.0.0` = 2025-06-02**. 🔵 **El gap 63
+no era un límite del entorno: era el instrumento equivocado.** Se buscó el número de versión en rutas de archivos cuando
+estaba en `refs/tags`.
+
+### 🔵 La distinción nueva, y es la que salva al instrumento de mentir: **la actividad de bot no es mantenimiento**
+
+`oneroster-ts` tiene **6 ramas y la más reciente es del 2026-05-11** — a cuatro meses, no a quince. **Un instrumento que
+tomara el ref más nuevo lo habría declarado vivo.** Pero las ramas son: cuatro `dependabot/npm_and_yarn/*` y una
+`speakeasy-sdk-regen-1746144633`, **ninguna mergeada**. Lo mismo en `satvik314/educhain`: `main` está en **2025-12-03** y
+el tip más nuevo (**2026-05-29**) es una rama **`claude/relaxed-curie-mNW2l`**, o sea generada por un agente y sin mergear.
+
+🔵 **La regla que esto deja, y aplica a todo barrido futuro de esta base: se fecha el *tip de la rama por defecto*, nunca
+el ref más nuevo.** Dependabot, los regeneradores de SDK y las ramas de agente mantienen vivo el grafo de refs de un
+proyecto que nadie atiende. **En `oneroster-ts` lo único que se movió en quince meses lo escribió una máquina, y nadie lo
+mergeó** (tendencia **124**, **gap 72**).
+
+### 🔴 Corrección al pase 36: `pykt-toolkit` NO está abandonado, y el error es exactamente el que esta KB ya tenía escrito
+
+El pase 36 escribió sobre `pykt-team/pykt-toolkit`: *«🔴 **2022-10-16** — **Cuatro años.** *Backlink* verificado: **es
+abandono, no colisión**»*, y lo metió en las propuestas de *knowledge tracing* con esa etiqueta. **Es falso.**
+
+| Canal | Qué dice |
+|---|---|
+| PyPI (pase 36) | último release **2022-10-16** |
+| Tags de git (los 5, fechados hoy) | `v0.0.34-alpha` 2022-06-09 … **`v1.0.0` 2023-02-10** |
+| 🟢 **`HEAD` de la rama por defecto** | 🟢 **2026-09-22** — `Merge pull request #305`, `feat: add cgmkt model`, `feat: add cgmkt sweep config` |
+
+🟢 **Está vivo en `main` y congelado en el registro — y son *feature commits*, no mantenimiento cosmético.** ⚠️ **Es la
+segunda aparición del patrón que esta base ya había nombrado con Ralph en el pase 33** (*«vivo en `main` y parado en el
+registro → se instala desde git, no desde PyPI»*). **El pase 36 tenía la regla escrita y no la aplicó, porque sólo tenía
+el instrumento del registro.** 🔵 **Ahora hay instrumento, y la regla pasa a ser verificable en vez de anecdótica:
+el registro puede decir «abandonado» de un proyecto activo, y el único canal que no se equivoca es el árbol** (tendencia
+**125**).
+
+### ⚠️ Un límite del instrumento, declarado antes de que alguien lo use mal
+
+**El «último tag» por orden de versión NO es confiable, y el commit de `HEAD` sí.** Donde los nombres de tag son
+heterogéneos, `sort -V` elige mal: `jupyterlab/jupyter-ai` tiene **279 tags** y el «mayor» es un tag de monorepo de
+**2023**, con `HEAD` en **2026-10-01**; `LabSirius/TutorIA` tiene un tag `informe-minciencias-2026-09` **posterior** a su
+propio `HEAD`. **Las fechas de `HEAD` de este pase son medidas; las de «último tag» son orientativas y no deben citarse a
+un cliente** (**gap 73**).
+
+### 🔴 Y una corrección de método sobre la API de GitHub, porque un probe mal leído habría llenado esta KB de basura
+
+El pase 36 de la KB hermana anotó *«github-api-proxy-blocked»*. **Medido hoy: `api.github.com/rate_limit` devuelve `200`
+con `limit: 15000`.** 🔴 **Pero `api.github.com/repos/HKUDS/DeepTutor` devuelve `200` en la capa HTTP y un cuerpo que dice
+`"GitHub access to this repository is not enabled for this session"`.** 🔵 **No es un bloqueo de red: es una compuerta de
+alcance, y devuelve el error en el cuerpo, no en el código.** Un barrido que midiera `%{http_code}` —como hace el resto de
+los probes de esta base— **habría registrado «funciona» y escrito 49 filas de campos vacíos.** La API sólo responde por
+los repos adjuntos a la sesión, así que **sigue sin ser un instrumento usable para esta tabla**, y `ls-remote` lo
+reemplaza sin cuota (tendencia **126**, **gap 74**).
+
+### 🔴 El hallazgo de método más importante del pase, y descalifica el verificador que esta familia de KBs tiene prescripto
+
+**La consigna de ingesta dice «verificar cada URL antes de escribirla (`curl -sI`)». Medido hoy: ese control no funciona en
+este entorno, y falla de la única manera que no se puede detectar — devuelve lo mismo para una URL buena y para una
+inexistente.**
+
+| URL probada con `curl` | Código |
+|---|---|
+| `github.com/torvalds/linux` (existe) | **403** |
+| `github.com/moodle/moodle` (existe) | **403** |
+| `github.com/pie-framework/pie-elements` (existe) | **403** |
+| 🔴 **`github.com/this-org-does-not-exist-zzz9/nope` (NO existe)** | 🔴 **403** |
+
+🔴 **El HTML de `github.com` está bloqueado en bloque: las cuatro dan 403, y la cuarta no existe.** Un barrido que use
+`curl -sI` sobre `github.com` **no puede distinguir un repo real de un 404**, así que cualquier «verificación de URL» hecha
+por ese canal en esta o en otra KB de esta familia **no verificó nada** — y según cómo se interprete el 403 produce **o
+bien filas inventadas aceptadas como válidas, o bien repos reales descartados como muertos.**
+
+🟢 **El discriminador que sí funciona es `git ls-remote`, y lo hace con control negativo limpio:**
+
+- `git ls-remote https://github.com/pie-framework/pie-elements` → **51.410 refs**
+- `git ls-remote https://github.com/this-org-does-not-exist-zzz9/nope` → 🔴 **`fatal: could not read Username for 'https://github.com'`** (GitHub pide credenciales para lo que no existe o es privado)
+
+🔵 **La regla, y reemplaza la de la consigna para todo repo de GitHub: la existencia de un repo se verifica con
+`git ls-remote`, nunca con `curl` sobre `github.com`.** Los otros dos canales que discriminan son
+`raw.githubusercontent.com` (200 por archivo real) y el registro de paquetes. ✅ **Las 49 filas de esta KB quedaron
+verificadas por el canal correcto en este pase** (tendencia **131**, **gap 77**).
+
+### Lo que NO se encontró, declarado como tal
+
+**Cero altas de agentes, por quinta vez consecutiva, y el barrido completo lo dice.** Las cuatro búsquedas globales con el
+año **calculado** (`2026`) devolvieron otra vez **la capa genérica** —OpenClaw (385.407 ★), browser-use (108.128 ★), Dify
+(151.639 ★), Mem0 (62.735 ★), AutoGen (60.284 ★), Flowise (55.226 ★), CrewAI, LangGraph, Aider, Cline— más **material
+didáctico *sobre* AI** (`ai-engineering-from-scratch`, #1 en GitHub Trending del 2026-05-24; `agents-from-scratch`;
+`free-ai-agents-resources`; cursos de DeepLearning.AI). ✅ **Quinta confirmación directa de la causa que midió el pase 23**:
+en GitHub `education` nombra al material que **enseña AI**, no al software que **educa**.
+
+⚠️ **Un nombre nuevo que aparece y NO entra, con la razón:** **Hermes Agent** (Nous Research), que las fuentes dan como
+**MIT** y **~180.000 ★ desde su lanzamiento de febrero de 2026**. **No es educativo** — es un agente general *local-first*.
+Entra en el encuadre de capa genérica, **no en esta tabla**.
+
+### 🔴 El candidato de registro que no entra, y la razón es que no tiene licencia
+
+`@timeback/oneroster` (**58 versiones**, última **2026-09-25**) apareció buscando reemplazo para `oneroster-ts`.
+🔴 **No declara licencia (`license: None`), no declara repositorio y no declara *homepage*.** ⚠️ **Es la cuarta vez que
+esta base encuentra una pieza del dominio sin licencia declarada, y la regla no cambia: sin licencia no es open source,
+es código publicado.** No entra; queda como ausencia declarada (**gap 75**).
+
+### ⚠️ Dos límites del buscador de npm, medidos, que explican barridos anteriores de esta base
+
+- 🔴 **Las consultas de dos palabras se resuelven como OR y se ordenan por descargas:** `xapi mcp` devuelve
+  **110.769** resultados encabezados por `@modelcontextprotocol/sdk` y `@storybook/addon-mcp`. **El paquete del dominio
+  queda sepultado.**
+- 🔴 **El calificador `scope:` NO está soportado:** `text=scope:pie-element` devuelve **2.403.867** resultados y la
+  primera página son `locate-path`, `strip-ansi`, `@types/node`. **Hay que pedir el paquete por nombre exacto.**
+
+🔵 **Juntos explican por qué el barrido por registro del pase 35 rindió poco fuera de Packagist, y la regla es: el registro
+sirve para CONFIRMAR un nombre que ya se tiene, no para DESCUBRIR** (tendencia **127**).
+
+### 🔵 Las tres acciones que este pase deja escritas para el 38
+
+**Las tres salen del instrumento nuevo y las tres son baratas, porque `ls-remote` cuesta un *round-trip* por repo y no
+consume cuota.**
+
+1. 🔴 **Fechar por rama por defecto los repos que esta KB cita FUERA de `agents/top.md`** — `repos/foundations.md` y
+   `verticals/solutions.md` tienen piezas que nunca pasaron por este control: `cassproject/CASS`, `1EdTech/OpenCASE`,
+   `instructure/qti`, `yetanalytics/datasim`, `oat-sa/tao-core`, la pila `qti3-*`, Ralph, `lrsql`, los tres LRS y las
+   plataformas (Moodle, Open edX, ILIAS, Chamilo, OpenEduCat, Frappe). **Este pase midió 49 filas; la base cita bastante
+   más de 49 repos.** La acción concreta: correr el mismo barrido sobre los slugs de esos dos archivos y **publicar las
+   frías**, porque son las que sostienen `P15`, `P50`, `P57`, `P60`, `P66`, `P70` y `P71`.
+2. 🔵 **Ejecutar `P78` sobre la pieza más chica para convertir la estimación en un número medido: `learnmcp-xapi`, 3 tools.**
+   Clonar, correr su suite si tiene, escribir el test de contrato de las 3 tools contra un `lrsql` local —que está vivo,
+   `v0.9.9` del 2026-10-01— y **cronometrar**. Esta KB estima **1-2 semanas** para ese fork; **es la única estimación de
+   `P78` que se puede verificar en una tarde**, y si el número real se aparta hay que corregir las otras dos.
+3. ⚠️ **Resolver si `pie-elements` es proponible de verdad, que es lo que el alta de este pase dejó a medias.** Lo medido
+   es licencia, vitalidad y catálogo; **lo que decide una propuesta es el contrato de *scoring***. La acción: leer el
+   `controller` de **dos** interacciones (`multiple-choice` y `rubric`) y responder **si el *scoring* es puro y portable o
+   si depende del *runtime* de `pie-player`** — porque de eso depende si se puede usar como motor de evaluación detrás de un
+   agente, o si sólo sirve como UI. 🔴 **Y de paso resolver la licencia de `@pie-element/multiple-choice`, que no declara
+   ninguna** (**gap 76**).
+
 ## 2026-10-02 (pase 36) — el pase que **mide las 49 filas en vez de seis**, y encuentra que la tabla tenía **una fila repetida** que ningún conteo anterior podía ver: el agente con **la cadencia más alta del archivo tiene 60 estrellas y 240 releases**, y dos piezas que esta KB cita como vivas no publican desde **2022** y **2025**
 
 **Acción 1 del pase 35, ejecutada sobre la tabla completa.** Para cada repo se leyó el manifiesto publicado desde

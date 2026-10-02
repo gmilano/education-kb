@@ -52,6 +52,36 @@ updated: 2026-10-02
 > **Pase 33 del 2026-10-02:** **la tabla se queda en 48 filas, y por una vez eso es el hallazgo: la pieza que este pase fue a buscar ya estaba acá.** 🔴 **La mitad xAPI del gap 60 es FALSA, y la refutación estaba en cuatro archivos de esta base:** `DavidLMS/learnmcp-xapi` (**MIT**, 3 tools — **1 escribe, 2 leen**) es la puerta MCP de xAPI, está en esta tabla **desde el pase 6** y el mapa por estándar de abajo lo dice con la frase *«desde el pase 6»* escrita al lado. **El pase 32 declaró ausente algo que esta KB listaba como presente.** ✅ **La mitad QTI, en cambio, se CONFIRMA por un segundo instrumento independiente** — y es la única ausencia de esta base medida por dos instrumentos (tendencia **101**). 🔴 **La causa está medida y es el instrumento, no el rigor:** `learnmcp-xapi` **no está en ningún registro de paquetes** (PyPI **404**, npm **`total: 0`**; se instala desde el código) y `lrsql` se distribuye por **Docker Hub**, así que un barrido que arma candidatos en npm/PyPI/Packagist **no puede verlas** (tendencia **99**). **Regla nueva y barata: antes de declarar una ausencia, `grep` sobre estos ocho archivos.** 🟢 **Lo nuevo del pase es el estado, que es lo que decide si una dependencia entra en una propuesta:** `lrsql` (**Apache-2.0**) publicó **`v0.9.9` el 2026-10-01 — ayer**, con **112 tags** y seis releases en 2026; **Ralph** (**MIT**, *«Copyright (c) 2020-present France Université Numérique»*) está **vivo en `main` y parado en el registro** (último release **2024-07-11**, `[Unreleased]` activo) → **se instala desde git, no desde PyPI**. ✅ **`coursecode` medido en el artefacto publicado: 15 tools definidas / 15 casos de dispatch, sin aliasing ni supresión, y DOS escriben** — `_build`, con **`enum: ['cmi5','scorm2004','scorm1.2','lti']` en el `inputSchema`** (los cuatro estándares dejan de ser prosa del README y pasan a ser **contrato de tool**), y `_narration`, que escribe MP3 llamando a un **TTS pago**. 🟢 **Y trae la primitiva del pase 30 reinventada por otro mecanismo, con una asimetría que hay que cotizar:** `openedx-mcp` frena **en el servidor** (confirm token) y `coursecode` frena **en el contrato** (anotaciones MCP + `dryRun`) — **sólo el primero frena solo** (tendencia **102**). ✅ **Gap 51 CERRADO en negativo, medido en tres registros:** `opencase` da **7 / 404 / 665** con **cero del dominio** (cajas de skins, `opencage`, `opencast`) y `cass` da **26.726** en Packagist; el instrumento que funciona es **el nombre de la organización** (tendencia **100**). ⚠️ **Y una corrección de atribución:** el `LICENSE` de `learnmcp-xapi` dice **`Copyright (c) 2025 David Romero`** —una persona—, no una institución; el argumento de soberanía europea de EMEA conviene apoyarlo en **Ralph**, cuyo titular institucional sí está en el archivo de licencia. Ver las tendencias **99**–**102**, los **gaps 62**–**64** y los patrones **P67**–**P69**.
 > **Pase 33 del 2026-10-02:** **la tabla se queda en 48 filas, y por una vez eso es el hallazgo: la pieza que este pase fue a buscar ya estaba acá.** 🔴 **La mitad xAPI del gap 60 es FALSA, y la refutación estaba en cuatro archivos de esta base:** `DavidLMS/learnmcp-xapi` (**MIT**, 3 tools — **1 escribe, 2 leen**) es la puerta MCP de xAPI, está en esta tabla **desde el pase 6** y el mapa por estándar de abajo lo dice con la frase *«desde el pase 6»* escrita al lado. **El pase 32 declaró ausente algo que esta KB listaba como presente.** ✅ **La mitad QTI, en cambio, se CONFIRMA por un segundo instrumento independiente** — y es la única ausencia de esta base medida por dos instrumentos (tendencia **109**). 🔴 **La causa está medida y es el instrumento, no el rigor:** `learnmcp-xapi` **no está en ningún registro de paquetes** (PyPI **404**, npm **`total: 0`**; se instala desde el código) y `lrsql` se distribuye por **Docker Hub**, así que un barrido que arma candidatos en npm/PyPI/Packagist **no puede verlas** (tendencia **107**). **Regla nueva y barata: antes de declarar una ausencia, `grep` sobre estos ocho archivos.** 🟢 **Lo nuevo del pase es el estado, que es lo que decide si una dependencia entra en una propuesta:** `lrsql` (**Apache-2.0**) publicó **`v0.9.9` el 2026-10-01 — ayer**, con **112 tags** y seis releases en 2026; **Ralph** (**MIT**, *«Copyright (c) 2020-present France Université Numérique»*) está **vivo en `main` y parado en el registro** (último release **2024-07-11**, `[Unreleased]` activo) → **se instala desde git, no desde PyPI**. ✅ **`coursecode` medido en el artefacto publicado: 15 tools definidas / 15 casos de dispatch, sin aliasing ni supresión, y DOS escriben** — `_build`, con **`enum: ['cmi5','scorm2004','scorm1.2','lti']` en el `inputSchema`** (los cuatro estándares dejan de ser prosa del README y pasan a ser **contrato de tool**), y `_narration`, que escribe MP3 llamando a un **TTS pago**. 🟢 **Y trae la primitiva del pase 30 reinventada por otro mecanismo, con una asimetría que hay que cotizar:** `openedx-mcp` frena **en el servidor** (confirm token) y `coursecode` frena **en el contrato** (anotaciones MCP + `dryRun`) — **sólo el primero frena solo** (tendencia **114**). ✅ **Gap 51 CERRADO en negativo, medido en tres registros:** `opencase` da **7 / 404 / 665** con **cero del dominio** (cajas de skins, `opencage`, `opencast`) y `cass` da **26.726** en Packagist; el instrumento que funciona es **el nombre de la organización** (tendencia **112**). ⚠️ **Y una corrección de atribución:** el `LICENSE` de `learnmcp-xapi` dice **`Copyright (c) 2025 David Romero`** —una persona—, no una institución; el argumento de soberanía europea de EMEA conviene apoyarlo en **Ralph**, cuyo titular institucional sí está en el archivo de licencia. Ver las tendencias **99**–**102**, los **gaps 62**–**64** y los patrones **P67**–**P69**.
 
+> **Pase 37 del 2026-10-02:** **la tabla se queda en 51 filas / 49 repos distintos — sexto pase sin altas de agente — y el
+> pase se gana midiendo lo que las 49 filas nunca tuvieron medido: si alguien sigue escribiendo código en ellas.**
+> Con `git ls-remote` + `git fetch --depth 1` del sha de `HEAD` (cero cuota de API, cero autenticación) **las 49 quedaron
+> fechadas por el commit de su rama por defecto**, y **49 de 49 respondieron: no hay una sola URL muerta en la tabla.**
+> 🔴 **El resultado incómodo: 10 de 49 tienen la rama principal parada hace ≥ 6 meses y 3 hace ≥ 12 meses, y tres de esas
+> diez son load-bearing en `compose/patterns.md`** — `DavidLMS/learnmcp-xapi` (**MIT**, `HEAD` **2025-08-29**, **13,1
+> meses**, **una sola rama**, y es la pieza **más citada de esta base: 42 menciones**, puerta xAPI de **P4/P15/P67/P68/P69**),
+> `trilogy-group/oneroster-ts` (**0BSD**, **2025-06-27**, **15,2 meses**, *«la superficie de tools más grande de toda esta
+> base»*, **P58/P60/P64**) y `peancor/moodle-mcp-server` (**MIT**, **2026-02-22**, **7,3 meses**, la única pieza permisiva
+> que **pone nota dentro de un LMS**, **P54/P55**). ✅ **Y cierra la mitad *fecha* del gap 63, que el pase 34 declaró
+> incerrable** tras 8 rutas con 404: los tags estaban en `refs/tags` y el *fetch* los fecha —**`v2.0.0` de `learnmcp-xapi`
+> = 2025-06-02**—; **no era un límite del entorno, era el instrumento equivocado.** 🔵 **La distinción que salva al
+> instrumento de mentir: la actividad de bot no es mantenimiento** — `oneroster-ts` tiene un ref de hace 4 meses, pero son
+> **4 ramas de dependabot + un regenerador de SDK, ninguna mergeada**, y `educhain` tiene su tip más nuevo en una rama
+> **`claude/*`** sin mergear: **se fecha el tip de la rama por defecto, nunca el ref más nuevo** (**gap 72**).
+> 🔴 **Corrección al pase 36:** `pykt-team/pykt-toolkit` **no está abandonado** — el pase 36 lo etiquetó *«cuatro años, es
+> abandono»* leyendo sólo PyPI, y su `HEAD` es del **2026-09-22** con *feature commits* (`feat: add cgmkt model`, PR #305).
+> **Está vivo en `main` y congelado en el registro: es la segunda aparición del patrón que esta base nombró con Ralph en el
+> pase 33**, y ahora es verificable en vez de anecdótico. 🔴 **Y una corrección de método que evitó llenar esta KB de
+> basura:** `api.github.com/rate_limit` da **200**, pero `api.github.com/repos/<cualquiera>` da **200 con un cuerpo que
+> dice que el repo no está habilitado para esta sesión** — **compuerta de alcance, no bloqueo de red, y el error viene en
+> el cuerpo y no en el código**, así que un probe que mire `%{http_code}` registra «funciona».
+> 🔴 **Y el hallazgo de método que descalifica el verificador prescripto: `curl` sobre `github.com` devuelve **403 para
+> TODO** —`torvalds/linux`, `moodle/moodle` y un slug inventado dan los tres **403**—, así que *«verificar la URL con
+> `curl -sI`»* **no distingue un repo real de uno inexistente.** El discriminador es **`git ls-remote`**, con control
+> negativo limpio (`fatal: could not read Username` para lo que no existe). **Las 49 filas de esta tabla quedaron
+> verificadas por ese canal en este pase.** Ver las tendencias
+> **124**–**131** y los gaps **72**–**77**.
+
+
 ## Agentes y herramientas destacadas
 
 **🔴 Pase 36 del 2026-10-02 — el conteo baja de 52 a 51, y la causa es un defecto que el conteo programático NO PODÍA ver: `Claw-ED` estaba DOS VECES.** Las dos filas apuntaban al mismo repo (`SirhanMacx/Claw-ED`) con **59 ★ y 60 ★**, una del 2026-09-30 y otra agregada como «alta» en el pase 35 — y la línea de historial de este mismo archivo dice *«Claw-ED se agregó en la tercera pasada del 2026-09-30»*, al lado. ⚠️ **La lección es sobre el instrumento, no sobre el descuido: la regla del pase 30 cuenta FILAS entre el separador y la primera línea que no empieza con `|`, y un duplicado es una fila válida.** Un conteo de filas no puede detectar una fila repetida. **El control que sí lo detecta es contar *slugs* distintos**, y medido así el archivo tiene **51 filas = 49 repos de GitHub distintos + 2 entradas que son de PyPI y no de GitHub** (`openedx-mcp` y `tutor-contrib-openedxmcp`, las dos AGPL-3.0, con URL verificable de PyPI). 🔵 **Es la sexta vez que esta KB se pelea con este número y la primera en que el número se descompone en vez de declararse:** 51 filas / 49 repos / 0 duplicados, y de acá en adelante **el conteo que vale es el de slugs distintos**.
@@ -276,6 +306,74 @@ se explica abajo, porque es la cuarta vez que esta KB se pelea con este número.
 | moodle-cli | https://github.com/bunizao/moodle-cli | **MIT** ✅ | — | TypeScript | **La cuarta puerta de Moodle, y la primera del lado del alumno.** *«Moodle for terminals and AI agents: deadlines, grades, files, feedback and quiz reviews from your browser session»*. 🔵 **El detalle de arquitectura que la vuelve proponible donde las otras tres no entran:** trabaja **desde la sesión del navegador del propio usuario**, así que **no necesita token de administrador ni habilitación de Web Services por parte de la institución** — que es exactamente el bloqueo de *discovery* que frena a `peancor/moodle-mcp-server` y a `MarcosNahuel/moodle-mcp` en un cliente que no quiere tocar su Moodle. **20 versiones** entre 2026-07-09 y **2026-09-27**, con **16 menciones de MCP** en el README. ⚠️ **Lado alumno**: no califica ni devuelve nota, así que **no sustituye** al conector docente, se compone con él. *Agregado en el pase 35* | Sin región verificada |
 | jbnu-lms-mcp | https://github.com/moon0825/jbnu-lms-student | **MIT** ✅ | — | Node.js | 🔵 **Categoría nueva para esta KB: la puerta de agente del LMS de UNA institución, no de un producto.** *«전북대 LMS 학업비서»* — asistente académico del LMS de la **Universidad Nacional de Jeonbuk** (전북대학교, `lms.jbnu.ac.kr`, *JBNU LXP*), **MCP STDIO local** para Claude Desktop o Codex. **25 tools** (**25개 도구**) sobre avisos, vencimientos de trabajos, estado de entrega y material de clase, con una interfaz orientada a *«qué tengo que hacer hoy»* —devuelve **hasta 3 pendientes con su fundamento**— y **devolución con aprobación del usuario**. 🔵 **Dos decisiones de diseño que importan más que el repo:** es **sólo lectura en todas las funciones de LMS** (`조회 전용`), y **el login lo completa la persona en su navegador, con passkey y segundo factor incluidos** — el servidor nunca ve la credencial. **Es la postura exacta que premia el régimen coreano vigente** (*AI Basic Act*, 2026-01-22). ⚠️ **Es una herramienta estudiantil NO oficial por declaración propia** (*«비공식 학생 도구»*): el repo advierte que el nombre y los activos de UI son de la universidad y que hay que revisar su guía oficial antes de distribuir. **No se propone a un cliente como pieza instalada; se propone como arquitectura de referencia.** Windows + macOS, v0.8.0 del **2026-09-08**. 🔵 **Y refuta una ausencia declarada de esta KB:** es **la primera infraestructura agéntica educativa de origen APAC** que entra por el registro de paquetes. *Agregado en el pase 35* | **APAC** (Corea del Sur — 전북대학교 / JBNU) |
 
+
+
+
+## 🧭 Capa de vitalidad medida — las 49 filas fechadas por su rama principal (pase 37 del 2026-10-02)
+
+**Esta base midió sus filas con estrellas (33 pases), con descargas del registro (pase 35) y con el *span* de releases
+(pase 36). Ninguno de los tres puede contestar la única pregunta que decide si una dependencia entra en una propuesta:
+¿alguien sigue escribiendo código acá?** Las estrellas miden interés acumulado; las descargas miden base instalada
+—`TinCanPHP` tiene 6.178/mes y no publica desde 2022—; y el *span* de releases **no existe para las 17 filas de esta tabla
+que tienen cero tags**.
+
+**El instrumento que sí contesta, y es el más barato de los cuatro:**
+
+```
+git ls-remote https://github.com/<slug>                 # refs, sin cuota de API
+git fetch --depth 1 https://github.com/<slug> <sha-HEAD> # un solo commit
+git log -1 --format=%cI FETCH_HEAD                       # fecha ISO del tip
+```
+
+**Cobertura: 49 de 49 filas, cero 404.** 🟢 **Es además el primer control de integridad completo de esta tabla: ninguna de
+las 49 URLs está muerta.**
+
+### El reparto, que es el dato de encuadre
+
+| Franja (último commit en la rama por defecto) | Filas | % |
+|---|---|---|
+| 🟢 Activo — menos de 3 meses | **34** | 69,4 % |
+| ⚠️ Tibio — 3 a 6 meses | 5 | 10,2 % |
+| 🔴 Frío — 6 a 12 meses | 7 | 14,3 % |
+| 🔴 **Congelado — más de 12 meses** | **3** | 6,1 % |
+
+🟢 **Lo que hay que leer primero es el 69,4 %: la tabla está mayoritariamente viva**, y eso vale como respaldo de las
+propuestas que se apoyan en ella. 🔴 **Lo que hay que corregir es el 20,4 % de ≥ 6 meses**, porque esta KB lo venía citando
+sin distinguir.
+
+### 🔴 Las 10 filas de ≥ 6 meses, con lo que cada una sostiene
+
+| Repo | Licencia | `HEAD` | Antigüedad | Qué sostiene en esta KB | Qué hacer |
+|---|---|---|---|---|---|
+| 🔴 `Cicatriiz/openedu-mcp` | MIT | 2025-06-03 | **16,0 m** | nada en `patterns.md` | **Marcar.** Dato histórico, no dependencia |
+| 🔴 `trilogy-group/oneroster-ts` | **0BSD** | 2025-06-27 | **15,2 m** | **P58**, **P60**, **P64** — *«la superficie de tools más grande de toda esta base»* (132 tools) | 🔴 **Cotizar fork o reemplazo.** Las 5 ramas nuevas son de bot, sin mergear |
+| 🔴 `DavidLMS/learnmcp-xapi` | **MIT** | 2025-08-29 | **13,1 m** | 🔴 **42 menciones** — puerta xAPI de **P4**, **P15**, **P67**, **P68**, **P69**; el gap 64 la llamó *«la única puerta»* | 🔴 **Asumir mantenimiento en la propuesta.** 1 sola rama: no hay desarrollo escondido |
+| 🔴 `karanb192/algo-sensei` | MIT | 2025-10-22 | **11,3 m** | — | Marcar |
+| 🔴 `plastic-labs/tutor-gpt` | — | 2025-11-13 | **10,7 m** | — | Marcar |
+| 🔴 `pythpythpython/openstax-mcp-server` | MIT | 2025-11-30 | **10,1 m** | 4 menciones en `patterns.md` | Revisar antes de citar |
+| 🔴 `satvik314/educhain` | MIT | 2025-12-03 | **10,0 m** | citada como pieza viva **desde el ciclo 2** | 🔴 **Degradar.** Su tip más nuevo es una rama `claude/*` sin mergear |
+| 🔴 `HugeCatLab/ChatTutor` | AGPL-3.0 | 2026-01-09 | **8,8 m** | — | Marcar |
+| 🔴 `peancor/moodle-mcp-server` | **MIT** | 2026-02-22 | **7,3 m** | **P54**, **P55** — **la única pieza permisiva de esta KB que pone nota y devolución dentro de un LMS** (gap 6) | 🔴 **Revisar con el cliente.** Es el tramo final del gap 6 |
+| 🔴 `24kchengYe/human-skill-tree` | — | 2026-03-25 | **6,3 m** | — | Marcar |
+
+**La tabla completa de las 49, fila por fila, está en `repos/trending.md` (pase 37).**
+
+### ✅ Lo que el instrumento cerró y lo que corrigió
+
+- ✅ **Gap 63, mitad *fecha*, CERRADO.** El pase 34 lo declaró incerrable tras *«8 rutas portadoras de versión, las 8 con
+  404»*. **Los tags viven en `refs/tags`, no en rutas de archivos:** `learnmcp-xapi` **`v1.0.0` = 2025-05-25**,
+  **`v2.0.0` = 2025-06-02**. 🔵 **No era un límite del entorno: era el instrumento equivocado.**
+- 🔴 **Corrección al pase 36 — `pykt-team/pykt-toolkit` NO está abandonado.** Los 5 tags llegan hasta `v1.0.0`
+  (**2023-02-10**) y PyPI hasta **2022-10-16**, pero `HEAD` es del **2026-09-22** con *feature commits* reales
+  (`feat: add cgmkt model`, `Merge pull request #305`). **Vivo en `main`, congelado en el registro** — el patrón «Ralph»
+  del pase 33, segunda aparición.
+- ⚠️ **Límite declarado: el «último tag» por orden de versión no es confiable.** `jupyter-ai` tiene 279 tags y el «mayor»
+  es de 2023 con `HEAD` en 2026-10-01; `LabSirius/TutorIA` tiene un tag **posterior** a su propio `HEAD`. **Las fechas de
+  `HEAD` son medidas; las de «último tag» son orientativas y no se citan a un cliente** (**gap 73**).
+- 🔴 **`api.github.com` no sirve para esta tabla, y falla de la peor manera.** `/rate_limit` da **200** con
+  `limit: 15000`; `/repos/<slug>` da **200 en HTTP** y en el cuerpo *«GitHub access to this repository is not enabled for
+  this session»*. **Compuerta de alcance, no bloqueo de red** — y como el error viaja en el cuerpo, **un probe que mire
+  sólo el código HTTP escribe campos vacíos creyendo que funcionó** (**gap 74**).
 
 
 ## 📦 Capa de despliegue medida — las 49 filas pasadas por el registro (pase 36 del 2026-10-02)

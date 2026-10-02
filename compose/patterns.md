@@ -59,6 +59,18 @@ updated: 2026-10-02
 
 > **Pase 30 del 2026-10-02:** **+2 patrones y una muerte.** 🔴 **P55 queda con premisa muerta** —el conector MCP de Open edX **existe**, es oficial y es **AGPL-3.0 corriendo en proceso**—, y lo que queda de él es el mapa REST para quien necesite una puerta permisiva *fuera* de proceso. Entran **P61** (el **rail de escritura de agente** reimplementado en permisivo: *dry run* + **confirm token atado a una huella del payload**, rate limit por tool, autoridad viva y auditoría previa — la primitiva que P53 y P54 venían describiendo en prosa, ahora medida sobre una implementación real) y **P62** (el **expediente de competencia** para el requisito de graduación de *AI fluency*, con el marco **suscripto** vía la capa **CGE** de OpenCASE en vez de redactado). ✅ **Y P58 gana precisión sin reescribirse:** pasa de «164 métodos de SDK» a **«132 tools servidas, el 100 % de las operaciones distintas»**, medido ejecutando el servidor. ⚠️ **Corrección de este pase sobre sí mismo:** se iba a escribir que **P48** *«gana por fin una herramienta nombrada para la pata legada»* con `instructure/qti`, **y es falso** — P48 ya nombraba `LongsightGroup/qti3` (**MIT**, 667 commits), que además **migra** QTI 1.2/2.x a QTI 3, mientras la gema de Instructure **sólo importa y parsea**. **`instructure/qti` entra como alternativa de lectura en Ruby, no como pieza que faltaba.**
 
+> **Pase 37 del 2026-10-02:** 🔴 **este pase no agrega recetas: audita las que hay.** Las **49 dependencias** de
+> `agents/top.md` quedaron fechadas por el commit de su rama por defecto (`git ls-remote` + `fetch --depth 1`, **49 de 49
+> respondieron, cero 404**), y **10 están paradas hace ≥ 6 meses — 3 hace ≥ 12**. 🔴 **Tres de esas diez son load-bearing
+> en este archivo:** `DavidLMS/learnmcp-xapi` (**MIT**, `HEAD` **2025-08-29**, **13,1 meses**, **42 menciones acá**, puerta
+> xAPI de **P4/P15/P67/P68/P69**), `trilogy-group/oneroster-ts` (**0BSD**, **2025-06-27**, **15,2 meses**, **132 tools**,
+> **P58/P60/P64**) y `peancor/moodle-mcp-server` (**MIT**, **2026-02-22**, **7,3 meses**, **P54/P55**, la única pieza
+> permisiva que pone nota dentro de un LMS). ⚠️ **Ninguno de los tres se retira** —los tres siguen siendo lo mejor
+> disponible y los tres son permisivos— **pero los tres pasan de supuesto a línea de presupuesto**, y eso se escribe en la
+> propuesta, no se descubre en la semana 6. Ver la sección de auditoría abajo y **P78**. 🟢 **Lo que sí está sano:** `lrsql`
+> (Apache-2.0, **v0.9.9 del 2026-10-01**), Ralph (MIT, vivo en `main`), las cuatro puertas de Canvas y Moodle-alumno
+> (commits de las últimas dos semanas) y `qti3-cli` (MIT). **El resto de las recetas no cambia.**
+
 ## Patrón base
 
 ```
@@ -4227,3 +4239,101 @@ no se versiona en su árbol), así que **se pinnea por commit, no por versión.*
 3. **Servidor MCP** sobre la capa semántica, **no sobre el CSV**: tools de lectura (`escolas_buscar`, `matriculas_agregar`, `docentes_por_escola`), **todas `readOnlyHint: true`**, con el rail de confirmación de **P61** innecesario porque **no hay escritura**.
 4. **Estimación honesta: 8-12 semanas**, de las cuales **la ingesta y el esquema multi-año son 6-8** — contra las **2-3 semanas** que costaría un fachada sobre una API que existiera. 🔵 **Decir esto en el *discovery* es exactamente la «línea de presupuesto escondida» que el pase 35 advirtió, y ahora tiene número.**
 5. ⚠️ **Y el pedido que hay que hacer afuera, porque este entorno no puede verificarlo:** confirmar si **`dados.gov.br` expone su API CKAN** (`/api/3/action/package_search`), que es lo habitual en ese portal. **Si la expone, el paso 1 se acorta para los *datasets* que estén publicados ahí** — pero **los microdatos del Censo Escolar se distribuyen igual como archivo**, así que el plazo del pipeline **no cambia**, sólo el descubrimiento.
+
+## 🔴 Auditoría de vitalidad de las dependencias de este archivo (pase 37 del 2026-10-02)
+
+**Treinta y seis pases construyeron recetas citando repos como piezas vivas. Este pase midió si lo son.** Instrumento:
+`git ls-remote` + `git fetch --depth 1` del sha de `HEAD` + `git log -1 --format=%cI`, sobre las 49 filas de
+`agents/top.md`. **49 de 49 respondieron; ninguna URL está muerta.** Tabla completa en `repos/trending.md` (pase 37).
+
+🔵 **La regla de lectura, antes de los números: una dependencia congelada no es una dependencia inválida.** Lo que cambia
+es **quién paga el mantenimiento**, y eso pertenece a la propuesta. Las tres piezas de abajo siguen siendo **lo mejor
+disponible en permisivo** para lo que hacen.
+
+### Las tres dependencias load-bearing que están paradas
+
+| Pieza | Licencia | `HEAD` | Patrones afectados | Diagnóstico y qué se escribe en la propuesta |
+|---|---|---|---|---|
+| 🔴 **`DavidLMS/learnmcp-xapi`** | **MIT** | **2025-08-29** (13,1 m) | **P4**, **P15**, **P67**, **P68**, **P69** — **42 menciones en este archivo** | **Una sola rama**: el 2025-08-29 es final, no hay desarrollo escondido. 🟢 **Mitigante fuerte: son 3 tools (1 escribe, 2 leen) sobre `xAPI 1.0.3`, que es un estándar cerrado de 2013.** La superficie más chica de toda esta KB sobre un contrato que no se mueve. **Se propone, con una línea de mantenimiento explícita** |
+| 🔴 **`trilogy-group/oneroster-ts`** | **0BSD** | **2025-06-27** (15,2 m) | **P58**, **P60**, **P64** | **132 tools (72 lectura / 60 escritura)** y **quince meses sin que un humano mergee**. Las 5 ramas nuevas son **4 de dependabot + 1 regenerador de SDK**. 🟢 **Mitigante decisivo: es 0BSD — la licencia más permisiva que existe, se forkea sin ninguna obligación.** 🔴 **Sin reemplazo:** el único candidato activo (`@timeback/oneroster`) **no declara licencia** (**gap 75**). **Se propone con fork propio cotizado** |
+| 🔴 **`peancor/moodle-mcp-server`** | **MIT** | **2026-02-22** (7,3 m) | **P54**, **P55** | **8 tools, 4 de escritura**, entre ellas `provide_assignment_feedback` y `provide_quiz_feedback`: **es el único artefacto permisivo de esta base que pone nota y devolución dentro de un LMS de producción** — el tramo final del **gap 6**. ⚠️ **Siete meses es frío, no muerto.** 🟢 **Hay alternativa viva para la parte de lectura:** `bunizao/moodle-cli` (**2026-10-02**) y `MarcosNahuel/moodle-mcp` (2026-05-03). **Se propone; la escritura es el tramo a mantener** |
+
+### 🟢 Lo que la auditoría confirma sano, y es la mayoría
+
+| Receta | Piezas verificadas vivas |
+|---|---|
+| **P67** / **P68** (telemetría) | 🟢 `lrsql` **Apache-2.0, v0.9.9 del 2026-10-01**; **Ralph** MIT vivo en `main` — **las dos patas de almacenamiento están bien** |
+| **P54** / lectura de Moodle | 🟢 `bunizao/moodle-cli` **2026-10-02** (el más activo de la capa), `MarcosNahuel/moodle-mcp` 2026-05-03 |
+| Canvas (transversal) | 🟢 `bruchris/canvas-lms-mcp` **2026-09-20** (165 tools), `vishalsachdev/canvas-mcp` **2026-10-01** |
+| **P56** (SCORM) | 🟢 `giacomomaria81/scorm-mcp-server` **2026-09-03** |
+| **P66** / **P69** / **P76** (QTI) | 🟢 `@longsightgroup/qti3-cli` MIT, última modificación **2026-10-01** |
+| **P16** / **P12** (*knowledge tracing*) | 🟢 **`pykt-team/pykt-toolkit` vivo: `HEAD` 2026-09-22** — ⚠️ **el pase 36 lo había declarado abandonado leyendo sólo PyPI; es falso** |
+| **P63** (autoría Open edX) | 🔴 `openedx-mcp` AGPL-3.0, **gap 68** sin cambios (12 releases en 2 días, nada en 70) |
+
+### 🔵 La regla de método que esta auditoría deja para todos los pases siguientes
+
+**Antes de citar un repo como pieza viva en una receta, fechar el tip de su rama por defecto.** Y **no** el ref más nuevo:
+`oneroster-ts` y `educhain` tienen refs de hace 4 y 5 meses que son **ramas de bot y de agente sin mergear**
+(**gap 72**, tendencia **124**). El «último tag» tampoco sirve donde los nombres de tag son heterogéneos
+(**gap 73**).
+
+## P78 — Adoptar una dependencia congelada a propósito: el fork mínimo con contrato de mantenimiento, para las piezas que no tienen reemplazo (agregado en el pase 37 del 2026-10-02; **transversal, y es el patrón que vuelve proponibles las tres piezas auditadas arriba**)
+
+**El problema que resuelve, y es el que este pase destapó.** Tres de las dependencias más valiosas de esta base están
+congeladas: `learnmcp-xapi` (13,1 m), `oneroster-ts` (15,2 m) y `peancor/moodle-mcp-server` (7,3 m). **Las tres son
+permisivas, las tres hacen exactamente lo que la receta necesita, y ninguna tiene reemplazo vivo.** La respuesta honesta
+no es esconderlo ni descartarlas: es **cotizar la adopción**.
+
+🔵 **Y la condición que lo hace viable está medida: las tres son MIT o 0BSD.** `oneroster-ts` es **0BSD**, que **no exige
+ni conservar el aviso de copyright** — el fork no tiene costo legal alguno. Las dos MIT exigen conservar el aviso y nada más.
+
+### Las piezas, con su estado verificado el 2026-10-02
+
+| Pieza | Licencia | `HEAD` | Superficie | Por qué no se reemplaza |
+|---|---|---|---|---|
+| `DavidLMS/learnmcp-xapi` | **MIT** | 2025-08-29 | **3 tools** (1 escribe / 2 leen) | **Única puerta MCP de xAPI** (gap 64, cerrado en negativo con tres instrumentos: ningún LRS publica puerta propia) |
+| `trilogy-group/oneroster-ts` | **0BSD** | 2025-06-27 | **132 tools** (72/60) | Único SDK OneRoster con MCP y escritura. `@timeback/oneroster` **sin licencia** (gap 75) |
+| `peancor/moodle-mcp-server` | **MIT** | 2026-02-22 | **8 tools, 4 escriben** | Único permisivo que **escribe nota y devolución** en un LMS (gap 6) |
+
+### El wiring, que es de proceso y no de código
+
+1. **Fork en la organización del cliente, no en la de Globant** — y se dice por qué: **el cliente se queda con la pieza al
+   final del proyecto**, que es lo que convierte la dependencia congelada de riesgo en activo. Con 0BSD y MIT no hay
+   obligación de republicar.
+2. **Fijar la versión por sha, no por tag.** `learnmcp-xapi` tiene 2 tags y el último es de 2025-06-02, **anterior** a su
+   propio `HEAD` (2025-08-29): **el tag no es el código que se quiere**. Es el caso concreto del **gap 73**.
+3. **Suite de contrato antes de tocar nada:** para cada pieza, un test por tool que fije la forma de entrada y de salida.
+   🟢 **En `learnmcp-xapi` esto cuesta casi nada: son 3 tools**, y el contrato de abajo es **xAPI 1.0.3**, un estándar
+   cerrado. En `oneroster-ts` son **132 tools**, así que se fija **sólo el subconjunto que la receta usa** — típicamente
+   las 20-30 de rostering y matrícula de **P64** — y el resto se deja sin cubrir **declarándolo**.
+4. **Reproducir el build y publicar el artefacto al registro privado del cliente**, para no depender de que el upstream
+   siga publicando. ⚠️ **En `learnmcp-xapi` esto es obligatorio y no opcional: la pieza no está en ningún registro**
+   (PyPI 404, npm `total: 0`) — **se instala desde el código fuente**, que es el hallazgo del pase 33.
+5. **Mantener los rails de escritura al adoptar, y si no los tiene, agregarlos:** el patrón de **P61** (dry-run +
+   *confirm token* atado a una huella del payload + auditoría *append-only* previa a la escritura). 🔴 **Las tres piezas
+   escriben y ninguna de las tres trae los cuatro rails de `openedx-mcp`** — es el tramo que el fork justifica por sí solo.
+6. **Ofrecer la contribución *upstream* una vez, y seguir sin esperarla.** Los tres repos tienen *issues* abiertos; un PR
+   con la suite de contrato es barato y, si entra, el fork se vuelve innecesario. **Pero el plan no depende de eso**, que es
+   la diferencia entre este patrón y «esperamos que el mantenedor vuelva».
+
+### Plazo y alcance
+
+| Pieza | Fork + contrato + publicación | Rails de **P61** si faltan |
+|---|---|---|
+| `learnmcp-xapi` (3 tools) | 🟢 **1-2 semanas** | +1 semana |
+| `peancor/moodle-mcp-server` (8 tools, 4 escriben) | **2-3 semanas** | +1-2 semanas |
+| `oneroster-ts` (subconjunto de 20-30 tools) | **3-4 semanas** | +2 semanas |
+
+🔵 **Es la estimación que hay que poner en la propuesta en vez del supuesto «la dependencia existe y se mantiene sola».**
+Sobre un proyecto de **P67** de 10-12 semanas, adoptar `learnmcp-xapi` son **1-2 semanas de las diez**: visible, chico y
+defendible — **y es exactamente el costo que aparece en la semana 6 si no se escribió antes.**
+
+### Dónde se vende primero
+
+- 🟢 **North America**, donde el estándar contractual de Microsoft/AFT (vigente desde el 1.º de noviembre) obliga a
+  supervisión humana y a no usar dato de alumno para entrenar: **un expediente que nombra sus dependencias y quién las
+  mantiene es parte del cumplimiento**, no un extra.
+- 🟢 **EMEA**, donde el Anexo III (**2027-12-02**) exige trazabilidad y gestión de riesgo del sistema: **una dependencia
+  congelada sin plan de mantenimiento es un hallazgo de auditoría**; con **P78** es un control documentado.
+- ⚠️ **LATAM y APAC**: se vende igual, pero el argumento es de continuidad operativa y no regulatorio.
+
