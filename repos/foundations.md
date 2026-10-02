@@ -27,7 +27,142 @@ updated: 2026-10-02
 > **Pase 28 del 2026-10-01:** **se ejecuta la acción 1 del pase 27 y el gap 48 queda contestado leyendo el código fuente**, no la documentación (`docs.openedx.org` y `openedx.atlassian.net` están **los dos bloqueados**; `raw.githubusercontent.com` **sí responde**, y es un canal de verificación nuevo para esta KB). **La respuesta es doble:** la API REST de Open edX **alcanza y escribe** para matrícula, roles, bloques de curso y **notas —incluido el lote—**, pero el ***authoring* de Studio está declarado experimental por el propio proyecto**. Eso parte el gap 48 en dos y abre el **gap 50**. Ver la sección del pase 28, abajo.
 > **Pase 29 del 2026-10-01:** **se ejecutan las tres acciones del pase 28, y la primera refuta la conclusión del pase que la pidió.** 🔴 **El *authoring* de Open edX NO está bloqueado por estado experimental.** El aviso que el pase 28 citó vive en `v1/urls.py`, **está fechado «(Nov. 23)» y encabeza una sección sin rutas**; `v0/views/xblock.py` dice **lo contrario** (*«superseded by `XblockViewSet`… use `/api/contentstore/v1/xblock/` going forward»*) y **`v1/urls.py` registra ese `XblockViewSet` con CRUD completo** bajo los ADRs de **FC-0118** —incluido un **`?view=minimal`** (ADR 0036) que recorta el árbol del curso, que es justo lo que necesita un agente. **Deprecación circular: gana la señal vigente.** Y aparece lo que el pase 28 no vio: **cinco versiones de API montadas a la vez** (`v0`–`v4`), con las notas en **tres** de ellas. ✅ **Alta nueva de base: [`1EdTech/OpenCASE`](https://github.com/1EdTech/OpenCASE) (**Apache-2.0**, 9 ★, 180 commits)** — la implementación de referencia de **CASE 1.0 y 1.1** del propio organismo, con **CASE Provider API oficial**, versionado inmutable en archivos, Keycloak + API keys, RBAC de 4 niveles y 🔵 **endpoint propio de descubrimiento OpenAPI 3**. **Cierra el gap 51** y abre el **gap 52**. Ver la sección del pase 29, abajo.
 
+> **Pase 34 del 2026-10-02:** **el pase que cambia el instrumento de medición de adopción de esta base.** Treinta y dos
+> pases midieron con **estrellas**; el registro publica **descargas por mes**, y las series se contradicen en los dos
+> sentidos: `learninglocker` **583 ★ / 0 descargas-mes** (queda cerrado, no se propone) contra `TinCanPHP` **88 ★ /
+> 6.178 descargas-mes** y `oat-sa/extension-tao-testqti` **8 ★ / 844 versiones / release del 2026-09-30**. 🔴 **Dos capas
+> cambian de orden:** el **QTI que el mundo despliega es GPL-2.0-only** (`oat-sa/qti-sdk`, 218.212 descargas, 293
+> versiones), así que `@longsightgroup/qti3-*` (**MIT**) e `instructure/qti` (**MIT**) no son «una opción más» sino **lo
+> único permisivo**; y la capa xAPI **del lado cliente resulta permisiva** —`TinCanPHP` y `TinCanPython` son
+> **Apache-2.0**— que es la mitad que esta base nunca catalogó, aunque las cuatro piezas estén **congeladas**. 🟢 **Altas:**
+> la pila `qti3` enumerada con **`qti3-a11y`** (matriz de prueba de accesibilidad + guiones VoiceOver/NVDA/JAWS) y
+> **`qti3-pnp`** (resolutor de *Personal Needs and Preferences*, cero dependencias), **`gafapa/moodle-core-cli`** (MIT,
+> sin MCP, el más barato de envolver) e **`ibge-br-mcp`** (MIT, la plantilla del **gap 67**). 🔴 **Gap 66:** la puerta
+> oficial de Open edX publicó **12 releases en dos días y nada en 70**. Ver la sección del pase 33, abajo.
+
 > **Pase 30 del 2026-10-02:** **el gap 52 cierra leyendo cinco archivos del árbol `main` de OpenCASE, y la contradicción entre sus dos documentos tiene una regla que ninguno enuncia:** el segmento `ims/case/v1pX` aparece **sólo** cuando la operación actúa sobre una entidad del estándar CASE, nunca en las rutas de plataforma. **72 rutas contadas** (24 de lectura —el juego completo en **v1p0 y v1p1**—, 44 de management, **2 de descubrimiento** y 2 de servicio). 🔵 **Tres hallazgos abaratan P60:** hay **dos** endpoints OpenAPI (uno por versión) y **sin auth**; la lectura usa **auth opcional** (marcos públicos sin credenciales ni tenant); y aparece **CGE — CASE Global Exchange**, **11 rutas de federación** que permiten **suscribirse** a marcos del registro global en vez de cargarlos. 🔴 **Pero la escritura no es parte del estándar y lo declara el código**, así que sólo la mitad de lectura es portable. 🔴 **Open edX cambia de estado: ya tiene puerta de agente, y es AGPL-3.0 y corre EN PROCESO** (`openedx-mcp` + `tutor-contrib-openedxmcp`, 2026-07-25) — con lo que **el riesgo de adaptador de versiones del pase 29 no se paga por ese camino, y la autoría queda confirmada por implementación**. ✅ **Alta nueva:** [`instructure/qti`](https://github.com/instructure/qti) (**MIT**, 174 commits), que cubre **QTI 1.2** —el acervo legado del que parte **P48**— y que `examplary/qti` no cubría. ✅ **Y se cierran dos nombres: `.LRN` (vivo pero GPL-2.0 y en CVS) y `CK-ERP` (muerto desde 2012).** Ver la sección del pase 30, abajo.
+
+## 🧭 La adopción medida en descargas, no en estrellas — y tres capas de esta base cambian de orden (pase 33 del 2026-10-02)
+
+**Treinta y dos pases midieron adopción con estrellas de GitHub. El registro de paquetes publica descargas por mes, y
+las dos series no se parecen — en los dos sentidos.** Esta sección es el resultado de aplicar el instrumento nuevo a las
+bases que esta KB ya tenía catalogadas, más las altas que el barrido por **nombre de proyecto implementador** trajo
+(consigna del pase 32, ejecutada sobre **npm, PyPI y Packagist**).
+
+### El instrumento, y la regla que deja
+
+| Base | Licencia | ★ | Descargas total / mes | Último release | Lectura |
+|---|---|---|---|---|---|
+| `learninglocker/learninglocker` | 🔴 GPL-3.0 | **583** | 🔴 **2.960 / 0** | **2017-04-04** | **No se propone.** Cerrado por medición, no por rumor |
+| `RusticiSoftware/TinCanPHP` | **Apache-2.0** ✅ | 88 | 🔵 **863.777 / 6.178** | 🔴 **2019-03-05** | El cliente xAPI más desplegado del planeta, **y es permisivo** |
+| `RusticiSoftware/TinCanPython` (PyPI `tincan` 1.0.0) | **Apache-2.0** ✅ | — | 5 releases | 🔴 **2020-09-03** | Permisivo y congelado |
+| `php-xapi/client` + familia `php-xapi/*` | **MIT** ✅ | 23 | 48.104 / 825 | 🔴 2021-03-24 | Pila xAPI modular MIT, congelada |
+| `qtism/qtism` (`oat-sa/qti-sdk`) | 🔴 **GPL-2.0-only** | 85 | **218.212 / 3.104** | **2026-07-09** (v19.7.2, **293 versiones**) | **El QTI que el mundo despliega es copyleft** |
+| `oat-sa/extension-tao-testqti` | 🔴 **GPL-2.0-only** | **8** | **117.544 / 950** | **2026-09-30** (**844 versiones**) | **8 estrellas e infraestructura desplegada.** El mejor caso de la tendencia 23 |
+
+🔵 **La regla, y aplica a toda esta base de acá en adelante:** **las estrellas miden interés; las descargas por mes miden
+despliegue.** Cuando se contradicen, la que decide una propuesta es la segunda. Y la fecha que importa para promover una
+pieza a dependencia de patrón **no es la del primer release, es la del último**.
+
+### 🔴 La capa de evaluación queda bien medida, y la conclusión es más fuerte que las dos anteriores
+
+El pase 28 escribió *«el QTI utilizable es PHP»*; el pase 32 dijo que `qti3` lo **rompía**. **Las dos frases eran
+parciales porque ninguna midió licencia y despliegue a la vez.** Medido:
+
+- **Lo desplegado es copyleft.** `oat-sa/qti-sdk` → **GPL-2.0-only**, 218.212 descargas, 293 versiones, activo.
+  `oat-sa/extension-tao-testqti` → **GPL-2.0-only**, 117.544 descargas, 844 versiones, release del **2026-09-30**.
+  🔴 **No sirven para un entregable cerrado**; sirven como referencia y como aviso de que el cliente institucional grande
+  probablemente **ya tiene TAO adentro**.
+- **Lo permisivo es nuevo y chico, y es todo lo que hay.** `@longsightgroup/qti3-*` (**MIT**, 0.13.1 del **2026-10-01**,
+  12 paquetes) para **QTI 3**, e `instructure/qti` (**MIT**, 174 commits) para el acervo **QTI 1.2**.
+- 🔵 **Eso no debilita P20 ni P48: los vuelve el único camino permisivo.** Pero **obliga a declarar el riesgo de madurez
+  por delante**, no a esconderlo detrás de la palabra «MIT».
+
+### 🟢 Altas de base de este pase: la pila QTI 3 permisiva, enumerada — y dos piezas que abren la capa de accesibilidad
+
+**`LongsightGroup/qti3` — MIT, versión 0.13.1 publicada el 2026-10-01.** El pase 32 registró «12 paquetes» sin
+enumerarlos. Enumerados y verificados en el registro:
+
+| Paquete | Licencia | Dependencias de terceros | Qué aporta |
+|---|---|---|---|
+| `@longsightgroup/qti3-core` | **MIT** ✅ | 🔵 **cero** | Parseo XML sin dependencias, validación, *response processing*, **scoring**, metadatos de soporte y **estado de intento serializado**. No renderiza UI ni depende de framework. Expone `parseQtiXml`, `validateAssessmentItem`, `createItemSession` (`respond`/`score`) |
+| 🟢 `@longsightgroup/qti3-a11y` | **MIT** ✅ | sólo `qti3-core` | 🔵 **La pieza que P17 necesitaba y esta KB declaraba inexistente en permisivo.** `a11yContracts`, **`accessibilityProofMatrix`** y **`manualAssistiveTechnologyScripts` para VoiceOver, NVDA y JAWS**. Contratos de teclado, foco, nombre accesible y mensaje de validación por tipo de interacción: **metadato de prueba, legible por máquina** |
+| 🟢 `@longsightgroup/qti3-pnp` | **MIT** ✅ | 🔵 **cero** | Resolutor de **QTI 3 *Personal Needs and Preferences***: `parseQti3PnpXml` → `normalizeQti3Pnp` → `resolveQti3Pnp` contra capacidades del *player* y catálogo QTI, con diagnósticos de perfil |
+| `@longsightgroup/qti3-cli` | **MIT** ✅ | sólo paquetes hermanos | **14 comandos, todos emiten JSON** (ver abajo) |
+| `@longsightgroup/qti3-transcoder` | **MIT** ✅ | — | QTI 3 → QTI 1.2 y 2.x, por perfil |
+| `@longsightgroup/qti3-migrator` | **MIT** ✅ | — | QTI 1.2 / 2.x → 3 |
+| `@longsightgroup/qti3-player-react` · `-player-preact` | **MIT** ✅ | — | Adaptadores TSX del *web component* del player |
+| `@longsightgroup/qti3-conformance` · `-fixtures` | **MIT** ✅ | — | Corredor de *fixtures* y *fixtures* sintéticos con resultados de scoring esperados |
+
+⚠️ **La frontera que `qti3-pnp` declara en su propio README, y conviene citarla textual en un *discovery* porque es
+exactamente el presupuesto del integrador:** *«It does not fetch, store, authorize, or transmit PNP records. LMS
+identity, consent, institutional policy, persistence, LTI launch handling, and AfA PNP service access belong outside this
+package.»* 🔵 **Es la primera base de esta KB que escribe qué NO hace con ese nivel de precisión** — identidad, consentimiento,
+política institucional, persistencia, *launch* LTI y el servicio AfA PNP **son trabajo a cotizar**, no configuración.
+
+### 🔵 `qti3-cli`: por qué «envolvible como MCP en días» ya no es una afirmación
+
+**`@longsightgroup/qti3-cli` 0.13.1 (MIT), `bin: { qti3 }`, cero dependencias de terceros en runtime.** Catorce comandos:
+
+| Comando | Modo | Qué emite |
+|---|---|---|
+| `parse <item.xml>` | lectura | El modelo de ítem parseado, **como JSON** |
+| `validate <item.xml>` | lectura | Diagnósticos de validación, **como JSON** |
+| `score <item.xml> --responses <r.json>` | lectura | Resultado completo: diagnósticos, estado, respuestas, *outcomes* y puntaje |
+| `score-correct <item.xml>` | lectura | Puntúa con la respuesta correcta autorada |
+| `prepare-delivery` | **escritura con `--out`** | XML apto para el candidato. ⚠️ Ver la advertencia de modo, abajo |
+| `inspect-package <pkg.zip>` | lectura | Inspección del zip QTI y sus referencias de ítem |
+| `validate-package <pkg.zip>` | lectura | Validación estricta de paquete para conformidad |
+| `certification import-basic-items` · `import-basic-tests` · `verify-validator` · `check-import-report` | lectura | Mapas de evidencia **QTI 3 Basic IMPORT** contra el árbol oficial de conformidad de 1EdTech, con `--trusted-report-sha256` |
+| `support-matrix` | lectura | Metadatos de soporte, deprecación y *processing* |
+| `a11y-proof` | lectura | 🔵 **La prueba de accesibilidad** — el comando que materializa `qti3-a11y` |
+| `write-fixtures <dir>` | **escritura** | Escribe los *fixtures* canónicos |
+
+🔵 **El mapeo a MCP es 1:1 y no necesita capa de parseo, porque cada comando ya devuelve JSON.** **Doce leen, dos
+escriben a disco.** Eso es lo que sostiene el **gap 68** y lo que vuelve a **P67** cotizable.
+
+⚠️ **La advertencia de cotización que el gap 60 no tenía:** `prepare-delivery` distingue **modo estático** (default, y
+**rechaza** un archivo de estado) de **`server-materialized-adaptive`**, que **exige** un objeto de estado con `outcomes`
+y, opcionalmente, `templateValues`. 🔴 **Lo adaptativo no es un flag: es un contrato de estado del lado servidor.** Es
+integración, no configuración.
+
+### 🔵 La capa de telemetría tenía una mitad sin catalogar, y es la permisiva
+
+Esta base inventarió la telemetría por sus **servidores** (lrsql, Learning Locker, Veracity, OpenLRW). **Nunca por sus
+clientes.** Del lado cliente:
+
+- **`RusticiSoftware/TinCanPHP` — Apache-2.0, 863.777 descargas, 6.178 por mes, 88 ★, último tag 2019-03-05.**
+- **`RusticiSoftware/TinCanPython` (PyPI `tincan` 1.0.0) — Apache-2.0, último upload 2020-09-03.**
+- **Familia `php-xapi/*` — MIT** (`client`, `serializer`, `repository-api`, `exception`, `test-fixtures`,
+  `json-test-fixtures`), último tag 2021-03-24, 825 descargas/mes en el cliente.
+
+🔵 **Eso abarata todo lo que cuelga de P15**, porque el emisor de *statements* ya no hay que escribirlo ni elegirlo
+copyleft. 🔴 **Y hay que decir la otra mitad en la misma frase: las cuatro están congeladas, la más fresca hace cinco
+años.** Se proponen **forkeables**, no mantenidas, y el *fork* se presupuesta.
+
+⚠️ **Nota de nombre, para que el próximo pase no lo pierda:** el repo se llama **TinCanPython** y el paquete se llama
+**`tincan`**; en Packagist es **`rusticisoftware/tincan`**. Buscar por el nombre del repo en npm devuelve **0
+resultados**.
+
+### 🟢 Otras altas de base de este pase
+
+| Base | URL | Licencia | Señal | Para qué sirve acá |
+|---|---|---|---|---|
+| **moodle-core-cli** | [gafapa/moodle-core-cli](https://github.com/gafapa/moodle-core-cli) | **MIT** ✅ | **11 versiones**, última 2026-09-24, **Moodle 4.5+** | ⚪ **Cero menciones de MCP, y por eso entra:** cliente Node.js limpio de *core web services*. **El candidato más barato a envolver** en la capa de entrada al LMS |
+| **ibge-br-mcp** | [SidneyBissoli/ibge-br-mcp](https://github.com/SidneyBissoli/ibge-br-mcp) | **MIT** ✅ | **24 versiones**, 2026-01-18 → 2026-09-27 | 🔵 **La plantilla del gap 67.** Datos públicos brasileños (geografía, **censo**, economía, salud) servidos por MCP **con procedencia**. **Educación no está** — ver **P69** |
+
+### 🔴 Gap 66 (nuevo) — la puerta oficial de Open edX no publicó nada en 70 días, y hay que cotizarla distinto
+
+Leído del JSON de PyPI, y es la medición que los pases 30, 31 y 32 no hicieron:
+
+| Paquete | Releases | Ventana | Silencio | Versión |
+|---|---|---|---|---|
+| `openedx-mcp` | 5 (0.1.1 → 0.1.5) | **2026-07-24 → 2026-07-25** | 🔴 **70 días** | **0.1.5** |
+| `tutor-contrib-openedxmcp` | 7 (0.1.1 → 0.1.7) | **2026-07-24 → 2026-07-25** | 🔴 **70 días** | **0.1.7** |
+
+🔴 **Doce releases en dos días y nada después, todavía en `0.1.x`: es la forma de un experimento publicado una vez.**
+Nada de lo medido se invalida —35 rutas, 19 escritores, los cuatro rails—, pero **una propuesta que dependa de esta
+puerta presupuesta mantenerla**. Dependencias declaradas del wheel: `Django>=4.2` y `djangorestframework`, sin más.
 
 ## 🧭 Las rutas de OpenCASE resueltas, la capa de federación que nadie vio, y dos nombres que se cierran — pase 30 del 2026-10-02
 
@@ -315,7 +450,7 @@ Un LRS guarda *statements* con forma `actor – verbo – objeto` ("María inten
 
 **Cómo elegir, en una línea:** producción permisiva → **`lrsql`**; cliente sobre Open edX → **Ralph**; certificar conformidad con el estándar → **ADL_LRS**; el cliente ya tiene uno instalado → casi seguro es **Learning Locker**, y entonces hay que leer la GPL antes de tocarlo.
 
-#### 🟢 Estado de la capa, medido en el pase 33 del 2026-10-02 — lo que faltaba no era la licencia, era la fecha
+#### 🟢 Estado de la capa, medido en el pase 34 del 2026-10-02 — lo que faltaba no era la licencia, era la fecha
 
 Veintisiete pasadas registraron **licencia y rol** de estas cinco piezas y ninguna registró **cuándo se movieron por
 última vez**, que es el dato que decide si entran en una propuesta. Medido por canal, en este pase:

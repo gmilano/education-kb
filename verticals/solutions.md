@@ -20,9 +20,72 @@ updated: 2026-10-02
 > no comercial, y es justo la capa que el **Annex III** nombra de alto riesgo. La alternativa que sí se vende es **P49**.
 > **Pase 23:** entra **Frappe Education** en la capa SIS y **se cierra la pregunta del pase 21 sobre dónde vive el módulo educativo de ERPNext** — es una app aparte, `frappe/education`, GPL-3.0.
 > **Pase 11:** entra la capa **Apereo (ECL-2.0)** —Sakai, Opencast, uPortal, OpenLRW—, que diez pasadas descartaron por un filtro de licencia mal aplicado, y se documenta qué **no** proponer cuando el cliente pide *early warning*.
+> **Pase 34 del 2026-10-02:** **la columna de la puerta de agente deja de ser escasa y pasa a ser la mejor abastecida de
+> esta KB.** Canvas tiene **cinco** puertas (cuatro MIT) y la más grande es **`bruchris/canvas-lms-mcp`** —**165 tools,
+> cifra citable, escribe, MCP 1.x**— con **8 ★**; Moodle tiene **cuatro** más un cliente envolvible. 🔵 **Y aparece la
+> respuesta de arquitectura a la pregunta que frenaba todos los pilotos («¿y si TI no nos habilita nada?»):
+> `bunizao/moodle-cli` y `moon0825/jbnu-lms-student` trabajan desde la *sesión del navegador del propio usuario*, con
+> passkey y 2FA, sin token institucional** —al costo de ser de sólo lectura. 🟢 **El empaquetado LMS entra a la tabla:**
+> `coursecode` expone **15 tools** y su `build` toma `format` como enum (`cmi5`/`scorm2004`/`scorm1.2`/`lti`). 🔴 **Y la
+> capa de evaluación se reordena por despliegue: lo instalado es TAO y es GPL-2.0-only** (117.544 descargas, 844
+> versiones), así que lo permisivo (`qti3-*`, `instructure/qti`) es **lo único proponible** — con **`qti3-a11y`** y
+> **`qti3-pnp`**, que abren accesibilidad de evaluación como entregable auditable (**P70**). ⚠️ **Open edX cambia de
+> recomendación: proponer con presupuesto de mantenimiento (gap 66).** Ver la sección del pase 33, abajo.
+
 > **Pase 28 del 2026-10-01:** la columna de la puerta de agente **gana una fila y pierde una certeza**. Gana **OneRoster**, que tiene puerta **0BSD** con **164 métodos y escritura** (`trilogy-group/oneroster-ts`) — el pase 26 la había declarado vacía. Y sobre **Open edX**, el «no hay puerta» se mantiene pero **ya se sabe sobre qué se construiría**: la API **escribe matrícula y notas por lote**, y el ***authoring* de Studio está declarado experimental en el repo** (**gap 50**). Ver la sección del pase 28, abajo.
 > **Pase 27 del 2026-10-01:** se agrega **la columna que faltaba en veintiséis pasadas — ¿la vertical tiene puerta de agente?** Moodle **sí** (dos conectores **MIT**, uno que escribe notas) y Canvas **sí**; 🔴 **Open edX no tiene ninguna**, y es la de mayor huella pública en LATAM e India. **Las LMS son copyleft pero las puertas son MIT**, y por eso se pueden componer. Ver la sección del pase 27, abajo.
 
+
+## 🟢 La columna de la puerta de agente deja de ser escasa — y la capa de conectores pasa a ser la mejor abastecida de esta KB (pase 33 del 2026-10-02)
+
+**El pase 27 agregó esta columna para decir que casi no había puertas. El pase 30 cerró el último «no». Este pase mide la
+columna completa y el resultado es el contrario del de seis pases atrás: hay puertas de sobra, son casi todas permisivas,
+y el problema ya no es encontrarlas sino elegirlas.**
+
+| Vertical | Licencia de la plataforma | Puertas de agente | Licencias | Arquitectura | Cuál proponer |
+|---|---|---|---|---|---|
+| **Canvas** | AGPL-3.0 | 🟢 **Cinco** (4 usables) | **MIT** ×4 · 🔴 **1 sin licencia** | Proceso aparte, habla REST | 🔵 **`bruchris/canvas-lms-mcp`** — **165 tools, cifra citable, escribe, MCP 1.x, 62 versiones**. `vishalsachdev/canvas-mcp` queda como la de más tracción (269 ★) **pero con cifra de tools inestable** |
+| **Moodle** | GPL-3.0 | 🟢 **Cuatro** + 1 cliente envolvible | **MIT** ×3 · ⚠️ **AGPL-3.0** ×1 | Proceso aparte, Web Services por token — **salvo `moodle-cli`** | **Docente que califica:** `peancor/moodle-mcp-server` (MIT, escribe nota y devolución). 🔵 **Cliente que no quiere tocar su Moodle:** **`bunizao/moodle-cli`** — trabaja desde la **sesión del navegador del usuario**, **sin token de administrador ni habilitación de Web Services** |
+| **Open edX** | AGPL-3.0 | ✅ Una, **oficial** | 🔴 **AGPL-3.0** | 🔴 **EN PROCESO: plugin Django dentro del LMS *y* del CMS** | ⚠️ **Proponer con presupuesto de mantenimiento (gap 66): 12 releases en dos días de julio y nada en los 70 siguientes, todavía `0.1.x`** |
+| 🔵 **LMS institucional** (categoría nueva) | la de la institución | ✅ Una, **no oficial** | **MIT** | STDIO local; **login por el navegador del usuario, passkey y 2FA** | **`moon0825/jbnu-lms-student`** (Corea, **25 tools, sólo lectura**). **No es pieza instalable para un cliente: es la arquitectura de referencia** de «agente sobre el LMS que ya existe, sin pedirle nada a TI» |
+| 🟢 **Empaquetado LMS** (SCORM 1.2/2004 + cmi5 + LTI 1.3) | — | ✅ Una | **MIT** | Proceso aparte, local | **`coursecode`** — **15 tools** y **`coursecode_build` con `format` como enum**: el empaquetado está detrás de MCP. Supera a `scorm-mcp-server` (3 tools), que queda como la opción mínima *offline* |
+| **OneRoster** (estándar) | — | ✅ Una | **0BSD** | SDK + servidor MCP | `trilogy-group/oneroster-ts`, **132 tools medidas por protocolo** |
+| **CASE** (estándar) | Apache-2.0 (OpenCASE) | 🔴 **Ninguna** | — | — | **Sigue siendo la mejor oportunidad: el servidor publica su propio OpenAPI 3** → **P60** |
+| 🔴 **QTI** (estándar) | MIT (`qti3-*`, `instructure/qti`) · 🔴 **GPL-2.0-only lo desplegado** | 🔴 **Ninguna** | — | — | 🔵 **La segunda mejor oportunidad, y ahora medida: `qti3-cli` tiene 14 comandos que emiten JSON y cero dependencias** → **gap 68**, **P70** |
+| 🔴 **xAPI / LRS** (estándar) | **Apache-2.0** del lado cliente | 🔴 Sólo `learnmcp-xapi` | — | — | ⚠️ Clientes permisivos **pero congelados** (`TinCanPHP` 2019, `TinCanPython` 2020, `php-xapi/*` 2021) |
+
+### 🔵 Lo que cambia en una conversación con cliente, en tres frases
+
+1. **«¿Hay que construir el conector?»** — Para **Canvas y Moodle, no**: hay nueve puertas entre las dos y ocho son
+   permisivas. Lo que se cotiza es **elegir, auditar y mantener**, no escribir.
+2. 🔵 **«¿Y si TI no nos habilita nada?»** — Es la pregunta que frenaba todos los pilotos de esta KB, y ahora tiene
+   respuesta de arquitectura: **`bunizao/moodle-cli` y `moon0825/jbnu-lms-student` trabajan desde la sesión del navegador
+   del propio usuario** —passkey y segundo factor incluidos—, así que **el piloto no depende de un token institucional**.
+   ⚠️ **Y su límite es el mismo que su virtud: son de sólo lectura / lado alumno.** Sirven para demostrar valor, no para
+   cerrar el circuito de calificación.
+3. ⚠️ **«¿El estándar tiene puerta?»** — **OneRoster sí, el empaquetado sí, CASE no, QTI no, xAPI casi no.** Y la frase
+   *«CaSS tiene puerta MCP»* 🔴 **es cierta del servidor y falsa del SDK npm** (`cassproject` 5.0.19: cero menciones de
+   MCP). Quien integre por npm **no hereda la puerta**.
+
+### 🟢 Capa de evaluación conforme a estándar: lo que se propone cambió, y no por novedad sino por medición
+
+**Antes de este pase esta KB proponía QTI sin saber qué estaba desplegado.** Medido en Packagist y npm:
+
+- 🔴 **Lo instalado en el cliente institucional grande es TAO, y es GPL-2.0-only.** `oat-sa/extension-tao-testqti`:
+  **117.544 descargas, 844 versiones, release del 2026-09-30**, con **8 estrellas**. `qtism/qtism` (`oat-sa/qti-sdk`):
+  **218.212 descargas, 293 versiones**. ⚠️ **No van a un entregable cerrado** — y hay que **preguntar en el *discovery*
+  si ya está adentro**, porque cambia el punto de partida.
+- ✅ **Lo proponible es MIT y es nuevo:** `@longsightgroup/qti3-*` (QTI 3, 0.13.1 del **2026-10-01**) e
+  `instructure/qti` (QTI 1.2). **Declarar la madurez por delante.**
+- 🟢 **Y aparece una vertical que esta KB no tenía: la prueba de accesibilidad del ítem de evaluación.**
+  `@longsightgroup/qti3-a11y` entrega **`accessibilityProofMatrix`** y **guiones manuales para VoiceOver, NVDA y JAWS**,
+  y `@longsightgroup/qti3-pnp` resuelve **Personal Needs and Preferences** contra las capacidades del *player*. **Las dos
+  son MIT.** Es la primera vez que esta base puede proponer **accesibilidad de evaluación como entregable auditable y
+  permisivo** → **P70**.
+
+⚠️ **El límite de `qti3-pnp`, textual del README, porque es el presupuesto del integrador:** *«It does not fetch, store,
+authorize, or transmit PNP records. LMS identity, consent, institutional policy, persistence, LTI launch handling, and
+AfA PNP service access belong outside this package.»*
 
 ## 🔴 La columna de la puerta de agente se cierra: **Open edX ya la tiene, es oficial, y es AGPL en proceso** — pase 30 del 2026-10-02
 

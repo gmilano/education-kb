@@ -8,6 +8,114 @@ updated: 2026-10-02
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 
+## 2026-10-02 (pase 34) — el registro deja de responder «qué hay» y empieza a responder **«qué se usa»**: con descargas por mes, la capa de evaluación y la de telemetría **cambian de orden**, y la pieza xAPI más desplegada de esta KB resulta ser **Apache-2.0 y congelada desde 2019**
+
+**Lo medido:** consultas a **npm** (`registry.npmjs.org/-/v1/search` y documentos de paquete), **PyPI** (`/pypi/<pkg>/json`)
+y **Packagist** (`packagist.org/packages/<vendor>/<pkg>.json`) por **nombre de proyecto implementador** —la consigna del
+pase 32— más lectura de **README crudo**, `package.json` y archivo `LICENSE` de cada candidato. Más la lectura de
+`lib/mcp-server.js` y `lib/mcp-prompts.js` de `coursecode`, que está en `agents/trending.md`.
+
+🔵 **El canal nuevo de este pase no es un host: es un campo.** `downloads.monthly` de Packagist y la fecha del último
+release de PyPI son dos números que esta base nunca pidió, y los dos **reordenan capas enteras**.
+
+### 🟢 Lo que entra, verificado el 2026-10-02
+
+| Repo | URL | Licencia | Adopción medida | Stack | Por qué importa |
+|---|---|---|---|---|---|
+| **canvas-lms-mcp** | [bruchris/canvas-lms-mcp](https://github.com/bruchris/canvas-lms-mcp) | **MIT** ✅ | **8 ★**, 4 forks, **317 commits**, **62 versiones** npm (última 2026-09-20) | TypeScript | 🔵 **165 tools — el conector permisivo de LMS más grande de esta KB**, con escritura (califica, comenta, CRUD de assignments) y **cifra citable**. Declara **MCP 1.x**. Trae **`accessibility audits`** como categoría de tools |
+| **Claw-ED** | [SirhanMacx/Claw-ED](https://github.com/SirhanMacx/Claw-ED) | **MIT** ✅ (`LICENSE`, *(c) 2026 EDUagent Contributors*) | **60 ★**, 13 forks, **778 commits**; PyPI `clawed` **240 releases** | Python 3.11+ | 🟢 **El agente docente *local-first*.** Importa PDF/DOCX/PPTX/TXT/MD del docente, indexa para *retrieval*, construye **perfil de estilo de enseñanza** y emite borradores **editables en DOCX y PPTX**. Beta revisada por docentes |
+| **moodle-cli** | [bunizao/moodle-cli](https://github.com/bunizao/moodle-cli) | **MIT** ✅ | **20 versiones** (2026-07-09 → 2026-09-27) | TypeScript | **Cuarta puerta de Moodle y primera del lado alumno**: vencimientos, notas, archivos, devoluciones, revisión de quizzes, **desde la sesión del navegador** (sin token de administrador) |
+| **moodle-core-cli** | [gafapa/moodle-core-cli](https://github.com/gafapa/moodle-core-cli) | **MIT** ✅ | **11 versiones**, última 2026-09-24 | Node.js | ⚪ **Cero menciones de MCP — y por eso vale:** cliente limpio de *core web services* de **Moodle 4.5+**. Es el candidato más barato a envolver como MCP en esta capa |
+| **jbnu-lms-mcp** | [moon0825/jbnu-lms-student](https://github.com/moon0825/jbnu-lms-student) | **MIT** ✅ | v0.8.0, **2026-09-08** | Node.js (STDIO local) | 🔵 **Categoría nueva: el LMS de UNA institución.** 전북대학교 (Univ. Nacional de Jeonbuk, Corea), **25 tools**, **sólo lectura por diseño**, login por el navegador del propio usuario (**passkey y 2FA incluidos**), Windows + macOS. **No oficial por declaración propia** |
+| **@longsightgroup/qti3-a11y** | [LongsightGroup/qti3](https://github.com/LongsightGroup/qti3) | **MIT** ✅ | 0.13.1, **2026-10-01** | TypeScript | 🔵 **La pieza que P17 necesitaba y esta KB declaraba inexistente en permisivo:** `accessibilityProofMatrix`, `a11yContracts` y **guiones manuales de tecnología asistiva para VoiceOver, NVDA y JAWS**. Es **metadato de prueba de accesibilidad**, legible por máquina |
+| **@longsightgroup/qti3-pnp** | [LongsightGroup/qti3](https://github.com/LongsightGroup/qti3) | **MIT** ✅ | 0.13.1, **cero dependencias** | TypeScript | **Resolutor de QTI 3 *Personal Needs and Preferences***: parsea el XML de PNP, normaliza, valida el perfil y lo resuelve contra las capacidades del *player* y el catálogo QTI |
+| **ibge-br-mcp** | [SidneyBissoli/ibge-br-mcp](https://github.com/SidneyBissoli/ibge-br-mcp) | **MIT** ✅ | **24 versiones** (2026-01-18 → 2026-09-27) | TypeScript | 🔵 **La plantilla del gap 63.** Datos públicos brasileños —geografía, **censo**, economía, salud— servidos por MCP con procedencia. **No cubre educación**, y eso es justamente la oportunidad |
+
+### 🔴 Lo que NO entra, y por qué
+
+| Pieza | Licencia | Por qué queda afuera |
+|---|---|---|
+| `@imazhar101/mcp-canvas-server` | 🔴 **ninguna declarada** | 13 versiones y la última del **2026-10-01** (activo), README de 35.048 caracteres. **Sin licencia no hay entregable**: no se propone ni como referencia cerrada |
+| `lms-mcp` | MIT | **Sin repositorio declarado**, README de 1.091 caracteres, última versión **2025-04-05**. No verificable de primera mano |
+| `@owen-x-tech/canvas-mcp` | MIT (declarada) | 2 versiones, 2026-02-23. 🔴 **El repo que declara da 404 en las doce rutas probadas** (`owentaylor/canvas-mcp`, `main`/`master`/`dev` × README/LICENSE/package.json/index.js). Por la **tendencia 94** eso no invalida el paquete, **pero sin código legible no se propone** |
+| `educhain` (PyPI) | MIT | ⚠️ **No sale: se re-fecha.** Esta KB lo tiene como alta de los pases 2 y 3 (*YouTube → curso, v0.4*). **35 releases y el último es del 2025-12-03 — diez meses sin publicar.** Sigue siendo MIT y usable; **deja de ser «lo nuevo»** |
+| `opencase` (npm) · `opencage/geocode` (Packagist) | — | 🔴 **Colisión 7.** El nombre del implementador de CASE devuelve **geocodificación** |
+| `@censo-custody/solana-wallet-adapter`, `@censo/eth-contracts` | — | 🔴 **Colisión 9.** «censo escolar» devuelve **custodia de criptoactivos en Solana** |
+
+### 🔵 La capa de evaluación, reordenada por adopción en vez de por novedad
+
+El pase 28 escribió *«el QTI utilizable es PHP»*; el pase 32 dijo que `qti3` (MIT) **rompía** esa frase. **Las dos cosas
+eran ciertas y a la vez insuficientes, porque ninguno midió despliegue ni licencia del lado PHP.** Medido:
+
+| Pieza | Licencia | ★ | Descargas total / mes | Versiones | Último release |
+|---|---|---|---|---|---|
+| `qtism/qtism` → [oat-sa/qti-sdk](https://github.com/oat-sa/qti-sdk) | 🔴 **GPL-2.0-only** | 85 | **218.212 / 3.104** | **293** | 2026-07-09 (v19.7.2) |
+| [oat-sa/extension-tao-testqti](https://github.com/oat-sa/extension-tao-testqti) | 🔴 **GPL-2.0-only** | **8** | **117.544 / 950** | **844** | **2026-09-30** |
+| `@longsightgroup/qti3-*` (12 paquetes) | **MIT** ✅ | 5 | — (npm, 0.13.1) | — | **2026-10-01** |
+| [instructure/qti](https://github.com/instructure/qti) (QTI 1.2) | **MIT** ✅ | 8 | — | 174 commits | — |
+
+🔴 **La conclusión que sirve para una propuesta, y es más fuerte que las dos anteriores:** **el QTI que el mundo
+efectivamente despliega es copyleft** —GPL-2.0-only, 218.212 descargas, 293 versiones, mantenido— y **el QTI permisivo es
+nuevo y chico**. Así que `@longsightgroup/qti3-*` no es «una opción más»: es **la única pila QTI 3 permisiva con releases
+vivos**, y `instructure/qti` **la única permisiva para el acervo 1.2**. Eso vuelve a **P20** y a **P48** más valiosos, no
+menos — pero **obliga a declarar el riesgo de madurez**, no a esconderlo detrás de la licencia.
+
+⚠️ **Y `oat-sa/extension-tao-testqti` con 8 ★, 844 versiones etiquetadas y un release de hace dos días es el mejor
+ejemplo que tiene esta base de la tendencia 23**: TAO es infraestructura de evaluación desplegada, y en GitHub parece un
+proyecto abandonado.
+
+### 🔵 La capa de telemetría, reordenada igual — y el resultado es mejor de lo que esta KB creía
+
+| Pieza | Licencia | ★ | Descargas total / mes | Último tag |
+|---|---|---|---|---|
+| [`RusticiSoftware/TinCanPHP`](https://github.com/RusticiSoftware/TinCanPHP) | **Apache-2.0** ✅ | 88 | 🔵 **863.777 / 6.178** | 🔴 **2019-03-05** |
+| [`RusticiSoftware/TinCanPython`](https://github.com/RusticiSoftware/TinCanPython) (PyPI `tincan`) | **Apache-2.0** ✅ | — | — (5 releases) | 🔴 **2020-09-03** |
+| [`php-xapi/client`](https://github.com/php-xapi/client) + familia `php-xapi/*` | **MIT** ✅ | 23 | 48.104 / 825 | 🔴 2021-03-24 |
+| [`learninglocker/learninglocker`](https://github.com/LearningLocker/learninglocker) | 🔴 GPL-3.0 | **583** | 🔴 **2.960 / 0** | 🔴 2017-04-04 |
+
+🔵 **La buena noticia que estaba escondida:** la pieza cliente xAPI más desplegada del planeta es **Apache-2.0** y
+descarga **6.178 veces por mes**. Esta KB tenía la capa de telemetría catalogada por sus **servidores** (lrsql, Learning
+Locker, Veracity) y nunca por sus **clientes**. **Del lado cliente, la capa es permisiva** — y eso abarata todo lo que
+cuelga de **P15** (el LRS como capa 0).
+
+🔴 **La mala, y hay que decirla en la misma frase:** las cuatro piezas están **congeladas**. La más fresca tiene cinco
+años. **Un cliente xAPI Apache-2.0 con 6.178 descargas mensuales y sin release desde 2019 es a la vez el camino más
+barato y una deuda técnica asumida** — se propone *forkeable*, no *mantenido*. ⚠️ **Y `learninglocker` queda cerrado por
+medición y no por rumor: 583 estrellas, 0 descargas mensuales.** No se propone.
+
+### 🔴 La ausencia de MCP, confirmada por el segundo método — y ahora con el SDK de CaSS adentro
+
+README crudo de las seis piezas de la consigna, conteo de «MCP» y «Model Context Protocol»:
+
+| Pieza | MCP | Vocabulario del dominio | Nota |
+|---|---|---|---|
+| `oat-sa/qti-sdk` | **0** | 84 | — |
+| `oat-sa/extension-tao-testqti` | **0** | 12 | — |
+| `php-xapi/client` | **0** | 15 | — |
+| `RusticiSoftware/TinCanPHP` | **0** | 2 | — |
+| `RusticiSoftware/TinCanPython` | **0** | 🔴 **0** | Falso negativo del control: *es* del dominio |
+| `cassproject/cass-npm` (`cassproject` 5.0.19, Apache-2.0, **2026-08-12**) | **0** | 🔴 **0** | 🔵 **Hallazgo:** el SDK JS de CaSS **no** expone MCP — la puerta de CaSS es **sólo del servidor** |
+
+**La mitad QTI del gap 60 queda confirmada por un segundo método independiente** — ⚠️ **y la mitad xAPI NO: el pase 33, que corrió en paralelo a este, demostró que `DavidLMS/learnmcp-xapi` (MIT) es la puerta y que estaba en esta KB desde el pase 6. Lo que este pase mide es más angosto y compatible: las piezas de MAYOR DESPLIEGUE de las dos capas no tienen MCP, que no es lo mismo que «la capa no tiene puerta».** Y queda una frase prohibida nueva: *«CaSS tiene puerta
+MCP»* es cierto de `cassproject/CASS` (servidor) y **falso** de `cassproject` (SDK npm). **Quien integre por npm no
+hereda la puerta.**
+
+### ⚠️ Nota de método — qué canal verificó en este pase, y qué quedó fuera de alcance
+
+- ✅ **Verificaron:** `registry.npmjs.org`, `pypi.org/pypi/*/json`, `packagist.org/packages/*.json`,
+  `raw.githubusercontent.com` (README, `LICENSE`, `package.json` y código fuente).
+- 🔴 **Bloqueado por el proxy de egreso, medido en su registro:** `eur-lex.europa.eu` y `data.europa.eu`
+  (**403 a CONNECT**), más `artificialintelligenceact.eu`, `op.europa.eu`, `euaiact.com`, `euai-act.com`. **Gap 65.**
+- ⚠️ **`repo.packagist.org` devuelve `"404 not found, no packages here"` para rutas de paquete**; el host que sirve el
+  JSON de paquete es **`packagist.org`**. Anotado para que el próximo pase no pierda el intento.
+- 🔴 **La API de GitHub está limitada al alcance de repos de la sesión** (`api.github.com/repos/...` responde *«GitHub
+  access to this repository is not enabled for this session»*). Las estrellas y los commits de piezas de terceros se
+  leyeron de la **página renderizada**, y el código por **`raw.githubusercontent.com`**. ⚠️ Recordar la regla del pase
+  29: **la presencia de MCP se verifica en el README crudo, nunca en la página renderizada.**
+- 🔴 **En este entorno no se puede instalar ni ejecutar paquetes de terceros.** Por eso los conteos de tools de
+  `coursecode` (15) y de `canvas-lms-mcp` (165) son **de código fuente y de documentación**, no de `tools/list`. La
+  distinción del pase 30 —declaradas contra servidas— **se mantiene abierta** para las dos piezas.
+
 ## 2026-10-02 (pase 33) — **cero altas y tres fechas**: las piezas de la capa de telemetría ya estaban en esta KB desde el pase 6, y lo que faltaba era su **estado**; `hub.docker.com` entra como canal de verificación y fecha `lrsql` **en el día de ayer**
 
 🔵 **Este pase no agrega repos a la capa de telemetría, y eso es el hallazgo.** Fue a buscar la puerta MCP de xAPI que el
@@ -86,7 +194,7 @@ este entorno, así que las cifras son **lectura de artefacto**, no de protocolo 
 `@longsightgroup/qti3-cli@0.13.1` (**MIT**), `bin: { "qti3": "dist/index.js" }`, superficie declarada *«parsing,
 validating, scoring, inspecting, and checking QTI 3 items»*. Sus `dependencies` son **sólo sus cuatro hermanas**
 (`qti3-core`, `-a11y`, `-fixtures`, `-conformance`, las cuatro en `0.13.1`): **cero dependencias de terceros en toda la
-cadena**. Un wrapper MCP **agrega exactamente una** (`@modelcontextprotocol/sdk`). Ver **P69**.
+cadena**. Un wrapper MCP **agrega exactamente una** (`@modelcontextprotocol/sdk`). Ver **P72**.
 
 ### 🔴 Ruido medido, para que el próximo pase no lo vuelva a pagar
 
@@ -118,7 +226,6 @@ resultados exactos**, uno de ellos `yetanalytics/statementfactory`: **la consult
 puntero a lo vivo en la columna del mantenedor.**
 
 ---
-
 ## 2026-10-02 (pase 32) — el registro de paquetes rinde **un MCP MIT que el campo `description` ocultaba**, y el término «xapi» resulta ser una **trampa de tres vías** con dos paquetes MIT activos que no tienen nada que ver con educación
 
 **Lo medido:** `registry.npmjs.org/-/v1/search` sobre **QTI, xAPI, SCORM** y la pregunta desambiguada de **CASE**, más

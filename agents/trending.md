@@ -9,6 +9,336 @@ updated: 2026-10-02
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 > No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
 
+## 2026-10-02 (pase 34) — el pase que **mide la adopción con el instrumento que treinta y tres pases no usaron**: las descargas del registro. Y el instrumento da vuelta tres filas de esta KB, entre ellas **cuál es el conector de LMS más grande que tiene** (tiene 8 ★) y **si la puerta oficial de Open edX está viva** (no publicó nada en 70 días)
+
+**Lo que se hizo:** el barrido obligatorio completo —**cuatro búsquedas globales y cuatro regionales**, con el año
+**calculado** (2026); las cuatro regiones rindieron— más **las tres acciones que el pase 32 dejó escritas**. Las tres se
+ejecutaron. La 2 **se contestó contra la expectativa del pase que la pidió** y cerró a favor; la 3 rindió **cinco altas
+y tres colisiones nuevas**; la 1 🔴 **no se pudo cerrar y ahora se sabe que no se va a poder cerrar desde este entorno**,
+que es un resultado distinto de «no se intentó».
+
+🔵 **Pero el hallazgo del pase no es ninguna de las tres: es un instrumento.** Esta base midió adopción con **estrellas**
+durante treinta y dos pases, y escribió la tendencia 23 (*«las estrellas esconden la infraestructura desplegada»*) sin
+tener con qué medir lo que escondían. El registro de paquetes publica **descargas por mes**, y eso **sí** mide
+despliegue. Las dos series no se parecen, y no se parecen **en los dos sentidos**.
+
+### 🔵 El instrumento nuevo: ★ contra descargas/mes, medido en las piezas que esta KB ya tenía
+
+| Pieza | ★ | Descargas (total / mes) | Último tag | Lectura |
+|---|---|---|---|---|
+| `learninglocker/learninglocker` | **583** | **2.960 / 0** | **2017-04-04** | 🔴 **583 estrellas y cero descargas mensuales.** La demostración más limpia de la tendencia 23: la atención persiste, el despliegue es nulo |
+| `RusticiSoftware/TinCanPHP` | 88 | **863.777 / 6.178** | **2019-03-05** | 🔵 **Setenta veces más descargas mensuales que estrellas, y sin release en siete años.** Es la librería xAPI más desplegada de esta KB — **y es Apache-2.0** |
+| `oat-sa/qti-sdk` (`qtism/qtism`) | 85 | **218.212 / 3.104** | 2026-07-09 | 🔴 **El QTI más desplegado del mundo es GPL-2.0-only.** 293 versiones etiquetadas, activo |
+| `oat-sa/extension-tao-testqti` | **8** | **117.544 / 950** | **2026-09-30** | 🔴 8 estrellas, **844 versiones** y un release de hace dos días. TAO es infraestructura, no proyecto |
+| `php-xapi/client` | 23 | 48.104 / 825 | 2021-03-24 | **MIT**, modular, congelado hace cinco años pero con tráfico vivo |
+
+**La regla que esto deja, y aplica a toda esta base:** **las estrellas miden interés; las descargas por mes miden
+despliegue.** Cuando las dos series se contradicen, la que decide una propuesta es la segunda. Y los dos extremos de
+esta tabla son el argumento: **583 ★ / 0 descargas** contra **8 ★ / 950 descargas por mes**.
+
+### 🔴 La misma inversión, en la fila que más le importa a esta KB: el conector de LMS más grande tiene 8 estrellas
+
+El pase 26 declaró a `vishalsachdev/canvas-mcp` (**MIT**, 269 ★, «102–103 tools») **el conector permisivo de LMS más
+grande que vio esta KB**, y el pase 27 agregó una *advertencia de cifra* porque el número de tools variaba según la
+versión (40+, 80+, 116). **La advertencia era correcta y el título caducó.**
+
+| Conector Canvas | Licencia | ★ | Tools | Escribe | Commits / versiones |
+|---|---|---|---|---|---|
+| 🟢 **`bruchris/canvas-lms-mcp`** | **MIT** ✅ | **8** | 🔵 **165** | **Sí** — califica, comenta, crea/actualiza assignments, administra contenido y *admin workflows* | **317 commits**, **62 versiones** en npm, última **2026-09-20** |
+| `vishalsachdev/canvas-mcp` | **MIT** ✅ | **269** | 102–103 (cifra inestable) | Sí | 815 commits |
+| `mtgibbs/canvas-lms-mcp` | **MIT** ✅ | — | — | Consulta notas, entregas, datos académicos | 15 versiones, última 2026-02-13 |
+| `owentaylor/canvas-mcp` | **MIT** ✅ | — | — | — | 2 versiones, 2026-02-23 |
+| `@imazhar101/mcp-canvas-server` | 🔴 **sin licencia declarada** | — | — | — | 13 versiones, última **2026-10-01** — **se excluye por licencia ausente** |
+
+**Descripción verbatim de la pieza nueva:** *«The TypeScript MCP server for Canvas LMS. Read courses, assignments,
+submissions, rubrics, quizzes; grade, comment, manage course content, and handle Canvas admin workflows from any AI
+agent.»* Las **165** tools cubren, entre otros: *courses, assignments, assignment overrides, submissions, rubrics,
+quizzes, **New Quizzes (LTI)**, files, **gradebook history**, grade explanations, grading policy, grade projection,
+grading standards, users, groups, enrollments, discussions, modules, pages, calendar, conversations, peer reviews,
+accounts, analytics, outcomes, content exports, course setup, link audits, **accessibility audits**, appointment groups,
+student workflows, student search, dashboard* e *instructor attention workflows*.
+
+🔵 **Y resuelve la advertencia de cifra del pase 27 en vez de heredarla:** acá el número **165** aparece igual en el
+campo `description` del paquete y en el README, sobre 62 versiones publicadas. **Es una cifra citable**, a diferencia de
+la de `canvas-mcp`. 🔵 **Dos detalles que valen para una propuesta:** declara **MCP 1.x** (versión de protocolo, no
+«compatible con MCP»), y trae **`accessibility audits`** como categoría propia — el único conector de LMS de esta base
+que expone auditoría de accesibilidad como herramienta, que es exactamente lo que **P17** y **P70** necesitaban del lado del LMS.
+
+⚠️ **Lo que no se midió:** `tools/list` **no se observó**. El **165** viene del `description` del paquete y del README,
+no del protocolo — la misma distinción que el pase 30 estableció con `oneroster-ts` (132 servidas contra 164
+declaradas). **No se cita como «165 servidas».**
+
+### 🔴 Gap 62 (nuevo) — la puerta oficial de Open edX **no publicó nada en 70 días**, y eso no lo midió ninguno de los tres pases que la celebraron
+
+El pase 30 cerró el gap 48 con `openedx-mcp` + `tutor-contrib-openedxmcp` y construyó **P61** encima; el 31 midió sus 35
+rutas; el 32 leyó su código. **Ninguno miró las fechas de publicación.** Leídas del JSON de PyPI:
+
+| Paquete | Releases | Ventana de publicación | Silencio hasta hoy | Versión |
+|---|---|---|---|---|
+| `openedx-mcp` | **5** (0.1.1 → 0.1.5) | **2026-07-24 → 2026-07-25** | 🔴 **70 días** | **0.1.5** |
+| `tutor-contrib-openedxmcp` | **7** (0.1.1 → 0.1.7) | **2026-07-24 → 2026-07-25** | 🔴 **70 días** | **0.1.7** |
+
+🔴 **Doce releases en dos días y nada en los setenta siguientes, con la versión todavía en `0.1.x`.** Esa es la forma de
+un **experimento publicado una vez**, no de un producto mantenido. **No invalida nada de lo medido** —las 35 rutas, los
+19 escritores, los cuatro rails siguen siendo ciertos y los rails siguen siendo el artefacto más reutilizable de esta
+base—, pero **cambia cómo se cotiza P61**: una propuesta que dependa de esta puerta tiene que presupuestar
+**mantenerla**, no consumirla. **Y es barato de volver a chequear:** es una llamada al JSON del registro.
+
+🔵 **La regla general que esto deja:** cuando esta KB promueve una pieza a dependencia de patrón, la fecha que importa
+**no es la del primer release, es la del último** — y la distancia entre las dos es lo que dice si hay proyecto.
+
+### ✅ Acción 2 CUMPLIDA — y contestó **contra** la expectativa: `coursecode` **sí** es la pieza de salida, porque su `build` **emite el paquete**
+
+El pase 32 preguntó si las tools de `coursecode` leen o si alguna escribe, y si eso lo convierte en la pieza de salida
+de la capa generativa o lo deja como «un CLI con fachada MCP». **Medido sobre `lib/mcp-server.js` y `lib/mcp-prompts.js`
+del árbol `main`: 15 tools declaradas en el array que sirve `ListToolsRequestSchema` — 9 de sólo lectura y 6 que no.**
+
+| Tool | Modo | Anotación | Qué hace |
+|---|---|---|---|
+| `coursecode_state` | READ | idempotente | Estado del curso + diagnósticos del preview en una llamada |
+| `coursecode_errors` | READ | idempotente | Diagnósticos sin el *payload* pesado de estado |
+| `coursecode_screenshot` | READ | idempotente | Captura JPEG del preview |
+| `coursecode_workflow_status` | READ | idempotente | Detecta la etapa de autoría y devuelve instrucciones de etapa |
+| `coursecode_lint` | READ | idempotente | *Linter* estático con resultados estructurados |
+| `coursecode_css_catalog` · `_component_catalog` · `_interaction_catalog` · `_icon_catalog` | READ | idempotentes | Catálogos de CSS, componentes, interacciones e iconos |
+| `coursecode_navigate` | WRITE | idempotente | Navega a una diapositiva; fija tema claro/oscuro y alto contraste |
+| `coursecode_interact` | WRITE | — | Fija **y evalúa** una respuesta de interacción en una llamada |
+| `coursecode_reset` | WRITE | 🔴 **destructiva** | Borra el estado del alumno y reinicia el curso |
+| `coursecode_viewport` | WRITE | idempotente | Tamaño de viewport del navegador headless (prueba responsive) |
+| 🟢 **`coursecode_build`** | **WRITE** | idempotente | 🔵 **`format` es un enum: `cmi5` \| `scorm2004` \| `scorm1.2` \| `lti`** — **el empaquetado LMS está detrás de MCP** |
+| `coursecode_narration` | WRITE | — | Genera (o *dry-run*) narración de audio por TTS configurado |
+
+⚠️ **Reconciliación con el pase 33, que midió lo mismo en paralelo y por otro canal — y conviene asentarla porque las dos
+lecturas se publican el mismo día.** El pase 33 bajó el **tarball de `coursecode@0.1.61` de `registry.npmjs.org`** y leyó
+el artefacto publicado; este pase leyó **`main` por `raw.githubusercontent.com`**. 🔵 **Las dos coinciden en todo lo que
+decide:** **15 tools definidas**, **15 casos de dispatch** (o sea **cero *aliasing* y cero supresión** — a diferencia de
+`oneroster-ts`), el `enum` de `coursecode_build`, y la conclusión de que **`coursecode` es la pieza de salida y no un CLI
+con fachada**. **Dos canales independientes, mismos números: es la verificación más fuerte que puede tener una cifra en
+esta base.**
+
+🔴 **Donde difieren es en el conteo de escrituras, y la diferencia es de criterio, no de medición — así que se publican
+los dos con su regla:**
+
+| Criterio | Cuenta | Qué incluye |
+|---|---|---|
+| **Anotación del protocolo** (este pase): tools **sin** `readOnlyHint: true` | **6** | `_navigate`, `_interact`, `_reset`, `_viewport`, `_build`, `_narration` |
+| **Efecto persistente** (pase 33): tools que dejan un artefacto en disco | **2** | `_build` (paquete LMS en `dist/`) y `_narration` (**MP3 en `course/assets/audio/`, vía proveedor TTS pago**) |
+
+🔵 **Las dos son correctas y sirven para cosas distintas.** Para **revisar permisos** de un agente, el número que importa
+es **6**: `_reset` borra el estado del alumno y `_interact` lo modifica, y aunque nada de eso sobreviva al proceso,
+**sí altera lo que el alumno ve**. Para **cotizar riesgo de artefacto y costo**, el número es **2**, y el que cuesta
+dinero es `_narration`. ⚠️ **Dato del pase 33 que esta lectura no tenía y que hay que conservar: el `LICENSE` del
+artefacto dice *«Copyright (c) 2026 Seth Vincent»*** — la licencia MIT está verificada en el artefacto publicado, no sólo
+en el repo.
+
+🟢 **La respuesta, y es un sí:** `coursecode_build` **acepta el formato de LMS como parámetro de entrada**, así que la
+generación de **SCORM 1.2, SCORM 2004, cmi5 y LTI** es alcanzable por protocolo, no sólo por CLI. **`coursecode` pasa a
+ser la pieza de salida de la capa generativa de esta KB**, y es un **superconjunto estricto** de
+`giacomomaria81/scorm-mcp-server` (3 tools, sólo SCORM), que queda como la opción mínima y *offline*.
+
+🔵 **La forma del servidor vale aparte:** normaliza errores a **códigos de dominio con *hint* accionable**
+(`preview_not_running`, `invalid_slide_id`, `invalid_arguments`, `unknown_tool`, `tool_failed`) y devuelve
+`structuredContent` además del texto. **Es la segunda vez que esta KB encuentra ingeniería de rails reutilizable en una
+pieza educativa** —la primera fueron los cuatro rails de `openedx-mcp`— y esta es **MIT**.
+
+⚠️ **Tres límites declarados.** (a) **No se ejecutó**: el conteo es por **lectura de código fuente**, igual que el pase
+30 con el sdist de `openedx-mcp`; `tools/list` sigue sin observarse y en este entorno **la instalación de paquetes de
+terceros no está disponible**. (b) El CLI tiene **33 comandos** y la superficie MCP expone 15: lo que queda afuera
+incluye `convert`, `import`, `export`, `html`, `upgrade` y **toda la capa de despliegue** (`login`, `deploy`, `promote`,
+`courses`, `token`, `preview-link`, `delete`) — 🔴 **el paquete MIT trae cliente de un servicio alojado multi-tenant con
+CDN; la superficie de agente es local, el CLI no.** (c) El `--no-zip` del CLI **no** está en la tool de build.
+
+### ✅ Acción 2, segunda mitad: `qti3-cli` es envolvible como MCP, y ahora está medido en vez de afirmado
+
+El **gap 60** sostenía que `qti3-core` «no tiene dependencias y ya expone parser, validación y *scoring*», **sin haberlo
+abierto**. Abierto: **`@longsightgroup/qti3-cli` 0.13.1 (MIT)**, `bin: { qti3 }`, **cero dependencias de terceros en
+runtime**, y **catorce comandos que emiten JSON**:
+
+`parse`, `validate`, `score --responses`, `score-correct`, `prepare-delivery [--mode static|server-materialized-adaptive] [--state] [--out]`,
+`inspect-package`, `validate-package`, `certification import-basic-items`, `certification verify-validator`,
+`certification check-import-report`, `certification import-basic-tests`, `write-fixtures`, `support-matrix`, `a11y-proof`.
+
+🔵 **Por qué el «en días» se sostiene:** **cada comando ya devuelve JSON** (*«emits the parsed item model as JSON»*,
+*«emits validation diagnostics as JSON»*, *«emits the complete scoring result, including diagnostics, state, responses,
+outcomes, and score»*), así que el envoltorio **no necesita capa de parseo** — el mapeo es 1:1 comando→tool y el corte
+lectura/escritura ya está dado: **doce leen** y sólo `prepare-delivery --out` y `write-fixtures` escriben a disco.
+**Sigue siendo la contribución *upstream* más limpia que tiene esta base** (**gap 64**), y ahora con el inventario de
+tools ya escrito.
+
+⚠️ **Y una advertencia de cotización que el gap 60 no tenía:** `prepare-delivery` distingue **modo estático** (default,
+y **rechaza** un archivo de estado) de **`server-materialized-adaptive`**, que **exige** un objeto de estado con
+`outcomes`. **Lo adaptativo no es un flag, es un contrato de estado del lado servidor** — es trabajo de integración, no
+de configuración.
+
+### ✅ Acción 3 CUMPLIDA — y el método del pase 32 **funciona a medias, con una regla que lo explica**
+
+El pase 32 descartó por escrito atacar el registro por el **nombre del estándar** (gap 51: `"competencies and academic
+standards exchange"` → 1.696.870 objetos de ruido) y mandó atacarlo por el **nombre del proyecto implementador**.
+Ejecutado sobre **npm, PyPI y Packagist** con `OpenCASE`, `CASS`, `learning_locker`, `TinCanPython` y `qti3`:
+
+| Nombre consultado | npm | PyPI | Packagist | Veredicto del método |
+|---|---|---|---|---|
+| `CASS` | ✅ **`cassproject` 5.0.19** (Apache-2.0, 2026-08-12) | — | 🔴 **26.726 objetos de ruido** (Cassandra, cassowary, cassis) | **Funciona en npm, falla en Packagist** |
+| `qti3` | ✅ **12 paquetes `@longsightgroup/qti3-*`** (MIT, 0.13.1) | — | — | **Funciona** |
+| `TinCanPython` | 🔴 0 resultados | ✅ **`tincan` 1.0.0** (Apache-2.0) | ✅ **`rusticisoftware/tincan`** (Apache-2.0) | **El nombre del repo no es el nombre del paquete** |
+| `learning_locker` | ⚠️ `learning_locker` 2.0.7 (**2017**) | — | ⚠️ `learninglocker/learninglocker` (**0 descargas/mes**) | **Funciona, y lo que encuentra está muerto** |
+| `OpenCASE` | 🔴 ruido (`opencase` de 2017, sin relación) | 🔴 ausente | 🔴 **`OpenCage` (geocodificación)** | **Falla en los tres** |
+
+🔵 **La regla que explica el patrón, y es nueva:** el nombre del implementador desambigua **sólo cuando el publicador usó
+el nombre de la organización del proyecto como nombre de paquete** (`cassproject`, `@longsightgroup/*`) **o el término
+del dominio** (`tincan`). Cuando el proyecto se llama como una palabra corta y común (`CASS`, `OpenCASE`), **colisiona
+igual que el estándar** — el problema del gap 51 **no era el nivel de nombre, era el largo del nombre.** **Lo que sí
+desambigua siempre es el *scope* o el prefijo de organización**, y esa es la consulta que hay que escribir.
+
+### 🔴 Colisiones de término **7, 8 y 9** — y una es cripto otra vez
+
+| Término | Qué devuelve | Dónde |
+|---|---|---|
+| `opencase` | 🔴 **OpenCage** — geocodificación (`opencage/geocode`, 568.555 descargas) y `opencafe/datium` | Packagist |
+| `cass` | 🔴 **Apache Cassandra** y `cassowary` (solver de restricciones) — **26.726 objetos** | Packagist |
+| `censo-escolar` | 🔴 **Censo Custody** — **billetera Solana** (`@censo-custody/solana-wallet-adapter`, `@censo/eth-contracts`) | npm |
+
+🔵 **La novena colisión repite el patrón de la quinta y la sexta:** el pase 32 encontró que las dos piezas llamadas
+«xapi» eran **cripto/Web3** y **forex**. Acá, el término del censo educativo brasileño devuelve **custodia de
+criptoactivos**. **Tres de las nueve colisiones de esta KB son con el vocabulario cripto**, y las tres pasan el filtro de
+licencia porque son MIT y están activas. **El único control que las atrapa sigue siendo abrir el README y contar
+vocabulario del dominio.**
+
+### ⚠️ Pero el control de la tendencia 96 tiene un falso negativo medido, y hay que acotarlo
+
+Aplicado a las cinco piezas de la acción 3, el conteo de vocabulario del dominio sobre el README crudo dio:
+
+| Pieza | Vocabulario del dominio | ¿Es del dominio? |
+|---|---|---|
+| `oat-sa/qti-sdk` | **84 apariciones** | Sí |
+| `oat-sa/extension-tao-testqti` | 12 | Sí |
+| `php-xapi/client` | 15 | Sí |
+| `RusticiSoftware/TinCanPHP` | **2** | **Sí** |
+| `cassproject/cass-npm` | 🔴 **0** | 🔴 **Sí** — es el SDK de *Competency and Skills Service* |
+| `RusticiSoftware/TinCanPython` | 🔴 **0** | 🔴 **Sí** |
+
+🔴 **Dos piezas que son del dominio puntúan cero**, porque su README es un *quickstart* de SDK (instalar, importar,
+llamar) sin prosa. **La tendencia 96 es por lo tanto asimétrica y hay que usarla así: sirve para RECHAZAR, nunca para
+ACEPTAR.** Un cero no dice «no es del dominio», dice «el README no alcanza para decidir» — y entonces hay que leer el
+`package.json`, el `LICENSE` y el árbol, como se hizo acá.
+
+### 🔴 Gap 60 CONFIRMADO por un segundo método independiente: QTI y xAPI siguen sin puerta MCP
+
+Abiertos los **README crudos** de las seis piezas que la acción 3 trajo —`qti-sdk`, `extension-tao-testqti`,
+`php-xapi/client`, `TinCanPHP`, `TinCanPython` y `cass-npm`— el conteo de «MCP» y «Model Context Protocol` es **cero en
+las seis**. El gap 60 pasa de *medido abriendo los candidatos de dos capas* a **medido además por nombre de implementador
+en tres registros**. 🔵 **Y aparece un dato que el gap no tenía:** **el SDK JavaScript de CaSS tampoco expone MCP** —
+el cartucho MCP de CaSS vive **sólo del lado servidor** (`cassproject/CASS`), así que *«CaSS tiene puerta MCP»* es
+cierto del servidor y **falso del SDK**. Quien integre por npm no hereda la puerta.
+
+### 🟢 Las altas del pase, todas verificadas por archivo `LICENSE` o clasificador OSI
+
+| Pieza | URL | Licencia | ★ | Señal | Por qué entra |
+|---|---|---|---|---|---|
+| **Claw-ED** | [SirhanMacx/Claw-ED](https://github.com/SirhanMacx/Claw-ED) | **MIT** ✅ (`LICENSE`: *Copyright (c) 2026 EDUagent Contributors*) | **60** (13 forks) | **778 commits**; PyPI `clawed` con **240 releases**, v**9.18.2026.1** | 🟢 **El agente docente *local-first* que P8 describía y esta KB no tenía.** Importa material propio (PDF/DOCX/PPTX/TXT/MD), construye **perfil de estilo de enseñanza** y emite borradores editables |
+| **canvas-lms-mcp** | [bruchris/canvas-lms-mcp](https://github.com/bruchris/canvas-lms-mcp) | **MIT** ✅ | 8 (4 forks) | **317 commits**, **62 versiones** npm, **165 tools**, MCP 1.x | 🔵 **El conector permisivo de LMS más grande de esta KB**, con cifra citable y **auditoría de accesibilidad** como categoría |
+| **moodle-cli** | [bunizao/moodle-cli](https://github.com/bunizao/moodle-cli) | **MIT** ✅ | — | **20 versiones** (2026-07-09 → 2026-09-27), 16 menciones de MCP | **La cuarta puerta de Moodle, y la primera del lado alumno**: vencimientos, notas, archivos, devoluciones y revisión de quizzes **desde la sesión del navegador** |
+| **jbnu-lms-mcp** | [moon0825/jbnu-lms-student](https://github.com/moon0825/jbnu-lms-student) | **MIT** ✅ | — | v0.8.0, **2026-09-08**, **25 tools**, passkey, Windows+macOS | 🔵 **Categoría nueva: el LMS de una institución, no un producto.** Universidad Nacional de Jeonbuk (전북대학교). **Sólo lectura por diseño** y **no oficial por declaración propia** |
+| **moodle-core-cli** | [gafapa/moodle-core-cli](https://github.com/gafapa/moodle-core-cli) | **MIT** ✅ | — | **11 versiones**, última 2026-09-24, Moodle **4.5+** | ⚪ **Sin MCP (cero menciones) — y por eso entra**: cliente limpio de *core web services*, el candidato más barato a envolver |
+
+🔵 **Lo que esto le hace al mapa de conectores: Canvas tiene al menos cinco puertas MIT y Moodle cuatro más un cliente
+envolvible.** La capa de conectores **ya no es escasa** — es la capa mejor abastecida de esta KB, y es toda permisiva
+salvo dos piezas. ⚠️ **Y eso erosiona por segunda vez la tesis del pase 27** (*«las LMS son copyleft pero las puertas son
+MIT»*): la primera grieta fue Open edX (AGPL y en proceso); la segunda es que **de las puertas de Moodle, una es
+AGPL-3.0** (`csmediapro/moodle-mcp-server`, que esta KB ya tenía y que este pase re-fecha: **8 versiones en npm como
+`moodle-mcp-server-aql`, la última del 2026-10-01** — está vivo). **La tesis vale por mayoría, no por regla.**
+
+### 🔴 Acción 1 NO CUMPLIDA, y el resultado es estructural — gap 65 (nuevo)
+
+El pase 32 mandó probar **`eur-lex.europa.eu`** y **`data.europa.eu`**, «que no se intentaron». **Se intentaron. Los dos
+están bloqueados**, y esta vez el bloqueo está medido en el registro del propio proxy de egreso, no inferido de un
+timeout:
+
+```
+connect_rejected  gateway answered 403 to CONNECT  eur-lex.europa.eu:443
+connect_rejected  gateway answered 403 to CONNECT  data.europa.eu:443
+```
+
+Probados además y **todos inalcanzables**: `artificialintelligenceact.eu`, `op.europa.eu`, `euaiact.com`,
+`euai-act.com`, `nicfab.eu`, `cypheron.cz`, `modulos.ai`. 🔴 **No es un host caído: es el dominio completo de la
+publicación legal europea más los analistas que lo citan.** **Gap 65:** *el calendario del Anexo III no es verificable
+de primera mano desde este entorno, y ningún pase futuro lo va a cerrar por este camino.* Deja de ser una acción
+pendiente y pasa a ser una **restricción declarada**: se cierra con un PDF del DOUE traído por una persona, o no se
+cierra.
+
+✅ **Lo que sí avanzó, y es lo que descarga el riesgo comercial: la afirmación pasa de fecha a *inciso*.** El pase 32
+tenía «2027-12-02» por concordancia de cinco fuentes. Este pase tiene **la disposición**:
+
+> **Artículo 113** difiere la aplicación del **Capítulo III, Secciones 1, 2 y 3 — con la excepción del Artículo 6(5) —
+> al 2 de diciembre de 2027** para los sistemas de alto riesgo del **Artículo 6(2) y el Anexo III**.
+
+Y la cadena de publicación: **Reglamento (UE) 2026/1744**, DOUE del **2026-07-24**, **en vigor 2026-07-27**, **modifica**
+el Reglamento (UE) 2024/1689 sin reemplazarlo. ⚠️ **Sigue siendo fuente secundaria** —no hay lectura del DOUE— pero
+ahora es **citable con artículo y sección**, que es lo que el área legal de un cliente pide. **La frase de venta no
+cambia; su respaldo sí.**
+
+### 🔵 El hallazgo regional que convierte el «silencio de LATAM» en una oportunidad con nombre — gap 63 (nuevo)
+
+Siete pases declararon el barrido regional de LATAM **saturado**. Este pase lo atacó por el registro de paquetes en
+portugués y español, y **encontró lo contrario de un silencio: encontró una capa entera, activa, MIT — y el hueco exacto
+donde debería estar educación.**
+
+| Dominio de dato público brasileño | Paquete MCP | Licencia | Señal |
+|---|---|---|---|
+| Geografía, **censo**, economía, salud | [`ibge-br-mcp`](https://github.com/SidneyBissoli/ibge-br-mcp) | **MIT** ✅ | **24 versiones**, 2026-01-18 → **2026-09-27** |
+| Banco Central (SGS, series) | `bcb-br-mcp` | — | **2026-09-28** |
+| Salud — **DATASUS SIH/SUS** (internaciones, AIH) | `sih-br-mcp` | — | **2026-10-01** |
+| Firma electrónica | `@signdocs-brasil/mcp-server` | — | 2026-09-07 |
+| 🔴 **Educación — INEP / Censo Escolar / ENEM** | 🔴 **nada** | — | **Medido: `inep` → 3 resultados, ninguno MCP; `censo-escolar` → 18, todos colisión; `enem` → 6, el más nuevo de 2024** |
+
+🔴 **Brasil está construyendo una capa nacional de MCP sobre sus datos públicos —estadística, banco central, salud,
+firma— y educación es el único dominio grande que falta.** Eso no es un gap de esta KB: es un **hueco en el ecosistema
+LATAM**, con un peer ya escrito que sirve de plantilla (`ibge-br-mcp`, MIT, 24 versiones) y con las tres fuentes
+canónicas identificadas (**INEP**, **Censo Escolar**, **ENEM**). Ver **P72**.
+
+### 🗺️ Las cuatro regiones rindieron — ninguna quedó en silencio
+
+- **North America** — **confirmación, sin dato nuevo**, y es la cuarta vez seguida: **86 %** de las organizaciones
+  educativas con AI generativa adoptada; **134 proyectos de ley en 31 estados** en la sesión 2026; **cuatro estados
+  —Idaho, Maryland, Oklahoma, Virginia—** obligan a **política distrital**, no sólo guía estatal; **California AB 1159**
+  prohíbe entrenar modelos con datos de alumnos; **Oklahoma** y **Maryland** exigen supervisión humana y **prohíben la
+  decisión de alto impacto sobre el alumno**; Georgia y Mississippi suman créditos de CS con AI. Despliegues:
+  **Gemini for Education** en **+1.000** instituciones de educación superior, **Khanmigo** en Maryland con **~4.350**
+  alumnos. 🔵 **El dato nuevo es de abajo hacia arriba:** estudiantes de **los 50 estados** produjeron un marco nacional
+  de AI para K-12 —**STUDENTS FIRST Act of 2026**— presentado por AASA en **agosto de 2026**. Es la primera pieza de
+  gobernanza de esta KB **escrita por el usuario final regulado**, y encaja con **P7**.
+- **EMEA** — gobernada por el calendario del **gap 56**, ahora con **artículo**: desde el **2026-08-02** el AI Office y
+  las autoridades nacionales **ya aplican** el AI Act (transparencia incluida); el Anexo III de educación **vence el
+  2027-12-02** por el Artículo 113. 🔵 **Dato nuevo, y es el que explica por qué EMEA compra infraestructura y no
+  producto:** la adopción empresarial de AI en la **UE es 19,95 %** contra **20,2 % de la OCDE** — EMEA **no** va
+  adelantada en adopción, va adelantada en regulación. Y la señal técnica se repite: **los distritos con exigencia de
+  residencia de datos autoalojan pesos abiertos** (Llama 3, Mistral) en vez de consumir API, lo que vuelve el *stack*
+  soberano **requisito**, no preferencia. El uso que efectivamente se despliega hoy sigue siendo el de **consecuencia
+  liviana** (chatbot de información a familias).
+- **APAC** — 🔴 **y acá hay una corrección a esta KB.** El pase 32 escribió *«Japón y Taiwán redactan ley»*. **Taiwán ya
+  la tiene en vigor:** *Basic Law on Artificial Intelligence*, **vigente 2026-01-14**, **20 artículos**, ley marco que
+  **no impone obligaciones operativas directas al sector privado** — es un *framework*, no un régimen de cumplimiento, y
+  conviene no venderlo como tal. **Corea del Sur**: *AI Basic Act* **vigente 2026-01-22**, consolidación de **19**
+  proyectos, segunda jurisdicción del mundo con ley integral. **Vietnam**: ley de AI que nombra educación entre **seis**
+  sectores de alto riesgo (evaluación automatizada y monitoreo conductual), ⚠️ **con fecha de cumplimiento para los
+  sistemas identificados el 2027-03-01** — esta KB tenía «vigente marzo de 2026», que es la entrada en vigor de la ley,
+  **no** el plazo de cumplimiento del alto riesgo. **Son dos relojes y había uno.** Mercado dominado por China, India y
+  Japón; *players* citados: Google, Microsoft, IBM, Pearson, Byju's. 🔵 **Y el dato de ingeniería del pase viene de acá:**
+  `jbnu-lms-mcp` es **la primera pieza de infraestructura agéntica educativa de origen APAC** que entra a esta base por
+  el registro de paquetes, y es **sólo lectura por diseño** — que es exactamente la postura que el régimen coreano
+  vigente premia.
+- **LATAM** — **la adopción sigue por delante del mundo y la regulación por detrás**, confirmado: *AI in Higher Education
+  LATAM Survey 2026* (Digital Education Council con el Institute for the Future of Education del **Tec de Monterrey**,
+  más **AIGEN** y **RIE360**, **+30.000 respuestas de 29 instituciones**): **92 % de estudiantes** y **79 % de docentes**
+  usan AI activamente, **94 % de docentes** espera usarla, y **65 % de los estudiantes teme que la AI vuelva superficial
+  el aprendizaje**. Regulación a distintas velocidades: proyecto de ley en **Brasil**, marco en **Chile**,
+  **CONPES 4144** en **Colombia** (política nacional con presupuesto hasta 2030; adoptada en **febrero de 2025**),
+  reglas sectoriales en **México**. 🔵 **El dato nuevo es de oferta, no de demanda, y es el gap 63:** existe una capa
+  MCP brasileña de datos públicos, activa y MIT, **sin educación**. 🔴 **Y la barrera que las encuestas no miden:**
+  escasez y costo de ingenieros de ML y arquitectos de plataforma senior, **tensionada por el trabajo remoto** que abre
+  el talento LATAM a empleadores de EE. UU. y Europa. Para Globant eso es las dos cosas: competencia por el perfil, y
+  el argumento de por qué el cliente terciariza la capa.
+
 ## 2026-10-02 (pase 33) — el pase que descubre que **el gap 60 se contradecía con la propia tabla de esta KB**, y mide **por qué**: la lista de candidatos venía del registro de paquetes, y la pieza que lo refuta **no está en ningún registro**
 
 **Lo que se hizo:** el barrido obligatorio completo —**cuatro búsquedas globales y cuatro regionales**, con el año
@@ -107,7 +437,7 @@ ahora está doblemente medida**. Es la diferencia entre *«no lo encontré»* y 
 
 **La conclusión cotizable:** un wrapper MCP sobre `qti3-cli` **agrega exactamente una dependencia externa**
 (`@modelcontextprotocol/sdk`) a un árbol que hoy no tiene ninguna. Es la contribución *upstream* más limpia de esta
-base, y ahora con el costo **medido** en vez de estimado. Ver **P69**.
+base, y ahora con el costo **medido** en vez de estimado. Ver **P72**.
 
 ### ✅ `coursecode` medido en el artefacto publicado — 15 tools, y **dos escriben**
 
@@ -242,7 +572,6 @@ de este entorno de red**, y así hay que pedirla.
   registro**, nunca de proceso.
 
 ---
-
 ## 2026-10-02 (pase 32) — el pase que **cierra el gap 57 invirtiendo la conclusión del 31, y esta vez a favor**: crear un curso en Open edX **sí es una llamada HTTP**, sólo que no vive en el árbol REST versionado — y el permiso que pide **no es GlobalStaff**
 
 **Lo que se hizo:** el barrido obligatorio completo —**cuatro búsquedas globales y cuatro regionales**, con el año

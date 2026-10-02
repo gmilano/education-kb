@@ -21,7 +21,7 @@ updated: 2026-10-02
 > dependencia externa** porque su cadena no tiene ninguna de terceros. ⚠️ **Y una advertencia transversal que atraviesa
 > los tres: `coursecode` pone su rail de seguridad en las *anotaciones MCP* y no en el servidor, así que — a diferencia
 > del *confirm token* de `openedx-mcp` — no frena solo.** Donde el pliego exija supervisión humana demostrable, **la
-> confirmación es trabajo del integrador y entra en la estimación** (tendencia **102**).
+> confirmación es trabajo del integrador y entra en la estimación** (tendencia **110**).
 > **Pase 26:** +4 patrones — **P50** (el perfil de competencia por MCP, con las 6 tools de CaSS **medidas** en vez de
 > inferidas), **P51** (el conector MCP de Moodle que no existe, construido sobre el patrón del que sí existe para
 > Canvas), **P52** (la capa agéntica de biblioteca sobre el bus de Kafka de FOLIO, Apache-2.0) y **P53** (*early warning*
@@ -32,6 +32,8 @@ updated: 2026-10-02
 > no existe en open source permisivo).
 > **Pase 11:** +2 patrones — **P25** (riesgo de abandono conforme al Anexo III, la capa con presupuesto ya asignado y sin oferta open source) y **P26** (agente docente sobre la ontología curricular nacional ya publicada).
 > **Pase 27:** **+4 patrones y una corrección.** 🔴 **P51 queda con premisa falsa** —el conector MCP de Moodle **sí existe y es MIT**— y lo reemplazan **P54** (corrección y devolución sobre Moodle con **compuerta humana**, el último tramo del gap 6, con piezas que ya escriben), **P55** (el conector de **Open edX**, que es el único que de verdad no existe), **P56** (**SCORM** como formato de salida de la capa generativa: cero integración, offline) y **P57** (evidencia por MCP cotizada sobre lo que CaSS **realmente** expone — 6 de 61 operaciones, con insignias y autoría de marcos **fuera**).
+
+> **Pase 34 del 2026-10-02:** **+4 patrones, y tres de ellos existen porque aparecieron las piezas, no porque se haya inventado una receta.** 🟢 **P70** — *expediente de accesibilidad de la evaluación*: la obligación europea vencida que **P17** describía sin pieza por fin la tiene, y es **MIT y está adentro de la pila de evaluación** (`qti3-a11y` con `accessibilityProofMatrix` y guiones **VoiceOver/NVDA/JAWS**, `qti3-pnp` para *Personal Needs and Preferences*, `qti3-cli a11y-proof`, más **`accessibility audits`** del lado LMS en `bruchris/canvas-lms-mcp`). 🟢 **P71** — *el bucle cerrado docente*: **material propio → lección revisable → aula → nota**, con trazabilidad de punta a punta (`Claw-ED` MIT + `lineage-skill` Apache-2.0 + `coursecode` MIT + `canvas-lms-mcp` MIT); es el patrón que **P8** describía sin piezas, y **la rúbrica que califica sale del material del docente, no del modelo**. 🔵 **P72** — *el servidor MCP del dato educativo nacional*: Brasil tiene capa MCP de datos públicos (**IBGE/censo, BCB, DATASUS, firma**) y **educación es el único dominio grande que falta**; ⚠️ **se publica con la incógnita adelante —API o CSV— porque de eso depende si son 6 semanas o 4 meses, y esa medición es la acción 3 del pase 35.** 🔵 **P73** — *piloto sobre el LMS sin pedirle nada a sistemas*: `bunizao/moodle-cli` y `moon0825/jbnu-lms-student` trabajan **desde la sesión del navegador del usuario, con passkey y 2FA, sin token de administrador**, así que el valor se demuestra **antes** de la primera reunión con TI — 🔴 al costo de ser **sólo lectura**, que es un límite que se pone adelante. ⚠️ **Y P61 cambia de costo sin cambiar de contenido: la puerta oficial de Open edX publicó 12 releases en dos días y nada en los 70 siguientes (gap 66), así que se cotiza con presupuesto de mantenimiento.** ✅ **P56 gana su superconjunto:** `coursecode` expone **15 tools** y su `build` toma `format` como enum (`cmi5`/`scorm2004`/`scorm1.2`/`lti`), contra las 3 tools de `scorm-mcp-server`, que queda como la opción mínima *offline*. ⚠️ **P20 y P48 quedan más valiosos y más honestos: el QTI que el mundo despliega es GPL-2.0-only** (`oat-sa/qti-sdk`, 218.212 descargas, 293 versiones), **así que la pila permisiva es el diferencial — y hay que preguntar en el *discovery* si TAO ya está instalado.**
 
 > **Pase 30 del 2026-10-02:** **+2 patrones y una muerte.** 🔴 **P55 queda con premisa muerta** —el conector MCP de Open edX **existe**, es oficial y es **AGPL-3.0 corriendo en proceso**—, y lo que queda de él es el mapa REST para quien necesite una puerta permisiva *fuera* de proceso. Entran **P61** (el **rail de escritura de agente** reimplementado en permisivo: *dry run* + **confirm token atado a una huella del payload**, rate limit por tool, autoridad viva y auditoría previa — la primitiva que P53 y P54 venían describiendo en prosa, ahora medida sobre una implementación real) y **P62** (el **expediente de competencia** para el requisito de graduación de *AI fluency*, con el marco **suscripto** vía la capa **CGE** de OpenCASE en vez de redactado). ✅ **Y P58 gana precisión sin reescribirse:** pasa de «164 métodos de SDK» a **«132 tools servidas, el 100 % de las operaciones distintas»**, medido ejecutando el servidor. ⚠️ **Corrección de este pase sobre sí mismo:** se iba a escribir que **P48** *«gana por fin una herramienta nombrada para la pata legada»* con `instructure/qti`, **y es falso** — P48 ya nombraba `LongsightGroup/qti3` (**MIT**, 667 commits), que además **migra** QTI 1.2/2.x a QTI 3, mientras la gema de Instructure **sólo importa y parsea**. **`instructure/qti` entra como alternativa de lectura en Ruby, no como pieza que faltaba.**
 
@@ -602,6 +604,231 @@ Hasta este pase la KB no tenía con qué responder. Ahora sí, y las piezas son 
 **North America**, donde IDEA crea la obligación y la prohibición de IEP automatizado crea el encuadre. **EMEA** entra combinado con **P17** (EAA). **LATAM** entra por Chile, donde el Decreto 83 cumple el papel de IDEA y donde `tero` y `Ronda` dan contraparte técnica local — ver el **gap 2**.
 
 ⚠️ **Las dos frases que no se pueden decir en esta venta:** que el sistema «escribe IEPs» y que «decide acomodaciones». Las dos están prohibidas en jurisdicciones concretas y las dos son innecesarias — el valor está en las horas de preparación de material, que es donde el docente efectivamente se consume.
+
+## P70 — Expediente de accesibilidad de la evaluación, generado y no declarado (agregado en el pase 34; **EMEA primero**, y es la segunda obligación vencida de esta KB que por fin tiene piezas)
+
+**El problema que resuelve.** La obligación europea de accesibilidad es **la única de esta KB con fecha ya cumplida**
+(pase 17), y **P17** se escribió sin una pieza permisiva que la cumpliera: el pase 8 midió que la tecnología asistiva
+madura es toda copyleft y que lo permisivo no pasaba de 15 estrellas. Mientras tanto, lo que un cliente institucional
+necesita entregar no es una afirmación —*«nuestros ítems son accesibles»*— sino **evidencia reproducible por ítem**.
+
+🟢 **Lo que cambió en el pase 33:** las piezas existen, son **MIT**, y están **adentro de la pila de evaluación**, que es
+donde nadie las buscó.
+
+### Las piezas, todas verificadas en el pase 34
+
+| Pieza | Licencia | Rol |
+|---|---|---|
+| `@longsightgroup/qti3-core` | **MIT** ✅ (cero deps) | Parseo, validación, *response processing* y **scoring** del ítem QTI 3 |
+| `@longsightgroup/qti3-a11y` | **MIT** ✅ | 🔵 **La prueba:** `accessibilityProofMatrix`, `a11yContracts` (teclado, foco, nombre accesible, mensaje de validación **por tipo de interacción**) y **`manualAssistiveTechnologyScripts` para VoiceOver, NVDA y JAWS** |
+| `@longsightgroup/qti3-pnp` | **MIT** ✅ (cero deps) | Resuelve **Personal Needs and Preferences** contra las capacidades del *player* y el catálogo QTI, con diagnósticos de perfil |
+| `@longsightgroup/qti3-cli` | **MIT** ✅ | **`a11y-proof`**, `validate`, `inspect-package`, `validate-package`, `support-matrix` — **todos emiten JSON** |
+| `@longsightgroup/qti3-conformance` + `-fixtures` | **MIT** ✅ | Corredor de *fixtures* y casos sintéticos con resultados esperados: es el **control de regresión** del expediente |
+| `bruchris/canvas-lms-mcp` | **MIT** ✅ | 🔵 **El lado LMS, y es nuevo: trae `accessibility audits` como categoría de tools** entre sus 165 |
+| `lrsql` (LRS) | Apache-2.0 | Registra el resultado de cada corrida como *statements* xAPI → el expediente queda **fechado y consultable** |
+
+### El wiring
+
+1. **Entrada:** el banco de ítems QTI 3 del cliente (o el convertido con `qti3-migrator` desde 1.2 / 2.x).
+2. **Por ítem:** `qti3-cli validate` → `qti3-cli a11y-proof` → se emite el par **`accessibilityProofMatrix` + contrato de
+   interacción**, en JSON.
+3. **Por perfil de alumno:** `qti3-pnp` resuelve el PNP declarado contra las capacidades del *player* y **emite
+   `diagnostics` y `catalogRequests`** — es decir, deja escrito **qué pidió el alumno y qué pudo entregar el sistema**.
+   🔵 **Ese par es el corazón del expediente**, porque documenta la brecha en vez de afirmar su ausencia.
+4. **Verificación manual, acotada:** `manualAssistiveTechnologyScripts` da el guion para **VoiceOver, NVDA y JAWS**. Se
+   corre sobre una **muestra estratificada por tipo de interacción**, no sobre el banco entero: el contrato es por tipo,
+   así que la muestra cubre la clase.
+5. **Regresión:** `qti3-conformance` + `-fixtures` en CI → **el expediente no caduca con el próximo release del player**.
+6. **Trazabilidad:** cada corrida emite *statements* a `lrsql`, y el lado LMS se audita con las tools de
+   `accessibility audits` de `bruchris/canvas-lms-mcp`.
+7. **Salida al cliente:** un paquete con la matriz por ítem, los diagnósticos de PNP, los guiones ejecutados con fecha y
+   operador, y el resultado de CI. **Eso es un expediente, no un informe.**
+
+### Plazo y alcance
+
+**6–8 semanas** para un banco de hasta ~500 ítems con 6–8 tipos de interacción, incluyendo la conversión desde QTI 1.2 /
+2.x si hace falta. **El costo no está en la accesibilidad: está en la integración de PNP.**
+
+⚠️ **Y el límite hay que poner adelante, porque el propio proyecto lo escribe:** *«It does not fetch, store, authorize,
+or transmit PNP records. LMS identity, consent, institutional policy, persistence, LTI launch handling, and AfA PNP
+service access belong outside this package.»* 🔴 **Identidad, consentimiento, política institucional, persistencia,
+*launch* LTI y el servicio AfA PNP son el trabajo de integración y se cotizan aparte.** Que lo declare la librería en vez
+de dejarlo implícito es lo que vuelve la cotización defendible.
+
+⚠️ **Riesgo de madurez, declarado:** la pila es **0.13.1 del 2026-10-01** y tiene **5 ★**. **Capacidad y licencia
+verificadas; comunidad mínima.** Se propone con *fork* interno y CI propio, no como dependencia transparente.
+
+### Dónde se vende primero
+
+**EMEA**, por la obligación vencida y porque es la única región donde esta KB midió que la ventaja comprable es el
+expediente y no la adopción (**UE 19,95 % contra OCDE 20,2 %**). **Segundo North America**, donde cuatro estados obligan
+a política distrital y **Oklahoma y Maryland prohíben la decisión de alto impacto automatizada** — el expediente de
+accesibilidad es el mismo artefacto con otra carátula.
+
+---
+
+## P71 — El bucle cerrado docente: material propio → lección revisable → aula → nota, todo permisivo (agregado en el pase 34; **transversal, y es el patrón que P8 describía sin tener piezas**)
+
+**El problema que resuelve.** **P8** («Fábrica de lecciones en la voz del docente») era el ángulo menos disputado de esta
+KB y el peor abastecido: había generadores de contenido genérico y había conectores de LMS, **y nada que uniera el
+material propio del docente con la calificación**. Y es justo el circuito donde la objeción de LATAM pega más fuerte:
+**65 % de los estudiantes teme que la AI vuelva superficial el aprendizaje.**
+
+🟢 **El pase 33 cierra el circuito con tres piezas MIT y una Apache-2.0.**
+
+### Las piezas, todas verificadas en el pase 34
+
+| Pieza | Licencia | Rol |
+|---|---|---|
+| **`SirhanMacx/Claw-ED`** | **MIT** ✅ (60 ★, 778 commits) | **Entrada y autoría.** Importa PDF/DOCX/PPTX/TXT/MD del docente, indexa para *retrieval*, **construye perfil de estilo de enseñanza** y emite borradores **editables en DOCX y PPTX**. El modelo lo elige el usuario; **corre local** |
+| **`JuneYaooo/lineage-skill`** | **Apache-2.0** ✅ (448 ★) | **Destilación con procedencia.** Convierte el material en *Agent Skills* con **trazabilidad a la fuente**: diagnósticos, flujos, **rúbricas**, plantillas y **modos de falla** |
+| **`course-code-framework/coursecode`** | **MIT** ✅ | **Salida empaquetada.** **15 tools**; `coursecode_build` con `format` = `cmi5` \| `scorm2004` \| `scorm1.2` \| `lti`; `coursecode_lint` y `coursecode_screenshot` para verificar antes de publicar |
+| **`bruchris/canvas-lms-mcp`** | **MIT** ✅ | **Aula y nota.** **165 tools**: *assignments*, *submissions*, **rubrics**, *gradebook history*, califica y comenta |
+| `peancor/moodle-mcp-server` | **MIT** ✅ | Alternativa del lado Moodle: **escribe nota y devolución** |
+| `lrsql` | Apache-2.0 | *Statements* xAPI de cada paso → evidencia de que el circuito ocurrió |
+
+### El wiring, y el orden importa
+
+1. **`Claw-ED` toma el material del docente y construye el perfil de estilo.** No se parte de un prompt: se parte del
+   acervo real de la cátedra.
+2. **`lineage-skill` destila ese acervo en skills con trazabilidad y extrae la rúbrica**, que es la pieza que después
+   califica. 🔵 **La rúbrica sale del material del docente, no del modelo** — y eso es lo que hace defendible la nota.
+3. **`Claw-ED` emite la lección, los materiales del alumno y las diapositivas en DOCX y PPTX. El docente edita en sus
+   herramientas de siempre y aprueba.** El paso de revisión está en el diseño, no en el descargo de responsabilidad.
+4. **`coursecode` empaqueta**: `coursecode_lint` → `coursecode_screenshot` para verificar maquetado →
+   `coursecode_build(format)` según lo que coma el LMS del cliente.
+5. **`canvas-lms-mcp` publica el *assignment* con su rúbrica** y, cuando llegan las entregas, **califica y comenta
+   citando la rúbrica destilada en el paso 2**.
+6. **`lrsql` registra cada paso**, así que al final hay **una cadena auditable desde el material original hasta la nota**.
+
+🔵 **Por qué este patrón vale más que la suma de sus piezas:** es el único de esta KB donde **la trazabilidad va de punta
+a punta** — la nota se puede justificar hasta el documento que el docente trajo. **Es la respuesta técnica literal al
+65 % de desconfianza estudiantil de LATAM**, y es también el argumento de cumplimiento en EMEA, donde el Anexo III nombra
+la **evaluación de resultados de aprendizaje**.
+
+### Plazo y alcance
+
+**8–10 semanas** para una cátedra con acervo existente y un LMS ya desplegado. Hitos: (1) perfil + destilación, 2–3
+semanas; (2) primeras lecciones revisadas y aceptadas por el docente, 2 semanas; (3) empaquetado y publicación, 2
+semanas; (4) circuito de calificación con rúbrica, 2–3 semanas.
+
+⚠️ **Riesgos declarados.** `Claw-ED` está en **beta declarada** (Python 3.11+) y **no es oficial de ninguna institución**.
+El **165** de `canvas-lms-mcp` es **declarado, no servido** (`tools/list` no observado): la primera semana del proyecto
+se gasta en **medirlo**. Y 🔴 **la capa de despliegue alojada de `coursecode` (login/deploy/promote/CDN) NO está detrás de
+MCP y es un servicio de terceros**: el patrón usa **sólo el build local**.
+
+### Dónde se vende primero
+
+**LATAM**, porque la objeción de compra ya está medida y este patrón es su respuesta. **Después North America**, donde
+el ahorro docente es la métrica que decide retención (**5 a 10 horas por semana** es el umbral medido) y donde el
+**STUDENTS FIRST Act of 2026** pide exactamente esta clase de trazabilidad.
+
+---
+
+## P72 — El servidor MCP del dato educativo nacional, replicando una plantilla que ya existe (agregado en el pase 34; **LATAM / Brasil primero**, y es contribución *upstream* antes que proyecto)
+
+**El problema que resuelve.** **Brasil tiene una capa MCP nacional de datos públicos y educación es el único dominio
+grande que falta** (gap 63, tendencia 106). Cuatro dominios ya tienen servidor —**IBGE/censo** (`ibge-br-mcp`, **MIT**,
+24 versiones desde enero de 2026, con procedencia de fuente), **Banco Central** (`bcb-br-mcp`), **DATASUS SIH/SUS**
+(`sih-br-mcp`) y **firma electrónica**—, y los tres datasets educativos canónicos —**INEP**, **Censo Escolar**,
+**ENEM**— **no tienen ninguno**: `inep` devuelve 3 resultados sin MCP, `censo-escolar` 18 y todos colisión
+(🔴 **Censo Custody, billetera Solana**), `enem` 6 y el más nuevo es de 2024.
+
+### Las piezas
+
+| Pieza | Licencia | Rol |
+|---|---|---|
+| **`SidneyBissoli/ibge-br-mcp`** | **MIT** ✅ | 🔵 **La plantilla, no una dependencia.** Ya resolvió el problema difícil: **servir dato público por MCP con procedencia**. Se replica su forma, no su código |
+| `@modelcontextprotocol/sdk` | **MIT** ✅ | Servidor MCP |
+| `qdrant` o `pgvector` | Apache-2.0 / PostgreSQL | Índice semántico sobre metadatos y diccionarios de variables (los datasets del INEP tienen cientos) |
+| `lrsql` | Apache-2.0 | Opcional: registra qué consultó cada agente — útil para la rendición de cuentas de un ministerio |
+| `temporal` | MIT | Sólo si el dato llega por CSV y hay que ingestarlo: orquesta la actualización periódica |
+
+### El wiring, en dos variantes y **la elección no se puede hacer todavía**
+
+- **Variante A — fachada (semanas).** Si INEP y el portal de datos abiertos exponen **API REST**, el servidor es una
+  fachada: tools de consulta por escuela, municipio, red y año, con **cita de fuente y versión del dataset** en cada
+  respuesta, igual que `ibge-br-mcp`. **4–6 semanas.**
+- **Variante B — ingesta (meses).** Si sólo hay **descargas de CSV**, hace falta pipeline: descarga versionada →
+  normalización → carga → índice → fachada, con `temporal` orquestando la actualización anual del Censo Escolar.
+  **12–16 semanas.**
+
+🔴 **Cuál de las dos es se decide con una medición que este pase NO hizo, y está escrita como acción 3 del pase 34:**
+probar `dados.gov.br` y las APIs del INEP. ⚠️ **No cotizar este patrón antes de esa medición** — es la diferencia entre
+seis semanas y cuatro meses, y prometer la primera y entregar la segunda es la forma más rápida de perder una cuenta
+pública.
+
+### Por qué se propone igual, con esa incógnita adelante
+
+**Porque el valor no está sólo en el entregable.** (a) **Es contribución *upstream* visible** en una región donde
+**sólo 8 % de las instituciones tiene presupuesto dedicado** a AI: abre puerta institucional por reputación, no por
+licitación. (b) **Hay demanda medida**: **92 % de estudiantes y 79 % de docentes** de LATAM usan AI, y **65 % de los
+estudiantes desconfía de la superficialidad** — un servidor que responde **con dato público y procedencia** es la
+respuesta directa a esa objeción. (c) **El patrón es replicable por país**: la misma forma sirve para el **SIMCE**
+chileno, las pruebas **Saber** colombianas y la **ENLACE/PLANEA** mexicana, y **CONPES 4144** en Colombia tiene programa
+nacional con presupuesto hasta 2030.
+
+### Dónde se vende primero
+
+**LATAM / Brasil.** Y el camino de entrada no es una propuesta comercial: es **publicar el servidor como open source
+MIT** y dejar que la conversación institucional venga después.
+
+---
+
+## P73 — Piloto de agente sobre el LMS sin pedirle nada al área de sistemas (agregado en el pase 34; **transversal, y desbloquea el piloto que esta KB no podía arrancar**)
+
+**El problema que resuelve, y es el que frenaba todo lo demás.** Todos los patrones de esta KB que tocan un LMS piden lo
+mismo: **token de administrador y Web Services habilitados.** Eso convierte un piloto de dos semanas en una conversación
+de tres meses con el área de sistemas, seguridad y compras de la institución — y **es la causa por la que un
+*discovery* se muere antes de demostrar valor.**
+
+🔵 **El pase 33 encontró dos piezas que resuelven esto por arquitectura, no por negociación: trabajan desde la sesión
+del navegador del propio usuario.**
+
+### Las piezas
+
+| Pieza | Licencia | Qué hace | Credencial |
+|---|---|---|---|
+| **`bunizao/moodle-cli`** | **MIT** ✅ | Vencimientos, notas, archivos, devoluciones y **revisión de quizzes** de Moodle, para terminal y para agentes. **20 versiones** (jul→sep 2026) | 🔵 **La sesión del navegador del usuario. Sin token de administrador** |
+| **`moon0825/jbnu-lms-student`** | **MIT** ✅ | **La arquitectura de referencia.** **25 tools**, MCP STDIO local, orientado a *«qué tengo que hacer hoy»*: devuelve **hasta 3 pendientes con su fundamento** | 🔵 **Login en el navegador de la persona, con passkey y segundo factor. El servidor nunca ve la credencial** |
+| `gafapa/moodle-core-cli` | **MIT** ✅ | Cliente de *core web services* de **Moodle 4.5+**, **sin MCP** | Token, cuando la institución sí lo da |
+| `lrsql` | Apache-2.0 | Registra el uso del piloto → **la evidencia con la que se pide el presupuesto de la fase 2** |
+
+### El wiring
+
+1. **Fase 0 — piloto (2 semanas, sin TI).** `moodle-cli` o un servidor con la forma de `jbnu-lms-student` corriendo
+   **local en la máquina del docente o del alumno**, con **STDIO**, hablándole al LMS por la sesión del navegador. **Sólo
+   lectura.** Entregable: el agente contesta *«qué tengo que hacer hoy»* **con fundamento citado**.
+2. **Fase 0.5 — evidencia.** `lrsql` registra qué se consultó y con qué frecuencia. 🔵 **Eso es el argumento del paso
+   siguiente: no «creemos que sirve», sino «se usó N veces en dos semanas».**
+3. **Fase 1 — institucionalización.** Con la evidencia en la mano se pide lo que al principio no se podía pedir: token,
+   Web Services, y **el conector que escribe** (`peancor/moodle-mcp-server` para nota y devolución, o
+   `bruchris/canvas-lms-mcp` con sus 165 tools del lado Canvas).
+4. **Fase 2 — el resto de la KB.** Recién acá entran **P1**, **P10**, **P15** y **P71**, que son los que cierran circuito.
+
+### Plazo y alcance
+
+**2 semanas la fase 0**, y es el punto: **el valor se demuestra antes de la primera reunión con sistemas.**
+Institucionalización, 4–6 semanas más según la burocracia del cliente.
+
+⚠️ **Los límites, y son duros — se ponen adelante o el patrón se usa mal.**
+🔴 **Las dos piezas son de SÓLO LECTURA y del lado del usuario: no califican, no devuelven nota, no escriben nada.** Un
+piloto que prometa calificación con estas piezas **no se puede cumplir.**
+🔴 **`jbnu-lms-student` es una herramienta estudiantil NO oficial por declaración propia** —el repo advierte que el
+nombre y los activos de UI son de la universidad y que hay que revisar su guía oficial antes de distribuir—: **se usa
+como arquitectura de referencia, nunca se instala en un cliente.**
+⚠️ **Y la pregunta de gobernanza hay que hacerla el primer día, no el último:** operar sobre la sesión del usuario es
+legítimo y es lo que hace barato el piloto, pero **la institución tiene que saberlo**. Un piloto que el cliente descubre
+después es un problema de confianza, no de arquitectura.
+
+### Dónde se vende primero
+
+**APAC**, donde la pieza nació y donde el régimen coreano vigente (*AI Basic Act*, **2026-01-22**) premia exactamente
+esta postura: **sólo lectura y credencial que nunca sale del navegador del usuario.** **Y LATAM en segundo lugar**,
+donde **73,5 % ya enseña con AI y sólo 8 % tiene presupuesto dedicado**: un piloto que no necesita presupuesto ni
+habilitación institucional es la única forma de entrar.
+
+---
 
 ## Nota de licencias para todos los patrones
 
@@ -3747,7 +3974,7 @@ Globant en **el integrador que escribió la puerta de agente del estándar de ev
 posicionamiento que la tendencia de esta KB describe: *«el integrador que sabe cuál de estas piezas sigue viva vale más
 que el que sabe el estándar»*.
 
-⚠️ **La decisión que falta, y es la acción 3 del pase 34.** El ecosistema QTI tiene **dos mitades**: la TypeScript
+⚠️ **La decisión que falta, y es la acción 3 del pase 35.** El ecosistema QTI tiene **dos mitades**: la TypeScript
 permisiva de `LongsightGroup` (**cero dependencias**, pero `qti3` tiene **5 ★**) y la PHP de **OAT SA** (**36 paquetes
 en Packagist**: `qtism/qtism`, `oat-sa/extension-tao-*`, mucha más adopción). **La contribución más limpia es la
 TypeScript; la de más alcance podría ser la PHP.** Hay que medir licencia y cadencia de `qtism/qtism` antes de elegir
