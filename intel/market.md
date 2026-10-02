@@ -1166,6 +1166,28 @@ Dónde se produce el software educativo abierto, que no es donde está la demand
 ## Opportunities by region
 
 ### North America
+
+#### Pase 49 del 2026-10-02 — **confirmación, con UNA cifra de gasto público nueva y un reencuadre regulatorio**
+
+Búsqueda corrida: `AI education North America 2026 adoption regulation players` (año **calculado**: 2026).
+⚠️ **Casi todo vuelve a ser confirmación** (36 % de cuota global, ChatGPT en **66 %** de los alumnos,
+Colorado y Texas legislando por partes, el mercado de **$951 M** en 2024 → **$2.303,2 M** en 2029 a
+**15,9 %** CAGR). 🟢 **Lo nuevo es una cifra de compra: $169 M comprometidos por el gobierno de
+EE. UU. a AI responsable en educación superior en el Q1 de 2026**, y **41,7 %** de la oportunidad
+de crecimiento global 2026-2030 atribuida a la región.
+
+🔴 **Y el reencuadre, que es más útil que la cifra:** una fuente secundaria lo pone en los términos
+en que un comprador lo siente — *«la AI educativa opera en un vacío regulatorio relativo, sin
+equivalente a la FDA, y las decisiones de adopción las toma cada escuela, distrito o universidad
+con supervisión externa mínima»*. 🔵 **Combinado con el AI Act clasificando la educación como alto
+riesgo desde agosto de 2026, la asimetría es la oportunidad concreta: el proveedor
+norteamericano que vende a EMEA necesita el expediente de cumplimiento que su propio mercado NO le
+pide.** Esa es una venta de gobernanza, no de modelo, y esta base ya tiene las piezas
+(`compose/code/aiact-50-2-marking/`, `aiact-50-2-pack/`, `mcp-allowlist-gateway/`).
+
+⚠️ **`multistate.us`, la primaria del conteo de proyectos de ley, sigue `EGRESS_BLOCKED`** (pase
+48). El «134 en 31 estados» se sigue citando como **secundaria concordante**, igual que desde el
+pase 23.
 #### Pase 48 del 2026-10-02 — **confirmación completa, sin dato nuevo**, y se declara como tal
 
 Búsqueda corrida: `AI education North America 2026 adoption regulation players` (año **calculado**, no fijo).
@@ -2129,6 +2151,24 @@ Artículo 50(2) **no es exigible** en North America — pero es **el requisito m
 multi-región conviene cotizarlo contra el techo europeo y no contra el piso local (ver **P103** y **P105**).
 
 ### EMEA
+
+#### Pase 49 del 2026-10-02 — **confirmación, y un evento regulatorio ESPECÍFICO de educación que no estaba registrado**
+
+Búsqueda corrida: `AI education EMEA 2026 adoption regulation players` (año **calculado**: 2026).
+⚠️ **El grueso es confirmación:** el reloj de agosto de 2026 del AI Act, la educación como
+**alto riesgo**, y el patrón de financiamiento público ya anotado (**£200 M+** del AI Adoption
+Summit del Reino Unido, con el Estado como financiador, *Big Tech* como socio de entrega —Cisco,
+IBM, BT, Rolls-Royce— y los sindicatos como legitimadores).
+
+🟢 **Lo nuevo y lo más accionable: el Consejo de Europa convocó su 2.ª conferencia de trabajo sobre
+las dimensiones REGULATORIAS de la AI en educación, en octubre.** Es la primera vez que el barrido
+devuelve un foro **específico del sector** y no una norma horizontal: a diferencia del AI Act, acá
+se está escribiendo la interpretación *educativa*, que es la que termina en los pliegos.
+
+🔵 **Dos cifras de encuadre que conviene no promediar:** **94 %** de las organizaciones declaran
+que invertirán en formación en AI en 2026, y al mismo tiempo **38 % de las organizaciones de EMEA
+todavía no empezó a pilotear**. **La brecha entre intención y piloto es el mercado de servicios**,
+y es la lectura que sostiene una propuesta de habilitación antes que una de producto.
 #### Pase 48 del 2026-10-02 — **confirmación completa, sin dato nuevo**, y se declara como tal
 
 Búsqueda corrida: `AI education EMEA Europe 2026 adoption regulation players`.
@@ -3220,6 +3260,31 @@ concordantes**. El Artículo 50(2) —la obligación de transparencia del conten
 este pase dejó cubierto con código.
 
 ### APAC
+
+#### Pase 49 del 2026-10-02 — 🔴 **el barrido genérico ni siquiera devolvió EDUCACIÓN (séptima confirmación), y el vacío se rompió por ORGANIZACIÓN**
+
+Búsqueda corrida: `AI education APAC 2026 adoption regulation players` (año **calculado**: 2026).
+🔴 **Lo devuelto es *enterprise*, no educación — y lo declaró el propio buscador**, que cerró
+avisando que los resultados trataban de adopción empresarial y no de entornos educativos.
+**Es la séptima confirmación consecutiva del vacío por el canal genérico**, y a esta altura el
+resultado dejó de ser del territorio y pasó a ser **del instrumento**.
+
+Lo utilizable es de *enterprise* y se registra como tal: **48 %** de los líderes de gobernanza de
+APAC con la adopción de AI como prioridad 2026, **57 %** de las organizaciones de Asia con AI en al
+menos un área, **49 %** señalando infraestructura insuficiente para datos en tiempo real como
+barrera, y la **soberanía** moldeando las decisiones de infraestructura de cerca de la mitad de las
+firmas.
+
+🟢 **La oportunidad APAC de este pase NO vino del barrido: vino de cambiar el canal.** La acción 3
+del pase 48 pedía buscar por **organización** en vez de por región, con hipótesis falsable. Una
+consulta a los repositorios de **HKUDS** devolvió **tres piezas ausentes de los ocho archivos de
+esta base** (`AI-Researcher` 5.8k sin licencia, `Paper2Slides` 3.8k MIT, `VideoAgent` 1.9k MIT).
+
+🔴 **Y la mitad que importa para una propuesta: ninguna de las tres es educativa.** No mencionan
+enseñanza, alumnos ni cursos. 🔵 **Así que la oportunidad APAC se formula distinto y mejor: el
+laboratorio APAC publica CAPACIDAD permisiva, no producto educativo; la pieza de aula se COMPONE
+sobre ella** (P110), y el diferencial de Globant en la región es la composición y el expediente de
+soberanía, no la espera de un *upstream* educativo que siete pases muestran que no llega.
 #### Pase 48 del 2026-10-02 — **confirmación completa, sin dato nuevo**, y se declara como tal
 
 Búsqueda corrida: `AI education APAC Asia Pacific 2026 adoption regulation players`.
@@ -4096,6 +4161,26 @@ desplegado + puerta MCP permisiva (`jbnu-lms-mcp`, `canvas-lms-mcp`, las cuatro 
 depende de un tercero» son el mismo argumento.**
 
 ### LATAM
+
+#### Pase 49 del 2026-10-02 — **confirmación con cifras de adopción muy altas, y una primaria académica nueva sobre educación superior**
+
+Búsqueda corrida: `AI education LATAM 2026 adoption regulation players` (año **calculado**: 2026).
+⚠️ **Confirma el patrón que esta base viene registrando desde el pase 13 —adopción alta, gobernanza
+floja— y lo hace con cifras más fuertes:** LATAM como **tercer mercado mundial** de descargas de
+aplicaciones de AI generativa, **99 %** de las *startups* usando alguna solución de AI en sus
+operaciones y **85 %** integrándola de forma nativa en su producto, con *edtech* entre los sectores
+de AI aplicada más disruptivos junto a *fintech* y *healthtech*.
+
+🟢 **Lo nuevo en fuentes, y es de las buenas:** un *working paper* de la **Universidad de las
+Naciones Unidas (UNU)** sobre **implementación de AI en educación superior en América Latina y el
+Caribe** — primaria académica y **específica del sector y de la región**, que es exactamente lo que
+el gap 65 viene pidiendo. ⚠️ **El BID vuelve a aparecer con *An Enabling Regulatory Framework for
+AI in LAC*** (tendencia 210): el canal multilateral sigue devolviendo **ruta de PDF**.
+
+🔴 **La fragmentación regulatoria se confirma como el riesgo de operación cruzada:** varios países
+con marcos distintos o inexistentes mientras el AI Act europeo fija el estándar de facto para quien
+exporte. 🔵 **Eso mantiene la oportunidad LATAM donde el pase 48 la dejó —pipeline de ingesta, 8-12
+semanas, porque INEP no publica API— y le agrega el ángulo de cumplimiento exportador.**
 #### Pase 48 del 2026-10-02 — **confirmación completa, sin dato nuevo**, y se declara como tal
 
 Búsqueda corrida: `AI education LATAM Latin America 2026 adoption regulation players`.

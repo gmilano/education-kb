@@ -8,6 +8,27 @@ updated: 2026-10-02
 
 > Bases sobre las cuales construir. Verificado repo por repo vía WebFetch el 2026-09-30 (capas del pase 10, el 2026-10-01).
 > Leer la columna **Licencia** antes de proponer: media KB de educación es GPL/AGPL, no permisiva.
+> **Pase 49 del 2026-10-02:** 🟢 **DOS clases de cifra dejaron de ser «no re-verificables acá», y una de las dos
+> cubre 326 mediciones de esta base.** El pase 48 declaró **1.836 de 3.611 (50,8 %)** fuera de alcance por canal
+> cerrado. **Dos de esos canales estaban mal elegidos, no cerrados:**
+> 🟢 **licencias** — `raw.githubusercontent.com/<org>/<repo>/<rama>/LICENSE` responde **200** donde
+> `github.com/<org>/<repo>` responde **403**. Verificado con control positivo sobre cinco repos (`Paper2Slides`,
+> `VideoAgent`, `VideoRAG`, `DeepTutor`, `OpenMAIC`): **200 por `raw` los cinco, 403 por `github.com` los cinco.**
+> 🟢 **`tools` (326 cifras)** — el *tarball* de `registry.npmjs.org` se baja y la superficie se cuenta
+> **estáticamente**, sin instalar el paquete ni levantar el servidor. Instrumento nuevo: `compose/code/npm-surface-probe/`,
+> **19/19**.
+> 🔴 **Y lo primero que midió el canal nuevo es un bloqueo comercial, no un número:** `@imazhar101/mcp-canvas-server`
+> expone **227 herramientas distintas** sobre Canvas LMS —**la superficie más grande de esta KB**, verificada por **dos
+> conteos independientes** (nombres en `tools/` = **227**; ocurrencias de `inputSchema` = **227**; coinciden uno a uno en
+> los **18** archivos)— **y no declara licencia en ningún canal** (campo del registro, manifiesto embarcado, archivo y
+> repositorio: los cuatro ausentes). El pase 35 lo excluyó por eso y tenía razón; **lo que nadie había medido es el
+> tamaño de lo excluido.** 🔵 **Pedir ese `LICENSE` upstream es la gestión de mayor apalancamiento de esta base.**
+> ⚠️ **Y una trampa de licencia que un *badge* no muestra:** `HKUDS/VideoRAG` es **MIT en la arquitectura** y
+> **NO comercial tal como se embarca**, porque integra ImageBind (CC BY-NC-SA 4.0) — **lo dice su propio `LICENSE`**:
+> *«the current complete implementation is restricted to NonCommercial use only»* (tendencia 223).
+> 🔴 **Corrección de una cifra propia de este README:** las «**186** crudas / **152** no-blancas» de
+> `extract_surface.py` tienen **el valor bien y la métrica mal** — **152 es no-blancas-NO-COMENTARIO; no-blancas son
+> 157**. Es el gap 101 encontrado por el archivo que existe para evitarlo, **tres pases después de escribir la regla**.
 > **Pase 48 del 2026-10-02:** 🟢 **el barrido de cifras pasó de UN archivo a los OCHO, y la escala cambia la lectura:
 > 3.611 mediciones en total, de las que 1.836 — el 50,8 % — NO son re-verificables en este entorno** (1.042 `★`, 418
 > `commits`, 326 conteos de `tools`, 50 descargas). **Más de la mitad de las cifras de esta base no se pueden refrescar

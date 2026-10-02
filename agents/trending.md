@@ -9,6 +9,46 @@ updated: 2026-10-02
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 > No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
 
+## 2026-10-02 (pase 49) — **el séptimo pase sin altas se rompió cambiando el CANAL: 3 altas por ORGANIZACIÓN donde seis pases por REGIÓN no dieron ninguna**
+
+**La hipótesis del pase 48 era explícita y falsable:** *si el vacío de origen APAC es del canal,
+buscar por organización lo rompe; si la organización tampoco devuelve nada, el vacío es real.*
+**Se corrió, y se parte en dos — las dos mitades sirven.**
+
+🟢 **Mitad uno: el canal era el problema.** Una consulta a la página de repositorios de **HKUDS**
+—el laboratorio que ya había dado `DeepTutor`— devolvió **tres piezas ausentes de los ocho archivos
+de esta base**. Medido antes de escribir nada, con `grep -ric` sobre los ocho: **cero coincidencias
+para las tres.**
+
+| Alta | Licencia | ★ | Qué es | ¿Educativa? |
+|---|---|---|---|---|
+| **`HKUDS/AI-Researcher`** | 🔴 **ninguna** (404 en `LICENSE`/`.md`/`.txt`, `main` y `master`) | 5.8k | Ciclo de investigación de punta a punta; *Spotlight* NeurIPS 2025 | 🔴 **no** |
+| **`HKUDS/Paper2Slides`** | **MIT** ✅ | 3.8k | Paper → láminas o póster en un paso, con agentes | 🔴 **no**, y es la más cercana |
+| **`HKUDS/VideoAgent`** | **MIT** ✅ | 1.9k | Entender, editar y rehacer video (EMNLP 2026) | 🔴 **no** |
+
+🔴 **Mitad dos: el vacío educativo APAC es REAL, y ahora está medido en vez de supuesto.**
+**Ninguna de las tres menciona educación, enseñanza, alumnos ni cursos.** Son **capacidad de
+laboratorio**, no piezas de aula. 🔵 **Y eso cambia la recomendación comercial en vez de sólo
+cerrar un gap:** para una propuesta APAC **no se espera la pieza educativa —se compone sobre la
+capacidad que el laboratorio ya publicó permisiva** (P110). Lo que APAC no produce es open source
+**educativo-nativo**; la capacidad con la que se construye, sí.
+
+⚠️ **El barrido obligatorio se corrió completo igual** (cuatro globales + cuatro regionales, año
+**calculado**: 2026) **y por séptima vez no devolvió una sola pieza educativa nueva.** Las cuatro
+regiones, declaradas una por una:
+
+| Región | Qué devolvió el barrido genérico | Altas |
+|---|---|---|
+| **North America** | mercado y regulación (36 % del mercado global, **$169 M** federales a AI en educación superior en Q1 2026, Colorado y Texas por partes); jugadores **comerciales**: IBM, Microsoft, Google | **0** |
+| **EMEA** | AI Act con el reloj de agosto de 2026; **£200 M+** del AI Adoption Summit del Reino Unido; Consejo de Europa convocando sobre regulación de AI en educación; **94 %** de las organizaciones dispuestas a invertir en formación | **0** |
+| **APAC** | 🔴 **ni siquiera devolvió educación:** contenido de *enterprise* (48 % de los líderes de gobernanza priorizando AI, soberanía como eje 2026). **El propio buscador declaró que los resultados no eran de educación.** Es la **séptima** confirmación del vacío por el canal genérico | **0** por región, **3** por organización |
+| **LATAM** | adopción alta y gobernanza floja (tercer mercado mundial de descargas de apps GenAI; **99 %** de *startups* con alguna AI, **85 %** nativa en el producto; *edtech* entre los sectores más disruptivos); el **BID** otra vez como primaria multilateral | **0** |
+
+🔵 **La lectura transversal de las cuatro:** las cuatro regiones devuelven **mercado, dinero y
+regulación** —material de `intel/`— y **ninguna devuelve código**. Después de siete pases eso ya no
+es un resultado del barrido: **es una propiedad del barrido**, y la pieza nueva entró por el canal
+que no estaba probado.
+
 ## 2026-10-02 (pase 48) — **SEXTO pase consecutivo sin altas de agente**, y el pase no se gastó buscándolas: se gastó en cerrar la única fila que le prometía a un cliente un artefacto inexistente
 
 **El barrido completo obligatorio se corrió igual —cuatro búsquedas globales y cuatro

@@ -337,6 +337,80 @@ QUOTE_RX = re.compile(
     r"|\(\s*(?:\*\*)?(\d{1,3})(?:\*\*)?\s*\)\s*(?:checks?|aserciones?)",
     re.I)
 
+#: Tokens showing the window is RECORDING A CORRECTION, not making a claim.
+#: Pase 49 ran --crossref and got 7 STALE. Reading all 7 showed every one sat on
+#: prose that already carried the RIGHT number and quoted the wrong one as
+#: history ("«11/11 checks» (hoy **37/37**)"). Acting on them would have
+#: re-broken correct text -- the exact opposite of what this file exists for.
+CORRECTION_RX = re.compile(
+    r"\bhoy\b|\u2192|quedaron?\s+corregidas?|corregidas?\s+donde|VENCIDA|"
+    r"se\s+\*{0,2}reemplaza|cifra\s+del\s+pase|la\s+subi\u00f3|pas\u00f3\s+a",
+    re.I)
+
+
+def records_correction(window: str, todays) -> bool:
+    """True when the window quotes a figure IN ORDER TO record it was already
+    corrected.
+
+    Two conjuncts, and the second is what keeps this falsifiable: a correction
+    marker alone is not enough, because "hoy" also appears in ordinary prose.
+    The window must ALSO carry a current measured value. Prose that says "hoy"
+    without stating the right number stays a defect and stays reported.
+    """
+    if not CORRECTION_RX.search(window):
+        return False
+    return any(re.search(r"(?<!\d)%d(?!\d)" % t, window) for t in todays if t)
+
+
+def figure_window(lines, lineno):
+    """The text a figure is read in context of.
+
+    Pase 48 set the rule as "table row => the row; prose => the paragraph", and
+    the implementation grew the prose window while lines were non-blank and not
+    table rows. Pase 49 measured what that actually returns on these files:
+    **5.635 and 9.914 characters**. Every one of the eight KB files opens with a
+    long `>` blockquote carrying no blank line, so the "paragraph" swallowed the
+    whole header -- and a suite named 4.000 characters away was read as the
+    owner of the figure. That is how 7 STALE findings appeared on prose that
+    never mentioned those suites near the number.
+
+    The original rationale was narrow and correct: prose is hard-wrapped at
+    ~100 chars, so a condition can sit one line below the figure. One line
+    below is therefore the window -- bounded, not a run.
+    """
+    i = lineno - 1
+    if lines[i].lstrip().startswith("|"):
+        return lines[i]
+    lo = max(0, i - 1)
+    hi = min(len(lines) - 1, i + 1)
+    out = []
+    for j in range(lo, hi + 1):
+        if lines[j].lstrip().startswith("|") and j != i:
+            continue
+        out.append(lines[j])
+    return " ".join(out)
+
+
+def resolve_owners(named, val, measured):
+    """Which of the suites named in a window a figure belongs to.
+
+    A figure matching one named suite belongs to THAT one (pase 48). Pase 49
+    adds the case pase 48 left open: when the figure matches NONE of them, the
+    old code reported it against EVERY named suite, turning one figure into N
+    findings -- 3 figures became 7 STALE. Ownership is unknown there, and this
+    instrument's standing rule is that unknown is reported, never guessed.
+
+    Returns (suites_to_charge, ambiguous).
+    """
+    owners = [d for d in named
+              if measured.get(d, (None,))[0] == val
+              or val in CONDITIONAL.get(d, {})]
+    if owners:
+        return owners, False
+    if len(named) > 1:
+        return named, True
+    return named, False
+
 
 def measure_suites() -> dict:
     """Run every suite and count its PASS lines. The count is the instrument's
@@ -368,6 +442,7 @@ def crossref() -> int:
 
     print("\n-- every check-count quotation in the eight files, attributed --")
     stale = live_ok = unattributed = conditional = 0
+    corrected = ambiguous = 0
     findings = []
     for rel in KB_FILES:
         path = os.path.join(ROOT, rel)
@@ -388,16 +463,7 @@ def crossref() -> int:
             #     9, and 6 of those were manufactured by the window).
             #   * prose is hard-wrapped at ~100 chars -> the window is the
             #     paragraph, or the condition one line down is missed.
-            if lines[lineno - 1].lstrip().startswith("|"):
-                window = lines[lineno - 1]
-            else:
-                lo = hi = lineno - 1
-                while lo > 0 and lines[lo - 1].strip() and not lines[lo - 1].lstrip().startswith("|"):
-                    lo -= 1
-                while (hi + 1 < len(lines) and lines[hi + 1].strip()
-                       and not lines[hi + 1].lstrip().startswith("|")):
-                    hi += 1
-                window = " ".join(lines[lo:hi + 1])
+            window = figure_window(lines, lineno)
             named = [d for d in SUITES if d in window]
             for m in hits:
                 g = [x for x in m.groups() if x]
@@ -411,12 +477,21 @@ def crossref() -> int:
                 # belongs to THAT one; charging it to all of them manufactures a
                 # finding. If it matches none, every named suite is reported,
                 # because then the figure is wrong for all of them.
-                owners = [d for d in named
-                          if measured.get(d, (None,))[0] == val
-                          or val in CONDITIONAL.get(d, {})]
-                if len(named) > 1 and owners:
-                    named = owners
-                for d in named:
+                # NB: the old code did `named = owners` INSIDE this loop,
+                # which permanently narrowed the list for every later figure on
+                # the same line. Resolution is per-figure now.
+                charge, ambig = resolve_owners(named, val, measured)
+                todays = [measured.get(d, (None,))[0] for d in named]
+                if val not in todays and records_correction(window, todays):
+                    corrected += 1
+                    continue
+                if ambig:
+                    ambiguous += 1
+                    findings.append(("AMBIG", rel, lineno, "/".join(charge),
+                                     val, None, "",
+                                     re.sub(r"\s+", " ", line)[:105]))
+                    continue
+                for d in charge:
                     today = measured.get(d, (None,))[0]
                     if today is None:
                         continue
@@ -436,7 +511,10 @@ def crossref() -> int:
                         findings.append(("STALE", rel, lineno, d, val, today, "",
                                          re.sub(r"\s+", " ", line)[:105]))
     for kind, rel, lineno, d, val, today, cond, ctx in findings:
-        if kind == "STALE":
+        if kind == "AMBIG":
+            print("  AMBIG  %s:%d  %s quotes %s -- matches NONE of the suites"
+                  " named here; owner NOT guessed" % (rel, lineno, d, val))
+        elif kind == "STALE":
             print("  STALE  %s:%d  %s quotes %s, today %s" % (rel, lineno, d, val, today))
         else:
             print("  COND   %s:%d  %s quotes %s -- real, but only %r, and the"
@@ -446,6 +524,9 @@ def crossref() -> int:
     print("\nattributed and matching today : %d" % live_ok)
     print("attributed and STALE          : %d" % stale)
     print("attributed, real but UNCONDITIONED : %d" % conditional)
+    print("quoted AS ALREADY CORRECTED (history, not a defect) : %d" % corrected)
+    print("AMBIGUOUS (matches none of several named suites, not guessed) : %d"
+          % ambiguous)
     print("unattributed (no suite name on the line, NOT guessed) : %d" % unattributed)
     print("\n⚠ An append-only dated section is HISTORY: a count that was true when")
     print("  written stays. Only a LIVE reference row is a defect. This tool reports")

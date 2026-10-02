@@ -9,6 +9,21 @@ updated: 2026-10-02
 > Plataformas verticales reales, en producción, customizables con AI.
 > Modelo: partir de algo que ya funciona y que ya tiene los datos, y agregar la capa agéntica arriba.
 > Verificado vía WebFetch el 2026-09-30; las capas del pase 11, el 2026-10-01.
+> **Pase 49 del 2026-10-02:** 🔵 **sin verticales nuevas por CUARTO pase consecutivo** —el barrido obligatorio
+> (`open source platform education ERP CRM MIT Apache SIS LMS`) devolvió **otra vez las mismas siete ya medidas y en
+> este archivo**: Moodle (**400 M** de usuarios y **150.000** sitios declarados por Moodle Pty Ltd), Open edX (raíces
+> MIT/Harvard, Python/Django, **AGPL**), **OpenEduCat** (LMS+SIS+aranceles+app de familias sobre una sola base, módulos
+> **LGPLv3**), Canvas, Chamilo, ILIAS y Sakai, más glosarios del propio proveedor.
+> 🔴 **Pero la capa de INTEGRACIÓN de estas plataformas cambió de estado, y para peor de lo que este archivo
+> suponía.** Las puertas MCP que conectan con ellas se midieron una por una con `compose/code/npm-surface-probe/`:
+> **`@imazhar101/mcp-canvas-server` expone 227 herramientas sobre Canvas y NO tiene licencia en ninguno de los cuatro
+> canales** (registro, manifiesto embarcado, archivo, repositorio), y **`@timeback/oneroster` tampoco declara licencia**.
+> ⚠️ **Dos de las puertas a las plataformas que este archivo recomienda son, tal como están publicadas, inusables
+> para una entrega.** 🔵 **La lectura para una propuesta: la plataforma vertical sigue siendo la decisión correcta
+> —está instalada y tiene los datos—, pero la capa agéntica que se le pone arriba hay que ESCRIBIRLA o conseguir el
+> `LICENSE` upstream; no se puede asumir que la puerta existente sea entregable.** 🟢 **Y lo que sí quedó limpio y
+> verificado:** `@longsightgroup/qti3-cli` 0.13.1 (**MIT**, con `LICENSE.md` embarcado **y** repositorio publicado) y
+> `@signdocs-brasil/mcp-server` 0.11.2 (**MIT**, con `LICENSE` real embarcado, **26** herramientas distintas).
 > **Pase 48 del 2026-10-02:** 🔵 **sin verticales nuevas por TERCER pase consecutivo**, y el barrido obligatorio
 > (`open source platform education LMS SIS MIT Apache self-hosted`) devolvió **siete plataformas ya medidas y en este
 > archivo** —Moodle (**400 M** de usuarios y 150.000 sitios declarados por Moodle Pty Ltd), Open edX, **OpenEduCat**

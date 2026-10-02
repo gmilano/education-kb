@@ -8,6 +8,80 @@ updated: 2026-10-02
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 
+## 2026-10-02 (pase 49) — **el dato crudo: DOS canales que esta base había declarado cerrados responden 200, y uno de ellos mide 227 tools sobre Canvas**
+
+Todo lo de abajo se **midió con un comando** en este repositorio o contra `registry.npmjs.org` /
+`raw.githubusercontent.com`. Las **dos** carpetas nuevas de `compose/code/` fallan si el upstream
+cambió: `trend-backlink-audit` **22/22**, `npm-surface-probe` **19/19**.
+
+### 🔴 El hallazgo con precio: la superficie de LMS más grande de esta KB no tiene licencia, y nadie la había medido
+
+**El pase 35 excluyó `@imazhar101/mcp-canvas-server` por licencia ausente y tenía razón. Lo que
+nadie midió es QUÉ se estaba excluyendo.**
+
+| Medición | Valor | Instrumento |
+|---|---|---|
+| tools distintos sobre Canvas LMS | 🔴 **227** | nombres en `dist/servers/canvas/src/tools/` del *tarball* |
+| conteo independiente | **227** | ocurrencias de `inputSchema` en el mismo árbol |
+| archivos de `tools/`, uno a uno | **18**, y **coinciden los dos conteos en cada uno** | `user-tools.js` **39**, `page-tools.js` **21**, `file-tools.js` **20**, `submission-tools.js` **20**, `module-tools.js` **18**, `enrollment-tools.js` **15**, … `lti-launch-definition-tools.js` **1** |
+| licencia (registro npm / manifiesto embarcado / archivo / repo) | 🔴 **ninguna / ninguna / ninguno / no publicado** | `probe.py` |
+
+🔵 **Por qué esto es una acción y no un dato:** **227 tools es la superficie más grande de esta
+base**, y lo único que la bloquea es **un archivo de licencia**. **Pedirlo upstream es la gestión
+de mayor apalancamiento de toda esta KB**: un `LICENSE` permisivo convierte la integración de
+Canvas más completa que existe en material entregable. Sin él, el default legal es «todos los
+derechos reservados» y **no se puede proponer**.
+
+### 🟢 Los dos canales que se reabrieron, y las 326 + N cifras que vuelven a ser medibles
+
+| Clase de cifra | Estado declarado | Canal que responde 200 |
+|---|---|---|
+| **`tools`** (**326** cifras en los ocho archivos) | 🔴 «exige el paquete instalado» | **el *tarball* de `registry.npmjs.org`**: se cuenta **estáticamente**, sin instalar ni levantar servidor |
+| **licencias** | 🔴 cerrado desde el pase 37 (`github.com` **403**, `api.github.com` 200 negando acceso) | **`raw.githubusercontent.com/<org>/<repo>/<rama>/LICENSE`** |
+
+⚠️ **Y el canal de licencias se verificó con control positivo sobre cinco repos:** `Paper2Slides`,
+`VideoAgent`, `VideoRAG`, `DeepTutor` y `OpenMAIC` dieron **200** por `raw`, mientras los cinco
+daban **403** por `github.com`. **El canal no estaba cerrado: estaba mal elegido.**
+
+### 🔴 La trampa de licencia que un *badge* no muestra: MIT en la arquitectura, NO comercial en el código
+
+**`HKUDS/VideoRAG`** —vecino declarado en el README de `Paper2Slides`— **no es MIT a secas**. Su
+`LICENSE` (139 líneas) es un **doble licenciamiento** y lo dice él mismo:
+
+- **Parte 1, la arquitectura:** MIT.
+- **Parte 2, la implementación tal como se embarca:** `Vimo-desktop/` y `VideoRAG-algorithm/`
+  **integran ImageBind, que es CC BY-NC-SA 4.0 — NO comercial**, y `MiniCPM` (Apache-2.0).
+- 🔴 **Y la conclusión la escribe el propio archivo:** *«the current complete implementation is
+  restricted to NonCommercial use only»*.
+
+🔵 **La salida está documentada y es la que una propuesta debe cotizar:** usar **sólo la
+arquitectura** y reemplazar ImageBind por un modelo de licencia comercial. ⚠️ **Lo peligroso es el
+atajo:** un filtro de licencias que lee «MIT» del *badge* o del campo **aprueba una pieza que, tal
+como está, no se puede facturar.**
+
+### Las licencias npm medidas en este pase, con el campo separado del TEXTO
+
+| Paquete | Campo (registro / manifiesto) | ¿Archivo de licencia? | Repositorio | Tools |
+|---|---|---|---|---|
+| `@imazhar101/mcp-canvas-server` 2.1.3 | 🔴 ninguno / ninguno | 🔴 ninguno | 🔴 no publicado | 🔴 **227** |
+| `@ink-waffle/sisu-mcp` 0.1.0 | MIT / MIT | 🔴 ninguno | 🔴 no publicado | **12** |
+| `@signdocs-brasil/mcp-server` 0.11.2 | MIT / MIT | 🟢 `LICENSE` | 🔴 no publicado | **26** (37 registros) |
+| `@timadey/proctor` 1.2.6 | MIT / MIT | 🔴 ninguno | 🟢 `Timadey/proctor` | 0 (no es MCP) |
+| `@longsightgroup/qti3-cli` 0.13.1 | MIT / MIT | 🟢 `LICENSE.md` | 🟢 `LongsightGroup/qti3` | 0 (es CLI) |
+| `@timeback/oneroster` 0.3.3 | 🔴 ninguno / ninguno | 🔴 ninguno | 🔴 no publicado | 0 |
+
+⚠️ **`tools` distintos ≠ ocurrencias de registro:** `@signdocs-brasil/mcp-server` registra **37**
+veces **26** herramientas porque embarca dos *builds*. **Publicar 37 infla la superficie un 42 %**,
+y el probe reporta las dos cifras en vez de elegir.
+
+🟢 **Dos confirmaciones independientes de cifras que esta base ya tenía:** `sisu-mcp` **12 tools**
+(coincide con lo que el pase 41 anotó) y la exclusión de Canvas por licencia del pase 35.
+🔴 **Y una corrección de grado:** el bloqueante *«licencia de `sisu-mcp` sin segunda fuente»* **baja
+de grado y no se cierra** — la segunda fuente **existe** (MIT en el documento del registro **y** en
+el `package.json` embarcado, dos artefactos independientes), pero **no hay texto de licencia en
+ningún canal y no hay repositorio publicado**: se embarca `dist/` compilado. **Lo que falta ya no es
+la fuente: es el texto y el código.**
+
 ## 2026-10-02 (pase 48) — **el dato crudo: 3.611 cifras inventariadas en los OCHO archivos, el 50,8 % no re-verificable acá, 1 cifra vencida de verdad, y 7 saltos de procedencia trazados hasta la pantalla**
 
 Las tres acciones del pase 47 se ejecutaron. Todo lo de abajo se **midió con un comando** en

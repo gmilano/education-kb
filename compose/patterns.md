@@ -8,6 +8,16 @@ updated: 2026-10-02
 
 > Recetas concretas: repos nombrados, licencias verificadas, wiring explícito y estimación.
 > Todos los repos citados fueron verificados vía WebFetch el 2026-09-30; los del pase 11, el 2026-10-01 (ver `agents/top.md`).
+> **Pase 49 del 2026-10-02:** **+3 patrones, y los tres salen de las tres acciones del pase 48.** **P110** es el
+> resultado comercial de romper el vacio APAC por organizacion: **componer la capacidad permisiva que el laboratorio
+> APAC SI publica** (`Paper2Slides` MIT + `OpenMAIC` MIT + `DeepTutor` Apache-2.0, las tres verificadas por
+> `raw.githubusercontent.com`) en vez de esperar la pieza educativa que siete pases muestran que no llega.
+> **P111** convierte en compuerta de decision lo que este pase midio: **auditar licencia Y superficie de una puerta MCP
+> antes de cotizarla**, porque la integracion de Canvas mas completa que existe expone **227 herramientas** y **no tiene
+> licencia en ninguno de los cuatro canales**. **P112** escribe la salida del caso `VideoRAG`: **MIT en la arquitectura y
+> NO comercial tal como se embarca**, asi que el reemplazo del *embedder* es el paso que decide la facturabilidad.
+> 🔵 **Lo que los tres comparten, y es el aprendizaje de este pase: la licencia se verifica por el ARCHIVO, no por el
+> *badge*, y la superficie se cuenta antes de prometerla.**
 > **Pase 47 del 2026-10-02:** **+3 patrones, y los tres salen de ejecutar las tres acciones del pase 46 — pero el
 > primero CORRIGE a su antecesor.** **P106** reemplaza a **P105**: el marcado del Artículo 50(2) se inyecta una vez en
 > el empaquetado, sí, 🔴 **pero con un portador por dialecto, porque el comodín de SCORM 1.2 es `strict` y no `lax`, así
@@ -288,6 +298,125 @@ ausencia (`ChatSource` = `title`, `date`, `source`; `buildCitations` deduplica p
 **versionadas en este repositorio o leídas de un árbol real**, las cuatro traen aserciones que
 corren, y **la mitad más cara —llevar la identidad de la fuente hasta la pantalla— no hay que
 construirla: el upstream la construyó y dejó escrito por qué.**
+
+## P110 — **Clase a partir de un paper**, componiendo la capacidad APAC permisiva en vez de esperar la pieza educativa (agregado en el pase 49 del 2026-10-02)
+
+🔵 **Por qué este patrón existe, y es el resultado comercial de la acción 3 del pase 48:** siete
+pases de barrido regional muestran que **APAC no publica open source educativo-nativo**. El pase 49
+cambió el canal —búsqueda por **organización**— y encontró que **sí publica la capacidad con la que
+se construye**, permisiva. **La conclusión no es esperar: es componer.**
+
+### Las piezas, con licencia verificada por `raw.githubusercontent.com` (200) en el pase 49
+
+| Pieza | Licencia | ★ | Qué aporta |
+|---|---|---|---|
+| **`HKUDS/Paper2Slides`** | **MIT** ✅ | 3.8k | paper/documento → **láminas o póster** en un paso, con generación en paralelo |
+| **`THU-MAIC/OpenMAIC`** | **MIT** ✅ | — | **aula interactiva multi-agente** desde un tema o documento: docente y compañeros AI, escenas, quizzes, pizarra, export a PPTX/HTML |
+| **`HKUDS/DeepTutor`** | **Apache-2.0** ✅ | — | **tutoría personalizada con memoria** y las 8 superficies (Chat, Partners, Co-Writer, Book, Knowledge, Space, Memory) |
+| **`HKUDS/VideoAgent`** | **MIT** ✅ | 1.9k | *opcional*: la **clase grabada** como entrada editable |
+
+🟢 **Las cuatro son permisivas y las cuatro son de origen APAC** (HKU y Tsinghua), lo que para una
+propuesta en la región es un argumento de soberanía además de uno de costo.
+
+### El *wiring*, explícito
+
+1. **`Paper2Slides`** toma el paper (o el apunte, o la norma) y emite **láminas**. Es el 80 % del
+   trabajo de armar una clase y es el paso que **no** hay que escribir.
+2. Las láminas entran a **`OpenMAIC`** como documento de origen: ahí dejan de ser estáticas y pasan
+   a **escena de aula** con docente y compañeros AI, quizzes y pizarra.
+3. **`DeepTutor`** se engancha como **capa de memoria por alumno** —es lo que ninguna de las otras
+   dos hace— para que la segunda clase sepa qué pasó en la primera.
+4. 🔴 **La puerta al LMS va con allowlist (`P85` / `compose/code/mcp-allowlist-gateway/`, 34/34)**, y
+   ⚠️ **antes de cotizar la integración se corre `compose/code/npm-surface-probe/` sobre la puerta
+   npm elegida** (**P111**): dos de las que hay no tienen licencia.
+5. Si entra video, **`VideoAgent`** (MIT) y 🔴 **NUNCA `VideoRAG` tal como se embarca** — ver
+   **P112**.
+
+### Estimación y lo que NO cubre
+
+| Tramo | Estimación | Nota |
+|---|---|---|
+| paper → láminas → escena de aula (1 y 2) | **3-4 semanas** | las dos piezas hacen lo suyo; el trabajo es el pegado y el formato institucional |
+| memoria por alumno (3) | **4-6 semanas** | integración, no desarrollo |
+| puerta al LMS (4) | **2-3 semanas** | **sólo si la puerta tiene licencia**; si no, +6-8 (escribirla) |
+
+⚠️ **Lo que este patrón NO resuelve, declarado:** **ninguna de las cuatro piezas es educativa de
+origen** —`Paper2Slides`, `VideoAgent` y `AI-Researcher` **no mencionan enseñanza, alumnos ni
+cursos**— así que **la pedagogía es trabajo de Globant, no del *upstream***: secuencia, evaluación,
+rúbrica y accesibilidad no vienen en la caja. 🔵 **Y eso es exactamente lo que se cobra.**
+
+## P111 — **Auditar licencia y superficie de una puerta MCP ANTES de cotizarla**, en un comando (agregado en el pase 49 del 2026-10-02)
+
+🔴 **El caso que obliga a este patrón, medido en el pase 49:** la integración de Canvas LMS más
+completa que existe en open source —**`@imazhar101/mcp-canvas-server`, 227 herramientas
+distintas**— **no declara licencia en ninguno de los cuatro canales**: campo del registro npm,
+`package.json` embarcado, archivo en el *tarball* y repositorio publicado. **Los cuatro ausentes.**
+Sin licencia el default legal es «todos los derechos reservados»: **no se puede entregar.**
+
+### La receta
+
+```sh
+python3 compose/code/npm-surface-probe/probe.py @imazhar101/mcp-canvas-server
+python3 compose/code/npm-surface-probe/probe.py @ink-waffle/sisu-mcp --json
+```
+
+El probe baja el *tarball* de `registry.npmjs.org` y reporta, **separando el CAMPO del TEXTO**:
+licencia según el registro, licencia según el manifiesto embarcado, **si hay archivo de licencia de
+verdad**, si hay repositorio publicado, y la **superficie de herramientas** contada
+**estáticamente** —sin instalar el paquete ni levantar el servidor, que es el canal que esta base
+tenía declarado cerrado para las **326** cifras de `tools`.
+
+### La compuerta de decisión, tal como se usa en una propuesta
+
+| Lo que devuelve el probe | Veredicto |
+|---|---|
+| campo **y** archivo **y** repositorio, permisivos | 🟢 **entregable**: se integra |
+| campo permisivo en **dos artefactos**, **sin** archivo ni repositorio | ⚠️ **se usa con reserva escrita**; no se audita, no se parchea (`@ink-waffle/sisu-mcp`) |
+| **sin** campo de licencia | 🔴 **NO entregable**: se pide el `LICENSE` upstream o se escribe la puerta |
+| ocurrencias de registro **>** nombres distintos | ⚠️ **cotizar por los distintos**: dos *builds* inflan la cuenta (**37 vs 26** en `@signdocs-brasil/mcp-server`, un **42 %**) |
+
+🔵 **El valor comercial directo:** la gestión de **pedir un `LICENSE` upstream** pasa de gesto de
+buena vecindad a **la acción de mayor apalancamiento de esta KB** — un archivo desbloquea **227
+herramientas** sobre el LMS más grande del mercado. ⚠️ **Y el riesgo que cierra:** un filtro que lee
+«MIT» de un *badge* aprueba piezas que no se pueden facturar (**P112**).
+
+## P112 — **RAG sobre la clase grabada**, reemplazando el modelo que vuelve NO comercial a un repo «MIT» (agregado en el pase 49 del 2026-10-02)
+
+🔴 **La trampa, leída en el `LICENSE` y no en el *badge*:** `HKUDS/VideoRAG` se presenta como MIT y
+**su licencia es doble, de 139 líneas**. La **arquitectura** es MIT; la **implementación tal como se
+embarca** integra **ImageBind (CC BY-NC-SA 4.0 — NO comercial)** en `Vimo-desktop/` y en
+`VideoRAG-algorithm/`. **El propio archivo lo concluye:** *«the current complete implementation is
+restricted to NonCommercial use only»*.
+
+⚠️ **Para una consultora esa es la diferencia entre facturable y no facturable, y no se ve en la
+solapa del repo.**
+
+### La receta, que es la salida que el propio `LICENSE` documenta
+
+1. **Tomar la arquitectura** (MIT): el diseño de recuperación multimodal sobre video largo, las
+   interfaces y la estructura. **Eso es lo que la Parte 1 licencia.**
+2. 🔴 **Reemplazar ImageBind** por un *embedder* multimodal de licencia comercial. **Es el único
+   paso que decide la facturabilidad**, y el `LICENSE` nombra las tres opciones: arquitectura sola
+   con modelo propio, reemplazo del modelo, o licencia comercial negociada con los autores de
+   ImageBind.
+3. 🟢 **Conservar `MiniCPM` (Apache-2.0)**, que ya es comercialmente apto.
+4. **Edición y rearmado con `HKUDS/VideoAgent` (MIT limpio)**: la clase grabada como entrada
+   editable.
+5. **Citas con tramo:** la cadena de procedencia de **P109** se aplica igual, y ⚠️ **con el límite
+   que el pase 48 midió: la unidad de procedencia de estas arquitecturas es el DOCUMENTO**, así que
+   «minuto 14 del teórico 3» es desarrollo nuevo, no integración.
+
+### Estimación
+
+| Tramo | Estimación |
+|---|---|
+| arquitectura + reemplazo del *embedder* (1-3) | **5-7 semanas** |
+| edición con `VideoAgent` (4) | **2-3 semanas** |
+| citas por documento (5) | **3-4 semanas** (por **tramo**: desarrollo nuevo, no cotizar como integración) |
+
+🔵 **Por qué este patrón se sostiene:** las dos piezas de código están verificadas por licencia en
+el pase 49 (`raw.githubusercontent.com` → **200**), el reemplazo que lo vuelve facturable **está
+documentado por el upstream**, y el límite de la promesa **está medido** en vez de supuesto.
 
 ## P99 — El componente transversal de marcado del Artículo 50(2): **dos filas de esta base son mitades complementarias y ninguna sabe de la otra** (agregado en el pase 45 del 2026-10-02)
 

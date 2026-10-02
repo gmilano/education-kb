@@ -4974,6 +4974,108 @@ que sus fuentes secundarias publican mal.** La regla operativa no cambia y convi
 **las fechas están confirmadas por tres canales secundarios independientes y concordantes, no por fuente primaria, y
 eso se dice en la propuesta.**
 
+## 🔵 Las tendencias 220–231, del pase 49 del 2026-10-02
+
+**Las doce salen de ejecutar las tres acciones del pase 48 y el barrido obligatorio. Cinco corrigen
+afirmaciones de esta base, cuatro son defectos del propio instrumento —encontrados porque el
+control positivo se corrió antes de publicar— y dos reabren un canal declarado cerrado.**
+
+| # | Tendencia | Evidencia |
+|---|---|---|
+| **220** | 🟢 **Un canal «cerrado» puede estar sólo mal elegido, y cuesta un comando descubrirlo.** Esta base declaró la licencia no re-verificable **desde el pase 37** porque `github.com` responde **403** a `curl` y `api.github.com` responde 200 negando acceso. **`raw.githubusercontent.com/<org>/<repo>/<rama>/LICENSE` responde 200.** Doce pases citando un bloqueo que no era del dato sino de la ruta | **5 de 5** repos (`Paper2Slides`, `VideoAgent`, `VideoRAG`, `DeepTutor`, `OpenMAIC`): **200 por `raw`, 403 por `github.com`** |
+| **221** | 🟢 **La superficie MCP se puede contar SIN instalar el paquete ni levantar el servidor: el *tarball* del registro alcanza.** La clase `tools` —**326 cifras** en los ocho archivos— estaba declarada no reproducible por *«exige el paquete instalado»*. El *tarball* de `registry.npmjs.org` trae el `dist/` y su propio `package.json` | `compose/code/npm-surface-probe/`, **19/19**, sólo *stdlib* |
+| **222** | 🔴 **La superficie de LMS más grande de esta KB no tiene licencia, y el tamaño de lo excluido no se había medido nunca.** `@imazhar101/mcp-canvas-server` expone **227 herramientas** sobre Canvas y **no declara licencia en los CUATRO canales** (registro, manifiesto embarcado, archivo, repositorio). 🔵 **El pase 35 lo excluyó y tenía razón; lo que faltaba era saber que un solo archivo desbloquea 227 tools** | **dos conteos independientes = 227** (nombres en `tools/`; ocurrencias de `inputSchema`), **coincidentes uno a uno en los 18 archivos** |
+| **223** | 🔴 **Un repositorio puede ser MIT en la ARQUITECTURA y NO comercial en el CÓDIGO que embarca, y el *badge* no lo muestra.** `HKUDS/VideoRAG` tiene un `LICENSE` **doble de 139 líneas**: arquitectura MIT, implementación con **ImageBind (CC BY-NC-SA 4.0)** cableado. **Lo concluye el propio archivo:** *«the current complete implementation is restricted to NonCommercial use only»* | el `LICENSE` leído completo; **P112** escribe la salida que el archivo documenta |
+| **224** | ⚠️ **Un CAMPO de licencia no es TEXTO de licencia, y la distinción cambia el veredicto.** `@ink-waffle/sisu-mcp` dice MIT en **dos artefactos independientes** (documento del registro y `package.json` embarcado) y **no tiene texto de licencia en ningún canal ni repositorio publicado**: embarca `dist/` compilado. El bloqueante *«sin segunda fuente»* **baja de grado y NO se cierra: lo que falta ya no es la fuente, es el texto y el código** | `probe.py` separa las cuatro preguntas; **4 de 6** paquetes medidos no embarcan archivo de licencia |
+| **225** | 🔴 **La ventana de lectura de un auditor de cifras medía 5.635 caracteres, y fabricaba atribuciones.** La regla era *«prosa ⇒ el párrafo»*, pero los ocho archivos abren con un `>` *blockquote* **sin una línea en blanco**, así que «el párrafo» se tragaba el encabezado entero y **una suite nombrada 4.000 caracteres más lejos se leía como dueña de la cifra** | **5.635** en `repos/foundations.md`, **9.914** en `verticals/solutions.md`; acotar la ventana **SUBIÓ** `unattributed` de **31 a 36**: *cinco atribuciones las fabricaba el tamaño* |
+| **226** | 🔴 **Una cifra que no coincide con NINGUNA de varias suites nombradas se cargaba a TODAS, y eso convierte una cifra en N hallazgos.** El comentario del código lo decía explícito como si fuera prudente. **Las «7 vencidas» eran 3 cifras.** Ahora es `AMBIG`: se reporta una vez y **no se le asigna dueño** | `test_crossref.py`, **21/21**; y `named = owners` se hacía **dentro** del bucle por cifra, angostando la lista para todas las siguientes de la misma línea |
+| **227** | ⚠️ **Las 7 cifras «VENCIDAS» del `--crossref` eran falsas, y el pase 48 había cerrado en 0.** Lo peligroso es la dirección: **un pase siguiente habría «corregido» prosa que estaba bien.** Un auditor de citas que atribuye de más no es optimista — es falso | estado final con ventana acotada: **12 concuerdan / 0 vencidas / 3 citadas como ya corregidas / 1 ambigua / 36 sin atribuir** |
+| **228** | 🔵 **Esta base numera sus tendencias en TRES formas, no en dos, y un encabezado de RANGO nombra sólo sus dos extremos.** De ahí que el `grep` del pase 48 no encontrara la *tendencia 210*: **no es que viva en una fila y no en un `## `** —vive en las dos— **es que las doce intermedias (198–209) no aparecen en NINGÚN texto de encabezado.** El pase 48 sacó la acción correcta del motivo equivocado | **196** encabezados numerados + **33** por rango + **23** filas (**ninguna que el rango no declare ya**) |
+| **229** | 🔴 **Un extractor con pérdida no falla ruidosamente: devuelve un número más chico y más confiado.** El patrón de citas usaba `\s*(?:—\|,\|\sy\s)?\s*`, y **`\sy\s` no puede disparar nunca** porque el `\s*` anterior ya se comió el espacio: *«las tendencias 213, 216 y 217»* devolvía `[213, 216]`. **Es la misma forma del `\b` que costó el 44 % del inventario en el pase 47** | **700 → 755** citas: faltaba el **7,3 %**. Lo atrapó un control escrito **antes** de mirar el resultado |
+| **230** | 🔴 **El vacío de origen APAC se parte en dos, y las dos mitades son útiles.** 🟢 **El CANAL era el problema:** una consulta a los repositorios de **HKUDS** devolvió **tres piezas ausentes de los ocho archivos** que seis pases de `AI education APAC 2026 …` no habían dado. 🔴 **Y el vacío EDUCATIVO es real: ninguna de las tres menciona educación, enseñanza, alumnos ni cursos.** APAC no publica open source educativo-**nativo**; sí publica **la capacidad con la que se construye** | `grep -ric` sobre los ocho: **cero** coincidencias previas para las tres; **P110** compone sobre la capacidad en vez de esperar la pieza |
+| **231** | ⚠️ **Un manifiesto puede PROMETER un archivo de licencia que no existe, y eso mejora el gap en vez de empeorarlo.** `@timadey/proctor` declara `"license": "MIT"` **y lista `LICENSE` en su propio `files`**. 🟢 **La intención MIT está documentada dos veces**, así que no es vacío de licencia sino **defecto de documentación — y confirma que el PR de un archivo es el arreglo correcto**, porque agrega el archivo que el manifiesto ya promete | `LICENSE` y `LICENSE.md` → **404** en `main` y `master`; `README.md` → **200** en las dos (control positivo: el 404 es del archivo, no del canal) |
+
+🔵 **Y la regla transversal que dejan las tendencias 225, 226, 227 y 229, que es la más barata de
+adoptar y la que este pase pagó cuatro veces:** **cuando un instrumento devuelve un hallazgo, hay
+que medir la VENTANA antes de creerle al hallazgo.** Las cuatro son el mismo error con cuatro caras
+—ventana sin acotar, atribución a todos, separador que no dispara, mutación dentro del bucle— y las
+cuatro producen **números confiados**. ⚠️ **El corolario operativo: un CERO sólo es publicable con
+control positivo.** Las dos cifras limpias de este pase (**0 citas colgadas de 755**, **0 vencidas**)
+valen porque se inyectó un defecto y el instrumento lo encontró.
+
+## 🔵 Estado de gaps al cierre del pase 49 del 2026-10-02
+
+**Este pase ejecutó las TRES acciones que el pase 48 dejó escritas, y las tres rindieron. Ninguna
+necesitó un host bloqueado.**
+
+| Gap | Estado | Resolución |
+|---|---|---|
+| **101** (cifras publicadas sin nombrar su métrica) | 🟢 **AVANZADO, y el instrumento CORREGIDO en cuatro defectos** | **Denominador declarado primero:** de **1.672** mediciones de `intel/market.md` (**912**) e `intel/trends.md` (**760**), sólo **195 (11,7 %)** son de unidades reproducibles acá; **las 1.477 restantes no se tocaron y se dice por qué** (916 `percent` derivadas, 389 `★`, 83 `commits`, 83 `tools`, 10 `downloads`). **Verificadas exacto:** «66 filas / 61 *slugs* / 0 duplicados» (**68** líneas de pipe = 1+1+**66**), «233/196/184» de `mcp-allowlist-gateway`, «162 y 146 no-blancas / 145-145 no-blancas-no-comentario» de las dos puertas. 🔴 **Una corrección propia:** «186 crudas / **152** no-blancas» de `extract_surface.py` **tiene el valor bien y la métrica mal** (152 es no-blancas-**no-comentario**; no-blancas son **157**). ⚠️ **Y el gap cambia de forma otra vez:** ya no es nombrar la métrica ni propagar la corrección — es que **la regla «decir crudas o no-blancas-no-comentario» no alcanza cuando hay TRES métricas** |
+| **nuevo — el *backlink* de TENDENCIA** | ✅ **CERRADO con un CERO ganado** | `compose/code/trend-backlink-audit/`, **22/22**. **755 citas en los ocho archivos al correr la acción (786 al cierre del pase, porque este pase escribió secciones que citan tendencias), 0 colgadas en las dos mediciones, y las tendencias 1–219 definidas sin un solo hueco.** Control positivo: se inyectaron dos citas a numeros inexistentes —uno simple y un rango de tres— y **el instrumento marco las cuatro** y el archivo se revirtió. 🔵 **Corrige el diagnóstico del pase 48** (tendencia 228) y 🔴 **encontró su propio 7,3 % de pérdida antes de publicar** (tendencia 229) |
+| **vacío de descubrimiento APAC** | ✅ **CERRADO, y la respuesta parte en dos** | 🟢 **El canal era el problema:** **3 altas** por búsqueda de **organización** (`AI-Researcher`, `Paper2Slides`, `VideoAgent`), con **cero** coincidencias previas en los ocho archivos. 🔴 **El vacío EDUCATIVO es real:** **0 de 3** mencionan educación. **P110 escrito para componer sobre la capacidad en vez de esperar la pieza** |
+| **nuevo 232** 🔴 | **la superficie de LMS más grande de esta KB está bloqueada por un archivo** | `@imazhar101/mcp-canvas-server`: **227 tools** sobre Canvas, **sin licencia en los cuatro canales**. ⚠️ **Acción hacia afuera, no ejecutable desde acá:** pedir el `LICENSE` upstream. 🔵 **Es la gestión de mayor apalancamiento de esta base** |
+| **nuevo 233** ⚠️ | **¿hay una alternativa CON licencia que cubra parte de esas 227?** | Esta base tiene `canvas-mcp` (269★) y `canvas-lms-mcp` (bruchris, 8★) **sin superficie medida**. Hasta medirlo, **no se sabe si el bloqueo del gap 232 es real o sólo del paquete más grande**. Acción 3 del pase 50 |
+| **el bloqueante de `sisu-mcp`** | ⚠️ **BAJA DE GRADO, no se cierra** | La segunda fuente **existe** (MIT en registro **y** en el manifiesto embarcado, dos artefactos). 🔴 **Falta el texto y el código:** sin archivo de licencia y **sin repositorio publicado**, embarcando `dist/` compilado. **Sigue siendo la única puerta de SIS de educación superior de esta base**, y ahora con **12 tools confirmados de forma independiente** |
+| **el `LICENSE` de `Timadey/proctor`** | 🟢 **PRECISADO y reforzado** | El manifiesto **promete** `LICENSE` en su `files` y declara MIT: **defecto de documentación, no vacío de licencia** (tendencia 231). **El PR de un archivo sigue siendo el arreglo, y ahora el propio manifiesto lo pide** |
+| **92** (texto consolidado del AI Act) / **65** (primarias multilaterales) | 🔴 **ABIERTOS** — 🟢 **y el 65 mejora un grado** | Las tres acciones tenían prioridad. 🟢 **El barrido LATAM devolvió una primaria académica NUEVA y específica del sector: un *working paper* de la UNU sobre implementación de AI en educación superior en América Latina y el Caribe.** El BID vuelve a aparecer (tendencia 210). `multistate.us` sigue `EGRESS_BLOCKED` |
+| **69** (educación en la capa MCP brasileña) / **68** / **60** / **61** | 🔴 **ABIERTOS, sin cambios** | ⚠️ **Y se precisa el 69:** `@signdocs-brasil/mcp-server` **existe, es MIT con `LICENSE` real embarcado y tiene 26 herramientas**, pero es de **firma de documentos, no de educación**: confirma que la capa MCP brasileña está viva y que **lo que falta es la pieza educativa, no la infraestructura** |
+| **71** (duplicado en `agents/top.md`) | 🟢 **CERRADO y CONTROLADO en cada pase** | Con las tres altas: **69 filas, 64 *slugs* distintos, 0 duplicados**, y **0 filas de encabezado filtradas como dato** — ⚠️ **las 5 que lo parecen son los encabezados de las cinco tablas de ese archivo, y las cinco tienen su `\|---\|` debajo** (verificado en este pase) |
+
+## 🔵 Las tres acciones que el pase 49 deja escritas para el pase 50
+
+**Las tres son ejecutables en este entorno: ninguna necesita Docker, ni instalar dependencias de
+terceros, ni la API de GitHub. La primera es la de mayor rendimiento porque convierte una clase
+entera de cifras de «no verificable» en una columna medida; la segunda ataca la cifra de código más
+propagada de esta base, que nunca se re-verificó; la tercera decide si el bloqueo comercial del gap
+232 es real.**
+
+1. 🟢 **Correr el probe sobre TODOS los paquetes de registro que esta base cita, y extenderlo a
+   PyPI** (**cierra la parte medible del gap 101**). El pase 49 midió **6** paquetes y encontró
+   **dos sin licencia** y **227 tools** que nadie había contado. Esta base cita al menos **25**
+   nombres de registro distintos (`@longsightgroup/qti3-*` son doce, `@timeback/*`,
+   `@superbuilders/oneroster`, `@eduware/oneroster`, `@ajna-inc/openbadges`,
+   `@pie-element/multiple-choice`, `@citolab/qti-convert-local-ai`, `@public-ui/mcp`,
+   `@yunmiao/studymate`, `frappe-mcp-server`, …) **y dos en PyPI** (`openedx-mcp`,
+   `tutor-contrib-openedxmcp`). **La acción concreta:** un `--batch` que tome la lista, corra
+   `probe.py` sobre cada uno y publique la tabla **licencia (campo / archivo / repo) × superficie**;
+   y extender el probe al **sdist/wheel de PyPI**, que tiene la misma forma. ⚠️ **Y declarar el
+   denominador: los paquetes sin tarball publicado se listan como tales, no se adivinan.**
+   🔵 **El valor: `tools` y licencia dejan de ser prosa y pasan a ser una columna, para los ~25.**
+2. 🔴 **Verificar las cifras de código que apuntan a un árbol UPSTREAM, empezando por «164
+   métodos», que es la más propagada de esta base y nunca se re-midió** (**extiende gap 101**). El
+   inventario del pase 49 la encontró citada **13 veces** en `intel/trends.md`, más «**187
+   archivos**», «**72 rutas**», «**35 rutas**», «**341 operaciones**» y «**31 clases**». **Ninguna
+   es reproducible hoy porque el árbol no está en este entorno** — pero **sí es clonable**:
+   `--filter=blob:none --sparse` sobre `seb-server` y `UniTime` es el método que esta base ya usó en
+   los pases 44-46. **La acción concreta:** clonar los dos *sparse*, re-correr los extractores que
+   ya están versionados (`sebserver-mcp-gate/extract_surface.py`, `unitime-mcp-gate/extract_surface.py`,
+   `proctoring-reach-audit/extract_reach.py`), y **cruzar cada cifra publicada contra lo medido**.
+   ⚠️ **Y fijar la métrica: «métodos» hay que decir si cuenta firmas, `@abstractmethod` o
+   invocaciones** — es la regla de la tendencia 227 aplicada a una unidad que todavia no la tiene escrita. 🔵 **El valor: es la
+   mitad del gap 101 que el pase 49 declaró fuera de alcance por entorno y NO por canal, y resulta
+   que el entorno alcanza.**
+3. ⚠️ **Medir la superficie de las DOS alternativas con licencia a la puerta de Canvas, y decidir si
+   el gap 232 bloquea o no** (**gap 233**, nuevo). El pase 49 dejó el bloqueo planteado —**227 tools
+   sin licencia**— pero **no midió si hay sustituto**: esta base tiene `canvas-mcp` (**269★**) y
+   `canvas-lms-mcp` de bruchris (**8★**), **las dos sin superficie contada**. **La acción concreta:**
+   correr el probe o el conteo estático sobre las dos, **publicar la intersección**: cuántas de las
+   227 operaciones cubre una alternativa permisiva, y **cuáles son las que sólo tiene la pieza sin
+   licencia**. 🔵 **La hipótesis es explícita y falsable: si una alternativa con licencia cubre el
+   núcleo (cursos, tareas, calificaciones, matrículas), el gap 232 NO bloquea una entrega y la
+   gestión upstream baja de prioridad; si sólo cubre los bordes, el `LICENSE` de
+   `@imazhar101/mcp-canvas-server` es la gestión más valiosa de esta KB y hay que decirlo así en la
+   propuesta.**
+
+⚠️ **Y las acciones hacia afuera que esta corrida sigue sin poder ejecutar, declaradas para no
+perderlas:** 🔴 **el `LICENSE` de `@imazhar101/mcp-canvas-server`, que desbloquea 227 herramientas
+sobre Canvas y es la gestión de mayor apalancamiento de esta base** (gap 232); el `LICENSE` que
+falta en `Timadey/proctor`, **ahora con el argumento de que su propio manifiesto lo promete**
+(tendencia 231); el **repositorio y el texto de licencia** de `@ink-waffle/sisu-mcp`, la única
+puerta de SIS de educación superior de esta KB; el acceso de miembro a los repositorios de Caliper
+Sensor API de 1EdTech; **los dos PR a `giacomomaria81/scorm-mcp-server`** (el gancho de metadatos en
+`buildManifestFor`, gap 100, y el `import` de una línea en `wrapper12.xsd`, gap 102); y 🔵 **el
+texto consolidado del Reglamento (UE) 2024/1689, inalcanzable por CUATRO canales** (gap 92).
+
 ## 🔵 Las tendencias 211–219, del pase 48 del 2026-10-02
 
 **Las nueve salen de ejecutar las tres acciones del pase 47 y el barrido obligatorio. Cinco corrigen afirmaciones de

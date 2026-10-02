@@ -50,6 +50,76 @@ python3 extract_figures.py <ruta>       # cualquier archivo suelto
    **326** conteos de `tools`, **50** descargas. Las **1.775** restantes sí lo son, y son las únicas que una propuesta
    puede defender hoy.
 
+## 🔴 Pase 49: las 7 cifras «vencidas» del `--crossref` eran falsas, y la causa era la VENTANA
+
+**El pase 48 cerró en «15 concuerdan / 0 vencidas». El pase 49 corrió el mismo comando y obtuvo
+7 VENCIDAS.** Ninguna era real, y el motivo tardó dos lecturas en aparecer — por eso hay un
+`test_crossref.py` con **21/21** controles:
+
+1. **Primera lectura:** la prosa *«ya dice el número correcto y cita el viejo como historia»*.
+   Es cierto de **una** línea (`repos/foundations.md:30`: *«11/11 checks» (hoy 37/37), «23
+   aserciones» (hoy 46)*), y produjo una regla de corrección.
+2. 🔴 **Después se corrió el control, y la regla resultaba satisfecha por COINCIDENCIA:** la ventana
+   que el instrumento le pasaba medía **5.635 caracteres** en `repos/foundations.md` y **9.914** en
+   `verticals/solutions.md`.
+
+**La causa, medida:** la regla del pase 48 era *«fila de tabla ⇒ la fila; prosa ⇒ el párrafo»*, y el
+código hacía crecer la ventana mientras las líneas no fueran blancas ni filas de tabla.
+🔴 **Los ocho archivos de esta base abren con un `>` *blockquote* largo y sin una sola línea en
+blanco**, así que «el párrafo» se tragaba el encabezado entero del archivo — y **una suite nombrada
+4.000 caracteres más lejos se leía como la dueña de la cifra**.
+
+🔵 **La medición que lo prueba, y que es contraintuitiva:** acotar la ventana subió
+`unattributed` de **31 a 36**. **Cinco atribuciones las fabricaba el tamaño de la ventana.** Un
+instrumento de citas que atribuye de más no es optimista: es falso, y en la dirección peligrosa,
+porque **un pase siguiente habría «corregido» prosa que estaba bien**.
+
+| Estado | Pase 48 | Pase 49, ventana sin acotar | Pase 49, ventana acotada |
+|---|---|---|---|
+| concuerdan | 15 | 17 | **12** |
+| 🔴 **VENCIDAS** | 0 | 🔴 **7** | 🟢 **0** |
+| sin condición | 0 | 0 | **0** |
+| citadas **como ya corregidas** (historia) | — | 7 | **3** |
+| 🆕 **AMBIGUAS** (no coinciden con ninguna de varias suites nombradas) | — | 0 | **1** |
+| sin atribuir (**no se adivinan**) | 29 | 31 | ⚠️ **36** |
+
+**La ventana correcta es la que el propio comentario del código describía:** la prosa va cortada a
+~100 caracteres, así que una condición puede vivir **una línea más abajo**. **Una línea más abajo es
+la ventana** — acotada, no un corrido. `figure_window()` queda como función pura y con controles.
+
+### 🔴 Y dos defectos más de atribución, que inflaban la cuenta
+
+1. **Una cifra que no coincide con NINGUNA de varias suites nombradas se cargaba a TODAS.**
+   El comentario lo decía explícito (*«si no coincide con ninguna, se reporta contra todas»*), y eso
+   convierte **una** cifra en **N** hallazgos: las 7 vencidas eran **3 cifras**. Ahora es
+   **`AMBIG`: se reporta una vez y no se le asigna dueño**, que es la regla que esta carpeta ya tenía
+   escrita para los *slugs* y no estaba aplicada acá.
+2. **`named = owners` se hacía DENTRO del bucle por cifra**, así que la primera cifra de una línea
+   **angostaba permanentemente** la lista de suites para todas las siguientes de la misma línea.
+   La resolución es por cifra ahora, y hay un control de no-mutación.
+
+### Las cifras de código verificadas a mano en este pase
+
+**El denominador declarado primero**, porque es la mitad del resultado: de las **1.672** mediciones
+de `intel/market.md` (**912**) e `intel/trends.md` (**760**), sólo **195 (11,7 %)** son de las
+unidades reproducibles acá (`lines`, `assertions`, `routes`, `methods`, `files`, `rows`, `classes`,
+`modules`, `tables`, `fields`). ⚠️ **Las 1.477 restantes NO se tocaron y se declara por qué:**
+**916** `percent` (derivadas: hay que nombrar numerador y denominador, no el porcentaje), **389**
+`★`, **83** `commits`, **83** `tools`, **10** `downloads`. 🟢 **Y de esas clases, `tools` y las
+licencias dejaron de estar cerradas en este pase** — ver `../npm-surface-probe/`.
+
+| Cifra publicada | Instrumento | Hoy | Veredicto |
+|---|---|---|---|
+| «**66 filas**, **61** *slugs* distintos, **0** duplicados» (el control de cada pase) | tabla principal de `agents/top.md`, líneas 398–465 | **68** líneas de pipe = 1 encabezado + 1 separador + **66 filas**; **61** *slugs* distintos; **0** duplicados | 🟢 **reproduce exacto** |
+| «**233** crudas / **196** no-blancas / **184** no-blancas-no-comentario» (`mcp-allowlist-gateway`) | `wc -l` + `grep -cvE` sobre `gateway.py` + `policy.py` | **128+105 = 233** / **113+83 = 196** / **108+76 = 184** | 🟢 **reproduce exacto** |
+| «**162** y **146** no-blancas; **145/145** no-blancas-no-comentario» (las dos puertas) | ídem sobre los dos `gate.py` | seb **189/162/145**, UniTime **171/146/145** | 🟢 **reproduce exacto** — la corrección del pase 48 se sostiene |
+| «**186** crudas / **152** no-blancas» (`extract_surface.py`, en este README) | ídem | **186** crudas, **157** no-blancas, **152** no-blancas-no-comentario | 🔴 **el valor es correcto y la MÉTRICA está mal etiquetada**: 152 es no-blancas-**no-comentario**; no-blancas son **157** |
+| las **5** filas que parecen encabezado en `agents/top.md` (L398, 605, 746, 794, 851) | ¿tienen un `\|---\|` debajo? | **las cinco lo tienen** | 🟢 **son encabezados legítimos, no datos filtrados** |
+
+🔵 **La cuarta fila es el gap 101 en su forma más barata y más terca:** la encontró el propio
+archivo que existe para evitarla, **tres pases después de escribir la regla**. La regla —*«decir
+crudas o no-blancas-no-comentario»*— **no alcanza cuando hay TRES métricas y no dos.**
+
 ## 🟢 `--crossref`: el defecto NO era que una cifra se venza
 
 **El pase 47 corrigió «11/11 checks» en `compose/patterns.md`. La misma cifra siguió viva en otros archivos.**
