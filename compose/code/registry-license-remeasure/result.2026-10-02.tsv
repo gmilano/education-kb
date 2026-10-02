@@ -1,0 +1,12 @@
+paquete	repo_declarado	A_20nombres	B_hermano	C_tarball_ancla_corregida	veredicto_pase52	veredicto_pase50	cambia
+@superbuilders/oneroster	trilogy-group/oneroster-ts	licenciado main:LICENSE	n/a	package/LICENSE	licenciado 0BSD	licenciado (texto no identificado)	TEXTO IDENTIFICADO
+@eduware/oneroster	Eduware-Inc/eduware-oneroster	indeterminado	sin hermano en el registro	package/LICENSE	licenciado 0BSD + campo MIT DISCREPA	indeterminado	SI
+@osu-cass/sb-components	osu-cass/sb-components	indeterminado	osu-cass/tslint-config master:README 200 -> repo NO PUBLICO	package/LICENSE	licenciado MPL-2.0	indeterminado	SI
+@learninglocker/xapi-agents	LearningLocker/xapi-agents	indeterminado	xapi-validation + xapi-service 404 -> canal NO llega a la org	package/license (minuscula)	licenciado GPL-3.0	indeterminado	SI
+@owen-x-tech/canvas-mcp	owentaylor/canvas-mcp	indeterminado	sin hermano en el registro	raiz=0 recursivo=0	campo MIT SIN TEXTO por tres canales	indeterminado	PRECISADO
+frappe-mcp-server	appliedrelevance/frappe_mcp_server	indeterminado	sin hermano en el registro	raiz=0 recursivo=0	campo ISC SIN TEXTO por tres canales	indeterminado	PRECISADO
+@pie-element/multiple-choice	pie-framework/pie-elements-ng	sin-licencia master:README 200	n/a	raiz=0 recursivo=0	sin licencia CONFIRMADO por dos canales	sin licencia	CONFIRMADO
+@pie-element/rubric	pie-framework/pie-elements-ng	sin-licencia master:README 200	n/a	raiz=0 recursivo=0	sin licencia CONFIRMADO por dos canales	sin licencia	CONFIRMADO
+@moinsen-dev/tool-teacher	moinsen-dev/tool-teacher	sin-licencia master:README 200	n/a	raiz=0 recursivo=0	campo MIT sin texto CONFIRMADO	campo MIT sin texto	CONFIRMADO
+@timeback/caliper	-	sin repo declarado	n/a	raiz=0 recursivo=0	sin licencia por dos canales	sin campo de licencia	CONFIRMADO
+@timeback/oneroster	-	sin repo declarado	n/a	raiz=0 recursivo=0	sin licencia por dos canales	sin campo de licencia	CONFIRMADO

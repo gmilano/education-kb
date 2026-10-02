@@ -43,13 +43,27 @@ o la variable de entorno (regla de **P107**, pase 47):
 | ídem, con el árbol upstream | ídem + regeneración byte a byte de las tablas | `python3 test_reach.py /ruta/a/seb-server` | **20/20** |
 | `openedx-course-generator/` | genera un curso de Open edX sin levantar la plataforma | `python3 test_plan.py` | **33** |
 | `seb-proctoring-validator/` | validador que rechaza ajustes de terceros incompletos | `sh run_test.sh` | **21/21** |
+| **`registry-license-remeasure/`** | **el ancla de licencia del tarball: encuentra con cualquier capitalización Y sigue rechazando `node_modules`** | `python3 test_anchor.py` | **24/24** |
+| `npm-surface-probe/` | licencia y superficie de un paquete MCP desde el *tarball* del registro | `python3 test_probe.py` | **19/19** |
+| `mcp-allowlist-gateway/` | puerta MCP con *allowlist*: lo no listado no llega al upstream | `python3 test_gateway.py` | **ALL PASSED** |
+| `trend-backlink-audit/` | cada tendencia citada tiene su sección y su evidencia | `python3 test_trends.py` | **22/22** |
 
-🔴 **Advertencia del pase 50 del 2026-10-02: la columna «Hoy» NO se re-verificó en este pase.** El entorno de la
-corrida **negó la ejecución de código de este repositorio** (`[Code from External]`), así que **ninguna de las trece
-suites se corrió** y los valores de arriba son los del **pase 49**. ⚠️ **Siguen siendo las cifras publicadas con su
-invocación, pero su fecha de verificación es la del pase anterior, no la de hoy** — que es exactamente la distinción
-que la regla de **P107** existe para hacer. **El pase 50 midió por el canal de red, que sí estaba abierto:**
-licencias de **30 de 32** paquetes de registro (ver `repos/trending.md` y **P114**).
+🟢 **Corrección del pase 52 del 2026-10-02: la columna «Hoy» SÍ se re-verificó, y estaba estancada desde el pase 49
+por una conclusión demasiado amplia.** Los pases 50 y 51 escribieron que *«el entorno niega la ejecución de código de
+este repositorio»* (`[Code from External]`) y dejaron de intentarlo. **Este pase midió la frontera exacta de esa
+negativa y es más angosta:**
+
+| Qué se corre | Resultado en este entorno |
+|---|---|
+| las suites **OFFLINE** (`test_*.py`, `run_test.sh`) | 🟢 **corren todas, y los doce valores de arriba se reprodujeron hoy** |
+| un script del repositorio que **sale a la red** (`probe.py`) | 🔴 **NEGADO (`[Code from External]`)** |
+
+🔵 **O sea que la negativa es sobre EJECUTAR CON RED código que vino clonado, no sobre ejecutar el código.** ⚠️ **La
+consecuencia de método, que es la que vale: una negativa puntual se midió por su caso más amplio y se publicó como
+regla general, y eso costó DOS pases de cifras sin re-verificar** — exactamente el error que **P107** existe para
+evitar, cometido sobre el propio instrumento. 🔴 **Lo único que sigue bloqueado es la acción 2** (hacer comparables las
+superficies de Canvas, **227** vs **165**), **porque exige `probe.py` con red**, y por eso el permiso que hay que
+pedir es **salida de red para ese script**, no permiso de ejecución. Ver **P119** y la tendencia **280**.
 
 ⚠️ **Las dos filas «ídem» no son adorno: son el caso que el pase 47 encontró citado sin su
 condición.** Una cifra de aserciones sin la invocación que la produce no se puede reproducir, aunque

@@ -8,6 +8,7 @@ updated: 2026-10-02
 
 > Recetas concretas: repos nombrados, licencias verificadas, wiring explícito y estimación.
 > Todos los repos citados fueron verificados vía WebFetch el 2026-09-30; los del pase 11, el 2026-10-01 (ver `agents/top.md`).
+> **Pase 52 del 2026-10-02:** **+3 patrones, y el más importante abre un EJE que esta base no tenía.** **P118** agrega la tercera pregunta del filtro de componentes —*¿la pieza respeta los controles de acceso de la institución?*— porque `canvas-student-mcp` es **MIT verificado por dos artefactos**, pasa P115 y pasa P116, **y su argumento de venta es eludir que la universidad deshabilitó la emisión de tokens**, resolviéndolo con la cookie de sesión del alumno: 🔴 **licencia impecable y NO entregable**, con `@mtgibbs/canvas-lms-mcp` como contraejemplo de misma licencia y misma plataforma que sí usa el token institucional. **P119** corrige la regla que el pase 51 declaró obligatoria: el ancla del tarball era **CASE-SENSITIVE** y perdió `package/license` con **35.121 bytes de GPL-3.0**, así que el ancla tiene que ser insensible a mayúsculas **y seguir anclada** —si se desancla vuelve a publicar las **144** licencias de `node_modules`— 🔵 **y la regla de método que deja es que un instrumento recién corregido es el MENOS probado de todos, por lo que toda corrección sale con un control offline que reproduce el defecto y conserva el control positivo del anterior (24/24 sin red).** **P120** sube la unidad de cotización del paquete al **ALCANCE** (`@timeback/*` 3 de 3 sin licencia, `@ink-waffle/*` 2 de 2 con campo sin texto), ⚠️ **declara que un «3 de 3» con denominador encontrado de paso no es el del alcance enumerado** y marca su propio límite: **la organización de GitHub NO es clave**, porque `pie-framework` publica `pie-qti` (ISC) y `pie-elements-ng` (sin licencia). ⚠️ **Y la nota de alcance de P113 se precisa: la comparación de superficies de Canvas sigue sin instrumento único, pero este pase midió que la suite OFFLINE del probe CORRE y es la ejecución CON RED la que se niega, así que lo que falta pedir es salida de red.**
 > **Pase 51 del 2026-10-02:** **+3 patrones, y los tres salen de ejecutar las acciones 1 y 3 del pase 50.** **P115** convierte el filtro de licencias en una **auditoría de 5 pasos** con los 20 nombres de archivo, el control del hermano y el probe anclado por tarball — medido sobre **167** repos (**139/23/5**) y corrigiendo **4 falsos «sin licencia» de 27**, `moodle/moodle` entre ellos. **P116** separa las dos preguntas que esta base venía mezclando —*«¿hay permiso escrito?»* y *«¿se puede usar en una entrega comercial?»*— porque una pieza con `LICENSE` de 200 y texto real resultó ser **académica no comercial**. **P117** es el pipeline de descubrimiento por el `?text=` del registro, que **rompió nueve pases de sequía** con 4 altas y trae el control del gap 71 adentro. ⚠️ **Y la nota de alcance que P113 arrastra: la comparación de superficies de Canvas sigue sin poder hacerse con un instrumento único porque exige ejecutar código versionado, negado en los pases 50 y 51.**
 > **Pase 50 del 2026-10-02:** **+2 patrones, y los dos salen de la mitad de la acción 1 del pase 49 que no necesitaba ejecutar código.** **P113** saca la entrega sobre Canvas de la dependencia de un archivo ajeno: **dos puertas MIT con texto de licencia verificado**, la mayor con **165** tools cubriendo los cuatro dominios del núcleo, **el servidor de 227 sin licencia pasa a opcional**, y ⚠️ **la resta 227−165 queda prohibida por ser de dos instrumentos**. **P114** convierte en puerta de entrada el filtro de licencias de **dos artefactos con salida de TRES valores** (`licenciado` / `sin licencia` / `indeterminado`), medido sobre 30 paquetes: **se equivoca en los dos sentidos si se lee uno solo**, y sin el control de alcanzabilidad publica **7 falsos «sin licencia»** donde hay **2**.
 > **Pase 49 del 2026-10-02:** **+3 patrones, y los tres salen de las tres acciones del pase 48.** **P110** es el
@@ -109,6 +110,167 @@ updated: 2026-10-02
 > propuesta, no se descubre en la semana 6. Ver la sección de auditoría abajo y **P78**. 🟢 **Lo que sí está sano:** `lrsql`
 > (Apache-2.0, **v0.9.9 del 2026-10-01**), Ralph (MIT, vivo en `main`), las cuatro puertas de Canvas y Moodle-alumno
 > (commits de las últimas dos semanas) y `qti3-cli` (MIT). **El resto de las recetas no cambia.**
+
+## P118 — Preguntar si la pieza RESPETA los controles de acceso de la institución, porque la licencia no lo dice (agregado en el pase 52 del 2026-10-02)
+
+**Qué resuelve.** **P115 pregunta *«¿hay permiso escrito?»*. P116 pregunta *«¿se puede usar en una
+entrega comercial?»*. Hay una tercera pregunta que esta base nunca había hecho y que las dos
+anteriores no pueden responder:** *¿la pieza respeta los controles de acceso de la institución que
+la va a alojar?*
+
+🔴 **El caso que lo obligó.** `canvas-student-mcp` **1.3.3** tiene **MIT** verificado por **dos
+artefactos independientes** —`main:LICENSE` por `raw` y `package/LICENSE` en el tarball—, o sea que
+pasa P115 y pasa P116 sin una sola observación. **Y su argumento de venta, textual en el README, es
+`works even when your school disables API tokens`:** el problema que resuelve es que **muchas
+universidades deshabilitan a propósito la emisión de tokens a los alumnos**, y lo resuelve
+instruyendo al alumno para que **extraiga la cookie de sesión desde las DevTools del navegador**.
+
+⚠️ **Eso no es una deficiencia de licencia ni de calidad: el código es correcto y hace lo que
+promete.** Es que **trata una decisión de gobernanza de la institución como un obstáculo técnico**,
+y un cliente institucional lo trata como **incidente de seguridad**, no como detalle de
+integración.
+
+### El cableado — la tercera pregunta, después de P115 y P116
+
+Sobre cada pieza que hable con un LMS, un SIS o un LRS del cliente, se clasifica en **tres
+valores**, igual que la licencia:
+
+| Clase | Qué significa | Qué se hace |
+|---|---|---|
+| 🟢 **(a) credencial emitida por la institución** | token de API, cuenta de servicio, OAuth con cliente registrado, LTI | **entra**; la institución ya consintió el acceso |
+| 🔴 **(b) credencial de sesión del usuario final** | cookie de sesión, *scraping* autenticado, automatización del navegador del alumno | **no entra sin consentimiento EXPLÍCITO y escrito de la institución**, y se declara en la propuesta |
+| ⚠️ **(c) no determinable del README** | el documento no dice cómo autentica | **se mide leyendo el código antes de cotizar**, no se asume (a) |
+
+🔵 **La regla de redacción, que es la mitad del patrón:** cuando una pieza cae en (b), **la fila la
+lleva escrito al lado de la licencia, no en una nota aparte** — porque el lector que copia el nombre
+desde una celda que dice *«MIT ✅»* se lleva el nombre y no la advertencia. **Es la misma lección
+que obligó a DESARMAR las listas agregadas en este pase.**
+
+### Lo que este patrón NO dice
+
+⚠️ **No dice que la clase (b) sea software malicioso, y no hay que presentarla así.** La cookie de
+sesión del propio usuario es un mecanismo legítimo en otros contextos, y la pieza puede ser
+perfectamente razonable para un alumno que la corre para sí mismo. 🔴 **Lo que dice es que una
+consultora no puede desplegarla DENTRO de la institución cuya política está eludiendo**, y que esa
+distinción no aparece en ningún filtro de licencias.
+
+### El contraste que lo hace operativo
+
+| Pieza | Licencia | Superficie | Autenticación | Veredicto |
+|---|---|---|---|---|
+| `canvas-student-mcp` 1.3.3 | **MIT** ✅ ×2 | 30 tools, read-only | 🔴 **cookie de sesión, para sortear la política de tokens** | 🔴 **clase (b)** |
+| `@mtgibbs/canvas-lms-mcp` 0.2.18 | **MIT** ✅ ×2 | 10 tools, read-only declarado | 🟢 **el token que la institución emite** | 🟢 **clase (a)** |
+
+🔵 **Misma licencia, misma plataforma, misma clase de superficie y veredicto opuesto.** **Ésa es la
+prueba de que el eje es independiente de los otros dos y no un refinamiento de ninguno.**
+
+## P119 — Un instrumento recién corregido es el MENOS probado: anclar Y desanclar el probe de licencia del tarball (corrige la regla del pase 51, agregado en el pase 52 del 2026-10-02)
+
+**Qué resuelve.** El pase 51 cerró con una regla correcta y bien fundada: **el probe de licencia por
+tarball TIENE que anclar a la raíz del paquete**, porque `tutors-publish-npm` empaqueta sus
+`node_modules` y un `grep` recursivo encuentra **144** archivos de licencia **ajenos** mientras la
+raíz tiene **0** (tendencia 259). El ancla que se escribió fue:
+
+```
+^package/(LICEN[CS]E|COPYING)[^/]*$
+```
+
+🔴 **Esa ancla es CASE-SENSITIVE, y por eso produjo un falso negativo un pase después:**
+
+| Paquete | Qué envía | Ancla del pase 51 | Ancla de P119 |
+|---|---|---|---|
+| `@learninglocker/xapi-agents` 4.4.3 | **`package/license`**, minúscula, sin extensión, **35.121 bytes** de GPL-3.0 íntegra | 🔴 **raíz=0** → *«sin licencia en el tarball»* | 🟢 **raíz=1 → GPL-3.0** |
+
+🔵 **Es exactamente el mecanismo de la tendencia 252** —*una lista de nombres de archivo de licencia
+es un supuesto cultural disfrazado de detalle técnico*— **una capa más adentro: el supuesto ya no
+estaba en una lista, estaba en una expresión regular, y la había escrito el pase que acababa de
+descubrir el problema en su otra forma.**
+
+### El cableado
+
+```sh
+# El ancla tiene que cumplir DOS cosas, no una:
+ANCHOR='^package/(licen[cs]e|copying)([._-][A-Za-z0-9]+)?$'
+tar -tzf "$T" | grep -i -m1 -E "$ANCHOR"     # 1. encuentra con cualquier capitalizacion
+tar -tzf "$T" | grep -icE 'licen[cs]e|copying'  # 2. y se compara con el recursivo, que NO decide
+```
+
+| Condición | Por qué | Qué la rompe |
+|---|---|---|
+| **1. insensible a mayúsculas** | `package/license`, `package/License`, `LICENCE` británica (tendencia 256), `COPYING.txt` del mundo GNU (tendencia 252) | una lista de nombres escrita desde un solo ecosistema |
+| **2. SIGUE anclada a la raíz de `package/`** | si no, vuelve a contar las **144** licencias de `node_modules` y **publica texto VERDADERO de un proyecto AJENO** (tendencia 259) | «arreglar» el regex quitándole el ancla junto con las mayúsculas |
+| **3. nombre EXACTO, no prefijo** | `licenses.json` es un inventario y `LICENSES` un directorio: **ninguno es un texto de licencia** | `[^/]*$` detrás del nombre, que admite cualquier sufijo |
+
+### La regla de método, que vale más que el regex
+
+🔴 **Un instrumento recién corregido es el MENOS probado de todos, y el pase que lo escribe es el que
+tiene menos derecho a confiar en él.** La corrección del pase 51 se declaró **obligatoria** en el
+mismo pase en que se escribió, sin un control que la ejercitara contra capitalizaciones distintas.
+
+🔵 **La consecuencia operativa: toda corrección de instrumento de esta KB sale con un control
+OFFLINE que (a) reproduce el defecto que corrige y (b) conserva el control positivo del defecto
+anterior.** `compose/code/registry-license-remeasure/test_anchor.py` hace las dos cosas: **24/24 sin
+red**, con `package/license` demostrando la pérdida del pase 51 y las 144 rutas de `node_modules`
+demostrando que el ancla sigue cumpliendo su función original.
+
+⚠️ **Y la deuda que esto crea, escrita como acción para el pase 53: hay que re-medir con el ancla
+corregida todos los paquetes que los pases 49–51 declararon «sin texto en el tarball», porque el
+defecto pudo haber producido más de un falso.**
+
+## P120 — Cotizar por ALCANCE y no por paquete, porque el alcance es la unidad de riesgo de licencia (agregado en el pase 52 del 2026-10-02)
+
+**Qué resuelve.** Esta base venía descubriendo paquetes sin licencia **de a uno**, y cada uno entraba
+como *«fila a revisar»*. **Tres pases de medición muestran que la unidad real no es el paquete: es el
+ALCANCE**, porque el alcance refleja una práctica de publicación de una organización y esa práctica
+no cambia entre paquetes.
+
+| Alcance | Estado medido | Paquetes |
+|---|---|---|
+| **`@timeback/*`** | 🔴 **3 de 3 sin licencia por NINGÚN canal** | `oneroster` 0.3.3 (pase 49), `caliper` 0.3.3 (pase 50), **`qti` 0.4.1** (pase 52: sin campo, sin repositorio, `raíz=0 recursivo=0` **y sin descripción**) |
+| **`@ink-waffle/*`** | 🔴 **2 de 2 campo `MIT` y CERO texto** | `sisu-mcp` 0.1.0 (pase 49), **`moodle-mcp` 0.2.0** (pase 52) |
+| **`@pie-element/*`** | 🔴 **2 de 2 sin licencia, y no son prototipos** | `multiple-choice` **14.0.0**, `rubric` **9.0.0** |
+
+🔵 **Tres confirmaciones independientes dejan de ser una anécdota: `@timeback/*` no entra en una
+entrega sin gestión previa, y eso se decide SIN mirar el paquete.** Es el mismo movimiento que la
+tendencia 263 pedía cuando concluyó que la clave de un inventario es `org/repo` o
+`alcance/paquete`, nunca el nombre del proyecto.
+
+### El cableado
+
+```sh
+# 1. enumerar el alcance ENTERO por el buscador del registro, no el paquete que apareció de paso
+curl -s "https://registry.npmjs.org/-/v1/search?text=@timeback&size=100"
+# 2. medir CADA uno con P115 + el ancla de P119
+./measure_candidate.sh @timeback/oneroster @timeback/caliper @timeback/qti ...
+# 3. publicar "N de N" con el N COMPLETO, y declarar si el N salió de enumerar o de tropezar
+```
+
+⚠️ **La trampa que hay que declarar, y es la que este pase todavía tiene abierta: «3 de 3» con un N
+que se encontró de paso NO es «3 de 3» del alcance.** Las reglas de arriba se escribieron sobre
+**5 paquetes en total** que esta base encontró buscando otras cosas. 🔵 **Mientras el denominador no
+sea el alcance enumerado, la regla se publica como *«3 de los 3 medidos»*, que es más débil y es la
+verdad.**
+
+### La hipótesis que haría caer la regla, y hay que estar dispuesto a escribirla
+
+🔴 **Si al enumerar el alcance completo aparece UN paquete de `@timeback/*` con texto de licencia, la
+regla pasa de *«el alcance no entra»* a *«el alcance se revisa paquete por paquete»***, que es una
+recomendación mucho más débil. **Una regla de cotización por alcance sólo vale si se declara qué
+observación la rompería.**
+
+### Y el límite del patrón: la ORGANIZACIÓN no es clave
+
+⚠️ **Lo que vale para el alcance de un registro NO vale para una organización de GitHub, y este pase
+tiene el contraejemplo adentro:**
+
+| Organización | Repo | Licencia |
+|---|---|---|
+| `pie-framework` | `pie-qti` | **ISC** (texto en tres artefactos) |
+| `pie-framework` | `pie-elements-ng` | 🔴 **sin licencia** |
+
+🔵 **La misma organización publica un repo licenciado y otro sin licencia, así que agrupar por
+organización de GitHub sobre-generaliza en los dos sentidos.** **El alcance de npm funciona como
+unidad porque es un acto de publicación; la organización de GitHub es sólo un contenedor.**
 
 ## P115 — Auditar la licencia de una capa entera en 5 pasos, con los nombres de archivo que los ECOSISTEMAS usan de verdad (corrige y extiende **P114**, agregado en el pase 51 del 2026-10-02)
 
@@ -1235,7 +1397,7 @@ cliente instala** (tendencia 147).
 - **Retención:** [py-fsrs](https://github.com/open-spaced-repetition/py-fsrs) (MIT, 499 ★) — scheduling DSR con 21 parámetros optimizables
 - **Mastery:** lógica de Bayesian Knowledge Tracing de [OATutor](https://github.com/CAHLR/OATutor) (MIT) + su contenido curado de OpenStax en JSON
   - 🔴 **Corregido en el pase 10:** el **código** de OATutor es MIT y no está en discusión; **el contenido sí**. OATutor declara en su README que su contenido es **CC BY 4.0**, y el archivo `LICENSE` de los bundles de OpenStax en GitHub dice **CC BY-NC-SA** — incluido **Calculus Volume 1**, que OATutor declara curar (verificado 3 de 3 bundles: Calculus, Biology, College Physics). **NonCommercial prohíbe el uso en un entregable facturado y ShareAlike obliga a abrir la derivación.** Antes de usar este contenido en un proyecto pago hay que leer **el campo de licencia de cada ítem JSON** —que es donde OATutor dice que está la licencia real— y producir el manifiesto de **P22**. Ver el **trend 22** y el **gap 17**
-- **Evaluación:** [AITutor-EvalKit](https://github.com/kaushal0494/AITutor-EvalKit) (MIT) — mide Mistake Identification, Mistake Location, Providing Guidance, Actionability
+- **Evaluación:** [AITutor-EvalKit](https://github.com/kaushal0494/AITutor-EvalKit) (🚫 **sin licencia, pase 51**) — mide Mistake Identification, Mistake Location, Providing Guidance, Actionability
 
 **Wiring.** DeepTutor conversa. `tutor-mcp` se monta como servidor MCP y es la **única** fuente de verdad del estado del aprendiz — DeepTutor no guarda mastery en su memoria, la consulta. Cada intento del alumno actualiza BKT (mastery) y alimenta `py-fsrs` (cuándo repasar). `py-fsrs` emite la cola de repaso que DeepTutor usa para abrir la sesión siguiente. Todas las decisiones pedagógicas se loguean con timestamp y razón. `AITutor-EvalKit` corre en CI contra MRBench como gate de regresión pedagógica.
 
@@ -1381,7 +1543,7 @@ Lo que hace este patrón distinto de una consultoría de políticas: la ley rest
 - **Host / sistema de registro:** [Moodle](https://github.com/moodle/moodle) (GPL-3.0) vía plugin del **AI subsystem** — no tocar el core. Si el distrito usa Canvas, [Canvas LMS](https://github.com/instructure/canvas-lms) (AGPL-3.0) por **LTI 1.3**, nunca fork
 - **Gate de decisiones auditables:** [tutor-mcp](https://github.com/ArnaudGuiovanna/tutor-mcp) (MIT, Go) — estado durable del aprendiz y **decisiones pedagógicas auditables con razón y timestamp**. Es la pieza que convierte "hay human-in-the-loop" en un registro consultable
 - **Gate de escritura en grading:** [gradescope-mcp](https://github.com/Yuanpeng-Li/gradescope-mcp) (MIT) — 34 tools sobre Gradescope con **escrituras detrás de confirmación explícita**. Ver el gap 6: el grading open source no existe, así que se orquesta el incumbente
-- **Evidencia de calidad pedagógica:** [AITutor-EvalKit](https://github.com/kaushal0494/AITutor-EvalKit) (MIT) — 4 dimensiones sobre MRBench, corriendo en CI
+- **Evidencia de calidad pedagógica:** [AITutor-EvalKit](https://github.com/kaushal0494/AITutor-EvalKit) (🚫 **sin licencia, pase 51**) — 4 dimensiones sobre MRBench, corriendo en CI
 - **Formación docente (lo que Maryland paga):** [ai-engineering-from-scratch](https://github.com/rohitg00/ai-engineering-from-scratch) (MIT, 62.1k ★, 523 lecciones en 20 fases) como cantera de currículum, recortado a un track docente corto
 - **Currículo AI para créditos de CS (GA, MS):** [LLMs-from-scratch](https://github.com/rasbt/LLMs-from-scratch) (Apache-2.0) y [minimind](https://github.com/jingyaogong/minimind) (Apache-2.0)
 
@@ -1496,7 +1658,7 @@ Hasta este pase la KB no tenía con qué responder. Ahora sí, y las piezas son 
 
 | Rol | Pieza | Licencia | Stars |
 |-----|-------|----------|-------|
-| Taxonomía de daño pedagógico + dataset de evaluación | **[SafeTutors](https://github.com/RadiantCrystal/SafeTutors)** — 11 dimensiones, 48 sub-riesgos, 5.955 instancias (3.135 single-turn + 2.820 multi-turn), matemática/física/química | MIT ✅ | 0 |
+| Taxonomía de daño pedagógico + dataset de evaluación (🚫 **sin licencia, pase 51**) | **[SafeTutors](https://github.com/RadiantCrystal/SafeTutors)** — 11 dimensiones, 48 sub-riesgos, 5.955 instancias (3.135 single-turn + 2.820 multi-turn), matemática/física/química | MIT ✅ | 0 |
 | Fidelidad pedagógica transversal a materia | **[EduBench](https://github.com/ybai-nlp/EduBench)** — 9 contextos, 4.000+ situaciones, 12 dimensiones, incluye 4 escenarios docentes | MIT ✅ | 29 |
 | Seguridad adversaria del modelo como docente | **[EduGuardBench](https://github.com/YL1N/EduGuardBench)** — SATA + prompts adversarios de mala conducta académica | ⚠️ sin licencia | 4 |
 | Motor de scoring por rúbrica ponderada | **[rubric](https://github.com/paper-instruments/rubric)** — criterio por criterio, single-pass u holístico, Pydantic | MIT ✅ | 75 |
@@ -1513,7 +1675,7 @@ Hasta este pase la KB no tenía con qué responder. Ahora sí, y las piezas son 
 
 **Lo que se toma hecho vs. lo que se construye.** Se toman SafeTutors, EduBench y `rubric`. Se construye el mapeo del paso 1, la integración en CI del paso 5 y el reporte del paso 7. **Proporción deliberadamente parecida a P10:** el cliente paga integración y evidencia.
 
-⚠️ **Licencias.** `SafeTutors`, `EduBench` y `rubric` son **MIT** — es la primera vez en esta KB que un patrón de evaluación no arrastra fricción de Creative Commons. **`EduGuardBench` no declara licencia**: usarlo para leer y diseñar, **no** incorporar sus datasets a un entregable. Si hace falta el ángulo adversario dentro del entregable, escribir prompts propios siguiendo su estructura.
+⚠️ **Licencias, CORREGIDAS en el pase 51.** `EduBench` y `rubric` son **MIT**; 🔴 **`SafeTutors` NO: la ausencia de texto de licencia está MEDIDA** (20 nombres × 2 ramas en 404, `README.md` en 200). **Este patrón apoyaba su afirmación de «sin fricción» en tres piezas y una de las tres no la tiene**, así que el paso 1 exige gestión del `LICENSE` o reemplazo de la taxonomía. **`EduGuardBench` no declara licencia**: usarlo para leer y diseñar, **no** incorporar sus datasets a un entregable. Si hace falta el ángulo adversario dentro del entregable, escribir prompts propios siguiendo su estructura.
 
 ⚠️ **Y lo que hay que verificar antes de ponerlo en una slide:** los hallazgos de anti-correlación (ELBench) y de incompetencia dominante (EduGuardBench) **no pudieron verificarse en la fuente primaria** — `arxiv.org` y `ojs.aaai.org` están bloqueados en el entorno donde se investigó. Son el argumento central del patrón: abrir los papers antes de presentarlos.
 
@@ -1561,7 +1723,7 @@ Hasta este pase la KB no tenía con qué responder. Ahora sí, y las piezas son 
 
 **Por qué este patrón y no "construyamos un tutor LATAM".** El gap 2 dice que LATAM no produce tutores con tracción, y la conclusión tentadora es construir uno. Es la peor opción: competir contra DeepTutor (40.6k ★) y OpenMAIC (39.7k ★) con un producto nuevo. **Cerrar el gap de medición, en cambio, es integrar cuatro librerías MIT que ya existen** — y el comprador ya declaró que le falta.
 
-**Las piezas:** `EduBench` (MIT, transversal a materia — importa porque las instituciones LATAM no son sólo STEM), `SafeTutors` (MIT, 11 dimensiones de daño), `pyBKT` (MIT, mastery interpretable **y de procedencia no-china**, que en licitación pública de la región importa), `rubric` (MIT, scoring). Todo el stack es MIT: **no hay conversación de legal que frene el proyecto.**
+**Las piezas:** `EduBench` (MIT, transversal a materia — importa porque las instituciones LATAM no son sólo STEM), `SafeTutors` (🚫 **sin licencia, pase 51**; 11 dimensiones de daño), `pyBKT` (MIT, mastery interpretable **y de procedencia no-china**, que en licitación pública de la región importa), `rubric` (MIT, scoring). Todo el stack es MIT: **no hay conversación de legal que frene el proyecto.**
 
 **Wiring concreto.**
 
@@ -1594,7 +1756,7 @@ Hasta este pase la KB no tenía con qué responder. Ahora sí, y las piezas son 
 | **La nota** (no-código) | **[rubric](https://github.com/paper-instruments/rubric)** — rúbricas ponderadas, salida validada | MIT ✅ | 75 ★ |
 | El incumbente que no se va a cambiar | **[gradescope-mcp](https://github.com/Yuanpeng-Li/gradescope-mcp)** — 34 tools, escrituras tras confirmación | MIT ✅ | 8 ★ |
 | Artefacto de corrección auditable | **[AI-Teaching-Agent](https://github.com/littlecookie0722/AI-Teaching-Agent)** — Lab/Exam/Grading como DSL validado, review humano obligatorio | MIT ✅ | 0 ★ — seguir, no usar |
-| Que el gate no sea adulador | **P11** (`SafeTutors`, `EduBench`) | MIT ✅ | — |
+| Que el gate no sea adulador | **P11** (`SafeTutors`, `EduBench`) | ⚠️ **`EduBench` MIT ✅; `SafeTutors` 🚫 sin licencia (pase 51)** | — |
 
 **Wiring concreto.**
 
@@ -1755,7 +1917,7 @@ Hasta este pase la KB no tenía con qué responder. Ahora sí, y las piezas son 
 | **`tero`** (0 ★, 111 commits) | **MIT** ✅ | Referencia de arquitectura del gate humano y de la vinculación a norma. Reutilizable |
 | **`Aila`** (35 ★, 1.188 commits, Oak National Academy) | **MIT** ✅ ⚠️ *"internal use"* | Referencia teacher-facing **en producción**, la única de la KB con escala real |
 | **`accessibility-agents`** (419 ★) | **MIT** ✅ | Garantiza que el material que el agente produce sea **él mismo accesible** — si el entregable para un alumno con discapacidad no cumple WCAG, el proyecto se contradice |
-| **`EduBench`** + **`SafeTutors`** | **MIT** ✅ | El expediente de calidad y de seguridad pedagógica. Ver **P10** y **P11** |
+| **`EduBench`** + **`SafeTutors`** | ⚠️ **`EduBench` MIT ✅; `SafeTutors` 🚫 sin licencia (pase 51)** | El expediente de calidad y de seguridad pedagógica. Ver **P10** y **P11** |
 | **LRS** (`lrsql` / `Ralph`) | Apache-2.0 / MIT ✅ | Registro de qué propuso el agente, qué aprobó el docente y qué rechazó. **Bajo IDEA, la trazabilidad de la decisión es la defensa del distrito** |
 | **`noggimigo`** (1 ★) | **MIT** ✅ | Idea reutilizable, no dependencia: **latencia de respuesta como señal de carga cognitiva** |
 
@@ -2015,7 +2177,8 @@ habilitación institucional es la única forma de entrar.
 
 | Licencia | Repos en estos patrones | Implicancia |
 |----------|-------------------------|-------------|
-| **MIT / Apache-2.0** ✅ | DeepTutor, OpenMAIC, NOMAD, OATutor, Educhain, tutor-mcp, py-fsrs, gradescope-mcp, AITutor-EvalKit, Kolibri, OpenOLAT, Richie, Oppia, XBlock, LLMs-from-scratch, minimind, **Bloom**, **ai-engineering-from-scratch**, **learn-claude-code**, **tiny-llm**, **Claw-ED**, **AI-Teaching-Agent**, y del pase 5: **pyBKT**, **EduBench**, **SafeTutors**, **rubric**, **Aila**, y los 5 servidores MCP de mastery | Sin fricción. Base de todo lo que Globant construye |
+| **MIT / Apache-2.0** ✅ **(lista DESARMADA en el pase 52)** | DeepTutor, OpenMAIC, NOMAD, OATutor, Educhain, tutor-mcp, py-fsrs, gradescope-mcp, Kolibri, OpenOLAT, Richie, Oppia, XBlock, LLMs-from-scratch, minimind, **Bloom**, **ai-engineering-from-scratch**, **learn-claude-code**, **tiny-llm**, **Claw-ED**, **AI-Teaching-Agent**, y del pase 5: **pyBKT**, **EduBench**, **rubric**, **Aila**, y los 5 servidores MCP de mastery | Sin fricción. Base de todo lo que Globant construye |
+| 🚫 **Sin licencia — ausencia MEDIDA (salen de la clase de arriba en el pase 52)** | **`SafeTutors`** y **`AITutor-EvalKit`**, que esta fila listaba como permisivas. 🔴 **El pase 51 midió la ausencia de texto** (20 nombres de archivo × `main` y `master` en 404, con el repo respondiendo 200): las dos afirmaban MIT sobre un *badge* y una sección de README, y el badge de `SafeTutors` **todavía enlaza `your-username`**. ⚠️ **Es la lista que el pase 51 marcó y NO desarmó; desarmarla era la acción 3(b)** | No entran sin gestión previa del `LICENSE`. Ver **P116** |
 | **MIT con open-core** ⚠️ | **GegoK12** | El core (26 de 38 módulos) es MIT de verdad y admite plugin propietario. Pero **12 módulos son Pro pagos, USD 100–250 cada uno — entre ellos exámenes y fees**. La licencia no es el problema; el alcance sí. Cotizar los módulos Pro de entrada |
 | **MIT reciente** ⚠️ | **OpenMAIC** | Relicenciado de **AGPL-3.0 a MIT en v0.3.0 (2026-06-28)**. Es permisivo hoy, pero la licencia tiene ~3 meses: si el cliente audita procedencia, declarar que el historial previo es AGPL |
 | **BSD-3-Clause** ✅ | OpenTutorAI-CE | Permisiva. Sólo exige atribución y no usar el nombre del proyecto para endosar derivados |
@@ -2105,7 +2268,7 @@ callejón: no entra en el LMS, no se audita y no migra. QTI 3 es el formato que 
 | Generación de ítems | `Educhain` (MCQs, lesson plans, flashcards desde PDF/URL/YouTube) | MIT ✅ |
 | Entrega y scoring | `amp-up-io/qti3-item-player` (camino B) o **TAO** (camino A) | MIT ✅ / GPL-2.0 ⚠️ |
 | Gate de calidad pedagógica | `EduBench` (transversal a materia, incluye **Automatic Grading** y generación de preguntas) | MIT ✅ |
-| Gate de seguridad pedagógica | `SafeTutors` (11 dimensiones de daño, 48 sub-riesgos) | MIT ✅ |
+| Gate de seguridad pedagógica | `SafeTutors` (11 dimensiones de daño, 48 sub-riesgos) | 🚫 **sin licencia (pase 51)** |
 | Matrícula y devolución de notas | `LongsightGroup/oneroster` (OneRoster 1.1/1.2) | MIT ✅ |
 | Montaje en el LMS del cliente | `1EdTech/lti-1-3-php-library` | Apache-2.0 ✅ |
 
@@ -2647,7 +2810,7 @@ modelo?»* sino **«¿por qué debería creer que esto sabe enseñar?»**. `peda
 | https://github.com/kaushal0494/UnifyingAITutorEvaluation | CC BY-SA 4.0 ⚠️ | 32 | Taxonomía de **8 dimensiones** pedagógicas ante el error del alumno (MRBench). NAACL 2025 |
 | https://github.com/eth-lre/mathtutorbench | CC BY 4.0 ⚠️ | 42 | **Enseñanza en diálogo**: andamiaje, no resolución. EMNLP 2025 (Oral) |
 | https://github.com/ybai-nlp/EduBench | **MIT** ✅ | 29 | 9 contextos educativos, transversal a materia, con cuatro escenarios docentes |
-| https://github.com/RadiantCrystal/SafeTutors | **MIT** ✅ | 0 | **Daño pedagógico**: si enseña mal siendo amable |
+| https://github.com/RadiantCrystal/SafeTutors | 🚫 **sin licencia (pase 51)** | 0 | **Daño pedagógico**: si enseña mal siendo amable |
 
 **El reparto de trabajo entre ellas es el punto, y es lo que ninguna sola cubre:** `pedagogy-benchmark` mide
 **conocimiento declarativo** (sabe pedagogía), `MathTutorBench` y `UnifyingAITutorEvaluation` miden **conducta en
@@ -3447,14 +3610,14 @@ cliente cambia de modelo, y en 2026 el cliente cambia de modelo cada trimestre.
 | Extensión de datos | `aiverify-foundation/moonshot-data` (45 ★) | **Apache-2.0** | Donde entra el dataset educativo como *recipe* / *cookbook* |
 | Extensión de código | `aiverify-foundation/aiverify-developer-tools` (9 ★) | **Apache-2.0** | Donde entra el algoritmo de test propio |
 | Informe | `aiverify-foundation/moonshot-ui` (12 ★) | **Apache-2.0** | Salida **HTML con gráficos** + JSON: lo que lee un comité de ética o una inspección |
-| Contenido pedagógico | `EduBench` · `SafeTutors` | **MIT** | El qué se mide: 9 contextos educativos, 4.000+ situaciones, 12 dimensiones; y el daño |
+| Contenido pedagógico | `EduBench` · `SafeTutors` | ⚠️ **`EduBench` MIT; `SafeTutors` 🚫 sin licencia (pase 51)** | El qué se mide: 9 contextos educativos, 4.000+ situaciones, 12 dimensiones; y el daño |
 | Contenido pedagógico | `MathTutorBench` · `UnifyingAITutorEvaluation` | CC BY 4.0 / **CC BY-SA 4.0** ⚠️ | Taxonomía de 8 dimensiones y *reward models* de calidad de enseñanza. **El share-alike se dispara si se deriva un benchmark propio con dato del cliente** |
 
 ### El wiring, y es el trabajo del gap 35
 
 ```
    EduBench (MIT) ─┐
-  SafeTutors (MIT) ─┼──► empaquetado como *recipe* / cookbook ──► moonshot-data (Apache-2.0)
+  SafeTutors (🚫 sin lic.) ─┼──► empaquetado como *recipe* / cookbook ──► moonshot-data (Apache-2.0)
                     │         ⚠️ ESTE PASO NO EXISTE (gap 35) — es el trabajo de integración
                     │
   prueba pedagógica ┴──► plugin de test ──► aiverify-developer-tools (Apache-2.0)
@@ -3474,7 +3637,7 @@ cliente cambia de modelo, y en 2026 el cliente cambia de modelo cada trimestre.
 1. **Fase 1 — la corrida base, sin nada educativo (2–3 semanas).** `moonshot-cicd` sobre el agente del cliente con los
    *cookbooks* del Starter Kit de IMDA ya existentes: alucinación, contenido indeseable, **divulgación de datos**,
    prompts adversarios. **Ya entrega valor** y no depende de cerrar ningún gap. Es la demo de diez minutos.
-2. **Fase 2 — la capa pedagógica (4–6 semanas).** Empaquetar `EduBench` y `SafeTutors` (**MIT, sin fricción**) como
+2. **Fase 2 — la capa pedagógica (4–6 semanas).** Empaquetar `EduBench` (**MIT**) y `SafeTutors` (🔴 **sin licencia medida en el pase 51 — exige gestión antes de empaquetar**) como
    *recipes* y escribir la prueba pedagógica propia sobre `inspect_ai`. **Acá se cierra el gap 35**, y es el
    diferenciador: nadie en el mercado tiene esto, porque los tres catálogos de la capa declaran cobertura de
    **derecho, medicina y finanzas** y no de educación.
@@ -3508,7 +3671,7 @@ cliente cambia de modelo, y en 2026 el cliente cambia de modelo cada trimestre.
 - **`aiverify` no evalúa agentes** (tabular e imagen supervisados). El tutor se prueba con Moonshot, Inspect o COMPL-AI.
 - **`LLM-Evals-Catalogue` no tiene licencia declarada**: se lee para orientarse, **no se incorpora** a un entregable.
 - **`MathTutorBench` es CC BY 4.0 y `UnifyingAITutorEvaluation` es CC BY-SA 4.0.** Derivar un benchmark propio con dato
-  del cliente **dispara el share-alike** del segundo. Las dos piezas limpias son `EduBench` y `SafeTutors` (MIT).
+  del cliente **dispara el share-alike** del segundo. La pieza limpia es `EduBench` (MIT); ⚠️ **`SafeTutors` dejó de ser «limpia» en el pase 51: su licencia es una ausencia medida.**
 
 **El bonus de posicionamiento, y no cuesta nada extra.** Como las dos puntas son MIT y Apache-2.0, la capa educativa se
 puede **contribuir hacia arriba**: a `moonshot-data`, a `compl-ai` (ETH Zürich) o al `LLM-Evals-Catalogue` del
@@ -3537,7 +3700,7 @@ etapas y un loop de tres partes **Coach / Teachable Agent / Judge**.
 | `torchunlearn` (`machine-unlearning-pytorch`) | **MIT** ✅ | Los 20 algoritmos de *unlearning* si hay que reimplementar la etapa 1 |
 | `UnifyingAITutorEvaluation` | CC BY-SA 4.0 ⚠️ | La taxonomía de **8 dimensiones** contra la que se puntúa al tutor |
 | `MathTutorBench` | CC BY 4.0 ⚠️ | *Reward models* entrenados de calidad de enseñanza y leaderboard |
-| `EduBench` · `SafeTutors` | **MIT** ✅ | Las piezas limpias: 9 contextos educativos y seguridad pedagógica |
+| `EduBench` · `SafeTutors` | ⚠️ **`EduBench` MIT ✅; `SafeTutors` 🚫 sin licencia (pase 51)** | 9 contextos educativos y seguridad pedagógica |
 | `moonshot` / `inspect_ai` | **Apache-2.0** / **MIT** ✅ | Donde corre todo esto como prueba repetible (ver **P42**) |
 
 ### El wiring

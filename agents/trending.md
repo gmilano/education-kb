@@ -9,6 +9,180 @@ updated: 2026-10-02
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 > No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
 
+## 2026-10-02 (pase 52) — **el instrumento que el pase 51 declaró obligatorio tenía el supuesto cultural adentro de una expresión regular: el ancla del tarball era CASE-SENSITIVE y perdía 35.121 bytes de GPL-3.0; la hipótesis de la acción 1 se confirma con 3 de 9 veredictos cambiados y los tres los resuelve el tarball; +6 filas, y una entra con licencia impecable y advertencia de ELUSIÓN DE CONTROL institucional**
+
+🟢 **De las tres acciones que el pase 51 dejó escritas, la 1 y la 3 se ejecutaron completas y la 2
+sigue negada —pero el motivo se midió mejor que antes y eso cambia qué hay que pedir.**
+
+### 🔴 El hallazgo principal: el ancla que el pase anterior volvió obligatoria tenía su propio defecto
+
+El pase 51 cerró con una regla fuerte y bien fundada (**tendencia 259**): el probe por tarball
+**tiene** que anclar a la raíz del paquete, porque `tutors-publish-npm` empaqueta sus `node_modules`
+y un `grep` recursivo encuentra **144** archivos de licencia **ajenos**, con `package/LICENSE` en la
+raíz = **0**. El ancla que se escribió fue `^package/(LICEN[CS]E|COPYING)[^/]*$`.
+
+🔴 **Esa ancla es CASE-SENSITIVE, y por eso este pase publicó un falso negativo sobre un paquete de
+esta misma KB:**
+
+| Paquete | Qué envía de verdad | Ancla del pase 51 | Ancla corregida |
+|---|---|---|---|
+| `@learninglocker/xapi-agents` 4.4.3 | **`package/license`** — minúscula, sin extensión, **35.121 bytes** con el texto íntegro de la **GPL-3.0** | 🔴 **raíz=0** → *«sin licencia en el tarball»* | 🟢 **raíz=1 → GPL-3.0** |
+
+🔵 **Es exactamente el mecanismo de la tendencia 252** —*una lista de nombres de archivo de licencia
+es un supuesto cultural disfrazado de detalle técnico*— **una capa más adentro: el supuesto ya no
+estaba en una lista de nombres, estaba en una expresión regular, y la había escrito el pase
+anterior al cerrar su propio hallazgo.** ⚠️ **La lección de método no es «revisar el regex»: es que
+un instrumento recién corregido es el MENOS probado de todos, y el pase que lo escribe es el que
+tiene menos derecho a confiar en él.**
+
+El ancla nueva es `^package/(licen[cs]e|copying)([._-][A-Za-z0-9]+)?$` **insensible a mayúsculas**, y
+tiene que cumplir **dos** condiciones a la vez, que es lo que el control offline verifica:
+encontrar el texto con cualquier capitalización **y seguir rechazando todo lo que no esté en la raíz
+de `package/`**. `python3 test_anchor.py` → **24/24 sin red**, con el defecto reproducido
+explícitamente y el control positivo de la tendencia 259 adentro (**144 licencias de `node_modules`
+→ raíz=0**). ⚠️ **`licenses.json` y `LICENSES` quedan fuera a propósito: un inventario de licencias
+no es un texto de licencia.**
+
+### 🟢 La acción 1, ejecutada: la hipótesis se confirma y el mecanismo no era el previsto
+
+El pase 51 la dejó con una hipótesis **falsable**: *si la causa de los falsos es la misma convención
+de ecosistema, al menos uno de esos 9 cambia de veredicto; si ninguno cambia, el defecto era
+específico de la capa de GitHub.* **Cambian tres —y ninguno por los 20 nombres de archivo.**
+
+| Paquete | Pase 50 | Pase 52 | Lo que lo resolvió |
+|---|---|---|---|
+| `@eduware/oneroster` 1.2.11 | ⚠️ indeterminado | 🟢 **licenciado 0BSD** — 🔴 **y el campo dice `MIT`** | el **tarball** |
+| `@osu-cass/sb-components` 1.5.0-alpha.10 | ⚠️ indeterminado | 🟢 **licenciado MPL-2.0**, y el repo **NO ES PÚBLICO** | el **tarball** + el hermano |
+| `@learninglocker/xapi-agents` 4.4.3 | ⚠️ indeterminado | 🟢 **licenciado GPL-3.0** | el **tarball**, sólo con el ancla corregida |
+| `@owen-x-tech/canvas-mcp` 1.1.0 | ⚠️ indeterminado | ⚠️ **campo MIT SIN TEXTO por TRES canales** | los tres, en negativo |
+| `frappe-mcp-server` 0.6.0 | ⚠️ indeterminado | ⚠️ **campo ISC SIN TEXTO por TRES canales** | ídem |
+| `@superbuilders/oneroster` 0.7.0 | 🟢 licenciado (texto sin identificar) | 🟢 **0BSD**, texto leído | el tarball y el repo |
+
+🔵 **La conclusión de encuadre, que vale más que los tres veredictos: «indeterminado» no era una
+propiedad de los paquetes, era una propiedad del CANAL que se les había aplicado.** De los 5
+indeterminados del pase 50, el tarball resuelve 3 y precisa los otros 2 — y **ninguno de los 20
+nombres de archivo aportó un solo veredicto nuevo**, porque los repositorios de esos paquetes
+simplemente no son alcanzables.
+
+**Denominador declarado (P107):** **11 paquetes re-medidos** —los 4 «sin campo» y los 5
+«indeterminados» del pase 50, más `@moinsen-dev/tool-teacher` y `@timeback/oneroster`—, **de los
+cuales 9 declaran un `org/repo` utilizable y 2 no declaran repositorio en absoluto.** ⚠️ **Los 30
+del pase 50 NO se re-midieron enteros: los 21 con campo permisivo y texto ya leído no cambian de
+clase por agregar nombres de archivo, y decirlo es parte del dato.**
+
+### 🔴 Dos direcciones nuevas del defecto campo-vs-texto, y en las dos las licencias son DISTINTAS
+
+Las direcciones 1–6 eran siempre *«falta uno de los dos artefactos»*. **Las dos de este pase son
+peores: los dos artefactos existen, los dos dicen algo, y dicen cosas distintas.**
+
+| # | Paquete | Campo del registro | Texto real | Dónde está el error |
+|---|---|---|---|---|
+| **7.ª** | `@eduware/oneroster` 1.2.11 | **`MIT`** | 🔴 **0BSD**, *«Copyright (c) 2025 Bjorn Pagen»* | el **campo** |
+| **8.ª** | `@pie-qti/assessment-player` · `item-player` 0.1.25 | **`MIT`** | 🔴 **`ISC`** en *sidebar* + `master:LICENSE` + pie del README | el **REGISTRO** |
+
+🔴 **Y el detalle de la séptima que no se buscaba:** el `package/LICENSE` de `@eduware/oneroster` es
+**byte a byte idéntico** al de `@superbuilders/oneroster` —**mismo `sha256` `8b211ca0…20efa`**—, son
+**alcances distintos**, declaran **repositorios distintos** (`Eduware-Inc/eduware-oneroster` y
+`trilogy-group/oneroster-ts`) y **el titular que el texto nombra no es ninguna de las dos
+organizaciones que publican.** Para cotizar, las dos son permisivas y el riesgo es bajo; **para un
+inventario, el campo archiva la licencia equivocada y el otorgante del permiso es un tercero.**
+
+🔵 **La octava invierte el supuesto cómodo de esta base.** En los pases 49–51 el lado poco confiable
+fue siempre el repositorio (*badge* sin texto, `LICENSE` con titular de GitHub Inc.). Acá el
+repositorio es **consistente en tres artefactos** y **el registro es el que miente**. ⚠️ **La
+dirección del error no es predecible, y eso es precisamente por qué los dos artefactos se leen
+siempre y la discrepancia se REPORTA en vez de resolverse a favor de ninguno.**
+
+### ⚠️ El control del HERMANO queda degradado a tercer lugar, con dos límites que nadie había escrito
+
+| Límite | Evidencia |
+|---|---|
+| **Tiene una precondición no declarada: la organización tiene que publicar MÁS DE UN paquete.** No aplica a `Eduware-Inc`, `owentaylor` ni `appliedrelevance` | búsqueda por organización en el registro: un solo paquete cada una |
+| **Es SUBORDINADO al tarball.** En `LearningLocker` **todos** los hermanos dan 404 (`xapi-validation`, `xapi-service`), el control concluye *«el canal no llega a la organización»* **y el tarball resolvió la licencia igual** | `LearningLocker/*` → 404 · `package/license` → GPL-3.0 |
+
+🔵 **El orden correcto de los tres instrumentos es 20 nombres → TARBALL → hermano.** El hermano no
+responde *«qué licencia tiene»*: responde *«por qué no pude verlo»*, que es una pregunta de gestión.
+**Ponerlo segundo, como hizo el pase 51, cuesta un veredicto.**
+
+### 🟢 Las 6 altas, y el canal que las trajo es otra vez el `?text=` del registro (P117)
+
+**El control del gap 71 se corrió ANTES de escribir**, con `grep -ric` sobre los ocho archivos: de
+19 candidatos, **7 ya estaban en la base** (entre ellos `jbnu-lms-mcp`, que esta KB ya tenía, así
+que **no** es el quiebre APAC que parecía) y **12 tenían cero coincidencias**. Entran 6.
+
+| Alta | Licencia medida | Por qué entra |
+|---|---|---|
+| `canvas-student-mcp` 1.3.3 | **MIT** ✅ en **dos** artefactos | 30 tools read-only sobre Canvas — ⚠️ **y la advertencia de P118** |
+| `@mtgibbs/canvas-lms-mcp` 0.2.18 | **MIT** ✅ en **dos** artefactos | 10 tools, read-only declarado, **sin eludir el control de acceso** |
+| `@citolab/qti-convert-cli` 0.8.1 | 🔴 **GPL-3.0-only**, consistente en **TRES** artefactos | QTI 2.x → QTI 3; la única pieza con las tres lecturas coincidentes |
+| `@pie-qti/assessment-player` 0.1.25 | 🔴 **campo MIT vs texto ISC** | *players* QTI 2.1/2.2/3.0 + transformación QTI XML ↔ PIE JSON |
+| `opencode-sit` 0.1.2 | **MIT** ✅ **medida en el tarball** | **política pedagógica socrática sobre un agente que ya existe** |
+| `aicourse-mcp-server` 0.1.0 | ⚠️ **campo MIT, CERO texto** | 🟢 **código educativo de origen APAC** (Aliyun Bailian / DashScope) |
+
+🟢 **`aicourse-mcp-server` es el dato regional del pase:** diez pases de canal genérico no
+devolvieron código educativo de APAC, y **una consulta al `?text=` del registro sí.** ⚠️ **Y llega
+con `MIT` sin una línea de texto, así que no entra en una entrega sin gestión** — el hallazgo es el
+canal, no la pieza.
+
+### 🔵 Dos reglas de ALCANCE, que es la unidad que esta base venía descubriendo de a una
+
+| Alcance | Estado | Evidencia |
+|---|---|---|
+| **`@timeback/*`** | 🔴 **3 de 3 sin licencia** | `oneroster` (pase 49), `caliper` (pase 50) y **`@timeback/qti` 0.4.1** (este pase): sin campo, sin repositorio, sin texto en el tarball **y sin descripción** |
+| **`@ink-waffle/*`** | 🔴 **2 de 2 campo MIT sin texto** | `sisu-mcp` (pase 49) y **`@ink-waffle/moodle-mcp` 0.2.0** (este pase) |
+
+🔵 **Tres confirmaciones independientes dejan de ser filas a revisar y pasan a ser una regla de
+cotización: `@timeback/*` y `@ink-waffle/*` no entran en una entrega sin gestión previa, por alcance
+y sin mirar el paquete.** Es el mismo movimiento que la tendencia 263 pedía al concluir que la clave
+de un inventario es `org/repo` o `alcance/paquete`, nunca el nombre del proyecto.
+
+### 🔴 La pieza con licencia impecable que NO es entregable, y por qué es un eje nuevo
+
+`canvas-student-mcp` tiene **MIT** verificado por dos artefactos independientes. **Y su argumento de
+venta, textual en el README, es** *«works even when your school disables API tokens»*: el problema
+que resuelve es que **muchas universidades deshabilitan a propósito la emisión de tokens a los
+alumnos**, y lo resuelve pidiéndole al alumno que extraiga la **cookie de sesión** desde las
+DevTools del navegador.
+
+🔵 **P115 pregunta «¿hay permiso escrito?». P116 pregunta «¿se puede usar en una entrega
+comercial?». Las dos dicen SÍ acá, y la pieza no es entregable igual**, porque hay una tercera
+pregunta que esta base nunca había hecho: **¿la pieza respeta los controles de acceso de la
+institución que la va a alojar?** ⚠️ **Una licencia permisiva no dice nada sobre eso, y un cliente
+institucional lo trata como incidente de seguridad, no como detalle de integración.** Queda como
+**P118**, y la fila lo lleva escrito.
+
+### ⚠️ La acción 2, negada por TERCER pase — pero el motivo se midió mejor y eso cambia el pedido
+
+Lo que este pase estableció y los pases 50 y 51 no habían distinguido:
+
+| Qué se corrió | Resultado |
+|---|---|
+| `python3 test_probe.py` — la suite **offline** del probe versionado | 🟢 **19/19, corrió sin problema** |
+| `python3 probe.py @imazhar101/mcp-canvas-server` — el probe **con red** | 🔴 **NEGADO: `[Code from External]`** |
+
+🔵 **La negativa no es sobre «el código del repositorio»: es sobre EJECUTAR CON RED código que vino
+clonado.** Eso es más preciso que *«el entorno niega correr el código versionado»*, que es lo que
+los dos pases anteriores escribieron, y cambia qué hay que pedir: **no permiso para ejecutar
+`compose/code/`, sino permiso de SALIDA DE RED para ese código.** 🔴 **Se respetó la disciplina
+escrita: no se reimplementó el probe fuera del repositorio**, porque la comparación 227 vs 165 sólo
+vale si los dos números salen del mismo código versionado. **La resta sigue sin poder escribirse
+(P113) y el permiso se pide explícitamente en el reporte, por tercera vez.**
+
+### 🟢 La acción 3, ejecutada completa — y lo que enseña es sobre LISTAS AGREGADAS
+
+Las tres filas cuyo veredicto cambió en el pase 51 estaban citadas con la licencia vieja por todas
+partes. **27 menciones corregidas en seis archivos**, marcando la medición sin borrar la historia, y
+🔴 **las dos listas agregadas del tipo «MIT / Apache-2.0 ✅» DESARMADAS** —`agents/top.md` y
+`compose/patterns.md`—, que el pase 51 había **marcado al margen** y dejado intactas.
+
+🔵 **Por qué desarmarlas y no anotarlas: una lista agregada se lee de un vistazo y la nota al margen
+no viaja con el nombre.** Quien copia `SafeTutors` de una celda que dice *«MIT / Apache-2.0 ✅»* se
+lleva el nombre y no la advertencia. **Los dos nombres ahora están en una fila propia que dice «sin
+licencia — ausencia MEDIDA».** ⚠️ **Los archivos *append-only* conservan la afirmación vieja a
+propósito: ahí el error es la serie temporal.** Y la cita del PR #341 quedó etiquetada como
+**`propuesto en PR abierto #341`**, que es lo que la tendencia 262 pedía para que no vuelva a leerse
+como paquete publicado.
+
 ## 2026-10-02 (pase 51) — **la acción 1 se ejecuta completa y la columna más consultada de esta KB cambia: 139 licenciado / 23 sin licencia / 5 no público — con 2 filas que decían «MIT ✅» sin una sola línea de texto, 1 que es NO COMERCIAL y estaba archivada como «NOASSERTION», y 4 ALTAS que rompen nueve pases de sequía por un canal que esta base nunca había usado**
 
 🟢 **La acción 1 del pase 50 era la única de las tres que no dependía de un permiso de ejecución, y

@@ -7,6 +7,7 @@ updated: 2026-10-02
 # 📡 Tendencias — education
 
 > Ventana de investigación: septiembre 2026. Verificado 2026-09-30; el pase 11, el 2026-10-01.
+> **Pase 52 del 2026-10-02:** 🔴 **el hallazgo del pase es sobre el instrumento que el pase 51 acababa de declarar obligatorio: el ancla del tarball era CASE-SENSITIVE y por eso esta base publicó «sin licencia en el tarball» sobre `@learninglocker/xapi-agents`, que envía `package/license` en minúscula con 35.121 bytes de GPL-3.0 adentro.** 🔵 **Es el mecanismo de la tendencia 252 —un supuesto cultural disfrazado de detalle técnico— una capa más adentro: ya no en una lista de nombres, sino en una expresión regular escrita por el pase anterior. La lección: un instrumento recién corregido es el MENOS probado de todos.** Corregido e instrumentado **offline**: **24/24 sin red**, con el defecto reproducido y el control positivo de la tendencia 259 conservado. 🟢 **La acción 1 se ejecutó y su hipótesis falsable se CONFIRMA: cambian 3 de 9 veredictos —`@eduware/oneroster` 0BSD, `@osu-cass/sb-components` MPL-2.0, `@learninglocker/xapi-agents` GPL-3.0— y los tres los resuelve el TARBALL, mientras los 20 nombres no aportaron ninguno.** 🔵 **«Indeterminado» no era una propiedad de los paquetes: era del canal que se les había aplicado.** 🔴 **Dos direcciones NUEVAS del defecto campo-vs-texto, y en las dos campo y texto nombran licencias DISTINTAS:** `@eduware/oneroster` declara `MIT` y envía 0BSD en un archivo **byte a byte idéntico** al de `@superbuilders/oneroster` que **nombra a un tercero como titular**; y `@pie-qti/*` declara `MIT` en npm contra `ISC` en tres artefactos del repo — ⚠️ **ahí el lado equivocado es el REGISTRO, así que la dirección del error no es predecible.** 🔵 **Y se abre un EJE que esta base no tenía: una licencia impecable no dice nada sobre si la pieza respeta los controles de acceso de la institución.** `canvas-student-mcp` es **MIT por dos artefactos** y vende *«works even when your school disables API tokens»* resolviéndolo con la cookie de sesión del alumno: **P115 dice sí, P116 dice sí, y no es entregable** (**P118**). 🟢 **La acción 3 se ejecutó COMPLETA: 27 menciones corregidas en seis archivos y las DOS listas agregadas «MIT / Apache-2.0 ✅» DESARMADAS**, porque una nota al margen no viaja con el nombre. ⚠️ **La acción 2 queda sin ejecutar por TERCER pase, pero la frontera se midió: la suite OFFLINE corre (19/19) y es la ejecución CON RED la que se niega, así que lo que hay que pedir es salida de red y no permiso de ejecución.** Tendencias **265**–**280**.
 > **Pase 51 del 2026-10-02:** 🟢 **la acción 1 del pase 50 se ejecutó COMPLETA y es la de mayor valor que esta base haya corrido sobre sí misma: la columna Licencia de `agents/top.md` pasó de afirmación a medición repo por repo —167 `org/repo`, 20 nombres de archivo × 2 ramas, control de alcanzabilidad— y da 139 licenciado / 23 sin licencia / 5 no público.** 🔴 **Tres filas cambian y una cambia una cotización: `SafeTutors` y `AITutor-EvalKit` decían «MIT ✅» sin UNA línea de texto, y `dssg/student-early-warning` no era «NOASSERTION» sino una licencia académica NO COMERCIAL de la Universidad de Chicago que excluye vender un servicio.** 🔵 **El instrumento se corrigió a sí mismo: 4 falsos «sin licencia» de 27 (14,8 %), entre ellos `moodle/moodle`, y las dos causas son CONVENCIONES DE ECOSISTEMA (`COPYING.txt` en el mundo GNU; `LICENSE-MIT` en doble licencia Rust).** 🟢 **4 ALTAS que rompen nueve pases de sequía, y lo que las trajo fue un CANAL NUEVO: el `?text=` de búsqueda del registro npm, no la consulta por nombre exacto.** 🟢 **La acción 3 se ejecutó y CORRIGE al pase 50: `@tutors/{xapi,badges}` no eran citas inventadas, eran nombres de un PR ABIERTO —el defecto es una cita sin etiqueta de estado— y el alcance equivocado había costado SIETE paquetes permisivos reales.** ⚠️ **La acción 2 vuelve a quedar SIN EJECUTAR: el entorno niega correr el código versionado (`[Code from External]`); no se reimplementó el probe ni se buscó otro intérprete, y el permiso se pide explícitamente.** Tendencias **251**–**264**.
 > **Pase 50 del 2026-10-02:** ⚠️ **las tres acciones del pase 49 pedían las tres correr código versionado de `compose/code/`, y el entorno NEGÓ la ejecución de código del repositorio clonado** (`[Code from External]`, dos veces, la segunda tras leer `probe.py` y `test_probe.py` completos). **No se reimplementó el probe ni se buscó otro intérprete.** 🟢 **Lo que sí estaba abierto es el canal de red, que es exactamente la mitad de la acción 1 que no necesita el script: 30 de 32 paquetes de registro medidos por LICENCIA, con los dos artefactos de la regla del pase 49.** 🟢 **Gap 233 CERRADO** —hay dos puertas MIT de Canvas con texto y la mayor cubre el núcleo, así que **el gap 232 baja de bloqueante a opcional**. 🔴 **Y los hallazgos que corrigen a esta base: el defecto campo-vs-texto corre en los DOS sentidos; la capa de agentes NO es más permisiva que la plataforma (la de Open edX es AGPL-3.0); hay dos «Kolibri» con licencias distintas; y esta KB citaba dos paquetes que no existen.** ⚠️ **La acción 2 queda SIN EJECUTAR y se vuelve a dejar escrita.** Tendencias **234**–**246**.
 > **Pase 47 del 2026-10-02:** **se ejecutan las tres acciones del pase 46, las tres rinden, y la primera rinde
@@ -1328,7 +1329,7 @@ tres jurisdicciones distintas publican su cobertura por dominio:
 | `awesome-eu-ai-act` (**CC0**) | 11 herramientas de conformidad open source | **ninguna educativa** |
 
 **El contraste con lo que esta KB ya tiene es lo que convierte esto en oportunidad y no en queja.** Desde el pase 4
-están registrados `EduBench` (**MIT**, ACL 2026, 9 contextos educativos), `SafeTutors` (**MIT**), `MathTutorBench`
+están registrados `EduBench` (**MIT**, ACL 2026, 9 contextos educativos), `SafeTutors` (🚫 **sin licencia, medida en el pase 51**), `MathTutorBench`
 (CC BY 4.0, EMNLP 2025 Oral) y `UnifyingAITutorEvaluation` (CC BY-SA 4.0, NAACL 2025): **benchmarks pedagógicos
 premiados en los venues principales, y ninguno mapeado a un requisito regulatorio ni empaquetado como *recipe* de
 ninguna herramienta.**
@@ -1420,7 +1421,7 @@ nada en educación, hay que rehacerla por escenario antes de declarar el vacío.
 
 Huecos confirmados tras buscar, no ausencias por no haber buscado. Un gap informado es información; el silencio se parece demasiado a la cobertura.
 
-1. ~~**No hay evaluador pedagógico open source con tracción.**~~ → **GAP REFORMULADO en el pase 4 del 2026-09-30.** Los pases 1–3 registraron un solo evaluador, `AITutor-EvalKit` (MIT, MBZUAI, **3 ★**), y concluyeron que "no existe el LegalBench de educación". **La medición estaba mal hecha y la conclusión era más fuerte de lo que los datos permitían.**
+1. ~~**No hay evaluador pedagógico open source con tracción.**~~ → **GAP REFORMULADO en el pase 4 del 2026-09-30.** Los pases 1–3 registraron un solo evaluador, `AITutor-EvalKit` (🚫 **sin licencia — medida en el pase 51; esta línea decía «MIT»**, MBZUAI, **3 ★**), y concluyeron que "no existe el LegalBench de educación". **La medición estaba mal hecha y la conclusión era más fuerte de lo que los datos permitían.**
 
    Lo que hay, verificado en el pase 4:
 
@@ -1438,7 +1439,7 @@ Huecos confirmados tras buscar, no ausencias por no haber buscado. Un gap inform
    - **`EduGuardBench`** (https://github.com/YL1N/EduGuardBench, ⚠️ **sin licencia declarada**, 4 ★) — evalúa al modelo *como docente simulado*, lo cual es independiente de la materia. 14 modelos.
    - **`EduFrameTrap`** (arXiv 2605.14604, TUM/MCML) — **seis materias**: matemática, física, **economía, química, biología y ciencias de la computación**. Sin repo localizable.
 
-   **Y el dato de licencia es la mejor parte:** `EduBench` y `SafeTutors` son **MIT**. Hasta el pase 4 toda la capa de evaluación pedagógica tenía fricción (CC BY, CC BY-SA con *share-alike*). Ahora se puede armar el stack de evaluación completo sin pasar por legal.
+   **Y el dato de licencia era la mejor parte, y hay que corregirla:** `EduBench` es **MIT**; ⚠️ **`SafeTutors` 🚫 NO —el pase 51 midió la ausencia de texto, su «MIT» era un *badge* cuyo enlace todavía apunta a `your-username`.** Hasta el pase 4 toda la capa de evaluación pedagógica tenía fricción (CC BY, CC BY-SA con *share-alike*). Ahora se puede armar el stack de evaluación completo sin pasar por legal.
 
    ~~**Lo que sigue sin existir, más acotado:** benchmark pedagógico específico de **lengua, ciencias sociales o formación profesional**.~~ → **ACOTADO OTRA VEZ EN EL PASE 6 DEL 2026-09-30: cae *lengua*, quedan ciencias sociales y FP.**
 
@@ -4975,6 +4976,108 @@ comercial **de forma sistemática**, mientras el texto consolidado del Reglament
 que sus fuentes secundarias publican mal.** La regla operativa no cambia y conviene repetirla cada vez que se cite:
 **las fechas están confirmadas por tres canales secundarios independientes y concordantes, no por fuente primaria, y
 eso se dice en la propuesta.**
+
+## 🔵 Las tendencias 265–280, del pase 52 del 2026-10-02
+
+**Las dieciséis salen de ejecutar las acciones 1 y 3 del pase 51 y del barrido obligatorio. Cinco son
+defectos del propio instrumento —y el más importante está DENTRO de la corrección que el pase
+anterior acababa de declarar obligatoria—, dos abren direcciones nuevas del defecto campo-vs-texto,
+dos convierten alcances en reglas de cotización y una abre un eje de evaluación que esta base no
+tenía: una licencia impecable no dice nada sobre si la pieza respeta los controles de la
+institución.**
+
+| # | Tendencia | Evidencia |
+|---|---|---|
+| **265** | 🟢 **La hipótesis falsable de la acción 1 se CONFIRMA, y el mecanismo no era el previsto: «indeterminado» no era una propiedad de los paquetes sino del CANAL que se les había aplicado.** De los 5 indeterminados del pase 50, **el tarball resuelve 3 y precisa 2**, y 🔴 **los 20 nombres de archivo no aportaron NI UN veredicto nuevo en el lote**, porque esos repositorios simplemente no son alcanzables | `compose/code/registry-license-remeasure/result.2026-10-02.tsv`; **denominador: 11 re-medidos, 9 con `org/repo` utilizable y 2 sin repositorio declarado** |
+| **266** | 🔴 **Un supuesto cultural puede esconderse DENTRO de una expresión regular, y el pase que la escribe es el que tiene menos derecho a confiar en ella.** El ancla `^package/(LICEN[CS]E\|COPYING)[^/]*$`, que el pase 51 declaró **obligatoria**, es **CASE-SENSITIVE**: `@learninglocker/xapi-agents` envía **`package/license`** en minúscula con **35.121 bytes de GPL-3.0** y el instrumento publicaba **raíz=0**. 🔵 **Es el mecanismo de la tendencia 252 una capa más adentro** | ancla corregida a `^package/(licen[cs]e\|copying)([._-][A-Za-z0-9]+)?$`; `test_anchor.py` → **24/24 sin red**, con el defecto reproducido |
+| **267** | 🔴 **La 7.ª dirección del defecto campo-vs-texto, y la primera en que campo y texto nombran licencias DISTINTAS.** `@eduware/oneroster` 1.2.11 declara **`MIT`** y envía **0BSD**, en un archivo **byte a byte idéntico** (mismo `sha256 8b211ca0…20efa`) al de `@superbuilders/oneroster` 0.7.0, 🔴 **y el titular que el texto nombra no es ninguna de las dos organizaciones que publican** | los dos `package/LICENSE` extraídos del tarball; alcances y repositorios declarados distintos; **no se midió de dónde salió el código y eso se dice** |
+| **268** | 🔴 **La 8.ª dirección, y esta invierte el supuesto cómodo de esta base: el lado equivocado es el REGISTRO.** `@pie-qti/assessment-player` e `item-player` 0.1.25 declaran **`MIT`** en npm y el repositorio dice **`ISC`** en **tres** artefactos —*sidebar*, `master:LICENSE`, pie del README—. ⚠️ **En los pases 49–51 el lado poco confiable fue siempre el repositorio; acá es el registro, así que la dirección del error NO es predecible** | `pie-framework/pie-qti`, 4 ★; **es el argumento más fuerte para leer los dos artefactos siempre y REPORTAR la discrepancia** |
+| **269** | ⚠️ **El control del HERMANO tiene una precondición que nadie declaró y es SUBORDINADO al tarball.** Exige que la organización **publique más de un paquete** —no aplica a `Eduware-Inc`, `owentaylor` ni `appliedrelevance`—, y en `LearningLocker` **todos** los hermanos dan 404 mientras **el tarball resolvió la licencia igual**. 🔵 **Orden correcto: 20 nombres → TARBALL → hermano**; el hermano responde *«por qué no pude verlo»*, que es gestión, no licencia | `LearningLocker/{xapi-validation,xapi-service}` → 404; `osu-cass/tslint-config` → **200**, que sí prueba *«el repo no es público»* |
+| **270** | 🔴 **El ALCANCE es la unidad de riesgo de licencia, y `@timeback/*` llega a 3 de 3.** `@timeback/qti` 0.4.1 se suma a `oneroster` (pase 49) y `caliper` (pase 50): **sin campo, sin repositorio declarado, sin texto en el tarball y sin descripción.** 🔵 **Tres confirmaciones independientes dejan de ser filas a revisar: es una regla de cotización por alcance, sin mirar el paquete** | `?text=qti` → `@timeback/qti`; `raíz=0 recursivo=0` |
+| **271** | 🔴 **Y una SEGUNDA regla de alcance: `@ink-waffle/*` va 2 de 2 con campo `MIT` y cero texto.** `@ink-waffle/moodle-mcp` 0.2.0 repite exactamente el patrón de `@ink-waffle/sisu-mcp` del pase 49 | los dos: campo y manifiesto `MIT`, `raíz=0 recursivo=0`, sin repositorio declarado |
+| **272** | 🔵 **Una licencia impecable no dice NADA sobre si la pieza respeta los controles de acceso de la institución, y esta base no tenía esa pregunta.** `canvas-student-mcp` 1.3.3 es **MIT verificado por dos artefactos independientes** y su argumento de venta, textual, es *«works even when your school disables API tokens»*: resuelve el bloqueo pidiéndole al alumno la **cookie de sesión** desde las DevTools. 🔴 **P115 dice sí, P116 dice sí, y la pieza no es entregable** | `xmike04/canvas-student-mcp`, 2 ★, README; queda como **P118** |
+| **273** | 🔴 **Una consulta de descubrimiento que colapsa sobre el SEO de un proveedor no es un accidente de un pase: se reprodujo IDÉNTICA una corrida después.** «open source platform education ERP CRM SIS MIT Apache 2026» volvió a devolver **diez resultados y los diez de `openeducat.org`**, en diez idiomas. 🔵 **La tendencia 264 pasa de anécdota a propiedad ESTABLE de la consulta: hay que cambiar el instrumento, no repetirlo** | **séptimo pase consecutivo sin verticales nuevas** |
+| **274** | 🔴 **El canal web genérico falló por DÉCIMA vez para código educativo**, devolviendo agentes de propósito general (openclaw, browser-use, AutoGen) y **material didáctico SOBRE AI** —la clase que los pases 46–48 rechazan—. 🟢 **Y el `?text=` del registro volvió a funcionar: 19 candidatos, 12 ausentes de los ocho archivos, 6 altas** | el barrido de este pase vs. `registry.npmjs.org/-/v1/search`; **confirma P117 en su segundo pase** |
+| **275** | 🟢 **LATAM da la oportunidad mejor fundada del pase y la expresa como una TIJERA con instrumento declarado:** **92 %** de estudiantes usando AI (67 % semanal) y docentes de 61 % → **79 %**, contra **26,0 %** de instituciones con estrategia formal, **18,5 %** con política institucional, **8,0 %** con presupuesto dedicado y 🔴 **9,0 % con mecanismo formal de evaluación.** 🔵 **Es brecha de GOBERNANZA, no de adopción** | **200 instituciones, 19 países de LAC, agosto-octubre 2025** (UNU/UNESCO IESALC) — la primaria del gap 65 |
+| **276** | ⚠️ **El defecto de cifras conflictivas se confirma como del CANAL y no de una región: ahora lo produjo North America, dentro de UNA MISMA respuesta.** **$951 M (2024) → $2.303,2 M (2029) a CAGR 15,9 %** contra **«$3,37 B a CAGR 45 % 2025-2030»**. 🔴 **15,9 % y 45 % no son dos estimaciones del mismo fenómeno: son dos definiciones de mercado sin declarar** | van **dos** regiones tras el 70 % vs >85 % de LATAM (pase 51); **ninguna se publica sin su instrumento** |
+| **277** | 🟢 **EMEA deja de significar «Europa»: entra una capa africana con instrumentos propios.** **Egipto, Ruanda y Mauricio** con estrategias nacionales de AI publicadas y la **Unión Africana** con una **Estrategia Continental de AI**. ⚠️ **Ninguna es sectorial de educación, y eso se dice: es marco habilitante** | y la dispersión intra-UE de **factor ocho**: **42,03 %** Dinamarca vs **5,21 %** Rumania |
+| **278** | 🟢 **Las barreras de no-adopción de EMEA están cuantificadas, lo que convierte un discurso en oferta:** de las empresas que consideraron AI y no adoptaron, **70,89 %** falta de expertise, **52,52 %** incertidumbre legal, **48,83 %** protección de datos. 🔵 **Las tres son servicios; las dos últimas son exactamente lo que la capa de licencia y de controles de acceso de esta KB sabe auditar** | el barrido EMEA de este pase; ⚠️ **devolvió AI empresarial y no educación, así que las cifras son transversales y no del sector** |
+| **279** | 🔵 **La negativa de la acción 2 se midió más fino y eso cambia QUÉ hay que pedir: no es «correr el código versionado», es SALIDA DE RED para ese código.** La suite **offline** del probe corrió sin problema (**19/19**); el probe **con red** fue **negado (`[Code from External]`)**. 🔴 **Los pases 50 y 51 habían escrito «el entorno niega correr el código versionado», que es más amplio de lo que ocurre** | `python3 test_probe.py` → 19/19 · `python3 probe.py @imazhar101/mcp-canvas-server` → negado; **no se reimplementó el probe, por disciplina de P113** |
+| **280** | 🟢 **La columna «Hoy» de `README.md` estaba estancada desde el pase 49 por una conclusión demasiado AMPLIA, y se reprodujo entera en una corrida.** Los pases 50 y 51 midieron **una** negativa (sobre un script con red) y publicaron *«el entorno niega la ejecución de código de este repositorio»*, dejando de intentar. 🔴 **Las doce suites OFFLINE corren y los doce valores publicados se reprodujeron hoy** —27/27, 23/23, 37/37, 19/19, 21/21, 22/22, 19/19, 24/24 y cuatro *ALL PASSED*—. ⚠️ **Es el error de P107 cometido sobre el propio instrumento: una observación puntual generalizada a regla, que costó DOS pases de cifras sin re-verificar** | `compose/code/*/test_*.py` y `run_test.sh`; **lo único efectivamente bloqueado es `probe.py` con red**, que es la acción 2 |
+
+## 🔵 Estado de gaps al cierre del pase 52 del 2026-10-02
+
+🟢 **Este pase ejecutó DOS de las tres acciones del pase 51 —la 1 y la 3— y las dos rindieron. La 2
+queda sin ejecutar por TERCER pase, pero por primera vez se midió la frontera exacta de la
+negativa.**
+
+| Gap | Estado | Resolución |
+|---|---|---|
+| **101** (cifras publicadas sin nombrar su métrica) | 🟢 **AVANZA, y ahora también en la capa de REGISTRO** | La acción 1 extendió la medición de licencia a los 11 paquetes que la lista de 4 nombres podía haber dañado, con salida de tres valores y artefacto exacto por fila. 🔴 **Pero el gap se AGRAVA en cifras de mercado: ya van DOS regiones devolviendo conflictos internos (tendencia 276)** |
+| **71** (duplicados y filas basura en `agents/top.md`) | 🟢 **CERRADO y controlado en el mismo pase que tocó la tabla** | **80 filas / 80 claves distintas / 0 duplicados**; **60 cabeceras y 60 separadores `\|---\|` → 0 encabezados usados como dato**; **6 altas reales, 0 filas de relleno**. 🟢 **Y el control volvió a servir hacia adentro: `jbnu-lms-mcp` parecía alta APAC y tenía 15 coincidencias previas** |
+| **nuevo 251** (la lista de nombres de licencia era incompleta) | 🟢 **CERRADO, y la corrección del pase 51 resultó tener su propio defecto** | Los 20 nombres se aplicaron al lote de registro. 🔴 **Y el hallazgo es que el ancla del TARBALL, escrita en el mismo pase 51, era CASE-SENSITIVE (tendencia 266): corregida e instrumentada offline, 24/24** |
+| **nuevo 252** (una pieza cuya licencia prohíbe el negocio) | 🔴 **ABIERTO, sin cambios** | `dssg/student-early-warning` sigue siendo académica no comercial. **La gestión ante el Polsky Center (`polsky@uchicago.edu`) no se ejecutó: es acción hacia afuera.** 🟢 **Lo que SÍ se hizo es la acción 3: sus menciones con la licencia vieja quedaron corregidas en los seis archivos no-*append-only*** |
+| **nuevo 253** (★ de las altas sin instrumento uniforme) | 🟢 **MEJORA: este pase declara el instrumento por fila** | `canvas-student-mcp` **2 ★**, `@mtgibbs/canvas-lms-mcp` **0 ★ (1 fork)**, `pie-framework/pie-qti` **4 ★**, `Citolab/qti-convert` **6 ★**, todas por **WebFetch** sobre `github.com`; `opencode-sit` y `aicourse-mcp-server` **n/d porque no tienen repo público** — ⚠️ **«n/d» y «0» siguen sin mezclarse** |
+| **nuevo 254** 🔴 | **el ALCANCE es la unidad de riesgo y esta base lo venía descubriendo de a un paquete** | `@timeback/*` **3 de 3** sin licencia y `@ink-waffle/*` **2 de 2** con campo sin texto (tendencias 270 y 271). **Regla de cotización: los dos alcances no entran sin gestión previa, sin mirar el paquete** |
+| **nuevo 255** 🔴 | **una licencia limpia no garantiza que la pieza respete los controles de la institución** | `canvas-student-mcp` (tendencia 272): **MIT por dos artefactos y vende eludir la política de tokens de la universidad.** Queda como **P118**, y **ninguna pieza de esta KB fue auditada todavía por este eje** — es trabajo pendiente sobre las 80 filas |
+| **247** (cifras de código sobre árbol UPSTREAM sin re-medir) | 🔴 **ABIERTO** — ⚠️ **pero la frontera de la negativa ya está medida** | «164 métodos», «187 archivos», «72 rutas», «35 rutas», «341 operaciones», «31 clases». **Era la acción 2 de los pases 49, 50 y 51 y sigue sin ejecutar.** 🔵 **Lo nuevo: la suite OFFLINE del probe corre (19/19) y es la ejecución CON RED la que se niega (tendencia 279), así que lo que hay que pedir es salida de red, no permiso de ejecución** |
+| **249** (capa MCP de Open edX AGPL-3.0) / **250** (colisiones de nombre) | 🔴 **249 ABIERTO** — ⚠️ **250 se AGRAVA: ya van CUATRO** | A los dos «Bloom», los dos «Kolibri» y `@tutors/*` vs `@tutors-sdk/*` se suma 🔴 **`pie-framework/pie-qti` (ISC) contra `pie-framework/pie-elements-ng` (sin licencia): la MISMA organización con dos repos de clase de licencia distinta**, así que ni la organización es clave |
+| **232** (227 tools de Canvas sin licencia) / **233** | 🟢 **233 CERRADO en el pase 50; 232 OPCIONAL** | Sin cambios. ⚠️ **La resta 227 − 165 sigue sin poder escribirse (P113), que es exactamente la acción 2** |
+| **vacío de descubrimiento APAC** | 🟢 **ROTO por primera vez en diez pases** | `aicourse-mcp-server` (Aliyun Bailian / DashScope, China) es **código** educativo de origen APAC. 🔵 **Y lo rompió el canal `?text=` del registro, no el buscador web: el vacío era del canal.** ⚠️ **Con `MIT` sin texto, así que no entra en una entrega sin gestión** |
+| **92** (texto consolidado del AI Act) / **65** (primarias multilaterales) | 🔴 **92 ABIERTO** — 🟢 **65 se REFUERZA con denominador** | La encuesta **UNU/UNESCO IESALC** publica ahora sus cifras de gobernanza con su instrumento (**200 instituciones, 19 países, ago-oct 2025**): 26,0 % estrategia, 18,5 % política, 8,0 % presupuesto, **9,0 % evaluación formal** |
+| **69** / **68** / **60** / **61** | 🔴 **ABIERTOS, sin cambios** | Sin mediciones nuevas este pase |
+
+## 🔵 Las tres acciones que el pase 52 deja escritas para el pase 53
+
+⚠️ **La acción 1 sale directamente del eje nuevo que este pase abrió y no necesita ningún permiso.
+La 2 lleva TRES pases bloqueada y ahora se pide distinto, porque la frontera está medida. La 3 es la
+deuda que este pase creó al convertir dos alcances en reglas.**
+
+1. 🔴 **Auditar las 80 filas de `agents/top.md` por el eje de P118 —respeto a los controles de acceso
+   institucionales— porque ninguna fila fue mirada nunca por esa pregunta.** **La acción concreta:**
+   sobre las filas que hablan con un LMS o SIS (Canvas, Moodle, Open edX, Sakai), leer el README por
+   `raw` y clasificar en tres valores: **(a) usa credenciales que la institución emite**,
+   **(b) pide credenciales de sesión del usuario final** —la clase de `canvas-student-mcp`— o
+   **(c) no se puede determinar del README.** 🔵 **La hipótesis explícita y falsable: si
+   `canvas-student-mcp` es un caso aislado, el barrido devuelve una sola fila en la clase (b); si
+   devuelve varias, la elusión de controles es un patrón del ecosistema MCP educativo y entonces
+   P118 tiene que ser un paso obligatorio del filtro y no una advertencia por fila.** ⚠️ **Declarar
+   el denominador: cuántas de las 80 filas hablan con un LMS/SIS y cuántas no aplican.**
+2. 🔴 **Hacer comparables las dos superficies de Canvas con el MISMO instrumento — CUARTO pase que se
+   pide, y ahora el pedido es MÁS CHICO y más preciso.** Hoy se enfrentan **227** (conteo estático
+   sobre `dist/`, pase 49) y **165** (README del proveedor) y **la resta no se puede escribir**.
+   🔵 **Lo que este pase midió y cambia el pedido: la suite OFFLINE de
+   `compose/code/npm-surface-probe/` CORRE (19/19); lo que se niega es `probe.py` con SALIDA DE RED
+   (`[Code from External]`).** ⚠️ **Así que lo que hay que pedir no es permiso de ejecución sobre
+   `compose/code/`, es permiso de red para ese script** — y es un permiso notablemente más chico que
+   el que los pases 50 y 51 venían pidiendo sin precisar. 🔴 **No se debe reimplementar el probe
+   fuera del repositorio: la comparación sólo vale si los dos números salen del MISMO código
+   versionado, que es justamente el punto.**
+3. ⚠️ **Cerrar la deuda que este pase creó al convertir dos alcances en reglas, y es trabajo sin
+   ningún canal nuevo.** Las reglas `@timeback/*` (3 de 3) y `@ink-waffle/*` (2 de 2) se escribieron
+   sobre **5** paquetes en total. **La acción concreta:** (a) enumerar por el `?text=` del registro
+   **todos** los paquetes publicados bajo esos dos alcances y medir **cada uno** con el instrumento
+   corregido, para poder decir *«N de N»* con el N completo en vez de con el N que esta base
+   encontró de paso; (b) 🔵 **y declarar la hipótesis que lo haría caer: si aparece UN paquete de
+   `@timeback/*` con texto de licencia, la regla pasa de «el alcance no entra» a «el alcance se
+   revisa paquete por paquete», que es una recomendación mucho más débil y hay que estar dispuesto a
+   escribirla.** ⚠️ **Y re-medir con el ancla CORREGIDA los paquetes que los pases 49–51 declararon
+   «sin texto en el tarball»: el defecto de la tendencia 266 pudo haber producido más de un falso.**
+
+⚠️ **Y las acciones hacia afuera que esta corrida sigue sin poder ejecutar, declaradas para no
+perderlas:** 🔴 **la licencia comercial de `dssg/student-early-warning` ante el Polsky Center de la
+Universidad de Chicago, que sigue siendo la única que desbloquea una pieza en vez de aclarar un
+dato**; 🔴 **la discrepancia `MIT` (npm) vs `ISC` (repo) de `@pie-qti/*` ante `pie-framework`, que
+es un reporte de un solo párrafo y corrige la licencia que un inventario archiva**; **el titular del
+`package/LICENSE` de `@eduware/oneroster`, que hoy otorga permiso 0BSD en nombre de un tercero**; el
+`LICENSE` de `RadiantCrystal/SafeTutors` y de `kaushal0494/AITutor-EvalKit`, **cuyos README ya
+PROMETEN el archivo y uno todavía enlaza `your-username`**; el titular correcto en
+`edeleastar/tutors-ts`, **que hoy otorga permiso en nombre de GitHub Inc.**; el `LICENSE` de
+`DMontgomery40/mcp-canvas-lms` y de `pie-framework/pie-elements-ng`; el del alcance `@timeback/*` y
+el de `@ink-waffle/*`, **ahora con dos y tres confirmaciones respectivamente**; el de
+`@imazhar101/mcp-canvas-server` (gap 232); **el acceso de miembro a los repos de Caliper de
+1EdTech**; los dos PR a `giacomomaria81/scorm-mcp-server` (gaps 100 y 102); y 🔵 **el texto
+consolidado del Reglamento (UE) 2024/1689, inalcanzable por cuatro canales** (gap 92).
 
 ## 🔵 Las tendencias 251–264, del pase 51 del 2026-10-02
 

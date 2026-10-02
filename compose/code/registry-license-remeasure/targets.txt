@@ -1,0 +1,11 @@
+@superbuilders/oneroster|trilogy-group/oneroster-ts
+@timeback/caliper|-
+@pie-element/multiple-choice|pie-framework/pie-elements-ng
+@pie-element/rubric|pie-framework/pie-elements-ng
+@owen-x-tech/canvas-mcp|owentaylor/canvas-mcp
+@eduware/oneroster|Eduware-Inc/eduware-oneroster
+@learninglocker/xapi-agents|LearningLocker/xapi-agents
+@osu-cass/sb-components|osu-cass/sb-components
+frappe-mcp-server|appliedrelevance/frappe_mcp_server
+@moinsen-dev/tool-teacher|moinsen-dev/tool-teacher
+@timeback/oneroster|-

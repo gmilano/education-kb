@@ -8,6 +8,108 @@ updated: 2026-10-02
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 
+## 2026-10-02 (pase 52) — **el dato crudo: 11 paquetes re-medidos con tres instrumentos, 3 veredictos cambiados y los tres por el tarball; un `package/license` de 35.121 bytes que el ancla del pase 51 no veía por ser minúscula; dos sha256 idénticos en alcances distintos; `@timeback/*` 3 de 3**
+
+**Todo lo de abajo sale de ejecutar la acción 1 del pase 51 y de medir con `?text=` (P117) los
+candidatos nuevos. El código, el control offline y los dos TSV están en
+`compose/code/registry-license-remeasure/`.**
+
+### El ancla, medida contra sí misma
+
+| Paquete | Entradas que matchean `^package/(LICEN[CS]E\|COPYING)[^/]*$` (pase 51) | Con el ancla corregida (pase 52) | `grep -ic` recursivo | Archivo real |
+|---|---|---|---|---|
+| `@learninglocker/xapi-agents` 4.4.3 | 🔴 **0** | 🟢 **1** | 1 | **`package/license`** — **35.121 bytes**, GPL-3.0 íntegra |
+| `@superbuilders/oneroster` 0.7.0 | 1 | 1 | 1 | `package/LICENSE` |
+| `@eduware/oneroster` 1.2.11 | 1 | 1 | 1 | `package/LICENSE` |
+| `@osu-cass/sb-components` 1.5.0-alpha.10 | 1 | 1 | 1 | `package/LICENSE` |
+| **`tutors-publish-npm` 4.1.3** *(control positivo de la tendencia 259)* | **0** | 🟢 **0** | 🔴 **144** | — **el ancla sigue rechazando `node_modules`** |
+| las otras 7 del lote | 0 | 0 | 0 | sin texto por ningún canal |
+
+🟢 **El control positivo es la mitad que importa del cambio:** un ancla insensible a mayúsculas que
+dejara de estar anclada volvería a contar las **144** licencias ajenas de `tutors-publish-npm`. La
+corrección tiene que hacer **las dos cosas**, y `test_anchor.py` lo verifica **sin red**: **24/24**,
+con el defecto del pase 51 reproducido explícitamente (`package/license`, `package/license.md`,
+`package/License`) y `licenses.json` / `LICENSES` rechazados a propósito.
+
+### Los 11 objetivos, crudos
+
+| Paquete | A: 20 nombres × 2 ramas | B: hermano | C: tarball (ancla corregida) | Veredicto pase 52 |
+|---|---|---|---|---|
+| `@superbuilders/oneroster` 0.7.0 | 🟢 `main:LICENSE` → *«BSD Zero Clause License»* | n/a | `package/LICENSE` | 🟢 **0BSD** |
+| `@eduware/oneroster` 1.2.11 | ⚠️ indeterminado | 🔴 sin hermano en el registro | `package/LICENSE` → **0BSD** | 🟢 **0BSD** — 🔴 **campo dice `MIT`** |
+| `@osu-cass/sb-components` 1.5.0-alpha.10 | ⚠️ indeterminado | 🟢 `osu-cass/tslint-config` `master:README.md` **200** → **el repo NO es público** | `package/LICENSE` → **MPL-2.0** | 🟢 **MPL-2.0**, confirma el campo |
+| `@learninglocker/xapi-agents` 4.4.3 | ⚠️ indeterminado | 🔴 `xapi-validation` y `xapi-service` **404** → el canal no llega a la org | `package/license` → **GPL-3.0** | 🟢 **GPL-3.0**, confirma el campo |
+| `@owen-x-tech/canvas-mcp` 1.1.0 | ⚠️ indeterminado | 🔴 sin hermano | raíz=0 recursivo=0 | ⚠️ **campo `MIT` SIN texto, 3 canales** |
+| `frappe-mcp-server` 0.6.0 | ⚠️ indeterminado | 🔴 sin hermano | raíz=0 recursivo=0 | ⚠️ **campo `ISC` SIN texto, 3 canales** |
+| `@pie-element/multiple-choice` 14.0.0 | 🔴 sin licencia (`master:README.md` 200) | n/a | raíz=0 recursivo=0 | 🔴 **sin licencia, DOS canales** |
+| `@pie-element/rubric` 9.0.0 | 🔴 sin licencia (`master:README.md` 200) | n/a | raíz=0 recursivo=0 | 🔴 **sin licencia, DOS canales** |
+| `@moinsen-dev/tool-teacher` 0.1.0 | 🔴 sin licencia (`master:README.md` 200) | n/a | raíz=0 recursivo=0 | 🔴 **campo `MIT` sin texto, confirmado** |
+| `@timeback/caliper` 0.3.3 | 🔴 sin repositorio declarado | n/a | raíz=0 recursivo=0 | 🔴 **sin licencia, DOS canales** |
+| `@timeback/oneroster` 0.3.3 | 🔴 sin repositorio declarado | n/a | raíz=0 recursivo=0 | 🔴 **sin licencia, DOS canales** |
+
+**Reparto: 4 licenciados con texto leído** (0BSD ×2, MPL-2.0, GPL-3.0), **2 con campo y sin texto por
+tres canales**, **5 sin licencia por dos canales.** 🔵 **Y el dato de método: los 20 nombres de
+archivo NO aportaron ni un veredicto nuevo en este lote**, porque los repositorios de los paquetes
+indeterminados simplemente no son alcanzables. **Lo que resolvió los tres cambios fue el tarball.**
+
+### 🔴 Dos sha256 idénticos en alcances distintos
+
+```
+@superbuilders/oneroster 0.7.0   package/LICENSE  sha256 8b211ca07d3f7842a35b8926d4958200735eeb53ee6433ccfb29ffc3c3120efa
+@eduware/oneroster       1.2.11  package/LICENSE  sha256 8b211ca07d3f7842a35b8926d4958200735eeb53ee6433ccfb29ffc3c3120efa
+```
+
+| | `@superbuilders/oneroster` | `@eduware/oneroster` |
+|---|---|---|
+| campo `license` del manifiesto | 🔴 **ninguno** | 🔴 **`MIT`** |
+| texto enviado | **0BSD** | **0BSD** — *idéntico* |
+| titular que el texto nombra | *Bjorn Pagen* | *Bjorn Pagen* — **ajeno a `Eduware-Inc`** |
+| repositorio declarado | `trilogy-group/oneroster-ts` | `Eduware-Inc/eduware-oneroster` |
+| archivos en el tarball | 4.467 | 2.533 |
+
+⚠️ **Lo verificable es esto y no más: dos alcances publican el mismo archivo de licencia byte a
+byte, nombrando a un tercero como titular, y uno de los dos declara `MIT` mientras envía 0BSD.** No
+se afirma de dónde salió el código: **no se midió**, y eso también se dice.
+
+### Las 13 piezas candidatas medidas por `?text=` (P117)
+
+| Paquete | Ver. | Campo | Manifiesto | Texto repo | Texto tarball | Veredicto |
+|---|---|---|---|---|---|---|
+| `canvas-student-mcp` | 1.3.3 | MIT | MIT | 🟢 `main:LICENSE` MIT | 🟢 `package/LICENSE` MIT | 🟢 **MIT por DOS artefactos** |
+| `@mtgibbs/canvas-lms-mcp` | 0.2.18 | MIT | MIT | 🟢 `main:LICENSE` MIT | 🟢 `package/LICENSE` MIT | 🟢 **MIT por DOS artefactos** |
+| `@citolab/qti-convert-cli` | 0.8.1 | GPL-3.0-only | GPL-3.0-only | 🟢 `main:LICENSE` GPL-3 | 🟢 `package/LICENSE` GPL-3 | 🔴 **GPL-3.0-only, TRES artefactos coincidentes** |
+| `opencode-sit` | 0.1.2 | MIT | MIT | — sin repo | 🟢 `package/LICENSE` MIT | 🟢 **MIT en el tarball** |
+| `@pie-qti/assessment-player` | 0.1.25 | **MIT** | **MIT** | 🔴 `master:LICENSE` **ISC** | raíz=0 | 🔴 **DISCREPA: campo MIT / texto ISC** |
+| `@pie-qti/item-player` | 0.1.25 | **MIT** | **MIT** | 🔴 `master:LICENSE` **ISC** | raíz=0 | 🔴 **ídem** |
+| `aicourse-mcp-server` | 0.1.0 | MIT | MIT | — sin repo | 🔴 raíz=0 rec=0 | ⚠️ **campo MIT SIN texto** |
+| `eth-moodle-mcp` | 1.3.3 | MIT | MIT | — sin repo | 🔴 raíz=0 rec=0 | ⚠️ **campo MIT SIN texto** |
+| `@ink-waffle/moodle-mcp` | 0.2.0 | MIT | MIT | — sin repo | 🔴 raíz=0 rec=0 | ⚠️ **campo MIT SIN texto — alcance 2 de 2** |
+| `@thanh01.pmt/curriculum-kit` | 2.0.12 | MIT | MIT | — sin repo | 🔴 raíz=0 rec=0 | ⚠️ **campo MIT SIN texto** |
+| `@timeback/qti` | 0.4.1 | 🔴 ninguno | 🔴 ninguno | — sin repo | 🔴 raíz=0 rec=0 | 🔴 **sin licencia — alcance 3 de 3** |
+| `@citolab/qti-json-schemas` | 1.9.3 | 🔴 ninguno | 🔴 ninguno | — sin repo | 🔴 raíz=0 rec=0 | 🔴 **sin licencia** |
+| `kust-iomi-mcp-course-proxy` | 1.0.0 | 🔴 ninguno | 🔴 ninguno | — sin repo | 🔴 raíz=0 rec=0 | 🔴 **sin licencia** |
+
+**Reparto de los 13: 4 con texto verificado** (MIT ×3, GPL-3.0 ×1), **2 que DISCREPAN entre campo y
+texto**, **4 con campo MIT y cero texto**, **3 sin licencia por ningún canal.** 🔴 **Nueve de trece
+no son usables en una entrega sin gestión previa, y las trece tienen campo o apariencia de
+permisividad en el buscador del registro.**
+
+### El control del gap 71, corrido ANTES de escribir
+
+**19 candidatos × `grep -ric` sobre los ocho archivos: 7 ya estaban, 12 con cero coincidencias.**
+⚠️ **El que más importa de los 7 es `jbnu-lms-mcp`** (**15** coincidencias): parecía el quiebre del
+vacío de código APAC y **esta base ya lo tenía**. 🔵 **Sin el control se habría publicado como alta
+regional nueva** — es la tercera vez que el control del gap 71 evita exactamente eso.
+
+### Los canales, verificados al abrir el pase
+
+| Canal | Código |
+|---|---|
+| `raw.githubusercontent.com` | 🟢 **200** |
+| `registry.npmjs.org/<pkg>/latest` y `/-/v1/search?text=` | 🟢 **200** |
+| `codeload.github.com` (tarball de GitHub) | 🔴 **403** |
+| `github.com` por `curl` | 🔴 **403** (las ★ se leen por **WebFetch**) |
+
 ## 2026-10-02 (pase 51) — **el dato crudo: 167 repos medidos por licencia con 20 nombres de archivo, 139/23/5, y la lista de 4 nombres que esta base usaba fallaba en `moodle/moodle`; 7 paquetes `tutors` recuperados de un alcance equivocado; 144 licencias ajenas en un tarball**
 
 **Todo lo de abajo sale de la acción 1 del pase 50 —la única que no dependía de permiso de
