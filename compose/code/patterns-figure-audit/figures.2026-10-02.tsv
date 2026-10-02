@@ -1,0 +1,384 @@
+line	unit	value	text	reproducible_here	instrument
+20	rows	0	0 de 33 filas	yes	grep -vc '^#' <the tsv>  for a measured table; count rows of agents/top.md
+23	rows	32	32 de 66 filas	yes	grep -vc '^#' <the tsv>  for a measured table; count rows of agents/top.md
+23	percent	48	48 %	yes	DERIVED: name the numerator and denominator, not the percentage
+34	assertions	33	**33 aserciones	yes	python3 compose/code/<dir>/test_*.py  (count the trailing 'N/N checks passed'; some suites need an argument or an env var -- see per-figure notes)
+39	tools	20	**20 tools	no	echo '{"jsonrpc":"2.0","id":1,"method":"tools/list"}' | <server over stdio>  -- needs the package installed, so NOT reproducible here
+41	tools	14	14 tools	no	echo '{"jsonrpc":"2.0","id":1,"method":"tools/list"}' | <server over stdio>  -- needs the package installed, so NOT reproducible here
+42	percent	30	**30 %	yes	DERIVED: name the numerator and denominator, not the percentage
+43	tools	18	**18 de 20 tools	no	echo '{"jsonrpc":"2.0","id":1,"method":"tools/list"}' | <server over stdio>  -- needs the package installed, so NOT reproducible here
+43	routes	2	2 rutas	yes	grep -oE '@(Get|Post|Put|Delete|Request)Mapping|@Service\("/' over a clone, or the servlet's <url-pattern>
+56	percent	49	**49 %	yes	DERIVED: name the numerator and denominator, not the percentage
+64	percent	79	79 %	yes	DERIVED: name the numerator and denominator, not the percentage
+64	percent	88	88 %	yes	DERIVED: name the numerator and denominator, not the percentage
+74	tools	6	6 tools	no	echo '{"jsonrpc":"2.0","id":1,"method":"tools/list"}' | <server over stdio>  -- needs the package installed, so NOT reproducible here
+85	tools	15	**15 tools	no	echo '{"jsonrpc":"2.0","id":1,"method":"tools/list"}' | <server over stdio>  -- needs the package installed, so NOT reproducible here
+85	tools	3	3 tools	no	echo '{"jsonrpc":"2.0","id":1,"method":"tools/list"}' | <server over stdio>  -- needs the package installed, so NOT reproducible here
+85	downloads	218.212	218.212 descargas	no	the registry API (pypi.org/npmjs) -- reachable per-case, not swept
+87	tools	132	132 tools	no	echo '{"jsonrpc":"2.0","id":1,"method":"tools/list"}' | <server over stdio>  -- needs the package installed, so NOT reproducible here
+87	methods	164	164 métodos	yes	grep -cE '<language method signature>' over a clone; for a Java SPI, count abstract methods in the interface
+87	commits	667	667 commits	no	git rev-list --count HEAD on a full clone; the shallow clones here cannot
+87	percent	100	100 %	yes	DERIVED: name the numerator and denominator, not the percentage
+93	tools	132	**132 tools	no	echo '{"jsonrpc":"2.0","id":1,"method":"tools/list"}' | <server over stdio>  -- needs the package installed, so NOT reproducible here
+148	tools	3	3 tools	no	echo '{"jsonrpc":"2.0","id":1,"method":"tools/list"}' | <server over stdio>  -- needs the package installed, so NOT reproducible here
+149	rows	0	**0 de 33** filas	yes	grep -vc '^#' <the tsv>  for a measured table; count rows of agents/top.md
+169	lines	912	912 líneas	yes	wc -l <file>  for raw lines; grep -cvE '^[[:space:]]*(#.*)?$' <file> for non-blank-non-comment. THE TWO DISAGREE: name which one.
+178	lines	115	115 líneas	yes	wc -l <file>  for raw lines; grep -cvE '^[[:space:]]*(#.*)?$' <file> for non-blank-non-comment. THE TWO DISAGREE: name which one.
+178	percent	17	**17 %	yes	DERIVED: name the numerator and denominator, not the percentage
+178	percent	22	**22 %	yes	DERIVED: name the numerator and denominator, not the percentage
+179	assertions	11	11 checks	yes	python3 compose/code/<dir>/test_*.py  (count the trailing 'N/N checks passed'; some suites need an argument or an env var -- see per-figure notes)
+179	assertions	23	23 aserciones	yes	python3 compose/code/<dir>/test_*.py  (count the trailing 'N/N checks passed'; some suites need an argument or an env var -- see per-figure notes)
+184	lines	175	175 líneas	yes	wc -l <file>  for raw lines; grep -cvE '^[[:space:]]*(#.*)?$' <file> for non-blank-non-comment. THE TWO DISAGREE: name which one.
+197	downloads	46,	46, descargas	no	the registry API (pypi.org/npmjs) -- reachable per-case, not swept
+201	percent	44	44 %	yes	DERIVED: name the numerator and denominator, not the percentage
+242	rows	66	66 filas	yes	grep -vc '^#' <the tsv>  for a measured table; count rows of agents/top.md
+242	percent	48	48 %	yes	DERIVED: name the numerator and denominator, not the percentage
+249	stars	127	127 ★	no	github.com -> 403 for curl here; api.github.com denies in the body (pass 37)
+250	stars	448	448 ★	no	github.com -> 403 for curl here; api.github.com denies in the body (pass 37)
+340	fields	4	4 campos	yes	read the schema / serializer and count declared fields
+350	modules	2	2 módulos	yes	ls the module directory on a clone, or read the add-on registry
+353	assertions	33	33 aserciones	yes	python3 compose/code/<dir>/test_*.py  (count the trailing 'N/N checks passed'; some suites need an argument or an env var -- see per-figure notes)
+401	fields	6	6 campos	yes	read the schema / serializer and count declared fields
+460	percent	100	100 %	yes	DERIVED: name the numerator and denominator, not the percentage
+473	methods	6	6 métodos	yes	grep -cE '<language method signature>' over a clone; for a Java SPI, count abstract methods in the interface
+495	assertions	37	37 checks	yes	python3 compose/code/<dir>/test_*.py  (count the trailing 'N/N checks passed'; some suites need an argument or an env var -- see per-figure notes)
+495	tools	79	**79** tools	no	echo '{"jsonrpc":"2.0","id":1,"method":"tools/list"}' | <server over stdio>  -- needs the package installed, so NOT reproducible here
+534	tools	37	**37** tools	no	echo '{"jsonrpc":"2.0","id":1,"method":"tools/list"}' | <server over stdio>  -- needs the package installed, so NOT reproducible here
+535	tools	11	**11** tools	no	echo '{"jsonrpc":"2.0","id":1,"method":"tools/list"}' | <server over stdio>  -- needs the package installed, so NOT reproducible here
+546	percent	61	**61 %	yes	DERIVED: name the numerator and denominator, not the percentage
+557	methods	12	12 métodos	yes	grep -cE '<language method signature>' over a clone; for a Java SPI, count abstract methods in the interface
+563	methods	14	**14 métodos	yes	grep -cE '<language method signature>' over a clone; for a Java SPI, count abstract methods in the interface
+565	methods	14	14 métodos	yes	grep -cE '<language method signature>' over a clone; for a Java SPI, count abstract methods in the interface
+565	percent	23	23 %	yes	DERIVED: name the numerator and denominator, not the percentage
+566	percent	77	**77 %	yes	DERIVED: name the numerator and denominator, not the percentage
+583	methods	14	14 métodos	yes	grep -cE '<language method signature>' over a clone; for a Java SPI, count abstract methods in the interface
+583	percent	22	**22 %	yes	DERIVED: name the numerator and denominator, not the percentage
+583	percent	23	**23 %	yes	DERIVED: name the numerator and denominator, not the percentage
+585	lines	6	6 líneas	yes	wc -l <file>  for raw lines; grep -cvE '^[[:space:]]*(#.*)?$' <file> for non-blank-non-comment. THE TWO DISAGREE: name which one.
+595	lines	912	912 líneas	yes	wc -l <file>  for raw lines; grep -cvE '^[[:space:]]*(#.*)?$' <file> for non-blank-non-comment. THE TWO DISAGREE: name which one.
+595	methods	14	**14** métodos	yes	grep -cE '<language method signature>' over a clone; for a Java SPI, count abstract methods in the interface
+600	assertions	21	21 checks	yes	python3 compose/code/<dir>/test_*.py  (count the trailing 'N/N checks passed'; some suites need an argument or an env var -- see per-figure notes)
+613	methods	1	1 de 14 métodos	yes	grep -cE '<language method signature>' over a clone; for a Java SPI, count abstract methods in the interface
+626	routes	0	0 endpoints	yes	grep -oE '@(Get|Post|Put|Delete|Request)Mapping|@Service\("/' over a clone, or the servlet's <url-pattern>
+671	lines	175	175 líneas	yes	wc -l <file>  for raw lines; grep -cvE '^[[:space:]]*(#.*)?$' <file> for non-blank-non-comment. THE TWO DISAGREE: name which one.
+694	tools	0	**0 tools	no	echo '{"jsonrpc":"2.0","id":1,"method":"tools/list"}' | <server over stdio>  -- needs the package installed, so NOT reproducible here
+717	routes	41	41 endpoints	yes	grep -oE '@(Get|Post|Put|Delete|Request)Mapping|@Service\("/' over a clone, or the servlet's <url-pattern>
+754	tools	26	26 tools	no	echo '{"jsonrpc":"2.0","id":1,"method":"tools/list"}' | <server over stdio>  -- needs the package installed, so NOT reproducible here
+758	assertions	46	**46 aserciones	yes	python3 compose/code/<dir>/test_*.py  (count the trailing 'N/N checks passed'; some suites need an argument or an env var -- see per-figure notes)
+765	assertions	46	**46** aserciones	yes	python3 compose/code/<dir>/test_*.py  (count the trailing 'N/N checks passed'; some suites need an argument or an env var -- see per-figure notes)
+765	lines	175	175 líneas	yes	wc -l <file>  for raw lines; grep -cvE '^[[:space:]]*(#.*)?$' <file> for non-blank-non-comment. THE TWO DISAGREE: name which one.
+766	lines	186	**186 líneas	yes	wc -l <file>  for raw lines; grep -cvE '^[[:space:]]*(#.*)?$' <file> for non-blank-non-comment. THE TWO DISAGREE: name which one.
+766	tools	26	26 tools	no	echo '{"jsonrpc":"2.0","id":1,"method":"tools/list"}' | <server over stdio>  -- needs the package installed, so NOT reproducible here
+778	tools	26	26 tools	no	echo '{"jsonrpc":"2.0","id":1,"method":"tools/list"}' | <server over stdio>  -- needs the package installed, so NOT reproducible here
+794	tools	0	0 tools	no	echo '{"jsonrpc":"2.0","id":1,"method":"tools/list"}' | <server over stdio>  -- needs the package installed, so NOT reproducible here
+821	percent	23	23 %	yes	DERIVED: name the numerator and denominator, not the percentage
+825	files	1	1 archivo	yes	git ls-tree -r HEAD --name-only | grep -c <pattern>  on a blobless clone
+830	methods	0	**0 métodos	yes	grep -cE '<language method signature>' over a clone; for a Java SPI, count abstract methods in the interface
+834	methods	12	12 métodos	yes	grep -cE '<language method signature>' over a clone; for a Java SPI, count abstract methods in the interface
+859	routes	20	**20 rutas	yes	grep -oE '@(Get|Post|Put|Delete|Request)Mapping|@Service\("/' over a clone, or the servlet's <url-pattern>
+865	methods	27	27 métodos	yes	grep -cE '<language method signature>' over a clone; for a Java SPI, count abstract methods in the interface
+868	methods	18	18 métodos	yes	grep -cE '<language method signature>' over a clone; for a Java SPI, count abstract methods in the interface
+875	routes	20	**20 rutas	yes	grep -oE '@(Get|Post|Put|Delete|Request)Mapping|@Service\("/' over a clone, or the servlet's <url-pattern>
+886	classes	24	24 clases	yes	grep -cE '^class ' <file>
+886	classes	5	5 clases	yes	grep -cE '^class ' <file>
+886	classes	0	0 clases	yes	grep -cE '^class ' <file>
+922	stars	499	499 ★	no	github.com -> 403 for curl here; api.github.com denies in the body (pass 37)
+969	stars	444	444 ★	no	github.com -> 403 for curl here; api.github.com denies in the body (pass 37)
+972	stars	32	32 ★	no	github.com -> 403 for curl here; api.github.com denies in the body (pass 37)
+972	stars	3	3 ★	no	github.com -> 403 for curl here; api.github.com denies in the body (pass 37)
+972	stars	42	42 ★	no	github.com -> 403 for curl here; api.github.com denies in the body (pass 37)
+973	stars	441	441 ★	no	github.com -> 403 for curl here; api.github.com denies in the body (pass 37)
+1035	stars	389	389 ★	no	github.com -> 403 for curl here; api.github.com denies in the body (pass 37)
+1064	percent	18	18%	yes	DERIVED: name the numerator and denominator, not the percentage
+1070	tools	34	34 tools	no	echo '{"jsonrpc":"2.0","id":1,"method":"tools/list"}' | <server over stdio>  -- needs the package installed, so NOT reproducible here
+1083	percent	18	18%	yes	DERIVED: name the numerator and denominator, not the percentage
+1099	stars	59	59 ★	no	github.com -> 403 for curl here; api.github.com denies in the body (pass 37)
+1109	stars	59	**59 ★	no	github.com -> 403 for curl here; api.github.com denies in the body (pass 37)
+1119	stars	54	54 ★	no	github.com -> 403 for curl here; api.github.com denies in the body (pass 37)
+1121	modules	26	26 módulos	yes	ls the module directory on a clone, or read the add-on registry
+1133	stars	54	54 ★	no	github.com -> 403 for curl here; api.github.com denies in the body (pass 37)
+1145	percent	65	**65%	yes	DERIVED: name the numerator and denominator, not the percentage
+1159	percent	80	80%	yes	DERIVED: name the numerator and denominator, not the percentage
+1161	stars	42	42 ★	no	github.com -> 403 for curl here; api.github.com denies in the body (pass 37)
+1170	percent	65	65%	yes	DERIVED: name the numerator and denominator, not the percentage
+1172	stars	32	32 estrellas	no	github.com -> 403 for curl here; api.github.com denies in the body (pass 37)
+1178	percent	95	95%	yes	DERIVED: name the numerator and denominator, not the percentage
+1213	stars	3	**3 estrellas	no	github.com -> 403 for curl here; api.github.com denies in the body (pass 37)
+1213	commits	23	23 commits	no	git rev-list --count HEAD on a full clone; the shallow clones here cannot
+1237	stars	441	441 ★	no	github.com -> 403 for curl here; api.github.com denies in the body (pass 37)
+1237	commits	811	811 commits	no	git rev-list --count HEAD on a full clone; the shallow clones here cannot
+1243	percent	73,5	73,5%	yes	DERIVED: name the numerator and denominator, not the percentage
+1243	percent	9	9%	yes	DERIVED: name the numerator and denominator, not the percentage
+1245	percent	73,5	**73,5%	yes	DERIVED: name the numerator and denominator, not the percentage
+1245	percent	9,0	9,0%	yes	DERIVED: name the numerator and denominator, not the percentage
+1245	percent	18,5	18,5%	yes	DERIVED: name the numerator and denominator, not the percentage
+1245	percent	26,0	26,0%	yes	DERIVED: name the numerator and denominator, not the percentage
+1255	percent	8,0	8,0%	yes	DERIVED: name the numerator and denominator, not the percentage
+1256	percent	73,5	73,5%	yes	DERIVED: name the numerator and denominator, not the percentage
+1256	percent	18,5	18,5%	yes	DERIVED: name the numerator and denominator, not the percentage
+1260	percent	18,5	18,5%	yes	DERIVED: name the numerator and denominator, not the percentage
+1260	percent	9,0	9,0%	yes	DERIVED: name the numerator and denominator, not the percentage
+1262	percent	84	84%	yes	DERIVED: name the numerator and denominator, not the percentage
+1262	percent	68	68%	yes	DERIVED: name the numerator and denominator, not the percentage
+1262	percent	52	52%	yes	DERIVED: name the numerator and denominator, not the percentage
+1264	percent	65	**65%	yes	DERIVED: name the numerator and denominator, not the percentage
+1274	commits	240	240 commits	no	git rev-list --count HEAD on a full clone; the shallow clones here cannot
+1281	stars	75	75 ★	no	github.com -> 403 for curl here; api.github.com denies in the body (pass 37)
+1282	tools	34	34 tools	no	echo '{"jsonrpc":"2.0","id":1,"method":"tools/list"}' | <server over stdio>  -- needs the package installed, so NOT reproducible here
+1282	stars	8	8 ★	no	github.com -> 403 for curl here; api.github.com denies in the body (pass 37)
+1283	stars	0	0 ★	no	github.com -> 403 for curl here; api.github.com denies in the body (pass 37)
+1291	stars	0	0 ★	no	github.com -> 403 for curl here; api.github.com denies in the body (pass 37)
+1340	percent	50	50%	yes	DERIVED: name the numerator and denominator, not the percentage
+1340	percent	10	10%	yes	DERIVED: name the numerator and denominator, not the percentage
+1343	commits	32	**32 commits	no	git rev-list --count HEAD on a full clone; the shallow clones here cannot
+1380	commits	32	32 commits	no	git rev-list --count HEAD on a full clone; the shallow clones here cannot
+1407	stars	419	419 ★	no	github.com -> 403 for curl here; api.github.com denies in the body (pass 37)
+1407	commits	374	374 commits	no	git rev-list --count HEAD on a full clone; the shallow clones here cannot
+1408	stars	128	128 ★	no	github.com -> 403 for curl here; api.github.com denies in the body (pass 37)
+1408	stars	34	34 ★	no	github.com -> 403 for curl here; api.github.com denies in the body (pass 37)
+1436	stars	0	**0 ★	no	github.com -> 403 for curl here; api.github.com denies in the body (pass 37)
+1436	commits	111	111 commits	no	git rev-list --count HEAD on a full clone; the shallow clones here cannot
+1442	stars	0	0 ★	no	github.com -> 403 for curl here; api.github.com denies in the body (pass 37)
+1442	commits	111	111 commits	no	git rev-list --count HEAD on a full clone; the shallow clones here cannot
+1443	stars	35	35 ★	no	github.com -> 403 for curl here; api.github.com denies in the body (pass 37)
+1443	commits	1.188	1.188 commits	no	git rev-list --count HEAD on a full clone; the shallow clones here cannot
+1444	stars	419	419 ★	no	github.com -> 403 for curl here; api.github.com denies in the body (pass 37)
+1447	stars	1	1 ★	no	github.com -> 403 for curl here; api.github.com denies in the body (pass 37)
+1470	stars	15	15 estrellas	no	github.com -> 403 for curl here; api.github.com denies in the body (pass 37)
+1516	stars	5	**5 ★	no	github.com -> 403 for curl here; api.github.com denies in the body (pass 37)
+1522	percent	19,95	19,95 %	yes	DERIVED: name the numerator and denominator, not the percentage
+1522	percent	20,2	20,2 %	yes	DERIVED: name the numerator and denominator, not the percentage
+1533	percent	65	**65 %	yes	DERIVED: name the numerator and denominator, not the percentage
+1541	stars	60	60 ★	no	github.com -> 403 for curl here; api.github.com denies in the body (pass 37)
+1541	commits	778	778 commits	no	git rev-list --count HEAD on a full clone; the shallow clones here cannot
+1542	stars	448	448 ★	no	github.com -> 403 for curl here; api.github.com denies in the body (pass 37)
+1543	tools	15	**15 tools	no	echo '{"jsonrpc":"2.0","id":1,"method":"tools/list"}' | <server over stdio>  -- needs the package installed, so NOT reproducible here
+1544	tools	165	**165 tools	no	echo '{"jsonrpc":"2.0","id":1,"method":"tools/list"}' | <server over stdio>  -- needs the package installed, so NOT reproducible here
+1564	percent	65	65 %	yes	DERIVED: name the numerator and denominator, not the percentage
+1622	percent	8	8 %	yes	DERIVED: name the numerator and denominator, not the percentage
+1623	percent	92	**92 %	yes	DERIVED: name the numerator and denominator, not the percentage
+1623	percent	79	79 %	yes	DERIVED: name the numerator and denominator, not the percentage
+1623	percent	65	**65 %	yes	DERIVED: name the numerator and denominator, not the percentage
+1651	tools	25	**25 tools	no	echo '{"jsonrpc":"2.0","id":1,"method":"tools/list"}' | <server over stdio>  -- needs the package installed, so NOT reproducible here
+1664	tools	165	165 tools	no	echo '{"jsonrpc":"2.0","id":1,"method":"tools/list"}' | <server over stdio>  -- needs the package installed, so NOT reproducible here
+1686	percent	73,5	**73,5 %	yes	DERIVED: name the numerator and denominator, not the percentage
+1686	percent	8	8 %	yes	DERIVED: name the numerator and denominator, not the percentage
+1706	modules	26	26 de 38 módulos	yes	ls the module directory on a clone, or read the add-on registry
+1706	modules	12	**12 módulos	yes	ls the module directory on a clone, or read the add-on registry
+1724	percent	46	**46%	yes	DERIVED: name the numerator and denominator, not the percentage
+1725	percent	82	82%	yes	DERIVED: name the numerator and denominator, not the percentage
+1725	percent	76	76%	yes	DERIVED: name the numerator and denominator, not the percentage
+1726	percent	71	71%	yes	DERIVED: name the numerator and denominator, not the percentage
+1733	stars	281	281 ★	no	github.com -> 403 for curl here; api.github.com denies in the body (pass 37)
+1733	stars	441	441 ★	no	github.com -> 403 for curl here; api.github.com denies in the body (pass 37)
+1767	percent	46	46%	yes	DERIVED: name the numerator and denominator, not the percentage
+1779	commits	22.533	**22.533 commits	no	git rev-list --count HEAD on a full clone; the shallow clones here cannot
+1845	stars	30	**30 ★	no	github.com -> 403 for curl here; api.github.com denies in the body (pass 37)
+1845	stars	205	205 ★	no	github.com -> 403 for curl here; api.github.com denies in the body (pass 37)
+1872	commits	25.385	25.385 commits	no	git rev-list --count HEAD on a full clone; the shallow clones here cannot
+1913	commits	38.046	**38.046 commits	no	git rev-list --count HEAD on a full clone; the shallow clones here cannot
+1915	stars	41	41 estrellas	no	github.com -> 403 for curl here; api.github.com denies in the body (pass 37)
+1952	stars	41	41 estrellas	no	github.com -> 403 for curl here; api.github.com denies in the body (pass 37)
+1952	commits	38.046	38.046 commits	no	git rev-list --count HEAD on a full clone; the shallow clones here cannot
+1987	percent	41,7	**41,7%	yes	DERIVED: name the numerator and denominator, not the percentage
+1999	stars	6	6 ★	no	github.com -> 403 for curl here; api.github.com denies in the body (pass 37)
+2013	stars	62	62 ★	no	github.com -> 403 for curl here; api.github.com denies in the body (pass 37)
+2017	commits	2.572	2.572 commits	no	git rev-list --count HEAD on a full clone; the shallow clones here cannot
+2039	percent	38	38%	yes	DERIVED: name the numerator and denominator, not the percentage
+2045	stars	6	6 ★	no	github.com -> 403 for curl here; api.github.com denies in the body (pass 37)
+2157	stars	35	35 ★	no	github.com -> 403 for curl here; api.github.com denies in the body (pass 37)
+2168	stars	1	1 ★	no	github.com -> 403 for curl here; api.github.com denies in the body (pass 37)
+2170	stars	499	499 ★	no	github.com -> 403 for curl here; api.github.com denies in the body (pass 37)
+2182	stars	499	499 ★	no	github.com -> 403 for curl here; api.github.com denies in the body (pass 37)
+2182	commits	254	254 commits	no	git rev-list --count HEAD on a full clone; the shallow clones here cannot
+2309	percent	87	**87%	yes	DERIVED: name the numerator and denominator, not the percentage
+2383	stars	12	**12 estrellas	no	github.com -> 403 for curl here; api.github.com denies in the body (pass 37)
+2383	commits	5	5 commits	no	git rev-list --count HEAD on a full clone; the shallow clones here cannot
+2405	stars	0	0 ★	no	github.com -> 403 for curl here; api.github.com denies in the body (pass 37)
+2406	stars	19	19 ★	no	github.com -> 403 for curl here; api.github.com denies in the body (pass 37)
+2407	stars	44	44 ★	no	github.com -> 403 for curl here; api.github.com denies in the body (pass 37)
+2410	stars	9	9 ★	no	github.com -> 403 for curl here; api.github.com denies in the body (pass 37)
+2412	stars	3	3 ★	no	github.com -> 403 for curl here; api.github.com denies in the body (pass 37)
+2415	stars	2	2 ★	no	github.com -> 403 for curl here; api.github.com denies in the body (pass 37)
+2418	stars	14	14 ★	no	github.com -> 403 for curl here; api.github.com denies in the body (pass 37)
+2470	stars	0	**0 estrellas	no	github.com -> 403 for curl here; api.github.com denies in the body (pass 37)
+2470	stars	0	0 ★	no	github.com -> 403 for curl here; api.github.com denies in the body (pass 37)
+2472	stars	45	45 ★	no	github.com -> 403 for curl here; api.github.com denies in the body (pass 37)
+2532	stars	198	198 ★	no	github.com -> 403 for curl here; api.github.com denies in the body (pass 37)
+2568	percent	61,3	**61,3 %	yes	DERIVED: name the numerator and denominator, not the percentage
+2569	percent	2,9	2,9 %	yes	DERIVED: name the numerator and denominator, not the percentage
+2570	percent	5,85	**5,85 %	yes	DERIVED: name the numerator and denominator, not the percentage
+2570	percent	20	20 %	yes	DERIVED: name the numerator and denominator, not the percentage
+2574	percent	1	1 %	yes	DERIVED: name the numerator and denominator, not the percentage
+2585	stars	1.100	**1.100 ★	no	github.com -> 403 for curl here; api.github.com denies in the body (pass 37)
+2586	commits	344	344 commits	no	git rev-list --count HEAD on a full clone; the shallow clones here cannot
+2613	percent	61,3	**61,3 %	yes	DERIVED: name the numerator and denominator, not the percentage
+2628	percent	80	80 %	yes	DERIVED: name the numerator and denominator, not the percentage
+2630	percent	73	73 %	yes	DERIVED: name the numerator and denominator, not the percentage
+2695	stars	1	**1 estrella	no	github.com -> 403 for curl here; api.github.com denies in the body (pass 37)
+2816	percent	11	11 %	yes	DERIVED: name the numerator and denominator, not the percentage
+2935	methods	12	12 métodos	yes	grep -cE '<language method signature>' over a clone; for a Java SPI, count abstract methods in the interface
+3005	files	187	187 archivos	yes	git ls-tree -r HEAD --name-only | grep -c <pattern>  on a blobless clone
+3012	commits	528	528 commits	no	git rev-list --count HEAD on a full clone; the shallow clones here cannot
+3086	stars	299	299 ★	no	github.com -> 403 for curl here; api.github.com denies in the body (pass 37)
+3086	commits	181	181 commits	no	git rev-list --count HEAD on a full clone; the shallow clones here cannot
+3087	percent	100	**100 %	yes	DERIVED: name the numerator and denominator, not the percentage
+3091	stars	88	88 ★	no	github.com -> 403 for curl here; api.github.com denies in the body (pass 37)
+3091	commits	828	828 commits	no	git rev-list --count HEAD on a full clone; the shallow clones here cannot
+3130	stars	353	353 ★	no	github.com -> 403 for curl here; api.github.com denies in the body (pass 37)
+3131	stars	14	14 ★	no	github.com -> 403 for curl here; api.github.com denies in the body (pass 37)
+3132	stars	211	211 ★	no	github.com -> 403 for curl here; api.github.com denies in the body (pass 37)
+3133	stars	2.900	2.900 ★	no	github.com -> 403 for curl here; api.github.com denies in the body (pass 37)
+3134	stars	45	45 ★	no	github.com -> 403 for curl here; api.github.com denies in the body (pass 37)
+3135	stars	9	9 ★	no	github.com -> 403 for curl here; api.github.com denies in the body (pass 37)
+3136	stars	12	12 ★	no	github.com -> 403 for curl here; api.github.com denies in the body (pass 37)
+3214	stars	4	4 ★	no	github.com -> 403 for curl here; api.github.com denies in the body (pass 37)
+3214	commits	22	22 commits	no	git rev-list --count HEAD on a full clone; the shallow clones here cannot
+3216	percent	50	50%	yes	DERIVED: name the numerator and denominator, not the percentage
+3233	percent	50	50%	yes	DERIVED: name the numerator and denominator, not the percentage
+3251	stars	4	**4 estrellas	no	github.com -> 403 for curl here; api.github.com denies in the body (pass 37)
+3254	commits	22	22 commits	no	git rev-list --count HEAD on a full clone; the shallow clones here cannot
+3276	tables	7	7 tablas	yes	grep the migration or the delete cascade for table names
+3295	tables	7	7 tablas	yes	grep the migration or the delete cascade for table names
+3349	commits	2.269	2.269 commits	no	git rev-list --count HEAD on a full clone; the shallow clones here cannot
+3379	tables	7	7 tablas	yes	grep the migration or the delete cascade for table names
+3430	commits	2.269	2.269 commits	no	git rev-list --count HEAD on a full clone; the shallow clones here cannot
+3480	lines	8	8 líneas	yes	wc -l <file>  for raw lines; grep -cvE '^[[:space:]]*(#.*)?$' <file> for non-blank-non-comment. THE TWO DISAGREE: name which one.
+3494	files	4	4 archivos	yes	git ls-tree -r HEAD --name-only | grep -c <pattern>  on a blobless clone
+3498	lines	8	8 líneas	yes	wc -l <file>  for raw lines; grep -cvE '^[[:space:]]*(#.*)?$' <file> for non-blank-non-comment. THE TWO DISAGREE: name which one.
+3557	rows	25	25 filas	yes	grep -vc '^#' <the tsv>  for a measured table; count rows of agents/top.md
+3559	rows	0	0 filas	yes	grep -vc '^#' <the tsv>  for a measured table; count rows of agents/top.md
+3567	rows	10	**10 filas	yes	grep -vc '^#' <the tsv>  for a measured table; count rows of agents/top.md
+3622	commits	667	667 commits	no	git rev-list --count HEAD on a full clone; the shallow clones here cannot
+3625	stars	138	138 ★	no	github.com -> 403 for curl here; api.github.com denies in the body (pass 37)
+3625	stars	124	124 ★	no	github.com -> 403 for curl here; api.github.com denies in the body (pass 37)
+3649	percent	45	45 %	yes	DERIVED: name the numerator and denominator, not the percentage
+3649	percent	70	70 %	yes	DERIVED: name the numerator and denominator, not the percentage
+3664	stars	5	5 ★	no	github.com -> 403 for curl here; api.github.com denies in the body (pass 37)
+3664	commits	667	**667 commits	no	git rev-list --count HEAD on a full clone; the shallow clones here cannot
+3684	commits	37	37 commits	no	git rev-list --count HEAD on a full clone; the shallow clones here cannot
+3690	stars	373	373 ★	no	github.com -> 403 for curl here; api.github.com denies in the body (pass 37)
+3727	tools	6	**6 tools	no	echo '{"jsonrpc":"2.0","id":1,"method":"tools/list"}' | <server over stdio>  -- needs the package installed, so NOT reproducible here
+3780	tools	10	10 tools	no	echo '{"jsonrpc":"2.0","id":1,"method":"tools/list"}' | <server over stdio>  -- needs the package installed, so NOT reproducible here
+3780	tools	8	**8 tools	no	echo '{"jsonrpc":"2.0","id":1,"method":"tools/list"}' | <server over stdio>  -- needs the package installed, so NOT reproducible here
+3780	tools	40	**40 tools	no	echo '{"jsonrpc":"2.0","id":1,"method":"tools/list"}' | <server over stdio>  -- needs the package installed, so NOT reproducible here
+3780	stars	43	43 ★	no	github.com -> 403 for curl here; api.github.com denies in the body (pass 37)
+3780	commits	59	59 commits	no	git rev-list --count HEAD on a full clone; the shallow clones here cannot
+3786	tools	103	103 tools	no	echo '{"jsonrpc":"2.0","id":1,"method":"tools/list"}' | <server over stdio>  -- needs the package installed, so NOT reproducible here
+3786	stars	269	269 ★	no	github.com -> 403 for curl here; api.github.com denies in the body (pass 37)
+3786	commits	815	815 commits	no	git rev-list --count HEAD on a full clone; the shallow clones here cannot
+3788	tools	10	10 tools	no	echo '{"jsonrpc":"2.0","id":1,"method":"tools/list"}' | <server over stdio>  -- needs the package installed, so NOT reproducible here
+3788	stars	0	0 ★	no	github.com -> 403 for curl here; api.github.com denies in the body (pass 37)
+3823	tools	30	30 tools	no	echo '{"jsonrpc":"2.0","id":1,"method":"tools/list"}' | <server over stdio>  -- needs the package installed, so NOT reproducible here
+3860	stars	15	**15 ★	no	github.com -> 403 for curl here; api.github.com denies in the body (pass 37)
+3861	stars	4	**4 ★	no	github.com -> 403 for curl here; api.github.com denies in the body (pass 37)
+3861	commits	2.402	2.402 commits	no	git rev-list --count HEAD on a full clone; the shallow clones here cannot
+3912	percent	65	**65 %	yes	DERIVED: name the numerator and denominator, not the percentage
+3933	tools	40	40 tools	no	echo '{"jsonrpc":"2.0","id":1,"method":"tools/list"}' | <server over stdio>  -- needs the package installed, so NOT reproducible here
+3945	tools	40	40 tools	no	echo '{"jsonrpc":"2.0","id":1,"method":"tools/list"}' | <server over stdio>  -- needs the package installed, so NOT reproducible here
+3958	tools	8	8 tools	no	echo '{"jsonrpc":"2.0","id":1,"method":"tools/list"}' | <server over stdio>  -- needs the package installed, so NOT reproducible here
+3958	commits	10	**10 commits	no	git rev-list --count HEAD on a full clone; the shallow clones here cannot
+3963	routes	35	**35 endpoints	yes	grep -oE '@(Get|Post|Put|Delete|Request)Mapping|@Service\("/' over a clone, or the servlet's <url-pattern>
+3980	percent	8	**8 %	yes	DERIVED: name the numerator and denominator, not the percentage
+3981	percent	73,5	**73,5 %	yes	DERIVED: name the numerator and denominator, not the percentage
+3990	tools	40	40 tools	no	echo '{"jsonrpc":"2.0","id":1,"method":"tools/list"}' | <server over stdio>  -- needs the package installed, so NOT reproducible here
+4019	routes	21	21 rutas	yes	grep -oE '@(Get|Post|Put|Delete|Request)Mapping|@Service\("/' over a clone, or the servlet's <url-pattern>
+4085	percent	100	100 %	yes	DERIVED: name the numerator and denominator, not the percentage
+4146	tools	6	6 tools	no	echo '{"jsonrpc":"2.0","id":1,"method":"tools/list"}' | <server over stdio>  -- needs the package installed, so NOT reproducible here
+4157	methods	164	164 métodos	yes	grep -cE '<language method signature>' over a clone; for a Java SPI, count abstract methods in the interface
+4157	stars	10	10 ★	no	github.com -> 403 for curl here; api.github.com denies in the body (pass 37)
+4157	commits	39	39 commits	no	git rev-list --count HEAD on a full clone; the shallow clones here cannot
+4171	methods	164	164 métodos	yes	grep -cE '<language method signature>' over a clone; for a Java SPI, count abstract methods in the interface
+4195	methods	164	164 methods	yes	grep -cE '<language method signature>' over a clone; for a Java SPI, count abstract methods in the interface
+4199	tools	164	164 tools	no	echo '{"jsonrpc":"2.0","id":1,"method":"tools/list"}' | <server over stdio>  -- needs the package installed, so NOT reproducible here
+4201	tools	132	**132 tools	no	echo '{"jsonrpc":"2.0","id":1,"method":"tools/list"}' | <server over stdio>  -- needs the package installed, so NOT reproducible here
+4203	methods	164	164 métodos	yes	grep -cE '<language method signature>' over a clone; for a Java SPI, count abstract methods in the interface
+4205	percent	100	100 %	yes	DERIVED: name the numerator and denominator, not the percentage
+4206	tools	132	132 tools	no	echo '{"jsonrpc":"2.0","id":1,"method":"tools/list"}' | <server over stdio>  -- needs the package installed, so NOT reproducible here
+4206	percent	100	100 %	yes	DERIVED: name the numerator and denominator, not the percentage
+4208	tools	132	132 tools	no	echo '{"jsonrpc":"2.0","id":1,"method":"tools/list"}' | <server over stdio>  -- needs the package installed, so NOT reproducible here
+4223	stars	10	**10 ★	no	github.com -> 403 for curl here; api.github.com denies in the body (pass 37)
+4223	commits	39	39 commits	no	git rev-list --count HEAD on a full clone; the shallow clones here cannot
+4267	stars	1	**1 ★	no	github.com -> 403 for curl here; api.github.com denies in the body (pass 37)
+4267	commits	32	32 commits	no	git rev-list --count HEAD on a full clone; the shallow clones here cannot
+4293	methods	164	**164 métodos	yes	grep -cE '<language method signature>' over a clone; for a Java SPI, count abstract methods in the interface
+4294	commits	39	39 commits	no	git rev-list --count HEAD on a full clone; the shallow clones here cannot
+4347	stars	9	**9 ★	no	github.com -> 403 for curl here; api.github.com denies in the body (pass 37)
+4347	commits	180	180 commits	no	git rev-list --count HEAD on a full clone; the shallow clones here cannot
+4405	percent	9	9 %	yes	DERIVED: name the numerator and denominator, not the percentage
+4416	routes	11	11 rutas	yes	grep -oE '@(Get|Post|Put|Delete|Request)Mapping|@Service\("/' over a clone, or the servlet's <url-pattern>
+4468	routes	35	**35 rutas	yes	grep -oE '@(Get|Post|Put|Delete|Request)Mapping|@Service\("/' over a clone, or the servlet's <url-pattern>
+4516	routes	7	7 rutas	yes	grep -oE '@(Get|Post|Put|Delete|Request)Mapping|@Service\("/' over a clone, or the servlet's <url-pattern>
+4550	tools	132	132 tools	no	echo '{"jsonrpc":"2.0","id":1,"method":"tools/list"}' | <server over stdio>  -- needs the package installed, so NOT reproducible here
+4557	tools	132	**132 tools	no	echo '{"jsonrpc":"2.0","id":1,"method":"tools/list"}' | <server over stdio>  -- needs the package installed, so NOT reproducible here
+4667	tools	3	3 tools	no	echo '{"jsonrpc":"2.0","id":1,"method":"tools/list"}' | <server over stdio>  -- needs the package installed, so NOT reproducible here
+4673	stars	5	**5 ★	no	github.com -> 403 for curl here; api.github.com denies in the body (pass 37)
+4682	tools	3	3 tools	no	echo '{"jsonrpc":"2.0","id":1,"method":"tools/list"}' | <server over stdio>  -- needs the package installed, so NOT reproducible here
+4694	percent	79	**79 %	yes	DERIVED: name the numerator and denominator, not the percentage
+4694	percent	88	**88 %	yes	DERIVED: name the numerator and denominator, not the percentage
+4705	tools	3	**3 tools	no	echo '{"jsonrpc":"2.0","id":1,"method":"tools/list"}' | <server over stdio>  -- needs the package installed, so NOT reproducible here
+4736	commits	32	**32 commits	no	git rev-list --count HEAD on a full clone; the shallow clones here cannot
+4812	tools	15	**15 tools	no	echo '{"jsonrpc":"2.0","id":1,"method":"tools/list"}' | <server over stdio>  -- needs the package installed, so NOT reproducible here
+4821	tools	15	15 tools	no	echo '{"jsonrpc":"2.0","id":1,"method":"tools/list"}' | <server over stdio>  -- needs the package installed, so NOT reproducible here
+4843	downloads	218.212	**218.212 descargas	no	the registry API (pypi.org/npmjs) -- reachable per-case, not swept
+4847	downloads	130.032	**130.032** descargas	no	the registry API (pypi.org/npmjs) -- reachable per-case, not swept
+4862	stars	5	**5 ★	no	github.com -> 403 for curl here; api.github.com denies in the body (pass 37)
+4867	stars	5	**5 ★	no	github.com -> 403 for curl here; api.github.com denies in the body (pass 37)
+4924	percent	49	**49 %	yes	DERIVED: name the numerator and denominator, not the percentage
+4973	routes	8	**8 rutas	yes	grep -oE '@(Get|Post|Put|Delete|Request)Mapping|@Service\("/' over a clone, or the servlet's <url-pattern>
+4978	tools	20	20 tools	no	echo '{"jsonrpc":"2.0","id":1,"method":"tools/list"}' | <server over stdio>  -- needs the package installed, so NOT reproducible here
+4989	tools	14	14 tools	no	echo '{"jsonrpc":"2.0","id":1,"method":"tools/list"}' | <server over stdio>  -- needs the package installed, so NOT reproducible here
+4989	tools	20	**20 tools	no	echo '{"jsonrpc":"2.0","id":1,"method":"tools/list"}' | <server over stdio>  -- needs the package installed, so NOT reproducible here
+4992	tools	6	**6 tools	no	echo '{"jsonrpc":"2.0","id":1,"method":"tools/list"}' | <server over stdio>  -- needs the package installed, so NOT reproducible here
+4992	percent	30	30 %	yes	DERIVED: name the numerator and denominator, not the percentage
+4996	tools	18	**18 de 20 tools	no	echo '{"jsonrpc":"2.0","id":1,"method":"tools/list"}' | <server over stdio>  -- needs the package installed, so NOT reproducible here
+5053	stars	45	45 ★	no	github.com -> 403 for curl here; api.github.com denies in the body (pass 37)
+5053	commits	29	29 commits	no	git rev-list --count HEAD on a full clone; the shallow clones here cannot
+5070	rows	49	49 filas	yes	grep -vc '^#' <the tsv>  for a measured table; count rows of agents/top.md
+5081	tools	3	3 tools	no	echo '{"jsonrpc":"2.0","id":1,"method":"tools/list"}' | <server over stdio>  -- needs the package installed, so NOT reproducible here
+5082	tools	132	**132 tools	no	echo '{"jsonrpc":"2.0","id":1,"method":"tools/list"}' | <server over stdio>  -- needs the package installed, so NOT reproducible here
+5083	tools	8	**8 tools	no	echo '{"jsonrpc":"2.0","id":1,"method":"tools/list"}' | <server over stdio>  -- needs the package installed, so NOT reproducible here
+5091	tools	165	165 tools	no	echo '{"jsonrpc":"2.0","id":1,"method":"tools/list"}' | <server over stdio>  -- needs the package installed, so NOT reproducible here
+5113	tools	9	9 tools	no	echo '{"jsonrpc":"2.0","id":1,"method":"tools/list"}' | <server over stdio>  -- needs the package installed, so NOT reproducible here
+5113	tools	22	22 tools	no	echo '{"jsonrpc":"2.0","id":1,"method":"tools/list"}' | <server over stdio>  -- needs the package installed, so NOT reproducible here
+5115	commits	2	**2 commits	no	git rev-list --count HEAD on a full clone; the shallow clones here cannot
+5119	commits	32	32 commits	no	git rev-list --count HEAD on a full clone; the shallow clones here cannot
+5140	tools	3	**3 tools	no	echo '{"jsonrpc":"2.0","id":1,"method":"tools/list"}' | <server over stdio>  -- needs the package installed, so NOT reproducible here
+5141	tools	132	**132 tools	no	echo '{"jsonrpc":"2.0","id":1,"method":"tools/list"}' | <server over stdio>  -- needs the package installed, so NOT reproducible here
+5142	tools	8	**8 tools	no	echo '{"jsonrpc":"2.0","id":1,"method":"tools/list"}' | <server over stdio>  -- needs the package installed, so NOT reproducible here
+5152	tools	3	3 tools	no	echo '{"jsonrpc":"2.0","id":1,"method":"tools/list"}' | <server over stdio>  -- needs the package installed, so NOT reproducible here
+5153	tools	132	**132 tools	no	echo '{"jsonrpc":"2.0","id":1,"method":"tools/list"}' | <server over stdio>  -- needs the package installed, so NOT reproducible here
+5169	tools	3	3 tools	no	echo '{"jsonrpc":"2.0","id":1,"method":"tools/list"}' | <server over stdio>  -- needs the package installed, so NOT reproducible here
+5170	tools	8	8 tools	no	echo '{"jsonrpc":"2.0","id":1,"method":"tools/list"}' | <server over stdio>  -- needs the package installed, so NOT reproducible here
+5171	tools	30	30 tools	no	echo '{"jsonrpc":"2.0","id":1,"method":"tools/list"}' | <server over stdio>  -- needs the package installed, so NOT reproducible here
+5221	tools	22	22 tools	no	echo '{"jsonrpc":"2.0","id":1,"method":"tools/list"}' | <server over stdio>  -- needs the package installed, so NOT reproducible here
+5231	routes	8	8 rutas	yes	grep -oE '@(Get|Post|Put|Delete|Request)Mapping|@Service\("/' over a clone, or the servlet's <url-pattern>
+5247	routes	14	**14 endpoints	yes	grep -oE '@(Get|Post|Put|Delete|Request)Mapping|@Service\("/' over a clone, or the servlet's <url-pattern>
+5257	routes	14	14 endpoints	yes	grep -oE '@(Get|Post|Put|Delete|Request)Mapping|@Service\("/' over a clone, or the servlet's <url-pattern>
+5260	routes	14	14 endpoints	yes	grep -oE '@(Get|Post|Put|Delete|Request)Mapping|@Service\("/' over a clone, or the servlet's <url-pattern>
+5261	tools	60	60 tools	no	echo '{"jsonrpc":"2.0","id":1,"method":"tools/list"}' | <server over stdio>  -- needs the package installed, so NOT reproducible here
+5290	tools	3	**3 tools	no	echo '{"jsonrpc":"2.0","id":1,"method":"tools/list"}' | <server over stdio>  -- needs the package installed, so NOT reproducible here
+5290	commits	32	32 commits	no	git rev-list --count HEAD on a full clone; the shallow clones here cannot
+5302	commits	2	2 commits	no	git rev-list --count HEAD on a full clone; the shallow clones here cannot
+5303	commits	2	2 commits	no	git rev-list --count HEAD on a full clone; the shallow clones here cannot
+5317	commits	32	32 commits	no	git rev-list --count HEAD on a full clone; the shallow clones here cannot
+5324	lines	175	**175 líneas	yes	wc -l <file>  for raw lines; grep -cvE '^[[:space:]]*(#.*)?$' <file> for non-blank-non-comment. THE TWO DISAGREE: name which one.
+5326	lines	175	175 líneas	yes	wc -l <file>  for raw lines; grep -cvE '^[[:space:]]*(#.*)?$' <file> for non-blank-non-comment. THE TWO DISAGREE: name which one.
+5326	lines	171	**171** líneas	yes	wc -l <file>  for raw lines; grep -cvE '^[[:space:]]*(#.*)?$' <file> for non-blank-non-comment. THE TWO DISAGREE: name which one.
+5468	tools	7	7 tools	no	echo '{"jsonrpc":"2.0","id":1,"method":"tools/list"}' | <server over stdio>  -- needs the package installed, so NOT reproducible here
+5478	tools	0	**0 tools	no	echo '{"jsonrpc":"2.0","id":1,"method":"tools/list"}' | <server over stdio>  -- needs the package installed, so NOT reproducible here
+5496	tools	12	12 tools	no	echo '{"jsonrpc":"2.0","id":1,"method":"tools/list"}' | <server over stdio>  -- needs the package installed, so NOT reproducible here
+5497	tools	48	**48 tools	no	echo '{"jsonrpc":"2.0","id":1,"method":"tools/list"}' | <server over stdio>  -- needs the package installed, so NOT reproducible here
+5515	files	181	**181 archivos	yes	git ls-tree -r HEAD --name-only | grep -c <pattern>  on a blobless clone
+5549	percent	34,1	**34,1 %	yes	DERIVED: name the numerator and denominator, not the percentage
+5553	percent	32	32 %	yes	DERIVED: name the numerator and denominator, not the percentage
+5613	tools	165	165 tools	no	echo '{"jsonrpc":"2.0","id":1,"method":"tools/list"}' | <server over stdio>  -- needs the package installed, so NOT reproducible here
+5651	tools	13	**13 tools	no	echo '{"jsonrpc":"2.0","id":1,"method":"tools/list"}' | <server over stdio>  -- needs the package installed, so NOT reproducible here
+5663	tools	13	13 tools	no	echo '{"jsonrpc":"2.0","id":1,"method":"tools/list"}' | <server over stdio>  -- needs the package installed, so NOT reproducible here
+5685	tools	16	**16 tools	no	echo '{"jsonrpc":"2.0","id":1,"method":"tools/list"}' | <server over stdio>  -- needs the package installed, so NOT reproducible here
+5688	tools	6	6 tools	no	echo '{"jsonrpc":"2.0","id":1,"method":"tools/list"}' | <server over stdio>  -- needs the package installed, so NOT reproducible here
+5754	rows	66	66 filas	yes	grep -vc '^#' <the tsv>  for a measured table; count rows of agents/top.md
+5760	stars	448	448 ★	no	github.com -> 403 for curl here; api.github.com denies in the body (pass 37)
+5768	stars	127	127 ★	no	github.com -> 403 for curl here; api.github.com denies in the body (pass 37)
+5833	assertions	9	**9** checks	yes	python3 compose/code/<dir>/test_*.py  (count the trailing 'N/N checks passed'; some suites need an argument or an env var -- see per-figure notes)
+5841	tools	3	3 tools	no	echo '{"jsonrpc":"2.0","id":1,"method":"tools/list"}' | <server over stdio>  -- needs the package installed, so NOT reproducible here

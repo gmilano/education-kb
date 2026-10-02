@@ -1,3 +1,9 @@
+---
+industry: education
+region: Global
+updated: 2026-10-02
+---
+
 # 📚 Education KB
 
 > Knowledge base de la industria **Education** para Globant AI Studios.
@@ -12,14 +18,44 @@ education-kb/
 ├── verticals/     # Plataformas verticales customizables con AI
 ├── intel/         # Mercado, players, tendencias
 ├── compose/       # Recetas: cómo componer soluciones
-└── ingest/        # Scripts de actualización automática
+├── ingest/        # Scripts de actualización automática
+└── compose/code/  # Código ejecutable y probado, no prosa
 ```
+
+## `compose/code/` — lo que esta KB puede demostrar corriendo
+
+Cada carpeta trae su propio `README.md`, su suite y el comando que la reproduce. **Las cifras de
+aserciones se publican con su invocación**, porque varias dan un número distinto según el argumento
+o la variable de entorno (regla de **P107**, pase 47):
+
+| Carpeta | Qué prueba | Invocación | Hoy |
+|---|---|---|---|
+| `aiact-50-2-pack/` | marca un paquete SCORM ya construido, con un portador por dialecto | `python3 test_pack.py` | **27/27** |
+| ídem, conformidad real | ídem + `xmllint` contra los XSD de los **dos** dialectos | `SCORM_SCHEMAS=… SCORM_SCHEMAS12=… python3 test_pack.py --with-xmllint` | **37/37** |
+| `aiact-50-2-marking/` | mapea los 9 valores de `lineage-skill` a `synthetic` + etiqueta | `python3 test_marking.py` | **23/23** |
+| ídem, conformidad real | ídem + el fragmento de manifiesto | `SCORM_SCHEMAS=… python3 test_marking.py --with-xmllint` | **24/24** |
+| `aiact-50-2-spans/` | ¿alguna pieza expuesta emite límites de tramo? | `sh scan_spans.sh` | 🔴 **0 de 33** |
+| `aiact-50-2-exposure/` | ¿cuántas filas ponen contenido sintético delante de alguien? | `sh scan_marking.sh` | **32 de 66** |
+| `patterns-figure-audit/` | inventario de cifras de `patterns.md` y su instrumento | `python3 extract_figures.py --check` | **383** medidas |
+| `sebserver-mcp-gate/` | puerta MCP de SEB Server: sólo lecturas, `-32601` al resto | `python3 test_gate.py` | **37/37** |
+| `unitime-mcp-gate/` | puerta MCP de UniTime, con `hard_deny()` como piso | `python3 test_gate.py` | **46** |
+| `proctoring-reach-audit/` | alcance de red real de los 14 métodos del SPI | `python3 test_reach.py` | **19/19** |
+| ídem, con el árbol upstream | ídem + regeneración byte a byte de las tablas | `python3 test_reach.py /ruta/a/seb-server` | **20/20** |
+| `openedx-course-generator/` | genera un curso de Open edX sin levantar la plataforma | `python3 test_plan.py` | **33** |
+| `seb-proctoring-validator/` | validador que rechaza ajustes de terceros incompletos | `sh run_test.sh` | **21/21** |
+
+⚠️ **Las dos filas «ídem» no son adorno: son el caso que el pase 47 encontró citado sin su
+condición.** Una cifra de aserciones sin la invocación que la produce no se puede reproducir, aunque
+sea correcta.
 
 ## Uso
 
 1. **Nuevo engagement**: leer `intel/market.md` + `repos/foundations.md`
 2. **Proponer solución AI**: `agents/top.md` + `compose/patterns.md`
 3. **Mantenerse al día**: correr `ingest/update.sh` semanalmente
+4. **Verificar antes de citar**: `compose/code/patterns-figure-audit/extract_figures.py --check`
+   remide las cifras de `compose/patterns.md` que salen de suites propias. **Una cifra de una suite
+   se vence cuando la suite crece**, y el pase 47 encontró dos vencidas
 
 ---
 *Red de KBs Globant AI Studios → [globant-kb](../globant-kb/)*

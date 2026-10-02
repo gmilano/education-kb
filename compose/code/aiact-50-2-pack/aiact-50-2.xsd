@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Declaration for the Article 50(2) marking namespace.
+
+     SCORM 2004 does not need this file: imscp_v1p1.xsd's grp.any is
+     processContents="lax", so an undeclared foreign element is tolerated.
+
+     SCORM 1.2 DOES need it: imscp_rootv1p1p2.xsd's grp.any is
+     processContents="strict", and a strict wildcard rejects a foreign element
+     it cannot resolve. A validator that is asked to accept CARRIER_FOREIGN in
+     a SCORM 1.2 manifest must import this schema into its schema set. -->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  targetNamespace="urn:globant:aiact:50-2"
+  xmlns:m="urn:globant:aiact:50-2"
+  elementFormDefault="qualified">
+
+  <xsd:annotation>
+    <xsd:documentation>
+      Machine-readable disclosure that part or all of a learning object's text
+      was produced by a generative model. value="true" is the OR over the
+      spans. Absence of this element asserts nothing; value="false" asserts
+      that no span was measured synthetic.
+    </xsd:documentation>
+  </xsd:annotation>
+
+  <xsd:element name="aiGenerated">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="m:span" minOccurs="0" maxOccurs="unbounded"/>
+      </xsd:sequence>
+      <xsd:attribute name="value" type="xsd:boolean" use="required"/>
+      <xsd:attribute name="profile" type="xsd:string"/>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="span">
+    <xsd:complexType>
+      <xsd:attribute name="start" type="xsd:nonNegativeInteger" use="required"/>
+      <xsd:attribute name="end" type="xsd:nonNegativeInteger" use="required"/>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

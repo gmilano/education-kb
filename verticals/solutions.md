@@ -9,6 +9,14 @@ updated: 2026-10-02
 > Plataformas verticales reales, en producción, customizables con AI.
 > Modelo: partir de algo que ya funciona y que ya tiene los datos, y agregar la capa agéntica arriba.
 > Verificado vía WebFetch el 2026-09-30; las capas del pase 11, el 2026-10-01.
+> **Pase 47 del 2026-10-02:** 🔵 **sin verticales nuevas por segundo pase consecutivo, y el barrido obligatorio lo
+> volvió a medir:** `open source platform education ERP CRM MIT Apache` devolvió **OpenEduCat** (ya en este archivo) y
+> **CK-ERP** (rastro vivo más reciente: **2010**, medido en el pase 46), más glosarios del propio proveedor. 🔴 **Pero la
+> plataforma de empaquetado de este catálogo cambió de veredicto:** el pase 47 escribió el post-procesador de marcado y
+> midió que **`scorm-mcp-server` emite DOS dialectos**, que el comodín XSD de **SCORM 1.2 es `strict`** y que su
+> validador **rechaza hasta metadatos LOM estándar** de ese dialecto por un `import` que falta (**gap 102**, arreglo de
+> una línea). **El empaquetado sigue siendo el punto de inyección correcto; la forma del marcador ahora depende del
+> dialecto.** Ver la actualización al pie de la sección de `scorm-mcp-server` y **P106**.
 > **Pase 45 del 2026-10-02:** 🔵 **sin verticales nuevas, y el barrido lo midió en vez de suponerlo:** la búsqueda
 > obligatoria de plataformas (`open source platform education ERP CRM MIT Apache`) devolvió **`OpenEduCat`**, que **ya
 > está en este archivo**, más glosarios del propio proveedor y **CK-ERP**, un ERP/CRM educativo cuyo último anuncio
@@ -1748,3 +1756,29 @@ regulatorio.** Receta completa en **P105**, y la cadena de punta a punta en **P1
 ⚠️ **Lo que falta y se cotiza:** inyectar exige **post-procesar el ZIP** (barato, no toca upstream — es la acción 1 del
 pase 47) **o un PR de pocas líneas a upstream** para que `buildManifestFor` acepte metadatos de extensión. **El estándar
 lo admite, el validador lo acepta, y el generador todavía no lo puede emitir.**
+
+> ## 🔴 Actualización del pase 47 del 2026-10-02 — el post-procesador está escrito, y la tabla de arriba vale para UN dialecto de los dos
+>
+> **La acción 1 se ejecutó** (`compose/code/aiact-50-2-pack/`, **27/27** sin `xmllint` y **37/37** con los dos
+> directorios de esquemas), **y midió que la tabla de arriba describe SCORM 2004 y no SCORM 1.2.** Las dos filas que
+> cambian:
+>
+> | Pregunta | SCORM 2004 | 🔴 SCORM 1.2 |
+> |---|---|---|
+> | `grp.any` del XSD de empaquetado | `processContents="lax"` | 🔴 **`processContents="strict"`** |
+> | ¿`scorm_validate` acepta un metadato con *namespace* propio? | 🟢 **Sí** | 🔴 **No**: `strict` exige una declaración global, y sin ella el paquete es **inválido** |
+> | ¿Y un `<imsmd:lom>` con metadatos LOM **estándar**? | 🟢 Sí | 🔴 **Tampoco** — ver abajo |
+>
+> 🔴 **El defecto que esto destapa no es del marcador: `scorm_validate` rechaza metadatos LOM estándar de SCORM 1.2.**
+> Su `wrapper12.xsd` importa **2 de los 3** *namespaces* que el propio repo empaqueta en `schemas12/` y deja afuera
+> `imsmd_rootv1p2p1`. 🟢 **Arreglo de UNA línea** sobre un esquema que ya está en el repo (**gap 102**, segundo PR corto
+> que esta base le debe a `scorm-mcp-server`).
+>
+> ⚠️ **Y la corrección de conteo, porque es la misma ceguera que produjo el error:** este archivo publicaba **«15 XSD
+> empaquetados»**; son **20** — **15 en `schemas/` y 5 en `schemas12/`** (`ls schemas*/ | grep -c '\.xsd$'`). **Contar
+> sólo el directorio de 2004 es exactamente lo que hizo invisible el segundo dialecto.**
+>
+> 🟢 **Lo que NO cambia, y sigue siendo el argumento de esta plataforma:** el empaquetado sigue siendo el punto de
+> inyección correcto —**una** integración en vez de **32**— y el marcado del curso entero es **entregable hoy**. Lo que
+> cambia es que hay **un portador por dialecto** y que conviene **emitir SCORM 2004** cuando se puede elegir. Receta
+> corregida en **P106**, que reemplaza a **P105**; la cotización en dos tramos, en **P108**.

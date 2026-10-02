@@ -8,6 +8,89 @@ updated: 2026-10-02
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 
+## 2026-10-02 (pase 47) — **el dato crudo: 2 comodines que no coinciden, 3 de 3 «handles» que se caen al abrirlos, 163 cifras que un `\b` se comía, y 1 import que falta en un esquema**
+
+Todo lo de abajo se leyó del árbol con `git clone --depth 1 --filter=blob:none --sparse` o con
+`raw.githubusercontent.com`, y se **reprodujo con un comando**: las tres carpetas nuevas de
+`compose/code/` regeneran sus tablas contra el repo real y fallan si el upstream cambió.
+
+### 🔴 `giacomomaria81/scorm-mcp-server` — los dos esquemas que empaqueta no acuerdan, y el que valida no importa todo lo que trae
+
+Leído a `HEAD` del 2026-10-02 (`src/converter.ts`, `src/validate.ts`, `schemas/`, `schemas12/`).
+
+| Medición | Valor | Instrumento |
+|---|---|---|
+| Dialectos que emite `buildManifestFor` | **2** (`buildManifest` 2004 / `buildManifest12` 1.2) | `src/converter.ts:603` |
+| `grp.any` en el XSD de **2004** | `processContents="lax"` | `grep -A6 'name="grp.any"' schemas/imscp_v1p1.xsd` |
+| `grp.any` en el XSD de **1.2** | 🔴 **`processContents="strict"`** | `grep -A6 'name="grp.any"' schemas12/imscp_rootv1p1p2.xsd` |
+| Puntos de extensión, cada dialecto | **9** | `grep -c 'ref = "grp.any"'` (2004) y `grep -c 'ref="grp.any"'` (1.2) — ⚠️ **el espaciado difiere entre archivos** |
+| `grp.any` del XSD de **metadatos LOM** | 🔴 **`##any` + `strict`** (más duro que los dos) | `grep -A6 'name="grp.any"' schemas12/imsmd_rootv1p2p1.xsd` |
+| XSDs empaquetados en `schemas12/` | **5** (`imscp_rootv1p1p2`, `adlcp_rootv1p2`, `imsmd_rootv1p2p1`, `ims_xml`, `wrapper12`) | `ls schemas12/` |
+| *Namespaces* que `wrapper12.xsd` importa | 🔴 **2 de 3** — falta `imsmd_rootv1p2p1` | `src/validate.ts:49-52` |
+| `checks` distintos de `scorm_validate` | **9** ids (**15** sitios de llamada) | `grep -oE 'push\("[a-z0-9-]+"' src/validate.ts \| sort -u \| wc -l` |
+
+🟢 **Y un detalle de `validate.ts` que conviene tener escrito porque es una superficie de confianza:**
+las líneas 240-249 copian al directorio temporal **los `.xsd` que trae el propio paquete ANTES** de
+caer a las copias embebidas, y sólo copia la embebida si el nombre no está ya. **O sea: un paquete
+puede traer su propio `imscp_rootv1p1p2.xsd` y el validador lo usará.** El `wrapper12.xsd` sí se
+escribe fresco cada vez, así que la raíz no es sustituible — pero lo que la raíz importa, sí.
+**`schema-valid` es tan confiable como el paquete que se está validando.**
+
+### 🔴 Las 33 filas expuestas, barridas por CONTENIDO y no por nombre de archivo
+
+Primera vez que esta base lee el **contenido** de los repos expuestos en vez de su lista de
+archivos. Detalle y TSV en [`compose/code/aiact-50-2-spans/`](../compose/code/aiact-50-2-spans/README.md).
+
+| Magnitud | Valor |
+|---|---|
+| Repos barridos | **33** |
+| Archivos listados (ningún blob descargado) | **24.206** |
+| Candidatos por patrón de ruta | **3.249** |
+| Archivos **leídos** (tope **25**/repo, declarado) | **432** |
+| `HANDLE` → al verificar a mano, **límites de ENTRADA** | **3** |
+| `WEAK` / `OPAQUE` / `NO_CANDIDATES` | **16** / **8** / **6** |
+| 🔴 **Límites dentro del texto GENERADO** | 🔴 **0** |
+
+| Repo | Archivo:línea | Token | Qué es |
+|---|---|---|---|
+| `Crosstalk-Solutions/project-nomad` | `admin/app/services/rag_service.ts:1137` | `chunk_index` | `metadata` del resultado de recuperación, con `source` y `document_id` |
+| `microsoft/Shiksha-Copilot` | `components/ingestion-pipeline/.../utils/toc_extractor.py:110` | `end_index` | `toc_end_index = min(5, len(images))` — 🔴 **falso positivo** |
+| `ahmedEid1/lumen` | `apps/backend/app/models/lesson_chunk.py:57` | `chunk_index` | columna con `UniqueConstraint("lesson_id", "chunk_index")` |
+
+### 🔵 `compose/patterns.md`, medido contra sí mismo
+
+| Magnitud | Valor | Instrumento |
+|---|---|---|
+| Líneas | **5.863** | `wc -l compose/patterns.md` |
+| Mediciones numéricas | **383** | `python3 compose/code/patterns-figure-audit/extract_figures.py` |
+| Reproducibles en este entorno | **165** | ídem |
+| 🔴 No reproducibles acá | **218** (`tools` 78, `★` 90, `commits` 46, descargas 4) | ídem |
+| 🔴 Cifras que la primera versión del instrumento se comía | **163 (44 %)** | `\b` tras `%` y `★` nunca dispara |
+| `MCP_ALLOWLIST` en `compose/code/` | 🔴 **0 archivos** | `grep -rl MCP_ALLOWLIST compose/code/` |
+
+### Las suites de esta base, todas corridas en este pase
+
+| Suite | Hoy | Lo que `patterns.md` publicaba |
+|---|---|---|
+| `aiact-50-2-pack/test_pack.py` (**nuevo**) | **27/27** sin `xmllint`, **37/37** con él | — |
+| `sebserver-mcp-gate/test_gate.py` | **37/37** | 🔴 «11/11» (L345) |
+| `unitime-mcp-gate/test_gate.py` | **46** | 🔴 «23» (L608) |
+| `openedx-course-generator/test_plan.py` | **33** | 🟢 «33» |
+| `proctoring-reach-audit/test_reach.py` | **19/19** a secas, **20/20** con `/ruta/a/seb-server` | ⚠️ «20/20» sin la condición (L423) |
+| `aiact-50-2-marking/test_marking.py` | **23/23** a secas, **24/24** con `--with-xmllint` | ⚠️ «24/24» sin la condición |
+| `seb-proctoring-validator/run_test.sh` | **21/21** | 🟢 «21/21, JDK puro» |
+
+### 🔴 Ruido medido y rechazos, para que el próximo pase no lo vuelva a pagar
+
+- `speedyapply/2026-AI-College-Jobs` (**5.200 ★**, 206 forks) — **bolsa de trabajo de AI/ML**, no
+  pieza educativa. Primera aparición en el barrido de *trending*; se registra como no-hallazgo.
+- `karpathy/nn-zero-to-hero`, *Awesome LLM*, *Agents Towards Production*, `pguso/agents-from-scratch`,
+  `rohitg00/ai-engineering-from-scratch` — **currículo y listas sobre AI**, la colisión de término
+  que el pase 23 midió y que lleva cinco pases devolviendo lo mismo.
+- `gittrend.io`, `trendshift.io`, `oosmetrics.com`, `sourcepulse.org` — **agregadores** cuyos conteos
+  de ★ **no se pueden verificar acá** (`github.com` → 403 para `curl`, pase 37). Se citan como
+  encuadre, **nunca como cifra verificada**.
+
 ## 2026-10-02 (pase 46) — **el dato crudo: 5 de 14 alcanzan la red y 0 directamente, 8 constructores emitidos como métodos, 9 puntos de extensión en el XSD y 1 de 3 casos de `xmllint` rechazado**
 
 Todo lo de abajo se leyó del árbol con `git clone --depth 1 --filter=blob:none --sparse` y se

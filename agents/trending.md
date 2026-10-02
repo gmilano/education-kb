@@ -9,6 +9,215 @@ updated: 2026-10-02
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 > No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
 
+## 2026-10-02 (pase 47) — el pase que **convierte el hallazgo del 46 en un paquete marcado y, al hacerlo, lo corrige**: 🔴 **el mismo generador emite DOS dialectos, el comodín de SCORM 1.2 es `strict`, y el validador que esta KB recomienda rechaza los metadatos del propio estándar**
+
+**Las tres acciones del pase 46 se ejecutaron. Las tres rindieron, las tres dejan código que corre
+en este repositorio, y las tres corrigen afirmaciones propias — una de ellas la del pase anterior.**
+El barrido global obligatorio (cuatro búsquedas, año **calculado**: 2026) volvió a devolver **la
+capa genérica** (openclaw 385.407 ★, dify 151.639, browser-use 108.128, Mem0 62.735, AutoGen
+60.284, Flowise 55.226) y **material didáctico *sobre* AI**. 🔵 **Cero altas de agente, y es el
+QUINTO pase consecutivo con esa medición.** La tabla se queda en **66 filas**.
+
+### Los candidatos del barrido, uno por uno, y por qué ninguno entra
+
+| Candidato | De dónde salió | Veredicto |
+|---|---|---|
+| **Hermes Agent** (Nous Research, MIT) | «top open source AI agents education 2026 github MIT» | 🔴 **Agente genérico**, no educativo — la capa que esta KB ya customiza |
+| `rohitg00/ai-engineering-from-scratch` (#1 GitHub Trending 2026-05-24) | «github trending education AI 2026» | 🔴 **Material didáctico *sobre* AI** — la colisión que el pase 23 midió |
+| `pguso/agents-from-scratch` (MIT) | global | 🔴 Ídem: enseña a construir agentes, no educa con ellos |
+| `karpathy/nn-zero-to-hero`, *Awesome LLM*, *Agents Towards Production* | «github trending education AI 2026» | 🔴 **Currículo y listas**, no software que educa |
+| `speedyapply/2026-AI-College-Jobs` (5.200 ★) | global | 🔴 **Bolsa de trabajo**, no pieza educativa — primera aparición, se registra para no volver a pagarla |
+| `microsoft/Semantic Kernel` (27.470 ★) | global | 🔴 Orquestador genérico |
+| **OpenEduCat** / **CK-ERP** | «open source platform education ERP CRM MIT Apache» | ⚠️ **Los dos ya medidos**: OpenEduCat está en `verticals/solutions.md`; CK-ERP tiene su rastro vivo más reciente en **2010** (pase 46) |
+
+🔵 **El dato de encuadre, en positivo:** las cuatro búsquedas globales devolvieron **cero** piezas
+educativas que esta base no tuviera. Las altas de los últimos doce pases vinieron **todas** del eje
+**conector** y del eje **estándar**. **El eje agente está saturado para esta industria, medido
+cinco veces.**
+
+### 🔴 El hallazgo del pase: el gap 97 era verdadero para SCORM 2004 y FALSO para SCORM 1.2
+
+La acción 1 pedía escribir el post-procesador que inyecta el marcado del Artículo 50(2) en un
+paquete SCORM **ya construido** (**gap 100**). Está escrito —
+[`compose/code/aiact-50-2-pack/`](../compose/code/aiact-50-2-pack/README.md), **37/37** aserciones
+con `xmllint` y **27/27** sin él— y lo primero que midió **derriba la conclusión del pase 46**.
+
+El pase 46 publicó *«el marcador DEBE declarar su propio namespace»* y cerró el gap 97 **a favor**.
+Esa frase es necesaria y **no suficiente**, porque `buildManifestFor` de `scorm-mcp-server`
+despacha a **dos** generadores y sus esquemas no coinciden:
+
+| Esquema | `grp.any` | Puntos de extensión |
+|---|---|---|
+| `schemas/imscp_v1p1.xsd` (SCORM 2004) | `processContents="lax"` | **9** |
+| `schemas12/imscp_rootv1p1p2.xsd` (SCORM 1.2) | 🔴 **`processContents="strict"`** | **9** |
+
+Bajo `strict` el validador **tiene que encontrar** la declaración global del elemento foráneo, así
+que un marcador en un *namespace* que nadie importó **no es «desconocido pero tolerado»: es
+INVÁLIDO**. Medido, verbatim:
+
+```
+Element '{urn:globant:aiact:50-2}aiGenerated': No matching global element
+declaration available, but demanded by the strict wildcard.
+```
+
+🔵 **La cuenta de 9 puntos de extensión del pase 46 se confirma, y ahora con su instrumento
+escrito:** `grep -c 'ref = "grp.any"'` sobre el XSD de 2004 y `grep -c 'ref="grp.any"'` sobre el
+de 1.2 —**el espaciado difiere entre los dos archivos**, que es justo el tipo de detalle que
+convierte un conteo correcto en irreproducible—. Tendencias **197**–**199**.
+**Gap 100 CERRADO; gap 97 REABIERTO y matizado.**
+
+### 🔴 Y el hallazgo que no es sobre el marcador: `scorm_validate` rechaza los metadatos del propio SCORM 1.2
+
+`src/validate.ts` arma el conjunto de esquemas de 1.2 con un `wrapper12.xsd` que importa **dos** de
+los **tres** *namespaces* que el repo empaqueta en `schemas12/`: entran `imscp_rootv1p1p2` y
+`adlcp_rootv1p2`, **y queda afuera `imsmd_rootv1p2p1`** —el esquema de metadatos LOM, que está en
+el repo y que nadie importa—. Consecuencia, medida con `xmllint` 2.9:
+
+| Caso (SCORM 1.2) | Como viene | + **una línea** de `import` |
+|---|---|---|
+| manifiesto base | 🟢 `validates` | 🟢 `validates` |
+| marcador foráneo | 🔴 `fails` | 🔴 `fails` (necesita **su** XSD) |
+| marcador foráneo + `aiact-50-2.xsd` importado | — | 🟢 **`validates`** |
+| marcador en `<imsmd:lom><imsmd:classification>` | 🔴 `fails` | 🟢 **`validates`** |
+| 🔴 **paquete con SÓLO metadatos LOM estándar de SCORM 1.2** | 🔴 **`fails`** | 🟢 **`validates`** |
+
+🔴 **La última fila es el defecto, y no es del marcador: es el modo canónico y documentado de
+poner metadatos en un `imsmanifest.xml` de SCORM 1.2.** `scorm_validate` reporta
+`schema-valid: failed` sobre un paquete perfectamente conforme. 🟢 **El arreglo es UNA línea sobre
+un esquema que el repo ya trae**, y queda anotado como **segundo PR corto** que esta base le debe a
+`giacomomaria81/scorm-mcp-server`. ⚠️ **Lo que le cuesta a un estudio hoy:** un curso SCORM 1.2 —
+marcado **o simplemente con metadatos LOM**— falla el `schema-valid` de la herramienta que esta KB
+recomienda para validarlo. Tendencias **200**–**201**. **Gap 102 (nuevo).**
+
+🔵 **Y el *subproducto* de diseño, que es el que se cotiza:** el portador **portátil** no es el
+tipado. `<imsmd:lom><imsmd:classification>` valida en **2004 también**, así que si hace falta
+**una** forma para los dos dialectos es ésa, **y se paga en estructura**: los tramos dejan de ser
+atributos enteros y pasan a ser cadenas (`ai-generated-span:67-131`) que el consumidor tiene que
+parsear. **Tipado y portátil son objetivos en conflicto acá, y la decisión se escribe en vez de
+heredarse.** Tendencia **202**.
+
+### 🔴 La acción 2 rinde el hallazgo más barato del pase: P85 se cita como entregable y su código NO está en este repositorio
+
+La acción 2 pedía barrer las cifras de `compose/patterns.md` y nombrarle el instrumento a cada una
+(**gap 101**). Hecho, y como **script repetible** en vez de lista:
+[`compose/code/patterns-figure-audit/`](../compose/code/patterns-figure-audit/README.md).
+**383 mediciones**, **165 reproducibles en este entorno** y **218 no** —y las 216 son casi todas de
+la misma clase: popularidad (`★` 90, `commits` 46, descargas 4) y superficie MCP (`tools` 78)—.
+**No están mal: su canal está cerrado acá.**
+
+**Once cifras se verificaron a mano. Siete cierran; cuatro no:**
+
+| Dónde | Cifra | Hoy | Veredicto |
+|---|---|---|---|
+| L521, L615, L5174 | «**175 líneas** de stdlib» (**P85**) | 🔴 **ningún archivo del repo la implementa** | 🔴 **el artefacto no está** |
+| L608 | «23 aserciones, 23 en verde» | 🔴 **46** | 🔴 **vencida** (el pase 45 la subió) |
+| L345 | «11/11 checks» | 🔴 **37/37** | 🔴 **vencida** (el pase 44 la subió) |
+| L616 | «~115 líneas de stdlib» | 🔴 **186** crudas / **152** no-blancas | 🔴 **no coincide con ninguna de las dos** |
+
+🔴 **El caso de P85 es el que importa, y no por el número.** La sección se titula *«el *gateway* de
+allowlist, **escrito y probado**»* y dice de sí misma *«la diferencia entre un patrón y un
+entregable»*. Pero **`MCP_ALLOWLIST` —la variable que documenta, con su matriz de casos— aparece
+únicamente en `compose/patterns.md`**: `grep -rl MCP_ALLOWLIST compose/code/` no devuelve nada. Las
+dos puertas que **sí** están versionadas usan `SEB_ALLOW` y `UNITIME_ALLOW` y miden **189** y
+**171** líneas crudas (**145** y **145** no-blancas) — **ninguna da 175 por ninguno de los dos
+instrumentos**. Y es la única sección que cita código **sin enlazar a `compose/code/`**.
+⚠️ **P85 se cita como dependencia ya resuelta en DOS tablas de solución y P60, P92 y P93 se apoyan
+en él**: esas filas le prometen a un cliente una pieza que este repositorio no puede entregar.
+🔵 **El mitigante honesto: las dos puertas que existen HACEN lo que P85 describe y están probadas
+(37/37 y 46), así que el patrón es real; lo que falta es la pieza genérica que P85 dice tener
+escrita.** Tendencias **203**–**205**. **Gap 101 CERRADO, gap 103 (nuevo) abierto.**
+
+### 🔵 Y el barrido de cifras encontró primero un error del barrido de cifras
+
+La primera versión del inventario reportó **205 mediciones**; sobre el mismo archivo la real era **368**. Faltaban **163,
+el 44 %**, porque el patrón cerraba con `\b` y **`\b` después de un carácter que no es de palabra
+nunca dispara**: se caían en silencio **todas** las cifras cuya unidad era `%` (82) o `★` (81). Se
+detectó cruzando el total contra un `grep` más flojo. 🔵 **Conviene decirlo sin disculpa: la acción
+2 existe porque una cifra sin instrumento no se puede auditar, y el primer instrumento que esta
+base escribió para auditar sus cifras tenía exactamente ese defecto.** Es el argumento de la
+acción, demostrado sobre sí misma. Tendencia **206**.
+
+### 🔴 La acción 3 responde NO, y las tres candidatas se caen al abrirlas
+
+La acción 3 preguntaba si alguna de las 32 filas expuestas emite **límites de tramo** —*offsets*,
+citas con rango, *chunk ids*— o si el clasificador hay que escribirlo entero (**gap 99**). Se
+barrieron **33 repos**, **24.206 archivos listados**, **3.249 candidatos por ruta** y **432 leídos
+de verdad** (tope de 25 por repo, declarado en la salida):
+[`compose/code/aiact-50-2-spans/`](../compose/code/aiact-50-2-spans/README.md).
+
+🔴 **Cero de 33 emiten un límite dentro del texto que el modelo genera.** Las tres que el barrido
+marcó `HANDLE` resultaron, al abrirlas, **límites sobre la ENTRADA** — y una no es procedencia:
+
+| Repo | Token | Qué es realmente |
+|---|---|---|
+| `Crosstalk-Solutions/project-nomad` | `chunk_index` | `rag_service.ts:1137` lo mete en el `metadata` del **resultado de recuperación**, con `source` y `document_id` → ⚠️ **de qué documento salió el contexto**, no qué parte de la respuesta lo usó |
+| `microsoft/Shiksha-Copilot` | `end_index` | `toc_extractor.py:110` → `toc_end_index = min(5, len(images))`, las primeras 5 páginas de un PDF → 🔴 **falso positivo**, es paginado de ingesta |
+| `ahmedEid1/lumen` | `chunk_index` | `app/models/lesson_chunk.py:57`, una **columna** con `UniqueConstraint("lesson_id", "chunk_index")` → ⚠️ indexa el corpus troceado |
+
+🔵 **Y el dato que explica cómo se equivoca un lector apurado:** el vocabulario de índices está en
+todas partes —**16** repos dieron `WEAK` con `citation`, `chunk`, `grounding`, `provenance`— así
+que un barrido de palabras concluye que el gancho existe. **No existe.** Todo ese vocabulario habla
+de **de dónde vino el contexto**; **ni una pieza habla de qué parte de su propia salida escribió el
+modelo.** Es la asimetría que el pase 45 midió con otro instrumento (*«13 de 15 son procedencia de
+FUENTE, no sintética»*), ahora confirmada **leyendo código** en vez de nombres de archivo.
+
+🟢 **Hay un piloto, por otra razón que la esperada:** `project-nomad` lleva `chunk_index` + `source`
++ `document_id` **hasta el resultado** que alimenta la generación —su propio comentario dice
+*«needed for citations and for recall@k scoring»*—, así que **permite separar `direct_source` del
+resto a nivel de TURNO**, la mitad barata del vocabulario de `lineage-skill`, sin resolver tramos.
+**Es media respuesta entregable y conviene cotizarla como media.** Tendencias **207**–**209**.
+**Gap 99 CERRADO con un NO.**
+
+### El barrido regional, las cuatro regiones, y lo que cada una devolvió
+
+**Las cuatro se corrieron con el año calculado.** 🔴 **Cero software open source nuevo en las
+cuatro, por TERCER pase consecutivo.** Lo que devolvieron es encuadre, y se registra por región
+para que la ausencia no se confunda con cobertura:
+
+- **North America** — reconfirma **951 M USD (2024) → 2.303 M (2029), CAGR 15,9 %** y **36 %** de
+  cuota global, y el **vacío regulatorio** (*«no hay equivalente a la FDA»*, decisión por
+  escuela/distrito/universidad, colcha estatal con **Colorado** y **Texas**). Players nombrados:
+  **IBM, Microsoft, Google** — ninguno open source. 🔵 **Dato nuevo de encuadre: 86 % de los
+  estudiantes de 16 países ya usa AI en sus estudios.** 🔴 **Cero software nuevo.**
+- **EMEA** — **94 %** de las organizaciones invertirá en formación en AI en 2026 y **38 %** todavía
+  no empezó a pilotear; *compliance* y control de acceso en el top-4 de criterios de selección
+  (GDPR + NIS2 + AI Act). 🔵 **Dos datos nuevos:** el **primer AI Adoption Summit del Reino Unido**
+  comprometió **£200 M+** con **Cisco, IBM, BT y Rolls-Royce** como socios de ejecución y
+  **Skills England** fijando el marco curricular —**el patrón «Big Tech ejecuta, sindicatos
+  legitiman, Estado curricula»**, que es nuevo en esta base—; y el **Europe EdTech 200+ de 2026**
+  (QS) como censo de proveedores. 🔴 **Cero software nuevo.**
+- **APAC** — **48 %** de los líderes de gobernanza pone la adopción como prioridad 2026, **57 %**
+  ya tiene AI en producción, y la región se mueve a ***sovereign-by-design*** (la soberanía decide
+  la infraestructura de **cerca de la mitad** de las firmas). 🔵 **Dato nuevo y es de canal
+  comercial, no open source: LearnUpon** abre sede en **Sídney** con *Create+* de autoría por AI,
+  **TCS + Pearson** anuncian una alianza plurianual de formación, y **Alteryx** relanza su Academy.
+  Singapur sigue consultando sobre AI en instituciones **financieras**, **no educativas**.
+  🔴 **Cero piezas open source de origen APAC** — `jbnu-lms-mcp` (Corea, pase 35) sigue siendo la
+  única de esta base.
+- **LATAM** — **tercer mercado mundial** en descargas de aplicaciones de AI generativa. 🔵 **Cifra
+  nueva y más dura que la que esta base tenía:** **99 % de las startups de la región usa AI en sus
+  operaciones internas y 85 % la integra NATIVAMENTE en su producto principal** (contra el *«100 %
+  de las empresas en 2026»* proyectado y el 85 %+ previos). Sectores más disruptivos: **fintech,
+  healthtech y edtech**, con **Ednova (Chile)** en edtech. Reconfirma el *working paper* de
+  **UNU/UNESCO IESALC** (**200 instituciones en 19 países**, 5 dimensiones, campo agosto–octubre
+  2025). 🟢 **Y aparece una URL institucional nueva y con PDF directo:**
+  `publications.iadb.org/.../An-Enabling-Regulatory-Framework-for-Artificial-Intelligence-in-Latin-America-and-the-Caribbean.pdf`
+  (BID) — **el canal multilateral del gap 65/92 devolvió, por primera vez, la RUTA de un PDF y no
+  sólo un título**. ⚠️ **El *fetch* sigue bloqueado: `000`, ni un código HTTP** — es un grado más de
+  acceso a la referencia, **no** acceso a la fuente. 🔴 **Ninguna pieza open source, y cuarto pase consecutivo con cero piezas de
+  origen LATAM.** Tendencia **210**.
+
+### ⚠️ Y la fecha vencida del AI Act reapareció por UNDÉCIMA vez, otra vez en North America
+
+El barrido de North America volvió a afirmar que el AI Act *«toma efecto pleno en agosto de 2026»*
+clasificando educación como **alto riesgo**. 🔴 **Esta base lo corrigió en el pase 32: educación es
+Anexo III y la fecha se movió a 2027-12-02.** Undécima aparición, **siempre en el mismo barrido
+regional**. Deja de ser el error de una fuente y queda como propiedad del canal: **el barrido
+comercial de North America publica la fecha vencida de forma sistemática, mientras el texto
+consolidado del Reglamento (UE) 2024/1689 sigue inalcanzable por cuatro canales (gap 92).** La
+regla operativa no cambia: **las fechas están confirmadas por tres canales secundarios
+independientes y concordantes, no por fuente primaria, y eso se dice en la propuesta.**
+
 ## 2026-10-02 (pase 46) — el pase que **ejecuta las tres acciones del 45 y las tres rinden**: el componente del Artículo 50(2) existe, el empaquetado **sí** es el punto barato de marcado, y 🔴 **la tercera pieza de código corrige una fila que esta base venía cotizando: Zoom habla con el remoto desde 5 de 14 métodos, no desde 2 — y desde ninguno directamente**
 
 **Las tres acciones del pase 45 se ejecutaron. Las tres rindieron, las tres dejan código que corre

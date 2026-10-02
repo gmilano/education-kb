@@ -8,6 +8,17 @@ updated: 2026-10-02
 
 > Recetas concretas: repos nombrados, licencias verificadas, wiring explícito y estimación.
 > Todos los repos citados fueron verificados vía WebFetch el 2026-09-30; los del pase 11, el 2026-10-01 (ver `agents/top.md`).
+> **Pase 47 del 2026-10-02:** **+3 patrones, y los tres salen de ejecutar las tres acciones del pase 46 — pero el
+> primero CORRIGE a su antecesor.** **P106** reemplaza a **P105**: el marcado del Artículo 50(2) se inyecta una vez en
+> el empaquetado, sí, 🔴 **pero con un portador por dialecto, porque el comodín de SCORM 1.2 es `strict` y no `lax`, así
+> que un marcador foráneo sin XSD declarado INVALIDA el paquete** — y de paso se midió que `scorm_validate` **rechaza
+> hasta un paquete con metadatos LOM estándar de SCORM 1.2**, por un `import` que falta en su propio `wrapper12.xsd`
+> (arreglo de **una línea**, PR corto a upstream). **P107** fija la regla de la acción 2: **toda cifra nombra su
+> instrumento**, con **383** mediciones de este archivo inventariadas, **218 no reproducibles acá** y 🔴 **cuatro que no
+> cierran — una porque el artefacto que mide no está en el repositorio (P85, gap 103)**. **P108** parte la cotización
+> del marcado en dos: 🟢 **el curso entero es entregable en una semana** y 🔴 **por afirmación es desarrollo nuevo,
+> porque 0 de 33 filas expuestas emiten un límite dentro del texto que generan**. Las cifras vencidas de L345 y L608
+> quedaron corregidas en su lugar.
 > **Pase 45 del 2026-10-02:** **+3 patrones, y los tres salen de ejecutar las tres acciones del pase 44.** **P99** — *el
 > componente transversal de marcado del Artículo 50(2)*: 🟢 **el hueco está medido (32 de 66 filas, el 48 %) y el
 > componente no hay que inventarlo, hay que conectarlo** — `OpenTutor` (**MIT**) aporta **el campo y el transporte**
@@ -86,6 +97,145 @@ updated: 2026-10-02
 > propuesta, no se descubre en la semana 6. Ver la sección de auditoría abajo y **P78**. 🟢 **Lo que sí está sano:** `lrsql`
 > (Apache-2.0, **v0.9.9 del 2026-10-01**), Ralph (MIT, vivo en `main`), las cuatro puertas de Canvas y Moodle-alumno
 > (commits de las últimas dos semanas) y `qti3-cli` (MIT). **El resto de las recetas no cambia.**
+
+## P106 — Marcar un paquete SCORM que YA está construido, con **un portador por dialecto** (corrige y reemplaza **P105**, agregado en el pase 47 del 2026-10-02)
+
+**Qué resuelve.** **P105** decidió el lugar correcto —una inyección en el empaquetado en vez de 32 en los
+generadores— y se equivocó en la forma. El pase 47 escribió el post-procesador y midió que **el mismo generador emite
+dos dialectos cuyos comodines XSD no coinciden**, así que un solo marcador no sirve para los dos. Esto es la receta que
+se cotiza; P105 queda como el razonamiento que llevó hasta acá.
+
+### Lo que está medido
+
+| Esquema | `grp.any` | Consecuencia para el marcador |
+|---|---|---|
+| `schemas/imscp_v1p1.xsd` (SCORM 2004) | `processContents="lax"` | 🟢 un elemento foráneo **sin** XSD **valida** |
+| `schemas12/imscp_rootv1p1p2.xsd` (SCORM 1.2) | 🔴 **`processContents="strict"`** | 🔴 un elemento foráneo sin declaración **invalida el paquete** |
+| `schemas12/imsmd_rootv1p2p1.xsd` (LOM) | 🔴 **`##any` + `strict`** | 🔴 tampoco acepta foráneos **dentro** del LOM |
+
+Instrumentos: `grep -A6 'name="grp.any"' <xsd>` para la estrictez, `grep -c 'ref = "grp.any"'` (2004) y
+`grep -c 'ref="grp.any"'` (1.2) para los **9** puntos de extensión de cada uno — ⚠️ **el espaciado difiere entre los dos
+archivos**, y es el detalle que vuelve irreproducible un conteo correcto.
+
+### Los dos portadores, y cuál elegir
+
+| | `CARRIER_FOREIGN` | `CARRIER_LOM` |
+|---|---|---|
+| Forma | `<m:aiGenerated value="true"><m:span start end/></m:aiGenerated>` | `<imsmd:lom><imsmd:classification>` con `purpose` + `keyword` |
+| Tramos | 🟢 **tipados** (atributos enteros) | ⚠️ **cadenas** `ai-generated-span:67-131`: hay que parsear |
+| XSD extra | no en 2004; **sí** en 1.2 | **ninguno** |
+| SCORM 2004 | 🟢 valida | 🟢 valida |
+| SCORM 1.2 como viene el validador | 🔴 falla | 🔴 falla (ver abajo: no es culpa del portador) |
+| SCORM 1.2 con el `import` que falta | 🔴 falla igual | 🟢 **valida** |
+
+🔵 **La decisión, escrita en vez de heredada: si hace falta UNA forma para los dos dialectos, es `lom`, y se paga en
+estructura.** `foreign` es mejor dato y peor portabilidad. **Tipado y portátil están en conflicto acá.**
+
+### 🔴 Y el defecto de upstream que hay que decirle al cliente antes de la demo
+
+`src/validate.ts` arma el conjunto de esquemas de 1.2 con un `wrapper12.xsd` que importa **2 de los 3** *namespaces*
+que el repo empaqueta en `schemas12/`: queda afuera **`imsmd_rootv1p2p1`**. Resultado medido con `xmllint` 2.9:
+**un paquete SCORM 1.2 con metadatos LOM estándar —el modo canónico y documentado— falla `schema-valid`.**
+
+⚠️ **Lo que cuesta:** un curso SCORM 1.2, **marcado o no**, falla el validador que esta KB recomienda. 🟢 **El arreglo
+es UNA línea** (`<xsd:import namespace="…imsmd_rootv1p2p1" schemaLocation="imsmd_rootv1p2p1.xsd"/>`) sobre un esquema
+que el repo **ya trae**: es el segundo PR corto que esta base le debe a `giacomomaria81/scorm-mcp-server`.
+🔵 **Y el mitigante inmediato: emitir SCORM 2004**, donde el comodín es `lax` y todo valida.
+
+### El cableado
+
+1. **El empaquetador** — [`giacomomaria81/scorm-mcp-server`](https://github.com/giacomomaria81/scorm-mcp-server)
+   (**MIT**, v2.3.0, 3 tools; **20 XSD empaquetados**, 15 + 5).
+2. **El clasificador** — 🔴 **no existe y hay que escribirlo**: el pase 47 midió **0 de 33** filas expuestas que emitan
+   un límite dentro del texto generado (**P108**).
+3. **El componente** — `compose/code/aiact-50-2-marking/` mapea los 9 valores de `lineage-skill` a `synthetic` + la
+   etiqueta original (**23/23** a secas, **24/24** con `--with-xmllint`).
+4. **El post-procesador** — `compose/code/aiact-50-2-pack/`: toma el `.zip`, reescribe `imsmanifest.xml`, **detecta el
+   dialecto** y elige el portador. **27/27** sin `xmllint`, **37/37** con los dos directorios de esquemas.
+5. **La verificación** — `scorm_validate`, **sabiendo lo de arriba**, o `xmllint --schema` directo.
+
+🔵 **Dos cuidados que el código ya toma y que una implementación apurada no toma:** (a) `<metadata>` es legal en
+**nueve** ranuras —`organization`, `item`, `resource`, `file`…—, así que *«insertar antes del primer `</metadata>`»*
+grapa el marcado del **curso** a **un archivo**: hay que tomar el de nivel manifiesto (`expat` + `CurrentByteIndex`);
+(b) **re-inyectar es idempotente y ACTUALIZA** los tramos en vez de agregar un segundo marcador.
+
+**Estimación.** **1 semana** para el post-procesador y su matriz de conformidad sobre los dos dialectos (está escrito:
+es leerlo y adaptar el *namespace* del cliente). 🔴 **El clasificador por tramo es aparte y es desarrollo nuevo —
+ver P108 antes de poner un número.**
+
+
+## P107 — Toda cifra que entre a una propuesta nombra su instrumento en la misma línea (agregado en el pase 47 del 2026-10-02)
+
+**Qué resuelve.** El caso que lo obliga: **«481 / 912 líneas» era CORRECTO** —son líneas no-blancas-no-comentario— y
+porque la métrica no estaba escrita, durante tres pases nadie pudo reproducirla: `wc -l` da **583 / 1.116**. Una
+propuesta que la citara habría defendido un número que no cerraba delante del cliente. El pase 47 barrió las **383**
+mediciones de este archivo y encontró **cuatro** que no cierran, **una de ellas porque el artefacto que mide no existe**.
+
+### Las tres clases de falla, con su caso
+
+| Clase | Caso real de esta base | Regla |
+|---|---|---|
+| 🔴 **Métrica ambigua** | «~115 líneas» → **186** crudas / **152** no-blancas: **no coincide con ninguna** | para líneas, decir **«crudas»** o **«no-blancas-no-comentario»**. La diferencia en la clase de SEB es **481 vs 583** y **912 vs 1.116**: entre **17 %** y **22 %** del presupuesto |
+| 🔴 **Cifra vencida** | «11/11 checks» → hoy **37/37**; «23 aserciones» → hoy **46** | una cifra de una suite propia **se vence cuando la suite crece**. `extract_figures.py --check` las remide en un comando |
+| ⚠️ **Cifra condicional citada sin su condición** | «20/20» → **19/19** sin el argumento; «24/24» → **23/23** sin `--with-xmllint` | decir **qué invocación** la produce |
+
+### 🔴 Y la cuarta, que es de otra especie: el artefacto que no está
+
+**P85** se titula *«escrito y probado»* y publica **«175 líneas»**, pero `grep -rl MCP_ALLOWLIST compose/code/` **no
+devuelve nada** y es la única sección que cita código **sin enlazar a `compose/code/`**. **P85 se cita como dependencia
+resuelta en dos tablas de solución y P60, P92 y P93 se apoyan en él.** 🔵 **La regla que esto deja: una cifra sobre
+código propio va acompañada de la RUTA del código, y si no hay ruta, la cifra no entra en una tabla de solución.**
+
+### El instrumento del instrumento
+
+```sh
+python3 compose/code/patterns-figure-audit/extract_figures.py          # inventario por unidad
+python3 compose/code/patterns-figure-audit/extract_figures.py --check  # remide las suites locales
+```
+
+**383** mediciones, **165** reproducibles acá y **218** no — y las 218 son casi todas de una clase: popularidad
+(`★` 90, `commits` 46, descargas 4) y superficie MCP (`tools` 78), porque `github.com` responde **403** a `curl` en este
+entorno y `api.github.com` niega en el cuerpo (pase 37). 🔵 **No están mal: su canal está cerrado, y eso se dice.**
+
+⚠️ **Y el aviso que hay que dar sobre este mismo script:** su primera versión reportó **205** sobre el archivo de entonces y la real era **368** —
+faltaban **163, el 44 %**, porque `\b` después de `%` o de `★` nunca dispara. **El instrumento que audita cifras tenía el
+defecto que audita.** Se detectó cruzando su total contra un `grep` más flojo, **y ésa es la práctica que queda: toda
+cifra importante se mide dos veces con instrumentos distintos.**
+
+
+## P108 — Cotizar el marcado del Artículo 50(2) en DOS tramos, porque el fino no tiene de dónde agarrarse (agregado en el pase 47 del 2026-10-02)
+
+**Qué resuelve.** El componente del pase 46 marca **por tramo**. Para que sirva, alguien tiene que **asignar** una de
+las 9 etiquetas de `lineage-skill` a cada tramo. El pase 47 midió si algo lo hace. **No lo hace nadie**, y eso cambia el
+presupuesto en vez de cambiar el diseño.
+
+### La medición
+
+| Magnitud | Valor |
+|---|---|
+| Repos expuestos barridos **por contenido** | **33** |
+| Archivos listados / candidatos / **leídos** | **24.206** / **3.249** / **432** (tope **25**/repo, declarado) |
+| 🔴 **Piezas que emiten un límite dentro del texto GENERADO** | 🔴 **0** |
+| Piezas con límites de **ENTRADA** (`chunk_index`, `document_id`) | **2** + 1 falso positivo |
+| Piezas con vocabulario adyacente y ningún límite | **16** |
+
+🔵 **Por qué un barrido de palabras da la respuesta opuesta:** `citation`, `chunk`, `grounding` y `provenance` aparecen
+en **16 de 33**, así que parece que el gancho existe. Todo ese vocabulario habla de **de dónde vino el contexto**;
+**ninguna pieza habla de qué parte de su propia salida escribió el modelo.** Detalle, TSV y los tres falsos positivos
+abiertos uno por uno en `compose/code/aiact-50-2-spans/`.
+
+### Los dos tramos, y qué se promete en cada uno
+
+| Tramo | Qué entrega | Necesita | Estimación |
+|---|---|---|---|
+| 🟢 **Grueso (hoy)** | el **curso entero** marcado como generado, dentro del `imsmanifest.xml`, verificado con `xmllint` | nada que no esté escrito (**P106**) | **1 semana** |
+| ⚠️ **Medio** | `synthetic` **por turno**, separando `direct_source` del resto | una pieza que lleve la identidad de la fuente hasta la respuesta — **`project-nomad` la tiene**: `chunk_index` + `source` + `document_id` en `rag_service.ts:1137`, *«needed for citations and for recall@k scoring»* | **3-4 semanas** sobre esa pieza |
+| 🔴 **Fino** | `synthetic` **por tramo**, que es lo que el componente del pase 46 sabe transportar | 🔴 **un clasificador propio, desarrollo nuevo: no hay nada que envolver** | **no cotizar sin un piloto** |
+
+🔵 **La frase citable:** *«el marcado del curso es entregable en una semana; el marcado por afirmación es desarrollo, y
+medimos que ninguna de las 33 piezas de este espacio lo habilita hoy»*. ⚠️ **Decir lo contrario es prometer una
+integración donde hay un producto por construir** — y el componente ya está escrito, así que la tentación de decir que
+está listo es real.
 
 ## P99 — El componente transversal de marcado del Artículo 50(2): **dos filas de esta base son mitades complementarias y ninguna sabe de la otra** (agregado en el pase 45 del 2026-10-02)
 
@@ -342,7 +492,7 @@ proponer **la capa de examen completa —horario y supervisión— con licencia 
 | Pieza | Licencia | Dato medido |
 |---|---|---|
 | [`SafeExamBrowser/seb-server`](https://github.com/SafeExamBrowser/seb-server) | 🟢 **Apache-2.0** | Rama por defecto **`master`** (`git ls-remote --symref`), commit `7f45689`. **42** constantes `*_ENDPOINT` en `gbl/api/API.java`; **30** controladores concretos + **3** bases abstractas |
-| `compose/code/sebserver-mcp-gate/` | el de esta KB | **79** operaciones → **79** tools, **36** expuestas. **11/11 checks** por ejecución |
+| `compose/code/sebserver-mcp-gate/` | el de esta KB | **79** operaciones → **79** tools, **36** expuestas. **37/37 checks** por ejecución (`python3 compose/code/sebserver-mcp-gate/test_gate.py`; 🔴 **el pase 47 corrigió «11/11», que era la cifra del pase 40 y el pase 44 la había subido**) |
 
 ### El wiring
 
@@ -518,7 +668,7 @@ esta base haya medido — porque el conector ya ES la unidad.**
 | Pieza | Licencia | Rol |
 |---|---|---|
 | [`UniTime/unitime`](https://github.com/UniTime/unitime) | 🟢 **Apache-2.0** (Apereo) | el sistema de horarios: cursos, aulas, exámenes, *student scheduling*. `HEAD` **2026-10-01**, 202 tags |
-| *Gateway* de allowlist del pase 40 (**P85**) | propio | **175 líneas de stdlib**, ya probado: recorta `tools/list` y bloquea con `-32601` sin llegar al upstream |
+| *Gateway* de allowlist del pase 40 (**P85**) | propio | ⚠️ **el pase 47 no pudo reproducir las «175 líneas»: `grep -rl MCP_ALLOWLIST compose/code/` no devuelve nada** (gap 103). El comportamiento sí está escrito y probado, en `compose/code/sebserver-mcp-gate/` (**37/37**) y `compose/code/unitime-mcp-gate/` (**46**): recortan `tools/list` y bloquean con `-32601` sin llegar al upstream. **Cotizar sobre ésas, no sobre P85** |
 
 **Wiring**
 
@@ -605,15 +755,15 @@ que manda es marzo de 2027** (tendencia **156**).
 
 **Este patrón no se describe: está escrito y probado.** La acción 1 del pase 41 pedía escribir la puerta de la única capa
 que esta base midió con **cero competencia agéntica, licencia Apache-2.0 y despliegue institucional real**. Hecho, y
-verificado por ejecución: **23 aserciones, 23 en verde.**
+verificado por ejecución: **46 aserciones, 46 en verde** (`python3 compose/code/unitime-mcp-gate/test_gate.py`; 🔴 **el pase 47 corrigió «23», que era la cifra previa al pase 45**).
 
 **Piezas**
 
 | Pieza | Licencia | Rol |
 |---|---|---|
 | [`UniTime/unitime`](https://github.com/UniTime/unitime) | 🟢 **Apache-2.0** (Apereo) | El *upstream*: 15 conectores con nombre registrado, verbos y `?token=` |
-| *Gateway* de allowlist (**P85**) | propio | **175 líneas de stdlib** del pase 40, ya probadas |
-| Generador de manifiesto (**este patrón**) | propio | **~115 líneas de stdlib**: lee los conectores del árbol y emite 26 tools. 🟢 **Código y prueba versionados en [`compose/code/unitime-mcp-gate/`](code/unitime-mcp-gate/)** |
+| *Gateway* de allowlist (**P85**) | propio | ⚠️ **«175 líneas» no reproducible (gap 103)**: usar `compose/code/unitime-mcp-gate/gate.py` (**171** crudas / **145** no-blancas, **46** aserciones) |
+| Generador de manifiesto (**este patrón**) | propio | **186 líneas crudas / 152 no-blancas-no-comentario** (`wc -l` y `grep -cvE '^[[:space:]]*(#.*)?$'` sobre `extract_surface.py`; 🔴 **el pase 47 corrigió «~115», que no coincidía con ninguno de los dos instrumentos**): lee los conectores del árbol y emite 26 tools. 🟢 **Código y prueba versionados en [`compose/code/unitime-mcp-gate/`](code/unitime-mcp-gate/)** |
 | Un agente cualquiera de `agents/top.md` | — | El consumidor MCP |
 
 **Cómo se arma**
@@ -5173,6 +5323,8 @@ configuración»**. Es la misma dependencia; el riesgo es el mismo; **la diferen
 **P82 (pase 39) describió el patrón y dejó la pieza por escribir.** Este pase la escribe y **la prueba**, que es la
 diferencia entre un patrón y un entregable. **175 líneas, sólo biblioteca estándar de Python, sin dependencias.**
 
+> 🔴 **Corrección del pase 47 (gap 103), y va arriba porque cambia lo que se puede prometer:** **el código de las «175 líneas» no está en este repositorio.** `MCP_ALLOWLIST` —la variable que esta sección documenta— aparece **únicamente en `compose/patterns.md`**, y es la única sección que cita código sin enlazar a `compose/code/`. Las dos puertas que **sí** están versionadas usan `SEB_ALLOW` y `UNITIME_ALLOW`, miden **189** y **171** líneas crudas (**145** y **145** no-blancas) y **ninguna da 175 por ninguno de los dos instrumentos**. 🟢 **El patrón es real y está probado — `compose/code/sebserver-mcp-gate/` (37/37) y `compose/code/unitime-mcp-gate/` (46) hacen exactamente esto—; lo que falta es la pieza GENÉRICA que esta sección dice tener escrita. Hasta que exista, cotizar las dos puertas concretas y no P85.**
+
 ### El problema, en una frase
 
 Esta base tiene **nueve puertas de LMS** y varias traen escritura sin partición por rol. La peor es
@@ -5678,14 +5830,18 @@ se convierte en el curso que el alumno abre, es **una**. El pase 46 midió que l
 - 🔴 **La condición dura, medida con `xmllint` contra los XSD que empaqueta `scorm-mcp-server`: el marcador DEBE
   declarar su propio *namespace*.** Con *namespace* propio **valida**; en el *namespace* por omisión **falla**. Un
   `<synthetic>` sin prefijo **invalida el paquete**, y es el primer error que cualquiera comete.
-- 🟢 **`scorm_validate` no agrega veto propio:** sus 9 checks son estructurales más `schema-valid`, que es ese mismo
-  `xmllint`.
+- ⚠️ **`scorm_validate` sí agrega veto, y el pase 47 lo midió:** sus **9** checks (ids distintos; **15** sitios de
+  llamada) son estructurales más `schema-valid`, que es ese mismo `xmllint` — **pero sólo en SCORM 2004**. En
+  **SCORM 1.2** su `wrapper12.xsd` importa **2 de los 3** *namespaces* que el repo empaqueta y deja afuera
+  `imsmd_rootv1p2p1`, así que **rechaza hasta un paquete con metadatos LOM estándar**. Ver **P106**.
 
 ### El cableado
 
 1. **El empaquetador** — [`giacomomaria81/scorm-mcp-server`](https://github.com/giacomomaria81/scorm-mcp-server)
-   (**MIT**, v2.3.0, 3 tools: `scorm_package`, `scorm_validate`, `scorm_selftest`; **15 XSD empaquetados** → conformidad
-   **offline**).
+   (**MIT**, v2.3.0, 3 tools: `scorm_package`, `scorm_validate`, `scorm_selftest`; **20 XSD empaquetados — 15 en
+   `schemas/` y 5 en `schemas12/`**, instrumento `ls schemas*/ | grep -c '\.xsd$'`; 🔴 **el pase 47 corrigió «15»,
+   que contaba sólo el directorio de 2004 — y esa misma ceguera es la que produjo el error de P105**) → conformidad
+   **offline**.
 2. **El fragmento** — `manifest_metadata_fragment()` de `compose/code/aiact-50-2-marking/`, que emite
    `<m:aiGenerated xmlns:m="urn:globant:aiact:50-2" value="…" profile="…">` con un `<m:span start= end=>` por tramo
    sintético.
@@ -5695,6 +5851,11 @@ se convierte en el curso que el alumno abre, es **una**. El pase 46 midió que l
    líneas** a upstream (**sirve a todos, tarda**).
 4. **La verificación** — `scorm_validate` sobre el paquete marcado, o
    `python3 test_marking.py --with-xmllint` con `SCORM_SCHEMAS` apuntando a los XSD del repo.
+
+> 🔴 **Corrección del pase 47:** este patrón es correcto para **SCORM 2004** y **falso para SCORM 1.2**. El comodín
+> de `imscp_rootv1p1p2.xsd` es **`processContents="strict"`**, no `lax`, así que *«declarar su propio namespace»* es
+> necesario y **no suficiente**. **El marcado se inyecta una vez, sí — pero con un portador por dialecto.**
+> Ver **P106**, que reemplaza esta sección como la receta a cotizar.
 
 🔵 **Por qué este punto y no otro:** es el único lugar del recorrido donde **todo** el contenido generado pasa
 obligatoriamente y donde la marca viaja **dentro del entregable** que se le da a la institución, en vez de en el sobre

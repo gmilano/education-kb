@@ -8,6 +8,18 @@ updated: 2026-10-02
 
 > Agentes y herramientas AI open source para educación. Foco: MIT / Apache 2.0 / BSD.
 > Verificado repo por repo vía WebFetch el 2026-09-30 (stars y licencia leídos de la página del repo).
+> **Pase 47 del 2026-10-02:** 🔵 **la tabla sigue en 66 filas — QUINTO pase consecutivo sin altas**, y el barrido
+> completo obligatorio (cuatro búsquedas globales + cuatro regionales, con el año **calculado**) devolvió por quinta vez
+> **la capa genérica** (openclaw 385.407 ★, dify 151.639, browser-use 108.128, Mem0 62.735, AutoGen 60.284, Flowise
+> 55.226) y **material didáctico *sobre* AI**. Rechazos nuevos registrados para no volver a pagarlos:
+> `speedyapply/2026-AI-College-Jobs` (**5.200 ★**, bolsa de trabajo), `karpathy/nn-zero-to-hero`, *Awesome LLM* y
+> *Agents Towards Production* (**currículo**, no software que educa). 🔴 **Y el hallazgo del pase es sobre las filas que
+> YA están: se leyó el CONTENIDO de las 33 expuestas —24.206 archivos listados, 432 leídos— y CERO emiten un límite
+> dentro del texto que generan.** Las tres que un barrido de tokens marcó como candidatas resultaron límites de la
+> **entrada** (`chunk_index` de recuperación, una columna de base de datos) y una no es procedencia en absoluto
+> (`toc_end_index = min(5, len(images))`, paginado de PDF). **Consecuencia para cualquier fila de esta tabla que se
+> proponga con marcado del Artículo 50(2): el marcado del curso entero es entregable, el marcado por afirmación es
+> desarrollo nuevo.** Medición en `compose/code/aiact-50-2-spans/`, cotización en **P108**.
 > **Pase 25 del 2026-10-01:** **la tabla sigue en 37 filas — séptimo pase consecutivo sin altas**, y el barrido completo
 > obligatorio (cuatro búsquedas globales + cuatro regionales, con el año **calculado**) devolvió por tercera vez la capa
 > genérica y el material didáctico *sobre* AI. **El hallazgo de agente del pase no es un agente: es una puerta.**
