@@ -8,6 +8,181 @@ updated: 2026-10-02
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 
+## 2026-10-02 (pase 50) — **el dato crudo: 30 de 32 paquetes de registro medidos, 4 NUEVOS sin licencia, 2 nombres que esta base citaba y NO EXISTEN, los dos pedazos de Open edX en PyPI son AGPL-3.0, y el defecto campo-vs-texto resulta que corre en los DOS sentidos**
+
+⚠️ **El límite de esta corrida, declarado antes de los datos.** Las tres acciones del pase 49 pedían
+las tres lo mismo en el fondo: **correr código versionado de `compose/code/`** (el `--batch` del
+probe, los tres extractores sobre un árbol *sparse*, el conteo de superficie de las alternativas a
+Canvas). 🔴 **Este entorno negó la ejecución de código del repositorio clonado** (`[Code from
+External]`, dos veces — la segunda después de leer `probe.py` y `test_probe.py` de punta a punta y
+constatar que no hay `subprocess`, ni `exec`, ni escrituras, sólo `urllib` contra
+`registry.npmjs.org`, `tarfile` y expresiones regulares). **No se buscó una vuelta por otro
+intérprete ni se reimplementó el probe**, que sería el mismo resultado por otra puerta.
+
+🔵 **Lo que sí estaba abierto es el CANAL de red, y es exactamente la mitad de la acción 1 que no
+necesita el script:** `registry.npmjs.org`, `pypi.org` y `raw.githubusercontent.com` responden
+**200**. Así que este pase **mide la LICENCIA de los paquetes que la acción 1 enumeraba, por los dos
+artefactos de la regla del pase 49 (CAMPO y TEXTO), y no mide superficie por tarball** —esa mitad
+depende de la ejecución y queda pendiente. **La acción 2 queda SIN EJECUTAR por el mismo motivo** y
+se vuelve a dejar escrita sin rebajarla.
+
+### 🔵 El denominador primero: 32 nombres, 30 resuelven, 2 no existen
+
+**La acción 1 hablaba de «al menos 25 nombres de registro». El barrido de los ocho archivos da 32
+nombres educativos distintos** (se excluyen `@modelcontextprotocol/sdk`, `@types/node`,
+`@storybook/*`, `@urql/*`, `@univerjs-pro/*`, `@upstash/*`, `@transcend-io/*` y `@censo*/*`, que son
+infraestructura genérica y no piezas de educación). **De los 32: 30 devuelven `200` en
+`registry.npmjs.org/<pkg>/latest` y 2 devuelven `404`.**
+
+🔴 **Los dos `404` son una corrección, no un hueco:** **`@tutors/xapi` y `@tutors/badges` están
+citados en `intel/trends.md` y en `agents/trending.md` y NO EXISTEN en el registro.** Es la regla de
+esta KB aplicada a sí misma —*un 404 no es un hallazgo*— y esta vez el 404 es propio.
+
+### Las 30 licencias medidas, por CAMPO de registro
+
+| Paquete | Campo | Versión | Repositorio declarado |
+|---|---|---|---|
+| `@owen-x-tech/canvas-mcp` | **MIT** | 1.1.0 | `owentaylor/canvas-mcp` |
+| `@longsightgroup/qti3-core` | **MIT** | 0.13.1 | `LongsightGroup/qti3` |
+| `@longsightgroup/qti3-a11y` | **MIT** | 0.13.1 | `LongsightGroup/qti3` |
+| `@longsightgroup/qti3-pnp` | **MIT** | 0.13.1 | `LongsightGroup/qti3` |
+| `@longsightgroup/qti3-transcoder` | **MIT** | 0.13.1 | `LongsightGroup/qti3` |
+| `@longsightgroup/qti3-migrator` | **MIT** | 0.13.1 | `LongsightGroup/qti3` |
+| `@longsightgroup/qti3-player-react` | **MIT** | 0.13.1 | `LongsightGroup/qti3` |
+| `@longsightgroup/qti3-conformance` | **MIT** | 0.13.1 | `LongsightGroup/qti3` |
+| `@longsightgroup/oneroster` | **MIT** | 0.3.0 | `LongsightGroup/oneroster` |
+| `@eduware/oneroster` | **MIT** | 1.2.11 | `Eduware-Inc/eduware-oneroster` |
+| `@dendiem/caliper` | **MIT** | 1.3.3 | `DenDiem/caliper` |
+| `@yunmiao/studymate` | **MIT** | 0.3.0 | `Miaotofu01/Study-Mate` |
+| `@nahuelalbornoz/moodle-mcp` | **MIT** | 0.5.1 | `marcosnahuel/moodle-mcp` |
+| `@brutalsystems/tincan` | **MIT** | 2.2.0 | `BrutalSystems/tincan` |
+| `@handsong/folio-ui-cli` | **MIT** | 0.1.0 | 🔴 ninguno |
+| `@moinsen-dev/tool-teacher` | **MIT** | 0.1.0 | `moinsen-dev/tool-teacher` |
+| `@ajna-inc/openbadges` | **Apache-2.0** | 0.6.3 | 🔴 ninguno |
+| `@genramzi/proctor` | **Apache-2.0** | 0.1.0 | `GenRamzi/Proctor` |
+| `@stll/folio-agents` | **Apache-2.0** | 0.15.1 | `stella/folio` |
+| `@stll/folio-cli` | **Apache-2.0** | 0.4.0 | `stella/folio` |
+| `frappe-mcp-server` | **ISC** | 0.6.0 | `appliedrelevance/frappe_mcp_server` |
+| `@universis/one-roster` | ⚠️ **LGPL-3.0-or-later** | 2.31.1 | 🔴 ninguno |
+| `@osu-cass/sb-components` | ⚠️ **MPL-2.0** | **1.5.0-alpha.10** | `osu-cass/sb-components` |
+| `@public-ui/mcp` | 🔴 **EUPL-1.2** | 4.4.0 | `public-ui/kolibri` |
+| `@citolab/qti-convert-local-ai` | 🔴 **GPL-3.0-only** | 0.8.1 | `Citolab/qti-convert` |
+| `@learninglocker/xapi-agents` | 🔴 **GPL-3.0** | 4.4.3 | `LearningLocker/xapi-agents` |
+| `@superbuilders/oneroster` | 🔴 **ninguno** | 0.7.0 | `trilogy-group/oneroster-ts` |
+| `@timeback/caliper` | 🔴 **ninguno** | 0.3.3 | 🔴 ninguno |
+| `@pie-element/multiple-choice` | 🔴 **ninguno** | **14.0.0** | `pie-framework/pie-elements-ng` |
+| `@pie-element/rubric` | 🔴 **ninguno** | **9.0.0** | `pie-framework/pie-elements-ng` |
+
+**El reparto, que es lo que una propuesta necesita de una sola mirada: 21 permisivas** (16 MIT,
+4 Apache-2.0, 1 ISC), **5 con copyleft o recíproca** (GPL-3.0, GPL-3.0-only, LGPL-3.0-or-later,
+EUPL-1.2, MPL-2.0) **y 4 SIN campo de licencia**.
+
+🔴 **Las 4 sin licencia son NUEVAS: el pase 49 encontró 2 de 6, este pase encuentra 4 más de 30.**
+Y dos de ellas no son prototipos: **`@pie-element/multiple-choice` va en la versión 14.0.0 y
+`@pie-element/rubric` en la 9.0.0.** Una librería de ítems de evaluación con catorce mayores y sin
+licencia no es un descuido de arranque.
+
+🔵 **Y un patrón de ALCANCE, no de paquete:** con `@timeback/oneroster` del pase 49,
+**el scope `@timeback` va 2 de 2 sin campo de licencia y sin repositorio publicado.** Deja de ser
+una fila a revisar y pasa a ser una regla de cotización: **`@timeback/*` no entra en una entrega sin
+gestión previa.**
+
+### 🔴 El hallazgo que cambia el instrumento: el defecto campo-vs-texto corre en los DOS sentidos
+
+El pase 49 estableció la regla —*un CAMPO de licencia no es TEXTO de licencia*— y la ilustró en una
+sola dirección: **campo que dice MIT y no hay texto** (`sisu-mcp`, `@timadey/proctor`). **Este pase
+encuentra la dirección inversa, y es peor para un filtro automático:**
+
+| Paquete | Campo de registro | Texto en el repositorio |
+|---|---|---|
+| **`@superbuilders/oneroster`** 0.7.0 | 🔴 **ninguno** | 🟢 **`trilogy-group/oneroster-ts` `main:LICENSE` → 200** |
+
+⚠️ **Un filtro de licencias que lea sólo el campo RECHAZA un paquete que sí está licenciado**, igual
+que uno que lea sólo el *badge* **aprueba** uno que no lo está. **Las dos lecturas de un solo
+artefacto fallan, en sentidos opuestos, y el error de cada una es el que más caro sale en su
+contexto:** el que sobre-aprueba crea un riesgo legal, el que sobre-rechaza descarta la pieza
+correcta. **La regla operativa que sale de esto: los dos artefactos, siempre, y la discrepancia se
+reporta en vez de resolverse a favor de ninguno.**
+
+### Los TEXTOS de licencia, y el control que distingue «no hay» de «no llegué»
+
+`raw.githubusercontent.com/<org>/<repo>/<rama>/{LICENSE,LICENSE.md,LICENSE.txt,COPYING}`, probando
+`main` y después `master`. **12 de los 19 repositorios declarados tienen texto de licencia
+alcanzable.** ⚠️ **Y los 7 restantes no son una sola categoría —** ése es el control que este pase
+agrega al instrumento, porque sin él un `NONE` se publica como «sin licencia» cuando puede ser «el
+canal no llegó al repositorio»:
+
+| Repositorio | Texto | ¿El repo responde? | Lectura |
+|---|---|---|---|
+| `pie-framework/pie-elements-ng` | 🔴 ninguno | 🟢 **sí** (`master/README.md` → 200) | 🔴 **sin licencia de verdad**, y confirma los dos campos vacíos |
+| `moinsen-dev/tool-teacher` | 🔴 ninguno | 🟢 **sí** (`master/README.md` → 200) | 🔴 **campo MIT sin texto** — el patrón del pase 49 |
+| `owentaylor/canvas-mcp` | 🔴 ninguno | 🔴 **no** (`main`/`master`/`develop`, README y `package.json`) | ⚠️ **indeterminado**: campo MIT, tarball 200, repositorio inalcanzable |
+| `Eduware-Inc/eduware-oneroster` | 🔴 ninguno | 🔴 **no** | ⚠️ **indeterminado** |
+| `LearningLocker/xapi-agents` | 🔴 ninguno | 🔴 **no** | ⚠️ **indeterminado** |
+| `osu-cass/sb-components` | 🔴 ninguno | 🔴 **no** | ⚠️ **indeterminado** |
+| `appliedrelevance/frappe_mcp_server` | 🔴 ninguno | 🔴 **no** | ⚠️ **indeterminado** |
+
+🔵 **Dos conclusiones firmes y cinco declaradas indeterminadas es un resultado mejor que siete
+«sin licencia»**, que es lo que el instrumento habría publicado sin el control. **El control cuesta
+una petición por repositorio.**
+
+### 🔴 La extensión a PyPI: los DOS pedazos de Open edX que esta base cita son AGPL-3.0
+
+La acción 1 pedía extender el probe al *sdist*/*wheel* de PyPI. **La superficie no se pudo medir
+(exige ejecución), pero la metadata sí, y responde la pregunta que más importa:**
+
+| Paquete PyPI | Versión | `license` | Clasificador OSI |
+|---|---|---|---|
+| `openedx-mcp` | 0.1.5 | 🔴 **AGPL-3.0** | *GNU Affero General Public License v3* |
+| `tutor-contrib-openedxmcp` | 0.1.7 | 🔴 **AGPL-3.0** | 🔴 **ninguno declarado** |
+
+🔴 **Las dos únicas piezas de la capa MCP de Open edX que esta KB cita son AGPL-3.0, o sea copyleft
+de RED.** Un servidor MCP es precisamente el caso que la AGPL contempla: **si se expone como
+servicio a un tercero, la obligación de liberar fuente alcanza al servicio**, no sólo a la
+redistribución del binario. ⚠️ **Y no es una sorpresa aislada: concuerda con la nota de cabecera de
+`repos/foundations.md` —*media KB de educación es GPL/AGPL, no permisiva*— pero la mueve de la
+plataforma a la CAPA DE AGENTES**, que es donde esta base venía suponiendo permisividad.
+🔵 **Consecuencia de cotización: la puerta MCP de Open edX se construye propia sobre la API
+permisiva, o el engagement acepta AGPL en el componente que mira al cliente.** ⚠️ Y
+`tutor-contrib-openedxmcp` **no declara clasificador OSI**, así que un inventario automático de
+licencias que lea clasificadores —no el campo— lo cuenta como desconocido.
+
+### 🔴 La colisión de nombre que un inventario por NOMBRE no puede ver: hay DOS «Kolibri», con licencias distintas
+
+| Proyecto | Licencia medida | Qué es |
+|---|---|---|
+| **`learningequality/kolibri`** | **MIT** (`master/LICENSE`, 200) | el LMS offline-first que `verticals/solutions.md` lista |
+| **`public-ui/kolibri`** | 🔴 **EUPL-1.2** (`master/LICENSE`, 200 — *«EUROPEAN UNION PUBLIC LICENCE v. 1.2»*) | sistema de diseño accesible alemán, y el origen de **`@public-ui/mcp` 4.4.0** |
+
+⚠️ **Son dos proyectos distintos con el mismo nombre y licencias que NO son intercambiables**, y
+esta base los nombra a los dos: «Kolibri (MIT, offline)» en verticales, `@public-ui/mcp` en la capa
+MCP. **Una búsqueda de licencia por nombre de proyecto devuelve la respuesta del otro**, y la EUPL-1.2
+tiene cláusula de reciprocidad con compatibilidad explícita hacia otras copyleft —no es «como MIT».
+🔵 **La regla que esto deja: la clave de un inventario de licencias es `org/repo`, nunca el nombre
+del proyecto.**
+
+### 🔴 UN servidor, CUATRO conteos de tools, y ninguno es «el» número
+
+Medido sobre `bruchris/canvas-lms-mcp`, que es la alternativa con licencia a la puerta de Canvas:
+
+| Valor | Instrumento | Fuente |
+|---|---|---|
+| **165** | titular del README del proyecto | `main/README.md` línea 14 |
+| **165** | **el propio desglose del proyecto: 117 de lectura + 48 de escritura** | ídem, línea 153 — **internamente consistente** |
+| **166** | ídem **con FERPA activo en el transporte stdio**, donde se registra `resolve_pseudonym` | ídem — y **el transporte HTTP nunca lo registra** |
+| **157** | nombres distintos recuperables por expresión regular sobre su tabla de inventario enumerada | medición propia de este pase, `sed -n '107,156p'` + `grep -oE` |
+| **115** | «read+write tools across 17 domains» | **directorio de terceros** (`getdrio.com`) |
+
+⚠️ **La discrepancia 165 vs 157 es de MI instrumento, no de la fuente:** el desglose del propio
+proyecto cierra (**117 + 48 = 165**), así que los 8 que faltan son un artefacto de contar una tabla
+en prosa con una expresión regular. **Se publican los dos con su invocación, como manda P107.**
+🔴 **La de 115 es otra cosa: es un tercero publicando un conteo sin instrumento ni fecha**, y es la
+que un cliente encuentra primero en un buscador. 🔵 **Y el mismo defecto aparece cruzado entre los
+dos proyectos: el README de `bruchris` cotiza a `vishalsachdev/canvas-mcp` en «80+» tools, y el
+README de `vishalsachdev` dice «up to 103 tools», aclarando que «el perfil por defecto registra
+menos».** **Un conteo de tools sin (a) instrumento, (b) perfil y (c) transporte no es comparable con
+ningún otro** — y el *proveedor* de la cifra, propio o ajeno, cambia el valor más que el software.
+
 ## 2026-10-02 (pase 49) — **el dato crudo: DOS canales que esta base había declarado cerrados responden 200, y uno de ellos mide 227 tools sobre Canvas**
 
 Todo lo de abajo se **midió con un comando** en este repositorio o contra `registry.npmjs.org` /

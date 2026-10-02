@@ -9,6 +9,120 @@ updated: 2026-10-02
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 > No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
 
+## 2026-10-02 (pase 50) — **el gap 233 se responde y el bloqueo de las 227 tools de Canvas NO bloquea una entrega; 1 alta, y es una ADVERTENCIA — más una corrección de este mismo pase: las dos piezas que iba a dar de alta ya estaban en la tabla**
+
+⚠️ **Lo primero, porque condiciona todo el pase:** las tres acciones del pase 49 pedían **correr
+código versionado de `compose/code/`**, y 🔴 **este entorno negó la ejecución de código del
+repositorio clonado** (`[Code from External]`, dos veces, la segunda tras leer `probe.py` y
+`test_probe.py` completos y verificar que no hay `subprocess` ni `exec`). **No se reimplementó el
+probe ni se buscó otro intérprete.** 🔵 **Pero la pregunta comercial de la acción 3 no necesitaba el
+script: necesitaba saber si existe una alternativa CON licencia, y eso se contesta por
+`registry.npmjs.org` y `raw.githubusercontent.com`, los dos abiertos.** Se contestó.
+
+### 🔴 La corrección que este pase se hace a sí mismo, antes de los datos
+
+**Este pase midió dos servidores MCP de Canvas con licencia, los escribió como altas, y al controlar contra
+`agents/top.md` resultó que LAS DOS YA ESTABAN** (filas `canvas-mcp` de `vishalsachdev` y `canvas-lms-mcp` de
+`bruchris`), **y que el pase 39 ya había medido la segunda en el CÓDIGO y no en el README** (120 `readOnlyHint:
+true` + 48 `destructiveHint: true`). **Las dos filas duplicadas se revirtieron antes de publicar.** 🔵 **Es el
+control del gap 71 funcionando en el sentido que importa —hacia adentro—** y deja la regla escrita: **medir contra
+la tabla ANTES de llamar «alta» a algo es tan obligatorio como medir el upstream.** Lo que sí aportan las dos
+mediciones es **el TEXTO de licencia que la regla del pase 49 exige y que esas filas no tenían**, y está anotado en
+cada una:
+
+| Pieza (fila **preexistente**) | Campo | 🟢 Texto de licencia, medido en este pase | Superficie documentada | Instrumento de la cifra |
+|---|---|---|---|---|
+| `bruchris/canvas-lms-mcp` (TypeScript) | MIT | `main:LICENSE` → **200**, *«MIT License / Copyright (c) 2026 Christian Bru»* | **165** tools (**166** con FERPA en stdio), **16** *Agent Skills*, **2** *MCP Resources* | README del proyecto; **su propio desglose cierra: 117 lectura + 48 escritura = 165** |
+| `vishalsachdev/canvas-mcp` | MIT | `main:LICENSE` → **200**, *«MIT License / Copyright (c) 2025 Vishal Sachdev»* | **hasta 103** tools, **8** *agent skills* | README del proyecto, que aclara que **el perfil por defecto registra menos** |
+
+### 🟢 El alta real del pase, y entra como advertencia
+
+**`DMontgomery40/mcp-canvas-lms`** —la tercera alternativa MCP de Canvas, que esta base no tenía en ningún archivo—
+**es el caso que un filtro de licencias por *badge* aprueba y no debería:**
+
+| Alta | Licencia | Medición |
+|---|---|---|
+| **`DMontgomery40/mcp-canvas-lms`** (TypeScript, **54** tools según la tabla comparativa de un competidor) | 🔴 **sin texto de licencia** | `LICENSE` → **404** en `main` **y** en `master`, mientras `README.md` y `package.json` dan **200** en las dos ramas: **la ausencia está medida, no es del canal**. 🔴 **Lo único que afirma una licencia es un *badge* en el README de un TERCERO** |
+
+🔴 **Es el defecto inverso al de `@timadey/proctor` del pase 49:** ahí el **propio** manifiesto prometía un `LICENSE`
+inexistente —defecto de documentación con intención declarada—; **acá la licencia la afirma un tercero sobre un repo
+ajeno**, que es la peor procedencia posible para un dato de licencia. **No es proponible.**
+
+| Alta | Licencia | Texto de licencia | Superficie documentada | Instrumento de la cifra |
+|---|---|---|---|---|
+| **`bruchris/canvas-lms-mcp`** (npm `canvas-lms-mcp`, TypeScript) | **MIT** ✅ | 🟢 `main:LICENSE` → *«MIT License / Copyright (c) 2026 Christian Bru»* | **165** tools (**166** con FERPA en stdio), **16** *Agent Skills*, **2** *MCP Resources* | README del proyecto, **y su propio desglose cierra: 117 lectura + 48 escritura = 165** |
+| **`vishalsachdev/canvas-mcp`** (Python) | **MIT** ✅ | 🟢 `main:LICENSE` → *«MIT License / Copyright (c) 2025 Vishal Sachdev»* | **hasta 103** tools, **8** *agent skills* | README del proyecto, que **aclara que el perfil por defecto registra menos** |
+
+**Las dos eran filas sin superficie medida en el gap 233 del pase 49** —que las nombraba como
+«`canvas-mcp` (269★)» y «`canvas-lms-mcp` de bruchris (8★)»— **y ninguna de las dos tenía licencia
+confirmada por TEXTO.** Ahora las dos la tienen, y la superficie tiene instrumento declarado.
+
+### 🔵 La respuesta al gap 233, que era una hipótesis explícita y falsable
+
+El pase 49 la escribió así: *si una alternativa con licencia cubre el núcleo (cursos, tareas,
+calificaciones, matrículas), el gap 232 NO bloquea una entrega; si sólo cubre los bordes, el
+`LICENSE` de `@imazhar101/mcp-canvas-server` es la gestión más valiosa de esta KB.*
+
+🟢 **Se resuelve a favor de la primera rama, y con el enunciado del propio proyecto como evidencia.**
+`canvas-lms-mcp` declara sus 165 tools sobre *«courses, assignments, submissions, gradebook history,
+rubrics, quizzes, New Quizzes (LTI), files, users, groups, enrollments, discussions, modules, pages,
+calendar, conversations, peer reviews, accounts, analytics, outcomes, grading standards, grade
+projection, link audit, accessibility audit, content exports, content migrations, quiz
+accommodations, appointment groups, student workflows, student search, dashboard, instructor
+attention workflows, and health checks»*. **Los cuatro dominios del núcleo están los cuatro:**
+cursos, tareas/entregas, libro de calificaciones y matrículas.
+
+🔵 **Consecuencia comercial, que es un cambio de prioridad y no un gap cerrado de adorno:**
+
+- **El gap 232 BAJA de «la gestión de mayor apalancamiento de esta base» a opcional.** Las 227 tools
+  sin licencia de `@imazhar101/mcp-canvas-server` dejan de ser una dependencia: **son una
+  conveniencia**. Una entrega sobre Canvas se cotiza hoy, con MIT y texto, sin pedirle nada a nadie.
+- ⚠️ **Lo que se pierde al cambiar es superficie, no núcleo: 227 → 165.** Y **no es una resta
+  legítima**, porque los dos números salen de instrumentos distintos (conteo estático de nombres
+  distintos sobre `dist/` en un caso, README del proveedor en el otro). **La comparación honesta es
+  «los dos cubren el núcleo», no «faltan 62 tools».**
+- 🔴 **Y la tercera alternativa que apareció en el camino NO sirve, por el defecto inverso al del
+  pase 49:** el README de `bruchris` compara contra **`DMontgomery40/mcp-canvas-lms`** (54 tools) y
+  **muestra un *badge* de licencia para él**; el repositorio **responde 200 en `README.md` y
+  `package.json`, en `main` y en `master`, y NO tiene `LICENSE` en ninguna de las dos ramas**.
+  **Repositorio alcanzable + badge afirmando licencia + cero texto** es el caso que un filtro por
+  badge aprueba y no debería. ⚠️ **Y la afirmación de licencia es de un TERCERO sobre un repo
+  ajeno**, que es la peor procedencia posible para un dato de licencia.
+
+### ⚠️ El barrido obligatorio se corrió completo, y por OCTAVA vez no dio una pieza educativa nueva
+
+Cuatro consultas globales y cuatro regionales, **año calculado: 2026**. Las cuatro regiones,
+declaradas una por una —**un vacío declarado es información; el silencio se lee como cobertura**:
+
+| Región | Qué devolvió | Altas |
+|---|---|---|
+| **North America** | mercado y regulación: **36 %** de la adopción regional, **$951 M** (2024) → **$2.303,2 M** (2029, CAGR **15,9 %**), **$169 M** federales a AI en educación superior en Q1 2026; **71 %** de los docentes de EE. UU. sin formación en AI y **sólo 10 %** de las instituciones con guías formales; Colorado y Texas por partes. Jugadores **comerciales**: IBM, Microsoft, Google | **0** |
+| **EMEA** | el AI Act con el reloj de agosto de 2026 y la clasificación de **alto riesgo** para AI educativa; **£200 M+** del AI Adoption Summit del Reino Unido (**£100 M** a Bridge AI, **£53 M** regional); **94 %** de las organizaciones dispuestas a invertir en formación en AI y 🔴 **38 % que todavía no empezó a pilotear**; el Consejo de Europa convocando su 2.ª conferencia de trabajo sobre regulación de AI en educación (octubre); *Europe EdTech 200+* | **0** |
+| **APAC** | 🔴 **otra vez ni siquiera devolvió educación**: *enterprise* y gobernanza (**48 %** de los líderes de gobernanza con AI como prioridad, **57 %** de las organizaciones de Asia ya con AI en algún área, **49 %** señalando infraestructura insuficiente para datos en tiempo real, soberanía como eje 2026, consultas de Singapur sobre uso de AI en instituciones financieras). **El propio buscador declaró que no había resultados de educación.** **Octava** confirmación por el canal genérico | **0** |
+| **LATAM** | adopción alta y gobernanza floja: **99 %** de las *startups* con alguna AI y **85 %** nativa en el producto; *edtech* entre los sectores más disruptivos junto a *fintech* y *healthtech*, con **Ednova (Chile)** nombrada; **>85 %** de las empresas de la región usando AI; fragmentación regulatoria como riesgo de consistencia normativa transfronteriza; **BID** y el *working paper* de la **UNU/UNESCO IESALC** sobre **200 instituciones de educación superior en 19 países** (encuesta agosto–octubre 2025) | **0** |
+
+🔵 **La lectura transversal vuelve a dar lo mismo que el pase 49, y ya con ocho mediciones no es un
+resultado del barrido sino una propiedad del barrido: las cuatro regiones devuelven mercado, dinero y
+regulación —material de `intel/`— y ninguna devuelve código.** Las dos altas de este pase **no
+entraron por ahí**: entraron por el **canal de registro + texto de licencia**, igual que las tres
+del pase 49 entraron por el canal de organización.
+
+### 🔴 Y el canal de ORGANIZACIÓN, que el pase 49 estrenó con éxito, tiene un límite medido
+
+El pase 49 rompió siete pases sin altas consultando la página de repositorios de **HKUDS**. **Este
+pase aplicó el mismo canal a la organización más grande del open source educativo —`openedx`— y el
+resultado es cero:** de **182** repositorios, los visibles por estrellas son
+`openedx-platform` (**8,2k★**), `codejail` (478★), `XBlock` (470★), `paragon` (140★),
+`frontend-app-learning` (71★), `edx-proctoring` (68★), `edx-ora2` (64★), `event-tracking` (63★),
+y **ninguno menciona AI, agente, MCP, LLM, tutor ni copilot en su descripción**.
+
+🔵 **La precisión que esto agrega al hallazgo del pase 49: el rendimiento del canal de organización
+depende de si la organización es un LABORATORIO o una PLATAFORMA.** HKUDS publica capacidad nueva y
+da altas; `openedx` mantiene una plataforma y **su capa de AI no vive en su organización** —vive en
+paquetes de terceros, que es justamente donde este pase los encontró, y 🔴 **los dos de Open edX en
+PyPI son AGPL-3.0** (`openedx-mcp` 0.1.5, `tutor-contrib-openedxmcp` 0.1.7). **Buscar la capa
+agéntica de una plataforma en su propia organización es buscarla donde no está.**
+
 ## 2026-10-02 (pase 49) — **el séptimo pase sin altas se rompió cambiando el CANAL: 3 altas por ORGANIZACIÓN donde seis pases por REGIÓN no dieron ninguna**
 
 **La hipótesis del pase 48 era explícita y falsable:** *si el vacío de origen APAC es del canal,

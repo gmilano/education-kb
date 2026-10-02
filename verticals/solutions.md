@@ -9,6 +9,7 @@ updated: 2026-10-02
 > Plataformas verticales reales, en producción, customizables con AI.
 > Modelo: partir de algo que ya funciona y que ya tiene los datos, y agregar la capa agéntica arriba.
 > Verificado vía WebFetch el 2026-09-30; las capas del pase 11, el 2026-10-01.
+> **Pase 50 del 2026-10-02:** **tres correcciones de licencia que cambian lo que se cotiza, y ninguna necesitó un host bloqueado.** 🟢 **Canvas se puede entregar hoy:** hay dos puertas **MIT con texto verificado** y la mayor (**165** tools) cubre cursos, tareas, calificaciones y matrículas, **así que el bloqueo de las 227 tools sin licencia deja de estar en el camino crítico**. 🔴 **La puerta MCP de Open edX es AGPL-3.0 en sus dos piezas** —copyleft de red: o se construye propia sobre la API, o el engagement la acepta en el componente que mira al cliente. 🔴 **Y hay DOS «Kolibri»:** el **MIT** de `learningequality` que este archivo lista, y el **EUPL-1.2** de `public-ui` del que sale `@public-ui/mcp`. **La clave de un inventario de licencias es `org/repo`, nunca el nombre.**
 > **Pase 49 del 2026-10-02:** 🔵 **sin verticales nuevas por CUARTO pase consecutivo** —el barrido obligatorio
 > (`open source platform education ERP CRM MIT Apache SIS LMS`) devolvió **otra vez las mismas siete ya medidas y en
 > este archivo**: Moodle (**400 M** de usuarios y **150.000** sitios declarados por Moodle Pty Ltd), Open edX (raíces
@@ -97,6 +98,60 @@ updated: 2026-10-02
 > **Pase 28 del 2026-10-01:** la columna de la puerta de agente **gana una fila y pierde una certeza**. Gana **OneRoster**, que tiene puerta **0BSD** con **164 métodos y escritura** (`trilogy-group/oneroster-ts`) — el pase 26 la había declarado vacía. Y sobre **Open edX**, el «no hay puerta» se mantiene pero **ya se sabe sobre qué se construiría**: la API **escribe matrícula y notas por lote**, y el ***authoring* de Studio está declarado experimental en el repo** (**gap 50**). Ver la sección del pase 28, abajo.
 > **Pase 27 del 2026-10-01:** se agrega **la columna que faltaba en veintiséis pasadas — ¿la vertical tiene puerta de agente?** Moodle **sí** (dos conectores **MIT**, uno que escribe notas) y Canvas **sí**; 🔴 **Open edX no tiene ninguna**, y es la de mayor huella pública en LATAM e India. **Las LMS son copyleft pero las puertas son MIT**, y por eso se pueden componer. Ver la sección del pase 27, abajo.
 
+
+## 🧾 Tres correcciones de licencia que cambian lo que se cotiza en esta vertical (pase 50 del 2026-10-02)
+
+**Las tres salen de medir, por `registry.npmjs.org` / `pypi.org` / `raw.githubusercontent.com`, la
+licencia de los 32 paquetes de registro que esta KB cita. Ninguna necesitó un host bloqueado.**
+
+### 1. 🟢 **Canvas se puede entregar hoy: el bloqueo de las 227 tools NO bloquea**
+
+El pase 49 dejó el gap 232 como *«la gestión de mayor apalancamiento de esta base»*:
+`@imazhar101/mcp-canvas-server` expone **227 tools** sobre Canvas y **no declara licencia en ningún
+canal**. 🔵 **El gap 233 preguntaba si había alternativa con licencia, y la respuesta es sí, con
+texto verificado:**
+
+| Puerta de Canvas | Licencia | Texto de licencia | Superficie | Instrumento |
+|---|---|---|---|---|
+| `bruchris/canvas-lms-mcp` | **MIT** ✅ | 🟢 `main:LICENSE` → 200 (*© 2026 Christian Bru*) | **165** tools (**166** con FERPA en stdio) | README del proyecto; **117 lectura + 48 escritura = 165**, cierra |
+| `vishalsachdev/canvas-mcp` | **MIT** ✅ | 🟢 `main:LICENSE` → 200 (*© 2025 Vishal Sachdev*) | **hasta 103** tools | README del proyecto (**el perfil por defecto registra menos**) |
+| `@imazhar101/mcp-canvas-server` | 🔴 **ninguna** | 🔴 ninguno, en cuatro canales | **227** | conteo estático de nombres distintos sobre `dist/` (pase 49) |
+| `DMontgomery40/mcp-canvas-lms` | 🔴 **badge de un tercero** | 🔴 **404 en `main` y `master`, con el repo respondiendo 200** | **54** | tabla comparativa de un competidor |
+
+🟢 **`canvas-lms-mcp` cubre los cuatro dominios del núcleo** —cursos, tareas/entregas, libro de
+calificaciones y matrículas— **por enunciado del propio proyecto**, más rúbricas, New Quizzes (LTI),
+analítica, *outcomes*, auditoría de accesibilidad y de enlaces, exportaciones y migraciones.
+🔵 **Por lo tanto: el gap 232 BAJA de bloqueante a opcional, y la gestión del `LICENSE` upstream deja
+de ser prioridad uno.** ⚠️ **Lo que se pierde es superficie, no núcleo (227 → 165), y la resta no es
+legítima:** son dos instrumentos distintos (conteo estático de un árbol vs. README del proveedor).
+**La comparación honesta es «los dos cubren el núcleo».**
+
+### 2. 🔴 **La puerta MCP de Open edX es AGPL-3.0, y eso es copyleft de RED**
+
+| Pieza | Versión | Licencia |
+|---|---|---|
+| `openedx-mcp` (PyPI) | 0.1.5 | 🔴 **AGPL-3.0** (clasificador OSI *GNU AGPL v3*) |
+| `tutor-contrib-openedxmcp` (PyPI) | 0.1.7 | 🔴 **AGPL-3.0**, ⚠️ **sin clasificador OSI declarado** |
+
+**Las dos únicas piezas de la capa MCP de Open edX que esta KB cita son AGPL-3.0.** Un servidor MCP
+expuesto como servicio a un tercero es precisamente el caso que la AGPL contempla: **la obligación de
+liberar fuente alcanza al servicio, no sólo a la redistribución.** 🔵 **Cotización: o la puerta se
+construye propia sobre la API de Open edX (permisiva en la plataforma), o el engagement acepta AGPL
+en el componente que mira al cliente.** ⚠️ **Y la segunda no declara clasificador**, así que un
+inventario automático que lea clasificadores la cuenta como *desconocida* en vez de AGPL.
+
+### 3. 🔴 **Hay DOS «Kolibri» y no son intercambiables**
+
+| Proyecto | Licencia medida (texto) | Qué es |
+|---|---|---|
+| **`learningequality/kolibri`** | **MIT** (`master/LICENSE` → 200) | el LMS *offline-first* que este archivo lista |
+| **`public-ui/kolibri`** | 🔴 **EUPL-1.2** (`master/LICENSE` → 200) | sistema de diseño accesible alemán, origen de **`@public-ui/mcp` 4.4.0** |
+
+⚠️ **Esta base nombra a los dos** —«Kolibri (MIT, offline)» acá, `@public-ui/mcp` en la capa MCP— **y
+una consulta de licencia por NOMBRE devuelve la del otro.** La EUPL-1.2 tiene cláusula de
+reciprocidad con compatibilidad explícita hacia otras copyleft: **no es «como MIT»**. 🔵 **Regla: la
+clave de un inventario de licencias es `org/repo`, nunca el nombre del proyecto.** Es el mismo
+defecto que la colisión de los dos «Bloom» del pase 7, **y ya van dos**, así que no es anécdota.
 
 ## 🔒 La capa de examen seguro, re-medida: la puerta cubre el servicio y no cuatro endpoints — y la licencia de la plataforma quedaba mal escrita en el código (pase 44 del 2026-10-02)
 

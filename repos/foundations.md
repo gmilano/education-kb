@@ -8,6 +8,7 @@ updated: 2026-10-02
 
 > Bases sobre las cuales construir. Verificado repo por repo vía WebFetch el 2026-09-30 (capas del pase 10, el 2026-10-01).
 > Leer la columna **Licencia** antes de proponer: media KB de educación es GPL/AGPL, no permisiva.
+> **Pase 50 del 2026-10-02:** 🔴 **la nota de arriba —*media KB de educación es GPL/AGPL*— se midió en la capa de AGENTES, que es donde esta base suponía permisividad, y el resultado no es el supuesto.** De **32** nombres de registro citados, **30 resuelven**: **21 permisivos**, **5 copyleft o recíproca**, **4 SIN licencia** — y 🔴 **los dos pedazos de la capa MCP de Open edX en PyPI son AGPL-3.0**, o sea copyleft de RED sobre un servidor. ⚠️ **Y los 2 que no resuelven son una corrección propia: `@tutors/xapi` y `@tutors/badges` dan 404 y esta base los citaba.** 🟢 **El defecto de instrumento que se corrige corre en los DOS sentidos** (campo sin texto **y** texto sin campo), y el control de alcanzabilidad cambia **7 falsos «sin licencia»** por **2 ciertos y 5 declarados indeterminados**. Ver **P114**.
 > **Pase 49 del 2026-10-02:** 🟢 **DOS clases de cifra dejaron de ser «no re-verificables acá», y una de las dos
 > cubre 326 mediciones de esta base.** El pase 48 declaró **1.836 de 3.611 (50,8 %)** fuera de alcance por canal
 > cerrado. **Dos de esos canales estaban mal elegidos, no cerrados:**
@@ -162,6 +163,87 @@ updated: 2026-10-02
 > completo, resuelve las constantes compuestas y los valores de `src/main/resources` —que es lo que `raw` no permite
 > sin saber de antemano qué archivo pedir— y además **fecha el `HEAD`**. Con `raw` no se habría encontrado ninguno de
 > los cuatro defectos del pase.
+
+## 🧾 Capa de LICENCIA de la superficie npm/PyPI que esta base cita — 30 paquetes medidos, y el reparto NO es el que el archivo suponía (agregada en el pase 50 del 2026-10-02)
+
+⚠️ **Lo que esta sección NO es:** no es la superficie de tools. La acción 1 del pase 49 pedía las dos
+cosas (licencia **y** `tools`) con un `--batch` del probe, y 🔴 **este entorno negó la ejecución de
+código del repositorio** (`[Code from External]`). **La licencia se puede medir sin ejecutar nada
+—`registry.npmjs.org`, `pypi.org` y `raw.githubusercontent.com` responden 200—, la superficie no.**
+Así que acá está la mitad medible, y la otra queda escrita como pendiente, sin rebajarla.
+
+**La nota de cabecera de este archivo dice —*«media KB de educación es GPL/AGPL, no permisiva»*— y
+hasta ahora valía para las PLATAFORMAS. Este pase la mide en la CAPA DE AGENTES, que es donde esta
+base venía suponiendo permisividad, y el resultado está partido en tres:**
+
+| Reparto de los **30** paquetes npm resueltos (de **32** citados) | Cuántos | Cuáles |
+|---|---|---|
+| 🟢 **Permisivas** | **21** | **16 MIT** (`@owen-x-tech/canvas-mcp`, los **7** `@longsightgroup/qti3-*`, `@longsightgroup/oneroster`, `@eduware/oneroster`, `@dendiem/caliper`, `@yunmiao/studymate`, `@nahuelalbornoz/moodle-mcp`, `@brutalsystems/tincan`, `@handsong/folio-ui-cli`, `@moinsen-dev/tool-teacher`), **4 Apache-2.0** (`@ajna-inc/openbadges`, `@genramzi/proctor`, `@stll/folio-agents`, `@stll/folio-cli`), **1 ISC** (`frappe-mcp-server`) |
+| ⚠️ **Copyleft o recíproca** | **5** | `@learninglocker/xapi-agents` **GPL-3.0**, `@citolab/qti-convert-local-ai` **GPL-3.0-only**, `@universis/one-roster` **LGPL-3.0-or-later**, `@public-ui/mcp` **EUPL-1.2**, `@osu-cass/sb-components` **MPL-2.0** (y en **1.5.0-alpha.10**: *alpha*) |
+| 🔴 **Sin campo de licencia** | **4** | `@superbuilders/oneroster` 0.7.0, `@timeback/caliper` 0.3.3, `@pie-element/multiple-choice` **14.0.0**, `@pie-element/rubric` **9.0.0** |
+
+**Y los 2 que no resuelven son una corrección propia:** 🔴 **`@tutors/xapi` y `@tutors/badges`
+devuelven 404 en el registro y esta base los citaba** (`intel/trends.md`, `agents/trending.md`).
+*Un 404 no es un hallazgo* — y esta vez el 404 era de la KB.
+
+### 🔴 Lo que hay que leer antes de proponer, y son cuatro cosas, no una
+
+1. **Las 4 sin licencia no son prototipos, y en una el mecanismo está medido.**
+   `@pie-element/multiple-choice` va en **14.0.0** (con **2.514** versiones publicadas) y
+   `@pie-element/rubric` en **9.0.0**. 🔴 **El campo `license` nunca se declaró** —vacío en las tres
+   versiones muestreadas— **y el permiso se perdió en una MIGRACIÓN DE REPOSITORIO:** las versiones
+   viejas apuntan a `pie-framework/pie-elements`, que **tiene texto** (`master/LICENSE.md` → **200**,
+   *«Copyright 2019 CoreSpring Inc»* — el **ISC** que este archivo registra), y la **14.0.0** apunta a
+   `pie-framework/pie-elements-ng`, donde **`LICENSE`, `LICENSE.md` y `COPYING` dan 404 en `main` y en
+   `master`** mientras el repo responde. ⚠️ **Corrección para cualquiera que cite el ISC de esta
+   librería: ese texto es del PREDECESOR, no de lo que npm sirve hoy.**
+2. 🔵 **Hay un patrón de ALCANCE, no de paquete: `@timeback/*` va 2 de 2 sin licencia y sin
+   repositorio** (`oneroster` en el pase 49, `caliper` en este). **Regla de cotización: el scope
+   `@timeback` no entra en una entrega sin gestión previa**, y no hace falta medir el tercero.
+3. 🔴 **La capa MCP de Open edX es AGPL-3.0 en PyPI, las dos piezas** (`openedx-mcp` 0.1.5,
+   `tutor-contrib-openedxmcp` 0.1.7, la segunda **sin clasificador OSI**, así que un inventario que
+   lea clasificadores la cuenta como desconocida). **AGPL es copyleft de RED y un servidor MCP es
+   exactamente su caso de uso previsto:** exponerlo como servicio a un tercero **alcanza al
+   servicio**. **O la puerta se construye propia sobre la API, o el engagement acepta AGPL en el
+   componente que mira al cliente.**
+4. ⚠️ **`@public-ui/mcp` es EUPL-1.2, no «como MIT».** La EUPL tiene cláusula de reciprocidad con
+   compatibilidad explícita hacia otras copyleft. **Y viene con una colisión de nombre que un
+   inventario por nombre no puede ver:** su repo es `public-ui/kolibri` (**EUPL-1.2**, texto leído en
+   `master/LICENSE`), **que NO es el `learningequality/kolibri` MIT que `verticals/solutions.md`
+   lista** (texto leído en `master/LICENSE`: *«MIT License»*). 🔵 **La clave de un inventario de
+   licencias es `org/repo`, nunca el nombre del proyecto.**
+
+### 🟢 El defecto de instrumento que este pase corrige, y corre en los DOS sentidos
+
+El pase 49 estableció que **un CAMPO de licencia no es TEXTO de licencia**, con dos casos en una sola
+dirección (campo MIT, cero texto). **Este pase encuentra la dirección inversa:**
+
+| Paquete | Campo de registro | Texto en el repositorio | Qué hace un filtro de una sola lectura |
+|---|---|---|---|
+| **`@superbuilders/oneroster`** 0.7.0 | 🔴 **ninguno** | 🟢 `trilogy-group/oneroster-ts` **`main:LICENSE` → 200** | **lo RECHAZA, y está licenciado** |
+| `@timadey/proctor` (pase 49) | MIT | 🔴 ninguno | **lo APRUEBA, y no hay permiso escrito** |
+
+⚠️ **Los dos errores son del mismo instrumento mal usado, y cada uno cuesta en su dirección:** el que
+sobre-aprueba crea riesgo legal, el que sobre-rechaza descarta la pieza correcta. **La regla
+operativa: los dos artefactos siempre, y la discrepancia se REPORTA en vez de resolverse a favor de
+ninguno.**
+
+### 🟢 Y el control que distingue «no hay licencia» de «no llegué al repositorio»
+
+De **19** repositorios declarados, **12 tienen texto de licencia alcanzable** (`main` o `master`).
+⚠️ **De los 7 restantes, sólo 2 permiten concluir:**
+
+- 🔴 **Sin licencia de verdad (el repo responde):** `pie-framework/pie-elements-ng` y
+  `moinsen-dev/tool-teacher` (`master/README.md` → **200** en los dos).
+- ⚠️ **Indeterminados (el repo no responde en `main`/`master`/`develop`, ni `README.md` ni
+  `package.json`):** `owentaylor/canvas-mcp`, `Eduware-Inc/eduware-oneroster`,
+  `LearningLocker/xapi-agents`, `osu-cass/sb-components`, `appliedrelevance/frappe_mcp_server`.
+  **Su campo de registro dice una licencia y el texto no se pudo ver: no se publica ninguna de las
+  dos conclusiones.**
+
+🔵 **Dos conclusiones firmes y cinco indeterminadas declaradas es un resultado mejor que siete «sin
+licencia», que es lo que el instrumento habría publicado sin el control — y el control cuesta una
+petición HTTP por repositorio.** Es **P104** aplicado a licencias.
 
 ## 🎓 Capa de *student success* / alerta temprana — la capa que esta base declaró la PEOR abastecida, y tiene una pieza MIT desde 2022 (agregada en el pase 40 del 2026-10-02)
 

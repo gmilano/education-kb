@@ -7,6 +7,7 @@ updated: 2026-10-02
 # 📡 Tendencias — education
 
 > Ventana de investigación: septiembre 2026. Verificado 2026-09-30; el pase 11, el 2026-10-01.
+> **Pase 50 del 2026-10-02:** ⚠️ **las tres acciones del pase 49 pedían las tres correr código versionado de `compose/code/`, y el entorno NEGÓ la ejecución de código del repositorio clonado** (`[Code from External]`, dos veces, la segunda tras leer `probe.py` y `test_probe.py` completos). **No se reimplementó el probe ni se buscó otro intérprete.** 🟢 **Lo que sí estaba abierto es el canal de red, que es exactamente la mitad de la acción 1 que no necesita el script: 30 de 32 paquetes de registro medidos por LICENCIA, con los dos artefactos de la regla del pase 49.** 🟢 **Gap 233 CERRADO** —hay dos puertas MIT de Canvas con texto y la mayor cubre el núcleo, así que **el gap 232 baja de bloqueante a opcional**. 🔴 **Y los hallazgos que corrigen a esta base: el defecto campo-vs-texto corre en los DOS sentidos; la capa de agentes NO es más permisiva que la plataforma (la de Open edX es AGPL-3.0); hay dos «Kolibri» con licencias distintas; y esta KB citaba dos paquetes que no existen.** ⚠️ **La acción 2 queda SIN EJECUTAR y se vuelve a dejar escrita.** Tendencias **234**–**246**.
 > **Pase 47 del 2026-10-02:** **se ejecutan las tres acciones del pase 46, las tres rinden, y la primera rinde
 > CORRIGIENDO la conclusión del pase anterior.** 🔴 **El gap 97 era verdadero para SCORM 2004 y falso para SCORM 1.2:**
 > el mismo `buildManifestFor` emite dos dialectos y el comodín de 1.2 es **`processContents="strict"`**, así que un
@@ -4973,6 +4974,100 @@ comercial **de forma sistemática**, mientras el texto consolidado del Reglament
 que sus fuentes secundarias publican mal.** La regla operativa no cambia y conviene repetirla cada vez que se cite:
 **las fechas están confirmadas por tres canales secundarios independientes y concordantes, no por fuente primaria, y
 eso se dice en la propuesta.**
+
+## 🔵 Las tendencias 234–246, del pase 50 del 2026-10-02
+
+**Las trece salen de una corrida que NO pudo ejecutar lo que se le pidió, y de hacer con el canal
+abierto la mitad que no necesitaba ejecución. Cinco son defectos del instrumento de licencias, tres
+corrigen afirmaciones de esta base y una es un defecto del propio pase, encontrado antes de
+publicar.**
+
+| # | Tendencia | Evidencia |
+|---|---|---|
+| **234** | 🔴 **El defecto campo-vs-texto corre en los DOS sentidos, y un filtro de UNA lectura se equivoca en los dos.** El pase 49 mostró *campo MIT sin texto* (`sisu-mcp`, `@timadey/proctor`): **sobre-aprueba**. Este pase encuentra la inversa: **`@superbuilders/oneroster` 0.7.0 no declara campo y SÍ tiene texto** (`trilogy-group/oneroster-ts` `main:LICENSE` → 200), o sea **sobre-rechaza una pieza licenciada**. **Los dos artefactos, siempre, y la discrepancia se reporta** | `registry.npmjs.org/<pkg>/latest` + `raw.githubusercontent.com`; **P114** |
+| **235** | 🟢 **«No hay licencia» y «no llegué al repositorio» son dos resultados distintos, y distinguirlos cuesta UNA petición.** De **19** repos declarados, **12** tienen texto; de los **7** restantes **sólo 2** son ausencia real (`pie-framework/pie-elements-ng`, `moinsen-dev/tool-teacher`, los dos con `master/README.md` → 200) y **5 son indeterminados** (ni `README.md` ni `package.json` en `main`/`master`/`develop`). **Sin el control, el instrumento publicaba 7 «sin licencia»** | la tabla de 7 filas en `repos/trending.md` del pase 50 |
+| **236** | 🔴 **La capa de AGENTES de educación no es más permisiva que la plataforma, y esta base lo suponía.** De **30** paquetes npm resueltos: **21 permisivos**, **5 copyleft o recíproca**, **4 sin licencia**. Y en PyPI, 🔴 **los DOS pedazos de la capa MCP de Open edX son AGPL-3.0** (`openedx-mcp` 0.1.5, `tutor-contrib-openedxmcp` 0.1.7): **copyleft de RED sobre un servidor MCP alcanza al servicio expuesto**, que es su caso de uso previsto | `pypi.org/pypi/<pkg>/json`, campo y clasificadores |
+| **237** | 🔴 **Una versión madura no implica licencia, y acá el mecanismo está medido: el permiso se perdió en una MIGRACIÓN DE REPOSITORIO.** `@pie-element/multiple-choice` tiene **2.514 versiones** y el campo `license` está **vacío en las tres muestreadas** (1.2.2, 7.9.3-next.32, 14.0.0): **nunca se declaró**. 🔴 **Lo que cambió es el puntero de repositorio:** las versiones viejas apuntan a `pie-framework/pie-elements`, que **SÍ tiene texto** (`master/LICENSE.md` → 200, *«Copyright 2019 CoreSpring Inc»*, el **ISC** que esta base registra), y la **14.0.0** apunta a `pie-framework/pie-elements-ng`, donde **`LICENSE`, `LICENSE.md` y `COPYING` dan 404 en `main` y en `master`** con el repo respondiendo. ⚠️ **El ISC que esta KB tiene anotado es del PREDECESOR: el artefacto que cargaba el permiso quedó en el repo viejo** | `registry.npmjs.org/@pie-element/multiple-choice` (campo `repository` por versión) + los seis 404 de `-ng` |
+| **238** | 🔵 **La licencia ausente puede ser una propiedad del ALCANCE y no del paquete, y entonces no hay que medir el tercero.** **`@timeback/*` va 2 de 2** sin campo y sin repositorio (`oneroster` en el pase 49, `caliper` en este). **Pasa de fila a revisar a regla de cotización** | `@timeback/caliper` 0.3.3 + `@timeback/oneroster` 0.3.3 |
+| **239** | 🔴 **Hay DOS «Kolibri» con licencias que no son intercambiables, y esta base nombra a los dos.** `learningequality/kolibri` es **MIT** y `public-ui/kolibri` es **EUPL-1.2** (los dos textos leídos en `master/LICENSE`). **Una consulta por NOMBRE devuelve la del otro.** Con los dos «Bloom» del pase 7 **ya van dos colisiones: la clave de un inventario de licencias es `org/repo`** | `@public-ui/mcp` 4.4.0 → `public-ui/kolibri`; **P114** paso 2 |
+| **240** | 🔵 **Una licencia no se evalúa en abstracto: se evalúa contra el COMPRADOR, y la EUPL-1.2 cambia de signo.** En una cotización genérica entra como copyleft recíproca y **resta**; en **compra pública europea suma**, porque es la licencia de la propia Unión, redactada para administraciones y con validez en cada lengua oficial. **Es el único hallazgo de licencia de este pase que mejora una propuesta en vez de limitarla** | `intel/market.md`, EMEA, pase 50 |
+| **241** | 🔴 **UN servidor, CINCO conteos de tools, y el proveedor de la cifra la mueve más que el software.** Para `bruchris/canvas-lms-mcp`: **165** (titular del README), **117+48=165** (su propio desglose, consistente), **166** (con FERPA en stdio; **HTTP nunca lo registra**), **157** (expresión regular propia sobre su tabla enumerada) y **115** (directorio de terceros, sin instrumento ni fecha). **Y cruzado: `bruchris` cotiza a `vishalsachdev` en «80+» y `vishalsachdev` dice «hasta 103», aclarando que el perfil por defecto registra menos.** **Un conteo sin (a) instrumento, (b) perfil y (c) transporte no es comparable** | la tabla de cinco instrumentos en `repos/trending.md` del pase 50 |
+| **242** | 🔴 **La peor procedencia posible para un dato de licencia es un TERCERO afirmándola sobre un repo ajeno.** `DMontgomery40/mcp-canvas-lms` aparece con *badge* de licencia **en la tabla comparativa de un competidor**, y su `LICENSE` da **404 en `main` y en `master`** mientras `README.md` y `package.json` dan **200 en las dos**: **la ausencia está medida.** Es peor que el caso de `@timadey/proctor`, donde al menos **el propio** manifiesto declaraba la intención | `raw.githubusercontent.com/DMontgomery40/mcp-canvas-lms/{main,master}/LICENSE` |
+| **243** | 🔵 **El canal de ORGANIZACIÓN —que el pase 49 estrenó rompiendo siete pases sin altas— rinde en LABORATORIOS y no en PLATAFORMAS.** Aplicado a `openedx`: **182 repositorios** y **ninguno** menciona AI, agente, MCP, LLM, tutor ni copilot en su descripción (`openedx-platform` 8,2k★, `codejail` 478★, `XBlock` 470★, `paragon` 140★, `frontend-app-learning` 71★, `edx-proctoring` 68★, `edx-ora2` 64★, `event-tracking` 63★). **La capa agéntica de una plataforma vive en paquetes de terceros** —y en este caso son **AGPL-3.0** (tendencia 236) | página de repositorios de `openedx`, ordenada por estrellas |
+| **244** | 🔴 **Esta base citaba DOS paquetes que no existen.** `@tutors/xapi` y `@tutors/badges` devuelven **404** en `registry.npmjs.org` y están citados en `intel/trends.md` y `agents/trending.md`. **Es la regla propia —*un 404 no es un hallazgo*— aplicada a la KB misma**, y el paso 1 de **P114** los habría atrapado el primer día | `registry.npmjs.org/@tutors/{xapi,badges}/latest` → 404 |
+| **245** | 🔴 **Una restricción de ENTORNO no es un canal cerrado, y mezclarlas pierde la mitad que sí se puede hacer.** Las tres acciones del pase 49 eran las tres de **ejecución de código versionado**, y este entorno la negó (`[Code from External]`, dos veces, la segunda tras leer `probe.py` y `test_probe.py` completos). 🟢 **Pero `registry.npmjs.org`, `pypi.org` y `raw.githubusercontent.com` respondían 200**, y la **licencia** de la acción 1 no necesitaba el script: **30 paquetes medidos sin ejecutar nada.** ⚠️ **La superficie por tarball y la re-medición del árbol upstream sí la necesitan, y quedan pendientes sin rebajarse** | este pase; **la acción 2 del pase 49 queda SIN EJECUTAR** |
+| **246** | 🟢 **El control del gap 71 sirve hacia ADENTRO, y este pase lo necesitó.** Midió dos servidores MCP de Canvas con licencia, **los escribió como altas**, y al controlar contra `agents/top.md` **las dos YA ESTABAN** —y el pase 39 ya había medido una **en el código** (120 `readOnlyHint` + 48 `destructiveHint`) y no en el README. **Las dos filas duplicadas se revirtieron antes de publicar.** **Medir contra la tabla antes de llamar «alta» a algo es tan obligatorio como medir el upstream** | `agents/trending.md` del pase 50, primera sección |
+
+## 🔵 Estado de gaps al cierre del pase 50 del 2026-10-02
+
+⚠️ **Este pase NO ejecutó las tres acciones que el pase 49 dejó escritas, y el motivo no es de
+criterio:** las tres pedían **correr código versionado de `compose/code/`** y **el entorno negó la
+ejecución de código del repositorio clonado** (`[Code from External]`, dos veces, la segunda después
+de leer `probe.py` y `test_probe.py` de punta a punta y constatar que no hay `subprocess`, ni `exec`,
+ni escrituras). **No se reimplementó el probe ni se buscó otro intérprete.** 🟢 **Lo que sí se hizo
+es la mitad de la acción 1 que vive en el canal de red, y rindió de más.**
+
+| Gap | Estado | Resolución |
+|---|---|---|
+| **233** (¿hay alternativa CON licencia a las 227 tools de Canvas?) | ✅ **CERRADO, y la hipótesis se resuelve a favor de la primera rama** | 🟢 **Sí, DOS, las dos MIT con texto verificado:** `bruchris/canvas-lms-mcp` (**165** tools; **117 lectura + 48 escritura** cierra; **166** con FERPA en stdio) y `vishalsachdev/canvas-mcp` (**hasta 103**). **La mayor cubre los cuatro dominios del núcleo** —cursos, tareas/entregas, calificaciones, matrículas— **por enunciado del propio proyecto**. ⚠️ **Y la resta 227−165 no es legítima: son dos instrumentos** (**P113**) |
+| **232** (las 227 tools de Canvas sin licencia) | 🟢 **BAJA DE GRADO: de bloqueante a OPCIONAL** | **Ya no está en el camino crítico de ninguna propuesta.** Sigue valiendo pedir el `LICENSE` upstream —son 227 herramientas— pero **una entrega sobre Canvas se cotiza hoy sobre MIT con texto**. 🔵 **Deja de ser «la gestión de mayor apalancamiento de esta base»** |
+| **101** (cifras publicadas sin nombrar su métrica) | ⚠️ **AVANZA en licencias, SIN AVANZAR en superficie** | 🟢 **La clase «licencia» pasa a columna medida para 30 de 32 paquetes**, con salida de **tres** valores (`licenciado` / `sin licencia` / `indeterminado`) y el control de alcanzabilidad (tendencia 235). 🔴 **La clase `tools` sigue sin instrumento reproducible, y este pase mide por qué duele: cinco conteos para un solo servidor** (tendencia 241). **La mitad de superficie exige ejecución** |
+| **nuevo 247** 🔴 | **las cifras de código que apuntan a un árbol UPSTREAM siguen sin re-medir, y ahora el motivo está identificado** | «**164 métodos**» —citada **13 veces** en `intel/trends.md`— más «187 archivos», «72 rutas», «35 rutas», «341 operaciones» y «31 clases». **Era la acción 2 del pase 49 y queda SIN EJECUTAR: exige correr los tres extractores versionados.** ⚠️ **Mientras no se puedan correr, no se deben citar como estado actual sin su pase de origen** |
+| **nuevo 248** 🔴 | **esta base cita dos paquetes inexistentes** | `@tutors/xapi` y `@tutors/badges` → **404** en el registro, citados en `intel/trends.md` y `agents/trending.md`. **Corrección pendiente de redacción en los dos archivos** (tendencia 244) |
+| **nuevo 249** 🔴 | **la capa MCP de Open edX es AGPL-3.0, y es copyleft de RED** | `openedx-mcp` 0.1.5 y `tutor-contrib-openedxmcp` 0.1.7, la segunda **sin clasificador OSI**. **O la puerta se construye propia sobre la API, o el engagement acepta AGPL en el componente que mira al cliente** (**P114**) |
+| **nuevo 250** ⚠️ | **la colisión de nombre es un defecto sistemático, no una anécdota** | Dos «Kolibri» (**MIT** vs **EUPL-1.2**) sumados a los dos «Bloom» del pase 7. **La clave de cualquier inventario de licencias de esta KB debe ser `org/repo`** (tendencia 239) |
+| **71** (duplicado en `agents/top.md`) | 🟢 **CERRADO y CONTROLADO — y este pase lo necesitó hacia adentro** | **Dos filas duplicadas detectadas y revertidas antes de publicar** (tendencia 246). Al cierre: **425 filas de pipe en el archivo**, **las 5 cabeceras con su `\|---\|` debajo** (verificado), **1 alta real** (`DMontgomery40/mcp-canvas-lms`, como advertencia) y **0 filas de encabezado o de relleno como dato** |
+| **vacío de descubrimiento APAC** | 🔵 **CERRADO en el pase 49, y este pase le pone LÍMITE al canal que lo cerró** | **El canal de organización rinde en laboratorios y no en plataformas:** `openedx` da **182 repos y 0** piezas AI-nativas (tendencia 243). **Para APAC confirma dónde buscar: laboratorios universitarios, no consorcios de plataforma** |
+| **92** (texto consolidado del AI Act) / **65** (primarias multilaterales) | 🔴 **92 ABIERTO** — 🟢 **65 mejora y por primera vez con DENOMINADOR** | El *working paper* **UNU / UNESCO IESALC** sobre AI en educación superior en América Latina y el Caribe **declara muestra y ventana: 200 instituciones, 19 países, agosto–octubre 2025**. 🔵 **Es la primera primaria LATAM de esta base citable sin la advertencia de dispersión de consultora.** El **BID** reaparece con su marco regulatorio habilitante |
+| **69** (educación en la capa MCP brasileña) / **68** / **60** / **61** | 🔴 **ABIERTOS, sin cambios** | Se refuerza el 69 con licencia medida: `@signdocs-brasil/mcp-server` es **MIT con `LICENSE` real embarcado y 26 tools**, y **sigue siendo de firma de documentos, no de educación**. **La capa MCP brasileña está viva; falta la pieza educativa, no la infraestructura** |
+
+## 🔵 Las tres acciones que el pase 50 deja escritas para el pase 51
+
+⚠️ **La primera es la única de las tres que NO depende de un permiso de ejecución, y por eso va
+primera. La segunda y la tercera declaran de entrada qué hacer si el permiso sigue negado, para que
+el pase 51 no se gaste descubriendo lo mismo que este.**
+
+1. 🟢 **Aplicar las cuatro preguntas de P114 a TODOS los repositorios `github.com/...` que cita
+   `agents/top.md`, y publicar la salida de tres valores** (`licenciado` / `sin licencia` /
+   `indeterminado`). **Sólo necesita `raw.githubusercontent.com`, que responde 200.** La columna
+   **Licencia** de ese archivo tiene hoy **MIT ✅ / Apache-2.0 ✅ / 🔴 sin licencia** escritos en su
+   mayoría **sin texto verificado**, y este pase midió que esa lectura **se equivoca en los dos
+   sentidos** (tendencia 234). **La acción concreta:** extraer los `org/repo` de las **425** filas de
+   pipe, pedir `{main,master}/{LICENSE,LICENSE.md,LICENSE.txt,COPYING}`, **y para cada ausencia
+   preguntar si el repo responde** antes de concluir. ⚠️ **Y declarar el denominador: cuántas filas
+   traen URL de GitHub y cuántas no.** 🔵 **El valor: la columna más consultada de esta KB —la que
+   decide si una pieza entra en una propuesta— pasa de afirmación a medición, y con el tercer valor
+   que un filtro binario no puede expresar.**
+2. 🔴 **Hacer comparables las dos superficies de Canvas midiéndolas con el MISMO instrumento**
+   (**cierra la mitad que P113 declara incomparable**). Hoy se enfrentan **227** (conteo estático de
+   nombres distintos sobre `dist/`, pase 49) y **165** (README del proveedor), y **la resta no se
+   puede escribir**. **La acción concreta:** correr el probe sobre el tarball de `canvas-lms-mcp` y
+   sobre el de `vishalsachdev/canvas-mcp` **con el mismo conteo de nombres distintos**, y publicar la
+   **intersección por dominio** (cursos, tareas, calificaciones, matrículas). ⚠️ **Esto EXIGE
+   ejecución de código del repositorio, que este pase tuvo negada.** 🔵 **Si el permiso sigue
+   negado, el reemplazo no es no hacer nada: es anotar en P113 y en las tres filas de Canvas que las
+   cifras son de instrumentos distintos —ya está hecho— y pedir el permiso explícitamente en el
+   reporte, en vez de volver a intentarlo en silencio.**
+3. ⚠️ **Corregir las dos citas muertas y cerrar el gap 248, que es trabajo de redacción y no
+   necesita ningún canal.** `@tutors/xapi` y `@tutors/badges` **no existen en el registro** y están
+   citados en `intel/trends.md` y `agents/trending.md`. **La acción concreta:** (a) corregir las dos
+   citas marcándolas como **404 medido** en vez de borrarlas —la historia es el valor de los archivos
+   *append-only*—, (b) **buscar si el proyecto `tutors` publica bajo otro alcance** (el dato salió de
+   algún lado: puede ser un alcance renombrado, y entonces hay dos piezas reales que esta base
+   perdió), y (c) **correr el paso 1 de P114 sobre los 32 nombres una vez más al cierre**, porque
+   **un paquete sin licencia puede publicarla en cualquier versión nueva** y cuatro de los medidos
+   están en esa situación.
+
+⚠️ **Y las acciones hacia afuera que esta corrida sigue sin poder ejecutar, declaradas para no
+perderlas:** el `LICENSE` de `DMontgomery40/mcp-canvas-lms`, **ahora con el argumento de que un
+tercero ya publica un *badge* de licencia que el repositorio no respalda** (tendencia 242); el
+`LICENSE` de `pie-framework/pie-elements-ng`, **con catorce versiones mayores publicadas** (tendencia
+237); el del alcance **`@timeback/*`**, **2 de 2 sin licencia ni repositorio** (tendencia 238); el
+`LICENSE` de `@imazhar101/mcp-canvas-server` —**que sigue valiendo 227 herramientas aunque ya no
+bloquee** (gap 232)—; el de `Timadey/proctor`, **cuyo propio manifiesto lo promete**; el repositorio y
+el texto de licencia de `@ink-waffle/sisu-mcp`; el acceso de miembro a los repositorios de Caliper
+Sensor API de 1EdTech; **los dos PR a `giacomomaria81/scorm-mcp-server`** (gap 100 y gap 102); y
+🔵 **el texto consolidado del Reglamento (UE) 2024/1689, inalcanzable por CUATRO canales** (gap 92).
 
 ## 🔵 Las tendencias 220–231, del pase 49 del 2026-10-02
 

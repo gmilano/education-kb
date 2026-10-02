@@ -44,6 +44,13 @@ o la variable de entorno (regla de **P107**, pase 47):
 | `openedx-course-generator/` | genera un curso de Open edX sin levantar la plataforma | `python3 test_plan.py` | **33** |
 | `seb-proctoring-validator/` | validador que rechaza ajustes de terceros incompletos | `sh run_test.sh` | **21/21** |
 
+🔴 **Advertencia del pase 50 del 2026-10-02: la columna «Hoy» NO se re-verificó en este pase.** El entorno de la
+corrida **negó la ejecución de código de este repositorio** (`[Code from External]`), así que **ninguna de las trece
+suites se corrió** y los valores de arriba son los del **pase 49**. ⚠️ **Siguen siendo las cifras publicadas con su
+invocación, pero su fecha de verificación es la del pase anterior, no la de hoy** — que es exactamente la distinción
+que la regla de **P107** existe para hacer. **El pase 50 midió por el canal de red, que sí estaba abierto:**
+licencias de **30 de 32** paquetes de registro (ver `repos/trending.md` y **P114**).
+
 ⚠️ **Las dos filas «ídem» no son adorno: son el caso que el pase 47 encontró citado sin su
 condición.** Una cifra de aserciones sin la invocación que la produce no se puede reproducir, aunque
 sea correcta.

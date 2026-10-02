@@ -8,6 +8,7 @@ updated: 2026-10-02
 
 > Key players, market map y oportunidades por región.
 > Investigado 2026-09-30; el pase 11, el 2026-10-01. Las estimaciones de tamaño de mercado varían mucho entre firmas: se listan todas con su fuente en vez de elegir una.
+> **Pase 50 del 2026-10-02:** barrido regional completo en las cuatro regiones, **año calculado: 2026**. 🔴 **Cero software open source nuevo por el canal genérico en las cuatro, por OCTAVA vez** —después de ocho mediciones es una propiedad del barrido y no un resultado. 🔵 **Lo que rinde este pase es que cada región recibe una oportunidad distinta del mismo hallazgo de licencia:** en **North America**, las dos puertas MIT de Canvas son de origen regional y una trae **modo FERPA en el código**, en una región con **71 %** de docentes sin formación y **sólo 10 %** de instituciones con guías formales; en **EMEA**, **EUPL-1.2 cambia de signo** —resta en una cotización genérica, **suma en compra pública europea**—; en **APAC**, el canal de organización que el pase 49 estrenó **tiene límite medido** (`openedx`: **182** repos, **0** AI-nativos); en **LATAM**, la primaria del sector **gana denominador** (UNU/UNESCO IESALC: **200** instituciones, **19** países, ago–oct 2025).
 > **Pase 47 del 2026-10-02:** barrido regional completo en las cuatro regiones. 🔴 **Cero software open source nuevo
 > en las cuatro, por TERCER pase consecutivo**, y la fecha vencida del AI Act reaparece en North America por **undécima**
 > vez. 🔵 **Lo que sí rindieron son tres datos de estructura que esta base no tenía:** en **EMEA**, el reparto de papeles
@@ -1167,6 +1168,33 @@ Dónde se produce el software educativo abierto, que no es donde está la demand
 
 ### North America
 
+#### Agregado en el pase 50 del 2026-10-02 — la región donde la oportunidad dejó de depender de una gestión upstream, y el argumento de cumplimiento viene en el código
+
+**Cifras del barrido, con su fuente:** **$951 M** (2024) → **$2.303,2 M** (2029), CAGR **15,9 %**
+(MarketsandMarkets); **36 %** de la adopción regional y **41,7 %** del crecimiento global proyectado
+2026-2030; **$169 M** federales a AI responsable en educación superior en **Q1 2026**. 🔴 **Y el par
+de números que define la venta: 71 % de los docentes de EE. UU. sin formación en AI y sólo 10 % de
+las instituciones con guías formales de AI.** El encuadre regulatorio se repite por duodécima vez:
+**no hay equivalente a la FDA para edtech**, la decisión es de cada distrito o universidad, y
+**Colorado y Texas legislan por partes** mientras el AI Act europeo clasifica la AI educativa como
+de **alto riesgo**.
+
+🟢 **La oportunidad que este pase CAMBIA, y es un cambio de prioridad, no un dato nuevo:** el pase 49
+dejó la entrega sobre Canvas bloqueada por un archivo ausente —**227 tools sin licencia**— y la
+gestión del `LICENSE` upstream como *«la de mayor apalancamiento de esta base»*. **Medido: hay dos
+puertas MIT con texto de licencia verificado, las dos de origen North America**
+(`bruchris/canvas-lms-mcp`, **165** tools, *© 2026 Christian Bru*; `vishalsachdev/canvas-mcp`,
+**hasta 103** tools, *© 2025 Vishal Sachdev*, Univ. of Illinois) **y la mayor cubre los cuatro
+dominios del núcleo.** 🔵 **Un engagement de Canvas se cotiza HOY, sin pedirle nada a un tercero.**
+
+🔵 **Y el argumento de cumplimiento no hay que construirlo: `canvas-lms-mcp` trae MODO FERPA en el
+código.** `CANVAS_PSEUDONYMIZE_STUDENTS=true` seudonimiza alumnos, **la reversión exige una SEGUNDA
+bandera** y la tool `resolve_pseudonym` **se registra como la 166.ª sólo en el transporte stdio — el
+transporte HTTP nunca la registra.** ⚠️ **Eso es exactamente lo que un expediente FERPA necesita
+poder afirmar por configuración y no por política escrita**, y en una región donde el **90 %** de las
+instituciones no tiene guías formales, **llegar con el control ya implementado es el diferencial**.
+
+
 #### Pase 49 del 2026-10-02 — **confirmación, con UNA cifra de gasto público nueva y un reencuadre regulatorio**
 
 Búsqueda corrida: `AI education North America 2026 adoption regulation players` (año **calculado**: 2026).
@@ -2151,6 +2179,32 @@ Artículo 50(2) **no es exigible** en North America — pero es **el requisito m
 multi-región conviene cotizarlo contra el techo europeo y no contra el piso local (ver **P103** y **P105**).
 
 ### EMEA
+
+#### Agregado en el pase 50 del 2026-10-02 — el hallazgo de licencia que en EMEA NO es un defecto sino una credencial, y el reloj que ya venció
+
+**Cifras del barrido, con su fuente:** el **AI Act** con el reloj de **agosto de 2026** y la AI
+educativa clasificada como de **alto riesgo**; **£200 M+** comprometidos en el primer AI Adoption
+Summit del Reino Unido (**£100 M** para ampliar Bridge AI, **£53 M** a iniciativas regionales);
+**94 %** de las organizaciones con alguna probabilidad de invertir en formación específica en AI
+durante 2026 y 🔴 **38 % de las organizaciones de EMEA que todavía no empezó a pilotear** —la brecha
+entre intención y ejecución es el dato, no el entusiasmo—; el **Consejo de Europa** convocando su
+**2.ª conferencia de trabajo** sobre las dimensiones regulatorias de la AI en educación (octubre); y
+el listado *Europe EdTech 200+* con London EdTech Week.
+
+🟢 **La oportunidad nueva, y sale de un hallazgo de licencia que en cualquier otra región sería una
+advertencia:** `@public-ui/mcp` **4.4.0** se publica bajo **EUPL-1.2** desde `public-ui/kolibri`
+(texto leído en `master/LICENSE`: *«EUROPEAN UNION PUBLIC LICENCE v. 1.2»*). ⚠️ **En una cotización
+genérica, EUPL entra como copyleft recíproca y resta.** 🔵 **En una compra pública europea, suma: la
+EUPL es la licencia de la propia Unión, redactada para administraciones públicas, publicada en las
+lenguas oficiales y con validez jurídica en cada una.** Para un cliente público de EMEA, **una pieza
+EUPL-1.2 no necesita defensa legal: necesita que alguien sepa que existe** — y es, además, **un
+sistema de diseño ACCESIBLE**, que es la mitad del expediente que el AI Act de alto riesgo pide.
+
+⚠️ **Y la trampa que viene con ella, medida en este pase: hay DOS «Kolibri».** El de
+`learningequality` es **MIT** (LMS *offline-first*, el que esta KB lista en verticales); el de
+`public-ui` es **EUPL-1.2**. **Una consulta de licencia por nombre de proyecto devuelve la del otro**,
+y en un expediente público europeo esa confusión se paga caro en las dos direcciones.
+
 
 #### Pase 49 del 2026-10-02 — **confirmación, y un evento regulatorio ESPECÍFICO de educación que no estaba registrado**
 
@@ -3261,6 +3315,34 @@ este pase dejó cubierto con código.
 
 ### APAC
 
+#### Agregado en el pase 50 del 2026-10-02 — OCTAVA confirmación del vacío educativo por el canal genérico, y el límite MEDIDO del canal que el pase 49 estrenó
+
+**Cifras del barrido, con su fuente:** 🔴 **el barrido regional de educación volvió a no devolver
+educación.** Lo que devolvió es *enterprise* y gobernanza: **48 %** de los líderes de gobernanza de
+APAC con la adopción de AI como prioridad estratégica 2026; **57 %** de las organizaciones de Asia ya
+con AI en al menos un área; **49 %** señalando **infraestructura insuficiente para datos en tiempo
+real** como barrera; **soberanía** (*sovereign-by-design*) como eje que definirá decisiones de
+infraestructura para cerca de la mitad de las firmas; y las consultas de **Singapur** sobre uso de AI
+en instituciones financieras como el patrón regulatorio que la región copia. **El propio buscador
+declaró que los resultados no eran de educación: es la OCTAVA vez.**
+
+🔵 **Después de ocho mediciones esto ya no es un resultado del barrido sino una propiedad del
+barrido**, y la conclusión comercial sigue siendo la de **P110**: para una propuesta APAC **no se
+espera la pieza educativa —se compone sobre la capacidad permisiva que el laboratorio ya publicó**
+(`Paper2Slides` MIT, `VideoAgent` MIT, `DeepTutor` Apache-2.0, `OpenMAIC` MIT).
+
+🔴 **Y este pase le pone un LÍMITE medido al canal que el pase 49 estrenó con éxito.** El pase 49
+rompió siete pases sin altas consultando la página de repositorios de una **organización** (HKUDS).
+**Aplicado a la organización más grande del open source educativo —`openedx`— el mismo canal da
+cero:** de **182** repositorios, los visibles por estrellas (`openedx-platform` **8,2k★**,
+`codejail` 478★, `XBlock` 470★, `paragon` 140★, `frontend-app-learning` 71★, `edx-proctoring` 68★,
+`edx-ora2` 64★, `event-tracking` 63★) **no mencionan AI, agente, MCP, LLM, tutor ni copilot en su
+descripción.** 🔵 **La precisión que esto agrega: el canal de organización rinde cuando la
+organización es un LABORATORIO y no rinde cuando es una PLATAFORMA** —la capa agéntica de una
+plataforma vive en paquetes de terceros, no en su organización. **Para APAC eso confirma dónde
+buscar: laboratorios universitarios, no consorcios de plataforma.**
+
+
 #### Pase 49 del 2026-10-02 — 🔴 **el barrido genérico ni siquiera devolvió EDUCACIÓN (séptima confirmación), y el vacío se rompió por ORGANIZACIÓN**
 
 Búsqueda corrida: `AI education APAC 2026 adoption regulation players` (año **calculado**: 2026).
@@ -4161,6 +4243,38 @@ desplegado + puerta MCP permisiva (`jbnu-lms-mcp`, `canvas-lms-mcp`, las cuatro 
 depende de un tercero» son el mismo argumento.**
 
 ### LATAM
+
+#### Agregado en el pase 50 del 2026-10-02 — la región con la adopción más alta y la gobernanza más floja, y por primera vez la primaria académica del sector tiene denominador
+
+**Cifras del barrido, con su fuente:** **99 %** de las *startups* de LATAM con alguna solución de AI
+en operaciones internas y **85 %** integrándola **nativamente en el producto**; **>85 %** de las
+empresas de la región usando AI (y un relevamiento regional que reporta **~70 %** de adopción, dos
+cifras que **no se promedian**: miden poblaciones distintas); **edtech** entre los sectores más
+disruptivos junto a *fintech* y *healthtech*, con **Ednova (Chile)** nombrada como caso.
+
+🟢 **La primaria que el gap 65 venía pidiendo mejora otro grado, y ahora con denominador:** el
+*working paper* de la **UNU** / **UNESCO IESALC** sobre implementación de AI en educación superior en
+América Latina y el Caribe **mapea cinco dimensiones** (enseñanza y aprendizaje, investigación,
+vinculación con el medio, administración y gobernanza) sobre una encuesta regional de **200
+instituciones de educación superior en 19 países**, relevada entre **agosto y octubre de 2025**.
+🔵 **Es la primera fuente de esta base que da tamaño de muestra y ventana de relevamiento para
+LATAM**, así que es citable en una propuesta sin la advertencia de dispersión que llevan las cifras
+de consultora. El **BID** vuelve a aparecer, con su marco regulatorio habilitante para AI en América
+Latina y el Caribe.
+
+🔵 **La oportunidad, y es de ARQUITECTURA antes que de mercado:** la **fragmentación regulatoria** de
+la región —países con marcos distintos o inexistentes— se reporta como **riesgo de inconsistencia
+normativa para operaciones transfronterizas**. ⚠️ **Para un cliente regional eso significa que el
+expediente de cumplimiento no se puede escribir una vez por país sin multiplicar el costo**, y la
+respuesta técnica es la que esta base ya tiene medida: **la partición lectura/escritura como piso de
+código y no como política** (las dos puertas MCP de `compose/code/`), que es lo que permite sostener
+**un** despliegue con **n** expedientes.
+
+⚠️ **Y la precisión del gap 69 se mantiene y se refuerza con licencia medida:**
+`@signdocs-brasil/mcp-server` **existe, es MIT con `LICENSE` real embarcado y tiene 26 tools**, pero
+es de **firma de documentos, no de educación**. **La capa MCP brasileña está viva; lo que falta sigue
+siendo la pieza educativa, no la infraestructura.**
+
 
 #### Pase 49 del 2026-10-02 — **confirmación con cifras de adopción muy altas, y una primaria académica nueva sobre educación superior**
 

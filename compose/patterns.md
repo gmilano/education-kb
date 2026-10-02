@@ -8,6 +8,7 @@ updated: 2026-10-02
 
 > Recetas concretas: repos nombrados, licencias verificadas, wiring explícito y estimación.
 > Todos los repos citados fueron verificados vía WebFetch el 2026-09-30; los del pase 11, el 2026-10-01 (ver `agents/top.md`).
+> **Pase 50 del 2026-10-02:** **+2 patrones, y los dos salen de la mitad de la acción 1 del pase 49 que no necesitaba ejecutar código.** **P113** saca la entrega sobre Canvas de la dependencia de un archivo ajeno: **dos puertas MIT con texto de licencia verificado**, la mayor con **165** tools cubriendo los cuatro dominios del núcleo, **el servidor de 227 sin licencia pasa a opcional**, y ⚠️ **la resta 227−165 queda prohibida por ser de dos instrumentos**. **P114** convierte en puerta de entrada el filtro de licencias de **dos artefactos con salida de TRES valores** (`licenciado` / `sin licencia` / `indeterminado`), medido sobre 30 paquetes: **se equivoca en los dos sentidos si se lee uno solo**, y sin el control de alcanzabilidad publica **7 falsos «sin licencia»** donde hay **2**.
 > **Pase 49 del 2026-10-02:** **+3 patrones, y los tres salen de las tres acciones del pase 48.** **P110** es el
 > resultado comercial de romper el vacio APAC por organizacion: **componer la capacidad permisiva que el laboratorio
 > APAC SI publica** (`Paper2Slides` MIT + `OpenMAIC` MIT + `DeepTutor` Apache-2.0, las tres verificadas por
@@ -5999,6 +6000,107 @@ aprobado.
 
 🔵 **Y la regla de reproducibilidad, que es la que convierte la tabla en entregable:** el *test* debe **regenerar la
 tabla contra el checkout y compararla byte a byte**. Una tabla que nadie puede reproducir es una transcripción.
+
+## P113 — Canvas se entrega sobre una puerta CON licencia, y el servidor de 227 tools pasa a ser opcional (reemplaza la recomendación del gap 232, agregado en el pase 50 del 2026-10-02)
+
+**Qué resuelve.** El pase 49 dejó la entrega sobre Canvas esperando un archivo: las **227 tools** de
+`@imazhar101/mcp-canvas-server` **no tienen licencia en ninguno de los cuatro canales**, y pedir el
+`LICENSE` upstream quedó escrito como *«la gestión de mayor apalancamiento de esta base»*. **Una
+entrega que depende de que un tercero conteste un issue no es una entrega.** Este patrón la saca de
+esa dependencia.
+
+### Lo que está medido, y con qué instrumento cada cosa
+
+| Pieza | Licencia | Texto de licencia | Superficie | Instrumento de la cifra |
+|---|---|---|---|---|
+| **`bruchris/canvas-lms-mcp`** (TypeScript) | **MIT** | 🟢 `main:LICENSE` → **200**, *«MIT License / Copyright (c) 2026 Christian Bru»* | **165** tools, **16** *Agent Skills*, **2** *MCP Resources* | README del proyecto, **y su desglose cierra: 117 lectura + 48 escritura = 165** |
+| ídem, con FERPA en **stdio** | ídem | ídem | **166** — `resolve_pseudonym` entra como la 166.ª | ídem; ⚠️ **el transporte HTTP NUNCA la registra** |
+| **`vishalsachdev/canvas-mcp`** (segunda opción) | **MIT** | 🟢 `main:LICENSE` → **200**, *«© 2025 Vishal Sachdev»* | **hasta 103** tools, **8** *agent skills* | README del proyecto, **que aclara que el perfil por defecto registra menos** |
+| `@imazhar101/mcp-canvas-server` | 🔴 **ninguna** | 🔴 **ninguno**, cuatro canales | **227** | conteo estático de nombres distintos sobre `dist/` (pase 49) |
+| `DMontgomery40/mcp-canvas-lms` | 🔴 **sólo *badge* de un tercero** | 🔴 **404 en `main` y `master`, con el repo respondiendo 200** | **54** | tabla comparativa de un competidor |
+
+🟢 **Los cuatro dominios del núcleo están cubiertos por la opción MIT**, por enunciado del propio
+proyecto: **cursos, tareas/entregas, libro de calificaciones y matrículas**, más rúbricas, New
+Quizzes (LTI), analítica, *outcomes*, auditoría de accesibilidad y de enlaces, exportaciones y
+migraciones de contenido, acomodaciones de examen, grupos de turnos y búsqueda de alumno.
+
+⚠️ **La resta 227 − 165 = 62 NO se debe escribir en una propuesta.** Son **dos instrumentos
+distintos** (conteo estático de un árbol compilado vs. README del proveedor): lo comparable es
+*«las dos cubren el núcleo»*, no una diferencia de tools. **Es la regla de la tendencia 227 aplicada
+a la decisión de compra.**
+
+### El cableado
+
+1. **La puerta** — [`bruchris/canvas-lms-mcp`](https://github.com/bruchris/canvas-lms-mcp) (**MIT**,
+   texto verificado) en transporte **stdio** si hay que seudonimizar, o **HTTP** si el host necesita
+   OAuth. ⚠️ **La elección de transporte NO es de infraestructura: decide si `resolve_pseudonym`
+   existe.**
+2. **La partición de escritura** — `compose/code/mcp-allowlist-gateway/` delante de la puerta. **No
+   se confía en que 117 sean de lectura: se declara la lista y el resto cae en `hard_deny()`.** El
+   propio proyecto expone `readOnlyHint`/`destructiveHint`, así que la lista **se deriva y se
+   verifica** en vez de escribirse a mano (es **P82**/**P104** sobre una pieza de terceros).
+3. **El expediente FERPA (North America)** — `CANVAS_PSEUDONYMIZE_STUDENTS=true`, y
+   `CANVAS_PSEUDONYMIZE_REVERSE_LOOKUP=true` **sólo si el expediente justifica la reversión**: son
+   **dos** banderas y la segunda es la que un auditor pregunta. 🔵 **El control queda afirmado por
+   configuración y no por política escrita**, que es lo que vale en una región donde **el 90 % de las
+   instituciones no tiene guías formales de AI**.
+4. **El servidor de 227, si se quiere** — **sólo** tras obtener el `LICENSE` upstream, y **como
+   ampliación de superficie sobre una entrega que ya funciona**, nunca como dependencia de arranque.
+
+> 🔵 **El cambio de prioridad que este patrón formaliza: el gap 232 BAJA de bloqueante a opcional.**
+> La gestión del `LICENSE` de `@imazhar101/mcp-canvas-server` sigue teniendo valor —son 227
+> herramientas— pero **ya no está en el camino crítico de ninguna propuesta.**
+
+## P114 — El filtro de licencias de DOS artefactos como puerta de entrada de cualquier paquete de registro (generaliza la regla del pase 49, agregado en el pase 50 del 2026-10-02)
+
+**Qué resuelve.** Esta base cita **32** nombres de registro. Un filtro de licencias que lea **un**
+artefacto —el campo, o el *badge*— **se equivoca en los dos sentidos**, y este pase midió las dos
+direcciones sobre la misma muestra. **El patrón es el orden de las preguntas, y cuesta tres
+peticiones HTTP por paquete.**
+
+### Las dos direcciones del error, medidas
+
+| Caso | Campo de registro | Texto de licencia | Qué hace un filtro de UNA lectura |
+|---|---|---|---|
+| **`@superbuilders/oneroster`** 0.7.0 | 🔴 **ninguno** | 🟢 `trilogy-group/oneroster-ts` `main:LICENSE` → **200** | 🔴 **lo RECHAZA y está licenciado** — se descarta la pieza correcta |
+| `@timadey/proctor` 1.2.6 (pase 49) | MIT, **y promete `LICENSE` en su `files`** | 🔴 **ninguno** | 🔴 **lo APRUEBA y no hay permiso escrito** — riesgo legal |
+| `DMontgomery40/mcp-canvas-lms` | — (*badge* de un **tercero**) | 🔴 **404 en `main` y `master`, repo respondiendo 200** | 🔴 **lo APRUEBA por un dato de la peor procedencia posible** |
+
+### El cableado — cuatro preguntas, en este orden
+
+1. **`GET registry.npmjs.org/<pkg>/latest`** (o `pypi.org/pypi/<pkg>/json`) → **campo** `license`,
+   versión y `repository`. ⚠️ **En PyPI hay que leer `license` Y los clasificadores OSI por
+   separado:** `tutor-contrib-openedxmcp` **declara AGPL-3.0 en el campo y no declara clasificador**,
+   así que un inventario que lea clasificadores lo cuenta como *desconocido*.
+2. **`GET raw.githubusercontent.com/<org>/<repo>/{main,master}/{LICENSE,LICENSE.md,LICENSE.txt,COPYING}`**
+   → **texto**. 🔵 **Es el canal que el pase 49 encontró abierto donde `github.com` da 403 a `curl` y
+   `api.github.com` responde 200 negando acceso.** **La clave es `org/repo`, NUNCA el nombre del
+   proyecto** —hay dos «Kolibri» (MIT y **EUPL-1.2**) y dos «Bloom», y ya van dos colisiones.
+3. 🟢 **El control obligatorio, que es el que este pase agrega: si no hay texto, preguntar si el
+   REPOSITORIO responde** (`README.md` o `package.json` en `main`/`master`/`develop`). **Sin este
+   paso, «no llegué» se publica como «no hay licencia»** — en esta muestra habría producido **7
+   falsos «sin licencia»** donde sólo **2** lo son de verdad (`pie-framework/pie-elements-ng`,
+   `moinsen-dev/tool-teacher`) y **5 son indeterminados**.
+4. **La salida tiene TRES valores, no dos:** `licenciado` (campo **y** texto), `sin licencia`
+   (ausencia **medida**, con el repo respondiendo) e `indeterminado` (el canal no llegó).
+   ⚠️ **Un filtro binario no puede expresar el tercero, y el tercero fue 5 de 19 acá.**
+
+### Las reglas de cotización que salen de aplicarlo a los 32
+
+- 🔴 **`@timeback/*` no entra en una entrega sin gestión previa:** **2 de 2** medidos (`oneroster`,
+  `caliper`) **sin campo de licencia y sin repositorio publicado**. **Es una regla de alcance: no hace
+  falta medir el tercero.**
+- 🔴 **La capa MCP de Open edX es AGPL-3.0 en PyPI** (`openedx-mcp` 0.1.5,
+  `tutor-contrib-openedxmcp` 0.1.7). **Copyleft de RED sobre un servidor MCP alcanza al servicio
+  expuesto**, no sólo a la redistribución: **o la puerta se construye propia sobre la API, o el
+  engagement acepta AGPL en el componente que mira al cliente.**
+- ⚠️ **Una versión madura no implica licencia:** `@pie-element/multiple-choice` va en **14.0.0** y
+  `@pie-element/rubric` en **9.0.0**, **las dos sin licencia y con el repo respondiendo**.
+- 🔵 **EUPL-1.2 cambia de signo según la región:** resta en una cotización genérica, **suma en compra
+  pública europea** (es la licencia de la propia Unión, redactada para administraciones). **La
+  licencia no se evalúa en abstracto: se evalúa contra el comprador.**
+- 🔴 **`@tutors/xapi` y `@tutors/badges` dan 404: esta base citaba dos paquetes que no existen.**
+  **El paso 1 del patrón los habría atrapado el primer día.**
 
 ## P105 — Inyectar el marcado del Artículo 50(2) UNA vez en el empaquetado SCORM, no en cada generador (agregado en el pase 46 del 2026-10-02)
 
