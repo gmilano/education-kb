@@ -349,6 +349,27 @@ se explica abajo, porque es la cuarta vez que esta KB se pelea con este número.
 > docente del Ministerio de Educación de Chile**, y **Shiksha Copilot** documenta **1.043 docentes** con **9 estrellas**.
 > Ver los **trends 30, 31 y 32**, los **gaps 21 y 22** y los patrones **P29** y **P30**.
 
+> **Pase 46 del 2026-10-02:** **la tabla se queda en 66 filas, y es el CUARTO pase consecutivo con cero altas de
+> agente — ya no es una observación, es una propiedad medida del canal.** Las cuatro búsquedas globales obligatorias
+> (año **calculado**: 2026) devolvieron otra vez la **capa genérica** y **material didáctico *sobre* AI**; el único
+> nombre nuevo del barrido vertical, **CK-ERP** (32 módulos, incl. `Teacher`/`Student`/`Registrar`), **no entra**:
+> su rastro vivo más reciente es de **2010**. **El valor del pase está en las tres acciones del 45, y dos corrigen
+> afirmaciones de esta base.** 🔴 **La corrección que más cuentas cambia cae sobre la cotización de *proctoring*:
+> P94 publicaba *«métodos que hablan con el remoto: Jitsi 1, Zoom 2»* y la medición transitiva sobre `HEAD 7f45689`
+> da **Zoom 5 de 14 — y 0 directos**.** Los cinco llegan al socket por helpers privados, `disposeServiceRoomsForExam`
+> a **profundidad 4 y dentro de un `forEach`** (`2 × N` peticiones, sin tope), y **crear una sala cuesta 3 llamadas**
+> porque `createAdHocMeeting` crea un usuario ad-hoc. 🟢 **A favor: todo el HTTP de Zoom sale por un único `exchange`
+> con *circuit breaker*** — un solo punto donde poner reintentos. 🟢 **Y el gap 95 cierra con código:** el componente
+> transversal del **Artículo 50(2)** existe (`compose/code/aiact-50-2-marking/`, **24/24**), mapea los **9 valores**
+> de `lineage-skill` a `synthetic` **conservando la etiqueta**, y **la decisión que nadie había tomado son CINCO
+> valores, no cuatro** — `unsupported` se marca, porque si ninguna fuente sustenta la afirmación ninguna fuente la
+> escribió tampoco. ⚠️ **Y el error simétrico queda escrito: las cuatro categorías humanas devuelven `false` a
+> propósito** — marcar como AI un tramo del alumno es dato incorrecto, no cautela. 🟢 **Gap 97 decidido a favor:
+> marcar en el empaquetado SCORM NO rompe la conformidad** (`xmllint` contra `imscp_v1p1.xsd`: con *namespace*
+> propio **valida**, en el *namespace* por omisión **falla**), así que el marcado se inyecta **una vez** y no 32.
+> Ver las tendencias **184**–**196**, los **gaps 95, 96 y 97 (los tres CERRADOS)**, **98**–**101**, y los patrones
+> **P102**–**P105**.
+
 | Nombre | Repo | Licencia | Stars | Lenguaje | Descripción | Origen (región) |
 |--------|------|----------|-------|----------|-------------|-----------------|
 | DeepTutor | https://github.com/HKUDS/DeepTutor | Apache-2.0 | 40.6k | Python | Tutoría personalizada "lifelong"; workspace agent-native con 8 superficies (Chat, Partners, Co-Writer, Book, Knowledge, Space, Memory), memoria en 3 capas y RAG multi-engine. v1.6.12 del 2026-09-27, releases semanales | APAC (HKU Data Intelligence Lab, Hong Kong) |

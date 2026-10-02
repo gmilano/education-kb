@@ -1710,3 +1710,41 @@ siendo **OpenCASE** (Apache-2.0, certificado v1.1) o **`compeito`** (Apache-2.0)
 legible es el fork **LGPL-3.0** de la U. de Michigan, `tl-its-umich-edu/caliper-php-public`, **ya registrado en esta base
 desde el pase 9**. Para la vertical eso significa: **instrumentar Caliper traslada costo al integrador**, y la pieza
 disponible **no es permisiva**. Ver la tendencia **163**.
+
+## 🏷️ El barrido de verticales del pase 46 (2026-10-02) — **sin altas, y el dato es que la capa `pack` pasa a ser la capa de CUMPLIMIENTO**
+
+**El barrido obligatorio de plataformas verticales (`open source platform education ERP CRM MIT Apache`) no devolvió
+altas, y devolvió lo correcto:** **OpenEduCat** sobre **Odoo** —que esta base ya tiene catalogado— como la respuesta
+canónica de ERP educativo, con el argumento de ecosistema que lo sostiene (**3.000+ partners certificados de Odoo en
+120+ países**, ORM, motor de reportes y modelo de seguridad heredados).
+
+⚠️ **Un nombre nuevo apareció y NO entra: `CK-ERP`**, descrito como sistema open source de contabilidad/educación/MRP/
+ERP/CRM con **32 módulos**, incluidos `Teacher`, `Counsellor`, `Student`, `Applicant`, `Family`, `Registrar` y
+`Edu Administration`. 🔴 **El rastro vivo más reciente que devolvió el barrido es de 2010** (anuncio de la v0.30.1 con
+conector para Drupal 6.17 en una lista de correo). **Se registra como antecedente histórico, no como dependencia** — la
+cobertura funcional de su catálogo de módulos es notable y es exactamente el mapa que OpenEduCat cubre hoy con
+mantenimiento.
+
+### 🟢 El cambio de encuadre del pase: `scorm-mcp-server` deja de ser «el empaquetador» y pasa a ser **el punto de cumplimiento**
+
+El pase 45 clasificó `scorm-mcp-server` como **el único `pack`** de las 66 filas —*«donde el contenido generado se
+vuelve el curso que el alumno abre»*— **por razonamiento**. El pase 46 lo midió, y la medición le da una función que no
+tenía en el catálogo:
+
+| Pregunta | Respuesta medida |
+|---|---|
+| ¿El `imsmanifest.xml` admite metadatos arbitrarios? | 🟢 **Sí** — `metadataType` termina en `grp.any` (`xsd:any namespace="##other" processContents="lax" maxOccurs="unbounded"`) |
+| ¿En qué elemento? | 🔵 **En nueve**: `manifestType`, `metadataType`, `organizationsType`, `organizationType`, `itemType`, `resourcesType`, `resourceType`, `fileType`, `dependencyType` |
+| ¿`scorm_validate` rechazaría un metadato extra? | 🟢 **No**, si trae *namespace* propio — `validates` con `xmllint` |
+| ¿Y sin *namespace* propio? | 🔴 **`fails to validate`** — el paquete se rompe |
+| ¿El generador tiene gancho para inyectarlo? | ⚠️ **No** — `buildManifest`/`buildManifest12` son literales de cadena (**gap 100**) |
+
+🔵 **Por qué esto importa para un catálogo de verticales:** la pregunta *«¿dónde pongo el marcado del Artículo 50(2) de
+un entregable generativo?»* tiene **una** respuesta barata en toda esta KB, y es **esta plataforma**. **32 de las 66
+filas** generan contenido sintético; marcarlo en cada generador son **32 integraciones**, marcarlo en el empaquetado es
+**una**. **La capa de empaquetado era la menos glamorosa del catálogo y resultó ser la de mayor apalancamiento
+regulatorio.** Receta completa en **P105**, y la cadena de punta a punta en **P103**.
+
+⚠️ **Lo que falta y se cotiza:** inyectar exige **post-procesar el ZIP** (barato, no toca upstream — es la acción 1 del
+pase 47) **o un PR de pocas líneas a upstream** para que `buildManifestFor` acepte metadatos de extensión. **El estándar
+lo admite, el validador lo acepta, y el generador todavía no lo puede emitir.**

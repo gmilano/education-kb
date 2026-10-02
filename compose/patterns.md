@@ -415,13 +415,27 @@ pieza de validación que faltaba**.
 2. **Los 14 métodos son el 22-23 % de la clase.** El resto —*helpers*, DTOs, caché de `RestTemplate`, construcción de
    tokens— es el **77 %** que nadie presupuesta.
 
+3. 🔴 **CORRECCIÓN DEL PASE 46 — la fila «métodos que hablan con el remoto» decía «Zoom 2» y son CINCO, y ninguno
+   directo.** La cifra anterior contaba las primitivas de red que aparecen **dentro del cuerpo** del método de la
+   interfaz; la magnitud que se cotiza es **transitiva** («llamar a este método provoca un viaje HTTP»). En Zoom,
+   **cero** métodos del SPI llaman la red directamente: los cinco la alcanzan por `createAdHocMeeting`,
+   `deleteAdHocMeeting` y la jerarquía interna `ZoomRestTemplate`. **La asimetría real entre la ruta barata y la
+   realista es 1 contra 5.** Medido y reproducible en `compose/code/proctoring-reach-audit/` (20/20). **Para cotizar,
+   usar P102.**
+
+4. 🔵 **Y la métrica de las líneas queda NOMBRADA, que faltaba desde el pase 43:** «481 / 912» son líneas
+   **no-blancas-no-comentario**. `wc -l` da **583 / 1.116**. La cifra era correcta; el instrumento no estaba escrito
+   (**gap 101**).
+
 | Magnitud que se cotiza | **Jitsi** (la barata) | **Zoom** (la realista) |
 |---|---|---|
 | Líneas de código de la clase | **481** | **912** |
 | Líneas en los 14 métodos | 107 (**22 %**) | 212 (**23 %**) |
 | Líneas **fuera** de la interfaz | **374** | **700** |
 | Métodos triviales (≤6 líneas, sin red) | 10 de 14 | 6 de 14 |
-| Métodos que hablan con el remoto | **1** (`testExamProctoring`) | **2** |
+| Métodos que **alcanzan** el remoto | **1** (`testExamProctoring`) | 🔴 **5 — corregido en el pase 46** |
+| Métodos que lo llaman **directamente** | 1 | 🔴 **0** |
+| Profundidad máxima hasta el socket | 0 | 🔴 **4** |
 | Métodos privados de apoyo / clases internas | 2 / 0 | **8** / 1 |
 | *Imports* de terceros | 17 | **38** |
 | Criptografía | 🔴 **HmacSHA256 + Base64 + `Mac.getInstance`** | 🔴 **idem** |
@@ -5543,3 +5557,145 @@ tools se contaron en el árbol.
 🟢 **Por qué esta receta vale más en APAC y en India en particular:** un mandato curricular nacional desde 3.º grado
 (ciclo 2026-27) genera volumen de acreditación que ningún proceso manual absorbe, y el credencial firmado es
 **portable entre instituciones** desde el día uno.
+
+## P102 — Cotizar un proveedor de *proctoring* por **alcance de red**, no por cantidad de métodos (reemplaza la fila corregida de **P94**, agregado en el pase 46 del 2026-10-02)
+
+**Qué resuelve.** P91 cotizaba por **cantidad de métodos** (14). P94 lo mejoró cotizando por **líneas** (481–912). Las
+dos magnitudes son del tamaño del código, y **ninguna predice el riesgo de integración**, que es la red: lo que falla en
+UAT es el viaje HTTP, no la línea de más. Este patrón cotiza por **alcance transitivo**.
+
+### La tabla que va en la propuesta
+
+| Magnitud | **Jitsi** (la barata) | **Zoom** (la realista) |
+|---|---|---|
+| Métodos del SPI | 14 | 14 |
+| Métodos que **alcanzan** la red | **1** | 🔴 **5** |
+| Métodos que la llaman **directamente** | 1 | 🔴 **0** |
+| Profundidad máxima al socket | 0 | 🔴 **4** |
+| Peticiones por **sala creada** | **0** (salas implícitas) | 🔴 **3** |
+| Peticiones por **limpieza de examen** | **0** | 🔴 **`2 × N`** salas, sin tope |
+| Puntos de salida HTTP únicos | 1 | 🟢 **1** (`exchange` con *circuit breaker*) |
+| Guardas de runtime `false` por omisión | 0 | ⚠️ **2** |
+
+### Cómo se usa, en cuatro pasos
+
+1. **Correr el medidor contra el checkout del cliente, no contra esta tabla.**
+   `python3 compose/code/proctoring-reach-audit/extract_reach.py /ruta/a/seb-server > reach.tsv` y
+   `python3 .../test_reach.py /ruta/a/seb-server` (20/20, exige regeneración byte a byte). Si el cliente fijó un *tag*
+   distinto de `7f45689`, **la tabla cambia y el presupuesto con ella**.
+2. **Clasificar los 14 por alcance, no por tamaño.** Los que alcanzan la red necesitan *mock* del proveedor, prueba de
+   *timeout* y prueba de 429. Los que no, son lógica de dominio y se prueban en memoria. **Ésa es la línea que separa
+   dos tarifas.**
+3. **Presupuestar aparte los dos métodos sin tope:** `disposeServiceRoomsForExam` (`2 × N`) y los dos `new*Room`
+   (3 peticiones cada uno). **Son los únicos que degradan con el tamaño del examen.**
+4. **Copiar la forma del chokepoint, no inventarla.** Un solo método privado `exchange` envuelto en
+   `circuitBreaker.protectedRun`, con los ≥400 degradados a *warning* con cuerpo preservado. **Si el proveedor propio
+   tiene N puntos de salida, el *circuit breaker* hay que escribirlo N veces.**
+
+⚠️ **Y el aviso que no se descubre leyendo la interfaz:** `notifyCollectingRoomOpened` de la referencia **es un no-op**
+salvo que `sendRejoinForCollectingRoom` esté en `true`, y el valor por omisión es `false`. **Implementarlo copiando la
+referencia es copiar un no-op**, y el síntoma aparece como «los alumnos no vuelven a la sala» en UAT. El validador de
+`compose/code/seb-proctoring-validator/` (**21/21**) sigue siendo obligatorio antes de escribir la implementación.
+
+## P103 — Marcar contenido generado de punta a punta para el Artículo 50(2), con tres piezas permisivas que ya existen (agregado en el pase 46 del 2026-10-02)
+
+**Qué resuelve.** **32 de las 66 filas** de `agents/top.md` ponen contenido sintético delante de una persona y **0 de 33
+repos** pueden marcarlo. Esto es la cadena completa, y **ninguna de las tres piezas hay que inventarla**.
+
+### Las piezas y el cableado, en este orden
+
+1. **La etiqueta, por afirmación** — [`JuneYaooo/lineage-skill`](https://github.com/JuneYaooo/lineage-skill)
+   (**Apache-2.0**, 448 ★). Su `references/provenance-policy.md` es un **vocabulario cerrado de 9 valores** obligatorio
+   *«for every consequential claim, task answer, rubric rule, feedback judgment, and Personal Skill rule»*. **Se adopta
+   tal cual: es el único vocabulario permisivo de esta base con granularidad por afirmación.**
+2. **El mapeo al booleano** — `compose/code/aiact-50-2-marking/marking.py` (**24/24**). `is_synthetic()` lleva los 9
+   valores a `synthetic` **conservando la etiqueta original**, con **cinco** verdaderos
+   (`source_grounded_synthesis`, `cross_source_synthesis`, `mentor_inference`, `external_general_knowledge`,
+   `unsupported`) y **cuatro** falsos, que son las categorías de autoría **humana**. Falla cerrado ante una etiqueta
+   desconocida **y la señala** (`flags: ["unknown_provenance"]`).
+3. **El transporte** — [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) (**MIT**, 127 ★).
+   `build_marked_provenance()` emite **el payload de `build_provenance` extendido con `spans`**, así que
+   `routers/chat.py:214` lo sirve y `schemas/task.py:59` lo persiste **sin cambios en el consumidor**.
+4. **La separación del sobre** — `detach_artifact()` emite texto + tramos **sin envoltorio**, y la prueba asevera que
+   los desplazamientos **sobreviven** `json.dumps` → `json.loads` y siguen seleccionando la oración generada.
+5. **El marcado en el entregable** — `manifest_metadata_fragment()` + **P105**, para que el curso que abre el alumno
+   lleve la marca.
+6. 🔴 **La firma, que NO está** — `sign_hook()` es una costura vacía. `MarkLLM` / SynthID-Text (**Apache-2.0**, **P33**)
+   marcan **los tokens** y necesitan el decodificador; este componente corre después. **Se cotiza aparte y se dice en
+   la propuesta.**
+
+### Las dos decisiones que hay que defender ante un cliente
+
+- 🔵 **`unsupported` se marca como sintético** aunque hable de evidencia y no de autoría: si ninguna fuente sustenta la
+  afirmación, ninguna fuente la escribió, y el único autor que queda es el modelo.
+- ⚠️ **Los tramos del alumno NO se marcan.** `learner_hypothesis` y `learner_observation` son de autoría humana;
+  marcarlos le diría a un estudiante que su propia oración la escribió una máquina. ***«Por las dudas marco todo»* es
+  una política equivocada**, no una conservadora.
+
+⚠️ **Lo que falta para que esto corra en un cliente (gap 99): alguien tiene que ASIGNAR la etiqueta a cada tramo.** El
+componente mapea, transporta y asevera; **no clasifica**. Esa integración es la línea gruesa del presupuesto.
+
+## P104 — Los cinco controles como puerta obligatoria de cualquier tabla derivada de un árbol (generaliza **P98**/**P100**, agregado en el pase 46 del 2026-10-02)
+
+**Qué resuelve.** Tres artefactos de esta base derivaron una tabla de un árbol de código —dos tablas de rutas y una
+clasificación de métodos— y **los tres fallaron el mismo control**. El patrón es: **la tabla no se publica sin los cinco
+controles**, y los dos que no aplican **se declaran N/A en voz alta**, porque un control salteado se lee igual que uno
+aprobado.
+
+| Control | Qué atrapa | Dónde falló en esta base |
+|---|---|---|
+| **(a)** ninguna ruta con `${` | rutas que son propiedades, no literales | `sebserver-mcp-gate` (0 de 30 literales) |
+| **(b)** toda ruta absoluta **y con contexto** | `/api/x` publicado cuando la URL real es `/UniTime/api/x` | `unitime-mcp-gate` |
+| **(c)** ninguna fila de una declaración de clase | constructores y clases emitidos como métodos/rutas | **las tres piezas**, la última con **8 constructores** |
+| **(d)** todo guarda registrado, **incluido el de runtime** | métodos que son no-op por una propiedad `false` por omisión | `proctoring-reach-audit` (**2** guardas) |
+| **(e)** ningún verbo de lectura que escriba / nada «local» que toque la red | la clasificación que se cotiza | `unitime` (`GET /api/script` escribe) y **P94** (Zoom 5, no 2) |
+
+### Las tres reglas de instrumento que salieron de aplicarlo
+
+1. **El verbo no identifica la operación; el receptor sí.** `attributes.put(...)` puntuado como petición HTTP daba **16**
+   llamadas de red inexistentes. Y el receptor debe **terminar** en el nombre del cliente: `restTemplatesCache` es un
+   `Map`.
+2. **Construir el cliente no es usarlo.** Contar `new RestTemplate(...)` infla justo la cifra que se quiere medir.
+3. **Toda tabla derivada necesita una columna `kind`.** El nombre de un tipo declarado en el archivo es el
+   discriminador más barato entre método y constructor.
+
+🔵 **Y la regla de reproducibilidad, que es la que convierte la tabla en entregable:** el *test* debe **regenerar la
+tabla contra el checkout y compararla byte a byte**. Una tabla que nadie puede reproducir es una transcripción.
+
+## P105 — Inyectar el marcado del Artículo 50(2) UNA vez en el empaquetado SCORM, no en cada generador (agregado en el pase 46 del 2026-10-02)
+
+**Qué resuelve.** Si el marcado se escribe en cada generador, son **32 integraciones**. Si se escribe donde el contenido
+se convierte en el curso que el alumno abre, es **una**. El pase 46 midió que la segunda es legal.
+
+### Lo que está medido, y la condición que lo hace fallar
+
+- 🟢 **`metadataType` de `imscp_v1p1.xsd` termina en `<xsd:group ref="grp.any"/>`**, que es
+  `<xsd:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>`. **Cualquier cantidad de
+  elementos de cualquier otro *namespace*.**
+- 🟢 **Hay NUEVE puntos de extensión**, no uno: `manifestType`, `metadataType`, `organizationsType`,
+  `organizationType`, `itemType`, `resourcesType`, `resourceType`, `fileType`, `dependencyType`. **`<metadata>` cubre el
+  paquete entero; `itemType` y `resourceType` permiten marcar por SCO.**
+- 🔴 **La condición dura, medida con `xmllint` contra los XSD que empaqueta `scorm-mcp-server`: el marcador DEBE
+  declarar su propio *namespace*.** Con *namespace* propio **valida**; en el *namespace* por omisión **falla**. Un
+  `<synthetic>` sin prefijo **invalida el paquete**, y es el primer error que cualquiera comete.
+- 🟢 **`scorm_validate` no agrega veto propio:** sus 9 checks son estructurales más `schema-valid`, que es ese mismo
+  `xmllint`.
+
+### El cableado
+
+1. **El empaquetador** — [`giacomomaria81/scorm-mcp-server`](https://github.com/giacomomaria81/scorm-mcp-server)
+   (**MIT**, v2.3.0, 3 tools: `scorm_package`, `scorm_validate`, `scorm_selftest`; **15 XSD empaquetados** → conformidad
+   **offline**).
+2. **El fragmento** — `manifest_metadata_fragment()` de `compose/code/aiact-50-2-marking/`, que emite
+   `<m:aiGenerated xmlns:m="urn:globant:aiact:50-2" value="…" profile="…">` con un `<m:span start= end=>` por tramo
+   sintético.
+3. ⚠️ **El gancho, que no existe (gap 100).** `buildManifest`/`buildManifest12` de `src/converter.ts` arman el
+   `<metadata>` como **literal de cadena**, sin parámetro de extensión. **Dos caminos:** post-procesar el `.zip`
+   reescribiendo `imsmanifest.xml` (**barato, no toca upstream** — es la acción 1 del pase 47), o un **PR de pocas
+   líneas** a upstream (**sirve a todos, tarda**).
+4. **La verificación** — `scorm_validate` sobre el paquete marcado, o
+   `python3 test_marking.py --with-xmllint` con `SCORM_SCHEMAS` apuntando a los XSD del repo.
+
+🔵 **Por qué este punto y no otro:** es el único lugar del recorrido donde **todo** el contenido generado pasa
+obligatoriamente y donde la marca viaja **dentro del entregable** que se le da a la institución, en vez de en el sobre
+de una respuesta HTTP que nadie archiva.

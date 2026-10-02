@@ -2792,3 +2792,52 @@ con analítica de aprendizaje.
 
 ⚠️ **Y la trampa de fork volvió a aparecer** (tendencia 132): la búsqueda devolvió **`kristofb/ltijs`** antes que el
 canónico **`Cvmcosta/ltijs`** —el que referencia la documentación del propio proyecto—, y es el canónico el que se midió.
+
+## 🔬 Las tres dependencias que el pase 46 midió por código, y las dos cifras de esta base que quedan confirmadas (2026-10-02)
+
+**Este pase no agrega repos fundacionales: mide tres que ya estaban, y es la primera vez que las tres se verifican
+leyendo el árbol en vez del README.** Las tres sostienen entregables concretos de esta KB, así que su estado es lo que
+decide si entran en una propuesta.
+
+| Repo | Licencia | `HEAD` / versión | Qué se midió | Veredicto |
+|---|---|---|---|---|
+| [`SafeExamBrowser/seb-server`](https://github.com/SafeExamBrowser/seb-server) | **Apache-2.0** | `7f45689` (**2026-04-01**) | SPI de *proctoring*: 14 métodos, alcance de red transitivo | 🔴 **corrige P94** — Zoom **5 de 14**, no 2, y **0 directos** |
+| [`giacomomaria81/scorm-mcp-server`](https://github.com/giacomomaria81/scorm-mcp-server) | **MIT** | `fd5f110` (**2026-09-03**), **v2.3.0** | tools, licencia, XSD, puntos de extensión | ✅ **3 tools y MIT confirmados por código**; **9** puntos de extensión legales |
+| [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | **MIT** | `main` | `services/provenance.py` completo | 🔴 **cero granularidad por tramo** — no estaba «a medias», no estaba |
+| [`JuneYaooo/lineage-skill`](https://github.com/JuneYaooo/lineage-skill) | **Apache-2.0** | `main` | `references/provenance-policy.md` | ✅ **9 valores**, confirmados uno a uno y commiteados como *fixture* |
+
+### `seb-server` — la fila que cambia una cotización
+
+**`HEAD 7f45689` coincide con el que ya citaba `compose/code/seb-proctoring-validator/`**, así que la auditoría cae sobre
+el mismo árbol que sostiene la cotización de *proctoring* — **reverificado, no asumido**. Lo medido:
+`RemoteProctoringService.java` son **130 líneas** y **14 métodos abstractos**; `JitsiProctoringService` **481 líneas de
+código** y `ZoomProctoringService` **912** — 🔵 **y la métrica queda NOMBRADA, que faltaba desde el pase 43: son
+no-blancas-no-comentario; `wc -l` da 583 y 1.116.** El alcance de red transitivo da **Jitsi 1 de 14** (correcto) y
+**Zoom 5 de 14 con 0 directos**. Detalle, grafo y 20 aserciones en
+[`compose/code/proctoring-reach-audit/`](../compose/code/proctoring-reach-audit/README.md). **Para cotizar, P102.**
+
+### `scorm-mcp-server` — la capa de empaquetado, ahora medida
+
+**3 tools** (`scorm_package`, `scorm_validate`, `scorm_selftest`) ✅ **confirmando la cifra que esta base traía desde el
+pase 32**, **3.517 líneas** de TypeScript en 6 módulos (`converter` 1.010, `tom` 652, `index` 559, `runtime` 506,
+`ui` 495, `validate` 295), **15 XSD empaquetados** (14 de ADL/IMS + `xml.xsd` de W3C) que dan **conformidad offline**
+porque `xsi:schemaLocation` resuelve a hermanos dentro del ZIP, y **9 checks** en `scorm_validate`.
+⚠️ **`scorm_version` NO es una cuarta tool: es un campo del JSON de respuesta** — un `grep` de `"scorm_[a-z_]+"` devuelve
+cuatro cadenas y sólo tres son herramientas. **Colisión de instrumento, registrada.**
+
+🟢 **Y el hallazgo que lo vuelve pieza de cumplimiento y no sólo de empaquetado:** `metadataType` de su
+`imscp_v1p1.xsd` termina en `grp.any` =
+`<xsd:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>`, y **`grp.any` aparece en
+NUEVE `complexType`**. 🔴 **Con una condición dura medida con `xmllint`: el marcador debe declarar su propio
+*namespace*** — en el *namespace* por omisión el paquete **no valida**. Ver **P105**.
+
+### Las dos fuentes del componente del Artículo 50(2)
+
+- **`OpenTutor/apps/api/services/provenance.py`**: **72 líneas, 2 funciones**. `build_provenance` tiene **12
+  parámetros**, `generated: bool = True` **por omisión** (🟢 falla hacia el lado seguro) y **ninguno por tramo**.
+  `merge_provenance` unifica `source_labels` como conjunto ordenado y descarta `None` — **el detalle que permite
+  extender el payload sin romper el merge**, y por eso la extensión del pase 46 es compatible.
+- **`lineage-skill/references/provenance-policy.md`**: **9 valores** exigidos *«for every consequential claim, task
+  answer, rubric rule, feedback judgment, and Personal Skill rule»*. El archivo queda **commiteado como *fixture*** en
+  `compose/code/aiact-50-2-marking/fixtures-provenance-policy.md` y `test_marking.py` **asevera el vocabulario contra
+  él**, así que una deriva upstream rompe la prueba en vez de aparecer en producción.

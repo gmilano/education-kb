@@ -8,6 +8,137 @@ updated: 2026-10-02
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 
+## 2026-10-02 (pase 46) — **el dato crudo: 5 de 14 alcanzan la red y 0 directamente, 8 constructores emitidos como métodos, 9 puntos de extensión en el XSD y 1 de 3 casos de `xmllint` rechazado**
+
+Todo lo de abajo se leyó del árbol con `git clone --depth 1 --filter=blob:none --sparse` y se
+**reprodujo con un comando**: las dos carpetas nuevas de `compose/code/` regeneran sus tablas contra
+un checkout y lo aseveran (`test_reach.py` exige que `reach.tsv` se regenere **byte a byte**).
+
+### `SafeExamBrowser/seb-server` — Apache-2.0, `HEAD` `7f45689` (**2026-04-01**, Andreas Hefti)
+
+🟢 **El `HEAD` coincide con el que ya citaba `seb-proctoring-validator`**, así que la auditoría es
+sobre el mismo árbol que sostiene la cotización de *proctoring* — reverificado, no asumido.
+
+| Magnitud | P94 (pase 43) | Pase 46 | Nota |
+|---|---|---|---|
+| Métodos obligatorios del SPI | 14 | **14** | leídos de `RemoteProctoringService.java` (130 líneas) |
+| Líneas de código, Jitsi | 481 | **481** | 🟢 **la métrica queda NOMBRADA: no-blancas-no-comentario** (`wc -l` da 583) |
+| Líneas de código, Zoom | 912 | **912** | ídem (`wc -l` da 1.116) |
+| Métodos que **alcanzan** el remoto, Jitsi | 1 | **1** | ✅ la cifra de Jitsi era correcta |
+| Métodos que **alcanzan** el remoto, Zoom | 🔴 **2** | 🔴 **5** | cerradura **transitiva**, no directa |
+| Métodos que llaman la red **directamente**, Zoom | no medido | 🔴 **0** | los cinco pasan por helpers |
+| Profundidad máxima al socket, Zoom | no medido | 🔴 **4** | `disposeServiceRoomsForExam` |
+| Llamadas HTTP por sala creada | no medido | 🔴 **3** | `createUser` + `applyUserSettings` + `createMeeting` |
+| Puntos únicos de salida HTTP, Zoom | no medido | 🟢 **1** | `exchange` privado (línea 940) con *circuit breaker* |
+| Guardas de runtime no-anotación | no medido | **2** | `sendRejoinForCollectingRoom`, `enableWaitingRoom` — **las dos `false` por omisión** |
+| Aserciones de `test_reach.py` | — | **20** | 20/20 en verde, incluida la regeneración |
+
+**Los 14 métodos del SPI, leídos de la interfaz:** `getType` · `testExamProctoring` ·
+`getProctorRoomConnection` · `getClientRoomConnection` · `createJoinInstructionAttributes` ·
+`disposeServiceRoomsForExam` · `newCollectingRoom` · `newBreakOutRoom` · `disposeBreakOutRoom` ·
+`getDefaultReconfigInstructionAttributes` · `mapReconfigInstructionAttributes` ·
+`notifyBreakOutRoomOpened` · `notifyCollectingRoomOpened` · `clearRestTemplateCache`.
+
+**La cadena de Zoom hasta el socket**, que es lo que la cuenta directa no ve:
+
+```
+disposeServiceRoomsForExam  --forEach-->  disposeBreakOutRoom
+      --> deleteAdHocMeeting --> deleteMeeting/deleteUser --> exchange --> restTemplate.exchange
+newCollectingRoom / newBreakOutRoom --> createAdHocMeeting
+      --> createUser + applyUserSettings + createMeeting --> exchange --> restTemplate.exchange
+testExamProctoring --> createNewRestTemplate --> testServiceConnection --> exchange
+getZoomRestTemplate --> isValid --> oAuth2RestTemplate.getAccessToken()   🔴 token = tráfico
+```
+
+🔴 **Las tres trampas de lectura de este árbol, anotadas para que no se repitan:**
+
+1. **`.put(` y `.delete(` no son verbos HTTP acá.** Una lista de verbos ingenua puntúa
+   `attributes.put(...)` —un `Map.put`— como petición: daba **6** llamadas de red en
+   `createJoinInstructionAttributes` de Jitsi y **10** en el de Zoom, **dos métodos que no tocan un
+   socket**. **El verbo no identifica una petición; el receptor sí.**
+2. **El receptor tiene que TERMINAR en `restTemplate`.** Zoom cachea templates en
+   `restTemplatesCache`, que es un `LinkedHashMap`: un patrón laxo lo aceptaba y le daba a
+   `getZoomRestTemplate` **2** llamadas fantasma.
+3. **Construir un `RestTemplate` no es una petición.** Jitsi construye uno en la línea 162 y la
+   llamada real es el `getForEntity` de la 163. Contar el constructor habría inflado justamente la
+   cifra que había que corregir.
+
+🔴 **Y el control (c) falló por TERCERA vez con el mismo síntoma:** la primera versión del extractor
+emitió **8 constructores como métodos** (`JitsiProctoringService`, `ZoomProctoringService`,
+`ZoomRestTemplate`, `OAuthZoomRestTemplate`, más `Context`, `Features`, `JWTContext` y `User` de las
+clases internas). **Tercera pieza, tercer acierto del mismo control: el defecto es del método de
+extracción, no de un árbol en particular.**
+
+### `giacomomaria81/scorm-mcp-server` — MIT, `HEAD` `fd5f110` (**2026-09-03**), **v2.3.0**
+
+✅ **Dos cifras de esta base se CONFIRMAN por lectura del árbol**, que es la primera vez que esta
+fila se verifica por código y no por README:
+
+| Magnitud | Esta KB decía | Pase 46 | Nota |
+|---|---|---|---|
+| Tools MCP | 3 | ✅ **3** | `scorm_package` · `scorm_validate` · `scorm_selftest` |
+| Licencia | MIT | ✅ **MIT** | `LICENSE`: *«Copyright (c) 2026 Giacomo Pilia»* |
+| Versión | no registrada | **2.3.0** | `package.json` + `RELEASE-2.3.0.md` |
+| Fuente TypeScript | no medido | **3.517 líneas** en 6 módulos | `converter` 1.010, `tom` 652, `index` 559, `runtime` 506, `ui` 495, `validate` 295 |
+| XSD empaquetados | no registrado | 🟢 **15** | **14 de ADL/IMS** + `xml.xsd` de W3C; conformidad **offline**: `xsi:schemaLocation` resuelve a hermanos del ZIP |
+| Checks de `scorm_validate` | no medido | **9** | `zip-readable`, `manifest-at-root`, `manifest-parses`, `version-detected`, `organization`, `launch-resource`, `entry-exists`, `files-exist`, `schema-valid` |
+
+⚠️ **`scorm_version` NO es una cuarta tool** — es un campo del JSON de respuesta. Un `grep` de
+`"scorm_[a-z_]+"` devuelve cuatro cadenas y sólo tres son herramientas. **Colisión de instrumento,
+registrada.**
+
+🟢 **El punto de extensión, medido en el XSD y no en la documentación.** `metadataType` de
+`imscp_v1p1.xsd` (línea 267) es:
+
+```xml
+<xsd:complexType name = "metadataType">
+  <xsd:sequence>
+    <xsd:element ref = "schema" minOccurs = "0"/>
+    <xsd:element ref = "schemaversion" minOccurs = "0"/>
+    <xsd:group ref = "grp.any"/>
+  </xsd:sequence>
+  <xsd:anyAttribute namespace = "##other" processContents = "lax"/>
+</xsd:complexType>
+```
+
+y `grp.any` (línea 141) es
+`<xsd:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>`.
+🔵 **Aparece en NUEVE `complexType`, no en uno:** `manifestType`, `metadataType`,
+`organizationsType`, `organizationType`, `itemType`, `resourcesType`, `resourceType`, `fileType` y
+`dependencyType`. **Hay nueve puntos donde un marcador es legal.**
+
+**Los tres casos de `xmllint`, corridos de verdad** contra los XSD del propio repo:
+
+| Caso | Resultado |
+|---|---|
+| manifiesto 2004 base | `validates` |
+| `<m:aiGenerated xmlns:m="urn:globant:aiact:50-2">` dentro de `<metadata>` | 🟢 **`validates`** |
+| `<bogus>x</bogus>` (*namespace* por omisión) dentro de `<metadata>` | 🔴 **`fails to validate`** |
+
+🔴 **La condición dura queda medida, no razonada: el marcador DEBE declarar su propio *namespace*.**
+Y ⚠️ **el generador no tiene gancho**: `buildManifest` (línea 535) y `buildManifest12` (línea 576)
+de `src/converter.ts` arman el `<metadata>` como **literal de cadena**, con `<schema>` y
+`<schemaversion>` fijos y **ningún parámetro de extensión**. Inyectar exige **parchear el generador
+o post-procesar el ZIP** — se cotiza, pero **una vez**, no 32.
+
+### `JuneYaooo/lineage-skill` y `zijinz456/OpenTutor` — las dos fuentes del componente, leídas de primera mano
+
+- **`lineage-skill/references/provenance-policy.md`** (Apache-2.0): **9 valores**, confirmados uno a
+  uno contra el archivo, que además queda commiteado como *fixture* para que la deriva rompa la
+  prueba: `direct_source`, `source_grounded_synthesis`, `cross_source_synthesis`,
+  `mentor_inference`, `learner_hypothesis`, `learner_observation`, `real_world_evidence`,
+  `external_general_knowledge`, `unsupported`. La política los exige *«for every consequential
+  claim, task answer, rubric rule, feedback judgment, and Personal Skill rule»*.
+- **`OpenTutor/apps/api/services/provenance.py`** (MIT): **72 líneas, dos funciones**.
+  `build_provenance` tiene **12 parámetros** y `generated: bool = True` **por omisión** —
+  🟢 **falla hacia el lado seguro**— y agrega `"generated"` a `source_labels` cuando es verdadero.
+  `merge_provenance` **unifica `source_labels` como conjunto ordenado** y descarta `None`, que es el
+  detalle que permite extender el payload sin romper el merge.
+
+🔵 **Dato que cambia la lectura del campo:** `build_provenance` **no tiene nada por tramo** — ni
+`spans`, ni desplazamientos, ni etiqueta por afirmación. **La granularidad no estaba «a medias»: no
+estaba.** Lo que esta base agrega es el tramo, y lo agrega **sin romper** el contrato del turno.
+
 ## 2026-10-02 (pase 45) — **el dato crudo: 15 rutas literales de 15, 60 rutas vivas (no 26), 46 aserciones en verde, 24.202 archivos barridos y 0 artefactos de marcado**
 
 Todo lo de abajo se leyó del árbol, con `git clone --depth 1 --filter=blob:none --sparse` y con

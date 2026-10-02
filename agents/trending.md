@@ -9,6 +9,182 @@ updated: 2026-10-02
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 > No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
 
+## 2026-10-02 (pase 46) — el pase que **ejecuta las tres acciones del 45 y las tres rinden**: el componente del Artículo 50(2) existe, el empaquetado **sí** es el punto barato de marcado, y 🔴 **la tercera pieza de código corrige una fila que esta base venía cotizando: Zoom habla con el remoto desde 5 de 14 métodos, no desde 2 — y desde ninguno directamente**
+
+**Las tres acciones del pase 45 se ejecutaron. Las tres rindieron, las tres dejan código que corre
+en este repositorio, y dos de ellas corrigen afirmaciones propias.** El barrido global obligatorio
+(cuatro búsquedas, año **calculado**: 2026) volvió a devolver **la capa genérica** (openclaw
+385.407 ★, dify 151.639, browser-use 108.128, Mem0 62.735, AutoGen 60.284, Flowise 55.226) y
+**material didáctico *sobre* AI**. 🔵 **Cero altas de agente, y es el CUARTO pase consecutivo con
+esa medición.** La tabla se queda en **66 filas**.
+
+### Los candidatos del barrido, uno por uno, y por qué ninguno entra
+
+| Candidato | De dónde salió | Veredicto |
+|---|---|---|
+| **Hermes Agent** (Nous Research, MIT) | «top open source AI agents education 2026 github MIT» | 🔴 **Agente genérico**, no educativo — la capa que esta KB ya customiza |
+| `rohitg00/ai-engineering-from-scratch` (#1 GitHub Trending 2026-05-24) | «github trending education AI 2026» | 🔴 **Material didáctico *sobre* AI** — la colisión que el pase 23 midió |
+| `pguso/agents-from-scratch` (MIT) | global | 🔴 Ídem: enseña a construir agentes, no educa con ellos |
+| `avinash201199/free-ai-agents-resources`, *Awesome LLM Apps* | global | 🔴 **Listas curadas**, no software |
+| `microsoft/Semantic Kernel` (27.470 ★) | global | 🔴 Orquestador genérico |
+| **OpenEduCat** (ERP educativo sobre Odoo) | «open source platform education ERP CRM MIT Apache» | ⚠️ **Ya está** en `verticals/solutions.md` |
+| **CK-ERP** (32 módulos, incl. Teacher/Student/Registrar) | ídem | ⚠️ **Nombrado por primera vez**, pero el rastro vivo más reciente es de **2010** (lista de Drupal) → no entra como dependencia |
+
+🔵 **El dato de encuadre, en positivo:** las cuatro búsquedas globales devolvieron **cero** piezas
+educativas que esta base no tuviera. Las altas de los últimos once pases vinieron **todas** del eje
+**conector** y del eje **estándar**. **El eje agente está saturado para esta industria, medido
+cuatro veces.** Y la búsqueda de plataformas verticales **sigue devolviendo Odoo/OpenEduCat**, que
+es la respuesta correcta y ya está catalogada.
+
+### 🔴 El hallazgo del pase: la cuenta de «métodos que hablan con el remoto» estaba mal, y el error es de método
+
+La acción 2 pedía auditar `compose/code/seb-proctoring-validator/` con los cinco controles —era la
+**única de las tres piezas de código de esta base sin medir**, porque se escribió en el pase 43,
+antes de que los controles existieran—. Se auditó, y **el control (e) derriba una fila de P94**.
+
+P94 publica *«Métodos que hablan con el remoto: Jitsi **1**, Zoom **2**»*. Medido sobre
+`HEAD 7f45689` con cerradura transitiva:
+
+| Proveedor | Alcanzan la red | **Directos** | Profundidad |
+|---|---|---|---|
+| `JITSI_MEET` | **1 de 14** (`testExamProctoring`) | 1 | 0 |
+| `ZOOM` | 🔴 **5 de 14** | 🔴 **0** | **2 a 4** |
+
+🔴 **Y lo que explica por qué la cuenta directa falla tan limpio: en Zoom, CERO métodos de la
+interfaz llaman a la red directamente.** Los cinco la alcanzan por helpers privados
+(`createAdHocMeeting`, `deleteAdHocMeeting`) y por la jerarquía interna `ZoomRestTemplate`. Un
+barrido que mire sólo el cuerpo del método puntúa **0** — ni 2 ni 5. **La asimetría real entre la
+ruta barata y la realista es 1 contra 5.** Los cinco: `testExamProctoring` (d=2),
+`newCollectingRoom` (d=3), `newBreakOutRoom` (d=3), `disposeBreakOutRoom` (d=3),
+`disposeServiceRoomsForExam` (**d=4**).
+
+**Las tres consecuencias que se escriben en la propuesta:**
+
+1. 🔴 **`disposeServiceRoomsForExam` llama a `disposeBreakOutRoom` dentro de un `forEach`: no es un
+   viaje HTTP, son `2 × N` con N = salas del examen, sin tope en el código.** P94 lo tenía como
+   local. Es el método que hay que probar con carga.
+2. 🔴 **Crear una sala cuesta 3 llamadas, no 1** — `createUser` + `applyUserSettings` +
+   `createMeeting` (líneas 543/554/558). **Crear una sala en Zoom crea un usuario ad-hoc.**
+3. 🟢 **Todo el HTTP de Zoom pasa por un único `exchange` privado** (línea 940) envuelto en
+   `circuitBreaker.protectedRun`. **Para un proveedor propio ésa es la buena noticia: hay un solo
+   punto donde poner reintentos, *timeouts* y el *circuit breaker*.** Conviene copiar la forma.
+
+🔴 **El viaje HTTP menos evidente no está en ninguna llamada a la API:** `getZoomRestTemplate`
+valida el template cacheado con `oAuth2RestTemplate.getAccessToken()` (línea 1027), que **pide el
+token al endpoint de Zoom**. Validar la caché es tráfico.
+
+🟢 **Y el control (d) encuentra dos guardas de runtime que no son anotaciones, una con consecuencia
+comercial directa:** `notifyCollectingRoomOpened` **no hace nada** si
+`sendRejoinForCollectingRoom` es `false`, **y `false` es el valor por omisión**. **Un tercero que
+implemente ese método copiando la referencia está copiando un no-op.** Detalle, grafo y las 20
+aserciones en [`compose/code/proctoring-reach-audit/`](../compose/code/proctoring-reach-audit/README.md).
+Tendencias **184**–**187**. **Gap 96 CERRADO.**
+
+### 🟢 La acción 1 rinde: el componente del Artículo 50(2) existe, y la decisión son CINCO valores, no cuatro
+
+El gap 95 quedaba *«especificado y sin código»*. Ahora hay código:
+[`compose/code/aiact-50-2-marking/`](../compose/code/aiact-50-2-marking/README.md), **24/24
+aserciones**, sólo biblioteca estándar. Mapea los **9 valores** de `lineage-skill` a un booleano
+`synthetic` **conservando la etiqueta original**, emite el payload de `OpenTutor` **extendido al
+tramo** y asevera las tres cosas que pedía la acción.
+
+🔵 **La decisión que nadie había tomado, y va en contra del conteo del pase 45:** el 45 contó
+*«cuatro valores son literalmente ‘esto lo produjo el modelo’»*. **Son cinco.** El quinto es
+`unsupported`, y el criterio queda escrito: **`synthetic` es verdadero cuando el MODELO escribió
+las palabras** — no cuando la afirmación es falsa ni cuando está mal fundada; son ejes distintos.
+*«No adequate evidence is available»* habla de evidencia, no de autoría, **pero si ninguna fuente
+sustenta la afirmación, ninguna fuente la escribió tampoco, y el único autor que queda es el
+modelo.** Marcarlo `false` produce exactamente el caso que el Artículo 50(2) existe para evitar.
+
+⚠️ **Y el error simétrico, que importa igual:** las cuatro categorías humanas
+(`direct_source`, `learner_hypothesis`, `learner_observation`, `real_world_evidence`) devuelven
+`false` **a propósito**. Marcar como generado por AI un tramo que escribió **el alumno** le estaría
+diciendo a un estudiante que su propia oración la escribió una máquina. ***«Por las dudas marco
+todo»* no es cautela, es dato incorrecto.**
+
+🟢 **Lo que mejora respecto del límite del pase 45:** `generated` pasa a ser el **OR sobre los
+tramos**, medido — el turno de ejemplo da **1 de 3 tramos sintéticos, 81 de 170 caracteres**, y un
+turno que sólo cita reporta `generated: false`, algo que `turn_pipeline.py` de OpenTutor **no puede
+representar** porque fija `generated=True` en el camino del agente. **Esta base queda más estricta
+que su propia fuente.** 🔴 **Pero la firma sigue sin existir:** `sign_hook()` es una costura
+declarada y **vacía**, y decirlo es parte del entregable. Tendencias **188**–**191**.
+**Gap 95 CERRADO.**
+
+### 🟢 La acción 3 decide a favor: el empaquetado ES el punto barato, con una condición dura
+
+La pregunta era si marcar en el `pack` **rompe** la conformidad SCORM. **No la rompe**, y se midió
+con `xmllint` contra el `imscp_v1p1.xsd` que empaqueta `scorm-mcp-server`:
+
+| Caso | Resultado |
+|---|---|
+| manifiesto base | `validates` |
+| elemento **con *namespace* propio** dentro de `<metadata>` | 🟢 **`validates`** |
+| elemento en el ***namespace* por omisión** dentro de `<metadata>` | 🔴 **`fails to validate`** |
+
+Porque `metadataType` termina en `<xsd:group ref="grp.any"/>` =
+`<xsd:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>`.
+🔵 **Y hay NUEVE puntos de extensión, no uno:** `grp.any` aparece en `manifestType`,
+`metadataType`, `organizationsType`, `organizationType`, `itemType`, `resourcesType`,
+`resourceType`, `fileType` y `dependencyType`. 🔴 **La condición dura: el marcador DEBE declarar su
+propio *namespace*** — un `<synthetic>` sin prefijo rompe el paquete.
+
+⚠️ **Pero el generador no tiene gancho:** `buildManifest`/`buildManifest12` de
+`src/converter.ts` arman el `<metadata>` como **literal de cadena**, sin parámetro de extensión.
+Inyectar exige **parchear el generador o post-procesar el ZIP**, y eso se cotiza. **Decisión: el
+componente se inyecta UNA vez en el empaquetado, no 32 veces en cada generador.** Tendencias
+**192**–**194**. **Gap 97 CERRADO.**
+
+### El barrido regional, las cuatro regiones, y lo que cada una devolvió
+
+**Las cuatro se corrieron con el año calculado.** 🔴 **Dato nuevo de software: CERO en las cuatro,
+por segundo pase consecutivo.** Lo que devolvieron es encuadre, y se registra por región para que
+la ausencia no se confunda con cobertura:
+
+- **North America** — **41,7 %** del crecimiento global y **36 %** de cuota; mercado de **951 M USD
+  (2024) → 2.303 M (2029), CAGR 15,9 %**. Reconfirma el **vacío regulatorio** (*«no hay equivalente
+  a la FDA»*, decisión por escuela/distrito/universidad) y la **colcha estatal con Colorado y
+  Texas**. Players nombrados: **IBM, Microsoft, Google** — ninguno open source. 🔴 **Cero software
+  nuevo.**
+- **EMEA** — **94 %** de las organizaciones invertirá en formación en AI en 2026; **38 %** todavía
+  no empezó a pilotear; *compliance* y control de acceso entran en el **top-4 de criterios de
+  selección de proveedor** (GDPR + NIS2 + AI Act juntos). 🟢 **Y el Consejo de Europa celebra su
+  2.ª conferencia de trabajo sobre las dimensiones REGULATORIAS de la AI en educación este mes
+  (octubre de 2026)** — ver abajo, porque el acceso a `coe.int` cambió de estado. 🔴 **Cero
+  software nuevo.**
+- **APAC** — **48 %** de los líderes de gobernanza pone la adopción como prioridad 2026; **57 %**
+  ya tiene AI en producción; la región se mueve a ***sovereign-by-design*** y **Singapur** consulta
+  sobre AI en instituciones **financieras** (**no educativas**). Mercados que marcan el paso:
+  **Australia, Singapur, India, Nueva Zelanda**. 🔴 **Cero piezas open source de origen APAC** —
+  `jbnu-lms-mcp` (Corea, pase 35) sigue siendo la única de esta base.
+- **LATAM** — **tercer mercado mundial** en descargas de aplicaciones de AI generativa, y se
+  proyecta que **el 100 % de las empresas de la región use AI en al menos una actividad en 2026**
+  (contra el **85 %+** y el **70 %** que esta base ya tenía). Reconfirma el *working paper* de
+  **UNU/UNESCO IESALC** (**200 instituciones en 19 países**, 5 dimensiones). Startups nombradas:
+  **Ednova (Chile)**, Kredi (México), MindHealth LATAM (Colombia). 🔴 **Ninguna open source, y
+  tercer pase consecutivo con cero piezas de origen LATAM.**
+
+### 🟢 Un cambio de estado en el límite de fuentes: `coe.int` apareció en resultados
+
+⚠️ **Matiz importante y hay que decirlo con precisión:** el **gap 65 / 92** registra que los
+dominios institucionales multilaterales son inalcanzables (`coe.int`, `unu.edu`, UNESCO, OCDE,
+BID…). Este pase, la URL del Consejo de Europa **apareció como resultado de búsqueda con título
+legible** —*«key stakeholders across europe will explore the regulatory dimensions of ai in
+education at the 2nd working conference in october»*— y la de **UNU** también
+(`unu.edu/publication/ai-implementation-higher-education-latin-america-and-caribbean`). 🔵 **Eso
+NO es acceso a primaria: es el buscador devolviendo metadatos.** La afirmación sigue apoyada en
+canal secundario, pero **el título y la fecha ahora vienen del propio dominio**, que es un grado
+más que antes. **El gap 92 no se cierra; se matiza.** Tendencia **195**.
+
+### ⚠️ Y la fecha vencida del AI Act reapareció por DÉCIMA vez, otra vez en North America
+
+El barrido de North America volvió a afirmar que el AI Act *«toma efecto pleno en agosto de 2026»*
+clasificando educación como **alto riesgo**. 🔴 **Esta base ya lo corrigió en el pase 32: educación
+es Anexo III y la fecha se movió a 2027-12-02.** Décima aparición, en el mismo barrido regional que
+las nueve anteriores. **Deja de ser el error de una fuente y queda registrado como propiedad del
+canal: el barrido comercial de North America publica la fecha vencida de forma sistemática.**
+Tendencia **196**. **Y conviene el encuadre completo: las fuentes secundarias comerciales se
+contradicen sobre la única fecha que esta base no puede verificar contra primaria (gap 92).**
+
 ## 2026-10-02 (pase 45) — el pase que **re-audita la OTRA puerta de esta base y encuentra que el verbo HTTP no es la frontera de escritura**, y que **una de las 66 filas sí emite una bandera legible por máquina de contenido generado**
 
 **Las tres acciones del pase 44 se ejecutaron. Las tres rindieron, y dos dejan código que corre en este repositorio.**

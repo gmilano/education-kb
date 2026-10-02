@@ -4794,6 +4794,228 @@ checklist de esta base.**
 `artificialintelligenceact.eu` y `data.europa.eu` se suma **`digital-strategy.ec.europa.eu`**, la página oficial del
 *Code of Practice on Transparency of AI-generated Content*, probada por **los dos canales** disponibles (`curl` →
 `connect_rejected`, WebFetch → `EGRESS_BLOCKED`). **Tres canales secundarios concordantes, cero primarias.**
+## 184. 🔴 «Métodos que hablan con el remoto» se venía contando con el instrumento equivocado: Zoom son 5 de 14, no 2 — y 0 directos (agregado en el pase 46 del 2026-10-02)
+
+P94 publica *«Métodos que hablan con el remoto: Jitsi **1**, Zoom **2**»*. Medido sobre `HEAD 7f45689` de
+`SafeExamBrowser/seb-server` con **cerradura transitiva** del grafo de llamadas: **Jitsi 1 de 14 (correcto), Zoom
+5 de 14**. Los cinco: `testExamProctoring` (d=2), `newCollectingRoom` (d=3), `newBreakOutRoom` (d=3),
+`disposeBreakOutRoom` (d=3), `disposeServiceRoomsForExam` (**d=4**).
+
+🔴 **Y el dato que explica por qué la cuenta anterior no podía acertar: en Zoom, CERO métodos de la interfaz llaman a la
+red directamente.** Los cinco la alcanzan por helpers privados (`createAdHocMeeting`, `deleteAdHocMeeting`) y por la
+jerarquía interna `ZoomRestTemplate`. **Un barrido que mire el cuerpo del método puntúa 0.** La magnitud que se cotiza
+—«llamar a este método provoca un viaje HTTP»— es **transitiva por naturaleza**, y la asimetría real entre la ruta
+barata y la realista es **1 contra 5**, no 1 contra 2. Reproducible en
+`compose/code/proctoring-reach-audit/` (20/20, regeneración byte a byte aseverada).
+
+## 185. 🔴 El método que P94 tenía como local es el único sin tope: `disposeServiceRoomsForExam` son `2 × N` peticiones dentro de un `forEach` (agregado en el pase 46 del 2026-10-02)
+
+`disposeServiceRoomsForExam` itera las salas del examen (`remoteProctoringRoomDAO.getRooms(examId).forEach`) y llama a
+`disposeBreakOutRoom` **por cada una**; cada una baja a `deleteAdHocMeeting`, que hace **dos** peticiones
+(`deleteMeeting` + `deleteUser`). **No es un viaje HTTP: son `2 × N`, con N = salas, y no hay tope en el código.**
+
+🔵 **Y la de al lado tiene el mismo problema en la dirección de creación: crear una sala cuesta TRES llamadas**, no una
+—`createUser` + `applyUserSettings` + `createMeeting` (líneas 543/554/558)—, porque **`createAdHocMeeting` crea un
+usuario ad-hoc en Zoom por sala.** Para la propuesta: éstos son los dos métodos que hay que probar con carga, y P94 los
+contaba como locales.
+
+## 186. 🟢 Todo el HTTP de Zoom sale por un único `exchange` privado con *circuit breaker*: es el artefacto más reutilizable de esta ruta (agregado en el pase 46 del 2026-10-02)
+
+Las siete operaciones de la API de Zoom (`createUser`, `applyUserSettings`, `createMeeting`, `deleteMeeting`,
+`deleteUser`, `testServiceConnection`, y el `getAccessToken` de OAuth) **convergen en un solo método privado**
+`exchange` (línea 940) que envuelve `restTemplate.exchange` en `circuitBreaker.protectedRun(...)` y degrada los ≥400 a
+*warning* con el cuerpo preservado.
+
+🟢 **Para un proveedor propio eso es la buena noticia del pase: hay UN punto donde poner reintentos, *timeouts* y el
+*circuit breaker*, y conviene copiar la forma en vez de inventarla.** 🔴 **Con una excepción que no pasa por ahí:**
+`getZoomRestTemplate` valida el template cacheado con `oAuth2RestTemplate.getAccessToken()` (línea 1027), que **pide el
+token al endpoint de Zoom**. **Validar la caché es tráfico, y es el viaje HTTP menos evidente de la clase.**
+
+## 187. 🔴 Tercera pieza, tercer acierto del mismo control: el control (c) atrapa constructores emitidos como métodos, y el defecto es del MÉTODO de extracción (agregado en el pase 46 del 2026-10-02)
+
+La primera corrida del extractor de `proctoring-reach-audit` emitió **8 constructores como métodos**:
+`JitsiProctoringService`, `ZoomProctoringService`, `ZoomRestTemplate`, `OAuthZoomRestTemplate`, y `Context`,
+`Features`, `JWTContext` y `User` de las clases internas. Es **exactamente** el defecto que el control (c) encontró en
+las tablas de rutas de `sebserver-mcp-gate` (pase 44) y `unitime-mcp-gate` (pase 45).
+
+🔵 **Tres artefactos distintos, tres lenguajes de declaración distintos, el mismo falso positivo: la conclusión es que
+el defecto no es de un árbol, es del método de extracción basado en expresiones regulares sobre declaraciones.** La
+regla que queda: **toda tabla derivada de un árbol necesita una columna `kind`**, y el nombre de un tipo declarado en el
+archivo es el discriminador más barato.
+
+## 188. 🔴 El verbo no identifica una petición HTTP: el RECEPTOR sí — y `Map.put` costó 16 llamadas de red fantasma (agregado en el pase 46 del 2026-10-02)
+
+Un detector de primitivas de red con lista de verbos que incluya `put` y `delete` puntúa `attributes.put(...)` —un
+`Map.put` corriente— como petición HTTP. Medido: **6** llamadas falsas en `createJoinInstructionAttributes` de Jitsi y
+**10** en el de Zoom, **dos métodos que no tocan un socket**.
+
+🔴 **Y la corrección obvia tampoco alcanza:** exigir un receptor *parecido* a un template (`\w*restTemplate\w*`)
+acepta `restTemplatesCache`, que es un `LinkedHashMap`, y le regala **2** llamadas fantasma a `getZoomRestTemplate`. **El
+receptor tiene que TERMINAR en `restTemplate`.** 🔵 **Y la decisión explícita en la dirección contraria: construir un
+`RestTemplate` NO es una petición** —Jitsi construye uno en la 162 y la llamada real es el `getForEntity` de la 163—;
+contar el constructor habría inflado la misma cifra que había que corregir. **Las tres reglas son del instrumento, y las
+tres se encontraron porque la cifra no cerraba con la lectura a mano.**
+
+## 189. 🔵 El mapeo de los 9 valores de procedencia al booleano del Artículo 50(2) son CINCO sintéticos, no cuatro: `unsupported` es autoría por eliminación (agregado en el pase 46 del 2026-10-02)
+
+El pase 45 contó *«cuatro valores son literalmente ‘esto lo produjo el modelo’»*
+(`source_grounded_synthesis`, `cross_source_synthesis`, `mentor_inference`, `external_general_knowledge`). El componente
+del pase 46 marca **cinco**, y el criterio queda escrito: **`synthetic` es verdadero cuando el MODELO escribió las
+palabras** — no cuando la afirmación es falsa, ni cuando está mal fundada. **Son ejes distintos y confundirlos es cómo
+este campo se llena mal.**
+
+*«No adequate evidence is available»* habla de **evidencia**, no de autoría, así que `unsupported` se lee como una
+quinta categoría y no como un quinto `true`. **Se marca igual, por eliminación: si ninguna fuente sustenta la
+afirmación, ninguna fuente la escribió tampoco, y el único autor que queda es el modelo.** Marcarlo `false` produce
+exactamente el caso que el Artículo 50(2) existe para evitar — **prosa del modelo sin fuente llegando a un alumno con
+`synthetic: false` adosado**.
+
+## 190. ⚠️ El error simétrico del marcado, que esta base conviene decir en voz alta: marcar como AI un tramo del ALUMNO es dato incorrecto, no cautela (agregado en el pase 46 del 2026-10-02)
+
+Cuatro de los nueve valores son de autoría **humana**: `direct_source` (lo escribió la fuente del docente),
+`learner_hypothesis` y `learner_observation` (lo escribió **el alumno**) y `real_world_evidence` (un hecho del mundo
+transportado). **Los cuatro devuelven `synthetic: false` a propósito.**
+
+⚠️ **Marcar `learner_observation` como generado por AI le estaría diciendo a un estudiante que su propia oración la
+escribió una máquina** — y en un contexto educativo eso no es una imprecisión de metadato, es una acusación de autoría.
+🔵 **La distinción con el *fail-closed*:** fallar cerrado aplica a **lo desconocido** (una etiqueta fuera del
+vocabulario se marca `true` y se señala con `flags: ["unknown_provenance"]`); **no** aplica a lo conocido-humano.
+***«Por las dudas marco todo»* no es una política conservadora: es una política equivocada**, y degrada el valor
+informativo de la marca para los tramos que sí la necesitan.
+
+## 191. 🟢 OpenTutor no tenía la granularidad «a medias»: no la tenía — y esta base queda más estricta que su propia fuente (agregado en el pase 46 del 2026-10-02)
+
+`apps/api/services/provenance.py` leído de primera mano: **72 líneas, dos funciones**. `build_provenance` tiene **12
+parámetros** y **ninguno por tramo** — ni `spans`, ni desplazamientos, ni etiqueta por afirmación. 🔵 **La granularidad
+que esta base describía como faltante no estaba incompleta: estaba ausente.**
+
+🟢 **Y la extensión resulta más estricta que el upstream, que no es lo que se esperaba.** `turn_pipeline.py` fija
+`generated=True` en el camino del agente, así que **no puede representar un turno que sólo cita fuentes y relata lo que
+dijo el alumno**. Con el booleano como **OR sobre los tramos**, el turno de ejemplo mide **1 de 3 tramos sintéticos, 81
+de 170 caracteres**, y un turno sin síntesis reporta `generated: false` **porque se midió**. 🟢 **Compatibilidad
+preservada a propósito:** `generated` y `source_labels` conservan el significado que `routers/chat.py:214` ya sirve y
+`schemas/task.py:59` ya persiste, así que un consumidor que sólo entiende el turno sigue funcionando.
+
+## 192. 🟢 `metadataType` de SCORM termina en `grp.any`: hay NUEVE puntos de extensión legales, no uno (agregado en el pase 46 del 2026-10-02)
+
+Leído del `imscp_v1p1.xsd` que **empaqueta `scorm-mcp-server`** (15 XSD, conformidad offline): `metadataType`
+(línea 267) es `schema?` + `schemaversion?` + `<xsd:group ref="grp.any"/>`, y `grp.any` (línea 141) es
+`<xsd:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>` — **cualquier cantidad de
+elementos de cualquier otro *namespace*, validados laxamente.**
+
+🔵 **Y `grp.any` aparece en NUEVE `complexType`:** `manifestType`, `metadataType`, `organizationsType`,
+`organizationType`, `itemType`, `resourcesType`, `resourceType`, `fileType` y `dependencyType`. **El marcado del
+Artículo 50(2) no tiene un punto de inyección legal: tiene nueve**, y `<metadata>` del manifiesto es el de mayor alcance
+(cubre el paquete entero) mientras `itemType` y `resourceType` permiten marcar **por SCO**.
+
+## 193. 🔴 La condición dura del marcado en SCORM es el *namespace*, y está medida con `xmllint`, no razonada desde `lax` (agregado en el pase 46 del 2026-10-02)
+
+Tres casos corridos contra los XSD del propio repo:
+
+| Caso | Resultado |
+|---|---|
+| manifiesto 2004 base | `validates` |
+| `<m:aiGenerated xmlns:m="urn:globant:aiact:50-2">` en `<metadata>` | 🟢 **`validates`** |
+| `<bogus>x</bogus>` (*namespace* por omisión) en `<metadata>` | 🔴 **`fails to validate`** |
+
+🔵 **La pregunta del gap 97 era si marcar en el `pack` ROMPE la conformidad. No la rompe — con la condición de que el
+marcador declare su propio *namespace*.** Un `<synthetic>` sin prefijo **invalida el paquete**, y es el error que
+cualquiera cometería primero. 🔵 **Consecuencia de diseño que esto decide:** el componente se inyecta **UNA vez en el
+empaquetado** y no **32 veces** en cada generador expuesto. Y `scorm_validate` no agrega veto propio: sus **9 checks**
+son estructurales (`zip-readable`, `manifest-at-root`, `manifest-parses`, `version-detected`, `organization`,
+`launch-resource`, `entry-exists`, `files-exist`) más `schema-valid`, que es justamente el `xmllint` de arriba.
+
+## 194. ⚠️ El punto de inyección es legal pero no tiene gancho: el `<metadata>` de `scorm-mcp-server` es un literal de cadena (agregado en el pase 46 del 2026-10-02)
+
+`buildManifest` (línea 535) y `buildManifest12` (línea 576) de `src/converter.ts` arman el manifiesto como **plantilla
+de cadena**, con `<schema>ADL SCORM</schema>` y `<schemaversion>` **fijos** y **ningún parámetro de extensión**:
+`buildManifestFor` recibe `identifier`, `title`, `language`, `entryHref`, `extraFiles` y `masteryScore` — **nada para
+metadatos arbitrarios**.
+
+⚠️ **O sea: el estándar admite el marcador (tendencia 192), el validador lo acepta (193), y el generador no lo puede
+emitir.** Inyectar exige **parchear el generador** (un parámetro opcional que se concatene antes de `</metadata>`) **o
+post-procesar el ZIP** reescribiendo `imsmanifest.xml`. **La segunda no toca upstream y es la barata; la primera es un
+PR de pocas líneas y es la que sirve a todos.** Queda como **gap 100**.
+
+## 195. 🟢 El gap 92 se MATIZA y no se cierra: los dominios institucionales aparecen con título legible en el buscador, aunque sigan sin responder al *fetch* (agregado en el pase 46 del 2026-10-02)
+
+El barrido regional de este pase devolvió, como resultados con título y ruta,
+`coe.int/web/education/-/key-stakeholders-across-europe-will-explore-the-regulatory-dimensions-of-ai-in-education-at-the-2nd-working-conference-in-october`
+y `unu.edu/publication/ai-implementation-higher-education-latin-america-and-caribbean` — **los dos dominios que el gap
+65 registra como bloqueados**.
+
+🔵 **Hay que decirlo con precisión, porque la tentación de cerrar el gap es alta y sería incorrecto: eso NO es acceso a
+la fuente primaria.** Es el buscador devolviendo **metadatos** (título y URL), no el documento. **Lo que sí mejora: el
+título y la fecha del evento del Consejo de Europa ahora provienen del propio dominio**, en vez de la paráfrasis de un
+tercero — un grado más de autoridad sobre **el hecho de que el evento existe y cuándo**, y cero grados sobre **su
+contenido**. **El gap 92 queda matizado: el canal de información y el canal de *fetch* fallan por separado**, que es la
+tendencia 130 confirmada por un segundo camino.
+
+## 196. ⚠️ Décima aparición de la fecha vencida del AI Act, y las secundarias comerciales se contradicen justo en la fecha que no se puede verificar contra primaria (agregado en el pase 46 del 2026-10-02)
+
+El barrido de North America volvió a afirmar que el AI Act *«toma efecto pleno en agosto de 2026»* clasificando
+educación como **alto riesgo**. 🔴 **Esta base lo corrigió en el pase 32: educación es Anexo III y la fecha se movió a
+2027-12-02.** Es la **décima** aparición y la enésima en el **mismo** barrido regional.
+
+⚠️ **El encuadre que importa para cualquier afirmación regulatoria de esta KB:** la fecha vencida aparece en el canal
+comercial **de forma sistemática**, mientras el texto consolidado del Reglamento (UE) 2024/1689 sigue inalcanzable por
+**cuatro** canales (gap 92). **O sea: la única fecha que esta base no puede verificar contra primaria es exactamente la
+que sus fuentes secundarias publican mal.** La regla operativa no cambia y conviene repetirla cada vez que se cite:
+**las fechas están confirmadas por tres canales secundarios independientes y concordantes, no por fuente primaria, y
+eso se dice en la propuesta.**
+
+## 🔵 Estado de gaps al cierre del pase 46 del 2026-10-02
+
+| Gap | Estado | Evidencia |
+|---|---|---|
+| **95** — componente transversal de marcado del Art. 50(2) especificado y sin código | ✅ **CERRADO con código** | `compose/code/aiact-50-2-marking/`, **24/24** aserciones, sólo stdlib. Las tres que pidió la acción: cita textual **no** marcada, `mentor_inference` **sí**, y la marca **sobrevive** `dumps`→`loads` del artefacto separado del sobre con los desplazamientos intactos (rango `(50, 131)`) |
+| **96** — la tercera pieza de código sin auditar con los controles | ✅ **CERRADO, y corrige P94** | `compose/code/proctoring-reach-audit/`, **20/20**. Control (c) **falló** (8 constructores); control (e) **falló contra P94**: Zoom 5 de 14 y 0 directos |
+| **97** — ¿el `pack` es el punto de marcado más barato? | ✅ **CERRADO a favor** | `metadataType` termina en `grp.any` (**9** puntos de extensión); `xmllint`: *namespace* propio **valida**, por omisión **falla**. Se inyecta **1 vez**, no 32 |
+| **98** (nuevo) 🔴 | **la firma sigue sin existir** | `sign_hook()` es una costura **declarada y vacía**. La marca viaja **con** el texto tras `detach_artifact`, pero **no está EN** el texto: copiar sólo el texto la pierde. `MarkLLM`/SynthID (**P33**) necesitan el decodificador y este módulo corre después |
+| **99** (nuevo) 🔴 | **nadie asigna las etiquetas por tramo** | El componente **mapea, transporta y asevera**; **no clasifica**. Falta medir si alguna de las 32 filas expuestas emite algo mapeable a los 9 valores, o si el clasificador hay que escribirlo entero |
+| **100** (nuevo) ⚠️ | **el generador SCORM no tiene gancho de metadatos** | `buildManifest`/`buildManifest12` son literales de cadena sin parámetro de extensión (tendencia **194**). Dos caminos: PR de pocas líneas a upstream, o post-procesar el ZIP |
+| **101** (nuevo) 🔵 | **cifras publicadas sin nombrar su métrica** | P94 decía «481 / 912 líneas» y **era correcto** — son **no-blancas-no-comentario**, mientras `wc -l` da **583 / 1.116**. La cifra acertaba y **la métrica no estaba escrita** durante tres pases. Hay que barrer las demás cifras numéricas de `compose/patterns.md` y nombrarles el instrumento |
+
+## 🔵 Las tres acciones que el pase 46 deja escritas para el pase 47
+
+**Las tres son ejecutables en este entorno: ninguna necesita Docker, ni instalar dependencias de terceros, ni la API de
+GitHub. La primera convierte el hallazgo del gap 97 en entregable; la segunda es la más barata y la que más cuentas
+corrige; la tercera es la que decide si el componente del pase 46 sirve o queda de adorno.**
+
+1. 🟢 **Escribir el post-procesador que inyecta el marcado en un paquete SCORM ya construido, y validarlo con
+   `xmllint`** (**gap 100**). El pase 46 probó que el marcador es legal y que el generador no lo puede emitir. **La
+   acción concreta:** un módulo en `compose/code/` que tome un `.zip` SCORM, reescriba `imsmanifest.xml` insertando el
+   fragmento de `manifest_metadata_fragment()` **antes de `</metadata>`**, y **asevere cuatro cosas**: que el ZIP
+   resultante sigue validando contra `imscp_v1p1.xsd`, que el `imsmanifest.xml` original **sin** marcador también
+   validaba (control de que la prueba mide algo), que **re-inyectar es idempotente** (no duplica el elemento), y que un
+   paquete **sin** `<metadata>` se rechaza con un error claro en vez de corromperse. 🔵 **El valor: cierra el único
+   tramo que falta entre «esta KB tiene el componente» y «esta KB marca un curso entregable», sin tocar upstream.**
+2. 🔵 **Barrer las cifras numéricas de `compose/patterns.md` y nombrarle el instrumento a cada una** (**gap 101**). El
+   caso del pase 46 es el aviso: **«481 líneas» era correcto y su métrica no estaba escrita**, así que durante tres
+   pases nadie podía reproducirla —`wc -l` da 583— y una propuesta que la citara habría defendido un número que no
+   cerraba. **La acción concreta:** listar toda cifra de `compose/patterns.md` que sea una **medición** (líneas, tools,
+   métodos, porcentajes, descargas), y para cada una escribir **con qué comando se obtiene**; marcar las que no se
+   puedan reproducir hoy. 🔵 **El valor: es la acción más barata del backlog y toca el activo más citado — los
+   patrones son lo que se pega en una propuesta.**
+3. 🔴 **Medir si existe alguna fuente de procedencia POR TRAMO en las 32 filas expuestas, o si el clasificador hay que
+   escribirlo entero** (**gap 99**). El pase 45 encontró **15 artefactos de procedencia en 5 repos** y advirtió que
+   **13 de 15 son procedencia de FUENTE, no sintética**. El componente del pase 46 necesita que alguien **asigne** una
+   de las 9 etiquetas a cada tramo, y hoy no se sabe si algo lo hace. **La acción concreta:** sobre los repos ya
+   listados en `compose/code/aiact-50-2-exposure/rows.tsv`, buscar en el árbol (`--filter=blob:none --sparse`) si algún
+   generador emite **límites de tramo** —*offsets*, *citations* con rango, *chunk ids* en la respuesta— y responder
+   **una** pregunta: ¿hay por dónde agarrar el tramo, o la salida es un bloque de texto opaco? 🔵 **El valor: si la
+   respuesta es «opaco» en las 32, el componente del pase 46 exige un clasificador propio y eso cambia el presupuesto;
+   si alguna emite *offsets*, esa fila es el piloto.**
+
+⚠️ **Y las acciones hacia afuera que esta corrida sigue sin poder ejecutar, declaradas para no perderlas:** el
+`LICENSE` que falta en `Timadey/proctor` (**un PR de un archivo**); la licencia sin segunda fuente de
+`@ink-waffle/sisu-mcp` (**bloqueante: sigue siendo la única puerta de SIS de educación superior de esta base**); el
+acceso de miembro a los repositorios de Caliper Sensor API de 1EdTech; 🟢 **el PR de pocas líneas a
+`giacomomaria81/scorm-mcp-server` para que `buildManifestFor` acepte metadatos de extensión** (**gap 100**, camino
+largo); y 🔵 **el texto consolidado del Reglamento (UE) 2024/1689, que sigue inalcanzable por CUATRO canales** (gap 92,
+matizado por la tendencia **195**: el buscador devuelve título y URL de `coe.int` y `unu.edu`, el *fetch* sigue
+bloqueado).
+
 ## 🔵 Las tres acciones que el pase 45 deja escritas para el pase 46
 
 **Las tres son ejecutables en este entorno: ninguna necesita Docker, ni instalar dependencias de terceros, ni la API de

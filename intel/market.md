@@ -2015,6 +2015,27 @@ conversación en North America no empieza por cumplimiento: empieza por exposici
 ⚠️ **Y la contradicción del calendario del AI Act reapareció por UNDÉCIMA vez en el barrido de esta región.** Queda
 reconfirmada como **propiedad del canal**, no como error de una fuente.
 
+
+#### Agregado en el pase 46 del 2026-10-02 — la cifra regional se reconfirma y el dato nuevo es de **canal**, no de mercado
+
+**Las cifras se repiten sin contradicción**, lo que a esta altura es la señal: **41,7 %** del crecimiento global y
+**36 %** de cuota; **951 M USD (2024) → 2.303 M (2029)**, **CAGR 15,9 %** — por debajo del CAGR global del 31-41 % que
+publican otras firmas, y la divergencia ya está anotada como dispersión de fuentes, no como error. Se reconfirma el
+**vacío regulatorio** (*«no hay equivalente a la FDA»*; la decisión la toma la escuela, el distrito o la universidad) y
+la **colcha estatal con Colorado y Texas**. Players nombrados: **IBM, Microsoft, Google** — **ninguno open source**.
+
+🔴 **El dato nuevo es sobre la fuente, y es la DÉCIMA vez:** el barrido de North America vuelve a publicar que el AI Act
+*«toma efecto pleno en agosto de 2026»* clasificando educación como alto riesgo. **Esta base lo corrigió en el pase 32:
+educación es Anexo III, fecha movida a 2027-12-02.** Décima aparición, **siempre en este barrido**. ⚠️ **La oportunidad
+que esto crea es de posicionamiento:** un comprador de North America que lea su propio canal comercial **llega a la
+reunión con una fecha equivocada y con la clasificación de riesgo equivocada**. Llevar la fecha correcta —y decir por
+qué canal se verificó— **es diferenciación, no pedantería**.
+
+🔵 **Oportunidad concreta, atada a lo que este pase construyó:** en el vacío regulatorio federal, el marcado del
+Artículo 50(2) **no es exigible** en North America — pero es **el requisito más alto** de las cuatro regiones, y
+`compose/code/aiact-50-2-marking/` lo cumple. **Marcar una vez sirve para las cuatro**, así que para un entregable
+multi-región conviene cotizarlo contra el techo europeo y no contra el piso local (ver **P103** y **P105**).
+
 ### EMEA
 
 #### Pase 44 del 2026-10-02 — las dos fechas quedan **confirmadas por segundo canal** (la recomendación NO se revierte), y aparece una tercera, más cerca
@@ -3050,6 +3071,27 @@ piezas permisivas identificadas y estimado en 3-4 semanas: ver P99.** Eso convie
 *Code of Practice on Transparency of AI-generated Content*, probada por **los dos canales disponibles** (`curl` →
 `connect_rejected`, WebFetch → `EGRESS_BLOCKED`). **Tres canales secundarios concordantes, cero primarias.**
 
+
+#### Agregado en el pase 46 del 2026-10-02 — el *compliance* entra al top-4 de criterios de compra, y la fuente primaria cambia de estado (sin desbloquearse)
+
+**Cifras de este pase:** **94 %** de las organizaciones invertirá en formación en AI en 2026; **38 %** todavía **no
+empezó a pilotear**; y el dato que más mueve una propuesta: ***compliance* y control de acceso entran en el top-4 de
+criterios de selección de proveedor**, con GDPR, NIS2 y el AI Act operando juntos. 🔵 **Lectura comercial directa: en
+EMEA el cumplimiento no es un anexo del pliego, es un criterio de adjudicación** — y eso convierte
+`compose/code/aiact-50-2-marking/` (**P103**) de costo en **argumento de venta**.
+
+🟢 **El Consejo de Europa celebra su 2.ª conferencia de trabajo sobre las dimensiones REGULATORIAS de la AI en educación
+este mes (octubre de 2026)**, y este pase pudo leer **el título y la URL desde el propio dominio** en resultados de
+búsqueda. ⚠️ **Precisión necesaria: eso NO es acceso a la primaria** — es el buscador devolviendo metadatos; el *fetch*
+de `coe.int` sigue bloqueado. **El gap 92 se matiza, no se cierra** (tendencia **195**): **el canal de información y el
+canal de *fetch* fallan por separado.** Para una propuesta: **el hecho de que el evento existe y su fecha** se pueden
+afirmar con fuente del dominio; **su contenido, no**.
+
+⚠️ **Y la fecha que hay que citar bien, porque es la única que esta base no puede verificar contra primaria:** educación
+es **Anexo III** y la fecha aplicable es **2027-12-02**, confirmada por **tres canales secundarios independientes y
+concordantes**. El Artículo 50(2) —la obligación de transparencia del contenido generado— es el que ya corre y el que
+este pase dejó cubierto con código.
+
 ### APAC
 
 #### Agregado en el pase 42 del 2026-10-02 — soberanía como eje de compra, y la brecha de gobernanza con número
@@ -3893,6 +3935,27 @@ argumento que un cliente APAC con operación multi-país necesita escuchar antes
 ⚠️ **Y el reloj más apretado del mundo en la capa de examen sigue siendo APAC:** **Vietnam** pone *evaluación
 automatizada* y *monitorización del comportamiento* en alto riesgo con cumplimiento el **2027-03-01**, **nueve meses
 antes** del 2027-12-02 europeo. **No cambió en este pase; se reconfirma para que no se pierda.**
+
+
+#### Agregado en el pase 46 del 2026-10-02 — la región sigue sin producir open source educativo, y el movimiento es a *sovereign-by-design*
+
+**Cifras de este pase:** **48 %** de los líderes de gobernanza pone la adopción de AI como prioridad 2026; **57 %** de
+las organizaciones ya tiene AI en producción en al menos un área. La región converge en principios comunes —seguridad,
+transparencia, responsabilidad— **ejecutados de forma distinta en cada mercado**, y los mercados que marcan el paso son
+**Australia, Singapur, India y Nueva Zelanda**. ⚠️ **La consulta de Singapur sobre uso de AI es para instituciones
+FINANCIERAS, no educativas** — el dato se venía citando en contextos educativos y conviene no estirarlo.
+
+🔴 **Cero piezas open source de origen APAC en este barrido, y es consistente con los pases anteriores:**
+`jbnu-lms-mcp` (Corea, **MIT**, 25 tools sólo lectura, pase 35) **sigue siendo la única infraestructura agéntica
+educativa de origen APAC de esta base**. Los players de formación nombrados —**LearnUpon, TCS + Pearson, NIIT MTS**—
+son **los tres propietarios**.
+
+🔵 **La oportunidad, y el movimiento ***sovereign-by-design*** la define:** una región que exige soberanía de datos y
+despliegue local **no puede comprar el tutor como SaaS**. La combinación que esta base ya tiene medida —LMS copyleft
+desplegado + puerta MCP permisiva (`jbnu-lms-mcp`, `canvas-lms-mcp`, las cuatro de Moodle) + modelo local— es
+**exactamente la arquitectura que ese requisito obliga**, y el diferencial es que el marcado del Artículo 50(2)
+(**P103**) viaja en el artefacto y no en un servicio remoto. **Para APAC, «corre en tu infraestructura» y «la marca no
+depende de un tercero» son el mismo argumento.**
 
 ### LATAM
 
@@ -5038,3 +5101,26 @@ más directa a ese miedo que esta base puede ofrecer.**
 *Fuentes en `intel/trends.md`. Cifras de mercado con rango explícito: no reportar un número puntual sin la fuente.*
 
 *⚠️ Nivel de evidencia: las cifras de mercado y las afirmaciones regulatorias agregadas en el pase 3 del 2026-09-30 están **corroboradas por múltiples fuentes concordantes pero no leídas en la fuente primaria** — el proxy de esta sesión bloquea esos dominios. Leer el estatuto o el reporte antes de citarlas en material de cliente. Ver «Nota de método» en `intel/trends.md`.*
+
+
+#### Agregado en el pase 46 del 2026-10-02 — la adopción empresarial se proyecta al 100 %, y la región sigue siendo consumidora y no productora
+
+**Cifras de este pase, y la nueva es más alta que todas las anteriores:** la región es el **tercer mercado mundial** en
+descargas de aplicaciones de AI generativa, y se proyecta que **el 100 % de las empresas de LATAM use AI en al menos una
+actividad en 2026** — contra el **85 %+** y el **70 %** que esta base ya tenía registrados de pases anteriores.
+⚠️ **Las tres cifras miden cosas distintas** («usa AI en alguna actividad» no es «tiene AI en producción»), y conviene
+citarlas con su verbo, no promediarlas.
+
+Se reconfirma el *working paper* de **UNU/UNESCO IESALC** (**200 instituciones de educación superior en 19 países**,
+agosto-octubre de 2025, cinco dimensiones: enseñanza, investigación, extensión, administración y gobernanza) y, como en
+EMEA, este pase leyó **la URL y el título desde `unu.edu`** en resultados de búsqueda sin poder recuperar el documento
+(**gap 92 matizado**, tendencia **195**). Startups nombradas: **Ednova (Chile)** en edtech, Kredi (México),
+MindHealth LATAM (Colombia) — 🔴 **ninguna open source, y tercer pase consecutivo con cero piezas de origen LATAM en
+las capas de esta KB.**
+
+🔵 **Y la lectura regulatoria que el barrido regala, que es la más útil de las cuatro regiones:** la fuente señala que
+**la fragmentación normativa de LATAM crea riesgo de inconsistencia para la operación transfronteriza**, con países de
+marcos distintos o inexistentes. **Para un entregable generativo multi-país, el Artículo 50(2) es el denominador común
+más alto y el más barato de cumplir: marcar una vez sirve para los 19.** Con `compose/code/aiact-50-2-marking/` más
+**P105** (inyección única en el empaquetado SCORM), **el costo de cumplir el techo europeo en toda la región es un
+post-procesador, no 32 integraciones.**
