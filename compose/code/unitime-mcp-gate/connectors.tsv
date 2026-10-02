@@ -1,0 +1,15 @@
+BuildingsConntector	buildings	Delete Get Post 
+ClassInfoConnector	class-info	Get 
+CurriculaConnector	curricula	Get 
+DataExchangeConnector	exchange	Get Post 
+EnrollmentsConnector	enrollments	Get 
+EventsConnector	events	Delete Get Post 
+InstructorScheduleConnector	instructor-schedule	Get 
+InstructorsConnector	instructors	Get 
+JsonConnector	json	Post 
+OnlineStudentSchedulingConnector	sectioning	Get Post 
+RolesConnector	roles	Get 
+RoomsConnector	rooms	Delete Get Post Put 
+ScriptConnector	script	Get Post 
+StudentGroupsConnector	student-groups	Get 
+VariableTitleCourseConnector	var-title-crs	Get Post 

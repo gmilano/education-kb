@@ -228,6 +228,38 @@ pregunta legal, no de ingeniería**. El plugin corre dentro de un proceso Open e
 **Para un cliente que quiera vender el backend como producto separado, esta tabla es el insumo de la consulta legal, no su
 respuesta.** **Gap 88: cerrado como medición, abierto como decisión de legales.**
 
+## 🏛️ Capa de administración académica histórica — la familia **Kuali**, cuatro repos y los cuatro muertos (agregada en el pase 42 del 2026-10-02)
+
+**El barrido global de plataformas de este pase devolvió la *Kuali Foundation* descrita en presente** (*«consorcio de más
+de dos docenas de universidades que produce ERP, SIS y administración de investigación»*). 🔴 **Esta KB tenía 0 menciones
+de Kuali en 41 pases, y la razón de que no las tuviera es la correcta: no hay nada vivo que proponer.** Se mide y se
+registra **para que el próximo pase no lo descubra como novedad**, que es exactamente lo que le pasó a éste.
+
+| Repo | Licencia (leída del archivo del árbol) | Rama defecto | `HEAD` | Máx. corregido entre ramas | Antigüedad | Qué es |
+|---|---|---|---|---|---|---|
+| [`kuali/rice`](https://github.com/kuali/rice) | 🟢 **ECL-2.0** (*Educational Community License v2.0*) | `master` · 11 ramas | 2017-05-17 | **2018-09-01** (`rice-2.5`) | 🔴 **~8 años** | El *middleware* de la pila (workflow, IAM, formularios) |
+| [`KualiCo/rice`](https://github.com/KualiCo/rice) | 🟢 **ECL-2.0** | `java11` · 13 ramas | 2020-07-01 | **2020-07-01** | 🔴 **~6 años** | El fork comercial del *middleware*, migrado a Java 11 |
+| [`kuali/kc`](https://github.com/kuali/kc) | 🔴 **AGPL-3.0** | `master` · 12 ramas | 2017-01-06 | 2017-01-06 | 🔴 **~9 años** | *Kuali Coeus*: administración de investigación (*grants*, propuestas, IRB) |
+| [`kuali/kfs`](https://github.com/kuali/kfs) | 🔴 **AGPL-3.0** | `master` · 35 ramas | 2018-03-22 | 2018-03-22 | 🔴 **~8 años** | *Kuali Financial System*: finanzas institucionales |
+
+🔴 **`KualiCo/kc`, `KualiCo/kfs` y `KualiCo/kuali-student` NO existen** (`git ls-remote` falla en los tres).
+
+🔵 **La forma de este hallazgo se repite en esta base y conviene nombrarla:** **el *middleware* es permisivo y las dos
+aplicaciones que un cliente querría —investigación y finanzas— son AGPL.** Es el mismo reparto que `edx-proctoring`
+(núcleo AGPL, `backends/` Apache-2.0) y que `lrsql`/`Ralph` contra Learning Locker. **La licencia usable suele estar en la
+capa que no resuelve el problema del cliente.**
+
+⚠️ **Qué se hace con esto en un *engagement*:** nada como dependencia. 🟢 **Sirve como dato de contexto en educación
+superior de North America** —estos sistemas siguen en producción en universidades que los instalaron antes de 2018— y
+**como argumento de migración**: un cliente con Kuali instalado tiene una pila sin mantenimiento *upstream* desde hace
+6-9 años. 🔴 **No se cita como «open source disponible»: se cita como deuda.**
+
+### ⚠️ Y la cuarta confirmación independiente de la clase `dependabot`
+
+`KualiCo/rice` tiene su rama más nueva en `dependabot/maven/com.fasterxml.jackson.core-jackson-databind-2.9.10.7`
+(**2021-01-21**), **7 meses «más fresca» que la vida real del repositorio**. **Es un repo fuera de `agents/top.md`, así que
+confirma la clase que el pase 42 agregó al instrumento de vitalidad sin reusar la misma evidencia.**
+
 ## 🗓️ Capa de *timetabling* — la capa que el pase 40 midió vacía de agente tiene una base Apache-2.0 con API de conectores (agregada en el pase 41 del 2026-10-02)
 
 **El pase 40 midió que `unitime` no devuelve ni un nombre en los 903.402 del índice de PyPI y concluyó que la capa de
@@ -260,7 +292,7 @@ Un envoltorio ingenuo de los 15 conectores **expone ejecución de scripts del se
 
 | Repo | Licencia (leída del árbol) | Medición de primera mano | Qué aporta |
 |---|---|---|---|
-| 🟢 [`SafeExamBrowser/seb-server`](https://github.com/SafeExamBrowser/seb-server) | ⚠️ **MPL-2.0** — `LICENSE` en `master` | 🔴 `master` **2026-04-01** / 🟢 **`dev-3.0` 2026-10-01** · **108 tags** (incl. `v3.0-latest`) · **1.450 archivos** · Java (`ch.ethz.seb`) | **La capa de administración, monitoreo y *proctoring* de exámenes**, con **36 controladores REST** y **41 constantes de *endpoint***. Es el lado servidor que los SDK de navegador de `agents/top.md` no cubren |
+| 🟢 [`SafeExamBrowser/seb-server`](https://github.com/SafeExamBrowser/seb-server) | ⚠️ **MPL-2.0** — `LICENSE` en `master` | 🔴 `master` **2026-04-01** / 🟢 **`dev-3.0` 2026-10-01** · **108 tags** (incl. `v3.0-latest`) · **1.450 archivos** · Java (`ch.ethz.seb`) | **La capa de administración, monitoreo y *proctoring* de exámenes**, con **36 controladores REST** y **41 constantes de *endpoint***. Es el lado servidor que los SDK de navegador de `agents/top.md` no cubren. 🟢 **Enumerada en el pase 42 sobre `dev-3.0`: 1.201 archivos versionados, 313 `.java` en `webservice/servicelayer/`, 75 de *proctoring*. SPI de proveedor = `RemoteProctoringService` (14 métodos, 2 `default`, 🔴 12 obligatorios), registro ABIERTO por inyección de Spring, 🔴 tipo CERRADO (`enum ProctoringServerType{JITSI_MEET,ZOOM}`): un proveedor propio obliga a tocar 1 archivo *Covered* y a publicar ese valor de enum. `LmsType` tiene 6 valores y `LMS_FULL_INTEGRATION` sólo con Moodle+plugin** |
 | 🟢 [`SafeExamBrowser/seb-win-refactoring`](https://github.com/SafeExamBrowser/seb-win-refactoring) | ⚠️ **MPL-2.0** — `LICENSE.txt` | 🟢 `HEAD` **2026-09-25** · **20 tags** · **1.452 archivos** · C# | **El cliente de bloqueo de escritorio (Windows)**: convierte la máquina en estación de examen y restringe funciones del sistema, sitios y aplicaciones |
 
 ⚠️ **MPL-2.0 no es MIT/Apache, y tampoco es AGPL: es copyleft DÉBIL por archivo.** Lo que se modifica de los archivos

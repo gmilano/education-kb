@@ -1040,6 +1040,30 @@ Dónde se produce el software educativo abierto, que no es donde está la demand
 
 ### North America
 
+#### Agregado en el pase 42 del 2026-10-02 — la cifra regional propia, y la NOVENA reaparición de la fecha vencida
+
+| Dato | Valor | Fuente / reserva |
+|---|---|---|
+| Mercado AI en educación, North America | **USD 951 M (2024) → USD 2.303,2 M (2029)** | MarketsandMarkets. **CAGR 15,9 %** |
+| 🔴 **Contraste con el CAGR global** | el global se cita en **31,35 %** y hasta **40,9 %** | 🔴 **La región líder crece a la MITAD del global: North America es mercado maduro, no mercado en explosión** |
+| Participación regional | **36 %** del mercado global | La mayor de las cuatro regiones |
+| Uso estudiantil | **66 % (2024) → 92 % (2025)** | ⚠️ Cifra **global**, no regional: no citarla como dato de North America |
+| Regulación federal | 🔴 **ninguna específica** — *«vacío regulatorio relativo, sin equivalente a la FDA»* | La decisión la toma cada distrito o universidad |
+| Regulación estatal | **Colorado** y **Texas** con requisitos parciales | Confirma el patrón de fragmentación de los pases 19 y 26 |
+
+🔴 **La fecha vencida reaparece por NOVENA vez, y en el mismo barrido de North America:** el resultado afirma que el AI
+Act *«toma efecto pleno en agosto de 2026»* y clasifica la AI educativa como alto riesgo. ⚠️ **Para educación la fecha que
+manda es 2027-12-02 (Anexo III punto 3), no agosto de 2026.** 🔵 **Nueve reapariciones en veinticuatro pases dejan de ser
+un error de una fuente y pasan a ser una propiedad del canal: el buscador devuelve esta fecha de forma estable y
+confiada.** **Regla: la fecha del AI Act no se cita nunca desde un buscador; si no se puede ver en EUR-Lex, se cita el
+Anexo y se dice que el número de reglamento está sin verificar** (gap **65**, abierto desde el pase 11).
+
+🟢 **Lo accionable para un *engagement* de North America:** el comprador no tiene un regulador que le exija nada, así que
+**el expediente no se vende por cumplimiento sino por responsabilidad civil y por política institucional**. Es el único
+mercado de los cuatro donde *«humans in the loop by design»* —lo que trae `datakind/student-success-tool` (MIT) en el
+árbol— es argumento comercial antes que requisito legal.
+
+
 **Pase 40 (2026-10-02) — la región aporta la pieza que cierra la capa peor abastecida de esta KB, es MIT y trae el expediente regulatorio puesto; y la fecha falsa del AI Act vuelve por OCTAVA vez**
 
 - 🟢 **El hallazgo que define la oportunidad de la región en este pase, y es el mejor de varios pases:
@@ -1851,6 +1875,40 @@ en más de 1.000 universidades** de EE. UU.: 🔵 **el incumbente ya está adent
 ya lista. **Donde hay instalación Apereo hay cliente para P88 sin migración.**
 
 ### EMEA
+
+#### Agregado en el pase 42 del 2026-10-02 — la fuente primaria está identificada y BLOQUEADA, y el dinero público tiene número
+
+🔴 **Hallazgo de fuente, y es el más valioso del barrido EMEA: existe una conferencia del Consejo de Europa dedicada
+exactamente a las dimensiones REGULATORIAS de la AI en educación, y es de ESTE MES (octubre de 2026).** Es la *2nd
+Working Conference* y la convoca la división de educación del Consejo de Europa.
+
+| Medición | Resultado |
+|---|---|
+| URL primaria | `coe.int/web/education/-/key-stakeholders-across-europe-will-explore-the-regulatory-dimensions-of-ai-in-education…` |
+| 🔴 Acceso | 🔴 **`EGRESS_BLOCKED` — `coe.int` está bloqueado por el proxy de egreso de este entorno** |
+| Qué se sabe | Título, convocante (Consejo de Europa, división de educación) y mes (**octubre de 2026**) |
+| 🔴 Qué NO se sabe | **fechas exactas, sede, y si cita un instrumento jurídico por nombre o número** |
+
+🔵 **Esto es un gap informado, no cobertura: se declara con nombre de dominio y causa.** ⚠️ **Y es una instancia NUEVA del
+gap 65** (primarias legales y multilaterales inaccesibles): hasta ahora el gap se sostenía en EUR-Lex y en las tres
+primarias de LATAM; **`coe.int` se suma a la lista de dominios bloqueados, y es el que habría respondido la pregunta
+regulatoria de EMEA de primera mano.** 🟢 **Acción con destinatario humano: alguien con acceso a `coe.int` puede cerrar
+esto en diez minutos, y es la fuente de mayor autoridad que esta KB haya identificado para EMEA.**
+
+| Dato de inversión pública | Valor |
+|---|---|
+| UK, primer *AI Adoption Summit* | **£200 M+** comprometidos |
+| de los cuales, expansión de *Bridge AI* | **£100 M** |
+| iniciativas regionales | **£53 M** |
+| Modelo de ejecución | Estado como financiador · **Cisco, IBM, BT, Rolls-Royce** como ejecutores · sindicatos como legitimadores |
+| Organizaciones que invertirán en formación AI en 2026 | **94 %** (al menos «algo probable») |
+
+🔵 **La lectura para Globant, y distingue a EMEA de las otras tres regiones:** **el comprador EMEA está comprando
+FORMACIÓN y GOBERNANZA, no tutores.** El dinero público está rotulado *adopción* y *habilidades*, y el modelo de
+ejecución ya tiene integradores adentro. ⚠️ **Y la cifra del 94 % es de organizaciones en general, no de instituciones
+educativas: no se cita como dato del sector educativo** — es la misma clase de error de población que la advertencia 3 de
+LATAM.
+
 
 **Pase 40 (2026-10-02) — la brecha de adopción INTRA-UE tiene número y es de 8x, las barreras del no-adoptante están cuantificadas, y la región aporta dos piezas: una viva con reserva de licencia y una muerta que alguien va a encontrar**
 
@@ -2732,6 +2790,28 @@ requisitos estrictos de residencia (auto-hospedar modelos abiertos en lugar de l
 
 ### APAC
 
+#### Agregado en el pase 42 del 2026-10-02 — soberanía como eje de compra, y la brecha de gobernanza con número
+
+| Dato | Valor | Reserva |
+|---|---|---|
+| Líderes de gobernanza que ponen AI como prioridad 2026 | **48 %** | Población: *governance leaders*, no instituciones educativas |
+| Organizaciones en Asia con AI en al menos un área | **57 %** | Idem — dato de empresa |
+| 🔵 Eje declarado para 2026 | **«soberano por diseño»** — se espera que la soberanía determine las decisiones de infraestructura de **~la mitad** de las firmas APAC | 🟢 **Es el dato de encuadre de la región** |
+| Regulación | **Singapur** en consulta sobre uso de AI en instituciones financieras (transparencia, responsabilidad, supervisión del riesgo) | 🔴 **No es educación**: es el sector financiero |
+| Armonización | Principios comunes (seguridad, transparencia, responsabilidad), **ejecución distinta por mercado** | — |
+
+🔴 **Lo que el barrido APAC NO dio, y hay que escribirlo:** **ninguna cifra de adopción de AI específica del sector
+educativo de APAC, y ningún instrumento regulatorio educativo de APAC.** Los resultados fueron de prioridades TI
+empresariales y de formación corporativa (`NIIT MTS`, alianza `TCS`+`Pearson`). ⚠️ **Es la séptima vez que el barrido
+regional de APAC devuelve material de empresa cuando se le pide educación.** 🟢 **El dato educativo-regulatorio más
+fuerte que esta base tiene de APAC sigue siendo el de Vietnam —seis sectores de alto riesgo, *monitorización del
+comportamiento* en evaluación, vigencia 2027-03-01— y sigue siendo el que manda sobre el AI Act por nueve meses.**
+
+🟢 **Lo accionable: en APAC el requisito técnico de entrada es el despliegue soberano**, y eso favorece exactamente la
+pila que esta base ya inventarió como autoalojable (Ollama/vLLM + Qdrant + LiteLLM) sobre una plataforma permisiva.
+**En APAC «on-premise» no es una concesión: es la condición de compra.**
+
+
 **Pase 38 (2026-10-02) — la región rompe su racha: el barrido APAC aporta por fin un repo permisivo nuevo, y es el de mejor diseño de todo el pase. Más tres leyes marco en vigor este año**
 
 - 🟢 **El barrido regional de APAC, que esta base declaró agotado varias veces, esta vez SÍ rindió — y lo que rindió es el alta destacada del pase.** `toshieji/moodle-grading-mcp` (**MIT**, copyright **Web Analytics Consultants Association (WACA) y Toshiaki Ejiri**, **Japón**, `HEAD` **2026-09-07**, **9 tools**): reemplaza a la pieza congelada que era *«la única permisiva que pone nota dentro de un LMS»*, y la reemplaza **con mejor diseño** — nota en `workflowstate=readyforreview` (**no la publica**), allowlist de cursos, `MOODLE_ALLOW_WRITE=1`, audit trail JSONL, sin notificación al alumno, pie de declaración de AI. 🔵 **Es la primera vez que el aporte de APAC a esta base no es escala ni modelo, sino criterio de seguridad** — y viene de una asociación profesional, no de una universidad ni de una big tech.
@@ -3496,6 +3576,38 @@ norteamericana (Open edX) o europea (ETH Zürich).** **La oportunidad APAC es de
 *upstream*.**
 
 ### LATAM
+
+#### Agregado en el pase 42 del 2026-10-02 — la primaria de IESALC reaparece por un segundo canal, y el aviso de población se extiende
+
+🟢 **El estudio institucional que esta base usa para LATAM aparece ahora también publicado por la UNU** (*AI Implementation
+in Higher Education in Latin America and the Caribbean*, `unu.edu/publication/...`), con la misma forma que el pase 19
+registró vía IESALC: **encuesta regional a 200 instituciones de educación superior, cinco dimensiones** (enseñanza y
+aprendizaje, investigación, vinculación con el medio, **administración** y gobernanza).
+
+🔵 **Dos canales independientes para la misma primaria es exactamente lo que el gap 65 pedía para LATAM**, donde las tres
+fuentes primarias venían bloqueadas. ⚠️ **No es la fuente leída de primera mano: es un segundo canal que confirma
+existencia, alcance y metodología.** El PDF del BID (*An Enabling Regulatory Framework for AI in Latin America and the
+Caribbean*, `publications.iadb.org`) aparece como segunda primaria regulatoria regional.
+
+| Dato del barrido | Valor | 🔴 Reserva de población |
+|---|---|---|
+| Startups LATAM que usan alguna solución AI (2026) | **99 %** | 🔴 **startups**, no instituciones |
+| Que la integran nativamente en su producto | **85 %** | 🔴 **empresas**, no instituciones |
+| Descargas de apps de AI generativa | **3.er mercado mundial** | Consumo, no adopción institucional |
+| Instituciones de educación superior con AI en al menos un área | **87 %** | 🟢 **Ésta es la cifra que sirve para un *engagement* educativo** (IESALC) |
+| Dimensión menos adoptada | 🔴 **administración, 34,1 %** | 🟢 El dato de síntesis del pase 40, intacto |
+| Edtech citada como caso | **Ednova** (Chile) — aprendizaje personalizado | Mención en prensa, **sin medición propia** |
+
+⚠️ **La advertencia 3 del pase 25 se extiende y hay que mantenerla a la vista: el barrido LATAM vuelve a devolver cifras
+de EMPRESAS (99 %, 85 %) pegadas a la cifra de INSTITUCIONES (87 %).** 🔴 **Promediarlas o usarlas de refuerzo mutuo en
+una propuesta es un error de lectura, y el canal las entrega juntas una y otra vez.** **La que vale es la de
+instituciones.**
+
+🟢 **Y la oportunidad sigue siendo la misma que el pase 40 identificó, ahora con la primaria confirmada por dos canales:
+la dimensión menos adoptada de LATAM (administración, 34,1 %) es exactamente la capa que esta base midió sin competencia
+agéntica** — *timetabling*, *proctoring*, admisiones. 🔵 **Y desde este pase la puerta de esa capa ya no es una promesa:
+está escrita y probada (P92).** **La brecha de oferta y la de adopción son la misma brecha, y ahora tenemos la pieza.**
+
 
 **Pase 38 (2026-10-02) — 🔴 el barrido de REPOS de LATAM vuelve a dar vacío, y esta vez conviene escribir qué sí devolvió: instrumentos de política, no software. Más el dato de que la región entró al tablero institucional de AI educativa**
 

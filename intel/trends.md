@@ -7,6 +7,7 @@ updated: 2026-10-02
 # 📡 Tendencias — education
 
 > Ventana de investigación: septiembre 2026. Verificado 2026-09-30; el pase 11, el 2026-10-01.
+> **Pase 42 del 2026-10-02:** **se ejecutan las tres acciones del pase 41, las tres por EJECUCIÓN y no por lectura, y el resultado corrige la recomendación comercial que el pase 41 dejó escrita.** 🔴 **El hallazgo que manda: la ruta MPL-2.0 que el pase 41 prefirió *«porque no arrastra AGPL»* cuesta MÁS código que la AGPL** — `RemoteProctoringService` de `seb-server` es una **interfaz desnuda con 12 métodos obligatorios de 14**, mientras `ProctoringBackendProvider` de `edx-proctoring` es una **clase concreta con 0 obligatorios de 18**: no son rutas equivalentes con distinta licencia, son **distinto trabajo** (tendencia **157**). 🟢 **Y lo que vuelve cotizable la ruta SEB igual, medido archivo por archivo: su obligación de publicar es UN valor de enum.** El registro del proveedor es **abierto** (Spring inyecta `Collection<RemoteProctoringService>`, la fábrica no se toca) pero el **tipo está cerrado** (`enum ProctoringServerType{JITSI_MEET,ZOOM}`), así que un tercero obliga a tocar **1 de los 10 archivos *Covered*** que mencionan el enum — y por el copyleft **por archivo** de MPL-2.0 §1.10(a), **lo único que hay que publicar es ese valor**; el proveedor propio es archivo nuevo y queda propietario (tendencia **158**). ⚠️ **Hueco medido que se escribe en la propuesta y no se descubre en UAT: el validador de SEB cae a `return true` ante un tipo desconocido — tu proveedor pasa SIN validación de campos** (tendencia **159**). 🔴 **Corrección al pase 41: `LmsType` tiene SEIS valores con matriz de *features*, no cuatro, y `LMS_FULL_INTEGRATION` NO está en `OPEN_EDX` —sólo en `MOODLE_PLUGIN`—, mientras `MOODLE` a secas tiene `SEB_RESTRICTION` COMENTADA en el fuente: el LMS del cliente manda más que la licencia** (tendencia **160**, patrón **P91**). 🟢 **Acción 1 CUMPLIDA Y PROBADA: la puerta MCP de UniTime existe** — 26 tools generados del árbol (15 conectores × verbos reales), **13 expuestos**, y **23 aserciones en verde**, entre ellas la que importa: 🔴 **0 de 9 llamadas retenidas llegaron al upstream**, `script.post` incluido, que ejecuta un script del servidor (tendencia **161**, patrón **P92**). 🟢 **Acción 2 CUMPLIDA: 61 filas re-fechadas sobre 472 ramas, cobertura 61/61** — y el gap 89 tenía razón en las dos direcciones: **4 veredictos se promueven** (`algo-sensei` de FRÍO a ACTIVO porque **commiteó hoy**, más `gradescope-mcp`, `TutorIA` y `open-badges-mcp`) **y 2 se SOSTIENEN gracias al filtro** (`oneroster-ts` seguiría CONGELADO aunque el máximo ingenuo lo promovería 10 meses con un **commit vacío de bot**). 🟢 **Reparto corregido: 78,7 % activas contra el 69,4 % del pase 37 — la tabla está más viva de lo que esta base venía diciendo** (tendencia **162**). 🔴 **Las tres clases de «no es vida de proyecto» del pase 41 son SEIS, y la que más cuentas cambia es la que faltaba: `dependabot`** — `armenian-national-library-mcp` tiene **10 ramas dependabot** y parece 7 semanas más fresco de lo que es (tendencia **163**). 🔵 **Y el hallazgo de método es sobre un defecto de ESTE pase: mi primer filtro descartaba el tip de la rama por defecto, y `OpenTutor` y `Shiksha-Copilot` quedaban SIN fecha de vida. La regla que queda: el tip de la rama por defecto cuenta SIEMPRE —es historia mergeada—; los filtros sólo deciden si una rama no-defecto agrega vida encima** (tendencia **164**). 🔴 **La familia `Kuali` entra como registro histórico, no como dependencia: 4 repos, los cuatro muertos (6 a 9 años), *middleware* ECL-2.0 y las dos aplicaciones de verdad AGPL-3.0 — y esta KB tenía 0 menciones en 41 pases** (tendencia **165**). 🔴 **Fuente primaria nueva identificada y BLOQUEADA: el Consejo de Europa tiene una *2nd Working Conference* sobre las dimensiones REGULATORIAS de la AI en educación este mes, y `coe.int` da `EGRESS_BLOCKED` — instancia nueva del gap 65, y la de mayor autoridad para EMEA** (tendencia **166**). ⚠️ **Y la fecha vencida del AI Act reapareció por NOVENA vez, otra vez en el barrido de North America: deja de ser el error de una fuente y pasa a ser una propiedad del canal.** Ver las tendencias **157**–**166** y los patrones **P91**–**P92**.
 > **Pase 41 del 2026-10-02:** **se ejecutan las tres acciones del pase 40, las tres rinden, y la de mayor valor comercial CORRIGE un veredicto que esta base había publicado como cerrado.** 🟢 **El hallazgo que manda estaba en un `README.txt` de 174 bytes dentro del paquete: `edx_proctoring/backends/` está *carved-out* en Apache-2.0 dentro de un repo AGPL-3.0** — verificado en el *wheel* y en el árbol — **así que el directorio donde se escribe un backend de *proctoring* propio no arrastra la AGPL** (tendencia **150**). 🔴 **El gap 84 (*«proctoring no tiene opción permisiva»*) queda corregido por DOS motivos independientes:** ése, y que **existe una capa de integración de examen fuera de Open edX, `seb-server` de ETH Zürich, MPL-2.0 — copyleft débil — con `OPEN_EDX`, `MOODLE`, `MOODLE_PLUGIN` y `OPEN_OLAT` ya escritos en su `enum LmsType`** (tendencia **149**). 🟢 **Y la pregunta comercial de la acción 3 se responde contando un cero: `ProctoringBackendProvider` tiene 18 métodos y CERO `@abstractmethod`, o sea es una base concreta — integrar *proctoring* propio en Open edX es implementar una interfaz (12 modelos, 20 rutas y las 2 rutas de supresión de datos ya existen), no escribir la capa** (tendencia **151**). 🔵 **El matiz que impide sobrevenderlo, medido con `ast` en el mismo pase: la carve-out NO es autocontenida, pero lo que cruza hacia la AGPL es vocabulario —constantes, nombres de excepción y valores de estado— y no lógica** (**gap 88**). 🔴 **Hallazgo de método que obliga a re-correr el pase 37: la rama por defecto puede ser la rama MUERTA de un proyecto vivo —`seb-server` mide 6 meses en `master` y commiteó AYER en `dev-3.0`— y la prueba de validez sobre las 10 filas paradas sostiene 10 de 10 veredictos, pero sólo al LEER EL AUTOR: el commit más nuevo de `oneroster-ts` es un commit VACÍO de un bot y el de `educhain` es un refactor firmado por un AGENTE, sin mergear** (tendencias **152** y **153**). ✅ **Gap 83 CERRADO por la historia de dos archivos, y baja de bloqueante a anotación: las dos licencias en conflicto son permisivas OSI** (tendencia **154**). ⚠️ **Gap 81 PARTIDO EN DOS clases con riesgo y acción distintos: `@timadey/proctor` declara MIT tres veces en el árbol y le falta el archivo; `sisu-mcp` tiene UNA declaración en todo el mundo** (tendencia **155**). 🔵 **Y el hallazgo de síntesis, que es el más vendible: el *proctoring* es la única capa de esta base nombrada como alto riesgo por DOS reguladores de dos regiones —Anexo III punto 3 de la UE (2027-12-02) y los seis sectores de Vietnam (2027-03-01, NUEVE MESES ANTES)— y es la que este pase midió sin NINGUNA competencia agéntica: 404 en 8 de 8 nombres de npm y 0 en los 46,6 MB del índice de PyPI** (tendencia **156**, **gap 86**). Ver las tendencias **149**–**156** y los patrones **P88**–**P90**.
 > **Pase 40 del 2026-10-02:** **se ejecutan las tres acciones del pase 39 y las tres rinden, pero la primera rinde descubriendo que el instrumento del pase anterior está roto — y roto de la peor manera, devolviendo `200`.** 🔴 **`pypi.org/search/` responde `HTTP 200` con una página de desafío anti-bot en 28 de 28 términos**: un barrido corrido con el procedimiento del pase 39, sin control de contenido, **habría publicado 28 ausencias falsas y las habría llamado medición** (tendencia **141**). 🟢 **El reemplazo es mejor que el original y queda documentado: `pypi.org/simple/` devuelve 200 con 46.675.078 bytes y 903.402 nombres de paquete** — descubrimiento completo, sin ranking ni paginación (tendencia **142**). 🔴 **Y el barrido sobre las cuatro capas de administración académica devuelve el resultado más fuerte del pase, que es un vacío: no existe NI UNA puerta MCP de educación para *proctoring*, *timetabling*, admisiones, *student success* ni accesibilidad, en ninguno de los cuatro registros** — la única traza es `ucleeds-mcp-tester`, **el cliente de prueba de un MCP de *timetabling* cuyo servidor nunca se publicó** (tendencia **144**). 🟢 **La mejor alta en varios pases cierra la capa que esta base declaró la peor abastecida desde el pase 11: `datakind/student-success-tool` es MIT, y lo que la vuelve vendible no es el modelo sino que trae *model cards* y secciones de análisis de sesgo en el árbol**, con *«humans in the loop by design»* escrito en el README — la forma exacta del requisito estatal de North America (tendencia **148**). 🟢 **La capa de *proctoring* queda cerrada y la respuesta es copyleft:** `openedx/edx-proctoring` (**AGPL-3.0**), 🔴 **con `HEAD` de 4 meses y último release de 17** — de donde sale la regla de que **`HEAD` mide al proyecto y el release mide lo que el cliente instala** (tendencia **147**). ✅ **Acción 2 cumplida y el resultado es opuesto en las dos piezas por UNA línea de código: `mcp-usc` es 88 % portable (80 de 91 tools) porque su host es `os.getenv`; `DUTIC-mcp` es 8 % (1 de 12) porque el suyo es `export const HOST`** (tendencia **145**). 🔵 **Y al medirla apareció el mejor dato de LATAM en varios pases: la telemetría de `DUTIC-mcp` está escrita contra la Ley 29733 y la nombra en el código.** ✅ **Acción 3 cumplida y PROBADA, no descrita: el *gateway* de partición de tools existe, son 175 líneas de stdlib, y se verificó que recorta `tools/list` de 7 a 3, bloquea `delete_document` y `call_method` con `-32601` sin que lleguen al upstream, y que con allowlist vacía expone cero tools** (**P85**). 🔴 **Dos clases de evidencia nuevas: la licencia que se CONTRADICE entre el manifiesto y el árbol** (`exam-guard`: ISC contra Apache-2.0 — distinto del gap 81, y peor) y **la colonización del vocabulario: «proctor» ya significa supervisar al AGENTE, y «caliper» tiene seis homónimos no educativos y una sola pieza educativa** (tendencias **143** y **146**). 🔵 **Y el hallazgo de síntesis, que es el más accionable: en LATAM la dimensión menos adoptada es ADMINISTRACIÓN (34,1 %) — justo la capa que este pase midió vacía de open source. La brecha de oferta y la de adopción son la misma brecha.** Ver las tendencias **141**–**148** y los patrones **P85**–**P87**.
 > **Pase 38 del 2026-10-02:** **se fue a buscar SUCESIÓN para las tres dependencias congeladas del pase 37 y el resultado es asimétrico: dos cierran con piezas permisivas vivas (tres MIT para Moodle, Apache-2.0 + MIT para OneRoster) y la tercera no — y el fork que parecía salvarla está 2 commits adelante, los dos de configuración de Cloud Run** (tendencias **132** a **135**, `gap 78` y `gap 79`).
@@ -3891,6 +3892,156 @@ veredicto que esta base había publicado como cerrado.**
 | **131** (`curl` sobre `github.com` devuelve 403 para todo) | ✅ **RE-CONFIRMADO con control negativo explícito** | **4 de 4 iguales (403)** en dos repos reales y dos inventados; **`git ls-remote` acierta 4 de 4**. **Toda URL de GitHub de este pase se verificó clonando el árbol**, que es evidencia más fuerte que un `HEAD` de HTTP |
 | **26** (capa que decide sobre el alumno) | 🟢 **sigue reformulado a favor desde el pase 40** | Sin avance deliberado este pase: las tres acciones del 40 tenían prioridad |
 | **60** / **61** / **68** / **65** / **80** / **82** | 🔴 **ABIERTOS, sin avance deliberado** | El **65** (primarias legales y multilaterales) y el **80** (sin *daemon* de Docker) siguen siendo **límites de entorno**, no de método. **No insistir por esas vías** |
+
+## 🔵 Tendencias 157–166 — el pase 42 del 2026-10-02
+
+### 157 — 🔴 La licencia permisiva cuesta más código que la copyleft, y es al revés de lo que se supone
+
+**Medido en las dos rutas de *proctoring* de esta base.** `edx-proctoring` expone `ProctoringBackendProvider` como **clase
+concreta: 18 métodos, 0 `@abstractmethod`** — se hereda y se sobreescribe lo que haga falta. `seb-server` expone
+`RemoteProctoringService` como **interfaz desnuda: 14 métodos, 2 `default`, 12 obligatorios**. 🔵 **La ruta cuya licencia
+es más cómoda (MPL-2.0, copyleft débil, por archivo) es la que pide más trabajo; la que arrastra AGPL regala la
+implementación base.** **Regla para cotizar: la licencia dice qué podés publicar, no cuánto vas a escribir. Son dos
+preguntas y hay que medir las dos.**
+
+### 158 — 🟢 El copyleft más barato que esta base cotizó: un valor de enum
+
+**MPL-2.0 es copyleft por ARCHIVO** (§1.10(a): *«cualquier archivo … que resulte de una adición, eliminación o
+modificación del contenido de *Covered Software*»*). En `seb-server` el registro de un proveedor de *proctoring* es
+**abierto** —`RemoteProctoringServiceFactory(Collection<RemoteProctoringService>)`, inyección de Spring, la fábrica no se
+toca— pero `getType()` devuelve un **enum con exactamente dos valores**. **10 archivos *Covered* mencionan el enum; sólo
+1 hay que modificar.** 🟢 **La divulgación obligatoria es un valor de enum, y la lógica del proveedor —archivo nuevo, sin
+*Covered Software* dentro— queda propietaria.** 🔵 **Es un dato que cambia una conversación de licenciamiento con un
+cliente, y se obtuvo contando referencias, no leyendo la licencia.**
+
+### 159 — ⚠️ El validador que no rechaza: un tipo desconocido pasa SIN validar
+
+`ProctoringSettingsValidator.isValid()` pregunta `if (serverType == JITSI_MEET || serverType == ZOOM)` y **cae a
+`return true`**. **Un tercer proveedor no es rechazado: pasa sin validación de campos.** 🔵 **No es un bloqueo, es
+trabajo**: hay que escribir la validación de los campos propios. ⚠️ **Y es la clase de detalle que, no dicho, aparece en
+UAT como un defecto del integrador.** **Se escribe en la propuesta.**
+
+### 160 — 🔴 El `enum` del LMS decide más que la licencia, y el pase anterior lo leyó incompleto
+
+`LmsSetup.java` (`dev-3.0`) declara **seis** `LmsType`, cada uno con su `EnumSet<Features>`: `MOCKUP`, `OPEN_EDX`,
+`MOODLE`, `MOODLE_PLUGIN`, `ANS_DELFT`, `OPEN_OLAT`. 🔴 **`LMS_FULL_INTEGRATION` —las llamadas del LMS *hacia* SEB
+Server— existe sólo en `MOCKUP` y `MOODLE_PLUGIN`: NO en `OPEN_EDX`.** 🔴 **Y `MOODLE` a secas tiene `SEB_RESTRICTION`
+comentada en el fuente.** **El pase 41 había leído cuatro valores y ninguna matriz.** 🔵 **La consecuencia comercial: la
+pregunta que decide la ruta no es *«qué licencia tolera el cliente»* sino *«qué LMS tiene»*.** Ver **P91**.
+
+### 161 — 🟢 La primera puerta de agente de esta KB que se entrega PROBADA, y lo que la vuelve proponible es lo que retiene
+
+**26 tools generados del árbol de `UniTime/unitime`** (15 conectores × verbos leídos de los `do*` sobreescritos),
+montados sobre el *gateway* del pase 40. **23 aserciones, 23 en verde.** 🔴 **La que importa: `0 de 9` llamadas retenidas
+llegaron al upstream** —entre ellas `script.post`, que arma un `ExecuteScriptRpcRequest` y **ejecuta un script del
+servidor**. 🔵 **Un envoltorio ingenuo de los 15 conectores publica ejecución remota como tool de un agente.** **La
+diferencia entre una demo y un entregable es la allowlist, y se prueba con un *stub* que registra cada llamada recibida —
+no con un *prompt* que pide no usar la herramienta.** Ver **P92**.
+
+### 162 — 🟢 La tabla de esta KB está más viva de lo que la KB venía diciendo, y el instrumento anterior la subestimaba
+
+**61 filas, 472 ramas, cobertura 61/61.** Reparto corregido: **48 activas (78,7 %)**, 3 tibias, 7 frías, 3 congeladas.
+El pase 37, midiendo por rama por defecto, decía **69,4 %**. 🔵 **El gap 89 tenía razón en las DOS direcciones:** cuatro
+veredictos se promueven (`algo-sensei` FRÍO → ACTIVO, `gradescope-mcp` y `TutorIA` tibio → ACTIVO, `open-badges-mcp`
+tibio → ACTIVO) **y dos se sostienen sólo porque el filtro los sostiene.** ⚠️ **Matiz honesto sobre `algo-sensei`: el
+pase 37 no se equivocó al medirlo —el proyecto commiteó hoy, después de esa medición.** **Una fila fría no es una fila
+muerta: es una fila que hay que volver a mirar.**
+
+### 163 — 🔴 La clase que faltaba en el filtro de vitalidad, y es la más común de todas: `dependabot`
+
+El pase 41 nombró tres clases que no son vida de proyecto (commit vacío de bot, regeneración de SDK, rama de agente sin
+mergear). **Medidas 472 ramas, son seis**, y la que más cuentas cambia es la que faltaba: **ramas de `dependabot` /
+`renovate` con un *bump* de dependencia — 4 repos, 18 ramas.** `suren-kk/armenian-national-library-mcp` tiene **10**, y
+hace parecer el repo **7 semanas** más fresco de lo que es. **Las otras dos nuevas: `bot-other` (autor `[bot]` en rama no
+defecto) y `auto-content`** (`OATutor` → `content-staging`, *«Automated content update»*, autor `Generic User`: un
+*pipeline* de contenido no es desarrollo). 🟢 **Confirmación independiente en un repo fuera de la tabla: `KualiCo/rice`
+también tiene su rama más nueva en `dependabot/`.**
+
+### 164 — 🔵 Un filtro de más no se nota, porque se parece exactamente a un proyecto muerto
+
+**Defecto encontrado en el instrumento de ESTE pase, no del anterior.** La primera versión aplicaba los seis filtros a
+todas las ramas, **incluida la de defecto**. Resultado medido: `jupyterlab/jupyter-ai` perdía 3 meses (el tip de su `main`
+lo firma un `[bot]`), y **`zijinz456/OpenTutor` y `microsoft/Shiksha-Copilot` quedaban sin NINGUNA fecha de vida.**
+🟢 **La regla que queda: el tip de la rama por defecto cuenta SIEMPRE como vida —es historia mergeada, y un commit de
+release firmado por un bot en `main` sigue siendo el proyecto publicando—; los filtros deciden únicamente si una rama
+NO-defecto agrega vida por encima de ella.** ⚠️ **Es la misma familia de error que el `200` de PyPI del pase 40 y el
+`403` de `curl` del 37: el instrumento falla hacia el lado que se confunde con el resultado esperado.** **Tercera vez que
+el instrumento del pase anterior se corrige al EJECUTARLO en vez de leerlo.**
+
+### 165 — 🔴 El reparto de licencias que se repite: el *middleware* es permisivo y la aplicación que el cliente quiere es copyleft
+
+**La familia `Kuali`, medida en este pase y ausente de esta KB durante 41 pases:** `kuali/rice` y `KualiCo/rice` son
+**ECL-2.0** (*Educational Community License v2.0*, derivada de Apache-2.0, aprobada por la OSI) y son el **middleware**;
+`kuali/kc` (administración de investigación) y `kuali/kfs` (finanzas) son **AGPL-3.0** y son las **aplicaciones**.
+🔴 **Los cuatro están muertos: entre 6 y 9 años sin commits reales.** 🔵 **Pero la forma importa porque se repite:**
+`edx-proctoring` (núcleo AGPL, `backends/` Apache-2.0), `lrsql`/`Ralph` contra Learning Locker, y ahora Kuali.
+**La licencia usable suele estar en la capa que no resuelve el problema del cliente.** ⚠️ **Y el barrido global devolvió
+Kuali descrito en PRESENTE: una propuesta escrita desde el buscador lo habría ofrecido como opción viva.**
+
+### 166 — 🔴 La primaria de mayor autoridad para EMEA existe, es de este mes, y está bloqueada
+
+El barrido EMEA identificó la ***2nd Working Conference*** del **Consejo de Europa** sobre las **dimensiones regulatorias
+de la AI en educación**, **octubre de 2026**. 🔴 **`coe.int` responde `EGRESS_BLOCKED` en este entorno.** Se conocen
+título, convocante y mes; **no** fechas exactas, sede ni si cita un instrumento jurídico por nombre o número. 🔵 **Es
+una instancia NUEVA del gap 65 y la más valiosa: hasta ahora el gap se sostenía en EUR-Lex y en las tres primarias de
+LATAM.** 🟢 **Queda como acción con destinatario humano: alguien con acceso a `coe.int` lo cierra en diez minutos.**
+⚠️ **Y en el mismo barrido —el de North America— la fecha vencida del AI Act reapareció por NOVENA vez.** **Nueve
+reapariciones en veinticuatro pases dejan de ser el error de una fuente: son una propiedad del canal, y la regla es no
+citar nunca la fecha del AI Act desde un buscador.**
+
+## 🔵 Estado de gaps al cierre del pase 42 del 2026-10-02
+
+**Este pase ejecutó las TRES acciones del pase 41. Las tres rindieron, y la primera corrigió una recomendación comercial
+que esta base ya había publicado.**
+
+| Gap | Estado | Resolución |
+|---|---|---|
+| **Acción 1** (escribir y probar la puerta MCP de UniTime) | ✅ **CUMPLIDA Y PROBADA** | **26 tools del árbol → 13 expuestos. 23 aserciones en verde**, entre ellas **0 de 9 llamadas retenidas llegaron al upstream** y *allowlist* vacía → **0 tools**. Probada además **extremo a extremo por stdio real**. Ver **P92** |
+| **Acción 2** (re-fechar con el instrumento corregido) | ✅ **CUMPLIDA — 61/61, 472 ramas** | **4 veredictos promovidos, 2 sostenidos por el filtro.** Reparto **78,7 % activas** contra 69,4 % del pase 37. 🔴 **Las tres clases de no-vida son SEIS: falta `dependabot`, y es la más común** |
+| **Acción 3** (enumerar `seb-server` al nivel de `edx-proctoring`) | ✅ **CUMPLIDA — y corrige al pase 41** | **313 `.java` en `servicelayer/`, 75 de *proctoring*.** SPI `RemoteProctoringService`: **12 obligatorios de 14**. Registro abierto, **tipo cerrado**. **Divulgación obligatoria = 1 valor de enum.** Ver **P91** |
+| **89** (la rama por defecto puede ser la rama muerta) | ✅ **CERRADO — y tenía razón en las dos direcciones** | Medido sobre 472 ramas. **El número publicado estaba mal en la dirección peligrosa en 4 filas** (subestimaba vida) **y el filtro evitó 2 promociones falsas** |
+| **86** (las dos capas institucionales sin puerta de agente) | 🟢 **CERRADO A MEDIAS — la mitad UniTime tiene puerta** | **La puerta de UniTime existe y está probada (P92).** 🔴 **La de `seb-server` sigue sin existir**: queda como la mitad abierta del gap |
+| **87** (`master` de `seb-server` tiene 6 meses) | ⚠️ **CONFIRMADO y usado como regla** | `dev-3.0` commiteó **2026-10-01** (`Andreas Hefti`, *«code cleanup»*); `master`, 2026-04-01. **Todo lo enumerado en este pase está medido en `dev-3.0`, y se declara** |
+| **NUEVO 90** (el validador de SEB no valida a un tercero) | ⚠️ **ABIERTO como trabajo cotizable, no como bloqueo** | `ProctoringSettingsValidator` cae a `return true`. **Es alcance que hay que incluir en la propuesta** (tendencia **159**) |
+| **NUEVO 91** (`LMS_FULL_INTEGRATION` no está en Open edX) | 🔴 **ABIERTO como límite de producto** | Sólo `MOCKUP` y `MOODLE_PLUGIN` lo declaran. **Para un cliente Open edX la ruta SEB no da integración plena**, y eso no se arregla con código propio: está en el `enum` del upstream (tendencia **160**) |
+| **65** (primarias legales / multilaterales) | 🔴 **ABIERTO — y con un dominio bloqueado NUEVO y de alta autoridad** | 🔴 **`coe.int` → `EGRESS_BLOCKED`**, y era la primaria regulatoria educativa de EMEA (tendencia **166**). 🟢 **Avance parcial en LATAM: la primaria de IESALC aparece por un SEGUNDO canal (UNU), con 200 instituciones y 5 dimensiones confirmadas.** ⚠️ **La fecha del AI Act reapareció por NOVENA vez y sigue sin verse en EUR-Lex** |
+| **81** (licencia sólo en el manifiesto) / **83** (licencia contradictoria) | ⚠️ **SIN CAMBIO — y la acción que falta es hacia afuera** | El PR de un archivo a `Timadey/proctor` y el contacto a `@ink-waffle/sisu-mcp` **siguen siendo acciones con destinatario humano**: este pase tampoco le escribe a terceros |
+| **40** (el cartucho MCP de CaSS) / **60** (mitad QTI) / **61** (curso origen vacío) / **68** / **80** (sin Docker) | 🔴 **ABIERTOS, sin avance deliberado** | Las tres acciones del 41 tenían prioridad. **El 80 no se reintenta: el pase 39 dejó escrito «no insistir por esta vía»** |
+| **26** (capa predictiva) | 🟢 **SIN CAMBIO — sigue reformulado a favor** | `datakind/student-success-tool` (MIT) sigue siendo la respuesta, y el barrido de North America de este pase **refuerza por qué**: sin regulador federal, *«humans in the loop by design»* es argumento comercial |
+
+## 🔵 Las tres acciones que el pase 42 deja escritas para el pase 43
+
+**Las tres son ejecutables en este entorno: ninguna necesita Docker, ni un host bloqueado, ni el buscador roto de PyPI,
+ni la API de GitHub.**
+
+1. 🟢 **Cerrar la mitad abierta del gap 86: escribir y PROBAR la puerta MCP de `seb-server`, que es la única de las dos
+   capas institucionales que sigue sin puerta.** El trabajo ya está acotado por este pase: **36 controladores, 41
+   constantes de *endpoint*, y los nombres de los cuatro APIs de integración de LMS.** **La acción concreta:** generar el
+   manifiesto desde `gbl/api/API.java` (las constantes `*_ENDPOINT`, que son datos, no prosa), montarlo sobre el mismo
+   *gateway* de **P85**, y 🔴 **verificar ejecutando que los *endpoints* de escritura de `/exam`, `/lms-setup` y
+   `/useraccount` quedan fuera con `-32601`**, además de los de `/batch-action`. ⚠️ **Contra un *stub*, igual que P92:
+   no hace falta levantar SEB Server.** 🔵 **El valor: con las dos puertas escritas, esta base puede proponer la capa de
+   examen completa —horarios y supervisión— con licencia usable y sin competencia agéntica.**
+2. 🟢 **Medir el COSTO de los 12 métodos obligatorios de `RemoteProctoringService`, que es el número que falta para
+   cotizar P91.** Hoy esta base sabe *cuántos* métodos hay que escribir pero no *cuánto pesan*. **La acción concreta:**
+   leer `JitsiProctoringService` y `ZoomProctoringService` —las dos implementaciones de referencia— y **contar líneas por
+   método, dependencias externas por método y cuántos de los 12 son triviales** (devuelven un `Map` de constantes, como
+   `getDefaultReconfigInstructionAttributes`) **contra cuántos hablan con un servicio remoto**. 🔵 **El valor es directo:
+   P91 hoy dice «12 métodos» y una propuesta necesita «12 métodos, de los cuales N triviales y M con integración
+   remota».** **Las dos implementaciones están en el clon y no hace falta red.**
+3. 🟢 **Cerrar el gap 90 con código, no con una advertencia: escribir la validación de campos que SEB no aplica a un
+   proveedor de terceros.** El pase midió que el validador cae a `return true`. **La acción concreta:** escribir el
+   `ConstraintValidator` propio para un `ProctoringServerType` nuevo, siguiendo la forma exacta de
+   `ProctoringSettingsValidator` (plantillas `proctoringSettings:<campo>:notNull`), y **probar por ejecución que un
+   settings incompleto es rechazado y uno completo aceptado**. 🔵 **El valor: convierte el gap 90 de «alcance que hay que
+   avisar» en «pieza que ya existe», que es la diferencia entre una advertencia y un entregable.**
+
+⚠️ **Y las dos acciones hacia afuera que esta corrida sigue sin poder ejecutar, declaradas para no perderlas:** el
+`LICENSE` que falta en `Timadey/proctor` (**un PR de un archivo**, y el árbol ya dice MIT tres veces) y la licencia sin
+segunda fuente de `@ink-waffle/sisu-mcp` (**bloqueante: es la única puerta de SIS de educación superior de esta base**).
+🔵 **Se suma una tercera, nueva y de alto valor: pedirle a alguien con acceso a `coe.int` el programa de la *2nd Working
+Conference* del Consejo de Europa** — es la primaria regulatoria educativa de EMEA y este entorno no la alcanza.
+
 
 ## 🔵 Las tres acciones que el pase 41 deja escritas para el pase 42
 

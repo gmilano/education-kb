@@ -101,6 +101,8 @@ updated: 2026-10-02
 
 **🔵 Pase 40 del 2026-10-02 — el conteo se re-mide con la regla del pase 36 y hay que corregirlo: son 65 filas, no 52.** Aplicada la regla que el pase 36 estableció —**contar *slugs* distintos** entre el separador y la primera línea que no empieza con `|`— el archivo tiene **65 filas de datos y 65 slugs distintos: cero duplicados**. 🔴 **El encabezado declaraba «52 filas», y la diferencia no es de este pase: los pases 37 a 39 agregaron filas sin actualizar el número** (este pase agrega **2**: `mereos` y `@timadey/proctor`, las dos de *proctoring*). 🔵 **Es la séptima vez que esta KB se pelea con este número, y la lección ya no es sobre el instrumento —que funciona— sino sobre el hábito: la regla del pase 36 es correcta y nadie la estuvo corriendo.** La medición es programática y cuesta un comando; **conviene correrla en cada pase que toque la tabla, no cada cinco.** ✅ **Verificado en este pase: 65 filas / 65 slugs / 0 duplicados.**
 
+**🔵 Pase 42 del 2026-10-02 — la tabla se queda en 66 filas: OCTAVO pase consecutivo sin altas de agente, y el pase no se gastó buscándolas.** Se corrieron **las cuatro búsquedas globales y las cuatro regionales con el año calculado** (`date -u +%Y` → **2026**) y 🔴 **devolvieron por octava vez la capa genérica** (openclaw 385.407 ★, dify 151.639 ★, browser-use 108.128 ★, Mem0 62.735 ★, AutoGen 60.284 ★) **y material didáctico *sobre* AI**, que no es un agente de educación. ⚠️ **Dos tercios de los resultados de la primera búsqueda vinieron de agregadores SEO sin repo verificable (`toolradar`, `fungies.io`, `ayautomate`, `oosmetrics`): se descartaron sin medirlos, y se declara.** 🟢 **El valor del pase está en las tres acciones del 41, las tres ejecutadas:** la **puerta MCP de UniTime escrita y PROBADA** (26 tools → 13 expuestos, **23 aserciones en verde, 0 de 9 llamadas retenidas llegaron al upstream**, ver **P92**), las **61 filas de GitHub re-fechadas por sus 472 ramas** (capa de vitalidad corregida, abajo) y la **superficie de `seb-server` enumerada** (**P91**). 🔴 **Y el hallazgo que corrige al pase 41: la ruta MPL-2.0 que ese pase dejó como preferible cuesta MÁS código que la AGPL** — `RemoteProctoringService` es una **interfaz desnuda con 12 métodos obligatorios**, mientras `ProctoringBackendProvider` es una **clase concreta con 0 obligatorios**. 🟢 **Lo que sí la vuelve cotizable: su obligación de publicar es UN valor de enum.** 🔵 **Hallazgo lateral: la familia `Kuali` entra como registro histórico —4 repos, los cuatro muertos (6 a 9 años), middleware ECL-2.0 y aplicaciones AGPL-3.0— y esta KB tenía 0 menciones en 41 pases.** ✅ **Conteo corrido con la regla del pase 36 en el mismo pase que tocó el archivo: 66 filas / 66 identificadores distintos / 0 duplicados.**
+
 **🔵 Pase 41 del 2026-10-02 — la tabla pasa a 66 filas, y el pase no se gastó en buscar agentes nuevos: se gastó en ejecutar las tres acciones que el pase 40 dejó escritas, que era donde estaba el valor.** El alta es **una** (`exam-guard`), y entra porque **se le resolvió la licencia, no porque se la haya encontrado**: el **gap 83 queda CERRADO** leyendo la *historia* de dos archivos, y el resultado es que **la contradicción ISC/Apache-2.0 no bloquea nada** (las dos son permisivas OSI; difieren en la cláusula de patentes). 🔵 **Y dos filas que ya estaban cambian de clase sin cambiar de licencia, que es el resultado más útil del pase:** el **gap 81 no era una clase, eran dos.** `@timadey/proctor` **declara MIT tres veces en el árbol** y apunta a un `LICENSE` que nunca se commiteó —es **archivo faltante**, y se cierra con un PR de un archivo—, mientras `@ink-waffle/sisu-mcp` tiene **una sola declaración en todo el mundo** y ni README en el tarball. **Misma etiqueta antes, riesgo muy distinto.** ✅ **Verificado en este pase con la regla del pase 36, y corrido en el mismo pase que tocó la tabla, como el pase 40 pidió: 66 filas / 66 slugs / 0 duplicados.** 🔴 **Nota de alcance: los tres hallazgos de base de este pase —`UniTime/unitime` (Apache-2.0), `SafeExamBrowser/seb-server` y `seb-win-refactoring` (MPL-2.0)— NO entran en esta tabla porque no son agentes: son plataformas con API, y están en `repos/foundations.md` y `verticals/solutions.md`. Lo que esta tabla registra de ellas es que **su puerta de agente no existe todavía en ningún registro** (gap 86).**
 
 **🔴 Pase 36 del 2026-10-02 — el conteo baja de 52 a 51, y la causa es un defecto que el conteo programático NO PODÍA ver: `Claw-ED` estaba DOS VECES.** Las dos filas apuntaban al mismo repo (`SirhanMacx/Claw-ED`) con **59 ★ y 60 ★**, una del 2026-09-30 y otra agregada como «alta» en el pase 35 — y la línea de historial de este mismo archivo dice *«Claw-ED se agregó en la tercera pasada del 2026-09-30»*, al lado. ⚠️ **La lección es sobre el instrumento, no sobre el descuido: la regla del pase 30 cuenta FILAS entre el separador y la primera línea que no empieza con `|`, y un duplicado es una fila válida.** Un conteo de filas no puede detectar una fila repetida. **El control que sí lo detecta es contar *slugs* distintos**, y medido así el archivo tiene **51 filas = 49 repos de GitHub distintos + 2 entradas que son de PyPI y no de GitHub** (`openedx-mcp` y `tutor-contrib-openedxmcp`, las dos AGPL-3.0, con URL verificable de PyPI). 🔵 **Es la sexta vez que esta KB se pelea con este número y la primera en que el número se descompone en vez de declararse:** 51 filas / 49 repos / 0 duplicados, y de acá en adelante **el conteo que vale es el de slugs distintos**.
@@ -342,6 +344,66 @@ se explica abajo, porque es la cuarta vez que esta KB se pelea con este número.
 
 
 
+
+## 🧭 Capa de vitalidad CORREGIDA — las 61 filas de GitHub re-fechadas por todas sus ramas (pase 42 del 2026-10-02)
+
+**Esta capa REEMPLAZA el instrumento del pase 37 y conserva su tabla abajo como historia.** El pase 41 probó que la rama
+por defecto puede ser la rama **muerta** de un proyecto vivo (`seb-server`: 6 meses en `master`, commit de ayer en
+`dev-3.0`) y dejó el **gap 89**: *«el número publicado puede estar mal en la dirección peligrosa»*. **Este pase lo midió.**
+
+**Instrumento:** `git ls-remote --heads` sobre las 61 filas de GitHub → **472 ramas** → `git fetch --depth 1` de cada tip
+→ **máximo de fecha, y después lectura de autor y mensaje**. Cobertura **61/61, cero `404`**.
+
+### 🔵 La regla que hace funcionar el instrumento, y se encontró rompiéndolo
+
+🔴 **La primera versión aplicaba los filtros a todas las ramas, incluida la de defecto, y el resultado fue silenciosamente
+peor que el original:** `jupyterlab/jupyter-ai` perdía 3 meses (el tip de su `main` lo firma un `[bot]`) y
+**`zijinz456/OpenTutor` y `microsoft/Shiksha-Copilot` quedaban SIN fecha de vida.**
+
+🟢 **La regla correcta:** **el tip de la rama por defecto cuenta SIEMPRE como vida —es historia mergeada—; los filtros
+deciden sólo si una rama NO-defecto agrega vida por encima de ella.**
+
+### 🔴 Las seis clases que NO son vida de proyecto (el pase 41 había nombrado tres)
+
+| Clase | Qué es | Repos / ramas |
+|---|---|---|
+| 🔴 **`bot-deps`** | rama de `dependabot`/`renovate` con un *bump* de dependencia | **4 / 18** |
+| `agent-branch` | rama `claude/`, `codex/`, `triage/` sin mergear | 4 |
+| `bot-other` | autor `[bot]` en una rama no-defecto | 2 |
+| `sdk-regen` | regeneración automática de SDK | 1 |
+| `empty-commit` | *«empty commit to trigger …workflow»* | 1 |
+| 🔵 **`auto-content`** | *pipeline* de contenido, no de código | 1 |
+
+🔵 **`bot-deps` es la clase nueva que más cambia cuentas y el pase 41 no la nombró:**
+`suren-kk/armenian-national-library-mcp` tiene **10 ramas `dependabot`** y parece 7 semanas más fresco de lo que es.
+**25 observaciones de rama retenidas en 7 repos.**
+
+### El reparto corregido, que es el dato de encuadre
+
+| Franja (máximo entre ramas, filtrado) | Filas | % | Pase 37 (rama defecto, 49 filas) |
+|---|---|---|---|
+| 🟢 Activo — menos de 3 meses | **48** | **78,7 %** | 34 (69,4 %) |
+| ⚠️ Tibio — 3 a 6 meses | 3 | 4,9 % | 5 (10,2 %) |
+| 🔴 Frío — 6 a 12 meses | 7 | 11,5 % | 7 (14,3 %) |
+| 🔴 **Congelado — más de 12 meses** | **3** | 4,9 % | 3 (6,1 %) |
+
+🟢 **La tabla está más viva de lo que esta base venía diciendo**, y eso respalda las propuestas que se apoyan en ella.
+
+### 🔴 Los cuatro veredictos que cambian, y los dos que el filtro SOSTIENE
+
+| Repo | Pase 37 | **Pase 42** | Causa |
+|---|---|---|---|
+| 🟢 `karanb192/algo-sensei` | 🔴 FRÍO 11,3 m | 🟢 **ACTIVO (hoy)** | **Commiteó hoy en `main`.** 🔵 El pase 37 no se equivocó: **el proyecto revivió después de medirlo.** Sale del conjunto de «no recomendar» |
+| 🟢 `Yuanpeng-Li/gradescope-mcp` | ⚠️ tibio | 🟢 **ACTIVO** | `upgrade-mcp-v2`, autor humano |
+| 🟢 `LabSirius/TutorIA` | ⚠️ tibio | 🟢 **ACTIVO** | 🔵 `feature/openedx-integration` — repo **LATAM** integrando Open edX |
+| 🟢 `maxxeddev/open-badges-mcp` | ⚠️ tibio | 🟢 **ACTIVO** | `chore/release-0.4.0-and-deps` |
+| 🔴 `trilogy-group/oneroster-ts` | 🔴 CONGELADO 15,2 m | 🔴 **CONGELADO — SE SOSTIENE** | 🟢 **El filtro se gana el sueldo:** el máximo ingenuo lo promovería a 4,8 m con un **commit vacío de bot** en rama de SDK. Sostiene **P58/P60/P64** y 132 tools |
+| 🔴 `satvik314/educhain` | 🔴 FRÍO 10,0 m | 🔴 **FRÍO 8,3 m** | La rama `claude/*` se retiene; una rama humana real (`new-version`, merge del PR #140) sí cuenta. **Número corregido, veredicto intacto** |
+| 🔴 `DavidLMS/learnmcp-xapi` | 🔴 CONGELADO 13,1 m | 🔴 **CONGELADO 13,1 m** | **1 sola rama: no hay vida escondida.** Sigue sosteniendo **42 menciones** y el gap 64 |
+| ⚠️ `aswanth9495/exam-guard` | *(no estaba en las 49)* | ⚠️ **FRÍO 7,9 m** | `scaler/dcp-revamp`, autor humano. **Entra al conjunto de «no recomendar»** |
+
+**Las 10 filas de ≥ 6 meses siguen siendo 10**, con cambio de composición: **sale `algo-sensei`, entra `exam-guard`**.
+**La tabla completa de las 61, fila por fila, está en `repos/trending.md` (pase 42).**
 
 ## 📐 Capa de portabilidad medida — qué fracción de las dos puertas institucionales se REUSA y qué fracción se DESARROLLA (pase 40 del 2026-10-02)
 

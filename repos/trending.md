@@ -8,6 +8,163 @@ updated: 2026-10-02
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 
+## 2026-10-02 (pase 42) — **el dato crudo de las tres acciones: 472 ramas leídas en 61 repos, 26 tools generados desde el árbol de UniTime, 313 archivos de `servicelayer` en `seb-server` y los 4 repos de Kuali fechados y licenciados**
+
+**Este archivo guarda la medición; el veredicto está en `agents/trending.md`.** Todo se obtuvo con `git ls-remote` +
+`git fetch --depth 1` + lectura del árbol: **sin API de GitHub, sin Docker, sin el buscador roto de PyPI.**
+
+### 🧭 Las 61 filas de GitHub de `agents/top.md`, re-fechadas por el MÁXIMO ENTRE TODAS SUS RAMAS
+
+**472 ramas leídas. Cobertura 61/61, cero `404`.** Regla: **el tip de la rama por defecto cuenta siempre** (es historia
+mergeada); una rama no-defecto agrega vida **sólo si pasa los seis filtros** (`dependabot`, `sdk-regen`, `bot-other`,
+`empty-commit`, `agent-branch`, `auto-content`). La columna «Nota» dice qué rama agregó vida o qué clase se retuvo.
+
+| # | Repo | `HEAD` rama defecto | Fecha corregida | Antigüedad | Banda | Nota |
+|---:|---|---|---|---:|---|---|
+| 1 | [`madhvantyagi/Gnos`](https://github.com/madhvantyagi/Gnos) | 2026-10-02 | **2026-10-02** | 0.0 m | 🟢 activo |  |
+| 2 | [`karanb192/algo-sensei`](https://github.com/karanb192/algo-sensei) | 2026-10-02 | **2026-10-02** | 0.0 m | 🟢 activo |  |
+| 3 | [`bunizao/moodle-cli`](https://github.com/bunizao/moodle-cli) | 2026-10-02 | **2026-10-02** | 0.0 m | 🟢 activo |  |
+| 4 | [`Yuanpeng-Li/gradescope-mcp`](https://github.com/Yuanpeng-Li/gradescope-mcp) | 2026-05-13 | **2026-10-02** | 0.0 m | 🟢 activo | rama `upgrade-mcp-v2` |
+| 5 | [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | 2026-10-02 | **2026-10-02** | 0.0 m | 🟢 activo |  |
+| 6 | [`Miaotofu01/Study-Mate`](https://github.com/Miaotofu01/Study-Mate) | 2026-10-02 | **2026-10-02** | 0.0 m | 🟢 activo |  |
+| 7 | [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | 2026-10-01 | **2026-10-01** | 0.0 m | 🟢 activo |  |
+| 8 | [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | 2026-10-01 | **2026-10-01** | 0.0 m | 🟢 activo | 🔴 retenida `agent-branch` |
+| 9 | [`jupyterlab/jupyter-ai`](https://github.com/jupyterlab/jupyter-ai) | 2026-10-01 | **2026-10-01** | 0.0 m | 🟢 activo |  |
+| 10 | [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) | 2026-10-01 | **2026-10-01** | 0.0 m | 🟢 activo |  |
+| 11 | [`toshieji/moodle-grading-mcp`](https://github.com/toshieji/moodle-grading-mcp) | 2026-09-07 | **2026-09-30** | 0.1 m | 🟢 activo | rama `feat/cloud-rubric-tabs` |
+| 12 | [`LabSirius/TutorIA`](https://github.com/LabSirius/TutorIA) | 2026-05-20 | **2026-09-30** | 0.1 m | 🟢 activo | rama `feature/openedx-integratio` |
+| 13 | [`Crosstalk-Solutions/project-nomad`](https://github.com/Crosstalk-Solutions/project-nomad) | 2026-09-29 | **2026-09-30** | 0.1 m | 🟢 activo | rama `dev` |
+| 14 | [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | 2026-09-30 | **2026-09-30** | 0.1 m | 🟢 activo | 🔴 retenida `auto-content` |
+| 15 | [`dasgltd/mcp-brasil`](https://github.com/dasgltd/mcp-brasil) | 2026-08-18 | **2026-09-29** | 0.1 m | 🟢 activo | rama `feat/batch-optimization` |
+| 16 | [`redbeard-26/asfai-education`](https://github.com/redbeard-26/asfai-education) | 2026-09-28 | **2026-09-28** | 0.1 m | 🟢 activo |  |
+| 17 | [`oaknational/oak-ai-lesson-assistant`](https://github.com/oaknational/oak-ai-lesson-assistant) | 2026-09-28 | **2026-09-28** | 0.1 m | 🟢 activo |  |
+| 18 | [`Dymayo/moodler-mcp`](https://github.com/Dymayo/moodler-mcp) | 2026-09-19 | **2026-09-28** | 0.1 m | 🟢 activo | rama `fix/accept-token-without-p` |
+| 19 | [`ZeKaiNie/universal-examprep-skill`](https://github.com/ZeKaiNie/universal-examprep-skill) | 2026-09-27 | **2026-09-27** | 0.2 m | 🟢 activo |  |
+| 20 | [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 2026-09-27 | **2026-09-27** | 0.2 m | 🟢 activo |  |
+| 21 | [`nmarafo/OpenDidactia`](https://github.com/nmarafo/OpenDidactia) | 2026-09-25 | **2026-09-25** | 0.2 m | 🟢 activo |  |
+| 22 | [`artcc/freelingo`](https://github.com/artcc/freelingo) | 2026-09-25 | **2026-09-25** | 0.2 m | 🟢 activo |  |
+| 23 | [`NiccoloSalvini/mcp-moodle-teacher`](https://github.com/NiccoloSalvini/mcp-moodle-teacher) | 2026-09-25 | **2026-09-25** | 0.2 m | 🟢 activo |  |
+| 24 | [`SenmuuuuW/universal-diagnostic-tutor-skill`](https://github.com/SenmuuuuW/universal-diagnostic-tutor-skill) | 2026-09-24 | **2026-09-24** | 0.3 m | 🟢 activo |  |
+| 25 | [`JOSETRA44/DUTIC-mcp`](https://github.com/JOSETRA44/DUTIC-mcp) | 2026-09-24 | **2026-09-24** | 0.3 m | 🟢 activo |  |
+| 26 | [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) | 2026-09-22 | **2026-09-22** | 0.3 m | 🟢 activo |  |
+| 27 | [`marcorojasb/tero`](https://github.com/marcorojasb/tero) | 2026-09-20 | **2026-09-20** | 0.4 m | 🟢 activo |  |
+| 28 | [`bruchris/canvas-lms-mcp`](https://github.com/bruchris/canvas-lms-mcp) | 2026-09-20 | **2026-09-20** | 0.4 m | 🟢 activo | 🔴 retenida `bot-deps` |
+| 29 | [`SirhanMacx/Claw-ED`](https://github.com/SirhanMacx/Claw-ED) | 2026-09-18 | **2026-09-18** | 0.5 m | 🟢 activo |  |
+| 30 | [`ashleycribb/learnmcp-xapi`](https://github.com/ashleycribb/learnmcp-xapi) | 2026-09-17 | **2026-09-17** | 0.5 m | 🟢 activo |  |
+| 31 | [`Li-Evan/Bloom`](https://github.com/Li-Evan/Bloom) | 2026-09-17 | **2026-09-17** | 0.5 m | 🟢 activo |  |
+| 32 | [`microsoft/Shiksha-Copilot`](https://github.com/microsoft/Shiksha-Copilot) | 2026-09-15 | **2026-09-15** | 0.6 m | 🟢 activo | 🔴 retenida `bot-deps` |
+| 33 | [`moon0825/jbnu-lms-student`](https://github.com/moon0825/jbnu-lms-student) | 2026-09-08 | **2026-09-08** | 0.8 m | 🟢 activo |  |
+| 34 | [`paulocymbaum/ed-tech-system-mcp`](https://github.com/paulocymbaum/ed-tech-system-mcp) | 2026-09-06 | **2026-09-06** | 0.9 m | 🟢 activo |  |
+| 35 | [`giacomomaria81/scorm-mcp-server`](https://github.com/giacomomaria81/scorm-mcp-server) | 2026-09-03 | **2026-09-03** | 1.0 m | 🟢 activo |  |
+| 36 | [`avps82/mentar`](https://github.com/avps82/mentar) | 2026-09-03 | **2026-09-03** | 1.0 m | 🟢 activo |  |
+| 37 | [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) | 2026-08-28 | **2026-08-28** | 1.1 m | 🟢 activo |  |
+| 38 | [`Drone9/mereos`](https://github.com/Drone9/mereos) | 2026-08-28 | **2026-08-28** | 1.1 m | 🟢 activo |  |
+| 39 | [`PabloPC05/mcp-usc`](https://github.com/PabloPC05/mcp-usc) | 2026-08-27 | **2026-08-27** | 1.2 m | 🟢 activo |  |
+| 40 | [`amosblomqvist/learn`](https://github.com/amosblomqvist/learn) | 2026-08-26 | **2026-08-26** | 1.2 m | 🟢 activo |  |
+| 41 | [`maxxeddev/open-badges-mcp`](https://github.com/maxxeddev/open-badges-mcp) | 2026-06-10 | **2026-08-17** | 1.5 m | 🟢 activo | rama `chore/release-0.4.0-and-de` |
+| 42 | [`vasanthsreeram/Alvarmethod`](https://github.com/vasanthsreeram/Alvarmethod) | 2026-08-16 | **2026-08-16** | 1.5 m | 🟢 activo |  |
+| 43 | [`suren-kk/armenian-national-library-mcp`](https://github.com/suren-kk/armenian-national-library-mcp) | 2026-08-10 | **2026-08-10** | 1.7 m | 🟢 activo | 🔴 retenida `bot-deps` |
+| 44 | [`open-spaced-repetition/py-fsrs`](https://github.com/open-spaced-repetition/py-fsrs) | 2026-08-09 | **2026-08-09** | 1.8 m | 🟢 activo |  |
+| 45 | [`Timadey/proctor`](https://github.com/Timadey/proctor) | 2026-08-08 | **2026-08-08** | 1.8 m | 🟢 activo |  |
+| 46 | [`CAHLR/pyBKT`](https://github.com/CAHLR/pyBKT) | 2026-08-05 | **2026-08-05** | 1.9 m | 🟢 activo |  |
+| 47 | [`JuneYaooo/lineage-skill`](https://github.com/JuneYaooo/lineage-skill) | 2026-07-23 | **2026-07-23** | 2.3 m | 🟢 activo |  |
+| 48 | [`Nutlope/llamatutor`](https://github.com/Nutlope/llamatutor) | 2026-07-12 | **2026-07-12** | 2.7 m | 🟢 activo |  |
+| 49 | [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) | 2026-06-26 | **2026-06-26** | 3.2 m | ⚠️ tibio |  |
+| 50 | [`ahmedEid1/lumen`](https://github.com/ahmedEid1/lumen) | 2026-06-07 | **2026-06-07** | 3.8 m | ⚠️ tibio |  |
+| 51 | [`MarcosNahuel/moodle-mcp`](https://github.com/MarcosNahuel/moodle-mcp) | 2026-05-03 | **2026-05-03** | 5.0 m | ⚠️ tibio |  |
+| 52 | [`24kchengYe/human-skill-tree`](https://github.com/24kchengYe/human-skill-tree) | 2026-03-25 | **2026-03-25** | 6.3 m | 🔴 frío |  |
+| 53 | [`peancor/moodle-mcp-server`](https://github.com/peancor/moodle-mcp-server) | 2026-02-22 | **2026-02-22** | 7.3 m | 🔴 frío |  |
+| 54 | [`aswanth9495/exam-guard`](https://github.com/aswanth9495/exam-guard) | 2025-10-09 | **2026-02-04** | 7.9 m | 🔴 frío | rama `scaler/dcp-revamp` |
+| 55 | [`satvik314/educhain`](https://github.com/satvik314/educhain) | 2025-12-03 | **2026-01-21** | 8.3 m | 🔴 frío | rama `new-version` |
+| 56 | [`HugeCatLab/ChatTutor`](https://github.com/HugeCatLab/ChatTutor) | 2026-01-09 | **2026-01-09** | 8.7 m | 🔴 frío |  |
+| 57 | [`pythpythpython/openstax-mcp-server`](https://github.com/pythpythpython/openstax-mcp-server) | 2025-11-30 | **2025-11-30** | 10.1 m | 🔴 frío |  |
+| 58 | [`plastic-labs/tutor-gpt`](https://github.com/plastic-labs/tutor-gpt) | 2025-11-13 | **2025-11-13** | 10.6 m | 🔴 frío |  |
+| 59 | [`DavidLMS/learnmcp-xapi`](https://github.com/DavidLMS/learnmcp-xapi) | 2025-08-29 | **2025-08-29** | 13.1 m | 🔴 congelado |  |
+| 60 | [`trilogy-group/oneroster-ts`](https://github.com/trilogy-group/oneroster-ts) | 2025-06-27 | **2025-06-27** | 15.2 m | 🔴 congelado | 🔴 retenida `bot-deps` |
+| 61 | [`Cicatriiz/openedu-mcp`](https://github.com/Cicatriiz/openedu-mcp) | 2025-06-03 | **2025-06-03** | 16.0 m | 🔴 congelado |  |
+
+**Reparto:** 🟢 **48 activas (78,7 %)** · ⚠️ 3 tibias (4,9 %) · 🔴 7 frías (11,5 %) · 🔴 3 congeladas (4,9 %).
+
+### 🔴 Las 25 observaciones de rama RETENIDAS por no ser vida de proyecto, con su clase
+
+| Repo | `HEAD` defecto | Rama retenida (más nueva) | Clase | Autor |
+|---|---|---|---|---|
+| `CAHLR/OATutor` | 2026-09-30 | `content-staging` → **2026-10-02** | 🔵 `auto-content` | `Generic User` (*«Automated content update»*) |
+| `vishalsachdev/canvas-mcp` | 2026-10-01 | `triage/2026-10-02` → **2026-10-02** | `agent-branch` | `Claude` |
+| `microsoft/Shiksha-Copilot` | 2026-09-15 | `dependabot/…/joi-17.13.7` → **2026-10-01** | 🔴 `bot-deps` (**5 ramas**) | `dependabot[bot]` |
+| `suren-kk/armenian-national-library-mcp` | 2026-08-10 | `dependabot/…/ip-address-10.7.2` → **2026-09-29** | 🔴 `bot-deps` (**10 ramas**) | `dependabot[bot]` |
+| `bruchris/canvas-lms-mcp` | 2026-09-20 | `dependabot/…/sdk-1.30.1` → **2026-09-29** | 🔴 `bot-deps` (**2 ramas**) | `dependabot[bot]` |
+| `trilogy-group/oneroster-ts` | 2025-06-27 | `speakeasy-sdk-regen-1746144633` → **2026-05-11** | 🔴 `sdk-regen` + `empty-commit` | `speakeasy-github[bot]` (*«empty commit to trigger [run-tests] workflow»*) |
+| `satvik314/educhain` | 2025-12-03 | `claude/relaxed-curie-mNW2l` → **2026-05-29** | `agent-branch` | `Claude` (*«Refactor to Educhain 1.0: drop LangChain…»*) |
+| `oaknational/oak-ai-lesson-assistant` | 2026-09-28 | `dependabot/…/next-16.2.11` → 2026-07-26 | 🔴 `bot-deps` | `dependabot[bot]` |
+
+⚠️ **`oneroster-ts` es el caso que justifica el filtro entero:** el máximo ingenuo lo promovería de **15,2 meses a 4,8**
+con un **commit vacío de un bot** en una rama de regeneración de SDK. **Sostiene P58, P60 y P64 y 132 tools.**
+
+### 🟢 `UniTime/unitime` — los 15 conectores verificados en el árbol, con el nombre leído del `getName()`
+
+**Ruta:** `JavaSource/org/unitime/timetable/api/connectors/`. **Verbos leídos de los `do*` sobreescritos, no de la
+documentación.** 🔴 **Corrección de método sobre el propio instrumento: un `grep` del primer literal después de
+`getName` da nombres FALSOS** (devolvió `"name"` para `EventsConnector` y `"log"` para `ScriptConnector`); hay que leer
+**el `return` del override**. Ambos confirmados así: **`events` y `script`**. La tabla del pase 41 era correcta.
+
+| Clase | Nombre | GET | POST | PUT | DELETE | Tools generados |
+|---|---|:--:|:--:|:--:|:--:|:--:|
+| `RoomsConnector` | `rooms` | ✅ | ✅ | ✅ | ✅ | 4 |
+| `BuildingsConntector` ⚠️ *(typo upstream, confirmado)* | `buildings` | ✅ | ✅ | | ✅ | 3 |
+| `EventsConnector` | `events` | ✅ | ✅ | | ✅ | 3 |
+| `DataExchangeConnector` | `exchange` | ✅ | ✅ | | | 2 |
+| `OnlineStudentSchedulingConnector` | `sectioning` | ✅ | ✅ | | | 2 |
+| `VariableTitleCourseConnector` | `var-title-crs` | ✅ | ✅ | | | 2 |
+| 🔴 `ScriptConnector` | 🔴 `script` | ✅ | 🔴 ✅ | | | 2 |
+| `JsonConnector` | `json` | | ✅ | | | 1 |
+| `ClassInfoConnector` | `class-info` | ✅ | | | | 1 |
+| `CurriculaConnector` | `curricula` | ✅ | | | | 1 |
+| `EnrollmentsConnector` | `enrollments` | ✅ | | | | 1 |
+| `InstructorsConnector` | `instructors` | ✅ | | | | 1 |
+| `InstructorScheduleConnector` | `instructor-schedule` | ✅ | | | | 1 |
+| `RolesConnector` | `roles` | ✅ | | | | 1 |
+| `StudentGroupsConnector` | `student-groups` | ✅ | | | | 1 |
+| **15 conectores** | | **13** | **8** | **1** | **3** | 🟢 **26** |
+
+🟢 **Con la política por defecto (negar `script`, sólo lecturas) quedan 13 de 26 expuestos.** Probado por ejecución:
+**23 aserciones en verde, 0 de 9 llamadas retenidas llegaron al upstream.** Ver **P92**.
+
+### 🟢 `SafeExamBrowser/seb-server` — la superficie de `dev-3.0`, al nivel que el pase 41 midió `edx-proctoring`
+
+| Medición | Valor |
+|---|---|
+| Rama medida | 🔴 **`dev-3.0`**, no `master` (**gap 87**) |
+| Tip de `dev-3.0` | 🟢 **2026-10-01**, `Andreas Hefti`, *«code cleanup»* |
+| Licencia | ⚠️ **MPL-2.0**, leída del `LICENSE` del árbol |
+| Archivos versionados | **1.201** |
+| Archivos `.java` en `webservice/servicelayer/` | **313** |
+| Archivos relacionados con *proctoring* | **75** |
+| SPI de proveedor de *proctoring* | 🟢 **`RemoteProctoringService`** (130 líneas) |
+| Métodos / `default` / **obligatorios** | 14 / 2 / 🔴 **12** |
+| Implementaciones de referencia | **2** — `JitsiProctoringService`, `ZoomProctoringService` |
+| Registro | 🟢 **abierto** — `RemoteProctoringServiceFactory(Collection<RemoteProctoringService>)`, inyección de Spring |
+| 🔴 Tipo | 🔴 **cerrado** — `enum ProctoringServerType { JITSI_MEET, ZOOM }` |
+| Archivos *Covered* que mencionan el enum / **que hay que tocar** | 10 / 🟢 **1** |
+| Validador ante un tipo desconocido | ⚠️ **`return true`** — pasa sin validar |
+
+**Las 4 APIs de integración de LMS** (`webservice/servicelayer/lms/`): `CourseAccessAPI` (147 líneas, ~21 firmas, 3
+`default`), `SEBRestrictionAPI` (69, ~8, 2), `LmsAPITemplate` (83, ~4, 1), `FullLmsIntegrationAPI` (38, ~6, **0
+`default`**). **Bindings concretos en el árbol:** `edx`, `moodle`, `olat`, `ans`, `mockup`.
+
+### 🔴 `Kuali` — cuatro repos que esta base no tenía, los cuatro muertos
+
+| Repo | Licencia (del archivo) | Rama defecto | `HEAD` | Máx. corregido | Antigüedad |
+|---|---|---|---|---|---|
+| [`kuali/rice`](https://github.com/kuali/rice) | 🟢 **ECL-2.0** | `master` (11 ramas) | 2017-05-17 | **2018-09-01** (`rice-2.5`) | 🔴 **~8 años** |
+| [`KualiCo/rice`](https://github.com/KualiCo/rice) | 🟢 **ECL-2.0** | `java11` (13 ramas) | 2020-07-01 | **2020-07-01** | 🔴 **~6 años** |
+| [`kuali/kc`](https://github.com/kuali/kc) | 🔴 **AGPL-3.0** | `master` (12 ramas) | 2017-01-06 | 2017-01-06 | 🔴 **~9 años** |
+| [`kuali/kfs`](https://github.com/kuali/kfs) | 🔴 **AGPL-3.0** | `master` (35 ramas) | 2018-03-22 | 2018-03-22 | 🔴 **~8 años** |
+
+🔴 **`KualiCo/kc`, `KualiCo/kfs` y `KualiCo/kuali-student` no existen** (`git ls-remote` falla). ⚠️ **Y `KualiCo/rice` da
+la cuarta confirmación de la clase `dependabot`:** su rama más nueva es `dependabot/maven/…jackson-databind-2.9.10.7`
+(**2021-01-21**), 7 meses «más fresca» que la vida real del repo.
+
 ## 2026-10-02 (pase 41) — **el dato crudo de las dos capas que el pase 40 midió vacías: 3 repos fechados y licenciados desde el árbol, 15 conectores con nombre, 36 controladores REST, 11 nombres de registro probados y 8 de 8 en 404**
 
 **Instrumentos de este pase:** `git ls-remote` (refs y tags), `git clone --depth 1 --filter=blob:none --no-checkout` +

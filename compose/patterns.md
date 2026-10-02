@@ -164,6 +164,96 @@ del AI Act** (**2027-12-02**) y **Vietnam nombra la *monitorización del comport
 sectores de alto riesgo (**2027-03-01**, nueve meses antes). **Para un cliente con operación en los dos lados, la fecha
 que manda es marzo de 2027** (tendencia **156**).
 
+## P92 — La puerta MCP de UniTime: 26 tools generados del árbol, 13 expuestos, y el `script` retenido antes del upstream (agregado en el pase 42 del 2026-10-02)
+
+**Este patrón no se describe: está escrito y probado.** La acción 1 del pase 41 pedía escribir la puerta de la única capa
+que esta base midió con **cero competencia agéntica, licencia Apache-2.0 y despliegue institucional real**. Hecho, y
+verificado por ejecución: **23 aserciones, 23 en verde.**
+
+**Piezas**
+
+| Pieza | Licencia | Rol |
+|---|---|---|
+| [`UniTime/unitime`](https://github.com/UniTime/unitime) | 🟢 **Apache-2.0** (Apereo) | El *upstream*: 15 conectores con nombre registrado, verbos y `?token=` |
+| *Gateway* de allowlist (**P85**) | propio | **175 líneas de stdlib** del pase 40, ya probadas |
+| Generador de manifiesto (**este patrón**) | propio | **~115 líneas de stdlib**: lee los conectores del árbol y emite 26 tools. 🟢 **Código y prueba versionados en [`compose/code/unitime-mcp-gate/`](code/unitime-mcp-gate/)** |
+| Un agente cualquiera de `agents/top.md` | — | El consumidor MCP |
+
+**Cómo se arma**
+
+1. **El manifiesto se genera del ÁRBOL, no de documentación.** Se recorre
+   `JavaSource/org/unitime/timetable/api/connectors/*.java` y por cada clase se leen dos cosas: **el literal que devuelve
+   el override de `getName()`** y **los `do{Get,Post,Put,Delete}` efectivamente sobreescritos**. Sale un tool por
+   `(conector, verbo)`: **26 para los 15 conectores.** 🔴 **Y hay que leer el `return` del override, no el primer literal
+   después de `getName`:** ese atajo devuelve `"name"` para `EventsConnector` y `"log"` para `ScriptConnector` — **dos
+   nombres falsos, uno de ellos el del conector peligroso.**
+2. **La política por defecto es dos reglas, no una lista a mano:** *negar los conectores de la denylist* (`script`) y
+   *exponer sólo verbos de lectura*. Sobre 26 tools deja **13**.
+3. **El `tools/list` se construye DESDE la allowlist**, así que un tool retenido no existe para el agente: no lo ve y no
+   puede pedirlo por nombre.
+4. **Un `tools/call` a un tool retenido se responde `-32601` y NO se reenvía.** Es lo que el *gateway* del pase 40 probó y
+   lo que este pase volvió a probar con un *stub* que **registra cada llamada que recibe**.
+
+**Lo que la prueba verifica, y es lo que se le muestra a un cliente**
+
+| Aserción | Resultado |
+|---|---|
+| Conectores leídos del árbol / tools generados | **15** / **26** |
+| Tools expuestos / verbos de escritura expuestos / tools de `script` | 🟢 **13** / 🟢 **0** / 🟢 **0** |
+| `script.{get,post}` → `-32601` | 🟢 ✅ |
+| `rooms.{post,put,delete}`, `buildings.{post,delete}`, `events.{post,delete}` → `-32601` | 🟢 ✅ |
+| 🔴 **Llamadas retenidas que llegaron al upstream** | 🟢 **0 de 9** |
+| `rooms.get` permitido llega al upstream | 🟢 ✅ **1 y sólo 1** |
+| Allowlist vacía → 0 tools, y hasta una lectura da `-32601` | 🟢 ✅ |
+| Extremo a extremo por stdio real (subproceso, 3 peticiones) | 🟢 **3 de 3** |
+
+🔴 **Por qué esta puerta no se demuestra nunca sin allowlist:** `ScriptConnector` acepta `POST` y arma un
+`ExecuteScriptRpcRequest` — **ejecuta un script del servidor**. Un envoltorio ingenuo de los 15 conectores **publica
+ejecución remota como tool de un agente**. 🟢 **El *gateway* lo retiene antes del upstream; no después, y no con un
+*prompt*.**
+
+⚠️ **Lo que este patrón NO prueba, declarado:** no se levantó UniTime. El *upstream* es un *stub* que imita la API de
+conectores, **igual que el pase 40 probó su *gateway***. **Lo medido es la partición de tools, que es la parte que decide
+si la puerta se puede proponer; lo que falta es el mapeo de parámetros de cada conector contra una instancia real.**
+
+## P91 — Elegir ruta de *proctoring* por TRABAJO y por LMS, no por licencia (agregado en el pase 42 del 2026-10-02)
+
+**Este patrón corrige a P90 y al pase 41.** Ese pase dejó la ruta MPL-2.0 como preferible *«porque no arrastra AGPL»*.
+Enumeradas las dos superficies, **la ruta MPL cuesta más código** — y **el LMS del cliente manda más que la licencia**.
+
+**La medición que decide**
+
+| | Open edX (`edx-proctoring`) | SEB Server (`seb-server`, `dev-3.0`) |
+|---|---|---|
+| Pieza | `ProctoringBackendProvider` (clase concreta) | `RemoteProctoringService` (interfaz desnuda) |
+| 🔴 **Métodos obligatorios** | 🟢 **0 de 18** | 🔴 **12 de 14** |
+| Punto de integración | 🟢 Apache-2.0 (*carve-out*) | ⚠️ MPL-2.0 |
+| Registro | *entry point* | 🟢 inyección de Spring, **sin tocar la fábrica** |
+| 🟢 **Divulgación obligatoria** | 🟢 ninguna | 🟢 **un valor de enum** (1 archivo *Covered*) |
+| Tu código | propietario | 🟢 propietario (archivo nuevo) |
+
+**El árbol de decisión, en orden**
+
+1. 🟢 **Cliente ya en Open edX** → **ruta Open edX.** AGPL ya aceptada, `backends/` Apache-2.0, **0 métodos
+   obligatorios**. Es la ruta barata y es la que se cotiza primero.
+2. 🟢 **Cliente en Moodle + plugin de SEB Server** → **ruta SEB**: es la **única** combinación del `enum` con
+   **`LMS_FULL_INTEGRATION`**.
+3. ⚠️ **Cliente en Open edX que quiere producto propio al lado** → **ruta SEB**, pagando los 12 métodos, y 🔴 **avisando
+   que con `OPEN_EDX` no hay integración plena**: `COURSE_API` + `SEB_RESTRICTION` y nada más.
+4. 🔴 **Cliente en Moodle sin plugin** → **`SEB_RESTRICTION` está comentada en el fuente**. No prometer restricción SEB
+   por esta vía.
+
+**Los dos detalles que se escriben en la propuesta y no se descubren en UAT**
+
+- ⚠️ **El validador de SEB cae a `return true`** ante un `ProctoringServerType` desconocido: tu proveedor **pasa sin
+  validación de campos**. Hay que escribirla; **es trabajo, no es un bloqueo**.
+- 🔴 **`master` de `seb-server` tiene 6 meses y `dev-3.0` commiteó el 2026-10-01** (**gap 87**). Si el entregable se para
+  en `v3.0-latest`, **toda esta tabla se re-verifica en ese tag**.
+
+🔴 **Y el expediente va primero, igual que en P90:** el *«monitoreo durante exámenes»* está en el **Anexo III punto 3 del
+AI Act** (**2027-12-02**) y Vietnam nombra la *monitorización del comportamiento* en evaluación (**2027-03-01**). **Para
+un cliente con operación en los dos lados manda marzo de 2027** (tendencia **156**).
+
 ## P90 — *Proctoring* propio dentro de Open edX: un *entry point*, cuatro métodos y el código propio en Apache-2.0 (agregado en el pase 41 del 2026-10-02)
 
 **Este patrón existe porque la acción 3 del pase 40 midió la superficie y el resultado invierte el presupuesto: no se

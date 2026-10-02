@@ -46,7 +46,7 @@ anteriores había listado.**
 
 | Plataforma | Qué es | Licencia | Estado medido | Puerta de agente | Región de origen |
 |---|---|---|---|---|---|
-| 🟢 **UniTime** — [`UniTime/unitime`](https://github.com/UniTime/unitime) | **Horarios académicos y de exámenes**: asignación de cursos, aulas y exámenes, *student scheduling* en línea | 🟢 **Apache-2.0** (Apereo Foundation) | 🟢 `HEAD` **2026-10-01**, **202 tags**, Java | 🔴 **NO existe** — y **sí hay API formal**: 15 conectores con nombre, verbos y token (ver `repos/foundations.md`) | **North America** (Apereo; origen Purdue University) |
+| 🟢 **UniTime** — [`UniTime/unitime`](https://github.com/UniTime/unitime) | **Horarios académicos y de exámenes**: asignación de cursos, aulas y exámenes, *student scheduling* en línea | 🟢 **Apache-2.0** (Apereo Foundation) | 🟢 `HEAD` **2026-10-01**, **202 tags**, Java | 🟢 **EXISTE, escrita y probada en el pase 42** — 26 tools generados del árbol (15 conectores × verbos), **13 expuestos** con la política por defecto; `script` y todos los verbos de escritura retenidos con `-32601` **sin llegar al upstream** (23 aserciones en verde, ver **P92**) | **North America** (Apereo; origen Purdue University) |
 | 🟢 **SEB Server** — [`SafeExamBrowser/seb-server`](https://github.com/SafeExamBrowser/seb-server) | **Administración, monitoreo y *proctoring* de exámenes**: plantillas de examen, configuración del cliente, indicadores, monitoreo en vivo | ⚠️ **MPL-2.0** (copyleft **débil**, por archivo) | ⚠️ `master` **2026-04-01** / 🟢 `dev-3.0` **2026-10-01**, **108 tags** | 🔴 **NO existe** — **36 controladores REST / 41 endpoints** sin envolver | **EMEA** (ETH Zürich, Suiza) |
 | 🟢 **Safe Exam Browser** (cliente) — [`seb-win-refactoring`](https://github.com/SafeExamBrowser/seb-win-refactoring) | **Bloqueo de escritorio para examen**: convierte la máquina en estación controlada | ⚠️ **MPL-2.0** | 🟢 `HEAD` **2026-09-25**, **20 tags**, C# | n/a (es cliente de escritorio) | **EMEA** (ETH Zürich, Suiza) |
 
@@ -73,6 +73,60 @@ exámenes»* está **nombrado en el Anexo III punto 3 del AI Act** (plazo **2027
 *«monitorización del comportamiento»* en evaluación** entre sus seis sectores de alto riesgo (**cumplimiento desde
 2027-03-01**). **Es la única capa de esta KB nombrada por el regulador en DOS regiones** — y es la que acaba de medirse
 sin competencia agéntica. Ver `intel/trends.md`, tendencia **156**.
+
+## 🔌 Capa de extensión de las dos plataformas de examen — qué se hereda y qué se escribe (agregada en el pase 42 del 2026-10-02)
+
+**El pase 41 dejó las dos rutas de *proctoring* empatadas en prosa y pidió enumerar la de SEB al nivel de la de Open edX
+(acción 3). Enumeradas, dejan de estar empatadas — y el resultado invierte la lectura fácil.**
+
+| Dimensión | **Open edX** (`openedx/edx-proctoring`) | **SEB Server** (`SafeExamBrowser/seb-server`) |
+|---|---|---|
+| Pieza a implementar | `ProctoringBackendProvider` | `RemoteProctoringService` |
+| Forma de la pieza | 🟢 **clase concreta** | 🔴 **interfaz desnuda** (130 líneas, `dev-3.0`) |
+| Métodos / ya implementados / 🔴 **obligatorios** | 18 / **18** / 🟢 **0** | 14 / 2 `default` / 🔴 **12** |
+| Licencia del punto de integración | 🟢 **Apache-2.0** (*carve-out* en `backends/`) | ⚠️ **MPL-2.0** |
+| Licencia del resto de la plataforma | 🔴 **AGPL-3.0** | ⚠️ **MPL-2.0** (copyleft **por archivo**) |
+| Registro del proveedor | *entry point* de `setuptools` | 🟢 **inyección de Spring** — `Collection<RemoteProctoringService>`, **no hay que tocar la fábrica** |
+| 🔴 Cierre del tipo | — | 🔴 **`enum ProctoringServerType{JITSI_MEET, ZOOM}`** |
+| 🟢 **Divulgación obligatoria** | 🟢 **ninguna** (Apache-2.0) | 🟢 **1 archivo: un valor de enum** (`ProctoringServiceSettings.java`, §1.10(a) de MPL-2.0) |
+| Tu implementación queda | propietaria | 🟢 **propietaria** — archivo nuevo, no contiene *Covered Software* |
+| Validación de tus campos | la del backend | ⚠️ **ninguna**: el validador cae a `return true` ante un tipo desconocido — la escribís vos |
+| Implementaciones de referencia | 4 *backends* | 2 (`JitsiProctoringService`, `ZoomProctoringService`) |
+
+### 🔵 Cómo se elige, y no se elige por licencia
+
+🔴 **Lo que NO hay que decirle a un cliente: *«usá SEB porque no arrastra AGPL»*.** Es verdad y es incompleto: **la ruta
+SEB pide escribir 12 métodos que en Open edX vienen heredados.** No son dos rutas equivalentes con distinta licencia; son
+**distinto trabajo**.
+
+**El árbol de decisión que sale de la medición:**
+
+1. 🟢 **El cliente ya es Open edX** → **ruta Open edX.** La AGPL del LMS ya está aceptada, `backends/` es Apache-2.0 y
+   hay **0 métodos obligatorios**. Es la ruta barata.
+2. 🟢 **El cliente es Moodle con el plugin de SEB Server** → **ruta SEB**, y es la única combinación con
+   **`LMS_FULL_INTEGRATION`** (llamadas del LMS *hacia* SEB Server).
+3. ⚠️ **El cliente es Open edX pero quiere un producto propio al lado, sin discusión de obra derivada** → **ruta SEB**,
+   pagando los 12 métodos. 🔴 **Y hay que decirle que con Open edX el `LmsType` no habilita integración plena: da
+   `COURSE_API` + `SEB_RESTRICTION` y nada más.**
+4. 🔴 **El cliente es Moodle *sin* plugin** → el `enum` declara `COURSE_API` + `COURSE_RECOVERY` y **`SEB_RESTRICTION`
+   está comentada en el fuente**. La restricción SEB **no** está disponible por esta vía.
+
+### La matriz de `LmsType` × *features*, leída de `LmsSetup.java` en `dev-3.0`
+
+| `LmsType` | `COURSE_API` | `SEB_RESTRICTION` | `COURSE_RECOVERY` | `LMS_FULL_INTEGRATION` |
+|---|:--:|:--:|:--:|:--:|
+| `MOCKUP` *(pruebas)* | ✅ | ✅ | | ✅ |
+| **`OPEN_EDX`** | ✅ | ✅ | | 🔴 **no** |
+| `MOODLE` | ✅ | 🔴 **no** *(comentada)* | ✅ | 🔴 **no** |
+| 🟢 **`MOODLE_PLUGIN`** | ✅ | ✅ | ✅ | 🟢 **✅** |
+| `ANS_DELFT` | ✅ | ✅ | | 🔴 no |
+| `OPEN_OLAT` | ✅ | ✅ | | 🔴 no |
+
+⚠️ **Corrige al pase 41, que leyó cuatro valores sin matriz de *features*.** **Bindings concretos en el árbol:** `edx`,
+`moodle`, `olat`, `ans`, `mockup`.
+
+⚠️ **Y la advertencia de rama sigue en pie (gap 87): `master` tiene 6 meses y `dev-3.0` commiteó el 2026-10-01.** Todo lo
+de esta tabla está medido en **`dev-3.0`**; si el entregable se para en el tag `v3.0-latest`, hay que re-verificarlo ahí.
 
 ## 🧾 Las capas administrativas de esta vertical, medidas por registro: admisiones tiene una pieza APAC viva, y la biblioteca gana su primera puerta de agente (pase 40 del 2026-10-02)
 

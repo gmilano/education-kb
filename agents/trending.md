@@ -9,6 +9,196 @@ updated: 2026-10-02
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 > No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
 
+## 2026-10-02 (pase 42) — el pase que **ejecuta las tres acciones del pase 41, las tres por ejecución y no por lectura**, y encuentra que **la ruta MPL-2.0 que el pase 41 dejó como la preferible cuesta MÁS código que la AGPL, y que su única obligación de publicar es UN valor de enum**
+
+**Las tres acciones del pase 41 se ejecutaron: la puerta MCP de UniTime está escrita y PROBADA (23 aserciones, 23 en verde),
+las 61 filas de la tabla están re-fechadas con el instrumento corregido, y la superficie de `seb-server` está enumerada al
+nivel que el pase 41 enumeró `edx-proctoring`.** 🔵 **El hallazgo que manda invierte la lectura fácil del pase 41:** esa
+pasada dejó escrito que la ruta SEB era la preferible *«porque no arrastra AGPL»*, y es cierto — **pero medida, la ruta SEB
+pide implementar 12 métodos desde una interfaz desnuda, mientras la ruta Open edX deja heredar de una clase concreta.**
+🟢 **Y la obligación de copyleft de la ruta SEB, medida archivo por archivo, es la más chica que esta base haya cotizado:
+un valor de enum.**
+
+### 🔴 El hallazgo que manda: la ruta MPL cuesta más código que la AGPL, y el pase 41 lo tenía al revés
+
+| Medición | Open edX (`edx-proctoring`) | SEB Server (`seb-server`) |
+|---|---|---|
+| Pieza de extensión | `ProctoringBackendProvider` | `RemoteProctoringService` |
+| Forma | 🟢 **clase concreta** (0 `@abstractmethod`) | 🔴 **interfaz desnuda** |
+| Métodos declarados | 18 | **14** |
+| Métodos ya implementados | 🟢 **18 de 18** (se sobreescribe lo que haga falta) | ⚠️ **2** (`default`) |
+| 🔴 **Métodos obligatorios** | 🟢 **0** | 🔴 **12** |
+| Licencia del punto de integración | 🟢 Apache-2.0 (*carve-out*) | ⚠️ MPL-2.0 |
+| Implementaciones de referencia en el árbol | 4 *backends* | **2** (`JitsiProctoringService`, `ZoomProctoringService`) |
+
+🔵 **La lectura correcta, y es la que hay que llevar a una propuesta:** *«la ruta SEB no arrastra AGPL, y por eso cuesta
+más: hay que escribir 12 métodos que en Open edX vienen heredados.»* **No son rutas equivalentes con distinta licencia;
+son distinto trabajo.** Medido: `RemoteProctoringService.java`, **130 líneas**, `dev-3.0`.
+
+### 🟢 El dato que vuelve la ruta SEB cotizable igual: el registro es ABIERTO y la obligación de publicar es UN valor de enum
+
+**La fábrica no hay que tocarla.** `RemoteProctoringServiceFactory` recibe `Collection<RemoteProctoringService>` por
+constructor: **Spring inyecta todos los beans que implementen la interfaz**, así que un proveedor propio se registra con
+un `@Service` y nada más.
+
+🔴 **Pero el tipo sí está cerrado, y ahí está la única obligación de copyleft:**
+
+| Medición | Valor |
+|---|---|
+| `getType()` devuelve | `ProctoringServiceSettings.ProctoringServerType` |
+| Valores del enum | 🔴 **exactamente 2** — `JITSI_MEET`, `ZOOM` |
+| Archivo que hay que modificar para un tercero | `gbl/model/exam/ProctoringServiceSettings.java` |
+| Archivos *Covered* que mencionan el enum | **10** |
+| 🟢 **Archivos que HAY que modificar** | 🟢 **1** |
+| Obligación de MPL-2.0 §1.10(a) | **publicar ese archivo modificado** — es decir, **un valor de enum** |
+| El proveedor propio (archivo nuevo) | 🟢 **no es modificación de *Covered Software*: queda propietario** |
+
+🟢 **Ése es el número que hace cotizable la ruta SEB: la divulgación obligatoria es un valor de enum, y la lógica del
+proveedor —la que tiene el valor— queda cerrada**, porque MPL-2.0 es copyleft **por archivo** y un archivo nuevo que
+implementa una interfaz no contiene *Covered Software*.
+
+### 🔵 Y un hueco medido que conviene decir antes de que lo encuentre el cliente: el validador deja pasar al tercero SIN validar
+
+`ProctoringSettingsValidator.isValid()` pregunta `if (serverType == JITSI_MEET || serverType == ZOOM)` y **cae a
+`return true`**. ⚠️ **Un tercer tipo no es rechazado: pasa sin validación de campos.** **No es un bloqueo —es un hueco—**
+y el trabajo que agrega es escribir la validación de los campos propios. **Se dice en la propuesta; no se descubre en UAT.**
+
+### 🔴 Corrección al pase 41: `LmsType` tiene SEIS valores, no cuatro — y `LMS_FULL_INTEGRATION` NO está en Open edX
+
+El pase 41 escribió que el `enum LmsType` tenía *«`OPEN_EDX`, `MOODLE`, `MOODLE_PLUGIN` y `OPEN_OLAT` ya escritos»*. **Son
+seis, y cada uno declara qué *features* soporta** (`LmsSetup.java`, `dev-3.0`):
+
+| `LmsType` | `COURSE_API` | `SEB_RESTRICTION` | `COURSE_RECOVERY` | `LMS_FULL_INTEGRATION` |
+|---|:--:|:--:|:--:|:--:|
+| `MOCKUP` | ✅ | ✅ | | ✅ |
+| **`OPEN_EDX`** | ✅ | ✅ | | 🔴 **no** |
+| `MOODLE` | ✅ | 🔴 **no** *(comentado en el fuente)* | ✅ | 🔴 **no** |
+| 🟢 **`MOODLE_PLUGIN`** | ✅ | ✅ | ✅ | 🟢 **✅** |
+| `ANS_DELFT` | ✅ | ✅ | | 🔴 no |
+| `OPEN_OLAT` | ✅ | ✅ | | 🔴 no |
+
+🔴 **El dato comercial: la integración plena (`LMS_FULL_INTEGRATION`, las llamadas del LMS HACIA SEB Server) existe sólo
+con Moodle + plugin.** Para un cliente **Open edX** la ruta SEB da acceso a cursos y restricción SEB, **no** integración
+plena — y eso cambia la recomendación según qué LMS tenga el cliente, no sólo según qué licencia tolere.
+**`MOODLE` a secas tampoco tiene `SEB_RESTRICTION`: está comentada en el fuente.** Ver **P91**.
+
+### 🟢 Acción 1 CUMPLIDA Y PROBADA: la puerta MCP de UniTime existe, y lo que la vuelve proponible es lo que NO expone
+
+**26 tools generados desde el árbol** (15 conectores × sus verbos reales, leídos del `getName()` y de los `do*`
+sobreescritos, no de documentación). **Montados sobre el *gateway* de allowlist del pase 40 (P85).**
+
+| Aserción verificada por ejecución | Resultado |
+|---|---|
+| Conectores leídos del árbol | **15** |
+| Tools en el manifiesto completo | **26** |
+| Tools expuestos con la política por defecto | 🟢 **13** |
+| Verbos de escritura expuestos | 🟢 **0** |
+| Tools de `script` expuestos | 🟢 **0** |
+| `script.post`, `script.get` → `-32601` | 🟢 ✅ |
+| `rooms.{post,put,delete}` → `-32601` | 🟢 ✅ |
+| `buildings.{post,delete}`, `events.{post,delete}` → `-32601` | 🟢 ✅ |
+| 🔴 **Llamadas retenidas que llegaron al upstream** | 🟢 **0 de 9** |
+| `rooms.get` permitido → llega al upstream | 🟢 ✅ (**1 y sólo 1**) |
+| Allowlist vacía → tools expuestos | 🟢 **0** |
+| Allowlist vacía → incluso una lectura da `-32601` | 🟢 ✅ |
+| Extremo a extremo por stdio real (subproceso) | 🟢 **3 de 3** |
+| **Total** | 🟢 **23 aserciones, 23 en verde** |
+
+🔴 **Y la razón por la que esta puerta no se demuestra sin allowlist: `ScriptConnector` acepta `POST` y ejecuta un script
+del servidor** (`ExecuteScriptRpcRequest`, verificado en el fuente, `dev`/`main` de `UniTime/unitime`). **Un envoltorio
+ingenuo de los 15 conectores publica ejecución remota como tool.** El *gateway* lo retiene **antes** del upstream, no
+después. Ver **P92**.
+
+### 🟢 Acción 2 CUMPLIDA — y el instrumento corregido mueve veredictos en las dos direcciones
+
+**61 filas de GitHub re-fechadas, 472 ramas leídas, cobertura 61/61, cero `404`.** El pase 37 fechó por la rama por
+defecto; este pase toma **el máximo entre todas las ramas y después lee autor y mensaje**.
+
+🔴 **Las tres clases que el pase 41 nombró son SEIS.** Medidas sobre 472 ramas:
+
+| Clase descartada | Instancias | Ejemplo |
+|---|---|---|
+| 🔴 **`dependabot` / bump de dependencias** | **4 repos / 18 ramas** | `armenian-national-library-mcp` tiene **10 ramas dependabot** |
+| `agent-branch` (`claude/`, `codex/`, `triage/`) | 4 | `educhain` → `claude/relaxed-curie-mNW2l` |
+| `bot-other` (`[bot]` como autor) | 2 | — |
+| `sdk-regen` (regeneración de SDK) | 1 | `oneroster-ts` → `speakeasy-sdk-regen-…` |
+| `empty-commit` | 1 | *«empty commit to trigger [run-tests] workflow»* |
+| 🔵 **`auto-content` (pipeline de contenido)** | 1 | `OATutor` → `content-staging`, *«Automated content update»*, autor `Generic User` |
+
+🔵 **La clase nueva que más cambia cuentas es `dependabot`, y el pase 41 no la nombró.** `armenian-national-library-mcp`
+parece 7 semanas más fresco de lo que es; `microsoft/Shiksha-Copilot`, 2 semanas. **25 observaciones de rama retenidas en
+7 repos.**
+
+**Lo que el instrumento corregido movió, en las dos direcciones:**
+
+| Repo | Pase 37 (rama por defecto) | Pase 42 (corregido) | Por qué |
+|---|---|---|---|
+| 🟢 `karanb192/algo-sensei` | 🔴 2025-10-22 — **11,3 m, FRÍO** | 🟢 **2026-10-02 — ACTIVO** | **Commiteó hoy en `main`** (autor humano, *feature* real). 🔵 **El número del pase 37 no estaba mal cuando se midió: el proyecto revivió después.** Sale del conjunto de «no recomendar» |
+| 🟢 `Yuanpeng-Li/gradescope-mcp` | ⚠️ 2026-05-13 — tibio | 🟢 **2026-10-02 — ACTIVO** | `upgrade-mcp-v2`, autor humano, *fix* real |
+| 🟢 `LabSirius/TutorIA` | ⚠️ 2026-05-20 — tibio | 🟢 **2026-09-30 — ACTIVO** | 🔵 `feature/openedx-integration` — y la rama es comercialmente relevante: repo **LATAM** integrando Open edX |
+| 🟢 `maxxeddev/open-badges-mcp` | ⚠️ 2026-06-10 — tibio | 🟢 **2026-08-17 — ACTIVO** | `chore/release-0.4.0-and-deps`, autor humano |
+| ⚠️ `aswanth9495/exam-guard` | 🔴 2025-10-09 | ⚠️ **2026-02-04 — 7,9 m, FRÍO** | `scaler/dcp-revamp`, autor humano (*«step 2 camera share done»*). Mejora de banda, **sigue en no-recomendar** |
+| 🔴 `trilogy-group/oneroster-ts` | 🔴 **15,2 m CONGELADO** | 🔴 **15,2 m CONGELADO — SE SOSTIENE** | 🟢 **El filtro se gana el sueldo:** el máximo ingenuo lo habría promovido a 4,8 m con un **commit vacío de bot en una rama de regeneración de SDK** |
+| 🔴 `satvik314/educhain` | 🔴 10,0 m FRÍO | 🔴 **8,3 m FRÍO — SE SOSTIENE** | La rama `claude/*` (2026-05-29) se retiene; **pero una rama humana real, `new-version` (2026-01-21, merge del PR #140), sí cuenta**. Número corregido, veredicto intacto |
+| 🔴 `DavidLMS/learnmcp-xapi` | 🔴 **13,1 m CONGELADO** | 🔴 **13,1 m CONGELADO** | **1 sola rama: no hay vida escondida.** Sigue sosteniendo **42 menciones** y el gap 64 |
+
+🟢 **Reparto corregido de las 61 filas:** **48 activas (78,7 %)**, 3 tibias (4,9 %), 7 frías (11,5 %), **3 congeladas
+(4,9 %)**. El pase 37 medía 69,4 % activas sobre 49 filas. **La tabla está más viva de lo que esta base venía diciendo** —
+y las 10 filas de ≥ 6 meses que se usan para **no** recomendar siguen siendo 10, con un cambio de composición
+(`algo-sensei` sale, `exam-guard` entra).
+
+### 🔴 Nota de método, y es sobre un defecto de este pase, no de los anteriores: el primer filtro que escribí descartaba la rama por defecto
+
+**La primera versión del instrumento aplicaba los seis filtros a *todas* las ramas, incluida la de defecto. Resultado
+medido:** `jupyterlab/jupyter-ai` perdía 3 meses (su tip de `main` lo firma un `[bot]`), y **`zijinz456/OpenTutor` y
+`microsoft/Shiksha-Copilot` se quedaban SIN fecha de vida: ninguna rama pasaba el filtro.**
+
+🔵 **La regla que queda, y es barata:** **el tip de la rama por defecto cuenta SIEMPRE como vida, porque es historia
+mergeada** —un commit de release firmado por un bot en `main` sigue siendo el proyecto publicando—; **los filtros deciden
+únicamente si una rama NO-defecto agrega vida por encima de ella.** ⚠️ **Es la misma forma de error que esta base viene
+nombrando: un filtro de más no se nota, porque se parece a un proyecto muerto.** Y es la tercera vez que el instrumento
+del pase anterior se corrige al ejecutarlo en vez de leerlo.
+
+### 🔵 Hallazgo lateral del barrido: la familia **Kuali** entra a esta base como registro histórico, no como dependencia
+
+El barrido global de plataformas devolvió la *Kuali Foundation* descrita en presente (*«produce ERP, SIS y administración
+de investigación»*). **Esta KB tenía 0 menciones de Kuali en 41 pases.** Medido por `git ls-remote` + árbol:
+
+| Repo | Licencia (leída del archivo) | `HEAD` rama defecto | Máx. corregido | Veredicto |
+|---|---|---|---|---|
+| [`kuali/rice`](https://github.com/kuali/rice) | 🟢 **ECL-2.0** (*Educational Community License v2.0*) | 2017-05-17 | **2018-09-01** (`rice-2.5`) | 🔴 **muerto, 8 años** |
+| [`KualiCo/rice`](https://github.com/KualiCo/rice) | 🟢 **ECL-2.0** | 2020-07-01 | **2020-07-01** | 🔴 **muerto, 6 años.** 🔵 El máximo ingenuo diría 2021-01-21: **rama `dependabot`** |
+| [`kuali/kc`](https://github.com/kuali/kc) | 🔴 **AGPL-3.0** | 2017-01-06 | 2017-01-06 | 🔴 **muerto, 9 años** |
+| [`kuali/kfs`](https://github.com/kuali/kfs) | 🔴 **AGPL-3.0** | 2018-03-22 | 2018-03-22 | 🔴 **muerto, 8 años** |
+
+🔵 **Lo que vale de este hallazgo es la forma, y se repite:** el middleware es permisivo (**ECL-2.0**, derivada de
+Apache-2.0 y aprobada por la OSI) **y las dos aplicaciones de verdad —investigación y finanzas— son AGPL**. 🔴 **Ninguno
+se propone: el más nuevo tiene 6 años.** **Se registra para que el próximo pase no lo descubra como novedad**, que es
+exactamente lo que le pasó a este. ⚠️ **Y da la cuarta confirmación independiente de la clase `dependabot`, en un repo
+fuera de la tabla.**
+
+### ⚠️ Lo que el barrido obligatorio NO dio, declarado como tal — octavo pase sin altas de agente
+
+Se corrieron **las cuatro búsquedas globales y las cuatro regionales con el año calculado** (`date -u +%Y` → **2026**).
+🔴 **Cero agentes nuevos para la tabla, por octava vez consecutiva.** Lo global devolvió otra vez la capa genérica
+(openclaw 385.407 ★, browser-use 108.128 ★, dify 151.639 ★, AutoGen 60.284 ★, Mem0 62.735 ★, Flowise 55.226 ★) y
+**material didáctico *sobre* AI** (`ai-engineering-from-scratch`, *Zero to Hero*), que no es un agente de educación.
+⚠️ **Dos tercios de los resultados de la primera búsqueda vinieron de agregadores SEO** (`toolradar`, `fungies.io`,
+`ayautomate`, `oosmetrics`), **sin repo verificable**: se descartaron sin medirlos. La lectura estructural de los pases
+23–25 se sostiene **a 19 pases de distancia**.
+
+### 🔴 El `curl` de la consigna, otra vez, y por última vez como hallazgo
+
+| URL | `curl -sI` | `git ls-remote` |
+|---|---|---|
+| `github.com/UniTime/unitime` (**existe**) | **403** | 🟢 refs |
+| `github.com/UniTime/this-repo-does-not-exist-xyz123` (**no existe**) | **403** | 🟢 falla |
+| `github.com/SafeExamBrowser/seb-server` (**existe**) | **403** | 🟢 refs |
+
+🔴 **403 en los tres reales y en el falso: `curl` no distingue.** 🟢 **`git ls-remote` acertó 3 de 3.** **Toda URL de
+GitHub de este pase se verificó con `git ls-remote` y, en los cuatro repos nuevos, clonando el árbol y leyendo el archivo
+de licencia.** Es la tendencia **131**, re-confirmada por tercer pase; **se deja de registrar como hallazgo.**
+
 ## 2026-10-02 (pase 41) — el pase que **ejecuta las tres acciones del pase 40** y encuentra que **la respuesta comercial que el 40 dejó abierta estaba escrita en un `README.txt` de 174 bytes**: el directorio que hay que subclasear para integrar *proctoring* propio en Open edX **no es AGPL, es Apache-2.0**
 
 **Las tres acciones del pase 40 se ejecutaron y las tres rindieron.** La de mayor valor comercial —la acción 3— se resuelve
