@@ -1,3 +1,9 @@
+---
+industry: education
+region: Global
+updated: 2026-10-02
+---
+
 # SEB Server proctoring settings validator — gap 90, closed with code
 
 Gap 90 was recorded as *"scope you have to warn the client about"*. This turns it into

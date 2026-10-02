@@ -9,6 +9,144 @@ updated: 2026-10-02
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 > No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
 
+## 2026-10-02 (pase 45) — el pase que **re-audita la OTRA puerta de esta base y encuentra que el verbo HTTP no es la frontera de escritura**, y que **una de las 66 filas sí emite una bandera legible por máquina de contenido generado**
+
+**Las tres acciones del pase 44 se ejecutaron. Las tres rindieron, y dos dejan código que corre en este repositorio.**
+El barrido global obligatorio (cuatro búsquedas, año **calculado**: 2026) volvió a devolver **la capa genérica**
+(openclaw 385.407 ★, dify 151.639, browser-use 108.128, Mem0 62.735, AutoGen 60.284, Flowise 55.226) y **material
+didáctico *sobre* AI**. 🔵 **Cero altas de agente, y es el TERCER pase consecutivo con esa medición: ya no es una
+observación, es una propiedad estable del canal.** La tabla se queda en **66 filas**.
+
+### Los candidatos del barrido, uno por uno, y por qué ninguno entra
+
+| Candidato | De dónde salió | Veredicto |
+|---|---|---|
+| **Hermes Agent** (Nous Research, MIT, ~180k ★ desde feb-2026) | «best open source AI agents 2026» | 🔴 **Agente genérico, no educativo.** Es la capa que esta KB ya tiene catalogada y que customiza; no es una pieza de dominio |
+| `rohitg00/ai-engineering-from-scratch` (#1 en GitHub Trending, 2026-05-24) | «github trending education AI 2026» | 🔴 **Material didáctico *sobre* AI**, exactamente la colisión de término que el pase 23 midió |
+| `OpenEduCat` (ERP educativo sobre Odoo) | «open source platform education ERP CRM» | ⚠️ **Ya está en esta base**, en `verticals/solutions.md`, desde pases anteriores |
+| `avinash201199/free-ai-agents-resources`, *Awesome LLM Apps* | global | 🔴 **Listas curadas**, no software que educa |
+| `microsoft/Semantic Kernel` (27.470 ★) | global | 🔴 Orquestador genérico |
+
+🔵 **El dato de encuadre que esto deja, y conviene decirlo en positivo:** las **cuatro** búsquedas globales obligatorias
+devolvieron **cero** piezas educativas que esta base no tuviera. Las altas de los últimos diez pases vinieron **todas**
+del eje **conector** y del eje **estándar**. **El eje agente está saturado para esta industria, medido tres veces.**
+
+### 🔴 El hallazgo del pase: en UniTime, un GET escribe — y eso invalida la abstracción de las dos puertas de esta base
+
+La acción 1 pedía correr sobre `compose/code/unitime-mcp-gate/` los cuatro controles que el pase 44 tuvo que inventar.
+**Se corrieron, y el resultado es asimétrico respecto de SEB Server:**
+
+| Control | SEB Server (pase 44) | UniTime (este pase) |
+|---|---|---|
+| **(a)** ninguna ruta con `${` | 🔴 **falló: 0 de 30 rutas eran literales** | 🟢 **pasa: 15 de 15 son literales** de `@Service("/api/x")` |
+| **(b)** toda ruta absoluta | 🔴 falló | 🔴 **falló, por otro motivo: no había columna de ruta** |
+| **(c)** ninguna fila de una declaración de clase | 🔴 falló | 🟢 pasa |
+| **(d)** clase condicionada excluida | 🔴 falló (`LightController`) | 🟢 pasa (no hay `@ConditionalOn*`) — pero el análogo existe, abajo |
+
+🔴 **(b) `getName()` NO es la ruta, y esta base la venía usando como si lo fuera.** `ApiServlet.getConnector()` hace
+`applicationContext.getBean(request.getServletPath() + request.getPathInfo())`: **la ruta es el nombre del bean de
+Spring**, o sea el valor de `@Service("/api/rooms")`. `ApiConnector.getName()` **no participa del enrutado** — su único
+uso es `getCacheMode()`. 🔵 **Los 15 coinciden hoy, así que el dato publicado era correcto y el método no.** Una puerta
+construida sobre `getName()` acierta **por coincidencia** y se rompe en silencio el día que un conector registre un bean
+con otro nombre. Y el `/api/` del manifiesto **era una f-string de Python**, no un dato leído: el `<url-pattern>` de
+`apiServlet` en `web.xml` es **`/api/*`** y `pom.xml` envía **`<warName>UniTime</warName>`**, así que la URL desplegada
+es **`/UniTime/api/<conector>`** y la puerta publicaba una ruta **relativa al contexto**.
+
+🔴 **(e) Y el control que esta base no tenía, porque SEB Server no lo necesitaba: el verbo no es la frontera de
+escritura.** `ScriptConnector.doGet` despacha por **parámetro de query**, y dos de sus ramas escriben:
+
+```java
+} else if (helper.getParameter("delete") != null) {
+    Boolean ret = solverServerService.getQueueProcessor().remove(helper.getParameter("delete"));
+    helper.setResponse(ret);
+} else if (helper.getParameter("script") != null) {
+    doPost(helper);                       // <-- un GET ejecuta un script del servidor
+}
+```
+
+**La partición lectura/escritura por verbo —que es el corazón de las dos puertas de esta KB— no es sólida para
+UniTime.** La política por defecto ya negaba `script` **por nombre**, así que **el resultado era correcto y el motivo
+documentado no lo era**. Desde este pase `hard_deny()` es un **piso y no una política**: `unitime.script.get` se niega
+con `-32601` **incluso si un operador lo nombra en `UNITIME_ALLOW`**, y la decisión se registra como `floor`.
+
+⚠️ **Barrido completo, para no dejarlo como impresión:** se revisaron **los 15 `doGet`** buscando mutaciones. El único
+cruce real es `ScriptConnector`. `EventsConnector:170` casa el patrón y **es un falso positivo** — es
+`Iterator.remove()` sobre una lista en memoria.
+
+🔵 **Dos mediciones nuevas de regalo:** (1) **las rutas HTTP vivas de UniTime son 60, no 26** — 15 conectores × 4
+verbos, y los **34** sin *override* **no dan 404: `ApiConnector` responde 501 NOT_IMPLEMENTED**; (2) el análogo de
+`LightController` existe y condiciona **una lectura**: `VariableTitleCourseConnector.validateRequest()` —llamado por
+`doGet` **y** por `doPost`— lanza `IllegalArgumentException` si tres `ApplicationProperty` no están seteadas, así que
+`GET /UniTime/api/var-title-crs` **devuelve 400 en un despliegue por omisión**.
+
+**`test_gate.py` pasó de 23 a 46 aserciones, las 46 en verde**, y `load_connectors()` **levanta `StaleTable`** si le dan
+la tabla de 3 columnas del pase 42 en vez de volver a inferir. **Gap 93 CERRADO.** Tendencias **175**–**177**.
+
+### 🟢 El hallazgo de la acción 3, y contradice lo que el pase 44 predijo
+
+El pase 44 escribió que el resultado esperado de medir el **Artículo 50(2)** sobre las 66 filas era *«ninguna»* y que
+**eso sería el hallazgo**. Medido: **el vacío es casi total, y lo que sobrevive vale más que el vacío.**
+
+🟢 **`zijinz456/OpenTutor` (MIT, 127 ★) es la ÚNICA de las 66 filas que emite, hacia el cliente y de forma
+estructurada, una afirmación de que el contenido lo generó una AI.** Leído en el código:
+`services/provenance.py` → `build_provenance(..., generated: bool = True, ...)` arma un payload con **`"generated":
+true`** y un `source_labels` que incluye `"generated"`; `services/agent/turn_pipeline.py:144-173` lo llama con esos
+valores **fijos** en el camino del turno del agente (*«for UI and persistence»*); y **`routers/chat.py:214` lo manda al
+cliente**, con `schemas/task.py:59` declarándolo en el esquema. **No es telemetría interna: se persiste y se sirve.**
+
+🔴 **Y lo que le falta, que es la parte que se cotiza:** es un campo JSON **al lado** del contenido, no una marca
+**dentro** — si el texto se copia o se exporta, la marca no viaja; marca **el turno y no el tramo**; y **no está
+firmado**, así que no es resistente a manipulación, que es a lo que apunta *«effective, interoperable, robust and
+reliable»*.
+
+🟢 **La segunda mitad está en otra fila y ninguna de las dos lo sabe:** `JuneYaooo/lineage-skill` (Apache-2.0, 448 ★)
+trae `references/provenance-policy.md`, un **vocabulario cerrado de 9 valores** obligatorio *«para toda afirmación
+consecuente, respuesta de tarea, regla de rúbrica, juicio de feedback y regla de Personal Skill»*, del cual **cuatro
+valores son literalmente «esto lo produjo el modelo»** (`source_grounded_synthesis`, `cross_source_synthesis`,
+`mentor_inference`, `external_general_knowledge`). **Es la granularidad por afirmación que a OpenTutor le falta, y es
+prosa dirigida al modelo, que es el campo que a lineage-skill le falta.** Ver **P99**.
+
+⚠️ **La distinción que hay que hacer en voz alta, porque los 15 hits de «procedencia» invitan al error:** los otros 13
+(`DeepTutor` 3, `universal-examprep-skill` 8, `lumen` 2) son **procedencia de FUENTE** —de qué documento salió una
+afirmación—, **no procedencia SINTÉTICA**. Saber de dónde viene el material no dice que lo escribió una máquina. **Son
+dos problemas y comparten una palabra.**
+
+Detalle completo, cifras y el barrido reproducible en
+[`compose/code/aiact-50-2-exposure/`](../compose/code/aiact-50-2-exposure/README.md). **Gap 91 CERRADO.** Tendencias
+**180**–**182**.
+
+### El barrido regional, las cuatro regiones, y lo que cada una devolvió
+
+**Las cuatro se corrieron con el año calculado.** 🔴 **Dato nuevo de software: CERO en las cuatro.** Lo que devolvieron
+es encuadre, y se registra por región para que la ausencia no se confunda con cobertura:
+
+- **North America** — reconfirma por enésima vez el **vacío regulatorio de educación** (*«no hay equivalente a la FDA»*,
+  decisión por escuela/distrito/universidad, colcha estatal con **Colorado y Texas**) y las dos cifras de capacidad que
+  esta base ya tiene: **10 % de instituciones con guías formales**, **71 % de docentes sin formación**. **36 % del
+  mercado global.** Players nombrados: **IBM, Microsoft, Google** — ninguno open source. 🔴 **Nada nuevo.**
+- **EMEA** — el **Consejo de Europa** celebra su **2.ª conferencia de trabajo sobre las dimensiones regulatorias de la
+  AI en educación este mes (octubre de 2026)**, y ⚠️ **`coe.int` sigue bloqueado**, así que no se cita como primaria.
+  **£200 M+** del *AI Adoption Summit* del Reino Unido con **Cisco, IBM, BT y Rolls-Royce**; **38 % de las
+  organizaciones EMEA todavía no empezó a pilotear**; **94 % invertirá en formación en AI en 2026**. Aparece
+  **Claude Corps** (150 M USD, 1.000 trabajadores de carrera temprana) y el **Europe EdTech 200+ 2026**. 🔴 **Nada que
+  esta base no tuviera.**
+- **APAC** — **48 %** de los líderes de gobernanza pone la adopción como prioridad 2026; **57 %** ya tiene AI en
+  producción; **49 %** declara infraestructura insuficiente para datos en tiempo real; la región se mueve a
+  ***sovereign-by-design*** y **Singapur** consulta sobre uso de AI en instituciones financieras (**no educativas**).
+  Players de formación nombrados: **LearnUpon** (nueva sede en Sídney), **TCS + Pearson**, **NIIT MTS** — 🔴 **los tres
+  propietarios.** 🔴 **Cero piezas open source de origen APAC.**
+- **LATAM** — reconfirma el *working paper* de **UNU/UNESCO IESALC** (**200 instituciones en 19 países**, agosto-octubre
+  de 2025, cinco dimensiones) y ⚠️ **`unu.edu` sigue bloqueado**. **85 %+ de las empresas de la región usa AI**;
+  **70 %** de adopción por otra fuente. Startups nombradas: **Ednova (Chile)** en edtech, Kredi (México),
+  MindHealth LATAM (Colombia). 🔴 **Ninguna open source, y cero piezas de origen LATAM en las capas de esta KB en este
+  pase** — es la **segunda** vez consecutiva que se mide así.
+
+🔵 **Y una lectura regional que el barrido de LATAM entrega gratis y que importa para el Artículo 50(2):** la fuente
+regional señala que *«el marco europeo crea fragmentación normativa para la operación transfronteriza en América Latina,
+donde varios países operan con marcos distintos o inexistentes»*. **Para un entregable generativo multi-país, el
+Artículo 50(2) es el denominador común más alto y el más barato de cumplir — marcar una vez sirve para las cuatro
+regiones.**
+
 ## 2026-10-02 (pase 44) — el pase que **cierra la acción 1 sobre el servicio entero** y encuentra que **la tabla de la puerta describía rutas que no existen en esa URL**: todos los controladores de SEB Server cuelgan de una propiedad, no de una ruta literal
 
 **Las tres acciones del pase 43 se ejecutaron. Las tres rindieron, y la primera rindió encontrando cuatro defectos en la

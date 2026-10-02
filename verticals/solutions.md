@@ -9,6 +9,33 @@ updated: 2026-10-02
 > Plataformas verticales reales, en producción, customizables con AI.
 > Modelo: partir de algo que ya funciona y que ya tiene los datos, y agregar la capa agéntica arriba.
 > Verificado vía WebFetch el 2026-09-30; las capas del pase 11, el 2026-10-01.
+> **Pase 45 del 2026-10-02:** 🔵 **sin verticales nuevas, y el barrido lo midió en vez de suponerlo:** la búsqueda
+> obligatoria de plataformas (`open source platform education ERP CRM MIT Apache`) devolvió **`OpenEduCat`**, que **ya
+> está en este archivo**, más glosarios del propio proveedor y **CK-ERP**, un ERP/CRM educativo cuyo último anuncio
+> rastreable es de **2010** (conector para Drupal 6.17): **se registra como no-hallazgo para que el próximo pase no lo
+> descubra como novedad.** 🔴 **Dato de vertical nueva: cero.**
+> **Lo que cambia acá es cómo se cotiza sobre dos verticales que ya están, y en las dos el cambio es una advertencia:**
+> 🔴 **`UniTime` (horarios institucionales, Apache-2.0) tiene una ruta que escribe detrás de un GET.**
+> `ScriptConnector.doGet` despacha por parámetro de query: `?script=` **llama `doPost` y ejecuta un script del
+> servidor**, `?delete=` borra un ítem de la cola. **Para esta vertical, «exponer sólo lecturas» no es implementable
+> mirando el verbo**, así que toda propuesta de capa agéntica sobre UniTime tiene que negar `/api/script` **por nombre y
+> de forma no anulable** (patrón **P100**). ⚠️ **Y dos datos de despliegue que cambian el presupuesto de integración:**
+> la URL real es **`/UniTime/api/<conector>`** (contexto del *webapp*, leído de `pom.xml`), y **la superficie HTTP
+> publicada es de 60 rutas, no 26** — las 34 sin implementación **responden 501, no 404**, así que un inventario
+> automático de la vertical devuelve más del doble de lo usable.
+> 🟢 **`Open edX` (plataforma, AGPL-3.0) queda con el costo de generación de contenido cerrado y cotizable:**
+> **`llamadas = 1 + bloques`**, en **`profundidad` olas secuenciales** con los hermanos en paralelo — **18 llamadas y
+> 4 olas** para un curso de 2 módulos / 3 secuencias / 4 verticales / 8 componentes. 🔴 **Con la advertencia que decide
+> una tarde de *troubleshooting*: un cuerpo sin `parent_locator` devuelve 403 y uno sin `category` devuelve 500**, los
+> dos mandando al operador a buscar credenciales o logs cuando el problema es **una clave ausente en el JSON**. El
+> generador probado está en `compose/code/openedx-course-generator/` (patrón **P101**).
+> 🔴 **Y la advertencia transversal a TODAS las verticales de este archivo, que es el hallazgo del pase:** de las 66
+> filas de `agents/top.md`, **32 —el 48 %— ponen contenido sintético delante de un alumno o de un docente, y ninguna de
+> las 33 barridas puede marcarlo** como artificialmente generado (**24.202 archivos**, **26 manifiestos**, cero
+> dependencias). **El Artículo 50(2) rige desde el 2026-08-02 para todo sistema nuevo**, así que **cualquier capa
+> agéntica que se proponga encima de estas verticales hereda la obligación completa** — y el `pack` donde más barato
+> sería marcar es **`scorm-mcp-server`**, porque es donde el contenido generado **se vuelve el curso que el alumno
+> abre**. ⚠️ **Si eso es cierto está sin medir y es la acción 3 del pase 45 (gap 97).** Ver **P99**.
 > **Pase 36 del 2026-10-02:** 🔵 **sin verticales nuevas, y dos datos que cambian cómo se cotiza sobre las que ya están.** 🟢 **Moodle está vivo y medido: 2.134 descargas/mes en Packagist, 485 versiones y release del 2026-10-01** —ayer—, GPL-3.0. Sigue siendo la vertical de mayor huella y la de mejor argumento de *«el cliente ya lo tiene»*. 🔴 **La capa de evaluación que se le monta encima está fechada y el orden de licencias es inverso al del resto de esta KB: lo desplegado es copyleft** (`oat-sa/extension-tao-testqti`, **885 versiones**, release del **2026-09-30**, GPL-2.0-only; `qtism/qtism`, 218.212 descargas totales, GPL-2.0-only) **y lo permisivo es lo nuevo** (`@longsightgroup/qti3-cli`, **MIT**, cero dependencias de terceros) — **su manifiesto MCP de 20 tools está escrito en `compose/patterns.md` (P76)**, con el corte **18 de lectura / 2 de escritura** medido en el paquete y el contrato de estado del modo adaptativo documentado. ⚠️ **Y el dato que hay que tener antes de prometer un portal de datos educativos públicos en Brasil: INEP no publica API.** El Censo Escolar se distribuye como **ZIP con CSV delimitado por `;`, ~2-4 GB comprimidos y 10-20 GB descomprimidos por año**, en cuatro dimensiones (**Escolas, Turmas, Matrículas, Docentes**), más ASCII con *input files* de SAS y SPSS; la única API de terceros es **GPL-2.0, cubre sólo IDEB y su dominio ya no resuelve**. 🔵 **Por eso lo que corresponde montar ahí no es un servidor fachada sobre la fuente —como `ibge-br-mcp` hace con el IBGE, que sí publica REST— sino una vertical de datos propia: ingesta → almacén columnar → capa semántica → MCP de sólo lectura, 8-12 semanas** (**P77**). **El código INEP de escuela es la clave de *join*** que ya usan los portales estaduales (el de São Paulo publica *datasets* etiquetados por *Código INEP Escola*, **CC-BY-4.0**), así que el enriquecimiento estadual es incremental.
 > **Pase 26:** entra **una vertical entera que veinticinco pasadas no buscaron — la biblioteca (ILS/OPAC)** — y entra
 > con una opción **permisiva y grande**: **FOLIO** (Apache-2.0, 3.096 commits, multi-tenant, bus de Kafka). Se agregan

@@ -1,0 +1,77 @@
+# Article 50(2) exposure of the 66 rows of agents/top.md. Pass 45, action 3 (gap 91).
+# verdict: the answer to ONE question -- does this piece put synthetic content in
+#          front of a student or a teacher?
+#   gen      yes, the piece itself generates it
+#   gen-ind  yes, indirectly: it is packaged pedagogy (a skill, a schema, an MCP
+#            tutor surface) whose output is produced by the host agent
+#   gen-cond yes, but only with an optional module enabled
+#   pack     it does not generate, but it is where generated content BECOMES the
+#            course the student opens -- the place to mark, if you mark anywhere
+#   no       it moves, records, grades, roster-syncs or proctors; it does not generate
+#slug	name	verdict
+HKUDS/DeepTutor	DeepTutor	gen
+THU-MAIC/OpenMAIC	OpenMAIC	gen
+Crosstalk-Solutions/project-nomad	Project NOMAD	gen-cond
+jupyterlab/jupyter-ai	jupyter-ai	gen
+amosblomqvist/learn	learn	gen-ind
+Nutlope/llamatutor	llamatutor	gen
+HugeCatLab/ChatTutor	ChatTutor	gen
+plastic-labs/tutor-gpt	tutor-gpt	gen
+GarethManning/education-agent-skills	education-agent-skills	gen-ind
+open-spaced-repetition/py-fsrs	py-fsrs	no
+satvik314/educhain	Educhain	gen
+pykt-team/pykt-toolkit	pyKT	no
+madhvantyagi/Gnos	Gnos	gen
+artcc/freelingo	FreeLingo	gen
+Li-Evan/Bloom	Bloom	gen
+CAHLR/pyBKT	pyBKT	no
+CAHLR/OATutor	OATutor	no
+vasanthsreeram/Alvarmethod	Alvarmethod	gen-ind
+zijinz456/OpenTutor	OpenTutor	gen
+Open-TutorAi/open-tutor-ai-CE	OpenTutorAI-CE	gen
+oaknational/oak-ai-lesson-assistant	Aila	gen
+microsoft/Shiksha-Copilot	Shiksha Copilot	gen
+ArnaudGuiovanna/tutor-mcp	tutor-mcp	gen-ind
+DavidLMS/learnmcp-xapi	learnmcp-xapi	no
+pythpythpython/openstax-mcp-server	openstax-mcp-server	no
+Yuanpeng-Li/gradescope-mcp	gradescope-mcp	no
+LabSirius/TutorIA	TutorIA	gen
+nmarafo/OpenDidactia	OpenDidactia	gen-ind
+avps82/mentar	mentar	gen
+marcorojasb/tero	tero	gen
+Miaotofu01/Study-Mate	Study-Mate	gen
+24kchengYe/human-skill-tree	human-skill-tree	gen-ind
+ZeKaiNie/universal-examprep-skill	universal-examprep-skill	gen
+karanb192/algo-sensei	algo-sensei	gen
+SenmuuuuW/universal-diagnostic-tutor-skill	universal-diagnostic-tutor-skill	gen
+ahmedEid1/lumen	lumen	gen
+vishalsachdev/canvas-mcp	canvas-mcp	no
+peancor/moodle-mcp-server	moodle-mcp-server (peancor)	no
+MarcosNahuel/moodle-mcp	moodle-mcp (MarcosNahuel)	no
+giacomomaria81/scorm-mcp-server	scorm-mcp-server	pack
+trilogy-group/oneroster-ts	oneroster-ts	no
+paulocymbaum/ed-tech-system-mcp	ed-tech-system-mcp	gen
+Cicatriiz/openedu-mcp	openedu-mcp	no
+pypi:openedx-mcp	openedx-mcp	no
+pypi:tutor-contrib-openedxmcp	tutor-contrib-openedxmcp	no
+redbeard-26/asfai-education	asfai-education	no
+JuneYaooo/lineage-skill	lineage-skill	gen-ind
+SirhanMacx/Claw-ED	Claw-ED	gen
+bruchris/canvas-lms-mcp	canvas-lms-mcp (bruchris)	no
+bunizao/moodle-cli	moodle-cli	no
+moon0825/jbnu-lms-student	jbnu-lms-mcp	no
+toshieji/moodle-grading-mcp	moodle-grading-mcp	no
+NiccoloSalvini/mcp-moodle-teacher	mcp-moodle-teacher	no
+Dymayo/moodler-mcp	moodler-mcp	no
+ashleycribb/learnmcp-xapi	learnmcp-xapi (fork)	no
+PabloPC05/mcp-usc	mcp-usc	no
+JOSETRA44/DUTIC-mcp	DUTIC-mcp	no
+dasgltd/mcp-brasil	mcp-brasil	no
+maxxeddev/open-badges-mcp	open-badges-mcp	no
+npm:@ink-waffle/sisu-mcp	sisu-mcp	no
+suren-kk/armenian-national-library-mcp	armenian-national-library-mcp	no
+npm:ed-fi-sdk-mcp	ed-fi-sdk-mcp	no
+npm:frappe-mcp-server	frappe-mcp-server	no
+Drone9/mereos	mereos	no
+Timadey/proctor	@timadey/proctor	no
+aswanth9495/exam-guard	exam-guard	no

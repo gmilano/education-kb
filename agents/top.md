@@ -137,6 +137,42 @@ updated: 2026-10-02
 > arrastrar la clave emite un segundo certificado**. La primitiva **corregida** se adopta en **P97**; la pieza, no.
 > Ver las tendencias **166**–**174** y los patrones **P96**–**P98**.
 
+> **Pase 45 del 2026-10-02:** **la tabla se queda en 66 filas — TERCER pase consecutivo con cero altas de agente, y el
+> barrido lo volvió a medir en vez de suponerlo.** Las cuatro búsquedas globales obligatorias, con el año **calculado**
+> (2026), devolvieron **la capa genérica** (openclaw 385.407 ★, dify 151.639, browser-use 108.128, Mem0 62.735,
+> AutoGen 60.284, Flowise 55.226) y **material didáctico *sobre* AI**. Los cinco candidatos se evaluaron uno por uno y
+> **ninguno entra**: **Hermes Agent** (Nous Research, MIT, ~180k ★) es **agente genérico**, no educativo;
+> `ai-engineering-from-scratch` (#1 de GitHub Trending en mayo) es **material sobre AI**; **OpenEduCat** ya está en
+> `verticals/solutions.md`; y *free-ai-agents-resources*, *Awesome LLM Apps* y **Semantic Kernel** son listas y
+> orquestadores genéricos. 🔵 **Tres pases midiendo lo mismo deja de ser observación y pasa a ser propiedad del canal:
+> el eje agente está saturado para esta industria, y las altas vienen del eje conector y del eje estándar.**
+> 🔴 **El trabajo del pase está en re-auditar lo que esta base ya había publicado, y encontró el defecto donde el pase
+> 44 dijo que había que buscarlo.** Corridos sobre `compose/code/unitime-mcp-gate/` los cuatro controles del pase 44
+> (**gap 93, CERRADO**): **(a) pasa — las 15 rutas de UniTime son literales de `@Service("/api/x")`**, lo contrario de
+> SEB Server donde eran **0 de 30**; **(c) y (d) pasan**; 🔴 **(b) FALLABA, y por un motivo que el pase 42 no podía
+> ver: `getName()` NO es la ruta.** `ApiServlet` hace `getBean(servletPath + pathInfo)`, así que **la ruta es el nombre
+> del bean de Spring**; `getName()` sólo alimenta `getCacheMode()`. Los 15 coinciden hoy, **así que el dato era
+> correcto y el método no** — y el `/api/` del manifiesto era **una f-string de Python**, cuando el `<url-pattern>` es
+> `/api/*` y `pom.xml` envía `<warName>UniTime</warName>`: **la URL desplegada es `/UniTime/api/<conector>`.**
+> 🔴 **Y apareció un QUINTO control que esta base no tenía, porque es de la abstracción de la puerta y no del
+> extractor: el verbo HTTP no es la frontera de escritura.** `ScriptConnector.doGet` despacha por parámetro de query y
+> dos ramas escriben — `?script=` **llama `doPost` (un GET ejecuta un script del servidor)** y `?delete=` borra un ítem
+> de la cola. **La partición lectura/escritura por verbo, que es el corazón de las DOS puertas de esta KB, no es sólida
+> para UniTime**; la política ya negaba `script` por nombre, así que **el resultado era correcto y el motivo
+> documentado no lo era**. Desde este pase el rechazo es un **piso y no una política**: se niega con `-32601` **incluso
+> si un operador lo nombra en `UNITIME_ALLOW`**. **46 aserciones en verde** (eran 23). Ver las tendencias
+> **175**–**177** y el patrón **P100**.
+> 🟢 **Y la medición del Artículo 50(2) sobre esta tabla contradice lo que el pase 44 predijo** (**gap 91, CERRADO**).
+> **32 de las 66 filas —el 48 %— ponen contenido sintético delante de un alumno o de un docente**, y de los **33** repos
+> barridos (**24.202 archivos**, **26 manifiestos**) hay 🔴 **0 artefactos de marcado y 0 dependencias de marcado**.
+> Pero el pase 44 esperaba *«ninguna»* y **hay una**: 🟢 **`OpenTutor` emite `{"generated": true, "source_labels":
+> ["generated"]}` hacia el cliente**, con valor por omisión `True` y declarado en el esquema de la API — **la única
+> bandera legible por máquina de contenido generado en toda esta tabla**. 🔴 **Y no alcanza:** es un campo **al lado**
+> del contenido, marca **el turno y no el tramo**, y **no está firmado**. La granularidad que le falta está en **otra
+> fila** —`lineage-skill`, con un vocabulario cerrado de 9 valores por afirmación, **4 de los 9 «esto lo produjo el
+> modelo»**— y **ninguna de las dos sabe de la otra**. Ver la capa nueva al final de este archivo, las tendencias
+> **180**–**182** y el patrón **P99**.
+
 ## Agentes y herramientas destacadas
 
 **🔵 Pase 40 del 2026-10-02 — el conteo se re-mide con la regla del pase 36 y hay que corregirlo: son 65 filas, no 52.** Aplicada la regla que el pase 36 estableció —**contar *slugs* distintos** entre el separador y la primera línea que no empieza con `|`— el archivo tiene **65 filas de datos y 65 slugs distintos: cero duplicados**. 🔴 **El encabezado declaraba «52 filas», y la diferencia no es de este pase: los pases 37 a 39 agregaron filas sin actualizar el número** (este pase agrega **2**: `mereos` y `@timadey/proctor`, las dos de *proctoring*). 🔵 **Es la séptima vez que esta KB se pelea con este número, y la lección ya no es sobre el instrumento —que funciona— sino sobre el hábito: la regla del pase 36 es correcta y nadie la estuvo corriendo.** La medición es programática y cuesta un comando; **conviene correrla en cada pase que toque la tabla, no cada cinco.** ✅ **Verificado en este pase: 65 filas / 65 slugs / 0 duplicados.**
@@ -384,6 +420,95 @@ se explica abajo, porque es la cuarta vez que esta KB se pelea con este número.
 
 
 
+
+## ⚖️ Capa de exposición al Artículo 50(2) del AI Act — las 66 filas clasificadas por UNA pregunta (pase 45 del 2026-10-02)
+
+**Ejecuta la acción 3 del pase 44 y cierra el gap 91.** La pregunta es una sola: **¿esta pieza pone contenido sintético
+delante de un alumno o de un docente?** Y para las que sí: **¿tiene alguna forma de marcado?**
+
+🔵 **Por qué estaba en la lista de acciones y no en el *backlog*:** es la única de las tres que no es técnica y es la de
+más valor comercial, porque **el plazo está dentro del trimestre y esta base no lo tenía clasificado fila por fila.**
+
+### El reparto, que es el dato de encuadre
+
+| Veredicto | Filas | Qué significa |
+|---|---|---|
+| `gen` | **24** | la pieza **genera** el contenido |
+| `gen-ind` | **7** | pedagogía empaquetada (*skill*, esquema, superficie MCP de tutor): genera **a través del agente anfitrión** |
+| `gen-cond` | **1** | sólo con un módulo opcional activado (**Project NOMAD**, módulo de AI local) |
+| `pack` | **1** | no genera, pero es **donde el contenido generado se vuelve el curso que el alumno abre** (**scorm-mcp-server**) |
+| `no` | **33** | mueve, registra, califica, sincroniza matrícula o supervisa exámenes — **no genera** |
+
+🔵 **32 de 66 filas (48 %) ponen contenido sintético delante de una persona. Exactamente la mitad de esta tabla:** el
+Artículo 50(2) no es un problema de un rincón de esta KB, **es un problema de la mitad.**
+
+### 🔴 La medición del marcado: 0 de 33, y el método importa
+
+Barrido con `compose/code/aiact-50-2-exposure/scan_marking.sh`, que **no busca en documentación**: clona cada repo
+expuesto con `--filter=blob:none` (**ningún blob se descarga**) y busca artefactos en **la lista de archivos**, más
+dependencias en **los manifiestos de raíz**.
+
+| Magnitud | Valor |
+|---|---|
+| Repos barridos (32 expuestos + el empaquetador − 5 entradas de registro sin repo de GitHub) | **33** |
+| Archivos listados | **24.202** |
+| Artefactos de **marcado** (`c2pa`, `watermark`, `synthid`, `content-credentials`, `invisible-watermark`, `imwatermark`) | 🔴 **0** |
+| Manifiestos de raíz leídos | **26** |
+| **Dependencias** de marcado en esos manifiestos | 🔴 **0** |
+| Repos con **0 de todo** | **28 de 33** |
+| Artefactos de **procedencia** | **15, en 5 repos** |
+
+🔴 **Ninguna de las 33 piezas puede marcar su salida como artificialmente generada, y ninguna se eligió por eso.**
+
+### 🟢 Las DOS filas que sobreviven, y son mitades complementarias del mismo componente
+
+**El pase 44 predijo que la respuesta sería «ninguna». Hay una, y hay una segunda que aporta lo que a la primera le
+falta.**
+
+| Fila | Licencia | Qué tiene | Qué le falta |
+|---|---|---|---|
+| 🟢 **`zijinz456/OpenTutor`** | **MIT**, 127 ★ | **La única bandera legible por máquina de toda la tabla.** `services/provenance.py` → `build_provenance(..., generated: bool = True, ...)` emite **`"generated": true`** + `source_labels` con `"generated"`; `turn_pipeline.py:144-173` lo fija en el camino del turno (*«for UI and persistence»*); **`routers/chat.py:214` lo manda al cliente** y `schemas/task.py:59` lo declara en el esquema. **Se persiste y se sirve: no es telemetría interna.** Y el default es `True` — **falla hacia el lado seguro** | 🔴 Es un campo JSON **al lado**, no una marca **dentro**: si el texto se copia o exporta, **la marca no viaja**. Marca **el turno, no el tramo**. **No está firmado**, así que no resiste manipulación — que es a lo que apunta *«effective, interoperable, robust and reliable»* |
+| 🟢 **`JuneYaooo/lineage-skill`** | **Apache-2.0**, 448 ★ | `references/provenance-policy.md`: **vocabulario cerrado de 9 valores**, obligatorio *«para toda afirmación consecuente, respuesta de tarea, regla de rúbrica, juicio de feedback y regla de Personal Skill»*. 🔵 **Cuatro de los nueve son literalmente «esto lo produjo el modelo»**: `source_grounded_synthesis`, `cross_source_synthesis`, `mentor_inference`, `external_general_knowledge`. Y ya dice *«High-impact inference needs a visible label and human review when evidence is thin»* | 🔴 **No es legible por máquina:** es **prosa dirigida al modelo**, no un campo emitido junto al artefacto |
+
+🔵 **La lectura que esto habilita, y es la oportunidad:** `OpenTutor` tiene **el campo y el transporte**;
+`lineage-skill` tiene **la granularidad correcta** (por afirmación, no por turno). **Ninguna de las dos sabe de la
+otra.** Marcar de verdad no es abrir una capa nueva: es **llenar un campo que ya existe, con una etiqueta que ya está
+especificada**, y firmarlo con la capa forense que esta KB ya tiene permisiva (`MarkLLM`, SynthID-Text Apache-2.0,
+**P33**). Ver **P99**.
+
+### ⚠️ La distinción que hay que hacer en voz alta
+
+Los **15** hits de «procedencia» invitan al error. **13 de los 15** —`DeepTutor` 3, `universal-examprep-skill` 8,
+`lumen` 2— son **procedencia de FUENTE**: de qué documento salió una afirmación, o de qué clon salió una fila de base de
+datos. **No son procedencia SINTÉTICA.** Saber de dónde viene el material **no dice que el material lo escribió una
+máquina**. Son dos problemas y comparten una palabra, y confundirlos sobreestima el cumplimiento de esta tabla por un
+factor de 13.
+
+### 🔴 El calendario, con la corrección de encuadre que hay que decir aunque la fecha esté bien
+
+Confirmado en este pase por un **tercer canal independiente**, concordante con lo que esta base ya tenía:
+
+| Obligación | Fecha | Estado al 2026-10-02 |
+|---|---|---|
+| Art. 50 transparencia (declarar que se interactúa con AI) | **2026-08-02** | 🔴 **vigente, vencida hace 2 meses** |
+| **Art. 50(2) marcado legible por máquina** — sistemas puestos en el mercado **desde** el 2026-08-02 | **2026-08-02** | 🔴 **YA VIGENTE** |
+| **Art. 50(2)** — *backstop* para sistemas **ya en el mercado antes** del 2026-08-02 | **2026-12-02** | ⏳ **61 días** |
+
+🔵 **El 2026-12-02 NO es «cuándo empieza el Artículo 50(2)»: es el plazo de gracia de lo que ya estaba desplegado.**
+Para **cualquier sistema nuevo** —que es exactamente lo que es un *engagement* que entrega un tutor construido sobre
+estas piezas— **la obligación rige desde el 2026-08-02 y ya está vencida al momento de entregar.** Decir «faltan 61
+días» sobre un desarrollo nuevo es **tranquilizar con la fecha equivocada.**
+
+🟢 **Y el dato de responsabilidad que esta KB NO tenía, y decide quién paga:** el deber del Artículo 50(2) recae en el
+**proveedor** —quien desarrolla el sistema generativo y lo pone en el mercado, incluidos los proveedores de GPAI— **no
+en el *deployer* ni en el usuario final.** Si Globant **construye y entrega**, el deber está del lado del entregable; si
+el cliente sólo **despliega** algo de un tercero, está aguas arriba. **Es una pregunta de *discovery*, y hoy no está en
+ningún checklist de esta base.**
+
+⚠️ **Límite de fuente, que se repite cada vez que se citen estas fechas:** **gap 92 ampliado a cuatro dominios** —
+`eur-lex.europa.eu`, `artificialintelligenceact.eu`, `data.europa.eu` y ahora **`digital-strategy.ec.europa.eu`** (la
+página oficial del *Code of Practice on Transparency of AI-generated Content*), probado por **los dos canales**. Las
+fechas están confirmadas por **tres canales secundarios independientes**, **no** por texto consolidado.
 
 ## 🧭 Capa de vitalidad CORREGIDA — las 61 filas de GitHub re-fechadas por todas sus ramas (pase 42 del 2026-10-02)
 

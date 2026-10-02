@@ -8,6 +8,116 @@ updated: 2026-10-02
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 
+## 2026-10-02 (pase 45) — **el dato crudo: 15 rutas literales de 15, 60 rutas vivas (no 26), 46 aserciones en verde, 24.202 archivos barridos y 0 artefactos de marcado**
+
+Todo lo de abajo se leyó del árbol, con `git clone --depth 1 --filter=blob:none --sparse` y con
+`raw.githubusercontent.com` sobre la rama por defecto verificada con `git ls-remote --symref` — el canal que el pase 37
+estableció como el único fiable, porque `curl` sobre `github.com` devuelve **403 para todo** y `api.github.com/repos/<x>`
+devuelve **200 con un cuerpo que niega el acceso**.
+
+### `UniTime/unitime` — Apache-2.0, `HEAD` `aeb4431` (**2026-10-02**, Tomáš Müller)
+
+🟢 **El `HEAD` del clon es de hoy**, así que la re-auditoría es sobre código vivo, no sobre un árbol viejo.
+
+| Magnitud | Pase 42 | Pase 45 | Nota |
+|---|---|---|---|
+| Conectores con bean `@Service("/api/…")` | 15 | **15** | barrido sobre `JavaSource` **entero**: no hay un 16.º |
+| Tools en el manifiesto (conector × verbo implementado) | 26 | **26** | 14 lecturas + 12 escrituras |
+| **Rutas HTTP vivas** | no medido | 🔴 **60** | 15 × 4; las **34** sin *override* **responden 501**, no 404 |
+| Rutas base **literales** | no medido | 🟢 **15 de 15** | lo contrario de SEB Server, donde eran **0 de 30** |
+| Columna de ruta en `connectors.tsv` | 🔴 **no existía** | **sí** | antes se inferían `getName()` + `"/api/"` en una f-string |
+| Prefijo del servlet | inferido | **`/api/*`** | leído de `WebContent/WEB-INF/web.xml`, `<servlet-name>apiServlet</servlet-name>` |
+| Contexto de despliegue | **no registrado** | 🔴 **`/UniTime`** | leído de `pom.xml:614`, `<warName>UniTime</warName>` |
+| Verbos que **cruzan** la frontera de escritura | no medido | 🔴 **1** | `GET /api/script` |
+| Verbos **guardados por propiedad** | no medido | **2** | `var-title-crs` `Get` **y** `Post` |
+| Aserciones de `test_gate.py` | 11 → 23 | **46** | 46/46 en verde |
+
+**Los 15 beans, leídos del árbol** (`grep -rn '@Service("/api' JavaSource`), **y los 15 coinciden con `getName()`**:
+`/api/buildings` · `/api/class-info` · `/api/curricula` · `/api/exchange` · `/api/enrollments` · `/api/events` ·
+`/api/instructor-schedule` · `/api/instructors` · `/api/json` · `/api/sectioning` · `/api/roles` · `/api/rooms` ·
+`/api/script` · `/api/student-groups` · `/api/var-title-crs`.
+
+🔵 **Reproducible, no transcrito:** el pase deja `compose/code/unitime-mcp-gate/extract_surface.py`, que regenera la
+tabla contra un checkout. Las cifras de arriba se vuelven a obtener con un comando.
+
+🔴 **Las dos trampas de lectura de este árbol, anotadas para que no se repitan:**
+
+1. **`getName()` no es la ruta** — es la clave de *cache mode* (`ApplicationProperty.ApiCacheMode.value(getName())`).
+2. **No tomar el primer literal después de la palabra `getName`:** ese atajo devuelve `"name"` para `EventsConnector` y
+   `"log"` para `ScriptConnector`. (Trampa registrada en el pase 42; sigue vigente y ahora está aseverada.)
+
+### `openedx/edx-platform` — AGPL-3.0, leído sobre `master` por `raw.githubusercontent.com`
+
+La acción 2 pedía cerrar el costo de **P55**. Las tres piezas del contrato que el pase 44 midió **se reverificaron de
+primera mano** y **aparecieron dos cosas que no estaban**:
+
+| Pregunta | Respuesta medida | Sitio exacto |
+|---|---|---|
+| ¿Qué devuelve la creación? | **`{"locator", "courseKey"}`**, y `locator` es el usage key del bloque nuevo | `xblock_storage_handlers/view_handlers.py:895-897` |
+| ¿Cuánto cuesta leer el curso? | **1 llamada** — `GET /api/contentstore/v1/course_index/{course_id}` → `course_structure` | `rest_api/v1/urls.py:82-84` |
+| ¿`category` tiene enum en un curso? | **No.** `CharField(required=False, allow_null=True)` sin `choices`; el enum `["html","problem","video"]` es **sólo** para `LibraryUsageLocator` | `rest_api/v0/serializers/xblock.py:29`, `view_handlers.py:867` |
+| 🔴 **¿Cuántas claves exige el handler sin declararlas?** | **DOS, no una**: `request.json["parent_locator"]` (832) **y** `request.json["category"]` (864), las dos subscripts pelados | `view_handlers.py:832,864` |
+| 🔴 **¿Qué estatus da cada falta?** | **403** la primera, **500** la segunda, **400** una clave de más | ver abajo |
+
+🔴 **Tres estatus para un mismo defecto —un cuerpo mal formado— y sólo uno es el correcto:**
+
+1. **sin `parent_locator` → 403.** `XblockViewSet.initial()` deriva `course_key` **del cuerpo crudo**
+   (`request._request.body`); si falta, queda `None`, y `HasCourseAuthorAccess.has_permission` hace
+   `if not course_key: return False` (`rest_api/v1/views/permissions.py:25-27`). **Un defecto de cuerpo se reporta como
+   falla de autorización**, que es donde un operador va a buscar credenciales en vez de el payload.
+2. **sin `category` → 500.** `category` se lee **dos veces**: `request.json.get("category")` en la 834, que alimenta el
+   chequeo de permisos, y el **subscript pelado** en la 864. Así que el POST **pasa el control de autorización** y
+   revienta después, con `KeyError`.
+3. **con un campo inesperado → 400**, correctamente, porque `XblockSerializer` extiende `StrictSerializer`
+   (`rest_api/serializers/common.py:40-49`).
+
+🟢 **Y una corrección a favor del upstream, por lectura de primera mano:** el `create` del `v1` **sí** corre el
+serializer — lleva `@validate_request_with_serializer` además de `@expect_json_in_class_view`
+(`rest_api/v1/views/xblock.py:239-243`). **El serializer se ejecuta y es estricto con las claves de más**; lo que no
+puede hacer es atrapar las dos claves que el handler exige, **porque las declara opcionales a las dos.**
+
+**El costo de P55, cerrado, con la fórmula transferible:** `llamadas = 1 + bloques`, en `profundidad` olas secuenciales,
+con los hermanos en paralelo dentro de cada ola. Para el outline de ejemplo del generador (2 módulos / 3 secuencias /
+4 verticales / 8 componentes = **17 bloques**): **18 llamadas, 4 olas, ola más ancha de 8**. **33 aserciones en verde.**
+Artefacto en `compose/code/openedx-course-generator/`. **Gap 94 CERRADO.**
+
+### El barrido de marcado del Artículo 50(2) — 33 repos, y el cero es el dato
+
+Medido con `compose/code/aiact-50-2-exposure/scan_marking.sh`, que **no busca en documentación**: clona cada repo
+expuesto con `--filter=blob:none` (**ningún blob se descarga**) y busca en **la lista de archivos**, más las
+dependencias en **los manifiestos de raíz**.
+
+| Magnitud | Valor |
+|---|---|
+| Filas de `agents/top.md` clasificadas | **66** |
+| Filas que ponen contenido sintético delante de una persona | **32** (24 `gen` + 7 `gen-ind` + 1 `gen-cond`) = **48 %** |
+| Repos barridos (los 32 + el empaquetador − 5 entradas de registro sin repo) | **33** |
+| Archivos listados | **24.202** |
+| Artefactos de **marcado** (`c2pa`, `watermark`, `synthid`, `content-credentials`, `imwatermark`) | 🔴 **0** |
+| Manifiestos de raíz leídos | **26** |
+| **Dependencias** de marcado | 🔴 **0** |
+| Repos con **0 de todo** | **28 de 33** |
+| Artefactos de **procedencia** | **15, en 5 repos** — y **13 de los 15 son procedencia de FUENTE**, no sintética |
+
+🟢 **La única fila que emite una bandera legible por máquina:** `zijinz456/OpenTutor`
+(`"generated": true` + `source_labels: ["generated"]`, servido al cliente en `routers/chat.py:214` y declarado en
+`schemas/task.py:59`). 🔴 **Y no alcanza:** es un campo **al lado** del contenido, marca **el turno y no el tramo**, y
+**no está firmado**. Detalle y veredicto en `compose/code/aiact-50-2-exposure/README.md`.
+
+### 🔴 Ruido medido y rechazos, para que el próximo pase no lo vuelva a pagar
+
+- **`gap 92` ampliado a CUATRO dominios.** A `eur-lex.europa.eu`, `artificialintelligenceact.eu` y `data.europa.eu` se
+  suma **`digital-strategy.ec.europa.eu`** —la página oficial del *Code of Practice on Transparency of AI-generated
+  Content*—, probada por **los dos canales** (`curl` y WebFetch) con **`connect_rejected` / `EGRESS_BLOCKED`**. Las
+  fechas del Artículo 50 quedan confirmadas por **tres canales secundarios independientes y concordantes**, y eso **hay
+  que seguir diciéndolo cada vez que se citen.**
+- **`EventsConnector:170` es un falso positivo del barrido de mutaciones** (`Iterator.remove()` sobre una lista en
+  memoria). Se registra para que no vuelva a aparecer como hallazgo.
+- **La alternativa `public boolean do*` del extractor de UniTime está muerta:** **0 ocurrencias** en el árbol. Los 26
+  *overrides* son **todos** `public void do<Verb>(ApiHelper)`, y **ninguno** usa la forma
+  `(HttpServletRequest, HttpServletResponse)` de la clase base, así que el patrón del pase 42 **no perdía nada** — pero
+  tampoco lo sabía.
+
 ## 2026-10-02 (pase 44) — **el dato crudo: 55 constantes (no 42), 341 operaciones (no 79), 31 controladores (no 4), 37 aserciones en verde, y 0 rutas base literales en todo el servicio**
 
 Todo lo de abajo se leyó del árbol, con `git clone --depth 1 --filter=blob:none --sparse` sobre los dos upstreams —el

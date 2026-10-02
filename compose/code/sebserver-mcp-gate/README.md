@@ -1,3 +1,9 @@
+---
+industry: education
+region: Global
+updated: 2026-10-02
+---
+
 # SEB Server MCP gate — the second instance of the P85 allowlist pattern
 
 Closes the open half of **gap 86**: of the two institutional exam layers in this KB,

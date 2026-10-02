@@ -64,6 +64,35 @@ updated: 2026-10-02
 > 404** — y **10 están paradas hace ≥ 6 meses**, tres de ellas load-bearing. Tabla completa en `repos/trending.md` (pase 37),
 > impacto en `compose/patterns.md`.
 
+> **Pase 45 del 2026-10-02:** **no entran repos nuevos, y el barrido lo midió: las cuatro búsquedas globales
+> obligatorias devolvieron la capa genérica y material didáctico *sobre* AI, cero piezas de dominio que esta base no
+> tuviera.** Lo que entra es **una re-medición de `UniTime/unitime` sobre un checkout de HOY**, y corrige el dato que
+> esta base publicaba sobre su propia superficie. 🟢 **`UniTime/unitime` (Apache-2.0, `HEAD` `aeb4431` del
+> **2026-10-02**, Tomáš Müller — árbol vivo, no histórico):** el barrido sobre `JavaSource` **entero** confirma
+> **15 conectores API y ni uno más** (`grep -rn '@Service("/api'`), con **26 `do<Verb>(ApiHelper)` implementados**.
+> 🔴 **Y aparecen tres cifras que no estaban:** (1) **las rutas HTTP vivas son 60, no 26** — 15 × 4, y las **34** sin
+> *override* **responden 501 NOT_IMPLEMENTED, no 404**, porque `ApiConnector` implementa los cuatro verbos con
+> `sendError(SC_NOT_IMPLEMENTED)`; (2) **la URL desplegada por omisión es `/UniTime/api/<conector>`** y no
+> `/api/<conector>` — el `<url-pattern>` de `apiServlet` en `WebContent/WEB-INF/web.xml` es `/api/*` y `pom.xml:614`
+> envía `<warName>UniTime</warName>`, así que **la ruta del árbol es relativa al contexto del *webapp***; (3)
+> **`getName()` NO es la ruta de ningún conector** — `ApiServlet` hace `getBean(servletPath + pathInfo)`, así que
+> **enruta el nombre del bean de `@Service`**, y `getName()` sólo alimenta `getCacheMode()`. **Los 15 coinciden hoy, así
+> que el dato publicado era correcto y el método no.**
+> 🔴 **Y una advertencia de superficie que un cliente descubre en producción si no se lee antes:**
+> `ScriptConnector.doGet` **despacha por parámetro de query y dos ramas escriben** — `?script=` **llama `doPost`, o sea
+> un GET ejecuta un script del servidor**, y `?delete=` borra un ítem de la cola. **Para UniTime, el verbo HTTP no es la
+> frontera de escritura**, así que cualquier propuesta *read-only* sobre este upstream tiene que negar `/api/script`
+> **por nombre y de forma no anulable**, nunca por verbo. ⚠️ **Y `/api/var-title-crs` devuelve 400 en un despliegue por
+> omisión, también en la LECTURA:** `validateRequest()` —llamado por `doGet` y por `doPost`— exige tres
+> `ApplicationProperty` seteadas. Ver las tendencias **175**–**177** y el patrón **P100**; el extractor reproducible
+> está en `compose/code/unitime-mcp-gate/extract_surface.py`.
+> 🟢 **`openedx/edx-platform` (AGPL-3.0, leído sobre `master`) queda con el contrato de autoría cerrado**, y con dos
+> cosas que el pase 44 no tenía: **el handler exige DOS claves con subscript pelado** —`parent_locator` (832) y
+> `category` (864)— **y el contrato las declara opcionales a las dos**, así que **un cuerpo sin `parent_locator` da 403
+> y uno sin `category` da 500**, mientras una clave de más da **400** correctamente. 🟢 **Y una corrección a favor del
+> upstream: el `create` del `v1` SÍ corre el serializer** (`@validate_request_with_serializer`,
+> `rest_api/v1/views/xblock.py:239-243`) — es estricto con las claves de más y **no puede** atrapar las dos que exige,
+> porque las declara opcionales. Ver las tendencias **178**–**179** y el patrón **P101**.
 > **Pase 44 del 2026-10-02:** **no entran repos nuevos; los dos upstreams que sostienen los patrones de examen y de
 > autoría quedan re-medidos sobre un checkout, y las dos mediciones corrigen cifras de esta propia base.**
 > 🟢 **`SafeExamBrowser/seb-server` (⚠️ MPL-2.0, `HEAD` de `master` = `7f45689`, 2026-04-01):** el `HEAD` del clon

@@ -1,0 +1,67 @@
+{
+  "course_id": "course-v1:GlobantAIStudios+AIS101+2026_T4",
+  "children": [
+    {
+      "category": "chapter",
+      "display_name": "Modulo 1 — Fundamentos",
+      "children": [
+        {
+          "category": "sequential",
+          "display_name": "1.1 Que es un agente",
+          "children": [
+            {
+              "category": "vertical",
+              "display_name": "Lectura y practica",
+              "children": [
+                {"category": "html", "display_name": "Definiciones"},
+                {"category": "video", "display_name": "Demo en vivo"},
+                {"category": "problem", "display_name": "Chequeo rapido"}
+              ]
+            },
+            {
+              "category": "vertical",
+              "display_name": "Cierre",
+              "children": [
+                {"category": "discussion", "display_name": "Foro del modulo"}
+              ]
+            }
+          ]
+        },
+        {
+          "category": "sequential",
+          "display_name": "1.2 Herramientas y MCP",
+          "children": [
+            {
+              "category": "vertical",
+              "display_name": "Taller",
+              "children": [
+                {"category": "html", "display_name": "Guia del taller"},
+                {"category": "problem", "display_name": "Entrega"}
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": "chapter",
+      "display_name": "Modulo 2 — Evaluacion",
+      "children": [
+        {
+          "category": "sequential",
+          "display_name": "2.1 Rubricas",
+          "children": [
+            {
+              "category": "vertical",
+              "display_name": "Rubrica y ejemplo",
+              "children": [
+                {"category": "html", "display_name": "La rubrica"},
+                {"category": "problem", "display_name": "Autoevaluacion"}
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

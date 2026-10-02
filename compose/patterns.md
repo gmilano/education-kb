@@ -8,6 +8,22 @@ updated: 2026-10-02
 
 > Recetas concretas: repos nombrados, licencias verificadas, wiring explícito y estimación.
 > Todos los repos citados fueron verificados vía WebFetch el 2026-09-30; los del pase 11, el 2026-10-01 (ver `agents/top.md`).
+> **Pase 45 del 2026-10-02:** **+3 patrones, y los tres salen de ejecutar las tres acciones del pase 44.** **P99** — *el
+> componente transversal de marcado del Artículo 50(2)*: 🟢 **el hueco está medido (32 de 66 filas, el 48 %) y el
+> componente no hay que inventarlo, hay que conectarlo** — `OpenTutor` (**MIT**) aporta **el campo y el transporte**
+> (`{"generated": true}` servido al cliente), `lineage-skill` (**Apache-2.0**) aporta **la etiqueta y la granularidad
+> por afirmación** (9 valores, **4 sintéticos**) y `MarkLLM`/SynthID-Text (**Apache-2.0**, **P33**) aportan **la firma**;
+> **ninguna de las dos primeras sabe de la otra.** Estimado en **3-4 semanas** para los pasos 1-3, con el paso 4
+> **sin estimar hasta medirlo**. **P100** — *el quinto control*: 🔴 **extiende P98 con un control de otra clase — los
+> cuatro del pase 44 atrapan defectos del extractor, éste atrapa un defecto de la ABSTRACCIÓN**, porque en UniTime
+> `GET /api/script?script=` **llama `doPost` y ejecuta un script del servidor**, así que *«exponer sólo lecturas»* no es
+> implementable mirando el verbo. **Por eso el rechazo pasa de política a PISO** y se niega aunque un operador lo nombre
+> en la allowlist. **46/46 en verde**, y las dos puertas de esta base quedan auditadas. **P101** — *cotizar contra una
+> API cuyos estatus de error son diagnósticos falsos*: 🟢 **la fórmula de P96 queda cerrada** (`llamadas = 1 + bloques`,
+> en `profundidad` olas, hermanos en paralelo: **18 llamadas y 4 olas** para 17 bloques, **33 aserciones**) y 🔴 **la
+> regla de cliente queda escrita: todo campo que el handler lea con subscript pelado y el contrato declare opcional se
+> valida en el CLIENTE**, porque en Open edX un cuerpo sin `parent_locator` da **403** y uno sin `category` da **500**,
+> y los dos mandan al operador al lugar equivocado.
 > **Pase 36 del 2026-10-02:** +2 patrones, y **los dos cierran una acción que el pase 35 dejó escrita.** **P76** — *el
 > manifiesto MCP de QTI 3, escrito en vez de estimado*: las **20 tools** de `qti3-cli@0.13.1` con su `inputSchema` y su
 > `readOnlyHint`, medidas en el `.tgz` y no en el README. 🔴 **Y la medición corrige tres cosas que esta KB traía: no son
@@ -71,6 +87,126 @@ updated: 2026-10-02
 > (Apache-2.0, **v0.9.9 del 2026-10-01**), Ralph (MIT, vivo en `main`), las cuatro puertas de Canvas y Moodle-alumno
 > (commits de las últimas dos semanas) y `qti3-cli` (MIT). **El resto de las recetas no cambia.**
 
+## P99 — El componente transversal de marcado del Artículo 50(2): **dos filas de esta base son mitades complementarias y ninguna sabe de la otra** (agregado en el pase 45 del 2026-10-02)
+
+**Qué resuelve.** El hueco que el pase 45 midió y que alcanza a **32 de las 66 filas de `agents/top.md` — el 48 %**:
+ninguna puede marcar su salida como artificialmente generada, y la obligación **ya está vigente** (ver tendencias
+**180**–**183** y `compose/code/aiact-50-2-exposure/README.md`). 🔵 **El patrón no es «construir un marcador»: es
+conectar tres piezas que ya existen, permisivas, dentro de esta misma base.**
+
+| Pieza | Licencia | Qué aporta | Por qué no alcanza sola |
+|---|---|---|---|
+| **`zijinz456/OpenTutor`** | **MIT**, 127 ★ | **El campo y el transporte.** `build_provenance(..., generated: bool = True, ...)` emite `{"generated": true, "source_labels": ["generated"], …}`; `routers/chat.py:214` lo sirve al cliente y `schemas/task.py:59` lo declara en el esquema | Marca **el turno, no el tramo**; es un campo **al lado** del contenido; **no está firmado** |
+| **`JuneYaooo/lineage-skill`** | **Apache-2.0**, 448 ★ | **La etiqueta y la granularidad.** `references/provenance-policy.md`: 9 valores cerrados **por afirmación**, de los cuales **4 son sintéticos** (`source_grounded_synthesis`, `cross_source_synthesis`, `mentor_inference`, `external_general_knowledge`) | Es **prosa dirigida al modelo**, no un campo emitido |
+| **`THU-BPM/MarkLLM`** + **SynthID-Text** | **Apache-2.0** (ver **P33**) | **La firma y el detector**, en el mismo paquete | No sabe nada de pedagogía ni de quién consume el texto |
+
+### El wiring, explícito
+
+1. **Mapear los 9 valores a un booleano, que es la decisión que nadie tomó.** `direct_source`, `learner_observation`,
+   `real_world_evidence` y `learner_hypothesis` → `synthetic: false`. Los cuatro sintéticos + `unsupported` →
+   `synthetic: true`. 🔵 **Se conserva el valor original además del booleano**, porque el booleano es lo que pide el
+   Artículo 50(2) y el valor es lo que sirve para la revisión pedagógica: **son dos consumidores distintos del mismo
+   dato.**
+2. **Extender el payload de `OpenTutor` con `spans`.** Hoy `generated` es del turno; el patrón lo baja al tramo:
+   `spans: [{start, end, synthetic, provenance}]`. El campo ya viaja al cliente, así que **el transporte está hecho**.
+3. **Firmar el tramo sintético con SynthID-Text o `MarkLLM`** en el momento de generarlo, **no después**: así la marca
+   viaja **dentro del texto** y sobrevive a copiarlo fuera del sobre, que es el requisito que el campo JSON no cumple.
+4. **Inyectar en el empaquetado si se puede** (`giacomomaria81/scorm-mcp-server`, **MIT**, el único `pack` de la
+   clasificación) — ⚠️ **pendiente de medición: es la acción 3 del pase 45** (**gap 97**). Si el `imsmanifest.xml`
+   admite metadatos arbitrarios y `scorm_validate` no los rechaza, **se marca UNA vez en el empaquetado en vez de 32
+   veces en cada generador.**
+
+**Estimación.** **3-4 semanas** para los pasos 1-3 sobre un generador existente (el mapeo es un diccionario, el
+`spans` es un cambio de esquema, la firma es una dependencia Apache-2.0 ya catalogada). El paso 4 **no se estima hasta
+medirlo**.
+
+🔴 **La advertencia que hay que decir primero, porque cambia quién paga:** el deber del Artículo 50(2) es del
+**proveedor** —quien pone el sistema generativo en el mercado— **no del *deployer***. Si el entregable es un sistema
+nuevo, **la obligación viaja con el entregable y ya está vencida al momento de entregar** (tendencia **183**).
+
+⚠️ **Y lo que este patrón NO resuelve:** las **13 piezas** con artefactos de «procedencia» que resultaron ser
+**procedencia de fuente** no aportan nada acá (tendencia **182**). Contarlas como cobertura **sobreestima el
+cumplimiento 13×**.
+
+## P100 — Antes de proponer la superficie de un servicio: el **quinto control**, porque el verbo HTTP no siempre es la frontera de escritura (extiende **P98**, agregado en el pase 45 del 2026-10-02)
+
+**Esto no es un patrón de producto: es la extensión del control de calidad de P98**, y la diferencia con los cuatro
+anteriores es de clase. **Los cuatro controles del pase 44 atrapan defectos del EXTRACTOR. Éste atrapa un defecto de la
+ABSTRACCIÓN** — la premisa, compartida por P60, P85, P92 y P93, de que *«exponer sólo lecturas»* es una política
+implementable mirando el verbo.
+
+| # | Control | Cómo se verifica | Qué atrapa |
+|---|---|---|---|
+| **5** | **Ningún verbo de lectura escribe** | leer el **cuerpo** de cada handler de lectura y buscar: delegación a otro verbo (`doPost(helper)`), borrados, `saveOrUpdate`, `persist` | `ScriptConnector.doGet` de UniTime: **`?script=` llama `doPost` (ejecuta un script del servidor) y `?delete=` borra un ítem de la cola** |
+
+**Y las tres consecuencias de diseño, que son lo que hay que llevarse:**
+
+1. 🔴 **El rechazo tiene que ser un PISO, no una política.** Si el verbo no es la frontera, una *allowlist* de
+   lectura/escritura no puede proteger la ruta: hay que negarla **por nombre y de forma no anulable**.
+   `hard_deny()` niega con `-32601` **incluso si un operador nombra el tool en la variable de entorno de allowlist**, y
+   registra la decisión como `floor` y no como `withheld`, **para que el log distinga «la política no lo abrió» de «no
+   se puede abrir»**.
+2. 🔵 **El guarda condicional puede estar dentro del método, no en la clase.** El control 4 de P98 busca
+   `@ConditionalOn*`; UniTime **no condiciona el bean, condiciona el handler**:
+   `VariableTitleCourseConnector.validateRequest()` —llamado por `doGet` **y** por `doPost`— rechaza si tres
+   `ApplicationProperty` no están seteadas, así que **la LECTURA devuelve 400 en un despliegue por omisión**. Hay que
+   buscar el guarda **en el cuerpo y en los métodos que llama**, no sólo en las anotaciones.
+3. 🔵 **Una ruta sin *override* no es un 404.** La clase base de UniTime responde **501**, así que la superficie HTTP es
+   **60** y la implementada **26**. Las dos cifras son correctas y responden preguntas distintas; **el manifiesto expone
+   26 y la tabla registra 60.**
+
+🔵 **El artefacto está escrito y las dos puertas de esta base quedan auditadas:**
+`compose/code/unitime-mcp-gate/extract_surface.py` lee el bean de `@Service`, el `<url-pattern>` de `web.xml`, el
+`<warName>` de `pom.xml`, los *overrides* de verbo, los **cruces de verbo** y los **guardas por propiedad**; y
+`test_gate.py` asevera los cinco controles con **46/46 en verde**. 🔴 **La tercera pieza de código de esta KB
+—`seb-proctoring-validator`— sigue sin pasar por los controles: es la acción 2 del pase 45 (gap 96).**
+
+**Costo de aplicarlo: horas.** Costo de no aplicarlo: una puerta que se propone como *read-only* y expone, detrás de un
+GET, la ejecución de scripts del servidor.
+
+## P101 — Cotizar la generación de contenido contra una API cuyos estatus de error son diagnósticos falsos (agregado en el pase 45 del 2026-10-02)
+
+**Qué resuelve.** El patrón de cliente que **P96** necesitaba y no tenía: cómo escribir el generador cuando el servidor
+**mal-reporta** los defectos de cuerpo. Medido sobre
+`POST /api/contentstore/v1/xblock/` de `openedx/edx-platform` (**AGPL-3.0**, leído sobre `master`), un cuerpo mal formado
+da **tres** estatus y **sólo uno es el correcto** (tendencia **178**):
+
+| Cuerpo | Estatus | Dónde va a buscar el operador | Dónde está el problema |
+|---|---|---|---|
+| sin `parent_locator` | 🔴 **403** | credenciales, JWT, permisos de autoría | **una clave ausente en el JSON** |
+| sin `category` | 🔴 **500** | logs del servidor, versión de la plataforma | **una clave ausente en el JSON** |
+| clave de más | 🟢 **400** | el cuerpo | el cuerpo |
+
+### La regla del patrón
+
+🔵 **Todo campo que el handler lea con subscript pelado y el contrato declare opcional se valida en el CLIENTE, antes de
+emitir.** No es defensa en profundidad: **es que el estatus del servidor manda al lugar equivocado.** En Open edX esos
+campos son **dos** —`parent_locator` (línea 832) y `category` (864)— y el serializer **los declara opcionales a los
+dos**, con `StrictSerializer` siendo estricto **sólo con las claves de más**.
+
+### El wiring, con el número
+
+1. **Validar el *outline* entero antes de la primera llamada:** `parent_locator`, `category`, el orden de niveles
+   (capítulo → secuencia → vertical → hoja) y **la lista blanca de los 4 campos** que el *create* lee.
+2. **Planificar en olas.** El POST devuelve `{"locator", "courseKey"}` y `locator` **es el usage key del bloque nuevo**,
+   así que un hijo necesita a su padre pero **los hermanos no dependen entre sí**: una ola por nivel, paralelizable
+   dentro.
+3. **Leer el curso en UNA llamada**, no recorriendo el árbol:
+   `GET /api/contentstore/v1/course_index/{course_id}` devuelve `course_structure`.
+4. **Probar contra un *stub* que castigue, no que diga sí.** El del artefacto reproduce los **cuatro**
+   comportamientos (400/403/500/200) y devuelve `locator` con la forma real
+   `block-v1:<org>+<course>+<run>+type@<category>+block@<32 hex>`.
+
+🟢 **La fórmula cotizable: `llamadas = 1 + bloques`, en `profundidad` olas secuenciales.** Para un curso de 2 módulos /
+3 secuencias / 4 verticales / 8 componentes = **17 bloques**: **18 llamadas, 4 olas, ola más ancha de 8.**
+
+🔵 **El artefacto está escrito, con 33 aserciones en verde y sin levantar Open edX:**
+`compose/code/openedx-course-generator/`.
+
+⚠️ **El límite declarado, y es del upstream:** **`category` no se puede validar contra los XBlocks instalados porque el
+servidor tampoco lo hace** — `XblockSerializer.category` es un `CharField(required=False)` **sin `choices`**, y el único
+enum del árbol (`["html","problem","video"]`) aplica **sólo** si el padre es un `LibraryUsageLocator`. La lista de
+categorías hoja del generador es **una convención de esta KB**, declarada como tal.
 ## P96 — Generar un curso de Open edX entero, con el **número de llamadas** cerrado (reencuadra **P95**: el árbol no se lee del endpoint de xblock) (agregado en el pase 44 del 2026-10-02)
 
 **P95 quedó escrito con una premisa que este pase midió y es falsa:** que el recorrido del árbol se hace con el endpoint

@@ -8,6 +8,7 @@ updated: 2026-10-02
 
 > Key players, market map y oportunidades por región.
 > Investigado 2026-09-30; el pase 11, el 2026-10-01. Las estimaciones de tamaño de mercado varían mucho entre firmas: se listan todas con su fuente en vez de elegir una.
+> **Pase 45 del 2026-10-02:** barrido regional completo en las cuatro regiones. 🔴 **Dato de mercado nuevo: CERO en las cuatro, y dato de software nuevo: CERO en las cuatro. Se dice así en vez de rellenar**, y queda registrado por región para que el agotamiento no se confunda con cobertura. **Lo que aporta el pase es de encuadre regulatorio, y corrige un marco que esta misma base habilitaba:** 🔵 **el 2026-12-02 NO es «cuándo empieza el Artículo 50(2)» — es el plazo de gracia de los sistemas YA desplegados.** Para **cualquier sistema nuevo** —y un *engagement* que entrega un tutor construido sobre las piezas de esta KB **es** un sistema nuevo— **la obligación rige desde el 2026-08-02 y ya está vencida al momento de entregar**: decir «faltan 61 días» en una reunión sobre un desarrollo nuevo es **tranquilizar con la fecha equivocada** (tendencia **183**). 🟢 **Y entra el dato que decide quién paga y que esta base no tenía en ninguna parte: el deber del Artículo 50(2) recae en el PROVEEDOR —quien pone el sistema generativo en el mercado, incluidos los proveedores de GPAI— no en el *deployer* ni en el usuario final.** De ahí sale **una pregunta de *discovery* de una línea** que hoy no está en ningún checklist: ***«¿quién pone este sistema en el mercado?»***. 🔴 **Y el hueco está medido fila por fila: 32 de las 66 filas de `agents/top.md` —el 48 %— ponen contenido sintético delante de un alumno o un docente, y 0 de 33 repos puede marcarlo** (**24.202 archivos**, **26 manifiestos de raíz**, cero dependencias de marcado) — aunque **hay UNA bandera legible por máquina** (`OpenTutor`, `{"generated": true}` servido al cliente) y **la granularidad que le falta está en otra fila** (`lineage-skill`). 🟢 **El componente transversal queda especificado con tres piezas permisivas y estimado en 3-4 semanas (P99)**, y eso cambia la conversación de EMEA de *«ustedes tienen un problema»* a *«el hueco está medido y tenemos el componente»*. **Por región:** North America entra por **exposición de exportación** (sin régimen educativo propio, el deber aparece si el producto se vende en la UE) y ⚠️ **la contradicción del calendario del AI Act reapareció por UNDÉCIMA vez**; **EMEA** se lleva la corrección de encuadre y la tabla de escenarios de *engagement*; **APAC** deja a la vista que **el marcado es el único requisito que comparte con EMEA** (China desde el 2025-09-01, UE desde el 2026-08-02) y que **sus tres *players* de formación nombrados son propietarios**; **LATAM** aporta el argumento más fuerte de la región — **la fragmentación normativa que la fuente plantea como riesgo convierte al marcado en el denominador común más alto y más barato**, y es **la pieza de gobernanza más chica que existe** para una región que **adopta al 92 % y gobierna al 8-26 %**. 🔴 **Gap 92 ampliado a CUATRO dominios bloqueados** (se suma `digital-strategy.ec.europa.eu`, la página oficial del *Code of Practice on Transparency of AI-generated Content*). Ver `intel/trends.md`, tendencias **175**–**183**, y los patrones **P99**–**P101**.
 > **Pase 44 del 2026-10-02:** barrido regional completo en las cuatro regiones, **y el pase aporta una fecha que esta base no tenía y que vence antes que todo lo que venía planificando.** 🟢 **El Artículo 50(2) del AI Act vence el 2026-12-02 —61 días— para los sistemas generativos ya en el mercado antes del 2026-08-02, y NO se prorrogó**: el Digital Omnibus que diferió el Anexo III dejó el Artículo 50 intacto, y el 9.º plenario del Consejo Europeo de IA (2026-09-17) lo confirmó sin conceder alivio. **El entregable más cercano de cumplimiento no es el expediente de alto riesgo, es el marcado legible por máquina sobre producto YA desplegado** (tendencia **173**). ✅ **Las dos fechas del pase 43 quedan confirmadas por segundo canal independiente —Anexo III 2027-12-02, Anexo I 2028-08-02, Reg. (UE) 2026/1744 publicado el 2026-07-24 y en vigor el 2026-07-27— así que la recomendación de EMEA NO se revierte.** 🔴 **Pero no contra el texto consolidado: `eur-lex.europa.eu` y `artificialintelligenceact.eu` dan los dos 403 a CONNECT, y el segundo es una instancia NUEVA y no institucional del gap 65 — el bloqueo alcanza también a los agregadores legales privados** (**gap 92**). ⚠️ **Y la fecha vencida del AI Act reapareció por DÉCIMA vez, otra vez en el barrido de North America: queda establecido como propiedad del canal, no error de una fuente.** **Cifras nuevas por región:** North America **951 M USD (2024) → 2.303,2 M (2029), CAGR 15,9 %, 36 % del mercado global**; APAC **591,6 M → 1.848,1 M, CAGR 20,9 % — el más alto de las cuatro**; EMEA con adopción empresarial de **5,21 % (Rumania) a 42,03 % (Dinamarca)** y barreras ordenadas (**expertise 70,89 %** > legal 52,52 % > datos 48,83 %); LATAM con el desglose institucional completo (**enseñanza 73,5 % · investigación 57,0 % · administración 34,1 % · comunidad 20,0 %**) y **la brecha de gobernanza con cuatro números: estrategia formal 26,0 %, políticas 18,5 %, presupuesto 8,0 %, evaluación 9,0 %**. 🔵 **El cruce que se repite y ya es estructural: LATAM adopta al 92 % y gobierna al 8-26 %.** ⚠️ **Y las dos ausencias de software se reconfirman explícitamente para no confundirlas con cobertura: cero piezas open source nuevas de origen LATAM y cero de origen APAC en las capas de esta KB en este pase.** Ver `intel/trends.md`, tendencias **166**–**174**, y los patrones **P96**–**P98**.
 > **Pase 41 del 2026-10-02:** barrido regional completo en las cuatro regiones. 🔵 **Las cuatro rindieron, pero lo que rindieron es encuadre, no cifra: el dato de mercado nuevo de este pase es CERO y se dice así en vez de rellenar.** Lo que cambia es que la capa de examen y monitoreo **pasa a tener ruta permisiva**, y eso reordena las cuatro regiones. 🔴 **APAC se queda con el reloj más apretado del mundo en esta capa: Vietnam nombra la *evaluación automatizada* y la *monitorización del comportamiento* en educación entre sus seis sectores de alto riesgo, con cumplimiento el 2027-03-01 — NUEVE meses antes del 2027-12-02 europeo.** ⚠️ **Y eso matiza lo que el pase 36 publicó** (*«ninguno de los instrumentos APAC es un régimen de alto riesgo EDUCATIVO»*): para *proctoring*, Vietnam lo es. 🟢 **EMEA deja de tener su opción muerta: `openfun/xblock-proctor-exam` (France Université Numérique) sigue parado hace 5,6 años, y lo reemplaza la familia Safe Exam Browser de ETH Zürich — MPL-2.0, copyleft DÉBIL, con `OPEN_OLAT` en su `enum LmsType` y residencia de datos por construcción.** 🟢 **North America: las dos anclas permisivas de estas capas son norteamericanas (UniTime es Apache-2.0 de la Apereo Foundation, origen Purdue; el directorio de *backends* de `edx-proctoring` está carved-out en Apache-2.0), y el diseño del patrón coincide literalmente con lo que Oklahoma y Maryland ya exigen —supervisión humana y prohibición de que la AI decida sobre el alumno—, así que el cumplimiento deja de ser una concesión y pasa a ser la arquitectura.** 🔵 **LATAM se lleva el cruce más accionable del pase: la dimensión que la región adopta MENOS es ADMINISTRACIÓN (34,1 %, pase 40) y es exactamente la capa que este pase encontró gratis, viva y sin ninguna competencia agéntica — la brecha de adopción y la de oferta son la misma, y el software no es el obstáculo.** 🔴 **Y una ausencia MEDIDA que se escribe explícitamente: no hay ninguna pieza open source de origen LATAM en las dos capas, ni del lado servidor ni del lado cliente** (las anclas son North America, EMEA y —en la mitad navegador— APAC con `exam-guard`, India). **Se probaron los 8 nombres de npm y el índice completo de PyPI: 404 en 8 de 8 y 0 nombres.** 🔵 **En LATAM, además, la palanca NO es regulatoria —ningún instrumento de la región nombra monitoreo de exámenes como alto riesgo— así que el expediente se vende por confianza institucional, y para eso el número es el 65 % de alumnos que teme que la AI vuelva el aprendizaje superficial.** Ver `intel/trends.md`, tendencias **149**–**156**, y los patrones **P88**–**P90**.
 > **Pase 36 del 2026-10-02:** barrido regional completo en las cuatro regiones, **y las cuatro rindieron dato nuevo.** 🔴 **El hallazgo que manda es de calendario, y la primera lectura de este pase fue EQUIVOCADA y quedó corregida antes de publicarse — por eso se escribe completo: las fechas revisadas del AI Act son DOS** — **2027-12-02 (Anexo III, *autónomo*)** y **2028-08-02 (Anexo I, embebido en producto regulado)** — **pero EDUCACIÓN ESTÁ EN EL ANEXO III**, junto con contratación y *credit scoring*, mientras el **Anexo I son dispositivos médicos, maquinaria y vehículos**. ⚠️ **«Embebido en un LMS» NO es Anexo I: un LMS no es producto regulado**, así que **el plazo de educación es el 2027-12-02 y la segunda fecha no da prórroga a este sector.** 🔵 **El error que esto evita tiene el signo peligroso —creerse ocho meses que no existen— y la pregunta correcta de *discovery* no es «¿autónomo o embebido?» sino «¿el producto que lo contiene tiene conformidad propia del Anexo I?», que en educación es casi siempre NO.** ⚠️ Dos fuentes concordantes, secundarias comerciales como todo `intel/` (**gap 65**). **North America:** el volumen legislativo tiene número —**134 proyectos en 31 estados, sesión 2026**—, aparece el primer instrumento **federal** (**K-12 AI Literacy and Readiness Act of 2026**, aprobado en comisión: **financiamiento, no conformidad**) y 🟢 **el dato con fecha más cercana es contractual: el *National AI Safety & Privacy Standard* de Microsoft + AFT —sin dato de alumno para entrenar, sin seguimiento, con supervisión humana— aplica a todos los contratos escolares de Microsoft desde el 1.º de noviembre**, lo que convierte la capa de telemetría de esta KB en cláusula contractual y no sólo en cumplimiento legal. **APAC:** primera cifra de intención de gasto (**96 % aumenta inversión, +15 % promedio en 2026; ~66 % pilotea o adopta**) y el mapa regulatorio se completa con cuatro instrumentos vigentes (**Corea** enero 2026 **con alcance extraterritorial**, **Vietnam** marzo 2026, **Taiwán** 2026-01-14 con **20 artículos**, **China** etiquetado sintético desde 2025-09-01) — 🔴 **y la lectura es la ausencia: ninguno es un régimen de alto riesgo EDUCATIVO**, así que no se debe escribir «APAC regula la AI en educación». **LATAM:** 🟢 **la región deja de depender de evidencia bloqueada** — el ***AI in Higher Education LATAM Survey 2026*** (Digital Education Council con el **Tec de Monterrey**, AIGEN y RIE360) es la contraparte **accesible** del *working paper* de IESALC: **92 % de alumnos y 79 % de docentes usando AI** (✅ el 79 % **confirma** por segundo instrumento la cifra que esta KB ya tenía), **94 % de docentes espera seguir usándola** y **sin brecha por años de experiencia**; 🔴 **y entra el dato que esta base no tenía en ninguna región: 65 % de los alumnos teme que la AI vuelva el aprendizaje superficial** — el complemento exacto de la adopción «ancha y superficial» del pase 33, y el argumento que hace que **P67** (evidencia auditable) valga más en LATAM que en ninguna otra región. 🔴 **Y una corrección de alcance medida en este pase: INEP no publica API** — Censo Escolar es descarga masiva de CSV/ZIP (**10-20 GB descomprimidos**) y la única API de terceros es **GPL-2.0, sólo IDEB y con el dominio ya sin resolver**: la oportunidad brasileña es **pipeline de ingesta, no servidor fachada** (**gap 69**, **P77**).
@@ -1992,6 +1993,28 @@ permite entrenar con datos de alumnos y qué no—, y **(2)** el **registro de d
 Maryland, que es exactamente el artefacto que el patrón de credencial firmada y el *gateway* de partición de tools de
 esta KB ya saben producir.
 
+#### Agregado en el pase 45 del 2026-10-02 — 🔴 **el barrido de North America se agotó otra vez, y lo que entra no es cifra: es la pregunta de *discovery* que decide quién paga el Artículo 50(2)**
+
+🔴 **Dato de mercado nuevo: CERO.** El barrido devolvió lo que esta base ya tiene —**951 M USD (2024) → 2.303,2 M
+(2029), CAGR 15,9 %, 36 % del mercado global**; **10 % de instituciones con guías formales**; **71 % de docentes sin
+formación**; el **vacío regulatorio** (*«no hay equivalente a la FDA»*, decisión por escuela/distrito/universidad,
+colcha estatal con **Colorado** y **Texas**)— y los *players* nombrados son **IBM, Microsoft y Google**, **ninguno open
+source**. **Se registra como agotamiento medido, no como cobertura.**
+
+🟢 **Lo que sí entra, y es accionable en esta región antes que en ninguna:** la clasificación del Artículo 50(2) del
+pase 45 deja una **pregunta de *discovery* de una línea** que hoy no está en ningún checklist de esta base —
+***«¿quién pone este sistema en el mercado?»***— porque el deber del marcado recae en el **proveedor**, no en el
+*deployer*.
+
+🔵 **Por qué pesa especialmente acá:** North America es la región **sin régimen educativo propio**, así que un distrito o
+una universidad norteamericana que compra un tutor no tiene una autoridad que le exija nada… **salvo que el producto se
+venda también en la UE**. Entonces la pregunta se invierte y es comercial: **si el entregable se despliega en EMEA, el
+proveedor es quien lo construyó**, y en un *engagement* de Globant eso es **el entregable**, no el cliente. **La
+conversación en North America no empieza por cumplimiento: empieza por exposición de exportación.**
+
+⚠️ **Y la contradicción del calendario del AI Act reapareció por UNDÉCIMA vez en el barrido de esta región.** Queda
+reconfirmada como **propiedad del canal**, no como error de una fuente.
+
 ### EMEA
 
 #### Pase 44 del 2026-10-02 — las dos fechas quedan **confirmadas por segundo canal** (la recomendación NO se revierte), y aparece una tercera, más cerca
@@ -2973,6 +2996,60 @@ secundarias de análisis regulatorio, **no del texto consolidado en EUR-Lex**. L
 del pase 44. Sigue también sin alcanzarse `coe.int` (la *2nd Working Conference* del Consejo de Europa), que es la
 primaria regulatoria educativa de EMEA que este entorno no resuelve.
 
+#### Agregado en el pase 45 del 2026-10-02 — 🔴 **el encuadre del Artículo 50(2) que hay que corregir aunque la fecha esté bien, y el dato de responsabilidad que esta base no tenía**
+
+El barrido de EMEA devolvió **encuadre conocido**: el **Consejo de Europa** celebra su **2.ª conferencia de trabajo
+sobre las dimensiones regulatorias de la AI en educación este mes (octubre de 2026)** —⚠️ `coe.int` **sigue bloqueado**,
+así que no se cita como primaria—; **£200 M+** del *AI Adoption Summit* del Reino Unido con **Cisco, IBM, BT y
+Rolls-Royce**; **38 %** de las organizaciones EMEA todavía sin pilotear; **94 %** invertirá en formación en AI en 2026;
+y entran **Claude Corps** (150 M USD, 1.000 trabajadores de carrera temprana) y el **Europe EdTech 200+ 2026**.
+🔴 **Dato de mercado nuevo: cero.**
+
+### 🔴 La corrección de encuadre, que es el aporte del pase a esta región
+
+Esta base venía publicando el **2026-12-02** como *«el Artículo 50(2) vence en 61 días»*. **La fecha está bien y el
+encuadre induce al error.** Confirmado en este pase por un **tercer canal secundario independiente**:
+
+| Obligación | Fecha | Estado al 2026-10-02 |
+|---|---|---|
+| Art. 50 transparencia (declarar que se interactúa con AI) | **2026-08-02** | 🔴 vigente, **vencida hace 2 meses** |
+| **Art. 50(2) marcado legible por máquina** — sistemas puestos en el mercado **desde** el 2026-08-02 | **2026-08-02** | 🔴 **YA VIGENTE** |
+| **Art. 50(2)** — *backstop* de sistemas **ya en el mercado antes** del 2026-08-02 | **2026-12-02** | ⏳ 61 días |
+
+🔵 **El 2026-12-02 es el plazo de gracia de lo ya desplegado, no el inicio de la obligación.** Para **cualquier sistema
+nuevo** —y un *engagement* que entrega un tutor construido sobre las piezas de esta KB **es** un sistema nuevo— **la
+obligación rige desde el 2026-08-02 y ya está vencida al momento de entregar.** 🔴 **Decir «faltan 61 días» en una
+reunión sobre un desarrollo nuevo es tranquilizar con la fecha equivocada**, y es un error que esta misma base
+habilitaba al publicar una sola fecha.
+
+### 🟢 El dato que decide quién paga, y no estaba en ninguna parte de esta base
+
+**El deber del Artículo 50(2) recae en el PROVEEDOR** —quien desarrolla el sistema generativo y lo pone en el mercado,
+**incluidos los proveedores de GPAI**— **no en el *deployer* ni en el usuario final.**
+
+| Escenario de *engagement* | Quién es el proveedor | Dónde está el deber |
+|---|---|---|
+| Globant **construye y entrega** un tutor sobre estas piezas, con marca del cliente | depende de quién lo pone en el mercado — **es la pregunta de *discovery*** | **viaja con el entregable** |
+| El cliente **sólo despliega** un producto de un tercero | el tercero | **aguas arriba**: no es del cliente ni de Globant |
+| Globant integra un **GPAI** de un proveedor y genera contenido educativo encima | **los dos**, en capas distintas | **el marcado del texto generado sigue siendo del sistema que lo emite** |
+
+🔵 **La pregunta de *discovery*, de una línea: «¿quién pone este sistema en el mercado?»** Hoy no está en ningún
+checklist de esta base y decide si el cumplimiento es una partida del proyecto o un riesgo heredado.
+
+### La asimetría comercial, actualizada con la medición del pase
+
+Lo que **vence ya** sigue siendo **lo barato** (marcar) y lo que vence en **2027-12-02** sigue siendo **lo caro** (el
+expediente del Anexo III, **P4**). 🔴 **Pero ahora el «barato» tiene su hueco medido: 32 de las 66 filas de
+`agents/top.md` —el 48 %— ponen contenido sintético delante de una persona, y 0 de 33 repos puede marcarlo**
+(**24.202 archivos**, **26 manifiestos**, cero dependencias). 🟢 **Y el componente está especificado, con las tres
+piezas permisivas identificadas y estimado en 3-4 semanas: ver P99.** Eso convierte la conversación de EMEA de
+*«ustedes tienen un problema»* a *«tenemos el componente y el hueco está medido»*.
+
+⚠️ **Límite de fuente, ampliado: gap 92 pasa a CUATRO dominios bloqueados** — `eur-lex.europa.eu`,
+`artificialintelligenceact.eu`, `data.europa.eu` y ahora **`digital-strategy.ec.europa.eu`**, la página oficial del
+*Code of Practice on Transparency of AI-generated Content*, probada por **los dos canales disponibles** (`curl` →
+`connect_rejected`, WebFetch → `EGRESS_BLOCKED`). **Tres canales secundarios concordantes, cero primarias.**
+
 ### APAC
 
 #### Agregado en el pase 42 del 2026-10-02 — soberanía como eje de compra, y la brecha de gobernanza con número
@@ -3785,6 +3862,37 @@ el costo de un *rollout* regional respecto de lo que esta KB asumía.
 2026**; en AI aplicada a educación los incumbentes nombrados son **Google, Microsoft, IBM, Pearson y Byju's**, con
 **China, India y Japón** concentrando la inversión. ⚠️ Esa cifra de **USD 102 B es de AI en general, no de AI en
 educación** — no se debe comparar con los USD 10,6 B globales del sector educativo.
+
+#### Agregado en el pase 45 del 2026-10-02 — 🔴 **APAC se agota, los tres *players* de formación que devolvió son propietarios, y la asimetría con China queda en evidencia**
+
+🔴 **Dato de mercado nuevo: CERO, y dato de software nuevo: CERO.** El barrido devolvió **48 %** de líderes de
+gobernanza con la adopción de AI como prioridad 2026; **57 %** de organizaciones asiáticas con AI en producción;
+**49 %** declarando infraestructura insuficiente para datos en tiempo real; y la región moviéndose a
+***sovereign-by-design***, con la soberanía definiendo la infraestructura de **~la mitad** de las empresas — **todo ya
+registrado en esta base**. **Singapur** aparece consultando sobre uso de AI, pero **en instituciones financieras, no
+educativas.**
+
+🔴 **Los tres *players* de formación nombrados son propietarios:** **LearnUpon** (nueva sede en Sídney, con *authoring*
+de cursos por AI), **TCS + Pearson** (alianza plurianual de aprendizaje con AI) y **NIIT MTS**. 🔵 **Eso es información
+y conviene decirla así: en APAC la capa de formación corporativa la están tomando incumbentes propietarios, y esta KB no
+tiene una sola pieza open source de origen APAC en las capas generativas.** Segunda medición consecutiva con ese
+resultado.
+
+### 🔵 La asimetría que la medición del Artículo 50(2) deja a la vista en esta región
+
+**China exige etiquetado de contenido sintético desde el 2025-09-01** —dato que esta base tiene desde el pase 36— y
+**la UE desde el 2026-08-02**. 🔴 **O sea: la obligación de marcar es, hoy, el único requisito regulatorio que APAC y
+EMEA comparten en esta capa**, mientras ninguno de los cuatro instrumentos APAC vigentes (Corea, Vietnam, Taiwán,
+China) es un **régimen de alto riesgo educativo**.
+
+🟢 **La lectura comercial, y es la más limpia que tiene APAC en esta capa:** un entregable generativo que marca su salida
+**cumple en China, en la UE y —por adelantado— en los regímenes basados en riesgo que la región va a modelar sobre el EU
+AI Act en 2027-2030.** **El componente de P99 se paga una vez y sirve en tres jurisdicciones**, que es exactamente el
+argumento que un cliente APAC con operación multi-país necesita escuchar antes que cualquier cifra de mercado.
+
+⚠️ **Y el reloj más apretado del mundo en la capa de examen sigue siendo APAC:** **Vietnam** pone *evaluación
+automatizada* y *monitorización del comportamiento* en alto riesgo con cumplimiento el **2027-03-01**, **nueve meses
+antes** del 2027-12-02 europeo. **No cambió en este pase; se reconfirma para que no se pierda.**
 
 ### LATAM
 
@@ -4871,6 +4979,43 @@ corriendo hasta diciembre de 2026** — es un **ámbito nombrado y con plazo** p
 ⚠️ **La advertencia de método se atenúa pero no se levanta:** el DEC y el Tec de Monterrey **sí** son alcanzables desde
 este entorno. Las primarias *de gobierno* (ANPD, CONPES, los textos legislativos) **siguen** sin leerse de primera mano
 acá, así que las fechas regulatorias de esta sección son **de segunda fuente** y están marcadas como tales.
+
+#### Agregado en el pase 45 del 2026-10-02 — 🟢 **el barrido de LATAM devuelve el argumento más fuerte que tiene la región para el componente de marcado: la fragmentación normativa**
+
+🔴 **Dato de software nuevo: CERO, por segunda vez consecutiva.** El barrido reconfirmó el *working paper* de
+**UNU / UNESCO IESALC** (**200 instituciones de educación superior en 19 países**, relevado entre **agosto y octubre de
+2025**, cinco dimensiones: docencia, investigación, extensión, administración y **gobernanza**) —⚠️ **`unu.edu` sigue
+bloqueado**, así que entra como secundaria—, más **85 %+ de empresas de la región usando AI** y **70 %** de adopción por
+otra fuente. Startups nombradas: **Ednova (Chile)** en edtech, **Kredi (México)** y **MindHealth LATAM (Colombia)**.
+🔴 **Ninguna open source, y cero piezas de origen LATAM en las capas generativas de esta KB.**
+
+### 🟢 El hallazgo del pase para esta región, y sale de una frase de la fuente regional
+
+La fuente señala que **el marco europeo crea fragmentación normativa para la operación transfronteriza en América
+Latina, donde varios países operan con marcos distintos o inexistentes.** 🔵 **Eso, que la fuente plantea como riesgo,
+es el argumento comercial del componente de marcado:**
+
+**El Artículo 50(2) es el denominador común más alto de la región y el más barato de cumplir.** Un entregable generativo
+que marca su salida:
+
+- **cumple en la UE** (desde el 2026-08-02, ya vencido para sistemas nuevos);
+- **cumple en China** (etiquetado sintético desde el 2025-09-01);
+- **no contradice a ningún instrumento LATAM**, porque **ninguno exige marcado** — así que **marcar no cuesta
+  concesiones regulatorias en la región**;
+- y **anticipa** los regímenes basados en riesgo que la región va a modelar sobre el EU AI Act.
+
+🟢 **Marcar una vez sirve para las cuatro regiones.** Para un cliente LATAM con operación multi-país —que es el caso
+típico— eso convierte el cumplimiento de **un costo por jurisdicción** en **un componente del producto**.
+
+### 🔵 Y el cruce estructural de la región vuelve a cerrar, ahora por el lado del marcado
+
+LATAM **adopta al 92 % y gobierna al 8-26 %** (estrategia formal **26,0 %**, políticas **18,5 %**, presupuesto
+**8,0 %**, evaluación **9,0 %**). 🔵 **El marcado es la pieza de gobernanza más chica que existe:** no requiere comité,
+ni política institucional, ni presupuesto recurrente — **es un campo en un payload y una firma en el texto** (**P99**,
+estimado en **3-4 semanas**). **Para una región que adopta mucho más de lo que gobierna, es el único entregable de
+gobernanza que entra en el presupuesto que ya tiene.** Y el argumento del usuario final ya está medido y es de esta
+región: **65 % de los alumnos teme que la AI vuelva el aprendizaje superficial** — **marcar lo generado es la respuesta
+más directa a ese miedo que esta base puede ofrecer.**
 
 ## Posicionamiento Globant
 

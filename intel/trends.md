@@ -7,6 +7,7 @@ updated: 2026-10-02
 # 📡 Tendencias — education
 
 > Ventana de investigación: septiembre 2026. Verificado 2026-09-30; el pase 11, el 2026-10-01.
+> **Pase 45 del 2026-10-02:** **se ejecutan las tres acciones del pase 44, las tres rinden, y dos dejan código que corre en este repositorio.** 🔴 **El hallazgo que manda es de la abstracción y no del dato: en UniTime el verbo HTTP NO es la frontera de escritura.** `ScriptConnector.doGet` despacha por parámetro de query y dos ramas escriben —`?script=` **llama `doPost`, así que un GET ejecuta un script del servidor**, y `?delete=` borra un ítem de la cola—, de modo que **la partición lectura/escritura que es el corazón de las DOS puertas de esta KB no es sólida** (tendencia **176**). La política ya negaba `script` por nombre, así que **el resultado era correcto y el motivo documentado no lo era**; desde este pase el rechazo es un **piso y no una política**. 🔴 **Y el control (b) del pase 44 FALLABA en la otra puerta por un motivo que el pase 42 no podía ver: `getName()` no es la ruta** — `ApiServlet` hace `getBean(servletPath + pathInfo)`, así que **la ruta es el nombre del bean de Spring**, los 15 coinciden hoy y por lo tanto **el dato era correcto y el método no** (tendencia **175**). **46 aserciones en verde** (eran 23), **gap 93 CERRADO**. 🟢 **El costo de P55 queda cerrado con fórmula:** `llamadas = 1 + bloques`, en `profundidad` olas, hermanos en paralelo — **18 llamadas y 4 olas** para un curso de 17 bloques, con **33 aserciones** contra un *stub* que reproduce los cuatro comportamientos reales del endpoint (**gap 94 CERRADO**, tendencia **179**); y por el camino apareció que **un cuerpo mal formado se reporta con TRES estatus distintos y sólo uno es el correcto: el 403 de Open edX es un error de payload disfrazado de credenciales** (tendencia **178**). 🟢 **Y la medición del Artículo 50(2) contradice lo que el pase 44 predijo** (**gap 91 CERRADO**): **32 de las 66 filas —el 48 %— ponen contenido sintético delante de una persona**, **0 de 33 repos** tiene artefacto o dependencia de marcado en **24.202 archivos** y **26 manifiestos**, **pero hay UNA bandera legible por máquina** —`OpenTutor` emite `{"generated": true}` al cliente, con default `True`— y **la granularidad que le falta está en otra fila de la misma tabla** (`lineage-skill`, 9 valores por afirmación, 4 sintéticos), **y ninguna de las dos sabe de la otra** (tendencias **180**–**182**). ⚠️ **Y una trampa de barrido medida: 13 de los 15 hits de «procedencia» son procedencia de FUENTE y no sintética — confundirlas sobreestima el cumplimiento 13× sobre esta misma muestra.** 🔵 **El encuadre de calendario que hay que corregir aunque la fecha esté bien: el 2026-12-02 es el plazo de gracia de lo ya desplegado, no el inicio; para un desarrollo nuevo el Artículo 50(2) rige desde el 2026-08-02 y ya está vencido — y el deber recae en el PROVEEDOR, no en el *deployer*** (tendencia **183**). 🔴 **Gap 92 ampliado a cuatro dominios bloqueados.** Ver las tendencias **175**–**183** y los patrones **P99**–**P101**.
 > **Pase 44 del 2026-10-02:** **se ejecutan las tres acciones del pase 43, las tres rinden, y la primera rinde encontrando que la medición del pase anterior describía rutas que no existen.** 🔴 **El hallazgo que manda: ninguna ruta de la puerta de SEB Server era una URL.** Los **30** controladores mapeados del servicio cuelgan de una propiedad de Spring —**27** de `"${sebserver.webservice.api.admin.endpoint}" + API.X_ENDPOINT`—, **no hay una sola ruta base literal**, y el valor que trae el árbol es `/admin-api/v1`: lo que la tabla llamaba `/exam` **es `/admin-api/v1/exam`**, así que una puerta que proxea el sufijo **da 404 en el 100 % de las llamadas** (tendencia **166**). ✅ **Acción 1 CUMPLIDA sobre el servicio entero: de 79 operaciones sobre 4 controladores a 341 sobre los 31 `@RestController`**, 30 endpoints, **170 escrituras**, y `test_gate.py` de 11 a **37 aserciones, 37 en verde** — más `extract_surface.py`, que regenera las tablas contra un checkout en vez de transcribirlas. 🔴 **Y los otros tres defectos son del instrumento, no del upstream: (a) `endpoints.tsv` tenía 41 de 55 constantes y las 14 que faltaban eran EXACTAMENTE las compuestas** —`OTRO_ENDPOINT + "/sufijo"`, 14 de 14 sin excepción— **y lo perdido es la superficie de autenticación completa** (`/oauth/token`, `/oauth/revoke-token`, `/oauth/jwttoken`, `/oauth/jwttoken/verify`) **más `/admin-api/v1/monitoring/proctoring`**, la capa que esta base nombra como alto riesgo bajo dos reguladores (tendencia **167**); **(b) el extractor contaba la DECLARACIÓN DE CLASE como una operación**, así que cada controlador con mapeo de clase venía inflado en una fila fantasma —`/batch-action` figuraba con `1 own` y `BatchActionController` **no declara ninguna**— (tendencia **168**); **(c) `ActivatableEntityController` aporta 4 rutas heredadas y no 3**: faltaba `deactivate` (`API.PATH_VAR_INACTIVE`), así que todo controlador activable sub-reportaba una escritura. 🔵 **El matiz que afila el argumento de la puerta: `ReadonlyEntityController` niega 4 de las 5 escrituras a nivel de ruta y la quinta —`forceHardDelete`, `DELETE /{id}/force`— queda VIVA y se frena una capa más abajo**, por el override de `checkWriteAccess`; y «force» significa que saltea `validForDelete`, **no** la autorización (tendencia **169**). 🔴 **Una ruta en el árbol no es una ruta en ejecución: `LightController` está detrás de `@ConditionalOnExpression` y seb-server envía `light.setup=false`** (tendencia **170**). ✅ **Acción 2 CUMPLIDA y las tres preguntas tienen número: `create_xblock_response` devuelve `{locator, courseKey}` y el `locator` ES el usage key del bloque nuevo —el árbol es recursable sin un GET extra—; `category` no tiene restricción en un curso (`CharField(required=False)`, sin `choices`) y el único enum del árbol es `["html","problem","video"]` para bibliotecas; y `?view=minimal` es sólo de `retrieve`** (tendencia **171**). 🔴 **Pero la premisa de la pregunta estaba invertida: NO hay hijos que recorrer.** `get_block_info` lleva escrito *«children aren't being returned until we have a use case»*, así que el docstring del `v1` que llama *«tree-shaped»* a esa respuesta **es falso**, **2 de los 6 campos que promete la vista mínima son claves que el handler no emite**, y la única forma de obtener hijos es la combinación **no documentada** `?fields=customReadToken&view=minimal`, que da un nivel y **descarta `parent` en silencio** (tendencia **172**). 🟢 **Y el costo de P55 queda fijado porque el instrumento correcto es otro endpoint: `course_index/{course_id}` devuelve el outline anidado en UNA llamada; escribir es 1 POST por bloque**, paralelizable entre hermanos. ✅ **Acción 3: las dos fechas del pase 43 quedan CONFIRMADAS por un segundo canal independiente —Anexo III 2027-12-02, Anexo I 2028-08-02, Reglamento (UE) 2026/1744 publicado el 2026-07-24 y en vigor el 2026-07-27—, así que la recomendación comercial de EMEA NO hay que revertirla.** 🔴 **Pero NO contra el texto consolidado: `eur-lex.europa.eu` Y `artificialintelligenceact.eu` dan los dos `403` a CONNECT**, y el segundo es una **instancia nueva y no institucional del gap 65** (**gap 92**). 🟢 **Y el pase encuentra un plazo más cercano y más firme que el que esta base venía planificando: el Artículo 50(2) vence el 2026-12-02 —61 días desde hoy— para los sistemas generativos ya en el mercado antes del 2026-08-02**, con 50(1), 50(3) y 50(4) en vigor desde el 2026-08-02 y **sin prórroga**, confirmado por el 9.º plenario del Consejo Europeo de IA del 2026-09-17 (tendencia **173**, **gap 91**). 🔵 **`issuebadge/mcp-server` re-medido como el pase 43 pidió: sigue FUERA de la tabla** —4 commits, dependencia de `app.issuebadge.com`, no implementa OB 3.0— **pero ahora tiene v2.1.0, 1.106 líneas y 168 casos de test**, **no está en npm** (invisible al barrido por registro, como `learnmcp-xapi`) y **aporta la QUINTA variante de primitiva anti-bucle, la más débil: delega el freno en la API del proveedor, y el valor por omisión lo anula** —`idempotency_key` se genera por llamada, así que un reintento sin arrastrar la clave **emite un segundo certificado** (tendencia **174**, **P97**). ⚠️ **Y el barrido global devolvió por segunda vez consecutiva la capa genérica y material didáctico sobre AI: cero altas de agente, el canal está saturado.** Ver las tendencias **166**–**174**, los gaps **91**–**94** y los patrones **P96**–**P98**.
 > **Pase 42 del 2026-10-02:** **se ejecutan las tres acciones del pase 41, las tres por EJECUCIÓN y no por lectura, y el resultado corrige la recomendación comercial que el pase 41 dejó escrita.** 🔴 **El hallazgo que manda: la ruta MPL-2.0 que el pase 41 prefirió *«porque no arrastra AGPL»* cuesta MÁS código que la AGPL** — `RemoteProctoringService` de `seb-server` es una **interfaz desnuda con 12 métodos obligatorios de 14**, mientras `ProctoringBackendProvider` de `edx-proctoring` es una **clase concreta con 0 obligatorios de 18**: no son rutas equivalentes con distinta licencia, son **distinto trabajo** (tendencia **157**). 🟢 **Y lo que vuelve cotizable la ruta SEB igual, medido archivo por archivo: su obligación de publicar es UN valor de enum.** El registro del proveedor es **abierto** (Spring inyecta `Collection<RemoteProctoringService>`, la fábrica no se toca) pero el **tipo está cerrado** (`enum ProctoringServerType{JITSI_MEET,ZOOM}`), así que un tercero obliga a tocar **1 de los 10 archivos *Covered*** que mencionan el enum — y por el copyleft **por archivo** de MPL-2.0 §1.10(a), **lo único que hay que publicar es ese valor**; el proveedor propio es archivo nuevo y queda propietario (tendencia **158**). ⚠️ **Hueco medido que se escribe en la propuesta y no se descubre en UAT: el validador de SEB cae a `return true` ante un tipo desconocido — tu proveedor pasa SIN validación de campos** (tendencia **159**). 🔴 **Corrección al pase 41: `LmsType` tiene SEIS valores con matriz de *features*, no cuatro, y `LMS_FULL_INTEGRATION` NO está en `OPEN_EDX` —sólo en `MOODLE_PLUGIN`—, mientras `MOODLE` a secas tiene `SEB_RESTRICTION` COMENTADA en el fuente: el LMS del cliente manda más que la licencia** (tendencia **160**, patrón **P91**). 🟢 **Acción 1 CUMPLIDA Y PROBADA: la puerta MCP de UniTime existe** — 26 tools generados del árbol (15 conectores × verbos reales), **13 expuestos**, y **23 aserciones en verde**, entre ellas la que importa: 🔴 **0 de 9 llamadas retenidas llegaron al upstream**, `script.post` incluido, que ejecuta un script del servidor (tendencia **161**, patrón **P92**). 🟢 **Acción 2 CUMPLIDA: 61 filas re-fechadas sobre 472 ramas, cobertura 61/61** — y el gap 89 tenía razón en las dos direcciones: **4 veredictos se promueven** (`algo-sensei` de FRÍO a ACTIVO porque **commiteó hoy**, más `gradescope-mcp`, `TutorIA` y `open-badges-mcp`) **y 2 se SOSTIENEN gracias al filtro** (`oneroster-ts` seguiría CONGELADO aunque el máximo ingenuo lo promovería 10 meses con un **commit vacío de bot**). 🟢 **Reparto corregido: 78,7 % activas contra el 69,4 % del pase 37 — la tabla está más viva de lo que esta base venía diciendo** (tendencia **162**). 🔴 **Las tres clases de «no es vida de proyecto» del pase 41 son SEIS, y la que más cuentas cambia es la que faltaba: `dependabot`** — `armenian-national-library-mcp` tiene **10 ramas dependabot** y parece 7 semanas más fresco de lo que es (tendencia **163**). 🔵 **Y el hallazgo de método es sobre un defecto de ESTE pase: mi primer filtro descartaba el tip de la rama por defecto, y `OpenTutor` y `Shiksha-Copilot` quedaban SIN fecha de vida. La regla que queda: el tip de la rama por defecto cuenta SIEMPRE —es historia mergeada—; los filtros sólo deciden si una rama no-defecto agrega vida encima** (tendencia **164**). 🔴 **La familia `Kuali` entra como registro histórico, no como dependencia: 4 repos, los cuatro muertos (6 a 9 años), *middleware* ECL-2.0 y las dos aplicaciones de verdad AGPL-3.0 — y esta KB tenía 0 menciones en 41 pases** (tendencia **165**). 🔴 **Fuente primaria nueva identificada y BLOQUEADA: el Consejo de Europa tiene una *2nd Working Conference* sobre las dimensiones REGULATORIAS de la AI en educación este mes, y `coe.int` da `EGRESS_BLOCKED` — instancia nueva del gap 65, y la de mayor autoridad para EMEA** (tendencia **166**). ⚠️ **Y la fecha vencida del AI Act reapareció por NOVENA vez, otra vez en el barrido de North America: deja de ser el error de una fuente y pasa a ser una propiedad del canal.** Ver las tendencias **157**–**166** y los patrones **P91**–**P92**.
 > **Pase 41 del 2026-10-02:** **se ejecutan las tres acciones del pase 40, las tres rinden, y la de mayor valor comercial CORRIGE un veredicto que esta base había publicado como cerrado.** 🟢 **El hallazgo que manda estaba en un `README.txt` de 174 bytes dentro del paquete: `edx_proctoring/backends/` está *carved-out* en Apache-2.0 dentro de un repo AGPL-3.0** — verificado en el *wheel* y en el árbol — **así que el directorio donde se escribe un backend de *proctoring* propio no arrastra la AGPL** (tendencia **150**). 🔴 **El gap 84 (*«proctoring no tiene opción permisiva»*) queda corregido por DOS motivos independientes:** ése, y que **existe una capa de integración de examen fuera de Open edX, `seb-server` de ETH Zürich, MPL-2.0 — copyleft débil — con `OPEN_EDX`, `MOODLE`, `MOODLE_PLUGIN` y `OPEN_OLAT` ya escritos en su `enum LmsType`** (tendencia **149**). 🟢 **Y la pregunta comercial de la acción 3 se responde contando un cero: `ProctoringBackendProvider` tiene 18 métodos y CERO `@abstractmethod`, o sea es una base concreta — integrar *proctoring* propio en Open edX es implementar una interfaz (12 modelos, 20 rutas y las 2 rutas de supresión de datos ya existen), no escribir la capa** (tendencia **151**). 🔵 **El matiz que impide sobrevenderlo, medido con `ast` en el mismo pase: la carve-out NO es autocontenida, pero lo que cruza hacia la AGPL es vocabulario —constantes, nombres de excepción y valores de estado— y no lógica** (**gap 88**). 🔴 **Hallazgo de método que obliga a re-correr el pase 37: la rama por defecto puede ser la rama MUERTA de un proyecto vivo —`seb-server` mide 6 meses en `master` y commiteó AYER en `dev-3.0`— y la prueba de validez sobre las 10 filas paradas sostiene 10 de 10 veredictos, pero sólo al LEER EL AUTOR: el commit más nuevo de `oneroster-ts` es un commit VACÍO de un bot y el de `educhain` es un refactor firmado por un AGENTE, sin mergear** (tendencias **152** y **153**). ✅ **Gap 83 CERRADO por la historia de dos archivos, y baja de bloqueante a anotación: las dos licencias en conflicto son permisivas OSI** (tendencia **154**). ⚠️ **Gap 81 PARTIDO EN DOS clases con riesgo y acción distintos: `@timadey/proctor` declara MIT tres veces en el árbol y le falta el archivo; `sisu-mcp` tiene UNA declaración en todo el mundo** (tendencia **155**). 🔵 **Y el hallazgo de síntesis, que es el más vendible: el *proctoring* es la única capa de esta base nombrada como alto riesgo por DOS reguladores de dos regiones —Anexo III punto 3 de la UE (2027-12-02) y los seis sectores de Vietnam (2027-03-01, NUEVE MESES ANTES)— y es la que este pase midió sin NINGUNA competencia agéntica: 404 en 8 de 8 nombres de npm y 0 en los 46,6 MB del índice de PyPI** (tendencia **156**, **gap 86**). Ver las tendencias **149**–**156** y los patrones **P88**–**P90**.
@@ -4551,6 +4552,292 @@ la capa MCP de credenciales, **no** existe la capa MCP de credenciales *conforme
 ⚠️ **Y la madurez, con el número a la vista: 0 ★ y 4 commits.** **No entra a la tabla de `agents/top.md`** por eso, y se
 registra acá con la cifra visible para que el próximo pase la vuelva a medir en vez de heredar un juicio.
 
+## 175. 🔴 `getName()` no es la ruta: en UniTime enruta el nombre del bean de Spring, y una puerta construida sobre el otro campo acierta por coincidencia (agregado en el pase 45 del 2026-10-02)
+
+`ApiServlet.getConnector()` de `UniTime/unitime` (Apache-2.0, `HEAD` `aeb4431` del 2026-10-02) hace:
+
+```java
+protected String getReference(HttpServletRequest request) {
+    return request.getServletPath() + request.getPathInfo();
+}
+protected ApiConnector getConnector(HttpServletRequest request) {
+    return (ApiConnector) applicationContext.getBean(getReference(request));
+}
+```
+
+**La ruta es el nombre del bean.** Los 15 conectores lo declaran con `@Service("/api/rooms")`, y
+`ApiConnector.getName()` —el campo que esta base venía publicando como ruta— **no participa del enrutado**: su único uso
+es `getCacheMode()`, que lo pasa a `ApplicationProperty.ApiCacheMode.value(getName())`.
+
+🔵 **Los 15 coinciden hoy** (`@Service` vale exactamente `/api/` + `getName()` en **15 de 15**), **así que el dato
+publicado era correcto y el método no.** Esa es la forma del defecto que importa: una puerta construida sobre el campo
+equivocado **acierta por coincidencia** y se rompe **en silencio** el día que un conector registre un bean con otro
+nombre. Es la misma clase que el defecto del pase 44 en SEB Server —**la ruta inferida en vez de leída**— con el signo
+invertido: allá la inferencia daba 404 en el 100 % de las llamadas, acá da el resultado correcto y **no se puede
+distinguir de la suerte**.
+
+🔴 **Y la ruta absoluta tampoco era la URL.** `getServletPath()` es relativo al contexto del *webapp*. El
+`<url-pattern>` de `apiServlet` en `WebContent/WEB-INF/web.xml` es **`/api/*`** y `pom.xml:614` envía
+**`<warName>UniTime</warName>`**, así que la URL desplegada por omisión es **`/UniTime/api/<conector>`**. La puerta
+publicaba `/api/<conector>` **pegado en una f-string de Python**, no leído de ninguna parte.
+
+**La regla de método que deja esta tendencia, y es hermana de la del pase 44:** cuando una pieza enruta por un
+mecanismo de *framework* (bean de Spring, `@RequestMapping` con propiedad, `url-pattern` de servlet), **la ruta hay que
+leerla del mecanismo que la resuelve, no del campo que se le parece.** Y la prueba tiene que **aseverar la ruta como
+dato**: desde este pase `load_connectors()` **levanta `StaleTable`** si recibe una tabla sin columna de ruta, en vez de
+volver a inferir.
+
+## 176. 🔴 El verbo HTTP no es la frontera de escritura: un GET que despacha por parámetro de query ejecuta un script del servidor (agregado en el pase 45 del 2026-10-02)
+
+Ésta es la quinta clase de defecto de las puertas de esta base, y es la primera que **no es del extractor: es de la
+abstracción**. `ScriptConnector.doGet` de UniTime despacha por **parámetro de query**, y dos de sus ramas escriben:
+
+```java
+} else if (helper.getParameter("delete") != null) {
+    Boolean ret = solverServerService.getQueueProcessor().remove(helper.getParameter("delete"));
+} else if (helper.getParameter("script") != null) {
+    doPost(helper);
+}
+```
+
+**`GET /UniTime/api/script?script=…` ejecuta un script del servidor** y **`?delete=…` borra un ítem de la cola**, las
+dos detrás del mismo `checkPermission(Right.Scripts)` del encabezado del método.
+
+🔴 **La consecuencia alcanza a las DOS puertas de esta KB:** la política *«exponer sólo lecturas»* —que es el corazón de
+**P85**, **P92** y del *gateway* de SEB Server— **presupone que el verbo es la frontera**. Para UniTime no lo es. La
+política por defecto ya negaba `script` **por nombre**, así que **el resultado era correcto y el motivo documentado no
+lo era**: decía *«se niega porque ejecuta scripts»* cuando lo que corresponde decir es *«se niega porque su GET es una
+escritura, y por lo tanto ninguna allowlist de lectura/escritura puede protegerlo»*.
+
+🟢 **Lo que se adopta, y es la corrección de diseño:** el rechazo pasa de **política** a **piso**. `hard_deny()` niega
+el tool con `-32601` **incluso si un operador lo nombra explícitamente en `UNITIME_ALLOW`**, y la decisión se registra
+como `floor` y no como `withheld`, para que el log distinga *«la política no lo abrió»* de *«no se puede abrir»*.
+Aseverado por ejecución, in-process y por **stdio real**. Ver **P100**.
+
+⚠️ **Barrido completo, para que no quede como impresión:** se revisaron **los 15 `doGet`** del paquete buscando
+mutaciones. El único cruce real es `ScriptConnector`; `EventsConnector:170` casa el patrón y **es un falso positivo**
+(`Iterator.remove()` sobre una lista en memoria, no estado persistido).
+
+## 177. 🔵 Una ruta sin *override* no devuelve 404: la clase base responde 501, así que la superficie HTTP es 2,3× la superficie implementada (agregado en el pase 45 del 2026-10-02)
+
+`ApiConnector` implementa **los cuatro** `do<Verb>(ApiHelper)` con `helper.sendError(SC_NOT_IMPLEMENTED)`. Entonces en
+UniTime hay **15 conectores × 4 verbos = 60 rutas HTTP vivas**, de las cuales **26 están implementadas** y las otras
+**34 responden 501**, no 404.
+
+🔵 **Por qué esto es información y no trivia:** un inventario de superficie que cuenta *handlers* mide **26** y un
+escáner que prueba verbos mide **60**. Las dos cifras son correctas y responden preguntas distintas —*«qué puedo
+usar»* contra *«qué está publicado»*— y mezclarlas es lo que hace que un informe de superficie no cuadre con el de
+nadie más. El manifiesto de la puerta expone **26** (no hay nada que ofrecer detrás de un 501), y la tabla registra
+**60** para que el dato de encuadre exista.
+
+⚠️ **Y el análogo del `LightController` del pase 44 existe acá, condicionando una LECTURA.**
+`VariableTitleCourseConnector.validateRequest()` —llamado por `doGet` **y** por `doPost`— lanza
+`IllegalArgumentException` si `VariableTitleConfigName`, `VariableTitleDefaultLimit` o
+`VariableTitleInstructionalType` no están seteadas. Así que **`GET /UniTime/api/var-title-crs` devuelve 400 en un
+despliegue por omisión**. 🔵 **La lección de método: UniTime no condiciona el bean, condiciona el handler**, así que el
+control *«toda clase condicionada está excluida»* del pase 44 **pasa y no alcanza** — hay que buscar el guarda **dentro
+del método y en los que llama**, que es lo que mide la columna `guarded` del extractor nuevo.
+
+## 178. 🔴 Tres estatus para un mismo defecto, y sólo uno es el correcto: el 403 de Open edX es un error de payload disfrazado de credenciales (agregado en el pase 45 del 2026-10-02)
+
+Medido leyendo `openedx/edx-platform` sobre `master`. Un cuerpo mal formado en
+`POST /api/contentstore/v1/xblock/` se reporta de **tres** maneras:
+
+| Cuerpo | Estatus | Mecanismo, con el sitio exacto |
+|---|---|---|
+| sin `parent_locator` | 🔴 **403** | `XblockViewSet.initial()` deriva `course_key` **del cuerpo crudo**; si falta queda `None`, y `HasCourseAuthorAccess.has_permission` hace `if not course_key: return False` (`rest_api/v1/views/permissions.py:25-27`) |
+| sin `category` | 🔴 **500** | el serializer declara **todos** sus campos `required=False`, así que valida; después `_create_block_core` hace el subscript pelado `request.json["category"]` (`view_handlers.py:864`) |
+| con una clave de más | 🟢 **400** | `XblockSerializer` extiende `StrictSerializer`, que lanza `ValidationError` por clave inesperada (`rest_api/serializers/common.py:40-49`) |
+
+🔴 **El 403 es el peligroso**, y no por severidad sino por **diagnóstico**: manda al operador a revisar credenciales,
+JWT y permisos de autoría cuando el problema es **una clave ausente en el JSON**. En un *engagement*, eso es una tarde.
+
+🔵 **Precisión que afina el hallazgo: `category` se lee DOS veces** — `request.json.get("category")` en la línea 834,
+que alimenta el chequeo de permisos, y el **subscript pelado** en la 864. Así que un POST sin `category` **pasa el
+control de autorización** y revienta después. Y **`parent_locator` también es un subscript pelado** (línea 832), pero
+**no llega a ejecutarse**: el 403 del `permission_class` lo frena antes.
+
+🟢 **Y una corrección a favor del upstream, porque la lectura fácil es injusta:** el `create` del `v1` **sí** corre el
+serializer — lleva `@validate_request_with_serializer` además de `@expect_json_in_class_view`
+(`rest_api/v1/views/xblock.py:239-243`). **El serializer se ejecuta y es estricto con las claves de más.** Lo que no
+puede hacer es atrapar las dos claves que el handler exige, **porque las declara opcionales a las dos**. El defecto no
+es *«no valida»*: es **que la declaración del contrato y el uso del contrato discrepan en dos campos.**
+
+**La consecuencia de diseño:** un cliente generador tiene que validar `parent_locator`, `category`, el orden de niveles
+y la lista blanca de campos **antes de emitir**. No es defensa en profundidad — es que **dos de los tres estatus del
+servidor son diagnósticos falsos**. Ver **P55** y `compose/code/openedx-course-generator/`.
+
+## 179. 🟢 El costo de generar un curso tiene fórmula, y es cotizable sin levantar la plataforma (agregado en el pase 45 del 2026-10-02)
+
+Tres hechos medidos, y los tres juntos dan la fórmula:
+
+1. El POST devuelve **`{"locator", "courseKey"}`** y `locator` **es el usage key del bloque nuevo**
+   (`view_handlers.py:895-897`), así que el recorrido del árbol es **recursable sin un GET extra**.
+2. Leer el curso entero es **UNA llamada**: `GET /api/contentstore/v1/course_index/{course_id}` devuelve
+   `course_structure`, el *outline* anidado (`rest_api/v1/urls.py:82-84`).
+3. Un hijo necesita el `locator` de su padre; **los hermanos no dependen entre sí.**
+
+🟢 **La fórmula: `llamadas = 1 + bloques`, en `profundidad` olas secuenciales, con los hermanos paralelizables dentro de
+cada ola.** Para un curso de 2 módulos / 3 secuencias / 4 verticales / 8 componentes = **17 bloques**: **18 llamadas, 4
+olas, ola más ancha de 8.**
+
+🔵 **Por qué esto es el entregable y no la observación:** *«generar un curso en Open edX»* era hasta este pase una
+promesa de **P55** sin número. Ahora es un artefacto con **33 aserciones en verde** que asevera, contra un *stub* que
+reproduce los **cuatro** comportamientos reales del endpoint (400/403/500/200), que **ningún POST se emite antes de
+tener el `locator` de su padre**, que **los hermanos se agrupan en olas** y que **un cuerpo que el servidor
+mal-reportaría se rechaza en el cliente**. Eso es lo que entra en una propuesta: no *«se puede»*, sino **«18 llamadas,
+4 olas»**.
+
+⚠️ **Y el límite declarado:** `category` **no se puede validar contra los XBlocks instalados**, porque **el servidor
+tampoco lo hace** — `XblockSerializer.category` es un `CharField(required=False)` **sin `choices`**, y el único enum del
+árbol (`["html","problem","video"]`) aplica **sólo** si el padre es un `LibraryUsageLocator`. La lista de categorías
+hoja del generador es **una convención de esta KB**, declarada como tal.
+
+## 180. 🔴 El 48 % de las piezas de esta KB pone contenido sintético delante de una persona, y 0 de 33 puede marcarlo (agregado en el pase 45 del 2026-10-02)
+
+Clasificadas las **66** filas de `agents/top.md` por una sola pregunta —**¿genera contenido sintético que un alumno o un
+docente va a ver?**—: **24 `gen` + 7 `gen-ind` + 1 `gen-cond` = 32 filas, el 48 %**, más **1 `pack`**
+(`scorm-mcp-server`, que no genera pero es **donde el contenido generado se vuelve el curso que el alumno abre**) y
+**33 `no`**.
+
+Barridos los **33** repos expuestos con `--filter=blob:none` —**ningún blob se descarga**— y leídos sus manifiestos de
+raíz:
+
+| Magnitud | Valor |
+|---|---|
+| Archivos listados | **24.202** |
+| Artefactos de marcado (`c2pa`, `watermark`, `synthid`, `content-credentials`, `imwatermark`) | 🔴 **0** |
+| Manifiestos de raíz leídos | **26** |
+| Dependencias de marcado | 🔴 **0** |
+| Repos con **0 de todo** | **28 de 33** |
+
+🔵 **La cifra que hay que llevarse es el 48 %, no el 0.** El cero era previsible —el pase 44 lo predijo— y no cambia
+ninguna decisión. **Que sea la mitad de la tabla sí la cambia:** el Artículo 50(2) no es un problema de un rincón de
+esta KB, es **un problema estructural de su mitad generativa**, y cualquier *engagement* que combine dos o tres de estas
+piezas lo hereda completo.
+
+## 181. 🟢 Existe UNA bandera legible por máquina de contenido generado en toda esta KB, y la granularidad que le falta está en otra fila (agregado en el pase 45 del 2026-10-02)
+
+**El pase 44 predijo que la respuesta a la pregunta del marcado sería «ninguna». Hay una.**
+
+🟢 **`zijinz456/OpenTutor` (MIT, 127 ★):** `services/provenance.py` → `build_provenance(..., generated: bool = True,
+...)` arma un payload con **`"generated": true`** y un `source_labels` que incluye `"generated"`;
+`services/agent/turn_pipeline.py:144-173` lo llama con esos valores **fijos** en el camino del turno del agente, con el
+docstring *«for UI and persistence»*; **`routers/chat.py:214` lo manda al cliente** y `schemas/task.py:59` lo declara en
+el esquema de tarea. **Se persiste y se sirve: no es telemetría interna.** Y el valor por omisión es `True`, o sea
+**falla hacia el lado seguro**.
+
+🔴 **Las tres cosas que le faltan, y son las tres que se cotizan:**
+
+1. **Es un campo JSON al lado del contenido, no una marca dentro.** Si el texto se copia, se exporta o se reenvía, **la
+   marca no viaja**. El Artículo 50(2) pide que la salida esté marcada y sea **detectable**; esto es detectable sólo
+   mientras no se separe del sobre.
+2. **Marca el turno, no el tramo.** `generated=True` está fijo en ese camino, así que no distingue **una cita textual de
+   una fuente** de **una síntesis del modelo**.
+3. **No está firmado.** Nada ata la bandera al contenido, así que no es resistente a manipulación — que es exactamente a
+   lo que apunta *«effective, interoperable, robust and reliable»*.
+
+🟢 **Y la granularidad que le falta está en OTRA fila de la misma tabla.** `JuneYaooo/lineage-skill` (Apache-2.0, 448 ★)
+trae `references/provenance-policy.md`: un **vocabulario cerrado de 9 valores** obligatorio *«para toda afirmación
+consecuente, respuesta de tarea, regla de rúbrica, juicio de feedback y regla de Personal Skill»*, del cual **cuatro son
+literalmente «esto lo produjo el modelo»** — `source_grounded_synthesis`, `cross_source_synthesis`, `mentor_inference`,
+`external_general_knowledge` — más `unsupported`. Y la política ya dice *«High-impact inference needs a visible label
+and human review when evidence is thin»*. 🔴 **Lo que no es: legible por máquina.** Es **prosa dirigida al modelo**.
+
+🔵 **Son mitades complementarias del mismo componente y ninguna de las dos sabe de la otra.** Una tiene **el campo y el
+transporte**; la otra, **la etiqueta y la granularidad**. Y la capa que firma **ya existe en esta KB y es permisiva**
+(`MarkLLM`, SynthID-Text Apache-2.0, **P33**). **El componente no hay que inventarlo: hay que conectarlo.** Ver **P99**.
+
+## 182. ⚠️ Procedencia de fuente no es procedencia sintética: 13 de 15 hits miden otra cosa, y confundirlos sobreestima el cumplimiento 13× (agregado en el pase 45 del 2026-10-02)
+
+El barrido del Artículo 50(2) encontró **15 artefactos de «procedencia» en 5 repos**. Es la cifra que un informe
+apurado convertiría en *«cinco piezas ya tienen procedencia»*. **Dos lo son en el sentido útil; trece no.**
+
+| Repo | Hits | Qué mide de verdad |
+|---|---|---|
+| 🟢 `zijinz456/OpenTutor` | 1 | **procedencia sintética**: `"generated": true` servido al cliente |
+| 🟢 `JuneYaooo/lineage-skill` | 1 | **procedencia por afirmación**, con 4 de 9 valores sintéticos |
+| 🔴 `ZeKaiNie/universal-examprep-skill` | 8 | *fixtures* de workspace inválido y *drift* de **procedencia de fuente** |
+| 🔴 `HKUDS/DeepTutor` | 3 | *fixtures* y un componente de UI de indexado: **de qué documento salió el fragmento** |
+| 🔴 `ahmedEid1/lumen` | 2 | una migración de Alembic: **de qué clon salió la fila** |
+
+🔵 **La regla que deja esta tendencia, y aplica a cualquier barrido por palabra:** *«de dónde viene el material»* y
+*«quién escribió el material»* **comparten la palabra `provenance` y responden preguntas distintas.** Saber que un
+párrafo salió del capítulo 3 del libro **no dice** que el párrafo lo redactó un modelo. Un barrido que no separa las dos
+acepciones **sobreestima el cumplimiento del Artículo 50(2) por un factor de 13** sobre esta misma muestra.
+
+## 183. 🔵 El 2026-12-02 es el plazo de gracia, no el inicio: para un desarrollo nuevo el Artículo 50(2) ya está vencido — y el deber es del proveedor, no del *deployer* (agregado en el pase 45 del 2026-10-02)
+
+Confirmado en este pase por un **tercer canal secundario independiente**, concordante con lo que esta base ya tenía bien
+desde el pase 44:
+
+| Obligación | Fecha | Estado al 2026-10-02 |
+|---|---|---|
+| Art. 50 transparencia | **2026-08-02** | 🔴 **vigente, vencida hace 2 meses** |
+| **Art. 50(2) marcado** — sistemas puestos en el mercado **desde** el 2026-08-02 | **2026-08-02** | 🔴 **YA VIGENTE** |
+| **Art. 50(2)** — *backstop* de sistemas **ya en el mercado antes** del 2026-08-02 | **2026-12-02** | ⏳ **61 días** |
+
+🔴 **La corrección de ENCUADRE, aunque la fecha esté bien:** el 2026-12-02 **no es «cuándo empieza el Artículo 50(2)»** —
+es **el plazo de gracia de lo que ya estaba desplegado**. Para **cualquier sistema nuevo** —y un *engagement* que
+entrega un tutor construido sobre las piezas de esta KB **es** un sistema nuevo— **la obligación rige desde el
+2026-08-02 y ya está vencida al momento de entregar.** Decir *«faltan 61 días»* sobre un desarrollo nuevo es
+**tranquilizar con la fecha equivocada**, y es el error que esta misma base habilitaba al publicar una sola fecha.
+
+🟢 **Y el dato de responsabilidad que esta KB no tenía, que es el que decide quién paga:** el deber del Artículo 50(2)
+recae en el **proveedor** —quien desarrolla el sistema generativo y lo pone en el mercado, **incluidos los proveedores de
+GPAI**— **no en el *deployer* ni en el usuario final.** Para un *engagement*: si Globant **construye y entrega**, el
+deber viaja con el entregable; si el cliente sólo **despliega** algo de un tercero, está **aguas arriba**. 🔵 **Es una
+pregunta de *discovery* de una línea** —*«¿quién pone este sistema en el mercado?»*— **y hoy no está en ningún
+checklist de esta base.**
+
+⚠️ **Límite de fuente, otra vez y por cuarto dominio: gap 92 ampliado.** A `eur-lex.europa.eu`,
+`artificialintelligenceact.eu` y `data.europa.eu` se suma **`digital-strategy.ec.europa.eu`**, la página oficial del
+*Code of Practice on Transparency of AI-generated Content*, probada por **los dos canales** disponibles (`curl` →
+`connect_rejected`, WebFetch → `EGRESS_BLOCKED`). **Tres canales secundarios concordantes, cero primarias.**
+## 🔵 Las tres acciones que el pase 45 deja escritas para el pase 46
+
+**Las tres son ejecutables en este entorno: ninguna necesita Docker, ni instalar dependencias de terceros, ni la API de
+GitHub. La primera es la de más valor comercial y es la que este pase dejó armada sin ejecutar.**
+
+1. 🟢 **Escribir el componente transversal de marcado del Artículo 50(2), que este pase dejó especificado y sin código**
+   (**gap 95**). Las tres piezas están identificadas y ninguna hay que inventarla: **el campo y el transporte** los
+   tiene `OpenTutor` (`build_provenance`, `"generated": true`, servido en `routers/chat.py:214`); **la etiqueta y la
+   granularidad por afirmación** las tiene `lineage-skill` (vocabulario cerrado de 9 valores, 4 de ellos sintéticos); y
+   **la firma** la tiene la capa forense permisiva de esta KB (`MarkLLM`, SynthID-Text Apache-2.0, **P33**).
+   **La acción concreta:** escribir en `compose/code/` un módulo que (a) **mapee los 9 valores de `lineage-skill` a un
+   booleano `synthetic` más el valor original**, porque esa es la decisión de diseño que nadie tomó todavía; (b) emita
+   el payload de `OpenTutor` **extendido con el tramo** (`spans`, no sólo el turno); y (c) **asevere tres cosas**: que
+   un tramo citado textualmente de una fuente **no** se marca como sintético, que un tramo de `mentor_inference` **sí**
+   se marca, y que la marca **sobrevive a un `json.dumps` → `json.loads`** del artefacto separado del sobre.
+   🔵 **El valor: convierte «esta KB no cumple el Artículo 50(2)» en «esta KB tiene el componente», y el hueco está
+   medido en 32 filas.**
+2. 🔴 **Re-auditar la TERCERA pieza de código de esta base con los cinco controles, que es la única que queda sin
+   pasar** (**gap 96**). `compose/code/seb-proctoring-validator/` se escribió en el pase 43 y **nunca se midió con los
+   controles**, que no existían. **La acción concreta:** correr sobre él las cinco aserciones —(a) ninguna ruta con
+   `${`, (b) toda ruta absoluta **y con contexto**, (c) ninguna fila de una declaración de clase, (d) todo guarda
+   condicional registrado **incluido el de runtime dentro del método**, (e) **ningún verbo de lectura que escriba**— y
+   en particular **(e), que es el control nuevo**: el validador afirma qué métodos de `RemoteProctoringService` son
+   triviales y cuáles hablan con el remoto, **y esa clasificación es exactamente la que el control (e) pone en duda**.
+   🔵 **El valor: de las tres piezas de código de esta KB, dos quedarían auditadas y la tercera es la que sostiene la
+   cotización de proctoring.**
+3. 🟢 **Medir si el `pack` del Artículo 50(2) es el punto de marcado más barato, leyendo `scorm-mcp-server`**
+   (**gap 97**). Este pase lo clasificó como **el único `pack`** —*«donde el contenido generado se vuelve el curso que
+   el alumno abre»*— **por razonamiento, no por medición**. **La acción concreta:** leer el árbol de
+   `giacomomaria81/scorm-mcp-server` (**MIT**, 3 tools) y responder **dos preguntas que hoy no tienen número**: si el
+   `imsmanifest.xml` que emite admite **metadatos arbitrarios** (y en qué elemento, porque SCORM 2004 tiene
+   `<adlcp:location>` y perfiles de LOM), y si `scorm_validate` **rechazaría** un paquete con un metadato extra — porque
+   si lo rechaza, marcar en el empaquetado **rompe la conformidad** y el punto barato no existe.
+   🔵 **El valor: decide si el componente de la acción 1 se inyecta UNA vez en el empaquetado o 32 veces en cada
+   generador.**
+
+⚠️ **Y las acciones hacia afuera que esta corrida sigue sin poder ejecutar, declaradas para no perderlas:** el `LICENSE`
+que falta en `Timadey/proctor` (**un PR de un archivo**); la licencia sin segunda fuente de `@ink-waffle/sisu-mcp`
+(**bloqueante: sigue siendo la única puerta de SIS de educación superior de esta base**); el acceso de miembro a los
+repositorios de Caliper Sensor API de 1EdTech; y 🔵 **el texto consolidado del Reglamento (UE) 2024/1689, que este pase
+volvió a intentar y que sigue inalcanzable, ahora por CUATRO canales** —`eur-lex.europa.eu`,
+`artificialintelligenceact.eu`, `data.europa.eu` y `digital-strategy.ec.europa.eu`, los cuatro `connect_rejected` o
+`EGRESS_BLOCKED` (**gap 92, ampliado**)—. **Las fechas quedan confirmadas por tres canales secundarios independientes y
+concordantes, no por fuente primaria, y eso hay que seguir diciéndolo cada vez que se citen.**
 ## 🔵 Las tres acciones que el pase 44 deja escritas para el pase 45
 
 **Las tres son ejecutables en este entorno: ninguna necesita Docker, ni instalar dependencias de terceros, ni la API de

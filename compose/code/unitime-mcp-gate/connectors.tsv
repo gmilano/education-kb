@@ -1,15 +1,25 @@
-BuildingsConntector	buildings	Delete Get Post 
-ClassInfoConnector	class-info	Get 
-CurriculaConnector	curricula	Get 
-DataExchangeConnector	exchange	Get Post 
-EnrollmentsConnector	enrollments	Get 
-EventsConnector	events	Delete Get Post 
-InstructorScheduleConnector	instructor-schedule	Get 
-InstructorsConnector	instructors	Get 
-JsonConnector	json	Post 
-OnlineStudentSchedulingConnector	sectioning	Get Post 
-RolesConnector	roles	Get 
-RoomsConnector	rooms	Delete Get Post Put 
-ScriptConnector	script	Get Post 
-StudentGroupsConnector	student-groups	Get 
-VariableTitleCourseConnector	var-title-crs	Get Post 
+# UniTime API surface, extracted from UniTime/unitime JavaSource.
+# route = the @Service bean name, which is what ApiServlet.getBean() looks up.
+# It is absolute inside the webapp context; the deployed URL is <context>+route.
+# servlet url-pattern read from WEB-INF/web.xml: /api/*
+# deploy context read from pom.xml <warName>: /UniTime
+# verbs = the do<Verb>(ApiHelper) overrides. A verb NOT listed is still a live
+# route: ApiConnector answers 501 NOT_IMPLEMENTED, not 404.
+# crossing = verbs whose handler mutates state or delegates to another verb.
+# guarded  = verbs that refuse at runtime unless application properties are set.
+#class	route	name	verbs	crossing	guarded
+BuildingsConntector	/api/buildings	buildings	Get Post Delete	-	-
+ClassInfoConnector	/api/class-info	class-info	Get	-	-
+CurriculaConnector	/api/curricula	curricula	Get	-	-
+DataExchangeConnector	/api/exchange	exchange	Get Post	-	-
+EnrollmentsConnector	/api/enrollments	enrollments	Get	-	-
+EventsConnector	/api/events	events	Get Post Delete	-	-
+InstructorScheduleConnector	/api/instructor-schedule	instructor-schedule	Get	-	-
+InstructorsConnector	/api/instructors	instructors	Get	-	-
+JsonConnector	/api/json	json	Post	-	-
+OnlineStudentSchedulingConnector	/api/sectioning	sectioning	Get Post	-	-
+RolesConnector	/api/roles	roles	Get	-	-
+RoomsConnector	/api/rooms	rooms	Get Post Put Delete	-	-
+ScriptConnector	/api/script	script	Get Post	Get	-
+StudentGroupsConnector	/api/student-groups	student-groups	Get	-	-
+VariableTitleCourseConnector	/api/var-title-crs	var-title-crs	Get Post	-	Get Post
