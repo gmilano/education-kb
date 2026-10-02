@@ -8,6 +8,7 @@ updated: 2026-10-02
 
 > Key players, market map y oportunidades por región.
 > Investigado 2026-09-30; el pase 11, el 2026-10-01. Las estimaciones de tamaño de mercado varían mucho entre firmas: se listan todas con su fuente en vez de elegir una.
+> **Pase 33 del 2026-10-02:** barrido regional completo en las cuatro regiones, **y las cuatro rindieron dato nuevo**. **North America:** concentró el **38 % del mercado en 2025**, y aparece el primer documento de requisitos **del lado del comprador** — **alumnos de los 50 estados publicaron un marco nacional de AI en K-12** (AASA, **2026-08-03**), más despliegues concretos (**Nueva York**: *Traffic Light Framework* desde marzo de 2026, *Playbook* en junio; **Maryland**: piloto con **Khanmigo** sobre **~4.350 alumnos**). 🟢 **Y la capa de telemetría de esta KB resulta ser la respuesta literal a dos mandatos:** `ACTOR_UUID` sin dato personal contra **California AB 1159**, y el rail de escritura con confirmación contra la **supervisión humana** de Oklahoma y Maryland. **EMEA:** sin novedad de calendario —**Anexo III → 2027-12-02**, **art. 50 vigente desde 2026-08-02**— pero ⚠️ **se corrige el argumento de soberanía de esta base**: el `LICENSE` de **Ralph** nombra a **France Université Numérique** (institución pública) y el de `learnmcp-xapi` dice **`Copyright (c) 2025 David Romero`** (una persona), así que **la soberanía se apoya en Ralph y la privacidad por diseño en `learnmcp-xapi`** — son dos argumentos y conviene no mezclarlos. 🔴 **Gap 56: `eur-lex.europa.eu` y `data.europa.eu` están BLOQUEADOS por el proxy** — van **siete fuentes secundarias y cero primarias**, y la fecha **no se cita como primaria**. **APAC:** **~530 M de alumnos de K-12**, **88 % de empleados usando AI en el trabajo (2025) contra 22 % en 2023**, **Corea vigente desde 2026-01-22**, **Vietnam con monitoreo conductual y evaluación automatizada en alto riesgo**, y la previsión de que **2027–2030 traiga leyes basadas en riesgo modeladas sobre el EU AI Act** — o sea, **el expediente de EMEA se reutiliza acá**. **LATAM:** la brecha más vendible de las cuatro regiones — **72 % de docentes con visión positiva (vs 57 % global) y 79 % usándola, pero 88 % con compromiso «mínimo» a «moderado»**: la adopción es **ancha y superficial**. Entra institución nueva (**Observatorio de AI en la Educación para América Latina y el Caribe de UNESCO, 2026-04-14**) e hito de gobernanza (**Uruguay, primer país de LATAM en firmar el Convenio Marco del Consejo de Europa sobre AI**, 2025). 🟢 **La receta regional queda armada**: Open edX + **Ralph** (convierte sus *tracking logs* a xAPI de fábrica) + `learnmcp-xapi` + `lrsql` — cuatro piezas permisivas que convierten uso superficial en evidencia.
 > **Pase 23:** barrido regional completo en las cuatro regiones. North America: **134 proyectos en 31 estados**, y Oklahoma/Maryland **prohíben la decisión autónoma sobre el alumno** — la capa predictiva pasa de mal abastecida a parcialmente prohibida. APAC: Corea vigente **2026-01-22**, Vietnam pone en alto riesgo el **monitoreo conductual**. LATAM: **65% de los alumnos teme el aprendizaje superficial** — el primer argumento de venta de pedagogía defendible que viene del usuario final.
 > **Pase 11:** el reloj del Anexo III del EU AI Act se corrió a **2027-12-02** (Reglamento (UE) 2026/1744, en vigor 2026-07-27) y las cuatro regiones tienen bloque propio sobre la **capa predictiva / early warning**.
 > **Pase 27:** barrido regional completo en las cuatro regiones, y el dato nuevo de cada una es de **capacidad institucional**, no de tamaño de mercado. **North America:** sólo **10 % de instituciones con guías formales** y **71 % de docentes sin formación**. **EMEA:** 🔴 **la adopción interna va de 5,21 % (Rumanía) a 42,03 % (Dinamarca) — ocho veces**, con barreras cuantificadas (expertise 70,89 %, incertidumbre legal 52,52 %, privacidad 48,83 %). **APAC:** la **soberanía define la infraestructura de ~50 %** de las empresas. **LATAM:** el *AI in Higher Education LATAM Survey 2026* (DEC, 29+ instituciones) mide la brecha: **73,5 % ya enseña con AI y sólo 8 % tiene presupuesto dedicado**, con **9 % de mecanismos formales de evaluación**. ⚠️ Y una contradicción de fuente registrada: la prensa dice que el AI Act entra en pleno efecto en **agosto de 2026**, contra el **2027-12-02** que esta KB tiene verificado por norma.
@@ -853,6 +854,37 @@ Dónde se produce el software educativo abierto, que no es donde está la demand
 
 ### North America
 
+**Pase 33 (2026-10-02) — la demanda empieza a escribir su propio marco, y la capa de telemetría de esta KB resulta ser la respuesta técnica literal a dos de los mandatos.**
+
+- 🟢 **Dato de tamaño que faltaba:** **North America concentró el 38 % del mercado de AI en educación en 2025**. Es la
+  región más grande y la que ya tiene regulación escrita — la combinación que más rápido convierte un mandato en pliego.
+- 🔵 **Novedad de encuadre, y es del lado del comprador:** **alumnos de los 50 estados produjeron un marco nacional
+  para el uso de AI en K-12** (AASA, **2026-08-03**), que pide protecciones para el **aprendizaje auténtico**, la
+  **privacidad**, la **equidad**, el **juicio humano** y **las relaciones** en el centro de la educación. **No es
+  regulación, pero es el primer documento de requisitos que viene del usuario final** — y se parece mucho más a un
+  pliego que a una declaración.
+- **Confirmado otra vez, sin cambios:** **134 proyectos de ley en 31 estados**; **California AB 1159** prohíbe usar
+  datos del alumno para **entrenar modelos**; **Idaho SB 1227** exige protecciones de privacidad; **Oklahoma y
+  Maryland** exigen **supervisión humana** y **prohíben que la AI decida de forma autónoma** sobre el alumno;
+  **Georgia y Mississippi** suman créditos de computación con contenido de AI a los requisitos de graduación.
+- 🔵 **Lo concreto en despliegue, que es lo que se puede mostrar:** **Nueva York** publicó guía preliminar en **marzo de
+  2026** con un **Traffic Light Framework** y un *Playbook* completo previsto para **junio de 2026**; el **piloto de
+  tutoría K-12 de Maryland** corre con **Khanmigo** sobre **~4.350 alumnos en dos condados**.
+
+🟢 **La oportunidad que este pase deja servida, y es la más directa de las cuatro regiones.** La capa de telemetría
+—**`lrsql`** (Apache-2.0, `v0.9.9` del **2026-10-01**) + **`learnmcp-xapi`** (MIT)— responde **literalmente** a los dos
+mandatos más duros de esta región:
+
+| Mandato | Qué pide | Qué de esta KB lo cumple de fábrica |
+|---|---|---|
+| **California AB 1159** — no entrenar modelos con datos del alumno | Separar *actividad de aprendizaje* de *dato personal* | **`learnmcp-xapi` guarda un `ACTOR_UUID` por alumno** y declara *«No personal information is stored — only learning activities and progress indicators»*. **La evidencia pedagógica queda; el dato personal no entra** |
+| **Oklahoma / Maryland** — supervisión humana, prohibida la decisión autónoma | Que cada decisión sea rastreable y reversible por una persona | El **rail de escritura con *dry run* + confirmación** (tendencia **102**) y la **auditoría append-only previa a la escritura** de `openedx-mcp`. ⚠️ **Pero hay que leer quién lo hace cumplir:** el freno por **anotaciones MCP** (`coursecode`) **no frena solo** — en esta región, la confirmación la implementa el orquestador o no existe |
+
+🔴 **Y el asterisco que evita vender humo:** *«supervisión humana demostrable»* no se demuestra con una anotación
+declarativa. Si el pliego la exige, **el freno tiene que estar en el servidor** (confirm token, como `openedx-mcp`) o en
+el orquestador propio — y eso **entra en la estimación**, no en la lista de features heredadas.
+
+
 **Pase 31 (2026-10-02) — el barrido regional trae por fin los *nombres de ley*, no sólo el conteo de proyectos.** La
 cifra de contexto se mantiene (**134 proyectos de ley en 31 estados**, y **38 % del mercado de AI en educación en
 2025**), y lo nuevo es nominal y por lo tanto citable en una propuesta:
@@ -1483,6 +1515,48 @@ distrital**, en North America **no se vende adopción ni piloto — se vende exp
 KB ya tiene mapeado para EMEA. **El mismo entregable técnico sirve a las dos regiones por razones legales distintas.**
 ### EMEA
 
+⚠️ **Pase 33 (2026-10-02) — la fecha no se movió, pero el argumento de soberanía de esta KB tenía una pieza mal atribuida, y se corrige.**
+
+**Sobre el calendario: cero novedades y una acción cerrada en negativo.** El pase 32 mandó verificar el Anexo III contra
+el **texto primario**, nombrando dos dominios que no se habían intentado. Se intentaron los dos:
+
+| Dominio | Resultado |
+|---|---|
+| `eur-lex.europa.eu` | 🔴 **`EGRESS_BLOCKED` por el proxy de egreso** |
+| `data.europa.eu` | 🔴 **`EGRESS_BLOCKED` por el proxy de egreso** |
+
+El barrido regional de este pase devuelve, de fuentes nuevas y concordantes: **Anexo III (educación) → 2027-12-02**,
+diferido desde el 2026-08-02; **art. 50 (transparencia) en aplicación desde el 2026-08-02** —o sea, **la obligación de
+declarar que el alumno está hablando con una AI ya rige**—; y **evaluación de conformidad, interna o auditoría de
+tercero, antes de poner el sistema en el mercado**. El alcance educativo del Anexo III se confirma otra vez:
+**admisión, asignación a programas, evaluación, orientación, progresión y monitoreo de exámenes** (incluida la
+detección de conducta prohibida durante la evaluación).
+
+🔴 **Van siete fuentes secundarias concordantes y cero primarias. La regla se mantiene: esta fecha no se cita como
+primaria ante el cliente.** Para cerrar el **gap 56** hace falta **una lectura hecha fuera de este entorno de red**, y
+así conviene pedirla — es el único número de esta KB que un abogado del cliente verifica en la primera reunión.
+
+⚠️ **La corrección del pase, y pega sobre el argumento de venta de esta región.** Esta KB viene usando como argumento de
+**soberanía tecnológica europea** que *«Ralph y `learnmcp-xapi` son artefactos europeos y MIT»*. **Hay que afinarlo,
+porque los dos títulos de licencia no son equivalentes:**
+
+| Pieza | Lo que dice el archivo `LICENSE`, leído de primera mano | Qué soporta en una licitación |
+|---|---|---|
+| **Ralph** (`openfun/ralph`) | **MIT** — *«Copyright (c) 2020-present **France Université Numérique**»* | 🟢 **El argumento completo.** El titular es una **institución pública francesa**, y eso es lo que puntúa en un pliego de soberanía |
+| **`learnmcp-xapi`** | **MIT** — *«Copyright (c) 2025 **David Romero**»* | ⚠️ **Titular: una persona.** El autor declara filiación docente (IES Rafael Alberti, España) y las dos cosas son compatibles, **pero el dato verificable es el del archivo de licencia** |
+
+🟢 **Cómo se arma el pitch de EMEA con esto, en una línea:** **la soberanía se apoya en Ralph** (institución pública
+europea en el `LICENSE`, convierte *tracking logs* de Open edX a xAPI de fábrica) y **la privacidad por diseño se apoya
+en `learnmcp-xapi`** (`ACTOR_UUID`, *«no personal information is stored»*), que es justo lo que el Anexo III premia.
+**Son dos argumentos distintos y conviene no mezclarlos**, porque el primero se verifica en un archivo y el segundo en
+una arquitectura.
+
+🔴 **El asterisco operativo que hay que decir en la primera reunión:** **Ralph está vivo en `main` y parado en el
+registro.** Último release en PyPI **2024-07-11** (`ralph-malph` 5.0.1) con un `[Unreleased]` grande y activo en el
+`CHANGELOG.md`. **Un proyecto que lo use instala desde git, no desde `pip install`** — no está abandonado, pero **no se
+cotiza como dependencia estable** y el *onboarding* lo paga.
+
+
 🔴 **Pase 31 (2026-10-02) — CORRECCIÓN MAYOR: el gap 56 queda resuelto, y esta KB le estaba vendiendo a EMEA una
 urgencia que no existe.**
 
@@ -1690,6 +1764,8 @@ Dos ángulos nuevos para una propuesta europea:
 **La lectura estratégica, que refuerza el gap 3.** Europa compra **conformidad** — el artefacto que se vende es el expediente auditable, y la oferta open source local (MathTutorBench, OpenDidactia, L2-Bench, Ralph) es justamente de medición, currículo y telemetría, no de tutores. El Golfo compra **programa nacional**: contrato grande, plazo político, despliegue masivo, y la decisión no la toma una institución sino un ministerio. **Son dos motions de venta distintas dentro de la misma región, y conviene no mezclarlas en una sola propuesta EMEA.**
 
 ⚠️ **Y un dato de oferta del pase 6 que vale para EMEA:** `Ralph` (MIT, OpenFun, Francia) y `learnmcp-xapi` (MIT, IES Rafael Alberti, España) son europeos, permisivos, e integran con Open edX. Junto con Richie (MIT, OpenFun) permiten armar **una cadena vertical de un solo origen regional** — argumento de soberanía tecnológica que en licitaciones europeas puntúa.
+
+> ⚠️ **Matizado en el pase 33 del 2026-10-02 — leer el bloque del pase 33 al inicio de esta sección antes de usar este párrafo.** El argumento de soberanía **se sostiene, pero no sobre las tres piezas por igual**: el `LICENSE` de `Ralph` nombra a **France Université Numérique** (institución pública), mientras que el de `learnmcp-xapi` dice **`Copyright (c) 2025 David Romero`** — **una persona**, no el instituto. La filiación docente del autor es compatible con eso, pero **en un pliego de soberanía el dato que se cita es el del archivo de licencia**. Apoyar la soberanía en **Ralph** (y Richie, del mismo origen institucional), y usar `learnmcp-xapi` para el argumento distinto —y también fuerte— de **privacidad por diseño** (`ACTOR_UUID`, *«no personal information is stored»*). ⚠️ Y sumar el asterisco de instalación: **Ralph se instala desde `main` de git**, no desde PyPI.
 
 
 **Agregado en el pase 8 del 2026-10-01 — la obligación europea con la fecha ya vencida, y es la de ciclo de venta más corto de toda la KB.**
@@ -2135,6 +2211,39 @@ abrir el DOUE.** Queda como acción para el pase siguiente.
   pesos abiertos** (Llama 3, Mistral) en vez de consumir API. Eso convierte el *stack* soberano —Ollama/vLLM + LMS open
   source— en **requisito de licitación, no en preferencia de arquitectura**.
 ### APAC
+
+**Pase 33 (2026-10-02) — la región pasa a tener la cifra de adopción más alta del mundo y el techo de mercado más grande por volumen, y la regulación converge hacia el modelo europeo.**
+
+- 🟢 **El volumen, que es el argumento que APAC tiene y nadie más:** **~530 millones de alumnos de K-12 en Asia** (2024).
+  Cualquier mejora porcentual sobre esa base es un número que ninguna otra región puede ofrecer.
+- 🔵 **La adopción ya no es la objeción:** **88 % de los empleados en Asia usa AI en el trabajo (2025), contra 22 % en
+  2023**, con proyecciones de **80–90 %** para 2026. **El comprador de APAC no hay que convencerlo de usar AI** — eso
+  mueve la conversación de *«por qué AI»* a *«cómo lo gobierno»*, que es donde esta KB tiene inventario.
+- **Confirmado, sin cambios:** **Corea — la Ley Marco de AI (AI Basic Act) está vigente desde el 2026-01-22**.
+  **Vietnam clasifica como alto riesgo los sistemas de AI educativos**, nombrando específicamente **la evaluación
+  automatizada y el monitoreo conductual**.
+- 🔵 **La trayectoria regulatoria, y es la que conviene anticipar:** la previsión del período **2027–2030** es que **la
+  mayoría de las economías de APAC tenga leyes de AI basadas en riesgo, modeladas en parte sobre el EU AI Act**. O sea:
+  **el expediente de conformidad que se arma para EMEA se reutiliza en APAC**, con otro calendario. Eso convierte el
+  trabajo de EMEA en un activo, no en un costo hundido.
+- **Players que domina la demanda:** Google, Microsoft, IBM, **Pearson** y **Byju's**; **China, India y Japón** concentran
+  el mercado — China por inversión pública dirigida, India por plataformas de educación online.
+
+🟢 **La oportunidad concreta, y sale de cruzar Vietnam con el hallazgo técnico de este pase.** Donde el **monitoreo
+conductual** y la **evaluación automatizada** están declarados de **alto riesgo**, lo que se vende no es el tutor: es
+**el rail que hace auditable y reversible cada escritura del agente sobre el expediente del alumno**. Las dos
+implementaciones medidas por esta KB son:
+
+| Mecanismo | Pieza | ¿Frena solo? |
+|---|---|---|
+| **Confirm token** atado a una huella del payload, en el servidor, con auditoría *append-only* previa a la escritura | `openedx-mcp` (**AGPL-3.0** ⚠️ — corre en proceso) | 🟢 **Sí** |
+| **Anotaciones MCP** (`readOnlyHint`/`idempotentHint`/`destructiveHint`) + **`dryRun`**, en el contrato | `coursecode` (**MIT** ✅) | 🔴 **No** — depende de que el cliente MCP las lea |
+
+🔴 **El asterisco de licencia que decide la arquitectura en esta región:** el mecanismo que **frena solo** es el
+**AGPL-3.0 y corre dentro del LMS**; el permisivo **no frena solo**. En un pliego de alto riesgo, **el freno lo
+implementa el orquestador propio** —y entra en la estimación— o se acepta la AGPL con sus consecuencias. **No hay
+tercera opción permisiva medida en esta base**, y eso es un gap de oferta, no de búsqueda (tendencia **102**).
+
 
 **Pase 31 (2026-10-02) — el calendario regulatorio de APAC se completa con fechas, y el gasto tiene número.**
 
@@ -2749,6 +2858,48 @@ monitoreo de conducta**— es exactamente lo que hace un tutor con *proctoring*.
 herramienta de evaluación con respaldo estatal de las cuatro regiones, así que **un expediente armado contra AI Verify
 sirve de borrador para el Anexo III europeo**, no sólo para APAC.
 ### LATAM
+
+**Pase 33 (2026-10-02) — la región tiene la adopción docente más entusiasta del mundo y el uso más superficial, y esa brecha es el *pitch*; aparece además una institución regional nueva y un hito de gobernanza.**
+
+- 🟢 **El dato de entusiasmo, que es el mejor de las cuatro regiones:** **72 % del profesorado de LATAM tiene una visión
+  «positiva» o «muy positiva» de la AI en educación, contra 57 % global**, y **79 % declara usarla en su enseñanza**
+  (18 puntos por encima de la cifra global de 2025).
+- 🔴 **Y el dato que lo convierte en oportunidad en vez de en noticia: el 88 % declara un compromiso «mínimo» a
+  «moderado»**. O sea: **la adopción es ancha y es superficial.** El cuello de botella de LATAM **no es el acceso ni la
+  actitud — es la profundidad de uso.**
+- 🔵 **Institución nueva, y es de las que generan pliegos:** **UNESCO lanzó el 2026-04-14 el Observatorio de Inteligencia
+  Artificial en la Educación para América Latina y el Caribe**, una plataforma regional para apoyar a los Estados en la
+  integración de AI en sus sistemas educativos.
+- 🟢 **Hito de gobernanza:** en 2025 **Uruguay fue el primer país de LATAM en firmar el Convenio Marco del Consejo de
+  Europa sobre AI y derechos humanos, democracia y Estado de derecho.** Para un cliente uruguayo o regional, eso
+  **conecta el expediente de conformidad europeo con la jurisdicción local** — el mismo trabajo sirve dos veces.
+- **Confirmado, sin cambios:** el proyecto de ley de **Brasil**, el marco de **Chile**, el **CONPES** de **Colombia** y
+  las reglas sectoriales de **México** avanzan **a velocidades distintas**; **Chile, Brasil y Uruguay** son los
+  pioneros regionales por disponibilidad de datos, gobernanza e infraestructura; **Latam-GPT** (CENIA, Chile) sigue
+  siendo el esfuerzo regional de modelo, con **30+ instituciones de 8 países**.
+
+🟢 **La receta que este pase deja armada para LATAM, y encaja con la huella que la región ya tiene.** Open edX es la
+huella pública grande de LATAM (ver **P63**), y **Ralph convierte los *tracking logs* de Open edX a xAPI de fábrica**.
+Eso da el camino más corto de *«uso superficial»* a *«evidencia de aprendizaje»* sin pedirle al cliente que cambie de
+plataforma:
+
+1. **El LMS que ya está** — Open edX (AGPL-3.0, el agente va **afuera**).
+2. **Ralph** (**MIT**, France Université Numérique) — ingesta los *tracking logs* existentes y los convierte a xAPI.
+   ⚠️ **Se instala desde `main` de git**, no desde PyPI (release de 2024-07-11).
+3. **`learnmcp-xapi`** (**MIT**) — el agente **escribe** evidencia y **lee** el progreso antes de responder, con
+   `ACTOR_UUID` en vez de dato personal.
+4. **`lrsql`** (**Apache-2.0**, `v0.9.9` del **2026-10-01**) si el cliente prefiere un LRS sobre la base de datos que ya
+   opera, en vez del stack Elasticsearch de Ralph.
+
+🔵 **Por qué este orden vende acá y no en otra región:** el **88 % de uso superficial** significa que **el dato de
+aprendizaje ya se está generando y se está perdiendo**. La propuesta no es *«adopten AI»* —ya la adoptaron— sino
+**«convirtamos el uso que ya existe en evidencia que el Ministerio y la acreditación puedan leer»**. Y los cuatro
+componentes son **permisivos**, lo que importa en una región donde el presupuesto de licencias es la primera objeción.
+
+⚠️ **Lo que no hay que prometer, y sigue valiendo:** **ningún LRS estima *mastery*.** Son almacenes conformes al
+estándar; la inferencia es desarrollo propio. Y el **65 % de los alumnos de la región teme el aprendizaje superficial**
+(pase 23) — así que la pedagogía defendible **es parte del entregable**, no un extra.
+
 
 **Pase 31 (2026-10-02) — aparece la encuesta regional más grande que tocó esta KB, y refina el argumento central de
 LATAM con un dato del usuario final.**

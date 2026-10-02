@@ -8,6 +8,20 @@ updated: 2026-10-02
 
 > Recetas concretas: repos nombrados, licencias verificadas, wiring explícito y estimación.
 > Todos los repos citados fueron verificados vía WebFetch el 2026-09-30; los del pase 11, el 2026-10-01 (ver `agents/top.md`).
+> **Pase 33 del 2026-10-02:** +3 patrones, los tres sobre la capa de telemetría y la de evaluación. **P67** — *evidencia
+> de aprendizaje auditable sobre el LMS que el cliente ya tiene*, que resuelve **dos mandatos de North America con
+> piezas que ya existen** (`ACTOR_UUID` sin dato personal contra **California AB 1159**; rail de escritura con
+> confirmación contra la **supervisión humana** de Oklahoma y Maryland) y la **brecha de uso superficial de LATAM**
+> (79 % usa AI, 88 % con compromiso mínimo-a-moderado). **P68** — *telemetría soberana europea*, que existe porque este
+> pase midió que **las piezas no soportan el argumento de soberanía con la misma fuerza**: el `LICENSE` de **Ralph**
+> nombra a **France Université Numérique** y el de `learnmcp-xapi` dice **`Copyright (c) 2025 David Romero`**, así que
+> **la soberanía se apoya en Ralph y la privacidad por diseño en `learnmcp-xapi`**. **P69** — *la puerta MCP de QTI*,
+> que es **contribución *upstream*, no integración**: la mitad QTI del gap 60 es la **única ausencia de esta base medida
+> por dos instrumentos independientes**, y envolver `@longsightgroup/qti3-cli` (**MIT**) cuesta **exactamente una
+> dependencia externa** porque su cadena no tiene ninguna de terceros. ⚠️ **Y una advertencia transversal que atraviesa
+> los tres: `coursecode` pone su rail de seguridad en las *anotaciones MCP* y no en el servidor, así que — a diferencia
+> del *confirm token* de `openedx-mcp` — no frena solo.** Donde el pliego exija supervisión humana demostrable, **la
+> confirmación es trabajo del integrador y entra en la estimación** (tendencia **102**).
 > **Pase 26:** +4 patrones — **P50** (el perfil de competencia por MCP, con las 6 tools de CaSS **medidas** en vez de
 > inferidas), **P51** (el conector MCP de Moodle que no existe, construido sobre el patrón del que sí existe para
 > Canvas), **P52** (la capa agéntica de biblioteca sobre el bus de Kafka de FOLIO, Apache-2.0) y **P53** (*early warning*
@@ -3578,3 +3592,169 @@ versión y prever *fork* mantenido** es parte del presupuesto, igual que esta KB
 `AGENTS.md` pero no MCP. **La contribución *upstream* más limpia disponible hoy** es envolver `qti3-cli` en un servidor
 MCP: el core no tiene dependencias y ya expone parser, validación y *scoring*, así que es trabajo de días. **Medirlo es la
 acción 2 del pase 33.**
+
+> 🔴 **CORREGIDO EN EL PASE 33 DEL 2026-10-02 — el párrafo de arriba afirma la mitad falsa del gap 60.** **xAPI SÍ tiene
+> puerta MCP:** [`DavidLMS/learnmcp-xapi`](https://github.com/DavidLMS/learnmcp-xapi) (**MIT**, 3 tools — 1 escribe, 2
+> leen), **y está en esta KB desde el pase 6**, en `agents/top.md` y en `repos/foundations.md`. El gap 60 armó su lista
+> de candidatos con el **registro de paquetes**, y `learnmcp-xapi` **no está en ninguno** (PyPI 404, npm `total: 0`): el
+> instrumento no podía verla. ✅ **La mitad QTI sí se sostiene**, y ahora confirmada por un segundo instrumento
+> independiente — es la única ausencia de esta base que cumple ese requisito. ✅ **Y la acción 2 quedó cumplida: envolver
+> `qti3-cli` cuesta UNA dependencia externa**, medido en sus metadatos (`dependencies` = sólo sus cuatro hermanas, cero
+> de terceros). Ver **P69**, y las tendencias **99**, **100**, **101** y **102**.
+
+## P67 — Evidencia de aprendizaje auditable sobre el LMS que el cliente ya tiene (agregado en el pase 33 del 2026-10-02; **North America y LATAM primero**, por razones opuestas)
+
+**El problema que resuelve, y es distinto en cada región.** En **North America** hay mandatos que prohíben entrenar con
+datos del alumno (**California AB 1159**) y exigen supervisión humana con prohibición de decisión autónoma (**Oklahoma**,
+**Maryland**). En **LATAM** el **79 %** de los docentes ya usa AI pero el **88 %** declara compromiso *«mínimo» a
+«moderado»*: **el dato de aprendizaje se está generando y se está perdiendo.** Las dos situaciones piden lo mismo:
+**convertir la interacción con el agente en evidencia conforme al estándar, sin acumular dato personal y con cada
+escritura auditable.**
+
+### Las piezas, todas verificadas de primera mano en el pase 33
+
+| Rol | Pieza | Licencia | Estado medido |
+|---|---|---|---|
+| Almacén conforme | [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) | **Apache-2.0** ✅ | 🟢 **`v0.9.9` el 2026-10-01**, 112 tags, seis releases en 2026. Corre sobre SQLite / PostgreSQL / MariaDB / MySQL |
+| Almacén alternativo sobre Open edX | [`openfun/ralph`](https://github.com/openfun/ralph) | **MIT** ✅ | ⚠️ **Vivo en `main`, release de 2024-07-11** → instalar desde git. Convierte *tracking logs* de Open edX a xAPI **de fábrica** |
+| Puente al agente | [`DavidLMS/learnmcp-xapi`](https://github.com/DavidLMS/learnmcp-xapi) | **MIT** ✅ | **3 tools: 1 escribe, 2 leen.** `LRS_PLUGIN=lrsql\|ralph\|veracity`. 🔴 **Fuera de todo registro**: se instala desde el código |
+| Rail de escritura | el del orquestador propio | — | ⚠️ **Hay que construirlo.** Ver el paso 4 y la tendencia **102** |
+
+### El wiring, en el orden en que hay que construirlo
+
+1. **El LMS se queda donde está y no se toca.** Si es **Open edX** (AGPL-3.0), el agente va **afuera** — y conviene
+   **Ralph**, porque la ingesta de *tracking logs* ya existe y no hay que escribirla. Si es cualquier otro, **`lrsql`**
+   sobre la base de datos que el cliente ya opera, para no agregar una pieza nueva al diagrama.
+2. **`learnmcp-xapi` como servidor MCP del agente**, con `LRS_PLUGIN` apuntando al LRS del paso 1 y el
+   `config/plugins/<backend>.yaml` con endpoint, credenciales y `retry_attempts`. Desde acá el tutor **registra** cada
+   interacción como *statement* xAPI y **consulta** el historial antes de responder.
+3. **La privacidad se configura, no se promete.** Un **`ACTOR_UUID`** por alumno, con la tabla de correspondencia
+   **fuera** del LRS y bajo control del cliente. Lo que queda en el almacén es **actividad de aprendizaje**, no identidad
+   — que es exactamente lo que **AB 1159** pide y lo que el **Anexo III** premia.
+4. 🔴 **El rail que hay que agregar, porque ninguna de las piezas lo trae.** `learnmcp-xapi` tiene **una** tool de
+   escritura (el *statement recording*) y **no** publica un *confirm token* como `openedx-mcp` ni anotaciones de
+   destructividad como `coursecode`. En un despliegue con mandato de supervisión humana hay que interponer, **en el
+   orquestador**:
+   - **Ensayo**: construir el *statement* y mostrarlo antes de postearlo.
+   - **Confirmación** para escrituras en lote, con huella del payload (el patrón de `openedx-mcp`, tendencia 84).
+   - **Auditoría *append-only*** previa a la escritura: quién, qué, cuándo, con qué *prompt*.
+
+   **Esto es desarrollo y se cotiza.** No está heredado de ninguna de las tres piezas.
+
+### Estimación y lo que no hay que prometer
+
+**6–8 semanas** con el LMS ya en producción: 1–2 para el LRS y la configuración de plugin, 2 para el rail del paso 4,
+2–3 para el mapeo de vocabulario xAPI del dominio del cliente y el tablero.
+
+⚠️ **Lo que NO hay que prometer, y es la advertencia que esta KB repite porque se la piden igual:** **ningún LRS estima
+*mastery*.** Son almacenes conformes al estándar. La inferencia (`pyBKT`, `pyKT`) es **desarrollo propio** y es otro
+patrón (**P15**). Y ⚠️ `learnmcp-xapi` tiene **32 commits** registrados: **es base a forkear o referencia de
+integración, no dependencia de producción** — ver el **gap 63**, que es el que falta cerrar para saber si el `2.0.0`
+cambia esa lectura.
+
+---
+
+## P68 — Telemetría soberana europea, con el argumento apoyado en el archivo de licencia correcto (agregado en el pase 33 del 2026-10-02; **EMEA**)
+
+**Por qué es un patrón y no una variante de P67.** En una licitación pública europea el argumento de **soberanía
+tecnológica** puntúa, y se verifica **abriendo el archivo de licencia**. Este pase midió que **las piezas de esta KB no
+soportan el mismo argumento con la misma fuerza**, y el patrón consiste en usar cada una para lo que su `LICENSE`
+respalda.
+
+| Pieza | Lo que dice su `LICENSE` | Para qué sirve en el pliego |
+|---|---|---|
+| [`openfun/ralph`](https://github.com/openfun/ralph) | **MIT** — *«Copyright (c) 2020-present **France Université Numérique**»* | 🟢 **Soberanía.** Titular: **institución pública francesa** |
+| `Richie` (OpenFun) | **MIT**, mismo origen institucional | 🟢 **Soberanía**, misma cadena de origen |
+| [`DavidLMS/learnmcp-xapi`](https://github.com/DavidLMS/learnmcp-xapi) | **MIT** — *«Copyright (c) 2025 **David Romero**»* | ⚠️ **No soberanía** (titular: una persona). 🟢 **Privacidad por diseño**: `ACTOR_UUID`, *«No personal information is stored»* |
+| [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) | **Apache-2.0**, Yet Analytics (EE. UU.) | 🟢 **Madurez y cadencia** (`v0.9.9`, 2026-10-01). 🔴 **No** sirve para el argumento de origen europeo |
+
+### El wiring, y la decisión que lo gobierna
+
+1. **Ralph como LRS**, no `lrsql`, **cuando el pliego valora el origen** — aunque `lrsql` tenga mejor cadencia. Es una
+   decisión de licitación, no de ingeniería, y conviene escribirla como tal en la propuesta.
+2. ⚠️ **Instalar Ralph desde `main` de git.** Último release en PyPI: **2024-07-11** (`ralph-malph` 5.0.1), con un
+   `[Unreleased]` grande y activo en el `CHANGELOG.md` (CORS, baja de Python 3.8, correcciones de tipos Pydantic).
+   **`pip install ralph-malph` trae código de hace ~2,2 años.** Fijar el *commit* y documentarlo.
+3. **`learnmcp-xapi` encima**, con `LRS_PLUGIN=ralph`, y el argumento de **privacidad por diseño** en la sección de
+   conformidad del expediente — **no** en la de soberanía.
+4. **El expediente del Anexo III**, con el calendario fechado por inciso: **art. 50 (transparencia) rige desde el
+   2026-08-02** —o sea, declarar que el alumno habla con una AI **ya es obligatorio**— y **el Anexo III, que es el
+   inciso que nombra educación, desde el 2027-12-02**. La evaluación de conformidad (interna o auditoría de tercero) va
+   **antes** de poner el sistema en el mercado.
+
+🔴 **La regla de citación que hay que respetar, y es la única de esta KB que un abogado verifica en la primera
+reunión.** La fecha del Anexo III está sostenida por **siete fuentes secundarias concordantes y cero primarias**:
+`eur-lex.europa.eu` y `data.europa.eu` están **bloqueados** desde el entorno donde se investigó esta base (**gap 56**).
+**No citarla como primaria**; pedir la verificación del texto consolidado como primer ítem del expediente.
+
+**Estimación: 8–10 semanas**, de las cuales 3–4 son el expediente de conformidad y no el código.
+
+---
+
+## P69 — La puerta MCP de QTI, que no existe y cuesta una dependencia (agregado en el pase 33 del 2026-10-02; contribución *upstream*, transversal)
+
+**Por qué este patrón es distinto de todos los demás de este archivo: acá Globant no integra, aporta.** La mitad QTI del
+**gap 60** es la **única ausencia de esta KB medida por dos instrumentos independientes** —apertura de README de
+candidatos (pase 32) y búsqueda abierta (pase 33)— más una lectura de SDK. **QTI, el estándar de interoperabilidad de
+evaluación, no tiene puerta MCP.** Y la base sobre la que construirla está medida.
+
+### El costo, medido en vez de estimado
+
+| Medición | Valor | Fuente |
+|---|---|---|
+| Paquete | `@longsightgroup/qti3-cli@0.13.1` | `registry.npmjs.org` |
+| Licencia | **MIT** ✅ | metadatos del paquete |
+| Ejecutable | **`bin: { "qti3": "dist/index.js" }`** — ya es un CLI | metadatos del paquete |
+| Superficie | *«parsing, validating, scoring, inspecting, and checking QTI 3 items»* | `description` del paquete |
+| **`dependencies`** | 🟢 **Sólo sus cuatro hermanas**: `qti3-core`, `-a11y`, `-fixtures`, `-conformance` (las cuatro en `0.13.1`). **Cero dependencias de terceros en toda la cadena** | metadatos del paquete |
+| Cadencia del monorepo | `@longsightgroup/qti3-migrator@0.13.1`, npm `modified` **2026-10-01** | `registry.npmjs.org` |
+
+🟢 **La conclusión cotizable: un wrapper MCP sobre `qti3-cli` agrega exactamente UNA dependencia externa**
+(`@modelcontextprotocol/sdk`) a un árbol que hoy no tiene ninguna. No hay que escribir parser, ni *scoring*, ni
+validación: **ya están y son MIT.**
+
+### El wiring de la contribución
+
+1. **Un paquete nuevo en el monorepo** (`packages/mcp`), que importe `qti3-core` y exponga como tools MCP las
+   operaciones que el CLI ya tiene: `parse`, `validate`, `score`, `inspect`, `check`.
+2. **Las cuatro primeras son de sólo lectura** → `annotations: { readOnlyHint: true, idempotentHint: true }`.
+3. **La de escritura es el *writer* de banco de ítems** (`qti3-writer`, que el pase 32 registró): esa sí necesita
+   **`dryRun` + confirmación**, siguiendo el modelo de `coursecode`. ⚠️ **Y con la advertencia de la tendencia 102: la
+   anotación MCP no frena sola.** Si la contribución quiere el freno real, va **un chequeo en el servidor**, como
+   `openedx-mcp`.
+4. **Salida al LMS, que ya está resuelta y es la pieza vecina:** **`coursecode`** (**MIT**) empaqueta a **SCORM 1.2,
+   SCORM 2004, cmi5 y LTI 1.3** —los cuatro **en el `enum` del `inputSchema` de `coursecode_build`**, medido en este
+   pase, no leído del README— y expone **15 tools** por MCP.
+
+### El pipeline completo que esto cierra
+
+```
+[Agente autor] ──MCP──▶ qti3-mcp (a construir, MIT, +1 dependencia)
+                            │  parse / validate / score / check  (lectura)
+                            └─ writer de banco de ítems          (escritura, con dry run)
+                                     │
+                            ──MCP──▶ coursecode (MIT, 15 tools)
+                                     └─ coursecode_build → cmi5 | scorm2004 | scorm1.2 | lti
+                                              │
+                                              ▼
+                                        [LMS del cliente]
+```
+
+### Por qué conviene aportarlo en vez de tenerlo interno
+
+El `LICENSE` es **MIT** y el monorepo está **activo** (`modified` 2026-10-01). Una contribución aceptada convierte a
+Globant en **el integrador que escribió la puerta de agente del estándar de evaluación** — que es exactamente el
+posicionamiento que la tendencia de esta KB describe: *«el integrador que sabe cuál de estas piezas sigue viva vale más
+que el que sabe el estándar»*.
+
+⚠️ **La decisión que falta, y es la acción 3 del pase 34.** El ecosistema QTI tiene **dos mitades**: la TypeScript
+permisiva de `LongsightGroup` (**cero dependencias**, pero `qti3` tiene **5 ★**) y la PHP de **OAT SA** (**36 paquetes
+en Packagist**: `qtism/qtism`, `oat-sa/extension-tao-*`, mucha más adopción). **La contribución más limpia es la
+TypeScript; la de más alcance podría ser la PHP.** Hay que medir licencia y cadencia de `qtism/qtism` antes de elegir
+—**y decidir con el número de adopción al lado, no por preferencia de lenguaje.**
+
+⚠️ **La honestidad que va al frente de la propuesta:** `qti3` tiene **5 ★**. Es un hallazgo **de arquitectura y de
+licencia**, no de tracción — y así hay que presentarlo.
+
+---
+

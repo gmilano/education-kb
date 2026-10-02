@@ -8,6 +8,117 @@ updated: 2026-10-02
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 
+## 2026-10-02 (pase 33) — **cero altas y tres fechas**: las piezas de la capa de telemetría ya estaban en esta KB desde el pase 6, y lo que faltaba era su **estado**; `hub.docker.com` entra como canal de verificación y fecha `lrsql` **en el día de ayer**
+
+🔵 **Este pase no agrega repos a la capa de telemetría, y eso es el hallazgo.** Fue a buscar la puerta MCP de xAPI que el
+**gap 60** declaró ausente, la encontró… **y ya estaba en esta base desde el pase 6**, junto con los dos LRS. Lo que **no**
+estaba era el dato que decide si una dependencia entra en una propuesta: **cuándo se movió por última vez.** Eso es lo
+que este pase mide.
+
+### ✅ Las tres piezas de la capa, ahora fechadas de primera mano
+
+| Repo | Licencia | Canal de verificación | Estado medido |
+|---|---|---|---|
+| [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) | **Apache-2.0** ✅ | `LICENSE` (200) = texto Apache 2.0; `README.md`, `doc/overview.md`, `deps.edn` (200); **`hub.docker.com/v2`** | 🟢 **VIVO, y la cifra es de ayer: `v0.9.9` el 2026-10-01.** **112 tags.** Seis releases en 2026 |
+| [`openfun/ralph`](https://github.com/openfun/ralph) | **MIT** ✅ | PyPI `ralph-malph` 5.0.1 (clasificador OSI); `CHANGELOG.md` (200) | ⚠️ **Vivo en `main`, parado en el registro**: último release **2024-07-11**, `[Unreleased]` grande y activo |
+| [`DavidLMS/learnmcp-xapi`](https://github.com/DavidLMS/learnmcp-xapi) | **MIT** ✅ | `LICENSE` (200): *«Copyright (c) 2025 David Romero»*; `README.md` (200), 293 líneas | 🟢 **Arquitectura de plugins leída del README**; 🔴 **fuera de todo registro de paquetes** |
+
+**`deps.edn` de `lrsql`, leído:** Clojure 1.11.2, `core.async`, `cheshire` 6.2.0, `spec-tools`, `aero`, `selmer`. Es un
+proyecto **JVM/Clojure**, y eso explica su canal de distribución.
+
+### 🟢 Canal de verificación nuevo: `hub.docker.com` fecha lo que `api.github.com` ya no puede
+
+`api.github.com` sigue devolviendo **403** en este entorno (tendencia 94), así que estrellas y fechas de release no son
+alcanzables. **Para una pieza que se distribuye como contenedor hay un sustituto, y funciona:**
+
+```
+GET https://hub.docker.com/v2/repositories/yetanalytics/lrsql/tags?page_size=8&ordering=last_updated
+→ 200, count: 112
+   latest  last_updated 2026-10-01T15:08:08Z
+   v0.9.9  last_updated 2026-10-01T15:08:06Z
+   v0.9.8  last_updated 2026-08-17T20:43:38Z
+   v0.9.7  last_updated 2026-08-11T16:00:25Z
+   v0.9.6  last_updated 2026-08-08T18:29:39Z
+   v0.9.5  last_updated 2026-04-30T17:02:39Z
+   v0.9.4  last_updated 2026-04-28T23:21:32Z
+   v0.9.3  last_updated 2025-11-11T16:16:22Z
+```
+
+**Seis releases en 2026 y la última de ayer.** Es cadencia medida, no impresión. **Agregar `hub.docker.com` al conjunto
+de canales verificables de esta KB**, al lado de `registry.npmjs.org`, `pypi.org`, `packagist.org` y
+`raw.githubusercontent.com`.
+
+### 🔴 El sesgo del instrumento, medido: el registro de paquetes no puede devolver media capa
+
+| Pieza | npm | PyPI | Packagist | Canal real de distribución |
+|---|---|---|---|---|
+| `lrsql` | — | — | — | **Docker Hub + releases de GitHub** (uberjar JVM) |
+| `learnmcp-xapi` | 🔴 **`total: 0`** (`text=learnmcp`) | 🔴 **404** | — | **Ninguno: se instala desde el código** (*from source*, `venv`, `uv`) |
+| `ralph` | — | `ralph-malph` ✅ **pero 2 años atrás** | — | **`main` de git** para lo actual |
+
+**La regla: el registro de paquetes de un lenguaje sólo es el instrumento correcto si la pieza se distribuye como
+librería de ese lenguaje.** Una plataforma entregada como **contenedor** o **uberjar** es invisible a npm, PyPI y
+Packagist; una herramienta que se instala **desde el código** es invisible a todos a la vez. Esto generaliza un nivel la
+lección del pase 30 (*«buscar en PyPI, no en GitHub»*): no alcanza con elegir el registro, hay que **elegir el canal**.
+Y tuvo una consecuencia concreta: **el gap 60 declaró ausente una pieza que esta KB lista desde el pase 6**, porque la
+lista de candidatos venía del registro. Ver tendencias **99** y **100**.
+
+### ✅ `coursecode` — del README al contrato de la tool
+
+Se bajó y abrió el artefacto publicado (`coursecode@0.1.61`, tarball de `registry.npmjs.org`, 200, 2,9 MB):
+
+| Medición | Valor |
+|---|---|
+| Licencia del artefacto | **MIT**, *«Copyright (c) 2026 Seth Vincent»* |
+| Dependencia MCP | **`@modelcontextprotocol/sdk`** en `dependencies` |
+| Tools definidas / casos de dispatch | **15 / 15** — sin aliasing ni supresión |
+| Escrituras | **2**: `coursecode_build` (paquete a `dist/`) y `coursecode_narration` (MP3 + TTS pago) |
+
+🟢 **El upgrade de evidencia que importa:** los cuatro estándares de salida dejan de ser prosa del README y pasan a estar
+**en el `inputSchema` de la tool**: `enum: ['cmi5','scorm2004','scorm1.2','lti']`. Un *enum* de contrato lo verifica el
+cliente MCP; una frase de README no.
+
+⚠️ **Lo que no se hizo, y se dice:** **no se ejecutó `tools/list`.** Instalar dependencias de terceros quedó bloqueado en
+este entorno, así que las cifras son **lectura de artefacto**, no de protocolo (**gap 62**).
+
+### 🟢 `qti3-cli`: el costo del wrapper MCP queda medido
+
+`@longsightgroup/qti3-cli@0.13.1` (**MIT**), `bin: { "qti3": "dist/index.js" }`, superficie declarada *«parsing,
+validating, scoring, inspecting, and checking QTI 3 items»*. Sus `dependencies` son **sólo sus cuatro hermanas**
+(`qti3-core`, `-a11y`, `-fixtures`, `-conformance`, las cuatro en `0.13.1`): **cero dependencias de terceros en toda la
+cadena**. Un wrapper MCP **agrega exactamente una** (`@modelcontextprotocol/sdk`). Ver **P69**.
+
+### 🔴 Ruido medido, para que el próximo pase no lo vuelva a pagar
+
+| Consulta | Registro | Resultado | Qué devuelve de verdad |
+|---|---|---|---|
+| `opencase` | npm | **7**, 0 del dominio | Apertura de cajas de skins (`opencase`, `skins4go`, *«OpenCase by ДикиЙ»*) |
+| `opencase` | Packagist | **665**, 0 del dominio | *Fuzzy match* contra **`opencage`** (geocodificador) y **`opencast`** (Apereo, otro proyecto) |
+| `cass` | npm / Packagist | ruido / **26.726** | Cassandra, **USPS CASS** (direcciones postales), Shimeji, OSU CASS |
+| `opencase` / `cass` / `qti3` | PyPI | **404 / 404 / 404** | Nada |
+| `tincan` | npm | ruido mezclado | 🔴 **`@brutalsystems/tincan`**: servidor MCP de mensajería entre sesiones de Claude Code y Codex. **MIT, activo, con MCP — y cero relación con educación** |
+| `learning_locker` | npm / Packagist | **1** / **3**, exactos ✅ | El único caso donde el nombre del proyecto **sí** desambigua |
+| `qti` | Packagist | **36** | El stack PHP real: **`qtism/qtism` (OAT QTI-SDK)** y las extensiones **`oat-sa/extension-tao-*`** |
+
+**Hallazgo incidental que sí es del dominio:** `@osu-cass/sb-components` — *«Shared components for Smarter Balanced»*,
+del consorcio de evaluación de Oregon State. Apareció buscando `cass` por otra cosa. **No es CaSS**; se anota para que
+no se vuelva a confundir.
+
+### 🔴 La capa xAPI «clásica», medida y congelada
+
+| Paquete | Registro | Licencia | Último movimiento |
+|---|---|---|---|
+| `learning_locker` | npm | 🔴 **GPL-3.0** | `modified` **2022-06-19** (~4,3 años) |
+| `tincanjs` (RusticiSoftware) | npm | **Apache-2.0** | `modified` **2022-06-27** (~4,3 años) |
+| `tincan` / TinCanPython (RusticiSoftware) | PyPI | **Apache-2.0** | release **2020-09-03** (~6 años) |
+
+**Esto confirma la recomendación que esta KB ya tenía** (`lrsql` o Ralph, nunca Learning Locker) **y ahora con la razón
+medida**: no es sólo que sea copyleft, es que está **congelado**. 🔵 Y el `learning_locker` de Packagist devuelve **3
+resultados exactos**, uno de ellos `yetanalytics/statementfactory`: **la consulta que encontró lo muerto llevaba el
+puntero a lo vivo en la columna del mantenedor.**
+
+---
+
 ## 2026-10-02 (pase 32) — el registro de paquetes rinde **un MCP MIT que el campo `description` ocultaba**, y el término «xapi» resulta ser una **trampa de tres vías** con dos paquetes MIT activos que no tienen nada que ver con educación
 
 **Lo medido:** `registry.npmjs.org/-/v1/search` sobre **QTI, xAPI, SCORM** y la pregunta desambiguada de **CASE**, más

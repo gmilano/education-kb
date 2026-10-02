@@ -327,6 +327,19 @@ Un LMS gestiona el aprendizaje y un SIS gestiona la institución; **un LRS guard
 
 **El par que hace la diferencia en una demo:** `lrsql` (o Ralph) + **`learnmcp-xapi`** (MIT, servidor MCP). Con esos dos, un agente de tutoría deja de tener memoria propia y empieza a escribir en el registro institucional — que es exactamente lo que pide un director académico cuando pregunta "¿y esto dónde queda guardado?". Wiring concreto en **P15**.
 
+🟢 **Pase 33 del 2026-10-02 — las tres piezas de este bloque quedan fechadas, y eso cambia cómo se instalan (no cuál se elige):**
+
+| Pieza | Último movimiento medido | Qué cambia en el despliegue |
+|---|---|---|
+| **`lrsql`** | 🟢 **`v0.9.9` el 2026-10-01**, **112 tags** en Docker Hub, seis releases en 2026 | Nada: **se confirma como el default de producción**, y ahora con cadencia medida en vez de supuesta. **Se instala por imagen de contenedor** |
+| **Ralph** | ⚠️ Release PyPI **2024-07-11**; `[Unreleased]` grande y activo en `CHANGELOG.md` | 🔴 **Se instala desde `main` de git, no desde PyPI.** Sigue siendo la pieza correcta sobre Open edX y sigue siendo MIT, pero **el `pip install ralph-malph` trae código de hace ~2,2 años**. Decirlo en la estimación del *onboarding* |
+| **Learning Locker** | 🔴 npm `modified` **2022-06-19** | Refuerza lo que ya decía esta fila: **es el que uno se encuentra, no el que uno elige.** Copyleft **y** congelado hace ~4,3 años |
+
+🔵 **Y el canal de verificación que esto deja instalado:** `api.github.com` devuelve **403** en este entorno, así que para
+una vertical que se distribuye **como contenedor** la fecha sale de
+`hub.docker.com/v2/repositories/<org>/<imagen>/tags` (200, con `last_updated` por versión). Es el método que fechó
+`lrsql` y sirve para cualquier otra vertical dockerizada de este archivo.
+
 **Nota sobre ERPNext, con una corrección de matiz.** Las búsquedas de "ERP educativo open source" devuelven consistentemente **ERPNext** (https://github.com/frappe/erpnext) junto a OpenEduCat, y el material comercial de Frappe lo presenta *for education*. Verificado de primera mano en el repo: **GPL-3.0, 39,7k ★**. Cae del mismo lado que OpenEduCat y RosarioSIS — copyleft, el agente va afuera.
 
 ✅ **CERRADO EN EL PASE 23 (2026-10-01) — la sospecha del pase 21 era correcta, y ahora el repo tiene nombre.** El pase 21 dejó escrito que había que *«verificar primero en qué app vive el módulo»* porque *«la funcionalidad educativa de ERPNext fue históricamente una app aparte»*. **Lo es, y sigue siéndolo:** el módulo de gestión académica vive en **`frappe/education`** (https://github.com/frappe/education), una app independiente — **657 ★, 1.091 commits, Python, GPL-3.0 leída en `license.txt`** (la página del repo no muestra licencia: hay que abrir el archivo, que es exactamente la regla de método del pase 10). **El corte es la versión 14 de ERPNext:** hasta v13 *Education* era un *domain* del core; desde v14 se extrajo y hay que instalarla con `bench get-app education` + `bench --site <sitio> install-app education`. Por eso los foros de Frappe están llenos de «Education module missing in domain list v14» — no es un bug de instalación, es el split. **Consecuencia operativa para una propuesta:** proponer ERPNext *for education* implica **dos** artefactos (`erpnext` + `education`), los dos GPL-3.0, no uno; y el módulo académico tiene **657 ★ frente a los 39,7k de ERPNext**, así que la tracción del ERP **no se hereda** al módulo que al cliente le importa. Sigue sin desplazar a GegoK12 (MIT, el único permisivo) ni a OpenEduCat.

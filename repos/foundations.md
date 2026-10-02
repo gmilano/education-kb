@@ -315,6 +315,28 @@ Un LRS guarda *statements* con forma `actor – verbo – objeto` ("María inten
 
 **Cómo elegir, en una línea:** producción permisiva → **`lrsql`**; cliente sobre Open edX → **Ralph**; certificar conformidad con el estándar → **ADL_LRS**; el cliente ya tiene uno instalado → casi seguro es **Learning Locker**, y entonces hay que leer la GPL antes de tocarlo.
 
+#### 🟢 Estado de la capa, medido en el pase 33 del 2026-10-02 — lo que faltaba no era la licencia, era la fecha
+
+Veintisiete pasadas registraron **licencia y rol** de estas cinco piezas y ninguna registró **cuándo se movieron por
+última vez**, que es el dato que decide si entran en una propuesta. Medido por canal, en este pase:
+
+| Pieza | Canal de verificación | Último movimiento | Veredicto para cotizar |
+|---|---|---|---|
+| **`lrsql`** | **`hub.docker.com/v2`** — `count: 112` tags | 🟢 **`v0.9.9` el 2026-10-01** (seis releases en 2026: v0.9.4 y v0.9.5 en abril, v0.9.6–v0.9.8 en agosto, v0.9.9 en octubre) | ✅ **Dependencia de producción.** Cadencia medida, no supuesta |
+| **Ralph** | PyPI `ralph-malph` **5.0.1** + `CHANGELOG.md` | ⚠️ **Release 2024-07-11**, pero `[Unreleased]` grande y activo (CORS, baja de Python 3.8, correcciones de tipos Pydantic, mantenimiento de CI) | ⚠️ **Vivo en `main`, parado en el registro → se instala desde git, no desde PyPI.** No está abandonado; **no se cotiza como dependencia estable** |
+| **Learning Locker** | npm `learning_locker` | 🔴 **`modified` 2022-06-19** (~4,3 años) | 🔴 **Copyleft *y* congelado.** La recomendación de no construir sobre él ya estaba; ahora tiene la razón medida |
+| **`learnmcp-xapi`** | `raw.githubusercontent.com` (`LICENSE`, `README.md` 200) | Arquitectura de plugins leída; **fecha sin verificar** (**gap 63**) | ✅ Puente MCP vigente. 🔴 **No está en ningún registro**: PyPI **404**, npm **`total: 0`** |
+
+🔵 **El canal nuevo, y conviene reusarlo:** `api.github.com` devuelve **403** en este entorno, así que estrellas y fechas
+de release no son alcanzables. **Para una pieza que se distribuye como contenedor, `hub.docker.com/v2/repositories/<org>/<img>/tags`
+responde 200 y devuelve `last_updated` por versión** — es el sustituto directo, y es lo que fechó `lrsql`.
+
+🔴 **Y la advertencia de método que esta capa dejó, que es la más importante del pase 33:** el **gap 60** del pase 32
+declaró que **xAPI/LRS no tiene puerta MCP**. **Es falso, y la refutación estaba en esta tabla** (fila `learnmcp-xapi`,
+desde el pase 6). La lista de candidatos de ese barrido venía del **registro de paquetes**, y `learnmcp-xapi` no está en
+ninguno — así que el instrumento **no podía verla**. Ver las tendencias **99** y **101**: *antes de declarar una
+ausencia, `grep` sobre esta KB.*
+
 **Por qué esta capa cambia el gap 5 y no sólo agrega repos.** El pase 5 encontró cinco servidores MCP de mastery, todos con heurística propia, y concluyó que faltaba conectar `pyKT`/`pyBKT`. Faltaba eso **y** algo anterior: los cinco también inventaron su propio almacén de eventos. Con esta capa registrada, el trabajo pendiente queda acotado a una sola pieza — **el estimador de mastery** — porque el almacén (`lrsql`, Apache-2.0) y el transporte MCP (`learnmcp-xapi`, MIT) ya existen y ya hablan entre sí. Ver el patrón **P15**.
 
 ### 🔴 Auditoría de borrado de esta capa — agregada en el pase 19 del 2026-10-01, y es el agujero del medio de la cadena de supresión

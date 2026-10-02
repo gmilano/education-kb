@@ -7,6 +7,7 @@ updated: 2026-10-02
 # 📡 Tendencias — education
 
 > Ventana de investigación: septiembre 2026. Verificado 2026-09-30; el pase 11, el 2026-10-01.
+> **Pase 33 del 2026-10-02:** **el hallazgo es de consistencia interna y es incómodo: el gap 60 del pase 32 se contradecía con cuatro archivos de esta propia base.** 🔴 **Mitad xAPI del gap 60 FALSA: `DavidLMS/learnmcp-xapi` (MIT, 3 tools — 1 escribe, 2 leen) es la puerta MCP de xAPI, y estaba acá desde el pase 6**, con la frase *«desde el pase 6»* escrita al lado en el mapa por estándar. ✅ **Mitad QTI CONFIRMADA por un segundo instrumento independiente** — y ésa es la única ausencia de esta KB que cumple el requisito de dos instrumentos (tendencia **101**). 🔴 **La causa está medida, y es el instrumento: `learnmcp-xapi` no está en ningún registro de paquetes** (PyPI **404**, npm **`total: 0`**, se instala desde el código) y **`lrsql` se distribuye por Docker Hub**, así que un barrido que arma su lista de candidatos en npm/PyPI/Packagist **tiene cero probabilidad de verlas** (tendencia **99**). ✅ **Gap 51 CERRADO en negativo y medido en tres registros:** `opencase` devuelve **7 / 404 / 665** resultados con **cero del dominio** —son cajas de skins de videojuego, `opencage` y `opencast`— y `cass` devuelve **26.726** en Packagist (Cassandra, **USPS CASS**); el instrumento que sí funciona es **el nombre de la organización** (tendencia **100**). 🟢 **Las tres piezas de la capa de telemetría quedan FECHADAS: `lrsql` (Apache-2.0) publicó `v0.9.9` el 2026-10-01 —ayer—, 112 tags y seis releases en 2026**; **Ralph (MIT, France Université Numérique) está vivo en `main` y parado en el registro** (último release 2024-07-11 con `[Unreleased]` activo: **se instala desde git, no desde PyPI**); y **`hub.docker.com` entra como canal de verificación nuevo**, que es el sustituto de `api.github.com` —403— para lo que se distribuye como contenedor. ✅ **`coursecode` medido en el artefacto: 15 tools definidas / 15 dispatch, sin aliasing, y DOS escriben** (`_build` con **`enum: ['cmi5','scorm2004','scorm1.2','lti']` en el `inputSchema`** — los cuatro estándares pasan de prosa del README a contrato de tool— y `_narration`, que escribe MP3 llamando a un TTS pago). 🟢 **Y aparece la misma primitiva de seguridad del pase 30 reinventada por otro mecanismo, con una asimetría que hay que cotizar: `openedx-mcp` frena en el servidor (confirm token) y `coursecode` frena en el contrato (anotaciones MCP + `dryRun`) — sólo el primero frena solo** (tendencia **102**). 🟢 **`qti3-cli` (MIT) tiene cero dependencias de terceros en toda su cadena: un wrapper MCP agrega exactamente una** (**P69**). ⚠️ **Gap 56: la acción se ejecutó y el resultado es negativo — `eur-lex.europa.eu` y `data.europa.eu` están BLOQUEADOS por el proxy.** Van **siete fuentes secundarias concordantes y cero primarias**: Anexo III → **2027-12-02**, art. 50 → **2026-08-02** vigente. **No citar como primaria.** ⚠️ **Sin permiso de ejecución en este entorno: instalar dependencias de terceros** — por eso `tools/list` de `coursecode` quedó sin correr (**gap 62**) y toda medición de este pase es lectura de artefacto o de registro, nunca de proceso.
 > **Pase 31 del 2026-10-02:** **se ejecutan las tres acciones del pase 30 más la acción 1 pendiente del pase 29, y las cuatro rinden — la de más valor comercial rinde *contra* la premisa con la que estaba escrita.** 🔴 **Gap 56 RESUELTO, y es la corrección de mayor riesgo comercial descargado de esta KB: las dos fechas del Anexo III son reales y gobiernan obligaciones distintas.** El **2026-08-02** entró en vigor la aplicabilidad general (art. 50 transparencia, art. 4 alfabetización, art. 5 prohibiciones, GPAI, gobernanza y sanciones); el **Anexo III —el inciso que nombra educación— rige desde el 2027-12-02**, diferido 16 meses por el **Reglamento (UE) 2026/1744** (Consejo, 2026-06-29; en vigor 2026-07-27). **El pase 28 confundió una con otra y esta KB le vendió a EMEA una urgencia inexistente: la conformidad del Anexo III NO está vencida, faltan ~14 meses** (tendencia **92**). ✅ **Gap 50 CERRADO leyendo código, invirtiendo la consigna: el `v0` de *authoring* de Open edX está DEPRECADO en favor del `v1`**, con directiva `.. deprecated::` y `DeprecationWarning` emitido en runtime en las cinco operaciones; el comentario que mandaba usar `v0` es de **noviembre de 2023** y encabeza una sección vacía (**confirma al pase 29, corrige al pase 30**; tendencia **88**). 🔵 **Y el bloqueo real estaba una capa más arriba: NINGUNA de las cinco versiones REST (`v0`–`v4`) crea un curso**, y **ninguna de las 19 escrituras del conector oficial tampoco** — tres mediciones independientes, misma conclusión; el bootstrap es curso plantilla + **`course_rerun`** (**gap 57**, **P63**). ✅ **Gap 55 MEDIDO sin Docker, bajando el wheel de PyPI: 35 rutas** (28 LMS + 7 CMS), **19 escrituras en 6 scopes**, **AGPL-3.0 leída del `LICENSE` del artefacto**, y 🔴 **11 escrituras piden *confirm token* y 8 no** — el freno protege contra la operación masiva y **no contra la repetida** (`bulk_enroll` pide token, `unenroll_user` de a uno no; tendencia **93**). ✅ **Gap 54: la consigna del registro de paquetes rinde — aparece una SEGUNDA puerta MCP de OneRoster y es MIT** (`@eduware/oneroster` v1.2.11, ejecutable `mcp` empaquetado; tendencia **89**). 🟢 **Entra OpenBadges 3.0 permisivo** (`@ajna-inc/openbadges`, Apache-2.0) — la pieza que faltaba desde que se midió que CaSS es OB 2.0. ✅ **Gap 42 sigue cerrado pero ahora medido en los dos lenguajes:** `ltijs` v7.0.6 (Apache-2.0, 2026-09-18) tiene **0 menciones de MCP**, y `pylti1p3` **lleva casi cuatro años sin release** (tendencia **90**). 🔵 **Capa nueva que treinta pases no vieron: el *upstream/downstream* de Libraries v2** (`SyncFromUpstreamView`) — editar una vez y propagar a N cursos (tendencia **91**, **gap 59**). ⚠️ **Caliper tiene código de 2026-09-25 y no declara licencia:** no es que no haya código, es que es inusable. ⚠️ **Y una regla de verificación nueva: `github.com`, `www.npmjs.com` y `api.github.com` devuelven 403 en este entorno; `raw.githubusercontent.com`, `registry.npmjs.org` y `pypi.org` responden 200 — así que este pase no publica ni una estrella, y un repo declarado por un paquete real da 404 en las ocho rutas de metadatos probadas** (**gap 58**, tendencia **94**). 🔵 **Y el pase se autocorrigió sobre la marcha: una primera lectura declaró 404 a `pylti1.3` por pedirle `README.md` a un repo Python que publica `README.rst` — el error que la tendencia 87 del pase 30 ya había descrito. Existe, y esta KB lo tenía registrado con 138 ★.**
 > **Pase 30 del 2026-10-02:** **se ejecutan las tres acciones del pase 29, las tres rinden, y el hallazgo que manda no salió de ninguna: salió de volver a preguntar por el gap 48.** 🔴 **Open edX ya tiene puerta de agente, es oficial del proyecto y es AGPL-3.0** (`openedx-mcp` + `tutor-contrib-openedxmcp`, PyPI, 2026-07-25; **35 endpoints leídos del código**, autoría incluida). **Eso cierra el gap 48 y rompe la tesis del pase 27:** esta puerta **corre en proceso** como plugin Django, así que *«las LMS son copyleft pero las puertas son MIT»* deja de valer, y la regla que lo reemplaza es que **la licencia de un conector la decide su arquitectura** (tendencias **81** y **82**, **gap 54**). 🔵 **El regalo del hallazgo son los cuatro rails de escritura**, con el modelo de amenaza escrito en el código —*«a looping agent… a retry storm that mass-enrols or deletes»*— y con la primitiva que P53 y P54 venían describiendo en prosa: ***dry run* + confirm token atado a una huella del payload** (tendencia **84**). ✅ **Gap 52 CERRADO leyendo cinco archivos de OpenCASE: 72 rutas, la regla del prefijo, dos endpoints OpenAPI y una capa CGE de federación que nadie había visto.** ✅ **Gap 53 medido ejecutando el servidor: 132 tools, y el «164» era *aliasing*, no supresión** —el 100 % de las operaciones se sirve (tendencia **83**)—, aunque 🔴 **la antigüedad era peor de lo registrado por leer `time.modified` en vez de `time[version]`** (tendencia **86**). ✅ **`.LRN` cerrado: vivo pero GPL-2.0 y en CVS**; **`CK-ERP` muerto desde 2012**. **Dos altas:** `asfai-education` (Apache-2.0, cinco estándares 1EdTech) e `instructure/qti` (MIT, QTI **1.2** legado). ⚠️ **Un falso positivo evitado, y da regla nueva: la capacidad que sólo vive en un *pull request* abierto no está en el producto** (tendencia **85**). 🔴 **Y se declara una contradicción interna de esta KB sobre el calendario del Anexo III: hay dos fechas publicadas en esta base y no son conciliables** (**gap 56**). ⚠️ **Dominios nuevos bloqueados por el proxy: `openacs.org`, `openedx.org` y `codeload.github.com`.**
 > **Pase 28 del 2026-10-01:** se ejecutan las acciones 1 y 2 del pase 27 y las dos rinden. **El gap 48 queda
@@ -4877,6 +4878,155 @@ los defaults**. Un proyecto que eligió el default conservador ya pagó ese dise
 destructivo traslada el costo al integrador — y **el mismo archivo tiene un caso de cada uno**: el `sync` preserva por
 omisión, pero si `block_type == "video"` **llama `clear_transcripts` y borra todas las transcripciones antes de copiar
 las del upstream**. Default seguro en un camino, destructivo en el otro, **en la misma función**.
+
+## 99. El registro de paquetes es un instrumento **sesgado por el canal de distribución**, y el sesgo ya produjo una ausencia falsa en esta KB (agregado en el pase 33 del 2026-10-02)
+
+Los pases 30, 31 y 32 instalaron un método de descubrimiento que funcionó y rindió hallazgos reales: **consultar el
+registro de paquetes del lenguaje de la plataforma** (`registry.npmjs.org`, `pypi.org`, Packagist) en vez de buscar
+repos en GitHub. El pase 30 lo formuló así: *«la puerta la publicó el proyecto en PyPI, no en GitHub con nombre
+`*-mcp`»*. **Es verdadero y es parcial**, y este pase midió dónde se rompe.
+
+**La medición:**
+
+| Pieza de la capa de telemetría | npm | PyPI | Packagist | Cómo se distribuye de verdad |
+|---|---|---|---|---|
+| `yetanalytics/lrsql` (el LRS Apache-2.0 vivo) | — | — | — | **Docker Hub + releases de GitHub** (uberjar JVM/Clojure) |
+| `DavidLMS/learnmcp-xapi` (la puerta MCP de xAPI) | 🔴 **`total: 0`** | 🔴 **404** | — | **Ninguno: se instala desde el código** |
+| `openfun/ralph` (el LRS MIT europeo) | — | ✅ pero **release de 2024-07-11** | — | **`main` de git** para lo actual |
+
+**La regla:** el registro de paquetes de un lenguaje sólo es el instrumento correcto **si la pieza se distribuye como
+librería de ese lenguaje**. Una plataforma entregada como **contenedor** o **uberjar** no está en ningún registro de
+librerías. Una herramienta que se instala **desde el código** no está en ninguno, punto. Y un proyecto **vivo en `main`
+y parado en el registro** se lee como abandonado si sólo se mira el registro.
+
+🔴 **Por qué es una tendencia y no una nota de método: el sesgo ya costó una afirmación falsa publicada.** El **gap 60**
+del pase 32 declaró —con la palabra *«medido»*— que **xAPI/LRS no tiene puerta MCP**. La lista de candidatos que abrió
+para medir venía del registro; `learnmcp-xapi` no puede estar en esa lista; y la conclusión salió al revés de la
+realidad… **que esta misma KB tenía escrita desde el pase 6, en cuatro archivos.** El instrumento se volvió tan
+dominante que **se le creyó por encima de la tabla propia**.
+
+**El corolario operativo, y es de dos líneas:**
+
+1. **Antes de declarar una ausencia, consultar esta KB** (`grep` sobre los ocho archivos). Cuesta segundos.
+2. **Antes de concluir desde un registro, preguntarse cómo se distribuye la categoría que se está buscando.** LMS y LRS
+   se entregan como servicio o contenedor; parsers y SDK se entregan como librería. **Son canales distintos y hace falta
+   mirar los dos.**
+
+---
+
+## 100. Para un estándar cuyos implementadores se llaman con palabras comunes, el instrumento es el **nombre de la organización**, no el del paquete (agregado en el pase 33 del 2026-10-02)
+
+El **gap 51** venía abierto desde el pase 28 y pedía desambiguar **CASE** (*Competencies and Academic Standards
+Exchange*). El pase 32 descartó por escrito el nombre del **estándar** —`registry.npmjs.org` hace **OR** sobre texto
+libre y devolvió **1.696.870** objetos de ruido— y dejó escrita la hipótesis de reemplazo: atacarlo **por el nombre del
+proyecto implementador** (`OpenCASE`, `CASS`). **Se hizo, en tres registros, y la hipótesis también falla.**
+
+| Consulta | npm | PyPI | Packagist | Qué devuelve de verdad |
+|---|---|---|---|---|
+| `opencase` | **7**, 0 del dominio | **404** | **665**, 0 del dominio | Apertura de cajas de skins de videojuego (`opencase`, `skins4go`); en Packagist, *fuzzy match* con **`opencage`** (geocodificador) y **`opencast`** (Apereo) |
+| `cass` | ruido | **404** | **26.726** | **Cassandra**, **USPS CASS** (validación de direcciones postales), un *pack* Shimeji, OSU CASS |
+| `qti3` | **12** `@longsightgroup/*` ✅ | **404** | — | El stack real |
+| `learning_locker` | **1**, exacto ✅ | — | **3**, exactos ✅ | El LRS y su *statement factory* |
+| `tincan` | ruido mezclado | ✅ | — | Entre el ruido, **un MCP activo sin relación con educación** |
+
+**El patrón que explica los cinco resultados:** el nombre desambigua cuando es **compuesto y poco común**
+(`learning_locker`, `qti3`) y falla cuando es **una palabra común o un acrónimo corto** (`cass`, `opencase`). El filtro
+de licencia no ayuda —el ruido también es MIT— y el filtro de actividad tampoco —el ruido también está activo.
+
+🟢 **El instrumento que sí funcionó en los cinco casos es el nombre de la organización:** `LongsightGroup` (QTI 3 en
+TypeScript), `oat-sa` (QTI en PHP, 36 paquetes en Packagist), `yetanalytics` (SQL LRS), `openfun` (Ralph),
+`LearningLocker`. **La organización es un identificador casi único; el estándar y el producto, no.** **Gap 51 cierra
+como no-resoluble por nombre de paquete**, con el método de reemplazo escrito.
+
+---
+
+## 101. Una ausencia declarada se sostiene sólo si está medida por **dos instrumentos distintos** — y el gap 60 es el caso que lo demuestra por las dos caras (agregado en el pase 33 del 2026-10-02)
+
+El **gap 60** del pase 32 afirmó dos ausencias en una sola frase: *«QTI y xAPI/LRS no tienen puerta MCP»*. Este pase
+volvió a preguntar por las dos, **con un instrumento distinto del que las midió** (búsqueda abierta en vez de registro),
+y el resultado **se partió**:
+
+| Mitad del gap 60 | Instrumento 1 (pase 32: README de candidatos del registro) | Instrumento 2 (pase 33: búsqueda abierta) | Veredicto |
+|---|---|---|---|
+| **xAPI / LRS** | «no hay puerta» | 🔴 **`learnmcp-xapi`, MIT, 3 tools** — y estaba en esta KB desde el pase 6 | 🔴 **FALSA** |
+| **QTI** | «no hay puerta» | ✅ **nada**: ninguna implementación, el ecosistema MCP no nombra QTI | ✅ **CONFIRMADA** |
+
+**Por qué es una tendencia y no la anécdota de un error:** las dos mitades se midieron **igual de bien** y una era falsa.
+La diferencia no estuvo en el rigor sino en **si el instrumento podía ver el objeto**. Para xAPI no podía —la pieza no
+está en ningún registro— y la ausencia medida fue **el borde del instrumento confundido con el borde del campo**.
+
+**La regla, y es la más barata de todas las que esta KB escribió:** 🔵 **una ausencia se publica con el instrumento
+anotado al lado, y se promueve a «no existe» sólo cuando dos instrumentos independientes coinciden.** Hasta entonces se
+escribe *«no lo encontré con X»*, que es una frase distinta y defendible. La mitad QTI del gap 60 ya cumple el
+requisito; **es la única ausencia de esta base que lo cumple con dos instrumentos y una lectura de SDK.**
+
+---
+
+## 102. El mismo rail de seguridad se está reinventando en dos lugares del protocolo, y **sólo uno frena solo** (agregado en el pase 33 del 2026-10-02)
+
+El pase 30 encontró en `openedx-mcp` el modelo de amenaza escrito en el código —*«a looping agent… a retry storm that
+mass-enrols or deletes»*— y su mitigación: **dry run + confirm token atado a una huella del payload** (tendencia 84).
+Este pase encontró **la misma primitiva en `coursecode`, resuelta por otro mecanismo**:
+
+| | `openedx-mcp` (AGPL-3.0) | `coursecode` (MIT) |
+|---|---|---|
+| Dónde vive el freno | **En el servidor**: emite un *confirm token* que el cliente debe devolver | **En el contrato**: `annotations: { readOnlyHint: false, idempotentHint: false, destructiveHint: false }` |
+| Ensayo sin efecto | *dry run* | **`dryRun: true`** — *«no API calls, no audio written»* |
+| Aprobación | Rechaza la llamada sin token | **Una frase en la descripción**: *«requires explicit user approval before running»* |
+| ¿Frena solo? | 🟢 **Sí** — el servidor rechaza | 🔴 **No** — si el cliente MCP ignora las anotaciones, la escritura ocurre |
+
+**La convergencia es la buena noticia:** dos proyectos sin relación, con licencias distintas y en lenguajes distintos,
+llegaron a la misma conclusión —*las escrituras de un agente sobre un sistema educativo necesitan ensayo y
+confirmación*— y la implementaron sin copiarse. **Eso convierte la primitiva en expectativa de categoría**, no en rasgo
+de un producto.
+
+🔴 **La mala noticia es la asimetría, y hay que decirla al componer:** las anotaciones MCP son **declarativas**. Un
+cliente que no las lea ejecuta `coursecode_narration` y **gasta crédito de un proveedor TTS pago** sin preguntar. El
+*confirm token* no depende del cliente; la anotación sí. **Un stack que compone los dos conectores hereda el freno más
+débil de los dos** a menos que el orquestador implemente la confirmación por su cuenta.
+
+**La regla para cotizar:** cuando un conector declara su rail por anotaciones y no por protocolo, **la confirmación es
+trabajo del integrador** y entra en la estimación. Es la misma lección que la tendencia 98 (*leer los defaults*) un
+nivel más arriba: **leer también quién los hace cumplir.**
+
+---
+
+## 🔵 Estado de gaps al cierre del pase 33 del 2026-10-02
+
+| Gap | Estado | Resolución |
+|---|---|---|
+| **60** (¿QTI y xAPI/LRS sin puerta MCP?) | 🔴 **PARTIDO: mitad FALSA, mitad CONFIRMADA** | **xAPI/LRS: falsa.** `DavidLMS/learnmcp-xapi` (**MIT**, 3 tools: 1 escribe, 2 leen) es la puerta, y **estaba en esta KB desde el pase 6** (`agents/top.md` fila + mapa por estándar con *«desde el pase 6»* escrito, `repos/foundations.md`, 15+ patrones). **QTI: confirmada** por segundo instrumento independiente. Causa de la falla: la lista de candidatos venía del registro de paquetes y `learnmcp-xapi` **no está en ninguno** (PyPI 404, npm 0) — tendencias **99** y **101** |
+| **51** (CASE por nombre desambiguado) | ✅ **CERRADO en negativo** | **No es resoluble por nombre de paquete, y ahora está medido en tres registros.** `opencase`: npm 7 / PyPI 404 / Packagist 665, **cero del dominio**. `cass`: Packagist **26.726**. El instrumento de reemplazo es el **nombre de la organización** (`LongsightGroup`, `oat-sa`, `yetanalytics`, `openfun`) — tendencia **100** |
+| **56** (calendario del Anexo III) | ⚠️ **ACCIÓN EJECUTADA, resultado negativo — sigue sin fuente primaria** | **Los dos dominios que el pase 32 mandó probar están bloqueados:** `eur-lex.europa.eu` y `data.europa.eu` devuelven **`EGRESS_BLOCKED`**. La fecha suma dos fuentes secundarias más (**siete concordantes, cero primarias**): Anexo III → **2027-12-02**; art. 50 → **2026-08-02**, vigente. 🔴 **No citar como primaria.** Para cerrarlo hace falta **una lectura hecha fuera de este entorno de red** |
+| **62** (nuevo) | 🔴 **ABIERTO** | **`tools/list` de `coursecode` no se ejecutó por protocolo.** Instalar dependencias de terceros está **bloqueado en este entorno**. Las cifras **15 definidas / 15 dispatch / 2 escrituras** son **lectura del artefacto publicado**, no respuesta del servidor. La coincidencia 15 = 15 hace improbable el aliasing pero no lo descarta — que es justo la distinción que el pase 30 estableció con `oneroster-ts` |
+| **63** (nuevo) | 🔴 **ABIERTO** | **La arquitectura de plugins de `learnmcp-xapi` está leída; su fecha no.** El README documenta `LRS_PLUGIN=lrsql\|ralph\|veracity` + `config/plugins/*.yaml`, lo que **no estaba** en la ficha del pase 6. Fuentes secundarias mencionan un **`2.0.0`** con *«complete redesign with a modular LRS plugin system»* — **sin verificar**: `github.com/releases` da **403** y no hay `pyproject.toml` en la raíz de `main` (404). **Si el `2.0.0` es real, el «no se movió» del pase 25 está vencido** |
+| **61** (origen vacío en `course_rerun_task`) | 🔴 **ABIERTO**, sin cambios | No se tocó en este pase |
+| **64** (nuevo) | 🔴 **ABIERTO** | **¿`lrsql` o Ralph tienen puerta MCP propia?** Este pase midió que **`learnmcp-xapi` es la puerta de terceros**, pero no preguntó por la del proyecto — que es exactamente el canal donde el pase 30 encontró `openedx-mcp` (oficial, en PyPI, dos meses antes de que esta KB lo notara). **`lrsql` se distribuye por Docker Hub**: la pregunta correcta es si publica una imagen o un módulo con MCP |
+
+## 🔵 Las tres acciones que el pase 33 deja escritas para el pase 34
+
+**Las tres salen del mismo hallazgo —el sesgo del instrumento— y las tres son baratas. Ninguna necesita permiso de
+ejecución, que es la restricción que bloqueó media acción de este pase.**
+
+1. 🔴 **Auditar las ausencias declaradas de esta KB contra la propia KB, y después contra un segundo instrumento**
+   (**tendencia 101**). Este pase descubrió que el **gap 60** contradecía cuatro archivos de esta base. **No hay razón
+   para suponer que es el único.** La acción concreta: listar **todas** las frases de tipo *«no existe»*, *«nada»*,
+   *«ausencia medida»* del mapa por estándar de `agents/top.md` —**CASE, CEASN, Open Badges del estándar, Caliper**— y
+   para cada una (a) hacer `grep` del término en los ocho archivos, y (b) re-preguntar **por búsqueda abierta**, que es
+   el instrumento que destapó la mitad xAPI. **Es la acción de mayor valor de las tres**, porque cada ausencia falsa que
+   siga publicada es una pieza que Globant ya podría estar usando y no usa.
+2. **Preguntar por la puerta MCP *del proyecto*, no de terceros, en los dos LRS** (**gap 64**). Es el mismo gesto que
+   rindió `openedx-mcp` en el pase 30, y nunca se hizo para la capa de telemetría. Concretamente: buscar en
+   `hub.docker.com` las imágenes de `yetanalytics`, abrir `raw.githubusercontent.com/yetanalytics/lrsql/main` buscando
+   `mcp` en el árbol de módulos, y lo mismo para `openfun/ralph` —que **sí** está en PyPI, así que ahí el registro **es**
+   el instrumento correcto—. **Y de paso cerrar el gap 63**: fechar el `2.0.0` de `learnmcp-xapi` por un canal que no sea
+   `github.com` (el `uv.lock` o el `__init__.py` del paquete sirven, y `raw.githubusercontent.com` responde 200).
+3. **Medir el stack PHP de QTI, que es la mitad del gap 60 que se sostiene y la única capa de evaluación con escala
+   real.** Packagist devolvió **36 paquetes** y el ecosistema está dominado por **`qtism/qtism` (OAT QTI-SDK)** y
+   **`oat-sa/extension-tao-*`**. La pregunta que decide **P69**: ¿la contribución *upstream* conviene sobre
+   `@longsightgroup/qti3-cli` —**MIT, cero dependencias de terceros, un wrapper MCP agrega una sola**— o sobre el stack
+   PHP, que tiene **más adopción y más paquetes**? Leer la licencia y la cadencia de `qtism/qtism` por Packagist y
+   `raw.githubusercontent.com`, y **decidir con el número de adopción al lado**, no por preferencia de lenguaje.
 
 ## 🔵 Estado de gaps al cierre del pase 32 del 2026-10-02
 
