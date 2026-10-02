@@ -24,6 +24,40 @@ updated: 2026-10-02
 > **Pase 27 del 2026-10-01:** se agrega **la columna que faltaba en veintiséis pasadas — ¿la vertical tiene puerta de agente?** Moodle **sí** (dos conectores **MIT**, uno que escribe notas) y Canvas **sí**; 🔴 **Open edX no tiene ninguna**, y es la de mayor huella pública en LATAM e India. **Las LMS son copyleft pero las puertas son MIT**, y por eso se pueden componer. Ver la sección del pase 27, abajo.
 
 
+## 🎖️ La vertical de credenciales tiene por fin una implementación **OB 3.0 completa** — y es copyleft de red: `Certo` — pase 34 del 2026-10-02
+
+**Esta base venía diciendo que la capa de credenciales no tenía con qué partir:** `badgr-server` da **404**, el Open
+Badges de CaSS es **OB 2.0 y no 3.0**, y CaSS deja **CASE, CEASN y Open Badges enteros fuera de MCP**. **Existe una
+plataforma OB 3.0 entera, y no estaba en ninguno de los ocho archivos de esta KB.**
+
+| Plataforma | Licencia | Stack | Estándares | Puerta de agente |
+|---|---|---|---|---|
+| [`Schroedinger-Hat/certo`](https://github.com/schroedinger-hat/certo) | ⚠️ **AGPL-3.0** — leída del `LICENSE` (**200**): *«GNU AFFERO GENERAL PUBLIC LICENSE Version 3»* | **Strapi 5.x** (backend) + **Nuxt 3** (frontend) | **Open Badges 3.0**, **W3C Verifiable Credentials**, **DIDs** | 🔴 **No** — ninguna puerta MCP (reconfirmado por segundo instrumento en este pase) |
+| [`1EdTech/digital-credentials-public-validator`](https://github.com/1EdTech/digital-credentials-public-validator) | **Apache-2.0** ✅ (`LICENSE` **200** en `main` y `master`) | — | **Open Badges** + **CLR** | — (validador: web, HTTP y API) |
+
+**Qué hace Certo, leído del README y no de una reseña:** los emisores crean **plantillas de insignia (*Achievements*)**
+con criterios y habilidades asociadas; emiten **individualmente o en lote por CSV**; los receptores las ven en su panel;
+**cualquiera verifica la autenticidad en una página pública**; y el receptor comparte a **LinkedIn**. Casos de uso que
+el propio proyecto declara: instituciones educativas, organizaciones de formación, eventos, empresas, comunidades open
+source y asociaciones profesionales.
+
+🔴 **La licencia decide cómo se propone, y hay que decirlo antes de cotizar.** **AGPL-3.0 en un servicio de red obliga a
+ofrecer la fuente a los usuarios del servicio.**
+
+- ✅ **Como plataforma desplegada para el cliente** —el cliente la opera, la customiza y asume la obligación— **sirve, y
+  es la única opción OB 3.0 completa que esta KB conoce.**
+- 🔴 **Como componente embebido en un producto propietario de Globant, no sirve.** La obligación alcanza al derivado.
+
+🟢 **Y la pieza Apache-2.0 es la que vuelve el expediente defendible.** El validador de **1EdTech** permite verificar la
+credencial emitida **contra el consorcio que publica el estándar**, sin depender del emisor ni de Certo. **Esa
+separación —emisor copyleft desplegado del lado del cliente, validador permisivo del lado del expediente— es lo que
+convierte «cumplimos Open Badges» en una afirmación que un área de compras puede comprobar.** Ver **P70**.
+
+⚠️ **Y la advertencia de barrido que este pase deja sobre esta vertical:** el candidato que *parecía* la puerta de
+agente de esta capa —`quizlar/mcp-server`, **MCP, educativo, `LICENSE` MIT**— **no tiene código**: su `server.json`
+declara `remotes` contra `https://mcp.quizlar.app/mcp/` detrás de una API key. **Es un servicio propietario con un
+manifiesto MIT.** Ver **colisión 9** en `agents/trending.md` y la tendencia **104**.
+
 ## 🔴 La columna de la puerta de agente se cierra: **Open edX ya la tiene, es oficial, y es AGPL en proceso** — pase 30 del 2026-10-02
 
 **El pase 27 agregó la columna «¿la vertical tiene puerta de agente?» y dejó a Open edX como el único «no» entre las LMS

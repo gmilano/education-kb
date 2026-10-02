@@ -9,6 +9,217 @@ updated: 2026-10-02
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 > No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
 
+## 2026-10-02 (pase 34) — el pase que mide **el error del registro en la dirección contraria**: el pase 33 probó que el registro **no ve** open source real; este pase encuentra que el registro **muestra como MIT lo que no tiene código**
+
+**Lo que se hizo:** el barrido obligatorio completo —**cuatro búsquedas globales y cuatro regionales**, con el año
+**calculado** (2026); **las cuatro regiones rindieron y ninguna quedó en silencio**— más **las tres acciones que el pase
+33 dejó escritas**. Las tres se ejecutaron y **las tres cerraron**: la acción 1 auditó las ausencias declaradas y
+encontró **tres confirmadas y una parcialmente falsa**; la acción 2 **cerró el gap 64 en negativo con tres instrumentos**;
+la acción 3 **decidió P69**, y la decidió por licencia y no por lenguaje.
+
+🔴 **El hallazgo que manda completa el del pase 33 y lo invierte.** El pase 33 midió que `learnmcp-xapi` **no está en
+ningún registro de paquetes** y concluyó que un barrido basado en registros **tiene falsos negativos**. Este pase
+encontró el **falso positivo**, y es del mismo tamaño:
+
+| | Pase 33 (falso negativo) | Pase 34 (falso positivo) |
+|---|---|---|
+| **El caso** | `learnmcp-xapi` | **`quizlar/mcp-server`** |
+| **Lo que el registro dice** | **nada** — PyPI 404, npm `total: 0` | **MIT**, servidor MCP de educación, activo |
+| **La realidad** | **MIT, open source, 3 tools, en esta KB desde el pase 6** | 🔴 **No hay código.** El repo es **un manifiesto de 25 líneas** |
+| **El error que produce** | se declara ausente lo que existe | **se promueve como open source lo que es un servicio propietario** |
+
+**O sea: el registro de paquetes y el de servidores MCP fallan en las dos direcciones, y la corrección no es «buscar
+mejor» en ninguna de las dos. Son instrumentos con sesgo conocido, y a esta altura conviene escribirlo como tal.** Ver
+tendencias **103** y **104**.
+
+### 🔴 Colisión 9 — y es de clase nueva: no colisiona el **nombre**, colisiona la **superficie de la licencia**
+
+Las colisiones 1 a 8 de esta KB son de **término** (`opencase` son cajas de skins, `tincan` es mensajería entre agentes
+de código, `xapi` es forex). **La novena es distinta y más peligrosa, porque el nombre es correcto, el dominio es
+correcto y la licencia es real.** Lo que no es lo que parece es **qué cubre esa licencia.**
+
+Leído de primera mano por `raw.githubusercontent.com` sobre `quizlar/mcp-server@main`:
+
+| Archivo | Código | Qué contiene |
+|---|---|---|
+| `LICENSE` | **200** | *«MIT License — Copyright (c) 2026 **Quizlar**»* ✅ **la licencia es real** |
+| `server.json` | **200** | 🔴 **un manifiesto de registro, y nada más** |
+| `README.md` | **200** | la superficie de descubrimiento |
+| *cualquier fuente* | — | 🔴 **no hay** |
+
+**Y el manifiesto se delata solo, en un campo:**
+
+```json
+"remotes": [{ "type": "streamable-http", "url": "https://mcp.quizlar.app/mcp/",
+  "headers": [{ "name": "Authorization", "isRequired": true, "isSecret": true,
+    "description": "Mint a Quizlar API key at https://quizlar.app/settings/api-keys (format: sk-qz-<32 chars>)" }] }]
+```
+
+🔴 **`remotes` significa que el servidor corre en el host del proveedor.** El `$schema` es
+`static.modelcontextprotocol.io/schemas/**2025-12-11**/server.schema.json`, o sea el esquema nuevo de registro de MCP.
+**Lo que está licenciado MIT es el manifiesto; la implementación es un endpoint alojado detrás de una clave
+`sk-qz-<32>`.** No hay nada que auto-hospedar, forkear, auditar ni extender.
+
+🔵 **El control es de un campo y hay que incorporarlo al barrido:** si `server.json` declara **`remotes`** y no declara
+paquete ni fuente, **la licencia del repo cubre metadatos**. Para una propuesta de Globant eso significa **cero código
+reutilizable, una dependencia de proveedor, y datos de aprendizaje del alumno saliendo a un tercero bajo API key** —
+que es exactamente lo contrario del argumento de privacidad por diseño que esta base construyó sobre `ACTOR_UUID`.
+
+⚠️ **Y conviene decir qué sí es Quizlar, sin despreciarlo:** *«voice-led, FSRS-scheduled flashcards from YouTube, PDFs,
+web, or text»*. Como **producto** es del dominio y usa **FSRS**, el mismo planificador que `OpenTutor` (fila de esta
+tabla). Como **pieza componible, no existe.** No entra a la tabla, y se anota acá para que ningún pase lo promueva.
+
+### ✅ Acción 1 ejecutada — las ausencias del mapa por estándar, auditadas una por una
+
+El pase 33 ordenó auditar **todas** las frases de tipo *«no existe»* contra (a) un `grep` sobre estos ocho archivos y
+(b) una **búsqueda abierta**, que es el instrumento que destapó la mitad xAPI. Se hizo para las cuatro:
+
+| Ausencia declarada | (a) `grep` sobre la KB | (b) búsqueda abierta | Veredicto |
+|---|---|---|---|
+| **Caliper** sin puerta MCP | presente en los 8 archivos, **sin contradicción** | 🔴 ninguna implementación MCP | ✅ **CONFIRMADA, dos instrumentos** |
+| **CASE** sin puerta MCP | presente, **sin contradicción** | 🔴 nada del dominio | ✅ **CONFIRMADA, dos instrumentos** |
+| **CEASN** sin puerta MCP | presente en 4 archivos, **sin contradicción** | 🔴 nada — y el buscador **expande mal la sigla** | ✅ **CONFIRMADA, dos instrumentos** |
+| **Open Badges** sin puerta MCP | presente en los 8 archivos | 🔴 ninguna puerta MCP… **pero sí una plataforma OB 3.0 que esta KB no tenía** | ⚠️ **la mitad MCP se sostiene; la de implementación era falsa** |
+
+🔵 **Dato de método sobre CEASN, y es tranquilizador al revés:** la búsqueda abierta ni reconoce la sigla —la expande
+como *«Credential Engine Adoption Support Network»*, que **no es** lo que CEASN significa (*Competency and Academic
+Standards Exchange*)—. **Una ausencia que el instrumento no puede ni nombrar es una ausencia robusta**, no un fallo de
+consulta.
+
+🟢 **Y la mitad que era falsa paga el pase entero.** Esta KB registraba que *«las implementaciones de referencia de
+estos estándares ya no están»* (`badgr-server` **404**) y que el Open Badges de CaSS es **OB 2.0, no 3.0**. Existe una
+implementación **OB 3.0 completa**, y no estaba en ninguno de los ocho archivos:
+
+| Pieza | Licencia (leída del archivo) | Qué es |
+|---|---|---|
+| [`Schroedinger-Hat/certo`](https://github.com/schroedinger-hat/certo) | ⚠️ **AGPL-3.0** (`LICENSE` 200: *«GNU AFFERO GENERAL PUBLIC LICENSE Version 3»*) | **Open Badges 3.0 + W3C Verifiable Credentials + DIDs**, emisión individual y **masiva por CSV**, página pública de verificación, compartir a LinkedIn. Strapi 5.x + Nuxt 3 |
+| [`1EdTech/digital-credentials-public-validator`](https://github.com/1EdTech/digital-credentials-public-validator) | **Apache-2.0** ✅ (`LICENSE` 200 en `main` **y** `master`) | El **validador oficial del consorcio** para Open Badges **y Comprehensive Learner Record**, con HTTP y API |
+
+⚠️ **La licencia de Certo decide cómo se propone:** AGPL-3.0 **en un servicio de red** obliga a ofrecer la fuente a los
+usuarios. Como **plataforma desplegada para el cliente** sirve; como **componente embebido en un producto de Globant**,
+no. 🟢 **El validador de 1EdTech, en cambio, es Apache-2.0 y es el que cierra el expediente**: permite verificar la
+credencial emitida **contra el consorcio que publica el estándar**, sin pedirle permiso a nadie. Ver **P70**.
+
+### ✅ Acción 2 — gap 64 CERRADO en negativo, y medido con **tres** instrumentos independientes
+
+La pregunta era si los LRS publican **su propia** puerta MCP, que es el canal donde el pase 30 encontró `openedx-mcp`
+(oficial, dos meses antes de que esta KB lo notara). **La respuesta es no, y por tres caminos que no se apoyan entre sí:**
+
+| Instrumento | Consulta | Resultado |
+|---|---|---|
+| **Docker Hub** (el canal que el pase 33 incorporó) | `hub.docker.com/v2/repositories/yetanalytics/` | **`count: 6`** — `lrsql`, `xapipe`, `datasim`, `persephone`, `fuseki`, `hello-marathon`. 🔴 **ninguna MCP** |
+| **Árbol de `lrsql`** | `deps.edn` + `README.md` sobre `main` | 🔴 **cero menciones de `mcp`** en las dos |
+| **PyPI de Ralph** | `ralph-malph` 5.0.1, `requires_dist` + `provides_extra` | 🔴 **ningún `mcp`** en dependencias; **14 extras** y ninguno MCP; **0 menciones** en la descripción |
+
+**Entonces `DavidLMS/learnmcp-xapi` (MIT, de un tercero) sigue siendo la única puerta MCP de la capa de telemetría**, y
+ahora eso está medido en vez de supuesto. 🔵 **Y el instrumento regaló el sitio exacto de la contribución *upstream*:**
+los **14 extras** de Ralph (`backend-clickhouse`, `-es`, `-ldp`, `-lrs`, `-mongo`, `-s3`, `-swift`, `-ws`, `backends`,
+`cli`, `lrs`, `dev`, `ci`, `full`) son una **superficie de plugins ya instalada y empaquetada**. Un `ralph[mcp]` es la
+contribución que encaja en la convención del proyecto, no un fork. Ver **P71**.
+
+### 🟢 Gap 63 — la mitad de arquitectura CIERRA con evidencia de archivo; la de fecha queda abierta **con mejor razón**
+
+El pase 33 leyó la arquitectura de plugins de `learnmcp-xapi` **del README** y lo dejó anotado como no fechado. Este
+pase la confirma **por existencia de archivos**, que es evidencia más fuerte que la prosa:
+
+| Ruta | Código |
+|---|---|
+| `config/plugins/lrsql.yaml` | **200** ✅ |
+| `config/plugins/ralph.yaml` | **200** ✅ |
+| `config/plugins/veracity.yaml` | **200** ✅ |
+| `.env.example` | **200** — declara `LRS_PLUGIN=lrsql  # Options: lrsql, ralph, veracity` |
+
+**Los tres backends del README existen como archivos de configuración.** El `lrsql.yaml` trae
+`endpoint: ${LRSQL_ENDPOINT:-http://localhost:8080}`, `key`/`secret` por variable, `timeout: 30` y `retry_attempts: 3`.
+
+🔴 **Pero la fecha del `2.0.0` no es que esté bloqueada: es que no existe en el árbol.** Se probaron **ocho** rutas
+portadoras de versión y **las ocho dan 404**: `pyproject.toml`, `uv.lock`, `CHANGELOG.md`, `VERSION`, `setup.py`,
+`main.py`, `src/__init__.py`, `app/__init__.py`. Lo único que hay es `requirements.txt` (**200**), que **no declara
+versión de proyecto**. **El gap 63 se reclasifica:** no es una limitación del proxy —como se escribió en el pase 33—,
+es que **el proyecto no se versiona dentro de su propio árbol**, así que **ningún canal alcanzable puede fechar ese
+`2.0.0`**. Eso es una conclusión más útil que «bloqueado»: cierra la búsqueda en vez de invitar a repetirla.
+
+### 🟢 Y aparece la **tercera** variante de la misma primitiva de seguridad — ésta frena en la **configuración**
+
+`.env.example` de `learnmcp-xapi` declara dos límites que la ficha de esta KB no registraba:
+
+```
+RATE_LIMIT_PER_MINUTE=30
+MAX_BODY_SIZE=16384
+```
+
+**La serie queda completa y conviene cotizarla junta,** porque son tres mecanismos para el mismo riesgo —el agente en
+bucle— con tres propiedades de falla distintas:
+
+| Pieza | Dónde frena | ¿Frena solo? |
+|---|---|---|
+| `openedx-mcp` (pase 30) | **en el servidor** — *confirm token* atado a una huella del payload | 🟢 **Sí** |
+| `coursecode` (pase 33) | **en el contrato** — anotaciones MCP + `dryRun` | 🔴 **No** — si el cliente ignora las anotaciones, gasta |
+| **`learnmcp-xapi` (este pase)** | **en la configuración** — 30 escrituras/minuto y cuerpo de 16 KiB | 🟢 **Sí**, y sin pedirle nada al cliente |
+
+🔵 **El de configuración es el más barato de los tres y el único que no requiere cooperación de nadie:** es un techo de
+caudal, no una decisión. **Para la capa de telemetría —donde el riesgo es inundar el LRS de statements, no borrar un
+curso— es exactamente el freno adecuado.** `learnmcp-xapi` además corre sobre **`fastmcp>=0.3.2`** (no el SDK crudo),
+con **8 dependencias de runtime**: `fastmcp`, `fastapi`, `uvicorn[standard]`, `httpx[http2]`, `jsonschema`, `pydantic`,
+`pyyaml`, `orjson`. Ver tendencia **105**.
+
+### ✅ Acción 3 — P69 DECIDIDO, y lo decide la licencia, no el lenguaje
+
+El pase 33 pidió decidir **con el número de adopción al lado** si la contribución *upstream* de QTI conviene sobre el
+stack PHP o sobre el TypeScript. **Los números se midieron en Packagist y npm, y el número de adopción perdió:**
+
+| | `qtism/qtism` (OAT QTI-SDK) | `@longsightgroup/qti3-cli` |
+|---|---|---|
+| **Licencia** | 🔴 **GPL-2.0-only** — en **las 293 releases** | **MIT** ✅ |
+| **Adopción** | 🟢 **218.212 descargas** totales, **3.104/mes**, 85 *favers* | menor y nueva |
+| **Actividad** | viva: `v19.7.2` el **2026-07-09** | 🟢 **41 releases**, primera **2026-05-21**, última modificación **2026-10-01** |
+| **Dependencias de terceros** | stack PHP completo | 🟢 **cero en toda la cadena** |
+
+Y el ecosistema PHP alrededor es real: `oat-sa/extension-tao-item` **130.032** descargas,
+`extension-tao-itemqti` **128.201**, `-pci` **89.265**, `-pic` **79.373**, `extension-tao-itemhtml` **37.722**.
+
+🔵 **La decisión, y el criterio por el que se toma:** **se contribuye sobre el lado TypeScript.** El stack PHP tiene
+**~10× la adopción** y eso era el argumento a favor, pero **`GPL-2.0-only` cierra el caso de uso**: Globant no puede
+envolverlo en un producto propietario ni embeberlo en una entrega de cliente sin heredar copyleft, y la obligación
+alcanza al derivado. **El lado MIT no sólo es viable: resulta ser el que se mueve más rápido** —41 releases en cuatro
+meses y medio, la última de ayer—, lo que era lo contrario de lo que cabía esperar de la opción con menos adopción.
+**El número grande era el equivocado para esta pregunta.** **P69** queda cerrado y cotizado.
+
+### 🔴 El hallazgo estructural del pase, y es de método: **el entorno sesga esta KB hacia fuentes comerciales**
+
+El pase 33 cerró el gap 56 reportando que `eur-lex.europa.eu` y `data.europa.eu` están bloqueados. Este pase fue a
+buscar **dos fuentes primarias regionales nuevas** —el Consejo de Europa (EMEA) y el *working paper* de **UNESCO
+IESALC** sobre **200 instituciones en 19 países** (LATAM)— y **las dos están bloqueadas**. Así que se midió el patrón
+en vez de seguir encontrándolo de a uno:
+
+| Clase de dominio | Probados | Alcanzables |
+|---|---|---|
+| 🔴 **Multilaterales e institucionales** | `coe.int`, `unu.edu`, `publications.iadb.org`, `www.unesco.org`, `unesdoc.unesco.org`, `iesalc.unesco.org`, `www.oecd.org`, `ec.europa.eu`, `www.worldbank.org` (+ `eur-lex.europa.eu` y `data.europa.eu` del pase 33) | 🔴 **0 de 11** |
+| ✅ **Registros comerciales y de código** | `registry.npmjs.org`, `pypi.org`, `packagist.org`, `hub.docker.com`, `raw.githubusercontent.com` | 🟢 **5 de 5** |
+
+🔴 **Esto cambia cómo hay que leer todo `intel/` de esta base, y hay que decirlo en voz alta: cada afirmación
+regulatoria y de tamaño de mercado de esta KB se apoya en fuentes secundarias comerciales *por construcción del
+entorno*, no por falta de rigor del pase.** No es que las primarias no se hayan intentado —se intentaron **once**—: es
+que **ninguna es alcanzable desde esta red**.
+
+🔵 **Y eso reclasifica el gap 56 de «acción pendiente» a «límite de clase».** Probar un dominio europeo más es
+previsiblemente inútil. **La petición correcta no es técnica, es organizativa: una lectura del texto consolidado hecha
+fuera de esta red**, y así hay que pedirla. Ver tendencia **106** y **gap 65**.
+
+### 🔵 Dominios y canales que este pase agrega al mapa del entorno
+
+- 🔴 **Bloqueados por el proxy de egreso (nuevos):** `mcp.so` (el registro de servidores MCP — **el instrumento natural
+  para este barrido, y no se puede consultar**), `coe.int`, `unu.edu`, `publications.iadb.org`, `www.unesco.org`,
+  `unesdoc.unesco.org`, `iesalc.unesco.org`, `www.oecd.org`, `ec.europa.eu`, `www.worldbank.org`.
+- ✅ **Responden:** `registry.npmjs.org`, `pypi.org`, `packagist.org` (`/packages/<vendor>/<pkg>.json` da licencia y
+  fecha **por release**, que es mejor que `/search.json`), `hub.docker.com`, `raw.githubusercontent.com`.
+- ⚠️ **`api.npmjs.org/downloads/point/...` devolvió vacío** para un paquete con *scope*; la adopción de npm de este pase
+  se reporta por **conteo y fechas de releases**, no por descargas. **La asimetría hay que decirla:** Packagist **sí**
+  da descargas, así que la comparación PHP/TypeScript de arriba **no es simétrica en esa columna** — y por eso la
+  decisión se tomó por licencia, que sí está medida en las dos.
+
+---
+
 ## 2026-10-02 (pase 33) — el pase que descubre que **el gap 60 se contradecía con la propia tabla de esta KB**, y mide **por qué**: la lista de candidatos venía del registro de paquetes, y la pieza que lo refuta **no está en ningún registro**
 
 **Lo que se hizo:** el barrido obligatorio completo —**cuatro búsquedas globales y cuatro regionales**, con el año

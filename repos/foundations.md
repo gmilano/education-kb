@@ -29,6 +29,50 @@ updated: 2026-10-02
 
 > **Pase 30 del 2026-10-02:** **el gap 52 cierra leyendo cinco archivos del árbol `main` de OpenCASE, y la contradicción entre sus dos documentos tiene una regla que ninguno enuncia:** el segmento `ims/case/v1pX` aparece **sólo** cuando la operación actúa sobre una entidad del estándar CASE, nunca en las rutas de plataforma. **72 rutas contadas** (24 de lectura —el juego completo en **v1p0 y v1p1**—, 44 de management, **2 de descubrimiento** y 2 de servicio). 🔵 **Tres hallazgos abaratan P60:** hay **dos** endpoints OpenAPI (uno por versión) y **sin auth**; la lectura usa **auth opcional** (marcos públicos sin credenciales ni tenant); y aparece **CGE — CASE Global Exchange**, **11 rutas de federación** que permiten **suscribirse** a marcos del registro global en vez de cargarlos. 🔴 **Pero la escritura no es parte del estándar y lo declara el código**, así que sólo la mitad de lectura es portable. 🔴 **Open edX cambia de estado: ya tiene puerta de agente, y es AGPL-3.0 y corre EN PROCESO** (`openedx-mcp` + `tutor-contrib-openedxmcp`, 2026-07-25) — con lo que **el riesgo de adaptador de versiones del pase 29 no se paga por ese camino, y la autoría queda confirmada por implementación**. ✅ **Alta nueva:** [`instructure/qti`](https://github.com/instructure/qti) (**MIT**, 174 commits), que cubre **QTI 1.2** —el acervo legado del que parte **P48**— y que `examplary/qti` no cubría. ✅ **Y se cierran dos nombres: `.LRN` (vivo pero GPL-2.0 y en CVS) y `CK-ERP` (muerto desde 2012).** Ver la sección del pase 30, abajo.
 
+> **Pase 34 del 2026-10-02:** entra la **capa de conformidad y simulación xAPI** (sección nueva, abajo) con dos piezas
+> **Apache-2.0** verificadas de primera mano: **`yetanalytics/datasim`** —genera tráfico xAPI a escala y valida contra
+> **xAPI Profile**, del **mismo mantenedor que `lrsql`**— y el **validador oficial de 1EdTech** para Open Badges y CLR.
+> 🔴 **Y una no-alta declarada: `yetanalytics/persephone` queda fuera** — 10 rutas de licencia, las 10 **404**, y Docker
+> parado en **2023-10-10** (**gap 66**). 🔵 **Las dos altas aparecieron por el nombre de la organización, no por término.**
+
+## 🧪 Capa de conformidad y simulación xAPI, y el validador oficial de credenciales — agregada en el pase 34 del 2026-10-02
+
+**Treinta y tres pases recomendaron `lrsql` o Ralph sin tener con qué dimensionarlos.** Esta capa cierra eso. **Las dos
+piezas aparecieron por el mismo instrumento —el nombre de la organización (tendencia 100)—, no por búsqueda de término.**
+
+| Repo | Licencia | Verificación de primera mano | Qué aporta |
+|---|---|---|---|
+| [`yetanalytics/datasim`](https://github.com/yetanalytics/datasim) | **Apache-2.0** ✅ | `LICENSE` **200** (`master`), `README.md` **200**, `deps.edn` **200**, imagen Docker **2025-12-02** | **Genera datos xAPI simulados a escala.** *«benchmark and stress-test … with the Total Learning Architecture»* y *«evaluate the implementation of xAPI data design using the xAPI Profile specification»*. **Mismo mantenedor que `lrsql`.** Origen: **ADL Initiative** (DoD EE. UU.) |
+| [`1EdTech/digital-credentials-public-validator`](https://github.com/1EdTech/digital-credentials-public-validator) | **Apache-2.0** ✅ | `LICENSE` **200** en `main` **y** `master` | Validador **del consorcio que escribe el estándar**, para **Open Badges** y **CLR**, con web, HTTP y API |
+
+🟢 **Por qué `datasim` cambia una propuesta y no sólo un repo.** Permite **cargar el LRS con tráfico sintético conforme
+a un xAPI Profile antes de comprometer una cifra**. Es la diferencia entre proponer una arquitectura de telemetría y
+haberla probado — y como viene del mantenedor de `lrsql`, la combinación es la que el propio proyecto usa. Resuelve
+además una carencia que esta base arrastraba: **los xAPI Profiles entraron en la consigna del pase 24 y el pase 25 los
+buscó sin encontrar herramienta.**
+
+🟢 **Por qué el validador de 1EdTech cierra un expediente.** Este archivo registraba que *«las implementaciones de
+referencia de estos estándares ya no están»* (`badgr-server` **404**, `caliper-php` en privado). El validador **está, es
+Apache-2.0, y lo publica 1EdTech**: convierte *«cumplimos Open Badges»* en una afirmación **verificable por un tercero
+neutral**, que es lo que pide un área de compras. Ver **P70**.
+
+### ⚠️ La no-alta de esta capa, declarada: `yetanalytics/persephone`
+
+Docker Hub la describe como *«a Clojure CLI and server app for validating xAPI Statements against Profiles»* —
+**exactamente** la capa de este apartado. **No entra.** Se probaron **10 rutas de licencia** (`LICENSE`, `LICENSE.md`,
+`LICENSE.txt`, `license`, `COPYING`, cada una en `main` y `master`): **las diez 404**; `project.clj` y `deps.edn`
+**404**; `README.md` **404** en las dos ramas; **3 tags en Docker Hub, el último de 2023-10-10 (~3 años)**. 🔴 **Sin
+licencia leída no entra a ninguna tabla de esta KB**, que es la regla que el pase 31 aplicó a Caliper. **Gap 66.**
+
+### 🔵 Y la contribución *upstream* que esta capa deja identificada, con el sitio exacto
+
+`ralph-malph` 5.0.1 declara **14 extras** —`backend-clickhouse`, `-es`, `-ldp`, `-lrs`, `-mongo`, `-s3`, `-swift`,
+`-ws`, `backends`, `cli`, `lrs`, `dev`, `ci`, `full`— y **ninguno es MCP** (medido en `provides_extra` de PyPI, junto
+con `requires_dist` sin `mcp` y **0 menciones** en la descripción). **Eso es una superficie de plugins ya empaquetada:**
+un **`ralph[mcp]`** encaja en la convención del proyecto y **no requiere fork**. Ralph es **MIT** y su `LICENSE` nombra
+a **France Université Numérique**, así que es también el camino con mejor argumento institucional para EMEA. Ver **P71**
+y **gap 64 (cerrado en negativo)**.
+
 ## 🧭 Las rutas de OpenCASE resueltas, la capa de federación que nadie vio, y dos nombres que se cierran — pase 30 del 2026-10-02
 
 **Tres bases quedan mejor medidas en este pase y las tres por lectura de primera mano: dos leyendo código fuente y una
