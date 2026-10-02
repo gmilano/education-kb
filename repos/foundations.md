@@ -64,6 +64,104 @@ updated: 2026-10-02
 > 404** — y **10 están paradas hace ≥ 6 meses**, tres de ellas load-bearing. Tabla completa en `repos/trending.md` (pase 37),
 > impacto en `compose/patterns.md`.
 
+## 🎓 Capa de *student success* / alerta temprana — la capa que esta base declaró la PEOR abastecida, y tiene una pieza MIT desde 2022 (agregada en el pase 40 del 2026-10-02)
+
+El **gap 26** y la **tendencia 26** de esta base dicen, desde el pase 11, que *«la capa que decide sobre el alumno es
+la más regulada del sector y la peor abastecida de open source»*, y el pase 11 lo midió buscando **predictores**. La
+acción 1 del pase 39 mandó barrer esta capa por **registro de paquetes**, y el barrido devuelve **un solo nombre en
+903.402 de PyPI** — pero ese nombre cambia la conclusión.
+
+| Repo | Licencia (verificada hoy) | Medición de primera mano | Qué aporta |
+|---|---|---|---|
+| 🟢 [`datakind/student-success-tool`](https://github.com/datakind/student-success-tool) | 🟢 **MIT** ✅ — `LICENSE.md` **200** en `main`, *«The MIT License (MIT) · Copyright (c) 2022 DataKind»* | `HEAD` **2025-09-08** · PyPI `student-success-tool` **0.3.10**, **14 releases**, último **2025-08-05** · **181 archivos `.py`** · Python **3.10–3.12** | **La única librería de *student success* con licencia permisiva que encontró esta base en 40 pases.** *«School-agnostic lib for implementing Student Success Tool workflows.»* Pipeline completo de **advising asistido por datos**: esquema base, ingesta, *feature engineering*, EDA, definición de *targets* por punto de control, **AutoML configurado por `config.yaml`**, reporting y datos sintéticos para pruebas |
+
+### 🟢 Por qué esta pieza vale más de lo que su tracción sugiere: trae puesto el expediente regulatorio
+
+**El problema de esta capa nunca fue el modelo. Era el expediente.** Un modelo que predice abandono estudiantil es,
+en EMEA, **Anexo III punto 3 del AI Act** (evaluación de resultados de aprendizaje), y en North America cae bajo las
+leyes estatales que esta base viene registrando —**supervisión humana obligatoria y prohibición de que la AI decida
+en alto impacto** (Oklahoma, Maryland)—. Construir el modelo es la parte barata; **documentarlo para que pase una
+auditoría es la cara.**
+
+**Y esta librería trae esa parte hecha, en el árbol:**
+
+| Componente | Ruta en el repo | Para qué sirve en el expediente |
+|---|---|---|
+| **Model cards** | `reporting/model_card/` (`base.py`, `pdp.py`, `custom.py`, `h2o_pdp.py`, `h2o_custom.py`) | **La documentación del modelo que el regulador pide**, generada desde el modelo entrenado y no escrita a mano |
+| **Secciones de sesgo** | `reporting/sections/bias_sections.py` (+ variantes `pdp/` y `custom/`) | 🟢 **Análisis de sesgo como sección de reporte de primera clase** — no un notebook aparte |
+| **Secciones de atributos y evaluación** | `reporting/sections/attribute_sections.py`, `evaluation_sections.py`, `metric_sections.py`, `registry.py` | Reporte por secciones registrables, extensible por institución |
+| **Validación de ingesta** | `ingestion_validation/` | Controla el dato antes de que entre al modelo |
+| **Datos sintéticos** | `generation/pdp/` | Permite demostrar el pipeline **sin dato real de alumno**, que es lo que destraba un piloto |
+
+🔵 **Y los principios de producto están escritos en el README, lo cual importa porque son exactamente los tres que un
+comité de ética universitario pregunta:** *transparente* (modelo y variables se comparten con la institución),
+*dedicado a la reducción de sesgo*, y 🟢 ***«humans in the loop by design»*** — las intervenciones las ejecuta un
+**asesor humano**, no el algoritmo. **Eso es la forma del requisito de Oklahoma y Maryland, por diseño y no por
+cláusula.**
+
+### El encuadre institucional, y el resultado reportado
+
+**DataKind** es una organización sin fines de lucro; el trabajo está **financiado por Google.org** y desarrollado con
+un equipo de *fellows*. El README reporta un resultado de despliegue: **John Jay College informó un aumento del 32 %
+en la tasa de graduación de estudiantes de último año en dos años** con su programa CUSP sobre este enfoque.
+⚠️ **Es una cifra auto-reportada en el README del proyecto, no un estudio independiente** — se cita como antecedente
+de despliegue, no como evidencia de eficacia.
+
+### ⚠️ Las tres reservas, declaradas antes de que alguien la cotice
+
+1. 🔴 **Está acoplada a `PDP` y a Databricks, y eso define a quién le sirve.** El esquema base es el del
+   **Postsecondary Data Partnership** —un estándar de datos de educación superior **de Estados Unidos**— y el camino
+   de ejecución documentado es **Databricks Runtime 15.4 LTS / 16.x**. 🔵 **Hay una ruta `custom/` paralela a cada
+   `pdp/`** (en `reporting/sections/`, `dataio/`, `preprocessing/`, `pipelines/`), así que **la customización está
+   prevista por diseño**; pero fuera de PDP hay que escribir el esquema. **Para North America es casi reuso; para
+   EMEA, APAC y LATAM es adopción del armazón con esquema propio.**
+2. ⚠️ **Tibia, no viva:** `HEAD` del **2025-09-08** y último release del **2025-08-05** — **~13 meses**. Cae en la
+   franja que el pase 37 definió como «hay que preguntar antes de depender». **No está archivada.**
+3. 🔴 **PyPI no declara su licencia y el árbol sí.** El JSON de `student-success-tool` **no trae `license`,
+   `license_expression` ni clasificador de licencia**; el **MIT se leyó en `LICENSE.md` del repo**. Es el **inverso
+   del gap 81**: ahí la licencia vivía sólo en el manifiesto; acá vive sólo en el árbol. **Misma lección, signo
+   opuesto: una sola fuente nunca alcanza.**
+
+## 🎥 Capa de *proctoring* — existe, es oficial, y es toda copyleft (agregada en el pase 40 del 2026-10-02)
+
+El barrido por registro del pase 40 cierra esta capa, que esta base venía nombrando en consignas desde el pase 24 sin
+haberla medido. **El resultado tiene la misma forma que los pases 8 y 9 encontraron en accesibilidad y credenciales:
+lo maduro es copyleft y lo permisivo es chico.**
+
+| Repo | Licencia (verificada hoy) | Medición de primera mano | Qué aporta |
+|---|---|---|---|
+| 🟢 [`openedx/edx-proctoring`](https://github.com/openedx/edx-proctoring) | **AGPL-3.0** ⚠️ — `LICENSE.txt` **200** en `master` (texto AGPL v3 completo) | `HEAD` **2026-05-30** · PyPI `edx-proctoring` **5.2.0**, 🔴 **253 releases** pero el último del **2025-04-28** · Python | **El subsistema de *proctoring* OFICIAL de Open edX.** Es la pieza de referencia de la capa: integra proveedores de supervisión con el flujo de examen del LMS, con los estados de examen, las excepciones y la auditoría ya modelados |
+| ⚠️ [`openfun/xblock-proctor-exam`](https://github.com/openfun/xblock-proctor-exam) | **AGPL-3.0** | 🔴 `HEAD` **2021-02-11** — **5,6 años** · 4 releases | *XBlock* que restringe el acceso a una prueba al proceso de monitoreo de Proctor Exam. 🔴 **Muerto.** Se registra porque es **la opción EMEA de la capa** (France Université Numérique) y porque alguien va a encontrarla: **no proponer** |
+| ⚠️ `grvlms-proctoring` | **AGPL-3.0** | 🔴 PyPI **2020-11-09** — **5,9 años** · 2 releases | Plugin de *proctoring* para Grvlms. 🔴 **Muerto** |
+| 🔴 `proctoru-xblock` | 🔴 **sin licencia declarada** | 🔴 PyPI **2016-08-17** — **10,1 años** · 1 release | Integración con ProctorU. 🔴 **Muerto y sin licencia: inusable por dos motivos independientes** |
+
+### 🔴 El dato de método que esta capa aporta, y aplica a toda la KB: el repo está vivo y el registro parado
+
+**`edx-proctoring` tiene `HEAD` del 2026-05-30 (4 meses) y su último release en PyPI es del 2025-04-28 (17 meses).**
+Las dos mediciones son correctas y dicen cosas distintas:
+
+- 🟢 **Medido por repositorio: mantenido.** Hay trabajo reciente.
+- 🔴 **Medido por registro: parado hace 17 meses.** Quien lo instale con `pip` recibe código de hace año y medio.
+
+🔵 **Esto corrige un supuesto implícito del pase 37, que fechó 49 filas por el commit de su rama principal.** Para una
+dependencia que se **instala**, la fecha que gobierna el riesgo **no es la del commit: es la del artefacto
+publicado**. **Hay que medir las dos y decir cuál se usa** — y para `edx-proctoring`, que llega vía Tutor/pip en un
+despliegue de Open edX, la que importa es la del registro. **Regla nueva: `HEAD` mide al proyecto, el release mide a
+lo que el cliente instala.**
+
+### 🔵 La lectura comercial de la capa, y es incómoda pero clara
+
+**La única pieza seria de *proctoring* del ecosistema open source educativo es AGPL-3.0 y es parte de Open edX** — o
+sea que **no hay opción permisiva para la capa que el AI Act regula más explícitamente**. Las dos piezas MIT que el
+pase 40 encontró (`mereos`, `@timadey/proctor`, en `agents/top.md`) son **SDK de detección del lado del navegador**:
+resuelven la mitad de visión por computadora, **no** la mitad de integración con el examen, los estados, las
+excepciones y la auditoría, que es donde está el trabajo.
+
+**Cómo se cotiza entonces:** sobre Open edX, `edx-proctoring` es adopción y la AGPL **ya está aceptada** porque el
+LMS entero es AGPL — no agrega fricción. **Fuera de Open edX, la capa de integración hay que construirla**, y los SDK
+MIT sirven como la mitad cliente. ⚠️ **Y antes de cualquiera de las dos rutas va el expediente del Anexo III punto 3,
+cuyo plazo es el 2027-12-02** (el *«monitoreo durante exámenes»* está nombrado en el inciso).
+
 ## 🧩 Capa de rostering OneRoster — el lado PROVEEDOR, que esta base nunca tuvo (agregada en el pase 38 del 2026-10-02)
 
 **Treinta y siete pases trataron OneRoster como un problema de cliente.** La base tenía `oneroster-ts` (0BSD, 132 tools)

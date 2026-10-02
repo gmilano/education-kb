@@ -4494,6 +4494,283 @@ adaptador de 32 commits del que somos dueños, sobre un LRS mantenido por una en
 configuración»**. Es la misma dependencia; el riesgo es el mismo; **la diferencia es que está medido**.
 
 
+## P85 — El *gateway* de allowlist de tools, **escrito y probado**: la pieza que P82 describía en prosa (agregado en el pase 40 del 2026-10-02)
+
+**P82 (pase 39) describió el patrón y dejó la pieza por escribir.** Este pase la escribe y **la prueba**, que es la
+diferencia entre un patrón y un entregable. **175 líneas, sólo biblioteca estándar de Python, sin dependencias.**
+
+### El problema, en una frase
+
+Esta base tiene **nueve puertas de LMS** y varias traen escritura sin partición por rol. La peor es
+**`frappe-mcp-server`**, que expone **`call_method`** (ejecuta métodos arbitrarios *whitelisted* del servidor) y
+**`delete_document`** (borra) sobre un ERP académico. **La tendencia 137 probó, con el patrón `preview_*` de
+`mcp-usc`, que un filtro por nombre de tool es un control de cumplimiento real y no cosmético.** Lo que faltaba era
+la pieza intermedia.
+
+### Las dos decisiones de diseño que lo vuelven un control y no un adorno
+
+🔴 **1. El filtro se aplica en DOS puntos, no en uno.** Recortar `tools/list` **no es un control**: un cliente que ya
+conoce el nombre —de una versión anterior, de la documentación o por adivinanza— puede invocar una tool no listada.
+**El segundo punto, `tools/call` rechazado por nombre antes de reenviar, es el que convierte el patrón en control.**
+
+🔴 **2. *Default deny*.** Allowlist vacía ⇒ **cero tools**. Un *gateway* que falla abierto no es un *gateway*.
+
+**Y dos decisiones menores que importan:** la allowlist es **por nombre exacto, sin globs ni prefijos** —así
+`preview_submit_assignment` no habilita `submit_assignment` y `delete_*` no entra por accidente—, y **cada rechazo se
+escribe como una línea JSON con timestamp**, porque sin registro no hay nada que mostrarle a un auditor y ésa es la
+razón de existir de la pieza.
+
+### El código
+
+```python
+#!/usr/bin/env python3
+"""mcp-allowlist-gateway — proxy MCP stdio que reexporta SOLO las tools de una
+allowlist y registra cada llamada bloqueada."""
+import json, os, subprocess, sys, threading, time
+
+ALLOW = frozenset(t.strip() for t in os.environ.get("MCP_ALLOWLIST", "").split(",") if t.strip())
+AUDIT_LOG = os.environ.get("MCP_AUDIT_LOG", "").strip()
+_lock = threading.Lock()
+
+def audit(event, **fields):
+    rec = {"ts": time.strftime("%Y-%m-%dT%H:%M:%S%z"), "event": event, **fields}
+    line = json.dumps(rec, ensure_ascii=False)
+    with _lock:
+        if AUDIT_LOG:
+            try:
+                with open(AUDIT_LOG, "a", encoding="utf-8") as fh:
+                    fh.write(line + "\n")
+                return
+            except OSError:
+                pass            # si el log falla, el evento no se pierde: cae a stderr
+        print(line, file=sys.stderr, flush=True)
+
+def deny(req_id, name):
+    # -32601 (Method not found) y no -32602: para el cliente, la tool NO EXISTE
+    # en este servidor, que es exactamente lo que el gateway quiere afirmar.
+    return {"jsonrpc": "2.0", "id": req_id,
+            "error": {"code": -32601,
+                      "message": f"Tool '{name}' no expuesta por este gateway",
+                      "data": {"allowed": sorted(ALLOW)}}}
+
+def main():
+    argv = sys.argv[1:]
+    if argv and argv[0] == "--":
+        argv = argv[1:]
+    if not argv:
+        print("uso: gateway.py -- <comando del servidor upstream>", file=sys.stderr)
+        return 2
+    audit("gateway_start", upstream=argv, allowlist=sorted(ALLOW))
+    up = subprocess.Popen(argv, stdin=subprocess.PIPE, stdout=subprocess.PIPE,
+                          stderr=None, text=True, bufsize=1)
+    pending, plock = set(), threading.Lock()
+
+    def c2u():                                   # cliente -> upstream
+        for line in sys.stdin:
+            line = line.strip()
+            if not line:
+                continue
+            try:
+                msg = json.loads(line)
+            except json.JSONDecodeError:
+                up.stdin.write(line + "\n"); up.stdin.flush(); continue
+            m = msg.get("method")
+            if m == "tools/list":
+                with plock:
+                    pending.add(json.dumps(msg.get("id")))
+            elif m == "tools/call":
+                name = (msg.get("params") or {}).get("name", "")
+                if name not in ALLOW:            # PUNTO 2: el control real
+                    audit("tool_call_blocked", tool=name, request_id=msg.get("id"))
+                    sys.stdout.write(json.dumps(deny(msg.get("id"), name)) + "\n")
+                    sys.stdout.flush(); continue
+                audit("tool_call_allowed", tool=name, request_id=msg.get("id"))
+            up.stdin.write(json.dumps(msg) + "\n"); up.stdin.flush()
+        try:
+            up.stdin.close()
+        except OSError:
+            pass
+
+    def u2c():                                   # upstream -> cliente
+        for line in up.stdout:
+            line = line.strip()
+            if not line:
+                continue
+            try:
+                msg = json.loads(line)
+            except json.JSONDecodeError:
+                sys.stdout.write(line + "\n"); sys.stdout.flush(); continue
+            key = json.dumps(msg.get("id"))
+            with plock:
+                is_list = key in pending
+                if is_list:
+                    pending.discard(key)
+            if is_list and isinstance(msg.get("result"), dict):
+                tools = msg["result"].get("tools")
+                if isinstance(tools, list):      # PUNTO 1: recorte del listado
+                    kept = [t for t in tools if t.get("name") in ALLOW]
+                    dropped = [t for t in tools if t.get("name") not in ALLOW]
+                    msg["result"]["tools"] = kept
+                    audit("tools_list_filtered",
+                          exposed=[t.get("name") for t in kept],
+                          withheld=[t.get("name") for t in dropped],
+                          upstream_total=len(tools))
+            sys.stdout.write(json.dumps(msg) + "\n"); sys.stdout.flush()
+
+    threading.Thread(target=c2u, daemon=True).start()
+    t2 = threading.Thread(target=u2c, daemon=True); t2.start()
+    rc = up.wait(); t2.join(timeout=2)
+    audit("gateway_stop", upstream_returncode=rc)
+    return rc
+
+if __name__ == "__main__":
+    sys.exit(main())
+```
+
+### El wiring
+
+```bash
+MCP_ALLOWLIST=get_document,list_documents,get_doctype_schema \
+MCP_AUDIT_LOG=./mcp-blocked.jsonl \
+python3 mcp_allowlist_gateway.py -- npx -y frappe-mcp-server
+```
+
+En la configuración del cliente MCP, el servidor pasa a ser **el gateway**, y el upstream real queda detrás.
+
+### 🟢 La verificación, que es lo que distingue esto de P82
+
+**Probado contra un upstream que imita la superficie de `frappe-mcp-server`** (7 tools: `get_document`,
+`list_documents`, `get_doctype_schema`, `update_document`, `delete_document`, `call_method`, `create_document`):
+
+| Prueba | Resultado medido |
+|---|---|
+| `tools/list` con allowlist de 3 | 🟢 **7 → 3 expuestas** (`get_document`, `list_documents`, `get_doctype_schema`) |
+| `tools/call` de una tool permitida | 🟢 **llega al upstream y ejecuta** |
+| `tools/call` de `delete_document` **sin listarla** | 🟢 **`-32601`, y NO llega al upstream** |
+| `tools/call` de `call_method` **sin listarla** | 🟢 **`-32601`, y NO llega al upstream** |
+| Ejecuciones totales en el upstream | 🟢 **1** — sólo la permitida |
+| Allowlist **vacía** (`MCP_ALLOWLIST=""`) | 🟢 **0 tools expuestas, las 3 llamadas bloqueadas** (*default deny*) |
+| `initialize` y el resto del protocolo | 🟢 **pasa sin tocarse** |
+
+**Y el log que queda, que es el entregable para el auditor:**
+
+```json
+{"event":"tools_list_filtered","upstream_total":7,
+ "exposed":["get_document","list_documents","get_doctype_schema"],
+ "withheld":["update_document","delete_document","call_method","create_document"]}
+{"event":"tool_call_blocked","tool":"delete_document","request_id":4}
+{"event":"tool_call_blocked","tool":"call_method","request_id":5}
+```
+
+### Dónde se aplica primero, por orden de urgencia
+
+| Pieza | Por qué | Allowlist sugerida |
+|---|---|---|
+| 🔴 **`frappe-mcp-server`** | `call_method` + `delete_document`, **sin partición por rol**, sobre ERP académico | sólo las 10 de lectura y esquema |
+| 🔴 **`DUTIC-mcp`** | **ninguna de sus 12 tools declara `readOnlyHint`**, y `dutic_encuesta_fill_all` + `_submit` envían una encuesta institucional en nombre del alumno | las 4 de semestre + `dutic_pdf_to_markdown` + las 2 de biblioteca |
+| ⚠️ **`bruchris/canvas-lms-mcp`** | **48 tools con `destructiveHint: true`** sobre 165 | las 120 `readOnlyHint` |
+| ⚠️ **`moodler-mcp`** | `save_assignment_grade` con `workflowstate=""` **publica la nota** | las 30 de lectura |
+
+⚠️ **Dos límites, declarados.** (1) **Es un control de superficie, no de autorización**: no sustituye los permisos del
+LMS ni el rol del token — una tool permitida sigue pudiendo hacer todo lo que el token permita. (2) **Cubre transporte
+stdio.** Para un upstream HTTP el mismo filtro aplica en un *reverse proxy*, pero **ese código no está escrito ni
+probado en este pase** y no hay que presentarlo como si lo estuviera.
+
+## P86 — *Student success* sin construir el modelo: adoptar el pipeline MIT que ya trae el expediente regulatorio (agregado en el pase 40 del 2026-10-02)
+
+**El patrón que la tendencia 148 vuelve posible, y reemplaza lo que esta base venía diciendo sobre esta capa.** Hasta
+el pase 39, la capa predictiva se cotizaba como desarrollo: el **gap 26** la declaraba *«la peor abastecida»* y los
+110 repos de *knowledge tracing* no eran productos. **Ya no se construye: se adopta.**
+
+### Las piezas, verificadas el 2026-10-02
+
+| Pieza | Licencia | Rol | Estado medido |
+|---|---|---|---|
+| [`datakind/student-success-tool`](https://github.com/datakind/student-success-tool) | 🟢 **MIT** (`LICENSE.md` del árbol) | **El pipeline entero**: esquema, ingesta, *features*, EDA, *targets*, AutoML, reporting | `HEAD` **2025-09-08**, PyPI 0.3.10, **181 archivos `.py`** ⚠️ ~13 meses |
+| `reporting/model_card/` + `reporting/sections/bias_sections.py` | (dentro de la anterior) | 🟢 **El expediente**: *model card* generada del modelo + análisis de sesgo | En el árbol |
+| `ingestion_validation/` + `generation/pdp/` | (dentro de la anterior) | Validación de ingesta + **datos sintéticos** | En el árbol |
+| `bruchris/canvas-lms-mcp` **o** una puerta de Moodle de esta base | **MIT** | La fuente de señal del LMS, si el cliente no tiene PDP | `HEAD` 2026-09-20 |
+| **P85** (*gateway* de allowlist) | — | Recortar la puerta del LMS a **sólo lectura** para alimentar el modelo | 🟢 **probado en este pase** |
+
+### El wiring
+
+1. **Decidir el esquema, y es la bifurcación que define el presupuesto.** Si el cliente es un *college*
+   estadounidense dentro del **Postsecondary Data Partnership**, el esquema base sirve tal cual: `dataio/schemas/pdp/`
+   ya modela cohortes, cursos y términos. **Si no**, se usa la ruta **`custom/`** que el repo trae paralela a cada
+   `pdp/` (en `dataio/`, `preprocessing/`, `reporting/sections/`, `pipelines/`) y **se escribe el esquema del
+   cliente**. 🔵 **La customización está prevista por diseño, no es un fork.**
+2. **Alimentar la señal.** Con PDP, el dato ya viene. Sin PDP, la señal de compromiso se lee del LMS con una puerta
+   MIT **recortada a lectura con P85** — y eso, además de prudente, es el argumento de privacidad: **el modelo nunca
+   recibe una tool que escriba**.
+3. **Demostrar sin dato real de alumno.** `generation/pdp/` produce datos sintéticos. 🔵 **Es lo que destraba el
+   piloto**: se muestra el pipeline completo, el *model card* y el reporte de sesgo **antes** de firmar el acuerdo de
+   tratamiento de datos.
+4. **Entrenar y evaluar** con el AutoML configurado por `config.yaml`, en los puntos de control que
+   `preprocessing/checkpoints/` define.
+5. **Emitir el expediente, que es el entregable.** *Model card* del modelo entrenado + secciones de sesgo, atributos,
+   métricas y evaluación. **Esto no es documentación del proyecto: es el artefacto que contesta al regulador.**
+6. **Cerrar con el humano en el lazo, y decirlo así.** El README del proyecto lo declara —*«humans in the loop by
+   design»*, las intervenciones las ejecuta un asesor— y **eso es exactamente lo que exigen Oklahoma y Maryland**
+   (supervisión humana, prohibición de que la AI decida en alto impacto). **En EMEA es la base del expediente del
+   Anexo III punto 3, cuyo plazo es el 2027-12-02.**
+
+### Cómo se cotiza, por región
+
+| Región | Qué es | Por qué |
+|---|---|---|
+| **North America** | 🟢 **casi reuso** | PDP es su estándar y Databricks es común. Se cotiza adaptación + expediente |
+| **EMEA** | **adopción del armazón + esquema propio** | No hay PDP. 🔵 **Pero es la región donde el expediente vale más**, porque el Anexo III lo va a pedir |
+| **APAC / LATAM** | **adopción del armazón + esquema propio** | 🔵 **En LATAM es la mejor entrada medida de este pase**: administración es la dimensión menos adoptada (**34,1 %**) y la capa **no tiene competencia open source** |
+
+⚠️ **Las tres reservas que van en la propuesta, no en la letra chica:** acoplamiento a **PyPI sin licencia declarada**
+(el MIT se lee en el árbol, gap 83 invertido), **~13 meses sin release** (tibia, no archivada), y el resultado del
+README —**+32 % en graduación en John Jay College**— es **auto-reportado por el proyecto, no un estudio
+independiente**: abre la conversación, no promete el número.
+
+## P87 — *Proctoring*: cuál de las dos rutas se cotiza, y la pregunta que lo decide es una sola (agregado en el pase 40 del 2026-10-02)
+
+El pase 40 cerró la capa de *proctoring* (gap 84) y el mapa es chico y claro: **una pieza seria y copyleft, dos SDK
+MIT que resuelven la otra mitad.** El patrón, entonces, no es una receta única: **son dos, y la pregunta que elige
+entre ellas es «¿el cliente corre Open edX?».**
+
+| Pieza | Licencia | Qué resuelve | Qué NO resuelve |
+|---|---|---|---|
+| [`openedx/edx-proctoring`](https://github.com/openedx/edx-proctoring) | **AGPL-3.0** | **Integración con el examen**: estados, excepciones, auditoría, proveedores | La detección en sí (la delega al proveedor) |
+| [`Drone9/mereos`](https://github.com/Drone9/mereos) | 🟢 **MIT** | **Detección en el navegador**: presencia por webcam, pantalla compartida, foco de pestaña, registro de actividad | Nada del flujo de examen del LMS |
+| [`Timadey/proctor`](https://github.com/Timadey/proctor) | ⚠️ MIT (sólo npm) | Detección de rostro y **seguimiento de mirada** con MediaPipe | Ídem |
+
+### Ruta A — el cliente corre Open edX: **adopción**, y la AGPL no agrega fricción
+
+`edx-proctoring` es el subsistema oficial y **el LMS entero ya es AGPL**, así que la licencia **no introduce una
+decisión nueva**. Se adopta y se configura el proveedor. ⚠️ **La única advertencia es de versión, y es la tendencia
+147: el repo tiene `HEAD` del 2026-05-30 pero el último release de PyPI es del 2025-04-28 — 17 meses.** Lo que llega
+por Tutor/pip es ese artefacto. **Hay que fijar la versión a conciencia y presupuestar la diferencia**, no asumir que
+«el proyecto está activo» significa «el paquete está al día».
+
+### Ruta B — el cliente NO corre Open edX: **desarrollo de la integración**, con la mitad cliente resuelta
+
+**Los SDK MIT cubren la visión por computadora; el trabajo es el flujo**: estados de examen, excepciones, evidencia,
+retención y auditoría. `mereos` es la mejor base por licencia (**`LICENSE` en el árbol y campo npm coincidentes**, y
+**repo y registro en la misma fecha**, 2026-08-28, que es lo menos frecuente de este pase).
+
+### 🔴 Y lo que va ANTES de las dos rutas, sin excepción
+
+**El *proctoring* por webcam es el inciso de educación del Anexo III del AI Act**: el punto 3 nombra
+**«monitoreo durante exámenes»**. Eso significa:
+
+- **EMEA:** expediente de alto riesgo, plazo **2027-12-02** (y el **Artículo 50** de transparencia **ya rige desde el
+  2026-08-02**, independiente del nivel de riesgo). ⚠️ **El seguimiento de mirada de `@timadey/proctor` es inferencia
+  biométrica de comportamiento, que es el extremo caro del expediente.**
+- **North America:** leyes estatales de privacidad del alumno ya registradas por esta base (**California AB 1159**,
+  **Idaho SB 1227**) y el estándar contractual que **Microsoft/AFT** aplica desde el **1.º de noviembre**, que
+  **prohíbe el seguimiento del alumno**. 🔴 **Un despliegue de *proctoring* con webcam choca de frente con esa
+  cláusula: hay que leerla antes de proponer, no después.**
+
+🔵 **La forma honesta de llevarlo a una reunión:** *«la capa existe, la pieza de referencia es copyleft y está dentro
+de Open edX, la detección se resuelve con MIT — y el plazo regulatorio que gobierna esto es diciembre de 2027, así que
+el expediente se diseña ahora y no al final»*. 🔴 **Lo que no se puede decir es que hay una opción permisiva completa:
+no la hay** (gap 84).
+
 ## P82 — El *gateway* de partición de tools: convertir «confiamos en el servidor» en «la escritura no está en la lista» (agregado en el pase 39 del 2026-10-02)
 
 **El problema que resuelve, y es el que bloquea más propuestas de esta base.** Una institución que no acepta que un

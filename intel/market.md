@@ -28,6 +28,41 @@ updated: 2026-10-02
 
 ## Tamaño de mercado
 
+### Agregado en el pase 40 del 2026-10-02 — la cifra global se confirma con un par nuevo, aparece horizonte a 2034, y el dato de adopción estudiantil se mueve 26 puntos en un año
+
+🟢 **Par global nuevo, y es consistente con el que esta base viene citando:** **US$ 7.520 M (2025) → US$ 10.600 M
+(2026)**, **CAGR 40,9 %**. 🔵 **El `10.600 M` para 2026 coincide con el número que esta KB tiene registrado desde el
+pase 2**, por una fuente distinta y una corrida distinta: es la **tercera confirmación independiente** de la cifra de
+2026, que a esta altura se puede citar sin asterisco.
+
+🟢 **Y aparece un horizonte más largo que el que esta base tenía:** **US$ 79.600 M para 2034**, con **CAGR 31,35 %
+para 2026–2034**. ⚠️ **No se promedia ni se reconcilia con el par que esta KB ya cita** (`US$ 9.580 M → 42.480 M en
+2030, CAGR 41,5 %`): son firmas distintas con horizontes distintos. 🔵 **Pero el patrón entre los dos es informativo
+y vale decirlo: los dos horizontes largos bajan el CAGR respecto del corto** (41,5 % a 2030 y 31,35 % a 2034 contra
+40,9 % interanual 2025→2026). **La lectura razonable es que las consultoras modelan desaceleración después de 2030**,
+y conviene no vender el 40 % como si fuera sostenido hasta 2034.
+
+🔴 **El dato de adopción que más se movió, y es el que cambia la conversación de entrada:**
+
+| Métrica | 2024 | 2025 | Inicio 2026 |
+|---|---|---|---|
+| Alumnos que usan AI en sus estudios (global) | **66 %** | 🔴 **92 %** | — |
+| Alumnos de educación superior que usan AI como **socio primario de investigación y *brainstorming*** | — | — | **86 %** |
+| Alumnos que usan AI en sus estudios (16 países) | — | — | **86 %** |
+
+🔵 **Los 26 puntos de 2024 a 2025 son el dato más vendible de este pase, y no por el número sino por lo que implica:
+la pregunta del cliente dejó de ser «¿adoptamos AI?» y pasó a ser «¿gobernamos la que ya está adentro?»**. Con 92 %
+de uso estudiantil, **un proyecto de AI educativa que empieza por la capacidad y no por la política llega tarde a su
+propio problema** — que es exactamente lo que miden las cifras de gobernanza de LATAM de este pase (26 % con
+estrategia formal) y las barreras de EMEA (52,52 % frena por incertidumbre legal).
+
+**Composición, sin cambios respecto de los pases 37 y 38:** soluciones en la nube **71,22 %** del share (2024), **K-12
+45,62 %** de la adopción total, **STEM 34,78 %** de los ingresos, y **aprendizaje de idiomas como el segmento de mayor
+crecimiento**.
+
+⚠️ **Secundarias comerciales, como todo `intel/` de esta base** (ver **gap 65**).
+
+
 ### Agregado en el pase 38 del 2026-10-02 — otro par de números globales, y el dato que vale más es el de GOBERNANZA, no el de tamaño
 
 - **La cifra global de este barrido:** el mercado de AI en educación pasa de **US$ 7,52 B (2025)** a **US$ 10,6 B (2026)**, **CAGR 40,9 %**, con proyección a **US$ 42,48 B en 2030** (Research and Markets / barrido de septiembre-octubre 2026). ⚠️ **Se reporta como un punto más de la dispersión que esta base viene documentando desde el pase 13, no como «la» cifra:** sigue valiendo la regla del archivo — **no reportar un número puntual sin la fuente y sin el rango**.
@@ -354,6 +389,42 @@ players 2026. Resultado honesto:
 | EMEA | **Confirmación.** Anexo III alto riesgo, Digital Omnibus, fechas 2027-12-02 / 2028-08-02 — ya estaba, y con identificadores citables (Reglamento (UE) 2026/1744). Nada nuevo |
 | APAC | **Un hallazgo nuevo:** la oficialización de los libros de texto digitales en Japón (abajo, en `### APAC
 
+**Pase 40 (2026-10-02) — la región confirma su CAGR propio y su condición de más rápida, y aporta la única pieza viva de admisiones de esta KB; el dato nuevo es la brecha entre prioridad y gobernanza**
+
+- ✅ **Cifras propias reconfirmadas, sin cambios:** **US$ 591,6 M (2024) → US$ 1.848,1 M (2029)**, **CAGR 20,9 %**, y
+  **la región sigue siendo la de crecimiento más rápido** en AI educativa, empujada por digitalización acelerada,
+  iniciativas gubernamentales de edtech y penetración de *smartphones* en economías emergentes. ⚠️ **No se promedia
+  con el global (40,9 %) ni con North America (15,9 %).** 🔵 **Y conviene notar la comparación que sí es válida porque
+  sale de la misma firma y la misma corrida: el CAGR de APAC (20,9 %) es ~5 puntos mayor que el de North America
+  (15,9 %), con un mercado base ~1,6 veces menor.** Eso es la definición de mercado de captura.
+- 🔴 **El dato nuevo del pase, y es una brecha, no un tamaño:** **48 % de los líderes de gobernanza de APAC declara la
+  adopción de AI como prioridad estratégica para 2026**, y **57 % de las organizaciones asiáticas ya incorporó AI en
+  al menos un área** — pero el titular de las fuentes es que **las brechas de gobernanza se ENSANCHAN mientras los
+  directorios priorizan innovación**. 🔵 **Es la misma forma que esta base midió en LATAM (tendencia 32) y ahora
+  aparece en APAC: la adopción corre más rápido que la gobernanza.** La diferencia es que en APAC no hay un marco
+  común que la discipline.
+- **Encuadre regulatorio, reconfirmado y sin cambios de fondo:** **un marco legislativo común para APAC sigue siendo
+  inviable** — el paisaje es fragmentado, a diferencia de la UE. **Singapur** sostiene guías maduras de AI
+  responsable; **China** legisla contra la mala conducta algorítmica. La convergencia esperada para 2026 es **de
+  principios** (seguridad, transparencia, responsabilidad), **ejecutados de forma distinta en cada mercado**. 🔵 **Para
+  una propuesta eso significa que el expediente de cumplimiento de APAC se arma por país y no se reusa**, al revés de
+  EMEA, donde el instrumento es uno y lo que varía es la madurez del comprador.
+- 🟢 **La alta del pase, y es la única pieza de admisiones VIVA que encontró esta base en 40 pases:**
+  **`odoo14-addon-ssi-school-admission`** (**AGPL-3**, PyPI **2026-05-01**, 6 releases), de **Simetri Sinergi
+  Indonesia** — admisión escolar como módulo de **Odoo 14**, con submódulos separados para **gestión de *leads***
+  (el embudo previo a la matrícula) y **unidad operativa** (multi-sede).
+- 🔵 **Y confirma, por tercera vez igual, el patrón regional más útil de esta vertical: la capa administrativa
+  educativa de APAC se publica como *addon* de un ERP generalista, no como producto educativo** — `ssi-school-admission`
+  sobre Odoo (Indonesia), **Frappe Education** sobre Frappe (India), **GegoK12** (India), **OpenEduCat** sobre Odoo
+  (India). **La pregunta de entrada en un engagement administrativo de APAC no es qué plataforma educativa usar: es si
+  el cliente ya corre Odoo o Frappe.** Si corre, la capa es un *addon* y lo que se cotiza es la AI arriba.
+- ⚠️ **Advertencia de licencia, igual que en toda la capa ERP de esta base:** AGPL-3 y LGPL-3 son copyleft, así que
+  **el agente va afuera**, por API, con su propia licencia (**gap 46**).
+- 🔵 **Un dato de higiene de registro, útil para no perder un pase:** `odoo9-addon-openeducat-admission` y
+  `odoo10-addon-openeducat-admission` **devuelven JSON sin metadatos en PyPI** y apuntan a versiones EOL de Odoo. **El
+  módulo de admisiones de OpenEduCat hay que tomarlo del repo del proyecto, no del registro.**
+
+
 **Pase 39 (2026-10-02) — la región pasa a tener el único marco de gobernanza AGÉNTICA del mundo y un mandato curricular nacional desde tercer grado, y aporta la firma de credenciales**
 
 - 🟢 **El dato regulatorio que no tiene equivalente en ninguna otra región: Singapur lanzó en enero de 2026, vía IMDA, el primer marco de gobernanza del mundo para AI AGÉNTICA.** Para esta KB, cuyo catálogo entero son agentes que escriben dentro de un LMS, **es la única jurisdicción que legisla exactamente el objeto que vendemos**. Su filosofía es *test-and-learn*: infraestructura y herramientas primero, obligaciones recién si hacen falta. 🔵 **Consecuencia práctica: es la mejor jurisdicción del mundo para un piloto agéntico de educación con cobertura de gobernanza explícita.**
@@ -396,6 +467,65 @@ experimental) es un riesgo técnico **de esta región** tanto como de LATAM.
 **La soberanía dejó de ser retórica y es una lista.** Toda economía grande de APAC está construyendo modelo propio: **Sarvam AI** (India), **ILMU** (Malasia), **Sahabat AI** (Indonesia), **SEA-LION** (Singapur), **HyperCLOVA X Think** (Corea del Sur), **NTT Sarashina** (Japón) y **TAIDE** (Taiwán). Para un proyecto educativo en la región eso significa que **la capa de modelo es una decisión política del cliente, no técnica nuestra**: el entregable tiene que ser **agnóstico de proveedor** desde el diseño (LiteLLM o equivalente en el medio), porque el modelo lo elige el ministerio. Mercado de AI de la región: **~USD 102.000M (2025) → >USD 735.000M (2030), CAGR ~34,5%**; los compradores que dominan la vertical educativa siguen siendo **China, India y Japón**.
 
 | LATAM | **Confirmación** (Observatorio UNESCO, sandbox de la ANPD brasileña, Uruguay y el Convenio del Consejo de Europa, CENIA). Y **un vacío nuevo y medido** en la capa de skills (abajo, en `### LATAM
+
+**Pase 40 (2026-10-02) — la región tiene por fin la encuesta con N grande que convierte su «problema de gobernanza» en una tabla de cuatro cifras, y la capa administrativa resulta ser la MENOS adoptada justo donde el open source está vacío**
+
+- 🟢 **El instrumento nuevo, y es el mejor que esta base consiguió para LATAM:** la **AI in Higher Education LATAM
+  Survey 2026** del **Digital Education Council**, con **más de 30.000 estudiantes** de **29+ instituciones**, entre
+  ellas **Tecnológico de Monterrey**, **UNAM**, **UPC Perú** y la **Pontificia Universidad Católica de Chile**.
+  Complementa el relevamiento de **UNESCO IESALC** sobre **200 instituciones de educación superior en 19 países de
+  ALC** (agosto–octubre de 2025).
+- 🔴 **La adopción de la región dejó de ser el problema, y ahora el número lo prueba sin margen:**
+
+  | Métrica de adopción | Valor |
+  |---|---|
+  | Estudiantes que usan AI **regularmente** | **92 %** |
+  | Estudiantes que la usan **al menos semanalmente** | **67 %** |
+  | Docentes que la usan | **79 %** (desde **61 %**: **+18 puntos** contra la global 2025) |
+
+- 🔴 **Y la gobernanza, que es donde está el hueco, también tiene número por fin — cuatro cifras que caben en un
+  slide y ninguna llega a un tercio:**
+
+  | Condición de gobernanza institucional | % de instituciones |
+  |---|---|
+  | Tiene **estrategia formal de AI** | **26,0 %** |
+  | Tiene **política institucional** de alcance general | **18,5 %** |
+  | Tiene **mecanismos formales de evaluación** | **9,0 %** |
+  | Tiene **presupuesto dedicado a AI** | 🔴 **8,0 %** |
+
+  🔵 **El contraste es el argumento comercial entero de la región: 92 % de uso estudiantil contra 8 % de presupuesto
+  dedicado.** La tendencia 32 de esta base decía desde el pase 13 que *«LATAM dejó de tener un problema de adopción y
+  tiene uno de gobernanza»*; **este pase la convierte de diagnóstico en tabla.** ⚠️ **Y el 8 % es también la
+  advertencia de venta: la demanda es real y el presupuesto asignado no — hay que buscar quién paga antes de
+  dimensionar.**
+- 🔴 **El hallazgo de síntesis del pase, y es el que más vale para elegir dónde entrar:** la encuesta mide la adopción
+  **por dimensión institucional** y da una jerarquía clara —**enseñanza y aprendizaje 73,5 %**, **investigación
+  57,0 %**, 🔴 **administración 34,1 %**, **vinculación con el medio 20,0 %**— **y el barrido por registro de este
+  mismo pase acaba de medir que las capas administrativas (admisiones, *timetabling*, *student success*, *proctoring*)
+  son exactamente las que NO tienen una sola puerta de agente open source, en ninguno de los cuatro registros.**
+  🔵 **La brecha de oferta y la brecha de adopción son la misma brecha**, y eso es inusualmente accionable: la capa
+  menos adoptada por las instituciones de la región es también la que menos competencia open source tiene.
+  **Entrar por administración en LATAM es entrar donde no hay ni producto instalado ni alternativa gratuita.**
+- **Marco regulatorio, reconfirmado y sin cambios de fondo:** **LATAM no tiene un marco unificado de AI para
+  educación superior**. **Chile** lidera con **Política Nacional de IA desde 2021** y **una ley en discusión**;
+  **Brasil** y **Colombia** avanzaron en **estrategias nacionales sin regulación sectorial específica para
+  educación**. 🔵 **La lectura que esta base ya tenía escrita y este pase refuerza: es el régimen que el open source
+  puede cumplir hoy** (tendencia 38) — no hay un Anexo III que obligue a un expediente de conformidad antes de
+  desplegar, así que **el ciclo de piloto a producción es más corto que en EMEA**.
+- 🟢 **Y la pieza de la región que este pase midió de primera mano cambia la lectura de «LATAM produce prototipos sin
+  gobernanza»:** la telemetría de **`DUTIC-mcp`** (MIT, UNSA, Perú) **está diseñada contra la Ley 29733** —la ley
+  peruana de protección de datos personales, **nombrada en el comentario del código**—, con **dos niveles de
+  consentimiento** (identidad en `unasked` por *default*), respeto por **`DO_NOT_TRACK=1`**, estado en **chmod 600** y
+  la regla de que **nunca se envían argumentos ni resultados de herramientas**. 🔵 **Es la cuarta pieza de esta KB cuyo
+  diseño encodea el estatuto de su región y la primera que cita la ley en el código** (tendencia 136). ⚠️ **La
+  contracara, que hay que decirle a una institución pública antes de instalar: la telemetría técnica viene
+  ENCENDIDA** y su destino por *default* es infraestructura de un tercero — se apaga con una variable de entorno, pero
+  se decide antes.
+- ⚠️ **Y la pieza tiene el límite de reuso medido, para no sobrevenderla:** de sus **12 tools sólo 1 es portable tal
+  cual** y **9 son institucionales**, porque el host de la UNSA es **constante de compilación**
+  (`src/core/config.ts:11`), no variable de entorno. **Lo reusable es su *gateway* de Koha y su diseño de
+  telemetría**, no la pieza entera (ver `agents/top.md`).
+
 
 **Pase 39 (2026-10-02) — la oportunidad brasileña que esta KB venía cotizando como construcción YA ESTÁ ESCRITA y es MIT, y la pieza argentina más fresca no tiene licencia**
 
@@ -908,6 +1038,47 @@ Dónde se produce el software educativo abierto, que no es donde está la demand
 ## Opportunities by region
 
 ### North America
+
+**Pase 40 (2026-10-02) — la región aporta la pieza que cierra la capa peor abastecida de esta KB, es MIT y trae el expediente regulatorio puesto; y la fecha falsa del AI Act vuelve por OCTAVA vez**
+
+- 🟢 **El hallazgo que define la oportunidad de la región en este pase, y es el mejor de varios pases:
+  `datakind/student-success-tool` es MIT, es de esta región y resuelve la capa que esta base declaró la peor
+  abastecida de todo el sector** (gap 26, desde el pase 11). Pipeline completo de *advising* asistido por datos sobre
+  el esquema **PDP** —estándar de datos de educación superior de EE. UU.— con **AutoML**, validación de ingesta y
+  datos sintéticos. **DataKind, financiado por Google.org.** `HEAD` 2025-09-08.
+- 🟢 **Y lo que lo vuelve vendible no es el modelo, es el expediente: trae *model cards* y secciones de análisis de
+  sesgo como componentes de primera clase del árbol** (`reporting/model_card/`, `reporting/sections/bias_sections.py`),
+  más el principio ***«humans in the loop by design»*** escrito en el README: **las intervenciones las ejecuta un
+  asesor humano, no el algoritmo**. 🔵 **Eso es, literalmente, la forma del requisito estatal que esta base viene
+  registrando** —supervisión humana obligatoria y prohibición de que la AI decida en alto impacto (**Oklahoma**,
+  **Maryland**)—, **cumplido por diseño y no por cláusula.** Para un *college* que pregunta *«¿y si el modelo
+  discrimina?»*, la respuesta es un artefacto del repo, no una promesa.
+- 🔵 **El antecedente de despliegue, con la reserva puesta:** el README reporta que **John Jay College informó +32 %
+  en graduación de estudiantes de último año en dos años** con su programa CUSP. ⚠️ **Cifra auto-reportada en el
+  README del proyecto, no un estudio independiente**: sirve para abrir una conversación, no para prometer un
+  resultado.
+- ⚠️ **Las dos reservas que hay que decir antes de cotizar:** está **acoplada a PDP y a Databricks** (15.4 LTS / 16.x),
+  así que **para esta región es casi reuso y para las otras tres es adopción del armazón con esquema propio**; y lleva
+  **~13 meses sin release**, o sea franja tibia — **no archivada, pero hay que preguntar antes de depender**.
+- 🟢 **La capa de *proctoring* de la región también queda cerrada, y la respuesta es copyleft:**
+  **`openedx/edx-proctoring` (AGPL-3.0)** es el subsistema oficial de Open edX, `HEAD` del **2026-05-30**. 🔴 **Pero su
+  último release en PyPI es del 2025-04-28 — 17 meses**, así que **el repo está vivo y lo que el cliente instala con
+  `pip` tiene año y medio**. Sobre Open edX la AGPL no agrega fricción (el LMS entero lo es); fuera de Open edX **la
+  capa de integración hay que construirla**.
+- 🔴 **Y la contradicción del calendario del AI Act vuelve a aparecer en el barrido de ESTA región, por octava vez:**
+  la fuente afirma que el EU AI Act *«entra en plena vigencia en agosto de 2026»* y que **clasifica educación como
+  alto riesgo**. 🟢 **Esta vez la base tiene el instrumento exacto para corregirla, que el pase 39 resolvió:** el
+  **Artículo 50** (transparencia) **sí** rige desde el **2026-08-02**, pero el **Anexo III punto 3 —donde cae
+  educación— fue diferido al 2027-12-02** por el **Reglamento (UE) 2026/1744**. **Son dos obligaciones distintas, y la
+  fuente las fusionó en una.** 🔵 **El valor comercial es literal y conviene usarlo: llegar a la reunión con el inciso
+  y las dos fechas, cuando el cliente leyó el deck del proveedor que trae la fecha vencida.**
+- **Cifras propias de la región, sin cambios y sin promediar con el global:** **US$ 951 M (2024) → US$ 2.303,2 M
+  (2029)**, **CAGR 15,9 %**; **36 %** de la adopción global; y **41,7 %** de la oportunidad de crecimiento global del
+  sector hasta 2030. ⚠️ El CAGR regional (15,9 %) **no se promedia** con el global (40,9 %).
+- **Encuadre regulatorio, reconfirmado textualmente:** *«no existe un equivalente a la FDA para la tecnología
+  educativa»* — la decisión la toma cada escuela, distrito o universidad, con supervisión externa mínima, sobre una
+  **colcha de retazos estatal** en la que el barrido vuelve a nombrar **Colorado** y **Texas**.
+
 
 **Pase 39 (2026-10-02) — la región tiene la puerta de agente OFICIAL de su estándar de datos y está abandonada, y la pieza que mejor cumple FERPA es MIT y tiene 8 estrellas**
 
@@ -1648,6 +1819,50 @@ distrital**, en North America **no se vende adopción ni piloto — se vende exp
 **inferencia autoalojada con registro de decisión y humano en el lazo**, que es exactamente el *stack* soberano que esta
 KB ya tiene mapeado para EMEA. **El mismo entregable técnico sirve a las dos regiones por razones legales distintas.**
 ### EMEA
+
+**Pase 40 (2026-10-02) — la brecha de adopción INTRA-UE tiene número y es de 8x, las barreras del no-adoptante están cuantificadas, y la región aporta dos piezas: una viva con reserva de licencia y una muerta que alguien va a encontrar**
+
+- 🔴 **El dato nuevo que más cambia cómo se dimensiona un proyecto europeo: la adopción de AI dentro de la UE va de
+  5,21 % a 42,03 %, según el país.** **Dinamarca 42,03 %**, **Rumanía 5,21 %** — **una brecha de ocho veces dentro del
+  mismo marco regulatorio**. 🔵 **La consecuencia práctica es que «EMEA» no es un mercado para dimensionar una
+  propuesta:** el mismo entregable, con el mismo AI Act encima, cae en un país donde cuatro de cada diez empresas ya
+  usan AI y en otro donde lo hace una de cada veinte. **La madurez del cliente hay que preguntarla por país, no
+  inferirla de la región** — y esto refuerza el desdoblamiento de EMEA en dos mercados que el pase 8 ya había
+  registrado con cifra propia.
+- 🔴 **Y las barreras del que consideró AI y NO la adoptó, por fin con números, que es el dato que ordena una
+  propuesta:**
+
+  | Barrera declarada por el no-adoptante (2025) | % |
+  |---|---|
+  | Falta de experiencia relevante | **70,89 %** |
+  | **Incertidumbre sobre consecuencias legales** | **52,52 %** |
+  | Protección de datos y privacidad | **48,83 %** |
+
+  🔵 **Dos de las tres barreras principales son regulatorias, no técnicas (52,52 % + 48,83 %), y suman más que la
+  falta de capacidad.** **Eso invierte el orden de una propuesta EMEA:** el expediente de cumplimiento no es el anexo
+  del proyecto, **es la objeción principal del comprador** — y esta base ya tiene las piezas para contestarlo con
+  arquitectura en vez de con cláusulas (seudonimización FERPA de `bruchris/canvas-lms-mcp`, `readyforreview` de
+  `moodle-grading-mcp`, *model cards* y secciones de sesgo de `student-success-tool`).
+- 🔵 **Contexto de ritmo, para encuadrar:** la adopción europea sube ~**30 %** interanual, con *«cinco empresas por
+  minuto»* adoptando AI; y el diagnóstico que repiten las fuentes es que **el AI Act es un hito pero su
+  implementación inconsistente arriesga un mosaico** que frena más que la norma misma. Las tres palancas que las
+  fuentes nombran: **regulación consistente, cierre de la brecha de habilidades digitales y capital de etapa tardía.**
+- ⚠️ **La pieza EMEA viva del pase, con reserva de evidencia:** **`@timadey/proctor`** (*proctoring* con **MediaPipe**,
+  detección de rostro y **seguimiento de mirada**, `HEAD` 2026-08-08, zona `+01:00`). 🔴 **Declara MIT sólo en el
+  manifiesto de npm y no trae `LICENSE` en el árbol** (probadas 5 rutas en dos ramas), así que **no hay texto de
+  licencia que mostrarle a legal** — se cierra con un correo al autor. ⚠️ **Y le aplica el Anexo III punto 3 en su
+  forma más cara: el seguimiento de mirada es inferencia biométrica de comportamiento**, y *«monitoreo durante
+  exámenes»* está nombrado en el inciso. **Plazo: 2027-12-02.**
+- 🔴 **La pieza EMEA muerta que hay que dejar escrita porque alguien la va a encontrar:**
+  **`openfun/xblock-proctor-exam`** (**AGPL-3.0**), de **France Université Numérique** — *«la opción europea»* de la
+  capa de *proctoring* sobre Open edX — tiene su último commit el **2021-02-11**: **5,6 años**. **No proponer.** La
+  única pieza seria de la capa es `openedx/edx-proctoring` (AGPL-3.0), que es de North America.
+- 🟢 **Y el calendario regulatorio de la región queda, por fin, citable sin contradicción interna** (gap 56 cerrado en
+  el pase 39): **Artículo 50 (transparencia) en vigor desde el 2026-08-02**, alcanza al chatbot educativo **aunque no
+  sea de alto riesgo**; **Anexo III punto 3 (educación) el 2027-12-02**; **Anexo I el 2028-08-02**, y **un LMS no es
+  Anexo I**. ⚠️ **Antes de poner el número de reglamento en un documento contractual hay que verlo en EUR-Lex desde
+  una red sin el bloqueo del gap 65.**
+
 
 **Pase 39 (2026-10-02) — el calendario regulatorio queda FECHADO con número de reglamento, y la región aporta las dos piezas de mejor diseño de escritura de toda la KB**
 

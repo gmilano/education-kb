@@ -37,6 +37,60 @@ updated: 2026-10-02
 > **Pase 27 del 2026-10-01:** se agrega **la columna que faltaba en veintiséis pasadas — ¿la vertical tiene puerta de agente?** Moodle **sí** (dos conectores **MIT**, uno que escribe notas) y Canvas **sí**; 🔴 **Open edX no tiene ninguna**, y es la de mayor huella pública en LATAM e India. **Las LMS son copyleft pero las puertas son MIT**, y por eso se pueden componer. Ver la sección del pase 27, abajo.
 
 
+## 🧾 Las capas administrativas de esta vertical, medidas por registro: admisiones tiene una pieza APAC viva, y la biblioteca gana su primera puerta de agente (pase 40 del 2026-10-02)
+
+El barrido por registro del pase 40 fue a las capas administrativas que esta vertical lista como módulos de ERP pero
+nunca había medido por separado. **Dos resultados: una alta en admisiones y la puerta de agente de una plataforma que
+este archivo lleva 30 pases listando sin una sola.**
+
+### 🟢 Admisiones: el nicho se abastece con *addons* de Odoo, y el único vivo es de Indonesia
+
+| Pieza | Licencia | Última señal | Qué aporta | Región |
+|---|---|---|---|---|
+| 🟢 `odoo14-addon-ssi-school-admission` (+ `-lead`, `-operating-unit`) | **AGPL-3** ⚠️ | PyPI **2026-05-01** · 6 releases | **Admisión escolar como módulo de Odoo 14**, con submódulos separados para **gestión de *leads*** (el embudo previo a la matrícula) y para **unidad operativa** (multi-sede). Publicado por **Simetri Sinergi Indonesia** (`simetri-sinergi.id`) | **APAC** (Indonesia) |
+| ⚠️ `odoo9-addon-openeducat-admission` / `odoo10-addon-openeducat-admission` | LGPL-3.0 | 🔴 Odoo **9 y 10** — versiones EOL | El módulo de admisiones de **OpenEduCat**, empaquetado para Odoo 9/10. 🔴 **El JSON de PyPI de los dos devuelve sin metadatos** y las versiones de Odoo son históricas: **usar el módulo desde el repo de OpenEduCat, no desde el registro** | APAC (India) |
+
+🔵 **El patrón que esto confirma, y ya es el tercero igual en esta vertical:** la capa administrativa educativa se
+construye **como módulo de un ERP generalista** (Odoo, Frappe) y **no como producto educativo**, y quien la publica es
+un integrador regional de APAC — igual que **GegoK12** (India) y **Frappe Education** (India). **Para un engagement de
+admisiones la pregunta correcta no es «¿qué plataforma de admisiones open source hay?» sino «¿el cliente ya corre
+Odoo o Frappe?»** — porque si la respuesta es sí, la capa es un *addon* y la AI va arriba.
+
+⚠️ **Y la advertencia de licencia que esta vertical ya tiene escrita para su tabla de ERP aplica igual acá:** AGPL-3 y
+LGPL-3 son copyleft, así que **el agente va afuera**, leyendo por API, con su propia licencia (ver el patrón de la
+tabla de plataformas y el **gap 46**).
+
+### 🟢 Koha: la vertical de biblioteca estrena puerta de agente, y llega de costado
+
+**`Koha` —el ILS open source más desplegado del mundo— no tenía ninguna pieza agéntica en esta KB.** El pase 40
+encuentra la primera, y no es un conector de Koha: es **la mitad biblioteca de `DUTIC-mcp`** (MIT, Perú), que resuelve
+su catálogo contra **un *gateway* de Koha propio** en `src/biblioteca/infrastructure/koha/` (`kohaGateway.ts`,
+`kohaHttp.ts`, `kohaParsers.ts`, `kohaUrls.ts`), con base overridable por `DUTIC_LIBRARY_URL`.
+
+| | Antes del pase 40 | Después |
+|---|---|---|
+| **Koha** (ILS, GPL) | 🔴 sin puerta de agente | ⚠️ **gateway MIT extraíble** de `DUTIC-mcp` (2 tools: `dutic_library_search`, `dutic_library_record`) |
+| **DSpace** (repositorio) | 🔴 sin puerta (hasta el pase 39) | ⚠️ `armenian-national-library-mcp` (MIT, 23 tools, todas de lectura) — apuntado a **una** instancia |
+
+🔵 **Las dos tienen la misma forma y conviene nombrarla porque decide cómo se cotiza: son implementaciones de
+referencia apuntadas a una institución, no conectores genéricos.** Lo que se reusa es **el parser y el mapeo del
+protocolo** —que es el trabajo— y lo que se reescribe es el destino. ⚠️ **En el caso de `DUTIC-mcp` hay una reserva
+extra: el catálogo se resuelve contra una instancia de Supabase del autor** (`SAAS_SUPABASE_URL`), así que **extraer
+el *gateway* de Koha es más limpio que adoptar la pieza entera**.
+
+### 🔴 Lo que estas capas NO tienen, confirmado por doble canal
+
+**Ni *timetabling*, ni *proctoring*, ni admisiones, ni *student success*, ni accesibilidad tienen puerta MCP de
+educación en ninguno de los cuatro registros de paquetes.** Y en dos de ellas la pieza canónica **no está en ningún
+registro**: 🔴 **`UniTime`** (el planificador de horarios universitario de referencia) y 🔴 **Safe Exam Browser**
+devuelven **cero nombres** en los 903.402 de PyPI. **No es que no existan: es que se distribuyen fuera del canal que
+este barrido mide**, que es exactamente lo que la tendencia 23 de esta base dice sobre la infraestructura educativa
+realmente desplegada.
+
+🔵 **La consecuencia práctica para esta vertical:** para *timetabling* y *proctoring* el inventario hay que hacerlo
+**por sitio del proyecto**, no por registro — y para *proctoring* la respuesta ya está medida y es
+**`openedx/edx-proctoring`, AGPL-3.0** (ver `repos/foundations.md`).
+
 ## 🟢 La fila roja de Moodle se cierra con TRES opciones MIT, y aparece el lado proveedor de OneRoster (pase 38 del 2026-10-02)
 
 El pase 37 dejó esta vertical con **tres filas rojas en la tabla de puertas**: Moodle-que-pone-nota (`peancor`, frío

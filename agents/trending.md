@@ -9,6 +9,110 @@ updated: 2026-10-02
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 > No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
 
+## 2026-10-02 (pase 40) — el pase que **corre el barrido por registro sobre las cuatro capas de administración académica** y encuentra que **están vacías de agente**, con el instrumento del pase 39 **roto y devolviendo 200**
+
+**La acción 1 del pase 39 pedía barrer las capas que el 39 no barrió: *proctoring*, *timetabling*, analítica por nombre
+de herramienta, admisiones, *student success* y accesibilidad** — las dos últimas declaradas por esta base como las
+peor abastecidas de toda la KB. Se barrieron **28 términos × 4 registros**. El resultado tiene dos mitades y la
+primera es de método.
+
+### 🔴 El hallazgo que manda: el instrumento de PyPI del pase 39 está roto, y falla DEVOLVIENDO 200
+
+El pase 39 dejó escrito que *«PyPI no tiene API de búsqueda: hay que raspar el HTML de `/search/`»*. **Hoy ese
+raspado no devuelve resultados, y no devuelve un error: devuelve `HTTP 200` con una página de desafío anti-bot.**
+
+| Medición | Valor |
+|---|---|
+| Términos barridos contra `pypi.org/search/?q=` | **28** |
+| Respuestas `HTTP 200` | **28 / 28** |
+| Respuestas con `<title>Client Challenge</title>` | 🔴 **28 / 28** |
+| Paquetes extraídos | **0** |
+| Tamaño típico de la respuesta | **3.038 bytes** (una página de resultados real pesa cientos de kB) |
+| Control positivo: `pypi.org/pypi/<nombre>/json` | 🟢 **200 con datos reales** (probado en 3 paquetes) |
+
+🔴 **Por qué esto es peor que un bloqueo y hay que dejarlo escrito:** un `403` se nota. **Un `200` con cero resultados
+se registra como «ausencia confirmada por segundo canal»**, que es exactamente la frase con la que el pase 39
+justificó nueve ausencias. **Un barrido corrido hoy con el procedimiento del 39, sin mirar el `<title>`, habría
+publicado 28 ausencias falsas y las habría llamado medición.** Es la forma de error que esta base viene nombrando
+desde el principio: *el silencio se parece demasiado a la cobertura*. **Regla nueva y barata: todo raspado de HTML
+lleva un control de contenido, no sólo de código de estado.**
+
+### 🟢 Y el reemplazo existe, es mejor que el original y queda documentado: el índice `simple` de PyPI
+
+| Instrumento | Endpoint | Resultado |
+|---|---|---|
+| 🔴 Búsqueda (roto) | `pypi.org/search/?q=<término>` | 200 + desafío, 0 resultados |
+| 🟢 **Descubrimiento (nuevo)** | **`pypi.org/simple/`** | **200, 46.675.078 bytes, 903.402 nombres de paquete** |
+| 🟢 Confirmación (sin cambios) | `pypi.org/pypi/<nombre>/json` | 200 con licencia, releases y fechas |
+
+**El índice `simple` entrega el nombre de todos los paquetes de PyPI en una sola respuesta.** No trae descripciones,
+así que no reemplaza una búsqueda semántica — **pero la acción del pase 39 era buscar por *nombre de proyecto*, y para
+eso es estrictamente mejor que el buscador**: es la lista completa, sin ranking, sin paginación y sin desafío. Se
+descarga una vez y se consulta localmente con `grep`.
+
+### 🔴 La segunda mitad: las cuatro capas de administración académica están VACÍAS de agente
+
+**Barridas `proctoring`, `timetabling`, admisiones, *student success* y accesibilidad en npm, PyPI, Packagist y
+RubyGems, con el filtro de dominio educativo y descartando homónimos: no existe ni UNA puerta MCP de educación en
+ninguna de las cinco capas.** Las piezas reales que aparecen son **librerías de aplicación**, no agentes.
+
+🔵 **Y la única traza de un MCP de *timetabling* que encontró el barrido es su mitad cliente:**
+**`ucleeds-mcp-tester`** (**MIT**, npm, **1 release del 2025-04-25**, **sin repositorio**) se describe como *«Test
+client for UCLeeds Timetabling MCP integration»*. **El tester se publicó; el servidor que testea, nunca.** Es la
+evidencia más limpia que esta base tiene de que alguien construyó la pieza que falta y no la liberó.
+
+### 🔴 Los homónimos, y acá hay un hallazgo de categoría: el mundo de los agentes se quedó con las dos palabras
+
+El pase 39 llevaba la cuenta en **9 colisiones**. Este pase suma **once más**, y no son ruido aleatorio: **dos
+términos centrales de esta vertical fueron recolonizados por el vocabulario del propio mundo agéntico.**
+
+**«Proctor» ya no significa vigilar un examen. Significa vigilar al agente.**
+
+| Candidato | Qué es en realidad | Licencia |
+|---|---|---|
+| ⛔ `proctor-mcp` | *«Human oversight for MCP agents. The human-in-the-loop the MCP spec asks for and does not provide»* | — |
+| ⛔ `proctor-skill` | interroga al desarrollador sobre cambios de rama antes de permitir `git push` | — |
+| ⛔ `@genramzi/proctor` | *«Audit what coding agents said against what they actually did»* | — |
+| ⛔ `proctor-ai` (PyPI) | framework de *prompt engineering* estructurado | MIT |
+| ⛔ `agentproctor`, `sqlproctor`, `onion-proctor` | supervisión de agentes / SQL / red | — |
+| ⛔ `matthewproctor-postcodes` | **el apellido de una persona** — códigos postales australianos | — |
+
+**«Caliper» tiene seis homónimos y UNA sola pieza educativa.** El estándar de analítica de 1EdTech comparte nombre
+con, al menos: `caliper-ai` (**MIT**, costo de AI de *coding agents*), `caliper-py` (**MIT**, *tracker* de
+experimentos ML), `caliper-reader` (**BSD**, *profiling* de HPC de **Lawrence Livermore**), `caliper-sdk`
+(**GPL-3.0**, observabilidad de LLM), `caliper` (**MPL-2.0**, medición de cambios en paquetes) y `@dendiem/caliper`
+(**MCP de revisión de UI**). 🔵 **La única educativa del barrido es `timeback-caliper`**, y hay que leerla con
+reserva (ver abajo).
+
+**Dos homónimos más, los dos de dominio adyacente y los dos verosímiles:** ⛔ `sih-br-mcp` — **admisiones
+HOSPITALARIAS** de Brasil (DATASUS SIH/SUS), que en un barrido por `admissions` entra como si fuera admisión
+universitaria; y ⛔ `timetable-api-node` — **horarios del transporte público de Lviv**, que entra por `timetable`.
+
+### Las altas del pase, con el dato crudo
+
+| Pieza | Capa | Licencia (dónde se leyó) | `HEAD` / release | Veredicto |
+|---|---|---|---|---|
+| `datakind/student-success-tool` | **student success** | 🟢 **MIT** — `LICENSE.md` del árbol (*«Copyright (c) 2022 DataKind»*) | `HEAD` **2025-09-08** / PyPI **2025-08-05**, 14 releases | 🟢 **ALTA — cierra la capa que esta base declaró peor abastecida.** Ver `repos/foundations.md` |
+| `openedx/edx-proctoring` | **proctoring** | **AGPL-3.0** — `LICENSE.txt` en `master` | `HEAD` **2026-05-30** / PyPI **2025-04-28**, 253 releases | 🟢 **ALTA — es el subsistema oficial de Open edX.** Copyleft, y **repo vivo con registro parado hace 17 meses** |
+| `Drone9/mereos` | **proctoring** | 🟢 **MIT** — `LICENSE` del árbol **y** campo npm | **2026-08-28** (repo y registro **coinciden**) | 🟢 **ALTA a `agents/top.md`** |
+| `@timadey/proctor` | **proctoring** | ⚠️ **MIT sólo en el manifiesto npm** — sin `LICENSE` en el árbol | **2026-08-08** (coinciden) | ⚠️ **ALTA con reserva de evidencia** (clase del gap 81) |
+| `odoo14-addon-ssi-school-admission` | **admisiones** | **AGPL-3** | PyPI **2026-05-01**, 6 releases | 🟢 **ALTA a verticales — y es APAC** (Simetri Sinergi, Indonesia) |
+| `timeback-caliper` | **analítica** | ⚠️ **MIT** en `license_expression` de PyPI | PyPI **2026-07-18**, **55 releases** | ⚠️ 🔴 **Su repositorio declarado (`superbuilders/timeback-dev-python`) NO es legible por `git ls-remote`** — cuarta instancia de la tendencia 140 |
+
+### 🔴 Lo que el barrido encontró MUERTO, y conviene tenerlo escrito antes de que alguien lo proponga
+
+| Pieza | Licencia | Última señal | Antigüedad |
+|---|---|---|---|
+| `openfun/xblock-proctor-exam` | AGPL-3.0 | **2021-02-11** | **5,6 años** — y es de **France Université Numérique**, o sea la opción EMEA de la capa |
+| `ucsd-ets/caliper-tracking` (`openedx-caliper-tracking`) | AGPL-3.0 | **2020-10-12** | **6 años** |
+| `groovetch/grvlms-proctoring` | AGPL-3.0 | **2020-11-09** | **5,9 años** |
+| `proctoru-xblock` | 🔴 **sin licencia** | **2016-08-17** | **10,1 años** |
+
+🟢 **Y una confirmación por tercer canal independiente de algo que esta base ya sabía:** `@learninglocker/xapi-agents`
+tiene su **última publicación el 2019-07-11**. La tendencia 56 (*«el LRS más instalado del sector tiene cinco años sin
+un commit y se presenta como producto vivo»*) **queda confirmada ahora también desde el registro de paquetes**, que es
+un canal distinto del repo y del sitio.
+
 ## 2026-10-02 (pase 39) — el pase que **deja de preguntarle a GitHub y le pregunta al REGISTRO por el nombre del PROYECTO**, que es la acción 1 del pase 38 — y en una tarde encuentra **seis piezas que treinta y ocho pases de barrido sobre GitHub nunca vieron**
 
 **La hipótesis del pase 38 era que el canal estaba mal, no el filtro, y queda confirmada.** El 38 descubrió que el

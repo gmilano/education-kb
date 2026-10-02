@@ -8,6 +8,126 @@ updated: 2026-10-02
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 
+## 2026-10-02 (pase 40) — **el dato crudo del barrido sobre las capas de administración académica: 28 términos × 4 registros, 1 instrumento roto, 1 instrumento nuevo, 6 altas y 5 capas confirmadas vacías de agente**
+
+**Consigna ejecutada: la acción 1 del pase 39** — correr el barrido por registro sobre las capas que el 39 no barrió
+(*proctoring*, *timetabling*, analítica por nombre de herramienta, admisiones, *student success*, accesibilidad).
+
+### Los 28 términos, para que el barrido sea repetible
+
+```
+proctoring proctor safe-exam-browser exam-monitoring
+timetable timetabling unitime school-timetable
+learninglocker ralph-lrs trax-lrs lrsql openlrs yet-analytics watershed-lrs caliper-sensor
+admissions student-application enrollment
+student-success early-warning student-retention academic-advising
+accessibility-checker alt-text screen-reader wcag-audit a11y-report
+```
+
+### 🔴 Estado de los cuatro endpoints — uno cambió desde el pase 39 y hay que corregir la tabla
+
+| Registro | Endpoint | Pase 39 | **Pase 40** |
+|---|---|---|---|
+| npm | `registry.npmjs.org/-/v1/search?text=<t>` | 200 | 🟢 **200, resultados reales** |
+| Packagist | `packagist.org/search.json?q=<t>` | 200 | 🟢 **200, resultados reales** |
+| RubyGems | `rubygems.org/api/v1/search.json?query=<t>` | 200 | 🟢 **200, resultados reales** |
+| PyPI | `pypi.org/search/?q=<t>` (HTML) | 200 | 🔴 **200 pero DESAFÍO ANTI-BOT — 0 resultados en 28/28** |
+
+🔴 **El procedimiento del pase 39 para PyPI ya no mide nada, y su modo de falla es el peor posible: código 200.** La
+respuesta pesa **3.038 bytes** y lleva `<title>Client Challenge</title>`. **Sin un control de contenido, 28 ausencias
+falsas se habrían publicado como medidas.**
+
+### 🟢 El instrumento de reemplazo, medido
+
+```
+curl -s https://pypi.org/simple/ -o pypi_simple.html
+#   -> HTTP 200, 46.675.078 bytes
+grep -o '>[^<]*</a>' pypi_simple.html | sed 's/^>//; s|</a>$||' > pypi_names.txt
+#   -> 903.402 nombres de paquete
+grep -i 'proctor' pypi_names.txt      # descubrimiento local, sin red
+curl -s "https://pypi.org/pypi/<nombre>/json"   # confirmación: licencia, releases, fechas
+```
+
+**Rendimiento del canal nuevo, por término:**
+
+| Término | Nombres en PyPI | Término | Nombres en PyPI |
+|---|---|---|---|
+| `proctor` | **22** | `admission` | **13** |
+| `proctoring` | 6 | `enrol` | 25 |
+| `timetabl` | **37** | `student-success` | **1** |
+| `unitime` | **0** | `early-warning` | **0** |
+| `lrs` | 57 | `retention` | 23 |
+| `xapi` | **169** | `advising` | 2 |
+| `caliper` | 14 | `accessib` | 67 |
+| `wcag` | 9 | `a11y` | 37 |
+| `safeexam` / `safe-exam` | **0 / 0** | | |
+
+🔵 **Dos ceros que valen como dato:** `unitime` (el planificador de horarios universitario de referencia) **no publica
+en PyPI**, y **`safe-exam-browser` tampoco** — las dos piezas canónicas de sus capas viven fuera del registro, que es
+la misma forma que la tendencia 133 del pase 39 describió para la infraestructura educativa desplegada.
+
+### Las 6 altas con su dato crudo
+
+| Paquete / repo | Licencia (dónde se leyó) | `HEAD` | Último release | Releases | Lenguaje | Región |
+|---|---|---|---|---|---|---|
+| `datakind/student-success-tool` | 🟢 **MIT** — `LICENSE.md` del árbol | **2025-09-08** | **2025-08-05** | 14 | Python (3.10–3.12) | **North America** |
+| `openedx/edx-proctoring` | **AGPL-3.0** — `LICENSE.txt` (`master`) | **2026-05-30** | **2025-04-28** | **253** | Python | **North America** (Open edX / Axim) |
+| `Drone9/mereos` | 🟢 **MIT** — `LICENSE` + campo npm | **2026-08-28** | **2026-08-28** | 19 | JavaScript | Sin determinar (`+05:00`) |
+| `Timadey/proctor` (`@timadey/proctor`) | ⚠️ **MIT sólo campo npm** — 🔴 sin `LICENSE` en el árbol | **2026-08-08** | **2026-08-08** | 7 | JavaScript | **EMEA** (`+01:00`) |
+| `odoo14-addon-ssi-school-admission` | **AGPL-3** | — (PyPI) | **2026-05-01** | 6 | Python | **APAC** (Indonesia) |
+| `timeback-caliper` | ⚠️ **MIT** — `license_expression` de PyPI | 🔴 **repo ilegible** | **2026-07-18** | **55** | Python ≥3.12 | Sin determinar |
+
+🔴 **`timeback-caliper` es la cuarta instancia de la tendencia 140 en dos pases:** declara
+`Repository: github.com/superbuilders/timeback-dev-python` y **`git ls-remote` falla**. 55 releases y una licencia
+permisiva declarada, con **cero superficie de auditoría**. Se registra, no se recomienda.
+
+### 🔴 La verificación de licencia que se contradijo a sí misma — clase de evidencia nueva
+
+| Pieza | Campo del registro | Archivo del árbol | Veredicto |
+|---|---|---|---|
+| `exam-guard` (npm, 113 releases, `HEAD` 2025-10-09) | **ISC** | 🔴 **Apache-2.0** (`LICENSE` en `main`) | **CONTRADICCIÓN** |
+
+🔵 **Esto no es el gap 81 y conviene no confundirlos.** El gap 81 es *«la licencia está sólo en el manifiesto»* —
+ausencia de una de las dos fuentes. **Esto es peor: las dos fuentes existen y dicen cosas distintas.** Para un
+entregable, **manda el archivo del árbol** (es el instrumento que el pase 39 ya había sancionado), pero la
+contradicción **hay que resolverla con el autor antes de usar la pieza**, porque mientras exista, cualquiera de las
+dos licencias es citable de buena fe por un tercero. **Y la diferencia no es cosmética: ISC y Apache-2.0 difieren en
+la cláusula de patentes**, que es justo lo que un cliente grande revisa.
+
+### 🔴 Ruido medido y rechazos, para que el próximo pase no lo vuelva a pagar
+
+**El filtro importa más que el término.** El primer barrido, filtrando por `accessib|a11y|wcag` junto con los términos
+educativos, devolvió **256 candidatos** en npm y **prácticamente todos eran herramientas de accesibilidad web
+genéricas** (`eslint-plugin-jsx-a11y`, `@storybook/addon-a11y`, `cypress-a11y-report`, `wick-a11y`…). **Nada de
+educación.** Exigiendo un *token* de dominio educativo y cruzándolo con señal agéntica, los 256 bajaron a **22**, y de
+esos **11 eran homónimos**. 🔵 **Regla: en esta capa, «accesibilidad» sin un término educativo al lado es un término
+inútil** — el ecosistema de a11y web lo satura por completo.
+
+**Los 11 homónimos rechazados, con la evidencia:**
+
+| Candidato | Qué es | Por qué entró |
+|---|---|---|
+| ⛔ `proctor-mcp` | *human-in-the-loop* para agentes MCP | `proctor` |
+| ⛔ `proctor-skill` | interroga al dev antes de `git push` | `proctor` |
+| ⛔ `@genramzi/proctor` | audita lo que hizo un *coding agent* | `proctor` |
+| ⛔ `proctor-ai` (PyPI, MIT) | *prompt engineering* | `proctor` |
+| ⛔ `agentproctor` / `sqlproctor` / `onion-proctor` | supervisión de agentes / SQL / red | `proctor` |
+| ⛔ `matthewproctor-postcodes` | **apellido** — códigos postales AU | `proctor` |
+| ⛔ `caliper-ai` (MIT) / `caliper-py` (MIT) / `caliper-reader` (BSD, LLNL) / `caliper-sdk` (GPL-3.0) / `caliper` (MPL-2.0) / `@dendiem/caliper` | costo de AI, *tracker* ML, *profiling* HPC, observabilidad LLM, cambios de paquete, revisión de UI | `caliper` |
+| ⛔ `sih-br-mcp` | **admisiones hospitalarias** de Brasil (DATASUS) | `admissions` |
+| ⛔ `timetable-api-node` | **transporte público de Lviv** | `timetable` |
+| ⛔ `@moinsen-dev/tool-teacher` | inventario de herramientas de dev | `early-warning` |
+| ⛔ `@aep-foundation/*` | *Agent Enrollment Protocol* — credenciales de agente | `enrollment` |
+| ⛔ `proctoring-sdk` (npm, 14 releases) | 🔴 **sin licencia y sin repo** | `proctoring` |
+
+### 🔴 Las 5 ausencias confirmadas por doble canal
+
+**No hay puerta MCP de educación para:** *proctoring*, *timetabling*, admisiones, *student success* ni accesibilidad —
+**en ninguno de los cuatro registros**, con el canal npm/Packagist/RubyGems sano y el canal PyPI reemplazado por el
+índice `simple`. Lo que existe en esas capas son **librerías de aplicación** (las 6 altas de arriba) y **ningún
+agente**. 🔵 **La única traza de un MCP de *timetabling* es `ucleeds-mcp-tester`** (MIT, 1 release 2025-04-25, sin
+repo): *«Test client for UCLeeds Timetabling MCP integration»* — **el cliente de prueba se publicó y el servidor no**.
+
 ## 2026-10-02 (pase 39) — **el dato crudo del barrido por REGISTRO: 23 términos × 4 registros, 8 altas, 5 homónimos rechazados y 9 ausencias confirmadas por segundo canal**
 
 **El instrumento de este pase no es GitHub.** Es la acción 1 del pase 38: consultar **npm, PyPI, Packagist y

@@ -7,6 +7,7 @@ updated: 2026-10-02
 # 📡 Tendencias — education
 
 > Ventana de investigación: septiembre 2026. Verificado 2026-09-30; el pase 11, el 2026-10-01.
+> **Pase 40 del 2026-10-02:** **se ejecutan las tres acciones del pase 39 y las tres rinden, pero la primera rinde descubriendo que el instrumento del pase anterior está roto — y roto de la peor manera, devolviendo `200`.** 🔴 **`pypi.org/search/` responde `HTTP 200` con una página de desafío anti-bot en 28 de 28 términos**: un barrido corrido con el procedimiento del pase 39, sin control de contenido, **habría publicado 28 ausencias falsas y las habría llamado medición** (tendencia **141**). 🟢 **El reemplazo es mejor que el original y queda documentado: `pypi.org/simple/` devuelve 200 con 46.675.078 bytes y 903.402 nombres de paquete** — descubrimiento completo, sin ranking ni paginación (tendencia **142**). 🔴 **Y el barrido sobre las cuatro capas de administración académica devuelve el resultado más fuerte del pase, que es un vacío: no existe NI UNA puerta MCP de educación para *proctoring*, *timetabling*, admisiones, *student success* ni accesibilidad, en ninguno de los cuatro registros** — la única traza es `ucleeds-mcp-tester`, **el cliente de prueba de un MCP de *timetabling* cuyo servidor nunca se publicó** (tendencia **144**). 🟢 **La mejor alta en varios pases cierra la capa que esta base declaró la peor abastecida desde el pase 11: `datakind/student-success-tool` es MIT, y lo que la vuelve vendible no es el modelo sino que trae *model cards* y secciones de análisis de sesgo en el árbol**, con *«humans in the loop by design»* escrito en el README — la forma exacta del requisito estatal de North America (tendencia **148**). 🟢 **La capa de *proctoring* queda cerrada y la respuesta es copyleft:** `openedx/edx-proctoring` (**AGPL-3.0**), 🔴 **con `HEAD` de 4 meses y último release de 17** — de donde sale la regla de que **`HEAD` mide al proyecto y el release mide lo que el cliente instala** (tendencia **147**). ✅ **Acción 2 cumplida y el resultado es opuesto en las dos piezas por UNA línea de código: `mcp-usc` es 88 % portable (80 de 91 tools) porque su host es `os.getenv`; `DUTIC-mcp` es 8 % (1 de 12) porque el suyo es `export const HOST`** (tendencia **145**). 🔵 **Y al medirla apareció el mejor dato de LATAM en varios pases: la telemetría de `DUTIC-mcp` está escrita contra la Ley 29733 y la nombra en el código.** ✅ **Acción 3 cumplida y PROBADA, no descrita: el *gateway* de partición de tools existe, son 175 líneas de stdlib, y se verificó que recorta `tools/list` de 7 a 3, bloquea `delete_document` y `call_method` con `-32601` sin que lleguen al upstream, y que con allowlist vacía expone cero tools** (**P85**). 🔴 **Dos clases de evidencia nuevas: la licencia que se CONTRADICE entre el manifiesto y el árbol** (`exam-guard`: ISC contra Apache-2.0 — distinto del gap 81, y peor) y **la colonización del vocabulario: «proctor» ya significa supervisar al AGENTE, y «caliper» tiene seis homónimos no educativos y una sola pieza educativa** (tendencias **143** y **146**). 🔵 **Y el hallazgo de síntesis, que es el más accionable: en LATAM la dimensión menos adoptada es ADMINISTRACIÓN (34,1 %) — justo la capa que este pase midió vacía de open source. La brecha de oferta y la de adopción son la misma brecha.** Ver las tendencias **141**–**148** y los patrones **P85**–**P87**.
 > **Pase 38 del 2026-10-02:** **se fue a buscar SUCESIÓN para las tres dependencias congeladas del pase 37 y el resultado es asimétrico: dos cierran con piezas permisivas vivas (tres MIT para Moodle, Apache-2.0 + MIT para OneRoster) y la tercera no — y el fork que parecía salvarla está 2 commits adelante, los dos de configuración de Cloud Run** (tendencias **132** a **135**, `gap 78` y `gap 79`).
 > **Pase 34 del 2026-10-02:** **el pase completa el hallazgo del 33 en la dirección contraria y el resultado es una regla sobre el instrumento, no sobre un repo.** El pase 33 probó que el registro **no ve** open source real (`learnmcp-xapi`, invisible en PyPI y npm). 🔴 **Este pase encontró el falso positivo: `quizlar/mcp-server` es MCP, educativo, activo y su `LICENSE` dice MIT — y no tiene una línea de código.** Su `server.json` declara **`remotes` → `https://mcp.quizlar.app/mcp/`** detrás de una API key `sk-qz-<32>`: **la MIT licencia el manifiesto, la implementación es un servicio alojado propietario.** Es la **colisión 9** y es de **clase nueva** —colisiona la **superficie de la licencia**, no el nombre— y el control que la descarta **es un campo** (tendencias **103** y **104**). ✅ **Acción 1 del pase 33 ejecutada sobre las cuatro ausencias del mapa por estándar: Caliper, CASE y CEASN quedan CONFIRMADAS con los dos instrumentos** —y la de CEASN es **más** robusta porque **el buscador no reconoce la sigla**—, 🟢 **mientras la de Open Badges era MITAD FALSA**: la puerta MCP no existe, pero **sí existe la implementación OB 3.0 que esta base declaraba inexistente** (`Schroedinger-Hat/certo`, ⚠️ **AGPL-3.0**, OB 3.0 + W3C VC + DIDs) **y el validador oficial del consorcio** (`1EdTech/digital-credentials-public-validator`, **Apache-2.0** ✅). ✅ **Gap 64 CERRADO en negativo con tres instrumentos: ningún LRS publica puerta MCP propia** (Docker Hub de `yetanalytics` **6 imágenes, ninguna MCP**; `lrsql` **0 menciones**; `ralph-malph` **14 extras, ninguno MCP**) — 🟢 **y el instrumento regaló el sitio del upstream: un `ralph[mcp]` encaja en la convención sin fork** (**P71**). 🟢 **Dos altas por el nombre de la organización, no por término: `yetanalytics/datasim` (Apache-2.0) es la pieza que permite PROBAR un LRS antes de cotizarlo**, y cubre los xAPI Profiles que el pase 25 buscó sin encontrar; 🔴 **y una no-alta declarada, `persephone`, con 10 rutas de licencia en 404 y Docker parado en 2023** (**gap 70**). 🟢 **Gap 63 partido: arquitectura CERRADA por evidencia de archivo** (los tres `config/plugins/*.yaml` en **200**), **fecha RECLASIFICADA** — **8 rutas portadoras de versión, las 8 en 404: el proyecto no se versiona en su árbol**, así que no es el proxy. 🟢 **Y aparece la TERCERA variante de la primitiva anti-bucle, que frena en la CONFIGURACIÓN** (`RATE_LIMIT_PER_MINUTE=30`, `MAX_BODY_SIZE=16384`): **frena solo, cuesta dos variables de entorno, y la lección es que el mecanismo correcto depende de la FORMA DEL DAÑO** —confirmación para el daño irreversible y discreto, techo de caudal para el acumulativo— (tendencia **109**). ✅ **P69 DECIDIDO, y gana la licencia contra el número de adopción: `qtism/qtism` tiene ~10× las descargas (218.212 / 3.104 al mes) pero es GPL-2.0-only en LAS 293 RELEASES**, y `@longsightgroup/qti3-cli` es **MIT, con cero dependencias de terceros y además el más rápido** (41 releases desde 2026-05-21, última modificación **2026-10-01**). 🔴 **Y el hallazgo estructural que obliga a releer todo `intel/`: las primarias multilaterales son inalcanzables POR CLASE — 0 de 11 contra 5 de 5 comerciales.** Toda cifra de mercado y toda fecha regulatoria de esta base se apoya en secundarias comerciales **por construcción del entorno**; el **gap 56 pasa de acción pendiente a límite de clase**, y lo que hay que pedir por fuera vale más que el AI Act: el *working paper* de **UNESCO IESALC** sobre **200 instituciones en 19 países** (tendencia **106**, **gap 65**).
 > **Pase 33 del 2026-10-02:** **el hallazgo es de consistencia interna y es incómodo: el gap 60 del pase 32 se contradecía con cuatro archivos de esta propia base.** 🔴 **Mitad xAPI del gap 60 FALSA: `DavidLMS/learnmcp-xapi` (MIT, 3 tools — 1 escribe, 2 leen) es la puerta MCP de xAPI, y estaba acá desde el pase 6**, con la frase *«desde el pase 6»* escrita al lado en el mapa por estándar. ✅ **Mitad QTI CONFIRMADA por un segundo instrumento independiente** — y ésa es la única ausencia de esta KB que cumple el requisito de dos instrumentos (tendencia **101**). 🔴 **La causa está medida, y es el instrumento: `learnmcp-xapi` no está en ningún registro de paquetes** (PyPI **404**, npm **`total: 0`**, se instala desde el código) y **`lrsql` se distribuye por Docker Hub**, así que un barrido que arma su lista de candidatos en npm/PyPI/Packagist **tiene cero probabilidad de verlas** (tendencia **99**). ✅ **Gap 51 CERRADO en negativo y medido en tres registros:** `opencase` devuelve **7 / 404 / 665** resultados con **cero del dominio** —son cajas de skins de videojuego, `opencage` y `opencast`— y `cass` devuelve **26.726** en Packagist (Cassandra, **USPS CASS**); el instrumento que sí funciona es **el nombre de la organización** (tendencia **100**). 🟢 **Las tres piezas de la capa de telemetría quedan FECHADAS: `lrsql` (Apache-2.0) publicó `v0.9.9` el 2026-10-01 —ayer—, 112 tags y seis releases en 2026**; **Ralph (MIT, France Université Numérique) está vivo en `main` y parado en el registro** (último release 2024-07-11 con `[Unreleased]` activo: **se instala desde git, no desde PyPI**); y **`hub.docker.com` entra como canal de verificación nuevo**, que es el sustituto de `api.github.com` —403— para lo que se distribuye como contenedor. ✅ **`coursecode` medido en el artefacto: 15 tools definidas / 15 dispatch, sin aliasing, y DOS escriben** (`_build` con **`enum: ['cmi5','scorm2004','scorm1.2','lti']` en el `inputSchema`** — los cuatro estándares pasan de prosa del README a contrato de tool— y `_narration`, que escribe MP3 llamando a un TTS pago). 🟢 **Y aparece la misma primitiva de seguridad del pase 30 reinventada por otro mecanismo, con una asimetría que hay que cotizar: `openedx-mcp` frena en el servidor (confirm token) y `coursecode` frena en el contrato (anotaciones MCP + `dryRun`) — sólo el primero frena solo** (tendencia **102**). 🟢 **`qti3-cli` (MIT) tiene cero dependencias de terceros en toda su cadena: un wrapper MCP agrega exactamente una** (**P69**). ⚠️ **Gap 56: la acción se ejecutó y el resultado es negativo — `eur-lex.europa.eu` y `data.europa.eu` están BLOQUEADOS por el proxy.** Van **siete fuentes secundarias concordantes y cero primarias**: Anexo III → **2027-12-02**, art. 50 → **2026-08-02** vigente. **No citar como primaria.** ⚠️ **Sin permiso de ejecución en este entorno: instalar dependencias de terceros** — por eso `tools/list` de `coursecode` quedó sin correr (**gap 62**) y toda medición de este pase es lectura de artefacto o de registro, nunca de proceso.
@@ -3392,6 +3393,313 @@ oficial en npm bajo **Apache-2.0** hace **doce meses**, con **un solo release**,
 legible**. No es un proyecto abandonado por una persona: es un artefacto oficial de un consorcio grande, y aun así
 **el único canal de auditoría que queda es el tarball**. ⚠️ **Verificar siempre con `git ls-remote`, nunca con `curl`**
 (que devuelve 403 para todo, exista o no — tendencia 131).
+
+## 141. El instrumento que falla devolviendo `200` es peor que el que falla devolviendo `403`, y esta base acaba de perder uno así (agregado en el pase 40 del 2026-10-02)
+
+El pase 39 documentó su procedimiento de barrido por registro y dejó escrito, para PyPI, que *«no hay API de búsqueda:
+hay que raspar el HTML de `/search/`»*. **Ese raspado ya no funciona.**
+
+| Medición del pase 40 | Valor |
+|---|---|
+| Términos consultados contra `pypi.org/search/?q=` | **28** |
+| Respuestas con código `HTTP 200` | **28 / 28** |
+| Respuestas cuyo `<title>` es **`Client Challenge`** | 🔴 **28 / 28** |
+| Paquetes extraídos del HTML | **0** |
+| Peso típico de la respuesta | **3.038 bytes** |
+| Control positivo (`pypi.org/pypi/<nombre>/json`) | 🟢 **200 con datos reales**, 3 de 3 |
+
+🔴 **El problema no es que PyPI haya puesto una protección anti-bot. El problema es el modo de falla.** Esta base
+tiene registrados muchos bloqueos —`github.com` 403, `eur-lex.europa.eu` 000, `arxiv.org` inalcanzable (gaps 58, 65,
+72)— y **todos se notan**: devuelven un error y el pase lo anota como límite de entorno. **Este devuelve `200` y una
+página válida con cero resultados**, que es indistinguible de *«busqué y no hay nada»*.
+
+🔵 **Y ahí está el daño concreto, porque es exactamente la frase que el pase 39 usó:** el 39 cerró **nueve ausencias**
+calificándolas de *«confirmadas por segundo instrumento»*, y uno de sus dos instrumentos era éste. **Un barrido
+corrido hoy con el procedimiento del 39, sin mirar el contenido, habría publicado 28 ausencias falsas presentándolas
+como medición.** Es la forma de error que el encabezado de la sección de gaps de este archivo nombra desde el primer
+pase: *un gap informado es información; el silencio se parece demasiado a la cobertura.* **Acá el silencio venía
+firmado con un `200`.**
+
+**La regla que deja, y es de dos líneas:** **todo raspado de HTML lleva un control de CONTENIDO, no sólo de código de
+estado.** Un *assert* sobre un elemento que la página de resultados real siempre tiene —en este caso
+`package-snippet__name`— convierte un falso negativo silencioso en un fallo ruidoso. **Y una ausencia sólo se declara
+cuando el instrumento que la midió pasó su propio control positivo en la misma corrida.**
+
+## 142. El índice completo de un registro es un mejor instrumento de descubrimiento que su buscador, y es el que nadie usa (agregado en el pase 40 del 2026-10-02)
+
+Roto el buscador de PyPI (tendencia 141), el reemplazo no fue otra búsqueda: fue **bajarse la lista entera**.
+
+| Instrumento | Endpoint | Resultado medido |
+|---|---|---|
+| 🔴 Búsqueda | `pypi.org/search/?q=<t>` | 200 + desafío, **0 resultados** |
+| 🟢 **Descubrimiento** | **`pypi.org/simple/`** | **200**, **46.675.078 bytes**, **903.402 nombres** |
+| 🟢 Confirmación | `pypi.org/pypi/<nombre>/json` | 200 con licencia, releases, fechas |
+
+**El índice `simple` es la lista de todos los paquetes de PyPI en una sola respuesta.** No trae descripciones, así que
+no sustituye una búsqueda semántica — **pero la consigna del pase 39 era buscar por *nombre de proyecto*, y para eso
+es estrictamente superior al buscador**: es completo, no tiene ranking que sesgue el orden, no pagina, no se puede
+bloquear por término y **se consulta localmente, así que barrer 28 términos cuesta una descarga en vez de 28
+peticiones**.
+
+🔵 **La generalización, que es lo que vale para los próximos pases:** varios registros publican su índice completo o
+su volcado, y **el índice es inmune a las tres cosas que arruinan un barrido por buscador** —el ranking, la
+paginación y la protección anti-bot—. **Cuando se busca por nombre, hay que pedir el índice; cuando se busca por
+descripción, hay que usar el buscador y controlarlo.**
+
+🔴 **Y el primer dato que el índice entregó es un par de ceros que valen como hallazgo:** **`unitime`** —el
+planificador de horarios universitario de referencia— y **`safe-exam-browser`** devuelven **cero nombres en los
+903.402**. **Las piezas canónicas de dos de las capas barridas no están en el registro en absoluto.** No es que no
+existan: **se distribuyen fuera del canal**, que es la misma forma que la tendencia 23 describió para la
+infraestructura educativa realmente desplegada. **Para esas dos capas el inventario hay que hacerlo por sitio del
+proyecto.**
+
+## 143. El mundo de los agentes se quedó con el vocabulario de esta vertical: «proctor» ya significa supervisar al AGENTE (agregado en el pase 40 del 2026-10-02)
+
+Esta base lleva una cuenta de colisiones de nombre desde el pase 7, y el pase 39 la dejó en **nueve**. El pase 40 suma
+**once**, y el hallazgo no es la cantidad: es que **dos términos centrales de la vertical educativa fueron
+reutilizados por el propio ecosistema agéntico para significar otra cosa.**
+
+**«Proctor», en un registro de paquetes de 2026, casi nunca es un examen:**
+
+| Paquete | Qué significa «proctor» ahí |
+|---|---|
+| `proctor-mcp` | *«Human oversight for MCP agents. The human-in-the-loop the MCP spec asks for and does not provide»* |
+| `proctor-skill` | interroga al desarrollador sobre cambios de rama **antes de permitir `git push`** |
+| `@genramzi/proctor` | *«Audit what coding agents said against what they actually did»* |
+| `proctor-ai` (MIT) | framework de *prompt engineering* |
+| `agentproctor`, `sqlproctor`, `onion-proctor` | supervisión de agentes, de SQL, de red |
+| `matthewproctor-postcodes` | 🔵 **un apellido** — códigos postales australianos |
+
+🔵 **El desplazamiento semántico es lógico y conviene entenderlo porque va a empeorar: «proctor» es la palabra inglesa
+para quien supervisa a alguien que podría hacer trampa, y en 2026 el que podría hacer trampa es el agente.** La
+vertical educativa perdió la palabra ante su propio caso de uso invertido.
+
+**«Caliper» tiene seis homónimos no educativos y UNA pieza educativa:**
+
+| Paquete | Qué es | Licencia |
+|---|---|---|
+| `caliper-reader` | *profiling* de HPC de **Lawrence Livermore** | BSD |
+| `caliper-ai` | costo de los *coding agents* | MIT |
+| `caliper-py` | *tracker* de experimentos de ML | MIT |
+| `caliper-sdk` | observabilidad de LLM | GPL-3.0 |
+| `caliper` | medición de cambios en paquetes | MPL-2.0 |
+| `@dendiem/caliper` | MCP de revisión de UI | — |
+| 🟢 **`timeback-caliper`** | **cliente del estándar Caliper de analítica educativa** | ⚠️ MIT (sólo registro) |
+
+🔴 **Uno a seis, y la educativa es la que tiene la evidencia más débil del grupo** (su repositorio declarado no es
+legible: tendencia 140). **Para el estándar de analítica de 1EdTech, buscar por «caliper» en un registro es
+inutilizable**; hay que desambiguar con el nombre largo, igual que el pase 35 estableció para CASE
+(*«Competencies and Academic Standards Exchange»*, no la sigla).
+
+**Y dos homónimos más, de dominio adyacente, que son los peligrosos porque son verosímiles:** ⛔ `sih-br-mcp` son
+**admisiones HOSPITALARIAS** de Brasil (DATASUS SIH/SUS) y entra limpio en un barrido por `admissions`; ⛔
+`timetable-api-node` son **horarios del transporte público de Lviv** y entra limpio por `timetable`. 🔵 **Regla: en
+esta vertical, un término administrativo sin un token educativo al lado no es un término de búsqueda.** Medido:
+filtrando `accessib|a11y|wcag` junto con términos educativos, npm devolvió **256 candidatos y prácticamente todos eran
+herramientas de accesibilidad web genéricas**; exigiendo token de dominio educativo bajaron a **22**, de los cuales
+**11 eran homónimos**.
+
+## 144. Las cuatro capas de administración académica no tienen ni una puerta de agente, y de una de ellas sólo existe el cliente de prueba (agregado en el pase 40 del 2026-10-02)
+
+**Barridas por registro las capas que el pase 39 no había barrido —*proctoring*, *timetabling*, admisiones, *student
+success* y accesibilidad— en npm, PyPI (por índice), Packagist y RubyGems: no hay NI UNA puerta MCP de educación en
+ninguna de las cinco.** Lo que existe son **librerías de aplicación**, que es otra cosa y se cotiza distinto.
+
+**Y es una ausencia medida, no una ausencia por no haber buscado:** el canal npm/Packagist/RubyGems respondió con
+resultados reales en los 28 términos, y el canal PyPI se rehízo con el índice completo (tendencia 142) después de
+detectar que el buscador estaba roto (tendencia 141). **Los dos canales coinciden.**
+
+🔵 **La única traza de un MCP de *timetabling* que existe en los cuatro registros es su mitad cliente, y es el dato
+más elocuente del pase:** **`ucleeds-mcp-tester`** (**MIT**, npm, **un solo release del 2025-04-25**, **sin
+repositorio**) se describe a sí mismo como *«Test client for UCLeeds Timetabling MCP integration»*. **Alguien
+construyó el servidor, le escribió un cliente de prueba, publicó el cliente y no publicó el servidor.** Es la
+evidencia más limpia que esta base tiene de que la pieza que falta **se construyó y se quedó adentro de una
+institución**.
+
+🔴 **Y el contraste con la capa de conectores de LMS ordena la oportunidad entera de esta KB.** El pase 35 declaró esa
+capa *«saturada: nueve puertas entre Canvas y Moodle, ocho permisivas»*. Estas cinco capas tienen **cero**.
+
+| Capa | Puertas de agente | Estado |
+|---|---|---|
+| Conectores de LMS (Canvas, Moodle) | **9** (8 permisivas) | 🔴 **saturada** |
+| *Proctoring* | **0** | 🟢 vacía — y la librería base es AGPL |
+| *Timetabling* | **0** (+1 cliente de prueba huérfano) | 🟢 vacía |
+| Admisiones | **0** | 🟢 vacía — hay *addons* de ERP (APAC) |
+| *Student success* | **0** | 🟢 vacía — y ahora hay librería MIT (tendencia 148) |
+| Accesibilidad | **0** | 🟢 vacía |
+
+🔵 **Y el dato que convierte esto de observación en oportunidad con nombre viene del barrido regional del mismo pase:
+en LATAM la dimensión institucional MENOS adoptada es administración (34,1 %), muy por debajo de enseñanza y
+aprendizaje (73,5 %).** **La capa con menos adopción institucional es la misma que tiene cero competencia open
+source.** La brecha de oferta y la brecha de demanda son la misma brecha, y eso es inusualmente accionable: **entrar
+por administración es entrar donde no hay producto instalado ni alternativa gratuita.**
+
+## 145. La portabilidad de una puerta institucional la decide una línea: `os.getenv` contra `export const` (agregado en el pase 40 del 2026-10-02)
+
+El pase 39 admitió dos puertas institucionales y dejó escrito que no sabía qué fracción de cada una era reusable. El
+pase 40 lo midió leyendo el árbol, y **el resultado es opuesto en las dos piezas por una diferencia de una línea.**
+
+| | `mcp-usc` (USC, España) | `DUTIC-mcp` (UNSA, Perú) |
+|---|---|---|
+| Tools | 91 | 12 |
+| **Portables** | 🟢 **80 (88 %)** | 🔴 **1 (8 %)**, +2 con configuración |
+| Host de la institución | 🟢 `os.getenv("USC_MOODLE_URL", "https://cv.usc.es")` | 🔴 `export const HOST = "aulavirtual.unsa.edu.pe"` |
+| Candado | **2 archivos** (`settings.py`, `security.py`) | repartido por el árbol |
+
+🔵 **En `mcp-usc` los nombres de host de la universidad aparecen en exactamente dos archivos de todo el proyecto**, y
+en uno de los dos **ya son un *default* de variable de entorno**. El otro es un par de `frozenset` de hosts
+permitidos. **Portar la mitad genérica es editar dos conjuntos.** En `DUTIC-mcp` el host es **constante de
+compilación**, lo que mueve la pieza de «configurable» a «fork» antes de mirar una sola tool.
+
+**La regla de cotización que deja, y es barata de aplicar:** antes de estimar el reuso de una puerta institucional,
+**buscar el nombre de dominio de la institución en el árbol y mirar en cuántos archivos aparece y en qué forma.**
+Si aparece como *default* de variable de entorno en uno o dos archivos, **la pieza es configuración**. Si aparece como
+constante exportada, **es un fork**. **Es una medición de dos comandos y decide la diferencia entre cotizar reuso y
+cotizar desarrollo.**
+
+🟢 **Y la medición encontró de paso el activo que nadie había contado, que es el más caro de construir de toda la
+capa:** `mcp-usc` lleva en `student_capabilities.py` **un catálogo de 306 funciones de Moodle Web Services**
+clasificadas por acceso (`read`/`action`), con redacción de claves secretas y cotas de tamaño de argumento
+(`MAX_ARGUMENT_NODES`, `MAX_ARGUMENT_DEPTH`, `MAX_RESULT_BYTES`), sobre **327 nombres de función WS** referenciados en
+el árbol. **Saber qué función de Moodle existe, qué hace y si escribe es el trabajo lento de cualquier puerta de
+Moodle — y está MIT.** 🔵 **La pieza no se propone como «la puerta de la USC»: se propone como la puerta de Moodle con
+el catálogo y los límites ya escritos, a la que se le cambia el destino.**
+
+## 146. La licencia que se contradice entre el manifiesto y el árbol es una clase de evidencia distinta de la que falta, y es peor (agregado en el pase 40 del 2026-10-02)
+
+El pase 39 abrió el **gap 81** para las piezas cuya licencia **vive sólo en el manifiesto del registro** y no en el
+árbol (`@ink-waffle/sisu-mcp`, `frappe-mcp-server`). El pase 40 encuentra el caso siguiente, y **no es el mismo
+problema**.
+
+| Pieza | Campo del registro | Archivo del árbol | Clase |
+|---|---|---|---|
+| `@timadey/proctor` | MIT | 🔴 **no existe** | **gap 81** — falta una de las dos fuentes |
+| `datakind/student-success-tool` | 🔴 **no declara ninguna** | **MIT** (`LICENSE.md`) | **gap 81 invertido** — falta la otra fuente |
+| 🔴 **`exam-guard`** | **ISC** | 🔴 **Apache-2.0** | **CONTRADICCIÓN** — las dos existen y **discrepan** |
+
+🔴 **La contradicción es peor que la ausencia por una razón operativa:** cuando falta una fuente, el pase anota la
+reserva y la cierra con un correo al autor. **Cuando las dos existen y dicen cosas distintas, cualquiera de las dos
+licencias es citable de buena fe por un tercero** — y mientras eso siga así, **la pieza tiene dos licencias según
+dónde mire quien la audite**.
+
+**Y la diferencia no es cosmética en este caso concreto: ISC y Apache-2.0 difieren en la cláusula de patentes**, que
+es justo lo que revisa el departamento legal de un cliente grande. **El criterio que esta base adopta: manda el
+archivo del árbol** (es el instrumento que el pase 39 ya había sancionado como superior al manifiesto), **pero la
+pieza no se usa en un entregable hasta que el autor resuelve la discrepancia.**
+
+🔵 **La regla general que las tres filas de arriba dejan, y es la misma con tres signos: una sola fuente de licencia
+nunca alcanza.** Hay que leer **el manifiesto y el archivo**, y **cuando discrepan, eso es el hallazgo**.
+
+## 147. `HEAD` mide al proyecto; el release mide lo que el cliente instala — y para una dependencia son 13 meses de diferencia (agregado en el pase 40 del 2026-10-02)
+
+El pase 37 fechó las 49 filas de esta base **por el commit de su rama principal**, y con eso encontró 10 piezas
+paradas hace más de seis meses. **El pase 40 encuentra el caso que muestra que ese instrumento, solo, no alcanza.**
+
+| `openedx/edx-proctoring` | Valor | Antigüedad al 2026-10-02 |
+|---|---|---|
+| `HEAD` de la rama principal | **2026-05-30** | 🟢 **4 meses — mantenido** |
+| Último release en PyPI (5.2.0) | **2025-04-28** | 🔴 **17 meses — parado** |
+| Releases publicados en total | **253** | — |
+
+**Las dos mediciones son correctas y dicen cosas distintas.** Medido por repositorio, el proyecto está vivo y hay
+trabajo reciente. Medido por registro, **quien lo instale con `pip` —que es como llega en un despliegue de Open edX
+vía Tutor— recibe código de hace año y medio.**
+
+🔵 **La regla que esto deja, y corrige un supuesto implícito del pase 37:** para una pieza que se **instala**, la
+fecha que gobierna el riesgo **no es la del commit: es la del artefacto publicado**. **`HEAD` mide la salud del
+proyecto; el release mide la exposición del cliente.** Hay que medir las dos y **decir explícitamente cuál se está
+citando** — y en una conversación con cliente, la que vale es la del artefacto que va a instalar.
+
+⚠️ **Y el caso inverso también aparece en este pase, lo que confirma que la divergencia va en los dos sentidos:**
+`maxxeddev/open-badges-mcp` (pase 39) está **adelante del registro** (`package.json` 0.4.0 contra npm 0.3.2), mientras
+`mereos` y `@timadey/proctor` tienen **repo y registro en la misma fecha**, que es lo sano y lo menos frecuente.
+
+## 148. A la capa más regulada del sector no le faltaba el modelo: le faltaba el expediente — y lo tiene MIT desde 2022 (agregado en el pase 40 del 2026-10-02)
+
+El **gap 26** de esta base dice desde el pase 11 que *«la capa que decide sobre el alumno es la más regulada del
+sector y la peor abastecida de open source»*, y lo midió buscando **predictores**: encontró 110 repos de *knowledge
+tracing* y ningún producto. **El pase 40 la barrió por nombre de proyecto en el registro y encontró un solo nombre en
+903.402 — pero ese nombre reformula el gap.**
+
+**`datakind/student-success-tool`** — **MIT** (`LICENSE.md`, *«Copyright (c) 2022 DataKind»*), 181 archivos Python,
+financiado por **Google.org**, `HEAD` 2025-09-08.
+
+🔵 **Y el hallazgo no es que exista una librería de predicción. Es QUÉ trae además del modelo:**
+
+| Componente | Ruta | Para qué sirve |
+|---|---|---|
+| ***Model cards*** | `reporting/model_card/` (5 módulos) | La documentación del modelo **generada desde el modelo entrenado**, no escrita a mano |
+| **Secciones de sesgo** | `reporting/sections/bias_sections.py` (+ `pdp/`, `custom/`) | 🟢 Análisis de sesgo como **sección de reporte de primera clase** |
+| **Validación de ingesta** | `ingestion_validation/` | Controla el dato antes de que entre al modelo |
+| **Datos sintéticos** | `generation/pdp/` | Demostrar el pipeline **sin dato real de alumno** |
+
+🔴 **Esto reformula el gap 26 igual que el pase 4 reformuló el gap 1, y en la misma dirección: lo que falta no es
+construir, es adoptar.** El cuello de botella de esta capa **nunca fue entrenar el clasificador** —hay 110 repos que
+lo hacen—: era **documentarlo para que sobreviva una auditoría**. Un modelo que predice abandono es **Anexo III punto
+3** en EMEA (evaluación de resultados de aprendizaje, plazo **2027-12-02**) y cae bajo la **supervisión humana
+obligatoria** que Oklahoma y Maryland ya exigen en North America. **El artefacto caro es el expediente, y acá viene
+en el repo.**
+
+🟢 **Y el principio de producto está escrito en el README, que es lo que lo hace citable ante un comité de ética:
+*«humans in the loop by design»* — las intervenciones las ejecuta un asesor humano, no el algoritmo.** Es la misma
+forma que el `readyforreview` de `moodle-grading-mcp` y la seudonimización de `bruchris/canvas-lms-mcp`: **el
+requisito regulatorio contestado por diseño en vez de por cláusula** (tendencia 136).
+
+⚠️ **Las tres reservas, para no sobrevenderla:** está **acoplada a PDP** (estándar de datos de educación superior de
+EE. UU.) **y a Databricks**, aunque tiene una ruta `custom/` paralela a cada `pdp/`, o sea que **la customización está
+prevista por diseño**; lleva **~13 meses sin release** (franja tibia, no archivada); y **PyPI no declara su licencia
+—el MIT se leyó en el árbol—**, que es el gap 81 invertido (tendencia 146). 🔵 **Para North America es casi reuso;
+para EMEA, APAC y LATAM es adopción del armazón con esquema propio.**
+
+## 🔵 Estado de gaps al cierre del pase 40 del 2026-10-02
+
+**Este pase ejecutó las TRES acciones del pase 39. Las tres rindieron, y la primera rindió descubriendo que el
+instrumento que iba a usar estaba roto.**
+
+| Gap | Estado | Resolución |
+|---|---|---|
+| **Acción 1** (barrer por registro las capas no barridas) | ✅ **CUMPLIDA — y con el instrumento rehecho a mitad de camino** | **28 términos × 4 registros.** 🔴 **El procedimiento de PyPI del pase 39 está roto y devuelve `200`** (tendencia **141**); 🟢 **reemplazado por `pypi.org/simple/` — 903.402 nombres** (tendencia **142**). **6 altas, 11 homónimos rechazados, 5 capas confirmadas vacías de agente** |
+| **Acción 2** (fracción portable de `mcp-usc` y `DUTIC-mcp`) | ✅ **CUMPLIDA — y el resultado es opuesto en las dos** | **`mcp-usc`: 80 de 91 (88 %) genéricas**, candado en 2 archivos, host en `os.getenv`. **`DUTIC-mcp`: 1 de 12 (8 %)**, host en `export const`. 🟢 **Y aparece el activo no contado: catálogo de 306 funciones de Moodle WS, MIT** (tendencia **145**) |
+| **Acción 3** (*gateway* de partición de tools) | ✅ **CUMPLIDA Y PROBADA, no descrita** | **175 líneas, sólo stdlib.** Verificado contra un upstream que imita `frappe-mcp-server`: `tools/list` **7 → 3**, `delete_document` y `call_method` **bloqueados con `-32601` sin llegar al upstream** (1 ejecución total), **allowlist vacía → 0 tools**. Log JSONL con `exposed`/`withheld`. Ver **P85** |
+| **NUEVO 82** (el buscador de PyPI falla con `200`) | 🔴 **ABIERTO como límite de entorno — pero MITIGADO** | A diferencia de los gaps 58, 65, 72 y 80, **éste tiene reemplazo y mejor que el original**: el índice `simple`. **Lo que queda abierto es la búsqueda por DESCRIPCIÓN en PyPI**, que el índice no cubre. **Regla nueva obligatoria: todo raspado lleva control de contenido, no sólo de código de estado** |
+| **NUEVO 83** (licencia contradictoria entre manifiesto y árbol) | ⚠️ **ABIERTO como clase de evidencia — y es distinta del 81** | `exam-guard`: **ISC** en npm contra **Apache-2.0** en el árbol. **Difieren en la cláusula de patentes.** Manda el árbol; la pieza **no se usa en un entregable** hasta que el autor resuelva. El **gap 81 invertido** también aparece: `student-success-tool` **no declara licencia en PyPI** y es **MIT** en el árbol (tendencia **146**) |
+| **26** (capa predictiva / que decide sobre el alumno, «la peor abastecida») | 🟢 **REFORMULADO — y la reformulación es a favor** | **No faltaba el modelo: faltaba el expediente.** `datakind/student-success-tool` (**MIT**, Google.org) trae ***model cards*, secciones de análisis de sesgo, validación de ingesta y datos sintéticos** en el árbol, con *«humans in the loop by design»*. **Pasa de «construir lo que falta» a «adoptar y adaptar el esquema»**, que es una propuesta muy distinta (tendencia **148**) |
+| **NUEVO 84** (*proctoring*: no hay opción permisiva) | 🔴 **ABIERTO, y medido** | La capa queda cerrada y **la única pieza seria es `openedx/edx-proctoring`, AGPL-3.0**. Las dos piezas MIT (`mereos`, `@timadey/proctor`) son **SDK de detección del lado navegador**: resuelven la visión por computadora, **no** la integración con estados de examen, excepciones y auditoría. **Sobre Open edX la AGPL no agrega fricción; fuera de Open edX la capa de integración hay que construirla** |
+| **NUEVO 85** (*timetabling*: el servidor que nunca se publicó) | 🔴 **ABIERTO, con una pista concreta** | `ucleeds-mcp-tester` (**MIT**, 1 release 2025-04-25, sin repo) es *«Test client for UCLeeds Timetabling MCP integration»*. **El cliente se publicó, el servidor no.** Y 🔴 **`unitime` no está en PyPI** (0 de 903.402): el inventario de esta capa hay que hacerlo **por sitio de proyecto** |
+| **81** (licencia sólo en el manifiesto) | ⚠️ **ABIERTO y con una instancia más** | `@timadey/proctor` (**MIT** sólo en npm, sin `LICENSE` en 5 rutas × 2 ramas). Entra con reserva explícita, igual que `sisu-mcp` y `frappe-mcp-server` |
+| **140** (el campo `repository` no prueba que el repo exista) | ⚠️ **CONFIRMADO con una cuarta instancia** | `timeback-caliper` (**55 releases**, MIT declarada) declara `superbuilders/timeback-dev-python` y **`git ls-remote` falla**. **Se registra, no se recomienda** |
+| **56** (tendencia: el LRS más instalado está congelado) | ✅ **CONFIRMADO por un TERCER canal independiente** | `@learninglocker/xapi-agents`: **última publicación 2019-07-11**. Antes se había medido por repo y por sitio; ahora también **por registro de paquetes** |
+| **65** (primarias legales / multilaterales) | 🔴 **ABIERTO, sin avance deliberado** | Las tres acciones del 39 tenían prioridad. **El calendario del AI Act se citó otra vez por el canal del buscador**, y 🔴 **la fecha vencida reapareció por OCTAVA vez** en el barrido de North America. **El número de reglamento sigue sin verse en EUR-Lex** |
+| **60** (mitad QTI) / **61** (curso origen vacío) / **68** (release de la puerta de Open edX) / **80** (sin Docker) | 🔴 **ABIERTOS, sin avance deliberado** | Las tres acciones del 39 tenían prioridad. **El 80 no se reintenta: el pase 39 dejó escrito «no insistir por esta vía»** |
+
+## 🔵 Las tres acciones que el pase 40 deja escritas para el pase 41
+
+**Las tres son ejecutables en este entorno y ninguna depende de un host bloqueado, de Docker ni del buscador roto de
+PyPI.**
+
+1. 🟢 **Cerrar el inventario de las dos capas cuyas piezas canónicas NO están en ningún registro, por sitio de
+   proyecto en vez de por registro.** El pase 40 midió que **`unitime` y `safe-exam-browser` devuelven cero nombres en
+   los 903.402 de PyPI** y que la capa de *timetabling* sólo deja como traza un cliente de prueba huérfano
+   (**gap 85**). **La acción concreta:** ir a **UniTime** y a **Safe Exam Browser** por su repositorio, medir licencia
+   del archivo, `HEAD`, tags y superficie de API, **y responder si alguno expone una API envolvible como MCP**. 🔵 **El
+   valor es que son las dos capas donde esta base acaba de probar que no hay competencia agéntica**, y las dos tienen
+   despliegue institucional real. **Es el barrido que la tendencia 142 dejó pendiente por construcción: el índice de
+   un registro no encuentra lo que no está en el registro.**
+2. ⚠️ **Resolver las dos contradicciones de licencia abiertas, que son baratas y bloquean entregables.** Son tres
+   piezas y tres acciones distintas: (a) **`exam-guard`** → la contradicción **ISC contra Apache-2.0** (gap 83) se
+   resuelve leyendo **el `package.json` del árbol** —no el del registro— y el historial de ese archivo, para saber
+   **cuál de las dos es la intención actual del autor**; (b) **`@timadey/proctor`** y (c) **`@ink-waffle/sisu-mcp`**
+   (gap 81) → abrir *issue* o correo pidiendo el `LICENSE` en el árbol. 🔵 **El valor es de desbloqueo: `sisu-mcp` es
+   la única puerta de SIS de educación superior de esta base y hoy no se puede proponer por un archivo que falta.**
+3. 🟢 **Medir la superficie real de `edx-proctoring` y decidir si la capa de *proctoring* se cotiza entera o partida,
+   que es la acción de mayor valor comercial pendiente.** El pase 40 estableció que es la **única pieza seria de la
+   capa** y que es **AGPL-3.0 con 17 meses sin release** (gap 84, tendencia 147). **La acción concreta:** bajar el
+   *wheel* de PyPI —que es el método que el pase 31 dejó probado para Open edX, sin Docker y sin instalar
+   dependencias— y **enumerar sus modelos de estado de examen, sus endpoints REST y sus puntos de extensión de
+   proveedor**, para responder **si integrar un *proctoring* propio es implementar una interfaz existente o escribir
+   la capa desde cero**. 🔵 **De eso depende si la capa se propone sobre Open edX (adopción, AGPL ya aceptada) o fuera
+   (desarrollo), y hoy esta base no lo sabe.** ⚠️ **Y antes de cualquiera de las dos rutas va el expediente del Anexo
+   III punto 3, cuyo plazo es el 2027-12-02**: el *«monitoreo durante exámenes»* está nombrado en el inciso.
 
 ## 🔵 Estado de gaps al cierre del pase 39 del 2026-10-02
 
