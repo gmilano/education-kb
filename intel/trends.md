@@ -7,6 +7,7 @@ updated: 2026-10-02
 # 📡 Tendencias — education
 
 > Ventana de investigación: septiembre 2026. Verificado 2026-09-30; el pase 11, el 2026-10-01.
+> **Pase 38 del 2026-10-02:** **se fue a buscar SUCESIÓN para las tres dependencias congeladas del pase 37 y el resultado es asimétrico: dos cierran con piezas permisivas vivas (tres MIT para Moodle, Apache-2.0 + MIT para OneRoster) y la tercera no — y el fork que parecía salvarla está 2 commits adelante, los dos de configuración de Cloud Run** (tendencias **132** a **135**, `gap 78` y `gap 79`).
 > **Pase 34 del 2026-10-02:** **el pase completa el hallazgo del 33 en la dirección contraria y el resultado es una regla sobre el instrumento, no sobre un repo.** El pase 33 probó que el registro **no ve** open source real (`learnmcp-xapi`, invisible en PyPI y npm). 🔴 **Este pase encontró el falso positivo: `quizlar/mcp-server` es MCP, educativo, activo y su `LICENSE` dice MIT — y no tiene una línea de código.** Su `server.json` declara **`remotes` → `https://mcp.quizlar.app/mcp/`** detrás de una API key `sk-qz-<32>`: **la MIT licencia el manifiesto, la implementación es un servicio alojado propietario.** Es la **colisión 9** y es de **clase nueva** —colisiona la **superficie de la licencia**, no el nombre— y el control que la descarta **es un campo** (tendencias **103** y **104**). ✅ **Acción 1 del pase 33 ejecutada sobre las cuatro ausencias del mapa por estándar: Caliper, CASE y CEASN quedan CONFIRMADAS con los dos instrumentos** —y la de CEASN es **más** robusta porque **el buscador no reconoce la sigla**—, 🟢 **mientras la de Open Badges era MITAD FALSA**: la puerta MCP no existe, pero **sí existe la implementación OB 3.0 que esta base declaraba inexistente** (`Schroedinger-Hat/certo`, ⚠️ **AGPL-3.0**, OB 3.0 + W3C VC + DIDs) **y el validador oficial del consorcio** (`1EdTech/digital-credentials-public-validator`, **Apache-2.0** ✅). ✅ **Gap 64 CERRADO en negativo con tres instrumentos: ningún LRS publica puerta MCP propia** (Docker Hub de `yetanalytics` **6 imágenes, ninguna MCP**; `lrsql` **0 menciones**; `ralph-malph` **14 extras, ninguno MCP**) — 🟢 **y el instrumento regaló el sitio del upstream: un `ralph[mcp]` encaja en la convención sin fork** (**P71**). 🟢 **Dos altas por el nombre de la organización, no por término: `yetanalytics/datasim` (Apache-2.0) es la pieza que permite PROBAR un LRS antes de cotizarlo**, y cubre los xAPI Profiles que el pase 25 buscó sin encontrar; 🔴 **y una no-alta declarada, `persephone`, con 10 rutas de licencia en 404 y Docker parado en 2023** (**gap 70**). 🟢 **Gap 63 partido: arquitectura CERRADA por evidencia de archivo** (los tres `config/plugins/*.yaml` en **200**), **fecha RECLASIFICADA** — **8 rutas portadoras de versión, las 8 en 404: el proyecto no se versiona en su árbol**, así que no es el proxy. 🟢 **Y aparece la TERCERA variante de la primitiva anti-bucle, que frena en la CONFIGURACIÓN** (`RATE_LIMIT_PER_MINUTE=30`, `MAX_BODY_SIZE=16384`): **frena solo, cuesta dos variables de entorno, y la lección es que el mecanismo correcto depende de la FORMA DEL DAÑO** —confirmación para el daño irreversible y discreto, techo de caudal para el acumulativo— (tendencia **109**). ✅ **P69 DECIDIDO, y gana la licencia contra el número de adopción: `qtism/qtism` tiene ~10× las descargas (218.212 / 3.104 al mes) pero es GPL-2.0-only en LAS 293 RELEASES**, y `@longsightgroup/qti3-cli` es **MIT, con cero dependencias de terceros y además el más rápido** (41 releases desde 2026-05-21, última modificación **2026-10-01**). 🔴 **Y el hallazgo estructural que obliga a releer todo `intel/`: las primarias multilaterales son inalcanzables POR CLASE — 0 de 11 contra 5 de 5 comerciales.** Toda cifra de mercado y toda fecha regulatoria de esta base se apoya en secundarias comerciales **por construcción del entorno**; el **gap 56 pasa de acción pendiente a límite de clase**, y lo que hay que pedir por fuera vale más que el AI Act: el *working paper* de **UNESCO IESALC** sobre **200 instituciones en 19 países** (tendencia **106**, **gap 65**).
 > **Pase 33 del 2026-10-02:** **el hallazgo es de consistencia interna y es incómodo: el gap 60 del pase 32 se contradecía con cuatro archivos de esta propia base.** 🔴 **Mitad xAPI del gap 60 FALSA: `DavidLMS/learnmcp-xapi` (MIT, 3 tools — 1 escribe, 2 leen) es la puerta MCP de xAPI, y estaba acá desde el pase 6**, con la frase *«desde el pase 6»* escrita al lado en el mapa por estándar. ✅ **Mitad QTI CONFIRMADA por un segundo instrumento independiente** — y ésa es la única ausencia de esta KB que cumple el requisito de dos instrumentos (tendencia **101**). 🔴 **La causa está medida, y es el instrumento: `learnmcp-xapi` no está en ningún registro de paquetes** (PyPI **404**, npm **`total: 0`**, se instala desde el código) y **`lrsql` se distribuye por Docker Hub**, así que un barrido que arma su lista de candidatos en npm/PyPI/Packagist **tiene cero probabilidad de verlas** (tendencia **99**). ✅ **Gap 51 CERRADO en negativo y medido en tres registros:** `opencase` devuelve **7 / 404 / 665** resultados con **cero del dominio** —son cajas de skins de videojuego, `opencage` y `opencast`— y `cass` devuelve **26.726** en Packagist (Cassandra, **USPS CASS**); el instrumento que sí funciona es **el nombre de la organización** (tendencia **100**). 🟢 **Las tres piezas de la capa de telemetría quedan FECHADAS: `lrsql` (Apache-2.0) publicó `v0.9.9` el 2026-10-01 —ayer—, 112 tags y seis releases en 2026**; **Ralph (MIT, France Université Numérique) está vivo en `main` y parado en el registro** (último release 2024-07-11 con `[Unreleased]` activo: **se instala desde git, no desde PyPI**); y **`hub.docker.com` entra como canal de verificación nuevo**, que es el sustituto de `api.github.com` —403— para lo que se distribuye como contenedor. ✅ **`coursecode` medido en el artefacto: 15 tools definidas / 15 dispatch, sin aliasing, y DOS escriben** (`_build` con **`enum: ['cmi5','scorm2004','scorm1.2','lti']` en el `inputSchema`** — los cuatro estándares pasan de prosa del README a contrato de tool— y `_narration`, que escribe MP3 llamando a un TTS pago). 🟢 **Y aparece la misma primitiva de seguridad del pase 30 reinventada por otro mecanismo, con una asimetría que hay que cotizar: `openedx-mcp` frena en el servidor (confirm token) y `coursecode` frena en el contrato (anotaciones MCP + `dryRun`) — sólo el primero frena solo** (tendencia **102**). 🟢 **`qti3-cli` (MIT) tiene cero dependencias de terceros en toda su cadena: un wrapper MCP agrega exactamente una** (**P69**). ⚠️ **Gap 56: la acción se ejecutó y el resultado es negativo — `eur-lex.europa.eu` y `data.europa.eu` están BLOQUEADOS por el proxy.** Van **siete fuentes secundarias concordantes y cero primarias**: Anexo III → **2027-12-02**, art. 50 → **2026-08-02** vigente. **No citar como primaria.** ⚠️ **Sin permiso de ejecución en este entorno: instalar dependencias de terceros** — por eso `tools/list` de `coursecode` quedó sin correr (**gap 62**) y toda medición de este pase es lectura de artefacto o de registro, nunca de proceso.
 > **Pase 33 del 2026-10-02:** **el hallazgo es de consistencia interna y es incómodo: el gap 60 del pase 32 se contradecía con cuatro archivos de esta propia base.** 🔴 **Mitad xAPI del gap 60 FALSA: `DavidLMS/learnmcp-xapi` (MIT, 3 tools — 1 escribe, 2 leen) es la puerta MCP de xAPI, y estaba acá desde el pase 6**, con la frase *«desde el pase 6»* escrita al lado en el mapa por estándar. ✅ **Mitad QTI CONFIRMADA por un segundo instrumento independiente** — y ésa es la única ausencia de esta KB que cumple el requisito de dos instrumentos (tendencia **109**). 🔴 **La causa está medida, y es el instrumento: `learnmcp-xapi` no está en ningún registro de paquetes** (PyPI **404**, npm **`total: 0`**, se instala desde el código) y **`lrsql` se distribuye por Docker Hub**, así que un barrido que arma su lista de candidatos en npm/PyPI/Packagist **tiene cero probabilidad de verlas** (tendencia **107**). ✅ **Gap 51 CERRADO en negativo y medido en tres registros:** `opencase` devuelve **7 / 404 / 665** resultados con **cero del dominio** —son cajas de skins de videojuego, `opencage` y `opencast`— y `cass` devuelve **26.726** en Packagist (Cassandra, **USPS CASS**); el instrumento que sí funciona es **el nombre de la organización** (tendencia **112**). 🟢 **Las tres piezas de la capa de telemetría quedan FECHADAS: `lrsql` (Apache-2.0) publicó `v0.9.9` el 2026-10-01 —ayer—, 112 tags y seis releases en 2026**; **Ralph (MIT, France Université Numérique) está vivo en `main` y parado en el registro** (último release 2024-07-11 con `[Unreleased]` activo: **se instala desde git, no desde PyPI**); y **`hub.docker.com` entra como canal de verificación nuevo**, que es el sustituto de `api.github.com` —403— para lo que se distribuye como contenedor. ✅ **`coursecode` medido en el artefacto: 15 tools definidas / 15 dispatch, sin aliasing, y DOS escriben** (`_build` con **`enum: ['cmi5','scorm2004','scorm1.2','lti']` en el `inputSchema`** — los cuatro estándares pasan de prosa del README a contrato de tool— y `_narration`, que escribe MP3 llamando a un TTS pago). 🟢 **Y aparece la misma primitiva de seguridad del pase 30 reinventada por otro mecanismo, con una asimetría que hay que cotizar: `openedx-mcp` frena en el servidor (confirm token) y `coursecode` frena en el contrato (anotaciones MCP + `dryRun`) — sólo el primero frena solo** (tendencia **114**). 🟢 **`qti3-cli` (MIT) tiene cero dependencias de terceros en toda su cadena: un wrapper MCP agrega exactamente una** (**P69**). ⚠️ **Gap 56: la acción se ejecutó y el resultado es negativo — `eur-lex.europa.eu` y `data.europa.eu` están BLOQUEADOS por el proxy.** Van **siete fuentes secundarias concordantes y cero primarias**: Anexo III → **2027-12-02**, art. 50 → **2026-08-02** vigente. **No citar como primaria.** ⚠️ **Sin permiso de ejecución en este entorno: instalar dependencias de terceros** — por eso `tools/list` de `coursecode` quedó sin correr (**gap 62**) y toda medición de este pase es lectura de artefacto o de registro, nunca de proceso.
@@ -5791,6 +5792,96 @@ contenido con `raw.githubusercontent.com`. Nunca con `curl` sobre `github.com`.*
 126:** `api.github.com` devuelve **200 con el error en el cuerpo**, y `github.com` devuelve **403 para todo**. **Los dos
 canales «obvios» para verificar un repo están rotos de maneras distintas y los dos fallan en silencio** — razón por la cual
 este pase fechó las 49 filas con el protocolo git y no con HTTP. Ver el **gap 77**.
+
+## 132. Un fork con `main` más nuevo NO es un mantenedor, y el caso que lo prueba estaba a punto de entrar a esta base como dato bueno (agregado en el pase 38 del 2026-10-02)
+
+El pase 37 estableció que **la actividad de bot no es mantenimiento** (tendencia 124): Dependabot y los regeneradores de
+SDK mantienen vivo el grafo de refs de un proyecto que nadie atiende, y por eso **se fecha el tip de la rama por
+defecto, nunca el ref más nuevo**. Este pase encuentra la variante hermana, y es más difícil de detectar porque **esta
+vez el dato está en la rama correcta**.
+
+Buscando sucesión para `DavidLMS/learnmcp-xapi` —congelado hace 13,1 meses, **42 menciones en `compose/patterns.md`**—
+el primer resultado es **`ashleycribb/learnmcp-xapi`**, que el buscador presenta como *«a more recent fork»*. Y es
+cierto en el único sentido medible sin diffear: su `main` está en **2026-09-17**, **trece meses más nuevo que el
+upstream**. 🔴 **Si esta base hubiera aceptado el titular, habría escrito que su dependencia más citada tiene sucesor.**
+
+Se midió el grafo en vez del titular:
+
+| Medición | Valor |
+|---|---|
+| `merge-base` upstream/fork | `fbf6091` — **es el tip del upstream** (2025-08-29) |
+| Commits del fork que no están en el upstream | **2** |
+| Commits del upstream que no están en el fork | **0** |
+| Qué son | `18b2954` *«Add Google Cloud Run deployment configuration and documentation»* + `816d8b8`, su merge |
+| Estrellas / tags | **0** / **0** |
+
+🔵 **El fork no mantiene el proyecto: lo despliega.** La lógica xAPI y MCP es la del upstream congelado, sin un cambio.
+**La regla:** *fechar un fork sin contar los commits que agrega y leer qué tocan produce la misma clase de dato falso
+que fechar un repo por su ref más nuevo.* El barrido estándar de vitalidad de esta base necesita una columna más —
+**commits adelante/atrás del upstream**— igual que el pase 37 le agregó la distinción de ramas de bot (**gap 78**).
+
+## 133. Los dos relojes regulatorios que mandan en 2026 ya corren, y los dos piden lo MISMO del software: que la nota la publique una persona (agregado en el pase 38 del 2026-10-02)
+
+Esta base tiene el calendario del AI Act anotado desde el pase 21 (tendencia 121) y el volumen legislativo de North
+America desde el 36. Lo que el barrido de este pase agrega es la **convergencia**, y es operativa, no retórica:
+
+| Jurisdicción | Instrumento | Estado medido en este barrido | Qué exige del software |
+|---|---|---|---|
+| **EMEA** | **AI Act** | **Desde el 2 de agosto de 2026 la AI Office y las autoridades nacionales lo APLICAN.** Educación —acceso, evaluación, scoring de exámenes, trayectoria— es **alto riesgo** | Supervisión humana sobre la decisión |
+| **North America** | Leyes estatales | **134 proyectos en 31 estados** (reconfirmado). **Oklahoma y Maryland exigen supervisión humana y prohíben que la AI tome decisiones de alto impacto sobre un alumno** | Lo mismo, por vía estatal |
+| **APAC** | 3 leyes marco nuevas | **Corea: AI Basic Act en vigor el 22-01-2026** (19 proyectos consolidados; **segunda jurisdicción del mundo con ley integral después de la UE**). **Vietnam: Ley de AI adoptada en dic-2025, en vigor marzo 2026**, y **nombra educación entre seis sectores de alto riesgo** (evaluación automatizada y monitoreo conductual). **Taiwán: Ley Básica de AI en vigor el 14-01-2026** | Lo mismo, en tres países más |
+| **LATAM** | Sin ley integral | Brasil, Chile, Colombia (CONPES) y México a velocidades distintas. **Uruguay fue el primero de la región en firmar el Convenio Marco del Consejo de Europa sobre AI** | Todavía por vía de privacidad y consumidor |
+
+🔵 **La lectura que importa, y es la que convierte una restricción en argumento de venta:** tres regímenes
+independientes —europeo, estatal norteamericano y asiático— **convergen en el mismo requisito de arquitectura**: la AI
+puede proponer la nota, **la persona la publica**. Eso no es una política que se escribe en un PDF: es una propiedad del
+conector. Ver la tendencia **134**.
+
+⚠️ **Lo que este pase NO verificó, y queda declarado:** el **acuerdo Omnibus del AI Act posterga plazos de alto riesgo**
+según una de las fuentes del barrido. **No se confirmaron las fechas nuevas contra el texto consolidado**, y esta base
+ya tiene abierto el `gap 56` exactamente sobre el calendario del Anexo III. **No citar fechas pospuestas sin cerrar ese
+gap**: es el tipo de dato que se dice en una reunión y sale caro.
+
+## 134. Apareció la primera pieza permisiva de esta base cuyo DISEÑO DE SEGURIDAD es argumento de cumplimiento, y no sólo higiene de ingeniería (agregado en el pase 38 del 2026-10-02)
+
+`toshieji/moodle-grading-mcp` (**MIT**, Japón/WACA, `HEAD` **2026-09-07**) reemplaza a la pieza que el pase 37 declaró
+*«la única permisiva que pone nota dentro de un LMS»* y estaba fría hace 7,3 meses. Pero lo que lo hace la tendencia no
+es que reemplace: es **cómo** escribe. Verificado en su README:
+
+- La nota la **decide el cliente LLM**; el servidor sólo la escribe.
+- La escribe en **`workflowstate=readyforreview`** — **graduada y NO publicada**. *Nunca* publica.
+- **No dispara notificación al alumno.**
+- Exige **`MOODLE_ALLOW_WRITE=1`** y **restringe la escritura a una allowlist de IDs de curso** — lista vacía = no puede escribir nada.
+- **Loguea cada intento de escritura en un audit trail JSONL.**
+- **Anexa un pie de declaración de asistencia por AI** salvo override explícito.
+
+🟢 **Cada una de esas seis propiedades responde a un requisito de la tendencia 133.** «Human oversight» deja de ser una
+cláusula de la propuesta y pasa a ser **el comportamiento por defecto del servidor**: el docente es el único que puede
+publicar porque **el software no sabe hacerlo**. La trazabilidad deja de ser una promesa de logging y es un JSONL. La
+transparencia hacia el alumno viene en el pie del texto.
+
+🔵 **Por qué es una tendencia y no una ficha de producto:** hasta este pase, el eje de selección de esta base fue
+**licencia × vitalidad × superficie de tools**. Esta pieza agrega un cuarto eje —**la forma en que el conector restringe
+la escritura**— y es el único de los cuatro que se puede llevar a una conversación de compliance. **Con 0 estrellas.**
+Las estrellas no miden esto, y es la segunda vez que esta base encuentra que la fila que más vale es la que menos
+tracción tiene.
+
+## 135. Ed-Fi y 1EdTech dejaron de ser dos mundos: apareció el primer repo de esta base con la firma de los DOS consorcios (agregado en el pase 38 del 2026-10-02)
+
+Esta base venía tratando **Ed-Fi** (el dato del distrito, EE. UU.) y **1EdTech** (el estándar de interoperabilidad:
+OneRoster, QTI, CLR, Open Badges) como ecosistemas separados, y la separación estaba bien fundada: aparecen en capas
+distintas, con repos distintos y gobernanzas distintas.
+
+**`Ed-Fi-Alliance-OSS/edfi-oneroster`** la rompe: vive en la organización de **Ed-Fi**, implementa un estándar de
+**1EdTech** (OneRoster 1.2, 14 endpoints GET sobre una base Ed-Fi ODS, Apache-2.0, `HEAD` **2026-10-01**, 86 tags), y su
+aviso de copyright dice **«Copyright (c) 2025 1EdTech Consortium, Inc. and contributors»**.
+
+🔵 **Lo que significa para un entregable:** el puente entre *«el distrito tiene sus datos en Ed-Fi»* y *«el proveedor de
+EdTech habla OneRoster»* **ya está escrito, es permisivo y está mantenido** — no hay que construir el traductor, que es
+exactamente lo que `EASOL/edfi-to-oneroster` intentaba y abandonó **hace 10 años**. ⚠️ **Y el límite, que hay que decir
+antes de que lo pregunten:** el repo **no declara certificación 1EdTech**. Implementación de referencia permisiva ≠
+implementación certificada, y en una venta a un distrito esa distinción se hace.
+
 
 ## 🔵 Las tres acciones que este pase deja escritas para el siguiente
 

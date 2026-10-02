@@ -64,6 +64,74 @@ updated: 2026-10-02
 > 404** — y **10 están paradas hace ≥ 6 meses**, tres de ellas load-bearing. Tabla completa en `repos/trending.md` (pase 37),
 > impacto en `compose/patterns.md`.
 
+## 🧩 Capa de rostering OneRoster — el lado PROVEEDOR, que esta base nunca tuvo (agregada en el pase 38 del 2026-10-02)
+
+**Treinta y siete pases trataron OneRoster como un problema de cliente.** La base tenía `oneroster-ts` (0BSD, 132 tools)
+como *«la superficie de tools más grande de toda esta base»* y `@timeback/oneroster` declarado no-alta. El pase 37 fechó
+`oneroster-ts` en **2025-06-27 — 15,2 meses sin un commit en `main`**, y lo único que se movió desde entonces fueron
+cuatro ramas de Dependabot y un regenerador de SDK, **ninguna mergeada**. Este pase va a buscar reemplazo y encuentra
+algo distinto de lo que buscaba: **el lado servidor del estándar, que es permisivo, está vivo y nadie en esta base había
+mirado.**
+
+| Repo | Licencia (verificada hoy) | Medición de primera mano | Qué aporta |
+|---|---|---|---|
+| 🟢 [`Ed-Fi-Alliance-OSS/edfi-oneroster`](https://github.com/Ed-Fi-Alliance-OSS/edfi-oneroster) | **Apache-2.0** ✅ (`LICENSE` **200** en `main`) | `HEAD` **2026-10-01** · **86 tags**, último **v1.0.2** · 6 ★ · Node.js | **Sirve una API OneRoster 1.2 desde una base Ed-Fi ODS.** **14 endpoints GET**: `academicSessions`, `classes`, `courses`, `demographics`, `enrollments`, `orgs`, `users`, `schools`, `students`, `teachers`, `gradingPeriods`, `terms` y recuperación por id. Query params `limit`/`offset`, `sort`/`orderBy`, `filter`, `fields`. **Ed-Fi Data Standard 4.0 y 5.0/5.1/5.2.** Despliegue por **Docker** (guía de stack completo) o IIS/Windows |
+| 🟢 [`CSR2017/edfi-oneroster`](https://github.com/CSR2017/edfi-oneroster) | **Apache-2.0** ✅ (`LICENSE` **200** en `main`) | `HEAD` **2026-09-22** · 8 tags · 13 ramas | Misma descripción y mismo propósito. 🔴 **Cuál de los dos es upstream NO se resolvió este pase → `gap 79`.** Hasta resolverlo, citar el de la Alliance: tiene 86 tags y commit de ayer |
+| 🟢 [`TCI/OneRoster`](https://github.com/TCI/OneRoster) | **MIT** ✅ (`LICENSE.txt` **200** en `master`) | `HEAD` **2026-09-11** · 35 tags, último **v2.3.27** · 4 ★ · Ruby · 122 commits | **El lado cliente, vivo.** Wrapper de consumo (no servidor) para `students`, `teachers`, `classes`, `classrooms`, `courses`, `enrollments`, con filtrado por `sourcedId`. Publicado en rubygems. Config por `app_id`/`app_secret`/`api_url` |
+
+### ⚠️ La rareza de gobernanza, que hay que saber antes de nombrar el proyecto en una reunión
+
+El repo de la Alliance vive en la organización **Ed-Fi-Alliance-OSS**, pero su aviso de copyright dice **«Copyright (c)
+2025 1EdTech Consortium, Inc. and contributors»**. 🔵 **Es un artefacto conjunto de los dos consorcios que esta base
+venía tratando como mundos separados** —Ed-Fi del lado del dato del distrito, 1EdTech del lado del estándar de
+interoperabilidad— y **es el primero de esta KB con esa doble firma** (**tendencia 135**). ⚠️ **No declara certificación
+1EdTech en el repo: no afirmar que está certificado.** Que un estándar tenga implementación de referencia permisiva no
+equivale a que esa implementación esté certificada, y es una distinción que un cliente de distrito sí hace.
+
+### 🔴 El dato que decide cómo se cotiza esta capa: seis de ocho implementaciones no se pueden usar
+
+El barrido abierto de OneRoster devuelve **ocho** implementaciones. Medidas hoy una por una:
+
+| Repo | `HEAD` | Antigüedad | Veredicto |
+|---|---|---|---|
+| `Ed-Fi-Alliance-OSS/edfi-oneroster` | 2026-10-01 | 0 d | 🟢 usable |
+| `CSR2017/edfi-oneroster` | 2026-09-22 | 9 d | 🟢 usable |
+| `TCI/OneRoster` | 2026-09-11 | 20 d | 🟢 usable (Ruby) |
+| `trilogy-group/oneroster-ts` | 2025-06-27 | 15,2 meses | 🔴 congelado (0BSD) |
+| `jdolny/OneRoster.NET` | 2023-10-13 | 3,0 años | ⚫ muerto |
+| `gotranseo/oneroster` | 2023-05-01 | 3,4 años | ⚫ muerto |
+| `bgwdotdev/go-oneroster` | 2019-11-04 | 6,9 años | ⚫ muerto |
+| `EASOL/edfi-to-oneroster` | 2016-10-19 | 10,0 años | ⚫ muerto |
+
+🔵 **OneRoster es un estándar con mucho código escrito y poco código mantenido.** La consecuencia práctica: un barrido
+por *«existe una librería para esto»* da ocho respuestas de las que **seis no se pueden poner en un entregable**, y la
+diferencia sólo se ve fechando los repos. 🔴 **El residuo honesto: no hay cliente OneRoster permisivo y vivo en
+TypeScript.** `oneroster-ts` está congelado, `@timeback/oneroster` ya era no-alta, y el único cliente vivo es Ruby. Eso
+es candidato a **contribución *upstream* propia**, no a seguir buscando.
+
+## 🔄 Re-fechado de la capa LRS, y es la medición que contiene el riesgo de la puerta xAPI congelada (pase 38 del 2026-10-02)
+
+El pase 37 dejó `DavidLMS/learnmcp-xapi` congelado hace 13,1 meses con **42 menciones en `compose/patterns.md`**. La
+pregunta que importa no es si el adaptador está frío, sino **si el dato del cliente queda atrapado**. No queda: la
+v2.0.0 de `learnmcp-xapi` trae **sistema de plugins de LRS** (SQLite, Ralph, Veracity), o sea que el LRS se cambia **por
+variable de entorno**. Y los dos LRS permisivos que esta base recomienda hace 33 pases están vivos:
+
+| LRS | Licencia | `HEAD` medido hoy | Último semver | Motores verificados | Región |
+|---|---|---|---|---|---|
+| 🟢 [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) | **Apache-2.0** ✅ | **2026-10-01** (ayer) | **v0.9.9** | SQLite 3.42 · Postgres 14–18 · MariaDB 10.6–11.8 · MySQL 8.0.44–9.5.0 | North America (Yet Analytics, Inc.) |
+| 🟢 [`openfun/ralph`](https://github.com/openfun/ralph) | **MIT** ✅ (`LICENSE.md`: *«(c) 2020-present France Université Numérique»*) | **2026-09-07** | **v5.0.1** | Elasticsearch verificado en README; los **14 extras** de `ralph-malph` ya inventariados en este archivo (pase 34) | EMEA (France Université Numérique) |
+
+🔵 **Corrección de orden respecto de lo que este archivo afirmaba:** los **115 tags** de `lrsql` incluyen etiquetas de
+pre-release, y un orden ingenuo devuelve `v1.0.0-pre_ui_testing` como «última». **El último semver limpio es `v0.9.9`.**
+No citar un 1.0.0 de `lrsql`: no existe como release estable.
+
+🟢 **La lectura de riesgo que esto habilita, y es la que va a una propuesta:** lo congelado no es la telemetría, es un
+adaptador de ~32 commits sobre dos LRS vivos, permisivos, mantenidos por organizaciones **distintas** en regiones
+**distintas** —una de ellas pública europea—. Costo de adopción acotado y medible, que es la condición que **P78**
+pedía verificar. 🔴 **Lo que NO sirve como mitigación: el fork `ashleycribb/learnmcp-xapi`.** Tiene `main` 13 meses más
+nuevo y **2 commits adelante, los dos de configuración de Cloud Run** (ver `agents/trending.md`, pase 38).
+
+
 ## 🧪 Capa de conformidad y simulación xAPI, y el validador oficial de credenciales — agregada en el pase 34 del 2026-10-02
 
 **Treinta y tres pases recomendaron `lrsql` o Ralph sin tener con qué dimensionarlos.** Esta capa cierra eso. **Las dos

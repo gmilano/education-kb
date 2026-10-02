@@ -8,6 +8,63 @@ updated: 2026-10-02
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 
+## 2026-10-02 (pase 38) — **el dato crudo de los 19 repos candidatos a suceder a las tres dependencias congeladas**: 13 de OneRoster/Moodle/LRS medidos de cero, y el reparto es **8 vivos, 1 tibio, 5 muertos de ≥ 3 años y 1 sin licencia**
+
+El pase 37 fechó las **49 filas que esta base ya tenía**. Este pase mide **19 repos que la base NO tenía**, buscando
+reemplazo permisivo y vivo para `learnmcp-xapi`, `oneroster-ts` y `peancor/moodle-mcp-server`. Mismo instrumento
+(`git ls-remote --symref` + `git fetch --depth 1 <rama por defecto>` + `git log -1 --format=%cI`), más verificación del
+**archivo de licencia** por `raw.githubusercontent.com` probando `LICENSE`, `LICENSE.md`, `LICENSE.txt` y `COPYING` en
+`main` y en `master`. El razonamiento, las correcciones y la lectura comercial están en `agents/trending.md` (pase 38);
+acá queda **la medición**, que es lo que hay que poder mirar fila por fila antes de poner una dependencia en una
+propuesta.
+
+🔵 **Corrección de método al pase 37, que afecta a todo barrido futuro:** el `fetch` por **SHA** de `HEAD` devuelve
+`FETCHFAIL` en este entorno para **todos** los repos. El que funciona es el `fetch` de la **rama por defecto por su
+nombre**, leído del `ref:` que entrega `ls-remote --symref`. El instrumento del 37 es correcto; su invocación no era
+portable, y durante un rato pareció que 49 repos habían desaparecido.
+
+### La tabla completa de este pase, ordenada por antigüedad del último commit en la rama por defecto
+
+| Repo | Licencia (verificada en archivo) | Último commit `HEAD` | Antigüedad | Tags | Rol | Estado |
+|---|---|---|---|---|---|---|
+| `yetanalytics/lrsql` | **Apache-2.0** ✅ | **2026-10-01** | 0 d | 115 (semver top **v0.9.9**) | LRS | 🟢 activo |
+| `Ed-Fi-Alliance-OSS/edfi-oneroster` | **Apache-2.0** ✅ | **2026-10-01** | 0 d | **86** (**v1.0.2**) | OneRoster **servidor** | 🟢 activo · **ALTA** |
+| `csmediapro/moodle-mcp-server` | 🔴 **AGPL-3.0** | **2026-10-01** | 0 d | 7 (v0.1.7) | Moodle MCP (lectura) | ⛔ **no proponer** (licencia) |
+| `NiccoloSalvini/mcp-moodle-teacher` | **MIT** ✅ | **2026-09-25** | 6 d | 4 (**v0.4.0**) | Moodle MCP **escritura** | 🟢 activo · **ALTA** |
+| `CSR2017/edfi-oneroster` | **Apache-2.0** ✅ | **2026-09-22** | 9 d | 8 | OneRoster servidor | 🟢 activo (relación upstream sin resolver → `gap 79`) |
+| `Dymayo/moodler-mcp` | **MIT** ✅ | **2026-09-19** | 13 d | 0 (release 1.1.2 por commit) | Moodle MCP | 🟢 activo · **ALTA** |
+| `ashleycribb/learnmcp-xapi` | **MIT** ✅ (heredada: *«(c) 2025 David Romero»*) | **2026-09-17** | 15 d | 0 | fork de la puerta xAPI | ⚠️ **NO es sucesión** — 2 commits adelante, ambos de Cloud Run |
+| `TCI/OneRoster` | **MIT** ✅ | **2026-09-11** | 20 d | 35 (**v2.3.27**) | OneRoster **cliente** (Ruby) | 🟢 activo · **ALTA** |
+| `openfun/ralph` | **MIT** ✅ | **2026-09-07** | 24 d | 32 (**v5.0.1**) | LRS | 🟢 activo |
+| `toshieji/moodle-grading-mcp` | **MIT** ✅ (WACA + T. Ejiri) | **2026-09-07** | 24 d | 0 | Moodle MCP **corrección** | 🟢 activo · **ALTA destacada** |
+| `loyaniu/moodle-mcp` | 🚫 **sin archivo de licencia** (8 rutas probadas, 8 × 404) | 2026-06-28 | 95 d | 0 | Moodle MCP | ⛔ **no proponer** (licencia) |
+| `DavidLMS/learnmcp-xapi` | **MIT** ✅ | 2025-08-29 | **13,1 meses** | 2 (v2.0.0) | puerta xAPI (upstream) | 🔴 **CONGELADO** (reconfirmado) |
+| `jdolny/OneRoster.NET` | — (no verificada: repo muerto) | 2023-10-13 | **3,0 años** | 0 | OneRoster cliente (.NET) | ⚫ muerto |
+| `gotranseo/oneroster` | — (no verificada: repo muerto) | 2023-05-01 | **3,4 años** | 22 | OneRoster cliente (Swift) | ⚫ muerto |
+| `bgwdotdev/go-oneroster` | — (no verificada: repo muerto) | 2019-11-04 | **6,9 años** | 5 | OneRoster servidor (Go) | ⚫ muerto |
+| `EASOL/edfi-to-oneroster` | — (no verificada: repo muerto) | 2016-10-19 | **10,0 años** | 0 | Ed-Fi → OneRoster | ⚫ muerto |
+| `Transcordia/jupiter` | — (no verificada: repo muerto) | 2015-04-19 | **11,5 años** | 0 | LRS xAPI + Caliper | ⚫ muerto |
+
+**Nota de honestidad sobre la columna de licencia:** en los cinco repos muertos **no se verificó el archivo**. No hacía
+falta y habría sido gasto: una licencia permisiva sobre un repo sin commits en una década no cambia la decisión. Las
+licencias que esta tabla afirma con ✅ son todas lectura de primera mano del archivo, hoy.
+
+### 🟢 Las cinco altas de base de este pase, en una línea cada una
+
+1. **`Ed-Fi-Alliance-OSS/edfi-oneroster`** (Apache-2.0) — sirve **OneRoster 1.2** con **14 endpoints GET** desde una base **Ed-Fi ODS** (Data Standard 4.0 y 5.0/5.1/5.2), Docker o IIS. **Es el lado proveedor de OneRoster, que esta base nunca tuvo.** ⚠️ Copyright **«1EdTech Consortium, Inc.»** dentro de la org **Ed-Fi-Alliance-OSS**: artefacto conjunto de los dos consorcios, el primero de esta KB.
+2. **`toshieji/moodle-grading-mcp`** (MIT, Japón/WACA) — **9 tools**, y la única que escribe deja la nota en `workflowstate=readyforreview`: **no la publica**. Allowlist de cursos, `MOODLE_ALLOW_WRITE=1`, audit trail JSONL, sin notificación al alumno, pie de declaración de AI. **El diseño de seguridad es argumento de cumplimiento.**
+3. **`NiccoloSalvini/mcp-moodle-teacher`** (MIT, Italia) — **22 tools** (15 lectura, 3 escritura, 4 utilidad), incluidas `grade_submission` con devolución escrita, `mark_attendance` y `late_registers` (registros no tomados en 24 h). Toda tool que modifica Moodle **pide confirmación**. En proceso de renombre a `mcp-moodle-staff`.
+4. **`TCI/OneRoster`** (MIT, Ruby, v2.3.27) — wrapper de **consumo** de OneRoster, vivo y publicado en rubygems. Reemplaza el rol de cliente de `oneroster-ts`, **en otro lenguaje**.
+5. **`Dymayo/moodler-mcp`** (MIT) — tercera opción permisiva de Moodle MCP, release 1.1.2. ⚠️ Entró por licencia y fecha: **sus tools no se enumeraron este pase**.
+
+### 🔴 El dato de encuadre que deja el barrido de OneRoster, y vale para cotizar
+
+De las **ocho** implementaciones de OneRoster que devuelve un barrido abierto, **cinco llevan ≥ 3 años sin un commit**
+y una sexta (`oneroster-ts`, 0BSD) lleva 15,2 meses. **Quedan dos servidores Apache-2.0 vivos y un cliente MIT vivo.**
+OneRoster es un estándar con mucho código escrito y poco código mantenido: en esta capa **la selección pesa más que en
+ninguna otra de esta base**, y un barrido por «existe una librería para X» da ocho respuestas de las que seis no se
+pueden usar.
+
 ## 2026-10-02 (pase 37) — **las 49 filas fechadas una por una por el commit de su rama principal**, con el instrumento que no usa registro ni API: la tabla completa, y el alta de base del pase es una librería de evaluación **ISC** con 2.226 versiones que esta KB nunca vio
 
 **El instrumento:** `git ls-remote <repo>` para los refs, `git fetch --depth 1 <sha de HEAD>` y `git log -1 --format=%cI`.

@@ -4277,6 +4277,28 @@ disponible en permisivo** para lo que hacen.
 (**gap 72**, tendencia **124**). El «último tag» tampoco sirve donde los nombres de tag son heterogéneos
 (**gap 73**).
 
+## 🔄 Corrección del pase 38 (2026-10-02) a la auditoría del pase 37 y a la premisa de **P78** — dos de las tres dependencias congeladas SÍ tienen reemplazo vivo
+
+🔴 **La premisa que hay que corregir, porque está escrita en este archivo y es la que decide si se cotiza un fork:** la
+auditoría del pase 37 y el enunciado de **P78** afirman que las tres dependencias congeladas *«no tienen reemplazo
+vivo»*. **Se fue a buscar, y dos de las tres sí lo tienen.** El pase 37 midió vitalidad pero **no buscó sucesión**:
+diagnosticar no es reemplazar, y la diferencia vale dos patrones.
+
+| Pieza congelada | Qué decía el pase 37 | Qué midió el pase 38 | Efecto sobre **P78** |
+|---|---|---|---|
+| 🟢 `peancor/moodle-mcp-server` | *«único permisivo que escribe nota y devolución en un LMS»* (gap 6) | **FALSO desde hoy: hay tres MIT vivos** — `toshieji/moodle-grading-mcp` (9 tools, nota en borrador), `NiccoloSalvini/mcp-moodle-teacher` (22 tools), `Dymayo/moodler-mcp` | 🔴 **Sale de P78.** No se cotiza fork: **se migra**. Ver **P79** |
+| 🟢 `trilogy-group/oneroster-ts` | *«único SDK OneRoster con MCP y escritura»* | **Parcialmente falso: hay servidor Apache-2.0 vivo** (`Ed-Fi-Alliance-OSS/edfi-oneroster`, `HEAD` 2026-10-01) **y cliente MIT vivo** (`TCI/OneRoster`, Ruby). 🔴 **Sigue siendo el único cliente en TypeScript** | ⚠️ **Sale de P78 salvo que el requisito sea TypeScript.** Ver **P80** |
+| 🔴 `DavidLMS/learnmcp-xapi` | *«la única puerta»* (gap 64) | **CONFIRMADO: sigue sin sucesor.** El fork `ashleycribb` está **2 commits adelante y los dos son config de Cloud Run** | 🟢 **P78 se mantiene, y ahora tiene su caso medido.** Ver **P81** |
+
+🔵 **Lo que esto le hace a P78 como patrón: lo mejora.** P78 era una receta para tres piezas y resulta que **dos no la
+necesitaban**. Queda para **una**, con la premisa verificada en serio —se buscó sucesión y no hay— y con el riesgo
+dimensionado: son **~32 commits de adaptador delgado** sobre dos LRS vivos e intercambiables por configuración. **Un
+patrón que se aplica a una pieza con la premisa probada vale más que uno que se aplicaba a tres por falta de búsqueda.**
+
+⚠️ **Y la regla de proceso que deja, para esta base:** **toda auditoría de vitalidad tiene que ir seguida de un barrido
+de sucesión antes de que sus conclusiones entren a un patrón.** Medir que algo está frío y concluir que no tiene
+reemplazo son dos afirmaciones distintas, y la segunda necesita su propia búsqueda (`gap 78`).
+
 ## P78 — Adoptar una dependencia congelada a propósito: el fork mínimo con contrato de mantenimiento, para las piezas que no tienen reemplazo (agregado en el pase 37 del 2026-10-02; **transversal, y es el patrón que vuelve proponibles las tres piezas auditadas arriba**)
 
 **El problema que resuelve, y es el que este pase destapó.** Tres de las dependencias más valiosas de esta base están
@@ -4336,4 +4358,138 @@ defendible — **y es exactamente el costo que aparece en la semana 6 si no se e
 - 🟢 **EMEA**, donde el Anexo III (**2027-12-02**) exige trazabilidad y gestión de riesgo del sistema: **una dependencia
   congelada sin plan de mantenimiento es un hallazgo de auditoría**; con **P78** es un control documentado.
 - ⚠️ **LATAM y APAC**: se vende igual, pero el argumento es de continuidad operativa y no regulatorio.
+
+## P79 — Corregir dentro de Moodle con la nota en BORRADOR: la receta que convierte el requisito regulatorio en el comportamiento por defecto del servidor (agregado en el pase 38 del 2026-10-02)
+
+**El problema que resuelve.** Un cliente institucional quiere que la AI ayude a corregir, y su regulador —AI Act en EMEA,
+reglas estatales en North America, Vietnam y Corea en APAC— exige **supervisión humana** sobre la evaluación del alumno.
+La respuesta habitual es una cláusula en la propuesta. **Esta receta la pone en el software**, y reemplaza la pieza que
+el pase 37 encontró congelada hace 7,3 meses (`peancor/moodle-mcp-server`, **P54**/**P55**).
+
+### Las piezas, todas verificadas el 2026-10-02
+
+| Rol | Pieza | Licencia | `HEAD` |
+|---|---|---|---|
+| LMS | **Moodle** (`moodle/moodle`) | GPL-3.0 — es el host, no se linkea | — |
+| Puerta de corrección | **`toshieji/moodle-grading-mcp`** | **MIT** ✅ | **2026-09-07** |
+| Superficie docente amplia (opcional) | **`NiccoloSalvini/mcp-moodle-teacher`** | **MIT** ✅ | **2026-09-25** |
+| Telemetría del proceso (opcional) | `yetanalytics/lrsql` (Apache-2.0) o `openfun/ralph` (MIT) | permisivas ✅ | **2026-10-01** / 2026-09-07 |
+
+### El wiring
+
+1. **Habilitar en Moodle las 8 funciones de Web Services que la puerta requiere**, y sólo esas:
+   `core_webservice_get_site_info`, `core_course_get_courses_by_field`, `core_course_get_contents`,
+   `mod_assign_get_assignments`, `mod_assign_get_submissions`, `mod_assign_get_grades`,
+   `mod_assign_get_submission_status`, `mod_assign_save_grade`. ⚠️ **En Moodle 5.x el *webroot* es `public/`**: ver la
+   advertencia del pase 19 en `verticals/solutions.md` antes de escribir una sola ruta.
+2. **Crear el token de servicio con el rol más chico que cubra esas ocho** — no un token de admin.
+3. **Configurar la puerta en modo lectura primero:** sin `MOODLE_ALLOW_WRITE=1` **no puede escribir nada**. Se demuestra
+   el circuito completo de lectura (`list_pending`, `get_submission`, `read_submission_file`, `read_submission_images`)
+   **antes** de habilitar escritura.
+4. **Habilitar escritura con allowlist explícita de IDs de curso** — empezar por **un** curso piloto. Lista vacía = no
+   escribe; esa es la posición segura por defecto, y es la que se deja en los entornos que no son el piloto.
+5. **La nota la decide el modelo, la escribe el servidor y queda en `workflowstate=readyforreview`:** graduada y **NO
+   publicada**, **sin notificación al alumno**. 🟢 **El docente sigue siendo el único que publica, porque el servidor no
+   sabe hacerlo.**
+6. **Dejar el pie de declaración de asistencia por AI activado** (viene por defecto) y **conservar el audit trail JSONL**
+   como evidencia: es el artefacto que se le entrega al auditor.
+7. **Si hace falta más que corregir** —asistencia, anuncios, alumnos en riesgo— se compone `mcp-moodle-teacher` al lado
+   (22 tools, con confirmación obligatoria en las 3 de escritura), **no se reemplaza** la puerta de corrección: la que
+   tiene las garantías de nota en borrador es la de `toshieji`.
+8. **Opcional, y es lo que cierra el expediente:** emitir un statement xAPI por cada corrección asistida hacia `lrsql` o
+   `ralph`, para tener la serie temporal de *qué propuso la AI y qué publicó el docente*. Eso es **P4**/**P68** enchufado
+   acá, y es la métrica que prueba la supervisión humana en vez de afirmarla.
+
+🔵 **Lo que se escribe en la propuesta:** *«el sistema no puede publicar notas»*. No *«el sistema está configurado para
+no publicar notas»*. La diferencia la sostiene el código, y es verificable por el cliente en el README.
+
+⚠️ **Lo que NO entra en esta receta:** `csmediapro/moodle-mcp-server` —**AGPL-3.0**, y es el más activo de la capa, así
+que va a aparecer primero en cualquier búsqueda— y `loyaniu/moodle-mcp`, **sin archivo de licencia** (8 rutas probadas,
+8 × 404).
+
+## P80 — Rostering OneRoster sin escribir un cliente: servir el estándar desde el Ed-Fi ODS que el distrito ya tiene (agregado en el pase 38 del 2026-10-02)
+
+**El problema que resuelve.** Las recetas **P58**, **P60** y **P64** de esta base consumen OneRoster con
+`trilogy-group/oneroster-ts`, que está **congelado hace 15,2 meses** y cuyo único movimiento en ese tiempo fueron cuatro
+ramas de Dependabot sin mergear. Y hay un problema anterior: en un distrito norteamericano el dato **no está en
+OneRoster**, está en **Ed-Fi ODS**, así que la receta vieja suponía un traductor que nadie escribió — `EASOL/edfi-to-oneroster`
+lo intentó y lo abandonó **hace 10 años**.
+
+### Las piezas, verificadas el 2026-10-02
+
+| Rol | Pieza | Licencia | `HEAD` | Nota |
+|---|---|---|---|---|
+| Fuente | **Ed-Fi ODS** del distrito | — | — | Ya desplegado en el cliente: **no se cotiza** |
+| **Proveedor OneRoster** | **`Ed-Fi-Alliance-OSS/edfi-oneroster`** | **Apache-2.0** ✅ | **2026-10-01** | **14 endpoints GET**, OneRoster 1.2, Ed-Fi DS 4.0 y 5.0/5.1/5.2, **86 tags**, v1.0.2 |
+| Consumidor (Ruby) | **`TCI/OneRoster`** | **MIT** ✅ | **2026-09-11** | v2.3.27, rubygems |
+| Consumidor (TypeScript) | 🔴 `trilogy-group/oneroster-ts` | 0BSD | 🔴 2025-06-27 | **Congelado. No tiene sucesor** → si el requisito es TS, aplica **P78** sólo a esta pieza |
+| Competencias / alineación | `cassproject/CASS`, `1EdTech/OpenCASE` | Apache-2.0 | — | Como en **P50**, **P57**, **P60** |
+
+### El wiring
+
+1. **Levantar `edfi-oneroster` con Docker apuntando al ODS del cliente** — hay guía de stack completo en el repo; también
+   IIS/Windows si el distrito es Microsoft-shop. **Verificar primero la versión del Data Standard**: soporta **4.0 y
+   5.0/5.1/5.2**, y el ODS del cliente puede estar en otra.
+2. **Validar los 14 endpoints GET contra el ODS real** antes de prometer superficie: `academicSessions`, `classes`,
+   `courses`, `demographics`, `enrollments`, `orgs`, `users`, `schools`, `students`, `teachers`, `gradingPeriods`,
+   `terms` y recuperación por id. Usar `fields` y `filter` para no traer de más, y `limit`/`offset` para paginar.
+3. 🔴 **Decir en voz alta que es de SÓLO LECTURA.** Son 14 endpoints **GET**. El rol de escritura que `oneroster-ts`
+   cubría con sus 60 tools de escritura **no lo cubre esta pieza**: si la receta necesita escribir rostering, eso sigue
+   abierto y hay que cotizarlo aparte.
+4. **Elegir el consumidor por lenguaje, no por costumbre:** en Ruby, `TCI/OneRoster` y se termina. En TypeScript **no hay
+   opción viva**: o se asume `oneroster-ts` con **P78** (fork mínimo, 0BSD, sin obligación ni de conservar el aviso), o se
+   consume la API HTTP directamente —que es lo razonable, porque del otro lado ahora hay un servidor estándar y no una
+   librería.
+5. **Componer con la capa de competencias** (`CASS`/`OpenCASE`) como en **P60**: el rostering da *quién está en qué*, la
+   capa de competencias da *qué debería saber*.
+
+⚠️ **Las dos cosas que no hay que prometer.** (1) **Certificación 1EdTech: el repo no la declara.** Es implementación de
+referencia permisiva, y ante un distrito esa distinción se hace. (2) **Cuál de `Ed-Fi-Alliance-OSS/edfi-oneroster` y
+`CSR2017/edfi-oneroster` es upstream no está resuelto** (`gap 79`): citar el de la Alliance, que tiene 86 tags y commit
+de ayer.
+
+🔵 **El cambio de encuadre que esta receta habilita, y es el que se vende:** OneRoster deja de ser *«una librería que hay
+que envolver»* y pasa a ser **una plataforma que se despliega** sobre datos que el cliente ya tiene. Lo que se cotiza es
+la capa de AI arriba del estándar, no el plomería del estándar.
+
+## P81 — La puerta xAPI congelada, propuesta con el riesgo acotado por medición en vez de por promesa (agregado en el pase 38 del 2026-10-02)
+
+**El problema que resuelve.** `DavidLMS/learnmcp-xapi` tiene **42 menciones en este archivo** —es la puerta xAPI de
+**P4**, **P15**, **P67**, **P68** y **P69**— y está **congelada hace 13,1 meses, con una sola rama**. Es la única de las
+tres piezas del pase 37 que **sí** confirmó no tener sucesor. Esta receta es **P78 aplicado a ella**, con la diferencia
+de que ahora el riesgo está medido y se puede decir en números.
+
+### Las tres mediciones que convierten el riesgo en una cifra
+
+| Medición | Valor | Por qué importa en la propuesta |
+|---|---|---|
+| Tamaño de lo congelado | **~32 commits**, **3 tools** (1 escribe / 2 leen), 1 sola rama | **Es un adaptador delgado, no un sistema.** Es auditable en una tarde y mantenible por una persona |
+| Dónde vive el dato | **En el LRS, no en el adaptador** | Si la puerta se abandona, **el dato del cliente no está atrapado en ella** |
+| Vitalidad de la capa de abajo | `yetanalytics/lrsql` **Apache-2.0, `HEAD` 2026-10-01, v0.9.9** · `openfun/ralph` **MIT, v5.0.1, `HEAD` 2026-09-07** | **Dos LRS vivos, permisivos, de organizaciones distintas y regiones distintas** (una pública europea) |
+
+🔵 **Y el dato que cierra el argumento:** la **v2.0.0 de `learnmcp-xapi` trae sistema de plugins de LRS** (SQLite, Ralph,
+Veracity). **El LRS se cambia por variable de entorno, no por fork.** Es decir: la pieza congelada es intercambiable por
+abajo y chica por dentro.
+
+### El wiring
+
+1. **Fork mínimo en la organización del CLIENTE** (no en la de Globant), como manda **P78**: MIT, basta conservar el aviso.
+2. **Fijar el commit** `fbf6091` —el tip real del upstream, 2025-08-29— y partir de ahí. ⚠️ **No partir del fork
+   `ashleycribb`**: está 2 commits adelante y los dos son **configuración de Cloud Run**, no mantenimiento. Si el
+   despliegue es en GCP, **esos 2 commits sí sirven y se cherry-pickean a sabiendas de qué son**.
+3. **Elegir el LRS por región y por argumento, no por costumbre:** en EMEA, `openfun/ralph` —**MIT y de una entidad
+   pública francesa**, que es el argumento de soberanía de **P68**—; en North America o cuando el cliente quiere correr
+   sobre su base existente, `yetanalytics/lrsql` sobre Postgres/MySQL/MariaDB/SQLite.
+4. **Dejar el plugin de LRS configurado por entorno**, no hardcodeado: es lo que hace que cambiar de LRS no toque la
+   puerta.
+5. **Cotizar el mantenimiento explícito** —ventana de respuesta, quién actualiza dependencias, qué pasa si la spec xAPI
+   cambia— y entregarlo **como control documentado**: en EMEA, una dependencia congelada sin plan de mantenimiento es un
+   hallazgo de auditoría; **con plan, es un control**.
+6. **Vigilar el upstream con el instrumento del pase 38, no con la fecha de `main`:** `git ls-remote` para los refs, y
+   **contar commits adelante/atrás** antes de concluir que alguien lo retomó. Un `main` más nuevo puede ser una receta de
+   despliegue (`gap 78`).
+
+🟢 **Lo que esto le da a la conversación:** en vez de *«usamos una librería que no se actualiza»*, se dice **«usamos un
+adaptador de 32 commits del que somos dueños, sobre un LRS mantenido por una entidad pública europea, intercambiable por
+configuración»**. Es la misma dependencia; el riesgo es el mismo; **la diferencia es que está medido**.
 

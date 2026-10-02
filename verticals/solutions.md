@@ -37,6 +37,61 @@ updated: 2026-10-02
 > **Pase 27 del 2026-10-01:** se agrega **la columna que faltaba en veintiséis pasadas — ¿la vertical tiene puerta de agente?** Moodle **sí** (dos conectores **MIT**, uno que escribe notas) y Canvas **sí**; 🔴 **Open edX no tiene ninguna**, y es la de mayor huella pública en LATAM e India. **Las LMS son copyleft pero las puertas son MIT**, y por eso se pueden componer. Ver la sección del pase 27, abajo.
 
 
+## 🟢 La fila roja de Moodle se cierra con TRES opciones MIT, y aparece el lado proveedor de OneRoster (pase 38 del 2026-10-02)
+
+El pase 37 dejó esta vertical con **tres filas rojas en la tabla de puertas**: Moodle-que-pone-nota (`peancor`, frío
+7,3 m), xAPI (`learnmcp-xapi`, congelado 13,1 m) y OneRoster (`oneroster-ts`, congelado 15,2 m). Este pase fue a buscar
+reemplazo para las tres. **Dos se cierran; una no, y se puede decir por qué sin perder la propuesta.**
+
+### 🟢 Moodle: la fila roja pasa a verde, y con mejor diseño que el original
+
+| LMS | Puerta | Licencia (verificada) | `HEAD` | Qué se puede prometer |
+|---|---|---|---|---|
+| **Moodle** | 🟢 **`toshieji/moodle-grading-mcp`** | **MIT** ✅ | 🟢 **2026-09-07** | 🟢 **Se propone, y es la que hay que proponer cuando el cliente es una institución.** **9 tools.** Pone nota y devolución **en borrador** (`workflowstate=readyforreview`): **el docente sigue siendo quien publica**. Allowlist de cursos, `MOODLE_ALLOW_WRITE=1`, audit trail JSONL, sin notificación al alumno, pie de declaración de AI |
+| **Moodle** | 🟢 **`NiccoloSalvini/mcp-moodle-teacher`** | **MIT** ✅ | 🟢 **2026-09-25** | 🟢 **Se propone cuando hace falta superficie amplia.** **22 tools** (15 lectura / 3 escritura / 4 utilidad): nota con devolución, anuncios, **asistencia** y `students_at_risk`. Toda escritura pide confirmación. ⚠️ **Se está renombrando a `mcp-moodle-staff`** |
+| **Moodle** | 🟢 `Dymayo/moodler-mcp` | **MIT** ✅ | 🟢 **2026-09-19** | Tercera opción. ⚠️ Tools **no enumeradas**: no cotizar superficie sin revisarla |
+| **Moodle** | ⛔ `csmediapro/moodle-mcp-server` | 🔴 **AGPL-3.0** | 🟢 2026-10-01 | ⛔ **No proponer para producto.** Es **el más activo de la capa** y sólo lee: la fecha tienta y la licencia lo descarta |
+| **Moodle** | ⛔ `loyaniu/moodle-mcp` | 🚫 **sin licencia** | 2026-06-28 | ⛔ **No proponer.** `LICENSE`/`.md`/`.txt`/`COPYING` en `main` y `master`: **404 en los 8** |
+
+🔵 **Lo que esto cambia en una frase de reunión:** hasta ayer, *«corregir dentro de Moodle con software permisivo»* tenía
+**una** respuesta y estaba fría hace siete meses. Hoy tiene **tres**, todas MIT, todas con commit del último mes, y la
+mejor de las tres **no publica notas: las deja en borrador**. 🟢 **Eso deja de ser una limitación técnica y pasa a ser el
+argumento de cumplimiento**: el régimen de alto riesgo del AI Act para evaluación de alumnos, y las reglas de supervisión
+humana de Oklahoma y Maryland, piden exactamente eso —que la decisión final la publique una persona— y acá viene
+**impuesto por el servidor**, no prometido en una política. Ver `intel/trends.md`, **tendencias 133 y 134**.
+
+### 🟢 OneRoster: la vertical gana el lado proveedor, que es una plataforma, no una librería
+
+| Pieza | Licencia | `HEAD` | Rol | Qué aporta a un entregable |
+|---|---|---|---|---|
+| 🟢 **`Ed-Fi-Alliance-OSS/edfi-oneroster`** | **Apache-2.0** ✅ | 🟢 **2026-10-01** | **Servidor** | **Expone OneRoster 1.2 (14 endpoints GET) sobre una base Ed-Fi ODS que el distrito ya tiene.** Ed-Fi DS 4.0 y 5.0/5.1/5.2, Docker o IIS. **86 tags**, v1.0.2 |
+| 🟢 `CSR2017/edfi-oneroster` | **Apache-2.0** ✅ | 🟢 2026-09-22 | Servidor | Misma función. 🔴 Relación upstream sin resolver → `gap 79` |
+| 🟢 `TCI/OneRoster` | **MIT** ✅ | 🟢 2026-09-11 | **Cliente** (Ruby) | Consumo de `students`/`teachers`/`classes`/`courses`/`enrollments`. v2.3.27 |
+| 🔴 `trilogy-group/oneroster-ts` | 0BSD | 🔴 2025-06-27 | Cliente (TypeScript) | 🔴 **Congelado 15,2 m.** Sigue siendo la única opción **en TypeScript**, y no tiene sucesor |
+
+🔵 **El cambio de encuadre para esta vertical, y es el que importa comercialmente:** OneRoster venía tratado acá como
+*«una librería que hay que envolver»*. **Con `edfi-oneroster` pasa a ser una plataforma desplegable** —Docker, API HTTP
+estándar, sobre el ODS que el distrito ya corre— de la misma clase que Moodle u OpenEduCat en la tabla de plataformas
+recomendadas: **se instala y se le pone AI arriba**, en vez de escribirle un cliente. ⚠️ **Dato de gobernanza:** el repo
+vive en la org **Ed-Fi-Alliance-OSS** y su copyright dice **«1EdTech Consortium, Inc.»** — artefacto conjunto de los dos
+consorcios, el primero de esta base. **No declara certificación 1EdTech: no prometerla.**
+
+🔴 **Y el dato que hay que tener a mano antes de cotizar rostering:** de las **ocho** implementaciones de OneRoster que
+devuelve un barrido abierto, **cinco llevan ≥ 3 años sin un commit** (`jdolny/OneRoster.NET` 3,0 a · `gotranseo/oneroster`
+3,4 a · `bgwdotdev/go-oneroster` 6,9 a · `EASOL/edfi-to-oneroster` 10,0 a) y una sexta está congelada. **Quedan tres
+usables.** Es la capa de esta base donde la selección pesa más.
+
+### 🔴 xAPI: la fila sigue roja, y así es como se dice sin perder el proyecto
+
+`DavidLMS/learnmcp-xapi` sigue **congelado hace 13,1 meses** y no tiene sucesor en la capa de puerta. ⚠️ **El fork que
+aparece primero en cualquier búsqueda —`ashleycribb/learnmcp-xapi`, `main` de 2026-09-17— NO es sucesión: está 2 commits
+adelante y los dos son configuración de Cloud Run.** 🟢 **Pero el riesgo está contenido, y la contención es verificable:**
+el LRS de abajo se cambia por variable de entorno (plugins de la v2.0.0), y los dos LRS permisivos están vivos —
+`yetanalytics/lrsql` (Apache-2.0, `HEAD` **2026-10-01**, v0.9.9) y `openfun/ralph` (MIT, **v5.0.1**, `HEAD` 2026-09-07,
+**pública europea**). Lo congelado son ~32 commits de adaptador; el dato del cliente vive en el LRS. **Se propone por
+`P78`**, con fork mínimo y contrato de mantenimiento, **no como riesgo sin dimensionar**.
+
+
 ## 🔴 La columna «puerta de agente» de esta vertical, fechada: tres de las puertas que esta KB propone están paradas (pase 37 del 2026-10-02)
 
 **El pase 27 abrió en este archivo la columna *«¿la vertical tiene puerta de agente?»*, y los pases 30 y 33 la llenaron

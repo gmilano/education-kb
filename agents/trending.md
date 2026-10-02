@@ -9,6 +9,145 @@ updated: 2026-10-02
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 > No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
 
+## 2026-10-02 (pase 38) — el pase que va a buscar **sucesión** para las tres dependencias congeladas que dejó el 37, y el resultado es asimétrico: **dos de las tres quedan cerradas con piezas permisivas vivas**, la tercera no — y el fork que parecía salvarla está **exactamente 2 commits adelante, y los dos son configuración de Cloud Run**
+
+**La pregunta del pase es la que el 37 dejó abierta y no contestó.** El 37 fechó las 49 filas por el commit de su rama
+por defecto y encontró **10 filas paradas hace ≥ 6 meses**, de las cuales **tres son load-bearing**: `learnmcp-xapi`
+(42 menciones en `compose/patterns.md`), `oneroster-ts` (la superficie de tools más grande de la base) y
+`moodle-mcp-server` de `peancor` (la única pieza permisiva que ponía nota dentro de un LMS). **Diagnosticar no es
+reemplazar.** Este pase busca, para cada una, una pieza **permisiva, viva y del mismo rol**, con el mismo instrumento
+del 37 (`git ls-remote` + `git fetch --depth 1 <rama>` + `git log -1 --format=%cI`) y verificando el archivo de
+licencia por `raw.githubusercontent.com` antes de escribir una sola fila.
+
+🔵 **Nota de método, porque corrige al pase 37 en un detalle que importa para todo barrido futuro:** el `fetch` por
+**SHA** de `HEAD` que el 37 describe **falla en este entorno** (`FETCHFAIL` en las 49). El que funciona es el `fetch`
+de la **rama por defecto por nombre**, tomando el nombre del `ref:` que devuelve `ls-remote --symref`. Mismo dato,
+misma precisión, una llamada menos. El instrumento del 37 es correcto; su invocación no era portable.
+
+### El resultado, fila por fila — y conviene leer la tercera columna antes que la cuarta
+
+| Pieza congelada (pase 37) | Rol que sostiene | Sucesión encontrada en este pase | Estado |
+|---|---|---|---|
+| 🔴 `DavidLMS/learnmcp-xapi` · MIT · `HEAD` **2025-08-29** (13,1 m) | puerta MCP de xAPI (**P4, P15, P67, P68, P69**) | ❌ **Ninguna en la capa de puerta.** El único fork con `main` más nuevo está 2 commits adelante y no toca el protocolo | 🔴 **Abierto — pero CONTENIDO** (ver abajo) |
+| 🔴 `trilogy-group/oneroster-ts` · 0BSD · `HEAD` **2025-06-27** (15,2 m) | OneRoster, 132 tools (**P58, P60, P64**) | ✅ **Lado servidor:** `Ed-Fi-Alliance-OSS/edfi-oneroster` (Apache-2.0, `HEAD` **2026-10-01**). ✅ **Lado cliente:** `TCI/OneRoster` (MIT, Ruby, `HEAD` **2026-09-11**) | 🟢 **Cerrado**, salvo el cliente TypeScript |
+| 🔴 `peancor/moodle-mcp-server` · MIT · `HEAD` **2026-02-22** (7,3 m) | nota y devolución dentro del LMS (**P54, P55**, gap 6) | ✅ **Tres** reemplazos MIT vivos, y **dos con mejor diseño que el original** | 🟢 **Cerrado y sobre-ofertado** |
+
+### 🔴 El hallazgo que hay que decir primero, porque es una corrección a una fuente, no a esta base
+
+La búsqueda de sucesión para `learnmcp-xapi` devuelve, en el primer resultado, **`ashleycribb/learnmcp-xapi`**,
+descrito por el buscador como *«a more recent fork»*. Y es literalmente cierto: su `main` está en **2026-09-17**,
+trece meses más nuevo que el upstream. **Si esta base lo hubiera tomado por el titular, habría escrito que la
+dependencia más citada de la KB tiene sucesor.** No lo tiene. Se midió el grafo, no el titular:
+
+| Medición | Valor |
+|---|---|
+| `merge-base` upstream/fork | `fbf6091` — **es el tip del upstream** (2025-08-29) |
+| Commits del fork **que no están** en el upstream | **2** |
+| Commits del upstream **que no están** en el fork | **0** |
+| Qué son esos 2 commits | `18b2954` *«Add Google Cloud Run deployment configuration and documentation»* + `816d8b8`, su merge de PR #1 |
+| Estrellas / tags del fork | **0** / **0** |
+
+🔵 **O sea: el fork no mantiene el proyecto, lo despliega.** La lógica xAPI y MCP es **byte por byte la del upstream
+congelado**. Es una receta de despliegue en GCP, y como tal tiene valor — pero **no es sucesión y no debe citarse como
+tal**. 🔵 **La regla que deja, y es hermana de la del pase 37 sobre ramas de bot:** *un fork con `main` más nuevo no
+es un mantenedor hasta que se cuentan los commits que agrega y se lee qué tocan.* Dependabot infla el grafo de refs;
+un fork de despliegue infla la fecha de `main` (**tendencia 132**, **gap 78**).
+
+### 🔵 Por qué «abierto» no es «urgente»: la capa que está DEBAJO de la puerta congelada está viva y es permisiva
+
+Esta es la parte que cambia la lectura de riesgo, y se apoya en algo que la base ya tenía anotado sin conectarlo:
+**`learnmcp-xapi` v2.0.0 trae un sistema de plugins de LRS** (SQLite, **Ralph**, **Veracity**), o sea que el LRS se
+cambia **por variable de entorno, no por fork**. Y los dos LRS permisivos que esta base recomienda hace 33 pases
+fueron re-fechados hoy:
+
+| LRS | Licencia | `HEAD` medido hoy | Último semver | Motores | Región |
+|---|---|---|---|---|---|
+| 🟢 `yetanalytics/lrsql` (SQL LRS) | **Apache-2.0** ✅ | **2026-10-01** (ayer) | **v0.9.9** | SQLite 3.42 · Postgres 14–18 · MariaDB 10.6–11.8 · MySQL 8.0.44–9.5.0 | North America (Yet Analytics) |
+| 🟢 `openfun/ralph` | **MIT** ✅ | **2026-09-07** | **v5.0.1** | Elasticsearch + los 14 extras de `ralph-malph` ya inventariados en `repos/foundations.md` | EMEA (France Université Numérique) |
+
+🔵 **La conclusión de riesgo, y es la que va a una propuesta:** lo congelado no es la telemetría del cliente, es **un
+adaptador delgado de ~32 commits** montado sobre dos LRS vivos, permisivos y mantenidos por organizaciones distintas
+en dos regiones distintas. **El costo de adoptar la pieza congelada es acotado y medible**, que es exactamente la
+condición que **P78** (adoptar una dependencia congelada a propósito) pedía poder verificar antes de recomendarlo.
+**P78 deja de ser una receta teórica: `learnmcp-xapi` es su caso medido.**
+
+### 🟢 Las tres altas MIT que cierran el gap 6 — y la mejor de las tres está diseñada como lo pide un regulador
+
+El pase 37 escribió que `peancor` era *«la única pieza permisiva de esta KB que pone nota y devolución dentro de un
+LMS»*. **Hoy hay tres, todas MIT, todas con `main` de menos de un mes**, y ninguna estaba en esta base:
+
+| Repo | Licencia (verificada) | `HEAD` | Tools | Qué escribe | Región |
+|---|---|---|---|---|---|
+| 🟢 **`toshieji/moodle-grading-mcp`** | **MIT** ✅ (WACA + Toshiaki Ejiri, 2026) | **2026-09-07** (24 d) | **9** | `save_grade_draft` → `workflowstate=readyforreview`: **nota NO publicada** | **APAC** (Japón, Web Analytics Consultants Association) |
+| 🟢 **`NiccoloSalvini/mcp-moodle-teacher`** | **MIT** ✅ (2026) | **2026-09-25** (6 d) | **22** (15 lectura · 3 escritura · 4 utilidad) | `grade_submission`, `announce`, `mark_attendance`, con confirmación explícita | **EMEA** (Italia) |
+| 🟢 **`Dymayo/moodler-mcp`** | **MIT** ✅ (2026) | **2026-09-19** (13 d) | — (no enumeradas este pase) | release 1.1.2, *conventional commits* | Sin región declarada |
+
+🔵 **Y el hallazgo comercial del pase está en la columna «qué escribe» de la primera fila.** `moodle-grading-mcp` no
+publica notas: las deja en `readyforreview`. Además, **verificado en su README**: la escritura exige
+`MOODLE_ALLOW_WRITE=1`, está **restringida a una allowlist de IDs de curso** (lista vacía = no puede escribir nada),
+**loguea cada intento de escritura en un audit trail JSONL**, **no dispara notificación al alumno** y **anexa un pie
+de declaración de asistencia por AI** salvo override. 🟢 **Eso no es prolijidad: es exactamente la forma que exige el
+régimen de alto riesgo del AI Act para evaluación de alumnos — el humano sigue siendo quien publica** — y es también
+lo que piden las reglas de supervisión humana de Oklahoma y Maryland en North America (ver `intel/trends.md`,
+**tendencia 133**). **Es la primera vez que esta base encuentra una pieza permisiva cuyo diseño de seguridad es
+argumento de cumplimiento y no sólo higiene de ingeniería** (**tendencia 134**).
+
+### ⚠️ Las dos trampas de esta capa, medidas, para que nadie las repita
+
+| Repo | Por qué NO entra | Medición |
+|---|---|---|
+| ⛔ `csmediapro/moodle-mcp-server` | **AGPL-3.0** y sólo lectura — **es el más activo de todos** (`HEAD` **2026-10-01**, v0.1.7) y por eso es el que más tienta | `LICENSE` en `main` = AGPL-3.0 textual. Confirma el veredicto que la base ya tenía en `agents/top.md` |
+| ⛔ `loyaniu/moodle-mcp` | **Sin archivo de licencia** → por defecto, todos los derechos reservados | Probados `LICENSE`, `LICENSE.md`, `LICENSE.txt` y `COPYING` en `main` **y** `master`: **404 en los 8**. `HEAD` 2026-06-28 |
+
+### 🟢 OneRoster: aparece el lado PROVEEDOR, que esta base nunca tuvo — y trae una rareza de gobernanza
+
+`Ed-Fi-Alliance-OSS/edfi-oneroster` — **Apache-2.0**, Node.js, 6 ★, **86 tags**, último **v1.0.2**, `HEAD`
+**2026-10-01**. **Sirve una API OneRoster 1.2 desde una base Ed-Fi ODS**: **14 endpoints GET** (`academicSessions`,
+`classes`, `courses`, `demographics`, `enrollments`, `orgs`, `users`, `schools`, `students`, `teachers`,
+`gradingPeriods`, `terms`, más recuperación por id), con `limit`/`offset`, `sort`/`orderBy`, `filter` y `fields`.
+Compatible con **Ed-Fi Data Standard 4.0 y 5.0/5.1/5.2**. Despliegue por **Docker** o IIS/Windows.
+
+⚠️ **La rareza, y hay que saberla antes de nombrar al proyecto en una reunión:** el repo vive en la organización
+**Ed-Fi-Alliance-OSS**, pero su aviso de copyright dice **«Copyright (c) 2025 1EdTech Consortium, Inc. and
+contributors»**. **Es un artefacto conjunto de los dos consorcios que esta base venía tratando como mundos separados**
+— Ed-Fi del lado del dato del distrito, 1EdTech del lado del estándar de interoperabilidad. **Es el primero de esta
+KB con esa doble firma** (**tendencia 135**). No declara certificación 1EdTech en el repo: no afirmar que está
+certificado.
+
+Acompaña `CSR2017/edfi-oneroster` (**Apache-2.0**, `HEAD` **2026-09-22**, 8 tags), con la misma descripción. 🔴 **La
+relación entre los dos —cuál es upstream— NO se determinó este pase: queda como `gap 79`**, y hasta resolverlo hay que
+citar el de la Alliance, que es el que tiene 86 tags y commit de ayer.
+
+Y del lado cliente, **`TCI/OneRoster`** — **MIT**, Ruby, **v2.3.27**, `HEAD` **2026-09-11**, 35 tags, 4 ★: wrapper de
+consumo (no servidor) para `students`, `teachers`, `classes`, `classrooms`, `courses`, `enrollments`, con filtrado por
+`sourcedId`, publicado en rubygems. **Es el reemplazo funcional de `oneroster-ts` para el rol de cliente — pero en
+Ruby.** 🔴 **El cliente OneRoster permisivo y vivo en TypeScript no existe**: `oneroster-ts` (0BSD) está congelado y
+`@timeback/oneroster` ya fue declarado no-alta en `repos/foundations.md`. **Ese es el residuo honesto del gap, y
+conviene decirlo así en una propuesta en vez de prometer paridad de lenguaje.**
+
+### ⚫ Los callejones sin salida, fechados — para que ningún pase los vuelva a buscar
+
+Cinco candidatos de OneRoster y LRS que el barrido devolvió y que **están muertos**, medidos hoy:
+
+| Repo | `HEAD` | Antigüedad |
+|---|---|---|
+| ⚫ `Transcordia/jupiter` (LRS xAPI + Caliper) | 2015-04-19 | **11,5 años** |
+| ⚫ `EASOL/edfi-to-oneroster` | 2016-10-19 | **10,0 años** |
+| ⚫ `bgwdotdev/go-oneroster` | 2019-11-04 | **6,9 años** |
+| ⚫ `gotranseo/oneroster` (Swift) | 2023-05-01 | **3,4 años** |
+| ⚫ `jdolny/OneRoster.NET` | 2023-10-13 | **3,0 años** |
+
+🔵 **El dato de encuadre que dejan juntos:** de las **ocho** implementaciones de OneRoster que devuelve un barrido
+abierto, **cinco llevan ≥ 3 años sin un commit**. OneRoster tiene mucho código escrito y poco código mantenido:
+**la selección importa más acá que en cualquier otra capa de esta base.**
+
+### Lo que este pase deja abierto
+
+- 🔴 **`gap 78`** — un fork con `main` más nuevo no es sucesión: falta incorporar el conteo de commits adelante/atrás al barrido estándar de vitalidad, como el pase 37 incorporó la distinción de ramas de bot.
+- 🔴 **`gap 79`** — cuál de `Ed-Fi-Alliance-OSS/edfi-oneroster` y `CSR2017/edfi-oneroster` es upstream.
+- 🔴 **El cliente OneRoster permisivo en TypeScript sigue sin existir.** Es candidato a contribución *upstream* propia, no a búsqueda.
+- ⚠️ `Dymayo/moodler-mcp` entró por licencia y fecha; **sus tools no se enumeraron**. Falta pasarlo por el mismo detalle que las otras dos.
+
 ## 2026-10-02 (pase 37) — el pase que deja de preguntarle al registro y le pregunta **al árbol de git**: con `git ls-remote` + un *fetch* de profundidad 1, las **49 filas quedan fechadas por su commit de `HEAD`**, y el resultado es que **10 de 49 tienen la rama principal parada hace más de seis meses — tres hace más de un año**, entre ellas **la dependencia más citada de esta KB**
 
 **El instrumento del pase, y es el primero de esta base que no depende de ningún registro ni de ninguna API.** El pase 35
