@@ -9,6 +9,193 @@ updated: 2026-10-02
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 > No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
 
+## 2026-10-02 (pase 39) — el pase que **deja de preguntarle a GitHub y le pregunta al REGISTRO por el nombre del PROYECTO**, que es la acción 1 del pase 38 — y en una tarde encuentra **seis piezas que treinta y ocho pases de barrido sobre GitHub nunca vieron**
+
+**La hipótesis del pase 38 era que el canal estaba mal, no el filtro, y queda confirmada.** El 38 descubrió que el
+gap 48 llevaba dos meses cerrado sin que la KB lo notara, porque el barrido buscaba *«conector de terceros»* en GitHub
+con nombre `*-mcp` y la puerta la había publicado el propio proyecto **en PyPI**. La acción que dejó escrita era
+concreta: **para cada ausencia de conector que esta base declara abierta, consultar el registro de paquetes del
+lenguaje de la plataforma (npm, PyPI, Packagist, RubyGems) con el nombre del PROYECTO, no del protocolo.**
+
+**Ejecutada sobre 23 términos × 4 registros, el canal rinde seis altas y nueve ausencias confirmadas por segundo
+instrumento.** Ninguna de las seis estaba en esta KB. Ninguna aparece buscando `mcp` + `education` en GitHub.
+
+🔵 **Nota de método, porque el canal nuevo trae dos modos de falla propios y los dos se cobraron víctimas en este
+mismo pase:**
+
+| Modo de falla del canal «registro» | Caso medido en este pase | Control que lo detecta |
+|---|---|---|
+| **Homonimia** — el nombre del proyecto educativo colisiona con un proyecto ajeno más popular | `folio` → **4 paquetes**, ninguno es el ILS: son *redlining* de `.docx` y reportes de agentes de código. `kolibri` → `@public-ui/mcp`, que es el **design system alemán KoliBri**, no la plataforma de aprendizaje de Learning Equality | Leer la `description` **y** el `repository` antes de contar el hit. El filtro de licencia **no** protege contra esto (tendencia 96) |
+| **El `repository` del registro no es un repo legible** | `ed-fi-sdk-mcp` y `frappe-mcp-server` declaran URL de GitHub y **las dos fallan `git ls-remote`**; `@ink-waffle/sisu-mcp` **no declara repo en absoluto** | `git ls-remote` sobre la URL declarada. ⚠️ **`curl` no sirve**: `github.com` devuelve 403 para todo, exista o no (tendencia 131) |
+
+### 🟢 Las seis altas, medidas una por una — licencia leída del archivo, `HEAD` del árbol, tools contadas en el código
+
+| Pieza | Licencia (evidencia) | `HEAD` / release | Tools medidas | Región | Qué rol cubre |
+|---|---|---|---|---|---|
+| 🟢 **`PabloPC05/mcp-usc`** | **MIT** ✅ (`LICENSE` textual + `pyproject.toml`) | **2026-08-27** (1,2 m) · 30 commits | **91** distintas | **EMEA** (España, U. de Santiago de Compostela) | Moodle del lado alumno **+ fuentes académicas oficiales** (calendario de exámenes, titulaciones) |
+| 🟢 **`JOSETRA44/DUTIC-mcp`** | **MIT** ✅ (`LICENSE` textual + manifiesto) | **2026-09-24** (8 d) · 74 commits | **12** | **LATAM** (Perú, U. Nacional de San Agustín de Arequipa) | Moodle institucional + **biblioteca** + encuestas + `pdf_to_markdown` |
+| 🟢 **`dasgltd/mcp-brasil`** v0.14.0 | **MIT** ✅ (`LICENSE`, *«(c) 2025-2026 MCP Brasil»*) | **2026-08-18** (1,5 m, commit **humano**) · 246 commits · **23 tags** · PyPI (18 releases) | **97** en total, **13 de educación** | **LATAM** (Brasil) | **INEP: ENEM (6) + Censo Escolar (7)** sobre ingesta de microdatos |
+| 🟢 **`maxxeddev/open-badges-mcp`** (`mcp-ob-ts`) | **MIT** ✅ (`LICENSE` + manifiesto + README) | repo **2026-06-10** (3,7 m ⚠️) · npm **0.3.2** / repo **0.4.0** | **16** | **APAC** (zona `+10:00`, Australia) | Open Badges 3.0: spec, **generación, FIRMA Ed25519 y validación** |
+| 🟢 **`@ink-waffle/sisu-mcp`** | ⚠️ **MIT** sólo por campo de npm (**sin repo público y sin `LICENSE` en el tarball**) | **2026-09-17** (15 d) · 1 release | **12** (`sisu_*`) | **EMEA** (Finlandia, Sisu de Funidata) | **SIS** de educación superior: *attainments*, *study rights*, matrícula, horarios, planes, catálogo |
+| 🟢 **`suren-kk/armenian-national-library-mcp`** | **MIT** ✅ (`LICENSE` + manifiesto) | **2026-08-10** (1,7 m) · 37 commits | **23**, todas de lectura | **EMEA** (Armenia) | **Primera pieza de esta KB sobre DSpace** — descubrimiento, contenido y API cruda del repositorio |
+
+Y dos que entran **con reserva declarada**, porque la evidencia de licencia es más débil que la de las seis anteriores:
+
+| Pieza | Por qué la reserva | Medición |
+|---|---|---|
+| ⚠️ **`ed-fi-sdk-mcp`** (npm, *maintainer* **`edfi`** — la cuenta del propio consorcio) | **Apache-2.0** ✅ con `LICENSE` **dentro del tarball**, pero el **repo declarado no es legible** y hay **un solo release, del 2025-10-03** (12 meses, *span* 0 días) | **11 tools, y ninguna toca dato de alumno:** `search_endpoints`, `search_schemas`, `get_schema_details`, `get_endpoint_details`, `get_entities_by_domain`, `list_entity_relationships`, `generate_entity_diagram`, `export_diagram_as_text`, `list_available_versions`, `set_data_standard_version`, `set_custom_data_standard_url` |
+| ⚠️ **`frappe-mcp-server`** 0.6.0 | **ISC** sólo por campo de npm (**sin `LICENSE` en el tarball**), repo **no legible**, último release **2025-07-30** (14 meses) | **21 tools** de CRUD genérico de DocType — y entre ellas **`call_method`** (ejecución de método arbitrario *whitelisted*) y `delete_document` |
+
+### 🔴 La corrección más importante del pase, y es a una afirmación propia sobre LATAM
+
+Esta base publicó, en el pase 35 y reafirmó en el 36, que **«Brasil está construyendo una capa MCP nacional sobre sus
+datos públicos, y educación es el único dominio grande que falta»** (tendencia 114, gap 69), y que por eso el INEP
+había que cotizarlo como **pipeline de ingesta de 8-12 semanas** y no como fachada.
+
+**La mitad arquitectónica de esa afirmación era correcta. La mitad de la ausencia era falsa.**
+
+`dasgltd/mcp-brasil` (MIT) tiene **dos de sus quince datasets dedicados a educación**, con **13 tools**:
+
+| Dataset | Tools |
+|---|---|
+| `inep_enem` | `info_enem`, `refrescar_enem`, `valores_distintos_enem`, `media_notas_uf`, `media_notas_por_grupo`, `top_municipios_por_media` |
+| `inep_censo_escolar` | `info_censo_escolar`, `refrescar_censo_escolar`, `valores_distintos_censo`, `buscar_escolas`, `escola_detalhe`, `resumo_uf`, `top_municipios_por_escolas` |
+
+🟢 **Y confirma la predicción de arquitectura del pase 36 ejecutándola:** no consume API del INEP —porque no hay—,
+**descarga los ZIP de microdatos** (`download.inep.gov.br/microdados/microdados_enem_*`,
+`download.inep.gov.br/dados_abertos/microdados_censo_escolar_*`) y sirve agregados. **Es exactamente el pipeline que
+P77 describía. Lo que cambia es que ya está escrito, es MIT, y hay 23 tags y un canario semanal de salud de fuentes en
+CI.** La cotización pasa de *«8-12 semanas de construcción»* a *«adopción + extensión»*.
+
+### 🔵 El patrón que aparece al mirar las tres regiones juntas: **tres piezas permisivas, tres estatutos, tres diseños que los encodean**
+
+El pase 38 encontró la primera pieza de esta base cuyo diseño de seguridad es argumento de cumplimiento
+(`moodle-grading-mcp`, que deja la nota en `readyforreview` y no la publica). **Este pase encuentra que no es un caso
+aislado: es un patrón regional, y ya hay uno por región grande.**
+
+| Pieza | Estatuto que su diseño encodea | Mecanismo medido en el código |
+|---|---|---|
+| `bruchris/canvas-lms-mcp` (MIT, ya en la tabla) | **FERPA** (North America) | **Modo FERPA**: `CANVAS_PSEUDONYMIZE_STUDENTS=true` seudonimiza alumnos; la **reversión** exige una **segunda** bandera (`CANVAS_PSEUDONYMIZE_REVERSE_LOOKUP=true`) y la tool `resolve_pseudonym` **sólo se registra en transporte stdio**, como tool 166 |
+| `toshieji/moodle-grading-mcp` (MIT, pase 38) | **AI Act Anexo III §3** (EMEA) + supervisión humana de Oklahoma/Maryland | `save_grade_draft` → `workflowstate=readyforreview`: **la nota no se publica**; allowlist de cursos, audit trail JSONL, sin notificación al alumno |
+| `dasgltd/mcp-brasil` (MIT, alta de este pase) | **LGPD** (LATAM) | `COLUNAS_DISTINCT_PERMITIDAS` en `datasets/inep_enem/constants.py`: *frozenset* de **8 columnas**, todas categorías agregadas (`SG_UF_PROVA`, `SG_UF_ESC`, `TP_SEXO`, `TP_COR_RACA`, `TP_ESCOLA`, `TP_LINGUA`, `TP_FAIXA_ETARIA`, `TP_ST_CONCLUSAO`). `SOURCES.md` documenta el retiro de microdatos del INEP en 2022 por LGPD, la reanudación anonimizada de 2024, clasifica educación como **RISCO ALTO** y remite a **SEDAP** para microdatos no anonimizados; re-identificación **vedada** |
+
+🟢 **Para una propuesta esto es mejor que una cláusula: es código que ya hace lo que el regulador pide, en las tres
+regiones donde esta KB vende.** Ver **tendencia 136**.
+
+### 🟢 El sexto mecanismo de confirmación, y es el único que se puede imponer **partiendo el conjunto de tools**
+
+`mcp-usc` tiene **91 tools**, y la mitad de su superficie de escritura está construida como **gemelos `preview_*`**:
+`preview_submit_assignment` / `submit_assignment`, `preview_start_quiz` / `start_quiz`,
+`preview_save_quiz_answers` / `save_quiz_answers`, `preview_remove_submission` / `remove_submission`,
+`preview_replace_submission_files`, `preview_create_personal_calendar_event`, `preview_reply_forum_post`,
+`preview_message`, `preview_mark_course_self_completed`, `preview_update_activity_completion_status_manually`… —
+**22 tools de previsualización** contra sus escrituras correspondientes.
+
+🔵 **Por qué importa y en qué se diferencia de las cinco variantes que esta base ya catalogó** (`confirm=true`,
+*elicitation*, `readOnlyHint`, cuota por ventana, anclaje en artefacto externo): las cinco se cumplen **dentro** de la
+tool, así que confiar en ellas es confiar en el servidor. **El gemelo `preview_*` es una tool distinta**, y por lo
+tanto se puede **imponer desde afuera**: un cliente al que se le entrega sólo la mitad `preview_*` y las de lectura
+**no puede ejecutar la escritura, no porque se porte bien, sino porque la tool no está en su lista**. Es la única
+variante aplicable por **partición del conjunto de tools** en vez de por confianza. Ver **tendencia 137** y **P82**.
+
+### ⚫ Lo que el barrido rechazó, fechado, para que ningún pase lo vuelva a buscar
+
+| Candidato | Veredicto | Medición |
+|---|---|---|
+| ⛔ **`NicolasViruel/moodle-utn-mcp`** (Argentina, UTN) | **No entra: sin licencia en ningún artefacto** | `HEAD` **2026-09-28** (la pieza LATAM más fresca del barrido) y 16 commits, pero **no hay `LICENSE` ni campo de licencia en el manifiesto** → todos los derechos reservados. **Mismo veredicto que `loyaniu/moodle-mcp` en el pase 38** |
+| ⛔ `@stll/folio-agents`, `@stll/folio-cli`, `agent-folio`, `@handsong/folio-ui-cli` | **Homonimia**: ninguno es el ILS FOLIO | *redlining* de `.docx`, reportes de agentes de código, UI para agentes |
+| ⛔ `@public-ui/mcp` (4.4.0, 136+ componentes) | **Homonimia**: es el *design system* **KoliBri**, no Kolibri de Learning Equality | `repository` → `github.com/public-ui/kolibri` |
+| ⛔ `@transcend-io/mcp-server-assessments` | **Homonimia**: *assessments* de privacidad, no de evaluación educativa ni QTI | Apareció en los barridos de `qti assessment` **y** `pronunciation assessment` |
+| ⛔ `personaforge`, `confused-ai` | **Homonimia**: frameworks de agentes genéricos, no *knowledge tracing* | Apareció buscando `knowledge tracing` |
+
+### 🟢 Las nueve ausencias que el canal nuevo CONFIRMA por segundo instrumento
+
+**Esto es lo que vuelve útil un barrido que «no encontró nada»:** nueve ausencias que esta base declaraba sobre
+evidencia de un solo canal (GitHub) quedan confirmadas por un canal independiente (4 registros de paquetes). **Cero
+hits con `mcp`/`agent` en nombre o descripción**, sobre un total de resultados leídos:
+
+| Ausencia declarada | Términos barridos | Resultados leídos | Hits |
+|---|---|---|---|
+| Koha (ILS) | `koha library` | 35 | **0** |
+| Chamilo | `chamilo` | 16 | **0** |
+| Sakai | `sakai` | 41 | **0** |
+| OpenOLAT | `openolat` | 15 | **0** |
+| Oppia | `oppia` | 18 | **0** |
+| Opencast | `opencast` | 33 | **0** |
+| BigBlueButton | `bigbluebutton` | 40 | **0** |
+| Sunbird | `sunbird` | 21 | **0** |
+| nbgrader / Caliper / LTI 1.3 / *pronunciation* / *knowledge tracing* | 5 términos | 20 + 21 + 35 + n | **0 reales** |
+
+🔴 **Y la que más vale, porque cierra el residuo del gap 70 por el canal que faltaba:** el envoltorio MCP de **QTI**
+sigue sin existir *upstream*. El barrido de `qti assessment` en los cuatro registros devuelve **un solo hit y es
+homónimo**. **La especificación de 20 tools que el pase 36 dejó escrita en P76 sigue siendo la contribución más limpia
+que esta base tiene identificada, y ahora se sabe que nadie se adelantó.**
+
+### ✅ gap 79 CERRADO — y el instrumento del gap 78 lo resuelve en una medición
+
+El pase 38 dejó abierto cuál de `Ed-Fi-Alliance-OSS/edfi-oneroster` y `CSR2017/edfi-oneroster` es *upstream*.
+**Medido con `merge-base` + `rev-list --left-right`:**
+
+| Medición | Valor |
+|---|---|
+| Primer commit de los dos | **`02cbad5`, idéntico, `2025-08-07T16:03:10-05:00`** |
+| `merge-base` | **`937248b` — es el tip exacto de `CSR2017`** |
+| Commits que `CSR2017` agrega y la Alliance no tiene | **0** |
+| Commits que la Alliance agrega y `CSR2017` no tiene | **3** (los tres de *Vinaya Mayya*) |
+| Tags | **86** (Alliance) contra **8** (`CSR2017`) |
+| Tip de `CSR2017` | `Bump the minor-patches group…` → **commit de bot**; su último commit humano es **2026-09-22** |
+
+🟢 **Conclusión: `Ed-Fi-Alliance-OSS/edfi-oneroster` es la línea viva y es la que hay que citar.** `CSR2017` **no es
+una alternativa: es un espejo estrictamente atrasado**, con 0 commits divergentes.
+
+🔵 **Y deja una sub-regla que el pase 38 no tenía, hermana de la suya:** el 38 aprendió que *un fork con `main` más
+nuevo no es un mantenedor*. **El 39 aprende el caso inverso: dos repos con el mismo commit inicial y 0 commits
+divergentes no son dos proyectos, son uno y un espejo — y el que hay que citar es el que está adelante, no el que el
+buscador lista primero.** Este pase lo vivió **dos veces**: también con `mcp-brasil`, donde el buscador lista primero
+a `marcellodesales/mcp-brasil` (**0 adelante, 8 atrás**, `HEAD` 2026-04-26) y la línea viva es `dasgltd/mcp-brasil`
+(`HEAD` 2026-08-18). Ver **tendencia 138**.
+
+### ✅ El residuo explícito del pase 38, cerrado: `moodler-mcp` enumerado — y trae una corrección y un contraste
+
+El pase 38 lo admitió por licencia y fecha y dejó dicho que **sus tools no se habían enumerado**. Enumeradas:
+
+🔴 **Primero la corrección: `moodler-mcp` NO es TypeScript. Es Python** (`pyproject.toml`, `src/moodler_mcp/**.py`,
+`requires-python >= 3.14`, `mcp>=2.2,<3`). La fila de `agents/top.md` decía TypeScript y queda corregida.
+
+**38 tools en 10 módulos: 30 de lectura + 8 de escritura**, y la escritura está partida por **rol**:
+
+| Módulo | Tools | Rol |
+|---|---|---|
+| `assignments` (8) · `courses` (5) · `calendar` (3) · `forums` (3) · `grades` (3) · `messaging` (3) · `quizzes` (3) · `students` (2) | **30** | lectura |
+| `writes_student` (6): `submit_assignment`, `post_forum_reply`, `reply_to_conversation`, `mark_notifications_read`, `mark_activity_complete`, `create_calendar_event` | **6** | escritura de alumno |
+| `writes_teacher` (2): **`save_assignment_grade`**, `grant_extension` | **2** | escritura docente |
+
+🟢 **Lo bueno, y es lo más fino de esta capa:** la escritura pide **tres** cosas a la vez — bandera de entorno
+**separada por rol** (`MOODLER_ALLOW_TEACHER_GRADING` y `MOODLER_ALLOW_STUDENT_WRITES`, que es más granular que el
+`ALLOW_WRITE=1` único de las otras), `confirm=true` explícito, y una **resolución de aprobación del SDK de MCP**
+(`Resolve(approval("Save this grade for the student?"))`), además de `ToolAnnotations(read_only_hint=False,
+destructive_hint=True, idempotent_hint=False)`.
+
+🔴 **Y lo que hay que decir antes de proponerla para corrección, porque es el contraste exacto con la estrella del
+pase 38:** `save_assignment_grade` llama a `mod_assign_save_grade` con **`workflowstate=""`**. **Publica la nota.**
+`moodle-grading-mcp` la deja en `readyforreview` a propósito. **Para el régimen de alto riesgo del AI Act y para las
+reglas de supervisión humana de North America, la pieza de 9 tools le gana a la de 38.** Superficie y conformidad no
+apuntan al mismo lado, y la elección depende de cuál de las dos cosas pesa en el engagement.
+
+⚠️ **Un detalle de arquitectura que la distingue de las otras tres puertas de Moodle y hay que saberlo antes de
+cotizar:** depende de **`playwright`**, más `pymupdf`, `python-pptx`, `openpyxl` y `pypandoc-binary`. **No es sólo un
+cliente de Web Services: baja y parsea material del curso** (`download_resource`, `read_downloaded_file`,
+`get_module_content`). Es la única de las cuatro que ingiere contenido, y también la de huella de despliegue más
+grande. **0 tags en el remoto** pese a usar *release-please*: su canal de versión es el changelog, no el tag.
+
+### Lo que este pase deja abierto
+
+- 🔴 **`gap 80`** — **el *daemon* de Docker no corre en este entorno** (`/var/run/docker.sock` ausente), así que la acción 2 del pase 38 (`docker-compose up` en OpenCASE y `tutor plugins enable openedxmcp` para pedir `tools/list` real) **no se pudo ejecutar**. Los **gaps 52 y 55 siguen medidos en papel y en código fuente, no en protocolo.** Es límite de entorno, como el 65 y el 72: **no insistir por esta vía**.
+- ⚠️ **`@ink-waffle/sisu-mcp` y `frappe-mcp-server` tienen licencia declarada sólo en el campo de npm**, sin texto en el tarball ni repo legible. Entran con reserva. **Para `sisu-mcp`, que es la única puerta de SIS de educación superior de esta base, vale pedirle el `LICENSE` al autor: es una línea de correo y cambia la clase de evidencia.**
+- 🔴 **El `tools/list` real de `ed-fi-sdk-mcp` no se observó** — sus 11 tools se leyeron del tarball publicado. Es la misma distinción que el 30 estableció: superficie de código, no de protocolo.
+- ⚠️ **`mcp-usc` y `DUTIC-mcp` son de UNA institución** (USC y UNSA). La mitad Moodle es genérica y la mitad de fuentes oficiales no lo es. **Falta medir qué fracción de cada una es portable**, que es la pregunta que decide si se reusan o se leen como referencia.
+
+
 ## 2026-10-02 (pase 38) — el pase que va a buscar **sucesión** para las tres dependencias congeladas que dejó el 37, y el resultado es asimétrico: **dos de las tres quedan cerradas con piezas permisivas vivas**, la tercera no — y el fork que parecía salvarla está **exactamente 2 commits adelante, y los dos son configuración de Cloud Run**
 
 **La pregunta del pase es la que el 37 dejó abierta y no contestó.** El 37 fechó las 49 filas por el commit de su rama

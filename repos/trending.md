@@ -8,6 +8,112 @@ updated: 2026-10-02
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 
+## 2026-10-02 (pase 39) — **el dato crudo del barrido por REGISTRO: 23 términos × 4 registros, 8 altas, 5 homónimos rechazados y 9 ausencias confirmadas por segundo canal**
+
+**El instrumento de este pase no es GitHub.** Es la acción 1 del pase 38: consultar **npm, PyPI, Packagist y
+RubyGems** con el nombre del **proyecto** (`moodle`, `chamilo`, `sakai`, `ed-fi`, `frappe`, `koha`…), no del protocolo
+(`mcp`, `agent`). Los cuatro registros responden **200** en este entorno; `github.com` por `curl` sigue respondiendo
+**403 para todo** (tendencia 131), así que la verificación de existencia es **`git ls-remote`** y la de licencia es el
+**archivo** leído del árbol clonado o del tarball publicado.
+
+### Los endpoints usados, para que el barrido sea repetible
+
+| Registro | Endpoint de búsqueda | Código |
+|---|---|---|
+| npm | `registry.npmjs.org/-/v1/search?text=<término>` | 200 |
+| PyPI | `pypi.org/search/?q=<término>` (HTML; **no hay API de búsqueda JSON**) | 200 |
+| Packagist | `packagist.org/search.json?q=<término>` | 200 |
+| RubyGems | `rubygems.org/api/v1/search.json?query=<término>` | 200 |
+
+⚠️ **PyPI no tiene API de búsqueda**: hay que raspar el HTML de `/search/`. El JSON **por proyecto**
+(`pypi.org/pypi/<nombre>/json`) sí existe y es el que sirve para **confirmar** un nombre, nunca para descubrirlo
+(tendencia 127).
+
+🔵 **Nota de verificación de URL, porque toca a tres filas de `agents/top.md` de este pase:** las páginas web
+`npmjs.com/package/<pkg>` devuelven **403** en este entorno, **igual que `github.com`** — y por el mismo motivo, que es
+política de proxy y no inexistencia del paquete (tendencia 131). **Las tres piezas de npm de este pase se verificaron
+contra `registry.npmjs.org/<pkg>`, que devuelve 200 en las tres**, y de ahí salieron licencia, versiones, fechas de
+release y *maintainer*. **La URL legible por humanos que quedó escrita en la tabla no es la que se verificó: la
+verificada es la del registro.** Quien revise esas filas desde otra red puede confirmar las dos.
+
+### Las 8 altas con su dato crudo
+
+| Repo / paquete | Licencia (dónde se leyó) | `HEAD` o release | Commits / tags | Lenguaje | Tools | Región |
+|---|---|---|---|---|---|---|
+| `PabloPC05/mcp-usc` | **MIT** — `LICENSE` textual + `pyproject.toml` | `HEAD` **2026-08-27** | 30 / — | Python | **91** | **EMEA** (ES) |
+| `JOSETRA44/DUTIC-mcp` | **MIT** — `LICENSE` textual + manifiesto | `HEAD` **2026-09-24** | 74 / — | TypeScript | **12** | **LATAM** (PE) |
+| `dasgltd/mcp-brasil` | **MIT** — `LICENSE`, *«(c) 2025-2026 MCP Brasil»* | `HEAD` **2026-08-18** | **246 / 23** | Python ≥3.10 | **97** (13 de educación) | **LATAM** (BR) |
+| `maxxeddev/open-badges-mcp` | **MIT** — `LICENSE` + manifiesto + README | `HEAD` **2026-06-10** ⚠️ | 28 / 5 | TypeScript | **16** | **APAC** (AU) |
+| `@ink-waffle/sisu-mcp` | ⚠️ **MIT** sólo campo npm | release **2026-09-17** | — (**sin repo**) | JavaScript | **12** | **EMEA** (FI) |
+| `suren-kk/armenian-national-library-mcp` | **MIT** — `LICENSE` + manifiesto | `HEAD` **2026-08-10** | 37 / — | TypeScript | **23** (todas `READ_ONLY`) | **EMEA** (AM) |
+| `ed-fi-sdk-mcp` (npm, *maintainer* `edfi`) | **Apache-2.0** — `LICENSE` **en el tarball** | release **2025-10-03** 🔴 | — (**repo ilegible**) | TypeScript | **11** | **North America** |
+| `frappe-mcp-server` | ⚠️ **ISC** sólo campo npm | release **2025-07-30** 🔴 | 32 releases (**repo ilegible**) | TypeScript | **21** | Sin región determinada |
+
+🔵 **La columna «Región» se determinó por dos instrumentos, y conviene saber cuál se usó en cada fila:** la
+**organización** cuando existe (Ed-Fi Alliance → North America; Funidata/Sisu → EMEA; USC → EMEA; UNSA → LATAM; MCP
+Brasil → LATAM) y, cuando no, la **zona horaria del commit** (`+10:00` → APAC para `open-badges-mcp`; `+04:00` → EMEA
+para la biblioteca armenia). **La zona horaria es un instrumento débil y se declara como tal**: ubica al autor en el
+momento del commit, no al proyecto. `frappe-mcp-server` **no se pudo ubicar por ninguno de los dos** y se deja sin
+región en vez de inventarla.
+
+### Las dos filas de `agents/top.md` que este pase re-mide y corrige
+
+| Fila | Qué decía | Qué se midió hoy |
+|---|---|---|
+| `Dymayo/moodler-mcp` | **TypeScript**, *«tools NO enumeradas»* | 🔴 **Es Python** (`requires-python >=3.14`, `mcp>=2.2,<3`). **38 tools = 30 lectura + 6 escritura de alumno + 2 escritura docente.** `save_assignment_grade` → `workflowstate=""`: **publica la nota** |
+| `bruchris/canvas-lms-mcp` | 165 tools | ✅ **Confirmado en el código, no en el README**: **120 `readOnlyHint: true`** + **48 `destructiveHint: true`** (el README dice 117 de lectura; la diferencia son las tools condicionales). 🟢 **Y lo que no estaba anotado: tiene MODO FERPA** — `CANVAS_PSEUDONYMIZE_STUDENTS` seudonimiza, la reversión exige **segunda** bandera y `resolve_pseudonym` **sólo se registra en stdio**, como tool **166** |
+
+### `mcp-brasil`: el dato que corrige la tendencia 114
+
+| Medición | Valor |
+|---|---|
+| Datasets totales | **15** |
+| Datasets de educación | **2** (`inep_enem`, `inep_censo_escolar`) |
+| Tools totales en datasets | **97** |
+| Tools de educación | **13** |
+| Fuente de datos | **ZIP de microdatos** de `download.inep.gov.br` (ENEM y Censo Escolar) — **no hay API, y el proyecto tampoco la usa** |
+| Salvaguarda LGPD | `COLUNAS_DISTINCT_PERMITIDAS` = *frozenset* de **8 columnas agregadas** |
+| CI | **canario semanal de salud de las fuentes** (`feat(ci)`, commit humano del 2026-08-18) |
+| PyPI | `mcp-brasil` **0.14.0**, 18 releases |
+| Espejo atrasado | `marcellodesales/mcp-brasil`: **0 adelante, 8 atrás**, `HEAD` 2026-04-26 — **el buscador lo lista primero** |
+
+### Los rechazos, con la medición que los justifica
+
+| Candidato | Veredicto | Evidencia |
+|---|---|---|
+| ⛔ `NicolasViruel/moodle-utn-mcp` | **sin licencia** → todos los derechos reservados | `HEAD` 2026-09-28 (fresco), 16 commits, **sin `LICENSE` y sin campo en el manifiesto** |
+| ⛔ `@stll/folio-agents` · `@stll/folio-cli` · `agent-folio` · `@handsong/folio-ui-cli` | homonimia con el ILS **FOLIO** | `repository` → `github.com/stella/folio`, `github.com/srsatt/folio` |
+| ⛔ `@public-ui/mcp` 4.4.0 | homonimia con **Kolibri** de Learning Equality | es el *design system* KoliBri: `github.com/public-ui/kolibri` |
+| ⛔ `@transcend-io/mcp-server-assessments` 2.1.13 | homonimia con **QTI** y con *pronunciation assessment* | *assessments* de privacidad |
+| ⛔ `personaforge` 1.4.0 · `confused-ai` 2.4.2 | homonimia con *knowledge tracing* | frameworks de agentes genéricos |
+| ⛔ `CSR2017/edfi-oneroster` | **espejo**, no alternativa | **0 commits divergentes**, 8 tags contra 86, tip = commit de bot |
+
+### gap 79, resuelto con dos comandos
+
+```
+git merge-base HEAD other/main        # -> 937248b, que es el tip EXACTO de CSR2017
+git rev-list --left-right --count HEAD...937248b   # -> 3   0
+```
+
+**La Alliance está 3 commits adelante y 0 atrás. `CSR2017` no agrega nada.** Primer commit idéntico en los dos
+(`02cbad5`, 2025-08-07T16:03:10-05:00): **es la misma historia, no dos proyectos.**
+
+### Control de gap 65, corrido otra vez y extendido a una tercera clase de dominio
+
+| Host | `getent hosts` | HTTPS |
+|---|---|---|
+| `eur-lex.europa.eu` | **RESUELVE** | **000** (bloqueado) |
+| `ai-act-service-desk.ec.europa.eu` | **RESUELVE** | **000** |
+| `digital-strategy.ec.europa.eu` | **RESUELVE** | **000** |
+| `artificialintelligenceact.eu` | **RESUELVE** | **000** (y `EGRESS_BLOCKED` por `WebFetch`) |
+| `registry.npmjs.org` (control positivo) | RESUELVE | **200** |
+
+🔵 **Los cuatro resuelven DNS y los cuatro están bloqueados por política, no caídos.** El gap 65 queda extendido de
+*«primarias multilaterales y gubernamentales»* a **una tercera clase: las fuentes legales primarias de la UE**,
+incluido el explorador no gubernamental del AI Act. **El dato del AI Act de este pase vino por el buscador**, que es el
+canal que la tendencia 130 dejó sancionado para exactamente este caso.
+
+
 ## 2026-10-02 (pase 38) — **el dato crudo de los 19 repos candidatos a suceder a las tres dependencias congeladas**: 13 de OneRoster/Moodle/LRS medidos de cero, y el reparto es **8 vivos, 1 tibio, 5 muertos de ≥ 3 años y 1 sin licencia**
 
 El pase 37 fechó las **49 filas que esta base ya tenía**. Este pase mide **19 repos que la base NO tenía**, buscando

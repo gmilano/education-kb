@@ -4493,3 +4493,116 @@ abajo y chica por dentro.
 adaptador de 32 commits del que somos dueños, sobre un LRS mantenido por una entidad pública europea, intercambiable por
 configuración»**. Es la misma dependencia; el riesgo es el mismo; **la diferencia es que está medido**.
 
+
+## P82 — El *gateway* de partición de tools: convertir «confiamos en el servidor» en «la escritura no está en la lista» (agregado en el pase 39 del 2026-10-02)
+
+**El problema que resuelve, y es el que bloquea más propuestas de esta base.** Una institución que no acepta que un
+agente escriba en su LMS no se convence con `confirm=true` ni con `readOnlyHint`: los dos se cumplen **dentro** del
+servidor MCP, así que aceptarlos es aceptar confiar en código de terceros. `PabloPC05/mcp-usc` demostró que hay otra
+forma — **22 gemelos `preview_*`**, donde la previsualización es **una tool distinta** de la escritura (tendencia
+**137**). **Esta receta generaliza ese hallazgo a las nueve puertas de LMS de esta KB.**
+
+**Las piezas, todas verificadas en esta base:**
+
+| Pieza | Licencia | Rol en la receta |
+|---|---|---|
+| `@modelcontextprotocol/sdk` | MIT | El *proxy* es un servidor MCP que a su vez es cliente MCP del servidor real |
+| Cualquiera de las puertas de LMS de `agents/top.md` | MIT | El servidor *upstream*: `bruchris/canvas-lms-mcp` (165 tools), `PabloPC05/mcp-usc` (91), `Dymayo/moodler-mcp` (38), `NiccoloSalvini/mcp-moodle-teacher` (22), `toshieji/moodle-grading-mcp` (9) |
+| `frappe-mcp-server` | ISC | 🔴 **El caso donde el *gateway* no es opcional**: trae `call_method` (ejecución arbitraria) y `delete_document` sin partición por rol |
+
+**Cómo se arma, y son cuatro pasos:**
+
+1. **Levantar el *proxy* como servidor MCP** y, en el arranque, pedirle `tools/list` al *upstream*. **No hardcodear la
+   lista:** las superficies se mueven (`qti3-cli` publicó 41 releases en cuatro meses).
+2. **Clasificar cada tool por su propia anotación, no por su nombre:** `readOnlyHint: true` → perfil **lectura**;
+   `destructiveHint: true` → perfil **escritura**. En `bruchris/canvas-lms-mcp` esto parte las 165 en **120 / 48**
+   automáticamente, sin leer el README.
+3. **Reexportar sólo el perfil del `role` con el que arranca el *proxy*** (`reader`, `preview`, `grader`, `admin`). Una
+   tool que no se reexporta **no existe para el cliente**: no hay ruta de llamada, no hay *prompt injection* que la
+   alcance. 🔵 **En `mcp-usc` el perfil `preview` sale gratis: es el conjunto `preview_*` + las de lectura.**
+4. **Registrar cada llamada bloqueada** (nombre de tool, perfil, timestamp, hash del argumento) en un JSONL append-only
+   —el formato que ya usa `toshieji/moodle-grading-mcp` para su audit trail— **y ese archivo es el entregable de
+   auditoría**, no un log de depuración.
+
+🟢 **Por qué esto se vende:** es la única forma de contestar *«¿qué garantiza que no cambie una nota?»* con una
+demostración en vez de una promesa — se le muestra al cliente el `tools/list` del *proxy* y la escritura **no está**.
+⚠️ **El límite honesto, y hay que decirlo:** el *gateway* protege de **el agente**, no de credenciales filtradas. Si el
+token de Moodle con permiso de escritura se escapa, el *proxy* es irrelevante. **Va junto con token por rol, nunca en
+lugar de él.**
+
+🔴 **Lo que todavía no se puede afirmar:** esta base **nunca observó un `tools/list` real** (gap **80**: el *daemon* de
+Docker no corre en este entorno). Las cifras de 120/48, 91, 38 y 23 **se midieron en código fuente o en el tarball
+publicado**. Para el paso 1 eso es suficiente —el *proxy* lee la lista en tiempo de ejecución, no la cifra— **pero no
+hay que publicar esas cifras como superficie de protocolo**.
+
+## P83 — Datos educativos de Brasil: ADOPTAR el pipeline del INEP en vez de construirlo, con la salvaguarda LGPD ya escrita (agregado en el pase 39 del 2026-10-02)
+
+🔴 **Esta receta reemplaza la cotización que esta KB venía dando.** El pase 36 dejó escrito que el INEP, por no publicar
+API, obligaba a un **pipeline de ingesta de 8-12 semanas** contra las 2-3 de un servidor fachada. **La arquitectura
+estaba bien diagnosticada y el pipeline ya está escrito, es MIT y tiene 23 tags.**
+
+**Las piezas:**
+
+| Pieza | Licencia | Qué aporta |
+|---|---|---|
+| `dasgltd/mcp-brasil` | **MIT** | **13 tools de educación**: `inep_enem` (`info_enem`, `refrescar_enem`, `valores_distintos_enem`, `media_notas_uf`, `media_notas_por_grupo`, `top_municipios_por_media`) e `inep_censo_escolar` (`info_censo_escolar`, `refrescar_censo_escolar`, `valores_distintos_censo`, `buscar_escolas`, `escola_detalhe`, `resumo_uf`, `top_municipios_por_escolas`). PyPI: `mcp-brasil` 0.14.0 |
+| Los ZIP del INEP | dato público | `download.inep.gov.br/microdados/microdados_enem_*` y `…/dados_abertos/microdados_censo_escolar_*`. 🔴 **No hay API: la ingesta es parte del diseño, no un workaround** |
+| `COLUNAS_DISTINCT_PERMITIDAS` | **MIT**, dentro del repo | *frozenset* de **8 columnas agregadas** que acota qué se puede enumerar: `SG_UF_PROVA`, `SG_UF_ESC`, `TP_SEXO`, `TP_COR_RACA`, `TP_ESCOLA`, `TP_LINGUA`, `TP_FAIXA_ETARIA`, `TP_ST_CONCLUSAO` |
+
+**Cómo se arma:**
+
+1. **Levantar `mcp-brasil` con los dos datasets de educación habilitados** y correr `refrescar_enem` /
+   `refrescar_censo_escolar` una vez: ahí se paga el costo real de la receta, que es **descarga y descompresión de
+   microdatos** (el Censo Escolar ronda decenas de GB descomprimido).
+2. **Dejar el canario de salud de fuentes que el proyecto ya trae en CI** (commit humano del 2026-08-18). 🔵 **Es la
+   pieza que esta base no habría escrito y es la que más vale en un pipeline sobre ZIP publicados a mano:** avisa cuando
+   el INEP cambia una URL o un layout, que es el modo de falla real de esta arquitectura.
+3. **Componer encima**, no adentro: las 13 tools entregan agregados por UF, municipio y grupo. Un agente que compara
+   una red escolar con su municipio y su UF se arma con `buscar_escolas` + `escola_detalhe` + `resumo_uf` +
+   `top_municipios_por_escolas`, sin escribir una línea de ingesta.
+4. **Conservar la salvaguarda y decirlo en la propuesta.** 🟢 **`SOURCES.md` del proyecto clasifica educación como
+   RISCO ALTO**, documenta el retiro de microdatos de 2022 por LGPD y la reanudación anonimizada de 2024, **veda la
+   re-identificación** y remite a **SEDAP** para investigación con microdatos no anonimizados. **Eso es cumplimiento
+   heredado del repo, y conviene citarlo textual.**
+
+⚠️ **Las dos reservas:** `HEAD` del **2026-08-18** (1,5 meses, activo, commit **humano** — no de bot), y **hay que citar
+`dasgltd/mcp-brasil`, no `marcellodesales/mcp-brasil`**, que el buscador lista primero y está **0 adelante / 8 atrás**
+(tendencia **138**).
+
+## P84 — Cerrar el curso emitiendo un credencial Open Badges 3.0 FIRMADO, no un PDF (agregado en el pase 39 del 2026-10-02)
+
+**La ausencia que cierra.** Esta KB tiene desde el pase 9 la capa de credenciales verificables inventariada —Open
+Badges 3.0, W3C VC, CLR— **y ninguna pieza con puerta de agente**: `schroedinger-hat/certo` quedó anotado dos veces
+como *«sin puerta MCP»*. Con `maxxeddev/open-badges-mcp` la cadena se completa de punta a punta.
+
+**Las piezas:**
+
+| Pieza | Licencia | Rol |
+|---|---|---|
+| `maxxeddev/open-badges-mcp` (`mcp-ob-ts`) | **MIT** | **16 tools**: spec (`search_spec`, `get_class`, `resolve_term`, `find_conformance_requirements`, …), **emisión** (`generate_credential`, `create_achievement_credential`) y **validación** (`validate_credential`) |
+| `src/crypto/data-integrity.ts` del mismo repo | **MIT** | 🟢 **Firma real: `Ed25519`, `DataIntegrityProof`, `did:key` (`eddsa`)**, contra los contextos oficiales `purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json` y el *schema* `ob_v3p0_achievementcredential` |
+| Una puerta de LMS de esta base | MIT | La señal de logro: `get_completion_status` / `get_course_grades` (`moodler-mcp`), `get_my_completion` (`mcp-usc`) o la capa de *gradebook* de `bruchris/canvas-lms-mcp` |
+| `cassproject/CASS` | Apache-2.0 | 🔵 **La pata de competencia, ya en esta base:** `record_evidence` y `get_learner_profile` de su cartucho MCP (6 tools, 3 *resource templates*), para que el credencial apunte a una competencia asertada y no a un nombre de curso |
+
+**Cómo se arma:**
+
+1. **Disparar con la señal del LMS, no con una fecha.** El agente consulta completitud/nota por la puerta del LMS y
+   **sólo entonces** llama a la emisión. 🔴 **La decisión de emitir no la toma el agente solo:** se compone con el
+   patrón de nota en borrador (**P79**) — **si la nota la publica una persona, el credencial se emite después de eso**,
+   y así la cadena entera queda del lado correcto del Anexo III punto 3.
+2. **Construir el credencial con `create_achievement_credential`** y **resolver el vocabulario con `resolve_term` y
+   `find_conformance_requirements`** en vez de escribir el JSON-LD a mano: es la diferencia entre un badge que valida y
+   uno que *parece* válido.
+3. **Firmar**, no serializar: `DataIntegrityProof` + `Ed25519` sobre `did:key`. 🟢 **Es lo que hace que el credencial
+   sirva fuera de la institución que lo emitió**, que es el único motivo para preferirlo a un PDF.
+4. **Validar lo propio antes de entregarlo** con `validate_credential`, y **archivar la evidencia en CaSS**
+   (`record_evidence`) para que el perfil del alumno quede consultable por el agente del próximo curso.
+
+⚠️ **Las reservas, dichas antes de cotizar:** `HEAD` **2026-06-10** (**3,7 meses**, franja tibia — no está muerto, pero
+no tiene mantenimiento semanal), y el **repo está adelante del registro** (`package.json` 0.4.0 contra npm 0.3.2): hay
+que **fijar la versión desde git o esperar el release**. 🔴 **Y el `tools/list` real no se observó** (gap **80**): las 16
+tools se contaron en el árbol.
+
+🟢 **Por qué esta receta vale más en APAC y en India en particular:** un mandato curricular nacional desde 3.º grado
+(ciclo 2026-27) genera volumen de acreditación que ningún proceso manual absorbe, y el credencial firmado es
+**portable entre instituciones** desde el día uno.

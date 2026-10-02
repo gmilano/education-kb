@@ -2367,3 +2367,58 @@ agéntica**. Un barrido que ordene por nombre + licencia + frescura las habría 
 **Buscar `"Experience API"` o `"Tin Can"`, nunca `xapi` a secas.**
 
 - Verificado por `registry.npmjs.org`, `pypi.org/pypi/<pkg>/json` y lectura de README el **2026-10-02**.
+
+## 🔎 La capa que apareció consultando REGISTROS en vez de GitHub — agregada en el pase 39 del 2026-10-02
+
+**Esta sección existe por un cambio de canal, no por un cambio de criterio.** Treinta y ocho pases barrieron GitHub
+buscando nombres con `mcp` y `agent`. El pase 38 descubrió, cerrando el gap 48, que la puerta que esta KB declaraba
+ausente llevaba dos meses publicada **en PyPI por el propio proyecto**, y dejó escrita la acción: **consultar npm,
+PyPI, Packagist y RubyGems por el nombre del PROYECTO.** Ejecutada sobre **23 términos × 4 registros**, devuelve
+**ocho piezas nuevas**, **cinco homónimos** y **nueve ausencias confirmadas por segundo instrumento**.
+
+### Lo que hay que saber del canal antes de usarlo otra vez
+
+| Hecho medido | Consecuencia práctica |
+|---|---|
+| Los cuatro registros responden **200** en este entorno; `github.com` por `curl` responde **403 para todo** | La existencia se verifica con **`git ls-remote`**, no con `curl` (tendencia 131) |
+| **PyPI no tiene API de búsqueda JSON**: hay que raspar `pypi.org/search/?q=` | El JSON por proyecto **confirma** un nombre, nunca lo **descubre** (tendencia 127) |
+| **El campo `repository` del registro no prueba que el repo sea legible** | 2 de 8 altas tienen repo **ilegible** y 1 **no declara repo**: el tarball es el único canal de auditoría (tendencia 140) |
+| El nombre del proyecto **colisiona** con proyectos ajenos más populares | `folio` → *redlining* de `.docx`; `kolibri` → *design system* alemán. **El filtro de licencia no protege contra homonimia** (tendencia 96) |
+
+### Las piezas, por rol de infraestructura
+
+| Pieza | Licencia | Rol en una arquitectura | Por qué es fundacional y no sólo un conector |
+|---|---|---|---|
+| `dasgltd/mcp-brasil` | **MIT** | **Ingesta de datos educativos públicos (BR)** | 15 datasets, 97 tools, **23 tags**, PyPI (18 releases), **canario semanal de salud de fuentes en CI**. La educación son 2 datasets y **13 tools**: ENEM y Censo Escolar, **sobre descarga de microdatos**, porque el INEP no publica API. **Es el pipeline que P77 describía, ya escrito** |
+| `maxxeddev/open-badges-mcp` | **MIT** | **Emisión y verificación de credenciales** | No es un lector de spec: **firma** con `Ed25519` + `DataIntegrityProof` + `did:key` y valida contra el *schema* `ob_v3p0_achievementcredential` y los contextos de `purl.imsglobal.org`. Es la pata que la capa de credenciales de esta KB tenía declarada ausente desde el pase 9 |
+| `ed-fi-sdk-mcp` | **Apache-2.0** | **Exploración del *Data Standard* de Ed-Fi** | **11 tools de esquema, cero de dato**. Es infraestructura **de desarrollo**: un agente que escribe la integración Ed-Fi la usa para no inventar endpoints. 🔴 **No es una puerta al ODS** y decirlo al revés es afirmar algo falso |
+| `@ink-waffle/sisu-mcp` | ⚠️ MIT (campo npm) | **SIS de educación superior** | Cubre matrícula, derechos de estudio y expediente — **la capa administrativa que ninguna puerta de LMS de esta base toca**. Sisu es el SIS de las universidades finlandesas (Funidata, consorcio universitario) |
+| `frappe-mcp-server` | ⚠️ ISC (campo npm) | **ERP académico por el framework** | Llega a **ERPNext**, **Frappe Education** y **Frappe LMS** por DocType. 🔴 `call_method` + `delete_document` = escritura total: pieza de infraestructura **que exige un *gateway* delante** |
+| `suren-kk/armenian-national-library-mcp` | **MIT** | **Repositorio / biblioteca sobre DSpace** | **23 tools, todas `READ_ONLY` por construcción** (el *helper* `registerEnvelopeTool` fija la anotación). Lectura larga por *chunks* con continuación explícita. 🔴 Apuntada a una instancia: **implementación de referencia**, no conector genérico |
+| `PabloPC05/mcp-usc` · `JOSETRA44/DUTIC-mcp` | **MIT** | **Puerta institucional de LMS** | Ver la clase nueva, abajo |
+
+### 🔵 La clase que estas dos consolidan: **la puerta de agente de UNA institución**
+
+El pase 35 admitió `jbnu-lms-mcp` (U. Nacional de Jeonbuk) anotando que era *«categoría nueva: la puerta de UNA
+institución, no de un producto»*. **Con este pase la categoría ya tiene cuatro miembros y deja de ser anécdota:**
+
+| Pieza | Institución | Región | Licencia | Tools |
+|---|---|---|---|---|
+| `moon0825/jbnu-lms-student` | U. Nacional de Jeonbuk (전북대학교) | **APAC** (Corea) | MIT | 25 |
+| `PabloPC05/mcp-usc` | U. de Santiago de Compostela | **EMEA** (España) | MIT | **91** |
+| `JOSETRA44/DUTIC-mcp` | U. Nacional de San Agustín de Arequipa | **LATAM** (Perú) | MIT | 12 |
+| ⛔ `NicolasViruel/moodle-utn-mcp` | U. Tecnológica Nacional | **LATAM** (Argentina) | 🔴 **ninguna** | — |
+
+🔵 **Las cuatro son de alumnos o personal de la propia institución, las cuatro son sobre Moodle o el LMS local, y
+ninguna se publicó en un registro de paquetes.** Por eso el canal del registro **no** las encuentra: a estas se llega
+por búsqueda en lenguaje natural y en el idioma local, que es el instrumento que este pase usó para LATAM.
+🔴 **Y la de Argentina, la más fresca de las cuatro, no tiene licencia: no se puede usar.** Para un engagement
+LATAM eso es exactamente el tipo de dato que conviene saber antes y no después.
+
+### ⚠️ Lo que esta capa NO resuelve, dicho con el mismo detalle
+
+- **El conector genérico de DSpace sigue sin existir.** Hay una implementación de referencia sobre una instancia.
+- **El `tools/list` observado sigue sin medirse en ninguna de las ocho**: todas las cifras de este pase son de **código
+  fuente o de tarball publicado**, no de protocolo. El *daemon* de Docker no corre en este entorno (**gap 80**).
+- **Dos de las ocho declaran licencia sólo en el manifiesto del registro.** Entran con reserva explícita, no como
+  equivalentes a las que tienen `LICENSE` textual (tendencia 129).

@@ -3294,6 +3294,179 @@ el software que educa, y el primero tiene dos órdenes de magnitud más de estre
 por esa vía, por cuarta vez.** Las dos altas de este pase salieron **las dos del eje conector/estándar**, que es el
 único que viene rindiendo desde el pase 25. **No se agregó ninguna fila de relleno:** 43 filas reales.
 
+## 136. Apareció una pieza permisiva por región grande cuyo DISEÑO encodea el estatuto de esa región, y las tres se pueden mostrar como código (agregado en el pase 39 del 2026-10-02)
+
+El pase 38 encontró la primera: `toshieji/moodle-grading-mcp` **no publica la nota**, la deja en
+`workflowstate=readyforreview`, y eso es exactamente lo que el régimen de alto riesgo del AI Act y las reglas de
+supervisión humana de Oklahoma y Maryland piden del software. **Lo anotó como un caso.** Este pase, midiendo otras dos
+piezas, encuentra que **no es un caso: es un patrón, y ya hay un miembro por cada región donde esta KB vende.**
+
+| Región | Pieza (permisiva) | Estatuto | Mecanismo, leído en el código |
+|---|---|---|---|
+| **North America** | `bruchris/canvas-lms-mcp` (MIT) | **FERPA** | `CANVAS_PSEUDONYMIZE_STUDENTS=true` seudonimiza; la reversión exige **una segunda bandera**; `resolve_pseudonym` **sólo se registra en stdio**, como tool 166 |
+| **EMEA** | `toshieji/moodle-grading-mcp` (MIT) | **AI Act, Anexo III §3** | `save_grade_draft` → `readyforreview`: **la persona publica**. Allowlist de cursos, audit trail JSONL, sin notificación al alumno |
+| **LATAM** | `dasgltd/mcp-brasil` (MIT) | **LGPD** | `COLUNAS_DISTINCT_PERMITIDAS`: *frozenset* de **8 columnas agregadas**. `SOURCES.md` clasifica educación como **RISCO ALTO**, documenta el retiro de microdatos de 2022 y remite a **SEDAP**; re-identificación vedada |
+
+🟢 **Por qué esto cambia una conversación comercial y no sólo el catálogo.** La objeción de cumplimiento en educación
+no se contesta bien con una cláusula ni con una promesa de *roadmap*: se contesta mostrando **el mecanismo**. Las tres
+piezas son permisivas, así que el mecanismo se puede **leer, auditar y copiar** delante del cliente. 🔵 **Y la
+asimetría que hay que saber: en las tres, el mecanismo de cumplimiento le cuesta superficie a la herramienta.**
+`moodle-grading-mcp` tiene 9 tools y `moodler-mcp` tiene 38, pero la de 38 **publica la nota**. **Más tools no es más
+proponible en un dominio regulado**, y esta es la primera vez que esta base lo puede demostrar con dos piezas del mismo
+rol, el mismo LMS y la misma licencia.
+
+## 137. `preview_*` es el primer freno de escritura de esta base que se impone PARTIENDO el conjunto de tools, no confiando en el servidor (agregado en el pase 39 del 2026-10-02)
+
+Esta KB venía catalogando mecanismos para que un agente no escriba de más, y llevaba cinco: `confirm=true`,
+*elicitation* / resolución de aprobación del SDK, `readOnlyHint`/`destructiveHint`, cuota por sujeto y ventana, y
+anclaje de confianza en un artefacto externo. **Los cinco tienen el mismo punto ciego: se cumplen DENTRO de la tool.**
+Confiar en ellos es confiar en que el servidor hace lo que dice su anotación.
+
+`PabloPC05/mcp-usc` (MIT, 91 tools) introduce el sexto y es de otra clase: **cada escritura tiene un gemelo
+`preview_*` que es una tool separada** — 22 de ellas (`preview_submit_assignment` / `submit_assignment`,
+`preview_start_quiz` / `start_quiz`, `preview_save_quiz_answers`, `preview_remove_submission`,
+`preview_replace_submission_files`, `preview_reply_forum_post`, `preview_message`,
+`preview_mark_course_self_completed`, `preview_update_activity_completion_status_manually`, …).
+
+🟢 **La consecuencia es de arquitectura, no de prolijidad:** a un cliente al que se le entrega **sólo** la mitad
+`preview_*` más las de lectura, **la escritura no le está prohibida: le es inalcanzable, porque la tool no está en su
+lista**. Es el único de los seis mecanismos que **no requiere confiar en el servidor** y el único que un integrador
+puede imponer **desde afuera**, con un *gateway* que filtre nombres. 🔵 **Y es barato de replicar:** quien escriba un
+conector nuevo puede ofrecer el par en vez de un *flag*, y se vuelve proponible en instituciones que no aceptan
+escritura de agente en absoluto. Ver **P82**.
+
+## 138. Dos repos con el mismo commit inicial y cero commits divergentes no son dos proyectos: son uno y un espejo — y el buscador lista primero al atrasado (agregado en el pase 39 del 2026-10-02)
+
+El pase 38 aprendió, con `ashleycribb/learnmcp-xapi`, que **un fork con `main` más nuevo no es un mantenedor** hasta
+contar qué agrega. **Este pase aprende el caso inverso, y lo vive dos veces en el mismo barrido:**
+
+| Par | `merge-base` | Adelante / atrás | Qué hay que citar |
+|---|---|---|---|
+| `Ed-Fi-Alliance-OSS/edfi-oneroster` vs `CSR2017/edfi-oneroster` | **el tip exacto de `CSR2017`** (`937248b`); primer commit idéntico `02cbad5` | **3 / 0** a favor de la Alliance | **La Alliance** (86 tags contra 8; el tip de `CSR2017` es un commit de *bot*) |
+| `dasgltd/mcp-brasil` vs `marcellodesales/mcp-brasil` | historia común | **`marcellodesales`: 0 adelante, 8 atrás** | **`dasgltd`** (`HEAD` 2026-08-18 contra 2026-04-26) |
+
+🔴 **Y el dato incómodo del método: en los dos casos el buscador listó PRIMERO al atrasado.** El orden de resultados
+no es evidencia de vitalidad, de ninguna de las dos direcciones. **La regla completa, que ahora tiene las dos mitades:**
+ante dos repos con el mismo nombre, medir `merge-base` y `rev-list --left-right --count`; **si uno tiene 0 commits
+divergentes, no es una alternativa, es un espejo, y se cita al que está adelante.** Es una medición de dos comandos y
+en este pase **cerró el gap 79** y **evitó citar una línea de `mcp-brasil` cuatro meses vieja**.
+
+## 139. Un proyecto puede envolver `server.registerTool` en su propio *helper*, y entonces un `grep` de la API del SDK SUBCUENTA las tools (agregado en el pase 39 del 2026-10-02)
+
+🔴 **Este pase se equivocó y se corrigió antes de publicar, y la corrección vale más que el dato.** La primera
+medición de `suren-kk/armenian-national-library-mcp` dio **«8 tools»** con nombres que no eran tools (`packed`,
+`package`, `missing_item_error`): eran cadenas sueltas que el `grep` de `name: "…"` levantó. Un `grep` de
+`registerTool(` daba **1**.
+
+**La cifra correcta es 23**, y para llegar a ella hay que ver que el proyecto define **su propio *helper***,
+`registerEnvelopeTool(server, "nombre", …)`, en `src/tools/tool-registration.ts`, y registra desde tres módulos:
+descubrimiento (10), contenido (10), API cruda (2), más `get_repository_info`. **El *helper* además fija
+`annotations: READ_ONLY` para todas**, lo que convierte *«es de sólo lectura»* de una afirmación de README en una
+propiedad del código.
+
+🔵 **La regla, y es hermana de la tendencia 117** (*«la superficie real de un CLI está en el dispatch, no en el texto de
+ayuda»*): **la superficie real de un servidor MCP está en el punto de registro del PROYECTO, no en la llamada del
+SDK.** El procedimiento barato que funciona en los dos casos: buscar el archivo que importa el SDK, ver **qué función
+propia exporta**, y contar las llamadas a esa función. 🔴 **Un conteo publicado sin ese paso puede estar corto por un
+orden de magnitud** — acá fue 1 contra 23.
+
+## 140. El campo `repository` de un registro no prueba que el repo exista ni que sea legible, y en esta capa falla en 3 de 8 (agregado en el pase 39 del 2026-10-02)
+
+El canal nuevo de este pase (registros de paquetes) trae su propio modo de falla, y es grave porque **parece
+verificación**: el paquete declara una URL de GitHub, la URL se ve bien, y no hay repo detrás.
+
+| Paquete | `repository` declarado | `git ls-remote` |
+|---|---|---|
+| `ed-fi-sdk-mcp` (Apache-2.0, *maintainer* `edfi`) | `github.com/Ed-Fi-Alliance-OSS/Ed-Fi-SDK-MCP.git` | 🔴 **no legible** |
+| `frappe-mcp-server` (ISC) | `github.com/appliedrelevance/frappe_mcp_server.git` | 🔴 **no legible** |
+| `@ink-waffle/sisu-mcp` (MIT) | **no declara repo** | — |
+
+🔵 **Lo que esto cambia en la práctica, y no es que las piezas se descarten:** las tres son **instalables** y dos
+traen licencia permisiva verificable (una con `LICENSE` **dentro del tarball**, que es evidencia de primera clase). **Lo
+que se pierde no es el uso: es la auditoría del fuente, el *issue tracker* y la vía de PR.** Para una propuesta eso se
+traduce en una frase concreta: *«se puede usar y no se puede arreglar»*, y en el caso de `frappe-mcp-server` —que trae
+`call_method` y `delete_document`— **eso basta para exigir un *gateway* delante.**
+
+🔴 **Y el caso de gobernanza que hay que saber decir en una reunión:** el consorcio **Ed-Fi** publicó su servidor MCP
+oficial en npm bajo **Apache-2.0** hace **doce meses**, con **un solo release**, y **su repositorio no es públicamente
+legible**. No es un proyecto abandonado por una persona: es un artefacto oficial de un consorcio grande, y aun así
+**el único canal de auditoría que queda es el tarball**. ⚠️ **Verificar siempre con `git ls-remote`, nunca con `curl`**
+(que devuelve 403 para todo, exista o no — tendencia 131).
+
+## 🔵 Estado de gaps al cierre del pase 39 del 2026-10-02
+
+**Este pase ejecutó dos de las tres acciones del pase 38 completas, y la tercera la frenó el entorno, no el método.**
+
+| Gap | Estado | Resolución |
+|---|---|---|
+| **54** (¿hay ausencias ya cerradas por su propio proyecto?) | ✅ **CERRADO — la acción 1 rindió ocho altas** | **El canal faltante era el registro consultado por nombre de PROYECTO.** 23 términos × 4 registros → **8 piezas que 38 pases de GitHub no vieron**, **5 homónimos rechazados** y **9 ausencias confirmadas por segundo instrumento**. 🔴 **Y la corrección que trajo: la ausencia de educación en la capa MCP brasileña era falsa** |
+| **56** (calendario del Anexo III) | ✅ **CERRADO — y las «dos fechas incompatibles» nunca estuvieron en conflicto** | Ver abajo: fechan **dos obligaciones distintas**. Educación es **Anexo III, punto 3**; el aplazamiento es **Reglamento (UE) 2026/1744** (DOUE **2026-07-24**, en vigor **2026-07-27**): Anexo III → **2027-12-02**, Anexo I → **2028-08-02**. 🔴 **El Artículo 50 NO se aplazó y rige desde el 2026-08-02** |
+| **69 / tendencia 114** (educación ausente de la capa MCP brasileña) | 🔴 **CORREGIDO — la afirmación era falsa en su mitad de ausencia** | `dasgltd/mcp-brasil` (**MIT**) tiene **2 de 15 datasets** en educación y **13 tools** de ENEM y Censo Escolar. 🟢 **La mitad de arquitectura sí era correcta y queda confirmada por una implementación:** no hay API del INEP, se descargan los ZIP de microdatos. **P77 deja de ser presupuesto de construcción y pasa a adopción + extensión** |
+| **79** (¿cuál `edfi-oneroster` es *upstream*?) | ✅ **CERRADO en dos comandos** | `merge-base` = tip de `CSR2017`; **3 adelante / 0 atrás** a favor de `Ed-Fi-Alliance-OSS`. **`CSR2017` es un espejo estrictamente atrasado**, 8 tags contra 86, y su tip es un commit de bot (tendencia 138) |
+| **Residuo del pase 38** (`moodler-mcp` sin enumerar) | ✅ **CERRADO, con dos correcciones** | **38 tools = 30 lectura + 6 escritura de alumno + 2 docente.** 🔴 **Es Python, no TypeScript** (la fila decía mal). 🔴 **Y publica la nota** (`workflowstate=""`), al revés de `moodle-grading-mcp` |
+| **NUEVO 80** (sin *daemon* de Docker) | 🔴 **ABIERTO — límite de entorno, como el 65 y el 72** | **La acción 2 del pase 38 no se pudo ejecutar**: `/var/run/docker.sock` no existe (el binario `docker` sí). Los **gaps 52 y 55** siguen medidos **en papel y en código fuente, no en protocolo**. **Sustituto adoptado y ya en uso: contar en el tarball publicado o en el árbol** (tendencias 94 y 139). **No insistir por esta vía** |
+| **65** (primarias legales / multilaterales) | 🔴 **ABIERTO — y este pase lo extiende a una TERCERA clase** | **Las fuentes legales primarias de la UE** quedan confirmadas bloqueadas con el instrumento del pase 36: `eur-lex.europa.eu`, `ai-act-service-desk.ec.europa.eu`, `digital-strategy.ec.europa.eu` y `artificialintelligenceact.eu` **resuelven DNS y devuelven 000**, con control positivo (`registry.npmjs.org` → 200). **El dato del AI Act de este pase vino por el buscador** (tendencia 130) |
+| **70** (envoltorio MCP de QTI) | ✅ **sigue cerrado como especificación — y ahora se sabe que nadie se adelantó** | El barrido de `qti assessment` en los **cuatro** registros devuelve **un solo hit y es homónimo**. **Las 20 tools de P76 siguen siendo la contribución *upstream* más limpia identificada por esta base** |
+| **60** (mitad QTI) / **61** (curso origen vacío) / **68** (release de la puerta de Open edX) | 🔴 **ABIERTOS, sin avance deliberado** | Las dos acciones ejecutables del 38 tenían prioridad. El 68 se **reconfirmó de paso**: `tutor-contrib-openedxmcp` sigue en **0.1.7 del 2026-07-25** (**69 días**), **AGPL-3.0** |
+| **NUEVO 81** (licencia declarada sólo en el manifiesto del registro) | ⚠️ **ABIERTO como clase de evidencia, no como falla** | `@ink-waffle/sisu-mcp` (MIT) y `frappe-mcp-server` (ISC) **no traen `LICENSE` en el tarball ni repo legible**. **Entran con reserva explícita** y no como equivalentes a las que tienen texto (tendencia 129). **Para `sisu-mcp` se cierra con un correo al autor**, que es la única puerta de SIS de esta base |
+
+## 🔴 El gap 56, resuelto — y la lección es que el error nunca estuvo en las fechas
+
+**Esta base tenía publicadas dos fechas y las trataba como contradictorias:** *«2027-12-02»* (pase 11, luego pase 36) y
+*«rige desde 2026-08-02»* (pase 28), **y sobre la segunda se construyó argumentación de venta para EMEA.** El pase 38
+dejó escrito que había que fechar cada afirmación **por el inciso del Anexo III** que le corresponde.
+
+🟢 **Hecho eso, las dos fechas son correctas y fechan obligaciones DISTINTAS. No había contradicción: había una
+afirmación sin calificar.**
+
+| Obligación | Fecha de aplicación | Estado |
+|---|---|---|
+| **Artículo 50** — transparencia (interacción con IA, marcado de contenido sintético, *deepfakes*, reconocimiento de emociones) | **2026-08-02** | 🟢 **EN VIGOR. NO se aplazó.** Es **independiente del nivel de riesgo**: alcanza al chatbot educativo aunque no sea de alto riesgo |
+| **Anexo III** — alto riesgo autónomo, **educación es el punto 3** (acceso y admisión, asignación de alumnos, evaluación de resultados de aprendizaje y exámenes, **monitoreo durante exámenes**) | **2027-12-02** (antes 2026-08-02) | ⚠️ **APLAZADO** por el **Reglamento (UE) 2026/1744** |
+| **Anexo I** — alto riesgo embebido en producto ya regulado (dispositivos médicos, maquinaria, vehículos) | **2028-08-02** | ⚠️ Aplazado. 🔴 **Un LMS no es Anexo I**: *«embebido en un LMS»* **no mueve el plazo** |
+
+**El aplazamiento es derecho vigente, no propuesta** — y esta es la parte que faltaba fechar: el *Digital Omnibus on
+AI* fue **aprobado por el Parlamento Europeo el 2026-06-16**, **adoptado por el Consejo el 2026-06-29**, firmado el
+**2026-07-08**, **publicado en el DOUE el 2026-07-24** y **en vigor desde el 2026-07-27**, como **Reglamento (UE)
+2026/1744**. El motivo declarado por la Comisión: ni la industria ni **CEN/CENELEC** llegaban con las normas
+armonizadas, y la infraestructura de evaluación de conformidad que el Reglamento presupone no había madurado.
+
+🔵 **Cómo se dice esto en una propuesta EMEA, que es para lo que importa:** *«hoy ya le aplica una obligación de
+transparencia (Art. 50, vigente desde agosto de 2026) y tiene hasta diciembre de 2027 para la conformidad de alto
+riesgo del Anexo III punto 3»*. 🔴 **Lo que NO se puede seguir diciendo es «el alto riesgo rige desde agosto de
+2026»**, y lo que tampoco conviene decir es *«tiene tiempo»*: la seudonimización de `bruchris/canvas-lms-mcp` y el
+`readyforreview` de `moodle-grading-mcp` **ya existen hoy en piezas MIT** (tendencia 136), así que la pregunta
+razonable del cliente es por qué no están puestas.
+
+🔴 **Límite de fuente, declarado:** las cuatro fuentes primarias (DOUE/EUR-Lex y la Comisión) **están bloqueadas en
+este entorno** (gap 65) y el texto consolidado **no se leyó**. Lo anterior viene del **canal del buscador**
+(tendencia 130), con **la coincidencia de varias fuentes secundarias independientes** sobre el número de reglamento,
+las fechas del procedimiento y las dos fechas de aplicación. **Antes de citar el número de reglamento en un documento
+contractual, hay que verlo en EUR-Lex desde una red sin este bloqueo.**
+
+## 🔵 Las tres acciones que el pase 39 deja escritas para el pase 40
+
+**Las tres son ejecutables en este entorno y ninguna depende de un host bloqueado ni de Docker.**
+
+1. 🟢 **Correr el barrido por REGISTRO sobre las capas que este pase NO barrió, porque el canal ya demostró que
+   encuentra lo que GitHub esconde.** Este pase gastó sus 23 términos en LMS, SIS, estándares y biblioteca. **Quedan
+   sin barrer por registro: *proctoring*, *timetabling*, analítica de aprendizaje (Caliper/xAPI por nombre de
+   herramienta, no de estándar), admisiones, *student success* y accesibilidad** — y las dos últimas son, por
+   declaración propia de esta base, **las peor abastecidas de toda la KB**. **El procedimiento está escrito y es
+   repetible** (cuatro endpoints, en `repos/trending.md` de este pase); lo único que falta es la lista de términos.
+2. ⚠️ **Medir qué fracción de `mcp-usc` y `DUTIC-mcp` es PORTABLE, porque de eso depende si se reusan o sólo se leen.**
+   Las dos son institucionales (USC, UNSA) y las dos mezclan **tools genéricas de Moodle Web Services** con **tools
+   atadas a fuentes locales** (`list_usc_degrees`, `get_my_official_exam_schedule`, `dutic_semester_discover`). **La
+   acción concreta: clasificar las 91 + 12 tools en «sólo Web Services» contra «fuente institucional», que se lee en
+   el import de cada módulo.** 🔵 **El valor es de cotización: la fracción genérica es reuso y la otra es desarrollo**,
+   y hoy esta base no sabe la proporción en la pieza de 91 tools que acaba de admitir.
+3. 🟢 **Escribir el *gateway* de partición de tools que la tendencia 137 vuelve posible, porque es chico y desbloquea
+   los casos donde hoy no se puede proponer escritura.** El patrón `preview_*` de `mcp-usc` demuestra que **un filtro
+   por nombre de tool es un control de cumplimiento real**, no cosmético. **Lo que falta es la pieza intermedia:** un
+   *proxy* MCP que reexporte sólo las tools de una allowlist y **registre cada llamada bloqueada**. Sirve para las
+   nueve puertas de LMS de esta base, **y es obligatorio delante de `frappe-mcp-server`**, que trae `call_method` y
+   `delete_document` sin partición por rol. Ver **P82**, **P83** y **P84**.
+
 ## 🔵 Las tres acciones que este pase deja escritas para el siguiente
 
 1. **Medir los endpoints `v0` de *authoring* de Open edX** (**gap 50**), que son los que el propio repo recomienda sobre
