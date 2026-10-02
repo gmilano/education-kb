@@ -8,6 +8,56 @@ updated: 2026-10-02
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 
+## 2026-10-02 (pase 32) — el registro de paquetes rinde **un MCP MIT que el campo `description` ocultaba**, y el término «xapi» resulta ser una **trampa de tres vías** con dos paquetes MIT activos que no tienen nada que ver con educación
+
+**Lo medido:** `registry.npmjs.org/-/v1/search` sobre **QTI, xAPI, SCORM** y la pregunta desambiguada de **CASE**, más
+sondeo directo a **PyPI**, más lectura de README de cada candidato. Más la lectura de código de Open edX que cierra los
+**gaps 57 y 59** (en `agents/trending.md`).
+
+### 🟢 Lo que entra, verificado el 2026-10-02
+
+| Repo | URL | Licencia | ★ | Stack | Señal | Por qué importa |
+|---|---|---|---|---|---|---|
+| **coursecode** | [course-code-framework/coursecode](https://github.com/course-code-framework/coursecode) | **MIT** ✅ | 5 | JavaScript | `coursecode@0.1.61`, npm `modified` 2026-07-20 | 🟢 **Primera puerta MCP de la capa de empaquetado de esta KB.** **SCORM 1.2 + SCORM 2004 + cmi5 + LTI 1.3** en una pieza permisiva, con **servidor MCP incorporado** |
+| **qti3** | [LongsightGroup/qti3](https://github.com/LongsightGroup/qti3) | **MIT** ✅ | 5 | TypeScript | `@longsightgroup/qti3-migrator@0.13.1`, `modified` **2026-10-01** — publicado **ayer** | 🔴 **Rompe el «QTI utilizable es PHP» del pase 28.** **12 paquetes**, `qti3-core` con **cero dependencias de terceros**, más `-migrator` (1.2/2.x → 3) y `-transcoder` (3 → 1.2/2.x) |
+| **lineage-skill** | [JuneYaooo/lineage-skill](https://github.com/JuneYaooo/lineage-skill) | **Apache-2.0** ✅ | **448** | Python | El alta de agente del pase | Destila videos/PDFs/transcripciones en **Agent Skills docentes con trazabilidad a la fuente**. Ver `agents/top.md` |
+
+**Nota de adopción, declarada:** los dos primeros tienen **5 ★**. **Capacidad y licencia verificadas; comunidad mínima.**
+Se registran porque desbloquean una capa, no porque tengan tracción.
+
+### 🔴 Lo que NO entra, y por qué el filtro de licencia no alcanza
+
+| Paquete | Licencia | Fresco | Por qué queda afuera |
+|---|---|---|---|
+| `xapi-to` ([xapi-labs/xapi-cli](https://github.com/xapi-labs/xapi-cli)) | **MIT** | `modified` **2026-09-29** | 🔴 **No es xAPI educativo.** *Marketplace* de APIs de **cripto/Web3** (BlockPI RPC, Binance Web3, dominios/DNS). **Cero** menciones de *«Experience API»*, *«Tin Can»* o *«learning record»* en 47.905 caracteres de README — **y se anuncia como *«Agent-friendly CLI for xAPI»* con skill instalable**. **Colisión 5** |
+| `xapi-python` | **MIT** | — | 🔴 **«The xStation5 API Python library»**: API del bróker de **forex XTB**. **Colisión 6** |
+| `@citolab/qti-convert-local-ai` | **GPL-3.0-only** ⚠️ | `modified` 2026-09-28 | Conversión planilla → paquete QTI en el navegador. Referencia, no base de entregable cerrado |
+| `mizcausevic-dev/mcp-ai-tutor` | **AGPL-3.0** ⚠️ | 10 commits, **0 ★** | Seis tools MCP de *AI Tutor Card* con **FERPA/COPPA/GDPR**. Ataca el bloqueador regulatorio correcto por el canal correcto (`.well-known` + MCP), pero **ni componible ni adoptado**. Señal de especificación a vigilar |
+
+🔵 **La lección de método, y es la que hay que conservar:** **las dos colisiones son MIT, activas y una se anuncia como
+agéntica.** Un barrido que ordene por nombre + licencia + frescura —que es el barrido obvio— **las habría promovido a la
+tabla de agentes**. El único filtro que las atrapó fue **abrir el README y contar menciones del vocabulario del
+dominio**. Y en el otro sentido, **la descripción de `coursecode` no dice «MCP» y el README sí**: el mismo canal que
+descarta falsos positivos es el que encuentra los verdaderos. **El campo `description` no sirve ni para afirmar ni para
+negar.**
+
+### ⚪ Lo que no se pudo medir con este método — gap 51 sigue abierto
+
+`registry.npmjs.org` hace **OR** sobre texto libre: `"competencies and academic standards exchange"` devuelve
+**1.696.870** objetos (`@urql/exchange-retry`, `@univerjs-pro/exchange-client`, ASN.1 PKCS#12…). **El registro de
+paquetes no sabe desambiguar un estándar de nombre multi-palabra.** El **gap 51** queda abierto **con un método
+descartado por escrito**: hay que atacarlo por el **nombre del proyecto implementador** (`OpenCASE`, `CASS`), no por el
+del estándar.
+
+### 🔴 Y la ausencia que sí quedó medida: **QTI y xAPI/LRS no tienen puerta MCP**
+
+Tras abrir los README de los candidatos de las dos capas: **QTI no tiene conector MCP** (`LongsightGroup/qti3` trae
+`AGENTS.md` pero no MCP) y **xAPI/LRS tampoco**. La **tendencia 89** —*«donde hay una puerta MCP suele haber varias»*—
+**valió para OneRoster y Open Badges (pase 31) y no vale para la capa de evaluación y telemetría**: ahí la única puerta
+es la de **empaquetado** (`coursecode`). **Es una ausencia medida, no silencio**, y es la oportunidad de contribución
+*upstream* más limpia que tiene esta KB: `qti3-core` no tiene dependencias y ya expone parser, validación y *scoring* —
+el servidor MCP encima es trabajo de días, no de meses.
+
 ## 2026-10-02 (pase 31) — **cinco versiones de API leídas una por una**: el `v0` que la KB iba a recomendar está deprecado, y la pregunta correcta no era «qué versión» sino «¿alguna crea el curso?» — **ninguna**
 
 **Canal:** `raw.githubusercontent.com` (el único que responde para código; ver la tabla de verificación abajo).

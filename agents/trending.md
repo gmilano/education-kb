@@ -9,6 +9,238 @@ updated: 2026-10-02
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 > No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
 
+## 2026-10-02 (pase 32) — el pase que **cierra el gap 57 invirtiendo la conclusión del 31, y esta vez a favor**: crear un curso en Open edX **sí es una llamada HTTP**, sólo que no vive en el árbol REST versionado — y el permiso que pide **no es GlobalStaff**
+
+**Lo que se hizo:** el barrido obligatorio completo —**cuatro búsquedas globales y cuatro regionales**, con el año
+**calculado** (2026); las cuatro regiones rindieron y ninguna quedó en silencio— más **las tres acciones que el pase 31
+dejó escritas**. Las tres se ejecutaron. Dos cerraron (**gaps 57 y 59**), la tercera rindió un hallazgo **MIT con MCP** y
+**dos colisiones de término nuevas**. Y de regalo, el barrido regional de EMEA entregó lo que hacía falta para cerrar el
+**gap 56**, que era el de mayor riesgo comercial de la base.
+
+### 🔴 Gap 57 CERRADO — y la conclusión del pase 31 era verdadera en su medición y falsa en su alcance
+
+El pase 31 midió tres capas por separado (los cinco árboles `v0`…`v4`, y las 19 tools de escritura del conector oficial)
+y concluyó: *«crear la cáscara del curso no es alcanzable por REST»*. **La medición era correcta. La conclusión, no**, y
+el error es de alcance: **el árbol REST versionado no es toda la superficie HTTP de Studio.**
+
+Leído de primera mano por `raw.githubusercontent.com` sobre `master`:
+
+| Pieza | Coordenada | Métodos | Permiso | ¿Crea o clona? |
+|---|---|---|---|---|
+| `CourseRerunView` | `contentstore/rest_api/v1/views/course_rerun.py` | **sólo `get`** | **`GlobalStaff`** explícito | **No** — devuelve el *contexto del formulario* |
+| `course_rerun_handler` | `contentstore/views/course.py:365` | **sólo `GET`** (`@require_http_methods(["GET"])`) | **`GlobalStaff`** explícito | **No** — renderiza `course-create-rerun.html` |
+| **`course_handler` POST** | `contentstore/views/course.py:342` → `_create_or_rerun_course` (**:1184**) | **`POST`** JSON | **`is_content_creator(user, org)`** | **Sí, las dos cosas** |
+
+**El hallazgo:** las dos piezas que *se llaman* `course_rerun` son de lectura y piden el permiso más caro de la
+plataforma; **la que escribe no se llama rerun y pide el permiso de creador de contenido.** `_create_or_rerun_course`
+lee del JSON `org`, `number`/`course`, `display_name`, `start`, `end`, `run` y, **opcionalmente, `source_course_key`**:
+
+- **con `source_course_key`** → `rerun_course(...)` → `{"url": …, "destination_course_key": "<key>"}` (clona)
+- **sin `source_course_key`** → `create_new_course(...)` → `{"url": …, "course_key": "<key>"}` (**crea de cero**)
+
+### 🔵 Las tres respuestas que el gap 57 pedía
+
+**(a) ¿Acepta un curso vacío de plantilla como origen?** **La pregunta quedó sin objeto, y eso es la buena noticia:**
+no hace falta plantilla ninguna, porque **`create_new_course` vive en el mismo endpoint** y se activa simplemente
+*omitiendo* `source_course_key`. El *bootstrap* con curso plantilla que **P63** iba a cotizar **no es necesario**.
+
+**(b) ¿Qué devuelve —el `course_key` sincrónico o una tarea a pollear?** **Las dos cosas, y conviene no confundirlas.**
+`rerun_course` (**:1331**) calcula `destination_course_key` con `store.make_course_key` bajo `default_store('split')` y
+**lo devuelve sincrónicamente**; el copiado de contenido se despacha a **Celery** (`rerun_course_task.delay(*args)`,
+**:1375**) y su progreso se sigue por **`CourseRerunState` / `CourseRerunUIStateManager`** (estados `FAILED` /
+`SUCCEEDED`). O sea: **la clave existe en la respuesta, el contenido todavía no.** Cualquier automatización que escriba
+en el curso recién clonado inmediatamente después del POST corre contra una copia en vuelo.
+
+**(c) ¿Qué permisos pide?** **`is_content_creator(user, org)`** para el POST que crea o clona —**no `GlobalStaff`**—, más
+`has_studio_write_access` sobre el curso **origen** dentro de `rerun_course`, y también sobre el **destino** si cambian
+`org` o `course`. `GlobalStaff` sólo gatea las dos vistas GET de formulario. **Para un despliegue multi-tenant esto
+cambia la cotización**: el alta de cursos se delega por organización, no por superusuario.
+
+🔴 **Y una trampa operativa que hay que escribir porque rompe en runtime:** `rerun_course` lee
+**`fields['display_name']`** sin guarda (**:1359**), pero `_create_or_rerun_course` sólo puebla esa clave
+**`if display_name is not None`**. **Omitir `display_name` en un rerun levanta `KeyError`**, no un 400 prolijo. En la
+práctica `display_name` es **obligatorio para clonar** y opcional para crear. Además `rerun_course` **resetea**
+`advertised_start`, `enrollment_start`, `enrollment_end` y `video_upload_pipeline`, y hace
+`add_instructor(destination_course_key, user, user)`: el que clona queda instructor del clon.
+
+🔵 **La regla de método que deja este pase (tendencia 95):** **medir el árbol versionado de un API no es medir su
+superficie HTTP.** Un proyecto con años encima suele tener la escritura en el handler viejo y la lectura prolija en el
+REST nuevo. Cuando una medición concluye *«no se puede»*, hay que preguntarle **a la vista legacy y al `urls.py` raíz**
+antes de publicarlo. El pase 31 midió tres canales independientes y los tres coincidieron —y aun así la conclusión
+salió mal, porque **los tres miraban el mismo lado del proyecto**. Coincidencia de fuentes no es cobertura de fuentes.
+
+### 🔵 Gap 59 CERRADO — y la propagación **es segura por omisión**, que era justo lo que había que saber
+
+`SyncFromUpstreamView.post` (`contentstore/rest_api/v2/views/downstreams.py:510`) acepta JSON opcional:
+
+```json
+{ "override_customizations": false, "keep_custom_fields": [] }
+```
+
+**La respuesta a «¿sobrescribe, rechaza o marca conflicto?» es ninguna de las tres: preserva.**
+`override_customizations` **vale `False` por omisión**, de modo que **un `sync` no pisa los campos que el docente
+personalizó localmente** a menos que el llamador lo pida explícitamente. Y cuando lo pide, `keep_custom_fields` da
+granularidad **campo por campo** para blindar algunos de todas formas.
+
+**Entonces la propagación de la tendencia 91 es segura para contenido que el docente toca**, y el riesgo queda
+**invertido**: el peligro no es el `sync` por defecto, es **un integrador que manda `override_customizations: true` sin
+`keep_custom_fields`**. Eso es una línea de *code review*, no un rediseño.
+
+Dos cosas más que el mismo archivo contesta:
+
+1. 🔴 **El caso `video` destruye transcripciones antes de copiar.** Si `block_type == "video"`, el `post` llama
+   **`clear_transcripts(downstream)`** *antes* de `sync_library_content` — «delete all transcripts so we can copy new
+   ones from upstream». Si el *upstream* no las trae, **se pierden**. Para accesibilidad esto es material: las
+   transcripciones son requisito, no adorno.
+2. **`downstreams/` sí tiene escritura además de `sync`** — son **cuatro** operaciones, no una:
+
+| Operación | Qué hace |
+|---|---|
+| `POST downstreams/{usage_key}/sync` | Acepta la actualización (con los dos flags de arriba) |
+| `DELETE downstreams/{usage_key}/sync` | **Rechaza** la actualización (`decline_sync`) → `204`. El docente puede decir no. |
+| `PUT downstreams/{usage_key}` | Fija o edita el vínculo *upstream* (`upstream_ref`, con parámetro `sync` `"true"`/`"false"`) |
+| `DELETE downstreams/{usage_key}` | **Corta** el vínculo (`sever_upstream_link`) y borra el `ComponentLink`/`ContainerLink` → `204` |
+
+⚠️ **Caveat que hay que repetir en material de cliente:** las cuatro clases del módulo están rotuladas
+**`[ 🛑 UNSTABLE ]`** en el propio *docstring*. Es API de biblioteca-a-curso usable hoy y **sin contrato de
+estabilidad**.
+
+### 🟢 Acción 3 — el registro de paquetes rindió **un MCP MIT**, y lo rindió **en el README, no en la descripción**
+
+Se corrió `registry.npmjs.org/-/v1/search` sobre **QTI, xAPI, SCORM** y la pregunta desambiguada de **CASE**, más sondeo
+directo a **PyPI**. Resultado por estándar:
+
+| Estándar | ¿MCP? | Lo que hay, verificado |
+|---|---|---|
+| **SCORM / cmi5 / LTI 1.3** | 🟢 **SÍ** | **`coursecode`** — **MIT** — [course-code-framework/coursecode](https://github.com/course-code-framework/coursecode) — **servidor MCP incorporado** |
+| **QTI** | 🔴 No | **`LongsightGroup/qti3`** — **MIT**, TypeScript, **12 paquetes** publicados. Tiene `AGENTS.md`, no MCP |
+| **xAPI / LRS** | 🔴 No | `tincan` (PyPI, **Apache-2.0**, `RusticiSoftware/TinCanPython`), `learning_locker` (npm). **Dos colisiones nuevas, abajo** |
+| **CASE** (gap 51) | ⚪ **Método falló** | npm devuelve **1.696.870** objetos de ruido. **Gap 51 sigue abierto** |
+
+🟢 **El hallazgo del pase, y es de capa, no de repo:** **`coursecode`** (**MIT**, `coursecode@0.1.61`) es un framework de
+*authoring* multi-formato por CLI que cubre **SCORM 1.2, SCORM 2004, cmi5 y LTI 1.3** en una sola pieza permisiva, y
+**trae un servidor MCP incorporado** que habla con Claude Code, Codex y Cursor. Es **la primera puerta MCP de la capa de
+empaquetado** de esta KB.
+
+🔵 **Y el método importa más que el hallazgo:** **la descripción del paquete en npm no dice «MCP» en ninguna parte.** El
+barrido por campo `description` —que es el que esta KB venía corriendo— **lo habría declarado ausente**. Apareció al
+**abrir el README**, que es exactamente lo que la tendencia 89 manda hacer y lo que el barrido automático se saltea.
+**Donde la tendencia 89 dice «abrir el README», no es una formalidad: es el único canal donde esto era visible.**
+
+🟢 **El segundo hallazgo rompe un registro propio:** el pase 28 midió por tres métodos que la capa QTI utilizable era
+**PHP** (`oat-sa/qti-sdk`). **Ya no.** [LongsightGroup/qti3](https://github.com/LongsightGroup/qti3) es **MIT**,
+**TypeScript**, y publica **12 paquetes** —`qti3-core` (parser/validación/scoring, **cero dependencias de terceros**),
+`-player` (web component), `-player-react`, `-player-preact`, `-conformance`, `-a11y`, `-fixtures`, `-pnp`, `-writer`,
+`-migrator` (QTI 1.2/2.x → QTI 3), `-transcoder` (QTI 3 → 1.2/2.x), `-cli`—. `@longsightgroup/qti3-migrator@0.13.1`
+registra `modified` **2026-10-01**: se publicó **ayer**. Y `LongsightGroup` **ya estaba en esta base por OneRoster**, de
+modo que es el mismo actor cubriendo un segundo estándar.
+
+⚠️ **Honestidad de adopción, que esta KB se debe después de la corrección de estrellas del pase 31:** los dos hallazgos
+headline tienen **5 ★ cada uno**. Son hallazgos **de capacidad y de licencia, no de adopción**. Se registran porque
+resuelven un bloqueo técnico con licencia permisiva, y hay que presentarlos así: **capacidad verificada, comunidad
+mínima.** `@citolab/qti-convert-local-ai` existe y es relevante, pero es **GPL-3.0-only** — queda fuera de lo que
+Globant puede componer sin contagio.
+
+### 🔴 Colisiones de término **5 y 6** — y las dos se llaman «xapi»
+
+Esta KB venía con cuatro colisiones registradas. **Van seis, y las dos nuevas son el mismo término:**
+
+- **`xapi-to`** (npm, **MIT**, [xapi-labs/xapi-cli](https://github.com/xapi-labs/xapi-cli), `modified` 2026-09-29) se
+  presenta como *«Agent-friendly CLI for xAPI — discover and call capabilities and APIs»* e **instala un skill de
+  agente** (`npx skills add xapi-labs/xapi-cli`). Parece **exactamente** la puerta agéntica del xAPI educativo. **No lo
+  es.** Su README —47.905 caracteres— tiene **cero** menciones de *«Experience API»*, *«Tin Can»* o *«learning
+  record»*, y en cambio habla de **BlockPI RPC, Binance Web3, cripto, dominios/DNS**. Es un *marketplace* de APIs
+  comerciales que se llama xAPI.
+- **`xapi-python`** (PyPI, **MIT**) es **«The xStation5 API Python library»**: el API del **bróker de forex XTB**.
+
+🔵 **La regla que queda (tendencia 96):** **«xAPI» es el acrónimo más sobrecargado de este dominio**, y las tres cosas
+que devuelve —aprendizaje, cripto, forex— **comparten nombre exacto**. Para esta capa hay que buscar
+**`"Experience API"` o `"Tin Can"`**, nunca `xapi` a secas; y como las dos trampas son **MIT y activas**, el filtro de
+licencia **no** las descarta. Un barrido que sólo mire nombre y licencia las habría promovido a la tabla.
+
+⚪ **Y la cuarta sub-acción no se pudo hacer con este método, lo cual también es dato:** `registry.npmjs.org` hace **OR**
+sobre texto libre, así que `"competencies and academic standards exchange"` devuelve **1.696.870** resultados
+(`@urql/exchange-retry`, `@univerjs-pro/exchange-client`, ASN.1…). **El registro de paquetes no sabe desambiguar un
+estándar de nombre multi-palabra.** El **gap 51** sigue abierto y ahora con un método descartado por escrito: hay que
+atacarlo por el **nombre del proyecto implementador**, no por el del estándar.
+
+### 🟢 Un agente nuevo de verdad, el primero en ocho pases
+
+[JuneYaooo/lineage-skill](https://github.com/JuneYaooo/lineage-skill) — **Apache-2.0**, **448 ★**, Python. Destila
+**videos, PDFs, transcripciones y apuntes en Agent Skills docentes con trazabilidad a la fuente**: extrae diagnósticos,
+flujos de trabajo, rúbricas, plantillas, reglas de transferencia y modos de falla; emite paquetes de conocimiento
+compatibles con **OKF**; fusiona varios cursos preservando campos de habilidad; corre sobre Codex, Claude Code, OpenClaw
+y Hermes. **Por qué entra a `agents/top.md` y los últimos siete pases no tuvieron altas:** no es material didáctico
+*sobre* AI ni un wrapper genérico — es **la pieza que convierte el material de un docente en la metodología ejecutable
+de un agente**, que es el eslabón que esta base venía declarando vacío entre `education-agent-skills` (skills escritas a
+mano) y los tutores.
+
+⚠️ **Señal temprana, con el caveat por delante:**
+[mizcausevic-dev/mcp-ai-tutor](https://github.com/mizcausevic-dev/mcp-ai-tutor) — **AGPL-3.0**, **0 ★**, TypeScript, **10
+commits** — expone **seis** tools MCP para revisar *AI Tutor Cards* en compra institucional:
+`tutor_card_well_known_url`, `_fetch`, `_validate`, `_inspect`, `_subject_check` y `_coppa_check`, con banderas de
+**FERPA / COPPA / GDPR** y una regla condicional (edad mínima < 13 exige bandera de cumplimiento). **Ataca el bloqueador
+regulatorio número uno de las cuatro regiones** y lo hace por el canal correcto —`.well-known` + MCP—, pero con
+**AGPL-3.0 y cero estrellas no es componible ni adoptado**. Se registra como **idea de especificación a vigilar**, no
+como fila de `agents/top.md`. Lo que vale es la forma: **una ficha pública y verificable por tool del tutor**.
+
+### 🔴 Gap 56 RESUELTO — y la argumentación EMEA que esta KB tenía escrita **estaba mal aplicada**
+
+El barrido regional de EMEA entregó el calendario que faltaba. **Las dos fechas incompatibles que esta base publicaba
+eran las dos correctas, sobre obligaciones distintas** — y la que se usó para vender era la que no correspondía:
+
+| Clase de obligación | Fecha | Aplica a educación |
+|---|---|---|
+| **Aplicación general** del AI Act (incl. **transparencia**, art. 50) | **2026-08-02** — **vigente hoy** | Sí, las de transparencia |
+| **Anexo III, alto riesgo *stand-alone*** | **2026-08-02 → 2027-12-02** (postergada) | **Sí — acá vive educación** |
+| Art. 6(1), alto riesgo **embebido** en producto regulado | **2028-08-02** | Sólo si va embebido |
+
+Educación es **uno de los ocho supuestos del Anexo III** y entra por **evaluación de resultados de aprendizaje,
+selección de postulantes y monitoreo durante exámenes**. El **Digital Omnibus on AI** movió esa fecha: acuerdo político
+**2026-05-07**, aval del Parlamento **2026-06-16**, adopción del Consejo **2026-06-29**, publicación en el DOUE
+**2026-07-24**, **en vigor 2026-07-27**.
+
+🔵 **La corrección comercial, que es lo que descarga riesgo:** el pase 28 escribió *«rige desde 2026-08-02»* para el alto
+riesgo educativo y **sobre eso se construyó el pitch de EMEA**. **Post-Omnibus eso es falso.** El pitch correcto es de
+dos tiempos y es **más vendible, no menos**: *«las obligaciones de transparencia ya rigen —desde agosto de 2026—; la
+evaluación de conformidad del Anexo III vence el 2 de diciembre de 2027, y eso es el tiempo que tienen para hacerla
+bien»*. Vender una fecha vencida que no venció quema credibilidad en la primera consulta al área legal del cliente.
+
+⚠️ **Confianza de esta resolución, declarada:** **cinco fuentes legales secundarias independientes concuerdan** en
+`2027-12-02` y en la cronología del Omnibus. **El texto primario no se pudo abrir**: `artificialintelligenceact.eu`,
+`digital-strategy.ec.europa.eu` y el análisis de Gibson Dunn están **bloqueados por el proxy de egreso** de este
+entorno. **No es verificación primaria** y no debe citarse como tal en material de cliente sin abrir el DOUE. Queda
+como acción para el pase siguiente.
+
+### 🗺️ Las cuatro regiones rindieron — ninguna quedó en silencio
+
+- **North America** — **86 %** de las organizaciones educativas ya adoptaron AI generativa. **134 proyectos de ley en 31
+  estados** en la sesión 2026: **California AB 1159** prohíbe usar datos de alumnos para entrenar modelos; **Idaho SB
+  1227** exige protecciones de privacidad; **Oklahoma** y **Maryland** exigen supervisión humana y **prohíben decisiones
+  de alto impacto sobre alumnos tomadas por AI**; Georgia y Mississippi suman créditos de CS con AI. **Cuatro estados
+  —Idaho, Maryland, Oklahoma, Virginia— obligan a política distrital de AI**, no sólo guía estatal. Despliegues:
+  **Gemini for Education** en **+1.000** instituciones de educación superior; piloto de tutoría **Khanmigo** en Maryland
+  con **~4.350** alumnos en dos condados.
+- **EMEA** — gobernada por el calendario de arriba (**gap 56**). La mayoría de las instituciones está en modo
+  **piloto y pre-cumplimiento**, no en enforcement. Señal técnica de peso para Globant: **los distritos con exigencia de
+  residencia de datos autoalojan modelos de pesos abiertos** (Llama 3, Mistral) en lugar de consumir API. Eso convierte
+  el *stack* soberano —Ollama/vLLM + LMS open source— en requisito, no en preferencia.
+- **APAC** — es la región que **legisló más rápido**. **Corea del Sur**: *AI Basic Act* **vigente 2026-01-22**, que
+  consolidó **19 proyectos** y la vuelve la **segunda jurisdicción del mundo** con ley integral después de la UE.
+  **Vietnam**: ley nacional de AI adoptada en **diciembre de 2025**, vigente **marzo de 2026**, y **nombra educación
+  como sector de alto riesgo** —evaluación automatizada y monitoreo de conducta—. **Japón** y **Taiwán** redactan ley y
+  montan institutos de *testing*; **Singapur** apuesta a marcos y toolkits (**AI Verify**, que esta base ya tiene
+  catalogado). Mercado dominado por China, India y Japón; *players* citados: Google, Microsoft, IBM, Pearson, Byju's.
+- **LATAM** — **la adopción va por delante del mundo y la regulación por detrás.** *AI in Higher Education LATAM Survey
+  2026* (Digital Education Council, con el Institute for the Future of Education del **Tec de Monterrey**, más **AIGEN**
+  y **RIE360**): **92 % de estudiantes** y **79 % de docentes** usan AI activamente —por encima del promedio global—, y
+  **94 % de docentes** espera usarla a futuro. Pero **65 % de los estudiantes teme que la AI vuelva superficial el
+  aprendizaje**. Regulación fragmentada y a distintas velocidades: proyecto de ley en **Brasil**, marco en **Chile**,
+  **CONPES 4144** en **Colombia** (política nacional con presupuesto hasta 2030), reglas sectoriales en **México**.
+  🔵 **La lectura comercial:** en LATAM no hay que vender adopción —ya ocurrió, sin gobernanza—. Hay que vender
+  **gobernanza retroactiva y evidencia de aprendizaje**: el 65 % de desconfianza estudiantil es el *driver* de compra,
+  y es el mismo problema que `lineage-skill` (trazabilidad a la fuente) y las *AI Tutor Cards* atacan.
+
 ## 2026-10-02 (pase 31) — el pase que **da vuelta la consigna que traía**: los endpoints `v0` que el pase 29 mandó a medir *como los recomendados* están **deprecados en favor de `v1`**, y el bloqueo real no es la versión, es que **ninguna de las cinco versiones crea el curso**
 
 **Lo que se hizo:** el barrido obligatorio completo —**cuatro búsquedas globales y cuatro regionales**, con el año

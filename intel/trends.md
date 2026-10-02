@@ -4815,6 +4815,100 @@ control positivo conocido.** Si el control falla, falló el método. Y cuando un
 propio de esta KB, **la contradicción se resuelve antes de publicar** — acá el registro viejo tenía razón. Es la misma
 lección de la tendencia 87, que este pase **repitió a pesar de tenerla escrita**: una regla registrada no se aplica
 sola.
+## 95. Medir el árbol versionado de un API no es medir su superficie HTTP, y la coincidencia de tres fuentes no es cobertura de fuentes (agregado en el pase 32 del 2026-10-02)
+
+El pase 31 midió **tres canales independientes** —los cinco árboles `v0`…`v4` de contentstore, y las 19 tools de
+escritura del conector oficial— y los tres coincidieron: *«ninguna versión crea el curso»*. **La medición era correcta y
+la conclusión era falsa.** Crear un curso en Open edX **sí es una llamada HTTP**: vive en `course_handler` POST
+(`cms/djangoapps/contentstore/views/course.py:342` → `_create_or_rerun_course`, **:1184**), que es la vista **legacy** de
+Studio, fuera del árbol `/api/contentstore/` versionado.
+
+**La trampa de método, y es la que hay que conservar:** los tres canales **miraban el mismo lado del proyecto**. En un
+proyecto con años encima, la escritura suele haber quedado en el handler viejo mientras el REST nuevo se construyó
+prolijo y de lectura. **Tres fuentes que comparten un sesgo de origen son una fuente.** Cuando una medición concluye *«no
+se puede»*, hay que preguntarle **a la vista legacy y al `urls.py` raíz** antes de publicarlo — y antes de descontar la
+funcionalidad de una cotización.
+
+**Corolario que cambia una cotización:** la pieza que *se llama* `course_rerun` (dos de ellas: la vista REST `v1` y el
+handler legacy) es **de sólo lectura y pide `GlobalStaff`**; la que escribe **no se llama rerun y pide
+`is_content_creator(user, org)`**. **El nombre del endpoint no predice ni su verbo ni su permiso.**
+
+## 96. «xAPI» es el acrónimo más sobrecargado de este dominio, y el filtro de licencia no protege contra la homonimia (agregado en el pase 32 del 2026-10-02)
+
+Buscar `xapi` en los registros de paquetes devuelve **tres dominios distintos con el mismo nombre exacto**: el xAPI
+educativo (Experience API / Tin Can), un *marketplace* de APIs de **cripto/Web3** (`xapi-to`, MIT, `modified`
+2026-09-29, que además **se anuncia como *«Agent-friendly CLI for xAPI»* e instala un skill de agente**) y el API del
+**bróker de forex XTB** (`xapi-python`, MIT). Son las **colisiones 5 y 6** de esta KB.
+
+**Lo que esto le enseña al barrido, y es lo incómodo:** las dos trampas son **MIT, activas y recientes**. El filtro de
+licencia —que es el filtro principal de esta base— **no las descarta**, y la peor de las dos **se presenta como
+agéntica**, que es justo el criterio de promoción. Un barrido ordenado por nombre + licencia + frescura **las habría
+subido a `agents/top.md`**. El único filtro que las atrapó fue **abrir el README y contar menciones del vocabulario del
+dominio** (47.905 caracteres, **cero** menciones de *«Experience API»*, *«Tin Can»* o *«learning record»*).
+
+**Regla operativa:** buscar **`"Experience API"`** o **`"Tin Can"`**, nunca `xapi` a secas. Y en general: **un acrónimo de
+cuatro letras o menos no es una consulta de búsqueda, es una invitación a la homonimia.**
+
+## 97. El campo `description` de un paquete no sirve ni para afirmar ni para negar una capacidad (agregado en el pase 32 del 2026-10-02)
+
+`coursecode` (**MIT**) **trae un servidor MCP incorporado** y cubre SCORM 1.2, SCORM 2004, cmi5 y LTI 1.3. **Su
+descripción en npm no menciona MCP en ninguna parte.** El barrido por campo `description` —el que esta KB venía
+corriendo— **lo habría registrado como ausencia medida**, y la ausencia habría sido falsa.
+
+Es el mismo canal, en el sentido inverso, que atrapó las colisiones de la tendencia 96: **el README afirma lo que la
+descripción omite y desmiente lo que el nombre promete.** Las dos mitades de la regla son una sola: **la descripción del
+paquete no es evidencia** — ni positiva ni negativa. La tendencia 89 ya decía *«abrir el README»*; este pase mide **cuánto
+cuesta no hacerlo**: una puerta MCP entera, en la única capa de estándares donde esta KB tenía puerta.
+
+## 98. Un flag con default seguro convierte un riesgo de arquitectura en una línea de code review (agregado en el pase 32 del 2026-10-02)
+
+El **gap 59** preguntaba qué hace el `sync` de Libraries v2 cuando el bloque *downstream* fue editado por el docente:
+¿sobrescribe, rechaza, marca conflicto? **Ninguna de las tres: preserva.**
+`SyncFromUpstreamView.post` acepta `override_customizations`, que **vale `False` por omisión**, más
+`keep_custom_fields` para blindar campos puntuales cuando sí se pide sobrescribir.
+
+**Por qué es una tendencia y no un detalle de implementación:** el riesgo que esta KB tenía anotado como *«hay que medir
+si la propagación es segura para contenido que el docente toca»* —un riesgo de arquitectura, de los que se cotizan como
+diseño— **se reduce a vigilar que ningún integrador mande `override_customizations: true` sin `keep_custom_fields`**. Eso
+es una regla de *code review*, no un rediseño.
+
+**El corolario general, que vale para evaluar cualquier dependencia:** antes de cotizar la mitigación de un riesgo, **leer
+los defaults**. Un proyecto que eligió el default conservador ya pagó ese diseño. Un proyecto que eligió el default
+destructivo traslada el costo al integrador — y **el mismo archivo tiene un caso de cada uno**: el `sync` preserva por
+omisión, pero si `block_type == "video"` **llama `clear_transcripts` y borra todas las transcripciones antes de copiar
+las del upstream**. Default seguro en un camino, destructivo en el otro, **en la misma función**.
+
+## 🔵 Estado de gaps al cierre del pase 32 del 2026-10-02
+
+| Gap | Estado | Resolución |
+|---|---|---|
+| **57** (`course_rerun` como bootstrap de P63) | ✅ **CERRADO** | **Y sin objeto: no hace falta plantilla.** `create_new_course` vive en el mismo `POST course_handler`, basta **omitir `source_course_key`**. Devuelve `course_key`/`destination_course_key` **sincrónicamente**; el copiado va a **Celery** (`rerun_course_task.delay`) y se sigue por **`CourseRerunState`** (`FAILED`/`SUCCEEDED`). Permiso: **`is_content_creator(user, org)`**, no `GlobalStaff`. 🔴 Trampa: `rerun_course` lee `fields['display_name']` sin guarda (**:1359**) → **omitirlo en un rerun levanta `KeyError`** |
+| **59** (¿el `sync` resuelve conflicto?) | ✅ **CERRADO** | **Preserva por omisión** (`override_customizations` = `False`; `keep_custom_fields` para granularidad). `downstreams/` tiene **cuatro** escrituras: `POST .../sync` (aceptar), `DELETE .../sync` (**rechazar**, `decline_sync` → 204), `PUT` (fijar vínculo), `DELETE` (cortar vínculo). ⚠️ Las cuatro clases están rotuladas **`[ 🛑 UNSTABLE ]`** |
+| **56** (calendario del Anexo III) | ✅ **RESUELTO** ⚠️ no primario | Educación es **Anexo III** → **2027-12-02** (movida desde 2026-08-02 por el **Digital Omnibus on AI**, en vigor 2026-07-27). El **2026-08-02** es la **aplicación general** (transparencia, art. 50) y **sigue vigente**. Art. 6(1) embebido → **2028-08-02**. ⚠️ **Cinco fuentes secundarias concordantes; el texto primario quedó bloqueado por el proxy de egreso.** No citar como primario |
+| **51** (CASE por nombre desambiguado) | 🔴 **ABIERTO**, con un método descartado | `registry.npmjs.org` hace **OR** sobre texto libre: `"competencies and academic standards exchange"` devuelve **1.696.870** objetos de ruido. **El registro de paquetes no desambigua estándares de nombre multi-palabra.** Atacarlo por el **nombre del proyecto implementador** (`OpenCASE`, `CASS`), no del estándar |
+| **60** (nuevo) | 🔴 **ABIERTO** | **QTI y xAPI/LRS no tienen puerta MCP** — medido abriendo los README de los candidatos de las dos capas. La **tendencia 89** valió para OneRoster y Open Badges y **no vale para evaluación ni telemetría**: la única puerta de estándar nueva es la de **empaquetado** (`coursecode`). Es la **oportunidad de contribución *upstream* más limpia** que tiene esta base: `qti3-core` no tiene dependencias y ya expone parser, validación y *scoring* |
+| **61** (nuevo) | 🔴 **ABIERTO** | ¿`course_rerun_task` admite un curso **origen vacío**? El gap 57 volvió la pregunta innecesaria para el *bootstrap* (se usa `create_new_course`), pero sigue abierta para el caso **plantilla institucional con estructura y sin contenido**, que es un pedido real en despliegues grandes |
+
+## 🔵 Las tres acciones que el pase 32 deja escritas para el pase 33
+
+1. 🔴 **Cerrar el gap 56 contra el texto primario, y es la única acción no técnica de las tres.** Este pase lo resolvió
+   con **cinco fuentes secundarias concordantes** y dejó escrito que **no es verificación primaria**, porque
+   `artificialintelligenceact.eu`, `digital-strategy.ec.europa.eu` y el análisis de Gibson Dunn están **bloqueados por el
+   proxy de egreso**. **Probar `eur-lex.europa.eu` y `data.europa.eu`**, que no se intentaron, y fechar **cada
+   afirmación contra el inciso del Anexo III** que le corresponde. **Sobre esta fecha se construye el pitch de EMEA**: es
+   el único número de esta KB que un abogado del cliente va a verificar en la primera reunión.
+2. **Levantar `coursecode` y pedirle `tools/list`** — es el mismo gesto que el pase 30 hizo con `oneroster-ts` y el que
+   convirtió «35 rutas documentadas» en «132 tools servidas». Hay que responder **cuántas tools expone realmente** su
+   servidor MCP y **si alguna escribe** (genera paquete SCORM/cmi5) o si todas leen. **Decide si `coursecode` es la pieza
+   de salida de la capa generativa de esta KB** (el rol que hoy ocupa `scorm-mcp-server` con 3 tools) o sólo un CLI con
+   fachada MCP. Y de paso: **medir si `qti3-cli` es envolvible como MCP en días**, que es lo que el **gap 60** afirma sin
+   haberlo probado.
+3. **Repetir la consigna del registro de paquetes, pero por el nombre del proyecto implementador** — que es el método que
+   este pase descartó por escrito para el nombre del estándar (**gap 51**). Concretamente: consultar npm, PyPI y
+   Packagist por **`OpenCASE`**, **`CASS`**, **`learning_locker`**, **`TinCanPython`** y **`qti3`**, abrir el README de
+   cada resultado y buscar «MCP» adentro. **Y aplicarle a cada hallazgo el control de la tendencia 96 antes de
+   promoverlo:** contar menciones del vocabulario del dominio, porque este pase demostró que **MIT + activo + «agéntico»
+   no garantiza que la pieza sea del dominio educativo.**
 ## 🔵 Las tres acciones que el pase 31 deja escritas para el pase 32
 
 1. 🔴 **Medir `course_rerun` y cerrar el gap 57**, que es lo único que separa a **P63** de una cotización sin asterisco.

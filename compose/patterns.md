@@ -3354,7 +3354,7 @@ cumplimiento del patrón pero **sin el requisito de graduación**, así que ahí
 requisito.
 
 
-## P63 — Agente autor sobre Open edX, con el bootstrap que la API no da y el rail que el conector no pone (agregado en el pase 31; **LATAM e India primero**, donde está la huella pública grande de Open edX)
+## P63 — Agente autor sobre Open edX — 🟢 **ACTUALIZADO EN EL PASE 32: el bootstrap SÍ lo da la API, y el asterisco del gap 57 se cae** (agregado en el pase 31; **LATAM e India primero**, donde está la huella pública grande de Open edX)
 
 **Qué resuelve.** P55 venía cotizándose con asterisco porque no se sabía si el *authoring* de Open edX era alcanzable.
 El pase 31 lo midió en tres capas independientes y la respuesta es **sí para todo lo que vive adentro del curso, no para
@@ -3374,13 +3374,36 @@ hueco del bootstrap cubierto explícitamente y con el rail de seguridad que el c
 
 ### El wiring, en el orden en que hay que construirlo
 
-1. **Bootstrap del curso — y acá está el único trabajo que la API no hace.** 🔴 **Ninguna de las cinco versiones REST
-   crea un curso, y ninguna de las 19 escrituras del conector tampoco.** El camino es **un curso plantilla vacío,
-   creado una vez a mano en Studio**, y de ahí en adelante **`course_rerun`** (REST `v1`,
-   `course_rerun/{course_id}`) para clonarlo por cada curso nuevo. **Cotizar el alta del plantilla como tarea manual de
-   una vez**, no como desarrollo. ⚠️ **Asterisco honesto (gap 57):** falta confirmar que `course_rerun` acepta un curso
-   **vacío** como origen y si devuelve el `course_key` sincrónicamente o una tarea asíncrona. **Es la acción 1 del pase
-   32** y es lo único que separa este patrón de una cotización cerrada.
+1. 🟢 **Bootstrap del curso — y en el pase 32 esto dejó de ser trabajo.** El pase 31 concluyó que *«ninguna de las
+   cinco versiones REST crea un curso»*, y la medición era correcta pero el alcance no: **el árbol REST versionado no es
+   toda la superficie HTTP de Studio.** La creación vive en el handler legacy:
+
+   ```
+   POST /course/                      (cms/djangoapps/contentstore/views/course.py:342 → _create_or_rerun_course :1184)
+   Accept: application/json
+   {"org": "...", "number": "...", "run": "...", "display_name": "..."}        → crea de cero  → {"course_key": "..."}
+   {"org": "...", "number": "...", "run": "...", "display_name": "...",
+    "source_course_key": "course-v1:..."}                                     → clona         → {"destination_course_key": "..."}
+   ```
+
+   **Las tres consecuencias que cambian la cotización:**
+   - 🟢 **No hace falta curso plantilla ni alta manual en Studio.** `create_new_course` se activa **omitiendo
+     `source_course_key`**. La «tarea manual de una vez» que este patrón cotizaba **se elimina del presupuesto**.
+   - 🟢 **El permiso es `is_content_creator(user, org)`, no `GlobalStaff`.** Para multi-tenant esto es decisivo: **el alta
+     de cursos se delega por organización**, sin entregar superusuario. (`GlobalStaff` sólo gatea las dos vistas **GET**
+     de formulario — `CourseRerunView` del REST `v1` y `course_rerun_handler` —, que **no escriben nada**.)
+   - ⚠️ **La clave vuelve sincrónica; el contenido, no.** En el caso de clonado, `rerun_course` (**:1331**) devuelve
+     `destination_course_key` de inmediato pero despacha el copiado a **Celery** (`rerun_course_task.delay`, **:1375**).
+     **Hay que pollear `CourseRerunState`** (`FAILED`/`SUCCEEDED`, vía `CourseRerunUIStateManager`) antes de escribir en
+     el curso nuevo, o el paso 2 corre contra una copia en vuelo. **Este es el nodo de espera que el grafo necesita.**
+
+   🔴 **Y una trampa que rompe en runtime, no con un 400 prolijo:** `rerun_course` lee **`fields['display_name']`** sin
+   guarda (**:1359**), pero `_create_or_rerun_course` sólo puebla esa clave `if display_name is not None`. **Omitir
+   `display_name` al clonar levanta `KeyError`.** Tratarlo como **obligatorio para clonar**, opcional para crear.
+   Además el clonado **resetea** `advertised_start`, `enrollment_start`, `enrollment_end` y `video_upload_pipeline`, y
+   hace `add_instructor(destination, user, user)`: **quien clona queda instructor del clon** — hay que preverlo en el
+   modelo de permisos del entregable.
+
 2. **Estructura.** `POST blocks/create-tree/` con el árbol completo: `category: chapter` → `sequential` → `vertical`.
    Por REST crudo el equivalente es `POST /api/contentstore/v1/xblock/` con `parent_locator` + `category` **bloque por
    bloque** — razón suficiente para usar el conector acá y no la API cruda.
@@ -3459,3 +3482,99 @@ clientes cuyo *procurement* no tiene criterio para 0BSD.
 **Estimación.** 3–4 semanas para el delta diario por MCP con un SIS que ya habla OneRoster; +2 semanas si hay que hacer
 la carga inicial por CSV; +2 semanas para los rails de cuota e idempotencia.
 
+
+## P65 — Propagación segura de biblioteca a N cursos, con el default que ya protege al docente (agregado en el pase 32 del 2026-10-02)
+
+**Qué resuelve.** El patrón más pedido en un despliegue grande: una corrección se hace **una vez** en la biblioteca y
+baja a los **N** cursos que la usan. P63 ya lo usaba como paso 5, pero con un asterisco abierto (**gap 59**): nadie había
+medido qué pasa cuando **el docente ya editó localmente** el bloque que recibe la actualización. **Medido en el pase 32,
+y la respuesta habilita el patrón en vez de limitarlo: el `sync` preserva las personalizaciones por omisión.**
+
+**Piezas, con licencia verificada el 2026-10-02:**
+
+| Pieza | Licencia | Rol |
+|---|---|---|
+| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) — `contentstore/rest_api/v2/views/downstreams.py` | **AGPL-3.0** | las cuatro operaciones de vínculo *upstream/downstream* |
+| [`LangGraph`](https://github.com/langchain-ai/langgraph) | MIT | el grafo: decidir qué cursos sincronizar y en qué orden |
+| [`Temporal`](https://github.com/temporalio/temporal) | MIT | durabilidad: N cursos es N llamadas que pueden fallar a la mitad |
+
+### La superficie real, que es de cuatro escrituras y no de una
+
+| Operación | Qué hace | Cuándo usarla en el patrón |
+|---|---|---|
+| `POST downstreams/{usage_key}/sync` | Acepta la actualización | el camino feliz |
+| `DELETE downstreams/{usage_key}/sync` | **Rechaza** la actualización (`decline_sync`) → `204` | **el docente dijo no** — el patrón tiene que ofrecer este botón, no sólo el de aceptar |
+| `PUT downstreams/{usage_key}` | Fija o edita el vínculo (`upstream_ref`, con parámetro `sync` `"true"`/`"false"`) | **enganchar** contenido existente a una biblioteca, que es la migración inicial |
+| `DELETE downstreams/{usage_key}` | **Corta** el vínculo (`sever_upstream_link` + borra `ComponentLink`/`ContainerLink`) → `204` | el curso se bifurca a propósito y deja de seguir a la biblioteca |
+
+### El wiring
+
+1. **Enganche inicial.** `PUT downstreams/{usage_key}` con `upstream_ref` y **`sync: "false"`** sobre el contenido que ya
+   existe en los cursos. Con `sync: "false"` el bloque **no se sobreescribe**, pero la plataforma **igual trae los
+   valores personalizables del upstream y los guarda como campos ocultos** — que es lo que después permite al docente
+   «restaurar al default». **Hacer este paso con `sync: "true"` es el error que pisa contenido en la migración.**
+2. **Propagación.** Por cada *downstream*, `POST .../sync` **sin cuerpo**, o con el cuerpo explícito:
+   ```json
+   { "override_customizations": false, "keep_custom_fields": [] }
+   ```
+   🟢 **`override_customizations` vale `False` por omisión:** **un `sync` no pisa lo que el docente personalizó.** El
+   patrón es seguro **por defecto**, no por configuración.
+3. 🔴 **El único rail que hay que escribir, y es una línea de code review, no un diseño.** El riesgo no es el `sync`: es
+   **un integrador que manda `override_customizations: true` sin `keep_custom_fields`**. Prohibirlo en el cliente, y si
+   alguna vez hace falta sobrescribir, **exigir `keep_custom_fields` poblado** en la misma llamada.
+4. 🔴 **La excepción que hay que tratar aparte: `video`.** Si `block_type == "video"`, el `post` llama
+   **`clear_transcripts(downstream)` *antes* de copiar** — «delete all transcripts so we can copy new ones from
+   upstream». **Si el upstream no trae transcripciones, se pierden.** Y las transcripciones son **requisito de
+   accesibilidad**, no un adorno: en North America caen bajo las obligaciones de supervisión y en EMEA entran al
+   expediente del Anexo III. **Rail concreto:** antes de sincronizar un bloque de video, **verificar que el upstream
+   tiene transcripciones**; si no, **rechazar con `DELETE .../sync`** y escalar a humano.
+5. **Durabilidad.** N cursos son N llamadas HTTP que pueden cortarse a la mitad. Temporal, con el `usage_key` como clave
+   de idempotencia.
+
+⚠️ **El caveat que va en la propuesta, no en una nota al pie:** las **cuatro clases** del módulo están rotuladas
+**`[ 🛑 UNSTABLE ]`** en su propio *docstring*. Es API usable hoy y **sin contrato de estabilidad**: hay que fijar la
+versión de Open edX y **presupuestar una revisión por upgrade**.
+
+## P66 — Evaluación portable: QTI 3 en TypeScript permisivo y salida a SCORM/cmi5 por MCP (agregado en el pase 32 del 2026-10-02)
+
+**Qué resuelve.** La capa de evaluación era el hueco más viejo de esta KB en licencia y en *stack*: el pase 28 midió por
+tres métodos que lo utilizable era **PHP** (`oat-sa/qti-sdk`), y la salida al LMS del cliente dependía de una pieza de 3
+tools. El pase 32 encontró **las dos mitades en MIT**, y una de ellas **con servidor MCP incorporado**.
+
+**Piezas, con licencia verificada el 2026-10-02:**
+
+| Pieza | Licencia | ★ | Rol en el patrón |
+|---|---|---|---|
+| [`LongsightGroup/qti3`](https://github.com/LongsightGroup/qti3) | **MIT** ✅ | 5 | **12 paquetes**: `qti3-core` (parser + validación + *scoring*, **cero dependencias**), `-player` (web component), `-player-react`/`-preact`, `-writer` (emitir QTI), `-migrator` (1.2/2.x → 3), `-transcoder` (3 → 1.2/2.x), `-conformance`, `-a11y`, `-pnp`, `-fixtures`, `-cli` |
+| [`course-code-framework/coursecode`](https://github.com/course-code-framework/coursecode) | **MIT** ✅ | 5 | **Servidor MCP incorporado**; empaqueta a **SCORM 1.2, SCORM 2004, cmi5 y LTI 1.3** |
+| [`tincan`](https://pypi.org/project/tincan/) | **Apache-2.0** ✅ | — | telemetría xAPI de los intentos, si el cliente tiene LRS |
+| [`JuneYaooo/lineage-skill`](https://github.com/JuneYaooo/lineage-skill) | **Apache-2.0** ✅ | 448 | genera **rúbricas y modos de falla** desde el material del docente, que es la entrada del ítem |
+
+### El wiring
+
+1. **Entrada: del material del docente al ítem.** `lineage-skill` destila los PDFs/videos del curso en activos de
+   capacidad **con trazabilidad a la fuente**, incluidas **rúbricas** y **modos de falla** — los modos de falla son
+   literalmente los distractores de un ítem de opción múltiple bien hecho.
+2. **Autoría y validación en QTI 3.** `qti3-writer` emite el XML; **`qti3-core` lo valida y lo puntúa**, y como **no tiene
+   dependencias de terceros** entra en un *bundle* de navegador o en un worker sin arrastrar árbol. `qti3-a11y` verifica
+   los contratos de accesibilidad y `qti3-pnp` las *Personal Needs and Preferences* — las dos cosas que el expediente
+   regulatorio pide y que normalmente se cotizan como desarrollo propio.
+3. **Migración del banco que el cliente ya tiene.** `qti3-migrator` sube **QTI 1.2 y 2.x a QTI 3**; `qti3-transcoder`
+   hace el camino inverso **cuando el LMS del cliente todavía no lee QTI 3**. Es la pieza que vuelve el patrón vendible
+   en una institución con veinte años de ítems guardados.
+4. **Reproducción.** `qti3-player` como web component, con adaptadores React o Preact según el front del cliente.
+5. 🟢 **Salida al LMS, por MCP.** `coursecode` empaqueta el resultado a **SCORM 1.2/2004, cmi5 o LTI 1.3**, y **expone un
+   servidor MCP** que habla con Claude Code, Codex y Cursor: **el agente autor puede pedir el empaquetado como una tool**,
+   sin que haya que escribirle un conector. Es el rol que en P56 ocupaba `scorm-mcp-server` (3 tools) **con dos estándares
+   más y la misma licencia**.
+6. **Telemetría.** Si el cliente tiene LRS, `tincan` (Apache-2.0) para emitir los *statements* de intento. ⚠️ **Buscar
+   esta capa por `"Experience API"` o `"Tin Can"`, nunca por `xapi`**: los dos primeros resultados de ese término son un
+   *marketplace* de cripto y el API de un bróker de forex, **los dos MIT y activos** (tendencia 96).
+
+⚠️ **La honestidad que va al frente de la propuesta:** `qti3` y `coursecode` tienen **5 ★ cada uno**. Son hallazgos **de
+capacidad y de licencia, no de adopción**: resuelven el bloqueo con licencia permisiva y tienen comunidad mínima. **Fijar
+versión y prever *fork* mantenido** es parte del presupuesto, igual que esta KB ya escribió para `oneroster-ts`.
+🔴 **Y el hueco declarado (gap 60):** **ninguna de las dos capas de QTI ni xAPI tiene puerta MCP** — `qti3` trae
+`AGENTS.md` pero no MCP. **La contribución *upstream* más limpia disponible hoy** es envolver `qti3-cli` en un servidor
+MCP: el core no tiene dependencias y ya expone parser, validación y *scoring*, así que es trabajo de días. **Medirlo es la
+acción 2 del pase 33.**

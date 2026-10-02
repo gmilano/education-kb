@@ -1455,6 +1455,32 @@ es exactamente la cadena que esta KB tiene armada en permisivo: **CASE/OpenCASE*
 acervo **1.2** legado—, **xAPI** para la evidencia y **CaSS** para la aserción. **Es el primer mercado de esta KB donde el
 entregable es un expediente de competencia y no un asistente.** Ver **P48**, **P60** y **P62**.
 
+
+#### Agregado en el pase 32 del 2026-10-02 — la cifra de adopción institucional y el conteo legislativo de la sesión 2026
+
+- **86 %** de las organizaciones educativas de North America **ya adoptaron AI generativa** para usos administrativos e
+  instruccionales. Es la región de mayor adopción declarada del barrido de este pase.
+- **134 proyectos de ley sobre AI en educación en 31 estados** en la sesión legislativa 2026. Los ejes y los instrumentos
+  concretos:
+
+| Eje | Instrumento | Qué obliga |
+|---|---|---|
+| **Privacidad de datos** | **California AB 1159** | **Prohíbe usar datos de alumnos para entrenar modelos de AI** |
+| Privacidad de datos | **Idaho SB 1227** | Exige protecciones de privacidad para herramientas de AI en escuelas |
+| **Supervisión humana** | **Oklahoma**, **Maryland** | Exigen supervisión humana y **prohíben que la AI tome decisiones de alto impacto sobre alumnos** |
+| Curricular | **Georgia**, **Mississippi** | Créditos de computación que incluyen AI |
+| **Política obligatoria** | **Idaho, Maryland, Oklahoma, Virginia** | **Cuatro estados** exigen guía estatal **y política distrital de AI obligatoria** |
+
+- Despliegues de incumbentes como referencia de escala: **Gemini for Education** en **más de 1.000** instituciones de
+  educación superior de EE. UU.; piloto de tutoría **Khanmigo** en Maryland con **~4.350 alumnos en dos condados**.
+- Señal de gobernanza desde la demanda: estudiantes de **los 50 estados** produjeron un **marco nacional** de uso
+  responsable de AI en escuelas (AASA, agosto de 2026).
+
+🔵 **La lectura comercial, y cambia el orden del *pitch*:** con **86 % ya adoptado** y **cuatro estados exigiendo política
+distrital**, en North America **no se vende adopción ni piloto — se vende expediente**. La combinación que importa es
+**AB 1159 (no entrenar con datos de alumnos) + prohibición de decisión automatizada de alto impacto**: las dos empujan a
+**inferencia autoalojada con registro de decisión y humano en el lazo**, que es exactamente el *stack* soberano que esta
+KB ya tiene mapeado para EMEA. **El mismo entregable técnico sirve a las dos regiones por razones legales distintas.**
 ### EMEA
 
 🔴 **Pase 31 (2026-10-02) — CORRECCIÓN MAYOR: el gap 56 queda resuelto, y esta KB le estaba vendiendo a EMEA una
@@ -2075,6 +2101,39 @@ elige la más conveniente: ante un cliente se cita la norma, no la prensa, y se 
 concreto.** **Resolverlo contra el texto consolidado es la acción 3 del pase 31**, y es la que más riesgo comercial
 descarga porque es la que un cliente europeo va a preguntar primero.
 
+
+#### Agregado en el pase 32 del 2026-10-02 — 🔴 el calendario del AI Act queda resuelto, y **corrige la argumentación de venta que esta KB tenía escrita**
+
+Esta base publicaba **dos fechas incompatibles** para el alto riesgo educativo (**gap 56**), y sobre una de ellas
+—«rige desde 2026-08-02»— **se había construido el *pitch* de EMEA**. Resuelto: **las dos fechas eran correctas, sobre
+clases de obligación distintas**, y la que se usó para vender **no era la de educación**.
+
+| Clase de obligación | Fecha de aplicación | ¿Alcanza a educación? |
+|---|---|---|
+| **Aplicación general** del AI Act (incluye **transparencia**, art. 50) | **2026-08-02** — **vigente hoy** | **Sí**, las obligaciones de transparencia |
+| **Anexo III — alto riesgo *stand-alone*** | **2026-08-02 → 2027-12-02** (**postergada**) | **Sí — es acá donde vive educación** |
+| Art. 6(1) — alto riesgo **embebido** en producto regulado | **2028-08-02** | Sólo si va embebido |
+
+Educación es **uno de los ocho supuestos del Anexo III** y entra por **evaluación de resultados de aprendizaje,
+selección de postulantes y monitoreo de candidatos durante exámenes**. La postergación la hizo el **Digital Omnibus on
+AI**: acuerdo político **2026-05-07**, aval del Parlamento Europeo **2026-06-16**, adopción del Consejo **2026-06-29**,
+publicación en el DOUE **2026-07-24**, **en vigor 2026-07-27**.
+
+🔵 **El *pitch* corregido, que es más vendible y no menos:** es de **dos tiempos**. *«Las obligaciones de transparencia
+ya rigen —desde agosto de 2026—. La evaluación de conformidad del Anexo III vence el **2 de diciembre de 2027**, y ese es
+exactamente el tiempo que tienen para hacerla bien en lugar de improvisarla.»* Vender una fecha vencida que no venció se
+cae en la primera consulta al área legal del cliente, y se lleva puesta la credibilidad del resto de la propuesta.
+
+⚠️ **Confianza de esta resolución, declarada:** **cinco fuentes legales secundarias independientes concuerdan** en
+`2027-12-02` y en la cronología del Omnibus. **El texto primario no se pudo abrir en este pase:**
+`artificialintelligenceact.eu`, `digital-strategy.ec.europa.eu` y el análisis de Gibson Dunn están **bloqueados por el
+proxy de egreso** de este entorno. **No es verificación primaria y no debe citarse como tal en material de cliente sin
+abrir el DOUE.** Queda como acción para el pase siguiente.
+
+- **Señal técnica que no cambia y conviene repetir:** la mayoría de las instituciones está en **modo piloto y
+  pre-cumplimiento**, no en *enforcement*. Y los distritos con exigencia de **residencia de datos autoalojan modelos de
+  pesos abiertos** (Llama 3, Mistral) en vez de consumir API. Eso convierte el *stack* soberano —Ollama/vLLM + LMS open
+  source— en **requisito de licitación, no en preferencia de arquitectura**.
 ### APAC
 
 **Pase 31 (2026-10-02) — el calendario regulatorio de APAC se completa con fechas, y el gasto tiene número.**
@@ -2668,6 +2727,27 @@ medidas** para el contexto institucional. 🔵 **Y la gobernanza atrasada es ven
 auditoría previa a la escritura) **son, descriptos en términos de negocio, un marco de gobernanza de escrituras
 automatizadas** — y se pueden reimplementar en permisivo. Ver **P61**.
 
+
+#### Agregado en el pase 32 del 2026-10-02 — APAC es la región que **legisló más rápido**, y educación aparece nombrada como alto riesgo
+
+| Jurisdicción | Instrumento | Estado | Qué significa para educación |
+|---|---|---|---|
+| **Corea del Sur** | **AI Basic Act** | **Vigente 2026-01-22** | Consolidó **19 proyectos** en una ley marco. **Segunda jurisdicción del mundo** con ley integral de AI después de la UE |
+| **Vietnam** | Ley nacional de AI | Adoptada **dic. 2025**, **vigente marzo 2026** | 🔴 **Nombra educación como sector de alto riesgo**, cubriendo **evaluación automatizada y monitoreo de conducta** |
+| **Japón**, **Taiwán** | Proyectos de ley | En redacción | Montan además **institutos de *testing* y aseguramiento** |
+| **Singapur** | **AI Verify** | Marcos y *toolkits* | Apuesta a herramienta verificable antes que a ley. Esta KB **ya tiene `aiverify-foundation` catalogado** |
+
+- Mercado dominado por **China, India y Japón**. *Players* citados en el barrido: Google, Microsoft, IBM, **Pearson**,
+  **Byju's**.
+
+🔵 **La lectura comercial, y es distinta de la de las otras tres regiones:** APAC **no es un mercado, son
+jurisdicciones con calendarios propios ya vigentes** — Corea desde enero de 2026, Vietnam desde marzo. A diferencia de
+EMEA, acá **no hay prórroga que comprar tiempo**: lo que Vietnam nombra alto riesgo —**evaluación automatizada y
+monitoreo de conducta**— es exactamente lo que hace un tutor con *proctoring*. La pieza que esta KB tiene para eso es la
+**citación obligatoria con abstención fuera de alcance** (ver `universal-examprep-skill` y **P41**), y ahora también la
+**trazabilidad a la fuente** de `lineage-skill`. **Y la ventaja de Singapur es reutilizable:** AI Verify es la única
+herramienta de evaluación con respaldo estatal de las cuatro regiones, así que **un expediente armado contra AI Verify
+sirve de borrador para el Anexo III europeo**, no sólo para APAC.
 ### LATAM
 
 **Pase 31 (2026-10-02) — aparece la encuesta regional más grande que tocó esta KB, y refina el argumento central de
@@ -3472,6 +3552,37 @@ scopes se habilitan, qué escritura exige compuerta humana, qué queda auditado.
 ese entregable, descriptos.** Ver **P61** y **P54**.
 
 
+
+#### Agregado en el pase 32 del 2026-10-02 — la adopción va **por delante del mundo** y la gobernanza por detrás, y eso **invierte qué se vende**
+
+*AI in Higher Education LATAM Survey 2026* — **Digital Education Council**, con el **Institute for the Future of
+Education del Tec de Monterrey** (miembro fundador), y distribución apoyada por **AIGEN** y **RIE360**:
+
+| Indicador | LATAM 2026 |
+|---|---|
+| Estudiantes que usan AI activamente | **92 %** |
+| Docentes que usan AI activamente | **79 %** |
+| Docentes que esperan usarla a futuro | **94 %** |
+| 🔴 Estudiantes que **temen que la AI vuelva superficial el aprendizaje** y desaliente el pensamiento crítico | **65 %** |
+
+**La adopción de LATAM supera el promedio global.** Y la actitud docente es **consistente entre distintos niveles de
+antigüedad**, lo que descarta la lectura fácil de «resistencia generacional».
+
+**Regulación fragmentada y a velocidades distintas:** proyecto de ley en **Brasil**, marco en **Chile**, **CONPES 4144**
+en **Colombia** (política nacional de AI con acciones y **presupuesto hasta 2030**), reglas sectoriales en **México**.
+
+🔵 **La lectura comercial, y es el reencuadre más importante de este pase:** en LATAM **no hay que vender adopción —ya
+ocurrió, y ocurrió sin gobernanza—**. Lo que se vende es **gobernanza retroactiva y evidencia de aprendizaje**, y el
+*driver* de compra no es el CIO sino **ese 65 % de desconfianza estudiantil**: es la objeción que un rector ya está
+escuchando. Las dos piezas que esta KB tiene para responderla son técnicas y están verificadas: **trazabilidad a la
+fuente** (`lineage-skill`, Apache-2.0, 448 ★) y **citación obligatoria con página + abstención fuera de alcance**
+(`universal-examprep-skill`, MIT, **P41**). **La respuesta a «la AI vuelve superficial el aprendizaje» no es un discurso:
+es un tutor que cita de dónde sacó cada cosa y se niega a contestar fuera de alcance.**
+
+⚠️ **Y el otro lado de la misma moneda:** con **92 % de uso estudiantil** y regulación aún en trámite en las cuatro
+economías grandes, el cliente LATAM típico **tiene el riesgo ya contraído y sin expediente**. Eso hace que el entregable
+de mayor valor inmediato no sea un tutor nuevo sino **el registro de lo que ya está pasando** — y es el mismo artefacto
+que North America exige por ley y que EMEA va a exigir en 2027-12-02.
 ## Posicionamiento Globant
 
 **Dónde el studio gana en educación:**

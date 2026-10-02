@@ -1122,7 +1122,7 @@ consecutivo en que la capa vertical está saturada.**
 los 2000 y hay que medir si está vivo antes de proponerlo. **Es la acción 3 del pase 30**, y la razón de anotarlo es
 que, si está muerto, conviene declararlo muerto una vez y dejar de encontrarlo en cada barrido.
 
-## 🟡 La puerta de agente de Open edX, medida: authorea todo **adentro** del curso y no crea el curso — pase 31 del 2026-10-02
+## 🟡 La puerta de agente de Open edX, medida: authorea todo **adentro** del curso — 🟢 **y el «no crea el curso» quedó refutado en el pase 32** — pase 31 del 2026-10-02
 
 El pase 30 cerró la columna *«¿la vertical tiene puerta de agente?»* para Open edX: **la tiene, es oficial y es
 AGPL-3.0**. Este pase la **midió desde el artefacto publicado** (el wheel de PyPI `openedx_mcp-0.1.5`, 46.685 bytes,
@@ -1162,3 +1162,53 @@ pública más grande de LATAM e India y sin puerta de agente»* a *«LMS con pue
 menos la cáscara del curso»*. **Es cotizable entero** con un bootstrap declarado — curso plantilla + `course_rerun`
 (**gap 57**: falta confirmar que `course_rerun` acepta un plantilla vacío como origen).
 
+
+## 🟢 Corrección del pase 32 (2026-10-02): Open edX **sí crea cursos por HTTP**, y la fila de arriba hay que leerla con esto
+
+La tabla de la sección anterior dice, en la fila *«¿Puede crear **el curso**?»*: **🔴 No**. **Esa respuesta era correcta
+sobre lo que midió y falsa sobre lo que concluyó**, y la corrección cambia una cotización, así que va acá y no en una nota
+al pie.
+
+Lo que el pase 31 midió fueron **las 19 escrituras del conector MCP** y **los cinco árboles REST `v0`–`v4`**. Ninguno de
+los dos crea cursos, y eso sigue siendo cierto. Pero **el árbol REST versionado no es toda la superficie HTTP de
+Studio**: la creación vive en la vista **legacy**, leída de primera mano sobre `master` el 2026-10-02.
+
+| Pregunta de cotización | Respuesta corregida (pase 32) |
+|---|---|
+| ¿Puede crear **el curso**? | 🟢 **Sí.** `POST /course/` con `Accept: application/json` → `_create_or_rerun_course` (`cms/djangoapps/contentstore/views/course.py:342` → **:1184**). **Sin `source_course_key` crea de cero** (`create_new_course`); **con `source_course_key` clona** (`rerun_course`) |
+| ¿Hace falta un curso plantilla creado a mano? | 🟢 **No.** Era el *bootstrap* que **P63** cotizaba como tarea manual de una vez. **Se elimina del presupuesto** |
+| ¿Qué permiso pide? | 🟢 **`is_content_creator(user, org)`** — **no `GlobalStaff`**. Para multi-tenant es decisivo: **el alta se delega por organización**. `GlobalStaff` sólo gatea las dos vistas **GET** de formulario (`CourseRerunView` REST `v1` y `course_rerun_handler`), que **no escriben** |
+| ¿Es sincrónico? | ⚠️ **Mitad y mitad.** La **clave** vuelve en la respuesta; el **copiado** del clon va a **Celery** (`rerun_course_task.delay`, **:1375**) y se sigue por **`CourseRerunState`** (`FAILED`/`SUCCEEDED`). Hay que **pollear antes de escribir** en el curso nuevo |
+| ¿Trampas? | 🔴 `rerun_course` lee **`fields['display_name']`** sin guarda (**:1359**) y `_create_or_rerun_course` sólo la puebla `if display_name is not None` → **omitirlo al clonar levanta `KeyError`**. El clon **resetea** `advertised_start`, `enrollment_start`, `enrollment_end`, `video_upload_pipeline`, y **`add_instructor`** deja de instructor a quien clonó |
+
+🔵 **La lección que esta sección se lleva, y aplica a cualquier vertical de esta KB:** **la columna «¿tiene puerta de
+agente?» no se contesta midiendo sólo el conector y el API versionado.** Un proyecto con años encima suele tener la
+escritura en el handler viejo. Ver la **tendencia 95**.
+
+🟢 **Y el `gap 59` de la sección anterior queda cerrado, también a favor:** `SyncFromUpstreamView` **preserva las
+personalizaciones del docente por omisión** (`override_customizations` = `False`, con `keep_custom_fields` para
+granularidad), y `downstreams/` tiene **cuatro escrituras**, no una —incluido **`DELETE .../sync` para que el docente
+rechace** la actualización—. ⚠️ Con dos caveats que van en la propuesta: las cuatro clases están rotuladas
+**`[ 🛑 UNSTABLE ]`**, y en bloques **`video`** el `sync` llama **`clear_transcripts` antes de copiar**, de modo que **si el
+upstream no trae transcripciones, se pierden** — y eso es accesibilidad, no cosmética. Ver **P65**.
+
+## 🧾 El barrido de ERP/CRM del pase 32, y lo que confirma (2026-10-02)
+
+La búsqueda obligatoria `open source platform education ERP CRM MIT Apache` volvió a devolver, por séptimo pase,
+**plataformas que esta KB ya tiene inventariadas**: **OpenEduCat** (LGPL-3.0, sobre Odoo), **ERPNext** y **Frappe
+Education** (GPL-3.0, leída en `license.txt`), **Moodle**, **Sakai**. **Es saturación medida, no falta de búsqueda**, y
+conviene registrarla como tal.
+
+La única pieza **no inventariada** que apareció, verificada el 2026-10-02:
+
+| Plataforma | Repo | Licencia | ★ | Stack | Para qué sirve acá |
+|---|---|---|---|---|---|
+| **Apache OFBiz** | [apache/ofbiz-framework](https://github.com/apache/ofbiz-framework) | **Apache-2.0** ✅ | 1.1k | Java (30.444 commits) | ERP/CRM/e-commerce/SCM **genérico**, no educativo. Entra como **sustrato administrativo permisivo** cuando el bloqueo del proyecto es la licencia del ERP, no la funcionalidad educativa |
+
+⚠️ **Cómo hay que leer esto, para no vendérselo mal al cliente:** OFBiz **no es un SIS ni un LMS** y no trae admisiones,
+*gradebook* ni asistencia. Lo que aporta es lo que a esta KB le faltaba en esa capa: **licencia Apache-2.0 con comunidad
+grande**. El inventario educativo de la capa ERP sigue siendo **copyleft en su totalidad** (OpenEduCat LGPL, ERPNext y
+Frappe GPL), así que la decisión real no cambia: **o se acepta el copyleft con el agente afuera** (como esta KB ya
+escribió para RosarioSIS, openSIS y OpenEduCat), **o se construye sobre un sustrato permisivo genérico** —OFBiz— **y la
+funcionalidad educativa se desarrolla**, que es más caro y hay que cotizarlo como tal. **No hay ERP educativo permisivo y
+productivo: el gap sigue abierto después de siete barridos.**

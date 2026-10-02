@@ -1969,3 +1969,47 @@ registro, sin repo declarado). Esta KB venía diciendo que Caliper dejó de ser 
 quedaban los SDK previos. **El matiz corrige la conclusión y la empeora:** no es que no haya código nuevo, es que
 **hay código nuevo de 2026 y es jurídicamente inusable**. No entra como fundación. Entra como advertencia.
 
+
+## Capa de *assessment* y empaquetado permisiva — agregada en el pase 32 del 2026-10-02
+
+Hallada ejecutando la **acción 3 del pase 31** (registro de paquetes sobre los estándares sin segunda vuelta). Dos
+hallazgos, y los dos **corrigen un registro propio de esta KB**: el pase 28 había medido por tres métodos que la capa QTI
+utilizable era **PHP**, y la capa de empaquetado no tenía puerta de agente.
+
+| Repo / paquete | Licencia | Estándar | ★ | Stack | Verificación | Qué aporta |
+|---|---|---|---|---|---|---|
+| [`course-code-framework/coursecode`](https://github.com/course-code-framework/coursecode) | **MIT** ✅ | **SCORM 1.2 + SCORM 2004 + cmi5 + LTI 1.3** | 5 | JavaScript | ✅ repo 200 + `coursecode@0.1.61` en npm (`modified` 2026-07-20) | 🟢 **La primera puerta MCP de la capa de empaquetado de esta KB.** Framework de *authoring* multi-formato por CLI con **servidor MCP incorporado** (Claude Code, Codex, Cursor, CourseCode Desktop). Cubre **cuatro estándares en una sola pieza permisiva**, con *preview* local y guías dedicadas a agentes (`COURSE_AUTHORING_GUIDE.md`, `COURSE_OUTLINE_GUIDE.md`) |
+| [`LongsightGroup/qti3`](https://github.com/LongsightGroup/qti3) | **MIT** ✅ | **QTI 3** (+ migración desde 1.2 / 2.x) | 5 | TypeScript | ✅ repo 200 + `@longsightgroup/qti3-migrator@0.13.1`, `modified` **2026-10-01** | 🔴 **Rompe el «QTI es PHP» del pase 28.** **12 paquetes** publicados: `qti3-core` (parser + validación + *scoring*, **cero dependencias de terceros**), `-player` (web component), `-player-react`, `-player-preact`, `-conformance`, `-a11y`, `-fixtures`, `-pnp`, `-writer`, `-migrator`, `-transcoder`, `-cli`. Trae `AGENTS.md`, **no MCP** |
+| [`tincan`](https://pypi.org/project/tincan/) | **Apache-2.0** ✅ | **xAPI / Tin Can** (Python) | — (PyPI) | Python | ✅ PyPI 200 (`RusticiSoftware/TinCanPython`) | La implementación canónica y permisiva de xAPI en Python. **Sin MCP.** Es el nombre correcto por el que buscar esta capa (ver la colisión, abajo) |
+
+⚠️ **Honestidad de adopción, y hay que presentarlo así en propuesta:** los dos hallazgos *headline* tienen **5 ★**. Son
+hallazgos **de capacidad y de licencia, no de adopción** — resuelven un bloqueo técnico con licencia permisiva y tienen
+comunidad mínima. Fijar versión y prever *fork* es el mismo requisito que esta KB ya escribió para `oneroster-ts`.
+
+⚠️ **Y una pieza relevante que queda afuera por licencia:** `@citolab/qti-convert-local-ai` (conversión de planilla a
+paquete QTI del lado del navegador) es **GPL-3.0-only**. Sirve como referencia, no como base de un entregable cerrado.
+
+### 🔵 El método que encontró el MCP, porque el barrido estándar lo declaraba ausente
+
+**La descripción de `coursecode` en npm no menciona MCP en ninguna parte.** Un barrido por campo `description` —el que
+esta KB venía corriendo— **lo habría registrado como ausencia medida**. Apareció al **abrir el README**, que es
+literalmente lo que la tendencia 89 manda y lo que el automatismo se saltea. **Regla: en esta capa, la ausencia de MCP
+sólo se declara después de leer el README, nunca después de leer la descripción del paquete.**
+
+### 🔴 La colisión del término «xAPI» — la quinta y la sexta de esta KB, y las dos son MIT
+
+Buscar `xapi` en los registros devuelve **tres dominios distintos con el mismo nombre exacto**, y **dos de los tres no
+tienen nada que ver con educación**:
+
+| Paquete | Licencia | Qué es realmente |
+|---|---|---|
+| `tincan` (PyPI) / `learning_locker` (npm) | Apache-2.0 / — | ✅ **xAPI educativo** (Experience API / Tin Can), LRS |
+| [`xapi-labs/xapi-cli`](https://github.com/xapi-labs/xapi-cli) → `xapi-to` | **MIT** ⚠️ | 🔴 *Marketplace* de APIs comerciales: **BlockPI RPC, Binance Web3, cripto, dominios/DNS**. README de 47.905 caracteres con **cero** menciones de *«Experience API»*, *«Tin Can»* o *«learning record»* — **y aun así se presenta como *«Agent-friendly CLI for xAPI»* e instala un skill de agente** |
+| `xapi-python` (PyPI) | **MIT** ⚠️ | 🔴 **«The xStation5 API Python library»**: el API del bróker de **forex XTB** |
+
+**Por qué esto es un riesgo de método y no una curiosidad:** las dos trampas son **MIT y activas** (`xapi-to`,
+`modified` 2026-09-29), así que **el filtro de licencia no las descarta** y la que peor engaña **se anuncia como
+agéntica**. Un barrido que ordene por nombre + licencia + frescura las habría promovido a la tabla de agentes.
+**Buscar `"Experience API"` o `"Tin Can"`, nunca `xapi` a secas.**
+
+- Verificado por `registry.npmjs.org`, `pypi.org/pypi/<pkg>/json` y lectura de README el **2026-10-02**.
