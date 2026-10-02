@@ -64,6 +64,30 @@ updated: 2026-10-02
 > 404** — y **10 están paradas hace ≥ 6 meses**, tres de ellas load-bearing. Tabla completa en `repos/trending.md` (pase 37),
 > impacto en `compose/patterns.md`.
 
+> **Pase 44 del 2026-10-02:** **no entran repos nuevos; los dos upstreams que sostienen los patrones de examen y de
+> autoría quedan re-medidos sobre un checkout, y las dos mediciones corrigen cifras de esta propia base.**
+> 🟢 **`SafeExamBrowser/seb-server` (⚠️ MPL-2.0, `HEAD` de `master` = `7f45689`, 2026-04-01):** el `HEAD` del clon
+> **coincide con el commit que el pase 43 declaró medido**, así que las mediciones son comparables fila por fila — y la
+> comparación da **31 controladores de producción (no 36)** y **55 constantes de endpoint (no 41)**. Ver la corrección
+> en el renglón de la capa de integración de examen, abajo. 🔴 **Y una contradicción interna de esta KB queda cerrada
+> leyendo el archivo: el `README.md` de `compose/code/sebserver-mcp-gate/` decía Apache-2.0 y el `LICENSE` del upstream
+> dice «Mozilla Public License Version 2.0».** `repos/foundations.md` y las tendencias del pase 41/42 tenían razón; el
+> README del código, no — y la argumentación comercial de la ruta SEB (**copyleft débil, publicar un valor de enum**)
+> **depende de que sea MPL**. Corregido en el README y en el docstring de `gate.py`.
+> 🟢 **`openedx/edx-platform` (AGPL-3.0, `HEAD` `c0048e1`, 2026-10-02 — de hoy):** la capa de *authoring* del `v1` queda
+> medida sobre código vivo. **El POST de creación devuelve `{locator, courseKey}` y el `locator` es el usage key del
+> bloque nuevo**, así que el árbol se construye con **1 POST por bloque y ninguna lectura intermedia**; `category`
+> **no tiene enum** en un curso (`CharField(required=False)`, sin `choices`) y **sí lo tiene en una biblioteca v1**
+> (`["html","problem","video"]`). 🔴 **Y lo que el `v1` NO hace, que es lo que reencuadra P55: `retrieve` devuelve un
+> bloque, no un árbol** —`get_block_info` lleva escrito *«children aren't being returned until we have a use case»*—,
+> así que el recorrido se hace con **`course_index/{course_id}`, que trae el outline anidado en UNA llamada**. Ver las
+> tendencias **171** y **172** y el patrón **P96**.
+> ⚠️ **Nota de método que vale para los dos: el instrumento de este pase fue
+> `git clone --depth 1 --filter=blob:none --sparse`, no `raw.githubusercontent.com`.** Un clon disperso da el árbol
+> completo, resuelve las constantes compuestas y los valores de `src/main/resources` —que es lo que `raw` no permite
+> sin saber de antemano qué archivo pedir— y además **fecha el `HEAD`**. Con `raw` no se habría encontrado ninguno de
+> los cuatro defectos del pase.
+
 ## 🎓 Capa de *student success* / alerta temprana — la capa que esta base declaró la PEOR abastecida, y tiene una pieza MIT desde 2022 (agregada en el pase 40 del 2026-10-02)
 
 El **gap 26** y la **tendencia 26** de esta base dicen, desde el pase 11, que *«la capa que decide sobre el alumno es
@@ -292,7 +316,7 @@ Un envoltorio ingenuo de los 15 conectores **expone ejecución de scripts del se
 
 | Repo | Licencia (leída del árbol) | Medición de primera mano | Qué aporta |
 |---|---|---|---|
-| 🟢 [`SafeExamBrowser/seb-server`](https://github.com/SafeExamBrowser/seb-server) | ⚠️ **MPL-2.0** — `LICENSE` en `master` | 🔴 `master` **2026-04-01** / 🟢 **`dev-3.0` 2026-10-01** · **108 tags** (incl. `v3.0-latest`) · **1.450 archivos** · Java (`ch.ethz.seb`) | **La capa de administración, monitoreo y *proctoring* de exámenes**, con **36 controladores REST** y **41 constantes de *endpoint***. Es el lado servidor que los SDK de navegador de `agents/top.md` no cubren. 🟢 **Enumerada en el pase 42 sobre `dev-3.0`: 1.201 archivos versionados, 313 `.java` en `webservice/servicelayer/`, 75 de *proctoring*. SPI de proveedor = `RemoteProctoringService` (14 métodos, 2 `default`, 🔴 12 obligatorios), registro ABIERTO por inyección de Spring, 🔴 tipo CERRADO (`enum ProctoringServerType{JITSI_MEET,ZOOM}`): un proveedor propio obliga a tocar 1 archivo *Covered* y a publicar ese valor de enum. `LmsType` tiene 6 valores y `LMS_FULL_INTEGRATION` sólo con Moodle+plugin** |
+| 🟢 [`SafeExamBrowser/seb-server`](https://github.com/SafeExamBrowser/seb-server) | ⚠️ **MPL-2.0** — `LICENSE` en `master` | 🔴 `master` **2026-04-01** / 🟢 **`dev-3.0` 2026-10-01** · **108 tags** (incl. `v3.0-latest`) · **1.450 archivos** · Java (`ch.ethz.seb`) | **La capa de administración, monitoreo y *proctoring* de exámenes**. 🔴 **Re-enumerada en el pase 44 sobre `master` (`7f45689`): las dos cifras de este renglón estaban mal.** Son **31 controladores REST de producción** (no 36) y **55 constantes de *endpoint*** (no 41). El `@RestController` aparece en **35 archivos** del repo: **31** en `webservice/weblayer/api` (la superficie real), **3** en `src/test` (`*TestController`, no se despliegan) y **1** —`WebSecurityConfig`— que es `@RestController` + `ErrorController` en `src/main`, o sea el manejador de error, no un endpoint. Y de las 55 constantes, **41 son literales y 14 compuestas** (`OTRO_ENDPOINT + "/sufijo"`): **el «41» era exactamente el subconjunto que un extractor de literales puede ver** (tendencia **167**). Es el lado servidor que los SDK de navegador de `agents/top.md` no cubren. 🟢 **Enumerada en el pase 42 sobre `dev-3.0`: 1.201 archivos versionados, 313 `.java` en `webservice/servicelayer/`, 75 de *proctoring*. SPI de proveedor = `RemoteProctoringService` (14 métodos, 2 `default`, 🔴 12 obligatorios), registro ABIERTO por inyección de Spring, 🔴 tipo CERRADO (`enum ProctoringServerType{JITSI_MEET,ZOOM}`): un proveedor propio obliga a tocar 1 archivo *Covered* y a publicar ese valor de enum. `LmsType` tiene 6 valores y `LMS_FULL_INTEGRATION` sólo con Moodle+plugin** |
 | 🟢 [`SafeExamBrowser/seb-win-refactoring`](https://github.com/SafeExamBrowser/seb-win-refactoring) | ⚠️ **MPL-2.0** — `LICENSE.txt` | 🟢 `HEAD` **2026-09-25** · **20 tags** · **1.452 archivos** · C# | **El cliente de bloqueo de escritorio (Windows)**: convierte la máquina en estación de examen y restringe funciones del sistema, sitios y aplicaciones |
 
 ⚠️ **MPL-2.0 no es MIT/Apache, y tampoco es AGPL: es copyleft DÉBIL por archivo.** Lo que se modifica de los archivos

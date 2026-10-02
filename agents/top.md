@@ -116,6 +116,27 @@ updated: 2026-10-02
 > (**MIT**, Elixir, Carnegie Mellon: **Platform y Tool**, no sólo Tool)— que va a `repos/foundations.md` porque es
 > biblioteca, no agente. Ver las tendencias **157**–**165** y los patrones **P93**–**P95**.
 
+> **Pase 44 del 2026-10-02:** **la tabla NO crece, y el barrido lo midió en vez de suponerlo: segundo pase consecutivo
+> con cero altas de agente.** Las cuatro búsquedas globales obligatorias, con el año **calculado** (2026), volvieron a
+> devolver **la capa genérica** (openclaw 385.407 ★, dify 151.639, browser-use 108.128, AutoGen 60.284, Flowise 55.226)
+> y **material didáctico *sobre* AI** — ni un agente educativo nuevo. 🔵 **Eso ya no es una observación, es una
+> propiedad medida del canal: las altas de los últimos pases vinieron todas del eje conector y del eje estándar, y el
+> eje agente está saturado para esta industria.**
+> 🔴 **Y el control de *slugs* distintos del pase 36 encontró un error de aritmética propio: la tabla tiene 66 filas,
+> no las 63 que esta base viene publicando** — **61 slugs de GitHub, los 61 distintos, 0 duplicados**, más **5 entradas
+> de registro** (`openedx-mcp` y `tutor-contrib-openedxmcp` en PyPI; `@ink-waffle/sisu-mcp`, `ed-fi-sdk-mcp` y
+> `frappe-mcp-server` en npm) que no tienen slug de GitHub y se cuentan igual. **El control que importa —ninguna fila
+> repetida, ninguna fila de encabezado o de ejemplo entre los datos— pasa limpio; el que fallaba era la suma.**
+> **`issuebadge/mcp-server` se re-midió, como el pase 43 pidió, y SIGUE FUERA de esta tabla.** Ahora tiene **v2.1.0,
+> 1.106 líneas de TypeScript, 168 casos de test y sólo 2 dependencias**, con `LICENSE` **MIT** real — pero **sigue en
+> 4 commits**, **la emisión sigue dependiendo de `app.issuebadge.com` + API key del proveedor**, **no implementa Open
+> Badges 3.0** y por lo tanto **no sustituye nada en P84**. 🔴 **Dos hallazgos nuevos del re-medido: no está en npm**
+> (`Not found`, aunque declara `bin`), así que es **invisible al barrido por registro** igual que `learnmcp-xapi`; y
+> **aporta la quinta variante de primitiva anti-bucle, la más débil de las cinco, porque delega el freno en la API del
+> proveedor y su valor por omisión lo anula** — `idempotency_key` se genera por llamada, así que **un reintento sin
+> arrastrar la clave emite un segundo certificado**. La primitiva **corregida** se adopta en **P97**; la pieza, no.
+> Ver las tendencias **166**–**174** y los patrones **P96**–**P98**.
+
 ## Agentes y herramientas destacadas
 
 **🔵 Pase 40 del 2026-10-02 — el conteo se re-mide con la regla del pase 36 y hay que corregirlo: son 65 filas, no 52.** Aplicada la regla que el pase 36 estableció —**contar *slugs* distintos** entre el separador y la primera línea que no empieza con `|`— el archivo tiene **65 filas de datos y 65 slugs distintos: cero duplicados**. 🔴 **El encabezado declaraba «52 filas», y la diferencia no es de este pase: los pases 37 a 39 agregaron filas sin actualizar el número** (este pase agrega **2**: `mereos` y `@timadey/proctor`, las dos de *proctoring*). 🔵 **Es la séptima vez que esta KB se pelea con este número, y la lección ya no es sobre el instrumento —que funciona— sino sobre el hábito: la regla del pase 36 es correcta y nadie la estuvo corriendo.** La medición es programática y cuesta un comando; **conviene correrla en cada pase que toque la tabla, no cada cinco.** ✅ **Verificado en este pase: 65 filas / 65 slugs / 0 duplicados.**

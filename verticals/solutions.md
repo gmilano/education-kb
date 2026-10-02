@@ -37,6 +37,54 @@ updated: 2026-10-02
 > **Pase 27 del 2026-10-01:** se agrega **la columna que faltaba en veintiséis pasadas — ¿la vertical tiene puerta de agente?** Moodle **sí** (dos conectores **MIT**, uno que escribe notas) y Canvas **sí**; 🔴 **Open edX no tiene ninguna**, y es la de mayor huella pública en LATAM e India. **Las LMS son copyleft pero las puertas son MIT**, y por eso se pueden componer. Ver la sección del pase 27, abajo.
 
 
+## 🔒 La capa de examen seguro, re-medida: la puerta cubre el servicio y no cuatro endpoints — y la licencia de la plataforma quedaba mal escrita en el código (pase 44 del 2026-10-02)
+
+Las dos plataformas institucionales que esta base listó en el pase 41 (**UniTime**, horarios, y **SEB Server**, examen
+seguro) siguen siendo las mismas piezas. Lo que cambia en este pase es **cuánto de SEB Server es realmente proponible**,
+y la respuesta es: todo el servicio.
+
+| Magnitud de la propuesta | Pase 43 | Pase 44 |
+|---|---|---|
+| Endpoints de SEB Server cubiertos por la puerta MCP | **4** | **30** |
+| Operaciones mapeadas | 79 | **341** |
+| Controladores | 4 | **31** (los 31 de producción) |
+| Escrituras retenidas con `-32601` | — | **170** |
+| Aserciones ejecutables | 11 | **37**, las 37 en verde |
+
+🔵 **Para la conversación con un cliente eso cambia la frase que se dice:** se pasa de *«hay una puerta de agente para
+exámenes»* a **«la puerta expone el servicio de examen completo —instituciones, usuarios, exámenes, plantillas,
+configuraciones, monitoreo, proctoring, certificados, conexiones y eventos de cliente— con las 170 escrituras fuera de
+la lista y verificable con un comando»**.
+
+🔴 **Y una corrección de licencia que importa más que las cifras, porque es la que sostiene el argumento comercial.** El
+`README.md` de `compose/code/sebserver-mcp-gate/` decía que SEB Server es **Apache-2.0**. **No lo es: el `LICENSE` del
+upstream es la Mozilla Public License 2.0.** La tabla de plataformas de este archivo y las tendencias del pase 41/42 ya
+decían **MPL-2.0**, y toda la ruta que esta base recomienda —*integrar un proveedor de proctoring propio y publicar
+solamente un valor de `enum`, por el copyleft **por archivo** de MPL-2.0 §1.10(a)*— **sólo vale si es MPL**. Con Apache
+no haría falta publicar nada, y con una licencia equivocada en la carpeta del código la propuesta se defiende sobre una
+premisa falsa. Corregido en el README y en `gate.py`.
+
+⚠️ **Lo que NO cambió y conviene no sobrevender:** la puerta sigue corriendo contra un *stub* que cuenta llamadas, no
+contra un SEB Server levantado. Lo que está probado es **la partición** (qué se publica y qué se retiene, y que lo
+retenido nunca se despacha), no la integración HTTP. 🔵 **Pero el pase sí descubrió el detalle que habría hecho fallar
+esa integración entera: ninguna ruta de SEB Server es literal** —los 30 controladores mapeados cuelgan de
+`${sebserver.webservice.api.admin.endpoint}` y compañía, con `/admin-api/v1` como valor por omisión—, así que la tabla
+anterior apuntaba a `/exam` cuando el servicio sirve `/admin-api/v1/exam`. **Eso es 404 en el 100 % de las llamadas, y
+se encontró antes de levantar nada** (tendencia **166**).
+
+### 🟢 El barrido de verticales de este pase: confirmación, y una licencia que conviene tener escrita con precisión
+
+La búsqueda obligatoria `open source platform education ERP CRM SIS MIT Apache` devolvió **otra vez sólo plataformas ya
+inventariadas** —quinta vez consecutiva—, y la única con dato nuevo es **OpenEduCat**, que esta base ya lista: **70+
+módulos** (admisiones, SIS, contabilidad, RRHH, CRM y LMS), **300 módulos** y **65 idiomas en 45 localizaciones**,
+**3 M+ de usuarios**, construida sobre **Odoo**, sin licencia por usuario ni *lock-in* de datos.
+
+⚠️ **Y la precisión de licencia, que es el motivo de registrarlo: OpenEduCat es LGPL-3.0, no MIT ni Apache** — la propia
+búsqueda por «MIT Apache» la devuelve y **no es ninguna de las dos**. Eso no la descarta: la LGPL admite el módulo Odoo
+al lado sin contaminar (**gap 46**), que es exactamente cómo esta base la propone. **Pero hay que decir LGPL en la
+propuesta**, porque es la diferencia entre «módulo al lado» y «fork del core».
+
+
 ## 🗓️🔒 Las dos plataformas institucionales que esta base nunca había listado: horarios y examen seguro (pase 41 del 2026-10-02)
 
 **El pase 40 midió por registro que las capas de *timetabling* y *proctoring* estaban vacías de agente y mandó a medirlas

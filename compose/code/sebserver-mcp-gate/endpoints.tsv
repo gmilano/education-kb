@@ -1,43 +1,59 @@
-# constant	path	# from gbl/api/API.java @ SafeExamBrowser/seb-server master (7f45689), 42 constants
-OAUTH_ENDPOINT	/oauth
-INFO_ENDPOINT	/info
-REGISTER_ENDPOINT	/register
-EXAM_API_HANDSHAKE_ENDPOINT	/handshake
-EXAM_API_CONFIGURATION_REQUEST_ENDPOINT	/examconfig
-EXAM_API_CONFIGURATION_LIGHT_ENDPOINT	/light-config
-EXAM_API_PING_ENDPOINT	/sebping
-EXAM_API_EVENT_ENDPOINT	/seblog
-INSTITUTION_ENDPOINT	/institution
-LMS_SETUP_ENDPOINT	/lms-setup
-LMS_FULL_INTEGRATION_EXAM_ENDPOINT	/exam
-LMS_FULL_INTEGRATION_CONNECTION_CONFIG_ENDPOINT	/seb_config
-LMS_FULL_INTEGRATION_LOGIN_TOKEN_ENDPOINT	/login_token
-USER_ACCOUNT_ENDPOINT	/useraccount
-USER_ACCOUNT_ENDPOINT_SUPPORTER	/supervisors
-QUIZ_DISCOVERY_ENDPOINT	/quiz
-EXAM_ADMINISTRATION_ENDPOINT	/exam
-EXAM_INDICATOR_ENDPOINT	/indicator
-EXAM_CLIENT_GROUP_ENDPOINT	/client-group
-SEB_CLIENT_CONFIG_ENDPOINT	/client_configuration
-CONFIGURATION_NODE_ENDPOINT	/configuration-node
-CONFIGURATION_ENDPOINT	/configuration
-CONFIGURATION_VALUE_ENDPOINT	/configuration_value
-CONFIGURATION_ATTRIBUTE_ENDPOINT	/configuration_attribute
-TEMPLATE_ATTRIBUTE_ENDPOINT	/template-attribute
-ORIENTATION_ENDPOINT	/orientation
-EXAM_CONFIGURATION_MAP_ENDPOINT	/exam-configuration-map
-USER_ACTIVITY_LOG_ENDPOINT	/useractivity
-EXAM_MONITORING_ENDPOINT	/monitoring
-EXAM_MONITORING_OVERVIEW_ENDPOINT	/overview
-EXAM_MONITORING_INSTRUCTION_ENDPOINT	/instruction
-EXAM_MONITORING_NOTIFICATION_ENDPOINT	/notification
-EXAM_MONITORING_DISABLE_CONNECTION_ENDPOINT	/disable-connection
-EXAM_MONITORING_SIGNATURE_KEY_ENDPOINT	/signature
-EXAM_MONITORING_TEST_RUN_ENDPOINT	/testrun
-EXAM_MONITORING_FINISHED_ENDPOINT	/finishedexams
-SEB_CLIENT_CONNECTION_ENDPOINT	/seb-client-connection
-SEB_CLIENT_CONNECTION_DATA_ENDPOINT	/data
-SEB_CLIENT_EVENT_ENDPOINT	/seb-client-event
-CERTIFICATE_ENDPOINT	/certificate
-EXAM_TEMPLATE_ENDPOINT	/exam-template
-BATCH_ACTION_ENDPOINT	/batch-action
+# the 55 *_ENDPOINT constants of gbl/api/API.java @ 7f45689
+# kind=composed means the constant is defined as OTHER_ENDPOINT + "/suffix";
+#   a literals-only extractor sees 41 of 55 and misses every composed one.
+# constant	suffix	kind
+BATCH_ACTION_ENDPOINT	/batch-action	literal
+CERTIFICATE_ENDPOINT	/certificate	literal
+CONFIGURATION_ATTRIBUTE_ENDPOINT	/configuration_attribute	literal
+CONFIGURATION_ENDPOINT	/configuration	literal
+CONFIGURATION_NODE_ENDPOINT	/configuration-node	literal
+CONFIGURATION_VALUE_ENDPOINT	/configuration_value	literal
+CURRENT_USER_ENDPOINT	/useraccount/me	composed
+EXAM_ADMINISTRATION_ENDPOINT	/exam	literal
+EXAM_API_CONFIGURATION_LIGHT_ENDPOINT	/light-config	literal
+EXAM_API_CONFIGURATION_REQUEST_ENDPOINT	/examconfig	literal
+EXAM_API_EVENT_ENDPOINT	/seblog	literal
+EXAM_API_HANDSHAKE_ENDPOINT	/handshake	literal
+EXAM_API_PING_ENDPOINT	/sebping	literal
+EXAM_CLIENT_GROUP_ENDPOINT	/client-group	literal
+EXAM_CONFIGURATION_MAP_ENDPOINT	/exam-configuration-map	literal
+EXAM_INDICATOR_ENDPOINT	/indicator	literal
+EXAM_MONITORING_DISABLE_CONNECTION_ENDPOINT	/disable-connection	literal
+EXAM_MONITORING_ENDPOINT	/monitoring	literal
+EXAM_MONITORING_FINISHED_ENDPOINT	/finishedexams	literal
+EXAM_MONITORING_INSTRUCTION_ENDPOINT	/instruction	literal
+EXAM_MONITORING_NOTIFICATION_ENDPOINT	/notification	literal
+EXAM_MONITORING_OVERVIEW_ENDPOINT	/overview	literal
+EXAM_MONITORING_SIGNATURE_KEY_ENDPOINT	/signature	literal
+EXAM_MONITORING_TEST_RUN_ENDPOINT	/testrun	literal
+EXAM_PROCTORING_ENDPOINT	/monitoring/proctoring	composed
+EXAM_TEMPLATE_ENDPOINT	/exam-template	literal
+INFO_ENDPOINT	/info	literal
+INFO_INST_ENDPOINT	/institution/{urlSuffix}	composed
+INSTITUTION_ENDPOINT	/institution	literal
+LMS_FULL_INTEGRATION_CONNECTION_CONFIG_ENDPOINT	/seb_config	literal
+LMS_FULL_INTEGRATION_EXAM_ENDPOINT	/exam	literal
+LMS_FULL_INTEGRATION_LOGIN_TOKEN_ENDPOINT	/login_token	literal
+LMS_SETUP_ENDPOINT	/lms-setup	literal
+LMS_SETUP_TEST_AD_HOC_ENDPOINT	/lms-setup/test/adhoc	composed
+LMS_SETUP_TEST_ENDPOINT	/lms-setup/test/{modelId}	composed
+OAUTH_ENDPOINT	/oauth	literal
+OAUTH_JWT_TOKEN_ENDPOINT	/oauth/jwttoken	composed
+OAUTH_JWT_TOKEN_VERIFY_ENDPOINT	/oauth/jwttoken/verify	composed
+OAUTH_REVOKE_TOKEN_ENDPOINT	/oauth/revoke-token	composed
+OAUTH_TOKEN_ENDPOINT	/oauth/token	composed
+ORIENTATION_ENDPOINT	/orientation	literal
+PRIVILEGES_ENDPOINT	/info/privileges	composed
+QUIZ_DISCOVERY_ENDPOINT	/quiz	literal
+REGISTER_ENDPOINT	/register	literal
+SEB_CLIENT_CONFIG_ENDPOINT	/client_configuration	literal
+SEB_CLIENT_CONNECTION_DATA_ENDPOINT	/data	literal
+SEB_CLIENT_CONNECTION_ENDPOINT	/seb-client-connection	literal
+SEB_CLIENT_EVENT_ENDPOINT	/seb-client-event	literal
+SEB_CLIENT_EVENT_EXTENDED_PAGE_ENDPOINT	/seb-client-event/search	composed
+SEB_SETTINGS_ENDPOINT	/exam/seb-settings	composed
+SPS_OAUTH_JWT_TOKEN_ENDPOINT	/oauth/jwttoken	composed
+TEMPLATE_ATTRIBUTE_ENDPOINT	/template-attribute	literal
+USER_ACCOUNT_ENDPOINT	/useraccount	literal
+USER_ACTIVITY_LOG_ENDPOINT	/useractivity	literal
+VIEW_ENDPOINT	/orientation/view	composed

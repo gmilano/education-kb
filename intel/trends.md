@@ -7,6 +7,7 @@ updated: 2026-10-02
 # 📡 Tendencias — education
 
 > Ventana de investigación: septiembre 2026. Verificado 2026-09-30; el pase 11, el 2026-10-01.
+> **Pase 44 del 2026-10-02:** **se ejecutan las tres acciones del pase 43, las tres rinden, y la primera rinde encontrando que la medición del pase anterior describía rutas que no existen.** 🔴 **El hallazgo que manda: ninguna ruta de la puerta de SEB Server era una URL.** Los **30** controladores mapeados del servicio cuelgan de una propiedad de Spring —**27** de `"${sebserver.webservice.api.admin.endpoint}" + API.X_ENDPOINT`—, **no hay una sola ruta base literal**, y el valor que trae el árbol es `/admin-api/v1`: lo que la tabla llamaba `/exam` **es `/admin-api/v1/exam`**, así que una puerta que proxea el sufijo **da 404 en el 100 % de las llamadas** (tendencia **166**). ✅ **Acción 1 CUMPLIDA sobre el servicio entero: de 79 operaciones sobre 4 controladores a 341 sobre los 31 `@RestController`**, 30 endpoints, **170 escrituras**, y `test_gate.py` de 11 a **37 aserciones, 37 en verde** — más `extract_surface.py`, que regenera las tablas contra un checkout en vez de transcribirlas. 🔴 **Y los otros tres defectos son del instrumento, no del upstream: (a) `endpoints.tsv` tenía 41 de 55 constantes y las 14 que faltaban eran EXACTAMENTE las compuestas** —`OTRO_ENDPOINT + "/sufijo"`, 14 de 14 sin excepción— **y lo perdido es la superficie de autenticación completa** (`/oauth/token`, `/oauth/revoke-token`, `/oauth/jwttoken`, `/oauth/jwttoken/verify`) **más `/admin-api/v1/monitoring/proctoring`**, la capa que esta base nombra como alto riesgo bajo dos reguladores (tendencia **167**); **(b) el extractor contaba la DECLARACIÓN DE CLASE como una operación**, así que cada controlador con mapeo de clase venía inflado en una fila fantasma —`/batch-action` figuraba con `1 own` y `BatchActionController` **no declara ninguna**— (tendencia **168**); **(c) `ActivatableEntityController` aporta 4 rutas heredadas y no 3**: faltaba `deactivate` (`API.PATH_VAR_INACTIVE`), así que todo controlador activable sub-reportaba una escritura. 🔵 **El matiz que afila el argumento de la puerta: `ReadonlyEntityController` niega 4 de las 5 escrituras a nivel de ruta y la quinta —`forceHardDelete`, `DELETE /{id}/force`— queda VIVA y se frena una capa más abajo**, por el override de `checkWriteAccess`; y «force» significa que saltea `validForDelete`, **no** la autorización (tendencia **169**). 🔴 **Una ruta en el árbol no es una ruta en ejecución: `LightController` está detrás de `@ConditionalOnExpression` y seb-server envía `light.setup=false`** (tendencia **170**). ✅ **Acción 2 CUMPLIDA y las tres preguntas tienen número: `create_xblock_response` devuelve `{locator, courseKey}` y el `locator` ES el usage key del bloque nuevo —el árbol es recursable sin un GET extra—; `category` no tiene restricción en un curso (`CharField(required=False)`, sin `choices`) y el único enum del árbol es `["html","problem","video"]` para bibliotecas; y `?view=minimal` es sólo de `retrieve`** (tendencia **171**). 🔴 **Pero la premisa de la pregunta estaba invertida: NO hay hijos que recorrer.** `get_block_info` lleva escrito *«children aren't being returned until we have a use case»*, así que el docstring del `v1` que llama *«tree-shaped»* a esa respuesta **es falso**, **2 de los 6 campos que promete la vista mínima son claves que el handler no emite**, y la única forma de obtener hijos es la combinación **no documentada** `?fields=customReadToken&view=minimal`, que da un nivel y **descarta `parent` en silencio** (tendencia **172**). 🟢 **Y el costo de P55 queda fijado porque el instrumento correcto es otro endpoint: `course_index/{course_id}` devuelve el outline anidado en UNA llamada; escribir es 1 POST por bloque**, paralelizable entre hermanos. ✅ **Acción 3: las dos fechas del pase 43 quedan CONFIRMADAS por un segundo canal independiente —Anexo III 2027-12-02, Anexo I 2028-08-02, Reglamento (UE) 2026/1744 publicado el 2026-07-24 y en vigor el 2026-07-27—, así que la recomendación comercial de EMEA NO hay que revertirla.** 🔴 **Pero NO contra el texto consolidado: `eur-lex.europa.eu` Y `artificialintelligenceact.eu` dan los dos `403` a CONNECT**, y el segundo es una **instancia nueva y no institucional del gap 65** (**gap 92**). 🟢 **Y el pase encuentra un plazo más cercano y más firme que el que esta base venía planificando: el Artículo 50(2) vence el 2026-12-02 —61 días desde hoy— para los sistemas generativos ya en el mercado antes del 2026-08-02**, con 50(1), 50(3) y 50(4) en vigor desde el 2026-08-02 y **sin prórroga**, confirmado por el 9.º plenario del Consejo Europeo de IA del 2026-09-17 (tendencia **173**, **gap 91**). 🔵 **`issuebadge/mcp-server` re-medido como el pase 43 pidió: sigue FUERA de la tabla** —4 commits, dependencia de `app.issuebadge.com`, no implementa OB 3.0— **pero ahora tiene v2.1.0, 1.106 líneas y 168 casos de test**, **no está en npm** (invisible al barrido por registro, como `learnmcp-xapi`) y **aporta la QUINTA variante de primitiva anti-bucle, la más débil: delega el freno en la API del proveedor, y el valor por omisión lo anula** —`idempotency_key` se genera por llamada, así que un reintento sin arrastrar la clave **emite un segundo certificado** (tendencia **174**, **P97**). ⚠️ **Y el barrido global devolvió por segunda vez consecutiva la capa genérica y material didáctico sobre AI: cero altas de agente, el canal está saturado.** Ver las tendencias **166**–**174**, los gaps **91**–**94** y los patrones **P96**–**P98**.
 > **Pase 42 del 2026-10-02:** **se ejecutan las tres acciones del pase 41, las tres por EJECUCIÓN y no por lectura, y el resultado corrige la recomendación comercial que el pase 41 dejó escrita.** 🔴 **El hallazgo que manda: la ruta MPL-2.0 que el pase 41 prefirió *«porque no arrastra AGPL»* cuesta MÁS código que la AGPL** — `RemoteProctoringService` de `seb-server` es una **interfaz desnuda con 12 métodos obligatorios de 14**, mientras `ProctoringBackendProvider` de `edx-proctoring` es una **clase concreta con 0 obligatorios de 18**: no son rutas equivalentes con distinta licencia, son **distinto trabajo** (tendencia **157**). 🟢 **Y lo que vuelve cotizable la ruta SEB igual, medido archivo por archivo: su obligación de publicar es UN valor de enum.** El registro del proveedor es **abierto** (Spring inyecta `Collection<RemoteProctoringService>`, la fábrica no se toca) pero el **tipo está cerrado** (`enum ProctoringServerType{JITSI_MEET,ZOOM}`), así que un tercero obliga a tocar **1 de los 10 archivos *Covered*** que mencionan el enum — y por el copyleft **por archivo** de MPL-2.0 §1.10(a), **lo único que hay que publicar es ese valor**; el proveedor propio es archivo nuevo y queda propietario (tendencia **158**). ⚠️ **Hueco medido que se escribe en la propuesta y no se descubre en UAT: el validador de SEB cae a `return true` ante un tipo desconocido — tu proveedor pasa SIN validación de campos** (tendencia **159**). 🔴 **Corrección al pase 41: `LmsType` tiene SEIS valores con matriz de *features*, no cuatro, y `LMS_FULL_INTEGRATION` NO está en `OPEN_EDX` —sólo en `MOODLE_PLUGIN`—, mientras `MOODLE` a secas tiene `SEB_RESTRICTION` COMENTADA en el fuente: el LMS del cliente manda más que la licencia** (tendencia **160**, patrón **P91**). 🟢 **Acción 1 CUMPLIDA Y PROBADA: la puerta MCP de UniTime existe** — 26 tools generados del árbol (15 conectores × verbos reales), **13 expuestos**, y **23 aserciones en verde**, entre ellas la que importa: 🔴 **0 de 9 llamadas retenidas llegaron al upstream**, `script.post` incluido, que ejecuta un script del servidor (tendencia **161**, patrón **P92**). 🟢 **Acción 2 CUMPLIDA: 61 filas re-fechadas sobre 472 ramas, cobertura 61/61** — y el gap 89 tenía razón en las dos direcciones: **4 veredictos se promueven** (`algo-sensei` de FRÍO a ACTIVO porque **commiteó hoy**, más `gradescope-mcp`, `TutorIA` y `open-badges-mcp`) **y 2 se SOSTIENEN gracias al filtro** (`oneroster-ts` seguiría CONGELADO aunque el máximo ingenuo lo promovería 10 meses con un **commit vacío de bot**). 🟢 **Reparto corregido: 78,7 % activas contra el 69,4 % del pase 37 — la tabla está más viva de lo que esta base venía diciendo** (tendencia **162**). 🔴 **Las tres clases de «no es vida de proyecto» del pase 41 son SEIS, y la que más cuentas cambia es la que faltaba: `dependabot`** — `armenian-national-library-mcp` tiene **10 ramas dependabot** y parece 7 semanas más fresco de lo que es (tendencia **163**). 🔵 **Y el hallazgo de método es sobre un defecto de ESTE pase: mi primer filtro descartaba el tip de la rama por defecto, y `OpenTutor` y `Shiksha-Copilot` quedaban SIN fecha de vida. La regla que queda: el tip de la rama por defecto cuenta SIEMPRE —es historia mergeada—; los filtros sólo deciden si una rama no-defecto agrega vida encima** (tendencia **164**). 🔴 **La familia `Kuali` entra como registro histórico, no como dependencia: 4 repos, los cuatro muertos (6 a 9 años), *middleware* ECL-2.0 y las dos aplicaciones de verdad AGPL-3.0 — y esta KB tenía 0 menciones en 41 pases** (tendencia **165**). 🔴 **Fuente primaria nueva identificada y BLOQUEADA: el Consejo de Europa tiene una *2nd Working Conference* sobre las dimensiones REGULATORIAS de la AI en educación este mes, y `coe.int` da `EGRESS_BLOCKED` — instancia nueva del gap 65, y la de mayor autoridad para EMEA** (tendencia **166**). ⚠️ **Y la fecha vencida del AI Act reapareció por NOVENA vez, otra vez en el barrido de North America: deja de ser el error de una fuente y pasa a ser una propiedad del canal.** Ver las tendencias **157**–**166** y los patrones **P91**–**P92**.
 > **Pase 41 del 2026-10-02:** **se ejecutan las tres acciones del pase 40, las tres rinden, y la de mayor valor comercial CORRIGE un veredicto que esta base había publicado como cerrado.** 🟢 **El hallazgo que manda estaba en un `README.txt` de 174 bytes dentro del paquete: `edx_proctoring/backends/` está *carved-out* en Apache-2.0 dentro de un repo AGPL-3.0** — verificado en el *wheel* y en el árbol — **así que el directorio donde se escribe un backend de *proctoring* propio no arrastra la AGPL** (tendencia **150**). 🔴 **El gap 84 (*«proctoring no tiene opción permisiva»*) queda corregido por DOS motivos independientes:** ése, y que **existe una capa de integración de examen fuera de Open edX, `seb-server` de ETH Zürich, MPL-2.0 — copyleft débil — con `OPEN_EDX`, `MOODLE`, `MOODLE_PLUGIN` y `OPEN_OLAT` ya escritos en su `enum LmsType`** (tendencia **149**). 🟢 **Y la pregunta comercial de la acción 3 se responde contando un cero: `ProctoringBackendProvider` tiene 18 métodos y CERO `@abstractmethod`, o sea es una base concreta — integrar *proctoring* propio en Open edX es implementar una interfaz (12 modelos, 20 rutas y las 2 rutas de supresión de datos ya existen), no escribir la capa** (tendencia **151**). 🔵 **El matiz que impide sobrevenderlo, medido con `ast` en el mismo pase: la carve-out NO es autocontenida, pero lo que cruza hacia la AGPL es vocabulario —constantes, nombres de excepción y valores de estado— y no lógica** (**gap 88**). 🔴 **Hallazgo de método que obliga a re-correr el pase 37: la rama por defecto puede ser la rama MUERTA de un proyecto vivo —`seb-server` mide 6 meses en `master` y commiteó AYER en `dev-3.0`— y la prueba de validez sobre las 10 filas paradas sostiene 10 de 10 veredictos, pero sólo al LEER EL AUTOR: el commit más nuevo de `oneroster-ts` es un commit VACÍO de un bot y el de `educhain` es un refactor firmado por un AGENTE, sin mergear** (tendencias **152** y **153**). ✅ **Gap 83 CERRADO por la historia de dos archivos, y baja de bloqueante a anotación: las dos licencias en conflicto son permisivas OSI** (tendencia **154**). ⚠️ **Gap 81 PARTIDO EN DOS clases con riesgo y acción distintos: `@timadey/proctor` declara MIT tres veces en el árbol y le falta el archivo; `sisu-mcp` tiene UNA declaración en todo el mundo** (tendencia **155**). 🔵 **Y el hallazgo de síntesis, que es el más vendible: el *proctoring* es la única capa de esta base nombrada como alto riesgo por DOS reguladores de dos regiones —Anexo III punto 3 de la UE (2027-12-02) y los seis sectores de Vietnam (2027-03-01, NUEVE MESES ANTES)— y es la que este pase midió sin NINGUNA competencia agéntica: 404 en 8 de 8 nombres de npm y 0 en los 46,6 MB del índice de PyPI** (tendencia **156**, **gap 86**). Ver las tendencias **149**–**156** y los patrones **P88**–**P90**.
 > **Pase 40 del 2026-10-02:** **se ejecutan las tres acciones del pase 39 y las tres rinden, pero la primera rinde descubriendo que el instrumento del pase anterior está roto — y roto de la peor manera, devolviendo `200`.** 🔴 **`pypi.org/search/` responde `HTTP 200` con una página de desafío anti-bot en 28 de 28 términos**: un barrido corrido con el procedimiento del pase 39, sin control de contenido, **habría publicado 28 ausencias falsas y las habría llamado medición** (tendencia **141**). 🟢 **El reemplazo es mejor que el original y queda documentado: `pypi.org/simple/` devuelve 200 con 46.675.078 bytes y 903.402 nombres de paquete** — descubrimiento completo, sin ranking ni paginación (tendencia **142**). 🔴 **Y el barrido sobre las cuatro capas de administración académica devuelve el resultado más fuerte del pase, que es un vacío: no existe NI UNA puerta MCP de educación para *proctoring*, *timetabling*, admisiones, *student success* ni accesibilidad, en ninguno de los cuatro registros** — la única traza es `ucleeds-mcp-tester`, **el cliente de prueba de un MCP de *timetabling* cuyo servidor nunca se publicó** (tendencia **144**). 🟢 **La mejor alta en varios pases cierra la capa que esta base declaró la peor abastecida desde el pase 11: `datakind/student-success-tool` es MIT, y lo que la vuelve vendible no es el modelo sino que trae *model cards* y secciones de análisis de sesgo en el árbol**, con *«humans in the loop by design»* escrito en el README — la forma exacta del requisito estatal de North America (tendencia **148**). 🟢 **La capa de *proctoring* queda cerrada y la respuesta es copyleft:** `openedx/edx-proctoring` (**AGPL-3.0**), 🔴 **con `HEAD` de 4 meses y último release de 17** — de donde sale la regla de que **`HEAD` mide al proyecto y el release mide lo que el cliente instala** (tendencia **147**). ✅ **Acción 2 cumplida y el resultado es opuesto en las dos piezas por UNA línea de código: `mcp-usc` es 88 % portable (80 de 91 tools) porque su host es `os.getenv`; `DUTIC-mcp` es 8 % (1 de 12) porque el suyo es `export const HOST`** (tendencia **145**). 🔵 **Y al medirla apareció el mejor dato de LATAM en varios pases: la telemetría de `DUTIC-mcp` está escrita contra la Ley 29733 y la nombra en el código.** ✅ **Acción 3 cumplida y PROBADA, no descrita: el *gateway* de partición de tools existe, son 175 líneas de stdlib, y se verificó que recorta `tools/list` de 7 a 3, bloquea `delete_document` y `call_method` con `-32601` sin que lleguen al upstream, y que con allowlist vacía expone cero tools** (**P85**). 🔴 **Dos clases de evidencia nuevas: la licencia que se CONTRADICE entre el manifiesto y el árbol** (`exam-guard`: ISC contra Apache-2.0 — distinto del gap 81, y peor) y **la colonización del vocabulario: «proctor» ya significa supervisar al AGENTE, y «caliper» tiene seis homónimos no educativos y una sola pieza educativa** (tendencias **143** y **146**). 🔵 **Y el hallazgo de síntesis, que es el más accionable: en LATAM la dimensión menos adoptada es ADMINISTRACIÓN (34,1 %) — justo la capa que este pase midió vacía de open source. La brecha de oferta y la de adopción son la misma brecha.** Ver las tendencias **141**–**148** y los patrones **P85**–**P87**.
@@ -3870,6 +3871,29 @@ es marzo de 2027**. 🔴 **Fuente, declarada: canal del buscador, fuentes secund
 multilaterales y de la UE siguen bloqueadas en este entorno (gap 65).** **Antes de poner la fecha vietnamita en un
 documento contractual hay que verla en su boletín oficial.**
 
+## 🔵 Estado de gaps al cierre del pase 44 del 2026-10-02
+
+**Este pase ejecutó las TRES acciones del pase 43. Las tres rindieron, y la primera rindió encontrando cuatro defectos
+en la medición del pase anterior — ninguno en el upstream.**
+
+| Gap | Estado | Resolución |
+|---|---|---|
+| **Acción 1** (completar `operations.tsv` con los controladores que faltaban) | ✅ **CUMPLIDA sobre el servicio entero, y además EJECUTADA** | **79 → 341 operaciones**, **4 → 31 controladores**, **30 endpoints**, **170 escrituras**, `endpoints.tsv` **42 → 55**; `test_gate.py` **11 → 37 aserciones, 37/37 en verde**. 🔵 **Y queda reproducible, no transcrito:** `extract_surface.py` regenera las dos tablas contra un checkout (tendencias **166**–**170**) |
+| **Acción 2** (costo de *authoring* del `v1` de Open edX) | ✅ **CUMPLIDA — las tres preguntas con número, y la premisa de una era falsa** | `create_xblock_response` → **`{locator, courseKey}`**, y el `locator` **es** el usage key ⇒ **1 POST por bloque, cero lecturas intermedias**. `category`: **sin enum** en curso, **`["html","problem","video"]`** en biblioteca v1. `?view=minimal`: **sólo `retrieve`** — 🔴 **y no hay hijos que recorrer**, así que el recorrido va por `course_index` **en una llamada** (tendencias **171**, **172**; **P96**) |
+| **Acción 3** (fechas del AI Act contra el texto consolidado) | ⚠️ **CUMPLIDA A MEDIAS por límite de entorno, y el resultado es A FAVOR** | ✅ **Anexo III 2027-12-02 y Anexo I 2028-08-02 CONFIRMADAS por segundo canal independiente** (Reg. (UE) 2026/1744, OJ 2026-07-24, en vigor 2026-07-27): **la recomendación de EMEA NO se revierte**. 🔴 **No contra el texto consolidado:** los dos canales dan **403** (**gap 92**) |
+| 🟢 **91 (NUEVO)** — el plazo que vence primero no estaba en esta KB | 🟢 **ABIERTO como oportunidad con fecha, no como hueco** | **Art. 50(2): 2026-12-02, 61 días**, para generativos **ya en el mercado** antes del 2026-08-02; 50(1)/(3)/(4) **en vigor desde el 2026-08-02**. ✅ Confirmado sin prórroga por el **9.º plenario del Consejo Europeo de IA (2026-09-17)**. **La acción 3 del pase 45 es medir cuántas de las 66 filas de `agents/top.md` quedan expuestas** (tendencia **173**) |
+| 🔴 **92 (NUEVO)** — el gap 65 alcanza también a los agregadores legales **privados** | 🔴 **ABIERTO, y es de clase más ancha de lo que esta base creía** | `eur-lex.europa.eu` **y `artificialintelligenceact.eu`** dan los dos **`403` a CONNECT** (`EGRESS_BLOCKED` confirmado por el relay). El segundo **no es institucional ni multilateral**, así que **«las fuentes primarias multilaterales son inalcanzables» era una descripción demasiado angosta del bloqueo** |
+| 🔴 **93 (NUEVO)** — la OTRA puerta de esta base se construyó con el extractor defectuoso | 🔴 **ABIERTO, y es la acción 1 del pase 45** | `compose/code/unitime-mcp-gate/` se escribió en el pase 42 **con el mismo método** que produjo los cuatro defectos de SEB Server, y **antes de que existieran los cuatro controles**. **De las dos puertas que esta KB entrega, una está verificada y la otra no** |
+| 🟢 **94 (NUEVO)** — el generador de curso está cotizado pero no escrito | 🟢 **ABIERTO, y es la acción 2 del pase 45** | Con **P96** el costo ya tiene número (N POSTs, camino crítico 4, hermanos en paralelo). Falta el artefacto: un generador + *stub* que asevere el encadenado `locator → parent_locator`, los lotes de hermanos y el rechazo de `category` **en el cliente** (porque el servidor da **500, no 400**) |
+| ✅ **86** (capa de examen completa) | ✅ **SIGUE CERRADO, y ahora cubre el servicio** | El pase 43 lo cerró con 4 endpoints; este pase lo lleva a **30 endpoints y 341 operaciones**. 🔴 **Pero con una corrección de licencia que lo sostiene: SEB Server es MPL-2.0 y el README de la puerta decía Apache-2.0** — y la ruta recomendada (publicar **un** valor de `enum`) **sólo vale bajo MPL** |
+| ✅ **71** (contar filas no detecta una fila repetida) | ✅ **EL CONTROL SIGUE PASANDO — y encontró otra cosa** | **66 filas, 61 slugs de GitHub, los 61 distintos, 0 duplicados**, más 5 entradas de registro. 🔴 **Lo que falló fue la aritmética, no el control: esta base venía publicando «63 filas»** |
+| ⚠️ **65** (fuentes primarias inalcanzables) | ⚠️ **REFORMULADO Y AMPLIADO por el gap 92** | Deja de ser *«los dominios institucionales multilaterales»* y pasa a ser *«el dominio legal, institucional o privado, es inalcanzable por política del proxy»*. **Toda afirmación regulatoria de esta KB se apoya en fuentes secundarias comerciales por construcción del entorno**, y hay que decirlo cada vez que se cite una fecha |
+| ⚠️ **81** / **83** (licencia sólo en el manifiesto / contradictoria) | ⚠️ **SIN CAMBIO — la acción que falta es hacia afuera** | El PR de un archivo a `Timadey/proctor` y el contacto a `@ink-waffle/sisu-mcp` **siguen siendo acciones con destinatario humano**: esta corrida tampoco le escribe a terceros |
+| 🔴 **57** (crear un curso no está en el árbol REST versionado) | 🔴 **SIN CAMBIO, y P96 lo deja explícito** | `course_handler` + `course_rerun` siguen fuera de `/api/contentstore/v1/`. **P96 cotiza el árbol, no el *bootstrap* del curso** |
+
+⚠️ **Nota de concurrencia:** este pase corrió con el `HEAD` de `education-kb` en `ba960bf` (pase 43). Si otra corrida
+tocó los mismos ocho archivos en paralelo, el *merge* manda sobre la numeración de tendencias y gaps.
+
 ## 🔵 Estado de gaps al cierre del pase 41 del 2026-10-02
 
 **Este pase ejecutó las TRES acciones del pase 40. Las tres rindieron, y la de mayor valor comercial corrigió un
@@ -4279,6 +4303,236 @@ no del de biblioteca.
 **`kristofb/ltijs`** antes que el canónico. El canónico es **`Cvmcosta/ltijs`** —es el que la documentación del propio
 proyecto referencia— y es el que se midió.
 
+## 166. 🔴 Un servicio puede no tener **ni una** ruta base literal, y entonces una tabla de rutas no es una tabla de URLs (agregado en el pase 44 del 2026-10-02)
+
+Esta base publicó durante dos pases una tabla con `/exam`, `/lms-setup`, `/useraccount`, `/batch-action`. **Ninguna de
+las cuatro es una URL de SEB Server.** Los 30 controladores mapeados del paquete `weblayer/api` cuelgan todos de una
+propiedad de Spring:
+
+* **27** de `"${sebserver.webservice.api.admin.endpoint}" + API.X_ENDPOINT`
+* **3** de `${…api.exam.endpoint.discovery}`, `${…api.exam.endpoint.v1}` y `${…lms.api.endpoint}`
+* **0** de una cadena literal
+
+Los valores vienen en `src/main/resources` del propio repo: `admin` = **`/admin-api/v1`**, `exam` = **`/exam-api`**,
+`lms` = **`/lms-api/v1`**. Así que `/exam` **es `/admin-api/v1/exam`**, y una puerta que proxea el sufijo medido
+**da 404 en el 100 % de las llamadas** — sin un solo error en el código de la puerta.
+
+🔵 **La regla que queda, y es generalizable más allá de SEB Server:** cuando se mide la superficie de un servicio Java
+o Spring para proponérsela a un cliente, **el mapeo de clase hay que resolverlo, no leerlo**. Un `@RequestMapping` que
+empieza con `"${` no es una ruta: es una variable, y su valor vive en otro archivo del mismo repo. **El control barato
+es una aserción: ninguna ruta de la tabla puede contener `${`, y ninguna puede dejar de empezar con `/`.** Las dos están
+ahora en `test_gate.py`.
+
+## 167. 🔴 Una constante **compuesta** es invisible a un extractor de literales, y lo que se pierde es la superficie de autenticación (agregado en el pase 44 del 2026-10-02)
+
+`gbl/api/API.java` define **55** constantes `*_ENDPOINT`. El pase 43 registró **42** (41 de ellas constantes reales más
+una que no es `*_ENDPOINT`). La causa está medida y es determinista: **41 están definidas como literal** (`= "/exam"`) y
+**14 como composición** (`= OTRO_ENDPOINT + "/sufijo"`). Un extractor que casa `String X = "…"` ve las 41 y **pierde las
+14 — 14 de 14, sin una excepción**.
+
+Lo perdido no es aleatorio, y ahí está el riesgo:
+
+| Constante compuesta ausente | Resuelve a |
+|---|---|
+| `OAUTH_TOKEN_ENDPOINT` | `/oauth/token` |
+| `OAUTH_REVOKE_TOKEN_ENDPOINT` | `/oauth/revoke-token` |
+| `OAUTH_JWT_TOKEN_ENDPOINT` | `/oauth/jwttoken` |
+| `OAUTH_JWT_TOKEN_VERIFY_ENDPOINT` | `/oauth/jwttoken/verify` |
+| `SPS_OAUTH_JWT_TOKEN_ENDPOINT` | `/oauth/jwttoken` |
+| `EXAM_PROCTORING_ENDPOINT` | `/monitoring/proctoring` |
+| `SEB_SETTINGS_ENDPOINT` | `/exam/seb-settings` |
+| `VIEW_ENDPOINT` | `/orientation/view` |
+| `PRIVILEGES_ENDPOINT` | `/info/privileges` |
+| `CURRENT_USER_ENDPOINT` | `/useraccount/me` |
+
+**La superficie de autenticación completa estaba afuera**, y con ella `/monitoring/proctoring` —la capa que esta base
+nombra como alto riesgo bajo **dos** reguladores (Anexo III punto 3 de la UE y los seis sectores de Vietnam)—. Una
+allowlist construida sobre la tabla de 42 **nunca consideró los endpoints de token**: no los negaba, es que no sabía que
+existían. Ahora los cinco de OAuth están en la tabla y `/oauth/jwttoken/verify` —el único con controlador en este
+paquete, `AdminJWTAccess`— está en `DENY_ENDPOINTS` por nombre.
+
+⚠️ **Y el matiz que evita sobrevender el hallazgo:** de las cinco constantes de OAuth, **sólo una tiene controlador
+aquí**; las otras cuatro las sirve la configuración de Spring Security, fuera de `weblayer/api`. La tabla de operaciones
+tiene por eso **una** fila de OAuth, no cinco. **Estar en el inventario de endpoints y estar servido por un controlador
+son dos cosas distintas**, y confundirlas es el error simétrico al que este hallazgo corrige.
+
+## 168. 🔴 El extractor contaba la **declaración de clase** como una operación: cada controlador venía inflado en una fila fantasma (agregado en el pase 44 del 2026-10-02)
+
+El patrón del pase 43 buscaba un `@RequestMapping` seguido de `public|protected|private`. En Java eso casa también
+`@RequestMapping(…)` + `public class Foo … {`, que es **el mapeo de la clase**, no una operación. Resultado: **todo
+controlador con mapeo de clase sumaba exactamente una fila que no existe**.
+
+El caso que lo prueba sin ambigüedad es `BatchActionController`: la tabla vieja le daba **`1 own`** y el archivo
+**no declara ninguna** operación propia — su único `@RequestMapping` es el de la clase (línea 31). Lo mismo explica las
+otras diferencias: `/exam` pasa de 22 a **21** operaciones propias, `/useraccount` de 7 a **6**.
+
+🔵 **El discriminador, que es barato: una operación tiene tipo de retorno.** `public class Foo` no lo tiene; `public
+EntityProcessingReport hardDelete(` sí. El patrón nuevo exige `(public|protected) <tipo> <nombre>(` y por construcción
+**no puede** casar una declaración de clase. 🔴 **Y la primera versión del patrón nuevo tenía su propio defecto, del
+mismo tamaño y en la dirección contraria: excluía el punto del juego de caracteres del tipo de retorno**, así que
+perdía los métodos con tipo cualificado y la cuenta daba **129 `own` en vez de 135**. Se detectó porque las cuatro filas
+viejas y las nuevas tenían que coincidir salvo por los fantasmas — **un control de regresión contra la medición
+anterior, aunque la anterior sea la que se está corrigiendo**.
+
+## 169. 🔵 Un controlador «sólo lectura» niega 4 de 5 escrituras en la ruta; la quinta queda viva y se frena una capa más abajo (agregado en el pase 44 del 2026-10-02)
+
+`EntityController` expone cinco escrituras. `ReadonlyEntityController` sobrescribe **cuatro** —`savePut` (`PUT /`),
+`create` (`POST /`), `hardDelete` (`DELETE /{id}`), `hardDeleteAll` (`DELETE /`)— y lanza `AccessDeniedException` en el
+cuerpo, conservando el `@RequestMapping`. **No sobrescribe `forceHardDelete`**, así que **`DELETE /{id}/force` queda viva
+y entra al cuerpo heredado de la superclase.**
+
+Sigue negada, y el mecanismo es el dato: ese cuerpo hace `.flatMap(this::checkWriteAccess)`, y `checkWriteAccess`
+**está** sobrescrito para lanzar `PermissionDeniedException`. O sea:
+
+* **4 rutas** se niegan **en la ruta** (el cuerpo tira de entrada, sin tocar el modelo),
+* **1 ruta** se niega **en el guardia** (corre el cuerpo heredado y lo detiene un override de la superclase).
+
+**Para cotizar importa porque las dos clases se rompen distinto.** Las cuatro primeras siguen negadas aunque alguien
+cambie `checkWriteAccess`; la quinta depende de que ese override siga ahí. La tabla distingue las clases
+(`inherited-denied`, 16 filas = 4 controladores × 4, contra `inherited-guarded`, 4 filas) y la puerta retiene ambas
+**sea cual sea la política de lectura/escritura**, no sólo cuando `read_only=True`.
+
+🔵 **Y queda medido qué significa «force» en este código, que no es lo que el nombre sugiere:** `hardDelete` corre
+`checkWriteAccess` **y** `validForDelete`; `forceHardDelete` corre `checkWriteAccess` y **saltea `validForDelete`**.
+**Evita la validación referencial, no la autorización.** Un generador que lea el nombre y asuma «force = sin permisos»
+se equivoca en los dos sentidos a la vez.
+
+## 170. 🔴 Una ruta en el árbol no es una ruta en ejecución: el `@ConditionalOn*` decide, y el valor por omisión puede ser «no existe» (agregado en el pase 44 del 2026-10-02)
+
+`LightController` tiene `@RestController`, mapeo de clase y dos `@RequestMapping` propios. Un generador que lea
+anotaciones emite sus dos tools. Pero el archivo también tiene:
+
+```java
+@ConditionalOnExpression("'${sebserver.webservice.light.setup}'.equals('true')")
+```
+
+y `src/main/resources` de seb-server envía **`sebserver.webservice.light.setup=false`**. **Las dos rutas existen en el
+fuente y no existen en un despliegue por omisión.**
+
+🔵 **La regla: las anotaciones de ruta dicen qué PUEDE existir; las de condición dicen qué existe.** Hay que leer las dos
+o se proponen tools que dan 404 en producción — y es el peor 404, porque el código que lo justifica está en el repo y
+parece correcto. La tabla lleva ahora una columna `condition`, la puerta excluye del allowlist por omisión toda fila
+condicionada, y `test_gate.py` lo asevera.
+
+⚠️ **Nota de alcance honesta: este pase midió el conditional de clase, no el de método.** Spring admite
+`@ConditionalOn*` también sobre `@Bean`, y propiedades que apagan funcionalidad sin apagar la ruta. Lo que se afirma es
+lo medido: **un controlador condicionado, `LightController`, y su valor por omisión `false`**.
+
+## 171. ✅ El `locator` que devuelve la creación de un xblock **es** el usage key: el árbol de Open edX es recursable sin un GET extra (agregado en el pase 44 del 2026-10-02)
+
+La pregunta de la acción 2 era si `create_xblock_response` devuelve lo que hace recursable el recorrido. **Lo devuelve.**
+`view_handlers.py:894` arma:
+
+```python
+response = {"locator": str(created_block.location), "courseKey": str(created_block.location.course_key)}
+```
+
+`created_block.location` es el `UsageKey` del bloque nuevo, y `parent_locator` del POST siguiente **toma exactamente ese
+string**. Así que generar un curso entero es **1 POST por bloque y ninguna lectura intermedia**: secuencial bajando una
+rama (el hijo necesita el `locator` del padre), **paralelizable entre hermanos**.
+
+Las variantes del cuerpo, medidas en el mismo archivo: *paste* de clipboard agrega `static_file_notices` y `upstreamRef`
+(4 claves); import de biblioteca v2 agrega `upstreamRef`, `static_file_notices` y `parent_locator` (5); el camino de
+duplicado devuelve las mismas 2. **En ningún caso devuelve el `XBlockInfo` completo** — y no hace falta.
+
+🔵 **Y sobre `category`, la respuesta es que casi no hay contrato, lo cual es a la vez la facilidad y el riesgo:**
+`XblockSerializer.category` es un `CharField(required=False, allow_null=True)` **sin `choices`**, así que el serializer
+no valida el tipo de bloque; se resuelve en runtime contra los *entry points* de XBlock instalados. **El único enum del
+árbol** es `["html", "problem", "video"]`, y sólo cuando el padre es un `LibraryUsageLocator`
+(`view_handlers.py:867`). `chapter` y `sequential` tienen trato especial bajo el toggle `ENTRANCE_EXAMS`.
+
+⚠️ **Defecto de validación que conviene saber antes de escribir el cliente:** el serializer declara `category`
+**opcional**, pero `_create_block_core` hace `request.json["category"]`. Un POST sin `category` (y sin
+`staged_content="clipboard"`) **levanta `KeyError` → 500, no 400**. La validación no te lo dice: el 500 sí.
+
+## 172. 🔴 `?view=minimal` poda un árbol que no viene: el docstring del `v1` llama «tree-shaped» a una respuesta de un solo bloque (agregado en el pase 44 del 2026-10-02)
+
+La tercera pregunta de la acción 2 era si `?view=minimal` está sólo en `retrieve` o también al recorrer `children`.
+**Está sólo en `retrieve`** —es la única acción que llama `_apply_minimal_view`, y el comentario del parámetro OpenAPI lo
+dice— **pero la pregunta tenía la premisa invertida: no hay `children` que recorrer.**
+
+`retrieve_xblock_response` llama `get_block_info`, y `get_block_info` lleva escrito (`view_handlers.py:710`):
+
+```python
+# Note that children aren't being returned until we have a use case.
+```
+
+y nunca pasa `include_child_info`. **La respuesta del `v1` es un bloque, no un árbol**, así que el docstring del propio
+`v1` —*«Retrieve an xblock (and, by default, its nested tree)»*— **es falso para este endpoint**.
+
+Tres consecuencias concretas, todas verificables sin levantar nada:
+
+1. `_MINIMAL_VIEW_FIELDS` promete `{id, display_name, category, children, has_children, studio_url}` y
+   `_apply_minimal_view` es un `project()` **de primer nivel**. Como `children` y `has_children` no están en el cuerpo,
+   **la vista mínima devuelve a lo sumo 4 de los 6 campos que documenta.**
+2. **La única manera de sacar hijos de este endpoint es una combinación no documentada:**
+   `?fields=customReadToken&view=minimal`. Da `children` como identificadores `{block_type, block_id}` —**un nivel**— y
+   **descarta `parent` en silencio**, porque `parent` no figura en `_MINIMAL_VIEW_FIELDS`.
+3. 🟢 **El instrumento correcto para el árbol es otro endpoint**, y encontrarlo es lo que fija el costo de **P55**:
+   `GET /api/contentstore/v1/course_index/{course_id}` devuelve **`course_structure`**, el outline anidado, **en una
+   llamada**; `GET /api/contentstore/v1/container/{usage_key}/children` devuelve **un nivel** con nombre y tipo.
+
+🔵 **La lección de método, que es la que vale más allá de Open edX: el docstring y el `OpenApiParameter` describen la
+intención; el handler describe el producto.** Las dos estaban en el mismo archivo y se contradecían, y la que gana es la
+que corre. Es la misma clase de error que el pase 29 encontró con la deprecación circular del `v0`, ahora en la
+dirección opuesta: antes el aviso desactualizado escondía una capacidad real, acá el docstring promete una que no está.
+
+## 173. 🟢 El plazo del AI Act que de verdad aprieta no es 2027: el Artículo 50(2) vence el 2026-12-02 y no se prorrogó (agregado en el pase 44 del 2026-10-02)
+
+Esta base lleva varios pases planificando contra el **2027-12-02** (Anexo III, alto riesgo autónomo, donde educación
+está nombrada). La fecha es correcta y este pase la confirma. **Pero no es la primera que vence**, y la que vence antes
+cae exactamente sobre el producto que un estudio de AI entrega:
+
+| Obligación | Fecha | Estado |
+|---|---|---|
+| Art. 50(1), 50(3), 50(4) — transparencia | **2026-08-02** | **en vigor**, sin prórroga |
+| **Art. 50(2) — marcado legible por máquina** | **2026-12-02** | **vence en 61 días**; ventana transitoria de 4 meses para los sistemas generativos **ya en el mercado antes del 2026-08-02** |
+| Anexo III — alto riesgo autónomo (educación) | **2027-12-02** | diferido por el Reglamento (UE) 2026/1744 |
+| Anexo I — alto riesgo embebido en producto regulado | **2028-08-02** | diferido |
+
+**El 50(2) es el que muerde ya**, y por dos razones: aplica a **lo que ya está desplegado** —no a lo nuevo— y el
+remedio es *retrofit* de marcado en sistemas en producción, que es trabajo de ingeniería con fecha, no un expediente.
+Un tutor generativo entregado antes de agosto entra de lleno.
+
+✅ **Y está confirmado que no se movió:** el **9.º plenario del Consejo Europeo de IA (2026-09-17)** trató coordinación
+de supervisión y pruebas de ciberseguridad de modelos frontera **sin fijar fecha nueva ni conceder alivio** sobre el
+marcado. El Digital Omnibus que diferió el Anexo III **dejó el Artículo 50 intacto**.
+
+🔵 **Para la propuesta, la consecuencia es de orden: el entregable de cumplimiento más cercano no es el expediente de
+alto riesgo, es el marcado.** Y conviene decirlo antes de que lo diga el cliente, porque la fecha ya está dentro del
+trimestre.
+
+## 174. 🔴 La quinta variante de primitiva anti-bucle delega el freno en la API del proveedor — y el valor por omisión lo anula (agregado en el pase 44 del 2026-10-02)
+
+Esta base viene catalogando cómo cada pieza frena a un agente en bucle: **en el servidor** (`openedx-mcp`, *confirm
+token* atado a una huella del payload), **en el contrato** (`coursecode`, anotaciones MCP + `dryRun`), **en la
+configuración** (`learnmcp-xapi`, `RATE_LIMIT_PER_MINUTE`) y **anclando la procedencia** (`qti3-cli`,
+`--trusted-report-sha256`). `issuebadge/mcp-server` aporta la quinta, y es la más débil de las cinco:
+**`idempotency_key`, cuyo cumplimiento vive en la API del proveedor.**
+
+La descripción de la tool lo dice con todas las letras: *«a reused key is rejected by the API»*. **El freno no está en el
+código que se auto-hospeda**, y el README ofrece auto-hospedar el worker — así que un despliegue propio **hereda la forma
+de la protección sin la protección**.
+
+🔴 **Y hay un defecto peor, en el valor por omisión.** `src/issuebadge.ts:117`:
+
+```javascript
+const idempotency_key = input.idempotency_key || `mcp-${crypto.randomUUID()}`;
+```
+
+La clave se genera **por llamada**. Un agente que reintente `issue_badge` sin arrastrar la clave del intento anterior
+obtiene un UUID nuevo y **emite un segundo certificado**. La tool **devuelve** la clave en su `outputSchema` (está en
+`required`), así que la información para reintentar bien se entrega — **y no se recuerda**. La protección es cooperativa
+con el cliente, y **el camino por omisión es la doble emisión**.
+
+Para emisión de credenciales eso no es cosmético: el producto es un certificado que se manda por mail al alumno con URL
+pública de verificación. Dos llamadas idénticas = dos certificados = dos URLs válidas para el mismo logro.
+
+🔵 **Lo que se adopta es la primitiva corregida, no la pieza:** la idempotencia es **la** forma correcta de frenar un
+reintento en una operación que crea algo irreversible hacia afuera, y las otras cuatro variantes de esta base no la
+tienen. Pero hay que **derivarla del contenido** (`hash(badge_id + recipient + logro)`), no de un UUID por llamada, y
+hay que **hacerla cumplir del lado que uno controla**. Ver **P97**.
+
 ## 165. Apareció la primera puerta MCP de **emisión de credenciales**, y no sirve para el camino de estándar: la puerta es a una **API de proveedor** (agregado en el pase 43 del 2026-10-02)
 
 `issuebadge/mcp-server` es **MIT** (*Copyright (c) 2025-2026 IssueBadge*), TypeScript, y expone **4 tools**:
@@ -4296,6 +4550,45 @@ la capa MCP de credenciales, **no** existe la capa MCP de credenciales *conforme
 
 ⚠️ **Y la madurez, con el número a la vista: 0 ★ y 4 commits.** **No entra a la tabla de `agents/top.md`** por eso, y se
 registra acá con la cifra visible para que el próximo pase la vuelva a medir en vez de heredar un juicio.
+
+## 🔵 Las tres acciones que el pase 44 deja escritas para el pase 45
+
+**Las tres son ejecutables en este entorno: ninguna necesita Docker, ni instalar dependencias de terceros, ni la API de
+GitHub. Las dos primeras son el mismo gesto —clonar con `--sparse` y leer— sobre dos capas distintas.**
+
+1. 🔴 **Re-auditar las OTRAS dos puertas escritas por esta base con los cuatro controles que el pase 44 tuvo que
+   inventar** (**gap 93**). El defecto de las rutas relativas no era del upstream: era del extractor, y
+   **`compose/code/unitime-mcp-gate/` se construyó con el mismo método en el pase 42**, antes de que existieran los
+   controles. **La acción concreta:** correr sobre `connectors.tsv` de UniTime las cuatro aserciones que ahora están en
+   `test_gate.py` —(a) ninguna ruta contiene `${`, (b) toda ruta empieza con `/`, (c) ninguna fila proviene de una
+   declaración de clase, (d) toda clase condicionada está excluida— y, si UniTime también cuelga de una propiedad,
+   corregir sus 26 tools. 🔵 **El valor: las dos puertas son el entregable más concreto de esta KB, y una de las dos
+   está verificada y la otra no.**
+2. 🟢 **Cerrar el costo de P55 escribiendo el generador de curso y probándolo contra el contrato medido, sin levantar
+   Open edX** (**gap 94**). El pase 44 fijó las tres piezas que faltaban: el POST devuelve `locator`, el árbol se lee de
+   `course_index` en una llamada y `category` no tiene enum en un curso. **La acción concreta:** escribir en
+   `compose/code/` un generador que tome un outline (capítulo → secuencia → vertical → bloques) y emita **la secuencia
+   exacta de POSTs** con el encadenado `locator → parent_locator`, más un *stub* del endpoint que devuelva `locator`
+   sintéticos, y **asevere tres cosas**: que ningún POST se emite antes de tener el `locator` de su padre, que los
+   hermanos se agrupan en lotes paralelizables, y que un POST sin `category` **se rechaza en el cliente** —porque el
+   servidor devuelve 500 y no 400—. 🔵 **El valor: convierte «cotizar la generación de un curso» en un artefacto con
+   número de llamadas, que es lo que se pone en una propuesta.**
+3. 🔴 **Medir cuántas de las 63 filas de `agents/top.md` quedan expuestas al Artículo 50(2) del 2026-12-02, que vence en
+   61 días** (**gap 91**). Es la única de las tres que no es técnica y es la que más valor comercial tiene, porque el
+   plazo está dentro del trimestre y esta base no lo tenía. **La acción concreta:** clasificar las 63 filas por una sola
+   pregunta —**¿genera contenido sintético que un alumno o un docente va a ver?**— y para las que sí, registrar si el
+   repo tiene alguna forma de marcado (C2PA, metadatos, marca de agua, o nada). 🔵 **El resultado esperado es un vacío y
+   conviene medirlo antes de que lo pregunte un cliente:** ninguna pieza de esta KB se eligió por su capacidad de
+   marcado, así que la respuesta probable es «ninguna», y eso **es** el hallazgo — más una oportunidad de componente
+   transversal.
+
+⚠️ **Y las acciones hacia afuera que esta corrida sigue sin poder ejecutar, declaradas para no perderlas:** el `LICENSE`
+que falta en `Timadey/proctor` (**un PR de un archivo**); la licencia sin segunda fuente de `@ink-waffle/sisu-mcp`
+(**bloqueante: sigue siendo la única puerta de SIS de educación superior de esta base**); el acceso de miembro a los
+repositorios de Caliper Sensor API de 1EdTech; y 🔵 **el texto consolidado del Reglamento (UE) 2024/1689, que este pase
+volvió a intentar y que sigue inalcanzable por los DOS canales probados** —`eur-lex.europa.eu` y
+`artificialintelligenceact.eu`, ambos `403` a CONNECT (**gap 92**)—. **Las fechas quedan confirmadas por segundo canal,
+no por fuente primaria, y eso hay que seguir diciéndolo cada vez que se citen.**
 
 ## 🔵 Las tres acciones que el pase 43 deja escritas para el pase 44
 

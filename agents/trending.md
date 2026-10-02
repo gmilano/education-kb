@@ -9,6 +9,93 @@ updated: 2026-10-02
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 > No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
 
+## 2026-10-02 (pase 44) — el pase que **cierra la acción 1 sobre el servicio entero** y encuentra que **la tabla de la puerta describía rutas que no existen en esa URL**: todos los controladores de SEB Server cuelgan de una propiedad, no de una ruta literal
+
+**Las tres acciones del pase 43 se ejecutaron. Las tres rindieron, y la primera rindió encontrando cuatro defectos en la
+medición del pase anterior — no en el upstream.** El barrido global obligatorio (cuatro búsquedas, año **calculado**:
+2026) volvió a devolver **la capa genérica** (openclaw 385.407 ★, browser-use 108.128, dify 151.639, AutoGen 60.284,
+Flowise 55.226) y **material didáctico *sobre* AI**. 🔵 **Cero altas de agente, y es el segundo pase consecutivo con esa
+medición: el canal «agente» está saturado para esta industria.** 🔴 **Y al correr el control de *slugs* distintos del pase 36 apareció que la cifra de filas que esta base viene publicando está mal: la tabla tiene **66 filas**, no 63** — **61 slugs de GitHub, los 61 distintos, 0 duplicados**, más **5 entradas de registro** (2 de PyPI, 3 de npm) que no tienen slug de GitHub y se cuentan igual. **El control de duplicados pasa; el de aritmética no pasaba.**
+
+### El hallazgo del pase: la puerta de SEB Server apuntaba a rutas inexistentes
+
+La acción 1 pedía completar `operations.tsv` con los controladores que faltaban. Se completó —**de 79 operaciones sobre
+4 controladores a 341 sobre los 31 `@RestController` del servicio**, 30 endpoints distintos, 170 escrituras— y
+`test_gate.py` pasó de 11 a **37 aserciones, las 37 en verde**. Pero el valor del pase está en los **cuatro defectos**
+que aparecieron al medir en serio, y el primero invalida las rutas que esta KB publicaba:
+
+1. 🔴 **Ninguna ruta de la tabla anterior era una URL.** Los **30** controladores mapeados cuelgan de una propiedad de
+   Spring: **27** de `"${sebserver.webservice.api.admin.endpoint}" + API.X_ENDPOINT` y los otros tres de las propiedades
+   de exam/LMS. **No hay una sola ruta base literal en el servicio.** Los valores que trae el propio árbol son
+   `admin-api/v1`, `/exam-api` y `/lms-api/v1`, así que lo que la tabla llamaba `/exam` **es `/admin-api/v1/exam`**.
+   Una puerta que proxea el sufijo **da 404 en el 100 % de las llamadas**.
+2. 🔴 **`endpoints.tsv` tenía 41 de 55 constantes, y las 14 que faltaban eran exactamente las compuestas.** API.java
+   define 41 endpoints como literal y 14 como `OTRO_ENDPOINT + "/sufijo"`; un extractor que sólo casa literales pierde
+   la segunda clase —**14 de 14, sin excepción**— y lo perdido es **la superficie de autenticación completa**
+   (`/oauth/token`, `/oauth/revoke-token`, `/oauth/jwttoken`, `/oauth/jwttoken/verify`) más
+   **`/admin-api/v1/monitoring/proctoring`**, que es justamente la capa que esta base viene nombrando como alto riesgo
+   bajo dos reguladores, y `/admin-api/v1/exam/seb-settings`.
+3. 🔴 **El extractor anterior contaba la declaración de clase como una operación.** Su patrón casaba
+   `public class Foo ... {` detrás de un `@RequestMapping` de clase, así que **cada controlador con mapeo de clase
+   venía inflado en exactamente una fila fantasma**. `/batch-action` figuraba con `1 own` cuando
+   `BatchActionController` **no declara ninguna**: el único `@RequestMapping` del archivo es el de la clase.
+4. 🔴 **`ActivatableEntityController` aporta 4 rutas heredadas, no 3.** Faltaba `deactivate`
+   (`POST /{modelId}/inactive`, `API.PATH_VAR_INACTIVE`), así que **todo controlador activable sub-reportaba una
+   escritura**.
+
+### `ReadonlyEntityController` niega 4 de 5 escrituras — la quinta se frena una capa más abajo
+
+Esto afila el propio argumento de la puerta. `EntityController` tiene cinco rutas de escritura y
+`ReadonlyEntityController` sobrescribe **cuatro** (`savePut`, `create`, `hardDelete`, `hardDeleteAll`) lanzando
+`AccessDeniedException` en el cuerpo. **No sobrescribe `forceHardDelete`**, así que **`DELETE /{modelId}/force` queda
+viva y llega al cuerpo heredado.**
+
+Sigue negada —pero **por otro mecanismo, y eso es lo que hay que cotizar**: el cuerpo llama
+`.flatMap(this::checkWriteAccess)`, y `checkWriteAccess` **sí** está sobrescrito, lanzando `PermissionDeniedException`.
+La protección se apoya en **un override de un método de la superclase**, no en el rechazo a nivel de ruta que las otras
+cuatro exhiben. La tabla ahora distingue las dos clases (`inherited-denied` contra `inherited-guarded`) y la puerta
+retiene ambas sea cual sea la política de lectura/escritura.
+
+🔵 **Y de paso queda medido qué significa «force» acá:** `hardDelete` corre `checkWriteAccess` **y** `validForDelete`;
+`forceHardDelete` corre `checkWriteAccess` y **saltea `validForDelete`**. Evita la validación referencial, **no** la
+autorización.
+
+### Una ruta en el árbol no es una ruta en ejecución
+
+`LightController` está anotado
+`@ConditionalOnExpression("'${sebserver.webservice.light.setup}'.equals('true')")` y seb-server **envía
+`light.setup=false`**. Sus dos rutas existen en el fuente y **no existen en un despliegue por omisión**, así que la
+tabla lleva una columna `condition` y la puerta nunca las publica.
+
+### `issuebadge/mcp-server` re-medido, como el pase 43 pidió: sigue afuera de la tabla, y ahora se sabe por qué mejor
+
+El pase 43 lo dejó registrado con la cifra a la vista para que el siguiente **lo volviera a medir en vez de heredar un
+juicio**. Medido:
+
+| Lo que cambió | Lo que no |
+|---|---|
+| 🟢 **v2.1.0**, `1.106 líneas` de TypeScript, **168 casos de test** en 4 archivos, sólo **2 dependencias** (`@modelcontextprotocol/sdk`, `zod`) | 🔴 Sigue en **4 commits** (`HEAD` `ea249e4`, **2026-09-26**) |
+| `LICENSE` **MIT** real, *Copyright (c) 2025-2026 IssueBadge* | 🔴 La emisión sigue dependiendo de `app.issuebadge.com/api/v…` + `ISSUEBADGE_API_KEY` |
+| 4 tools confirmadas: `remoteTools = [validate_key, get_all_badges, issue_badge]` + `create_badge` sólo en stdio | 🔴 **No implementa Open Badges 3.0 como estándar**: no sustituye nada en **P84** |
+
+🔴 **Dos hallazgos nuevos, los dos del tipo que sólo aparece leyendo el código:**
+
+- **No está en npm.** `registry.npmjs.org/issuebadge-mcp-server` devuelve **`Not found`** aunque el `package.json`
+  declara `bin`. Se instala desde el fuente, así que **es invisible al barrido por registro** — es la misma clase que
+  `learnmcp-xapi` (tendencia 99) y **confirma que el canal del pase 39 tampoco lo habría encontrado**.
+- **Aporta la QUINTA variante de primitiva anti-bucle, y es la más débil de las cinco: delega el freno en la API del
+  proveedor.** Las cuatro anteriores frenan en el servidor (`openedx-mcp`), en el contrato (`coursecode`), en la
+  configuración (`learnmcp-xapi`) o ancla la procedencia (`qti3-cli`). Ésta declara `idempotency_key` y la descripción
+  dice que *«una clave reusada es rechazada por la API»* — o sea **el freno no está en el código que se auto-hospeda**.
+  🔴 **Y el valor por omisión lo anula:** `issuebadge.ts:117` hace
+  `const idempotency_key = input.idempotency_key || "mcp-" + crypto.randomUUID()` **por llamada**, así que
+  **un agente que reintenta `issue_badge` sin arrastrar la clave emite un SEGUNDO certificado.** La tool devuelve la
+  clave en su `outputSchema` (está en `required`), de modo que la información para reintentar bien **se entrega y no se
+  recuerda**: la protección es cooperativa con el cliente y el camino por omisión es la doble emisión. Para emisión de
+  credenciales —un certificado que se manda por mail con URL pública de verificación— eso es daño real, no cosmético.
+
+**Veredicto: se mantiene FUERA de `agents/top.md`.** Lo que sí se adopta es la primitiva, corregida: ver **P97**.
+
 ## 2026-10-02 (pase 43) — el pase que **ejecuta las tres acciones del pase 42** y encuentra que **la premisa de una cuarta estaba invertida**: el `v0` de Open edX que esta base recomendaba está **deprecado en favor del `v1`**
 
 **Las tres acciones del pase 42 se ejecutaron, y dos dejaron código que compila y corre en este repositorio:** la puerta

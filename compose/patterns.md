@@ -71,6 +71,130 @@ updated: 2026-10-02
 > (Apache-2.0, **v0.9.9 del 2026-10-01**), Ralph (MIT, vivo en `main`), las cuatro puertas de Canvas y Moodle-alumno
 > (commits de las últimas dos semanas) y `qti3-cli` (MIT). **El resto de las recetas no cambia.**
 
+## P96 — Generar un curso de Open edX entero, con el **número de llamadas** cerrado (reencuadra **P95**: el árbol no se lee del endpoint de xblock) (agregado en el pase 44 del 2026-10-02)
+
+**P95 quedó escrito con una premisa que este pase midió y es falsa:** que el recorrido del árbol se hace con el endpoint
+de xblock del `v1`. **No se puede** — `get_block_info` lleva escrito *«children aren't being returned until we have a use
+case»* y la respuesta de `retrieve` es **un bloque**, no un árbol (tendencia **172**). P96 reemplaza esa mitad y deja el
+costo con número.
+
+**Piezas** — todas en `openedx/edx-platform` (**AGPL-3.0**, `HEAD` `c0048e1` del 2026-10-02), API
+`/api/contentstore/v1/`:
+
+| Operación | Llamada | Qué devuelve | Costo |
+|---|---|---|---|
+| Leer el outline completo | `GET course_index/{course_id}` | `course_structure` (dict anidado) | **1 llamada, todo el árbol** |
+| Leer un nivel de hijos | `GET container/{usage_key}/children` | hijos con `name`, `block_id`, `block_type` | 1 por contenedor |
+| Crear un bloque | `POST xblock/` con `{parent_locator, category, display_name}` | **`{locator, courseKey}`** | **1 por bloque** |
+| Crear el curso | `POST course_handler` + `course_rerun` | — | fuera del árbol REST versionado (**gap 57**) |
+
+**Wiring, y es la parte que vuelve cotizable el patrón:**
+
+```
+POST /api/contentstore/v1/xblock/  {parent_locator: <curso>,    category: "chapter",    display_name: …}
+   └─> {"locator": "block-v1:…+type@chapter+block@<uuid>"}        ← ESTE string es el parent_locator del hijo
+       POST …/xblock/              {parent_locator: <ese locator>, category: "sequential", …}
+           └─> POST …/xblock/      {parent_locator: <ese>,         category: "vertical", …}
+               └─> POST …/xblock/  {parent_locator: <ese>,         category: "html" | "problem" | "video", …}
+```
+
+**Costo: exactamente N POSTs para N bloques, y cero lecturas intermedias.** La dependencia es sólo vertical —un hijo
+necesita el `locator` de su padre— así que **los hermanos se emiten en paralelo**. Para un curso de 4 capítulos × 3
+secuencias × 4 verticales × 3 bloques = **4 + 12 + 48 + 144 = 208 POSTs**, con un camino crítico de **4** llamadas.
+Eso es lo que se escribe en la propuesta, en vez de «se recorre el árbol».
+
+⚠️ **Tres cosas que hay que poner en el cliente, no descubrir en UAT:**
+
+1. **`category` no se valida en el servidor.** `XblockSerializer.category` es un `CharField(required=False)` sin
+   `choices`; se resuelve en runtime contra los XBlock instalados. **Validar la lista en el cliente**, contra los
+   `category` que el `course_structure` ya muestra en ese despliegue.
+2. **Omitir `category` da 500, no 400** (`request.json["category"]` → `KeyError`). **Requerirlo en el cliente.**
+3. **En una biblioteca v1 el enum existe y son tres:** `["html", "problem", "video"]`. Un generador que meta `vertical`
+   en una biblioteca recibe **400 con texto plano**, no JSON.
+
+🔵 **Y si hace falta bajar el payload de las lecturas:** `?view=minimal` sirve, pero devuelve **4 de los 6 campos que
+documenta** y sólo en `retrieve`; para hijos, la única combinación que los trae es
+`?fields=customReadToken&view=minimal`, **un nivel y sin `parent`**. Para recorrer, `course_index` es estrictamente
+mejor.
+
+**Estimación:** 2–3 semanas para el generador con reintentos y validación de `category` en cliente, sobre un despliegue
+existente. **No** incluye crear el curso (curso plantilla + `course_rerun`, **P63**).
+
+## P97 — Idempotencia **derivada del contenido** para toda operación que crea algo irreversible hacia afuera (agregado en el pase 44 del 2026-10-02)
+
+**El problema, medido en una pieza real.** Emitir un credencial, mandar un mail a un alumno, publicar una nota: son
+operaciones que un agente en bucle puede repetir y que **no se pueden deshacer desde el agente**. `issuebadge/mcp-server`
+(**MIT**) es la primera pieza de esta base que intenta frenarlo con **idempotencia** —la forma correcta— y las dos
+decisiones que toma son las dos equivocadas (tendencia **174**):
+
+| Lo que hace | Por qué falla | Qué hacer en su lugar |
+|---|---|---|
+| `idempotency_key` **opcional**, y si falta la genera: `input.idempotency_key \|\| "mcp-" + crypto.randomUUID()` **por llamada** | Un reintento sin arrastrar la clave **emite un segundo certificado**: el valor por omisión **anula** la primitiva | **Derivarla del contenido**, nunca de un UUID: `sha256(badge_id + recipient_email + achievement_id)`. Dos intentos del mismo hecho dan la misma clave **sin que nadie recuerde nada** |
+| El cumplimiento vive **en la API del proveedor** (*«a reused key is rejected by the API»*) | El README ofrece auto-hospedar el worker: un despliegue propio **hereda la forma sin la protección** | Hacerla cumplir **del lado que uno controla**: tabla `(idempotency_key → issue_id)` en el *gateway*, y responder el `issue_id` guardado en vez de reenviar |
+
+**La receta, componible con el *gateway* de P85 / P93 que esta base ya tiene escrito y probado:**
+
+```
+agente ──tools/call issue_badge──▶ gateway
+                                    │ 1. key = sha256(badge_id|email|achievement)   ← derivada, no recibida
+                                    │ 2. ¿key en la tabla?  sí ─▶ devolver el issue_id guardado (no se llama al upstream)
+                                    │ 3. no ─▶ POST upstream ─▶ guardar (key → issue_id) ANTES de responder
+                                    ▼
+                              emisor (issuebadge / certo / cualquiera)
+```
+
+**Por qué el orden importa:** guardar **antes** de responder convierte una caída entre el POST y la respuesta en una
+lectura de tabla en el reintento, no en una segunda emisión. Es la misma disciplina que `openedx-mcp` aplica con su
+**auditoría append-only previa a la escritura** (tendencia 84) — y aquí la primitiva es más fuerte, porque no le pide
+cooperación al cliente.
+
+🔵 **Dónde cae en el catálogo de esta base.** Las cinco variantes de freno, ordenadas por quién tiene que cooperar:
+
+1. **Nadie** — `learnmcp-xapi`: rate limit en la configuración; frena solo.
+2. **Nadie** — **esta receta**: la clave se deriva, el estado es del gateway.
+3. **El servidor** — `openedx-mcp`: *confirm token* atado a una huella del payload.
+4. **El cliente** — `coursecode`: anotaciones MCP + `dryRun`; y `qti3-cli`, que ancla procedencia.
+5. **El proveedor remoto** — `issuebadge` tal como está: la más débil, y se cae al auto-hospedar.
+
+**Licencia:** la receta es propia; el emisor es sustituible. Para el camino de **estándar** (Open Badges 3.0 firmado) el
+emisor sigue siendo el de **P84** —`1EdTech/digital-credentials-public-validator` (**Apache-2.0**) y
+`@ajna-inc/openbadges` (**Apache-2.0**)—, no `issuebadge`, que **no implementa OB 3.0**.
+
+**Estimación:** 1 semana sobre un *gateway* ya desplegado (la tabla y el hash son el trabajo; el resto ya está).
+
+## P98 — Antes de proponer la superficie REST de un servicio Spring: los **cuatro controles** que el pase 44 tuvo que inventar (agregado en el pase 44 del 2026-10-02)
+
+**Esto no es un patrón de producto, es el control de calidad de todos los patrones de esta base que envuelven un
+servicio** — P60, P85, P92, P93. El pase 44 descubrió que la tabla de SEB Server, medida con cuidado dos pases antes,
+tenía **cuatro defectos** y **ninguno** era del upstream: los cuatro eran del extractor (tendencias **166**–**170**).
+Cualquiera se repite en el próximo servicio si no se asevera.
+
+| # | Control | Cómo se verifica | Qué atrapa |
+|---|---|---|---|
+| 1 | **Ninguna ruta contiene `${`, y toda ruta empieza con `/`** | aserción sobre la tabla | El mapeo de clase que es una **propiedad** y no una ruta. En SEB Server **27 de 30** controladores. Sin esto, la puerta da **404 en el 100 %** de las llamadas |
+| 2 | **Las constantes compuestas están resueltas** | contar `X = "literal"` contra `X = OTRO + "/sufijo"` y comparar con el total | En SEB Server, **14 de 55** eran compuestas y se perdían todas — incluida **la superficie de autenticación completa** |
+| 3 | **Ninguna fila viene de una declaración de clase** | el patrón exige `(public\|protected) <tipo> <nombre>(` | La **fila fantasma** por controlador. Un `public class Foo` no tiene tipo de retorno; una operación sí |
+| 4 | **Las clases con `@ConditionalOn*` están marcadas y excluidas** | columna `condition` + aserción | La ruta que **existe en el árbol y no en el despliegue**. `LightController` con `light.setup=false` |
+
+**Y dos controles de método que vienen de pases anteriores y siguen valiendo:**
+
+* **La herencia aporta rutas, y la subclase «sólo lectura» no las borra.** `ReadonlyEntityController` conserva los
+  `@RequestMapping` y lanza en el cuerpo, así que **la ruta de escritura se sigue anunciando**. Hay que negar **por
+  nombre**, nunca por descubrimiento — y hay que contar bien: en SEB Server niega **4 de 5**, y la quinta
+  (`DELETE /{id}/force`) se frena **una capa más abajo** (tendencia **169**).
+* **Control de regresión contra la medición anterior, aunque la anterior sea la que se corrige.** Las cuatro filas
+  viejas y las nuevas tenían que coincidir **salvo por los defectos explicados**; fue así como se detectó que el patrón
+  nuevo, en su primera versión, perdía 6 métodos con tipo de retorno cualificado. **Una corrección sin control de
+  regresión es una segunda medición sin verificar.**
+
+🔵 **El artefacto está escrito y es reutilizable:** `compose/code/sebserver-mcp-gate/extract_surface.py` (stdlib, sin
+dependencias) toma un checkout y emite las dos tablas con las columnas que estos controles necesitan; y
+`test_gate.py` aseverá los cuatro, con **37/37 en verde**. Para el próximo servicio Spring se cambian los tres
+diccionarios de arriba del archivo.
+
+**Costo de aplicarlo: horas.** Costo de no aplicarlo: una puerta que se demuestra en una reunión y da 404 en la primera
+llamada real.
+
 ## P93 — La puerta MCP de SEB Server: supervisión de examen con la escritura fuera de la lista, y **la capa de examen por fin completa** (agregado en el pase 43 del 2026-10-02)
 
 **Qué resuelve.** Cierra la mitad abierta del **gap 86**. De las dos capas institucionales de examen de esta KB, UniTime

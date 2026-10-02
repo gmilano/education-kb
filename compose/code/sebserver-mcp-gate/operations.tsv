@@ -1,80 +1,345 @@
-# endpoint	controller	base_class	verb	path_segment	source
-/exam	ExamAdministrationController	EntityController	GET	(root)	own
-/exam	ExamAdministrationController	EntityController	GET	MODEL_ID_VAR_PATH_SEGMENT	own
-/exam	ExamAdministrationController	EntityController	GET	MODEL_ID_VAR_PATH_SEGMENT	own
-/exam	ExamAdministrationController	EntityController	PATCH	MODEL_ID_VAR_PATH_SEGMENT	own
-/exam	ExamAdministrationController	EntityController	GET	PARENT_MODEL_ID_VAR_PATH_SEGMENT	own
-/exam	ExamAdministrationController	EntityController	POST	PARENT_MODEL_ID_VAR_PATH_SEGMENT	own
-/exam	ExamAdministrationController	EntityController	GET	PARENT_MODEL_ID_VAR_PATH_SEGMENT	own
-/exam	ExamAdministrationController	EntityController	POST	PARENT_MODEL_ID_VAR_PATH_SEGMENT +	own
-/exam	ExamAdministrationController	EntityController	DELETE	PARENT_MODEL_ID_VAR_PATH_SEGMENT	own
-/exam	ExamAdministrationController	EntityController	GET	MODEL_ID_VAR_PATH_SEGMENT	own
-/exam	ExamAdministrationController	EntityController	GET	MODEL_ID_VAR_PATH_SEGMENT	own
-/exam	ExamAdministrationController	EntityController	POST	MODEL_ID_VAR_PATH_SEGMENT	own
-/exam	ExamAdministrationController	EntityController	PUT	MODEL_ID_VAR_PATH_SEGMENT	own
-/exam	ExamAdministrationController	EntityController	DELETE	MODEL_ID_VAR_PATH_SEGMENT	own
-/exam	ExamAdministrationController	EntityController	GET	MODEL_ID_VAR_PATH_SEGMENT	own
-/exam	ExamAdministrationController	EntityController	GET	MODEL_ID_VAR_PATH_SEGMENT	own
-/exam	ExamAdministrationController	EntityController	GET	MODEL_ID_VAR_PATH_SEGMENT	own
-/exam	ExamAdministrationController	EntityController	POST	MODEL_ID_VAR_PATH_SEGMENT	own
-/exam	ExamAdministrationController	EntityController	GET	MODEL_ID_VAR_PATH_SEGMENT	own
-/exam	ExamAdministrationController	EntityController	POST	MODEL_ID_VAR_PATH_SEGMENT	own
-/exam	ExamAdministrationController	EntityController	POST	MODEL_ID_VAR_PATH_SEGMENT	own
-/exam	ExamAdministrationController	EntityController	POST	MODEL_ID_VAR_PATH_SEGMENT	own
-/lms-setup	LmsSetupController	ActivatableEntityController	GET	(root)	own
-/lms-setup	LmsSetupController	ActivatableEntityController	GET	LMS_SETUP_TEST_PATH_SEGMENT + MODEL_ID_VAR_PATH_SEGMENT	own
-/lms-setup	LmsSetupController	ActivatableEntityController	PUT	LMS_SETUP_TEST_PATH_SEGMENT + LMS_SETUP_TEST_AD_HOC_PATH_SEGMENT	own
-/useraccount	UserAccountController	ActivatableEntityController	GET	(root)	own
-/useraccount	UserAccountController	ActivatableEntityController	GET	CURRENT_USER_PATH_SEGMENT	own
-/useraccount	UserAccountController	ActivatableEntityController	GET	CURRENT_USER_PATH_SEGMENT + FEATURES_PATH_SEGMENT	own
-/useraccount	UserAccountController	ActivatableEntityController	POST	LOGIN_PATH_SEGMENT	own
-/useraccount	UserAccountController	ActivatableEntityController	POST	LOGOUT_PATH_SEGMENT	own
-/useraccount	UserAccountController	ActivatableEntityController	GET	USER_ACCOUNT_ENDPOINT_SUPPORTER	own
-/useraccount	UserAccountController	ActivatableEntityController	PUT	PASSWORD_PATH_SEGMENT	own
-/batch-action	BatchActionController	EntityController	GET	(root)	own
-/exam	ExamAdministrationController	EntityController	GET	(root)	inherited
-/exam	ExamAdministrationController	EntityController	GET	NAMES_PATH_SEGMENT	inherited
-/exam	ExamAdministrationController	EntityController	GET	MODEL_ID_VAR+DEPENDENCY	inherited
-/exam	ExamAdministrationController	EntityController	GET	MODEL_ID_VAR	inherited
-/exam	ExamAdministrationController	EntityController	GET	LIST_PATH_SEGMENT	inherited
-/exam	ExamAdministrationController	EntityController	POST	(root)	inherited
-/exam	ExamAdministrationController	EntityController	PUT	(root)	inherited
-/exam	ExamAdministrationController	EntityController	DELETE	MODEL_ID_VAR	inherited
-/exam	ExamAdministrationController	EntityController	DELETE	MODEL_ID_VAR+FORCE	inherited
-/exam	ExamAdministrationController	EntityController	DELETE	(root)	inherited
-/lms-setup	LmsSetupController	ActivatableEntityController	GET	(root)	inherited
-/lms-setup	LmsSetupController	ActivatableEntityController	GET	NAMES_PATH_SEGMENT	inherited
-/lms-setup	LmsSetupController	ActivatableEntityController	GET	MODEL_ID_VAR+DEPENDENCY	inherited
-/lms-setup	LmsSetupController	ActivatableEntityController	GET	MODEL_ID_VAR	inherited
-/lms-setup	LmsSetupController	ActivatableEntityController	GET	LIST_PATH_SEGMENT	inherited
-/lms-setup	LmsSetupController	ActivatableEntityController	POST	(root)	inherited
-/lms-setup	LmsSetupController	ActivatableEntityController	PUT	(root)	inherited
-/lms-setup	LmsSetupController	ActivatableEntityController	DELETE	MODEL_ID_VAR	inherited
-/lms-setup	LmsSetupController	ActivatableEntityController	DELETE	MODEL_ID_VAR+FORCE	inherited
-/lms-setup	LmsSetupController	ActivatableEntityController	DELETE	(root)	inherited
-/lms-setup	LmsSetupController	ActivatableEntityController	GET	ACTIVE_PATH_SEGMENT	inherited
-/lms-setup	LmsSetupController	ActivatableEntityController	GET	INACTIVE_PATH_SEGMENT	inherited
-/lms-setup	LmsSetupController	ActivatableEntityController	POST	PATH_VAR_ACTIVE	inherited
-/useraccount	UserAccountController	ActivatableEntityController	GET	(root)	inherited
-/useraccount	UserAccountController	ActivatableEntityController	GET	NAMES_PATH_SEGMENT	inherited
-/useraccount	UserAccountController	ActivatableEntityController	GET	MODEL_ID_VAR+DEPENDENCY	inherited
-/useraccount	UserAccountController	ActivatableEntityController	GET	MODEL_ID_VAR	inherited
-/useraccount	UserAccountController	ActivatableEntityController	GET	LIST_PATH_SEGMENT	inherited
-/useraccount	UserAccountController	ActivatableEntityController	POST	(root)	inherited
-/useraccount	UserAccountController	ActivatableEntityController	PUT	(root)	inherited
-/useraccount	UserAccountController	ActivatableEntityController	DELETE	MODEL_ID_VAR	inherited
-/useraccount	UserAccountController	ActivatableEntityController	DELETE	MODEL_ID_VAR+FORCE	inherited
-/useraccount	UserAccountController	ActivatableEntityController	DELETE	(root)	inherited
-/useraccount	UserAccountController	ActivatableEntityController	GET	ACTIVE_PATH_SEGMENT	inherited
-/useraccount	UserAccountController	ActivatableEntityController	GET	INACTIVE_PATH_SEGMENT	inherited
-/useraccount	UserAccountController	ActivatableEntityController	POST	PATH_VAR_ACTIVE	inherited
-/batch-action	BatchActionController	EntityController	GET	(root)	inherited
-/batch-action	BatchActionController	EntityController	GET	NAMES_PATH_SEGMENT	inherited
-/batch-action	BatchActionController	EntityController	GET	MODEL_ID_VAR+DEPENDENCY	inherited
-/batch-action	BatchActionController	EntityController	GET	MODEL_ID_VAR	inherited
-/batch-action	BatchActionController	EntityController	GET	LIST_PATH_SEGMENT	inherited
-/batch-action	BatchActionController	EntityController	POST	(root)	inherited
-/batch-action	BatchActionController	EntityController	PUT	(root)	inherited
-/batch-action	BatchActionController	EntityController	DELETE	MODEL_ID_VAR	inherited
-/batch-action	BatchActionController	EntityController	DELETE	MODEL_ID_VAR+FORCE	inherited
-/batch-action	BatchActionController	EntityController	DELETE	(root)	inherited
+# SEB Server REST surface, extracted from SafeExamBrowser/seb-server @ 7f45689
+# endpoint resolved with the SHIPPED property defaults (admin=/admin-api/v1, exam=/exam-api, lms=/lms-api/v1)
+# source: own | inherited | inherited-denied (body throws AccessDeniedException) | inherited-guarded (route live, stopped by the checkWriteAccess override)
+# endpoint	controller	base_class	verb	path_segment	source	prefix_property	condition
+/oauth/jwttoken/verify	AdminJWTAccess	-	POST	(root)	own	(absolute: no class-level @RequestMapping)	-
+/admin-api/v1/batch-action	BatchActionController	EntityController	GET	(root)	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/batch-action	BatchActionController	EntityController	GET	/names	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/batch-action	BatchActionController	EntityController	GET	/{modelId}/dependency	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/batch-action	BatchActionController	EntityController	GET	/{modelId}	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/batch-action	BatchActionController	EntityController	GET	/list	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/batch-action	BatchActionController	EntityController	POST	(root)	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/batch-action	BatchActionController	EntityController	PUT	(root)	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/batch-action	BatchActionController	EntityController	DELETE	/{modelId}	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/batch-action	BatchActionController	EntityController	DELETE	/{modelId}/force	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/batch-action	BatchActionController	EntityController	DELETE	(root)	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/certificate	CertificateController	-	GET	(root)	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/certificate	CertificateController	-	GET	/names	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/certificate	CertificateController	-	GET	/{alias}	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/certificate	CertificateController	-	POST	(root)	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/certificate	CertificateController	-	DELETE	(root)	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/seb-client-connection	ClientConnectionController	ReadonlyEntityController	GET	(root)	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/seb-client-connection	ClientConnectionController	ReadonlyEntityController	GET	/data	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/seb-client-connection	ClientConnectionController	ReadonlyEntityController	GET	/data/{modelId}	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/seb-client-connection	ClientConnectionController	ReadonlyEntityController	PUT	(root)	inherited-denied	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/seb-client-connection	ClientConnectionController	ReadonlyEntityController	POST	(root)	inherited-denied	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/seb-client-connection	ClientConnectionController	ReadonlyEntityController	DELETE	/{modelId}	inherited-denied	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/seb-client-connection	ClientConnectionController	ReadonlyEntityController	DELETE	(root)	inherited-denied	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/seb-client-connection	ClientConnectionController	EntityController	GET	(root)	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/seb-client-connection	ClientConnectionController	EntityController	GET	/names	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/seb-client-connection	ClientConnectionController	EntityController	GET	/{modelId}/dependency	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/seb-client-connection	ClientConnectionController	EntityController	GET	/{modelId}	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/seb-client-connection	ClientConnectionController	EntityController	GET	/list	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/seb-client-connection	ClientConnectionController	EntityController	DELETE	/{modelId}/force	inherited-guarded	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/seb-client-event	ClientEventController	ReadonlyEntityController	GET	/search	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/seb-client-event	ClientEventController	ReadonlyEntityController	DELETE	(root)	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/seb-client-event	ClientEventController	ReadonlyEntityController	GET	/export	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/seb-client-event	ClientEventController	ReadonlyEntityController	PUT	(root)	inherited-denied	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/seb-client-event	ClientEventController	ReadonlyEntityController	POST	(root)	inherited-denied	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/seb-client-event	ClientEventController	ReadonlyEntityController	DELETE	/{modelId}	inherited-denied	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/seb-client-event	ClientEventController	ReadonlyEntityController	DELETE	(root)	inherited-denied	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/seb-client-event	ClientEventController	EntityController	GET	(root)	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/seb-client-event	ClientEventController	EntityController	GET	/names	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/seb-client-event	ClientEventController	EntityController	GET	/{modelId}/dependency	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/seb-client-event	ClientEventController	EntityController	GET	/{modelId}	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/seb-client-event	ClientEventController	EntityController	GET	/list	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/seb-client-event	ClientEventController	EntityController	DELETE	/{modelId}/force	inherited-guarded	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/client-group	ClientGroupController	EntityController	GET	(root)	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/client-group	ClientGroupController	EntityController	GET	/names	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/client-group	ClientGroupController	EntityController	GET	/{modelId}/dependency	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/client-group	ClientGroupController	EntityController	GET	/{modelId}	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/client-group	ClientGroupController	EntityController	GET	/list	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/client-group	ClientGroupController	EntityController	POST	(root)	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/client-group	ClientGroupController	EntityController	PUT	(root)	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/client-group	ClientGroupController	EntityController	DELETE	/{modelId}	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/client-group	ClientGroupController	EntityController	DELETE	/{modelId}/force	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/client-group	ClientGroupController	EntityController	DELETE	(root)	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/configuration_attribute	ConfigurationAttributeController	EntityController	GET	/list	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/configuration_attribute	ConfigurationAttributeController	EntityController	GET	(root)	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/configuration_attribute	ConfigurationAttributeController	EntityController	GET	/names	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/configuration_attribute	ConfigurationAttributeController	EntityController	GET	/{modelId}/dependency	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/configuration_attribute	ConfigurationAttributeController	EntityController	GET	/{modelId}	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/configuration_attribute	ConfigurationAttributeController	EntityController	GET	/list	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/configuration_attribute	ConfigurationAttributeController	EntityController	POST	(root)	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/configuration_attribute	ConfigurationAttributeController	EntityController	PUT	(root)	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/configuration_attribute	ConfigurationAttributeController	EntityController	DELETE	/{modelId}	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/configuration_attribute	ConfigurationAttributeController	EntityController	DELETE	/{modelId}/force	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/configuration_attribute	ConfigurationAttributeController	EntityController	DELETE	(root)	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/configuration	ConfigurationController	ReadonlyEntityController	POST	/save-to-history/{modelId}	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/configuration	ConfigurationController	ReadonlyEntityController	POST	/undo/{modelId}	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/configuration	ConfigurationController	ReadonlyEntityController	POST	/restore/{modelId}	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/configuration	ConfigurationController	ReadonlyEntityController	PUT	(root)	inherited-denied	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/configuration	ConfigurationController	ReadonlyEntityController	POST	(root)	inherited-denied	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/configuration	ConfigurationController	ReadonlyEntityController	DELETE	/{modelId}	inherited-denied	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/configuration	ConfigurationController	ReadonlyEntityController	DELETE	(root)	inherited-denied	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/configuration	ConfigurationController	EntityController	GET	(root)	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/configuration	ConfigurationController	EntityController	GET	/names	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/configuration	ConfigurationController	EntityController	GET	/{modelId}/dependency	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/configuration	ConfigurationController	EntityController	GET	/{modelId}	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/configuration	ConfigurationController	EntityController	GET	/list	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/configuration	ConfigurationController	EntityController	DELETE	/{modelId}/force	inherited-guarded	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/configuration-node	ConfigurationNodeController	EntityController	GET	/{modelId}/followup	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/configuration-node	ConfigurationNodeController	EntityController	GET	/{modelId}/settings_published	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/configuration-node	ConfigurationNodeController	EntityController	PATCH	/{modelId}/reset-to-template	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/configuration-node	ConfigurationNodeController	EntityController	PUT	/copy	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/configuration-node	ConfigurationNodeController	EntityController	GET	/{modelId}/configkey	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/configuration-node	ConfigurationNodeController	EntityController	GET	/{modelId}/downloadSettings	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/configuration-node	ConfigurationNodeController	EntityController	POST	/import	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/configuration-node	ConfigurationNodeController	EntityController	POST	/{modelId}/import	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/configuration-node	ConfigurationNodeController	EntityController	POST	/{modelId}/quitpwd	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/configuration-node	ConfigurationNodeController	EntityController	GET	/{parentModelId}/template-attribute	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/configuration-node	ConfigurationNodeController	EntityController	GET	/{parentModelId}/template-attribute/{modelId}	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/configuration-node	ConfigurationNodeController	EntityController	PATCH	/{parentModelId}/template-attribute/{modelId}/reset	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/configuration-node	ConfigurationNodeController	EntityController	PATCH	/{parentModelId}/template-attribute/{modelId}/attach-default-orientation	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/configuration-node	ConfigurationNodeController	EntityController	PATCH	/{parentModelId}/template-attribute/{modelId}/remove-orientation	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/configuration-node	ConfigurationNodeController	EntityController	GET	(root)	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/configuration-node	ConfigurationNodeController	EntityController	GET	/names	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/configuration-node	ConfigurationNodeController	EntityController	GET	/{modelId}/dependency	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/configuration-node	ConfigurationNodeController	EntityController	GET	/{modelId}	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/configuration-node	ConfigurationNodeController	EntityController	GET	/list	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/configuration-node	ConfigurationNodeController	EntityController	POST	(root)	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/configuration-node	ConfigurationNodeController	EntityController	PUT	(root)	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/configuration-node	ConfigurationNodeController	EntityController	DELETE	/{modelId}	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/configuration-node	ConfigurationNodeController	EntityController	DELETE	/{modelId}/force	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/configuration-node	ConfigurationNodeController	EntityController	DELETE	(root)	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/configuration_value	ConfigurationValueController	EntityController	GET	/table	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/configuration_value	ConfigurationValueController	EntityController	PUT	/table	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/configuration_value	ConfigurationValueController	EntityController	GET	(root)	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/configuration_value	ConfigurationValueController	EntityController	GET	/names	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/configuration_value	ConfigurationValueController	EntityController	GET	/{modelId}/dependency	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/configuration_value	ConfigurationValueController	EntityController	GET	/{modelId}	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/configuration_value	ConfigurationValueController	EntityController	GET	/list	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/configuration_value	ConfigurationValueController	EntityController	POST	(root)	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/configuration_value	ConfigurationValueController	EntityController	PUT	(root)	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/configuration_value	ConfigurationValueController	EntityController	DELETE	/{modelId}	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/configuration_value	ConfigurationValueController	EntityController	DELETE	/{modelId}/force	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/configuration_value	ConfigurationValueController	EntityController	DELETE	(root)	inherited	sebserver.webservice.api.admin.endpoint	-
+/exam-api/discovery	ExamAPIDiscoveryController	-	GET	(root)	own	sebserver.webservice.api.exam.endpoint.discovery	-
+/exam-api/v1	ExamAPI_V1_Controller	-	POST	/handshake	own	sebserver.webservice.api.exam.endpoint.v1	-
+/exam-api/v1	ExamAPI_V1_Controller	-	PATCH	/handshake	own	sebserver.webservice.api.exam.endpoint.v1	-
+/exam-api/v1	ExamAPI_V1_Controller	-	PUT	/handshake	own	sebserver.webservice.api.exam.endpoint.v1	-
+/exam-api/v1	ExamAPI_V1_Controller	-	DELETE	/handshake	own	sebserver.webservice.api.exam.endpoint.v1	-
+/exam-api/v1	ExamAPI_V1_Controller	-	GET	/examconfig	own	sebserver.webservice.api.exam.endpoint.v1	-
+/exam-api/v1	ExamAPI_V1_Controller	-	POST	/sebping	own	sebserver.webservice.api.exam.endpoint.v1	-
+/exam-api/v1	ExamAPI_V1_Controller	-	POST	/seblog	own	sebserver.webservice.api.exam.endpoint.v1	-
+/admin-api/v1/exam	ExamAdministrationController	EntityController	GET	/{modelId}/check-imported	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/exam	ExamAdministrationController	EntityController	GET	/{modelId}/check-consistency	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/exam	ExamAdministrationController	EntityController	PATCH	/{modelId}/archive	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/exam	ExamAdministrationController	EntityController	GET	/{parentModelId}/sebkeyinfo	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/exam	ExamAdministrationController	EntityController	POST	/{parentModelId}/sebkeyinfo	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/exam	ExamAdministrationController	EntityController	GET	/{parentModelId}/grant	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/exam	ExamAdministrationController	EntityController	POST	/{parentModelId}/grant/{modelId}	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/exam	ExamAdministrationController	EntityController	DELETE	/{parentModelId}/grant/{modelId}	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/exam	ExamAdministrationController	EntityController	GET	/{modelId}/check-seb-restriction	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/exam	ExamAdministrationController	EntityController	GET	/{modelId}/seb-restriction	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/exam	ExamAdministrationController	EntityController	POST	/{modelId}/seb-restriction	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/exam	ExamAdministrationController	EntityController	PUT	/{modelId}/seb-restriction	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/exam	ExamAdministrationController	EntityController	DELETE	/{modelId}/seb-restriction	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/exam	ExamAdministrationController	EntityController	GET	/{modelId}/chapters	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/exam	ExamAdministrationController	EntityController	GET	/{modelId}/followup	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/exam	ExamAdministrationController	EntityController	GET	/{modelId}/proctoring	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/exam	ExamAdministrationController	EntityController	POST	/{modelId}/proctoring	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/exam	ExamAdministrationController	EntityController	GET	/{modelId}/screen-proctoring	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/exam	ExamAdministrationController	EntityController	POST	/{modelId}/screen-proctoring	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/exam	ExamAdministrationController	EntityController	POST	/{modelId}/screen-proctoring/activation	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/exam	ExamAdministrationController	EntityController	POST	/{modelId}/screen-proctoring/apply-groups	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/exam	ExamAdministrationController	EntityController	GET	(root)	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/exam	ExamAdministrationController	EntityController	GET	/names	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/exam	ExamAdministrationController	EntityController	GET	/{modelId}/dependency	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/exam	ExamAdministrationController	EntityController	GET	/{modelId}	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/exam	ExamAdministrationController	EntityController	GET	/list	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/exam	ExamAdministrationController	EntityController	POST	(root)	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/exam	ExamAdministrationController	EntityController	PUT	(root)	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/exam	ExamAdministrationController	EntityController	DELETE	/{modelId}	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/exam	ExamAdministrationController	EntityController	DELETE	/{modelId}/force	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/exam	ExamAdministrationController	EntityController	DELETE	(root)	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/exam-configuration-map	ExamConfigurationMappingController	EntityController	POST	(root)	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/exam-configuration-map	ExamConfigurationMappingController	EntityController	DELETE	/{modelId}	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/exam-configuration-map	ExamConfigurationMappingController	EntityController	GET	(root)	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/exam-configuration-map	ExamConfigurationMappingController	EntityController	GET	/names	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/exam-configuration-map	ExamConfigurationMappingController	EntityController	GET	/{modelId}/dependency	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/exam-configuration-map	ExamConfigurationMappingController	EntityController	GET	/{modelId}	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/exam-configuration-map	ExamConfigurationMappingController	EntityController	GET	/list	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/exam-configuration-map	ExamConfigurationMappingController	EntityController	POST	(root)	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/exam-configuration-map	ExamConfigurationMappingController	EntityController	PUT	(root)	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/exam-configuration-map	ExamConfigurationMappingController	EntityController	DELETE	/{modelId}	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/exam-configuration-map	ExamConfigurationMappingController	EntityController	DELETE	/{modelId}/force	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/exam-configuration-map	ExamConfigurationMappingController	EntityController	DELETE	(root)	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/monitoring	ExamMonitoringController	-	GET	(root)	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/monitoring	ExamMonitoringController	-	GET	/finishedexams	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/monitoring	ExamMonitoringController	-	POST	/testrun/{modelId}	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/monitoring	ExamMonitoringController	-	GET	/overview/{modelId}	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/monitoring	ExamMonitoringController	-	GET	/connections/{modelId}	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/monitoring	ExamMonitoringController	-	GET	/{parentModelId}	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/monitoring	ExamMonitoringController	-	POST	/{parentModelId}/static-client-data	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/monitoring	ExamMonitoringController	-	GET	/{parentModelId}/fullpage	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/monitoring	ExamMonitoringController	-	GET	/{parentModelId}/{SEBConnectionToken}	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/monitoring	ExamMonitoringController	-	POST	/{parentModelId}/instruction	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/monitoring	ExamMonitoringController	-	GET	/{parentModelId}/notification/{SEBConnectionToken}	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/monitoring	ExamMonitoringController	-	POST	/{parentModelId}/notification/{modelId}/{SEBConnectionToken}	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/monitoring	ExamMonitoringController	-	POST	/{parentModelId}/disable-connection	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/monitoring	ExamMonitoringController	-	GET	/{parentModelId}/signature/{modelId}	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/monitoring/proctoring	ExamProctoringController	-	GET	/{modelId}/collecting-rooms	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/monitoring/proctoring	ExamProctoringController	-	GET	/{modelId}/screenproctoring-groups	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/monitoring/proctoring	ExamProctoringController	-	GET	/{modelId}	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/monitoring/proctoring	ExamProctoringController	-	POST	/{modelId}/notify-open-room	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/monitoring/proctoring	ExamProctoringController	-	GET	/{modelId}/room-connections	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/monitoring/proctoring	ExamProctoringController	-	POST	/{modelId}/reconfiguration-attributes	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/monitoring/proctoring	ExamProctoringController	-	POST	/{modelId}/open	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/monitoring/proctoring	ExamProctoringController	-	POST	/{modelId}/close	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/monitoring/proctoring	ExamProctoringController	-	GET	/{modelId}towhall-available	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/monitoring/proctoring	ExamProctoringController	-	GET	/{modelId}towhall-room-data	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/monitoring/proctoring	ExamProctoringController	-	POST	/{modelId}activate-towhall-room	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/exam-template	ExamTemplateController	EntityController	GET	/default	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/exam-template	ExamTemplateController	EntityController	GET	/{modelId}/indicator	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/exam-template	ExamTemplateController	EntityController	GET	/{parentModelId}/indicator/{modelId}	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/exam-template	ExamTemplateController	EntityController	POST	/indicator	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/exam-template	ExamTemplateController	EntityController	PUT	/indicator	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/exam-template	ExamTemplateController	EntityController	DELETE	/{parentModelId}/indicator/{modelId}	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/exam-template	ExamTemplateController	EntityController	GET	/{modelId}/client-group	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/exam-template	ExamTemplateController	EntityController	GET	/{parentModelId}/client-group/{modelId}	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/exam-template	ExamTemplateController	EntityController	POST	/client-group	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/exam-template	ExamTemplateController	EntityController	PUT	/client-group	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/exam-template	ExamTemplateController	EntityController	DELETE	/{parentModelId}/client-group/{modelId}	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/exam-template	ExamTemplateController	EntityController	GET	/{modelId}/proctoring	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/exam-template	ExamTemplateController	EntityController	POST	/{modelId}/proctoring	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/exam-template	ExamTemplateController	EntityController	GET	/{modelId}/screen-proctoring	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/exam-template	ExamTemplateController	EntityController	POST	/{modelId}/screen-proctoring	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/exam-template	ExamTemplateController	EntityController	GET	(root)	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/exam-template	ExamTemplateController	EntityController	GET	/names	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/exam-template	ExamTemplateController	EntityController	GET	/{modelId}/dependency	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/exam-template	ExamTemplateController	EntityController	GET	/{modelId}	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/exam-template	ExamTemplateController	EntityController	GET	/list	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/exam-template	ExamTemplateController	EntityController	POST	(root)	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/exam-template	ExamTemplateController	EntityController	PUT	(root)	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/exam-template	ExamTemplateController	EntityController	DELETE	/{modelId}	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/exam-template	ExamTemplateController	EntityController	DELETE	/{modelId}/force	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/exam-template	ExamTemplateController	EntityController	DELETE	(root)	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/indicator	IndicatorController	EntityController	GET	(root)	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/indicator	IndicatorController	EntityController	GET	/names	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/indicator	IndicatorController	EntityController	GET	/{modelId}/dependency	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/indicator	IndicatorController	EntityController	GET	/{modelId}	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/indicator	IndicatorController	EntityController	GET	/list	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/indicator	IndicatorController	EntityController	POST	(root)	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/indicator	IndicatorController	EntityController	PUT	(root)	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/indicator	IndicatorController	EntityController	DELETE	/{modelId}	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/indicator	IndicatorController	EntityController	DELETE	/{modelId}/force	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/indicator	IndicatorController	EntityController	DELETE	(root)	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/info	InfoController	-	GET	/logo/{urlSuffix}	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/info	InfoController	-	GET	/institution	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/info	InfoController	-	GET	/institution/{urlSuffix}	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/info	InfoController	-	GET	/privileges	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/institution	InstitutionController	ActivatableEntityController	GET	/self	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/institution	InstitutionController	ActivatableEntityController	GET	/active	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/institution	InstitutionController	ActivatableEntityController	GET	/inactive	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/institution	InstitutionController	ActivatableEntityController	POST	/{modelId}/active	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/institution	InstitutionController	ActivatableEntityController	POST	/{modelId}/inactive	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/institution	InstitutionController	EntityController	GET	(root)	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/institution	InstitutionController	EntityController	GET	/names	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/institution	InstitutionController	EntityController	GET	/{modelId}/dependency	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/institution	InstitutionController	EntityController	GET	/{modelId}	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/institution	InstitutionController	EntityController	GET	/list	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/institution	InstitutionController	EntityController	POST	(root)	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/institution	InstitutionController	EntityController	PUT	(root)	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/institution	InstitutionController	EntityController	DELETE	/{modelId}	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/institution	InstitutionController	EntityController	DELETE	/{modelId}/force	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/institution	InstitutionController	EntityController	DELETE	(root)	inherited	sebserver.webservice.api.admin.endpoint	-
+/exam-api/discovery	LightController	-	GET	/light-config	own	sebserver.webservice.api.exam.endpoint.discovery	ConditionalOnExpression("'${sebserver.webservice.light.setup}'.equals('true')")
+/exam-api/discovery	LightController	-	GET	/light-config/password	own	sebserver.webservice.api.exam.endpoint.discovery	ConditionalOnExpression("'${sebserver.webservice.light.setup}'.equals('true')")
+/lms-api/v1	LmsIntegrationController	-	POST	/exam	own	sebserver.webservice.lms.api.endpoint	-
+/lms-api/v1	LmsIntegrationController	-	DELETE	/exam	own	sebserver.webservice.lms.api.endpoint	-
+/lms-api/v1	LmsIntegrationController	-	POST	/seb_config	own	sebserver.webservice.lms.api.endpoint	-
+/lms-api/v1	LmsIntegrationController	-	POST	/login_token	own	sebserver.webservice.lms.api.endpoint	-
+/admin-api/v1/lms-setup	LmsSetupController	ActivatableEntityController	GET	/test/{modelId}	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/lms-setup	LmsSetupController	ActivatableEntityController	PUT	/test/adhoc	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/lms-setup	LmsSetupController	ActivatableEntityController	GET	/active	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/lms-setup	LmsSetupController	ActivatableEntityController	GET	/inactive	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/lms-setup	LmsSetupController	ActivatableEntityController	POST	/{modelId}/active	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/lms-setup	LmsSetupController	ActivatableEntityController	POST	/{modelId}/inactive	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/lms-setup	LmsSetupController	EntityController	GET	(root)	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/lms-setup	LmsSetupController	EntityController	GET	/names	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/lms-setup	LmsSetupController	EntityController	GET	/{modelId}/dependency	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/lms-setup	LmsSetupController	EntityController	GET	/{modelId}	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/lms-setup	LmsSetupController	EntityController	GET	/list	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/lms-setup	LmsSetupController	EntityController	POST	(root)	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/lms-setup	LmsSetupController	EntityController	PUT	(root)	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/lms-setup	LmsSetupController	EntityController	DELETE	/{modelId}	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/lms-setup	LmsSetupController	EntityController	DELETE	/{modelId}/force	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/lms-setup	LmsSetupController	EntityController	DELETE	(root)	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/orientation	OrientationController	EntityController	GET	(root)	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/orientation	OrientationController	EntityController	GET	/names	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/orientation	OrientationController	EntityController	GET	/{modelId}/dependency	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/orientation	OrientationController	EntityController	GET	/{modelId}	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/orientation	OrientationController	EntityController	GET	/list	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/orientation	OrientationController	EntityController	POST	(root)	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/orientation	OrientationController	EntityController	PUT	(root)	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/orientation	OrientationController	EntityController	DELETE	/{modelId}	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/orientation	OrientationController	EntityController	DELETE	/{modelId}/force	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/orientation	OrientationController	EntityController	DELETE	(root)	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/quiz	QuizController	-	GET	(root)	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/quiz	QuizController	-	GET	/{modelId}	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/register	RegisterUserController	-	POST	(root)	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/client_configuration	SEBClientConfigController	ActivatableEntityController	GET	/credentials/{modelId}	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/client_configuration	SEBClientConfigController	ActivatableEntityController	GET	/download/{modelId}	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/client_configuration	SEBClientConfigController	ActivatableEntityController	GET	/active	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/client_configuration	SEBClientConfigController	ActivatableEntityController	GET	/inactive	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/client_configuration	SEBClientConfigController	ActivatableEntityController	POST	/{modelId}/active	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/client_configuration	SEBClientConfigController	ActivatableEntityController	POST	/{modelId}/inactive	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/client_configuration	SEBClientConfigController	EntityController	GET	(root)	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/client_configuration	SEBClientConfigController	EntityController	GET	/names	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/client_configuration	SEBClientConfigController	EntityController	GET	/{modelId}/dependency	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/client_configuration	SEBClientConfigController	EntityController	GET	/{modelId}	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/client_configuration	SEBClientConfigController	EntityController	GET	/list	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/client_configuration	SEBClientConfigController	EntityController	POST	(root)	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/client_configuration	SEBClientConfigController	EntityController	PUT	(root)	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/client_configuration	SEBClientConfigController	EntityController	DELETE	/{modelId}	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/client_configuration	SEBClientConfigController	EntityController	DELETE	/{modelId}/force	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/client_configuration	SEBClientConfigController	EntityController	DELETE	(root)	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/exam/seb-settings	SEBSettingsController	-	GET	/{modelId}	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/exam/seb-settings	SEBSettingsController	-	GET	/{modelId}/examConfigMapping	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/exam/seb-settings	SEBSettingsController	-	GET	/{modelId}/table	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/exam/seb-settings	SEBSettingsController	-	POST	/{modelId}	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/exam/seb-settings	SEBSettingsController	-	PUT	/{modelId}/table/row	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/exam/seb-settings	SEBSettingsController	-	POST	/{modelId}/table/row	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/exam/seb-settings	SEBSettingsController	-	DELETE	/{modelId}/table/row	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/useraccount	UserAccountController	ActivatableEntityController	GET	/me	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/useraccount	UserAccountController	ActivatableEntityController	GET	/me/features	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/useraccount	UserAccountController	ActivatableEntityController	POST	/loglogin	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/useraccount	UserAccountController	ActivatableEntityController	POST	/loglogout	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/useraccount	UserAccountController	ActivatableEntityController	GET	/supervisors	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/useraccount	UserAccountController	ActivatableEntityController	PUT	/password	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/useraccount	UserAccountController	ActivatableEntityController	GET	/active	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/useraccount	UserAccountController	ActivatableEntityController	GET	/inactive	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/useraccount	UserAccountController	ActivatableEntityController	POST	/{modelId}/active	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/useraccount	UserAccountController	ActivatableEntityController	POST	/{modelId}/inactive	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/useraccount	UserAccountController	EntityController	GET	(root)	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/useraccount	UserAccountController	EntityController	GET	/names	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/useraccount	UserAccountController	EntityController	GET	/{modelId}/dependency	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/useraccount	UserAccountController	EntityController	GET	/{modelId}	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/useraccount	UserAccountController	EntityController	GET	/list	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/useraccount	UserAccountController	EntityController	POST	(root)	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/useraccount	UserAccountController	EntityController	PUT	(root)	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/useraccount	UserAccountController	EntityController	DELETE	/{modelId}	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/useraccount	UserAccountController	EntityController	DELETE	/{modelId}/force	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/useraccount	UserAccountController	EntityController	DELETE	(root)	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/useractivity	UserActivityLogController	ReadonlyEntityController	DELETE	(root)	own	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/useractivity	UserActivityLogController	ReadonlyEntityController	PUT	(root)	inherited-denied	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/useractivity	UserActivityLogController	ReadonlyEntityController	POST	(root)	inherited-denied	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/useractivity	UserActivityLogController	ReadonlyEntityController	DELETE	/{modelId}	inherited-denied	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/useractivity	UserActivityLogController	ReadonlyEntityController	DELETE	(root)	inherited-denied	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/useractivity	UserActivityLogController	EntityController	GET	(root)	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/useractivity	UserActivityLogController	EntityController	GET	/names	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/useractivity	UserActivityLogController	EntityController	GET	/{modelId}/dependency	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/useractivity	UserActivityLogController	EntityController	GET	/{modelId}	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/useractivity	UserActivityLogController	EntityController	GET	/list	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/useractivity	UserActivityLogController	EntityController	DELETE	/{modelId}/force	inherited-guarded	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/orientation/view	ViewController	EntityController	GET	(root)	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/orientation/view	ViewController	EntityController	GET	/names	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/orientation/view	ViewController	EntityController	GET	/{modelId}/dependency	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/orientation/view	ViewController	EntityController	GET	/{modelId}	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/orientation/view	ViewController	EntityController	GET	/list	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/orientation/view	ViewController	EntityController	POST	(root)	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/orientation/view	ViewController	EntityController	PUT	(root)	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/orientation/view	ViewController	EntityController	DELETE	/{modelId}	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/orientation/view	ViewController	EntityController	DELETE	/{modelId}/force	inherited	sebserver.webservice.api.admin.endpoint	-
+/admin-api/v1/orientation/view	ViewController	EntityController	DELETE	(root)	inherited	sebserver.webservice.api.admin.endpoint	-

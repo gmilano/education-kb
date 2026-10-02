@@ -8,6 +8,80 @@ updated: 2026-10-02
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 
+## 2026-10-02 (pase 44) — **el dato crudo: 55 constantes (no 42), 341 operaciones (no 79), 31 controladores (no 4), 37 aserciones en verde, y 0 rutas base literales en todo el servicio**
+
+Todo lo de abajo se leyó del árbol, con `git clone --depth 1 --filter=blob:none --sparse` sobre los dos upstreams —el
+canal que el pase 37 estableció como el único discriminador fiable, porque `curl` sobre `github.com` devuelve **403 para
+todo** y `api.github.com/repos/<x>` devuelve **200 con un cuerpo que niega el acceso**.
+
+### `SafeExamBrowser/seb-server` — Apache-2.0, `HEAD` `7f45689` (2026-04-01, Andreas Hefti)
+
+El `HEAD` del clon **coincide exactamente con el commit que el pase 43 declaró medido**, así que las dos mediciones son
+comparables fila por fila.
+
+| Magnitud | Pase 43 | Pase 44 | Nota |
+|---|---|---|---|
+| Constantes `*_ENDPOINT` en `gbl/api/API.java` | 42 | **55** | 41 literales + **14 compuestas**; las 14 que faltaban son **exactamente** las compuestas |
+| Operaciones en `operations.tsv` | 79 | **341** | `own` 135 · `inherited` 186 · `inherited-denied` 16 · `inherited-guarded` 4 |
+| Clases `@RestController` cubiertas | 4 | **31** | el total real del paquete `weblayer/api` |
+| Endpoints distintos | 4 | **30** | |
+| Escrituras (POST/PUT/DELETE/PATCH) | — | **170** | las 170 retenidas con `-32601` |
+| Aserciones de `test_gate.py` | 11 | **37** | 37/37 en verde |
+| Rutas base **literales** | — | **0 de 30** | 27 bajo `${…api.admin.endpoint}`, 3 bajo las de exam/LMS |
+
+**Valores de propiedad leídos de `src/main/resources` (no supuestos):**
+`sebserver.webservice.api.admin.endpoint` = **`/admin-api/v1`** ·
+`…api.exam.endpoint` = **`/exam-api`** ·
+`…api.exam.endpoint.discovery` = **`/exam-api/discovery`** ·
+`…api.exam.endpoint.v1` = **`/exam-api/v1`** ·
+`sebserver.webservice.lms.api.endpoint` = **`/lms-api/v1`** ·
+`sebserver.webservice.light.setup` = **`false`**.
+
+🔵 **Reproducible, no transcrito:** el pase deja `compose/code/sebserver-mcp-gate/extract_surface.py`, que regenera las
+dos tablas contra un checkout. Las cifras de arriba se vuelven a obtener con un comando.
+
+### `openedx/edx-platform` — AGPL-3.0, `HEAD` `c0048e1` (2026-10-02, Feanil Patel)
+
+🟢 **El `HEAD` es de hoy**, así que la medición de autoría del `v1` es sobre código vivo, no sobre un árbol viejo.
+
+| Pregunta de la acción 2 | Respuesta medida | Archivo |
+|---|---|---|
+| ¿Qué devuelve `create_xblock_response`? | **`{locator, courseKey}`** — y `locator` **es el usage key del bloque nuevo**, así que el recorrido del árbol es **recursable sin un GET extra** | `xblock_storage_handlers/view_handlers.py:894` |
+| Variantes del cuerpo | *clipboard*: +`static_file_notices` +`upstreamRef` (4 claves) · import de biblioteca v2: +`upstreamRef` +`static_file_notices` +`parent_locator` (5) · duplicado: las mismas 2 | ídem |
+| ¿Qué `category` acepta sin configuración extra? | En un **curso, ninguna restricción**: `XblockSerializer.category` es un `CharField(required=False)` **sin `choices`**. El **único** enum del árbol es `["html","problem","video"]` y sólo para `LibraryUsageLocator` | `rest_api/v0/serializers/xblock.py:29`, `view_handlers.py:867` |
+| ¿`?view=minimal` sólo en `retrieve`? | **Sí**, y además **no hay hijos que recorrer**: `get_block_info` lleva escrito *«children aren't being returned until we have a use case»* (`view_handlers.py:710`) y nunca pasa `include_child_info` | `rest_api/v1/views/xblock.py:275`, `view_handlers.py` |
+
+🔴 **Tres defectos del `v1` que un cliente descubre en producción si no se leen antes:**
+
+1. **El docstring del `v1` llama «tree-shaped» a la respuesta de `retrieve` y no lo es.** El handler es
+   `get_block_info`, que devuelve **un solo bloque**.
+2. **2 de los 6 campos que promete `?view=minimal` son claves que el handler no emite.**
+   `_MINIMAL_VIEW_FIELDS` lista `{id, display_name, category, children, has_children, studio_url}` y
+   `_apply_minimal_view` es un `project()` **de primer nivel**; como no hay `children` ni `has_children` en el cuerpo,
+   la vista mínima devuelve **a lo sumo 4 de 6**.
+3. **La única forma de obtener hijos de este endpoint es una combinación no documentada:**
+   `?fields=customReadToken&view=minimal`. Devuelve `children` como identificadores `{block_type, block_id}` —**un solo
+   nivel**— y **descarta `parent` en silencio**, porque `parent` no está en `_MINIMAL_VIEW_FIELDS`.
+
+⚠️ **Y un defecto de validación que conviene saber antes de escribir el cliente:** el serializer declara `category`
+**opcional** pero `_create_block_core` hace `request.json["category"]`, así que un POST sin `category` (y sin
+`staged_content="clipboard"`) **levanta `KeyError` → 500, no 400**.
+
+🟢 **El instrumento correcto para leer el árbol completo existe y no es el endpoint de xblock:**
+`GET /api/contentstore/v1/course_index/{course_id}` devuelve **`course_structure`**, el *outline* anidado, **en una sola
+llamada** (`CourseIndexSerializer.course_structure` es un `DictField`); y
+`GET /api/contentstore/v1/container/{usage_key}/children` devuelve **un nivel** de hijos con nombre y tipo.
+**Eso fija el costo de P55: leer el curso = 1 llamada; escribir = 1 POST por bloque**, secuencial bajando una rama
+(el hijo necesita el `locator` del padre) y **paralelizable entre hermanos**.
+
+### `issuebadge/mcp-server` — MIT, `HEAD` `ea249e4` (2026-09-26)
+
+**4 commits, y la forma de la historia es el dato:** tres commits del **2025-07-06** (README y subida de archivos) y
+**uno solo del 2026-09-26** que trae `v2.1.0` entero —worker remoto con OAuth 2.1, servidor stdio, plugins—. Catorce
+meses de silencio y una descarga: es **«ráfaga y silencio»**, el patrón que esta base nombró en el pase 36 con el *span*
+de releases, ahora visible en el árbol de git. **No está en npm** (`Not found`), así que ningún barrido por registro lo
+alcanza. Detalle completo y veredicto en `agents/trending.md`.
+
 ## 2026-10-02 (pase 43) — **el dato crudo de las tres acciones: 42 constantes de endpoint, 79 operaciones, 14 métodos obligatorios (no 12) y 22 % de clase, más 3 altas de estándar y 1 repo que no es legible**
 
 Todo lo de abajo se leyó **de primera mano** por `raw.githubusercontent.com` sobre la rama por defecto, verificada con
