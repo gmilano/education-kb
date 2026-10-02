@@ -97,6 +97,25 @@ updated: 2026-10-02
 > **124**–**131** y los gaps **72**–**77**.
 
 
+> **Pase 43 del 2026-10-02:** 🔴 **la tabla NO crece, y esta vez el motivo está medido en vez de supuesto.** El barrido
+> global obligatorio —cuatro búsquedas, con el año **calculado** (2026)— volvió a devolver **la capa genérica**
+> (OpenClaw, OpenHands, opencode, CrewAI, LangGraph) y **material didáctico *sobre* AI**. Los **dos** únicos candidatos
+> educativos que apareció, `SirhanMacx/Claw-ED` y `JuneYaooo/lineage-skill`, **ya estaban en esta base** (Claw-ED entró
+> en el pase 35). 🔵 **Eso es información, no silencio: el canal «agente» está saturado para esta industria**, y las altas
+> de los últimos pases vinieron todas del canal de **conector y de estándar**.
+> **El hallazgo de agente del pase existe y se deja FUERA de la tabla a propósito:** `issuebadge/mcp-server`
+> (**MIT**, *Copyright (c) 2025-2026 IssueBadge*, TypeScript) es **la primera puerta MCP de emisión de credenciales** que
+> ve esta KB — **4 tools** (`validate_key`, `get_all_badges`, `issue_badge`, y `create_badge` sólo en stdio), remoto por
+> `streamable-http` con OAuth 2.1 o local por `npx`, además **plugin de Claude Code** con *skill* del flujo
+> *listar → confirmar → emitir*, widget **MCP Apps** en `issue_badge`, y servidor remoto **auto-hospedable**.
+> 🔴 **Dos razones para no promoverlo, las dos con número o con hecho:** **(1) 0 ★ y 4 commits** — madurez sin evidencia;
+> **(2)** la emisión **depende de `app.issuebadge.com` y de una API key del proveedor**, así que **no implementa Open
+> Badges 3.0 como estándar** y **no sustituye nada en P84**. Se registra con la cifra a la vista en
+> `agents/trending.md` y en la tendencia **165**, para que el próximo pase lo **vuelva a medir** en vez de heredar un
+> juicio. 🔵 **Y el barrido por SDK de la capa de estándares dio una sola alta real** —`Simon-Initiative/lti_1p3`
+> (**MIT**, Elixir, Carnegie Mellon: **Platform y Tool**, no sólo Tool)— que va a `repos/foundations.md` porque es
+> biblioteca, no agente. Ver las tendencias **157**–**165** y los patrones **P93**–**P95**.
+
 ## Agentes y herramientas destacadas
 
 **🔵 Pase 40 del 2026-10-02 — el conteo se re-mide con la regla del pase 36 y hay que corregirlo: son 65 filas, no 52.** Aplicada la regla que el pase 36 estableció —**contar *slugs* distintos** entre el separador y la primera línea que no empieza con `|`— el archivo tiene **65 filas de datos y 65 slugs distintos: cero duplicados**. 🔴 **El encabezado declaraba «52 filas», y la diferencia no es de este pase: los pases 37 a 39 agregaron filas sin actualizar el número** (este pase agrega **2**: `mereos` y `@timadey/proctor`, las dos de *proctoring*). 🔵 **Es la séptima vez que esta KB se pelea con este número, y la lección ya no es sobre el instrumento —que funciona— sino sobre el hábito: la regla del pase 36 es correcta y nadie la estuvo corriendo.** La medición es programática y cuesta un comando; **conviene correrla en cada pase que toque la tabla, no cada cinco.** ✅ **Verificado en este pase: 65 filas / 65 slugs / 0 duplicados.**

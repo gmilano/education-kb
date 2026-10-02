@@ -1583,3 +1583,55 @@ Frappe GPL), así que la decisión real no cambia: **o se acepta el copyleft con
 escribió para RosarioSIS, openSIS y OpenEduCat), **o se construye sobre un sustrato permisivo genérico** —OFBiz— **y la
 funcionalidad educativa se desarrolla**, que es más caro y hay que cotizarlo como tal. **No hay ERP educativo permisivo y
 productivo: el gap sigue abierto después de siete barridos.**
+
+## 🧾 El barrido de verticales del pase 43 (2026-10-02) — **vacío de altas, y por eso se escribe**: la capa de examen queda completa y OpenSALT cambia de recomendación
+
+### ⚠️ El barrido salió sin altas, y el silencio se confunde con cobertura
+
+La búsqueda de plataformas (*open source platform education ERP CRM MIT Apache LMS SIS*) devolvió **exactamente lo que
+esta base ya tiene**, y conviene dejar los nombres escritos para que el próximo pase no repita el canal:
+**OpenEduCat** (LGPL-3.0, sobre Odoo), **ERPNext/Frappe**, **Moodle**, **Chamilo**, **RosarioSIS**, **Sakai**,
+**dotLRN**, **Open edX**, **Kolibri**, **BigBlueButton**, **H5P**. 🔵 **Las once estaban ya registradas**, con licencia
+verificada. **Cero altas** en la capa de plataforma, por enésimo pase consecutivo: **el canal de búsqueda de verticales
+está saturado para esta industria**, y lo que mueve esta capa son las **puertas de agente** sobre plataformas ya
+registradas, no plataformas nuevas.
+
+### 🟢 Lo que sí cambió: la capa de examen queda completa, horario **y** supervisión
+
+Con el *gateway* del pase 43, las dos plataformas institucionales de examen de esta base tienen **puerta de agente
+permisiva y probada**:
+
+| Capa de la vertical | Plataforma | Licencia | Puerta de agente | Estado |
+|---|---|---|---|---|
+| **Horarios, aulas, exámenes académicos** | UniTime | 🟢 **Apache-2.0** | `compose/code/unitime-mcp-gate/` | **P85** / **P92** — 26 tools, 13 expuestas |
+| **Supervisión de examen (*proctoring*, SEB)** | SEB Server | 🟢 **Apache-2.0** | `compose/code/sebserver-mcp-gate/` | 🟢 **P93 — 79 tools, 36 expuestas, 11/11 checks** |
+| **Validación de proveedor de proctoring de terceros** | SEB Server | 🟢 **Apache-2.0** | `compose/code/seb-proctoring-validator/` | 🟢 **Gap 90 cerrado — 21/21 checks** |
+
+🔵 **Por qué esto importa como vertical y no sólo como patrón:** es la primera capa de esta KB donde **las dos
+plataformas que un cliente necesita** —programar el examen y supervisarlo— **están las dos en Apache-2.0 y las dos con
+puerta de agente escrita**. Se propone como **capa**, no como integración pieza por pieza. Ver **P93** y **P94**.
+
+### 🔴 Corrección a la tabla de publicación de competencias: OpenSALT se adopta desde `develop` o no se adopta
+
+La sección de competencias de este archivo registra `opensalt/opensalt` (**MIT**, 45 ★) con la advertencia de que su
+**estable 3.2.0 (sept 2023) apunta a CASE v1.0** y que v1.1 está en `develop`. **Este pase midió `develop`** y el dato
+afila la recomendación en vez de cambiarla:
+
+* **5.027 commits** en `develop` y **135 issues abiertos**: 🟢 **el proyecto está activo**, no abandonado.
+* El README hoy lo presenta como **registro de LER** (*Learning and Employment Record*) —competencias, estándares,
+  credenciales, oportunidades de aprendizaje, empleos, *pathways*, emisores—, **no sólo** como editor de marcos. El
+  alcance declarado creció.
+* 🔴 **Pero lo activo y lo compatible con CASE 1.1 sigue estando en `develop`, no en el release.**
+
+🔵 **La consecuencia de cotización, en una línea:** **OpenSALT se adopta desde `develop`, asumiendo el costo de soportar
+una rama sin release, o no se adopta.** La regla del pase 14 —*acá no se elige por estrellas, se elige por fecha de
+certificación*— **se mantiene**: si lo que pesa es interoperar con herramientas certificadas recientes, la elección sigue
+siendo **OpenCASE** (Apache-2.0, certificado v1.1) o **`compeito`** (Apache-2.0), y OpenSALT entra por **autoría y
+*crosswalk*** con interfaz madura cuando el equipo del cliente ya es PHP.
+
+### ⚠️ Y la capa de analítica, sin cambio de signo: Caliper no se instrumenta leyendo la referencia oficial
+
+`IMSGlobal/caliper-php` **no es públicamente legible** (404; repos de miembros *Contributing*/*Affiliate*). El camino
+legible es el fork **LGPL-3.0** de la U. de Michigan, `tl-its-umich-edu/caliper-php-public`, **ya registrado en esta base
+desde el pase 9**. Para la vertical eso significa: **instrumentar Caliper traslada costo al integrador**, y la pieza
+disponible **no es permisiva**. Ver la tendencia **163**.

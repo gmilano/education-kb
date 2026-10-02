@@ -1874,6 +1874,32 @@ en más de 1.000 universidades** de EE. UU.: 🔵 **el incumbente ya está adent
 🟢 **El activo de adopción concreto de la región: UniTime es Apereo**, el mismo consorcio de Sakai y Opencast que esta KB
 ya lista. **Donde hay instalación Apereo hay cliente para P88 sin migración.**
 
+### Agregado en el pase 43 del 2026-10-02 — el barrido regional **no** se agotó: las cuatro regiones devolvieron dato nuevo, y en North America el dato es legislativo y ya tiene número
+
+🟢 **Primera vez en varios pases que las cuatro regiones devuelven material nuevo**, así que conviene decirlo antes de
+los datos: **ninguna de las cuatro quedó vacía en este pase**, y lo que cambió en tres de ellas es **regulatorio**, no
+de tamaño de mercado. La cifra global sigue siendo la misma de los pases anteriores (**USD 10,6 B en 2026 → USD 42,48 B
+en 2030, CAGR 41,5 %**) y **no se vuelve a contar acá**.
+
+**Lo nuevo de North America, del período legislativo 2026:**
+
+| Dato | Valor | Por qué cambia una propuesta |
+|---|---|---|
+| Proyectos de ley sobre AI en educación | **134 proyectos en 31 estados** (sesión 2026) | Ya no es «hay movimiento regulatorio»: es **densidad estado por estado**, y un despliegue multi-estado necesita matriz, no un único expediente |
+| California **AB 1159** | **Prohíbe usar datos de alumnos para entrenar modelos de AI** | 🔴 **Es un bloqueo de compra, no una recomendación.** Cualquier proveedor cuyo contrato permita entrenar con datos de alumnos queda fuera en California |
+| Idaho **SB 1227** | Exige protecciones de privacidad de datos en herramientas de AI escolares | Suma a AB 1159: la cláusula de datos pasa a ser **entregable del expediente**, no del área legal del cliente |
+| Oklahoma y Maryland | Exigen **supervisión humana** y **prohíben** que la AI tome decisiones de alto impacto sobre alumnos | 🔵 **Es requisito de producto:** hace falta un **registro de decisión revisable**, que es software, no política |
+| Georgia y Mississippi | Exigen créditos de computación **que incluyan AI** | Demanda curricular con fecha, hacia fines de la década |
+| Federal: **H.R. 8747** | *K-12 AI Literacy and Readiness Act of 2026*, avanzó en **markup del 21 de julio de 2026** del Comité de Educación y Trabajo de la Cámara | Avanzó en comisión, **no es ley**: se cita como dirección, nunca como obligación vigente |
+| Distrito, como señal de implementación | **Katy ISD**: prohíbe chatbots de AI generativa para **K-6**, con acceso escalonado hasta grado 12, vigente **ciclo 2026-27** | El patrón real de compra es **por franja de edad**, no por institución entera |
+
+🔵 **La oportunidad, dicha en términos de lo que se vende:** la adopción ya está (**86 %** de organizaciones educativas
+con AI generativa en uso administrativo e instruccional), así que **el trabajo nuevo no es adoptar: es auditar lo
+adoptado**. Dos servicios concretos salen de la tabla: **(1)** diligencia de proveedores contra AB 1159 —qué contrato
+permite entrenar con datos de alumnos y qué no—, y **(2)** el **registro de decisión revisable** que piden Oklahoma y
+Maryland, que es exactamente el artefacto que el patrón de credencial firmada y el *gateway* de partición de tools de
+esta KB ya saben producir.
+
 ### EMEA
 
 #### Agregado en el pase 42 del 2026-10-02 — la fuente primaria está identificada y BLOQUEADA, y el dinero público tiene número
@@ -2788,6 +2814,34 @@ propio `/oauth`, su `/institution` y su telemetría (`/seblog`) **dentro de su p
 el video del examen.** Es el argumento exacto que la búsqueda regional devuelve como práctica de los distritos con
 requisitos estrictos de residencia (auto-hospedar modelos abiertos en lugar de llamar a una API).
 
+### Agregado en el pase 43 del 2026-10-02 — 🔴 **corrección a la tendencia 133: el reloj del EU AI Act se movió, y se movió para adelante**
+
+La **tendencia 133** registró «los dos relojes regulatorios que mandan en 2026 ya corren». **Para el EU AI Act eso hay
+que corregirlo**, y la corrección cambia el *timing* de una propuesta, así que va con la fecha a la vista.
+
+| | Lo que esta KB tenía | Lo medido en este pase |
+|---|---|---|
+| Entrada en vigor | Agosto 2024 | ✅ Sin cambio: **agosto de 2024** |
+| Aplicación general | **2 de agosto de 2026** | ✅ Sin cambio como fecha general |
+| **Alto riesgo autónomo** | *(se leía como vigente con la aplicación general)* | 🔴 **2 de diciembre de 2027** |
+| **Alto riesgo embebido en producto regulado** | *(ídem)* | 🔴 **2 de agosto de 2028** |
+
+**Por qué importa para educación y no es una nota al pie:** el AI Act clasifica como **alto riesgo** justamente los usos
+educativos que más se cotizan — **acceso y admisión, evaluación de estudiantes y corrección de exámenes**. Esos son los
+que se corrieron a **2027-2028**, no los que vencieron en agosto de 2026.
+
+🔵 **Cómo cambia el argumento comercial, en una línea:** deja de ser *«cumplí ya o no despliegues»* y pasa a ser
+**«desplegá primero la capa de consecuencia leve y armá el expediente de conformidad mientras corre el plazo»**. La capa
+de consecuencia leve está identificada y es la misma que esta KB viene recomendando: **administración, apoyo al docente
+y chatbots de información a familias** —que no deciden nada y por eso satisfacen el AI Act y la guía de UNESCO sin
+expediente de alto riesgo—. Las obligaciones que sí hay que construir para 2027 están nombradas: **gestión de riesgo,
+gobernanza de datos, supervisión humana, transparencia y evaluación de conformidad previa al despliegue**.
+
+⚠️ **Y lo que este pase NO pudo verificar, declarado para no perderlo:** las fechas revisadas se leyeron de fuentes
+secundarias de análisis regulatorio, **no del texto consolidado en EUR-Lex**. La acción está en el bloque de acciones
+del pase 44. Sigue también sin alcanzarse `coe.int` (la *2nd Working Conference* del Consejo de Europa), que es la
+primaria regulatoria educativa de EMEA que este entorno no resuelve.
+
 ### APAC
 
 #### Agregado en el pase 42 del 2026-10-02 — soberanía como eje de compra, y la brecha de gobernanza con número
@@ -3574,6 +3628,32 @@ en APAC el modelo lo elige la política industrial del país, no el proveedor.
 integración de examen del lado servidor. **La mitad servidor de esta capa, en las dos rutas medidas, es
 norteamericana (Open edX) o europea (ETH Zürich).** **La oportunidad APAC es de adopción y localización, no de
 *upstream*.**
+
+### Agregado en el pase 43 del 2026-10-02 — APAC pasó de *guidance* a **estatuto** en 2026, y hay un texto que habla de **agentes** por nombre
+
+El cambio de este pase en APAC no es de tamaño de mercado: es que **tres instrumentos dejaron de ser orientación y
+empezaron a ser derecho vigente, los tres en 2026**.
+
+| Jurisdicción | Instrumento | Estado medido |
+|---|---|---|
+| **Corea del Sur** | *Framework Act on the Development of Artificial Intelligence and the Creation of a Foundation for Trust* (**AI Framework Act** / *AI Basic Act*) | 🔴 **Vigente desde el 22 de enero de 2026** |
+| **Vietnam** | **Law No. 134/2025/QH15 on Artificial Intelligence** | 🔴 **Vigente desde el 1 de marzo de 2026** |
+| **Singapur** | Marco de la **IMDA para AI agéntica** | 🟢 **Emitido el 22 de enero de 2026** |
+| **Australia** | **Australian AI Safety Institute** | Anunciado en noviembre de 2025, operativo a comienzos de 2026 |
+
+🔵 **El dato con más valor de los cuatro es el de Singapur, y no por el tamaño del mercado:** es **el primer texto de
+regulador de esta KB que trata la AI *agéntica* como categoría propia**, con nombre. Todo lo demás que esta base
+registró en cuatro regiones regula *sistemas de AI*; una propuesta agéntica se defendía por analogía. **Ahora hay un
+texto que se cita directamente**, y es el que conviene citar en cualquier propuesta de agentes de la región.
+
+🔴 **Y la consecuencia operativa de Corea y Vietnam:** APAC **deja de admitir un expediente regional único**. Dos
+estatutos nacionales con fechas distintas y alcances distintos significan **conformidad país por país**, lo que cambia
+el costo de un *rollout* regional respecto de lo que esta KB asumía.
+
+**Contexto de mercado, sin promediar con la cifra global:** el mercado AI de Asia-Pacífico ronda **USD 102 B a marzo de
+2026**; en AI aplicada a educación los incumbentes nombrados son **Google, Microsoft, IBM, Pearson y Byju's**, con
+**China, India y Japón** concentrando la inversión. ⚠️ Esa cifra de **USD 102 B es de AI en general, no de AI en
+educación** — no se debe comparar con los USD 10,6 B globales del sector educativo.
 
 ### LATAM
 
@@ -4625,6 +4705,41 @@ supuesta: se probaron los 8 nombres de npm y el índice completo de PyPI, y las 
 pase 40 con resultado vacío en las cuatro regiones.** 🔵 **Para Globant eso es una oportunidad de *upstream*, no una
 carencia: la primera puerta MCP de UniTime no tiene competencia de ninguna región, y publicarla desde LATAM es una
 posición de origen que esta base no tiene en ninguna otra capa.**
+
+### Agregado en el pase 43 del 2026-10-02 — LATAM tiene por fin evidencia institucional de primera magnitud, y **mueve la advertencia de método** de esta KB
+
+Esta base viene arrastrando una advertencia: *«las fuentes primarias de LATAM siguen bloqueadas»* y la evidencia regional
+era la más flaca de las cuatro. **Este pase la mueve** — no la borra, la mueve — con un estudio que es el más grande que
+vio esta KB para la región.
+
+**AI in Higher Education LATAM Survey 2026**, del **Digital Education Council**, en alianza con el **Institute for the
+Future of Education del Tecnológico de Monterrey**, con apoyo de **AIGEN** y la **Red de Innovación Educativa (RIE360)**:
+
+| Dato | Valor |
+|---|---|
+| Respuestas | 🟢 **más de 30.000** |
+| Instituciones | **29 instituciones de educación superior de LATAM** |
+| Alumnos que usan AI activamente | **92 %** |
+| Docentes que usan AI activamente | **79 %** |
+| Docentes que esperan usar AI a futuro | **94 %** |
+| Alumnos que temen el mal uso **por parte de sus pares** | 🔴 **61 %** |
+
+🔵 **La lectura que cambia la oportunidad, y es contraintuitiva:** con **92 % / 79 %**, LATAM **no tiene problema de
+adopción** — tiene la brecha alumno-docente más angosta de las cuatro regiones de esta KB. **El cuello de botella es
+gobernanza e integridad académica**, y el **61 %** lo dice con número: la preocupación dominante de los alumnos no es la
+herramienta, es **la falta de reglas claras sobre el uso de los demás**. Lo que se vende en LATAM, entonces, **no es
+habilitación de AI: es marco de integridad verificable** —y eso es justamente donde esta KB tiene piezas: credencial
+firmada, registro de evidencia y partición de herramientas.
+
+**Y el mapa regulatorio, que sigue fragmentándose a velocidades distintas:** proyecto de ley de AI de **Brasil**, marco
+de **Chile**, **CONPES** de AI de **Colombia** y reglas sectoriales de **México**, cada uno en su tiempo. 🟢 **El dato
+accionable con fecha:** la **ANPD de Brasil** tiene un **Sandbox Regulatorio Piloto de AI y protección de datos
+corriendo hasta diciembre de 2026** — es un **ámbito nombrado y con plazo** para colocar un piloto conforme, y es la
+única ventana de ese tipo que esta base encontró en la región.
+
+⚠️ **La advertencia de método se atenúa pero no se levanta:** el DEC y el Tec de Monterrey **sí** son alcanzables desde
+este entorno. Las primarias *de gobierno* (ANPD, CONPES, los textos legislativos) **siguen** sin leerse de primera mano
+acá, así que las fechas regulatorias de esta sección son **de segunda fuente** y están marcadas como tales.
 
 ## Posicionamiento Globant
 

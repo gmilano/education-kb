@@ -9,6 +9,86 @@ updated: 2026-10-02
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 > No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
 
+## 2026-10-02 (pase 43) — el pase que **ejecuta las tres acciones del pase 42** y encuentra que **la premisa de una cuarta estaba invertida**: el `v0` de Open edX que esta base recomendaba está **deprecado en favor del `v1`**
+
+**Las tres acciones del pase 42 se ejecutaron, y dos dejaron código que compila y corre en este repositorio:** la puerta
+MCP de **SEB Server** está escrita y **probada** (`11/11 checks`), el **costo** de implementar un proveedor de proctoring
+está **medido método por método**, y el **gap 90** pasó de advertencia a **pieza con 21/21 checks en JDK puro**. Además se
+cerró el **gap 50**, cuya premisa resultó falsa.
+
+### 🔴 La corrección que encabeza el pase, porque invierte una recomendación
+
+El handoff decía que había que medir el `v0` de *authoring* de Open edX *«que son los que el propio repo recomienda sobre
+el `v1` experimental»*. **Es al revés.** El encabezado de
+`cms/djangoapps/contentstore/rest_api/v0/views/xblock.py` sobre `master` dice **`(DEPRECATED)`** y *«superseded by
+`XblockViewSet` … Use `/api/contentstore/v1/xblock/` going forward. These v0 endpoints will be removed in a future
+release»*, y cada método emite `DeprecationWarning`. **El `v1` es el canónico**, con los ADR de la FC-0118: sobre de
+error estandarizado, autenticación explícita, `?view=minimal` y tag OpenAPI `openedx-platform-sdk` para generar SDK.
+Tendencias **157** y **158**; patrón **P95**.
+
+### 🟢 El hallazgo de agente del pase, y por qué **no** entra a la tabla
+
+`issuebadge/mcp-server` — **MIT** (*Copyright (c) 2025-2026 IssueBadge*), TypeScript — es **la primera puerta MCP de
+emisión de credenciales** que ve esta base. **4 tools**: `validate_key`, `get_all_badges`, `issue_badge` y, sólo en stdio,
+`create_badge`. Corre remoto (`streamable-http`, OAuth 2.1 además de API key) o local por `npx`; es además **plugin de
+Claude Code** con una *skill* que enseña el flujo *listar → confirmar → emitir*; `issue_badge` trae widget **MCP Apps**;
+el servidor remoto es **auto-hospedable**.
+
+🔴 **Y lo que lo descalifica para el camino de estándar:** el código es MIT, pero **la emisión depende de
+`app.issuebadge.com` y de una API key del proveedor**. **No implementa Open Badges 3.0 como estándar**: emite
+credenciales **del producto**. Para **P84** —cerrar el curso con un Open Badges 3.0 **firmado**— **no sustituye nada**.
+
+⚠️ **Madurez, con la cifra a la vista: 0 ★ y 4 commits.** **Por eso no entra a `agents/top.md`** y se registra acá, con el
+número visible, para que el próximo pase lo vuelva a medir en vez de heredar un juicio. Tendencia **165**.
+
+### La tabla de `agents/top.md` no cambia, y esta vez el motivo está medido
+
+**El barrido global volvió a devolver la capa genérica** (OpenClaw, OpenHands, opencode, CrewAI, LangGraph) y **material
+didáctico *sobre* AI**. Los dos únicos candidatos educativos que devolvió —`SirhanMacx/Claw-ED` y
+`JuneYaooo/lineage-skill`— **ya estaban en esta base**: Claw-ED entró en el **pase 35**. 🔵 **Eso es información, no
+silencio: el canal de búsqueda global está saturado para esta industria**, y las altas reales de los últimos pases
+vinieron todas del canal de **conector y estándar**, no del de «agente».
+
+### El barrido por SDK confirma la ausencia de MCP en la capa de estándares, por el canal correcto
+
+Leyendo el **README crudo** de cada pieza y contando menciones de `MCP`:
+
+| Pieza | Licencia (del `LICENSE`) | Menciones de MCP |
+|---|---|---|
+| `Cvmcosta/ltijs` | **Apache-2.0** ✅ | **0** |
+| `Simon-Initiative/lti_1p3` | **MIT** ✅ | **0** |
+| `opensalt/opensalt` | **MIT** ✅ | **0** |
+| `1EdTech/digital-credentials-public-validator` | **Apache-2.0** ✅ | **0** |
+| `luisgf/openbadgeslib` | 🔴 **LGPL-3.0** | **0** |
+
+🟢 **El gap 42 queda cerrado por una vía que sí lo examinó.** **CaSS sigue siendo la única pieza de estándar educativo de
+esta base con puerta nativa de agente.** ⚠️ Y la trampa de fork reapareció: la búsqueda devolvió `kristofb/ltijs` antes
+que el canónico `Cvmcosta/ltijs`.
+
+🔴 **Y el dato honesto del barrido: de esas cinco piezas, esta base ya tenía cuatro.** La **única alta real** es
+`Simon-Initiative/lti_1p3` (**MIT**, Elixir, Carnegie Mellon) — y entra por algo específico: **hace el lado PLATAFORMA
+además del lado Tool**, cuando toda la capa LTI de esta KB era *tool provider*. `opensalt` (ya desde el pase 14),
+`digital-credentials-public-validator` y `openbadgeslib` entran como **confirmaciones con dato nuevo**, no como altas.
+
+### Lo demás que dejó el pase, en una línea cada cosa
+
+- 🟢 **Gap 86 CERRADO** — `compose/code/sebserver-mcp-gate/`: **79** tools, **36** expuestas, **37** escrituras con
+  `-32601`, **0** llegadas al upstream. La capa de examen queda completa (horario **y** supervisión). **P93**.
+- 🟢 **Gap 90 CERRADO con código** — `compose/code/seb-proctoring-validator/`: el validador de upstream acepta un
+  proveedor nuevo con **todos** los campos vacíos; el reemplazo lo rechaza y **falla cerrado** ante un tipo desconocido.
+  **21/21 checks, sin instalar ninguna dependencia.** Tendencia **161**.
+- 🔴 **`RemoteProctoringService` tiene 14 métodos obligatorios, no 12** — y los 14 son el **22-23 %** de cada clase de
+  referencia (Jitsi **481** líneas, Zoom **912**). **Las dos firman tokens con HMAC-SHA256 a mano.** Tendencia **160**,
+  patrón **P94**.
+- 🔴 **Los controladores *read-only* de SEB Server conservan las rutas de escritura** y rechazan recién en el cuerpo: el
+  descubrimiento de rutas **no sirve** para armar una allowlist. Tendencia **159**.
+- 🔴 **La premisa del handoff de que «los SDK previos de Caliper siguen publicados» es falsa** (`caliper-php` da 404; es
+  de miembros). 🟢 **Y la respuesta ya estaba en esta base:** el fork LGPL-3.0 de la U. de Michigan
+  `tl-its-umich-edu/caliper-php-public`, registrado desde el pase 9. **Antes de un barrido externo, consultar la base.**
+  Tendencia **163**.
+- 🔴 **EU AI Act: las fechas de alto riesgo se corrieron** a **2 dic 2027** y **2 ago 2028**, lo que corrige la tendencia
+  133. ⚠️ De segunda fuente — verificarlo es la acción 3 del pase 44.
+
 ## 2026-10-02 (pase 42) — el pase que **ejecuta las tres acciones del pase 41, las tres por ejecución y no por lectura**, y encuentra que **la ruta MPL-2.0 que el pase 41 dejó como la preferible cuesta MÁS código que la AGPL, y que su única obligación de publicar es UN valor de enum**
 
 **Las tres acciones del pase 41 se ejecutaron: la puerta MCP de UniTime está escrita y PROBADA (23 aserciones, 23 en verde),

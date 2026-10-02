@@ -2678,3 +2678,64 @@ LATAM eso es exactamente el tipo de dato que conviene saber antes y no después.
   fuente o de tarball publicado**, no de protocolo. El *daemon* de Docker no corre en este entorno (**gap 80**).
 - **Dos de las ocho declaran licencia sólo en el manifiesto del registro.** Entran con reserva explícita, no como
   equivalentes a las que tienen `LICENSE` textual (tendencia 129).
+
+## 🧭 El barrido por SDK del pase 43 — **una alta real, dos confirmaciones con dato nuevo, y una premisa del handoff refutada** (2026-10-02)
+
+Este pase ejecutó la acción que el handoff pedía: **re-medir por SDK las ausencias que esta base había declarado por
+etiqueta** (tendencia 73), con el método *estándar + `SDK`/`client`/`library` + abrir el README crudo y buscar «MCP»
+adentro*.
+
+🔵 **El resultado honesto, dicho antes de la tabla: de las piezas que el barrido devolvió, esta base ya tenía casi
+todas.** Eso **no** es un barrido fallido —es la confirmación de que la capa de estándares de esta KB está saturada— pero
+sí obliga a escribirlo como confirmación y no como alta, porque una alta inventada es peor que un pase sin altas.
+
+**Las licencias se leyeron del archivo `LICENSE`, no del README ni del manifiesto** (tendencia 129).
+
+### 🟢 La única alta real del barrido
+
+| Repo | Licencia (del `LICENSE`) | ★ / forks | Lenguaje | Por qué entra |
+|---|---|---|---|---|
+| [`Simon-Initiative/lti_1p3`](https://github.com/Simon-Initiative/lti_1p3) | 🟢 **MIT** (*Copyright (c) 2021 Carnegie Mellon University*) | **16** / 4 | Elixir | 🔵 **Hace el lado PLATAFORMA además del lado Tool, y eso es la rareza.** Toda la capa LTI que esta base tenía es *tool provider* —`ltijs` lo es por diseño, `pylti1p3` también—. Esta biblioteca implementa **Platform y Tool**: registros, *deployments* y validación de *launch* del lado tool, y creación de instancia de plataforma con redirección de autorización del lado platform. Es lo que hace falta para construir **el lado LMS**, no el lado de la herramienta. Del **Simon Initiative** de Carnegie Mellon (la gente de OLI/Torus) |
+
+### Las dos confirmaciones, con el dato nuevo que aportan
+
+| Repo | Lo que esta base ya tenía | 🔵 El dato nuevo de este pase |
+|---|---|---|
+| [`opensalt/opensalt`](https://github.com/opensalt/opensalt) — **MIT**, 45 ★ | Desde el **pase 14**, con la advertencia correcta: *estable **3.2.0** (sept 2023) apunta a **CASE v1.0**; v1.1 en `develop`* | **`develop` tiene 5.027 commits y 135 issues abiertos: el proyecto está activo**, y el README hoy lo presenta como **registro de LER** (*Learning and Employment Record*) —competencias, credenciales, *pathways*, empleos, emisores—, no sólo como editor de marcos. 🔴 **La divergencia estable/`develop` es el dato que se cotiza:** lo activo y lo compatible con CASE 1.1 **no está en el release**. La recomendación del pase 14 —*elegir por fecha de certificación, no por estrellas*— **se mantiene y se afila**: OpenSALT se adopta desde `develop`, con el costo de soporte que eso implica, o no se adopta |
+| [`1EdTech/digital-credentials-public-validator`](https://github.com/1EdTech/digital-credentials-public-validator) — **Apache-2.0** | Registrado como validador de **Open Badges + CLR** | **El README dice *«primarily a validator for Open Badges 3.0»***, y que **acepta además OB 2.0**. 🔵 Eso lo precisa: esta base sabía que **CaSS implementa OB 2.0, no 3.0**, y ahora el validador de la credencial de **P84** queda nombrado como **de 3.0 primero**. **17 ★ / 12 forks** |
+
+### 🔴 La premisa del handoff que este pase refuta
+
+El handoff del pase 42 daba por bueno que, aunque **Caliper dejó de ser open source el 2023-06-17**, *«los SDK previos
+siguen publicados»*. **Es falso para el canal público:**
+
+* `IMSGlobal/caliper-php` → **404** en `raw.githubusercontent.com`, en `master` **y** en `main`; también **404** bajo
+  `1EdTech/caliper-php`.
+* ⚠️ El paquete **sí** figura en Packagist (`imsglobal/caliper`), que es exactamente la asimetría de la tendencia 127:
+  **el registro confirma el nombre pero no entrega el código.**
+
+🟢 **Y la respuesta ya estaba en esta base, que es lo que vuelve útil la refutación:** la implementación PHP de Caliper
+que **sigue siendo legible** es el fork de la **Universidad de Michigan**,
+[`tl-its-umich-edu/caliper-php-public`](https://github.com/tl-its-umich-edu/caliper-php-public) — ⚠️ **LGPL-3.0**, no
+permisiva, ya registrada en `agents/top.md` desde el pase 9. **Instrumentar Caliper no se cotiza contra el repo oficial:
+se cotiza contra el fork LGPL o contra la especificación, o se afilia al cliente.**
+
+**Y la colisión de nombre, la séptima de esta KB:** buscar «Caliper» devuelve antes **`llnl/Caliper`** (instrumentación y
+*profiling* de performance) y **`google/caliper`** (microbenchmarking de Java, **deprecado**). **Ninguno** tiene que ver
+con analítica de aprendizaje.
+
+### 🟢 Lo que sí es medición nueva: MCP, contado en el README crudo de cada pieza
+
+| Pieza | Licencia (del `LICENSE`) | Menciones de `MCP` / *model context protocol* |
+|---|---|---|
+| `Cvmcosta/ltijs` | **Apache-2.0** ✅ | **0** |
+| `Simon-Initiative/lti_1p3` | **MIT** ✅ | **0** |
+| `opensalt/opensalt` | **MIT** ✅ | **0** |
+| `1EdTech/digital-credentials-public-validator` | **Apache-2.0** ✅ | **0** |
+| `luisgf/openbadgeslib` | 🔴 **LGPL-3.0** | **0** |
+
+🟢 **El gap 42 queda cerrado por un canal que sí lo examinó**, y no por agotamiento de etiquetas: **CaSS sigue siendo la
+única pieza de estándar educativo de esta base con puerta nativa de agente.**
+
+⚠️ **Y la trampa de fork volvió a aparecer** (tendencia 132): la búsqueda devolvió **`kristofb/ltijs`** antes que el
+canónico **`Cvmcosta/ltijs`** —el que referencia la documentación del propio proyecto—, y es el canónico el que se midió.

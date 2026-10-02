@@ -4009,6 +4009,327 @@ que esta base ya había publicado.**
 | **40** (el cartucho MCP de CaSS) / **60** (mitad QTI) / **61** (curso origen vacío) / **68** / **80** (sin Docker) | 🔴 **ABIERTOS, sin avance deliberado** | Las tres acciones del 41 tenían prioridad. **El 80 no se reintenta: el pase 39 dejó escrito «no insistir por esta vía»** |
 | **26** (capa predictiva) | 🟢 **SIN CAMBIO — sigue reformulado a favor** | `datakind/student-success-tool` (MIT) sigue siendo la respuesta, y el barrido de North America de este pase **refuerza por qué**: sin regulador federal, *«humans in the loop by design»* es argumento comercial |
 
+## Nota de método del pase 43 (2026-10-02) — el pase que ejecutó las tres acciones **y encontró que la premisa de una cuarta estaba invertida**
+
+**Lo que se hizo:** el barrido obligatorio completo —**cuatro búsquedas globales y cuatro regionales**, con el año
+**calculado** (`date +%Y` → **2026**)— más **las tres acciones que el pase 42 dejó escritas**. 🟢 **Las tres se
+ejecutaron y las tres dieron resultado**, dos de ellas con código que compila y corre en este repositorio. Y además se
+cerró **el gap 50**, que venía de un bloque de acciones anterior y cuya premisa resultó **falsa**.
+
+🔴 **La corrección que encabeza el pase, porque cambia una cotización:** el handoff que dejó el gap 50 decía que había
+que medir el `v0` de *authoring* de Open edX **«que son los que el propio repo recomienda sobre el `v1` experimental»**.
+**Es al revés.** Ver la tendencia **157**.
+
+## 157. El `v0` de *authoring* de Open edX está **deprecado en favor del `v1`**, y esta base lo tenía al revés — la banda de deprecación es la fuente, no la memoria (agregado en el pase 43 del 2026-10-02)
+
+El archivo `cms/djangoapps/contentstore/rest_api/v0/views/xblock.py`, leído de primera mano sobre `master` por
+`raw.githubusercontent.com` el **2026-10-02**, abre así:
+
+```
+Public rest API endpoints for the CMS API — v0 xblock (DEPRECATED).
+
+.. deprecated::
+    These views are superseded by ``XblockViewSet`` in
+    ``cms.djangoapps.contentstore.rest_api.v1.views.xblock``.
+    Use ``/api/contentstore/v1/xblock/`` going forward.
+    These v0 endpoints will be removed in a future release.
+```
+
+Y cada método del `v0` emite `warnings.warn(_DEPRECATION_MSG, DeprecationWarning)`.
+
+🔵 **El `v1` no es «el experimental»: es el canónico, y trae más de lo que el `v0` tenía.** `XblockViewSet` está
+construido sobre los **ADR de la FC-0118** y eso es lo que se cotiza:
+
+| Lo que aporta el `v1` | ADR | Por qué se cotiza |
+|---|---|---|
+| CRUD consolidado en un `ViewSet` vía `DefaultRouter` | **0028** | Un solo recurso, cinco verbos: `POST /`, `GET/PUT/PATCH/DELETE /{usage_key}/` |
+| Sobre de error **estandarizado** | **0029** | El manejo de error del cliente se escribe una vez, no por endpoint |
+| `authentication_classes` y `permission_classes` explícitos | **0026**, **0034** | `JwtAuthentication` + `SessionAuthenticationAllowInactiveUser`; **sin** `BearerAuthentication` ni `OAuth2Authentication` |
+| **`?view=minimal`** | **0036** | Devuelve sólo `id`, `display_name`, `category`, `children`, `has_children`, `studio_url`. 🔵 **Es el que hace barato recorrer el árbol de un curso**: la respuesta completa trae `data`, `metadata`, `student_view_data` y OLX |
+| Tag OpenAPI **`openedx-platform-sdk`** | **0027** | El `ViewSet` está declarado para **generación de SDK**, no sólo para Swagger |
+
+⚠️ **La trampa que viene con el `v1` y hay que escribir en la propuesta:** `?fields=` **no** es un selector de subconjunto
+de campos como sugiere el ADR 0036. Es un **pass-through legacy** que selecciona *tipo de respuesta*
+(`?fields=graderType`, `?fields=ancestorInfo`, `?fields=customReadToken`). El repo decidió **no** reutilizar el nombre
+para no romper clientes, y lo documenta como deprecado. **Quien use `?fields=` esperando ADR 0036 recibe otra cosa.**
+
+🔵 **La lección de método, que es la que vale más allá de Open edX:** esta base tenía la recomendación invertida porque la
+tomó de prosa de documentación y no del **encabezado del módulo**. La banda `.. deprecated::` y el `DeprecationWarning`
+son **datos del árbol**, con la misma autoridad que el archivo `LICENSE` en la tendencia 129. **Se leen antes de elegir
+versión de API.**
+
+## 158. **Gap 50, CERRADO:** en Open edX la sección, la subsección, la unidad y el componente son **el mismo endpoint** — el árbol vive en el cuerpo, no en la ruta (agregado en el pase 43 del 2026-10-02)
+
+La pregunta del gap 50 era si el *authoring* por HTTP cubre **crear/actualizar curso, secciones y componentes**. Medido
+endpoint por endpoint sobre `master`, la respuesta es de tres partes y conviene darla separada porque **se cotiza
+distinto**:
+
+| Nivel | ¿Cubierto por HTTP? | Dónde |
+|---|---|---|
+| **El curso** | 🔴 **No en el árbol versionado** (ni `v0` ni `v1`) | ✅ **Sí en la vista legacy**: `POST /course/`, como ya midió el pase 32. El `v1` sólo tiene **`course_rerun`**, que **clona** un curso existente |
+| **Sección (`chapter`), subsección (`sequential`), unidad (`vertical`)** | 🟢 **Sí** | `POST /api/contentstore/v1/xblock/` |
+| **Componente (bloque hoja)** | 🟢 **Sí** | `POST /api/contentstore/v1/xblock/` — **el mismo endpoint** |
+
+🔵 **El hallazgo que simplifica el *wiring*, y es el que esta base no tenía escrito:** **no hay un endpoint por nivel de
+jerarquía.** En Open edX la sección, la subsección y la unidad **son XBlocks**, igual que un componente, así que los
+cuatro se crean con la misma llamada. Lo que distingue un nivel de otro son **dos campos del cuerpo**, leídos del
+`XblockSerializer`:
+
+* **`parent_locator`** — de quién cuelga. El `ViewSet` lo extrae del cuerpo crudo (`request._request.body`, no
+  `request.data`, para no consumir el *stream* WSGI) y de ahí deriva el `course_key` **antes** de que DRF corra los
+  permisos.
+* **`category`** — qué es (`chapter`, `sequential`, `vertical`, o el tipo de bloque).
+
+El serializer es **estricto** (`StrictSerializer`: tipos validados y **ningún campo inesperado admitido**) y los campos
+disponibles son `id`, `parent_locator`, `display_name`, `category`, `data`, `metadata`, `has_changes`, `children`,
+`fields`, `has_children`, `edited_on`, `published` y el grupo `video_sharing_*`.
+
+🔵 **Consecuencia de cotización, en una línea:** generar un curso entero —esqueleto y contenido— es **un solo cliente de
+un solo endpoint recorriendo un árbol**, más **una** llamada legacy para crear el curso. El gap 50 **no era un bloqueo
+ni un desvío de versión**: era una pregunta mal planteada, porque suponía una ruta por nivel.
+
+## 159. Los controladores *read-only* de SEB Server **conservan las rutas de escritura** y rechazan recién en el cuerpo: el descubrimiento de rutas no sirve para construir una allowlist (agregado en el pase 43 del 2026-10-02)
+
+Medido en `webservice/weblayer/api/ReadonlyEntityController.java` sobre `master`:
+
+```java
+@Override
+@RequestMapping(method = RequestMethod.PUT, ...)
+public T savePut(@Valid @RequestBody final T modifyData) {
+    throw new AccessDeniedException(ONLY_READ_ACCESS);
+}
+```
+
+Las tres escrituras heredadas (`PUT`, `POST`, `DELETE`) están **sobrescritas conservando la anotación
+`@RequestMapping`** y lanzando `AccessDeniedException("Only read requests available for this entity")`.
+
+🔴 **Por qué es una trampa y no una curiosidad:** la ruta **existe y se anuncia**. Un generador de manifiesto MCP que lea
+las anotaciones —que es la forma obvia de automatizarlo— **emite tools de escritura que parecen legítimas** sobre una
+entidad que es de sólo lectura. El rechazo ocurre **en tiempo de ejecución, adentro del controlador**, no en la capa de
+ruteo.
+
+🔵 **La conclusión de diseño, y es la que justifica el patrón P85 en vez de sólo usarlo:** **la allowlist se construye por
+NOMBRE, nunca por descubrimiento.** Es el segundo argumento independiente a favor de P85 que esta base encuentra.
+
+**Y un segundo motivo, medido en el mismo pase:** `ExamAdministrationController` declara un **`PATCH`**, verbo que **no
+existe** en la superficie CRUD de `EntityController`. Un manifiesto armado sólo con las **10** operaciones de la clase
+base **se lo pierde en silencio**.
+
+## 160. 🔴 `RemoteProctoringService` tiene **14 métodos obligatorios, no 12** — y la cifra que importa para cotizar no es la cantidad de métodos (agregado en el pase 43 del 2026-10-02)
+
+**Primero la corrección.** **P91** dice, en la celda *«Métodos obligatorios»*: **«12 de 14»**. Son **14 de 14**, y hay
+**tres** evidencias independientes del mismo árbol:
+
+1. La interfaz **no tiene ningún `default` ni ningún `static`** — los 14 métodos son abstractos.
+2. `JitsiProctoringService` y `ZoomProctoringService` **implementan `RemoteProctoringService` directamente**
+   (`implements`, no `extends`): **no hay clase base intermedia** que pudiera aportar dos implementaciones gratis, que es
+   la única forma en que «12 de 14» podría haber sido correcto.
+3. `JitsiProctoringService` tiene **exactamente 14 `@Override`**, uno por método de la interfaz.
+
+🔴 **Así que no hay dos métodos opcionales: hay que escribir los 14.** Los 14: `getType`, `testExamProctoring`, `getProctorRoomConnection`, `getClientRoomConnection`,
+`createJoinInstructionAttributes`, `disposeServiceRoomsForExam`, `newCollectingRoom`, `newBreakOutRoom`,
+`disposeBreakOutRoom`, `getDefaultReconfigInstructionAttributes`, `mapReconfigInstructionAttributes`,
+`notifyBreakOutRoomOpened`, `notifyCollectingRoomOpened`, `clearRestTemplateCache`.
+
+**Y ahora el número que el pase 42 pedía: el costo.** Las dos implementaciones de referencia, medidas método por método:
+
+| | **Jitsi** | **Zoom** |
+|---|---|---|
+| Líneas de código de la clase (sin comentarios ni blancos) | **481** | **912** |
+| Líneas dentro de los 14 métodos de la interfaz | **107** | **212** |
+| **Porcentaje de la clase que son los 14 métodos** | 🔴 **22 %** | 🔴 **23 %** |
+| Líneas **fuera** de la interfaz | **374** (77 %) | **700** (76 %) |
+| Métodos privados de apoyo | 2 | **8** |
+| Clases internas | 0 | 1 |
+| Métodos que hablan con el servicio remoto | **1** (`testExamProctoring`) | **2** (`testExamProctoring`, `clearRestTemplateCache`) |
+| Métodos triviales (≤6 líneas, sin red) | **10** de 14 | **6** de 14 |
+| *Imports* de terceros | 17 | **38** |
+| Criptografía obligatoria | **`Mac.getInstance` + `HmacSHA256` + `Base64`** | **idem** |
+
+🔵 **La lección, que es la que corrige la forma de cotizar de esta base:** *«implementar una interfaz de 14 métodos»*
+**subestima el trabajo por un factor de ~4,5**. Los 14 métodos son **22-23 %** de cada clase de referencia —y el
+porcentaje es asombrosamente estable entre las dos, que no se parecen en nada—. El otro **77 %** es lo que nadie pone en
+el presupuesto: *helpers*, DTOs, caché de `RestTemplate`, construcción de tokens.
+
+🔴 **Y el dato que cambia el perfil de riesgo, no sólo el tamaño:** **las dos implementaciones firman tokens con
+HMAC-SHA256 a mano.** La criptografía **no es opcional** en este puerto; es parte del contrato de los dos proveedores de
+referencia. Eso **sube el nivel de revisión** que la propuesta tiene que presupuestar, porque un error ahí no es un bug
+funcional.
+
+**Que sólo 1 de 14 (Jitsi) hable con la red** parece abaratar, y no abarata: significa que **el resto es lógica de
+dominio del proveedor** —ciclo de vida de salas, instrucciones de reconfiguración, mapeo de atributos—, que es
+exactamente lo que no se puede copiar de la otra implementación.
+
+## 161. 🟢 **Gap 90, CERRADO con código:** el validador de SEB Server acepta un proveedor de terceros con **todos** los campos vacíos, y el reemplazo está escrito y probado (agregado en el pase 43 del 2026-10-02)
+
+`webservice/servicelayer/validation/ProctoringSettingsValidator.java` valida campos **sólo** si el `serverType` es
+`JITSI_MEET` o `ZOOM`, y termina en **`return true`**. Como `ProctoringServerType` tiene hoy exactamente **dos** valores,
+la rama parece inalcanzable. **Lo deja de ser en el momento exacto en que se integra un tercer proveedor**, que es el
+único momento en que a alguien le importa.
+
+🔵 **Esto ya no es una advertencia: es una pieza.** En
+`compose/code/seb-proctoring-validator/` queda el reemplazo, y **la prueba corre con JDK puro, sin instalar ninguna
+dependencia de terceros** (`./run_test.sh`, **21/21 checks**):
+
+* **El defecto se reproduce por ejecución, no se afirma:** una copia fiel del validador actual recibe un settings de
+  `BIGBLUEBUTTON` con **todos los campos en `null`**, devuelve **`true`** y levanta **cero** violaciones.
+* El reemplazo lo **rechaza**, con las plantillas `proctoringSettings:serverURL:notNull` y
+  `proctoringSettings:appSecret:notNull` — **las mismas plantillas de siempre**, así que las claves de UI e i18n no se
+  tocan.
+* **Trata el espacio en blanco como ausencia**, no como valor.
+* Con un solo campo faltante levanta **una sola** violación, sobre ese campo.
+* El settings completo se acepta **sin violaciones** y **sin** deshabilitar la violación por defecto.
+* **Sin regresión** en `JITSI_MEET` ni en `ZOOM`, en los dos sentidos (completo acepta, incompleto rechaza con las cinco
+  plantillas de Zoom).
+
+🔴 **Y la parte que de verdad cierra el gap, que no es validar el proveedor nuevo:** el *fall-through* **falla cerrado**.
+Un `serverType` no reconocido se rechaza con `proctoringSettings:serverType:typeNotSupported`. **Sin eso, el próximo
+valor del enum reabre el agujero idéntico** — y la pieza valdría sólo para BigBlueButton en vez de para todos los
+proveedores futuros.
+
+⚠️ **El alcance, dicho sin ambigüedad:** valida **presencia** de campos, no **corrección**. Que el `serverURL` responda y
+que el secreto sea aceptado lo verifica `testExamProctoring`, que es el único método de la interfaz que habla con el
+servicio remoto (tendencia 160).
+
+## 162. **Gap 86, CERRADO:** la capa de examen queda completa —horario **y** supervisión— con las dos puertas escritas y probadas (agregado en el pase 43 del 2026-10-02)
+
+Con el *gateway* de `compose/code/sebserver-mcp-gate/` (ver **P93**), las dos capas institucionales de examen de esta KB
+tienen puerta de agente permisiva:
+
+| Capa | Proyecto | Licencia | Puerta |
+|---|---|---|---|
+| Horarios | UniTime | Apache-2.0 | `compose/code/unitime-mcp-gate/` (**P85**, 26 tools) |
+| Supervisión | SEB Server | Apache-2.0 | `compose/code/sebserver-mcp-gate/` (**P93**, 79 tools, 36 expuestas) |
+
+**Medido por ejecución** (`python3 test_gate.py`, **11/11 checks**, sin levantar SEB Server): **79** operaciones leídas
+del árbol → **79** tools, **36** expuestas; las **37** escrituras de `/exam`, `/lms-setup`, `/useraccount` y
+`/batch-action` responden **`-32601`**; las **11** tools de `/batch-action` quedan fuera **incluidas las lecturas**; y
+**ninguna** llamada retenida llegó al *upstream* — afirmado sobre el contador del propio *stub*, no sobre el mensaje de
+error.
+
+⚠️ **El alcance, para que nadie lo lea como más de lo que es:** `operations.tsv` cubre **los cuatro endpoints que el
+handoff del pase 42 nombró para verificación**, medidos controlador por controlador. Los **26** controladores concretos
+restantes (**30** en total, más **3** bases abstractas) **no** están en la tabla, y la tendencia 159 es justamente la
+razón por la que **no se pueden adivinar** por el nombre del endpoint.
+
+🔴 **Dos correcciones de conteo del mismo árbol, porque esta base tenía otras cifras:** las constantes `*_ENDPOINT` de
+`gbl/api/API.java` son **42** en `master` (y **47** en `development`), no 41; y los controladores son **30 concretos + 3
+bases = 33**, no 36. La rama por defecto de `seb-server` es **`master`**, verificada con `git ls-remote --symref`.
+
+**Y una colisión de rutas que un generador ingenuo colapsa:** `EXAM_ADMINISTRATION_ENDPOINT` y
+`LMS_FULL_INTEGRATION_EXAM_ENDPOINT` **valen las dos `/exam`**. Un manifiesto indexado por **path** los une; uno indexado
+por **constante y controlador** no.
+
+## 163. La premisa de que «los SDK previos de Caliper siguen publicados» es **falsa**, y la respuesta ya estaba en esta base: el fork LGPL de Michigan (agregado en el pase 43 del 2026-10-02)
+
+El handoff del pase 42 mandó re-medir Caliper dando por bueno que, aunque **el estándar dejó de ser open source el
+2023-06-17**, *«los SDK previos siguen publicados»*. **Medido, es falso para el canal público:**
+
+* `IMSGlobal/caliper-php` → **404** en `raw.githubusercontent.com`, en `master` **y** en `main`. Igual bajo
+  `1EdTech/caliper-php`.
+* 1EdTech lo confirma por su lado: los repos de **Sensor API** son **para miembros *Contributing* y *Affiliate*** con
+  acceso solicitado — que es lo que esta base **ya tenía registrado** para `caliper-java`, `caliper-js` y
+  `caliper-python` desde el pase que leyó el aviso textual del repo (*«1EdTech will be moving Caliper to private
+  repositories on June 17, 2023»*).
+
+⚠️ **La asimetría del registro, otra vez** (tendencia 127): el paquete **sí** figura en Packagist (`imsglobal/caliper`).
+**El registro confirma el nombre y no entrega el código.**
+
+🟢 **Y lo que convierte esto en algo más que una confirmación: la respuesta ya estaba en esta KB.** La implementación PHP
+de Caliper que **sigue siendo legible** es el fork de la **Universidad de Michigan**,
+`tl-its-umich-edu/caliper-php-public` — ⚠️ **LGPL-3.0**, registrado en `agents/top.md` desde el **pase 9**. 🔵 **La lección
+de método es sobre esta base, no sobre Caliper:** el handoff pidió buscar afuera algo que la propia KB ya tenía resuelto
+adentro. **Antes de un barrido externo, conviene consultar la base.**
+
+🔴 **Consecuencia de cotización, sin cambio de signo pero con el camino nombrado:** instrumentar Caliper **no** se cotiza
+contra el repo oficial. Se cotiza **contra el fork LGPL-3.0** —con la restricción de copyleft débil que eso impone—,
+contra la especificación, o afiliando al cliente a 1EdTech. Sigue **trasladando costo al integrador** en las cuatro
+regiones.
+
+**Y la colisión de nombre, la séptima de esta KB:** `llnl/Caliper` (instrumentación y *profiling* de performance) y
+`google/caliper` (microbenchmarking de Java, **deprecado**) ganan la búsqueda. **Ninguno** tiene que ver con analítica de
+aprendizaje.
+
+## 164. El barrido por SDK confirma la ausencia de MCP en la capa de estándares, ahora **por el canal correcto** — y devuelve **una sola alta real**, no cinco (agregado en el pase 43 del 2026-10-02)
+
+El handoff del pase 42 pedía re-medir por SDK las ausencias que esta base había declarado **por etiqueta**, porque el
+método de etiqueta no prueba nada. Hecho, leyendo el **README crudo** de cada pieza y contando menciones de `MCP` /
+*model context protocol*:
+
+| Pieza | Licencia (del archivo `LICENSE`) | Menciones de MCP en el README |
+|---|---|---|
+| `Cvmcosta/ltijs` | **Apache-2.0** ✅ | **0** |
+| `Simon-Initiative/lti_1p3` | **MIT** ✅ | **0** |
+| `opensalt/opensalt` | **MIT** ✅ | **0** |
+| `1EdTech/digital-credentials-public-validator` | **Apache-2.0** ✅ | **0** |
+| `luisgf/openbadgeslib` | 🔴 **LGPL-3.0** | **0** |
+
+🟢 **El gap 42 queda cerrado por una vía que sí lo examinó**, no por agotamiento de etiquetas: ninguna de las cinco
+bibliotecas de estándares expone MCP. **CaSS sigue siendo la única pieza de estándar educativo de esta base con puerta
+nativa de agente.**
+
+🔴 **Y el dato que hay que escribir aunque incomode: de las cinco piezas, esta base ya tenía cuatro.** `opensalt`
+(pase 14), `digital-credentials-public-validator`, `openbadgeslib` y `ltijs` estaban todas registradas. **La única alta
+real del barrido es `Simon-Initiative/lti_1p3`** (MIT, Elixir, **Platform y Tool**, no sólo Tool). Las otras entran como
+**confirmaciones con dato nuevo**, no como altas — ver `repos/foundations.md`. 🔵 **Eso no es un barrido fallido: es la
+señal de que la capa de estándares de esta KB está saturada**, y de que las altas siguen viniendo del canal de conector,
+no del de biblioteca.
+
+⚠️ **Y la trampa de fork que la tendencia 132 anticipó, aparecida otra vez en el mismo barrido:** la búsqueda devolvió
+**`kristofb/ltijs`** antes que el canónico. El canónico es **`Cvmcosta/ltijs`** —es el que la documentación del propio
+proyecto referencia— y es el que se midió.
+
+## 165. Apareció la primera puerta MCP de **emisión de credenciales**, y no sirve para el camino de estándar: la puerta es a una **API de proveedor** (agregado en el pase 43 del 2026-10-02)
+
+`issuebadge/mcp-server` es **MIT** (*Copyright (c) 2025-2026 IssueBadge*), TypeScript, y expone **4 tools**:
+`validate_key`, `get_all_badges`, `issue_badge` y —sólo en modo local/stdio— `create_badge`. Corre como **HTTP remoto**
+(`streamable-http`, con OAuth 2.1 además de API key, para *hosts* que no pueden mandar cabecera) o por **stdio**
+(`npx issuebadge-mcp-server`); es además **plugin de Claude Code** con una *skill* que enseña el flujo
+*listar → confirmar → emitir*, y el servidor remoto es **auto-hospedable**. `issue_badge` trae un **widget MCP Apps**
+(`ui://widget/certificate.html`).
+
+🔴 **Y ahora lo que lo descalifica para el patrón P84, dicho sin vueltas:** el código es MIT, pero **la emisión depende de
+`app.issuebadge.com` y de una API key del proveedor**. No implementa **Open Badges 3.0** como estándar: emite
+«certificados y credenciales verificables» **del producto**. 🔵 **La distinción que esta base necesita mantener:** existe
+la capa MCP de credenciales, **no** existe la capa MCP de credenciales *conforme al estándar y sin proveedor*. Para
+**P84** —cerrar el curso emitiendo un Open Badges 3.0 **firmado**— esta pieza **no sustituye** nada.
+
+⚠️ **Y la madurez, con el número a la vista: 0 ★ y 4 commits.** **No entra a la tabla de `agents/top.md`** por eso, y se
+registra acá con la cifra visible para que el próximo pase la vuelva a medir en vez de heredar un juicio.
+
+## 🔵 Las tres acciones que el pase 43 deja escritas para el pase 44
+
+**Las tres son ejecutables en este entorno: ninguna necesita Docker, ni instalar dependencias de terceros, ni la API de
+GitHub.**
+
+1. 🟢 **Completar `operations.tsv` del *gateway* de SEB Server con los 26 controladores que faltan, midiendo la clase
+   base de cada uno.** Es la mitad declarada de la tendencia 162, y **la tendencia 159 es la razón por la que no se puede
+   adivinar**: hay que leer el `extends` de cada controlador, porque `ReadonlyEntityController` conserva las rutas de
+   escritura. **La acción concreta:** un `curl` por controlador a `raw.githubusercontent.com`, extraer `extends` y los
+   `@RequestMapping` propios con el mismo script de este pase, y **volver a correr `test_gate.py`** —que debe seguir
+   dando verde con una tabla ~6× más grande—. 🔵 **El valor: con eso la puerta de SEB Server deja de cubrir cuatro
+   endpoints y cubre el servicio, que es lo que se le propone a un cliente.**
+2. 🟢 **Medir el costo de *authoring* del `v1` de Open edX como se midió el de proctoring, y cotizar P55 entero.** Hoy la
+   tendencia 158 dice *qué* endpoint usar; falta *cuánto pesa* el cliente. **La acción concreta:** leer
+   `cms/djangoapps/contentstore/rest_api/v1/views/xblock.py` completo (ya está en el entorno) más
+   `xblock_storage_handlers/view_handlers.py`, y responder **tres preguntas que hoy no tienen número**: qué devuelve
+   exactamente `create_xblock_response` (¿el `usage_key` del bloque nuevo, que es lo que hace recursable el recorrido del
+   árbol?), qué valores de `category` acepta sin configuración extra, y si `?view=minimal` está disponible en `retrieve`
+   únicamente —el docstring dice que sí— o también al recorrer `children`. 🔵 **El valor: es lo único que falta para
+   cotizar la generación de un curso entero sin asterisco.**
+3. 🟢 **Verificar las fechas revisadas del EU AI Act contra el texto consolidado**, que es la única cifra importante de
+   este pase que es de **segunda fuente** (ver la corrección en `intel/market.md`, sección EMEA). **La acción concreta:**
+   `eur-lex.europa.eu` por el Reglamento (UE) 2024/1689 y confirmar o refutar **2 de diciembre de 2027** (alto riesgo
+   autónomo) y **2 de agosto de 2028** (alto riesgo embebido). 🔴 **Si las fechas no se confirman, la recomendación
+   comercial de EMEA de este pase hay que revertirla**, porque está construida sobre el plazo extra. **Es la acción de
+   mayor riesgo pendiente**, no la de mayor valor: el resto del pase no depende de ella.
+
+⚠️ **Y las acciones hacia afuera que esta corrida sigue sin poder ejecutar, declaradas para no perderlas:** el `LICENSE`
+que falta en `Timadey/proctor` (**un PR de un archivo**); la licencia sin segunda fuente de `@ink-waffle/sisu-mcp`
+(**bloqueante: sigue siendo la única puerta de SIS de educación superior de esta base**); el programa de la *2nd Working
+Conference* del Consejo de Europa en `coe.int`; y 🔵 **una nueva: pedir acceso de miembro a los repositorios de Caliper
+Sensor API de 1EdTech** (tendencia 163), que es el único camino para leer esa capa y hoy **no** está abierto.
+
 ## 🔵 Las tres acciones que el pase 42 deja escritas para el pase 43
 
 **Las tres son ejecutables en este entorno: ninguna necesita Docker, ni un host bloqueado, ni el buscador roto de PyPI,

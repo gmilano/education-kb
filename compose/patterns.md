@@ -71,6 +71,169 @@ updated: 2026-10-02
 > (Apache-2.0, **v0.9.9 del 2026-10-01**), Ralph (MIT, vivo en `main`), las cuatro puertas de Canvas y Moodle-alumno
 > (commits de las últimas dos semanas) y `qti3-cli` (MIT). **El resto de las recetas no cambia.**
 
+## P93 — La puerta MCP de SEB Server: supervisión de examen con la escritura fuera de la lista, y **la capa de examen por fin completa** (agregado en el pase 43 del 2026-10-02)
+
+**Qué resuelve.** Cierra la mitad abierta del **gap 86**. De las dos capas institucionales de examen de esta KB, UniTime
+(horarios) ya tenía puerta de agente (**P85**/**P92**) y **SEB Server** (supervisión) no. Con las dos escritas, se puede
+proponer **la capa de examen completa —horario y supervisión— con licencia permisiva y sin competencia agéntica**.
+
+### Las piezas, verificadas el 2026-10-02
+
+| Pieza | Licencia | Dato medido |
+|---|---|---|
+| [`SafeExamBrowser/seb-server`](https://github.com/SafeExamBrowser/seb-server) | 🟢 **Apache-2.0** | Rama por defecto **`master`** (`git ls-remote --symref`), commit `7f45689`. **42** constantes `*_ENDPOINT` en `gbl/api/API.java`; **30** controladores concretos + **3** bases abstractas |
+| `compose/code/sebserver-mcp-gate/` | el de esta KB | **79** operaciones → **79** tools, **36** expuestas. **11/11 checks** por ejecución |
+
+### El wiring
+
+1. **Los datos salen del árbol, no de la documentación.** `endpoints.tsv` son las 42 constantes `*_ENDPOINT` de
+   `gbl/api/API.java`; `operations.tsv` son las operaciones por controlador, separadas en **`own`** (el
+   `@RequestMapping` propio del controlador) e **`inherited`** (la superficie CRUD medida sobre `EntityController`, que
+   declara **10** operaciones, y `ActivatableEntityController`, que agrega **3** distintas).
+2. **El manifiesto se indexa por constante y controlador, nunca por path.** `EXAM_ADMINISTRATION_ENDPOINT` y
+   `LMS_FULL_INTEGRATION_EXAM_ENDPOINT` **valen las dos `/exam`**: indexar por path los colapsa.
+3. **La allowlist se construye por NOMBRE.** Dos políticas: *read-only* (todo `POST`/`PUT`/`DELETE`/**`PATCH`** queda
+   fuera) y **deny nombrado** para `/batch-action`, **lecturas incluidas** — es un ejecutor de acciones masivas, una
+   llamada se abre en muchas entidades, que es la misma razón por la que P85 retiene el conector `script` de UniTime.
+4. **`tools/list` se arma DESDE la allowlist**, así que una tool retenida **no se anuncia**. La retenida que se llama
+   igual recibe **`-32601`** y **no llega al upstream**.
+
+### 🔴 Por qué la allowlist NO se puede derivar descubriendo rutas
+
+Es lo que convierte este patrón en argumento y no en preferencia. `ReadonlyEntityController` **conserva** las
+anotaciones `@RequestMapping` de `PUT`/`POST`/`DELETE` heredadas y lanza `AccessDeniedException` **en el cuerpo**:
+
+```java
+@Override
+@RequestMapping(method = RequestMethod.PUT, ...)
+public T savePut(@Valid @RequestBody final T modifyData) {
+    throw new AccessDeniedException(ONLY_READ_ACCESS);
+}
+```
+
+La ruta **existe y se anuncia**. Un generador que lea anotaciones **emite tools de escritura legítimas en apariencia**
+sobre entidades de sólo lectura. Y `ExamAdministrationController` declara un **`PATCH`**, verbo ausente de la base: un
+manifiesto armado con las 10 operaciones de `EntityController` **se lo pierde**. Ver la tendencia **159**.
+
+### La prueba, por ejecución y sin levantar SEB Server
+
+```sh
+cd compose/code/sebserver-mcp-gate && python3 test_gate.py
+```
+
+* **37** tools de escritura en `/exam`, `/lms-setup`, `/useraccount`, `/batch-action` → **todas `-32601`**
+* **11** tools de `/batch-action` → **todas** fuera de la allowlist, **incluidas las lecturas**
+* **0** llamadas retenidas llegaron al upstream — afirmado sobre **el contador del propio stub**, no sobre el mensaje
+* **36** lecturas **sí** se despachan: el gate no es vacuamente restrictivo
+* una tool inventada recibe el mismo `-32601`, sin filtrar la diferencia entre «no existe» y «no está permitida»
+
+### Cómo se cotiza, por región
+
+| Región | Encuadre |
+|---|---|
+| **EMEA** | 🔵 **El más fuerte.** SEB Server es suizo (ETH Zürich) y la supervisión de exámenes es **alto riesgo** bajo el AI Act, con plazo a **2 de diciembre de 2027**: el *gateway* es evidencia de **supervisión humana** y de que el agente **no escribe** |
+| **North America** | Oklahoma y Maryland **prohíben** decisiones de alto impacto automatizadas: la partición lectura/escritura es exactamente ese control, documentado |
+| **LATAM** | Entra por **integridad académica**, que es el cuello de botella real de la región (**61 %** de alumnos preocupados por el mal uso de sus pares), no por habilitación de AI |
+| **APAC** | Se cita el **marco de AI agéntica de la IMDA de Singapur** (22 de enero de 2026), el primer texto de regulador que trata a los agentes como categoría propia |
+
+### ⚠️ Alcance, declarado y no implícito
+
+`operations.tsv` cubre **los cuatro endpoints** que el handoff nombró para verificación. Los **26** controladores
+concretos restantes **no** están medidos, y la tendencia 159 es la razón por la que **no se adivinan**. Extenderlo es
+mecánico —un `curl` por controlador, leer el `extends`— y es **la acción 1 del pase 44**.
+
+## P94 — Cotizar un **tercer** proveedor de proctoring en SEB Server con el costo real, no con la cantidad de métodos (agregado en el pase 43 del 2026-10-02)
+
+**Qué resuelve.** **P91** decía «12 métodos obligatorios», y con eso no se arma un presupuesto: ni la cifra era correcta
+ni la cantidad de métodos es la magnitud que manda. Este patrón reemplaza esa línea por una tabla medida, **y agrega la
+pieza de validación que faltaba**.
+
+### 🔴 Las dos correcciones, primero
+
+1. `RemoteProctoringService` tiene **14 métodos obligatorios, no 12** — los 14 abstractos, **sin ningún `default`** y
+   **sin ningún `static`**.
+2. **Los 14 métodos son el 22-23 % de la clase.** El resto —*helpers*, DTOs, caché de `RestTemplate`, construcción de
+   tokens— es el **77 %** que nadie presupuesta.
+
+| Magnitud que se cotiza | **Jitsi** (la barata) | **Zoom** (la realista) |
+|---|---|---|
+| Líneas de código de la clase | **481** | **912** |
+| Líneas en los 14 métodos | 107 (**22 %**) | 212 (**23 %**) |
+| Líneas **fuera** de la interfaz | **374** | **700** |
+| Métodos triviales (≤6 líneas, sin red) | 10 de 14 | 6 de 14 |
+| Métodos que hablan con el remoto | **1** (`testExamProctoring`) | **2** |
+| Métodos privados de apoyo / clases internas | 2 / 0 | **8** / 1 |
+| *Imports* de terceros | 17 | **38** |
+| Criptografía | 🔴 **HmacSHA256 + Base64 + `Mac.getInstance`** | 🔴 **idem** |
+
+### El wiring, en tres piezas y en este orden
+
+1. **La implementación.** Una clase que implemente los **14** métodos. Presupuestar el rango **481–912 líneas**, no 107:
+   el piso es Jitsi porque delega casi todo, el techo es Zoom porque administra el ciclo de vida de salas de verdad.
+   Partir de **`JitsiProctoringService`** si el proveedor expone salas por URL firmada; de **`ZoomProctoringService`** si
+   hay *breakout rooms* y reconfiguración.
+2. 🔴 **La validación, que SEB Server NO aplica a un proveedor de terceros.** Antes de escribir la implementación, poner
+   el validador: `compose/code/seb-proctoring-validator/` —**21/21 checks, JDK puro**— porque el validador de upstream
+   termina en `return true` y **acepta el proveedor nuevo con todos los campos vacíos**. Sin esto, el síntoma aparece en
+   la primera sesión de examen como fallo de autenticación, no al guardar como error de formulario. Ver la tendencia
+   **161**.
+3. **El enum y la anotación.** Un valor nuevo en `ProctoringServerType` y apuntar `@ValidProctoringSettings` a la clase
+   que valida de verdad.
+
+### 🔴 Lo que sube el nivel de revisión y hay que decirlo en la propuesta
+
+**Las dos implementaciones de referencia firman tokens con HMAC-SHA256 a mano.** La criptografía **no es opcional** en
+este puerto: es el contrato de los dos proveedores. Un error ahí no es un bug funcional, así que la revisión de
+seguridad **se presupuesta aparte** — y eso no estaba en P91.
+
+**Y que sólo 1 de 14 métodos hable con la red no abarata:** significa que el resto es **lógica de dominio del
+proveedor** (ciclo de vida de salas, instrucciones de reconfiguración, mapeo de atributos), que es precisamente lo que
+**no** se copia de la otra implementación.
+
+## P95 — Generar un curso de Open edX **entero** por HTTP: una llamada legacy y **un** endpoint recorrido en árbol (agregado en el pase 43 del 2026-10-02)
+
+**Qué resuelve.** Reencuadra **P55** y **P63**. Esta base tenía el *authoring* partido en dos dudas: si se podía crear el
+curso (resuelto en el pase 32) y si el árbol versionado alcanzaba para la estructura (el **gap 50**). Con el gap 50
+cerrado, **el recorrido completo son dos endpoints, no cinco**, y 🔴 **sobre `v1`, no sobre `v0`**.
+
+### 🔴 La corrección de versión, primero, porque invierte lo que esta base recomendaba
+
+`v0` de *authoring* está **deprecado**: su propio encabezado dice *«superseded by `XblockViewSet` … Use
+`/api/contentstore/v1/xblock/` going forward. These v0 endpoints will be removed in a future release»*, y cada método
+emite `DeprecationWarning`. **El `v1` no es el experimental: es el canónico**, y trae sobre de error estandarizado
+(ADR 0029), autenticación explícita (ADR 0026/0034), **`?view=minimal`** (ADR 0036) y el tag OpenAPI
+**`openedx-platform-sdk`** para generar clientes. Ver la tendencia **157**.
+
+### El wiring
+
+| Paso | Llamada | Nota |
+|---|---|---|
+| 1. Crear el curso | `POST /course/` con `Accept: application/json` (vista **legacy**) | **Sin** `source_course_key` crea de cero. Permiso: **`is_content_creator(user, org)`**, no `GlobalStaff` → el alta **se delega por organización**. ⚠️ Al **clonar**, omitir `display_name` levanta `KeyError` |
+| 2. Secciones, subsecciones, unidades **y** componentes | `POST /api/contentstore/v1/xblock/` | 🔵 **El mismo endpoint para los cuatro niveles.** `parent_locator` dice de quién cuelga; `category` dice qué es (`chapter`, `sequential`, `vertical`, o el tipo de bloque) |
+| 3. Leer/modificar un bloque | `GET`/`PUT`/`PATCH`/`DELETE /api/contentstore/v1/xblock/{usage_key}/` | El mismo `ViewSet`, cinco verbos |
+| 4. Recorrer el árbol barato | `GET …/{usage_key}/?view=minimal` | Devuelve sólo `id`, `display_name`, `category`, `children`, `has_children`, `studio_url` — **sin** `data`, `metadata`, `student_view_data` ni OLX |
+
+🔵 **Por qué esto cambia la estimación:** no hay un cliente por nivel de jerarquía. En Open edX **la sección, la
+subsección y la unidad SON XBlocks**, igual que un componente, así que el generador es **una función recursiva sobre un
+endpoint**. El serializer es **estricto** (`StrictSerializer`: tipos validados, **ningún campo inesperado**), así que el
+contrato se valida del lado del servidor y los campos disponibles están enumerados: `parent_locator`, `display_name`,
+`category`, `data`, `metadata`, `children`, `fields`.
+
+### ⚠️ Las dos trampas que van escritas en la propuesta
+
+1. **`?fields=` no es ADR 0036.** Es un *pass-through* **legacy** que selecciona *tipo de respuesta*
+   (`?fields=graderType`, `ancestorInfo`, `customReadToken`), no un subconjunto de claves. Para subconjunto, **`?view=minimal`**.
+2. **El clon es medio asincrónico.** La clave vuelve en la respuesta, pero el copiado va a **Celery**
+   (`rerun_course_task.delay`) y se sigue por **`CourseRerunState`**: hay que **pollear antes de escribir** en el curso
+   nuevo. Y el clon **resetea** `advertised_start`, `enrollment_start`, `enrollment_end` y `video_upload_pipeline`.
+
+### Cómo se cotiza, por región
+
+**Open edX es la huella pública grande de LATAM e India**, así que este patrón se cotiza primero ahí — con la salvedad de
+licencia que esta base ya tiene escrita: **Open edX es AGPL-3.0**, y la regla *«las puertas de agente son MIT»* **no
+vale** para esta pieza. El cliente propio que se escribe contra estos endpoints **sí** puede ser permisivo; el servidor
+que se despliega, no.
+
 ## P88 — La puerta MCP de UniTime: horarios, aulas y exámenes académicos, con el conector `script` fuera de la lista (agregado en el pase 41 del 2026-10-02)
 
 **La capa que el pase 40 midió vacía de agente tiene una base Apache-2.0 viva, y su API es la más fácil de envolver que
@@ -227,6 +390,12 @@ Enumeradas las dos superficies, **la ruta MPL cuesta más código** — y **el L
 |---|---|---|
 | Pieza | `ProctoringBackendProvider` (clase concreta) | `RemoteProctoringService` (interfaz desnuda) |
 | 🔴 **Métodos obligatorios** | 🟢 **0 de 18** | 🔴 **12 de 14** |
+
+> 🔴 **Corrección del pase 43 (2026-10-02): la celda de arriba dice «12 de 14» y son «14 de 14».** No hay clase base
+> intermedia (las dos referencias hacen `implements`, no `extends`), la interfaz no tiene ningún `default` ni `static`, y
+> `JitsiProctoringService` tiene **exactamente 14 `@Override`**. 🔵 **Y la cantidad de métodos no es la magnitud que se
+> cotiza:** son el **22-23 %** de cada clase de referencia. **Para presupuestar, usar P94, no esta tabla.**
+
 | Punto de integración | 🟢 Apache-2.0 (*carve-out*) | ⚠️ MPL-2.0 |
 | Registro | *entry point* | 🟢 inyección de Spring, **sin tocar la fábrica** |
 | 🟢 **Divulgación obligatoria** | 🟢 ninguna | 🟢 **un valor de enum** (1 archivo *Covered*) |

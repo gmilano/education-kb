@@ -8,6 +8,98 @@ updated: 2026-10-02
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 
+## 2026-10-02 (pase 43) — **el dato crudo de las tres acciones: 42 constantes de endpoint, 79 operaciones, 14 métodos obligatorios (no 12) y 22 % de clase, más 3 altas de estándar y 1 repo que no es legible**
+
+Todo lo de abajo se leyó **de primera mano** por `raw.githubusercontent.com` sobre la rama por defecto, verificada con
+`git ls-remote --symref`. Las licencias salen del archivo **`LICENSE`**, no del README ni del manifiesto.
+
+### Acción 1 — `SafeExamBrowser/seb-server` (Apache-2.0, `master` @ `7f45689`)
+
+| Medición | Valor | Lo que esta base tenía |
+|---|---|---|
+| Constantes `*_ENDPOINT` en `gbl/api/API.java` | **42** en `master` | 🔴 decía **41** |
+| idem en `development` | **47** | no registrado |
+| Controladores concretos | **30** | 🔴 decía **36** |
+| Clases base abstractas | **3** (`EntityController`, `ActivatableEntityController`, `ReadonlyEntityController`) | no desglosado |
+| Archivos `.java` en `weblayer/api/` | **40** (incluye excepciones y servicios, no sólo controladores) | — |
+| Superficie CRUD de `EntityController` | **10** operaciones | — |
+| Operaciones que agrega `ActivatableEntityController` | **3** distintas (la cuarta, `POST (root)`, es *override*) | — |
+| Operaciones medidas para los 4 endpoints objetivo | **79** (33 `own` + 46 `inherited`) | — |
+| Verbos en los `own`: | `GET` 18 · `POST` 9 · `PUT` 3 · `DELETE` 2 · **`PATCH` 1** | 🔴 el `PATCH` no estaba registrado |
+
+**Colisión de paths:** `EXAM_ADMINISTRATION_ENDPOINT` y `LMS_FULL_INTEGRATION_EXAM_ENDPOINT` **valen las dos `/exam`**.
+
+**Resultado del gate** (`python3 test_gate.py`, **11/11**): 79 tools → **36 expuestas**; **37** escrituras con `-32601`;
+**11** tools de `/batch-action` fuera, lecturas incluidas; **0** llegadas al upstream.
+
+### Acción 2 — el costo de `RemoteProctoringService`
+
+| | **Jitsi** | **Zoom** |
+|---|---|---|
+| Métodos obligatorios de la interfaz | **14** (0 `default`, 0 `static`) | **14** |
+| Líneas de código de la clase | **481** | **912** |
+| Líneas en los 14 métodos | **107** (**22 %**) | **212** (**23 %**) |
+| Triviales (≤6 líneas, sin red) | **10** | **6** |
+| Hablan con el remoto | **1** | **2** |
+| Privados de apoyo / clases internas | 2 / 0 | **8** / 1 |
+| *Imports* de terceros | 17 | **38** |
+| Cripto | `Mac.getInstance` + `HmacSHA256` + `Base64` | idem |
+
+### Acción 3 — el validador
+
+`ProctoringSettingsValidator.java` termina en **`return true`**; `ProctoringServerType` tiene **2** valores. El reemplazo
+en `compose/code/seb-proctoring-validator/` da **21/21 checks** con **JDK puro** (`javac` + `java`, cero dependencias
+instaladas), e incluye una copia fiel del validador actual para **reproducir el defecto por ejecución**: un
+`BIGBLUEBUTTON` con todos los campos `null` → `true` y **0** violaciones.
+
+### Gap 50 — `openedx/edx-platform` (`master`; ⚠️ **la rama es `master`, `main` da 404**)
+
+| Archivo | Medición |
+|---|---|
+| `contentstore/rest_api/v0/urls.py` | 4.092 bytes. Rutas de *authoring*: `advanced_settings`, `tabs` (×3), `heartbeat`, `file_assets` (×2), `videos/*` (×6), `grading`, `video_transcripts`, **`xblock` (×2)**, `youtube_transcripts` (×2), `link_check*`, `rerun_link_update*`. 🔴 **Ninguna crea cursos** |
+| `contentstore/rest_api/v0/views/xblock.py` | 🔴 **`(DEPRECATED)`** en el encabezado + `DeprecationWarning` en los 5 métodos. Remite a `/api/contentstore/v1/xblock/` |
+| `contentstore/rest_api/v1/urls.py` | **22** rutas con nombre. `XblockViewSet` registrado en un `DefaultRouter`. Incluye `course_rerun`, `course_index`, `course_details`, `course_settings`, `course_grading`, `container/{usage_key}/children`. 🔴 **No crea cursos** |
+| `contentstore/rest_api/v1/views/xblock.py` | 14.080 bytes. ADR **0025/0026/0027/0028/0029/0034/0036**. `create` lee `parent_locator` de `request._request.body` (no de `request.data`, para no consumir el *stream* WSGI) y de ahí deriva el `course_key` **antes** de los permisos |
+| `v0/serializers/xblock.py` | `StrictSerializer`: tipos validados y **ningún campo inesperado**. Campos: `id`, `parent_locator`, `display_name`, `category`, `data`, `metadata`, `has_changes`, `children`, `fields`, `has_children`, `video_sharing_*`, `edited_on`, `published` |
+
+🔵 **Conclusión del gap 50:** curso **no** por el árbol versionado (sí por `POST /course/` legacy, pase 32);
+**sección, subsección, unidad y componente: los cuatro por `POST /api/contentstore/v1/xblock/`**, distinguidos por
+`parent_locator` + `category`.
+
+### El barrido de estándar: **una alta real**, el resto ya estaba. Licencias leídas del archivo `LICENSE`
+
+🔴 **De las piezas de abajo, esta base ya tenía `opensalt` (pase 14), `digital-credentials-public-validator`,
+`openbadgeslib` y `ltijs`.** La **única alta** es `Simon-Initiative/lti_1p3`. Se listan todas igual porque las cifras
+★/forks y los detalles de licencia **se re-midieron en este pase**, pero **no se cuentan como altas**.
+
+| Repo | `LICENSE` dice | ★ / forks | Dato |
+|---|---|---|---|
+| [`opensalt/opensalt`](https://github.com/opensalt/opensalt) ⚠️ *ya estaba (pase 14)* | 🟢 **MIT** (2016 Public Consulting Group) | **45** / 27 | PHP, **5.027 commits** en `develop`, 135 issues abiertos. Hoy el README lo presenta como registro de **LER**. 🔴 **Lo nuevo es la divergencia: lo activo y lo compatible con CASE 1.1 está en `develop`, no en el estable 3.2.0 (sept 2023 → CASE v1.0)** |
+| [`1EdTech/digital-credentials-public-validator`](https://github.com/1EdTech/digital-credentials-public-validator) ⚠️ *ya estaba* | 🟢 **Apache-2.0** | **17** / 12 | 🔵 **Lo nuevo:** el README dice **«primarily a validator for Open Badges 3.0»** — esta base lo tenía como «OB + CLR» sin la precisión de 3.0. Acepta también OB 2.0 |
+| 🟢 [`Simon-Initiative/lti_1p3`](https://github.com/Simon-Initiative/lti_1p3) — **LA ÚNICA ALTA** | 🟢 **MIT** (2021 Carnegie Mellon University) | **16** / 4 | Elixir. **Platform Y Tool**, no sólo Tool — toda la capa LTI previa de esta base era *tool provider* |
+| [`luisgf/openbadgeslib`](https://github.com/luisgf/openbadgeslib) ⚠️ *ya estaba* | 🔴 **LGPL-3.0** | — | Firma/verifica OB 2.0 (JWS) y **3.0 (W3C VC / JWT-VC)**. **No permisiva** |
+| [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) ⚠️ *ya estaba* | 🟢 **Apache-2.0** | — | El canónico. ⚠️ La búsqueda devolvió antes el fork `kristofb/ltijs` (tendencia 132) |
+| [`issuebadge/mcp-server`](https://github.com/issuebadge/mcp-server) | 🟢 **MIT** (2025-2026 IssueBadge) | **0** / 0 | TypeScript, **4 commits**. 4 tools. 🔴 Depende de `app.issuebadge.com` + API key: **no es el camino de estándar** |
+
+### 🔴 El repo que NO se puede leer, y es un dato
+
+`IMSGlobal/caliper-php` → **404** en `raw.githubusercontent.com` para `master` **y** `main`; también **404** bajo
+`1EdTech/caliper-php`. 1EdTech lo confirma: los repos de **Caliper Sensor API** son **para miembros *Contributing* y
+*Affiliate*** con acceso solicitado — algo que **esta base ya tenía registrado** para `caliper-java`/`-js`/`-python`.
+⚠️ El paquete **sí** figura en Packagist (`imsglobal/caliper`): el registro **confirma el nombre pero no da el código**
+(tendencia 127). 🟢 **Y el camino legible ya estaba acá:** `tl-its-umich-edu/caliper-php-public`, el fork **LGPL-3.0** de
+la U. de Michigan, en `agents/top.md` desde el pase 9. **Lo que este pase refuta es la premisa del handoff**, no el
+estado de Caliper.
+
+**Y la colisión de nombre, la séptima de esta KB:** `llnl/Caliper` (profiling de performance) y `google/caliper`
+(microbenchmarking de Java, **deprecado**) **no tienen nada que ver** con analítica de aprendizaje.
+
+### ⚠️ Nota de método: `curl` sobre `github.com` sigue dando 403 para todo
+
+Consistente con la tendencia **131**. Todo lo de arriba se midió por **`raw.githubusercontent.com`** (que **sí** responde
+200 y **404 legítimo** cuando el archivo no existe, que es lo que lo hace un verificador útil) y por **WebFetch** para
+★/forks. **El verificador `curl -sI` que el prompt prescribe no sirve contra `github.com` en este entorno.**
+
 ## 2026-10-02 (pase 42) — **el dato crudo de las tres acciones: 472 ramas leídas en 61 repos, 26 tools generados desde el árbol de UniTime, 313 archivos de `servicelayer` en `seb-server` y los 4 repos de Kuali fechados y licenciados**
 
 **Este archivo guarda la medición; el veredicto está en `agents/trending.md`.** Todo se obtuvo con `git ls-remote` +
