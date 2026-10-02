@@ -8,6 +8,7 @@ updated: 2026-10-02
 
 > Bases sobre las cuales construir. Verificado repo por repo vía WebFetch el 2026-09-30 (capas del pase 10, el 2026-10-01).
 > Leer la columna **Licencia** antes de proponer: media KB de educación es GPL/AGPL, no permisiva.
+> **Pase 51 del 2026-10-02:** 🟢 **la nota de arriba —*media KB de educación es GPL/AGPL*— ahora tiene su contraparte MEDIDA en la capa de agentes, y el reparto se invierte: de los 139 repos de `agents/top.md` con texto de licencia verificado, 106 (76,3 %) son MIT o Apache-2.0 contra 16 GPL/AGPL/LGPL.** ⚠️ **Las dos frases no se contradicen: la nota habla de PLATAFORMAS —Moodle, Open edX, Sakai, Chamilo, ILIAS— y el 76,3 % es de la capa de AGENTES. Son dos poblaciones distintas y hay que decir cuál se está citando.** 🔴 **Y el instrumento de licencia de esta base se corrigió a sí mismo: la lista de 4 nombres de archivo producía 4 falsos «sin licencia» de 27 (14,8 %), y el falso más grave era `moodle/moodle` —GPL vía `COPYING.txt`, la pieza central de `verticals/solutions.md`.** Las dos causas son **convenciones de ecosistema**, no descuidos: `COPYING.txt` en el mundo GNU/Moodle y `LICENSE-MIT`+`LICENSE-APACHE` en doble licencia estilo Rust (`contentauth/c2pa-rs`, `c2pa-python`). 🟢 **El gap 248 se recasta y mejora: `@tutors/xapi` y `@tutors/badges` siguen dando 404, pero NO eran citas inventadas —son nombres del PR #341, que está ABIERTO, y un paquete nombrado en un PR sin mergear no está en un registro por definición. El defecto es una cita SIN ETIQUETA DE ESTADO.** 🔵 **Y el alcance estaba mal, lo que había costado SIETE paquetes reales: el proyecto publica en `@tutors-sdk/*` y sin alcance, y las siete son permisivas (MIT ×6, ISC ×1).** Ver **P114** y `compose/code/p114-license-column/`.
 > **Pase 50 del 2026-10-02:** 🔴 **la nota de arriba —*media KB de educación es GPL/AGPL*— se midió en la capa de AGENTES, que es donde esta base suponía permisividad, y el resultado no es el supuesto.** De **32** nombres de registro citados, **30 resuelven**: **21 permisivos**, **5 copyleft o recíproca**, **4 SIN licencia** — y 🔴 **los dos pedazos de la capa MCP de Open edX en PyPI son AGPL-3.0**, o sea copyleft de RED sobre un servidor. ⚠️ **Y los 2 que no resuelven son una corrección propia: `@tutors/xapi` y `@tutors/badges` dan 404 y esta base los citaba.** 🟢 **El defecto de instrumento que se corrige corre en los DOS sentidos** (campo sin texto **y** texto sin campo), y el control de alcanzabilidad cambia **7 falsos «sin licencia»** por **2 ciertos y 5 declarados indeterminados**. Ver **P114**.
 > **Pase 49 del 2026-10-02:** 🟢 **DOS clases de cifra dejaron de ser «no re-verificables acá», y una de las dos
 > cubre 326 mediciones de esta base.** El pase 48 declaró **1.836 de 3.611 (50,8 %)** fuera de alcance por canal
@@ -163,6 +164,61 @@ updated: 2026-10-02
 > completo, resuelve las constantes compuestas y los valores de `src/main/resources` —que es lo que `raw` no permite
 > sin saber de antemano qué archivo pedir— y además **fecha el `HEAD`**. Con `raw` no se habría encontrado ninguno de
 > los cuatro defectos del pase.
+
+## 🧾 Capa de licencia de la capa de AGENTES — los 167 repos de `agents/top.md`, medidos con 20 nombres de archivo (agregada en el pase 51 del 2026-10-02)
+
+**El pase 50 midió la licencia de los 32 paquetes de REGISTRO (sección de abajo). Este pase mide la
+otra mitad: los repositorios de GitHub.** Código, control positivo y TSV en
+`compose/code/p114-license-column/`.
+
+| Veredicto | Repos | % |
+|---|---|---|
+| 🟢 **licenciado** (campo **y** texto, artefacto anotado) | **139** | **83,2 %** |
+| 🔴 **sin licencia** (ausencia **medida**: 20 nombres × 2 ramas, repo respondiendo 200) | **23** | **13,8 %** |
+| ⚠️ **no público por este canal** (canal **probado contra hermano de la misma organización**) | **5** | **3,0 %** |
+
+**Mezcla de los 139:** MIT **79** · Apache-2.0 **27** · GPL **9** · AGPL **7** · BSD **4** ·
+Creative Commons **3** · LGPL **2** · 🔴 **textos anómalos 4**.
+
+🔵 **El dato de encuadre que esta sección agrega, y hay que decirlo con cuidado:** **106 de 139
+(76,3 %) son MIT o Apache-2.0**. ⚠️ **Eso NO refuta la nota de cabecera de este archivo** —*media KB
+de educación es GPL/AGPL*— **porque esa frase es sobre las PLATAFORMAS y esta tabla es sobre los
+AGENTES.** 🔵 **La regla de cotización que sale: la capa agéntica se compone permisiva y la capa de
+plataforma hay que negociarla. Una propuesta que promedie las dos poblaciones en un solo número de
+«licencia» miente en las dos direcciones.**
+
+### 🔴 Las 4 licencias que esta base no veía, y las dos causas son convenciones de ecosistema
+
+| Repo | Artefacto real | Convención que la lista de 4 nombres no cubría |
+|---|---|---|
+| 🔴 **`moodle/moodle`** | `main:COPYING.txt` → *GNU GENERAL PUBLIC LICENSE* | **el mundo GNU/Moodle usa `COPYING.txt`, con extensión** |
+| `jeanlucio/moodle-local_aihub` | `main:COPYING.txt` → ídem | ídem, plugin de Moodle |
+| `contentauth/c2pa-rs` | `main:LICENSE-MIT` → *MIT License* | **doble licencia** (`LICENSE-MIT` + `LICENSE-APACHE`), mundo Rust |
+| `contentauth/c2pa-python` | `main:LICENSE-MIT` → ídem | ídem |
+
+⚠️ **Los dos `c2pa` importan más de lo que su nombre sugiere en una KB de educación: son la
+implementación de referencia de C2PA, que es la pieza con la que se marca contenido generado — el
+mismo requisito del Artículo 50(2) del AI Act que esta base cotiza en `compose/patterns.md`.**
+**Estaban archivados como «sin licencia» y son MIT.**
+
+### 🔴 Los 23 sin licencia confirmados incluyen piezas que esta base venía citando como permisivas
+
+**Dos filas de `agents/top.md` decían «MIT ✅» sobre *badge* y prosa, sin una línea de texto:**
+`RadiantCrystal/SafeTutors` y `kaushal0494/AITutor-EvalKit`. 🔴 **En `SafeTutors` el badge todavía
+enlaza `github.com/your-username/SafeTutors/blob/main/LICENSE`: es andamiaje de plantilla sin
+editar.** Y **`dssg/student-early-warning`**, archivado como *«Other (NOASSERTION)»*, resultó ser
+una **licencia académica NO COMERCIAL de la Universidad de Chicago** que excluye *«any service or
+part of selling a service»*. ⚠️ **Las tres habrían entrado a una propuesta por un filtro de badge.**
+
+### 🟢 El control del hermano, que convierte «no sé» en «pedir acceso»
+
+**Los 5 no resueltos dieron 404 en 6 ramas y `codeload` 403 por igual, así que ese canal no
+distingue. El hermano sí:** `1EdTech/caliper-spec` responde **200** y `marcusgreen/moodle-qtype_gapfill`
+también, **así que el canal llega a esas organizaciones y el repo específico no es público** —
+`1EdTech/caliper-php`, `IMSGlobal/caliper-python`, `marcusgreen/moodle-tool_aiconnect`. ⚠️ **Quedan
+indeterminados de verdad sólo 2** (`YL1N/EduGuardBench`, `concentricsky/badgr-server`).
+🔵 **Encaja con la gestión de acceso a los repos de Caliper de 1EdTech que esta base arrastra: la
+acción no es reintentar, es pedir membresía.**
 
 ## 🧾 Capa de LICENCIA de la superficie npm/PyPI que esta base cita — 30 paquetes medidos, y el reparto NO es el que el archivo suponía (agregada en el pase 50 del 2026-10-02)
 

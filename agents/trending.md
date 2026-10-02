@@ -9,6 +9,176 @@ updated: 2026-10-02
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 > No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
 
+## 2026-10-02 (pase 51) — **la acción 1 se ejecuta completa y la columna más consultada de esta KB cambia: 139 licenciado / 23 sin licencia / 5 no público — con 2 filas que decían «MIT ✅» sin una sola línea de texto, 1 que es NO COMERCIAL y estaba archivada como «NOASSERTION», y 4 ALTAS que rompen nueve pases de sequía por un canal que esta base nunca había usado**
+
+🟢 **La acción 1 del pase 50 era la única de las tres que no dependía de un permiso de ejecución, y
+rindió de punta a punta.** ⚠️ **La acción 2 vuelve a quedar SIN EJECUTAR por el MISMO motivo que en
+el pase 50** —`[Code from External]`, el entorno niega correr el código versionado de
+`compose/code/`— y **se respetó la disciplina que el pase 50 escribió: no se reimplementó el probe
+ni se buscó otro intérprete.** El permiso se pide explícitamente en el reporte, no en silencio.
+🟢 **La acción 3 se ejecutó y CORRIGE al pase 50 que la escribió.**
+
+### 🟢 Las 4 altas, y lo que importa es el CANAL por el que entraron
+
+**Nueve pases consecutivos sin una pieza educativa nueva por el barrido genérico. Este pase rompe la
+sequía, y no por buscar mejor: por usar un canal que esta base no había probado nunca —el *endpoint*
+de BÚSQUEDA del registro npm** (`registry.npmjs.org/-/v1/search?text=…`), **no la consulta por nombre
+exacto que los pases 49 y 50 usaron.** Las cuatro pasaron el control del gap 71 **antes** de
+escribirse: `grep -ric` sobre los ocho archivos, **cero coincidencias para las cuatro.**
+
+| Alta | Licencia | 🟢 Texto, medido | ★ | Qué es | ¿Educativa? |
+|---|---|---|---|---|---|
+| [`Marsmanleo/LinguaMCP`](https://github.com/Marsmanleo/LinguaMCP) · npm `lingua-mcp` **0.3.0** | **Apache-2.0** ✅ | `main:LICENSE` → *«Apache License»* | **1** ★, 0 forks | Protocolo de currículo abierto para **tutores de idiomas**: práctica diaria desde cualquier herramienta de AI | 🟢 **sí, nativa** |
+| npm **`@gera-services/mcp-geralearn`** **0.1.1** | **MIT** ✅ | 🔵 **`package/LICENSE` DEL TARBALL** → *«MIT License»* — el repo declarado da **404** | n/d | Servidor MCP de la plataforma **GeraLearn**: cursos, matrícula, progreso y búsqueda de tutores en **50+ países** | 🟢 **sí, nativa** |
+| npm **`@schoolexl/mentor`** **0.0.4** | **MIT** ✅ | 🔵 **`package/LICENSE` DEL TARBALL** → *«MIT License»* — **no declara repositorio** | n/d | UI React *drop-in* para **tutores AI en tiempo real**: chat, voz en vivo y avatar con labios sincronizados sobre **LiveKit**, temizable, con cliente tipado | 🟢 **sí, nativa** |
+| [`alirezadir/AIMLInterviews`](https://github.com/alirezadir/AIMLInterviews) · npm `aimlinterviews-mcp` **0.1.2** | **MIT** ✅ | `main:LICENSE` → *«MIT License»* | **9,8k** ★, 1,7k forks | Servidor MCP que convierte un asistente en **tutor de entrevistas de ML/AI «a prueba de spoilers»** sobre el currículo del repo | ⚠️ **el PAQUETE sí; el REPO no** (ver abajo) |
+
+🔵 **Y la cuarta obliga a afinar una regla propia de esta base, que venía rechazando por
+REPOSITORIO.** Los pases 46–48 rechazaron correctamente *«material didáctico sobre AI, no pieza que
+educa»* (`ai-engineering-from-scratch`, los *awesome lists*, las bolsas de trabajo).
+**`alirezadir/AIMLInterviews` es exactamente esa clase: un currículo de entrevistas.** 🔴 **Pero el
+paquete npm publicado desde ese mismo repo NO es el currículo: es un servidor MCP con control de
+spoilers, o sea un tutor con una política pedagógica implementada.** ⚠️ **Un rechazo a nivel
+`org/repo` habría tirado un agente real junto con el currículo. La regla se corrige: se clasifica el
+ARTEFACTO, no el repositorio** —un repo puede publicar las dos clases a la vez.
+
+### 🔴 La acción 1, completa: la columna Licencia de `agents/top.md` pasa de afirmación a medición
+
+**El denominador, declarado como el pase 50 exigía:** `agents/top.md` tiene **485** líneas de pipe,
+**60** son separadores `|---|` → **425 filas** de datos y encabezado. **176 traen URL de
+`github.com`** y dan **167 `org/repo` distintos**. ⚠️ **Las otras 249 filas NO traen URL de GitHub y
+quedan fuera del alcance de este instrumento** —paquetes de registro, especificaciones, plataformas—
+y **no son «sin medir» sino «medibles por otro canal»**. Código, control positivo y TSV en
+`compose/code/p114-license-column/`.
+
+| Veredicto | Filas | Qué significa |
+|---|---|---|
+| 🟢 **licenciado** | **139** | campo **y** texto, con el artefacto exacto anotado |
+| 🔴 **sin licencia** | **23** | ausencia **medida**: **20** nombres de archivo × `main` y `master`, con el repo respondiendo 200 |
+| ⚠️ **no público por este canal** | **5** | y **no es «no llegué»**: el canal está **probado contra un hermano de la misma organización** |
+
+Mezcla de los 139: **MIT 79 · Apache 27 · GPL 9 · AGPL 7 · BSD 4 · CC 3 · LGPL 2** + **4 textos anómalos**.
+
+### 🔴 Las dos filas que decían «MIT ✅» y no tienen una sola línea de texto de licencia
+
+**Es la dirección del error que P114 fue creado para atrapar, y estaba viva dentro de esta misma
+tabla:**
+
+| Fila | Lo que dice `agents/top.md` | 🔴 Lo medido | De dónde salía la afirmación |
+|---|---|---|---|
+| `RadiantCrystal/SafeTutors` | **MIT ✅** | **20 nombres × 2 ramas = 404**, `README.md` **200** | *badge* de shields.io + prosa *«licensed under the MIT License — see the LICENSE file»* 🔴 **y el enlace del badge sigue apuntando a `github.com/your-username/SafeTutors/blob/main/LICENSE`: es un marcador de plantilla SIN EDITAR** |
+| `kaushal0494/AITutor-EvalKit` | **MIT ✅** | **ídem, ausencia medida** | *badge* `license-MIT` + sección *«## License / This project is licensed under the MIT License.»* **enlazando un `LICENSE` que no existe** |
+
+🔵 **El `your-username` de `SafeTutors` es el hallazgo fino: prueba que la sección de licencia nunca
+se llenó —es andamiaje de plantilla—, no que el archivo se haya borrado.** Es el defecto de
+`@timadey/proctor` del pase 49 **con un testigo adicional que lo fecha en el origen.** ⚠️ **Las dos
+filas pasan a `🚫 sin licencia (ausencia medida)` en `agents/top.md`.**
+
+### 🔴 Y la fila que cambia una cotización: «NOASSERTION» tapaba una licencia NO COMERCIAL
+
+**`dssg/student-early-warning`** —*Data Science for Social Good*, Universidad de Chicago, el más
+estrellado de la capa predictiva en términos absolutos— estaba archivado en esta tabla como
+⚠️ *«"Other" (NOASSERTION)"»*. 🔴 **El texto existe, responde 200, y es inequívoco:**
+
+> *«Permission to use, copy, modify, and distribute this software … for **academic research or other
+> not-for-profit scholarly purposes** which are undertaken at a **non-profit or government
+> institution** … For the avoidance of doubt, educational and not-for-profit research purposes
+> **excludes any service or part of selling a service that uses the Program**. To obtain a commercial
+> license … contact the Technology Commercialization and Licensing, Polsky Center.»*
+
+🔴 **Para Globant, que vende servicios, esto no es «licencia desconocida»: es una PROHIBICIÓN
+expresa del modelo de negocio.** ⚠️ **«NOASSERTION» es peor que «sin licencia», porque suena a
+pendiente administrativo y es un bloqueo duro.** 🔵 **Y deja el límite de P114 escrito: el veredicto
+`licenciado` significa «hay permiso escrito», NUNCA «se puede usar en una entrega».** La gestión
+hacia afuera, si la pieza se quisiera, tiene destinatario y dirección concretos: **Polsky Center,
+`polsky@uchicago.edu`.**
+
+### 🔴 Dos clases de defecto de licencia NUEVAS, y las dos las produce un proyecto permisivo
+
+| Clase nueva | Caso medido | Por qué importa |
+|---|---|---|
+| **Inglés válido, SPDX inválido** | `tutors` **1.6.4** declara `license: `**`"MIT Licence"`** (grafía británica) | 🔴 **`MIT Licence` NO es un identificador SPDX** —el válido es `MIT`—. **Un inventario que VALIDE contra SPDX rechaza un paquete correctamente licenciado.** Es la tercera dirección del defecto campo-vs-texto que el pase 50 midió en dos |
+| **Texto correcto, OTORGANTE equivocado** | `edeleastar/tutors-ts` → `master:LICENSE.md` es un cuerpo **MIT íntegro** encabezado por *«Copyright (c) 2011-2018 **GitHub Inc.**»* | 🔴 **El permiso lo otorga, en el papel, una parte que no es dueña del código.** Un `LICENSE` copiado sin cambiar el titular: hay texto, hay 200, hay cuerpo OSI válido, **y el otorgante no corresponde**. Un filtro por cuerpo lo aprueba |
+
+### 🔴 El probe por TARBALL funciona, resuelve dos altas… y trae su propia trampa, medida
+
+🟢 **El paso nuevo que este pase le agrega a P114: cuando el repositorio no es público o no se
+declara, el texto de licencia se mide en el TARBALL del registro** —que además es **el artefacto que
+el cliente realmente instala**. Resolvió dos de las cuatro altas:
+
+| Paquete | Repo declarado | 🟢 Texto |
+|---|---|---|
+| `@gera-services/mcp-geralearn` | `geraservicesuk/mcp-geralearn` → 🔴 **404 por DOS canales independientes** (`raw` en 6 ramas **y** `github.com`) | **`package/LICENSE` → *«MIT License»*** |
+| `@schoolexl/mentor` | 🔴 **ninguno** | **`package/LICENSE` → *«MIT License»*** |
+
+🔵 **El primero es una clase inversa que vale anotar: manifiesto que apunta a un repositorio
+inexistente, y sin embargo el ARTEFACTO PUBLICADO sí carga el permiso.** Al revés de
+`@timadey/proctor` (el manifiesto promete un `LICENSE` ausente) y de `DMontgomery40/mcp-canvas-lms`
+(un tercero afirma lo que el repo no respalda). **Acá el repo no responde y la licencia está en lo
+que se instala.**
+
+🔴 **Y la trampa del propio probe, encontrada porque se imprimió la lista entera antes de concluir:**
+`tutors-publish-npm` **4.1.3** empaqueta sus `node_modules`, y el tarball trae **144 archivos de
+licencia — ninguno propio** (`package/LICENSE` en la raíz: **0**). **La primera coincidencia de un
+`grep -i licen` recursivo es `node_modules/@iktakahiro/markdown-it-katex/LICENSE`, con texto MIT
+real.** ⚠️ **Un escáner de tarball sin ancla publica la licencia de una DEPENDENCIA como la del
+paquete, con texto verdadero y todo.** 🟢 **La regla: el probe se ancla a
+`^package/(LICENSE|COPYING)[^/]*$` en la RAÍZ, nunca recursivo.**
+
+### 🟢 La acción 3 se ejecutó, y el pase 51 corrige al pase 50 que la escribió
+
+**El pase 50 cerró el gap 248 así: *«esta base cita DOS paquetes que no existen»*
+(`@tutors/xapi`, `@tutors/badges`, 404 en el registro).** 🔴 **La medición es correcta y el
+veredicto está a medias.**
+
+🔵 **Esos dos nombres no salieron de un registro: salieron del PR #341 de
+`tutors-sdk/tutors-mono-repo`, que está ABIERTO** —así lo dicen `agents/trending.md:3440` e
+`intel/trends.md:3166`, que es de donde esta base los tomó. **Un paquete nombrado en un PR sin
+mergear NO ESTÁ en el registro por definición: su ausencia no es un error de la cita, es su estado.**
+⚠️ **El defecto real es otro y es más chico: una cita SIN ETIQUETA DE ESTADO.** Y se confirma que
+tampoco se publicaron bajo el alcance que sí existe: **`@tutors-sdk/xapi` y `@tutors-sdk/badges` →
+404 también.**
+
+🟢 **Lo que sí era un error, y costó siete piezas reales: el ALCANCE estaba mal.** El proyecto no
+publica en `@tutors/*` (**5 de 5 sondas 404**) sino en **`@tutors-sdk/*` y sin alcance** — y **las
+siete son permisivas**:
+
+| Paquete | Versión | Campo | Texto (P114 paso 2) |
+|---|---|---|---|
+| `tutors` | 1.6.4 | ⚠️ **`MIT Licence`** (SPDX inválido) | `edeleastar/tutor` → 🔴 **sin licencia, ausencia medida** |
+| `tutors-lib` | 2.6.4 | **MIT** | `tutors-sdk/tutors-lib` → ⚠️ repo no público |
+| `tutors-gen-lib` | 3.4.7 | **MIT** | 🟢 `tutors-sdk/tutors` `main:LICENSE` → *MIT License* |
+| `tutors-js` | 1.5.1 | **MIT** | `tutors-sdk/tutors-json` → ⚠️ repo no público |
+| `tutors-ts` | 3.3.0 | **MIT** | ⚠️ `master:LICENSE.md`, **MIT con titular «GitHub Inc.»** |
+| `@tutors-sdk/tutors-lib` | 0.6.5 | **MIT** | ídem, repo no público |
+| `tutors-publish-npm` | 4.1.3 | **ISC** | 🔴 **sin texto propio: 144 licencias de dependencias** |
+
+🔵 **Y `tutors-sdk/tutors-mono-repo` —el repo del PR #341— sí tiene `main:LICENSE` → *MIT License*.**
+
+### ⚠️ El barrido obligatorio: completo, año CALCULADO (2026), y por NOVENA vez sin código educativo nuevo
+
+**Cuatro consultas globales y cuatro regionales. Las cuatro regiones declaradas una por una —un
+vacío declarado es información; el silencio se lee como cobertura:**
+
+| Región | Qué devolvió | Altas |
+|---|---|---|
+| **North America** | **$951 M** (2024) → **$2.303,2 M** (2029, CAGR **15,9 %**), **36 %** de cuota global, **$169 M** federales en Q1 2026; **71 %** de docentes sin formación y **sólo 10 %** de instituciones con guías formales; **ChatGPT usado por 66 %** de los estudiantes; Colorado y Texas por partes. Jugadores **comerciales**: IBM, Microsoft, Google | **0** |
+| **EMEA** | el AI Act con el reloj de **agosto de 2026** y educación como **alto riesgo**; **£200 M+** del AI Adoption Summit del Reino Unido (**£100 M** Bridge AI, **£53 M** regional); **94 %** dispuesto a invertir en formación y 🔴 **38 % que todavía no piloteó**; 🟢 **el Consejo de Europa con su 2.ª conferencia de trabajo sobre regulación de AI en educación ESTE MES (octubre)**; modelo de entrega británico nombrado (Cisco, IBM, BT, Rolls-Royce, **Skills England** fijando currículo) | **0** |
+| **APAC** | 🟢 **y acá hay una novedad de ocho pases: por PRIMERA VEZ el canal genérico devolvió educación.** **Tailandia: 30.000 profesionales de AI para 2027**; **ETDA AI Governance Center** y **PDPA** como marco; **56 %** de las empresas de APAC ya con asistentes desplegados; *sovereign RAG* por reglas de datos; 🔵 **informe OSAI de la Linux Foundation para APEC: hasta $3,8 billones de productividad hasta 2038, con el open source como vía de auditabilidad** | **0** |
+| **LATAM** | **200 instituciones / 19 países** (UNU-UNESCO IESALC, ago–oct 2025) en cinco dimensiones; *edtech* entre los sectores más disruptivos con **Ednova (Chile)** nombrada; **BID** con su marco regulatorio habilitante (PDF directo); ⚠️ **conflicto de cifra: 70 % de adopción** (*ecosistemastartup*) **contra >85 %** (*La Estrella*) | **0** |
+
+🔵 **La propiedad del barrido se confirma por novena vez —las cuatro regiones devuelven mercado,
+dinero y regulación, nunca código— pero con DOS cambios finos que valen más que la confirmación:**
+🟢 **APAC rompió ocho pases de no devolver ni siquiera educación**, y ⚠️ **LATAM devolvió por primera
+vez un conflicto de cifra entre dos secundarias sobre el MISMO indicador** (70 % vs >85 % de
+adopción), que es material de P107: **ninguna de las dos se publica sin su instrumento**.
+
+🔴 **Y la consulta de verticales degeneró: «open source platform education ERP CRM SIS MIT Apache
+2026» devolvió DIEZ resultados y los diez eran el sitio de UN solo proveedor** (`openeducat.org`, en
+diez idiomas distintos). ⚠️ **Cuando una consulta de descubrimiento colapsa sobre el SEO de un
+vendedor, no está midiendo el ecosistema: está midiendo quien compró las palabras.** Confirma
+OpenEduCat (**LGPL-3.0**, 70+ módulos, sobre Odoo) y **no agrega nada**.
+
 ## 2026-10-02 (pase 50) — **el gap 233 se responde y el bloqueo de las 227 tools de Canvas NO bloquea una entrega; 1 alta, y es una ADVERTENCIA — más una corrección de este mismo pase: las dos piezas que iba a dar de alta ya estaban en la tabla**
 
 ⚠️ **Lo primero, porque condiciona todo el pase:** las tres acciones del pase 49 pedían **correr

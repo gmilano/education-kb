@@ -7,6 +7,7 @@ updated: 2026-10-02
 # 📡 Tendencias — education
 
 > Ventana de investigación: septiembre 2026. Verificado 2026-09-30; el pase 11, el 2026-10-01.
+> **Pase 51 del 2026-10-02:** 🟢 **la acción 1 del pase 50 se ejecutó COMPLETA y es la de mayor valor que esta base haya corrido sobre sí misma: la columna Licencia de `agents/top.md` pasó de afirmación a medición repo por repo —167 `org/repo`, 20 nombres de archivo × 2 ramas, control de alcanzabilidad— y da 139 licenciado / 23 sin licencia / 5 no público.** 🔴 **Tres filas cambian y una cambia una cotización: `SafeTutors` y `AITutor-EvalKit` decían «MIT ✅» sin UNA línea de texto, y `dssg/student-early-warning` no era «NOASSERTION» sino una licencia académica NO COMERCIAL de la Universidad de Chicago que excluye vender un servicio.** 🔵 **El instrumento se corrigió a sí mismo: 4 falsos «sin licencia» de 27 (14,8 %), entre ellos `moodle/moodle`, y las dos causas son CONVENCIONES DE ECOSISTEMA (`COPYING.txt` en el mundo GNU; `LICENSE-MIT` en doble licencia Rust).** 🟢 **4 ALTAS que rompen nueve pases de sequía, y lo que las trajo fue un CANAL NUEVO: el `?text=` de búsqueda del registro npm, no la consulta por nombre exacto.** 🟢 **La acción 3 se ejecutó y CORRIGE al pase 50: `@tutors/{xapi,badges}` no eran citas inventadas, eran nombres de un PR ABIERTO —el defecto es una cita sin etiqueta de estado— y el alcance equivocado había costado SIETE paquetes permisivos reales.** ⚠️ **La acción 2 vuelve a quedar SIN EJECUTAR: el entorno niega correr el código versionado (`[Code from External]`); no se reimplementó el probe ni se buscó otro intérprete, y el permiso se pide explícitamente.** Tendencias **251**–**264**.
 > **Pase 50 del 2026-10-02:** ⚠️ **las tres acciones del pase 49 pedían las tres correr código versionado de `compose/code/`, y el entorno NEGÓ la ejecución de código del repositorio clonado** (`[Code from External]`, dos veces, la segunda tras leer `probe.py` y `test_probe.py` completos). **No se reimplementó el probe ni se buscó otro intérprete.** 🟢 **Lo que sí estaba abierto es el canal de red, que es exactamente la mitad de la acción 1 que no necesita el script: 30 de 32 paquetes de registro medidos por LICENCIA, con los dos artefactos de la regla del pase 49.** 🟢 **Gap 233 CERRADO** —hay dos puertas MIT de Canvas con texto y la mayor cubre el núcleo, así que **el gap 232 baja de bloqueante a opcional**. 🔴 **Y los hallazgos que corrigen a esta base: el defecto campo-vs-texto corre en los DOS sentidos; la capa de agentes NO es más permisiva que la plataforma (la de Open edX es AGPL-3.0); hay dos «Kolibri» con licencias distintas; y esta KB citaba dos paquetes que no existen.** ⚠️ **La acción 2 queda SIN EJECUTAR y se vuelve a dejar escrita.** Tendencias **234**–**246**.
 > **Pase 47 del 2026-10-02:** **se ejecutan las tres acciones del pase 46, las tres rinden, y la primera rinde
 > CORRIGIENDO la conclusión del pase anterior.** 🔴 **El gap 97 era verdadero para SCORM 2004 y falso para SCORM 1.2:**
@@ -4974,6 +4975,101 @@ comercial **de forma sistemática**, mientras el texto consolidado del Reglament
 que sus fuentes secundarias publican mal.** La regla operativa no cambia y conviene repetirla cada vez que se cite:
 **las fechas están confirmadas por tres canales secundarios independientes y concordantes, no por fuente primaria, y
 eso se dice en la propuesta.**
+
+## 🔵 Las tendencias 251–264, del pase 51 del 2026-10-02
+
+**Las catorce salen de ejecutar las acciones 1 y 3 del pase 50 y del barrido obligatorio. Siete
+corrigen afirmaciones de esta base, cuatro son defectos del propio instrumento de licencia —y tres
+de esos cuatro se encontraron porque el control positivo se corrió ANTES de publicar— y una abre un
+canal de descubrimiento que esta base no había probado en cincuenta pases.**
+
+| # | Tendencia | Evidencia |
+|---|---|---|
+| **251** | 🟢 **La columna más consultada de esta KB —la que decide si una pieza entra en una propuesta— se puede medir entera por un canal abierto, y cuesta ~1.300 peticiones HTTP.** **167 `org/repo` × 20 nombres de archivo × 2 ramas + control de alcanzabilidad: 139 licenciado (83,2 %) / 23 sin licencia con ausencia MEDIDA (13,8 %) / 5 no público (3,0 %).** Mezcla: **MIT 79 · Apache 27 · GPL 9 · AGPL 7 · BSD 4 · CC 3 · LGPL 2 + 4 anómalos** | `compose/code/p114-license-column/`, TSV de 167 filas; **denominador declarado: 429 filas de pipe, 176 con URL de GitHub, 249 sin** |
+| **252** | 🔴 **Una lista de nombres de archivo de licencia es un SUPUESTO CULTURAL disfrazado de detalle técnico, y falla contra los dos ecosistemas que más pesan en una revisión legal.** Los 4 nombres de P114 produjeron **4 falsos «sin licencia» de 27 (14,8 %)**: **`COPYING.txt`** es la convención del mundo **GNU/Moodle** y **`LICENSE-MIT`+`LICENSE-APACHE`** la de **doble licencia** estilo Rust. 🔴 **El falso más grave fue `moodle/moodle`, la pieza central de `verticals/solutions.md`, declarada sin licencia siendo GPL** | `moodle/moodle` y `jeanlucio/moodle-local_aihub` → `main:COPYING.txt`; `contentauth/c2pa-rs` y `c2pa-python` → `main:LICENSE-MIT` |
+| **253** | 🔴 **«Hay texto de licencia» y «se puede usar» son dos preguntas distintas, y confundirlas produjo el único BLOQUEO COMERCIAL DURO de esta base.** `dssg/student-early-warning` responde 200 con texto real **y no es open source**: licencia académica de la **Universidad de Chicago** limitada a *«non-profit or government institution»* que **excluye *«any service or part of selling a service that uses the Program»***. ⚠️ **Estaba archivado como *«Other (NOASSERTION)»*, que suena a pendiente administrativo** | `master:LICENSE`; vía comercial: Polsky Center, `polsky@uchicago.edu` |
+| **254** | 🔴 **Dos filas de esta base afirmaban MIT sobre *badge* + prosa, que es exactamente la lectura de UN artefacto que P114 fue creado para prohibir — y seguían vivas porque la columna nunca se re-midió.** `RadiantCrystal/SafeTutors` y `kaushal0494/AITutor-EvalKit`: **20 nombres × 2 ramas en 404 con `README.md` en 200**. 🔵 **El testigo fino está en `SafeTutors`: el badge enlaza `github.com/your-username/SafeTutors/blob/main/LICENSE`, un marcador de PLANTILLA sin editar — prueba que la sección nunca se llenó, no que el archivo se borrara** | los dos README leídos por `raw`; **P114 existía desde el pase 50 y no se había aplicado a este archivo** |
+| **255** | 🟢 **«Indeterminado» se parte en dos con un control nuevo y barato: el HERMANO de la misma organización.** Los 5 no resueltos dan **404 en 6 ramas** y `codeload` **403 a los cinco por igual**, así que ese canal no distingue. **Pero `1EdTech/caliper-spec` responde 200 y `marcusgreen/moodle-qtype_gapfill` también: el canal llega a esas organizaciones, así que el repo específico NO ES PÚBLICO.** 🔵 **Convierte 3 de 5 «no sé» en «pedir acceso», que es accionable** | `1EdTech/caliper-php`, `IMSGlobal/caliper-python`, `marcusgreen/moodle-tool_aiconnect`; quedan 2 indeterminados reales |
+| **256** | 🔴 **Inglés válido, SPDX inválido: una CUARTA dirección del defecto campo-vs-texto.** `tutors` **1.6.4** declara `license: `**`"MIT Licence"`** (grafía británica). **`MIT Licence` no es un identificador SPDX** —el válido es `MIT`—, así que **un inventario que VALIDE contra SPDX rechaza un paquete correctamente licenciado**, y uno que sólo lea la cadena lo acepta | `registry.npmjs.org/tutors/latest`, campo crudo `'MIT Licence'` |
+| **257** | 🔴 **Texto correcto, cuerpo OSI válido, OTORGANTE equivocado — y un filtro por cuerpo lo aprueba.** `edeleastar/tutors-ts` tiene en `master:LICENSE.md` un cuerpo **MIT íntegro** encabezado por *«Copyright (c) 2011-2018 **GitHub Inc.**»*: un `LICENSE` copiado sin cambiar el titular. **El permiso lo otorga, en el papel, una parte que no es dueña del código** | texto completo leído por `raw`; es la **quinta** dirección del defecto |
+| **258** | 🟢 **El TARBALL del registro es un canal de licencia de primera clase, no un plan B — y es el único que mide el artefacto que el cliente REALMENTE instala.** Resolvió dos de las cuatro altas: **`@gera-services/mcp-geralearn`**, cuyo repo declarado da **404 por dos canales independientes**, y **`@schoolexl/mentor`**, que **no declara repositorio en absoluto**; las dos traen **`package/LICENSE` → *«MIT License»*** | `registry.npmjs.org/<pkg>/latest` → `dist.tarball`; `tar -tzf` + `tar -xzOf` |
+| **259** | 🔴 **Y el probe por tarball trae su propia trampa, que publica texto VERDADERO de un proyecto AJENO.** `tutors-publish-npm` **4.1.3** empaqueta sus `node_modules`: **144 archivos de licencia en el tarball y `package/LICENSE` en la raíz = 0**. La primera coincidencia de un `grep -i licen` recursivo es `node_modules/@iktakahiro/markdown-it-katex/LICENSE`, con MIT real. 🟢 **La ancla `^package/(LICENSE\|COPYING)[^/]*$` es obligatoria.** ⚠️ **Se encontró porque se imprimió la lista entera antes de concluir** | conteo anclado: raíz **0**, recursivo **144** |
+| **260** | 🟢 **Nueve pases de sequía no se rompieron buscando mejor: se rompieron usando un ENDPOINT distinto del MISMO host que ya estaba probado.** Los pases 49 y 50 consultaron el registro npm sólo **por nombre exacto** (`/<pkg>/latest`), que **confirma y no descubre**. **El `?text=` de búsqueda devolvió en UNA llamada cuatro piezas educativas ausentes de los ocho archivos** (control del gap 71 corrido antes: 0 coincidencias con `grep -ric`) | `registry.npmjs.org/-/v1/search?text=tutors&size=20`; las 4 altas en `agents/top.md` |
+| **261** | ⚠️ **La regla de rechazo de esta base operaba a nivel REPOSITORIO y habría tirado un agente real junto con un currículo.** `alirezadir/AIMLInterviews` **es** material didáctico —la clase que los pases 46–48 rechazan con razón—, **pero el paquete npm publicado desde ese mismo repo es un servidor MCP tutor con control de spoilers**, o sea una política pedagógica implementada. 🟢 **Se clasifica el ARTEFACTO, no el repositorio: un repo puede publicar las dos clases a la vez** | `aimlinterviews-mcp` 0.1.2 (MIT) vs. el repo (9,8k ★, currículo) |
+| **262** | 🔵 **Un 404 en un registro puede ser el ESTADO de la cita y no un error de la cita, y el pase 50 leyó esto a medias.** `@tutors/xapi` y `@tutors/badges` dan 404 **y salieron del PR #341 de `tutors-sdk/tutors-mono-repo`, que está ABIERTO**: un paquete nombrado en un PR sin mergear **no está en un registro por definición**. ⚠️ **El defecto real es una cita SIN ETIQUETA DE ESTADO**, no una cita inventada. Confirmado que tampoco existen bajo el alcance que sí existe (`@tutors-sdk/{xapi,badges}` → 404) | `agents/trending.md:3440` e `intel/trends.md:3166`, de donde esta base los tomó; **corrige la tendencia 244 y el gap 248** |
+| **263** | 🔴 **Un ALCANCE equivocado costó siete paquetes reales y permisivos, y la clave es que `@tutors/*` no existe mientras el proyecto publica a la vista.** **5 de 5 sondas a `@tutors/*` dan 404**; el proyecto publica en **`@tutors-sdk/*` y sin alcance**: `tutors` 1.6.4, `tutors-lib` 2.6.4, `tutors-gen-lib` 3.4.7, `tutors-js` 1.5.1, `tutors-ts` 3.3.0, `@tutors-sdk/tutors-lib` 0.6.5 y `tutors-publish-npm` 4.1.3 — **MIT ×6 + ISC ×1** | `?text=tutors`; **es la tercera colisión/confusión de nombre de esta KB tras los dos «Bloom» y los dos «Kolibri»: la clave es `org/repo` o `alcance/paquete`, nunca el nombre del proyecto** |
+| **264** | 🔵 **Una consulta de descubrimiento puede colapsar sobre el SEO de UN vendedor, y entonces no mide el ecosistema: mide quién compró las palabras.** «open source platform education ERP CRM SIS MIT Apache 2026» devolvió **diez resultados y los diez eran `openeducat.org`**, en diez idiomas distintos. ⚠️ **Es el defecto hermano del pase 48** —cuando el barrido devuelve el propio inventario— **y los dos significan lo mismo: el instrumento dejó de ser de descubrimiento** | el barrido de verticales de este pase; confirma OpenEduCat (LGPL-3.0, 70+ módulos, sobre Odoo) y **no agrega nada** |
+
+## 🔵 Estado de gaps al cierre del pase 51 del 2026-10-02
+
+⚠️ **Este pase ejecutó DOS de las tres acciones del pase 50 —la 1 y la 3— y las dos rindieron. La
+2 vuelve a quedar sin ejecutar por el MISMO motivo del pase 50: el entorno niega correr el código
+versionado de `compose/code/` (`[Code from External]`). Se respetó la disciplina escrita: no se
+reimplementó el probe ni se buscó otro intérprete.**
+
+| Gap | Estado | Resolución |
+|---|---|---|
+| **101** (cifras publicadas sin nombrar su métrica) | 🟢 **AVANZA de forma decisiva en licencias** | **La clase «licencia» pasa a columna MEDIDA para los 167 repos de GitHub de `agents/top.md`**, con salida de tres valores, artefacto exacto por fila y denominador declarado (**429 filas, 176 con URL, 249 sin**). Sumado a los 30 paquetes de registro del pase 50, **la licencia deja de ser la clase problemática de esta KB**. 🔴 **La clase `tools`/superficie sigue sin instrumento reproducible y exige ejecución** |
+| **71** (duplicados y filas basura en `agents/top.md`) | 🟢 **CERRADO y controlado en el mismo pase que tocó la tabla** | **74 filas / 74 slugs distintos / 0 duplicados**; **22 cabeceras en el archivo y las 22 con su `\|---\|` debajo → 0 encabezados usados como dato**; **4 altas reales, 0 filas de relleno**. 🟢 **Y el control sirvió hacia adentro otra vez: las 4 altas se verificaron con `grep -ric` sobre los ocho archivos ANTES de escribirse** |
+| **248** (citas a paquetes inexistentes) | 🟢 **CERRADO, y el veredicto del pase 50 queda CORREGIDO** | **No eran citas inventadas: eran nombres del PR #341, que está ABIERTO** (tendencia 262). **El defecto es una cita sin etiqueta de estado**, y queda anotado como tal en los dos archivos. 🟢 **Bonus: el alcance correcto recupera 7 paquetes permisivos que esta base había perdido** (tendencia 263) |
+| **nuevo 251** 🔴 | **la lista de nombres de archivo de licencia de esta KB era incompleta y sesgada por ecosistema** | **CORREGIDA a 20 nombres** y documentada en `compose/code/p114-license-column/`. ⚠️ **Pendiente: re-medir con la lista completa los 30 paquetes de registro del pase 50**, cuyo veredicto salió con la lista de 4 — **4 de ellos declarados «sin licencia» podrían ser falsos por la misma causa** |
+| **nuevo 252** 🔴 | **hay una pieza en esta KB cuya licencia PROHÍBE el modelo de negocio de Globant** | `dssg/student-early-warning`: académica, no comercial, Universidad de Chicago (tendencia 253). **Gestión hacia afuera con destinatario concreto: Polsky Center, `polsky@uchicago.edu`** |
+| **nuevo 253** ⚠️ | **las cifras de ★ de las 4 altas no tienen un instrumento uniforme** | `AIMLInterviews` **9,8k ★** y `LinguaMCP` **1 ★** se leyeron por **WebFetch sobre `github.com`**; **`@gera-services/mcp-geralearn` y `@schoolexl/mentor` no tienen ★ porque no tienen repo público**, y se publican como **n/d** en vez de 0. 🔵 **«n/d» y «0» no son lo mismo y la tabla no debe mezclarlos** (P107) |
+| **247** (cifras de código sobre árbol UPSTREAM sin re-medir) | 🔴 **ABIERTO, sin cambios, y por el MISMO motivo** | «**164 métodos**» (citada 13 veces), «187 archivos», «72 rutas», «35 rutas», «341 operaciones», «31 clases». **Era la acción 2 del pase 49, volvió a ser la 2 del pase 50 y sigue SIN EJECUTAR: exige correr los extractores versionados.** ⚠️ **No se deben citar como estado actual sin su pase de origen** |
+| **249** (capa MCP de Open edX AGPL-3.0) / **250** (colisiones de nombre) | 🔴 **249 ABIERTO** — ⚠️ **250 se AGRAVA: ya van TRES** | A los dos «Bloom» y los dos «Kolibri» (MIT vs **EUPL-1.2**) se suma **`@tutors/*` contra `@tutors-sdk/*`** (tendencia 263). 🔵 **Tres casos ya no son anécdotas: la clave de cualquier inventario de esta KB es `org/repo` o `alcance/paquete`, y el nombre del proyecto no es una clave** |
+| **232** (227 tools de Canvas sin licencia) / **233** | 🟢 **233 CERRADO en el pase 50; 232 sigue OPCIONAL** | Sin cambios. ⚠️ **Y la mitad que P113 declara incomparable —227 vs 165 medidos con instrumentos distintos— sigue incomparable porque es exactamente la acción 2** |
+| **vacío de descubrimiento APAC** | 🟢 **MEJORA por primera vez en ocho pases** | **El canal genérico devolvió educación APAC**: Tailandia (**30.000** profesionales para 2027), **ETDA AI Governance Center**, **PDPA**, **56 %** con asistentes desplegados, e informe **OSAI de la Linux Foundation para APEC** (**$3,8 billones** hasta 2038). ⚠️ **Sigue sin devolver CÓDIGO: 0 altas regionales, y van nueve** |
+| **92** (texto consolidado del AI Act) / **65** (primarias multilaterales) | 🔴 **92 ABIERTO** — 🟢 **65 gana una primaria nueva** | El informe **OSAI de la Linux Foundation para APEC** es la primera fuente de esta base que une el argumento comercial del open source con el regulatorio en APAC. **La UNU/UNESCO IESALC (200 instituciones, 19 países) sigue siendo la primaria LATAM citable con denominador** |
+| **69** / **68** / **60** / **61** | 🔴 **ABIERTOS, sin cambios** | Sin mediciones nuevas este pase |
+
+## 🔵 Las tres acciones que el pase 51 deja escritas para el pase 52
+
+⚠️ **La acción 1 es consecuencia directa de lo que este pase midió y no necesita ningún permiso.
+La 2 es la que lleva DOS pases bloqueada y se declara qué hacer si sigue negada. La 3 cierra una
+deuda de redacción que este pase creó al cambiar tres filas.**
+
+1. 🟢 **Re-medir con los 20 nombres de archivo los 30 paquetes de registro del pase 50, porque
+   su veredicto salió con la lista de 4 que este pase probó incompleta.** **La acción concreta:**
+   para los **4** que el pase 50 declaró «sin licencia» y los **5** que dejó «indeterminados»,
+   correr (a) los 20 nombres sobre su `org/repo`, (b) **el control del hermano** (tendencia 255) y
+   (c) **el probe anclado por TARBALL** (tendencias 258 y 259), que no existía cuando se midieron.
+   🔵 **La hipótesis explícita y falsable: si la causa de los falsos es la misma convención de
+   ecosistema, al menos uno de esos 9 cambia de veredicto; si ninguno cambia, el defecto era
+   específico de la capa de GitHub y la capa de registro estaba bien medida.** ⚠️ **Y declarar el
+   denominador de nuevo: cuántos de los 32 nombres tienen `org/repo` utilizable y cuántos no.**
+2. 🔴 **Hacer comparables las dos superficies de Canvas con el MISMO instrumento — TERCER pase
+   que se pide.** Hoy se enfrentan **227** (conteo estático sobre `dist/`, pase 49) y **165** (README
+   del proveedor), y **la resta no se puede escribir**. ⚠️ **Esto exige ejecutar el código
+   versionado de `compose/code/npm-surface-probe/`, que los pases 50 y 51 tuvieron NEGADO
+   (`[Code from External]`).** 🔵 **Si el permiso sigue negado, el reemplazo está ya definido y no
+   es no hacer nada: (a) la advertencia de instrumentos distintos ya está escrita en P113 y en las
+   filas de Canvas, y (b) el permiso se pide EXPLÍCITAMENTE en el reporte —como hizo este pase— en
+   vez de reintentarlo en silencio.** 🔴 **No se debe reimplementar el probe fuera del
+   repositorio: la comparación sólo vale si los dos números salen del MISMO código versionado, que
+   es justamente el punto.**
+3. ⚠️ **Cerrar la deuda de redacción que este pase creó, y es trabajo que no necesita ningún
+   canal.** Este pase cambió el veredicto de licencia de **tres filas** (`SafeTutors`,
+   `AITutor-EvalKit`, `dssg/student-early-warning`) **y esas tres piezas están citadas en otros
+   archivos con la licencia VIEJA**. **La acción concreta:** (a) `grep -rn` las tres sobre los ocho
+   archivos y corregir cada mención **marcando la medición del pase 51 sin borrar la historia**
+   —los archivos *append-only* conservan el error como serie temporal—, (b) **revisar las listas
+   agregadas del tipo «MIT / Apache-2.0 / BSD-3 ✅»**, que este pase marcó pero no desarmó, y
+   (c) **anotar el estado de la cita del PR #341** con la etiqueta que la tendencia 262 pide, para
+   que no vuelva a leerse como paquete publicado.
+
+⚠️ **Y las acciones hacia afuera que esta corrida sigue sin poder ejecutar, declaradas para no
+perderlas:** 🔴 **la licencia comercial de `dssg/student-early-warning` ante el Polsky Center de la
+Universidad de Chicago, que es la única de esta lista que desbloquea una pieza en vez de aclarar un
+dato**; el `LICENSE` de `RadiantCrystal/SafeTutors` y de `kaushal0494/AITutor-EvalKit`, **ahora con
+el argumento de que los dos README ya PROMETEN el archivo y uno todavía enlaza `your-username`**; el
+titular correcto en el `LICENSE.md` de `edeleastar/tutors-ts`, **que hoy otorga permiso en nombre de
+GitHub Inc.**; el `LICENSE` de `DMontgomery40/mcp-canvas-lms` y de `pie-framework/pie-elements-ng`;
+el del alcance `@timeback/*`; el de `@imazhar101/mcp-canvas-server` (gap 232); el de `Timadey/proctor`;
+el repositorio y el texto de licencia de `@ink-waffle/sisu-mcp` y **el repositorio de
+`geraservicesuk/mcp-geralearn`, que su propio manifiesto declara y da 404**; **el acceso de miembro a
+los repos de Caliper de 1EdTech, ahora con el control del hermano demostrando que el canal llega y el
+repo no es público**; los dos PR a `giacomomaria81/scorm-mcp-server` (gaps 100 y 102); y 🔵 **el
+texto consolidado del Reglamento (UE) 2024/1689, inalcanzable por cuatro canales** (gap 92).
 
 ## 🔵 Las tendencias 234–246, del pase 50 del 2026-10-02
 

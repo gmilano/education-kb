@@ -8,6 +8,116 @@ updated: 2026-10-02
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 
+## 2026-10-02 (pase 51) — **el dato crudo: 167 repos medidos por licencia con 20 nombres de archivo, 139/23/5, y la lista de 4 nombres que esta base usaba fallaba en `moodle/moodle`; 7 paquetes `tutors` recuperados de un alcance equivocado; 144 licencias ajenas en un tarball**
+
+**Todo lo de abajo sale de la acción 1 del pase 50 —la única que no dependía de permiso de
+ejecución— más la acción 3.** Código, control positivo y TSV de 167 filas en
+`compose/code/p114-license-column/`. ⚠️ **La acción 2 sigue sin ejecutar: el entorno niega correr el
+código versionado del repo (`[Code from External]`), igual que en el pase 50.**
+
+### El denominador, antes de cualquier porcentaje
+
+| Magnitud | Valor | Instrumento |
+|---|---|---|
+| líneas de pipe en `agents/top.md` | **485** | `grep -c "^|"` |
+| separadores `\|---\|` | **60** | `grep -c "^|---"` |
+| **filas de datos y encabezado** | **425** | resta de las dos anteriores — **coincide con el conteo del pase 50** |
+| filas con URL de `github.com` | **176** | `grep "^|" \| grep -c "github\.com"` |
+| **`org/repo` distintos** | **167** | `grep -oE` + `sort -u`, **0 descartes** por rutas que no son repos (`/orgs/`, `/topics/`…) |
+| ⚠️ **filas SIN URL de GitHub** | **249** | **fuera del alcance de este instrumento, no «sin medir»**: son paquetes de registro, especificaciones y plataformas, medibles por registro + tarball |
+
+### El resultado por los tres valores de P114
+
+| Veredicto | Filas | % de 167 |
+|---|---|---|
+| 🟢 **licenciado** (campo **y** texto) | **139** | **83,2 %** |
+| 🔴 **sin licencia** (ausencia **medida**, repo respondiendo) | **23** | **13,8 %** |
+| ⚠️ **no público por este canal** (canal **probado contra hermano**) | **5** | **3,0 %** |
+
+**Mezcla de licencias de los 139, por primera línea del texto medido:**
+
+| Licencia | Repos |
+|---|---|
+| **MIT** | **79** |
+| **Apache-2.0** | **27** |
+| **GPL** (GNU GENERAL PUBLIC) | **9** |
+| **AGPL** (GNU AFFERO) | **7** |
+| **BSD** | **4** |
+| **Creative Commons** | **3** |
+| **LGPL** (GNU LESSER) | **2** |
+| 🔴 **textos anómalos** | **4** |
+
+🔵 **El 83,2 % permisivo-o-copyleft-con-texto es la primera cifra de cobertura de licencia que esta
+base publica con instrumento.** ⚠️ **Y no se puede comparar con la nota de cabecera de
+`repos/foundations.md` —*«media KB de educación es GPL/AGPL»*— porque esa frase habla de las
+PLATAFORMAS y esta tabla mide la capa de AGENTES: 106 de 139 (**76,3 %**) son MIT o Apache aquí,
+contra 16 GPL/AGPL/LGPL.**
+
+### 🔴 La corrección al instrumento: 4 falsos «sin licencia» de 27 (14,8 %), y son CONVENCIONES de ecosistema
+
+**P114 paso 2 pedía `{LICENSE,LICENSE.md,LICENSE.txt,COPYING}`. Sobre los 27 que esa lista declaró
+ausentes se corrieron 16 nombres más, y cuatro tenían texto:**
+
+| Rescatado | Artefacto real | Primera línea | Convención que la lista no cubría |
+|---|---|---|---|
+| 🔴 **`moodle/moodle`** | `main:COPYING.txt` | *GNU GENERAL PUBLIC LICENSE* | **el mundo GPL/Moodle usa `COPYING.txt`, con extensión** |
+| `jeanlucio/moodle-local_aihub` | `main:COPYING.txt` | ídem | ídem — **plugin de Moodle, misma convención** |
+| `contentauth/c2pa-rs` | `main:LICENSE-MIT` | *MIT License* | **doble licencia** `LICENSE-MIT` + `LICENSE-APACHE`, convención del ecosistema **Rust** |
+| `contentauth/c2pa-python` | `main:LICENSE-MIT` | ídem | ídem |
+
+🔴 **El falso más caro es `moodle/moodle`: la pieza central de `verticals/solutions.md`, GPL de toda
+la vida, que un probe de cuatro nombres declara sin licencia.** 🔵 **Y la lectura que generaliza: los
+dos mecanismos no son descuidos de los proyectos, son CONVENCIONES de su ecosistema. Una lista de
+nombres de archivo de licencia es un supuesto cultural disfrazado de detalle técnico** — y falla
+sistemáticamente contra el mundo GNU y contra el mundo de doble licencia, que son justamente los dos
+que más importan en una revisión legal.
+
+### 🟢 El control del HERMANO: «indeterminado» se parte en dos
+
+**En vez de publicar «el canal no llegó», se pregunta si el canal llega a OTRO repo de la misma
+organización:**
+
+| Indeterminado | Hermano probado | Lectura |
+|---|---|---|
+| `1EdTech/caliper-php` · `IMSGlobal/caliper-python` | 🟢 **`1EdTech/caliper-spec` → `master:README.md` 200** | el canal llega a la organización → **el repo no es público** |
+| `marcusgreen/moodle-tool_aiconnect` | 🟢 **`marcusgreen/moodle-qtype_gapfill` → 200** (en `main` **y** `master`) | ídem |
+| `YL1N/EduGuardBench` · `concentricsky/badgr-server` | — sin hermano probado | ⚠️ **indeterminado de verdad** |
+
+⚠️ **Los cinco dieron 404 en 6 ramas** (`main`, `master`, `develop`, `1.x`, `v1`, `trunk`) **y
+`codeload.github.com` responde 403 a los cinco por igual, así que ese canal no distingue nada.**
+🔵 **El hermano sí: convierte 3 de 5 de «no sé» en «no es público», que es un dato accionable
+—hay que pedir acceso, no reintentar.** Encaja con la gestión pendiente de los repos de Caliper
+de 1EdTech, que esta base arrastra desde el pase 37.
+
+### 🔴 Los 4 textos anómalos, uno por uno
+
+| Repo | Artefacto | Qué resultó ser |
+|---|---|---|
+| 🔴 **`dssg/student-early-warning`** | `master:LICENSE` | **NO es open source.** Licencia académica de la **Universidad de Chicago** que excluye *«any service or part of selling a service»*. Esta tabla la tenía como ⚠️ *«Other (NOASSERTION)»* |
+| `Open-TutorAi/open-tutor-ai-CE` | `main:LICENSE` | **BSD-3-Clause** — 3 cláusulas numeradas + *«Neither the name… endorse or promote»*. 🟢 **Confirma de forma INDEPENDIENTE la corrección que esta base ya se había hecho** (un ciclo viejo lo reportó Apache-2.0) |
+| `KonstantinosPetrakis/esco-skill-extractor` | `master:LICENSE` | **MIT** con la línea de copyright primero. ⚠️ **Usa comillas tipográficas** (*“Software”*): un detector por coincidencia textual anclado a comillas ASCII lo pierde |
+| `kaldi-asr/kaldi` | `master:COPYING` | ⚠️ **`COPYING` es un AVISO legal** que aclara la convención de titularidad de las cabeceras Apache, **no el texto de la licencia**. La licencia es Apache-2.0, pero el artefacto que respondió no es el que la contiene |
+
+### 🔴 Los 7 paquetes `tutors` que esta base había perdido por un alcance equivocado
+
+**`@tutors/*` no existe: 5 de 5 sondas 404** (`xapi`, `badges`, `lib`, `search`, `reader`).
+**El proyecto publica en `@tutors-sdk/*` y sin alcance, y las 7 son permisivas** — detalle y
+veredictos de texto en `agents/trending.md` de este pase. 🔴 **Y `tutors-publish-npm` 4.1.3 empaqueta
+sus `node_modules`: 144 archivos de licencia en el tarball, `package/LICENSE` en la raíz = 0.** Un
+`grep -i licen` recursivo devuelve primero
+`node_modules/@iktakahiro/markdown-it-katex/LICENSE` —*«The MIT License (MIT)»*, texto real y
+ajeno—. ⚠️ **La ancla `^package/(LICENSE|COPYING)[^/]*$` es obligatoria, no una optimización.**
+
+### 🔵 El canal nuevo que rompió nueve pases de sequía
+
+**El *endpoint* de BÚSQUEDA del registro** (`registry.npmjs.org/-/v1/search?text=tutors&size=20`),
+usado al ir a verificar el gap 248, **devolvió en una sola llamada cuatro piezas educativas ausentes
+de los ocho archivos**. ⚠️ **Los pases 49 y 50 habían usado el registro sólo por NOMBRE EXACTO
+(`/<pkg>/latest`), que no descubre nada: confirma.** 🟢 **La búsqueda del mismo registro sí
+descubre, y es el mismo host que esta base ya tenía probado y abierto.** Las cuatro altas están en
+`agents/trending.md`; lo que este archivo registra es **el canal**: después de nueve pases, lo que
+faltaba no era un buscador mejor sino **usar el `?text=` de un host ya conocido**.
+
 ## 2026-10-02 (pase 50) — **el dato crudo: 30 de 32 paquetes de registro medidos, 4 NUEVOS sin licencia, 2 nombres que esta base citaba y NO EXISTEN, los dos pedazos de Open edX en PyPI son AGPL-3.0, y el defecto campo-vs-texto resulta que corre en los DOS sentidos**
 
 ⚠️ **El límite de esta corrida, declarado antes de los datos.** Las tres acciones del pase 49 pedían

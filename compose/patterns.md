@@ -8,6 +8,7 @@ updated: 2026-10-02
 
 > Recetas concretas: repos nombrados, licencias verificadas, wiring explícito y estimación.
 > Todos los repos citados fueron verificados vía WebFetch el 2026-09-30; los del pase 11, el 2026-10-01 (ver `agents/top.md`).
+> **Pase 51 del 2026-10-02:** **+3 patrones, y los tres salen de ejecutar las acciones 1 y 3 del pase 50.** **P115** convierte el filtro de licencias en una **auditoría de 5 pasos** con los 20 nombres de archivo, el control del hermano y el probe anclado por tarball — medido sobre **167** repos (**139/23/5**) y corrigiendo **4 falsos «sin licencia» de 27**, `moodle/moodle` entre ellos. **P116** separa las dos preguntas que esta base venía mezclando —*«¿hay permiso escrito?»* y *«¿se puede usar en una entrega comercial?»*— porque una pieza con `LICENSE` de 200 y texto real resultó ser **académica no comercial**. **P117** es el pipeline de descubrimiento por el `?text=` del registro, que **rompió nueve pases de sequía** con 4 altas y trae el control del gap 71 adentro. ⚠️ **Y la nota de alcance que P113 arrastra: la comparación de superficies de Canvas sigue sin poder hacerse con un instrumento único porque exige ejecutar código versionado, negado en los pases 50 y 51.**
 > **Pase 50 del 2026-10-02:** **+2 patrones, y los dos salen de la mitad de la acción 1 del pase 49 que no necesitaba ejecutar código.** **P113** saca la entrega sobre Canvas de la dependencia de un archivo ajeno: **dos puertas MIT con texto de licencia verificado**, la mayor con **165** tools cubriendo los cuatro dominios del núcleo, **el servidor de 227 sin licencia pasa a opcional**, y ⚠️ **la resta 227−165 queda prohibida por ser de dos instrumentos**. **P114** convierte en puerta de entrada el filtro de licencias de **dos artefactos con salida de TRES valores** (`licenciado` / `sin licencia` / `indeterminado`), medido sobre 30 paquetes: **se equivoca en los dos sentidos si se lee uno solo**, y sin el control de alcanzabilidad publica **7 falsos «sin licencia»** donde hay **2**.
 > **Pase 49 del 2026-10-02:** **+3 patrones, y los tres salen de las tres acciones del pase 48.** **P110** es el
 > resultado comercial de romper el vacio APAC por organizacion: **componer la capacidad permisiva que el laboratorio
@@ -108,6 +109,136 @@ updated: 2026-10-02
 > propuesta, no se descubre en la semana 6. Ver la sección de auditoría abajo y **P78**. 🟢 **Lo que sí está sano:** `lrsql`
 > (Apache-2.0, **v0.9.9 del 2026-10-01**), Ralph (MIT, vivo en `main`), las cuatro puertas de Canvas y Moodle-alumno
 > (commits de las últimas dos semanas) y `qti3-cli` (MIT). **El resto de las recetas no cambia.**
+
+## P115 — Auditar la licencia de una capa entera en 5 pasos, con los nombres de archivo que los ECOSISTEMAS usan de verdad (corrige y extiende **P114**, agregado en el pase 51 del 2026-10-02)
+
+**Qué resuelve.** **P114** ordenó bien las preguntas y se quedó corto en una: **la lista de cuatro
+nombres de archivo de licencia.** Aplicado a los **167** repos de `agents/top.md` produjo
+**4 falsos «sin licencia» de 27 (14,8 %)** — y el peor fue **`moodle/moodle`**, GPL de toda la vida.
+**Las dos causas no son descuidos de los proyectos: son convenciones de su ecosistema.**
+
+### El cableado — cinco pasos, en este orden
+
+1. **Campo del registro** (`registry.npmjs.org/<pkg>/latest` o `pypi.org/pypi/<pkg>/json`): campo
+   `license`, versión y `repository`. ⚠️ **En PyPI leer el campo Y los clasificadores por separado.**
+   🔴 **Y validar contra SPDX sin descartar por eso:** `tutors` declara **`"MIT Licence"`**, que es
+   correcto en inglés e **inválido como identificador SPDX**.
+2. **Texto en el repo, con los 20 nombres**, sobre `{main,master}`:
+   ```
+   LICENSE LICENSE.md LICENSE.txt COPYING COPYING.txt COPYING.md
+   LICENSE-MIT LICENSE-APACHE LICENSE-APACHE-2.0 LICENSE.rst LICENCE LICENCE.md
+   license license.md License License.md LICENSE-MIT.md UNLICENSE COPYRIGHT NOTICE
+   ```
+   🔵 **Los dos que la lista de cuatro perdía, y por qué:** **`COPYING.txt`** es la convención del
+   mundo **GNU/Moodle** (con extensión), y **`LICENSE-MIT` + `LICENSE-APACHE`** la de **doble
+   licencia** estilo Rust. **La clave es `org/repo`, nunca el nombre del proyecto** — ya van **tres**
+   colisiones (dos «Bloom», dos «Kolibri», `@tutors` vs `@tutors-sdk`).
+3. **Si no hay texto, el control de alcanzabilidad:** ¿responde el repo (`README.md`,
+   `package.json`, `pyproject.toml`)? **Sin este paso, «no llegué» se publica como «no hay licencia».**
+4. 🟢 **Si el repo tampoco responde, el control del HERMANO —el paso nuevo:** pedir **otro repo de
+   la misma organización**. Si el hermano responde 200, **el canal llega y el repo específico no es
+   público**: la acción es *pedir acceso*, no reintentar. **Medido: convierte 3 de 5 «no sé» en algo
+   accionable** (`1EdTech/caliper-spec` y `marcusgreen/moodle-qtype_gapfill` responden 200 mientras
+   sus hermanos citados no). ⚠️ **`codeload.github.com` no sirve de control: responde 403 a todos
+   por igual.**
+5. 🟢 **Para un paquete de registro, el TARBALL —y es el canal que mide lo que el cliente instala:**
+   ```sh
+   tb=$(curl -s "https://registry.npmjs.org/$PKG/latest" | jq -r .dist.tarball)
+   curl -s "$tb" -o pkg.tgz
+   tar -tzf pkg.tgz | grep -iE '^package/(LICEN[CS]E|COPYING)[^/]*$'   # ANCLADO
+   ```
+   🔴 **La ancla no es una optimización, es obligatoria:** `tutors-publish-npm` empaqueta sus
+   `node_modules` y trae **144 archivos de licencia, ninguno propio**; un `grep -i licen` recursivo
+   devuelve el **MIT real de una DEPENDENCIA** como si fuera el del paquete.
+
+### La salida sigue teniendo tres valores, y ahora el tercero es más chico
+
+| Valor | Qué significa | Medido sobre 167 |
+|---|---|---|
+| `licenciado` | campo **y** texto, **con el artefacto anotado** | **139** (83,2 %) |
+| `sin licencia` | ausencia **medida**: 20 nombres × 2 ramas, repo respondiendo | **23** (13,8 %) |
+| `no público` / `indeterminado` | el paso 4 separa los dos | **5** (3,0 %), de los cuales **3 son «no público»** |
+
+### Estimación y control positivo
+
+**~1.300 peticiones HTTP para 167 repos, ~8 minutos con `xargs -P 8`.** 🟢 **Correr el control
+positivo ANTES de publicar es parte del patrón, no una cortesía:** tres veredictos ya conocidos de
+esta base (`learningequality/kolibri` MIT, `public-ui/kolibri` **EUPL-1.2**,
+`pie-framework/pie-elements-ng` ausencia medida) **más una corrección propia reproducida de forma
+independiente** (`Open-TutorAi/open-tutor-ai-CE` = **BSD-3-Clause**, no Apache-2.0).
+Código en `compose/code/p114-license-column/`.
+
+## P116 — Separar «hay permiso escrito» de «se puede usar en una entrega», porque un `LICENSE` de 200 puede PROHIBIR el negocio (agregado en el pase 51 del 2026-10-02)
+
+**Qué resuelve.** **P115 responde *«¿hay permiso escrito?»* y eso NO es la pregunta comercial.**
+Esta base tenía archivado como ⚠️ *«Other (NOASSERTION)»* un repo cuyo texto, leído, dice:
+
+> *«… for **academic research or other not-for-profit scholarly purposes** which are undertaken at a
+> **non-profit or government institution** … educational and not-for-profit research purposes
+> **excludes any service or part of selling a service that uses the Program**.»*
+> — `dssg/student-early-warning`, Universidad de Chicago, `master:LICENSE`
+
+🔴 **Para una consultora que vende servicios eso no es «licencia desconocida»: es una prohibición
+expresa del modelo de negocio.** ⚠️ **Y «NOASSERTION» es PEOR que «sin licencia», porque suena a
+pendiente administrativo y es un bloqueo duro.**
+
+### El cableado — la segunda pregunta, después de P115
+
+| Clase | Qué hacer |
+|---|---|
+| **OSI permisiva** (MIT, Apache-2.0, BSD, ISC) | entra |
+| **Copyleft de archivo** (GPL, LGPL) | entra con la obligación cotizada en el alcance |
+| **Copyleft de RED** (AGPL) | 🔴 **alcanza al SERVICIO expuesto**, no sólo a la redistribución — decidir *construir propio* vs *aceptar AGPL en el componente que mira al cliente* |
+| **Recíproca europea** (EUPL-1.2) | ⚠️ **cambia de signo según el comprador:** resta en cotización genérica, **suma en compra pública europea** |
+| 🔴 **No comercial / académica** | **NO ENTRA.** La vía es una licencia comercial con el titular, y tiene destinatario: en este caso **Polsky Center, `polsky@uchicago.edu`** |
+| ⚠️ **Sin texto** | no entra sin gestión, **y hay que decir si el README la PROMETE** (`SafeTutors`, `AITutor-EvalKit`, `@timadey/proctor`) |
+| 🔴 **Otorgante equivocado** | `edeleastar/tutors-ts` tiene cuerpo MIT con *«Copyright (c) 2011-2018 GitHub Inc.»*: **un filtro por cuerpo lo aprueba y el permiso lo otorga quien no es dueño** |
+
+🔵 **La regla de redacción que sale, y es la que entra en una propuesta: toda fila de licencia de
+esta KB dice las DOS cosas —el artefacto donde se leyó el permiso y la clase comercial que implica—
+en la misma línea.** **El veredicto `licenciado` de P115 nunca se cita solo.**
+
+## P117 — Descubrir piezas nuevas por el `?text=` del registro, no por el buscador web (agregado en el pase 51 del 2026-10-02)
+
+**Qué resuelve.** **Nueve pases consecutivos de barrido web sin una sola pieza educativa nueva.**
+El problema no era la consulta: era el **endpoint**. Los pases 49 y 50 usaron el registro npm **sólo
+por nombre exacto** (`/<pkg>/latest`), que **confirma y no descubre**. 🟢 **El `?text=` del MISMO
+host —ya probado y abierto— devolvió en una llamada cuatro piezas educativas ausentes de los ocho
+archivos.**
+
+### El cableado
+
+```sh
+# 1. Descubrir (el paso que faltaba)
+curl -s "https://registry.npmjs.org/-/v1/search?text=tutor&size=20" \
+  | jq -r '.objects[].package | "\(.name)\t\(.version)\t\(.links.repository // "-")"'
+# consultas que rindieron: tutor, tutors, mcp education, lms agent, proctoring
+```
+```sh
+# 2. CONTROL DEL GAP 71, antes de llamar "alta" a nada — obligatorio
+grep -ric "<nombre>" agents/top.md agents/trending.md repos/foundations.md repos/trending.md \
+  verticals/solutions.md intel/market.md intel/trends.md compose/patterns.md | grep -v ':0'
+```
+```sh
+# 3. Licencia por P115 (campo + 20 nombres + hermano + tarball anclado)
+# 4. Clase comercial por P116
+```
+
+### Las cuatro altas que produjo, con su cableado de composición
+
+| Pieza | Licencia | Dónde encaja en una entrega |
+|---|---|---|
+| `lingua-mcp` (`Marsmanleo/LinguaMCP`) | **Apache-2.0** | **currículo como DATO**: el protocolo define el plan y cualquier agente lo conduce → se compone con `tutor-mcp` (estado durable) y `learnmcp-xapi` (telemetría conforme) |
+| `@gera-services/mcp-geralearn` | **MIT** (tarball) | **catálogo + matrícula + progreso** sobre una plataforma con 50+ países → es la capa de *enrollment* que `verticals/solutions.md` no tenía como MCP |
+| `@schoolexl/mentor` | **MIT** (tarball) | 🔵 **la capa de PRESENTACIÓN que ninguna vertical de esta KB traía**: chat + voz en vivo + avatar con labios sincronizados sobre **LiveKit**, temizable → se monta encima de Moodle, Open edX o Canvas sin tocar el LMS |
+| `aimlinterviews-mcp` | **MIT** | **formación corporativa**, no aula: examinador técnico «a prueba de spoilers» → se compone con `py-fsrs` para repaso espaciado |
+
+⚠️ **La regla de clasificación que este patrón incorpora, y corrige una propia:** `AIMLInterviews`
+**es** un currículo —la clase que esta base rechaza— **y el paquete publicado desde ese repo es un
+agente**. 🟢 **Se clasifica el ARTEFACTO, no el repositorio.** Un rechazo a nivel `org/repo` habría
+tirado un agente real junto con el currículo.
+
+**Estimación: 1 hora de descubrimiento + 2 horas de auditoría de licencia por lote de 20 paquetes.**
 
 ## P106 — Marcar un paquete SCORM que YA está construido, con **un portador por dialecto** (corrige y reemplaza **P105**, agregado en el pase 47 del 2026-10-02)
 
