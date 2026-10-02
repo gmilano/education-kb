@@ -8,6 +8,155 @@ updated: 2026-10-02
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 
+## 2026-10-02 (pase 31) — **cinco versiones de API leídas una por una**: el `v0` que la KB iba a recomendar está deprecado, y la pregunta correcta no era «qué versión» sino «¿alguna crea el curso?» — **ninguna**
+
+**Canal:** `raw.githubusercontent.com` (el único que responde para código; ver la tabla de verificación abajo).
+**Repo:** `openedx/edx-platform`, rama `master`, árbol `cms/djangoapps/contentstore/rest_api/`.
+
+### Lo que dice `rest_api/urls.py`, que es donde se termina la discusión de «cuántas versiones hay»
+
+```python
+urlpatterns = [
+    path('v0/', include(v0_urls)),
+    path('v1/', include(v1_urls)),
+    path('v2/', include(v2_urls)),
+    path('v3/', include(v3_urls)),
+    path('v4/', include(v4_urls)),
+]
+```
+
+**Cinco, montadas en paralelo.** El pase 29 lo había contado bien (*«cinco versiones de API vivas donde el pase 28 vio
+tres»*) y queda ratificado leyendo el `include`, no inventariando archivos.
+
+### 🔴 El `v0` de authoring está deprecado **en favor del `v1`** — al revés de la consigna que traía este pase
+
+`v0/views/xblock.py`, primeras líneas:
+
+```
+Public rest API endpoints for the CMS API — v0 xblock (DEPRECATED).
+
+.. deprecated::
+    These views are superseded by ``XblockViewSet`` in
+    ``cms.djangoapps.contentstore.rest_api.v1.views.xblock``.
+    Use ``/api/contentstore/v1/xblock/`` going forward.
+    These v0 endpoints will be removed in a future release.
+```
+
+Y además **lo ejecuta**: define
+
+```python
+_DEPRECATION_MSG = ("The v0 xblock API (/api/contentstore/v0/xblock/) is deprecated. "
+                    "Use /api/contentstore/v1/xblock/ instead.")
+```
+
+y llama `warnings.warn(_DEPRECATION_MSG, DeprecationWarning, stacklevel=2)` en **las cinco** operaciones
+(`retrieve`, `update`, `partial_update`, `destroy`, `create`).
+
+Del otro lado, `v1/urls.py` **ya tiene el router montado**:
+
+```python
+_router = DefaultRouter()
+_router.register(r'xblock', XblockViewSet, basename='xblock')
+urlpatterns = _router.urls + [ ... ]
+```
+
+y `v1/views/xblock.py` (14.080 bytes) define `XblockViewSet(StandardizedErrorMixin, viewsets.ViewSet)` con
+`create`, `retrieve`, `update`, `partial_update`, `destroy`, más un parámetro ya marcado `deprecated=True` y un modo
+`minimal` de respuesta.
+
+**El comentario que mandó a medir el `v0` sigue al final de `v1/urls.py`**, después del router:
+
+```python
+    # Authoring API
+    # Do not use under v1 yet (Nov. 23). The Authoring API is still experimental and the v0 versions should be used
+```
+
+**«Nov. 23» es noviembre de 2023.** Es el mismo aviso que el pase 29 describió como *«encabeza una sección vacía y es de
+2023»* — literalmente encabeza una sección vacía, porque después de esas dos líneas **el archivo termina**.
+
+### El serializer dice qué se puede crear, y alcanza para secciones, subsecciones, unidades y componentes
+
+`v0/serializers/xblock.py` → `XblockSerializer(StrictSerializer)`, con validación estricta (*«No unexpected fields are
+passed in»*) y estos campos relevantes:
+
+| Campo | Para qué sirve |
+|---|---|
+| `parent_locator` | dónde se cuelga el bloque nuevo |
+| `category` | **qué tipo** de bloque: `chapter` (sección), `sequential` (subsección), `vertical` (unidad), o el componente |
+| `display_name` | nombre visible |
+| `data`, `metadata`, `fields` | contenido y configuración |
+| `children`, `has_children` | estructura |
+| `published`, `has_changes`, `edited_on` | estado editorial |
+
+En Open edX **la sección, la subsección, la unidad y el componente son todos xblocks**, así que **un solo endpoint con
+`parent_locator` + `category` cubre toda la jerarquía**. El `v1` confirma el contrato: el *docstring* del viewset
+documenta `create` como *«Create a new xblock under a parent block»* y extrae el `course_key` **del `parent_locator`**.
+Las dos versiones delegan en el mismo `view_handlers.handle_xblock`.
+
+### 🔵 Y lo que nadie había leído: `v2` trae la capa de **reutilización** (Libraries v2)
+
+`v2/urls.py` completo tiene **7 rutas**, y cuatro son una capa entera que no figura en ningún archivo de esta KB:
+
+| Ruta | Vista |
+|---|---|
+| `home/courses` | `HomePageCoursesViewV2` — **sólo `GET`** |
+| `downstreams/` | `DownstreamListView` |
+| `downstreams/<usage_key>` | `DownstreamView` |
+| `downstreams/<course_key>/summary` | `DownstreamSummaryView` |
+| **`downstreams/<usage_key>/sync`** | **`SyncFromUpstreamView`** |
+| `validate/numerical-input/` | `NumericalInputValidationView` |
+
+Es el mecanismo **upstream → downstream**: un bloque vive en una biblioteca (*upstream*) y los cursos que lo consumen
+(*downstream*) **se sincronizan**. Para un agente autor es la diferencia entre *«editar N cursos»* y *«editar uno y
+propagar»*. **Entra como capa nueva en `repos/foundations.md`.**
+
+### La respuesta al gap 50, en una tabla
+
+| Capa medida | Authoring **dentro** del curso | **Crear** el curso |
+|---|---|---|
+| REST `v0` (deprecado) | sí — xblock, assets, video, transcripts, grading, advanced settings, tabs | **no** |
+| REST `v1` (vigente) | sí — `XblockViewSet` + settings, details, grading, certificates, textbooks, group configurations, container children | **no** — sólo `course_rerun` (clona) |
+| REST `v2`/`v3`/`v4` | parcial (grading en `v3`); `v2` agrega `downstreams` | **no** (`home/courses` es `GET`) |
+| Conector oficial `openedx-mcp` 0.1.5 (AGPL-3.0) | sí — 7 rutas CMS, incluida `blocks/create-tree/` | **no** — ninguna de sus 19 escrituras es `create_course` |
+
+**Tres mediciones independientes, la misma conclusión.** El `v0` no era «la versión recomendada» y el `v1` no era
+«experimental»: las dos authorean, y **ninguna crea la cáscara del curso**. El bootstrap es curso plantilla +
+`course_rerun` (**gap 57**: falta medir si `course_rerun` acepta un plantilla vacío como origen).
+
+### Altas de este pase — del barrido de registros de paquetes (consigna del pase 30)
+
+Se consultó `registry.npmjs.org` y `pypi.org` **por nombre de proyecto/estándar**, abriendo el README de cada paquete y
+buscando «MCP» adentro. Lo verificable:
+
+| Paquete | Versión | Licencia | Modificado | Repo verificado | MCP |
+|---|---|---|---|---|---|
+| [`@eduware/oneroster`](https://registry.npmjs.org/@eduware%2Foneroster) | 1.2.11 | **MIT** | 2026-07-10 | ⚠️ **no** (`Eduware-Inc/eduware-oneroster` → 404) | ✅ **sí, servidor MCP empaquetado** |
+| [`@longsightgroup/oneroster`](https://github.com/LongsightGroup/oneroster) | 0.3.0 | **MIT** | 2026-07-15 | ✅ sí | no |
+| [`@superbuilders/oneroster`](https://github.com/trilogy-group/oneroster-ts) | 0.7.0 | 0BSD (ya registrado) | 2026-05-04 | ✅ sí | ✅ sí (12 menciones) |
+| [`@ajna-inc/openbadges`](https://registry.npmjs.org/@ajna-inc%2Fopenbadges) | 0.6.3 | **Apache-2.0** | 2026-05-19 | ⚠️ no declara repo | no |
+| [`ltijs`](https://github.com/Cvmcosta/ltijs) | 7.0.6 | Apache-2.0 | 2026-09-18 | ✅ sí | **no — 0 menciones en README** |
+| [`@timeback/caliper`](https://registry.npmjs.org/@timeback%2Fcaliper) | 0.3.3 | 🔴 **ninguna declarada** | 2026-09-25 | ⚠️ no declara repo | no |
+| [`pylti1p3`](https://pypi.org/project/pylti1p3/) | 2.0.0 | MIT | 🔴 **2022-11-20** | ✅ sí (`dmitry-viskov/pylti1.3`, por `README.rst`) | no |
+| [`openedx-mcp`](https://pypi.org/project/openedx-mcp/) | 0.1.5 | **AGPL-3.0** (leída del wheel) | 2026-07-25 | — (PyPI) | es el conector |
+
+**`@eduware/oneroster` es el alta que más mueve la aguja: es la primera puerta MCP *permisiva* de OneRoster** de esta
+KB. La que ya estaba —`oneroster-ts`— es 0BSD, que también es permisiva, pero ahora hay dos y una es MIT con README que
+documenta el ejecutable.
+
+### ⚠️ Qué canal verifica acá, y por qué este pase no publica estrellas
+
+| Canal | Resultado |
+|---|---|
+| `github.com/<owner>/<repo>` (HEAD) | **403** para todos, incluido `openedx/edx-platform` |
+| `api.github.com/repos/...` | **403** — *«GitHub access to this repository is not enabled for this session»* |
+| `www.npmjs.com/package/...` | **403** |
+| `raw.githubusercontent.com/<o>/<r>/HEAD/README.md` | **200** si existe, **404** si no → **es el test de existencia válido** |
+| `registry.npmjs.org/<pkg>` | **200** con licencia, versiones, fechas y README |
+| `pypi.org/pypi/<pkg>/json` + `files.pythonhosted.org` | **200**, y el artefacto se baja y se abre |
+
+🔴 **Sin `api.github.com` no hay forma de medir estrellas de primera mano, así que este pase no escribe ninguna.** Las
+altas van con licencia, versión, fecha de modificación y canal verificado. Es menos vistoso y es lo que se midió.
+
 ## 2026-10-02 (pase 30) — el **gap 52 cierra leyendo el código**, y la contradicción entre los dos documentos no se resuelve eligiendo uno: **los dos describen rutas que existen, y la regla es cuál lleva el prefijo**
 
 **La acción 1 del pase 29 era resolver la forma exacta de las rutas de OpenCASE leyendo el código, no los docs** — el

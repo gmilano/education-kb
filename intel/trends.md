@@ -7,6 +7,7 @@ updated: 2026-10-02
 # 📡 Tendencias — education
 
 > Ventana de investigación: septiembre 2026. Verificado 2026-09-30; el pase 11, el 2026-10-01.
+> **Pase 31 del 2026-10-02:** **se ejecutan las tres acciones del pase 30 más la acción 1 pendiente del pase 29, y las cuatro rinden — la de más valor comercial rinde *contra* la premisa con la que estaba escrita.** 🔴 **Gap 56 RESUELTO, y es la corrección de mayor riesgo comercial descargado de esta KB: las dos fechas del Anexo III son reales y gobiernan obligaciones distintas.** El **2026-08-02** entró en vigor la aplicabilidad general (art. 50 transparencia, art. 4 alfabetización, art. 5 prohibiciones, GPAI, gobernanza y sanciones); el **Anexo III —el inciso que nombra educación— rige desde el 2027-12-02**, diferido 16 meses por el **Reglamento (UE) 2026/1744** (Consejo, 2026-06-29; en vigor 2026-07-27). **El pase 28 confundió una con otra y esta KB le vendió a EMEA una urgencia inexistente: la conformidad del Anexo III NO está vencida, faltan ~14 meses** (tendencia **92**). ✅ **Gap 50 CERRADO leyendo código, invirtiendo la consigna: el `v0` de *authoring* de Open edX está DEPRECADO en favor del `v1`**, con directiva `.. deprecated::` y `DeprecationWarning` emitido en runtime en las cinco operaciones; el comentario que mandaba usar `v0` es de **noviembre de 2023** y encabeza una sección vacía (**confirma al pase 29, corrige al pase 30**; tendencia **88**). 🔵 **Y el bloqueo real estaba una capa más arriba: NINGUNA de las cinco versiones REST (`v0`–`v4`) crea un curso**, y **ninguna de las 19 escrituras del conector oficial tampoco** — tres mediciones independientes, misma conclusión; el bootstrap es curso plantilla + **`course_rerun`** (**gap 57**, **P63**). ✅ **Gap 55 MEDIDO sin Docker, bajando el wheel de PyPI: 35 rutas** (28 LMS + 7 CMS), **19 escrituras en 6 scopes**, **AGPL-3.0 leída del `LICENSE` del artefacto**, y 🔴 **11 escrituras piden *confirm token* y 8 no** — el freno protege contra la operación masiva y **no contra la repetida** (`bulk_enroll` pide token, `unenroll_user` de a uno no; tendencia **93**). ✅ **Gap 54: la consigna del registro de paquetes rinde — aparece una SEGUNDA puerta MCP de OneRoster y es MIT** (`@eduware/oneroster` v1.2.11, ejecutable `mcp` empaquetado; tendencia **89**). 🟢 **Entra OpenBadges 3.0 permisivo** (`@ajna-inc/openbadges`, Apache-2.0) — la pieza que faltaba desde que se midió que CaSS es OB 2.0. ✅ **Gap 42 sigue cerrado pero ahora medido en los dos lenguajes:** `ltijs` v7.0.6 (Apache-2.0, 2026-09-18) tiene **0 menciones de MCP**, y `pylti1p3` **lleva casi cuatro años sin release** (tendencia **90**). 🔵 **Capa nueva que treinta pases no vieron: el *upstream/downstream* de Libraries v2** (`SyncFromUpstreamView`) — editar una vez y propagar a N cursos (tendencia **91**, **gap 59**). ⚠️ **Caliper tiene código de 2026-09-25 y no declara licencia:** no es que no haya código, es que es inusable. ⚠️ **Y una regla de verificación nueva: `github.com`, `www.npmjs.com` y `api.github.com` devuelven 403 en este entorno; `raw.githubusercontent.com`, `registry.npmjs.org` y `pypi.org` responden 200 — así que este pase no publica ni una estrella, y un repo declarado por un paquete real da 404 en las ocho rutas de metadatos probadas** (**gap 58**, tendencia **94**). 🔵 **Y el pase se autocorrigió sobre la marcha: una primera lectura declaró 404 a `pylti1.3` por pedirle `README.md` a un repo Python que publica `README.rst` — el error que la tendencia 87 del pase 30 ya había descrito. Existe, y esta KB lo tenía registrado con 138 ★.**
 > **Pase 30 del 2026-10-02:** **se ejecutan las tres acciones del pase 29, las tres rinden, y el hallazgo que manda no salió de ninguna: salió de volver a preguntar por el gap 48.** 🔴 **Open edX ya tiene puerta de agente, es oficial del proyecto y es AGPL-3.0** (`openedx-mcp` + `tutor-contrib-openedxmcp`, PyPI, 2026-07-25; **35 endpoints leídos del código**, autoría incluida). **Eso cierra el gap 48 y rompe la tesis del pase 27:** esta puerta **corre en proceso** como plugin Django, así que *«las LMS son copyleft pero las puertas son MIT»* deja de valer, y la regla que lo reemplaza es que **la licencia de un conector la decide su arquitectura** (tendencias **81** y **82**, **gap 54**). 🔵 **El regalo del hallazgo son los cuatro rails de escritura**, con el modelo de amenaza escrito en el código —*«a looping agent… a retry storm that mass-enrols or deletes»*— y con la primitiva que P53 y P54 venían describiendo en prosa: ***dry run* + confirm token atado a una huella del payload** (tendencia **84**). ✅ **Gap 52 CERRADO leyendo cinco archivos de OpenCASE: 72 rutas, la regla del prefijo, dos endpoints OpenAPI y una capa CGE de federación que nadie había visto.** ✅ **Gap 53 medido ejecutando el servidor: 132 tools, y el «164» era *aliasing*, no supresión** —el 100 % de las operaciones se sirve (tendencia **83**)—, aunque 🔴 **la antigüedad era peor de lo registrado por leer `time.modified` en vez de `time[version]`** (tendencia **86**). ✅ **`.LRN` cerrado: vivo pero GPL-2.0 y en CVS**; **`CK-ERP` muerto desde 2012**. **Dos altas:** `asfai-education` (Apache-2.0, cinco estándares 1EdTech) e `instructure/qti` (MIT, QTI **1.2** legado). ⚠️ **Un falso positivo evitado, y da regla nueva: la capacidad que sólo vive en un *pull request* abierto no está en el producto** (tendencia **85**). 🔴 **Y se declara una contradicción interna de esta KB sobre el calendario del Anexo III: hay dos fechas publicadas en esta base y no son conciliables** (**gap 56**). ⚠️ **Dominios nuevos bloqueados por el proxy: `openacs.org`, `openedx.org` y `codeload.github.com`.**
 > **Pase 28 del 2026-10-01:** se ejecutan las acciones 1 y 2 del pase 27 y las dos rinden. **El gap 48 queda
 > contestado leyendo el código fuente de Open edX** —no la documentación, que está bloqueada— y **se parte en dos**:
@@ -4649,6 +4650,194 @@ declaraba ausente (tendencia **86**).
 | `codeload.github.com` | 🔴 **403** | Bajar el repo entero. **No disponible: hay que leer archivo por archivo** |
 | API de GitHub | 🔴 **Cerrada** fuera del alcance de la sesión | — |
 | `openacs.org`, `openedx.org` | 🔴 **403** | Documentación y anuncios oficiales. **No disponibles** |
+
+## 88. Cuando dos señales del mismo repo se contradicen, gana la que el runtime ejecuta — no la que el comentario afirma (agregado en el pase 31 del 2026-10-02)
+
+El pase 29 encontró dos documentos contradictorios en `openedx/edx-platform` sobre qué versión del API de *authoring*
+usar. El pase 30 convirtió esa contradicción en una consigna que elegía **el lado equivocado**: *«medir los endpoints
+`v0`, que son los que el propio repo recomienda»*. Se midieron, y el `v0` **está deprecado en favor del `v1`**.
+
+**La diferencia entre las dos señales no es de antigüedad, es de naturaleza:**
+
+| Señal | Dónde | Qué es |
+|---|---|---|
+| *«Do not use under v1 yet (Nov. 23). The Authoring API is still experimental and the v0 versions should be used»* | comentario al **final** de `v1/urls.py`, después del `register`, encabezando una sección **vacía** | una **afirmación** de noviembre de 2023 que nadie borró |
+| `.. deprecated::` + `_DEPRECATION_MSG` + `warnings.warn(..., DeprecationWarning)` en las 5 operaciones | `v0/views/xblock.py` | **código que se ejecuta** y le avisa al que llama |
+
+**La regla:** un comentario es una opinión fechada; un `DeprecationWarning` emitido es un hecho observable. Cuando hay
+que elegir, **se verifica cuál de las dos señales el programa ejecuta** — y si ninguna, se mira cuál está dentro de la
+ruta que el router monta. Esta KB se equivocó dos pases seguidos por leer prosa en vez de flujo de control, y le costó
+una consigna entera.
+
+**Corolario operativo para el barrido:** cuando un repo dice «experimental», hay que preguntar **¿sigue diciéndolo el
+código, o sólo el comentario?** Son dos preguntas distintas y dan respuestas opuestas más seguido de lo que parece.
+
+## 89. La puerta MCP de un estándar no es única: donde hay una, suele haber varias, y la licencia varía entre ellas (agregado en el pase 31 del 2026-10-02)
+
+El pase 28 descubrió que OneRoster **sí** tenía conector —`oneroster-ts`, 0BSD— y la KB lo registró como *«el»*
+conector de OneRoster. El pase 31 preguntó al registro de npm por el **nombre del estándar** y encontró **al menos
+seis implementaciones**, **dos de ellas sirviendo MCP**:
+
+| Paquete | Licencia | MCP |
+|---|---|---|
+| `@eduware/oneroster` v1.2.11 | **MIT** | ✅ ejecutable `mcp` empaquetado |
+| `@superbuilders/oneroster` v0.7.0 (= `trilogy-group/oneroster-ts`) | 0BSD | ✅ (132 tools medidas en el pase 30) |
+| `@longsightgroup/oneroster` v0.3.0 | **MIT** | no |
+| `@universis/one-roster` v2.30.2 | — | no |
+| `@timeback/oneroster` v0.3.3 | — | no |
+| `@eduware`/otros clientes parciales | varias | no |
+
+**Por qué importa y no es trivia:** la KB venía razonando *«OneRoster tiene puerta, y es 0BSD»*. La realidad es
+**«OneRoster tiene al menos dos puertas, y una es MIT»**, lo que cambia la conversación de licencia con un cliente que
+rechaza 0BSD por desconocimiento o por política de *procurement*. **Una ausencia se cierra con un hallazgo; una
+abundancia se administra comparando.** Y la regla de muestreo que la produjo —preguntar por el estándar, abrir el README,
+buscar «MCP» adentro— hay que repetirla **después** de encontrar el primero, no sólo antes.
+
+## 90. El mismo estándar obligatorio puede estar mantenido en un lenguaje y abandonado en otro, y eso decide el stack (agregado en el pase 31 del 2026-10-02)
+
+LTI 1.3 Advantage es obligatorio de hecho: toda plataforma educativa grande lo habla. Su implementación de referencia
+tiene **dos lados con salud opuesta**:
+
+| Lado | Paquete | Licencia | Última publicación |
+|---|---|---|---|
+| JavaScript | `ltijs` v7.0.6 | Apache-2.0 | **2026-09-18** (este mes) |
+| Python | `pylti1p3` v2.0.0 | MIT | 🔴 **2022-11-20** (casi 4 años) |
+
+**Treinta pases trataron la madurez como propiedad del *estándar*.** Es propiedad del **par estándar × lenguaje**. Un
+tool LTI nuevo en Python arranca sobre una dependencia sin releases —y por lo tanto sin parches publicados— desde 2022,
+mientras el equivalente JS está vivo. **Eso es un criterio de elección de lenguaje para la capa de integración, y
+pertenece a la propuesta**, no al descubrimiento tardío del *security review* del cliente.
+
+**Generalización para el barrido:** cuando esta KB diga «el SDK de X está maduro», tiene que decir **en qué lenguaje**.
+La afirmación sin lenguaje es la mitad de una medición.
+
+## 91. El authoring de un agente no se cotiza por curso: el core ya trae propagación, y nadie la estaba usando (agregado en el pase 31 del 2026-10-02)
+
+`v2` del API de contentstore de Open edX expone `downstreams/` con cuatro vistas, incluida
+**`downstreams/<usage_key>/sync` → `SyncFromUpstreamView`**: es la reutilización de **Libraries v2**, donde un bloque
+vive en una biblioteca (*upstream*) y los cursos que lo consumen (*downstream*) **se sincronizan**.
+
+**La consecuencia es económica, no técnica.** Un agente que mantiene material en 40 cursos tiene dos cotizaciones
+posibles:
+
+- **sin la capa:** 40 ediciones por cambio, y el costo crece con el catálogo;
+- **con la capa:** una edición + N `sync`, y el costo crece con el **número de cambios**, no de cursos.
+
+Esta KB venía cotizando la primera. ⚠️ **Y el conector MCP oficial no expone esta capa** —no está entre sus 7 rutas
+CMS—, así que hoy se alcanza por REST directo: **el agente necesita dos canales** (MCP para operación, REST para
+propagación), que es un dato de arquitectura y de esfuerzo (**gap 59**).
+
+## 92. Un régimen con varias fechas no tiene «una» fecha de vigencia, y confundirlas es el error de conformidad más caro que cometió esta KB (agregado en el pase 31 del 2026-10-02)
+
+El **gap 56** nació porque esta base publicó dos fechas incompatibles para el Anexo III del EU AI Act. Resuelto contra
+el texto consolidado: **las dos son correctas y gobiernan obligaciones distintas.**
+
+| Fecha | Qué rige | ¿Educación / Anexo III? |
+|---|---|---|
+| **2026-08-02** | aplicabilidad general: **art. 50** (transparencia), **art. 4** (alfabetización en AI), **art. 5** (prohibiciones), reglas **GPAI**, gobernanza y sanciones (AI Office + autoridades nacionales) | **no** |
+| **2027-12-02** | **obligaciones de alto riesgo *autónomo* del Anexo III — el inciso que nombra educación** | **sí** |
+| **2028-08-02** | alto riesgo **embebido** en productos regulados (Anexo I) | no |
+
+**Instrumento:** *Digital Omnibus* = **Reglamento (UE) 2026/1744**; aprobación final del Consejo **2026-06-29**, en
+vigor **2026-07-27**; diferimiento del Anexo III **16 meses** (del 2026-08-02 al 2027-12-02). **El art. 50 no se
+postergó.**
+
+🔴 **El error concreto, y por qué es el más caro:** el pase 28 escribió *«en EMEA el Annex III dejó de ser una fecha:
+rige desde el 2026-08-02 y la demanda de conformidad está vencida»*, y **sobre eso se construyó argumentación de
+venta**. Un comprador europeo con asesoría legal detecta eso en la primera reunión, y **lo que se pierde no es el
+argumento: es la credibilidad de todas las otras cifras de la propuesta**.
+
+**La regla que queda:** toda afirmación de vigencia en esta KB tiene que citar **el artículo o el inciso**, no el
+reglamento. «El AI Act rige desde X» es una oración sin valor operativo: el AI Act rige **por tramos**, y educación cae
+en el tramo que vence **último**.
+
+🟢 **Y el reencuadre, que además vende mejor porque es verdadero:** hay **dos tiempos**. Obligación **vigente y barata
+ahora** —transparencia del art. 50 y alfabetización del art. 4, que conecta con la tendencia 5 y con **P6**— y
+**conformidad cara con ~14 meses de pista** (Anexo III, 2027-12-02). Catorce meses es el horizonte de un **programa**,
+no de un parche: es una mejor venta que una urgencia falsa.
+
+## 93. Un rail de escritura puede estar bien diseñado contra la operación masiva y abierto a la repetida — y la asimetría no se ve en la documentación (agregado en el pase 31 del 2026-10-02)
+
+El pase 30 citó el modelo de amenaza escrito en el código del conector oficial de Open edX: *«a looping agent… a retry
+storm that mass-enrols or deletes»*, y registró los cuatro rails como un acierto de diseño. **Lo son.** Pero midiendo
+las 19 escrituras una por una aparece lo que la prosa no dice: **11 exigen *confirm token* y 8 no.**
+
+| Sin confirmación (8) | Con confirmación (11) |
+|---|---|
+| `create_xblock` (×2), `update_xblock`, `update_course_settings`, `enroll_user`, **`unenroll_user`**, `generate_certificate`, `submit_report` | `bulk_enroll`, `create_user`, `deactivate_user`, `delete_xblock`, `instructor_access`, `invalidate_certificate`, `publish_xblock`, `regenerate_certificates`, `request_retirement`, `reset_attempts`, `set_role` |
+
+**La asimetría es deliberada y está en el decorador `@audited_write`:** la operación *masiva* (`bulk_enroll`) pide
+token; la operación *unitaria* equivalente (`unenroll_user`) no. Un agente en bucle **no** puede desmatricular un curso
+entero en una llamada, y **sí** puede desmatricular 500 alumnos en 500 llamadas sin un solo token.
+
+**La regla general para evaluar cualquier conector de escritura:** no alcanza con verificar *que* hay rails; hay que
+**contar qué fracción de las escrituras los atraviesa**, y mirar específicamente si el rail está puesto en la
+**cardinalidad de la llamada** o en el **efecto acumulado sobre el sujeto**. El primero es fácil y el segundo es el que
+protege al alumno. Lo que falta se cubre afuera del conector: **cuota por sujeto y por ventana de tiempo** (**P63**).
+
+## 94. El paquete publicado y el repo público son dos verificaciones distintas, y para construir manda la del paquete (agregado en el pase 31 del 2026-10-02)
+
+Este pase intentó cumplir la regla *«verificá cada URL con `curl -sI`»* y descubrió que **el canal obvio no verifica
+nada en este entorno**:
+
+| Canal | Resultado | Sirve para verificar |
+|---|---|---|
+| `github.com/<owner>/<repo>` (HEAD) | **403** para todos, incluido `openedx/edx-platform` | ❌ no |
+| `api.github.com/repos/...` | **403** (*«not enabled for this session»*) | ❌ no — **y por eso este pase no publica ni una estrella** |
+| `www.npmjs.com/package/...` | **403** | ❌ no |
+| `raw.githubusercontent.com/<o>/<r>/HEAD/README.md` | **200** si existe, **404** si no | ✅ **sí — es el test de existencia válido** |
+| `registry.npmjs.org/<pkg>` | **200** con licencia, versiones, fechas y README completo | ✅ sí |
+| `pypi.org/pypi/<pkg>/json` + `files.pythonhosted.org` | **200**, y el artefacto se baja y se abre | ✅ sí, **y es el canal que mide de verdad** |
+
+🔵 **El hallazgo de método más útil: se puede medir una licencia y una superficie de herramientas sin instalar ni
+levantar nada.** El conector oficial de Open edX se midió bajando su wheel de PyPI, abriéndolo como ZIP y leyendo
+`dist-info/licenses/LICENSE` (AGPL-3.0, de primera mano) y los decoradores de sus vistas (19 escrituras). **Es el
+sucesor del truco del pase 26** (ejecutar el eslabón puro cuando el servidor no se puede levantar): cuando no hay
+Docker, **hay artefacto publicado**.
+
+🔴 **Y el hallazgo incómodo, después de corregir el propio instrumento: un paquete real, verificable y con licencia
+permisiva declara un repo que no existe públicamente** — `@eduware/oneroster` → `Eduware-Inc/eduware-oneroster`, con **ocho rutas de metadatos probadas y las
+ocho en 404**. **No son hallazgos falsos: el paquete es el producto, el repo es una afirmación sobre el paquete.** La regla de
+esta KB —*«todo hallazgo con URL de repo real»*— tiene que admitir **la URL del registro** cuando es la que verifica, y
+**decir cuál de las dos se comprobó** (**gap 58**).
+
+
+### 🔴 El subcaso que este pase vivió en carne propia: el test de existencia de un solo archivo no es un test
+
+La primera verificación de este pase usó **sólo** `README.md` y declaró 404 para dos repos. Corriendo el mismo test
+sobre `openedx/edx-platform` —cuyo código este pase **ya había leído archivo por archivo**— **también dio 404**, porque
+publica `README.rst`. El 404 era del instrumento, no del repo. Re-medido sobre **ocho rutas de metadatos**,
+`dmitry-viskov/pylti1.3` **existe** (y esta KB **ya lo tenía con 138 ★**, de modo que el falso negativo contradecía su
+propio archivo); sólo `Eduware-Inc/eduware-oneroster` falla **las ocho**.
+
+🔵 **La práctica que queda, y es generalizable a cualquier barrido:** **correr toda verificación de ausencia junto a un
+control positivo conocido.** Si el control falla, falló el método. Y cuando una medición nueva contradice un registro
+propio de esta KB, **la contradicción se resuelve antes de publicar** — acá el registro viejo tenía razón. Es la misma
+lección de la tendencia 87, que este pase **repitió a pesar de tenerla escrita**: una regla registrada no se aplica
+sola.
+## 🔵 Las tres acciones que el pase 31 deja escritas para el pase 32
+
+1. 🔴 **Medir `course_rerun` y cerrar el gap 57**, que es lo único que separa a **P63** de una cotización sin asterisco.
+   Concretamente: leer `CourseRerunView` en
+   `cms/djangoapps/contentstore/rest_api/v1/views/` por `raw.githubusercontent.com` y responder **tres** cosas:
+   (a) ¿acepta como origen un curso **vacío** usado de plantilla, o exige contenido?; (b) ¿qué devuelve —el nuevo
+   `course_key` sincrónicamente, o una tarea asíncrona que hay que *pollear*?; (c) ¿qué permisos pide? **Es la acción de
+   mayor valor comercial pendiente**, porque decide si el *onboarding* de un curso nuevo en un proyecto Open edX es una
+   línea de API o una intervención manual — y Open edX es la huella pública grande de **LATAM e India**.
+2. **Cerrar el gap 59 leyendo el mismo árbol: ¿`SyncFromUpstreamView` resuelve conflicto?** Leer
+   `v2/views/downstreams.py` y responder qué pasa cuando el bloque *downstream* fue editado localmente y llega un `sync`
+   (¿sobrescribe, rechaza, marca conflicto?). **De eso depende si la propagación de la tendencia 91 es segura para
+   contenido que el docente toca**, que es el caso real en cualquier despliegue. Y de paso contar si `downstreams/`
+   tiene escritura además de `sync`.
+3. **Repetir la consigna del registro de paquetes sobre los estándares que quedaron sin segunda vuelta** (tendencia 89).
+   El pase 31 probó que **donde hay una puerta MCP suele haber varias**: se hizo OneRoster (apareció una MIT nueva),
+   LTI (vacío medido) y Open Badges (apareció OB 3.0 permisivo). **Faltan: QTI** —medido por tres métodos en el pase 28,
+   nunca re-preguntado al registro—, **xAPI/LRS**, **CASE por nombre desambiguado**
+   (`"Competencies and Academic Standards Exchange"`, **gap 51**, cuarta colisión de término de esta KB, todavía
+   abierta) y **SCORM**. Método que funciona: `registry.npmjs.org/-/v1/search?text=<estándar>` y
+   `pypi.org/pypi/<pkg>/json`, **abrir el README y buscar «MCP» adentro**, y verificar el repo por
+   `raw.githubusercontent.com` **sabiendo que el 404 del repo no invalida el paquete** (tendencia 94).
+
 
 ## 🔵 Las tres acciones que este pase deja escritas para el siguiente
 

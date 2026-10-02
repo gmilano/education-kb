@@ -9,6 +9,190 @@ updated: 2026-10-02
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 > No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
 
+## 2026-10-02 (pase 31) — el pase que **da vuelta la consigna que traía**: los endpoints `v0` que el pase 29 mandó a medir *como los recomendados* están **deprecados en favor de `v1`**, y el bloqueo real no es la versión, es que **ninguna de las cinco versiones crea el curso**
+
+**Lo que se hizo:** el barrido obligatorio completo —**cuatro búsquedas globales y cuatro regionales**, con el año
+**calculado** (2026)— más las **tres acciones** del pase 30 y la **acción 1 pendiente del pase 29** (el gap 50, que el
+pase 30 no ejecutó). **Las cuatro rindieron**, y la de más valor comercial rindió *contra* la premisa con la que estaba
+escrita.
+
+### 🔴 Gap 50 CERRADO leyendo el código, y cierra invirtiendo la consigna
+
+El pase 29 dejó escrito: *«medir los endpoints `v0` de authoring de Open edX, **que son los que el propio repo
+recomienda** sobre el `v1` experimental»*. Se midió. **La premisa es falsa en `master`:**
+
+- `cms/djangoapps/contentstore/rest_api/v0/views/xblock.py` encabeza con una directiva
+  **`.. deprecated::`** explícita: *«These views are superseded by `XblockViewSet` in
+  `…rest_api.v1.views.xblock`. Use `/api/contentstore/v1/xblock/` going forward. These v0 endpoints will be removed in
+  a future release.»* Y no es sólo prosa: define `_DEPRECATION_MSG` y **emite `DeprecationWarning` en runtime en las
+  cinco operaciones** (`retrieve`, `update`, `partial_update`, `destroy`, `create`).
+- `v1/urls.py` **ya registra el xblock por router**: `_router.register(r'xblock', XblockViewSet, basename='xblock')`,
+  con `create / retrieve / update / partial_update / destroy`.
+- El comentario que originó la consigna sigue ahí, **al final** de `v1/urls.py`: *«Do not use under v1 yet (Nov. 23).
+  The Authoring API is still experimental and the v0 versions should be used»*. Es de **noviembre de 2023**, y está
+  escrito **después** del `register` que ya montó el xblock en `v1`.
+
+🔵 **La regla de método que deja este pase (tendencia 88):** cuando dos señales del mismo repo se contradicen, **gana la
+que el runtime ejecuta**, no la que el comentario afirma. Un `DeprecationWarning` que se emite es un hecho; un
+comentario fechado es una opinión vieja. El pase 29 ya había aprendido la mitad de esto —anotó que el aviso de
+«experimental» *«encabeza una sección vacía y es de 2023»*— y **el pase 30 lo volvió a tomar como recomendación
+vigente**. La KB se contradijo a sí misma en dos pases consecutivos.
+
+### 🔵 Y el bloqueo real estaba una capa más arriba: **no hay creación de curso en ninguna versión**
+
+Se leyeron **las cinco versiones** del API de contentstore (`rest_api/urls.py` monta `v0`…`v4`):
+
+| Versión | Qué expone | ¿Crea curso? |
+|---|---|---|
+| `v0` | authoring **deprecado**: xblock, `file_assets`, videos/transcripts, `grading`, `advanced_settings`, `tabs`, Course Optimizer (`link_check`, `rerun_link_update`) | No |
+| `v1` | `XblockViewSet` (router), `course_settings`, `course_details`, `course_index`, `course_team`, `course_grading`, `certificates`, `textbooks`, `group_configurations`, `container_children`, `course_rerun`, `proctored_exam_settings` | No — sólo **`course_rerun`** (clona) |
+| `v2` | `home/courses` (**sólo `GET`**: `HomePageCoursesViewV2` define `get` y nada más), **`downstreams/*`** (ver abajo), `validate/numerical-input` | No |
+| `v3` | ViewSets `home`, `course_details`, `authoring_grading` | No |
+| `v4` | ViewSet `home/courses` | No |
+
+**Y la tercera confirmación, independiente de las dos anteriores:** el conector oficial del propio proyecto tiene
+**19 herramientas de escritura y ninguna se llama `create_course`** (medición abajo). Tres capas medidas por separado
+dicen lo mismo: **el authoring de todo lo que vive *adentro* del curso está resuelto y es alcanzable por REST; crear la
+cáscara del curso no lo es.** El único primitivo de nivel curso alcanzable es **`course_rerun`**, que **clona** un curso
+existente (**gap 57**: queda sin medir si `course_rerun` acepta un curso plantilla vacío como origen, que es lo que
+decide si el bootstrap es de una línea o de una intervención manual).
+
+Eso **no parte P55: lo cotiza entero con un bootstrap declarado** — curso plantilla + `course_rerun`, y de ahí en
+adelante todo por API. Ver **P63**.
+
+### ✅ Gap 55 MEDIDO sin Docker: 35 rutas, 19 escrituras, 6 *scopes*, y **8 escriben sin confirmación**
+
+El pase 30 pedía `tutor plugins enable openedxmcp` para contar herramientas reales contra las 35 rutas de fachada. **No
+hay demonio de Docker en este entorno** (límite ya registrado), así que se midió por el canal que sí existe: **se bajó
+el wheel publicado de PyPI y se leyó** (`openedx_mcp-0.1.5-py3-none-any.whl`, 46.685 bytes, 2026-07-25).
+
+- **Licencia confirmada en el artefacto**, no en la metadata: `dist-info/licenses/LICENSE` es
+  **GNU AFFERO GENERAL PUBLIC LICENSE v3**. **AGPL-3.0 queda ratificado.**
+- **35 rutas exactas** — **28 en LMS** (`api/mcp/urls.py`) + **7 en CMS** (`cms_urls.py`). El «35» del pase 30 era
+  correcto.
+- **19 herramientas de escritura**, todas detrás del decorador `@audited_write`, repartidas en **6 scopes**:
+  `WRITE_COURSES` 6, `WRITE_USERS` 4, `WRITE_ENROLLMENT` 3, `WRITE_CERTIFICATES` 3, `WRITE_ROLES` 2, `WRITE_REPORTS` 1.
+- **Las 7 rutas CMS son la superficie de authoring del agente:** `outline` (lectura), `courses/settings/`,
+  `blocks/create/`, **`blocks/create-tree/`**, `blocks/update/`, `blocks/publish/`, `blocks/delete/`.
+  🔵 **`create-block-tree` es el hallazgo útil:** crea **un árbol** de bloques en una llamada —secciones, subsecciones y
+  unidades juntas—, que es exactamente lo que un agente autor necesita y lo que el endpoint REST crudo obliga a hacer
+  bloque por bloque.
+
+🔴 **Y la medición encontró algo que la documentación no dice: 11 de las 19 escrituras exigen *confirm token* y 8 no.**
+
+| Sin confirmación (8) | Con confirmación (11) |
+|---|---|
+| `create_xblock` (×2 vistas), `update_xblock`, `update_course_settings`, `enroll_user`, **`unenroll_user`**, `generate_certificate`, `submit_report` | `bulk_enroll`, `create_user`, `deactivate_user`, `delete_xblock`, `instructor_access`, `invalidate_certificate`, `publish_xblock`, `regenerate_certificates`, `request_retirement`, `reset_attempts`, `set_role` |
+
+El modelo de amenaza que el pase 30 citó del propio código —*«a looping agent… a retry storm that mass-enrols or
+deletes»*— **está implementado contra la operación masiva, no contra la repetida**: `bulk_enroll` pide confirmación,
+pero **`unenroll_user` de a uno no**. Un agente en bucle no puede desmatricular a un curso entero de una llamada, y
+**sí puede desmatricular a 500 alumnos en 500 llamadas sin un solo token**. Es un hallazgo de arquitectura, no un bug
+de la librería —la asimetría es deliberada y está en el decorador— y **es una condición de despliegue que un
+*engagement* tiene que cubrir afuera del conector** (ver **P63**, rail de cuota por sujeto).
+
+### ✅ Gap 54: la acción del pase 30 rinde, y aparece **una segunda puerta OneRoster — y es MIT**
+
+El pase 30 dejó la consigna de **preguntarle al registro de paquetes por el nombre del proyecto, no del protocolo**. Se
+ejecutó contra `registry.npmjs.org` y `pypi.org`, leyendo el README de cada paquete y buscando «MCP» adentro:
+
+- 🟢 **`@eduware/oneroster` v1.2.11 — MIT — trae servidor MCP propio.** README literal: *«the included MCP server for
+  tool-based integrations»*, *«The package includes an MCP server that exposes SDK operations as tools»*, con un
+  ejecutable `mcp` empaquetado. **13 versiones, creado 2026-01-23, última modificación 2026-07-10.** OneRoster **1.1 y
+  1.2**, más un perfil `ClassLink` de sólo lectura. **Es la primera puerta OneRoster permisiva de esta KB** — la que ya
+  estaba registrada, `trilogy-group/oneroster-ts`, es **0BSD** y aparece en npm como `@superbuilders/oneroster` v0.7.0
+  (12 menciones de MCP en el README; mismo repo, confirmado por el campo `repository`).
+- ⚠️ **Pero su repo declarado no es verificable:** `github.com/Eduware-Inc/eduware-oneroster` devuelve **404** por
+  `raw.githubusercontent.com`. **El paquete es real y verificable en el registro; el repo es una afirmación que no se
+  puede comprobar.** Se registra con la URL del registro, no con la del repo (**gap 58**).
+- 🟢 **`@longsightgroup/oneroster` v0.3.0 — MIT — repo verificado** (`LongsightGroup/oneroster`, README y
+  `package.json` responden 200). *«Faithful OneRoster 1.2 for TypeScript — CSV and portable REST contracts.»* Sin MCP.
+- Hay además `@universis/one-roster` v2.30.2 y `@timeback/oneroster` v0.3.3. **La capa OneRoster no es «un SDK con
+  MCP»: son al menos seis implementaciones y dos de ellas sirven MCP** (tendencia 89).
+
+### ⚠️ Caliper: código nuevo, licencia ausente
+
+`@timeback/caliper` v0.3.3, **modificado 2026-09-25** —el paquete más fresco de todo este pase— es un *«Caliper
+Analytics client SDK»* y **no declara licencia** (`license: null` en el registro, sin repo declarado). Esto **afina** lo
+que esta KB venía diciendo: no es que Caliper se quedó sin código desde que dejó de ser open source en 2023, es que
+**hay código nuevo de 2026 y no se puede usar**, que es peor y más accionable. No entra como fundación; entra como
+advertencia de licencia.
+
+### ✅ OpenBadges 3.0 entra a la KB, y es Apache-2.0
+
+`@ajna-inc/openbadges` v0.6.3 — **Apache-2.0** — *«OpenBadges v3.0 module for Credo-TS with OAuth 2.0 provider
+support»*, modificado 2026-05-19. Esta KB tenía registrado que **CaSS implementa OB 2.0 y no 3.0** y no tenía ninguna
+pieza de **OB 3.0**. Ya la tiene, y es permisiva. ⚠️ Mismo límite que `@eduware`: **no declara repo**, así que se cita
+por registro.
+
+### ✅ Gap 42 (LTI con MCP) sigue cerrado, pero ahora **medido en los dos lenguajes**, no por etiqueta
+
+- **`ltijs` v7.0.6 — Apache-2.0 — repo verificado** (`Cvmcosta/ltijs`), modificado **2026-09-18**: se leyó el README
+  completo y tiene **0 menciones de MCP**. Vivo, mantenido, sin puerta de agente.
+- **`pylti1p3` v2.0.0 — MIT — última publicación `2022-11-20`**, 29 releases. 🔴 **El lado Python de LTI 1.3 lleva casi
+  cuatro años sin release**. ✅ Su repo (`dmitry-viskov/pylti1.3`) **sí existe** — ver la autocorrección de este pase
+  más abajo, que es el hallazgo de método que más vale de los dos.
+  **La asimetría es el hallazgo (tendencia 90):** el mismo estándar obligatorio tiene un SDK JS mantenido este mes y un
+  SDK Python congelado en 2022. Para un *engagement* en Python sobre LTI, eso es riesgo de dependencia, no una nota al
+  pie.
+
+### 🔵 Una capa que treinta pases no vieron: el *upstream/downstream* de Open edX
+
+Leyendo `v2/urls.py` apareció algo que no está en ningún archivo de esta KB: **`downstreams/`**, con cuatro vistas —
+`DownstreamListView`, `DownstreamView`, `DownstreamSummaryView` y **`SyncFromUpstreamView`** (`downstreams/<usage_key>/sync`).
+Es la API de **reutilización de contenido de Libraries v2**: un bloque se edita **una vez** en la biblioteca y se
+**sincroniza** a los N cursos que lo consumen. Para un agente autor eso cambia la economía del patrón: no es «editar N
+cursos», es «editar uno y propagar». **Es el primitivo de propagación que P55 y P63 necesitaban y que se estaba
+cotizando como trabajo manual** (tendencia 91).
+
+### ⚠️ Nota de método: qué canal verifica en este entorno
+
+Se intentó cumplir el *«verificá cada URL con `curl -sI`»* y **el canal obvio no sirve acá**:
+
+| Canal | Resultado |
+|---|---|
+| `github.com/...` (HEAD) | **403** — el proxy lo rechaza para todo repo, incluso `openedx/edx-platform` |
+| `www.npmjs.com/package/...` | **403** |
+| `api.github.com` | **403** — *«GitHub access to this repository is not enabled for this session»* (scoping de sesión) |
+| `raw.githubusercontent.com/<owner>/<repo>/HEAD/README.md` | **200** — y **404 real** cuando el repo no existe |
+| `registry.npmjs.org/<pkg>` | **200**, con licencia, fechas y README completo |
+| `pypi.org/pypi/<pkg>/json` y `files.pythonhosted.org` | **200**, y el wheel se puede bajar y leer |
+
+🔵 **Por eso este pase no publica ni una estrella de GitHub:** sin `api.github.com` no hay forma de medirlas de primera
+mano, y **la regla de esta KB es no escribir cifras que no se midieron**. Las altas de este pase se publican con
+**licencia, versión, fecha de modificación y canal verificado**, que es lo que sí se pudo comprobar.
+
+### 🔴 Autocorrección del propio pase, y es el hallazgo de método que más vale de este barrido
+
+**Este pase casi publicó un falso negativo, y lo salvó por accidente.** La primera pasada de verificación usó
+`raw.githubusercontent.com/<owner>/<repo>/HEAD/README.md` como test de existencia y declaró **404** —es decir, *«repo no
+verificable»*— para **dos** repos. Al correr el mismo test sobre `openedx/edx-platform` —un repo que este pase **ya había
+leído entero**, archivo por archivo— **también dio 404**. Eso delató el método, no el repo: `edx-platform` publica
+**`README.rst`**, no `README.md`.
+
+Re-medido contra **ocho rutas de metadatos** (`README.rst`, `README.md`, `readme.md`, `package.json`,
+`pyproject.toml`, `setup.py`, `LICENSE`, `.gitignore`):
+
+| Repo | Resultado real |
+|---|---|
+| `openedx/edx-platform` | ✅ **existe** — `README.rst`, `package.json`, `pyproject.toml`, `LICENSE` en 200 |
+| `dmitry-viskov/pylti1.3` | ✅ **existe** — `README.rst`, `setup.py`, `LICENSE` en 200. **Y esta KB ya lo tenía registrado con 138 ★ desde un pase anterior**, así que el falso negativo contradecía su propio archivo |
+| `Eduware-Inc/eduware-oneroster` | 🔴 **no existe públicamente** — **las ocho rutas en 404**. Ésta sí se sostiene |
+
+**La tendencia 87 del pase 30 ya decía exactamente esto** (*«"No hay README" no es "no hay repo": cada ecosistema tiene
+su archivo de metadatos»*) **y este pase la repitió de todos modos.** Dos conclusiones, y la segunda es la importante:
+
+1. **Un test de existencia de un solo archivo no es un test de existencia.** Son **ocho rutas**, o como mínimo
+   `README.rst` + el manifiesto del ecosistema (`package.json` / `pyproject.toml` / `setup.py` / `composer.json`).
+2. 🔵 **El control que lo atrapó hay que convertirlo en rutina: correr el test de verificación sobre un caso que ya se
+   sabe positivo.** `edx-platform` funcionó como **control negativo del método**. Cuando un barrido declara una ausencia,
+   **tiene que declararla junto al resultado del control** — si el control también falla, lo que falló es el
+   instrumento. Es la versión barata de lo que el pase 24 aprendió ejecutando en vez de leer.
+
+**Y queda una regla de prioridad entre fuentes:** cuando una medición nueva contradice un registro propio de esta KB
+—138 ★ para un repo que el test dice que no existe—, **la contradicción se resuelve antes de publicar**, no después. El
+registro viejo fue el que tenía razón.
+
 ## 2026-10-02 (pase 30) — la ausencia más valiosa de esta KB **la cerró el propio proyecto**: Open edX tiene conector MCP oficial, y es **AGPL-3.0 y en proceso**, así que lo que se rompe no es el gap sino **la tesis de composición del pase 27**
 
 **6 artefactos verificados de primera mano (4 leyendo código fuente, 1 ejecutando el servidor, 1 en el registro de

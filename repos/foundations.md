@@ -1911,3 +1911,61 @@ anotadas para el pase 30, para no volver a buscarlas:**
 `apps/opencase/docs/DEVELOPER.md`, `apps/opencase/docs/FRAMEWORK_EDITOR_BACKEND_INTEGRATION.md`,
 `apps/opencase/docs/DataModel.md`, `apps/opencase/docs/RESTBindings.md` (1,5 MB, el binding REST oficial de CASE v1.1)
 y `apps/opencase/docs/Licensing.md`.
+
+## Capa de reutilización de contenido (Libraries v2 *upstream/downstream*) — agregada en el pase 31 del 2026-10-02
+
+Treinta pases trataron el authoring como *«escribir en un curso»*. Leyendo `v2/urls.py` de `openedx/edx-platform`
+apareció una capa que **ningún archivo de esta KB había registrado**: el curso no es el único lugar donde vive el
+contenido, y **hay un mecanismo de propagación en el core**.
+
+| Ruta (`/api/contentstore/v2/…`) | Vista | Para qué sirve |
+|---|---|---|
+| `downstreams/` | `DownstreamListView` | lista los bloques que consumen un *upstream* |
+| `downstreams/<usage_key>` | `DownstreamView` | el vínculo de un bloque con su origen |
+| `downstreams/<course_key>/summary` | `DownstreamSummaryView` | resumen por curso: qué está sincronizado y qué no |
+| **`downstreams/<usage_key>/sync`** | **`SyncFromUpstreamView`** | **propaga** el cambio del origen al bloque del curso |
+
+**Por qué importa para un agente.** Un agente autor que mantiene contenido en 40 cursos tiene dos economías posibles:
+editar 40 veces, o **editar una vez en la biblioteca y sincronizar**. La segunda existe en el core, es REST, y esta KB
+la estaba cotizando como trabajo manual. **Es el primitivo de propagación de P55 y P63.**
+
+⚠️ **Lo que no se midió** (**gap 59**): si `SyncFromUpstreamView` resuelve conflictos cuando el bloque *downstream* fue
+editado localmente, y si el conector oficial `openedx-mcp` expone esta capa — **sus 7 rutas CMS no la incluyen**, así
+que hoy se alcanza por REST directo y no por MCP.
+
+- Repo: [github.com/openedx/edx-platform](https://github.com/openedx/edx-platform) — **AGPL-3.0**, árbol
+  `cms/djangoapps/contentstore/rest_api/v2/`. Verificado por `raw.githubusercontent.com` el 2026-10-02.
+
+## Capa de *rostering* e identidad permisiva — agregada en el pase 31 del 2026-10-02
+
+Hallada ejecutando la consigna del pase 30: **consultar el registro de paquetes por el nombre del estándar**, no del
+protocolo. Son librerías para construir arriba, con licencia permisiva verificada en el registro.
+
+| Repo / paquete | Licencia | Estándar | Verificación | Nota |
+|---|---|---|---|---|
+| [`LongsightGroup/oneroster`](https://github.com/LongsightGroup/oneroster) | **MIT** ✅ | **OneRoster 1.2** | ✅ repo + `package.json` 200 | *«Faithful OneRoster 1.2 for TypeScript — CSV and portable REST contracts»*. Cubre **los dos perfiles** del estándar (CSV y REST), que es lo que distingue una implementación completa de un cliente parcial. v0.3.0, modificado 2026-07-15 |
+| [`@eduware/oneroster`](https://registry.npmjs.org/@eduware%2Foneroster) | **MIT** ✅ | OneRoster **1.1 + 1.2** | ⚠️ paquete sí, repo **404** | **Trae servidor MCP** (ver `agents/top.md`). v1.2.11, modificado 2026-07-10 |
+| [`@ajna-inc/openbadges`](https://registry.npmjs.org/@ajna-inc%2Fopenbadges) | **Apache-2.0** ✅ | **Open Badges 3.0** + OAuth 2.0 | ⚠️ paquete sí, repo no declarado | **La primera pieza de OB 3.0 de esta KB.** Módulo para Credo-TS (agentes de credenciales verificables). v0.6.3, modificado 2026-05-19 |
+| [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) | **Apache-2.0** ✅ | **LTI 1.3 Advantage** | ✅ repo 200 | v7.0.6, modificado **2026-09-18**. Mantenido activamente. **Sin MCP** (medido: 0 menciones en el README) |
+| [`pylti1p3`](https://pypi.org/project/pylti1p3/) | MIT | LTI 1.3 Advantage (Python) | ✅ PyPI y repo (`dmitry-viskov/pylti1.3`, por `README.rst`/`setup.py`) | 🔴 **Última publicación `2022-11-20`.** El repo existe y está registrado en esta KB con 138 ★: lo detenido es **la publicación**. Ver la advertencia de mantenimiento, abajo |
+
+### 🔴 La asimetría de mantenimiento de LTI, y es una decisión de stack
+
+El mismo estándar obligatorio —LTI 1.3, el que toda plataforma educativa tiene que hablar— tiene:
+
+- **lado JavaScript**: `ltijs` v7.0.6, publicado **este mes** (2026-09-18), Apache-2.0, repo verificable;
+- **lado Python**: `pylti1p3` v2.0.0, última publicación **2022-11-20** — **casi cuatro años**.
+
+**Consecuencia práctica para un *engagement*:** un tool LTI nuevo en Python arranca sobre una dependencia congelada
+—sin parches de seguridad publicados desde 2022— mientras el equivalente JS está vivo. No es una nota al pie: **es un
+criterio de elección de lenguaje para la capa de integración**, y conviene decirlo en la propuesta antes de que lo
+descubra el *security review* del cliente.
+
+### ⚠️ Caliper: hay código de 2026 y no se puede usar
+
+[`@timeback/caliper`](https://registry.npmjs.org/@timeback%2Fcaliper) v0.3.3, **modificado 2026-09-25** — el paquete más
+fresco de todo este pase— es un *«Caliper Analytics client SDK»* y **no declara licencia** (`license: null` en el
+registro, sin repo declarado). Esta KB venía diciendo que Caliper dejó de ser open source el 2023-06-17 y que sólo
+quedaban los SDK previos. **El matiz corrige la conclusión y la empeora:** no es que no haya código nuevo, es que
+**hay código nuevo de 2026 y es jurídicamente inusable**. No entra como fundación. Entra como advertencia.
+

@@ -853,6 +853,27 @@ Dónde se produce el software educativo abierto, que no es donde está la demand
 
 ### North America
 
+**Pase 31 (2026-10-02) — el barrido regional trae por fin los *nombres de ley*, no sólo el conteo de proyectos.** La
+cifra de contexto se mantiene (**134 proyectos de ley en 31 estados**, y **38 % del mercado de AI en educación en
+2025**), y lo nuevo es nominal y por lo tanto citable en una propuesta:
+
+- 🔴 **California AB 1159 prohíbe usar datos de alumnos para *entrenar* modelos de AI.** Es la primera obligación de
+  esta KB que no regula el uso del modelo sino **el destino del dato**: cualquier arquitectura que contemple
+  *fine-tuning* con dato estudiantil californiano queda fuera, y eso no se arregla con consentimiento ni con
+  anonimización declarada. Es un argumento directo para **P16** (entrenar el estimador sin dataset usable) y para la
+  capa de datos sintéticos.
+- ⚠️ **Idaho SB 1227 exige protecciones de privacidad del dato para toda herramienta de AI en escuelas.**
+- 🔵 **Cuatro estados —Idaho, Maryland, Oklahoma y Virginia— tienen leyes 2026 que exigen *las dos cosas*: guía estatal
+  y adopción obligatoria de política a nivel distrito.** Eso es presupuesto con fecha y con destinatario: **P7 (policy
+  pack distrital) tiene cuatro mercados nombrados**, no un argumento genérico.
+- 🟢 **Y hay una referencia de despliegue instruccional medible:** el piloto de tutoría K-12 de **Maryland** usa
+  **Khanmigo** y alcanza **~4.350 alumnos en dos condados**. Es la primera cifra de esta KB sobre un piloto público
+  con herramienta nombrada y tamaño declarado — el *baseline* contra el que se compara una propuesta de tutor.
+- ⚠️ **Señal de demanda desde el usuario final:** alumnos de **los 50 estados** publicaron (AASA, 2026-08-03) un marco
+  nacional para AI en K-12 que pide protección del *aprendizaje auténtico*, privacidad, equidad y **juicio humano**.
+  Coincide con lo que Oklahoma y Maryland ya prohíben por ley: **la decisión autónoma sobre el alumno no se vende en
+  esta región**.
+
 **Pase 28 (2026-10-01) — la cifra se reconfirma por octava vez y el dato nuevo es el nombre del vacío regulatorio.**
 El barrido devuelve otra vez **$951M (2024) → $2.303,2M (2029), CAGR 15,9 %**, y **41,7 % de la oportunidad global**
 con **36 % de participación de adopción** (la dispersión 36/38/41,7 sigue manejándose con la regla del pase 13: se cita
@@ -1436,6 +1457,38 @@ entregable es un expediente de competencia y no un asistente.** Ver **P48**, **P
 
 ### EMEA
 
+🔴 **Pase 31 (2026-10-02) — CORRECCIÓN MAYOR: el gap 56 queda resuelto, y esta KB le estaba vendiendo a EMEA una
+urgencia que no existe.**
+
+Esta base publicaba **dos fechas incompatibles** para el Anexo III: **2027-12-02** (pase 11) y *«rige desde el
+2026-08-02, la demanda de conformidad está vencida»* (pase 28). Resuelto contra el texto consolidado: **las dos fechas
+son reales y no se contradicen — gobiernan obligaciones distintas, y el pase 28 las confundió.**
+
+| Fecha | Qué entra en vigor | ¿Es el Anexo III? |
+|---|---|---|
+| **2026-08-02** | Aplicabilidad general del AI Act: **transparencia del art. 50**, **alfabetización en AI (art. 4)**, prohibiciones del **art. 5**, reglas de **GPAI**, y el aparato de **gobernanza y sanciones** (AI Office + autoridades nacionales) | **No** |
+| **2027-12-02** | **Obligaciones de los sistemas de alto riesgo *autónomos* del Anexo III — el inciso que nombra educación** | **Sí** |
+| **2028-08-02** | Alto riesgo **embebido en productos regulados** (Anexo I) | No |
+
+**El instrumento:** el *Digital Omnibus* es el **Reglamento (UE) 2026/1744**, aprobado en última instancia por el
+Consejo el **2026-06-29** y **en vigor desde el 2026-07-27**, y **diferió el Anexo III del 2026-08-02 al 2027-12-02** —
+**16 meses** respecto de la fecha original del art. 113. **La transparencia del art. 50 no se postergó.**
+
+🔴 **Lo que hay que dejar de decir:** *«la demanda de conformidad del Anexo III está vencida»*. **No lo está: faltan
+~14 meses.** Cualquier material comercial construido sobre esa urgencia hay que corregirlo antes de usarlo, porque un
+cliente europeo con asesoría legal lo detecta en la primera reunión y **se lleva puesta la credibilidad de todo el
+resto del argumento**.
+
+🟢 **Lo que sí se puede vender hoy, y es mejor argumento porque es verdadero:** lo que **ya rige desde el 2026-08-02** y
+es más barato de cumplir — **transparencia del art. 50** y **alfabetización en AI del art. 4** (que conecta con la
+tendencia 5 de esta KB y con **P6**), más las prohibiciones del art. 5. La lectura correcta para una propuesta es de
+dos tiempos: **obligación vigente y barata ahora (transparencia + alfabetización), conformidad cara con 14 meses de
+pista (Anexo III, 2027-12-02)** — y 14 meses es exactamente el horizonte en el que se vende un programa, no un parche.
+
+**Contexto de adopción del barrido:** adopción empresarial en la UE del **19,95 %**; **Alemania** con compromiso de
+inversión de **€20.000 M (2025–2030)** y la mayor contribución OCDE a adopción por firma; **clúster nórdico** (Suecia,
+Dinamarca, Finlandia, Noruega) por encima del promedio UE en Eurostat.
+
 **Pase 28 (2026-10-01) — 🔴 el reloj se terminó: el régimen de alto riesgo del Annex III es derecho aplicable desde el
 2026-08-02, y hoy lleva dos meses vigente.** Esta KB venía registrando la fecha en futuro desde el pase 11. **Ya no es
 una fecha: es el estado del mundo.** El AI Act entró en vigor el **2024-08-01**, y el **2026-08-02** es la fecha en que
@@ -1459,6 +1512,17 @@ ingeniería**, no de legal: el de gestión de riesgos es un proceso con evidenci
 compuerta en el flujo (que es exactamente la forma de **P54** y **P49**), y el de documentación técnica es generable
 desde el pipeline. **Y la pieza de proctoring sigue sin opción permisiva (gap 39), que es justo la que el Annex III
 nombra.** Vender «conformidad con el Annex III» hoy no es vender previsión: es vender una obligación incumplida.
+
+> 🔴 **CORREGIDO en el pase 31 (2026-10-02) — gap 56 resuelto. Este párrafo es falso en su premisa de fecha y no se
+> debe usar como está.** Las obligaciones de la tabla de arriba son las del **Anexo III**, y el Anexo III **no venció**:
+> el **Reglamento (UE) 2026/1744** (*Digital Omnibus*; Consejo 2026-06-29, en vigor 2026-07-27) **lo diferió del
+> 2026-08-02 al 2027-12-02** — 16 meses. Lo que **sí** está vencido desde el 2026-08-02 es **otra cosa**: la
+> transparencia del **art. 50**, la **alfabetización en AI del art. 4**, las prohibiciones del **art. 5** y las reglas
+> de **GPAI**, junto con el aparato de gobernanza y sanciones. **La frase «vender una obligación incumplida» aplica a
+> esas, no al Anexo III.** El resto del párrafo —que los cinco ítems son artefactos de ingeniería y no de legal, y que
+> el *proctoring* sigue sin opción permisiva (gap 39)— **se mantiene y sigue siendo el argumento bueno**; lo único que
+> cambia es el reloj: **~14 meses de pista, que es el horizonte de un programa y no de un parche.** Ver la tendencia
+> **92** y el bloque del pase 31 al principio de esta sección EMEA.
 
 
 **Pase 27 (2026-10-01) — el dato nuevo es el más accionable que EMEA dio en siete pases: la adopción interna de la
@@ -2012,6 +2076,27 @@ concreto.** **Resolverlo contra el texto consolidado es la acción 3 del pase 31
 descarga porque es la que un cliente europeo va a preguntar primero.
 
 ### APAC
+
+**Pase 31 (2026-10-02) — el calendario regulatorio de APAC se completa con fechas, y el gasto tiene número.**
+
+- 🔴 **Vietnam: la Ley de AI se adoptó en diciembre de 2025 y entra en vigor en marzo de 2026.** Esta KB venía
+  registrando que Vietnam *«pone en alto riesgo el monitoreo conductual»* sin fecha. **Ya tiene las dos: adopción y
+  vigencia, y la vigencia ya pasó.** Es el segundo régimen de la región que rige **antes** que el Anexo III europeo.
+- **Corea del Sur: la Ley Marco de AI rige desde enero de 2026** (esta KB tenía **2026-01-22**), **con alcance
+  extraterritorial** cuando el sistema afecta a usuarios coreanos: transparencia, evaluación de riesgo, supervisión
+  humana y documentación.
+- **China:** las *Medidas de gestión de servicios de AI generativa* rigen desde **2025-09-01** — consentimiento,
+  calidad del dato, **etiquetado de contenido**, derechos del usuario y gestión de reclamos.
+- 🟢 **Y el dato de presupuesto que faltaba:** **96 % de las organizaciones de APAC planea aumentar su inversión en AI,
+  con un promedio de +15 % para 2026**, y **~66 % ya está pilotando o adoptando sistemáticamente**.
+- **Players del mercado educativo regional:** Google, Microsoft, IBM, Pearson y Byju's, con **China, India y Japón**
+  concentrando el gasto.
+
+**Oportunidad.** Tres regímenes vigentes con requisitos que **se parecen pero no coinciden** (y uno de ellos,
+Corea, **extraterritorial**) es exactamente el perfil de **P5** (orquestación multi-jurisdicción): el valor no está en
+cumplir uno, está en **una sola arquitectura con nodos de política por jurisdicción**. Y el etiquetado de contenido
+chino se cubre con la capa de marcado de autoría que esta KB ya registró (**P-autoría / SynthID**), no con desarrollo
+nuevo.
 
 **Pase 27 (2026-10-01) — APAC confirma adopción y aporta un dato de arquitectura: la soberanía decide la
 infraestructura de la mitad de las empresas de la región.** El barrido trae tres cifras y una señal regulatoria:
@@ -2584,6 +2669,39 @@ auditoría previa a la escritura) **son, descriptos en términos de negocio, un 
 automatizadas** — y se pueden reimplementar en permisivo. Ver **P61**.
 
 ### LATAM
+
+**Pase 31 (2026-10-02) — aparece la encuesta regional más grande que tocó esta KB, y refina el argumento central de
+LATAM con un dato del usuario final.**
+
+**Digital Education Council — AI in Higher Education LATAM Survey 2026: 7.319 docentes de 29 instituciones de
+educación superior.** Lo que mide:
+
+| Dato | LATAM | Global |
+|---|---|---|
+| Visión «positiva» o «muy positiva» de la AI en educación | **72 %** | 57 % |
+| Declara **usar** AI en su enseñanza | **79 %** (+18 % sobre la cifra global de 2025) | — |
+| Declara involucramiento **«mínimo» a «moderado»** | 🔴 **88 %** | — |
+
+🔵 **La tijera de LATAM queda medida con mejor instrumento.** Esta KB venía sosteniendo (**P13**) que la región
+*«enseña con AI en un 73,5 % y puede medirlo en un 9 %»*. La encuesta nueva **confirma la forma y agranda el numerador**:
+**79 % usa, y 88 % lo hace en la superficie**. El argumento de venta ya no es «te falta medición»; es **«el uso ya es
+masivo y es superficial, y lo superficial no sobrevive a una auditoría académica»** — que es más fácil de aceptar para
+un decano, porque no le dice que su facultad está atrasada, le dice que está expuesta.
+
+- 🟢 **Y hay una contraparte institucional con la que alinearse:** **UNESCO lanzó el Observatorio de Inteligencia
+  Artificial en la Educación para América Latina y el Caribe el 14 de abril**, como plataforma regional de apoyo a los
+  Estados. Más el acuerdo **Tec de Monterrey – UNESCO** para avanzar AI en educación. Para un programa de ministerio
+  (**P6**), citar el Observatorio es más fuerte que citar un *benchmark* privado.
+- **Regulación, a distintas velocidades:** proyecto de ley de AI en **Brasil**, marco de **Chile**, **CONPES** de AI en
+  **Colombia**, reglas sectoriales en **México**. **Argentina, Brasil, Chile, Colombia, Costa Rica, México y Perú**
+  adoptaron formalmente los **Principios de AI de la OCDE** — base común citable cuando no hay ley vigente.
+- **Capacidad propia:** **Latam-GPT** (CENIA, Chile; 30+ instituciones de 8 países) sigue siendo el ancla de soberanía
+  del dato. En Brasil, **Plurall AI** como asistente desplegado que genera planes de estudio.
+
+⚠️ **Ausencia declarada de este pase en LATAM:** el barrido **no** devolvió ninguna ley vigente con obligaciones
+exigibles sobre AI **en educación** específicamente —hay marcos generales y principios OCDE, no un Anexo III regional—,
+así que **el argumento de conformidad no aplica acá y no hay que importarlo de EMEA**. Lo que vende en LATAM es
+**soberanía del dato, costo y pedagogía defendible**, no la fecha de un reglamento.
 
 **Pase 27 (2026-10-01) — la mejor instrumentación que LATAM recibió en esta KB: el *AI in Higher Education LATAM
 Survey 2026* pone número a la brecha entre uso y gobierno, y la brecha es de 65 puntos.** El barrido trae una fuente

@@ -1121,3 +1121,44 @@ consecutivo en que la capa vertical está saturada.**
 🔴 **No se verificó en este pase y por lo tanto no se cita ante un cliente**: la señal disponible sugiere un proyecto de
 los 2000 y hay que medir si está vivo antes de proponerlo. **Es la acción 3 del pase 30**, y la razón de anotarlo es
 que, si está muerto, conviene declararlo muerto una vez y dejar de encontrarlo en cada barrido.
+
+## 🟡 La puerta de agente de Open edX, medida: authorea todo **adentro** del curso y no crea el curso — pase 31 del 2026-10-02
+
+El pase 30 cerró la columna *«¿la vertical tiene puerta de agente?»* para Open edX: **la tiene, es oficial y es
+AGPL-3.0**. Este pase la **midió desde el artefacto publicado** (el wheel de PyPI `openedx_mcp-0.1.5`, 46.685 bytes,
+subido 2026-07-25) y midió además **las cinco versiones del API REST** por `raw.githubusercontent.com`. Lo que cambia
+para quien cotiza un proyecto sobre Open edX:
+
+| Pregunta de cotización | Respuesta medida |
+|---|---|
+| ¿El agente puede crear contenido? | **Sí.** 7 rutas CMS en el conector: `outline`, `courses/settings/`, `blocks/create/`, **`blocks/create-tree/`**, `blocks/update/`, `blocks/publish/`, `blocks/delete/` |
+| ¿Puede crear secciones, subsecciones y unidades? | **Sí, y en una llamada.** `blocks/create-tree/` crea **un árbol**; por REST crudo el `XblockSerializer` acepta `parent_locator` + `category` (`chapter` / `sequential` / `vertical` / componente) |
+| ¿Puede crear **el curso**? | 🔴 **No.** Ninguna de las **19 escrituras** del conector ni ninguna de las **cinco** versiones REST (`v0`–`v4`) crea un curso. El único primitivo de nivel curso es **`course_rerun`** (clona uno existente) |
+| ¿Puede matricular, calificar, emitir certificados? | **Sí.** `WRITE_ENROLLMENT` (3), `WRITE_CERTIFICATES` (3), `WRITE_ROLES` (2), `WRITE_USERS` (4), `WRITE_REPORTS` (1), `WRITE_COURSES` (6) |
+| ¿Qué licencia asume el cliente? | ⚠️ **AGPL-3.0**, leída del `LICENSE` dentro del wheel. El conector **corre en proceso** como plugin Django: no hay frontera de proceso que aísle la obligación |
+| ¿Trae frenos propios? | **Parcialmente: 11 de 19 escrituras piden *confirm token*, 8 no.** Ver abajo |
+
+### 🔴 El freno existe y es asimétrico: protege contra la operación masiva, no contra la repetida
+
+| Escriben **sin** confirmación (8) | Piden confirmación (11) |
+|---|---|
+| `create_xblock` (×2), `update_xblock`, `update_course_settings`, `enroll_user`, **`unenroll_user`**, `generate_certificate`, `submit_report` | `bulk_enroll`, `create_user`, `deactivate_user`, `delete_xblock`, `instructor_access`, `invalidate_certificate`, `publish_xblock`, `regenerate_certificates`, `request_retirement`, `reset_attempts`, `set_role` |
+
+`bulk_enroll` pide token; **`unenroll_user` de a uno, no**. Un agente en bucle no desmatricula un curso entero en una
+llamada **y sí puede desmatricular 500 alumnos en 500 llamadas sin un solo token**. La asimetría es deliberada —está en
+el decorador `@audited_write`— y **es una condición de despliegue que el proyecto tiene que cubrir afuera del
+conector**: cuota por sujeto y por ventana, no sólo por operación. Ver **P63**.
+
+### 🔵 Y el primitivo que cambia la economía del mantenimiento: *upstream/downstream*
+
+`v2` del API de contentstore expone `downstreams/` con cuatro vistas, incluida
+**`downstreams/<usage_key>/sync` (`SyncFromUpstreamView`)**: contenido que vive en una biblioteca y se **propaga** a los
+cursos que lo consumen. **Un agente que mantiene material en 40 cursos edita una vez y sincroniza**, en vez de editar
+40. ⚠️ **El conector MCP no expone esta capa** —no está entre sus 7 rutas CMS—, así que hoy se alcanza por REST directo
+(**gap 59**).
+
+**Consecuencia para la fila de Open edX en la tabla de arriba:** el supuesto de partida pasa de *«LMS con la huella
+pública más grande de LATAM e India y sin puerta de agente»* a *«LMS con puerta oficial, copyleft, que authorea todo
+menos la cáscara del curso»*. **Es cotizable entero** con un bootstrap declarado — curso plantilla + `course_rerun`
+(**gap 57**: falta confirmar que `course_rerun` acepta un plantilla vacío como origen).
+

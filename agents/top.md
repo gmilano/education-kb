@@ -262,7 +262,7 @@ arriba suma las tres piezas nuevas; acá queda el mapa completo, que es lo que s
 | **Moodle** | GPL-3.0+ | `peancor/moodle-mcp-server` | **MIT** ✅ | **Sí — nota y devolución** | 43 ★, 13 forks, **10 commits** |
 | **Moodle** | GPL-3.0+ | `MarcosNahuel/moodle-mcp` | **MIT** ✅ | Sí, 40 tools | 59 commits, **1 ★**, pre-producción declarada |
 | **Moodle** | GPL-3.0+ | `csmediapro/moodle-mcp-server` | ⚠️ **AGPL-3.0** | No (lectura) | Capas útiles = **plugins premium de pago** |
-| 🔴 **Open edX** | **AGPL-3.0** | **ninguno** | — | — | **Hueco, y a esta altura el mejor perfil de oportunidad de la KB.** El pase 28 midió operación y evaluación (`enrollment`, `unenroll`, roles, Course Blocks `v1`+`v2`, **notas con `gradebook/bulk-update` + *grade overrides***). 🔵 **El pase 29 corrige su propia conclusión sobre la autoría: NO está bloqueada.** `v1` registra `XblockViewSet` con **CRUD completo** y, por **ADR 0036**, un `?view=minimal` que recorta el árbol a campos estructurales — **un lujo para un agente**. El aviso de «experimental» es de **noviembre de 2023** y encabeza una sección **vacía**. **Lo que queda no es inestabilidad: es rotación de versiones** (`v0`–`v4` vivas a la vez). Ver **gap 50** y **P55** |Gap 48 (contestado) · **gap 50** · P55 |
+| 🟡 **Open edX** | **AGPL-3.0** | **`openedx-mcp` + `tutor-contrib-openedxmcp`** (oficial del proyecto, PyPI) | ⚠️ **AGPL-3.0** — corre **en proceso** como plugin Django | **Sí — 19 escrituras en 6 scopes** | **La fila cambia de «hueco» a «existe y es copyleft» (pase 30), y el pase 31 la mide desde el wheel publicado:** **35 rutas** (28 LMS + 7 CMS), **19 herramientas de escritura**, **11 con *confirm token* y 8 sin él**. AGPL-3.0 **leída del `LICENSE` del artefacto**, no de la metadata. 🔴 **Ninguna de las 19 crea un curso** — y tampoco lo hace ninguna de las **cinco** versiones REST (`v0`–`v4`): el `v0` de authoring está **deprecado en favor del `v1`** con `DeprecationWarning` en runtime, y el único primitivo de nivel curso es **`course_rerun`** (clona). Ver **gap 50 (cerrado)**, **gap 55 (medido)**, **gap 57** y **P63** | Gap 48 y **gap 50** cerrados · gap 55 medido · **gap 57** · P55 · **P63** |
 | **SCORM** (formato) | — | `giacomomaria81/scorm-mcp-server` | **MIT** ✅ | Genera paquetes | 3 tools, offline. **P56** |
 
 ⚠️ **Advertencia de cifra sobre `canvas-mcp`, y vale como regla.** La fila de la tabla principal registra **269 ★,
@@ -1485,3 +1485,44 @@ el pase 1— porque el proxy de egreso corta el `HEAD`. Verificar con `curl` ac�
 reales**, que es el error que la consigna quiere evitar. Por eso **toda verificación de este pase se hizo con WebFetch
 sobre la página del repo** (licencia, ★, forks, commits leídos de la página), y el único 404 que se reporta —
 `Cerebro-Tech/FlightPath` — es un 404 **de WebFetch**, no de `curl`.
+
+## Capa de conectores de *rostering* y estándares — medida en el registro de paquetes, pase 31 del 2026-10-02
+
+Treinta pases buscaron conectores **por nombre de protocolo** (`*-mcp`, `mcp-*`). El pase 30 demostró que eso deja
+ausencias mal medidas y dejó la consigna de **preguntarle al registro de paquetes por el nombre del proyecto o del
+estándar, y abrir el README a buscar «MCP» adentro**. Este pase la ejecutó contra `registry.npmjs.org` y `pypi.org`.
+**Rinde: aparece una segunda puerta MCP de OneRoster y es MIT.**
+
+| Agente / conector | Paquete verificado | Versión | Licencia | Sirve MCP | Qué escribe |
+|---|---|---|---|---|---|
+| **`@eduware/oneroster`** | [registry.npmjs.org](https://registry.npmjs.org/@eduware%2Foneroster) | 1.2.11 | **MIT** ✅ | ✅ **sí — ejecutable `mcp` empaquetado** | OneRoster **1.1 y 1.2** completo + perfil `ClassLink` de sólo lectura |
+| `@superbuilders/oneroster` (= `trilogy-group/oneroster-ts`) | [github.com/trilogy-group/oneroster-ts](https://github.com/trilogy-group/oneroster-ts) | 0.7.0 | 0BSD ✅ | ✅ sí (ya registrado, 132 tools medidas en el pase 30) | OneRoster con escritura |
+| `openedx-mcp` (oficial Open edX) | [pypi.org/project/openedx-mcp](https://pypi.org/project/openedx-mcp/) | 0.1.5 | ⚠️ **AGPL-3.0** | ✅ sí (35 rutas) | matrícula, usuarios, roles, certificados, reportes, **authoring de bloques** |
+
+**Lo que dice el README de `@eduware/oneroster`, textual:** *«the included MCP server for tool-based integrations»* y
+*«The package includes an MCP server that exposes SDK operations as tools»*. 13 versiones publicadas, creado
+**2026-01-23**, última modificación **2026-07-10**.
+
+⚠️ **Y la advertencia que va con el alta:** su repo declarado, `Eduware-Inc/eduware-oneroster`, **devuelve 404** por
+`raw.githubusercontent.com`. **El paquete es verificable en el registro; el repo es una afirmación que no se puede
+comprobar.** Se cita por registro a propósito. Es el **gap 58**, y da una regla nueva para esta KB: **el paquete
+publicado y el repo público son dos verificaciones distintas, y la que importa para construir es la del paquete.**
+
+### Lo que se midió y salió vacío — ausencias informadas, no silencios
+
+| Candidato | Qué se midió | Resultado |
+|---|---|---|
+| **`ltijs`** v7.0.6 (Apache-2.0, repo verificado, modificado **2026-09-18**) | README completo leído, grep de `MCP` / `Model Context Protocol` | **0 menciones.** El SDK LTI 1.3 de referencia está vivo y mantenido **y no tiene puerta de agente**. El **gap 42 sigue cerrado**, ahora por medición y no por etiqueta |
+| **`pylti1p3`** v2.0.0 (MIT) | PyPI: 29 releases, **última publicación `2022-11-20`** | Sin MCP, y 🔴 **casi cuatro años sin release**. ✅ El repo (`dmitry-viskov/pylti1.3`) **sí existe** —`README.rst`, `setup.py` y `LICENSE` responden 200— y esta KB ya lo tenía registrado con 138 ★: el abandono es **de publicación en PyPI**, no del repo |
+| **`@timeback/caliper`** v0.3.3 | registro: licencia y repo | 🔴 **No declara licencia.** Código **de 2026-09-25** y jurídicamente inusable. Ver advertencias de licencia |
+| **`openbadges`** en npm | familia `openbadges-validator*`, `openbadges-bakery*` | Herramientas de validación y *baking*, **OB 2.0**, sin MCP |
+
+### 🟢 Una pieza que faltaba y entra permisiva: OpenBadges **3.0**
+
+| Pieza | Paquete | Versión | Licencia | Qué aporta |
+|---|---|---|---|---|
+| **`@ajna-inc/openbadges`** | [registry.npmjs.org](https://registry.npmjs.org/@ajna-inc%2Fopenbadges) | 0.6.3 | **Apache-2.0** ✅ | *«OpenBadges v3.0 module for Credo-TS with OAuth 2.0 provider support»*, modificado 2026-05-19 |
+
+Esta KB tenía registrado que **CaSS implementa OB 2.0 y no 3.0**, y no tenía **ninguna** pieza de OB 3.0. Ya la tiene, y
+es permisiva. ⚠️ No declara repo, así que se cita por registro (mismo criterio que `@eduware`).
+

@@ -3353,3 +3353,109 @@ competencia es la alineación de ítems.**
 cumplimiento del patrón pero **sin el requisito de graduación**, así que ahí se vende como *marco de gobernanza*, no como
 requisito.
 
+
+## P63 — Agente autor sobre Open edX, con el bootstrap que la API no da y el rail que el conector no pone (agregado en el pase 31; **LATAM e India primero**, donde está la huella pública grande de Open edX)
+
+**Qué resuelve.** P55 venía cotizándose con asterisco porque no se sabía si el *authoring* de Open edX era alcanzable.
+El pase 31 lo midió en tres capas independientes y la respuesta es **sí para todo lo que vive adentro del curso, no para
+crear el curso**. Este patrón cotiza eso: agente que construye y mantiene contenido curricular en Open edX, con el
+hueco del bootstrap cubierto explícitamente y con el rail de seguridad que el conector **no** trae.
+
+**Piezas, con licencia verificada el 2026-10-02:**
+
+| Pieza | Licencia | Rol en el patrón |
+|---|---|---|
+| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | **AGPL-3.0** | la plataforma; API `contentstore` `v0`–`v4` |
+| [`openedx-mcp`](https://pypi.org/project/openedx-mcp/) + `tutor-contrib-openedxmcp` | ⚠️ **AGPL-3.0** (leída del `LICENSE` del wheel) | puerta MCP oficial: **35 rutas**, **19 escrituras** |
+| `blocks/create-tree/` (ruta CMS del conector) | — | **crea el árbol** sección→subsección→unidad **en una llamada** |
+| `downstreams/<usage_key>/sync` (REST `v2`, **fuera del conector**) | AGPL-3.0 | **propaga** el cambio de la biblioteca a los N cursos |
+| [`LangGraph`](https://github.com/langchain-ai/langgraph) | MIT | el grafo del agente, con el nodo de confirmación humana |
+| [`Temporal`](https://github.com/temporalio/temporal) | MIT | durabilidad de la secuencia de escritura y reintentos **idempotentes** |
+
+### El wiring, en el orden en que hay que construirlo
+
+1. **Bootstrap del curso — y acá está el único trabajo que la API no hace.** 🔴 **Ninguna de las cinco versiones REST
+   crea un curso, y ninguna de las 19 escrituras del conector tampoco.** El camino es **un curso plantilla vacío,
+   creado una vez a mano en Studio**, y de ahí en adelante **`course_rerun`** (REST `v1`,
+   `course_rerun/{course_id}`) para clonarlo por cada curso nuevo. **Cotizar el alta del plantilla como tarea manual de
+   una vez**, no como desarrollo. ⚠️ **Asterisco honesto (gap 57):** falta confirmar que `course_rerun` acepta un curso
+   **vacío** como origen y si devuelve el `course_key` sincrónicamente o una tarea asíncrona. **Es la acción 1 del pase
+   32** y es lo único que separa este patrón de una cotización cerrada.
+2. **Estructura.** `POST blocks/create-tree/` con el árbol completo: `category: chapter` → `sequential` → `vertical`.
+   Por REST crudo el equivalente es `POST /api/contentstore/v1/xblock/` con `parent_locator` + `category` **bloque por
+   bloque** — razón suficiente para usar el conector acá y no la API cruda.
+3. **Contenido.** `blocks/update/` por componente. El `XblockSerializer` es **estricto** (*«No unexpected fields are
+   passed in»*): el agente tiene que emitir exactamente `data`, `metadata`, `fields`, `display_name` — **validar el
+   payload contra el serializer antes de llamar**, porque un campo extra es un 400 y no un *warning*.
+4. **Publicación con humano en el lazo.** `blocks/publish/` **pide *confirm token*** (`require_confirm=True`): es el
+   punto natural de la compuerta pedagógica. Nada se publica sin que un docente confirme — y eso no hay que construirlo,
+   **el conector ya lo exige**.
+5. **Mantenimiento, que es donde está el margen.** El material común vive en una **biblioteca (Libraries v2)** y se
+   propaga con `downstreams/<usage_key>/sync`. ⚠️ **Esa capa no está en el conector MCP** (no figura entre sus 7 rutas
+   CMS), así que **el agente necesita dos canales: MCP para operar y REST directo para propagar.** Sumar ese cliente REST
+   al alcance. ⚠️ **Y antes de prometer propagación sobre contenido que el docente edita, cerrar el gap 59**: no se midió
+   qué hace `sync` ante un bloque *downstream* editado localmente.
+
+### 🔴 El rail que hay que agregar, porque el conector no lo tiene
+
+Las **19 escrituras** se reparten en **11 con *confirm token* y 8 sin él**. Entre las 8 sin token está
+**`unenroll_user`**. El modelo de amenaza del propio código —*«a looping agent… a retry storm that mass-enrols or
+deletes»*— **está implementado contra la operación masiva, no contra la repetida**: `bulk_enroll` pide confirmación,
+`unenroll_user` de a uno no. **Un agente en bucle puede desmatricular 500 alumnos en 500 llamadas sin un solo token.**
+
+**Lo que hay que poner afuera del conector, y es alcance de este patrón:**
+
+- **cuota por sujeto y por ventana** (p. ej. *N* operaciones de matrícula por alumno por hora), no sólo por operación —
+  es el rail que falta, y es el que protege al alumno;
+- **idempotencia por clave de negocio** en Temporal (`(curso, alumno, operación)`), para que un reintento no cuente como
+  una segunda escritura;
+- **tope de *blast radius* por ejecución**: el agente no puede tocar más de *K* sujetos por corrida sin aprobación
+  humana, con `K` configurable y auditado.
+
+### Licencia — decirlo en la primera reunión
+
+⚠️ El conector es **AGPL-3.0 y corre *in-process*** como plugin Django (tendencia 82: *la licencia de un conector la
+decide su arquitectura*). **No hay frontera de proceso que aísle la obligación.** Para un cliente que no acepta AGPL en
+su árbol, la alternativa es **consumir `contentstore` por REST desde un servicio propio** y escribir un conector MCP
+*out-of-process* — más trabajo, y la medición de este pase deja el mapa de rutas hecho para hacerlo.
+
+**Estimación.** 6–8 semanas con el plantilla + `course_rerun` resuelto y sin la capa `downstreams`; **9–12 semanas** con
+propagación por biblioteca y los tres rails de cuota. El bootstrap manual del plantilla: horas, una vez.
+
+## P64 — *Rostering* conforme a OneRoster por MCP, ahora con opción **MIT** (agregado en el pase 31; transversal, y es la pieza de entrada de cualquier proyecto con SIS)
+
+**Qué cambia respecto de lo que esta KB venía cotizando.** El pase 28 encontró que OneRoster tenía conector y era
+**0BSD** (`trilogy-group/oneroster-ts`, 132 tools medidas en el pase 30). El pase 31 preguntó al registro de npm por el
+**estándar** y encontró **una segunda puerta, y es MIT**. Eso saca la conversación de licencia del camino crítico con
+clientes cuyo *procurement* no tiene criterio para 0BSD.
+
+| Pieza | Licencia | Verificación | Rol |
+|---|---|---|---|
+| [`@eduware/oneroster`](https://registry.npmjs.org/@eduware%2Foneroster) v1.2.11 | **MIT** ✅ | ⚠️ paquete sí; repo `Eduware-Inc/eduware-oneroster` **404** (gap 58) | **servidor MCP empaquetado** (ejecutable `mcp`); OneRoster **1.1 + 1.2** + perfil `ClassLink` de lectura |
+| [`@superbuilders/oneroster`](https://github.com/trilogy-group/oneroster-ts) v0.7.0 | 0BSD ✅ | ✅ repo verificado | alternativa medida: **132 tools** |
+| [`LongsightGroup/oneroster`](https://github.com/LongsightGroup/oneroster) v0.3.0 | **MIT** ✅ | ✅ repo verificado | **sin MCP**, pero cubre **los dos perfiles** del estándar (CSV **y** REST) — la pieza para el lado *batch* |
+| [`Temporal`](https://github.com/temporalio/temporal) | MIT | — | sincronización durable, reintentos idempotentes |
+
+### Wiring
+
+1. **Elegir puerta por licencia, no por estrellas** (que este pase no pudo medir y por lo tanto no publica):
+   `@eduware/oneroster` si el cliente pide MIT; `oneroster-ts` si quiere el repo público verificable y acepta 0BSD.
+   **Declarar la elección y el motivo en la propuesta** — son dos licencias permisivas distintas y la diferencia es de
+   *procurement*, no técnica.
+2. **Perfil REST para lo incremental, CSV para la carga inicial.** OneRoster tiene **dos perfiles** y casi toda
+   implementación cubre uno. `LongsightGroup/oneroster` cubre los dos: usarlo para el *bulk load* del año académico y la
+   puerta MCP para el delta diario.
+3. **El agente consume el roster como *tools*, no como base de datos.** Clases, docentes, alumnos e inscripciones
+   llegan por MCP, lo que deja el modelo de permisos del SIS **del lado del SIS** — es el mismo argumento de P9 (agente
+   adentro del SIS sin fricción de licencia) y acá se cumple con licencia permisiva de punta a punta.
+4. **Rail obligatorio, por lo que aprendió P63:** el *rostering* escribe sobre personas. Antes de habilitar escritura,
+   **contar qué fracción de las tools del SDK elegido pasa por confirmación** y poner **cuota por sujeto** afuera. No
+   asumir que el SDK la trae: en el conector de Open edX, 8 de 19 escrituras no la tienen.
+
+⚠️ **Dónde NO sirve este patrón:** si el cliente necesita **Caliper** para la telemetría, no hay pieza usable —
+`@timeback/caliper` v0.3.3 es de **2026-09-25** y **no declara licencia**. La ruta de telemetría sigue siendo **xAPI/LRS**
+(ver **P15**), no Caliper.
+
+**Estimación.** 3–4 semanas para el delta diario por MCP con un SIS que ya habla OneRoster; +2 semanas si hay que hacer
+la carga inicial por CSV; +2 semanas para los rails de cuota e idempotencia.
+
