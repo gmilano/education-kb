@@ -8,6 +8,17 @@ updated: 2026-10-02
 
 > Recetas concretas: repos nombrados, licencias verificadas, wiring explícito y estimación.
 > Todos los repos citados fueron verificados vía WebFetch el 2026-09-30; los del pase 11, el 2026-10-01 (ver `agents/top.md`).
+> **Pase 34 del 2026-10-02:** +2 patrones, y **P69 pasa de abierto a decidido.** **P70** — *credenciales
+> verificables con el expediente cerrado por el propio consorcio*: la capa que esta base declaraba vacía existe
+> (`Schroedinger-Hat/certo`, ⚠️ **AGPL-3.0**, **OB 3.0 + W3C VC + DIDs**) y 🟢 **el validador oficial de 1EdTech es
+> Apache-2.0**, así que la pieza copyleft queda **aislada en el borde** y el expediente lo cierra un tercero neutral —
+> **North America primero, porque es la región donde no hay certificador y el comprador debe fabricarse la evidencia.**
+> **P71** — *probar la telemetría antes de firmarla*: entra **`yetanalytics/datasim` (Apache-2.0)**, que permite
+> **cargar el LRS con tráfico xAPI sintético antes de comprometer una cifra** —la única pieza de esta KB que contesta
+> con una medición la barrera de APAC (**49 % sin infraestructura de tiempo real**)— y deja identificado el
+> ***upstream* mejor ubicado de esta base: un `ralph[mcp]`**, que encaja en los **14 extras** que Ralph ya empaqueta
+> **sin fork** (**gap 64**, cerrado en negativo con tres instrumentos). ✅ **Y P69 queda decidido por licencia y no por
+> adopción: el stack PHP tiene ~10× las descargas pero es GPL-2.0-only en las 293 releases.**
 > **Pase 33 del 2026-10-02:** +3 patrones, los tres sobre la capa de telemetría y la de evaluación. **P67** — *evidencia
 > de aprendizaje auditable sobre el LMS que el cliente ya tiene*, que resuelve **dos mandatos de North America con
 > piezas que ya existen** (`ACTOR_UUID` sin dato personal contra **California AB 1159**; rail de escritura con
@@ -21,7 +32,7 @@ updated: 2026-10-02
 > dependencia externa** porque su cadena no tiene ninguna de terceros. ⚠️ **Y una advertencia transversal que atraviesa
 > los tres: `coursecode` pone su rail de seguridad en las *anotaciones MCP* y no en el servidor, así que — a diferencia
 > del *confirm token* de `openedx-mcp` — no frena solo.** Donde el pliego exija supervisión humana demostrable, **la
-> confirmación es trabajo del integrador y entra en la estimación** (tendencia **110**).
+> confirmación es trabajo del integrador y entra en la estimación** (tendencia **114**).
 > **Pase 26:** +4 patrones — **P50** (el perfil de competencia por MCP, con las 6 tools de CaSS **medidas** en vez de
 > inferidas), **P51** (el conector MCP de Moodle que no existe, construido sobre el patrón del que sí existe para
 > Canvas), **P52** (la capa agéntica de biblioteca sobre el bus de Kafka de FOLIO, Apache-2.0) y **P53** (*early warning*
@@ -33,7 +44,7 @@ updated: 2026-10-02
 > **Pase 11:** +2 patrones — **P25** (riesgo de abandono conforme al Anexo III, la capa con presupuesto ya asignado y sin oferta open source) y **P26** (agente docente sobre la ontología curricular nacional ya publicada).
 > **Pase 27:** **+4 patrones y una corrección.** 🔴 **P51 queda con premisa falsa** —el conector MCP de Moodle **sí existe y es MIT**— y lo reemplazan **P54** (corrección y devolución sobre Moodle con **compuerta humana**, el último tramo del gap 6, con piezas que ya escriben), **P55** (el conector de **Open edX**, que es el único que de verdad no existe), **P56** (**SCORM** como formato de salida de la capa generativa: cero integración, offline) y **P57** (evidencia por MCP cotizada sobre lo que CaSS **realmente** expone — 6 de 61 operaciones, con insignias y autoría de marcos **fuera**).
 
-> **Pase 34 del 2026-10-02:** **+4 patrones, y tres de ellos existen porque aparecieron las piezas, no porque se haya inventado una receta.** 🟢 **P70** — *expediente de accesibilidad de la evaluación*: la obligación europea vencida que **P17** describía sin pieza por fin la tiene, y es **MIT y está adentro de la pila de evaluación** (`qti3-a11y` con `accessibilityProofMatrix` y guiones **VoiceOver/NVDA/JAWS**, `qti3-pnp` para *Personal Needs and Preferences*, `qti3-cli a11y-proof`, más **`accessibility audits`** del lado LMS en `bruchris/canvas-lms-mcp`). 🟢 **P71** — *el bucle cerrado docente*: **material propio → lección revisable → aula → nota**, con trazabilidad de punta a punta (`Claw-ED` MIT + `lineage-skill` Apache-2.0 + `coursecode` MIT + `canvas-lms-mcp` MIT); es el patrón que **P8** describía sin piezas, y **la rúbrica que califica sale del material del docente, no del modelo**. 🔵 **P72** — *el servidor MCP del dato educativo nacional*: Brasil tiene capa MCP de datos públicos (**IBGE/censo, BCB, DATASUS, firma**) y **educación es el único dominio grande que falta**; ⚠️ **se publica con la incógnita adelante —API o CSV— porque de eso depende si son 6 semanas o 4 meses, y esa medición es la acción 3 del pase 35.** 🔵 **P73** — *piloto sobre el LMS sin pedirle nada a sistemas*: `bunizao/moodle-cli` y `moon0825/jbnu-lms-student` trabajan **desde la sesión del navegador del usuario, con passkey y 2FA, sin token de administrador**, así que el valor se demuestra **antes** de la primera reunión con TI — 🔴 al costo de ser **sólo lectura**, que es un límite que se pone adelante. ⚠️ **Y P61 cambia de costo sin cambiar de contenido: la puerta oficial de Open edX publicó 12 releases en dos días y nada en los 70 siguientes (gap 66), así que se cotiza con presupuesto de mantenimiento.** ✅ **P56 gana su superconjunto:** `coursecode` expone **15 tools** y su `build` toma `format` como enum (`cmi5`/`scorm2004`/`scorm1.2`/`lti`), contra las 3 tools de `scorm-mcp-server`, que queda como la opción mínima *offline*. ⚠️ **P20 y P48 quedan más valiosos y más honestos: el QTI que el mundo despliega es GPL-2.0-only** (`oat-sa/qti-sdk`, 218.212 descargas, 293 versiones), **así que la pila permisiva es el diferencial — y hay que preguntar en el *discovery* si TAO ya está instalado.**
+> **Pase 35 del 2026-10-02:** **+4 patrones, y tres de ellos existen porque aparecieron las piezas, no porque se haya inventado una receta.** 🟢 **P72** — *expediente de accesibilidad de la evaluación*: la obligación europea vencida que **P17** describía sin pieza por fin la tiene, y es **MIT y está adentro de la pila de evaluación** (`qti3-a11y` con `accessibilityProofMatrix` y guiones **VoiceOver/NVDA/JAWS**, `qti3-pnp` para *Personal Needs and Preferences*, `qti3-cli a11y-proof`, más **`accessibility audits`** del lado LMS en `bruchris/canvas-lms-mcp`). 🟢 **P73** — *el bucle cerrado docente*: **material propio → lección revisable → aula → nota**, con trazabilidad de punta a punta (`Claw-ED` MIT + `lineage-skill` Apache-2.0 + `coursecode` MIT + `canvas-lms-mcp` MIT); es el patrón que **P8** describía sin piezas, y **la rúbrica que califica sale del material del docente, no del modelo**. 🔵 **P74** — *el servidor MCP del dato educativo nacional*: Brasil tiene capa MCP de datos públicos (**IBGE/censo, BCB, DATASUS, firma**) y **educación es el único dominio grande que falta**; ⚠️ **se publica con la incógnita adelante —API o CSV— porque de eso depende si son 6 semanas o 4 meses, y esa medición es la acción 3 del pase 36.** 🔵 **P75** — *piloto sobre el LMS sin pedirle nada a sistemas*: `bunizao/moodle-cli` y `moon0825/jbnu-lms-student` trabajan **desde la sesión del navegador del usuario, con passkey y 2FA, sin token de administrador**, así que el valor se demuestra **antes** de la primera reunión con TI — 🔴 al costo de ser **sólo lectura**, que es un límite que se pone adelante. ⚠️ **Y P61 cambia de costo sin cambiar de contenido: la puerta oficial de Open edX publicó 12 releases en dos días y nada en los 70 siguientes (gap 70), así que se cotiza con presupuesto de mantenimiento.** ✅ **P56 gana su superconjunto:** `coursecode` expone **15 tools** y su `build` toma `format` como enum (`cmi5`/`scorm2004`/`scorm1.2`/`lti`), contra las 3 tools de `scorm-mcp-server`, que queda como la opción mínima *offline*. ⚠️ **P20 y P48 quedan más valiosos y más honestos: el QTI que el mundo despliega es GPL-2.0-only** (`oat-sa/qti-sdk`, 218.212 descargas, 293 versiones), **así que la pila permisiva es el diferencial — y hay que preguntar en el *discovery* si TAO ya está instalado.**
 
 > **Pase 30 del 2026-10-02:** **+2 patrones y una muerte.** 🔴 **P55 queda con premisa muerta** —el conector MCP de Open edX **existe**, es oficial y es **AGPL-3.0 corriendo en proceso**—, y lo que queda de él es el mapa REST para quien necesite una puerta permisiva *fuera* de proceso. Entran **P61** (el **rail de escritura de agente** reimplementado en permisivo: *dry run* + **confirm token atado a una huella del payload**, rate limit por tool, autoridad viva y auditoría previa — la primitiva que P53 y P54 venían describiendo en prosa, ahora medida sobre una implementación real) y **P62** (el **expediente de competencia** para el requisito de graduación de *AI fluency*, con el marco **suscripto** vía la capa **CGE** de OpenCASE en vez de redactado). ✅ **Y P58 gana precisión sin reescribirse:** pasa de «164 métodos de SDK» a **«132 tools servidas, el 100 % de las operaciones distintas»**, medido ejecutando el servidor. ⚠️ **Corrección de este pase sobre sí mismo:** se iba a escribir que **P48** *«gana por fin una herramienta nombrada para la pata legada»* con `instructure/qti`, **y es falso** — P48 ya nombraba `LongsightGroup/qti3` (**MIT**, 667 commits), que además **migra** QTI 1.2/2.x a QTI 3, mientras la gema de Instructure **sólo importa y parsea**. **`instructure/qti` entra como alternativa de lectura en Ruby, no como pieza que faltaba.**
 
@@ -605,7 +616,7 @@ Hasta este pase la KB no tenía con qué responder. Ahora sí, y las piezas son 
 
 ⚠️ **Las dos frases que no se pueden decir en esta venta:** que el sistema «escribe IEPs» y que «decide acomodaciones». Las dos están prohibidas en jurisdicciones concretas y las dos son innecesarias — el valor está en las horas de preparación de material, que es donde el docente efectivamente se consume.
 
-## P70 — Expediente de accesibilidad de la evaluación, generado y no declarado (agregado en el pase 34; **EMEA primero**, y es la segunda obligación vencida de esta KB que por fin tiene piezas)
+## P72 — Expediente de accesibilidad de la evaluación, generado y no declarado (agregado en el pase 35; **EMEA primero**, y es la segunda obligación vencida de esta KB que por fin tiene piezas)
 
 **El problema que resuelve.** La obligación europea de accesibilidad es **la única de esta KB con fecha ya cumplida**
 (pase 17), y **P17** se escribió sin una pieza permisiva que la cumpliera: el pase 8 midió que la tecnología asistiva
@@ -615,7 +626,7 @@ necesita entregar no es una afirmación —*«nuestros ítems son accesibles»*�
 🟢 **Lo que cambió en el pase 33:** las piezas existen, son **MIT**, y están **adentro de la pila de evaluación**, que es
 donde nadie las buscó.
 
-### Las piezas, todas verificadas en el pase 34
+### Las piezas, todas verificadas en el pase 35
 
 | Pieza | Licencia | Rol |
 |---|---|---|
@@ -667,7 +678,7 @@ accesibilidad es el mismo artefacto con otra carátula.
 
 ---
 
-## P71 — El bucle cerrado docente: material propio → lección revisable → aula → nota, todo permisivo (agregado en el pase 34; **transversal, y es el patrón que P8 describía sin tener piezas**)
+## P73 — El bucle cerrado docente: material propio → lección revisable → aula → nota, todo permisivo (agregado en el pase 35; **transversal, y es el patrón que P8 describía sin tener piezas**)
 
 **El problema que resuelve.** **P8** («Fábrica de lecciones en la voz del docente») era el ángulo menos disputado de esta
 KB y el peor abastecido: había generadores de contenido genérico y había conectores de LMS, **y nada que uniera el
@@ -676,7 +687,7 @@ material propio del docente con la calificación**. Y es justo el circuito donde
 
 🟢 **El pase 33 cierra el circuito con tres piezas MIT y una Apache-2.0.**
 
-### Las piezas, todas verificadas en el pase 34
+### Las piezas, todas verificadas en el pase 35
 
 | Pieza | Licencia | Rol |
 |---|---|---|
@@ -725,7 +736,7 @@ el ahorro docente es la métrica que decide retención (**5 a 10 horas por seman
 
 ---
 
-## P72 — El servidor MCP del dato educativo nacional, replicando una plantilla que ya existe (agregado en el pase 34; **LATAM / Brasil primero**, y es contribución *upstream* antes que proyecto)
+## P74 — El servidor MCP del dato educativo nacional, replicando una plantilla que ya existe (agregado en el pase 35; **LATAM / Brasil primero**, y es contribución *upstream* antes que proyecto)
 
 **El problema que resuelve.** **Brasil tiene una capa MCP nacional de datos públicos y educación es el único dominio
 grande que falta** (gap 63, tendencia 106). Cuatro dominios ya tienen servidor —**IBGE/censo** (`ibge-br-mcp`, **MIT**,
@@ -775,7 +786,7 @@ MIT** y dejar que la conversación institucional venga después.
 
 ---
 
-## P73 — Piloto de agente sobre el LMS sin pedirle nada al área de sistemas (agregado en el pase 34; **transversal, y desbloquea el piloto que esta KB no podía arrancar**)
+## P75 — Piloto de agente sobre el LMS sin pedirle nada al área de sistemas (agregado en el pase 35; **transversal, y desbloquea el piloto que esta KB no podía arrancar**)
 
 **El problema que resuelve, y es el que frenaba todo lo demás.** Todos los patrones de esta KB que tocan un LMS piden lo
 mismo: **token de administrador y Web Services habilitados.** Eso convierte un piloto de dos semanas en una conversación
@@ -804,7 +815,7 @@ del navegador del propio usuario.**
 3. **Fase 1 — institucionalización.** Con la evidencia en la mano se pide lo que al principio no se podía pedir: token,
    Web Services, y **el conector que escribe** (`peancor/moodle-mcp-server` para nota y devolución, o
    `bruchris/canvas-lms-mcp` con sus 165 tools del lado Canvas).
-4. **Fase 2 — el resto de la KB.** Recién acá entran **P1**, **P10**, **P15** y **P71**, que son los que cierran circuito.
+4. **Fase 2 — el resto de la KB.** Recién acá entran **P1**, **P10**, **P15** y **P73**, que son los que cierran circuito.
 
 ### Plazo y alcance
 
@@ -3974,7 +3985,33 @@ Globant en **el integrador que escribió la puerta de agente del estándar de ev
 posicionamiento que la tendencia de esta KB describe: *«el integrador que sabe cuál de estas piezas sigue viva vale más
 que el que sabe el estándar»*.
 
-⚠️ **La decisión que falta, y es la acción 3 del pase 35.** El ecosistema QTI tiene **dos mitades**: la TypeScript
+### ✅ La decisión, tomada en el pase 34 del 2026-10-02 — y la toma la licencia, no el número de adopción
+
+El pase 33 dejó esta decisión abierta y pidió resolverla **con el número de adopción al lado**. Se midió en Packagist
+(endpoint por paquete, que devuelve `license` y `time` **en cada versión**) y en npm:
+
+| | `qtism/qtism` (OAT QTI-SDK) | `@longsightgroup/qti3-cli` |
+|---|---|---|
+| **Licencia** | 🔴 **GPL-2.0-only — en las 293 releases** | **MIT** ✅ |
+| **Adopción** | 🟢 **218.212 descargas** totales, **3.104/mes**, 85 *favers* | menor y nueva (⚠️ `api.npmjs.org` no devolvió descargas para el paquete con *scope*) |
+| **Actividad** | viva: `v19.7.2` el **2026-07-09** | 🟢 **41 releases**, primera **2026-05-21**, última modificación **2026-10-01** |
+| **Dependencias de terceros** | stack PHP completo | 🟢 **cero en toda la cadena** |
+
+Y el ecosistema PHP alrededor es real: `oat-sa/extension-tao-item` **130.032** descargas, `extension-tao-itemqti`
+**128.201**, `-pci` **89.265**, `-pic` **79.373**, `extension-tao-itemhtml` **37.722**.
+
+🔵 **Se contribuye sobre el lado TypeScript, y el criterio es que el número grande era el equivocado para esta
+pregunta.** El stack PHP tiene **~10× la adopción** —el argumento que estaba a su favor— pero **`GPL-2.0-only` cierra
+el caso de uso**: Globant no puede envolverlo en un producto propietario ni embeberlo en una entrega de cliente sin
+heredar copyleft, y la obligación alcanza al derivado. **Y el lado MIT no sólo es viable: resulta ser el que se mueve
+más rápido** —41 releases en cuatro meses y medio, la última de ayer—, que era lo contrario de lo esperable de la
+opción con menos adopción. 🔵 **La regla general: cuando una de las dos opciones tiene una licencia que prohíbe el uso
+previsto, la comparación de adopción no se empata, se descarta.**
+
+⚠️ **Lo que la medición NO es:** la columna de adopción **no es simétrica** —Packagist da descargas y el endpoint de
+npm no las dio para este paquete—, así que **la decisión se apoya en la licencia, que sí está medida de los dos
+lados**, y no en una comparación de volumen que esta KB no puede hacer de forma pareja.
+⚠️ **La decisión que falta, y es la acción 3 del pase 36.** El ecosistema QTI tiene **dos mitades**: la TypeScript
 permisiva de `LongsightGroup` (**cero dependencias**, pero `qti3` tiene **5 ★**) y la PHP de **OAT SA** (**36 paquetes
 en Packagist**: `qtism/qtism`, `oat-sa/extension-tao-*`, mucha más adopción). **La contribución más limpia es la
 TypeScript; la de más alcance podría ser la PHP.** Hay que medir licencia y cadencia de `qtism/qtism` antes de elegir
@@ -3985,3 +4022,108 @@ licencia**, no de tracción — y así hay que presentarlo.
 
 ---
 
+
+## P70 — Credenciales verificables con el expediente cerrado por el propio consorcio (agregado en el pase 34 del 2026-10-02; **transversal, con North America primero**)
+
+**El problema.** El cliente quiere emitir credenciales que valgan afuera —no un PDF con logo— y quiere poder
+demostrarle a un tercero (una empresa que contrata, un ministerio, un área de compras) que la credencial es auténtica.
+Hasta este pase esta KB **no tenía con qué**: `badgr-server` da **404**, el Open Badges de `cassproject/CASS` está
+anclado a `w3id.org/openbadges/v2` —**OB 2.0, no 3.0**— y CaSS deja **Open Badges entero fuera de su superficie MCP**.
+
+**Las piezas, las dos verificadas de primera mano en este pase.**
+
+| Rol | Pieza | Licencia | Nota |
+|---|---|---|---|
+| **Emisión y gestión** | [`Schroedinger-Hat/certo`](https://github.com/schroedinger-hat/certo) | ⚠️ **AGPL-3.0** | **OB 3.0 + W3C VC + DIDs.** Plantillas de *Achievement* con criterios y habilidades, emisión **individual y masiva por CSV**, panel del receptor, **página pública de verificación**, compartir a LinkedIn. Strapi 5.x + Nuxt 3 |
+| **Validación independiente** | [`1EdTech/digital-credentials-public-validator`](https://github.com/1EdTech/digital-credentials-public-validator) | **Apache-2.0** ✅ | Validador **del consorcio que escribe el estándar**, para **Open Badges y CLR**, con web, HTTP y **API** |
+| **Evidencia de que la credencial se ganó** | `learnmcp-xapi` + `lrsql` | **MIT** / **Apache-2.0** ✅ | La capa que esta KB ya tenía: `ACTOR_UUID` sin dato personal, **30 escrituras/minuto** de techo |
+| **Dimensionamiento previo** | `yetanalytics/datasim` | **Apache-2.0** ✅ | Carga el LRS con tráfico xAPI sintético **antes** de comprometer una cifra |
+
+**El wiring, y el orden importa.**
+
+1. **`lrsql` + `learnmcp-xapi`** registran la evidencia de aprendizaje mientras el alumno cursa — un statement por
+   llamada, con `ACTOR_UUID` en lugar de identidad, y el techo de caudal de configuración como freno.
+2. **Certo** emite la credencial OB 3.0 al cumplirse el criterio, **firmada criptográficamente** (W3C VC), de modo que
+   **la insignia lleva su propia prueba y no depende de que el servidor del emisor siga en pie**.
+3. 🟢 **El validador de 1EdTech cierra el expediente**, y es el paso que vuelve la propuesta defendible: el tercero
+   verifica la credencial **contra el consorcio**, sin pedirle nada al emisor ni a Globant ni a Certo.
+
+🔴 **La restricción de licencia va al frente de la cotización, no al pie.** **AGPL-3.0 en un servicio de red obliga a
+ofrecer la fuente a los usuarios del servicio.** Entonces:
+
+- ✅ **Certo desplegado y operado por el cliente** —el cliente lo customiza y asume la obligación— **es viable, y hoy
+  es la única opción OB 3.0 completa que esta KB conoce.**
+- 🔴 **Certo embebido en un producto propietario de Globant, no.** La obligación alcanza al derivado.
+- 🟢 **Las otras tres piezas son permisivas** (MIT / Apache-2.0), así que **la pieza copyleft queda aislada en el borde
+  del sistema** — que es la forma correcta de convivir con ella.
+
+**Por qué North America primero.** El pase 34 midió el encuadre regulatorio de la región: 🔴 **en educación no existe
+un equivalente a la FDA**, y la decisión la toma cada escuela, distrito o universidad con supervisión externa mínima.
+🔵 **Donde no hay certificador, el comprador tiene que fabricarse su propia evidencia** — y este patrón es exactamente
+eso, con **un validador neutral al final** en vez de una declaración del proveedor. Encaja además con lo ya registrado:
+**California AB 1159** (sin datos del alumno para entrenar: `ACTOR_UUID` lo cumple por diseño) y la **supervisión
+humana** exigida por **Oklahoma y Maryland**.
+
+**Estimación.** 6–8 semanas para emisión + verificación sobre un LMS existente, con el validador integrado como paso de
+CI del expediente. ⚠️ **Lo que falta medir y hay que decirlo: Certo no tiene puerta MCP** —reconfirmado por segundo
+instrumento en este pase—, así que **la emisión se automatiza por su API, no por un agente**.
+
+---
+
+## P71 — Probar la telemetría antes de firmarla, y dejar la puerta MCP *upstream* donde el proyecto ya la espera (agregado en el pase 34 del 2026-10-02; **APAC y EMEA primero, por razones distintas**)
+
+**El problema, y es el que más caro sale.** Esta KB recomienda `lrsql` o Ralph en **más de quince patrones** y hasta el
+pase 34 **no tenía con qué dimensionarlos**. Se proponía una arquitectura de telemetría **sin haberla probado** — y en
+APAC eso choca de frente con la barrera que el barrido regional de este pase midió: 🔴 **49 % de las empresas declara
+infraestructura insuficiente para procesamiento de datos en tiempo real.** Una capa de telemetría de aprendizaje **es**
+ingestión de eventos en tiempo real: es precisamente la objeción que hay que contestar con un número.
+
+**Las piezas, todas verificadas y todas permisivas.**
+
+| Rol | Pieza | Licencia |
+|---|---|---|
+| LRS | [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) | **Apache-2.0** ✅ — `v0.9.9` del **2026-10-01**, 112 tags |
+| LRS alternativo, soberano | [`openfun/ralph`](https://github.com/openfun/ralph) | **MIT** ✅ — `LICENSE`: *«Copyright (c) 2020-present **France Université Numérique**»* |
+| 🟢 **Generador de carga y conformidad** | [`yetanalytics/datasim`](https://github.com/yetanalytics/datasim) | **Apache-2.0** ✅ |
+| Puerta MCP | [`DavidLMS/learnmcp-xapi`](https://github.com/DavidLMS/learnmcp-xapi) | **MIT** ✅ |
+| Reenvío / middleware | `yetanalytics/xapipe` (LRSPipe) | ya en esta KB |
+
+**El wiring, en el orden que convierte la propuesta en medición.**
+
+1. **`datasim` genera tráfico xAPI sintético a escala** —*«benchmark and stress-test … with the Total Learning
+   Architecture»*— **contra el `lrsql` del cliente, en su infraestructura**, antes de comprometer cualquier cifra.
+   🟢 **Mismo mantenedor que `lrsql`, así que es la combinación que el propio proyecto usa.**
+2. Se fija el techo de escritura **en la configuración** de `learnmcp-xapi` (`RATE_LIMIT_PER_MINUTE=30`,
+   `MAX_BODY_SIZE=16384`): **frena solo, no pide cooperación del cliente MCP y cuesta dos variables de entorno**
+   (tendencia **109**). 🔵 **Es el rail adecuado para esta capa porque acá el daño es acumulativo —inundar el LRS— y no
+   irreversible y discreto como borrar un curso.**
+3. `datasim` **valida además contra un xAPI Profile**, lo que cubre la capa de conformidad que **el pase 25 buscó sin
+   encontrar**.
+4. `xapipe` reenvía a la analítica del cliente si ya tiene una.
+
+🟢 **Y la contribución *upstream*, con el sitio exacto medido en este pase.** El **gap 64** quedó cerrado en negativo:
+**ninguno de los dos LRS publica puerta MCP propia** (Docker Hub de `yetanalytics`: **6 imágenes, ninguna MCP**;
+`lrsql`: **0 menciones** en `deps.edn` y `README`; `ralph-malph` 5.0.1: **0 menciones** y **14 extras, ninguno MCP**).
+🔵 **Pero el instrumento regaló el encaje:** los **14 extras** de Ralph —`backend-clickhouse`, `-es`, `-ldp`, `-lrs`,
+`-mongo`, `-s3`, `-swift`, `-ws`, `backends`, `cli`, `lrs`, `dev`, `ci`, `full`— son **una convención de plugins ya
+empaquetada**. Un **`ralph[mcp]`** con tres tools equivalentes a las de `learnmcp-xapi` (**1 escribe, 2 leen**) **entra
+por la puerta del proyecto y no requiere fork.**
+
+**Por qué EMEA para la mitad *upstream*.** Ralph es **MIT** y su archivo de licencia nombra a **France Université
+Numérique**, una institución pública francesa — **el mejor argumento de soberanía europea que tiene esta base**, y el
+que el pase 33 corrigió para que no se apoyara en `learnmcp-xapi` (cuyo `LICENSE` dice `Copyright (c) 2025 David
+Romero`, una persona). Una contribución aceptada posiciona a Globant como **el integrador que escribió la puerta de
+agente del LRS público europeo**.
+
+**Estimación.** 2–3 semanas para el ensayo de carga con `datasim` sobre un `lrsql` desplegado (es el entregable que
+contesta la objeción de APAC con un número). 4–6 semanas adicionales para el `ralph[mcp]` *upstream*.
+
+⚠️ **Las tres cosas que hay que verificar antes de cotizar, y están escritas como acciones del pase 35.**
+**(a)** `datasim` entró con **licencia verificada pero sin superficie medida**: no se sabe aún si tiene CLI, servidor o
+las dos, ni si apunta a un LRS externo o sólo escribe archivos — **y de eso depende que el punto 1 sea horas o
+semanas**. **(b)** **Ralph está vivo en `main` y parado en PyPI desde 2024-07-11**, así que la contribución se hace
+**contra `main`** y cualquier dependencia **se instala desde git, no desde el registro**. **(c)** El `2.0.0` de
+`learnmcp-xapi` **no se puede fechar por ningún canal alcanzable** (**8 rutas de versión, las 8 en 404**: el proyecto
+no se versiona en su árbol), así que **se pinnea por commit, no por versión.**
+
+---

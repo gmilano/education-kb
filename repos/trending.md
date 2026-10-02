@@ -8,7 +8,7 @@ updated: 2026-10-02
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 
-## 2026-10-02 (pase 34) — el registro deja de responder «qué hay» y empieza a responder **«qué se usa»**: con descargas por mes, la capa de evaluación y la de telemetría **cambian de orden**, y la pieza xAPI más desplegada de esta KB resulta ser **Apache-2.0 y congelada desde 2019**
+## 2026-10-02 (pase 35) — el registro deja de responder «qué hay» y empieza a responder **«qué se usa»**: con descargas por mes, la capa de evaluación y la de telemetría **cambian de orden**, y la pieza xAPI más desplegada de esta KB resulta ser **Apache-2.0 y congelada desde 2019**
 
 **Lo medido:** consultas a **npm** (`registry.npmjs.org/-/v1/search` y documentos de paquete), **PyPI** (`/pypi/<pkg>/json`)
 y **Packagist** (`packagist.org/packages/<vendor>/<pkg>.json`) por **nombre de proyecto implementador** —la consigna del
@@ -116,6 +116,101 @@ hereda la puerta.**
   `coursecode` (15) y de `canvas-lms-mcp` (165) son **de código fuente y de documentación**, no de `tools/list`. La
   distinción del pase 30 —declaradas contra servidas— **se mantiene abierta** para las dos piezas.
 
+## 2026-10-02 (pase 34) — **dos altas verificadas, una no-alta declarada y un falso positivo desarmado**: la familia `yetanalytics` rinde por el nombre de la organización —el instrumento del pase 33— y aparece la capa de **conformidad y simulación xAPI** que treinta y tres pases no buscaron
+
+🔵 **El eje de búsqueda de este pase no fue un término: fue una organización.** El pase 33 cerró el gap 51 concluyendo
+que *«el instrumento que funciona es el nombre de la organización»* (tendencia **100**). Se aplicó literalmente: se
+listó **el catálogo Docker Hub entero de `yetanalytics`** —el mantenedor de `lrsql`, que esta KB ya tenía— y se cruzó
+cada imagen contra los ocho archivos. **De seis imágenes, dos no estaban en esta base.**
+
+| Imagen | ¿Estaba en la KB? | Último movimiento (Docker Hub) |
+|---|---|---|
+| `lrsql` | ✅ sí, desde el pase 6 | **2026-10-01** (confirma la fecha del pase 33) |
+| `xapipe` / LRSPipe | ✅ sí | 2026-08-18 |
+| **`datasim`** | 🔴 **NO** | **2025-12-02** |
+| **`persephone`** | 🔴 **NO** | 🔴 **2023-10-10** |
+| `fuseki` | no (fork de infraestructura, fuera de alcance) | 2022-04-11 |
+| `hello-marathon` | no (demo de 2017) | 2017-05-16 |
+
+### ✅ Alta 1 — `yetanalytics/datasim`: **Apache-2.0**, y es la pieza que faltaba para *probar* un LRS antes de cotizarlo
+
+| | |
+|---|---|
+| **Repo** | [`yetanalytics/datasim`](https://github.com/yetanalytics/datasim) |
+| **Licencia** | **Apache-2.0** ✅ — leída del `LICENSE` sobre `master` (*«Apache License»*) |
+| **Verificación de primera mano** | `LICENSE` **200**, `README.md` **200**, `deps.edn` **200**, imagen Docker con tag publicado |
+| **Qué es** | *Data and Training Analytics Simulated Input Modeler* — **genera datos xAPI simulados a escala** |
+| **Para qué sirve, textual del README** | *«benchmark and stress-test the design of applications with the Total Learning Architecture»* y *«evaluate the implementation of xAPI data design using the xAPI Profile specification»*; apunta además a **pruebas de conformidad** |
+| **Origen** | financiado inicialmente por la **Advanced Distributed Learning Initiative** (ADL, Departamento de Defensa de EE. UU.) |
+
+🟢 **Por qué importa y no es una curiosidad.** Esta KB recomienda `lrsql` o Ralph en **más de quince patrones**, y hasta
+este pase **no tenía con qué dimensionarlos**. `datasim` permite **cargar el LRS con tráfico sintético conforme a un
+xAPI Profile antes de comprometer una cifra en una propuesta** — y viene del mismo mantenedor que `lrsql`, así que la
+combinación es la que el propio proyecto usa. **Es la diferencia entre proponer una arquitectura y haberla probado.**
+Ver **P71**.
+
+🔵 **Y resuelve, de paso, una carencia de método de esta base:** los xAPI Profiles aparecieron en la consigna del pase
+24 y se buscaron en el **25** sin encontrar herramienta; `datasim` **valida contra Profile** y estaba a un listado de
+organización de distancia.
+
+### ✅ Alta 2 — `1EdTech/digital-credentials-public-validator`: **Apache-2.0**, el validador **del propio consorcio**
+
+| | |
+|---|---|
+| **Repo** | [`1EdTech/digital-credentials-public-validator`](https://github.com/1EdTech/digital-credentials-public-validator) |
+| **Licencia** | **Apache-2.0** ✅ — `LICENSE` **200** en `main` **y** en `master`, texto *«Apache License Version 2.0»* |
+| **Qué es** | validador público de **Open Badges** y **Comprehensive Learner Record (CLR)**, con **interfaz web, HTTP y API** |
+
+🟢 **Cierra media carencia que esta KB tenía escrita.** Este archivo registraba que *«las implementaciones de referencia
+de estos estándares ya no están»* (`badgr-server` **404**, `caliper-php` en privado). **El validador no sólo está: es
+Apache-2.0 y lo publica 1EdTech, el consorcio que escribe el estándar.** Para un entregable de credenciales eso es lo
+que convierte *«cumplimos Open Badges»* en una afirmación verificable por un tercero neutral. Ver **P74**.
+
+### 🔴 No-alta declarada — `yetanalytics/persephone`: **no se agrega, y se dice por qué**
+
+Sería tentador sumarla: Docker Hub la describe como *«a Clojure CLI and server app for validating xAPI Statements
+against Profiles»*, que es **exactamente** la capa que este pase vino a buscar. **No entra, por dos razones medidas:**
+
+| Chequeo | Resultado |
+|---|---|
+| Licencia | 🔴 **no verificable** — se probaron **10 rutas**: `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `license` y `COPYING`, cada una en `main` **y** `master`. **Las diez, 404** |
+| `project.clj` / `deps.edn` | 🔴 **404 las dos** en `master` |
+| `README.md` | 🔴 **404** en `main` y en `master` |
+| Docker Hub | **3 tags**, el último **2023-10-10** → **~3 años sin movimiento** |
+
+⚠️ **O sea: existe la imagen, pero el árbol no es alcanzable por ninguna ruta probada y la pieza está congelada hace
+tres años.** **Sin licencia leída no va a ninguna tabla de esta KB** — es la misma regla que el pase 31 aplicó a Caliper
+(*«no es que no haya código, es que es inusable»*). Se anota acá **para que un pase futuro no la descubra como novedad**
+y para dejar la pregunta precisa: su árbol puede estar bajo una rama con otro nombre, y eso **sólo se contesta con un
+listado de repositorio**, que es justo lo que `api.github.com` (**403**) no permite acá. **Gap 68.**
+
+### 🔴 El falso positivo del pase, y es el hallazgo transferible: `quizlar/mcp-server`
+
+Un servidor MCP **del dominio educativo**, **activo**, con **`LICENSE` MIT real** — y **sin una línea de código**. El
+repo contiene un `server.json` cuyo campo **`remotes`** apunta a `https://mcp.quizlar.app/mcp/` detrás de una API key
+`sk-qz-<32>`. **La MIT cubre el manifiesto; la implementación es un servicio alojado propietario.** Está desarrollado en
+`agents/trending.md` de este mismo pase (**colisión 9**, tendencias **103** y **104**); acá queda la consecuencia para
+este archivo: 🔵 **un barrido de repos que filtre por «MCP + dominio + licencia permisiva» lo promueve, y el control que
+lo descarta es leer `server.json` y buscar `remotes`.**
+
+### ⚠️ Lo que se buscó y **no** rindió, declarado en vez de omitido
+
+- **Puerta MCP propia de los dos LRS** (`gap 64`): 🔴 **no existe** — Docker Hub de `yetanalytics` (**6 imágenes, ninguna
+  MCP**), `deps.edn` y `README` de `lrsql` (**0 menciones**), `ralph-malph` 5.0.1 en PyPI (**14 extras, ninguno MCP**).
+  **Cerrado en negativo con tres instrumentos.**
+- **Puerta MCP de Caliper, CASE y CEASN:** 🔴 **ninguna**, reconfirmado por búsqueda abierta (segundo instrumento).
+- **`mcp.so`**, el registro de servidores MCP y **el instrumento natural para esta pregunta**: 🔴 **bloqueado por el
+  proxy de egreso**. Es una limitación que conviene tener presente: **este barrido no puede consultar el catálogo
+  específico de su propio objeto de estudio.**
+
+### 🟢 Nota de instrumento: `packagist.org/packages/<vendor>/<pkg>.json` da **licencia y fecha por release**
+
+Hasta este pase esta KB usaba `packagist.org/search.json`, que devuelve descripción y descargas. El endpoint por
+paquete devuelve **el array completo de versiones con `time` y `license` en cada una** — y así se midió que
+`qtism/qtism` es **GPL-2.0-only en las 293 releases**, no sólo en la última. 🔵 **Para una decisión de licencia eso
+importa: un proyecto puede haber relicenciado, y el único modo de saberlo es mirar la serie, no la punta.**
+
+---
 ## 2026-10-02 (pase 33) — **cero altas y tres fechas**: las piezas de la capa de telemetría ya estaban en esta KB desde el pase 6, y lo que faltaba era su **estado**; `hub.docker.com` entra como canal de verificación y fecha `lrsql` **en el día de ayer**
 
 🔵 **Este pase no agrega repos a la capa de telemetría, y eso es el hallazgo.** Fue a buscar la puerta MCP de xAPI que el
@@ -194,7 +289,7 @@ este entorno, así que las cifras son **lectura de artefacto**, no de protocolo 
 `@longsightgroup/qti3-cli@0.13.1` (**MIT**), `bin: { "qti3": "dist/index.js" }`, superficie declarada *«parsing,
 validating, scoring, inspecting, and checking QTI 3 items»*. Sus `dependencies` son **sólo sus cuatro hermanas**
 (`qti3-core`, `-a11y`, `-fixtures`, `-conformance`, las cuatro en `0.13.1`): **cero dependencias de terceros en toda la
-cadena**. Un wrapper MCP **agrega exactamente una** (`@modelcontextprotocol/sdk`). Ver **P72**.
+cadena**. Un wrapper MCP **agrega exactamente una** (`@modelcontextprotocol/sdk`). Ver **P74**.
 
 ### 🔴 Ruido medido, para que el próximo pase no lo vuelva a pagar
 

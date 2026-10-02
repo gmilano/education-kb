@@ -27,7 +27,7 @@ updated: 2026-10-02
 > **Pase 28 del 2026-10-01:** **se ejecuta la acción 1 del pase 27 y el gap 48 queda contestado leyendo el código fuente**, no la documentación (`docs.openedx.org` y `openedx.atlassian.net` están **los dos bloqueados**; `raw.githubusercontent.com` **sí responde**, y es un canal de verificación nuevo para esta KB). **La respuesta es doble:** la API REST de Open edX **alcanza y escribe** para matrícula, roles, bloques de curso y **notas —incluido el lote—**, pero el ***authoring* de Studio está declarado experimental por el propio proyecto**. Eso parte el gap 48 en dos y abre el **gap 50**. Ver la sección del pase 28, abajo.
 > **Pase 29 del 2026-10-01:** **se ejecutan las tres acciones del pase 28, y la primera refuta la conclusión del pase que la pidió.** 🔴 **El *authoring* de Open edX NO está bloqueado por estado experimental.** El aviso que el pase 28 citó vive en `v1/urls.py`, **está fechado «(Nov. 23)» y encabeza una sección sin rutas**; `v0/views/xblock.py` dice **lo contrario** (*«superseded by `XblockViewSet`… use `/api/contentstore/v1/xblock/` going forward»*) y **`v1/urls.py` registra ese `XblockViewSet` con CRUD completo** bajo los ADRs de **FC-0118** —incluido un **`?view=minimal`** (ADR 0036) que recorta el árbol del curso, que es justo lo que necesita un agente. **Deprecación circular: gana la señal vigente.** Y aparece lo que el pase 28 no vio: **cinco versiones de API montadas a la vez** (`v0`–`v4`), con las notas en **tres** de ellas. ✅ **Alta nueva de base: [`1EdTech/OpenCASE`](https://github.com/1EdTech/OpenCASE) (**Apache-2.0**, 9 ★, 180 commits)** — la implementación de referencia de **CASE 1.0 y 1.1** del propio organismo, con **CASE Provider API oficial**, versionado inmutable en archivos, Keycloak + API keys, RBAC de 4 niveles y 🔵 **endpoint propio de descubrimiento OpenAPI 3**. **Cierra el gap 51** y abre el **gap 52**. Ver la sección del pase 29, abajo.
 
-> **Pase 34 del 2026-10-02:** **el pase que cambia el instrumento de medición de adopción de esta base.** Treinta y dos
+> **Pase 35 del 2026-10-02:** **el pase que cambia el instrumento de medición de adopción de esta base.** Treinta y dos
 > pases midieron con **estrellas**; el registro publica **descargas por mes**, y las series se contradicen en los dos
 > sentidos: `learninglocker` **583 ★ / 0 descargas-mes** (queda cerrado, no se propone) contra `TinCanPHP` **88 ★ /
 > 6.178 descargas-mes** y `oat-sa/extension-tao-testqti` **8 ★ / 844 versiones / release del 2026-09-30**. 🔴 **Dos capas
@@ -37,11 +37,54 @@ updated: 2026-10-02
 > **Apache-2.0**— que es la mitad que esta base nunca catalogó, aunque las cuatro piezas estén **congeladas**. 🟢 **Altas:**
 > la pila `qti3` enumerada con **`qti3-a11y`** (matriz de prueba de accesibilidad + guiones VoiceOver/NVDA/JAWS) y
 > **`qti3-pnp`** (resolutor de *Personal Needs and Preferences*, cero dependencias), **`gafapa/moodle-core-cli`** (MIT,
-> sin MCP, el más barato de envolver) e **`ibge-br-mcp`** (MIT, la plantilla del **gap 67**). 🔴 **Gap 66:** la puerta
+> sin MCP, el más barato de envolver) e **`ibge-br-mcp`** (MIT, la plantilla del **gap 69**). 🔴 **Gap 68:** la puerta
 > oficial de Open edX publicó **12 releases en dos días y nada en 70**. Ver la sección del pase 33, abajo.
 
 > **Pase 30 del 2026-10-02:** **el gap 52 cierra leyendo cinco archivos del árbol `main` de OpenCASE, y la contradicción entre sus dos documentos tiene una regla que ninguno enuncia:** el segmento `ims/case/v1pX` aparece **sólo** cuando la operación actúa sobre una entidad del estándar CASE, nunca en las rutas de plataforma. **72 rutas contadas** (24 de lectura —el juego completo en **v1p0 y v1p1**—, 44 de management, **2 de descubrimiento** y 2 de servicio). 🔵 **Tres hallazgos abaratan P60:** hay **dos** endpoints OpenAPI (uno por versión) y **sin auth**; la lectura usa **auth opcional** (marcos públicos sin credenciales ni tenant); y aparece **CGE — CASE Global Exchange**, **11 rutas de federación** que permiten **suscribirse** a marcos del registro global en vez de cargarlos. 🔴 **Pero la escritura no es parte del estándar y lo declara el código**, así que sólo la mitad de lectura es portable. 🔴 **Open edX cambia de estado: ya tiene puerta de agente, y es AGPL-3.0 y corre EN PROCESO** (`openedx-mcp` + `tutor-contrib-openedxmcp`, 2026-07-25) — con lo que **el riesgo de adaptador de versiones del pase 29 no se paga por ese camino, y la autoría queda confirmada por implementación**. ✅ **Alta nueva:** [`instructure/qti`](https://github.com/instructure/qti) (**MIT**, 174 commits), que cubre **QTI 1.2** —el acervo legado del que parte **P48**— y que `examplary/qti` no cubría. ✅ **Y se cierran dos nombres: `.LRN` (vivo pero GPL-2.0 y en CVS) y `CK-ERP` (muerto desde 2012).** Ver la sección del pase 30, abajo.
 
+> **Pase 34 del 2026-10-02:** entra la **capa de conformidad y simulación xAPI** (sección nueva, abajo) con dos piezas
+> **Apache-2.0** verificadas de primera mano: **`yetanalytics/datasim`** —genera tráfico xAPI a escala y valida contra
+> **xAPI Profile**, del **mismo mantenedor que `lrsql`**— y el **validador oficial de 1EdTech** para Open Badges y CLR.
+> 🔴 **Y una no-alta declarada: `yetanalytics/persephone` queda fuera** — 10 rutas de licencia, las 10 **404**, y Docker
+> parado en **2023-10-10** (**gap 70**). 🔵 **Las dos altas aparecieron por el nombre de la organización, no por término.**
+
+## 🧪 Capa de conformidad y simulación xAPI, y el validador oficial de credenciales — agregada en el pase 34 del 2026-10-02
+
+**Treinta y tres pases recomendaron `lrsql` o Ralph sin tener con qué dimensionarlos.** Esta capa cierra eso. **Las dos
+piezas aparecieron por el mismo instrumento —el nombre de la organización (tendencia 100)—, no por búsqueda de término.**
+
+| Repo | Licencia | Verificación de primera mano | Qué aporta |
+|---|---|---|---|
+| [`yetanalytics/datasim`](https://github.com/yetanalytics/datasim) | **Apache-2.0** ✅ | `LICENSE` **200** (`master`), `README.md` **200**, `deps.edn` **200**, imagen Docker **2025-12-02** | **Genera datos xAPI simulados a escala.** *«benchmark and stress-test … with the Total Learning Architecture»* y *«evaluate the implementation of xAPI data design using the xAPI Profile specification»*. **Mismo mantenedor que `lrsql`.** Origen: **ADL Initiative** (DoD EE. UU.) |
+| [`1EdTech/digital-credentials-public-validator`](https://github.com/1EdTech/digital-credentials-public-validator) | **Apache-2.0** ✅ | `LICENSE` **200** en `main` **y** `master` | Validador **del consorcio que escribe el estándar**, para **Open Badges** y **CLR**, con web, HTTP y API |
+
+🟢 **Por qué `datasim` cambia una propuesta y no sólo un repo.** Permite **cargar el LRS con tráfico sintético conforme
+a un xAPI Profile antes de comprometer una cifra**. Es la diferencia entre proponer una arquitectura de telemetría y
+haberla probado — y como viene del mantenedor de `lrsql`, la combinación es la que el propio proyecto usa. Resuelve
+además una carencia que esta base arrastraba: **los xAPI Profiles entraron en la consigna del pase 24 y el pase 25 los
+buscó sin encontrar herramienta.**
+
+🟢 **Por qué el validador de 1EdTech cierra un expediente.** Este archivo registraba que *«las implementaciones de
+referencia de estos estándares ya no están»* (`badgr-server` **404**, `caliper-php` en privado). El validador **está, es
+Apache-2.0, y lo publica 1EdTech**: convierte *«cumplimos Open Badges»* en una afirmación **verificable por un tercero
+neutral**, que es lo que pide un área de compras. Ver **P74**.
+
+### ⚠️ La no-alta de esta capa, declarada: `yetanalytics/persephone`
+
+Docker Hub la describe como *«a Clojure CLI and server app for validating xAPI Statements against Profiles»* —
+**exactamente** la capa de este apartado. **No entra.** Se probaron **10 rutas de licencia** (`LICENSE`, `LICENSE.md`,
+`LICENSE.txt`, `license`, `COPYING`, cada una en `main` y `master`): **las diez 404**; `project.clj` y `deps.edn`
+**404**; `README.md` **404** en las dos ramas; **3 tags en Docker Hub, el último de 2023-10-10 (~3 años)**. 🔴 **Sin
+licencia leída no entra a ninguna tabla de esta KB**, que es la regla que el pase 31 aplicó a Caliper. **Gap 68.**
+
+### 🔵 Y la contribución *upstream* que esta capa deja identificada, con el sitio exacto
+
+`ralph-malph` 5.0.1 declara **14 extras** —`backend-clickhouse`, `-es`, `-ldp`, `-lrs`, `-mongo`, `-s3`, `-swift`,
+`-ws`, `backends`, `cli`, `lrs`, `dev`, `ci`, `full`— y **ninguno es MCP** (medido en `provides_extra` de PyPI, junto
+con `requires_dist` sin `mcp` y **0 menciones** en la descripción). **Eso es una superficie de plugins ya empaquetada:**
+un **`ralph[mcp]`** encaja en la convención del proyecto y **no requiere fork**. Ralph es **MIT** y su `LICENSE` nombra
+a **France Université Numérique**, así que es también el camino con mejor argumento institucional para EMEA. Ver **P71**
+y **gap 64 (cerrado en negativo)**.
 ## 🧭 La adopción medida en descargas, no en estrellas — y tres capas de esta base cambian de orden (pase 33 del 2026-10-02)
 
 **Treinta y dos pases midieron adopción con estrellas de GitHub. El registro de paquetes publica descargas por mes, y
@@ -119,7 +162,7 @@ política institucional, persistencia, *launch* LTI y el servicio AfA PNP **son 
 | `write-fixtures <dir>` | **escritura** | Escribe los *fixtures* canónicos |
 
 🔵 **El mapeo a MCP es 1:1 y no necesita capa de parseo, porque cada comando ya devuelve JSON.** **Doce leen, dos
-escriben a disco.** Eso es lo que sostiene el **gap 68** y lo que vuelve a **P67** cotizable.
+escriben a disco.** Eso es lo que sostiene el **gap 70** y lo que vuelve a **P67** cotizable.
 
 ⚠️ **La advertencia de cotización que el gap 60 no tenía:** `prepare-delivery` distingue **modo estático** (default, y
 **rechaza** un archivo de estado) de **`server-materialized-adaptive`**, que **exige** un objeto de estado con `outcomes`
@@ -151,7 +194,7 @@ resultados**.
 | **moodle-core-cli** | [gafapa/moodle-core-cli](https://github.com/gafapa/moodle-core-cli) | **MIT** ✅ | **11 versiones**, última 2026-09-24, **Moodle 4.5+** | ⚪ **Cero menciones de MCP, y por eso entra:** cliente Node.js limpio de *core web services*. **El candidato más barato a envolver** en la capa de entrada al LMS |
 | **ibge-br-mcp** | [SidneyBissoli/ibge-br-mcp](https://github.com/SidneyBissoli/ibge-br-mcp) | **MIT** ✅ | **24 versiones**, 2026-01-18 → 2026-09-27 | 🔵 **La plantilla del gap 67.** Datos públicos brasileños (geografía, **censo**, economía, salud) servidos por MCP **con procedencia**. **Educación no está** — ver **P69** |
 
-### 🔴 Gap 66 (nuevo) — la puerta oficial de Open edX no publicó nada en 70 días, y hay que cotizarla distinto
+### 🔴 Gap 68 (nuevo) — la puerta oficial de Open edX no publicó nada en 70 días, y hay que cotizarla distinto
 
 Leído del JSON de PyPI, y es la medición que los pases 30, 31 y 32 no hicieron:
 
@@ -450,7 +493,7 @@ Un LRS guarda *statements* con forma `actor – verbo – objeto` ("María inten
 
 **Cómo elegir, en una línea:** producción permisiva → **`lrsql`**; cliente sobre Open edX → **Ralph**; certificar conformidad con el estándar → **ADL_LRS**; el cliente ya tiene uno instalado → casi seguro es **Learning Locker**, y entonces hay que leer la GPL antes de tocarlo.
 
-#### 🟢 Estado de la capa, medido en el pase 34 del 2026-10-02 — lo que faltaba no era la licencia, era la fecha
+#### 🟢 Estado de la capa, medido en el pase 35 del 2026-10-02 — lo que faltaba no era la licencia, era la fecha
 
 Veintisiete pasadas registraron **licencia y rol** de estas cinco piezas y ninguna registró **cuándo se movieron por
 última vez**, que es el dato que decide si entran en una propuesta. Medido por canal, en este pase:
