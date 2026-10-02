@@ -8,6 +8,7 @@ updated: 2026-10-02
 
 > Key players, market map y oportunidades por región.
 > Investigado 2026-09-30; el pase 11, el 2026-10-01. Las estimaciones de tamaño de mercado varían mucho entre firmas: se listan todas con su fuente en vez de elegir una.
+> **Pase 41 del 2026-10-02:** barrido regional completo en las cuatro regiones. 🔵 **Las cuatro rindieron, pero lo que rindieron es encuadre, no cifra: el dato de mercado nuevo de este pase es CERO y se dice así en vez de rellenar.** Lo que cambia es que la capa de examen y monitoreo **pasa a tener ruta permisiva**, y eso reordena las cuatro regiones. 🔴 **APAC se queda con el reloj más apretado del mundo en esta capa: Vietnam nombra la *evaluación automatizada* y la *monitorización del comportamiento* en educación entre sus seis sectores de alto riesgo, con cumplimiento el 2027-03-01 — NUEVE meses antes del 2027-12-02 europeo.** ⚠️ **Y eso matiza lo que el pase 36 publicó** (*«ninguno de los instrumentos APAC es un régimen de alto riesgo EDUCATIVO»*): para *proctoring*, Vietnam lo es. 🟢 **EMEA deja de tener su opción muerta: `openfun/xblock-proctor-exam` (France Université Numérique) sigue parado hace 5,6 años, y lo reemplaza la familia Safe Exam Browser de ETH Zürich — MPL-2.0, copyleft DÉBIL, con `OPEN_OLAT` en su `enum LmsType` y residencia de datos por construcción.** 🟢 **North America: las dos anclas permisivas de estas capas son norteamericanas (UniTime es Apache-2.0 de la Apereo Foundation, origen Purdue; el directorio de *backends* de `edx-proctoring` está carved-out en Apache-2.0), y el diseño del patrón coincide literalmente con lo que Oklahoma y Maryland ya exigen —supervisión humana y prohibición de que la AI decida sobre el alumno—, así que el cumplimiento deja de ser una concesión y pasa a ser la arquitectura.** 🔵 **LATAM se lleva el cruce más accionable del pase: la dimensión que la región adopta MENOS es ADMINISTRACIÓN (34,1 %, pase 40) y es exactamente la capa que este pase encontró gratis, viva y sin ninguna competencia agéntica — la brecha de adopción y la de oferta son la misma, y el software no es el obstáculo.** 🔴 **Y una ausencia MEDIDA que se escribe explícitamente: no hay ninguna pieza open source de origen LATAM en las dos capas, ni del lado servidor ni del lado cliente** (las anclas son North America, EMEA y —en la mitad navegador— APAC con `exam-guard`, India). **Se probaron los 8 nombres de npm y el índice completo de PyPI: 404 en 8 de 8 y 0 nombres.** 🔵 **En LATAM, además, la palanca NO es regulatoria —ningún instrumento de la región nombra monitoreo de exámenes como alto riesgo— así que el expediente se vende por confianza institucional, y para eso el número es el 65 % de alumnos que teme que la AI vuelva el aprendizaje superficial.** Ver `intel/trends.md`, tendencias **149**–**156**, y los patrones **P88**–**P90**.
 > **Pase 36 del 2026-10-02:** barrido regional completo en las cuatro regiones, **y las cuatro rindieron dato nuevo.** 🔴 **El hallazgo que manda es de calendario, y la primera lectura de este pase fue EQUIVOCADA y quedó corregida antes de publicarse — por eso se escribe completo: las fechas revisadas del AI Act son DOS** — **2027-12-02 (Anexo III, *autónomo*)** y **2028-08-02 (Anexo I, embebido en producto regulado)** — **pero EDUCACIÓN ESTÁ EN EL ANEXO III**, junto con contratación y *credit scoring*, mientras el **Anexo I son dispositivos médicos, maquinaria y vehículos**. ⚠️ **«Embebido en un LMS» NO es Anexo I: un LMS no es producto regulado**, así que **el plazo de educación es el 2027-12-02 y la segunda fecha no da prórroga a este sector.** 🔵 **El error que esto evita tiene el signo peligroso —creerse ocho meses que no existen— y la pregunta correcta de *discovery* no es «¿autónomo o embebido?» sino «¿el producto que lo contiene tiene conformidad propia del Anexo I?», que en educación es casi siempre NO.** ⚠️ Dos fuentes concordantes, secundarias comerciales como todo `intel/` (**gap 65**). **North America:** el volumen legislativo tiene número —**134 proyectos en 31 estados, sesión 2026**—, aparece el primer instrumento **federal** (**K-12 AI Literacy and Readiness Act of 2026**, aprobado en comisión: **financiamiento, no conformidad**) y 🟢 **el dato con fecha más cercana es contractual: el *National AI Safety & Privacy Standard* de Microsoft + AFT —sin dato de alumno para entrenar, sin seguimiento, con supervisión humana— aplica a todos los contratos escolares de Microsoft desde el 1.º de noviembre**, lo que convierte la capa de telemetría de esta KB en cláusula contractual y no sólo en cumplimiento legal. **APAC:** primera cifra de intención de gasto (**96 % aumenta inversión, +15 % promedio en 2026; ~66 % pilotea o adopta**) y el mapa regulatorio se completa con cuatro instrumentos vigentes (**Corea** enero 2026 **con alcance extraterritorial**, **Vietnam** marzo 2026, **Taiwán** 2026-01-14 con **20 artículos**, **China** etiquetado sintético desde 2025-09-01) — 🔴 **y la lectura es la ausencia: ninguno es un régimen de alto riesgo EDUCATIVO**, así que no se debe escribir «APAC regula la AI en educación». **LATAM:** 🟢 **la región deja de depender de evidencia bloqueada** — el ***AI in Higher Education LATAM Survey 2026*** (Digital Education Council con el **Tec de Monterrey**, AIGEN y RIE360) es la contraparte **accesible** del *working paper* de IESALC: **92 % de alumnos y 79 % de docentes usando AI** (✅ el 79 % **confirma** por segundo instrumento la cifra que esta KB ya tenía), **94 % de docentes espera seguir usándola** y **sin brecha por años de experiencia**; 🔴 **y entra el dato que esta base no tenía en ninguna región: 65 % de los alumnos teme que la AI vuelva el aprendizaje superficial** — el complemento exacto de la adopción «ancha y superficial» del pase 33, y el argumento que hace que **P67** (evidencia auditable) valga más en LATAM que en ninguna otra región. 🔴 **Y una corrección de alcance medida en este pase: INEP no publica API** — Censo Escolar es descarga masiva de CSV/ZIP (**10-20 GB descomprimidos**) y la única API de terceros es **GPL-2.0, sólo IDEB y con el dominio ya sin resolver**: la oportunidad brasileña es **pipeline de ingesta, no servidor fachada** (**gap 69**, **P77**).
 > **Pase 34 del 2026-10-02:** barrido regional completo en las cuatro regiones, **y las cuatro rindieron dato nuevo** — pero el hallazgo que manda es **de método y obliga a releer este archivo entero.** 🔴 **Las fuentes primarias multilaterales son inalcanzables por clase, no por caso: 0 de 11 dominios institucionales responden** (`coe.int`, `unu.edu`, `publications.iadb.org`, `www.unesco.org`, `unesdoc.unesco.org`, `iesalc.unesco.org`, `www.oecd.org`, `ec.europa.eu`, `www.worldbank.org`, más `eur-lex.europa.eu` y `data.europa.eu` del pase 33) **contra 5 de 5 registros comerciales y de código.** **Cada cifra de mercado y cada fecha regulatoria de este archivo se apoya en fuentes secundarias comerciales por construcción del entorno** — se intentaron **once** primarias y ninguna es alcanzable. Eso **reclasifica el gap 56 de «acción pendiente» a «límite de clase»**: probar un dominio europeo más es previsiblemente inútil, y **la petición correcta es organizativa — una lectura del texto consolidado hecha fuera de esta red** (tendencia **106**, **gap 65**). **North America:** cifra regional propia nueva — **US$ 951 M (2024) → US$ 2.303,2 M (2029), CAGR 15,9 %**, con **36 % de la adopción global**, y 🔴 **el encuadre regulatorio que conviene decir primero: en educación no hay equivalente a la FDA**, las decisiones las toma cada escuela, distrito o universidad, y lo que hay es **colcha de retazos estatal** (Colorado y Texas suman requisitos). **EMEA:** el **Consejo de Europa convoca su 2.ª conferencia de trabajo sobre las dimensiones regulatorias de la AI en educación en octubre de 2026** —este mes— pero ⚠️ **`coe.int` está bloqueado, así que no se cita como primaria**; **el Reino Unido comprometió £200 M+** en su *AI Adoption Summit* con **Cisco, IBM, BT y Rolls-Royce** como socios de ejecución; y 🔴 **38 % de las organizaciones EMEA todavía no empezó a pilotear**. **APAC:** **48 % de los líderes de gobernanza pone la adopción de AI como prioridad estratégica 2026** y **57 % de las organizaciones asiáticas ya la tiene en producción en algún área**, pero 🔴 **49 % declara infraestructura insuficiente para datos en tiempo real** y la región se mueve a ***sovereign-by-design***: la soberanía define la infraestructura de **~la mitad** de las empresas. **LATAM:** aparece la mejor evidencia metodológica que la región podía tener —el *working paper* de **UNESCO IESALC** sobre **200 instituciones de educación superior en 19 países**, en cinco dimensiones (docencia, investigación, extensión, administración y **gobernanza**)— ⚠️ **y está bloqueada (`unu.edu`), así que entra como secundaria**; **99 % de las startups LATAM usa AI internamente y 85 % la integra de forma nativa en su producto**, con **Ednova (Chile)** nombrada en edtech. 🔵 **Y una discrepancia de fuente que se registra en vez de resolverse por promedio: esta corrida devuelve US$ 7,52 Bn (2025) → US$ 10,6 Bn (2026), CAGR 40,9 %, y →US$ 79,6 Bn a 2034 (31,35 % en 2026-2034)**, contra el **US$ 42,48 Bn a 2030** que esta KB ya tenía. **Las dos se listan con su fuente.**
 > **Pase 33 del 2026-10-02:** barrido regional completo en las cuatro regiones, **y las cuatro rindieron dato nuevo**. **North America:** concentró el **38 % del mercado en 2025**, y aparece el primer documento de requisitos **del lado del comprador** — **alumnos de los 50 estados publicaron un marco nacional de AI en K-12** (AASA, **2026-08-03**), más despliegues concretos (**Nueva York**: *Traffic Light Framework* desde marzo de 2026, *Playbook* en junio; **Maryland**: piloto con **Khanmigo** sobre **~4.350 alumnos**). 🟢 **Y la capa de telemetría de esta KB resulta ser la respuesta literal a dos mandatos:** `ACTOR_UUID` sin dato personal contra **California AB 1159**, y el rail de escritura con confirmación contra la **supervisión humana** de Oklahoma y Maryland. **EMEA:** sin novedad de calendario —**Anexo III → 2027-12-02**, **art. 50 vigente desde 2026-08-02**— pero ⚠️ **se corrige el argumento de soberanía de esta base**: el `LICENSE` de **Ralph** nombra a **France Université Numérique** (institución pública) y el de `learnmcp-xapi` dice **`Copyright (c) 2025 David Romero`** (una persona), así que **la soberanía se apoya en Ralph y la privacidad por diseño en `learnmcp-xapi`** — son dos argumentos y conviene no mezclarlos. 🔴 **Gap 56: `eur-lex.europa.eu` y `data.europa.eu` están BLOQUEADOS por el proxy** — van **siete fuentes secundarias y cero primarias**, y la fecha **no se cita como primaria**. **APAC:** **~530 M de alumnos de K-12**, **88 % de empleados usando AI en el trabajo (2025) contra 22 % en 2023**, **Corea vigente desde 2026-01-22**, **Vietnam con monitoreo conductual y evaluación automatizada en alto riesgo**, y la previsión de que **2027–2030 traiga leyes basadas en riesgo modeladas sobre el EU AI Act** — o sea, **el expediente de EMEA se reutiliza acá**. **LATAM:** la brecha más vendible de las cuatro regiones — **72 % de docentes con visión positiva (vs 57 % global) y 79 % usándola, pero 88 % con compromiso «mínimo» a «moderado»**: la adopción es **ancha y superficial**. Entra institución nueva (**Observatorio de AI en la Educación para América Latina y el Caribe de UNESCO, 2026-04-14**) e hito de gobernanza (**Uruguay, primer país de LATAM en firmar el Convenio Marco del Consejo de Europa sobre AI**, 2025). 🟢 **La receta regional queda armada**: Open edX + **Ralph** (convierte sus *tracking logs* a xAPI de fábrica) + `learnmcp-xapi` + `lrsql` — cuatro piezas permisivas que convierten uso superficial en evidencia.
@@ -1818,6 +1819,37 @@ distrital**, en North America **no se vende adopción ni piloto — se vende exp
 **AB 1159 (no entrenar con datos de alumnos) + prohibición de decisión automatizada de alto impacto**: las dos empujan a
 **inferencia autoalojada con registro de decisión y humano en el lazo**, que es exactamente el *stack* soberano que esta
 KB ya tiene mapeado para EMEA. **El mismo entregable técnico sirve a las dos regiones por razones legales distintas.**
+#### Agregado en el pase 41 del 2026-10-02 — la capa de examen tiene por fin ruta permisiva, y en North America coincide EXACTAMENTE con lo que la ley estatal ya exige
+
+🟢 **El hallazgo técnico del pase, leído desde North America: las dos anclas de las capas que esta base medía vacías son
+norteamericanas y permisivas.** `UniTime/unitime` es **Apache-2.0 de la Apereo Foundation** (origen **Purdue
+University**), con `HEAD` del **2026-10-01**; y `openedx/edx-proctoring` —el subsistema oficial de Open edX— tiene su
+directorio de *backends* **carved-out en Apache-2.0** dentro de un paquete AGPL.
+
+🟢 **Y el encaje regulatorio es el más limpio que esta base encontró en la región, porque no hay que adaptar el diseño:
+la ley estatal ya pide lo que el patrón hace.**
+
+| Requisito estatal vigente | Lo que el patrón de esta KB hace | Fuente |
+|---|---|---|
+| **Oklahoma y Maryland**: supervisión humana obligatoria y **prohibición de que la AI decida cuestiones de alto impacto sobre el alumno** | 🟢 **P89**: el agente **resume y prioriza incidentes** de `/monitoring` para el supervisor; 🔴 **`/disable-connection` queda FUERA de las tools** — la AI no expulsa a nadie del examen | canal del buscador, 2026 |
+| **California AB 1159**: prohíbe usar datos de alumnos para **entrenar** modelos | el patrón **no entrena**: compone piezas existentes y lee por API con token | ídem |
+| **Idaho SB 1227**: protecciones de privacidad para herramientas de AI en escuelas | 🟢 **las 2 rutas de supresión de `edx-proctoring` ya existen** (`v1/retire_user/<id>`, `v1/retire_backend_user/<id>`) | medición de este pase |
+| **4 estados (ID, MD, OK, VA)** con leyes 2026 que exigen **guía estatal + política distrital obligatoria** | el expediente es el entregable, no el anexo | canal del buscador |
+
+🔵 **La frase de *discovery* que esto habilita, y es específica de la región:** *«en Oklahoma y Maryland la ley ya les
+prohíbe que la AI decida sobre el alumno; el diseño que proponemos no es una concesión al cumplimiento, es la arquitectura
+—el agente prepara la decisión y la toma una persona— y el borrado de datos ya viene implementado en la pieza oficial de
+Open edX»*.
+
+⚠️ **Volumen legislativo que confirma el encuadre, sin cifra nueva:** **134 proyectos en 31 estados en la sesión 2026**, y
+la ausencia de un regulador sectorial federal — **en educación no hay equivalente a la FDA**, decide cada distrito o
+universidad. **86 % de las organizaciones educativas ya adoptó AI generativa**, y **Gemini for Education está desplegado
+en más de 1.000 universidades** de EE. UU.: 🔵 **el incumbente ya está adentro, así que la venta no es «traer AI» sino
+«la capa que el incumbente no cubre»** — y *proctoring* y horarios son exactamente eso.
+
+🟢 **El activo de adopción concreto de la región: UniTime es Apereo**, el mismo consorcio de Sakai y Opencast que esta KB
+ya lista. **Donde hay instalación Apereo hay cliente para P88 sin migración.**
+
 ### EMEA
 
 **Pase 40 (2026-10-02) — la brecha de adopción INTRA-UE tiene número y es de 8x, las barreras del no-adoptante están cuantificadas, y la región aporta dos piezas: una viva con reserva de licencia y una muerta que alguien va a encontrar**
@@ -2654,6 +2686,50 @@ abrir el DOUE.** Queda como acción para el pase siguiente.
   pre-cumplimiento**, no en *enforcement*. Y los distritos con exigencia de **residencia de datos autoalojan modelos de
   pesos abiertos** (Llama 3, Mistral) en vez de consumir API. Eso convierte el *stack* soberano —Ollama/vLLM + LMS open
   source— en **requisito de licitación, no en preferencia de arquitectura**.
+#### Agregado en el pase 41 del 2026-10-02 — la opción EMEA de la capa de examen dejó de estar muerta, y la nueva es de ETH Zürich
+
+🔴 **Hasta este pase, la única pieza EMEA que esta base tenía en la capa de *proctoring* estaba muerta:**
+`openfun/xblock-proctor-exam` (**AGPL-3.0**, de **France Université Numérique**) con último commit el **2021-02-11** —
+**5,6 años**. Se registraba con la nota *«no proponer»*.
+
+🟢 **Este pase la reemplaza, y con la mejor pieza de la capa en toda la KB:** la familia **Safe Exam Browser**, de
+**ETH Zürich** (paquete `ch.ethz.seb`), **MPL-2.0**:
+
+| Pieza | Licencia | Estado medido |
+|---|---|---|
+| `SafeExamBrowser/seb-server` | ⚠️ **MPL-2.0** | **36 controladores REST / 41 endpoints**; `dev-3.0` commiteó el **2026-10-01**; 108 tags |
+| `SafeExamBrowser/seb-win-refactoring` | ⚠️ **MPL-2.0** | `HEAD` **2026-09-25**; 20 tags |
+
+🟢 **Y es nativamente EMEA en lo que importa para una propuesta: su `enum LmsType` incluye `OPEN_OLAT`** —el LMS de
+educación superior suizo/alemán— **además de `MOODLE`, `MOODLE_PLUGIN` y `OPEN_EDX`**. **El SEB está desplegado en
+universidades europeas con Moodle, ILIAS y OpenOLAT**: no es una pieza a introducir, es una que el cliente probablemente
+ya tiene instalada **sin la capa de servidor ni la puerta de agente**.
+
+🔵 **La ventaja de licencia, dicha para un comité europeo: MPL-2.0 es copyleft DÉBIL por archivo.** Se publica lo que se
+modifica de los archivos cubiertos; **lo que se construye al lado queda del integrador.** 🟢 **Es la única ruta de esta
+capa que no obliga a la conversación de AGPL** — y para un cliente europeo con política de *software* propia, esa
+diferencia decide la compra.
+
+**El calendario, sin cambios respecto del pase 40 pero ahora con la pieza que lo contesta:**
+
+| Obligación | Fecha | Estado |
+|---|---|---|
+| **Artículo 50** (transparencia: interacción con AI, marcado de contenido sintético, reconocimiento de emociones) | **2026-08-02** | 🟢 **EN VIGOR**, independiente del nivel de riesgo |
+| **Anexo III punto 3** (acceso, admisión, asignación, evaluación de resultados y 🔴 ***monitoreo durante exámenes***) | **2027-12-02** | ⚠️ aplazado por el **Reglamento (UE) 2026/1744** |
+| Anexo I (embebido en producto regulado) | 2028-08-02 | 🔴 **un LMS NO es Anexo I** |
+
+⚠️ **Confirmación de este pase, sin dato nuevo:** la aplicación del AI Act arranca con la **AI Office y las autoridades
+nacionales desde el 2026-08-02**, y las fechas revisadas siguen siendo **2027-12-02** (alto riesgo autónomo) y
+**2028-08-02** (embebido). 🔵 **El barrido regional de EMEA no devolvió cifra de mercado nueva: devolvió confirmación.**
+🔴 **Y sigue el límite de fuente del gap 65: `eur-lex.europa.eu` y los dominios de la Comisión siguen bloqueados en este
+entorno; el número de reglamento no se leyó de primera mano.**
+
+🟢 **El dato de arquitectura que vale para la región, y es el que un cliente alemán o nórdico va a preguntar primero:**
+`seb-server` resuelve **residencia de datos** por construcción — es un servidor que la institución despliega, con su
+propio `/oauth`, su `/institution` y su telemetría (`/seblog`) **dentro de su perímetro**. **No hay un tercero que reciba
+el video del examen.** Es el argumento exacto que la búsqueda regional devuelve como práctica de los distritos con
+requisitos estrictos de residencia (auto-hospedar modelos abiertos en lugar de llamar a una API).
+
 ### APAC
 
 **Pase 38 (2026-10-02) — la región rompe su racha: el barrido APAC aporta por fin un repo permisivo nuevo, y es el de mejor diseño de todo el pase. Más tres leyes marco en vigor este año**
@@ -3380,6 +3456,45 @@ monitoreo de conducta**— es exactamente lo que hace un tutor con *proctoring*.
 **trazabilidad a la fuente** de `lineage-skill`. **Y la ventaja de Singapur es reutilizable:** AI Verify es la única
 herramienta de evaluación con respaldo estatal de las cuatro regiones, así que **un expediente armado contra AI Verify
 sirve de borrador para el Anexo III europeo**, no sólo para APAC.
+#### Agregado en el pase 41 del 2026-10-02 — APAC tiene la fecha de cumplimiento MÁS CERCANA del mundo para la capa que este pase midió, y es NUEVE meses antes que la UE
+
+🔴 **Este es el dato con el que hay que abrir una conversación APAC de examen, y contradice la lectura que esta base
+publicó en el pase 36.** El pase 36 dejó escrito —correctamente para lo que medía— que *«ninguno de los instrumentos APAC
+es un régimen de alto riesgo EDUCATIVO»*. 🔴 **Para el caso de *proctoring* eso hay que matizarlo: Vietnam nombra la
+educación entre sus seis sectores de alto riesgo, y nombra específicamente la *evaluación automatizada* y la
+*monitorización del comportamiento*.**
+
+| Instrumento | Alcance en educación | Fecha de cumplimiento |
+|---|---|---|
+| 🔴 **Vietnam** — lista de 6 sectores de alto riesgo | 🔴 **educación: evaluación automatizada y monitorización del comportamiento** | 🔴 **2027-03-01** |
+| 🇪🇺 (comparación) AI Act, Anexo III punto 3 | *monitoreo durante exámenes* | **2027-12-02** |
+| **Taiwán** — *Basic Law on Artificial Intelligence* | marco general, **20 artículos** | 🟢 **en vigor desde 2026-01-14** |
+| **Corea del Sur** — MSIT | marco general | **2026 como período piloto**, con **un año de gracia** para sanciones |
+
+🔵 **O sea: el reloj más apretado del planeta para la capa de monitoreo de exámenes es vietnamita, y vence nueve meses
+antes que el europeo.** **Para un cliente con operación en los dos lados, la fecha que manda es marzo de 2027** — y eso
+cambia el orden del *roadmap*, no sólo su contenido.
+
+🟢 **Y la oferta de la región encaja: la pieza cliente de esta capa en esta KB es india.** `exam-guard` (**ISC**, 113
+versiones, *«AI proctoring tool»*) es de autor en zona `+05:30`; se suma a `mereos` y `@timadey/proctor` como la mitad
+navegador del patrón **P90**. ⚠️ **Instrumento de región débil y declarado: la zona horaria del commit.**
+
+**El contexto de demanda, confirmado sin cifra nueva:** **China, India y Japón** dominan el mercado de AI en educación;
+🟢 **India es el mercado APAC de crecimiento más rápido con CAGR 38,9 %**, apalancado en la **IndiaAI Mission** y
+~**2,6 millones de graduados STEM por año**. Los jugadores nombrados en la región son **Google, Microsoft, IBM, Pearson y
+Byju's**.
+
+🔵 **Y el dato estructural que importa para una propuesta de plataforma y no de producto: cada economía grande de APAC
+está construyendo modelo propio** — **Sarvam** (India), **ILMU** (Malasia), **Sahabat AI** (Indonesia), **SEA-Lion**
+(Singapur), **HyperCLOVA X Think** (Corea), **NTT Sarashina** (Japón) y **TAIDE** (Taiwán). 🟢 **Para esta KB eso
+refuerza el patrón de arquitectura que ya sostiene: la capa de orquestación tiene que ser agnóstica del modelo**, porque
+en APAC el modelo lo elige la política industrial del país, no el proveedor.
+
+🔴 **Lo que el barrido APAC NO devolvió, y conviene escribirlo:** ninguna pieza open source APAC de *timetabling* ni de
+integración de examen del lado servidor. **La mitad servidor de esta capa, en las dos rutas medidas, es
+norteamericana (Open edX) o europea (ETH Zürich).** **La oportunidad APAC es de adopción y localización, no de
+*upstream*.**
+
 ### LATAM
 
 **Pase 38 (2026-10-02) — 🔴 el barrido de REPOS de LATAM vuelve a dar vacío, y esta vez conviene escribir qué sí devolvió: instrumentos de política, no software. Más el dato de que la región entró al tablero institucional de AI educativa**
@@ -4351,6 +4466,54 @@ es un tutor que cita de dónde sacó cada cosa y se niega a contestar fuera de a
 economías grandes, el cliente LATAM típico **tiene el riesgo ya contraído y sin expediente**. Eso hace que el entregable
 de mayor valor inmediato no sea un tutor nuevo sino **el registro de lo que ya está pasando** — y es el mismo artefacto
 que North America exige por ley y que EMEA va a exigir en 2027-12-02.
+#### Agregado en el pase 41 del 2026-10-02 — la dimensión que LATAM adopta MENOS es exactamente la que este pase encontró gratis, viva y sin competencia
+
+🟢 **Este es el cruce más accionable que esta base produjo para la región, y sale de juntar un dato del pase 40 con un
+hallazgo del pase 41.**
+
+| Lo que el pase 40 midió | Lo que el pase 41 midió |
+|---|---|
+| 🔴 **En LATAM, la dimensión de AI menos adoptada es ADMINISTRACIÓN (34,1 %)** — por debajo de docencia, investigación, extensión y gobernanza | 🟢 **La capa administrativa de horarios y exámenes tiene una base Apache-2.0 viva (`UniTime`, `HEAD` del 2026-10-01, 202 tags) y CERO competencia agéntica** (404 en 8 de 8 nombres de npm; 0 en los 46,6 MB del índice de PyPI) |
+
+🔵 **La brecha de adopción y la brecha de oferta son la misma brecha, y ahora se sabe que el software no es el
+obstáculo.** **No falta plataforma: falta la puerta de agente, y es Apache-2.0.** **Para una propuesta LATAM eso convierte
+P88 en la receta de menor costo de entrada de todo este archivo** — la institución ya tiene el problema (horarios, aulas,
+exámenes), la plataforma es gratuita y permisiva, y no hay producto comercial compitiendo en esa capa.
+
+🟢 **Y el argumento de confianza, que en LATAM vale más que en ninguna otra región, tiene número propio:** el
+***AI in Higher Education LATAM Survey 2026*** (Digital Education Council con el **Instituto para el Futuro de la
+Educación del Tec de Monterrey**, **AIGEN** y **RIE360**; **más de 30.000 respuestas en 29 instituciones**) mide
+**92 % de alumnos y 79 % de docentes usando AI**, **94 % de docentes que espera seguir usándola** — y 🔴 **65 % de los
+alumnos que teme que la AI vuelva el aprendizaje superficial**.
+
+🔵 **Cómo se usa ese 65 % en esta capa concretamente:** es el argumento para que el agente de P88 y P89 **no decida**.
+*«El agente prepara el horario y prioriza el incidente; la decisión la firma una persona»* responde a la desconfianza
+medida **sin apelar a una obligación legal que en LATAM todavía no existe con esta especificidad.**
+
+⚠️ **Y ahí está la diferencia de encuadre regional que no hay que borrar: en LATAM la palanca NO es regulatoria.**
+
+| Región | Qué obliga a hacer el expediente | Fecha |
+|---|---|---|
+| EMEA | AI Act, Anexo III punto 3 | 2027-12-02 |
+| APAC (Vietnam) | lista de 6 sectores de alto riesgo | 2027-03-01 |
+| North America | leyes estatales de supervisión humana (OK, MD) y privacidad (CA, ID) | vigentes |
+| 🔴 **LATAM** | 🔴 **ningún instrumento nombra monitoreo de exámenes ni evaluación automatizada como alto riesgo** | **—** |
+
+**El mapa regulatorio LATAM sigue avanzando a velocidades distintas:** el **proyecto de ley de AI de Brasil**, el
+**marco de Chile**, el **CONPES 4144 de Colombia** (política nacional adoptada en **febrero de 2025**, con acciones y
+presupuesto **hasta 2030**) y las **reglas sectoriales de México**. 🔵 **Lectura comercial: en LATAM el expediente se
+vende por confianza institucional y por preparación para exportar servicios educativos a mercados regulados, no por
+obligación local.**
+
+🔴 **Lo que el barrido LATAM NO devolvió en este pase, y se escribe explícitamente porque el silencio se parece demasiado
+a la cobertura: ninguna pieza open source de origen LATAM en las dos capas medidas** —*timetabling* e integración de
+examen—, **ni del lado servidor ni del lado cliente.** Las anclas son **North America** (Apereo/Open edX), **EMEA**
+(ETH Zürich) y, en la mitad navegador, **APAC** (`exam-guard`, India). ⚠️ **Es una ausencia medida, no una ausencia
+supuesta: se probaron los 8 nombres de npm y el índice completo de PyPI, y las dos capas se barrieron por registro en el
+pase 40 con resultado vacío en las cuatro regiones.** 🔵 **Para Globant eso es una oportunidad de *upstream*, no una
+carencia: la primera puerta MCP de UniTime no tiene competencia de ninguna región, y publicarla desde LATAM es una
+posición de origen que esta base no tiene en ninguna otra capa.**
+
 ## Posicionamiento Globant
 
 **Dónde el studio gana en educación:**

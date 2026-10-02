@@ -9,6 +9,242 @@ updated: 2026-10-02
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 > No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
 
+## 2026-10-02 (pase 41) — el pase que **ejecuta las tres acciones del pase 40** y encuentra que **la respuesta comercial que el 40 dejó abierta estaba escrita en un `README.txt` de 174 bytes**: el directorio que hay que subclasear para integrar *proctoring* propio en Open edX **no es AGPL, es Apache-2.0**
+
+**Las tres acciones del pase 40 se ejecutaron y las tres rindieron.** La de mayor valor comercial —la acción 3— se resuelve
+con un dato que estaba a un `unzip` de distancia y que **invierte el veredicto del gap 84**. Las otras dos cierran el gap 83,
+parten el gap 81 en dos clases y **ponen número a las dos capas que el pase 40 midió vacías de agente.**
+
+### 🟢 El hallazgo que manda: `edx_proctoring/backends/` está *carved-out* en **Apache-2.0** dentro de un repo **AGPL-3.0**
+
+La acción 3 pedía bajar el *wheel* de PyPI y **responder si integrar un *proctoring* propio es implementar una interfaz
+existente o escribir la capa desde cero**. La respuesta es **implementar una interfaz** — y la interfaz **no arrastra la AGPL**.
+
+| Medición | Valor |
+|---|---|
+| Paquete | `edx-proctoring` **5.2.0**, *wheel* `py2.py3-none-any`, **1.315.493 bytes**, 294 entradas |
+| Licencia del paquete (nivel superior) | **AGPL-3.0** (`dist-info/LICENSE.txt` → *«GNU AFFERO GENERAL PUBLIC LICENSE Version 3»*) |
+| 🟢 **Licencia de `edx_proctoring/backends/`** | 🟢 **Apache-2.0** — `backends/LICENSE.txt`, **11.357 bytes**, contiene *«Apache License / Version 2.0»* y **no contiene la palabra «Affero»** |
+| 🟢 La declaración, textual | `backends/README.txt` (**174 bytes**): *«The code in this directory is licensed under a license different from the rest of the edx-proctoring repository. These modules are licensed under Apache 2.0. See LICENSE.txt.»* |
+| ✅ Verificado en **dos** canales | En el *wheel* **y** en el árbol (`raw.githubusercontent.com/openedx/edx-proctoring/master/edx_proctoring/backends/{README,LICENSE}.txt` → **200** los dos) |
+
+🔵 **Por qué esto cambia la cotización y no sólo la ficha:** el pase 40 cerró la capa de *proctoring* diciendo *«la única
+pieza seria es AGPL-3.0»* y de ahí dedujo que **fuera de Open edX la capa hay que construirla**. **La deducción sigue
+siendo correcta para el servidor, y es FALSA para el backend**: el punto de extensión está deliberadamente separado para
+que un proveedor escriba su integración **sin tocar la AGPL**. **Es el *upstream* diciendo, en 174 bytes, «escribí tu
+backend acá».**
+
+### 🟢 La superficie real de `edx-proctoring`, medida, que es lo que la acción 3 pedía enumerar
+
+| Qué | Cuánto | El dato crudo |
+|---|---|---|
+| Modelos de estado de examen | **12 clases** (8 entidades + 2 *managers* + 1 *queryset*) | `ProctoredExam`, `ProctoredExamReviewPolicy`(+`History`), `ProctoredExamStudentAttempt`, `ProctoredExamStudentAllowance`(+`History`), `ProctoredExamSoftwareSecureReview`(+`History`), `ProctoredExamSoftwareSecureComment` |
+| Rutas REST | **20** | `edx_proctoring/v1/proctored_exam/{exam,attempt,allowance,bulk_allowance,active_exams_for_user,active_attempt,review_policy,settings}`, `v1/user_onboarding/status`, `v1/retire_user/<id>`, `v1/retire_backend_user/<id>`, + 2 *callbacks* (`proctoring_launch_callback/start_exam/<attempt_code>`, `proctoring_review_callback/`) |
+| Punto de extensión de proveedor | **`ProctoringBackendProvider`**: **18 métodos + 8 atributos de clase** | `register_exam_attempt`, `start_exam_attempt`, `stop_exam_attempt`, `mark_erroneous_exam_attempt`, `remove_exam_attempt`, `on_review_callback`, `on_exam_saved`, `get_attempt`, `get_exam`, `get_instructor_url`, `retire_user`, `get_onboarding_profile_info`, `get_proctoring_config`, `get_video_review_aes_key`, `should_block_access_to_exam_material`, `get_javascript`, `get_software_download_url` |
+| 🔵 **`@abstractmethod` en esa clase** | 🔵 **CERO** | **No es una ABC: es una base concreta con implementaciones por defecto.** Un backend mínimo **sobreescribe sólo lo que usa** — es la diferencia entre «implementar 18 métodos» y «implementar 4» |
+| Base REST ya escrita | **`BaseRestProctoringProvider`** (`backends/rest.py`, **14.460 bytes**, 27 métodos) | Trae los constructores de URL (`exam_url`, `create_exam_attempt_url`, `config_url`, `instructor_url`, `onboarding_statuses_url`…) y `_make_attempt_request` |
+| Registro del plugin | ***entry point* de Django**, grupo **`[openedx.proctoring]`** | Ya vienen 4: `mock`, `null`, `rpnow4`, `software_secure` (los dos últimos apuntan al mismo proveedor) |
+| 🟢 Borrado de datos ya modelado | **2 rutas + 1 método** | `retire_user` / `retire_backend_user` existen en el modelo: **el expediente de supresión no se construye, se cablea** |
+
+🟢 **La respuesta, en una línea para una propuesta:** *«no se escribe la capa: se registra un *entry point* y se
+sobreescriben los métodos de ciclo de vida del intento; la máquina de estados, las excepciones (*allowances*), la política
+de revisión y las 20 rutas REST ya están, y el directorio donde va tu código es Apache-2.0»*.
+
+### 🟢 Acción 1 — las dos capas sin competencia agéntica ahora tienen anclas medidas, y las dos son usables
+
+**El pase 40 midió que `unitime` y `safe-exam-browser` no devuelven NI UN nombre en los 903.402 de PyPI** y mandó a
+medirlas por su repositorio (**gap 85**). Hecho:
+
+| Pieza | Licencia (leída del árbol) | `HEAD` | Tags | Tamaño | Veredicto |
+|---|---|---|---|---|---|
+| [`UniTime/unitime`](https://github.com/UniTime/unitime) | 🟢 **Apache-2.0** (`LICENSE` + `NOTICE`: *«Copyright 2015, The Apereo Foundation»*) | 🟢 **2026-10-01** (ayer) | **202** | 4.154 archivos, Java | 🟢 **ALTA — y es la mejor noticia de licencia de la capa administrativa** |
+| [`SafeExamBrowser/seb-server`](https://github.com/SafeExamBrowser/seb-server) | ⚠️ **MPL-2.0** (`LICENSE` en `master`) | ⚠️ `master` **2026-04-01** / 🟢 `dev-3.0` **2026-10-01** | **108** | 1.450 archivos, Java (`ch.ethz.seb`) | 🟢 **ALTA — es la capa de integración de examen que el gap 84 dijo que no existía en permisivo** |
+| [`SafeExamBrowser/seb-win-refactoring`](https://github.com/SafeExamBrowser/seb-win-refactoring) | ⚠️ **MPL-2.0** (`LICENSE.txt`) | 🟢 **2026-09-25** | **20** | 1.452 archivos, C# | 🟢 **ALTA — el cliente de bloqueo, Windows** |
+
+🟢 **Y la respuesta a la pregunta que la acción 1 hacía — «¿alguno expone una API envolvible como MCP?» — es SÍ en los
+dos, y en UniTime es más limpia que en cualquier LMS que esta base haya medido**, porque **el conector ya es la unidad**:
+
+| UniTime: `org.unitime.timetable.api` | Qué es |
+|---|---|
+| `ApiConnector` (clase abstracta) | `doGet` / `doPut` / `doPost` / `doDelete` + **`getName()`** + `createHelper()` |
+| Autenticación | **ya trae token**: `authenticateWithTokenIfNeeded()`, parámetro `?token=`, propiedad `ApiCanUseAPIToken` |
+| Serialización | `JsonApiHelper`, `XmlApiHelper`, `BinaryFileApiHelper` |
+| 🟢 **Conectores registrados** | 🟢 **15, con nombre propio** |
+
+| Conector | Nombre registrado (`/api/<nombre>`) | Verbos implementados |
+|---|---|---|
+| `RoomsConnector` | `rooms` | **GET, POST, PUT, DELETE** |
+| `BuildingsConntector` *(el typo es del upstream)* | `buildings` | GET, POST, DELETE |
+| `EventsConnector` | `events` | GET, POST, DELETE |
+| `OnlineStudentSchedulingConnector` | `sectioning` | GET, POST |
+| `DataExchangeConnector` | `exchange` | GET, POST |
+| 🔴 `ScriptConnector` | 🔴 **`script`** | 🔴 **GET, POST** |
+| `VariableTitleCourseConnector` | `var-title-crs` | GET, POST |
+| `JsonConnector` | `json` | POST |
+| `CurriculaConnector` / `EnrollmentsConnector` / `InstructorsConnector` / `InstructorScheduleConnector` / `RolesConnector` / `StudentGroupsConnector` / `ClassInfoConnector` | `curricula`, `enrollments`, `instructors`, `instructor-schedule`, `roles`, `student-groups`, `class-info` | GET |
+
+🔴 **Y el detalle que hay que leer antes de escribir una línea de *gateway*: existe un conector llamado `script` que acepta
+`POST`.** Un envoltorio MCP ingenuo de los 15 conectores **expone ejecución de scripts del servidor como una tool**. **Es
+el caso de uso exacto del *gateway* de allowlist que el pase 40 dejó probado (P85), y acá deja de ser higiene para ser
+requisito.** Ver **P88**.
+
+### 🟢 SEB Server ya habla con los tres LMS que esta base ya tiene — y eso es lo que lo vuelve componible, no su licencia
+
+**`seb-server` trae 36 controladores REST y 41 constantes de *endpoint***, entre ellos `ExamProctoringController`,
+`ExamMonitoringController`, `ClientConnectionController`, `LmsIntegrationController`, `ExamAPI_V1_Controller` y
+`ExamAPIDiscoveryController`. 🟢 **Pero el dato que manda es su `enum LmsType`:**
+
+| `LmsType` | *Features* declaradas | ¿Está ya en esta KB? |
+|---|---|---|
+| **`OPEN_EDX`** | `COURSE_API`, `SEB_RESTRICTION` | 🟢 **sí** (`openedx/edx-platform`) |
+| **`MOODLE`** | `COURSE_API`, `COURSE_RECOVERY` *(SEB_RESTRICTION comentada en el fuente)* | 🟢 **sí** (`moodle/moodle`) |
+| **`MOODLE_PLUGIN`** | `COURSE_API`, `COURSE_RECOVERY`, `SEB_RESTRICTION`, **`LMS_FULL_INTEGRATION`** | 🟢 **sí** — y es **la única combinación con integración completa** |
+| **`OPEN_OLAT`** | `COURSE_API`, `SEB_RESTRICTION` | 🟢 **sí** (`OpenOLAT/OpenOLAT`) |
+| `ANS_DELFT` | `COURSE_API`, `SEB_RESTRICTION` | no |
+| `MOCKUP` | las tres | — (para pruebas) |
+
+🔵 **O sea: la capa de examen permisiva de este sector ya tiene escrita la unión con tres de las plataformas que esta base
+viene listando como fundacionales desde el pase 1.** **El trabajo no es integrar: es `MOODLE_PLUGIN` + una puerta de
+agente.** Ver **P89**.
+
+### 🔴 Y un hallazgo de método que obliga a releer cómo esta base fecha proyectos: **la rama por defecto puede ser la rama muerta de un proyecto vivo**
+
+| Rama de `seb-server` | Último commit |
+|---|---|
+| 🔴 **`master`** (la rama por defecto, la que mide `HEAD`) | 🔴 **2026-04-01** — 6 meses |
+| 🟢 **`dev-3.0`** | 🟢 **2026-10-01** — **ayer** |
+| 🟢 `development` | 🟢 **2026-09-30** |
+
+🔴 **Medido con el instrumento del pase 37 —`ls-remote --symref HEAD` + fecha del commit— SEB Server se registra como
+«FRÍO, 6 meses».** Y es **falso**: el proyecto commiteó ayer, en la rama donde desarrolla, y publica el tag
+**`v3.0-latest`**. **El instrumento no está roto; está mal apuntado**: `HEAD` apunta a la rama de *release*, no a la de
+trabajo. Ver la tendencia **152**.
+
+### 🟢 La prueba de validez que eso exige, corrida sobre las 10 filas que el pase 37 declaró paradas — y el resultado tiene dos mitades
+
+**Se volvieron a medir las 10, pero contra TODAS las ramas, no sólo la de por defecto.**
+
+| Repo | Ramas | `HEAD` por defecto | Commit más nuevo en cualquier rama | ¿Cambia el veredicto? |
+|---|---|---|---|---|
+| `Cicatriiz/openedu-mcp` | 5 | 2025-06-03 | 2025-06-03 (`main`) | 🟢 no |
+| `DavidLMS/learnmcp-xapi` | 1 | 2025-08-29 | 2025-08-29 (`main`) | 🟢 no |
+| `pythpythpython/openstax-mcp-server` | 1 | 2025-11-30 | 2025-11-30 (`main`) | 🟢 no |
+| `HugeCatLab/ChatTutor` | 2 | 2026-01-09 | 2026-01-09 (`main`) | 🟢 no |
+| `peancor/moodle-mcp-server` | 2 | 2026-02-22 | 2026-02-22 (`main`) | 🟢 no |
+| `24kchengYe/human-skill-tree` | 1 | 2026-03-25 | 2026-03-25 (`master`) | 🟢 no |
+| ⚠️ `trilogy-group/oneroster-ts` | 6 | 2025-06-27 | **2026-05-11** (`speakeasy-sdk-regen-1746144633`) | ⚠️ **+10,5 meses — pero ver abajo** |
+| ⚠️ `plastic-labs/tutor-gpt` | **49** | 2025-11-13 | **2026-02-20** (`vineeth/elysia`) | ⚠️ **+3,2 meses, rama de *feature*** |
+| ⚠️ `satvik314/educhain` | 7 | 2025-12-03 | **2026-05-29** (`claude/relaxed-curie-mNW2l`) | ⚠️ **+5,9 meses — pero ver abajo** |
+| 🟢 `karanb192/algo-sensei` | 2 | 🟢 **2026-10-02** | 🟢 **2026-10-02** (`main`) | 🔴 **SÍ, y no por la rama: ver abajo** |
+
+🔵 **La segunda mitad es la que salva el veredicto original: hay que leer el AUTOR del commit más nuevo, no sólo su fecha.**
+
+| Caso | Autor del commit más nuevo | Mensaje | Qué es realmente |
+|---|---|---|---|
+| ⛔ `oneroster-ts` | **`speakeasy-github[bot]`** | *«empty commit to trigger [run-tests] workflow»* | 🔴 **un commit VACÍO de un bot generador de SDK.** No es desarrollo: es el antipatrón de patear el CI |
+| ⛔ `educhain` | **`Claude`** | *«Refactor to Educhain 1.0: drop LangChain, build on the OpenAI SDK»* | 🔵 **una rama escrita por un AGENTE, sin mergear desde hace 4 meses** |
+| ⚠️ `tutor-gpt` | humano | — | rama de *feature* parada hace 7,5 meses, entre **49** ramas |
+
+🟢 **Conclusión, y es a favor del pase 37: en 10 de 10 el veredicto sobre el desarrollo HUMANO en la rama principal se
+sostiene.** Pero el instrumento necesita una línea más: **medir todas las ramas y después leer quién firmó.** **Un commit
+vacío de bot y un refactor firmado por un agente no son vida de proyecto** — y los dos habrían entrado como tal. Ver la
+tendencia **153**.
+
+🔵 **Y el dato de `educhain` vale por sí mismo, más allá del método:** esta KB lo tiene como alta de los pases 2 y 3.
+**La rama que un agente dejó escrita dice hacia dónde iba la 1.0: sacar LangChain y apoyarse en el SDK de OpenAI.**
+Está sin mergear. **Es señal de dirección, no de release.**
+
+### 🟢 `algo-sensei` revivió HOY, y el pase 37 tenía razón cuando corrió — las dos cosas a la vez
+
+| Dato | Valor |
+|---|---|
+| Lo que publicó el pase 37 (corrido **hoy**) | `2025-10-22`, **11,3 meses**, 🔴 **FRÍO** |
+| Lo que mide este pase (corrido **hoy**, horas después) | 🟢 **`2026-10-02T15:10:33+05:30`** |
+| El commit | *«Offer a star invitation once after confirmed learning (#2)»* — **el commit número 2 del repo**, tras un hueco de **11,4 meses** |
+| Commits totales en `main` | **9**, un solo autor |
+
+🔵 **No es una corrección del pase 37: es la demostración de que esta medición caduca en horas.** Y conviene no
+sobreleerla: **un repo de 9 commits cuyo primer commit en un año agrega una invitación a poner una estrella es una
+reactivación de forma, no de fondo.** Sigue sin ser una dependencia.
+
+### ⚠️ Acción 2 — las tres contradicciones de licencia: una cierra, y las otras dos resultan ser **dos clases distintas**, no una
+
+**(a) `exam-guard` — el gap 83 queda CERRADO, y por la historia del archivo, que es exactamente donde el pase 40 dijo que estaba la respuesta.**
+
+| Evidencia | Valor |
+|---|---|
+| `LICENSE` en el árbol | **Apache-2.0**, 11.357 bytes |
+| 🔴 **Cuándo entró** | 🔴 **en el commit *«Initial commit»*, `1fcf7f6`, 2024-09-10T01:20 — y era el ÚNICO archivo del commit** (201 líneas) |
+| `package.json` en el árbol | **`"license": "ISC"`** (versión del árbol: 8.1.0) |
+| Cuándo entró `package.json` | el commit siguiente, *«feat: add base code»*, 2024-09-10T15:39 |
+| Licencia en el registro | **ISC en 113 de 113 versiones publicadas**, desde 2024-09-12 hasta 2026-01-22 |
+| Último toque a `package.json` | **2025-10-09** (el autor lo editó muchas veces) |
+| Último toque a `LICENSE` | 🔴 **nunca más desde el *«Initial commit»*** |
+
+🟢 **El veredicto, y es inequívoco:** el `LICENSE` Apache-2.0 es **el artefacto de creación del repo** (la casilla «add a
+license» de GitHub: un commit inicial que contiene sólo ese archivo). **La intención expresada y RE-afirmada 113 veces por
+el autor es ISC.**
+
+🔵 **Y la parte que importa comercialmente, que el pase 40 no había notado: las dos candidatas son permisivas y OSI, así
+que la contradicción NO bloquea el uso.** La diferencia entre Apache-2.0 e ISC **no es permisiva contra copyleft: es la
+cláusula de patentes** (Apache-2.0 la concede expresamente; ISC no la menciona). **El gap 83 baja de «bloquea
+entregables» a «anotar cuál se asume y por qué».** Ver la tendencia **154**.
+
+⚠️ **Dato lateral, del mismo tipo que la tendencia 147 pero invertido:** `exam-guard` tiene **`HEAD` 2025-10-09 y versión
+8.1.0 en el árbol**, contra **10.0.4 publicada el 2026-01-22** en npm. **El registro va ADELANTE del repo**: hay dos
+*majors* publicados que no están en la rama. **No se lee el fuente de lo que el cliente instalaría.**
+
+**(b) y (c) — el gap 81 no era una clase: eran dos, y la diferencia de riesgo es grande.** El pase 40 las trataba como
+equivalentes (*«licencia declarada sólo en el manifiesto del registro»*). Medidas de primera mano, no se parecen:
+
+| Pieza | Declaraciones de licencia que EXISTEN en el mundo | Medición |
+|---|---|---|
+| ⚠️ **`Timadey/proctor`** | 🟢 **TRES, y todas en el árbol** | 1) campo `license` del manifiesto npm: **MIT**; 2) **`package.json` del árbol: `"license": "MIT"`**; 3) **`README.md` del árbol: badge *«License: MIT»*** *y* sección *«This project is licensed under the MIT License — see the [LICENSE] file for details»*. 🔴 **Y el archivo `LICENSE` no existe en NINGUNA rama ni en NINGÚN commit de toda la historia** (`git log --all --name-only`, 0 coincidencias con `licen|copying`) |
+| 🔴 **`@ink-waffle/sisu-mcp`** | 🔴 **UNA, en todo el mundo** | sólo el campo `license` de npm. **El tarball (44.781 bytes, 17 archivos `dist/*.js`, 1 sola versión 0.1.0 del 2026-09-17) no trae `LICENSE`, y tampoco trae `README`.** Sin `repository`, sin `homepage` |
+
+🟢 **`Timadey/proctor` deja de ser un caso de licencia dudosa y pasa a ser un caso de archivo faltante, y se puede
+demostrar:** el propio árbol **apunta** al archivo que falta (*«see the LICENSE file»*). **La intención es inequívoca y
+está escrita tres veces; lo único ausente es el texto.** 🔵 **Y se cierra con una contribución de un archivo —el PR más
+barato que esta base identificó— que además deja a Globant como contribuyente del upstream.**
+
+🔴 **`sisu-mcp` se queda con la reserva completa, y ahora se sabe que es el caso extremo de la clase:** no hay segunda
+declaración posible porque **no hay dónde buscarla**. Sigue siendo **la única puerta de SIS de educación superior de esta
+base**, y sigue sin poder proponerse. Ver la tendencia **155**.
+
+⚠️ **Lo que este pase NO hizo, y queda declarado:** la acción 2 del pase 40 proponía **abrir un *issue* o mandar un correo
+a los autores** de `@timadey/proctor` y `@ink-waffle/sisu-mcp`. **No se hizo: escribirle a un tercero en su repositorio es
+una acción hacia afuera y no la decide esta corrida.** Queda como **acción con destinatario humano** (ver las acciones del
+pase 41, abajo). **Lo que sí se hizo es agotar la evidencia disponible sin contactar a nadie** — y para
+`@timadey/proctor` eso alcanzó para cambiarle la clase.
+
+### 🔴 Medición de vacío, con el instrumento del pase 40: **nadie envolvió todavía ninguna de las dos capas**
+
+| Instrumento | Términos | Resultado |
+|---|---|---|
+| npm (`registry.npmjs.org/<nombre>`) | `unitime-mcp`, `mcp-unitime`, `seb-mcp`, `mcp-seb`, `safeexambrowser-mcp`, `sebserver-mcp`, `timetable-mcp`, `timetabling-mcp` | 🔴 **404 en 8 de 8** |
+| PyPI (índice `simple` completo, **46.675.078 bytes**) | `unitime`, `seb-server`, `safeexambrowser` | 🔴 **0 nombres** |
+
+🟢 **Conclusión: dos capas con despliegue institucional real, licencia usable (Apache-2.0 y MPL-2.0), API formal
+documentada en el fuente — y cero competencia agéntica.** Es el hueco más limpio que esta base midió en varios pases.
+Ver el **gap 86** y los patrones **P88** y **P89**.
+
+### ⚠️ Nota de método: el control de `curl` sobre `github.com`, que **re-confirma la tendencia 131** y no descubre nada
+
+Antes de escribir las URLs nuevas se corrió el verificador que la consigna pide (`curl`), **con controles negativos**:
+
+| URL | HTTP |
+|---|---|
+| `github.com/UniTime/unitime` (**existe**) | **403** |
+| `github.com/UniTime/this-repo-does-not-exist-xyz123` (**no existe**) | **403** |
+| `github.com/openedx/edx-proctoring` (**existe**) | **403** |
+| `github.com/openedx/fake-repo-zzz999` (**no existe**) | **403** |
+
+🔴 **403 en los cuatro: el instrumento no distingue un repo real de uno inventado**, que es la misma forma de falla que el
+`200` de PyPI del pase 40 (tendencia **141**). 🟢 **`git ls-remote` acierta en 4 de 4** (devuelve refs en los dos reales,
+falla en los dos falsos). **Esto ya estaba escrito como tendencia 131 en el pase 37** y se registra como **re-confirmación
+con control negativo**, no como hallazgo: **toda URL de GitHub de este pase se verificó con `git ls-remote` y clonando el
+árbol, que es evidencia más fuerte que un `HEAD` de HTTP.**
+
 ## 2026-10-02 (pase 40) — el pase que **corre el barrido por registro sobre las cuatro capas de administración académica** y encuentra que **están vacías de agente**, con el instrumento del pase 39 **roto y devolviendo 200**
 
 **La acción 1 del pase 39 pedía barrer las capas que el 39 no barrió: *proctoring*, *timetabling*, analítica por nombre

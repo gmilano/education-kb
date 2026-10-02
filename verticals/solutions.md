@@ -37,6 +37,43 @@ updated: 2026-10-02
 > **Pase 27 del 2026-10-01:** se agrega **la columna que faltaba en veintiséis pasadas — ¿la vertical tiene puerta de agente?** Moodle **sí** (dos conectores **MIT**, uno que escribe notas) y Canvas **sí**; 🔴 **Open edX no tiene ninguna**, y es la de mayor huella pública en LATAM e India. **Las LMS son copyleft pero las puertas son MIT**, y por eso se pueden componer. Ver la sección del pase 27, abajo.
 
 
+## 🗓️🔒 Las dos plataformas institucionales que esta base nunca había listado: horarios y examen seguro (pase 41 del 2026-10-02)
+
+**El pase 40 midió por registro que las capas de *timetabling* y *proctoring* estaban vacías de agente y mandó a medirlas
+por su sitio de proyecto. Hecho, aparecen dos plataformas que encajan exactamente en el modelo de este archivo —algo que
+ya funciona, que ya tiene los datos, y al que se le agrega la capa agéntica arriba— y que ninguna de las 40 pasadas
+anteriores había listado.**
+
+| Plataforma | Qué es | Licencia | Estado medido | Puerta de agente | Región de origen |
+|---|---|---|---|---|---|
+| 🟢 **UniTime** — [`UniTime/unitime`](https://github.com/UniTime/unitime) | **Horarios académicos y de exámenes**: asignación de cursos, aulas y exámenes, *student scheduling* en línea | 🟢 **Apache-2.0** (Apereo Foundation) | 🟢 `HEAD` **2026-10-01**, **202 tags**, Java | 🔴 **NO existe** — y **sí hay API formal**: 15 conectores con nombre, verbos y token (ver `repos/foundations.md`) | **North America** (Apereo; origen Purdue University) |
+| 🟢 **SEB Server** — [`SafeExamBrowser/seb-server`](https://github.com/SafeExamBrowser/seb-server) | **Administración, monitoreo y *proctoring* de exámenes**: plantillas de examen, configuración del cliente, indicadores, monitoreo en vivo | ⚠️ **MPL-2.0** (copyleft **débil**, por archivo) | ⚠️ `master` **2026-04-01** / 🟢 `dev-3.0` **2026-10-01**, **108 tags** | 🔴 **NO existe** — **36 controladores REST / 41 endpoints** sin envolver | **EMEA** (ETH Zürich, Suiza) |
+| 🟢 **Safe Exam Browser** (cliente) — [`seb-win-refactoring`](https://github.com/SafeExamBrowser/seb-win-refactoring) | **Bloqueo de escritorio para examen**: convierte la máquina en estación controlada | ⚠️ **MPL-2.0** | 🟢 `HEAD` **2026-09-25**, **20 tags**, C# | n/a (es cliente de escritorio) | **EMEA** (ETH Zürich, Suiza) |
+
+🟢 **Por qué SEB Server es la incorporación más fuerte de este archivo en varios pases, y no es por su licencia: ya está
+integrado con tres de las plataformas que este archivo recomienda.** Su `enum LmsType` nombra **`OPEN_EDX`**,
+**`MOODLE`**, **`MOODLE_PLUGIN`** (la única combinación con `LMS_FULL_INTEGRATION`) y **`OPEN_OLAT`** — las tres están
+listadas acá como verticales de partida desde los primeros pases. **El trabajo no es integrar: es configurar
+`MOODLE_PLUGIN` y escribir la puerta de agente.**
+
+🔵 **Y la diferencia de licencia que hay que saber decir en una propuesta:** la capa de *proctoring* de Open edX es
+**AGPL-3.0** (aunque su directorio de *backends* está *carved-out* en **Apache-2.0** — ver `repos/foundations.md`),
+mientras **SEB es MPL-2.0: copyleft débil por archivo.** Se publica lo que se modifica de los archivos cubiertos; **lo
+que se construye al lado queda del integrador.** **Son dos rutas con dos perfiles legales distintos para el mismo
+requisito**, y hasta este pase esta base sólo tenía una.
+
+⚠️ **Las dos advertencias que viajan con estas filas:**
+1. 🔴 **UniTime expone un conector `script` que acepta `POST`** — ejecución de scripts del servidor. Cualquier envoltorio
+   MCP lo pone en la *denylist* antes de la primera demo (**P88**).
+2. ⚠️ **En SEB Server, la rama por defecto (`master`) tiene 6 meses y la de desarrollo commiteó ayer.** Antes de
+   proponerlo hay que decidir **si el entregable se para en el release o en la rama** (**gap 87**).
+
+🔴 **Y el encuadre regulatorio que estas dos filas arrastran, porque es el que decide el precio:** el *«monitoreo durante
+exámenes»* está **nombrado en el Anexo III punto 3 del AI Act** (plazo **2027-12-02**) y **Vietnam nombra la
+*«monitorización del comportamiento»* en evaluación** entre sus seis sectores de alto riesgo (**cumplimiento desde
+2027-03-01**). **Es la única capa de esta KB nombrada por el regulador en DOS regiones** — y es la que acaba de medirse
+sin competencia agéntica. Ver `intel/trends.md`, tendencia **156**.
+
 ## 🧾 Las capas administrativas de esta vertical, medidas por registro: admisiones tiene una pieza APAC viva, y la biblioteca gana su primera puerta de agente (pase 40 del 2026-10-02)
 
 El barrido por registro del pase 40 fue a las capas administrativas que esta vertical lista como módulos de ERP pero

@@ -122,7 +122,7 @@ de despliegue, no como evidencia de eficacia.
    del gap 81**: ahí la licencia vivía sólo en el manifiesto; acá vive sólo en el árbol. **Misma lección, signo
    opuesto: una sola fuente nunca alcanza.**
 
-## 🎥 Capa de *proctoring* — existe, es oficial, y es toda copyleft (agregada en el pase 40 del 2026-10-02)
+## 🎥 Capa de *proctoring* — existe, es oficial, y ~~es toda copyleft~~ (agregada en el pase 40 del 2026-10-02; 🔴 **la mitad copyleft del título quedó CORREGIDA en el pase 41 del 2026-10-02 — ver la corrección al final de la sección**)
 
 El barrido por registro del pase 40 cierra esta capa, que esta base venía nombrando en consignas desde el pase 24 sin
 haberla medido. **El resultado tiene la misma forma que los pases 8 y 9 encontraron en accesibilidad y credenciales:
@@ -130,7 +130,7 @@ lo maduro es copyleft y lo permisivo es chico.**
 
 | Repo | Licencia (verificada hoy) | Medición de primera mano | Qué aporta |
 |---|---|---|---|
-| 🟢 [`openedx/edx-proctoring`](https://github.com/openedx/edx-proctoring) | **AGPL-3.0** ⚠️ — `LICENSE.txt` **200** en `master` (texto AGPL v3 completo) | `HEAD` **2026-05-30** · PyPI `edx-proctoring` **5.2.0**, 🔴 **253 releases** pero el último del **2025-04-28** · Python | **El subsistema de *proctoring* OFICIAL de Open edX.** Es la pieza de referencia de la capa: integra proveedores de supervisión con el flujo de examen del LMS, con los estados de examen, las excepciones y la auditoría ya modelados |
+| 🟢 [`openedx/edx-proctoring`](https://github.com/openedx/edx-proctoring) | **AGPL-3.0 en el paquete** ⚠️ — `LICENSE.txt` **200** en `master` (texto AGPL v3 completo) — 🟢 **PERO `edx_proctoring/backends/` está *carved-out* en Apache-2.0** (`backends/LICENSE.txt`, 11.357 b, sin la palabra «Affero»; `backends/README.txt`, 174 b: *«These modules are licensed under Apache 2.0»*). ✅ **Verificado en el pase 41 en el *wheel* Y en el árbol** | `HEAD` **2026-05-30** · PyPI `edx-proctoring` **5.2.0**, 🔴 **253 releases** pero el último del **2025-04-28** · Python | **El subsistema de *proctoring* OFICIAL de Open edX.** Es la pieza de referencia de la capa: integra proveedores de supervisión con el flujo de examen del LMS, con los estados de examen, las excepciones y la auditoría ya modelados |
 | ⚠️ [`openfun/xblock-proctor-exam`](https://github.com/openfun/xblock-proctor-exam) | **AGPL-3.0** | 🔴 `HEAD` **2021-02-11** — **5,6 años** · 4 releases | *XBlock* que restringe el acceso a una prueba al proceso de monitoreo de Proctor Exam. 🔴 **Muerto.** Se registra porque es **la opción EMEA de la capa** (France Université Numérique) y porque alguien va a encontrarla: **no proponer** |
 | ⚠️ `grvlms-proctoring` | **AGPL-3.0** | 🔴 PyPI **2020-11-09** — **5,9 años** · 2 releases | Plugin de *proctoring* para Grvlms. 🔴 **Muerto** |
 | 🔴 `proctoru-xblock` | 🔴 **sin licencia declarada** | 🔴 PyPI **2016-08-17** — **10,1 años** · 1 release | Integración con ProctorU. 🔴 **Muerto y sin licencia: inusable por dos motivos independientes** |
@@ -161,6 +161,132 @@ excepciones y la auditoría, que es donde está el trabajo.
 LMS entero es AGPL — no agrega fricción. **Fuera de Open edX, la capa de integración hay que construirla**, y los SDK
 MIT sirven como la mitad cliente. ⚠️ **Y antes de cualquiera de las dos rutas va el expediente del Anexo III punto 3,
 cuyo plazo es el 2027-12-02** (el *«monitoreo durante exámenes»* está nombrado en el inciso).
+
+### 🟢 La corrección del pase 41, y cambia la cotización de esta capa en los dos extremos
+
+**La acción 3 del pase 40 pedía medir la superficie real de `edx-proctoring` y decidir si la capa se cotiza entera o
+partida. Medida, el párrafo de arriba resulta equivocado en su conclusión más importante, y por dos motivos
+independientes.**
+
+**🟢 Motivo 1 — el punto de extensión no es AGPL: es Apache-2.0, y está dicho por el upstream en 174 bytes.**
+
+| Archivo | Licencia | Evidencia |
+|---|---|---|
+| `dist-info/LICENSE.txt` (el paquete) | **AGPL-3.0** | *«GNU AFFERO GENERAL PUBLIC LICENSE Version 3»* |
+| 🟢 **`edx_proctoring/backends/LICENSE.txt`** | 🟢 **Apache-2.0** | **11.357 bytes**; contiene *«Apache License / Version 2.0»*; 🟢 **no contiene «Affero»** |
+| 🟢 **`edx_proctoring/backends/README.txt`** | — | **174 bytes**: *«The code in this directory is licensed under a license different from the rest of the edx-proctoring repository. These modules are licensed under Apache 2.0. See LICENSE.txt.»* |
+
+✅ **Verificado en dos canales:** dentro del *wheel* `edx_proctoring-5.2.0-py2.py3-none-any.whl` **y** en el árbol
+(`raw.githubusercontent.com/openedx/edx-proctoring/master/edx_proctoring/backends/{README,LICENSE}.txt` → **200** los dos).
+
+🔵 **Lo que esto significa: el directorio donde se escribe un backend de proveedor está deliberadamente separado para que
+un tercero lo escriba sin tocar la AGPL.** No es una ambigüedad ni un descuido: es un `README.txt` cuya única función es
+decirlo.
+
+**🟢 Motivo 2 — «fuera de Open edX hay que construir la capa» también es falso: existe, es MPL-2.0 y es de ETH Zürich.**
+Ver la sección de **SEB Server**, abajo. **MPL-2.0 es copyleft débil por archivo**, no AGPL: un integrador construye al
+lado sin abrir su propio código.
+
+### 🟢 La superficie de `edx-proctoring`, enumerada — la respuesta es «implementar una interfaz», no «escribir la capa»
+
+| Qué | Cuánto |
+|---|---|
+| Modelos de estado de examen | **12 clases**: `ProctoredExam`, `ProctoredExamReviewPolicy`(+`History`), `ProctoredExamStudentAttempt`, `ProctoredExamStudentAllowance`(+`History`), `ProctoredExamSoftwareSecureReview`(+`History`), `ProctoredExamSoftwareSecureComment` (+2 *managers* y 1 *queryset*) |
+| Rutas REST | **20** (18 bajo `edx_proctoring/v1/…` + 2 *callbacks*) |
+| 🟢 Borrado de datos | **ya modelado**: `v1/retire_user/<id>`, `v1/retire_backend_user/<id>` y el método `retire_user` del proveedor |
+| Punto de extensión | **`ProctoringBackendProvider`**: **18 métodos + 8 atributos de clase** |
+| 🔵 **`@abstractmethod`** | 🔵 **CERO** — es una base **concreta** con implementaciones por defecto: un backend mínimo sobreescribe **sólo lo que usa** |
+| Base REST ya escrita | **`BaseRestProctoringProvider`** (`backends/rest.py`, 14.460 b, **27 métodos**, 8 constructores de URL) |
+| Registro | ***entry point* de Django**, grupo **`[openedx.proctoring]`** — ya vienen `mock`, `null`, `rpnow4`, `software_secure` |
+
+🟢 **Cómo se cotiza ahora, y reemplaza al párrafo anterior:** *«sobre Open edX no se construye la capa de proctoring: se
+registra un entry point en `[openedx.proctoring]` y se sobreescriben los métodos de ciclo de vida del intento. La máquina
+de estados, las excepciones, la política de revisión, las 20 rutas REST y las rutas de supresión de datos ya existen —
+y el directorio donde va el código propio es Apache-2.0»*. Ver **P90** en `compose/patterns.md`.
+
+⚠️ **Lo que NO cambia, y sigue gobernando el riesgo:** el último release en PyPI es del **2025-04-28** (**17 meses**).
+La regla del pase 40 sigue en pie: `HEAD` mide al proyecto, el release mide lo que el cliente instala.
+
+### 🔵 El grafo de importación, medido — el matiz que impide sobrevender la carve-out
+
+**¿Es autocontenido el directorio Apache-2.0?** Medido con `ast` sobre sus 6 módulos no-test: 🔴 **no.** 🟢 **Pero lo que
+cruza es vocabulario, no lógica:**
+
+| Módulo AGPL al que entra `backends/` | Tamaño | Contenido | Quién lo importa |
+|---|---|---|---|
+| `constants.py` | 3.003 b | **0 clases, 0 funciones, 18 asignaciones** | `backend.py` |
+| `exceptions.py` | 4.524 b | **24 clases, 0 funciones** | `rest.py`, `software_secure.py` |
+| `statuses.py` | 11.088 b | **5 clases, 0 funciones** | `rest.py`, `software_secure.py` |
+| ⚠️ `utils.py` | 17.205 b | **26 funciones** (lógica real) | 🔵 **sólo `software_secure.py`** (backend de referencia) |
+| ⚠️ `callbacks.py` | 2.428 b | 1 función | 🔵 **sólo `mock.py`** |
+
+🟢 **Un backend propio que subclasee `BaseRestProctoringProvider` importa del lado AGPL únicamente nombres de excepción y
+valores de estado.** Los dos módulos con lógica los usan **sólo los backends que ya vienen en la caja**.
+
+⚠️ **Y el límite honesto, que no se puede cerrar con una medición:** si eso convierte al backend en obra derivada **es una
+pregunta legal, no de ingeniería**. El plugin corre dentro de un proceso Open edX que es AGPL completo de todos modos.
+**Para un cliente que quiera vender el backend como producto separado, esta tabla es el insumo de la consulta legal, no su
+respuesta.** **Gap 88: cerrado como medición, abierto como decisión de legales.**
+
+## 🗓️ Capa de *timetabling* — la capa que el pase 40 midió vacía de agente tiene una base Apache-2.0 con API de conectores (agregada en el pase 41 del 2026-10-02)
+
+**El pase 40 midió que `unitime` no devuelve ni un nombre en los 903.402 del índice de PyPI y concluyó que la capa de
+*timetabling* estaba vacía.** Medida por su repositorio, la conclusión se parte en dos: **vacía de agente, sí; vacía de
+software, no.**
+
+| Repo | Licencia (leída del árbol) | Medición de primera mano | Qué aporta |
+|---|---|---|---|
+| 🟢 [`UniTime/unitime`](https://github.com/UniTime/unitime) | 🟢 **Apache-2.0** — `LICENSE` + `NOTICE` (*«Copyright 2015, The Apereo Foundation»*) | `HEAD` **2026-10-01** (ayer) · **202 tags** · **4.154 archivos** · Java · `git ls-remote` + clon del árbol | **El sistema de horarios y exámenes académicos de referencia del mundo open source** (Apereo; origen Purdue University). Resuelve asignación de cursos, aulas, exámenes y *student scheduling*. 🟢 **Y lo que lo vuelve cotizable para una puerta de agente: expone una API formal con conectores CON NOMBRE** |
+
+🟢 **La API, que es el hallazgo: `org.unitime.timetable.api`**
+
+- **`ApiConnector`** (clase abstracta): `doGet` / `doPut` / `doPost` / `doDelete` + **`getName()`**.
+- **Autenticación por token ya incluida:** `authenticateWithTokenIfNeeded()`, parámetro `?token=`, propiedad
+  `ApiCanUseAPIToken`.
+- *Helpers* de serialización: `JsonApiHelper`, `XmlApiHelper`, `BinaryFileApiHelper`.
+- 🟢 **15 conectores registrados**, cada uno con su nombre de ruta (`/api/<nombre>`): `rooms` (**GET/POST/PUT/DELETE**),
+  `buildings`, `events`, `sectioning`, `exchange`, `var-title-crs`, `json`, `curricula`, `enrollments`, `instructors`,
+  `instructor-schedule`, `roles`, `student-groups`, `class-info` y 🔴 **`script`**.
+
+🔵 **Por qué esto es mejor que cualquier LMS que esta base haya medido para envolver como MCP: el conector YA es la
+unidad.** Tiene nombre propio, verbos explícitos y autenticación por token — **el mapeo a *tools* de MCP es 1:1**, sin
+inferir nada del HTML ni de un cliente.
+
+🔴 **Y la advertencia que va antes de la primera línea de código: existe un conector llamado `script` que acepta `POST`.**
+Un envoltorio ingenuo de los 15 conectores **expone ejecución de scripts del servidor como una tool**. **Va en la
+*denylist* del *gateway* del pase 40 (P85) antes de cualquier demo.** Ver **P88**.
+
+## 🔒 Capa de integración de examen — SEB Server, la pieza permisiva que el pase 40 dijo que no existía (agregada en el pase 41 del 2026-10-02)
+
+| Repo | Licencia (leída del árbol) | Medición de primera mano | Qué aporta |
+|---|---|---|---|
+| 🟢 [`SafeExamBrowser/seb-server`](https://github.com/SafeExamBrowser/seb-server) | ⚠️ **MPL-2.0** — `LICENSE` en `master` | 🔴 `master` **2026-04-01** / 🟢 **`dev-3.0` 2026-10-01** · **108 tags** (incl. `v3.0-latest`) · **1.450 archivos** · Java (`ch.ethz.seb`) | **La capa de administración, monitoreo y *proctoring* de exámenes**, con **36 controladores REST** y **41 constantes de *endpoint***. Es el lado servidor que los SDK de navegador de `agents/top.md` no cubren |
+| 🟢 [`SafeExamBrowser/seb-win-refactoring`](https://github.com/SafeExamBrowser/seb-win-refactoring) | ⚠️ **MPL-2.0** — `LICENSE.txt` | 🟢 `HEAD` **2026-09-25** · **20 tags** · **1.452 archivos** · C# | **El cliente de bloqueo de escritorio (Windows)**: convierte la máquina en estación de examen y restringe funciones del sistema, sitios y aplicaciones |
+
+⚠️ **MPL-2.0 no es MIT/Apache, y tampoco es AGPL: es copyleft DÉBIL por archivo.** Lo que se modifica de los archivos
+cubiertos se publica; **lo que se agrega al lado, no.** Para un integrador es usable **sin abrir su propio código** —
+que es exactamente la fricción que la AGPL de `edx-proctoring` sí impone fuera de Open edX.
+
+🟢 **El dato que lo vuelve componible con esta KB, y no es la licencia: su `enum LmsType` ya nombra tres de las
+plataformas fundacionales de este archivo.**
+
+| `LmsType` | *Features* declaradas | ¿Ya está en esta KB? |
+|---|---|---|
+| **`OPEN_EDX`** | `COURSE_API`, `SEB_RESTRICTION` | 🟢 sí |
+| **`MOODLE`** | `COURSE_API`, `COURSE_RECOVERY` (⚠️ `SEB_RESTRICTION` comentada en el fuente) | 🟢 sí |
+| 🟢 **`MOODLE_PLUGIN`** | `COURSE_API`, `COURSE_RECOVERY`, `SEB_RESTRICTION`, 🟢 **`LMS_FULL_INTEGRATION`** | 🟢 sí — **la única con integración completa** |
+| **`OPEN_OLAT`** | `COURSE_API`, `SEB_RESTRICTION` | 🟢 sí |
+| `ANS_DELFT` | `COURSE_API`, `SEB_RESTRICTION` | no |
+
+🔴 **El dato de método que esta pieza aporta, y obliga a corregir el instrumento del pase 37: la rama por defecto puede ser
+la rama MUERTA de un proyecto vivo.** `master` mide **6 meses**; `dev-3.0` commiteó **ayer**. Medido con
+`ls-remote --symref HEAD`, SEB Server se registraría como *«FRÍO»* y sería **falso**. Ver la tendencia **152**.
+
+⚠️ **Lo que queda sin resolver, y es de despliegue, no de licencia: cuál rama se instala.** Hay tag `v3.0-latest` y una
+`dev-3.0` activa contra un `master` de 6 meses. **Antes de proponerlo hay que decidir si el entregable se para en el
+release o en la rama**, que es la misma pregunta de la tendencia 147 con las dos respuestas invertidas. Queda como
+**gap 87**.
+
 
 ## 🧩 Capa de rostering OneRoster — el lado PROVEEDOR, que esta base nunca tuvo (agregada en el pase 38 del 2026-10-02)
 

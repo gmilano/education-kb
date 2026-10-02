@@ -8,6 +8,161 @@ updated: 2026-10-02
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 
+## 2026-10-02 (pase 41) — **el dato crudo de las dos capas que el pase 40 midió vacías: 3 repos fechados y licenciados desde el árbol, 15 conectores con nombre, 36 controladores REST, 11 nombres de registro probados y 8 de 8 en 404**
+
+**Instrumentos de este pase:** `git ls-remote` (refs y tags), `git clone --depth 1 --filter=blob:none --no-checkout` +
+`git log -1 --format=%cI` (fecha), `git show HEAD:<archivo>` (licencia leída del árbol), `zipfile` sobre el *wheel* de
+PyPI (superficie de API), `registry.npmjs.org/<nombre>` y el índice `simple` de PyPI (vacío).
+🔴 **`curl` sobre `github.com` NO se usa para verificar: devuelve 403 para repos reales e inventados por igual** —
+re-confirmado con control negativo en este pase (tendencia **131**).
+
+### Las tres altas de base, con el dato crudo leído del árbol
+
+| Repo | Licencia (archivo y dónde) | `HEAD` (rama por defecto) | Tags | Archivos | Lenguaje | Región |
+|---|---|---|---|---|---|---|
+| [`UniTime/unitime`](https://github.com/UniTime/unitime) | 🟢 **Apache-2.0** — `LICENSE` + `NOTICE` (*«Copyright 2015, The Apereo Foundation»*) | 🟢 **2026-10-01** (Tomáš Müller) | **202** | **4.154** | Java | **North America** (Apereo Foundation; ⚠️ *committer* en `+02:00`) |
+| [`SafeExamBrowser/seb-server`](https://github.com/SafeExamBrowser/seb-server) | ⚠️ **MPL-2.0** — `LICENSE` en `master` | ⚠️ **2026-04-01** en `master` / 🟢 **2026-10-01** en `dev-3.0` | **108** | **1.450** | Java (`ch.ethz.seb`) | **EMEA** (ETH Zürich, Suiza) |
+| [`SafeExamBrowser/seb-win-refactoring`](https://github.com/SafeExamBrowser/seb-win-refactoring) | ⚠️ **MPL-2.0** — `LICENSE.txt` (+ `Setup/Resources/License.rtf`) | 🟢 **2026-09-25** (Damian Büchel) | **20** | **1.452** | C# | **EMEA** (ETH Zürich, Suiza) |
+
+⚠️ **MPL-2.0 no es MIT/Apache y tampoco es AGPL: es copyleft DÉBIL por archivo.** Lo que se modifica de los archivos
+cubiertos se publica; lo que se agrega al lado, no. **Para un integrador es usable sin abrir su propio código**, y es una
+clase de licencia que esta base no tenía anotada en esta capa.
+
+### `UniTime`: los 15 conectores de API, con su nombre registrado y sus verbos — el dato que hace al envoltorio MCP cotizable
+
+**Ruta:** `JavaSource/org/unitime/timetable/api/`. **Clase base:** `ApiConnector` (`doGet`/`doPut`/`doPost`/`doDelete`,
+`getName()`); **autenticación por token ya incluida** (`?token=`, `ApiCanUseAPIToken`, `authenticateWithTokenIfNeeded`);
+*helpers* `JsonApiHelper` / `XmlApiHelper` / `BinaryFileApiHelper`.
+
+| Clase | Nombre registrado | GET | POST | PUT | DELETE |
+|---|---|:--:|:--:|:--:|:--:|
+| `RoomsConnector` | `rooms` | ✅ | ✅ | ✅ | ✅ |
+| `BuildingsConntector` ⚠️ *(typo del upstream)* | `buildings` | ✅ | ✅ | | ✅ |
+| `EventsConnector` | `events` | ✅ | ✅ | | ✅ |
+| `OnlineStudentSchedulingConnector` | `sectioning` | ✅ | ✅ | | |
+| `DataExchangeConnector` | `exchange` | ✅ | ✅ | | |
+| 🔴 `ScriptConnector` | 🔴 `script` | ✅ | 🔴 ✅ | | |
+| `VariableTitleCourseConnector` | `var-title-crs` | ✅ | ✅ | | |
+| `JsonConnector` | `json` | | ✅ | | |
+| `ClassInfoConnector` | `class-info` | ✅ | | | |
+| `CurriculaConnector` | `curricula` | ✅ | | | |
+| `EnrollmentsConnector` | `enrollments` | ✅ | | | |
+| `InstructorsConnector` | `instructors` | ✅ | | | |
+| `InstructorScheduleConnector` | `instructor-schedule` | ✅ | | | |
+| `RolesConnector` | `roles` | ✅ | | | |
+| `StudentGroupsConnector` | `student-groups` | ✅ | | | |
+
+🔴 **`script` acepta `POST`: un envoltorio MCP de los 15 conectores expone ejecución de scripts del servidor como tool.**
+Va en la *denylist* antes de la primera demo (**P88**).
+
+### `seb-server`: 36 controladores REST y 41 constantes de *endpoint*
+
+**Controladores** (`webservice/weblayer/api/`): `ExamAdministrationController`, `ExamProctoringController`,
+`ExamMonitoringController`, `ExamTemplateController`, `ExamConfigurationMappingController`, `ExamAPI_V1_Controller`,
+`ExamAPIDiscoveryController`, `ClientConnectionController`, `ClientEventController`, `ClientGroupController`,
+`LmsSetupController`, `LmsIntegrationController`, `QuizController`, `SEBClientConfigController`,
+`SEBSettingsController`, `ConfigurationController`, `ConfigurationNodeController`, `ConfigurationValueController`,
+`ConfigurationAttributeController`, `CertificateController`, `IndicatorController`, `InstitutionController`,
+`UserAccountController`, `UserActivityLogController`, `RegisterUserController`, `BatchActionController`,
+`OrientationController`, `InfoController`, `LightController`, `ViewController`, `EntityController`,
+`ActivatableEntityController`, `ReadonlyEntityController`, `APIExceptionHandler`, `APIConstraintViolationException`,
+`ExamAPIDiscoveryController`.
+
+**`*_ENDPOINT` en `gbl/api/API.java`: 41.** Los que importan para una puerta de agente:
+
+| Grupo | Endpoints |
+|---|---|
+| Examen / administración | `/exam`, `/exam-template`, `/exam-configuration-map`, `/indicator`, `/client-group`, `/quiz` |
+| 🟢 **Monitoreo** | `/monitoring`, `/overview`, `/instruction`, `/notification`, `/disable-connection`, `/signature`, `/testrun`, `/finishedexams` |
+| 🟢 **API de cliente SEB** | `/handshake`, `/examconfig`, `/light-config`, `/sebping`, `/seblog` |
+| 🟢 **Integración con LMS** | `/lms-setup`, `/exam`, `/seb_config`, `/login_token` |
+| Conexiones y eventos | `/seb-client-connection`, `/data`, `/seb-client-event` |
+| Configuración | `/configuration`, `/configuration-node`, `/configuration_value`, `/configuration_attribute`, `/template-attribute`, `/orientation` |
+| Plataforma | `/oauth`, `/info`, `/register`, `/institution`, `/useraccount`, `/useractivity`, `/certificate`, `/client_configuration`, `/batch-action` |
+
+**`enum LmsType`** (`gbl/model/institution/LmsSetup.java`): `MOCKUP`, **`OPEN_EDX`**, **`MOODLE`**,
+**`MOODLE_PLUGIN`** (la única con `LMS_FULL_INTEGRATION`), `ANS_DELFT`, **`OPEN_OLAT`**.
+
+### `edx-proctoring` 5.2.0: el dato crudo del *wheel*, y la licencia que contradice al repo **a favor**
+
+| Medición | Valor |
+|---|---|
+| *Wheel* | `edx_proctoring-5.2.0-py2.py3-none-any.whl`, **1.315.493 bytes**, **294 entradas**, subido **2025-04-28** |
+| Releases en PyPI | **253** — 🔴 el último es el **2025-04-28** (**17 meses**), con `HEAD` del repo el **2026-05-30** |
+| Licencia declarada | `License: AGPL 3.0`; `Classifier: ... GNU Affero General Public License v3 or later (AGPLv3+)` |
+| 🟢 **`edx_proctoring/backends/LICENSE.txt`** | 🟢 **Apache-2.0**, **11.357 bytes** — contiene *«Apache License / Version 2.0»*, **no contiene «Affero»** |
+| 🟢 `edx_proctoring/backends/README.txt` | **174 bytes**: *«The code in this directory is licensed under a license different from the rest of the edx-proctoring repository. These modules are licensed under Apache 2.0.»* |
+| ✅ Verificación cruzada en el árbol | `raw.githubusercontent.com/openedx/edx-proctoring/master/edx_proctoring/backends/README.txt` → **200**; `.../LICENSE.txt` → **200** |
+| Archivos clave | `models.py` 30.184 b · `urls.py` 6.397 b · `views.py` 94.918 b · `api.py` 123.167 b · `backends/rest.py` 14.460 b · `backends/software_secure.py` 15.037 b |
+| Dependencias declaradas | `Django>=2.2`, `djangorestframework`, `django-waffle`, `django-crum`, `django-model-utils`, `django-webpack-loader>=0.6.0`, `django-ipware>=1.1.0`, `django-simple-history` |
+| *Entry points* | `[lms.djangoapp]` y `[cms.djangoapp]` → `EdxProctoringConfig`; 🟢 **`[openedx.proctoring]` → `mock`, `null`, `rpnow4`, `software_secure`** |
+| Modelos | **12 clases** (ver `agents/trending.md`, pase 41) |
+| Rutas | **20** (18 en `v1/` + 2 *callbacks*) |
+| `ProctoringBackendProvider` | **18 métodos, 8 atributos, 🔵 0 `@abstractmethod`** |
+| `BaseRestProctoringProvider` | **27 métodos**, incluidos 8 constructores de URL |
+
+### `exam-guard`: la historia de los dos archivos, que es lo que cierra el gap 83
+
+| Hecho | Dato |
+|---|---|
+| Repo | [`aswanth9495/exam-guard`](https://github.com/aswanth9495/exam-guard) — *«AI proctoring tool»*, `main`, `HEAD` **2025-10-09** |
+| `LICENSE` (Apache-2.0) entró en | 🔴 **`1fcf7f6` *«Initial commit»*, 2024-09-10T01:20 — único archivo del commit, 201 líneas** |
+| `package.json` entró en | *«feat: add base code»*, 2024-09-10T15:39, con **`"license": "ISC"`** |
+| `LICENSE` modificado después | 🔴 **nunca** |
+| `package.json` modificado después | **sí, hasta 2025-10-09** |
+| ISC en el registro | 🟢 **113 de 113 versiones** (2024-09-12 → 2026-01-22) |
+| Versión en el árbol vs. en npm | **8.1.0** contra **10.0.4** — ⚠️ **el registro va 2 *majors* adelante del repo** |
+
+### `Timadey/proctor` y `@ink-waffle/sisu-mcp`: la medición que parte el gap 81 en dos
+
+| Pieza | `LICENSE` en el árbol | `package.json` del árbol | README | Manifiesto del registro | Total de declaraciones |
+|---|---|---|---|---|---|
+| `Timadey/proctor` (`HEAD` 2026-08-08) | 🔴 **no existe en ninguna rama ni commit** (`git log --all --name-only`: 0 coincidencias) | 🟢 **MIT** | 🟢 **badge *«License: MIT»*** + *«licensed under the MIT License — see the [LICENSE] file»* | 🟢 MIT | 🟢 **3 (todas en el árbol)** |
+| `@ink-waffle/sisu-mcp` 0.1.0 (2026-09-17) | 🔴 **tarball sin `LICENSE`** (44.781 b, 17 `dist/*.js`) | ⚠️ sólo en el manifiesto empaquetado | 🔴 **no hay README en el tarball** | 🟢 MIT | 🔴 **1 en todo el mundo** |
+
+### 🔴 El vacío medido: nadie publicó una puerta de agente para ninguna de las dos capas
+
+| Canal | Nombres probados | Resultado |
+|---|---|---|
+| npm | `unitime-mcp`, `mcp-unitime`, `seb-mcp`, `mcp-seb`, `safeexambrowser-mcp`, `sebserver-mcp`, `timetable-mcp`, `timetabling-mcp` | 🔴 **404 en 8 de 8** |
+| PyPI, índice `simple` completo (**46.675.078 bytes**, 903.402+ nombres) | `unitime`, `seb-server`, `safeexambrowser` | 🔴 **0 nombres** |
+
+### La re-medición de las 10 filas que el pase 37 declaró paradas, contra TODAS las ramas
+
+| Repo | Ramas | `HEAD` por defecto | Más nuevo en cualquier rama | Autor del más nuevo |
+|---|---|---|---|---|
+| `Cicatriiz/openedu-mcp` | 5 | 2025-06-03 | 2025-06-03 (`main`) | — |
+| `trilogy-group/oneroster-ts` | 6 | 2025-06-27 | **2026-05-11** (`speakeasy-sdk-regen-1746144633`) | 🔴 **`speakeasy-github[bot]`**, *«empty commit to trigger [run-tests] workflow»* |
+| `DavidLMS/learnmcp-xapi` | 1 | 2025-08-29 | 2025-08-29 (`main`) | — |
+| `karanb192/algo-sensei` | 2 | 🟢 **2026-10-02** | 🟢 **2026-10-02T15:10:33+05:30** (`main`) | Karan Bansal — *«Offer a star invitation once after confirmed learning (#2)»*, **commit nº 2 del repo**, 9 commits totales |
+| `plastic-labs/tutor-gpt` | **49** | 2025-11-13 | **2026-02-20** (`vineeth/elysia`) | humano, rama de *feature* |
+| `pythpythpython/openstax-mcp-server` | 1 | 2025-11-30 | 2025-11-30 (`main`) | — |
+| `satvik314/educhain` | 7 | 2025-12-03 | **2026-05-29** (`claude/relaxed-curie-mNW2l`) | 🔵 **`Claude`** — *«Refactor to Educhain 1.0: drop LangChain, build on the OpenAI SDK»* |
+| `HugeCatLab/ChatTutor` | 2 | 2026-01-09 | 2026-01-09 (`main`) | — |
+| `peancor/moodle-mcp-server` | 2 | 2026-02-22 | 2026-02-22 (`main`) | — |
+| `24kchengYe/human-skill-tree` | 1 | 2026-03-25 | 2026-03-25 (`master`) | — |
+
+### Ramas de `seb-server`, que es el caso que obliga a cambiar el instrumento
+
+| Rama | Último commit | Nota |
+|---|---|---|
+| 🔴 `master` (**rama por defecto**) | **2026-04-01** | la que mide `ls-remote --symref HEAD` |
+| 🟢 **`dev-3.0`** | 🟢 **2026-10-01** | donde desarrolla; tag **`v3.0-latest`** publicado |
+| 🟢 `development` | 2026-09-30 | |
+
+**Ramas totales:** 14 (`dev-1.2` … `dev-3.0`, `development`, `master`, `old_gui`, `dev-e2e-tests`, `SEBSERV-918-PoC-SEB-Restriction`).
+
+### 🔴 Control negativo del verificador prescripto, re-confirmando la tendencia 131
+
+| URL | Existe | `curl` | `git ls-remote` |
+|---|---|---|---|
+| `github.com/UniTime/unitime` | sí | 🔴 **403** | 🟢 refs |
+| `github.com/UniTime/this-repo-does-not-exist-xyz123` | **no** | 🔴 **403** | 🟢 falla |
+| `github.com/openedx/edx-proctoring` | sí | 🔴 **403** | 🟢 refs |
+| `github.com/openedx/fake-repo-zzz999` | **no** | 🔴 **403** | 🟢 falla |
+
+🔴 **`curl`: 4 de 4 iguales, no discrimina. `git ls-remote`: 4 de 4 correctos.**
+
 ## 2026-10-02 (pase 40) — **el dato crudo del barrido sobre las capas de administración académica: 28 términos × 4 registros, 1 instrumento roto, 1 instrumento nuevo, 6 altas y 5 capas confirmadas vacías de agente**
 
 **Consigna ejecutada: la acción 1 del pase 39** — correr el barrido por registro sobre las capas que el 39 no barrió
