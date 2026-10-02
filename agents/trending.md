@@ -9,6 +9,227 @@ updated: 2026-10-02
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 > No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
 
+## 2026-10-02 (pase 53) — **la hipótesis del pase 52 queda FALSIFICADA y en la dirección peor: eludir el control de acceso institucional no es un caso aislado, son 5 de 11 clientes de LMS de esta base, uno por cada región; los tres valores de P118 no alcanzaban porque la clase (b) son TRES clases y la peor guarda la contraseña reutilizable del alumno; y el AI Act tiene un reloj que esta base no tenía y no es un plazo, es una PROHIBICIÓN vigente desde el 2025-02-02**
+
+🟢 **De las tres acciones que el pase 52 dejó escritas, la 1 se ejecutó completa y rindió el hallazgo
+del pase. La 2 y la 3 están las dos negadas —y lo importante es que por DOS fronteras DISTINTAS, así
+que no las desbloquea el mismo permiso.**
+
+### 🔴 El hallazgo principal: la acción 1 falsificó su propia hipótesis, y por eso P118 deja de ser una advertencia por fila
+
+El pase 52 dejó la hipótesis explícita y falsable: *si `canvas-student-mcp` es un caso aislado, el
+barrido devuelve UNA sola fila en la clase (b); si devuelve varias, la elusión de controles es un
+patrón del ecosistema MCP educativo y entonces P118 tiene que ser un paso obligatorio del filtro.*
+
+🔴 **Devolvió cinco.**
+
+**Denominador declarado (P107):** de las **80 filas** de `agents/top.md`, **73** mencionan una
+palabra de LMS/SIS, pero la mayoría son bibliotecas LTI, plugins de Moodle del lado servidor y
+piezas de accesibilidad, que **no tienen pregunta de credencial de usuario final**. Los que sí son
+**clientes** de un LMS/SIS institucional y por lo tanto caen bajo P118: **12 filas leídas por README
+este pase, de las cuales 11 son clientes de LMS/SIS y 1 no aplica.** Resultado: **5 en clase (b) /
+6 en clase (a) / 1 no aplica.**
+
+| Pieza | Clase | Credencial que pide, textual del README | Región |
+|---|---|---|---|
+| [`moon0825/jbnu-lms-student`](https://github.com/moon0825/jbnu-lms-student) | 🔴 **(b)** | el alumno entra en un navegador real **con passkey/2FA**; la herramienta extrae `MoodleSession` + `sesskey` y los guarda en **DPAPI/Keychain**. *«비밀번호·패스키·인증 코드를 절대 입력받지 않습니다»* (nunca recibe contraseñas ni passkeys) | **APAC** (Corea — Univ. Nacional de Jeonbuk) |
+| [`bunizao/moodle-cli`](https://github.com/bunizao/moodle-cli) | 🔴 **(b)** | `MOODLE_TOKEN` / `MOODLE_SESSION` son **el valor de la cookie `MoodleSession`**; instruye *«Copy as cURL»* en la pestaña Network de DevTools y *«keeps it alive in the background, so Moodle's login wall stays out of your way»* | **sin región declarada** |
+| [`PabloPC05/mcp-usc`](https://github.com/PabloPC05/mcp-usc) | ⚠️ **(a)+(b)** | ofrece **las dos**: `USC_MOODLE_TOKEN` —*«un token legítimo emitido por Moodle para tu cuenta y servicio»*— **y** `import-session` / `login` con Playwright que completa *«Microsoft Entra y MFA en la ventana visible»* y extrae `MoodleSession` | **EMEA** (España — Univ. de Santiago de Compostela, `cv.usc.es`) |
+| [`JOSETRA44/DUTIC-mcp`](https://github.com/JOSETRA44/DUTIC-mcp) | 🔴 **(b) — la peor** | `DUTIC_SISACAD_USER` + `DUTIC_SISACAD_PASSWORD` + `DUTIC_ENCUESTA_USER` + `DUTIC_ENCUESTA_PASSWORD`: **la contraseña reutilizable del alumno en variable de entorno**; y el sistema de matrícula se describe *«usuario + clave + Escuela/Programa **sin CAPTCHA**»* | **LATAM** (Perú — Univ. Nac. de San Agustín, `aulavirtual.unsa.edu.pe`) |
+| [`xmike04/canvas-student-mcp`](https://github.com/xmike04/canvas-student-mcp) | 🔴 **(b)** | `CANVAS_COOKIE` con extracción por DevTools → Network → *«copy the full `cookie:` value»*; **acepta también `CANVAS_API_TOKEN` y el token gana si están los dos** | **North America** (Canvas universitario) |
+| [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | 🟢 **(a)** | `CANVAS_API_TOKEN` + `CANVAS_API_URL`; y **documenta el camino institucional cuando el control aprieta**: *«Some institutions gate token creation… tokens are issued through an IT request form instead»* | North America (Univ. de Illinois en el ejemplo) |
+| [`DMontgomery40/mcp-canvas-lms`](https://github.com/DMontgomery40/mcp-canvas-lms) | 🟢 **(a)** | `CANVAS_API_TOKEN` + `CANVAS_DOMAIN`; sin mención de contraseñas ni cookies | sin región declarada |
+| [`bruchris/canvas-lms-mcp`](https://github.com/bruchris/canvas-lms-mcp) | 🟢 **(a)** | `CANVAS_API_TOKEN`, y además modo `oauth_brokered` con `CANVAS_OAUTH_CLIENT_ID` / `CANVAS_OAUTH_CLIENT_SECRET` — **credenciales que la institución registra y revoca** | sin región declarada |
+| [`NiccoloSalvini/mcp-moodle-teacher`](https://github.com/NiccoloSalvini/mcp-moodle-teacher) | 🟢 **(a)** | `MOODLE_TOKEN` del **web service móvil**, vía *«Preferences → Security keys»*; `.env` en modo 600 y la advertencia correcta: *«a bearer credential carrying all of your rights, including marking. Treat it as a password»* | sin región declarada |
+| [`peancor/moodle-mcp-server`](https://github.com/peancor/moodle-mcp-server) | 🟢 **(a)** | `MOODLE_API_TOKEN` emitido desde *«Site Administration > Plugins > Web Services > Manage tokens»* | sin región declarada |
+| [`MarcosNahuel/moodle-mcp`](https://github.com/MarcosNahuel/moodle-mcp) | 🟢 **(a)** — la declaración más limpia de las once | `MOODLE_WS_TOKEN`, y lo dice de frente: *«The MCP only talks to Moodle via Web Services REST. **No cookie auth, no web scraping, no direct DB access**»* | sin región declarada |
+| [`SirhanMacx/Claw-ED`](https://github.com/SirhanMacx/Claw-ED) | ⚪ **no aplica** | OAuth del usuario a **su propia** cuenta de Google (`clawed drive auth`); **no hay control institucional de LMS en juego** | sin región declarada |
+
+⚠️ **Y una corrección del instrumento, hecha a mano:** la clasificación automática de `Claw-ED`
+devolvió **(b)** apoyándose en que su panel usa *«an HttpOnly session cookie»*. 🔵 **Es un falso
+positivo y vale escribirlo: la cookie de sesión de la PROPIA aplicación no es la cookie de sesión de
+un LMS ajeno, y el OAuth de un usuario a su propia cuenta de Google es el camino SANCIONADO, no una
+elusión.** **P118 pregunta por el control de un tercero —la institución—, no por cualquier cookie.**
+
+### 🔵 El mecanismo, que es lo que vuelve a P118 medible y no una opinión
+
+🔴 **La cookie de sesión es la única credencial que la institución NO puede negar sin romper su
+propio login.** El control institucional dice *«no emitimos tokens de API a los alumnos»*; el camino
+de la cookie **es inmune a ese control por construcción**, porque la cookie existe siempre que el
+alumno pueda entrar. ⚠️ **Por eso la elusión no requiere mala fe: es el camino de menor resistencia
+justamente cuando el control aprieta** — y es la razón por la que esperar que sea rara era un error.
+
+### 🟢 Y es legible y barato de medir, porque el mismo control produce dos respuestas OPUESTAS
+
+| Pieza | Enfrenta | Responde |
+|---|---|---|
+| [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | *«Some institutions gate token creation. Where self-service is disabled, the "New Access Token" button is missing or errors out»* | 🟢 **el formulario de pedido a IT** de la universidad |
+| [`xmike04/canvas-student-mcp`](https://github.com/xmike04/canvas-student-mcp) | *«many universities disable self-service token generation for students… there's simply no + New Access Token button»* | 🔴 **DevTools → Network → copiar la cookie** |
+
+🔵 **Los dos describen el MISMO hecho institucional con casi las mismas palabras y eligen caminos
+opuestos, y los dos lo dejan escrito en el README.** ⚠️ **Eso es lo que hace a P118 un paso de
+filtro y no una auditoría: cuesta UNA lectura por pieza, no una revisión de código.**
+
+### 🔴 Los tres valores de P118 no alcanzaban: la clase (b) son TRES clases con riesgos incomparables
+
+| Sub-clase | Qué hace | Riesgo | Ejemplo |
+|---|---|---|---|
+| **b1 — monta la sesión conservando los factores** | el usuario se autentica en un navegador real **con 2FA/passkey**; la herramienta nunca ve una contraseña; guarda la sesión en el llavero del sistema; sólo lectura | ⚠️ **el más bajo de los tres y defendible**: no degrada la autenticación, sólo no pasa por el canal de API | `jbnu-lms-student` |
+| **b2 — monta la sesión por pegado de cookie** | instruye extraer la cookie de DevTools y la mantiene viva en segundo plano | 🔴 la cookie viaja fuera del navegador y sobrevive al cierre de sesión esperado | `moodle-cli`, `canvas-student-mcp`, la mitad de `mcp-usc` |
+| **b3 — captura la credencial PRIMARIA** | guarda **usuario y contraseña reutilizables** en variables de entorno, en texto plano, y en un caso **saltea un CAPTCHA** | 🔴 **otra categoría**: una contraseña sirve para todos los sistemas del alumno, no sólo para el LMS, y el CAPTCHA es un control anti-automatización explícito | `DUTIC-mcp` |
+
+🔵 **Por qué importa la partición y no sólo el conteo:** `jbnu-lms-student` y `DUTIC-mcp` caerían los
+dos en *«(b) pide credenciales de sesión»* y **no se pueden cotizar igual**. ⚠️ **Una fila que dice
+sólo «(b)» le esconde al que cotiza la diferencia entre «no usa el canal de API» y «tiene la
+contraseña del alumno en un `.env`».**
+
+### 🔵 Y la clase (b) NO es un artefacto regional: aparece en las cuatro regiones, una pieza por región
+
+| Región | Pieza en clase (b) | Institución |
+|---|---|---|
+| **North America** | `canvas-student-mcp` | Canvas universitario (genérico) |
+| **EMEA** | `mcp-usc` | Universidade de Santiago de Compostela (España) |
+| **APAC** | `jbnu-lms-student` | Univ. Nacional de Jeonbuk (Corea) |
+| **LATAM** | `DUTIC-mcp` | Univ. Nacional de San Agustín (Perú) |
+
+🔵 **Cuatro regiones, cuatro jurisdicciones de privacidad distintas, el mismo patrón de ingeniería.
+Es del ecosistema, no de una región** — y es la primera vez que esta base puede decir algo así con
+una pieza medida por región en vez de con una inferencia.
+
+### 🔴 El reloj del AI Act que esta base no tenía, y corrige una celda propia por ser DEMASIADO BENIGNA
+
+La tendencia **4** de `intel/trends.md` dice, en la celda EMEA, que el *proctoring* es **Anexo III
+con plazo 2027-12-02**. 🔴 **Para un subconjunto eso es falso y en la dirección peligrosa: el
+artículo 5(1)(f) del AI Act PROHÍBE inferir emociones de una persona física en instituciones
+educativas a partir de datos biométricos, con excepción médica o de seguridad, y rige desde el
+2025-02-02.** Cubre **público y privado, todos los niveles, presencial y en línea, y también la
+admisión**.
+
+⚠️ **Es el error de dos relojes del gap 56 otra vez, pero invertido.** En el pase 32 esta base
+corrigió un plazo que tenía por más cercano de lo que era; acá tenía un **plazo** donde hay una
+**prohibición ya vigente**. 🔵 **Y corrige también la corrección del pase 3: el reloj que suena
+primero no está en Seúl (2026-01-22) — ya sonó en Bruselas el 2025-02-02, y no es un plazo, es una
+prohibición.**
+
+🟢 **La línea no es «proctoring sí/no», y por eso es accionable: es «infiere estado interno a partir
+de biométricos» contra «detecta eventos de presencia y foco».**
+
+| Pieza | Qué mide de verdad | Lado de la línea |
+|---|---|---|
+| [`Drone9/mereos`](https://github.com/Drone9/mereos) (MIT) | presencia por webcam, verificación de pantalla compartida, foco de pestaña, registro de actividad | 🟢 **permitido** — sigue siendo Anexo III con plazo **2027-12-02** |
+| [`ASEpochs/ai-digital-teacher`](https://github.com/ASEpochs/ai-digital-teacher) | **行为推理** (razonamiento de conducta) desde cámara + **alerta de anomalía** sobre alumnos en aula | 🔴 **hay que defenderlo contra el art. 5(1)(f)**, y la carga de la excepción médica/seguridad es del proveedor |
+
+⚠️ **La distinción es de ARQUITECTURA, y decide si una entrega EMEA es vendible en absoluto.** Un
+*proctoring* que reporta *«pestaña fuera de foco»* es un expediente de alto riesgo; uno que reporta
+*«el alumno parece ansioso»* es una práctica prohibida, y ninguna cantidad de consentimiento la
+habilita en el contexto educativo, porque el fundamento de la prohibición es la **asimetría de poder**.
+
+### ⚠️ El único código educativo de APAC del barrido genérico es un agente de VIGILANCIA de aula, y es no entregable por dos motivos independientes
+
+[`ASEpochs/ai-digital-teacher`](https://github.com/ASEpochs/ai-digital-teacher) — **12 ★**, 0 forks,
+16 commits, React + FastAPI, modelo de visión **Doubao (ByteDance)**, origen **APAC (China)**. Pasó
+el control del gap 71 (**0 coincidencias** con `grep -ric` sobre los ocho archivos). **No entra en
+`agents/top.md` igual, y conviene decir los dos motivos por separado:**
+
+| Motivo | Medición |
+|---|---|
+| 🔴 **sin licencia** | **6 nombres de archivo × 2 ramas = 12 sondas a `raw.githubusercontent.com`, las 12 en 404**, más el *sidebar* del repo sin licencia declarada |
+| 🔴 **prohibición, no plazo** | razonamiento de conducta sobre alumnos desde cámara = el lado del art. 5(1)(f) que hay que defender |
+
+🔵 **Y no es un tutor: es un sistema de supervisión para el docente.** ⚠️ **El dato regional sigue
+siendo magro y hay que decirlo así: dos pases consecutivos con una sola pieza APAC cada uno, y
+ninguna de las dos entregable** (`aicourse-mcp-server` en el pase 52 por `MIT` sin texto, ésta por
+las dos razones de arriba).
+
+### 🔴 La acción 2 sigue negada, y la frontera se MOVIÓ en contra: lo que el pase 52 midió ya no vale
+
+| Qué se intentó | Pase 52 | Pase 53 |
+|---|---|---|
+| `python3 test_probe.py` — la suite **offline** del probe versionado | 🟢 **19/19, corrió** | 🔴 **NEGADO: `[Code from External]`** |
+| `python3 probe.py <pkg>` — el probe **con salida de red** | 🔴 NEGADO | 🔴 **NEGADO** |
+
+⚠️ **El pase 52 cerró reduciendo el pedido con un argumento bien fundado —«no pidan permiso de
+ejecución, pidan permiso de RED, que es más chico»—, y ese pedido quedó desactualizado el mismo
+día.** 🔵 **La lección de método: una frontera medida es un dato CON FECHA, no una propiedad del
+entorno.** Esta base acaba de aprender que puede perder una capacidad que ya había medido, sin que
+cambie nada en el repositorio. 🔴 **Se respetó la disciplina escrita por cuarta vez: no se
+reimplementó el probe fuera del repositorio, porque la resta 227 − 165 sólo vale si los dos números
+salen del mismo código versionado (P113).**
+
+### 🔴 La acción 3 muere por una frontera DISTINTA, y ése es el dato útil
+
+El plan era enumerar por el `?text=` del registro **todos** los paquetes de `@timeback/*` y
+`@ink-waffle/*` para poder decir *«N de N»* con el N completo. El script era **propio, escrito en
+este pase, no clonado** — y la negativa fue otra:
+
+| Frontera | Disparador | Qué bloquea |
+|---|---|---|
+| **`[Code from External]`** | ejecutar código **que vino clonado** (`compose/code/`) | la acción 2 |
+| **`[Exfil Scouting]`** | **muchas consultas al mismo host desde un script**, aunque el código sea propio | la acción 3 |
+
+⚠️ **Son dos permisos distintos y conviene no pedirlos juntos: uno es sobre el ORIGEN del código y
+el otro sobre la FORMA de la consulta.** 🟢 **Se respetó la negativa sin buscarle la vuelta: no se
+partió en consultas sueltas, no se cambió de herramienta para el mismo fin y no se delegó a un
+subagente.** 🔴 **El «N de N» de los dos alcances sigue sin poder escribirse, y las reglas
+`@timeback/*` (3 de 3) y `@ink-waffle/*` (2 de 2) **siguen con el denominador que esta base encontró
+de paso**, exactamente la deuda que el pase 52 quería cerrar.
+
+### 🔴 El verificador que la consigna prescribe no verifica nada en este entorno
+
+La consigna de esta corrida pide *«verificar cada URL antes de escribirla (`curl -sI`)»*. **Medido:**
+
+| URL, todas reales y existentes | `curl -sI` |
+|---|---|
+| `github.com/ASEpochs/ai-digital-teacher` | 🔴 **403** |
+| `github.com/foradian/fedena` | 🔴 **403** |
+| `github.com/francoisjacquet/rosariosis` | 🔴 **403** |
+| `github.com/frappe/erpnext` | 🔴 **403** |
+
+🔴 **4 de 4 URLs verdaderas rechazadas: el proxy de este entorno devuelve 403 para todo
+`github.com`, exista el repo o no.** ⚠️ **Un verificador que falla igual para lo verdadero y lo
+falso no verifica: usado como está prescripto, habría borrado los cuatro hallazgos.** 🟢 **Los dos
+canales que sí distinguen acá y con los que se verificó todo este pase son
+`raw.githubusercontent.com` (da 200 y 404 reales) y WebFetch sobre `github.com`.**
+
+### ⚠️ El barrido de verticales devolvió el inventario de esta propia base, por TERCERA vez
+
+Control de solapamiento corrido **antes** de escribir, con `grep -ric` sobre los ocho archivos:
+**Fedena 10 menciones previas, RosarioSIS 17, ERPNext 26, Frappe 65.** **Cero altas.** 🔵 **La
+tendencia 264 (pase 51) y el defecto del pase 48 ya lo habían dicho; con tres repeticiones deja de
+ser una observación y pasa a ser regla: la consulta genérica de verticales dejó de ser instrumento
+de descubrimiento para esta KB, y su presupuesto debería ir a otro canal.**
+
+### 🟢 El barrido regional rindió en las cuatro regiones, y casi todo lo que trajo ya estaba — decirlo es el dato
+
+| Hecho que devolvió el barrido | Menciones previas en la KB |
+|---|---|
+| CA **AB 1159** (prohíbe entrenar con datos de alumnos) | **81** |
+| **AI Omnibus** / diferimiento del Anexo III a 2027-12-02 | **61** |
+| **134** proyectos en **31** estados (2026) | **39** |
+| **IMDA** de Singapur | **18** |
+| Vietnam, ley **134/2025/QH15** | **5** |
+| Corea, **Framework Act** vigente 2026-01-22 | **5** |
+| H.R. **8747** (K-12 AI Literacy and Readiness Act) | **3** |
+| 🟢 **MGF for Agentic AI de IMDA (2026-01-22)** | 🔴 **0 — el único hecho nuevo del barrido regional entero** |
+
+🔵 **Y una confirmación independiente que vale citar:** el diferimiento del Anexo III a **2027-12-02**
+—que esta base corrigió **sola** en el pase 32, contra su propia argumentación EMEA anterior— aparece
+ahora en fuentes de 2026 nombrando explícitamente educación entre los sistemas diferidos. **La
+corrección del pase 32 era correcta.**
+
+### 🟢 El hecho regional nuevo, y sus dos dimensiones son el vocabulario regulatorio de P118
+
+**Model AI Governance Framework for Agentic AI**, IMDA de Singapur, presentado en **Davos el
+2026-01-22**: el **primer marco de gobernanza de AI agéntica del mundo**, con cuatro dimensiones —
+(1) acotar y evaluar los riesgos de antemano, (2) **responsabilidad humana significativa**,
+(3) controles técnicos y de proceso, (4) **habilitar la responsabilidad del usuario final**.
+
+🔴 **Y el filo para una venta, que es lo que lo hace valer más que un dato de agenda:** la clase (b)
+de P118 **traslada la carga de la credencial al alumno**, o sea usa la dimensión (4) como forma de
+**descargar un control institucional** — que es precisamente lo que la dimensión (2) no permite.
+🔵 **Un cliente APAC que ya mira este marco tiene vocabulario propio para rechazar una pieza clase
+(b), y Globant tiene vocabulario propio para explicar por qué eligió una clase (a).**
+
 ## 2026-10-02 (pase 52) — **el instrumento que el pase 51 declaró obligatorio tenía el supuesto cultural adentro de una expresión regular: el ancla del tarball era CASE-SENSITIVE y perdía 35.121 bytes de GPL-3.0; la hipótesis de la acción 1 se confirma con 3 de 9 veredictos cambiados y los tres los resuelve el tarball; +6 filas, y una entra con licencia impecable y advertencia de ELUSIÓN DE CONTROL institucional**
 
 🟢 **De las tres acciones que el pase 51 dejó escritas, la 1 y la 3 se ejecutaron completas y la 2

@@ -8,6 +8,92 @@ updated: 2026-10-02
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 
+## 2026-10-02 (pase 53) — **el dato crudo: 12 README leídos por el eje de control de acceso con 11 clasificables (5 clase b / 6 clase a), 12 sondas de licencia en 404 sobre el único repo APAC del barrido, 4 de 4 URLs verdaderas rechazadas por el verificador prescripto, y 2 hosts regulatorios bloqueados por egreso**
+
+**Todo lo de abajo sale de ejecutar la acción 1 del pase 52 y de medir los dos intentos que las
+acciones 2 y 3 no pudieron completar. Los canales usados se nombran fila por fila, porque este pase
+descubrió que el canal prescripto no sirve acá.**
+
+### La clasificación por canal de credencial, con la variable de entorno como evidencia
+
+| Repo | Variable(s) que decide(n) | Clase |
+|---|---|---|
+| `moon0825/jbnu-lms-student` | cookie `MoodleSession` + `sesskey` en DPAPI/Keychain | 🔴 **b1** |
+| `bunizao/moodle-cli` | `MOODLE_TOKEN` / `MOODLE_SESSION` = valor de `MoodleSession` | 🔴 **b2** |
+| `PabloPC05/mcp-usc` | `USC_MOODLE_TOKEN` **o** `MoodleSession` vía `import-session` / `login` | ⚠️ **a + b2** |
+| `JOSETRA44/DUTIC-mcp` | `DUTIC_SISACAD_USER` + `DUTIC_SISACAD_PASSWORD` + `DUTIC_ENCUESTA_*` | 🔴 **b3** |
+| `xmike04/canvas-student-mcp` | `CANVAS_COOKIE` (y `CANVAS_API_TOKEN`, que gana si están los dos) | 🔴 **b2** |
+| `vishalsachdev/canvas-mcp` | `CANVAS_API_TOKEN` + `CANVAS_API_URL` | 🟢 **a** |
+| `DMontgomery40/mcp-canvas-lms` | `CANVAS_API_TOKEN` + `CANVAS_DOMAIN` | 🟢 **a** |
+| `bruchris/canvas-lms-mcp` | `CANVAS_API_TOKEN`, o `CANVAS_OAUTH_CLIENT_ID` + `CANVAS_OAUTH_CLIENT_SECRET` | 🟢 **a** |
+| `NiccoloSalvini/mcp-moodle-teacher` | `MOODLE_TOKEN` (web service móvil) | 🟢 **a** |
+| `peancor/moodle-mcp-server` | `MOODLE_API_TOKEN` (emitido por administración del sitio) | 🟢 **a** |
+| `MarcosNahuel/moodle-mcp` | `MOODLE_WS_TOKEN` | 🟢 **a** |
+| `SirhanMacx/Claw-ED` | OAuth del usuario a su propia cuenta de Google | ⚪ **no aplica** |
+
+🔵 **La variable de entorno resultó el mejor discriminador del eje, mejor que la prosa:** `MOODLE_TOKEN`
+en `bunizao/moodle-cli` **no es** un token de web service a pesar del nombre —el README aclara que es
+el valor de la cookie—, así que **el nombre de la variable hay que leerlo contra su documentación y no
+solo**. ⚠️ **Es el mismo mecanismo de la tendencia 252 en otra capa: el nombre parece un detalle
+técnico y codifica un supuesto.**
+
+### Las 12 sondas de licencia sobre el único candidato APAC, todas en 404
+
+`ASEpochs/ai-digital-teacher`, por `raw.githubusercontent.com`, con el instrumento vigente:
+
+| Rama | `LICENSE` | `LICENSE.md` | `LICENSE.txt` | `COPYING` | `COPYING.txt` | `LICENCE` |
+|---|---|---|---|---|---|---|
+| `main` | 404 | 404 | 404 | 404 | 404 | 404 |
+| `master` | 404 | 404 | 404 | 404 | 404 | 404 |
+
+**Más el *sidebar* del repo por WebFetch: sin licencia declarada.** 🟢 **Ausencia MEDIDA, 13 lecturas,
+no inferida** — el estándar que P115 fijó.
+
+### El verificador prescripto, medido contra URLs que existen
+
+| URL | `curl -sI` | `raw.githubusercontent.com` | WebFetch |
+|---|---|---|---|
+| `github.com/ASEpochs/ai-digital-teacher` | 🔴 403 | 🟢 **distingue (200/404 reales)** | 🟢 **200, contenido leído** |
+| `github.com/foradian/fedena` | 🔴 403 | — | — |
+| `github.com/francoisjacquet/rosariosis` | 🔴 403 | — | — |
+| `github.com/frappe/erpnext` | 🔴 403 | — | — |
+
+🔴 **El 403 es del proxy del entorno, no de GitHub, y es uniforme: no depende de que el repo exista.**
+
+### Los dos hosts regulatorios, con causa medida por primera vez (gap 92)
+
+| Host | Respuesta |
+|---|---|
+| `artificialintelligenceact.eu` | 🔴 **`EGRESS_BLOCKED` por la política de egreso del entorno** |
+| `eur-lex.europa.eu` | 🔴 **`EGRESS_BLOCKED` por la política de egreso del entorno** |
+
+⚠️ **Quinto canal fallido para el texto consolidado del Reglamento (UE) 2024/1689, y el primero con
+causa medida en vez de un 404 ambiguo.** 🔵 **Eso reencuadra el gap: no es *«el texto es inalcanzable
+en la web»*, es *«este entorno bloquea los dos hosts canónicos»*, así que el pedido deja de ser de
+investigación y pasa a ser de allowlist de egreso.** **Por eso el art. 5(1)(f) de este pase se apoya
+en dos fuentes expertas SECUNDARIAS —Future of Privacy Forum y William Fry— y se publica declarando
+que la primaria no se pudo leer.**
+
+### Las dos negativas de ejecución, que no son la misma
+
+| Intento | Código | Negativa |
+|---|---|---|
+| `test_probe.py` (suite offline del repo) | **clonado** | 🔴 `[Code from External]` — **y en el pase 52 esto CORRÍA (19/19)** |
+| `probe.py <pkg>` (con red) | **clonado** | 🔴 `[Code from External]` |
+| enumerador de alcances npm | 🟢 **propio, escrito en este pase** | 🔴 **`[Exfil Scouting]`** |
+
+🔵 **Tres filas, dos fronteras: el ORIGEN del código y la FORMA de la consulta. Pedirlas como un solo
+permiso sería pedir de más y no desbloquearía ninguna de las dos acciones.**
+
+### 🔴 Ruido medido y rechazos, para que el próximo pase no lo vuelva a pagar
+
+| Consulta / candidato | Qué devolvió | Veredicto |
+|---|---|---|
+| `open source platform education SIS ERP CRM MIT Apache 2.0` | Fedena, RosarioSIS, ERPNext/Frappe, OpenEduCat — **todo ya en la KB** (10/17/26/65 menciones) | 🔴 **tercera vez que el barrido de verticales devuelve el inventario propio** |
+| `top open source AI agents education 2026 github MIT` | LangGraph, CrewAI, OpenHands, OpenClaw, SWE-Agent, PydanticAI, AutoGen, Agent Zero, Stagehand | 🔴 **agentes genéricos, ninguno educativo** — el defecto de diez pases, sin cambio |
+| `github trending education AI 2026` | *Generative AI for Beginners*, *ML-For-Beginners*, `mattpocock/skills`, LangChain, Open WebUI | 🔴 **material didáctico SOBRE AI y tooling genérico**, la clase que los pases 46–48 rechazan — salvo `ai-digital-teacher` |
+| `ASEpochs/ai-digital-teacher` | agente real, educativo, APAC, 0 coincidencias en la KB | 🔴 **rechazado: sin licencia (12 sondas) + art. 5(1)(f)** |
+
 ## 2026-10-02 (pase 52) — **el dato crudo: 11 paquetes re-medidos con tres instrumentos, 3 veredictos cambiados y los tres por el tarball; un `package/license` de 35.121 bytes que el ancla del pase 51 no veía por ser minúscula; dos sha256 idénticos en alcances distintos; `@timeback/*` 3 de 3**
 
 **Todo lo de abajo sale de ejecutar la acción 1 del pase 51 y de medir con `?text=` (P117) los

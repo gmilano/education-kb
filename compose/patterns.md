@@ -8,6 +8,7 @@ updated: 2026-10-02
 
 > Recetas concretas: repos nombrados, licencias verificadas, wiring explícito y estimación.
 > Todos los repos citados fueron verificados vía WebFetch el 2026-09-30; los del pase 11, el 2026-10-01 (ver `agents/top.md`).
+> **Pase 53 del 2026-10-02:** **+2 patrones, y el primero convierte en puerta de entrada el eje que el pase 52 abrió como advertencia.** **P121** sube P118 a **paso obligatorio del filtro de componentes** porque la hipótesis del pase 52 se falsificó: **5 de 11 clientes de LMS/SIS de esta base eluden el control de acceso institucional, uno por cada región.** 🔵 **Y es barato: el mismo control produce dos respuestas opuestas y las dos están en el README, así que cuesta UNA lectura por pieza** (`vishalsachdev/canvas-mcp` manda al formulario de IT; `xmike04/canvas-student-mcp` manda a DevTools). 🔴 **Los tres valores de P118 se reemplazan por cinco, porque la clase (b) son tres clases y la peor guarda usuario y contraseña reutilizables del alumno en variables de entorno** (`DUTIC-mcp`). **P122** parte la capa de *proctoring* y analítica de aula por una línea que esta base no tenía: el **art. 5(1)(f)** del AI Act **prohíbe** inferir emociones en instituciones educativas desde biométricos **desde el 2025-02-02**, así que *«presencia y foco»* es Anexo III con plazo 2027-12-02 y *«estado interno»* es práctica prohibida — ⚠️ **una decisión de arquitectura que decide si la entrega EMEA es vendible en absoluto.** ⚠️ **Y la nota de alcance de P113 EMPEORA, no mejora: el pase 52 midió que la suite offline del probe corría y redujo el pedido a «salida de red»; este pase niega también la suite offline, así que hay que pedir la ejecución entera otra vez.**
 > **Pase 52 del 2026-10-02:** **+3 patrones, y el más importante abre un EJE que esta base no tenía.** **P118** agrega la tercera pregunta del filtro de componentes —*¿la pieza respeta los controles de acceso de la institución?*— porque `canvas-student-mcp` es **MIT verificado por dos artefactos**, pasa P115 y pasa P116, **y su argumento de venta es eludir que la universidad deshabilitó la emisión de tokens**, resolviéndolo con la cookie de sesión del alumno: 🔴 **licencia impecable y NO entregable**, con `@mtgibbs/canvas-lms-mcp` como contraejemplo de misma licencia y misma plataforma que sí usa el token institucional. **P119** corrige la regla que el pase 51 declaró obligatoria: el ancla del tarball era **CASE-SENSITIVE** y perdió `package/license` con **35.121 bytes de GPL-3.0**, así que el ancla tiene que ser insensible a mayúsculas **y seguir anclada** —si se desancla vuelve a publicar las **144** licencias de `node_modules`— 🔵 **y la regla de método que deja es que un instrumento recién corregido es el MENOS probado de todos, por lo que toda corrección sale con un control offline que reproduce el defecto y conserva el control positivo del anterior (24/24 sin red).** **P120** sube la unidad de cotización del paquete al **ALCANCE** (`@timeback/*` 3 de 3 sin licencia, `@ink-waffle/*` 2 de 2 con campo sin texto), ⚠️ **declara que un «3 de 3» con denominador encontrado de paso no es el del alcance enumerado** y marca su propio límite: **la organización de GitHub NO es clave**, porque `pie-framework` publica `pie-qti` (ISC) y `pie-elements-ng` (sin licencia). ⚠️ **Y la nota de alcance de P113 se precisa: la comparación de superficies de Canvas sigue sin instrumento único, pero este pase midió que la suite OFFLINE del probe CORRE y es la ejecución CON RED la que se niega, así que lo que falta pedir es salida de red.**
 > **Pase 51 del 2026-10-02:** **+3 patrones, y los tres salen de ejecutar las acciones 1 y 3 del pase 50.** **P115** convierte el filtro de licencias en una **auditoría de 5 pasos** con los 20 nombres de archivo, el control del hermano y el probe anclado por tarball — medido sobre **167** repos (**139/23/5**) y corrigiendo **4 falsos «sin licencia» de 27**, `moodle/moodle` entre ellos. **P116** separa las dos preguntas que esta base venía mezclando —*«¿hay permiso escrito?»* y *«¿se puede usar en una entrega comercial?»*— porque una pieza con `LICENSE` de 200 y texto real resultó ser **académica no comercial**. **P117** es el pipeline de descubrimiento por el `?text=` del registro, que **rompió nueve pases de sequía** con 4 altas y trae el control del gap 71 adentro. ⚠️ **Y la nota de alcance que P113 arrastra: la comparación de superficies de Canvas sigue sin poder hacerse con un instrumento único porque exige ejecutar código versionado, negado en los pases 50 y 51.**
 > **Pase 50 del 2026-10-02:** **+2 patrones, y los dos salen de la mitad de la acción 1 del pase 49 que no necesitaba ejecutar código.** **P113** saca la entrega sobre Canvas de la dependencia de un archivo ajeno: **dos puertas MIT con texto de licencia verificado**, la mayor con **165** tools cubriendo los cuatro dominios del núcleo, **el servidor de 227 sin licencia pasa a opcional**, y ⚠️ **la resta 227−165 queda prohibida por ser de dos instrumentos**. **P114** convierte en puerta de entrada el filtro de licencias de **dos artefactos con salida de TRES valores** (`licenciado` / `sin licencia` / `indeterminado`), medido sobre 30 paquetes: **se equivoca en los dos sentidos si se lee uno solo**, y sin el control de alcanzabilidad publica **7 falsos «sin licencia»** donde hay **2**.
@@ -110,6 +111,124 @@ updated: 2026-10-02
 > propuesta, no se descubre en la semana 6. Ver la sección de auditoría abajo y **P78**. 🟢 **Lo que sí está sano:** `lrsql`
 > (Apache-2.0, **v0.9.9 del 2026-10-01**), Ralph (MIT, vivo en `main`), las cuatro puertas de Canvas y Moodle-alumno
 > (commits de las últimas dos semanas) y `qti3-cli` (MIT). **El resto de las recetas no cambia.**
+
+## P121 — El canal de credencial como paso OBLIGATORIO del filtro de componentes (agregado en el pase 53; **las cuatro regiones**)
+
+> **Reemplaza la formulación de P118.** P118 lo planteó como una tercera pregunta y una advertencia
+> por fila; el pase 53 midió que **5 de 11 clientes de LMS/SIS de esta base eluden el control de
+> acceso institucional**, uno por cada región, así que deja de ser advertencia y pasa a ser puerta.
+
+**El problema que resuelve.** P115 pregunta *«¿hay permiso escrito?»* y P116 *«¿se puede usar en una
+entrega comercial?»*. Una pieza puede pasar las dos y **seguir siendo imposible de entregar**, porque
+hay una tercera pregunta: **¿la pieza respeta los controles de acceso de la institución que la va a
+alojar?** 🔴 **Un cliente institucional trata la elusión como incidente de seguridad, no como detalle
+de integración, y una licencia permisiva no dice nada al respecto.**
+
+**El mecanismo, que es lo que lo vuelve medible y no opinable.** 🔴 **La cookie de sesión es la única
+credencial que la institución no puede negar sin romper su propio login.** El control dice *«no
+emitimos tokens de API a los alumnos»*; el camino de la cookie **es inmune a ese control por
+construcción**. ⚠️ **Por eso la elusión es el camino de menor resistencia justamente cuando el control
+aprieta, y por eso hay que buscarla siempre en vez de esperar que sea rara.**
+
+**El paso, con cinco valores en vez de tres.** Una lectura del README por pieza:
+
+| Valor | Qué significa | Cómo se reconoce | ¿Entra? |
+|---|---|---|---|
+| **(a)** | usa una credencial que la institución **emite y revoca** | `CANVAS_API_TOKEN`, `MOODLE_WS_TOKEN`, OAuth con `CLIENT_ID`/`CLIENT_SECRET` registrados | 🟢 **sí** |
+| **b1** | monta la sesión **conservando los factores**: el usuario entra en un navegador real con 2FA/passkey, la herramienta nunca ve la contraseña, guarda en el llavero del SO | *«nunca recibe contraseñas ni passkeys»* + DPAPI/Keychain + sólo lectura | ⚠️ **con gestión**: no degrada la autenticación, pero sigue sin pasar por el canal de API |
+| **b2** | monta la sesión **por pegado de cookie** desde DevTools y la mantiene viva | *«Copy as cURL»*, *«copy the full `cookie:` value»*, `MoodleSession`, `CANVAS_COOKIE` | 🔴 **no sin autorización escrita del cliente** |
+| **b3** | captura la **credencial primaria**: usuario y contraseña reutilizables en variables de entorno, y a veces saltea controles anti-automatización | `*_USER` + `*_PASSWORD` en `.env`; *«sin CAPTCHA»* | 🔴 **no, y no es negociable** |
+| **no aplica** | no hay control de un tercero en juego: OAuth del usuario a **su propia** cuenta | `clawed drive auth` contra la cuenta Google del propio usuario | 🟢 **sí** |
+
+⚠️ **El falso positivo que hay que evitar, medido en el pase 53:** la cookie de sesión **de la propia
+aplicación** no es la cookie de un LMS ajeno. **P121 pregunta por el control de un tercero —la
+institución—, no por cualquier cookie.**
+
+**Cómo se lee en un minuto.** 🟢 **El mismo control institucional produce dos respuestas opuestas y
+las dos están escritas en el README**, así que basta buscar qué hace la pieza cuando el token no está
+disponible:
+
+| Pieza | Enfrenta el mismo hecho | Responde |
+|---|---|---|
+| [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) (MIT) | *«Some institutions gate token creation… the "New Access Token" button is missing»* | 🟢 **el formulario de pedido a IT** → clase **(a)** |
+| [`xmike04/canvas-student-mcp`](https://github.com/xmike04/canvas-student-mcp) (MIT) | *«many universities disable self-service token generation for students»* | 🔴 **DevTools → Network → copiar la cookie** → clase **b2** |
+
+**Wiring recomendado para una entrega sobre Canvas o Moodle.** Elegir la puerta por clase **(a)** y
+dejarlo escrito en la propuesta:
+
+| Plataforma | Puerta clase (a) a usar | Licencia | Por qué ésta |
+|---|---|---|---|
+| **Canvas** | [`bruchris/canvas-lms-mcp`](https://github.com/bruchris/canvas-lms-mcp) | **MIT** | única de las medidas con **modo OAuth `oauth_brokered`**: la institución registra la app y la revoca, que es el argumento más fuerte ante seguridad |
+| **Canvas** (alternativa) | [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | **MIT** | documenta el camino institucional cuando el self-service está cerrado |
+| **Moodle** | [`MarcosNahuel/moodle-mcp`](https://github.com/MarcosNahuel/moodle-mcp) | **MIT** | la declaración más limpia de las once: *«No cookie auth, no web scraping, no direct DB access»* — es una frase citable en una propuesta |
+| **Moodle** (corrección de notas) | [`toshieji/moodle-grading-mcp`](https://github.com/toshieji/moodle-grading-mcp) | **MIT** | token de web service + escribe en `workflowstate=readyforreview`, o sea **nunca publica** (ver P-s de alto riesgo) |
+
+🔵 **Y el argumento regulatorio que lo acompaña, nuevo en el pase 53:** el **MGF for Agentic AI** de
+IMDA (Singapur, 2026-01-22) exige **(2) responsabilidad humana significativa** y **(4) habilitar la
+responsabilidad del usuario final**. 🔴 **Una pieza clase (b) usa la dimensión (4) para descargar un
+control institucional, que es exactamente lo que la dimensión (2) no permite** — así que ante un
+cliente APAC que ya mira ese marco, elegir clase (a) se explica con su propio vocabulario.
+
+**Esfuerzo.** **Una lectura de README por pieza**, no una revisión de código. Medido en el pase 53:
+**12 piezas en un pase**, con el eje decidido por la variable de entorno y su documentación.
+
+⚠️ **La trampa del nombre, que costó una clasificación:** `MOODLE_TOKEN` en
+[`bunizao/moodle-cli`](https://github.com/bunizao/moodle-cli) **no es** un token de web service — el
+README aclara que es el valor de la cookie `MoodleSession`. **El nombre de la variable se lee contra
+su documentación, nunca solo.**
+
+## P122 — La línea del art. 5(1)(f) dentro del *proctoring*: qué arquitectura es vendible en EMEA (agregado en el pase 53; **EMEA primero**)
+
+> ⚠️ **Este patrón corrige una celda de esta propia base por ser demasiado benigna.** La tendencia 4
+> clasifica todo el *proctoring* como **Anexo III con plazo 2027-12-02**. Para un subconjunto no hay
+> plazo: hay **prohibición vigente desde el 2025-02-02**.
+
+**El hecho.** El **art. 5(1)(f)** del Reglamento (UE) 2024/1689 **prohíbe** los sistemas de AI que
+infieren emociones de una persona física **en instituciones educativas** a partir de datos
+biométricos, con excepción únicamente **médica o de seguridad**. Cubre **entidades públicas y
+privadas, todos los niveles, presencial y en línea, y también la admisión**. 🔴 **Su fundamento es la
+asimetría de poder entre institución y alumno, así que el consentimiento del alumno NO la habilita.**
+
+⚠️ **Fuente declarada:** el texto primario no se pudo leer en este entorno —`eur-lex.europa.eu` y
+`artificialintelligenceact.eu` devuelven `EGRESS_BLOCKED` (gap 92)—, así que esto se apoya en dos
+análisis expertos secundarios (**Future of Privacy Forum**, **William Fry**) y se publica declarándolo.
+🔴 **Antes de usar P122 en una propuesta hay que leer el texto consolidado.**
+
+**La línea, que es de arquitectura y no de categoría de producto.**
+
+| Señal que el sistema emite | Clasificación | Reloj |
+|---|---|---|
+| *«pestaña fuera de foco»*, *«pantalla no compartida»*, *«no hay rostro frente a la cámara»* | 🟢 **evento de presencia/foco — permitido** | Anexo III, alto riesgo, expediente con plazo **2027-12-02** |
+| *«el alumno parece ansioso»*, *«conducta anómala»*, *«falta de atención»* | 🔴 **inferencia de estado interno — práctica PROHIBIDA** | **vigente desde 2025-02-02**; sin plazo que vender |
+
+🔵 **El mismo sensor cae de los dos lados según cómo se reporte, y ahí está el valor del patrón:**
+*«mirada fuera de la pantalla»* es un evento; *«falta de atención»* es un estado inferido, **y es la
+misma señal con otro nombre.** ⚠️ **Lo que se audita es el VOCABULARIO de la salida, no el hardware.**
+
+**Las piezas de esta KB, clasificadas en el pase 53.**
+
+| Pieza | Qué mide de verdad | Lado |
+|---|---|---|
+| [`Drone9/mereos`](https://github.com/Drone9/mereos) | **MIT** · presencia por webcam, verificación de pantalla compartida, foco de pestaña, registro de actividad | 🟢 **permitido** — sigue siendo Anexo III con plazo |
+| [`ASEpochs/ai-digital-teacher`](https://github.com/ASEpochs/ai-digital-teacher) | **行为推理** (razonamiento de conducta) desde cámara + alerta de anomalía sobre alumnos | 🔴 **hay que defenderlo**; y además **sin licencia** (12 sondas en 404) |
+
+**La receta de entrega en EMEA.**
+
+1. **Fijar el vocabulario de salida antes de elegir el componente.** Escribir la lista de eventos que
+   el sistema puede emitir, y que **ninguno nombre un estado interno**. Es un documento de una página
+   y es el que decide la clasificación.
+2. **Elegir la capa de integridad por evento**, no por *«detección de trampa con AI»*: `mereos` (MIT)
+   es el punto de partida medido de esta KB.
+3. **Dejar la decisión final en un humano**, con el patrón que esta base ya tiene: la nota se escribe
+   en `workflowstate=readyforreview` y la publica una persona ([`toshieji/moodle-grading-mcp`](https://github.com/toshieji/moodle-grading-mcp), MIT).
+4. **Expediente de Anexo III con plazo 2027-12-02** para lo que quede del lado permitido — **26 meses
+   de trabajo de conformidad que se venden hoy**, que es el encuadre que la tendencia 4 ya traía.
+5. 🔴 **Y la frase que no se puede decir en esta venta:** que el sistema *«detecta el estado emocional
+   del alumno»* o *«mide su nivel de atención»*. **No es un problema de redacción: en el contexto
+   educativo de la UE es la descripción de una práctica prohibida.**
+
+**Esfuerzo.** La clasificación por pieza es **una lectura de la lista de señales de salida**. El
+expediente de Anexo III para lo permitido es el trabajo real y es el entregable facturable.
 
 ## P118 — Preguntar si la pieza RESPETA los controles de acceso de la institución, porque la licencia no lo dice (agregado en el pase 52 del 2026-10-02)
 

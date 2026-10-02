@@ -1170,6 +1170,25 @@ Dónde se produce el software educativo abierto, que no es donde está la demand
 
 ### North America
 
+**🔵 Pase 53 del 2026-10-02 — la oportunidad de esta región ya no es de licencia ni de cifra: es que el control de acceso del cliente es un requisito que el open source educativo incumple la mitad de las veces.**
+
+- 🔴 **El dato que vale para una venta:** de **11** clientes de LMS/SIS medidos en esta KB, **5 eluden
+  el control de acceso institucional**, y la pieza de esta región que lo hace
+  ([`xmike04/canvas-student-mcp`](https://github.com/xmike04/canvas-student-mcp)) es **MIT con texto
+  verificado por dos artefactos**. ⚠️ **Un comprador de North America —donde la decisión la toma cada
+  distrito o universidad y la gobernanza es contractual, no regulatoria— no rechaza por licencia:
+  rechaza por seguridad.** 🟢 **Llegar con la puerta clase (a) ya elegida y justificada (P121) es
+  diferenciación concreta, porque el competidor que bajó el repo más estrellado llega con una clase (b).**
+- 🟢 **Y el camino sancionado existe y está documentado por la propia comunidad:**
+  [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) (MIT) describe el
+  **formulario de pedido de token a IT** de la Universidad de Illinois. 🔵 **Eso convierte un bloqueo
+  técnico en un paso de proyecto con dueño institucional** — y es exactamente el tipo de fricción que
+  una consultora cobra por resolver.
+- ⚠️ **Sin cifra nueva de mercado este pase, y conviene decirlo en vez de repetir las que ya están:**
+  el barrido regional devolvió **AB 1159** (81 menciones previas en esta KB), los **134 proyectos en
+  31 estados** (39), **H.R. 8747** (3) e **ID SB 1227** — **todo ya registrado**. 🔵 **El barrido de
+  North America llegó a saturación para el eje regulatorio; lo que rinde acá es el eje de P121.**
+
 **🔵 Pase 52 del 2026-10-02 — la región devolvió un CONFLICTO de cifra DENTRO DE UNA MISMA respuesta, y la oportunidad nueva es de control de acceso, no de licencia.**
 
 - ⚠️ **El conflicto, declarado como tal (P107):** el barrido de esta región devolvió **dos
@@ -2218,6 +2237,33 @@ Artículo 50(2) **no es exigible** en North America — pero es **el requisito m
 multi-región conviene cotizarlo contra el techo europeo y no contra el piso local (ver **P103** y **P105**).
 
 ### EMEA
+
+**🔴 Pase 53 del 2026-10-02 — la oportunidad EMEA cambia de forma, porque esta base descubrió que le faltaba una PROHIBICIÓN y no un plazo, y eso mueve una capa entera de vendible a defendible.**
+
+- 🔴 **El hecho:** el **art. 5(1)(f)** del AI Act **prohíbe** inferir emociones en instituciones
+  educativas a partir de datos biométricos **desde el 2025-02-02**, con excepción sólo médica o de
+  seguridad, y cubre **público y privado, todos los niveles, presencial y en línea, y la admisión**.
+  ⚠️ **Esta base venía clasificando toda la capa de *proctoring* como Anexo III con plazo 2027-12-02:
+  demasiado benigno para el subconjunto que infiere estado interno.** Ver **P122** y las tendencias
+  **286**–**288**.
+- 🟢 **La oportunidad, que es mayor que el riesgo y es de arquitectura:** la línea no es *«proctoring
+  sí o no»* sino **«evento de presencia y foco» contra «inferencia de estado interno»**, y **el mismo
+  sensor cae de los dos lados según cómo se reporte**. 🔵 **Fijar el vocabulario de salida es un
+  entregable de una página que decide la clasificación regulatoria de todo el sistema** — y después
+  queda el expediente de Anexo III, que son los **26 meses de trabajo de conformidad** que esta base
+  ya identificaba como vendibles hoy.
+- 🔵 **Y hay un cliente natural que esta base no estaba nombrando: el que YA compró proctoring con
+  analítica emocional.** Para ése el trabajo no es un expediente, es una **remediación con fecha
+  vencida**, que es una venta más urgente y menos discrecional.
+- ⚠️ **La pieza EMEA de clase (b) de P121 está en España:**
+  [`PabloPC05/mcp-usc`](https://github.com/PabloPC05/mcp-usc), contra el Campus Virtual de la
+  Universidade de Santiago de Compostela. 🟢 **Es el mejor caso de los cinco porque ofrece las dos
+  vías —token institucional `USC_MOODLE_TOKEN` y sesión por Entra+MFA—, así que una entrega puede
+  usarlo configurando sólo la primera.**
+- 🔴 **Límite de este pase, declarado:** el texto consolidado del Reglamento sigue sin poder leerse acá
+  —`eur-lex.europa.eu` y `artificialintelligenceact.eu` dan **`EGRESS_BLOCKED`** (gap 92, quinto canal)—
+  así que el art. 5(1)(f) se apoya en **dos fuentes expertas secundarias** y **no debe citarse ante un
+  cliente sin leer antes la primaria**.
 
 **🟢 Pase 52 del 2026-10-02 — la región gana una capa AFRICANA de política que esta base no tenía, y la dispersión interna de la UE es el dato que decide el discurso.**
 
@@ -3388,6 +3434,35 @@ este pase dejó cubierto con código.
 
 ### APAC
 
+**🟢 Pase 53 del 2026-10-02 — APAC aporta el único hecho regulatorio NUEVO de todo el barrido regional, y resulta ser el vocabulario con el que se vende P121.**
+
+- 🟢 **El hallazgo:** **Model AI Governance Framework for Agentic AI**, IMDA de Singapur, presentado en
+  **Davos el 2026-01-22** — **el primer marco de gobernanza de AI agéntica del mundo**. Cuatro
+  dimensiones: (1) acotar y evaluar los riesgos de antemano, (2) **responsabilidad humana
+  significativa**, (3) controles técnicos y de proceso, (4) **habilitar la responsabilidad del usuario
+  final** mediante transparencia y formación. ⚠️ **Esta KB tenía 18 menciones de IMDA y cero de este
+  marco.**
+- 🔴 **Por qué es comercial y no de agenda:** una pieza de **clase (b)** de P121 traslada la carga de la
+  credencial **al alumno**, o sea **usa la dimensión (4) para descargar un control institucional, que es
+  justo lo que la dimensión (2) no permite**. 🔵 **Ante un cliente de Singapur —o de cualquier plaza que
+  tome ese marco como referencia— elegir clase (a) se argumenta con su propio documento, no con una
+  opinión de arquitectura.**
+- 🔵 **Y el marco nombra explícitamente la formación** sobre buenas prácticas de supervisión, modos de
+  falla comunes y **la pérdida de conocimiento operativo básico cuando los agentes absorben las tareas
+  de entrada** — ⚠️ **que es un servicio de capacitación con comprador institucional ya identificado, y
+  no es el mismo producto que un tutor.**
+- ⚠️ **La pieza APAC de clase (b) está en Corea:**
+  [`moon0825/jbnu-lms-student`](https://github.com/moon0825/jbnu-lms-student), contra el LMS de la
+  Universidad Nacional de Jeonbuk. 🟢 **Es la clase b1, la menos grave de las tres: el alumno se
+  autentica en un navegador real con passkey/2FA, la herramienta nunca recibe la contraseña y guarda la
+  sesión en el llavero del sistema operativo.** 🔵 **Es el mejor ejemplo disponible de que «monta la
+  sesión» y «captura la credencial» no son lo mismo.**
+- 🔴 **El vacío de descubrimiento de código APAC NO se rompió este pase, y la única pieza es un agente
+  de vigilancia de aula:** [`ASEpochs/ai-digital-teacher`](https://github.com/ASEpochs/ai-digital-teacher)
+  (12 ★, visión Doubao/ByteDance, China) es **no entregable por dos motivos independientes** —sin
+  licencia con ausencia medida en 12 sondas, y del lado del art. 5(1)(f) que hay que defender—.
+  ⚠️ **Dos pases consecutivos con una sola pieza APAC cada uno y ninguna entregable.**
+
 **🟢 Pase 52 del 2026-10-02 — por primera vez en diez pases la región aporta CÓDIGO educativo, y no llegó por el canal que se venía usando.**
 
 - 🟢 **El hallazgo del pase para esta región:** `aicourse-mcp-server` **0.1.0** envuelve el **agente
@@ -4347,6 +4422,34 @@ desplegado + puerta MCP permisiva (`jbnu-lms-mcp`, `canvas-lms-mcp`, las cuatro 
 depende de un tercero» son el mismo argumento.**
 
 ### LATAM
+
+**🔴 Pase 53 del 2026-10-02 — LATAM aporta la peor pieza de la clasificación de este pase, y eso es, paradójicamente, la oportunidad regional más clara: un trabajo de remediación con dueño identificado.**
+
+- 🔴 **El dato:** [`JOSETRA44/DUTIC-mcp`](https://github.com/JOSETRA44/DUTIC-mcp), contra los sistemas de
+  la **Universidad Nacional de San Agustín (Arequipa, Perú)** —aula virtual Moodle, SISACAD, matrícula y
+  encuesta docente—, es la única pieza de las once en **clase b3**: guarda **usuario y contraseña
+  reutilizables del alumno en variables de entorno** (`DUTIC_SISACAD_USER`, `DUTIC_SISACAD_PASSWORD`,
+  `DUTIC_ENCUESTA_*`) y describe uno de los sistemas como *«usuario + clave + Escuela/Programa **sin
+  CAPTCHA**»*. ⚠️ **Una contraseña sirve para todos los sistemas del alumno, no sólo para el LMS: es
+  otra categoría de riesgo que montar una sesión.**
+- 🟢 **Por qué es oportunidad y no sólo advertencia:** la pieza existe porque **la universidad no expone
+  una API utilizable al alumno**, y alguien resolvió el problema igual. 🔵 **El trabajo vendible en LATAM
+  no es un tutor más: es la capa de integración autorizada —token de web service, OAuth registrado— que
+  elimina la razón de existir de la clase b3.** ⚠️ **Y es un proyecto con comprador institucional
+  identificable, no una venta de plataforma.**
+- 🔵 **El contexto regional sostiene el encuadre:** **79 % del cuerpo docente de LATAM** declara usar AI
+  en su enseñanza —18 puntos sobre la cifra global de 2025— **pero 88 % reporta un involucramiento
+  «mínimo» a «moderado»**. 🔴 **Adopción alta con profundidad baja es exactamente el terreno donde
+  aparecen las piezas clase (b): la demanda existe y el canal institucional no.**
+- 🟢 **Y hay un instrumento regional nuevo para apoyarse:** el **Observatorio de IA en la Educación para
+  América Latina y el Caribe** de **UNESCO** (lanzado el 14 de abril), plataforma regional de apoyo a los
+  Estados para integrar AI en sus sistemas educativos con foco en equidad y calidad. 🔵 **Da marco
+  público a una propuesta de gobernanza de credenciales que de otro modo suena a requisito técnico.**
+- ⚠️ **Sin cifra nueva de tamaño de mercado para LATAM este pase; el barrido devolvió el cuadro
+  regulatorio ya registrado** (Brasil PL 2.338/2023, Chile, Colombia CONPES, México sectorial, Perú con
+  prácticas prohibidas y supervisión humana obligatoria para alto riesgo). 🔵 **Lo citable como nuevo es
+  el Perú de la fila de arriba leído junto con `DUTIC-mcp`: la jurisdicción ya exige supervisión humana
+  en usos de alto riesgo mientras el open source local pide la contraseña del alumno.**
 
 **🟢 Pase 52 del 2026-10-02 — la región vuelve a dar la oportunidad mejor fundada del pase, y esta vez con INSTRUMENTO declarado y una brecha de gobernanza cuantificada.**
 
