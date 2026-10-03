@@ -8,6 +8,7 @@ updated: 2026-10-03
 
 > Bases sobre las cuales construir. Verificado repo por repo vía WebFetch el 2026-09-30 (capas del pase 10, el 2026-10-01).
 > Leer la columna **Licencia** antes de proponer: media KB de educación es GPL/AGPL, no permisiva.
+> **Pase 59 del 2026-10-03:** ⚠️ **cero plataformas nuevas y el barrido obligatorio completo (cuatro globales + cuatro regionales, año calculado: 2026) volvió por DUODÉCIMA vez con la capa genérica y material didáctico *sobre* AI.** 🔴 **El hallazgo del pase es de LICENCIA y cambia el ORDEN de los filtros: el MCP de Moodle más estrellado que apareció —`loyaniu/moodle-mcp`, 37 ★, el segundo de toda esta capa tras los 272 de `vishalsachdev`— NO TIENE LICENCIA: `LICENSE` ausente en `main` y en `master` y sin clave `license` en `pyproject.toml`. Es inusable por Globant, y las tres permisivas del mismo barrido tienen 0 ★** (**P147**, tercera reproducción de la curva invertida de P134/P138, ahora sobre la licencia). 🔵 **Regla que queda escrita: el filtro de licencia se aplica ANTES del de popularidad, porque el orden inverso selecciona lo que no se puede entregar.** ⚠️ **Corrección de CANAL, y toca al verificador de licencias de esta base: `curl -sI` contra `github.com` devolvió `403` en los OCHO repos probados —el proxy de egreso bloquea `HEAD` sobre el HTML, no es un 404—, así que la verificación se hizo por `raw.githubusercontent.com` (200) y `WebFetch`, dos canales concordantes. Los veredictos de licencia de este pase siguen valiendo porque sus sondas fueron contra `raw`, que responde.** ⚠️ **Nota de instrumento: segunda reproducción consecutiva de la negativa a ejecutar el código clonado, incluidas las suites OFFLINE, así que ninguna cifra de `compose/code/` se re-verificó en este pase.** Ver **P145**–**P148** y las tendencias **402**–**412**.
 > **Pase 57 del 2026-10-03:** ⚠️ **cero repos nuevos y el barrido obligatorio completo (cuatro globales + cuatro regionales, año calculado: 2026) volvió por UNDÉCIMA vez con la capa genérica y material didáctico *sobre* AI** — y por segunda vez devolvió una pieza de esta propia base (`DeepTutor`) presentada como novedad. 🔴 **El hallazgo del pase es sobre un repo que esta base ya tenía y cuyo ÁRBOL SE MUDÓ: `moodle/moodle` relocalizó todo el código de la aplicación bajo `public/` en Moodle 5.** Medido con 12 sondas: `main/mod/assign/locallib.php` da **404** mientras `main/public/mod/assign/locallib.php` da **200** y `MOODLE_405_STABLE/mod/assign/locallib.php` da **200**. ⚠️ **Y la nota de instrumento que sale de ahí toca el verificador de licencias de esta base: `main/README.md` y `main/config-dist.php` dan 200 mientras `main/version.php` —de la MISMA raíz— da 404, así que una sonda de rama contra `README.md` NO prueba que el árbol esté en esa rama.** 🔵 **El veredicto «`LICENSE` 404 en `main` y `master`» sigue valiendo como *«no está en esa rama»*, pero no como *«el proyecto no tiene licencia»* cuando el proyecto mudó su árbol. Regla nueva: la sonda tiene que ser el archivo que se va a leer, no un hermano cualquiera** (**gap 250**). 🟢 **El valor del pase está en el instrumento, otra vez: 14 suites corridas OFFLINE con 383 aserciones y 0 fallas, una NUEVA (`grading-draft-gate` 37/37, la acción 2 del pase 56) y con TRES MUTACIONES que prueban que la suite nueva puede fallar (31/37, 36/37, 35/37).** 🔴 **Y una corrección que esta base se hace sobre su propia recomendación fundacional: nueve pases citaron el `readyforreview` de `toshieji/moodle-grading-mcp` como el patrón de cumplimiento a copiar, y la lectura del código de Moodle (`public/mod/assign/locallib.php:3001`) muestra que la garantía depende de `markingworkflow=1` en la TAREA — con `markingworkflow=0` Moodle publica la nota igual** (**P139**). ⚠️ **Dato de licencia que no cambia: la pieza de escritura docente mejor guardada de la capa sigue siendo MIT con 0 ★, y la puerta oficial de Open edX sigue siendo AGPL-3.0.** Ver **P137**–**P141** y las tendencias **370**–**392**.
 > **Pase 56 del 2026-10-03:** ⚠️ **cero repos nuevos y el barrido obligatorio completo (cuatro globales + cuatro regionales, año calculado: 2026) volvió por DÉCIMA vez con la capa genérica — y esta vez con las cifras idénticas dígito por dígito a las del pase 55** (openclaw **385.407 ★**, dify **151.639**, browser-use **108.128**, Mem0 **62.735**, AutoGen **60.284**, Flowise **55.226**). 🔵 **Dos pases del mismo día con cifras que no se mueven ni un dígito es dato de CANAL, no de ecosistema: el barrido genérico está saturado, y decirlo es más útil que repetirlo.** 🟢 **El valor del pase está otra vez en el instrumento de este repositorio: las 13 suites de `compose/code/` corrieron OFFLINE, dos son NUEVAS (`suite-total-control` 10/10 y `aiact-50-2-exposure/test_exposure.py` 11/11) y dos pasaron a publicar su total propio (`unitime-mcp-gate` **46/46**, `openedx-course-generator` **33/33**), cerrando la acción 2 del pase 55.** 🔴 **Y una cifra de esta base quedó corregida: el conjunto expuesto al Artículo 50(2) es **33 de 66 (50 %)**, no 32/48 % — el pase 45 lo había medido bien (*«32 … más 1 `pack`»*) y la propagación perdió la fila `pack` en cada cita aguas abajo, mientras los dos escáneres de la capa seguían usando 33 como denominador.** ⚠️ **Dato de licencia que no cambia pero conviene repetir antes de cotizar: la única pieza de escritura docente conforme al Artículo 50 es MIT con 0 ★, y la puerta oficial de Open edX sigue siendo AGPL-3.0.** Ver **P132**–**P135** y el patrón nuevo **P136** y las tendencias **338**–**369**.
 > **Pase 55 del 2026-10-03:** ⚠️ **cero repos nuevos y el barrido obligatorio completo (cuatro globales + cuatro regionales, año calculado: 2026) volvió por novena vez con la capa genérica y material didáctico *sobre* AI** — openclaw **385.407 ★**, dify **151.639**, browser-use **108.128**, Mem0 **62.735**, AutoGen **60.284**, Flowise **55.226**. 🔵 **Un nombre nuevo que NO entra y queda registrado para no volver a pagarlo: *«Hermes Agent»*, que una secundaria declara MIT con 180.000+ ★ desde feb-2026 — agente general, no educativo, y sin terna.** 🔴 **El valor del pase está en el instrumento de este repositorio, no afuera: las once suites de
@@ -179,6 +180,44 @@ corre ése antes de escribir uno a mano** (tendencia **313**). 🟢 **Y el `gafa
 > completo, resuelve las constantes compuestas y los valores de `src/main/resources` —que es lo que `raw` no permite
 > sin saber de antemano qué archivo pedir— y además **fecha el `HEAD`**. Con `raw` no se habría encontrado ninguno de
 > los cuatro defectos del pase.
+
+## 🧾 La LICENCIA se mide ANTES de la popularidad, y este pase tiene el contraejemplo más caro (pase 59 del 2026-10-03)
+
+**Cero plataformas nuevas: duodécimo pase con el barrido genérico devolviendo la capa de siempre**
+(Moodle, Open edX, Sakai, Canvas, ILIAS, Chamilo, OpenEduCat) **y material didáctico *sobre* AI en vez
+de repos *para* educación.** 🔵 **El valor del pase está en una medición de licencia que cambia el
+ORDEN de los filtros con que esta base recomienda.**
+
+### 🔴 El MCP de Moodle más estrellado del barrido no tiene licencia (P147)
+
+| Repo | ★ | `main/LICENSE` | `master/LICENSE` | Metadatos del paquete | Veredicto |
+|---|---|---|---|---|---|
+| [`loyaniu/moodle-mcp`](https://github.com/loyaniu/moodle-mcp) | **37** | 🔴 ausente | 🔴 ausente | 🔴 **sin clave `license` en `pyproject.toml`** (`moodle-mcp` v0.2.1) | 🔴 **SIN LICENCIA — inusable** |
+| [`dddanielliu/NCCU-Moodle-MCP`](https://github.com/dddanielliu/NCCU-Moodle-MCP) | 0 | 🔴 ausente | 🔴 ausente | — | 🔴 **SIN LICENCIA** |
+| [`Jawadh-Salih/moodle-mcp-server`](https://github.com/Jawadh-Salih/moodle-mcp-server) | 0 | 🟢 **`MIT License`** | — | — | 🟢 **MIT medido de primera mano** |
+| [`csmediapro/moodle-mcp-server`](https://github.com/csmediapro/moodle-mcp-server) | 0 | ⚠️ **AGPL-3.0** | — | — | ⚠️ **copyleft fuerte: no es base** |
+| [`CharlieCardenasToledo/mcp-canvas-server`](https://github.com/CharlieCardenasToledo/mcp-canvas-server) | 0 | 🟢 **MIT** | — | — | 🟢 **permisiva** |
+
+🔴 **`loyaniu/moodle-mcp` acumula 37 ★ —el segundo de toda la capa MCP de esta base, después de los
+272 de `vishalsachdev/canvas-mcp`— y no se puede entregar.** El defecto es de **permiso**, no de
+calidad: sin `LICENSE` en ninguna de las dos ramas y sin declaración en el empaquetado, no hay
+concesión de derechos y el *default* del derecho de autor es «todos reservados».
+
+🔵 **Regla de orden, y es lo que este pase aporta a este archivo:** **el filtro de licencia se aplica
+ANTES del de popularidad.** ⚠️ **El orden inverso selecciona justamente lo que no se puede entregar**:
+de las cinco medidas arriba, la más adoptada es la inusable y las tres permisivas tienen **0 ★**.
+🔵 **Tercera reproducción de la curva invertida de P134/P138 —la pieza conforme no es la adoptada—,
+ahora sobre la licencia en vez de sobre la compuerta de seguridad.**
+
+### ⚠️ Y una corrección de CANAL que toca al verificador de licencias de esta base
+
+🔴 **`curl -sI https://github.com/<owner>/<repo>` devolvió `403` para los ocho repos probados en este
+pase**, incluidos los que el pase 58 verificó sin problema. **Es el proxy de egreso bloqueando `HEAD`
+sobre el HTML de `github.com`, no un `404`.** 🔵 **Así que en este entorno la verificación de
+existencia se hace por `raw.githubusercontent.com` (200) y por `WebFetch` de la página, dos canales
+concordantes** — y **un `403` por `curl -sI` no es evidencia de nada sobre el repo.** ⚠️ **Se declara
+porque el veredicto «`LICENSE` 404 en `main` y `master`» de este pase SÍ es válido: esas sondas fueron
+contra `raw.githubusercontent.com`, que responde, y no contra el HTML bloqueado.**
 
 ## 🧱 La base que este pase agrega no es una plataforma: es el patrón de separación generación/publicación (pase 58 del 2026-10-03)
 

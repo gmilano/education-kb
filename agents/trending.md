@@ -9,6 +9,116 @@ updated: 2026-10-03
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 > No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
 
+## 2026-10-03 (pase 59) — **la acción 2 cierra en 1 de 9 y la unicidad se confirma: «afirma la publicación» no es una clase, es UNA fila — pero el eje resulta BIPOLAR y los dos polos dependen de la misma casilla en sentidos opuestos**
+
+### 🔴 El hallazgo que manda: el eje tiene DOS polos, no uno (P145)
+
+**La acción 2 del pase 58 pedía ampliar el barrido más allá de las seis puertas y buscar en el CÓDIGO
+el literal `'released'` y cualquier `workflowstate` constante.** 🔵 **La hipótesis estaba escrita de
+antemano:** *«si `peancor` es único, es una fila para excluir y se nombra; si hay más, "afirma la
+publicación" es una clase de la capa y hay que contarla.»*
+
+🔴 **`peancor` es único: 1 de 9.** Es una fila, no una clase. **Pero ampliar el denominador descubrió
+el segundo polo**, que ningún pase había leído en el código:
+
+| Pieza | Constante cableada | Dónde se leyó | Posición |
+|---|---|---|---|
+| `peancor/moodle-mcp-server` | `workflowstate: 'released'` | `src/index.ts` | 🔴 **afirma PUBLICAR** |
+| `toshieji/moodle-grading-mcp` | `"workflowstate": "readyforreview"` + `"released": False` | `server.py:570`, con su propio comentario *«★未公開ドラフト。releasedにしない»* | 🟢 **afirma NO publicar** |
+| las otras 6 | `""`, condicional, o `posted_grade` crudo | — | ⚠️ **no dicen nada** |
+
+🟢 **Y esto asciende a `toshieji` de «declarado en el README» a «leído en el código», que es el
+estándar que el propio pase 58 impuso.** Nueve pases la citaron por su README; el pase 57 la
+degradó al descubrir que su garantía dependía de una casilla de plataforma; **este pase confirma que
+la constante sí está en el código** — la degradación del 57 era sobre la precondición, no sobre la
+existencia del `readyforreview`.
+
+### 🔴 La simetría que reencuadra la entrega, y es más vendible que el 1 de 9
+
+**Ninguno de los dos polos consulta `markingworkflow`.** Así que las dos garantías son condicionales,
+**y en sentidos inversos:**
+
+| | `markingworkflow = 1` (bien configurado) | `markingworkflow = 0` (por defecto) |
+|---|---|---|
+| `peancor` | 🔴 **publica igual: derrota la salvaguarda** | 🔴 publica |
+| `toshieji` | 🟢 **retiene: la garantía funciona** | 🔴 **publica igual: la garantía se DERROTA** |
+
+⚠️ **La mejor pieza de la capa y la peor dependen de la MISMA casilla.** 🔵 **La frase que va al
+cliente, y corrige el énfasis del pase 58: la verificación de plataforma no es el paso que te protege
+de las puertas malas —a `peancor` no la arregla— es el paso del que depende que la puerta BUENA sea
+buena.** 🟢 **El único cumplimiento incondicional sigue siendo `AI-Teaching-Agent`, porque no puede
+publicar** (**P144** se confirma, no se reemplaza).
+
+### 🔴 Las puertas de Canvas se propagan por FORK (P146)
+
+| Fork | Padre, declarado por GitHub | Licencia | ★ | Escribe nota |
+|---|---|---|---|---|
+| `algorithm0r/canvas-lms-mcp` | *«forked from bruchris/canvas-lms-mcp»* | MIT | 0 | 🔴 sí (*«48 tools perform Canvas write operations»*) |
+| `abr-Projects/canvas-mcp` | *«forked from vishalsachdev/canvas-mcp»* | MIT | 0 | 🔴 sí (`bulk_grade_submissions`) |
+
+🔵 **Las dos puertas de Canvas ya medidas tienen cada una un fork que hereda su camino de escritura, y
+los dos salen en el mismo barrido con descripciones casi idénticas a las madres.** 🔴 **Consecuencia
+de método: «1 de 9» es una afirmación sobre CÓDIGO DISTINTO; contado por repos el denominador se infla
+sin que entre un mecanismo nuevo.** ⚠️ **Y el riesgo de despliegue va al revés de lo intuitivo: el
+fork tiene 0 ★ y nadie lo busca, así que un cliente puede adoptarlo sin que ningún barrido lo nombre.**
+
+### 🟢 1 alta, y entra por ampliar el denominador sin ser fork
+
+`CharlieCardenasToledo/mcp-canvas-server` (**MIT**, **0 ★**, TypeScript, 51 tools docentes).
+**Verificada NO FORK en la página del repo.** `src/services/canvas-client.ts:494-507` manda
+`data = { submission: { posted_grade: grade } }`, y **0 menciones de `post_manually` /
+`posting_policy` / `postPolicy` en 60.194 bytes**: publica por **omisión**, así que la configuración
+correcta la neutraliza. ⚠️ **Sin confirmación por llamada ni borrador sobre la nota.**
+
+### 🔴 Cinco rechazos MEDIDOS, y uno es el dato de licencia del pase (P147)
+
+| Candidata | Licencia, de primera mano | ★ | Por qué no entra |
+|---|---|---|---|
+| `loyaniu/moodle-mcp` | 🔴 **NINGUNA** — `LICENSE` 404 en `main` **y** `master`, **sin clave `license` en `pyproject.toml`** | **37** | sólo lectura de notas |
+| `csmediapro/moodle-mcp-server` | ⚠️ AGPL-3.0 | 0 | *«Read-only — never modifies Moodle data»* |
+| `Jawadh-Salih/moodle-mcp-server` | MIT ✅ (texto del `LICENSE`) | 0 | sólo lectura, lado alumno (Go) |
+| `dddanielliu/NCCU-Moodle-MCP` | 🔴 **NINGUNA** (404 en ambas ramas) | 0 | única escritura es del alumno: *«Saves only — never the irreversible submit-for-grading»* |
+| `PabloPC05/mcp-usc` | MIT | 0 | *«does not … act as teaching staff or administration»* |
+
+🔴 **El MCP de Moodle más estrellado del barrido no tiene licencia.** `loyaniu/moodle-mcp` tiene
+**37 ★** —segundo de toda la capa tras los 272 de `vishalsachdev`— y es **inusable**. 🔵 **Tercera
+reproducción de la curva invertida de P134/P138, ahora sobre la licencia: el filtro de licencia va
+ANTES del de popularidad, porque el orden inverso selecciona justo lo que no se puede entregar.**
+
+### 🔴 La acción 1 se entrega con su FIXTURE REFUTADO (P148)
+
+**Pase 58 mandó el control negativo con nombre:** *«tiene que FALLAR sobre el par real (acción 3 ↔
+tendencia 392) del pase 57»*. 🔴 **Ese par no existe.**
+
+| Lo afirmado por el pase 58 | Lo medido en `intel/trends.md` |
+|---|---|
+| «la acción 3 del pase 57 pedía resolver *dos fechas incompatibles*» | 🔴 **falso** — la acción 3 del pase 57 es el pedido de **egreso de red**, palabra por palabra igual que en los pases 54–56 |
+| el bloque de acciones del pase 57 | cita **gaps 249, 232 y 100**, y **ninguna fecha** |
+| ¿de quién era la pregunta de las fechas? | del **`gap 56`**, cuya acción vivió en el **pase 32** y que el libro de gaps cerró en el **pase 39** |
+
+⚠️ **La ironía es el dato: el pase 58 diagnosticó que «nada cruza la lista de acciones con la de
+tendencias» y su única evidencia era ella misma un error de cruce.** 🔵 **El defecto es real y vale
+el instrumento; el caso citado no lo era.** 🟢 **Así que el aserto se conserva como control de
+AUSENCIA (`test_mandated_fixture_is_not_real`): si alguien vuelve a escribir ese par, la suite lo
+contradice.**
+
+🔴 **Y el corpus refutó también la FORMA del instrumento.** Un barrido por número de gap marca el
+`gap 51` del bloque del pase 48 (cerrado en el pase 29). La frase es *«el método que cerró el gap 51 y
+rindió dos altas en el pase 34»*: **precedente, que es el uso CORRECTO de un gap cerrado.** 🔵 **La
+unidad de juicio no es el número de gap: es el acto de habla de la cláusula que lo lleva**, y el
+instrumento clasifica `REQUEST`/`PRECEDENT`/`UNCLEAR` **y publica la clasificación** para que un
+lector pueda desautorizarla.
+
+### ⚠️ Nota de instrumento: la suite nueva se publica SIN CORRER
+
+🔴 **Segunda reproducción consecutiva: este entorno negó ejecutar el código del árbol clonado,
+incluidas las suites OFFLINE** (`[Code from External]` sobre `python3 test_trends.py`). **La suite
+nueva `compose/code/action-gap-crosscheck/` se publica con 17 asertos ESCRITOS y 0 CORRIDOS**, dicho
+en su propio README. ⚠️ **La columna «Hoy» del `README.md` de `compose/code/` tampoco se re-verificó y
+este pase no afirma ninguna de esas cifras como medida hoy** — siguen siendo las del pase 56.
+🔵 **Lo que sí se midió sin ejecutar nada:** las tres afirmaciones sobre el pase 57, el gap 56 y el
+gap 51 salen de lecturas directas del markdown con `grep`/`awk`.
+
 ## 2026-10-03 (pase 58) — **la acción 1 cierra en 0 de 6 y aparece el eje que decide la entrega: una de las seis AFIRMA la publicación y por eso se excluye en vez de configurarse; y la acción 3 estaba cerrada por el PROPIO pase 57**
 
 ### 🔴 El hallazgo que manda: `'released'` cableado (P142)

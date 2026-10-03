@@ -106,6 +106,61 @@ updated: 2026-10-03
 > **Pase 27 del 2026-10-01:** se agrega **la columna que faltaba en veintiséis pasadas — ¿la vertical tiene puerta de agente?** Moodle **sí** (dos conectores **MIT**, uno que escribe notas) y Canvas **sí**; 🔴 **Open edX no tiene ninguna**, y es la de mayor huella pública en LATAM e India. **Las LMS son copyleft pero las puertas son MIT**, y por eso se pueden componer. Ver la sección del pase 27, abajo.
 
 
+## 🔧 El requisito de configuración de plataforma se INVIERTE: protege a la puerta buena, no de la mala (pase 59 del 2026-10-03)
+
+**El pase 58 dejó escrito el requisito como una defensa:** activar *Marking workflow* en Moodle
+(`markingworkflow = 1`) y política manual en Canvas (`post_manually = true`), porque **0 de 6** puertas
+consultaban la precondición. 🔴 **Ampliado el eje a nueve puertas, el requisito sigue en pie pero su
+MOTIVO era el equivocado.**
+
+### 🔴 Lo que cambia para un runbook de implantación
+
+**Sólo 2 de 9 puertas toman posición sobre la publicación en su código, y son los dos extremos — y
+ninguno de los dos consulta la casilla:**
+
+| Pieza | Constante cableada | Con `markingworkflow = 1` | Con `markingworkflow = 0` |
+|---|---|---|---|
+| `peancor/moodle-mcp-server` | `workflowstate: 'released'` | 🔴 **publica igual** | 🔴 publica |
+| `toshieji/moodle-grading-mcp` | `"readyforreview"` + `"released": False` | 🟢 **retiene** | 🔴 **publica igual** |
+
+⚠️ **Traducción a implantación, y es la frase para la primera reunión técnica:** activar *Marking
+workflow* **no** te protege de la puerta mala —a `peancor` no la arregla ninguna configuración— **es
+la condición sin la cual la puerta BUENA deja de ser buena.** 🔵 **O sea que el paso de configuración
+y el paso de exclusión son DOS requisitos distintos y hay que cotizar los dos:**
+
+1. 🔴 **EXCLUIR** `peancor/moodle-mcp-server` de la capa de escritura de nota mientras `'released'`
+   siga cableado. **Es un cambio de una línea y es un PR hacia afuera**, no una configuración.
+2. 🔴 **CONFIGURAR y VERIFICAR POR API** en las otras: *Ajustes de la tarea → Calificación → Use
+   marking workflow*, verificado con `mod_assign_get_assignments` → `markingworkflow`; en Canvas,
+   `post_manually = true` por *assignment*. ⚠️ **Sin este paso, `toshieji` —la mejor pieza de la
+   capa— publica la nota igual.**
+3. 🟢 **PREFERIR, cuando el alcance lo permita, el patrón que no necesita ninguna de las dos cosas:**
+   `AI-Teaching-Agent`, que separa generación de publicación y **no puede** publicar (**P144**/**P145**).
+
+### 🔴 Y un riesgo de adopción que la lista de plataformas no mostraba: los FORKS
+
+**Las dos puertas de Canvas que esta base mide tienen cada una un fork que hereda el camino de
+escritura**, con el padre declarado por GitHub:
+
+| Fork | Padre | Licencia | ★ |
+|---|---|---|---|
+| `algorithm0r/canvas-lms-mcp` | `bruchris/canvas-lms-mcp` | MIT | 0 |
+| `abr-Projects/canvas-mcp` | `vishalsachdev/canvas-mcp` | MIT | 0 |
+
+⚠️ **Para un *due diligence* de implantación esto es una pregunta nueva y concreta: la pieza que el
+cliente ya instaló, ¿es la madre o un fork?** 🔵 **El fork tiene 0 ★, no aparece en ningún ranking y
+hereda el defecto medido en la madre** — así que la verificación no puede ser por nombre de proyecto,
+tiene que ser por el **commit** que está desplegado (**P146**).
+
+### ⚠️ Verticales rebarridas sin alta permisiva nueva (duodécimo pase)
+
+**Moodle** (GPL-3.0), **Open edX** (AGPL-3.0), **Sakai** (Apache-2.0, Apereo), **Canvas LMS** (AGPL-3.0),
+**ILIAS**, **Chamilo**, **OpenEduCat** (LGPLv3, sobre Odoo, *«el único que integra LMS con SIS, cuotas y
+app de padres»*), **Kolibri** (MIT, offline), **BigBlueButton**, **H5P**. 🔴 **Ninguna alta MIT/Apache
+nueva: el encuadre de licencia de esta capa no cambia.** 🔵 **Y una nota de ubicación que vale al
+cotizar: `Sakai` es la única LMS grande con licencia **Apache-2.0**, nacida del consorcio de Michigan,
+Indiana, MIT y Stanford — es la base permisiva de esta capa, y sigue siendo la menos propuesta.**
+
 ## 📥 El IMPORTADOR del libro de calificaciones como punto de integración de la vertical, y lo que eso cambia al cotizar (pase 58 del 2026-10-03)
 
 🔵 **El pase 58 midió las 6 puertas MCP que escriben notas y encontró que una NO usa el web service en absoluto:**

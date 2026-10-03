@@ -8,6 +8,7 @@ updated: 2026-10-03
 
 > Key players, market map y oportunidades por región.
 > Investigado 2026-09-30; el pase 11, el 2026-10-01. Las estimaciones de tamaño de mercado varían mucho entre firmas: se listan todas con su fuente en vez de elegir una.
+> **Pase 59 del 2026-10-03:** 🔴 **el aporte de mercado de este pase es la cifra de NA que convierte el hallazgo técnico de esta KB en una venta: Gallup + Walton Family Foundation, *«Teaching for Tomorrow: Closing the Expectations Gap»* (campo 9-feb a 2-mar de 2026, n = 2.069 docentes de K-12 públicos de EE. UU.) mide que sólo el 18 % tiene guía FORMAL sobre uso de AI, el 34 % no tiene NINGUNA, el 48 % sólo informal — y 🔴 el 58 % no tiene guía para usar AI al CALIFICAR o dar devolución (69 % para tutoría 1-a-1).** 🔵 **Ese 58 % es exactamente la capa que esta KB mide, y las dos ausencias se refuerzan: los pases 56-59 establecieron que el ecosistema open source no tiene norma de «borrador + liberación humana» (1 de 9 lo afirma en código, y su garantía depende de una casilla de plataforma), y Gallup establece que la institución tampoco trae la regla. El control es ENTREGABLE, no un supuesto del proyecto.** ⚠️ **Y ya es obligatorio en cuatro estados: Idaho, Oklahoma, Virginia y Maryland exigen guía estatal Y política de distrito; Oklahoma y Maryland prohíben que la AI decida de forma determinante sobre un alumno.** 🔴 **Corrección de fuente EMEA que este pase hace en vez de propagar: una secundaria afirmó *«Entry into force of AI Act on 31 July 2026»* — es FALSO y se descarta; el AI Act entró en vigor el 2024-08-01 y lo de julio de 2026 fue el *AI Omnibus* (2026-07-27). Los tres relojes del pase 58 se sostienen y no se re-litigan.** 🟢 **Dato LATAM nuevo para elegir país de entrada: sólo Brasil (65,89), Chile (63,19) y Uruguay (62,21) entran al top 50 del AI Readiness Index, con Chile «pionero».** 🟢 **Y dato APAC nuevo: 96 % de las organizaciones planea invertir más y 88 % espera retorno este año, con ROI declarado de 2,85 USD por dólar.** ⚠️ **El hueco LATAM se declara por décimotercera vez: ninguna de las nueve puertas medidas declara origen LATAM, y este pase resistió inferirlo de un antropónimo (regla de **P135**).** Ver las tendencias **402**–**412**.
 > **Pase 56 del 2026-10-03:** 🔴 **el aporte de mercado de este pase es NEGATIVO y es el más caro de los que se pueden dar: la cifra de tamaño de mercado de APAC tampoco es publicable.** Corrida por el instrumento versionado (`market-triple-check/check.py`), la terna de APAC —**$591,6 M (2024) → $1.848,1 M (2029) @ 20,9 %**— exige **25,6 %** y no cierra, igual que la de North America (**15,9 %** declarado contra **19,4 %** exigido), que se reconfirma. 🔴 **Y el hallazgo es que el defecto es SISTEMÁTICO: las dos ternas por geografía del MISMO proveedor fallan en la MISMA dirección —el CAGR declarado es menor que el que exigen sus propios extremos— mientras la terna global de otra fuente cierra con 0,1 punto de holgura ($7,52 B 2025 → $10,6 B 2026 @ 40,9 %, exige 41,0 %).** 🔵 **Regla que endurece: una terna por geografía de este proveedor se asume sospechosa hasta que cierre, porque ya falló en las dos geografías medidas. Se declara el hueco en vez de pegar dos de tres números.** 🟢 **Lo que SÍ se publica de este barrido: el mercado de LMS en $54,86 B con 31 % menos de TCO reportado por quienes usan open source; el EU AI Act confirmado por un CUARTO canal independiente (obligaciones de documentación y transparencia desde agosto 2026, o sea vigentes hace dos meses); y el *backstop* del Artículo 50(2) a 60 días.** 🔴 **Dato regulatorio nuevo de North America, y cambia el guion de venta: no existe un equivalente a la FDA para edtech y la decisión la toma la escuela o el distrito, con Colorado y Texas legislando por pedazos — en EMEA se vende contra una fecha, acá contra un comité.** 🟢 **LATAM aporta el dato de brecha más citable del pase: 13 de los 19 países de la región no enseñan adopción temprana de AI en la escuela (UNESCO IESALC, 200 instituciones, 19 países, ago–oct 2025).** Ver **P132**–**P135** y el patrón nuevo **P136** y las tendencias **338**–**369**.
 > **Pase 55 del 2026-10-03:** 🟢 **el instrumento de terna que el pase 54 escribió (tendencia 311) se estrenó y DISPARÓ en la primera cifra de mercado nueva del pase: North America 951 M (2024) → 2.303,2 M (2029) con CAGR declarado 15,9 % NO cierra** — el par exige **19,35 %** y a 15,9 % el extremo sería **1.988,8 M**, un hueco de **314,4 M** (13,7 %). 🔴 **No publicable, y no se publica.** ⚠️ **Dos conflictos más de secundarias en el mismo barrido, los dos no publicables:** Moodle 400 M / 150.000 sitios contra *«más de 300 M»*; Latam-GPT 30+ instituciones con debut sept-2025 contra el registro de esta red (60+ instituciones, 15 países, feb-2026). 🟢 **LATAM: el 92 % de estudiantes que esta base ya citaba GANA su instrumento** — working paper de UNU, encuesta a **200 instituciones de educación superior de 19 países**, agosto–octubre 2025, cinco dimensiones. 🔵 **North America: el mecanismo regulatorio queda nombrado (ETS) — no hay equivalente a la FDA para edtech y la decisión de adopción la toma la escuela, el distrito o la universidad con supervisión externa mínima**, lo que corrobora la corrección del pase 54 (la brecha de gobernanza es GLOBAL, no una ventaja LATAM) **y nombra al comprador: el distrito o la institución, no un mandato**. ⚠️ **EMEA: las secundarias genéricas de 2026 siguen describiendo el calendario PRE-Omnibus** (*«documentación y transparencia en agosto de 2026»*) **contra la posición medida de esta base (Anexo III → 2027-12-02)** — 🔴 **un cliente EMEA puede llegar con la fecha equivocada, y conviene llegar con la corrección**. **APAC: undécima vez con material de *enterprise* y soberanía y cero open source educativo.** Ver tendencias **330**–**335**.
 > **Pase 54 del 2026-10-03:** barrido regional completo en las cuatro regiones, **año calculado: 2026**. 🔴 **La corrección de encuadre del pase, y es sobre una afirmación REGIONAL propia: la brecha de gobernanza NO es un diferencial de LATAM.** El pase 52 la publicó como *«la oportunidad mejor fundada»* de esa región con 18,5 % de instituciones con política; **este pase mide North America y da 18 % de docentes con alguna política escrita de AI (marzo 2026)**, y LATAM confirma el orden de magnitud por otro instrumento (**<10 %** de instituciones con pautas formales en Chile y Brasil). 🔵 **Es la MISMA brecha en dos regiones, así que vender gobernanza como especificidad latinoamericana es un error de posicionamiento: es una oferta global.** 🟢 **La mejor cifra nueva de LATAM está mejor instrumentada que ninguna anterior: Digital Education Council, *AI in Higher Education LATAM Survey 2026*, 7.319 docentes de 29 instituciones, 79 % usando AI en su enseñanza y 88 % con involucramiento «mínimo a moderado»** — ⚠️ **adopción ancha y superficial, que es un perfil de demanda distinto del de la brecha de política.** 🟢 **Y el hallazgo regulatorio del pase está en APAC y agarra exactamente lo que esta base acababa de medir en el código: el marco de AI de alto riesgo de Vietnam nombra la AI educativa de *«automated assessment and behavioral monitoring»*, con ley vigente desde el 2026-03-01.** 🔵 **La clase de inferencia de conducta que P124 midió en `mereos` y `@timadey/proctor` está nombrada en una ley de APAC antes que en una de la UE, así que *«el AI Act es el régimen más estricto»* deja de servir como atajo en esta capa.** 🔴 **Instrumento nuevo de P107 que atrapa un defecto SIN segunda fuente (P125): la terna de mercado tiene que cerrar sola.** De las dos ternas de EMEA, **en la misma frase y de la misma fuente**, Europa cierra perfecto (**$2,64 B → $8,0 B @ 31,9 %**, implicado 31,9 %) y **Middle East & Africa NO** (**$0,56 B → $1,6 B @ 34,3 %**, implicado **30,0 %**; con 34,3 % el final sería **$1,82 B**). ⚠️ **La asimetría es el dato: el defecto es por cifra, no del canal entero.** 🔵 **Y una nota de disciplina para no inventar un conflicto donde no hay: el 79 % de DOCENTES (DEC 2026) y el 92 % de ESTUDIANTES (UNU/UNESCO IESALC) del pase 52 son poblaciones distintas — denominadores distintos no son un conflicto de P107.** ⚠️ **El EU AI Act entró en aplicación general el 2026-08-02, hace dos meses: ya no es un plazo futuro, y las obligaciones de Anexo III educativo siguen en 2027-12-02 (≈14 meses).**
@@ -408,6 +409,28 @@ players 2026. Resultado honesto:
 | EMEA | **Confirmación.** Anexo III alto riesgo, Digital Omnibus, fechas 2027-12-02 / 2028-08-02 — ya estaba, y con identificadores citables (Reglamento (UE) 2026/1744). Nada nuevo |
 | APAC | **Un hallazgo nuevo:** la oficialización de los libros de texto digitales en Japón (abajo, en `### APAC
 
+#### 🟢 Pase 59 (2026-10-03) — el único marco del mundo que nombra agentes sigue siendo de APAC, y la capa medida es de APAC
+
+⚠️ **Relojes regulatorios re-confirmados, sin cambios:** **Corea del Sur**, *Framework Act* en vigor
+**2026-01-22**; **Vietnam**, ley dedicada de AI **2026-03-01**; **Singapur (IMDA)**, marco de **AI
+agéntica 2026-01-22** —🔴 **el único que nombra agentes, que es exactamente esta capa**—;
+**Australia**, AI Safety Institute operativo a principios de 2026.
+
+🟢 **Cifras de inversión, con dos nuevas:** **96 % de las organizaciones de APAC** planea invertir más
+en AI; **66 %** pilotea o adopta sistemáticamente; **88 % espera retorno este año**, con **ROI
+declarado de 2,85 USD por dólar**. ⚠️ **El gasto empresarial de APAC en AI crece 15 % en 2026.**
+
+🔵 **Y el dato de capa que este pase agrega, medido en el código y no buscado en una encuesta: la
+ÚNICA de las nueve puertas de escritura de nota que afirma el borrador en su código es de APAC.**
+`toshieji/moodle-grading-mcp` tiene el comentario en japonés en la línea que decide
+(`server.py:570`: *«★未公開ドラフト。releasedにしない»*) y **0 ★**.
+
+🔴 **Oportunidad APAC, y es la más específica de las cuatro regiones:** Singapur es la única
+jurisdicción con un marco que habla de **AI agéntica** por su nombre, y la pieza de referencia de
+cumplimiento de esta capa es japonesa y no tiene adopción. ⚠️ **Para una propuesta de APAC eso es un
+diferencial doble: el marco existe y la implementación conforme existe, pero nadie las ha conectado.**
+🔵 **Globant puede llegar con la pieza, el marco y la verificación de plataforma de P145 ya cableados.**
+
 #### 🔵 Pase 57 (2026-10-03) — la región sigue sin marco común, y su pieza de software es la que este pase acaba de condicionar
 
 🟢 **El barrido rindió, y la foto de adopción se ordena distinto de lo que supondría un mapa de PBI:**
@@ -576,6 +599,35 @@ experimental) es un riesgo técnico **de esta región** tanto como de LATAM.
 **La soberanía dejó de ser retórica y es una lista.** Toda economía grande de APAC está construyendo modelo propio: **Sarvam AI** (India), **ILMU** (Malasia), **Sahabat AI** (Indonesia), **SEA-LION** (Singapur), **HyperCLOVA X Think** (Corea del Sur), **NTT Sarashina** (Japón) y **TAIDE** (Taiwán). Para un proyecto educativo en la región eso significa que **la capa de modelo es una decisión política del cliente, no técnica nuestra**: el entregable tiene que ser **agnóstico de proveedor** desde el diseño (LiteLLM o equivalente en el medio), porque el modelo lo elige el ministerio. Mercado de AI de la región: **~USD 102.000M (2025) → >USD 735.000M (2030), CAGR ~34,5%**; los compradores que dominan la vertical educativa siguen siendo **China, India y Japón**.
 
 | LATAM | **Confirmación** (Observatorio UNESCO, sandbox de la ANPD brasileña, Uruguay y el Convenio del Consejo de Europa, CENIA). Y **un vacío nuevo y medido** en la capa de skills (abajo, en `### LATAM
+
+#### 🟢 Pase 59 (2026-10-03) — la mejor serie propia de la región se sostiene, y el índice de madurez se mide
+
+🟢 **Encuesta del Digital Education Council, LATAM 2026, re-confirmada:** **92 % de los alumnos** y
+**79 % del cuerpo docente** usan AI activamente; **+30.000 respuestas en 29 instituciones**, con el
+IFE/Tec de Monterrey, AIGEN y RIE360. **94 % del cuerpo docente espera usar AI en su práctica futura.**
+🔴 **Y el dato que es exactamente esta capa, sin cambios: 50 % de los alumnos acepta devolución
+asistida por AI contra sólo 19 % del cuerpo docente que la usa — la brecha es de OFERTA, no de
+demanda.** ⚠️ **61 % de los alumnos teme el mal uso por sus pares.**
+
+🟢 **Dato NUEVO de este pase, y sirve para elegir país de entrada:** en el **AI Readiness Index**
+global, **sólo tres países de LATAM entran en el top 50** — **Brasil (65,89)**, **Chile (63,19)** y
+**Uruguay (62,21)**. **Chile** está clasificado como **«pionero»** en madurez. ⚠️ **Marco de política:
+Colombia **CONPES 4144** (feb-2025), programa de gobierno hasta 2030; Chile con proyecto de ley de
+clasificación por riesgo desde may-2024.**
+
+🔴 **El hueco propio que se vuelve a declarar en vez de taparse, DÉCIMOTERCER pase consecutivo:
+ninguna de las NUEVE puertas de escritura de nota medidas declara origen LATAM.** ⚠️ **Y se declara
+con el antecedente puesto: el pase 56 se atrapó inventándolo (**P135**), y este pase volvió a
+resistir la tentación con `CharlieCardenasToledo/mcp-canvas-server` —nombre de dueño hispanohablante,
+que NO es evidencia de región— y la dejó «sin región determinada».** 🔵 **Un antropónimo no es un
+indicio de región y no se usa como tal.**
+
+🔵 **Oportunidad LATAM, con la cifra que la sostiene:** el 50 % contra 19 % dice que la demanda de
+devolución asistida existe y la oferta no. ⚠️ **Lo que este pase agrega: la oferta no existe *en
+forma conforme* tampoco — no hay pieza LATAM en la capa, y la única pieza conforme del mundo es
+japonesa con 0 ★.** 🟢 **Construir la primera puerta de corrección asistida con borrador verificado y
+origen LATAM es una posición de producto, no sólo un proyecto** — y Brasil, Chile o Uruguay son los
+tres mercados con la madurez medida para absorberla.
 
 #### 🔵 Pase 57 (2026-10-03) — la región adopta por encima del promedio global y captura 1,1 % de la inversión, y este pase NO publica una cifra única de adopción
 
@@ -1260,6 +1312,41 @@ Dónde se produce el software educativo abierto, que no es donde está la demand
 ## Opportunities by region
 
 ### North America
+
+#### 🔴 Pase 59 (2026-10-03) — la cifra que convierte el hallazgo técnico de esta KB en una venta de NA
+
+🟢 **Dato nuevo, de Gallup + Walton Family Foundation, *«Teaching for Tomorrow: Closing the
+Expectations Gap»*, campo del 9-feb al 2-mar de 2026, n = 2.069 docentes de K-12 públicos de EE. UU.:**
+
+| Medición | Valor |
+|---|---|
+| Docentes con **guía FORMAL** (política escrita u oficial) sobre uso de AI | 🔴 **18 %** |
+| Docentes **sin guía de ningún tipo** | 🔴 **34 %** |
+| Docentes con guía **sólo informal** (conversaciones, normas tácitas) | **48 %** |
+| 🔴 **Sin guía sobre AI para CALIFICAR o dar DEVOLUCIÓN** | 🔴 **58 %** |
+| Sin guía sobre AI para tutoría/instrucción 1-a-1 | **69 %** |
+| Docentes con guía formal sobre **alguna actividad específica** | **menos de 1 en 10** |
+
+🔴 **El 58 % es exactamente la capa que esta KB mide.** 🔵 **La conexión comercial, y es la más
+directa que este archivo tiene: los pases 56-59 establecieron que el ecosistema open source NO tiene
+norma de «borrador + liberación humana» (1 de 9 afirma el borrador en código, y su garantía depende
+de una casilla de plataforma). Gallup establece que el 58 % de los docentes tampoco tiene una regla
+institucional para ese mismo acto.** ⚠️ **Las dos ausencias se refuerzan: ni la herramienta ni la
+política traen el control, así que el control es ENTREGABLE, no un supuesto del proyecto.**
+
+🔵 **Oportunidad, redactable en una propuesta de NA:** un paquete de *governance* de corrección
+asistida —política escrita + verificación de plataforma por API + la receta P149— se vende contra una
+brecha medida por un tercero reconocido, no contra una hipótesis. ⚠️ **Y el marco regulatorio ya lo
+exige en cuatro estados:** **Idaho, Oklahoma, Virginia y Maryland** tienen leyes de 2026 que obligan
+**guía estatal Y adopción de política a nivel distrito**; **Oklahoma y Maryland** exigen supervisión
+humana y **prohíben que la AI decida de forma determinante** sobre un alumno.
+
+⚠️ **Contexto que se re-confirma y no cambia:** **134 proyectos de ley en 31 estados**; **California
+AB 1159** (prohíbe usar datos de alumnos para entrenar modelos); **Idaho SB 1227** (protecciones de
+privacidad); NYC *Traffic Light Framework* (mar-2026). 🟢 **Nuevo: el *STUDENTS FIRST Act of 2026***,
+marco nacional producido por alumnos de los **50 estados** y publicado por **AASA** el **2026-08-03**,
+que pide protecciones para el aprendizaje auténtico, la privacidad, la equidad **y el juicio humano**.
+⚠️ **NA concentra el 38 % del mercado de AI en educación (2025).**
 
 #### 🟢 Pase 58 (2026-10-03) — la legislación estatal converge con el eje que este pase midió, y hay una ley que nombra el dato de entrenamiento
 
@@ -2450,6 +2537,31 @@ Artículo 50(2) **no es exigible** en North America — pero es **el requisito m
 multi-región conviene cotizarlo contra el techo europeo y no contra el piso local (ver **P103** y **P105**).
 
 ### EMEA
+
+#### ⚠️ Pase 59 (2026-10-03) — los relojes NO se re-litigan, y una fuente secundaria que hay que descartar
+
+🟢 **Las tres fechas del pase 58 se sostienen y no se vuelven a cotizar:** Art. 50 vigente desde
+**2026-08-02**; *backstop* del Art. 50(2) para lo ya desplegado, **2026-12-02** (a **60 días** del
+2026-10-03); Anexo III §3 (educación) diferido a **2027-12-02** por el *AI Omnibus*.
+
+🔴 **Y una corrección de fuente que este pase hace en vez de propagar:** el barrido regional de EMEA
+devolvió una secundaria afirmando *«Entry into force of AI Act on 31 July 2026»*. ⚠️ **Es falso y se
+descarta:** el AI Act entró en vigor el **2024-08-01**; lo que ocurrió en julio de 2026 fue la entrada
+en vigor del ***AI Omnibus*** (**2026-07-27**, DOUE **2026-07-24**). 🔵 **Se registra el descarte
+porque es el tipo de error que una KB propaga sin querer: la fecha es casi correcta y el sujeto está
+cambiado.**
+
+⚠️ **El `gap 92` se re-confirma por tercer pase: sin texto consolidado de primera mano.**
+`eur-lex.europa.eu` y `artificialintelligenceact.eu` siguen inalcanzables desde este entorno, así que
+las fechas son de canales secundarios concordantes, **no de fuente primaria** — y se dice.
+
+🔵 **Oportunidad EMEA, sin cambios de encuadre pero con el argumento de P145 agregado:** la
+clasificación de alto riesgo del Anexo III §3 cubre **evaluación de alumnos y puntuación de exámenes**,
+y exige supervisión humana. 🔴 **Lo que este pase aporta a esa venta: «supervisión humana» NO se
+satisface instalando la puerta que dice «borrador».** Medido, el borrador de la mejor pieza de la capa
+se evapora si `markingworkflow = 0`, así que el expediente de conformidad tiene que incluir
+**verificación de la configuración de la plataforma por API**, con evidencia. ⚠️ **Eso es un
+entregable de auditoría, y es facturable: el cliente no lo puede producir leyendo READMEs.**
 
 #### 🟢 Pase 58 (2026-10-03) — las dos fechas re-verificadas, y la conclusión comercial es que lo vendible hoy es el reloj que NO se movió
 

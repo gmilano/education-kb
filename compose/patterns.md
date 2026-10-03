@@ -117,6 +117,121 @@ updated: 2026-10-03
 > (Apache-2.0, **v0.9.9 del 2026-10-01**), Ralph (MIT, vivo en `main`), las cuatro puertas de Canvas y Moodle-alumno
 > (commits de las últimas dos semanas) y `qti3-cli` (MIT). **El resto de las recetas no cambia.**
 
+## 🧩 P145–P148, los patrones del pase 59 (2026-10-03)
+
+### 🔴 P145 — El eje de publicación es BIPOLAR, ESCASO y los dos polos son CONDICIONALES en sentidos opuestos
+
+**Medido sobre nueve puertas de escritura de nota, leyendo el código.** Sólo **2 de 9** declaran una
+posición sobre la publicación; **6 de 9** no dicen nada (heredan u omiten) y **1** está fuera del eje.
+
+| Posición | Pieza | Constante, en el código | Precondición que NO consulta |
+|---|---|---|---|
+| 🔴 afirma **publicar** | `peancor/moodle-mcp-server` | `workflowstate: 'released'` (`src/index.ts`) | `markingworkflow` |
+| 🟢 afirma **no publicar** | `toshieji/moodle-grading-mcp` | `"workflowstate": "readyforreview"`, `"released": False` (`server.py:570`) | `markingworkflow` |
+
+🔴 **El patrón, y es lo que lo hace útil: una constante cableada NO es una garantía, es una APUESTA
+sobre la configuración de la plataforma.** Las dos apuestas son opuestas y las dos pueden perder:
+
+- `'released'` cableado **gana siempre** (publica con `markingworkflow` en 0 o en 1) → **la salvaguarda
+  del docente no existe**, y ninguna configuración la restituye.
+- `'readyforreview'` cableado **gana sólo si `markingworkflow = 1`** → con la casilla en 0, **Moodle
+  publica igual y la garantía se evapora en silencio**.
+
+🔵 **Cómo se usa el patrón al diseñar:** si una pieza cablea un estado de publicación, **la pregunta de
+revisión no es «qué estado manda» sino «de qué condición externa depende ese estado para significar
+algo»**. ⚠️ **El vocabulario de «borrador» esconde exactamente esa dependencia**, que es por qué el
+pase 57 se equivocó nueve pases citando un README. 🟢 **El único patrón que no tiene este problema es
+el de **P144**: separar generación de publicación, de modo que no haya estado que cablear.**
+
+### 🔴 P146 — La unicidad se cuenta sobre CÓDIGO DISTINTO, no sobre repos distintos
+
+**Las dos puertas de Canvas medidas por esta base tienen cada una un fork que hereda su camino de
+escritura, con el padre declarado por GitHub:** `algorithm0r/canvas-lms-mcp` ← `bruchris/canvas-lms-mcp`
+y `abr-Projects/canvas-mcp` ← `vishalsachdev/canvas-mcp`. **Ambos MIT, ambos 0 ★, ambos escriben nota.**
+
+🔴 **Consecuencia de método, y aplica a cualquier afirmación de proporción de esta KB:** un
+denominador contado por repos infla el conteo sin agregar un mecanismo. **Cuando este archivo dice
+«1 de 9», afirma 9 implementaciones distintas** — los forks quedan fuera del denominador y dentro de
+la lista de riesgo.
+
+🔵 **Y la regla de verificación que sale de ahí, que es la parte entregable:** en un *due diligence*,
+**la pieza desplegada se identifica por el commit, no por el nombre del proyecto.** ⚠️ **El fork es
+el caso peligroso precisamente porque es invisible: 0 ★, fuera de todo ranking, y con el defecto de
+la madre intacto.** 🔵 **Es la misma forma del hallazgo del pase 57 (dos repos sirviendo el mismo
+README byte a byte), ahora con el parentesco declarado en vez de inferido.**
+
+### 🔴 P147 — El filtro de LICENCIA va antes del filtro de POPULARIDAD
+
+**Contraejemplo medido:** `loyaniu/moodle-mcp` tiene **37 ★** —el segundo de toda la capa MCP de esta
+base— y **no tiene licencia**: `LICENSE` ausente en `main` y `master`, sin clave `license` en
+`pyproject.toml`. **Las tres piezas permisivas del mismo barrido tienen 0 ★.**
+
+🔵 **El patrón: ordenar candidatos por adopción y después filtrar por licencia selecciona lo que no se
+puede entregar.** El orden correcto es licencia → mecanismo → adopción. ⚠️ **Y una ausencia de licencia
+se MIDE en tres lugares antes de afirmarse** (`LICENSE` en las dos ramas + metadatos del paquete),
+porque el pase 57 ya se atrapó con el `gap 250`: una sonda contra un archivo hermano no prueba nada
+sobre el archivo que se va a leer. 🔴 **Tercera reproducción de la curva invertida de P134/P138.**
+
+### 🔴 P148 — Un instrumento de auditoría de PROSA necesita clasificar el acto de habla, no el identificador
+
+**El pase 58 pidió una suite que falle cuando una acción entregada menciona un gap ya cerrado.**
+Barrido el corpus, **un detector por número de gap produce un falso positivo real**: el bloque del
+pase 48 menciona `gap 51` (cerrado en el pase 29) en la frase *«el método que cerró el gap 51 y rindió
+dos altas en el pase 34»* — **precedente, que es el uso correcto de un gap cerrado.**
+
+🔵 **El patrón: cuando el objeto auditado es prosa, la unidad de juicio es la CLÁUSULA y su acto de
+habla (¿pide, o cita?), no el identificador que aparece en ella.** 🟢 **Y la regla de honestidad que
+lo acompaña: el instrumento publica su clasificación** (`REQUEST`/`PRECEDENT`/`UNCLEAR`) **para que un
+lector la desautorice**, porque una regex sobre prosa en español es más débil que una lectura de
+código y conviene decirlo en vez de presentar el conteo como medida.
+
+⚠️ **Corolario, y es el que duele:** el pase 58 diagnosticó que «nada cruza la lista de acciones con
+la de tendencias» y **su única evidencia era ella misma un error de cruce** (la acción 3 del pase 57 es
+el pedido de egreso de red; la pregunta de las fechas es el `gap 56`, del pase 32, cerrado en el 39).
+🔵 **El defecto es real; el caso citado no lo era. La ausencia se conserva como aserto para que no
+vuelva a escribirse.**
+
+## 🍳 Receta P149 — «Capa de corrección asistida que no puede publicar sola» (pase 59)
+
+**Para qué sirve:** un cliente de educación superior quiere devolución y pre-nota asistida por AI
+sobre Moodle o Canvas **sin** que ninguna pieza de la cadena pueda publicar una nota a un alumno por
+su cuenta. 🔴 **Después de nueve puertas medidas, esto NO se consigue eligiendo la puerta correcta:
+se consigue con una arquitectura de dos etapas más dos pasos de configuración verificada.**
+
+### Las piezas, con su licencia y su papel
+
+| Etapa | Pieza | Licencia | Papel exacto |
+|---|---|---|---|
+| **1. Generación** | [`littlecookie0722/AI-Teaching-Agent`](https://github.com/littlecookie0722/AI-Teaching-Agent) | **MIT** | Produce los artefactos de corrección y los retiene en `WAITING_REVIEW` con aprobación humana por página. 🟢 **No tiene camino de publicación**: *«The export does not call platform import, grading execution, or publishing paths»* |
+| **2. Escritura** | [`toshieji/moodle-grading-mcp`](https://github.com/toshieji/moodle-grading-mcp) | **MIT** | La única puerta cuyo código cablea el borrador: `"workflowstate": "readyforreview"`, `"released": False` (`server.py:570`). ⚠️ **Sólo vale con el paso 3** |
+| **2′. Canvas** | [`bruchris/canvas-lms-mcp`](https://github.com/bruchris/canvas-lms-mcp) | **MIT** | Para Canvas; es la de la compuerta más honesta de la capa (*«`confirm` is reserved but not implemented»*) y 16 variables `CANVAS_*`, con `CANVAS_PROVENANCE_FENCING` y `CANVAS_PSEUDONYMIZE_STUDENTS` |
+| **3. Precondición** | Moodle / Canvas, configuración | — | `markingworkflow = 1` por tarea (Moodle) o `post_manually = true` por *assignment* (Canvas) |
+| **4. Verificación** | `mod_assign_get_assignments` → `markingworkflow` | — | 🔴 **El paso que ninguna de las nueve puertas hace por nosotros** |
+| **5. Marcado AI Act** | `compose/code/aiact-50-2-marking/` + `aiact-50-2-pack/` | — | Marcado legible por máquina del Art. 50(2), **vigente desde 2026-08-02** |
+
+### Cómo se cablea, en orden
+
+1. **Excluir primero.** `peancor/moodle-mcp-server` queda fuera del catálogo de la cuenta: cablea
+   `'released'` y **ninguna configuración lo arregla** (**P142**/**P145**).
+2. **Identificar por commit, no por nombre.** Si el cliente ya tiene una puerta de Canvas instalada,
+   verificar si es la madre o un fork (`algorithm0r/…`, `abr-Projects/…` heredan el camino de
+   escritura medido) — **P146**.
+3. **Etapa 1 corre aislada:** `AI-Teaching-Agent` genera y retiene. **Ningún token de LMS en esta
+   etapa**, que es lo que hace la garantía estructural y no de configuración.
+4. **Puerta humana explícita** entre etapa 1 y 2: la aprobación por página de `AI-Teaching-Agent` es
+   el registro auditable de que una persona miró.
+5. **Etapa 2 escribe borrador** con `toshieji` (Moodle) o `bruchris` con `CANVAS_DESTRUCTIVE_TOOLS`
+   ampliado a la nota (⚠️ **hoy cubre los siete tools de borrado y NO `grade_submission`** — **P140**).
+6. **Verificar la precondición ANTES de habilitar la etapa 2**, por API, y **fallar el despliegue si
+   `markingworkflow = 0`**: sin eso, el borrador de `toshieji` se publica igual (**P145**).
+7. **Liberación final por el docente en la UI del LMS.** Ninguna pieza de la cadena la ejecuta.
+8. **Marcar el contenido sintético** con las suites `aiact-50-2-*` — obligación **vigente**, no futura.
+
+⚠️ **Lo que esta receta NO resuelve, declarado:** la etapa 1 no escribe en el LMS, así que **no
+reemplaza a la puerta** — el trabajo de escribir la nota lo hace la etapa 2, con todo lo que eso
+arrastra. 🔵 **Lo que sí cambia respecto de la capa tal como está: la liberación humana deja de
+depender de que una compuerta funcione y pasa a depender de que un token no exista donde no debe.**
+
 ## P123 — Leer la PROCEDENCIA de la credencial, no su tipo (agregado en el pase 54 del 2026-10-03; **las cuatro regiones**)
 
 > 🔴 **Corrige P121, y lo corrige por donde P121 pidió que se lo probara.** La acción 1 del pase 53

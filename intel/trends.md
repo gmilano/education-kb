@@ -7,6 +7,7 @@ updated: 2026-10-03
 # 📡 Tendencias — education
 
 > Ventana de investigación: septiembre 2026. Verificado 2026-09-30; el pase 11, el 2026-10-01.
+> **Pase 59 del 2026-10-03:** 🔴 **la acción 2 del pase 58 CIERRA en la rama de la UNICIDAD: ampliado el eje de 6 a 9 puertas de escritura de nota leídas en el CÓDIGO, `peancor` sigue siendo la ÚNICA que AFIRMA la publicación — «afirma la publicación» no es una clase de la capa, es UNA fila, y la regla de excluirla en vez de configurarla se sostiene con el denominador ampliado un 50 %.** 🔴 **Pero el denominador ampliado descubre el SEGUNDO POLO y reencuadra todo: el eje es BIPOLAR y ESCASO —sólo 2 de 9 toman posición en el código, y son los extremos: `peancor` cablea `'released'` y `toshieji` cablea `'readyforreview'` con `released: False`, verificado en `server.py:570` de primera mano y no en el README. Y NINGUNO de los dos consulta la precondición, así que las dos garantías son condicionales en sentidos OPUESTOS: a `peancor` no la salva `markingworkflow=1`, a `toshieji` la DERROTA `markingworkflow=0`. La mejor pieza de la capa y la peor dependen de la MISMA casilla** (**P145**). 🔴 **Hallazgo estructural nuevo: las puertas de Canvas se propagan por FORK —`algorithm0r/canvas-lms-mcp` ← `bruchris` y `abr-Projects/canvas-mcp` ← `vishalsachdev`, padre declarado por GitHub, ambos MIT y ambos escriben nota— así que la unicidad se cuenta sobre CÓDIGO DISTINTO y la pieza desplegada se identifica por el COMMIT, no por el nombre del proyecto** (**P146**). 🟢 **1 alta no-fork: `CharlieCardenasToledo/mcp-canvas-server` (MIT, 0 ★), `posted_grade` crudo y 0 menciones de política de publicación en 60.194 bytes: publica por omisión.** 🔴 **Y el dato de licencia que cambia el ORDEN de los filtros: el MCP de Moodle más estrellado del barrido —`loyaniu/moodle-mcp`, 37 ★— NO TIENE LICENCIA en ninguna rama ni en su `pyproject.toml`; el filtro de licencia va ANTES del de popularidad** (**P147**). 🔴 **La acción 1 se entrega con su FIXTURE REFUTADO: el par que el pase 58 mandó usar de control negativo no existe —el pase 57 cita gaps 249/232/100 y nada de fechas; la pregunta de las fechas es el `gap 56`, del pase 32, cerrado en el 39— y un barrido por número de gap da un falso positivo real (el `gap 51` del pase 48 es PRECEDENTE), así que la unidad de juicio es el ACTO DE HABLA de la cláusula** (**P148**). ⚠️ **Nota de instrumento, segunda reproducción: el entorno negó ejecutar el código clonado incluidas las suites OFFLINE, así que la suite nueva se publica con 17 asertos escritos y 0 corridos.** Tendencias **402**–**412**.
 > **Pase 58 del 2026-10-03:** 🔴 **la acción 1 del pase 57 CIERRA y su hipótesis falsable cae en la rama que obliga a trabajar: de las 6 puertas de escritura de nota, medidas de primera mano en el CÓDIGO, 0 consultan la precondición de plataforma** (`markingworkflow` en Moodle, `posting_policy`/`post_manually` en Canvas). 🔴 **Y aparece el eje que decide un despliegue y que el vocabulario de «borrador» no muestra: `peancor/moodle-mcp-server` manda `workflowstate: 'released'` CABLEADO, así que es la ÚNICA de las seis que publica incluso con `markingworkflow=1` — 5 de 6 quedan neutralizadas por la configuración correcta de la plataforma, 1 de 6 la DERROTA, y por eso `peancor` es la fila que hay que excluir y no la que hay que configurar** (**P142**). 🔵 **`mcp-moodle-staff` está fuera del eje por diseño: no llama al web service, genera CSV para el importador nativo, así que la liberación humana es del PROCESO y no del servidor** (**P143**). 🟢 **1 ALTA, la primera en doce pases, y entra porque contesta ARQUITECTÓNICAMENTE el 0 de 8 del pase 57 y el 0 de 6 de este: `littlecookie0722/AI-Teaching-Agent` (MIT verificado por el texto del `LICENSE`) cumple «borrador + liberación humana» de forma incondicional porque NO PUEDE publicar — *«The export does not call platform import, grading execution, or publishing paths»*. Separar la generación de la publicación es el patrón; una compuerta mejor adentro del camino de escritura no lo es** (**P144**). 🔴 **La acción 3 estaba CERRADA antes de escribirse, y la cerró el propio pase 57 en su tendencia 392: las «dos fechas incompatibles» son dos obligaciones distintas, no una contradicción. Es el defecto del gap 54 —declarar abierto lo que ya está cerrado— aplicado ADENTRO, y el mecanismo es que la lista de acciones y la de tendencias de un pase se escriben por separado y nada las cruza.** 🟢 **Las dos fechas se re-verificaron hoy por tres canales concordantes: Anexo III §3 → 2027-12-02 (AI Omnibus, DOUE 2026-07-24, en vigor 2026-07-27); Art. 50 NO tocado, vigente desde 2026-08-02; backstop del 50(2) el 2026-12-02 — a 60 días del 2026-10-03. Lo que sostiene la venta EMEA de esta base es justamente el reloj que no se movió.** ⚠️ **Nota de instrumento que corrige al pase 52 en la dirección contraria: este entorno negó ejecutar el código clonado INCLUIDAS las suites OFFLINE, así que la columna «Hoy» del README NO se re-verificó y este pase no afirma ninguna de esas cifras como medida hoy.** Tendencias **393**–**401**.
 > **Pase 55 del 2026-10-03:** 🔴 **el hallazgo que manda invierte la intuición de cualquier filtro de componentes: los dos ejes de la capa de conectores están ANTI-correlacionados.** Las tres piezas que someten trabajo calificado son las tres de PEOR procedencia de credencial y **las tres traen salvaguarda de integridad**; la de credencial más limpia (`peancor`, clase (a) con token de administración del **SITIO**) es la **única de las seis sin ninguna** — 🔴 **así que ordenar por higiene de credencial selecciona A FAVOR de la escritura de notas sin guarda** (**P127**). 🟢 **La clase (4) no existe en las seis y hay que decirlo: el ecosistema se autolimita donde la licencia no lo obliga** (**P128**), **y el «candidato natural a (4)» del pase 54 resultó el más estricto del conjunto.** ⚠️ **El esquema de cuatro clases es estudiante-céntrico y no ve la escritura del lado docente, que es donde está el agujero** (**P129**). 🟢 **Acción 2 cerrada con denominador ENUMERADO (14 filas → 9 determinables, 3 nuevas), y la tasa enumerada 2 de 9 (22,2 %) es MENOR que la oportunista 7 de 18 (38,9 %).** 🔴 **Y el pase se corrige a sí mismo antes de publicar: un `grep` escrito a mano dio «dos cifras del README vencidas» (49 y 34) y era FALSO POSITIVO — el instrumento versionado de esta KB da 46 y 33, que es lo que el README ya publicaba; el «control positivo» que lo habilitó era insensible al defecto** (**P126**). ⚠️ **Dos instrumentos de este pase dieron falsos positivos y se atraparon con control; ninguno se publicó como dato** (**P130**). 🟢 **El instrumento de terna del pase 54 se estrenó y disparó en la primera cifra nueva.** Tendencias **313**–**336**.
 > **Pase 54 del 2026-10-03:** 🔴 **el pase corrige el instrumento que el pase 53 acababa de construir, y lo corrige exactamente por donde el pase 53 escribió que había que probarlo: su propio CONTROL NEGATIVO falló.** `Dymayo/moodler-mcp`, que el pase 53 declaró control negativo *«si saliera (b) el instrumento está mal»*, **salió (b)** — y el defecto tiene nombre: **P121 leía el TIPO de la credencial y hay que leer su PROCEDENCIA** (**P123**). 🟢 **La clase nueva es la que ningún filtro automatizable ve: la pieza abre un navegador real, el alumno completa su SSO con passkey y 2FA, y entonces la pieza le pide a Moodle un token de web service OFICIAL y lo guarda en disco — artefacto de clase (a), emisor de clase (b).** 🔴 **Y el corolario invierte la intuición: `moodler-mcp` declara CERO variables de credencial (sólo `MOODLE_URL`) precisamente porque se la consigue sola, así que un audit de `.env` —el único barato de automatizar— ordena la capa al revés de lo que vale.** 🔵 **La hipótesis falsable del pase 53 cae en la banda que él mismo dejó sin interpretar (28,6 % este pase; 38,9 % acumulado: ni el ~45 % ni el <15 %) y por eso no decide — pero apareció un predictor mejor: el canal correlaciona con el ALCANCE, no con la plataforma. Nombre de universidad, 3 de 3 en clase (b); conector genérico de producto, 11 de 13 en (a), y las 2 excepciones son las dos que mintan su token.** 🟢 **La acción 2 desarma P122 y en la dirección FAVORABLE: 15 términos de afecto sobre los artefactos publicados de las tres piezas permisivas dan 3 coincidencias crudas y 3 falsos positivos verificados —dos comentarios de Tailwind y una encuesta con emoticones— o sea CERO inferencia de emoción, así que el art. 5(1)(f) NO parte esta capa y lo que hay es inferencia de CONDUCTA: Anexo III con plazo 2027-12-02, no práctica prohibida.** 🔴 **Pero una celda propia se corrige en los hechos: `mereos`, que el pase 53 clasificó 🟢 permitido, envía `cheating`, `it_looks_suspicious` y una *«re-calculation of the suspiciousness»* por imagen — y además apagar el ajuste NO detiene la derivación (*«regardless of the settings is enabled or not»*) y su taxonomía de AI se BAJA del servidor del proveedor, así que el clasificador no está en el paquete MIT.** 🟢 **`seb-server` resultó el caso MÁS FÁCIL de la capa y no el difícil que el pase 53 dejó abierto: sus siete indicadores son ping, contadores de log, batería y wifi — no observa al alumno, no es biométrico, y todo su riesgo de AI Act es IMPORTADO del servicio de sala.** 🟢 **Hallazgo regional del pase: el marco de alto riesgo de VIETNAM (ley vigente 2026-03-01) nombra la AI educativa de *«automated assessment and behavioral monitoring»* — la clase de conducta que esta base acababa de medir en el código está nombrada en una ley de APAC antes que en una de la UE.** 🔴 **Y una corrección regional propia: la brecha de gobernanza NO es un diferencial de LATAM — North America mide 18 % de docentes con política escrita contra el 18,5 % de instituciones latinoamericanas del pase 52.** 🟢 **Una deuda de alcance CIERRA (`@ink-waffle/*`: 4 de 4, 0 con texto de licencia) y la otra queda abierta con causa medida: `search?text=scope:X` de npm no filtra por alcance y falla en las dos direcciones.** 🔴 **Frontera nueva, la tercera: `[Credential Exploration]`.** 🟢 **Y una que se movió a favor: `[Exfil Scouting]`, así que el pedido 3(b) del pase 53 ya no hace falta.** Tendencias **295**–**312**.
@@ -5426,6 +5427,156 @@ hueco abierto, y el pase 56 ya se atrapó inventándolo (**P135**); (b) **el tex
 inalcanzable desde este entorno**, así que las fechas de 399 son de tres canales secundarios concordantes, **no de
 primera mano**; (c) **`AI-Teaching-Agent` no declara región** y su único indicio es contenido bilingüe
 inglés/chino — **indicio débil, NO se infiere región** (regla de **P135**).
+
+## Las tendencias 402–412, del pase 59 del 2026-10-03
+
+**402.** 🔴 **La acción 2 del pase 58 cierra y su hipótesis falsable cae en la rama de la UNICIDAD:
+ampliado el eje de 6 a 9 puertas de escritura de nota leídas en el CÓDIGO, `peancor/moodle-mcp-server`
+sigue siendo la ÚNICA que AFIRMA la publicación.** *«Afirma la publicación»* **no es una clase de la
+capa: es una fila.** 🟢 **La regla de entrega de P142 —se excluye, no se configura— se sostiene con el
+denominador ampliado un 50 %.**
+
+**403.** 🔴 **Pero ampliar el denominador descubrió el SEGUNDO POLO, y reencuadra la capa: el eje es
+BIPOLAR y ESCASO.** Sólo **2 de 9** piezas declaran una posición sobre la publicación en su código, y
+son los dos extremos: `peancor` cablea `workflowstate: 'released'` y `toshieji/moodle-grading-mcp`
+cablea `"workflowstate": "readyforreview"` con `"released": False`. **Las otras 6 no dicen nada:
+heredan u omiten.** 🔵 **Un eje con dos polos y seis silencios no se describe bien con un porcentaje,
+que es por qué los pases 54-56 rompieron tres esquemas de clasificación seguidos** (**P133**).
+
+**404.** 🟢 **`toshieji` asciende de «declarado en el README» a «leído en el código», que es el
+estándar que impuso el propio pase 58.** Verificado de primera mano en `server.py:570`:
+`"workflowstate": "readyforreview",  # ★未公開ドラフト。releasedにしない`, más
+`workflowstate="readyforreview", released=False` (l. 577). ⚠️ **Nueve pases la citaron por su README y
+el pase 57 la degradó por su precondición; este pase confirma que la constante SÍ está en el código —
+la degradación era sobre la condición externa, no sobre la existencia del borrador.**
+
+**405.** 🔴 **La simetría que decide el despliegue, y es más vendible que el 1 de 9: NINGUNO de los dos
+polos consulta `markingworkflow`, así que las dos garantías son condicionales y en sentidos OPUESTOS.**
+A `peancor` **no la salva** `markingworkflow = 1` (publica igual); a `toshieji` **la DERROTA**
+`markingworkflow = 0` (publica igual). ⚠️ **La mejor pieza de la capa y la peor dependen de la MISMA
+casilla.** 🔵 **Corrige el énfasis del pase 58: la verificación de plataforma no es el paso que
+protege de las puertas malas —no las arregla— es el paso del que depende que la puerta BUENA sea
+buena** (**P145**). 🟢 **El único cumplimiento incondicional sigue siendo `AI-Teaching-Agent`, que no
+puede publicar: P144 se confirma en vez de reemplazarse.**
+
+**406.** 🔴 **Hallazgo estructural nuevo: las puertas de Canvas se propagan por FORK, y un barrido por
+repo sobre-cuenta el código.** `algorithm0r/canvas-lms-mcp` es fork **declarado por GitHub** de
+`bruchris/canvas-lms-mcp`, y `abr-Projects/canvas-mcp` de `vishalsachdev/canvas-mcp` — **ambos MIT,
+ambos 0 ★, ambos escriben nota** (*«48 tools perform Canvas write operations»*;
+`bulk_grade_submissions`). 🔵 **Así que «1 de 9» es una afirmación sobre CÓDIGO DISTINTO; contado por
+repos el denominador se infla sin que entre un mecanismo nuevo.** ⚠️ **Y el riesgo de despliegue va al
+revés de lo intuitivo: el fork tiene 0 ★, no aparece en ningún ranking y hereda el defecto medido en
+la madre, así que un cliente puede adoptarlo sin que ningún barrido lo nombre. La pieza desplegada se
+identifica por el COMMIT, no por el nombre del proyecto** (**P146**).
+
+**407.** 🟢 **1 alta, y entra por ampliar el denominador con código propio:**
+`CharlieCardenasToledo/mcp-canvas-server` (**MIT**, **0 ★**, TypeScript, 51 tools docentes),
+**verificada NO FORK** en la página del repo. `src/services/canvas-client.ts:494-507` manda
+`data = { submission: { posted_grade: grade } }` y **tiene 0 menciones de `post_manually`,
+`posting_policy` o `postPolicy` en sus 60.194 bytes**: publica por **OMISIÓN**, así que la
+configuración correcta del *assignment* la neutraliza. ⚠️ **Sin confirmación por llamada ni borrador
+sobre la nota.**
+
+**408.** 🔴 **El dato de licencia del pase, y cambia el ORDEN de los filtros con que esta base
+recomienda: el MCP de Moodle más estrellado del barrido no tiene licencia.** `loyaniu/moodle-mcp`
+acumula **37 ★** —el segundo de toda esta capa tras los 272 de `vishalsachdev`— y **no se puede
+entregar**: `LICENSE` ausente en `main` **y** `master`, **sin clave `license` en `pyproject.toml`**
+(`moodle-mcp` v0.2.1). 🔵 **El filtro de licencia va ANTES del de popularidad, porque el orden inverso
+selecciona justo lo que no se puede entregar** — de las cinco candidatas screeneadas, la más adoptada
+es la inusable y las tres permisivas tienen 0 ★. **Tercera reproducción de la curva invertida de
+P134/P138, ahora sobre la licencia en vez de sobre la compuerta** (**P147**).
+
+**409.** ⚠️ **Cuatro candidatas más screeneadas y descartadas como puertas por ser de SÓLO LECTURA, y
+se registran como ausencias MEDIDAS en vez de omitirse:** `loyaniu/moodle-mcp` (lectura de notas),
+`csmediapro/moodle-mcp-server` (**AGPL-3.0**, *«Read-only — never modifies Moodle data»*),
+`Jawadh-Salih/moodle-mcp-server` (**MIT** medido en el texto del `LICENSE`, Go, lado alumno),
+`dddanielliu/NCCU-Moodle-MCP` (sin licencia; su única escritura es del alumno: *«Saves only — never
+the irreversible submit-for-grading»*), más `PabloPC05/mcp-usc` (**MIT**, *«does not … act as teaching
+staff or administration»*). 🔵 **Regla de los pases 51-52: una ausencia medida es un dato; el silencio
+parece cobertura.**
+
+**410.** 🔴 **La acción 1 del pase 58 se entrega CON SU FIXTURE REFUTADO, y la refutación es el
+hallazgo.** El pase 58 mandó el control negativo con nombre: *«tiene que FALLAR sobre el par real
+(acción 3 ↔ tendencia 392) del pase 57»*. **Ese par no existe:** el bloque de acciones del pase 57
+cita **gaps 249, 232 y 100** y **no afirma nada sobre fechas** — su acción 3 es el pedido de **egreso
+de red**, palabra por palabra igual que en los pases 54-56. **La pregunta de las fechas es el
+`gap 56`, cuya acción vivió en el pase 32 y que el libro de gaps cerró en el pase 39.** ⚠️ **La ironía
+es el dato: el pase 58 diagnosticó que «nada cruza la lista de acciones con la de tendencias» y su
+única evidencia era ella misma un error de cruce.** 🟢 **El defecto es real y vale el instrumento; el
+caso citado no lo era, y la ausencia se conserva como aserto (`test_mandated_fixture_is_not_real`)
+para que no vuelva a escribirse.**
+
+**411.** 🔴 **Y el corpus refutó también la FORMA del instrumento, que es lo que lo vuelve un patrón:
+un barrido por número de gap produce un falso positivo REAL.** El bloque del pase 48 menciona
+`gap 51` (cerrado en el pase 29) en la frase *«el método que cerró el gap 51 y rindió dos altas en el
+pase 34»* — **precedente, que es el uso CORRECTO de un gap cerrado.** 🔵 **La unidad de juicio no es
+el identificador: es el ACTO DE HABLA de la cláusula que lo lleva**, así que el instrumento clasifica
+`REQUEST`/`PRECEDENT`/`UNCLEAR` **y publica la clasificación para que un lector la desautorice**,
+porque una regex sobre prosa en español es más débil que una lectura de código (**P148**).
+
+**412.** ⚠️ **Nota de instrumento, SEGUNDA reproducción consecutiva y se declara en vez de taparse:
+este entorno negó ejecutar el código del árbol clonado, incluidas las suites OFFLINE**
+(`[Code from External]` sobre `python3 test_trends.py`), **y también negó la descarga masiva de
+archivos fuente externos** (`codeload.github.com`), **así que la lectura de código se hizo archivo por
+archivo por `raw.githubusercontent.com`, que es el canal que los pases 56-58 ya usaban.**
+🔴 **Consecuencias declaradas:** (a) **la suite nueva `compose/code/action-gap-crosscheck/` se publica
+con 17 asertos ESCRITOS y 0 CORRIDOS**, dicho en su propio README; (b) **la columna «Hoy» de
+`compose/code/` no se re-verificó y este pase no afirma ninguna de esas cifras como medida hoy** —
+siguen siendo las del pase 56. 🔵 **Lo que sí se midió sin ejecutar nada: las afirmaciones sobre el
+pase 57, el gap 56 y el gap 51 salen de lecturas directas del markdown con `grep`/`awk`.**
+⚠️ **Tercera corrección de canal del pase, y toca al verificador de URLs de esta base: `curl -sI`
+contra `github.com` devolvió `403` en los OCHO repos probados —el proxy de egreso bloquea `HEAD` sobre
+el HTML, NO es un 404—, así que la verificación de existencia se hizo por `raw.githubusercontent.com`
+(200 en los ocho) y por `WebFetch` de la página, dos canales concordantes.**
+
+### 🌍 El barrido regional del pase 59, con lo que rindió cada región
+
+| Región | ¿Rindió? | Lo que trajo |
+|---|---|---|
+| **North America** | 🟢 **sí, y es el material comercial del pase** | 🔴 **Gallup + Walton Family Foundation, *«Teaching for Tomorrow»*, campo 9-feb a 2-mar 2026, n = 2.069 docentes K-12: sólo 18 % tiene guía FORMAL, 34 % NO tiene ninguna, 48 % sólo informal, y 🔴 58 % no tiene guía para usar AI al CALIFICAR o dar devolución** (69 % para tutoría 1-a-1). 🟢 **El 58 % es exactamente la capa que esta KB mide.** Nuevo: *STUDENTS FIRST Act of 2026* (AASA, 2026-08-03, alumnos de los 50 estados). **4 estados (Idaho, Oklahoma, Virginia, Maryland) obligan guía estatal Y política de distrito.** NA = **38 %** del mercado |
+| **EMEA** | 🟢 **sí, y sirvió para DESCARTAR una fuente** | 🔴 **una secundaria afirmó *«Entry into force of AI Act on 31 July 2026»* — falso y descartado:** el AI Act entró en vigor el **2024-08-01**; lo de julio de 2026 fue el ***AI Omnibus*** (2026-07-27). 🟢 **Los tres relojes del pase 58 se sostienen y no se re-litigan.** ⚠️ **`gap 92` reconfirmado por tercer pase: `eur-lex` y `artificialintelligenceact.eu` siguen BLOQUEADOS, así que las fechas son de secundarias concordantes, no de primera mano** |
+| **APAC** | 🟢 **sí** | ⚠️ relojes re-confirmados (Corea 2026-01-22, Vietnam 2026-03-01, **Singapur/IMDA marco de AI AGÉNTICA 2026-01-22 — el único que nombra agentes**, Australia 2026). 🟢 **Cifras nuevas: 96 % planea invertir más, 88 % espera retorno este año**, 66 % pilotea/adopta, ROI **2,85 USD por dólar**, gasto +15 %. 🔵 **Y el dato de capa: la ÚNICA de las nueve puertas que afirma el borrador en su código es de APAC** (`toshieji`, comentario en japonés en `server.py:570`, 0 ★) |
+| **LATAM** | 🟢 **sí** | 🟢 **DEC LATAM 2026 re-confirmada: 92 % de alumnos y 79 % de docentes usan AI (+30.000 respuestas, 29 instituciones); 50 % de alumnos acepta devolución asistida contra 19 % de docentes que la usa — la brecha es de OFERTA**; 61 % teme mal uso por pares; 94 % del cuerpo docente espera usarla. 🟢 **Nuevo: sólo Brasil (65,89), Chile (63,19) y Uruguay (62,21) entran al top 50 del AI Readiness Index; Chile «pionero»**. Colombia CONPES 4144 |
+
+🟢 **Las cuatro regiones rindieron: este pase no tiene región en silencio.** ⚠️ **Y los huecos que se
+vuelven a declarar en vez de taparse:** (a) 🔴 **ninguna de las NUEVE puertas medidas declara origen
+LATAM — décimotercer pase con el hueco abierto**, y este pase volvió a resistir la tentación con
+`CharlieCardenasToledo/mcp-canvas-server`, cuyo único indicio es un antropónimo hispanohablante:
+**un nombre de persona no es evidencia de región** (regla de **P135**, tras el falso positivo de
+«Italia» por subcadena del pase 56); (b) **el texto consolidado del AI Act sigue inalcanzable**;
+(c) ⚠️ **`CharlieCardenasToledo`, `algorithm0r` y `abr-Projects` tampoco declaran región** — tres
+piezas nuevas y las tres sin región determinada, que es la forma habitual de esta capa.
+
+## 🔵 Las tres acciones que el pase 59 deja escritas para el pase 60
+
+1. 🔴 **Medir si el FORK hereda el defecto o lo CORRIGE, que es la pregunta que P146 abre y no
+   contesta** (**406**). Este pase estableció el parentesco por la declaración de GitHub, **no
+   comparó el código**. **La acción concreta:** leer `src/services/canvas-client.ts` (o su
+   equivalente) en `algorithm0r/canvas-lms-mcp` y el camino de `bulk_grade_submissions` en
+   `abr-Projects/canvas-mcp`, y comparar contra la madre en el eje de publicación
+   (`posted_grade`, `post_manually`, `posting_policy`). 🔵 **Hipótesis falsable y las dos ramas
+   sirven: si el fork es idéntico en el eje, «identificar por commit» es una precaución de
+   inventario y basta nombrarla; si DIVERGE —en cualquiera de los dos sentidos— entonces el fork es
+   una fila propia del eje y el denominador de 9 está mal contado.** ⚠️ **El canal es
+   `raw.githubusercontent.com` archivo por archivo: la descarga masiva quedó negada en este pase.**
+2. 🔴 **Cerrar la pregunta que `toshieji` deja abierta y que vale para TODA la capa: ¿alguna de las
+   nueve puertas puede verificar `markingworkflow` con el token que ya tiene?** (**405**). Las nueve
+   llaman a `mod_assign_get_assignments` o podrían hacerlo, y **405** establece que la garantía de la
+   mejor pieza depende de esa casilla. **La acción concreta:** determinar si la respuesta de
+   `mod_assign_get_assignments` incluye `markingworkflow` en el conjunto de capacidades que el token
+   de un docente obtiene, leyendo el descriptor del web service en `moodle/moodle` @ `main` bajo
+   `public/mod/assign/` (el árbol se mudó en Moodle 5 — **gap 250**). 🔵 **Si el dato viene con el
+   token normal, entonces la verificación de plataforma es un PR de tres líneas a `toshieji` y esta
+   KB puede ofrecerlo hacia afuera; si requiere capacidad de administración, el paso queda del lado
+   del cliente para siempre y hay que cotizarlo como tal.**
+3. ⚠️ **Pedir el permiso angosto y correcto, SIN cambios respecto del pase 58: ejecución de las
+   suites OFFLINE del árbol clonado** (**412**). 🔴 **Segunda reproducción consecutiva de la negativa,
+   y ahora con un costo concreto y nombrado: la suite del pase 59 se publicó con 0 de 17 asertos
+   corridos.** 🔵 **Es un solo pedido y no incluye red:** el pase 52 ya estableció que el egreso de
+   red para `probe.py` es un pedido distinto y aparte. ⚠️ **Y el segundo pedido chico, nuevo de este
+   pase: que la descarga de archivos fuente de repos públicos (`codeload.github.com`) deje de quedar
+   negada, o la confirmación de que el canal correcto es `raw.githubusercontent.com` archivo por
+   archivo —que es el que se usó— para no volver a gastar un intento por pase.**
 
 ## 🔵 Las tres acciones que el pase 58 deja escritas para el pase 59
 

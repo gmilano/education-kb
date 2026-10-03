@@ -8,6 +8,84 @@ updated: 2026-10-03
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 
+## 2026-10-03 (pase 59) — **el dato crudo: 16 repos tocados, 5 archivos de código leídos para el eje de publicación, 3 licencias probadas en 2 ramas cada una, 2 forks con padre declarado y 1 canal de verificación que hubo que cambiar**
+
+### 🔴 La nota de canal, primero, porque invalida un método que esta base usaba
+
+**`curl -sI https://github.com/<owner>/<repo>` devuelve `403` para los OCHO repos probados en este
+pase** — incluidos los que el pase 58 verificó sin problema. 🔵 **No es `404`: es el proxy de egreso
+de este entorno bloqueando `HEAD` sobre el HTML de `github.com`.** 🔴 **Consecuencia de método: un
+`403` por este canal NO es evidencia de que el repo no exista, y una verificación de URL por
+`curl -sI` contra `github.com` no vale en este entorno.**
+
+**El canal que sí funciona, y es el que se usó:** `raw.githubusercontent.com` (`200` verificado) y
+`WebFetch` sobre la página del repo (renderizó las ocho). **Las ocho URLs quedan verificadas por
+esos dos canales concordantes, no por `curl -sI`.**
+
+| Repo | `raw…/main/README.md` | `WebFetch` de la página |
+|---|---|---|
+| `loyaniu/moodle-mcp` | **200** | 🟢 renderizó |
+| `Jawadh-Salih/moodle-mcp-server` | **200** | 🟢 renderizó |
+| `dddanielliu/NCCU-Moodle-MCP` | **200** | 🟢 renderizó |
+| `NiccoloSalvini/mcp-moodle-teacher` | **200** | 🟢 renderizó |
+| `toshieji/moodle-grading-mcp` | **200** | 🟢 renderizó |
+| `PabloPC05/mcp-usc` | **200** | 🟢 renderizó |
+| `peancor/moodle-mcp-server` | **200** | 🟢 renderizó |
+| `littlecookie0722/AI-Teaching-Agent` | **200** | 🟢 renderizó |
+
+### Las 5 lecturas de código del eje de publicación, crudas
+
+**Regla mantenida del pase 58: la celda se decide por el archivo que hace la llamada, no por el README.**
+
+| # | Archivo leído (`raw.githubusercontent.com`, rama `main`) | Bytes | Qué se buscó | Resultado crudo |
+|---|---|---|---|---|
+| 1 | `NiccoloSalvini/mcp-moodle-teacher` → `src/index.ts` | **62.132** | `workflowstate`, `'released'`, `mod_assign_save_grade`, `markingworkflow` | **3 aciertos**: `can_grade: functions.includes("mod_assign_save_grade")` (l. 98), **`workflowstate: ""` (l. 375)**, `await moodle().call("mod_assign_save_grade", payload)` (l. 383). 🔴 **`markingworkflow`: 0 menciones**, aunque llama a `mod_assign_get_assignments` en l. 198 y l. 1218 |
+| 2 | `NiccoloSalvini/mcp-moodle-teacher` → `src/moodle.ts` | 4.297 | ídem | **0 aciertos** (es el cliente del web service) |
+| 3 | `NiccoloSalvini/mcp-moodle-teacher` → `src/marking.ts`, `src/grades.ts`, `src/oversight.ts` | 7.322 + 10.069 + 3.067 | ídem | 🔵 **0 aciertos en los tres**: el único escritor de nota está en `index.ts` |
+| 4 | `toshieji/moodle-grading-mcp` → `server.py` | **26.489** | ídem | **9 aciertos.** El decisivo, l. 570: `"workflowstate": "readyforreview",  # ★未公開ドラフト。releasedにしない`; más `workflowstate="readyforreview", released=False` (l. 577) y el par `"workflowstate": "readyforreview"` / `"released": False` (l. 583-584). 🔴 **`markingworkflow`: 0 menciones** |
+| 5 | `CharlieCardenasToledo/mcp-canvas-server` → `src/services/canvas-client.ts` | **60.194** | `posted_grade`, `post_manually`, `posting_policy`, `postPolicy` | **1 acierto**: `posted_grade: grade` (l. 505), dentro de `gradeSubmission` (l. 494) contra `courses/{c}/assignments/{a}/submissions/{u}`. 🔴 **`post_manually` / `posting_policy` / `postPolicy`: 0 menciones en todo el archivo** (`grep -ic` = **0**) |
+
+⚠️ **Cuatro sondas de ruta que dieron 404 y se registran** (la regla del `gap 250`: la sonda tiene que
+ser el archivo que se va a leer): `mcp-moodle-teacher` → `src/tools/grading.ts` **404**,
+`src/client.ts` **404**; `mcp-canvas-server` → `src/services/canvas-api.ts` **404**,
+`src/tools/grades.ts` **404**, `src/tools/index.ts` **404**, `src/services/index.ts` **404**.
+🔵 **El árbol real se obtuvo listando el directorio con `WebFetch`, no adivinando rutas.**
+
+### Las 3 licencias probadas en las dos ramas, crudas
+
+| Repo | `main/LICENSE` | `master/LICENSE` | `pyproject.toml` | Veredicto |
+|---|---|---|---|---|
+| `loyaniu/moodle-mcp` | 🔴 **ausente** | 🔴 **ausente** | 🔴 **sin clave `license`** (sólo `name = "moodle-mcp"`, `version = "0.2.1"`) | 🔴 **SIN LICENCIA, con 37 ★** |
+| `dddanielliu/NCCU-Moodle-MCP` | 🔴 **ausente** | 🔴 **ausente** | — | 🔴 **SIN LICENCIA** |
+| `Jawadh-Salih/moodle-mcp-server` | 🟢 **`MIT License`** (primera línea del archivo) | — | — | 🟢 **MIT medido** |
+
+### Los 2 forks, con el padre declarado por GitHub
+
+| Fork | Padre, verbatim de la página | Licencia | ★ | Lenguaje | Escritura de nota |
+|---|---|---|---|---|---|
+| `algorithm0r/canvas-lms-mcp` | *«forked from bruchris/canvas-lms-mcp»* | MIT | 0 | TypeScript | `grade_submission`, `comment_on_submission`; *«48 tools perform Canvas write operations»* |
+| `abr-Projects/canvas-mcp` | *«forked from vishalsachdev/canvas-mcp»* | MIT | 0 | Python | `bulk_grade_submissions`; *«up to 101 tools»*, v1.12.0 |
+
+🔵 **`CharlieCardenasToledo/mcp-canvas-server` se probó contra la misma pregunta y la respuesta fue
+NO:** la página no declara padre. **Es la única de las tres nuevas que aporta código distinto.**
+
+### El barrido obligatorio, crudo: 4 globales + 4 regionales, año calculado 2026
+
+| Búsqueda | Qué devolvió de nuevo para esta capa |
+|---|---|
+| `top open source AI agents education 2026 github MIT` | ⚠️ **nada de educación**: listicles de agentes genéricos (OpenClaw, OpenHands, CrewAI, LangGraph). **Duodécimo pase con la capa genérica** |
+| `github trending education AI 2026` | ⚠️ **material didáctico SOBRE AI**, no agentes PARA educación (`AI Agents for Beginners` 56.002 ★, `developer-roadmap`) — mismo sesgo que los 11 pases anteriores |
+| `open source platform education LMS SIS MIT Apache` | ⚠️ **sin alta permisiva nueva**: Moodle, Open edX, Sakai (Apache-2.0), Canvas, ILIAS, Chamilo, OpenEduCat (LGPLv3) — ya todas en `verticals/` |
+| `AI education industry trends 2026` | 🟢 cifras de mercado y adopción (ver `intel/market.md`) |
+| `moodle MCP server grade submission mod_assign_save_grade github workflowstate` | 🟢 **la que rindió**: 3 candidatas nuevas (`loyaniu`, `Jawadh-Salih`, `dddanielliu`) |
+| `new open source AI grading agent MCP server Canvas Moodle released 2026 Apache MIT` | 🟢 **la que más rindió**: la alta + los 2 forks + `csmediapro` |
+| 4 regionales (NA / EMEA / APAC / LATAM) | 🟢 **las cuatro rindieron** — ver `intel/market.md` y `intel/trends.md` |
+
+🔵 **La lección de barrido, y es la tercera vez que se repite: las dos búsquedas que rindieron son las
+ESPECÍFICAS DE MECANISMO** (`mod_assign_save_grade`, `workflowstate`, `posted_grade`), no las cuatro
+genéricas obligatorias. ⚠️ **Las genéricas se siguen corriendo porque el barrido es obligatorio, y se
+sigue declarando que no rinden en esta capa.**
+
 ## 2026-10-03 (pase 58) — **el dato crudo: 6 archivos de código fuente leídos línea por línea para el eje de precondición, 2 licencias probadas en 2 ramas, 2 hosts de la UE bloqueados y 14 suites NO corridas (con el motivo)**
 
 ### Las 6 lecturas de código de la acción 1, crudas
