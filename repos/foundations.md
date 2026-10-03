@@ -81,6 +81,97 @@ corre ése antes de escribir uno a mano** (tendencia **313**). 🟢 **Y el `gafa
 > **Pase 36 del 2026-10-02:** 🔵 **este pase no agrega repos: le pone FECHA a los que ya están, y la fecha cambia tres recomendaciones.** Se midió la capa PHP de evaluación y telemetría en Packagist —el único registro de los tres que entrega descargas en este entorno (`api.npmjs.org` y `pypistats.org` dan **403 a CONNECT**)— y el resultado está en `repos/trending.md`. **Lo que hay que saber antes de proponer desde este archivo:** 🔴 **la pieza xAPI más descargada de esta base, `rusticisoftware/tincan` (Apache-2.0, 6.178 desc./mes, 863.777 totales), no publica desde el 2022-11-02**, y ⚠️ **el único MIT de esa capa, `php-xapi/client`, está parado desde el 2021-03-24** con 825 desc./mes. 🔵 **La lectura es que en xAPI/PHP lo permisivo está quieto y lo vivo es copyleft**, así que la receta de telemetría se sostiene en **Ralph (MIT)** + **`lrsql` (Apache-2.0)** + **`learnmcp-xapi` (MIT)** y no en la capa PHP. 🟢 **Del lado de evaluación, lo activo es `oat-sa/extension-tao-testqti`** (**885 versiones**, release del **2026-09-30**) **y sigue siendo GPL-2.0-only**, mientras **lo permisivo es lo nuevo**: `@longsightgroup/qti3-cli` (**MIT**, 41 releases desde el 2026-05-21, último **2026-10-01**) con **cero dependencias de terceros** — sus 4 dependencias son todas `@longsightgroup/*` pinneadas a la misma versión exacta. **Su manifiesto MCP completo de 20 tools está escrito en `compose/patterns.md` (P76).** 🔴 **Y una corrección de catálogo: `oat-sa/qti-sdk` devuelve 404 en Packagist porque es el nombre del REPO — su paquete es `qtism/qtism`** (GPL-2.0-only, 218.212 descargas totales, 315 versiones). **Nombre de repo y nombre de paquete son identificadores distintos, y confundirlos produce un 404 que parece una ausencia** — pasó igual con `1edtech/oneroster`, `imsglobal/lti-1-3-php-library` y `packbackbooks/lti-1-3-php-library`, los tres **404**, que se anotan como *«no verificado en Packagist bajo ese nombre»* y **no** como inexistentes. ⚠️ **Acción pendiente que el pase 37 tiene asignada: este archivo nunca pasó por el control de *slugs* distintos ni por el de *backlink*** — los dos que en `agents/top.md` encontraron **un duplicado** y **dos colisiones** este mismo pase.
 > **Pase 11 del 2026-10-01:** aparece una licencia que las diez pasadas anteriores filtraban sin saberlo — **ECL-2.0**, con la que licencia todo Apereo (Sakai, Opencast, OpenLRW). Es Apache-2.0 con el alcance de patentes acotado, aprobada por OSI y FSF, y **es apta para construir arriba**. Ver la capa de analítica institucional, abajo.
 
+## 🧾 El instrumento por ARCHIVO existe por fin, y lo primero que encuentra es que el alcance de una pieza RECOMENDADA no se puede cerrar (acción 3 del pase 68, pase 69 del 2026-10-03)
+
+### 🔴 La corrección que este archivo tiene que hacerse, primero
+
+🔴 **La celda de titular de `INGInious` decía `FSF → NOT-APPLICABLE`, y es FALSA.** El `LICENSE` es
+boilerplate de la AGPL —cuyo copyright **sí** es de la Free Software Foundation, y de ahí salió el
+error—, pero los encabezados de los archivos remiten a **DOS** archivos, no a uno:
+
+> `# This file is part of INGInious. See the LICENSE and the COPYRIGHTS files for`
+> `# more information about the licensing of this file.`
+
+🟢 **El `COPYRIGHTS` existe, pesa 622 B, y ningún instrumento de esta base lo había abierto nunca:**
+
+> *«The vast majority of the files are Copyright (c) 2014-2026 Anthony Gégo, Guillaume Derval and
+> Pierre Reinbold»*
+
+🟢 **Corregido a `HOLDER-DECLARED-ELSEWHERE`.** 🔵 **Y deja una CAPA nueva para la escalera de
+precedencia de **P197**: un archivo de TITULAR dedicado manda sobre el boilerplate del `LICENSE` para
+la pregunta del titular, igual que el payload manda sobre el identificador del manifiesto.**
+⚠️ **Esta clase de archivo no está barrida en las 200 filas: no se afirma en cuántas más el titular
+vive en un `COPYRIGHTS`, un `AUTHORS` o un `NOTICE` que los cuatro instrumentos de esta KB no leen.**
+
+### 🟢 Lo que el instrumento por archivo SÍ pudo cerrar
+
+De los archivos de entrada alcanzables de `INGInious`, **7 de 7** traen el mismo encabezado que
+remite al `LICENSE`, con **cero excepciones declaradas en el encabezado**, y el `pyproject.toml`
+declara `license = {text = "AGPL 3"}` más el clasificador `License :: OSI Approved :: GNU Affero
+General Public License v3`.
+
+| Archivo | Encabezado | Licencia en el encabezado |
+|---|---|---|
+| `pyproject.toml` | remite al `LICENSE` | 🟢 **`AGPL 3`** + clasificador AGPL v3 |
+| `inginious/__init__.py` | remite al `LICENSE` y al `COPYRIGHTS` | sin licencia propia |
+| `inginious/frontend/app.py` | ídem | sin licencia propia |
+| `inginious/frontend/installer.py` | ídem | sin licencia propia |
+| `inginious/client/client.py` | ídem | sin licencia propia |
+| `inginious/agent/__init__.py` | ídem | sin licencia propia |
+| `inginious/common/__init__.py` | ídem | sin licencia propia |
+| `setup.py` | 🔴 **404** — el proyecto ya no lo tiene | — |
+
+### 🔴 Y el alcance NO se puede cerrar, que es un resultado peor que no haberlo medido
+
+🔴 **El propio `COPYRIGHTS` dice:** *«Some other files are entirely made by third parties, and
+distributed with other licences; this is clearly indicated in these files.»*
+
+🔵 **O sea: las excepciones EXISTEN por declaración del proyecto, están marcadas sólo DENTRO de los
+archivos, y no hay ningún manifiesto que las enumere.** 🔴 **Ningún instrumento acotado puede cerrar
+el alcance: haría falta leer todos los archivos del árbol, y el listado de directorio sólo está
+abierto por WebFetch y no es scripteable.**
+
+⚠️ **Lo cotizable, entonces, y así se escribe de ahora en más:** *AGPL-3.0 en la superficie de
+entrada medida (7/7, 0 excepciones), con archivos de terceros de otras licencias que existen por
+declaración del proyecto y no están enumerados* (**P201**). 🔴 **La frase «AGPL-3.0 entero» no es
+medible y esta base la venía publicando.**
+
+### 🔴 La otra pieza de alcance declarado: la licencia es por VERSIÓN, y ya está medido en cuál
+
+| Ruta en `1EdTech/openbadges-specification` | Estado |
+|---|---|
+| `LICENSE` · `LICENSE.md` · `NOTICE` (raíz) | 🔴 **404** las tres |
+| `ob_v3p0/license.md` | 🟢 **200** — *Specification Document License* de IMS Global: **niega derivados** |
+| `ob_v2p0/index.md` | 🟢 **200** — **la versión EXISTE** |
+| `ob_v2p0/license.md` | 🔴 **404** — **silencio, no ausencia de versión** |
+| `ob_v2p1` · `ob_v1p1` · `ob_v1p0` · `ob_v3p1` · `clr_v2p0` | 404 en los dos nombres — no se afirma que existan |
+
+🔵 **Por la regla de la acción (publicar la MÁS restrictiva encontrada), lo cotizable del repo es
+«niega derivados».** ⚠️ **Y queda escrito que para un repo de especificación «la licencia del repo»
+es una frase mal formada: hay una versión que cede y una, viva, que calla.**
+
+### 🟢 La capa de currículo gana SUECIA, y es la quinta jurisdicción
+
+| Pieza | Licencia (leída) | ★ / forks | Región | Qué aporta |
+|---|---|---|---|---|
+| 🟢 [`ksaklfszf921/skolverket-mcp`](https://github.com/ksaklfszf921/skolverket-mcp) | **MIT**, 1.092 B, `Copyright (c) 2025 Skolverket Syllabus MCP Contributors` ⚠️ `HOLDER-UNRELATED` | **11** / 8 | **EMEA** (Suecia) | Acceso por MCP a las **tres** API abiertas de **Skolverket**: *Läroplan* (currículo), *Skolenhetsregistret* (registro de centros) y *Planned Educations* |
+
+🔵 **Con esto la capa de currículo de esta base tiene Alemania (`FWU-DE`), España, Japón (`jp-cos`),
+Chile y Suecia.** ⚠️ **Dos reservas, escritas antes de que alguien la cotice:** 🔴 **no la publica la
+agencia** (el titular NOMBRA a Skolverket sin serlo — **P190**), y 🔴 **la licencia del DATO no está
+medida**: el README sólo afirma *«Fri användning»* en prosa, y MIT cubre el cliente, no el dato
+(**P172**; es la tendencia 22 por enésima vez).
+
+### ⚠️ El veredicto de la capa de estándares sigue medido en 2 de 7, y se dice así
+
+🔴 **La acción 2 del pase 68 —abrir las páginas de CLR, QTI, OneRoster y LTI en
+`standards.1edtech.org`— está BLOQUEADA en este entorno por los dos canales:** `403 CONNECT` por
+`curl` y `EGRESS_BLOCKED` por WebFetch, y lo mismo `www.imsglobal.org/speclicense.html`.
+⚠️ **Así que `1EdTech × documento` queda **medido en 2 de 7** y este archivo lo escribe así cada vez
+que lo nombre, que es la condición de vencimiento que el pase 68 impuso. No se infiere el régimen de
+los otros cuatro.**
+
+
 ## 🧾 La capa de ESTÁNDARES, medida entera por fin: el régimen se parte por PUBLICADOR × TIPO DE ARTEFACTO, no por «ser un estándar» (acción 3 del pase 67, pase 68 del 2026-10-03)
 
 ### 🔴 Lo que este archivo tiene que corregirse, primero
@@ -160,7 +251,7 @@ corrección propiamente dicha y un índice regional, las cinco con el archivo de
 
 | Repo | Licencia (**medida**) | Lectura del titular (**P184**) | Descripción | ★ | ¿Base para AI? |
 |---|---|---|---|---|---|
-| [`INGInious/INGInious`](https://github.com/INGInious/INGInious) | 🔴 **AGPL-3.0**, **34.764 B** ⚠️ **con preámbulo de ALCANCE** (**P186**) | FSF → `NOT-APPLICABLE` | Plataforma de evaluación automática y **segura** de ejercicios con tus propias pruebas. ***Grader* externo de Moodle y de edX vía LTI.** **UCLouvain** (Bélgica) | **243** (150 forks) | ✅ **la capa de corrección sobre la que se compone un agente** — 🔴 **AGPL + alcance parcial: leer los encabezados por archivo antes de prometer un entregable cerrado** |
+| [`INGInious/INGInious`](https://github.com/INGInious/INGInious) | 🔴 **AGPL-3.0**, **34.764 B** ⚠️ **con preámbulo de ALCANCE que NO se puede cerrar** (**P186**/**P201**) | 🔴 **AGPL-3.0**, **34.764 B** — ⚠️ **el `LICENSE` es boilerplate FSF y el TITULAR vive en `COPYRIGHTS` (622 B): `Copyright (c) 2014-2026 Anthony Gégo, Guillaume Derval and Pierre Reinbold` → 🟢 `HOLDER-DECLARED-ELSEWHERE`, corregido en el pase 69 (antes decía `FSF → NOT-APPLICABLE`, que era FALSO)** (**P197**) | Plataforma de evaluación automática y **segura** de ejercicios con tus propias pruebas. ***Grader* externo de Moodle y de edX vía LTI.** **UCLouvain** (Bélgica) | **243** (150 forks) | ✅ **la capa de corrección sobre la que se compone un agente** — 🔴 **AGPL + alcance parcial: leer los encabezados por archivo antes de prometer un entregable cerrado** |
 | [`webtech-network/autograder`](https://github.com/webtech-network/autograder) | 🟢 **Apache-2.0**, **11.357 B** | ausente **por construcción** → `NOT-APPLICABLE` | Autograding flexible con generación de reportes sobre entregas de alumnos | — | ✅ **la licencia más cómoda de la tanda**: se compone como librería |
 | [`johnswyou/autograder`](https://github.com/johnswyou/autograder) | 🟢 **MIT**, **1.065 B** | 🟢 `Copyright (c) 2026 John You` → **`HOLDER-MATCH`** (cesión, **P179**) | Corrige **manuscrito** de física y matemática: localiza, transcribe, aplica rúbrica, emite `review_queue.md`. **OpenRouter** | **0** | ✅ **como PATRÓN de arquitectura** (rúbrica + cola de revisión humana), no por tracción |
 | [`zmievsa/autograder`](https://github.com/zmievsa/autograder) | 🔴 **GPL-3.0**, **35.149 B** | FSF → `NOT-APPLICABLE` | Corrección automática de entregas para cursos de programación, lado docente | — | ⚠️ **copyleft: se compone por proceso, no enlazando** |

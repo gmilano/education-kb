@@ -7,6 +7,7 @@ updated: 2026-10-03
 # 📡 Tendencias — education
 
 > Ventana de investigación: septiembre 2026. Verificado 2026-09-30; el pase 11, el 2026-10-01.
+> **Pase 69 del 2026-10-03:** 🟢 **De las tres acciones del pase 68, DOS se ejecutaron y rinden; la tercera está bloqueada por egress y se declara en vez de taparse.** 🔴 **Acción 1: antes de medir hay que corregir el denominador de la propia acción —pedía «los 16 nombres» de registro único y son **13** (21 filas → 18 nombres − 5 de doble registro); el «16» era un conteo de FILAS leído como de NOMBRES—.** 🔵 **Medidos los 13: **3 `IDENTITY-DECLARED` · 2 `IDENTITY-DECLARED-BUT-DEAD` · 3 `IDENTITY-PROVEN` · 5 `IDENTITY-UNKNOWN`**, y 5 ≥ 3 → gana la rama CARA: la columna *Identidad* es **CONDICIÓN** para publicar una fila de paquete, con el valor `desconocida` escrito y no omitido** (**P192** cerrado). ⚠️ **5 de 13 no es comparable con el «4 de 5» de ayer: otro denominador.** 🔴 **El hallazgo del pase ACOTA un patrón de ayer y está demostrado, no argumentado: el `sha256` del `LICENSE` prueba identidad sólo hasta donde llega su TITULAR. Dos paquetes DISTINTOS —`openedx-mcp` y `tutor-contrib-openedxmcp`— comparten `sha256:8d56b405468a`; y borrándole el nombre del titular al `LICENSE` de `@yunmiao/studymate` y al de `@schoolexl/mentor` los dos quedan **byte a byte** iguales al de `opencode-sit`, que es el caso con el que **P193** se escribió** (**P199**). 🟢 **El veredicto de ayer igual se sostiene por un instrumento MEJOR: el árbol NOMBRA al paquete en su `package.json`, que es un enlace de dos vías que el hash no es** (**P200**). 🔴 **Defecto de instrumento que esta serie arrastraba sin saberlo: `HEAD/README.md` da 404 sobre `INGInious` —una pieza RECOMENDADA— porque el repo embarca `README.rst`. Un sondeo de un nombre de archivo mide una convención, no la existencia, y fabrica lápidas** (**P198**). 🟢 **Acción 3 ejecutada: el instrumento por archivo de **P186** existe.** 🔴 **Y obliga dos cosas: el titular de `INGInious` NO es la FSF —está en un `COPYRIGHTS` de 622 B que ningún instrumento de esta base había abierto: *Anthony Gégo, Guillaume Derval and Pierre Reinbold*— y el ALCANCE no se puede cerrar, porque el proyecto declara archivos de terceros con otras licencias y NO los enumera** (**P197** gana una capa, **P201**). 🔴 **Acción 2 BLOQUEADA: `standards.1edtech.org` y `www.imsglobal.org` dan `403 CONNECT` por `curl` y `EGRESS_BLOCKED` por WebFetch, así que `1EdTech × documento` sigue **medido en 2 de 7** y se dice así cada vez.** ⚠️ **Barrido regional: CONFIRMACIÓN en las cuatro regiones, sin una cifra nueva del sector; lo nuevo son PIEZAS —Brightspace/D2L (NA) y el currículo nacional de Suecia (EMEA)—.** Ver las tendencias **548**–**553**.
 > **Pase 68 del 2026-10-03:** 🟢 **Las TRES acciones del pase 67 se ejecutaron, y las tres rinden; dos refutan la hipótesis con la que fueron escritas.** 🔴 **Acción 1: de los 5 nombres de doble registro, **4 son dos ARTEFACTOS distintos** y sólo `moodle-cli` es un proyecto en dos canales → gana la rama cara y lo que se agrega es la columna *Identidad*, NO la columna *Canal*** (**P192**). 🔵 **El caso duro es `canvas-lms-mcp`: dos proyectos REALES, los dos en GitHub, mismo nombre, titulares y `sha256` distintos.** 🟢 **Y el hash del `LICENSE` resulta servir en la otra dirección: UNE un paquete a su árbol cuando el registro no declara el enlace** (**P193**). 🟢 **Acción 2, debida por TERCERA vez, corrió: `sweep_holder.sh` REPRODUJO 68/31/61 exacto, así que la cifra del pase 66 queda verificada y no corregida** — y la ampliación del denominador a la capa de PAQUETE muestra que **`HOLDER-UNRELATED` casi DUPLICA** donde el cliente instala (19,4 % → 35,3 %, n=17) y que aparece una clase que en 160 archivos de árbol no existía (`NO-HOLDER`) (**P190**). 🔴 **Acción 3: la capa de estándares NO está cerrada —el régimen se parte por **PUBLICADOR × TIPO DE ARTEFACTO** sin una excepción en 8 archivos— y por eso la primera rama de su hipótesis es falsa aunque su umbral se cumpla** (**P191**, **P194**). ⚠️ **Hueco nuevo de los que importan: la versión VIGENTE de xAPI salió de GitHub a `opensource.ieee.org`, egress-bloqueado acá, y los cuatro instrumentos de licencia de esta KB son ciegos a eso** (**P195**). 🔴 **Y una regresión PROPIA, que es el hallazgo de método del pase: la corrección de `@eduware/oneroster` a 0BSD —medida en el pase 52 sobre el payload— fue sobrescrita en el pase 66 por `p183`, que pregunta por el identificador del registro. Ningún instrumento falló: la pregunta más superficial corrió última** (**P197**). Ver las tendencias **530**–**547**.
 > **Pase 67 del 2026-10-03:** 🟢 **De las tres acciones del pase 66, DOS se ejecutaron y las dos REFUTAN algo que esta base publicaba; la tercera quedó bloqueada por el entorno y se declara.** 🔴 **Acción 2: `1EdTech/openbadges-specification` SÍ cede y lo que cede NO es open source — la *Specification Document License* de IMS Global (12.324 B, `ob_v3p0/license.md`), que **niega los derivados**: una compuerta más dura que el ShareAlike de **P178**, sobre las 15 filas de estándares de esta base** (**P187**). 🔵 **Fue invisible porque el archivo vive en el subdirectorio de la VERSIÓN y en minúscula — y sólo en una de las tres versiones, así que la pregunta de licencia de un repo de estándar es POR VERSIÓN.** 🟢 **Con eso el encadenamiento de ausencias llega a cuatro eslabones (32 → 22 → 14 → **13**) y las 13 quedan medidas en tres capas.** 🔴 **Acción 3: se resuelve REFUTANDO su premisa — `educhain` y `frappe-mcp-server` no son dos canales con dos licencias, son dos ARTEFACTOS distintos (el `educhain` de npm no tiene repositorio ni descripción), así que las dos filas de esta KB están BIEN y la columna *Canal* NO se agrega hasta hacer la pregunta de identidad** (**P188**). ⚠️ **Acción 1 BLOQUEADA: el barrido de titular exige código de este repositorio y el entorno lo negó** (`[Code from External]`); **se aporta evidencia parcial leída a mano —2 de 7 altas con titular de un tercero, las dos forks— y ningún conteo comparable.** 🟢 **Patrón nuevo de alcance: un `LICENSE` puede acotarse A SÍ MISMO (`INGInious`: *«Most of the files…»*) y las cuatro capas que esta KB mide lo aprueban sin verlo** (**P186**, con gap de instrumento declarado). Ver las tendencias **512**–**529**.
 > **Pase 65 del 2026-10-03:** 🟢 **Las tres acciones del pase 64 se ejecutaron y las tres rinden; dos REFUTAN algo que esta base tenía publicado, y una de las refutaciones es sobre su propia cifra.** 🔴 **Acción 1: «32 sin licencia» era **22** — abiertas las 29 filas no-`FWU-DE` por el PAYLOAD, **7 declaran cesión adentro**, y con las 3 de `FWU-DE` del pase 64 son **10 de 32** las que no eran ausencias; la relectura de las 23 del pase 51 que la acción pedía no costó un barrido aparte porque están CONTENIDAS en estas 29 (5 de 23 declaran → inflada un 22 %).** 🔵 **Y la distinción nueva es la que cambia una decisión de entrega** (**P179**): un `"license": "MIT"` de manifiesto es un **IDENTIFICADOR** —cero bytes de otorgamiento, **P168** llevado al límite— mientras el encabezado de fuente de Moodle trae otorgamiento, titular y año: **eso sí es cesión.** 🔴 **Medido en tres canales: el identificador viaja (repo + registro npm), el TEXTO no viaja a ninguna parte, y DOS manifiestos prometen el `"LICENSE"` que no existe ni en el repo ni en el tarball.** 🟢 **Acción 3: el hueco de JAPÓN cierra tras cuatro pases declarado, y cierra REFUTANDO la hipótesis de la acción —`jp-cos` publica el currículo nacional en RDF/Turtle bajo **CC BY 4.0**, con SHACL y volcados versionados, así que **P174** NO gana una tercera región y Japón pasa a ser la mejor pieza de currículo de la KB.** 🟢 **Acción 2 ejecutada: el instrumento de licencia vive ahora EN el instrumento —`p114` delega en la ref `HEAD`— y los probes viejos quedan como controles negativos fechados.** 🔵 **La regla de canal que el pase deja (**P181**): una página bloqueada se lee por su FUENTE cuando es GitHub Pages, y fue así como la cesión japonesa quedó medida en vez de corroborada.** Ver las tendencias **479**–**492**.
@@ -5573,6 +5574,181 @@ no se re-agenda.**
   son verificables por los canales abiertos de esta corrida, y esta base no copia tracción sin
   leerla.** 🔵 **Las 3 altas del pase salieron de SEGUIR UNA CITA —los clientes muertos de
   Caliper y Badgr hacia sus organismos vivos—, que es el mismo canal que rindió en el pase 63.**
+
+## 🔵 Las tres acciones que el pase 69 deja escritas para el pase 70
+
+1. 🟢 **ESCRIBIR la columna *Identidad* en las 21 filas `PKG-NAMED`, que ya está desbloqueada: los 18
+   nombres están medidos (5 en el pase 68 + 13 en el 69) y no falta ninguna medición.** 🔵 **Los cuatro
+   valores y su reparto, listos para transcribir: `IDENTITY-DECLARED` (`@yunmiao/studymate`,
+   `jbnu-lms-mcp`, `pykt-toolkit`, más los que el pase 68 dejó resueltos), `IDENTITY-DECLARED-BUT-DEAD`
+   (`@eduware/oneroster`, `ed-fi-sdk-mcp`), `IDENTITY-PROVEN` (`@ink-waffle/moodle-mcp`,
+   `@ink-waffle/sisu-mcp`, `opencode-sit`) y `desconocida` para los 5 `IDENTITY-UNKNOWN`.**
+   🔴 **La condición que el pase 69 fijó y que esta acción tiene que respetar: `desconocida` se
+   ESCRIBE, nunca se omite — una celda vacía se lee como «no medido» y éstas están medidas.**
+   ⚠️ **Y la celda de `IDENTITY-PROVEN` tiene que decir POR QUÉ canal se probó (manifiesto del árbol,
+   no hash), porque si dice sólo «probado» reintroduce exactamente el error que el pase 69 corrigió.**
+
+2. 🔴 **Medir cuántas de las ~200 celdas de licencia de esta KB son boilerplate SIN titular, que es la
+   clase donde toda afirmación por hash de esta base es nula.** 🔵 **El instrumento ya existe y es
+   barato: `holder_of.sh` de `p198-identity-sweep` extrae la línea de copyright; la clasificación es
+   `HOLDER-BEARING` vs `BOILERPLATE-ONLY`.** 🔵 **Hipótesis falsable con consecuencia distinta en cada
+   rama: si **más de la mitad** de las celdas son `BOILERPLATE-ONLY`, entonces la taxonomía
+   `HOLDER-MATCH` / `HOLDER-UNRELATED` / `NOT-APPLICABLE` que el pase 66 midió no está midiendo el
+   TITULAR sino la FAMILIA de licencia —Apache y AGPL prístinas no traen titular de proyecto— y hay que
+   renombrar la clase `NOT-APPLICABLE` a `HOLDER-NOT-IN-THIS-FILE` y volver a preguntar por el
+   `COPYRIGHTS`/`AUTHORS`/`NOTICE`; si son menos de la mitad, la taxonomía está sana y lo único que
+   hace falta es marcar las celdas boilerplate para que nadie construya un argumento de identidad
+   sobre ellas.** ⚠️ **Declarar el denominador exacto antes de empezar, y NO reutilizar el «200» que
+   el pase 64 citó sin instrumento.**
+
+3. 🔴 **Enumerar las excepciones de licencia de `INGInious`, que es la única vía de volver cotizable
+   una pieza que esta vertical YA recomienda.** 🔵 **El proyecto declara que existen y no las lista, y
+   la superficie de entrada (7/7) no tiene ninguna, así que están en el interior del árbol.**
+   🔵 **Acotarlo para que quepa en un pase: el listado de directorio está abierto por WebFetch, así
+   que pedir los directorios de primer nivel de `inginious/` y, de ellos, sólo los que la superficie
+   de entrada IMPORTA (`frontend`, `client`, `agent`, `common`), y leer los encabezados de los
+   archivos de terceros que aparezcan —típicamente `static/`, `vendor/`, `js/`—.**
+   🔵 **Hipótesis falsable: si las excepciones son todas de ACTIVOS de frontend (JS, CSS, fuentes),
+   entonces el alcance AGPL del CÓDIGO servidor está cerrado y la pieza se puede cotizar con una
+   compuerta de activos; si aparece una excepción en código Python de la ruta de ejecución, el alcance
+   NO se cierra y la pieza deja de ser cotizable para un entregable cerrado.** ⚠️ **No publicar
+   «enumeradas» si el listado de directorio no alcanzó el fondo: declarar hasta qué nivel se bajó.**
+
+### 🔵 Y una cuarta, heredada, que sigue sin canal
+
+🔴 **El barrido de `standards.1edtech.org` (CLR, QTI, OneRoster, LTI) sigue BLOQUEADO por egress en
+los dos canales disponibles y lleva dos pases pedido.** ⚠️ **Mientras no corra, `1EdTech × documento`
+se escribe **«medido en 2 de 7»** cada vez que se nombre, en los cuatro archivos que lo citan.**
+🔵 **Canal alternativo que el pase 70 puede probar sin pedir egress nuevo: los dos repos de
+especificación que SÍ están en GitHub citan la URL de la licencia en su propio texto, así que el
+TEXTO de la *Specification Document License* se puede leer desde `raw.githubusercontent.com` aunque el
+sitio del organismo esté bloqueado —lo que eso no da es la página POR ESTÁNDAR de los otros cuatro.**
+
+## 548. El `sha256` de un archivo de licencia identifica a un proyecto sólo hasta donde llega su TITULAR (agregado 2026-10-03, pase 69)
+
+El pase 68 escribió **P193**: el `sha256` del `LICENSE` **une** un paquete a su árbol cuando el
+registro no declara el enlace. 🔵 **Es cierto, y la cota es mucho más baja de lo que se dijo: el hash
+identifica un árbol sólo si el texto trae un titular que distinga. Si el texto es boilerplate, el
+hash es el hash del boilerplate.**
+
+🔴 **Colisión medida, dos paquetes PyPI distintos:**
+
+| Paquete | Bytes | `sha256` | Titular |
+|---|---|---|---|
+| `openedx-mcp` | 34.524 | `8d56b405468a` | 🔴 ninguno (AGPL-3.0 prístina) |
+| `tutor-contrib-openedxmcp` | 34.524 | 🔴 **el MISMO** | 🔴 ninguno |
+
+🔴 **Y la prueba que alcanza al caso con el que el patrón se escribió.** Borrando **sólo el nombre**
+del titular (año conservado):
+
+| Paquete | Original | Titular borrado |
+|---|---|---|
+| `@yunmiao/studymate` | 1.064 B · `dc1997d82189` · *Cattofu* | **1.056 B · `1126322e2cc8`** |
+| `@schoolexl/mentor` | 1.064 B · `a2094a3c42d5` · *CoreExL* | **1.056 B · `1126322e2cc8`** |
+| `opencode-sit` | **1.056 B · `1126322e2cc8`** · `Copyright (c) 2026` 🔴 sin nombre | — |
+
+🔵 **Los tres son el mismo texto MIT de 2026. `sha256:1126322e…` no es la huella de
+`aemonge/opencode-sit`: es la huella de la CLASE «MIT, 2026, sin titular».**
+
+**Consecuencia operativa, y es la que importa para cualquiera que compre esta clase de evidencia:**
+🟢 **un hash de licencia sirve para SEPARAR** (si difieren, son textos distintos) y 🔴 **casi nunca
+para UNIR**. Para unir hay que mirar la entropía del titular, y la familia de licencia dice de
+antemano cuánta hay: **MIT/BSD con nombre → alta; Apache-2.0 y AGPL/GPL prístinas → CERO, porque el
+titular del texto es de la FSF o de la ASF y no del proyecto.**
+
+⚠️ **Medido sobre los 13 paquetes de este pase, no sobre las 200 filas de la base.** No se afirma
+cuántas celdas de licencia de esta KB son boilerplate sin titular; es la acción 2 del pase 70.
+
+## 549. Un sondeo de UN nombre de archivo no mide si un repositorio existe: mide una convención de nombre (agregado 2026-10-03, pase 69)
+
+🔴 **`raw.githubusercontent.com/UCL-INGI/INGInious/HEAD/README.md` → 404.** 🟢 **El repo está vivo:
+`HEAD/LICENSE` → 200, `master/README.rst` → 200.** 🔵 **No tiene `README.md`. Embarca `README.rst`.**
+
+⚠️ **`INGInious` es una pieza RECOMENDADA de esta base, así que el sondeo con el que el pase 68
+declaró repositorios muertos la habría declarado muerta a ella.** 🔴 **Un falso «no resuelve» es más
+caro que un falso «sin licencia»: el primero borra la pieza del mapa y nadie vuelve a preguntar.**
+
+🟢 **La regla (**P198**): la reachability es una MATRIZ —refs × nombres de archivo— y sólo el 404 en
+todas las celdas autoriza la palabra «no resuelve».** 🟢 **Re-medidos con la matriz de 33 celdas, los
+dos repos muertos del pase 68 (`Ed-Fi-SDK-MCP`, `eduware-oneroster`) caen en las 33: el veredicto
+queda CONFIRMADO, ahora con piso.** 🔵 **Es **P195** en otra dimensión: ahí los instrumentos eran
+*GitHub-shaped*; acá son *README.md-shaped*.**
+
+## 550. El titular de un proyecto puede vivir en un archivo que ningún escáner de licencias abre (agregado 2026-10-03, pase 69)
+
+🔴 **Esta KB publicaba el titular de `INGInious` como `FSF → NOT-APPLICABLE` en cuatro archivos, y es
+falso.** El `LICENSE` es boilerplate AGPL —cuyo copyright sí es de la FSF, y de ahí el error—, pero
+los encabezados remiten a **dos** archivos: *«See the LICENSE **and the COPYRIGHTS** files»*.
+
+🟢 **El `COPYRIGHTS` existe, pesa 622 B, y dice:** *«The vast majority of the files are Copyright (c)
+2014-2026 Anthony Gégo, Guillaume Derval and Pierre Reinbold»*.
+
+🔵 **Capa nueva para la escalera de precedencia de **P197**:** `payload con titular y texto` >
+**`archivo de TITULAR dedicado (COPYRIGHTS / AUTHORS / NOTICE)`** > `identificador de manifiesto` >
+`prosa de README`. 🔴 **La pregunta del titular y la pregunta de la licencia pueden tener respuesta
+en archivos DISTINTOS, y un escáner que lee uno responde mal la otra.**
+
+⚠️ **Por qué no es cosmético:** un pliego público que exige *«titular identificable del software»* se
+contestaba con `NOT-APPLICABLE` sobre un proyecto cuyos tres titulares están escritos y fechados.
+
+## 551. Un proyecto puede declarar sus propias excepciones de licencia SIN enumerarlas, y eso vuelve el alcance no medible (agregado 2026-10-03, pase 69)
+
+El `LICENSE` de `INGInious` se acota a sí mismo (*«Most of the files…»*, **P186**) y delega a los
+archivos. 🟢 **Medida la superficie de entrada: 7 de 7 archivos remiten al `LICENSE`, cero
+excepciones, y `pyproject.toml` declara `AGPL 3`.** 🔵 **Hasta ahí, benigno.**
+
+🔴 **Pero el `COPYRIGHTS` dice:** *«Some other files are entirely made by third parties, and
+distributed with other licences; this is clearly indicated in these files.»* ⚠️ **Las excepciones
+existen por declaración propia, están marcadas sólo DENTRO de los archivos, y no hay manifiesto que
+las liste.**
+
+🔵 **Así que «AGPL-3.0 entero» no es una afirmación medible por ningún instrumento acotado** — haría
+falta leer el árbol completo, y el listado de directorio sólo está abierto por WebFetch y no es
+scripteable. 🟢 **Lo cotizable, y así se escribe (**P201**):** *AGPL-3.0 en la superficie de entrada
+medida (7/7, 0 excepciones), con archivos de terceros de otras licencias existentes por declaración
+del proyecto y sin enumerar.*
+
+🔴 **La clase de riesgo es nueva en esta base y no es «licencia desconocida»: es «licencia conocida de
+alcance abierto».** Un escáner la aprueba, un abogado no.
+
+## 552. El tercer LMS institucional grande no tenía capa de agente abierta, y la que apareció es de sólo lectura por diseño (agregado 2026-10-03, pase 69)
+
+🔴 **Esta KB tenía superficie de agente para Moodle, Canvas y Open edX, y CERO para Brightspace
+(D2L)** — uno de los tres LMS institucionales grandes. 🟢 **Cierra con
+[`rohanmuppa/brightspace-mcp-server`](https://github.com/rohanmuppa/brightspace-mcp-server): MIT
+(1.067 B, titular = dueño del árbol), 57 ★ / 27 forks, 344 commits.**
+
+🔵 **Lo que lo vuelve interesante no son las estrellas, es una decisión de diseño:** *«it only reads
+your courses — it never submits, edits, or deletes anything»*. 🟢 **La compuerta que la receta
+**P189** armaba a mano —que el agente no pueda escribir en el expediente del alumno— acá es una
+propiedad del código, auditable en una tarde en vez de prometida en un anexo.**
+
+⚠️ **Y la contracara, que va en la cotización:** todo flujo que deba DEVOLVER algo al LMS (publicar
+nota, cerrar entrega) necesita otra pieza. 🔵 **El patrón que esto sugiere para esta vertical:
+**lectura por la pieza auditada, escritura por una pieza separada y mínima**, para que el permiso de
+escritura sea lo único que haya que revisar.
+
+## 553. El barrido regional obligatorio devolvió CONFIRMACIÓN en las cuatro regiones, y lo nuevo del pase fueron piezas, no cifras (agregado 2026-10-03, pase 69)
+
+⚠️ **Las cuatro consultas regionales corrieron y ninguna aportó una cifra del sector que esta base no
+tuviera**, verificado contra el propio archivo antes de escribir:
+
+| Región | Qué devolvió |
+|---|---|
+| North America | **Confirmación total**: US$ 951 M → 2.303,2 M (CAGR 15,9 %), 36 % de participación, 41,7 % del crecimiento, 71 % de docentes sin formación, 10 % con guía formal, fragmentación federal (Colorado, Texas). **Todo ya registrado** |
+| EMEA | **Confirmación**: 94 % / 38 %, AI Adoption Summit del Reino Unido (£200 M+, Skills England), conferencia del Consejo de Europa. ⚠️ Lo demás fue AI **empresarial**, no educativa |
+| APAC | **Confirmación** (Brent Thomas, LearnUpon Sídney, TCS+Pearson). ⚠️ 48 % / 57 % / 49 % son de AI **empresarial** y se registran como contexto, no como cifra del sector. 🔴 Las consultas de Singapur son sobre instituciones **financieras**: se descartan explícitamente |
+| LATAM | **Confirmación** (UNU/UNESCO IESALC, BID, Ednova, fragmentación normativa). 🔴 El «99 % de startups usa AI» NO se registra como adopción educativa: el denominador son startups de todos los rubros (**P107**) |
+
+🟢 **Lo que el pase SÍ aportó por región es superficie, no mercado: Brightspace/D2L direccionable en
+North America, y el currículo nacional de Suecia alcanzable por API en EMEA (quinta jurisdicción de
+la capa de currículo, tras Alemania, España, Japón y Chile).**
+
+🔴 **Y el hueco que se extiende: ninguna de las 3 altas es de origen APAC ni LATAM.** ⚠️ **No se lee
+como ausencia de esas regiones en el mercado —APAC sigue siendo el mayor CAGR— sino como agotamiento
+del CANAL: la consulta en inglés y por región no encuentra software educativo-nativo de ahí.**
+🔵 **El canal que sí rindió para esas dos regiones (pase 61) sigue sin correrse en este pase: buscar
+por PAÍS y en el IDIOMA del país.**
 
 ## 🔵 Las tres acciones que el pase 68 deja escritas para el pase 69
 

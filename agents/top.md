@@ -8,6 +8,7 @@ updated: 2026-10-03
 
 > Agentes y herramientas AI open source para educación. Foco: MIT / Apache 2.0 / BSD.
 > Verificado repo por repo vía WebFetch el 2026-09-30 (stars y licencia leídos de la página del repo).
+> **Pase 69 del 2026-10-03:** 🔴 **La acción 1 CIERRA en su rama CARA, y lo primero que corrige es el denominador de la propia acción: la acción pedía «los 16 nombres» y los nombres de registro único son **13** —21 filas → 18 nombres, menos los 5 de doble registro del pase 68—. El «16» era un conteo de FILAS leído como conteo de NOMBRES.** 🔵 **Medidos los 13 con el canal que la acción exigía (pedir el repositorio declarado, no leerlo del manifiesto): **3 `IDENTITY-DECLARED` · 2 `IDENTITY-DECLARED-BUT-DEAD` · 3 `IDENTITY-PROVEN` · 5 `IDENTITY-UNKNOWN`**. 5 ≥ 3 → gana la rama cara: la columna *Identidad* es **CONDICIÓN** para publicar una fila de paquete y se escribe con el valor `desconocida`, nunca omitida** (**P192** cerrado). ⚠️ **5 de 13 NO es comparable con el «4 de 5» del pase 68: otro denominador (registro único vs. doble).** 🔴 **Y el hallazgo que acota un patrón de ayer: **el `sha256` del `LICENSE` NO prueba identidad cuando el texto no trae titular, y está DEMOSTRADO con una colisión de esta misma tanda** — `openedx-mcp` y `tutor-contrib-openedxmcp`, dos paquetes DISTINTOS, comparten `sha256:8d56b405468a` (34.524 B, AGPL-3.0 sin titular). 🔴 **Peor: quitarle el nombre del titular al `LICENSE` de `@yunmiao/studymate` (1.064 B, *Cattofu*) y al de `@schoolexl/mentor` (1.064 B, *CoreExL*) los vuelve **byte a byte** el de `opencode-sit` (1.056 B, `sha256:1126322e2cc8`), que dice *«Copyright (c) 2026»* **sin nombre** — o sea el caso ESTRELLA con el que **P193** se escribió ayer cae justo en la clase donde el hash prueba MENOS** (**P199**). 🟢 **El veredicto de ayer igual se sostiene, pero por otro instrumento: el `package.json` de `aemonge/opencode-sit` NOMBRA el paquete, y ése es un enlace de dos vías que el hash no es** (**P200**). 🟢 **Acción 3 EJECUTADA: el instrumento por archivo de **P186** existe y corrió sobre las 2 piezas de alcance declarado.** 🔴 **Y obliga una corrección que esta KB publica en CUATRO archivos: el titular de `INGInious` NO es `FSF → NOT-APPLICABLE`. El archivo `COPYRIGHTS` —622 B, que ningún instrumento de esta base había leído— dice *«Copyright (c) 2014-2026 Anthony Gégo, Guillaume Derval and Pierre Reinbold»*** (**P197** gana una capa). ⚠️ **Y el alcance de `INGInious` NO se puede cerrar: el propio proyecto declara que hay archivos de terceros con otras licencias y NO los enumera, así que «AGPL-3.0 entero» no es medible por ningún instrumento acotado** (**P201**). 🔴 **Acción 2 BLOQUEADA por egress en los dos canales (`standards.1edtech.org` y `www.imsglobal.org`: `403` por `curl`, `EGRESS_BLOCKED` por WebFetch), así que `1EdTech × documento` sigue **medido en 2 de 7** y se dice así cada vez, como el pase 68 exigió.** 🟢 **3 altas con licencia leída de primera mano, y una cierra un hueco de plataforma: **Brightspace/D2L** entra por fin a esta KB.**
 > **Pase 68 del 2026-10-03:** 🔴 **La acción 1 del pase 67 CIERRA en su rama CARA, y el defecto no es de dos filas: es de cómo esta KB transcribe un nombre de paquete.** Barridos los **5** nombres que viven en npm **y** PyPI —declarados antes de empezar: `canvas-lms-mcp`, `clawed`, `educhain`, `frappe-mcp-server`, `moodle-cli`—, **4 de 5 son dos ARTEFACTOS distintos** y sólo `moodle-cli` es un proyecto en dos canales. 🔵 **La hipótesis fijaba el corte en «más de 2» → se agrega la columna *Identidad*, NO la columna *Canal*** (**P192**). 🔴 **El caso que lo vuelve estructural: `canvas-lms-mcp` son DOS proyectos REALES, los dos en GitHub, los dos con el mismo nombre —`bruchris` (165 tools, TS, titular *Christian Bru*, 1.070 B) y `ahnopologetic` (minimal, titular *Canvas LMS MCP Server Contributors*, 1.091 B)—, separados por `sha256` distinto.** 🟢 **Y la identidad se puede PROBAR cuando el registro no la declara: `opencode-sit` no publica `repository`, y el `LICENSE` del repo `aemonge/opencode-sit` es byte a byte el del tarball (1.056 B, `sha256:1126322e…`), así que el hash que esta KB usa para SEPARAR forks también sirve para UNIR un paquete a su árbol** (**P193**). ⚠️ **Las cuatro búsquedas globales obligatorias volvieron a devolver el eje generalista agotado —openclaw, browser-use, AutoGen, CrewAI— y NINGUNA alta educativa salió de ellas, por segundo pase consecutivo.** 🔴 **Y el hallazgo que esta KB se hace a SÍ MISMA: una corrección del pase 52 fue REGRESADA en el pase 66 —`@eduware/oneroster` volvió a `MIT` porque un instrumento nuevo preguntó por el CAMPO del registro donde el viejo había leído el PAYLOAD—, así que una corrección sobrevive sólo si el instrumento que re-mide la conoce** (**P197**). Ver las tendencias **530**–**547**.
 > **Pase 67 del 2026-10-03:** 🔴 **La acción 2 del pase 66 CIERRA refutando una ausencia que esta KB publicaba en tres archivos: `1EdTech/openbadges-specification` SÍ cede —`ob_v3p0/license.md`, 12.324 B— y lo que cede NO es open source, es la SPECIFICATION DOCUMENT LICENSE de IMS Global, que *«no concede el derecho a crear modificaciones o derivados»*: una compuerta MÁS DURA que el ShareAlike de P178, sobre las 15 filas de estándares de esta base** (**P187**). 🔵 **Fue invisible porque el archivo no está en la raíz —vive en el subdirectorio de la VERSIÓN— y se llama `license.md` en minúscula; y sólo `ob_v3p0` lo tiene, así que en un repo de especificación la pregunta de licencia es POR VERSIÓN.** 🟢 **Con eso las «14 ausencias» son 13 y las 13 quedan medidas en tres capas.** 🔴 **La acción 3 se resuelve REFUTANDO su premisa: `educhain` y `frappe-mcp-server` no son dos canales con dos licencias, son dos ARTEFACTOS distintos —el `educhain` de npm no tiene repositorio ni descripción y no es el proyecto—, así que las dos filas de esta KB están BIEN y la columna *Canal* no se agrega hasta hacer la pregunta de identidad** (**P188**). 🟢 **5 altas con licencia leída de primera mano, la capa de AUTOGRADING entra entera (INGInious AGPL-3.0/EMEA, 2 MIT-Apache, 1 GPL) y APAC gana un índice CC0 de India.** 🔴 **La acción 1 está BLOQUEADA: el barrido de titular exige código de este repositorio y el entorno lo negó** (`[Code from External]`). Ver las tendencias **512**–**527**.
 > **Pase 65 del 2026-10-03:** 🔴 **La acción 1 del pase 64 CIERRA en su rama CARA y corrige una cifra publicada: «32 sin licencia» estaba inflada un 31 %.** Barridas las **29** filas no-`FWU-DE` por la pregunta del **PAYLOAD** en vez de la del archivo, **7 declaran cesión adentro** (5 en manifiesto, 2 en encabezado de fuente de Moodle); con las 3 de `FWU-DE` del pase 64, **10 de 32 no eran ausencias** y el denominador real es **22**. 🟢 **Y la relectura de las 23 del pase 51 que la acción pedía quedó hecha en el mismo barrido: están CONTENIDAS en estas 29 (`comm -23` da vacío) y 5 declaran en payload → aquella cifra estaba inflada un 22 %.** 🔵 **Pero las dos clases no valen lo mismo, y es el patrón nuevo del pase (**P179**): un `"license": "MIT"` de manifiesto es un IDENTIFICADOR —nombra la licencia y no trae titular, ni año, ni una línea de texto, que es **P168** llevado a cero bytes—, mientras el encabezado de Moodle trae la frase de otorgamiento completa con titular y año: eso sí es cesión.** 🔴 **Medido en tres canales sobre las 3 filas publicadas en npm: el identificador viaja (repo + registro), el TEXTO no viaja a ninguna parte —ningún tarball trae archivo de licencia— y DOS manifiestos PROMETEN el `"LICENSE"` que no existe ni en el repo ni en el artefacto; en `Timadey/proctor` la promesa es más vieja que el repo, porque el pase 41 ya había medido que no hay `LICENSE` en ningún commit de la historia.** 🟢 **La fila más forkeada de la KB se da vuelta a favor: los 39 forks de `DMontgomery40/mcp-canvas-lms` heredan una cesión DECLARADA, no la ausencia que la acción temía.** Ver `compose/code/p172-payload-license-sweep/` y las tendencias **479**–**492**.
@@ -237,6 +238,143 @@ updated: 2026-10-03
 > modelo»**— y **ninguna de las dos sabe de la otra**. Ver la capa nueva al final de este archivo, las tendencias
 > **180**–**182** y el patrón **P99**.
 
+## 🧬 IDENTIDAD de los 13 nombres de registro ÚNICO: la columna es CONDICIÓN, y el hash del `LICENSE` resulta ser una COTA mucho más baja de lo que el pase 68 creyó (acciones 1 y 3 del pase 68, pase 69 del 2026-10-03)
+
+### 🔴 Lo primero, antes de medir: el denominador de la acción estaba mal, y la acción misma pedía declararlo
+
+La acción 1 escribió *«los 16 nombres `PKG-NAMED` de registro ÚNICO»* y exigió **declararlos antes de
+empezar**. Al declararlos no cierran: **`pkgs.input.txt` —el archivo que el propio repositorio
+versiona desde el pase 66— tiene 18 nombres, y 5 viven en los dos registros. 18 − 5 = 13.**
+
+| Magnitud | Valor |
+|---|---|
+| filas `PKG-NAMED` | **21** |
+| nombres distintos que esas filas citan | **18** |
+| nombres de DOBLE registro (barridos en el pase 68) | **5** |
+| 🔵 **nombres de registro ÚNICO — el denominador real de esta acción** | **13** |
+
+🔵 **El «16» era el conteo de FILAS que quedaban (21 − 5), leído como conteo de NOMBRES.** Es el
+mismo error de categoría que **P183** cometió al mezclar filas con paquetes, y lo comete la acción
+que vino a arreglarlo. ⚠️ **Por eso el reparto de abajo NO se compara con el «4 de 5» del pase 68:
+son denominadores distintos (registro único vs. doble), y la acción prohibía expresamente publicar
+un conteo que se leyera como comparable.**
+
+### 🔵 Los 13 nombres, declarados antes de medir
+
+`@ajna-inc/openbadges` · `@eduware/oneroster` · `@ink-waffle/moodle-mcp` · `@ink-waffle/sisu-mcp` ·
+`@schoolexl/mentor` · `@yunmiao/studymate` · `aicourse-mcp-server` · `ed-fi-sdk-mcp` ·
+`jbnu-lms-mcp` · `opencode-sit` · `openedx-mcp` · `pykt-toolkit` · `tutor-contrib-openedxmcp`
+
+### 🟢 El reparto, con el repositorio PEDIDO y no sólo leído
+
+| Nombre | Canal | Árbol | Veredicto |
+|---|---|---|---|
+| `@yunmiao/studymate` | npm | [`Miaotofu01/Study-Mate`](https://github.com/Miaotofu01/Study-Mate) | 🟢 `IDENTITY-DECLARED` |
+| `jbnu-lms-mcp` | npm | [`moon0825/jbnu-lms-student`](https://github.com/moon0825/jbnu-lms-student) | 🟢 `IDENTITY-DECLARED` ⚠️ el nombre del paquete **no** es el del repo |
+| `pykt-toolkit` | PyPI | [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) | 🟢 `IDENTITY-DECLARED` |
+| `@eduware/oneroster` | npm | `Eduware-Inc/eduware-oneroster` | 🔴 `IDENTITY-DECLARED-BUT-DEAD` — **404 en las 33 celdas** |
+| `ed-fi-sdk-mcp` | npm | `Ed-Fi-Alliance-OSS/Ed-Fi-SDK-MCP` | 🔴 `IDENTITY-DECLARED-BUT-DEAD` — **404 en las 33 celdas** |
+| `@ink-waffle/moodle-mcp` | npm | [`ink-waffle/moodle-mcp`](https://github.com/ink-waffle/moodle-mcp) | 🟢 `IDENTITY-PROVEN` por manifiesto del árbol |
+| `@ink-waffle/sisu-mcp` | npm | [`ink-waffle/sisu-mcp`](https://github.com/ink-waffle/sisu-mcp) | 🟢 `IDENTITY-PROVEN` por manifiesto del árbol |
+| `opencode-sit` | npm | [`aemonge/opencode-sit`](https://github.com/aemonge/opencode-sit) | 🟢 `IDENTITY-PROVEN` **por manifiesto, NO por hash** (ver abajo) |
+| `@ajna-inc/openbadges` | npm | — | 🔴 `IDENTITY-UNKNOWN` — sin `repository`; `ajna-inc/openbadges` y `vinaysingh8866/openbadges` no existen |
+| `@schoolexl/mentor` | npm | — | 🔴 `IDENTITY-UNKNOWN` — sin `repository`; `schoolexl/mentor` no existe |
+| `aicourse-mcp-server` | npm | — | 🔴 `IDENTITY-UNKNOWN` — sin `repository`; `tongxinsuo/aicourse-mcp-server` no existe |
+| `openedx-mcp` | PyPI | — | 🔴 `IDENTITY-UNKNOWN` — sin `repository`, sin `project_urls`, autor *«Open edX MCP contributors»* |
+| `tutor-contrib-openedxmcp` | PyPI | — | 🔴 `IDENTITY-UNKNOWN` — ídem |
+
+🔵 **5 `IDENTITY-UNKNOWN` de 13, y el umbral de la hipótesis era «3 o más» → gana la rama CARA que la
+acción nombró: la columna *Identidad* no es una mejora de presentación, es una CONDICIÓN para
+publicar una fila de paquete, y se escribe con el valor `desconocida` en vez de omitirla.**
+🔴 **El 38 % de la capa de paquete de esta KB no puede decir de qué árbol es.**
+
+### 🔴 El hallazgo del pase: el `sha256` del `LICENSE` prueba identidad SÓLO hasta donde llega su TITULAR
+
+**P193** se escribió ayer diciendo que el `sha256` del `LICENSE` **UNE** un paquete a su árbol, y se
+declaró *cota inferior*. 🔴 **Medida la cota, es mucho más baja: el hash identifica un ÁRBOL sólo
+cuando el texto trae un titular que distinga. Cuando el texto es boilerplate, el hash es el hash del
+boilerplate y lo comparte todo proyecto del planeta que lo embarque sin tocar.**
+
+🔴 **Colisión REAL, en esta misma tanda de 13:**
+
+| Paquete | Bytes | `sha256` | Titular en el texto |
+|---|---|---|---|
+| `openedx-mcp` | 34.524 | `8d56b405468a` | 🔴 **ninguno** (AGPL-3.0 prístina) |
+| `tutor-contrib-openedxmcp` | 34.524 | 🔴 **`8d56b405468a` — el MISMO** | 🔴 **ninguno** |
+
+🔵 **Dos paquetes DISTINTOS con hash idéntico. Un instrumento que dedujera identidad de ese hash
+uniría dos artefactos que sólo comparten haber copiado la AGPL sin editarla.**
+
+🔴 **Y la prueba que toca el caso estrella de ayer.** `opencode-sit` dice `Copyright (c) 2026` **sin
+nombre**. Tomados los `LICENSE` de otros dos paquetes de esta tanda y borrado **sólo el nombre del
+titular**, conservando el año:
+
+| Paquete | Original | Con el titular borrado |
+|---|---|---|
+| `@yunmiao/studymate` | 1.064 B · `dc1997d82189` · *Cattofu* | **1.056 B · `1126322e2cc8`** |
+| `@schoolexl/mentor` | 1.064 B · `a2094a3c42d5` · *CoreExL* | **1.056 B · `1126322e2cc8`** |
+| `opencode-sit` | **1.056 B · `1126322e2cc8`** · 🔴 sin nombre | — |
+
+🔴 **Los tres son el MISMO texto MIT de 2026; lo único que los separaba era la cadena del titular.**
+🔵 **Así que `sha256:1126322e…` no identifica el árbol `aemonge/opencode-sit`: identifica la CLASE
+«MIT, 2026, sin titular», y el pase 68 presentó esa coincidencia como prueba de pertenencia**
+(**P199**). ⚠️ **La reproducción del hash de ayer es exacta —1.056 B, `1126322e2cc8`, byte a byte
+entre el tarball y el árbol— así que lo que falla no es la medición: es lo que se concluyó de ella.**
+
+### 🟢 Y el veredicto de ayer igual se salva, por un instrumento mejor: el enlace de DOS VÍAS
+
+🟢 **`aemonge/opencode-sit` tiene `package.json` y ese `package.json` declara `"name":
+"opencode-sit"`.** 🔵 **Eso sí es evidencia de identidad, porque va en la dirección contraria al
+nombre que yo adiviné: el árbol nombra al paquete** (**P200**). 🟢 **Mismo canal para las dos de
+`@ink-waffle`, y ahí hay un tercer sello independiente: un paquete con *scope* `@ink-waffle` sólo lo
+puede publicar quien controla el scope, y el dueño del árbol es `ink-waffle`.**
+
+⚠️ **El enlace es de UNA vía en los tres casos, y conviene escribirlo:** los `package.json` de
+`ink-waffle/moodle-mcp` y `ink-waffle/sisu-mcp` declaran **`"repository": null`** — el árbol nombra
+al paquete y el paquete no apunta al árbol. 🔵 **Es el *scope* lo que cierra el caso, no el campo.**
+
+### 🔴 La corrección de inventario que sale de esto, y no es de licencia sino de CESIÓN AUSENTE
+
+🔴 **Con el árbol de `@ink-waffle/*` por fin identificado se le pudo hacer la pregunta que el
+artefacto no podía contestar — y la respuesta CONFIRMA y además empeora lo que el pase 65 midió:**
+
+| Árbol | `LICENSE` en el árbol | `package.json` |
+|---|---|---|
+| `ink-waffle/moodle-mcp` | 🔴 **NO existe — 404 en 12 celdas** | `"license": "MIT"` |
+| `ink-waffle/sisu-mcp` | 🔴 **NO existe — 404 en 12 celdas** | `"license": "MIT"` |
+
+🔵 **No era un olvido de empaquetado: el otorgamiento no existe tampoco en el árbol.** Las dos filas
+quedan como **identificador MIT sin cesión en NINGUNA capa** (**P179**), y ahora con el árbol citable.
+
+### 🟢 Las altas del pase, con la licencia leída de primera mano y el dedupe corrido ANTES
+
+| Pieza | Repo | Licencia (leída) | Región | Qué es |
+|---|---|---|---|---|
+| 🟢 **Brightspace MCP Server** | [`rohanmuppa/brightspace-mcp-server`](https://github.com/rohanmuppa/brightspace-mcp-server) | **MIT**, 1.067 B, `Copyright (c) 2026 Rohan Muppa` 🟢 **`HOLDER-MATCH`** | **North America** (Purdue) | 🟢 **Cierra un hueco de PLATAFORMA de esta KB: Brightspace/D2L no estaba en ninguna capa de agente** (estaban Moodle, Canvas y Open edX). Expone notas, vencimientos, trabajos, anuncios, listas, programa y contenido por MCP. **57 ★ / 27 forks, 344 commits.** 🔵 **Es de SÓLO LECTURA por diseño** —*«it never submits, edits, or deletes»*—, que es exactamente la compuerta que **P189** pide a mano |
+| 🟢 **Skolverket MCP Server** | [`ksaklfszf921/skolverket-mcp`](https://github.com/ksaklfszf921/skolverket-mcp) | **MIT**, 1.092 B, `Copyright (c) 2025 Skolverket Syllabus MCP Contributors` ⚠️ **`HOLDER-UNRELATED`** al dueño del árbol | **EMEA** (Suecia) | 🟢 **SUECIA entra a la capa de currículo**, que tenía Alemania, España, Japón y Chile. Cubre las **tres** API abiertas de Skolverket: *Läroplan* (currículo), *Skolenhetsregistret* (registro de centros) y *Planned Educations*. **11 ★ / 8 forks.** ⚠️ **NO lo publica la agencia: es de un tercero y el titular NOMBRA a Skolverket sin serlo** (**P190**). ⚠️ **Y la licencia del DATO no está medida: el README sólo afirma *«Fri användning»* en prosa** (**P172**) |
+| 🟢 **EduBase MCP** | [`EduBase/mcp`](https://github.com/EduBase/mcp) | **MIT**, 1.063 B, `Copyright (c) 2025 EduBase` 🟢 **`HOLDER-MATCH`** | **EMEA** (proveedor) | MCP del PROVEEDOR para su propia plataforma de e-learning: crea y corrige cuestionarios y exámenes y empuja desempeño a un SIS. **29 ★ / 13 forks.** Soporta stdio, SSE y HTTP *streamable*. 🔵 **Entra como superficie de agente sobre plataforma COMERCIAL: el código cede MIT, la plataforma no es open source** |
+
+🔵 **Las tres salieron de la consulta por FUNCIÓN —*«MCP server student information system gradebook»*
+y *«lesson planning curriculum alignment»*—, que es el canal que el pase 67 ya había identificado
+como el único que rinde. Las cuatro búsquedas globales obligatorias volvieron a no rendir ninguna
+alta, por TERCER pase consecutivo.** 🟢 **Dedupe corrido antes de escribir: `k12-teacher-skills` y
+`canvas-mcp` salieron de la misma búsqueda y YA estaban en esta base, así que no se duplican.**
+
+### ⚠️ Lo que este pase NO midió de este archivo, declarado como tal
+
+1. ⚠️ **La columna *Identidad* NO se escribió todavía en las 21 filas.** Los 18 nombres están ahora
+   medidos (5 en el pase 68 + 13 en éste), así que la edición está desbloqueada y es trabajo de
+   escritura, no de medición. **Es la acción 1 del pase 70.**
+2. 🔴 **Los 3 `IDENTITY-UNKNOWN` sin candidato (`@ajna-inc/openbadges`, `@schoolexl/mentor`,
+   `aicourse-mcp-server`) se buscaron por UN solo canal: adivinar `owner/repo` desde el nombre y el
+   *scope*.** ⚠️ **`api.github.com` sigue dando `403` por el proxy, así que la búsqueda de código de
+   GitHub —el canal que los encontraría— no se pudo usar. No se afirma que no existan: se afirma que
+   no se declararon y que el nombre no los encuentra.**
+3. ⚠️ **La colisión de hash se midió sobre los 13 de esta tanda, no sobre las 200 filas.** No se
+   afirma cuántas celdas de licencia de esta KB son boilerplate sin titular; es **la acción 2 del
+   pase 70** y es la que decide si la taxonomía `HOLDER-MATCH`/`NOT-APPLICABLE` mide lo que dice.
+
+
 ## 🧾 IDENTIDAD antes que canal: 4 de los 5 nombres de doble registro son dos artefactos, y el hash del `LICENSE` une un paquete a su árbol (acción 1 del pase 67, pase 68 del 2026-10-03)
 
 ### 🔵 El denominador, declarado antes de medir como la acción exigía
@@ -322,7 +460,7 @@ como novedad.** 🟢 **Quedan 5 altas y 2 forks.**
 
 | Pieza | Repo | Licencia (**medida, bytes + titular**) | ★ | Región | Qué es |
 |---|---|---|---|---|---|
-| **INGInious** | https://github.com/INGInious/INGInious | 🔴 **AGPL-3.0**, **34.764 B**, titular FSF → `NOT-APPLICABLE` · ⚠️ **con preámbulo de ALCANCE: *«Most of the files … are distributed under the GNU AGPL v3 licence»*** (**P186**) | **243** (150 forks) | **EMEA** (Université catholique de Louvain, Bélgica) | Plataforma de **evaluación automática y segura de ejercicios**, usable como ***grader* externo de Moodle y de edX vía LTI**. 🔵 **Entra como PLATAFORMA, no como agente:** es la capa de corrección sobre la que un agente se compone. 🔴 **AGPL-3.0 + alcance parcial: no entra en un entregable cerrado sin leer los encabezados por archivo** |
+| **INGInious** | https://github.com/INGInious/INGInious | 🔴 **AGPL-3.0**, **34.764 B** — ⚠️ **el `LICENSE` es boilerplate FSF y el TITULAR vive en `COPYRIGHTS` (622 B): `Copyright (c) 2014-2026 Anthony Gégo, Guillaume Derval and Pierre Reinbold` → 🟢 `HOLDER-DECLARED-ELSEWHERE`, corregido en el pase 69 (antes decía `FSF → NOT-APPLICABLE`, que era FALSO)** (**P197**) · ⚠️ **con preámbulo de ALCANCE: *«Most of the files … are distributed under the GNU AGPL v3 licence»*, y el alcance NO se puede cerrar: el proyecto declara archivos de terceros con otras licencias y no los enumera** (**P186**/**P201**) | **243** (150 forks) | **EMEA** (Université catholique de Louvain, Bélgica) | Plataforma de **evaluación automática y segura de ejercicios**, usable como ***grader* externo de Moodle y de edX vía LTI**. 🔵 **Entra como PLATAFORMA, no como agente:** es la capa de corrección sobre la que un agente se compone. 🔴 **AGPL-3.0 + alcance parcial: no entra en un entregable cerrado sin leer los encabezados por archivo** |
 | **autograder** *(agéntico, manuscrito)* | https://github.com/johnswyou/autograder | 🟢 **MIT**, **1.065 B**, `Copyright (c) 2026 John You` → **`HOLDER-MATCH`**, cesión (**P179**) | **0** | sin región declarada | Corrige **entregas MANUSCRITAS** de física y matemática: localiza la respuesta, la transcribe, aplica rúbrica y emite `review_queue.md` + reporte por alumno. Proveedor **OpenRouter**. ⚠️ **Su README manda aprobación humana antes de liberar nota** —*«Review every queued item … and approve grades before release»*— 🔵 **pero es una norma de DOCUMENTACIÓN, no una garantía en código, así que NO mueve la medición de «1 de 9 lo afirma en el código» de los pases 57-59.** ⚠️ **0 ★: entra por el patrón, no por tracción** |
 | **autograder** *(reportes)* | https://github.com/webtech-network/autograder | 🟢 **Apache-2.0**, **11.357 B**, titular ausente **por construcción** → `NOT-APPLICABLE` (**P184**) | — | sin región declarada | Autograding con generación de reportes sobre entregas de alumnos. 🟢 **La licencia más cómoda de la tanda** |
 | **autograder** *(CLI docente)* | https://github.com/zmievsa/autograder | 🔴 **GPL-3.0**, **35.149 B**, titular FSF → `NOT-APPLICABLE` | — | sin región declarada | Corrección automática de entregas para cursos de programación, lado docente. 🔴 **Copyleft: se compone por proceso, no por librería** |

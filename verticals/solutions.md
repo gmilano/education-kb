@@ -109,6 +109,89 @@ updated: 2026-10-03
 > **`qti3-pnp`**, que abren accesibilidad de evaluación como entregable auditable (**P72**). ⚠️ **Open edX cambia de
 > recomendación: proponer con presupuesto de mantenimiento (gap 70).** Ver la sección del pase 33, abajo.
 
+## 🏫 La vertical gana Brightspace/D2L —el tercer LMS grande, que no estaba— y pierde el derecho a cotizar «AGPL-3.0 entero» sobre su pieza de corrección (pase 69 del 2026-10-03)
+
+### 🟢 El hueco de plataforma que esta vertical tenía sin saberlo
+
+🔴 **Esta base tenía superficie de agente para **Moodle**, **Canvas** y **Open edX**, y CERO para
+**Brightspace (D2L)**,** que es el tercero del trío institucional grande. 🟢 **El hueco cierra con una
+pieza medida:**
+
+| Pieza | Licencia (leída) | ★ / forks | Región | Punto de inserción |
+|---|---|---|---|---|
+| 🟢 [`rohanmuppa/brightspace-mcp-server`](https://github.com/rohanmuppa/brightspace-mcp-server) | **MIT**, 1.067 B, `Copyright (c) 2026 Rohan Muppa` 🟢 `HOLDER-MATCH` | **57** / 27 | **North America** (Purdue) | Se cuelga del Brightspace del cliente por su API: notas, vencimientos, trabajos, anuncios, listas, programa y contenido |
+
+🔵 **Y trae de fábrica la propiedad que la receta P189 construía a mano: es de SÓLO LECTURA por
+diseño** —*«it only reads your courses — it never submits, edits, or deletes anything»*—. 🟢 **Para un
+distrito o una universidad, una integración que no puede escribir en el expediente del alumno es una
+compuerta de cumplimiento gratis, no una limitación.** ⚠️ **Contracara a decir en la cotización: todo
+flujo que deba DEVOLVER algo al LMS (publicar nota, cerrar entrega) necesita otra pieza; ésta no lo
+hace y no se la puede forzar sin forkear.**
+
+### 🔴 La corrección que cambia cómo se cotiza `INGInious`, que es la pieza de corrección de esta vertical
+
+🟢 **El instrumento por archivo que **P186** venía pidiendo existe y corrió.** De los archivos de
+entrada alcanzables, **7 de 7** remiten al `LICENSE` sin declarar excepción, y el `pyproject.toml`
+dice `AGPL 3`. 🔵 **Hasta ahí, la lectura de esta vertical se confirma.**
+
+🔴 **Pero el `COPYRIGHTS` del proyecto —622 B, nunca leído por esta base— declara que *«some other
+files are entirely made by third parties, and distributed with other licences»* y NO los enumera.**
+⚠️ **Así que «AGPL-3.0 entero» no es medible, y esta vertical lo venía cotizando así.**
+
+🔵 **Lo que se escribe en una propuesta de ahora en más, palabra por palabra:** *AGPL-3.0 en la
+superficie de entrada medida (7 de 7 archivos, 0 excepciones), con archivos de terceros de otras
+licencias existentes por declaración del proyecto y sin enumerar; se implanta **sin modificar** y se
+compone por **LTI** y por proceso, nunca enlazando* (**P201**). 🔴 **Para un entregable cerrado, el
+enunciado anterior no alcanza y hace falta la enumeración, que hoy no existe.**
+
+🟢 **Y el titular, corregido:** no es la FSF. Es **Anthony Gégo, Guillaume Derval y Pierre Reinbold
+(2014-2026)**, declarado en el `COPYRIGHTS`. ⚠️ **Importa en la vertical porque un pliego que exige
+*«titular identificable del software»* se contestaba mal con `NOT-APPLICABLE`.**
+
+### 🟢 Suecia entra a la capa de currículo de la vertical, y es la quinta jurisdicción
+
+| Pieza | Licencia (leída) | Región | Qué habilita en un proyecto |
+|---|---|---|---|
+| 🟢 [`ksaklfszf921/skolverket-mcp`](https://github.com/ksaklfszf921/skolverket-mcp) | **MIT**, 1.092 B ⚠️ `HOLDER-UNRELATED` | **EMEA** (Suecia) | Consulta y comparación del currículo nacional sueco, el registro de centros y las ofertas planificadas, por **las tres API abiertas de Skolverket** |
+
+🔵 **La capa de currículo de la vertical queda con Alemania, España, Japón, Chile y Suecia.**
+⚠️ **Las dos reservas van en la cotización, no en una nota al pie:** 🔴 **el árbol es de un TERCERO y
+el titular nombra a la agencia sin serlo** (**P190**) —o sea no hay respaldo institucional que
+prometer—, y 🔴 **la licencia del DATO de Skolverket no está medida**: el README sólo dice *«Fri
+användning»* en prosa. 🔵 **MIT cubre el cliente, no el currículo que devuelve** (**P172**).
+
+### 🟢 Y una superficie de agente sobre plataforma COMERCIAL, que es una clase que esta vertical usa poco
+
+| Pieza | Licencia (leída) | ★ / forks | Qué es |
+|---|---|---|---|
+| 🟢 [`EduBase/mcp`](https://github.com/EduBase/mcp) | **MIT**, 1.063 B, `Copyright (c) 2025 EduBase` 🟢 `HOLDER-MATCH` | **29** / 13 | MCP publicado por el PROVEEDOR sobre su propia plataforma de e-learning: crea y corrige cuestionarios y exámenes y empuja desempeño a un SIS. stdio · SSE · HTTP streamable |
+
+🔵 **Es el patrón inverso al de Moodle: acá el proveedor cede el CLIENTE en MIT y la plataforma sigue
+siendo cerrada.** ⚠️ **Útil cuando el cliente ya compró EduBase; inútil como base sobre la que
+construir, porque lo que cede es el conector y no el sistema.**
+
+### ⚠️ La capa de ESTÁNDARES de la vertical sigue medida en 2 de 7, y así se dice
+
+🔴 **El barrido de `standards.1edtech.org` que cerraría el veredicto está BLOQUEADO por egress en los
+dos canales** (`403 CONNECT` por `curl`, `EGRESS_BLOCKED` por WebFetch; ídem
+`www.imsglobal.org/speclicense.html`). ⚠️ **Así que la regla *«con 1EdTech no se publica un perfil
+derivado»* sigue siendo una inferencia sobre **2 de 7** estándares y NO una medición, y cada vez que
+esta vertical la use tiene que decir «medido en 2 de 7».**
+
+🟢 **Lo que sí se midió hoy y afina la compuerta: dentro de `openbadges-specification` la licencia es
+por VERSIÓN** —`ob_v3p0/license.md` cede y niega derivados; `ob_v2p0` **existe** (`index.md` → 200) y
+**calla** (`license.md` → 404)—. 🔵 **Consecuencia de implantación: un perfil derivado se discute
+contra la versión que el cliente va a implementar, no contra «el estándar».**
+
+### ⚠️ El canal de plataformas, noveno pase saturado
+
+⚠️ **`open source platform education ERP CRM MIT Apache` volvió a colapsar sobre el SEO de
+OpenEduCat**, esta vez con la misma página de glosario en SEIS idiomas. 🔵 **Sin cambio de licencia:
+OpenEduCat sigue **LGPL-3.0** sobre Odoo.** 🔴 **Aparecieron `CK-ERP`, `openSIS` y `centre-sis`
+(SourceForge) y NINGUNO entra como fila: no se les leyó licencia de primera mano, y la única traza
+viva de `CK-ERP` es un correo de lista de Drupal de 2010.**
+
+
 ## 🧪 La vertical gana la capa de CORRECCIÓN con despliegue institucional, y la capa de ESTÁNDARES resulta la peor cedida de todas (pase 67 del 2026-10-03)
 
 ### 🟢 INGInious: la primera plataforma de esta vertical cuyo trabajo es DECIDIR la nota

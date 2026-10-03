@@ -107,6 +107,164 @@ updated: 2026-10-03
 > **Pase 11:** +2 patrones — **P25** (riesgo de abandono conforme al Anexo III, la capa con presupuesto ya asignado y sin oferta open source) y **P26** (agente docente sobre la ontología curricular nacional ya publicada).
 > **Pase 27:** **+4 patrones y una corrección.** 🔴 **P51 queda con premisa falsa** —el conector MCP de Moodle **sí existe y es MIT**— y lo reemplazan **P54** (corrección y devolución sobre Moodle con **compuerta humana**, el último tramo del gap 6, con piezas que ya escriben), **P55** (el conector de **Open edX**, que es el único que de verdad no existe), **P56** (**SCORM** como formato de salida de la capa generativa: cero integración, offline) y **P57** (evidencia por MCP cotizada sobre lo que CaSS **realmente** expone — 6 de 61 operaciones, con insignias y autoría de marcos **fuera**).
 
+## 🔌 P198 — La reachability de un repositorio es una MATRIZ, no un sondeo (pase 69 del 2026-10-03)
+
+**El defecto, medido sobre una pieza que esta KB RECOMIENDA.**
+`raw.githubusercontent.com/UCL-INGI/INGInious/HEAD/README.md` → **404**. El repo está **vivo**:
+`HEAD/LICENSE` → 200 y `master/README.rst` → 200. 🔵 **No tiene `README.md`: embarca `README.rst`.**
+
+🔴 **Un sondeo de un solo nombre de archivo no mide existencia: mide una convención de nombre.** Y el
+error que produce es el más caro de los dos posibles — un falso *«no resuelve»* borra la pieza del
+mapa y nadie vuelve a preguntar, mientras un falso *«sin licencia»* al menos deja la fila.
+
+**La regla.** Sólo el 404 en **todas** las celdas de la matriz autoriza la palabra «no resuelve»:
+
+| Eje | Valores |
+|---|---|
+| refs | `HEAD` · `main` · `master` |
+| nombres | `README.md` · `README.rst` · `README` · `README.txt` · `LICENSE` · `LICENSE.md` · `LICENSE.txt` · `COPYING` · `package.json` · `pyproject.toml` · `setup.py` |
+
+🟢 **Instrumento: `compose/code/p198-identity-sweep/resolve_repo.sh` (33 celdas, sale en la primera
+que contesta 200).** 🟢 **Control positivo: `INGInious` → `RESOLVES HEAD/README.rst`. Control
+negativo: `Ed-Fi-Alliance-OSS/Ed-Fi-SDK-MCP` → `ALL-404 33-cells`.**
+
+🔵 **Es **P195** en otra dimensión: ahí los instrumentos de esta KB eran *GitHub-shaped*; acá son
+*`README.md`-shaped*.**
+
+## 🧬 P199 — El `sha256` de un `LICENSE` prueba identidad SÓLO hasta donde llega su titular: sirve para SEPARAR, casi nunca para UNIR (pase 69 del 2026-10-03)
+
+**P193** (pase 68) dice que el `sha256` del `LICENSE` **une** un paquete a su árbol. 🔵 **La cota es
+mucho más baja, y está medida con dos colisiones reales.**
+
+**Colisión 1 — dos paquetes DISTINTOS, hash idéntico:**
+
+| Paquete | Bytes | `sha256` | Titular en el texto |
+|---|---|---|---|
+| `openedx-mcp` | 34.524 | `8d56b405468a` | 🔴 ninguno (AGPL-3.0 prístina) |
+| `tutor-contrib-openedxmcp` | 34.524 | 🔴 **el MISMO** | 🔴 ninguno |
+
+**Colisión 2 — el caso con el que P193 se escribió.** Borrando **sólo el nombre** del titular:
+
+| Paquete | Original | Titular borrado |
+|---|---|---|
+| `@yunmiao/studymate` | 1.064 B · `dc1997d82189` · *Cattofu* | **1.056 B · `1126322e2cc8`** |
+| `@schoolexl/mentor` | 1.064 B · `a2094a3c42d5` · *CoreExL* | **1.056 B · `1126322e2cc8`** |
+| `opencode-sit` | **1.056 B · `1126322e2cc8`** · `Copyright (c) 2026` 🔴 sin nombre | — |
+
+🔵 **`sha256:1126322e…` identifica la CLASE «MIT, 2026, sin titular», no el árbol
+`aemonge/opencode-sit`.**
+
+**La regla, y la tabla que la hace usable sin medir:** la familia de licencia dice de antemano cuánta
+entropía de identidad hay en el hash.
+
+| Familia del texto | Identidad que aporta el hash |
+|---|---|
+| MIT / BSD / ISC **con nombre de titular** | 🟢 **alta** — el nombre es la entropía |
+| MIT **sin nombre** (`Copyright (c) AÑO`) | 🔴 **casi nula** — es una clase, no un árbol |
+| Apache-2.0 prístina (11.3–11.6 kB) | 🔴 **nula** — el apéndice no se rellena casi nunca |
+| AGPL / GPL / LGPL prístinas (34–35 kB) | 🔴 **nula** — el titular del texto es la FSF |
+
+🟢 **Uso correcto: un hash distinto PRUEBA que dos textos difieren (y eso es lo que separó los dos
+`canvas-lms-mcp` del pase 68, donde sigue valiendo).** 🔴 **Un hash igual NO prueba pertenencia
+salvo que el texto traiga titular distintivo.**
+
+## 🔗 P200 — La identidad de un paquete se cierra con un enlace de DOS VÍAS, y el *scope* es un sello independiente (pase 69 del 2026-10-03)
+
+🔴 **Un nombre adivinado no es evidencia**, y en este pase 4 de 7 candidatos adivinados por nombre
+(`ajna-inc/openbadges`, `vinaysingh8866/openbadges`, `schoolexl/mentor`,
+`tongxinsuo/aicourse-mcp-server`) simplemente **no existen**.
+
+**Las tres vías, en orden de fuerza:**
+
+| Señal | Dirección | Fuerza |
+|---|---|---|
+| campo `repository` del registro **y el repo RESUELVE** (matriz de **P198**) | paquete → árbol | 🟢 **declarada** |
+| manifiesto del árbol declara el `name` del paquete | árbol → paquete | 🟢 **probatoria**: va en contra del nombre adivinado |
+| *scope* npm `@x` == dueño de GitHub `x` | sello de control | 🟢 **independiente**: sólo el dueño del scope publica ahí |
+
+🟢 **Caso trabajado — `opencode-sit`:** el registro **no** declara repositorio (así que la vía 1 no
+existe), el hash es boilerplate (**P199**, no prueba nada), **y sin embargo la identidad se cierra**
+porque `aemonge/opencode-sit` tiene `package.json` con `"name": "opencode-sit"`. 🔵 **El veredicto del
+pase 68 era correcto; su instrumento, no.**
+
+⚠️ **Caso trabajado — `@ink-waffle/*`:** el árbol nombra al paquete, pero el `package.json` del árbol
+declara **`"repository": null`**, así que el enlace es de **una vía**. 🟢 **Lo que lo cierra es el
+tercer sello: el scope `@ink-waffle` sólo lo publica quien controla `ink-waffle`.**
+
+🔵 **Consecuencia para la columna *Identidad*: la celda tiene que decir POR QUÉ canal se probó.**
+*«probado»* a secas reintroduce el error que este pase corrigió.
+
+## 🚧 P201 — Alcance ABIERTO declarado: un proyecto puede afirmar que tiene excepciones y no enumerarlas, y entonces la licencia no es medible (pase 69 del 2026-10-03)
+
+**P186** detectó que un `LICENSE` puede acotarse a sí mismo. 🟢 **El instrumento por archivo existe
+ahora (`compose/code/p199-perfile-license/perfile.sh`) y lo primero que encuentra es que el alcance de
+`INGInious` NO se puede cerrar.**
+
+| Capa | Qué dice | Lectura |
+|---|---|---|
+| `LICENSE` (34.764 B) | *«Most of the files … are distributed under the GNU AGPL v3 licence … If it is not the case, this is clearly indicated in the files»* | 🔴 se acota a sí mismo |
+| superficie de entrada | **7 de 7** archivos remiten al `LICENSE`, **0 excepciones**; `pyproject.toml` → `license = {text = "AGPL 3"}` | 🟢 benigno hasta acá |
+| `COPYRIGHTS` (622 B) | *«Some other files are entirely made by third parties, and distributed with other licences; this is clearly indicated in these files»* | 🔴 **las excepciones EXISTEN y NO están enumeradas** |
+
+🔴 **Ningún instrumento acotado puede cerrarlo:** haría falta leer el árbol entero, y el listado de
+directorio sólo está abierto por WebFetch y no es scripteable.
+
+🟢 **Lo cotizable, y se escribe así, palabra por palabra:** *AGPL-3.0 en la superficie de entrada
+medida (7 de 7 archivos, 0 excepciones), con archivos de terceros de otras licencias existentes por
+declaración del proyecto y sin enumerar.*
+
+🔵 **La clase de riesgo es nueva en esta base y no es «licencia desconocida»: es **licencia conocida
+de alcance abierto**.** 🔴 **Un escáner de licencias la aprueba —hay `LICENSE`, la familia se lee del
+título (**P171**)— y un abogado no, porque lo que falta no es el identificador sino el inventario.**
+
+## 🎓 P202 — RECETA: consulta de currículo nacional y estado académico, AUDITABLE, para una institución de EMEA (pase 69 del 2026-10-03)
+
+**Para quién.** Universidad o autoridad educativa **sueca** (o cualquiera que tenga que justificar
+contra el currículo nacional). 🔵 **Es la primera receta de esta KB que puede citar el currículo
+oficial por API en vez de un PDF raspado, y eso es lo que la vuelve defendible bajo el AI Act.**
+
+### Las piezas, con licencia MEDIDA en este pase
+
+| Capa | Pieza | Licencia (leída de primera mano) |
+|---|---|---|
+| currículo nacional | [`ksaklfszf921/skolverket-mcp`](https://github.com/ksaklfszf921/skolverket-mcp) | **MIT**, 1.092 B ⚠️ `HOLDER-UNRELATED` |
+| estado académico (LMS) | [`rohanmuppa/brightspace-mcp-server`](https://github.com/rohanmuppa/brightspace-mcp-server) | **MIT**, 1.067 B 🟢 `HOLDER-MATCH` |
+| compuerta de herramientas | `compose/code/mcp-allowlist-gateway` (de esta KB) | — |
+| registro de evidencia | `yetanalytics/lrsql` (**Apache-2.0**) o `openfun/ralph` (**MIT**) | ya medidas en esta KB |
+
+🟢 **Las dos piezas nuevas son MIT con el archivo leído, así que la receta entra entera en un
+entregable facturado: no hay copyleft en la ruta.**
+
+### El wiring, en cuatro pasos
+
+1. **Las dos puertas quedan de SÓLO LECTURA, y una lo es por diseño.** `brightspace-mcp-server` no
+   escribe nunca (*«it never submits, edits, or deletes anything»*). 🔵 **El `mcp-allowlist-gateway` se
+   configura igual, con la lista de herramientas de lectura explícita, para que la propiedad no
+   dependa de que el upstream no cambie de opinión** (es **P189** aplicado a una pieza que ya cumple).
+2. **El currículo entra como CITA, no como contexto suelto.** Toda afirmación pedagógica del agente
+   sale con el identificador del *Läroplan* que la respalda, obtenido por `skolverket-mcp`.
+   🔵 **`Skolenhetsregistret` resuelve el centro, así que la cita queda anclada a la institución.**
+3. **La evidencia se registra en el LRS desde el día uno**, no al final: el LRS es la pieza que
+   fabrica el dataset con el que después se mide cualquier cosa (es la lectura que el **trend 16** ya
+   dejó escrita, y acá vale igual).
+4. **La escritura, si hace falta, va por una pieza SEPARADA y mínima.** 🔴 **Ninguna de las dos puertas
+   publica nota.** 🔵 **Separarla es la decisión de arquitectura que hace la receta auditable: el único
+   componente con permiso de escritura es chico y se revisa solo.**
+
+### Lo que esta receta NO promete, dicho antes de cotizar
+
+1. 🔴 **La licencia del DATO de Skolverket no está medida.** El README afirma *«Fri användning»* en
+   **prosa**, y el MIT cubre el cliente, no el currículo que devuelve (**P172**). ⚠️ **Antes de
+   facturar, hay que leer los términos del dato en la fuente del organismo.**
+2. 🔴 **`skolverket-mcp` NO lo publica la agencia:** el árbol es de un tercero y el titular dice
+   *«Skolverket Syllabus MCP Contributors»*, nombrando al organismo sin serlo (**P190**).
+   ⚠️ **No hay respaldo institucional que prometer, y la continuidad depende de una persona: 11 ★.**
+3. ⚠️ **Si el entregable incluye corrección automática, `INGInious` entra por LTI y sin modificar, y
+   se cotiza con el enunciado de **P201** —no como «AGPL-3.0 entero»—.**
+4. ⚠️ **Si el entregable incluye un perfil derivado de un estándar de 1EdTech, la compuerta de
+   **P187** aplica y hoy está **medida en 2 de 7** estándares: no se afirma el régimen de CLR, QTI,
+   OneRoster ni LTI.**
+
 ## 🧾 P190 — El TITULAR en la capa que el cliente instala (pase 68 del 2026-10-03)
 
 **Instrumento:** `compose/code/p190-holder-package-layer/` — compone el alcance de `p183` con el

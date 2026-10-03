@@ -1525,6 +1525,33 @@ Dónde se produce el software educativo abierto, que no es donde está la demand
 
 ### North America
 
+#### 📍 Pase 69 del 2026-10-03 — el barrido regional devuelve CONFIRMACIÓN pura, y lo único nuevo de la región es una PIEZA: el tercer LMS grande pasa a ser direccionable
+
+⚠️ **`AI education North America 2026 adoption regulation players` no devolvió un solo dato que esta
+base no tuviera.** Verificado contra el propio archivo antes de escribir:
+
+| Dato que devolvió el barrido | Estado en esta KB |
+|---|---|
+| US$ 951 M (2024) → US$ 2.303,2 M (2029), CAGR 15,9 % | 🔵 **ya estaba** (pase 68, MarketsandMarkets, **P107**) |
+| 36 % de participación regional | 🔵 **ya estaba** (pase 68) |
+| 41,7 % del crecimiento global 2026-2030 | 🔵 **ya estaba** |
+| 71 % de docentes de EE.UU. sin formación en AI · 10 % de instituciones con guía formal | 🔵 **ya estaba** (pase 68) |
+| Fragmentación federal, con Colorado y Texas legislando por su cuenta | 🔵 **ya estaba** (pases 11, 14, 43) |
+
+🟢 **El aporte real de la región en este pase no es una cifra, es una SUPERFICIE: `Brightspace`
+(D2L) pasa a ser direccionable con una pieza MIT medida** —
+[`rohanmuppa/brightspace-mcp-server`](https://github.com/rohanmuppa/brightspace-mcp-server), 57 ★,
+27 forks, `Copyright (c) 2026 Rohan Muppa`, de **sólo lectura por diseño**, hecho en Purdue.
+🔴 **Hasta hoy esta base tenía agente para Moodle, Canvas y Open edX y NINGUNO para el tercer LMS
+institucional grande.**
+
+🔵 **Por qué importa para la oportunidad de ESTA región y no de otra:** es la región con el 36 % de
+la adopción y el 10 % de gobernanza formal, o sea la que más compra con menos marco. 🟢 **Una
+integración que **no puede escribir** en el expediente del alumno convierte esa debilidad en un
+argumento de venta: el control no se promete en un documento, está en el código y se audita en una
+tarde.** ⚠️ **Y la contracara va en la cotización: todo flujo que deba devolver nota al LMS necesita
+otra pieza, porque ésta no escribe.**
+
 #### 📍 Pase 68 del 2026-10-03 — la región con más mercado es la peor PREPARADA, y el vacío federal lo llenan los estados
 
 | Magnitud | Valor | Fuente / fecha |
@@ -3011,6 +3038,37 @@ Artículo 50(2) **no es exigible** en North America — pero es **el requisito m
 multi-región conviene cotizarlo contra el techo europeo y no contra el piso local (ver **P103** y **P105**).
 
 ### EMEA
+
+#### 📍 Pase 69 del 2026-10-03 — barrido de CONFIRMACIÓN, y el activo nuevo de la región es el currículo nacional de SUECIA, por fin alcanzable
+
+⚠️ **`AI education EMEA 2026 adoption regulation players` devolvió sobre todo prensa de AI
+EMPRESARIAL, no educativa**, y lo educativo que trajo ya estaba registrado:
+
+| Dato que devolvió el barrido | Estado en esta KB |
+|---|---|
+| 94 % de organizaciones probablemente invierten en formación en AI en 2026 · 38 % aún sin pilotear | 🔵 **ya estaba** (pase 43) |
+| AI Adoption Summit del Reino Unido, £200 M+, Cisco/IBM/BT/Rolls-Royce ejecutan, Skills England fija currícula | 🔵 **ya estaba** (pase 47) |
+| Conferencia del Consejo de Europa sobre dimensiones regulatorias de la AI en educación (octubre) | 🔵 **ya estaba** |
+| Europe EdTech 200 de QS (2026) | ⚠️ **nuevo como nombre, sin cifra citable: no se registra como dato** |
+
+🟢 **El aporte real de la región es un ACTIVO DE DATO, y suma la quinta jurisdicción a la capa de
+currículo de esta KB (Alemania, España, Japón, Chile y ahora Suecia):**
+[`ksaklfszf921/skolverket-mcp`](https://github.com/ksaklfszf921/skolverket-mcp) — **MIT**, 1.092 B,
+11 ★ / 8 forks — expone por MCP las **tres** API abiertas de **Skolverket**, la agencia nacional de
+educación sueca: *Läroplan* (currículo), *Skolenhetsregistret* (registro de centros) y *Planned
+Educations*.
+
+🔵 **Por qué es oportunidad en EMEA específicamente:** es la región donde el currículo y el registro
+de centros son **dato público del Estado**, y donde el AI Act obliga a trazar la procedencia de lo
+que un sistema educativo afirma. 🟢 **Un agente que cita el currículo oficial por API, y no un PDF
+raspado, es la diferencia entre un entregable auditable y uno que no se puede defender en una
+revisión.**
+
+⚠️ **Las dos reservas que van en la propuesta, no en una nota al pie:** 🔴 **el árbol es de un
+TERCERO y su titular dice *«Skolverket Syllabus MCP Contributors»*, nombrando al organismo sin serlo**
+(**P190**) — no hay respaldo institucional que prometer, y la continuidad depende de una persona—, y
+🔴 **la licencia del DATO no está medida: el README sólo afirma *«Fri användning»* en prosa, y el MIT
+cubre el cliente, no el currículo que devuelve** (**P172**).
 
 #### 📍 Pase 68 del 2026-10-03 — la regulación más dura sobre la dispersión más ancha, y el freno declarado es de CAPACIDAD
 
@@ -4623,6 +4681,30 @@ concordantes**. El Artículo 50(2) —la obligación de transparencia del conten
 este pase dejó cubierto con código.
 
 ### APAC
+
+#### 📍 Pase 69 del 2026-10-03 — barrido de CONFIRMACIÓN, y la región sigue sin aportar pieza educativa-nativa en este canal
+
+⚠️ **`AI education APAC 2026 adoption regulation players` devolvió casi enteramente AI
+EMPRESARIAL de APAC, no educación**, y lo que tocó educación ya estaba:
+
+| Dato que devolvió el barrido | Estado en esta KB |
+|---|---|
+| **OpenAI** designa a **Brent Thomas** para política en Australia y Nueva Zelanda | 🔵 **ya estaba** (registrado como señal de institucionalización) |
+| **LearnUpon** abre sede en Sídney con *Create+*; **TCS + Pearson**, alianza plurianual | 🔵 **ya estaba** (pase 47, y con la lectura de que el canal que se mueve es COMERCIAL, no abierto) |
+| 48 % de líderes de gobernanza ponen la adopción de AI como prioridad 2026 · 57 % de las organizaciones de Asia ya la usan en algún área | ⚠️ **nuevo, pero es dato de AI empresarial, no educativo: se registra como contexto y NO como cifra del sector** |
+| 49 % señala infraestructura insuficiente para dato en tiempo real | ⚠️ **ídem — contexto empresarial** |
+| Consultas de Singapur sobre AI en instituciones FINANCIERAS | 🔴 **no es educación: se descarta explícitamente para que nadie lo lea como regulación educativa de APAC** |
+
+🔵 **El eje que esta región sí confirma, y es el que decide una compra: «soberano por diseño»**
+—la narrativa regional de 2026 es ejecución soberana, no pilotos—, que es exactamente el encuadre con
+el que esta KB ya venía registrando a APAC.
+
+🔴 **Y el vacío que se extiende un pase más: de las 3 altas de este pase, NINGUNA es de origen
+APAC** (North America, Suecia y un proveedor de EMEA). ⚠️ **Se registra como continuidad del hueco de
+origen APAC, no como ausencia de la región en el mercado: APAC sigue siendo el mayor CAGR y la mayor
+adopción con la menor gobernanza, y lo que falta es software educativo-nativo abierto que salga de
+ahí por este canal.** 🔵 **El canal que rindió en el pase 61 para esta región sigue siendo el bueno y
+no se corrió hoy: buscar por PAÍS y en el IDIOMA del país, no «AI education APAC».**
 #### 📍 Pase 67 del 2026-10-03 — la región entrega por fin un artefacto educativo con la cesión MÁS LIMPIA de toda la KB, y es un índice de India bajo CC0
 
 🟢 **El hueco más viejo de esta región se mueve, y conviene decir exactamente cuánto.** Esta base
@@ -5892,6 +5974,30 @@ desplegado + puerta MCP permisiva (`jbnu-lms-mcp`, `canvas-lms-mcp`, las cuatro 
 depende de un tercero» son el mismo argumento.**
 
 ### LATAM
+
+#### 📍 Pase 69 del 2026-10-03 — barrido de CONFIRMACIÓN, y la cifra que vuelve es de STARTUPS, no del sector educativo
+
+⚠️ **`AI education LATAM 2026 adoption regulation players` devolvió lo que esta base ya tenía, y la
+cifra más vistosa no es del sector:**
+
+| Dato que devolvió el barrido | Estado en esta KB |
+|---|---|
+| Estudio **UNU / UNESCO IESALC** sobre implementación de AI en educación superior de América Latina y el Caribe | 🔵 **ya estaba, y con más precisión que la fuente de hoy** (encuesta a 200 instituciones de 19 países) |
+| **Ednova** (Chile) entre los casos de edtech regional | 🔵 **ya estaba** |
+| **BID**: marco regulatorio habilitante para AI en LAC | 🔵 **ya estaba** |
+| Fragmentación normativa entre países → riesgo de inconsistencia para operación transfronteriza | 🔵 **ya estaba, y es el eje con el que esta KB lee la región** |
+| 99 % de las *startups* de LATAM usan AI internamente · 85 % la integran en su producto | 🔴 **NO se registra como cifra del sector educativo: el denominador son startups de todos los rubros, y leerlo como adopción educativa sería un error de categoría** (**P107**) |
+
+🔵 **El dato de LATAM que sigue decidiendo la oportunidad no se movió, y conviene repetirlo porque es
+el que hace la diferencia con el resto de las regiones:** la fragmentación regulatoria entre países
+significa que **un entregable que cruza fronteras necesita que la procedencia del dato y la licencia
+del contenido sean argumentables en cada jurisdicción**, no en el promedio.
+
+🟢 **Y la pieza de este pase que LATAM puede usar sin esperar nada:** las tres altas son **MIT** con
+el archivo de licencia leído, así que entran en un entregable facturado sin compuerta de copyleft.
+🔴 **Pero ninguna es de origen LATAM, y eso se registra: el pase no aportó pieza de la región.**
+⚠️ **El canal que históricamente rindió acá es el mismo que para APAC —buscar por PAÍS y en el
+idioma del país— y no se corrió en este pase.**
 #### 📍 Pase 67 del 2026-10-03 — la región aporta el precedente institucional MULTI-PAÍS que esta KB no tenía, y se registra como intel con su límite escrito
 
 🟢 **El aporte de la región en este pase es institucional y vale como precedente de arquitectura, no

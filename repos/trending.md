@@ -8,6 +8,72 @@ updated: 2026-10-03
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 
+## 2026-10-03 — pase 69: entra la capa de agente de Brightspace/D2L, Suecia entra a la capa de currículo, y un sondeo de un solo nombre de archivo resultó estar fabricando lápidas
+
+### 🟢 El movimiento de repos del pase: tres piezas MIT, las tres con el archivo de licencia leído
+
+| Pieza | Licencia | ★ / forks | Qué es |
+|---|---|---|---|
+| 🟢 [`rohanmuppa/brightspace-mcp-server`](https://github.com/rohanmuppa/brightspace-mcp-server) | **MIT** (1.067 B, `Rohan Muppa` → `HOLDER-MATCH`) | **57** / 27 | MCP de **Brightspace (D2L)**: notas, vencimientos, trabajos, anuncios, listas, programa, contenido. 344 commits. 🔵 **sólo lectura por diseño** |
+| 🟢 [`ksaklfszf921/skolverket-mcp`](https://github.com/ksaklfszf921/skolverket-mcp) | **MIT** (1.092 B, `Skolverket Syllabus MCP Contributors` → ⚠️ `HOLDER-UNRELATED`) | **11** / 8 | MCP sobre las **tres** API abiertas de **Skolverket** (agencia nacional de educación de Suecia): *Läroplan*, *Skolenhetsregistret*, *Planned Educations* |
+| 🟢 [`EduBase/mcp`](https://github.com/EduBase/mcp) | **MIT** (1.063 B, `EduBase` → `HOLDER-MATCH`) | **29** / 13 | MCP del **proveedor** sobre su plataforma de e-learning: cuestionarios, exámenes, corrección, empuje a un SIS. stdio · SSE · HTTP streamable |
+
+🔵 **Las tres entraron por la consulta de FUNCIÓN** (*«MCP server student information system
+gradebook»*), no por el eje de categoría, que lleva tres pases sin rendir.
+
+### 🟢 Por qué la primera vale más que sus 57 ★: era un hueco de PLATAFORMA
+
+🔴 **Esta KB tenía capa de agente para Moodle, Canvas y Open edX, y NINGUNA para
+Brightspace/D2L** —uno de los tres LMS institucionales grandes del mundo—. 🟢 **El hueco se cierra
+con una pieza MIT, con titular que coincide con el dueño del árbol, y de sólo lectura por diseño
+(*«it never submits, edits, or deletes anything»*), que es la compuerta que la receta **P189** venía
+pidiendo a mano.**
+
+### 🟢 Y la segunda suma un PAÍS a la capa de currículo
+
+🟢 **Suecia entra a una capa que tenía Alemania (`FWU-DE`), España, Japón (`jp-cos`) y Chile.**
+⚠️ **Con dos reservas escritas antes de que alguien la cotice:** 🔴 **no la publica la agencia** —el
+árbol es de un tercero y el titular dice *«Skolverket Syllabus MCP Contributors»*, nombrando al
+organismo sin serlo (**P190**)—, y 🔴 **la licencia del DATO no está medida: el README sólo afirma
+*«Fri användning»* en prosa, y la cesión del código MIT no dice nada del dato** (**P172**, y es la
+tendencia 22 otra vez).
+
+### 🔴 El hallazgo de método del pase: `HEAD/README.md` no mide existencia
+
+🔴 **`raw/UCL-INGI/INGInious/HEAD/README.md` → 404, y el repo está VIVO** (`HEAD/LICENSE` → 200,
+`master/README.rst` → 200). **No tiene `README.md`: embarca `README.rst`.**
+⚠️ **`INGInious` es una pieza RECOMENDADA de esta base, así que el sondeo que el pase 68 usó para
+declarar repos muertos la habría declarado muerta.** 🔵 **La reachability pasa a MATRIZ de 33 celdas
+(3 refs × 11 nombres) y sólo las 33 en 404 autorizan la palabra «no resuelve»** (**P198**).
+🟢 **Re-medidos con la matriz, `Ed-Fi-Alliance-OSS/Ed-Fi-SDK-MCP` y `Eduware-Inc/eduware-oneroster`
+caen en las 33: el veredicto del pase 68 sobre los dos queda CONFIRMADO, ahora con piso.**
+
+### 🔴 La licencia de un repo de ESPECIFICACIÓN es por VERSIÓN, y ahora está medido en qué versión
+
+Ejecutando la acción 3 sobre `1EdTech/openbadges-specification`:
+
+| Ruta | Estado |
+|---|---|
+| `LICENSE`, `LICENSE.md`, `NOTICE` en la RAÍZ | 🔴 **404** las tres |
+| `ob_v3p0/license.md` | 🟢 **200** — *Specification Document License* de IMS Global, que **niega derivados** |
+| `ob_v2p0/index.md` | 🟢 **200** — **la versión EXISTE** |
+| `ob_v2p0/license.md` | 🔴 **404** — **y es SILENCIO, no ausencia de versión** |
+| `ob_v2p1` · `ob_v1p1` · `ob_v1p0` · `ob_v3p1` · `clr_v2p0` | 404 en los dos nombres (no se afirma que existan) |
+
+🔵 **Lo cotizable, por la regla de la acción (la MÁS restrictiva encontrada): «niega derivados».**
+⚠️ **Y la frase «la licencia del repo» queda mal formada para esta clase de repo.**
+
+### ⚠️ El eje de plataformas, saturado por NOVENA vez
+
+⚠️ **`open source platform education ERP CRM MIT Apache` volvió a colapsar sobre el SEO de
+OpenEduCat**, esta vez en seis idiomas a la vez (`es`, `fr`, `ar`, `zh`, `pt-BR`, `en`), todos la
+misma página de glosario. 🔵 **La única novedad nominal fue `CK-ERP`** (sistema educativo/ERP/CRM/MRP
+con 32 módulos, incluidos *Teacher*, *Counselor*, *Student*, *Registrar*): 🔴 **su única traza viva
+es un correo de lista de Drupal de julio de 2010 y no se le leyó licencia de primera mano, así que NO
+entra como fila.** ⚠️ **También reapareció `openSIS` y `centre-sis` (SourceForge) sin licencia leída:
+tampoco entran.**
+
+
 ## 2026-10-03 — pase 68: entran los dos documentos de estándar que SÍ ceden, y la versión vigente de xAPI se fue de GitHub
 
 ### 🟢 El movimiento de repos del pase: la capa de estándares gana sus dos piezas permisivas

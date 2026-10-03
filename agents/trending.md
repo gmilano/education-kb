@@ -9,6 +9,126 @@ updated: 2026-10-03
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 > No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
 
+## 2026-10-03 — pase 69: la columna *Identidad* queda CONDICIONADA por 5 de 13, el hash del `LICENSE` resulta probar mucho menos de lo que se dijo ayer, y el titular de una pieza recomendada estaba mal en cuatro archivos
+
+### 🔴 El hallazgo del pase: el instrumento de ayer prueba una CLASE, no un ÁRBOL
+
+**P193** se escribió en el pase 68 afirmando que el `sha256` del `LICENSE` **UNE** un paquete a su
+árbol. 🔴 **Medido hoy, une a su CLASE: el hash identifica un árbol sólo hasta donde llega el
+titular del texto, y los textos sin titular son boilerplate que comparte medio planeta.**
+
+🔴 **La colisión, dentro de los 13 nombres de este pase:** `openedx-mcp` y
+`tutor-contrib-openedxmcp` —**dos paquetes PyPI distintos**— embarcan los dos **34.524 B** de AGPL-3.0
+prístina y dan el **mismo** `sha256:8d56b405468a`.
+
+🔴 **Y la prueba que alcanza al caso estrella de ayer.** Borrado **sólo el nombre del titular** (año
+conservado) de dos `LICENSE` MIT de esta tanda:
+
+| Paquete | Original | Titular borrado |
+|---|---|---|
+| `@yunmiao/studymate` | 1.064 B · `dc1997d82189` · *Cattofu* | **1.056 B · `1126322e2cc8`** |
+| `@schoolexl/mentor` | 1.064 B · `a2094a3c42d5` · *CoreExL* | **1.056 B · `1126322e2cc8`** |
+| `opencode-sit` | **1.056 B · `1126322e2cc8`** · 🔴 `Copyright (c) 2026` sin nombre | — |
+
+🔵 **`sha256:1126322e…` no es la huella del árbol `aemonge/opencode-sit`: es la huella de «MIT, 2026,
+sin titular».** ⚠️ **La medición de ayer se reprodujo exacta (byte a byte entre tarball y árbol): lo
+que se corrige no es el número, es lo que se concluyó de él** (**P199**).
+
+🟢 **El veredicto igual se salva, por un instrumento mejor:** el `package.json` de
+`aemonge/opencode-sit` declara `"name": "opencode-sit"`, y eso va en la dirección contraria al nombre
+adivinado — el árbol nombra al paquete (**P200**).
+
+### 🟢 El reparto de identidad, con el denominador corregido antes de medir
+
+⚠️ **La acción pedía «los 16 nombres» de registro único. Son 13:** 21 filas → 18 nombres (el
+`pkgs.input.txt` que el repo versiona), menos los 5 de doble registro del pase 68. **El «16» era un
+conteo de FILAS leído como de NOMBRES.**
+
+| Veredicto | n de 13 | Quiénes |
+|---|---|---|
+| 🟢 `IDENTITY-DECLARED` | **3** | `@yunmiao/studymate` · `jbnu-lms-mcp` · `pykt-toolkit` |
+| 🔴 `IDENTITY-DECLARED-BUT-DEAD` | **2** | `@eduware/oneroster` · `ed-fi-sdk-mcp` — **404 en 33 celdas** |
+| 🟢 `IDENTITY-PROVEN` | **3** | las dos de `@ink-waffle` + `opencode-sit`, **por manifiesto del árbol** |
+| 🔴 `IDENTITY-UNKNOWN` | **5** | `@ajna-inc/openbadges` · `@schoolexl/mentor` · `aicourse-mcp-server` · `openedx-mcp` · `tutor-contrib-openedxmcp` |
+
+🔵 **5 ≥ 3 → gana la rama CARA de la hipótesis: la columna *Identidad* es CONDICIÓN para publicar una
+fila de paquete, con el valor `desconocida` escrito y no omitido.** ⚠️ **5 de 13 NO se compara con el
+«4 de 5» de ayer: otro denominador.**
+
+### 🔴 Un defecto de instrumento que esta serie venía arrastrando: el sondeo de un solo nombre de archivo FABRICA lápidas
+
+🔴 **`raw/UCL-INGI/INGInious/HEAD/README.md` da 404. El repo está VIVO** —`HEAD/LICENSE` 200,
+`master/README.rst` 200— **y simplemente no tiene `README.md`: embarca `README.rst`.**
+🔵 **Un sondeo de un nombre de archivo no mide existencia, mide una convención de nombre** (**P198**).
+🟢 **La reachability pasa a ser una MATRIZ de 33 celdas (3 refs × 11 nombres), y los dos repos
+prioritarios de la acción caen en las 33 — así que el veredicto del pase 68 sobre ellos queda
+CONFIRMADO, ahora con piso.**
+
+### 🔴 La corrección sobre una pieza RECOMENDADA, y vivía en cuatro archivos
+
+🔴 **Esta KB publicaba el titular de `INGInious` como `FSF → NOT-APPLICABLE`. Es falso.** El
+`LICENSE` es boilerplate AGPL (cuyo copyright es de la FSF, de ahí el error), pero los encabezados
+remiten a **dos** archivos —*«See the LICENSE **and the COPYRIGHTS** files»*— y el `COPYRIGHTS`
+(**622 B**, que ningún instrumento de esta base había abierto) dice:
+
+> *«The vast majority of the files are Copyright (c) 2014-2026 Anthony Gégo, Guillaume Derval and
+> Pierre Reinbold»*
+
+🟢 **Corregido en `agents/top.md` y `repos/foundations.md` → `HOLDER-DECLARED-ELSEWHERE`.**
+⚠️ **En este archivo y en `repos/trending.md` el valor viejo QUEDA en la historia: son append-only y
+reescribir la serie la destruiría. La corrección vive acá, fechada** — que es exactamente lo que
+**P197** pide.
+
+🔵 **Capa nueva para la escalera de precedencia de P197:** un archivo de TITULAR dedicado
+(`COPYRIGHTS`) manda sobre el boilerplate del `LICENSE` para la pregunta del titular.
+
+### ⚠️ Y el alcance de `INGInious` NO se puede cerrar, que es peor que no haberlo medido
+
+🟢 **Acción 3 ejecutada: el instrumento por archivo de P186 existe y corrió.** De los archivos de
+entrada alcanzables, **7 de 7** traen el mismo encabezado que remite al `LICENSE`, **cero
+excepciones**, y `pyproject.toml` declara `license = {text = "AGPL 3"}` + clasificador AGPL v3.
+
+🔴 **Pero el `COPYRIGHTS` declara:** *«Some other files are entirely made by third parties, and
+distributed with other licences; this is clearly indicated in these files.»* ⚠️ **Las excepciones
+EXISTEN por declaración propia y NO están enumeradas en ninguna parte.** 🔵 **Así que «AGPL-3.0
+entero» no es una afirmación medible por ningún instrumento acotado, y lo cotizable es: *AGPL-3.0 en
+la superficie de entrada medida (7/7, 0 excepciones), con archivos de terceros de otras licencias
+existentes por declaración del proyecto y sin enumerar*** (**P201**).
+
+### 🔴 La acción 2 está BLOQUEADA, y la condición de vencimiento del pase 68 se cumple al pie
+
+🔴 **`standards.1edtech.org` → `403 CONNECT` por `curl` y `EGRESS_BLOCKED` por WebFetch.
+`www.imsglobal.org/speclicense.html` → idéntico.** Los dos canales, los dos negados.
+⚠️ **Así que `1EdTech × documento` sigue **medido en 2 de 7** y este pase lo dice así cada vez que lo
+nombra, como el pase 68 exigió. No se infiere el régimen de los otros cuatro estándares.**
+
+### 🟢 Las altas del pase — y una cierra un hueco de PLATAFORMA, no de agente
+
+| Pieza | Repo | Licencia (leída de primera mano) | Región | Qué es |
+|---|---|---|---|---|
+| 🟢 **Brightspace MCP Server** | [`rohanmuppa/brightspace-mcp-server`](https://github.com/rohanmuppa/brightspace-mcp-server) | **MIT**, 1.067 B, `Copyright (c) 2026 Rohan Muppa` 🟢 `HOLDER-MATCH` | **North America** | 🟢 **Brightspace/D2L no estaba en NINGUNA capa de agente de esta KB** (había Moodle, Canvas, Open edX). Notas, vencimientos, trabajos, anuncios, listas, programa, contenido. **57 ★ / 27 forks**, 344 commits. 🔵 **Sólo lectura por diseño** |
+| 🟢 **Skolverket MCP Server** | [`ksaklfszf921/skolverket-mcp`](https://github.com/ksaklfszf921/skolverket-mcp) | **MIT**, 1.092 B, `Copyright (c) 2025 Skolverket Syllabus MCP Contributors` ⚠️ `HOLDER-UNRELATED` | **EMEA** (Suecia) | 🟢 **SUECIA entra a la capa de currículo.** Las **tres** API abiertas de Skolverket: *Läroplan*, *Skolenhetsregistret*, *Planned Educations*. **11 ★ / 8 forks**. ⚠️ **de un tercero, no de la agencia; el titular la nombra sin serla** (**P190**) |
+| 🟢 **EduBase MCP** | [`EduBase/mcp`](https://github.com/EduBase/mcp) | **MIT**, 1.063 B, `Copyright (c) 2025 EduBase` 🟢 `HOLDER-MATCH` | **EMEA** (proveedor) | MCP del proveedor sobre su propia plataforma: cuestionarios, exámenes, corrección y empuje de desempeño a un SIS. **29 ★ / 13 forks**. stdio · SSE · HTTP streamable |
+
+🔵 **Las tres salieron de la consulta por FUNCIÓN, no de categoría.** 🟢 **Dedupe antes de escribir:
+`anthropics/k12-teacher-skills` y `vishalsachdev/canvas-mcp` salieron de la misma búsqueda y YA
+estaban en esta base.**
+
+### ⚠️ El hueco de canal, por TERCER pase consecutivo
+
+⚠️ **`top open source AI agents education 2026 github MIT` y `github trending education AI 2026`
+devolvieron otra vez el eje generalista** —openclaw (385.407 ★ citados), browser-use (108.128 ★),
+AutoGen, CrewAI, dify, Flowise, Mem0— **más agregadores de SEO y listas de «aprender AI».**
+🔴 **Ninguna alta educativa salió de esas dos consultas, por tercer pase.** ⚠️ **Las cifras de
+estrellas que citan no se copian: no se leyeron del repo.**
+⚠️ **`open source platform education ERP CRM MIT Apache` colapsó por NOVENA vez sobre el SEO de
+OpenEduCat**, otra vez en seis idiomas (`es`, `fr`, `ar`, `zh`, `pt-BR`, `en`). 🔵 **Lo único nuevo
+fue un `CK-ERP` (educativo/ERP/CRM, 32 módulos) cuya única traza viva es un correo de lista de
+Drupal de 2010: NO entra como fila, no se leyó licencia de primera mano.**
+🔴 **`api.github.com` sigue `403` por el proxy, así que la búsqueda de código —el canal que
+encontraría los 3 `IDENTITY-UNKNOWN` sin candidato— no estuvo disponible.**
+
+
 ## 2026-10-03 — pase 68: 4 de 5 nombres de doble registro son dos artefactos, el régimen de los estándares se parte por PUBLICADOR, y el barrido debido tres veces por fin corrió
 
 ### 🔴 El hallazgo del pase: el defecto no es de dos filas, es de cómo se transcribe un nombre
