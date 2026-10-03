@@ -107,6 +107,185 @@ updated: 2026-10-03
 > **Pase 11:** +2 patrones — **P25** (riesgo de abandono conforme al Anexo III, la capa con presupuesto ya asignado y sin oferta open source) y **P26** (agente docente sobre la ontología curricular nacional ya publicada).
 > **Pase 27:** **+4 patrones y una corrección.** 🔴 **P51 queda con premisa falsa** —el conector MCP de Moodle **sí existe y es MIT**— y lo reemplazan **P54** (corrección y devolución sobre Moodle con **compuerta humana**, el último tramo del gap 6, con piezas que ya escriben), **P55** (el conector de **Open edX**, que es el único que de verdad no existe), **P56** (**SCORM** como formato de salida de la capa generativa: cero integración, offline) y **P57** (evidencia por MCP cotizada sobre lo que CaSS **realmente** expone — 6 de 61 operaciones, con insignias y autoría de marcos **fuera**).
 
+## 🪜 P207 — La compuerta de ESCRITURA es una ESCALERA de cuatro peldaños, y el peldaño se lee en el CÓDIGO (pase 71 del 2026-10-03)
+
+El pase 70 tipificó `GATE-IN-SIGNATURE` y advirtió que era *«más fuerte que `GATE-IN-DOC`»* sin
+decir qué había en el medio. **Medidas cuatro piezas más con superficie de escritura, el eje
+binario no aguanta: hay dos peldaños intermedios.**
+
+| # | Clase | Qué está PROBADO en código | Ejemplar | Se salta con… |
+|---|---|---|---|---|
+| **1** | `GATE-IN-SIGNATURE` | la condición es **parámetro** de la operación y su default es cerrado | `SwarupRock/attendai` (`confirm=false`) · MwalimuLens (ids de evidencia) | **nada de configuración** |
+| **2** | `GATE-IN-HANDLER` (2 etapas) | tabla de política **`Readonly` con denegación por omisión**, derecho sobre el recurso verificado contra el upstream, auditoría en concesión Y denegación, llamadas **antes** de la mutación | `nitsuah/bb-mcp` | **nada de configuración** · ⚠️ **asertando otra identidad** |
+| **3** | `GATE-IN-ENV-FLAG` | los no-GET se rechazan **salvo** que se exporte una variable | `felipedias-ie/blackboard-mcp` | 🔴 **UNA variable de entorno** |
+| **4** | `GATE-IN-DOC` | nada: hay una advertencia en prosa | `oliverhruby/edupage-mcp` · `johnswyou/autograder` | 🔴 **no hay compuerta** |
+
+**Cómo se aplica, en orden:**
+
+1. **Leer el CÓDIGO, no el README.** El peldaño 3 y el 4 se parecen en la prosa (*«read-only by
+   default»* contra *«use them with care»*) y son presupuestos distintos.
+2. **Buscar el default.** `confirm = false`, `ALLOW_WRITES` ausente, `?? []`: si el default es
+   abierto, el peldaño baja aunque el control exista.
+3. **Contar sitios de llamada contra tools de escritura.** Una función de autorización bien
+   escrita que nadie llama es peldaño 4 con disfraz. En `bb-mcp` el conteo cierra **6 de 6**.
+4. **Preguntar de dónde viene la IDENTIDAD.** Es la pregunta que separa el peldaño 2 del 1, y no
+   se ve en ninguna lista de *features*.
+
+⚠️ **Lo que P207 NO dice:** no ordena los peldaños 1 y 2 entre sí en todas las dimensiones. El 2
+puede tener política más rica que el 1 (ver **P210**).
+
+---
+
+## 🔐 P208 — El `sha256` pierde su poder SEPARADOR cuando el titular es el NOMBRE DEL PROYECTO, y entonces hace falta el sello del registro (pase 71 del 2026-10-03)
+
+**P199** estableció que el `sha256` de un `LICENSE` *«sirve para SEPARAR, casi nunca para UNIR»*,
+porque separa por TITULAR. **Este pase encontró el caso donde tampoco separa.**
+
+`bibo242/blackboard-mcp` y `felipedias-ie/blackboard-mcp` tienen el **mismo `sha256:fa4e32e5e622`,
+los mismos 1.083 B** y el **mismo titular: `blackboard-mcp contributors`** — que **no nombra a
+ninguno de los dos dueños**. 🔴 **Con un titular igual al nombre del proyecto, el hash no puede
+decir cuál es el upstream: puede decir que son el mismo texto, nada más.**
+
+🟢 **Lo que cerró la identidad fue el enlace de DOS VÍAS de P200**, y cerró limpio:
+
+```
+npm "blackboard-mcp"
+  → repository : git+https://github.com/felipedias-ie/blackboard-mcp.git
+  → maintainers: ["felipeie"]          <- el handle concuerda con el slug
+  → latest     : 0.1.2  (3 versiones)
+```
+
+**La regla, en orden de aplicación:**
+
+1. `sha256` idéntico → **mismo texto**. No concluir nada más todavía.
+2. Leer el **titular**. Si nombra a una de las partes → ésa es el upstream (**P199** alcanza).
+3. 🔴 **Si el titular es el NOMBRE DEL PROYECTO o «contributors» → P199 NO alcanza.** Ir al
+   registro de paquetes y pedir el **enlace de dos vías** (**P200**).
+4. El handle del *maintainer* contra el slug del repo es el sello que decide.
+
+⚠️ **Y la cota, que es el sub-caso nuevo: el sello identifica al dueño del NOMBRE, no prueba que
+el artefacto publicado corresponda al árbol de hoy.** Acá el `package.json` del canónico declara
+**`0.6.0`** —adelantado respecto del `0.1.2` publicado— y el del fork declara exactamente
+**`0.1.2`**. 🔵 **El fork quedó clavado en la última versión publicada y el canónico siguió sin
+publicar: *«canónico»* es una afirmación sobre el nombre, no sobre la versión que se va a instalar.**
+
+---
+
+## 🏢 P209 — Se mide el MÓDULO, nunca el proveedor: un solo stack puede tener cuatro regímenes de licencia (pase 71 del 2026-10-03)
+
+Medido por payload en este pase, el stack de **un** proveedor:
+
+```
+frappe/frappe     (framework)  →  MIT        1.117 B   texto completo
+frappe/erpnext    (ERP)        →  GPL-3.0   35.148 B   texto completo
+frappe/lms        (LMS)        →  AGPL-3.0  33.892 B   texto completo
+frappe/education  (educación)  →  19 BYTES: "License: GNU GPL V3"
+```
+
+🔴 **Cuatro repos del mismo proveedor, cuatro regímenes, y el módulo EDUCATIVO es el único sin
+texto de cesión.** Sus 19 bytes son un **IDENTIFICADOR, no una CESIÓN** (**P179**) — y esta vez el
+identificador está en el **archivo de licencia**, que es el canal más fuerte que mide esta base.
+⚠️ **`pyproject.toml` y `package.json` del mismo repo no declaran licencia: los 19 bytes son la
+única traza.**
+
+**La regla:**
+
+1. **Nunca heredar la licencia del proveedor, de la organización ni del repo «principal».** Pedir
+   el archivo de **cada módulo** que vaya al entregable.
+2. **Un identificador sin texto no se le entrega a legales** (**P179**), y da igual que esté en
+   `LICENSE`: lo que importa es si hay GRANT, no si hay archivo.
+3. 🔴 **Si el identificador del módulo CONTRADICE a sus hermanos, es un hallazgo, no un detalle.**
+   Acá declara `GPL V3` mientras el LMS hermano es **AGPL-3.0**, y el alcance sobre un despliegue
+   SaaS no es el mismo.
+4. **Y el corolario de categoría de este pase:** permisividad y especificidad educativa están
+   **ANTI-correlacionadas** en la capa de ERP — de 5 piezas educativas, 0 permisivas; las 2
+   permisivas de la capa no son educativas. 🔵 **La escapatoria permisiva existe y se paga en
+   ALCANCE, no en licencia.**
+
+---
+
+## 🔑 P206 — El canal de payload es CASE-SENSITIVE, así que el veredicto de AUSENCIA de cesión está condicionado por la CAJA del nombre (pase 71 del 2026-10-03)
+
+`raw.githubusercontent.com` distingue mayúsculas. **Todos los sondeos de licencia de esta base
+usaron nombres en mayúscula** (más `LICENCE`). Este pase devolvió **`NO-CESSION`** para
+`frappe/education` y `frappe/erpnext`: **las dos llevan `license.txt` en MINÚSCULA, HTTP 200.**
+
+🔵 **Es la clase de error que el pase 69 ya pagó** —*«un sondeo de un solo nombre FABRICA
+lápidas»*— **sólo que por la caja.** Corregido con una **matriz de 27 nombres**
+(`compose/code/p206-erp-layer-license/names.case-matrix.txt`).
+
+⚠️ **La consecuencia hay que escribirla y no se limita a este barrido: todo veredicto
+`NO-CESSION` / `UNLICENSED` publicado por esta base salió de un sondeo en mayúsculas, así que cada
+uno queda CONDICIONADO POR LA CAJA.** 🔵 **No desmentido: no cerrado.**
+
+🟢 **Y el control que evita generalizar de más, corrido en el mismo pase:** el `NO-CESSION` del
+pase 70 sobre `hesham0-0nasser/tutor-lms-mcp` se re-midió a los 27 nombres y **sigue siendo
+`NO-CESSION`**. **La corrección lo reforzó.**
+
+🔴 **El segundo defecto del mismo instrumento, porque viene de la misma disciplina:** la familia se
+clasificaba con un `grep` de AGPL sobre el cuerpo, y **la sección 13 del GPL-3.0 se titula *«Use
+with the GNU Affero General Public License»***, así que **todo** texto GPL-3.0 se leía como AGPL.
+🔴 **El instrumento leyó `GibbonEdu/core` como AGPL-3.0 y estuvo a un commit de «corregir» al pase
+70, que tenía razón.** 🔵 **Es **P171**: clasificar por la DECLARACIÓN, nunca por el cuerpo.**
+🟢 **Corregido leyendo sólo las primeras 40 líneas, con control negativo (un AGPL-3.0 real tiene
+que seguir dando AGPL-3.0). `test_family.py`: 5/5.**
+
+---
+
+## 🔒 P210 — RECETA: camino de ESCRITURA defendible sobre un LMS institucional, componiendo los dos peldaños de arriba (pase 71 del 2026-10-03)
+
+**El problema, medido y no supuesto:** las dos piezas mejor gobernadas de esta base cubren huecos
+**opuestos**, así que **ninguna sola** da un camino de escritura que se pueda adjuntar a un
+expediente de Anexo III.
+
+### Las piezas, con licencia MEDIDA en este pase
+
+| Rol en la receta | Pieza | Licencia (medida) | Qué aporta | Qué le FALTA |
+|---|---|---|---|---|
+| **Política + auditoría** | [`nitsuah/bb-mcp`](https://github.com/nitsuah/bb-mcp) | **MIT**, 1.063 B, `sha256:e024d09e682a`, `Copyright (c) 2026 nitsuah` | tabla `Readonly` con **denegación por omisión** (`?? []`), FERPA, **derecho de curso contra el upstream vivo**, auditoría en concesión y denegación, en **6 de 6** tools de escritura | 🔴 **la identidad es ASERTADA por el cliente** (`args.caller_identity`) |
+| **Ligadura de identidad + confirmación** | [`SwarupRock/attendai`](https://github.com/SwarupRock/attendai) | **MIT**, 1.077 B, `sha256:e5c3342e862f` | identidad resuelta de la **sesión** y verificada contra la **propiedad del recurso**; `confirm` default `false` con *dry-run*; auditoría de éxito **y de fallo** | 🔴 **corre contra un portal MOCK**, localhost-only |
+| **Compuerta de allowlist** | `compose/code/mcp-allowlist-gateway/` (de esta base) | — | recorta la superficie de tools antes de que llegue al servidor | — |
+| **Traza inmutable** | `compose/code/grading-draft-gate/` (de esta base) | — | borrador + liberación humana sobre la escritura de nota | — |
+
+### El wiring, en cuatro pasos
+
+1. **Terminar la aserción de identidad, que es el agujero del peldaño 2.** `bb-mcp` lee
+   `args.caller_identity`; **eso no se usa tal cual**. Se pone delante el gateway de allowlist de
+   esta base y **ahí** se resuelve la identidad del lado del servidor (sesión OAuth de la
+   institución), **se inyecta** el `caller_identity` y se **rechaza** cualquier `caller_identity`
+   que venga del cliente. 🔵 **Es el patrón de `attendai` —`cls.teacher_id !== session.id`—
+   aplicado al punto donde `bb-mcp` confía.**
+2. **Dejar la política donde ya está y NO reescribirla.** `TOOL_ROLE_RULES` falla cerrada por
+   construcción; agregarle tools sin política las deja inservibles, que es el default correcto.
+   **Lo que sí hay que hacer es un test que recorra las tools registradas y falle si alguna no
+   está en la tabla.**
+3. **Subir las escrituras al peldaño 1, que es lo único que cambia la firma.** Agregar `confirm`
+   —default `false`— a las **6** tools de `grade-writeback.ts`, con el *dry-run* devolviendo
+   exactamente qué nota de qué alumno cambiaría. 🔴 **Rompe compatibilidad con clientes
+   existentes: va en el presupuesto, no de regalo.**
+4. **Unir las dos auditorías en una sola traza.** `bb-mcp` audita a *stdout* más un *ring buffer*
+   acotado; `attendai` audita a una tabla `audit_log`. **Para un expediente hace falta persistencia
+   y retención**, no un buffer en memoria: la salida estructurada de `bb-mcp` va a un almacén
+   append-only y el `grading-draft-gate` de esta base queda como la etapa de liberación humana.
+
+### Lo que esta receta NO promete, dicho antes de cotizar
+
+- 🔴 **`attendai` no es un componente que se instale: es el PATRÓN que se copia.** Corre contra un
+  portal mock y su README es explícito —*«deliberately never touches a real institution's
+  portal»*—. **Lo que se reusa es la forma de la compuerta, no el código.**
+- 🔴 **`bb-mcp` tiene 2 ★ y 235 commits de un solo autor.** La cesión está limpia (MIT,
+  `HOLDER-MATCH`) y la arquitectura es la mejor medida de esta base en el eje de escritura, **pero
+  el riesgo de mantenimiento es real y se cotiza como tal.**
+- ⚠️ **Nada de esto resuelve el trámite de OAuth.** La API oficial *«requires an OAuth application
+  registered and approved by your institution's Blackboard administrator»*: **si el cliente no
+  controla la instancia, esta receta no aplica** y hay que ir a la pieza de cookie de sesión, que
+  es peldaño 3 y además **P204**.
+- ⚠️ **El peldaño 2 prueba la POLÍTICA, no la identidad; el paso 1 es el que la cierra.** Sin el
+  paso 1 la receta no es defendible, y el paso 1 es trabajo de estudio.
+
+---
+
+
 ## 🔐 P203 — La compuerta de gobernanza se clasifica por DÓNDE VIVE, y la firma es la clase fuerte (pase 70 del 2026-10-03)
 
 **El problema.** *«Requiere aprobación humana»* se dice de piezas que no ofrecen la misma garantía.

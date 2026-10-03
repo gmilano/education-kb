@@ -81,6 +81,93 @@ corre ése antes de escribir uno a mano** (tendencia **313**). 🟢 **Y el `gafa
 > **Pase 36 del 2026-10-02:** 🔵 **este pase no agrega repos: le pone FECHA a los que ya están, y la fecha cambia tres recomendaciones.** Se midió la capa PHP de evaluación y telemetría en Packagist —el único registro de los tres que entrega descargas en este entorno (`api.npmjs.org` y `pypistats.org` dan **403 a CONNECT**)— y el resultado está en `repos/trending.md`. **Lo que hay que saber antes de proponer desde este archivo:** 🔴 **la pieza xAPI más descargada de esta base, `rusticisoftware/tincan` (Apache-2.0, 6.178 desc./mes, 863.777 totales), no publica desde el 2022-11-02**, y ⚠️ **el único MIT de esa capa, `php-xapi/client`, está parado desde el 2021-03-24** con 825 desc./mes. 🔵 **La lectura es que en xAPI/PHP lo permisivo está quieto y lo vivo es copyleft**, así que la receta de telemetría se sostiene en **Ralph (MIT)** + **`lrsql` (Apache-2.0)** + **`learnmcp-xapi` (MIT)** y no en la capa PHP. 🟢 **Del lado de evaluación, lo activo es `oat-sa/extension-tao-testqti`** (**885 versiones**, release del **2026-09-30**) **y sigue siendo GPL-2.0-only**, mientras **lo permisivo es lo nuevo**: `@longsightgroup/qti3-cli` (**MIT**, 41 releases desde el 2026-05-21, último **2026-10-01**) con **cero dependencias de terceros** — sus 4 dependencias son todas `@longsightgroup/*` pinneadas a la misma versión exacta. **Su manifiesto MCP completo de 20 tools está escrito en `compose/patterns.md` (P76).** 🔴 **Y una corrección de catálogo: `oat-sa/qti-sdk` devuelve 404 en Packagist porque es el nombre del REPO — su paquete es `qtism/qtism`** (GPL-2.0-only, 218.212 descargas totales, 315 versiones). **Nombre de repo y nombre de paquete son identificadores distintos, y confundirlos produce un 404 que parece una ausencia** — pasó igual con `1edtech/oneroster`, `imsglobal/lti-1-3-php-library` y `packbackbooks/lti-1-3-php-library`, los tres **404**, que se anotan como *«no verificado en Packagist bajo ese nombre»* y **no** como inexistentes. ⚠️ **Acción pendiente que el pase 37 tiene asignada: este archivo nunca pasó por el control de *slugs* distintos ni por el de *backlink*** — los dos que en `agents/top.md` encontraron **un duplicado** y **dos colisiones** este mismo pase.
 > **Pase 11 del 2026-10-01:** aparece una licencia que las diez pasadas anteriores filtraban sin saberlo — **ECL-2.0**, con la que licencia todo Apereo (Sakai, Opencast, OpenLRW). Es Apache-2.0 con el alcance de patentes acotado, aprobada por OSI y FSF, y **es apta para construir arriba**. Ver la capa de analítica institucional, abajo.
 
+## 🏢 La capa de ERP/administración entra MEDIDA, y el hallazgo no está en ninguna columna de licencia: permisividad y especificidad educativa están ANTI-correlacionadas (pase 71 del 2026-10-03)
+
+### 🔴 El resultado de categoría, antes de las filas
+
+El pase 70 midió la capa de **SIS / plataforma escolar** y la encontró dominada por copyleft
+fuerte. **Ese veredicto salía de la rodaja de SIS sola.** 🟢 **Este pase midió la rodaja de
+**ERP** —el sistema donde una institución corre aranceles, admisiones y RR.HH.— y el veredicto se
+CONFIRMA con denominador más grande, pero además queda EXPLICADO:**
+
+🔴 **De las CINCO piezas específicamente educativas de la capa, CERO son permisivas.**
+🟢 **Y las DOS permisivas de la capa NO son educativas.**
+
+🔵 **O sea: la vertical educativa no «elige» copyleft. La pieza permisiva existe en la capa
+GENÉRICA, y el módulo educativo es justamente donde aparece el copyleft.** 🔵 **Para cotizar: la
+escapatoria permisiva en ERP existe, pero se paga en ALCANCE —hay que construir el dominio
+escolar— y no en licencia.**
+
+### 🟢 Las filas, con el archivo de licencia LEÍDO y la familia tomada del TÍTULO
+
+| Pieza | Repo | Familia | Archivo · bytes · `sha256` | ¿Educativa? |
+|---|---|---|---|---|
+| **ERPNext** | [`frappe/erpnext`](https://github.com/frappe/erpnext) | 🔴 **GPL-3.0** | `license.txt` · **35.148 B** · `sha256:8b1ba204bb69` | no (ERP general con módulo educativo) |
+| **Frappe LMS** | [`frappe/lms`](https://github.com/frappe/lms) | 🔴 **AGPL-3.0** | `license.txt` · **33.892 B** · `sha256:543fa96aec22` | 🟢 **sí** |
+| **Frappe Education** | [`frappe/education`](https://github.com/frappe/education) | 🔴 **sin texto de cesión** | `license.txt` · **19 B** · `sha256:1fcecf395312` | 🟢 **sí** |
+| **Frappe Framework** | [`frappe/frappe`](https://github.com/frappe/frappe) | 🟢 **MIT** | `LICENSE` · **1.117 B** · `sha256:5e3f49a77298` · `Copyright (c) 2016-2021 Frappe Tech` | no (framework) |
+| **ClassroomIO** | [`ClassroomIO/ClassroomIO`](https://github.com/ClassroomIO/ClassroomIO) | 🔴 **AGPL-3.0** | `LICENSE` · **34.522 B** · `sha256:20b067f86de3` | 🟢 **sí** |
+| **Gibbon** | [`GibbonEdu/core`](https://github.com/GibbonEdu/core) | 🔴 **GPL-3.0** | `LICENSE` · **35.120 B** · `sha256:0ba1ab6217c2` | 🟢 **sí** |
+| **OpenEduCat** | [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 🟡 **LGPL** | `LICENSE` · **8.240 B** · `sha256:8f4ce028f93d` | 🟢 **sí** |
+| **Apache OFBiz** | [`apache/ofbiz-framework`](https://github.com/apache/ofbiz-framework) | 🟢 **Apache-2.0** | `LICENSE` · **11.905 B** · `sha256:e5268bb253fb` | no (suite de negocio) |
+| **Aureus ERP** | [`aureuserp/aureuserp`](https://github.com/aureuserp/aureuserp) | 🟢 **MIT** | `LICENSE` · **1.077 B** · `sha256:c6dca3b0db5b` · `Copyright 2010-2025, Webkul Software` ⚠️ `HOLDER-UNRELATED` | no (ERP general, Laravel/Filament) |
+
+⚠️ **`HOLDER-UNRELATED` de Aureus no es un veredicto de error.** Webkul es el proveedor declarado
+del proyecto; el rango `2010-2025` es su encabezado de casa. **Queda en la lista de LECTURA de
+P184, no en la de hallazgos.**
+
+### 🔴 Dentro de UN proveedor conviven CUATRO regímenes, y el módulo EDUCATIVO es el peor cedido
+
+🔴 **Las cuatro primeras filas son del mismo proveedor y no comparten licencia:**
+
+```
+frappe/frappe     (framework)  →  MIT        1.117 B   texto completo
+frappe/erpnext    (ERP)        →  GPL-3.0   35.148 B   texto completo
+frappe/lms        (LMS)        →  AGPL-3.0  33.892 B   texto completo
+frappe/education  (educación)  →  19 BYTES: "License: GNU GPL V3"
+```
+
+🔴 **El módulo educativo es el único de los cuatro sin texto de cesión.** Sus 19 bytes son un
+**IDENTIFICADOR, no una CESIÓN** (**P179**) — y esta vez el identificador está en el **archivo de
+licencia**, que es el canal que esta base trata como el más fuerte. ⚠️ **`pyproject.toml` y
+`package.json` del mismo repo NO declaran licencia: los 19 bytes son la ÚNICA traza de cesión.**
+
+🔴 **Y declara `GNU GPL V3` mientras su hermano `frappe/lms` es AGPL-3.0.** 🔵 **GPL-3.0 y AGPL-3.0
+no tienen el mismo alcance sobre un despliegue SaaS, así que la diferencia no es cosmética, y no
+hay texto que respalde ninguna de las dos lecturas para el módulo educativo.** 🔵 **Regla
+(**P209**): se mide el MÓDULO, nunca el proveedor.**
+
+### 🧪 Dos defectos del instrumento, declarados — y el segundo evitó publicar una corrección FALSA
+
+🔴 **D1 — el canal de payload es CASE-SENSITIVE.** Los sondeos de licencia de esta base usaron
+nombres en MAYÚSCULA (más `LICENCE`). `frappe/education` y `frappe/erpnext` llevan **`license.txt`
+en minúscula**: la primera corrida devolvió **dos `NO-CESSION` FALSOS**.
+⚠️ **Consecuencia que hay que escribir: todo veredicto `NO-CESSION` / `UNLICENSED` de esta base
+salió de un sondeo en mayúsculas, así que queda CONDICIONADO POR LA CAJA — no desmentido, pero
+tampoco cerrado.**
+🟢 **Control corrido en el mismo pase:** el `NO-CESSION` del pase 70 sobre
+`hesham0-0nasser/tutor-lms-mcp` se re-midió a los **27** nombres y **sigue siendo `NO-CESSION`**.
+**La corrección lo REFORZÓ.**
+
+🔴 **D2 — la familia hay que leerla del TÍTULO, no del cuerpo.** La **sección 13 del GPL-3.0 se
+titula *«Use with the GNU Affero General Public License»***, así que un `grep` de AGPL sobre el
+cuerpo lee **todo** texto GPL-3.0 como AGPL-3.0. 🔴 **El instrumento leyó `GibbonEdu/core` como
+AGPL-3.0 y estuvo a un commit de «corregir» al pase 70, que tenía razón.** 🔵 **Es **P171**:
+clasificar por la DECLARACIÓN.** 🟢 **Corregido, con control negativo para que el arreglo no se
+pase de largo. `test_family.py`: 5/5.**
+
+### ⚠️ Lo que este canal NO rindió, declarado
+
+- 🔴 **`koolreport/school` y `School-Management-System/sms`: `UNREACHABLE`.** No se resolvió el
+  árbol por este canal, **así que NO se les atribuye ausencia de licencia** (**P198**).
+- ⚠️ **La capa de SIS del pase 70 no se re-abrió:** Fedena sigue medible sólo en ESPEJO.
+- ⚠️ **El canal de plataformas se saturó por DÉCIMA vez** sobre OpenEduCat y Frappe/ERPNext.
+  🟢 **Este pase usó el colapso como DENOMINADOR en vez de declararlo y seguir de largo**, que es
+  lo único nuevo que se le pudo sacar a una consulta agotada.
+- 🔴 **`api.github.com` / `github.com` → `403` todo el pase:** todas las licencias salen de
+  `raw.githubusercontent.com`.
+
+
 ## 🏫 La capa de SIS / plataforma escolar entra MEDIDA, y el resultado es incómodo: la categoría más citada de la vertical es copyleft fuerte (pase 70 del 2026-10-03)
 
 ### 🔴 El resultado de categoría, antes de las filas

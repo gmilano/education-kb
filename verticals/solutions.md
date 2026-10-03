@@ -109,6 +109,107 @@ updated: 2026-10-03
 > **`qti3-pnp`**, que abren accesibilidad de evaluación como entregable auditable (**P72**). ⚠️ **Open edX cambia de
 > recomendación: proponer con presupuesto de mantenimiento (gap 70).** Ver la sección del pase 33, abajo.
 
+## 🎓 La vertical gana BLACKBOARD —el cuarto LMS grande, que no estaba— y gana una ESCALERA para cotizar la compuerta de escritura en vez de declararla presente o ausente (pase 71 del 2026-10-03)
+
+### 🟢 El hueco de plataforma que esta vertical tenía, cerrado
+
+🟢 **Blackboard/Anthology Learn no estaba en NINGUNA capa de agente de esta KB.** Había Moodle,
+Canvas, Open edX, Brightspace/D2L (pase 69), EduPage y EduBase (pase 70) y Skolverket.
+🔵 **Con Blackboard, los cuatro LMS institucionales grandes quedan direccionables**, que es lo que
+decide si un *engagement* arranca con integración o con un conector a escribir de cero.
+
+| LMS | Pieza de la base | Licencia | Peldaño de escritura |
+|---|---|---|---|
+| Moodle | varias (capas previas) | GPL-3.0 (plataforma) | — |
+| Canvas | `vishalsachdev/canvas-mcp` | MIT | — |
+| Open edX | capa previa | AGPL-3.0 (plataforma) | — |
+| Brightspace / D2L | `rohanmuppa/brightspace-mcp-server` (pase 69) | MIT | 🔵 **sólo lectura por diseño** |
+| 🟢 **Blackboard** | 🟢 **`nitsuah/bb-mcp`** (**nuevo**) | **MIT** | 🟢 **Peldaño 2** (política + FERPA + derecho de curso + auditoría) |
+| 🟢 **Blackboard** | 🟢 **`felipedias-ie/blackboard-mcp`** (**nuevo**) | **MIT** | 🔴 **Peldaño 3** (variable de entorno) |
+
+### 🪜 Lo que cambia para cotizar: la compuerta de escritura es una ESCALERA, no un sí/no
+
+🔴 **Hasta el pase 70 esta vertical podía decir «la pieza tiene compuerta» o «no la tiene». Con
+cuatro peldaños medidos en código se puede cotizar el TRABAJO de subir uno:**
+
+| De → a | Qué hay que escribir | Orden de magnitud |
+|---|---|---|
+| 4 → 3 | un *guard* que rechace los no-GET salvo opt-in explícito | 🟢 **días** |
+| 3 → 2 | tabla de política con **denegación por omisión**, verificación de derecho sobre el recurso y auditoría en concesión y denegación | 🟡 **semanas** |
+| 2 → 1 | mover la condición a la **FIRMA** de las tools (`confirm`, ids de evidencia) | 🔴 **rompe compatibilidad** con todo cliente existente |
+
+🔵 **Esa tabla es la que conviene llevar a una reunión EMEA bajo Anexo III: no dice «esta pieza no
+cumple», dice cuánto cuesta que cumpla.**
+
+### 🔴 La advertencia de cotización del pase, y es la que ordena la conversación técnica
+
+🔴 **Las dos piezas de Blackboard NO son intercambiables, y la diferencia no es de licencia —las
+dos son MIT— sino de SUPERFICIE UPSTREAM:**
+
+- 🟢 **`nitsuah/bb-mcp` usa la API REST OFICIAL de Blackboard.** 40 tools por rol, incluida
+  escritura de nota con derecho de curso verificado **contra el upstream vivo**.
+- 🔴 **`felipedias-ie/blackboard-mcp` ataca la API INTERNA de Ultra con una cookie de sesión**, y
+  lo declara: *«This uses an internal API with no stability guarantee. Blackboard may change it
+  without notice»*. 🔵 **Su razón es honesta y es un dato de mercado:** la REST oficial *«requires
+  an OAuth application registered and approved by your institution's Blackboard administrator.
+  Most students and many staff can't get one.»*
+
+🔵 **Para la vertical eso se traduce en una regla de propuesta: si el cliente ES la institución,
+se va por la API oficial (`bb-mcp`) y el costo es el trámite de OAuth; si el cliente NO controla
+la instancia, la pieza que funciona hoy es la de cookie de sesión y entonces la fragilidad del
+upstream es un RIESGO DE PROYECTO que hay que presupuestar, no una nota al pie.**
+
+🔴 **Y es **P204** del pase 70 por SEGUNDA vez, en otra plataforma y con otro proveedor: escribir
+—o leer— sobre endpoints no documentados deja de ser un caso y pasa a ser una CLASE de esta
+vertical.** ⚠️ **Ninguna columna de licencia ve ese eje.**
+
+### 🔴 Ninguna pieza SOLA da un camino de escritura defendible, y eso es una oferta de servicio
+
+🔴 **Los dos peldaños de arriba cubren huecos OPUESTOS:**
+
+| | `nitsuah/bb-mcp` | `SwarupRock/attendai` |
+|---|---|---|
+| Política de rol | 🟢 **tabla `Readonly`, denegación por omisión** | 🟡 sólo rol `teacher` |
+| Derecho sobre el recurso | 🟢 **verificado contra el upstream vivo** | 🟢 **propiedad de la clase verificada** |
+| Identidad | 🔴 **ASERTADA por el cliente** (`args.caller_identity`) | 🟢 **LIGADA a la sesión: el agente no puede suplantar** |
+| Confirmación antes de escribir | 🔴 no | 🟢 **`confirm` default `false`, *dry-run* primero** |
+| Auditoría | 🟢 concesión y denegación | 🟢 éxito y fallo |
+| Upstream | 🟢 **API oficial, institución real** | 🔴 **portal MOCK, localhost-only** |
+
+🔵 **La lectura comercial: el camino defendible no es un repo, es una COMPOSICIÓN —la política y la
+auditoría de `bb-mcp` con la ligadura de identidad y la confirmación de `attendai` delante—, y
+armarla es trabajo de estudio, no descarga.** **Receta en `compose/patterns.md` (P210).**
+
+### 🟢 La vertical gana UZBEKISTÁN en la capa de SIS de educación superior
+
+🟢 **`sukhrobyangibaev/mcp_hemis_student` (MIT, `HOLDER-MATCH`) expone HEMIS** —*Higher Education
+Management Information System*, el MIS de educación superior de Uzbekistán (`student.hemis.uz`)—
+con **25+ tools**: perfil y GPA, materias, notas, asistencia, horarios, exámenes, contratos,
+títulos y estadísticas institucionales.
+
+🔵 **Para la vertical vale como CLASE y no sólo como país: es el primer MIS NACIONAL de educación
+superior con superficie de agente abierta que entra a esta base** —distinto de un LMS y distinto
+de un SIS de colegio—. ⚠️ **Lectura en la práctica, pero no DECLARADA: el eje de escritura queda
+SIN MEDIR y así hay que cotizarlo.** ⚠️ **Clasificada `EMEA` por decisión declarada (Asia Central
+no tiene bucket); el hueco de CÓDIGO de APAC sigue ABIERTO.**
+
+### 🔴 La capa de ERP/administración de la vertical, medida: la escapatoria permisiva existe pero se paga en ALCANCE
+
+🔴 **De las CINCO piezas de ERP específicamente educativas, CERO son permisivas** (Frappe LMS
+AGPL-3.0, Frappe Education sin texto, ClassroomIO AGPL-3.0, Gibbon GPL-3.0, OpenEduCat LGPL).
+🟢 **Las DOS permisivas de la capa —Apache OFBiz (Apache-2.0) y Aureus ERP (MIT)— NO son
+educativas.**
+
+🔵 **Regla de propuesta que sale de ahí: si el entregable tiene que ser permisivo, el camino es un
+ERP genérico permisivo MÁS el dominio escolar construido —presupuesto de ALCANCE—; si se parte de
+un ERP educativo, se parte de copyleft y el patrón de integración tiene que serlo (proceso
+separado, API, sin enlazar).** **Detalle y filas en `repos/foundations.md`.**
+
+🔴 **Y una advertencia por proveedor, no por pieza: el stack de Frappe tiene CUATRO regímenes
+(framework MIT, ERPNext GPL-3.0, LMS AGPL-3.0, Education 19 bytes sin texto). Se cotiza el
+MÓDULO, nunca el proveedor** (**P209**).
+
+
 ## 🏫 La vertical gana la capa de SIS/plataforma escolar y la gana con una advertencia de cotización: la categoría más citada es copyleft fuerte (pase 70 del 2026-10-03)
 
 ### 🔴 Lo que cambia para cotizar, dicho primero

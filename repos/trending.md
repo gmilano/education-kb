@@ -8,6 +8,104 @@ updated: 2026-10-03
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 
+## 2026-10-03 — pase 71: la capa de ERP entra medida, confirma el veredicto de copyleft del pase 70 con denominador más grande, y entrega el hallazgo que ninguna columna de licencia muestra: permisividad y especificidad educativa están ANTI-correlacionadas
+
+### 🔴 Lo primero, porque es una corrección de MÉTODO y condiciona veredictos ya publicados
+
+🔴 **`raw.githubusercontent.com` es CASE-SENSITIVE, y todos los sondeos de licencia de esta base
+usaron nombres en MAYÚSCULA** (más `LICENCE`). La primera corrida de este pase devolvió
+**`NO-CESSION`** para `frappe/education` y `frappe/erpnext`. 🔴 **Las dos llevan `license.txt` en
+MINÚSCULA, HTTP 200. Dos ausencias FALSAS.**
+
+🔵 **La clase de error es la que el pase 69 ya pagó** —*«un sondeo de un solo nombre de archivo
+FABRICA lápidas»*—, sólo que por la CAJA y no por el nombre. **Corregido con una matriz de 27
+nombres** (`compose/code/p206-erp-layer-license/names.case-matrix.txt`).
+
+⚠️ **La consecuencia va más allá de este barrido y hay que escribirla: todo veredicto
+`NO-CESSION` / `UNLICENSED` que esta base publicó salió de un sondeo en mayúsculas, así que cada
+uno queda CONDICIONADO POR LA CAJA.** 🔵 **No es que estén mal: es que no están cerrados.**
+
+🟢 **Control corrido en el mismo pase, antes de generalizar:** el `NO-CESSION` que el pase 70 le
+puso a `hesham0-0nasser/tutor-lms-mcp` se **re-midió a los 27 nombres** y **sigue siendo
+`NO-CESSION`**. 🟢 **La corrección no tumbó ese veredicto: lo reforzó.**
+
+### 🔴 El segundo defecto del instrumento, y éste casi publica una corrección FALSA sobre el pase 70
+
+🔴 **La primera corrida clasificó la familia con un `grep` de AGPL sobre TODO el texto. La
+sección 13 del GPL-3.0 se titula literalmente *«Use with the GNU Affero General Public
+License»*, así que TODO texto GPL-3.0 matcheaba AGPL primero.**
+
+🔴 **Resultado: el instrumento leyó `GibbonEdu/core` como AGPL-3.0 y estuvo a un commit de
+publicar una «corrección» al pase 70 — que tenía razón: Gibbon es GPL-3.0.**
+
+🔵 **Es **P171** otra vez: clasificar por la DECLARACIÓN, nunca por un `grep` del cuerpo.**
+Corregido leyendo sólo las primeras 40 líneas, con control negativo para que el arreglo no se
+pase de largo (un AGPL-3.0 real tiene que seguir dando AGPL-3.0). **`test_family.py`: 5/5.**
+
+### 🟢 El reparto de la capa de ERP/administración, con el archivo de licencia LEÍDO
+
+| Pieza | Repo | Familia (leída del TÍTULO) | Archivo · bytes · `sha256` | ¿Específica de educación? |
+|---|---|---|---|---|
+| **ERPNext** | [`frappe/erpnext`](https://github.com/frappe/erpnext) | 🔴 **GPL-3.0** | `license.txt` · **35.148 B** · `sha256:8b1ba204bb69` | no (ERP general, con módulo educativo) |
+| **Frappe LMS** | [`frappe/lms`](https://github.com/frappe/lms) | 🔴 **AGPL-3.0** | `license.txt` · **33.892 B** · `sha256:543fa96aec22` | 🟢 **sí** |
+| **Frappe Education** | [`frappe/education`](https://github.com/frappe/education) | 🔴 **sin texto** — el archivo mide **19 B** y dice `License: GNU GPL V3` | `license.txt` · **19 B** · `sha256:1fcecf395312` | 🟢 **sí** |
+| **Frappe Framework** | [`frappe/frappe`](https://github.com/frappe/frappe) | 🟢 **MIT** | `LICENSE` · **1.117 B** · `sha256:5e3f49a77298` · `Copyright (c) 2016-2021 Frappe Tech` | no (framework) |
+| **ClassroomIO** | [`ClassroomIO/ClassroomIO`](https://github.com/ClassroomIO/ClassroomIO) | 🔴 **AGPL-3.0** | `LICENSE` · **34.522 B** · `sha256:20b067f86de3` | 🟢 **sí** |
+| **Gibbon** | [`GibbonEdu/core`](https://github.com/GibbonEdu/core) | 🔴 **GPL-3.0** (confirmado, **el pase 70 tenía razón**) | `LICENSE` · **35.120 B** · `sha256:0ba1ab6217c2` | 🟢 **sí** |
+| **OpenEduCat** | [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 🟡 **LGPL** | `LICENSE` · **8.240 B** · `sha256:8f4ce028f93d` | 🟢 **sí** |
+| **Apache OFBiz** | [`apache/ofbiz-framework`](https://github.com/apache/ofbiz-framework) | 🟢 **Apache-2.0** | `LICENSE` · **11.905 B** · `sha256:e5268bb253fb` | no (suite de negocio) |
+| **Aureus ERP** | [`aureuserp/aureuserp`](https://github.com/aureuserp/aureuserp) | 🟢 **MIT** | `LICENSE` · **1.077 B** · `sha256:c6dca3b0db5b` · `Copyright 2010-2025, Webkul Software` ⚠️ `HOLDER-UNRELATED` | no (ERP general, Laravel/Filament) |
+
+### 🔴 El hallazgo: permisividad y especificidad educativa están ANTI-correlacionadas
+
+🔴 **Leída por la última columna, la tabla dice algo que ninguna lista de licencias muestra: de
+las CINCO piezas específicamente educativas, CERO son permisivas** —AGPL-3.0, GPL-3.0, LGPL, y
+una sin texto—. 🟢 **Y las DOS permisivas de la capa (Apache OFBiz, Aureus ERP MIT) NO son
+educativas: son ERP genéricos a los que habría que escribirles el dominio escolar.**
+
+🔵 **Eso confirma el veredicto del pase 70 con un denominador más grande y además lo EXPLICA:** no
+es que la vertical educativa «elija» copyleft; es que **la pieza permisiva existe en la capa
+genérica y el módulo educativo es justamente donde el copyleft aparece.** 🔵 **Para cotizar: la
+escapatoria permisiva en ERP existe, pero se paga en ALCANCE —hay que construir el dominio— y no
+en licencia.** ⚠️ **`HOLDER-UNRELATED` de Aureus no es un veredicto de error: Webkul es el
+proveedor declarado del proyecto; queda en la lista de LECTURA de P184, no en la de hallazgos.**
+
+### 🔴 Y dentro de UN solo proveedor conviven CUATRO regímenes, con el módulo educativo como el peor cedido
+
+🔴 **Las cuatro primeras filas son del MISMO proveedor y no comparten licencia:**
+
+```
+frappe/frappe     (framework)  →  MIT        1.117 B   texto completo
+frappe/erpnext    (ERP)        →  GPL-3.0   35.148 B   texto completo
+frappe/lms        (LMS)        →  AGPL-3.0  33.892 B   texto completo
+frappe/education  (educación)  →  19 BYTES: "License: GNU GPL V3"
+```
+
+🔴 **El módulo EDUCATIVO es el único de los cuatro sin texto de cesión.** Sus 19 bytes son un
+**IDENTIFICADOR, no una CESIÓN** —**P179**—, y esta vez el identificador está en el **archivo de
+licencia**, que es el canal que esta base trata como el más fuerte. ⚠️ **Y `pyproject.toml` y
+`package.json` del mismo repo NO declaran licencia: los 19 bytes son la ÚNICA traza de cesión del
+módulo.**
+
+🔴 **Peor: declara `GNU GPL V3` mientras su hermano `frappe/lms` es AGPL-3.0 y su base
+`frappe/erpnext` es GPL-3.0.** 🔵 **GPL-3.0 y AGPL-3.0 no tienen el mismo alcance sobre un
+despliegue SaaS, así que la diferencia no es cosmética — y no hay texto que respalde ninguna de
+las dos lecturas para el módulo educativo.** 🔵 **Regla que sale de esto, y es **P209**: se mide
+el MÓDULO, nunca el proveedor.**
+
+### ⚠️ Lo que este canal NO rindió en el pase, dicho explícitamente
+
+- 🔴 **`koolreport/school` y `School-Management-System/sms`: `UNREACHABLE`** — no se pudo resolver
+  el árbol por este canal, así que **no se les atribuye ausencia de licencia** (**P198**: la
+  ausencia sólo es medible sobre un repo alcanzable).
+- ⚠️ **La capa de SIS del pase 70 no se re-abrió**: Fedena sigue medible sólo en ESPEJO y eso no
+  cambió en este pase.
+- ⚠️ **El eje de plataformas se saturó por DÉCIMA vez** sobre OpenEduCat/Frappe. 🟢 **Este pase lo
+  usó como denominador en vez de declararlo y seguir**, que es lo único nuevo que se le pudo sacar.
+- 🔴 **`api.github.com` / `github.com` → `403` todo el pase.** Todas las cifras de licencia salen
+  de `raw.githubusercontent.com`.
+
+
 ## 2026-10-03 — pase 70: la capa de SIS/plataforma escolar entra medida por payload, y el resultado es que las dos piezas más citadas de la categoría son copyleft fuerte
 
 ### 🔴 Lo primero, porque cambia cómo se cotiza la categoría entera

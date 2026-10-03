@@ -11383,3 +11383,136 @@ brecha de gobernanza regional con ingeniería.**
 
 ⚠️ **Se declara como hueco abierto y se vuelve a medir cada pase: una región que no aparece es una
 región medida en cero, no una región sin buscar.**
+
+<!-- NOTA DE INTEGRIDAD DE NUMERACIÓN — pase 71 del 2026-10-03 -->
+> 🔴 **Defecto de numeración detectado y declarado, porque el compilador construye entidades
+> tipadas a partir de estos encabezados y dos encabezados con el mismo número son DOS ENTIDADES
+> CON EL MISMO id.**
+>
+> Medido sobre este archivo en el pase 71: **239 números distintos, 251 encabezados, y el número
+> más alto efectivamente usado es el 553.** 🔴 **El pase 70 reinició la numeración en 136, cuando
+> 136–147 ya existían desde los pases 39–40, y dejó 136, 137, 138 y 139 DUPLICADOS**
+> (líneas 3329/11310, 3350/11336, 3370/11355, 3386/11368).
+>
+> 🟢 **El pase 71 NO propaga el defecto:** sus ocho tendencias se numeran **554–561**, que es la
+> continuación real de la serie, en vez de agregar ocho duplicados más.
+> ⚠️ **Los cuatro duplicados del pase 70 se dejan donde están y NO se reescriben** —reescribir una
+> sección pasada rompe la regla append-only de esta base—, **pero quedan declarados acá para que se
+> corrijan en el archivo donde se compilan los ids, no a mano en la prosa.**
+
+## 554. La compuerta de escritura no es un sí/no: es una ESCALERA de cuatro peldaños, y los cuatro tienen ejemplar leído en código (agregado en el pase 71 del 2026-10-03)
+
+El pase 70 tipificó `GATE-IN-SIGNATURE` y dejó abierto qué había entre esa clase y la prosa.
+**Medidas cuatro piezas más con superficie de escritura, aparecen dos peldaños intermedios:**
+`GATE-IN-SIGNATURE` (la condición es parámetro y el default es cerrado) → `GATE-IN-HANDLER` de dos
+etapas (tabla de política con denegación por omisión + derecho sobre el recurso verificado contra
+el upstream + auditoría, llamadas antes de la mutación) → `GATE-IN-ENV-FLAG` (los no-GET se
+rechazan salvo una variable de entorno) → `GATE-IN-DOC` (una advertencia en prosa).
+
+🔵 **Por qué es una tendencia y no una taxonomía de adorno: con cuatro peldaños se puede cotizar
+el trabajo de subir uno.** Del 4 al 3 es un *guard* (días); del 3 al 2 es tabla de política más
+auditoría (semanas); del 2 al 1 es cambiar la firma de las tools, que **rompe compatibilidad** con
+todo cliente existente. 🔵 **Son tres presupuestos distintos, y antes se discutían como uno.**
+Ver **P207**.
+
+## 555. Las dos piezas mejor gobernadas del ecosistema cubren huecos OPUESTOS, así que el camino de escritura defendible es una COMPOSICIÓN y no una descarga (agregado en el pase 71 del 2026-10-03)
+
+🔴 **`nitsuah/bb-mcp` tiene la política más rica medida en esta base y la identidad más débil:**
+la política es una tabla `Readonly` que falla cerrada por construcción (`TOOL_ROLE_RULES[t] ?? []`),
+con FERPA y derecho de curso verificado contra el upstream vivo en **6 de 6** tools de escritura
+— pero **la identidad llega como ARGUMENTO de la tool** y su propio `auth.ts` dice del flag más
+sensible que *«the calling application must assert»* el `ferpa_authorized`. 🔴 **Un cliente que se
+declara `admin` pasa las tres etapas.**
+
+🟢 **`SwarupRock/attendai` tiene exactamente eso:** resuelve la identidad de la **sesión** y la
+verifica contra la propiedad del recurso (`if (cls.teacher_id !== session.id) return { error: … }`),
+con `confirm` default `false` y *dry-run* antes de toda escritura. 🔴 **Pero corre contra un portal
+MOCK, localhost-only, por declaración propia.**
+
+🔵 **La tendencia, que es de mercado y no técnica: el ecosistema open source educativo ya produce
+los CONTROLES, repartidos en piezas distintas, y no produce todavía una pieza que los tenga
+juntos.** 🔵 **Eso convierte el camino de escritura defendible en trabajo de integración —de
+estudio— en vez de una elección de componente.** Ver **P210**.
+
+## 556. El canal de payload es CASE-SENSITIVE, y eso deja CONDICIONADO todo veredicto de ausencia de cesión que esta base publicó (agregado en el pase 71 del 2026-10-03)
+
+🔴 **`raw.githubusercontent.com` distingue mayúsculas y todos los sondeos de licencia de esta base
+usaron nombres en MAYÚSCULA** (más `LICENCE`). Dos repos muy citados —`frappe/education` y
+`frappe/erpnext`— devolvieron `NO-CESSION` y **llevan `license.txt` en minúscula, HTTP 200**.
+
+⚠️ **La consecuencia es retroactiva y hay que decirla: todo `NO-CESSION` / `UNLICENSED` de esta
+base salió de un sondeo en mayúsculas, así que queda CONDICIONADO POR LA CAJA — no desmentido,
+pero tampoco cerrado.** 🟢 **El control corrido en el mismo pase evita generalizar de más:** el
+veredicto del pase 70 sobre `hesham0-0nasser/tutor-lms-mcp`, re-medido a 27 nombres, **sigue
+siendo `NO-CESSION`**. **La corrección lo reforzó.**
+
+🔵 **Y la tendencia de método que esto confirma por tercera vez en esta serie: en esta base los
+hallazgos más caros vienen de auditar el INSTRUMENTO, no de buscar más piezas.** Ver **P206**.
+
+## 557. La sección 13 del GPL-3.0 hace que cualquier `grep` de cuerpo lea GPL como AGPL, y eso es una trampa de licencias que afecta a toda la industria, no sólo a esta base (agregado en el pase 71 del 2026-10-03)
+
+🔴 **La sección 13 del GPL-3.0 se titula literalmente *«Use with the GNU Affero General Public
+License»*.** Un clasificador que busque `GNU AFFERO GENERAL PUBLIC LICENSE` en el cuerpo del texto
+**lee todo GPL-3.0 como AGPL-3.0**.
+
+🔴 **El instrumento de este pase cayó en eso y leyó `GibbonEdu/core` como AGPL-3.0, a un commit de
+publicar una «corrección» al pase 70 que tenía razón.** 🔵 **Es **P171** otra vez: clasificar por
+la DECLARACIÓN —el título— y nunca por el cuerpo.**
+
+⚠️ **Por qué se registra como tendencia y no sólo como defecto propio: GPL-3.0 y AGPL-3.0 NO tienen
+el mismo alcance sobre un despliegue SaaS**, así que la confusión no es cosmética — y cualquier
+escáner de terceros que use la misma heurística la comete. 🔵 **Al auditar un *bill of materials*
+heredado conviene verificar cómo se clasificó la familia antes de confiar en la columna.**
+
+## 558. En el stack de UN proveedor pueden convivir cuatro regímenes de licencia, y el módulo EDUCATIVO es el peor cedido (agregado en el pase 71 del 2026-10-03)
+
+Medido por payload: `frappe/frappe` (framework) **MIT**; `frappe/erpnext` (ERP) **GPL-3.0**;
+`frappe/lms` (LMS) **AGPL-3.0**; `frappe/education` (módulo educativo) **19 bytes** que dicen
+`License: GNU GPL V3` **y ningún texto de cesión** — con `pyproject.toml` y `package.json` del
+mismo repo **sin declarar licencia**, así que esos 19 bytes son la ÚNICA traza.
+
+🔴 **El módulo educativo es el único de los cuatro sin GRANT**, y encima declara una familia
+distinta de la de su hermano LMS. 🔵 **La regla que sale: se mide el MÓDULO, nunca el proveedor**
+(**P209**), y **un identificador sin texto no se le entrega a legales** aunque viva en `LICENSE`.
+
+## 559. Permisividad y especificidad educativa están ANTI-correlacionadas en la capa de ERP (agregado en el pase 71 del 2026-10-03)
+
+Medidas nueve piezas de la capa de ERP/administración con el archivo de licencia leído:
+🔴 **de las CINCO específicamente educativas, CERO son permisivas** (Frappe LMS AGPL-3.0, Frappe
+Education sin texto, ClassroomIO AGPL-3.0, Gibbon GPL-3.0, OpenEduCat LGPL). 🟢 **Y las DOS
+permisivas de la capa —Apache OFBiz (Apache-2.0) y Aureus ERP (MIT)— NO son educativas.**
+
+🔵 **Eso confirma el veredicto de copyleft del pase 70 con denominador más grande y además lo
+explica: la vertical educativa no «elige» copyleft; la pieza permisiva existe en la capa GENÉRICA
+y el módulo educativo es justamente donde aparece el copyleft.** 🔵 **Para cotizar: la escapatoria
+permisiva existe y se paga en ALCANCE —hay que construir el dominio escolar—, no en licencia.**
+
+## 560. El regulador de APAC ya pide por escrito el instrumento que esta base acaba de tipificar, y eso cierra el circuito entre el código y la norma (agregado en el pase 71 del 2026-10-03)
+
+Los tres relojes de APAC se reconfirman por este barrido —**Corea, Ley Marco en vigor desde el
+2026-01-22; Vietnam, Ley 134/2025/QH15 vigente desde el 2026-03-01; Singapur, marco de la IMDA
+para AI AGÉNTICA del 2026-01-22**— y el tercero es el que importa para esta serie.
+
+🔵 **Singapur no regula «AI» en abstracto: emitió un marco específico para AGENTES, orientado a
+*«safe adoption while maintaining trust, safety and accountability»*.** 🟢 **Es decir que el
+regulador de una región pide exactamente lo que los pases 70 y 71 estuvieron midiendo en el
+código: dónde vive la compuerta, quién autoriza la escritura y si queda traza.**
+
+🔵 **Consecuencia de posicionamiento: la escalera de **P207** deja de ser un instrumento interno de
+esta base y pasa a ser un argumento presentable** — permite responderle a un cliente de APAC, con
+código leído y no con una promesa, en qué peldaño está cada pieza de su pila.
+⚠️ **Y la cota: el marco de la IMDA es guía, no reglamento con sanción, y así hay que citarlo.**
+
+## 561. El canal de secundarias volvió a servir una fecha del EU AI Act que esta base ya había refutado, y la refutación se sostiene (agregado en el pase 71 del 2026-10-03)
+
+⚠️ **El barrido EMEA de este pase devolvió, otra vez, *«The EU AI Act entered into force on
+31 July 2026»*.** 🔴 **Esa afirmación es FALSA y el pase 59 ya la había descartado explícitamente:
+el AI Act entró en vigor el **2024-08-01**; lo del 2026-07-27 fue el *AI Omnibus*, y las
+obligaciones de Anexo III educativo siguen en **2027-12-02**.**
+
+🔵 **Se registra como tendencia porque el dato es que el error es PERSISTENTE en el canal, no que
+apareció una vez: un cliente de EMEA puede llegar a la reunión con esa fecha, y conviene llegar
+con la corrección y con la norma a mano.** 🟢 **El aporte EMEA nuevo y verificable del barrido es
+otro: el Código de Práctica sobre marcado y etiquetado de contenido generado por AI (junio de
+2026), que cae exactamente sobre el Artículo 50(2) para el que esta base ya tiene instrumento
+(`compose/code/aiact-50-2-marking/`).**

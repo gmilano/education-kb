@@ -12,6 +12,7 @@ updated: 2026-10-03
 > **Pase 69 del 2026-10-03:** 🔴 **La acción 1 CIERRA en su rama CARA, y lo primero que corrige es el denominador de la propia acción: la acción pedía «los 16 nombres» y los nombres de registro único son **13** —21 filas → 18 nombres, menos los 5 de doble registro del pase 68—. El «16» era un conteo de FILAS leído como conteo de NOMBRES.** 🔵 **Medidos los 13 con el canal que la acción exigía (pedir el repositorio declarado, no leerlo del manifiesto): **3 `IDENTITY-DECLARED` · 2 `IDENTITY-DECLARED-BUT-DEAD` · 3 `IDENTITY-PROVEN` · 5 `IDENTITY-UNKNOWN`**. 5 ≥ 3 → gana la rama cara: la columna *Identidad* es **CONDICIÓN** para publicar una fila de paquete y se escribe con el valor `desconocida`, nunca omitida** (**P192** cerrado). ⚠️ **5 de 13 NO es comparable con el «4 de 5» del pase 68: otro denominador (registro único vs. doble).** 🔴 **Y el hallazgo que acota un patrón de ayer: **el `sha256` del `LICENSE` NO prueba identidad cuando el texto no trae titular, y está DEMOSTRADO con una colisión de esta misma tanda** — `openedx-mcp` y `tutor-contrib-openedxmcp`, dos paquetes DISTINTOS, comparten `sha256:8d56b405468a` (34.524 B, AGPL-3.0 sin titular). 🔴 **Peor: quitarle el nombre del titular al `LICENSE` de `@yunmiao/studymate` (1.064 B, *Cattofu*) y al de `@schoolexl/mentor` (1.064 B, *CoreExL*) los vuelve **byte a byte** el de `opencode-sit` (1.056 B, `sha256:1126322e2cc8`), que dice *«Copyright (c) 2026»* **sin nombre** — o sea el caso ESTRELLA con el que **P193** se escribió ayer cae justo en la clase donde el hash prueba MENOS** (**P199**). 🟢 **El veredicto de ayer igual se sostiene, pero por otro instrumento: el `package.json` de `aemonge/opencode-sit` NOMBRA el paquete, y ése es un enlace de dos vías que el hash no es** (**P200**). 🟢 **Acción 3 EJECUTADA: el instrumento por archivo de **P186** existe y corrió sobre las 2 piezas de alcance declarado.** 🔴 **Y obliga una corrección que esta KB publica en CUATRO archivos: el titular de `INGInious` NO es `FSF → NOT-APPLICABLE`. El archivo `COPYRIGHTS` —622 B, que ningún instrumento de esta base había leído— dice *«Copyright (c) 2014-2026 Anthony Gégo, Guillaume Derval and Pierre Reinbold»*** (**P197** gana una capa). ⚠️ **Y el alcance de `INGInious` NO se puede cerrar: el propio proyecto declara que hay archivos de terceros con otras licencias y NO los enumera, así que «AGPL-3.0 entero» no es medible por ningún instrumento acotado** (**P201**). 🔴 **Acción 2 BLOQUEADA por egress en los dos canales (`standards.1edtech.org` y `www.imsglobal.org`: `403` por `curl`, `EGRESS_BLOCKED` por WebFetch), así que `1EdTech × documento` sigue **medido en 2 de 7** y se dice así cada vez, como el pase 68 exigió.** 🟢 **3 altas con licencia leída de primera mano, y una cierra un hueco de plataforma: **Brightspace/D2L** entra por fin a esta KB.**
 > **Pase 68 del 2026-10-03:** 🔴 **La acción 1 del pase 67 CIERRA en su rama CARA, y el defecto no es de dos filas: es de cómo esta KB transcribe un nombre de paquete.** Barridos los **5** nombres que viven en npm **y** PyPI —declarados antes de empezar: `canvas-lms-mcp`, `clawed`, `educhain`, `frappe-mcp-server`, `moodle-cli`—, **4 de 5 son dos ARTEFACTOS distintos** y sólo `moodle-cli` es un proyecto en dos canales. 🔵 **La hipótesis fijaba el corte en «más de 2» → se agrega la columna *Identidad*, NO la columna *Canal*** (**P192**). 🔴 **El caso que lo vuelve estructural: `canvas-lms-mcp` son DOS proyectos REALES, los dos en GitHub, los dos con el mismo nombre —`bruchris` (165 tools, TS, titular *Christian Bru*, 1.070 B) y `ahnopologetic` (minimal, titular *Canvas LMS MCP Server Contributors*, 1.091 B)—, separados por `sha256` distinto.** 🟢 **Y la identidad se puede PROBAR cuando el registro no la declara: `opencode-sit` no publica `repository`, y el `LICENSE` del repo `aemonge/opencode-sit` es byte a byte el del tarball (1.056 B, `sha256:1126322e…`), así que el hash que esta KB usa para SEPARAR forks también sirve para UNIR un paquete a su árbol** (**P193**). ⚠️ **Las cuatro búsquedas globales obligatorias volvieron a devolver el eje generalista agotado —openclaw, browser-use, AutoGen, CrewAI— y NINGUNA alta educativa salió de ellas, por segundo pase consecutivo.** 🔴 **Y el hallazgo que esta KB se hace a SÍ MISMA: una corrección del pase 52 fue REGRESADA en el pase 66 —`@eduware/oneroster` volvió a `MIT` porque un instrumento nuevo preguntó por el CAMPO del registro donde el viejo había leído el PAYLOAD—, así que una corrección sobrevive sólo si el instrumento que re-mide la conoce** (**P197**). Ver las tendencias **530**–**547**.
 > **Pase 67 del 2026-10-03:** 🔴 **La acción 2 del pase 66 CIERRA refutando una ausencia que esta KB publicaba en tres archivos: `1EdTech/openbadges-specification` SÍ cede —`ob_v3p0/license.md`, 12.324 B— y lo que cede NO es open source, es la SPECIFICATION DOCUMENT LICENSE de IMS Global, que *«no concede el derecho a crear modificaciones o derivados»*: una compuerta MÁS DURA que el ShareAlike de P178, sobre las 15 filas de estándares de esta base** (**P187**). 🔵 **Fue invisible porque el archivo no está en la raíz —vive en el subdirectorio de la VERSIÓN— y se llama `license.md` en minúscula; y sólo `ob_v3p0` lo tiene, así que en un repo de especificación la pregunta de licencia es POR VERSIÓN.** 🟢 **Con eso las «14 ausencias» son 13 y las 13 quedan medidas en tres capas.** 🔴 **La acción 3 se resuelve REFUTANDO su premisa: `educhain` y `frappe-mcp-server` no son dos canales con dos licencias, son dos ARTEFACTOS distintos —el `educhain` de npm no tiene repositorio ni descripción y no es el proyecto—, así que las dos filas de esta KB están BIEN y la columna *Canal* no se agrega hasta hacer la pregunta de identidad** (**P188**). 🟢 **5 altas con licencia leída de primera mano, la capa de AUTOGRADING entra entera (INGInious AGPL-3.0/EMEA, 2 MIT-Apache, 1 GPL) y APAC gana un índice CC0 de India.** 🔴 **La acción 1 está BLOQUEADA: el barrido de titular exige código de este repositorio y el entorno lo negó** (`[Code from External]`). Ver las tendencias **512**–**527**.
+> **Pase 71 del 2026-10-03:** 🟢 **La compuerta de escritura que el pase 70 tipificó como clase resulta una ESCALERA de CUATRO peldaños, y los cuatro tienen ejemplar leído en el CÓDIGO** (**P207**, tendencias **554**–**555**): `GATE-IN-SIGNATURE` (`attendai`, `confirm` con default `false` y *dry-run* antes de toda escritura) → `GATE-IN-HANDLER` de dos etapas (`bb-mcp`, tabla de política `Readonly` con **denegación por omisión por construcción** + FERPA + derecho de curso verificado contra el upstream vivo + auditoría en concesión Y denegación, en **6 de 6** tools de escritura) → `GATE-IN-ENV-FLAG` (`blackboard-mcp`, los no-GET se rechazan salvo que se exporte una variable) → `GATE-IN-DOC` (`edupage-mcp` del pase 70, *«use them with care»*). 🔴 **Y el hallazgo comercial es que los dos peldaños de arriba cubren huecos OPUESTOS: `bb-mcp` tiene la política más rica de la base y la identidad más débil —llega como ARGUMENTO de la tool, `args.caller_identity`, y su propio `auth.ts` dice que el flag FERPA *«the calling application must assert»*—, mientras `attendai` LIGA la identidad a la sesión y verifica propiedad del recurso (`cls.teacher_id !== session.id` → denegado) pero corre contra un portal MOCK.** 🔵 **Ninguna pieza sola da un camino de escritura defendible: la receta es la composición (P210).** 🟢 **BLACKBOARD —el cuarto LMS institucional grande— entra a la base con TRES implementaciones independientes medidas**, y la más capaz (`nitsuah/bb-mcp`, MIT, 40 tools, 235 commits) es la única que usa la **API REST oficial**; las otras dos atacan la **API interna de Ultra con cookie de sesión**, lo que hace de **P204** una CLASE y no un caso. 🔴 **Una candidata RECHAZADA por fork que el `sha256` NO pudo decidir —titular = nombre del proyecto— y que resolvió el sello de npm (**P208**, refina P199+P200).** 🔴 **Dos defectos del instrumento propio, declarados: el canal de payload es CASE-SENSITIVE (todo `NO-CESSION` de esta base queda CONDICIONADO POR LA CAJA; el control sobre el veredicto del pase 70 lo REFUERZA) y la familia se lee del TÍTULO porque la sección 13 del GPL-3.0 se titula *«Use with the GNU Affero General Public License»* y hacía leer todo GPL-3.0 como AGPL.** ⚠️ **APAC sin CÓDIGO por TERCER pase: entró Uzbekistán y se clasificó EMEA en vez de tapar el hueco.**
 > **Pase 65 del 2026-10-03:** 🔴 **La acción 1 del pase 64 CIERRA en su rama CARA y corrige una cifra publicada: «32 sin licencia» estaba inflada un 31 %.** Barridas las **29** filas no-`FWU-DE` por la pregunta del **PAYLOAD** en vez de la del archivo, **7 declaran cesión adentro** (5 en manifiesto, 2 en encabezado de fuente de Moodle); con las 3 de `FWU-DE` del pase 64, **10 de 32 no eran ausencias** y el denominador real es **22**. 🟢 **Y la relectura de las 23 del pase 51 que la acción pedía quedó hecha en el mismo barrido: están CONTENIDAS en estas 29 (`comm -23` da vacío) y 5 declaran en payload → aquella cifra estaba inflada un 22 %.** 🔵 **Pero las dos clases no valen lo mismo, y es el patrón nuevo del pase (**P179**): un `"license": "MIT"` de manifiesto es un IDENTIFICADOR —nombra la licencia y no trae titular, ni año, ni una línea de texto, que es **P168** llevado a cero bytes—, mientras el encabezado de Moodle trae la frase de otorgamiento completa con titular y año: eso sí es cesión.** 🔴 **Medido en tres canales sobre las 3 filas publicadas en npm: el identificador viaja (repo + registro), el TEXTO no viaja a ninguna parte —ningún tarball trae archivo de licencia— y DOS manifiestos PROMETEN el `"LICENSE"` que no existe ni en el repo ni en el artefacto; en `Timadey/proctor` la promesa es más vieja que el repo, porque el pase 41 ya había medido que no hay `LICENSE` en ningún commit de la historia.** 🟢 **La fila más forkeada de la KB se da vuelta a favor: los 39 forks de `DMontgomery40/mcp-canvas-lms` heredan una cesión DECLARADA, no la ausencia que la acción temía.** Ver `compose/code/p172-payload-license-sweep/` y las tendencias **479**–**492**.
 > **Pase 64 del 2026-10-03:** 🟢 **La acción 1 del pase 63 CIERRA, y cierra en su rama BENIGNA: barridas las **200** filas `org/repo` de este archivo con el archivo de licencia LEÍDO, el reparto no se movió —**160 licenciado · 32 sin licencia (ausencia MEDIDA) · 8 inalcanzable**, 82,5 % permisivo sobre lo licenciado contra 81,3 % que midió el pase 51 con un denominador 31 filas más chico—. **No apareció el bloque de archivos-afirmación que la hipótesis temía: 0 de 160 por debajo de 400 bytes.** 🔴 **Pero el barrido encontró UNA fila que aún afirma licencia sobre un repo que no existe: `radhepa/Teacher-MCP` dice «MIT ✅» y da **404 por dos canales independientes**.** 🔵 **Y el instrumento mejoró dos veces: `raw.githubusercontent.com` resuelve la ref **`HEAD`** a la rama por omisión —la dimensión «rama» desaparece—** (**P170**), **y un classificador que hace `grep` sobre el cuerpo etiqueta GPL-3.0 como AGPL-3.0 porque el §13 de GPL-3.0 se TITULA «Use with the GNU Affero General Public License»** (**P171**). 🟢 **Los 4 «textos anómalos» que el pase 51 dejó sin resolver quedan los CUATRO identificados, y uno mejora la cotización: `trilogy-group/oneroster-ts` es **0BSD**, más permisiva que MIT.** Ver las tendencias **466**–**478**.
 > **Pase 62 del 2026-10-03:** 🟢 **Este pase ejecutó la acción que el pase 60 difirió EXPLÍCITAMENTE al 62 —el barrido retroactivo de forks (**P150**, que esta base venía citando mal como «P151»)— y rindió el hallazgo más transferible de la serie: a la MISMA release (`v1.13.0`), un fork de `vishalsachdev/canvas-mcp` declara 139 *tools* contra las 103 de la madre, mientras el campo `description` de GitHub es IDÉNTICO palabra por palabra en toda la familia. **La descripción se hereda entera; la superficie no**, así que un barrido por búsqueda sub-cuenta y uno por repo sobre-cuenta — los dos mal, en direcciones opuestas** (**P160**). 🔴 **Y el signo tampoco es predecible: el pase 60 midió un fork atrasado y más laxo; éste mide uno adelantado y más grande, en la misma familia.** 🔴 **El control negativo de esta base (`Dymayo/moodler-mcp`) resultó ser un fork no registrado: la clase b4 se sostiene en las dos copias, pero el denominador contaba una copia como observación independiente, y la prosa de la fila («una sola variable, ninguna credencial») es falsa — son CINCO, dos de ellas compuertas de capacidad apagadas por defecto.** 🔴 **La puerta más forkeada de la KB (`DMontgomery40/mcp-canvas-lms`, 103 ★, 39 forks) promete una licencia que NO EXISTE: el README dice «see LICENSE file» y `LICENSE`, `LICENSE.md` y la rama `master` dan 404 — 39 forks heredan la ausencia de cesión** (**P161**). 🔴 **Y el `gap 255` del pase 61 se auto-refuta en España: declaraba «no hay artefacto de currículo» para un país que esta KB cubre desde el pase 3 en siete archivos.**
@@ -238,6 +239,130 @@ updated: 2026-10-03
 > fila** —`lineage-skill`, con un vocabulario cerrado de 9 valores por afirmación, **4 de los 9 «esto lo produjo el
 > modelo»**— y **ninguna de las dos sabe de la otra**. Ver la capa nueva al final de este archivo, las tendencias
 > **180**–**182** y el patrón **P99**.
+
+## 🪜 La compuerta de ESCRITURA deja de ser un sí/no: es una ESCALERA de cuatro peldaños y el peldaño se lee en el CÓDIGO (pase 71 del 2026-10-03)
+
+### 🟢 Las altas del pase, con licencia medida por PAYLOAD
+
+| Pieza | Repo | Licencia (**medida**: bytes + `sha256` + titular) | ★ | Región | Qué es, y en qué peldaño |
+|---|---|---|---|---|---|
+| 🟢 **bb-mcp** | [`nitsuah/bb-mcp`](https://github.com/nitsuah/bb-mcp) | **MIT**, **1.063 B**, `sha256:e024d09e682a`, `Copyright (c) 2026 nitsuah` → 🟢 **`HOLDER-MATCH`** | **2** ★ / 0 forks / 235 commits | **North America** | 🟢 **BLACKBOARD entra a la base.** **40 tools** sobre la **API REST OFICIAL**, repartidas por rol: alumno 9, docente 7, admin 7, padres 5, **escritura de nota 6**, webhooks 5, compartida 1. 🟢 **Peldaño 2 (`GATE-IN-HANDLER`, dos etapas)** — el único de la base con **derecho de curso verificado contra el upstream vivo**. TypeScript |
+| 🟢 **AttendAI** | [`SwarupRock/attendai`](https://github.com/SwarupRock/attendai) | **MIT**, **1.077 B**, `sha256:e5c3342e862f`, `Copyright (c) 2026 AttendAI contributors` → ⚠️ **titular = nombre del proyecto** (**P208**) | **1** ★ / 0 forks / 1 commit | **APAC** (India — ⚠️ inferida del dominio del dato: USN, portal de *college*; **no** de un antropónimo) | 🟢 **Peldaño 1 (`GATE-IN-SIGNATURE`) sobre una ESCRITURA**, que es la clase que el pase 70 no tenía sobre una mutación. 4 tools MCP sobre asistencia; `confirm` con **default `false`**. ⚠️ **Portal MOCK, localhost-only: entra por el PATRÓN, no por tracción** |
+| 🟢 **blackboard-mcp** | [`felipedias-ie/blackboard-mcp`](https://github.com/felipedias-ie/blackboard-mcp) | **MIT**, **1.083 B**, `sha256:fa4e32e5e622`, `Copyright (c) 2026 blackboard-mcp contributors` → ⚠️ **titular = nombre del proyecto** | **1** ★ / 1 fork / 15 commits | **EMEA** | Cursos, contenido, archivos, notas, vencimientos, anuncios, foros. 🔴 **API INTERNA de Ultra con cookie de sesión**, no la REST oficial. 🔴 **Peldaño 3 (`GATE-IN-ENV-FLAG`)** + **P204**. 🟢 **Canónico por el sello de npm**, TypeScript |
+| 🟢 **blackboard-mcp** | [`RD2100/blackboard-mcp`](https://github.com/RD2100/blackboard-mcp) | **MIT**, **1.058 B**, `sha256:8f0ce55219c2`, `Copyright (c) 2026 RD` | — | ⚠️ **sin ubicar** | Tercera implementación **independiente** de Blackboard: `sha256` distinto de las otras dos, **no es copia de ninguna**. ⚠️ **Superficie NO leída en este pase: se registra la cesión, no la función** |
+| 🟢 **HEMIS Student MCP** | [`sukhrobyangibaev/mcp_hemis_student`](https://github.com/sukhrobyangibaev/mcp_hemis_student) | **MIT**, **1.073 B**, `sha256:cabd91055b43`, `Copyright (c) 2025 Sukhrob Yangibaev` → 🟢 **`HOLDER-MATCH`** | 0 ★ / 0 forks / 9 commits | **EMEA** (**Uzbekistán** — ⚠️ decisión declarada, ver abajo) | 🟢 **UZBEKISTÁN entra a la base.** **25+ tools** sobre **HEMIS** (*Higher Education Management Information System*, `student.hemis.uz`): perfil, GPA, materias, notas, asistencia, horarios, exámenes, contratos y títulos, estadísticas institucionales. ⚠️ **Lectura en la práctica, pero NO declarada: el eje de escritura queda SIN MEDIR** |
+
+### 🪜 La escalera, que es el aporte conceptual del pase
+
+| # | Clase | Ejemplar | Lo que está PROBADO en código | Se salta con… |
+|---|---|---|---|---|
+| **1** | 🟢 `GATE-IN-SIGNATURE` | `attendai` · MwalimuLens (pase 70) | `confirm = false` por omisión y `if (!confirm) return { needs_confirmation: true, … }` **antes de toda escritura** | **nada de configuración**: hay que cambiar la llamada |
+| **2** | 🟢 `GATE-IN-HANDLER` (2 etapas) | `nitsuah/bb-mcp` | `checkAuthorization(authCtx)` → `await checkCourseEntitlement(authCtx, bbClient)` → **y después** el `post`/`delete`, en **6 de 6** tools de escritura | **nada de configuración** · ⚠️ **sí asertando otra identidad** |
+| **3** | 🔴 `GATE-IN-ENV-FLAG` | `felipedias-ie/blackboard-mcp` | los no-GET se rechazan salvo `BLACKBOARD_MCP_ALLOW_WRITES=1` | 🔴 **UNA variable de entorno** |
+| **4** | 🔴 `GATE-IN-DOC` | `edupage-mcp` (pase 70) | nada: *«Use them with care»* es una advertencia al operador | 🔴 **no hay compuerta** |
+
+🔵 **Por qué la escalera vale más que la clase binaria del pase 70: se puede COTIZAR el trabajo de
+subir un peldaño.** Del 4 al 3 es un *guard*; del 3 al 2 es una tabla de política más auditoría;
+del 2 al 1 es cambiar la firma de las tools —romper compatibilidad—. **Tres presupuestos.**
+
+### 🟢 Lo que hace fuerte al peldaño 2, leído del código y no del README
+
+🟢 **La política es una tabla declarativa con DENEGACIÓN POR OMISIÓN POR CONSTRUCCIÓN**, leída de
+`src/rbac.ts` (**2.247 B**, HTTP 200):
+
+```ts
+export const TOOL_ROLE_RULES: Readonly<Record<string, readonly Role[]>> = {
+  get_my_grades: ["student"],
+  get_at_risk_students: ["instructor", "admin"],
+  update_grade: ["instructor", "admin"],
+  delete_enrollment: ["admin"],
+  get_children_grades: ["parent"],
+  /* … 40 tools … */
+};
+export function getAllowedRolesForTool(toolName: string): readonly Role[] {
+  return TOOL_ROLE_RULES[toolName] ?? [];
+}
+```
+
+🔵 **El `?? []` es la propiedad que importa: una tool que no esté en la tabla no tiene NINGÚN rol
+permitido, así que se deniega. La tabla falla CERRADA, y agregar una tool sin política la deja
+inservible en vez de abierta.**
+
+🟢 **Y la compuerta está WIREADA, no sólo escrita** —que es la pregunta que el pase 70 dejó
+abierta—. Contados los sitios de llamada por módulo de tools: `student.ts` **9** llamadas a
+`checkAuthorization` para 9 tools, `instructor.ts` **8**/7, `admin.ts` **8**/7, `parent.ts`
+**6**/5, `shared.ts` **2**/1, y `grade-writeback.ts` **7** llamadas más **7** de
+`checkCourseEntitlement` para **6** tools de escritura. 🔴 **El derecho de curso se llama SÓLO en
+el módulo de escritura, que es el diseño correcto**, y siempre en este orden:
+
+```ts
+checkAuthorization(authCtx);
+await checkCourseEntitlement(authCtx, bbClient);
+
+const contentRes = await bbClient.post<BbContentItem>(contentUrl, { /* … */ });
+```
+
+### 🔴 La cota del peldaño 2, dicha antes de que alguien la cotice: la política se hace cumplir, la IDENTIDAD no se autentica
+
+🔴 **La identidad llega como ARGUMENTO de la tool** —`const identity = parseIdentity(args.caller_identity)`—
+y el encabezado de `src/auth.ts` (**11.364 B**) lo dice del flag más sensible: debe
+*«assert an explicit `ferpa_authorized: true` flag, which the calling application must assert»*.
+
+🔴 **Un cliente que se declara `role: "admin", ferpa_authorized: true` pasa las tres etapas.**
+🔵 **Lo que está probado es la POLÍTICA, no la identidad**, y por eso el peldaño 2 no domina al 1:
+`attendai` resuelve la identidad de la **sesión** y la verifica contra la propiedad del recurso —
+
+```js
+// Rule 2: the session's teacher must own this class.
+if (cls.teacher_id !== session.id) {
+  return { error: `Access denied: "${cls.name}" is taught by teacher #${cls.teacher_id}, ` +
+                  `not by the authenticated teacher "${session.username}".` };
+}
+```
+
+🟢 **Eso es ligadura de identidad: el agente no puede suplantar.** ⚠️ **Y audita el fallo igual que
+el éxito** (`audit(session.actor, 'mark_attendance_failed', …)`). 🔵 **Los dos peldaños de arriba
+son complementarios, no ordenables: la receta está en P210.**
+
+### ⚠️ La decisión de REGIÓN de la pieza de Uzbekistán, declarada y no escondida
+
+⚠️ **`mcp_hemis_student` es de Uzbekistán, y Asia Central no tiene bucket propio en el vocabulario
+cerrado de este campo** (North America · EMEA · APAC · LATAM · Global). 🔵 **Se clasificó
+`EMEA`.**
+
+🔴 **El motivo de NO ponerla en APAC es explícito: APAC lleva TRES pases sin aportar código, y
+usar una pieza centroasiática para cerrar ese hueco sería exactamente el sesgo que esta base
+declara evitar.** 🟢 **El hueco de CÓDIGO de APAC queda ABIERTO y declarado.** ⚠️ **El país va en
+la prosa, la región en el campo, como manda la regla de vocabulario cerrado.**
+
+### 🔴 Dos candidatas y tres piezas que NO entran, con el motivo medido
+
+| Pieza | Lo medido (matriz de **27** nombres, árbol alcanzable) | Veredicto |
+|---|---|---|
+| `bibo242/blackboard-mcp` | `LICENSE` **1.083 B**, `sha256:fa4e32e5e622` — 🔴 **byte a byte idéntico** a `felipedias-ie/blackboard-mcp`; mismo nombre de paquete, misma descripción, mismas 13 keywords. ⚠️ **El titular de AMBOS es `blackboard-mcp contributors`, así que el hash NO pudo decidir.** 🟢 **Lo resolvió npm: `blackboard-mcp` → `repository: felipedias-ie/…`, `maintainers: ["felipeie"]`, `latest: 0.1.2`** | 🔴 **FORK. No se agrega fila** (**P208**) |
+| `EdyVision/student-services-mcp` | 🟢 **árbol EXISTE** (`README.md` → 200) · 🔴 **404 en los 27 nombres de licencia** | 🔴 **`NO-CESSION`.** ⚠️ **Y es la que más duele: hace predicción de deserción y riesgo de abandono —clase ALTO RIESGO del Anexo III— y sin cesión no entra en entregable** |
+| `welcometomyworld-1/CampusFlow-AI` | 🟢 árbol existe · 🔴 404 en los 27 nombres | 🔴 **`NO-CESSION`** |
+| `pawalshriram06-ops/mcp-student-management-system` | 🟢 árbol existe · 🔴 404 en los 27 nombres | 🔴 **`NO-CESSION`** |
+| `AIwithDiego/attendance-mcp` | 🟢 **MIT**, **1.067 B**, `sha256:68fe5ee91e0b`, `Copyright (c) 2026 Diego Bauer` 🟢 `HOLDER-MATCH` | ⚠️ **Cesión limpia, pero NO entra a la tabla educativa: es asistencia de PERSONAL por sede, no de alumnos.** Se registra para no volver a medirla |
+
+### ⚠️ Canales que fallaron o no rindieron en este pase
+
+- 🔴 **`api.github.com` → `403` y `github.com` → `403` por `curl`, todo el pase.** Bytes, `sha256` y
+  titulares salen de **`raw.githubusercontent.com`** (**P172**); estrellas y commits, de WebFetch
+  sobre `github.com`. **Ninguna cifra de este pase sale de la API.**
+- 🔴 **El eje generalista se repitió por CUARTO pase** (`top open source AI agents education …`,
+  `github trending education AI …`): OpenClaw, OpenHands, opencode, CrewAI, AutoGPT, LiveKit, Rasa
+  y agregadores de SEO. **Cero altas educativas.** 🟢 **Las cinco altas salieron de consultas por
+  FUNCIÓN**, que es el tercer pase consecutivo en que ese canal es el único productivo.
+- ⚠️ **Dos defectos del instrumento PROPIO, corregidos y declarados** (ver
+  `compose/code/p206-erp-layer-license/README.md`): el canal es **CASE-SENSITIVE** —dos ausencias
+  falsas— y la familia se leía del **cuerpo** en vez del título, lo que hacía leer todo GPL-3.0
+  como AGPL por la sección 13. 🟢 **Los dos se atraparon antes de publicar, y el segundo evitó una
+  «corrección» FALSA al pase 70.**
+- ⚠️ **El titular de `nitsuah/bb-mcp` se publicó mal en la primera corrida** (`NO-HOLDER`) por un
+  defecto de la expresión regular propia; leído de nuevo es `Copyright (c) 2026 nitsuah` →
+  🟢 **`HOLDER-MATCH`**. **Corregido acá, no propagado.**
+
 
 ## 🌍 ÁFRICA entra a la capa de agente, y entra con la compuerta en la FIRMA — una clase de garantía que esta base no tenía tipificada (pase 70 del 2026-10-03)
 

@@ -9,6 +9,127 @@ updated: 2026-10-03
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 > No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
 
+## 2026-10-03 — pase 71: la compuerta de ESCRITURA deja de ser un sí/no y se vuelve una ESCALERA de CUATRO peldaños, los cuatro con ejemplar leído en código — y Blackboard, el cuarto LMS grande, entra en tres peldaños a la vez
+
+### 🟢 El hallazgo del pase: el pase 70 tipificó UNA clase de compuerta; medidas cuatro piezas más, resulta que hay una ESCALERA y el peldaño se lee en el código
+
+El pase 70 cerró con una clase nueva —`GATE-IN-SIGNATURE`— y una advertencia: era *«más fuerte
+que `GATE-IN-DOC`, pero NO equivale a que el sistema no pueda etiquetar solo»*. 🟢 **Este pase
+midió cuatro piezas más con superficie de ESCRITURA y el eje binario no aguanta: entre la firma y
+la prosa hay dos peldaños intermedios, y los cuatro tienen ahora ejemplar medido en el CÓDIGO.**
+
+| # | Clase | Ejemplar medido | Qué lo hace ese peldaño y no el de arriba | Se puede saltar con… |
+|---|---|---|---|---|
+| **1** | 🟢 **`GATE-IN-SIGNATURE`** | [`SwarupRock/attendai`](https://github.com/SwarupRock/attendai) — `confirm` es **parámetro** de `mark_attendance` y su **default es `false`** | `if (!confirm) return { needs_confirmation: true, … }` **antes de cualquier escritura**: el *dry-run* es el comportamiento por omisión, el commit exige una SEGUNDA llamada explícita | **nada en la configuración** — hay que cambiar la llamada |
+| **2** | 🟢 **`GATE-IN-HANDLER` (dos etapas)** | [`nitsuah/bb-mcp`](https://github.com/nitsuah/bb-mcp) — `checkAuthorization(authCtx)` → `await checkCourseEntitlement(authCtx, bbClient)` → **y después** el `bbClient.post/delete` | la política es una **tabla declarativa `Readonly`** con **denegación por omisión por construcción** (`TOOL_ROLE_RULES[tool] ?? []` → una tool no listada no tiene rol permitido), más FERPA, más derecho de curso verificado **contra el upstream vivo**, y auditoría en concesión Y en denegación | **nada en la configuración** — ⚠️ pero sí asertando otra identidad (ver la cota) |
+| **3** | 🔴 **`GATE-IN-ENV-FLAG`** | [`felipedias-ie/blackboard-mcp`](https://github.com/felipedias-ie/blackboard-mcp) — *«Read-only by default. Non-GET requests are refused unless `BLACKBOARD_MCP_ALLOW_WRITES=1` is set.»* | **es código real** y por omisión está cerrado: los no-GET se rechazan | 🔴 **UNA variable de entorno** — exactamente la objeción que el pase 70 le hizo a `johnswyou/autograder` |
+| **4** | 🔴 **`GATE-IN-DOC`** | `oliverhruby/edupage-mcp` (alta del pase 70) — *«Use them with care.»* | no hay control: hay una advertencia al operador | 🔴 **nada que saltar: no hay compuerta** |
+
+🔵 **Por qué la escalera vale más que la clase sola:** el pase 70 podía decir «esta pieza tiene
+compuerta y esta no». **Con cuatro peldaños se puede cotizar el TRABAJO**: subir del 4 al 3 es
+escribir un *guard*; del 3 al 2 es escribir una tabla de política y auditoría; del 2 al 1 es
+cambiar la firma de las tools, que es romper compatibilidad. **Son tres presupuestos distintos.**
+
+### 🔴 Y el hallazgo que ordena la conversación comercial: los dos peldaños de arriba cubren huecos OPUESTOS
+
+🔴 **Ninguna de las dos piezas de arriba, SOLA, da un camino de escritura defendible, y el motivo
+es simétrico.**
+
+**`bb-mcp` tiene la política más rica de la base y la identidad más débil.** La identidad llega
+como **ARGUMENTO de la tool** —`parseIdentity(args.caller_identity)`—, y su propio `auth.ts` lo
+dice en el encabezado: el flag `ferpa_authorized` *«the calling application must assert»*.
+🔴 **O sea: el servidor hace cumplir la política, pero NO autentica a quien dice ser. Un cliente
+que se declara `role: "admin", ferpa_authorized: true` pasa las tres etapas.** 🔵 **Lo que está
+probado es la política, no la identidad.**
+
+**`attendai` tiene exactamente lo que a `bb-mcp` le falta.** La identidad **no se acepta del
+argumento**: se resuelve de la sesión y se verifica contra la propiedad del recurso —
+
+```js
+// Rule 2: the session's teacher must own this class.
+if (cls.teacher_id !== session.id) {
+  return { error: `Access denied: "${cls.name}" is taught by teacher #${cls.teacher_id}, ` +
+                  `not by the authenticated teacher "${session.username}".` };
+}
+```
+
+🟢 **Eso es ligadura de identidad: el agente no puede suplantar.** Y audita el fallo igual que el
+éxito (`audit(session.actor, 'mark_attendance_failed', …)`).
+
+⚠️ **La cota de `attendai`, dicha antes de que alguien la cotice: 1 ★ / 1 commit, y corre contra
+un portal MOCK.** Su README es explícito: *«This project deliberately never touches a real
+institution's portal. No real credentials, URLs, or data exist in this repo»*, y la capa de
+automatización *«refuses any non-localhost target»*. 🔵 **Entra por el PATRÓN, no por tracción ni
+por despliegue** —la misma regla con la que el pase 70 admitió MwalimuLens a 0 ★—.
+
+🔵 **Conclusión que sí se puede llevar a una reunión:** el camino de escritura defendible sobre un
+LMS **no es un repo, es una composición** — la política y la auditoría de `bb-mcp` con la ligadura
+de identidad de `attendai` delante. **Está escrita como receta en `compose/patterns.md` (P210).**
+
+### 🟢 Blackboard entra a la base, y entra con TRES implementaciones independientes medidas
+
+🟢 **Blackboard/Anthology Learn no estaba en NINGUNA capa de agente de esta KB** —había Moodle,
+Canvas, Open edX, Brightspace/D2L (pase 69), EduPage y EduBase (pase 70), Skolverket—. **Era el
+cuarto LMS institucional grande y era un hueco de plataforma, no de función.**
+
+| Pieza | Repo | Licencia (medida: bytes + `sha256` + titular) | Región | Qué es, y qué peldaño |
+|---|---|---|---|---|
+| 🟢 **bb-mcp** | [`nitsuah/bb-mcp`](https://github.com/nitsuah/bb-mcp) | **MIT**, **1.063 B**, `sha256:e024d09e682a`, `Copyright (c) 2026 nitsuah` → 🟢 **`HOLDER-MATCH`** | **North America** | **40 tools** sobre la **API REST OFICIAL**, repartidas por rol (alumno 9, docente 7, admin 7, padres 5, escritura de nota 6, webhooks 5, compartida 1). 🟢 **Peldaño 2**, el único de la base con derecho de curso verificado contra el upstream. **2 ★ / 0 forks / 235 commits**, TypeScript |
+| 🟢 **blackboard-mcp** | [`felipedias-ie/blackboard-mcp`](https://github.com/felipedias-ie/blackboard-mcp) | **MIT**, **1.083 B**, `sha256:fa4e32e5e622`, `Copyright (c) 2026 blackboard-mcp contributors` → ⚠️ **titular = NOMBRE DEL PROYECTO** (ver **P208**) | **EMEA** | Cursos, contenido, archivos, notas, vencimientos, anuncios y foros. 🔴 **Ataca la API INTERNA de Ultra con una cookie de sesión**, no la REST oficial. 🔴 **Peldaño 3** + **P204**. **1 ★ / 1 fork / 15 commits**, TypeScript |
+| 🟢 **blackboard-mcp** | [`RD2100/blackboard-mcp`](https://github.com/RD2100/blackboard-mcp) | **MIT**, **1.058 B**, `sha256:8f0ce55219c2`, `Copyright (c) 2026 RD` | ⚠️ **sin ubicar** | Tercera implementación **independiente** —`sha256` distinto de las otras dos, así que no es copia de ninguna—. ⚠️ **Superficie no leída en este pase: se registra la cesión, no la función** |
+
+🔴 **Y la razón por la que `bb-mcp` vale más que sus 2 ★:** es la única de las tres que usa la API
+**oficial**. Las otras dos dependen de la superficie interna que la interfaz web llama, y
+`felipedias-ie` lo declara: *«This uses an internal API with no stability guarantee. Blackboard
+may change it without notice»*. 🔵 **Eso es **P204** del pase 70 por SEGUNDA vez y en otra
+plataforma, así que P204 deja de ser un caso y pasa a ser una CLASE.**
+
+### 🔴 Una candidata RECHAZADA, y el hash NO alcanzó para rechazarla: hizo falta el sello del registro
+
+| Lo que el canal ofreció | Lo medido | Veredicto |
+|---|---|---|
+| `bibo242/blackboard-mcp`, con **el mismo nombre de paquete, la misma descripción y las mismas 13 keywords** que `felipedias-ie/blackboard-mcp` | `LICENSE` **1.083 B**, `sha256:fa4e32e5e622` — 🔴 **byte a byte idéntico** — ⚠️ **pero el titular de AMBOS es `blackboard-mcp contributors`, que no nombra a ninguno de los dos dueños** | 🔴 **NO entra: es un FORK.** ⚠️ **Y el `sha256` no pudo decidirlo**, porque **P199** separa por TITULAR y acá el titular es el nombre del proyecto. **Lo resolvió el registro** (ver abajo) |
+
+🟢 **El instrumento que sí cerró la identidad fue el enlace de DOS VÍAS de P200**, y cerró así:
+**npm `blackboard-mcp` → `repository: git+https://github.com/felipedias-ie/blackboard-mcp.git`,
+`maintainers: ["felipeie"]`** —el handle concuerda con el slug—, **`latest: 0.1.2`, 3 versiones.**
+🔵 **Así que el canónico es `felipedias-ie` y `bibo242` es el fork. No se agrega fila por el fork,
+igual que el pase 70 hizo con `YeetingWaterbottle/canvas-mcp`.**
+
+⚠️ **Y un sub-caso que conviene anotar porque el enlace cierra sobre el NOMBRE y no sobre el
+árbol:** el `package.json` de `felipedias-ie` **declara `0.6.0`** —adelantado respecto del `0.1.2`
+publicado— mientras el de `bibo242` **declara exactamente `0.1.2`**, la última versión publicada.
+🔵 **O sea: el fork quedó clavado en la última versión publicada y el canónico siguió sin
+publicar. El sello de npm identifica al dueño del NOMBRE; no prueba que el artefacto publicado
+corresponda al árbol de hoy.**
+
+### ⚠️ Lo que se buscó en este pase y NO rindió, dicho explícitamente
+
+- 🔴 **`top open source AI agents education 2026 github MIT` y `github trending education AI 2026`
+  devolvieron el eje generalista por CUARTO pase consecutivo** —OpenClaw, OpenHands, opencode,
+  CrewAI, AutoGPT, LiveKit, Rasa— **más agregadores de SEO y listas de «aprender AI».**
+  🔴 **Ninguna alta educativa salió de esas dos consultas.** ⚠️ **Las estrellas que citan no se
+  copian: no se leyeron del repo.** 🟢 **Las cuatro altas de este pase salieron, otra vez, de
+  consultas por FUNCIÓN** (`Blackboard Learn MCP`, `student information system attendance grading`).
+- ⚠️ **`open source platform education ERP CRM MIT Apache` colapsó por DÉCIMA vez** sobre el SEO de
+  OpenEduCat y de Frappe/ERPNext. 🟢 **Esta vez se aprovechó el colapso en vez de declararlo: las
+  piezas que el SEO repite se MIDIERON** (ver `repos/foundations.md`), y de ahí salió el reparto de
+  licencias de la capa de ERP.
+- 🔴 **Tres piezas reales quedaron INUTILIZABLES por falta de cesión**, medidas con la matriz de
+  27 nombres y con el árbol alcanzable: **`EdyVision/student-services-mcp`**,
+  **`welcometomyworld-1/CampusFlow-AI`** y **`pawalshriram06-ops/mcp-student-management-system`**.
+  ⚠️ **La primera duele: hace predicción de deserción y riesgo de abandono —justo la clase que el
+  Anexo III del EU AI Act trata como alto riesgo— y sin cesión no entra en entregable.**
+- 🔴 **APAC no aportó CÓDIGO por TERCER pase consecutivo, y este pase resistió la tentación de
+  taparlo.** Entró una pieza de **Uzbekistán** (`mcp_hemis_student`) y **se clasificó EMEA, no
+  APAC** (Asia Central no tiene bucket propio en el vocabulario cerrado). 🔵 **Meterla en APAC
+  para cerrar el hueco habría sido exactamente el sesgo que esta base declara evitar: el hueco de
+  CÓDIGO de APAC sigue ABIERTO.**
+- ⚠️ **`api.github.com` y `github.com` dieron `403` por el proxy todo el pase.** Bytes, `sha256` y
+  titulares salen de **`raw.githubusercontent.com`**; estrellas y commits, de WebFetch sobre
+  `github.com`. **Ninguna cifra de este pase sale de la API.**
+
+
 ## 2026-10-03 — pase 70: ÁFRICA entra a la capa de agente, y entra con el instrumento de gobernanza más fuerte que esta base haya medido —la compuerta en la FIRMA— mientras la otra alta del pase es su contraejemplo exacto
 
 ### 🟢 El hallazgo del pase: la compuerta no está en la prosa ni en el cuerpo, está en la FIRMA
