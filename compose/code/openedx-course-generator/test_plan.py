@@ -27,27 +27,37 @@ from stub import CreateStub, HttpError
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ok = True
+checks = 0
+failures = []
 
 
 def check(label, got, want):
-    global ok
+    global ok, checks
+    checks += 1
     good = got == want
     ok = ok and good
+    if not good:
+        failures.append(label)
     print(f"{'PASS' if good else 'FAIL'}  {label}: got={got!r} want={want!r}")
 
 
 def raises(label, fn, exc, needle=""):
-    global ok
+    global ok, checks
+    checks += 1
     try:
         fn()
         ok = False
+        failures.append(label)
         print(f"FAIL  {label}: no exception raised")
     except exc as e:
         good = needle in str(e)
         ok = ok and good
+        if not good:
+            failures.append(label)
         print(f"{'PASS' if good else 'FAIL'}  {label}: {type(e).__name__}: {str(e)[:70]}")
     except Exception as e:  # noqa: BLE001
         ok = False
+        failures.append(label)
         print(f"FAIL  {label}: wrong exception {type(e).__name__}: {e}")
 
 
@@ -162,5 +172,6 @@ check("stub: three distinct statuses for one class of defect (a bad body)",
 check("stub: none of the malformed bodies was accepted", s.created, {})
 
 print()
+print(f"{checks - len(failures)}/{checks} checks passed")
 print("ALL CHECKS PASSED" if ok else "SOME CHECKS FAILED")
 sys.exit(0 if ok else 1)

@@ -25,7 +25,7 @@ de marcado** (C2PA, metadatos, marca de agua, o nada)?
 | `pack` | **1** | no genera, pero es **donde el contenido generado se vuelve el curso que el alumno abre** (`scorm-mcp-server`) |
 | `no` | **33** | mueve, registra, califica, sincroniza matrícula o supervisa exámenes — **no genera** |
 
-🔵 **32 de 66 filas (48 %) ponen contenido sintético delante de una persona.** Exactamente la mitad de esta tabla, que
+🔵 **33 de 66 filas (50 %) ponen contenido sintético delante de una persona.** Exactamente la mitad de esta tabla, que
 es la cifra de encuadre: **el Artículo 50(2) no es un problema de un rincón de esta KB, es un problema de la mitad.**
 
 ## 🔴 La medición del marcado: 0 de 33

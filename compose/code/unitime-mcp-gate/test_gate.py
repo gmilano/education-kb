@@ -30,12 +30,17 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 TSV = os.path.join(HERE, "connectors.tsv")
 VERBS = ("Get", "Post", "Put", "Delete")
 ok = True
+checks = 0
+failures = []
 
 
 def check(label, got, want):
-    global ok
+    global ok, checks
+    checks += 1
     good = got == want
     ok = ok and good
+    if not good:
+        failures.append(label)
     print(f"{'PASS' if good else 'FAIL'}  {label}: got={got!r} want={want!r}")
 
 
@@ -183,5 +188,6 @@ check("stdio: no private key leaked into tools/list",
       [k for t in out[0]["result"]["tools"] for k in t if k.startswith("_")], [])
 
 print()
+print(f"{checks - len(failures)}/{checks} checks passed")
 print("ALL CHECKS PASSED" if ok else "SOME CHECKS FAILED")
 sys.exit(0 if ok else 1)

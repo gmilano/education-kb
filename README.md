@@ -35,18 +35,20 @@ o la variable de entorno (regla de **P107**, pase 47):
 | `aiact-50-2-marking/` | mapea los 9 valores de `lineage-skill` a `synthetic` + etiqueta | `python3 test_marking.py` | **23/23** |
 | ídem, conformidad real | ídem + el fragmento de manifiesto | `SCORM_SCHEMAS=… python3 test_marking.py --with-xmllint` | **24/24** |
 | `aiact-50-2-spans/` | ¿alguna pieza expuesta emite límites de tramo? | `sh scan_spans.sh` | 🔴 **0 de 33** |
-| `aiact-50-2-exposure/` | ¿cuántas filas ponen contenido sintético delante de alguien? | `sh scan_marking.sh` | **32 de 66** |
-| `patterns-figure-audit/` | inventario de cifras de `patterns.md` y su instrumento | `python3 extract_figures.py --check` | **383** medidas |
+| `aiact-50-2-exposure/` | ¿cuántas filas ponen contenido sintético delante de alguien? (el **reparto**, leído de `rows.tsv`) | `python3 test_exposure.py` | **11/11** → 🔴 **33 de 66 (50 %)**, corregido en el pase 56 |
+| ídem, los **artefactos** de marcado en el árbol clonado de las 33 expuestas | lo que `scan_marking.sh` mide de verdad — **no** produce la cifra del reparto | `sh scan_marking.sh` | **0** artefactos de marcado / 15 de procedencia |
+| `patterns-figure-audit/` | inventario de cifras de `patterns.md` y su instrumento | `python3 extract_figures.py --check` | **420** medidas *(383 → 420 en el pase 56, con P136)* |
 | `sebserver-mcp-gate/` | puerta MCP de SEB Server: sólo lecturas, `-32601` al resto | `python3 test_gate.py` | **37/37** |
-| `unitime-mcp-gate/` | puerta MCP de UniTime, con `hard_deny()` como piso | `python3 test_gate.py` | **46** ✅ *(reproducida en el pase 55)* |
+| `unitime-mcp-gate/` | puerta MCP de UniTime, con `hard_deny()` como piso | `python3 test_gate.py` | **46/46** ✅ *(total propio desde el pase 56; reproduce el conteo a mano del 55)* |
 | `proctoring-reach-audit/` | alcance de red real de los 14 métodos del SPI | `python3 test_reach.py` | **19/19** |
 | ídem, con el árbol upstream | ídem + regeneración byte a byte de las tablas | `python3 test_reach.py /ruta/a/seb-server` | **20/20** |
-| `openedx-course-generator/` | genera un curso de Open edX sin levantar la plataforma | `python3 test_plan.py` | **33** ✅ *(reproducida en el pase 55)* |
+| `openedx-course-generator/` | genera un curso de Open edX sin levantar la plataforma | `python3 test_plan.py` | **33/33** ✅ *(total propio desde el pase 56; reproduce el conteo a mano del 55)* |
 | `seb-proctoring-validator/` | validador que rechaza ajustes de terceros incompletos | `sh run_test.sh` | **21/21** |
 | **`registry-license-remeasure/`** | **el ancla de licencia del tarball: encuentra con cualquier capitalización Y sigue rechazando `node_modules`** | `python3 test_anchor.py` | **24/24** |
 | `npm-surface-probe/` | licencia y superficie de un paquete MCP desde el *tarball* del registro | `python3 test_probe.py` | **19/19** |
-| `mcp-allowlist-gateway/` | puerta MCP con *allowlist*: lo no listado no llega al upstream | `python3 test_gateway.py` | **ALL PASSED** |
+| `mcp-allowlist-gateway/` | puerta MCP con *allowlist*: lo no listado no llega al upstream | `python3 test_gateway.py` | **34** *(la suite SIEMPRE publicó este total; la celda decía «ALL PASSED» y lo ocultaba — corregido en el pase 56)* |
 | `trend-backlink-audit/` | cada tendencia citada tiene su sección y su evidencia | `python3 test_trends.py` | **22/22** |
+| **`suite-total-control/`** | **la regla de P126: un contador por vocabulario acierta en `PASS` y FALLA en `ok`; el lector del total propio acierta en los dos** | `python3 test_control.py` | **10/10** |
 
 🟢 **Pase 55 del 2026-10-03: la columna «Hoy» se re-verificó COMPLETA y las once suites reprodujeron su
 cifra publicada.** Las once corren OFFLINE en este entorno.
@@ -66,6 +68,26 @@ esa suite emite líneas `ok` y no `PASS` — **el control no ejercitó el caso d
 fallar.** 🔵 **Un control positivo que pasa no habilita un instrumento si no ejercita ese caso. Y antes de
 escribir un instrumento a mano hay que correr el que este repositorio ya versiona.** Ver **P126** y la
 tendencia **313**.
+
+### 📏 La regla de P126, como regla permanente de este repositorio (escrita en el pase 56)
+
+**Vale para toda cifra de este repositorio, no sólo para las de `compose/code/`:**
+
+1. 🔴 **Antes de escribir un instrumento a mano se corre el que este repositorio ya versiona**
+   (`compose/code/patterns-figure-audit/extract_figures.py`). Si hace falta uno nuevo, se versiona.
+2. 🔴 **Un control positivo sólo habilita un instrumento si ejercita el caso donde ese instrumento
+   puede fallar.** Dos suites que comparten vocabulario **no son dos casos**: son el mismo caso dos
+   veces. El control del pase 55 pasó porque midió `PASS` contra `PASS`.
+3. 🟢 **Una suite que no publica su propio total invita al instrumento casero**, así que toda suite
+   nueva de `compose/code/` **imprime su total** en una de las formas que el lector ya reconoce
+   (`N/N checks passed`, `N controles pasados`, `N checks run`, `N de M`).
+4. 🔵 **La regla está ejecutable, no sólo escrita:** `compose/code/suite-total-control/`
+   (**10/10**) afirma el caso NEGATIVO —el contador por vocabulario acierta en `PASS` y **falla en
+   `ok`**— que es el que faltaba. Es el control concreto que el pase 55 pidió para la próxima vez.
+
+✅ **Las dos suites que faltaban ya cumplen el punto 3 (pase 56), y las dos reprodujeron el conteo a
+mano del pase 55 —46 y 33—, lo que confirma que el defecto nunca estuvo en el número sino en que
+obtenerlo exigía un instrumento casero.**
 
 🟢 **Corrección del pase 52 del 2026-10-02: la columna «Hoy» SÍ se re-verificó, y estaba estancada desde el pase 49
 por una conclusión demasiado amplia.** Los pases 50 y 51 escribieron que *«el entorno niega la ejecución de código de

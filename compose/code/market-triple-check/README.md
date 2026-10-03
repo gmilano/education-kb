@@ -34,6 +34,27 @@ pegar el número en una propuesta.**
 **Regla que deja:** ninguna terna de mercado entra a `intel/market.md` sin pasar por acá, y la que no
 cierra entra **con las tres cifras y la inconsistencia escrita**, nunca con dos de las tres.
 
+## Resultado del pase 56 — las ternas POR GEOGRAFÍA del mismo proveedor fallan las DOS, y en el mismo sentido
+
+| Terna | Declarado | CAGR implicado por los extremos | Veredicto |
+|---|---|---|---|
+| **North America**, AI en educación | $0,951 B (2024) → $2,3032 B (2029) @ 15,9 % | 🔴 **19,4 %** | 🔴 **inconsistente** *(reconfirma el pase 55)* |
+| **Asia Pacific**, AI en educación | $0,5916 B (2024) → $1,8481 B (2029) @ 20,9 % | 🔴 **25,6 %** | 🔴 **inconsistente** *(NUEVA)* |
+| **Global**, AI en educación | $7,52 B (2025) → $10,6 B (2026) @ 40,9 % | **41,0 %** | ✅ **consistente** |
+
+🔴 **El hallazgo es que el defecto es SISTEMÁTICO y no aleatorio: las dos ternas por geografía del
+mismo proveedor fallan, y fallan en la MISMA dirección —el CAGR declarado es menor que el que exigen
+sus propios extremos—, mientras la terna global de otra fuente cierra con 0,1 punto de holgura.**
+
+⚠️ **Consecuencia que cuesta plata: la cifra de tamaño de mercado de APAC tampoco es publicable**, y
+este pase iba a publicarla. Se declara el hueco en vez de pegar dos de tres números. 🔵 **Y la regla
+se endurece: una terna por geografía de este proveedor se asume sospechosa hasta que cierre, porque
+ya falló en las dos geografías medidas.**
+
+🟢 **Defecto de instrumento corregido en este pase:** el año base estaba **fijo en 2026** dentro del
+`print`, así que estas ternas —que son 2024-based— se habrían publicado con los años equivocados.
+Ahora es argumento (`y0`), y la salida del pase 54 no cambió.
+
 ---
 
 # `scope_enum.py` — y por qué el endpoint de búsqueda de npm NO es un enumerador de alcances

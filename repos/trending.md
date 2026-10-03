@@ -8,6 +8,119 @@ updated: 2026-10-03
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 
+## 2026-10-03 (pase 56) — **el dato crudo: 8 READMEs leídos por el eje de escritura docente con 8 clasificables, 13 suites corridas (2 nuevas, 2 corregidas), una cifra de esta base corregida en 8 archivos por propagación, y 3 ternas de mercado con 2 inconsistentes del MISMO proveedor**
+
+### Las 8 lecturas de la acción 1, crudas
+
+**Canal: `raw.githubusercontent.com` (200 en 8 de 8, rama `main`, `README.md`).** 🟢 **El canal que el
+pase 53 prescribió sigue siendo el único que rinde: `curl -sI` sobre `github.com` da 403 sin discriminar.**
+
+| Pieza | bytes | Clase | Evidencia decisiva |
+|---|---|---|---|
+| `toshieji/moodle-grading-mcp` | 8.326 | **T2** | `workflowstate=readyforreview` · *«This server never releases»* · pie de divulgación |
+| `peancor/moodle-mcp-server` | 4.344 | **T4** | 🔴 **cero coincidencias en los TRES ejes** (borrador, confirmación, divulgación) |
+| `MarcosNahuel/moodle-mcp` | 8.585 | **T4** | `calificar_manualmente` en *Gradebook*; el `preview`→`confirmar` está en el grupo de **contenido** |
+| `vishalsachdev/canvas-mcp` | 39.479 | **T4** | `bulk_grade_submissions`; el `confirmation_token` es de los **7 tools de borrado** |
+| `Dymayo/moodler-mcp` | 16.228 | **T3′** | *«Destructive writes ask for confirmation … `confirm=true`»* |
+| `bruchris/canvas-lms-mcp` | 43.022 | **T3′** | `destructiveHint: true`; *«`confirm` is reserved but not implemented»* |
+| `NiccoloSalvini/mcp-moodle-teacher` | 8.827 | **T3′** | *«every tool that changes Moodle says so and asks for confirmation»* |
+| `openedx-mcp` (PyPI JSON) | 11.487 | **T3′** | 0.1.5, AGPL-3.0, 5 releases; 4 rails con confirm token atado a huella del payload |
+
+**Barridos por eje, con sus denominadores:** borrador/liberación **1 de 8** · confirmación por llamada
+**4 de 8** · divulgación AI **1 de 8** · texto de integridad como mecanismo **1 de 8** (y **2 de 8** si
+se cuenta política en prosa, que no es mecanismo).
+
+### 🔴 El falso positivo de topónimos, con su cifra (P135)
+
+**Barrido de 9 patrones de país/institución sobre los 8 READMEs.** 🔴 **`MarcosNahuel` dio *«Italia»* y
+era subcadena de `Italicia`** (titular del copyright). ✅ **Con límite de palabra y verificación en
+Python: 2 ubicaciones verdaderas** — `vishalsachdev` *«University of Illinois Urbana»* (**North
+America**, NUEVA) y `toshieji` **800 caracteres CJK** (**APAC**, reconfirmada). ⚠️ **Y el contador de
+CJK escrito a mano con rangos en `grep` dio 252 caracteres CJK en `vishalsachdev` y 147 en `bruchris`:
+los dos son 0 medidos en Python por punto de código.** 🔵 **Dos instrumentos caseros, dos falsos
+positivos, el mismo pase — es exactamente la clase P126.**
+
+### Las 13 suites de `compose/code/`, corridas OFFLINE
+
+| Suite | Hoy | Nota |
+|---|---|---|
+| `aiact-50-2-pack` | **27/27** | reproduce |
+| `aiact-50-2-marking` | **23/23** | reproduce |
+| `sebserver-mcp-gate` | **37/37** | reproduce |
+| `unitime-mcp-gate` | **46/46** | 🟢 **total propio NUEVO (acción 2); reproduce el conteo a mano del 55** |
+| `openedx-course-generator` | **33/33** | 🟢 **total propio NUEVO (acción 2); reproduce el conteo a mano del 55** |
+| `proctoring-reach-audit` | **19/19** | reproduce |
+| `seb-proctoring-validator` | **21/21** | reproduce |
+| `registry-license-remeasure` | **24/24** | reproduce |
+| `npm-surface-probe` | **19/19** | reproduce |
+| `mcp-allowlist-gateway` | **34** | ⚠️ **la suite SIEMPRE publicó este total; la celda del README decía «ALL PASSED» y lo ocultaba — corregido** |
+| `trend-backlink-audit` | **22/22** | reproduce |
+| 🟢 **`suite-total-control`** | **10/10** | **NUEVA** — el control negativo que el pase 55 pidió |
+| 🟢 **`aiact-50-2-exposure/test_exposure.py`** | **11/11** | **NUEVA** — afirma el reparto contra el TSV versionado |
+
+🟢 **Modo `--inventory` de `suite-total-control`: 11 de 13 invocaciones publican un total propio.**
+⚠️ **Las 2 que no, declaradas en vez de supuestas: `aiact-50-2-spans` y `aiact-50-2-exposure`
+(`scan_*.sh`), que emiten contadores con etiqueta y no un total en una línea parseable.** 🔵 **La acción
+2 del pase 55 nombró dos suites; al cerrarlas quedan otras dos con el mismo problema en otra forma.**
+
+### 🔴 La cifra de esta base que estaba mal en 8 archivos, y el defecto es de PROPAGACIÓN
+
+**El pase 45 midió bien y escribió:** *«24 `gen` + 7 `gen-ind` + 1 `gen-cond` = 32 filas, más 1
+`pack`»* — o sea **33**. 🔴 **Lo que se rompió fue la propagación: las citas aguas abajo publicaron
+«32 de 66 (48 %)» como respuesta a «¿pone contenido sintético delante de una persona?» y perdieron la
+fila `pack` en cada cita**, aunque `rows.tsv` la clasifica como expuesta (*«es donde el contenido
+generado se vuelve el curso que el alumno abre»*).
+
+✅ **La cifra correcta es 33 de 66 = 50 %, y había tres testigos de que lo era:** los dos escáneres de la
+capa usan **33** como denominador (33 filas de datos en los dos `result.2026-10-02.tsv`) y la prosa de
+esta base ya decía *«exactamente la mitad»* al lado del número equivocado. 🟢 **Corregido con 14 reemplazos en 8 archivos
+y afirmado por `test_exposure.py` (11/11); la cita histórica de `repos/trending.md` se conserva intacta
+porque este archivo es APPEND-ONLY.**
+
+⚠️ **Y un defecto de atribución que salió con esto: la celda del README pareaba la cifra del reparto con
+`sh scan_marking.sh`, que NO la produce** — mide artefactos de marcado en el árbol clonado. **Una cifra
+citada con una invocación que no la genera no se puede reproducir, aunque sea correcta** (regla de
+**P107**). Corregido: el reparto va con `python3 test_exposure.py`.
+
+### 🔴 Las ternas de mercado: 2 de 3 inconsistentes, y las dos son del MISMO proveedor
+
+**Corridas por el instrumento versionado `market-triple-check/check.py`, como manda su propia regla.**
+
+| Terna | Declarado | CAGR que exigen sus extremos | Veredicto |
+|---|---|---|---|
+| **North America** | $0,951 B (2024) → $2,3032 B (2029) @ 15,9 % | 🔴 **19,4 %** | 🔴 **inconsistente** *(reconfirma el 55)* |
+| **Asia Pacific** | $0,5916 B (2024) → $1,8481 B (2029) @ 20,9 % | 🔴 **25,6 %** | 🔴 **inconsistente** *(NUEVA)* |
+| **Global** | $7,52 B (2025) → $10,6 B (2026) @ 40,9 % | **41,0 %** | ✅ **consistente** |
+
+🔴 **El defecto es sistemático, no aleatorio: las dos ternas por geografía del mismo proveedor fallan y
+fallan en la MISMA dirección** —el CAGR declarado es menor que el que exigen sus propios extremos—
+**mientras la global de otra fuente cierra con 0,1 punto.** ⚠️ **Consecuencia que cuesta plata: la cifra
+de APAC tampoco es publicable, y este pase iba a publicarla.** 🟢 **Defecto de instrumento corregido de
+paso: el año base estaba fijo en 2026 dentro del `print`, y estas ternas son 2024-based.**
+
+### Barrido obligatorio de repos — lo que devolvió
+
+🔴 **Cero repos nuevos, décima vez.** Las cifras de la capa genérica volvieron **idénticas dígito por
+dígito** a las del pase 55 (openclaw 385.407 ★, dify 151.639, browser-use 108.128, Mem0 62.735, AutoGen
+60.284, Flowise 55.226). ⚠️ **Dos pases del mismo día con cifras idénticas es dato de canal: saturación,
+no estabilidad del ecosistema.** 🔵 **LMS: Moodle vuelve con 400 M usuarios / 150.000 sitios —segunda
+fuente independiente del pase 55, que lo había dejado sin publicar por no cerrar su terna contra «más de
+300 M»; ahora 2 de 3 coinciden en 400 M/150.000 y la tercera sigue sin aparecer, así que sigue sin
+publicarse como cifra firme.** 🟢 **Dato nuevo de encuadre, publicable: el mercado de LMS llegó a
+$54,86 B y las organizaciones con LMS open source reportan 31 % menos de TCO.**
+
+### Canales y fronteras de este pase
+
+- ✅ `raw.githubusercontent.com` — **200 en 8 de 8**.
+- ✅ `pypi.org/pypi/<pkg>/json` — **200**, y es el canal que rinde donde la página HTML falla.
+- 🔴 **`pypi.org/project/openedx-mcp/` por WebFetch devuelve un error de carga de JS, no el proyecto.**
+  🔵 **El JSON del mismo host sí: preferir siempre el endpoint JSON.**
+- 🔴 **`github.com/<owner>/<repo>/security/advisories/GHSA-…` da 404 por este canal**, así que el
+  *security release* se cita por el README del propio proyecto, que es fuente de primera mano. ⚠️ **La
+  página del aviso queda como hueco declarado.**
+- ✅ **Ejecución OFFLINE de `compose/code/`: 13 de 13 corrieron.** 🔴 **Egreso de red para el código
+  versionado sigue sin permiso (gap 232 / P113).**
+
 ## 2026-10-03 (pase 55) — **el dato crudo: 11 suites corridas OFFLINE y 11 cifras reproducidas; y el falso positivo que este pase se encontró a sí mismo: un grep escrito a mano dio «2 vencidas» que no lo estaban**
 
 > ⚠️ **Cero repos nuevos, y por undécima vez consecutiva el canal genérico no devolvió infraestructura

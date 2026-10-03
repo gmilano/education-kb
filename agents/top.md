@@ -8,6 +8,7 @@ updated: 2026-10-03
 
 > Agentes y herramientas AI open source para educación. Foco: MIT / Apache 2.0 / BSD.
 > Verificado repo por repo vía WebFetch el 2026-09-30 (stars y licencia leídos de la página del repo).
+> **Pase 56 del 2026-10-03:** 🔴 **el pase cierra el agujero de P129 y la hipótesis que el pase 55 escribió de antemano cae en su rama mala: `toshieji` queda SOLO (1 de 8), así que «borrador + liberación humana» NO es la norma emergente de la categoría y el requisito lo tiene que escribir Globant.** 🔴 **Pero el hallazgo que manda degrada una recomendación de esta propia base: el pase 55 llamó al `confirmation_token` de `mcp-usc` «el mejor control de escritura medido en esta KB» y propuso extraerlo a una librería — y la pieza más adoptada de la capa (`vishalsachdev/canvas-mcp`, 272 ★) publicó un *security release* que dice que una confirmación NO PUEDE parar el ataque real de educación:** *«Instructions a student plants in course content can steer an instructor's assistant, and a confirmation token cannot stop that because the assistant can redeem its own token»*. **El que redime el token es el propio asistente: la confirmación no es una segunda autoridad, es la misma autoridad dos veces. Su remedio no es confirmar mejor, es que la herramienta no exista (`ALLOWED_WRITE_TOOLS`)** (**P132**). ⚠️ **El esquema de cuatro clases se rompe igual que el de tres del pase 54: la pluralidad de la capa (4 de 8) confirma pero no divulga, y eso no entra en T3 ni en T4 — se agrega T3′** (**P133**). 🔴 **La divulgación es 1 de 8 con el Artículo 50 vigente hace dos meses, y las curvas van al revés: la más adoptada (272 ★) es T4 y la única conforme tiene 0 ★** (**P134**). 🟢 **Dos regiones ubicadas con evidencia de primera mano (`vishalsachdev` → North America, NUEVA; `toshieji` → APAC, reconfirmada) y las otras 6 declaradas sin región.** ⚠️ **Y dos falsos positivos propios atrapados antes de publicar: un barrido de topónimos que ubicó una pieza en «Italia» por subcadena de `Italicia` (P135), y el resumidor que confundió «pide confirmación» con «escribe borrador» — son ejes independientes.** 🟢 **La tabla NO crece (80 filas, 0 altas): décimo pase sin altas, y el pase se gastó entero en las dos acciones del 55, las dos ejecutadas completas.** Ver **P132**–**P135** y el patrón nuevo **P136** y las tendencias **338**–**369**.
 > **Pase 55 del 2026-10-03:** 🔴 **el pase ejecuta las dos acciones del 54 y el hallazgo que manda invierte la intuición de cualquier filtro de componentes: los dos ejes de esta capa están ANTI-correlacionados.** Las **tres** piezas que someten trabajo calificado son las tres de PEOR procedencia de credencial (`@ink-waffle` b4+b3, `mcp-usc` (a)+b2, `moodler-mcp` b4) **y las tres traen salvaguarda de integridad explícita**; la pieza de credencial más limpia —`peancor/moodle-mcp-server`, 🟢 clase (a) con token de administración del **SITIO**— es la **ÚNICA de las seis sin ninguna**: ni confirmación, ni borrador, ni divulgación, ni texto de integridad. 🔴 **Así que un filtro que ordene por higiene de credencial selecciona A FAVOR de la escritura de notas sin guarda** (**P127**). 🟢 **La clase (4) NO existe en las seis, y el pase 54 pidió decirlo: el ecosistema se autolimita donde la licencia no lo obliga** (**P128**) — 🔴 **y el «candidato natural a (4)» que el 54 nombró, `DUTIC-mcp`, resultó el de disciplina MÁS estricta** (*«Todo simula por defecto»*, dos flags obligatorios, *«se niega a completar en vez de inventarse una valoración»*). ⚠️ **El esquema de cuatro clases tiene un agujero que este pase declara en vez de tapar: es estudiante-céntrico y no clasifica la escritura del lado DOCENTE, que es justo donde está la pieza sin guarda** (**P129**, acción 1 del pase 56). 🟢 **Acción 2 cerrada con denominador ENUMERADO: 14 filas del mapa por LMS → 9 clientes de tercero determinables (3 medidas acá por primera vez), 2 no determinables, 1 que no es cliente de un tercero y 2 fuera del eje; y la tasa enumerada (2 de 9, 22,2 %) es MENOR que la oportunista (7 de 18, 38,9 %).** ⚠️ **La tabla NO crece (80 filas, 0 altas): noveno pase sin altas desde el barrido obligatorio.** 🟢 **Una región recuperada con evidencia de primera mano —`toshieji` → APAC, 800 caracteres CJK— y el tamaño del problema medido: 16 de 21 filas sin región declarada.** ⚠️ **Y una corrección que el pase se hace a sí mismo antes de publicar: un `grep` escrito a mano dio dos cifras del README como «vencidas» y era falso positivo** (**P126**). Ver **P126**–**P130** y las tendencias **313**–**336**.
 > **Pase 54 del 2026-10-03:** 🔴 **el pase corrige el instrumento que el pase 53 acababa de construir, y lo corrige por donde el pase 53 dijo que había que probarlo: su propio CONTROL NEGATIVO falló.** El pase 53 escribió que `Dymayo/moodler-mcp` *«usa web service token, así que si saliera (b) el instrumento está mal»* — **salió (b)**, y el defecto tiene nombre: **P121 leía el TIPO de la credencial y hay que leer su PROCEDENCIA** (**P123**). 🟢 **La clase nueva, b4, es la que ningún filtro ve: la pieza abre un navegador real, el alumno completa su SSO con passkey y 2FA, y entonces la pieza le pide a Moodle un token de web service de app móvil y lo guarda en disco** — *«requests a mobile-app web service token from Moodle and stores it locally»*. **Artefacto de clase (a), emisor de clase (b).** 🔴 **Y el corolario invierte la intuición de cualquier filtro de componentes: `moodler-mcp` declara UNA variable (`MOODLE_URL`) y NINGUNA credencial, precisamente porque se la consigue sola — un audit de `.env` lo aprueba.** 🔵 **La hipótesis falsable del pase 53 cae en el medio que había declarado sin interpretar (2 de 7 este pase, 28,6 %; acumulado 7 de 18, 38,9 %: ni el ~45 % ni el <15 %), así que no decide — pero apareció un predictor mejor que un porcentaje: el canal correlaciona con el ALCANCE, no con la plataforma. Pieza con nombre de universidad: 3 de 3 en clase (b). Conector genérico de producto: 11 de 13 en (a), y las 2 excepciones son justamente las dos que mintan su propio token.** ⚠️ **La tabla NO crece (80 filas, 0 altas): el pase se gastó en las dos acciones que el 53 dejó escritas, y las dos se ejecutaron completas.** 🔴 **Nota de instrumento que es también una frontera nueva: el barrido que enumera estas filas quedó negado por `[Credential Exploration]` —una TERCERA frontera, distinta de las dos del pase 53— y lo niega tanto sobre el markdown de esta propia KB como sobre READMEs públicos ya descargados; lo que sí corre es WebFetch, que es el canal que la acción 1 del pase 53 prescribía.** ✅ **Control del pase 53 reproducido de primera mano: `curl -sI` da 403 para `github.com/moodle/moodle` Y para un repo inventado — no discrimina; `raw.githubusercontent.com` da 200/404.** Ver **P123**, **P124**, **P125** y las tendencias **295**–**312**.
 > **Pase 53 del 2026-10-02:** 🔴 **la tabla NO crece (80 filas, 0 altas) y el pase se gastó en mirar las filas que ya estaban por un eje que nunca se les había aplicado — que es donde estaba el valor.** La acción 1 del pase 52 dejó una hipótesis falsable sobre P118 —*si `canvas-student-mcp` es un caso aislado, el barrido devuelve UNA fila en la clase (b)*— y **devolvió cinco: 12 README leídos, 11 clientes de LMS/SIS clasificables, 5 en clase (b) / 6 en clase (a) / 1 no aplica, con una pieza de clase (b) en CADA una de las cuatro regiones.** 🔵 **Los doce veredictos están escritos EN LA CELDA DEL REPO de cada fila y no en una nota al margen, por la lección del pase 52: quien copia un nombre de una celda se lleva el nombre, no la advertencia.** 🔴 **Y los tres valores de P118 no alcanzaban: la clase (b) son TRES clases —b1 monta la sesión conservando passkey/2FA, b2 pega la cookie de DevTools, b3 guarda usuario y contraseña reutilizables en el `.env`— así que una fila que dijera sólo «(b)» escondería la diferencia entre `jbnu-lms-student` y `DUTIC-mcp`.** ⚠️ **El único candidato nuevo del barrido (`ASEpochs/ai-digital-teacher`, 12 ★, APAC) se RECHAZA por dos motivos independientes y medidos: sin licencia (6 nombres × 2 ramas = 12 sondas en 404 + sidebar sin licencia) y del lado del art. 5(1)(f) del AI Act que hay que defender — razonamiento de conducta sobre alumnos desde cámara.** 🔴 **Nota de instrumento: el verificador `curl -sI` que la consigna prescribe devuelve 403 para TODO `github.com` (4 de 4 URLs verdaderas incluidas), así que todo este pase se verificó por `raw.githubusercontent.com` y WebFetch.** Ver **P121**, **P122** y las tendencias **281**–**293**.
@@ -214,7 +215,7 @@ updated: 2026-10-03
 > si un operador lo nombra en `UNITIME_ALLOW`**. **46 aserciones en verde** (eran 23). Ver las tendencias
 > **175**–**177** y el patrón **P100**.
 > 🟢 **Y la medición del Artículo 50(2) sobre esta tabla contradice lo que el pase 44 predijo** (**gap 91, CERRADO**).
-> **32 de las 66 filas —el 48 %— ponen contenido sintético delante de un alumno o de un docente**, y de los **33** repos
+> **33 de las 66 filas —el 50 %, exactamente la mitad— ponen contenido sintético delante de un alumno o de un docente** (🔴 **cifra corregida en el pase 56: se publicaba «32 / 48 %» porque la composición escrita a mano `24 gen + 7 gen-ind + 1 gen-cond` omitía la fila `pack`; afirmado ahora por `compose/code/aiact-50-2-exposure/test_exposure.py`, 11/11**), y de los **33** repos
 > barridos (**24.202 archivos**, **26 manifiestos**) hay 🔴 **0 artefactos de marcado y 0 dependencias de marcado**.
 > Pero el pase 44 esperaba *«ninguna»* y **hay una**: 🟢 **`OpenTutor` emite `{"generated": true, "source_labels":
 > ["generated"]}` hacia el cliente**, con valor por omisión `True` y declarado en el esquema de la API — **la única
@@ -393,6 +394,112 @@ no entra en ninguna clase. 🔵 **El esquema del lado docente es la acción 1 de
 viven solo en memoria, caducan a los cinco minutos y son de un solo uso»* y *«Cambiar texto,
 destinatario, archivos, respuestas, intento o cualquier otra entrada invalida la confirmación»*. **Es el
 mejor control de escritura medido en esta KB y hoy está atado a una universidad.**
+
+🔴 **CORRECCIÓN DEL PASE 56 a este mismo párrafo, y es la que manda en el pase:** *«el mejor control de
+escritura medido en esta KB»* **sigue siendo cierto como ingeniería y queda DEGRADADO como recomendación**,
+porque el modelo de amenaza de educación lo atraviesa. **La pieza más adoptada de esta capa
+—`vishalsachdev/canvas-mcp`, 272 ★— publicó un *security release* que lo dice en primera persona:**
+*«Instructions a student plants in course content can steer an instructor's assistant, and a confirmation
+token cannot stop that because the assistant can redeem its own token»*. 🔵 **El atacante no es el
+docente distraído: es el alumno, escribiendo en el contenido del curso que el asistente del docente va a
+leer. Y el que redime el token es el propio asistente, así que la confirmación no es una segunda
+autoridad — es la misma autoridad dos veces.** ⚠️ **Su remedio no es confirmar mejor, es que la
+herramienta de escritura NO EXISTA:** `ALLOWED_WRITE_TOOLS` *«removes every write tool the operator has
+not allowed at startup, so it cannot be listed or called»*. Ver **P132**.
+
+## 🧑‍🏫 Capa de escritura del lado DOCENTE — el agujero de P129, cerrado, y la hipótesis del pase 55 cae en su rama mala (acción 1 del pase 56)
+
+**El esquema de credencial de los pases 53–55 es estudiante-céntrico: clasifica quién SOMETE trabajo.
+Esta capa clasifica quién escribe EL JUICIO sobre el alumno**, que es donde el pase 55 encontró la única
+pieza sin guarda. **Ocho piezas de esta base escriben nota, devolución o estado académico. Las ocho
+leídas por `raw.githubusercontent.com` en este pase, una por una, y clasificadas por el esquema que el
+pase 55 prescribió.**
+
+### 🔴 La hipótesis falsable del pase 55 cae, y cae en la rama que obliga a trabajar
+
+**El pase 55 escribió la prueba de antemano:** *«si ≥ 3 de las 8 escriben borrador no liberado,
+"borrador + liberación humana" ES la norma emergente de la categoría; si `toshieji` queda solo, la
+categoría no tiene norma y el requisito hay que escribirlo nosotros»*.
+
+🔴 **`toshieji` queda solo: 1 de 8.** **No hay norma emergente.** 🔵 **Consecuencia comercial directa, y
+es la más vendible del pase: el requisito «la nota la libera un humano» no se puede tercerizar al
+ecosistema porque el ecosistema no lo tiene. Lo escribe Globant, y eso lo vuelve un diferencial
+redactable en una propuesta en vez de un supuesto.**
+
+### Las ocho piezas, con la cita que decide cada celda
+
+| Pieza | Licencia | ★ | Región | Qué escribe | Clase | Guarda medida | Divulgación AI |
+|---|---|---|---|---|---|---|---|
+| [`toshieji/moodle-grading-mcp`](https://github.com/toshieji/moodle-grading-mcp) | **MIT** | 0 | 🟢 **APAC** (800 car. CJK) | `save_grade_draft` — *«the only writer»* | 🟢 **T2** | *«Grades are written as `workflowstate=readyforreview` (graded but UNRELEASED). This server never releases»* + *«No student notification»* + allowlist de cursos y `MOODLE_ALLOW_WRITE=1` | ✅ **sí** — *«An AI-assistance disclosure footer is appended if missing»* |
+| [`peancor/moodle-mcp-server`](https://github.com/peancor/moodle-mcp-server) | **MIT** | 43 | ⚠️ no declarada | `provide_assignment_feedback`, `provide_quiz_feedback` | 🔴 **T4** | 🔴 **ninguna** — cero menciones de confirmación, borrador o liberación | 🔴 **ninguna** |
+| [`MarcosNahuel/moodle-mcp`](https://github.com/MarcosNahuel/moodle-mcp) | **MIT** | 1 | ⚠️ no declarada | `calificar_manualmente` | 🔴 **T4** | 🔴 **ninguna sobre la nota** — el `publicar_preview`→`confirmar_preview` existe, pero es del grupo de **contenido**, no del *gradebook* | 🔴 **ninguna** |
+| [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | **MIT** | **272** | 🟢 **North America** (*University of Illinois Urbana*) | `bulk_grade_submissions`, `grade_submission_with_rubric` | 🔴 **T4** | ⚠️ `ALLOWED_WRITE_TOOLS` en **arranque** (control del operador), **sin confirmación por llamada en la nota**; el `confirmation_token` es de los **siete tools de borrado**, no del *grading* | 🔴 **ninguna** |
+| [`Dymayo/moodler-mcp`](https://github.com/Dymayo/moodler-mcp) | **MIT** | 0 | ⚠️ no declarada | `save_assignment_grade`, `grant_extension` | ⚠️ **T3′** | *«Tools behind a disabled flag are not registered at all»* + *«Destructive writes ask for confirmation … otherwise an explicit `confirm=true`»* | 🔴 **ninguna como mecanismo** — tiene política de integridad en prosa, que no es lo mismo |
+| [`bruchris/canvas-lms-mcp`](https://github.com/bruchris/canvas-lms-mcp) | **MIT** | 8 | ⚠️ no declarada | `grade_submission`, `comment_on_submission` | ⚠️ **T3′** | `destructiveHint: true` → prompt del host; 🟢 **y la honestidad más citable de la capa:** *«`confirm` is reserved but not implemented. Setting it is a startup error naming it as such, so it can never be mistaken for protection you do not have»* | 🔴 **ninguna** |
+| [`NiccoloSalvini/mcp-moodle-teacher`](https://github.com/NiccoloSalvini/mcp-moodle-teacher) | **MIT** | 0 | ⚠️ no declarada | `grade_submission` (*«mark and written feedback»*), `mark_attendance` | ⚠️ **T3′** | *«every tool that changes Moodle says so and asks for confirmation»* | 🔴 **ninguna** |
+| [`openedx-mcp`](https://pypi.org/project/openedx-mcp/) (oficial) | 🔴 **AGPL-3.0** | — (PyPI 0.1.5) | Global | certificados (generar/regenerar/**invalidar**), `students/reset-attempts` | ⚠️ **T3′** | 🟢 **la más fuerte de las ocho: dry-run + confirm token atado a HUELLA DEL PAYLOAD, rate limit por (key, tool), re-chequeo de autoridad vivo y auditoría append-only previa a la escritura** | 🔴 **ninguna** |
+
+### 🔴 El reparto, y el esquema de cuatro clases se rompe igual que el de tres del pase 54
+
+| Clase | Definición del pase 55 | Cuántas |
+|---|---|---|
+| **T1** | no escribe juicio | **0 de 8** |
+| **T2** | escribe borrador que un humano libera | 🟢 **1** (`toshieji`) |
+| **T3** | escribe en firme **con** divulgación de asistencia AI | 🔴 **0 de 8** |
+| **T4** | escribe en firme, **sin** divulgación y **sin** confirmación | 🔴 **3** (`peancor`, `MarcosNahuel`, `vishalsachdev`) |
+| ⚠️ **T3′** | **la clase que el esquema no nombra:** en firme, **con** confirmación, **sin** divulgación | ⚠️ **4** — *la pluralidad* |
+
+⚠️ **El esquema de cuatro clases del pase 55 tiene su propio agujero, y es simétrico al de P129 que vino
+a tapar: T3 exige divulgación y T4 exige ausencia de confirmación, así que la combinación más común de
+la capa —confirmar sí, divulgar no— no entra en ninguna de las cuatro.** 🔵 **Se agrega **T3′** y se
+dice de dónde salió, en vez de forzar cuatro casilleros sobre ocho piezas** (**P133**). 🟢 **Tercer pase
+consecutivo en que un esquema de clasificación de esta base resulta insuficiente al primer contacto con
+los datos (3→5 en el 54, 4→5 acá): el patrón ya es predecible y conviene escribir los esquemas con una
+clase abierta desde el principio.**
+
+### 🔴 La divulgación es 1 de 8, y la obligación está VIGENTE hace dos meses
+
+🔴 **Una sola de las ocho emite divulgación de asistencia AI, y es la de 0 ★.** ⚠️ **El Artículo 50 de
+transparencia rige desde el 2026-08-02 —hace dos meses— y el deber es del PROVEEDOR**, que es
+exactamente el rol de Globant cuando construye y entrega. 🔴 **La pieza más adoptada de la capa (272 ★)
+es T4, y la única conforme tiene cero adopción: la curva de adopción y la curva de cumplimiento de esta
+capa apuntan en direcciones opuestas** (**P134**).
+
+### 🔵 Los dos ejes vuelven a estar ANTI-correlacionados, y ahora se entiende el mecanismo
+
+**El pase 55 encontró la anti-correlación entre higiene de credencial y salvaguarda. Acá reaparece entre
+confirmación y divulgación: las 4 piezas con confirmación tienen 0 divulgaciones, y la única con
+divulgación no necesita confirmación.** 🟢 **Y el mecanismo no es casualidad: `toshieji` no confirma
+porque NUNCA LIBERA — el borrador hace innecesaria la confirmación, mientras las otras siete confirman
+porque el efecto es inmediato e irreversible.** 🔵 **Dicho como regla de diseño, que es lo que se lleva
+un *engagement*: confirmar es el control que se elige cuando la escritura es definitiva; si la escritura
+puede ser un borrador, el borrador domina a la confirmación — y P132 explica por qué, porque la
+confirmación no sobrevive al modelo de amenaza y el borrador sí.**
+
+### ⚠️ La región, medida en vez de inferida — y un falso positivo propio
+
+🟢 **2 de 8 quedan ubicadas con evidencia de primera mano:** `toshieji` → **APAC** (800 caracteres CJK,
+reconfirmando el pase 55) y `vishalsachdev` → **North America** (*«University of Illinois Urbana»* en su
+propio README; **ubicación NUEVA**). ⚠️ **Las otras 6 no declaran región y se dice así**, en vez de
+inferirla del nombre del autor.
+
+🔴 **Y el falso positivo que este pase se encontró a sí mismo antes de publicarlo:** un barrido de países
+dio *«Italia»* en `MarcosNahuel/moodle-mcp` y **era subcadena de `Italicia`, el titular del copyright**
+— una organización, no un país. **Un barrido de topónimos sin límite de palabra ubica piezas en países
+donde nadie trabaja** (**P135**). 🔵 **Es el mismo defecto de clase que P126: instrumento casero, control
+que no ejercita el caso de falla.**
+
+### 🟢 La pieza que hay que dejar de recomendar, y la que hay que empezar a recomendar
+
+🔴 **`peancor/moodle-mcp-server` es la combinación peor de la capa y esta base la recomienda en
+`compose/patterns.md`:** 🟢 clase (a) de credencial —**token de administración del SITIO**, el privilegio
+más alto medido— con **T4**, la guarda más baja. **Máximo privilegio, mínima guarda, y 43 ★ que le dan
+apariencia de opción por defecto.**
+
+🟢 **`toshieji/moodle-grading-mcp` es la única de las ocho entregable tal cual en un *engagement* con
+escritura de notas**, y su desventaja es de tracción, no de ingeniería: **0 ★, MIT, y es la única que
+llega conforme al Artículo 50.** 🔵 **Recomendación concreta: se adopta su patrón —`readyforreview` +
+nunca liberar + pie de divulgación— aun cuando el conector sea otro.**
 
 ### 🟢 Denominador ENUMERADO de la capa de conectores por LMS (acción 2 del pase 54, pase 55)
 
@@ -744,7 +851,7 @@ más valor comercial, porque **el plazo está dentro del trimestre y esta base n
 | `pack` | **1** | no genera, pero es **donde el contenido generado se vuelve el curso que el alumno abre** (**scorm-mcp-server**) |
 | `no` | **33** | mueve, registra, califica, sincroniza matrícula o supervisa exámenes — **no genera** |
 
-🔵 **32 de 66 filas (48 %) ponen contenido sintético delante de una persona. Exactamente la mitad de esta tabla:** el
+🔵 **33 de 66 filas (50 %) ponen contenido sintético delante de una persona. Exactamente la mitad de esta tabla:** el
 Artículo 50(2) no es un problema de un rincón de esta KB, **es un problema de la mitad.**
 
 ### 🔴 La medición del marcado: 0 de 33, y el método importa

@@ -7,7 +7,7 @@ updated: 2026-10-02
 # El componente transversal de marcado del Artículo 50(2) — gap 95, cerrado con código
 
 **Pase 46 del 2026-10-02, acción 1.** El pase 45 midió el hueco
-([`../aiact-50-2-exposure/`](../aiact-50-2-exposure/README.md)): **32 de las 66 filas** de
+([`../aiact-50-2-exposure/`](../aiact-50-2-exposure/README.md)): **33 de las 66 filas** de
 `agents/top.md` ponen contenido sintético delante de un alumno o un docente, y **0 de 33
 repos** pueden marcarlo. También encontró que **las tres piezas ya estaban en esta base y
 sólo había que unirlas**. Esta carpeta es esa unión, y **convierte «esta KB no cumple el

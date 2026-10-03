@@ -9,6 +9,109 @@ updated: 2026-10-03
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 > No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
 
+## 2026-10-03 (pase 56) — **la hipótesis del pase 55 cae en su rama mala (`toshieji` solo, 1 de 8: no hay norma de borrador) y el *security release* de la pieza más adoptada degrada el mejor control que esta base había medido: una confirmación no para al alumno que planta instrucciones, porque el asistente redime su propio token**
+
+### 🔴 El hallazgo principal — acción 1 ejecutada, y la hipótesis cae donde obliga a trabajar
+
+**Ocho piezas leídas una por una por `raw.githubusercontent.com` y clasificadas por el esquema T1–T4
+que el pase 55 prescribió.** El pase 55 escribió la prueba de antemano: *«si ≥ 3 de las 8 escriben
+borrador no liberado, "borrador + liberación humana" ES la norma emergente; si `toshieji` queda solo, la
+categoría no tiene norma y el requisito hay que escribirlo nosotros»*.
+
+🔴 **`toshieji` queda solo: 1 de 8. No hay norma emergente.** 🔵 **El requisito «la nota la libera un
+humano» no se puede tercerizar al ecosistema, así que se vuelve un diferencial redactable en una
+propuesta en vez de un supuesto.**
+
+| Clase | Cuántas | Quiénes |
+|---|---|---|
+| **T1** no escribe juicio | **0** | — |
+| **T2** borrador que libera un humano | 🟢 **1** | `toshieji/moodle-grading-mcp` |
+| **T3** en firme **con** divulgación | 🔴 **0** | — |
+| **T4** en firme, sin divulgación, sin confirmación | 🔴 **3** | `peancor`, `MarcosNahuel`, `vishalsachdev` |
+| ⚠️ **T3′** en firme, **con** confirmación, sin divulgación | ⚠️ **4** | `Dymayo`, `bruchris`, `NiccoloSalvini`, `openedx-mcp` |
+
+### 🔴 El dato que degrada una recomendación de esta propia base (P132)
+
+**El pase 55 llamó al `confirmation_token` de `mcp-usc` *«el mejor control de escritura medido en esta
+KB»* y su acción 3 proponía extraerlo a una librería.** `vishalsachdev/canvas-mcp` —**272 ★, la más
+adoptada de la capa**— publicó un *security release* que dice, en primera persona:
+
+> *«Instructions a student plants in course content can steer an instructor's assistant, and a
+> confirmation token cannot stop that because the assistant can redeem its own token.»*
+
+🔵 **El atacante no es el docente distraído: es el alumno, escribiendo en el contenido del curso que el
+asistente del docente va a leer.** 🔴 **Y el que redime el token es el propio asistente, así que la
+confirmación no es una segunda autoridad — es la misma autoridad dos veces.** ⚠️ **Su remedio no es
+confirmar mejor: es que la herramienta de escritura no exista** — `ALLOWED_WRITE_TOOLS` *«removes every
+write tool the operator has not allowed at startup, so it cannot be listed or called»*.
+
+🟢 **Lo que sobrevive al modelo de amenaza, y es lo que hay que poner en una propuesta: (a) que el tool
+no exista, y (b) el borrador con liberación humana. La confirmación por llamada queda como mitigación
+de operador distraído, no de alumno adversario.**
+
+### ⚠️ El esquema de cuatro clases se rompe igual que el de tres del pase 54 (P133)
+
+**T3 exige divulgación y T4 exige ausencia de confirmación, así que la combinación más común de la capa
+—confirmar sí, divulgar no— no entra en ninguna de las cuatro: 4 de 8, la pluralidad.** Se agrega
+**T3′**. 🟢 **Tercer pase consecutivo en que un esquema de esta base resulta insuficiente al primer
+contacto con los datos (3→5 en el 54, 4→5 acá): conviene escribir los esquemas con una clase abierta.**
+
+### 🔴 La divulgación es 1 de 8 con la obligación vigente hace dos meses (P134)
+
+**Una sola de las ocho emite pie de divulgación de asistencia AI, y es la de 0 ★.** El Artículo 50 rige
+desde el **2026-08-02** y el deber es del **proveedor**, que es el rol de Globant cuando construye y
+entrega. 🔴 **Las curvas van al revés: la más adoptada (272 ★) es T4; la única conforme tiene 0 ★.**
+
+### 🔵 Los dos ejes, ANTI-correlacionados otra vez — y ahora con mecanismo
+
+**Las 4 piezas con confirmación tienen 0 divulgaciones; la única con divulgación no necesita
+confirmación.** 🟢 **No es casualidad: `toshieji` no confirma porque NUNCA LIBERA.** 🔵 **Regla de
+diseño: confirmar es el control que se elige cuando la escritura es definitiva; si puede ser borrador,
+el borrador domina — y P132 dice por qué, porque la confirmación no sobrevive al modelo de amenaza.**
+
+### 🟢 La cita más honesta de la capa, y conviene copiarla
+
+`bruchris/canvas-lms-mcp`: *«`confirm` is reserved but not implemented. Setting it is a startup error
+naming it as such, so it can never be mistaken for protection you do not have.»* 🔵 **Una pieza que
+falla al arranque para que nadie crea que tiene una guarda que no tiene. Es el patrón contrario al de
+`peancor`, que simplemente no la menciona.**
+
+### Una región ubicada, una reconfirmada, y seis declaradas sin región
+
+🟢 **`vishalsachdev` → North America** (*«University of Illinois Urbana»* en su propio README,
+**ubicación NUEVA**); 🟢 **`toshieji` → APAC** (800 caracteres CJK, reconfirma el pase 55). ⚠️ **Las
+otras 6 no declaran región y se dice así.**
+
+### ⚠️ Dos falsos positivos propios, atrapados antes de publicar
+
+1. 🔴 **Un barrido de topónimos ubicó `MarcosNahuel/moodle-mcp` en «Italia», y era subcadena de
+   `Italicia`, el titular del copyright** — una organización, no un país (**P135**). Mismo defecto de
+   clase que P126: instrumento casero sin control del caso de falla.
+2. ⚠️ **El resumidor de lectura devolvió «DRAFT (requires user confirmation)» para
+   `NiccoloSalvini/mcp-moodle-teacher`, que escribe en firme.** **Confirmar y escribir borrador son
+   ejes independientes y colapsarlos invierte la clasificación.** Se verificó contra el texto primario.
+
+### 🔵 Un renombre detectado de paso, y hay que registrarlo
+
+**`NiccoloSalvini/mcp-moodle-teacher` y `NiccoloSalvini/mcp-moodle-staff` devuelven READMEs
+BYTE-IDÉNTICOS** (md5 `ce871be04620530f4db3b1b082d2a1d3`, 8.827 bytes los dos). ⚠️ **Esta base lo cita
+por el primer nombre; el README se titula `mcp-moodle-staff`. Es el mismo repositorio por dos nombres,
+así que una cita por nombre viejo sigue resolviendo hoy y puede dejar de hacerlo.**
+
+### Barrido obligatorio — lo que devolvió, con su denominador
+
+**Año calculado: 2026.** Cuatro búsquedas globales + cuatro regionales.
+
+🔴 **Décima vez consecutiva que la capa genérica vuelve con las MISMAS cifras**, dígito por dígito con
+las del pase 55: openclaw **385.407 ★**, dify **151.639**, browser-use **108.128**, Mem0 **62.735**,
+AutoGen **60.284**, Flowise **55.226**. ⚠️ **Que no se muevan ni un dígito en dos pases del mismo día es
+dato de canal, no de ecosistema: el barrido está saturado.** 🔵 **«Hermes Agent» (MIT, 180.000+ ★ desde
+feb-2026) reaparece y se vuelve a rechazar por el mismo motivo del pase 55: agente general, no
+educativo.**
+
+⚠️ **Cero agentes educativos nuevos en el barrido, por décima vez. La capa de agentes de educación de
+esta base no crece por búsqueda genérica, y eso ya es una conclusión sobre el método, no una falta.**
+
 ## 2026-10-03 (pase 55) — **los dos ejes de esta capa están ANTI-correlacionados: las tres piezas que someten trabajo calificado son las de PEOR credencial y las tres traen salvaguarda; la de credencial más limpia es la única sin ninguna**
 
 > ⚠️ **Pase de clasificación, no de altas: la tabla sigue en 80 filas y es el noveno pase consecutivo

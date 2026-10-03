@@ -8,6 +8,7 @@ updated: 2026-10-03
 
 > Recetas concretas: repos nombrados, licencias verificadas, wiring explícito y estimación.
 > Todos los repos citados fueron verificados vía WebFetch el 2026-09-30; los del pase 11, el 2026-10-01 (ver `agents/top.md`).
+> **Pase 56 del 2026-10-03:** 🔴 **el patrón nuevo es **P136** y corrige a **P131**, que este archivo acababa de agregar: la mitad de CONFIRMACIÓN de P131 queda degradada por evidencia de primera mano del proyecto más adoptado de la capa.** `vishalsachdev/canvas-mcp` (MIT, 272 ★) publicó que *«a confirmation token cannot stop [a student-planted instruction] because the assistant can redeem its own token»* — **el atacante del lado docente es el alumno escribiendo en el contenido del curso, y el que redime el token es el propio asistente, así que la confirmación no es una segunda autoridad sino la misma dos veces.** 🟢 **P136 reordena las compuertas: (1) arranque, que el tool no exista (`ALLOWED_WRITE_TOOLS`); (2) estado del dato, borrador no liberado (`workflowstate=readyforreview`); (3) confirmación por llamada, que pasa a tercera y sólo protege del operador distraído.** 🔴 **Y la recomendación que sale de este archivo: `peancor/moodle-mcp-server` es clase **T4** —nota y devolución en firme, sin confirmación, sin borrador, sin divulgación— con token de administración del SITIO. Máximo privilegio, mínima guarda.** 🟢 **La que entra en su lugar: `toshieji/moodle-grading-mcp` (MIT, APAC), la única de las 8 piezas de escritura docente conforme al Artículo 50, envuelta en la puerta de *allowlist* que este repositorio ya versiona (`compose/code/mcp-allowlist-gateway/`, 34 aserciones).** ⚠️ **Dato de encuadre corregido en este pase: el conjunto expuesto al Artículo 50(2) es **33 de 66 (50 %)**, no 32/48 % — el defecto era de propagación y los dos escáneres de la capa ya usaban 33.** Ver **P132**–**P135**, el patrón **P136** y las tendencias **338**–**369**.
 > **Pase 55 del 2026-10-03:** 🟢 **el pase deja un patrón nuevo y sale de una medición, no de una idea: P131, la puerta de escritura académica con confirmación de dos llamadas**, construida sobre el único control de escritura de esta KB que está medido y citado —el `confirmation_token` de `PabloPC05/mcp-usc`, *«los tokens viven solo en memoria, caducan a los cinco minutos y son de un solo uso»*— más el patrón de borrador no liberado de `toshieji/moodle-grading-mcp` (`workflowstate=readyforreview`, *«This server never releases»*, pie de divulgación de asistencia AI). 🔴 **Y el patrón corrige una recomendación de este propio archivo: donde esta base propone `peancor/moodle-mcp-server` para «nota y devolución dentro del LMS», hay que leer que `peancor` escribe la nota autoritativa con token de administración del SITIO y SIN confirmación, borrador ni divulgación** — es la combinación de máximo privilegio con mínima guarda (**P127**, **P129**). 🟢 **Las cifras de suites citadas se remidieron y las once reproducen.** ⚠️ **Y el pase se corrige a sí mismo: un `grep` escrito a mano dio «dos vencidas» (49 y 34) y era falso positivo — el instrumento versionado de esta KB da 46 y 33** (**P126**). Ver tendencias **313**–**321**.
 > **Pase 54 del 2026-10-03:** **+3 patrones, y los tres CORRIGEN instrumentos que los dos pases anteriores acababan de declarar obligatorios.** **P123** corrige P121 por donde P121 pidió que se lo probara: su control negativo declarado FALLÓ — `Dymayo/moodler-mcp` salió clase (b) — y el defecto es que **P121 leía el TIPO de la credencial en vez de su PROCEDENCIA.** 🔴 **La clase nueva (b4) es la que ningún filtro ve: la pieza abre un navegador real, el alumno completa su SSO con passkey y 2FA, y la pieza MINTA un token de web service oficial y lo guarda en disco — artefacto de clase (a), emisor de clase (b).** 🔵 **Y el corolario invierte la intuición del filtro: `moodler-mcp` declara CERO variables de credencial (sólo `MOODLE_URL`) precisamente porque se la consigue sola, así que un audit de `.env` lo aprueba y ordena la capa al revés.** **P124** corrige P122 **en el artículo y en los hechos**: 15 términos de afecto medidos sobre los artefactos publicados de las tres piezas permisivas dan **3 coincidencias crudas y 3 falsos positivos verificados** (comentarios de Tailwind × 2 y una encuesta con emoticones) → 🟢 **cero inferencia de emoción, así que el art. 5(1)(f) NO parte esta capa.** 🔴 **La línea que sí la parte es evento contra CONDUCTA, que es alto riesgo y NO prohibido** — y `mereos`, que P122 clasificaba 🟢 permitido, envía `cheating`, `it_looks_suspicious` y una *«re-calculation of the suspiciousness»* por imagen. 🔴 **Dos trampas medidas que ningún README menciona: en `mereos` apagar el ajuste NO detiene la derivación** (*«Each characteristic is derived for every image, regardless of the settings is enabled or not»*) **y la taxonomía de AI se BAJA del servidor del proveedor** (`GET /sessions/ai_event/`), así que el clasificador no está en el paquete MIT. 🟢 **Y la conclusión más vendible del pase: `seb-server` (MPL-2.0) es la única pieza de la capa que se despliega en la UE sin análisis de art. 5(1)(f), porque sus siete indicadores son ping, contadores de log, batería y wifi — no observa al alumno, y todo su riesgo es IMPORTADO del servicio de sala.** **P125** deja dos controles de dos líneas: la **terna de mercado tiene que cerrar sola** (atrapó una inconsistencia de MEA con una sola fuente, en la misma frase donde la de Europa cierra perfecto) y **la taxonomía de un SDK vive en su archivo de localización, no en su README** (4 READMEs → cero; un `translation.json` → 108 cadenas), ⚠️ **con su límite medido: sobre un bundle los falsos positivos son altos — el `attention` de `exam-guard` era el tokenizador de Markdown de micromark.**
 > **Pase 53 del 2026-10-02:** **+2 patrones, y el primero convierte en puerta de entrada el eje que el pase 52 abrió como advertencia.** **P121** sube P118 a **paso obligatorio del filtro de componentes** porque la hipótesis del pase 52 se falsificó: **5 de 11 clientes de LMS/SIS de esta base eluden el control de acceso institucional, uno por cada región.** 🔵 **Y es barato: el mismo control produce dos respuestas opuestas y las dos están en el README, así que cuesta UNA lectura por pieza** (`vishalsachdev/canvas-mcp` manda al formulario de IT; `xmike04/canvas-student-mcp` manda a DevTools). 🔴 **Los tres valores de P118 se reemplazan por cinco, porque la clase (b) son tres clases y la peor guarda usuario y contraseña reutilizables del alumno en variables de entorno** (`DUTIC-mcp`). **P122** parte la capa de *proctoring* y analítica de aula por una línea que esta base no tenía: el **art. 5(1)(f)** del AI Act **prohíbe** inferir emociones en instituciones educativas desde biométricos **desde el 2025-02-02**, así que *«presencia y foco»* es Anexo III con plazo 2027-12-02 y *«estado interno»* es práctica prohibida — ⚠️ **una decisión de arquitectura que decide si la entrega EMEA es vendible en absoluto.** ⚠️ **Y la nota de alcance de P113 EMPEORA, no mejora: el pase 52 midió que la suite offline del probe corría y redujo el pedido a «salida de red»; este pase niega también la suite offline, así que hay que pedir la ejecución entera otra vez.**
@@ -36,7 +37,7 @@ updated: 2026-10-03
 > porque 0 de 33 filas expuestas emiten un límite dentro del texto que generan**. Las cifras vencidas de L345 y L608
 > quedaron corregidas en su lugar.
 > **Pase 45 del 2026-10-02:** **+3 patrones, y los tres salen de ejecutar las tres acciones del pase 44.** **P99** — *el
-> componente transversal de marcado del Artículo 50(2)*: 🟢 **el hueco está medido (32 de 66 filas, el 48 %) y el
+> componente transversal de marcado del Artículo 50(2)*: 🟢 **el hueco está medido (33 de 66 filas, el 50 %) y el
 > componente no hay que inventarlo, hay que conectarlo** — `OpenTutor` (**MIT**) aporta **el campo y el transporte**
 > (`{"generated": true}` servido al cliente), `lineage-skill` (**Apache-2.0**) aporta **la etiqueta y la granularidad
 > por afirmación** (9 valores, **4 sintéticos**) y `MarkLLM`/SynthID-Text (**Apache-2.0**, **P33**) aportan **la firma**;
@@ -1054,7 +1055,7 @@ documentado por el upstream**, y el límite de la promesa **está medido** en ve
 
 ## P99 — El componente transversal de marcado del Artículo 50(2): **dos filas de esta base son mitades complementarias y ninguna sabe de la otra** (agregado en el pase 45 del 2026-10-02)
 
-**Qué resuelve.** El hueco que el pase 45 midió y que alcanza a **32 de las 66 filas de `agents/top.md` — el 48 %**:
+**Qué resuelve.** El hueco que el pase 45 midió y que alcanza a **33 de las 66 filas de `agents/top.md` — el 50 %** (🔴 **corregido en el pase 56**):
 ninguna puede marcar su salida como artificialmente generada, y la obligación **ya está vigente** (ver tendencias
 **180**–**183** y `compose/code/aiact-50-2-exposure/README.md`). 🔵 **El patrón no es «construir un marcador»: es
 conectar tres piezas que ya existen, permisivas, dentro de esta misma base.**
@@ -2357,7 +2358,7 @@ material propio del docente con la calificación**. Y es justo el circuito donde
 | **`JuneYaooo/lineage-skill`** | **Apache-2.0** ✅ (448 ★) | **Destilación con procedencia.** Convierte el material en *Agent Skills* con **trazabilidad a la fuente**: diagnósticos, flujos, **rúbricas**, plantillas y **modos de falla** |
 | **`course-code-framework/coursecode`** | **MIT** ✅ | **Salida empaquetada.** **15 tools**; `coursecode_build` con `format` = `cmi5` \| `scorm2004` \| `scorm1.2` \| `lti`; `coursecode_lint` y `coursecode_screenshot` para verificar antes de publicar |
 | **`bruchris/canvas-lms-mcp`** | **MIT** ✅ | **Aula y nota.** **165 tools**: *assignments*, *submissions*, **rubrics**, *gradebook history*, califica y comenta |
-| `peancor/moodle-mcp-server` | **MIT** ✅ | Alternativa del lado Moodle: **escribe nota y devolución** |
+| 🔴 `peancor/moodle-mcp-server` | **MIT** ✅ | ⚠️ **NO USAR para nota y devolución desde el pase 56: clase T4** (en firme, sin confirmación, sin borrador, sin divulgación) **con token de administración del SITIO.** 🟢 **Reemplazo: `toshieji/moodle-grading-mcp`** — ver **P136** |
 | `lrsql` | Apache-2.0 | *Statements* xAPI de cada paso → evidencia de que el circuito ocurrió |
 
 ### El wiring, y el orden importa
@@ -2475,7 +2476,7 @@ del navegador del propio usuario.**
 2. **Fase 0.5 — evidencia.** `lrsql` registra qué se consultó y con qué frecuencia. 🔵 **Eso es el argumento del paso
    siguiente: no «creemos que sirve», sino «se usó N veces en dos semanas».**
 3. **Fase 1 — institucionalización.** Con la evidencia en la mano se pide lo que al principio no se podía pedir: token,
-   Web Services, y **el conector que escribe** (`peancor/moodle-mcp-server` para nota y devolución, o
+   Web Services, y **el conector que escribe** (🔴 **ya NO `peancor/moodle-mcp-server`, que el pase 56 clasificó T4 — usar `toshieji/moodle-grading-mcp`, ver P136**, o
    `bruchris/canvas-lms-mcp` con sus 165 tools del lado Canvas).
 4. **Fase 2 — el resto de la KB.** Recién acá entran **P1**, **P10**, **P15** y **P73**, que son los que cierran circuito.
 
@@ -4745,7 +4746,7 @@ tramo se cotizaba como desarrollo. **El pase 27 encontró la pieza que lo cierra
 
 | Pieza | Licencia | Rol |
 |---|---|---|
-| [`peancor/moodle-mcp-server`](https://github.com/peancor/moodle-mcp-server) | **MIT** ✅ | **El que escribe.** `get_student_submissions` → `provide_assignment_feedback` / `provide_quiz_feedback` |
+| [`peancor/moodle-mcp-server`](https://github.com/peancor/moodle-mcp-server) | **MIT** ✅ | 🔴 **El que escribe — y desde el pase 56 NO se propone: clase T4, ver P136.** `get_student_submissions` → `provide_assignment_feedback` / `provide_quiz_feedback` |
 | [`MarcosNahuel/moodle-mcp`](https://github.com/MarcosNahuel/moodle-mcp) | **MIT** ✅ | **El que cubre el resto**: 40 tools (gradebook, grupos, calendario) **+ `ws_raw`** para lo que falte |
 | **Moodle** | GPL-3.0+ | El LMS, **sin modificar** — todo entra por Web Services con token |
 | `MathTutorBench` / `pedagogy-benchmark` | MIT | **El *eval* pedagógico**, para medir la calidad de la devolución (gap 1, P10) |
@@ -6531,7 +6532,86 @@ tools se contaron en el árbol.
 (ciclo 2026-27) genera volumen de acreditación que ningún proceso manual absorbe, y el credencial firmado es
 **portable entre instituciones** desde el día uno.
 
+## P136 — La compuerta de escritura académica, REORDENADA: el arranque y el borrador mandan, la confirmación pasa a tercera (corrige la mitad de confirmación de **P131**, agregado en el pase 56 del 2026-10-03)
+
+> 🔴 **Este patrón no reemplaza a P131: le cambia el ORDEN y degrada uno de sus tres componentes, con
+> evidencia de primera mano del proyecto más adoptado de la capa.** P131 pone la confirmación de dos
+> llamadas primero. **El pase 56 midió que la confirmación no sobrevive al modelo de amenaza propio de
+> educación**, así que el patrón entregable cambia de forma.
+
+**Sale de un *security release*, no de una idea.** `vishalsachdev/canvas-mcp` (**MIT**, **272 ★**, la
+pieza más adoptada de esta capa, *University of Illinois Urbana*) publicó, en su propio README:
+
+> *«Instructions a student plants in course content can steer an instructor's assistant, and a
+> confirmation token cannot stop that because the assistant can redeem its own token.»*
+
+🔵 **Por qué esto rompe la confirmación y no es un detalle: el atacante del lado docente es el ALUMNO,
+escribiendo en el contenido del curso que el asistente del docente va a leer. Y el que redime el token
+es el propio asistente, así que la confirmación no es una segunda autoridad — es la misma autoridad dos
+veces.** 🔴 **Un `confirmation_token` de un solo uso, atado al payload y con vencimiento —el de
+`PabloPC05/mcp-usc`, que esta base llamó «el mejor control de escritura medido»— sigue siendo buena
+ingeniería contra el operador distraído y NO protege contra este ataque.**
+
+### Los tres niveles de compuerta, en el orden en que hay que exigirlos
+
+| # | Nivel | Qué es | Qué ataque para | Pieza que lo implementa, medida |
+|---|---|---|---|---|
+| **1** | 🟢 **Arranque: el tool NO EXISTE** | *allowlist* por herramienta, evaluada al levantar el servidor | 🟢 **el alumno adversario: lo que no se puede listar no se puede invocar** | `vishalsachdev/canvas-mcp` — `ALLOWED_WRITE_TOOLS` *«removes every write tool the operator has not allowed at startup, so it cannot be listed or called»* |
+| **2** | 🟢 **Estado del dato: borrador no liberado** | la nota se escribe pero no es visible ni definitiva | 🟢 **el alumno adversario y el error del modelo: un humano libera** | `toshieji/moodle-grading-mcp` — `workflowstate=readyforreview`, *«This server never releases»*, *«No student notification»* |
+| **3** | ⚠️ **Diálogo: confirmación por llamada** | *preview* → token → *commit* | ⚠️ **sólo el operador distraído** | `PabloPC05/mcp-usc` (token de un uso, 5 min) y `openedx-mcp` (token atado a **huella del payload**) |
+
+🔴 **Y el cuarto componente, que no es compuerta sino obligación legal: el pie de divulgación de
+asistencia AI.** **1 de las 8 piezas que escriben el juicio sobre un alumno lo emite** (`toshieji`), y el
+**Artículo 50 rige desde el 2026-08-02**, con el deber del lado del **proveedor** — que es el rol de
+Globant cuando construye y entrega.
+
+### La receta, con piezas reales y lo que hay que escribir
+
+**Plataforma Moodle, escritura de notas asistida por AI:**
+
+1. 🟢 **Conector base:** `toshieji/moodle-grading-mcp` (**MIT**) tal cual. **Es la única de las ocho que
+   llega conforme**, y trae los niveles 2 y 4 puestos: borrador `readyforreview` que nunca libera,
+   *allowlist* de cursos (`MOODLE_WRITE_COURSE_ALLOWLIST`) y pie de divulgación que **agrega si falta**.
+2. ⚠️ **Lo que hay que agregarle, y es el nivel 1:** su compuerta es un flag global
+   (`MOODLE_ALLOW_WRITE=1`) más *allowlist* por **curso**, no por **herramienta**. 🔵 **Se envuelve en la
+   puerta de *allowlist* que este repositorio ya versiona y prueba —`compose/code/mcp-allowlist-gateway/`
+   (**34** aserciones)— que es exactamente «lo no listado no llega al upstream».**
+3. 🔴 **Lo que hay que SACAR de la propuesta:** `peancor/moodle-mcp-server`. **Clase T4** —escribe nota y
+   devolución en firme, sin confirmación, sin borrador y sin divulgación— **con un token de
+   administración del SITIO**, que es el privilegio más alto medido en esta base. **Máximo privilegio,
+   mínima guarda, y 43 ★ que le dan apariencia de opción por defecto.**
+
+**Plataforma Canvas:** `vishalsachdev/canvas-mcp` (**MIT**, 272 ★) con `ALLOWED_WRITE_TOOLS` acotado a lo
+que el *engagement* necesita, **y el nivel 2 construido** —Canvas no lo trae—: se escribe la nota con la
+calificación oculta hasta que un humano la publica. ⚠️ **Y el nivel 4 hay que escribirlo: la pieza no
+emite divulgación.**
+
+**Plataforma Open edX:** `openedx-mcp` trae **la compuerta de diálogo más fuerte de las ocho** (dry-run +
+token atado a huella del payload + rate limit por (key, tool) + re-chequeo de autoridad vivo + auditoría
+append-only previa a la escritura). 🔴 **Pero es AGPL-3.0 y corre en proceso como plugin Django, así que
+la decisión es de licencia antes que de arquitectura** (ver **P113** y la corrección de copyleft de red).
+
+### 🔵 Lo que este patrón habilita decir en una propuesta, y es el valor comercial del pase
+
+🔴 **«Borrador + liberación humana» NO es la norma de la categoría: 1 de 8.** 🟢 **Así que el requisito no
+se puede tercerizar al ecosistema y lo escribe Globant — lo que lo convierte en un diferencial
+redactable en vez de un supuesto.** ⚠️ **Y la advertencia que conviene dar antes de que la dé un
+auditor: la pieza más adoptada de esta capa (272 ★) escribe la nota en firme y sin divulgación, así que
+un cliente que elija por tracción elige la no conforme.**
+
+**Estimación: 3–5 semanas** sobre Moodle con `toshieji` + la puerta de *allowlist* ya versionada;
+**6–8 semanas** sobre Canvas, donde el nivel 2 hay que construirlo. ⚠️ **La suite que lo prueba es la
+acción 2 del pase 57 y todavía no existe: hoy el patrón se entrega con las citas, no con una corrida.**
+
 ## P131 — La puerta de escritura académica: confirmación de dos llamadas + borrador no liberado + pie de divulgación (agregado en el pase 55 del 2026-10-03)
+
+> 🔴 **CORRECCIÓN DEL PASE 56, y va antes que todo lo demás de este patrón: la mitad de CONFIRMACIÓN de
+> P131 quedó DEGRADADA.** El proyecto más adoptado de la capa publicó que *«a confirmation token cannot
+> stop [a student-planted instruction] because the assistant can redeem its own token»*. **La
+> confirmación de dos llamadas protege del operador distraído, no del alumno adversario.** 🟢 **El orden
+> correcto de las compuertas está en `P136`: arranque primero, borrador segundo, confirmación tercera.**
+> **Las otras dos mitades de P131 —borrador no liberado y pie de divulgación— quedan intactas y
+> reforzadas.**
 
 **Sale de una medición, no de una idea.** El pase 55 clasificó las seis piezas de esta base que escriben
 en un LMS por la **declaración de integridad académica** y encontró que **los dos ejes de la capa están
@@ -6653,7 +6733,7 @@ referencia es copiar un no-op**, y el síntoma aparece como «los alumnos no vue
 
 ## P103 — Marcar contenido generado de punta a punta para el Artículo 50(2), con tres piezas permisivas que ya existen (agregado en el pase 46 del 2026-10-02)
 
-**Qué resuelve.** **32 de las 66 filas** de `agents/top.md` ponen contenido sintético delante de una persona y **0 de 33
+**Qué resuelve.** **33 de las 66 filas** de `agents/top.md` ponen contenido sintético delante de una persona y **0 de 33
 repos** pueden marcarlo. Esto es la cadena completa, y **ninguna de las tres piezas hay que inventarla**.
 
 ### Las piezas y el cableado, en este orden
