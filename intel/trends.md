@@ -7,6 +7,7 @@ updated: 2026-10-03
 # 📡 Tendencias — education
 
 > Ventana de investigación: septiembre 2026. Verificado 2026-09-30; el pase 11, el 2026-10-01.
+> **Pase 64 del 2026-10-03:** 🟢 **Las tres acciones del pase 63 se ejecutaron y las tres rinden, una de ellas REFUTANDO el titular del pase que la escribió.** 🟢 **Acción 1 (barrido masivo de licencia, 200 filas): cae en su rama BENIGNA —160 licenciado · 32 sin licencia · 6 inalcanzable, con 82,5 % permisivo contra 81,3 % del pase 51— y **0 de 160 por debajo de 400 bytes**, así que el bloque de archivos-afirmación que la hipótesis temía NO existe en esta capa.** 🔴 **Acción 3: la licencia del dato estaba DENTRO del dato — las tres ontologías de `FWU-DE` declaran CC BY-SA 4.0 como anotación `dct:license` en el `.owl`, y el pase 63 había publicado «3 de 3 sin ninguna licencia» porque grepeó el README** (**P172**). 🔴 **Y la dependencia de la receta P169 es una lápida de 136 bytes que apunta al revés** (**P173**). ⚠️ **Acción 2: canal AGOTADO — seis dominios alemanes bloqueados por dos canales independientes; la afirmación sobre FWU se DEGRADA de «medida» a «corroborada por canal secundario», con cifras.** Ver las tendencias **466**–**478**.
 > **Pase 61 del 2026-10-03:** 🟢 **el pase ejecutó una consigna vieja que nadie había corrido —buscar el currículo por PAÍS y en el idioma del país, no «agentes educativos»— y rindió 11 piezas nuevas en las cuatro regiones tras diez pases sin altas, mientras las cuatro búsquedas globales obligatorias volvían a devolver el eje agotado.** 🔴 **El hallazgo que manda es un defecto de INSTRUMENTO: la capa de currículo es dual —código permisivo, dato con atribución— y el archivo del DATO no está en la raíz en dos de tres casos, así que el probe de P114/P115 reporta «MIT» para toda la capa y MIT cubre la mitad sin valor** (**P153**). 🟢 **La hipótesis falsable cae en su primera rama y el falso positivo era propio: `dados/LICENSE.md` existe, no hay contradicción entre repos — la ciega era mi lista de nombres.** 🟢 **Y llega el número: 31,9 % → 0,2 % con el dato en el prompt, 2,3 % vía MCP, en pares y con pre-registro cerrado antes de la batería — la condición de CONTROL le gana a la herramienta por un orden de magnitud** (**P156**). 🔴 **La asimetría regional invierte el gap 4: NA, con el 38 % del mercado, es la PEOR servida —tres renderizaciones JSON del Common Core sin archivo de licencia—** (**P159**). 🔴 **Y la acción 2 del pase 60 CIERRA confirmando los nueve números y REFUTANDO su cifra: son 80 citas, no 114, y las nueve NUNCA estuvieron definidas en los 65 commits de la historia — nacieron colgadas** (**P157**). Ver las tendencias **426**–**437**.
 > **Pase 59 del 2026-10-03:** 🔴 **la acción 2 del pase 58 CIERRA en la rama de la UNICIDAD: ampliado el eje de 6 a 9 puertas de escritura de nota leídas en el CÓDIGO, `peancor` sigue siendo la ÚNICA que AFIRMA la publicación — «afirma la publicación» no es una clase de la capa, es UNA fila, y la regla de excluirla en vez de configurarla se sostiene con el denominador ampliado un 50 %.** 🔴 **Pero el denominador ampliado descubre el SEGUNDO POLO y reencuadra todo: el eje es BIPOLAR y ESCASO —sólo 2 de 9 toman posición en el código, y son los extremos: `peancor` cablea `'released'` y `toshieji` cablea `'readyforreview'` con `released: False`, verificado en `server.py:570` de primera mano y no en el README. Y NINGUNO de los dos consulta la precondición, así que las dos garantías son condicionales en sentidos OPUESTOS: a `peancor` no la salva `markingworkflow=1`, a `toshieji` la DERROTA `markingworkflow=0`. La mejor pieza de la capa y la peor dependen de la MISMA casilla** (**P145**). 🔴 **Hallazgo estructural nuevo: las puertas de Canvas se propagan por FORK —`algorithm0r/canvas-lms-mcp` ← `bruchris` y `abr-Projects/canvas-mcp` ← `vishalsachdev`, padre declarado por GitHub, ambos MIT y ambos escriben nota— así que la unicidad se cuenta sobre CÓDIGO DISTINTO y la pieza desplegada se identifica por el COMMIT, no por el nombre del proyecto** (**P146**). 🟢 **1 alta no-fork: `CharlieCardenasToledo/mcp-canvas-server` (MIT, 0 ★), `posted_grade` crudo y 0 menciones de política de publicación en 60.194 bytes: publica por omisión.** 🔴 **Y el dato de licencia que cambia el ORDEN de los filtros: el MCP de Moodle más estrellado del barrido —`loyaniu/moodle-mcp`, 37 ★— NO TIENE LICENCIA en ninguna rama ni en su `pyproject.toml`; el filtro de licencia va ANTES del de popularidad** (**P147**). 🔴 **La acción 1 se entrega con su FIXTURE REFUTADO: el par que el pase 58 mandó usar de control negativo no existe —el pase 57 cita gaps 249/232/100 y nada de fechas; la pregunta de las fechas es el `gap 56`, del pase 32, cerrado en el 39— y un barrido por número de gap da un falso positivo real (el `gap 51` del pase 48 es PRECEDENTE), así que la unidad de juicio es el ACTO DE HABLA de la cláusula** (**P148**). ⚠️ **Nota de instrumento, segunda reproducción: el entorno negó ejecutar el código clonado incluidas las suites OFFLINE, así que la suite nueva se publica con 17 asertos escritos y 0 corridos.** Tendencias **402**–**412**.
 > **Pase 58 del 2026-10-03:** 🔴 **la acción 1 del pase 57 CIERRA y su hipótesis falsable cae en la rama que obliga a trabajar: de las 6 puertas de escritura de nota, medidas de primera mano en el CÓDIGO, 0 consultan la precondición de plataforma** (`markingworkflow` en Moodle, `posting_policy`/`post_manually` en Canvas). 🔴 **Y aparece el eje que decide un despliegue y que el vocabulario de «borrador» no muestra: `peancor/moodle-mcp-server` manda `workflowstate: 'released'` CABLEADO, así que es la ÚNICA de las seis que publica incluso con `markingworkflow=1` — 5 de 6 quedan neutralizadas por la configuración correcta de la plataforma, 1 de 6 la DERROTA, y por eso `peancor` es la fila que hay que excluir y no la que hay que configurar** (**P142**). 🔵 **`mcp-moodle-staff` está fuera del eje por diseño: no llama al web service, genera CSV para el importador nativo, así que la liberación humana es del PROCESO y no del servidor** (**P143**). 🟢 **1 ALTA, la primera en doce pases, y entra porque contesta ARQUITECTÓNICAMENTE el 0 de 8 del pase 57 y el 0 de 6 de este: `littlecookie0722/AI-Teaching-Agent` (MIT verificado por el texto del `LICENSE`) cumple «borrador + liberación humana» de forma incondicional porque NO PUEDE publicar — *«The export does not call platform import, grading execution, or publishing paths»*. Separar la generación de la publicación es el patrón; una compuerta mejor adentro del camino de escritura no lo es** (**P144**). 🔴 **La acción 3 estaba CERRADA antes de escribirse, y la cerró el propio pase 57 en su tendencia 392: las «dos fechas incompatibles» son dos obligaciones distintas, no una contradicción. Es el defecto del gap 54 —declarar abierto lo que ya está cerrado— aplicado ADENTRO, y el mecanismo es que la lista de acciones y la de tendencias de un pase se escriben por separado y nada las cruza.** 🟢 **Las dos fechas se re-verificaron hoy por tres canales concordantes: Anexo III §3 → 2027-12-02 (AI Omnibus, DOUE 2026-07-24, en vigor 2026-07-27); Art. 50 NO tocado, vigente desde 2026-08-02; backstop del 50(2) el 2026-12-02 — a 60 días del 2026-10-03. Lo que sostiene la venta EMEA de esta base es justamente el reloj que no se movió.** ⚠️ **Nota de instrumento que corrige al pase 52 en la dirección contraria: este entorno negó ejecutar el código clonado INCLUIDAS las suites OFFLINE, así que la columna «Hoy» del README NO se re-verificó y este pase no afirma ninguna de esas cifras como medida hoy.** Tendencias **393**–**401**.
@@ -5428,6 +5429,175 @@ hueco abierto, y el pase 56 ya se atrapó inventándolo (**P135**); (b) **el tex
 inalcanzable desde este entorno**, así que las fechas de 399 son de tres canales secundarios concordantes, **no de
 primera mano**; (c) **`AI-Teaching-Agent` no declara región** y su único indicio es contenido bilingüe
 inglés/chino — **indicio débil, NO se infiere región** (regla de **P135**).
+
+## Las tendencias 466–478, del pase 64 del 2026-10-03
+
+**466.** 🟢 **La acción masiva se ejecutó porque estaba escrita como masiva, y eso confirma
+P163 por tercera vez.** El pase 63 separó explícitamente dos barridos —*«el de LICENCIA es masivo y
+barato; el de LINAJE es unitario y caro»*— y prohibió mezclarlos. **Se corrió el barato, completo,
+en un pase: 200 filas, ~1.600 peticiones.** 🔵 **Una acción con presupuesto declarado se
+ejecuta; el barrido de linaje, que no lo tiene, sigue en ~12 % de cobertura desde el pase 60.**
+
+**467.** 🟢 **La hipótesis falsable de la acción 1 cae en su rama benigna, y eso es un
+resultado, no un no-resultado.** Reparto del pase 64 (n=160 licenciado): **MIT 94 · Apache 30 · GPL 12
+· AGPL 9 · BSD 4 · CC0 2 · LGPL 2 · CC BY-SA 1 · Unlicense 1 · ISC 1 · anómalo 4**.
+**Permisivo 82,5 % contra 81,3 % del pase 51; copyleft 14,4 % contra 12,9 %.**
+🔵 **El denominador creció de 167 a 198 filas en trece pases y las proporciones se movieron
+menos de dos puntos: el inventario de esta KB no se degradó mientras crecía.**
+
+**468.** 🟢 **Y el control de P168 no encontró nada que corregir donde más importaba: 0 de 160
+archivos por debajo de 400 bytes.** El más chico es de **710 B** y es un texto completo de `0BSD`.
+⚠️ **El `LICENSE` de 19 bytes del pase 63 vive en la capa de ERP de `verticals/`, no en la de
+agentes: la patología es real y está ACOTADA, que es distinto de generalizada.**
+
+**469.** 🔴 **El hallazgo que manda, y es de método transferible fuera de educación: la
+licencia del DATO vive DENTRO del dato.** Las tres ontologías de `FWU-DE` no tienen archivo
+`LICENSE` (404 en 14 nombres) ni la palabra «licencia» en el README (0 coincidencias en 4.297 B),
+**y las tres declaran `dct:license` → CC BY-SA 4.0 dentro de `src/ontology/*-edit.owl`**.
+🔵 **Es **P153** ganando su caso más fuerte y ascendiendo a **P172**: un verificador que mira
+raíz + README es estructuralmente ciego a toda la capa de dato semántico.**
+
+**470.** 🔴 **Y el pase 63 publicó lo contrario con un instrumento correcto: *«3 de 3 de dato
+sin ninguna licencia, y sin licencia en prosa tampoco»*.** La prosa que grepeó era el README; la
+cesión estaba un nivel más abajo. ⚠️ **La conclusión era válida sobre el canal medido y falsa
+sobre el mundo — y el enunciado no decía cuál canal.** 🔵 **Lección de redacción, no de
+medición: «sin licencia» debe escribirse «sin archivo de licencia en la raíz», porque la
+primera forma envejece como un hecho y la segunda como una medición.**
+
+**471.** ⚠️ **Y el grep que lo encuentra tampoco es único: las serializaciones no coinciden.** Dos
+de los tres repos escriben el IRI completo `<http://purl.org/dc/terms/license>` y el tercero el
+prefijo `dcterms:license`. **Un instrumento que busque una sola forma reporta 2 de 3 y vuelve a
+publicar una ausencia falsa.**
+
+**472.** 🔴 **La ruta del artefacto no es adivinable, y es la razón por la que el pase 63 no
+llegó.** Los nombres que el README anuncia —`lp.owl`, `lp-base.owl`, `lp-full.owl`, `lp-simple.owl`,
+`reasoned.ttl`— **dan 404 los cinco**: son productos de build sin versionar. **El archivo real es el
+de EDICIÓN, en `src/ontology/`, y la ruta se descubre leyendo el workflow de CI.**
+🔵 **Para medir la licencia de un dato semántico hay que leer el `Makefile`, no probar nombres.**
+
+**473.** 🔴 **La «dependencia upstream» de la receta P169 es una lápida, y apuntaba al
+revés.** `dini-ag-kim/school-curriculum-pg` tiene un README de **136 bytes** cuyo contenido íntegro
+es *«This repo is outdated, please go to `FWU-DE/lehrplan-ontologie`»*. **14 nombres de licencia,
+5 subdirectorios y 14 nombres de `.ttl`/`.owl`: 404 todos.** 🔵 **No es «sin licencia» ni
+«con licencia»: medirle la cesión es una pregunta mal planteada** (**P173**). ⚠️ **La hipótesis
+de la acción 3 tenía dos ramas y el resultado no cae en ninguna — conviene registrar eso en vez de
+forzarlo a una.**
+
+**474.** 🔵 **Mejora de instrumento con consecuencia inmediata: `raw.githubusercontent.com`
+resuelve la ref literal `HEAD` a la rama por omisión, cualquiera sea su nombre.** La dimensión
+«rama» desaparece del barrido: **14 nombres × 1 ref** reemplazan a 20 nombres × 2 ramas **y
+cubren `develop` y `trunk`, que ninguna lista de ramas alcanzaba** (**P170**).
+
+**475.** 🔴 **Y la especificación de la acción, seguida literalmente, habría publicado 7
+ausencias falsas de 160 — incluida `moodle/moodle`.** Corrida con 4 nombres × `main`/`master`
+detecta **153**; con la ref `HEAD`, **160**. Los 7 perdidos: `moodle/moodle` y
+`jeanlucio/moodle-local_aihub` (`COPYING.txt`), `cboard-org/cboard` y `luisgf/openbadgeslib`
+(`LICENSE.txt` en `master`), `kaldi-asr/kaldi` (`COPYING`), `contentauth/c2pa-rs` y
+`contentauth/c2pa-python` (`LICENSE-MIT`). 🔵 **El pase 51 ya había medido este mismo error en
+14,8 % con 4 nombres; trece pases después la acción volvió a especificar 4 nombres. 🔵 **Una lección de instrumento que no se escribe en el instrumento se vuelve a aprender.**
+
+**476.** 🔴 **Defecto de clasificación nuevo, y el contraejemplo es caro: un classificador que
+hace `grep` sobre todo el cuerpo etiqueta GPL-3.0 como AGPL-3.0**, porque el §13 del texto de
+GPL-3.0 se TITULA *«Use with the GNU Affero General Public License»*. Detectado contra
+`frappe/erpnext`, que el pase 63 había leído bien. ⚠️ **Y el tamaño NO los separa: 35,1 KB vs
+34,5 KB.** 🔵 **Se clasifica por el TÍTULO, primeras 12 líneas** (**P171**).
+
+**477.** 🟢 **Los 4 «textos anómalos» que el pase 51 dejó abiertos quedan los cuatro
+resueltos, y uno MEJORA la cotización.** `trilogy-group/oneroster-ts` es **`0BSD`** —más permisiva
+que MIT, cede sin exigir atribución—; `nmarafo/OpenDidactia` es **CC BY-SA 4.0**;
+`dssg/student-early-warning` **confirma** la licencia no comercial de la U. de Chicago;
+y `kaldi-asr/kaldi` aporta una clase nueva: **un `COPYING` de 17.263 B que NO es una cesión, es un
+*legal notice* que aclara dónde está la cesión** (en las cabeceras Apache de los fuentes).
+🔵 **Ni el código HTTP ni el tamaño atrapan ese caso.**
+
+**478.** 🔴 **Y una clase de licencia que la taxonomía de esta KB no tenía: la del ORGANISMO
+DE ESTÁNDARES.** `1EdTech/caliper-spec` trae `LICENSE.md` de **12.402 B** que dice *«made available
+under license to **Registered Users** solely to further that purpose»*. **No es permisiva, no es
+copyleft, no es ausencia: es una licencia de DOCUMENTO condicionada a membresía.**
+🔵 **Mismo modo de fallo que **P168** por la vía opuesta —ahí el archivo era demasiado chico
+para ser una cesión, acá es grande y tampoco lo es— y un escaneo de existencia aprueba las dos**
+(**P175**).
+
+### ⚠️ La acción 2, cerrada por AGOTAMIENTO de canal — y la afirmación DEGRADADA, no envejecida
+
+**La acción 2 pedía confirmar la estructura societaria de FWU en fuente primaria o declarar el canal
+agotado, y pedía probar PRIMERO si el bloqueo era del dominio o de la corrida. Se probó.**
+
+| Dominio | `curl` | WebFetch |
+|---|---|---|
+| `fwu.de` / `www.fwu.de` | 🔴 `000` — *gateway answered 403 to CONNECT* | — |
+| `regierung-mv.de` | 🔴 `000` | — |
+| `handelsregister.de` | 🔴 `000` | — |
+| `bundesanzeiger.de` | 🔴 `000` | — |
+| `sachsen-anhalt.de` (registro de participaciones de OTRO Land) | — | 🔴 **`EGRESS_BLOCKED`** |
+| `bildungsserver.de` | — | 🔴 **`EGRESS_BLOCKED`** |
+
+🔵 **Respuesta a la pregunta de la acción: el bloqueo es **del dominio**, no de la corrida —
+reproduce en **seis** dominios alemanes por **dos** canales independientes. El canal está AGOTADO,
+no intermitente**, y el *fallback* que la acción prescribía (el registro de participaciones de otro
+Land, el Handelsregister) **está bloqueado por la misma política**.
+
+🟢 **Lo que SÍ se obtuvo, por canal secundario, y es más específico que lo que el pase 63
+tenía:** FWU es la **gGmbH** —sociedad de responsabilidad limitada de utilidad pública— **de los
+16 Länder**, con sede en Grünwald; **cada Land tiene el 6,25 % y un aporte de capital de
+€ 10.225,84**; 16 × 6,25 % = 100 %, sin participación privada. **Corrobora la rama «es
+público» y agrega las cifras.**
+
+🔴 **Pero la etiqueta epistémica se DEGRADA, que es lo que la acción ordenó hacer si ningún
+canal alcanzable la confirmaba:** la afirmación pasa de **«establecida en fuente primaria»** a
+**«corroborada por canal secundario — resultados de búsqueda que citan dos registros de
+participaciones estatales (M-V y Sachsen-Anhalt) y el servidor educativo federal—, con la fuente
+primaria INALCANZABLE desde este entorno»**. 🔵 **No se sostiene como medida y no se borra: se
+etiqueta. Dejarla envejecer como si fuera medida era exactamente lo que la acción prohibía.**
+⚠️ **El pedido de licencia a FWU sigue BLOQUEADO por falta de autorización humana y por **P163**
+no se re-agenda.**
+
+### ⚠️ Lo que este pase NO midió, dicho para que no se lea como cobertura
+
+- 🔴 **El barrido mide CESIÓN, no LINAJE.** Las **188** filas sin abrir una por una siguen sin
+  abrirse; la cobertura del barrido de linaje sigue en **~12 %**. **Este pase no la movió, y la
+  acción lo pedía explícitamente.**
+- ⚠️ **Las 29 filas «sin licencia» que NO son `FWU-DE` no fueron abiertas por dentro.** Por
+  **P172**, cualquiera de ellas podría declarar cesión en el payload. **La ausencia está medida
+  sobre el ARCHIVO, no sobre el contenido.**
+- ⚠️ **Las 249 filas de `agents/top.md` sin URL de GitHub siguen fuera del denominador**: son
+  medibles por registro + tarball, como hizo el pase 51.
+- ⚠️ **Sigue sin medirse si existe artefacto de currículo estructurado para JAPÓN.** Cuarta vez
+  que se declara. **Hueco declarado, no ausencia.**
+- ⚠️ **Las búsquedas globales obligatorias de agentes y de trending volvieron a devolver el eje
+  agotado**: marcos generalistas (openclaw, browser-use, AutoGen, CrewAI) y agregadores de baja
+  calidad. 🔴 **Ninguna alta se tomó de esas búsquedas: las cifras de estrellas que citan no
+  son verificables por los canales abiertos de esta corrida, y esta base no copia tracción sin
+  leerla.** 🔵 **Las 3 altas del pase salieron de SEGUIR UNA CITA —los clientes muertos de
+  Caliper y Badgr hacia sus organismos vivos—, que es el mismo canal que rindió en el pase 63.**
+
+## 🔵 Las tres acciones que el pase 64 deja escritas para el pase 65
+
+1. 🔴 **Barrer el PAYLOAD de las 29 filas «sin licencia» que no son `FWU-DE`, buscando
+   `licen[sc]e` dentro de los archivos de dato** (**P172**). **La acción es acotada y cabe en un pase:
+   son 29 repos, y el canal (`raw` + ref `HEAD`) ya está probado y es barato.** 🔵 **Hipótesis
+   falsable y las dos ramas sirven: si ninguna de las 29 declara cesión en el payload, entonces
+   **P172** es específico de la capa de dato semántico (RDF/OWL/SKOS) y el instrumento de la capa de
+   código está sano como está; si alguna la declara, entonces «32 sin licencia» es una cifra
+   inflada y hay que recorrer las 23 del pase 51 también.** ⚠️ **Empezar por los 6 repos con
+   `.ttl`/`.owl`/`.jsonld` y por `DMontgomery40/mcp-canvas-lms`, que es la puerta más forkeada de la
+   KB (39 forks heredan la ausencia).**
+
+2. 🔵 **Escribir el instrumento de licencia corregido EN el instrumento, no en la prosa**
+   (**P170**, **P171**, **475**). **La tendencia 475 documenta que la lección de los 4 nombres se
+   aprendió en el pase 51 y se volvió a perder en el pase 63: la acción es reemplazar el probe de
+   `compose/code/p114-license-column/` por el de `p170-headref-license-sweep/` y dejar el viejo como
+   control negativo fechado.** 🔵 **Condición de vencimiento verificable: si el pase 66 vuelve a
+   escribir una acción de licencia con lista de ramas, el reemplazo no se hizo.**
+
+3. ⚠️ **Cerrar el hueco de JAPÓN, que esta base viene declarando desde el pase 61 sin medirlo.**
+   **Buscar el artefacto de currículo estructurado japonés EN JAPONÉS —`学習指導要領` (*gakushū
+   shidō yōryō*), no «Japan curriculum ontology»—, que es el canal que rindió 11 piezas en el
+   pase 61 cuando se buscó en el idioma del país.** 🔵 **Hipótesis falsable: si existe y está
+   publicado por MEXT sin licencia explícita, APAC replica el patrón alemán y **P174** gana una
+   tercera región; si no existe artefacto estructurado, el hueco deja de ser «no medido» y pasa a
+   ser **ausencia medida**, que es un dato vendible para un engagement japonés.**
+   ⚠️ **Declarar el canal si los dominios `.go.jp` están bloqueados, como lo están los alemanes.**
 
 ## Las tendencias 453–465, del pase 63 del 2026-10-03
 

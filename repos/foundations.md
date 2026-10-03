@@ -8,6 +8,7 @@ updated: 2026-10-03
 
 > Bases sobre las cuales construir. Verificado repo por repo vía WebFetch el 2026-09-30 (capas del pase 10, el 2026-10-01).
 > Leer la columna **Licencia** antes de proponer: media KB de educación es GPL/AGPL, no permisiva.
+> **Pase 64 del 2026-10-03:** 🔴 **La acción 3 del pase 63 CIERRA y REFUTA el titular del pase 63 sobre Alemania: las TRES ontologías de `FWU-DE` SÍ declaran licencia —**CC BY-SA 4.0**, como anotación `dct:license` DENTRO del `.owl`— mientras no tienen archivo `LICENSE` ni la palabra «licencia» en el README. El pase 63 grepeó el README y concluyó «3 de 3 sin ninguna licencia»: la cesión existía, un nivel más abajo, en el PAYLOAD** (**P172**, y es el caso más fuerte de **P153**). 🔴 **Y la dependencia de la receta **P169** estaba al revés: `dini-ag-kim/school-curriculum-pg` no es el upstream que FWU importa — es una **lápida de 136 bytes** cuyo README entero dice *«This repo is outdated, please go to FWU-DE/lehrplan-ontologie»*, o sea apunta HACIA la pieza sin archivo de licencia** (**P173**). 🔵 **Consecuencia de instrumento: un verificador de licencias que mira raíz + README es ciego a toda la capa de DATO semántico; hay que grepear dentro del RDF/OWL/TTL, y en las DOS serializaciones (`<http://purl.org/dc/terms/license>` e `dcterms:license`).** 🟢 **Alta permisiva verificada: `1EdTech/openbadges-validator-core` (Apache-2.0, 13.184 B), que reemplaza al muerto `concentricsky/badgr-server`.**
 > **Pase 62 del 2026-10-03:** 🟢 **+3 repos fundacionales y la capa de currículo extendida a ALEMANIA (`FWU-DE/lehrplan-ontologie`: los 16 Bundesländer en RDF/OWL) y a ESPAÑA (`nmarafo/open-lex-edu`: 832 normas con frontmatter YAML e `index.yaml` de referencias cruzadas).** 🔴 **Y el dato que decide: de SIETE artefactos de currículo medidos en cuatro regiones, exactamente UNO es permisivo y legible (Corea, MIT) — dos son *share-alike*, uno CC BY, DOS NO TIENEN LICENCIA y uno es ilegible. La capa más cara de reconstruir es la peor licenciada, y la región con más presupuesto (NA) y la de mayor cobertura técnica (Alemania) son justo las dos sin cesión.** 🔴 **El `gap 255` del pase 61 se auto-refuta en España: declaraba «sin artefacto» un país que esta base cubre desde el pase 3 en siete archivos — una declaración de hueco tiene que correr contra el índice propio antes de salir a buscar** (**P162**). 🟢 **Y `open-lex-edu` es el control negativo que a P153 le faltaba y lo pasa: su licencia de DATO sí está en la raíz.**
 > **Pase 61 del 2026-10-03:** 🟢 **+12 filas fundacionales y las cuatro regiones tocadas, tras varios pases sin altas — porque este pase ejecutó la acción pre-registrada que llevaba ciclos pendiente: buscar `curriculum ontology`, `achievement standards`, `learning map` e `item bank` POR PAÍS, en vez de buscar «agentes educativos».** 🔴 **Leer las DOS columnas de licencia: la capa es dual (código permisivo / dato con atribución) y el archivo del DATO no está en la raíz en dos de tres casos —`dados/LICENSE.md` adentro del directorio de datos, `LICENSE-DADOS.md`, `DATA-LICENSE.md`—, así que el probe de raíz de P114/P115 reporta «MIT» para toda la capa y MIT cubre la parte sin valor** (**P153**). 🟢 **Lo licenciable es la COMPILACIÓN, no el currículo: los textos normativos son actos de Estado no protegidos (art. 8º IV de la Lei 9.610/98; OGL v3.0 como *public sector information*)** (**P154**). 🔴 **Y la asimetría regional invierte el gap 4: LATAM tiene CC BY 4.0 con procedencia por registro, EMEA tiene OGL v3.0 con permiso comercial explícito, APAC tiene publicación oficial del Estado — y North America, el 38 % del mercado, reparte sus estándares entre 50 estados y sus tres renderizaciones JSON en GitHub NO tienen archivo de licencia** (**P159**).
 > **Pase 59 del 2026-10-03:** ⚠️ **cero plataformas nuevas y el barrido obligatorio completo (cuatro globales + cuatro regionales, año calculado: 2026) volvió por DUODÉCIMA vez con la capa genérica y material didáctico *sobre* AI.** 🔴 **El hallazgo del pase es de LICENCIA y cambia el ORDEN de los filtros: el MCP de Moodle más estrellado que apareció —`loyaniu/moodle-mcp`, 37 ★, el segundo de toda esta capa tras los 272 de `vishalsachdev`— NO TIENE LICENCIA: `LICENSE` ausente en `main` y en `master` y sin clave `license` en `pyproject.toml`. Es inusable por Globant, y las tres permisivas del mismo barrido tienen 0 ★** (**P147**, tercera reproducción de la curva invertida de P134/P138, ahora sobre la licencia). 🔵 **Regla que queda escrita: el filtro de licencia se aplica ANTES del de popularidad, porque el orden inverso selecciona lo que no se puede entregar.** ⚠️ **Corrección de CANAL, y toca al verificador de licencias de esta base: `curl -sI` contra `github.com` devolvió `403` en los OCHO repos probados —el proxy de egreso bloquea `HEAD` sobre el HTML, no es un 404—, así que la verificación se hizo por `raw.githubusercontent.com` (200) y `WebFetch`, dos canales concordantes. Los veredictos de licencia de este pase siguen valiendo porque sus sondas fueron contra `raw`, que responde.** ⚠️ **Nota de instrumento: segunda reproducción consecutiva de la negativa a ejecutar el código clonado, incluidas las suites OFFLINE, así que ninguna cifra de `compose/code/` se re-verificó en este pase.** Ver **P145**–**P148** y las tendencias **402**–**412**.
@@ -76,6 +77,116 @@ corre ése antes de escribir uno a mano** (tendencia **313**). 🟢 **Y el `gafa
 > y 5 en `schemas12/`, y contar sólo el primero es lo que hizo invisible el segundo dialecto de SCORM (**P106**).
 > **Pase 36 del 2026-10-02:** 🔵 **este pase no agrega repos: le pone FECHA a los que ya están, y la fecha cambia tres recomendaciones.** Se midió la capa PHP de evaluación y telemetría en Packagist —el único registro de los tres que entrega descargas en este entorno (`api.npmjs.org` y `pypistats.org` dan **403 a CONNECT**)— y el resultado está en `repos/trending.md`. **Lo que hay que saber antes de proponer desde este archivo:** 🔴 **la pieza xAPI más descargada de esta base, `rusticisoftware/tincan` (Apache-2.0, 6.178 desc./mes, 863.777 totales), no publica desde el 2022-11-02**, y ⚠️ **el único MIT de esa capa, `php-xapi/client`, está parado desde el 2021-03-24** con 825 desc./mes. 🔵 **La lectura es que en xAPI/PHP lo permisivo está quieto y lo vivo es copyleft**, así que la receta de telemetría se sostiene en **Ralph (MIT)** + **`lrsql` (Apache-2.0)** + **`learnmcp-xapi` (MIT)** y no en la capa PHP. 🟢 **Del lado de evaluación, lo activo es `oat-sa/extension-tao-testqti`** (**885 versiones**, release del **2026-09-30**) **y sigue siendo GPL-2.0-only**, mientras **lo permisivo es lo nuevo**: `@longsightgroup/qti3-cli` (**MIT**, 41 releases desde el 2026-05-21, último **2026-10-01**) con **cero dependencias de terceros** — sus 4 dependencias son todas `@longsightgroup/*` pinneadas a la misma versión exacta. **Su manifiesto MCP completo de 20 tools está escrito en `compose/patterns.md` (P76).** 🔴 **Y una corrección de catálogo: `oat-sa/qti-sdk` devuelve 404 en Packagist porque es el nombre del REPO — su paquete es `qtism/qtism`** (GPL-2.0-only, 218.212 descargas totales, 315 versiones). **Nombre de repo y nombre de paquete son identificadores distintos, y confundirlos produce un 404 que parece una ausencia** — pasó igual con `1edtech/oneroster`, `imsglobal/lti-1-3-php-library` y `packbackbooks/lti-1-3-php-library`, los tres **404**, que se anotan como *«no verificado en Packagist bajo ese nombre»* y **no** como inexistentes. ⚠️ **Acción pendiente que el pase 37 tiene asignada: este archivo nunca pasó por el control de *slugs* distintos ni por el de *backlink*** — los dos que en `agents/top.md` encontraron **un duplicado** y **dos colisiones** este mismo pase.
 > **Pase 11 del 2026-10-01:** aparece una licencia que las diez pasadas anteriores filtraban sin saberlo — **ECL-2.0**, con la que licencia todo Apereo (Sakai, Opencast, OpenLRW). Es Apache-2.0 con el alcance de patentes acotado, aprobada por OSI y FSF, y **es apta para construir arriba**. Ver la capa de analítica institucional, abajo.
+
+## 🧬 La licencia del DATO vive DENTRO del dato: las tres ontologías de `FWU-DE` declaran CC BY-SA 4.0 en el `.owl`, y eso refuta el titular del pase 63 (acción 3 del pase 63, pase 64 del 2026-10-03)
+
+**El pase 63 cerró la capa de currículo con una afirmación fuerte y un patrón elegante: *«3 de 3
+de código licenciados con tres licencias distintas; 3 de 3 de dato sin ninguna, y sin licencia en prosa
+tampoco»*, con *«el publicador no es la licencia»* (**P166**) como lección. La acción 3 pedía
+buscar la licencia FUERA de la raíz —en subdirectorios, en GitHub Pages y en las cabeceras del
+RDF/OWL— sobre `dini-ag-kim/school-curriculum-pg`. Al correrla, la mitad «sin ninguna licencia» del
+titular se cae.**
+
+### 🔴 Las tres ontologías SÍ ceden, y la cesión estaba en el payload
+
+| Repo | Archivo `LICENSE` en raíz | «Licencia» en el README | **Dentro del `.owl`** |
+|---|---|---|---|
+| [`FWU-DE/lehrplan-ontologie`](https://github.com/FWU-DE/lehrplan-ontologie) | 🔴 **404** los 14 nombres | 🔴 **0 coincidencias** en 4.297 B | 🟢 **`Annotation(<http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by-sa/4.0/>)`** en `src/ontology/lp-edit.owl` |
+| [`FWU-DE/schulfach-ontologie`](https://github.com/FWU-DE/schulfach-ontologie) | 🔴 **404** | 🔴 **0** | 🟢 **misma anotación, IRI completo**, en `src/ontology/sf-edit.owl` |
+| [`FWU-DE/schulart-ontologie`](https://github.com/FWU-DE/schulart-ontologie) | 🔴 **404** | 🔴 **0** | 🟢 **`Annotation(dcterms:license <https://creativecommons.org/licenses/by-sa/4.0/>)`** — ⚠️ **serialización PREFIJADA**, en `src/ontology/sa-edit.owl` |
+
+🔴 **La conclusión del pase 63 era correcta sobre el canal que miró y falsa sobre el mundo: no
+hay archivo de licencia y no hay licencia en prosa — pero **sí hay cesión**, y es la misma en las
+tres.** 🔵 **Esto es **P153** ganando su caso más fuerte: la licencia del dato no está donde el
+filtro la busca, está DENTRO del dato** (**P172**).
+
+⚠️ **Y el detalle que rompe un grep ingenuo: las dos serializaciones no coinciden.** Dos repos
+escriben el IRI completo `<http://purl.org/dc/terms/license>` y el tercero el prefijo
+`dcterms:license`. **Un instrumento que busque una sola de las dos formas reporta 2 de 3 y vuelve a
+publicar una ausencia falsa.** 🔵 **El patrón a buscar es `licen[sc]e` sobre el payload,
+case-insensitive, no una cadena exacta.**
+
+### 🔴 La ruta tampoco es adivinable, y por eso el pase 63 no la encontró
+
+Los artefactos no están en la raíz ni con el nombre del repo: viven en **`src/ontology/<prefijo>-edit.owl`**,
+y los nombres que el README anuncia —`lp.owl`, `lp-base.owl`, `lp-full.owl`, `lp-simple.owl`,
+`reasoned.ttl`— **dan 404 los cinco**, porque son *productos de build* que el repo no versiona.
+🔵 **El único archivo presente es el de EDICIóN, y es el que lleva la anotación. La ruta se
+descubre leyendo el workflow de CI (`.github/workflows/qc.yml` → `cd src/ontology && make test`), no
+probando nombres.**
+
+### 🔴 `school-curriculum-pg` no es un upstream: es una lápida, y la receta P169 apuntaba al revés
+
+**La acción 3 partía de un supuesto escrito en el pase 63: que `dini-ag-kim/school-curriculum-pg` era
+*«la pieza que FWU importa y de la que depende la salida CC0 de la receta P169»*. Es falso.**
+
+| Prueba | Resultado |
+|---|---|
+| `raw:HEAD/README.md` | 🟢 **200 — 136 bytes en total** |
+| Contenido ÍNTEGRO del README | 🔴 *«# This repo is outdated ·· ## please go to ·· https://github.com/FWU-DE/lehrplan-ontologie»* |
+| 14 nombres de licencia en raíz | 🔴 **404 los 14** |
+| 5 subdirectorios (`ontology/`, `docs/`, `src/`, `data/`, `.github/`) | 🔴 **404** |
+| 14 nombres de `.ttl`/`.owl`/GitHub Pages | 🔴 **404 los 14** |
+| Lo único alcanzable además del README | ⚠️ **`.gitignore`** |
+
+🔴 **El repo está vaciado y REDIRIGE a `FWU-DE/lehrplan-ontologie` — que es justamente la pieza
+sin archivo de licencia.** 🔵 **La dirección de la dependencia era la inversa de la que la receta
+suponía: no es «FWU importa de DINI, así que hay una salida CC0 arriba»; es «DINI apunta a FWU».**
+
+🔵 **La hipótesis falsable de la acción 3 tenía dos ramas —declara en cabecera RDF, o no
+declara en ningún lado— y el resultado no cae en ninguna: el repo no tiene cabeceras RDF porque no
+tiene RDF.** ⚠️ **Una lápida con README no es «sin licencia» ni «con licencia»: es un
+artefacto que ya no existe como dato, y medirle la cesión es una pregunta mal planteada** (**P173**).
+
+### 🟢 La salida CC0 de la receta P169 sigue en pie, pero por otra pieza
+
+🟢 **`dini-ag-kim/schulfaecher` —CC0 1.0, `raw:HEAD/LICENSE` 200, 7.047 B, re-verificado este
+pase— NO es `school-curriculum-pg`.** Es el **vocabulario SKOS de materias escolares**, no la
+ontología de currículo. 🔵 **Así que la receta P169 no se cae, pero hay que decir qué cubre:
+la capa de MATERIAS está en dominio público; la capa de CURRÍCULO por Land está en CC BY-SA 4.0.**
+
+### 🔴 El reparto de licencias de la capa de currículo, corregido por tercera vez
+
+| Pieza | Región | Pase 63 decía | Pase 64 mide |
+|---|---|---|---|
+| `dini-ag-kim/schulfaecher` | EMEA (DE) | 🟢 CC0 1.0 | 🟢 **CC0 1.0** (sin cambio) |
+| `FWU-DE/lehrplan-ontologie` | EMEA (DE) | 🔴 ninguna | 🔴 **CC BY-SA 4.0** (en el `.owl`) |
+| `FWU-DE/schulfach-ontologie` | EMEA (DE) | 🔴 ninguna | 🔴 **CC BY-SA 4.0** (en el `.owl`) |
+| `FWU-DE/schulart-ontologie` | EMEA (DE) | 🔴 ninguna | 🔴 **CC BY-SA 4.0** (en el `.owl`) |
+| `nmarafo/OpenDidactia` | EMEA (ES) | ⚠️ texto anómalo | 🔴 **CC BY-SA 4.0** (`LICENSE.md`) |
+| `dini-ag-kim/school-curriculum-pg` | EMEA (DE) | ⚠️ dependencia de P169 | 🔴 **lápida de 136 B** |
+
+🔵 **El dato comercial que sale de la corrección, y es mejor Y peor que el del pase 63:**
+**mejor**, porque Alemania **sí tiene cesión** y no hay que pedirle nada a FWU para usar el dato;
+**peor**, porque **CC BY-SA 4.0 es ShareAlike** — el currículo derivado hereda la obligación de
+compartirse igual. 🔴 **Para un engagement eso NO es «entregable sin condiciones»: es
+entregable con una condición que se propaga al entregable del cliente.**
+🔵 **Y aparece un patrón regional: las DOS piezas de currículo de EMEA con cesión leída
+—Alemania y España— convergen en la MISMA licencia, CC BY-SA 4.0, publicadas por organizaciones
+sin relación. El dato curricular converge en ShareAlike** (**P174**).
+
+### 🟢 Las altas de este pase, con la licencia leída del archivo
+
+| Repo | Licencia **leída** | Prueba | Qué es / por qué entra |
+|---|---|---|---|
+| [`1EdTech/openbadges-validator-core`](https://github.com/1EdTech/openbadges-validator-core) | 🟢 **Apache-2.0** | `raw:HEAD/LICENSE` **200**, **13.184 B** | validador de Open Badges del organismo de estándares. 🟢 **Es el reemplazo PERMISIVO del muerto `concentricsky/badgr-server`: la capa de credenciales vuelve a tener una pieza viva y cedida** |
+| [`1EdTech/caliper-spec`](https://github.com/1EdTech/caliper-spec) | 🔴 **IMS Global Specification Document License** (NO OSI) | `raw:HEAD/LICENSE.md` **200**, **12.402 B** | la spec de Caliper Analytics, **viva**, donde los clientes `caliper-php` y `caliper-python` dieron 404. ⚠️ **Ver la clase de licencia nueva abajo** |
+| [`IMSGlobal/openbadges-specification`](https://github.com/IMSGlobal/openbadges-specification) | 🔴 **ninguna (ausencia MEDIDA)** | 14 nombres **404**, `README.md` **200** | la spec de Open Badges: alcanzable y **sin cesión** |
+
+### 🔴 Una clase de licencia que la taxonomía de esta KB no tenía: la del ORGANISMO DE ESTÁNDARES
+
+**`1EdTech/caliper-spec` no es permisiva, no es copyleft y no es ausencia. Es un régimen propio, y
+conviene citarlo textual antes de que alguien lo cotice como «tiene LICENSE.md, listo»:**
+
+> *«IMS specifications are published solely for the purpose of enabling interoperability … and are
+> made available under license to **Registered Users** solely to further that purpose.»*
+
+🔴 **Es una licencia de DOCUMENTO condicionada a membresía, con política de IPR y registro de
+usuarios — no una cesión de software.** 🔵 **Para el filtro de esta KB
+(MIT/Apache/BSD) el efecto práctico es: **la spec se lee, no se redistribuye como parte de un
+entregable**, y la implementación propia es el camino. **Un escaneo que sólo pregunta «existe
+LICENSE?» la aprueba** — el mismo modo de fallo de **P168**, por otra vía: ahí el archivo era
+demasiado chico para ser una cesión, acá es lo bastante grande y **tampoco lo es** (**P175**).
 
 ## 🧾 La capa de currículo, cerrada por el lado de la LICENCIA: el publicador no es la licencia, y el upstream CC0 es la salida (pase 63 del 2026-10-03)
 

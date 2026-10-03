@@ -8,6 +8,7 @@ updated: 2026-10-03
 
 > Recetas concretas: repos nombrados, licencias verificadas, wiring explícito y estimación.
 > Todos los repos citados fueron verificados vía WebFetch el 2026-09-30; los del pase 11, el 2026-10-01 (ver `agents/top.md`).
+> **Pase 64 del 2026-10-03:** 🔵 **Tres recetas nuevas, las tres salidas de lo que este pase midió: **P176** el verificador de licencia de DOS CAPAS (archivo + payload), que es el único que no es ciego a la capa de dato semántico; **P177** la sustitución de una dependencia muerta por el organismo de estándares vivo, con Caliper y Open Badges como los dos casos trabajados; y **P178** la compuerta de ShareAlike, que es la que impide prometer un currículo derivado cerrado sobre dato CC BY-SA 4.0.** 🔴 **Y una receta vieja se CORRIGE: la dependencia upstream de **P169** era una lápida de 136 bytes — la salida CC0 existe pero cubre la capa de MATERIAS, no la de currículo.**
 > **Pase 62 del 2026-10-03:** 🟢 **los patrones nuevos son **P160**–**P163** y la receta **P164**, y los cuatro se promueven a sección en el mismo pase que los acuña (P157): ninguno queda citado sin texto.** 🔴 **Pero antes que los patrones va una corrección de CITA que afecta a cuatro archivos: esta base define **P150** como la regla de forks y **P151** como la de extractores, y hay SIETE citas que invocan «P151» para forks —incluida la acción del pase 60 que difirió el barrido a este pase. Es peor que una cita colgada: resuelve a un patrón real que habla de otra cosa, así que se lee como válida.** 🔵 **P160** la descripción se hereda y la superficie no (139 *tools* contra 103 a la misma release) · **P161** la licencia declarada sólo en prosa no es cesión, y la ausencia se hereda a 39 forks · **P162** un hueco por país se declara contra el índice propio antes que contra el mercado · **P163** una acción diferida lleva número de pase o se re-agenda para siempre.
 > **Pase 61 del 2026-10-03:** 🟢 **los patrones nuevos son **P153**–**P157**, la receta **P158** y **P159**, y todos salen de una sola medición: la capa de CURRÍCULO nacional estructurado, leída licencia por licencia en las cuatro regiones.** 🔴 **P153 es el que cambia una decisión de entrega: la capa entera es DUAL —código permisivo, dato con atribución— y el archivo que declara la licencia del DATO no está en la raíz en dos de tres casos (`dados/LICENSE.md`, `LICENSE-DADOS.md`, `DATA-LICENSE.md`): el probe de cinco nombres de raíz de P114/P115 devuelve «MIT» para toda la capa, y MIT es la licencia de la parte SIN valor.** 🟢 **P154: lo licenciable es la COMPILACIÓN, no el currículo —los textos normativos son actos de Estado no protegidos (art. 8º IV de la Lei 9.610/98; OGL v3.0 como *public sector information*)—, así que a un cliente no se le puede cobrar el currículo de su propio país.** 🔴 **P155: «Apache» en un README de esta vertical es más seguido el SERVIDOR web que la licencia —`Forma LMS` resulta GPLv2 y sin archivo de licencia, contra una recomendación secundaria que lo venía como «the most permissive licence»—.** 🟢 **P156 pone número al aterrizaje, en pares y con pre-registro: sin fuente 31,9 % de alucinación, con el dato en el prompt **0,2 %**, consultando el MCP **2,3 %** — la condición de CONTROL le gana a la herramienta por un orden de magnitud.** 🔴 **Y P159 es el hallazgo regional que invierte el gap 4: la región más grande es la peor servida —las tres renderizaciones JSON del Common Core en GitHub no tienen licencia y la única pieza permisiva de NA (`CEDS-Ontology`, Apache 2.0) no es currículo sino un modelo de entidades—.** ⚠️ **La acción 1 del pase 61 (abrir el PR a `toshieji`) NO se ejecutó: es una acción hacia AFUERA sobre un repo de terceros y esta corrida es automática, sin humano mirando — ver `agents/trending.md`.** Ver **P153**–**P159** y las tendencias **426**–**436**.
 > **Pase 58 del 2026-10-03:** 🔴 **los patrones nuevos son **P142**–**P144** y los tres salen de la misma medición: de las 6 puertas de escritura de nota, leídas en el CÓDIGO, **0 consultan la precondición de su plataforma**. 🔵 **P142 es el que cambia una decisión de entrega: las seis NO fallan igual, y la pregunta que las separa es una sola —con `markingworkflow = 1`, ¿publica igual?—. `peancor/moodle-mcp-server` manda `workflowstate: 'released'` CABLEADO, así que es la única que DERROTA la configuración correcta del cliente: 5 de 6 se CONFIGURAN, 1 de 6 se EXCLUYE.** ⚠️ **Y no se puede aplicar desde un README: `'released'` está en `src/index.ts`, no en la documentación.** 🔵 **P143 nombra una clase de garantía que esta KB no tenía: la que vive en el PROCESO** —`mcp-moodle-staff` no llama al web service, genera CSV para el importador nativo, así que la liberación humana es de quien aprieta Importar— **real, pero NO auditable en el código de la puerta, así que se entrega con el procedimiento o no existe.** 🟢 **P144 es la respuesta arquitectónica a tres pases de compuertas que fallaron por tres motivos distintos (P132, P138, P139, P142): separar la generación de la publicación, de modo que el proceso que genera NO tenga credencial de escritura al LMS. Lo funda `littlecookie0722/AI-Teaching-Agent` (MIT), la única pieza de esta KB que cumple «borrador + liberación humana» incondicionalmente —porque no puede publicar—.** ⚠️ **Lo que P144 NO compra: no automatiza la entrega de notas; si el cliente la pide, se vuelve a P142.** Ver **P142**–**P144** y las tendencias **393**–**401**.
@@ -102,6 +103,103 @@ updated: 2026-10-03
 > no existe en open source permisivo).
 > **Pase 11:** +2 patrones — **P25** (riesgo de abandono conforme al Anexo III, la capa con presupuesto ya asignado y sin oferta open source) y **P26** (agente docente sobre la ontología curricular nacional ya publicada).
 > **Pase 27:** **+4 patrones y una corrección.** 🔴 **P51 queda con premisa falsa** —el conector MCP de Moodle **sí existe y es MIT**— y lo reemplazan **P54** (corrección y devolución sobre Moodle con **compuerta humana**, el último tramo del gap 6, con piezas que ya escriben), **P55** (el conector de **Open edX**, que es el único que de verdad no existe), **P56** (**SCORM** como formato de salida de la capa generativa: cero integración, offline) y **P57** (evidencia por MCP cotizada sobre lo que CaSS **realmente** expone — 6 de 61 operaciones, con insignias y autoría de marcos **fuera**).
+
+## 🧪 P176 — Verificador de licencia de DOS CAPAS: el archivo y el payload (pase 64 del 2026-10-03)
+
+**El problema que resuelve, medido en este pase: un verificador que mira raíz + README reporta
+«sin licencia» para tres repos que SÍ ceden —CC BY-SA 4.0 dentro del `.owl`— y reporta
+«licenciado» para un documento de estándar que NO es software cedido. Los dos errores en el mismo
+instrumento, en direcciones opuestas.**
+
+### Wiring
+
+| Paso | Qué corre | Por qué |
+|---|---|---|
+| 1 | `compose/code/p170-headref-license-sweep/sweep_headref.sh <org/repo>` | 14 nombres × ref **`HEAD`** — cubre `main`, `master`, `develop`, `trunk` sin enumerar ramas (**P170**) |
+| 2 | si `LICENSED` → **clasificar por el TÍTULO**, primeras 12 líneas | un `grep` de cuerpo etiqueta GPL-3.0 como AGPL-3.0 (**P171**) |
+| 3 | si `LICENSED` → **control de TAMAÑO**: < ~400 B no es una cesión | el caso de 19 bytes (**P168**) |
+| 4 | si `LICENSED` → **control de CLASE**: ¿dice *«Registered Users»*, *«members»*, *«specification document»*? | licencia de organismo de estándares, no de software (**P175**) |
+| 5 | si `UNLICENSED` → **grep del PAYLOAD**: `licen[sc]e` sobre `*.ttl`, `*.owl`, `*.rdf`, `*.jsonld` | la cesión del dato vive dentro del dato (**P172**) |
+| 6 | si todo 404 → **control de alcanzabilidad** (`README.md` y 7 rutas más) | separa «sin licencia» de «no llego al repo» |
+
+⚠️ **El paso 5 busca el PATRÓN, no una cadena:** las serializaciones conviven
+(`<http://purl.org/dc/terms/license>` e `dcterms:license`) y buscar una sola reporta 2 de 3.
+⚠️ **Y la ruta del payload se descubre leyendo el workflow de CI** (`.github/workflows/*.yml`),
+porque los nombres que anuncia el README suelen ser productos de build sin versionar (**472**).
+
+🟢 **Rendimiento medido: ~6 repos en paralelo contra `raw.githubusercontent.com`, 200 filas y
+~1.600 peticiones en una corrida, sin estrangulamiento.** 🔴 **No usar `api.github.com` ni
+`curl` contra `github.com`: los dos dan **403** en este entorno.**
+
+---
+
+## 🔁 P177 — Sustituir una dependencia MUERTA por el organismo de estándares vivo (pase 64)
+
+**El problema: esta KB cita clientes de referencia que ya no existen. `1EdTech/caliper-php`,
+`IMSGlobal/caliper-python` y `concentricsky/badgr-server` dan 404 por dos canales. La receta no es
+buscar un fork: es subir un nivel, al organismo.**
+
+### Caso trabajado 1 — Open Badges (sale permisivo)
+
+| Pieza | Licencia **leída** | Rol |
+|---|---|---|
+| [`1EdTech/openbadges-validator-core`](https://github.com/1EdTech/openbadges-validator-core) | 🟢 **Apache-2.0** (13.184 B) | **el validador se entrega** |
+| `IMSGlobal/openbadges-specification` | 🔴 **ninguna (medida)** | la spec **se lee, no se redistribuye** |
+| `concentricsky/badgr-server` | 🔴 **404** | ⚠️ no proponer: no es obtenible |
+
+**Wiring:** emisión propia → `openbadges-validator-core` (Apache-2.0) como compuerta de
+conformidad en CI → credencial firmada. 🟢 **El validador es la pieza que vuelve defendible la
+promesa «emitimos Open Badges válidas» sin el servidor de referencia muerto.**
+
+### Caso trabajado 2 — Caliper Analytics (NO sale permisivo, y hay que decirlo)
+
+| Pieza | Licencia **leída** | Qué habilita |
+|---|---|---|
+| [`1EdTech/caliper-spec`](https://github.com/1EdTech/caliper-spec) | 🔴 **IMS Global Specification Document License** (12.402 B, **no OSI**) | 🟢 leer e **implementar por cuenta propia** · 🔴 **no** redistribuir el documento |
+
+**Wiring:** leer la spec → **implementar el Sensor API propio** → emitir eventos conformes.
+🔴 **Lo que NO se puede hacer: entregar el documento al cliente como parte del paquete, ni
+listar la spec como dependencia permisiva en un inventario.** 🔵 **Estimación honesta: acá el
+ahorro de «ya existe open source» NO aplica — el entregable es código propio contra un contrato
+leído, y conviene cotizarlo así.**
+
+---
+
+## 🚧 P178 — La compuerta de ShareAlike sobre el currículo derivado (pase 64)
+
+**El problema, y es comercial antes que técnico: la capa de currículo de EMEA converge en
+CC BY-SA 4.0** (**P174**) **— Alemania (`FWU-DE` ×3, en el `.owl`) y España (`nmarafo/OpenDidactia`,
+en `LICENSE.md`), publicadas por organizaciones sin relación. ShareAlike se PROPAGA al entregable
+del cliente, así que la compuerta va antes de la propuesta, no antes del release.**
+
+### El árbol de decisión, con las piezas nombradas
+
+| Si el cliente quiere… | Entonces | Pieza |
+|---|---|---|
+| currículo derivado **cerrado** | 🔴 **NO partir de la capa de currículo por Land** | — |
+| sólo **nomenclatura de materias**, sin condiciones | 🟢 **`dini-ag-kim/schulfaecher`** — **CC0 1.0**, dominio público (7.047 B) | la única sin condiciones de la capa |
+| cobertura **por Land**, y acepta compartir igual | ⚠️ `FWU-DE/lehrplan-ontologie` + `schulfach-` + `schulart-` — **CC BY-SA 4.0** | **declarar la obligación en la propuesta** |
+| superficie de **agente** sobre el dato | 🟢 **`FWU-DE/mem-mcp`** — **Unlicense** (1.210 B) | ⚠️ código en dominio público **sobre dato ShareAlike**: la condición viaja con el DATO, no con el MCP |
+
+🔵 **La asimetría que conviene tener escrita antes de una reunión: el código de FWU se cede en
+tres regímenes distintos —Unlicense, Apache-2.0, AGPL-3.0— y el dato en uno solo, CC BY-SA 4.0.
+**El publicador no es la licencia** (**P166**) **y la capa tampoco: hay que leer archivo por
+archivo.**
+
+---
+
+## 🔴 Corrección de la receta P169: la dependencia upstream era una lápida
+
+🔴 **La receta **P169** se apoyaba en `dini-ag-kim/school-curriculum-pg` como «el upstream
+licenciado del que depende la salida CC0». Es falso: ese repo es un README de **136 bytes** que dice
+*«This repo is outdated, please go to `FWU-DE/lehrplan-ontologie`»* — o sea apunta HACIA la pieza sin
+archivo de licencia** (**P173**).
+
+🟢 **La receta NO se cae, pero hay que decir qué cubre:** la salida CC0 real es
+**`dini-ag-kim/schulfaecher`**, que es el **vocabulario SKOS de MATERIAS escolares**, no la ontología
+de currículo. 🔵 **La capa genérica está en dominio público; la capa que agrega el valor local
+—currículo por Land— está en ShareAlike. Prometer «currículo alemán CC0» sobre esta base sería
+falso.**
 
 ## 🧩 P165–P168, los patrones del pase 63 (2026-10-03)
 

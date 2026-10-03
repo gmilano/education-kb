@@ -9,6 +9,70 @@ updated: 2026-10-03
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 > No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
 
+## 2026-10-03 — pase 64: el inventario de licencias pasa su propia auditoría, y una fila cotizaba un repo muerto
+
+### 🟢 El barrido completo de las 200 filas, con el archivo leído — y el reparto no se movió
+
+| Estado | n | % del denominador (198) |
+|---|---|---|
+| `LICENSED` (archivo leído, tamaño registrado) | **160** | 80,8 % |
+| `UNLICENSED` (alcanzable, **ausencia medida**) | **32** | 16,2 % |
+| `UNREACHABLE` (404; **sin afirmación de licencia**) | **6** | 3,0 % |
+
+🟢 **Permisivo 132 · copyleft 23 · texto anómalo 4 · CC BY-SA 1.** Contra el pase 51
+(n=139 licenciado): permisivo **82,5 %** hoy vs **81,3 %**; copyleft **14,4 %** vs **12,9 %**.
+🔵 **Trece pases y 31 filas más de denominador movieron las proporciones menos de dos puntos.**
+
+### 🔴 La única fila que el barrido obligó a corregir
+
+| Repo | Decía | Mide | Canales |
+|---|---|---|---|
+| `radhepa/Teacher-MCP` | 🔴 **MIT ✅** | 🔴 **404 — no existe** | `raw:HEAD` 404 × 14 nombres + 8 rutas de control; WebFetch `github.com` **404** |
+
+### 🟢 Los 4 textos anómalos del pase 51, resueltos
+
+| Repo | Veredicto leído | Bytes |
+|---|---|---|
+| `trilogy-group/oneroster-ts` | 🟢 **BSD Zero Clause (`0BSD`)** — más permisiva que MIT | 710 |
+| `nmarafo/OpenDidactia` | 🔴 **CC BY-SA 4.0** (ShareAlike sobre contenido) | 2.122 |
+| `kaldi-asr/kaldi` | ⚠️ **`COPYING` es un *legal notice*, no una cesión**; Apache-2.0 vive en las cabeceras | 17.263 |
+| `dssg/student-early-warning` | 🔴 **U. of Chicago, NO comercial** — bloqueo duro | 2.068 |
+
+### ⚠️ Dónde estaba la licencia: la cola larga es corta, pero existe
+
+| Archivo que dio el 200 | n |
+|---|---|
+| `LICENSE` | **143** |
+| `LICENSE.md` | 9 |
+| `LICENSE.txt` | 3 |
+| `LICENSE-MIT` | 2 |
+| `COPYING.txt` | 2 |
+| `COPYING` | 1 |
+
+🔵 **143 de 160 están en el nombre obvio. Los 17 restantes son los que deciden si un barrido
+publica ausencias falsas — y entre ellos está `moodle/moodle`, la plataforma madre de esta KB,
+en `COPYING.txt`.**
+
+### 🔴 Los 32 sin licencia, con la ausencia MEDIDA (no inferida)
+
+`100205ivan/EyeEP` · `1EdTech/openbadges-specification` · `DMontgomery40/mcp-canvas-lms` ·
+`FWU-DE/lehrplan-ontologie`† · `FWU-DE/schulart-ontologie`† · `FWU-DE/schulfach-ontologie`† ·
+`HKUDS/AI-Researcher` · `NLP2CT/LLM-generated-Text-Detection` · `Nutlope/llamatutor` ·
+`RadiantCrystal/SafeTutors` · `SabioTechTeam/Teacher-Hub` · `Timadey/proctor` ·
+`UOC/java-lti-1.3-platform` · `YL1N/EduGuardBench` · `aiverify-foundation/LLM-Evals-Catalogue` ·
+`alvarogregori/moodle-ai-graded-assignment` · `amosblomqvist/learn` ·
+`classifiedstudentkabir/Sign-Language-Interpreter` · `dddanielliu/NCCU-Moodle-MCP` ·
+`dini-ag-kim/school-curriculum-pg` · `eth-lre/mathtutorbench` · `ink-waffle/moodle-mcp` ·
+`jimbozhang/speechocean762` · `jjbrophy47/machine_unlearning` · `kaushal0494/AITutor-EvalKit` ·
+`kaushal0494/UnifyingAITutorEvaluation` · `loyaniu/moodle-mcp` ·
+`marcusgreen/moodle-tool_aiconnect` · `novatrix-2030/SIH-2026` · `tejpalvirk/student` ·
+`vilcaaguilerandrea-oss/carrera-lectora` · `yonatanlop/detectoria`
+
+† 🔴 **Los tres `FWU-DE` SÍ ceden — CC BY-SA 4.0 dentro del `.owl`.** Figuran acá porque el
+instrumento mide el ARCHIVO de licencia, y la corrección es precisamente el hallazgo del pase
+(**P172**). **Para los otros 29 la ausencia de archivo sigue siendo el único dato; ninguno fue
+abierto por dentro.**
+
 ## 2026-10-03 — pase 63: la organización de GitHub como canal de descubrimiento, y las dos altas que ninguna búsqueda devolvió
 
 **Lo nuevo de esta semana en agentes educativos no salió de ninguna de las cuatro consultas

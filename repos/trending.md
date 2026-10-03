@@ -8,6 +8,83 @@ updated: 2026-10-03
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 
+## 2026-10-03 — pase 64: la ref `HEAD` borra la dimensión «rama», y la licencia del dato estaba dentro del dato
+
+### 🔵 El cambio de instrumento, medido contra su propio control negativo
+
+**La acción 1 venía especificada como «4 nombres × `main` y `master`». Corrida así, y corrida con
+la ref `HEAD`, sobre las mismas 200 filas:**
+
+| Instrumento | Licenciados detectados | Falsos «sin licencia» |
+|---|---|---|
+| 4 nombres × `main`/`master` (la acción **como estaba escrita**) | **153** | 🔴 **7 de 160 (4,4 %)** |
+| 14 nombres × ref **`HEAD`** | **160** | 🟢 **0** |
+
+🔴 **Los 7 que la especificación original pierde, y el primero duele:**
+
+| Repo | Dónde estaba | Por qué se perdía |
+|---|---|---|
+| **`moodle/moodle`** | `COPYING.txt` | 🔴 **la plataforma madre de esta KB, reportada «sin licencia»** |
+| `jeanlucio/moodle-local_aihub` | `COPYING.txt` | convención GNU |
+| `cboard-org/cboard` | `LICENSE.txt` en `master` | nombre fuera de la lista corta |
+| `luisgf/openbadgeslib` | `LICENSE.txt` en `master` | ídem |
+| `kaldi-asr/kaldi` | `COPYING` | ídem |
+| `contentauth/c2pa-rs` | `LICENSE-MIT` | doble licencia estilo Rust |
+| `contentauth/c2pa-python` | `LICENSE-MIT` | ídem |
+
+🟢 **`raw.githubusercontent.com` resuelve la ref literal `HEAD` a la rama por omisión, cualquiera
+sea su nombre.** Verificado contra `frappe/education`, cuya licencia vive en **`develop/license.txt`**
+y que **ninguna** lista de ramas `main`/`master` alcanza (**P170**).
+
+### 🔴 El defecto de clasificación, con su contraejemplo
+
+🔴 **Un classificador que hace `grep` sobre todo el cuerpo etiqueta **GPL-3.0 como AGPL-3.0**,
+porque el §13 del texto de GPL-3.0 se TITULA *«Use with the GNU Affero General Public License»*.**
+Detectado contra `frappe/erpnext` (35.148 B), que el pase 63 había leído —bien— como GPL-3.0.
+🔵 **Se clasifica por el TÍTULO, en las primeras 12 líneas, no por el cuerpo** (**P171**).
+⚠️ **GPL-3.0 y AGPL-3.0 difieren ~600 bytes en tamaño (35,1 KB vs 34,5 KB): el tamaño NO los separa.**
+
+### 🔴 La licencia dentro del payload: las tres ontologías de `FWU-DE`
+
+| Repo | `LICENSE` en raíz | README | Dentro del `.owl` |
+|---|---|---|---|
+| `FWU-DE/lehrplan-ontologie` | 🔴 404 ×14 | 🔴 0 coincidencias | 🟢 **CC BY-SA 4.0**, `dct:license` IRI completo |
+| `FWU-DE/schulfach-ontologie` | 🔴 404 | 🔴 0 | 🟢 **CC BY-SA 4.0**, IRI completo |
+| `FWU-DE/schulart-ontologie` | 🔴 404 | 🔴 0 | 🟢 **CC BY-SA 4.0**, ⚠️ **prefijo `dcterms:`** |
+
+⚠️ **Ruta: `src/ontology/<prefijo>-edit.owl`.** Los nombres que anuncia el README (`lp.owl`,
+`lp-base.owl`, `lp-full.owl`, `lp-simple.owl`, `reasoned.ttl`) **dan 404 los cinco**: son productos de
+build sin versionar. **La ruta se descubre leyendo `.github/workflows/qc.yml`, no probando nombres.**
+
+### 🔴 Y la «dependencia upstream» de la receta P169 es una lápida de 136 bytes
+
+`dini-ag-kim/school-curriculum-pg` — README íntegro: *«# This repo is outdated ·· ## please go to ··
+`FWU-DE/lehrplan-ontologie`»*. **14 nombres de licencia 404, 5 subdirectorios 404, 14 nombres de
+`.ttl`/`.owl` 404; lo único alcanzable además del README es `.gitignore`** (**P173**).
+
+### 🟢 Reemplazos vivos para tres filas muertas de la capa de estándares
+
+| Alta | Licencia **leída** | Bytes | Reemplaza a |
+|---|---|---|---|
+| [`1EdTech/openbadges-validator-core`](https://github.com/1EdTech/openbadges-validator-core) | 🟢 **Apache-2.0** | 13.184 | `concentricsky/badgr-server` (404) |
+| [`1EdTech/caliper-spec`](https://github.com/1EdTech/caliper-spec) | 🔴 **IMS Global Specification Document License** (no OSI, por membresía) | 12.402 | `1EdTech/caliper-php` y `IMSGlobal/caliper-python` (404) |
+| [`IMSGlobal/openbadges-specification`](https://github.com/IMSGlobal/openbadges-specification) | 🔴 **ninguna (medida)** | — | — |
+
+### ⚠️ Mapa de canales de esta corrida — el bloqueo alemán es de DOMINIO, no de corrida
+
+| Canal | Estado | Nota |
+|---|---|---|
+| `raw.githubusercontent.com` (incl. ref `HEAD`) | 🟢 **abierto** | ~6 repos por llamada en paralelo; 1.600 peticiones sin estrangulamiento |
+| `github.com` HTML vía WebFetch | 🟢 abierto | ⚠️ una llamada por repo; sirve para confirmar 404 |
+| `api.github.com` | 🔴 **403** | reproduce el pase 63 |
+| `github.com` vía `curl` | 🔴 **403** | reproduce el pase 63 |
+| `fwu.de`, `regierung-mv.de`, `handelsregister.de`, `bundesanzeiger.de` | 🔴 **bloqueo de EGRESO** | `000` por `curl`; el proxy reporta *«gateway answered 403 to CONNECT»* |
+| `sachsen-anhalt.de`, `bildungsserver.de` vía WebFetch | 🔴 **`EGRESS_BLOCKED`** | ⚠️ **segundo canal, mismo veredicto** |
+
+🔵 **La pregunta que la acción 2 pedía responder primero —«el bloqueo es del dominio o de la
+corrida?»— queda contestada: es **del dominio**, y se reproduce en SEIS dominios alemanes por DOS
+canales independientes. El canal está agotado, no intermitente.**
+
 ## 2026-10-03 — pase 63: el upstream CC0 que estaba un nivel más arriba, y un `LICENSE` de 19 bytes
 
 ### 🟢 El alta de la semana es un vocabulario, y es la primera pieza de currículo de EMEA entregable sin condiciones

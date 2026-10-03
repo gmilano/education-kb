@@ -8,6 +8,7 @@ updated: 2026-10-03
 
 > Agentes y herramientas AI open source para educación. Foco: MIT / Apache 2.0 / BSD.
 > Verificado repo por repo vía WebFetch el 2026-09-30 (stars y licencia leídos de la página del repo).
+> **Pase 64 del 2026-10-03:** 🟢 **La acción 1 del pase 63 CIERRA, y cierra en su rama BENIGNA: barridas las **200** filas `org/repo` de este archivo con el archivo de licencia LEÍDO, el reparto no se movió —**160 licenciado · 32 sin licencia (ausencia MEDIDA) · 8 inalcanzable**, 82,5 % permisivo sobre lo licenciado contra 81,3 % que midió el pase 51 con un denominador 31 filas más chico—. **No apareció el bloque de archivos-afirmación que la hipótesis temía: 0 de 160 por debajo de 400 bytes.** 🔴 **Pero el barrido encontró UNA fila que aún afirma licencia sobre un repo que no existe: `radhepa/Teacher-MCP` dice «MIT ✅» y da **404 por dos canales independientes**.** 🔵 **Y el instrumento mejoró dos veces: `raw.githubusercontent.com` resuelve la ref **`HEAD`** a la rama por omisión —la dimensión «rama» desaparece—** (**P170**), **y un classificador que hace `grep` sobre el cuerpo etiqueta GPL-3.0 como AGPL-3.0 porque el §13 de GPL-3.0 se TITULA «Use with the GNU Affero General Public License»** (**P171**). 🟢 **Los 4 «textos anómalos» que el pase 51 dejó sin resolver quedan los CUATRO identificados, y uno mejora la cotización: `trilogy-group/oneroster-ts` es **0BSD**, más permisiva que MIT.** Ver las tendencias **466**–**478**.
 > **Pase 62 del 2026-10-03:** 🟢 **Este pase ejecutó la acción que el pase 60 difirió EXPLÍCITAMENTE al 62 —el barrido retroactivo de forks (**P150**, que esta base venía citando mal como «P151»)— y rindió el hallazgo más transferible de la serie: a la MISMA release (`v1.13.0`), un fork de `vishalsachdev/canvas-mcp` declara 139 *tools* contra las 103 de la madre, mientras el campo `description` de GitHub es IDÉNTICO palabra por palabra en toda la familia. **La descripción se hereda entera; la superficie no**, así que un barrido por búsqueda sub-cuenta y uno por repo sobre-cuenta — los dos mal, en direcciones opuestas** (**P160**). 🔴 **Y el signo tampoco es predecible: el pase 60 midió un fork atrasado y más laxo; éste mide uno adelantado y más grande, en la misma familia.** 🔴 **El control negativo de esta base (`Dymayo/moodler-mcp`) resultó ser un fork no registrado: la clase b4 se sostiene en las dos copias, pero el denominador contaba una copia como observación independiente, y la prosa de la fila («una sola variable, ninguna credencial») es falsa — son CINCO, dos de ellas compuertas de capacidad apagadas por defecto.** 🔴 **La puerta más forkeada de la KB (`DMontgomery40/mcp-canvas-lms`, 103 ★, 39 forks) promete una licencia que NO EXISTE: el README dice «see LICENSE file» y `LICENSE`, `LICENSE.md` y la rama `master` dan 404 — 39 forks heredan la ausencia de cesión** (**P161**). 🔴 **Y el `gap 255` del pase 61 se auto-refuta en España: declaraba «no hay artefacto de currículo» para un país que esta KB cubre desde el pase 3 en siete archivos.**
 > **Pase 61 del 2026-10-03:** 🟢 **Este pase ejecutó una acción pre-registrada que llevaba ciclos sin correrse —buscar `curriculum ontology` / `achievement standards` / `item bank` por país y en el idioma del país, en vez de buscar «agentes»— y rindió **11 piezas nuevas en las cuatro regiones**, tras diez pases sin altas.** 🔴 **El hallazgo que manda es un defecto del INSTRUMENTO, no un repo: la capa de currículo está DUALMENTE licenciada —código permisivo, dato con atribución— y el archivo que declara la licencia del DATO no está en la raíz en dos de tres casos (`dados/LICENSE.md`, `LICENSE-DADOS.md`, `DATA-LICENSE.md`), así que el probe de cinco nombres de raíz de P114/P115 devuelve «MIT» para toda la capa y MIT es la licencia de la parte SIN valor** (**P153**). 🟢 **La hipótesis falsable del pase cae en su primera rama y el falso positivo era propio: `bncc-dados` SÍ trae `dados/LICENSE.md` (CC BY 4.0), así que no hay contradicción entre repos — la lista de nombres probó `dados/LICENSE` y no `dados/LICENSE.md`.** 🟢 **Y llega el número que esta KB venía argumentando sin tener: aterrizar el currículo baja la alucinación de **31,9 %** a **0,2 %** con el dato en el prompt y a **2,3 %** vía MCP —la condición de CONTROL le gana a la herramienta por un orden de magnitud—, en pares y con pre-registro cerrado antes de la batería** (**P156**). 🔴 **Y la región más grande resulta la peor servida: las tres renderizaciones JSON del Common Core en GitHub no tienen archivo de licencia y la única pieza permisiva de NA no es currículo** (**P159**). ⚠️ **La acción 1 del pase 61 —abrir el PR a `toshieji`— NO se ejecutó: es hacia AFUERA, sobre un repo de terceros, y esta corrida es automática sin humano que la apruebe; el parche sigue escrito y versionado.** Ver **P153**–**P159** y las tendencias **426**–**436**.
 >
@@ -232,6 +233,101 @@ updated: 2026-10-03
 > fila** —`lineage-skill`, con un vocabulario cerrado de 9 valores por afirmación, **4 de los 9 «esto lo produjo el
 > modelo»**— y **ninguna de las dos sabe de la otra**. Ver la capa nueva al final de este archivo, las tendencias
 > **180**–**182** y el patrón **P99**.
+
+## 🧾 La columna LICENCIA de este archivo, re-medida en las 200 filas con la ref `HEAD` — el inventario está sano, y la excepción es una fila que cotiza un repo muerto (acción 1 del pase 63, pase 64 del 2026-10-03)
+
+**El pase 63 dejó escrita una acción con hipótesis falsable y las dos ramas útiles: si el reparto
+de licencias de las filas sin verificar se parecía al que el pase 51 midió, el inventario estaba sano
+y el barrido sólo lo confirmaba; si aparecía un bloque de «sin licencia» o de archivos-afirmación
+contados como permisivos, había que recotizar las recetas que los usan. Este pase la corrió completa
+sobre las **200** filas y el resultado cae en la PRIMERA rama.**
+
+### 🟢 El reparto, con el archivo leído y el tamaño registrado
+
+| Estado | n | % | Qué significa |
+|---|---|---|---|
+| **`LICENSED`** | **160** | 80,8 % | archivo de licencia leído, con familia y tamaño |
+| **`UNLICENSED`** | **32** | 16,2 % | repo **alcanzable**, ausencia **medida** en 14 nombres |
+| **`UNREACHABLE`** | **6** | 3,0 % | 404 por este canal; **no se afirma nada** de su licencia |
+
+⚠️ **Denominador declarado: 198, no 200.** De los 200 slugs que extrae el `grep`, **2 no son filas
+de datos**: `owner/repo` sale del TEXTO de un comando citado en la tabla de método de este archivo, y
+`your-username/SafeTutors` sale de la PROSA que describe el badge sin editar de `SafeTutors`.
+🔵 **Son un artefacto de MI extractor, no datos sucios de la KB — el pase 51 ya había
+caracterizado bien el caso de `SafeTutors`.** Se declara porque un denominador inflado en 2 es
+exactamente el tipo de error que esta base viene corrigiendo en otros pases.
+
+### 🟢 La familia de licencias, y por qué la hipótesis cae en su rama buena
+
+| Familia | Pase 64 (n=160) | Pase 51 (n=139) |
+|---|---|---|
+| MIT | **94** | 79 |
+| Apache-2.0 | **30** | 27 |
+| GPL | **12** | 9 |
+| AGPL-3.0 | **9** | 7 |
+| BSD (incl. 0BSD) | **4** | 4 |
+| CC0-1.0 | **2** | 3 (CC) |
+| LGPL | **2** | 2 |
+| CC BY-SA | **1** | — |
+| Unlicense | **1** | — |
+| ISC | **1** | — |
+| texto anómalo | **4** | 4 |
+
+🟢 **Permisivo sobre licenciado: 132/160 = 82,5 %**, contra **81,3 %** del pase 51.
+**Copyleft: 23/160 = 14,4 %**, contra **12,9 %**. 🔵 **El denominador creció de 167 a 198 filas
+en trece pases y las tres proporciones se movieron menos de dos puntos: eso es un inventario sano, y
+es el resultado que la acción pedía poder descartar.**
+
+🟢 **Y el control de **P168** no encontró nada que corregir en esta capa: de los 160 archivos
+leídos, **0 están por debajo de 400 bytes**.** El más chico es de **710 B**
+(`trilogy-group/oneroster-ts`) y el segundo de **750 B** (`pie-framework/pie-qti`), los dos textos de
+licencia completos y reales. ⚠️ **El `LICENSE` de 19 bytes que el pase 63 encontró vive en la capa
+de ERP de `verticals/`, no en la de agentes: la patología es real y está acotada.**
+
+### 🔴 La única fila que el barrido obliga a corregir: licencia afirmada sobre un repo que no existe
+
+| Fila | Decía | Mide | Prueba |
+|---|---|---|---|
+| [`radhepa/Teacher-MCP`](https://github.com/radhepa/Teacher-MCP) | 🔴 **«MIT ✅»** | 🔴 **404 — el repo no existe** | `raw:HEAD` **404** en los 14 nombres de licencia **y en las 8 rutas del control de alcanzabilidad**; `github.com` vía WebFetch **404** |
+
+🔴 **Las dos afirmaciones de esa fila son insostenibles al mismo tiempo: no hay licencia MIT que
+leer porque no hay repositorio.** 🔵 **Y el patrón de la corrección es el de **P147**: la
+licencia se heredó de una lectura vieja y nadie volvió a pedirle el archivo.**
+
+🟢 **Las otras 5 filas inalcanzables YA estaban correctamente marcadas «404» por pases
+anteriores** (`1EdTech/caliper-php`, `IMSGlobal/caliper-python`, `concentricsky/badgr-server`,
+`imazhar101/mcp-canvas-server`, `owentaylor/canvas-mcp`). **El barrido las reconfirma y no las
+re-descubre: 5 de 6 ya estaban bien.**
+
+### 🟢 Los 4 «textos anómalos» del pase 51, los CUATRO resueltos trece pases después
+
+| Repo | El pase 51 decía | Qué es, leído del archivo | Qué cambia |
+|---|---|---|---|
+| [`trilogy-group/oneroster-ts`](https://github.com/trilogy-group/oneroster-ts) | ⚠️ texto anómalo | 🟢 **BSD Zero Clause License (`0BSD`)**, 710 B | 🟢 **MEJORA la cotización: `0BSD` es más permisiva que MIT — cede sin exigir ni atribución** |
+| [`nmarafo/OpenDidactia`](https://github.com/nmarafo/OpenDidactia) | ⚠️ texto anómalo | 🔴 **CC BY-SA 4.0**, 2.122 B, en `LICENSE.md` y en español | 🔴 **ShareAlike sobre CONTENIDO curricular: no es entregable sin condiciones** |
+| [`kaldi-asr/kaldi`](https://github.com/kaldi-asr/kaldi) | ⚠️ texto anómalo | ⚠️ **`COPYING` NO es el texto de licencia: es un *legal notice* que aclara la convención de las cabeceras Apache** (17.263 B, «Update to legal notice, made Feb 2012…») | ⚠️ **La licencia efectiva es Apache-2.0 y vive en las CABECERAS de los fuentes, no en la raíz** |
+| [`dssg/student-early-warning`](https://github.com/dssg/student-early-warning) | 🔴 licencia académica no comercial | 🔴 **CONFIRMADO**: *«BY DOWNLOADING … Copyright © 2018. The University of Chicago. All Rights Reserved»*, 2.068 B | 🔴 **Sigue siendo bloqueo duro para una consultora** |
+
+🔵 **El caso `kaldi` agrega una clase al instrumento que ni **P114** ni **P168** cubrían: un
+archivo que EXISTE, pesa 17 KB y NO es una cesión — es un aviso sobre dónde está la cesión.**
+**Ni el código HTTP ni el tamaño lo atrapan; sólo leer el título** (**P171**).
+
+### ⚠️ Lo que el barrido NO mide, dicho antes de que alguien lo lea como cobertura
+
+- ⚠️ **El barrido mide CESIÓN, no LINAJE.** Las **188** filas sin abrir una por una siguen sin
+  abrirse: por **P160** la descripción se hereda entera y la superficie no, y eso sólo se ve en el
+  README. **La cobertura del barrido de linaje sigue en ~12 %** y este pase no la movió — la acción
+  lo decía explícitamente: *«NO mezclar con el barrido de linaje»*.
+- ⚠️ **Las 249 filas de esta tabla SIN URL de GitHub no entran en el denominador.** No son «sin
+  medir»: son medibles por registro + tarball, como hizo el pase 51.
+- 🔴 **`UNREACHABLE` no es «sin licencia».** Para las 6 filas 404 este pase **no afirma nada**
+  sobre su cesión, y esa es la diferencia que el control de alcanzabilidad existe para sostener.
+- ⚠️ **Los tamaños de este pase son 1 byte menores que los del pase 63** para el mismo archivo
+  (1.210 vs 1.211 B en `FWU-DE/mem-mcp`): el instrumento recorta el salto de línea final.
+  **Desvío sistemático y conocido, no discrepancia** — los tamaños son comparables entre pases.
+
+Código, control negativo y los dos TSV de 200 filas en
+`compose/code/p170-headref-license-sweep/`.
 
 ## 🇩🇪 La familia `FWU-DE`, abierta por fin — y el publicador NO es la licencia: cuatro regímenes en una sola institución pública (acción 1 del pase 62, pase 63 del 2026-10-03)
 
@@ -2244,7 +2340,7 @@ El pase 4 cerró el gap 5 diciendo: *"El hueco exacto es `pyKT` detrás de MCP, 
 | https://github.com/woodstocksoftware/student-progress-tracker | MIT ✅ | 1 | 9 | Perfiles, inscripciones, resultados de evaluación, mastery por tema, detección de learning gaps, recomendación de foco. Telemetría a nivel de pregunta |
 | https://github.com/tejpalvirk/student | MIT ✅ | 1 | 6 | Grafo de conocimiento académico (cursos, trabajos, exámenes, conceptos) con persistencia entre sesiones |
 | https://github.com/znecho9/knowledge-forest-mcp | Apache-2.0 ✅ | 0 | 3 | Árboles de prerequisitos + **mastery con evidencia obligatoria**: exige desempeño novedoso, sin asistencia y a libro cerrado antes de declarar dominio |
-| https://github.com/radhepa/Teacher-MCP | MIT ✅ | 0 | 2 | MCP-first con memoria SQLite persistente, personas docentes y andamiaje en tres niveles. Incluye un Claude Skill que corre solo o contra el server |
+| https://github.com/radhepa/Teacher-MCP | 🔴 **404 — repo inexistente (pase 64)**; 🔴 **esta celda decía «MIT ✅» y no hay archivo que leer:** `raw:HEAD` da **404** en los 14 nombres de licencia y en las 8 rutas del control de alcanzabilidad, y `github.com` da **404** vía WebFetch — **dos canales independientes** | 0 | 2 | MCP-first con memoria SQLite persistente, personas docentes y andamiaje en tres niveles. Incluía un Claude Skill que corría solo o contra el server. ⚠️ **Descripción conservada como registro histórico: el artefacto ya no es obtenible, así que no se puede proponer en una receta** |
 | https://github.com/ankimcp/anki-mcp-server | **MIT** ✅ | **499** | 254 | Puente MCP hacia **Anki**, el SRS de facto: crear, leer y revisar mazos en lenguaje natural. TypeScript, v0.22.0, en beta declarada. **No es un servidor de mastery: es el único de esta capa con tracción real** |
 
 > **Agregado en el pase 12 del 2026-10-01 — el techo de esta capa no era 1 ★, y la diferencia es de qué lado está el estándar.** Las cinco reinvenciones de mastery no pasan de 1 ★; `anki-mcp-server` tiene **499 ★ y 254 commits**. La diferencia no es calidad de código: es que los cinco **inventan** su modelo de dominio (grafo propio, SM-2 propio, esquema propio) mientras Anki **ya es el estándar instalado** de repetición espaciada y el MCP sólo lo expone. Leído junto con `py-fsrs` (MIT, en la tabla principal, que es el algoritmo moderno que reemplaza a SM-2), la lectura para un studio se invierte: **no construir el motor de mastery, conectarse al que el alumno ya usa.** Ver el patrón **P28**.

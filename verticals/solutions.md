@@ -9,6 +9,7 @@ updated: 2026-10-03
 > Plataformas verticales reales, en producción, customizables con AI.
 > Modelo: partir de algo que ya funciona y que ya tiene los datos, y agregar la capa agéntica arriba.
 > Verificado vía WebFetch el 2026-09-30; las capas del pase 11, el 2026-10-01.
+> **Pase 64 del 2026-10-03:** 🔴 **La capa de currículo de la vertical cambia de régimen, y no para mejor: las tres ontologías alemanas que el pase 63 cotizó como «sin licencia» declaran **CC BY-SA 4.0** dentro del `.owl` — **hay cesión, pero es ShareAlike, y el entregable del cliente hereda la obligación**.** 🔴 **Y aparece una clase de licencia que esta vertical no tenía: la del ORGANISMO DE ESTÁNDARES. `1EdTech/caliper-spec` trae `LICENSE.md` de 12.402 B que **no es una cesión de software**: es una licencia de documento condicionada a *Registered Users*** (**P175**). 🟢 **La capa de credenciales recupera una pieza permisiva viva: `1EdTech/openbadges-validator-core` (Apache-2.0), donde `concentricsky/badgr-server` da 404.** ⚠️ **Y la búsqueda obligatoria de plataformas vuelve sin alta permisiva por QUINTO pase consecutivo.**
 > **Pase 62 del 2026-10-03:** 🟢 **el aporte de plataforma de este pase es la COLUMNA DE LICENCIA de la capa de currículo, que convierte el modelo del pase 61 en una decisión de entrega: de siete artefactos medidos en cuatro regiones, UNO es entregable sin condiciones (Corea, MIT), uno con atribución (Brasil), uno con *share-alike* en el contrato (España), DOS no tienen cesión (North America y Alemania) y uno es ilegible (Australia).** 🔴 **Por eso el mismo proyecto —agente docente sobre el LMS del cliente, aterrizado al currículo oficial— es un proyecto DISTINTO en cada región: en Corea se integra, en Alemania hay que gestionar una licencia antes de empezar y en North America hay que producir la capa.** 🟢 **Dos piezas nuevas: `FWU-DE/lehrplan-ontologie` (16 Bundesländer en RDF/OWL, sin licencia) y `nmarafo/open-lex-edu` (832 normas LOMLOE, CC BY-SA en la raíz).** ⚠️ **Y la búsqueda obligatoria de plataformas volvió a devolver monocultivo de SEO de un solo proveedor: se reconfirma como no-hallazgo en vez de re-investigarse.**
 > **Pase 61 del 2026-10-03:** 🔴 **el aporte de plataforma de este pase es una corrección al modelo de este archivo: «partir de algo que ya tiene los datos» NO vale para el currículo — Moodle, Open edX, Canvas y OpenEduCat traen el continente (cursos, actividades, libro de calificaciones) y NINGUNO trae el currículo nacional del país del cliente; Canvas trae *Outcomes* como estructura VACÍA.** 🟢 **La pieza que llena el hueco se midió este pase y es usable en tres de las cuatro regiones (LATAM MIT/CC BY 4.0, EMEA MIT/OGL v3.0, APAC oficial) — ver la receta **P158**.** 🔴 **Y se REFUTA una recomendación secundaria que manda a `Forma LMS` por «Apache 2.0, the most permissive licence»: la única aparición de «Apache» en su README es el SERVIDOR web (`mod_rewrite`), no tiene archivo de licencia en `master` (7 nombres → 404) y su distribución propia dice **GPLv2** — seguir esa recomendación pone una entrega corporativa sobre copyleft** (**P155**).
 > **Pase 57 del 2026-10-03:** 🔴 **el hallazgo de plataforma de este pase cambia un requisito de configuración de Moodle, no un repo: la pieza que el pase 56 declaró «la única entregable tal cual» —`toshieji/moodle-grading-mcp`— sólo cumple si la TAREA de Moodle tiene el *marking workflow* activado, y el servidor no lo mira.** Leído de primera mano en `moodle/moodle` @ `main`, `public/mod/assign/locallib.php:2991-3001`: *«If marking workflow is enabled, the workflow state is at 'released'»*, con el SQL `WHERE (a.markingworkflow = 0 OR (a.markingworkflow = 1 AND uf.workflowstate = :wfreleased))`. 🔴 **Con `markingworkflow = 0` Moodle le manda la nota al alumno sea cual sea el `workflowstate`.** 🔵 **Traducción a requisito de implantación, y es accionable en la primera reunión técnica: antes de instalar cualquier puerta de notas sobre Moodle hay que activar *Marking workflow* en cada tarea de destino (Ajustes de la tarea → Calificación → *Use marking workflow*) y verificarlo por API (`mod_assign_get_assignments` → `markingworkflow`), porque es la casilla de la que depende la palabra «borrador».** ⚠️ **Es configuración de plataforma, no desarrollo: cuesta minutos y sin ella el control no existe.** 🟢 **La suite nueva `compose/code/grading-draft-gate/` (37/37) afirma las tres propiedades del patrón y, en su control (iv-b), demuestra el fallo: con el chequeo apagado el servidor manda `readyforreview` correctamente y Moodle notifica al alumno igual.** 🔴 **Segundo hallazgo de plataforma, sobre Canvas: la compuerta que el *security release* del pase 56 recomendó (`ALLOWED_WRITE_TOOLS`) es **fail-OPEN en stdio** — *«HTTP servers are read-only unless configured … Local stdio servers are unchanged unless you set it»*. **Un piloto de docente en local no hereda la protección del despliegue HTTP**, así que el runbook tiene que fijarla explícitamente en los dos transportes. 🟢 **Y la pieza con más controles de plataforma de toda esta capa es `bruchris/canvas-lms-mcp` (16 variables `CANVAS_*`), con dos que ninguna otra tiene: `CANVAS_PROVENANCE_FENCING` (encendido por defecto, marca el texto de terceros — el único control de la capa que ataca el modelo de amenaza de P132 por donde entra) y `CANVAS_PSEUDONYMIZE_STUDENTS` (modo FERPA, los nombres no llegan al LLM).** ⚠️ **Pero su desregistro real (`CANVAS_DESTRUCTIVE_TOOLS=block`) cubre los SIETE tools de borrado y NO `grade_submission`: la nota no está cubierta** (**P140**). ⚠️ **Verticales de SIS/ERP rebarridas sin alta permisiva nueva: OpenEduCat (LGPL, sobre Odoo, 3 M+ usuarios declarados), openSIS (GPL), RosarioSIS, Gibbon y ERPNext — ninguna MIT/Apache, así que el encuadre de licencia de esta capa no cambia.** Ver **P137**–**P141** y las tendencias **370**–**392**.
@@ -103,6 +104,77 @@ updated: 2026-10-03
 > versiones), así que lo permisivo (`qti3-*`, `instructure/qti`) es **lo único proponible** — con **`qti3-a11y`** y
 > **`qti3-pnp`**, que abren accesibilidad de evaluación como entregable auditable (**P72**). ⚠️ **Open edX cambia de
 > recomendación: proponer con presupuesto de mantenimiento (gap 70).** Ver la sección del pase 33, abajo.
+
+## 🧾 La capa de currículo de la vertical pasa de «sin licencia» a ShareAlike, y entra una clase de licencia nueva: la del organismo de estándares (pase 64 del 2026-10-03)
+
+**Dos cosas cambian lo que esta vertical puede prometer, y las dos salen de leer el archivo en vez de
+la página.**
+
+### 🔴 Alemania tenía cesión, y el modelo de entrega cambia igual
+
+| Pieza | Pase 63 cotizaba | Pase 64 mide | Qué cambia en la entrega |
+|---|---|---|---|
+| `FWU-DE/lehrplan-ontologie` | 🔴 sin licencia → *«pedir cesión a FWU»* | 🔴 **CC BY-SA 4.0** (en el `.owl`) | 🟢 **no hay que pedir nada** · 🔴 **pero el derivado hereda ShareAlike** |
+| `FWU-DE/schulfach-ontologie` | 🔴 sin licencia | 🔴 **CC BY-SA 4.0** | ídem |
+| `FWU-DE/schulart-ontologie` | 🔴 sin licencia | 🔴 **CC BY-SA 4.0** | ídem |
+| `dini-ag-kim/schulfaecher` | 🟢 CC0 1.0 | 🟢 **CC0 1.0** | 🟢 **la única sin condiciones de toda la capa** |
+| `nmarafo/OpenDidactia` (ES) | ⚠️ anómalo | 🔴 **CC BY-SA 4.0** | 🔴 ShareAlike |
+
+🔵 **Para cotizar, la diferencia entre «sin licencia» y «CC BY-SA 4.0» no es de grado, es de
+naturaleza: la primera bloquea el uso y se negocia con el publicador; la segunda habilita el uso y
+**condiciona el entregable del cliente**.** 🔴 **Un cliente que quiera cerrar su currículo
+derivado no puede partir de esta capa — y eso hay que decirlo en la propuesta, no en la auditoría.**
+
+🟢 **La salida sigue existiendo y es `schulfaecher` (CC0, dominio público): cubre la capa de
+MATERIAS. Lo que no tiene salida permisiva es la capa de CURRÍCULO POR LAND, que es justamente la que
+agrega el valor local.** 🔵 **Patrón a declarar: lo genérico se cede sin condiciones, lo
+específico se cede con ellas** (**P174**).
+
+### 🔴 La clase de licencia nueva: el documento de estándar no es software cedido
+
+**`1EdTech/caliper-spec` está vivo donde sus dos clientes dieron 404, y trae `LICENSE.md` de 12.402
+bytes. Un escaneo que pregunta «¿existe LICENSE?» lo aprueba. El texto dice otra cosa:**
+
+> *«IMS specifications are published solely for the purpose of enabling interoperability … and are
+> made available under license to **Registered Users** solely to further that purpose.»*
+
+| Qué habilita | Qué NO habilita |
+|---|---|
+| 🟢 leer la spec e **implementarla por cuenta propia** | 🔴 redistribuir el documento como parte de un entregable |
+| 🟢 interoperar con productos del ecosistema | 🔴 tratarla como MIT/Apache en un inventario de dependencias |
+
+🔵 **Es un tercer régimen junto a permisivo y copyleft, y el modo de fallo es el de **P168** por
+la vía opuesta: ahí el archivo era demasiado CHICO para ser una cesión (19 B), acá es grande y
+tampoco lo es** (**P175**). ⚠️ **Consecuencia para un runbook: la spec se cita, la
+implementación se escribe, y el cliente no recibe el PDF.**
+
+### 🟢 La capa de credenciales recupera una pieza permisiva, y era la que faltaba
+
+| Pieza | Licencia **leída** | Estado | Rol en la vertical |
+|---|---|---|---|
+| [`1EdTech/openbadges-validator-core`](https://github.com/1EdTech/openbadges-validator-core) | 🟢 **Apache-2.0** (13.184 B) | 🟢 **viva** | **validador de Open Badges del propio organismo** — reemplaza al muerto `concentricsky/badgr-server` |
+| `IMSGlobal/openbadges-specification` | 🔴 **ninguna (medida)** | 🟢 alcanzable | la spec: se lee, no se redistribuye |
+| `concentricsky/badgr-server` | — | 🔴 **404** | ⚠️ **la implementación de referencia que cita toda la documentación del sector ya no es obtenible** |
+
+🔵 **Esto desbloquea un pedazo concreto: emitir y VALIDAR credenciales abiertas vuelve a tener
+una pieza Apache-2.0 que se puede entregar, aunque el servidor de referencia haya desaparecido.**
+
+### ⚠️ La búsqueda obligatoria de plataformas, reproducida — sin alta permisiva por quinto pase
+
+| Búsqueda | Resultado |
+|---|---|
+| `open source platform education ERP CRM MIT Apache` | ⚠️ **sin alta permisiva nueva** |
+
+**Lo único que la búsqueda devolvió y no estaba en esta vertical es **CK-ERP** («*open source
+accounting/educational/MRP/ERP/CRM*», 32 módulos con Teacher/Student/Registrar).**
+🔴 **No se agrega: el último anuncio localizable es de una lista de correo de Drupal de
+**julio de 2010** y no hay repo verificable por el canal de este pase. Un ERP educativo sin
+mantenimiento en 16 años no es un punto de partida — es una cita histórica.**
+
+🔵 **Y el reparto de la capa de ERP educativo no se movió: `openeducat/openeducat_erp`
+**LGPL-3.0** (8.240 B, re-leído este pase), `frappe/education` **GPL-3.0** y `frappe/erpnext`
+**GPL-3.0**. 🔴 **Cinco pases de búsqueda obligatoria y el ERP educativo open source sigue
+siendo íntegramente copyleft: eso ya no es un hueco de búsqueda, es la forma del mercado.**
 
 ## 🇨🇱 Chile RECLASIFICA el hueco de LATAM, y el ERP educativo de la vertical resulta todo copyleft — con un `LICENSE` de 19 bytes (pase 63 del 2026-10-03)
 

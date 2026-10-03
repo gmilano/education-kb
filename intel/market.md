@@ -8,6 +8,7 @@ updated: 2026-10-03
 
 > Key players, market map y oportunidades por región.
 > Investigado 2026-09-30; el pase 11, el 2026-10-01. Las estimaciones de tamaño de mercado varían mucho entre firmas: se listan todas con su fuente en vez de elegir una.
+> **Pase 64 del 2026-10-03:** 🔵 **Las cuatro búsquedas regionales obligatorias se corrieron y rinden el eje REGULATORIO, no el de tamaño: el **EU AI Act entra en vigor pleno en agosto de 2026 clasificando la AI educativa como ALTO RIESGO**, mientras **NA no tiene equivalente — ningún «FDA del edtech»— y decide escuela por escuela.** 🔴 **La asimetría que eso crea es la oportunidad: NA concentra ~36 % del mercado y sólo **10 % de las instituciones tiene guía formal de AI** con **71 % de los docentes sin formación**; EMEA tiene la obligación legal pero **38 % de las organizaciones aún no empezó a pilotear**.** 🟢 **APAC mueve el eje a SOBERANÍA (la mitad de las firmas la deja decidir su infraestructura) y LATAM a FRAGMENTACIÓN regulatoria, con el dato más duro de la región: **99 % de las startups usa AI y <25 % entrena modelo propio**.** ⚠️ **Y las series de tamaño siguen sin reconciliar entre firmas: se listan las tres con su fuente.**
 > **Pase 62 del 2026-10-03:** 🔴 **el aporte de mercado de este pase es el reparto de LICENCIAS de la capa de currículo, cerrado sobre dos pases y las cuatro regiones: de SIETE artefactos medidos, exactamente UNO es permisivo y legible (Corea, MIT) — dos *share-alike*, uno CC BY, DOS sin licencia y uno ilegible. La región con más presupuesto (North America) y la de mayor cobertura técnica (Alemania, 16 Bundesländer en RDF/OWL) son justo las dos SIN CESIÓN, así que la capa más cara de cualquier engagement educativo es también la peor licenciada.** 🟢 **Las cuatro regiones rindieron: NA con 134 proyectos de ley en 31 estados y sólo 18 % del profesorado con guía escrita; EMEA con el quinto canal concordante sobre el diferimiento del alto riesgo a 2027-12-02; APAC con la Ley Marco coreana EN VIGOR desde enero y la única pieza de currículo permisiva de la base; LATAM con UNESCO IESALC (91,5 % / 75 %) como SEGUNDO instrumento de la brecha de gobernanza — que no se mezcla con el 92 % / 79 % del DEC.**
 > **Pase 61 del 2026-10-03:** 🟢 **el aporte de mercado de este pase es una capa entera colocada por región —el currículo nacional estructurado, la pieza más cara de cualquier agente docente (gap 4)— y por primera vez las cuatro regiones tienen veredicto propio y medido.** 🟢 **LATAM gana: Brasil tiene el artefacto mejor instrumentado (MIT / dato CC BY 4.0, 1.721 aprendizajes con procedencia POR REGISTRO, MCP hospedado SIN API key) y encima produce el número que vende la capa —alucinación 31,9 % → 0,2 % con el dato en el prompt, 2,3 % vía MCP, en pares y con pre-registro—.** 🟢 **EMEA tiene la licencia más limpia: OGL v3.0 con permiso comercial EXPLÍCITO sobre una ontología OWL/SKOS/SHACL del National Curriculum inglés.** 🟢 **APAC es el único caso sin intermediario —MRAC lo publica ACARA, el organismo curricular mismo— ⚠️ pero su licencia quedó sin leer por bloqueo de egreso (gap 254).** 🔴 **Y North America, con el 38 % del mercado, es la PEOR servida: las tres renderizaciones JSON del Common Core en GitHub no tienen archivo de licencia, la única pieza permisiva (`CEDS-Ontology`, Apache 2.0) no es currículo sino un modelo de entidades, y el camino que queda —CASE Network 2— es un servicio hospedado que se COTIZA como integración, no como reuso** (**P159**). ⚠️ **Las coberturas se declaran: EMEA es Inglaterra y LATAM es Brasil — el resto de las dos regiones es hueco medido, no cobertura** (**gap 255**).
 > **Pase 59 del 2026-10-03:** 🔴 **el aporte de mercado de este pase es la cifra de NA que convierte el hallazgo técnico de esta KB en una venta: Gallup + Walton Family Foundation, *«Teaching for Tomorrow: Closing the Expectations Gap»* (campo 9-feb a 2-mar de 2026, n = 2.069 docentes de K-12 públicos de EE. UU.) mide que sólo el 18 % tiene guía FORMAL sobre uso de AI, el 34 % no tiene NINGUNA, el 48 % sólo informal — y 🔴 el 58 % no tiene guía para usar AI al CALIFICAR o dar devolución (69 % para tutoría 1-a-1).** 🔵 **Ese 58 % es exactamente la capa que esta KB mide, y las dos ausencias se refuerzan: los pases 56-59 establecieron que el ecosistema open source no tiene norma de «borrador + liberación humana» (1 de 9 lo afirma en código, y su garantía depende de una casilla de plataforma), y Gallup establece que la institución tampoco trae la regla. El control es ENTREGABLE, no un supuesto del proyecto.** ⚠️ **Y ya es obligatorio en cuatro estados: Idaho, Oklahoma, Virginia y Maryland exigen guía estatal Y política de distrito; Oklahoma y Maryland prohíben que la AI decida de forma determinante sobre un alumno.** 🔴 **Corrección de fuente EMEA que este pase hace en vez de propagar: una secundaria afirmó *«Entry into force of AI Act on 31 July 2026»* — es FALSO y se descarta; el AI Act entró en vigor el 2024-08-01 y lo de julio de 2026 fue el *AI Omnibus* (2026-07-27). Los tres relojes del pase 58 se sostienen y no se re-litigan.** 🟢 **Dato LATAM nuevo para elegir país de entrada: sólo Brasil (65,89), Chile (63,19) y Uruguay (62,21) entran al top 50 del AI Readiness Index, con Chile «pionero».** 🟢 **Y dato APAC nuevo: 96 % de las organizaciones planea invertir más y 88 % espera retorno este año, con ROI declarado de 2,85 USD por dólar.** ⚠️ **El hueco LATAM se declara por décimotercera vez: ninguna de las nueve puertas medidas declara origen LATAM, y este pase resistió inferirlo de un antropónimo (regla de **P135**).** Ver las tendencias **402**–**412**.
@@ -47,6 +48,50 @@ updated: 2026-10-03
 > regulado — **STUDENTS FIRST Act of 2026**, marco de los estudiantes de los 50 estados (AASA, agosto 2026).
 > **LATAM:** 🔵 el hallazgo del pase — **existe una capa MCP nacional brasileña de datos públicos, activa y MIT, y
 > educación es el único dominio grande que falta** (**gap 69**).
+
+## 🌍 El eje de 2026 no es el tamaño del mercado, es la ASIMETRÍA REGULATORIA entre regiones (pase 64 del 2026-10-03)
+
+**Las cuatro búsquedas regionales obligatorias de este pase devolvieron menos cifras de tamaño nuevas
+y más estructura regulatoria. La estructura es lo accionable, porque decide QUÉ se puede vender en
+cada región antes que CUÁNTO.**
+
+### 🔴 El contraste que ordena el año
+
+| | EMEA | North America |
+|---|---|---|
+| Régimen | 🔴 **EU AI Act en vigor pleno desde agosto 2026**; AI educativa = **ALTO RIESGO** | 🔴 **vacío relativo: no hay equivalente a la FDA para edtech** |
+| Quién decide | el regulador, de forma uniforme | ⚠️ **cada escuela, distrito o universidad** |
+| Fragmentación | 4 niveles de riesgo definidos (inaceptable / alto / limitado / mínimo) | ⚠️ **estados sueltos: Colorado y Texas con requisitos parciales** |
+| Qué se vende | 🟢 **cumplimiento y trazabilidad** | 🟢 **gobernanza que aún no existe** |
+
+🔵 **Esa tabla es la tesis comercial del pase: en EMEA el comprador tiene una obligación y busca
+cómo cumplirla; en NA tiene una exposición y todavía no sabe que la tiene. Son dos ventas distintas
+sobre el mismo producto técnico.**
+
+### ⚠️ Tamaño de mercado: tres series que NO se reconcilian, listadas con su fuente
+
+| Serie | Valor | Ventana | CAGR |
+|---|---|---|---|
+| AI en educación | **US$ 7,52 B → 10,6 B** | 2025 → 2026 | **40,9 %** |
+| AI en educación | **US$ 6,4 B → 79,6 B** | 2025 → 2034 | **31,35 %** |
+| AI *tutors* (subsegmento) | **→ US$ 7,99 B** | a 2030 | — |
+
+⚠️ **Las dos primeras no son compatibles: una pone 2025 en 7,52 B y la otra en 6,4 B.** 🔵 **Se
+conservan las dos con su fuente, como viene haciendo este archivo, en vez de elegir una y perder la
+señal de que el consenso no existe.**
+
+### 🟢 El dato de adopción que no está en disputa, y es el que abre la conversación
+
+| Indicador | Valor |
+|---|---|
+| Uso de AI por estudiantes, global | 🟢 **66 % (2024) → 92 % (2025)** |
+| Estudiantes de educación superior que usan AI como socio primario de investigación | 🟢 **86 %** al inicio de 2026 |
+| Despliegue en nube (cuota de mercado) | **71,22 %** (2024) |
+
+🔴 **Contra 92 % de uso estudiantil, 10 % de instituciones con guía formal: la brecha entre
+adopción y gobernanza es la oportunidad más grande del sector, y no es tecnológica.**
+
+Fuentes de este pase en `intel/trends.md`, tendencias **471**–**478**.
 
 ## Tamaño de mercado
 
@@ -1346,6 +1391,28 @@ Dónde se produce el software educativo abierto, que no es donde está la demand
 ## Opportunities by region
 
 ### North America
+
+#### 📍 Pase 64 del 2026-10-03 — el mercado más grande con el régimen más flojo
+
+| Indicador | Valor |
+|---|---|
+| Mercado AI-en-educación NA | **US$ 951 M (2024) → 2.303,2 M (2029)**, CAGR **15,9 %** |
+| Cuota del mercado global | **~36 %** (otra serie: **41,7 % del crecimiento** global, con **US$ 3,37 B** de oportunidad 2026-2030) |
+| Instituciones con guía formal de AI | 🔴 **10 %** |
+| Docentes de EE.UU. sin formación en AI | 🔴 **71 %** |
+
+🔴 **Régimen: vacío relativo.** No hay equivalente a la FDA para tecnología educativa; la
+decisión de adopción la toma cada escuela, distrito o universidad con supervisión externa mínima.
+⚠️ **Requisitos parciales por estado (Colorado, Texas), sin marco federal.**
+
+🟢 **Oportunidad concreta para un estudio: la capa de GOBERNANZA es el entregable, no el
+modelo.** Con 92 % de uso estudiantil global contra 10 % de instituciones con política escrita, lo
+que falta es política, trazabilidad y formación docente — **y 71 % de docentes sin formación es un
+programa de capacitación dimensionable, no un diagnóstico**.
+🔵 **Y hay un enganche técnico que esta KB ya midió: la capa de currículo de NA es la PEOR
+servida en licencia (**P159**) — tres renderizaciones JSON del Common Core sin archivo de licencia.
+En la región con más mercado, el dato base no está cedido.**
+
 
 #### Agregado en el pase 63 del 2026-10-03 — 🔴 la legislación estatal pasó de «mandato de política» a PROHIBICIÓN de decisión automatizada, y eso le pega exactamente a la capa que esta KB declaró la peor abastecida
 
@@ -2687,6 +2754,26 @@ Artículo 50(2) **no es exigible** en North America — pero es **el requisito m
 multi-región conviene cotizarlo contra el techo europeo y no contra el piso local (ver **P103** y **P105**).
 
 ### EMEA
+
+#### 📍 Pase 64 del 2026-10-03 — la región donde la regulación es el producto
+
+| Indicador | Valor |
+|---|---|
+| **EU AI Act** | 🔴 **en vigor pleno desde agosto de 2026**; **AI educativa clasificada ALTO RIESGO**; 4 niveles (inaceptable / alto / limitado / mínimo) |
+| Organizaciones que invertirán en formación AI en 2026 | **94 %** |
+| Organizaciones EMEA que aún NO empezaron a pilotear | 🔴 **38 %** |
+| Compromiso público del Reino Unido | **£200 M+** en el AI Adoption Summit, con **Skills England** fijando el marco curricular y Cisco, IBM, BT y Rolls-Royce como socios de entrega |
+| Gobernanza sectorial | **Consejo de Europa**: 2.° *working conference* sobre las dimensiones regulatorias de la AI en educación (octubre) |
+
+🟢 **Oportunidad concreta: el cumplimiento es facturable y tiene fecha.** La clasificación de
+alto riesgo obliga a documentación, evaluación de conformidad y supervisión humana sobre sistemas
+que ya están desplegados — **y 38 % de organizaciones sin pilotos significa que la mayoría llegará
+a la obligación sin arquitectura**.
+🔵 **Enganche con lo medido en este pase: la capa de currículo de EMEA (Alemania y España)
+converge en **CC BY-SA 4.0** (**P174**). Para un entregable europeo eso es doble condición —
+ShareAlike sobre el dato **más** alto riesgo sobre el sistema — y conviene pre-registrarlo en la
+propuesta.**
+
 
 #### Agregado en el pase 63 del 2026-10-03 — ⚠️ el calendario del AI Act se confirma por SEXTO canal, y la novedad de la región no es regulatoria: es que apareció la arquitectura de soberanía en una compra pública real
 
@@ -4159,6 +4246,26 @@ este pase dejó cubierto con código.
 
 ### APAC
 
+#### 📍 Pase 64 del 2026-10-03 — el eje es SOBERANÍA, y la brecha es de gobernanza
+
+| Indicador | Valor |
+|---|---|
+| Líderes de gobernanza APAC que ponen la adopción de AI como prioridad 2026 | **48 %** |
+| Riesgo declarado mayor | 🔴 **la brecha de gobernanza**: los marcos no siguen el ritmo de la implementación |
+| Soberanía | 🔵 **decide la elección de infraestructura en ~la mitad de las firmas de la región** |
+| Plantilla regulatoria | **Singapur**: consultas sobre uso de AI en instituciones financieras como modelo de cómo se fijarán los límites |
+| ANZ | **Australia** endurece gobernanza de AI y reglas de copyright; OpenAI nombra responsable de política para AU/NZ |
+| Movimientos de mercado | **LearnUpon** abre sede en Sydney con autoría de cursos por AI; **TCS + Pearson**, alianza plurianual de *AI learning*; **Alteryx** relanza su Academy con rutas personalizadas |
+
+🟢 **Oportunidad concreta: despliegue soberano.** Si la soberanía decide la infraestructura en
+la mitad de las firmas, la arquitectura que gana es **modelo local + dato que no sale de la
+jurisdicción** — y esta KB ya tiene la capa para eso (la categoría *offline-first* con AI local, y
+`Kolibri` como plataforma MIT).
+⚠️ **Hueco declarado, no ausencia: sigue SIN medirse si existe artefacto de currículo
+estructurado para JAPÓN**, el país con la transición a libro de texto digital oficial en curso.
+**Es la cuarta vez que esta base lo declara sin cerrarlo.**
+
+
 #### Agregado en el pase 63 del 2026-10-03 — 🟢 los dos estatutos de la región entran en vigor con fecha confirmada, y el dato nuevo es de demanda: la opinión pública asiática NO quiere prohibir la AI en la escuela
 
 🟢 **Confirmación de los dos instrumentos que esta base ya tenía, ahora con las fechas cerradas:**
@@ -5333,6 +5440,29 @@ desplegado + puerta MCP permisiva (`jbnu-lms-mcp`, `canvas-lms-mcp`, las cuatro 
 depende de un tercero» son el mismo argumento.**
 
 ### LATAM
+
+#### 📍 Pase 64 del 2026-10-03 — adopción altísima, construcción propia bajísima
+
+| Indicador | Valor |
+|---|---|
+| Startups LATAM que usan alguna solución de AI | **99 %** |
+| Que la integran nativamente en su producto | **85 %** |
+| Que desarrolla modelo propio | 🔴 **< 25 %** |
+| Modelo más integrado | **OpenAI 89 %**, seguido por Gemini y Claude |
+| Empresas de Latinoamérica que usan AI | **> 85 %** |
+| Sectores más disruptivos | **fintech, healthtech y EDTECH** |
+| Evidencia académica regional | **UNESCO/UNU**: relevamiento de **200 instituciones de educación superior en 19 países** (agosto–octubre 2025), en cinco dimensiones — enseñanza, investigación, extensión, administración y gobernanza |
+| Marco regulatorio | **BID**: documento sobre un marco habilitante para AI en América Latina y el Caribe |
+
+🔴 **Régimen: fragmentación.** Múltiples países con marcos legales distintos o inexistentes;
+la entrada en vigor del EU AI Act agrega riesgo de inconsistencia para operaciones transfronterizas.
+
+🟢 **Oportunidad concreta, y es la más nítida de las cuatro regiones: 99 % de adopción con
+<25 % de construcción propia es exactamente el perfil de un cliente de estudio.** La demanda no es
+«adoptar AI» — ya la adoptaron, vía API de terceros — sino **dejar de depender de una sola API**:
+capa de abstracción de modelo, dato propio, y evaluación. ⚠️ **Con 89 % de concentración en un
+proveedor, el argumento de riesgo de concentración se sostiene sin tener que venderlo.**
+
 
 #### Agregado en el pase 63 del 2026-10-03 — 🔴 la brecha de gobernanza de LATAM tiene por fin un denominador institucional grande, y el número es peor de lo que la base venía diciendo
 
