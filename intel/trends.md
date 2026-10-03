@@ -5313,7 +5313,7 @@ se vende hoy en EMEA es el expediente de divulgación; el de alto riesgo pasa a 
 declarar en vez de taparse: de las 8 piezas de la capa docente, NINGUNA declara origen LATAM** — y el
 pase 56 se atrapó inventándolo (**P135**).
 
-## 🔵 El pase 58 del 2026-10-03 — la acción 1 cierra en su rama mala con un eje nuevo, y la acción 3 estaba cerrada por el PROPIO pase 57
+## 🔵 Las tendencias 393–401, del pase 58 del 2026-10-03 — la acción 1 cierra en su rama mala con un eje nuevo, y la acción 3 estaba cerrada por el PROPIO pase 57
 
 ⚠️ **Dos de las tres acciones del pase 57 se ejecutan y cierran. La tercera no se pudo tocar y el motivo es del
 entorno, no del método, así que se declara en vez de rellenarse.**
@@ -5571,6 +5571,266 @@ no se re-agenda.**
   son verificables por los canales abiertos de esta corrida, y esta base no copia tracción sin
   leerla.** 🔵 **Las 3 altas del pase salieron de SEGUIR UNA CITA —los clientes muertos de
   Caliper y Badgr hacia sus organismos vivos—, que es el mismo canal que rindió en el pase 63.**
+
+## Las tendencias 493–511, del pase 66 del 2026-10-03
+
+**493.** 🔴 **Un archivo de licencia COMPLETO puede decir la licencia equivocada, y esta base no tenía
+cómo verlo.** `MaybeItsAdam/tutors` trae `LICENSE.md` de **1.075 B** con el texto MIT completo, titular
+y año — `Copyright (c) 2024 tldraw Inc.` — y su README dice que los términos que gobiernan son la
+licencia del **SDK de tldraw**, que exige conservar la marca de agua *«Made with tldraw»* en el lienzo.
+⚠️ **MIT no obliga a conservar ningún elemento visual.** 🔵 **Las cuatro capas que esta KB mide lo
+aprueban: P170 (hay archivo), P171 (familia del título), P168 (tamaño de texto), P179 (titular + año +
+texto = cesión). La que lo detecta es nueva: ¿el titular PERTENECE al proyecto?** Ver **P184**.
+
+**494.** 🟢 **El copyright de un archivo MIT es una señal de LINAJE, y es más robusta que la deriva de
+descripción.** Barridos los 160 archivos presentes, **cuatro** de las seis filas que importan son los
+forks de `canvas-mcp` llevando el copyright de `Vishal Sachdev`: `AmirF194`,
+`BartMassey-upstream`, `abr-Projects`, `lindsay-cheng`. 🔵 **Es el mismo linaje que el pase 63
+estableció leyendo `description`, recuperado por un canal sin relación — y el titular sobrevive a un
+renombre, a una reescritura de `description` y a un fork desprendido, tres cosas que la descripción no
+sobrevive.**
+
+**495.** 🔴 **Y la lección de método del pase, que es sobre el propio instrumento: la FAMILIA de la
+licencia es una entrada obligatoria de la pregunta del titular.** El primer *build* devolvió **87
+`HOLDER-UNRELATED` de 99**, porque sobre **Apache-2.0** publicaba una frase del cuerpo
+(*«notice that is included in or attached to the work»*, 29 de 30 filas) y sobre **GPL/AGPL** publicaba
+`Free Software Foundation, Inc.` — **el copyright DEL TEXTO de la licencia** (21 filas). 🔵 **Parchear
+el filtro de frases fue el movimiento equivocado y los controles sobre los textos REALES lo
+demostraron:** Apache de 11.408 B → `patent, trademark, and`; GPL de 35.147 B →
+`permission, other than the making of an`. ⚠️ **Ninguna lista de palabras cierra la clase, porque esos
+textos son decenas de kilobytes de prosa SOBRE el copyright.**
+
+**496.** 🔵 **La asimetría que esa corrección deja escrita, y vale para toda pregunta de licencia que
+esta base agregue:** **P170** quitó la dimensión **rama** y **P171** llevó la familia al **título** —
+las dos hicieron la pregunta *menos* dependiente del contexto, y estuvo bien. **La dimensión del
+titular no va para ese lado:** que un archivo de licencia nombre al titular del proyecto **es una
+propiedad DE LA FAMILIA** (MIT/BSD/ISC sí; Apache, GPL, CC, Unlicense no). 🟢 **El instrumento se niega
+a contestar sin familia en vez de adivinar, y eso lo vuelve usable: 61 `NOT-APPLICABLE`, 68
+`HOLDER-MATCH`, 31 a leer.**
+
+**497.** 🔴 **El README es una TERCERA capa de licencia, y una regla de esta casa la mantuvo invisible
+dos pases.** De las 22 filas `PAYLOAD-SILENT`, **6 declaran licencia SÓLO en el README** —badge,
+sección `## License`, o las dos—. **Ninguno de los dos instrumentos anteriores podía verlo porque
+ninguno preguntó el README**, y el motivo es **P171**, que prohíbe el `grep` del cuerpo por la palabra
+*license*. ⚠️ **Tiene razón sobre el `grep` y se equivoca sobre la CAPA: un badge
+`img.shields.io/badge/License-MIT` y una sección `## License` son declaraciones ESTRUCTURADAS, no una
+palabra en una frase.** Ver **P182**.
+
+**498.** 🔴 **El denominador de «ausencias medidas» bajó por tercera vez consecutiva: 32 → 22 → 14.**
+La cifra original del pase 64 estaba inflada un **129 %**, y **las tres mediciones son correctas para
+la pregunta que cada una hizo.** 🔵 **La consecuencia que se reutiliza, y queda como regla: «ausencia
+medida» sin nombrar la CAPA no es un dato reutilizable.** De ahora en más esta KB escribe la capa junto
+a la cifra.
+
+**499.** 🔴 **Dos instrumentos del MISMO pase dieron respuestas opuestas sobre la misma fila, y el TSV
+autoritativo publicó la peor.** `dini-ag-kim/school-curriculum-pg` cede **CC BY-SA 4.0** —medido en
+`lp-base.ttl` línea 24, con titulares por **ORCID**— y el pase 65 lo midió con `sweep_semantic.sh` **y
+lo publicó en prosa**, mientras `sweep_payload.sh` lo dejaba `PAYLOAD-SILENT` porque su lista de
+nombres semánticos es por convención (`catalog.ttl`, `ontology.ttl`, `vocab.ttl`) y este repo nombra
+`lp-*.ttl`. ⚠️ **Es P126 regla 1 en su forma más incómoda: el instrumento que el repositorio ya
+versionaba tenía la respuesta, y el barrido masivo la contradijo sin reconciliarse con él.**
+
+**500.** 🔴 **Las CONTRADICCIONES de licencia valen más que las ausencias, y esta base no tenía dónde
+escribirlas.** `SabioTechTeam/Teacher-Hub` pone badge `MIT` y prosa *«free for educational and
+**non-commercial** use»* —**y MIT permite el uso comercial sin condiciones**—;
+`eth-lre/mathtutorbench` pone badge `CC BY 4.0` y prosa `CC BY-**SA** 4.0`, **y ShareAlike decide si un
+derivado puede cerrarse**. 🔵 **Una ausencia se pregunta; una contradicción se litiga.** La columna
+Licencia admite desde hoy el valor **`no-entregable-sin-aclaración`**, que una celda con una sola
+licencia no puede expresar.
+
+**501.** 🔵 **Clase nueva, y la aporta LATAM: `NOT-A-LICENSE`.**
+`vilcaaguilerandrea-oss/carrera-lectora` (Perú) dice *«Creado con fines educativos. Libre para usar en
+contextos educativos.»* — **un permiso a medida, más angosto que cualquier licencia OSI, que además no
+nombra ninguna.** ⚠️ **«Contextos educativos» no define si un entregable facturado a un ministerio lo
+es.** 🔵 **Y es la tercera pieza LATAM consecutiva con intención abierta y vehículo legal ausente: el
+patrón no es descuido, es que el autor es un docente o una institución, no un equipo de software.**
+
+**502.** 🟢 **La capa de PAQUETE está SANA, y eso decide qué NO hay que reescribir.** Medidos 18
+paquetes en los dos registros (23 mediciones, *tarball*/sdist bajado y grepeado): **17 de 23 (74 %)
+traen el TEXTO de licencia dentro del artefacto que el cliente instala**, contra **5 de 7 (71 %) SIN
+texto** en los repos de GitHub sin archivo. 🔵 **La hipótesis de la acción se resuelve en su segunda
+rama: el problema de P179 es específico de los repos cuyo árbol no tiene archivo, y no hay que
+reescribir la columna Licencia de la capa de paquete.**
+
+**503.** 🔵 **Y la dirección útil se invierte: el TARBALL es un sondeo más barato y más confiable que el
+árbol.** `npm pack` y los constructores de sdist **incluyen el archivo de licencia cuando existe**, así
+que el artefacto ya hizo la búsqueda de nombres: **una llamada al registro + una descarga**, contra
+**14 sondas a `raw`** por nombre de archivo. ⚠️ **Y para 2 de los 18 el registro es el ÚNICO canal que
+existe** (`opencode-sit` y `aicourse-mcp-server` no declaran repositorio): **la pregunta del archivo no
+se puede ni formular y el tarball la contesta igual.** Ver **P183**.
+
+**504.** 🔴 **Un NOMBRE no es un PAQUETE, y esta KB tiene al menos una fila publicando la licencia del
+artefacto equivocado.** **5 de los 18 nombres viven en los dos registros**, y 2 con licencias
+distintas: `educhain` es **ISC sin texto en npm** y **MIT con texto en PyPI**; `frappe-mcp-server` es
+**ISC sin texto en npm** y **MIT con texto en PyPI**, **y la fila de esta KB cita npm**. `clawed` tiene
+la misma licencia en los dos canales con una brecha de versión (0.0.1 contra 9.18.2026.1) que delata
+una reserva de nombre. ⚠️ **Obligación: una fila que nombra un paquete tiene que nombrar su CANAL.**
+
+**505.** 🔴 **El grafo japonés completo estaba en el repo, y el 404 del pase 65 era un nombre mal
+transcrito.** `index.html` lo enumera como **`all-20250927.ttl.gz`**; el pase 65 anotó
+`all-20250927.ttl`, obtuvo 404 y concluyó que *«el grafo completo sólo existe detrás de los dominios
+bloqueados»*. 🟢 **Medido: 4.251.289 B comprimidos → 69.288.422 B (66 MB), 1.004.927 líneas. Los 22
+volcados dan 200, los 22.** ⚠️ **Los dos nombres mal transcritos son los dos archivos más grandes del
+conjunto, que es exactamente por qué están comprimidos.** 🔵 **Un nombre transcrito de un listado no es
+el nombre que el listado dio — y el pase 65 tenía el listado delante: es el mismo `index.html` que leyó
+por `raw` para establecer P181. El canal correcto se usó y el dato se copió mal.**
+
+**506.** 🟢 **Y medido el grafo, Japón pasa de «la mejor pieza de currículo de la KB» a «la única con
+educación especial», que es un argumento comercial y no de inventario.** 39.958 `cs:Item`, 786
+`cs:Subject`, **655 `cs:CommentaryItem`** (学習指導要領解説, el comentario **oficial**), 34
+`cs:CourseOfStudyRevision`, 260 enlaces `RelatedSubject*` y **17 `sh:NodeShape`** de validación, todo
+en el mismo artefacto. 🔵 **Y 特別支援学校 desglosado por discapacidad: visual 4.886, auditiva 4.721,
+intelectual 2.207/1.546/1.223, `VHPH` 157/76, y las variantes sin currículo prescrito 432/372/341.**
+⚠️ **Ninguna otra pieza de currículo de esta KB trae esa dimensión: ni la alemana por *Land* (que
+además es ShareAlike) ni el Common Core de NA (que no tiene licencia).** 🟢 **El alcance de P180 se
+cierra y la dependencia del endpoint SPARQL desaparece: con 66 MB en la mano se carga en un
+*triplestore* propio.** Ver **P185**.
+
+**507.** 🟢 **El calendario del EU AI Act de esta base se confirma por un CUARTO canal independiente, y
+gana una fila que faltaba: el Anexo I.** El *Digital Omnibus* fue aprobado por el **Parlamento el
+2026-06-16**, adoptado por el **Consejo el 2026-06-29**, firmado el **2026-07-08** y **en vigor el
+2026-07-27**; el **Artículo 50 no fue tocado**. 🔵 **Lo nuevo: Anexo III *stand-alone* **2027-12-02**
+(ya registrado, y es donde cae educación y formación profesional) y **Anexo I** —alto riesgo
+**embebido en productos regulados**, dispositivos médicos y maquinaria— **2028-08-02**, que esta base
+no tenía.** ⚠️ **Por qué importa en educación: un producto de apoyo al aprendizaje entregado DENTRO de
+un dispositivo asistivo regulado cae por el Anexo I, no por el Anexo III — veinte meses más de plazo y
+otro régimen de conformidad. Qué anexo aplica es la primera pregunta de una propuesta EMEA de
+accesibilidad, y decide la fecha.**
+
+**508.** 🔵 **Y el cruce que ninguna de las dos mitades mostraba sola: el Anexo I se encuentra con el
+hallazgo APAC de este pase.** El currículo japonés trae **educación especial desglosada por categoría
+de discapacidad** (visual, auditiva, intelectual, VHPH), que es **exactamente el dominio donde un
+producto educativo se encuentra con un dispositivo asistivo regulado**. 🟢 **Un *engagement* de
+accesibilidad educativa tiene, en la misma mesa, la base de currículo cedida sin ShareAlike y el anexo
+del AI Act que le corresponde — y son dos regiones distintas, que es la clase de cruce que esta KB
+existe para producir.**
+
+**509.** 🟢 **La supervisión humana para decisiones de alto impacto sobre un alumno converge en CUATRO
+jurisdicciones de TRES regiones, y esta base ya la tiene implementada.** Corea del Sur (**Basic AI Act**
+vigente desde enero de 2026, **extraterritorial** cuando afecta a usuarios coreanos), **Oklahoma** y
+**Maryland** (supervisión humana obligatoria y **prohibición de que la AI decida cuestiones de alto
+impacto sobre un alumno**) y el reglamento de **Perú** (supervisión humana para usos de alto riesgo).
+🔵 **Es la misma cláusula que **P18** implementa, y esta KB ya tiene las seis puertas de
+`mod_assign_save_grade`/`posted_grade` clasificadas por ella.** ⚠️ **O sea que el entregable que la
+satisface no es un desarrollo: es evidencia de cumplimiento lista, y satisface a las cuatro de una
+vez.** 🔴 **Y la asimetría que hay que decir en la propuesta: Corea sanciona y Japón no —enfoque de
+principios, sin penalidades—, así que un producto que se venda en los dos cumple el techo coreano
+aunque se construya sobre dato japonés.**
+
+**510.** 🔵 **Corrido el auditor de citas de esta base sobre sus propios ocho archivos, las 8 citas
+colgadas que reportaba eran DOS defectos distintos, y uno era del instrumento.** 🟢 **Seis de las ocho
+—tendencias 393 y 401, citadas en cuatro lugares— SÍ estaban definidas**, como párrafos `**393.**` y
+`**401.**`, pero bajo un encabezado que no sigue la convención `Las tendencias N–M` que el auditor
+reconoce (`H_RANGE`). **El encabezado del pase 58 se completó con su rango y las seis citas
+resolvieron: 8 → 2.** 🔴 **Las dos que quedan son un defecto real y de otro tipo: la tendencia 294 no
+existe** —el pase 53 definió 281-293, el 54 arrancó en 295— **y está citada dos veces en
+`verticals/solutions.md`.** ⚠️ **Se registró el hueco en vez de reconstruir el contenido desde el
+contexto de la cita: una tendencia inventada hace más daño que una cita colgada, porque la cita
+colgada el instrumento la ve.** 🟢 **Con el hueco registrado bajo un encabezado que el auditor
+reconoce, el archivo cierra en CERO: «no dangling citation: every cited trend resolves» sobre
+**1.259** citas de los ocho archivos.** 🔵 **La lección de método: un reporte de «N citas colgadas» hay que
+abrirlo antes de publicarlo — acá seis de ocho eran una convención de encabezado, y es el mismo error
+de clase que el primer *build* de P184 cometió con sus 87 `HOLDER-UNRELATED`.**
+
+**511.** 🔴 **Y el mismo auditor, aplicado a los PATRONES, encuentra un defecto más grande y de otra
+clase: 15 números de patrón están citados **301** veces en los ocho archivos —**280** antes de que
+este pase los citara, así que la cifra se publica con su fecha— **y NO tienen sección que los defina
+en `compose/patterns.md`**: `P126` `P127` `P128` `P129` `P130` `P132` `P133` `P134` `P135` `P170`
+`P171` `P172` `P173` `P174` `P175`.** ⚠️ **Entre ellos están P170, P171 y P172 —citados 33, 24 y 23
+veces— que son los tres sobre los que descansa el argumento entero de este pase.** 🔵 **Se verificó
+que NO es el defecto de convención de encabezado que las tendencias tenían: los 15 no tienen
+encabezado de ninguna forma, ni `## PNNN`, ni `### 🔴 PNNN`, ni agrupado.** 🟢 **El contenido existe
+—P170 y P171 en prosa en el README de `p170-headref-license-sweep`, P172 en el de su instrumento— así
+que lo más probable es que sea consolidación y no reconstrucción — y el caso que lo confirma es el
+primero de la lista: **`P126`, LA regla que esta base invoca en cada pase, está escrita en `README.md`
+y no en el archivo de patrones.** 🔴 **Pero mientras no se abra uno
+por uno, esta base está citando como patrón establecido algo cuya definición no está en el archivo de
+patrones, y es de la familia de la tendencia 294 multiplicada por 301.** **Queda escrita como la
+cuarta acción del pase 67.**
+
+## 🔵 Las tres acciones que el pase 66 deja escritas para el pase 67
+
+1. 🔴 **Rehacer el barrido de TITULAR (`P184`) con el denominador ampliado, porque el caso que abrió el
+   patrón NO está en el denominador que se barrió.** `MaybeItsAdam/tutors` es un alta de hoy y se midió
+   a mano; los 160 slugs de `p170-headref-license-sweep/slugs.input.txt` son del pase 64. 🔵 **La acción
+   es acotada y mecánica: regenerar `slugs.input.txt` desde `agents/top.md` tal como está hoy, correr
+   `sweep_headref.sh` y después `sweep_holder.sh` sobre los `LICENSED` nuevos.** 🔵 **Hipótesis falsable
+   y las dos ramas sirven: si entre las altas de los pases 58-66 aparece OTRO titular de un tercero
+   —una empresa, un laboratorio distinto, un marcador de plantilla— entonces la licencia heredada es un
+   modo de falla ESTRUCTURAL de los repos jóvenes y hay que chequear titular en toda alta nueva como
+   trámite; si `tldraw Inc.`, `UCSB ML&NLP Group` y `author_a` siguen siendo los únicos tres sobre un
+   denominador mayor, es un modo de falla raro y el chequeo va sólo sobre repos que declaran construir
+   sobre un SDK de terceros.** ⚠️ **Declarar cuántos slugs nuevos entran antes de empezar, y no publicar
+   el conteo de `HOLDER-UNRELATED` sin leerlo: 17 de las 31 de hoy eran el nombre propio del autor, y
+   publicar 31 como «hallazgos» sería el error que el primer *build* de este instrumento ya cometió con
+   87.**
+
+2. 🔴 **Cerrar las 2 filas `SILENT-ROOT` que quedaron, que son las únicas 2 de 14 cuyo silencio no está
+   medido en tres capas.** `1EdTech/openbadges-specification` tiene `ob_v2p0/`, `ob_v2p1/`, `ob_v3p0/` y
+   `proposals/`; `aiverify-foundation/LLM-Evals-Catalogue` tiene `docs/`. 🔵 **El canal está probado y
+   es el de este pase: WebFetch sobre `github.com/<org>/<repo>/tree/HEAD/<subdir>`, 4-5 llamadas en
+   total, no un barrido.** 🔵 **Hipótesis falsable con consecuencia distinta en cada rama: una
+   especificación de 1EdTech normalmente transporta sus términos EN EL TEXTO DE LA ESPECIFICACIÓN, no
+   en un archivo — si está ahí, la clase `SPEC-EMBEDDED` es una QUINTA capa de licencia y hay que
+   agregarla a P182, porque esta KB tiene 15 filas de estándares; si los subdirectorios están en
+   silencio, las 14 ausencias pasan a estar medidas en tres capas completas y el denominador queda
+   cerrado por fin.** ⚠️ **Y la condición de vencimiento, verificable: si el pase 67 vuelve a citar «14
+   ausencias medidas en tres capas» sin haber abierto esos dos subdirectorios, la cifra sigue siendo
+   «12 en tres capas y 2 en una» y hay que escribirla así.**
+
+3. ⚠️ **Poner CANAL a las filas de paquete de `agents/top.md`, que es la obligación que este pase se
+   impuso a sí mismo y no ejecutó.** **P183** midió que **5 de 18 nombres viven en los dos registros y
+   2 con licencias distintas** (`educhain`: ISC sin texto en npm / MIT con texto en PyPI;
+   `frappe-mcp-server`: ídem, **y la fila de esta KB cita npm, el canal peor licenciado**). 🔴 **O sea
+   que hay al menos una fila publicando la licencia del artefacto equivocado.** 🔵 **La acción es
+   acotada: las 21 filas `PKG-NAMED` que `denominator.py --tsv` enumera, cada una con `(npm)` o
+   `(PyPI)` explícito en la celda, y la licencia que corresponde a ESE canal.** 🔵 **Hipótesis
+   falsable: si al poner canal aparecen más filas citando el canal equivocado que las 2 ya medidas,
+   entonces el defecto no es de dos filas sino de cómo esta KB transcribe un nombre de paquete, y hay
+   que agregar la columna Canal a la tabla en vez de parchear celdas.** ⚠️ **Es la acción de menor
+   mérito intelectual de las tres y la de mayor costo si no se hace: una licencia equivocada en una
+   fila de inventario es exactamente el daño que P114 existe para evitar.**
+
+### 🔴 Y una CUARTA, medida hoy, que es más grave que la tercera y no entró en la lista por poco
+
+🔴 **15 números de patrón están CITADOS **301** veces en los ocho archivos y NO tienen sección que los
+defina en `compose/patterns.md`** —medido por `compose/code/pattern-citation-audit/audit_patterns.py`;
+eran **280** antes de que este pase los citara, así que la cifra se publica con su fecha—
+**y entre ellos están P170, P171 y P172**, citados **33, 24 y 23** veces y **sobre los que descansa el
+argumento entero de este pase**. ⚠️ **No es el defecto de convención de encabezado que este pase
+corrigió en las tendencias: se verificó uno por uno y los 15 no tienen encabezado de NINGUNA forma
+—ni `## PNNN`, ni `### 🔴 PNNN`, ni agrupado `## PNNN–PMMM`—.**
+
+**La lista exacta, para que la acción no haya que re-derivarla:** `P126` `P127` `P128` `P129` `P130`
+`P132` `P133` `P134` `P135` `P170` `P171` `P172` `P173` `P174` `P175`.
+
+🔴 **Y el primero de la lista es el que más duele: `P126` es LA REGLA que esta base invoca en cada
+pase** —*«antes de escribir un instrumento a mano se corre el que este repositorio ya versiona»*— **y
+no tiene sección en el archivo de patrones.** 🟢 **Está escrita, y bien, en `README.md`
+(«📏 La regla de P126, como regla permanente de este repositorio», pase 56).** 🔵 **Eso refuerza la
+rama buena de la hipótesis: el contenido existe y vive en otro archivo, así que la acción es de
+consolidación y no de reconstrucción.**
+
+🔵 **El contenido existe: P170 y P171 están definidos en prosa en
+`compose/code/p170-headref-license-sweep/README.md` y P172 en el README de su propio instrumento. Lo
+que falta es que estén en el archivo de patrones**, que es el que un *engagement* abre. 🔵 **Hipótesis
+falsable y las dos ramas cambian el trabajo: si los 15 tienen su contenido en el README de algún
+instrumento, la acción es de consolidación —mover y citar— y cuesta un pase; si alguno NO está escrito
+en ninguna parte, entonces esta base viene citando un patrón que nadie escribió, y eso es de la misma
+familia que la tendencia 294 pero 301 veces.**
+
+⚠️ **No entró en la lista de tres sólo porque las acciones 1 y 2 vencen este ciclo (la 1 porque el
+caso que abrió P184 no está en su propio denominador, la 2 porque son 4-5 llamadas) y la 3 corrige una
+licencia EQUIVOCADA ya publicada.** 🔴 **Si el pase 67 puede tomar cuatro, ésta es la cuarta. Si no,
+es la primera del 68.**
+
+### 🔵 Y una quinta, que NO es acción de ingesta y se registra para que no se pierda
+
+⚠️ **Las 153 filas `NO-CHANNEL` de `agents/top.md` —sin repo y sin paquete— no son un pendiente de
+barrido: son una propiedad de la fila.** Son especificaciones, estándares, marcas, despliegues
+institucionales y lápidas. 🔵 **Lo accionable no es medirlas: es decidir qué valor lleva la columna
+Licencia cuando la fila no es software.** **No se toma como acción porque es una decisión de ontología
+y conviene tomarla con el `ontology/` de `globant-kb` delante, no en un pase de ingesta.**
 
 ## 🔵 Las tres acciones que el pase 65 deja escritas para el pase 66
 
@@ -6793,6 +7053,17 @@ que escribe nota y devolución sin confirmación ni borrador con un token de adm
 Artículo 50(2), porque hoy es la única pieza de esta base que lo emite y no lo nombra**; y **pedirle a
 `PabloPC05/mcp-usc` que extraiga su protocolo de `confirmation_token` a una librería, porque es el
 mejor control de escritura medido en esta KB y hoy está atado a una universidad.**
+
+## 294. Hueco de numeración — esta tendencia NO EXISTE, y se registra así (pase 66 del 2026-10-03)
+
+**294.** 🔴 **Este número nunca se escribió, y se registra así en vez de inventarlo.** El pase 53
+definió **281–293** y el pase 54 arrancó en **295**: el **294** quedó salteado. ⚠️ **Y está CITADO
+dos veces** —`verticals/solutions.md` líneas 20 y 21, por los pases 53 y 54— **como la tendencia del
+«barrido que devolvió el inventario de esta propia base».** 🔵 **Lo que se afirma es sólo esto: el
+contenido al que esas dos citas apuntan no está en ninguna parte de este archivo.** 🔴 **No se
+reconstruye desde el contexto de la cita, porque eso sería escribir una tendencia que ningún pase
+midió** — y el daño de una tendencia inventada es peor que el de una cita colgada, que al menos es
+visible para el instrumento. **Medido por `compose/code/trend-backlink-audit/audit_trends.py`.**
 
 ## 🔵 Las tendencias 295–312, del pase 54 del 2026-10-03
 

@@ -143,3 +143,101 @@ python3 test_extract.py                                    # los 8 controles
 - `result-semantic-predicatebug.2026-10-03.tsv` — **control negativo fechado** de D1
 - `result-semantic-jpcos.2026-10-03.tsv` — Japón, los 4 archivos de vocabulario y dataset
 - `slugs.input.txt` — el denominador: las 29 de las 32 del pase 64 que no son `FWU-DE`
+
+---
+
+# Pase 66 del 2026-10-03 — la reserva se CIERRA, y la cifra 22 baja a 14
+
+Ejecuta la **acción 2 del pase 65**: *«las 22 filas `PAYLOAD-SILENT` son "silencio en los nombres
+probados", no "silencio probado", porque la lista de rutas de payload es por CONVENCIÓN y `raw` no
+lista directorios. La acción es probar el canal que sí funcionó para el listado en este pase —el HTML
+de `github.com` vía WebFetch— sobre las 22, leyendo la raíz de cada repo.»*
+
+🟢 **Hecho tal cual: 22 llamadas unitarias, una por repo, como la acción pedía planificarlo.**
+`curl` a `github.com` da **403** en esta corrida y **WebFetch sobre `github.com` da 200**: el canal
+que la acción nombró es el que funcionó. Resultado en `result-rootlisting.2026-10-03.tsv`.
+
+## 🔴 Y la reserva estaba bien puesta: una de las 22 era una ausencia FALSA
+
+🔴 **`dini-ag-kim/school-curriculum-pg` NO es `PAYLOAD-SILENT`: cede `CC BY-SA 4.0`**, y está medido en
+`lp-base.ttl` línea 24 — `terms:license <https://creativecommons.org/licenses/by-sa/4.0/>`.
+
+⚠️ **Lo peor del caso es que este repositorio YA lo sabía.** El propio pase 65 lo midió con
+`sweep_semantic.sh` y lo publicó arriba —*«SÍ cede, y cede `CC BY-SA 4.0`, en las 25
+serializaciones»*— **y la fila quedó `PAYLOAD-SILENT` en el TSV autoritativo de todas formas**,
+porque la lista `SEMANTIC` de `sweep_payload.sh` es **por convención**
+(`catalog.ttl ontology.ttl context.jsonld vocab.ttl index.ttl`) y este repo nombra sus archivos
+`lp-base.ttl`, `lp-full.ttl`, `lp-land-XX-full.owl`, `reasoned.ttl`. 🔵 **El listado de raíz lo
+muestra en una línea: 25 serializaciones en la raíz, ningún nombre convencional entre ellas.**
+
+🔴 **Dos instrumentos del mismo pase dieron respuestas opuestas sobre la misma fila y el TSV publicó
+la peor.** Es **P126** regla 1 en su forma más incómoda: el instrumento que este repositorio ya
+versionaba (`sweep_semantic.sh`) tenía la respuesta, y el barrido masivo la contradijo sin
+reconciliarse con él.
+
+## Y hay una TERCERA capa que ninguno de los dos instrumentos preguntó: el README
+
+De las 21 restantes, **6 declaran una licencia en el README** —badge, sección `## License`, o las
+dos— y **1 declara un permiso a medida que no es una licencia**. Ni la pregunta del ARCHIVO (pase 64)
+ni la del PAYLOAD (pase 65) podían verlo, porque **ninguna preguntó el README.**
+
+🔵 **Y la razón por la que no lo preguntaron es una regla de esta casa, bien escrita y aplicada un
+paso de más.** **P171** manda clasificar sobre una **declaración**, nunca sobre un `grep` del cuerpo
+por la palabra *license* — y eso mantuvo el README afuera de los dos instrumentos. ⚠️ **La regla
+tiene razón sobre el `grep` y se equivoca sobre la CAPA:** un badge
+`img.shields.io/badge/License-MIT` y una sección `## License` **son declaraciones estructuradas**, no
+una palabra en una frase. Ver **P182**.
+
+| Veredicto nuevo | n | Qué es |
+|---|---|---|
+| `SILENT-3-LAYERS` | **12** | 🟢 silencio medido en **archivo + payload + README**, con la raíz enumerada completa |
+| `SILENT-ROOT` | **2** | silencio en la raíz; **subdirectorios NO sondeados** (`1EdTech/openbadges-specification` → `ob_v*/`, `proposals/`; `aiverify-foundation/LLM-Evals-Catalogue` → `docs/`) |
+| `README-*` | **6** | identificador en el README, invisible a las dos capas anteriores |
+| `NOT-A-LICENSE` | **1** | `vilcaaguilerandrea-oss/carrera-lectora`: *«Creado con fines educativos. Libre para usar en contextos educativos.»* — permiso a medida, **más angosto que cualquier licencia OSI**, y no nombra ninguna |
+| `FALSE-ABSENCE` | **1** | `dini-ag-kim/school-curriculum-pg` → **CC BY-SA 4.0** |
+
+🔵 **El denominador de ausencias medidas pasa de 22 a 14**, y de esas **12 tienen la raíz enumerada
+completa**. 🔴 **Encadenado: el pase 64 publicó 32, el 65 lo bajó a 22 (−31 %), y este pase lo baja a
+14 (−36 % más). La cifra original estaba inflada un 129 %.** ⚠️ **Las tres mediciones son correctas
+para la pregunta que cada una hizo. Lo que cambió es la pregunta — y «ausencia medida» sin nombrar la
+capa no es un dato reutilizable.**
+
+## Las dos contradicciones, que valen más que las ausencias
+
+🔴 **`SabioTechTeam/Teacher-Hub` — MIT con una cláusula no comercial.** Badge
+`License: MIT` (línea 3) y sección (línea 207): *«**License**: MIT License — free for educational and
+non-commercial use.»* ⚠️ **MIT PERMITE el uso comercial sin condiciones; la prosa lo prohíbe.** Para
+un *engagement* de estudio —que es comercial por definición— **esto es peor que el silencio: el
+silencio se pregunta, una contradicción se litiga.**
+
+🔴 **`eth-lre/mathtutorbench` — dos licencias distintas en un mismo README.** Badge (línea 3):
+`License: CC BY 4.0`. Prosa (líneas 199-202): *«This work is licensed under a Creative Commons
+Attribution-**ShareAlike** 4.0 International License.»* ⚠️ **ShareAlike o no decide si un derivado
+puede entregarse con licencia propia** — es exactamente la compuerta de **P178**, y el repo declara
+las dos caras. **Un *benchmark* de tutoría matemática sobre el que no se sabe si hay ShareAlike no se
+puede meter en un entregable.**
+
+⚠️ **`RadiantCrystal/SafeTutors` cierra con el listado lo que el pase 51 ya había caracterizado.** El
+enlace del badge apunta a `github.com/**your-username**/SafeTutors/blob/main/LICENSE` —plantilla sin
+editar, y es el origen del *slug* espurio que la reserva de denominador de **P170** declara—, la prosa
+dice *«see the [LICENSE](LICENSE) file for details»*, **`LICENSE` da 404 en `HEAD`, `main` y `master`,
+y la raíz lista `README.md` como único archivo.** 🔵 **La promesa no está incumplida: nunca fue
+escrita.** Es el tercer caso de archivo prometido y ausente, tras `DMontgomery40` y `Timadey`, y el
+único donde el marcador de la plantilla sigue puesto.
+
+## La reserva que QUEDA, acotada y nombrada
+
+- ⚠️ **2 de 14 son `SILENT-ROOT`, no `SILENT-3-LAYERS`:** `1EdTech/openbadges-specification` tiene
+  `ob_v2p0/`, `ob_v2p1/`, `ob_v3p0/` y `proposals/`, y `aiverify-foundation/LLM-Evals-Catalogue` tiene
+  `docs/`. **Una especificación de 1EdTech normalmente lleva sus términos en el texto de la
+  especificación**, así que esta reserva tiene una hipótesis concreta y es barata de cerrar.
+- 🟢 **Para las otras 12 la raíz está enumerada completa**, así que el silencio ya no es «en los
+  nombres probados»: es silencio en la raíz, en el payload convencional y en el README.
+- ⚠️ `codeload.github.com` sigue **403** (medido hoy), así que el árbol completo tampoco se bajó en
+  este pase. **No hizo falta: el listado de raíz contestó la pregunta que el árbol iba a contestar.**
+
+## Archivos del pase 66
+
+- `result-rootlisting.2026-10-03.tsv` — las 22 con su listado de raíz leído y su veredicto nuevo
+  (**autoritativo para la capa de LISTADO**; `result.2026-10-03.tsv` queda como el estado del pase 65,
+  con su fila `FALSE-ABSENCE` a la vista)

@@ -1,0 +1,23 @@
+@ajna-inc/openbadges	npm@0.6.3	Apache-2.0	LICENSE	11606	TARBALL-TEXT
+@eduware/oneroster	npm@1.2.11	MIT	LICENSE	711	TARBALL-TEXT
+@ink-waffle/moodle-mcp	npm@0.2.0	MIT	-	-	REG-ID-ONLY
+@ink-waffle/sisu-mcp	npm@0.1.0	MIT	-	-	REG-ID-ONLY
+@schoolexl/mentor	npm@0.0.4	MIT	LICENSE	1064	TARBALL-TEXT
+@yunmiao/studymate	npm@1.0.0	MIT	LICENSE	1064	TARBALL-TEXT
+aicourse-mcp-server	npm@0.1.0	MIT	-	-	REG-ID-ONLY
+canvas-lms-mcp	npm@1.30.0	MIT	LICENSE	1070	TARBALL-TEXT
+canvas-lms-mcp	pypi@0.1.2	MIT	LICENSE	1091	TARBALL-TEXT
+clawed	npm@0.0.1	MIT	-	-	REG-ID-ONLY
+clawed	pypi@9.18.2026.1	MIT	clawed-9.18.2026.1.dist-info/licenses/LICENSE	1078	TARBALL-TEXT
+ed-fi-sdk-mcp	npm@0.1.0	Apache-2.0	LICENSE	11558	TARBALL-TEXT
+educhain	npm@1.0.0	ISC	-	-	REG-ID-ONLY
+educhain	pypi@0.4.0	License :: OSI Approved :: MIT License	LICENSE	1092	TARBALL-TEXT
+frappe-mcp-server	npm@0.6.0	ISC	-	-	REG-ID-ONLY
+frappe-mcp-server	pypi@1.2.0	MIT	LICENSE	1065	TARBALL-TEXT
+jbnu-lms-mcp	npm@0.8.0	MIT	LICENSE	1082	TARBALL-TEXT
+moodle-cli	npm@0.10.0	MIT	LICENSE	1064	TARBALL-TEXT
+moodle-cli	pypi@0.4.2	MIT License	LICENSE	1064	TARBALL-TEXT
+opencode-sit	npm@0.1.2	MIT	LICENSE	1056	TARBALL-TEXT
+openedx-mcp	pypi@0.1.5	AGPL-3.0	LICENSE	34524	TARBALL-TEXT
+pykt-toolkit	pypi@0.0.38	License :: OSI Approved :: MIT License	LICENSE	1066	TARBALL-TEXT
+tutor-contrib-openedxmcp	pypi@0.1.7	AGPL-3.0	LICENSE	34524	TARBALL-TEXT

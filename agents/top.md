@@ -406,14 +406,28 @@ conceptos de la ontología de currículo de la DINI AG-KIM. Medidas las dos:**
 | Repo upstream | Licencia **leída del archivo** | Canal |
 |---|---|---|
 | [`dini-ag-kim/schulfaecher`](https://github.com/dini-ag-kim/schulfaecher) | 🟢 **CC0 1.0 Universal** | `raw:main/LICENSE` **200** (y `master/LICENSE` **200**) |
-| [`dini-ag-kim/school-curriculum-pg`](https://github.com/dini-ag-kim/school-curriculum-pg) | 🔴 **ninguna en la raíz** | `LICENSE`/`.md`/`.txt` → **404** en `main` **y** en `master` |
+| [`dini-ag-kim/school-curriculum-pg`](https://github.com/dini-ag-kim/school-curriculum-pg) | 🟢 **CC BY-SA 4.0 — CORREGIDO en el pase 66**, medido en `lp-base.ttl` línea 24 (`terms:license <https://creativecommons.org/licenses/by-sa/4.0/>`) y en las 25 serializaciones. 🔴 **Esta celda decía «ninguna en la raíz» y la ausencia era FALSA** | archivo de licencia: `LICENSE`/`.md`/`.txt` → **404** en `main` **y** en `master` (sigue siendo cierto) · **payload RDF: 200** · **listado de raíz abierto en el pase 66: 25 serializaciones, ningún nombre convencional** |
 
-🔴 **El vocabulario base de materias escolares alemanas es CC0 —dedicación al dominio público, lo más
-usable que existe— y la extensión de FWU que le agrega la cobertura por Land no tiene cesión.** 🔵 **La
-lectura de arquitectura, y es accionable hoy: un engagement alemán puede construir sobre el
-vocabulario CC0 de la KIM sin pedirle permiso a nadie, y tratar la capa de FWU como lo que es —la
-pieza a negociar—.** ⚠️ **Lo que NO se midió: si `school-curriculum-pg` declara licencia en un
-subdirectorio o en su sitio de GitHub Pages. Por P153, la ausencia en la raíz NO prueba la ausencia.**
+🟢 **CORRECCIÓN DEL PASE 66 — las dos capas alemanas CEDEN, y la conclusión de arriba se reescribe.**
+El vocabulario base de materias (`schulfaecher`) es **CC0 1.0**, y la extensión por *Land*
+(`school-curriculum-pg`) es **CC BY-SA 4.0**, declarada sobre el IRI de la ontología con titulares
+identificados por **ORCID**, fecha e IRI versionado — una cesión más completa que la de muchos
+archivos `LICENSE`.
+
+🔵 **Así que un *engagement* alemán puede construir sobre LAS DOS capas sin negociar nada**, con una
+diferencia que sí hay que cotizar: ⚠️ **`CC0` no pide nada y `CC BY-SA 4.0` activa la compuerta de
+**P178** — un currículo derivado de la capa por *Land* se publica con la misma licencia.** 🔵 **Y es
+exactamente la diferencia con Japón, que cede `CC BY 4.0` SIN ShareAlike: el derivado japonés se
+puede cerrar, el alemán no.**
+
+🔴 **La frase «la extensión de FWU que le agrega la cobertura por Land no tiene cesión» era falsa, y
+la reserva que la acompañaba —*«lo que NO se midió: si declara licencia en un subdirectorio o en su
+sitio de GitHub Pages»*— apuntaba al lugar equivocado.** La cesión no estaba en un subdirectorio ni
+en Pages: **estaba en la raíz, dentro de los archivos de dato**, en los 25 archivos que el listado de
+raíz enumera. ⚠️ **P153 tenía razón —la ausencia en la raíz no prueba la ausencia— y la razón real
+fue más simple que la que P153 contemplaba: el instrumento preguntaba por nombres de archivo
+convencionales (`catalog.ttl`, `ontology.ttl`, `vocab.ttl`) y este repo nombra `lp-*.ttl`.** Ver
+**P172**, **P182** y `compose/code/p172-payload-license-sweep/` (pase 66).
 
 ## 🔁 El barrido de forks, continuado — y P160 resulta ser un caso particular de algo más ancho (acción 2(b) del pase 62)
 
@@ -3459,3 +3473,141 @@ publicado y el repo público son dos verificaciones distintas, y la que importa 
 Esta KB tenía registrado que **CaSS implementa OB 2.0 y no 3.0**, y no tenía **ninguna** pieza de OB 3.0. Ya la tiene, y
 es permisiva. ⚠️ No declara repo, así que se cita por registro (mismo criterio que `@eduware`).
 
+
+---
+
+## 🧾 La TERCERA capa de licencia, y una CUARTA pregunta que ninguna de las tres hacía — pase 66 del 2026-10-03
+
+**Ejecuta las acciones 1 y 2 del pase 65 y agrega un hallazgo que no estaba pedido.** Cuatro pases
+seguidos midieron licencia sobre este archivo, y cada uno hizo **una pregunta distinta sobre la misma
+fila**:
+
+| Pase | Capa | Pregunta | Qué devolvió |
+|---|---|---|---|
+| 64 | **ARCHIVO** (**P170**) | ¿hay archivo de licencia en 14 nombres × ref `HEAD`? | 160 `LICENSED` · **32** `UNLICENSED` · 8 `UNREACHABLE` |
+| 65 | **PAYLOAD** (**P172**) | ¿la cesión está dentro del manifiesto, el header o el dato? | 10 de 32 **no eran ausencias** → **22** |
+| **66** | **README** (**P182**) | ¿la cesión está declarada en el README, como badge o sección? | 1 ausencia **falsa** + 6 `README-*` + 1 `NOT-A-LICENSE` → 🔵 **14** |
+| **66** | **TITULAR** (**P184**) | ¿el titular del archivo de licencia **pertenece al proyecto**? | de 160 archivos presentes: **68** sí · **31** a leer · **61** no aplica |
+
+🔴 **El denominador de «ausencias medidas» pasó de 32 a 22 a 14. La cifra original estaba inflada un
+129 %, y las tres mediciones son correctas para la pregunta que cada una hizo.** ⚠️ **La consecuencia
+de método, que es la que se reutiliza: «ausencia medida» sin nombrar la CAPA no es un dato
+reutilizable.** De ahora en más esta KB escribe la capa junto a la cifra.
+
+### Las 6 filas cuya licencia vive SÓLO en el README
+
+| Fila | Dónde | Qué dice | Clase |
+|---|---|---|---|
+| [`NLP2CT/LLM-generated-Text-Detection`](https://github.com/NLP2CT/LLM-generated-Text-Detection) | `README.md:9` | badge `License-MIT` | ⚠️ **identificador, y el más débil de todos: sólo badge**, sin sección ni prosa |
+| [`kaushal0494/AITutor-EvalKit`](https://github.com/kaushal0494/AITutor-EvalKit) | `README.md:7,376` | badge MIT con enlace a `(LICENSE)` + *«licensed under the MIT License»* | ⚠️ **identificador con promesa**: el `LICENSE` enlazado **no existe** (14 nombres, pase 64) |
+| [`kaushal0494/UnifyingAITutorEvaluation`](https://github.com/kaushal0494/UnifyingAITutorEvaluation) | `README.md:17,176` | CC BY-SA 4.0 | 🔴 **identificador ALCANZADO AL DATASET**: cede **MRBench**, no el repo ni el código. **La cesión del código no existe** |
+| [`SabioTechTeam/Teacher-Hub`](https://github.com/SabioTechTeam/Teacher-Hub) | `README.md:3,207` | badge `MIT` + *«MIT License — free for educational and **non-commercial** use»* | 🔴 **CONTRADICCIÓN** |
+| [`eth-lre/mathtutorbench`](https://github.com/eth-lre/mathtutorbench) | `README.md:3,199` | badge `CC BY 4.0` + prosa `CC BY-**SA** 4.0` | 🔴 **CONTRADICCIÓN** |
+| [`RadiantCrystal/SafeTutors`](https://github.com/RadiantCrystal/SafeTutors) | `README.md:15,113` | badge MIT + *«see the [LICENSE](LICENSE) file»* | 🔴 **PROMESA NUNCA ESCRITA**: el enlace del badge apunta a `github.com/**your-username**/SafeTutors` —plantilla sin editar— y la raíz lista `README.md` como **único** archivo |
+
+Y una séptima que **no declara licencia en absoluto**:
+[`vilcaaguilerandrea-oss/carrera-lectora`](https://github.com/vilcaaguilerandrea-oss/carrera-lectora)
+(**LATAM**, Perú) dice *«Creado con fines educativos. Libre para usar en contextos educativos.»*
+🔴 **Clase `NOT-A-LICENSE`, nueva en esta KB: un permiso a medida, más angosto que cualquier licencia
+OSI, que además no nombra ninguna.** ⚠️ **Para un *engagement* es inutilizable tal cual: «contextos
+educativos» no define si un entregable facturado lo es.**
+
+### 🔴 Las DOS contradicciones son el hallazgo operativo, no las ausencias
+
+⚠️ **Una ausencia se pregunta; una contradicción se litiga.** `Teacher-Hub` pone `MIT` en el badge y
+*«non-commercial»* en la prosa — **y MIT permite el uso comercial sin condiciones**. `mathtutorbench`
+pone `CC BY 4.0` en el badge y `CC BY-SA 4.0` en la prosa — **y ShareAlike decide si un derivado
+puede entregarse cerrado** (compuerta de **P178**). 🔵 **Las dos filas quedan marcadas como
+`no-entregable-sin-aclaración` en vez de con su licencia, que es lo que una celda con una sola
+licencia no puede expresar.**
+
+### 🟡 La capa de PAQUETE: medida por fin, y SANA
+
+Las filas sin URL de GitHub llevaban **14 pases** fuera de todo denominador. Medido con instrumento
+versionado (`compose/code/p183-nongithub-denominator/`):
+
+| | n |
+|---|---|
+| filas de dato de las 98 tablas de este archivo | **578** |
+| sin `github.com` | **292** |
+| **de esas, en tablas de ENTIDAD** → 🔵 **el denominador real** | **174** |
+| con paquete **declarado por su registro** | **21 filas → 18 paquetes** |
+| sin paquete y sin repo → 🔴 **no medibles por NINGÚN canal** | **153** |
+
+🔴 **La cifra «249» que el pase 65 escribió no se puede reproducir: nunca salió de un instrumento
+versionado** (regla 1 de **P126**). Y las otras 118 filas sin `github.com` son filas de tablas de
+**método** — preguntarle la licencia a una fila de `Magnitud · Valor` es un error de categoría.
+
+| Capa | Identificador sin texto | 🟢 Texto presente |
+|---|---|---|
+| repos de GitHub **sin archivo** (pase 65) | **5 de 7 — 71 %** | 2 de 7 |
+| **paquetes de registro** (este pase, 23 mediciones) | **6 de 23 — 26 %** | 🟢 **17 de 23 — 74 %** |
+
+🟢 **Conclusión que la acción pedía decidir: NO hay que reescribir la columna Licencia de la capa de
+paquete.** El problema de **P179** es específico de los repos cuyo árbol no tiene archivo. 🔵 **Y la
+inferencia se invierte en algo útil: el *tarball* contesta «¿hay texto de licencia?» con UNA llamada
+al registro y UNA descarga, contra 14 sondas a `raw` por nombre de archivo** — porque `npm pack` y
+los constructores de sdist ya hicieron la búsqueda de nombres.
+
+🔴 **Y un defecto de ESTA KB que el barrido expuso: 5 de los 18 nombres viven en los DOS registros, y
+2 con licencias distintas.** `educhain` es **ISC sin texto en npm** y **MIT con texto en PyPI**;
+`frappe-mcp-server` es **ISC sin texto en npm** y **MIT con texto en PyPI**, **y la fila de esta KB
+cita npm**. ⚠️ **Obligación nueva: una fila que nombra un paquete tiene que nombrar su CANAL.**
+
+### 🔴 P184 — un archivo de licencia COMPLETO puede decir la licencia EQUIVOCADA
+
+**`MaybeItsAdam/tutors`** trae `LICENSE.md` de **1.075 B** con el texto MIT completo, titular y año:
+`Copyright (c) 2024 **tldraw Inc.**` — **y su README dice que los términos que gobiernan son la
+licencia del SDK de tldraw, que exige conservar la marca de agua *«Made with tldraw»* en el lienzo.**
+⚠️ **MIT no obliga a conservar ningún elemento visual.**
+
+🔴 **Las cuatro capas que esta KB mide lo aprueban:** **P170** (hay archivo) ✅, **P171** (familia del
+título: MIT) ✅, **P168** (1.075 B: texto, no afirmación) ✅, **P179** (titular + año + texto =
+cesión) ✅. 🔵 **La pregunta que lo detecta es la del titular: un copyright de `tldraw Inc.` de 2024
+sobre un proyecto de 2026 de `MaybeItsAdam` no pertenece al proyecto.**
+
+Barridos los 160 archivos presentes (`compose/code/p184-holder-mismatch/`, **15/15** controles):
+
+| Veredicto | n | Qué significa |
+|---|---|---|
+| `NOT-APPLICABLE` | **61** | 🔵 **Apache-2.0, GPL, AGPL, LGPL, CC0, CC-BY, Unlicense: el titular NO está en el archivo por construcción.** Apache lo deja en un apéndice sin rellenar; la GPL lleva el de la **FSF**, que es el copyright **del texto de la licencia**. **El titular de esas familias vive en los headers de fuente — el canal de P172** |
+| `HOLDER-MATCH` | **68** | el titular comparte un *token* con el dueño o el repo |
+| `HOLDER-UNRELATED` | **31** | lista de lectura; **17 son el nombre propio del autor**, y 6 importan |
+
+🟢 **El resultado que más vale: CUATRO de las seis que importan son los forks de `canvas-mcp`
+llevando el copyright de `Vishal Sachdev`** (`AmirF194`, `BartMassey-upstream`, `abr-Projects`,
+`lindsay-cheng`) — **el mismo linaje que el pase 63 estableció leyendo deriva de `description`,
+recuperado por un canal sin relación.** 🔵 **El copyright de un archivo MIT sobrevive a un renombre,
+a una reescritura de `description` y a un fork desprendido; la deriva de descripción no.**
+
+Las otras dos: 🔴 [`GEMLab-HKU/Unlearn_and_Relearn`](https://github.com/GEMLab-HKU/Unlearn_and_Relearn)
+lleva `UCSB ML&NLP Group` —repo de un laboratorio de **HKU (APAC)** con copyright de un grupo de
+**North America**, titular heredado del *upstream*— y 🔴
+[`jupyterlab/jupyter-ai`](https://github.com/jupyterlab/jupyter-ai) lleva **`author_a`**, el marcador
+por omisión del *cookiecutter* de extensiones de Jupyter, publicado en un BSD real.
+
+⚠️ **Y dos titulares preservan el nombre ANTERIOR del proyecto, que es la misma señal invertida:**
+`SirhanMacx/Claw-ED` → `EDUagent Contributors`, y `UKGovernmentBEIS/inspect_ai` → `UK AI Security
+Institute` (el *handle* lleva el nombre viejo del departamento, el copyright el nuevo del organismo).
+
+### 🔵 Las altas del pase, y las tres que ya estaban
+
+| Pieza | Repo | Licencia (**leída de primera mano**) | Región | Nota |
+|---|---|---|---|---|
+| **500-AI-Agents-Projects** | [`ashishpatel26/500-AI-Agents-Projects`](https://github.com/ashishpatel26/500-AI-Agents-Projects) | **MIT**, 1.069 B, `© 2025 ashishpatel26` 🟢 cesión | sin región declarada | Catálogo de 500+ casos con sección **Education**. 🔵 **Entra como ÍNDICE, no como pieza: no tiene código propio** |
+| **EduGPT** | [`hqanhh/EduGPT`](https://github.com/hqanhh/EduGPT) | **MIT**, 1.071 B 🟢 cesión | sin región declarada | Dos agentes de rol negocian un *syllabus* y un tercero enseña contra él; arquitectura **CAMEL**. ⚠️ **Pieza vieja: referencia `hwchase17/langchain`.** 🔵 **Entra por el PATRÓN —negociar el currículo antes de enseñar— no por su estado** |
+| **agno** | [`agno-agi/agno`](https://github.com/agno-agi/agno) | **Apache-2.0**, 11.343 B | sin región declarada | Dependencia, no pieza educativa: su *cookbook* trae `study_partner.py` y `research_agent_exa.py`, los dos ejemplos educativos **ejecutables** del catálogo anterior. ⚠️ **Apache-2.0 → el titular no está en el archivo (P184): la atribución se busca en `NOTICE`** |
+
+🔴 **Tres candidatas más YA ESTABAN en este archivo** y se declara porque un alta que es un
+re-descubrimiento infla el conteo de piezas: **`THU-MAIC/OpenMAIC`** (39,7k ★ — y la fila existente
+sabe lo que la búsqueda no: **fue relicenciada de AGPL-3.0 a MIT en v0.3.0 del 2026-06-28**, así que
+la licencia permisiva tiene ~3 meses), **`littlecookie0722/AI-Teaching-Agent`** (alta del pase 58) y
+**`GarethManning/education-agent-skills`**. 🟢 **De las tres, una gana dato: la celda de
+`education-agent-skills` decía `CC BY-SA 4.0 ⚠️` sin clase, y el archivo leído son 1.229 B con
+titular → cesión, con ShareAlike confirmado por evidencia y no por el nombre de la licencia.**
+
+⚠️ **Y una candidata que NO es alta y es un dato de linaje:** `adity982/OpenTutor` apareció como
+proyecto independiente con **descripción idéntica** a `zijinz456/OpenTutor` (fila ya registrada), y su
+`LICENSE` lleva `© 2026 **Zijin Zhang**` con el badge apuntando al repo original. 🔵 **Es un fork que
+retiene correctamente al autor — y el titular de la licencia lo separa del original en una línea,
+donde la descripción no lo separa en absoluto.**

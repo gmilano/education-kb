@@ -9,6 +9,136 @@ updated: 2026-10-03
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 > No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
 
+## 2026-10-03 — pase 66: un archivo de licencia COMPLETO puede decir la licencia equivocada, y el README es una tercera capa
+
+### 🔴 El hallazgo del pase: `MaybeItsAdam/tutors` pasa TODAS las pruebas de esta KB y cede lo que no puede ceder
+
+**`MaybeItsAdam/tutors`** — *«infinite canvas where students and AI collaborate»*, extensión del
+*starter kit* de agentes de tldraw a una plataforma de tutoría BYOK — trae **`LICENSE.md` de 1.075 B
+con el texto MIT completo, titular y año: `Copyright (c) 2024 tldraw Inc.`**
+
+**Y su README dice otra cosa:** los términos que gobiernan son **la licencia del SDK de tldraw**, que
+permite uso comercial *«so long as you preserve the "Made with tldraw" watermark on the canvas»*.
+⚠️ **Una condición de marca de agua no es MIT.**
+
+🔴 **Lo que lo vuelve patrón: las cuatro capas que esta KB mide lo aprueban.** **P170** (hay archivo
+en 14 nombres) ✅ · **P171** (familia leída del título: MIT) ✅ · **P168** (1.075 B: texto, no
+afirmación) ✅ · **P179** (titular + año + texto = *cesión*) ✅. 🔵 **La que lo detecta es nueva:
+¿el TITULAR pertenece al proyecto?** Un copyright de `tldraw Inc.` de 2024 sobre un proyecto de 2026
+de `MaybeItsAdam` no pertenece al proyecto. Ver **P184** y `compose/code/p184-holder-mismatch/`.
+
+### 🟢 Y el titular recupera solo un linaje que costó un pase entero establecer
+
+Barridos los **160** archivos de licencia que **P170** midió como presentes: **68 `HOLDER-MATCH`**,
+**31 `HOLDER-UNRELATED`**, **61 `NOT-APPLICABLE`**. De las 31, leídas a mano, 17 son el nombre propio
+del autor y **6 importan** — y **cuatro de las seis son los forks de `canvas-mcp` llevando el
+copyright de `Vishal Sachdev`**: `AmirF194`, `BartMassey-upstream`, `abr-Projects`, `lindsay-cheng`.
+
+🔵 **Es el mismo linaje que el pase 63 estableció leyendo DERIVA DE `description`, recuperado por un
+canal sin relación.** **El copyright de un archivo MIT sobrevive a un renombre, a una reescritura de
+`description` y a un fork desprendido** — tres cosas que la deriva de descripción no sobrevive.
+
+Las otras dos: 🔴 **`GEMLab-HKU/Unlearn_and_Relearn`** lleva `UCSB ML&NLP Group` (repo de un
+laboratorio de **HKU** con copyright de un grupo de **North America**: titular heredado del
+*upstream*), y 🔴 **`jupyterlab/jupyter-ai`** lleva **`author_a`** — el marcador por omisión del
+*cookiecutter* de extensiones de Jupyter, publicado en un BSD real de un proyecto de JupyterLab.
+
+### 🔴 Las 22 «ausencias medidas» del pase 65 eran 14, y hay una tercera capa de licencia
+
+Abiertos los **listados de raíz** de las 22 filas `PAYLOAD-SILENT` (22 llamadas unitarias, canal
+WebFetch sobre `github.com`; `curl` a `github.com` da **403** hoy):
+
+- 🔴 **1 ausencia FALSA**: `dini-ag-kim/school-curriculum-pg` cede **CC BY-SA 4.0** en `lp-base.ttl`
+  línea 24. ⚠️ **El propio pase 65 lo había medido con `sweep_semantic.sh` y lo publicó — y la fila
+  quedó `PAYLOAD-SILENT` en el TSV autoritativo igual**, porque la lista de nombres semánticos es por
+  convención y este repo nombra `lp-*.ttl`. **Dos instrumentos del mismo pase, respuestas opuestas, y
+  el TSV publicó la peor.**
+- 🔴 **6 declaran licencia SÓLO en el README** (badge, sección `## License`, o las dos), invisible a
+  la pregunta del ARCHIVO y a la del PAYLOAD. **Ninguna de las dos preguntó el README**, y el motivo
+  es una regla de esta casa aplicada un paso de más: **P171** prohíbe el `grep` del cuerpo por la
+  palabra *license*. ⚠️ **Tiene razón sobre el `grep` y se equivoca sobre la CAPA**: un badge
+  `img.shields.io/badge/License-MIT` y una sección `## License` son declaraciones estructuradas. Ver
+  **P182**.
+- 🟢 **12 quedan con silencio medido en TRES capas** y la raíz enumerada completa. 2 quedan
+  `SILENT-ROOT` con subdirectorios sin sondear.
+
+🔴 **Encadenado: el pase 64 publicó 32, el 65 bajó a 22, este pase baja a 14. La cifra original
+estaba inflada un 129 %** — y las tres mediciones son correctas para la pregunta que cada una hizo.
+
+### 🔴 Dos contradicciones de licencia, que valen más que las ausencias
+
+| Fila | Badge | Prosa | Por qué decide un *engagement* |
+|---|---|---|---|
+| **`SabioTechTeam/Teacher-Hub`** | `License: MIT` | *«MIT License — free for educational and **non-commercial** use»* | ⚠️ **MIT permite uso comercial sin condiciones; la prosa lo prohíbe.** Para un estudio —comercial por definición— **es peor que el silencio: el silencio se pregunta, una contradicción se litiga** |
+| **`eth-lre/mathtutorbench`** | `License: CC BY 4.0` | *«Attribution-**ShareAlike** 4.0 International»* | ⚠️ **ShareAlike o no decide si un derivado puede cerrarse** (la compuerta de **P178**). Un *benchmark* de tutoría matemática con las dos caras declaradas **no entra en un entregable** |
+
+Y 🔴 **`vilcaaguilerandrea-oss/carrera-lectora`** (Perú, **LATAM**) no declara licencia alguna: dice
+*«Creado con fines educativos. Libre para usar en contextos educativos.»* — **un permiso a medida, más
+angosto que cualquier licencia OSI.** Es la clase `NOT-A-LICENSE`, nueva en esta KB.
+
+### 🔴 Las «altas» del pase: 3 de 6 candidatas YA ESTABAN en esta KB, y se corrige antes de publicarlas
+
+Las búsquedas con el vertical en la consulta devolvieron 6 candidatas. 🔴 **Verificadas contra
+`agents/top.md` antes de escribir una fila, TRES ya estaban registradas, dos de ellas con dato más
+rico del que este pase traía.** ⚠️ **Se declara, porque un alta que es un re-descubrimiento infla el
+conteo de piezas de la KB y es el defecto que `description-drift-audit` existe para atrapar — aquí
+cometido por el canal de búsqueda, no por un fork.**
+
+| Candidata | Estado | Qué aporta este pase |
+|---|---|---|
+| **`THU-MAIC/OpenMAIC`** | 🔴 **ya registrada** (`agents/top.md`, 39,7k ★, v1.1.2 del 2026-09-28) | **Nada nuevo de función, y una verificación de licencia:** `LICENSE` leído, **MIT, 1.064 B, `Copyright (c) 2026 THU-MAIC`** → 🟢 **cesión** bajo **P179**, no identificador. ⚠️ **Y la fila existente trae el dato que este pase NO tenía y que TEMPERA el entusiasmo: fue relicenciada de AGPL-3.0 a MIT en v0.3.0 (2026-06-28), así que la licencia permisiva tiene ~3 meses y no es el historial del proyecto.** 🔵 **La fila vieja sabe más que la búsqueda nueva** |
+| **`littlecookie0722/AI-Teaching-Agent`** | 🔴 **ya registrada** (alta del pase 58) | Ídem: la licencia ya estaba leída de primera mano allí. **Cero incremento** |
+| **`GarethManning/education-agent-skills`** | 🔴 **ya registrada** (815 ★, `CC BY-SA 4.0 ⚠️`) | **Un incremento real y chico:** la celda decía `CC BY-SA 4.0 ⚠️` sin clase. Leído el archivo: **1.229 B con titular** → 🟢 **cesión**, no identificador. ⚠️ **ShareAlike confirmado → la compuerta de P178 queda activada con evidencia, no por inferencia del nombre de la licencia** |
+
+### 🟢 Las altas que SÍ son altas: 2 piezas y 1 dependencia, todas con cesión leída de primera mano
+
+| Pieza | Repo | Licencia (**medida**) | Región | Qué es, y para qué entra |
+|---|---|---|---|---|
+| **500-AI-Agents-Projects** | [`ashishpatel26/500-AI-Agents-Projects`](https://github.com/ashishpatel26/500-AI-Agents-Projects) | **MIT**, 1.069 B, `Copyright (c) 2025 ashishpatel26` 🟢 *cesión* | sin región declarada | Catálogo de 500+ casos de agentes por industria con sección **Education**. 🔵 **Entra como ÍNDICE, no como pieza**: es un canal de descubrimiento con licencia limpia, y de él salieron las otras dos filas de esta tabla. ⚠️ **No tiene código propio: no se cotiza, se consulta** |
+| **EduGPT** | [`hqanhh/EduGPT`](https://github.com/hqanhh/EduGPT) | **MIT**, 1.071 B 🟢 *cesión* | sin región declarada | *AI Instructor*: dos agentes de rol negocian un *syllabus* a partir del objetivo de aprendizaje del usuario, y un tercero enseña contra ese *syllabus*. Arquitectura inspirada en **CAMEL**. ⚠️ **Pieza VIEJA, y se declara: referencia `hwchase17/langchain`, que es el *handle* de la era 2023.** 🔵 **Entra por el PATRÓN —negociación de currículo entre agentes antes de enseñar— no por su estado: es el antecedente directo de lo que `instructional_agents` y OpenMAIC hacen hoy con tres años más de herramienta** |
+| **agno** *(dependencia)* | [`agno-agi/agno`](https://github.com/agno-agi/agno) | **Apache-2.0**, 11.343 B | sin región declarada | 🔵 **No es una pieza educativa y entra igual, como dependencia nombrada:** su *cookbook* trae `study_partner.py` y `research_agent_exa.py`, que son los dos únicos ejemplos educativos **ejecutables** que el catálogo anterior enlaza. ⚠️ **Apache-2.0 sin `NOTICE` leído: el titular no está en el archivo por construcción (ver P184), así que la atribución hay que buscarla aparte** |
+
+### 🔴 Y una pieza que entra como CASO, no como recomendación
+
+**`MaybeItsAdam/tutors`** entra en esta KB **por su defecto de licencia**, que es el hallazgo de
+**P184** descrito arriba, **no como opción de arranque**. ⚠️ **Mientras el `LICENSE.md` diga
+`tldraw Inc.` y el README exija conservar la marca de agua, no hay términos que mostrarle a una
+oficina legal** — y la condición de marca de agua sobre un lienzo que ve el alumno **es un requisito
+de producto, no una nota al pie.** 🔵 **Se cierra con una pregunta al autor, igual que
+`@ink-waffle/sisu-mcp` y `Timadey/proctor`: ¿MIT propio, o SDK de tldraw con marca de agua?** Las dos
+respuestas son usables; la ambigüedad no.
+
+### ⚠️ Un alta que NO se toma, y el motivo es de método
+
+**`adity982/OpenTutor`** apareció en la búsqueda como proyecto independiente, con **descripción
+idéntica** a `zijinz456/OpenTutor` (fila ya registrada). Su `LICENSE` lleva
+`Copyright (c) 2026 **Zijin Zhang**` y el badge del README apunta a `zijinz456/OpenTutor`:
+🔵 **es un fork que retiene correctamente al autor original.** **No es un alta: es un dato de linaje**,
+y es la deriva que `compose/code/description-drift-audit/` existe para detectar. **El canal de
+búsqueda presenta forks como proyectos; el titular de la licencia los separa en una línea.**
+
+### 🔴 El hueco que se declara, no se tapa: las búsquedas globales no rindieron piezas educativas
+
+Corridas las cuatro búsquedas globales que manda el procedimiento (`top open source AI agents
+education 2026 github MIT`, `github trending education AI 2026`, `open source platform education ERP
+SIS MIT Apache 2026`, `AI education industry trends 2026`):
+
+- 🔴 **La búsqueda de «agentes open source de educación» devolvió listicles de agentes de PROPÓSITO
+  GENERAL** (OpenHands, opencode, CrewAI, LangGraph, Dify, n8n) **sin una sola pieza educativa**, y con
+  cifras de estrellas que **no son verificables por los canales de esta corrida** (`api.github.com`
+  → **403**). **Ninguna alta salió de ahí**, por la misma regla que el pase 65: esta base no copia
+  tracción sin leerla.
+- 🔴 **`github trending education AI 2026` devolvió CURRÍCULOS PARA APRENDER AI**, no AI para
+  educación: `rohitg00/ai-engineering-from-scratch`, `NishthaSingh7/agentic-ai-notebook-2026`,
+  `AgenticAiLabs/Ai-Engineering-Roadmap`, `panaversity/learn-agentic-ai`. ⚠️ **Es una fuente de ruido
+  recurrente y conviene nombrarla: «AI curriculum» y «AI for education» comparten palabras y son
+  mercados distintos.** Es la misma distinción que esta KB ya aplicó a `HKUDS/AI-Researcher`.
+- 🟢 **Las 6 candidatas salieron de búsquedas con el VERTICAL en la consulta** (*«AI tutor agent
+  repository Moodle Open edX Canvas»*, *«education AI agent github Japan Korea India curriculum»*),
+  y ninguna de las consultas genéricas. **El canal productivo es el que nombra la plataforma o la
+  región.** ⚠️ **Y aun así 3 de las 6 eran re-descubrimientos**, así que el rendimiento real del
+  canal en este pase es **2 piezas + 1 dependencia**, no 6.
+
 ## 2026-10-03 — pase 65: la cesión estaba dentro del dato en 10 de 32 filas, y el identificador no es una cesión
 
 ### 🔴 La cifra publicada se corrige: «32 sin licencia» era 22

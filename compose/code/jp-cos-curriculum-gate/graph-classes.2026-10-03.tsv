@@ -1,0 +1,28 @@
+# El grafo jp-cos completo, medido en el pase 66 del 2026-10-03.
+# Fuente: raw.githubusercontent.com/jp-cos/jp-cos.github.io/HEAD/all-20250927.ttl.gz
+# gz 4.251.289 B -> 69.288.422 B sin comprimir, 1.004.927 lineas.
+# clase	n
+cs:Number	46277
+Item	39958
+Subject	786
+CommentaryItem	655
+SubjectArea	276
+RelatedSubject	158
+RelatedSubjectArea	102
+void:Dataset	59
+StructuredItem	42
+Dataset	36
+CourseOfStudyRevision	34
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#Property	30
+CourseOfStudy	20
+sh:NodeShape	17
+rdfs:Class	17
+cs:SourceOfEnglishName	16
+School	9
+Period	9
+prov:Revision	8
+Stage	7
+foaf:Person	6
+DisabilityCategory	5
+CosCommentary	2
+foaf:Group	1

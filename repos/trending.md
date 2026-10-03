@@ -8,6 +8,120 @@ updated: 2026-10-03
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 
+## 2026-10-03 — pase 66: el grafo japonés completo estaba en el repo, y la capa de paquete está SANA
+
+### 🟢 Los 66 MB que el pase 65 declaró inalcanzables: estaban a un sufijo de distancia
+
+El pase 65 anotó `all-20250927.ttl` → **404** y concluyó *«el grafo completo sólo existe detrás de los
+dominios bloqueados»*. 🔴 **`index.html` lo enumera como `all-20250927.ttl.gz`.** El nombre se
+transcribió **sin el sufijo** y se sondeó un archivo que el publicador nunca anunció.
+
+| Nombre | Código | Bytes |
+|---|---|---|
+| **`all-20250927.ttl.gz`** — como lo escribe `index.html` | 🟢 **200** | **4.251.289** |
+| `all-20250927.ttl` — lo que se sondeó | 🔴 404 | 14 (el cuerpo es la cadena `404: Not Found`) |
+| **`cs-items-20220830.ttl.gz`** | 🟢 **200** | **2.522.650** |
+| `cs-items-20220830.ttl` | 🔴 404 | 14 |
+
+⚠️ **Los dos nombres mal transcritos son los dos archivos más grandes del conjunto, que es
+exactamente por qué están comprimidos.** 🔵 **La lección: un nombre transcrito de un listado no es el
+nombre que el listado dio.** Y el pase 65 **tenía el listado delante** — es el mismo `index.html` que
+leyó por `raw` para establecer **P181**. **El canal correcto se usó y el dato se copió mal.**
+
+🟢 **Medidos los 22 volcados exactamente como `index.html` los escribe: 22 de 22 dan 200.** La
+columna «no medido» de `dumps.tsv` queda cerrada completa.
+
+### 🟢 Y medido el grafo, Japón pasa de «la mejor pieza de currículo» a «la única con educación especial»
+
+**`jp-cos/jp-cos.github.io`** — 学習指導要領LOD, **CC BY 4.0 sin ShareAlike**. Grafo completo:
+**69.288.422 B (66 MB) sin comprimir, 1.004.927 líneas.**
+
+| Clase | n | Qué es |
+|---|---|---|
+| **`cs:Item`** | **39.958** | los ítems del currículo |
+| `cs:Subject` · `cs:SubjectArea` | 786 · 276 | materias y áreas |
+| **`cs:CommentaryItem`** | **655** | 🟢 **学習指導要領解説, el comentario OFICIAL, dentro del grafo** |
+| **`cs:CourseOfStudyRevision`** | **34** | currículos viejos **y** nuevos |
+| `cs:RelatedSubject` · `cs:RelatedSubjectArea` | 158 · 102 | 🟢 **enlaces entre materias: permite recorrer prerrequisitos** |
+| **`sh:NodeShape`** | **17** | 🟢 **el SHACL de validación viaja dentro del mismo grafo** |
+| **`cs:DisabilityCategory`** | **5** | categorías de discapacidad |
+
+**Cobertura por nivel:** 幼稚園 Kindergarten **1.382** · 小学校 Elementary **23.555** · 中学校
+LowerSecondary **17.468** · 高等学校 UpperSecondary **79.926**.
+
+🔵 **Y la rama que la muestra de un registro no podía mostrar: 特別支援学校 (educación especial)
+modelada como ciudadana de primera clase y desglosada por discapacidad** — `UpperSecondaryDeptSNES`
+**14.560**, `ElementaryAndLowerSecondaryDeptSNES` **6.130**, `-Visual` (視覚) **4.886**, `-Hearing`
+(聴覚) **4.721**, `-Intellectual` (知的) **2.207 / 1.546 / 1.223**, `-VHPH` **157 / 76**, y las
+variantes `-NC` (sin currículo prescrito) **432 / 372 / 341**.
+
+⚠️ **Esto cambia el valor de la pieza, no su tamaño. Ninguna otra pieza de currículo de esta KB
+—tampoco la alemana por *Land*, que es `CC BY-SA 4.0`— trae la dimensión de educación especial
+desglosada.** 🟢 **Para `P180` el alcance se cierra: no hay que construir vocabulario, ni validación,
+ni el comentario.** ⚠️ **La dependencia que la receta sigue teniendo que declarar es el endpoint
+SPARQL (`dydra.com` bloqueado, y el publicador lo anuncia 試験公開中) — con 66 MB en la mano la
+receta no lo necesita: se carga en un *triplestore* propio, y eso es lo que se cotiza.**
+
+### 🟢 La capa de PAQUETE está sana, y eso decide qué NO hay que reescribir
+
+Ejecutada la acción que llevaba 14 pases pendiente —las filas de `agents/top.md` **sin URL de
+GitHub**—, con el denominador declarado primero, por instrumento versionado:
+
+| | Qué se cuenta | n |
+|---|---|---|
+| filas de dato de las 98 tablas | | **578** |
+| sin `github.com` | | **292** |
+| **de esas, en tablas de ENTIDAD** | 🔵 **el denominador real** | **174** |
+| con paquete **declarado por su registro** | npm/PyPI | **21 filas → 18 paquetes** |
+| sin paquete y sin repo | 🔴 **no medibles por NINGÚN canal** | **153** |
+
+🔴 **La cifra «249» no se puede reproducir: nunca salió de un instrumento versionado.** Y las otras
+118 filas sin `github.com` son filas de tablas de **método** (`Magnitud · Valor`, `Estado · n · %`):
+**preguntarle la licencia a una fila de `Magnitud · Valor` es un error de categoría.** ⚠️ **La capa
+accionable es el 10 % de lo que la cifra sugería.**
+
+**Bajados los 18 paquetes del registro y abiertos sus *tarballs*/sdists (23 mediciones):**
+
+| Capa | Identificador sin texto | 🟢 Texto de licencia presente |
+|---|---|---|
+| repos de GitHub **sin archivo** (pase 65) | **5 de 7 — 71 %** | 2 de 7 |
+| **paquetes de registro** (hoy) | **6 de 23 — 26 %** | 🟢 **17 de 23 — 74 %** |
+
+🟢 **La hipótesis de la acción se resuelve en su segunda rama: NO hay que reescribir la columna
+Licencia de la capa de paquete.** El problema de **P179** es **específico de los repos de GitHub cuyo
+árbol no tiene archivo de licencia**. 🔵 **Y la dirección útil se invierte: `npm pack` y los
+constructores de sdist incluyen el archivo de licencia cuando existe, así que el *tarball* contesta
+«¿hay texto?» con UNA llamada al registro y UNA descarga, contra 14 sondas a `raw` por nombre.**
+⚠️ **Para 2 de los 18 el registro es el ÚNICO canal que existe** (`opencode-sit` y
+`aicourse-mcp-server` no declaran repositorio) **y contesta igual**: el primero con texto de 1.056 B,
+el segundo sin.
+
+### 🔴 Y un defecto que esta KB tiene que arreglar en sus propias filas: un NOMBRE no es un PAQUETE
+
+**5 de los 18 nombres viven en los DOS registros**, y en 2 casos con **licencias distintas**:
+
+| Nombre | npm | PyPI | Lectura |
+|---|---|---|---|
+| **`educhain`** | **ISC** 1.0.0, 🔴 sin texto | **MIT** 0.4.0, texto 1.092 B | 🔴 **La fila de esta KB es el proyecto Python (`satvik314/educhain`): quien corra `npm i educhain` se lleva ISC y ningún texto** |
+| **`frappe-mcp-server`** | **ISC** 0.6.0, 🔴 sin texto | **MIT** 1.2.0, texto 1.065 B | 🔴 **La fila cita npm — o sea el canal peor licenciado de los dos** |
+| **`clawed`** | MIT 0.0.1, 🔴 sin texto | MIT **9.18.2026.1**, texto | ⚠️ misma licencia, **brecha de versión que delata una reserva de nombre** en npm. La fila cita `(PyPI)`: correcto |
+| `canvas-lms-mcp` · `moodle-cli` | MIT con texto | MIT con texto | 🟢 benignos |
+
+⚠️ **Obligación que esto impone a la KB: una fila que nombra un paquete tiene que nombrar su CANAL.**
+Sin canal el nombre es ambiguo entre dos artefactos con dos licencias, y en 2 de 5 casos medidos lo
+es de verdad.
+
+### Canales de esta corrida, medidos
+
+| Canal | Estado | Qué sirvió |
+|---|---|---|
+| `raw.githubusercontent.com` | 🟢 **200** | archivos, incluidos los 66 MB del grafo japonés |
+| `registry.npmjs.org` · `pypi.org` | 🟢 **200** | metadato de licencia **y** *tarballs*/sdists |
+| **`github.com` por WebFetch** | 🟢 **200** | **los 22 listados de raíz** — el canal que la acción 2 nombró |
+| `github.com` por `curl` | 🔴 **403** | — |
+| `api.github.com` | 🔴 **403** | ninguna cifra de estrellas verificable de primera mano |
+| `codeload.github.com` | 🔴 **403** | igual que en el pase 65; **no hizo falta** |
+
 ## 2026-10-03 — pase 65: Japón entra con el currículo mejor cedido de la KB, y una página bloqueada se lee por su fuente
 
 ### 🟢 El alta del pase: `jp-cos/jp-cos.github.io` — 学習指導要領LOD, **CC BY 4.0**

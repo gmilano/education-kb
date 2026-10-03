@@ -920,6 +920,234 @@ canal secundario» en vez de **medida**.
 
 ---
 
+## P182 — El README es la TERCERA capa de licencia, y una regla de esta casa la mantuvo invisible (pase 66 del 2026-10-03)
+
+**El problema.** Cuatro pases midieron licencia sobre `agents/top.md`, cada uno con una pregunta
+distinta, y el denominador de «ausencias medidas» bajó cada vez: **32** (pase 64, pregunta del
+ARCHIVO) → **22** (pase 65, pregunta del PAYLOAD) → **14** (pase 66, pregunta del README). 🔴 **La
+cifra original estaba inflada un 129 %, y las tres mediciones son correctas para la pregunta que cada
+una hizo.**
+
+🔵 **Abiertos los listados de raíz de las 22 `PAYLOAD-SILENT`, 6 declaran licencia SÓLO en el
+README** —badge `img.shields.io/badge/License-…`, sección `## License`, o las dos— **y ninguno de los
+dos instrumentos anteriores podía verlo, porque ninguno preguntó el README.**
+
+🔴 **Y la razón por la que no lo preguntaron es una regla de esta casa, bien escrita y aplicada un
+paso de más.** **P171** manda classificar sobre una **declaración** y prohíbe el `grep` del cuerpo por
+la palabra *license* — porque *«license»* dentro del nombre de una dependencia, de una URL o de una
+frase **no es una cesión**. ⚠️ **La regla tiene razón sobre el `grep` y se equivoca sobre la CAPA:**
+
+| | Es | No es |
+|---|---|---|
+| `"license": "MIT"` en `package.json` | 🟢 declaración estructurada (**P172** la mide) | — |
+| `img.shields.io/badge/License-MIT` | 🟢 **declaración estructurada**: el valor está en la ruta del badge | ❌ una palabra en una frase |
+| una sección `## License` con su párrafo | 🟢 **declaración estructurada**: encabezado canónico + cuerpo | ❌ una palabra en una frase |
+| *«…uses the licensed-components library…»* | ❌ | 🔴 **esto es lo que P171 prohíbe, y hace bien** |
+
+**La regla, entonces.** 🔵 **La pregunta de licencia tiene CUATRO capas y hay que nombrar cuál se
+preguntó: ARCHIVO (P170) · PAYLOAD (P172) · README (P182) · TITULAR (P184).** ⚠️ **«Ausencia medida»
+sin nombrar la capa no es un dato reutilizable** — tres pases de esta KB lo demostraron corrigiéndose
+a sí mismos.
+
+### Y lo que la capa README aporta no son ausencias menos: son CONTRADICCIONES
+
+🔴 **Las dos filas que más cambian de estado no pasan de «sin licencia» a «con licencia»: pasan a
+«no-entregable sin aclaración», que es un estado que una celda con una sola licencia no puede
+expresar.**
+
+| Fila | Badge | Prosa | El conflicto |
+|---|---|---|---|
+| `SabioTechTeam/Teacher-Hub` | `License: MIT` | *«MIT License — free for educational and **non-commercial** use»* | 🔴 **MIT permite el uso comercial sin condiciones** |
+| `eth-lre/mathtutorbench` | `License: CC BY 4.0` | *«Attribution-**ShareAlike** 4.0»* | 🔴 **ShareAlike decide si un derivado puede cerrarse** (**P178**) |
+
+⚠️ **Una ausencia se pregunta; una contradicción se litiga.** La consecuencia operativa: **la columna
+Licencia de esta KB admite el valor `no-entregable-sin-aclaración`**, y esas dos filas lo llevan.
+
+Y una clase nueva: 🔴 **`NOT-A-LICENSE`.** `vilcaaguilerandrea-oss/carrera-lectora` (**LATAM**, Perú)
+dice *«Creado con fines educativos. Libre para usar en contextos educativos.»* — **un permiso a
+medida, más angosto que cualquier licencia OSI, que además no nombra ninguna.** ⚠️ **«Contextos
+educativos» no define si un entregable facturado lo es.**
+
+**Instrumento:** `compose/code/p172-payload-license-sweep/result-rootlisting.2026-10-03.tsv`
+(22 llamadas unitarias, canal WebFetch sobre `github.com`).
+
+---
+
+## P183 — El TARBALL contesta la pregunta de P179 más barato que el árbol (pase 66 del 2026-10-03)
+
+**El problema.** **P179** separó el **identificador** de licencia (un campo de manifiesto que nombra
+la licencia y no trae titular, ni año, ni una línea de texto) de la **cesión** (otorgamiento con
+titular, año y texto). Medir cuál de las dos tiene un repositorio costaba **14 sondas a `raw`** —un
+nombre de archivo por sonda— y aun así devolvía ausencias falsas, porque la lista de nombres es por
+convención.
+
+🟢 **La vuelta, medida: `npm pack` y los constructores de sdist incluyen el archivo de licencia
+cuando existe en el árbol.** Así que el artefacto publicado **ya hizo la búsqueda de nombres**, y la
+pregunta se contesta con **una** llamada al registro y **una** descarga:
+
+```sh
+# identificador (registro) + ¿hay texto? (tarball), en dos llamadas
+curl -s https://registry.npmjs.org/$(printf '%s' "$pkg" | sed 's|/|%2F|') \
+  | python3 -c 'import json,sys; d=json.load(sys.stdin); v=d["dist-tags"]["latest"]; m=d["versions"][v]; print(m.get("license"), m["dist"]["tarball"])'
+curl -s "$tarball" | tar tz | grep -iE '/(licen[sc]e|copying|notice)([.-][a-z0-9]+)?$'
+```
+
+**El resultado sobre los 18 paquetes de esta KB (23 mediciones, los dos registros):**
+
+| Capa | Identificador sin texto | 🟢 Texto presente |
+|---|---|---|
+| repos de GitHub **sin archivo** de licencia | **5 de 7 — 71 %** | 2 de 7 |
+| **paquetes de registro** | **6 de 23 — 26 %** | 🟢 **17 de 23 — 74 %** |
+
+🔵 **La conclusión que decide trabajo: el problema de P179 es específico de los repos cuyo árbol no
+tiene archivo, y la capa de paquete está SANA.** No hay que reescribir la columna Licencia de esa
+capa. ⚠️ **Y para 2 de los 18 el registro es el ÚNICO canal que existe** (`opencode-sit` y
+`aicourse-mcp-server` no declaran repositorio): **la pregunta del archivo no se puede ni formular, y
+el tarball la contesta igual** — uno con texto de 1.056 B, el otro sin.
+
+### El corolario que obliga a cambiar cómo esta KB escribe una fila: un NOMBRE no es un PAQUETE
+
+🔴 **5 de los 18 nombres viven en los DOS registros, y 2 con licencias distintas.**
+
+| Nombre | npm | PyPI |
+|---|---|---|
+| **`educhain`** | **ISC**, 🔴 sin texto | **MIT**, texto 1.092 B |
+| **`frappe-mcp-server`** | **ISC**, 🔴 sin texto | **MIT**, texto 1.065 B |
+| `clawed` | MIT 0.0.1, sin texto | MIT **9.18.2026.1**, con texto |
+
+⚠️ **Regla: una fila que nombra un paquete tiene que nombrar su CANAL.** Sin canal el nombre es
+ambiguo entre dos artefactos con dos licencias, **y en 2 de 5 casos medidos lo es de verdad** — en
+`frappe-mcp-server` la fila de esta KB cita justamente el canal peor licenciado.
+
+**Instrumento:** `compose/code/p183-nongithub-denominator/` (con `shape-only` y `npm-first` como
+controles negativos fechados de D4 y D5).
+
+---
+
+## P184 — El TITULAR: un archivo de licencia completo puede decir la licencia EQUIVOCADA (pase 66 del 2026-10-03)
+
+**El problema.** **`MaybeItsAdam/tutors`** trae `LICENSE.md` de **1.075 B** con el texto MIT completo,
+titular y año — `Copyright (c) 2024 **tldraw Inc.**` — **y su README dice que los términos que
+gobiernan son la licencia del SDK de tldraw, que permite uso comercial *«so long as you preserve the
+"Made with tldraw" watermark on the canvas»*.** ⚠️ **MIT no obliga a conservar ningún elemento
+visual.**
+
+🔴 **Las cuatro capas que esta KB mide lo aprueban:**
+
+| Capa | Pregunta | Veredicto |
+|---|---|---|
+| **P170** | ¿hay archivo en 14 nombres × ref `HEAD`? | 🟢 sí, `LICENSE.md` |
+| **P171** | ¿qué familia dice el TÍTULO? | 🟢 MIT |
+| **P168** | ¿tiene tamaño de texto, no de afirmación? | 🟢 1.075 B |
+| **P179** | ¿identificador o cesión? | 🟢 **cesión**: titular + año + texto |
+| **P184** | **¿el titular PERTENECE al proyecto?** | 🔴 **no** |
+
+**La regla, entonces.** 🔵 **El titular es la señal más barata de que una licencia fue HEREDADA y no
+OTORGADA**, y se chequea sin leer el README: un copyright de `tldraw Inc.` de 2024 sobre un proyecto
+de 2026 de `MaybeItsAdam` no pertenece al proyecto.
+
+### D7 — la FAMILIA es una entrada OBLIGATORIA, y es la asimetría que vale
+
+🔴 **El primer *build* corrió sobre los 160 archivos presentes y devolvió 87 `HOLDER-UNRELATED`: 87
+sobre 99 no es una lista de lectura, es un instrumento roto.** Dos causas, la misma en el fondo:
+**Apache-2.0** (29 de 30) publicaba una **frase del cuerpo** (*«notice that is included in or attached
+to the work»*) y **GPL/AGPL** (21) publicaba `Free Software Foundation, Inc.` — **el copyright DEL
+TEXTO DE LA LICENCIA**, que toda copia de la GPL lleva.
+
+🔴 **Y parchear el filtro de frases fue el movimiento equivocado: los controles sobre los textos
+REALES y completos lo demostraron** (Apache 11.408 B → `patent, trademark, and`; GPL 35.147 B →
+`permission, other than the making of an`). **Ninguna lista de palabras cierra la clase: esos textos
+son decenas de kilobytes de prosa SOBRE el copyright.**
+
+🔵 **Así que el instrumento se NIEGA a contestar sin familia en vez de adivinar, y la asimetría es el
+patrón: P170 quitó la dimensión RAMA y P171 llevó la familia al TÍTULO —las dos hicieron la pregunta
+menos dependiente del contexto, y estuvo bien—. La dimensión del TITULAR no va para ese lado.**
+
+| Familia | ¿el texto estándar trae titular rellenado? | Dónde está el titular |
+|---|---|---|
+| **MIT · BSD · ISC** | 🟢 **sí, por construcción** | en el archivo |
+| Apache-2.0 | 🔴 no (apéndice plantilla) | `NOTICE`, o headers de fuente |
+| GPL · AGPL · LGPL | 🔴 no (lleva el de la FSF) | **headers de fuente — el canal de P172** |
+| CC0 · CC-BY · Unlicense | 🔴 no | anotación del dato (**P172**) |
+
+**El resultado sobre los 160:** `NOT-APPLICABLE` **61** · `HOLDER-MATCH` **68** ·
+`HOLDER-UNRELATED` **31** (de las cuales 17 son el nombre propio del autor).
+
+### 🟢 Y el titular recupera un linaje que costó un pase entero establecer
+
+**Cuatro de las seis filas que importan son los forks de `canvas-mcp` llevando el copyright de
+`Vishal Sachdev`**: `AmirF194`, `BartMassey-upstream`, `abr-Projects`, `lindsay-cheng`. 🔵 **Es el
+mismo linaje que el pase 63 estableció leyendo DERIVA DE `description`, recuperado por un canal sin
+relación con el que lo produjo.**
+
+⚠️ **Y el titular es más robusto que la descripción: sobrevive a un renombre, a una reescritura de
+`description` y a un fork desprendido.** Las otras dos: `GEMLab-HKU/Unlearn_and_Relearn` lleva
+`UCSB ML&NLP Group` (repo **APAC**, titular **North America**: heredado del *upstream*) y
+`jupyterlab/jupyter-ai` lleva **`author_a`** — el marcador por omisión del *cookiecutter* de Jupyter,
+publicado en un BSD real.
+
+**Instrumento:** `compose/code/p184-holder-mismatch/` — **15/15** controles, con los textos Apache y
+GPL **completos** como *fixtures* (el primer *build* pasó un Apache recortado y aun así publicaba una
+frase como titular: regla 2 de **P126**, fallada sobre el propio módulo).
+
+---
+
+## P185 — Tutor aterrizado al currículo japonés COMPLETO, con educación especial, sin endpoint y sin ShareAlike (pase 66 del 2026-10-03)
+
+**Reemplaza el alcance de P180, que estaba estimado sobre una muestra de un registro.** Medido el
+grafo entero, el alcance se cierra y la dependencia que había que declarar desaparece.
+
+**Qué se compone, todo con licencia leída de primera mano:**
+
+| Pieza | Licencia | Qué aporta |
+|---|---|---|
+| [`jp-cos/jp-cos.github.io`](https://github.com/jp-cos/jp-cos.github.io) → `all-20250927.ttl.gz` | **CC BY 4.0** 🟢 *sin ShareAlike* | **66 MB / 1.004.927 líneas**: 39.958 `cs:Item`, 786 `cs:Subject`, 655 `cs:CommentaryItem` (学習指導要領解説), 34 `cs:CourseOfStudyRevision`, 260 enlaces `RelatedSubject*`, **17 `sh:NodeShape`** y 5 `cs:DisabilityCategory` |
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | **MIT**, 1.064 B, `© 2026 THU-MAIC` | el aula multi-agente: planifica currículo y construye páginas desde material. ⚠️ **relicenciada de AGPL-3.0 a MIT en v0.3.0 (2026-06-28): la licencia permisiva tiene ~3 meses** |
+| [`littlecookie0722/AI-Teaching-Agent`](https://github.com/littlecookie0722/AI-Teaching-Agent) | **MIT**, 1.068 B | `WAITING_REVIEW` y aprobación humana **por página** antes de aprobar el entregable (**P18**) |
+| [`ICT-CONNECT-21/CSCode2023`](https://github.com/ICT-CONNECT-21/CSCode2023) | **MIT**, 1.081 B | búsqueda sobre los códigos del currículo, por encargo de MEXT |
+
+**Cómo se cablea, y el orden importa:**
+
+```
+1. Cargar el grafo en un triplestore PROPIO  (NO el endpoint del publicador)
+   curl -s .../HEAD/all-20250927.ttl.gz | gunzip | <carga bulk Turtle>
+   # 4,2 MB comprimidos -> 66 MB -> una sola carga, sin recorrer 104 directorios
+
+2. Validar con el SHACL que viene DENTRO del mismo grafo (17 sh:NodeShape)
+   # no hay que escribir shapes: el publicador las versiona
+
+3. Indexar por nivel y por rama, incluida la de educacion especial
+   Kindergarten | Elementary | LowerSecondary | UpperSecondary
+   + *DeptSNES[-Visual|-Hearing|-Intellectual|-VHPH|-NC]   <- el diferenciador
+
+4. OpenMAIC planifica contra cs:Item, y recorre prerrequisitos por
+   cs:RelatedSubject / cs:RelatedSubjectArea (260 enlaces)
+
+5. El comentario oficial (655 cs:CommentaryItem) alimenta la justificacion
+   pedagogica: no es parafraseo del modelo, es el texto de MEXT
+
+6. AI-Teaching-Agent sostiene WAITING_REVIEW por pagina; nada llega al LMS
+   sin aprobacion docente registrada   (P18, y la clausula de supervision
+   humana de Corea del Sur, Oklahoma, Maryland y el reglamento peruano)
+
+7. Marcado del Articulo 50(2) una sola vez en el empaquetado  (P105/P106)
+```
+
+🟢 **Lo que esta receta NO tiene que construir, y por eso la estimación se sostiene:** vocabulario
+(viene), validación SHACL (viene), comentario oficial (viene), currículos históricos (34 revisiones,
+vienen), educación especial por discapacidad (viene). ⚠️ **Lo que SÍ hay que cotizar es el paso 1**:
+cargar 66 MB en un *triplestore* propio, **porque el endpoint SPARQL del publicador se anuncia
+試験公開中 y está bloqueado por esta corrida.** 🔵 **Con el grafo en la mano el endpoint no es una
+dependencia: es una comodidad que no se usa.**
+
+🔵 **Y el eje de licencia que decide la propuesta, contra la alternativa alemana:**
+`CC BY 4.0` **sin ShareAlike** significa que **el currículo derivado se puede entregar con licencia
+propia**. ⚠️ **La capa alemana por *Land* es `CC BY-SA 4.0`: el derivado se publica con la misma
+licencia (compuerta de P178).** **Para un producto que el cliente quiere cerrar, Japón es la base y
+Alemania no.**
+
+---
+
 ## P150 — Un fork no «hereda» ni «corrige»: hereda POR EJE, y la celda que uno no comparó queda abierta (agregado en el pase 60 del 2026-10-03)
 
 **El problema, medido:** el pase 59 estableció por la declaración de GitHub que dos puertas de Canvas eran

@@ -1,0 +1,25 @@
+# archivo	codigo	bytes	nota
+all-20250927.ttl.gz	200	4251289	gzip
+all-20250927.ttl	404	14	el nombre SIN .gz — lo que el pase 65 sondeó
+commentary-20250824.ttl	200	582590	-
+commentary-metadata-20250817.ttl	200	1691	-
+cs-basic-advanced-20250824.ttl	200	10448	-
+cs-citations-20250817.ttl	200	27541	-
+cs-commentary-20250217.ttl	200	1061362	-
+cs-dataset-20211229.ttl	200	31087	-
+cs-items-20220830.ttl.gz	200	2522650	gzip
+cs-items-20220830.ttl	404	14	el nombre SIN .gz — lo que el pase 65 sondeó
+cs-metadata-20211211.ttl	200	15006	-
+cs-period-20211010.ttl	200	4876	-
+cs-revision-20211211.ttl	200	43670	-
+dataset-20250927.ttl	200	19175	-
+disability-category-20211122.ttl	200	1762	-
+schema-class-20250817.ttl	200	9335	-
+schema-property-20250817.ttl	200	11331	-
+school-20211122.ttl	200	2985	-
+section-hierarchy-20240704.ttl	200	13689658	-
+shapes-20250817.ttl	200	71548	-
+source-20241228.ttl	200	8078	-
+stage-20211205.ttl	200	10078	-
+subject-20241220.ttl	200	1005600	-
+subjectArea-20241228.ttl	200	364800	-

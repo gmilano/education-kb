@@ -49,6 +49,37 @@ o la variable de entorno (regla de **P107**, pase 47):
 | `mcp-allowlist-gateway/` | puerta MCP con *allowlist*: lo no listado no llega al upstream | `python3 test_gateway.py` | **34** *(la suite SIEMPRE publicó este total; la celda decía «ALL PASSED» y lo ocultaba — corregido en el pase 56)* |
 | `trend-backlink-audit/` | cada tendencia citada tiene su sección y su evidencia | `python3 test_trends.py` | **22/22** |
 | **`suite-total-control/`** | **la regla de P126: un contador por vocabulario acierta en `PASS` y FALLA en `ok`; el lector del total propio acierta en los dos** | `python3 test_control.py` | **10/10** |
+| **`p183-nongithub-denominator/`** | **la capa de PAQUETE: que la pregunta de la DECLARACIÓN rechace los 7 tokens con FORMA de paquete que no lo son, y que el *build* por forma los acepte** | `python3 test_denominator.py` | **15/15** ✅ *(nuevo en el pase 66)* |
+| **`p184-holder-mismatch/`** | **el TITULAR de un archivo de licencia, y que el instrumento SE NIEGUE a contestar sin la familia en vez de publicar una frase del texto Apache o el copyright de la FSF** | `python3 test_holder.py` | **15/15** ✅ *(nuevo en el pase 66)* |
+
+🟢 **Pase 66 del 2026-10-03 — la columna «Hoy» se re-verificó COMPLETA, con el instrumento que este
+repositorio versiona, y el resultado es cero cifras vencidas.**
+
+```sh
+cd compose && python3 code/patterns-figure-audit/extract_figures.py --crossref
+```
+
+```
+attributed and matching today : 14
+attributed and STALE          : 0
+attributed, real but UNCONDITIONED : 0
+```
+
+🔵 **Y se hizo en el orden que P126 manda (regla 1): primero el instrumento versionado, nunca un
+`grep` escrito en el pase.** Es exactamente la lección que el pase 55 pagó —su `grep` propio devolvió
+49 y 34 donde el instrumento versionado devuelve 46 y 33— y por eso las tres suites que no imprimen
+total propio (`unitime-mcp-gate` **46**, `openedx-course-generator` **33**, `mcp-allowlist-gateway`
+**34**) se leyeron con el lector anclado y no a mano.
+
+🟢 **Las 19 suites OFFLINE del árbol clonado CORRIERON en este entorno**, así que la frontera que el
+pase 58 midió como negada (`[Code from External]` sobre `python3 test_*.py` sin red) **no se sostiene
+hoy.** ⚠️ **Y no se vuelve a publicar como regla general, en ninguno de los dos sentidos: la frontera
+es DEL ENTORNO y varía entre pases** — es el error que los pases 50 y 51 cometieron, el 52 corrigió y
+el 58 volvió a cometer en la dirección contraria. 🔵 **Lo único que se afirma es la medición de hoy, y
+las dos cifras nuevas de la tabla (15/15 y 15/15) son de este entorno y de este pase.** 🔴 **Lo que
+sigue bloqueado es la salida de red: `codeload.github.com`, `api.github.com` y `github.com` por `curl`
+dan **403**; `raw.githubusercontent.com`, `registry.npmjs.org` y `pypi.org` dan **200**, y
+`github.com` por WebFetch también.**
 
 ⚠️ **Pase 58 del 2026-10-03 — la columna «Hoy» NO se re-verificó en este pase, y el motivo es del entorno:** el
 barrido de las 14 suites OFFLINE quedó **NEGADO** (`[Code from External]`) sobre `python3 test_*.py` **sin red**.

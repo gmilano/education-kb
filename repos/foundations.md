@@ -3567,3 +3567,84 @@ NUEVE `complexType`**. 🔴 **Con una condición dura medida con `xmllint`: el m
   answer, rubric rule, feedback judgment, and Personal Skill rule»*. El archivo queda **commiteado como *fixture*** en
   `compose/code/aiact-50-2-marking/fixtures-provenance-policy.md` y `test_marking.py` **asevera el vocabulario contra
   él**, así que una deriva upstream rompe la prueba en vez de aparecer en producción.
+
+---
+
+## 🇯🇵 El grafo japonés, MEDIDO — y la pieza pasa de «la mejor cedida» a «la única con educación especial» (acción 3 del pase 65, pase 66 del 2026-10-03)
+
+El pase 65 midió este artefacto **por muestra de un solo registro** (`710/0000000000000.ttl`, 1.102 B)
+y lo declaró *«la mejor pieza de currículo de la KB»* sobre esa muestra. 🔵 **Medido el grafo entero,
+la afirmación se sostiene y se vuelve más fuerte por un motivo que la muestra no podía mostrar.**
+
+### 🔴 Primero, la corrección: los 66 MB que el pase 65 declaró inalcanzables estaban en el repo
+
+| Nombre | Código | Bytes |
+|---|---|---|
+| **`all-20250927.ttl.gz`** — como lo escribe `index.html` | 🟢 **200** | **4.251.289** |
+| `all-20250927.ttl` — lo que el pase 65 sondeó | 🔴 404 | 14 (el cuerpo es la cadena `404: Not Found`) |
+| **`cs-items-20220830.ttl.gz`** | 🟢 **200** | **2.522.650** |
+| `cs-items-20220830.ttl` | 🔴 404 | 14 |
+
+⚠️ **El nombre se transcribió sin el sufijo `.gz`, y los dos nombres mal transcritos son los dos
+archivos más grandes del conjunto — que es exactamente por qué están comprimidos.** El pase 65
+concluyó de ese 404 que *«el grafo completo sólo existe detrás de los dominios bloqueados»*: 🔴 **el
+404 era real y la conclusión era falsa.** 🔵 **Y el listado estaba delante: es el mismo `index.html`
+que ese pase leyó por `raw` para establecer **P181**. El canal correcto se usó y el dato se copió
+mal; ningún canal nuevo hacía falta.**
+
+🟢 **Medidos los 22 volcados exactamente como `index.html` los escribe: 22 de 22 dan 200.** La columna
+«no medido» de `dumps.tsv` queda cerrada completa (`dumps.2026-10-03.tsv`).
+
+### El grafo: 69.288.422 B (66 MB), 1.004.927 líneas
+
+| Clase | n | Qué es |
+|---|---|---|
+| **`cs:Item`** | **39.958** | 🔵 **los ítems del currículo: el dato que un tutor necesita** |
+| `cs:Subject` · `cs:SubjectArea` | **786 · 276** | materias y áreas |
+| **`cs:CommentaryItem`** · `cs:CosCommentary` | **655 · 2** | 🟢 **学習指導要領解説, el comentario OFICIAL, dentro del mismo grafo** |
+| **`cs:CourseOfStudyRevision`** · `cs:CourseOfStudy` | **34 · 20** | 🔵 **currículos viejos Y nuevos, como el publicador declara** |
+| **`cs:RelatedSubject`** · `cs:RelatedSubjectArea` | **158 · 102** | 🟢 **enlaces entre materias: es lo que permite recorrer prerrequisitos** |
+| **`sh:NodeShape`** | **17** | 🟢 **el SHACL de validación viaja DENTRO del grafo** |
+| `cs:School` · `cs:Stage` · `cs:Period` | 9 · 7 · 9 | tipos de escuela, etapas, vigencias |
+| **`cs:DisabilityCategory`** | **5** | categorías de discapacidad |
+| `cs:Number` (literales tipados) | 46.277 | |
+
+### 🟢 La cobertura, y el diferenciador: 特別支援学校 desglosado por discapacidad
+
+| Nivel | Apariciones |
+|---|---|
+| 幼稚園 **Kindergarten** | **1.382** |
+| 小学校 **Elementary** | **23.555** |
+| 中学校 **LowerSecondary** | **17.468** |
+| 高等学校 **UpperSecondary** | **79.926** |
+
+| Rama de educación especial (SNES) | Apariciones |
+|---|---|
+| `UpperSecondaryDeptSNES` | **14.560** |
+| `ElementaryAndLowerSecondaryDeptSNES` | **6.130** |
+| `-Visual` (視覚) · `-Hearing` (聴覚) | **4.886 · 4.721** |
+| `-Intellectual` (知的), tres niveles | **2.207 · 1.546 · 1.223** |
+| `KindergartenDeptSNES` | **515** |
+| `-VHPH` (視覚・聴覚・肢体・病弱) | **157 · 76** |
+| variantes `-NC` (教育課程なし) | **432 · 372 · 341** |
+
+⚠️ **Esto cambia el VALOR de la pieza, no su tamaño: el currículo nacional japonés en LOD viene con el
+currículo de educación especial desglosado por categoría de discapacidad, bajo `CC BY 4.0` sin
+ShareAlike.** 🔵 **Ninguna otra pieza de currículo de esta KB trae esa dimensión — tampoco la alemana
+por *Land*, que además es `CC BY-SA 4.0`.** Y es el eje que decide un derivado:
+
+| Región | Pieza de currículo | Licencia | ShareAlike | Educación especial desglosada |
+|---|---|---|---|---|
+| **APAC — Japón** | `jp-cos` 学習指導要領LOD | **CC BY 4.0** | 🟢 **no** | 🟢 **sí, por discapacidad** |
+| **EMEA — Alemania** (base) | `dini-ag-kim/schulfaecher` | **CC0 1.0** | 🟢 no | 🔴 no |
+| **EMEA — Alemania** (por *Land*) | `dini-ag-kim/school-curriculum-pg` | **CC BY-SA 4.0** *(corregido en el pase 66)* | 🔴 **sí** | 🔴 no |
+
+🟢 **Para `P180` el alcance se cierra: no hay que construir vocabulario, ni validación, ni el
+comentario — los tres vienen en el artefacto.** ⚠️ **La dependencia que la receta SÍ tiene que
+declarar es el endpoint SPARQL**: `dydra.com` sigue bloqueado en esta corrida y el publicador lo
+anuncia 試験公開中 (*publicación de prueba*). 🔵 **Con los 66 MB en la mano la receta no lo necesita:
+se carga en un *triplestore* propio, y eso es exactamente lo que se cotiza.**
+
+Medición reproducible en `compose/code/jp-cos-curriculum-gate/`:
+`measure_dumps.sh`, `dumps.2026-10-03.tsv`, `graph-classes.2026-10-03.tsv`,
+`graph-coverage.2026-10-03.tsv`.

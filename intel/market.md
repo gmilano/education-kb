@@ -488,6 +488,39 @@ players 2026. Resultado honesto:
 | EMEA | **Confirmación.** Anexo III alto riesgo, Digital Omnibus, fechas 2027-12-02 / 2028-08-02 — ya estaba, y con identificadores citables (Reglamento (UE) 2026/1744). Nada nuevo |
 | APAC | **Un hallazgo nuevo:** la oficialización de los libros de texto digitales en Japón (abajo, en `### APAC
 
+#### 📍 Pase 66 del 2026-10-03 — Japón pasa a ser el activo de currículo más valioso de la KB, y el motivo es la educación especial
+
+🟢 **Medido el grafo completo de `jp-cos/jp-cos.github.io` (学習指導要領LOD, `CC BY 4.0`):
+69.288.422 B, 1.004.927 líneas, 39.958 ítems de currículo, 786 materias, 655 ítems del comentario
+oficial 学習指導要領解説, 34 revisiones de currículo, 260 enlaces entre materias y 17 *shapes*
+SHACL de validación — todo en el mismo artefacto.**
+
+🔵 **Y el diferenciador que la muestra de un registro del pase 65 no podía mostrar: 特別支援学校
+(educación especial) está modelada como ciudadana de primera clase y desglosada por categoría de
+discapacidad** — visual (視覚) **4.886**, auditiva (聴覚) **4.721**, intelectual (知的) **2.207 /
+1.546 / 1.223** en tres niveles, `VHPH` **157 / 76**, y las variantes sin currículo prescrito
+(教育課程なし) **432 / 372 / 341**.
+
+⚠️ **Esto cambia la propuesta comercial, no sólo el inventario.** Ninguna otra pieza de currículo de
+esta KB trae la dimensión de discapacidad: **ni la alemana por *Land* (que además es ShareAlike), ni
+el Common Core de NA (que no tiene licencia).** 🟢 **Un *engagement* APAC de accesibilidad educativa
+arranca con el currículo nacional desglosado por discapacidad, cedido sin ShareAlike, con su
+validación incluida — y lo único que hay que cotizar es cargar 66 MB en un *triplestore* propio**,
+porque el endpoint SPARQL del publicador se anuncia 試験公開中 y está bloqueado por esta corrida.
+
+🔵 **Contexto regulatorio del pase, por canal secundario concordante (no de primera mano):** la
+**Basic AI Act de Corea del Sur rige desde enero de 2026** y **aplica extraterritorialmente** cuando
+el sistema afecta a usuarios coreanos, con exigencias de transparencia, evaluación de riesgo,
+**supervisión humana** y documentación para sistemas de alto impacto; la **AI Law de Vietnam** entra
+en marzo de 2026; **Japón mantiene un enfoque de principios** apoyado en leyes existentes y **sin
+sanciones**; Australia puso en marcha su **AI Safety Institute** a comienzos de 2026.
+
+⚠️ **La asimetría que vale para una propuesta: APAC es la región donde el régimen varía MÁS entre
+países vecinos** —extraterritorial y sancionable en Corea, de principios y sin sanciones en Japón— y
+**un producto que se vende en los dos tiene que cumplir el techo coreano aunque se construya sobre
+dato japonés.** 🔵 **La supervisión humana es el requisito común, y es el que P18 implementa.**
+
+
 #### 🟢 Pase 59 (2026-10-03) — el único marco del mundo que nombra agentes sigue siendo de APAC, y la capa medida es de APAC
 
 ⚠️ **Relojes regulatorios re-confirmados, sin cambios:** **Corea del Sur**, *Framework Act* en vigor
@@ -678,6 +711,53 @@ experimental) es un riesgo técnico **de esta región** tanto como de LATAM.
 **La soberanía dejó de ser retórica y es una lista.** Toda economía grande de APAC está construyendo modelo propio: **Sarvam AI** (India), **ILMU** (Malasia), **Sahabat AI** (Indonesia), **SEA-LION** (Singapur), **HyperCLOVA X Think** (Corea del Sur), **NTT Sarashina** (Japón) y **TAIDE** (Taiwán). Para un proyecto educativo en la región eso significa que **la capa de modelo es una decisión política del cliente, no técnica nuestra**: el entregable tiene que ser **agnóstico de proveedor** desde el diseño (LiteLLM o equivalente en el medio), porque el modelo lo elige el ministerio. Mercado de AI de la región: **~USD 102.000M (2025) → >USD 735.000M (2030), CAGR ~34,5%**; los compradores que dominan la vertical educativa siguen siendo **China, India y Japón**.
 
 | LATAM | **Confirmación** (Observatorio UNESCO, sandbox de la ANPD brasileña, Uruguay y el Convenio del Consejo de Europa, CENIA). Y **un vacío nuevo y medido** en la capa de skills (abajo, en `### LATAM
+
+#### 📍 Pase 66 del 2026-10-03 — la clase de licencia que LATAM aporta a esta KB no existía: `NOT-A-LICENSE`
+
+🔴 **El hallazgo de la región en este pase es una pieza peruana, y es un caso de licencia que esta KB
+no tenía clasificado.** [`vilcaaguilerandrea-oss/carrera-lectora`](https://github.com/vilcaaguilerandrea-oss/carrera-lectora)
+—una PWA de comprensión lectora con guía docente y guía para estudiantes— **no declara licencia
+alguna**. Lo que dice, en su sección `## 📝 Licencia`, es:
+
+> *«Creado con fines educativos. Libre para usar en contextos educativos.»*
+
+⚠️ **No es una licencia permisiva mal escrita: es un permiso a medida más ANGOSTO que cualquier
+licencia OSI**, y no nombra ninguna. 🔴 **Para un *engagement* es inutilizable tal cual, y por una
+razón concreta: «contextos educativos» no define si un entregable facturado a un ministerio o a una
+universidad privada lo es.** 🔵 **Y la salida es barata y conocida: es la misma conversación de un
+archivo que esta KB ya tiene abierta con `@ink-waffle/sisu-mcp` y `Timadey/proctor` — se pide MIT o
+Apache-2.0 y se cierra con un PR de un archivo.**
+
+🔵 **Por qué esto es un dato regional y no una anécdota:** es la tercera pieza LATAM consecutiva que
+esta base encuentra con **intención abierta y vehículo legal ausente**. ⚠️ **El patrón no es
+descuido: es que el autor es un docente o una institución educativa, no un equipo de software, y la
+licencia es un artefacto de la cultura de software.** 🟢 **La oportunidad que eso abre, y es de
+posicionamiento: una pieza LATAM bien licenciada es más fácil de conseguir pidiéndola que
+construyéndola, y Globant puede ofrecer esa gestión como parte del *onboarding* de un *engagement*
+regional** — no hay competencia haciéndolo.
+
+🔵 **Contexto institucional del pase, por canal secundario concordante (no de primera mano):** **87 %
+de las instituciones de educación superior de América Latina y el Caribe declara usar AI en al menos
+un área, y sólo 26 % tiene una estrategia formal de AI**; **menos del 10 % tiene lineamientos y
+capacidades suficientes** para integrarla con criterio, y en Chile y Brasil **más del 50 % de los
+docentes ya usa herramientas de AI**. ⚠️ **La brecha —uso alto, gobernanza baja— es la MISMA que esta
+KB viene registrando, y ahora tiene dos números que la cierran: 87 % de uso contra 26 % de
+estrategia.** 🟢 **Eso es exactamente el producto: no «traer AI», sino el expediente de gobernanza de
+la AI que ya está adentro.**
+
+Regulación: **Uruguay** es el primer país de la región en firmar el Convenio Marco del Consejo de
+Europa sobre AI y derechos humanos; **Brasil** tramita el **PL 2.338/2023** con enfoque por riesgo y
+arquitectura de supervisión; **Perú** tiene reglamento con prácticas prohibidas (vigilancia masiva sin
+base legal, predicción de delitos, sistemas letales autónomos) **y exigencia de supervisión humana
+para usos de alto riesgo**; Chile, Colombia (**CONPES de AI**) y México avanzan a ritmos distintos.
+**UNESCO lanzó el 14 de abril el Observatorio de AI en Educación para América Latina y el Caribe**, y
+**CENIA** (Chile) sostiene **ILIA** y **Latam-GPT**.
+
+⚠️ **La supervisión humana para alto riesgo del reglamento peruano es la misma cláusula que Oklahoma,
+Maryland y Corea del Sur: cuatro jurisdicciones de tres regiones pidiendo lo mismo.** 🔵 **Un
+entregable que implemente P18 una vez satisface a las cuatro — y esta KB ya tiene las puertas de
+corrección de Moodle clasificadas por ese criterio.**
+
 
 #### 🟢 Pase 59 (2026-10-03) — la mejor serie propia de la región se sostiene, y el índice de madurez se mide
 
@@ -1391,6 +1471,46 @@ Dónde se produce el software educativo abierto, que no es donde está la demand
 ## Opportunities by region
 
 ### North America
+
+#### 📍 Pase 66 del 2026-10-03 — la capa de paquete de NA está SANA, y el problema se acota a los repos sin archivo
+
+🟢 **El dato que cambia la postura de la región, y es bueno.** El pase 65 reclasificó 5 puertas de
+**Canvas** y **Moodle** a *identificador de licencia* y dejó la impresión de que la capa entera estaba
+enferma. 🔵 **Medida la capa de PAQUETE —18 paquetes de registro, *tarball*/sdist bajado y
+grepeado— el reparto se invierte: 17 de 23 mediciones (74 %) traen el TEXTO de licencia dentro del
+artefacto que el cliente instala**, contra 5 de 7 (71 %) **sin** texto en los repos de GitHub sin
+archivo.
+
+⚠️ **O sea que el problema de **P179** NO es «la capa de integración de Canvas/Moodle»: es
+«repositorios de GitHub cuyo árbol no tiene archivo de licencia».** 🟢 **Y hay una consecuencia
+operativa barata para un *engagement* de NA: `npm pack` y los constructores de sdist incluyen el
+archivo de licencia cuando existe, así que el *due diligence* de una puerta se hace con UNA llamada
+al registro y UNA descarga del tarball — no con 14 sondas a `raw` por nombre de archivo.** Es el
+chequeo que una oficina legal de NA puede correr sola.
+
+🔴 **Pero dos filas quedan PEOR que antes, y las dos son de esta región o se venden aquí.**
+
+| Fila | Qué dice | Por qué no entra en una entrega |
+|---|---|---|
+| **`SabioTechTeam/Teacher-Hub`** | badge `MIT` + prosa *«MIT License — free for educational and **non-commercial** use»* | 🔴 **MIT permite el uso comercial sin condiciones y la prosa lo prohíbe.** Un *engagement* de estudio es comercial por definición: **esto es peor que el silencio — el silencio se pregunta, una contradicción se litiga** |
+| **`MaybeItsAdam/tutors`** | `LICENSE.md` MIT completo con `© 2024 **tldraw Inc.**`, y el README exige conservar la marca de agua *«Made with tldraw»* | 🔴 **Un requisito de marca de agua sobre el lienzo que ve el alumno es un requisito de PRODUCTO.** Y el archivo pasa las cuatro capas que esta KB mide (**P184**) |
+
+🔴 **Y el hueco de currículo de la región sigue abierto y ahora con peor comparación:** las tres
+renderizaciones JSON del Common Core siguen sin licencia, mientras **Japón resultó traer el currículo
+nacional COMPLETO —66 MB, 39.958 ítems, el comentario oficial y la educación especial desglosada por
+discapacidad— bajo `CC BY 4.0` sin ShareAlike.** ⚠️ **La región con ~36-38 % del mercado es la única
+de las cuatro donde la capa de currículo hay que PRODUCIRLA.**
+
+🔵 **Contexto regulatorio del pase, por canal secundario concordante (no de primera mano):** **134
+proyectos de ley sobre AI en educación en 31 estados** en 2026. California **AB 1159** prohíbe usar
+dato de alumno para entrenar modelos; Idaho **SB 1227** exige protecciones de privacidad; Oklahoma y
+Maryland exigen **supervisión humana** y **prohíben que la AI decida cuestiones de alto impacto sobre
+un alumno**; Nueva York publicó en marzo de 2026 un *Traffic Light Framework* (permitido / con
+cautela / prohibido); Georgia y Mississippi incorporan AI al crédito obligatorio de CS. ⚠️ **La
+cláusula de supervisión humana de Oklahoma y Maryland es la misma que P18 implementa, y esta KB ya
+tiene las seis puertas de `mod_assign_save_grade` clasificadas por ella: es evidencia de
+cumplimiento lista, no un desarrollo.**
+
 
 #### 📍 Pase 65 del 2026-10-03 — la región sigue siendo la PEOR cedida, y ahora el contraste tiene con qué compararse
 
@@ -2774,6 +2894,46 @@ Artículo 50(2) **no es exigible** en North America — pero es **el requisito m
 multi-región conviene cotizarlo contra el techo europeo y no contra el piso local (ver **P103** y **P105**).
 
 ### EMEA
+
+#### 📍 Pase 66 del 2026-10-03 — el calendario del AI Act se confirma por un CUARTO canal, y gana una fila que faltaba
+
+🟢 **Las tres filas del calendario de esta KB se sostienen, verificadas hoy por un canal
+independiente más** (cuarto concordante): el *Digital Omnibus* fue aprobado por el **Parlamento el
+2026-06-16**, adoptado por el **Consejo el 2026-06-29**, firmado el **2026-07-08** y **en vigor el
+2026-07-27** — y el **Artículo 50 no fue tocado**, así que la transparencia sigue vigente desde el
+**2026-08-02** y el *backstop* del 50(2) sigue en el **2026-12-02**.
+
+🔵 **Y aparece una fila que esta base NO tenía: el Anexo I.**
+
+| Obligación | Fecha | Qué cubre |
+|---|---|---|
+| Art. 50 / 50(2) transparencia | **2026-08-02** | ya vigente |
+| Art. 50(2) *backstop* (sistemas ya en mercado) | **2026-12-02** | ya registrado |
+| **Anexo III** *stand-alone* de alto riesgo | **2027-12-02** | ya registrado — **educación y formación profesional están acá** |
+| 🆕 **Anexo I** — alto riesgo **embebido en productos regulados** | **2028-08-02** | dispositivos médicos, maquinaria, vehículos |
+
+⚠️ **Por qué el Anexo I importa en educación y no es un detalle de otra industria: un producto de
+apoyo al aprendizaje que se entrega DENTRO de un dispositivo asistivo regulado cae por el Anexo I, no
+por el Anexo III — y son veinte meses más de plazo, con otro régimen de conformidad.** 🔵 **Y conecta
+con el hallazgo APAC de este pase: el currículo japonés trae la educación especial desglosada por
+categoría de discapacidad, que es exactamente el dominio donde un producto educativo se encuentra con
+un dispositivo asistivo.** **Para una propuesta EMEA de accesibilidad, qué anexo aplica es la primera
+pregunta y decide la fecha.**
+
+🟢 **El dato de licencia de la región, y es una corrección a favor:** la capa de currículo alemana
+**CEDE EN SUS DOS NIVELES** — el vocabulario base `dini-ag-kim/schulfaecher` en **CC0 1.0** y la
+cobertura por *Land* `dini-ag-kim/school-curriculum-pg` en **CC BY-SA 4.0**, medida en `lp-base.ttl`
+línea 24 y en las 25 serializaciones, con titulares identificados por **ORCID**. 🔴 **Esta KB
+publicaba que la capa por *Land* «no tiene cesión»: era una ausencia FALSA.** ⚠️ **Lo que sí hay que
+cotizar es el ShareAlike: un currículo derivado de la capa alemana se publica con la misma licencia
+(compuerta de **P178**), y el japonés no.**
+
+🔴 **Y una pieza EMEA queda marcada como no-entregable sin aclaración:**
+`eth-lre/mathtutorbench` (ETH Zürich) **declara dos licencias distintas en un mismo README** — badge
+`CC BY 4.0`, prosa `CC BY-SA 4.0`. **Un *benchmark* de tutoría matemática sobre el que no se sabe si
+hay ShareAlike no entra en un entregable**, y es la pieza de evaluación europea más citada de esta
+capa.
+
 
 #### 📍 Pase 65 del 2026-10-03 — Alemania pasa de «sin cesión» a «cedida con ShareAlike», y eso cambia el contrato, no el proyecto
 
@@ -7081,6 +7241,56 @@ estimado en **3-4 semanas**). **Para una región que adopta mucho más de lo que
 gobernanza que entra en el presupuesto que ya tiene.** Y el argumento del usuario final ya está medido y es de esta
 región: **65 % de los alumnos teme que la AI vuelva el aprendizaje superficial** — **marcar lo generado es la respuesta
 más directa a ese miedo que esta base puede ofrecer.**
+
+### Global
+
+#### 📍 Pase 66 del 2026-10-03 — la cifra 2026 se actualiza, y el hueco del barrido regional se declara en vez de taparse
+
+🔵 **Cifras de mercado del pase, por canal secundario concordante (NO de primera mano — los informes
+primarios son de pago y los canales de esta corrida no los alcanzan):**
+
+| Magnitud | Valor | CAGR |
+|---|---|---|
+| AI en educación, **2025 → 2026** | **US$ 7,52 B → 10,6 B** | **40,9 %** |
+| AI en educación, **2026 → 2034** | **→ US$ 79,6 B** | **31,35 %** |
+| Uso de AI por estudiantes, global | **66 % (2024) → 92 % (2025)** | — |
+| Estudiantes de educación superior que usan AI como herramienta primaria de investigación | **86 %** a comienzos de 2026 | — |
+| Despliegue en nube | **71,22 %** de cuota (2024) | — |
+| STEM | **34,78 %** de los ingresos; idiomas es el segmento de mayor crecimiento | — |
+
+⚠️ **La dispersión entre series sigue siendo el dato, y esta base la viene registrando desde el pase
+17: el rango 2026 va de ~7 a ~11 mil millones según la casa.** 🔵 **Lo que NO está en disputa, y es
+lo que se usa en una propuesta: el CAGR de dos dígitos altos y la brecha entre uso (86-92 %) y
+gobernanza (26 % de estrategia formal en LATAM, <10 % con lineamientos).** **El producto es la
+gobernanza, no la adopción: la adopción ya ocurrió.**
+
+#### 🔴 El hueco del barrido de este pase, declarado: las consultas regionales NO devolvieron repos
+
+El procedimiento manda correr, por región, `AI {industria} {región} {año} adoption regulation
+players`. 🟢 **Las cuatro regiones devolvieron dato de adopción y de regulación, y está arriba, cada
+una en su subsección.** 🔴 **Ninguna de las cuatro devolvió una sola pieza de software open source
+atribuible a la región.** ⚠️ **Se escribe porque un hueco declarado es información y el silencio se
+parece exactamente a la cobertura.**
+
+| Consulta | Qué devolvió | Qué NO devolvió |
+|---|---|---|
+| `AI education {NA, EMEA, APAC, LATAM} 2026 adoption regulation players` | 🟢 **regulación y adopción, útil y abundante** (134 proyectos de ley en NA, el calendario del Omnibus en EMEA, Corea/Vietnam en APAC, 87 %/26 % en LATAM) | 🔴 **cero repos.** Los *«players»* que devuelve son **Google, Microsoft, IBM, Pearson, Byju's** — incumbentes comerciales, no piezas construibles |
+| `top open source AI agents education 2026 github MIT` | listicles de agentes de **propósito general** (OpenHands, opencode, CrewAI, LangGraph, Dify, n8n) | 🔴 **ni una pieza educativa**, y con cifras de estrellas **no verificables** por los canales de hoy (`api.github.com` → **403**) |
+| `github trending education AI 2026` | 🔴 **currículos PARA APRENDER AI** (`ai-engineering-from-scratch`, `agentic-ai-notebook-2026`, `Ai-Engineering-Roadmap`, `learn-agentic-ai`) | ⚠️ **AI para educación.** Es una fuente de ruido recurrente y conviene nombrarla: *«AI curriculum»* y *«AI for education»* comparten palabras y son mercados distintos |
+| `open source platform education ERP SIS MIT Apache 2026` | **OpenEduCat** (3M+ usuarios, 300 módulos, 65 idiomas, 45 localizaciones) — ya registrado en `verticals/` | nada nuevo; el canal está **saturado** para esta consulta |
+
+🟢 **El canal que SÍ rindió, y queda escrito como método: la consulta que nombra la PLATAFORMA o el
+IDIOMA del país.** *«AI tutor agent repository Moodle Open edX Canvas»* y *«education AI agent github
+Japan Korea India curriculum»* devolvieron 6 candidatas (de las cuales 3 ya estaban en la KB y 3 son
+altas). 🔵 **Es la confirmación del hallazgo del pase 61 —buscar en el idioma del país— extendida a
+«buscar por el nombre de la plataforma»: el vertical en la consulta es lo que separa señal de
+listicle.**
+
+⚠️ **Y una restricción de canal que atraviesa todo el pase y conviene tener a mano:** `api.github.com`
+**403**, `github.com` por `curl` **403**, `codeload.github.com` **403**. 🟢 **Lo que sí funciona:
+`raw.githubusercontent.com` 200, `registry.npmjs.org` 200, `pypi.org` 200, y `github.com` por WebFetch
+200** — este último es el que permitió abrir los 22 listados de raíz. **Ninguna cifra de estrellas de
+este pase es de primera mano, y por eso no se escribió ninguna nueva.**
 
 ## Posicionamiento Globant
 
