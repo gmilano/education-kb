@@ -8,6 +8,7 @@ updated: 2026-10-03
 
 > Key players, market map y oportunidades por región.
 > Investigado 2026-09-30; el pase 11, el 2026-10-01. Las estimaciones de tamaño de mercado varían mucho entre firmas: se listan todas con su fuente en vez de elegir una.
+> **Pase 73 del 2026-10-03:** 🔴 **Las cuatro búsquedas regionales obligatorias se corrieron (año CALCULADO: 2026) y por TERCER pase consecutivo las cuatro devolvieron material que esta base ya tenía publicado** —NA: los 134 proyectos en 31 estados, el 86 %, el *Traffic Light* y el STUDENTS FIRST Act; EMEA: el calendario del AI Act y la clasificación de alto riesgo; APAC: el 96 %, el 66 %, el ROI de US$ 2,85 y la Basic AI Act coreana; LATAM: la encuesta del Digital Education Council (92 % / 79 % / 94 % / 61 %) con el Tec de Monterrey, AIGEN y RIE360, más Chile y el CONPES 4144—. 🔵 **Saturación confirmada por tercera vez (tendencia **567**): el canal se sigue corriendo porque es obligatorio y porque un cambio de régimen hay que verlo, con rendimiento marginal medido CERO.** 🟢 **Lo nuevo de las cuatro regiones es, en las cuatro, un ARTEFACTO de código:** NA el piloto **sin expediente** (`purdue-mcp`, sin credencial) y Blackbaud (`myschoolapp-mcp`); EMEA el portal de un *Land* y un problema de **INSTRUMENTO** de licencia (Unlicense en derecho alemán); APAC el **reporte obligatorio al Estado ya construido y MIT** (`open-academic`, PDDIKTI); LATAM, por segundo pase seguido, **la pieza mejor gobernada de la base** (`CaioCastro1/usp-mcp`).
 > **Pase 72 del 2026-10-03:** 🔴 **Las cuatro búsquedas regionales obligatorias se corrieron (año CALCULADO: 2026) y el resultado es el hallazgo del barrido: las CUATRO devolvieron el inventario propio de esta base.** North America repitió los $951 M → $2.303,2 M del pase 44, la terna irreconciliable de $3,37 B del 52 y el *«no hay equivalente a la FDA»* del 34; EMEA repitió el *AI Adoption Summit* británico de £200 M y la conferencia del Consejo de Europa del 34; APAC repitió el 48 %/57 % de gobernanza *enterprise*; LATAM repitió UNESCO-IESALC entero —200 instituciones, 19 países, 73,5/57,0/34,1/20,0 % y 26,0/18,5/9,0/8,0 %—, que esta base tiene desde los pases 44, 52 y 68. 🔵 **Con cuatro de cuatro devolviendo lo propio, el barrido de MERCADO por región está saturado como canal de descubrimiento, igual que le pasó al de agentes en el pase 48** (tendencia **567**). 🟢 **Lo nuevo de este pase vino todo por el canal de FUNCIÓN y por PAÍS en el idioma del país: APAC rompe su hueco de CÓDIGO abierto desde el pase 69** (`codit04/TechMCP`, MIT, PSG College of Technology, India) **y LATAM vuelve a la capa de código tras tres pases** (`iDavi/usp-mcp` + `heidy_backend`, GPL-3.0, USP). 🟢 **Y NA aporta un ARTEFACTO que vale más que una cifra repetida:** `chrischall/infinitecampus-mcp` embarca FERPA, COPPA y la admisión de posible violación de ToU **dentro del repositorio** — el primer expediente de esta base que viaja como archivo de código. ⚠️ **Único aporte cualitativo del barrido: la divisoria PÚBLICA/PRIVADA de LATAM** — son dos ofertas distintas, no una con descuento.
 > **Pase 71 del 2026-10-03:** 🟢 **Las cuatro búsquedas regionales obligatorias se corrieron (año calculado: 2026) y las cuatro rindieron, pero el aporte del pase es de RECONCILIACIÓN y de INSTRUMENTO más que de cifra nueva.** 🟢 **North America entrega el dato que CIERRA POR COMPLEMENTO una serie propia: Gallup (marzo 2026) mide 18 % de docentes con política ESCRITA formal y 34 % sin NINGUNA guía — y 18 % con política / 82 % sin ella son la misma medición por sus dos lados, que es la primera vez que las dos puntas de la tendencia 8 concuerdan con instrumento nombrado.** ⚠️ **Su cifra de participación (38 % del mercado en 2025) NO se promedia con el 36 % que esta base ya tiene de otra fuente: se listan las dos** (**P107**). 🟢 **EMEA aporta un documento nuevo que cae justo sobre una capa que esta KB venía midiendo sola: el Código de Práctica sobre marcado y etiquetado de contenido generado por AI (junio de 2026), sobre el Artículo 50(2) para el que ya hay instrumento corriendo.** 🔴 **Y el canal volvió a servir *«entered into force on 31 July 2026»*, que el pase 59 ya refutó: en vigor 2024-08-01, Omnibus 2026-07-27, aplicación general 2026-08-02, Anexo III educativo 2027-12-02 — el error es PERSISTENTE y conviene llegar a la reunión con la norma** (tendencia 561). 🟢 **APAC entrega el hallazgo de posicionamiento del pase: el marco de la IMDA de Singapur (2026-01-22) es específico de AI AGÉNTICA, o sea que un regulador pide por escrito exactamente lo que los pases 70 y 71 midieron en el código —dónde vive la compuerta, quién autoriza una escritura y si queda traza—, lo que vuelve la escalera de **P207** un argumento presentable** ⚠️ **(es guía, no reglamento con sanción).** ⚠️ **Su cifra regional nueva (~USD 102.000 M a marzo de 2026) es de AI TOTAL y no entra en ninguna terna educativa.** 🟢 **LATAM gana el aparato del estudio que esta base venía citando por resultados —más de 30.000 respuestas, 29 instituciones, con el IFE del Tec de Monterrey, AIGEN y RIE360— y dos datos que NO son de adopción: 94 % del profesorado espera usar AI a futuro (intención, no uso) y 🔴 61 % de los estudiantes teme el mal uso por parte de sus PARES.** 🔵 **Ese 61 % es el primer dato de DEMANDA de integridad académica expresado por el usuario final, y cambia a quién se le vende el proyecto: al área académica, no a compliance.** 🔴 **Y la disciplina del pase 54 se sostiene: con 18 % en NA, la brecha de gobernanza es la MISMA en dos regiones y no un diferencial de LATAM.** ⚠️ **El hueco de CÓDIGO de APAC sigue ABIERTO por tercer pase: entró Uzbekistán y se clasificó EMEA en vez de taparlo.**
 > **Pase 68 del 2026-10-03:** 🔴 **El barrido regional de este pase rinde un eje nuevo y es una INVERSIÓN: la región de MAYOR adopción es la de MENOR gobernanza.** LATAM declara **92 % de estudiantes** usando AI y docentes de **61 % → 79 %** (+18 pp), y al mismo tiempo **26 % de instituciones con estrategia formal, 8 % con presupuesto propio y 9 % con mecanismo de evaluación**. 🔴 **North America tiene el 36 % de la adopción regional y **71 % de docentes sin formación en AI** con **sólo 10 % de instituciones con guía formal**, en un vacío regulatorio federal que los estados llenan a parches (Colorado, Texas).** 🔵 **EMEA es la inversa exacta: la regulación más dura —**EU AI Act en vigor plena en agosto de 2026, con la AI educativa clasificada ALTO RIESGO**— sobre la dispersión interna más ancha de todas (**5,21 % Rumania a 42,03 % Dinamarca**), y los frenos declarados son de capacidad y de miedo legal, no de presupuesto: **70,89 % falta de expertise, 52,52 % incertidumbre legal, 48,83 % protección de datos**.** 🟢 **APAC es el de mayor CAGR (20,9 %) y el único donde la gobernanza se declara prioridad por delante del crecimiento (48 % contra 45 %), sin marco común y con la ASEAN Guide en etapa temprana.** ⚠️ **Todas las cifras de esta tanda son de consultora o de encuesta sectorial, sin instrumento propio: se listan con su fuente y su fecha como manda **P107**, y no se promedian entre sí.**
@@ -492,6 +493,37 @@ players 2026. Resultado honesto:
 | EMEA | **Confirmación.** Anexo III alto riesgo, Digital Omnibus, fechas 2027-12-02 / 2028-08-02 — ya estaba, y con identificadores citables (Reglamento (UE) 2026/1744). Nada nuevo |
 | APAC | **Un hallazgo nuevo:** la oficialización de los libros de texto digitales en Japón (abajo, en `### APAC
 
+#### 📍 Pase 73 del 2026-10-03 — sin cifra nueva, y la región entrega el activo más cotizable del pase: el reporte OBLIGATORIO al Estado, ya construido y PERMISIVO
+
+🔴 **El barrido de APAC no aportó cifra nueva.** Devolvió el **96 %** de organizaciones que planean
+invertir más, el **66 %** en piloto o adopción sistemática, el ROI de **US$ 2,85** por dólar, la
+**Basic AI Act** coreana en vigor desde enero de 2026, la **Ley de Tecnología Digital** vietnamita
+con vigencia 2026 y las medidas chinas de etiquetado: **todo ya publicado en este archivo**.
+
+🟢 **Lo nuevo es un repositorio, y es el hallazgo de mercado del pase:**
+[`motiolabs-space/open-academic`](https://github.com/motiolabs-space/open-academic) — **MIT**
+medido (1.087 B, titular `PT Motiolabs Digital Indonesia`, **persona jurídica**), SIAKAD completo de
+admisión a graduación **con la capa de reporte al Estado ya construida**: **PDDIKTI / Neo Feeder**
+con sincronización idempotente, *ledger* y **herramienta de diff**; **SISTER**; **KIP Kuliah**;
+**LKPS** de acreditación; e indicadores **IKU**.
+
+🔵 **Por qué esto es mercado y no sólo código:** reportar a PDDIKTI **es condición legal de
+operación** de una institución de educación superior indonesia. 🟢 **Es la parte que el integrador
+no improvisa y por la que el incumbente cobra — y ahora existe bajo MIT.** La tendencia **24** de
+esta base sostenía desde el pase 10 que había una *tercera vía permisiva* para la plataforma
+nacional **sin tener un ejemplar completo**: este pase se lo da.
+
+⚠️ **Cotas, declaradas:** 0 ★ / 0 forks / un solo publicador —riesgo de continuidad real—, y el
+adaptador **SISTER** está declarado pendiente de credencial.
+
+🟢 **Y la segunda alta coloca Vietnam en la capa de código:**
+[`zaikaman/SGU-Academic-MCP`](https://github.com/zaikaman/SGU-Academic-MCP) (**MIT**, 1.068 B, 114
+commits) sobre el portal de la **Đại học Sài Gòn**. 🔵 **Detalle comercial, no técnico:
+`simulate_target_gpa` y `check_prerequisites` no son consulta, son ASESORÍA ACADÉMICA automatizada**
+— y la Ley de Tecnología Digital vietnamita, con vigencia 2026, trae obligaciones de etiquetado y
+transparencia. **Vender eso en Vietnam es un encargo con requisito regulatorio desde el día uno.**
+
+
 #### 📍 Pase 68 del 2026-10-03 — el mayor CAGR, y la única región donde la GOBERNANZA se declara por delante del crecimiento
 
 | Magnitud | Valor | Fuente / fecha |
@@ -734,6 +766,41 @@ experimental) es un riesgo técnico **de esta región** tanto como de LATAM.
 **La soberanía dejó de ser retórica y es una lista.** Toda economía grande de APAC está construyendo modelo propio: **Sarvam AI** (India), **ILMU** (Malasia), **Sahabat AI** (Indonesia), **SEA-LION** (Singapur), **HyperCLOVA X Think** (Corea del Sur), **NTT Sarashina** (Japón) y **TAIDE** (Taiwán). Para un proyecto educativo en la región eso significa que **la capa de modelo es una decisión política del cliente, no técnica nuestra**: el entregable tiene que ser **agnóstico de proveedor** desde el diseño (LiteLLM o equivalente en el medio), porque el modelo lo elige el ministerio. Mercado de AI de la región: **~USD 102.000M (2025) → >USD 735.000M (2030), CAGR ~34,5%**; los compradores que dominan la vertical educativa siguen siendo **China, India y Japón**.
 
 | LATAM | **Confirmación** (Observatorio UNESCO, sandbox de la ANPD brasileña, Uruguay y el Convenio del Consejo de Europa, CENIA). Y **un vacío nuevo y medido** en la capa de skills (abajo, en `### LATAM
+
+#### 📍 Pase 73 del 2026-10-03 — sin cifra nueva, y la región entrega por segundo pase consecutivo el ACTIVO TÉCNICO que las otras tres no tienen
+
+🔴 **El barrido de LATAM no aportó cifra nueva.** Devolvió la encuesta del **Digital Education
+Council** de educación superior latinoamericana (**92 %** de estudiantes y **79 %** de docentes
+usando AI; **94 %** de docentes que esperan usarla; **61 %** de estudiantes que temen el mal uso de
+sus pares), con el **Institute for the Future of Education del Tecnológico de Monterrey**, **AIGEN**
+y **RIE360** como socios, el proyecto de ley chileno por riesgo y el **CONPES 4144** colombiano:
+**todo ya publicado**, con pase de origen identificable.
+
+🟢 **Y por segundo pase consecutivo lo nuevo de LATAM es un activo técnico, no una estadística de
+demanda.** El pase 72 registró que `iDavi/usp-mcp` traía el único patrón de credencial del
+inventario. **Este pase encuentra, sobre la MISMA universidad, la pieza mejor gobernada de toda la
+base:** [`CaioCastro1/usp-mcp`](https://github.com/CaioCastro1/usp-mcp) — **MIT**, 16 ★, **376
+commits**, fuerte en los **tres** ejes (compuerta peldaño **0**, actor **A1**, divulgación **D2**) y
+**corriendo contra una institución real**.
+
+🔵 **El dato de mercado que esto constituye, y conviene decirlo sin adorno:** esta base describía
+LATAM casi exclusivamente con estadística de **demanda** —adopción alta, presupuesto bajo, déficit
+de ingenieros—. 🟢 **Dos pases seguidos, la región aportó la pieza de GOBERNANZA que North America y
+EMEA no produjeron**, y la de este pase mejora una receta que esta propia base había publicado
+(**P131**/**P136**): la confirmación de dos llamadas **atada al estado** por un código derivado del
+plan.
+
+🟢 **La oportunidad comercial concreta:** un estudio que proponga en Brasil **no parte de cero ni
+parte de una pieza extranjera que haya que adaptar** — parte de un referente local, MIT, sobre la
+universidad más grande del país, con el camino de escritura ya defendible. **Eso cambia la
+conversación de «vamos a construirlo» a «vamos a desplegarlo y extenderlo».**
+
+⚠️ **Y la cota de la segunda alta, que es de licencia:**
+[`vnschneider/suap-mcp`](https://github.com/vnschneider/suap-mcp) cubre el **SUAP** de los institutos
+federales (IFMA) —una red pública enorme— pero cede en **AGPL-3.0-or-later**: 🔴 **copyleft de red,
+no se compone dentro de un entregable propietario.** Se cotiza como pieza desplegada tal cual, o no
+se cotiza.
+
 
 #### 📍 Pase 68 del 2026-10-03 — la mayor adopción del mundo sobre la menor gobernanza, y es la inversión que define la oportunidad
 
@@ -1526,6 +1593,37 @@ Dónde se produce el software educativo abierto, que no es donde está la demand
 ## Opportunities by region
 
 ### North America
+
+#### 📍 Pase 73 del 2026-10-03 — tercer pase consecutivo sin cifra nueva, y la oportunidad de la región se corre del EXPEDIENTE al PILOTO SIN EXPEDIENTE
+
+🔴 **Dicho primero: el barrido de North America no aportó una cifra nueva por tercer pase
+consecutivo.** Devolvió, verificado contra lo ya publicado en este archivo: los **134 proyectos de
+ley en 31 estados** de la sesión 2026, el **86 %** de adopción organizacional, el *Traffic Light
+Framework* de Nueva York (marzo de 2026), el **STUDENTS FIRST Act of 2026** de la AASA y el
+despliegue de Gemini for Education en 1.000+ instituciones. **Todo ya estaba, con pase de origen
+identificable.**
+
+🟢 **Lo nuevo de la región es, otra vez, un ARTEFACTO — y este pase trae el que cambia la forma de
+entrar.** [`sharziki/purdue-mcp`](https://github.com/sharziki/purdue-mcp) (**MIT**, 33 tools sobre
+13 fuentes públicas de Purdue) **no usa credencial**: declara *«only public, unauthenticated data»*,
+sin cuentas de alumno, notas ni horarios.
+
+🔵 **Por qué eso vale específicamente en NA, y es una inversión del encuadre del pase 72:** el pase
+72 dijo que en esta región el expediente de conformidad **no lo exige nadie**, y que por eso hay que
+venderlo como reducción de riesgo. 🟢 **El corolario que este pase agrega: si nadie lo exige,
+entonces el camino más rápido a una referencia institucional es el piloto que NO NECESITA
+expediente.** Un *campus assistant* de datos públicos —comedores, catálogo, buses, biblioteca,
+eventos— se entrega en semanas, **sin datos personales de alumno, sin FERPA, sin COPPA y sin comité
+de privacidad**, y es lo que después abre la conversación por el acceso autenticado.
+
+🟢 **Y la segunda alta de la región pone número a la otra mitad:**
+[`6a6179/myschoolapp-mcp`](https://github.com/6a6179/myschoolapp-mcp) (**MIT**, **32 tools**) cubre
+**Blackbaud** —el SIS dominante en el K-12 privado de NA— y declara en el repositorio:
+*«Unofficial. Not affiliated with Blackbaud. Endpoints were reverse-engineered from network traffic
+on one school's deployment»*. ⚠️ **Eso es honestidad útil y es también la cota comercial: un canal
+reconstruido del tráfico de UN despliegue no es una integración soportada, y un distrito que lo
+compre como tal está comprando riesgo de ruptura, no un producto.**
+
 
 #### 📍 Pase 72 del 2026-10-03 — el canal de NA devolvió el inventario propio, y lo único nuevo de la región es un ARTEFACTO de código, no una cifra
 
@@ -3129,6 +3227,39 @@ Artículo 50(2) **no es exigible** en North America — pero es **el requisito m
 multi-región conviene cotizarlo contra el techo europeo y no contra el piso local (ver **P103** y **P105**).
 
 ### EMEA
+
+#### 📍 Pase 73 del 2026-10-03 — sin cifra nueva, y la oportunidad de la región aparece en la capa que nadie mira: el INSTRUMENTO de la licencia, no su alcance
+
+🔴 **El barrido de EMEA no aportó cifra nueva.** Devolvió el calendario del EU AI Act y la
+clasificación de **alto riesgo** para admisión, evaluación y corrección de exámenes —que esta base
+tiene desde el pase 4 y cuyo calendario corrigió seis veces—, y el encuadre de *pilot-and-pre-compliance*.
+⚠️ **Un canal volvió a servir fechas de enmienda del AI Act («adoptadas en junio de 2026, en vigor
+el 27 de julio de 2026») del tipo que esta base ya refutó en los pases 11 y 71: no se incorporan.**
+
+🟢 **Lo nuevo de la región son dos conectores alemanes, y traen una oportunidad de tipo distinto:**
+
+| Pieza | Licencia medida | Lo que abre |
+|---|---|---|
+| [`udondan/lanis-mcp`](https://github.com/udondan/lanis-mcp) | 🟢 **MIT**, 1.073 B | **Schulportal Hessen** — portal que un *Land* **opera para sus escuelas públicas** |
+| [`kohlsalem/schulmanager-mcp`](https://github.com/kohlsalem/schulmanager-mcp) | ⚠️ **Unlicense**, 1.212 B, **sin titular** | Schulmanager Online — suite **privada**, vista de familia |
+
+🔵 **La distinción es de comprador, y es la que decide el ciclo de venta:** `Lanis` **no se compra**
+—el comprador es la administración del *Land*, el ciclo es de **licitación pública** y el expediente
+es de sector público—. `Schulmanager` es proveedor privado con comprador escuela o familia. **Son
+dos negocios distintos sobre la misma capa técnica, y confundirlos cuesta el ciclo entero.**
+
+🔴 **Y el hallazgo que este pase agrega al expediente de EMEA, que no es de alcance sino de
+INSTRUMENTO:** `schulmanager-mcp` es **Unlicense**, es decir una **dedicación al dominio público**, y
+**es un proyecto alemán**. El derecho alemán no admite renunciar al *Urheberrecht*: la dedicación es
+ineficaz como instrumento, y lo que queda es la licencia permisiva de reserva que el propio texto
+incluye. ⚠️ **Permisiva en la práctica, frágil en un expediente de procurement público europeo — un
+comprador público alemán puede rechazarla por el instrumento y no por los derechos.**
+
+🟢 **La oportunidad concreta:** en una región donde el expediente de conformidad **lo exige la ley y
+el cliente lo presupuesta**, auditar el *instrumento* de licencia de la cadena de dependencias —no
+sólo su etiqueta SPDX— es trabajo facturable que casi nadie está vendiendo. **Esta base acaba de
+encontrar un caso real en la primera pieza alemana que midió.**
+
 
 #### 📍 Pase 72 del 2026-10-03 — tampoco acá hubo cifra nueva; lo que cambió es que la pieza EMEA de código resultó el ejemplar MÁS FUERTE del eje de actor
 

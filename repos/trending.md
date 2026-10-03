@@ -8,6 +8,72 @@ updated: 2026-10-03
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 
+## 2026-10-03 — pase 73: una licencia puede estar ausente como ARCHIVO y presente en el PAYLOAD, o presente en PROSA y ausente del todo — y los dos casos aparecen en el mismo pase, sobre dos piezas que un lector humano clasificaría igual
+
+### 🔴 El hallazgo del pase: la clase de error más barata de cometer es leer la licencia del README
+
+Esta base tiene desde el pase 64 un instrumento por archivo (**P170**), desde el 65 uno por payload
+(**P172**) y desde el 71 la advertencia de caja (**P206**). Todos apuntan al mismo supuesto:
+**la cesión se mide en un artefacto, nunca en una frase.** Este pase mide el caso humano del mismo
+error, y lo mide sobre dos piezas que **un lector de README clasificaría idénticamente**:
+
+| Pieza | Lo que dice el README | Lo que está medido | Verdicto |
+|---|---|---|---|
+| [`443pablo/mcp-powerschool`](https://github.com/443pablo/mcp-powerschool) | *«This project is open source and available under the MIT License»* | 🔴 **404 en 11 nombres de archivo.** `pyproject.toml` **404**, `setup.py` **404**, `package.json` **404**. Único manifiesto: `requirements.txt`, **sin clave de licencia** | 🔴 **`LICENSE-CLAIMED-IN-PROSE-ONLY`** — **no hay cesión** |
+| [`vnschneider/suap-mcp`](https://github.com/vnschneider/suap-mcp) | badge AGPL-3.0 + `## Licenca` → `[AGPL-3.0](LICENSE)` | ⚠️ **404 en 6 nombres de archivo** — el enlace relativo apunta a un archivo que no existe. 🟢 **Pero `pyproject.toml` lleva `license = "AGPL-3.0-or-later"`: clave con valor SPDX** | 🟢 **`PAYLOAD-LICENSED`** — **sí cede**, AGPL-3.0-or-later |
+
+🔵 **La diferencia no es el archivo ausente: en las dos falta. Es si algún artefacto declara la
+cesión con una CLAVE.** `suap-mcp` cede en el manifiesto; `mcp-powerschool` no cede en ninguna parte
+y lo afirma en prosa. **Un estudio que lea «MIT» en ese README y empaquete la pieza no tiene grant,
+y la afirmación del README no se lo da** (**P216**).
+
+⚠️ **Dato de contexto de `suap-mcp`, registrado sin resolver:** el badge apunta a
+`github.com/vnschneider/**sabichao**/blob/main/LICENSE` —otro slug del mismo dueño, cuyo `README.md`
+responde **200**, y cuyo `LICENSE` también es **404**—. El `pyproject.toml` nombra el proyecto
+`sabichao`, no `suap-mcp`. **Dos repositorios vivos para el mismo proyecto, ninguno con archivo de
+licencia, y la cesión viviendo sólo en el manifiesto de uno.**
+
+### 🔁 Y el `sha256` del `LICENSE` resuelve un linaje de fork, que es el uso INVERSO del que P199 descartó
+
+El canal devolvió **dos** `purdue-mcp`, con la **misma descripción** y el **mismo recuento de
+commits (17)**. Sólo la medición dice cuál citar:
+
+| Repo | ★ | forks | `forked from` | `LICENSE` medido |
+|---|---|---|---|---|
+| 🟢 [`sharziki/purdue-mcp`](https://github.com/sharziki/purdue-mcp) | **4** | **1** | 🟢 **ausente** → **canónico** | MIT, **1.080 B**, `sha256:cfb32038c0ba` |
+| 🔴 [`RohanMuppa/purdue-mcp`](https://github.com/RohanMuppa/purdue-mcp) | 0 | 0 | 🔴 **`forked from sharziki/purdue-mcp`** | MIT, **1.080 B**, `sha256:cfb32038c0ba` — **byte-idéntico** |
+
+🟢 **El hallazgo instrumental:** **P199** (pase 69) concluyó que el `sha256` de un `LICENSE` *«sirve
+para SEPARAR, casi nunca para UNIR»*, y **P208** (pase 71) que pierde su poder separador cuando el
+titular es **el nombre del proyecto**. Acá el titular es exactamente eso —`purdue-mcp
+contributors`— **y por eso el hash UNE el fork a su upstream con certeza byte a byte.**
+
+🔵 **La misma propiedad que lo inutiliza como separador de identidad lo vuelve fiable como detector
+de LINAJE dentro de un proyecto.** No es una excepción a P199/P208: es su corolario, y vale
+registrarlo como uso legítimo (**P216**).
+
+### 🟢 Lo que entró a la capa fundacional en este pase
+
+[`motiolabs-space/open-academic`](https://github.com/motiolabs-space/open-academic) — **MIT**
+medido (**1.087 B**, `sha256:fb2e70ba804c`, titular `PT Motiolabs Digital Indonesia`, **persona
+jurídica**). SIAKAD indonesio completo con **PDDIKTI/Neo Feeder** (sincronización idempotente, con
+*ledger* y diff), **SISTER**, **KIP Kuliah**, **LKPS** e **IKU**. 🔵 **0 ★ · 75 commits:** el caso de
+libro de la tendencia **23** de esta base. Detalle en `repos/foundations.md`.
+
+### ⚠️ Lo que este pase NO midió de este archivo, declarado como tal
+
+- 🔴 **El barrido en lote quedó bloqueado por el clasificador del entorno**, así que las ausencias de
+  este pase se midieron a **16** nombres en 3 cajas, no a los **28** de **P211**. Los `NO-CESSION` de
+  `hocphi-info/hocphi-info-mcp`, `git-pratap-shrey/uniAI_mcp` y
+  `xGabrielCv/Auto-Matricula-SIGAA-UnB` **llevan ese alcance escrito y no se publican como P211**.
+- ⚠️ **No se re-midió ninguna fila antigua de este archivo.** El pase se gastó en altas y en las dos
+  clases nuevas de licencia; el inventario histórico queda como lo dejó **P211**.
+- 🔵 **Acción para el pase siguiente:** `vnschneider/sabichao` tiene `README.md` 200 y `LICENSE` 404.
+  Falta medir si su `pyproject.toml` lleva la misma clave AGPL que `suap-mcp`. **Hipótesis falsable:
+  si la lleva, el par es consistente y es un rename a medias; si no la lleva, hay un repositorio
+  vivo del mismo proyecto SIN cesión en ninguna capa, y entonces el veredicto de `suap-mcp` no se
+  puede extender al nombre del proyecto.**
+
 ## 2026-10-03 — pase 72: la advertencia de caja del pase 71 era DEMASIADO AMPLIA — re-medidas las 32 ausencias publicadas en las tres cajas, las 32 se sostienen, y el instrumento que las produjo nunca había sido ciego a la caja
 
 ### 🔴 Lo primero, porque corrige al pase que pidió esta medición

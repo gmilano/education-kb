@@ -1,0 +1,15 @@
+# slug	class	label	probes-fired	readme-bytes
+chrischall/infinitecampus-mcp	D1	DISCLOSURE-WITH-STATUTE-AND-TOU	tou,provider-risk,statute,dated,non-affiliation	7065
+CaioCastro1/usp-mcp	D2	DISCLOSURE-OF-NON-AFFILIATION	dated,non-affiliation,handling	49648
+sharziki/purdue-mcp	D2	DISCLOSURE-OF-NON-AFFILIATION	dated,non-affiliation	13724
+6a6179/myschoolapp-mcp	D2+	DISCLOSURE-OF-SCOPE	dated,non-affiliation,scope,handling	20330
+kohlsalem/schulmanager-mcp	D4	NO-DISCLOSURE	dated	5561
+udondan/lanis-mcp	D4	NO-DISCLOSURE	-	10574
+zaikaman/SGU-Academic-MCP	D4	NO-DISCLOSURE	-	17233
+vnschneider/suap-mcp	D3	DISCLOSURE-OF-HANDLING-ONLY	handling	4630
+443pablo/mcp-powerschool	D4	NO-DISCLOSURE	-	8962
+codit04/TechMCP	D4	NO-DISCLOSURE	tou	8663
+iDavi/usp-mcp	D4	NO-DISCLOSURE	-	4374
+SwarupRock/attendai	D3	DISCLOSURE-OF-HANDLING-ONLY	scope,handling	11747
+peancor/moodle-mcp-server	D4	NO-DISCLOSURE	-	4344
+motiolabs-space/open-academic	D4	NO-DISCLOSURE	-	19312

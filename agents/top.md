@@ -8,6 +8,7 @@ updated: 2026-10-03
 
 > Agentes y herramientas AI open source para educación. Foco: MIT / Apache 2.0 / BSD.
 > Verificado repo por repo vía WebFetch el 2026-09-30 (stars y licencia leídos de la página del repo).
+> **Pase 73 del 2026-10-03:** 🟢 **La DIVULGACIÓN es un TERCER eje con cuatro clases (**P215**), independiente de la compuerta y del actor — y el pase que la mide encuentra la pieza que el pase 72 declaró inexistente.** `CaioCastro1/usp-mcp` (**MIT**, 16 ★, 376 commits, Brasil) es fuerte en los **tres** ejes, corre contra una institución **real** —lo que `attendai` explícitamente no hace— y aporta un **peldaño 0** por encima de la escalera del pase 71: 🟢 **`GATE-IN-SURFACE`**, la tool **no existe** hasta habilitarla (`listar_ferramentas()`: 11 tools sin la flag, 13 con ella). 🔴 **Y la razón por la que no estaba en la base es de MÉTODO (**P217**): dos repositorios independientes, mismo nombre, misma universidad — el pase 72 midió el flojo.** 🆕 Clase de licencia nueva: **`LICENSE-CLAIMED-IN-PROSE-ONLY`** (**P216**) — `mcp-powerschool` promete MIT en prosa con **404 en 11 nombres y ningún manifiesto**. Altas: **7** (LATAM 2, EMEA 2, APAC 1, NA 2).
 > **Pase 72 del 2026-10-03:** 🟢 **La escalera de la compuerta del pase 71 medía la mitad: de dónde sale el ACTOR es un SEGUNDO eje y, cruzado con el primero, está INVERTIDO** (**P212**, tendencias **562**–**563**). `attendai` es la única fuerte en los dos (compuerta 1 · actor A2); `bb-mcp` tiene la política más rica de la base **evaluada contra un actor que el cliente declara** (A3); `blackboard-mcp` tiene la compuerta más débil y el actor más fuerte (A1). El hueco es del PROTOCOLO y el propio `bb-mcp` lo escribe: *«The MCP spec does not define end-user identity»*. 🟢 **LATAM vuelve a la capa de código tras tres pases** con `iDavi/usp-mcp` + `iDavi/heidy_backend` (**GPL-3.0**, Brasil), **la única pieza del inventario que no manda la contraseña institucional en claro** —sobre sellado a la clave pública del backend—, 🔴 **con dos cotas medidas: los metadatos del sobre NO están autenticados y el *key schedule* NO es RFC 9180** (**P213**, 13 checks con control negativo). 🟢 **APAC rompe su hueco de CÓDIGO, abierto desde el pase 69**, con `codit04/TechMCP` (MIT, PSG College of Technology, India). 🔴 **Y la advertencia de CAJA del pase 71 era demasiado ancha: re-medidas las 32 ausencias de P170 en las TRES cajas, 32 de 32 se sostienen — P170 nunca fue un sondeo en mayúsculas** (**P211**, tendencia **564**). ⚠️ **Cuatro candidatas reales rechazadas por `NO-CESSION`**, una de ellas una segunda pieza APAC.
 > **Pase 70 del 2026-10-03:** 🟢 **ÁFRICA entra a la capa de agente de esta base, y entra con el instrumento de gobernanza más fuerte que la base haya medido: la compuerta en la FIRMA de la operación.** `buriro-ezekia/mwalimulens-agent` (Apache-2.0, 11.357 B) exige `supporting_evidence_ids`, `counter_evidence_ids` y `uncertainty` como ARGUMENTOS de `flag_pattern_for_review` —no se puede emitir un juicio sobre un alumno sin citar evidencia, exhibir contra-evidencia y declarar incertidumbre— (**P203**, clase `GATE-IN-SIGNATURE`, **tendencia 136**). 🔴 **Y el contraejemplo entra en el MISMO pase:** `oliverhruby/edupage-mcp` (MIT, `HOLDER-MATCH`, 31 tools) escribe —mensajes, cambio de cuenta de alumno— **sin compuerta en código** y contra *«undocumented endpoints»*, lo que abre un SEGUNDO eje de evaluación que la columna Licencia no ve (**P204**, **tendencia 137**). 🔴 **La capa de SIS entra medida y está dominada por copyleft fuerte** —ClassroomIO AGPL-3.0, Gibbon GPL-3.0, y la única permisiva (Fedena) sólo medible en un ESPEJO porque el repo que la fuente llama oficial da 404— (**tendencia 138**). ⚠️ **Dos candidatas RECHAZADAS: `YeetingWaterbottle/canvas-mcp` es un fork con `LICENSE` byte a byte idéntico al upstream ya presente, y `hesham0-0nasser/tutor-lms-mcp` es un árbol real SIN cesión.** ⚠️ **Barrido regional completo: EMEA 2 piezas, NA 0, APAC 0, LATAM 0 —declarado, no tapado— (**tendencia 139**). 🔴 **`api.github.com` y `github.com` dieron 403 todo el pase: las licencias salen de `raw.githubusercontent.com`.**
 > **Pase 69 del 2026-10-03:** 🔴 **La acción 1 CIERRA en su rama CARA, y lo primero que corrige es el denominador de la propia acción: la acción pedía «los 16 nombres» y los nombres de registro único son **13** —21 filas → 18 nombres, menos los 5 de doble registro del pase 68—. El «16» era un conteo de FILAS leído como conteo de NOMBRES.** 🔵 **Medidos los 13 con el canal que la acción exigía (pedir el repositorio declarado, no leerlo del manifiesto): **3 `IDENTITY-DECLARED` · 2 `IDENTITY-DECLARED-BUT-DEAD` · 3 `IDENTITY-PROVEN` · 5 `IDENTITY-UNKNOWN`**. 5 ≥ 3 → gana la rama cara: la columna *Identidad* es **CONDICIÓN** para publicar una fila de paquete y se escribe con el valor `desconocida`, nunca omitida** (**P192** cerrado). ⚠️ **5 de 13 NO es comparable con el «4 de 5» del pase 68: otro denominador (registro único vs. doble).** 🔴 **Y el hallazgo que acota un patrón de ayer: **el `sha256` del `LICENSE` NO prueba identidad cuando el texto no trae titular, y está DEMOSTRADO con una colisión de esta misma tanda** — `openedx-mcp` y `tutor-contrib-openedxmcp`, dos paquetes DISTINTOS, comparten `sha256:8d56b405468a` (34.524 B, AGPL-3.0 sin titular). 🔴 **Peor: quitarle el nombre del titular al `LICENSE` de `@yunmiao/studymate` (1.064 B, *Cattofu*) y al de `@schoolexl/mentor` (1.064 B, *CoreExL*) los vuelve **byte a byte** el de `opencode-sit` (1.056 B, `sha256:1126322e2cc8`), que dice *«Copyright (c) 2026»* **sin nombre** — o sea el caso ESTRELLA con el que **P193** se escribió ayer cae justo en la clase donde el hash prueba MENOS** (**P199**). 🟢 **El veredicto de ayer igual se sostiene, pero por otro instrumento: el `package.json` de `aemonge/opencode-sit` NOMBRA el paquete, y ése es un enlace de dos vías que el hash no es** (**P200**). 🟢 **Acción 3 EJECUTADA: el instrumento por archivo de **P186** existe y corrió sobre las 2 piezas de alcance declarado.** 🔴 **Y obliga una corrección que esta KB publica en CUATRO archivos: el titular de `INGInious` NO es `FSF → NOT-APPLICABLE`. El archivo `COPYRIGHTS` —622 B, que ningún instrumento de esta base había leído— dice *«Copyright (c) 2014-2026 Anthony Gégo, Guillaume Derval and Pierre Reinbold»*** (**P197** gana una capa). ⚠️ **Y el alcance de `INGInious` NO se puede cerrar: el propio proyecto declara que hay archivos de terceros con otras licencias y NO los enumera, así que «AGPL-3.0 entero» no es medible por ningún instrumento acotado** (**P201**). 🔴 **Acción 2 BLOQUEADA por egress en los dos canales (`standards.1edtech.org` y `www.imsglobal.org`: `403` por `curl`, `EGRESS_BLOCKED` por WebFetch), así que `1EdTech × documento` sigue **medido en 2 de 7** y se dice así cada vez, como el pase 68 exigió.** 🟢 **3 altas con licencia leída de primera mano, y una cierra un hueco de plataforma: **Brightspace/D2L** entra por fin a esta KB.**
@@ -240,6 +241,136 @@ updated: 2026-10-03
 > fila** —`lineage-skill`, con un vocabulario cerrado de 9 valores por afirmación, **4 de los 9 «esto lo produjo el
 > modelo»**— y **ninguna de las dos sabe de la otra**. Ver la capa nueva al final de este archivo, las tendencias
 > **180**–**182** y el patrón **P99**.
+
+## 🔭 La DIVULGACIÓN es un TERCER eje, y el pase que la mide encuentra la pieza que el pase 72 declaró inexistente — porque estaba escondida detrás de un nombre repetido (pase 73 del 2026-10-03)
+
+### 🟢 Las altas del pase, con licencia medida por PAYLOAD
+
+| Pieza | Repo | Licencia (**medida**: bytes + `sha256` + titular) | ★ | Región | Qué es, y qué divulga |
+|---|---|---|---|---|---|
+| 🟢 **usp-mcp** (Caio Castro) | [`CaioCastro1/usp-mcp`](https://github.com/CaioCastro1/usp-mcp) | **MIT**, **1.107 B**, `Copyright (c) 2026 Caio Castro e João Pedro Barreto do Prado Gunthen` → 🟢 **`HOLDER-MATCH`** | **16 ★** / 0 forks / **376 commits** | 🟢 **LATAM** (Brasil) | Tres servidores sobre la **USP**: `usp-rucard` (bandejão), `usp-moodle` (e-Disciplinas: prazos, material, notas, avisos), `usp-jupiter` (catálogo). 🟢 **La compuerta de escritura más fuerte del inventario, y está en la SUPERFICIE** (**P215**, peldaño **0**). **Actor `A1`**, token sólo local. Divulga **`D2`** |
+| 🟢 **myschoolapp-mcp** | [`6a6179/myschoolapp-mcp`](https://github.com/6a6179/myschoolapp-mcp) | **MIT**, **1.085 B**, `Copyright (c) 2026 myschoolapp-mcp contributors` → ⚠️ titular = **nombre del proyecto** (**P208**) | 3 ★ / 0 forks / 19 commits | **North America** | **Blackbaud** K-12 (`myschoolapp.com`), **32 tools** en 8 dominios + escotilla `api_request`. **Actor `A1`** (cookie de sesión, `0600`). 🔴 Escritura detrás de `MSA_ALLOW_WRITES=true` → peldaño **3**. Divulga **`D2+`**: *«Unofficial. Not affiliated with Blackbaud. Endpoints were reverse-engineered from network traffic on one school's deployment»* |
+| 🟢 **purdue-mcp** | [`sharziki/purdue-mcp`](https://github.com/sharziki/purdue-mcp) | **MIT**, **1.080 B**, `Copyright (c) 2026 purdue-mcp contributors` → ⚠️ titular = **nombre del proyecto** (**P208**) | 4 ★ / **1 fork** / 17 commits | **North America** | **33 tools** sobre **13 fuentes públicas** de Purdue (comedores, catálogo Banner, ocupación del gimnasio, buses, exámenes, eventos). 🟢 **Sin credencial: la única pieza del inventario que resuelve el problema del actor ELIMINÁNDOLO.** Divulga **`D2+`**: *«Everything it reads is public and unauthenticated. It **never touches** a student account, grades, schedules, bursar records, or anything behind a Purdue login.»* |
+| 🟢 **lanis-mcp** | [`udondan/lanis-mcp`](https://github.com/udondan/lanis-mcp) | **MIT**, **1.073 B**, `Copyright (c) 2026 Daniel Schroeder` → ⚠️ **`HOLDER-UNVERIFIED`**: el titular es un nombre civil y el dueño un alias (`udondan`) | 1 ★ / 0 forks / 41 commits | 🟢 **EMEA** (Alemania) | **Schulportal Hessen (Lanis)** —portal de un *Land* alemán—: plan de sustituciones, horario, tareas, calendario, conversaciones, archivos. 15 tools, **todas de lectura**. 🔴 Divulga **`D4`**: su README no declara nada |
+| 🟢 **SGU-Academic-MCP** | [`zaikaman/SGU-Academic-MCP`](https://github.com/zaikaman/SGU-Academic-MCP) | **MIT**, **1.068 B** (con **BOM** UTF-8), `Copyright (c) 2026 zaikaman` → 🟢 **`HOLDER-MATCH`** | 0 ★ / 0 forks / **114 commits** | 🟢 **APAC** (Vietnam) | Portal de la **Đại học Sài Gòn**: 15 tools — horario, exámenes con cuenta atrás, notas, **simulación de GPA objetivo** (`simulate_target_gpa`), matrícula, prerrequisitos, **học phí** (matrícula económica). **Actor `A1`** (`SGU_STUDENT_ID` + `SGU_PASSWORD` en `.env`). Divulga **`D3`** (*«Xử lý cục bộ»*) |
+| 🟢 **schulmanager-mcp** | [`kohlsalem/schulmanager-mcp`](https://github.com/kohlsalem/schulmanager-mcp) | ⚠️ **Unlicense**, **1.212 B**, `sha256:b5065838cbac` — **sin línea de titular**; dedicación al dominio público | 1 ★ / 1 fork / 10 commits | 🟢 **EMEA** (Alemania) | **Schulmanager Online** (vista de familia): informe diario, horario, deberes, exámenes, notas, circulares. ⚠️ `schulmanager_raw_call` = **llamada arbitraria a la API**. Divulga **`D2`**: *«unofficial community project. There is no connection to Schulmanager Online GmbH. Use at your own risk»* |
+| 🟢 **suap-mcp** / *Sabichao* | [`vnschneider/suap-mcp`](https://github.com/vnschneider/suap-mcp) | 🔴 **AGPL-3.0-or-later** — **`PAYLOAD-LICENSED`** (`pyproject.toml`, `license = "AGPL-3.0-or-later"`); ⚠️ **404 en 6 nombres de archivo** (**P216**) | 2 ★ / 0 forks / 10 commits | 🟢 **LATAM** (Brasil) | **SUAP** del **IFMA** (institutos federales): notas, histórico, matrículas por período, proyectos, informes de orientación, **currículo Lattes**. 13 tools, read-only. Divulga **`D3`** |
+
+### 🔭 El eje nuevo: ¿qué DIVULGA la pieza? (**P215**)
+
+La tendencia **566** del pase 72 dejó esto escrito como eje sin barrer: *«la divulgación de términos
+de uso empieza a viajar como ARCHIVO DEL REPO»*. 🟢 **Barrido ahora sobre QUINCE piezas con instrumento versionado y control negativo, es un eje
+con cuatro clases, y ninguna se deduce de la licencia ni de la compuerta.** Reparto: **D1** 1 ·
+**D2+** 2 · **D2** 2 · **D3** 4 · **D4** 6.
+
+| | Clase | Ejemplar | Qué contiene, medido en el texto |
+|---|---|---|---|
+| **D1** | 🟢 `DISCLOSURE-WITH-STATUTE-AND-TOU` | `chrischall/infinitecampus-mcp` | cita **textual** el ToU del proveedor, **admite que el proveedor puede tratar el canal como violación**, nombra **FERPA** y **COPPA**, y **fecha** la lectura del término |
+| **D2+** | 🟢 `DISCLOSURE-OF-SCOPE` | `sharziki/purdue-mcp` · `myschoolapp-mcp` | lo de abajo **más el alcance del dato**: qué NO toca |
+| **D2** | 🟢 `DISCLOSURE-OF-NON-AFFILIATION` | `CaioCastro1/usp-mcp` · `schulmanager-mcp` | declara **no-oficialidad** y ausencia de vínculo con el proveedor nombrado; sin norma citada y sin ToU |
+| **D3** | ⚠️ `DISCLOSURE-OF-HANDLING-ONLY` | `SGU-Academic-MCP` · `suap-mcp` · `attendai` · `bb-mcp` | dice qué hace con la **credencial y el dato** (local, sólo lectura, no sale de la máquina) y **calla el plano contractual** |
+| **D4** | 🔴 `NO-DISCLOSURE` | `codit04/TechMCP` · `lanis-mcp` · `mcp-powerschool` · `iDavi/usp-mcp` · `peancor/moodle-mcp-server` | nada. `TechMCP` además pide la contraseña del portal **en claro** en un `config.json` |
+
+🔵 **Sub-clase que el barrido obliga a registrar, y es la más fuerte de D2:** `sharziki/purdue-mcp`
+no divulga sólo *de quién no depende* — divulga **su propio ALCANCE**: *«only public, unauthenticated
+data»*, explícitamente sin cuentas de alumno, notas ni horarios. **Es la única pieza del inventario
+que no tiene nada que divulgar sobre credenciales porque no usa ninguna.**
+
+### 🔴 El cruce de los TRES ejes, que es lo que cotiza — y refuta la conclusión del pase 72
+
+| Pieza | Compuerta (**P207**) | Actor (**P212**) | Divulgación (**P215**) |
+|---|---|---|---|
+| 🟢 `CaioCastro1/usp-mcp` | 🟢 **0** `GATE-IN-SURFACE` (**nuevo**) | 🟢 **A1** | 🟢 **D2** |
+| `chrischall/infinitecampus-mcp` | ⚠️ sin escritura que cerrar | 🟢 **A1** | 🟢 **D1** — la más fuerte del eje |
+| `SwarupRock/attendai` | 🟢 **1** `GATE-IN-SIGNATURE` | 🟢 **A2** | ⚠️ **D3** — manejo y alcance, **nada contractual**; y 🔴 **portal SIMULADO** |
+| `nitsuah/bb-mcp` | 🟢 **2** `GATE-IN-HANDLER` | 🔴 **A3** | ⚠️ **D3** — **nombra la norma** pero no cita el ToU ni admite el riesgo |
+| `6a6179/myschoolapp-mcp` | 🔴 **3** `GATE-IN-ENV-FLAG` | 🟢 **A1** | 🟢 **D2+** |
+| `sharziki/purdue-mcp` | ⚠️ n/a — sin escritura y **sin credencial** | ⚠️ n/a | 🟢 **D2 + alcance** |
+| `peancor/moodle-mcp-server` | 🔴 sin compuerta | 🔴 **A4** | 🔴 **D4** |
+
+🟢 **El pase 72 cerró con que «no hay una pieza para recomendar: hay una COMPOSICIÓN» (P214). Este
+pase lo refuta con una medición, no con un argumento:** `CaioCastro1/usp-mcp` es fuerte en los tres
+ejes a la vez, **y corre contra una institución REAL** —lo que `attendai`, la campeona del pase 72,
+explícitamente no hace: *«This project deliberately never touches a real institution's portal… all
+data is seeded fake data»*. La recomendación de `attendai` seguía siendo correcta como *instrumento
+de garantía* y era **incotizable como despliegue**.
+
+⚠️ **Y la razón por la que esta pieza no estaba en la base es un defecto de MÉTODO, no de canal
+(**P217**): el pase 72 dio de alta `iDavi/usp-mcp` y, al verlo ya «cubierto», nunca preguntó si
+había OTRO repositorio con el MISMO nombre sobre la MISMA institución.** Lo hay, y es el bueno:
+
+| | `iDavi/usp-mcp` (pase 72) | `CaioCastro1/usp-mcp` (este pase) |
+|---|---|---|
+| Licencia | 🔴 GPL-3.0 | 🟢 **MIT** |
+| Madurez | 5 ★ · **4 commits** | **16 ★** · **376 commits** |
+| Fork de la otra | 🔴 **no** — `forked from` ausente en ambas | 🔴 **no** |
+| Escritura | planner propio + descarga | 🟢 **entrega al e-Disciplinas, con compuerta en la superficie** |
+| Credencial | 🟢 sobre X25519 (**P213**) | 🟢 token local, *«não vai para nenhum servidor»* |
+
+🔵 **No son un fork ni una deriva: son dos proyectos independientes que eligieron el mismo nombre
+para la misma universidad.** El `sha256` de sus `LICENSE` lo confirma por construcción —familias
+distintas— y la ausencia de `forked from` en las dos lo cierra.
+
+### 🪜 El peldaño **0**, leído en el CÓDIGO y no en el README
+
+Los cuatro peldaños del pase 71 comparten un supuesto que ninguno declaraba: **la tool existe y la
+compuerta la RECHAZA.** `CaioCastro1/usp-mcp` hace algo categóricamente distinto —**la tool no
+existe hasta que alguien la habilita**—, y eso se lee en `usp_mcp/moodle/server.py`:
+
+> *«**Depende do ambiente desde 15/09/2026**… com `USP_MCP_ENTREGA=1` a lista tem **treze** itens,
+> sem ela tem **onze**. Continua pura (lê `os.environ`, não escreve em lugar nenhum)»*
+> — docstring de `listar_ferramentas()`
+
+Y el README lo dice en la lengua del usuario: *«enquanto você não ligar, essas ferramentas **nem
+aparecem** para o assistente»*. 🟢 **El cliente no puede nombrar lo que no ve: la compuerta actúa
+antes de que exista una llamada que rechazar.** De ahí el peldaño **0**, por encima de `GATE-IN-SIGNATURE`.
+
+🟢 **Y trae tres garantías más, las tres en código, que MEJORAN la receta que esta base publicó en
+P131/P136/P210** (`usp_mcp/moodle/entrega.py`, 28.976 B):
+
+1. 🟢 **Lista de denegación que la flag NO abre.** *«Começar uma prova, responder questionário ou
+   mandar mensagem em seu nome estão bloqueados e **continuam bloqueados mesmo se alguém ligar a
+   permissão de escrita**»*. En código, la capa 5: *«**Recusas que a flag não abre.** Entrega de
+   grupo, entrega travada, envio já feito, envio não permitido pelo site e plano sem arquivo
+   nenhum»*. 🔵 **Es exactamente el «el arranque manda» de P136, implementado por un tercero.**
+2. 🟢 **Confirmación de dos llamadas ATADA AL ESTADO, que es más de lo que P131 pedía.** La primera
+   llamada devuelve un plan **y un código** = los primeros 6 caracteres del `hashlib` del resumen
+   del plan. La segunda sólo escribe **si el código todavía casa**: *«Se alguém anexou outro
+   arquivo… a segunda chamada é recusada com o plano novo»*. **P131 pedía dos llamadas; esto es un
+   nonce ligado al estado leído, y detecta la carrera que «dos llamadas» no detecta.**
+3. 🟢 **Borrador y entrega son DOS tools a propósito**: *«porque "salva aí" e "entrega isso" estão a
+   uma palavra de distância e só uma das duas tem volta»* — el «borrador no liberado» de P131.
+
+⚠️ **Y publica su propia cota, con la misma disciplina que esta base se exige:** *«Ela não é um
+cadeado: quem roda o projeto dentro de um assistente que também tem acesso ao terminal pode
+contornar qualquer trava que o programa tente impor»*. 🔵 **Una compuerta en el servidor MCP no es
+un control de seguridad frente al operador del cliente, y conviene decirlo en la propuesta antes de
+que lo diga el área de riesgo del cliente.**
+
+### 🔴 Las candidatas que NO entran, con el motivo medido
+
+| Candidata | Lo medido | Veredicto |
+|---|---|---|
+| [`443pablo/mcp-powerschool`](https://github.com/443pablo/mcp-powerschool) | **PowerSchool** (notas, tareas, asistencia, OAuth2). README: *«This project is open source and available under the MIT License»*. 🔴 **404 en 11 nombres de archivo; `pyproject.toml`, `setup.py` y `package.json` 404 — el único manifiesto es `requirements.txt`, que no lleva clave de licencia** | 🔴 **`LICENSE-CLAIMED-IN-PROSE-ONLY`** (**P216**, clase nueva) |
+| [`RohanMuppa/purdue-mcp`](https://github.com/RohanMuppa/purdue-mcp) | 0 ★; GitHub muestra **`forked from sharziki/purdue-mcp`**; `LICENSE` **byte-idéntico** al del upstream (1.080 B, `sha256:cfb32038c0ba`) | ⚠️ **`FORK-CITE-UPSTREAM`** — se cotiza `sharziki/purdue-mcp` |
+| [`hocphi-info/hocphi-info-mcp`](https://github.com/hocphi-info/hocphi-info-mcp) | matrícula universitaria de **Vietnam** (7 tools, público, sin auth). **404 en 16 nombres en 3 cajas**; `pyproject.toml` presente (2.364 B) **sin clave de licencia**; árbol alcanzable | 🔴 **`NO-CESSION`** |
+| [`git-pratap-shrey/uniAI_mcp`](https://github.com/git-pratap-shrey/uniAI_mcp) | apuntes RAG + temario + exámenes anteriores de una universidad. **404 en 16 nombres en 3 cajas**; árbol alcanzable | 🔴 **`NO-CESSION`** |
+| [`xGabrielCv/Auto-Matricula-SIGAA-UnB`](https://github.com/xGabrielCv/Auto-Matricula-SIGAA-UnB) | robot de matrícula extraordinaria en el **SIGAA de la UnB**. **404 en 16 nombres en 3 cajas**; árbol alcanzable. ⚠️ Además **no es un agente**: automatiza un formulario sin modelo en el camino | 🔴 **`NO-CESSION`** |
+| [`JorickPepin/campus-mcp`](https://github.com/JorickPepin/campus-mcp) | el canal lo devolvió a una consulta de *campus universitario*; es **Campus Coach**, plataforma de entrenamiento de **running y trail** | 🔴 **`OUT-OF-DOMAIN`** — falso positivo léxico de «campus» |
+
+### ⚠️ Canales que fallaron o no rindieron en este pase
+
+- 🔴 **Sexto pase consecutivo sin una sola alta educativa desde `top open source AI agents …` y
+  `github trending …`.** Devolvieron listicles de agentes genéricos (OpenClaw, OpenHands, CrewAI) y
+  cursos (`generative-ai-for-beginners`). **Las siete altas salieron del canal por SISTEMA NOMBRADO
+  y por PAÍS en el idioma del país**: `SIGAA`/`SUAP` en portugués, `SIAKAD`/`nilai` en indonesio,
+  `Noten`/`Stundenplan` en alemán, `PowerSchool`/`Skyward`/`Aeries` por producto.
+- ⚠️ **`api.github.com` y `github.com`: `403` por el proxy, todo el pase** (tercer pase seguido).
+  Licencias, bytes, `sha256` y **todo el código citado** salen de `raw.githubusercontent.com`;
+  estrellas, commits y la línea `forked from`, de WebFetch.
+- 🔴 **El barrido por lista en lote quedó BLOQUEADO por el clasificador del entorno.** Las
+  mediciones de este pase se hicieron con peticiones nombradas una por una, y por eso la caja se
+  barrió a **16** nombres y no a los 28 de **P211**: declarado como alcance, no como cobertura.
 
 ## 🧭 El ACTOR es un segundo eje, y está INVERTIDO respecto de la compuerta — además LATAM y APAC vuelven a la capa de código en el mismo pase (pase 72 del 2026-10-03)
 

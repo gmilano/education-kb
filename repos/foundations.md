@@ -8,6 +8,7 @@ updated: 2026-10-03
 
 > Bases sobre las cuales construir. Verificado repo por repo vía WebFetch el 2026-09-30 (capas del pase 10, el 2026-10-01).
 > Leer la columna **Licencia** antes de proponer: media KB de educación es GPL/AGPL, no permisiva.
+> **Pase 73 del 2026-10-03:** 🟢 **La «tercera vía permisiva» de la plataforma de sistema educativo nacional (tendencia **24**) deja de ser hipótesis y tiene repositorio:** [`motiolabs-space/open-academic`](https://github.com/motiolabs-space/open-academic) — **MIT** medido (1.087 B, titular `PT Motiolabs Digital Indonesia`, persona jurídica), SIAKAD completo de admisión a graduación **con el reporte obligatorio al Estado ya construido** (PDDIKTI/Neo Feeder idempotente con *ledger* y diff, SISTER, KIP Kuliah, LKPS, IKU). 🔵 **0 ★ y 75 commits: el caso de libro de la tendencia **23** —las estrellas esconden la infraestructura desplegada—.** 🟢 **Y rompe la anti-correlación de **P209**: permisiva Y específica a la vez, desde APAC.**
 > **Pase 72 del 2026-10-03:** 🟢 **La capa de SIS gana su primera pieza LATAM y trae el único patrón de CREDENCIAL del inventario:** [`iDavi/usp-mcp`](https://github.com/iDavi/usp-mcp) + [`iDavi/heidy_backend`](https://github.com/iDavi/heidy_backend) (**GPL-3.0**, 35.148 B cada uno, Brasil) **sellan la Senha Única de la USP contra la clave pública del backend antes del login — ninguna otra pieza de esta base evita la contraseña en claro.** 🔴 **Y las dos cotas están medidas con test ejecutable y control negativo** (**P213**, 13 checks): los metadatos del sobre **no** están autenticados (el AAD es una constante) y el *key schedule* **no** es RFC 9180, así que el sobre interopera con UN backend. ⚠️ **Tercer corte institucional consecutivo ganado por copyleft** — para esta vertical, «permisivo» ya es la excepción, no el caso base.
 > **Pase 68 del 2026-10-03:** 🟢 **Entran los DOS documentos de estándar que ceden de verdad, y son la corrección más útil que este archivo recibió sobre la capa: [`adlnet/xAPI-Spec`](https://github.com/adlnet/xAPI-Spec) (**Apache-2.0**, 11.525 B, 952 ★, 403 forks) y [`Ed-Fi-Alliance-OSS/Ed-Fi-Standard`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-Standard) (**Apache-2.0**, 10.173 B, 46 ★, v6.2.0) publican el DOCUMENTO normativo bajo licencia permisiva, así que un perfil derivado se puede entregar con atribución y sin trámite.** 🔴 **Eso REFUTA lo que este archivo publicó en el pase 67 —*«la capa de estándares es la PEOR cedida de todas»*—: el régimen no se parte por «ser un estándar», se parte por **PUBLICADOR × TIPO DE ARTEFACTO**, sin una sola excepción en 8 archivos leídos** (**P191**). 🔴 **1EdTech cede su SOFTWARE bajo Apache-2.0 (4 de 4: OpenCASE, los dos validadores, la librería LTI 1.3) y sus DOCUMENTOS bajo la licencia que NIEGA derivados (2 de 2).** ⚠️ **Hueco nuevo y de los que importan: la versión VIGENTE de xAPI (IEEE 9274.1.1-2023) ya no está en GitHub —vive en `opensource.ieee.org`, que este entorno tiene EGRESS-BLOQUEADO—, así que los cuatro instrumentos de licencia de esta KB, todos apuntados a `raw.githubusercontent.com`, son ciegos a un estándar que migra** (**P195**). 🟢 **Y una pieza de agente: [`aemonge/opencode-sit`](https://github.com/aemonge/opencode-sit) (MIT, tutor socrático como plugin de OpenCode), con la identidad probada por `sha256` porque el paquete no declara repositorio** (**P193**). Ver `compose/code/p191-spec-license-sweep/`.
 > **Pase 67 del 2026-10-03:** 🟢 **Entra la capa de CORRECCIÓN automática, que esta base tenía representada por UNA pieza: `INGInious` (AGPL-3.0, 243 ★, 150 forks, **UCLouvain** → EMEA) como *grader* externo de Moodle y edX vía LTI, más `webtech-network/autograder` (Apache-2.0), `johnswyou/autograder` (MIT, corrige MANUSCRITO con rúbrica y cola de revisión humana) y `zmievsa/autograder` (GPL-3.0) — las cuatro con el archivo de licencia LEÍDO.** 🟢 **Y APAC gana un índice regional con la cesión más limpia de toda la capa de dato de esta KB: `crpf-mitadt/Indian-AI-for-Education`, **CC0 1.0** (dominio público: ni atribución ni ShareAlike).** 🔴 **La corrección que este archivo tiene que hacerse: `IMSGlobal/openbadges-specification` figuraba como *«ninguna (ausencia MEDIDA) … alcanzable y sin cesión»* y es una ausencia FALSA — `ob_v3p0/license.md` trae 12.324 B de la *Specification Document License* de IMS Global, que ⚠️ **NIEGA los derivados**, o sea una cesión PEOR que el silencio para un entregable** (**P187**). 🔵 **El detalle de la fila vieja era correcto —los 14 nombres dan 404 en la RAÍZ— y el error fue leer «no hay licencia en la raíz» como «no hay cesión».** ⚠️ **Nuevo patrón de alcance: el `LICENSE` de `INGInious` declara cubrir *«la mayoría de los archivos»* y delega las excepciones a los encabezados por archivo, y esta base no tiene instrumento para un barrido POR ARCHIVO** (**P186**, gap declarado).
@@ -81,6 +82,74 @@ corre ése antes de escribir uno a mano** (tendencia **313**). 🟢 **Y el `gafa
 > y 5 en `schemas12/`, y contar sólo el primero es lo que hizo invisible el segundo dialecto de SCORM (**P106**).
 > **Pase 36 del 2026-10-02:** 🔵 **este pase no agrega repos: le pone FECHA a los que ya están, y la fecha cambia tres recomendaciones.** Se midió la capa PHP de evaluación y telemetría en Packagist —el único registro de los tres que entrega descargas en este entorno (`api.npmjs.org` y `pypistats.org` dan **403 a CONNECT**)— y el resultado está en `repos/trending.md`. **Lo que hay que saber antes de proponer desde este archivo:** 🔴 **la pieza xAPI más descargada de esta base, `rusticisoftware/tincan` (Apache-2.0, 6.178 desc./mes, 863.777 totales), no publica desde el 2022-11-02**, y ⚠️ **el único MIT de esa capa, `php-xapi/client`, está parado desde el 2021-03-24** con 825 desc./mes. 🔵 **La lectura es que en xAPI/PHP lo permisivo está quieto y lo vivo es copyleft**, así que la receta de telemetría se sostiene en **Ralph (MIT)** + **`lrsql` (Apache-2.0)** + **`learnmcp-xapi` (MIT)** y no en la capa PHP. 🟢 **Del lado de evaluación, lo activo es `oat-sa/extension-tao-testqti`** (**885 versiones**, release del **2026-09-30**) **y sigue siendo GPL-2.0-only**, mientras **lo permisivo es lo nuevo**: `@longsightgroup/qti3-cli` (**MIT**, 41 releases desde el 2026-05-21, último **2026-10-01**) con **cero dependencias de terceros** — sus 4 dependencias son todas `@longsightgroup/*` pinneadas a la misma versión exacta. **Su manifiesto MCP completo de 20 tools está escrito en `compose/patterns.md` (P76).** 🔴 **Y una corrección de catálogo: `oat-sa/qti-sdk` devuelve 404 en Packagist porque es el nombre del REPO — su paquete es `qtism/qtism`** (GPL-2.0-only, 218.212 descargas totales, 315 versiones). **Nombre de repo y nombre de paquete son identificadores distintos, y confundirlos produce un 404 que parece una ausencia** — pasó igual con `1edtech/oneroster`, `imsglobal/lti-1-3-php-library` y `packbackbooks/lti-1-3-php-library`, los tres **404**, que se anotan como *«no verificado en Packagist bajo ese nombre»* y **no** como inexistentes. ⚠️ **Acción pendiente que el pase 37 tiene asignada: este archivo nunca pasó por el control de *slugs* distintos ni por el de *backlink*** — los dos que en `agents/top.md` encontraron **un duplicado** y **dos colisiones** este mismo pase.
 > **Pase 11 del 2026-10-01:** aparece una licencia que las diez pasadas anteriores filtraban sin saberlo — **ECL-2.0**, con la que licencia todo Apereo (Sakai, Opencast, OpenLRW). Es Apache-2.0 con el alcance de patentes acotado, aprobada por OSI y FSF, y **es apta para construir arriba**. Ver la capa de analítica institucional, abajo.
+
+## 🇮🇩 La «tercera vía permisiva» de la plataforma de sistema educativo nacional deja de ser una hipótesis y tiene repositorio: MIT, con la integración al reporte ministerial ya construida (pase 73 del 2026-10-03)
+
+La tendencia **24** de esta base (pase 10) sostuvo que *hay una tercera vía para la plataforma de
+sistema educativo nacional, y es permisiva*, y la sostuvo **sin un ejemplar completo**: los dos
+candidatos citables de la capa ERP educativa eran copyleft —`OpenEduCat` (LGPL-3.0) y `frappe/education`
+(GPL-3.0)—, que es justo la anti-correlación que **P209** midió en el pase 71.
+
+🟢 **Este pase cierra el hueco con una pieza medida:**
+
+| Pieza | Repo | Licencia (**medida**: bytes + `sha256` + titular) | ★ | Región | Qué cubre |
+|---|---|---|---|---|---|
+| 🟢 **open-academic** | [`motiolabs-space/open-academic`](https://github.com/motiolabs-space/open-academic) | 🟢 **MIT**, **1.087 B**, `Copyright (c) 2026 PT Motiolabs Digital Indonesia` → 🟢 **`HOLDER-MATCH`** (titular = **persona jurídica**, no alias) | 0 ★ / 0 forks / **75 commits** | 🟢 **APAC** (Indonesia) | **SIAKAD** completo: *system of record* de **PMB a wisuda** (admisión a graduación) — KRS/KHS, transcripciones, IPK, asistencia por QR, finanzas, currículo y horarios, 2FA TOTP, **SSO OAuth2** de campus |
+
+### 🟢 Por qué esta pieza vale más que su cuenta de estrellas, y la cuenta de estrellas es cero
+
+**El activo no es el CRUD académico: es la capa de reporte obligatorio al Estado, que es
+exactamente la parte que un integrador no puede improvisar y por la que el incumbente cobra.**
+Medido en el README:
+
+| Integración | Qué es | Estado declarado |
+|---|---|---|
+| 🟢 **PDDIKTI / Neo Feeder** | el registro nacional de educación superior de Indonesia — reportar ahí es **condición legal de operación** | sincronización con **transacciones idempotentes**, *ledger*, validación previa al envío y **herramienta de comparación de diferencias** |
+| 🟢 **SISTER** | sistema de datos de docentes | export CSV por grupo de datos (adaptador pendiente de credencial) |
+| 🟢 **KIP Kuliah** | beca estatal | reporte de beneficiarios por semestre, listo para subir |
+| 🟢 **LKPS** | formulario de **acreditación** | calculadora de indicadores |
+| 🟢 **IKU 1/2/3/4/7/11** | indicadores de desempeño del ministerio | proveedor de datos |
+
+🔵 **Esa lista es la razón de la pieza.** La tendencia **23** de esta base dice que *las estrellas de
+GitHub esconden la infraestructura educativa realmente desplegada*: **0 ★ y 75 commits, con el
+reporte a PDDIKTI construido, es más cotizable para una institución indonesia que un repositorio de
+10k ★ sin él** — y la sincronización idempotente con *ledger* y diff es, además, la parte que suele
+estar mal hecha.
+
+- **Stack:** Laravel 12 / PHP 8.2+, Eloquent agnóstico de motor (MySQL 8 · MariaDB 10.11 ·
+  PostgreSQL 13+), Pest, Vite.
+- **Capacidad declarada por el proyecto:** 5.000 alumnos y 631.220+ registros de asistencia.
+- **Superficie de integración:** *Campus Bridge* REST con **webhooks firmados HMAC** y auditoría por cola.
+- ⚠️ **No trae MCP ni agente.** Trae `.claude/` y un `CLAUDE.md` de guía para contribuyentes AI:
+  **es la base sobre la que se pone la capa agéntica, no la capa agéntica** — que es el modelo de
+  este archivo, no una carencia.
+
+### ⚠️ Las cotas, antes de que alguien la cotice
+
+- 🔴 **0 ★, 0 forks, un solo publicador.** No hay comunidad medible: el riesgo de continuidad es
+  real y se cotiza como tal. Lo que lo compensa es que el titular es **una empresa registrada**
+  (`PT Motiolabs Digital Indonesia`) y no un alias — la clase de titular que **P184** separa.
+- ⚠️ **El adaptador SISTER está declarado pendiente** de acceso a credencial: la lista de arriba no
+  es toda igual de madura, y la propuesta no debe presentarla como tal.
+- 🔵 **Es específico de Indonesia por diseño.** PDDIKTI, SISTER, KIP Kuliah y LKPS no se exportan a
+  otra jurisdicción: **lo reutilizable fuera de APAC es el PATRÓN** —ledger idempotente + diff
+  contra el registro estatal— no el código, y ese patrón es el que **P218** describe.
+
+### 🔁 Y el reparto de licencias de la capa ERP/administración queda corregido
+
+| Pieza | Licencia | Especificidad educativa |
+|---|---|---|
+| 🟢 **`motiolabs-space/open-academic`** | 🟢 **MIT** | 🟢 **máxima — SIAKAD + reporte ministerial** |
+| `OpenEduCat` | 🔴 LGPL-3.0 | 🟢 alta |
+| `frappe/education` | 🔴 GPL-3.0 | 🟢 alta |
+| `ERPNext` | 🔴 GPL-3.0 | ⚠️ módulo |
+| `Apache OFBiz` | 🟢 Apache-2.0 | 🔴 ninguna |
+| `aureuserp/aureuserp` | 🟢 MIT | 🔴 ninguna |
+
+🟢 **P209 (pase 71) midió que permisividad y especificidad educativa estaban ANTI-correlacionadas en
+esta capa. Con `open-academic` la anti-correlación deja de ser una ley y pasa a ser una tendencia
+con contraejemplo** — y el contraejemplo vino de **APAC**, no de las dos regiones que producen casi
+toda esta capa.
 
 ## 🇧🇷 La capa de SIS gana su primera pieza LATAM, y trae el único patrón de CREDENCIAL del inventario — con dos cotas medidas (pase 72 del 2026-10-03)
 

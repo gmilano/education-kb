@@ -100,6 +100,7 @@ updated: 2026-10-03
 > inferidas), **P51** (el conector MCP de Moodle que no existe, construido sobre el patrón del que sí existe para
 > Canvas), **P52** (la capa agéntica de biblioteca sobre el bus de Kafka de FOLIO, Apache-2.0) y **P53** (*early warning*
 > con humano decidiendo, que es el único envoltorio facturable de la capa predictiva en las cuatro regiones).
+> **Pase 73:** **+5 patrones.** 🔭 **P215** (la **DIVULGACIÓN** es el tercer eje de un conector, con cuatro clases medidas en el texto del repo —`D1` ToU+norma+fecha, `D2` no-oficialidad, `D2+` alcance, `D3` sólo manejo, `D4` nada— y es **independiente** de la compuerta y del actor: tercera anti-correlación que esta base mide), 🪜 **P215b** (el peldaño **0** `GATE-IN-SURFACE`, por encima de la escalera de **P207**: la tool **no existe** hasta habilitarla), 🧾 **P216** (la cesión se mide en un **artefacto con una clave**: ni el archivo ausente la niega —`suap-mcp` cede en `pyproject.toml`— ni la prosa la concede —`mcp-powerschool` promete MIT sin ningún artefacto—; + el corolario que recupera el `sha256` del `LICENSE` como detector de **linaje** de fork), 🧩 **P217** (antes de declarar cubierto un sistema, barrer el **nombre del repo SIN el dueño** — corrige el defecto que el pase 72 cometió sobre `usp-mcp`), 🏛️ **P218** (RECETA: reconciliar un SIS con el **registro nacional obligatorio**, *ledger* idempotente + diff, sobre `open-academic` **MIT**) y 🎓 **P219** (RECETA: el *campus assistant* **sin expediente de privacidad**, sobre `purdue-mcp` **sin credencial** — el arranque correcto en NA, no una concesión).
 > **Pase 72:** **+4 patrones.** 🧭 **P212** (el ACTOR es un eje independiente de la compuerta de **P207**, con cuatro clases leídas en código —A1 upstream · A2 config local · A3 argumento de la llamada · A4 sin actor— y el hueco es del PROTOCOLO). 🔗 **P214** (RECETA: las dos escaleras están anti-correlacionadas, así que no hay pieza para recomendar — se compone actor de `blackboard-mcp` + política de `bb-mcp` + compuerta en la firma de `attendai` + sobre de `usp-mcp` + expediente de `infinitecampus-mcp`, las cinco MIT o GPL, **4-6 semanas** el núcleo). 🧪 **P213** (un sobre de credencial se evalúa por lo que su AEAD CUBRE y por si su *key schedule* es estándar, con control negativo). 🔁 **P211** (una corrección de instrumento se publica con el ALCANCE medido — el control positivo es lo que lo mide, y mirar CON QUÉ NOMBRE resuelve es la prueba).
 > **Pase 25:** +2 patrones — **P48** (del acervo QTI viejo a la aserción de competencia: migración → banco de ítems →
 > entrega **certificada** → evidencia xAPI filtrada → competencia en CaSS, **todo MIT/Apache-2.0**) y **P49** (integridad
@@ -107,6 +108,250 @@ updated: 2026-10-03
 > no existe en open source permisivo).
 > **Pase 11:** +2 patrones — **P25** (riesgo de abandono conforme al Anexo III, la capa con presupuesto ya asignado y sin oferta open source) y **P26** (agente docente sobre la ontología curricular nacional ya publicada).
 > **Pase 27:** **+4 patrones y una corrección.** 🔴 **P51 queda con premisa falsa** —el conector MCP de Moodle **sí existe y es MIT**— y lo reemplazan **P54** (corrección y devolución sobre Moodle con **compuerta humana**, el último tramo del gap 6, con piezas que ya escriben), **P55** (el conector de **Open edX**, que es el único que de verdad no existe), **P56** (**SCORM** como formato de salida de la capa generativa: cero integración, offline) y **P57** (evidencia por MCP cotizada sobre lo que CaSS **realmente** expone — 6 de 61 operaciones, con insignias y autoría de marcos **fuera**).
+
+## 🔭 P215 — La DIVULGACIÓN es el tercer eje de un conector, con cuatro clases, y no se deduce de la licencia ni de la compuerta (pase 73 del 2026-10-03)
+
+**P204** (pase 70) dijo que un conector se evalúa en dos ejes y que la licencia sólo cubre uno.
+**P207** y **P212** nombraron esos dos: **qué se niega a hacer** y **para quién lo hace**. 🟢 **Falta
+un tercero, y es el que decide si el cliente puede decidir informado: QUÉ DECLARA la pieza sobre el
+plano contractual del sistema con el que habla.**
+
+| | Clase | Qué exige, medido en el texto del repo | Ejemplar |
+|---|---|---|---|
+| **D1** | 🟢 `DISCLOSURE-WITH-STATUTE-AND-TOU` | ToU **citado textual** + admite que el proveedor **puede tratar el canal como violación** + **norma nombrada** (FERPA/COPPA/GDPR) + **fecha** de lectura | `chrischall/infinitecampus-mcp` |
+| **D2** | 🟢 `DISCLOSURE-OF-NON-AFFILIATION` | declara **no-oficialidad** y ausencia de vínculo con el proveedor **nombrado**; sin norma y sin ToU | `CaioCastro1/usp-mcp` · `kohlsalem/schulmanager-mcp` |
+| **D2+** | 🟢 `DISCLOSURE-OF-SCOPE` | lo anterior **más el alcance del dato**: qué NO toca | `sharziki/purdue-mcp` — *«It never touches a student account, grades, schedules…»* · `6a6179/myschoolapp-mcp` |
+| **D3** | ⚠️ `DISCLOSURE-OF-HANDLING-ONLY` | dice qué hace con **credencial y dato** (local, sólo lectura) y **calla el plano contractual** | `zaikaman/SGU-Academic-MCP` · `vnschneider/suap-mcp` · `SwarupRock/attendai` · `nitsuah/bb-mcp` |
+| **D4** | 🔴 `NO-DISCLOSURE` | nada | `codit04/TechMCP` (y pide la contraseña en claro) · `udondan/lanis-mcp` · `iDavi/usp-mcp` · `443pablo/mcp-powerschool` |
+
+### 🔴 Cómo se mide, y en qué orden
+
+1. **Leer el README del `HEAD` por payload**, nunca la ficha del repositorio.
+2. Buscar, en este orden: **cita textual del ToU** → **admisión de riesgo contractual** → **norma
+   nombrada** → **fecha de lectura** → **declaración de no-oficialidad** → **alcance del dato**.
+3. 🔴 **Una promesa de manejo («local», «read-only», «no sale de tu máquina») NO es divulgación
+   contractual.** Es `D3`: responde una pregunta que nadie hizo y calla la que el área legal hará.
+4. Registrar la clase **por lo que está escrito**, nunca por el tono del proyecto.
+
+### 🟢 Cómo se usa, que es lo que lo vuelve patrón y no taxonomía
+
+| Si el cliente es… | Exigir | Por qué |
+|---|---|---|
+| institución de **North America** con FERPA/COPPA en el expediente | 🟢 **D1** | nadie lo exige por ley: el expediente se vende como **reducción de riesgo institucional** y hace falta un ejemplar que mostrar |
+| cualquier cliente sobre **SIS/portal propietario** | 🟢 **D2** mínimo | sin declaración de no-oficialidad el cliente no sabe que está usando un canal no soportado |
+| piloto **sin datos de alumno** | 🟢 **D2+** | el alcance declarado es lo que elimina el expediente de privacidad |
+| — | 🔴 **`D4` no entra en propuesta institucional** | — |
+
+🟢 **El texto de `infinitecampus-mcp` es un activo reutilizable: sirve de PLANTILLA del expediente de
+cualquier conector sobre un sistema propietario, en cualquier región.**
+
+### 🔴 El hallazgo que el eje produce, y es el que cotiza
+
+| Pieza | Compuerta (**P207**) | Actor (**P212**) | Divulgación (**P215**) |
+|---|---|---|---|
+| 🟢 `CaioCastro1/usp-mcp` | 🟢 **0** `GATE-IN-SURFACE` | 🟢 **A1** | 🟢 **D2** |
+| `chrischall/infinitecampus-mcp` | ⚠️ sin escritura que cerrar | 🟢 **A1** | 🟢 **D1** |
+| `SwarupRock/attendai` | 🟢 **1** `GATE-IN-SIGNATURE` | 🟢 **A2** | ⚠️ **D3** — manejo y alcance, nada contractual + 🔴 **portal simulado** |
+| `nitsuah/bb-mcp` | 🟢 **2** `GATE-IN-HANDLER` | 🔴 **A3** | ⚠️ **D3** — **nombra la norma** pero no cita el ToU ni admite el riesgo |
+| `6a6179/myschoolapp-mcp` | 🔴 **3** `GATE-IN-ENV-FLAG` | 🟢 **A1** | 🟢 **D2+** |
+| `sharziki/purdue-mcp` | ⚠️ n/a — **sin credencial** | ⚠️ n/a | 🟢 **D2+** |
+| `peancor/moodle-mcp-server` | 🔴 sin compuerta | 🔴 **A4** | 🔴 **D4** |
+
+### 🔴 La cota del INSTRUMENTO, publicada con el resultado y no después
+
+El clasificador de este patrón (`compose/code/p215-disclosure-axis/`, 16 tests, 3 de ellos
+controles negativos) **se escribió en inglés, y su v1 sub-leyó sistemáticamente todo repo que no
+estuviera en inglés.** Tres veredictos dieron vuelta al corregirlo:
+
+| slug | v1 | v2 | qué se le escapaba a v1 |
+|---|---|---|---|
+| `kohlsalem/schulmanager-mcp` | 🔴 D4 | 🟢 **D2** | en alemán se dice **`inoffiziell`**, no *«nicht offiziell»*; y *«keine Verbindung zu»* |
+| `zaikaman/SGU-Academic-MCP` | 🔴 D4 | 🟢 **D3** | el vietnamita *«Xử lý cục bộ»* / *«Không lưu trữ tập trung»* |
+| `sharziki/purdue-mcp` | ⚠️ D2 | 🟢 **D2+** | la forma *«It **never touches** a student account…»* |
+
+🔵 **Es la MISMA FORMA de defecto que P206** —el canal de payload siendo *case-sensitive*—: **el
+punto ciego de un instrumento fabricando AUSENCIAS FALSAS, y fabricándolas justo en las regiones
+que esta base existe para servir.** 🔴 **Dos de los tres vuelcos fueron piezas de EMEA y APAC, y
+las dos subieron de clase.**
+
+⚠️ **La cota, dicha antes de que alguien lea el resultado como cobertura:** el *recall* está
+corregido para **inglés, alemán, portugués y vietnamita**, y está **sin medir** para español,
+francés, indonesio, hindi, chino, japonés y coreano. **Un `D4` sobre un repo escrito en esas
+lenguas queda CONDICIONADO**, igual que P206 condicionó todo veredicto de ausencia de cesión de
+esta base. **No es incorrecto: no está cerrado.**
+
+⚠️ **Y una advertencia de denominador:** `motiolabs-space/open-academic` puntúa `D4` y **el puntaje
+no significa nada** — es una plataforma que la institución corre sobre su propio dato, no un
+conector contra el sistema de un tercero, así que **no hay plano contractual que divulgar. El eje
+aplica a CONECTORES.**
+
+🔴 **Tercera anti-correlación que esta base mide entre dos ejes de calidad** (pase 55, pase 72, y
+ahora). **La pieza mejor divulgada no tiene compuerta; la mejor cerrada no divulga nada.** 🟢 **Y la
+excepción es la que refuta a P214: `CaioCastro1/usp-mcp` cierra los tres ejes a la vez.**
+
+## 🪜 P215b — El peldaño **0** de la escalera: `GATE-IN-SURFACE`, y por qué es de otra naturaleza (pase 73 del 2026-10-03)
+
+Los cuatro peldaños de **P207** comparten un supuesto no declarado: **la tool existe y la compuerta
+la rechaza.** El peldaño **0** es distinto: **la tool no está en el listado.**
+
+Leído en `usp_mcp/moodle/server.py` de `CaioCastro1/usp-mcp` (61.793 B), docstring de
+`listar_ferramentas()`: *«com `USP_MCP_ENTREGA=1` a lista tem **treze** itens, sem ela tem
+**onze**»*. Y en el README: *«enquanto você não ligar, essas ferramentas **nem aparecem** para o
+assistente»*.
+
+🟢 **Por qué es más fuerte, y no sólo distinto:** el riesgo que esta base mide desde el pase 53 **no
+es el humano que llama mal — es el modelo que elige mal interpretando una frase ambigua.** Una tool
+ausente del listado **no es elegible**. El propio proyecto lo razona: *«"manda ver a lista de
+exercícios" não pode ter caminho até entregar o trabalho»*.
+
+⚠️ **Y la cota, que la propia pieza publica:** *«Ela não é um cadeado: quem roda o projeto dentro de
+um assistente que também tem acesso ao terminal pode contornar qualquer trava»*. 🔴 **Una compuerta
+MCP no es un control frente al operador del cliente. Decirlo en la propuesta es más barato que
+escucharlo del área de riesgo.**
+
+## 🧾 P216 — La cesión se mide en un ARTEFACTO con una CLAVE: ni el archivo ausente la niega, ni la prosa la concede (pase 73 del 2026-10-03)
+
+Dos piezas del mismo pase, que un lector de README clasificaría idénticamente:
+
+| Pieza | README | Medido | Veredicto |
+|---|---|---|---|
+| `443pablo/mcp-powerschool` | *«available under the MIT License»* | **404 en 11 nombres**; `pyproject.toml`/`setup.py`/`package.json` **404**; sólo `requirements.txt`, **sin clave** | 🔴 **`LICENSE-CLAIMED-IN-PROSE-ONLY`** — **no hay cesión** |
+| `vnschneider/suap-mcp` | badge AGPL + `[AGPL-3.0](LICENSE)` a archivo inexistente | **404 en 6 nombres**, **pero** `pyproject.toml`: `license = "AGPL-3.0-or-later"` | 🟢 **`PAYLOAD-LICENSED`** — **sí cede** |
+
+🔵 **La regla operativa, en una línea: el archivo ausente no decide nada; decide si algún artefacto
+declara la cesión con una CLAVE que tiene un VALOR.** Es la extensión de **P171** del barrido
+automático al lector humano — y el error es **gratis de verificar y caro de descubrir en diligencia**.
+
+### 🟢 El corolario que recupera el hash del `LICENSE` como detector de LINAJE
+
+**P199** lo descartó para **unir** y **P208** mostró que pierde el poder de **separar** cuando el
+titular es el nombre del proyecto. 🟢 **Justo ahí recupera un uso:**
+
+| Repo | ★ | `forked from` | `LICENSE` |
+|---|---|---|---|
+| 🟢 `sharziki/purdue-mcp` | 4 | 🟢 ausente → **canónico** | MIT, 1.080 B, `sha256:cfb32038c0ba` |
+| 🔴 `RohanMuppa/purdue-mcp` | 0 | 🔴 `sharziki/purdue-mcp` | **byte-idéntico** |
+
+🔵 **Un titular que es el nombre del proyecto VIAJA con el fork: el hash une la copia a su origen con
+certeza byte a byte.** No es excepción a P199/P208 — es su corolario. 🔴 **Y la consecuencia
+práctica: cuando el canal devuelve dos repos con la misma descripción, se cita el que NO tiene
+`forked from`, no el que aparece primero.**
+
+## 🧩 P217 — Antes de declarar cubierto un sistema, barrer el NOMBRE DEL REPO SIN EL DUEÑO (pase 73 del 2026-10-03)
+
+🔴 **El defecto que este patrón corrige lo cometió esta base en el pase anterior.** El pase 72 dio de
+alta `iDavi/usp-mcp` (GPL-3.0, 5 ★, **4 commits**), registró la USP como cubierta y publicó la pieza
+como «la pieza LATAM». 🟢 **Existe otro `usp-mcp`, de otro dueño, sobre la misma universidad, y es el
+bueno:** `CaioCastro1/usp-mcp` — **MIT**, 16 ★, **376 commits**, fuerte en los tres ejes.
+
+| | `iDavi/usp-mcp` | `CaioCastro1/usp-mcp` |
+|---|---|---|
+| Licencia | 🔴 GPL-3.0 | 🟢 **MIT** |
+| Madurez | 5 ★ · **4 commits** | **16 ★** · **376 commits** |
+| `forked from` | 🔴 ausente | 🔴 ausente |
+| Escritura | planner propio | 🟢 **entrega con compuerta en la superficie** |
+
+🔵 **No son fork ni deriva: dos proyectos independientes eligieron el mismo nombre para la misma
+universidad.**
+
+### 🔴 Por qué ningún instrumento de esta base lo detectaba
+
+Esta base mide identidad de **paquete** (P192, P198, P200), **linaje de fork** (P150, P160), **caja**
+del nombre (P206, P211) y **titular** (P184, P208). ⚠️ **Ninguno pregunta: «¿hay otro repositorio con
+este nombre, de otro dueño, sobre este mismo sistema?»** El `dedupe` corre sobre `org/repo`, y **dos
+`org/repo` distintos con el mismo `repo` pasan los dos.**
+
+### 🟢 El procedimiento
+
+1. Antes de dar de alta una pieza como **la** cobertura de una institución o un sistema, **buscar el
+   nombre del repo sin el dueño** y por el **sistema nombrado** en el idioma del país.
+2. Para cada homónimo: medir **licencia por payload**, **★/commits**, y **`forked from`**.
+3. 🔴 **Si ninguno tiene `forked from`, son independientes: se cotiza el de licencia más permisiva y
+   madurez mayor, y el otro se registra como homónimo, no como duplicado.**
+4. Si uno lo tiene, aplicar **P216**: se cita el upstream.
+
+⚠️ **Hipótesis falsable para el pase siguiente:** *si el caso de `usp-mcp` es único, el barrido de
+homónimos sobre el inventario no devuelve otro par; si devuelve más de uno, hay más filas de esta
+base cotizando la pieza equivocada de un par.*
+
+## 🏛️ P218 — RECETA: reconciliar un SIS con el registro NACIONAL obligatorio, con *ledger* idempotente y diff (pase 73 del 2026-10-03)
+
+**El problema, que es el que paga:** en una jurisdicción con registro nacional obligatorio de
+educación superior, **reportar es condición legal de operación**. Es la parte que el integrador no
+improvisa, la que el incumbente cobra, y la que suele estar mal hecha —reenvíos que duplican,
+divergencias que nadie detecta hasta la auditoría—.
+
+**Las piezas, todas medidas:**
+
+| Capa | Pieza | Licencia | Rol |
+|---|---|---|---|
+| *System of record* | [`motiolabs-space/open-academic`](https://github.com/motiolabs-space/open-academic) | 🟢 **MIT**, 1.087 B, `PT Motiolabs Digital Indonesia` | SIAKAD de admisión a graduación + **la capa de reporte ya construida** |
+| Reconciliación | el módulo **PDDIKTI / Neo Feeder** del anterior | 🟢 MIT | **transacciones idempotentes**, *ledger*, validación previa al envío, **diff contra el registro** |
+| Acreditación | **LKPS** + **IKU** del anterior | 🟢 MIT | calculadora de indicadores y proveedor de datos del ministerio |
+| Capa agéntica | un servidor MCP propio sobre el *Campus Bridge* REST (**webhooks firmados HMAC**) | — | consulta en lenguaje natural del estado de reporte y de las divergencias |
+| Compuerta de escritura | 🟢 **peldaño 0** de **P215b** | — | **ninguna tool de ENVÍO al registro aparece** sin habilitación explícita |
+
+**El cableado, en orden:**
+
+1. `open-academic` como *system of record*; el reporte al registro queda en su módulo, **no en la
+   capa agéntica**.
+2. El servidor MCP expone **sólo lectura**: estado del *ledger*, divergencias del diff, indicadores
+   LKPS/IKU pendientes.
+3. 🔴 **El envío al registro nacional NO se automatiza ni detrás de confirmación.** Es un acto con
+   consecuencia legal: la capa agéntica **prepara y explica**, una persona envía. Aplicar la lista de
+   denegación de **P136**/tendencia **569**: el envío es el «arranque de examen» de este dominio.
+4. Si se habilita alguna escritura (corregir un dato antes del envío), **confirmación de dos llamadas
+   atada al estado** con código derivado del plan (tendencia **569**), no «dos llamadas» a secas.
+5. Divulgación **`D1`** en el repositorio del entregable (**P215**): el registro nacional y su
+   normativa, nombrados y fechados.
+
+**Estimación:** 8–10 semanas para el despliegue con reporte reconciliado en una institución;
++3–4 semanas la capa agéntica de consulta.
+
+⚠️ **Cotas:** `open-academic` tiene **0 ★ / 0 forks / un publicador** —riesgo de continuidad real,
+mitigado por un titular que es **persona jurídica**— y el adaptador **SISTER** está declarado
+pendiente de credencial.
+
+🔵 **Lo portable fuera de Indonesia es el PATRÓN, no el código:** *ledger* idempotente + diff contra
+el registro estatal. Aplica a **SISTEC/Censo Escolar** (Brasil), **SIED** (Argentina), **HESA**
+(Reino Unido) y **CDS/IPEDS** (Estados Unidos). **PDDIKTI no se exporta; la forma de reconciliar, sí.**
+
+## 🎓 P219 — RECETA: el *campus assistant* que NO necesita expediente de privacidad, y por qué es el arranque correcto y no una concesión (pase 73 del 2026-10-03)
+
+**El problema real de esta vertical no es técnico: es que el primer proyecto no arranca.** Todo
+conector sobre un LMS o un SIS trae credencial de alumno, y con ella expediente de datos personales,
+comité de privacidad y —en NA— FERPA y COPPA. **Meses antes de la primera demo.**
+
+🟢 **Hay una pieza que elimina el problema en vez de administrarlo:**
+[`sharziki/purdue-mcp`](https://github.com/sharziki/purdue-mcp) — **MIT**, 1.080 B, **33 tools sobre
+13 fuentes públicas**, y **sin credencial**: declara *«only public, unauthenticated data»*, sin
+cuentas, notas ni horarios.
+
+| Capa | Pieza | Licencia | Rol |
+|---|---|---|---|
+| Datos públicos de campus | [`sharziki/purdue-mcp`](https://github.com/sharziki/purdue-mcp) | 🟢 **MIT** | comedores con nutrición, catálogo **Banner**, ocupación de gimnasio, buses, exámenes, eventos, organizaciones, biblioteca, atletismo, clima |
+| Currículo público | [`RohanMuppa/purdue-mcp`](https://github.com/RohanMuppa/purdue-mcp) | ⚠️ **fork** — 🔴 **no usar**: citar el upstream (**P216**) | — |
+| Patrón de divulgación | la sección *Acknowledgement of Terms* de [`chrischall/infinitecampus-mcp`](https://github.com/chrischall/infinitecampus-mcp) | 🟢 MIT | **plantilla** del expediente para la fase 2 |
+| Fase 2 (autenticada) | el conector del SIS del cliente, con **peldaño 0** y divulgación **D1** | — | se negocia **después**, con la referencia ya desplegada |
+
+**El cableado, en orden:**
+
+1. Replicar el patrón de `purdue-mcp` sobre las **fuentes públicas del campus del cliente**: menús,
+   catálogo (Banner/Ellucian si aplica), transporte, biblioteca, eventos, calendario académico.
+2. 🟢 **No pedir ninguna credencial de alumno.** Ni para «enriquecer». El valor de esta fase **es**
+   no tenerlas.
+3. Declarar el alcance en el repositorio del entregable: **`D2+`** de **P215** —qué NO toca—, que es
+   lo que permite al área legal firmar en una reunión y no en un ciclo.
+4. Medir uso real durante 6–8 semanas. **Eso es el argumento de la fase 2**, no la demo.
+5. Fase 2: el conector autenticado del SIS, con compuerta **peldaño 0** (**P215b**), actor **A1** y
+   divulgación **D1** usando la plantilla de `infinitecampus-mcp`.
+
+**Estimación:** 3–5 semanas la fase 1 (sin expediente de privacidad); la fase 2 según el SIS.
+
+🔵 **Por qué es el arranque correcto y no «empezar chico»:** en North America **nadie exige** el
+expediente de conformidad —lo decide cada distrito o universidad—, así que el camino más rápido a una
+referencia institucional es **el piloto que no lo necesita**. 🟢 **Es la única capa de esta vertical
+donde la arquitectura prudente y la venta rápida coinciden.**
 
 ## 🧭 P212 — El ACTOR es un eje independiente de la compuerta, y se lee en el código con cuatro clases (pase 72 del 2026-10-03)
 

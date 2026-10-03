@@ -11401,6 +11401,225 @@ región medida en cero, no una región sin buscar.**
 > sección pasada rompe la regla append-only de esta base—, **pero quedan declarados acá para que se
 > corrijan en el archivo donde se compilan los ids, no a mano en la prosa.**
 
+## 577. Un instrumento escrito en inglés fabrica ausencias falsas en las regiones no anglófonas, y es la misma forma de defecto que la caja de P206 (agregado en el pase 73 del 2026-10-03)
+
+El clasificador de divulgación de **P215** se escribió en inglés. 🔴 **Su v1 sub-leyó
+sistemáticamente todo repositorio que no estuviera en inglés, y tres veredictos dieron vuelta al
+corregirlo:** `kohlsalem/schulmanager-mcp` **D4 → D2** (en alemán la palabra es **`inoffiziell`**,
+no *«nicht offiziell»*, y la fórmula es *«keine Verbindung zu»*); `zaikaman/SGU-Academic-MCP`
+**D4 → D3** (el vietnamita *«Xử lý cục bộ»*, *«Không lưu trữ tập trung»*); y
+`sharziki/purdue-mcp` **D2 → D2+** (la forma *«It **never touches** a student account…»*, que
+ningún patrón de «no + sustantivo» captura).
+
+🔵 **Es la MISMA FORMA de defecto que P206**, que descubrió que el canal de payload es
+*case-sensitive* y dejó condicionado todo veredicto de ausencia de cesión de esta base: **el punto
+ciego de un instrumento produciendo AUSENCIAS FALSAS.** 🔴 **Y produce el sesgo exactamente donde
+más caro sale para una compañía global: dos de los tres vuelcos fueron piezas de EMEA y APAC, y las
+dos subieron de clase.** Un barrido así, publicado sin corregir, **habría «medido» que las piezas
+europeas y asiáticas divulgan menos que las norteamericanas**, cuando lo que pasaba era que el
+instrumento no leía sus idiomas.
+
+🟢 **La regla que sale de esto, y vale para cualquier barrido de esta base:** un instrumento de
+texto se declara con **las lenguas en que su *recall* está medido**, y todo veredicto NEGATIVO
+sobre un artefacto escrito en otra lengua queda **condicionado**. Para P215 el *recall* está
+corregido en **inglés, alemán, portugués y vietnamita**, y **sin medir** en español, francés,
+indonesio, hindi, chino, japonés y coreano. **No es incorrecto: no está cerrado.**
+
+⚠️ **Acción pre-registrada para el pase siguiente, con hipótesis falsable:** extender el *recall*
+a español e indonesio y re-correr las **15** piezas. *Si el defecto era de las dos lenguas ya
+corregidas, ningún veredicto más se mueve; si se mueve alguno, entonces el sesgo del instrumento es
+general y hay que re-correr también los barridos de licencia de esta base, que son de la misma
+familia de patrones.*
+
+## 568. La compuerta de escritura tiene un peldaño que la escalera no previó, y está por ENCIMA de todos: la tool no existe hasta que alguien la habilita (agregado en el pase 73 del 2026-10-03)
+
+La escalera de **P207** (pase 71) tiene cuatro peldaños y ejemplar leído en código para cada uno.
+Los cuatro comparten un supuesto que ninguno declaraba: **la tool EXISTE y la compuerta la RECHAZA**
+—en la firma, en el *handler*, o contra una variable de entorno—.
+
+🟢 **`CaioCastro1/usp-mcp` (MIT, Brasil) hace algo categóricamente distinto, y se lee en la docstring
+de `listar_ferramentas()` en `usp_mcp/moodle/server.py`:** *«com `USP_MCP_ENTREGA=1` a lista tem
+**treze** itens, sem ela tem **onze**»*. El README lo dice en la lengua del usuario: *«enquanto você
+não ligar, essas ferramentas **nem aparecem** para o assistente»*.
+
+**El cliente no puede nombrar lo que no ve.** La compuerta actúa **antes de que exista una llamada
+que rechazar**, y eso la pone por encima de `GATE-IN-SIGNATURE`: peldaño **0**, `GATE-IN-SURFACE`.
+
+🔵 **Por qué es más que una curiosidad de implementación:** el riesgo que esta base mide desde el
+pase 53 no es que un humano llame a la tool equivocada — es que **un modelo elija la tool equivocada
+interpretando una frase ambigua**. Una tool ausente del listado **no es elegible**, y eso es una
+garantía distinta en naturaleza a una que se niegue después. El propio proyecto lo razona así:
+*«quem escolhe o que chamar é um assistente interpretando uma frase ambígua, e "manda ver a lista de
+exercícios" não pode ter caminho até entregar o trabalho»*.
+
+## 569. Una receta de esta base acaba de recibir su implementación de referencia de un tercero que no la leyó, y la implementación la MEJORA (agregado en el pase 73 del 2026-10-03)
+
+**P131** (pase 55) y **P136** (pase 56) definieron la puerta de escritura académica: confirmación de
+dos llamadas, borrador no liberado, el arranque de examen nunca automatizable. Eran una receta de
+esta base, compuesta de piezas que la cumplían **parcialmente**.
+
+🟢 **`CaioCastro1/usp-mcp` las implementa las tres, en código, y agrega una que la receta no pedía**
+(`usp_mcp/moodle/entrega.py`, 28.976 B):
+
+1. **Lista de denegación que la flag no abre** — capa 5 del módulo: *«Recusas que a flag não abre.
+   Entrega de grupo, entrega travada, envio já feito, envio não permitido pelo site e plano sem
+   arquivo nenhum»*; y en el README: *«Começar uma prova, responder questionário ou mandar mensagem
+   em seu nome… continuam bloqueados mesmo se alguém ligar a permissão de escrita»*. **Es P136.**
+2. **Borrador y entrega son dos tools a propósito** — *«só uma das duas tem volta»*. **Es P131.**
+3. 🟢 **Confirmación de dos llamadas ATADA AL ESTADO, que P131 no pedía:** la primera llamada
+   devuelve un plan **y un código** = los primeros 6 caracteres del `hashlib` del resumen del plan;
+   la segunda escribe **sólo si el código todavía casa**, y *«se alguém anexou outro arquivo… a
+   segunda chamada é recusada com o plano novo»*.
+
+🔵 **El punto 3 es el que corrige la receta.** «Dos llamadas» protege del accidente y de la frase
+ambigua, **pero no detecta que el estado haya cambiado entre la lectura y la escritura.** Un código
+derivado del plan leído es un *nonce* ligado al estado: **detecta la carrera que «dos llamadas» no
+detecta.** **P131 queda actualizada por el campo, y es la primera vez que una receta de esta base la
+mejora un proyecto externo en vez de un pase propio.**
+
+🟢 **Y la pieza publica su propia cota con la misma disciplina que esta base se exige:** *«Ela não é
+um cadeado: quem roda o projeto dentro de um assistente que também tem acesso ao terminal pode
+contornar qualquer trava que o programa tente impor»*. ⚠️ **Una compuerta en el servidor MCP no es
+un control de seguridad frente al operador del cliente, y eso va en la propuesta antes de que lo
+diga el área de riesgo.**
+
+## 570. La DIVULGACIÓN es un tercer eje con cuatro clases, y es independiente de los otros dos — la pieza mejor divulgada no tiene compuerta y la mejor cerrada no divulga nada (agregado en el pase 73 del 2026-10-03)
+
+La tendencia **566** dejó este eje nombrado y sin barrer. 🟢 **Barrido sobre quince piezas, tiene
+cuatro clases** (**P215**): `D1` cita el ToU textual, admite el riesgo contractual, nombra la norma
+(FERPA/COPPA) y fecha la lectura; `D2` declara no-oficialidad y ausencia de vínculo; `D3` dice qué
+hace con la credencial y **calla el plano contractual**; `D4` no declara nada.
+
+🔴 **El contraste que prueba la independencia:** `infinitecampus-mcp`, la única **D1** del
+inventario, **no tiene compuerta de escritura que cerrar**. `attendai`, la única en el peldaño **1**
+y la campeona declarada del pase 72, **divulga manejo y alcance y NADA del plano contractual** (`D3`)
+— y, medido este pase,
+*«deliberately never touches a real institution's portal… all data is seeded fake data»*.
+
+🔵 **Es la TERCERA vez que esta base mide anti-correlación entre dos ejes de calidad de un conector**
+(pase 55 sobre permisividad × especificidad, pase 72 sobre compuerta × actor, ahora compuerta ×
+divulgación). **Deja de ser una curiosidad: es una propiedad del ecosistema. Lo que una pieza hace
+bien predice poco sobre lo demás, y por eso el filtro por una sola columna selecciona mal.**
+
+🟢 **Y aparece una sub-clase que es la más fuerte de D2 y no estaba prevista:** `sharziki/purdue-mcp`
+divulga su propio **ALCANCE** —*«only public, unauthenticated data»*, sin cuentas ni notas— **y por
+eso no tiene nada que divulgar sobre credenciales: no usa ninguna.**
+
+## 571. El INSTRUMENTO de una licencia permisiva puede ser inválido en la jurisdicción del propio proyecto, y la etiqueta SPDX no lo muestra (agregado en el pase 73 del 2026-10-03)
+
+[`kohlsalem/schulmanager-mcp`](https://github.com/kohlsalem/schulmanager-mcp) cede bajo **Unlicense**
+—medido: 1.212 B, `sha256:b5065838cbac`, *«This is free and unencumbered software released into the
+public domain»*, **sin línea de titular**—. **Y es un proyecto alemán.**
+
+🔴 **El derecho alemán no admite renunciar al *Urheberrecht*: la dedicación al dominio público es
+ineficaz como instrumento en esa jurisdicción**, y lo que queda operando es la licencia permisiva de
+reserva que el propio texto incluye.
+
+🔵 **Por qué es una tendencia y no una anécdota:** todo filtro de licencias de esta industria —el de
+esta base incluido, hasta este pase— clasifica por **etiqueta SPDX y familia**: permisiva, copyleft
+débil, copyleft fuerte. ⚠️ **Ninguna de esas tres columnas pregunta si el instrumento es válido donde
+el proyecto vive y donde el cliente compra.** Para un comprador público europeo eso es rechazable
+**por el instrumento, no por los derechos** — y es la clase de observación que aparece en la revisión
+jurídica, tarde y caro.
+
+🟢 **La oportunidad: en EMEA, donde el expediente de conformidad lo exige la ley y el cliente lo
+presupuesta, auditar el INSTRUMENTO de licencia de la cadena de dependencias —no sólo su etiqueta—
+es trabajo facturable que casi nadie vende.** Esta base lo encontró en la primera pieza alemana que
+midió.
+
+## 572. Un README puede afirmar una licencia que ningún artefacto concede, y es el error más barato de cometer en esta industria (agregado en el pase 73 del 2026-10-03)
+
+**P171** previno para los barridos automáticos que *una declaración es una clave con un valor, nunca
+la palabra apareciendo en una frase*. 🟢 **Este pase mide el mismo error cometido por un LECTOR
+HUMANO, y el par que lo mide es la prueba de que la distinción no es formalismo:**
+
+| Pieza | El README dice | Medido | Veredicto |
+|---|---|---|---|
+| `443pablo/mcp-powerschool` | *«available under the MIT License»* | **404 en 11 nombres**; `pyproject.toml`, `setup.py` y `package.json` **404**; único manifiesto `requirements.txt`, **sin clave** | 🔴 **no hay cesión** |
+| `vnschneider/suap-mcp` | badge AGPL + `[AGPL-3.0](LICENSE)` a un archivo que **no existe** | **404 en 6 nombres**, **pero** `pyproject.toml` con `license = "AGPL-3.0-or-later"` | 🟢 **sí cede** |
+
+🔵 **Las dos tienen el archivo ausente. La diferencia es si algún artefacto declara la cesión con una
+CLAVE** (**P216**). 🔴 **Un estudio que lea «MIT» en el primer README y empaquete la pieza no tiene
+grant, y la frase del README no se lo da.** Es gratis de verificar y caro de descubrir en diligencia.
+
+## 573. El hash del `LICENSE` recupera utilidad justo donde esta base lo había descartado, y por la misma propiedad que lo inutilizó (agregado en el pase 73 del 2026-10-03)
+
+**P199** (pase 69) concluyó que el `sha256` de un `LICENSE` *«sirve para SEPARAR, casi nunca para
+UNIR»*. **P208** (pase 71) agregó que **pierde su poder separador cuando el titular es el nombre del
+proyecto**, porque entonces miles de árboles hashean igual.
+
+🟢 **Este pase mide el corolario que ninguno de los dos escribió.** El canal devolvió **dos**
+`purdue-mcp` con la misma descripción y los mismos 17 commits. `sharziki/purdue-mcp` (4 ★, 1 fork)
+no tiene `forked from`; `RohanMuppa/purdue-mcp` (0 ★) sí, y apunta al primero. **Los dos `LICENSE`
+son byte-idénticos: 1.080 B, `sha256:cfb32038c0ba`, titular `purdue-mcp contributors`.**
+
+🔵 **La misma propiedad que lo arruina como separador de identidad lo vuelve fiable como detector de
+LINAJE dentro de un proyecto:** un titular que es el nombre del proyecto **viaja con el fork**, así
+que el hash une la copia a su origen con certeza byte a byte. **No es una excepción a P199/P208: es
+su corolario, y cierra el uso legítimo que quedaba sin nombrar.**
+
+## 574. La región que esta base describía con estadística de demanda lleva DOS pases consecutivos aportando el activo técnico que las otras tres no produjeron (agregado en el pase 73 del 2026-10-03)
+
+El pase 72 registró (tendencia **565**) que el único patrón de credencial del inventario vino de
+LATAM. 🟢 **Este pase, sobre la misma universidad, encuentra la pieza mejor gobernada de toda la
+base:** `CaioCastro1/usp-mcp`, **MIT**, 16 ★, 376 commits, fuerte en los **tres** ejes y corriendo
+contra una institución **real**.
+
+🔵 **Dos pases seguidos no es casualidad, y el dato es de mercado, no de código.** Esta base
+describía LATAM casi exclusivamente con cifras de **demanda** —adopción altísima, presupuesto bajo,
+déficit de ingenieros, menos de un tercio de los PoC llegando a resultado—. **La región que el
+encuadre trataba como consumidora está produciendo la capa de gobernanza que North America y EMEA no
+produjeron**, y la pieza de este pase **mejora una receta que esta base había publicado**.
+
+🟢 **Consecuencia comercial directa:** una propuesta en Brasil ya no parte de cero ni de una pieza
+extranjera que haya que adaptar. **Parte de un referente local, MIT, sobre la universidad más grande
+del país** — y eso mueve la conversación de «vamos a construirlo» a «vamos a desplegarlo».
+
+## 575. Un vacío de inventario puede venir de un nombre REPETIDO, y ningún instrumento de esta base lo detectaba (agregado en el pase 73 del 2026-10-03)
+
+El pase 72 dio de alta `iDavi/usp-mcp` (GPL-3.0, 5 ★, **4 commits**) y, al registrar la institución
+como cubierta, **nunca preguntó si existía otro repositorio con el mismo nombre sobre la misma
+institución.** 🔴 **Existe, y es diez veces más maduro:** `CaioCastro1/usp-mcp`, MIT, 16 ★, **376
+commits**.
+
+🔵 **No son fork ni deriva:** `forked from` está **ausente en los dos** y sus `LICENSE` son de
+familias distintas. **Son dos proyectos independientes que eligieron el mismo nombre para la misma
+universidad** (**P217**).
+
+🔴 **Y lo que esto dice del método es incómodo y vale más que el hallazgo:** esta base tiene
+instrumentos para la identidad de un **paquete** (P192, P198, P200), para el **linaje de forks**
+(P150, P160), para la **caja** del nombre (P206, P211) y para el **titular** (P184, P208).
+⚠️ **Ninguno pregunta: «¿hay otro repositorio con este nombre, de otro dueño, sobre este mismo
+sistema?»** El `dedupe` de esta base corre sobre `org/repo`, y **dos `org/repo` distintos con el
+mismo `repo` pasan los dos.** Por eso el pase 72 midió el flojo y lo publicó como «la pieza LATAM».
+
+🟢 **La corrección de método que queda escrita como acción:** antes de declarar cubierta una
+institución o un sistema, **barrer el NOMBRE DEL REPO sin el dueño** y comparar madurez y licencia
+entre los homónimos. **Hipótesis falsable para el pase siguiente: si este caso es único, el barrido
+de homónimos sobre el inventario no devuelve otro par; si devuelve más de uno, entonces hay más
+filas de esta base cotizando la pieza equivocada de un par.**
+
+## 576. El barrido de mercado por región se saturó por TERCER pase consecutivo, y lo nuevo volvió a salir entero del canal por sistema nombrado (agregado en el pase 73 del 2026-10-03)
+
+Las cuatro búsquedas regionales obligatorias se corrieron con el año **calculado** (2026) y las
+cuatro devolvieron material ya publicado en `intel/market.md`, con pase de origen identificable:
+NA los **134** proyectos en **31** estados, el **86 %**, el *Traffic Light* y el STUDENTS FIRST Act;
+EMEA el calendario del AI Act y la clasificación de alto riesgo; APAC el **96 %**, el **66 %**, el
+ROI de **US$ 2,85** y la **Basic AI Act** coreana; LATAM la encuesta del Digital Education Council
+(**92 %** / **79 %** / **94 %** / **61 %**) con el Tec de Monterrey, AIGEN y RIE360.
+
+🔵 **Tres de tres pases es propiedad del canal, no casualidad de la consulta.** ⚠️ **Y un canal de
+EMEA volvió a servir fechas de enmienda del AI Act del tipo que esta base refutó en los pases 11 y
+71: la refutación se sostiene y la fecha no se incorpora** —cuarta vez que este canal sirve el mismo
+error—.
+
+🟢 **Lo nuevo del pase —siete altas, las cuatro regiones con código en el mismo pase— salió entero de
+dos canales que no están en la lista obligatoria:** por **SISTEMA NOMBRADO** (`SIGAA`, `SUAP`,
+`SIAKAD`, `PowerSchool`, `Skyward`, `Aeries`) y por **PAÍS EN EL IDIOMA DEL PAÍS** (portugués,
+indonesio, alemán, vietnamita). 🔴 **Sexto pase consecutivo en que `top open source AI agents …` y
+`github trending …` no producen una sola alta educativa:** devuelven listicles de agentes genéricos
+y cursos. **Se siguen corriendo porque son obligatorios; el rendimiento medido es cero.**
+
 ## 562. El ACTOR es un eje independiente de la compuerta, y el hueco que lo produce es del PROTOCOLO, no de las piezas (agregado en el pase 72 del 2026-10-03)
 
 La escalera del pase 71 (tendencia 554) mide **qué se niega el servidor a hacer**. No dice **para

@@ -9,6 +9,118 @@ updated: 2026-10-03
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 > No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
 
+## 2026-10-03 — pase 73: la DIVULGACIÓN es el tercer eje, y medirlo destapa que el pase 72 cotizó el `usp-mcp` equivocado — hay otro, independiente, con el mismo nombre, sobre la misma universidad, y es el mejor gobernado del inventario
+
+### 🟢 El hallazgo del pase: hay un peldaño POR ENCIMA de la escalera, y la tool ni aparece
+
+El pase 71 construyó la escalera de la compuerta de escritura (**P207**) con cuatro peldaños y
+ejemplar leído en código para cada uno. Los cuatro comparten un supuesto que ninguno declaraba:
+**la tool EXISTE y la compuerta la RECHAZA.**
+
+🟢 **`CaioCastro1/usp-mcp` (MIT, 16 ★, 376 commits, Brasil) hace algo categóricamente distinto: la
+tool no existe hasta que alguien la habilita.** Leído en la docstring de `listar_ferramentas()`, en
+`usp_mcp/moodle/server.py` (61.793 B):
+
+> *«**Depende do ambiente desde 15/09/2026**, e é a única função deste projeto que depende: com
+> `USP_MCP_ENTREGA=1` a lista tem **treze** itens, sem ela tem **onze**.»*
+
+Y en el README, en la lengua de quien lo va a usar: *«enquanto você não ligar, essas ferramentas
+**nem aparecem** para o assistente»*. **El cliente no puede nombrar lo que no ve.** De ahí el
+peldaño **0**, `GATE-IN-SURFACE`, por encima de `GATE-IN-SIGNATURE` (**P215**).
+
+### 🟢 Y las tres garantías que lo acompañan MEJORAN la receta que esta base publicó
+
+Leídas en `usp_mcp/moodle/entrega.py` (28.976 B), no en el README:
+
+1. **Lista de denegación que la flag no abre** — *«Começar uma prova, responder questionário ou
+   mandar mensagem em seu nome estão bloqueados e **continuam bloqueados mesmo se alguém ligar a
+   permissão de escrita**»*; en código, la capa 5: *«**Recusas que a flag não abre.** Entrega de
+   grupo, entrega travada, envio já feito, envio não permitido pelo site e plano sem arquivo
+   nenhum»*. 🔵 **Es el «el arranque manda» de P136, implementado por un tercero que no leyó esta KB.**
+2. **Confirmación de dos llamadas ATADA AL ESTADO** — la primera devuelve un plan **y un código** =
+   6 caracteres del `hashlib` del resumen del plan; la segunda sólo escribe si el código todavía
+   casa, y *«se alguém anexou outro arquivo… a segunda chamada é recusada com o plano novo»*.
+   🟢 **P131 pedía dos llamadas. Esto es un nonce ligado al estado leído, y detecta la carrera que
+   «dos llamadas» no detecta** — la receta de esta base queda corregida por el campo.
+3. **Borrador y entrega son dos tools a propósito** — *«porque "salva aí" e "entrega isso" estão a
+   uma palavra de distância e só uma das duas tem volta»*.
+4. ⚠️ **Publica su propia cota:** *«Ela não é um cadeado: quem roda o projeto dentro de um assistente
+   que também tem acesso ao terminal pode contornar qualquer trava que o programa tente impor.»*
+
+### 🔴 La corrección que este pase le debe al pase 72, y es de MÉTODO
+
+El pase 72 dio de alta `iDavi/usp-mcp` (GPL-3.0, 5 ★, **4 commits**) como «la pieza LATAM» y, al
+verla cubierta, **nunca preguntó si existía otro repositorio con el mismo nombre sobre la misma
+institución.** Existe, y es el bueno: `CaioCastro1/usp-mcp`, **MIT**, **16 ★**, **376 commits**.
+
+🔵 **No son fork ni deriva: `forked from` está ausente en las dos, y sus `LICENSE` son de familias
+distintas.** Dos proyectos independientes eligieron el mismo nombre para la misma universidad
+(**P217**).
+
+**Y el pase 72 cerró diciendo que «no hay una pieza para recomendar: hay una COMPOSICIÓN» (P214).
+Este pase lo refuta midiendo:** esta pieza es fuerte en los tres ejes a la vez **y corre contra una
+institución real**, que es justo lo que `attendai` —la campeona del pase 72— declara no hacer:
+*«This project deliberately never touches a real institution's portal… all data is seeded fake
+data»*.
+
+### 🔭 El tercer eje, barrido sobre QUINCE piezas (**P215**)
+
+| | Clase | Ejemplar | Lo que contiene |
+|---|---|---|---|
+| **D1** | 🟢 `DISCLOSURE-WITH-STATUTE-AND-TOU` | `infinitecampus-mcp` | ToU textual + admite riesgo contractual + **FERPA/COPPA** + fecha |
+| **D2+** | 🟢 `DISCLOSURE-OF-SCOPE` | `sharziki/purdue-mcp` · `myschoolapp-mcp` | lo de D2 **más el alcance del dato**: qué NO toca |
+| **D2** | 🟢 `DISCLOSURE-OF-NON-AFFILIATION` | `CaioCastro1/usp-mcp` · `schulmanager-mcp` | no-oficialidad y ausencia de vínculo; sin norma ni ToU |
+| **D3** | ⚠️ `DISCLOSURE-OF-HANDLING-ONLY` | `SGU-Academic-MCP` · `suap-mcp` · `attendai` · `bb-mcp` | qué hace con la credencial; **calla el plano contractual** |
+| **D4** | 🔴 `NO-DISCLOSURE` | `codit04/TechMCP` · `lanis-mcp` · `iDavi/usp-mcp` · `mcp-powerschool` | nada — y `TechMCP` la contraseña del portal en claro |
+
+🔴 **No se deduce de los otros dos ejes, y el contraste lo prueba:** la pieza mejor divulgada del
+inventario (`infinitecampus-mcp`, **D1**) **no tiene compuerta de escritura que cerrar**; la mejor
+cerrada en código (`attendai`, peldaño **1**) **no divulga nada en el plano legal y además simula el
+portal**. 🟢 **Sólo `CaioCastro1/usp-mcp` cierra los tres.**
+
+### 🟢 Las altas del pase: 7, y las cuatro regiones devuelven código en el mismo pase
+
+| Pieza | Licencia medida (bytes · `sha256` · titular) | Región | Lo que aporta |
+|---|---|---|---|
+| [`CaioCastro1/usp-mcp`](https://github.com/CaioCastro1/usp-mcp) | **MIT** · 1.107 B · `3bf0a0b64f7d` · *Caio Castro e João Pedro Barreto do Prado Gunthen* 🟢 | **LATAM** 🇧🇷 | peldaño **0** + las tres garantías |
+| [`6a6179/myschoolapp-mcp`](https://github.com/6a6179/myschoolapp-mcp) | **MIT** · 1.085 B · `b29c079b77dc` · *myschoolapp-mcp contributors* ⚠️ (**P208**) | **North America** | **Blackbaud** K-12, 32 tools; `MSA_ALLOW_WRITES` = peldaño 3 |
+| [`sharziki/purdue-mcp`](https://github.com/sharziki/purdue-mcp) | **MIT** · 1.080 B · `cfb32038c0ba` · *purdue-mcp contributors* ⚠️ (**P208**) | **North America** | 33 tools, 13 fuentes **públicas**, 🟢 **sin credencial** |
+| [`udondan/lanis-mcp`](https://github.com/udondan/lanis-mcp) | **MIT** · 1.073 B · `bc1f8bc85cc0` · *Daniel Schroeder* ⚠️ | **EMEA** 🇩🇪 | **Schulportal Hessen**: portal de un *Land*, 15 tools de lectura |
+| [`kohlsalem/schulmanager-mcp`](https://github.com/kohlsalem/schulmanager-mcp) | ⚠️ **Unlicense** · 1.212 B · `b5065838cbac` · **sin titular** | **EMEA** 🇩🇪 | Schulmanager Online; ⚠️ `raw_call` arbitrario |
+| [`zaikaman/SGU-Academic-MCP`](https://github.com/zaikaman/SGU-Academic-MCP) | **MIT** · 1.068 B (**BOM**) · `0b02f0945515` · *zaikaman* 🟢 | **APAC** 🇻🇳 | Đại học Sài Gòn, 15 tools, `simulate_target_gpa` |
+| [`vnschneider/suap-mcp`](https://github.com/vnschneider/suap-mcp) | 🔴 **AGPL-3.0-or-later** — `PAYLOAD-LICENSED` en `pyproject.toml`; **404 en 6 nombres** | **LATAM** 🇧🇷 | **SUAP**/IFMA: notas, histórico, proyectos, **Lattes** |
+
+### 🆕 Clase de licencia nueva, y es la más barata de cometer (**P216**)
+
+[`443pablo/mcp-powerschool`](https://github.com/443pablo/mcp-powerschool) dice en su README: *«This
+project is open source and available under the MIT License»*. Medido: 🔴 **404 en 11 nombres de
+archivo; `pyproject.toml`, `setup.py` y `package.json` todos 404 — el único manifiesto es
+`requirements.txt`, que no lleva clave de licencia.**
+
+🔴 **`LICENSE-CLAIMED-IN-PROSE-ONLY`: no hay cesión.** Una frase en prosa no es una concesión de
+derechos, y es exactamente el error que P171 previno para los barridos automáticos —**ahora medido
+sobre un humano leyendo un README**. Un estudio que lea «MIT» ahí y lo empaquete no tiene grant.
+
+⚠️ **El caso contrario también aparece, y conviene no confundirlos:** `vnschneider/suap-mcp` tiene
+`LICENSE` **404 en 6 nombres** y sin embargo **SÍ cede** —`pyproject.toml` lleva
+`license = "AGPL-3.0-or-later"`, clave con valor SPDX (**P172**)—. **La diferencia no es el archivo
+ausente: es si algún artefacto declara la cesión con una clave.**
+
+### ⚠️ Lo que este pase NO midió, declarado como tal
+
+- 🔴 **El barrido por lista en lote quedó bloqueado por el clasificador del entorno.** Todo se midió
+  con peticiones nombradas una a una, y por eso la caja se barrió a **16** nombres y no a los **28**
+  de **P211**. Los tres `NO-CESSION` de este pase están medidos a 16 nombres en 3 cajas: **no es la
+  cobertura de P211 y no se publica como si lo fuera.**
+- ⚠️ **`udondan/lanis-mcp`: titular `Daniel Schroeder` contra dueño `udondan`** — alias contra nombre
+  civil. No se resolvió por este canal: queda **`HOLDER-UNVERIFIED`**, no `HOLDER-MISMATCH`.
+- ⚠️ **`kohlsalem/schulmanager-mcp` es Unlicense y es ALEMÁN**, y la dedicación al dominio público
+  no es un instrumento que el derecho alemán admita: el *Urheberrecht* no se renuncia. Permisiva en
+  la práctica, **frágil en un expediente de procurement de EMEA** — ver tendencia **571**.
+- 🔴 **Sexto pase consecutivo sin altas desde los canales genéricos obligatorios.** Las 7 salieron de
+  **sistema nombrado** (`SIGAA`, `SUAP`, `SIAKAD`, `PowerSchool`, `Skyward`, `Aeries`) y de **país en
+  el idioma del país** (portugués, indonesio, alemán, vietnamita).
+
 ## 2026-10-03 — pase 72: la escalera de la compuerta sólo medía la MITAD — de dónde sale el ACTOR es un segundo eje, está INVERTIDO respecto del primero, y LATAM vuelve a la capa de código con la mejor respuesta al problema de credencial que esta base haya medido
 
 ### 🟢 El hallazgo del pase: la compuerta dice qué se niega el servidor a HACER; no dice PARA QUIÉN

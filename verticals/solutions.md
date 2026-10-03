@@ -9,6 +9,7 @@ updated: 2026-10-03
 > Plataformas verticales reales, en producción, customizables con AI.
 > Modelo: partir de algo que ya funciona y que ya tiene los datos, y agregar la capa agéntica arriba.
 > Verificado vía WebFetch el 2026-09-30; las capas del pase 11, el 2026-10-01.
+> **Pase 73 del 2026-10-03:** 🟢 **La vertical gana CUATRO capas de partida y un criterio de compra nuevo.** 🟢 **SIAKAD nacional PERMISIVO** ([`open-academic`](https://github.com/motiolabs-space/open-academic), **MIT**, Indonesia) con el reporte al Estado construido — **para educación superior en jurisdicción con registro nacional, la capa de partida la decide quién exige el REPORTE, no qué LMS usan los docentes**. 🟢 **Portal de un *LAND* alemán** (`Lanis`, comprador = administración pública). 🟢 **Portal universitario propio bien gobernado** ([`CaioCastro1/usp-mcp`](https://github.com/CaioCastro1/usp-mcp), **MIT**, fuerte en los tres ejes). 🟢 **Dato PÚBLICO de campus** ([`sharziki/purdue-mcp`](https://github.com/sharziki/purdue-mcp), **MIT**, **sin credencial**: sin FERPA, sin actor, sin compuerta — el arranque más barato del inventario). 🔭 **Y la DIVULGACIÓN (**P215**) entra como criterio de compra con cuatro clases: `D4` no entra en una propuesta institucional.**
 > **Pase 72 del 2026-10-03:** 🔵 **La vertical gana dos capas de partida que el modelo de este archivo no cubía — el SIS PROPIETARIO (Infinite Campus, K-12 EE.UU.) y el PORTAL UNIVERSITARIO PROPIO (PSG e-campus en India, JupiterWeb+e-Disciplinas en la USP) — y el modelo hay que corregirlo: cuando la plataforma no se puede tocar, la capa de partida es el CONECTOR y lo reutilizable no es la plataforma sino el ESQUEMA DE AUTENTICACIÓN.** 🔴 **Las tres hablan con endpoints no documentados y sólo UNA lo declara:** `infinitecampus-mcp` trae una sección de *«Acknowledgement of Terms»* que **admite que el proveedor puede tratarlo como violación del ToU** y nombra FERPA y COPPA — **la divulgación más completa del inventario**, y un criterio de selección que ni la licencia ni la escalera de compuerta muestran (tendencia **566**).
 > **Pase 68 del 2026-10-03:** 🔴 **La compuerta de ESTÁNDARES que el pase 67 cerró entera se ABRE a la mitad, y es la corrección más vendible de este archivo: el régimen no se parte por «ser un estándar», se parte por **PUBLICADOR × TIPO DE ARTEFACTO**, sin una excepción en 8 archivos de licencia leídos** (**P191**). 🟢 **Sobre **xAPI** y **Ed-Fi** un perfil derivado del documento SÍ se puede publicar: los dos ceden el documento normativo bajo **Apache-2.0** (`adlnet/xAPI-Spec` 11.525 B; `Ed-Fi-Alliance-OSS/Ed-Fi-Standard` 10.173 B, v6.2.0).** 🔴 **Sobre **Open Badges** y **Caliper** sigue cerrada, y por el mismo publicador: 1EdTech/IMS cede sus DOCUMENTOS bajo una licencia que niega derivados (2 de 2) y su SOFTWARE bajo Apache-2.0 (4 de 4).** 🔵 **Así que la frase para una reunión deja de ser *«el estándar no se puede adaptar»* y pasa a ser *«depende de QUIÉN lo publica y de si tocás el documento o el código»*.** ⚠️ **Y un riesgo de continuidad que esta vertical tiene que saber: la versión VIGENTE de xAPI (IEEE 9274.1.1-2023) ya no está en GitHub, vive en `opensource.ieee.org` y este entorno la tiene egress-bloqueada, así que lo medido es el documento ARCHIVADO** (**P195**). ⚠️ **El canal de plataformas vuelve saturado por OCTAVO pase, y la cifra autodeclarada de OpenEduCat se movió 30× (1.000+ → 30.000+ instituciones) sin instrumento: inestabilidad de cifra de vendedor, no crecimiento** (**P107**).
 > **Pase 67 del 2026-10-03:** 🟢 **La vertical gana la capa que DECIDE la nota, no la que la escribe: `INGInious` (UCLouvain, Bélgica → EMEA, 243 ★, 150 forks) es *grader* externo de **Moodle y edX vía LTI**, así que se cuelga del LMS del cliente sin pedir migración — el punto de inserción más barato de esta capa.** 🔴 **Y su licencia es la condición: AGPL-3.0 (34.764 B) ⚠️ de ALCANCE PARCIAL declarado por el propio archivo (*«Most of the files…»*), así que se implanta sin modificar y se compone por LTI y por proceso, nunca enlazando** (**P186**). 🔴 **El hallazgo que reencuadra la capa de ESTÁNDARES de esta vertical —15 filas— es que es la PEOR cedida de todas: `openbadges-specification` no estaba sin licencia, está bajo la *Specification Document License* de IMS Global, que **NIEGA los derivados**. Implementar contra el estándar no pide permiso; publicar un perfil derivado sí** (**P187**). 🟢 **Dos iniciativas institucionales nuevas, registradas como INTEL y no como piezas: **Labs UniversitarIA** (SEGIB: UBA, UFRJ, U. de Chile, UDC, UTEC — dato en servidores de cada universidad, CC desde el día uno) y **TECgpt** (Tec de Monterrey abre su ecosistema a cualquier institución de educación superior).** ⚠️ **Y el canal de plataformas vuelve saturado por SÉPTIMO pase: la novedad entró por la consulta de FUNCIÓN, no de categoría.**
@@ -109,6 +110,95 @@ updated: 2026-10-03
 > versiones), así que lo permisivo (`qti3-*`, `instructure/qti`) es **lo único proponible** — con **`qti3-a11y`** y
 > **`qti3-pnp`**, que abren accesibilidad de evaluación como entregable auditable (**P72**). ⚠️ **Open edX cambia de
 > recomendación: proponer con presupuesto de mantenimiento (gap 70).** Ver la sección del pase 33, abajo.
+
+## 🏛️ La vertical gana el SIAKAD NACIONAL PERMISIVO y el PORTAL DE UN *LAND* — y la capa de partida deja de elegirse por LMS para elegirse por QUIÉN EXIGE EL REPORTE (pase 73 del 2026-10-03)
+
+El modelo de este archivo —partir de algo desplegado, que ya tiene los datos, y poner la capa
+agéntica arriba— venía ordenado por **LMS** (Moodle, Open edX, Canvas, Blackboard, Brightspace) y,
+desde el pase 72, por **SIS propietario**. Este pase agrega dos capas de partida distintas, y la
+primera cambia el criterio de elección.
+
+### 🟢 Capa nueva 1: el SIAKAD de alcance nacional, con el reporte al Estado construido — y PERMISIVO
+
+| Plataforma | Repo | Licencia (**medida**) | Región | Por qué es capa de partida |
+|---|---|---|---|---|
+| 🟢 **Open Academic** | [`motiolabs-space/open-academic`](https://github.com/motiolabs-space/open-academic) | 🟢 **MIT**, 1.087 B, `PT Motiolabs Digital Indonesia` | 🟢 **APAC** (Indonesia) | *System of record* de **PMB a wisuda**; KRS/KHS, transcripciones, IPK, asistencia QR, finanzas, SSO OAuth2, 2FA. 🟢 **Y la capa que no se improvisa: PDDIKTI/Neo Feeder (idempotente, con *ledger* y diff), SISTER, KIP Kuliah, LKPS, IKU** |
+
+🔵 **El criterio de elección que esto introduce:** hasta ahora este archivo elegía la capa de partida
+por **el LMS que el cliente ya tiene**. Para una institución de educación superior en una
+jurisdicción con registro nacional obligatorio, **la capa de partida la decide quién exige el
+reporte, no qué LMS usan los docentes** — porque el reporte es condición legal de operación y el LMS
+es reemplazable.
+
+- 🟢 **Para un encargo en Indonesia:** es la base. Permisiva, con el reporte ministerial hecho.
+- 🔵 **Para un encargo FUERA de Indonesia:** lo reutilizable es **el patrón**, no el código —
+  *ledger* idempotente + diff contra el registro estatal (**P218**). PDDIKTI no se exporta; la forma
+  de reconciliar con un registro nacional, sí. Aplica a **SISTEC/Censo Escolar** (Brasil), **SIED**
+  (Argentina), **HESA** (Reino Unido) y **CDS/IPEDS** (Estados Unidos).
+- ⚠️ **Cotas:** 0 ★ / 0 forks / un publicador — riesgo de continuidad real; adaptador **SISTER**
+  declarado pendiente de credencial.
+
+### 🟢 Capa nueva 2: el portal de un *LAND* alemán, que no es ni LMS ni SIS
+
+| Plataforma | Conector medido | Licencia | Región | Qué es |
+|---|---|---|---|---|
+| 🟢 **Schulportal Hessen (Lanis)** | [`udondan/lanis-mcp`](https://github.com/udondan/lanis-mcp) | **MIT**, 1.073 B | 🟢 **EMEA** (Alemania) | Portal escolar **de un estado federado**: plan de sustituciones, horario, tareas, calendario, conversaciones, archivos. **15 tools, todas de lectura** |
+| ⚠️ **Schulmanager Online** | [`kohlsalem/schulmanager-mcp`](https://github.com/kohlsalem/schulmanager-mcp) | ⚠️ **Unlicense**, 1.212 B, **sin titular** | 🟢 **EMEA** (Alemania) | Suite comercial, vista de familia: informe diario, horario, deberes, exámenes, notas, circulares. ⚠️ `schulmanager_raw_call` = **llamada arbitraria a la API** |
+
+🔵 **Por qué la distinción importa para cotizar EMEA:** `Lanis` **no es un producto que se compra**,
+es la plataforma que un *Land* opera para sus escuelas públicas. **El comprador es la
+administración, el ciclo es de licitación pública y el expediente es de sector público**, no un
+proyecto de IT escolar. `Schulmanager Online` es lo contrario: proveedor privado, comprador
+individual o escuela.
+
+⚠️ **Y la licencia de la segunda tiene un problema específicamente alemán que conviene nombrar antes
+de la reunión:** **Unlicense** es una **dedicación al dominio público**, y el derecho alemán no
+admite renunciar al *Urheberrecht*. **Permisiva en la práctica, frágil en un expediente de
+procurement de EMEA** — un cliente público alemán puede rechazarla por el instrumento, no por el
+alcance. Ver tendencia **571**.
+
+### 🟢 Capa nueva 3: el portal universitario propio, ahora con la pieza bien gobernada
+
+El pase 72 abrió la capa *portal universitario propio* con `iDavi/usp-mcp` (GPL-3.0). 🟢 **Este pase
+la reemplaza por la pieza que faltaba, sobre la MISMA universidad:**
+
+| Plataforma | Conector | Licencia | Región | Lo que aporta a la vertical |
+|---|---|---|---|---|
+| 🟢 **e-Disciplinas / JupiterWeb / RUCard (USP)** | [`CaioCastro1/usp-mcp`](https://github.com/CaioCastro1/usp-mcp) | 🟢 **MIT**, 1.107 B, titular = los dos autores | 🟢 **LATAM** (Brasil) | 🟢 **La única pieza del inventario fuerte en los TRES ejes** (compuerta peldaño **0**, actor **A1**, divulgación **D2**) **y corriendo contra una institución real** |
+| 🟢 **SUAP (IFMA, institutos federales)** | [`vnschneider/suap-mcp`](https://github.com/vnschneider/suap-mcp) | 🔴 **AGPL-3.0-or-later** (payload) | 🟢 **LATAM** (Brasil) | Notas, histórico, matrículas por período, proyectos, informes, **Lattes**. 🔴 Copyleft de red: **no se compone en un entregable propietario** |
+| 🟢 **Đại học Sài Gòn** | [`zaikaman/SGU-Academic-MCP`](https://github.com/zaikaman/SGU-Academic-MCP) | 🟢 **MIT**, 1.068 B | 🟢 **APAC** (Vietnam) | 15 tools; `simulate_target_gpa` y `check_prerequisites` son **asesoría académica**, no consulta |
+
+### 🟢 Capa nueva 4: el dato PÚBLICO de campus, que esquiva el problema entero de la credencial
+
+[`sharziki/purdue-mcp`](https://github.com/sharziki/purdue-mcp) (**MIT**, 1.080 B) — **33 tools sobre
+13 fuentes públicas**: comedores con nutrición, catálogo **Banner**, ocupación del gimnasio, buses,
+exámenes, eventos, organizaciones estudiantiles, biblioteca, atletismo, clima.
+
+🟢 **Es la pieza más fácil de cotizar de todo el inventario, y por un motivo estructural: no usa
+credencial.** Declara su propio alcance —*«only public, unauthenticated data»*, sin cuentas ni
+notas— y por eso **no tiene expediente de datos personales de alumno, ni FERPA, ni actor que
+autenticar, ni compuerta que cerrar**.
+
+🔵 **Para una propuesta, eso la convierte en el arranque natural:** el *campus assistant* de datos
+públicos se entrega en semanas, sin expediente de privacidad, y **crea el contexto institucional en
+el que después se negocia el acceso autenticado.** Es la única capa de este archivo donde «empezar
+chico» no es una concesión: es la arquitectura correcta.
+
+### 🔭 Y el criterio de selección que este pase agrega a TODA la vertical
+
+El pase 72 dejó escrito (tendencia **566**) que la divulgación viaja como archivo del repo. 🟢
+**Barrida ahora como eje con cuatro clases (**P215**), es criterio de compra:**
+
+| Si el cliente es… | Pedir al menos | Ejemplar que lo cumple |
+|---|---|---|
+| institución de **North America** con FERPA/COPPA en el expediente | 🟢 **D1** — ToU citado, norma nombrada, riesgo contractual admitido, lectura fechada | `chrischall/infinitecampus-mcp` |
+| cualquier cliente sobre un **SIS/portal propietario** | 🟢 **D2** mínimo — no-oficialidad y ausencia de vínculo declaradas | `myschoolapp-mcp` · `CaioCastro1/usp-mcp` |
+| un piloto **sin datos de alumno** | 🟢 **D2+** — alcance declarado | `sharziki/purdue-mcp` · `6a6179/myschoolapp-mcp` |
+| — | 🔴 **D4 no entra en una propuesta institucional** | `codit04/TechMCP` pide la contraseña en claro y no declara nada |
+
+🔵 **El texto de `infinitecampus-mcp` es un activo reutilizable:** sirve de **plantilla** del
+expediente de cualquier conector sobre un sistema propietario, en cualquier región. Es lo más
+cercano a un entregable listo que esta vertical tiene en el plano legal.
 
 ## 🏛️ La vertical gana el SIS PROPIETARIO y el portal UNIVERSITARIO PROPIO — dos capas de partida que el modelo de este archivo no cubría (pase 72 del 2026-10-03)
 
