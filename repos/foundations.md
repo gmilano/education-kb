@@ -8,6 +8,7 @@ updated: 2026-10-03
 
 > Bases sobre las cuales construir. Verificado repo por repo vía WebFetch el 2026-09-30 (capas del pase 10, el 2026-10-01).
 > Leer la columna **Licencia** antes de proponer: media KB de educación es GPL/AGPL, no permisiva.
+> **Pase 67 del 2026-10-03:** 🟢 **Entra la capa de CORRECCIÓN automática, que esta base tenía representada por UNA pieza: `INGInious` (AGPL-3.0, 243 ★, 150 forks, **UCLouvain** → EMEA) como *grader* externo de Moodle y edX vía LTI, más `webtech-network/autograder` (Apache-2.0), `johnswyou/autograder` (MIT, corrige MANUSCRITO con rúbrica y cola de revisión humana) y `zmievsa/autograder` (GPL-3.0) — las cuatro con el archivo de licencia LEÍDO.** 🟢 **Y APAC gana un índice regional con la cesión más limpia de toda la capa de dato de esta KB: `crpf-mitadt/Indian-AI-for-Education`, **CC0 1.0** (dominio público: ni atribución ni ShareAlike).** 🔴 **La corrección que este archivo tiene que hacerse: `IMSGlobal/openbadges-specification` figuraba como *«ninguna (ausencia MEDIDA) … alcanzable y sin cesión»* y es una ausencia FALSA — `ob_v3p0/license.md` trae 12.324 B de la *Specification Document License* de IMS Global, que ⚠️ **NIEGA los derivados**, o sea una cesión PEOR que el silencio para un entregable** (**P187**). 🔵 **El detalle de la fila vieja era correcto —los 14 nombres dan 404 en la RAÍZ— y el error fue leer «no hay licencia en la raíz» como «no hay cesión».** ⚠️ **Nuevo patrón de alcance: el `LICENSE` de `INGInious` declara cubrir *«la mayoría de los archivos»* y delega las excepciones a los encabezados por archivo, y esta base no tiene instrumento para un barrido POR ARCHIVO** (**P186**, gap declarado).
 > **Pase 65 del 2026-10-03:** 🟢 **JAPÓN entra a la capa de currículo, y entra como la MEJOR pieza que tiene la KB: `jp-cos/jp-cos.github.io` —学習指導要領LOD— publica el currículo nacional japonés completo en RDF/Turtle bajo **CC BY 4.0**, con 22 volcados versionados, vocabulario, SHACL y endpoint SPARQL declarado.** 🔵 **CC BY 4.0 es MÁS permisiva que la alemana CC BY-SA 4.0: sin ShareAlike, no activa la compuerta de **P178**, así que el currículo derivado puede entregarse con licencia propia.** 🔴 **Y la acción 3 queda REFUTADA en su hipótesis: decía «si está publicado por MEXT sin licencia explícita, APAC replica el patrón alemán y **P174** gana una tercera región» — hay licencia explícita, así que P174 NO gana región por este caso.** 🟢 **La reserva de la tendencia 457 también cae: `dini-ag-kim/school-curriculum-pg` —la cobertura por LAND, que el pase 63 escribió como «la capa que agrega el valor específico y sigue sin licencia»— declara **CC BY-SA 4.0** en las 25 serializaciones, los 16 `lp-land-XX-full.owl` incluidos, con titulares por ORCID.** 🔴 **Las dos cesiones eran invisibles a los instrumentos de esta KB: ninguna está en un archivo `LICENSE` y las dos aparecieron sólo al abrir el dato** (**P172**, **P179**). Ver `compose/code/jp-cos-curriculum-gate/`.
 > **Pase 64 del 2026-10-03:** 🔴 **La acción 3 del pase 63 CIERRA y REFUTA el titular del pase 63 sobre Alemania: las TRES ontologías de `FWU-DE` SÍ declaran licencia —**CC BY-SA 4.0**, como anotación `dct:license` DENTRO del `.owl`— mientras no tienen archivo `LICENSE` ni la palabra «licencia» en el README. El pase 63 grepeó el README y concluyó «3 de 3 sin ninguna licencia»: la cesión existía, un nivel más abajo, en el PAYLOAD** (**P172**, y es el caso más fuerte de **P153**). 🔴 **Y la dependencia de la receta **P169** estaba al revés: `dini-ag-kim/school-curriculum-pg` no es el upstream que FWU importa — es una **lápida de 136 bytes** cuyo README entero dice *«This repo is outdated, please go to FWU-DE/lehrplan-ontologie»*, o sea apunta HACIA la pieza sin archivo de licencia** (**P173**). 🔵 **Consecuencia de instrumento: un verificador de licencias que mira raíz + README es ciego a toda la capa de DATO semántico; hay que grepear dentro del RDF/OWL/TTL, y en las DOS serializaciones (`<http://purl.org/dc/terms/license>` e `dcterms:license`).** 🟢 **Alta permisiva verificada: `1EdTech/openbadges-validator-core` (Apache-2.0, 13.184 B), que reemplaza al muerto `concentricsky/badgr-server`.**
 > **Pase 62 del 2026-10-03:** 🟢 **+3 repos fundacionales y la capa de currículo extendida a ALEMANIA (`FWU-DE/lehrplan-ontologie`: los 16 Bundesländer en RDF/OWL) y a ESPAÑA (`nmarafo/open-lex-edu`: 832 normas con frontmatter YAML e `index.yaml` de referencias cruzadas).** 🔴 **Y el dato que decide: de SIETE artefactos de currículo medidos en cuatro regiones, exactamente UNO es permisivo y legible (Corea, MIT) — dos son *share-alike*, uno CC BY, DOS NO TIENEN LICENCIA y uno es ilegible. La capa más cara de reconstruir es la peor licenciada, y la región con más presupuesto (NA) y la de mayor cobertura técnica (Alemania) son justo las dos sin cesión.** 🔴 **El `gap 255` del pase 61 se auto-refuta en España: declaraba «sin artefacto» un país que esta base cubre desde el pase 3 en siete archivos — una declaración de hueco tiene que correr contra el índice propio antes de salir a buscar** (**P162**). 🟢 **Y `open-lex-edu` es el control negativo que a P153 le faltaba y lo pasa: su licencia de DATO sí está en la raíz.**
@@ -78,6 +79,62 @@ corre ése antes de escribir uno a mano** (tendencia **313**). 🟢 **Y el `gafa
 > y 5 en `schemas12/`, y contar sólo el primero es lo que hizo invisible el segundo dialecto de SCORM (**P106**).
 > **Pase 36 del 2026-10-02:** 🔵 **este pase no agrega repos: le pone FECHA a los que ya están, y la fecha cambia tres recomendaciones.** Se midió la capa PHP de evaluación y telemetría en Packagist —el único registro de los tres que entrega descargas en este entorno (`api.npmjs.org` y `pypistats.org` dan **403 a CONNECT**)— y el resultado está en `repos/trending.md`. **Lo que hay que saber antes de proponer desde este archivo:** 🔴 **la pieza xAPI más descargada de esta base, `rusticisoftware/tincan` (Apache-2.0, 6.178 desc./mes, 863.777 totales), no publica desde el 2022-11-02**, y ⚠️ **el único MIT de esa capa, `php-xapi/client`, está parado desde el 2021-03-24** con 825 desc./mes. 🔵 **La lectura es que en xAPI/PHP lo permisivo está quieto y lo vivo es copyleft**, así que la receta de telemetría se sostiene en **Ralph (MIT)** + **`lrsql` (Apache-2.0)** + **`learnmcp-xapi` (MIT)** y no en la capa PHP. 🟢 **Del lado de evaluación, lo activo es `oat-sa/extension-tao-testqti`** (**885 versiones**, release del **2026-09-30**) **y sigue siendo GPL-2.0-only**, mientras **lo permisivo es lo nuevo**: `@longsightgroup/qti3-cli` (**MIT**, 41 releases desde el 2026-05-21, último **2026-10-01**) con **cero dependencias de terceros** — sus 4 dependencias son todas `@longsightgroup/*` pinneadas a la misma versión exacta. **Su manifiesto MCP completo de 20 tools está escrito en `compose/patterns.md` (P76).** 🔴 **Y una corrección de catálogo: `oat-sa/qti-sdk` devuelve 404 en Packagist porque es el nombre del REPO — su paquete es `qtism/qtism`** (GPL-2.0-only, 218.212 descargas totales, 315 versiones). **Nombre de repo y nombre de paquete son identificadores distintos, y confundirlos produce un 404 que parece una ausencia** — pasó igual con `1edtech/oneroster`, `imsglobal/lti-1-3-php-library` y `packbackbooks/lti-1-3-php-library`, los tres **404**, que se anotan como *«no verificado en Packagist bajo ese nombre»* y **no** como inexistentes. ⚠️ **Acción pendiente que el pase 37 tiene asignada: este archivo nunca pasó por el control de *slugs* distintos ni por el de *backlink*** — los dos que en `agents/top.md` encontraron **un duplicado** y **dos colisiones** este mismo pase.
 > **Pase 11 del 2026-10-01:** aparece una licencia que las diez pasadas anteriores filtraban sin saberlo — **ECL-2.0**, con la que licencia todo Apereo (Sakai, Opencast, OpenLRW). Es Apache-2.0 con el alcance de patentes acotado, aprobada por OSI y FSF, y **es apta para construir arriba**. Ver la capa de analítica institucional, abajo.
+
+## 🧪 La capa de CORRECCIÓN automática, que esta base tenía casi vacía — y una ausencia de licencia de estándar que era falsa (pase 67 del 2026-10-03)
+
+### 🟢 Por qué esta tanda llena un hueco real y no agrega repos por agregar
+
+⚠️ **Esta KB venía representando la corrección automática con UNA pieza registrada**
+(`eecs-autograder/autograder.io`, Universidad de Michigan) **más las puertas de nota de Moodle y
+Canvas — que son INTEGRACIÓN, no corrección.** 🔵 **La diferencia importa para cotizar: una puerta MCP
+escribe una nota que alguien ya decidió; un *grader* la decide.** 🟢 **Entran cuatro piezas de
+corrección propiamente dicha y un índice regional, las cinco con el archivo de licencia LEÍDO por
+`raw.githubusercontent.com`.**
+
+| Repo | Licencia (**medida**) | Lectura del titular (**P184**) | Descripción | ★ | ¿Base para AI? |
+|---|---|---|---|---|---|
+| [`INGInious/INGInious`](https://github.com/INGInious/INGInious) | 🔴 **AGPL-3.0**, **34.764 B** ⚠️ **con preámbulo de ALCANCE** (**P186**) | FSF → `NOT-APPLICABLE` | Plataforma de evaluación automática y **segura** de ejercicios con tus propias pruebas. ***Grader* externo de Moodle y de edX vía LTI.** **UCLouvain** (Bélgica) | **243** (150 forks) | ✅ **la capa de corrección sobre la que se compone un agente** — 🔴 **AGPL + alcance parcial: leer los encabezados por archivo antes de prometer un entregable cerrado** |
+| [`webtech-network/autograder`](https://github.com/webtech-network/autograder) | 🟢 **Apache-2.0**, **11.357 B** | ausente **por construcción** → `NOT-APPLICABLE` | Autograding flexible con generación de reportes sobre entregas de alumnos | — | ✅ **la licencia más cómoda de la tanda**: se compone como librería |
+| [`johnswyou/autograder`](https://github.com/johnswyou/autograder) | 🟢 **MIT**, **1.065 B** | 🟢 `Copyright (c) 2026 John You` → **`HOLDER-MATCH`** (cesión, **P179**) | Corrige **manuscrito** de física y matemática: localiza, transcribe, aplica rúbrica, emite `review_queue.md`. **OpenRouter** | **0** | ✅ **como PATRÓN de arquitectura** (rúbrica + cola de revisión humana), no por tracción |
+| [`zmievsa/autograder`](https://github.com/zmievsa/autograder) | 🔴 **GPL-3.0**, **35.149 B** | FSF → `NOT-APPLICABLE` | Corrección automática de entregas para cursos de programación, lado docente | — | ⚠️ **copyleft: se compone por proceso, no enlazando** |
+| [`crpf-mitadt/Indian-AI-for-Education`](https://github.com/crpf-mitadt/Indian-AI-for-Education) | 🟢 **CC0 1.0 Universal**, **7.048 B** | 🔵 **CC0 no lleva titular** → `NOT-APPLICABLE` | Mapa curado de *datasets*, modelos, **ASR, TTS, OCR**, traducción automática, *benchmarks* e infraestructura de AI educativa **de India** | — | ✅ **como ÍNDICE regional de APAC.** 🟢 **CC0 = dominio público: la cesión más limpia de toda la capa de dato de esta KB** |
+
+🔴 **El reparto de licencias de la tanda es el dato de la capa:** de 5 piezas, **2 permisivas**, **1
+CC0** y **2 copyleft** — y ⚠️ **la única con despliegue institucional y tracción real (243 ★) es justo
+la AGPL.** 🔵 **Es la misma forma que esta base ya tiene medida en los LMS (Moodle GPL, Open edX
+AGPL): en educación la madurez correlaciona con el copyleft, así que la pieza que un cliente
+reconoce es casi siempre la que obliga más.**
+
+### 🔴 La corrección de este archivo: `openbadges-specification` NO era una ausencia de licencia
+
+Este archivo publicaba la fila como 🔴 *«ninguna (ausencia MEDIDA)»*, con el detalle
+*«14 nombres **404**, `README.md` **200**»* y el veredicto *«alcanzable y **sin cesión**»*.
+🔴 **La ausencia es FALSA.** Abierto el subdirectorio de versión por WebFetch (acción 2 del pase 66),
+`ob_v3p0/license.md` existe: **12.324 B**, **SPECIFICATION DOCUMENT LICENSE de IMS Global Learning
+Consortium, Inc.**
+
+⚠️ **Y la cesión que aparece es PEOR que la ausencia para un entregable**, que es lo que vuelve al caso
+interesante: *«No right to create modifications or derivatives of IMS documents is granted pursuant to
+this license.»* 🔵 **Un silencio se pregunta; una negativa explícita de derivados hay que tramitarla
+con el organismo.** Ver **P187**.
+
+🟢 **El detalle de la fila vieja era CORRECTO y es lo que salva la medición:** los 14 nombres **sí**
+dan 404 **en la raíz**, y el `README.md` **sí** da 200. 🔵 **La pregunta estaba bien hecha y la
+respuesta era verdadera — lo que estaba mal era leer «no hay licencia en la raíz» como «no hay
+cesión».** ⚠️ **El archivo vive en el subdirectorio de la VERSIÓN y en minúscula, y sólo en una de las
+tres versiones: `ob_v2p1/license.md` y `ob_v2p0/license.md` dan 404.**
+
+### 🔵 La consigna de instrumento que esto deja para esta capa
+
+🔴 **Esta base tiene 15 filas de estándares** (1EdTech/IMS, QTI, xAPI, Caliper, Open Badges, CLR,
+OneRoster, Ed-Fi…). **La pregunta de licencia sobre un repo de especificación no es la misma que sobre
+un repo de código:**
+
+1. 🔵 **Enumerar los subdirectorios de versión** y pedir `license.md` **en minúscula** en cada uno.
+2. ⚠️ **No asumir que el repo tiene UNA licencia:** puede tener una por versión, y dos versiones en
+   silencio.
+3. 🔴 **Y si aparece una licencia de especificación, distinguir las dos cosas que un cliente mezcla:**
+   **implementar** contra el estándar no requiere permiso; **derivar un perfil** del documento sí.
 
 ## 🇯🇵 La capa de currículo gana JAPÓN, y es la pieza mejor cedida de toda la capa (acción 3 del pase 65, pase 65 del 2026-10-03)
 
@@ -233,7 +290,7 @@ sin relación. El dato curricular converge en ShareAlike** (**P174**).
 |---|---|---|---|
 | [`1EdTech/openbadges-validator-core`](https://github.com/1EdTech/openbadges-validator-core) | 🟢 **Apache-2.0** | `raw:HEAD/LICENSE` **200**, **13.184 B** | validador de Open Badges del organismo de estándares. 🟢 **Es el reemplazo PERMISIVO del muerto `concentricsky/badgr-server`: la capa de credenciales vuelve a tener una pieza viva y cedida** |
 | [`1EdTech/caliper-spec`](https://github.com/1EdTech/caliper-spec) | 🔴 **IMS Global Specification Document License** (NO OSI) | `raw:HEAD/LICENSE.md` **200**, **12.402 B** | la spec de Caliper Analytics, **viva**, donde los clientes `caliper-php` y `caliper-python` dieron 404. ⚠️ **Ver la clase de licencia nueva abajo** |
-| [`IMSGlobal/openbadges-specification`](https://github.com/IMSGlobal/openbadges-specification) | 🔴 **ninguna (ausencia MEDIDA)** | 14 nombres **404**, `README.md` **200** | la spec de Open Badges: alcanzable y **sin cesión** |
+| [`IMSGlobal/openbadges-specification`](https://github.com/IMSGlobal/openbadges-specification) | 🔴 **`SPEC-LICENSE` — ausencia FALSA, corregida en el pase 67**: IMS Global *Specification Document License*, **12.324 B** en `ob_v3p0/license.md` | 14 nombres **404 en la RAÍZ** (correcto), `README.md` **200** — ⚠️ **la cesión vive en el subdirectorio de la VERSIÓN y en minúscula**, y **sólo en `ob_v3p0`** | 🔴 **no es «sin cesión»: es una cesión que NIEGA los derivados** (*«No right to create modifications or derivatives of IMS documents is granted»*) — más dura que ShareAlike (**P187**) |
 
 ### 🔴 Una clase de licencia que la taxonomía de esta KB no tenía: la del ORGANISMO DE ESTÁNDARES
 

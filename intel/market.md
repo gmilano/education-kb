@@ -8,6 +8,7 @@ updated: 2026-10-03
 
 > Key players, market map y oportunidades por región.
 > Investigado 2026-09-30; el pase 11, el 2026-10-01. Las estimaciones de tamaño de mercado varían mucho entre firmas: se listan todas con su fuente en vez de elegir una.
+> **Pase 67 del 2026-10-03:** 🟢 **Las cuatro búsquedas regionales obligatorias se corrieron (año calculado: 2026) y las cuatro rinden, con una pieza nueva en dos de ellas.** 🔴 **North America legisla EXACTAMENTE el control que la capa nueva de esta KB no trae en código: 134 proyectos en 31 estados, con **California AB 1159** prohibiendo usar datos de alumnos para ENTRENAR modelos y **Oklahoma y Maryland** exigiendo supervisión humana y prohibiendo que la AI decida de forma determinante — mientras la pieza de autograding que manda aprobación humana lo hace en su README y no en el código, así que el control es ENTREGABLE.** 🟢 **EMEA aporta SOFTWARE y no sólo reglamento: `INGInious` (UCLouvain, Bélgica) como *grader* externo de Moodle y edX vía LTI, y su AGPL-3.0 cambia de signo en compra pública europea igual que la EUPL-1.2 del pase 50.** 🟢 **APAC entrega el artefacto con la cesión MÁS LIMPIA de toda la KB —`crpf-mitadt/Indian-AI-for-Education`, **CC0 1.0**, dominio público— y conserva los tres relojes en vigor (Corea 2026-01-22, Vietnam 2026-03-01, **marco AGÉNTICO de la IMDA de Singapur 2026-01-22**), con 96 % de las organizaciones planeando invertir más y ROI declarado de 2,85 USD por dólar.** 🟢 **LATAM aporta el precedente institucional MULTI-PAÍS que esta base no tenía: **Labs UniversitarIA** (SEGIB — UBA, UFRJ, U. de Chile, UDC, UTEC) con dato en servidores de cada universidad y CC desde el día uno, más **TECgpt** abriéndose a cualquier institución de educación superior.** ⚠️ **Las dos se registran como INTEL y no como piezas: no se localizó repositorio, y una promesa de licencia no es una licencia medida.** 🔴 **Y la disciplina del pase 54 se respeta: la brecha de gobernanza NO es un diferencial de LATAM (78 % de empresas usando AI y 12 % gobernándola, contra 18 % de docentes de NA con guía escrita) — es una oferta global.**
 > **Pase 64 del 2026-10-03:** 🔵 **Las cuatro búsquedas regionales obligatorias se corrieron y rinden el eje REGULATORIO, no el de tamaño: el **EU AI Act entra en vigor pleno en agosto de 2026 clasificando la AI educativa como ALTO RIESGO**, mientras **NA no tiene equivalente — ningún «FDA del edtech»— y decide escuela por escuela.** 🔴 **La asimetría que eso crea es la oportunidad: NA concentra ~36 % del mercado y sólo **10 % de las instituciones tiene guía formal de AI** con **71 % de los docentes sin formación**; EMEA tiene la obligación legal pero **38 % de las organizaciones aún no empezó a pilotear**.** 🟢 **APAC mueve el eje a SOBERANÍA (la mitad de las firmas la deja decidir su infraestructura) y LATAM a FRAGMENTACIÓN regulatoria, con el dato más duro de la región: **99 % de las startups usa AI y <25 % entrena modelo propio**.** ⚠️ **Y las series de tamaño siguen sin reconciliar entre firmas: se listan las tres con su fuente.**
 > **Pase 62 del 2026-10-03:** 🔴 **el aporte de mercado de este pase es el reparto de LICENCIAS de la capa de currículo, cerrado sobre dos pases y las cuatro regiones: de SIETE artefactos medidos, exactamente UNO es permisivo y legible (Corea, MIT) — dos *share-alike*, uno CC BY, DOS sin licencia y uno ilegible. La región con más presupuesto (North America) y la de mayor cobertura técnica (Alemania, 16 Bundesländer en RDF/OWL) son justo las dos SIN CESIÓN, así que la capa más cara de cualquier engagement educativo es también la peor licenciada.** 🟢 **Las cuatro regiones rindieron: NA con 134 proyectos de ley en 31 estados y sólo 18 % del profesorado con guía escrita; EMEA con el quinto canal concordante sobre el diferimiento del alto riesgo a 2027-12-02; APAC con la Ley Marco coreana EN VIGOR desde enero y la única pieza de currículo permisiva de la base; LATAM con UNESCO IESALC (91,5 % / 75 %) como SEGUNDO instrumento de la brecha de gobernanza — que no se mezcla con el 92 % / 79 % del DEC.**
 > **Pase 61 del 2026-10-03:** 🟢 **el aporte de mercado de este pase es una capa entera colocada por región —el currículo nacional estructurado, la pieza más cara de cualquier agente docente (gap 4)— y por primera vez las cuatro regiones tienen veredicto propio y medido.** 🟢 **LATAM gana: Brasil tiene el artefacto mejor instrumentado (MIT / dato CC BY 4.0, 1.721 aprendizajes con procedencia POR REGISTRO, MCP hospedado SIN API key) y encima produce el número que vende la capa —alucinación 31,9 % → 0,2 % con el dato en el prompt, 2,3 % vía MCP, en pares y con pre-registro—.** 🟢 **EMEA tiene la licencia más limpia: OGL v3.0 con permiso comercial EXPLÍCITO sobre una ontología OWL/SKOS/SHACL del National Curriculum inglés.** 🟢 **APAC es el único caso sin intermediario —MRAC lo publica ACARA, el organismo curricular mismo— ⚠️ pero su licencia quedó sin leer por bloqueo de egreso (gap 254).** 🔴 **Y North America, con el 38 % del mercado, es la PEOR servida: las tres renderizaciones JSON del Common Core en GitHub no tienen archivo de licencia, la única pieza permisiva (`CEDS-Ontology`, Apache 2.0) no es currículo sino un modelo de entidades, y el camino que queda —CASE Network 2— es un servicio hospedado que se COTIZA como integración, no como reuso** (**P159**). ⚠️ **Las coberturas se declaran: EMEA es Inglaterra y LATAM es Brasil — el resto de las dos regiones es hueco medido, no cobertura** (**gap 255**).
@@ -1471,6 +1472,49 @@ Dónde se produce el software educativo abierto, que no es donde está la demand
 ## Opportunities by region
 
 ### North America
+#### 📍 Pase 67 del 2026-10-03 — la región legisla EXACTAMENTE el control que la capa nueva de esta KB no trae en código, y su pila de interoperabilidad resulta la peor cedida
+
+🔴 **El dato regulatorio del pase, y aprieta donde esta KB acaba de medir.** La sesión legislativa
+2026 lleva **134 proyectos de ley sobre AI en educación en 31 estados**, y el eje no es el tamaño sino
+**qué prohíben**:
+
+| Instrumento | Qué obliga |
+|---|---|
+| **California AB 1159** | 🔴 **prohíbe usar datos de alumnos para ENTRENAR modelos de AI** |
+| **Idaho SB 1227** | exige protecciones de privacidad de dato en toda herramienta de AI escolar |
+| **Oklahoma** y **Maryland** | 🔴 **exigen supervisión humana y PROHÍBEN que la AI decida de forma determinante sobre un alumno** |
+| **Georgia** y **Mississippi** | currículo de AI dentro de los créditos de computación para graduarse (fin de la década) |
+| **NYC Public Schools** (guía preliminar, marzo 2026) | *Traffic Light Framework*: usos permitidos, con precaución y prohibidos |
+| **U.S. Dept. of Education** (regla final) | AI como **prioridad ponderada en todos los programas de subvención discrecional** |
+
+🟢 **Y hay un instrumento de legitimidad nuevo que sirve para abrir conversación en K-12:** alumnos de
+**los 50 estados** produjeron en **agosto de 2026** un marco nacional para el uso responsable de AI en
+escuelas (AASA), con protecciones para el aprendizaje auténtico, la privacidad, la equidad y **el
+juicio humano**.
+
+🔵 **La oportunidad, y es la más directa que esta región ha tenido en varios pases.** Oklahoma y
+Maryland obligan a **supervisión humana sobre la decisión**. 🔴 **La capa de corrección automática que
+este pase incorporó NO trae esa garantía en código:** `johnswyou/autograder` **sí** manda aprobación
+humana antes de liberar la nota —*«Review every queued item … and approve grades before release»*— ⚠️
+**pero es una norma de su README, no una compuerta en el código**, así que no mueve la medición de los
+pases 57-59 (**1 de 9 piezas lo afirma en el código, y su garantía depende de una casilla de
+plataforma**). 🟢 **O sea que el control que la ley de OK y MD exige es ENTREGABLE: no lo trae el
+ecosistema open source y no lo trae la institución (18 % del profesorado con guía formal escrita).**
+🔵 **Se vende como compuerta de liberación de nota, con la cola de revisión de `johnswyou/autograder`
+como referencia de arquitectura y la compuerta implementada por nosotros.**
+
+🔴 **Y el hallazgo de licencia de este pase le pega a la región en su pila de interoperabilidad.** La
+pila con la que NA integra —**Open Badges, CLR, OneRoster, Ed-Fi, QTI, xAPI**— es de **organismos de
+estándares**, y la primera fila medida resulta estar bajo una **licencia de documento que NIEGA los
+derivados** (`openbadges-specification`, IMS Global, 12.324 B; ver **P187**). ⚠️ **Para un cliente de
+NA que quiera *«nuestro perfil del estándar»* —pedido frecuente en distritos grandes— eso es un
+trámite con el organismo, no una decisión de ingeniería.** 🔵 **Implementar contra el estándar no pide
+permiso; derivar el documento sí, y conviene decirlo antes de cotizar.**
+
+⚠️ **La región conserva su 38 % del mercado global (2025) y su asimetría de siempre: el presupuesto
+más grande con el régimen más fragmentado.** 🔴 **Y el hueco de currículo sigue abierto: las tres
+renderizaciones JSON del Common Core siguen sin archivo de licencia, sin novedad en este pase.**
+
 
 #### 📍 Pase 66 del 2026-10-03 — la capa de paquete de NA está SANA, y el problema se acota a los repos sin archivo
 
@@ -2894,6 +2938,41 @@ Artículo 50(2) **no es exigible** en North America — pero es **el requisito m
 multi-región conviene cotizarlo contra el techo europeo y no contra el piso local (ver **P103** y **P105**).
 
 ### EMEA
+#### 📍 Pase 67 del 2026-10-03 — la región pone la PIEZA, no sólo el reglamento: la capa de corrección que entra a esta KB es de origen EMEA, y su copyleft juega a favor en compra pública
+
+🟢 **El cambio de postura de la región en este pase es que aporta software, y no es poco frecuente que
+aporte sólo regulación.** **`INGInious/INGInious`** —**Université catholique de Louvain, Bélgica**,
+243 ★, 150 forks— es una plataforma de **evaluación automática y segura de ejercicios** usable como
+***grader* externo de Moodle y de edX vía LTI**, con uso declarado en un curso de la propia UCLouvain
+publicado en edX. 🔵 **Es la capa que DECIDE la nota, que es la que el cliente paga; lo que esta KB
+tenía hasta hoy eran puertas que la ESCRIBEN.**
+
+🔴 **Su licencia es AGPL-3.0 (34.764 B) y de ALCANCE PARCIAL declarado por el propio archivo** (*«Most
+of the files in INGInious are distributed under the GNU AGPL v3 licence»*; ver **P186**). 🟢 **Y acá el
+copyleft cambia de signo igual que la EUPL-1.2 en el pase 50: en una cotización genérica AGPL resta,
+pero en COMPRA PÚBLICA EUROPEA una plataforma AGPL de una universidad pública belga es un activo de
+licitación** —procedencia institucional, sin dependencia de proveedor, auditable. ⚠️ **La condición
+operativa se mantiene: implantar sin modificar y componer por LTI y por proceso, no enlazando; y leer
+los encabezados de los archivos que se toquen, porque el `LICENSE` avisa que no cubre todo.**
+
+🔵 **El reloj regulatorio no se re-litiga en este pase y se cita en la posición medida de esta base.**
+El **EU AI Act** clasifica como **alto riesgo** la AI de **acceso y evaluación** educativa —admisión,
+evaluación del alumno, calificación de examen—, con aplicación **escalonada a lo largo de 2026-2027**,
+de modo que la mayoría de las instituciones está en **piloto y pre-cumplimiento** y no en fiscalización
+plena. ⚠️ **Las fechas finas (aplicación general 2026-08-02, Anexo III educativo a 2027-12-02) son las
+que esta base ya tiene medidas en cinco canales y no se mueven con las secundarias de este pase.**
+
+🟢 **El dato de arquitectura que confirma el eje de soberanía de la región:** los despliegues
+corren mayoritariamente sobre APIs de terceros, **pero los distritos e instituciones con requisitos
+estrictos de residencia de dato auto-hospedan un modelo de pesos abiertos.** 🔵 **Eso es exactamente el
+perfil al que le sirve `INGInious` + un LLM local: corrección on-premise, dato que no sale, y una
+licencia que una oficina de compras públicas europea lee como garantía en vez de como riesgo.**
+
+⚠️ **Y una nota de cobertura, declarada:** la iniciativa iberoamericana **Labs UniversitarIA** (SEGIB)
+incluye a la **Universidade da Coruña** (España), así que toca EMEA — pero se registra como **intel y
+no como pieza**, porque no se localizó repositorio en este pase. 🔵 **Que una iniciativa prometa
+«Creative Commons desde el día uno» no es una licencia medida hasta que haya archivo que leer.**
+
 
 #### 📍 Pase 66 del 2026-10-03 — el calendario del AI Act se confirma por un CUARTO canal, y gana una fila que faltaba
 
@@ -4450,6 +4529,47 @@ concordantes**. El Artículo 50(2) —la obligación de transparencia del conten
 este pase dejó cubierto con código.
 
 ### APAC
+#### 📍 Pase 67 del 2026-10-03 — la región entrega por fin un artefacto educativo con la cesión MÁS LIMPIA de toda la KB, y es un índice de India bajo CC0
+
+🟢 **El hueco más viejo de esta región se mueve, y conviene decir exactamente cuánto.** Esta base
+viene declarando desde hace muchos pases que **APAC no produce open source educativo-nativo** —con la
+corrección del pase 55 de que la conclusión era *«en parte un artefacto de catalogación»*—. 🟢 **Este
+pase trae una pieza real: `crpf-mitadt/Indian-AI-for-Education` (India), mapa curado de *datasets*,
+modelos, **ASR, TTS, OCR**, traducción automática, *benchmarks* e infraestructura para AI educativa
+india, bajo **CC0 1.0 Universal** (7.048 B, archivo leído de primera mano).**
+
+🔵 **Y la licencia es el titular de la noticia, no la pieza.** **CC0 es dedicación al dominio
+público**: ni atribución, ni ShareAlike, ni la compuerta de **P178**. 🟢 **Es la cesión más limpia de
+toda la capa de dato de esta KB** —más permisiva que el CC BY 4.0 japonés (`jp-cos`), que el CC BY-SA
+alemán (`FWU-DE`, `dini-ag-kim`) y que el MIT coreano—. ⚠️ **Y el límite se declara: es un ÍNDICE, no
+un agente ni un currículo. No tiene código propio: se consulta, no se cotiza.**
+
+🔵 **Por qué igual vale para un *engagement* de la región, y mucho:** lo que indexa es
+**ASR, TTS, OCR y traducción automática para lenguas de India**, que es **la capa más cara de
+cualquier agente educativo multilingüe** y la que un estudio no puede reconstruir. 🟢 **Un índice CC0
+sobre esa capa es un atajo de arranque medible, no un gesto.**
+
+🔴 **El reloj regulatorio de la región sigue siendo el más rápido del mundo, y tiene tres fechas en
+vigor:**
+
+| Jurisdicción | Instrumento | En vigor |
+|---|---|---|
+| **Corea del Sur** | *Framework Act on the Development of Artificial Intelligence* | 🔴 **2026-01-22** |
+| **Vietnam** | ley de AI dedicada | 🔴 **2026-03-01** |
+| **Singapur** | 🟢 **marco de la IMDA para AI AGÉNTICA** | 🔴 **2026-01-22** |
+
+🔵 **El marco agéntico de Singapur sostiene algo que esta base ya tenía escrito y que vale repetir en
+una venta: APAC es la única región con un instrumento que nombra AGENTES, no «sistemas de AI».** ⚠️
+**Para un cliente que compra agentes, el régimen más específico del mundo está acá, no en la UE.**
+
+🟢 **La demanda, con las cifras del barrido de este pase:** **96 %** de las organizaciones de APAC
+planea invertir más en AI, **~66 %** ya está piloteando o adoptando de forma sistemática, **88 %**
+espera retorno este año con un **ROI declarado de 2,85 USD por dólar**, y el gasto empresarial de AI de
+la región crece **~15 % en 2026**. ⚠️ **Los *players* de AI educativa que las secundarias nombran
+siguen siendo no regionales en su mayoría —Google, Microsoft, IBM, Pearson— con Byju's como el único de
+origen APAC, y China, India y Japón como los tres mercados que dominan.** 🔵 **O sea: demanda y
+regulación propias, oferta todavía mayoritariamente importada. Ese es el hueco que un estudio ocupa.**
+
 
 #### 📍 Pase 65 del 2026-10-03 — JAPÓN entra, y entra como la MEJOR oportunidad de currículo de las cuatro regiones
 
@@ -5678,6 +5798,55 @@ desplegado + puerta MCP permisiva (`jbnu-lms-mcp`, `canvas-lms-mcp`, las cuatro 
 depende de un tercero» son el mismo argumento.**
 
 ### LATAM
+#### 📍 Pase 67 del 2026-10-03 — la región aporta el precedente institucional MULTI-PAÍS que esta KB no tenía, y se registra como intel con su límite escrito
+
+🟢 **El aporte de la región en este pase es institucional y vale como precedente de arquitectura, no
+como repositorio.** **Labs UniversitarIA** (iniciativa de la **SEGIB**) reúne a **cinco
+universidades** —**UBA** (Argentina), **UFRJ** (Brasil), **Universidad de Chile**, **Universidade da
+Coruña** (España) y **UTEC** (Uruguay)— que diseñaron, prototiparon y probaron **cinco soluciones de
+AI** para problemas concretos de la vida universitaria.
+
+🔵 **Los tres principios declarados son exactamente el modelo que esta KB propone, y por eso el
+precedente sirve para vender:**
+
+1. 🟢 ***«La AI asiste y la persona decide»*** — que es el control de supervisión humana que North
+   America está legislando (Oklahoma, Maryland) y que el ecosistema open source **no trae en código**.
+2. 🟢 **El dato se queda en los servidores de cada universidad** — soberanía resuelta por diseño, sin
+   discurso.
+3. 🟢 **Software y modelos abiertos por preferencia, y todo lo producido con licencia Creative Commons
+   desde el día uno.**
+
+⚠️ **Y el límite se escribe antes de que alguien lo lea como cobertura: NO se localizó repositorio en
+este pase, así que es INTEL y no una pieza.** 🔵 **Que una iniciativa prometa «Creative Commons desde
+el día uno» no es una licencia medida: es una declaración hasta que haya un archivo que leer** — la
+misma disciplina que **P179** impone sobre los manifiestos de paquete.
+
+🟢 **Segundo movimiento institucional, México:** el ecosistema **TECgpt** del **Tecnológico de
+Monterrey** pasa de piloto a **plataforma abierta disponible para cualquier institución de educación
+superior, pública o privada**. ⚠️ **También intel: no se localizó repositorio ni licencia.** 🔵 **Si
+materializa, sería el primer *host* de AI educativa de origen LATAM con alcance regional declarado.**
+
+🔴 **Y una pieza que NO entra, medida:** `jcruzalmiron/open-lab` (Fundación para la Democratización de
+la IA) propone una arquitectura repetible de proyectos de AI con catálogo público, **y no tiene archivo
+de licencia** (`main`/`master` × 4 nombres, 404). **No es entregable.**
+
+🔵 **El reloj regulatorio de la región, con la ola de 2026 nombrada por país:** **Chile** (ley de IA en
+trámite), **Colombia** (lineamientos del MinTIC), **México** (directrices del INAI), **Argentina**
+(proyecto de ley). ⚠️ **Sigue sin marco común, que es la propiedad estable de la región en esta base.**
+
+🟢 **Las cifras de demanda y de brecha de este barrido, con su población declarada para no
+mezclarlas:** **73 %** de los **estudiantes universitarios de México** usa AI para trabajos
+académicos, mientras **más del 80 % de las instituciones de educación superior mexicanas** carece de
+marco normativo claro; y en el plano corporativo, **78 %** de las empresas de LATAM usa AI y **sólo
+12 %** la gobierna formalmente.
+
+⚠️ **Y la disciplina que el pase 54 impuso y este pase respeta: la brecha de gobernanza NO es un
+diferencial de LATAM.** North America mide **18 %** de docentes con guía formal escrita; la brecha es
+**global**, así que se vende como oferta global y no como especificidad regional. 🔵 **Lo que sí es
+propio de LATAM es el PRECEDENTE: cinco universidades de cuatro países acordando soberanía de dato y
+licencia abierta desde el día uno es un antecedente que ninguna otra región de esta base tiene
+documentado.**
+
 
 #### 📍 Pase 65 del 2026-10-03 — LATAM no cambió de estado, y la comparación la deja como la segunda peor cedida
 

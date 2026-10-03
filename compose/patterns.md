@@ -8,6 +8,7 @@ updated: 2026-10-03
 
 > Recetas concretas: repos nombrados, licencias verificadas, wiring explícito y estimación.
 > Todos los repos citados fueron verificados vía WebFetch el 2026-09-30; los del pase 11, el 2026-10-01 (ver `agents/top.md`).
+> **Pase 67 del 2026-10-03:** 🔵 **Los patrones nuevos son **P186**–**P188**, y los tres salen de mediciones de primera mano de este pase.** **P186**: un archivo de licencia puede acotarse A SÍ MISMO —`INGInious` declara cubrir *«la mayoría de los archivos»* y delega las excepciones a los encabezados por archivo, y las cuatro capas que esta KB mide lo aprueban sin ver el alcance—. **P187**: la licencia de ESPECIFICACIÓN (`1EdTech/openbadges-specification`, IMS Global, 12.324 B en `ob_v3p0/license.md`) **cede el documento y NIEGA el derivado**, así que es una compuerta más dura que el ShareAlike de **P178** y afecta a las 15 filas de estándares de esta base. **P188**: el NOMBRE de un paquete no es una IDENTIDAD —`educhain` en npm no tiene repositorio ni descripción y no es el proyecto—, así que la pregunta de identidad va ANTES que la de canal. 🟢 **Y la acción 4 del pase 66 se ejecuta parcialmente: `P126`, `P170`, `P171` y `P172` ya tienen sección propia, consolidada desde donde su texto ya vivía (rama buena de la hipótesis); quedan 11 debidos.** ⚠️ **Ninguna cifra de suite se re-midió: el entorno negó ejecutar el código de este repositorio** (`[Code from External]`).
 > **Pase 65 del 2026-10-03:** 🔵 **Los patrones nuevos son **P179**–**P181**, y los tres salen de lo que este pase midió, no de lo que leyó.** **P179** separa el IDENTIFICADOR de licencia de la CESIÓN —un `"license": "MIT"` de manifiesto no trae titular, ni año, ni una línea de texto, y decide qué se le puede entregar a legales—; **P180** es la receta de currículo japonés sobre CC BY 4.0, la primera de esta KB que no arrastra ShareAlike; **P181** es la regla de canal que este pase usó tres veces: **una página bloqueada se lee por su fuente** cuando es GitHub Pages. 🔴 **Y una receta vieja se CORRIGE a favor: **P178** (la compuerta de ShareAlike) deja de ser la única salida para EMEA, porque ahora hay una fuente de currículo nacional CEDIDA SIN ShareAlike —Japón— y la elección de región cambia la obligación del entregable.**
 > **Pase 64 del 2026-10-03:** 🔵 **Tres recetas nuevas, las tres salidas de lo que este pase midió: **P176** el verificador de licencia de DOS CAPAS (archivo + payload), que es el único que no es ciego a la capa de dato semántico; **P177** la sustitución de una dependencia muerta por el organismo de estándares vivo, con Caliper y Open Badges como los dos casos trabajados; y **P178** la compuerta de ShareAlike, que es la que impide prometer un currículo derivado cerrado sobre dato CC BY-SA 4.0.** 🔴 **Y una receta vieja se CORRIGE: la dependencia upstream de **P169** era una lápida de 136 bytes — la salida CC0 existe pero cubre la capa de MATERIAS, no la de currículo.**
 > **Pase 62 del 2026-10-03:** 🟢 **los patrones nuevos son **P160**–**P163** y la receta **P164**, y los cuatro se promueven a sección en el mismo pase que los acuña (P157): ninguno queda citado sin texto.** 🔴 **Pero antes que los patrones va una corrección de CITA que afecta a cuatro archivos: esta base define **P150** como la regla de forks y **P151** como la de extractores, y hay SIETE citas que invocan «P151» para forks —incluida la acción del pase 60 que difirió el barrido a este pase. Es peor que una cita colgada: resuelve a un patrón real que habla de otra cosa, así que se lee como válida.** 🔵 **P160** la descripción se hereda y la superficie no (139 *tools* contra 103 a la misma release) · **P161** la licencia declarada sólo en prosa no es cesión, y la ausencia se hereda a 39 forks · **P162** un hueco por país se declara contra el índice propio antes que contra el mercado · **P163** una acción diferida lleva número de pase o se re-agenda para siempre.
@@ -104,6 +105,316 @@ updated: 2026-10-03
 > no existe en open source permisivo).
 > **Pase 11:** +2 patrones — **P25** (riesgo de abandono conforme al Anexo III, la capa con presupuesto ya asignado y sin oferta open source) y **P26** (agente docente sobre la ontología curricular nacional ya publicada).
 > **Pase 27:** **+4 patrones y una corrección.** 🔴 **P51 queda con premisa falsa** —el conector MCP de Moodle **sí existe y es MIT**— y lo reemplazan **P54** (corrección y devolución sobre Moodle con **compuerta humana**, el último tramo del gap 6, con piezas que ya escriben), **P55** (el conector de **Open edX**, que es el único que de verdad no existe), **P56** (**SCORM** como formato de salida de la capa generativa: cero integración, offline) y **P57** (evidencia por MCP cotizada sobre lo que CaSS **realmente** expone — 6 de 61 operaciones, con insignias y autoría de marcos **fuera**).
+
+## 🧑‍⚖️ P189 — RECETA: corrección automática con compuerta de liberación HUMANA, para un distrito de North America (pase 67 del 2026-10-03)
+
+**Para quién.** Un distrito o institución de **North America** sujeto a la legislación de 2026 que
+🔴 **exige supervisión humana y prohíbe que la AI decida de forma determinante sobre un alumno**
+(**Oklahoma**, **Maryland**; más **California AB 1159**, que prohíbe usar datos de alumnos para
+entrenar modelos). 🔵 **Es la receta que el hallazgo regulatorio de este pase vuelve vendible:
+el control que la ley obliga NO lo trae el ecosistema open source y NO lo trae la institución
+(18 % del profesorado con guía formal escrita).**
+
+### Las piezas, con licencia medida en este pase
+
+| Rol | Pieza | Licencia (**medida**) | Por qué ésta |
+|---|---|---|---|
+| LMS (ya instalado en el cliente) | **Moodle** o **Open edX** | GPL-3.0 / AGPL-3.0 | 🔵 **No se migra: la receta se cuelga de lo que ya corre** |
+| Motor de corrección | **`INGInious/INGInious`** | 🔴 **AGPL-3.0**, 34.764 B, ⚠️ **alcance parcial** (**P186**) | 🟢 **Es *grader* externo de Moodle y de edX vía LTI**: se integra por protocolo, 243 ★, UCLouvain |
+| Arquitectura de rúbrica + cola | **`johnswyou/autograder`** *(referencia)* | 🟢 **MIT**, 1.065 B, `HOLDER-MATCH` | 🟢 **Aporta el patrón `review_queue.md`**: rúbrica aplicada + cola de ítems que exigen ojo humano |
+| Compuerta de liberación | 🔴 **NUESTRA** (no existe en la capa) | — | 🔴 **Es el entregable.** Ver el paso 4 |
+| Interoperabilidad de credencial | **Open Badges / CLR** | 🔴 **`SPEC-LICENSE`** (**P187**) | ⚠️ **Se IMPLEMENTA, no se deriva** |
+
+### El wiring, en cuatro pasos
+
+1. **LTI entre el LMS y el *grader*.** `INGInious` se declara como herramienta externa del curso en
+   Moodle u Open edX. 🔵 **El libro de notas, la matrícula y la identidad del alumno NO se tocan** — es
+   el punto de inserción más barato de esta capa y el que evita la conversación de migración.
+2. **Corrección con rúbrica, sin liberar.** El *grader* produce **nota propuesta + evidencia +
+   confianza**, nunca una nota publicada. 🔵 **El patrón de `johnswyou/autograder` es el que se copia:
+   localizar, transcribir, aplicar rúbrica, y emitir la cola — con un `review_queue.md` por lote.**
+3. **Modelo on-premise si hay AB 1159 o equivalente.** 🔴 **Si el estado prohíbe que el dato del alumno
+   entrene modelos, el proveedor de API no alcanza como garantía contractual:** se auto-hospeda un
+   modelo de pesos abiertos y el dato no sale del perímetro. ⚠️ **Es la misma arquitectura que EMEA
+   usa por residencia de dato, reutilizada acá por una razón legal distinta.**
+4. 🔴 **La compuerta de liberación, que es el entregable y no un supuesto.** Una nota pasa a
+   `released` **sólo** con acto humano registrado: quién, cuándo, qué vio, y qué cambió respecto de la
+   propuesta. 🔵 **Por qué es nuestro y no de la capa: esta KB midió el eje en 9 puertas de escritura
+   de nota y **sólo 1 lo afirma en el código**, con su garantía dependiendo de una casilla de
+   plataforma (pases 57-59); y `johnswyou/autograder`, la única pieza que MANDA aprobación humana, lo
+   hace en el README —*«approve grades before release»*— no en el código.** ⚠️ **Una norma de
+   documentación no es una compuerta: la auditoría del distrito pide registro, no una frase.**
+
+### Lo que esta receta NO promete, dicho antes de cotizar
+
+- 🔴 **AGPL-3.0 con alcance parcial.** `INGInious` se implanta **sin modificar** y se compone **por LTI
+  y por proceso**, nunca enlazando código adentro. ⚠️ **Y antes de tocar cualquier archivo hay que leer
+  su encabezado, porque el propio `LICENSE` avisa que cubre *«la mayoría»* de los archivos y delega las
+  excepciones** (**P186**). 🔴 **Esta KB no tiene instrumento para ese barrido por archivo: es un hueco
+  declarado, no una estimación.**
+- 🔴 **Si el cliente pide *«nuestro perfil de Open Badges»*, eso NO es ingeniería: es un trámite con el
+  organismo** (**P187**). 🟢 **Implementar contra el estándar no pide permiso; derivar el documento
+  sí.**
+- ⚠️ **`johnswyou/autograder` tiene 0 ★ y entra como REFERENCIA DE ARQUITECTURA, no como dependencia.**
+  🔵 **Lo que se toma es el patrón rúbrica + cola; el código que se entrega es propio.**
+- ⚠️ **Y el alcance de la corrección se declara: `johnswyou/autograder` está probado en física y
+  matemática manuscritas.** 🔴 **Extrapolarlo a ensayo o a materias de criterio abierto no está medido
+  por esta base y no se vende como si lo estuviera.**
+
+### Estimación
+
+🔵 **8-10 semanas** para el primer curso en producción: 1-2 implantación y LTI, 2-3 rúbrica y
+corrección sobre un *corpus* real del cliente, **3-4 la compuerta de liberación con su registro de
+auditoría** (es el núcleo y el entregable), 1 informe de conformidad contra la norma estatal
+aplicable. ⚠️ **Si hay requisito de modelo on-premise, sumar 2-3 semanas de infraestructura.**
+
+## 🚧 P186 — Un archivo de licencia puede acotarse A SÍ MISMO, y el ALCANCE es lo que se cotiza (pase 67 del 2026-10-03)
+
+**El caso.** `INGInious/INGInious` (243 ★, 150 forks, UCLouvain, Bélgica) trae `LICENSE` de
+**34.764 B**. El texto AGPL-3.0 **empieza en la línea 9**. Las ocho primeras son un preámbulo de
+alcance, leído de primera mano por `raw.githubusercontent.com`:
+
+> *«Most of the files in INGInious are distributed under the GNU AGPL v3 licence, which follows.*
+> *If it is not the case, this is clearly indicated in the files.»*
+
+**Las cuatro capas de esta KB lo aprueban y ninguna ve el problema:**
+
+| Capa | Pregunta | Resultado | ¿Ve el alcance? |
+|---|---|---|---|
+| **P170** | ¿hay archivo de licencia en la raíz, por ref `HEAD`? | ✅ sí | 🔴 no |
+| **P171** | ¿qué familia dice el TÍTULO (12 primeras líneas)? | ✅ AGPL-3.0 — **y acierta, para *«la mayoría»*** | 🔴 no |
+| **P168** | ¿es texto o es una afirmación? | ✅ 34.764 B: texto | 🔴 no |
+| **P184** | ¿el titular pertenece al proyecto? | ✅ FSF → `NOT-APPLICABLE` por construcción | 🔴 no |
+
+**La regla.** 🔴 **Un archivo de licencia completo, con la familia correcta y el titular correcto,
+puede cubrir sólo PARTE del árbol y delegar las excepciones a los encabezados por archivo.** Para una
+entrega el alcance es justo lo que se cotiza: **no se sabe qué archivos quedan afuera, ni si la
+excepción es más permisiva o más restrictiva que la licencia declarada.**
+
+**Cómo se detecta, barato.** ⚠️ **Leer las líneas ANTERIORES al título de la licencia.** Si el título
+canónico (`GNU AFFERO GENERAL PUBLIC LICENSE`, `MIT License`, `Apache License`) **no está en la línea
+1-3**, hay preámbulo, y el preámbulo es el que manda. `grep -n` del título contra el número de línea
+alcanza: en este caso, **línea 9**.
+
+**Gap declarado, no estimado.** 🔴 **Esta KB no tiene instrumento para un barrido de licencia POR
+ARCHIVO.** Sus instrumentos preguntan por repo (`p170`), por payload (`p172`), por registro (`p183`) y
+por titular (`p184`) — **ninguno por archivo.** Mientras no exista, una pieza con preámbulo de alcance
+**se cotiza con la licencia más restrictiva de las que declara**, que acá es AGPL-3.0.
+
+---
+
+## 🚧 P187 — La licencia de ESPECIFICACIÓN: cede el documento y NIEGA el derivado, y es más dura que ShareAlike (pase 67 del 2026-10-03)
+
+**El caso.** `1EdTech/openbadges-specification` figuraba en esta KB como **ausencia de licencia
+MEDIDA** (*«14 nombres 404»*, *«alcanzable y sin cesión»*) en tres archivos. **Es una ausencia FALSA:**
+`ob_v3p0/license.md` existe, **12.324 B**, y es la **SPECIFICATION DOCUMENT LICENSE de IMS Global
+Learning Consortium, Inc.** (`imsglobal.org/speclicense.html`).
+
+**La cláusula que decide, textual:**
+
+> *«No right to create modifications or derivatives of IMS documents is granted pursuant to this
+> license. However, if additional requirements (documented in the How to Use IMS Documents) are
+> satisfied, the right to create modifications or derivatives is sometimes granted by the IMS to
+> individuals or organizations complying with those requirements.»*
+
+> *«The Specification(s) may not be modified in any way, such as by removing the copyright notice or
+> references to IMS…»*
+
+**La regla, y el orden de dureza que deja escrito.**
+
+| Régimen | ¿Derivado permitido? | ¿Con qué costo? |
+|---|---|---|
+| MIT / Apache-2.0 / **CC0** | 🟢 sí | ninguno (CC0: ni atribución) |
+| CC BY | 🟢 sí | atribución |
+| **ShareAlike** (**P178**) | 🟢 sí | 🔴 el derivado hereda la licencia |
+| 🔴 **`SPEC-LICENSE`** (**P187**) | 🔴 **NO concedido** | **trámite con el organismo, caso por caso** |
+
+🔵 **ShareAlike permite el derivado y le impone licencia; una licencia de especificación no lo concede
+en absoluto.** ⚠️ **Es la compuerta más dura que esta KB tiene medida, y esta KB tiene 15 filas de
+estándares.**
+
+**Por qué fue invisible, que es el valor transferible.** 🔴 **El archivo no está en la raíz —vive en el
+subdirectorio de la VERSIÓN— y se llama `license.md` en minúscula.** **P170** barre 14 nombres **en la
+raíz** → 404 legítimo. **P182** pregunta el README → silencio legítimo. **P172** pregunta el payload →
+no es un `.ttl`/`.owl`. **Las tres estaban bien; la cesión vivía en una capa que ninguna mira.**
+
+**Y la pregunta es POR VERSIÓN, no por repo.** ⚠️ `ob_v2p1/license.md` y `ob_v2p0/license.md` dan
+**404**: el mismo repositorio tiene **una versión cedida y dos en silencio.**
+
+**La receta, para un *engagement* que toque estándares (1EdTech, IMS, QTI, xAPI, Open Badges, CLR):**
+
+1. 🔵 **Enumerar los subdirectorios de versión** (`WebFetch` sobre `github.com/<org>/<repo>/tree/HEAD/`)
+   y pedir `license.md` **en minúscula** en cada uno, por `raw`.
+2. 🔴 **Si aparece una licencia de especificación, el entregable NO puede ser un perfil derivado del
+   estándar** sin el trámite del organismo. **Lo que sí se puede: implementar contra la
+   especificación** — implementar no es derivar el documento.
+3. ⚠️ **Y hay que decirlo antes de cotizar**, porque es la diferencia entre *«adaptamos el estándar»*
+   (requiere permiso) y *«cumplimos el estándar»* (no lo requiere).
+
+---
+
+## 🚧 P188 — El NOMBRE de un paquete no es una IDENTIDAD (pase 67 del 2026-10-03)
+
+**El caso.** **P183** (pase 66) midió que *«5 de 18 nombres viven en los dos registros y 2 con
+licencias distintas»* y concluyó que *«hay al menos una fila publicando la licencia del artefacto
+equivocado»*. Medidas las dos filas de primera mano contra `registry.npmjs.org` y `pypi.org`, **el
+diagnóstico cambia de naturaleza: no son dos canales con dos licencias, son dos ARTEFACTOS
+distintos.**
+
+| Nombre | npm | PyPI | Veredicto |
+|---|---|---|---|
+| **`educhain`** | `1.0.0`, **ISC**, 🔴 **sin `repository` y con `description` VACÍA** | `0.4.0`, repo `satvik314/educhain`, descripción real, 🔴 `license` **vacío (0 B)**, MIT **sólo por clasificador** | 🔴 **El de npm no es el proyecto.** `ISC` es el valor por omisión de `npm init`. **El proyecto es el de PyPI** |
+| **`frappe-mcp-server`** | `0.6.0`, **ISC**, 🔴 **declara `appliedrelevance/frappe_mcp_server` y la declaración da 404** (`raw`, 3 ramas) | `1.2.0`, 🔴 **sin URL de repositorio**, descripción distinta, `license` de **3 B** | 🔴 **El que al menos DECLARA repositorio es el de npm, que es el que esta KB cita.** ⚠️ **Pero ninguno RESUELVE, así que por este canal la identidad queda sin establecer** |
+
+**La regla.** 🔴 **El mismo nombre en dos registros puede ser dos artefactos sin relación, y la prueba
+de identidad NO es el campo de licencia: es la URL de `repository` más la descripción.**
+
+⚠️ **Y el refinamiento que este mismo pase tuvo que hacerse antes de publicar, porque la primera versión
+de esta regla se quedaba corta: una URL de `repository` DECLARADA es una afirmación, no un canal.** El
+`frappe-mcp-server` de npm **declara** `appliedrelevance/frappe_mcp_server` y 🔴 **la declaración da 404
+por `raw` en `main`, `master` y `develop`.** 🔵 **O sea que la prueba de identidad tiene DOS pasos y el
+segundo es el que vale: (1) ¿declara repositorio?, (2) 🔴 **¿resuelve?** Un `repository` que no resuelve
+deja la identidad SIN establecer — no la establece a favor del que lo declaró.**
+
+🔵 **Y es la CUARTA aparición de la clase «promesa que no existe» en esta KB, ahora sobre el repositorio
+en vez de la licencia:** un README prometiendo un `LICENSE` ausente (pases 62 y 67), dos manifiestos
+prometiendo un `LICENSE` ausente (pase 65), y un manifiesto prometiendo un REPOSITORIO ausente (pase 67).
+⚠️ **La forma es siempre la misma: un campo estructurado que apunta a algo que nadie verificó.**
+
+**El indicador más barato, y delata antes que nada:** ⚠️ **la VERSIÓN.** npm `1.0.0` contra PyPI
+`0.4.0`; npm `0.6.0` contra PyPI `1.2.0`. 🔵 **Dos canales de publicación del mismo proyecto no
+divergen diez versiones menores.** Una divergencia así es señal de que hay que preguntar la identidad
+antes que la licencia.
+
+**Consecuencia de orden, y es la que importa.** 🔴 **Agregar una columna *Canal* `(npm)`/`(PyPI)` a una
+tabla de inventario ANTES de hacer la pregunta de identidad publicaría dos artefactos como una fila** —
+que es un daño peor que el que la columna venía a arreglar. 🔵 **El orden correcto es: identidad
+primero (¿qué artefacto ES el proyecto?), canal después (¿qué licencia trae ESE artefacto?).**
+
+**Y la conclusión de P183 que sí se sostiene:** 🟢 **el campo `license` de un registro es un
+IDENTIFICADOR, no una cesión** (**P179**). El de `frappe-mcp-server` en PyPI mide **3 bytes**; el de
+`educhain` en PyPI **no existe** y el MIT viaja sólo en un clasificador.
+
+⚠️ **Nota de seguridad de suministro, dicha en su registro defensivo y sin más:** un nombre publicado
+en un registro **sin repositorio y sin descripción** es exactamente la forma que tiene un paquete de
+ocupación de nombre. 🔵 **Para un *engagement* la consecuencia es operativa y simple: el comando de
+instalación de una pieza se escribe con el registro VERIFICADO de esa pieza**, nunca deducido del
+nombre.
+
+---
+
+## 📏 P126 — Antes de un instrumento a mano se corre el que el repositorio ya versiona *(consolidado en el pase 67; escrito en el 56)*
+
+⚠️ **Esta sección existe porque el pase 66 midió que `P126` está citado en los ocho archivos y NO
+tenía sección en este archivo** —siendo la regla que esta base invoca en cada pase—. 🟢 **Su texto
+estaba escrito, y bien, en `README.md` («📏 La regla de P126, como regla permanente de este
+repositorio», pase 56). Esto es la consolidación, no una reconstrucción.**
+
+**Vale para toda cifra de este repositorio, no sólo para las de `compose/code/`:**
+
+1. 🔴 **Antes de escribir un instrumento a mano se corre el que este repositorio ya versiona**
+   (`compose/code/patterns-figure-audit/extract_figures.py`). Si hace falta uno nuevo, se versiona.
+2. 🔴 **Un control positivo sólo habilita un instrumento si ejercita el caso donde ese instrumento
+   puede fallar.** Dos suites que comparten vocabulario **no son dos casos**: son el mismo caso dos
+   veces.
+3. 🟢 **Toda suite nueva de `compose/code/` imprime su total propio**, en una de las formas que el
+   lector ya reconoce (`N/N checks passed`, `N controles pasados`, `N checks run`, `N de M`), porque
+   una suite que no lo hace **invita al instrumento casero**.
+4. 🔵 **La regla está ejecutable:** `compose/code/suite-total-control/` afirma el caso NEGATIVO — un
+   contador por vocabulario acierta en `PASS` y **falla en `ok`**.
+
+🔵 **Los dos defectos que el pase 67 cometió son el argumento de P126 dicho desde el lado del fallo, y
+se registran acá a propósito:** (a) un barrido de `LICENSE` escrito en el pase devolvió **cinco
+ausencias y cuatro eran falsos negativos** —`awk -F'|'` sobre un cuerpo multilínea—; (b) una lectura
+de titular a mano publicó **una frase del cuerpo de CC0 como si fuera un titular**, que es
+exactamente lo que `p184-holder-mismatch` existe para rechazar. ⚠️ **Los dos salieron de instrumentos
+hechos en el pase, porque el versionado estaba negado por el entorno** (`[Code from External]`).
+
+---
+
+## 🧾 P170 — Barrido de licencia por ref `HEAD`, con control de alcanzabilidad *(consolidado en el pase 67; escrito en el 64)*
+
+🟢 **Texto consolidado desde `compose/code/p170-headref-license-sweep/README.md`.**
+
+**El cambio de instrumento, que es el hallazgo.** 🔵 **`raw.githubusercontent.com` resuelve la ref
+`HEAD` a la rama por omisión del repositorio**, así que **la dimensión «rama» desaparece** del
+barrido. Un instrumento que prueba `main` y `master` deja `develop` afuera **por construcción** — y
+hay repos de esta KB cuya rama por omisión es `develop`.
+
+**El control que separa TRES cosas y no dos.** 🔴 **Un 404 en los 14 nombres significa dos cosas que no
+se pueden mezclar:** *«el repo existe y no cede licencia»* y *«no llego al repo»*. El instrumento
+resuelve la ambigüedad pidiendo `HEAD/README.md` y 7 rutas más: **si alguna da 200, el repo es
+alcanzable y la ausencia está MEDIDA; si ninguna da 200, el veredicto es `inalcanzable`,** que no es
+lo mismo.
+
+**Las tres clases, entonces:** `LICENSED` · `ausencia MEDIDA` · `inalcanzable`. ⚠️ **Publicar
+«inalcanzable» como «sin licencia» es el error que este control existe para evitar.**
+
+**Y lo que P170 NO ve, medido por los pases 65-67:** la cesión dentro del payload (**P172**), la del
+README (**P182**), la del registro de paquetes (**P183**), el titular ajeno (**P184**), el alcance
+parcial (**P186**) y **el archivo en un subdirectorio de versión** (**P187**). 🔵 **P170 es la primera
+capa, no la única.**
+
+---
+
+## 🧾 P171 — La familia de licencia se lee del TÍTULO, nunca del cuerpo *(consolidado en el pase 67; escrito en el 64)*
+
+🟢 **Texto consolidado desde `compose/code/p170-headref-license-sweep/README.md`.**
+
+**El caso que lo obliga.** 🔴 **Un clasificador que hace `grep` sobre el CUERPO etiqueta GPL-3.0 como
+AGPL-3.0**, porque el **§13 de GPL-3.0 se titula literalmente *«Use with the GNU Affero General Public
+License»***. El cuerpo de una licencia **nombra otras licencias**.
+
+**La regla.** 🔵 **La familia se decide sobre el TÍTULO —las primeras 12 líneas— y no sobre el
+cuerpo.** El título es la declaración; el cuerpo es el contrato, y el contrato cita vecinos.
+
+**Y el límite de P171, que el pase 67 midió:** ⚠️ **el título puede no estar en la línea 1.**
+`INGInious/INGInious` abre con ocho líneas de preámbulo de alcance y el título AGPL recién aparece en
+la **línea 9** — dentro de la ventana de 12, así que P171 acierta, **pero por un margen de tres
+líneas** y sin ver el preámbulo. Ver **P186**.
+
+---
+
+## 🧾 P172 — La pregunta del PAYLOAD: la cesión puede vivir DENTRO del dato *(consolidado en el pase 67; escrito en el 65)*
+
+🟢 **Texto consolidado desde `compose/code/p172-payload-license-sweep/README.md`.**
+
+**El caso que lo funda.** Las ontologías de `FWU-DE` **no tienen archivo `LICENSE` ni la palabra
+«licencia» en el README**, y declaran **CC BY-SA 4.0** como anotación `dct:license` **dentro de**
+`src/ontology/*-edit.owl`. 🔴 **La pregunta del archivo devolvió una ausencia FALSA.**
+
+**La regla.** 🔵 **En la capa de dato semántico (RDF/OWL/TTL/JSON-LD) la cesión vive en el payload, y
+hay que grepearla en las DOS serializaciones:** `<http://purl.org/dc/terms/license>` **y**
+`dcterms:license`.
+
+**El resultado que dejó.** De las **29** filas no-`FWU-DE` barridas por la pregunta del payload,
+**7 declaran cesión adentro**; sumadas las **3** de `FWU-DE`, **10 de 32 no eran ausencias** →
+🔴 **«32 sin licencia» estaba inflada un 31 %**, y el encadenamiento siguió: **32 → 22 → 13** (pases
+65, 66 y 67).
+
+⚠️ **Y el límite de P172, medido por el pase 66 y confirmado por el 67:** la lista de nombres
+semánticos es **por convención**. `dini-ag-kim/school-curriculum-pg` quedó `PAYLOAD-SILENT` en el TSV
+autoritativo **porque nombra sus archivos `lp-*.ttl`**, y sí cede. 🔵 **Una pregunta de payload es tan
+buena como su lista de nombres.**
+
+---
+
+## ⚠️ El estado de la acción 4 del pase 66, declarado con precisión
+
+La acción 4 pedía consolidar **15** números de patrón citados **301** veces y sin sección en este
+archivo: `P126` `P127` `P128` `P129` `P130` `P132` `P133` `P134` `P135` `P170` `P171` `P172` `P173`
+`P174` `P175`.
+
+🟢 **Consolidados en este pase: 4 de 15** — `P126`, `P170`, `P171`, `P172`, **que son exactamente los
+que la acción señaló como los que más duelen** (P126 por ser la regla que la base invoca en cada pase;
+P170/P171/P172 por sostener el argumento de los pases 64-67). 🟢 **Y la hipótesis de la acción cae en
+su rama BUENA para los cuatro: el contenido existía en otro archivo** —`README.md` para P126, el
+README de cada instrumento para P170/P171/P172— **así que fue mover y citar, no reconstruir.**
+
+🔴 **Quedan 11 DEBIDOS** (`P127`–`P135`, `P173`–`P175`) **y no se afirma nada sobre dónde vive su
+texto, porque no se buscó.** ⚠️ **La cifra «301 citas» NO se re-mide en este pase: `audit_patterns.py`
+es código de este repositorio y el entorno negó su ejecución** (`[Code from External]`), así que el
+conteo conserva la fecha del pase 66 y este pase agregó citas propias.
 
 ## 🧪 P176 — Verificador de licencia de DOS CAPAS: el archivo y el payload (pase 64 del 2026-10-03)
 

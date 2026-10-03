@@ -8,6 +8,7 @@ updated: 2026-10-03
 
 > Agentes y herramientas AI open source para educación. Foco: MIT / Apache 2.0 / BSD.
 > Verificado repo por repo vía WebFetch el 2026-09-30 (stars y licencia leídos de la página del repo).
+> **Pase 67 del 2026-10-03:** 🔴 **La acción 2 del pase 66 CIERRA refutando una ausencia que esta KB publicaba en tres archivos: `1EdTech/openbadges-specification` SÍ cede —`ob_v3p0/license.md`, 12.324 B— y lo que cede NO es open source, es la SPECIFICATION DOCUMENT LICENSE de IMS Global, que *«no concede el derecho a crear modificaciones o derivados»*: una compuerta MÁS DURA que el ShareAlike de P178, sobre las 15 filas de estándares de esta base** (**P187**). 🔵 **Fue invisible porque el archivo no está en la raíz —vive en el subdirectorio de la VERSIÓN— y se llama `license.md` en minúscula; y sólo `ob_v3p0` lo tiene, así que en un repo de especificación la pregunta de licencia es POR VERSIÓN.** 🟢 **Con eso las «14 ausencias» son 13 y las 13 quedan medidas en tres capas.** 🔴 **La acción 3 se resuelve REFUTANDO su premisa: `educhain` y `frappe-mcp-server` no son dos canales con dos licencias, son dos ARTEFACTOS distintos —el `educhain` de npm no tiene repositorio ni descripción y no es el proyecto—, así que las dos filas de esta KB están BIEN y la columna *Canal* no se agrega hasta hacer la pregunta de identidad** (**P188**). 🟢 **5 altas con licencia leída de primera mano, la capa de AUTOGRADING entra entera (INGInious AGPL-3.0/EMEA, 2 MIT-Apache, 1 GPL) y APAC gana un índice CC0 de India.** 🔴 **La acción 1 está BLOQUEADA: el barrido de titular exige código de este repositorio y el entorno lo negó** (`[Code from External]`). Ver las tendencias **512**–**527**.
 > **Pase 65 del 2026-10-03:** 🔴 **La acción 1 del pase 64 CIERRA en su rama CARA y corrige una cifra publicada: «32 sin licencia» estaba inflada un 31 %.** Barridas las **29** filas no-`FWU-DE` por la pregunta del **PAYLOAD** en vez de la del archivo, **7 declaran cesión adentro** (5 en manifiesto, 2 en encabezado de fuente de Moodle); con las 3 de `FWU-DE` del pase 64, **10 de 32 no eran ausencias** y el denominador real es **22**. 🟢 **Y la relectura de las 23 del pase 51 que la acción pedía quedó hecha en el mismo barrido: están CONTENIDAS en estas 29 (`comm -23` da vacío) y 5 declaran en payload → aquella cifra estaba inflada un 22 %.** 🔵 **Pero las dos clases no valen lo mismo, y es el patrón nuevo del pase (**P179**): un `"license": "MIT"` de manifiesto es un IDENTIFICADOR —nombra la licencia y no trae titular, ni año, ni una línea de texto, que es **P168** llevado a cero bytes—, mientras el encabezado de Moodle trae la frase de otorgamiento completa con titular y año: eso sí es cesión.** 🔴 **Medido en tres canales sobre las 3 filas publicadas en npm: el identificador viaja (repo + registro), el TEXTO no viaja a ninguna parte —ningún tarball trae archivo de licencia— y DOS manifiestos PROMETEN el `"LICENSE"` que no existe ni en el repo ni en el artefacto; en `Timadey/proctor` la promesa es más vieja que el repo, porque el pase 41 ya había medido que no hay `LICENSE` en ningún commit de la historia.** 🟢 **La fila más forkeada de la KB se da vuelta a favor: los 39 forks de `DMontgomery40/mcp-canvas-lms` heredan una cesión DECLARADA, no la ausencia que la acción temía.** Ver `compose/code/p172-payload-license-sweep/` y las tendencias **479**–**492**.
 > **Pase 64 del 2026-10-03:** 🟢 **La acción 1 del pase 63 CIERRA, y cierra en su rama BENIGNA: barridas las **200** filas `org/repo` de este archivo con el archivo de licencia LEÍDO, el reparto no se movió —**160 licenciado · 32 sin licencia (ausencia MEDIDA) · 8 inalcanzable**, 82,5 % permisivo sobre lo licenciado contra 81,3 % que midió el pase 51 con un denominador 31 filas más chico—. **No apareció el bloque de archivos-afirmación que la hipótesis temía: 0 de 160 por debajo de 400 bytes.** 🔴 **Pero el barrido encontró UNA fila que aún afirma licencia sobre un repo que no existe: `radhepa/Teacher-MCP` dice «MIT ✅» y da **404 por dos canales independientes**.** 🔵 **Y el instrumento mejoró dos veces: `raw.githubusercontent.com` resuelve la ref **`HEAD`** a la rama por omisión —la dimensión «rama» desaparece—** (**P170**), **y un classificador que hace `grep` sobre el cuerpo etiqueta GPL-3.0 como AGPL-3.0 porque el §13 de GPL-3.0 se TITULA «Use with the GNU Affero General Public License»** (**P171**). 🟢 **Los 4 «textos anómalos» que el pase 51 dejó sin resolver quedan los CUATRO identificados, y uno mejora la cotización: `trilogy-group/oneroster-ts` es **0BSD**, más permisiva que MIT.** Ver las tendencias **466**–**478**.
 > **Pase 62 del 2026-10-03:** 🟢 **Este pase ejecutó la acción que el pase 60 difirió EXPLÍCITAMENTE al 62 —el barrido retroactivo de forks (**P150**, que esta base venía citando mal como «P151»)— y rindió el hallazgo más transferible de la serie: a la MISMA release (`v1.13.0`), un fork de `vishalsachdev/canvas-mcp` declara 139 *tools* contra las 103 de la madre, mientras el campo `description` de GitHub es IDÉNTICO palabra por palabra en toda la familia. **La descripción se hereda entera; la superficie no**, así que un barrido por búsqueda sub-cuenta y uno por repo sobre-cuenta — los dos mal, en direcciones opuestas** (**P160**). 🔴 **Y el signo tampoco es predecible: el pase 60 midió un fork atrasado y más laxo; éste mide uno adelantado y más grande, en la misma familia.** 🔴 **El control negativo de esta base (`Dymayo/moodler-mcp`) resultó ser un fork no registrado: la clase b4 se sostiene en las dos copias, pero el denominador contaba una copia como observación independiente, y la prosa de la fila («una sola variable, ninguna credencial») es falsa — son CINCO, dos de ellas compuertas de capacidad apagadas por defecto.** 🔴 **La puerta más forkeada de la KB (`DMontgomery40/mcp-canvas-lms`, 103 ★, 39 forks) promete una licencia que NO EXISTE: el README dice «see LICENSE file» y `LICENSE`, `LICENSE.md` y la rama `master` dan 404 — 39 forks heredan la ausencia de cesión** (**P161**). 🔴 **Y el `gap 255` del pase 61 se auto-refuta en España: declaraba «no hay artefacto de currículo» para un país que esta KB cubre desde el pase 3 en siete archivos.**
@@ -234,6 +235,98 @@ updated: 2026-10-03
 > fila** —`lineage-skill`, con un vocabulario cerrado de 9 valores por afirmación, **4 de los 9 «esto lo produjo el
 > modelo»**— y **ninguna de las dos sabe de la otra**. Ver la capa nueva al final de este archivo, las tendencias
 > **180**–**182** y el patrón **P99**.
+
+## 🧾 La capa de AUTOGRADING entra entera, una ausencia de licencia de estándar era FALSA, y el nombre de un paquete no es su identidad (acciones 2 y 3 del pase 66, pase 67 del 2026-10-03)
+
+### 🟢 Las altas del pase 67 — con la licencia leída de primera mano y el dedupe corrido ANTES de escribir la fila
+
+⚠️ **El dedupe se corrió primero, por la lección del pase 66 (3 de 6 candidatas ya estaban
+registradas).** De **10** candidatas, **5 ya estaban en esta KB** —`eecs-autograder/autograder.io`,
+`Sunbird`, `Oppia`, `csmediapro/moodle-mcp-server` y `peancor/moodle-mcp-server`— **y no se re-anotan
+como novedad.** 🟢 **Quedan 5 altas y 2 forks.**
+
+| Pieza | Repo | Licencia (**medida, bytes + titular**) | ★ | Región | Qué es |
+|---|---|---|---|---|---|
+| **INGInious** | https://github.com/INGInious/INGInious | 🔴 **AGPL-3.0**, **34.764 B**, titular FSF → `NOT-APPLICABLE` · ⚠️ **con preámbulo de ALCANCE: *«Most of the files … are distributed under the GNU AGPL v3 licence»*** (**P186**) | **243** (150 forks) | **EMEA** (Université catholique de Louvain, Bélgica) | Plataforma de **evaluación automática y segura de ejercicios**, usable como ***grader* externo de Moodle y de edX vía LTI**. 🔵 **Entra como PLATAFORMA, no como agente:** es la capa de corrección sobre la que un agente se compone. 🔴 **AGPL-3.0 + alcance parcial: no entra en un entregable cerrado sin leer los encabezados por archivo** |
+| **autograder** *(agéntico, manuscrito)* | https://github.com/johnswyou/autograder | 🟢 **MIT**, **1.065 B**, `Copyright (c) 2026 John You` → **`HOLDER-MATCH`**, cesión (**P179**) | **0** | sin región declarada | Corrige **entregas MANUSCRITAS** de física y matemática: localiza la respuesta, la transcribe, aplica rúbrica y emite `review_queue.md` + reporte por alumno. Proveedor **OpenRouter**. ⚠️ **Su README manda aprobación humana antes de liberar nota** —*«Review every queued item … and approve grades before release»*— 🔵 **pero es una norma de DOCUMENTACIÓN, no una garantía en código, así que NO mueve la medición de «1 de 9 lo afirma en el código» de los pases 57-59.** ⚠️ **0 ★: entra por el patrón, no por tracción** |
+| **autograder** *(reportes)* | https://github.com/webtech-network/autograder | 🟢 **Apache-2.0**, **11.357 B**, titular ausente **por construcción** → `NOT-APPLICABLE` (**P184**) | — | sin región declarada | Autograding con generación de reportes sobre entregas de alumnos. 🟢 **La licencia más cómoda de la tanda** |
+| **autograder** *(CLI docente)* | https://github.com/zmievsa/autograder | 🔴 **GPL-3.0**, **35.149 B**, titular FSF → `NOT-APPLICABLE` | — | sin región declarada | Corrección automática de entregas para cursos de programación, lado docente. 🔴 **Copyleft: se compone por proceso, no por librería** |
+| **Indian-AI-for-Education** | https://github.com/crpf-mitadt/Indian-AI-for-Education | 🟢 **CC0 1.0 Universal**, **7.048 B** · 🔵 **CC0 no lleva línea de titular** → `NOT-APPLICABLE` | — | **APAC (India)** | Mapa curado de *datasets*, modelos, **ASR, TTS, OCR**, traducción automática, *benchmarks* e infraestructura para AI educativa **de India**. 🟢 **Entra como ÍNDICE REGIONAL, y su licencia es la más permisiva de toda la capa de dato de esta KB: CC0 es dedicación al dominio público — ni atribución, ni ShareAlike, ni compuerta de P178** |
+| **canvas-mcp — 2 forks** | `sirdanielm` · `fdis111` | **MIT** ×2, **1.071 B** ×2, 🔴 titular de un tercero: `Copyright (c) 2025 **Vishal Sachdev**` | 0 ×2 | sin región declarada | 🔵 **No son altas: son LINAJE.** Forks de `vishalsachdev/canvas-mcp`, identificados por **`sha256` idéntico** del `LICENSE` (`5385a26e2face987…`, `diff` byte a byte). **Generaciones distintas: `sirdanielm` al día (`1.13.0`), `fdis111` diez versiones menores atrás (`1.3.0`)**. El linaje con titular ajeno pasa de 4 (pase 66) a **6** |
+
+### ⚠️ Y una pieza que NO entra como recomendación: el README promete un `LICENSE` que no existe
+
+**`weizhenFrank/AutoGrader`** (AutoGrader con GPT-4, **1 ★**) declara en `## License`:
+**«MIT License. See `LICENSE` for more information.»** 🔴 **No hay archivo, medido por DOS canales
+independientes:** `raw` da **404** en `main` y `master` × 5 nombres (10 sondas), y el **listado de
+raíz** por WebFetch enumera `zip/`, `.DS_Store`, `README.md`, `Solution.pdf`, `autograder.py`,
+`grading_results.csv`, `requirements.txt` — **ningún nombre de licencia**, y el sidebar no declara
+ninguna.
+
+🔵 **Tercera aparición de la clase «promesa de licencia inexistente» en esta KB, y primera en la capa
+del README:** el pase 62 la halló en el README de `DMontgomery40/mcp-canvas-lms` (39 forks heredando la
+ausencia) y el pase 65 en **dos manifiestos** de paquete. ⚠️ **Así que **P182** gana su modo de falla:
+una capa de licencia puede PROMETER otra capa que no existe.** 🔴 **Con 1 ★ no se cotiza: se registra
+por el defecto.**
+
+### 🔴 La corrección de inventario de este pase: tres celdas decían «sin licencia» sobre una pieza que SÍ cede
+
+**Acción 2 del pase 66, ejecutada por WebFetch sobre `github.com/<org>/<repo>/tree/HEAD/<subdir>`.**
+🔴 **`1EdTech/openbadges-specification` SÍ cede, y lo que cede NO es open source:**
+`ob_v3p0/license.md`, **12.324 B**, **SPECIFICATION DOCUMENT LICENSE de IMS Global Learning
+Consortium** — cuya cláusula operativa es *«No right to create modifications or derivatives of IMS
+documents is granted pursuant to this license»*. ⚠️ **Compuerta MÁS DURA que el ShareAlike de P178:
+ShareAlike permite el derivado y le impone licencia; esto no lo concede.** Ver **P187**.
+
+🔵 **Por qué fue invisible:** el archivo **no está en la raíz** (vive en el subdirectorio de la
+versión) **y se llama `license.md` en minúscula**. **P170** barre 14 nombres en la raíz → 404
+legítimo; **P182** pregunta el README → silencio legítimo; **P172** pregunta el payload → no es
+RDF/OWL. **Las tres estaban bien.** ⚠️ **Y sólo `ob_v3p0` lo tiene: `ob_v2p1/license.md` y
+`ob_v2p0/license.md` dan 404, así que en un repo de especificación la pregunta de licencia es POR
+VERSIÓN, no por repo.**
+
+🟢 **Consecuencia sobre el denominador de ausencias, escrita como el pase 66 exigió por adelantado:**
+las «14 ausencias medidas» son **13**, y **las 13 quedan medidas en tres capas** — una salió del
+denominador por estar cedida, y la otra fila `SILENT-ROOT`
+(`aiverify-foundation/LLM-Evals-Catalogue/docs/`, que contiene sólo `CONTRIBUTING.md`) quedó medida.
+**Ya no hay filas en una sola capa.**
+
+### 🔴 Las filas de PAQUETE: la acción 3 se resuelve refutando su premisa, y por eso NO se agrega la columna *Canal*
+
+**P183** midió *«5 de 18 nombres en los dos registros, 2 con licencias distintas»* y concluyó que
+*«hay al menos una fila publicando la licencia del artefacto equivocado»*. 🔵 **Leídos los dos
+registros de primera mano (`registry.npmjs.org` y `pypi.org`, 200 hoy), no son dos canales con dos
+licencias: son dos ARTEFACTOS distintos.**
+
+| Nombre | npm | PyPI | Veredicto sobre la fila de esta KB |
+|---|---|---|---|
+| **`educhain`** | `1.0.0`, **ISC**, 🔴 **sin `repository`, `description` VACÍA** | `0.4.0`, repo `satvik314/educhain`, 🔴 `license` **vacío (0 B)**, MIT **sólo por clasificador** | 🟢 **La fila está BIEN: cita `github.com/satvik314/educhain` con MIT.** 🔴 **El paquete npm no es el proyecto** — `ISC` es el default de `npm init` |
+| **`frappe-mcp-server`** | `0.6.0`, **ISC**, 🔴 **declara repo `appliedrelevance/frappe_mcp_server` — y la declaración NO RESUELVE: 404 por `raw` en `main`, `master` y `develop`** | `1.2.0`, 🔴 **sin URL de repositorio**, descripción distinta, `license` de **3 B** | 🟢 **La fila de esta KB está BIEN y además ya lo decía: *«14 meses sin release y repo no legible»*.** 🔴 **Pero ninguno de los dos registros resuelve a un repositorio legible: uno NO declara y el otro declara un 404.** ⚠️ **Cae la afirmación del pase 66 de que la fila citaba «el canal peor licenciado»** |
+
+🔴 **Así que la columna *Canal* NO se agrega en este pase, y el motivo es que agregarla ahora haría
+daño:** poner `(npm)`/`(PyPI)` en las 21 filas `PKG-NAMED` **antes** de preguntar la identidad
+**publicaría dos artefactos como una sola fila**. 🔵 **El orden correcto es identidad primero, canal
+después** (**P188**), y se re-agenda como acción 1 del pase 68. ⚠️ **La versión es el indicador más
+barato de que hay que preguntar: dos canales del mismo proyecto no divergen diez versiones menores.**
+
+🟢 **Lo que de P183 sí se sostiene:** el campo `license` de un registro es un **IDENTIFICADOR**, no una
+cesión (**P179**) — 3 bytes en un caso, inexistente en el otro.
+
+### ⚠️ Lo que este pase NO midió de este archivo, declarado como tal
+
+1. 🔴 **El barrido de TITULAR con denominador ampliado (acción 1 del pase 66) NO se corrió:** exige
+   `sweep_headref.sh` y `sweep_holder.sh`, que son código de este repositorio clonado, y el entorno lo
+   **NEGÓ** (`[Code from External]`). **No se reimplementaron a mano ni se trocearon.** 🔴 **El reparto
+   del pase 66 (68 `HOLDER-MATCH` / 31 `HOLDER-UNRELATED` / 61 `NOT-APPLICABLE`) NO se re-afirma como
+   medido hoy, y la acción sigue debida.**
+2. 🟢 **Evidencia parcial que sí se obtuvo, leyendo a mano el titular de las altas de HOY:** 2 de 7
+   traen titular de un tercero, **y las dos son forks de una canónica ya registrada.** 🔵 **Eso
+   confirma el titular heredado como propiedad de los FORKS; la rama ancha de la hipótesis —«modo de
+   falla estructural de los repos jóvenes»— sigue sin decidir y necesita el barrido bloqueado.**
+3. 🔴 **Las estrellas de las filas históricas no se re-verificaron:** `api.github.com/repos/{o}/{r}` da
+   **403** hoy, y el único endpoint de ese host que pasa (`rate_limit`) no transporta datos de
+   repositorio. **Las cifras nuevas de este pase son de primera mano; las viejas conservan la fecha de
+   su pase.**
 
 ## 🧾 La columna LICENCIA de este archivo, re-medida en las 200 filas con la ref `HEAD` — el inventario está sano, y la excepción es una fila que cotiza un repo muerto (acción 1 del pase 63, pase 64 del 2026-10-03)
 
@@ -2506,7 +2599,7 @@ Existe, es un estándar con certificación de conformidad, y **esta KB nunca la 
 | esco-skill-extractor | https://github.com/KonstantinosPetrakis/esco-skill-extractor | **MIT** ✅ | 32 | 29 | Python | Extrae **competencias y ocupaciones** de texto libre (avisos de trabajo, CV, descripciones de curso) y las mapea a la taxonomía europea **ESCO** y a ocupaciones **ISCO**, con *sentence transformers* y similitud cosena. **Es la única pieza que encontró esta KB que traduce lenguaje natural a un vocabulario de competencias normalizado** — el paso que convierte «el alumno terminó el módulo» en «el alumno acredita esta competencia». ⚠️ No declara versión de ESCO | Sin región declarada (autor Konstantinos Petrakis) |
 | oneroster (TypeScript) | https://github.com/LongsightGroup/oneroster | **MIT** ✅ | 0 | 33 | TypeScript | Parsea, valida y escribe **paquetes CSV de OneRoster** y habla la **REST API** en las versiones **1.1 y 1.2**. Corre en Node, Deno y navegador; incluye cliente REST de lectura de roster y de notas del *gradebook*, y un *provider router* neutral al framework para construir servicios OneRoster. Declara validación contra las especificaciones oficiales y las suites de certificación. **0 ★: referencia de integración, no dependencia de producción** | Sin región declarada (Longsight Group) |
 | lti-1-3-php-library | https://github.com/1EdTech/lti-1-3-php-library | **Apache-2.0** ✅ | 124 | 110 | PHP | Librería oficial de 1EdTech para construir *tool providers* **LTI 1.3**: flujo de login OIDC, validación de mensajes, respuestas de *deep linking* e integración con los servicios de la plataforma (envío de notas, lectura del roster de miembros). **Es la pieza de esta capa con más estrellas que sigue pública y permisiva**, y es la que hace que un agente se pueda montar dentro de cualquier LMS conforme | Global (1EdTech, `1edtech.org`) |
-| openbadges-specification | https://github.com/1EdTech/openbadges-specification | ⚠️ **no declarada en la página** | 205 | 2.266 | HTML | La **especificación** de Open Badges, no una implementación: versiones **3.0, 2.1 y 2.0** en directorios separados (`ob_v3p0`, `ob_v2p1`, `ob_v2p0`), más **Comprehensive Learner Record (CLR) 2.0**. Ramas `main` (estable) y `develop`. Es el documento normativo al que hay que programar; **para el código hay que ir a terceros**, que es exactamente el problema de esta capa | Global (1EdTech) |
+| openbadges-specification | https://github.com/1EdTech/openbadges-specification | 🔴 **`SPEC-LICENSE`: IMS Global *Specification Document License*, 12.324 B, leída en `ob_v3p0/license.md` (pase 67)** — ⚠️ **NO concede derivados** (*«No right to create modifications or derivatives of IMS documents is granted»*); más dura que ShareAlike (**P187**). ⚠️ **Sólo en `ob_v3p0`: `ob_v2p1` y `ob_v2p0` dan 404 — la licencia es POR VERSIÓN.** 🔵 *Corrige «no declarada en la página»: no está en el sidebar porque GitHub no la clasifica* | 205 | 2.266 | HTML | La **especificación** de Open Badges, no una implementación: versiones **3.0, 2.1 y 2.0** en directorios separados (`ob_v3p0`, `ob_v2p1`, `ob_v2p0`), más **Comprehensive Learner Record (CLR) 2.0**. Ramas `main` (estable) y `develop`. Es el documento normativo al que hay que programar; **para el código hay que ir a terceros**, que es exactamente el problema de esta capa | Global (1EdTech) |
 
 ### Lo maduro y lo copyleft — la misma forma que el pase 8 encontró en accesibilidad
 

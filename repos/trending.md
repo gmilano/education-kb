@@ -8,6 +8,61 @@ updated: 2026-10-03
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 
+## 2026-10-03 — pase 67: la capa de autograding entra entera, y una ausencia de licencia de estándar era falsa
+
+### 🟢 El movimiento de repos del pase: una FUNCIÓN que esta KB tenía casi vacía
+
+⚠️ **La consulta por vertical de *autograding* rindió lo que las cuatro globales no rindieron.** Esta
+KB venía con la corrección automática representada por **una** pieza registrada
+(`eecs-autograder/autograder.io`, Universidad de Michigan) y por las puertas de nota de Moodle/Canvas,
+que son **integración**, no corrección. 🟢 **Entran cuatro piezas de corrección propiamente dicha, las
+cuatro con el archivo de licencia LEÍDO de primera mano por `raw.githubusercontent.com`.**
+
+| Repo | Licencia (**medida, bytes**) | Titular (**P184**) | ★ | Señal | Por qué importa |
+|---|---|---|---|---|---|
+| [`INGInious/INGInious`](https://github.com/INGInious/INGInious) | 🔴 **AGPL-3.0**, **34.764 B** ⚠️ **con preámbulo de ALCANCE** | FSF → `NOT-APPLICABLE` | **243** (150 forks) | **UCLouvain**, activo 2026 | **Grader externo de Moodle y de edX vía LTI.** La única pieza de esta tanda que es plataforma y no script. 🔴 **Su `LICENSE` declara cubrir *«la mayoría de los archivos»*** (ver **P186**) |
+| [`webtech-network/autograder`](https://github.com/webtech-network/autograder) | 🟢 **Apache-2.0**, **11.357 B** | ausente **por construcción** → `NOT-APPLICABLE` | — | activo | **La licencia más cómoda de la tanda.** Autograding con generación de reportes sobre entregas |
+| [`johnswyou/autograder`](https://github.com/johnswyou/autograder) | 🟢 **MIT**, **1.065 B** | 🟢 `Copyright (c) 2026 John You` → **`HOLDER-MATCH`** | **0** | alta de 2026 | **Corrige MANUSCRITO** (física, matemática): localiza, transcribe, aplica rúbrica, emite `review_queue.md`. ⚠️ **0 ★: entra por el patrón** |
+| [`zmievsa/autograder`](https://github.com/zmievsa/autograder) | 🔴 **GPL-3.0**, **35.149 B** | FSF → `NOT-APPLICABLE` | — | activo | Corrección de entregas de cursos de programación, lado docente. 🔴 **Copyleft: se compone por proceso** |
+| [`crpf-mitadt/Indian-AI-for-Education`](https://github.com/crpf-mitadt/Indian-AI-for-Education) | 🟢 **CC0 1.0 Universal**, **7.048 B** | 🔵 **CC0 no lleva titular** → `NOT-APPLICABLE` | — | **APAC / India** | **Mapa curado de *datasets*, modelos, ASR, TTS, OCR, MT, *benchmarks* e infraestructura de AI educativa de India.** 🟢 **CC0 = dominio público: la licencia más permisiva de toda la capa de dato de esta KB** |
+
+🔵 **El reparto de licencias de la tanda es el dato de la capa, y no es bueno:** de 5 piezas, **2
+permisivas** (Apache-2.0, MIT), **1 CC0**, **2 copyleft** (AGPL-3.0, GPL-3.0). ⚠️ **La pieza con más
+tracción de las cinco —243 ★, la única con despliegue institucional— es justo la AGPL.** Es la misma
+forma que esta KB ya midió en los LMS: **la madurez correlaciona con el copyleft en educación.**
+
+### 🔴 Dos forks nuevos de `canvas-mcp`, identificados por `sha256` del `LICENSE`
+
+| Repo | `LICENSE` | `sha256` | Titular | `version` |
+|---|---|---|---|---|
+| `vishalsachdev/canvas-mcp` *(canónica, registrada)* | 1.071 B | `5385a26e2face987…` | `Vishal Sachdev` | **1.13.0** |
+| 🆕 [`sirdanielm/canvas-mcp`](https://github.com/sirdanielm/canvas-mcp) | 1.071 B | 🔴 **`5385a26e2face987…`** *(idéntico)* | 🔴 `Vishal Sachdev` | **1.13.0** |
+| 🆕 [`fdis111/canvas-mcp`](https://github.com/fdis111/canvas-mcp) | 1.071 B | 🔴 **`5385a26e2face987…`** *(idéntico)* | 🔴 `Vishal Sachdev` | 🔴 **1.3.0** |
+
+🟢 **`diff` los declara idénticos byte a byte.** ⚠️ **Y la corrección de método: tres archivos de
+1.071 B podrían ser tres textos MIT distintos del mismo largo — el tamaño coincidente no prueba nada,
+el digest sí.** 🔵 **Los dos llegaron por el canal de búsqueda presentados como proyectos
+independientes; el titular del `LICENSE` los reclasifica en una línea.** **El linaje `canvas-mcp` pasa
+de 4 forks conocidos con titular ajeno (pase 66) a 6.**
+
+### 🔴 La corrección de este archivo: `openbadges-specification` no era una ausencia
+
+Este archivo publica `IMSGlobal/openbadges-specification` con 🔴 *«ninguna (medida)»*. **Es una
+ausencia FALSA**: `ob_v3p0/license.md` existe —**12.324 B**— y es la **SPECIFICATION DOCUMENT LICENSE
+de IMS Global**, que ⚠️ **no concede derivados** (*«No right to create modifications or derivatives of
+IMS documents is granted pursuant to this license»*). 🔵 **No estaba en la raíz, estaba en el
+subdirectorio de la versión, y en minúscula** — ver **P187** y la sección del pase en
+`agents/trending.md`. ⚠️ **Y sólo en `ob_v3p0`: `ob_v2p1/license.md` y `ob_v2p0/license.md` dan 404,
+así que en un repo de especificación la pregunta de licencia es POR VERSIÓN.**
+
+### ⚠️ Lo que este pase NO midió de este archivo, declarado como tal
+
+🔴 **Las estrellas y las fechas de release de las filas históricas NO se re-verificaron**, porque el
+canal que lo haría barato —`api.github.com/repos/{owner}/{repo}`— **da 403 hoy** (y el único endpoint
+de ese host que pasa, `rate_limit`, no transporta datos de repositorio). 🔵 **Las cifras de la tabla de
+arriba son de este pase y de primera mano; las de las secciones de abajo conservan la fecha de su
+pase.**
+
 ## 2026-10-03 — pase 66: el grafo japonés completo estaba en el repo, y la capa de paquete está SANA
 
 ### 🟢 Los 66 MB que el pase 65 declaró inalcanzables: estaban a un sufijo de distancia
@@ -230,7 +285,7 @@ build sin versionar. **La ruta se descubre leyendo `.github/workflows/qc.yml`, n
 |---|---|---|---|
 | [`1EdTech/openbadges-validator-core`](https://github.com/1EdTech/openbadges-validator-core) | 🟢 **Apache-2.0** | 13.184 | `concentricsky/badgr-server` (404) |
 | [`1EdTech/caliper-spec`](https://github.com/1EdTech/caliper-spec) | 🔴 **IMS Global Specification Document License** (no OSI, por membresía) | 12.402 | `1EdTech/caliper-php` y `IMSGlobal/caliper-python` (404) |
-| [`IMSGlobal/openbadges-specification`](https://github.com/IMSGlobal/openbadges-specification) | 🔴 **ninguna (medida)** | — | — |
+| [`IMSGlobal/openbadges-specification`](https://github.com/IMSGlobal/openbadges-specification) | 🔴 **`SPEC-LICENSE` — corregido en el pase 67:** IMS Global *Specification Document License*, 12.324 B en `ob_v3p0/license.md`, ⚠️ **niega derivados** (**P187**) | — | — |
 
 ### ⚠️ Mapa de canales de esta corrida — el bloqueo alemán es de DOMINIO, no de corrida
 
