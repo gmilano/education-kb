@@ -9,6 +9,80 @@ updated: 2026-10-03
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 > No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
 
+## 2026-10-03 (pase 58) — **la acción 1 cierra en 0 de 6 y aparece el eje que decide la entrega: una de las seis AFIRMA la publicación y por eso se excluye en vez de configurarse; y la acción 3 estaba cerrada por el PROPIO pase 57**
+
+### 🔴 El hallazgo que manda: `'released'` cableado (P142)
+
+**La acción 1 del pase 57 pedía medir la precondición de plataforma en las 4 puertas de Moodle que faltaban y en
+las 2 de Canvas. Se midió en las seis, leyendo el CÓDIGO.** 🔴 **0 de 6 la consultan.** Pero el resultado útil no es
+el 0 de 6: es que **las seis no fallan igual.**
+
+| Puerta | ¿Lee la precondición? | Qué manda | Con `markingworkflow = 1` |
+|---|---|---|---|
+| [`peancor/moodle-mcp-server`](https://github.com/peancor/moodle-mcp-server) | 🔴 no | `workflowstate: 'released'` **cableado** | 🔴 **publica igual — DERROTA la salvaguarda** |
+| [`Dymayo/moodler-mcp`](https://github.com/Dymayo/moodler-mcp) | 🔴 no | `workflowstate=""` | 🟢 neutralizada |
+| [`MarcosNahuel/moodle-mcp`](https://github.com/MarcosNahuel/moodle-mcp) | 🔴 no | condicional (`if (args.workflow_state)`) | 🟢 neutralizada |
+| [`NiccoloSalvini/mcp-moodle-staff`](https://github.com/NiccoloSalvini/mcp-moodle-staff) | ⚫ n/a | **CSV al importador nativo** | ⚫ fuera del eje |
+| [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | 🔴 no (sólo `rubric`, `rubric_settings`) | `submission[posted_grade]` | 🟢 neutralizada con `post_manually` |
+| [`bruchris/canvas-lms-mcp`](https://github.com/bruchris/canvas-lms-mcp) | 🔴 no | `canvas.submissions.grade(...)` | 🟢 ídem |
+
+🔵 **5 de 6 se CONFIGURAN, 1 de 6 se EXCLUYE** — y la que se excluye es la que un barrido por README no distingue,
+porque `'released'` está en `src/index.ts` y no en la documentación. **Es la frase que va al cliente: `peancor` es la
+única cuyo defecto NO se arregla configurando su Moodle.**
+
+### 🟢 El alta, y entra por lo que CONTESTA (P144)
+
+**Primera alta en DOCE pases:** [`littlecookie0722/AI-Teaching-Agent`](https://github.com/littlecookie0722/AI-Teaching-Agent)
+— **MIT** verificado por el **texto** del `LICENSE` (*«MIT License / Copyright (c) 2026 littlecookie»*), Python,
+**30 commits, 0 ★**.
+
+🟢 **Es la única pieza de esta KB que cumple «borrador + liberación humana» de forma incondicional, y lo cumple
+porque NO PUEDE publicar:** *«The export does not call platform import, grading execution, or publishing paths»*.
+🔵 **Tres pases buscaron la compuerta correcta adentro del camino de escritura y los tres la encontraron rota por
+motivos distintos (P132, P138, P139). La pieza que no tiene el problema no tiene una compuerta mejor: no tiene la
+capacidad.**
+
+⚠️ **Lo que NO es:** no escribe en el LMS, así que **no reemplaza a ninguna de las seis** — no hace su trabajo.
+⚠️ **Y su MCP está CONGELADO por el propio proyecto** (*«MCP/Agent expansion … remain frozen»*), así que **no se
+cotiza como puerta MCP** aunque la descripción lo nombre. 🔴 **0 ★: pieza joven, se declara** — y es la curva
+invertida de **P134**/**P138** otra vez (la conforme no es la adoptada).
+
+### 🔴 Un rechazo medido, para que quede el registro
+
+[`dajiaohuang/WayMarker`](https://github.com/dajiaohuang/WayMarker) (tutor adaptativo, RAG + modelo de alumno
+persistente) **se RECHAZA por licencia ausente MEDIDA**: `LICENSE` **404** en `main` y en `master`, sin licencia en
+el *sidebar* y sin archivo en el árbol. ⚠️ **Además 1 commit y 0 ★.** 🔵 **Se registra el rechazo en vez de
+omitirlo, por la regla de los pases 51–52: una ausencia medida es un dato; el silencio parece cobertura.**
+
+### 🔴 La acción 3 estaba cerrada, y la cerró el pase 57
+
+La acción pedía resolver *«dos fechas incompatibles publicadas en archivos distintos»*. 🔵 **No eran incompatibles:
+son dos obligaciones distintas, y la tendencia 392 —del MISMO pase 57— ya las había separado bien.**
+
+| Obligación | Fecha | Estado al 2026-10-03 |
+|---|---|---|
+| Art. 50 transparencia | **2026-08-02** | 🔴 vigente (hace 62 días) — **NO tocada por el Omnibus** |
+| Art. 50(2), *backstop* de lo ya desplegado antes del 2026-08-02 | **2026-12-02** | ⏳ **60 días** |
+| **Anexo III §3** (educación), alto riesgo *stand-alone* | **2027-12-02** | diferido desde 2026-08-02 por el *AI Omnibus* |
+
+🟢 **Re-verificado hoy por tres canales concordantes:** aprobación final del Consejo **2026-06-29**, **DOUE
+2026-07-24**, **en vigor 2026-07-27**, y *«Transparency obligations (Article 50) apply from 2 August 2026 and are
+not touched by the Omnibus»*. 🔵 **Lo que importa comercialmente: lo que sostiene la argumentación EMEA de esta base
+es el reloj que NO se movió** —las suites `aiact-50-2-*` implementan el marcado del Art. 50(2)—, **y el expediente de
+alto riesgo no desapareció: se corrió, y el cliente lo sigue necesitando para 2027-12-02.**
+
+🔴 **La lección de método, y es la del gap 54 aplicada ADENTRO:** la lista de acciones y la de tendencias de un pase
+**se escriben por separado y nada las cruza**, así que un pase puede cerrar un gap en sus tendencias y entregarlo
+como acción abierta en la misma publicación. **Queda como acción 1 del pase 59, con control negativo obligatorio.**
+
+### ⚠️ Nota de instrumento: la columna «Hoy» no se re-verificó
+
+🔴 **Este entorno negó ejecutar el código clonado, INCLUIDAS las suites OFFLINE** (`[Code from External]` sobre
+`python3 test_*.py` sin red). ⚠️ **Corrige al pase 52 en la dirección contraria:** ese pase había medido la frontera
+y la había declarado más angosta (*«la negativa es sobre ejecutar CON RED»*). 🔵 **La frontera es del entorno y varía
+entre pases, así que NO se vuelve a publicar como regla general** —el error de los pases 50 y 51—. 🔴 **Consecuencia
+declarada: este pase no afirma ninguna cifra de `compose/code/` como medida hoy; siguen siendo las del pase 56.**
+
 ## 2026-10-03 (pase 57) — **la única celda verde de la capa docente se borra: el borrador de `toshieji` no es una propiedad del servidor sino de una casilla de Moodle que el servidor nunca mira, así que el T2 incondicional es 0 de 8; y la escalera de compuertas del pase 56 no es ordinal porque soldó dos ejes independientes**
 
 ### 🔴 El hallazgo que manda: `markingworkflow` (P139)

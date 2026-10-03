@@ -8,6 +8,7 @@ updated: 2026-10-03
 
 > Recetas concretas: repos nombrados, licencias verificadas, wiring explícito y estimación.
 > Todos los repos citados fueron verificados vía WebFetch el 2026-09-30; los del pase 11, el 2026-10-01 (ver `agents/top.md`).
+> **Pase 58 del 2026-10-03:** 🔴 **los patrones nuevos son **P142**–**P144** y los tres salen de la misma medición: de las 6 puertas de escritura de nota, leídas en el CÓDIGO, **0 consultan la precondición de su plataforma**. 🔵 **P142 es el que cambia una decisión de entrega: las seis NO fallan igual, y la pregunta que las separa es una sola —con `markingworkflow = 1`, ¿publica igual?—. `peancor/moodle-mcp-server` manda `workflowstate: 'released'` CABLEADO, así que es la única que DERROTA la configuración correcta del cliente: 5 de 6 se CONFIGURAN, 1 de 6 se EXCLUYE.** ⚠️ **Y no se puede aplicar desde un README: `'released'` está en `src/index.ts`, no en la documentación.** 🔵 **P143 nombra una clase de garantía que esta KB no tenía: la que vive en el PROCESO** —`mcp-moodle-staff` no llama al web service, genera CSV para el importador nativo, así que la liberación humana es de quien aprieta Importar— **real, pero NO auditable en el código de la puerta, así que se entrega con el procedimiento o no existe.** 🟢 **P144 es la respuesta arquitectónica a tres pases de compuertas que fallaron por tres motivos distintos (P132, P138, P139, P142): separar la generación de la publicación, de modo que el proceso que genera NO tenga credencial de escritura al LMS. Lo funda `littlecookie0722/AI-Teaching-Agent` (MIT), la única pieza de esta KB que cumple «borrador + liberación humana» incondicionalmente —porque no puede publicar—.** ⚠️ **Lo que P144 NO compra: no automatiza la entrega de notas; si el cliente la pide, se vuelve a P142.** Ver **P142**–**P144** y las tendencias **393**–**401**.
 > **Pase 57 del 2026-10-03:** 🔴 **el patrón nuevo es **P137** y corrige el NIVEL 2 de **P136**, que este archivo agregó el pase anterior: el «borrador no liberado» no es una compuerta del servidor, es una compuerta de la PLATAFORMA, y sin su precondición no existe.** Leído de primera mano en `moodle/moodle` @ `main`, `public/mod/assign/locallib.php:2991-3001`: *«If marking workflow is enabled, the workflow state is at 'released'»*, con el SQL `WHERE (a.markingworkflow = 0 OR (a.markingworkflow = 1 AND uf.workflowstate = :wfreleased))`. 🔴 **Con `markingworkflow = 0` Moodle publica la nota sea cual sea el `workflowstate`, y el README de `toshieji` no menciona `markingworkflow` ni una vez en 8.326 bytes** (**P139**). ⚠️ **Las seis citas de `readyforreview` de este archivo quedan marcadas con su precondición: el patrón sigue siendo el mejor de la capa, pero se entrega con un paso de verificación, no solo.** 🔴 **Y el nivel 1 de P136 (que el tool no exista) se mide por primera vez sobre las 8 piezas y la escalera que el pase 56 propuso NO es ordinal: «impedir listar el tool» y «granularidad» son dos ejes independientes** — `Dymayo` es la compuerta más gruesa y desregistra, `toshieji` es más fina y no (**P137**). 🔴 **Más el eje que faltaba y que decide el despliegue: el SENTIDO DEL DEFECTO. `ALLOWED_WRITE_TOOLS` es fail-OPEN en stdio** (**P138**). 🟢 **Y el patrón llega entregable: `compose/code/grading-draft-gate/` (37/37, OFFLINE) afirma las tres propiedades por separado, con 12 asertos de control negativo y tres mutaciones que prueban que la suite puede fallar.** Ver **P137**–**P141** y las tendencias **370**–**392**.
 > **Pase 56 del 2026-10-03:** 🔴 **el patrón nuevo es **P136** y corrige a **P131**, que este archivo acababa de agregar: la mitad de CONFIRMACIÓN de P131 queda degradada por evidencia de primera mano del proyecto más adoptado de la capa.** `vishalsachdev/canvas-mcp` (MIT, 272 ★) publicó que *«a confirmation token cannot stop [a student-planted instruction] because the assistant can redeem its own token»* — **el atacante del lado docente es el alumno escribiendo en el contenido del curso, y el que redime el token es el propio asistente, así que la confirmación no es una segunda autoridad sino la misma dos veces.** 🟢 **P136 reordena las compuertas: (1) arranque, que el tool no exista (`ALLOWED_WRITE_TOOLS`); (2) estado del dato, borrador no liberado (`workflowstate=readyforreview`); (3) confirmación por llamada, que pasa a tercera y sólo protege del operador distraído.** 🔴 **Y la recomendación que sale de este archivo: `peancor/moodle-mcp-server` es clase **T4** —nota y devolución en firme, sin confirmación, sin borrador, sin divulgación— con token de administración del SITIO. Máximo privilegio, mínima guarda.** 🟢 **La que entra en su lugar: `toshieji/moodle-grading-mcp` (MIT, APAC), la única de las 8 piezas de escritura docente conforme al Artículo 50, envuelta en la puerta de *allowlist* que este repositorio ya versiona (`compose/code/mcp-allowlist-gateway/`, 34 aserciones).** ⚠️ **Dato de encuadre corregido en este pase: el conjunto expuesto al Artículo 50(2) es **33 de 66 (50 %)**, no 32/48 % — el defecto era de propagación y los dos escáneres de la capa ya usaban 33.** Ver **P132**–**P135**, el patrón **P136** y las tendencias **338**–**369**.
 > **Pase 55 del 2026-10-03:** 🟢 **el pase deja un patrón nuevo y sale de una medición, no de una idea: P131, la puerta de escritura académica con confirmación de dos llamadas**, construida sobre el único control de escritura de esta KB que está medido y citado —el `confirmation_token` de `PabloPC05/mcp-usc`, *«los tokens viven solo en memoria, caducan a los cinco minutos y son de un solo uso»*— más el patrón de borrador no liberado de `toshieji/moodle-grading-mcp` (`workflowstate=readyforreview`, *«This server never releases»*, pie de divulgación de asistencia AI). 🔴 **Y el patrón corrige una recomendación de este propio archivo: donde esta base propone `peancor/moodle-mcp-server` para «nota y devolución dentro del LMS», hay que leer que `peancor` escribe la nota autoritativa con token de administración del SITIO y SIN confirmación, borrador ni divulgación** — es la combinación de máximo privilegio con mínima guarda (**P127**, **P129**). 🟢 **Las cifras de suites citadas se remidieron y las once reproducen.** ⚠️ **Y el pase se corrige a sí mismo: un `grep` escrito a mano dio «dos vencidas» (49 y 34) y era falso positivo — el instrumento versionado de esta KB da 46 y 33** (**P126**). Ver tendencias **313**–**321**.
@@ -6664,6 +6665,116 @@ free text is authored by third parties — including the students an educator is
 dicho por el proyecto: *«Fencing marks provenance; it does not enforce obedience … a precondition for a
 model treating it as data — not a guarantee that it will»*. 🔵 **Es el nivel 0 que P136 no tenía:
 separar dato de instrucción antes de que la compuerta importe.**
+
+## P142 — Separar la puerta que AFIRMA la publicación de la que la hereda: una se excluye, la otra se configura (agregado en el pase 58 del 2026-10-03)
+
+🔴 **El hallazgo que lo funda, medido en 6 puertas de escritura de nota leyendo el CÓDIGO (pase 58):**
+**0 de 6 consultan la precondición de su plataforma** —`markingworkflow` en Moodle,
+`posting_policy`/`post_manually` en Canvas—. **Pero las seis no fallan igual, y la diferencia decide el
+despliegue.**
+
+**La pregunta que las separa, y es UNA sola:** con la plataforma **bien** configurada
+(`markingworkflow = 1`), ¿la puerta publica igual?
+
+| Clase | Qué manda | Con la plataforma bien configurada | Qué se hace con ella |
+|---|---|---|---|
+| 🔴 **AFIRMA** | un `workflowstate` constante y publicador (`'released'`) | 🔴 **publica igual: DERROTA la salvaguarda** | 🔴 **se EXCLUYE** |
+| ⚠️ **por OMISIÓN** | `workflowstate=""`, o nada (Canvas) | 🟢 la configuración correcta la neutraliza | 🟢 **se CONFIGURA** |
+| ⚠️ **HEREDA** | `workflowstate` sólo si el llamador lo pasa | 🟢 ídem | 🟢 **se CONFIGURA, y se le pasa el valor** |
+
+🔵 **Medido: 5 de 6 se configuran, 1 de 6 se excluye.** El caso 🔴 es
+[`peancor/moodle-mcp-server`](https://github.com/peancor/moodle-mcp-server), con
+`workflowstate: 'released'` **cableado** en `src/index.ts`.
+
+### 🔴 Por qué este patrón no se puede aplicar desde un README
+
+⚠️ **`'released'` NO aparece en la documentación de `peancor`: aparece en el código.** Un barrido por
+README pone a las seis en la misma celda. **La consecuencia de método es la misma que P139 dejó
+escrita, un paso más adentro: la propiedad que decide está en la línea que llama al web service, así
+que el eje se mide ahí o no se mide.**
+
+### El cableado — tres preguntas, en este orden
+
+1. **¿Hay un `workflowstate` (o equivalente) CONSTANTE en el código?** Si su valor publica → **excluir**.
+   🔵 Es la única rama que no se arregla configurando el LMS del cliente.
+2. **Si es condicional o vacío** → **configurar la plataforma** (`markingworkflow = 1` por tarea,
+   `post_manually = true`) **y verificarlo como paso de aceptación del despliegue**, no como supuesto.
+3. **Si no hay llamada al web service** → no es de este eje: es **P143** (la garantía es del proceso).
+
+⚠️ **Y lo que el patrón NO autoriza a decir:** «configurado el LMS, la puerta es segura». Lo que queda
+demostrado es más angosto —**la puerta deja de ser quien publica**—; la nota la sigue publicando Moodle
+cuando una persona libera el estado, que es exactamente donde se la quiere.
+
+## P143 — Una garantía que vive en el PROCESO es real, y no es auditable en el código de la puerta (agregado en el pase 58 del 2026-10-03)
+
+🔵 **El caso que lo funda:** [`NiccoloSalvini/mcp-moodle-staff`](https://github.com/NiccoloSalvini/mcp-moodle-staff)
+no llama a `mod_assign_save_grade` en absoluto — *«the CSV import is Moodle's own way in»*—: genera el CSV
+y lo pasa por el **importador nativo** del libro de calificaciones, con `grades_verify` después.
+
+🔴 **Lo que NO se debe concluir: que es más seguro.** El importador del libro de calificaciones **también
+escribe la nota y tampoco pasa por marking workflow**. 🟢 **Lo que sí cambia, y es real: quién aprieta el
+botón.** El import lo ejecuta una persona en la UI de Moodle, así que la liberación humana es una
+propiedad del **proceso**.
+
+⚠️ **La consecuencia de método, que es el patrón:** una garantía de proceso **no se puede poner en la
+misma columna que una compuerta**, porque no se verifica leyendo el repositorio ni corriendo `tools/list`.
+**Se verifica en el procedimiento del cliente, y se entrega con él o no se entrega.**
+
+🔵 **Cómo se escribe en una propuesta, sin inflarla:** «la pieza no puede publicar sola; publica cuando
+un administrador corre el import» — **y entonces el entregable incluye ese procedimiento**, con quién lo
+corre y contra qué se compara (`grades_verify`). 🔴 **Sin el procedimiento escrito, la garantía no
+existe: es una propiedad de alguien que no está en el contrato.**
+
+## P144 — Separar la GENERACIÓN de la PUBLICACIÓN, en vez de poner una compuerta mejor dentro del camino de escritura (agregado en el pase 58 del 2026-10-03)
+
+🔴 **Tres pases midieron compuertas dentro del camino de escritura y los tres dieron el mismo signo:**
+el pase 56 encontró que una confirmación no para el ataque real (el asistente redime su propio token,
+**P132**); el 57, que la compuerta más fina de la capa es **fail-open** en el despliegue normal de un
+docente (**P138**) y que el «borrador» del único caso conforme era una casilla que el servidor no mira
+(**P139**); el 58, que **0 de 6** consultan la precondición de su plataforma (**P142**).
+
+🔵 **El patrón sale de la pieza que no tiene el problema, y no lo tiene por diseño:**
+[`littlecookie0722/AI-Teaching-Agent`](https://github.com/littlecookie0722/AI-Teaching-Agent) (**MIT**)
+genera laboratorios, exámenes y artefactos de corrección con `WAITING_REVIEW` y aprobación humana
+registrada **por página** — y **no puede publicar**:
+
+> *«The export does not call platform import, grading execution, or publishing paths»*
+>
+> *«The default Review Center stops at approved local PPTX download and does not offer platform import
+> or publishing»*
+
+🟢 **Es la única pieza de esta KB que cumple «borrador + liberación humana» de forma INCONDICIONAL, y lo
+cumple porque la capacidad de publicar no está en el binario.** 🔵 **La lección, que es la del patrón:
+una garantía que depende de que una compuerta funcione se cae cuando la compuerta se configura mal, se
+anula por precedencia (**P141**) o mira el objeto equivocado (**P140**). Una garantía que depende de una
+capacidad AUSENTE no tiene esa clase de falla.**
+
+### El cableado — dos procesos y un artefacto en el medio
+
+```
+   ┌─────────────────────────┐        artefacto          ┌──────────────────────────┐
+   │  GENERACIÓN (agente)    │   revisado y aprobado     │  PUBLICACIÓN (persona)   │
+   │  · corrige, redacta     │ ────────────────────────► │  · abre el artefacto     │
+   │    devolución y nota    │   (CSV / paquete / draft) │  · ejecuta el import o   │
+   │  · WAITING_REVIEW       │                           │    libera el estado      │
+   │  🔴 SIN credencial de   │                           │  🟢 con SU credencial    │
+   │     escritura al LMS    │                           │                          │
+   └─────────────────────────┘                           └──────────────────────────┘
+```
+
+1. 🔴 **El proceso que genera NO tiene credencial de escritura al LMS.** Es la propiedad que hace el
+   patrón, y es la única que no se puede desconfigurar: sin token no hay escritura.
+2. 🟢 **El artefacto es el entregable revisable** —CSV de notas, paquete, borrador— y es lo que la
+   persona aprueba. **Revisable significa diffeable, no «visible en un chat».**
+3. 🟢 **La publicación la hace una persona con su propia credencial**, en la UI de la plataforma.
+4. ⚠️ **Dónde NO alcanza, y hay que decirlo:** el patrón **no automatiza la entrega de notas**. Si el
+   cliente pide que el agente publique, se vuelve a **P142** y entonces la verificación de plataforma es
+   obligatoria. 🔵 **Lo que este patrón compra es que «borrador» deje de ser una promesa del README.**
+
+🔵 **Y cómo se compone con lo que esta KB ya tiene:** la generación puede usar cualquiera de los tutores
+de `agents/top.md`; el artefacto de notas en lote es el CSV de **P143**; y si hace falta escribir por
+API, la puerta elegida pasa primero por el filtro de **P142** (excluir la que afirma, configurar las
+que heredan).
 
 ## P141 — La compuerta se fija donde se arma el comando, no sólo en el entorno (agregado en el pase 57 del 2026-10-03)
 

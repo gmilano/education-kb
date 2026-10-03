@@ -50,6 +50,19 @@ o la variable de entorno (regla de **P107**, pase 47):
 | `trend-backlink-audit/` | cada tendencia citada tiene su sección y su evidencia | `python3 test_trends.py` | **22/22** |
 | **`suite-total-control/`** | **la regla de P126: un contador por vocabulario acierta en `PASS` y FALLA en `ok`; el lector del total propio acierta en los dos** | `python3 test_control.py` | **10/10** |
 
+⚠️ **Pase 58 del 2026-10-03 — la columna «Hoy» NO se re-verificó en este pase, y el motivo es del entorno:** el
+barrido de las 14 suites OFFLINE quedó **NEGADO** (`[Code from External]`) sobre `python3 test_*.py` **sin red**.
+**No se reimplementaron, no se buscó otro intérprete y no se trocearon el comando** — la negativa es sobre el
+resultado, no sobre la forma. 🔴 **Consecuencia que se declara en vez de taparse: las cifras de la tabla de abajo
+son las que el pase 56 reprodujo; el pase 58 NO las afirma como medidas hoy.**
+
+🔵 **Y corrige al pase 52 en la dirección contraria.** Ese pase midió la frontera y la declaró más angosta
+—*«la negativa es sobre EJECUTAR CON RED código que vino clonado, no sobre ejecutar el código»*—; **hoy alcanzó a la
+ejecución sin red.** ⚠️ **La frontera es del ENTORNO y varía entre pases, así que no se vuelve a publicar como regla
+general** — que es exactamente el error que los pases 50 y 51 cometieron y el 52 corrigió, ahora en el otro sentido.
+🔴 **El permiso a pedir es angosto y es uno: ejecución de las suites OFFLINE del árbol clonado** (no incluye red; la
+salida de red para `probe.py` sigue siendo un pedido aparte, del pase 52).
+
 🟢 **Pase 55 del 2026-10-03: la columna «Hoy» se re-verificó COMPLETA y las once suites reprodujeron su
 cifra publicada.** Las once corren OFFLINE en este entorno.
 

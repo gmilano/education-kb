@@ -180,6 +180,28 @@ corre ése antes de escribir uno a mano** (tendencia **313**). 🟢 **Y el `gafa
 > sin saber de antemano qué archivo pedir— y además **fecha el `HEAD`**. Con `raw` no se habría encontrado ninguno de
 > los cuatro defectos del pase.
 
+## 🧱 La base que este pase agrega no es una plataforma: es el patrón de separación generación/publicación (pase 58 del 2026-10-03)
+
+🔵 **El pase 58 no encontró plataforma nueva, y lo dice en vez de rellenar.** Las cuatro búsquedas globales
+devolvieron por decimotercera vez la capa genérica de agentes (OpenClaw, opencode, CrewAI, LangGraph, OpenHands) y
+material didáctico *sobre* AI, **que no es una base de la industria**. 🟢 **Lo que sí entró como punto de partida es
+un repo chico con una propiedad arquitectónica que esta base necesitaba:**
+
+| Repo | Licencia | Qué aporta como PUNTO DE PARTIDA |
+|---|---|---|
+| [`littlecookie0722/AI-Teaching-Agent`](https://github.com/littlecookie0722/AI-Teaching-Agent) | **MIT** ✅ (texto del `LICENSE` leído: *«Copyright (c) 2026 littlecookie»*) | 🟢 **la implementación de referencia de P144**: genera laboratorio, examen y artefactos de corrección con DSL estructurados, `WAITING_REVIEW` y aprobación humana por página, **y no tiene camino de publicación** — *«The export does not call platform import, grading execution, or publishing paths»*. **30 commits, 0 ★, Python** |
+
+⚠️ **Por qué se lista acá además de en `agents/top.md`:** como agente es joven y chico; **como punto de partida vale
+por su forma** — el proceso que genera **no tiene credencial de escritura al LMS**, que es la única propiedad de las
+medidas en los pases 56–58 que no se puede desconfigurar. 🔴 **Y lo que NO hay que esperar de él: no escribe en
+ningún LMS**, así que un *engagement* que deba entregar notas necesita además una de las puertas de **P142** (y
+entonces la verificación de plataforma es obligatoria) o el camino del importador CSV de **P143**.
+
+⚠️ **Rechazo medido en el mismo barrido, para que el registro no parezca cobertura:**
+[`dajiaohuang/WayMarker`](https://github.com/dajiaohuang/WayMarker) (tutor adaptativo con RAG y modelo de alumno
+persistente) **queda afuera por licencia ausente MEDIDA** — `LICENSE` **404 en `main` y en `master`**, sin licencia
+en el *sidebar*, 1 commit, 0 ★.
+
 ## 🧾 Capa de licencia de la capa de AGENTES — los 167 repos de `agents/top.md`, medidos con 20 nombres de archivo (agregada en el pase 51 del 2026-10-02)
 
 **El pase 50 midió la licencia de los 32 paquetes de REGISTRO (sección de abajo). Este pase mide la

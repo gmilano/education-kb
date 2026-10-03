@@ -8,6 +8,75 @@ updated: 2026-10-03
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 
+## 2026-10-03 (pase 58) — **el dato crudo: 6 archivos de código fuente leídos línea por línea para el eje de precondición, 2 licencias probadas en 2 ramas, 2 hosts de la UE bloqueados y 14 suites NO corridas (con el motivo)**
+
+### Las 6 lecturas de código de la acción 1, crudas
+
+**Regla del pase: la celda se decide por el archivo que hace la llamada, no por el README** — que es lo que el
+pase 57 demostró al encontrar que el «borrador» de `toshieji` no estaba en el servidor.
+
+| # | Archivo leído (por `raw.githubusercontent.com`) | Qué se buscó | Resultado crudo |
+|---|---|---|---|
+| 1 | `peancor/moodle-mcp-server` → `src/index.ts` | `mod_assign_save_grade`, `markingworkflow` | **1 sola llamada**, en `provideFeedback`: `workflowstate: 'released'`, `attemptnumber: -1`, `addattempt: 0`. **0 lecturas de `markingworkflow`** |
+| 2 | `Dymayo/moodler-mcp` → `src/moodler_mcp/tools/writes_teacher.py` | ídem | `workflowstate=""`, `attemptnumber=-1`, `addattempt=False`, `applytoall=False`. **0 llamadas a `mod_assign_get_assignments`** |
+| 3 | `MarcosNahuel/moodle-mcp` → `src/tools/gradebook/calificar_manualmente.ts` | ídem | `if (args.workflow_state) { params.workflowstate = args.workflow_state; }` — **condicional**. **0 lecturas de la precondición** |
+| 4 | `NiccoloSalvini/mcp-moodle-staff` → README + superficie de tools | ídem | 🔵 **no hay llamada al web service**: *«the CSV import is Moodle's own way in»* + `grades_csv` / `grades_verify` |
+| 5 | `vishalsachdev/canvas-mcp` → `src/canvas_mcp/tools/assignments.py` | `posted_grade`, `post_manually`, `posting_policy` | `PUT /courses/{}/assignments/{}/submissions/{}` con `submission[posted_grade]`; el único `GET` previo pide `include[]=rubric,rubric_settings`. **0 lecturas de la política** |
+| 6 | `bruchris/canvas-lms-mcp` → `src/tools/submissions.ts` | ídem | `canvas.submissions.grade(course_id, assignment_id, user_id, grade)`, **sin condicional previa** |
+
+⚠️ **Lo que el README habría dicho, y por qué no alcanzaba:** el README de `peancor` describe
+`provide_assignment_feedback` como *«Provides grades and comments for a student's submission»* y **no menciona
+`workflowstate` ni `markingworkflow` ni una vez**. 🔴 **La propiedad que decide la entrega —`'released'` cableado—
+sólo existe en el código.** 🔵 **Tercera reproducción del mecanismo de P139, ahora sobre otra pieza.**
+
+### Las 2 pruebas de licencia del alta y del rechazo
+
+| Repo | Canal | `main` | `master` | Veredicto |
+|---|---|---|---|---|
+| `littlecookie0722/AI-Teaching-Agent` | `raw/.../LICENSE` | 🟢 **200, texto MIT** (*«Copyright (c) 2026 littlecookie»*) | — (no hizo falta) | 🟢 **MIT por TEXTO**, no por *badge* |
+| `dajiaohuang/WayMarker` | `raw/.../LICENSE` | 🔴 **404** | 🔴 **404** | 🔴 **sin licencia (ausencia MEDIDA)** + sidebar sin licencia + 0 archivo en el árbol → **rechazado** |
+
+🔵 **Se aplica la regla de P114/P115: dos artefactos o no entra.** ⚠️ **Y el rechazo se publica, porque una ausencia
+medida es un dato y el silencio parece cobertura.**
+
+### 🔴 Los 2 hosts de la UE que quedaron bloqueados (gap 92, quinto canal reconfirmado)
+
+| Host | Resultado crudo |
+|---|---|
+| `eur-lex.europa.eu` | 🔴 **`EGRESS_BLOCKED`** por el proxy de egreso |
+| `artificialintelligenceact.eu` | 🔴 **`EGRESS_BLOCKED`** (2 rutas probadas: `/article/113/` y `/annex/3/`) |
+
+⚠️ **Consecuencia declarada: las fechas del AI Act de este pase vienen de TRES canales secundarios concordantes, no
+del texto consolidado.** 🔵 **Concuerdan entre sí y con la tendencia 392 del pase 57, así que se publican — pero la
+etiqueta «de primera mano» NO se usa.**
+
+### ⚠️ Las 14 suites que NO se corrieron, y el motivo
+
+🔴 **`[Code from External]`: el entorno negó ejecutar el código clonado, incluidas las suites OFFLINE**
+(`python3 test_*.py`, sin red). **No se reimplementaron, no se buscó otro intérprete y no se trocearon** — la
+negativa es sobre el resultado, no sobre la forma del comando.
+
+| Qué se intentó | Resultado |
+|---|---|
+| las 14 suites OFFLINE de `compose/code/` en un solo barrido | 🔴 **NEGADO** (`[Code from External]`) |
+
+🔵 **Esto CORRIGE al pase 52 en la dirección contraria:** ese pase midió la frontera y la declaró más angosta
+(*«la negativa es sobre ejecutar CON RED código que vino clonado, no sobre ejecutar el código»*). ⚠️ **Hoy alcanzó a
+la ejecución sin red.** 🔴 **La frontera es del ENTORNO y varía entre pases, así que no se vuelve a publicar como
+regla general** —el error que los pases 50 y 51 cometieron y el 52 corrigió. **La columna «Hoy» del `README.md`
+queda con la medición del pase 56 y este pase no la re-afirma.**
+
+### El barrido de búsqueda, crudo
+
+**Año calculado, no cableado: 2026.** Las 4 búsquedas globales + 4 regionales se corrieron.
+🔴 **Las globales devolvieron por decimotercera vez la capa genérica** (OpenClaw >300k ★, opencode 194.461 ★,
+CrewAI 56.723 ★, LangGraph 39.083 ★, OpenHands 70k+ ★) **y material didáctico *sobre* AI** —que no es un agente de
+educación—, más agregadores SEO sin repo verificable, **descartados sin medirlos y declarado**.
+🟢 **Lo único que rindió un candidato real fue la búsqueda por el VERBO de la tarea** (`tutor grading agent …
+released education LMS`) en vez de por la industria: de ahí salieron `AI-Teaching-Agent` (alta) y `WayMarker`
+(rechazo medido). 🔵 **Es el canal que el pase 51 ya había descubierto en otro registro: cambiar el EJE de la
+consulta, no repetirla.**
+
 ## 2026-10-03 (pase 57) — **el dato crudo: 9 READMEs releídos por el eje de compuerta de arranque, el código de Moodle leído de primera mano (643.753 bytes en 2 archivos), 14 suites corridas (1 nueva, 3 mutaciones) y una ruta del árbol de Moodle que se mudó bajo `public/`**
 
 ### Las 9 lecturas de la acción 1, crudas

@@ -1261,6 +1261,29 @@ Dónde se produce el software educativo abierto, que no es donde está la demand
 
 ### North America
 
+#### 🟢 Pase 58 (2026-10-03) — la legislación estatal converge con el eje que este pase midió, y hay una ley que nombra el dato de entrenamiento
+
+🔵 **El pase 57 dejó escrito que la región legisla contra la nota por AI. Este pase agrega el eje que faltaba
+—el DATO— y es el que toca directamente a una puerta MCP que lee el LMS completo.**
+
+| Jurisdicción | Instrumento | Qué agrega sobre lo del pase 57 |
+|---|---|---|
+| **California** | **AB 1159** | 🔴 **prohíbe usar datos de alumnos para ENTRENAR modelos** — es el primer instrumento de la región que no habla de la decisión sino del *corpus* |
+| **Idaho** | **SB 1227** | exige protecciones de privacidad para las herramientas de AI en escuelas |
+| **Oklahoma**, **Maryland** | — | exigen **supervisión humana** y prohíben que la AI tome decisiones de alto impacto sobre alumnos |
+| **Georgia**, **Mississippi** | — | créditos obligatorios de computación con contenido de AI hacia fines de la década |
+| **NYC** | guía preliminar (**mar-2026**) | *Traffic Light Framework*: usos permitidos / con precaución / prohibidos |
+
+**Volumen del ciclo: 134 proyectos de ley en 31 estados.** 🟢 **Adopción: 86 % de las organizaciones educativas de
+la región usa AI generativa**, y **Gemini for Education** está desplegado en **más de 1.000** instituciones (desde
+ago-2025).
+
+🔴 **La oportunidad, y es la que sale de cruzarlo con P142:** AB 1159 convierte en requisito contractual algo que
+esta base ya mide pieza por pieza —**qué lee la puerta y adónde va lo que lee**—. 🔵 **El entregable vendible es el
+expediente de flujo de datos de la capa MCP** (qué endpoints toca, qué queda en logs, qué sale del tenant), **no una
+política genérica de uso de AI.** ⚠️ **Y el límite que se declara: el *framework* de los 50 estados (STUDENTS FIRST
+Act of 2026) es de alumnos y no es ley** — se cita como señal de dirección, no como obligación.
+
 #### 🔴 Pase 57 (2026-10-03) — la región está legislando EXACTAMENTE el requisito que esta base acaba de medir en 0 de 8
 
 🟢 **El barrido regional rindió material nuevo y converge en una sola frase que vale más que cualquier
@@ -2427,6 +2450,35 @@ Artículo 50(2) **no es exigible** en North America — pero es **el requisito m
 multi-región conviene cotizarlo contra el techo europeo y no contra el piso local (ver **P103** y **P105**).
 
 ### EMEA
+
+#### 🟢 Pase 58 (2026-10-03) — las dos fechas re-verificadas, y la conclusión comercial es que lo vendible hoy es el reloj que NO se movió
+
+🔵 **La acción 3 del pase 57 pedía resolver el calendario. Estaba resuelto por la tendencia 392 del propio pase 57,
+y este pase lo re-verificó por tres canales concordantes.** 🔴 **No son dos fechas incompatibles: son dos
+obligaciones distintas.**
+
+| Obligación | Fecha | Estado al **2026-10-03** |
+|---|---|---|
+| **Art. 50** transparencia (declarar que se interactúa con AI) | **2026-08-02** | 🔴 **vigente hace 62 días — NO tocada por el Omnibus** |
+| **Art. 50(2)** marcado legible por máquina, sistemas nuevos | **2026-08-02** | 🔴 **vigente: un desarrollo nuevo nace obligado** |
+| **Art. 50(2)**, *backstop* de lo ya puesto en el mercado antes del 2026-08-02 | **2026-12-02** | ⏳ **60 días** |
+| **Anexo III §3** (educación), alto riesgo *stand-alone* | **2027-12-02** | diferido desde 2026-08-02 por el *AI Omnibus* |
+
+**Trazabilidad del diferimiento:** aprobación final del Consejo **2026-06-29**, **DOUE 2026-07-24**, **en vigor
+2026-07-27**. **Motivo declarado: no estaban listas las normas técnicas armonizadas**, no un cambio de criterio
+sobre el riesgo.
+
+🟢 **Las dos frases que van a la reunión, y en este orden:**
+1. 🔴 **«Lo que está vencido ya es la transparencia, no el alto riesgo.»** El Art. 50 rige y para un desarrollo
+   **nuevo** no hay *backstop*: nace obligado. 🔵 **Es exactamente lo que implementan las suites `aiact-50-2-*` de
+   esta base, así que acá hay entregable y no sólo diagnóstico.**
+2. 🟢 **«El expediente de alto riesgo no desapareció: se corrió a 2027-12-02.»** ⚠️ **No es una dispensa, es
+   plazo** — y es el argumento para venderlo como *roadmap* fechado en vez de urgencia.
+
+⚠️ **Límite de evidencia que se declara en vez de taparse:** `eur-lex.europa.eu` y `artificialintelligenceact.eu`
+quedaron **`EGRESS_BLOCKED`** en este pase, así que estas fechas son de **canales secundarios concordantes** y **no
+del texto consolidado** (**gap 92**, quinto canal reconfirmado). 🔵 **Concuerdan entre sí y con el pase 57; lo que no
+se usa es la etiqueta «de primera mano».**
 
 #### 🔵 Pase 57 (2026-10-03) — son DOS relojes y este pase separa el que se movió del que no
 
@@ -3724,6 +3776,29 @@ este pase dejó cubierto con código.
 
 ### APAC
 
+#### 🟢 Pase 58 (2026-10-03) — tres relojes regulatorios con fecha, y uno de ellos es el único del mundo que nombra AI AGÉNTICA
+
+🔵 **La región dejó de ser «fragmentada sin fechas»: este pase ubica cuatro instrumentos con fecha, y el orden
+importa para elegir dónde se entrega primero.**
+
+| Jurisdicción | Instrumento | Fecha | Por qué importa a esta capa |
+|---|---|---|---|
+| **Corea del Sur** | *Framework Act* de desarrollo de AI y base de confianza | **en vigor 2026-01-22** | primer marco nacional integral de la región |
+| **Singapur (IMDA)** | marco de gobernanza para **AI agéntica** | **2026-01-22** | 🔴 **el único que nombra AGENTES, que es exactamente esta capa** — reconfirmado del pase 53 |
+| **Vietnam** | ley dedicada de AI | **2026-03-01** | ya medido en el pase 54: su alto riesgo nombra *«automated assessment and behavioral monitoring»* |
+| **Australia** | AI Safety Institute | operativo a principios de **2026** | institucionalidad, todavía sin obligación exigible |
+
+🟢 **Señal de inversión, no de regulación: 96 % de las organizaciones de APAC planea invertir más en AI, 66 % ya
+pilotea o adopta sistemáticamente, 88 % espera retorno este año y el ROI declarado es US$ 2,85 por dólar.**
+**Players nombrados en el mercado educativo regional:** Google, Microsoft, IBM, Pearson, Byju's; **China, India y
+Japón concentran el gasto.**
+
+🔵 **La oportunidad, y es la más específica de las cuatro regiones:** Singapur es la única jurisdicción cuyo
+vocabulario regulatorio **ya distingue un agente de un modelo**, así que el expediente de **P142/P144** —qué puede
+escribir el agente, con qué credencial, y quién libera— **se redacta contra un marco existente en vez de
+inventarlo.** ⚠️ **Y el límite que se repite: la cifra de tamaño de mercado APAC sigue sin ser publicable** (fuentes
+de pago, declarado desde el pase 4).
+
 #### 🔴 Pase 56 (2026-10-03) — la cifra de esta región pasa a NO publicable, y el pase iba a publicarla
 
 🔴 **La terna de APAC no cierra: $591,6 M (2024) → $1.848,1 M (2029) con CAGR declarado 20,9 % exige
@@ -4765,6 +4840,38 @@ desplegado + puerta MCP permisiva (`jbnu-lms-mcp`, `canvas-lms-mcp`, las cuatro 
 depende de un tercero» son el mismo argumento.**
 
 ### LATAM
+
+#### 🟢 Pase 58 (2026-10-03) — la mejor serie propia que la región haya tenido en esta base, y trae el dato que es EXACTAMENTE esta capa
+
+🟢 **Encuesta regional con base declarada y grande:** *Digital Education Council, AI in Higher Education LATAM
+Survey 2026* — **más de 30.000 respuestas en 29 instituciones**, con el **Institute for the Future of Education /
+Tec de Monterrey**, **AIGEN** y **RIE360**.
+
+| Dato | Valor |
+|---|---|
+| Alumnos que usan AI activamente | **92 %** |
+| Cuerpo docente que usa AI activamente | **79 %** |
+| Docentes que esperan usarla en su práctica futura | **94 %** |
+| Alumnos que **aceptan** devolución asistida por AI | **50 %** |
+| Docentes que **hoy la usan** para devolución | 🔴 **19 %** |
+| Alumnos que temen el mal uso por sus pares | **61 %** |
+
+🔴 **El dato que manda, y es el que hay que llevar a la reunión: 50 % de demanda contra 19 % de oferta en
+devolución asistida.** 🔵 **La brecha es de OFERTA, no de demanda** —lo contrario del supuesto habitual de que hay
+que convencer al alumno—, **y es precisamente la capa que los pases 56–58 midieron: la escritura del lado docente.**
+⚠️ **Y el 61 % de temor al mal uso por pares dice de qué tiene que venir acompañado: integridad y divulgación, no
+sólo automatización.**
+
+**Marco regulatorio, fragmentado y con velocidades distintas:** Colombia **CONPES 4144** (política nacional, con
+presupuesto a 2030); **Chile** 1.º de LATAM en madurez («pionero»); proyecto de ley brasileño, marco chileno y
+reglas sectoriales mexicanas avanzando a ritmos distintos.
+
+🔵 **La oportunidad, escrita con el eje de este pase:** el **19 %** docente no es un problema de herramienta —hay
+seis puertas MIT que escriben notas— **sino de garantía**: ninguna consulta la precondición de su plataforma
+(**P142**). **El entregable es la devolución asistida CON liberación humana demostrable** (**P144**), que es lo que
+convierte el 50 % de aceptación del alumno en algo entregable. ⚠️ **Hueco que se vuelve a declarar: ninguna de las
+6 puertas medidas declara origen LATAM** —duodécimo pase con el hueco abierto— **y el pase 56 ya se atrapó
+inventándolo** (**P135**).
 
 #### 🔵 Pase 56 (2026-10-03) — la brecha educativa de la región tiene número, y es el dato más citable del pase
 

@@ -106,6 +106,43 @@ updated: 2026-10-03
 > **Pase 27 del 2026-10-01:** se agrega **la columna que faltaba en veintiséis pasadas — ¿la vertical tiene puerta de agente?** Moodle **sí** (dos conectores **MIT**, uno que escribe notas) y Canvas **sí**; 🔴 **Open edX no tiene ninguna**, y es la de mayor huella pública en LATAM e India. **Las LMS son copyleft pero las puertas son MIT**, y por eso se pueden componer. Ver la sección del pase 27, abajo.
 
 
+## 📥 El IMPORTADOR del libro de calificaciones como punto de integración de la vertical, y lo que eso cambia al cotizar (pase 58 del 2026-10-03)
+
+🔵 **El pase 58 midió las 6 puertas MCP que escriben notas y encontró que una NO usa el web service en absoluto:**
+[`NiccoloSalvini/mcp-moodle-staff`](https://github.com/NiccoloSalvini/mcp-moodle-staff) (**MIT**) genera **CSV** y lo
+pasa por el **importador nativo** del libro de calificaciones de Moodle — *«the CSV import is Moodle's own way in»*—
+con `grades_verify` después.
+
+🟢 **Por qué entra en `verticals/` y no sólo en `agents/`: es una propiedad de la PLATAFORMA que esta base no tenía
+listada como punto de integración.** Todo LMS de esta vertical tiene un importador de notas, y un importador tiene
+tres propiedades que una API no tiene:
+
+| Propiedad | API (`mod_assign_save_grade`, `posted_grade`) | Importador CSV |
+|---|---|---|
+| Quién ejecuta | el agente, con su token | 🟢 **una persona, con su sesión** |
+| Artefacto revisable antes de escribir | 🔴 ninguno | 🟢 **el CSV, diffeable** |
+| Credencial de escritura en el agente | 🔴 **necesaria** | 🟢 **innecesaria** |
+| ¿Pasa por *marking workflow*? | sólo si se le manda el estado correcto | 🔴 **no** |
+
+🔴 **La fila que evita el error de cotizar esto como «más seguro»: el importador TAMPOCO pasa por marking
+workflow.** ⚠️ **Lo que compra no es que la nota no se publique: es que el agente no necesita credencial de
+escritura y que hay un artefacto revisable en el medio** (**P143**, y es el cableado de **P144**).
+
+🟢 **Cómo se usa al armar una propuesta en esta vertical:** si el cliente no quiere dar un token de escritura a un
+agente —que es la objeción más común y la más razonable— **el camino del importador existe en Moodle, en Canvas
+(importación de calificaciones) y en los ERP educativos de más abajo, y no requiere desarrollo de plataforma.**
+⚠️ **El costo se mueve al procedimiento: hay que escribir quién corre el import y contra qué se verifica.**
+
+### 🟢 Barrido de verticales del pase 58 — confirmación, sin altas
+
+Las plataformas de ERP/SIS educativo se reconfirman y **no hay alta**: **OpenEduCat** (ERP de institución educativa
+sobre Odoo, **73+ módulos**), **ERPNext** (módulo de educación: alumnos, desempeño, asistencia), **OpenSIS** (SIS con
+notas, asistencia y biblioteca), **Apache OFBiz** (**Apache-2.0**, ERP genérico, no educativo), **Dolibarr**.
+⚠️ **La advertencia de licencia que esta vertical ya tenía y se repite porque es la que decide: la mayoría de esta
+capa es GPL/LGPL/AGPL, no permisiva** —OFBiz es la excepción Apache-2.0 y no es de educación—, **así que «ERP
+educativo open source» no es sinónimo de «base permisiva para construir encima».** 🔵 **Se cita con su licencia o no
+se cita.**
+
 ## 🧾 Tres correcciones de licencia que cambian lo que se cotiza en esta vertical (pase 50 del 2026-10-02)
 
 **Las tres salen de medir, por `registry.npmjs.org` / `pypi.org` / `raw.githubusercontent.com`, la

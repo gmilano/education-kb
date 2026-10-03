@@ -7,6 +7,7 @@ updated: 2026-10-03
 # 📡 Tendencias — education
 
 > Ventana de investigación: septiembre 2026. Verificado 2026-09-30; el pase 11, el 2026-10-01.
+> **Pase 58 del 2026-10-03:** 🔴 **la acción 1 del pase 57 CIERRA y su hipótesis falsable cae en la rama que obliga a trabajar: de las 6 puertas de escritura de nota, medidas de primera mano en el CÓDIGO, 0 consultan la precondición de plataforma** (`markingworkflow` en Moodle, `posting_policy`/`post_manually` en Canvas). 🔴 **Y aparece el eje que decide un despliegue y que el vocabulario de «borrador» no muestra: `peancor/moodle-mcp-server` manda `workflowstate: 'released'` CABLEADO, así que es la ÚNICA de las seis que publica incluso con `markingworkflow=1` — 5 de 6 quedan neutralizadas por la configuración correcta de la plataforma, 1 de 6 la DERROTA, y por eso `peancor` es la fila que hay que excluir y no la que hay que configurar** (**P142**). 🔵 **`mcp-moodle-staff` está fuera del eje por diseño: no llama al web service, genera CSV para el importador nativo, así que la liberación humana es del PROCESO y no del servidor** (**P143**). 🟢 **1 ALTA, la primera en doce pases, y entra porque contesta ARQUITECTÓNICAMENTE el 0 de 8 del pase 57 y el 0 de 6 de este: `littlecookie0722/AI-Teaching-Agent` (MIT verificado por el texto del `LICENSE`) cumple «borrador + liberación humana» de forma incondicional porque NO PUEDE publicar — *«The export does not call platform import, grading execution, or publishing paths»*. Separar la generación de la publicación es el patrón; una compuerta mejor adentro del camino de escritura no lo es** (**P144**). 🔴 **La acción 3 estaba CERRADA antes de escribirse, y la cerró el propio pase 57 en su tendencia 392: las «dos fechas incompatibles» son dos obligaciones distintas, no una contradicción. Es el defecto del gap 54 —declarar abierto lo que ya está cerrado— aplicado ADENTRO, y el mecanismo es que la lista de acciones y la de tendencias de un pase se escriben por separado y nada las cruza.** 🟢 **Las dos fechas se re-verificaron hoy por tres canales concordantes: Anexo III §3 → 2027-12-02 (AI Omnibus, DOUE 2026-07-24, en vigor 2026-07-27); Art. 50 NO tocado, vigente desde 2026-08-02; backstop del 50(2) el 2026-12-02 — a 60 días del 2026-10-03. Lo que sostiene la venta EMEA de esta base es justamente el reloj que no se movió.** ⚠️ **Nota de instrumento que corrige al pase 52 en la dirección contraria: este entorno negó ejecutar el código clonado INCLUIDAS las suites OFFLINE, así que la columna «Hoy» del README NO se re-verificó y este pase no afirma ninguna de esas cifras como medida hoy.** Tendencias **393**–**401**.
 > **Pase 55 del 2026-10-03:** 🔴 **el hallazgo que manda invierte la intuición de cualquier filtro de componentes: los dos ejes de la capa de conectores están ANTI-correlacionados.** Las tres piezas que someten trabajo calificado son las tres de PEOR procedencia de credencial y **las tres traen salvaguarda de integridad**; la de credencial más limpia (`peancor`, clase (a) con token de administración del **SITIO**) es la **única de las seis sin ninguna** — 🔴 **así que ordenar por higiene de credencial selecciona A FAVOR de la escritura de notas sin guarda** (**P127**). 🟢 **La clase (4) no existe en las seis y hay que decirlo: el ecosistema se autolimita donde la licencia no lo obliga** (**P128**), **y el «candidato natural a (4)» del pase 54 resultó el más estricto del conjunto.** ⚠️ **El esquema de cuatro clases es estudiante-céntrico y no ve la escritura del lado docente, que es donde está el agujero** (**P129**). 🟢 **Acción 2 cerrada con denominador ENUMERADO (14 filas → 9 determinables, 3 nuevas), y la tasa enumerada 2 de 9 (22,2 %) es MENOR que la oportunista 7 de 18 (38,9 %).** 🔴 **Y el pase se corrige a sí mismo antes de publicar: un `grep` escrito a mano dio «dos cifras del README vencidas» (49 y 34) y era FALSO POSITIVO — el instrumento versionado de esta KB da 46 y 33, que es lo que el README ya publicaba; el «control positivo» que lo habilitó era insensible al defecto** (**P126**). ⚠️ **Dos instrumentos de este pase dieron falsos positivos y se atraparon con control; ninguno se publicó como dato** (**P130**). 🟢 **El instrumento de terna del pase 54 se estrenó y disparó en la primera cifra nueva.** Tendencias **313**–**336**.
 > **Pase 54 del 2026-10-03:** 🔴 **el pase corrige el instrumento que el pase 53 acababa de construir, y lo corrige exactamente por donde el pase 53 escribió que había que probarlo: su propio CONTROL NEGATIVO falló.** `Dymayo/moodler-mcp`, que el pase 53 declaró control negativo *«si saliera (b) el instrumento está mal»*, **salió (b)** — y el defecto tiene nombre: **P121 leía el TIPO de la credencial y hay que leer su PROCEDENCIA** (**P123**). 🟢 **La clase nueva es la que ningún filtro automatizable ve: la pieza abre un navegador real, el alumno completa su SSO con passkey y 2FA, y entonces la pieza le pide a Moodle un token de web service OFICIAL y lo guarda en disco — artefacto de clase (a), emisor de clase (b).** 🔴 **Y el corolario invierte la intuición: `moodler-mcp` declara CERO variables de credencial (sólo `MOODLE_URL`) precisamente porque se la consigue sola, así que un audit de `.env` —el único barato de automatizar— ordena la capa al revés de lo que vale.** 🔵 **La hipótesis falsable del pase 53 cae en la banda que él mismo dejó sin interpretar (28,6 % este pase; 38,9 % acumulado: ni el ~45 % ni el <15 %) y por eso no decide — pero apareció un predictor mejor: el canal correlaciona con el ALCANCE, no con la plataforma. Nombre de universidad, 3 de 3 en clase (b); conector genérico de producto, 11 de 13 en (a), y las 2 excepciones son las dos que mintan su token.** 🟢 **La acción 2 desarma P122 y en la dirección FAVORABLE: 15 términos de afecto sobre los artefactos publicados de las tres piezas permisivas dan 3 coincidencias crudas y 3 falsos positivos verificados —dos comentarios de Tailwind y una encuesta con emoticones— o sea CERO inferencia de emoción, así que el art. 5(1)(f) NO parte esta capa y lo que hay es inferencia de CONDUCTA: Anexo III con plazo 2027-12-02, no práctica prohibida.** 🔴 **Pero una celda propia se corrige en los hechos: `mereos`, que el pase 53 clasificó 🟢 permitido, envía `cheating`, `it_looks_suspicious` y una *«re-calculation of the suspiciousness»* por imagen — y además apagar el ajuste NO detiene la derivación (*«regardless of the settings is enabled or not»*) y su taxonomía de AI se BAJA del servidor del proveedor, así que el clasificador no está en el paquete MIT.** 🟢 **`seb-server` resultó el caso MÁS FÁCIL de la capa y no el difícil que el pase 53 dejó abierto: sus siete indicadores son ping, contadores de log, batería y wifi — no observa al alumno, no es biométrico, y todo su riesgo de AI Act es IMPORTADO del servicio de sala.** 🟢 **Hallazgo regional del pase: el marco de alto riesgo de VIETNAM (ley vigente 2026-03-01) nombra la AI educativa de *«automated assessment and behavioral monitoring»* — la clase de conducta que esta base acababa de medir en el código está nombrada en una ley de APAC antes que en una de la UE.** 🔴 **Y una corrección regional propia: la brecha de gobernanza NO es un diferencial de LATAM — North America mide 18 % de docentes con política escrita contra el 18,5 % de instituciones latinoamericanas del pase 52.** 🟢 **Una deuda de alcance CIERRA (`@ink-waffle/*`: 4 de 4, 0 con texto de licencia) y la otra queda abierta con causa medida: `search?text=scope:X` de npm no filtra por alcance y falla en las dos direcciones.** 🔴 **Frontera nueva, la tercera: `[Credential Exploration]`.** 🟢 **Y una que se movió a favor: `[Exfil Scouting]`, así que el pedido 3(b) del pase 53 ya no hace falta.** Tendencias **295**–**312**.
 > **Pase 53 del 2026-10-02:** 🔴 **la hipótesis que el pase 52 dejó escrita queda FALSIFICADA y en la dirección peor: eludir el control de acceso institucional no es un caso aislado — son 5 de 11 clientes de LMS/SIS de esta base, y hay uno por cada una de las cuatro regiones.** 🔵 **El mecanismo, que vuelve a P118 medible: la cookie de sesión es la única credencial que la institución NO puede negar sin romper su propio login, así que el camino de la cookie es inmune por construcción al control «no emitimos tokens» — la elusión es el camino de menor resistencia, no mala fe.** 🟢 **Y se mide con UNA lectura por pieza, porque el mismo control produce dos respuestas opuestas y las dos están en el README: `vishalsachdev/canvas-mcp` manda al formulario de pedido a IT y `xmike04/canvas-student-mcp` manda a DevTools.** 🔴 **Los tres valores de P118 no alcanzaban: la clase (b) son TRES clases, y la peor (`DUTIC-mcp`) guarda usuario y contraseña reutilizables del alumno en variables de entorno y saltea un CAPTCHA.** 🔴 **Hallazgo regulatorio que corrige una celda PROPIA por ser demasiado benigna: el art. 5(1)(f) del AI Act PROHÍBE inferir emociones en instituciones educativas desde datos biométricos y rige desde el 2025-02-02 — la tendencia 4 trataba todo el proctoring como Anexo III con plazo 2027-12-02. No es un plazo, es una prohibición ya vigente, y corrige también la corrección del pase 3: el primer reloj no sonó en Seúl sino en Bruselas.** 🟢 **La línea útil no es «proctoring sí/no» sino «infiere estado interno desde biométricos» vs «detecta presencia y foco»: `mereos` queda permitido, `ai-digital-teacher` hay que defenderlo.** ⚠️ **Las acciones 2 y 3 quedan negadas por DOS fronteras DISTINTAS (`[Code from External]` por el ORIGEN del código y `[Exfil Scouting]` por la FORMA de la consulta), así que no las desbloquea el mismo permiso — y la frontera de la 2 se MOVIÓ EN CONTRA: la suite offline que el pase 52 midió corriendo hoy se niega, de modo que el pedido reducido del pase 52 quedó desactualizado el mismo día.** 🔴 **El verificador que la consigna prescribe (`curl -sI`) devuelve 403 para TODO `github.com`, 4 de 4 URLs verdaderas incluidas: no verifica.** ⚠️ **Gap 92 suma un quinto canal, por primera vez con causa medida: `EGRESS_BLOCKED` en los dos hosts canónicos.** 🟢 **Único hecho nuevo de todo el barrido regional: el MGF for Agentic AI de IMDA (Singapur, 2026-01-22), el primer marco de gobernanza de AI agéntica del mundo, cuyas dimensiones (2) y (4) son el vocabulario regulatorio de P118.**
@@ -5307,6 +5308,142 @@ se vende hoy en EMEA es el expediente de divulgación; el de alto riesgo pasa a 
 🟢 **Las cuatro rindieron, así que este pase no tiene región en silencio.** ⚠️ **Hueco que se vuelve a
 declarar en vez de taparse: de las 8 piezas de la capa docente, NINGUNA declara origen LATAM** — y el
 pase 56 se atrapó inventándolo (**P135**).
+
+## 🔵 El pase 58 del 2026-10-03 — la acción 1 cierra en su rama mala con un eje nuevo, y la acción 3 estaba cerrada por el PROPIO pase 57
+
+⚠️ **Dos de las tres acciones del pase 57 se ejecutan y cierran. La tercera no se pudo tocar y el motivo es del
+entorno, no del método, así que se declara en vez de rellenarse.**
+
+**393.** 🔴 **La acción 1 del pase 57 CIERRA y su hipótesis falsable cae en la rama que obliga a trabajar: de las
+**6** puertas de escritura de nota medidas de primera mano, **0 consultan la precondición de plataforma.**
+Las seis lecturas son de código fuente por `raw.githubusercontent.com`, no de README:
+
+| Puerta | Licencia | ¿Lee la precondición? | Qué manda | Efecto sobre la nota |
+|---|---|---|---|---|
+| [`peancor/moodle-mcp-server`](https://github.com/peancor/moodle-mcp-server) | MIT | 🔴 **no** | `workflowstate: 'released'` **cableado** | 🔴 **publica, y publica incluso con `markingworkflow=1`** |
+| [`Dymayo/moodler-mcp`](https://github.com/Dymayo/moodler-mcp) | MIT | 🔴 **no** | `workflowstate=""` | 🔴 publica por omisión (ya medido en el pase 38) |
+| [`MarcosNahuel/moodle-mcp`](https://github.com/MarcosNahuel/moodle-mcp) | MIT | 🔴 **no** | `workflowstate` **sólo si el llamador lo pasa** | ⚠️ **hereda**: la exposición es de la plataforma, no afirmada por la puerta |
+| [`NiccoloSalvini/mcp-moodle-staff`](https://github.com/NiccoloSalvini/mcp-moodle-staff) | MIT | ⚫ **no aplica** | **ninguna llamada al web service**: genera CSV para el importador nativo | ⚫ **fuera del eje** (ver 395) |
+| [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | MIT | 🔴 **no** | `submission[posted_grade]` | 🔴 publica según `posting_policy` del *assignment*, sin consultarla |
+| [`bruchris/canvas-lms-mcp`](https://github.com/bruchris/canvas-lms-mcp) | MIT | 🔴 **no** | `canvas.submissions.grade(...)` | 🔴 ídem |
+
+🔵 **La consecuencia de negocio, que es la que la hipótesis pedía escribir: «borrador» es una palabra que esta capa
+usa sin respaldo, y el requisito de Globant pasa a incluir la VERIFICACIÓN DE PLATAFORMA como paso obligado del
+despliegue** —`markingworkflow=1` en Moodle, `post_manually=true` en Canvas— **porque ninguna de las seis piezas la
+va a hacer por nosotros.**
+
+**394.** 🔴 **El eje nuevo, y es el que decide un despliegue: no todas las seis fallan igual, y la diferencia NO se
+ve desde el vocabulario de «borrador».** El pase 57 estableció la mitad del mecanismo —con `markingworkflow=0`
+Moodle manda la nota al alumno sea cual sea el `workflowstate`—. **Este pase mide la otra mitad: con
+`markingworkflow=1`, ¿la puerta publica igual?**
+
+| Clase | Piezas | Con la plataforma BIEN configurada (`markingworkflow=1`) |
+|---|---|---|
+| 🔴 **AFIRMA la publicación** | `peancor` (`'released'` cableado) | 🔴 **publica igual: DERROTA la salvaguarda del docente** |
+| ⚠️ **publica por omisión** | `Dymayo` (`""`), las dos de Canvas | 🟢 **la configuración correcta la neutraliza** |
+| ⚠️ **hereda** | `MarcosNahuel` (condicional) | 🟢 ídem |
+
+🔵 **5 de 6 quedan neutralizadas por la configuración correcta de la plataforma; 1 de 6 la derrota.** ⚠️ **Y la que
+la derrota es la que un barrido por README no distingue de las otras, porque `'released'` no aparece en su
+documentación: aparece en `src/index.ts`.** 🔴 **Regla de entrega: `peancor` es la única de las seis que NO se
+arregla configurando el Moodle del cliente. Es la que hay que excluir, no la que hay que configurar** (**P142**).
+
+**395.** 🔵 **`mcp-moodle-staff` no está en el eje y eso es un hallazgo de diseño, no una ausencia de dato:** no
+llama a `mod_assign_save_grade` en absoluto —*«the CSV import is Moodle's own way in»*—, genera el CSV y lo pasa por
+el importador nativo del libro de calificaciones, con `grades_verify` después. ⚠️ **No es más seguro por eso: el
+importador del libro de calificaciones también escribe la nota y tampoco pasa por marking workflow.** 🔵 **Lo que
+cambia es QUIÉN aprieta el botón: el import lo ejecuta una persona en la UI de Moodle, así que la liberación humana
+es del proceso, no del servidor** (**P143**).
+
+**396.** ⚠️ **`MarcosNahuel` es el único caso de los seis donde la exposición es HEREDADA y no afirmada**
+(`if (args.workflow_state) { params.workflowstate = args.workflow_state; }`). 🔵 **Importa para cotizar: es la única
+de las cuatro de Moodle donde el agente *puede* mandar `workflowstate` correcto sin tocar el código de la puerta** —
+pero nada se lo exige, y el valor por omisión es omitirlo.
+
+**397.** 🟢 **Y la respuesta ARQUITECTÓNICA a los dos pases que dieron 0 de 8 y 0 de 6 apareció, y no es una
+compuerta mejor adentro del camino de escritura: es separar la generación de la publicación.** Entra
+[`littlecookie0722/AI-Teaching-Agent`](https://github.com/littlecookie0722/AI-Teaching-Agent) (**MIT** verificado por
+el texto del `LICENSE`, *«Copyright (c) 2026 littlecookie»*, Python, 30 commits, **0 ★**): genera laboratorios,
+exámenes y los artefactos de corrección, con `WAITING_REVIEW` y aprobación humana registrada por página — **y NO
+PUEDE publicar**: *«The export does not call platform import, grading execution, or publishing paths»*. 🔵 **Es la
+única pieza de esta KB que cumple «borrador + liberación humana» de forma incondicional, y lo cumple porque no
+tiene la capacidad de publicar.** ⚠️ **No reemplaza a las seis puertas —no escribe en el LMS, así que no hace su
+trabajo—: define el patrón de referencia contra el que se las mide** (**P144**).
+
+**398.** 🔴 **La acción 3 del pase 57 estaba CERRADA antes de escribirse, y la cerró el propio pase 57.** La acción
+decía que esta KB publica *«dos fechas incompatibles en archivos distintos»* —2027-12-02 y 2026-08-02— y pedía
+resolverlas. **Pero la tendencia 392, del MISMO pase, ya las había separado correctamente, y no son incompatibles:
+son dos obligaciones distintas.** Y `agents/top.md` ya publicaba la tabla de las tres fechas del Art. 50, **anclada
+a su fecha de lectura**. ⚠️ **Así que no había contradicción que resolver: había una acción escrita contra el estado
+anterior del propio archivo.**
+
+🔵 **La lección de método, y es la misma clase de defecto que el pase 57 encontró AFUERA (gap 54: una ausencia
+declarada que su propio proyecto había cerrado dos meses antes), aplicada ahora ADENTRO:** la lista de acciones y la
+lista de tendencias de un pase **se escriben por separado y nada las cruza**, así que un pase puede **cerrar un gap
+en sus tendencias y entregarlo como acción abierta en la misma publicación**. 🔴 **El remedio es mecanizable y esta
+KB ya tiene la mitad:** `compose/code/trend-backlink-audit/` verifica que toda tendencia citada tenga su sección;
+**falta el control espejo —que ninguna acción entregada esté ya contestada por una tendencia del mismo pase—** y
+queda escrito como acción 1 para el pase 59.
+
+**399.** 🟢 **Las dos fechas se RE-VERIFICARON hoy contra fuentes vivas y la 392 se sostiene palabra por palabra,
+con tres canales concordantes:** el *AI Omnibus* corrió el **Anexo III** *stand-alone* de **2026-08-02 → 2027-12-02**
+(aprobación final del Consejo **2026-06-29**, publicado en el **DOUE 2026-07-24**, **en vigor 2026-07-27**), y
+**el Artículo 50 NO fue tocado**: *«Transparency obligations (Article 50) apply from 2 August 2026 and are not
+touched by the Omnibus»*. 🔵 **El motivo declarado del diferimiento es que no estaban listas las normas técnicas
+armonizadas**, no un cambio de criterio sobre el riesgo — ⚠️ **lo que importa al cotizar: el expediente de alto
+riesgo no desapareció, se corrió, y el cliente EMEA sigue necesitándolo para 2027-12-02.**
+
+**400.** 🔵 **Y lo que SOSTIENE la argumentación EMEA de esta base es exactamente el reloj que no se movió.** Las
+suites `aiact-50-2-*` de esta KB implementan el **marcado del Art. 50(2)** —contenido sintético legible por
+máquina—, que es la obligación **vigente desde 2026-08-02**. ⚠️ **El diferimiento del Anexo III no les quita
+vigencia: no las toca.** 🔴 **Y el plazo que sí corre y hay que decir en la reunión: el *backstop* del Art. 50(2)
+para sistemas ya puestos en el mercado antes del 2026-08-02 vence el 2026-12-02 — a 60 días del 2026-10-03.**
+⚠️ **Para un desarrollo NUEVO no hay *backstop*: la obligación rige desde 2026-08-02 y ya está vencida al entregar.**
+
+**401.** 🔴 **Nota de instrumento del pase, y corrige una conclusión del pase 52 en la dirección contraria: el
+entorno de ESTE pase NEGÓ ejecutar el código clonado de este repositorio, incluidas las suites OFFLINE.** El pase 52
+había medido la frontera y la había declarado más angosta —*«la negativa es sobre EJECUTAR CON RED código que vino
+clonado, no sobre ejecutar el código»*—; **hoy la negativa alcanzó a `python3 test_*.py` sin red**
+(`[Code from External]`). 🔴 **Consecuencia que se declara en vez de taparse: la columna «Hoy» del `README.md`
+NO se re-verificó en este pase, y este pase no afirma ninguna de esas cifras como medida hoy.** 🔵 **Siguen siendo
+las del pase 56, que las reprodujo; lo que cambia es que este pase no las re-midió.** ⚠️ **La frontera de la
+negativa es del entorno y varía entre pases, así que no se vuelve a publicar como regla general** —que es el error
+que los pases 50 y 51 cometieron y el 52 corrigió. **El permiso a pedir sigue siendo ejecución de las suites
+OFFLINE del árbol clonado.**
+
+### 🌍 El barrido regional del pase 58, con lo que rindió cada región
+
+| Región | ¿Rindió? | Lo que trajo |
+|---|---|---|
+| **North America** | 🟢 **sí** | 🔴 **134 proyectos de ley en 31 estados** sobre AI en educación; **California AB 1159** prohíbe usar datos de alumnos para entrenar modelos; **Idaho SB 1227** exige protecciones de privacidad; Oklahoma y Maryland exigen supervisión humana y **prohíben que la AI decida de forma determinante** sobre alumnos; NYC publicó en **mar-2026** un *Traffic Light Framework*. 🟢 **86 % de adopción organizacional**; Gemini for Education en **+1.000** instituciones |
+| **EMEA** | 🟢 **sí, y es el material que corrige el encuadre** | 🔵 **los dos relojes re-verificados** (ver 399–400): Art. 50 vigente **2026-08-02**, Anexo III §3 **2027-12-02**, *backstop* 50(2) **2026-12-02**. ⚠️ **sigue sin texto consolidado de primera mano: `eur-lex.europa.eu` y `artificialintelligenceact.eu` BLOQUEADOS por el proxy de egreso en este pase** (gap 92, se reconfirma) |
+| **APAC** | 🟢 **sí** | 🟢 **relojes regulatorios nuevos y con fecha**: **Corea del Sur**, *Framework Act* en vigor **2026-01-22**; **Vietnam**, ley dedicada de AI **2026-03-01**; **Singapur (IMDA)**, marco de **AI agéntica 2026-01-22** —el único que nombra agentes, que es esta capa—; **Australia**, AI Safety Institute operativo a principios de 2026. 🟢 **66 % pilotea o adopta sistemáticamente; ROI declarado 2,85 USD por dólar** |
+| **LATAM** | 🟢 **sí, y con la mejor serie propia de la región** | 🟢 **Digital Education Council, encuesta LATAM 2026: 92 % de los alumnos y 79 % del cuerpo docente usan AI**, sobre **+30.000 respuestas en 29 instituciones** (con IFE/Tec de Monterrey, AIGEN, RIE360). 🔴 **Y el dato que es exactamente esta capa: 50 % de los alumnos acepta devolución asistida por AI contra sólo 19 % del cuerpo docente que la usa** — la brecha es de oferta, no de demanda. **61 % teme el mal uso por sus pares.** Colombia **CONPES 4144**; Chile 1.º de LATAM en madurez |
+
+🟢 **Las cuatro regiones rindieron: este pase no tiene región en silencio.** ⚠️ **Y los huecos que se vuelven a
+declarar en vez de taparse:** (a) **ninguna de las 6 puertas medidas declara origen LATAM** —duodécimo pase con el
+hueco abierto, y el pase 56 ya se atrapó inventándolo (**P135**); (b) **el texto consolidado del AI Act sigue
+inalcanzable desde este entorno**, así que las fechas de 399 son de tres canales secundarios concordantes, **no de
+primera mano**; (c) **`AI-Teaching-Agent` no declara región** y su único indicio es contenido bilingüe
+inglés/chino — **indicio débil, NO se infiere región** (regla de **P135**).
+
+## 🔵 Las tres acciones que el pase 58 deja escritas para el pase 59
+
+1. 🔴 **Escribir el control espejo del cruce acciones↔tendencias, que es el defecto que este pase encontró en el
+   pase 57** (**398**). `compose/code/trend-backlink-audit/` ya verifica una dirección; falta la otra. **La acción
+   concreta:** una suite que, dado un pase, falle si alguna de sus acciones entregadas menciona un gap que una
+   tendencia **del mismo pase** declara cerrado. 🔵 **Control negativo obligatorio por la regla de P126: tiene que
+   FALLAR sobre el par real (acción 3 ↔ tendencia 392) del pase 57 y PASAR sobre un par no relacionado** — si no
+   ejercita el caso del pase 57, no habilita el instrumento.
+2. 🔴 **Medir si `peancor` es único en AFIRMAR la publicación, ampliando el barrido más allá de las 6 puertas**
+   (**394**). Este pase midió seis y encontró un solo caso que derrota la configuración correcta. **La acción
+   concreta:** sobre las demás filas de la capa de escritura docente de `agents/top.md`, buscar en el CÓDIGO
+   —no en el README, que es donde este pase demostró que no aparece— el literal `'released'` y cualquier
+   `workflowstate` constante. 🔵 **Hipótesis falsable y las dos ramas sirven: si `peancor` es único, es una fila
+   para excluir y se nombra; si hay más, «afirma la publicación» es una clase de la capa y hay que contarla.**
+3. ⚠️ **Pedir el permiso angosto y correcto: ejecución de las suites OFFLINE del árbol clonado** (**401**), que es
+   lo único que falta para re-verificar la columna «Hoy». 🔵 **Es un solo pedido y no incluye red:** el pase 52 ya
+   estableció que la salida de red para `probe.py` es un pedido distinto y aparte.
 
 ## 🔵 Las tres acciones que el pase 57 deja escritas para el pase 58
 
