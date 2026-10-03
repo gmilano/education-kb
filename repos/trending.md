@@ -8,6 +8,126 @@ updated: 2026-10-03
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 
+## 2026-10-03 (pase 57) — **el dato crudo: 9 READMEs releídos por el eje de compuerta de arranque, el código de Moodle leído de primera mano (643.753 bytes en 2 archivos), 14 suites corridas (1 nueva, 3 mutaciones) y una ruta del árbol de Moodle que se mudó bajo `public/`**
+
+### Las 9 lecturas de la acción 1, crudas
+
+**Canal: `raw.githubusercontent.com`, rama `main`, `README.md` — 9 de 9 en 200.**
+
+| Pieza | bytes | Variables de compuerta halladas | G |
+|---|---|---|---|
+| `toshieji/moodle-grading-mcp` | 8.326 | `MOODLE_ALLOW_WRITE` (×4), `MOODLE_WRITE_COURSE_ALLOWLIST` (×4) | **G2** |
+| `peancor/moodle-mcp-server` | 4.344 | 🔴 **ninguna** — 3 variables, las 3 de conexión | **G0** |
+| `MarcosNahuel/moodle-mcp` | 8.585 | `MOODLE_ALLOW_INSECURE` ⚠️ **es TLS, no escritura** | **G0** |
+| `vishalsachdev/canvas-mcp` | 39.479 | `ALLOWED_WRITE_TOOLS` (×2), `TOOL_MANIFEST` (×2) | **G3** ⚠️ |
+| `Dymayo/moodler-mcp` | 16.228 | `MOODLER_ALLOW_STUDENT_WRITES` (×7), `MOODLER_ALLOW_TEACHER_GRADING` (×3) | **G2′** |
+| `bruchris/canvas-lms-mcp` | 43.022 | `CANVAS_ROLE` (×10), `CANVAS_DESTRUCTIVE_TOOLS` (×6), `CANVAS_PROVENANCE_FENCING` (×2), `CANVAS_ENABLE_ASSIGNMENT_SUBMISSION` (×2) | **G0** (alcance) |
+| `NiccoloSalvini/mcp-moodle-teacher` | 8.827 | `MOODLE_STAFF_TOOLS` (×1) | **G1?** |
+| `NiccoloSalvini/mcp-moodle-staff` | 8.827 | 🟢 **sha256 IDÉNTICO al anterior** | — |
+| `PabloPC05/mcp-usc` | 34.404 | 🔴 ninguna de arranque | — |
+
+**Reparto: 3 de 8 con compuerta G2 o mejor sobre la escritura de juicio.** ⚠️ **`bruchris` es la pieza
+con MÁS variables de seguridad de toda la capa (16 `CANVAS_*`) y en este eje es G0, porque su
+desregistro real cubre los siete tools de borrado y no `grade_submission`.**
+
+### 🔴 El código de Moodle, leído de primera mano
+
+| Archivo | bytes | Qué se leyó |
+|---|---|---|
+| `public/mod/assign/externallib.php` | **142.802** | `save_grade` (líneas 2013-2062), `workflowstate` como **`PARAM_ALPHA`** (1987) |
+| `public/mod/assign/locallib.php` | **500.951** | los **6** estados (64-69), la regla de liberación (**2991-3001**), el registro del cambio (**7960**), `grading_disabled` (8796) |
+| `public/lib/moodlelib.php` | 369.302 | `PARAM_ALPHA` → `\core\param::ALPHA` = **`[a-zA-Z]`** (86-89) |
+
+### ⚠️ Nota de instrumento: el árbol de Moodle se mudó bajo `public/` (y la sonda de rama over-reporta)
+
+**Moodle 5 relocalizó el código de la aplicación bajo `public/`.** Medido este pase con 12 sondas:
+
+| Ruta | `main` | `MOODLE_405_STABLE` |
+|---|---|---|
+| `README.md` | **200** | **200** |
+| `config-dist.php` | **200** | **200** |
+| `version.php` | 🔴 **404** | **200** |
+| `lib/moodlelib.php` | 🔴 **404** | **200** |
+| `mod/assign/locallib.php` | 🔴 **404** | **200** |
+| `public/version.php` | 🟢 **200** | — |
+| `public/mod/assign/locallib.php` | 🟢 **200** | — |
+
+🔴 **Una sonda de rama contra `<rama>/README.md` devuelve 200 y NO prueba que el árbol del proyecto esté
+en esa rama.** Dos archivos de la raíz (`README.md`, `config-dist.php`) dan 200 en `main` mientras un
+tercero de la MISMA raíz (`version.php`) da 404. ⚠️ **Toca el instrumento de licencia de esta base: el
+veredicto «`LICENSE` 404 en `main` y `master`» sigue siendo válido como *«no está en esa rama»*, pero no
+como *«el proyecto no tiene licencia»* si el proyecto mudó su árbol.** 🔵 **Regla nueva: la sonda tiene
+que ser el archivo que se va a leer, no un hermano cualquiera** (**gap 250**).
+
+### Las 14 suites de `compose/code/`, corridas OFFLINE
+
+| Suite | Hoy | Nota |
+|---|---|---|
+| `aiact-50-2-pack` | **27/27** | reproduce |
+| `aiact-50-2-marking` | **23/23** | reproduce |
+| `aiact-50-2-exposure` | **11/11** | reproduce |
+| `sebserver-mcp-gate` | **37/37** | reproduce |
+| `unitime-mcp-gate` | **46/46** | reproduce |
+| `openedx-course-generator` | **33/33** | reproduce |
+| `proctoring-reach-audit` | **19/19** | reproduce (`exit=0`; el texto *«Control (c) FAILED»* de su salida es **narrativa histórica**, no una falla de hoy) |
+| `seb-proctoring-validator` | **21/21** | reproduce (`run_test.sh`, no `test_*.py`) |
+| `registry-license-remeasure` | **24/24** | reproduce |
+| `npm-surface-probe` | **19/19** | reproduce |
+| `mcp-allowlist-gateway` | **34/34** | reproduce |
+| `trend-backlink-audit` | **22/22** | reproduce |
+| `suite-total-control` | **10/10** | reproduce |
+| 🟢 **`grading-draft-gate`** | **37/37** | **NUEVA** — acción 2 del pase 56 |
+
+**Total: 14 suites, 383 aserciones, 0 fallas.**
+
+### 🟢 Las tres mutaciones de la suite nueva (que es lo que la hace un control)
+
+| Mutación en `gate.py` | Resultado | Quién la atrapa |
+|---|---|---|
+| `DRAFT_STATE = "released"` | **31/37** | las 5 de (i) + 1 de (iv-d) |
+| pie agregado sin chequear si ya está | **36/37** | *«NOT duplicated when already present»* |
+| allowlist vacía tratada como comodín | **35/37** | las 2 de *«empty allowlist is no write target»* |
+
+🔵 **Sin estas tres filas, «37/37» no dice nada: una suite que no puede fallar no es un control.**
+
+### ✅ Controles de integridad de este pase, corridos y con sus cifras
+
+| Control | Resultado |
+|---|---|
+| *frontmatter* en los 8 archivos | 🟢 **8/8**, `industry: education`, `region` dentro del vocabulario cerrado, `updated: 2026-10-03` |
+| tabla de inventario de `agents/top.md` (gap 71) | 🟢 **80 filas / 80 claves distintas / 0 duplicados** |
+| encabezados usados como dato | 🟢 **0** — las **70** tablas del archivo tienen su `\|---\|` debajo |
+| filas totales en las 70 tablas | 438 |
+| suites de `compose/code/` | 🟢 **14 corridas, 383 aserciones, 0 fallas** |
+
+⚠️ **Y dos falsos positivos de instrumentos escritos a mano EN ESTE PASE, atrapados antes de publicar
+—la clase P126 otra vez, y van tres pases seguidos:**
+
+1. 🔴 **El detector de «encabezado usado como dato» marcó 12 filas**, y las 12 eran filas de celdas
+   **vacías** (`| | |`, formato de tabla). El defecto: la condición *«todas las celdas son etiquetas
+   genéricas»* es **verdadera por vacuidad** cuando no hay ninguna celda. **Corregido exigiendo ≥ 2
+   celdas no vacías → 0 sospechosas.**
+2. 🔴 **El control de «fila con repo y sin licencia» marcó 33 filas**, y son filas de las tablas
+   **analíticas** (clase de credencial, compuerta, divulgación) que **no tienen columna de licencia** por
+   diseño: la licencia de esas piezas vive en la fila del inventario. **El denominador estaba mal, no los
+   datos.**
+
+🔵 **La lección es la de la tendencia 376 aplicada a los controles: un control que no puede distinguir
+«ausencia» de «no aplica» mide el esquema del autor, no el archivo.**
+
+### El barrido obligatorio, crudo
+
+| Consulta | Devolvió | Alta |
+|---|---|---|
+| `top open source AI agents education 2026 github MIT` | capa genérica (OpenClaw, CrewAI, OpenHands, opencode) + catálogos | 🔴 0 |
+| `github trending education AI 2026` | currículos (MS *GenAI for Beginners* 121k ★, DeepLearning.AI, HuggingFace) + `DeepTutor` **ya en esta base** | 🔴 0 |
+| `open source platform education ERP SIS MIT Apache 2026` | OpenEduCat (LGPL), openSIS (GPL), RosarioSIS, Gibbon, ERPNext | 🔴 0 (ninguna permisiva nueva) |
+| `AI education industry trends 2026 regulation disclosure grading` | 🟢 **material regulatorio nuevo y relevante** (ver `intel/`) | 🔴 0 |
+| North America / EMEA / APAC / LATAM | 🟢 **las cuatro rindieron** | 🔴 0 |
+
+⚠️ **Undécimo pase consecutivo sin altas por el canal de búsqueda, y por segunda vez el barrido devolvió
+una pieza de esta propia base (`DeepTutor`) presentada como novedad.**
+
 ## 2026-10-03 (pase 56) — **el dato crudo: 8 READMEs leídos por el eje de escritura docente con 8 clasificables, 13 suites corridas (2 nuevas, 2 corregidas), una cifra de esta base corregida en 8 archivos por propagación, y 3 ternas de mercado con 2 inconsistentes del MISMO proveedor**
 
 ### Las 8 lecturas de la acción 1, crudas

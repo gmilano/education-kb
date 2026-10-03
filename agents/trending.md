@@ -9,6 +9,130 @@ updated: 2026-10-03
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 > No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
 
+## 2026-10-03 (pase 57) — **la única celda verde de la capa docente se borra: el borrador de `toshieji` no es una propiedad del servidor sino de una casilla de Moodle que el servidor nunca mira, así que el T2 incondicional es 0 de 8; y la escalera de compuertas del pase 56 no es ordinal porque soldó dos ejes independientes**
+
+### 🔴 El hallazgo que manda: `markingworkflow` (P139)
+
+**La acción 2 del pase 56 pedía volver entregable el patrón de `toshieji` —*«lo único conforme que esta
+base encontró»*— con código versionado. Al escribir el stub contra el código REAL de Moodle apareció
+que la propiedad (i) del patrón no se cumple sola.**
+
+**Fuente de primera mano: `moodle/moodle` @ `main`, `public/mod/assign/locallib.php:2991-3001`.**
+Comentario del propio Moodle y su SQL:
+
+> *«Submissions are included if all are true: … **If marking workflow is enabled, the workflow state is
+> at 'released'.**»*
+
+```sql
+WHERE (a.markingworkflow = 0 OR (a.markingworkflow = 1 AND uf.workflowstate = :wfreleased)) AND
+```
+
+🔴 **Con `markingworkflow = 0`, Moodle le manda la nota al alumno sea cual sea el `workflowstate`.** Y
+en `locallib.php:7960` el cambio de estado **no se registra siquiera**:
+
+```php
+$modified->workflowstatechanged = $this->get_instance()->markingworkflow && ...
+```
+
+| Lo que dice el README de `toshieji` | Lo que mide el código de Moodle |
+|---|---|
+| *«Safety (**enforced server-side**)»* | ⚠️ la propiedad vive en la **tarea**, no en el servidor |
+| *«Grades are written as `workflowstate=readyforreview` (graded but **UNRELEASED**)»* | 🔴 **publicada** si la tarea tiene `markingworkflow=0` |
+| *«**No student notification** (draft state)»* | 🔴 **notificada** si la tarea tiene `markingworkflow=0` |
+| menciones de `markingworkflow` en sus 8.326 bytes | 🔴 **cero** |
+
+⚠️ **Consecuencia para la tabla de la capa: el T2 INCONDICIONAL es 0 de 8, no 1 de 8.** 🔵 **Y es una
+corrección de esta base sobre sí misma: nueve pases citaron `readyforreview` como el patrón de
+cumplimiento recomendado (tendencias 133, 134, y `compose/patterns.md`), sin la precondición.**
+
+### 🔴 La acción 1, y la escalera que no es ordinal (P137)
+
+**8 piezas, canal `raw.githubusercontent.com` rama `main`, 9 de 9 en 200.** Pregunta: ¿hay compuerta de
+**arranque** sobre el tool que escribe el **juicio**?
+
+| Pieza | Compuerta | Granularidad | ¿Desregistra? | Defecto | ¿Cubre la nota? | G |
+|---|---|---|---|---|---|---|
+| `toshieji/moodle-grading-mcp` | `MOODLE_ALLOW_WRITE` + `..._COURSE_ALLOWLIST` | global + recurso | 🔴 no | 🟢 fail-closed | ✅ sí | **G2** |
+| `vishalsachdev/canvas-mcp` | `ALLOWED_WRITE_TOOLS` | 🟢 **por tool** | 🟢 **sí** | 🔴 **fail-open en stdio** | ✅ sí | **G3** ⚠️ |
+| `Dymayo/moodler-mcp` | `MOODLER_ALLOW_TEACHER_GRADING` | por rol | 🟢 **sí** | 🟢 fail-closed | ✅ sí | **G2′** |
+| `bruchris/canvas-lms-mcp` | `CANVAS_DESTRUCTIVE_TOOLS=block` | conjunto de tools | 🟢 sí | ⚠️ `allow` | 🔴 **no** (7 borrados) | **G0** |
+| `NiccoloSalvini/mcp-moodle-staff` | `MOODLE_STAFF_TOOLS` | grupo (22→17) | ⚠️ sin determinar | 🔴 **fail-open** | ⚠️ sin determinar | **G1?** |
+| `peancor/moodle-mcp-server` | 🔴 ninguna | — | — | — | 🔴 no | **G0** |
+| `MarcosNahuel/moodle-mcp` | 🔴 ninguna (`ALLOW_INSECURE` es TLS) | — | — | — | 🔴 no | **G0** |
+| `openedx-mcp` | 🔴 ninguna de arranque (`is_staff`/`is_superuser`) | — | — | — | 🔴 no | **G0** |
+
+**3 de 8 con compuerta G2 o mejor sobre la nota.** 🔵 **La hipótesis pedía ≥ 4 o ≤ 2: 3 no decide, y es
+el SEGUNDO pase consecutivo con un umbral pre-registrado de 3-contra-4 aterrizando en el hueco. La
+lección es de diseño: un umbral sobre n = 8 se parte 4-contra-4.**
+
+🔴 **Lo que sí decide:** la escalera G0–G3 **soldó dos ejes ortogonales**. `Dymayo` es la compuerta más
+**gruesa** y **desregistra**; `toshieji` es más **fina** y **no**; y `CANVAS_ROLE` filtra el listado sin
+ser un límite, **dicho por el proyecto**: *«`CANVAS_ROLE` hides tools from a listing; `block` means the
+handler is never registered»*. **Cuarto pase consecutivo con un esquema insuficiente al primer contacto
+— y acá la clase abierta que el 56 recomendó no alcanzaba: hacían falta DOS COLUMNAS.**
+
+### 🔴 El sentido del defecto, el eje que no estaba (P138)
+
+> *«HTTP servers are read-only unless configured … **Local stdio servers are unchanged unless you set
+> it**»* — `vishalsachdev/canvas-mcp` v1.13.0
+
+🔴 **La compuerta más fina de la capa, nacida del *security release* del pase 56, está APAGADA por
+defecto en stdio, que es el despliegue normal de un docente.** De las 3 con compuerta real, **sólo 2 son
+fail-closed en local** (`toshieji`, `Dymayo`), **y las dos tienen 0 ★ contra las 272 ★ de la fail-open.**
+🔵 **Misma curva invertida que P134.**
+
+### 🟢 Una pregunta hacia afuera, contestada MIDIENDO (y su control negativo)
+
+El pase 56 dejó escrito *«preguntarle a `NiccoloSalvini` cuál de los dos nombres es el canónico»*. **No
+hizo falta preguntar:**
+
+| Medición | Resultado |
+|---|---|
+| `sha256` de `mcp-moodle-teacher/main/README.md` | `5c9e50eb…a385ca` |
+| `sha256` de `mcp-moodle-staff/main/README.md` | 🟢 **idéntico** |
+| título del README (los dos) | `# mcp-moodle-staff` |
+| **control negativo:** `mcp-moodle-foo`, `mcp-moodle-lecturer`, `mcp-moodle` del mismo dueño | 🟢 **404, 404, 404** |
+
+🟢 **El canónico es `mcp-moodle-staff` —el que titula— y esta base cita el otro.** 🔵 **El control
+negativo importa: sin él, «los dos nombres responden» podría ser un comodín del canal; con tres 404 del
+mismo dueño, es una redirección real de renombrado.**
+
+### 🟢 Acción 2 cerrada: `compose/code/grading-draft-gate/` (37/37)
+
+Las **tres** propiedades por separado **más** los controles negativos que el 56 exigió, contra un stub
+que reproduce el contrato real (`PARAM_ALPHA`, los seis estados, la regla de liberación, `accessexception`).
+
+| Bloque | Aserciones |
+|---|---|
+| (i) `readyforreview` y nunca liberada | 7 |
+| (ii) pie de divulgación: se agrega si falta, no se duplica | 5 |
+| (iii) allowlist de cursos + `MOODLE_ALLOW_WRITE` + allowlist vacía ≠ comodín | 8 |
+| 🔴 (iv) controles negativos | 12 |
+| el stub castiga lo que castiga Moodle | 5 |
+
+🔴 **El control (iv-b) es el que vale: con el chequeo de precondición apagado, el servidor manda
+`readyforreview` correctamente Y Moodle notifica al alumno igual.** 🟢 **Y tres mutaciones prueban que la
+suite tiene dientes: `DRAFT_STATE="released"` → 31/37; pie sin chequear → 36/37; allowlist vacía como
+comodín → 35/37.**
+
+### ⚠️ El barrido obligatorio: undécimo pase sin altas
+
+**Cuatro globales + cuatro regionales, año calculado: 2026.** Devolvió por undécima vez la capa genérica
+y material didáctico *sobre* AI. **0 altas; la tabla sigue en 80 filas.** 🔵 **El rendimiento marginal
+del eje de descubrimiento sigue medido en cero; el valor del pase estuvo entero en releer filas que ya
+estaban por un eje nuevo, como en los pases 53 y 56.**
+
+### ⚠️ Fronteras del entorno, reproducidas
+
+| Control | Resultado |
+|---|---|
+| `curl -sI https://github.com/moodle/moodle` | **403** |
+| `curl -sI` sobre un repo inventado | **403** — 🔴 **no discrimina** |
+| `raw.githubusercontent.com/…/main/README.md` real | **200** |
+| idem inventado | **404** — 🟢 **discrimina** |
+| `grep` multi-patrón sobre el markdown de esta KB | 🔴 **negado por `[Credential Exploration]`** (tercera reproducción, pases 54 y 57) |
+| página `security/advisories/GHSA-…` | 🔴 **404 por este canal** (pedido del pase 56, sin cambios) |
+
 ## 2026-10-03 (pase 56) — **la hipótesis del pase 55 cae en su rama mala (`toshieji` solo, 1 de 8: no hay norma de borrador) y el *security release* de la pieza más adoptada degrada el mejor control que esta base había medido: una confirmación no para al alumno que planta instrucciones, porque el asistente redime su propio token**
 
 ### 🔴 El hallazgo principal — acción 1 ejecutada, y la hipótesis cae donde obliga a trabajar

@@ -5190,6 +5190,189 @@ defectos de instrumento del propio pase, y una degrada una recomendación que es
 dos cifras de tamaño de mercado regional que el pase podía publicar (North America y APAC) no se
 publican, y el motivo está medido con el instrumento versionado, no supuesto.**
 
+## 🔵 Las tendencias 370–392, del pase 57 del 2026-10-03
+
+**370.** 🔴 **La garantía de «borrador» de la única pieza conforme de esta base NO es una propiedad del
+servidor: es una propiedad de una casilla de configuración por TAREA de Moodle.** Leído de primera mano en
+`moodle/moodle` @ `main`, `public/mod/assign/locallib.php:2991-3001`, con el comentario del propio Moodle
+—*«If marking workflow is enabled, the workflow state is at 'released'»*— y su SQL
+`WHERE (a.markingworkflow = 0 OR (a.markingworkflow = 1 AND uf.workflowstate = :wfreleased))`.
+
+**371.** 🔴 **Con `markingworkflow = 0`, Moodle le manda la nota al alumno sea cual sea el
+`workflowstate`.** Y en `locallib.php:7960` el cambio de estado no se registra siquiera:
+`$modified->workflowstatechanged = $this->get_instance()->markingworkflow && …`.
+
+**372.** 🔴 **El README de `toshieji/moodle-grading-mcp` dice *«Safety (enforced server-side)»* y *«No
+student notification (draft state)»* y tiene CERO menciones de `markingworkflow` en sus 8.326 bytes.**
+⚠️ **No es mala fe: es el reparto de responsabilidad entre servidor y plataforma, sin declarar.**
+
+**373.** ⚠️ **Consecuencia para la tabla de la capa: el **T2 incondicional es 0 de 8**, no 1 de 8.** 🔵 **Y
+es una corrección de esta base sobre sí misma: nueve pases citaron `readyforreview` como el patrón de
+cumplimiento a copiar (tendencias 133 y 134, `compose/patterns.md`) sin la precondición.**
+
+**374.** 🟢 **El remedio es barato y es de configuración, no de desarrollo:** activar *Marking workflow* en
+cada tarea de destino y **verificarlo por API** (`mod_assign_get_assignments` → `markingworkflow`) antes de
+escribir. Una llamada de lectura más por tarea.
+
+**375.** 🔵 **La hipótesis falsable de la acción 1 del pase 56 cae en el medio que ella misma declaró sin
+interpretar: 3 de 8 piezas tienen compuerta de arranque G2 o mejor sobre la escritura de juicio** (pedía
+≥ 4 para «es la norma» y ≤ 2 para «hallazgo de riesgo»).
+
+**376.** ⚠️ **Es el SEGUNDO pase consecutivo con un umbral pre-registrado de 3-contra-4 aterrizando
+exactamente en el hueco** (el del pase 54 también). 🔵 **La lección es de diseño de hipótesis, no de
+datos: un umbral sobre n = 8 se parte 4-contra-4, nunca 3-contra-4.**
+
+**377.** 🔴 **La escalera G0–G3 del pase 56 no es ordinal porque soldó dos ejes independientes:
+«impedir listar el tool» NO es una propiedad de la granularidad.** `Dymayo` es la compuerta más gruesa (un
+booleano por rol) y **desregistra**; `toshieji` es más fina (allowlist por recurso) y **no**.
+
+**378.** 🟢 **Y el propio ecosistema ya tenía la distinción escrita, en la pieza más honesta de la capa:**
+*«`CANVAS_ROLE` hides tools from a listing; `block` means the handler is never registered»*
+(`bruchris/canvas-lms-mcp`). ⚠️ **Un filtro de listado no es un límite, y confundirlos es la trampa del eje.**
+
+**379.** ⚠️ **Cuarto pase consecutivo en que un esquema de clasificación de esta base resulta insuficiente
+al primer contacto con los datos** (3→5 en el 54, 4→5 en el 56, y acá una escalera que no es escalera).
+🔵 **La lección del 56 —escribir los esquemas con una clase abierta— se aplicó y NO alcanzó: lo que hacía
+falta era escribirlo con DOS COLUMNAS.**
+
+**380.** 🔴 **El eje que de verdad decide un despliegue no estaba en la escalera: el SENTIDO DEL DEFECTO.**
+`ALLOWED_WRITE_TOOLS` —la compuerta más fina de las ocho, nacida del *security release* del pase 56— es
+**fail-OPEN en stdio**: *«HTTP servers are read-only unless configured … Local stdio servers are unchanged
+unless you set it»*.
+
+**381.** 🔴 **De las 3 piezas con compuerta real sobre la nota, sólo 2 son fail-closed en el despliegue
+local por defecto, y las dos tienen 0 ★ mientras la de 272 ★ es la fail-open.** 🔵 **Misma curva invertida
+que P134: adopción y guarda van al revés.**
+
+**382.** ⚠️ **La pieza con MÁS controles de la capa apunta al objeto equivocado:** `bruchris` tiene 16
+variables `CANVAS_*` y su desregistro real (`CANVAS_DESTRUCTIVE_TOOLS=block`) cubre los **siete** tools de
+borrado, **no** `grade_submission`. 🔴 **En el eje de la nota es G0.**
+
+**383.** 🟢 **Y trae el único control de la capa que ataca el modelo de amenaza de P132 por donde entra:**
+`CANVAS_PROVENANCE_FENCING`, **encendido por defecto**, marca el texto de terceros — *«Canvas free text is
+authored by third parties — including the students an educator is grading»*. 🔵 **Con su límite dicho por
+el proyecto:** *«Fencing marks provenance; it does not enforce obedience … a precondition for a model
+treating it as data — not a guarantee that it will»*.
+
+**384.** ⚠️ **Y una defensa de compuerta que se puede perder por precedencia, medida y citable:** en
+`bruchris`, *«Precedence is last-writer-wins, not strictest-wins: `--destructive-tools=allow` really does
+override `CANVAS_DESTRUCTIVE_TOOLS=block`»*. 🔴 **Una institución que fija la variable de entorno puede ser
+anulada por la línea de comandos del lanzador: la compuerta hay que fijarla donde se arma el comando.**
+
+**385.** 🟢 **Una pregunta hacia afuera del pase 56 se contesta MIDIENDO:** `mcp-moodle-teacher` y
+`mcp-moodle-staff` sirven el mismo README **byte a byte** (`sha256` idéntico) y el canónico es
+**`mcp-moodle-staff`**, el que titula. 🔵 **Con control negativo: tres nombres plausibles del mismo dueño
+dan 404, así que es una redirección real de renombrado y no un comodín del canal.**
+
+**386.** 🟢 **La acción 2 del pase 56 queda cerrada con código versionado:
+`compose/code/grading-draft-gate/` (**37/37**, OFFLINE, sólo biblioteca estándar), con las tres
+propiedades afirmadas por separado y los 12 asertos de control negativo.**
+
+**387.** 🔴 **El control que vale es el (iv-b): con el chequeo de precondición apagado, el servidor manda
+`readyforreview` CORRECTAMENTE y Moodle notifica al alumno igual.** 🔵 **Sin ese control, la suite habría
+«probado» un patrón que falla en producción.**
+
+**388.** 🟢 **Y la suite se mide a sí misma con tres mutaciones:** `DRAFT_STATE="released"` → **31/37**; pie
+agregado sin chequear → **36/37**; allowlist vacía como comodín → **35/37**. ⚠️ **Una suite que no puede
+fallar no es un control, y «37/37» sin esta fila no dice nada.**
+
+**389.** ⚠️ **Nota de instrumento con consecuencia sobre el verificador de licencias de esta base: el árbol
+de `moodle/moodle` se mudó bajo `public/` en Moodle 5.** `main/mod/assign/locallib.php` → **404**;
+`main/public/mod/assign/locallib.php` → **200**; `MOODLE_405_STABLE/mod/assign/locallib.php` → **200**.
+
+**390.** 🔴 **Y la sonda de rama contra `<rama>/README.md` OVER-REPORTA: `main/README.md` y
+`main/config-dist.php` dan 200 mientras `main/version.php` —de la MISMA raíz— da 404.** 🔵 **Regla nueva:
+la sonda tiene que ser el archivo que se va a leer, no un hermano cualquiera** (**gap 250**).
+
+**391.** 🔴 **North America está legislando exactamente el requisito que este pase midió en 0 de 8:**
+Oklahoma **SB 1734** prohíbe que la AI sea *«the primary basis for grading, discipline, placement, or
+other high-stakes decisions»*; **D.C.** prohíbe la AI en calificación, disciplina, IEP y evaluación
+docente; **Illinois SB 3735** da derecho a no participar de decisiones de calificación por AI; **South
+Carolina H.B. 5253** pide opt-in parental y divulgación pública anual. **134 proyectos en 31 estados.**
+
+**392.** 🔵 **Y el AI Act son DOS relojes, que este pase separa antes de cotizar:** la **transparencia del
+Art. 50** está **vigente** (aplicación desde **2026-08-02**), mientras el **alto riesgo del Anexo III §3**
+—puntuar exámenes— quedó **POSPUESTO a 2027-12-02** por el *AI Omnibus* (en vigor 2026-07-27). ⚠️ **Lo que
+se vende hoy en EMEA es el expediente de divulgación; el de alto riesgo pasa a roadmap con fecha.**
+
+### 🌍 El barrido regional del pase 57, con lo que rindió cada región
+
+| Región | ¿Rindió? | Lo que trajo |
+|---|---|---|
+| **North America** | 🟢 **sí, y es el material más vendible del pase** | 🔴 **4 jurisdicciones legislando contra la nota por AI** (OK, DC, IL, SC) + **134 proyectos / 31 estados / 5 ya ley**; ⚠️ cifra de mercado sigue no publicable |
+| **EMEA** | 🟢 **sí, y corrige un encuadre propio** | 🔵 **los dos relojes separados**: Art. 50 vigente desde 2026-08-02; Anexo III §3 pospuesto a **2027-12-02** (*AI Omnibus* en vigor 2026-07-27). ⚠️ **sigue sin texto consolidado de primera mano (gap 92)** |
+| **APAC** | 🟢 **sí** | 🟢 **orden de adopción medido** (Singapur > Australia/Corea/Taiwán > Japón/India/China) + **India 38,9 % CAGR y señal de legislación dedicada (jul-2026)** + **7 modelos soberanos nombrados**; 🔴 cifra de mercado no publicable |
+| **LATAM** | 🟢 **sí** | 🟢 **47 % de adopción contra 45 % global y sólo 1,1 % de la inversión global**; ⚠️ **Brasil 76 % / México 70 % NO se promedian con el 47 %: bases distintas, terna declarada abierta**; 🟢 Plan Nacional de IA de México (abr-2026), ley brasileña esperada en 2026 |
+
+🟢 **Las cuatro rindieron, así que este pase no tiene región en silencio.** ⚠️ **Hueco que se vuelve a
+declarar en vez de taparse: de las 8 piezas de la capa docente, NINGUNA declara origen LATAM** — y el
+pase 56 se atrapó inventándolo (**P135**).
+
+## 🔵 Las tres acciones que el pase 57 deja escritas para el pase 58
+
+⚠️ **La acción 1 es la continuación obligada de lo que este pase descubrió y es la que más vale
+comercialmente. La 2 cierra el agujero que el entorno dejó abierto en la medición. La 3 sigue siendo UN
+solo pedido.**
+
+1. 🔴 **Medir la precondición de plataforma en las OTRAS tres puertas de Moodle y en Canvas, porque este
+   pase la midió en una sola.** 370–374 establecen que `workflowstate` no vale nada sin
+   `markingworkflow=1`. **La acción concreta:** sobre `peancor/moodle-mcp-server`,
+   `MarcosNahuel/moodle-mcp`, `Dymayo/moodler-mcp` y `NiccoloSalvini/mcp-moodle-staff`, determinar **(a)**
+   si alguna lee `markingworkflow` antes de escribir, **(b)** con qué `workflowstate` llama a
+   `mod_assign_save_grade` (el pase 38 ya midió que `Dymayo` manda `workflowstate=""`, que **publica**), y
+   **(c)** el equivalente en Canvas, que **no tiene marking workflow**: la nota se publica según
+   `posting_policy` del *assignment* (`post_manually`), así que hay que determinar si alguna de las dos
+   puertas de Canvas lo consulta. 🔵 **Hipótesis falsable, y las dos ramas sirven: si ninguna de las seis
+   consulta la precondición de su plataforma, entonces «borrador» es una palabra que esta capa usa sin
+   respaldo y el requisito de Globant pasa a incluir la verificación de plataforma como paso obligado; si
+   alguna la consulta, es el patrón a citar y hay que nombrarlo.** ⚠️ **`Dymayo` es el candidato medido a
+   la rama mala: manda `workflowstate=""` con `markingworkflow` sin consultar.**
+
+2. 🟢 **Cerrar el `G1?` de `NiccoloSalvini/mcp-moodle-staff`, que es la única celda sin determinar de la
+   tabla de la acción 1** (**gap 249**). **La acción concreta:** establecer si `grade_submission` cae
+   dentro del grupo que `MOODLE_STAFF_TOOLS=false` apaga (las *«office tools»*: notas en lote, registros
+   de tardanza, alumnos en riesgo) o entre los **17** que quedan siempre encendidos. ⚠️ **El canal importa:
+   este pase quedó negado por `[Credential Exploration]` al barrer el README por ese eje —tercera
+   reproducción de la frontera del pase 54— así que la acción se hace **leyendo el archivo de tools del
+   repositorio**, no barriendo el README con patrones. 🔵 **Si `grade_submission` está entre los 17
+   siempre encendidos, la pieza es G0 y el reparto de la acción 1 pasa de 3/8 a 3/8 con un G0 más
+   confirmado; si está en el grupo apagable, la pieza sube a G2′ y el reparto pasa a 4 de 8 — que es la
+   rama que el umbral del pase 56 pedía para declarar norma de categoría.** ⚠️ **O sea que esta celda sola
+   decide una hipótesis que este pase tuvo que dejar sin decidir.**
+
+3. ⚠️ **UN solo pedido, sin cambios respecto de los pases 54, 55 y 56: permiso de EGRESO DE RED para el
+   código versionado de `compose/code/`** (gap 232 / **P113**, hacer comparables las superficies de Canvas,
+   **227** contra **165**). ✅ **Confirmado otra vez: la ejecución OFFLINE no está bloqueada — las 14 suites
+   corrieron, una nueva de este pase, 383 aserciones y 0 fallas.** 🔵 **Y los dos pedidos chicos que siguen
+   abiertos:** acceso a `github.com/<owner>/<repo>/security/advisories/GHSA-…` (**404 por este canal**, y el
+   hallazgo principal del pase 56 salió de un *security release* que hubo que citar por el README), y
+   🔴 **que el barrido multi-patrón sobre el markdown de esta propia KB deje de quedar negado por
+   `[Credential Exploration]`** — tercera reproducción, y es lo que obligó a dejar el `G1?` sin cerrar.
+
+⚠️ **Y las acciones hacia afuera que esta corrida sigue sin poder ejecutar, declaradas para no perderlas
+(se conservan todas las de los pases 54, 55 y 56, menos la que este pase cerró midiendo):** 🔴 **la
+licencia comercial de `dssg/student-early-warning` ante el Polsky Center de la Universidad de Chicago**;
+🔴 **la discrepancia `MIT` (npm) vs `ISC` (repo) de `@pie-qti/*` ante `pie-framework`**; **el titular del
+`package/LICENSE` de `@eduware/oneroster`**; el `LICENSE` de `RadiantCrystal/SafeTutors` y de
+`kaushal0494/AITutor-EvalKit`; el titular correcto en `edeleastar/tutors-ts`; el `LICENSE` de
+`DMontgomery40/mcp-canvas-lms` y de `pie-framework/pie-elements-ng`; el del alcance `@timeback/*`; el de
+`@imazhar101/mcp-canvas-server` (gap 232); **el acceso de miembro a los repos de Caliper de 1EdTech**; los
+dos PR a `giacomomaria81/scorm-mcp-server` (gaps 100 y 102); **reportar a `ASEpochs/ai-digital-teacher`
+que publica sin licencia**; preguntarle a `Drone9/mereos` si apagar un ajuste detiene la derivación o
+sólo su peso, pedirle la taxonomía de `GET /sessions/ai_event/`, y avisarle a `@timadey/proctor` por los
+nombres de sus compuestos; **avisarle a `peancor/moodle-mcp-server` que escribe nota y devolución sin
+confirmación ni borrador con un token de administración de sitio** (🔴 **ahora también sin NINGUNA
+compuerta de arranque: G0 medido**); **avisarle a `MarcosNahuel/moodle-mcp` que `calificar_manualmente`
+escribe la nota en firme mientras su propio `publicar_preview`→`confirmar_preview` protege el
+contenido**; y **proponerle a `bruchris/canvas-lms-mcp` que publique como patrón su nota de `confirm`
+reservado-y-no-implementado**. 🔵 **Y tres NUEVAS de este pase, las tres con la cita exacta ya medida:**
+🔴 **avisarle a `toshieji/moodle-grading-mcp` que su garantía de borrador depende de `markingworkflow=1`
+en la tarea y que conviene verificarlo en `verify` y documentarlo** (es la pieza mejor diseñada de la capa
+y el aviso la mejora, no la acusa); 🟢 **avisarle a `vishalsachdev/canvas-mcp` que su `ALLOWED_WRITE_TOOLS`
+es fail-open en stdio y que el README lo dice en una línea de migración, donde un operador no lo busca**;
+y 🟢 **proponerle a `bruchris/canvas-lms-mcp` que `CANVAS_DESTRUCTIVE_TOOLS` cubra también la escritura de
+notas, porque su mecanismo de desregistro ya es el correcto y sólo le falta el alcance.**
+
 ## 🔵 Las tres acciones que el pase 56 deja escritas para el pase 57
 
 ⚠️ **La acción 1 es la continuación obligada de lo que este pase descubrió y tiene valor comercial

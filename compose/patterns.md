@@ -8,6 +8,7 @@ updated: 2026-10-03
 
 > Recetas concretas: repos nombrados, licencias verificadas, wiring explícito y estimación.
 > Todos los repos citados fueron verificados vía WebFetch el 2026-09-30; los del pase 11, el 2026-10-01 (ver `agents/top.md`).
+> **Pase 57 del 2026-10-03:** 🔴 **el patrón nuevo es **P137** y corrige el NIVEL 2 de **P136**, que este archivo agregó el pase anterior: el «borrador no liberado» no es una compuerta del servidor, es una compuerta de la PLATAFORMA, y sin su precondición no existe.** Leído de primera mano en `moodle/moodle` @ `main`, `public/mod/assign/locallib.php:2991-3001`: *«If marking workflow is enabled, the workflow state is at 'released'»*, con el SQL `WHERE (a.markingworkflow = 0 OR (a.markingworkflow = 1 AND uf.workflowstate = :wfreleased))`. 🔴 **Con `markingworkflow = 0` Moodle publica la nota sea cual sea el `workflowstate`, y el README de `toshieji` no menciona `markingworkflow` ni una vez en 8.326 bytes** (**P139**). ⚠️ **Las seis citas de `readyforreview` de este archivo quedan marcadas con su precondición: el patrón sigue siendo el mejor de la capa, pero se entrega con un paso de verificación, no solo.** 🔴 **Y el nivel 1 de P136 (que el tool no exista) se mide por primera vez sobre las 8 piezas y la escalera que el pase 56 propuso NO es ordinal: «impedir listar el tool» y «granularidad» son dos ejes independientes** — `Dymayo` es la compuerta más gruesa y desregistra, `toshieji` es más fina y no (**P137**). 🔴 **Más el eje que faltaba y que decide el despliegue: el SENTIDO DEL DEFECTO. `ALLOWED_WRITE_TOOLS` es fail-OPEN en stdio** (**P138**). 🟢 **Y el patrón llega entregable: `compose/code/grading-draft-gate/` (37/37, OFFLINE) afirma las tres propiedades por separado, con 12 asertos de control negativo y tres mutaciones que prueban que la suite puede fallar.** Ver **P137**–**P141** y las tendencias **370**–**392**.
 > **Pase 56 del 2026-10-03:** 🔴 **el patrón nuevo es **P136** y corrige a **P131**, que este archivo acababa de agregar: la mitad de CONFIRMACIÓN de P131 queda degradada por evidencia de primera mano del proyecto más adoptado de la capa.** `vishalsachdev/canvas-mcp` (MIT, 272 ★) publicó que *«a confirmation token cannot stop [a student-planted instruction] because the assistant can redeem its own token»* — **el atacante del lado docente es el alumno escribiendo en el contenido del curso, y el que redime el token es el propio asistente, así que la confirmación no es una segunda autoridad sino la misma dos veces.** 🟢 **P136 reordena las compuertas: (1) arranque, que el tool no exista (`ALLOWED_WRITE_TOOLS`); (2) estado del dato, borrador no liberado (`workflowstate=readyforreview`); (3) confirmación por llamada, que pasa a tercera y sólo protege del operador distraído.** 🔴 **Y la recomendación que sale de este archivo: `peancor/moodle-mcp-server` es clase **T4** —nota y devolución en firme, sin confirmación, sin borrador, sin divulgación— con token de administración del SITIO. Máximo privilegio, mínima guarda.** 🟢 **La que entra en su lugar: `toshieji/moodle-grading-mcp` (MIT, APAC), la única de las 8 piezas de escritura docente conforme al Artículo 50, envuelta en la puerta de *allowlist* que este repositorio ya versiona (`compose/code/mcp-allowlist-gateway/`, 34 aserciones).** ⚠️ **Dato de encuadre corregido en este pase: el conjunto expuesto al Artículo 50(2) es **33 de 66 (50 %)**, no 32/48 % — el defecto era de propagación y los dos escáneres de la capa ya usaban 33.** Ver **P132**–**P135**, el patrón **P136** y las tendencias **338**–**369**.
 > **Pase 55 del 2026-10-03:** 🟢 **el pase deja un patrón nuevo y sale de una medición, no de una idea: P131, la puerta de escritura académica con confirmación de dos llamadas**, construida sobre el único control de escritura de esta KB que está medido y citado —el `confirmation_token` de `PabloPC05/mcp-usc`, *«los tokens viven solo en memoria, caducan a los cinco minutos y son de un solo uso»*— más el patrón de borrador no liberado de `toshieji/moodle-grading-mcp` (`workflowstate=readyforreview`, *«This server never releases»*, pie de divulgación de asistencia AI). 🔴 **Y el patrón corrige una recomendación de este propio archivo: donde esta base propone `peancor/moodle-mcp-server` para «nota y devolución dentro del LMS», hay que leer que `peancor` escribe la nota autoritativa con token de administración del SITIO y SIN confirmación, borrador ni divulgación** — es la combinación de máximo privilegio con mínima guarda (**P127**, **P129**). 🟢 **Las cifras de suites citadas se remidieron y las once reproducen.** ⚠️ **Y el pase se corrige a sí mismo: un `grep` escrito a mano dio «dos vencidas» (49 y 34) y era falso positivo — el instrumento versionado de esta KB da 46 y 33** (**P126**). Ver tendencias **313**–**321**.
 > **Pase 54 del 2026-10-03:** **+3 patrones, y los tres CORRIGEN instrumentos que los dos pases anteriores acababan de declarar obligatorios.** **P123** corrige P121 por donde P121 pidió que se lo probara: su control negativo declarado FALLÓ — `Dymayo/moodler-mcp` salió clase (b) — y el defecto es que **P121 leía el TIPO de la credencial en vez de su PROCEDENCIA.** 🔴 **La clase nueva (b4) es la que ningún filtro ve: la pieza abre un navegador real, el alumno completa su SSO con passkey y 2FA, y la pieza MINTA un token de web service oficial y lo guarda en disco — artefacto de clase (a), emisor de clase (b).** 🔵 **Y el corolario invierte la intuición del filtro: `moodler-mcp` declara CERO variables de credencial (sólo `MOODLE_URL`) precisamente porque se la consigue sola, así que un audit de `.env` lo aprueba y ordena la capa al revés.** **P124** corrige P122 **en el artículo y en los hechos**: 15 términos de afecto medidos sobre los artefactos publicados de las tres piezas permisivas dan **3 coincidencias crudas y 3 falsos positivos verificados** (comentarios de Tailwind × 2 y una encuesta con emoticones) → 🟢 **cero inferencia de emoción, así que el art. 5(1)(f) NO parte esta capa.** 🔴 **La línea que sí la parte es evento contra CONDUCTA, que es alto riesgo y NO prohibido** — y `mereos`, que P122 clasificaba 🟢 permitido, envía `cheating`, `it_looks_suspicious` y una *«re-calculation of the suspiciousness»* por imagen. 🔴 **Dos trampas medidas que ningún README menciona: en `mereos` apagar el ajuste NO detiene la derivación** (*«Each characteristic is derived for every image, regardless of the settings is enabled or not»*) **y la taxonomía de AI se BAJA del servidor del proveedor** (`GET /sessions/ai_event/`), así que el clasificador no está en el paquete MIT. 🟢 **Y la conclusión más vendible del pase: `seb-server` (MPL-2.0) es la única pieza de la capa que se despliega en la UE sin análisis de art. 5(1)(f), porque sus siete indicadores son ping, contadores de log, batería y wifi — no observa al alumno, y todo su riesgo es IMPORTADO del servicio de sala.** **P125** deja dos controles de dos líneas: la **terna de mercado tiene que cerrar sola** (atrapó una inconsistencia de MEA con una sola fuente, en la misma frase donde la de Europa cierra perfecto) y **la taxonomía de un SDK vive en su archivo de localización, no en su README** (4 READMEs → cero; un `translation.json` → 108 cadenas), ⚠️ **con su límite medido: sobre un bundle los falsos positivos son altos — el `attention` de `exam-guard` era el tokenizador de Markdown de micromark.**
@@ -383,7 +384,7 @@ dejarlo escrito en la propuesta:
 | **Canvas** | [`bruchris/canvas-lms-mcp`](https://github.com/bruchris/canvas-lms-mcp) | **MIT** | única de las medidas con **modo OAuth `oauth_brokered`**: la institución registra la app y la revoca, que es el argumento más fuerte ante seguridad |
 | **Canvas** (alternativa) | [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | **MIT** | documenta el camino institucional cuando el self-service está cerrado |
 | **Moodle** | [`MarcosNahuel/moodle-mcp`](https://github.com/MarcosNahuel/moodle-mcp) | **MIT** | la declaración más limpia de las once: *«No cookie auth, no web scraping, no direct DB access»* — es una frase citable en una propuesta |
-| **Moodle** (corrección de notas) | [`toshieji/moodle-grading-mcp`](https://github.com/toshieji/moodle-grading-mcp) | **MIT** | token de web service + escribe en `workflowstate=readyforreview`, o sea **nunca publica** (ver P-s de alto riesgo) |
+| **Moodle** (corrección de notas) | [`toshieji/moodle-grading-mcp`](https://github.com/toshieji/moodle-grading-mcp) | **MIT** | token de web service + escribe en `workflowstate=readyforreview`, o sea **nunca publica** ⚠️ **sólo si la tarea tiene `markingworkflow=1` — verificar primero (P139)** |
 
 🔵 **Y el argumento regulatorio que lo acompaña, nuevo en el pase 53:** el **MGF for Agentic AI** de
 IMDA (Singapur, 2026-01-22) exige **(2) responsabilidad humana significativa** y **(4) habilitar la
@@ -442,7 +443,7 @@ misma señal con otro nombre.** ⚠️ **Lo que se audita es el VOCABULARIO de l
 2. **Elegir la capa de integridad por evento**, no por *«detección de trampa con AI»*: `mereos` (MIT)
    es el punto de partida medido de esta KB.
 3. **Dejar la decisión final en un humano**, con el patrón que esta base ya tiene: la nota se escribe
-   en `workflowstate=readyforreview` y la publica una persona ([`toshieji/moodle-grading-mcp`](https://github.com/toshieji/moodle-grading-mcp), MIT).
+   en `workflowstate=readyforreview` y la publica una persona ([`toshieji/moodle-grading-mcp`](https://github.com/toshieji/moodle-grading-mcp), MIT) ⚠️ **con `markingworkflow=1` verificado en la tarea (P139)**.
 4. **Expediente de Anexo III con plazo 2027-12-02** para lo que quede del lado permitido — **26 meses
    de trabajo de conformidad que se venden hoy**, que es el encuadre que la tendencia 4 ya traía.
 5. 🔴 **Y la frase que no se puede decir en esta venta:** que el sistema *«detecta el estado emocional
@@ -6532,6 +6533,161 @@ tools se contaron en el árbol.
 (ciclo 2026-27) genera volumen de acreditación que ningún proceso manual absorbe, y el credencial firmado es
 **portable entre instituciones** desde el día uno.
 
+## P137 — La compuerta de escritura académica tiene DOS EJES, no una escalera; y el nivel «borrador» es de la PLATAFORMA (agregado en el pase 57 del 2026-10-03; **las cuatro regiones**)
+
+**Corrige:** la escalera G0–G3 que el pase 56 propuso para medir el nivel 1 de **P136**, y el nivel 2 de
+**P136** mismo.
+
+### 🔴 El defecto del esquema: dos ejes soldados en uno
+
+El pase 56 propuso ordenar las compuertas de arranque por **granularidad** (ninguna → bandera global →
+*allowlist* por recurso → *allowlist* por herramienta) suponiendo que la más fina es la única que
+**impide listar** el tool. **Medido sobre las 8 piezas, es falso en las dos direcciones:**
+
+| Pieza | Granularidad | ¿Impide listar? |
+|---|---|---|
+| `Dymayo/moodler-mcp` | la más **gruesa**: un booleano por ROL | 🟢 **sí** — *«Tools behind a disabled flag are not registered at all»* |
+| `toshieji/moodle-grading-mcp` | más **fina**: *allowlist* por RECURSO | 🔴 **no** — rechaza en la llamada, el tool se lista igual |
+| `bruchris` / `CANVAS_ROLE` | por rol | 🔴 **no, y el proyecto lo dice**: *«hides tools from a listing»* |
+| `bruchris` / `CANVAS_DESTRUCTIVE_TOOLS` | por conjunto | 🟢 **sí** — *«the handler is never registered»* |
+
+🔵 **Son ortogonales. El esquema correcto tiene dos columnas:**
+
+| | **Granularidad** → | ninguna | bandera global | por rol/grupo | por recurso | por herramienta |
+|---|---|---|---|---|---|---|
+| **Vínculo** ↓ | | | | | | |
+| **(R)** rechaza en la llamada, el tool se lista | | — | — | — | `toshieji` | — |
+| **(U)** desregistra, el tool no se puede listar | | — | — | `Dymayo` | — | `vishalsachdev` |
+
+⚠️ **Y una tercera columna que no es del esquema sino del ALCANCE, y que en la práctica decide:
+¿la compuerta cubre el tool que escribe el JUICIO?** `bruchris` desregistra de verdad, pero sobre los
+**siete** tools de borrado: `grade_submission` queda afuera, así que en el eje de la nota es **G0**
+(**P140**).
+
+### 🔴 El nivel 2 de P136 es de la plataforma, no del servidor
+
+**P136 puso el «borrador no liberado» como nivel 2 y lo describió como *«la nota se escribe pero no es
+visible ni definitiva»*. Eso es verdad sólo si la plataforma lo honra.**
+
+**Moodle**, `public/mod/assign/locallib.php:2991-3001` —comentario del propio proyecto y su SQL:
+
+> *«Submissions are included if all are true: … If marking workflow is enabled, the workflow state is at
+> 'released'.»*
+
+```sql
+WHERE (a.markingworkflow = 0 OR (a.markingworkflow = 1 AND uf.workflowstate = :wfreleased)) AND
+```
+
+🔴 **`markingworkflow = 0` ⇒ la nota se le manda al alumno con cualquier `workflowstate`.** Y en
+`locallib.php:7960` el cambio ni se registra. ⚠️ **`PARAM_ALPHA` (externallib.php:1987) agrega que el
+estado es `[a-zA-Z]`: `ready_for_review` lo rechaza Moodle, no el servidor.**
+
+### 🟢 El patrón, con la precondición adentro
+
+```
+(0) VERIFICAR LA PLATAFORMA   mod_assign_get_assignments → markingworkflow == 1 ?
+                               └─ si es 0: NO escribir. El «borrador» no existe en esa tarea.
+(1) ARRANQUE                  el tool de escritura no se registra salvo que el operador lo permita
+                               └─ fijarlo donde se arma el COMANDO, no sólo en el entorno (P141)
+(2) ESTADO DEL DATO           workflowstate=readyforreview, y el servidor nunca libera
+(3) DIVULGACIÓN               pie de asistencia AI, agregado si falta, no duplicado  [Art. 50]
+(4) AUDITORÍA                 JSONL append-only de intento / denegación / éxito
+```
+
+🟢 **Implementado y afirmado: [`compose/code/grading-draft-gate/`](../compose/code/grading-draft-gate/)
+— 37/37, OFFLINE, sólo biblioteca estándar.** El paso (0) es `require_marking_workflow`, **encendido por
+defecto**, y cuesta una llamada de lectura por tarea.
+
+⚠️ **En Canvas no hay *marking workflow*: el equivalente es la `posting_policy` del *assignment*
+(`post_manually`), y ninguna de las dos puertas de Canvas de esta base la consulta** — es la acción 1 del
+pase 58.
+
+## P138 — El sentido del defecto de una compuerta es parte de la compuerta (agregado en el pase 57 del 2026-10-03)
+
+🔴 **La compuerta más fina de la capa está apagada por defecto en el despliegue más común.**
+`vishalsachdev/canvas-mcp` v1.13.0, línea de migración de su *security release*:
+
+> *«HTTP servers are read-only unless configured → set `ALLOWED_WRITE_TOOLS` … **Local stdio servers are
+> unchanged unless you set it**»*
+
+| Transporte | Defecto | Quién lo usa |
+|---|---|---|
+| HTTP | 🟢 **read-only** (fail-closed) | despliegue institucional |
+| **stdio** | 🔴 **sin cambios** (fail-OPEN) | ⚠️ **el piloto del docente en su máquina** |
+
+🔵 **Regla de cotización: un piloto local no hereda la postura de seguridad del despliegue HTTP, y es el
+piloto el que entra primero a un aula.** El runbook fija la variable **en los dos transportes** y lo
+verifica con una llamada a `tools/list`, que es la única prueba de que el tool no está.
+
+⚠️ **De las 3 piezas con compuerta real sobre la nota, sólo 2 son fail-closed en local (`toshieji`,
+`Dymayo`) y las dos tienen 0 ★, contra las 272 ★ de la fail-open** — misma curva invertida que **P134**.
+
+## P139 — Antes de prometer «borrador», verificar que la plataforma tenga borradores (agregado en el pase 57 del 2026-10-03; **EMEA y North America primero**)
+
+**El requisito regulatorio de las dos regiones que legislan sobre la nota es el mismo —la libera una
+persona— y las dos lo piden del RESULTADO, no del código.**
+
+| Región | Instrumento | Lo que exige |
+|---|---|---|
+| **North America** | Oklahoma **SB 1734** (antes del ciclo 2027-28) | la AI no puede ser *«the primary basis for grading»*; *«educator-directed human-in-the-loop»* |
+| **North America** | **D.C.** (OSSE, 2026-27) | prohíbe la AI en calificación |
+| **North America** | Illinois **SB 3735** | derecho de la familia a no participar de la calificación por AI |
+| **EMEA** | AI Act **Anexo III §3** (pospuesto a **2027-12-02**) | supervisión humana sobre la evaluación de resultados |
+| **EMEA** | AI Act **Art. 50** (**vigente** desde 2026-08-02) | divulgación de asistencia AI |
+
+🔴 **Un `workflowstate=readyforreview` sobre una tarea con `markingworkflow=0` NO satisface ninguno de los
+cinco: el alumno ya recibió la nota.** 🟢 **Y la verificación que lo satisface es una línea.**
+
+⚠️ **Consecuencia para el expediente de cumplimiento: la evidencia no es «usamos la pieza que escribe
+borradores», es la salida del paso (0) por cada tarea del alcance.** 🔵 **Eso es auditable y es
+exactamente lo que `grading-draft-gate` imprime en su log JSONL.**
+
+## P140 — Un filtro de listado no es un límite, y el alcance de la compuerta se verifica aparte (agregado en el pase 57 del 2026-10-03)
+
+**Dos modos de aprobar una compuerta que no existe, los dos medidos este pase:**
+
+1. 🔴 **Contar un filtro de UX como control.** `CANVAS_ROLE=teacher` reduce el listado de ~165 a ~145
+   tools, y el proyecto declara que es *«a client-side UX / context-reduction filter only — Canvas still
+   enforces real permissions server-side»* y que *«`CANVAS_ROLE` hides tools from a listing; `block`
+   means the handler is never registered»*. ⚠️ **Una planilla de compras que acepte «filtrado por rol»
+   como control de escritura acepta un filtro de contexto.**
+2. 🔴 **Contar una compuerta real de ALCANCE equivocado.** `CANVAS_DESTRUCTIVE_TOOLS=block` desregistra
+   de verdad — **los siete tools de borrado.** `grade_submission` **no** está entre ellos.
+
+🟢 **El control que distingue los tres casos es uno y es ejecutable: pedirle `tools/list` al servidor
+arrancado con la configuración de producción y buscar el nombre del tool que escribe la nota.** Si está
+listado, no hay compuerta de arranque sobre la nota, diga lo que diga la planilla.
+
+🟢 **Y el control que sí ataca el modelo de amenaza de P132 por donde entra, que ninguna otra pieza de la
+capa tiene:** `CANVAS_PROVENANCE_FENCING` (encendido por defecto) marca el texto de terceros —*«Canvas
+free text is authored by third parties — including the students an educator is grading»*— con su límite
+dicho por el proyecto: *«Fencing marks provenance; it does not enforce obedience … a precondition for a
+model treating it as data — not a guarantee that it will»*. 🔵 **Es el nivel 0 que P136 no tenía:
+separar dato de instrucción antes de que la compuerta importe.**
+
+## P141 — La compuerta se fija donde se arma el comando, no sólo en el entorno (agregado en el pase 57 del 2026-10-03)
+
+🔴 **Medido y citable, en la pieza más cuidadosa de la capa:**
+
+> *«The flag beats the environment outright. When `--destructive-tools` is present,
+> `CANVAS_DESTRUCTIVE_TOOLS` is not read or validated at all … **Precedence is last-writer-wins, not
+> strictest-wins**: `--destructive-tools=allow` really does override `CANVAS_DESTRUCTIVE_TOOLS=block`»*
+
+⚠️ **Una institución que fija la variable de entorno en su imagen puede ser anulada por quien arma la
+línea de comandos del cliente MCP** — que en la práctica es el archivo `.mcp.json` del docente.
+
+🟢 **Dos consecuencias de implantación, las dos baratas:**
+
+1. **La compuerta va en el mismo artefacto que el comando** (`.mcp.json` gestionado, o un *wrapper* que
+   no acepte flags), **no en el entorno del host.**
+2. **El control de aceptación es `tools/list` contra el servidor arrancado por ESE artefacto**, porque es
+   lo único que refleja la precedencia real.
+
+🔵 **Y el contraejemplo que conviene copiar:** la misma pieza declara que `CANVAS_DESTRUCTIVE_TOOLS` es
+*«server-side only. Unlike `CANVAS_ROLE`, there is no request header for this in HTTP mode — a client
+that could pick the mode could switch the gate off»*. **Esa es la asimetría correcta: la compuerta no
+debe ser negociable por el cliente.**
+
 ## P136 — La compuerta de escritura académica, REORDENADA: el arranque y el borrador mandan, la confirmación pasa a tercera (corrige la mitad de confirmación de **P131**, agregado en el pase 56 del 2026-10-03)
 
 > 🔴 **Este patrón no reemplaza a P131: le cambia el ORDEN y degrada uno de sus tres componentes, con
@@ -6557,7 +6713,7 @@ ingeniería contra el operador distraído y NO protege contra este ataque.**
 | # | Nivel | Qué es | Qué ataque para | Pieza que lo implementa, medida |
 |---|---|---|---|---|
 | **1** | 🟢 **Arranque: el tool NO EXISTE** | *allowlist* por herramienta, evaluada al levantar el servidor | 🟢 **el alumno adversario: lo que no se puede listar no se puede invocar** | `vishalsachdev/canvas-mcp` — `ALLOWED_WRITE_TOOLS` *«removes every write tool the operator has not allowed at startup, so it cannot be listed or called»* |
-| **2** | 🟢 **Estado del dato: borrador no liberado** | la nota se escribe pero no es visible ni definitiva | 🟢 **el alumno adversario y el error del modelo: un humano libera** | `toshieji/moodle-grading-mcp` — `workflowstate=readyforreview`, *«This server never releases»*, *«No student notification»* |
+| **2** | 🟢 **Estado del dato: borrador no liberado** | la nota se escribe pero no es visible ni definitiva ⚠️ **sólo con `markingworkflow=1`; con 0 Moodle la publica (P139)** | 🟢 **el alumno adversario y el error del modelo: un humano libera** | `toshieji/moodle-grading-mcp` — `workflowstate=readyforreview`, *«This server never releases»*, *«No student notification»* |
 | **3** | ⚠️ **Diálogo: confirmación por llamada** | *preview* → token → *commit* | ⚠️ **sólo el operador distraído** | `PabloPC05/mcp-usc` (token de un uso, 5 min) y `openedx-mcp` (token atado a **huella del payload**) |
 
 🔴 **Y el cuarto componente, que no es compuerta sino obligación legal: el pie de divulgación de

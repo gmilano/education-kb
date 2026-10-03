@@ -408,6 +408,32 @@ players 2026. Resultado honesto:
 | EMEA | **Confirmación.** Anexo III alto riesgo, Digital Omnibus, fechas 2027-12-02 / 2028-08-02 — ya estaba, y con identificadores citables (Reglamento (UE) 2026/1744). Nada nuevo |
 | APAC | **Un hallazgo nuevo:** la oficialización de los libros de texto digitales en Japón (abajo, en `### APAC
 
+#### 🔵 Pase 57 (2026-10-03) — la región sigue sin marco común, y su pieza de software es la que este pase acaba de condicionar
+
+🟢 **El barrido rindió, y la foto de adopción se ordena distinto de lo que supondría un mapa de PBI:**
+**Singapur lidera**, seguido de **Australia, Corea y Taiwán**, mientras **Japón, India y China aparecen
+relativamente atrás**. 🔵 **Y el crecimiento va al revés del nivel: India es el mercado de AI que más
+rápido crece de APAC, con CAGR declarado 38,9 %.**
+
+🔴 **No habrá marco común, y este pase lo reconfirma con un movimiento nuevo:** Japón mantiene gobernanza
+**voluntaria y de mano liviana**; Singapur opera por ***regulatory sandbox***; y **en julio de 2026 el
+gobierno de India señaló que puede ir a legislación de AI dedicada**, que es un cambio respecto de su
+enfoque previo de usar el derecho existente.
+
+🟢 **Dato estructural que importa para una propuesta regional: toda economía grande de APAC está
+construyendo modelo soberano propio** — **Sarvam AI** (India), **ILMU** (Malasia), **Sahabat AI**
+(Indonesia), **SEA-Lion** (Singapur), **HyperCLOVA X Think** (Corea), **NTT Sarashina** (Japón) y
+**TAIDE** (Taiwán). 🔵 **Consecuencia de arquitectura: en APAC la capa de modelo es una decisión local y
+negociable, así que conviene proponer la capa agéntica desacoplada del proveedor de modelo.**
+
+⚠️ **Y la nota que corrige a esta propia base: la única pieza de escritura docente conforme al Artículo 50
+sigue siendo de esta región** (`toshieji/moodle-grading-mcp`, Japón, WACA) **pero este pase midió que su
+garantía de borrador depende de una casilla de Moodle que el servidor no mira** (**P139**). 🔵 **El
+patrón sigue siendo el mejor de la capa; lo que cambia es que ahora se entrega CON la precondición
+verificada, y la suite que lo verifica ya está versionada.**
+
+🔴 **Cifra de tamaño de mercado de esta región: sigue NO publicable** (terna 20,9 % vs 25,6 %, pase 56).
+
 #### 🟢 Pase 55 (2026-10-03) — la conclusión de «APAC no produce educativo-nativo» era en parte un artefacto de catalogación
 
 🔴 **Corrección a una conclusión del pase 49 que esta base venía repitiendo:
@@ -550,6 +576,34 @@ experimental) es un riesgo técnico **de esta región** tanto como de LATAM.
 **La soberanía dejó de ser retórica y es una lista.** Toda economía grande de APAC está construyendo modelo propio: **Sarvam AI** (India), **ILMU** (Malasia), **Sahabat AI** (Indonesia), **SEA-LION** (Singapur), **HyperCLOVA X Think** (Corea del Sur), **NTT Sarashina** (Japón) y **TAIDE** (Taiwán). Para un proyecto educativo en la región eso significa que **la capa de modelo es una decisión política del cliente, no técnica nuestra**: el entregable tiene que ser **agnóstico de proveedor** desde el diseño (LiteLLM o equivalente en el medio), porque el modelo lo elige el ministerio. Mercado de AI de la región: **~USD 102.000M (2025) → >USD 735.000M (2030), CAGR ~34,5%**; los compradores que dominan la vertical educativa siguen siendo **China, India y Japón**.
 
 | LATAM | **Confirmación** (Observatorio UNESCO, sandbox de la ANPD brasileña, Uruguay y el Convenio del Consejo de Europa, CENIA). Y **un vacío nuevo y medido** en la capa de skills (abajo, en `### LATAM
+
+#### 🔵 Pase 57 (2026-10-03) — la región adopta por encima del promedio global y captura 1,1 % de la inversión, y este pase NO publica una cifra única de adopción
+
+🟢 **Lo que el barrido devolvió con fuente:**
+
+- 🟢 **LATAM adopta AI al 47 %, por encima del promedio global de 45 %** — y **captura sólo el 1,1 % de
+  la inversión global en AI.** 🔵 **Ese contraste es el argumento de la región: hay demanda instalada y
+  no hay capital local compitiendo por atenderla, que es exactamente el hueco de una consultora.**
+- ⚠️ **Brasil 76 % y México 70 % de adopción (datos 2026).** 🔴 **Esta cifra NO se promedia con el 47 %
+  ni lo reemplaza: son bases de medición distintas (promedio regional contra país, y encuestas
+  distintas). Se publican las dos con su procedencia y se declara que la terna no cierra** — regla de
+  las ternas de mercado de esta base.
+- 🟢 **Brasil: se espera que su ley de AI entre en vigor en 2026 tras pasar por la Cámara de Diputados**
+  — marco de corte europeo, consistente con lo que el pase 56 ya tenía.
+- 🟢 **México: Plan Nacional de Inteligencia Artificial publicado en abril de 2026.** ⚠️ **Y la
+  contracara, dicha por una fuente académica local (El Colegio de México): *«México ya vive la
+  revolución de la IA, pero carece de regulación y capacidades para enfrentarla»*.** 🔵 **Eso es brecha
+  de capacidad, que se vende; no es ventaja regulatoria, que no existe** — la corrección del pase 54
+  sigue vigente.
+- 🟢 **Adopción empresarial por país: 68 % de empresas argentinas ya usan AI generativa, 62 % de
+  brasileñas, y 55 % de mexicanas planean aumentar inversión.**
+
+⚠️ **El hueco de software sigue abierto y este pase lo vuelve a declarar en vez de taparlo: de las 8
+piezas de la capa de escritura docente, NINGUNA declara origen LATAM** — y el pase 56 se atrapó
+inventándolo (**P135**, el falso positivo *«Italia»* por subcadena de `Italicia`). 🔵 **La recomendación
+honesta para un *engagement* LATAM es la del pase 49 aplicada a esta capa: no se espera la pieza
+regional, se compone sobre las MIT que existen y se le agrega la compuerta — que es justo lo que
+`compose/code/grading-draft-gate/` ya hace correr.**
 
 #### 🟢 Pase 55 (2026-10-03) — la cifra de adopción estudiantil de LATAM gana su instrumento
 
@@ -1206,6 +1260,38 @@ Dónde se produce el software educativo abierto, que no es donde está la demand
 ## Opportunities by region
 
 ### North America
+
+#### 🔴 Pase 57 (2026-10-03) — la región está legislando EXACTAMENTE el requisito que esta base acaba de medir en 0 de 8
+
+🟢 **El barrido regional rindió material nuevo y converge en una sola frase que vale más que cualquier
+cifra de tamaño de mercado: en North America la ley se está escribiendo para prohibir que la AI sea la
+base de una nota.**
+
+| Jurisdicción | Instrumento | Qué dice sobre la NOTA |
+|---|---|---|
+| **Oklahoma** | **SB 1734** — política escrita obligatoria en cada distrito antes del ciclo **2027-28** | 🔴 **prohíbe que la AI sea «the primary basis for grading, discipline, placement, or other high-stakes decisions»**; exige *«educator-directed human-in-the-loop»* |
+| **Washington, D.C.** | política de OSSE para **2026-27** (no obligatoria) | 🔴 **prohíbe la AI en calificación, disciplina, decisiones de IEP y evaluación docente** |
+| **Illinois** | **SB 3735** | 🟢 **derecho de la familia a NO participar de decisiones de calificación por AI**; limita el uso de datos del alumno para entrenar sin consentimiento |
+| **South Carolina** | **H.B. 5253** (proyecto) | 🟢 **opt-in parental por escrito + divulgación pública anual de herramientas y prácticas de datos**; prohíbe que la AI reemplace a un docente licenciado en calificación |
+| **California** | **AB 1159** | prohíbe usar datos del alumno para entrenar modelos |
+| **Idaho / Maryland** | **SB 1227 / SB 720** | guía estatal obligatoria, coordinadores de AI, salvaguardas de compra |
+
+**Volumen medido: 134 proyectos en 31 estados en 2026; 27 estados con proyectos activos y 5 ya ley.**
+
+🔴 **Y acá está la oportunidad, porque las dos mitades se tocan:** la región legisla *«la nota la decide
+y la libera una persona»* **y esta base acaba de medir que de las 8 piezas permisivas que escriben juicio
+docente, las que cumplen eso incondicionalmente son CERO** (**P139**: la única T2 depende de
+`markingworkflow=1` en la tarea, que el servidor no mira).
+
+🟢 **Lo vendible, concreto:** el expediente que ninguna pieza trae —compuerta de arranque fail-closed +
+borrador no liberado + divulgación + log de auditoría— **ya existe como suite que corre**
+(`compose/code/grading-draft-gate/`, 37/37). ⚠️ **Y la pieza más adoptada de la capa es de esta región**
+(`vishalsachdev/canvas-mcp`, 272 ★, *University of Illinois Urbana*), **clase T4 y fail-OPEN en stdio**:
+el piloto local de un docente de Illinois no hereda la protección del despliegue HTTP.
+
+⚠️ **Las cifras de tamaño de mercado de esta región siguen SIN publicarse** (la terna del proveedor
+sigue fallando, pases 55 y 56). 🔵 **No hace falta: el argumento de esta región es la fecha de Oklahoma,
+no un CAGR.**
 
 #### 🔵 Pase 56 (2026-10-03) — la cifra sigue sin ser publicable, y ahora se sabe que el defecto es del proveedor
 
@@ -2341,6 +2427,28 @@ Artículo 50(2) **no es exigible** en North America — pero es **el requisito m
 multi-región conviene cotizarlo contra el techo europeo y no contra el piso local (ver **P103** y **P105**).
 
 ### EMEA
+
+#### 🔵 Pase 57 (2026-10-03) — son DOS relojes y este pase separa el que se movió del que no
+
+⚠️ **Corrección de encuadre que esta base necesitaba antes de cotizar: el AI Act tiene dos obligaciones
+distintas sobre educación y sólo una se corrió de fecha.**
+
+| Reloj | Qué pide | Estado medido este pase |
+|---|---|---|
+| **Transparencia, Art. 50** | divulgar que el contenido / la interacción es de AI | 🟢 **VIGENTE** — aplicación por la AI Office y las autoridades nacionales **desde 2026-08-02** |
+| **Alto riesgo, Anexo III §3** | expediente de conformidad para AI que determina acceso o evalúa resultados de aprendizaje (p. ej. **puntuar exámenes**) | 🔴 **POSPUESTO a 2027-12-02** por el *AI Omnibus* (propuesto nov-2025, adoptado jun-2026, **en vigor 2026-07-27**) |
+
+🔵 **Consecuencia comercial, y es la que cambia el orden de un roadmap: lo que se vende HOY en EMEA es el
+expediente de DIVULGACIÓN, que ya es exigible; el expediente de ALTO RIESGO pasa a ser roadmap con fecha
+2027-12-02 en vez de urgencia.** ⚠️ **Y el dato que lo vuelve urgente igual: la divulgación de asistencia
+AI está en **1 de 8** piezas de la capa de escritura docente, con la obligación vigente hace dos meses.**
+
+🟢 **La pieza que sí divulga —`toshieji`, pie de divulgación agregado si falta— es también la única T2, y
+este pase midió que su garantía de borrador es condicional** (**P139**). 🔵 **Para el Anexo III §3 eso
+importa doble: «puntuar exámenes» es exactamente el caso de alto riesgo, y la supervisión humana es el
+requisito. Un borrador que Moodle publica solo NO es supervisión humana.**
+
+⚠️ **Sigue sin texto consolidado de primera mano (gap 92).**
 
 #### 🔵 Pase 56 (2026-10-03) — cuarto canal independiente para el reloj, y el *backstop* a 60 días
 

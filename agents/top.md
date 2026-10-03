@@ -8,6 +8,7 @@ updated: 2026-10-03
 
 > Agentes y herramientas AI open source para educación. Foco: MIT / Apache 2.0 / BSD.
 > Verificado repo por repo vía WebFetch el 2026-09-30 (stars y licencia leídos de la página del repo).
+> **Pase 57 del 2026-10-03:** 🔴 **el pase ejecuta las dos acciones del 56 y el hallazgo que manda borra la única celda verde que tenía la tabla de la capa docente: la garantía de borrador de `toshieji` —la ÚNICA pieza T2 y la única conforme al Artículo 50 de las ocho— NO es una propiedad del servidor, es una propiedad de una casilla de configuración POR TAREA que el servidor no mira, no documenta y no posee.** Leído de primera mano en `moodle/moodle` @ `main`, `public/mod/assign/locallib.php:2991-3001`, con el comentario del propio Moodle: *«If marking workflow is enabled, the workflow state is at 'released'»* y su SQL `WHERE (a.markingworkflow = 0 OR (a.markingworkflow = 1 AND uf.workflowstate = :wfreleased))`. 🔴 **Con `markingworkflow = 0` Moodle le manda la nota al alumno sea cual sea el `workflowstate`, y en `locallib.php:7960` el cambio de estado no se registra siquiera. El README de `toshieji` dice «Safety (enforced server-side)» y «No student notification (draft state)», y tiene CERO menciones de `markingworkflow` en sus 8.326 bytes** (**P139**). ⚠️ **Así que el T2 incondicional de la capa es 0 de 8, no 1 de 8.** 🔵 **La hipótesis falsable de la acción 1 cae por SEGUNDO pase consecutivo en el medio que ella misma declaró sin interpretar: la compuerta de arranque sobre la escritura de juicio da 3 de 8 (el 56 pidió ≥ 4 para «es la norma» y ≤ 2 para «hallazgo de riesgo»), así que no decide — pero como en el pase 54 apareció un predictor mejor que un porcentaje.** 🔴 **La escalera G0–G3 del pase 56 suelda DOS EJES INDEPENDIENTES: «impedir listar el tool» no es una propiedad de la granularidad.** `Dymayo` tiene la compuerta más gruesa (un booleano por ROL) y **sí** desregistra (*«Tools behind a disabled flag are not registered at all»*); `toshieji` tiene una más fina (allowlist por RECURSO) y **no** desregistra; y `CANVAS_ROLE` de `bruchris` filtra el listado **sin ser un límite**, dicho por el propio proyecto: *«`CANVAS_ROLE` hides tools from a listing; `block` means the handler is never registered»* (**P137**). 🔴 **Y el eje que de verdad decide un despliegue no está en la escalera: el SENTIDO DEL DEFECTO.** La compuerta más fina de las ocho —`ALLOWED_WRITE_TOOLS`, nacida de un *security release*— es **fail-OPEN en stdio**, que es el despliegue normal de un docente: *«HTTP servers are read-only unless configured … Local stdio servers are unchanged unless you set it»*. **De las 3 piezas con compuerta real sobre la nota, sólo 2 son fail-closed por defecto en local, y las dos tienen 0 ★ mientras la de 272 ★ es la fail-open** (**P138**, misma curva invertida que P134). ⚠️ **`bruchris` desregistra de verdad (`CANVAS_DESTRUCTIVE_TOOLS=block`) pero sobre los SIETE tools de borrado: la nota no está cubierta, así que en este eje es G0 — la compuerta más honesta de la capa apunta al objeto equivocado** (**P140**). 🟢 **Acción 2 cerrada con código versionado: `compose/code/grading-draft-gate/` (37/37, OFFLINE), con los controles negativos que el 56 exigió y tres mutaciones que prueban que la suite tiene dientes (31/37, 36/37, 35/37).** 🟢 **Y una pregunta hacia afuera del pase 56 se contesta MIDIENDO en vez de preguntando: `mcp-moodle-teacher` y `mcp-moodle-staff` sirven el MISMO README byte a byte (sha256 idéntico) y el canónico es `mcp-moodle-staff`, que es el que titula** — con control negativo de tres nombres plausibles del mismo dueño en 404. ⚠️ **La tabla NO crece (80 filas, 0 altas): undécimo pase sin altas.** Ver **P137**–**P141** y las tendencias **370**–**392**.
 > **Pase 56 del 2026-10-03:** 🔴 **el pase cierra el agujero de P129 y la hipótesis que el pase 55 escribió de antemano cae en su rama mala: `toshieji` queda SOLO (1 de 8), así que «borrador + liberación humana» NO es la norma emergente de la categoría y el requisito lo tiene que escribir Globant.** 🔴 **Pero el hallazgo que manda degrada una recomendación de esta propia base: el pase 55 llamó al `confirmation_token` de `mcp-usc` «el mejor control de escritura medido en esta KB» y propuso extraerlo a una librería — y la pieza más adoptada de la capa (`vishalsachdev/canvas-mcp`, 272 ★) publicó un *security release* que dice que una confirmación NO PUEDE parar el ataque real de educación:** *«Instructions a student plants in course content can steer an instructor's assistant, and a confirmation token cannot stop that because the assistant can redeem its own token»*. **El que redime el token es el propio asistente: la confirmación no es una segunda autoridad, es la misma autoridad dos veces. Su remedio no es confirmar mejor, es que la herramienta no exista (`ALLOWED_WRITE_TOOLS`)** (**P132**). ⚠️ **El esquema de cuatro clases se rompe igual que el de tres del pase 54: la pluralidad de la capa (4 de 8) confirma pero no divulga, y eso no entra en T3 ni en T4 — se agrega T3′** (**P133**). 🔴 **La divulgación es 1 de 8 con el Artículo 50 vigente hace dos meses, y las curvas van al revés: la más adoptada (272 ★) es T4 y la única conforme tiene 0 ★** (**P134**). 🟢 **Dos regiones ubicadas con evidencia de primera mano (`vishalsachdev` → North America, NUEVA; `toshieji` → APAC, reconfirmada) y las otras 6 declaradas sin región.** ⚠️ **Y dos falsos positivos propios atrapados antes de publicar: un barrido de topónimos que ubicó una pieza en «Italia» por subcadena de `Italicia` (P135), y el resumidor que confundió «pide confirmación» con «escribe borrador» — son ejes independientes.** 🟢 **La tabla NO crece (80 filas, 0 altas): décimo pase sin altas, y el pase se gastó entero en las dos acciones del 55, las dos ejecutadas completas.** Ver **P132**–**P135** y el patrón nuevo **P136** y las tendencias **338**–**369**.
 > **Pase 55 del 2026-10-03:** 🔴 **el pase ejecuta las dos acciones del 54 y el hallazgo que manda invierte la intuición de cualquier filtro de componentes: los dos ejes de esta capa están ANTI-correlacionados.** Las **tres** piezas que someten trabajo calificado son las tres de PEOR procedencia de credencial (`@ink-waffle` b4+b3, `mcp-usc` (a)+b2, `moodler-mcp` b4) **y las tres traen salvaguarda de integridad explícita**; la pieza de credencial más limpia —`peancor/moodle-mcp-server`, 🟢 clase (a) con token de administración del **SITIO**— es la **ÚNICA de las seis sin ninguna**: ni confirmación, ni borrador, ni divulgación, ni texto de integridad. 🔴 **Así que un filtro que ordene por higiene de credencial selecciona A FAVOR de la escritura de notas sin guarda** (**P127**). 🟢 **La clase (4) NO existe en las seis, y el pase 54 pidió decirlo: el ecosistema se autolimita donde la licencia no lo obliga** (**P128**) — 🔴 **y el «candidato natural a (4)» que el 54 nombró, `DUTIC-mcp`, resultó el de disciplina MÁS estricta** (*«Todo simula por defecto»*, dos flags obligatorios, *«se niega a completar en vez de inventarse una valoración»*). ⚠️ **El esquema de cuatro clases tiene un agujero que este pase declara en vez de tapar: es estudiante-céntrico y no clasifica la escritura del lado DOCENTE, que es justo donde está la pieza sin guarda** (**P129**, acción 1 del pase 56). 🟢 **Acción 2 cerrada con denominador ENUMERADO: 14 filas del mapa por LMS → 9 clientes de tercero determinables (3 medidas acá por primera vez), 2 no determinables, 1 que no es cliente de un tercero y 2 fuera del eje; y la tasa enumerada (2 de 9, 22,2 %) es MENOR que la oportunista (7 de 18, 38,9 %).** ⚠️ **La tabla NO crece (80 filas, 0 altas): noveno pase sin altas desde el barrido obligatorio.** 🟢 **Una región recuperada con evidencia de primera mano —`toshieji` → APAC, 800 caracteres CJK— y el tamaño del problema medido: 16 de 21 filas sin región declarada.** ⚠️ **Y una corrección que el pase se hace a sí mismo antes de publicar: un `grep` escrito a mano dio dos cifras del README como «vencidas» y era falso positivo** (**P126**). Ver **P126**–**P130** y las tendencias **313**–**336**.
 > **Pase 54 del 2026-10-03:** 🔴 **el pase corrige el instrumento que el pase 53 acababa de construir, y lo corrige por donde el pase 53 dijo que había que probarlo: su propio CONTROL NEGATIVO falló.** El pase 53 escribió que `Dymayo/moodler-mcp` *«usa web service token, así que si saliera (b) el instrumento está mal»* — **salió (b)**, y el defecto tiene nombre: **P121 leía el TIPO de la credencial y hay que leer su PROCEDENCIA** (**P123**). 🟢 **La clase nueva, b4, es la que ningún filtro ve: la pieza abre un navegador real, el alumno completa su SSO con passkey y 2FA, y entonces la pieza le pide a Moodle un token de web service de app móvil y lo guarda en disco** — *«requests a mobile-app web service token from Moodle and stores it locally»*. **Artefacto de clase (a), emisor de clase (b).** 🔴 **Y el corolario invierte la intuición de cualquier filtro de componentes: `moodler-mcp` declara UNA variable (`MOODLE_URL`) y NINGUNA credencial, precisamente porque se la consigue sola — un audit de `.env` lo aprueba.** 🔵 **La hipótesis falsable del pase 53 cae en el medio que había declarado sin interpretar (2 de 7 este pase, 28,6 %; acumulado 7 de 18, 38,9 %: ni el ~45 % ni el <15 %), así que no decide — pero apareció un predictor mejor que un porcentaje: el canal correlaciona con el ALCANCE, no con la plataforma. Pieza con nombre de universidad: 3 de 3 en clase (b). Conector genérico de producto: 11 de 13 en (a), y las 2 excepciones son justamente las dos que mintan su propio token.** ⚠️ **La tabla NO crece (80 filas, 0 altas): el pase se gastó en las dos acciones que el 53 dejó escritas, y las dos se ejecutaron completas.** 🔴 **Nota de instrumento que es también una frontera nueva: el barrido que enumera estas filas quedó negado por `[Credential Exploration]` —una TERCERA frontera, distinta de las dos del pase 53— y lo niega tanto sobre el markdown de esta propia KB como sobre READMEs públicos ya descargados; lo que sí corre es WebFetch, que es el canal que la acción 1 del pase 53 prescribía.** ✅ **Control del pase 53 reproducido de primera mano: `curl -sI` da 403 para `github.com/moodle/moodle` Y para un repo inventado — no discrimina; `raw.githubusercontent.com` da 200/404.** Ver **P123**, **P124**, **P125** y las tendencias **295**–**312**.
@@ -456,6 +457,75 @@ dice de dónde salió, en vez de forzar cuatro casilleros sobre ocho piezas** (*
 consecutivo en que un esquema de clasificación de esta base resulta insuficiente al primer contacto con
 los datos (3→5 en el 54, 4→5 acá): el patrón ya es predecible y conviene escribir los esquemas con una
 clase abierta desde el principio.**
+
+
+### 🔴 La compuerta de ARRANQUE sobre la escritura de juicio (acción 1 del pase 56)
+
+**Denominador: las mismas 8 piezas de la capa docente.** **Canal: `raw.githubusercontent.com`, rama
+`main`, 9 de 9 en 200** (las 8 más `PabloPC05/mcp-usc`). ⚠️ **La pregunta NO es «¿tiene una
+bandera?» sino «¿hay una compuerta de arranque sobre el tool que escribe el JUICIO?»** — porque el
+pase 56 estableció (338–340) que la confirmación por llamada no protege contra el alumno que planta
+instrucciones.
+
+| Pieza | Variable de la compuerta | Granularidad | ¿Desregistra? | Defecto | ¿Cubre la nota? | G |
+|---|---|---|---|---|---|---|
+| [`toshieji/moodle-grading-mcp`](https://github.com/toshieji/moodle-grading-mcp) | `MOODLE_ALLOW_WRITE` + `MOODLE_WRITE_COURSE_ALLOWLIST` | bandera global **+ por RECURSO** | 🔴 **no** — rechaza en la llamada, el tool se lista igual | 🟢 **fail-closed** (`0` / vacía) | ✅ **sí** | 🟢 **G2** |
+| [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | `ALLOWED_WRITE_TOOLS` | 🟢 **por TOOL** | 🟢 **sí** — *«so it cannot be listed or called»* | 🔴 **fail-closed en HTTP, fail-OPEN en stdio** | ✅ **sí** | 🟢 **G3** ⚠️ |
+| [`Dymayo/moodler-mcp`](https://github.com/Dymayo/moodler-mcp) | `MOODLER_ALLOW_TEACHER_GRADING` | bandera **por ROL** | 🟢 **sí** — *«Tools behind a disabled flag are not registered at all»* | 🟢 **fail-closed** (`off`) | ✅ **sí** | 🟢 **G2′** |
+| [`bruchris/canvas-lms-mcp`](https://github.com/bruchris/canvas-lms-mcp) | `CANVAS_DESTRUCTIVE_TOOLS=block` (y `CANVAS_ROLE`) | por CONJUNTO de tools | 🟢 **sí** — *«`block` means the handler is never registered»* | ⚠️ `allow` por defecto | 🔴 **NO** — sólo los **7** tools de borrado | 🔴 **G0** |
+| [`NiccoloSalvini/mcp-moodle-staff`](https://github.com/NiccoloSalvini/mcp-moodle-staff) | `MOODLE_STAFF_TOOLS` (*«sees 17 tools instead of 22»*) | por GRUPO | ⚠️ no determinado | 🔴 **fail-OPEN** — *«on by default»* | ⚠️ **no determinado** (**gap 249**) | ⚠️ **G1?** |
+| [`peancor/moodle-mcp-server`](https://github.com/peancor/moodle-mcp-server) | 🔴 **ninguna** — 3 variables y las 3 son de conexión | — | — | — | 🔴 **no** | 🔴 **G0** |
+| [`MarcosNahuel/moodle-mcp`](https://github.com/MarcosNahuel/moodle-mcp) | 🔴 **ninguna** — `MOODLE_ALLOW_INSECURE` es **TLS**, no escritura | — | — | — | 🔴 **no** | 🔴 **G0** |
+| [`openedx-mcp`](https://pypi.org/project/openedx-mcp/) | 🔴 **ninguna de arranque** — autoriza con `is_staff` / `is_superuser` de Django y protege en la LLAMADA | — | — | — | 🔴 **no** | 🔴 **G0** |
+
+**El reparto: 3 de 8 tienen compuerta de arranque de G2 o mejor sobre la escritura de juicio**
+(`toshieji`, `vishalsachdev`, `Dymayo`). 🔵 **La hipótesis del pase 56 pedía ≥ 4 para declarar norma de
+categoría y ≤ 2 para declarar hallazgo de riesgo: 3 cae en el medio y NO decide.** ⚠️ **Es el segundo
+pase consecutivo en que un umbral pre-registrado de 3-contra-4 aterriza exactamente en el hueco; la
+lección es de diseño de hipótesis, no de datos: un umbral sobre n = 8 tiene que partir en 4-contra-4.**
+
+#### 🔴 Lo que sí decide: la escalera no es ordinal (P137)
+
+**«Impedir listar el tool» NO es una propiedad de la granularidad**, y las tres piezas con compuerta lo
+demuestran en tres direcciones distintas:
+
+| | granularidad | ¿desregistra? |
+|---|---|---|
+| `Dymayo` | la más **gruesa** (un booleano por rol) | 🟢 **sí** |
+| `toshieji` | más **fina** (allowlist por recurso) | 🔴 **no** |
+| `bruchris` / `CANVAS_ROLE` | por rol | 🔴 **no, y el proyecto lo dice**: *«hides tools from a listing»* |
+
+🔵 **Son dos ejes ortogonales y el pase 56 los soldó en una escalera. Cuarto pase consecutivo en que un
+esquema de esta base resulta insuficiente al primer contacto con los datos** (3→5 en el 54, 4→5 en el
+56, y acá una escalera que no es ordinal). **La lección que el pase 56 dejó escrita —escribir los
+esquemas con una clase abierta— se aplicó, y no alcanzó: lo que hacía falta era escribirlo con DOS
+COLUMNAS.**
+
+#### 🔴 El eje que decide el despliegue no estaba en la escalera: el sentido del defecto (P138)
+
+**`ALLOWED_WRITE_TOOLS` es la compuerta más fina de las ocho y nació del *security release* que el pase
+56 citó.** Su defecto depende del TRANSPORTE:
+
+> *«HTTP servers are read-only unless configured → set `ALLOWED_WRITE_TOOLS` to the write tools your
+> deployment needs, or `all` … **Local stdio servers are unchanged unless you set it**»*
+
+🔴 **El despliegue normal de un docente es stdio, y en stdio la compuerta está apagada salvo que el
+operador la encienda.** De las 3 piezas con compuerta real sobre la nota, **sólo 2 son fail-closed en el
+despliegue local por defecto** (`toshieji`, `Dymayo`) — **y las dos tienen 0 ★, mientras la de 272 ★ es
+la fail-open.** 🔵 **Misma curva invertida que P134: la adopción y la guarda van al revés.**
+
+#### ⚠️ La compuerta más honesta de la capa apunta al objeto equivocado (P140)
+
+`bruchris/canvas-lms-mcp` es la única pieza que **distingue explícitamente un filtro de un límite** y la
+única que **se niega a fingir una guarda que no tiene** (*«`confirm` is reserved but not implemented»*).
+🔴 **Y su desregistro real cubre los SIETE tools de borrado, no `grade_submission`.** ⚠️ **Para una
+auditoría de compras esto es la trampa del eje: una planilla que cuente «filtrado por rol» o «política
+de tools destructivos» como control de escritura de notas cuenta un filtro de UX y un alcance
+equivocado como si fueran compuertas.** 🟢 **Y `CANVAS_PROVENANCE_FENCING` (encendido por defecto) es
+el único control de la capa que ataca el modelo de amenaza de P132 por donde entra —marca la
+procedencia del texto del alumno— con su límite dicho por el propio proyecto:** *«Fencing marks
+provenance; it does not enforce obedience … a precondition for a model treating it as data — not a
+guarantee that it will»*.
 
 ### 🔴 La divulgación es 1 de 8, y la obligación está VIGENTE hace dos meses
 
