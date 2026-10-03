@@ -8,6 +8,64 @@ updated: 2026-10-03
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 
+## 2026-10-03 — pase 68: entran los dos documentos de estándar que SÍ ceden, y la versión vigente de xAPI se fue de GitHub
+
+### 🟢 El movimiento de repos del pase: la capa de estándares gana sus dos piezas permisivas
+
+| Pieza | Licencia | ★ / forks | Qué es |
+|---|---|---|---|
+| 🟢 [`adlnet/xAPI-Spec`](https://github.com/adlnet/xAPI-Spec) | **Apache-2.0** (11.525 B) | **952** / 403 | documento normativo de **xAPI 1.0.3**, ADL Initiative (U.S. DoD) |
+| 🟢 [`Ed-Fi-Alliance-OSS/Ed-Fi-Standard`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-Standard) | **Apache-2.0** (10.173 B) | **46** / 13 | **Ed-Fi Data Standard v6.2.0**: Descriptors, Models, Samples, Schemas |
+| 🟢 [`aemonge/opencode-sit`](https://github.com/aemonge/opencode-sit) | **MIT** (1.056 B, `NO-HOLDER`) | npm v0.1.2 | tutor socrático como **plugin de OpenCode** |
+
+🔵 **Las dos primeras entran por una pregunta de LICENCIA, no por un eje de descubrimiento: el barrido
+de la acción 3 fue a buscar si los documentos de estándar niegan derivados y encontró dos que no.**
+
+### 🔴 La corrección que este archivo arrastraba: «la capa de estándares está cerrada» era media verdad
+
+| Publicador | Artefacto | Régimen | n |
+|---|---|---|---|
+| 🔴 1EdTech / IMS | documento | `SPEC-NO-DERIVATIVES` + `REGISTERED-USERS` | 2 de 2 |
+| 🟢 1EdTech / IMS | software | Apache-2.0 | 4 de 4 |
+| 🟢 ADL · Ed-Fi | documento | **Apache-2.0** | 2 de 2 |
+
+🔵 **Cero excepciones en 8 archivos leídos. El eje no es «estándar»: es publicador × tipo de
+artefacto** (**P191**).
+
+### 🔴 El hallazgo de canal del pase: un estándar que migra se cae de TODOS los denominadores
+
+🔴 **`xAPI-Spec` declara en su propio README que es la versión vieja. La vigente —IEEE
+9274.1.1-2023— vive en `opensource.ieee.org`, GitLab del IEEE.** 🔴 **`curl` → `000`; WebFetch →
+`EGRESS_BLOCKED`.** 🔵 **Los cuatro instrumentos de licencia de esta KB apuntan a
+`raw.githubusercontent.com`, así que esto no aparece como ausencia: aparece como si no existiera**
+(**P195**). ⚠️ **Se declara como hueco en vez de heredar la licencia del archivado.**
+
+### 🔴 Tres `REPO-UNREACHABLE` que esta KB podría haber publicado como ausencias de licencia
+
+🟢 **El instrumento nuevo separa las dos causas antes de escribir ninguna**, que es la lección de
+**P187** aplicada a sí misma: `1EdTech/caliper-php`, `IMSGlobal/caliper-python` y
+`Ed-Fi-Alliance-OSS/Ed-Fi-SDK-MCP` dan 404 también en `README.md` → **el repo no resuelve.**
+⚠️ **`Ed-Fi-SDK-MCP` sale del campo `repository` de un paquete npm vivo cuyo artefacto embarca
+Apache-2.0: el paquete declara un repositorio que no existe.**
+
+### ⚠️ El eje de plataformas, saturado por OCTAVO pase — y la cifra de vendedor se movió 30×
+
+⚠️ **`open source platform education ERP CRM MIT Apache` volvió a colapsar sobre el SEO de
+OpenEduCat**, otra vez en varios idiomas. 🔴 **La novedad no es la plataforma, es su cifra: el pase 52
+registró *«~3 millones de usuarios y 1.000+ instituciones en 90+ países»* y hoy el mismo proveedor
+declara **«30.000+ instituciones en 130+ países»**.** 🔵 **Un salto de 30× en la misma afirmación
+autodeclarada y sin instrumento se registra como **inestabilidad de cifra de vendedor** (**P107**), no
+como crecimiento.** 🟢 **Confirmado en el barrido y sin cambio de licencia: OpenEduCat sigue
+**LGPL-3.0** sobre Odoo.** ⚠️ **También aparecieron `Kuali` (consorcio de ERP/SIS universitario) y
+`openSIS`: ninguno con licencia leída de primera mano en esta corrida, así que NO entran como filas.**
+
+### ⚠️ Lo que este pase NO midió de este archivo, declarado como tal
+
+⚠️ **No se re-midió tracción (★/forks) de las filas ya publicadas:** las cifras de este pase son las
+de las tres altas, leídas hoy. ⚠️ **No se barrió `standards.1edtech.org`, donde viven los documentos de
+CLR, QTI, OneRoster y LTI**, así que el veredicto sobre documentos de 1EdTech está medido sobre los
+**2** repos que la org publica en GitHub.
+
 ## 2026-10-03 — pase 67: la capa de autograding entra entera, y una ausencia de licencia de estándar era falsa
 
 ### 🟢 El movimiento de repos del pase: una FUNCIÓN que esta KB tenía casi vacía

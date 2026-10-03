@@ -8,6 +8,7 @@ updated: 2026-10-03
 
 > Agentes y herramientas AI open source para educación. Foco: MIT / Apache 2.0 / BSD.
 > Verificado repo por repo vía WebFetch el 2026-09-30 (stars y licencia leídos de la página del repo).
+> **Pase 68 del 2026-10-03:** 🔴 **La acción 1 del pase 67 CIERRA en su rama CARA, y el defecto no es de dos filas: es de cómo esta KB transcribe un nombre de paquete.** Barridos los **5** nombres que viven en npm **y** PyPI —declarados antes de empezar: `canvas-lms-mcp`, `clawed`, `educhain`, `frappe-mcp-server`, `moodle-cli`—, **4 de 5 son dos ARTEFACTOS distintos** y sólo `moodle-cli` es un proyecto en dos canales. 🔵 **La hipótesis fijaba el corte en «más de 2» → se agrega la columna *Identidad*, NO la columna *Canal*** (**P192**). 🔴 **El caso que lo vuelve estructural: `canvas-lms-mcp` son DOS proyectos REALES, los dos en GitHub, los dos con el mismo nombre —`bruchris` (165 tools, TS, titular *Christian Bru*, 1.070 B) y `ahnopologetic` (minimal, titular *Canvas LMS MCP Server Contributors*, 1.091 B)—, separados por `sha256` distinto.** 🟢 **Y la identidad se puede PROBAR cuando el registro no la declara: `opencode-sit` no publica `repository`, y el `LICENSE` del repo `aemonge/opencode-sit` es byte a byte el del tarball (1.056 B, `sha256:1126322e…`), así que el hash que esta KB usa para SEPARAR forks también sirve para UNIR un paquete a su árbol** (**P193**). ⚠️ **Las cuatro búsquedas globales obligatorias volvieron a devolver el eje generalista agotado —openclaw, browser-use, AutoGen, CrewAI— y NINGUNA alta educativa salió de ellas, por segundo pase consecutivo.** 🔴 **Y el hallazgo que esta KB se hace a SÍ MISMA: una corrección del pase 52 fue REGRESADA en el pase 66 —`@eduware/oneroster` volvió a `MIT` porque un instrumento nuevo preguntó por el CAMPO del registro donde el viejo había leído el PAYLOAD—, así que una corrección sobrevive sólo si el instrumento que re-mide la conoce** (**P197**). Ver las tendencias **530**–**547**.
 > **Pase 67 del 2026-10-03:** 🔴 **La acción 2 del pase 66 CIERRA refutando una ausencia que esta KB publicaba en tres archivos: `1EdTech/openbadges-specification` SÍ cede —`ob_v3p0/license.md`, 12.324 B— y lo que cede NO es open source, es la SPECIFICATION DOCUMENT LICENSE de IMS Global, que *«no concede el derecho a crear modificaciones o derivados»*: una compuerta MÁS DURA que el ShareAlike de P178, sobre las 15 filas de estándares de esta base** (**P187**). 🔵 **Fue invisible porque el archivo no está en la raíz —vive en el subdirectorio de la VERSIÓN— y se llama `license.md` en minúscula; y sólo `ob_v3p0` lo tiene, así que en un repo de especificación la pregunta de licencia es POR VERSIÓN.** 🟢 **Con eso las «14 ausencias» son 13 y las 13 quedan medidas en tres capas.** 🔴 **La acción 3 se resuelve REFUTANDO su premisa: `educhain` y `frappe-mcp-server` no son dos canales con dos licencias, son dos ARTEFACTOS distintos —el `educhain` de npm no tiene repositorio ni descripción y no es el proyecto—, así que las dos filas de esta KB están BIEN y la columna *Canal* no se agrega hasta hacer la pregunta de identidad** (**P188**). 🟢 **5 altas con licencia leída de primera mano, la capa de AUTOGRADING entra entera (INGInious AGPL-3.0/EMEA, 2 MIT-Apache, 1 GPL) y APAC gana un índice CC0 de India.** 🔴 **La acción 1 está BLOQUEADA: el barrido de titular exige código de este repositorio y el entorno lo negó** (`[Code from External]`). Ver las tendencias **512**–**527**.
 > **Pase 65 del 2026-10-03:** 🔴 **La acción 1 del pase 64 CIERRA en su rama CARA y corrige una cifra publicada: «32 sin licencia» estaba inflada un 31 %.** Barridas las **29** filas no-`FWU-DE` por la pregunta del **PAYLOAD** en vez de la del archivo, **7 declaran cesión adentro** (5 en manifiesto, 2 en encabezado de fuente de Moodle); con las 3 de `FWU-DE` del pase 64, **10 de 32 no eran ausencias** y el denominador real es **22**. 🟢 **Y la relectura de las 23 del pase 51 que la acción pedía quedó hecha en el mismo barrido: están CONTENIDAS en estas 29 (`comm -23` da vacío) y 5 declaran en payload → aquella cifra estaba inflada un 22 %.** 🔵 **Pero las dos clases no valen lo mismo, y es el patrón nuevo del pase (**P179**): un `"license": "MIT"` de manifiesto es un IDENTIFICADOR —nombra la licencia y no trae titular, ni año, ni una línea de texto, que es **P168** llevado a cero bytes—, mientras el encabezado de Moodle trae la frase de otorgamiento completa con titular y año: eso sí es cesión.** 🔴 **Medido en tres canales sobre las 3 filas publicadas en npm: el identificador viaja (repo + registro), el TEXTO no viaja a ninguna parte —ningún tarball trae archivo de licencia— y DOS manifiestos PROMETEN el `"LICENSE"` que no existe ni en el repo ni en el artefacto; en `Timadey/proctor` la promesa es más vieja que el repo, porque el pase 41 ya había medido que no hay `LICENSE` en ningún commit de la historia.** 🟢 **La fila más forkeada de la KB se da vuelta a favor: los 39 forks de `DMontgomery40/mcp-canvas-lms` heredan una cesión DECLARADA, no la ausencia que la acción temía.** Ver `compose/code/p172-payload-license-sweep/` y las tendencias **479**–**492**.
 > **Pase 64 del 2026-10-03:** 🟢 **La acción 1 del pase 63 CIERRA, y cierra en su rama BENIGNA: barridas las **200** filas `org/repo` de este archivo con el archivo de licencia LEÍDO, el reparto no se movió —**160 licenciado · 32 sin licencia (ausencia MEDIDA) · 8 inalcanzable**, 82,5 % permisivo sobre lo licenciado contra 81,3 % que midió el pase 51 con un denominador 31 filas más chico—. **No apareció el bloque de archivos-afirmación que la hipótesis temía: 0 de 160 por debajo de 400 bytes.** 🔴 **Pero el barrido encontró UNA fila que aún afirma licencia sobre un repo que no existe: `radhepa/Teacher-MCP` dice «MIT ✅» y da **404 por dos canales independientes**.** 🔵 **Y el instrumento mejoró dos veces: `raw.githubusercontent.com` resuelve la ref **`HEAD`** a la rama por omisión —la dimensión «rama» desaparece—** (**P170**), **y un classificador que hace `grep` sobre el cuerpo etiqueta GPL-3.0 como AGPL-3.0 porque el §13 de GPL-3.0 se TITULA «Use with the GNU Affero General Public License»** (**P171**). 🟢 **Los 4 «textos anómalos» que el pase 51 dejó sin resolver quedan los CUATRO identificados, y uno mejora la cotización: `trilogy-group/oneroster-ts` es **0BSD**, más permisiva que MIT.** Ver las tendencias **466**–**478**.
@@ -235,6 +236,80 @@ updated: 2026-10-03
 > fila** —`lineage-skill`, con un vocabulario cerrado de 9 valores por afirmación, **4 de los 9 «esto lo produjo el
 > modelo»**— y **ninguna de las dos sabe de la otra**. Ver la capa nueva al final de este archivo, las tendencias
 > **180**–**182** y el patrón **P99**.
+
+## 🧾 IDENTIDAD antes que canal: 4 de los 5 nombres de doble registro son dos artefactos, y el hash del `LICENSE` une un paquete a su árbol (acción 1 del pase 67, pase 68 del 2026-10-03)
+
+### 🔵 El denominador, declarado antes de medir como la acción exigía
+
+La acción del pase 67 impuso una condición: *«declarar los 5 nombres antes de empezar, y no publicar
+ningún conteo que se lea como comparable al "5 de 18" de P183, que contaba NOMBRES»*. 🟢 **Los cinco
+nombres que `p183/result.2026-10-03.tsv` registra en los DOS registros son `canvas-lms-mcp`,
+`clawed`, `educhain`, `frappe-mcp-server` y `moodle-cli`.** Este conteo es sobre **5 nombres de doble
+registro**, y no es comparable al 5-de-18 de **P183**.
+
+**El canal, el que la acción dejó probado:** `registry.npmjs.org/<pkg>` y `pypi.org/pypi/<pkg>/json`,
+comparando `repository` + `description` + `version` — **no la licencia.** Los dos dan **200**.
+
+### 🔴 El reparto: 4 de 5 son dos artefactos distintos
+
+| Nombre | npm | PyPI | Veredicto |
+|---|---|---|---|
+| 🔴 **`canvas-lms-mcp`** | repo [`bruchris/canvas-lms-mcp`](https://github.com/bruchris/canvas-lms-mcp) · v**1.30.0** · *«TypeScript MCP 1.x server for Canvas LMS — 165 tools»* | repo [`ahnopologetic/canvas-lms-mcp`](https://github.com/ahnopologetic/canvas-lms-mcp) · v**0.1.2** · *«Minimal Canvas LMS MCP server»* | **DOS ARTEFACTOS, los dos REALES.** Titulares distintos (*Christian Bru* 2026 / *Canvas LMS MCP Server Contributors* 2023) y `sha256` distinto (1.070 B / 1.091 B) |
+| 🔴 **`clawed`** | **sin `repository`**, descripción *«clawed - coming soon»*, ISC por omisión, *maintainer* `jay6697117`, creado **2026-03-24** | repo [`SirhanMacx/Claw-ED`](https://github.com/SirhanMacx/Claw-ED) · v**9.18.2026.1** · *«Your AI co-teacher… aligns to your state standards»* | **DOS ARTEFACTOS.** El de npm es una **RESERVA DE NOMBRE**, no un proyecto |
+| 🔴 **`educhain`** | sin `repository`, descripción **vacía**, ISC, creado **2024** | repo [`satvik314/educhain`](https://github.com/satvik314/educhain) · v**0.4.0** | DOS ARTEFACTOS (ya medido en el pase 67, se confirma) |
+| 🔴 **`frappe-mcp-server`** | repo `appliedrelevance/frappe_mcp_server` · v**0.6.0** · **ISC** | **sin repo y sin author** · v**1.2.0** · **MIT**, titular `muthanii` | DOS ARTEFACTOS, y 🔴 **ninguna cesión de primera parte**: el repo de npm **no tiene `LICENSE` en la raíz** (404 en tres nombres) |
+| 🟢 **`moodle-cli`** | repo [`bunizao/moodle-cli`](https://github.com/bunizao/moodle-cli) · v**0.10.0** · MIT | **mismo repo** · v0.4.2 · MIT · author `bunizao` | 🟢 **UN proyecto en dos canales** — el único de los cinco. Titular `bunizao` en los dos, 1.064 B idénticos |
+
+🔴 **4 de 5 > 2, así que la hipótesis cae en la rama que la acción marcó como cara: lo que hay que
+agregar es la columna *Identidad* —qué artefacto ES el proyecto— y NO la columna *Canal*.** 🔵 **Poner
+`(npm)`/`(PyPI)` en las 21 filas `PKG-NAMED` habría publicado dos artefactos como una fila en cuatro
+de cinco casos.** Ver **P192**.
+
+### 🟢 La prueba de identidad más fuerte que esta KB tenía sin usar: el `sha256` del `LICENSE`
+
+🔴 **`opencode-sit` (npm) no declara `repository`.** Por **P188** el nombre no alcanza para afirmar un
+repo, así que la fila no podía citar ninguno. 🟢 **Pero `aemonge/opencode-sit` existe, y la identidad
+quedó PROBADA en vez de inferida: el `LICENSE` del repositorio y el del tarball son byte a byte el
+mismo archivo** — 1.056 B, `sha256:1126322e2cc8d165…` en los dos—, **y el `package.json` del repo
+declara `"name": "opencode-sit"`.**
+
+🔵 **El patrón (**P193**): el mismo instrumento que esta KB usa para SEPARAR forks —comparar el
+`sha256` del archivo de licencia, como hizo el pase 67 con las dos crías de `canvas-mcp`— sirve para
+UNIR un paquete a su árbol cuando el registro no declara el enlace.** ⚠️ **No prueba que el repo sea
+el *upstream* del paquete: prueba que comparten el archivo. Es una cota inferior de identidad, y se
+escribe como tal.**
+
+### 🟢 El alta del pase, con la licencia leída de primera mano y el dedupe corrido ANTES
+
+| Pieza | Licencia | Qué es | Región | Identidad |
+|---|---|---|---|---|
+| 🟢 [`aemonge/opencode-sit`](https://github.com/aemonge/opencode-sit) | **MIT** (1.056 B, ⚠️ **`Copyright (c) 2026` sin nombre** → `NO-HOLDER`, **P190**/D8) | ***Socratic Intelligent Tutor* como plugin de agente para OpenCode** — tutoría socrática encima de un agente de código ya desplegado, no un LMS | **Global** (sin señal regional declarada) | npm `opencode-sit` v0.1.2 ↔ repo, **unidos por `sha256`** |
+
+⚠️ **Es UNA alta, y eso es el resultado honesto del pase: corrido el dedupe ANTES de escribir —la
+corrección que el pase 66 se hizo a sí mismo—, 12 de 15 candidatas YA ESTABAN en esta KB**
+(`bruchris/canvas-lms-mcp`, `SirhanMacx/Claw-ED`, `moon0825/jbnu-lms-student`, `Miaotofu01/Study-Mate`,
+`Eduware-Inc/eduware-oneroster`, `pykt-team/pykt-toolkit`, `satvik314/educhain`, `bunizao/moodle-cli`
+y otras). 🔵 **El valor de este pase no está en filas nuevas: está en cuatro correcciones de filas
+publicadas y en dos instrumentos nuevos.** Las otras dos altas son documentos de estándar y van a
+`repos/foundations.md`.
+
+### 🔴 Las correcciones de inventario de este pase, nombradas
+
+| Fila | Decía | Dice ahora | Por qué |
+|---|---|---|---|
+| 🔴 **`@eduware/oneroster`** | **MIT** (reintroducido por `p183` en el pase 66) | **BSD Zero Clause (0BSD)**, 711 B, titular `Bjorn Pagen` | 🔴 **NO es un hallazgo nuevo: es una REGRESIÓN.** El **pase 52** ya había medido 0BSD en el payload; el pase 66 re-derivó `MIT` del campo del registro y la celda volvió atrás. 🟢 **Reproducido hoy: 711 B, `sha256:8b211ca07d3f…`, byte a byte idéntico al de `@superbuilders/oneroster`,** que declara repo `trilogy-group/oneroster-ts` — **la pieza 0BSD que esta KB ya tiene registrada**, así que la licencia está HEREDADA y el linaje queda trazado por hash (**P193**, **P197**). ⚠️ **Y el repo que el paquete declara, `Eduware-Inc/eduware-oneroster`, da 404 en README y LICENSE (4 variantes probadas), igual que su `homepage`** |
+| 🔴 **`frappe-mcp-server`** | una fila con licencia por canal | **dos artefactos**; el de PyPI cede MIT bajo titular **`muthanii`** | Tres canales, tres respuestas, **ninguna de primera parte** |
+| 🔴 **`clawed`** | un proyecto en dos registros | **el npm es reserva de nombre**; el proyecto es `SirhanMacx/Claw-ED` | npm sin repo ni descripción; ⚠️ y el titular del proyecto dice **`EDUagent Contributors`** → señal de **renombre** |
+| 🔴 **`opencode-sit`** | MIT con titular | **MIT `NO-HOLDER`** | `Copyright (c) 2026` **sin nombre**: la cesión no nombra a nadie (**P190**/D8) |
+
+### ⚠️ Lo que este pase NO midió de este archivo, declarado como tal
+
+⚠️ **Las 16 filas `PKG-NAMED` restantes no se re-barrieron por identidad:** la acción acotaba el
+barrido a los 5 nombres de doble registro, y un nombre de registro único no tiene con qué
+contradecirse. 🔵 **Pero el caso `clawed` muestra que un nombre de registro único TAMBIÉN puede no ser
+el proyecto, así que la pregunta queda abierta para las 16 y es la acción 1 del pase 69.** ⚠️ **Y la
+columna *Identidad* NO se agregó a la tabla en este pase: se midió el reparto que decide su contenido,
+y escribir 21 celdas es trabajo de edición que conviene hacer de una vez y con las 16 medidas.**
 
 ## 🧾 La capa de AUTOGRADING entra entera, una ausencia de licencia de estándar era FALSA, y el nombre de un paquete no es su identidad (acciones 2 y 3 del pase 66, pase 67 del 2026-10-03)
 
@@ -3535,7 +3610,7 @@ estándar, y abrir el README a buscar «MCP» adentro**. Este pase la ejecutó c
 
 | Agente / conector | Paquete verificado | Versión | Licencia | Sirve MCP | Qué escribe |
 |---|---|---|---|---|---|
-| **`@eduware/oneroster`** | [registry.npmjs.org](https://registry.npmjs.org/@eduware%2Foneroster) | 1.2.11 | **MIT** ✅ | ✅ **sí — ejecutable `mcp` empaquetado** | OneRoster **1.1 y 1.2** completo + perfil `ClassLink` de sólo lectura |
+| **`@eduware/oneroster`** | [registry.npmjs.org](https://registry.npmjs.org/@eduware%2Foneroster) | 1.2.11 | 🔴 **0BSD** (payload, 711 B) — ⚠️ **el campo npm dice `MIT` y es el lado equivocado**; corregido en el pase 68 tras la regresión del 66 | ✅ **sí — ejecutable `mcp` empaquetado** | OneRoster **1.1 y 1.2** completo + perfil `ClassLink` de sólo lectura |
 | `@superbuilders/oneroster` (= `trilogy-group/oneroster-ts`) | [github.com/trilogy-group/oneroster-ts](https://github.com/trilogy-group/oneroster-ts) | 0.7.0 | 0BSD ✅ | ✅ sí (ya registrado, 132 tools medidas en el pase 30) | OneRoster con escritura |
 | `openedx-mcp` (oficial Open edX) | [pypi.org/project/openedx-mcp](https://pypi.org/project/openedx-mcp/) | 0.1.5 | ⚠️ **AGPL-3.0** | ✅ sí (35 rutas) | matrícula, usuarios, roles, certificados, reportes, **authoring de bloques** |
 

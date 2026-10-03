@@ -9,6 +9,176 @@ updated: 2026-10-03
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 > No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
 
+## 2026-10-03 — pase 68: 4 de 5 nombres de doble registro son dos artefactos, el régimen de los estándares se parte por PUBLICADOR, y el barrido debido tres veces por fin corrió
+
+### 🔴 El hallazgo del pase: el defecto no es de dos filas, es de cómo se transcribe un nombre
+
+La acción 1 del pase 67 mandó preguntar la IDENTIDAD antes que el canal sobre las 21 filas
+`PKG-NAMED`, con el denominador declarado antes de empezar y una hipótesis con corte en «más de 2».
+
+🔴 **Medido sobre los 5 nombres que viven en npm y PyPI: 4 son dos ARTEFACTOS distintos.** Sólo
+`moodle-cli` es un proyecto en dos canales — mismo repo `bunizao/moodle-cli`, mismo titular
+`bunizao`, `LICENSE` de 1.064 B idéntico en los dos.
+
+🔵 **4 > 2, así que gana la rama cara: lo que hay que agregar es la columna *Identidad* (qué artefacto
+ES el proyecto) y NO la columna *Canal* que el pase 66 había pedido.** Poner `(npm)`/`(PyPI)` sin
+preguntar identidad habría publicado **dos artefactos como una fila en 4 de 5 casos**.
+
+### 🔴 El caso que lo vuelve estructural: dos proyectos REALES con el mismo nombre
+
+🔴 **`canvas-lms-mcp` no es un nombre con dos canales: son dos proyectos vivos, los dos en GitHub, los
+dos con `LICENSE` propio.**
+
+| | npm | PyPI |
+|---|---|---|
+| repo | `bruchris/canvas-lms-mcp` | `ahnopologetic/canvas-lms-mcp` |
+| versión | 1.30.0 | 0.1.2 |
+| descripción | *«TypeScript MCP 1.x server for Canvas LMS — 165 tools»* | *«Minimal Canvas LMS MCP server»* |
+| titular | `Christian Bru` (2026) | `Canvas LMS MCP Server Contributors` (2023) |
+| `LICENSE` | 1.070 B · `sha256:c29329c5ef3b…` | 1.091 B · `sha256:830feaa6c363…` |
+
+⚠️ **Los dos son MIT y los dos son defendibles; lo que NO se puede es escribir *«canvas-lms-mcp»* en
+una fila y dejar que el lector elija.** 🔵 **La prueba de no-identidad más barata sigue siendo la
+VERSIÓN (1.30.0 contra 0.1.2), y la más dura es el `sha256` del archivo de licencia.**
+
+### 🟢 El hash del `LICENSE` no sólo separa: también UNE
+
+🔴 **`opencode-sit` (npm) no declara `repository`, así que por **P188** la fila no podía citar un
+repo.** 🟢 **La identidad quedó PROBADA: el `LICENSE` de `aemonge/opencode-sit` y el del tarball son
+el mismo archivo byte a byte** (1.056 B, `sha256:1126322e2cc8d165…`), **y el `package.json` del repo
+declara `"name": "opencode-sit"`.** 🔵 **Es el mismo instrumento que el pase 67 usó para separar dos
+forks de `canvas-mcp`, corriendo en la otra dirección** (**P193**). ⚠️ **Prueba que comparten el
+archivo, no que el repo sea el upstream: es una cota inferior de identidad.**
+
+### 🟢 La alta del pase, y es una sola
+
+| Pieza | Licencia | Qué es |
+|---|---|---|
+| 🟢 [`aemonge/opencode-sit`](https://github.com/aemonge/opencode-sit) | **MIT**, 1.056 B, ⚠️ `NO-HOLDER` | ***Socratic Intelligent Tutor* como plugin para OpenCode**: tutoría socrática montada sobre un agente de código ya desplegado |
+
+⚠️ **UNA alta, y es el resultado honesto: corrido el dedupe ANTES de escribir, 12 de 15 candidatas ya
+estaban en esta KB.** 🔵 **El pase vale por cuatro correcciones y dos instrumentos, no por filas.**
+
+### 🔴 La acción 2, debida por TERCERA vez, corrió — y lo primero que hizo fue VERIFICAR el pase 66
+
+🟢 **`sweep_holder.sh` se ejecutó de cero sobre las 160 filas `LICENSED` de `p170` y devolvió
+exactamente la salida guardada: 68 `HOLDER-MATCH` · 31 `HOLDER-UNRELATED` · 61 `NOT-APPLICABLE`.**
+Ningún *slug* cambió de veredicto, ninguno entró, ninguno salió. ⚠️ **La acción advertía «no publicar
+un reparto que se lea como el del pase 66 (68/31/61)» por si estaba inflado. No lo estaba: es
+reproducible dos pases después.**
+
+🔴 **Y un defecto de medición PROPIO, declarado porque es barato de repetir: la primera lectura de
+esta corrida contó 66/30/60 sobre 156 filas, y era un artefacto de MI lectura** — `sweep_holder.sh`
+escribe desde 6 trabajos en paralelo y leí el archivo en la misma cadena de comandos, antes de que
+las últimas escrituras llegaran al disco. 🔵 **Regla: la salida de un barrido paralelo se cuenta en
+una invocación SEPARADA, y el conteo se valida contra el número de entradas antes de publicarse.**
+⚠️ **Si esa lectura se hubiera publicado, esta KB habría «corregido» una cifra correcta.**
+
+### 🔴 La ampliación del denominador: el titular es PEOR en la capa que el cliente instala
+
+Nuevo instrumento `p190-holder-package-layer`, que **compone** el alcance de `p183` con el extractor
+de `p184` sin reimplementar ninguno (**regla 1 de P126**). **Denominador declarado: las 17 filas
+`TARBALL-TEXT`** — las únicas con texto de licencia DENTRO del artefacto.
+
+| Veredicto | Capa ÁRBOL (n=160) | Capa PAQUETE (n=17) |
+|---|---|---|
+| `HOLDER-MATCH` | 68 (42,5 %) | 6 (35,3 %) |
+| `HOLDER-UNRELATED` | 31 (19,4 %) | 🔴 6 (**35,3 %**) |
+| `NOT-APPLICABLE` | 61 (38,1 %) | 4 (23,5 %) |
+| `NO-HOLDER` | **0** | 🔴 1 (5,9 %) |
+
+🔴 **`HOLDER-UNRELATED` casi DUPLICA su proporción donde el cliente instala, y la clase `NO-HOLDER`
+—ausente en 160 archivos de árbol— aparece acá.** ⚠️ **n=17: esto no establece una tasa. Establece
+que el supuesto de que lo publicado en un registro está más prolijo NO se sostiene.**
+
+### 🔴 Dos contradicciones de licencia nuevas, las dos en el payload
+
+**`@eduware/oneroster`** (v1.2.11): npm declara **MIT**; el artefacto embarca **BSD Zero Clause
+(0BSD)**, 711 B, titular `Bjorn Pagen <…@users.noreply.github.com>` 2025; el *maintainer* es
+`ian-eduware`; 🔴 **y el repo que declara —`Eduware-Inc/eduware-oneroster`, también como `homepage`—
+NO RESUELVE: 404 en README y LICENSE, probadas 4 variantes del nombre.** 🟢 **0BSD es más permisiva
+que MIT —ni atribución— así que el error de familia cae del lado seguro, pero son cuatro desajustes
+en una sola fila y ninguno se ve desde el campo de licencia.**
+
+**`frappe-mcp-server`**: npm **ISC** con repo `appliedrelevance/frappe_mcp_server`; **ese repo no tiene
+`LICENSE` en la raíz** (404 en tres nombres); el artefacto de PyPI cede **MIT** bajo titular
+**`muthanii`**, sin repo y sin author. 🔴 **Tres canales, tres respuestas, ninguna de primera parte.**
+
+### 🔴 D8 — la línea de copyright SIN RELLENAR, y P184 ya tenía la clase correcta
+
+🔴 **`opencode-sit` embarca `MIT License` con `Copyright (c) 2026` y NINGÚN NOMBRE**, y el camino
+permisivo de `extract_holder.py` tomó la línea siguiente —*«Permission is hereby granted, free of
+charge…»*— **como titular.** 🔵 **Es el fallo **D6** de **P184** en una familia que su filtro no
+cubre: un texto de licencia son kilobytes de prosa SOBRE el copyright, así que cualquier línea del
+cuerpo puede hacerse pasar por titular.** 🟢 **La corrección es una RECLASIFICACIÓN a `NO-HOLDER`, una
+clase que **P184** ya tenía escrita para el apéndice de Apache sin rellenar.** 🟢 **Guarda cubierta por
+7 casos corriendo, y control negativo fechado al lado: `diff` contra la corrida sin guarda devuelve
+exactamente UNA línea.**
+
+### 🟢 La acción 3 CIERRA, y refuta su propia primera rama
+
+🔴 **La capa de estándares NO está cerrada: el régimen se parte por PUBLICADOR × TIPO DE ARTEFACTO, y
+el reparto no tiene una excepción.**
+
+| Publicador | Artefacto | Régimen | n |
+|---|---|---|---|
+| 🔴 1EdTech / IMS | **documento** | `SPEC-NO-DERIVATIVES` + `REGISTERED-USERS` | 2 |
+| 🟢 1EdTech / IMS | software | Apache-2.0 | 4 |
+| 🟢 **ADL · Ed-Fi** | **documento** | **Apache-2.0** | 2 |
+
+🔵 **Son DOS las que niegan derivados —`openbadges-specification` y `caliper-spec`—, así que por la
+letra de la hipótesis gana «dominante». Y «dominante» es falso: las dos son del MISMO publicador, y
+los otros dos organismos ceden su DOCUMENTO bajo Apache-2.0.** ⚠️ **Un umbral sobre un conteo no
+distingue una propiedad de la capa de una propiedad del publicador cuando la muestra está
+desbalanceada por publicador** (**P194**). 🟢 **La tabulación cruzada sí, y cuesta lo mismo.**
+
+### ⚠️ El hueco que aparece solo: la versión VIGENTE de xAPI ya no está en GitHub
+
+🔴 **`adlnet/xAPI-Spec` (952 ★, 403 forks, Apache-2.0) es la 1.0.3 y su README la declara vieja. La
+vigente es IEEE 9274.1.1-2023 y vive en `opensource.ieee.org` — GitLab del IEEE, fuera de GitHub.**
+🔴 **Y este entorno no la alcanza: `curl` da `000` y WebFetch da `EGRESS_BLOCKED` explícito.** 🔵 **Los
+CUATRO instrumentos de licencia de esta KB apuntan a `raw.githubusercontent.com`, así que un estándar
+que migra fuera de GitHub se cae de todos los denominadores a la vez, y en silencio** (**P195**).
+⚠️ **La cesión Apache-2.0 medida es la del documento ARCHIVADO; sobre la del vigente esta KB no tiene
+medición y no hereda la del archivado.**
+
+### 🔴 La regresión que esta KB se encuentra a sí misma, y es el hallazgo de método del pase
+
+🔴 **`@eduware/oneroster` estaba publicado como `MIT ✅`. El pase 52 ya lo había corregido a **0BSD**
+leyendo el payload, catorce pases atrás.** 🔴 **El pase 66 corrió `p183` —que lee el identificador del
+REGISTRO— y la celda volvió a `MIT`.**
+
+🔵 **Ningún instrumento falló: los dos contestaron bien la pregunta que hacían. Lo que falla es el
+ORDEN — la pregunta más superficial corrió última y sobrescribió a la más profunda, sin dejar señal.**
+⚠️ **Y así es invisible: la celda dice `MIT ✅`, no «re-derivado del campo del registro».**
+
+🟢 **Reproducido hoy de cero, y rinde de más: el `LICENSE` de `@eduware/oneroster` es byte a byte el de
+`@superbuilders/oneroster` —711 B, `sha256:8b211ca07d3f…`—, y ése declara repo
+`trilogy-group/oneroster-ts`, la pieza **0BSD** que esta KB ya tiene registrada.** 🔵 **Así que el
+titular ajeno (`Bjorn Pagen`) no era un misterio: la licencia está **HEREDADA**, y el linaje quedó
+trazado por hash entre tres artefactos y dos organizaciones, sin leer un README** (**P193** extendido).
+⚠️ **`@superbuilders/oneroster` no declara campo `license` y embarca el texto igual: el identificador
+falta donde la cesión existe, que es el caso inverso.**
+
+🟢 **La regla que deja (**P197**): las capas tienen PRECEDENCIA —payload con titular y texto >
+identificador de manifiesto > prosa de README— y la celda lleva la CAPA pegada al valor (`0BSD
+(payload)` dice algo que `MIT ✅` no dice). Un instrumento que re-mide un campo ya corregido se compara
+contra la CORRECCIÓN, no sólo contra la fuente: es el mismo dedupe que el pase 66 impuso para las
+altas, aplicado a las correcciones.** ⚠️ **Este pase encontró UNA regresión y no barrió las demás: no
+se afirma cuántas hay.**
+
+### ⚠️ El hueco de canal que se declara: las cuatro búsquedas globales, por segundo pase, sin rendir
+
+⚠️ **`top open source AI agents education 2026 github MIT` y `github trending education AI 2026`
+devolvieron el eje generalista agotado** —openclaw (385.407 ★), browser-use (108.128 ★), AutoGen,
+CrewAI, dify, Flowise— **más agregadores de SEO.** 🔴 **Ninguna alta educativa salió de esas cuatro
+consultas, y las cifras de estrellas que citan no se copian porque no se leyeron del repo.**
+⚠️ **`open source platform education ERP CRM MIT Apache` colapsó por OCTAVA vez sobre el SEO de
+OpenEduCat** —esta vez con la novedad de que la cifra de vendedor CAMBIÓ: de *«~3 millones de usuarios
+y 1.000+ instituciones en 90+ países»* (pase 52) a **«30.000+ instituciones en 130+ países»**. 🔵 **Un
+salto de 30× en la misma afirmación autodeclarada, sin instrumento: se registra como inestabilidad de
+cifra de vendedor** (**P107**), **no como crecimiento.**
+
 ## 2026-10-03 — pase 67: una ausencia de licencia era FALSA y lo que cede no es open source, y el NOMBRE de un paquete no es su identidad
 
 ### 🔴 El hallazgo del pase: la acción 2 cae en su rama cara, y la quinta capa de licencia existe

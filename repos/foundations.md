@@ -8,6 +8,7 @@ updated: 2026-10-03
 
 > Bases sobre las cuales construir. Verificado repo por repo vía WebFetch el 2026-09-30 (capas del pase 10, el 2026-10-01).
 > Leer la columna **Licencia** antes de proponer: media KB de educación es GPL/AGPL, no permisiva.
+> **Pase 68 del 2026-10-03:** 🟢 **Entran los DOS documentos de estándar que ceden de verdad, y son la corrección más útil que este archivo recibió sobre la capa: [`adlnet/xAPI-Spec`](https://github.com/adlnet/xAPI-Spec) (**Apache-2.0**, 11.525 B, 952 ★, 403 forks) y [`Ed-Fi-Alliance-OSS/Ed-Fi-Standard`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-Standard) (**Apache-2.0**, 10.173 B, 46 ★, v6.2.0) publican el DOCUMENTO normativo bajo licencia permisiva, así que un perfil derivado se puede entregar con atribución y sin trámite.** 🔴 **Eso REFUTA lo que este archivo publicó en el pase 67 —*«la capa de estándares es la PEOR cedida de todas»*—: el régimen no se parte por «ser un estándar», se parte por **PUBLICADOR × TIPO DE ARTEFACTO**, sin una sola excepción en 8 archivos leídos** (**P191**). 🔴 **1EdTech cede su SOFTWARE bajo Apache-2.0 (4 de 4: OpenCASE, los dos validadores, la librería LTI 1.3) y sus DOCUMENTOS bajo la licencia que NIEGA derivados (2 de 2).** ⚠️ **Hueco nuevo y de los que importan: la versión VIGENTE de xAPI (IEEE 9274.1.1-2023) ya no está en GitHub —vive en `opensource.ieee.org`, que este entorno tiene EGRESS-BLOQUEADO—, así que los cuatro instrumentos de licencia de esta KB, todos apuntados a `raw.githubusercontent.com`, son ciegos a un estándar que migra** (**P195**). 🟢 **Y una pieza de agente: [`aemonge/opencode-sit`](https://github.com/aemonge/opencode-sit) (MIT, tutor socrático como plugin de OpenCode), con la identidad probada por `sha256` porque el paquete no declara repositorio** (**P193**). Ver `compose/code/p191-spec-license-sweep/`.
 > **Pase 67 del 2026-10-03:** 🟢 **Entra la capa de CORRECCIÓN automática, que esta base tenía representada por UNA pieza: `INGInious` (AGPL-3.0, 243 ★, 150 forks, **UCLouvain** → EMEA) como *grader* externo de Moodle y edX vía LTI, más `webtech-network/autograder` (Apache-2.0), `johnswyou/autograder` (MIT, corrige MANUSCRITO con rúbrica y cola de revisión humana) y `zmievsa/autograder` (GPL-3.0) — las cuatro con el archivo de licencia LEÍDO.** 🟢 **Y APAC gana un índice regional con la cesión más limpia de toda la capa de dato de esta KB: `crpf-mitadt/Indian-AI-for-Education`, **CC0 1.0** (dominio público: ni atribución ni ShareAlike).** 🔴 **La corrección que este archivo tiene que hacerse: `IMSGlobal/openbadges-specification` figuraba como *«ninguna (ausencia MEDIDA) … alcanzable y sin cesión»* y es una ausencia FALSA — `ob_v3p0/license.md` trae 12.324 B de la *Specification Document License* de IMS Global, que ⚠️ **NIEGA los derivados**, o sea una cesión PEOR que el silencio para un entregable** (**P187**). 🔵 **El detalle de la fila vieja era correcto —los 14 nombres dan 404 en la RAÍZ— y el error fue leer «no hay licencia en la raíz» como «no hay cesión».** ⚠️ **Nuevo patrón de alcance: el `LICENSE` de `INGInious` declara cubrir *«la mayoría de los archivos»* y delega las excepciones a los encabezados por archivo, y esta base no tiene instrumento para un barrido POR ARCHIVO** (**P186**, gap declarado).
 > **Pase 65 del 2026-10-03:** 🟢 **JAPÓN entra a la capa de currículo, y entra como la MEJOR pieza que tiene la KB: `jp-cos/jp-cos.github.io` —学習指導要領LOD— publica el currículo nacional japonés completo en RDF/Turtle bajo **CC BY 4.0**, con 22 volcados versionados, vocabulario, SHACL y endpoint SPARQL declarado.** 🔵 **CC BY 4.0 es MÁS permisiva que la alemana CC BY-SA 4.0: sin ShareAlike, no activa la compuerta de **P178**, así que el currículo derivado puede entregarse con licencia propia.** 🔴 **Y la acción 3 queda REFUTADA en su hipótesis: decía «si está publicado por MEXT sin licencia explícita, APAC replica el patrón alemán y **P174** gana una tercera región» — hay licencia explícita, así que P174 NO gana región por este caso.** 🟢 **La reserva de la tendencia 457 también cae: `dini-ag-kim/school-curriculum-pg` —la cobertura por LAND, que el pase 63 escribió como «la capa que agrega el valor específico y sigue sin licencia»— declara **CC BY-SA 4.0** en las 25 serializaciones, los 16 `lp-land-XX-full.owl` incluidos, con titulares por ORCID.** 🔴 **Las dos cesiones eran invisibles a los instrumentos de esta KB: ninguna está en un archivo `LICENSE` y las dos aparecieron sólo al abrir el dato** (**P172**, **P179**). Ver `compose/code/jp-cos-curriculum-gate/`.
 > **Pase 64 del 2026-10-03:** 🔴 **La acción 3 del pase 63 CIERRA y REFUTA el titular del pase 63 sobre Alemania: las TRES ontologías de `FWU-DE` SÍ declaran licencia —**CC BY-SA 4.0**, como anotación `dct:license` DENTRO del `.owl`— mientras no tienen archivo `LICENSE` ni la palabra «licencia» en el README. El pase 63 grepeó el README y concluyó «3 de 3 sin ninguna licencia»: la cesión existía, un nivel más abajo, en el PAYLOAD** (**P172**, y es el caso más fuerte de **P153**). 🔴 **Y la dependencia de la receta **P169** estaba al revés: `dini-ag-kim/school-curriculum-pg` no es el upstream que FWU importa — es una **lápida de 136 bytes** cuyo README entero dice *«This repo is outdated, please go to FWU-DE/lehrplan-ontologie»*, o sea apunta HACIA la pieza sin archivo de licencia** (**P173**). 🔵 **Consecuencia de instrumento: un verificador de licencias que mira raíz + README es ciego a toda la capa de DATO semántico; hay que grepear dentro del RDF/OWL/TTL, y en las DOS serializaciones (`<http://purl.org/dc/terms/license>` e `dcterms:license`).** 🟢 **Alta permisiva verificada: `1EdTech/openbadges-validator-core` (Apache-2.0, 13.184 B), que reemplaza al muerto `concentricsky/badgr-server`.**
@@ -79,6 +80,72 @@ corre ése antes de escribir uno a mano** (tendencia **313**). 🟢 **Y el `gafa
 > y 5 en `schemas12/`, y contar sólo el primero es lo que hizo invisible el segundo dialecto de SCORM (**P106**).
 > **Pase 36 del 2026-10-02:** 🔵 **este pase no agrega repos: le pone FECHA a los que ya están, y la fecha cambia tres recomendaciones.** Se midió la capa PHP de evaluación y telemetría en Packagist —el único registro de los tres que entrega descargas en este entorno (`api.npmjs.org` y `pypistats.org` dan **403 a CONNECT**)— y el resultado está en `repos/trending.md`. **Lo que hay que saber antes de proponer desde este archivo:** 🔴 **la pieza xAPI más descargada de esta base, `rusticisoftware/tincan` (Apache-2.0, 6.178 desc./mes, 863.777 totales), no publica desde el 2022-11-02**, y ⚠️ **el único MIT de esa capa, `php-xapi/client`, está parado desde el 2021-03-24** con 825 desc./mes. 🔵 **La lectura es que en xAPI/PHP lo permisivo está quieto y lo vivo es copyleft**, así que la receta de telemetría se sostiene en **Ralph (MIT)** + **`lrsql` (Apache-2.0)** + **`learnmcp-xapi` (MIT)** y no en la capa PHP. 🟢 **Del lado de evaluación, lo activo es `oat-sa/extension-tao-testqti`** (**885 versiones**, release del **2026-09-30**) **y sigue siendo GPL-2.0-only**, mientras **lo permisivo es lo nuevo**: `@longsightgroup/qti3-cli` (**MIT**, 41 releases desde el 2026-05-21, último **2026-10-01**) con **cero dependencias de terceros** — sus 4 dependencias son todas `@longsightgroup/*` pinneadas a la misma versión exacta. **Su manifiesto MCP completo de 20 tools está escrito en `compose/patterns.md` (P76).** 🔴 **Y una corrección de catálogo: `oat-sa/qti-sdk` devuelve 404 en Packagist porque es el nombre del REPO — su paquete es `qtism/qtism`** (GPL-2.0-only, 218.212 descargas totales, 315 versiones). **Nombre de repo y nombre de paquete son identificadores distintos, y confundirlos produce un 404 que parece una ausencia** — pasó igual con `1edtech/oneroster`, `imsglobal/lti-1-3-php-library` y `packbackbooks/lti-1-3-php-library`, los tres **404**, que se anotan como *«no verificado en Packagist bajo ese nombre»* y **no** como inexistentes. ⚠️ **Acción pendiente que el pase 37 tiene asignada: este archivo nunca pasó por el control de *slugs* distintos ni por el de *backlink*** — los dos que en `agents/top.md` encontraron **un duplicado** y **dos colisiones** este mismo pase.
 > **Pase 11 del 2026-10-01:** aparece una licencia que las diez pasadas anteriores filtraban sin saberlo — **ECL-2.0**, con la que licencia todo Apereo (Sakai, Opencast, OpenLRW). Es Apache-2.0 con el alcance de patentes acotado, aprobada por OSI y FSF, y **es apta para construir arriba**. Ver la capa de analítica institucional, abajo.
+
+## 🧾 La capa de ESTÁNDARES, medida entera por fin: el régimen se parte por PUBLICADOR × TIPO DE ARTEFACTO, no por «ser un estándar» (acción 3 del pase 67, pase 68 del 2026-10-03)
+
+### 🔴 Lo que este archivo tiene que corregirse, primero
+
+El pase 67 escribió que la capa de estándares *«es la PEOR cedida de todas»* a partir de **una** fila
+medida. 🔴 **Medidos 8 archivos de licencia de primera mano, eso es falso para la mitad de la capa.**
+
+| Publicador | Tipo de artefacto | Régimen medido | n | ¿Derivado? |
+|---|---|---|---|---|
+| 🔴 **1EdTech / IMS Global** | **documento de especificación** | `SPEC-NO-DERIVATIVES` + `REGISTERED-USERS` | **2 de 2** | 🔴 **NO concedido** |
+| 🟢 1EdTech / IMS Global | software del organismo | **Apache-2.0** | **4 de 4** | 🟢 sí |
+| 🟢 **ADL · Ed-Fi Alliance** | **documento de especificación** | **Apache-2.0** | **2 de 2** | 🟢 **sí, con atribución** |
+
+🔵 **Cero excepciones en 8 archivos.** La variable no es la capa: son los dos ejes. **El mismo
+organismo que niega derivados sobre su documento cede su software bajo Apache-2.0, y otro organismo
+cede su documento bajo Apache-2.0.** Ver **P191** y `compose/code/p191-spec-license-sweep/`.
+
+### 🟢 Las altas del pase, con el archivo de licencia leído y el tamaño registrado
+
+| Pieza | Licencia | Señal | Qué aporta | Región |
+|---|---|---|---|---|
+| 🟢 [`adlnet/xAPI-Spec`](https://github.com/adlnet/xAPI-Spec) | **Apache-2.0** (11.525 B) | **952 ★** · 403 forks | **El documento normativo de xAPI 1.0.3 bajo licencia permisiva** — un perfil derivado se publica con atribución y sin trámite con el organismo. Publicado por la **ADL Initiative (U.S. DoD)** | **North America** (ADL = Dept. of Defense) |
+| 🟢 [`Ed-Fi-Alliance-OSS/Ed-Fi-Standard`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-Standard) | **Apache-2.0** (10.173 B) | **46 ★** · 13 forks · **v6.2.0** | **El Ed-Fi Data Standard** (Descriptors, Models, Samples, Schemas) — la base de interoperabilidad de datos de distrito en EE.UU., y **el formato sobre el que ya está `edfi-oneroster`**, que esta KB tiene registrado | **North America** |
+| 🟢 [`aemonge/opencode-sit`](https://github.com/aemonge/opencode-sit) | **MIT** (1.056 B) ⚠️ `NO-HOLDER` | npm v0.1.2 | ***Socratic Intelligent Tutor* como plugin de OpenCode**: la tutoría socrática montada sobre un agente de código ya desplegado, no sobre un LMS | **Global** |
+
+⚠️ **`Ed-Fi-Standard` tiene 46 ★ y es la pieza de MENOS tracción aparente de esta tanda: no es señal
+de abandono, es que un repositorio de esquemas normativos no acumula estrellas. Se cotiza por su
+adopción institucional, no por el contador.**
+
+### 🔴 El hueco que aparece solo, y vale más que las dos altas
+
+🔴 **El README de `xAPI-Spec` declara su propio contenido VIEJO:** *«This is an old version of the
+specification found at 1.0.3. The current version of the specification is xAPI 2.0.»* 🔴 **xAPI 2.0 es
+**IEEE 9274.1.1-2023** y vive en `https://opensource.ieee.org/xapi/xapi-base-standard-documentation`
+— un GitLab del IEEE, FUERA de GitHub.**
+
+⚠️ **Este entorno no lo alcanza por ningún canal: `curl` devuelve `000` y WebFetch devuelve
+`EGRESS_BLOCKED` nombrando el dominio.** 🔵 **La consecuencia de instrumento es el patrón **P195**: los
+CUATRO instrumentos de licencia de esta KB preguntan por repo (`p170`), payload (`p172`), registro
+(`p183`) y titular (`p184`/`p190`), **y los cuatro apuntan a `raw.githubusercontent.com`**. Un estándar
+que migra fuera de GitHub se cae de todos los denominadores **a la vez y en silencio** — no aparece
+como ausencia, aparece como si no existiera. ⚠️ **La cesión Apache-2.0 que este pase midió es la del
+documento ARCHIVADO. Sobre la licencia del VIGENTE esta KB no tiene medición y NO hereda la del
+archivado.** (ADL lo anuncia como *«the first open-source standard in the history of IEEE»*:
+afirmación de la fuente, sin archivo leído — **P107**.)
+
+### 🔴 Tres filas que NO son ausencias de licencia sino repos que no resuelven
+
+🔵 **La lección de **P187** aplicada al instrumento que la descubrió: antes de escribir una ausencia,
+preguntar si el REPOSITORIO contesta.** 🔴 **`1EdTech/caliper-php`, `IMSGlobal/caliper-python` y
+`Ed-Fi-Alliance-OSS/Ed-Fi-SDK-MCP` dan 404 también en `README.md`: son `REPO-UNREACHABLE`, no
+licencias faltantes** — y dos de los tres ya figuraban `UNREACHABLE` en `p170`, así que la separación
+de causas reconcilia los dos instrumentos. ⚠️ **`Ed-Fi-SDK-MCP` es el caso que hay que mirar: el
+*slug* sale del campo `repository` del paquete npm y NO RESUELVE, mientras el artefacto publicado SÍ
+embarca Apache-2.0 (11.558 B). La cesión existe en el paquete y el repositorio que el paquete declara
+no existe.**
+
+### ⚠️ Lo que este barrido NO midió de esta capa, declarado antes de que alguien lo lea como cobertura
+
+⚠️ **CLR, QTI, OneRoster y LTI no tienen repositorio de ESPECIFICACIÓN en GitHub.** Buscado en el
+único listado de org abierto (`github.com/orgs/1EdTech/repositories?q=spec`), la org publica **sólo**
+`openbadges-specification` y `caliper-spec`. **Sus documentos viven en `standards.1edtech.org`, que
+esta corrida no leyó.** 🔵 **Así que el veredicto `1EdTech × documento` está medido sobre 2 repos —que
+son TODOS los que la org publica en GitHub— y no sobre los 7 estándares que la vertical nombra. La
+inferencia «los otros cinco serán iguales» es plausible, NO está medida, y se escribe así.**
 
 ## 🧪 La capa de CORRECCIÓN automática, que esta base tenía casi vacía — y una ausencia de licencia de estándar que era falsa (pase 67 del 2026-10-03)
 

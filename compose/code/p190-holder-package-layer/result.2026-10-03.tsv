@@ -1,0 +1,17 @@
+@ajna-inc/openbadges	npm	MAINTAINER	vinaysingh8866	NOT-APPLICABLE	(Apache-2.0: holder not in the license text by construction)	Apache-2.0	11606	package/LICENSE
+@eduware/oneroster	npm	DECLARED-REPO	Eduware-Inc/eduware-oneroster	HOLDER-UNRELATED	Bjorn Pagen <11238136+bjornpagen@users.noreply.github.com>	BSD	711	package/LICENSE
+@schoolexl/mentor	npm	MAINTAINER	ageofai-owl	HOLDER-UNRELATED	CoreExL	MIT	1064	package/LICENSE
+@yunmiao/studymate	npm	DECLARED-REPO	Miaotofu01/Study-Mate	HOLDER-UNRELATED	Cattofu	MIT	1064	package/LICENSE
+canvas-lms-mcp	npm	DECLARED-REPO	bruchris/canvas-lms-mcp	HOLDER-UNRELATED	Christian Bru	MIT	1070	package/LICENSE
+canvas-lms-mcp	pypi	DECLARED-REPO	ahnopologetic/canvas-lms-mcp	HOLDER-MATCH	Canvas LMS MCP Server Contributors	MIT	1091	canvas_lms_mcp-0.1.2/LICENSE
+clawed	pypi	DECLARED-REPO	SirhanMacx/Claw-ED	HOLDER-UNRELATED	EDUagent Contributors	MIT	1078	clawed-9.18.2026.1.dist-info/licenses/LICENSE
+ed-fi-sdk-mcp	npm	DECLARED-REPO	Ed-Fi-Alliance-OSS/Ed-Fi-SDK-MCP	NOT-APPLICABLE	(Apache-2.0: holder not in the license text by construction)	Apache-2.0	11558	package/LICENSE
+educhain	pypi	DECLARED-REPO	satvik314/educhain	HOLDER-MATCH	Educhain (https://educhain.in)	MIT	1092	educhain-0.4.0/LICENSE
+frappe-mcp-server	pypi	AUTHOR	-	HOLDER-UNRELATED	muthanii	MIT	1065	frappe_mcp_server-1.2.0/LICENSE
+jbnu-lms-mcp	npm	DECLARED-REPO	moon0825/jbnu-lms-student	HOLDER-MATCH	jbnu-lms-mcp contributors	MIT	1082	package/LICENSE
+moodle-cli	npm	DECLARED-REPO	bunizao/moodle-cli	HOLDER-MATCH	bunizao	MIT	1064	package/LICENSE
+moodle-cli	pypi	DECLARED-REPO	bunizao/moodle-cli	HOLDER-MATCH	bunizao	MIT	1064	moodle_cli-0.4.2/LICENSE
+opencode-sit	npm	MAINTAINER	aemonge	NO-HOLDER	(copyright line present, no name filled in)	MIT	1056	package/LICENSE
+openedx-mcp	pypi	AUTHOR	Open_edX_MCP_contributors	NOT-APPLICABLE	(AGPL-3.0: holder not in the license text by construction)	AGPL-3.0	34524	openedx_mcp-0.1.5/LICENSE
+pykt-toolkit	pypi	DECLARED-REPO	pykt-team/pykt-toolkit	HOLDER-MATCH	pykt-team	MIT	1066	pykt-toolkit-0.0.38/LICENSE
+tutor-contrib-openedxmcp	pypi	AUTHOR	Open_edX_MCP_contributors	NOT-APPLICABLE	(AGPL-3.0: holder not in the license text by construction)	AGPL-3.0	34524	tutor_contrib_openedxmcp-0.1.7/LICENSE

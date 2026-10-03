@@ -8,6 +8,7 @@ updated: 2026-10-03
 
 > Recetas concretas: repos nombrados, licencias verificadas, wiring explícito y estimación.
 > Todos los repos citados fueron verificados vía WebFetch el 2026-09-30; los del pase 11, el 2026-10-01 (ver `agents/top.md`).
+> **Pase 68 del 2026-10-03:** 🔵 **Los patrones nuevos son **P190**–**P195**, y los seis salen de mediciones de primera mano de este pase, con su texto escrito en el mismo pase que los acuña (**P157**).** **P190**: el titular es PEOR en la capa que el cliente INSTALA (`HOLDER-UNRELATED` 19,4 % en árbol → 35,3 % en paquete, n=17) y ahí vive una clase que el árbol no tiene (`NO-HOLDER`). **P191**: el régimen de licencia de un estándar se parte por **PUBLICADOR × TIPO DE ARTEFACTO** —1EdTech×documento niega derivados (2/2), 1EdTech×software es Apache-2.0 (4/4), ADL y Ed-Fi×documento son Apache-2.0 (2/2)— sin una excepción en 8 archivos. **P192**: la pregunta de IDENTIDAD va antes que la de canal, y está medida: 4 de 5 nombres de doble registro son dos artefactos. **P193**: el `sha256` del `LICENSE` UNE un paquete a su árbol cuando el registro no declara el enlace, y es cota inferior. **P194**: un umbral sobre un conteo no distingue una propiedad de la CAPA de una del PUBLICADOR si la muestra está desbalanceada. **P195**: los cuatro instrumentos de licencia de esta KB son GitHub-shaped, así que un estándar que migra se cae de todos los denominadores en silencio. 🟢 **La receta nueva es **P196**: elegir el estándar por su LICENCIA cuando el entregable incluye un perfil derivado.** 🔴 **Y **P197** es el patrón que esta KB se aplica a sí misma: una corrección sobrevive sólo si el instrumento que re-mide la conoce — el pase 66 regresó a `MIT` una celda que el pase 52 había corregido a 0BSD leyendo el payload, y la regresión es invisible en la celda.**
 > **Pase 67 del 2026-10-03:** 🔵 **Los patrones nuevos son **P186**–**P188**, y los tres salen de mediciones de primera mano de este pase.** **P186**: un archivo de licencia puede acotarse A SÍ MISMO —`INGInious` declara cubrir *«la mayoría de los archivos»* y delega las excepciones a los encabezados por archivo, y las cuatro capas que esta KB mide lo aprueban sin ver el alcance—. **P187**: la licencia de ESPECIFICACIÓN (`1EdTech/openbadges-specification`, IMS Global, 12.324 B en `ob_v3p0/license.md`) **cede el documento y NIEGA el derivado**, así que es una compuerta más dura que el ShareAlike de **P178** y afecta a las 15 filas de estándares de esta base. **P188**: el NOMBRE de un paquete no es una IDENTIDAD —`educhain` en npm no tiene repositorio ni descripción y no es el proyecto—, así que la pregunta de identidad va ANTES que la de canal. 🟢 **Y la acción 4 del pase 66 se ejecuta parcialmente: `P126`, `P170`, `P171` y `P172` ya tienen sección propia, consolidada desde donde su texto ya vivía (rama buena de la hipótesis); quedan 11 debidos.** ⚠️ **Ninguna cifra de suite se re-midió: el entorno negó ejecutar el código de este repositorio** (`[Code from External]`).
 > **Pase 65 del 2026-10-03:** 🔵 **Los patrones nuevos son **P179**–**P181**, y los tres salen de lo que este pase midió, no de lo que leyó.** **P179** separa el IDENTIFICADOR de licencia de la CESIÓN —un `"license": "MIT"` de manifiesto no trae titular, ni año, ni una línea de texto, y decide qué se le puede entregar a legales—; **P180** es la receta de currículo japonés sobre CC BY 4.0, la primera de esta KB que no arrastra ShareAlike; **P181** es la regla de canal que este pase usó tres veces: **una página bloqueada se lee por su fuente** cuando es GitHub Pages. 🔴 **Y una receta vieja se CORRIGE a favor: **P178** (la compuerta de ShareAlike) deja de ser la única salida para EMEA, porque ahora hay una fuente de currículo nacional CEDIDA SIN ShareAlike —Japón— y la elección de región cambia la obligación del entregable.**
 > **Pase 64 del 2026-10-03:** 🔵 **Tres recetas nuevas, las tres salidas de lo que este pase midió: **P176** el verificador de licencia de DOS CAPAS (archivo + payload), que es el único que no es ciego a la capa de dato semántico; **P177** la sustitución de una dependencia muerta por el organismo de estándares vivo, con Caliper y Open Badges como los dos casos trabajados; y **P178** la compuerta de ShareAlike, que es la que impide prometer un currículo derivado cerrado sobre dato CC BY-SA 4.0.** 🔴 **Y una receta vieja se CORRIGE: la dependencia upstream de **P169** era una lápida de 136 bytes — la salida CC0 existe pero cubre la capa de MATERIAS, no la de currículo.**
@@ -105,6 +106,144 @@ updated: 2026-10-03
 > no existe en open source permisivo).
 > **Pase 11:** +2 patrones — **P25** (riesgo de abandono conforme al Anexo III, la capa con presupuesto ya asignado y sin oferta open source) y **P26** (agente docente sobre la ontología curricular nacional ya publicada).
 > **Pase 27:** **+4 patrones y una corrección.** 🔴 **P51 queda con premisa falsa** —el conector MCP de Moodle **sí existe y es MIT**— y lo reemplazan **P54** (corrección y devolución sobre Moodle con **compuerta humana**, el último tramo del gap 6, con piezas que ya escriben), **P55** (el conector de **Open edX**, que es el único que de verdad no existe), **P56** (**SCORM** como formato de salida de la capa generativa: cero integración, offline) y **P57** (evidencia por MCP cotizada sobre lo que CaSS **realmente** expone — 6 de 61 operaciones, con insignias y autoría de marcos **fuera**).
+
+## 🧾 P190 — El TITULAR en la capa que el cliente instala (pase 68 del 2026-10-03)
+
+**Instrumento:** `compose/code/p190-holder-package-layer/` — compone el alcance de `p183` con el
+extractor de `p184` **sin reimplementar ninguno** (regla 1 de **P126**).
+
+**Qué establece.** **P184** leyó el titular de 160 archivos de licencia, **todos en un árbol de
+GitHub**. Las filas que esta KB cita por REGISTRO no estaban en ese denominador, **y son la capa que
+el cliente instala**. Barridas las 17 filas `TARBALL-TEXT`:
+
+| Veredicto | Capa ÁRBOL (n=160) | Capa PAQUETE (n=17) |
+|---|---|---|
+| `HOLDER-MATCH` | 68 (42,5 %) | 6 (35,3 %) |
+| 🔴 `HOLDER-UNRELATED` | 31 (**19,4 %**) | 6 (**35,3 %**) |
+| `NOT-APPLICABLE` | 61 (38,1 %) | 4 (23,5 %) |
+| 🔴 `NO-HOLDER` | **0** | 1 (5,9 %) |
+
+⚠️ **n=17: no establece una tasa.** 🔵 **Establece que el supuesto de que un registro está más prolijo
+que un árbol no se sostiene.** **Cómo se usa:** antes de meter una pieza citada por paquete en un
+entregable, leer el titular **del tarball** y no el del repo — son archivos distintos y pueden decir
+cosas distintas.
+
+**D8, el defecto que abrió:** una línea `Copyright (c) 2026` **sin nombre** hace que el extractor tome
+la prosa siguiente como titular. 🟢 Reclasificado a `NO-HOLDER`, clase que **P184** ya tenía. Guarda
+con suite de 7 casos y control negativo fechado.
+
+## 🧾 P191 — RECETA DE LICENCIA: el régimen de un estándar se parte por PUBLICADOR × TIPO DE ARTEFACTO (pase 68 del 2026-10-03)
+
+**Instrumento:** `compose/code/p191-spec-license-sweep/` (suite 8/8).
+
+| Publicador | Artefacto | Régimen | n | ¿Perfil derivado publicable? |
+|---|---|---|---|---|
+| 🔴 **1EdTech / IMS** | **documento** | `SPEC-NO-DERIVATIVES` + `REGISTERED-USERS` | 2/2 | 🔴 **no** — trámite con el organismo |
+| 🟢 1EdTech / IMS | software | Apache-2.0 | 4/4 | 🟢 sí |
+| 🟢 **ADL** (xAPI) · **Ed-Fi** | **documento** | Apache-2.0 | 2/2 | 🟢 **sí, con atribución** |
+
+🔵 **Cero excepciones en 8 archivos leídos.** ⚠️ **Y el límite declarado: `1EdTech × documento` está
+medido sobre los **2** repos que la org publica en GitHub, no sobre los 7 estándares de la vertical —
+CLR, QTI, OneRoster y LTI no tienen repo de especificación y viven en `standards.1edtech.org`.**
+
+## 🧩 P192 — La pregunta de IDENTIDAD va antes que la de CANAL, y está medida (pase 68 del 2026-10-03)
+
+🔴 **De los 5 nombres que viven en npm y PyPI, **4 son dos ARTEFACTOS distintos**.** Sólo `moodle-cli`
+es un proyecto en dos canales. 🔵 **Por eso la columna que corresponde a las 21 filas `PKG-NAMED` es
+*Identidad* (qué artefacto ES el proyecto) y no *Canal*: poner `(npm)`/`(PyPI)` sin preguntar identidad
+habría publicado dos artefactos como una fila en 4 de 5 casos.**
+
+**La prueba de identidad, en orden de costo:** `version` (la más barata: 1.30.0 contra 0.1.2) →
+`repository` + `description` → **`sha256` del archivo de licencia** (la más dura). ⚠️ **El campo de
+LICENCIA no es prueba de identidad: dos artefactos distintos pueden ser los dos MIT.**
+
+## 🧬 P193 — El `sha256` del `LICENSE` UNE un paquete a su árbol, y es cota inferior (pase 68 del 2026-10-03)
+
+🟢 **`opencode-sit` no declara `repository`; el `LICENSE` del repo `aemonge/opencode-sit` y el del
+tarball son el mismo archivo byte a byte (1.056 B, `sha256:1126322e2cc8d165…`), y el `package.json`
+del repo declara el mismo `name`.** 🔵 **Es el instrumento de **P150** (separar forks por hash)
+corriendo en la dirección inversa: el mismo hash que distingue dos crías de un repo ATA un paquete a
+su árbol.** ⚠️ **Prueba que comparten el archivo, no que el repo sea el upstream. Se publica como cota
+inferior de identidad, nunca como linaje.**
+
+## 🔬 P194 — Un umbral sobre un CONTEO no distingue una propiedad de la CAPA de una del PUBLICADOR (pase 68 del 2026-10-03)
+
+🔴 **La acción 3 del pase 67 fijó el veredicto de una capa de 15 filas en *«¿más de una niega
+derivados?»*. Son dos, el umbral se cumple, y el veredicto que habilita es falso: las dos son del
+mismo publicador.** 🔵 **El umbral estaba casi garantizado por la composición de la muestra, no por el
+régimen.** 🟢 **La regla: cuando una hipótesis de capa se escribe como umbral sobre un conteo,
+tabular por la variable que podría explicarlo —publicador, tipo de artefacto, región— ANTES de
+publicar el veredicto. Cuesta lo mismo y cambia la conclusión.**
+
+## 🔌 P195 — Los instrumentos de esta KB son GitHub-shaped, y un estándar que migra se cae en silencio (pase 68 del 2026-10-03)
+
+🔴 **Los CUATRO instrumentos de licencia preguntan por repo (`p170`), payload (`p172`), registro
+(`p183`) y titular (`p184`/`p190`), y los cuatro apuntan a `raw.githubusercontent.com`.** 🔴 **xAPI
+vigente (IEEE 9274.1.1-2023) vive en `opensource.ieee.org`: `curl` da `000`, WebFetch da
+`EGRESS_BLOCKED`.** ⚠️ **La migración no aparece como ausencia: aparece como si la pieza no existiera.**
+🔵 **Mitigación hasta que exista un instrumento no-GitHub: cuando un README declara su propio contenido
+superado, marcar la fila como **ARCHIVADA** y NO heredar su licencia a la versión vigente.**
+
+## 🔁 P197 — Una corrección sobrevive sólo si el instrumento que re-mide la conoce (pase 68 del 2026-10-03)
+
+🔴 **El caso, y es de esta KB sobre sí misma:** el **pase 52** midió `@eduware/oneroster` como **0BSD**
+leyendo el PAYLOAD y lo publicó como corrección de un `MIT` declarado en npm. **Catorce pases después,
+`p183` —que pregunta por el identificador del REGISTRO— escribió `MIT`, y la celda volvió al valor
+equivocado.**
+
+🔵 **Ningún instrumento falló.** `p183` contestó correctamente la pregunta que hace. 🔴 **El problema es
+de ORDEN: la pregunta más superficial corrió última y sobrescribió a la más profunda, sin señal de que
+lo estaba haciendo.** ⚠️ **Y la regresión es invisible en la celda: dice `MIT ✅`, no «re-derivado del
+campo del registro».**
+
+**La regla, en tres partes:**
+
+1. 🟢 **Las capas tienen PRECEDENCIA y hay que escribirla:** payload con titular y texto (**P179**) >
+   identificador de manifiesto > prosa de README. **Un valor de capa alta no puede ser sobrescrito por
+   uno de capa baja sin una nota explícita.**
+2. 🟢 **La celda lleva la CAPA pegada al valor**, como **P112** pide para las ausencias: `0BSD (payload)`
+   dice algo que `MIT ✅` no dice.
+3. 🔵 **Un instrumento que re-mide un campo ya corregido tiene que compararse contra la corrección,
+   no sólo contra la fuente.** Costo: un `grep` del nombre de la pieza en esta KB antes de escribir la
+   celda — el mismo dedupe que el pase 66 ya impuso para las ALTAS, aplicado a las CORRECCIONES.
+
+⚠️ **Alcance: este pase encontró UNA regresión y no barrió las demás. No se afirma cuántas hay.**
+🔵 **El barrido es mecánico y queda como deuda: para cada pieza con una corrección de licencia
+publicada, verificar que la celda vigente coincida con la corrección y no con la fuente.**
+
+## 🎯 P196 — RECETA: elegir el ESTÁNDAR por su licencia cuando el entregable incluye un perfil derivado (pase 68 del 2026-10-03)
+
+**Cuándo aplica.** El cliente pide *«nuestra versión del estándar»* — un perfil, una extensión, un
+documento derivado que va a publicar con su marca. 🔴 **Hasta este pase esta KB respondía *«la capa de
+estándares no concede derivados»*, y eso es falso para la mitad de la capa.**
+
+**El árbol de decisión, con la licencia medida:**
+
+1. 🟢 **¿El dominio admite xAPI o Ed-Fi?** → **elegirlos.** El documento normativo es **Apache-2.0**
+   ([`adlnet/xAPI-Spec`](https://github.com/adlnet/xAPI-Spec), 11.525 B, 952 ★;
+   [`Ed-Fi-Alliance-OSS/Ed-Fi-Standard`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-Standard),
+   10.173 B, v6.2.0), así que **el perfil derivado se publica con atribución y sin trámite.**
+2. 🔴 **¿El requisito obliga a Open Badges o Caliper?** → **se puede IMPLEMENTAR, no PUBLICAR un
+   derivado del documento.** Lo que se entrega es software propio que cumple el estándar, y la
+   extensión se tramita con 1EdTech. 🟢 **El software del organismo sí es Apache-2.0**
+   (`1EdTech/openbadges-validator-core` 13.185 B, `1EdTech/OpenCASE` 11.264 B,
+   `1EdTech/digital-credentials-public-validator`, `1EdTech/lti-1-3-php-library`), **así que el
+   validador se puede embarcar y modificar.**
+3. ⚠️ **¿Es CLR, QTI, OneRoster o LTI?** → **sin medición.** No tienen repo de especificación en
+   GitHub; el supuesto razonable es el régimen de 1EdTech, y **se cotiza con la cláusula de que la
+   licencia del documento se confirma antes de comprometer el perfil.**
+
+**Wiring concreto, para un distrito de North America que ya tiene Ed-Fi:**
+`Ed-Fi-Standard` (Apache-2.0, el modelo de dato) → **`Ed-Fi-Alliance-OSS/edfi-oneroster`**
+(Apache-2.0, expone OneRoster 1.2 sobre la ODS que el distrito ya tiene, 14 endpoints GET, Docker o
+IIS) → capa agéntica de sólo lectura → **`INGInious`** (AGPL-3.0, por LTI y por proceso, nunca
+enlazando — **P186**) para la corrección. 🟢 **El perfil de dato derivado se publica bajo Apache-2.0 y
+el entregable del cliente no hereda copyleft, porque lo copyleft queda del otro lado de una frontera
+de proceso.** **Estimación: 8–10 semanas** para el perfil + la puerta de lectura, **+4** si entra
+corrección por LTI.
+
+⚠️ **La condición que va escrita en la propuesta:** *«implementamos el estándar»* se promete en los
+cuatro casos; *«publicamos su perfil derivado»* **sólo en el camino 1**.
 
 ## 🧑‍⚖️ P189 — RECETA: corrección automática con compuerta de liberación HUMANA, para un distrito de North America (pase 67 del 2026-10-03)
 
