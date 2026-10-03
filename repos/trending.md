@@ -8,6 +8,65 @@ updated: 2026-10-03
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 
+## 2026-10-03 — pase 63: el upstream CC0 que estaba un nivel más arriba, y un `LICENSE` de 19 bytes
+
+### 🟢 El alta de la semana es un vocabulario, y es la primera pieza de currículo de EMEA entregable sin condiciones
+
+| Repo | Licencia **leída del archivo** | Prueba | Qué es |
+|---|---|---|---|
+| [`dini-ag-kim/schulfaecher`](https://github.com/dini-ag-kim/schulfaecher) | 🟢 **CC0 1.0 Universal** | `raw:main/LICENSE` **200** y `raw:master/LICENSE` **200** | vocabulario KIM de **materias escolares alemanas**, SKOS |
+
+🔵 **Cómo apareció, y es la lección: no por búsqueda.** **El README de `FWU-DE/schulfach-ontologie`
+declara que mapea a las *KIM school subjects* e importa conceptos de la ontología de currículo de la
+DINI AG-KIM. Seguir esa cita hacia arriba dio la pieza licenciada que la región no tenía.**
+🔴 **Patrón: la capa de FWU, que agrega la cobertura por Land, NO tiene licencia; el vocabulario base
+del que deriva es CC0. El valor específico es lo que no se cede.**
+
+### 🔴 La familia `FWU-DE`, medida repo por repo — cuatro regímenes en un publicador público
+
+| Repo | Tipo | Licencia | Prueba |
+|---|---|---|---|
+| `mem-mcp` | código | 🟢 **Unlicense** | `raw:main/LICENSE` 200, **1.211 B** |
+| `fwu-kc-extensions` | código | 🟢 **Apache-2.0** | `raw:main/LICENSE` 200, **11.357 B** |
+| `ais-chat` | código | 🔴 **AGPL-3.0** | `raw:main/LICENSE` 200, **34.523 B** |
+| `lehrplan-ontologie` | **dato** | 🔴 **ninguna** | `LICENSE`,`.md`,`.txt`,`COPYING` → **404 los 4** |
+| `schulfach-ontologie` | **dato** | 🔴 **ninguna** | **404 los 4** |
+| `schulart-ontologie` | **dato** | 🔴 **ninguna** | **404 los 4** |
+
+🔴 **3 de 3 de código licenciados con tres licencias distintas; 3 de 3 de dato sin ninguna, y sin
+licencia en prosa tampoco (cero coincidencias de `licen[sz]|lizenz|copyright|CC[ -]BY|urheber|rechte`
+en los tres README).** 🔵 **El publicador no es la licencia** (**P166**).
+
+### 🔴 Las dos plataformas de ERP educativo, con la licencia leída en vez de creída
+
+| Plataforma | Repo | Licencia | Prueba |
+|---|---|---|---|
+| **OpenEduCat** | [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 🔴 **LGPL-3.0** | `raw:master/LICENSE` **200**, texto explícito |
+| **Frappe Education** | [`frappe/education`](https://github.com/frappe/education) | 🔴 **GPL-3.0** | `raw:develop/license.txt` **200** — ⚠️ **19 BYTES** |
+| **ERPNext** | [`frappe/erpnext`](https://github.com/frappe/erpnext) | 🔴 **GPL-3.0** | `raw:master/license.txt` **200**, texto completo |
+
+🔵 **El `LICENSE` de 19 bytes es una categoría nueva** (**P168**): `License: GNU GPL V3`, sin texto,
+sin titular, sin año. **Un chequeo de existencia lo aprueba; sólo un chequeo de CONTENIDO lo atrapa.**
+**El control es el tamaño: GPL-3.0 ~35 KB, AGPL-3.0 ~34,5 KB, Apache-2.0 ~11 KB, MIT ~1 KB — por
+debajo de ~400 B no cabe ninguna licencia OSI.**
+
+### ⚠️ El mapa de canales de verificación, medido en esta corrida — cambia cómo se planifica un barrido
+
+| Canal | Estado | Sirve | No sirve |
+|---|---|---|---|
+| `raw.githubusercontent.com` | 🟢 **abierto, sin límite de alcance** | **LICENSE y README de cualquier repo público**; el 404 como prueba de ausencia; **~6 repos por llamada** | linaje de fork, ★, `description` |
+| `github.com` HTML vía **WebFetch** | 🟢 abierto | **fork, ★, `description`, licencia de la barra** | ⚠️ **una llamada por repo** |
+| `github.com` vía **curl** | 🔴 **403** | — | — |
+| `api.github.com` | 🔴 **403 — acotada por SESIÓN, no bloqueada** | — | ⚠️ pedible con `add_repo`, repo por repo |
+
+🟢 **`gap 74` (pase 36) cambia de estado: ahí `api.github.com/repos/<slug>` devolvía **200** con el
+cuerpo diciendo que el repo no estaba habilitado para la sesión —y el riesgo era un probe que mirara
+sólo el código HTTP—. **Hoy el mismo endpoint devuelve `403`, así que el código concuerda con el cuerpo
+y ese modo de fallo silencioso ya no aplica.** ⚠️ **Cambio observado entre dos fechas, no corrección:
+la compuerta de alcance es la que aquel pase ya había identificado.** 🔵 **Consecuencia operativa: el barrido de LICENCIA es masivo y barato; el de
+LINAJE es unitario y caro. Dejar de planificarlos como una sola tarea es lo que habilita la acción 1
+del pase 64.**
+
 ## 2026-10-03 (pase 62) — **el dato crudo del barrido de forks: 13 repos abiertos uno por uno, 3 rutas de `LICENSE` probadas en la puerta más forkeada (las tres 404), y el canal de API caído**
 
 ### 🔴 Canal de medición de esta corrida, declarado antes que los datos

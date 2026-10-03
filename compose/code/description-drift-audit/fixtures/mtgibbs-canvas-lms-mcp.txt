@@ -1,0 +1,4 @@
+mtgibbs / canvas-lms-mcp  Public
+MCP server connecting Claude to Canvas LMS for querying grades, assignments, and academic data
+Available Tools: get_courses, get_comprehensive_status, get_missing_assignments.
+License: MIT

@@ -77,6 +77,102 @@ corre ése antes de escribir uno a mano** (tendencia **313**). 🟢 **Y el `gafa
 > **Pase 36 del 2026-10-02:** 🔵 **este pase no agrega repos: le pone FECHA a los que ya están, y la fecha cambia tres recomendaciones.** Se midió la capa PHP de evaluación y telemetría en Packagist —el único registro de los tres que entrega descargas en este entorno (`api.npmjs.org` y `pypistats.org` dan **403 a CONNECT**)— y el resultado está en `repos/trending.md`. **Lo que hay que saber antes de proponer desde este archivo:** 🔴 **la pieza xAPI más descargada de esta base, `rusticisoftware/tincan` (Apache-2.0, 6.178 desc./mes, 863.777 totales), no publica desde el 2022-11-02**, y ⚠️ **el único MIT de esa capa, `php-xapi/client`, está parado desde el 2021-03-24** con 825 desc./mes. 🔵 **La lectura es que en xAPI/PHP lo permisivo está quieto y lo vivo es copyleft**, así que la receta de telemetría se sostiene en **Ralph (MIT)** + **`lrsql` (Apache-2.0)** + **`learnmcp-xapi` (MIT)** y no en la capa PHP. 🟢 **Del lado de evaluación, lo activo es `oat-sa/extension-tao-testqti`** (**885 versiones**, release del **2026-09-30**) **y sigue siendo GPL-2.0-only**, mientras **lo permisivo es lo nuevo**: `@longsightgroup/qti3-cli` (**MIT**, 41 releases desde el 2026-05-21, último **2026-10-01**) con **cero dependencias de terceros** — sus 4 dependencias son todas `@longsightgroup/*` pinneadas a la misma versión exacta. **Su manifiesto MCP completo de 20 tools está escrito en `compose/patterns.md` (P76).** 🔴 **Y una corrección de catálogo: `oat-sa/qti-sdk` devuelve 404 en Packagist porque es el nombre del REPO — su paquete es `qtism/qtism`** (GPL-2.0-only, 218.212 descargas totales, 315 versiones). **Nombre de repo y nombre de paquete son identificadores distintos, y confundirlos produce un 404 que parece una ausencia** — pasó igual con `1edtech/oneroster`, `imsglobal/lti-1-3-php-library` y `packbackbooks/lti-1-3-php-library`, los tres **404**, que se anotan como *«no verificado en Packagist bajo ese nombre»* y **no** como inexistentes. ⚠️ **Acción pendiente que el pase 37 tiene asignada: este archivo nunca pasó por el control de *slugs* distintos ni por el de *backlink*** — los dos que en `agents/top.md` encontraron **un duplicado** y **dos colisiones** este mismo pase.
 > **Pase 11 del 2026-10-01:** aparece una licencia que las diez pasadas anteriores filtraban sin saberlo — **ECL-2.0**, con la que licencia todo Apereo (Sakai, Opencast, OpenLRW). Es Apache-2.0 con el alcance de patentes acotado, aprobada por OSI y FSF, y **es apta para construir arriba**. Ver la capa de analítica institucional, abajo.
 
+## 🧾 La capa de currículo, cerrada por el lado de la LICENCIA: el publicador no es la licencia, y el upstream CC0 es la salida (pase 63 del 2026-10-03)
+
+**El pase 62 dejó una acción explícita en este archivo —línea 135: *«Queda como acción del pase 63»*—:
+establecer qué es FWU, porque de eso dependía si la ausencia de licencia en la mejor ontología de
+currículo de Europa era un trámite o una decisión. Ejecutada, cambia el reparto de esta capa.**
+
+### 🟢 FWU es público: una gGmbH de los 16 Länder
+
+**FWU = «Institut für Film und Bild in Wissenschaft und Unterricht», gGmbH, sede en Grünwald (Baviera),
+que se presenta como «das Medieninstitut der Länder».** La estructura societaria —**los 16 Bundesländer
+al 6,25 % cada uno**— está declarada en el portal de participaciones del **Ministerio de Finanzas de
+Mecklemburgo-Pomerania Occidental**, que es la fuente primaria correcta: un Land declarando su tenencia.
+
+🔴 **Reserva de método, y es fuerte: este pase NO abrió ninguna de esas páginas.** `regierung-mv.de`,
+`fwu.de`, `bildungsserver.de` y `de.wikipedia.org` están **los cuatro bloqueados por el proxy de egreso
+de esta corrida.** **Lo que hay es el resultado de búsqueda sobre fuentes primarias identificadas, no su
+lectura.** 🔵 **Se publica así a propósito: la fuente queda nombrada y localizable para que el próximo
+pase —o un humano sin este proxy— la confirme en un minuto.**
+
+### 🔴 Y la hipótesis cae en una TERCERA rama: es público Y la ausencia es deliberada
+
+**La hipótesis del pase 62 era binaria —público ⇒ trámite pedible; privado ⇒ decisión—. Medido repo por
+repo con `raw.githubusercontent.com`, el mismo publicador usa CUATRO regímenes a la vez:**
+
+| Repo de `FWU-DE` | Tipo | Licencia **leída del archivo** | Prueba |
+|---|---|---|---|
+| [`mem-mcp`](https://github.com/FWU-DE/mem-mcp) | **código** (MCP) | 🟢 **Unlicense** | `raw:main/LICENSE` **200**, 1.211 B |
+| [`fwu-kc-extensions`](https://github.com/FWU-DE/fwu-kc-extensions) | **código** (Java/Keycloak) | 🟢 **Apache-2.0** | `raw:main/LICENSE` **200**, 11.357 B |
+| [`ais-chat`](https://github.com/FWU-DE/ais-chat) | **código** (chatbot escolar) | 🔴 **AGPL-3.0** | `raw:main/LICENSE` **200**, 34.523 B |
+| [`lehrplan-ontologie`](https://github.com/FWU-DE/lehrplan-ontologie) | **dato** (16 Länder, RDF/OWL) | 🔴 **ninguna** | `LICENSE`,`.md`,`.txt`,`COPYING` → **404 los 4** |
+| [`schulfach-ontologie`](https://github.com/FWU-DE/schulfach-ontologie) | **dato** (materias + SKOS por Land) | 🔴 **ninguna** | **404 los 4** |
+| [`schulart-ontologie`](https://github.com/FWU-DE/schulart-ontologie) | **dato** (tipos de escuela, niveles) | 🔴 **ninguna** | **404 los 4** |
+
+🔴 **El corte es exacto: 3 de 3 repos de CÓDIGO tienen licencia, con tres licencias distintas elegidas
+una por una; 3 de 3 repos de ONTOLOGÍA no tienen ninguna.** ⚠️ **Y no hay licencia en prosa tampoco: se
+buscó `licen[sz]|lizenz|copyright|CC[ -]BY|urheber|rechte|terms of use|nutzungsbedingung` en los tres
+README y da **cero coincidencias en los tres**.** 🔵 **Es más limpio que el caso de P161 —ahí el README
+prometía un `LICENSE` que no existía—: acá no se promete nada. Es silencio, no promesa incumplida.**
+
+🔵 **La consecuencia, y es el patrón P166: un publicador que eligió Unlicense, Apache-2.0 y AGPL-3.0
+para tres piezas distintas sabe adjuntar una licencia. La ausencia en las ontologías deja de ser
+descuido y pasa a ser política.** **Para un engagement: se puede pedir, pero se entra a una negociación,
+no a un trámite — y conviene pedirlo invocando que el dueño son los 16 Länder.**
+
+### 🟢 La salida que SÍ está licenciada, y estaba un nivel más arriba: el upstream es CC0
+
+**`schulfach-ontologie` declara en su README que mapea a las *KIM school subjects* e importa conceptos
+de la ontología de currículo de la DINI AG-KIM. Medidas las dos fuentes:**
+
+| Repo upstream | Licencia **leída del archivo** | Prueba |
+|---|---|---|
+| [`dini-ag-kim/schulfaecher`](https://github.com/dini-ag-kim/schulfaecher) | 🟢 **CC0 1.0 Universal** | `raw:main/LICENSE` **200** y `raw:master/LICENSE` **200** |
+| [`dini-ag-kim/school-curriculum-pg`](https://github.com/dini-ag-kim/school-curriculum-pg) | 🔴 **ninguna en la raíz** | `LICENSE`,`.md`,`.txt` → **404** en `main` **y** `master` |
+
+🟢 **El vocabulario base de materias escolares alemanas es CC0 —dedicación al dominio público, el techo
+de permisividad— y es la primera pieza de currículo de EMEA que esta KB puede poner en un entregable
+comercial sin ninguna condición.** 🔴 **Lo que no tiene cesión es, otra vez, la capa que agrega el valor
+específico: la cobertura por Land que pone FWU encima.**
+
+⚠️ **Lo que NO se midió, y por P153 no se infiere:** si `school-curriculum-pg` declara licencia en un
+subdirectorio o en su GitHub Pages. **La ausencia en la raíz no prueba la ausencia.**
+
+### 🧾 El reparto de licencias de TODA la capa de currículo, actualizado con el pase 63
+
+| Región | Artefacto | Licencia | ¿Usable en entregable comercial? |
+|---|---|---|---|
+| **North America** | las tres renderizaciones JSON de Common Core en GitHub | 🔴 **sin archivo de licencia** (pase 61) | 🔴 **no** |
+| **EMEA** (Alemania) | 🟢 **`dini-ag-kim/schulfaecher` — vocabulario KIM de materias** | 🟢 **CC0 1.0** (**alta del pase 63**) | 🟢 **sí, sin condiciones** |
+| **EMEA** (Alemania) | `FWU-DE/lehrplan-ontologie` — 16 Länder, RDF/OWL | 🔴 **ninguna** (4 comprobaciones) | 🔴 **no** |
+| **EMEA** (Alemania) | 🆕 `FWU-DE/schulfach-ontologie`, `schulart-ontologie` | 🔴 **ninguna** (**medidas en el pase 63**) | 🔴 **no** |
+| **EMEA** (España) | `OpenDidactia` + `open-lex-edu` — LOMLOE, 17 CCAA, 832 normas | ⚠️ **CC BY-SA 4.0** | ⚠️ **sí, con *share-alike* en el contrato** |
+| **EMEA** (Inglaterra) | `bbc/curriculum-data` | — | ⚠️ **último commit 2014** |
+| **LATAM** (Brasil) | `bncc-dev/bncc-dados` y familia — BNCC | 🟢 **CC BY 4.0** | 🟢 **sí, con atribución** |
+| **LATAM** (Chile) | 🆕 `curriculumnacional.cl` — OA por curso y asignatura | ⚠️ **PDF/HTML, sin artefacto estructurado** (**pase 63**) | ⚠️ **extracción, no reutilización** |
+| **APAC** (Corea) | `DECK6/korean-elementary-learning-map` — 620 anclas, 2.293 prerrequisitos | 🟢 **MIT** | 🟢 **sí** |
+| **APAC** (Australia) | MRAC / ACARA | 🔴 **ilegible** — `gap 254` | ⚠️ **indeterminado** |
+
+🔵 **El dato que cambia respecto del pase 62: la capa pasa de UN artefacto permisivo y legible (Corea,
+MIT) a DOS (Corea MIT + vocabulario KIM CC0), y el segundo está en EMEA, que era la región donde la
+mejor cobertura técnica coincidía con la peor cesión.** 🔴 **Sigue valiendo el titular: de los
+artefactos de currículo medidos, la mayoría no es entregable sin condiciones, y la ontología de mayor
+cobertura poblacional de Europa continúa sin licencia.**
+
+### 🔑 Y la capa gana superficie de agente: `mem-mcp`, dominio público, sobre dato sin licencia
+
+🟢 **`FWU-DE/mem-mcp` (Unlicense, 6 ★) es un servidor MCP con 9 *tools* sobre un *triple store* del
+currículo alemán** —`sparql_query`, `list_bundeslaender`, `list_schulfaecher`, `list_schularten`,
+`find_lehrplaene`, `get_lehrplan_tree`, `get_children`, `get_kompetenzen`, `search`—, **MCP Streamable
+HTTP con `Authorization: Bearer`.** **Esta KB venía declarando que Alemania tenía la mejor cobertura de
+currículo de EMEA y ninguna puerta de agente encima. La tiene, es oficial y es dominio público.**
+
+🔴 **Y deja el riesgo del engagement en su forma más nítida: la PUERTA es de dominio público y el DATO
+que sirve no tiene licencia** (**P167**). **Se toma el mecanismo; el contenido se negocia.** 🔵 **Lo que
+sí se puede hacer hoy sin pedir nada: apuntar `mem-mcp` a un *triple store* cargado con el vocabulario
+CC0 de la KIM, y usar la ontología de FWU sólo como referencia de modelado.**
+
 ## 🌍 La capa de currículo, ampliada a ALEMANIA y a ESPAÑA — y el reparto de licencias de toda la capa, que es el dato que decide (pase 62 del 2026-10-03)
 
 > **El pase 61 cerró declarando `gap 255`:** *«Para Alemania, Francia, España, Italia, Nórdicos,

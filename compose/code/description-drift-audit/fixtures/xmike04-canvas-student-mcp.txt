@@ -1,0 +1,4 @@
+xmike04 / canvas-student-mcp  Public
+Canvas LMS MCP server that works even when your school disables API tokens — session-cookie auth, read-only by design. 19 tools for Claude and any MCP client.
+This server provides 29 tools for read-only access to Canvas LMS data, including canvas_get_profile, canvas_list_courses and canvas_read_file.
+License: MIT

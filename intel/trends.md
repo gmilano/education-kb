@@ -5429,6 +5429,184 @@ inalcanzable desde este entorno**, así que las fechas de 399 son de tres canale
 primera mano**; (c) **`AI-Teaching-Agent` no declara región** y su único indicio es contenido bilingüe
 inglés/chino — **indicio débil, NO se infiere región** (regla de **P135**).
 
+## Las tendencias 453–465, del pase 63 del 2026-10-03
+
+**453.** 🔴 **La hipótesis heredada cae en una TERCERA rama, y es la tendencia que manda en el pase.**
+El pase 62 dejó la pregunta binaria: *«si FWU es organismo público, la licencia ausente es un trámite y
+se pide; si es privado, es una decisión»*. **FWU es público —gGmbH de los 16 Bundesländer al 6,25 %
+cada uno, «das Medieninstitut der Länder»— Y la ausencia es deliberada.** 🔵 **Lo prueba el propio
+publicador: `mem-mcp` es **Unlicense**, `fwu-kc-extensions` es **Apache-2.0**, `ais-chat` es
+**AGPL-3.0**, y las TRES ontologías (`lehrplan`, `schulfach`, `schulart`) no tienen ninguna. **Tres de
+tres repos de código licenciados con tres licencias distintas; tres de tres de dato sin licencia.****
+**Quien eligió tres licencias sabe adjuntar una** (**P166**).
+
+**454.** 🔴 **El corte licencia-sí / licencia-no cae exactamente sobre la frontera CÓDIGO / DATO, y no
+sobre la frontera organización.** **Es la confirmación más fuerte que esta KB tiene de P153 —la
+licencia del dato no está donde el filtro la busca— porque esta vez el control es interno: mismo
+publicador, misma gobernanza, mismo repositorio de GitHub, mismo CI.** ⚠️ **Y no hay licencia en prosa
+tampoco: se buscó `licen[sz]|lizenz|copyright|CC[ -]BY|urheber|rechte|terms of use|nutzungsbedingung`
+en los tres README y da cero coincidencias en los tres. Es silencio, no promesa incumplida —más limpio
+que el caso de P161 y más difícil de reclamar.**
+
+**455.** 🟢 **Alemania gana la puerta de agente que esta KB venía declarando inexistente, y es de
+dominio público.** [`FWU-DE/mem-mcp`](https://github.com/FWU-DE/mem-mcp) (**Unlicense**, 6 ★) es un
+servidor **MCP Streamable HTTP** con **9 *tools*** sobre un *triple store* del currículo alemán:
+`sparql_query`, `list_bundeslaender`, `list_schulfaecher`, `list_schularten`, `find_lehrplaene`,
+`get_lehrplan_tree` (profundidad acotada, *default* 2, máx. 10), `get_children`, `get_kompetenzen` y
+`search` (texto libre con `bif:contains` de Virtuoso). 🔵 **Los pases 61 y 62 escribieron que Alemania
+tenía la mejor cobertura de currículo de EMEA y ninguna superficie de agente encima. La tiene, es
+oficial del instituto de los Länder, y con la licencia más permisiva que existe.**
+
+**456.** 🔴 **Y la combinación deja el riesgo del engagement en su forma más nítida: la PUERTA es de
+dominio público y el DATO que sirve NO TIENE LICENCIA** (**P167**). **Se toma el mecanismo; el
+contenido se negocia.** 🔵 **El patrón se reprodujo TRES veces en este mismo pase, en regiones
+distintas y por causas distintas: (a) Alemania, puerta Unlicense sobre dato sin cesión; (b) Alemania un
+nivel arriba, vocabulario upstream **CC0** y extensión por Land sin cesión; (c) Chile, el Estado
+construyó la recuperación semántica sobre Objetivos de Aprendizaje y la dejó dentro del portal —sin
+endpoint, sin descarga, sin licencia—.** **Tres mecanismos disponibles, tres contenidos sin ceder.**
+
+**457.** 🟢 **EMEA gana su primera pieza de currículo entregable SIN CONDICIONES, y estaba un nivel más
+arriba de donde la KB venía mirando.** **`schulfach-ontologie` declara en su README que mapea a las
+*KIM school subjects* e importa conceptos de la ontología de currículo de la DINI AG-KIM. Medido:
+[`dini-ag-kim/schulfaecher`](https://github.com/dini-ag-kim/schulfaecher) es **CC0 1.0 Universal**
+(`raw:main/LICENSE` 200 **y** `raw:master/LICENSE` 200).** 🔵 **La capa de currículo pasa de UN
+artefacto permisivo y legible (Corea, MIT) a DOS, y el segundo está en la región que tenía la peor
+cesión.** 🔴 **Lo que sigue sin licencia es, otra vez, la capa que agrega el valor específico: la
+cobertura por Land.** ⚠️ **`dini-ag-kim/school-curriculum-pg` no tiene licencia en la raíz (404 en
+`main` y `master`); por P153 eso no prueba la ausencia y no se midió el subdirectorio ni su Pages.**
+
+**458.** 🔴 **P160 era un caso particular: la deriva de la `description` NO necesita un fork**
+(**P165**). **El pase 62 explicó la divergencia descripción/README como herencia del fork. Medido en
+repos ORIGINALES, pasa igual: `xmike04/canvas-student-mcp` no es fork de nadie, su descripción dice
+19 *tools* y su README lista 29.** 🔵 **El fork no es la causa: es una de las maneras en que la
+descripción se queda vieja. La otra, más común, es que el autor la escribió una vez y no la volvió a
+tocar.** **El conteo cierra sin matices: de las 5 filas medidas que declaran cifra en los dos lugares
+—`vishalsachdev` +1, `lindsay-cheng` +1, `AmirF194` +21, `abr-Projects` +37, `xmike04` +10—, **las 5
+discrepan y ninguna coincide**.**
+
+**459.** ⚠️ **Y P160 queda corregido en su LETRA: la descripción no se hereda «idéntica palabra por
+palabra en toda la familia».** **`AmirF194/canvas-mcp` es fork de la misma madre y su descripción dice
+«80+ tools and 5 agent skills» contra «up to 102 tools and 8 agent skills» de la madre.** 🔵 **No se
+hereda la descripción ACTUAL: se hereda la que la madre tenía el día del fork, y ahí se congela. Es
+una foto vieja sin fecha visible, que es peor que una copia —una copia se compara—.**
+
+**460.** 🔴 **El error inverso es el más caro y tiene 43 ★: un repo SIN descripción es invisible al
+barrido por búsqueda.** **`peancor/moodle-mcp-server` es el MCP de Moodle más estrellado de
+`agents/top.md` y no tiene ninguna descripción.** 🔵 **Un barrido por consulta no sub-cuenta su
+superficie: no lo encuentra. Esta base lo tiene porque llegó por repo.** **Corolario de método: el
+sesgo de selección de un inventario por búsqueda no se corrige mirando más páginas de resultados,
+porque las piezas invisibles no aparecen en ninguna.**
+
+**461.** 🔴 **Dos filas de `agents/top.md` apuntaban a repos que ya no existen.**
+**`owentaylor/canvas-mcp` e `imazhar101/mcp-canvas-server` dan 404 por DOS canales independientes
+—HTML vía WebFetch y `raw.githubusercontent.com` en `main` y en `master`—.** **No es renombre ni fallo
+de un canal: se marcan como bajas.** ⚠️ **La regla de esta base es que un 404 no es un hallazgo; dos
+filas llevaban tiempo siendo exactamente eso.**
+
+**462.** 🔵 **El denominador de P107, recalculado y con la cobertura declarada en vez de proyectada.**
+**191 filas únicas `github.com/owner/repo` en `agents/top.md`; 23 abiertas una por una (13 en los
+pases 60/62 + 10 en éste) = **12 % de cobertura**; entre esas 23: **4 forks** y **2 bajas por 404**, o
+sea **17 observaciones independientes vivas**.** 🔴 **El 26 % de lo auditado no era una observación
+independiente.** ⚠️ **Proyectar esa tasa a las 168 filas sin abrir sería el error que P107 existe para
+evitar: se publica la cobertura, no la extrapolación.**
+
+**463.** 🟢 **`gap 74` cambia de estado, y no por un hallazgo nuevo sino porque la compuerta cambió de
+comportamiento.** **El pase 36 midió que `api.github.com/repos/<slug>` devolvía **200 en HTTP** con el
+cuerpo diciendo que el repo no estaba habilitado para la sesión —compuerta de alcance, no bloqueo de
+red— y advirtió el modo de fallo: un probe que mirara sólo `%{http_code}` registraba «funciona» y
+escribía campos vacíos.** 🔵 **Medido hoy, el mismo endpoint devuelve `403`, con el cuerpo ampliado
+(«…Use add_repo to request access»): la naturaleza del canal es la que el pase 36 ya había establecido,
+y lo que cambió es que el código HTTP ahora CONCUERDA con el cuerpo.** 🟢 **El modo de fallo silencioso
+ya no aplica.** ⚠️ **Se registra como cambio observado entre dos fechas, NO como corrección de aquella
+medición: las dos lecturas son correctas en su fecha.**
+**Y el mapa de los tres canales, medido en esta corrida: `raw.githubusercontent.com` abierto y sin
+límite de alcance —sirve LICENSE y README de cualquier repo público, y el 404 como prueba de
+ausencia—; `github.com` HTML **sólo** vía WebFetch —y ahí viven el linaje de fork, las ★ y la
+`description`—; `github.com` vía curl, 403.** ⚠️ **Consecuencia operativa que explica por qué 10 filas
+y no 100: el barrido de LICENCIA es masivo y barato (6 repos por llamada con `raw`); el de LINAJE es
+unitario y caro (una llamada HTML por repo). Hay que dejar de planificarlos como una sola tarea.**
+
+**464.** 🔵 **Un archivo de licencia de menos de ~400 bytes es una afirmación, no una cesión**
+(**P168**). **`frappe/education/license.txt` devuelve 200 y su contenido completo son 19 bytes:
+`License: GNU GPL V3`. Ni texto, ni titular, ni año.** 🔴 **Un filtro que pregunta «¿tiene archivo de
+licencia?» lo aprueba y lo anota como GPL-3.0 bien declarada: es una inferencia escrita como lectura.**
+**El control es el tamaño —GPL-3.0 completa ~35 KB, AGPL-3.0 ~34,5 KB, Apache-2.0 ~11 KB, MIT ~1 KB—.**
+⚠️ **No se afirma que el proyecto no sea GPL: `frappe/erpnext`, el ERP que lo contiene, trae la GPL
+completa. Se afirma que ESE archivo no transporta la cesión.**
+
+**465.** 🔴 **Chile RECLASIFICA el hueco de LATAM, y cae en la rama barata: de «no hay dato» a «hay
+dato sin artefacto».** **`curriculumnacional.cl` publica los Objetivos de Aprendizaje por curso y
+asignatura, oficiales y completos —en PDF y HTML de consulta—. No se encontró repositorio en GitHub,
+dataset en `datos.gob.cl` ni API JSON, buscado por dos vías.** 🔵 **El problema deja de ser producir el
+dato y pasa a ser extraerlo, que es mucho más barato.** 🔴 **Y el dato comercial del caso: el portal
+del MINEDUC ya incorporó búsqueda semántica asistida por AI sobre los OA —se le entra un tema o la
+descripción de un proyecto y devuelve los OA relacionados—, o sea que el Estado construyó la capa de
+recuperación que un agente docente necesita y la dejó adentro del portal.** **En Chile no se vende
+«construir la capa de currículo»: se vende extraerla, licenciarla y ponerle puerta de agente.**
+⚠️ **Los términos de uso NO se leyeron: `www.curriculumnacional.cl` está bloqueado por el proxy de
+egreso de esta corrida y no se infieren de que sea un portal público.**
+
+### ⚠️ Los huecos y las reservas de este pase, declarados en vez de tapados
+
+- 🔴 **Las cuatro fuentes primarias alemanas están BLOQUEADAS por el proxy de egreso:**
+  `regierung-mv.de`, `fwu.de`, `bildungsserver.de` y `de.wikipedia.org`. **La estructura societaria de
+  FWU (16 Länder al 6,25 %) y el rótulo «Medieninstitut der Länder» provienen de resultados de búsqueda
+  SOBRE esas fuentes, no de su lectura.** 🔵 **La fuente queda nombrada y localizable
+  (`regierung-mv.de/Landesregierung/fm/Beteiligungen/FWU/`, portal de participaciones del Ministerio de
+  Finanzas de M-V) para que el próximo pase o un humano sin este proxy la confirme en un minuto.**
+- 🔴 **`www.curriculumnacional.cl` también bloqueado:** los términos de uso del currículo chileno quedan
+  sin leer, y por eso el artefacto se clasifica como «sin artefacto estructurado» y **no** como
+  «permisivo» ni como «restringido».
+- ⚠️ **Las cuatro búsquedas globales obligatorias volvieron a devolver el eje agotado:** OpenClaw,
+  OpenHands, CrewAI, SWE-agent, Codex — **todos generalistas ya inventariados, ninguno educativo.**
+  **Es la enésima reproducción consecutiva, y la asimetría entre el canal de búsqueda y el canal por
+  repo queda medida otra vez: las dos altas de este pase (`mem-mcp`, `ais-chat`) NO vinieron de
+  ninguna de las cuatro consultas obligatorias — vinieron de abrir la organización de GitHub de una
+  pieza que la base ya tenía.**
+- ⚠️ **Las ★ que publican los listicles no se propagan:** el canal da «OpenClaw ~362k» donde la
+  verificación repo-por-repo de la KB hermana de tecnología leyó 385k. **Por P107, ninguna cifra de
+  estrellas de un blog entra a esta base.**
+- ⚠️ **No se verificó en fuente primaria el texto de las leyes de Oklahoma y Maryland** (prohibición de
+  decisión automatizada de alto impacto sobre alumnos): la caracterización viene del canal de
+  seguimiento legislativo y se publica como tal.
+- ⚠️ **No se midió si existe artefacto de currículo estructurado para JAPÓN**, que es el país con la
+  transición a libro de texto digital oficial en curso. **Hueco declarado, no ausencia.**
+- 🔴 **168 de las 191 filas de `agents/top.md` siguen sin abrirse una por una.** La cobertura del
+  barrido de linaje es del **12 %**.
+
+## 🔵 Las tres acciones que el pase 63 deja escritas para el pase 64
+
+1. 🟢 **Barrer la capa de LICENCIA con `raw.githubusercontent.com`, que es el canal que este pase
+   descubrió barato, sobre las 168 filas de `agents/top.md` sin verificar** (**463**, **464**). **La
+   acción es masiva y cabe en un pase: 6 repos por llamada, probando `LICENSE`, `LICENSE.md`,
+   `LICENSE.txt` y `COPYING` en `main` y `master`, y registrando el TAMAÑO además del código HTTP
+   —porque por **P168** un archivo de menos de ~400 bytes no es una cesión—.** 🔵 **Hipótesis falsable
+   y las dos ramas sirven: si el reparto de licencias que sale se parece al que el pase 51 midió con 20
+   nombres de archivo, el inventario está sano y el barrido sólo lo confirma; si aparece un bloque de
+   «sin licencia» o de archivos-afirmación que la base venía contando como permisivos, hay que
+   recotizar las recetas que los usan.** ⚠️ **NO mezclar con el barrido de linaje: ése es unitario y
+   caro, y es lo que agotó el presupuesto de este pase.**
+
+2. ⚠️ **Confirmar la estructura societaria de FWU en fuente primaria, o declarar el canal agotado**
+   (**453**, y la reserva de arriba). **Este pase la sostiene con resultados de búsqueda porque las
+   cuatro fuentes alemanas están bloqueadas por el proxy.** 🔵 **Lo que hay que probar primero es si el
+   bloqueo es del dominio o de la corrida: reintentar `regierung-mv.de` y `fwu.de`, y si siguen
+   bloqueados, buscar la misma declaración en un dominio alcanzable —el registro de participaciones de
+   otro Land, o el Handelsregister—.** 🔴 **Si ningún canal alcanzable la confirma, hay que
+   DEGRADAR la afirmación en los cuatro archivos donde quedó escrita, no dejarla envejecer como si
+   fuera medida.** ⚠️ **El pedido de licencia a FWU sigue BLOQUEADO por falta de autorización humana y
+   por P163 no se re-agenda.**
+
+3. 🔵 **Medir si `dini-ag-kim/school-curriculum-pg` tiene licencia fuera de la raíz** (**457**). **Es
+   la pieza que FWU importa y de la que depende la salida CC0 de la receta P169, así que su cesión
+   decide si esa receta es sólida o si se apoya en un supuesto.** **Buscar en subdirectorios, en el
+   sitio de GitHub Pages del proyecto y en los propios archivos de la ontología (cabeceras
+   `dct:license` en el RDF/OWL, que es donde la capa de currículo suele esconderla —P153—).**
+   🔵 **Hipótesis falsable: si declara licencia en una cabecera RDF, entonces P153 gana su caso más
+   fuerte —la licencia del dato vive DENTRO del dato— y hay que agregar esa comprobación al
+   instrumento de licencias; si no declara en ningún lado, la receta P169 tiene que reemplazar esa
+   dependencia o declararla como riesgo abierto.**
+
 ## Las tendencias 438–450, del pase 62 del 2026-10-03
 
 **438.** 🟢 **La acción diferida se ejecutó, y la lección de método es sobre el DIFERIMIENTO, no

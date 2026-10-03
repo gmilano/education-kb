@@ -50,6 +50,38 @@ updated: 2026-10-03
 
 ## Tamaño de mercado
 
+### Agregado en el pase 63 del 2026-10-03 — el par global vuelve a cerrar, aparece horizonte a 2030, y la cifra de adopción docente/estudiante se asienta en los ochenta
+
+| Magnitud | Valor | Lectura |
+|---|---|---|
+| Mercado de AI en educación, **2025** | **7,52 MM USD** | — |
+| Mercado de AI en educación, **2026** | **10,6 MM USD** | **CAGR 40,9 %** entre los dos |
+| Horizonte **2030** | **42,48 MM USD** | ⚠️ **horizonte nuevo para esta base**, que venía con 2034 |
+| Cuota **North America**, 2025 | **38 %** | coherente con el **36 %** que el barrido regional venía publicando |
+| Docentes que usaron AI en el ciclo 2024-25 | **85 %** | — |
+| Estudiantes que usaron AI en el ciclo 2024-25 | **86 %** | — |
+
+🔵 **Lo que confirma y lo que no.** El par **7,52 → 10,6 MM USD con CAGR 40,9 %** es internamente
+consistente (7,52 × 1,409 = 10,59) y cae **en el extremo alto** de la dispersión que esta base tiene
+registrada —el barrido de North America viene publicando CAGR global del 31-41 %—. ⚠️ **Se anota como
+el techo de la banda, no como «la» cifra: la dispersión entre consultoras sigue siendo el dato
+(pase 13, pase 17), y el 40,9 % es el valor más optimista de los que esta KB tiene medidos.**
+
+🔴 **La cifra que hay que usar con cuidado es la de adopción: 85 % de docentes y 86 % de estudiantes
+en el ciclo 2024-25 está medida sobre un ciclo escolar ya cerrado y proviene de un agregador
+comercial, no de un organismo.** 🔵 **Contra eso, el dato institucional de la región LATAM de este
+mismo pase (UNESCO IESALC, 200 instituciones, 19 países: 87 % de instituciones usando AI y **menos del
+10 % con lineamientos**) es el que conviene llevar a una reunión: tiene denominador, tiene emisor
+público y mide gobernanza en vez de uso.**
+
+🔵 **Y el encuadre cualitativo del año, que es el que más se parece a lo que esta KB mide:** el canal
+coincide en que el giro de 2026 es **el abandono de la herramienta AI genérica a favor de plataformas
+construidas para educación**, con despliegue **selectivo** y foco en ética, transparencia, casos
+agénticos y beneficio instruccional demostrable **por encima de la promesa de personalización
+amplia**. **Eso es exactamente la tesis de la tendencia 29 de esta base —lo que se conecta al estándar
+instalado escala, lo que inventa su propio modelo de dominio no— vista desde el lado de la demanda.**
+
+
 ### Agregado en el pase 40 del 2026-10-02 — la cifra global se confirma con un par nuevo, aparece horizonte a 2034, y el dato de adopción estudiantil se mueve 26 puntos en un año
 
 🟢 **Par global nuevo, y es consistente con el que esta base viene citando:** **US$ 7.520 M (2025) → US$ 10.600 M
@@ -1314,6 +1346,49 @@ Dónde se produce el software educativo abierto, que no es donde está la demand
 ## Opportunities by region
 
 ### North America
+
+#### Agregado en el pase 63 del 2026-10-03 — 🔴 la legislación estatal pasó de «mandato de política» a PROHIBICIÓN de decisión automatizada, y eso le pega exactamente a la capa que esta KB declaró la peor abastecida
+
+**Cifra nueva de volumen legislativo, y es la que da escala:** en la sesión **2026** se introdujeron
+**134 proyectos de ley sobre AI en educación en 31 estados**, dentro de un total de **más de 1.500
+proyectos relacionados con AI** a nivel nacional. **Los ejes son tres: privacidad del dato del alumno,
+restricción de uso en el aula e integración curricular.**
+
+🔴 **El dato que cambia una propuesta, y no es el volumen: Oklahoma y Maryland exigen supervisión
+humana y PROHÍBEN que la AI tome decisiones de alto impacto sobre un alumno.** 🔵 **Esto aterriza
+sobre la **tendencia 26** de esta base —*«la capa que decide sobre el alumno es la más regulada del
+sector y la peor abastecida de open source»*— y la mueve de categoría: ya no es «la más regulada», es
+**parcialmente prohibida**.** **Para un engagement de *student success* / alerta temprana en esos
+estados, el entregable no puede ser un sistema que decide: tiene que ser un sistema que **recomienda
+con expediente**, y la supervisión humana deja de ser una buena práctica para ser el requisito que
+define la arquitectura.**
+
+**Lo demás del barrido es confirmación de lo que esta base ya tenía:** **California AB 1159**
+(prohibición de usar dato de alumno para entrenar modelos; ya registrada en la tendencia 43) e **Idaho
+SB 1227** (protecciones de privacidad para herramientas AI en escuelas). **Cuota de mercado: North
+America, 38 % del mercado de AI en educación en 2025.** **Adopción: 88 % de estudiantes y 77 % de
+docentes en 35 países declaran usar AI; el uso de chatbots entre adolescentes de EE. UU. llega al
+64 %.** 🔴 **Y el número que sostiene el *pitch* de gobernanza sigue ahí: sólo el 18 % de los docentes
+de K-12 público recibe guía escrita formal sobre uso de AI en el trabajo.**
+
+**Actores institucionales nuevos para el mapa:**
+
+| Actor | Qué publicó | Por qué importa |
+|---|---|---|
+| **NYC Public Schools** | guía preliminar (marzo 2026) con un **«Traffic Light Framework»**, y *Playbook* completo anunciado para junio 2026 | el distrito más grande de EE. UU. fija un vocabulario de clasificación de usos que los proveedores van a tener que hablar |
+| **Microsoft + AFT** | un estándar nacional **exigible** de seguridad y privacidad de AI para escuelas | 🔵 **es gobernanza privada ocupando el vacío federal: un estándar de facto impulsado por un proveedor y el sindicato docente** |
+| **Estudiantes de los 50 estados** (vía AASA, agosto 2026) | marco nacional de uso responsable de AI en K-12 | protecciones de aprendizaje auténtico, privacidad, equidad y juicio humano |
+| **Georgia, Mississippi** | créditos obligatorios de ciencias de la computación **con contenido de AI** | demanda curricular con fecha, hacia fines de esta década |
+
+🔵 **Oportunidad concreta, y es de arquitectura antes que de producto:** **vender el expediente de
+supervisión humana como parte del sistema, no como un anexo.** **Las piezas permisivas que esta KB ya
+tiene inventariadas para eso son la capa de alerta temprana MIT (pase 40) más la compuerta de
+`grading-draft-gate` —que no publica sola— y el marcado del Artículo 50(2).** **La prohibición de
+Oklahoma y Maryland convierte esa compuerta, que en EMEA se vende como cumplimiento, en condición de
+entrada al mercado en esos estados.** ⚠️ **No se verificó el texto de las leyes de Oklahoma y Maryland
+en fuente primaria en esta corrida: la caracterización viene del canal de seguimiento legislativo y
+se publica como tal.**
+
 
 #### Agregado en el pase 62 del 2026-10-03 — 🔴 la región legisla a 31 estados mientras el 18 % del profesorado recibe guía escrita, y el currículo sigue sin cesión
 
@@ -2612,6 +2687,47 @@ Artículo 50(2) **no es exigible** en North America — pero es **el requisito m
 multi-región conviene cotizarlo contra el techo europeo y no contra el piso local (ver **P103** y **P105**).
 
 ### EMEA
+
+#### Agregado en el pase 63 del 2026-10-03 — ⚠️ el calendario del AI Act se confirma por SEXTO canal, y la novedad de la región no es regulatoria: es que apareció la arquitectura de soberanía en una compra pública real
+
+🟢 **El reloj se vuelve a confirmar, y ya es rutina: la fecha de aplicación de los sistemas de alto
+riesgo del Anexo III —que es donde cae educación: admisión, evaluación de alumnos, corrección de
+exámenes— se movió del 2026-08-02 al 2027-12-02.** **Sexto canal independiente que lo dice.** 🔵 **La
+corrección que esta base viene haciendo desde el pase 32 está estabilizada; lo que sigue siendo
+noticia es que el canal comercial de North America la publica mal (ver esa región, décima aparición).**
+
+**Y la clasificación se confirma textual: admisión, evaluación de estudiantes y corrección de exámenes
+son alto riesgo, con obligación de gestión de riesgo, gobernanza de datos, supervisión humana,
+transparencia y evaluación de conformidad ANTES del despliegue.** ⚠️ **La lectura de madurez del
+canal: la mayoría de las escuelas de la UE están en modo piloto y pre-cumplimiento, no en aplicación
+plena — que es coherente con la fecha de 2027.**
+
+### 🟢 El dato nuevo de la región, y es de arquitectura: cómo se ve la soberanía cuando la paga un Estado
+
+**Medido de primera mano en este pase, en el repo del instituto de medios de los 16 Bundesländer:**
+[`FWU-DE/ais-chat`](https://github.com/FWU-DE/ais-chat) (AGPL-3.0, 23 ★, 1.285 commits, desplegado en
+`app.ais-chat.schule`) **configura sus proveedores de modelo así: IONOS API —*cloud* alemán— junto a
+GPT-4o mini y GPT-5 nano, enrutados con Bifrost**, con Keycloak para identidad.
+
+🔵 **Esto contesta con un artefacto una pregunta que la base venía contestando con argumentos: el
+requisito de residencia de datos en una compra pública europea NO se implementa prohibiendo el modelo
+extranjero, se implementa poniendo un enrutador delante y un proveedor soberano como una opción
+más.** **Es replicable, está en producción y lo decidió un comprador público.** ⚠️ **Es AGPL-3.0: sirve
+como referencia de arquitectura, no como base de un entregable propietario.**
+
+**El canal comercial confirma el mismo patrón por el lado del despliegue:** la mayoría de las
+implantaciones educativas usan APIs de OpenAI o Anthropic, y **los distritos con requisitos estrictos
+de residencia de datos auto-hospedan un modelo de pesos abiertos** (Llama 3, Mistral). 🔵 **La
+oportunidad de Globant en EMEA está en el ENRUTADOR, no en el modelo: la pieza que permite cambiar de
+proveedor por jurisdicción sin reescribir la aplicación es lo que el comprador público necesita y lo
+que ningún proveedor de modelo le va a vender.**
+
+🔴 **Y la asimetría de la región se mantiene, ahora con una grieta:** EMEA tiene la obligación más
+alta y la mejor cobertura de currículo (Alemania, 16 Länder) **sin cesión de licencia** — pero el pase
+63 encontró que **el vocabulario upstream de materias escolares de la DINI AG-KIM es CC0 1.0**, así
+que la región gana su primera pieza de currículo entregable sin condiciones (ver
+`repos/foundations.md`).
+
 
 #### Agregado en el pase 62 del 2026-10-03 — 🟢 el calendario del AI Act se sostiene por quinto canal, y Alemania aporta la mejor capa de currículo de la KB… sin licencia
 
@@ -4043,6 +4159,42 @@ este pase dejó cubierto con código.
 
 ### APAC
 
+#### Agregado en el pase 63 del 2026-10-03 — 🟢 los dos estatutos de la región entran en vigor con fecha confirmada, y el dato nuevo es de demanda: la opinión pública asiática NO quiere prohibir la AI en la escuela
+
+🟢 **Confirmación de los dos instrumentos que esta base ya tenía, ahora con las fechas cerradas:**
+
+| País | Instrumento | Vigencia | Alcance que toca a educación |
+|---|---|---|---|
+| **Corea del Sur** | **AI Basic Act** | 🔴 **en vigor 2026-01-22** | **segundo país del mundo** tras la UE con legislación integral de AI; regula **«high-impact AI»** y nombra **educación** entre los sectores |
+| **Vietnam** | **Ley N.º 134/2025/QH15 de Inteligencia Artificial** | 🔴 **en vigor 2026-03-01** | ley dedicada de AI (ver tendencia 31: su texto nombra el patrón base de esta KB) |
+| **China** | tres leyes fundacionales | vigentes | 🔴 el marco **más restrictivo** de la región |
+| **Singapur** | *test-and-learn* | sin estatuto | construir infraestructura y herramientas, intervenir con obligatoriedad **sólo si hace falta** |
+
+🔵 **La consecuencia comercial de la tabla, y es la que esta base viene sosteniendo: APAC no tiene UN
+régimen, tiene cuatro posturas incompatibles —estatuto integral (Corea), ley dedicada (Vietnam), marco
+restrictivo (China) y sandbox voluntario (Singapur)—. Un entregable multi-país de la región necesita
+política por jurisdicción, y eso es el patrón de nodos de política en LangGraph que la base ya
+tiene cotizado.**
+
+### 🟢 El dato nuevo, y es de demanda en vez de regulación
+
+**El *Ipsos Education Monitor 2026* mide MENOR apoyo a prohibir la AI en las escuelas en los mercados
+asiáticos examinados, mientras el apoyo a restringir el uso de redes sociales por menores se mantiene
+alto.** 🔵 **Es el dato que faltaba para encuadrar la región: el público asiático distingue entre
+tecnologías en vez de rechazarlas en bloque, así que la venta en APAC no tiene que pasar por vencer
+una resistencia social a la AI educativa —tiene que pasar por el régimen regulatorio—.** **Es el
+inverso del encuadre de North America, donde la pelea es política y de confianza.**
+
+**Dos movimientos de sistema educativo que valen para el mapa:** **Japón** está en transición hacia
+los **libros de texto digitales oficiales**, y **Corea del Sur** combina soporte a familias
+extranjeras con expansión de herramientas AI de idioma. 🔵 **El de Japón es el que abre presupuesto:
+una transición nacional a libro de texto digital oficial es, en la práctica, una licitación de
+alineación de contenido a currículo —exactamente la capa que esta KB mide— y la pieza permisiva de
+currículo de la región (`DECK6/korean-elementary-learning-map`, MIT, 620 anclas, 2.293 prerrequisitos)
+es coreana, no japonesa.** ⚠️ **No se buscó en esta corrida si existe un artefacto equivalente para el
+currículo japonés: queda declarado como hueco, no como ausencia.**
+
+
 #### Agregado en el pase 62 del 2026-10-03 — 🟢 Corea pone su ley en vigor en enero y la región suma la única pieza de currículo PERMISIVA de toda la KB
 
 - 🔴 **La Ley Marco de AI de Corea del Sur (*Basic Act on the Development of AI and the
@@ -5181,6 +5333,58 @@ desplegado + puerta MCP permisiva (`jbnu-lms-mcp`, `canvas-lms-mcp`, las cuatro 
 depende de un tercero» son el mismo argumento.**
 
 ### LATAM
+
+#### Agregado en el pase 63 del 2026-10-03 — 🔴 la brecha de gobernanza de LATAM tiene por fin un denominador institucional grande, y el número es peor de lo que la base venía diciendo
+
+**La **tendencia 32** de esta base dice que LATAM dejó de tener un problema de adopción y tiene uno de
+gobernanza. Este pase la confirma con el estudio más grande que la región tiene hasta ahora y con tres
+cifras que cierran entre sí:**
+
+| Cifra | Valor | Fuente |
+|---|---|---|
+| Estudiantes universitarios que usan herramientas AI | **92 %** | Digital Education Council |
+| Instituciones de educación superior que usan AI en ≥1 área | **87 %** | UNESCO IESALC |
+| Docentes que ya las usan en **Chile y Brasil** | **> 50 %** | canal regional |
+| 🔴 **Instituciones con lineamientos formales Y capacidades suficientes** | 🔴 **< 10 %** | canal regional |
+
+🔴 **El contraste es el *pitch* entero: 87 % de las instituciones usan AI y menos del 10 % tiene cómo
+gobernarla.** **La base del estudio es sólida y conviene citarla con el denominador: UNESCO IESALC
+sobre 200 instituciones de educación superior en 19 países de América Latina y el Caribe**, cubriendo
+docencia, investigación, administración, vinculación con el medio y gobernanza institucional.
+
+**Actor institucional nuevo, y es el que cambia el canal de venta:** la **UNESCO lanzó el 2026-04-14
+el Observatorio de Inteligencia Artificial en Educación para América Latina y el Caribe**, una
+plataforma regional para apoyar a los Estados en la integración de AI en sus sistemas educativos.
+🔵 **Para Globant eso es una puerta de entrada institucional: un organismo regional que está
+construyendo justamente el inventario de capacidades que esta KB tiene medido por licencia.**
+
+**Regulación:** **Chile** mantiene el **Proyecto de Ley 2338** como la primera regulación integral de
+AI de la región, con clasificación por riesgo, transparencia obligatoria y requisitos de protección de
+datos. ⚠️ **Sigue siendo proyecto, no estatuto: es el encuadre correcto en una reunión, y la
+diferencia con Corea (en vigor desde enero) y Vietnam (desde marzo) es exactamente el argumento para
+no tratar a LATAM como «atrasada» sino como «sin fecha».**
+
+### 🔴 Y el hueco de currículo de LATAM hispanohablante se RECLASIFICA — de «no hay dato» a «hay dato sin artefacto»
+
+**Acción 3 del pase 62, ejecutada sobre Chile.** **`curriculumnacional.cl` publica los Objetivos de
+Aprendizaje por curso y asignatura, completos y oficiales — en PDF y HTML de consulta. No se encontró
+repositorio en GitHub, dataset en `datos.gob.cl`, ni API JSON.** 🔵 **El `gap 255` cambia de
+naturaleza: el problema deja de ser producir el dato y pasa a ser EXTRAERLO, que es mucho más
+barato.** ⚠️ **Los términos de uso del sitio NO se pudieron leer: `www.curriculumnacional.cl` está
+bloqueado por el proxy de egreso de esta corrida, y no se infieren de que sea un portal público.**
+
+🔴 **El hallazgo que más vale de esta región en el pase, y es comercial:** el portal del MINEDUC **ya
+incorporó búsqueda semántica asistida por AI sobre los Objetivos de Aprendizaje** —se le entra un tema
+o la descripción de un proyecto y devuelve los OA relacionados—. 🔵 **El Estado chileno construyó la
+capa de recuperación que un agente docente necesita, la puso en producción y la dejó dentro del
+portal: sin endpoint, sin descarga y sin licencia.** **En Chile no se vende «construir la capa de
+currículo»: se vende extraerla, licenciarla y ponerle una puerta de agente — y la contraparte ya
+demostró que entiende el valor, porque lo pagó.**
+
+⚠️ **Lo que sigue abierto en la región, y no se lee como cobertura:** México, Colombia, Argentina y
+Perú siguen sin artefacto de currículo estructurado (buscados en español en el pase 62). **Brasil
+sigue siendo el único con cesión limpia (`bncc-dev/bncc-dados`, CC BY 4.0).**
+
 
 #### Agregado en el pase 62 del 2026-10-03 — 🔴 la brecha adopción/gobernanza ahora tiene DOS instrumentos concordantes, y la capa de currículo sigue siendo Brasil y nada más
 

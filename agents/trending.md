@@ -9,6 +9,61 @@ updated: 2026-10-03
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 > No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
 
+## 2026-10-03 — pase 63: la organización de GitHub como canal de descubrimiento, y las dos altas que ninguna búsqueda devolvió
+
+**Lo nuevo de esta semana en agentes educativos no salió de ninguna de las cuatro consultas
+obligatorias del ciclo. Salió de abrir la ORGANIZACIÓN de GitHub de una pieza que esta base ya tenía
+inventariada hace dos pases.**
+
+### 🟢 Las dos altas, con la licencia leída del archivo
+
+| Agente / puerta | Repo | Licencia | ★ | Qué es |
+|---|---|---|---|---|
+| **MEM Ontology MCP Server** | [`FWU-DE/mem-mcp`](https://github.com/FWU-DE/mem-mcp) | 🟢 **Unlicense** (dominio público) | **6** | **9 *tools*** MCP sobre el currículo alemán en SPARQL. Streamable HTTP + `Bearer` |
+| **AIS.chat** | [`FWU-DE/ais-chat`](https://github.com/FWU-DE/ais-chat) | 🔴 **AGPL-3.0** | **23** | chatbot escolar *self-hosted* del instituto de medios de los 16 Länder; **1.285 commits**, `app.ais-chat.schule` |
+
+🔵 **`mem-mcp` es la alta importante, y no por sus 6 ★: cierra el hueco que los pases 61 y 62 dejaron
+escrito —Alemania tenía la mejor cobertura de currículo de EMEA y ninguna superficie de agente
+encima—. Y lo cierra con la licencia más permisiva que existe.** 🔴 **Con la trampa que define el
+engagement: la puerta es de dominio público y el dato que sirve no tiene licencia.**
+
+### 🔴 El dato de método de la semana, y es sobre el CANAL de descubrimiento
+
+**Las cuatro búsquedas globales obligatorias (`top open source AI agents education 2026 github MIT`,
+`github trending education AI 2026`, `open source platform education ERP CRM MIT Apache`,
+`AI education industry trends 2026`) devolvieron otra vez el eje agotado: OpenClaw, OpenHands, CrewAI,
+SWE-agent, Codex — todos generalistas ya inventariados, ninguno educativo.**
+
+🔵 **Mientras las dos altas del pase vinieron de un canal que esta base no estaba usando: abrir la
+organización de GitHub de un repo conocido y leer sus otros 29 repos.** **`FWU-DE` tenía, además de la
+ontología que la KB ya citaba, dos ontologías más, un MCP y un chatbot escolar en producción.**
+⚠️ **Es una consigna transferible y hay que anotarla como tal: cuando una pieza institucional entra al
+inventario, abrir su organización ENTERA antes de volver a buscar en el canal de consultas.**
+
+### 🔁 El barrido de forks, continuado — 10 filas más abiertas
+
+| Fila | Resultado |
+|---|---|
+| `AmirF194/canvas-mcp` | 🔴 **fork** de `vishalsachdev/canvas-mcp` — MIT, 0 ★, deriva descripción→README **+21** |
+| `lindsay-cheng/canvas-mcp` | 🔴 **fork** de `vishalsachdev/canvas-mcp` — MIT, 0 ★, deriva **+1** |
+| `xmike04/canvas-student-mcp` | 🟢 original, MIT, 2 ★ — **deriva +10 SIN fork**, y es el hallazgo |
+| `peancor/moodle-mcp-server` | 🟢 original, MIT, **43 ★** — 🔴 **SIN DESCRIPCIÓN: invisible al barrido por búsqueda** |
+| `ink-waffle/moodle-mcp` | 🟢 original, 🔴 **sin licencia**, 2 ★ — **24 *tools*, la mayor superficie Moodle medida** |
+| `csmediapro/moodle-mcp-server` | 🟢 original, 🔴 **AGPL-3.0 + plugins premium propietarios** (open-core) |
+| `Jawadh-Salih/moodle-mcp-server` | 🟢 original, MIT, 0 ★, 13 *tools* |
+| `mtgibbs/canvas-lms-mcp` | 🟢 original, MIT, 0 ★, 10 *tools* |
+| `owentaylor/canvas-mcp` | 🔴 **404 — BAJA** |
+| `imazhar101/mcp-canvas-server` | 🔴 **404 — BAJA** |
+
+**Denominador declarado (P107):** **191** filas únicas en `agents/top.md`; **23** abiertas una por una
+(13 en los pases 60/62 + 10 en éste) = **12 % de cobertura**; de esas 23, **4 forks** y **2 bajas**,
+o sea **17 observaciones independientes vivas**. 🔴 **El 26 % de lo auditado no era una observación
+independiente.** ⚠️ **No se extrapola a las 168 filas sin abrir.**
+
+**Instrumento nuevo, con su invocación (P107):** `compose/code/description-drift-audit/` —
+`python3 test_audit.py` → **14/14 aserciones**, con el control que exige deriva `None` y **no `0`**
+cuando falta una de las dos cifras.
+
 ## 2026-10-03 (pase 62) — **el barrido de forks que el pase 60 difirió al 62: la descripción se hereda entera y la superficie no (139 *tools* contra 103 en la misma release), el control negativo de esta base resultó ser un fork, y la puerta más forkeada promete una licencia que no existe**
 
 ### 🟢 La acción diferida se ejecutó, y no se re-agendó

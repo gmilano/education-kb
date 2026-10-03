@@ -103,6 +103,173 @@ updated: 2026-10-03
 > **Pase 11:** +2 patrones — **P25** (riesgo de abandono conforme al Anexo III, la capa con presupuesto ya asignado y sin oferta open source) y **P26** (agente docente sobre la ontología curricular nacional ya publicada).
 > **Pase 27:** **+4 patrones y una corrección.** 🔴 **P51 queda con premisa falsa** —el conector MCP de Moodle **sí existe y es MIT**— y lo reemplazan **P54** (corrección y devolución sobre Moodle con **compuerta humana**, el último tramo del gap 6, con piezas que ya escriben), **P55** (el conector de **Open edX**, que es el único que de verdad no existe), **P56** (**SCORM** como formato de salida de la capa generativa: cero integración, offline) y **P57** (evidencia por MCP cotizada sobre lo que CaSS **realmente** expone — 6 de 61 operaciones, con insignias y autoría de marcos **fuera**).
 
+## 🧩 P165–P168, los patrones del pase 63 (2026-10-03)
+
+### 🔴 P165 — La `description` de GitHub es una FOTO VIEJA sin fecha visible, con fork o sin fork
+
+**Qué dice.** La divergencia entre la cifra de *tools* que anuncia el campo `description` y la que
+declara el README **no es un efecto del fork**. El pase 62 la midió en una familia de forks y la
+explicó como herencia (**P160**). Medida en repos **originales**, aparece igual.
+
+**La medición, con su invocación al lado (P107):**
+
+```
+cd compose/code/description-drift-audit && python3 audit_drift.py fixtures/*.txt
+```
+
+| Repo | ¿fork? | `description` | README | Deriva |
+|---|---|---|---|---|
+| `vishalsachdev/canvas-mcp` (madre) | 🟢 no | 102 | 103 | **+1** |
+| `lindsay-cheng/canvas-mcp` | 🔴 sí | 102 | 103 | **+1** |
+| `AmirF194/canvas-mcp` | 🔴 sí | **80** | 101 | **+21** |
+| `abr-Projects/canvas-mcp` (pase 62) | 🔴 sí | 102 | 139 | **+37** |
+| `xmike04/canvas-student-mcp` | 🟢 **no** | **19** | **29** | **+10** |
+
+🔴 **5 de 5 discrepan. Ninguna coincide. Y una de las dos que no son forks discrepa en +10.**
+
+**Y la corrección a la letra de P160:** el pase 62 escribió que la descripción se hereda *«idéntica
+palabra por palabra en toda la familia»*. **`AmirF194` es fork de la misma madre y dice «80+ tools and
+5 agent skills» contra «up to 102 tools and 8 agent skills».** 🔵 **No se hereda la descripción
+ACTUAL: se hereda la que la madre tenía el día del fork, y ahí se congela.** **Es peor que una copia:
+una copia se compara; una foto sin fecha, no.**
+
+**Qué hacer con esto, operativamente.** La descripción sirve para **encontrar** un repo y **nunca**
+para dimensionarlo. ⚠️ **Y el caso que duele es el inverso: `peancor/moodle-mcp-server` tiene 43 ★ —el
+MCP de Moodle más estrellado de la base— y NO tiene descripción. Un barrido por búsqueda no
+sub-cuenta su superficie: no lo ve.** 🔵 **Corolario: un inventario por búsqueda tiene un sesgo de
+selección que no se corrige mirando más resultados, porque las piezas invisibles no están en ninguna
+página de resultados.**
+
+**Instrumento:** `compose/code/description-drift-audit/` — **14/14 aserciones**, con el control que
+exige que la deriva sea `None` y **no `0`** cuando falta una de las dos cifras (un `0` se lee como
+«coinciden»: es la forma de error de **P151**).
+
+### 🔴 P166 — El PUBLICADOR no es la licencia, ni siquiera dentro de una sola institución
+
+**Qué dice.** «Es un organismo público, así que la licencia faltante es un trámite» es una inferencia
+inválida. **Medido en `FWU-DE`** —el instituto de medios de los 16 Bundesländer, gGmbH al 6,25 % cada
+Land—, **el mismo publicador usa cuatro regímenes a la vez:**
+
+| | Repo | Licencia |
+|---|---|---|
+| **código** | `mem-mcp` | 🟢 **Unlicense** (dominio público) |
+| **código** | `fwu-kc-extensions` | 🟢 **Apache-2.0** |
+| **código** | `ais-chat` | 🔴 **AGPL-3.0** |
+| **dato** | `lehrplan-ontologie`, `schulfach-ontologie`, `schulart-ontologie` | 🔴 **ninguna, las tres** |
+
+🔴 **3 de 3 repos de código licenciados, con tres licencias distintas elegidas una por una; 3 de 3
+ontologías sin ninguna, y sin licencia en prosa tampoco —búsqueda de
+`licen[sz]|lizenz|copyright|CC[ -]BY|urheber|rechte|terms of use|nutzungsbedingung` en los tres README:
+cero coincidencias—.**
+
+🔵 **Por qué es un patrón y no una anécdota: quien eligió tres licencias distintas sabe adjuntar una.
+La ausencia deja de ser descuido y pasa a ser política.** **Qué cambia en el filtro: la licencia se
+mide POR REPO, nunca por organización, y «es público» no es un atajo — es, como máximo, un argumento
+para la negociación.** ⚠️ **Y la hipótesis binaria del pase 62 (trámite / decisión) cae en una tercera
+rama: es público Y es decisión.**
+
+### 🔴 P167 — La PUERTA puede ser de dominio público y el DATO que sirve no tener cesión
+
+**Qué dice.** En la capa de currículo, el mecanismo de acceso y el contenido accedido se licencian por
+separado y pueden estar en extremos opuestos del espectro. **Es P153 llevado a su forma más limpia.**
+
+**El caso canónico, medido en este pase:**
+
+| Pieza | Papel | Licencia |
+|---|---|---|
+| `FWU-DE/mem-mcp` | **la puerta** — 9 *tools* MCP sobre el currículo alemán | 🟢 **Unlicense** |
+| `FWU-DE/lehrplan-ontologie` | **el dato** — 16 Länder en RDF/OWL | 🔴 **ninguna** |
+
+🔵 **Se puede tomar el mecanismo y no se puede tomar el contenido.** **Y el patrón se reprodujo tres
+veces en este mismo pase, en regiones distintas y por causas distintas:**
+
+1. **Alemania** — puerta de dominio público, dato sin licencia (arriba).
+2. **Alemania, un nivel más arriba** — el vocabulario upstream `dini-ag-kim/schulfaecher` es **CC0
+   1.0** y la extensión por Land que le pone FWU encima no tiene cesión: **la capa que agrega el valor
+   específico es la que no se cede.**
+3. **Chile** — el Estado construyó la **recuperación semántica sobre Objetivos de Aprendizaje** y la
+   dejó **dentro del portal**: el mecanismo existe, en producción, y no hay endpoint ni descarga ni
+   licencia.
+
+**Qué hacer.** 🟢 **Separar las dos preguntas en la propuesta y cotizarlas aparte: «¿puedo usar la
+puerta?» y «¿puedo redistribuir lo que devuelve?».** **La respuesta casi nunca es la misma, y la
+segunda es la que define si el entregable es un producto o un servicio.** 🔵 **La salida de
+arquitectura que este pase deja probada: apuntar `mem-mcp` a un *triple store* cargado con el
+vocabulario **CC0** de la KIM, y usar la ontología de FWU sólo como referencia de modelado.**
+
+### 🔵 P168 — Un archivo de licencia de menos de 400 bytes es una AFIRMACIÓN, no una cesión
+
+**Qué dice.** Un chequeo de licencia que pregunta *«¿existe el archivo?»* tiene un falso negativo que
+esta base no había separado. **`frappe/education/license.txt` devuelve 200 y su contenido completo es
+19 bytes:** `License: GNU GPL V3`. **Ni texto de licencia, ni titular, ni año.**
+
+**Las tres categorías, que hay que distinguir:**
+
+| Caso | ¿Archivo? | Contenido | Lo atrapa |
+|---|---|---|---|
+| **P161** — `DMontgomery40/mcp-canvas-lms` | 🔴 404 | el README promete el archivo | existencia |
+| **FWU ontologías** | 🔴 404 | silencio total | existencia |
+| 🆕 **`frappe/education`** | 🟢 **200** | **19 B de prosa** | 🔴 **sólo CONTENIDO** |
+
+**El control, de una línea:** la GPL-3.0 completa son ~35 KB; la AGPL-3.0, ~34,5 KB; la Apache-2.0,
+~11 KB; la MIT, ~1 KB. **Por debajo de ~400 bytes no cabe ninguna licencia OSI.**
+
+```
+# el tamaño ANTES de creerle al archivo
+curl -sS "https://raw.githubusercontent.com/$REPO/$BRANCH/LICENSE" | wc -c
+```
+
+⚠️ **Lo que el patrón NO afirma:** que el proyecto no sea GPL. **`frappe/erpnext`, el ERP que lo
+contiene, trae la GPL-3.0 completa, así que el régimen es claro por contexto.** 🔵 **Lo que afirma es
+que ESE archivo no transporta la cesión, y que un inventario que lo cuenta como «GPL-3.0 bien
+declarada» está anotando una inferencia como si fuera una lectura.**
+
+## 🍳 Receta P169 — «Capa de currículo alemán con agente, construida sólo sobre lo que SÍ está cedido» (pase 63)
+
+**El problema que resuelve.** Un engagement educativo en Alemania —*edtech*, ministerio de un Land, o
+editorial— necesita alinear contenido a currículo por Bundesland. La mejor ontología disponible cubre
+los 16 Länder **y no tiene licencia**, así que no puede ir en un entregable. **Esta receta entrega la
+capacidad sin apoyarse en la pieza que no está cedida.**
+
+### Las piezas, con su licencia leída del archivo y su papel
+
+| Pieza | Licencia | Papel |
+|---|---|---|
+| [`dini-ag-kim/schulfaecher`](https://github.com/dini-ag-kim/schulfaecher) | 🟢 **CC0 1.0** | **el vocabulario base**: materias escolares alemanas, SKOS. **Es la única pieza de currículo de EMEA entregable sin condiciones** |
+| [`FWU-DE/mem-mcp`](https://github.com/FWU-DE/mem-mcp) | 🟢 **Unlicense** | **la puerta de agente**: 9 *tools* MCP sobre SPARQL (`sparql_query`, `list_bundeslaender`, `list_schulfaecher`, `list_schularten`, `find_lehrplaene`, `get_lehrplan_tree`, `get_children`, `get_kompetenzen`, `search`), Streamable HTTP + `Authorization: Bearer` |
+| **un *triple store* SPARQL** (Virtuoso, o Apache Jena Fuseki / Qdrant+RDF según el *stack*) | 🟢 Apache-2.0 según el elegido | **el sustrato**. ⚠️ `mem-mcp` usa `bif:contains` de **Virtuoso** en su `search`: con otro motor, esa *tool* hay que reimplementarla |
+| [`FWU-DE/lehrplan-ontologie`](https://github.com/FWU-DE/lehrplan-ontologie) | 🔴 **ninguna** | 🔴 **SÓLO referencia de modelado. NO se copia, NO se redistribuye, NO entra al entregable** |
+| [`FWU-DE/ais-chat`](https://github.com/FWU-DE/ais-chat) | 🔴 AGPL-3.0 | 🔴 **referencia de arquitectura de soberanía** (IONOS + Bifrost + Keycloak). **No es base de un entregable propietario** |
+| `compose/code/description-drift-audit/` | — | **el control de inventario**: ninguna cifra de superficie entra a la propuesta desde una `description` |
+
+### Cómo se cablea, en orden
+
+1. **Levantar el *triple store*** y cargar el vocabulario **CC0** de la KIM (`dini-ag-kim/schulfaecher`,
+   SKOS por Land). 🟢 **Hasta acá, todo el entregable es CC0 + Unlicense: no hay nada que pedir.**
+2. **Montar `mem-mcp` delante**, con `SPARQL_ENDPOINT` y los grafos (`GRAPH_ONTOLOGY`, `GRAPH_SCHULART`,
+   `GRAPH_SCHULFACH`) apuntando al punto 1. ⚠️ **Falla al arrancar si faltan variables requeridas: es
+   una propiedad buena y hay que documentarla en el *runbook*, no parchearla.**
+3. **Exponerlo detrás de un *reverse proxy*** con `Bearer` — el README trae los ejemplos de Caddy y
+   nginx ya escritos, con `proxy_buffering off` para el SSE del Streamable HTTP.
+4. **Modelar las extensiones por Land que el cliente necesite** tomando `lehrplan-ontologie` como
+   **referencia de diseño** (su división `lp.owl` / `lp-full` / `lp-base` / `lp-simple` y su decisión
+   de conservar la terminología de cada Land son buenas y se pueden *imitar*). 🔴 **No se copian sus
+   archivos.**
+5. **En paralelo y como gestión, no como dependencia del proyecto:** pedir la licencia de las tres
+   ontologías de FWU, invocando que el dueño son los 16 Länder. ⚠️ **Es acción hacia afuera: necesita
+   autorización humana. Por P163 queda BLOQUEADA, no re-agendada.**
+
+### Lo que esta receta NO resuelve, declarado
+
+- 🔴 **No entrega la cobertura de los 16 Länder.** La entrega la pieza sin licencia. **Lo que se
+  entrega es la arquitectura y el vocabulario base**; el llenado por Land es trabajo cotizable, o
+  espera la cesión.
+- ⚠️ **FP y educación especial están fuera de alcance** en la ontología de FWU por declaración propia,
+  así que tampoco hay referencia de modelado para esas dos ramas.
+- ⚠️ **`dini-ag-kim/school-curriculum-pg`** —la otra fuente que FWU importa— **no tiene licencia en la
+  raíz** (404 en `main` y en `master`). **Por P153 eso no prueba la ausencia: puede estar en un
+  subdirectorio o en su GitHub Pages, y no se midió.**
+
 ## 🧩 P160–P163, los patrones del pase 62 (2026-10-03) — y una corrección de CITA que afecta a cuatro archivos
 
 > **Los cuatro se promueven a sección en el MISMO pase que los acuña, que es lo que exige P157.**

@@ -1,0 +1,5 @@
+AmirF194 / canvas-mcp  Public
+forked from vishalsachdev/canvas-mcp
+Canvas LMS MCP server — 80+ tools and 5 agent skills for students & educators. Works with Claude, Cursor, Codex, and 40+ agents.
+Canvas MCP exposes up to 101 tools; the default profile registers fewer, and optional feature-gated tools can raise the total to 101.
+License: MIT

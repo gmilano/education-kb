@@ -104,6 +104,115 @@ updated: 2026-10-03
 > **`qti3-pnp`**, que abren accesibilidad de evaluación como entregable auditable (**P72**). ⚠️ **Open edX cambia de
 > recomendación: proponer con presupuesto de mantenimiento (gap 70).** Ver la sección del pase 33, abajo.
 
+## 🇨🇱 Chile RECLASIFICA el hueco de LATAM, y el ERP educativo de la vertical resulta todo copyleft — con un `LICENSE` de 19 bytes (pase 63 del 2026-10-03)
+
+### ⚠️ La acción 3 del pase 62, ejecutada: Chile cae en la rama BARATA de su hipótesis
+
+**El pase 62 dejó la hipótesis escrita con las dos ramas útiles: si `curriculumnacional.cl` expone una
+descarga estructurada con términos legibles, LATAM pasa de un país a dos; si sólo expone HTML de
+consulta, el hueco se RECLASIFICA de «no hay dato» a «hay dato sin artefacto» —que es extracción, no
+producción—.** 🔵 **Cae en la segunda rama, y eso es una buena noticia operativa.**
+
+**Lo que el portal del MINEDUC publica, buscado en español en dos consultas distintas:**
+
+| Qué | Formato | ¿Artefacto estructurado? |
+|---|---|---|
+| Bases Curriculares (1º–6º básico, 7º–2º medio, 3º–4º medio, FP diferenciada) | 🔴 **PDF** (p. ej. `articles-22394_bases.pdf`, 3,73 MB) | 🔴 **no** |
+| Objetivos de Aprendizaje (OA) y OA Transversales, por curso y asignatura | 🔴 **HTML de consulta** (`/curriculum`, fichas `w3-propertyvalue-*`) | 🔴 **no** |
+| Programas y planes de estudio, priorización curricular, orientaciones | 🔴 **PDF** | 🔴 **no** |
+| +40.000 recursos digitales alineados por asignatura/curso y muchos por OA | ⚠️ portal | 🔴 **no** |
+
+🔴 **No se encontró repositorio en GitHub, dataset en `datos.gob.cl`, ni API JSON. Buscado
+explícitamente por las dos vías.** ⚠️ **Y lo que NO se pudo hacer: leer los términos de uso del propio
+sitio. `www.curriculumnacional.cl` está BLOQUEADO por el proxy de egreso de esta corrida, así que las
+condiciones de uso quedan SIN LEER — y por regla de esta base no se infieren de que sea un portal
+público.** 🔵 **`gap 255` para LATAM hispanohablante se reescribe: no es «no hay dato», es «hay dato
+oficial, completo y por OA, sin artefacto reutilizable y con términos no leídos».**
+
+### 🔴 El dato que nadie había mirado: el Estado chileno YA construyó la capa semántica, y la dejó dentro del portal
+
+**El portal se renovó e incorporó una herramienta de apoyo a la Integración Curricular con búsqueda
+avanzada asistida por AI: se le entra un tema, la descripción de un proyecto o una búsqueda conceptual
+y devuelve Objetivos de Aprendizaje semánticamente relacionados del currículo nacional.**
+
+🔵 **Eso es exactamente la pieza que un agente docente necesita —recuperación semántica sobre OA
+oficiales— y está construida, en producción y pagada por el Estado.** 🔴 **Pero es una función del
+portal, no un artefacto: no hay endpoint, no hay descarga, no hay licencia.** 🔵 **Para la vertical
+cambia el *pitch*: en Chile no se vende «construir la capa de currículo», se vende **extraer y
+licenciar** lo que ya existe —y la contraparte tiene demostrado que entiende el valor, porque lo
+construyó—.** ⚠️ **Y se vuelve a ver el patrón de P167 por tercera vez en este pase: el mecanismo
+disponible y el dato sin cesión, en regiones distintas y por causas distintas.**
+
+### 🧾 La búsqueda obligatoria de plataformas, con la licencia MEDIDA — y no hay alta permisiva: por cuarto pase
+
+**Consulta obligatoria del ciclo (`open source platform education ERP CRM MIT Apache`). Devolvió los
+dos candidatos de siempre. Esta vez se les leyó el archivo de licencia con `raw`, en vez de creerle al
+sitio del proyecto:**
+
+| Plataforma | Repo | Licencia **leída del archivo** | Prueba | ¿Base de entregable propietario? |
+|---|---|---|---|---|
+| **OpenEduCat** (ERP educativo sobre Odoo, 73+ módulos) | [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 🔴 **LGPL-3.0** | `raw:master/LICENSE` **200**: *«OpenEduCat is published under the GNU LESSER GENERAL PUBLIC LICENSE, Version 3»* | 🔴 **no** |
+| **Frappe / ERPNext Education** | [`frappe/education`](https://github.com/frappe/education) | 🔴 **GPL-3.0** | `raw:develop/license.txt` **200** — ⚠️ **y el archivo tiene 19 BYTES** | 🔴 **no** |
+| **ERPNext** (el ERP que lo contiene) | [`frappe/erpnext`](https://github.com/frappe/erpnext) | 🔴 **GPL-3.0** | `raw:master/license.txt` **200**, texto completo de la GPL | 🔴 **no** |
+
+🔴 **Cuarto pase consecutivo sin alta permisiva en esta vertical, y ahora el no-hallazgo está
+MEDIDO en vez de supuesto: los dos ERP educativos open source de referencia son copyleft, uno LGPL y
+el otro GPL.** 🔵 **Lo que eso cambia al cotizar: sobre OpenEduCat (LGPL) se puede entregar un módulo
+propio enlazado sin contaminar el módulo, que es la razón práctica por la que LGPL ≠ GPL en una
+propuesta; sobre `frappe/education` (GPL) no.** **Es la diferencia entre «AI encima de la plataforma»
+y «AI dentro de la plataforma», y decide la arquitectura antes que el presupuesto.**
+
+### 🔴 Un `LICENSE` de 19 bytes: el defecto que un escáner de licencias NO atrapa
+
+**`frappe/education/license.txt` existe, devuelve 200 y su contenido completo es:**
+
+```
+License: GNU GPL V3
+```
+
+**19 bytes. Ni el texto de la licencia, ni la línea de titular de derechos, ni el año.**
+
+🔵 **Es una categoría distinta de las dos que esta base ya tenía, y hay que separarla** (**P168**):
+
+| Caso | `LICENSE` existe | Contenido | Quién lo atrapa |
+|---|---|---|---|
+| **P161** (`DMontgomery40/mcp-canvas-lms`) | 🔴 **no, 404** | el README promete un archivo que no está | ✅ un chequeo de **existencia** |
+| **FWU ontologías** (este pase) | 🔴 **no, 404** | **silencio total**, ni prosa | ✅ un chequeo de **existencia** |
+| 🆕 **`frappe/education`** | 🟢 **sí, 200** | 🔴 **19 B de PROSA, no la licencia** | 🔴 **sólo un chequeo de CONTENIDO** |
+
+🔴 **Un filtro que pregunta «¿tiene archivo de licencia?» aprueba el tercer caso y lo anota como
+GPL-3.0 bien declarada.** 🔵 **Lo que hay que preguntar es el TAMAÑO: la GPL-3.0 completa son ~35 KB,
+la Apache-2.0 ~11 KB, la MIT ~1 KB. **Un archivo de licencia de menos de 400 bytes es una afirmación,
+no una cesión**, y va al mismo cajón que la licencia declarada sólo en prosa.** ⚠️ **No se afirma que
+la intención del proyecto sea otra —ERPNext, el ERP que lo contiene, trae la GPL completa, así que el
+régimen es claro por contexto—; lo que se afirma es que ESTE archivo no transporta la licencia, y que
+el instrumento tiene que verlo.**
+
+### 🔴 El modelo open-core con AGPL, visto en la capa de conectores de Moodle
+
+**Medido en el barrido de este pase:** [`csmediapro/moodle-mcp-server`](https://github.com/csmediapro/moodle-mcp-server)
+**es AGPL-3.0 y su README ofrece plugins premium por separado** —Advanced Reporting, User Analytics,
+User Directory, Compliance Pack—.
+
+🔵 **Es el primer open-core explícito que esta KB registra en la capa de puertas de LMS, y la
+combinación es la peor de las dos para un integrador: AGPL en el núcleo (copyleft de red, así que el
+servicio que lo exponga arrastra la obligación) y propietario en lo que de verdad pide un cliente
+institucional —reporting, analítica y el *pack* de cumplimiento—.** ⚠️ **Hay que saberlo antes de
+nombrarlo en una reunión: el repo se ve como «otra puerta MCP MIT más» en una lista y no lo es.**
+
+### 🟢 Y la arquitectura de soberanía, vista en una compra pública real
+
+**[`FWU-DE/ais-chat`](https://github.com/FWU-DE/ais-chat)** (AGPL-3.0, 23 ★, 1.285 commits,
+`app.ais-chat.schule`) **es el chatbot escolar del instituto de medios de los 16 Länder alemanes.** Su
+configuración de proveedores de modelo pone **IONOS API** —*cloud* alemán— **junto a GPT-4o mini y
+GPT-5 nano, enrutados con Bifrost**, con **Keycloak** para identidad y PostgreSQL separado por
+componente.
+
+🔵 **Es la forma concreta que toma el requisito de residencia de datos en una compra pública de la UE:
+no «prohibir el modelo extranjero», sino **poner un enrutador delante y un proveedor soberano como una
+opción más**.** ⚠️ **Es AGPL-3.0: para Globant es referencia de arquitectura replicable, no base de un
+entregable propietario.**
+
 ## 🧱 La capa de currículo de la vertical, ahora con ALEMANIA y ESPAÑA — y la licencia como la variable que decide el modelo de entrega (pase 62 del 2026-10-03)
 
 > **El pase 61 estableció el modelo de esta sección: la plataforma (Moodle, Open edX, OpenEduCat,
