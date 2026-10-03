@@ -7,6 +7,7 @@ updated: 2026-10-03
 # 📡 Tendencias — education
 
 > Ventana de investigación: septiembre 2026. Verificado 2026-09-30; el pase 11, el 2026-10-01.
+> **Pase 77 del 2026-10-03:** 🟢 **Nueve tendencias nuevas, numeradas 602–610** (el pase 76 cerró en 601). 🔴 **602: una nota de honestidad puede estar equivocada en el 100 % de sus filas y seguir pareciendo prudente** — las cinco filas de `— (no verificada: repo muerto)` son **5 de 5 permisivas**, y el cierre costó **cinco peticiones HTTP** (**P234**). 🔴 **603: «muerto» tampoco exime de medir el ROL, y el rol es peor que la licencia porque su error tiene el signo contrario** — una licencia mal archivada EXCLUYE una pieza usable, un rol mal archivado **INCLUYE una inservible**, y llega a una propuesta. 🪜 **604: el eje CAPA se reproduce en otro estándar y su SIGNO SE INVIERTE** — en xAPI el servidor está abierto y vivo y el cuello está en el cliente, al revés que en OneRoster, **así que el signo es propiedad del ESTÁNDAR y no del sector** (**P235**). 🔴 **605: una corrección de esta base no viaja si vive en prosa y en N instrumentos: el pase 77 reintrodujo P171 en dos instrumentos nuevos** y leyó `LearningLocker` (GPL-3.0) como AGPL-3.0 (**P237**). 🔴 **606: un clasificador de licencias validado sobre la clase que INTERESA saca 5/5 y sigue roto** — hay que validarlo contra la clase con la que se puede CONFUNDIR. 🟢 **607: el discriminador cuantitativo que faltaba —GPL-3.0 nombra la AGPL en 3 líneas, una AGPL real en 15, GPL-2.0 en 0— y con él el defecto queda ACOTADO A UNA VERSIÓN.** 🔴 **608: cuando el FUENTE de un fork es idéntico byte a byte, lo que se bifurcó es el SUITE DE PRUEBAS, y el asunto del commit no lo dice** (**P238**: `upstream` 0/3 · fork 3/3). ⚠️ **609: un archivo de licencia no siempre es un TEXTO de licencia: puede ser una DECLARACIÓN de una línea, y la regla correcta de P171 devuelve `UNCLASSIFIED` sobre ella** — el *fallback* se vuelve sano sólo con un guard de TAMAÑO. 🔵 **610: el barrido por región se agotó por TERCERA vez consecutiva, y las tres dimensiones que rindieron en esos tres pases son INTERNAS** — `(segmento, unidad)`, `CAPA`, y ahora la auditoría de los instrumentos propios. Ver los patrones **P234**–**P238** y `compose/code/lib/`.
 > **Pase 75 del 2026-10-03:** 🟢 **Ocho tendencias nuevas, numeradas 586–593** (el pase 74 cerró en 585). 🔴 **586: una cuota de LMS sin SEGMENTO ni UNIDAD no es un dato, y el líder se INVIERTE entre segmentos** —Classroom ~31 % en K-12 contra **6 de 3.400 instituciones (0,2 %)** en superior—, **lo que corrige el encuadre de P224**: medido por cohorte hay **7** inversiones en K-12 y **1** en superior, así que esta es una KB de educación SUPERIOR medida con denominador de K-12 (**P228**). 🔵 **587: el sesgo real no es «contra la base instalada» sino a favor de lo AUTOALOJABLE**, que sí sugiere una acción. 🔴 **588: una cifra agregada se propaga sin su conjunto de archivos —7 copias, 1 lo nombra— y la que viaja a otras KBs es la que no** (**P227**, reparado en `patterns.md`). 🔴 **589: en la capa de *rostering* de K-12, «permisivo + vivo + spec vigente» deja UNA pieza y el hueco es de DERECHOS**, no de investigación (**P229**). 🔵 **590: el mismo autor publica el mismo estándar con dos licencias, y el dedupe por repo es ciego a eso.** ⚠️ **591: MIT sobre un árbol ARCHIVADO es una trampa que la columna de licencia no muestra.** 🟢 **592: el barrido por región se agotó otra vez, y lo que rindió fue cambiar de DIMENSIÓN** —`SEGMENTO × UNIDAD`, y por nombre de ESTÁNDAR en vez de `education`—, **que es exactamente lo que la tendencia 585 prescribía.** 🔴 **593: y el instrumento se encontró contaminado A SÍ MISMO — `measure.py` da 11 inversiones sobre el árbol de trabajo y 7 sobre `5dd2bcc`, porque la prosa que documenta el hueco menciona las plataformas *stub* en los mismos cuatro archivos que la métrica cuenta: hablar de una ausencia la borra del contador de ausencias, así que el COMMIT es parte de la invocación.**
 > **Pase 74 del 2026-10-03:** 🟢 **Ocho tendencias nuevas, numeradas 578–585** (continuación real de la serie; el pase 73 cerró en 577). 🔴 **578: la atención de esta base resultó INVERSAMENTE proporcional a la base instalada** —Canvas en 111 líneas / 241 ocurrencias de `agents/top.md` contra **0** de Google Classroom en 73 pases (229 / 389 contra 0 en los cuatro archivos de contenido), siendo Classroom el líder global (~39 % contra ~19 %)— **y el defecto es de instrumento: todos los barridos de cobertura miden contra la historia propia, así que no pueden encontrar una ausencia sistemática.** 🟢 **579–580: dos peldaños nuevos de compuerta, y uno es de otra naturaleza** — `GATE-IN-SCOPE` (**P220**) se hace cumplir **fuera del proceso**, en los *scopes* del token de OAuth, así que no depende de la corrección del código medido; `GATE-IN-EFFECT` (**P221**) gobierna la **visibilidad** del efecto y no la llamada, que es la forma correcta para educación. 🔴 **581: `LICENSE-REVOCABLE`** (**P222**) **es una categoría de riesgo distinta de una restrictiva, y la diferencia es de MOMENTO: la no-comercial bloquea en la propuesta, la revocable después de la entrega.** 🔴 **582: texto e identificador de licencia que se contradicen en el MISMO árbol → no gana ninguno** (**P223**). 🟢 **583: una vertical propietaria puede ser MEJOR terreno de partida que una open source copyleft**, porque el conector es obra propia. 🟢 **584: la capa está atomizada en 8 implementaciones de ≤2 ★ y ninguna se conoce.** 🔴 **585: el barrido de mercado por región se saturó por CUARTA vez, y la lección es que el problema ya no es el canal sino la dimensión.**
 > **Pase 72 del 2026-10-03:** 🟢 **Seis tendencias nuevas, numeradas 562–567** (continuación real de la serie; el pase 71 cerró en 561). 🟢 **562–563: el ACTOR es un eje independiente de la compuerta del pase 71, el hueco que lo produce es del PROTOCOLO** —`src/auth.ts` de `bb-mcp`: *«The MCP spec does not define end-user identity»*— **y cruzado con la compuerta está ANTI-correlacionado, que es la SEGUNDA vez que esta base mide esa forma sobre un par de ejes distinto** (la primera, pase 55). 🔴 **564: una corrección de método puede generalizarse de más** — la advertencia de caja del pase 71 no aplicaba a P170, y re-medidas sus 32 ausencias en las tres cajas, **32 de 32 se sostienen**. 🟢 **565: el único patrón de credencial que resuelve el problema estructural de esta capa vino de LATAM** (`iDavi/usp-mcp`, sobre sellado), **con sus dos cotas medidas** (**P213**). 🟢 **566: la divulgación de términos de uso empieza a viajar como ARCHIVO DEL REPO** y es un eje de selección que ni la licencia ni la compuerta muestran. 🔴 **567: el barrido de MERCADO por región se saturó** — las cuatro regiones devolvieron el inventario propio, con pase de origen identificable en cada caso.
@@ -101,6 +102,196 @@ updated: 2026-10-03
 > están mal por ~2× y **un 403 de `curl` no es un 404**. Ver la nota de método del pase 12.
 > **Pase 11:** el Digital Omnibus es derecho vigente (tendencia 25), aparece la capa predictiva y está vacía (tendencia 26), y se corrige un error de método de diez pasadas sobre licencias permisivas (tendencia 27).
 
+## 🆕 Tendencias 602–610 — pase 77 del 2026-10-03
+
+### 602. 🔴 Una nota de honestidad puede estar equivocada en el 100 % de sus filas y seguir pareciendo prudente
+
+`repos/trending.md` publicó durante 39 pases cinco filas con la licencia en
+`— (no verificada: repo muerto)` y, debajo, una nota que **explicaba la decisión en voz de rigor**:
+
+> *«no hacía falta y habría sido gasto: una licencia permisiva sobre un repo sin commits en una
+> década no cambia la decisión.»*
+
+Medidas las cinco (`compose/code/p234-dead-license-closeout/`): 🔴 **5 de 5 son permisivas** — 3 MIT
+y 2 Apache-2.0, **cero copyleft y cero sin archivo**. Y una de ellas era **el único permisivo con el
+spec vigente de toda la capa de *rostering*** mientras el pase 75 declaraba que esa pieza no existía.
+
+🔵 **La forma del defecto es la que hay que reconocer: la nota no era un descuido, era un ARGUMENTO**
+—y por eso sobrevivió 39 pases—. Un «no lo medimos **porque**…» se lee como disciplina, no como
+hueco, y **ningún barrido de consistencia marca una celda que viene con su justificación adjunta.**
+🔴 **Costo real del cierre: cinco peticiones HTTP.** La nota estimó un gasto que nunca verificó, y la
+estimación fue el único motivo para no mirar.
+
+**La regla operativa:** cuando una celda vacía trae una razón, **la razón es la hipótesis, no la
+conclusión** — y es falsable por el mismo precio que cualquier otra medición.
+
+### 603. 🔴 «Muerto» tampoco exime de medir el ROL, y el error de rol tiene el signo contrario al de licencia
+
+**P231** (pase 76) estableció que la muerte de un repo no exime de medir su **licencia**. Este pase
+encuentra el campo siguiente, y es peor.
+
+La fila de `Transcordia/jupiter` promete **«LRS xAPI + Caliper»**. El árbol medido (31 archivos,
+100.040 B): 🔴 **cero Caliper**, **ninguna ruta de consulta** —así que no es un LRS, es un ingestor de
+statements con 2 comandos— y **validación contra `xapi-0.9.5.schema`, un borrador PRE-1.0** publicado
+dos años antes de su último commit. El README lo explica solo: *«we submit Jupiter for their
+consideration»*. 🔵 **La columna «Rol» heredó la AMBICIÓN del README en vez de la capacidad del
+código.**
+
+🔴 **Y la asimetría es el hallazgo:**
+
+| Campo mal archivado | Qué provoca | Dónde se paga |
+|---|---|---|
+| **licencia** | **EXCLUYE** una pieza usable | dentro de la KB — se pierde una opción |
+| **rol** | **INCLUYE** una pieza inservible | **fuera** de la KB — entra en una propuesta |
+
+🔵 **El rol es el campo que decide si la pieza es CANDIDATA**, así que su error no se filtra en el
+paso siguiente: lo atraviesa. Y en una fila muerta nadie vuelve a abrir el código, porque la columna
+de fecha ya dio el motivo para no hacerlo.
+
+### 604. 🪜 El eje CAPA se reproduce en otro estándar, y su SIGNO se INVIERTE
+
+**P230** midió OneRoster por capa y concluyó *«CONSUMIR se puede; EXPONER no»*. Aplicado el mismo eje
+a **xAPI** (**P235**, 9 piezas):
+
+| CAPA | OneRoster | xAPI |
+|---|---|---|
+| servidor | 🔴 cerrado (ningún permisivo vigente) | 🟢 **abierto y VIVO** (`lrsql` Apache-2.0 **2 d** · `ralph` MIT **26 d**) |
+| cliente | 🟢 abierto | ⚠️ permisivo pero **congelado 1,7–6,1 años** |
+| puente | 🔴 sin licencia | 🟡 MIT, *upstream* congelado **1,1 a** |
+
+🟢 **Lo que se reproduce es la DIMENSIÓN: preguntar por capa separa piezas que la columna Licencia
+mezcla, en los dos estándares.** 🔴 **Lo que NO se reproduce es el SIGNO.** Para xAPI la frase
+correcta es la inversa: **EXPONER xAPI se puede hoy, permisivo y con mantenimiento de esta semana;
+CONSUMIRLO obliga a bifurcar.**
+
+🔵 **La consecuencia de método, y es la que vale para las otras KBs: un eje que rinde se puede
+TRASLADAR, un resultado medido sobre ese eje NO.** Haber generalizado el signo de P230 al sector
+habría invertido exactamente la recomendación en la capa de telemetría — que esta base vende como
+dependencia de **fase 1**, no como anexo. **8 de 9 piezas de la capa xAPI son permisivas, y la única
+copyleft es la que está muerta.**
+
+### 605. 🔴 Una corrección no viaja si vive en prosa y en N instrumentos: esta base reintrodujo su propio defecto
+
+El defecto GPL-3.0 / AGPL-3.0 está registrado acá como **P171** desde el pase 52: la **sección 13 de
+GPL-3.0 se titula *«Use with the GNU Affero General Public License»***, así que un `grep` del
+**cuerpo** etiqueta todo GPL-3.0 como AGPL. **Cinco instrumentos** lo documentan en su encabezado y
+`p206/test_family.py` **trae el *fixture* de la sección 13 como test de regresión.**
+
+🔴 **Y el pase 77 lo reintrodujo igual**, en dos instrumentos nuevos, porque escribió un clasificador
+desde cero. Reportó `LearningLocker/learninglocker` (**GPL-3.0**) como **AGPL-3.0** y estuvo a punto
+de publicar una corrección falsa contra esta propia base.
+
+🔵 **La forma general: una corrección almacenada como CONOCIMIENTO se re-pierde en cada herramienta
+nueva; sólo sobrevive almacenada como CÓDIGO COMPARTIDO con un test.** Cinco encabezados y un test en
+el instrumento equivocado no impidieron nada: **el sexto instrumento no leyó ninguno de los cinco.**
+Es la **tendencia 197** (*una corrección sobrevive sólo si el instrumento que re-mide la conoce*)
+medida una vez más y con el agravante de que acá **la corrección existía, estaba testeada, y el
+camino para heredarla no existía.**
+
+🟢 **Reparación: `compose/code/lib/license_family.sh` + `test_license_family.sh` (18/18), y los
+instrumentos la IMPORTAN.** **Una regla que hay que recordar no es un control.**
+
+### 606. 🔴 Un clasificador de licencias validado sobre la clase que INTERESA saca 5/5 y sigue roto
+
+La auditoría de este pase sobre los **cinco veredictos AGPL** que esta base sostiene
+(`csmediapro/moodle-mcp-server`, `usechalk/chalk`, `helixnow/deep-student`,
+`schroedinger-hat/certo`, `instructure/canvas-lms`) dio ✅ **5 de 5 correctos**.
+
+🔴 **Y el clasificador que los validó estaba roto.** AGPL → AGPL **acierta por casualidad**: el
+defecto es un falso positivo *hacia* AGPL, así que no puede manifestarse sobre entrada AGPL. Se ve
+**únicamente** sobre GPL-3.0:
+
+| Pieza | `grep` del cuerpo | bloque de título | Veredicto |
+|---|---|---|---|
+| 🔴 **`moodle/moodle`** | **AGPL-3.0** | 🟢 GPL-3.0 | **FALSO POSITIVO** |
+| 🔴 `LearningLocker/learninglocker` | **AGPL-3.0** | 🟢 GPL-3.0 | **FALSO POSITIVO** |
+
+🔴 **El instrumento roto etiquetaba a MOODLE como AGPL-3.0** — el LMS más instalado del planeta y el
+argumento de *«el cliente ya lo tiene»* más grande de esta KB. **Y AGPL §13 contra GPL-3.0 es
+exactamente la distinción que decide si se le puede montar un producto ALOJADO encima**: el error más
+caro que esta base podría cometer, cometido en silencio y con 5/5 de validación.
+
+🔵 **La regla: un clasificador se valida contra la clase con la que puede CONFUNDIRSE, no contra la
+clase que interesa.** Y el corolario incómodo: **una cobertura de 100 % sobre la clase de interés es
+exactamente el resultado que un falso positivo direccional produce.**
+
+### 607. 🟢 El discriminador cuantitativo que faltaba, y con él el defecto queda acotado a UNA versión
+
+Medido en la misma corrida, sobre payloads reales:
+
+| Payload | Líneas que nombran la AGPL |
+|---|---|
+| GPL-3.0 (Moodle, Learning Locker) | **3** — su sección 13 |
+| AGPL-3.0 real (Canvas, `moodle-mcp-server`) | **15** |
+| **GPL-2.0** (`oat-sa/qti-sdk`, `extension-tao-testqti`) | **0** |
+
+🟢 **Dos cosas que el registro de P171 no tenía.** Primero, un **chequeo secundario de un `grep -c`**:
+3 contra 15 separa las dos familias sin leer el título. Segundo, y es lo que acota el daño:
+🔵 **GPL-2.0 da 0 porque PREDATA a la AGPL, así que el defecto es específico de GPL-3.0** — **la capa
+QTI de esta base, que es GPL-2.0, nunca estuvo en riesgo.** Un defecto acotado a una versión es un
+defecto auditable; uno «de toda la familia GPL» habría obligado a re-medir 21 filas.
+
+### 608. 🔴 Cuando el FUENTE de un fork es idéntico byte a byte, lo que se bifurcó es el SUITE DE PRUEBAS
+
+El pase 38 clasificó `ashleycribb/learnmcp-xapi` como *«NO es sucesión — 2 commits adelante, ambos de
+Cloud Run»*, **leyendo los asuntos de los commits**. Medido archivo por archivo:
+
+- 🟢 **14 de 14 archivos de FUENTE, idénticos byte a byte.**
+- 🔴 **CINCO archivos de TEST, distintos.** La configuración de despliegue no toca los tests.
+
+Corriendo contra fuentes idénticas, **como máximo un suite describe el código que está ahí**: de las
+tres afirmaciones divergentes, el fuente compartido sostiene 🔴 **`upstream` 0/3 · fork 3/3** (el
+fuente asigna `_token_cache` y no `_oidc_token`; usa `/xAPI/statements/` y no `/xapi/`; valida
+`LRS_KEY`/`LRS_SECRET` y no `LRS_ENDPOINT`).
+
+🔴 **La puerta xAPI que esta KB recomienda desde el pase 6 publica un suite que contradice a su
+propio fuente, y el fork descartado es el único árbol auto-consistente.** El commit que repara los
+tests **se llama «Cloud Run deployment» y no los menciona.**
+
+🔵 **La lección es de CANAL y generaliza a todo juicio de fork de esta base: el asunto de un commit es
+prosa del autor.** Un fork con fuente idéntico y tests distintos **no es «sólo empaquetado»** — y la
+diferencia sólo aparece comparando archivos. ⚠️ **Cota: esto es contradicción ESTÁTICA, no una
+corrida de tests** — las dependencias de terceros no se pueden instalar en este entorno, así que lo
+afirmado es *«la afirmación nombra un símbolo ausente del fuente»*. **Correr los dos suites queda
+pre-registrado.**
+
+### 609. ⚠️ Un archivo de licencia no siempre es un TEXTO de licencia, y la regla correcta falla sobre una declaración
+
+`frappe/education` publica `license.txt` con **19 bytes**: `License: GNU GPL V3`. 🔵 **No es un texto
+de licencia: es una DECLARACIÓN.** Y el clasificador por **bloque de título** —que es el **correcto**
+según **P171**— devuelve `UNCLASSIFIED`, porque no hay bloque de título que leer.
+
+🟢 **El *fallback* por token es sano acá, y la razón de por qué es el aporte:** P171 existe porque un
+**cuerpo** de licencia **contiene los nombres de otras licencias** (GPL-3.0 nombra la AGPL). **Un
+payload corto no tiene cuerpo con el cual confundirse.** Así que el token match corre **sólo bajo un
+guard de TAMAÑO (≤ 400 B)**, y **el guard es el argumento de seguridad entero**, no una optimización.
+Testeado en los dos lados de sí mismo: una declaración de una línea se lee; un cuerpo GPL-3.0
+duplicado, por encima del umbral, **sigue dando GPL-3.0 por título y nunca AGPL por la sección 13**.
+
+### 610. 🔵 El barrido por región se agotó por TERCERA vez, y las tres dimensiones que rindieron son INTERNAS
+
+Tercera confirmación consecutiva: **las cuatro búsquedas regionales obligatorias devolvieron cero
+cifras regulatorias nuevas**, y lo que trajeron con número ya estaba publicado o entra como cifra
+secundaria menor (NA: guía de NYC con *Traffic Light Framework* de marzo 2026, *STUDENTS FIRST Act of
+2026*, Idaho **SB 1227** · APAC: 88 % espera retorno, ROI **2,85 USD** por dólar · LATAM: **61 %** de
+alumnos teme el mal uso por sus pares, **47 %** de despliegue empresarial regional).
+
+🔵 **Y el patrón de los tres pases es el dato:**
+
+| Pase | Dimensión que rindió | Clase |
+|---|---|---|
+| 75 | `(segmento, unidad)` | **interna** — cohorte de la propia KB |
+| 76 | `CAPA` | **interna** — estructura del estándar |
+| 77 | `CAPA × ESTÁNDAR` + **auditoría de los instrumentos propios** | **interna** |
+
+🔴 **Tres pases, tres dimensiones internas, cero hallazgos del canal regional.** La tendencia **592**
+decía que la región se agotó como dimensión de **descubrimiento**; con tres repeticiones **pasa de
+observación a presupuesto**: el barrido regional se corre para **declarar el hueco** —que es
+obligatorio y vale— **no para encontrar piezas.** 🟢 **El presupuesto de hallazgo va a las
+dimensiones internas, y la de mayor rendimiento de este pase fue la más barata: auditar los
+instrumentos de esta base contra sus propias correcciones ya pagadas.**
+
+---
 ## 🆕 Tendencias 594–601 — pase 76 del 2026-10-03
 
 > Continuación real de la serie: el pase 75 cerró en **593**. Las ocho salen de mediciones de primera

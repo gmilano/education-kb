@@ -9,6 +9,216 @@ updated: 2026-10-03
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 > No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
 
+## 2026-10-03 — pase 77: la nota de honestidad de esta base estaba equivocada en las CINCO filas, el eje CAPA se da vuelta al cambiar de estándar, y la puerta xAPI que esta KB recomienda desde el pase 6 no pasa sus propios tests
+
+### 🟢 La tabla de muertos cierra, y no era una excepción: era un patrón de 5 de 5
+
+`repos/trending.md:3450` publica cinco filas con la licencia en `— (no verificada: repo muerto)` y,
+debajo, **una nota de honestidad que explica por qué no se midieron**:
+
+> «en los cinco repos muertos **no se verificó el archivo**. No hacía falta y habría sido gasto: una
+> licencia permisiva sobre un repo sin commits en una década no cambia la decisión.»
+
+El pase 76 (**P231**) refutó esa nota en **una** fila. Este pase midió **las cinco**
+(`compose/code/p234-dead-license-closeout/`):
+
+| Pieza | Licencia (payload) | Titular | Estado antes |
+|---|---|---|---|
+| 🆕 [`EASOL/edfi-to-oneroster`](https://github.com/EASOL/edfi-to-oneroster) | **Apache-2.0** | ⚠️ *no respondible desde el archivo* (**P184**) | 🔴 sin medir en 76 pases |
+| 🆕 [`Transcordia/jupiter`](https://github.com/Transcordia/jupiter) | **MIT** | `Transcordia`, 2014 | 🔴 sin medir en 76 pases |
+| ✅ [`jdolny/OneRoster.NET`](https://github.com/jdolny/OneRoster.NET) | **MIT** | `theopenem` | pase 76, reconfirmada |
+| ✅ [`bgwdotdev/go-oneroster`](https://github.com/bgwdotdev/go-oneroster) | **MIT** | `fffnite` | pase 76, reconfirmada |
+| ✅ [`gotranseo/oneroster`](https://github.com/gotranseo/oneroster) | **Apache-2.0** | ⚠️ *plantilla sin llenar* | pase 76, reconfirmada |
+
+🔴 **5 de 5 permisivas. Cero copyleft, cero sin archivo.** La nota no estaba equivocada en una fila:
+**estaba equivocada en todas**, y su razonamiento está dado vuelta. 🔵 **La columna de muertos de
+esta KB no es un cementerio: es la reserva de código BIFURCABLE**, y es la clase donde más paga
+medir la licencia, porque es lo único que queda cuando no hay quien atienda un *issue*.
+**Costo total del cierre: cinco peticiones HTTP, para un dato que estuvo 76 pases sin medir.**
+
+### 🔴 Y la fila que se midió trae una corrección de ROL, que es más cara que una de licencia
+
+La fila de `Transcordia/jupiter` dice **«LRS xAPI + Caliper»**. Clonado y medido el árbol
+(31 archivos, 100.040 B, `HEAD` **2015-04-19**):
+
+| Lo que la fila promete | Lo medido en el código |
+|---|---|
+| **Caliper** | 🔴 **CERO** — ni un archivo nombrado `*caliper*`, ni una ocurrencia en `.java`/`.json`/`.xml` |
+| **LRS xAPI** | ⚠️ **8 clases de modelo** (`XApiActor`, `XApiAgent`, `XApiVerb`, `XApiAccount`, `XApiLanguageMap`, `XApiIdentifier`, `XApiAnonymousGroup`, `XApiIdentifiedGroup`) y **2 comandos** (`CreateStatementRequest`/`Response`) — **sin ruta de consulta: no es un LRS, es un ingestor de statements** |
+| *(sin dato de spec en la fila)* | 🔴 **valida contra `xapi-0.9.5.schema`** — un **borrador PRE-1.0**, y xAPI 1.0.0 salió en abril de 2013, **dos años antes de su último commit** |
+
+🔵 **La clase de defecto, y es nueva en esta base: la columna «Rol» heredó la AMBICIÓN del README en
+vez de la capacidad del código.** El README de jupiter dice *«capable of ingesting both Caliper API
+and Experience API payloads»* y, en la misma página, *«There are no known implementations of a
+record store implementing the Caliper API … we submit Jupiter for their consideration»* — **era una
+propuesta, y entró al inventario como una capacidad.**
+
+🔴 **Y el signo del error es el peligroso.** El pase 76 mostró que una licencia mal archivada
+**EXCLUYE** una pieza usable. Un rol mal archivado **INCLUYE una inservible**, y eso no se detiene
+en la KB: llega a una propuesta. **«Muerto» no exime de medir la licencia (P231), y tampoco exime de
+medir el ROL — que es el campo que decide si la pieza es candidata.**
+
+✅ **Efecto colateral bueno: la ausencia de Caliper open source de esta base queda REFORZADA.**
+`agents/top.md` la declaraba *«escrita, no inferida … reconfirmada con `grep` sobre los 8 archivos,
+sin contradicción»*. 🔵 **Había una contradicción disponible —esta fila dice «Caliper»— y ahora está
+medida EN EL CÓDIGO y resuelta a favor de la ausencia**: el único candidato de Caliper que esta base
+contenía no implementa Caliper.
+
+### 🪜 El eje CAPA de P230 se reproduce en otro estándar — y su SIGNO se INVIERTE
+
+**P230** concluyó, sobre OneRoster: *«CONSUMIR se puede hoy; EXPONER no.»* Lo que el pase 76 no
+podía saber es si eso es del **sector** o del **estándar**. Medido sobre **xAPI**
+(`compose/code/p235-xapi-layer-axis/`, 9 piezas):
+
+| CAPA | OneRoster (**P230**) | xAPI (**P235**) |
+|---|---|---|
+| **servidor** | 🔴 ningún permisivo en spec vigente | 🟢 **dos permisivos VIVOS** — `yetanalytics/lrsql` (**Apache-2.0**, `HEAD` **2 d**) · `openfun/ralph` (**MIT**, **26 d**) |
+| **cliente** | 🟢 cuatro permisivos, uno vigente | ⚠️ **permisivos pero TODOS congelados** — `php-xapi/model` (**MIT**, 1,7 a) · `TinCanPHP` (**Apache-2.0**, 3,9 a) · `TinCanPython` (**Apache-2.0**, 6,1 a) |
+| **puente** | 🔴 los dos **sin archivo de licencia** | 🟡 **MIT**, pero el *upstream* congelado **1,1 a** y el único «vivo» no es sucesión (**P238**) |
+
+🔴 **Por lo tanto «CONSUMIR se puede, EXPONER no» es una propiedad de ONEROSTER, no de educación.**
+🟢 **Para xAPI la frase correcta es la inversa: EXPONER xAPI —ser el LRS— se puede hoy, permisivo y
+con mantenimiento de esta semana; el cuello de botella está en el CLIENTE y en el PUENTE.**
+🔵 **Haber generalizado el signo de P230 al sector habría invertido exactamente la recomendación en
+la capa de telemetría, que es la que esta KB vende como dependencia de fase 1.**
+
+⚠️ **Reparto de licencia de la capa: 8 de 9 piezas son permisivas.** La única copyleft es
+`LearningLocker/learninglocker` (**GPL-3.0**, `HEAD` 2021-11-16 → **4,9 años**).
+
+### 🔴 El hallazgo de método del pase, y es contra esta base: una corrección que NO VIAJÓ
+
+Al construir los dos instrumentos nuevos, el pase escribió su propio clasificador de licencias con
+un `grep` de `affero` sobre el **cuerpo** del payload, y **reportó
+`LearningLocker/learninglocker` (GPL-3.0) como AGPL-3.0.** Estuvo a punto de publicar una corrección
+falsa contra esta KB.
+
+🔴 **Ese defecto ya estaba registrado acá como `P171` desde el pase 52:** la **sección 13 de GPL-3.0
+se titula *«Use with the GNU Affero General Public License»***, así que un `grep` del cuerpo etiqueta
+**todo** GPL-3.0 como AGPL. **Cinco instrumentos** (`p114`, `p170`, `p206`, `p211`, `p230`)
+clasifican por bloque de título y lo dicen en su encabezado; `p206/test_family.py` **trae el
+*fixture* de la sección 13 como test de regresión.**
+
+🔵 **Y el pase lo reintrodujo igual, porque escribió un clasificador nuevo en vez de reusar uno
+endurecido. La corrección vivía en cinco instrumentos y en prosa, y un sexto no heredó nada: una
+regla que hay que RECORDAR no es un control.** Reparación: el clasificador pasa a vivir en
+**`compose/code/lib/license_family.sh`** con **`test_license_family.sh` (12/12)**, y los dos
+instrumentos nuevos lo **importan** (**P237**).
+
+#### El control negativo, que es lo que vuelve esto grave y no anecdótico
+
+| Pieza | `grep` del cuerpo | bloque de título | líneas `affero` | Veredicto |
+|---|---|---|---|---|
+| 🔴 **`moodle/moodle`** | **AGPL-3.0** | 🟢 **GPL-3.0** | **3** | **FALSO POSITIVO** |
+| 🔴 `LearningLocker/learninglocker` | **AGPL-3.0** | 🟢 **GPL-3.0** | **3** | **FALSO POSITIVO** |
+| `oat-sa/qti-sdk` | GPL | GPL-2.0 | **0** | ✅ OK |
+| `oat-sa/extension-tao-testqti` | GPL | GPL-2.0 | **0** | ✅ OK |
+| `csmediapro/moodle-mcp-server` | AGPL-3.0 | AGPL-3.0 | **15** | ✅ OK |
+| `instructure/canvas-lms` | AGPL-3.0 | AGPL-3.0 | **15** | ✅ OK |
+
+🔴 **Un `grep` de cuerpo etiqueta a MOODLE como AGPL-3.0** — el LMS más instalado del planeta y el
+argumento de *«el cliente ya lo tiene»* más grande de esta KB. **Y AGPL §13 contra GPL-3.0 es
+exactamente la distinción que decide si se puede construir un producto ALOJADO encima.** Es el error
+más caro que esta base podría cometer, y el instrumento roto lo cometía en silencio.
+
+🟢 **Dos cotas nuevas que el registro de P171 no tenía:**
+
+1. **Discriminador cuantitativo:** GPL-3.0 nombra la AGPL en **3** líneas (su §13); una AGPL-3.0 real
+   en **15**. Chequeo secundario de un `grep -c`.
+2. **El defecto es específico de VERSIÓN:** GPL-2.0 da **0** — predata a la AGPL. 🔵 **Así que sólo
+   las filas GPL-3.0 estuvieron en riesgo, y la capa QTI de esta base (GPL-2.0) nunca lo estuvo.**
+
+✅ **Auditoría completa: los CINCO veredictos AGPL que esta base sostiene son CORRECTOS** —
+`csmediapro/moodle-mcp-server`, `usechalk/chalk`, `helixnow/deep-student`, `schroedinger-hat/certo`,
+`instructure/canvas-lms` — por bloque de título, tres además concordantes con su manifiesto.
+🔴 **Y ahí está la lección de validación: un clasificador probado SÓLO sobre repos AGPL saca 5/5 y
+sigue roto, porque AGPL → AGPL acierta por casualidad. Hay que validarlo contra la clase con la que
+se puede CONFUNDIR, no contra la que interesa.**
+
+### 🧪 P238 — cuando el FUENTE de un fork es idéntico byte a byte, lo que se bifurcó es el SUITE DE PRUEBAS
+
+El pase 38 clasificó [`ashleycribb/learnmcp-xapi`](https://github.com/ashleycribb/learnmcp-xapi) como
+**«NO es sucesión — 2 commits adelante, ambos de Cloud Run»**, leyendo **los asuntos de los
+commits**. Sobre esa base esta KB recomienda
+[`DavidLMS/learnmcp-xapi`](https://github.com/DavidLMS/learnmcp-xapi) como la puerta xAPI canónica
+desde el pase 6.
+
+Comparados archivo por archivo (`compose/code/p238-fork-testsuite-contradiction/`):
+
+- 🟢 **14 de 14 archivos de FUENTE son idénticos byte a byte** — `config.py`, `main.py`, `mcp/core.py`,
+  `mcp/validator.py`, los cinco *plugins*, `verbs.py`, `run_server.py`.
+- 🆕 Sólo el fork agrega `Dockerfile`, `.dockerignore`, `docs/GCP_DEPLOYMENT.md`.
+- 🔴 **Y difieren CINCO archivos de TEST. La configuración de despliegue no toca los tests.**
+
+Los dos suites corren contra fuentes **idénticas**, así que **como máximo uno describe el código que
+está ahí**:
+
+| Afirmación | `upstream` afirma | el fork afirma | El fuente COMPARTIDO |
+|---|---|---|---|
+| atributo de cache del token OIDC | `self._oidc_token` | `self._token_cache` | 🔴 **asigna `_token_cache`, nunca `_oidc_token`** |
+| *casing* de la ruta de statements | `/xapi/statements/` | `/xAPI/statements/` | 🔴 **`/xAPI/`**, con el comentario *«note the capital X»* |
+| contrato de validación de config | `"LRS_ENDPOINT is required"` | `"LRS_KEY and LRS_SECRET are required"` | 🔴 **la segunda**, rama `CONFIG_PATH` *legacy* |
+
+🔴 **`upstream` 0/3 · fork 3/3. La puerta xAPI que esta KB recomienda desde el pase 6 publica un
+suite que contradice a su propio fuente, y el fork que el pase 38 descartó es el único árbol
+auto-consistente.** El commit que repara los tests **dice «Cloud Run deployment» y no los menciona.**
+
+🔵 **El error del pase 38 fue de CANAL: clasificó una relación de fork leyendo los ASUNTOS de los
+commits, que son prosa del autor.** Un fork con fuente idéntico y tests distintos **no es «sólo
+empaquetado»: es un árbol que cambió el contrato de prueba**, y eso sólo se ve comparando archivos.
+
+⚠️ **Cota declarada, y es importante: esto es una prueba ESTÁTICA de contradicción, no una corrida
+de tests.** Instalar las dependencias de terceros del suite (`pytest`, `respx`, `httpx`) **no está
+disponible en este entorno**, así que lo medido es *«esta afirmación nombra un símbolo ausente del
+fuente»*, **no** *«pytest reporta un fallo»*. Se afirma la versión más débil. **Correr los dos suites
+queda pre-registrado para un pase con ese presupuesto.**
+
+⚠️ **Y un defecto que este instrumento pagó en su propia construcción:** la primera versión probó la
+cadena pelada `_oidc_token` y la reportó **PRESENTE**, porque el fuente define el **método**
+`_get_oidc_token`, que la **contiene**. El test afirma un **acceso a atributo**, y ese atributo no
+existe. 🔵 **Una sonda por subcadena sobre un nombre de atributo pega en el *getter* que lo envuelve y
+convierte una contradicción en un acuerdo** — habría publicado `upstream 1/3` en vez de `0/3`.
+Las sondas son regex ancladas en `self\.`, con test de regresión (**8/8**).
+
+### ⚠️ Altas de agente de este pase: 0, declarado
+
+**El pase midió y corrigió en vez de sumar filas.** Las dos piezas nuevas que entran al inventario
+(`EASOL/edfi-to-oneroster`, `Transcordia/jupiter`) **ya estaban en la base**: lo que entra es su
+licencia y, en un caso, la corrección de su rol. **Ninguna es un agente.**
+
+### ⚠️ El barrido obligatorio, declarado fila por fila
+
+**Las cuatro búsquedas globales devolvieron CERO piezas educativas nuevas** — lo que trajeron es
+inventario de agentes genéricos ya publicado acá (`OpenClaw`, `OpenHands`, `CrewAI`, `AutoGPT`,
+`aider`) o rankings sin pieza educativa verificable. 🔴 **Y la búsqueda obligatoria de plataformas se
+saturó una vez más sobre `openeducat/openeducat_erp` y `frappe/education`, las dos ya inventariadas
+en `verticals/solutions.md`** — ⚠️ **registrado acá porque la primera redacción de este pase las
+anunció como «dos verticales nuevas» antes de hacer el `grep` contra la propia base: no lo son, y la
+licencia que midió este pase CONCUERDA con la que esta KB ya publicaba** (LGPL y GPL-3.0).
+🔵 **Lo único que esa re-medición aportó es una cota de instrumento, y está en `verticals/`:
+`frappe/education` publica una DECLARACIÓN de una línea en vez de un TEXTO de licencia (19 B), y el
+clasificador por bloque de título —el correcto por P171— devuelve `UNCLASSIFIED` sobre ella.**
+
+**Las cuatro regionales devolvieron CERO cifras regulatorias nuevas por TERCER pase consecutivo**, y
+lo que trajeron con número ya está en `intel/market.md` o entra ahí como cifra secundaria nueva
+(NA: guía de NYC con *Traffic Light Framework*, marzo 2026 · *STUDENTS FIRST Act of 2026*, agosto
+2026 · Idaho **SB 1227** · APAC: 88 % espera retorno, ROI **2,85 USD** por dólar · LATAM: **61 %** de
+alumnos teme el mal uso por sus pares, **47 %** de despliegue empresarial regional). 🔵 **Tercera
+confirmación consecutiva de la tendencia 592: el barrido por REGIÓN está agotado como dimensión de
+DESCUBRIMIENTO. Las dimensiones que rindieron en tres pases seguidos son internas —
+`(segmento, unidad)` en el 75, `CAPA` en el 76, y en el 77 `CAPA × ESTÁNDAR` más la auditoría de los
+propios instrumentos.**
+
+### 🔵 Lo que este pase buscó y NO encontró, declarado
+
+- 🔴 **Sigue sin aparecer un cliente xAPI permisivo y VIVO.** El más fresco de los tres medidos es
+  `php-xapi/model` con **1,7 años** — ⚠️ **y eso ya corrige a esta base, que databa la familia
+  `php-xapi/*` en «último tag 2021-03-24»: el `HEAD` de `php-xapi/model` es 2025-01-20.**
+- 🔴 **Cero implementaciones de Caliper open source**, ahora con el único candidato interno medido en
+  código (0 ocurrencias). La ausencia del pase 34 **se sostiene y queda más fuerte.**
+- 🔴 **Cero servidores OneRoster permisivos en `v1p2`** — residuo del pase 76, **sin cambio.**
+
+---
+
 ## 2026-10-03 — pase 76: la conclusión del pase 75 se cae con datos de su propio archivo, y la pieza que la arreglaba estaba en la base sin licencia porque se la declaró «no verificada: repo muerto»
 
 ### 🔴 La corrección, y esta vez no hizo falta salir a buscar: la refutación ya estaba escrita

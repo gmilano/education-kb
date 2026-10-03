@@ -8,6 +8,77 @@ updated: 2026-10-03
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 
+## 2026-10-03 — pase 77: la tabla de muertos de este archivo cierra con 5 de 5 permisivas, y su nota de honestidad queda refutada entera
+
+### 🟢 La medición, fila por fila
+
+Instrumento: `compose/code/p234-dead-license-closeout/sweep_dead.sh`. Canal:
+`raw.githubusercontent.com` con `ref HEAD` (**P170**), clasificación por **payload** (**P172**) y
+por **bloque de título** (**P171**, vía `compose/code/lib/license_family.sh`).
+
+| Pieza | Licencia (payload) | Archivo | Titular | Antes |
+|---|---|---|---|---|
+| [`EASOL/edfi-to-oneroster`](https://github.com/EASOL/edfi-to-oneroster) | **Apache-2.0** ✅ | `LICENSE` | ⚠️ no respondible desde el archivo (**P184**) | 🔴 `— (no verificada)` |
+| [`Transcordia/jupiter`](https://github.com/Transcordia/jupiter) | **MIT** ✅ | `LICENSE` | `Transcordia`, 2014 | 🔴 `— (no verificada)` |
+| [`jdolny/OneRoster.NET`](https://github.com/jdolny/OneRoster.NET) | **MIT** ✅ | `LICENSE` | `theopenem`, 2020 | pase 76 |
+| [`bgwdotdev/go-oneroster`](https://github.com/bgwdotdev/go-oneroster) | **MIT** ✅ | `LICENSE` | `fffnite`, 2019 | pase 76 |
+| [`gotranseo/oneroster`](https://github.com/gotranseo/oneroster) | **Apache-2.0** ✅ | `LICENSE.txt` | ⚠️ plantilla sin llenar | pase 76 |
+
+🔴 **5 de 5 permisivas.** La nota de honestidad de la tabla del pase 38 —*«no hacía falta y habría
+sido gasto»*— queda **refutada en las cinco filas**, y está corregida en su lugar más abajo en este
+mismo archivo. **Costo del cierre: cinco peticiones HTTP.**
+
+### 🧾 Dos cotas de TITULAR que la tabla no podía mostrar, y las dos son Apache-2.0
+
+⚠️ **El archivo de licencia responde el titular SÓLO para MIT/BSD/ISC** (**P184**). Medido acá:
+
+- `EASOL/edfi-to-oneroster` → el `LICENSE` **no trae ninguna línea de copyright**.
+- `gotranseo/oneroster` → trae **el apéndice sin llenar**: `Copyright [yyyy] [name of copyright owner]`.
+
+🔵 **Así que «Apache-2.0 sin titular identificable» es el caso NORMAL y no una anomalía** — el
+apéndice de Apache es una plantilla que se publica vacía. La primera versión del instrumento de este
+pase imprimía como titular la frase *«copyright notice that is included in or attached to the work»*,
+**que es texto de la licencia Apache**: un `grep` de líneas que empiezan con `copyright` sobre un
+payload Apache devuelve **boilerplate**, no un titular.
+
+### 🪜 La capa xAPI medida por CAPA, para comparar contra OneRoster
+
+`compose/code/p235-xapi-layer-axis/result.2026-10-03.tsv` — licencia por payload, vida por
+`ls-remote --symref` + `fetch --depth 1` de la rama por defecto **por su nombre** (la invocación
+portable del pase 38):
+
+| Pieza | CAPA | Licencia | `HEAD` | Antigüedad | Estado |
+|---|---|---|---|---|---|
+| [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) | servidor | **Apache-2.0** ✅ | **2026-10-01** | **2 d** | 🟢 activo |
+| [`openfun/ralph`](https://github.com/openfun/ralph) | servidor | **MIT** ✅ | **2026-09-07** | 26 d | 🟢 activo |
+| [`ashleycribb/learnmcp-xapi`](https://github.com/ashleycribb/learnmcp-xapi) | puente | **MIT** ✅ | **2026-09-17** | 16 d | 🟡 activo, **y es el único árbol auto-consistente** (**P238**) |
+| [`php-xapi/model`](https://github.com/php-xapi/model) | cliente | **MIT** ✅ | 2025-01-20 | **1,7 a** | ⚠️ congelado — **corrige «último tag 2021-03-24»** |
+| [`DavidLMS/learnmcp-xapi`](https://github.com/DavidLMS/learnmcp-xapi) | puente | **MIT** ✅ | 2025-08-29 | **1,1 a** | 🔴 congelado · **su suite contradice su fuente** (**P238**) |
+| [`RusticiSoftware/TinCanPHP`](https://github.com/RusticiSoftware/TinCanPHP) | cliente | **Apache-2.0** ✅ | 2022-11-02 | **3,9 a** | 🔴 congelado |
+| [`LearningLocker/learninglocker`](https://github.com/LearningLocker/learninglocker) | servidor | 🔴 **GPL-3.0** ✅ | 2021-11-16 | **4,9 a** | ⛔ muerto · **NO es AGPL** (ver abajo) |
+| [`RusticiSoftware/TinCanPython`](https://github.com/RusticiSoftware/TinCanPython) | cliente | **Apache-2.0** ✅ | 2020-09-02 | **6,1 a** | 🔴 congelado |
+| [`Transcordia/jupiter`](https://github.com/Transcordia/jupiter) | servidor | **MIT** ✅ | 2015-04-19 | **11,5 a** | ⛔ muerto · **xAPI 0.9.5, sin Caliper** |
+
+🟢 **8 de 9 permisivas**, y **el único copyleft es el que está muerto.** 🔴 **El eje se da vuelta
+respecto de OneRoster: acá el SERVIDOR está abierto y vivo, y el cuello está en el CLIENTE** (ver
+**P235**).
+
+### 🔴 La corrección de instrumento de este pase, medida con control negativo
+
+| Pieza | `grep` del cuerpo | bloque de título | líneas `affero` | Veredicto |
+|---|---|---|---|---|
+| **`moodle/moodle`** | 🔴 AGPL-3.0 | 🟢 **GPL-3.0** | **3** | **FALSO POSITIVO** |
+| `LearningLocker/learninglocker` | 🔴 AGPL-3.0 | 🟢 **GPL-3.0** | **3** | **FALSO POSITIVO** |
+| `oat-sa/qti-sdk` · `oat-sa/extension-tao-testqti` | GPL | GPL-2.0 | **0** | ✅ OK |
+| `csmediapro/moodle-mcp-server` · `instructure/canvas-lms` | AGPL-3.0 | AGPL-3.0 | **15** | ✅ OK |
+
+**GPL-3.0 §13 se titula *«Use with the GNU Affero General Public License»***, así que un `grep` del
+cuerpo marca **Moodle** como AGPL-3.0. ✅ **Los cinco veredictos AGPL de esta base son correctos**;
+🟢 **y GPL-2.0 da 0 ocurrencias, así que la capa QTI nunca estuvo en riesgo.** Ver **P236**/**P237** y
+`compose/code/lib/`.
+
+---
+
 ## 2026-10-03 — pase 76: el barrido del pase 75 dejó el *topic* a medias — las piezas que faltaban son las de la capa CLIENTE, y una de ellas es el único permisivo con el spec VIGENTE
 
 ### 🔴 Por qué el barrido del pase 75 no las trajo, y es un defecto de criterio y no de canal
@@ -3439,7 +3510,7 @@ portable, y durante un rato pareció que 49 repos habían desaparecido.
 | `Ed-Fi-Alliance-OSS/edfi-oneroster` | **Apache-2.0** ✅ | **2026-10-01** | 0 d | **86** (**v1.0.2**) | OneRoster **servidor** | 🟢 activo · **ALTA** |
 | `csmediapro/moodle-mcp-server` | 🔴 **AGPL-3.0** | **2026-10-01** | 0 d | 7 (v0.1.7) | Moodle MCP (lectura) | ⛔ **no proponer** (licencia) |
 | `NiccoloSalvini/mcp-moodle-teacher` | **MIT** ✅ | **2026-09-25** | 6 d | 4 (**v0.4.0**) | Moodle MCP **escritura** | 🟢 activo · **ALTA** |
-| `CSR2017/edfi-oneroster` | **Apache-2.0** ✅ | **2026-09-22** | 9 d | 8 | OneRoster servidor | 🟢 activo (relación upstream sin resolver → `gap 79`) |
+| `CSR2017/edfi-oneroster` | **Apache-2.0** ✅ | **2026-09-22** | 9 d | 8 | OneRoster servidor | 🟢 activo · ✅ **`gap 79` CERRADO más abajo en este archivo: la Alliance es upstream (3 adelante, 0 atrás); `CSR2017` no agrega nada** — *texto corregido en el pase 77* |
 | `Dymayo/moodler-mcp` | **MIT** ✅ | **2026-09-19** | 13 d | 0 (release 1.1.2 por commit) | Moodle MCP | 🟢 activo · **ALTA** |
 | `ashleycribb/learnmcp-xapi` | **MIT** ✅ (heredada: *«(c) 2025 David Romero»*) | **2026-09-17** | 15 d | 0 | fork de la puerta xAPI | ⚠️ **NO es sucesión** — 2 commits adelante, ambos de Cloud Run |
 | `TCI/OneRoster` | **MIT** ✅ | **2026-09-11** | 20 d | 35 (**v2.3.27**) | OneRoster **cliente** (Ruby) | 🟢 activo · **ALTA** |
@@ -3447,15 +3518,29 @@ portable, y durante un rato pareció que 49 repos habían desaparecido.
 | `toshieji/moodle-grading-mcp` | **MIT** ✅ (WACA + T. Ejiri) | **2026-09-07** | 24 d | 0 | Moodle MCP **corrección** | 🟢 activo · **ALTA destacada** |
 | `loyaniu/moodle-mcp` | 🚫 **sin archivo de licencia** (8 rutas probadas, 8 × 404) | 2026-06-28 | 95 d | 0 | Moodle MCP | ⛔ **no proponer** (licencia) |
 | `DavidLMS/learnmcp-xapi` | **MIT** ✅ | 2025-08-29 | **13,1 meses** | 2 (v2.0.0) | puerta xAPI (upstream) | 🔴 **CONGELADO** (reconfirmado) |
-| `jdolny/OneRoster.NET` | — (no verificada: repo muerto) | 2023-10-13 | **3,0 años** | 0 | OneRoster cliente (.NET) | ⚫ muerto |
-| `gotranseo/oneroster` | — (no verificada: repo muerto) | 2023-05-01 | **3,4 años** | 22 | OneRoster cliente (Swift) | ⚫ muerto |
-| `bgwdotdev/go-oneroster` | — (no verificada: repo muerto) | 2019-11-04 | **6,9 años** | 5 | OneRoster servidor (Go) | ⚫ muerto |
-| `EASOL/edfi-to-oneroster` | — (no verificada: repo muerto) | 2016-10-19 | **10,0 años** | 0 | Ed-Fi → OneRoster | ⚫ muerto |
-| `Transcordia/jupiter` | — (no verificada: repo muerto) | 2015-04-19 | **11,5 años** | 0 | LRS xAPI + Caliper | ⚫ muerto |
+| `jdolny/OneRoster.NET` | **MIT** ✅ (titular `theopenem`) — ⚠️ *corregido en el pase 76; esta celda decía «— (no verificada: repo muerto)»* | 2023-10-13 | **3,0 años** | 0 | OneRoster cliente (.NET) | ⚫ muerto |
+| `gotranseo/oneroster` | **Apache-2.0** ✅ (sin titular: apéndice sin llenar) — ⚠️ *corregido en el pase 77* | 2023-05-01 | **3,4 años** | 22 | OneRoster cliente (Swift) | ⚫ muerto |
+| `bgwdotdev/go-oneroster` | **MIT** ✅ (titular `fffnite`) — ⚠️ *corregido en el pase 76* | 2019-11-04 | **6,9 años** | 5 | OneRoster servidor (Go) | ⚫ muerto |
+| `EASOL/edfi-to-oneroster` | **Apache-2.0** ✅ (sin línea de copyright) — 🆕 *medido en el pase 77* | 2016-10-19 | **10,0 años** | 0 | Ed-Fi → OneRoster | ⚫ muerto |
+| `Transcordia/jupiter` | **MIT** ✅ (titular `Transcordia`, 2014) — 🆕 *medido en el pase 77* | 2015-04-19 | **11,5 años** | 0 | ⚠️ **ingestor de statements xAPI 0.9.5** — *la celda decía «LRS xAPI + Caliper»; medido en el árbol: 0 ocurrencias de Caliper, sin ruta de consulta, 2 comandos (pase 77, **P234**)* | ⚫ muerto |
 
-**Nota de honestidad sobre la columna de licencia:** en los cinco repos muertos **no se verificó el archivo**. No hacía
-falta y habría sido gasto: una licencia permisiva sobre un repo sin commits en una década no cambia la decisión. Las
-licencias que esta tabla afirma con ✅ son todas lectura de primera mano del archivo, hoy.
+**Nota de honestidad sobre la columna de licencia** — 🔴 **REFUTADA EN LAS CINCO FILAS, pases 76 y 77.** Decía:
+
+> ⛔ *«en los cinco repos muertos **no se verificó el archivo**. No hacía falta y habría sido gasto: una licencia
+> permisiva sobre un repo sin commits en una década no cambia la decisión.»*
+
+🔴 **Las cinco son permisivas** (3 MIT + 2 Apache-2.0), **cero copyleft y cero sin archivo** — medido en
+`compose/code/p234-dead-license-closeout/`, **cinco peticiones HTTP**. Y el razonamiento está dado vuelta: **un
+permisivo muerto se BIFURCA, un AGPL muerto no**, así que en código sin mantenimiento la licencia pesa **más**, no
+menos (**P231**). 🔵 **La columna de muertos de esta KB no es un cementerio: es su reserva de código bifurcable.** Una
+de esas cinco filas —`jdolny/OneRoster.NET`, **MIT con `v1p2`**— era **el único permisivo con el spec vigente de toda
+la capa de *rostering***, y estuvo archivada como no verificada mientras el pase 75 declaraba que no existía.
+
+⚠️ **Y la omisión no se limitaba a la licencia: `Transcordia/jupiter` tenía además el ROL mal archivado** («LRS xAPI +
+Caliper» contra un árbol sin Caliper y sin ruta de consulta). **«Muerto» tampoco exime de medir el rol** — y un rol mal
+archivado INCLUYE una pieza inservible, que es el signo de error peligroso. Ver **P234**.
+
+Las licencias que esta tabla afirma con ✅ son todas lectura de primera mano del archivo.
 
 ### 🟢 Las cinco altas de base de este pase, en una línea cada una
 

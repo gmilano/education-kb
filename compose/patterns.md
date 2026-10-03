@@ -8,6 +8,7 @@ updated: 2026-10-03
 
 > Recetas concretas: repos nombrados, licencias verificadas, wiring explícito y estimación.
 > Todos los repos citados fueron verificados vía WebFetch el 2026-09-30; los del pase 11, el 2026-10-01 (ver `agents/top.md`).
+> **Pase 77 del 2026-10-03:** 🔵 **Los patrones nuevos son **P234**–**P238**, y los cinco salen de mediciones de primera mano de este pase.** **P234**: la tabla de «repo muerto ⇒ licencia no verificada» cierra con **5 de 5 permisivas** y su nota de honestidad queda refutada entera — **y la fila que se midió traía además el ROL mal archivado**, que es el error de signo peligroso porque INCLUYE una pieza inservible en vez de excluir una usable. **P235**: el eje CAPA se reproduce en otro estándar y **su SIGNO se INVIERTE** — en xAPI exponer está abierto y consumir está congelado, al revés que en OneRoster, **así que un eje se traslada y un resultado medido sobre ese eje no**. **P236**: cómo se mide una familia de licencia sin reabrir P171, con el control negativo que lo prueba sobre Moodle. **P237**: el patrón que esta KB se aplica a sí misma por segunda vez — **una corrección almacenada como conocimiento se re-pierde en cada herramienta nueva; sólo sobrevive como código compartido con un test** (`compose/code/lib/`). **P238**: la receta para juzgar un fork, que es comparar ARCHIVOS y no asuntos de commit — con fuente idéntico byte a byte, **lo que se bifurcó es el suite de pruebas**.
 > **Pase 68 del 2026-10-03:** 🔵 **Los patrones nuevos son **P190**–**P195**, y los seis salen de mediciones de primera mano de este pase, con su texto escrito en el mismo pase que los acuña (**P157**).** **P190**: el titular es PEOR en la capa que el cliente INSTALA (`HOLDER-UNRELATED` 19,4 % en árbol → 35,3 % en paquete, n=17) y ahí vive una clase que el árbol no tiene (`NO-HOLDER`). **P191**: el régimen de licencia de un estándar se parte por **PUBLICADOR × TIPO DE ARTEFACTO** —1EdTech×documento niega derivados (2/2), 1EdTech×software es Apache-2.0 (4/4), ADL y Ed-Fi×documento son Apache-2.0 (2/2)— sin una excepción en 8 archivos. **P192**: la pregunta de IDENTIDAD va antes que la de canal, y está medida: 4 de 5 nombres de doble registro son dos artefactos. **P193**: el `sha256` del `LICENSE` UNE un paquete a su árbol cuando el registro no declara el enlace, y es cota inferior. **P194**: un umbral sobre un conteo no distingue una propiedad de la CAPA de una del PUBLICADOR si la muestra está desbalanceada. **P195**: los cuatro instrumentos de licencia de esta KB son GitHub-shaped, así que un estándar que migra se cae de todos los denominadores en silencio. 🟢 **La receta nueva es **P196**: elegir el estándar por su LICENCIA cuando el entregable incluye un perfil derivado.** 🔴 **Y **P197** es el patrón que esta KB se aplica a sí misma: una corrección sobrevive sólo si el instrumento que re-mide la conoce — el pase 66 regresó a `MIT` una celda que el pase 52 había corregido a 0BSD leyendo el payload, y la regresión es invisible en la celda.**
 > **Pase 67 del 2026-10-03:** 🔵 **Los patrones nuevos son **P186**–**P188**, y los tres salen de mediciones de primera mano de este pase.** **P186**: un archivo de licencia puede acotarse A SÍ MISMO —`INGInious` declara cubrir *«la mayoría de los archivos»* y delega las excepciones a los encabezados por archivo, y las cuatro capas que esta KB mide lo aprueban sin ver el alcance—. **P187**: la licencia de ESPECIFICACIÓN (`1EdTech/openbadges-specification`, IMS Global, 12.324 B en `ob_v3p0/license.md`) **cede el documento y NIEGA el derivado**, así que es una compuerta más dura que el ShareAlike de **P178** y afecta a las 15 filas de estándares de esta base. **P188**: el NOMBRE de un paquete no es una IDENTIDAD —`educhain` en npm no tiene repositorio ni descripción y no es el proyecto—, así que la pregunta de identidad va ANTES que la de canal. 🟢 **Y la acción 4 del pase 66 se ejecuta parcialmente: `P126`, `P170`, `P171` y `P172` ya tienen sección propia, consolidada desde donde su texto ya vivía (rama buena de la hipótesis); quedan 11 debidos.** ⚠️ **Ninguna cifra de suite se re-midió: el entorno negó ejecutar el código de este repositorio** (`[Code from External]`).
 > **Pase 65 del 2026-10-03:** 🔵 **Los patrones nuevos son **P179**–**P181**, y los tres salen de lo que este pase midió, no de lo que leyó.** **P179** separa el IDENTIFICADOR de licencia de la CESIÓN —un `"license": "MIT"` de manifiesto no trae titular, ni año, ni una línea de texto, y decide qué se le puede entregar a legales—; **P180** es la receta de currículo japonés sobre CC BY 4.0, la primera de esta KB que no arrastra ShareAlike; **P181** es la regla de canal que este pase usó tres veces: **una página bloqueada se lee por su fuente** cuando es GitHub Pages. 🔴 **Y una receta vieja se CORRIGE a favor: **P178** (la compuerta de ShareAlike) deja de ser la única salida para EMEA, porque ahora hay una fuente de currículo nacional CEDIDA SIN ShareAlike —Japón— y la elección de región cambia la obligación del entregable.**
@@ -109,6 +110,190 @@ updated: 2026-10-03
 > **Pase 11:** +2 patrones — **P25** (riesgo de abandono conforme al Anexo III, la capa con presupuesto ya asignado y sin oferta open source) y **P26** (agente docente sobre la ontología curricular nacional ya publicada).
 > **Pase 27:** **+4 patrones y una corrección.** 🔴 **P51 queda con premisa falsa** —el conector MCP de Moodle **sí existe y es MIT**— y lo reemplazan **P54** (corrección y devolución sobre Moodle con **compuerta humana**, el último tramo del gap 6, con piezas que ya escriben), **P55** (el conector de **Open edX**, que es el único que de verdad no existe), **P56** (**SCORM** como formato de salida de la capa generativa: cero integración, offline) y **P57** (evidencia por MCP cotizada sobre lo que CaSS **realmente** expone — 6 de 61 operaciones, con insignias y autoría de marcos **fuera**).
 
+## 🧾 P234 — la columna de MUERTOS es la reserva bifurcable, y se mide igual que las demás (pase 77 del 2026-10-03)
+
+**La receta, en el orden en que paga.** Para una capa donde «lo vivo» ya se agotó:
+
+1. **Listar las filas muertas de la propia KB con su licencia en `—`.** Acá eran **cinco**, todas en
+   `repos/trending.md`, todas con una **nota que explicaba por qué no se midieron**.
+2. **Medir la licencia por payload igual que si estuvieran vivas** (`ref HEAD` + bloque de título, vía
+   `compose/code/lib/license_family.sh`). Resultado: 🔴 **5 de 5 permisivas** — 3 MIT, 2 Apache-2.0.
+3. **Medir también el ROL abriendo el árbol**, porque una fila muerta nunca se vuelve a abrir.
+4. **No preguntarle el titular al archivo salvo en MIT/BSD/ISC** (**P184**).
+
+**Por qué esto es una receta y no una anécdota: el costo es cinco peticiones HTTP** y lo que devuelve
+es la clase de pieza que se puede **bifurcar sin pedir permiso** — que es justo lo que hace falta
+cuando la capa viva es copyleft o no existe.
+
+### 🔴 El error de ROL, que es el aporte nuevo y el más caro
+
+| Lo que la fila prometía | Lo medido en el árbol de `Transcordia/jupiter` |
+|---|---|
+| **Caliper** | 🔴 **0 ocurrencias** en código (31 archivos, 100.040 B) |
+| **LRS xAPI** | ⚠️ 8 clases de modelo + **2 comandos**, **sin ruta de consulta** → ingestor, no LRS |
+| *(sin spec en la fila)* | 🔴 **`xapi-0.9.5.schema`** — borrador **PRE-1.0**, 2 años anterior a su último commit |
+
+🔵 **La columna «Rol» heredó la AMBICIÓN del README** (*«we submit Jupiter for their
+consideration»*). 🔴 **Y el signo importa: una licencia mal archivada EXCLUYE una pieza usable
+—dentro de la KB—; un rol mal archivado INCLUYE una inservible, y eso sale en una propuesta.**
+
+**Lo que esta receta NO promete:** no dice que una pieza muerta sea entregable. Dice que su
+**licencia** y su **rol** son datos de decisión —bifurcable o no, candidata o no— y que cuestan una
+petición cada uno. **El entregable sigue siendo un fork mantenido por quien lo propone.**
+
+---
+## 🪜 P235 — un EJE se traslada entre estándares; un RESULTADO medido sobre ese eje, no
+
+**El error que este patrón evita** es el que el pase 77 estuvo a punto de cometer: tomar la
+conclusión de **P230** sobre OneRoster —*«CONSUMIR se puede, EXPONER no»*— y leerla como una
+propiedad del sector educativo.
+
+**La receta: antes de reusar una conclusión de capa, re-medir el eje en el estándar que se va a
+cotizar.** Son 9 peticiones y un `ls-remote` por pieza.
+
+| CAPA | OneRoster (**P230**) | xAPI (**P235**) | ¿Se traslada? |
+|---|---|---|---|
+| servidor | 🔴 ningún permisivo vigente | 🟢 `lrsql` **Apache-2.0** (2 d) · `ralph` **MIT** (26 d) | 🔴 **NO — se invierte** |
+| cliente | 🟢 cuatro permisivos | ⚠️ `php-xapi/model` MIT (1,7 a) · `TinCanPHP` Apache-2.0 (3,9 a) · `TinCanPython` Apache-2.0 (6,1 a) | 🔴 **NO — se invierte** |
+| puente | 🔴 los dos sin licencia | 🟡 MIT, *upstream* congelado 1,1 a | ⚠️ parcial |
+
+### 🟢 Las dos frases comerciales, una por estándar, y son opuestas
+
+- **OneRoster:** *«podemos CONSUMIR el roster con licencia permisiva; para EXPONERLO hay que construir
+  o tomar AGPL-3.0 y asumir el despliegue del distrito.»*
+- **xAPI:** *«podemos SER el LRS hoy, con Apache-2.0 o MIT y mantenimiento de esta semana; CONSUMIRLO
+  obliga a bifurcar un cliente congelado hace 4 a 6 años, o a escribir el cliente.»*
+
+🔵 **Y el dato de encuadre de la capa xAPI: 8 de 9 piezas son permisivas y la única copyleft
+(`LearningLocker`, GPL-3.0) está muerta hace 4,9 años.** Para un cliente que ya corre Learning
+Locker, la conversación no es de licencia: es de **migración a `lrsql` o `ralph`**.
+
+**Lo que NO promete:** `spec_en_codigo` rindió en **1 de 9** piezas. **No se afirma conformidad de
+versión para las otras ocho** — es ausencia de instrumento, no ausencia de conformidad.
+
+---
+## 🔐 P236 — cómo medir una familia de licencia sin reabrir P171, con su control negativo
+
+**Regla, en tres líneas:**
+
+1. **Clasificar por BLOQUE DE TÍTULO** (primeras ~40 líneas), nunca por el cuerpo. **GPL-3.0 §13 se
+   titula *«Use with the GNU Affero General Public License»***.
+2. **Si el payload es corto (≤ 400 B), es una DECLARACIÓN y no un texto** → token match, **sólo bajo
+   ese guard de tamaño** (**tendencia 609**).
+3. **Confirmar con un segundo canal** (manifiesto) cuando exista, y registrar concordancia.
+
+### El control negativo, que es obligatorio y es lo que prueba la regla
+
+| Pieza | `grep` del cuerpo | bloque de título | líneas `affero` |
+|---|---|---|---|
+| 🔴 **`moodle/moodle`** | **AGPL-3.0** | 🟢 **GPL-3.0** | **3** |
+| 🔴 `LearningLocker/learninglocker` | **AGPL-3.0** | 🟢 **GPL-3.0** | **3** |
+| `oat-sa/qti-sdk` | GPL | **GPL-2.0** | **0** |
+| `csmediapro/moodle-mcp-server` | AGPL-3.0 | **AGPL-3.0** | **15** |
+
+🔴 **Un `grep` del cuerpo marca a Moodle como AGPL-3.0**, y **AGPL §13 contra GPL-3.0 decide si se
+puede montar un producto ALOJADO encima.** 🟢 **GPL-2.0 da 0, así que el defecto es específico de
+GPL-3.0 y la capa QTI nunca estuvo en riesgo.**
+
+🔴 **Y la trampa de validación, que es la parte transferible: los CINCO veredictos AGPL de esta base
+son correctos y el clasificador que los validó estaba roto.** AGPL → AGPL acierta por casualidad.
+**Validar contra la clase con la que se puede CONFUNDIR, no contra la que interesa.**
+
+---
+## 🔁 P237 — una corrección sobrevive como CÓDIGO COMPARTIDO con un test, no como conocimiento
+
+**El caso, y es contra esta KB.** El defecto de **P171** estaba registrado desde el pase 52,
+documentado en el encabezado de **cinco** instrumentos (`p114`, `p170`, `p206`, `p211`, `p230`) y
+**con test de regresión** en `p206/test_family.py`. 🔴 **El pase 77 escribió dos instrumentos nuevos y
+lo reintrodujo**, porque **retipeó el clasificador** en vez de heredarlo.
+
+🔵 **Cinco encabezados y un test en el instrumento equivocado no impidieron nada: el sexto
+instrumento no leyó ninguno de los cinco.** La corrección estaba almacenada como **conocimiento**, y
+el conocimiento no se hereda: se recuerda, o no.
+
+### La receta, aplicable a cualquier KB de este árbol
+
+1. **Un control por defecto, en un archivo.** `compose/code/lib/license_family.sh`.
+2. **Un test al lado, cuyo caso obligatorio es el de la confusión** — no el caso feliz.
+   `test_license_family.sh`, **18/18**.
+3. **Los instrumentos lo IMPORTAN** (`. ../lib/license_family.sh`). Está escrito en el README del
+   directorio: **no se inlinea un clasificador de licencias.**
+4. **La regla de revisión:** un barrido nuevo que define su propia clasificación de algo ya
+   clasificado **es un defecto**, aunque su salida de ese día sea correcta.
+
+**Es la tendencia 197 por segunda vez, con el agravante de que acá la corrección existía, estaba
+testeada, y el camino para heredarla no existía.**
+
+### ⚠️ La versión chica del mismo patrón, encontrada en el mismo pase: un test que depende del `cwd`
+
+🔴 **`p238/test_check_contract.py` daba 8/8 desde su directorio y 4/8 FAIL desde la raíz del repo**,
+porque invocaba su instrumento por ruta relativa al llamador. 🔵 **Un control que sólo funciona bajo
+UNA invocación no es un control — y el modo de falla es el peor: no explota, MIENTE**, porque las
+aserciones leen el `stdout` vacío como defectos reales del código medido.
+
+**Las dos reglas que esto deja, y aplican a todo test de este árbol:**
+
+1. **Resolver rutas contra `__file__` (o `dirname "$0"`), nunca contra el `cwd`.** Verificado desde
+   tres directorios distintos antes de publicar.
+2. **Separar fallo del ARNÉS de fallo del CÓDIGO MEDIDO:** `returncode != 0` o salida vacía deben
+   salir como **`ERROR`**, no como aserción fallida. **Un test que los confunde es inservible
+   exactamente cuando más se lo necesita.**
+
+---
+## 🧪 P238 — juzgar un fork comparando ARCHIVOS, nunca asuntos de commit
+
+**El error que evita** lo cometió el pase 38 de esta base: clasificó `ashleycribb/learnmcp-xapi` como
+*«NO es sucesión — 2 commits adelante, ambos de Cloud Run»* **leyendo los asuntos de los commits**, y
+sobre eso esta KB mantuvo su recomendación de la puerta xAPI durante 39 pases.
+
+### La receta
+
+```sh
+git clone --depth 50 https://github.com/<upstream>.git  /tmp/up
+git clone --depth 50 https://github.com/<fork>.git      /tmp/fork
+diff -rq --exclude=.git /tmp/up /tmp/fork               # qué difiere, por archivo
+# y para cada afirmación divergente de los tests, preguntar al fuente COMPARTIDO:
+python3 compose/code/p238-fork-testsuite-contradiction/check_contract.py /tmp/up /tmp/fork
+```
+
+### El resultado, y la clase que descubre
+
+- 🟢 **14 de 14 archivos de FUENTE idénticos byte a byte.**
+- 🆕 Sólo el fork agrega `Dockerfile`, `.dockerignore`, `docs/GCP_DEPLOYMENT.md`.
+- 🔴 **CINCO archivos de TEST distintos. El despliegue no toca los tests.**
+
+Con fuentes idénticas, **como máximo un suite describe el código que está ahí**:
+🔴 **`upstream` 0/3 · fork 3/3.**
+
+| Afirmación | `upstream` | fork | El fuente compartido |
+|---|---|---|---|
+| cache del token OIDC | `self._oidc_token` | `self._token_cache` | 🔴 **`_token_cache`** |
+| ruta de statements | `/xapi/statements/` | `/xAPI/statements/` | 🔴 **`/xAPI/`** (*«note the capital X»*) |
+| validación de config | `LRS_ENDPOINT is required` | `LRS_KEY and LRS_SECRET are required` | 🔴 **la segunda** |
+
+🔵 **La clase nueva: `FORK-OF-THE-TEST-CONTRACT`.** Un fork cuyo **fuente** es idéntico y cuyos
+**tests** no lo son **no es empaquetado**: es un árbol que arregló —o rompió— el contrato de prueba.
+**Y el commit que lo hizo puede llamarse cualquier otra cosa:** acá se llama *«Cloud Run
+deployment»*.
+
+### ⚠️ Lo que esta receta NO promete, y hay que decirlo
+
+**No dice que el suite del upstream FALLE.** Dice que **afirma símbolos ausentes del fuente**.
+Instalar las dependencias de terceros (`pytest`, `respx`, `httpx`) **no está disponible en este
+entorno**, así que la prueba es **estática**. 🔵 **La versión fuerte —correr los dos suites— queda
+pre-registrada, y es una hora de trabajo para quien tenga el entorno.** Tampoco dice que el fork sea
+el *upstream* a proponer: dice que **la recomendación de esta KB apuntaba al árbol no
+auto-consistente, y que el criterio con el que se eligió era el canal equivocado.**
+
+### Y el defecto que la propia receta pagó
+
+🔴 **La primera versión de `check_contract.py` probó la cadena pelada `_oidc_token` y la reportó
+PRESENTE**, porque el fuente define el **método** `_get_oidc_token`, que la **contiene**.
+🔵 **Una sonda por subcadena sobre un nombre de atributo pega en el *getter* que lo envuelve y
+convierte una contradicción en un acuerdo** — habría publicado `upstream 1/3`. **Las sondas de
+atributo se ancla­n en la forma del acceso (`self\.`), y el test de regresión pinea ese caso** (**8/8**).
+
+---
 ## 🪜 P230 — el eje CAPA: en un estándar vertical, CONSUMIRLO y EXPONERLO son dos proyectos con dos licencias (pase 76 del 2026-10-03)
 
 **Medido:** `compose/code/p230-rostering-layer-axis/measure.sh`, corrida `result.2026-10-03.txt`,

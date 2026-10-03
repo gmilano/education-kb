@@ -1,0 +1,6 @@
+moodle/moodle	COPYING.txt	body=AGPL-3.0	title=GPL-3.0	lineas_affero=3	FALSO-POSITIVO-AGPL
+LearningLocker/learninglocker	LICENSE	body=AGPL-3.0	title=GPL-3.0	lineas_affero=3	FALSO-POSITIVO-AGPL
+oat-sa/qti-sdk	LICENSE	body=GPL	title=GPL-2.0	lineas_affero=0	OK
+oat-sa/extension-tao-testqti	LICENSE	body=GPL	title=GPL-2.0	lineas_affero=0	OK
+csmediapro/moodle-mcp-server	LICENSE	body=AGPL-3.0	title=AGPL-3.0	lineas_affero=15	OK
+instructure/canvas-lms	LICENSE	body=AGPL-3.0	title=AGPL-3.0	lineas_affero=15	OK

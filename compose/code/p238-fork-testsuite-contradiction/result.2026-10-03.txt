@@ -1,0 +1,9 @@
+probe                              fuente identica  upstream afirma                    fork afirma                       
+atributo de cache de token OIDC    SI               AUSENTE  'self\\._oidc_token\\s*=' PRESENTE 'self\\._token_cache\\s*='
+casing de la ruta de statements    SI               AUSENTE  '/xapi/statements/'       PRESENTE '/xAPI/statements/'      
+contrato de validacion de config   SI               AUSENTE  'LRS_ENDPOINT is required' PRESENTE 'LRS_KEY and LRS_SECRET are required'
+
+afirmaciones que el codigo COMPARTIDO sostiene:  upstream 0/3   fork 3/3
+veredicto: el suite del FORK describe el codigo que esta ahi; el del UPSTREAM no.
+           La bifurcacion no es de despliegue: es del contrato de prueba, y el
+           mensaje de commit del fork ('Cloud Run deployment') no lo menciona.
