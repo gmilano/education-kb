@@ -7,6 +7,7 @@ updated: 2026-10-03
 # 📡 Tendencias — education
 
 > Ventana de investigación: septiembre 2026. Verificado 2026-09-30; el pase 11, el 2026-10-01.
+> **Pase 65 del 2026-10-03:** 🟢 **Las tres acciones del pase 64 se ejecutaron y las tres rinden; dos REFUTAN algo que esta base tenía publicado, y una de las refutaciones es sobre su propia cifra.** 🔴 **Acción 1: «32 sin licencia» era **22** — abiertas las 29 filas no-`FWU-DE` por el PAYLOAD, **7 declaran cesión adentro**, y con las 3 de `FWU-DE` del pase 64 son **10 de 32** las que no eran ausencias; la relectura de las 23 del pase 51 que la acción pedía no costó un barrido aparte porque están CONTENIDAS en estas 29 (5 de 23 declaran → inflada un 22 %).** 🔵 **Y la distinción nueva es la que cambia una decisión de entrega** (**P179**): un `"license": "MIT"` de manifiesto es un **IDENTIFICADOR** —cero bytes de otorgamiento, **P168** llevado al límite— mientras el encabezado de fuente de Moodle trae otorgamiento, titular y año: **eso sí es cesión.** 🔴 **Medido en tres canales: el identificador viaja (repo + registro npm), el TEXTO no viaja a ninguna parte, y DOS manifiestos prometen el `"LICENSE"` que no existe ni en el repo ni en el tarball.** 🟢 **Acción 3: el hueco de JAPÓN cierra tras cuatro pases declarado, y cierra REFUTANDO la hipótesis de la acción —`jp-cos` publica el currículo nacional en RDF/Turtle bajo **CC BY 4.0**, con SHACL y volcados versionados, así que **P174** NO gana una tercera región y Japón pasa a ser la mejor pieza de currículo de la KB.** 🟢 **Acción 2 ejecutada: el instrumento de licencia vive ahora EN el instrumento —`p114` delega en la ref `HEAD`— y los probes viejos quedan como controles negativos fechados.** 🔵 **La regla de canal que el pase deja (**P181**): una página bloqueada se lee por su FUENTE cuando es GitHub Pages, y fue así como la cesión japonesa quedó medida en vez de corroborada.** Ver las tendencias **479**–**492**.
 > **Pase 64 del 2026-10-03:** 🟢 **Las tres acciones del pase 63 se ejecutaron y las tres rinden, una de ellas REFUTANDO el titular del pase que la escribió.** 🟢 **Acción 1 (barrido masivo de licencia, 200 filas): cae en su rama BENIGNA —160 licenciado · 32 sin licencia · 6 inalcanzable, con 82,5 % permisivo contra 81,3 % del pase 51— y **0 de 160 por debajo de 400 bytes**, así que el bloque de archivos-afirmación que la hipótesis temía NO existe en esta capa.** 🔴 **Acción 3: la licencia del dato estaba DENTRO del dato — las tres ontologías de `FWU-DE` declaran CC BY-SA 4.0 como anotación `dct:license` en el `.owl`, y el pase 63 había publicado «3 de 3 sin ninguna licencia» porque grepeó el README** (**P172**). 🔴 **Y la dependencia de la receta P169 es una lápida de 136 bytes que apunta al revés** (**P173**). ⚠️ **Acción 2: canal AGOTADO — seis dominios alemanes bloqueados por dos canales independientes; la afirmación sobre FWU se DEGRADA de «medida» a «corroborada por canal secundario», con cifras.** Ver las tendencias **466**–**478**.
 > **Pase 61 del 2026-10-03:** 🟢 **el pase ejecutó una consigna vieja que nadie había corrido —buscar el currículo por PAÍS y en el idioma del país, no «agentes educativos»— y rindió 11 piezas nuevas en las cuatro regiones tras diez pases sin altas, mientras las cuatro búsquedas globales obligatorias volvían a devolver el eje agotado.** 🔴 **El hallazgo que manda es un defecto de INSTRUMENTO: la capa de currículo es dual —código permisivo, dato con atribución— y el archivo del DATO no está en la raíz en dos de tres casos, así que el probe de P114/P115 reporta «MIT» para toda la capa y MIT cubre la mitad sin valor** (**P153**). 🟢 **La hipótesis falsable cae en su primera rama y el falso positivo era propio: `dados/LICENSE.md` existe, no hay contradicción entre repos — la ciega era mi lista de nombres.** 🟢 **Y llega el número: 31,9 % → 0,2 % con el dato en el prompt, 2,3 % vía MCP, en pares y con pre-registro cerrado antes de la batería — la condición de CONTROL le gana a la herramienta por un orden de magnitud** (**P156**). 🔴 **La asimetría regional invierte el gap 4: NA, con el 38 % del mercado, es la PEOR servida —tres renderizaciones JSON del Common Core sin archivo de licencia—** (**P159**). 🔴 **Y la acción 2 del pase 60 CIERRA confirmando los nueve números y REFUTANDO su cifra: son 80 citas, no 114, y las nueve NUNCA estuvieron definidas en los 65 commits de la historia — nacieron colgadas** (**P157**). Ver las tendencias **426**–**437**.
 > **Pase 59 del 2026-10-03:** 🔴 **la acción 2 del pase 58 CIERRA en la rama de la UNICIDAD: ampliado el eje de 6 a 9 puertas de escritura de nota leídas en el CÓDIGO, `peancor` sigue siendo la ÚNICA que AFIRMA la publicación — «afirma la publicación» no es una clase de la capa, es UNA fila, y la regla de excluirla en vez de configurarla se sostiene con el denominador ampliado un 50 %.** 🔴 **Pero el denominador ampliado descubre el SEGUNDO POLO y reencuadra todo: el eje es BIPOLAR y ESCASO —sólo 2 de 9 toman posición en el código, y son los extremos: `peancor` cablea `'released'` y `toshieji` cablea `'readyforreview'` con `released: False`, verificado en `server.py:570` de primera mano y no en el README. Y NINGUNO de los dos consulta la precondición, así que las dos garantías son condicionales en sentidos OPUESTOS: a `peancor` no la salva `markingworkflow=1`, a `toshieji` la DERROTA `markingworkflow=0`. La mejor pieza de la capa y la peor dependen de la MISMA casilla** (**P145**). 🔴 **Hallazgo estructural nuevo: las puertas de Canvas se propagan por FORK —`algorithm0r/canvas-lms-mcp` ← `bruchris` y `abr-Projects/canvas-mcp` ← `vishalsachdev`, padre declarado por GitHub, ambos MIT y ambos escriben nota— así que la unicidad se cuenta sobre CÓDIGO DISTINTO y la pieza desplegada se identifica por el COMMIT, no por el nombre del proyecto** (**P146**). 🟢 **1 alta no-fork: `CharlieCardenasToledo/mcp-canvas-server` (MIT, 0 ★), `posted_grade` crudo y 0 menciones de política de publicación en 60.194 bytes: publica por omisión.** 🔴 **Y el dato de licencia que cambia el ORDEN de los filtros: el MCP de Moodle más estrellado del barrido —`loyaniu/moodle-mcp`, 37 ★— NO TIENE LICENCIA en ninguna rama ni en su `pyproject.toml`; el filtro de licencia va ANTES del de popularidad** (**P147**). 🔴 **La acción 1 se entrega con su FIXTURE REFUTADO: el par que el pase 58 mandó usar de control negativo no existe —el pase 57 cita gaps 249/232/100 y nada de fechas; la pregunta de las fechas es el `gap 56`, del pase 32, cerrado en el 39— y un barrido por número de gap da un falso positivo real (el `gap 51` del pase 48 es PRECEDENTE), así que la unidad de juicio es el ACTO DE HABLA de la cláusula** (**P148**). ⚠️ **Nota de instrumento, segunda reproducción: el entorno negó ejecutar el código clonado incluidas las suites OFFLINE, así que la suite nueva se publica con 17 asertos escritos y 0 corridos.** Tendencias **402**–**412**.
@@ -5570,6 +5571,220 @@ no se re-agenda.**
   son verificables por los canales abiertos de esta corrida, y esta base no copia tracción sin
   leerla.** 🔵 **Las 3 altas del pase salieron de SEGUIR UNA CITA —los clientes muertos de
   Caliper y Badgr hacia sus organismos vivos—, que es el mismo canal que rindió en el pase 63.**
+
+## 🔵 Las tres acciones que el pase 65 deja escritas para el pase 66
+
+1. 🔴 **Barrer el PAYLOAD de las 249 filas de `agents/top.md` SIN URL de GitHub, que llevan 14 pases
+   fuera de todo denominador de licencia.** Son paquetes de registro, especificaciones y plataformas, y
+   el pase 51 ya declaró el canal: **registro + tarball**, que este pase acaba de probar que funciona
+   (3 de 3 paquetes npm consultados, con tarball bajado y grepeado). **La acción es acotada: se empieza
+   por las que tienen nombre de paquete npm/PyPI citado en la fila.** 🔵 **Hipótesis falsable y las dos
+   ramas sirven: si el reparto de clases de **P179** en esa capa se parece al de esta (5 identificador /
+   2 cesión de 7), entonces «identificador sin texto» es la forma NORMAL de declarar licencia en la capa
+   de paquete y hay que cambiar lo que esta KB publica en la columna Licencia para TODA esa capa; si
+   predomina la cesión con texto, el problema es específico de los repos de GitHub sin archivo y la capa
+   de paquete está sana.** ⚠️ **Declarar el denominador exacto antes de empezar: cuántas de las 249
+   traen nombre de paquete y cuántas no son medibles por ningún canal.**
+
+2. 🔴 **Cerrar la reserva que este pase NO pudo cerrar: las 22 filas `PAYLOAD-SILENT` son «silencio en
+   los nombres probados», no «silencio probado»,** porque la lista de rutas de payload es por CONVENCIÓN
+   y `raw` no lista directorios. 🔵 **El canal que lo cerraría está identificado y medido como
+   bloqueado: `codeload.github.com` da **403** por el proxy de esta corrida, así que no se puede bajar
+   el árbol y grepearlo.** **La acción es probar el canal que sí funcionó para el listado en este pase
+   —el HTML de `github.com` vía WebFetch— sobre las 22, leyendo la raíz de cada repo y buscando nombres
+   de payload NO convencionales.** ⚠️ **Es unitario y caro (una llamada por repo, como el linaje del
+   pase 63), así que se planifica como 22 llamadas y no como un barrido masivo: la tendencia 463 ya
+   dejó escrito que licencia y linaje no se planifican como una sola tarea.** 🔵 **Condición de
+   vencimiento verificable: si el pase 67 vuelve a citar «22 ausencias medidas» sin haber abierto los
+   listados, la cifra sigue siendo «silencio en los nombres probados» y hay que escribirla así.**
+
+3. ⚠️ **Medir el GRAFO japonés, que este pase midió por MUESTRA de un solo registro.** Se leyó entero
+   `710/0000000000000.ttl` (1.102 B) y **no se recorrieron los 104 directorios de código**, así que la
+   riqueza del artefacto que esta base acaba de declarar «la mejor pieza de currículo de la KB» está
+   afirmada sobre una muestra de uno. 🔵 **El canal es barato y está probado: `raw` sirve cada `.ttl`, y
+   los volcados agregados (`cs-items-20220830.ttl`, `commentary-20250824.ttl`,
+   `disability-category-20211122.ttl`) dan el grafo entero sin recorrer 104 directorios.** 🔵
+   **Hipótesis falsable: si los volcados cubren todos los niveles escolares y el comentario oficial
+   (学習指導要領解説), la receta **P180** se puede cotizar con alcance cerrado; si cubren sólo parte,
+   la estimación de 6-8 semanas está mal y hay que publicar qué falta.** ⚠️ **Y medir de una vez
+   `all-20250927.ttl`, que dio **404** en la raíz del repo y es el único volcado que el publicador
+   enumera y este pase no pudo alcanzar: si no está en el repo, el grafo completo sólo existe detrás de
+   los dominios bloqueados, y eso es una dependencia que la receta tiene que declarar.**
+
+## Las tendencias 479–492, del pase 65 del 2026-10-03
+
+**479.** 🔴 **La cifra que esta base publicó hace un pase se corrige a la baja, y la corrección es del 31 %.**
+El pase 64 midió **32** filas de `agents/top.md` como `UNLICENSED` preguntando por el **ARCHIVO**
+(14 nombres × ref `HEAD`). Abierto el **PAYLOAD** de las 29 que no son `FWU-DE`, **7 declaran cesión
+adentro**; con las **3** de `FWU-DE` que el pase 64 ya había leído, **10 de 32 no eran ausencias**.
+🔵 **El denominador real de la capa es **22**, y la tendencia que manda en el pase es que la pregunta
+del archivo y la del payload miden cosas distintas: una ausencia medida sobre el ARCHIVO no es una
+ausencia de licencia** (**P172**).
+
+**480.** 🔵 **Y la relectura que la acción pedía salió gratis, porque los denominadores están ANIDADOS.**
+La acción mandaba *«si alguna declara, hay que recorrer las 23 del pase 51 también»*. Medido con
+`comm -23`: **las 23 filas `sin-licencia` del pase 51 están CONTENIDAS en estas 29** — intersección
+completa, cero filas afuera. 🟢 **De esas 23, **5** declaran en payload: aquella cifra estaba inflada un
+**22 %**.** ⚠️ **Y el anidamiento es un dato de método que conviene registrar: el pase 64 amplió el
+denominador en 31 filas y **no perdió ninguna** de las que el 51 había encontrado. Los dos instrumentos
+coinciden en lo que miden; discrepan en lo que la pregunta deja afuera.**
+
+**481.** 🔴 **El patrón del pase separa dos cosas que esta base venía anotando en la misma columna, y la
+diferencia decide qué se le entrega a una oficina legal** (**P179**). Un `"license": "MIT"` de manifiesto
+es un **IDENTIFICADOR**: nombra la licencia y no trae **ni titular, ni año, ni una línea del texto**.
+🔵 **Es **P168** llevado al límite** —aquel midió que un `license.txt` de **19 bytes** es una afirmación
+y no una cesión; esto son **cero bytes de otorgamiento**—. El **encabezado de fuente de Moodle**, en
+cambio, trae la frase completa (*«you can redistribute it and/or modify it under the terms of the GNU
+General Public License as published by the Free Software Foundation, either version 3…»*), **titular con
+nombre y año** (`@copyright 2024 Marcus Green`, `@copyright 2026 Alvaro Gregori`) y versión
+(`@license … GNU GPL v3 or later`): **eso sí es una cesión, y la GPL contempla explícitamente esta
+forma** (*«You should have received a copy…»*). **El reparto de las 7: 5 identificador, 2 cesión.**
+
+**482.** 🔴 **Medido en tres canales: el identificador VIAJA y el texto no viaja a ninguna parte.** Para
+las 3 filas publicadas en npm, el registro declara `MIT` en las tres —**canal independiente del repo**—
+y después se bajó el **tarball publicado**: **ninguno de los tres trae archivo de licencia.**
+🔴 **Y dos de los tres manifiestos PROMETEN el archivo que no existe: `DMontgomery40/mcp-canvas-lms` y
+`Timadey/proctor` listan `"LICENSE"` en su array `files` de npm, y no está ni en el repo (404 en 14
+nombres) ni en el artefacto.** 🔵 **En `Timadey` la promesa es más vieja que el repo: el pase 41 ya
+había medido con `git log --all --name-only` que no hay `LICENSE` en NINGÚN commit de toda la
+historia.** **La intención está documentada tres veces; la cesión, cero.**
+
+**483.** 🟢 **La fila más forkeada de la KB se da vuelta a favor, y era el caso que la acción marcó como
+prioritario.** La acción señaló `DMontgomery40/mcp-canvas-lms` porque **39 forks heredan la ausencia**.
+Medido: **heredan una cesión DECLARADA** (`"license": "MIT"` en `package.json`, corroborado por el
+registro en `canvas-mcp-server` v2.2.3). ⚠️ **Pero lo que heredan es un identificador sin texto, así
+que la herencia MEJORA y no se resuelve: 39 repos con la licencia nombrada y ninguno con el
+otorgamiento.** 🔵 **Dato lateral de versión: el `package.json` del repo dice **2.3.1** y el registro
+publica **2.2.3** — el repo va adelante del paquete, así que «la versión instalada» y «la versión leída»
+no son la misma pieza.**
+
+**484.** 🟢 **JAPÓN cierra tras cuatro pases declarado sin medir, y cierra en la mejor rama posible.**
+El hueco venía declarado desde el **pase 61** —cuatro veces— y cerró con el canal que la acción
+prescribió: **buscar en el idioma del país**, `学習指導要領` (*gakushū shidō yōryō*), no «Japan
+curriculum ontology». 🔵 **Es el tercer pase consecutivo en que ese canal rinde mientras las búsquedas
+genéricas obligatorias devuelven el eje agotado.** **`jp-cos/jp-cos.github.io` —学習指導要領LOD—
+publica el currículo nacional japonés completo en RDF/Turtle: 22 volcados versionados, vocabulario,
+**SHACL** de validación (71 KB), 104 directorios de códigos resolubles, endpoint SPARQL declarado,
+**39 issues abiertos** y último cambio el **2026-09-25**.**
+
+**485.** 🔴 **Y la hipótesis de la acción queda REFUTADA, lo cual es información y no un fracaso.**
+La acción escribió: *«si existe y está publicado por MEXT sin licencia explícita, APAC replica el
+patrón alemán y **P174** gana una tercera región»*. **Medido: hay licencia explícita y es `CC BY 4.0`.**
+**P174 NO gana una tercera región por este caso.** 🔵 **El reparto correcto es otro: el publicador del
+dato NO es MEXT —es 教育データプラス研究会, y MEXT es el 出典— y el software compañero
+(`ICT-CONNECT-21/CSCode2023`, encargo de MEXT) es **MIT con texto completo de 1.081 B**. Las dos capas
+están cedidas, que es exactamente lo contrario del caso alemán del pase 63.**
+
+**486.** 🔵 **Japón pasa a ser la MEJOR pieza de currículo de la KB, y la razón es contractual y no
+técnica: `CC BY 4.0` no tiene ShareAlike.** La compuerta de **P178** no se activa, así que **un
+currículo derivado se entrega con licencia propia** — lo que en Alemania (`CC BY-SA 4.0`) hay que
+negociar o evitar derivando. **El orden de la capa, por lo que se le puede prometer a un cliente:**
+Japón `CC BY 4.0` 🟢 → Corea `MIT` 🟢 → Alemania materias `CC0` 🟢 → Alemania currículo `CC BY-SA 4.0`
+⚠️ → Chile (dato sin artefacto) 🔴 → North America (sin licencia) 🔴.
+🔴 **La región con ~36-38 % del mercado sigue siendo la peor cedida, y ahora tiene con qué compararse.**
+
+**487.** 🟢 **La reserva que el pase 63 publicó sobre Alemania también cae, y cae por el mismo motivo que
+la cifra del 479.** La tendencia 457 escribió: *«lo que sigue sin licencia es, otra vez, la capa que
+agrega el valor específico: la cobertura por Land»*. **Medido: `dini-ag-kim/school-curriculum-pg`
+declara `CC BY-SA 4.0` en las **25** serializaciones, los **16** archivos `lp-land-XX-full.owl`
+incluidos** —uno por Bundesland, que cierra con los 16 Länder del pase 64—. 🔵 **Y la cesión es más
+completa que la de muchos archivos `LICENSE`: anotación sobre el IRI de la ontología, con **titulares
+identificados por ORCID**, fecha (`terms:created "2025-12-08"`) e IRI versionado
+(`owl:versionIRI …/1.0.0-8`).** ⚠️ **La reserva era correcta en su fecha —la licencia no está en la
+raíz— y falsa sobre el hecho: lo que faltaba era abrir el dato.**
+
+**488.** 🔴 **Tres defectos de EXTRACCIÓN, los tres propios de este pase, los tres con control fechado —
+y son de la familia de P171.** La pregunta *«¿declara licencia?»* tiene **al menos tres
+serializaciones** en RDF, y un `grep` que acierta una **publica ausencia** en las otras:
+**D1 predicado-como-URI** (`<…dc/terms/license> <…by-sa/4.0/>` → tomar el primer URI devuelve el
+**predicado** y lo publica como licencia; medido en `reasoned.ttl`); **D2 nodo en blanco**
+(`dct:license [ rdf:value <…by/4.0/> ]` → el URI no es adyacente al predicado; medido en el dataset
+japonés); **D3 profundidad** (una descripción VOID/DCAT declara en la **línea 66**, detrás de 6 KB de
+prefijos y literales largos → una ventana de «encabezado» da ausencia falsa).
+🟢 **Los tres están fijados en `test_extract.py`, un control por defecto, 8 asertos y 8 pasan**, y
+**D1 quedó publicado en una corrida y se conserva fechado como control negativo**:
+`result-semantic-predicatebug.2026-10-03.tsv` difiere del autoritativo en **exactamente 1 de 25 filas**.
+
+**489.** 🔵 **La regla de canal que el pase deja, y que usó tres veces** (**P181**): **una página
+bloqueada se lee por su FUENTE cuando es GitHub Pages.** `jp-cos.github.io` da `EGRESS_BLOCKED` por los
+dos canales, **pero un sitio Pages se sirve DESDE un repositorio y `raw.githubusercontent.com` está
+abierto**: `index.html` (11 KB) y `about.html` (124 KB) se leyeron por `raw`, y ahí estaba la cesión.
+🟢 **Consecuencia de evidencia, que es el punto: la licencia japonesa quedó **MEDIDA** en vez de
+«corroborada por canal secundario», que es el rótulo que el pase 64 tuvo que usar para FWU.**
+⚠️ **Lo que la vuelta NO resuelve: un sitio que no es Pages no tiene fuente pública.**
+
+**490.** 🔴 **El mapa de canales bloqueados de esta corrida, medido y declarado en vez de supuesto.**
+`www.mext.go.jp`, `jp-cos.github.io`, `w3id.org`, `zenodo.org` y `dydra.com` dan **`connect_rejected` /
+`EGRESS_BLOCKED`**, cada uno probado por **dos canales independientes** (curl y WebFetch), igual que los
+seis dominios alemanes del pase 64. Y `codeload.github.com` da **403**.
+⚠️ **Lo que cada bloqueo costó, nombrado:** los términos upstream de MEXT (公共データ利用規約 第1.0版)
+quedan **corroborados por canal secundario, no medidos**; **el endpoint SPARQL no se verificó** y el
+publicador lo anuncia **試験公開中** (*publicación de prueba*); **el depósito DOI de Zenodo quedó sin
+leer**, que para un dataset de investigación es un lugar canónico de licencia; y sin `codeload` no se
+pudo bajar el árbol de los 22 repos silenciosos para grepearlo entero.
+
+**491.** 🟢 **Una hipótesis de instrumento se probó y se REFUTÓ, y la refutación refuerza P170 en vez de
+limitarlo.** Al encontrar la cesión japonesa en `index.html` surgió la sospecha de que el sitio Pages se
+sirviera de una rama **no por omisión**, en cuyo caso la ref `HEAD` de **P170** no la cubriría y el
+instrumento tendría un agujero. **Medido contra `/branches/all`: `jp-cos/jp-cos.github.io` tiene UNA
+sola rama, `main`, y es la de omisión.** 🔵 **Así que `HEAD` cubrió el repo entero y la ausencia del
+archivo `LICENSE` estaba bien medida: lo que faltaba no era una rama, era mirar adentro de otros
+archivos.** ⚠️ **La sospecha sigue siendo válida como clase y queda escrita en P181 paso 3: antes de
+concluir una ausencia en un repo de Pages, se mira `/branches/all`.**
+
+**492.** ⚠️ **El eje genérico volvió a devolver lo mismo, por enésimo pase, y conviene decirlo con el
+contraste que este pase produce.** Las búsquedas globales obligatorias de agentes y de trending siguen
+devolviendo marcos generalistas y agregadores de baja calidad. 🔵 **Ninguna de las dos altas de este
+pase salió de ahí: `jp-cos` y `ICT-CONNECT-21/CSCode2023` salieron de BUSCAR EN JAPONÉS, y las dos
+correcciones de cifra salieron de RELEER LO QUE LA KB YA TENÍA con una pregunta distinta.** 🔴 **Dos
+canales productivos y bien identificados —el idioma del país, y la relectura del propio inventario con
+otra pregunta— contra uno agotado que sigue consumiendo presupuesto de barrido en cada pase.**
+
+### ⚠️ Los huecos y las reservas de este pase, declarados en vez de tapados
+
+- ⚠️ **Las 22 filas `PAYLOAD-SILENT` son «silencio en los nombres probados», NO «silencio probado».**
+  La lista de rutas de payload es por **convención** (`raw` no lista directorios) y
+  **`codeload.github.com` da 403**, que es el canal que cerraría la reserva. **Es la acción 2 del pase 66.**
+- ⚠️ **Las 249 filas de `agents/top.md` sin URL de GitHub siguen fuera de todo denominador de licencia**,
+  catorce pases después. Son medibles por **registro + tarball**, canal que este pase acaba de ejercitar
+  con éxito en 3 paquetes. **Es la acción 1 del pase 66.**
+- ⚠️ **El grafo japonés está medido por MUESTRA DE UNO**: se leyó entero un registro de ítem
+  (`710/0000000000000.ttl`, 1.102 B) y no se recorrieron los 104 directorios. **La afirmación «la mejor
+  pieza de currículo de la KB» se apoya en la licencia y en la estructura declarada, no en el recuento
+  del grafo.** **Es la acción 3 del pase 66.**
+- 🔴 **`all-20250927.ttl` —el único volcado que promete el grafo completo— da 404 en la raíz del repo.**
+  Si no está versionado ahí, el grafo entero sólo existe detrás de dominios bloqueados.
+- ⚠️ **Los términos de MEXT y los de `curriculumnacional.cl` siguen sin leerse de primera mano**, los dos
+  por bloqueo de dominio, y **no se infieren de que sean portales públicos.**
+- ⚠️ **El endpoint SPARQL japonés no está verificado y su dueño lo llama experimental**: la receta
+  **P180** carga los volcados localmente por eso, no por preferencia de arquitectura.
+- ⚠️ **LATAM no recibió dato nuevo en este pase**, porque las tres acciones heredadas no la tocan. **Se
+  declara en vez de llenarse**, y el único cambio para la región es de ORDEN por comparación: Chile queda
+  como el único caso con dato oficial completo y ningún artefacto.
+- 🔵 **Las 3 filas `indeterminado` del pase 51 que no entraban en las 29 —`1EdTech/caliper-php`,
+  `IMSGlobal/caliper-python`, `concentricsky/badgr-server`— dan `UNREACHABLE` por este canal**,
+  consistente con las lápidas que el pase 64 describió. **No se afirma nada sobre su licencia.**
+- 🔴 **Deuda de CITAS medida con los instrumentos que este repositorio ya versiona, y no se tapa:**
+  `pattern-citation-audit` reporta **15 números de patrón COLGADOS** —citados en negrita y **nunca
+  definidos en una sección**—, entre ellos **P170**–**P175**, acuñados en los pases 63 y 64;
+  `trend-backlink-audit` reporta **8 citas de tendencia colgadas** (**393**, **401**, **294**, de los
+  pases 53, 54 y 58). 🔵 **Esto viola una regla que esta base ya tiene escrita: el pase 62 estableció
+  que un patrón se promueve a sección en el MISMO pase que lo acuña, «ninguno queda citado sin texto»
+  (**P157**).** 🟢 **Los tres patrones de este pase —**P179**, **P180**, **P181**— quedan definidos con
+  sección propia, verificado con el mismo instrumento: ninguno aparece en la tabla de colgadas.**
+  ⚠️ **No se arregló la deuda ajena en este pase**: son 15 secciones que habría que escribir con el
+  material de los pases que las acuñaron, y hacerlo de apuro produciría texto inventado sobre
+  mediciones que no son de esta corrida. **Queda declarado con cifra e instrumento, que es lo que
+  permite que el pase 66 lo tome como acción con alcance cerrado.**
+- 🔵 **Nota de método, y es la segunda vez que P126 atrapa a esta base en el mismo lugar:** para contar
+  las suites de `compose/code/` este pase escribió primero un detector a mano que buscaba el `OK` de
+  `unittest` y reportó **18 de 20 FALLANDO**. **Las 20 pasan.** Las suites publican su propio total
+  (`N/N checks passed`, `TODAS LAS ASERCIONES PASAN (n)`, `ALL CHECKS PASSED`) y sólo dos usan el
+  vocabulario de `unittest`. 🔴 **Es exactamente el defecto que `suite-total-control/` existe para
+  demostrar —un contador por vocabulario falla en la suite que no usa ese vocabulario— y la regla que
+  esa carpeta deja escrita es la que se incumplió: antes de escribir un instrumento a mano se corre el
+  que el repositorio ya versiona.** 🟢 **Con la regla aplicada: 20 de 20 suites pasan, la nueva
+  `p172-payload-license-sweep/test_extract.py` incluida (8/8).**
 
 ## 🔵 Las tres acciones que el pase 64 deja escritas para el pase 65
 

@@ -1,0 +1,26 @@
+# Los 22 volcados TTL versionados que index.html de jp-cos/jp-cos.github.io enumera.
+# canal_w3id: w3id.org esta BLOQUEADO en esta corrida (connect_rejected por dos canales).
+# canal_raw:  medido contra raw.githubusercontent.com/jp-cos/jp-cos.github.io/HEAD/<archivo>
+archivo	que_trae	canal_raw
+all-20250927.ttl	el grafo completo	404 (no esta en la raiz del repo)
+dataset-20250927.ttl	descripcion VOID/DCAT del dataset + LA CESION	200 (19.175 B)
+schema-class-20250817.ttl	vocabulario: clases	200 (9.335 B)
+schema-property-20250817.ttl	vocabulario: propiedades	no medido
+shapes-20250817.ttl	SHACL shapes de validacion	200 (71.548 B)
+commentary-20250824.ttl	学習指導要領解説 (el comentario oficial)	no medido
+commentary-metadata-20250817.ttl	metadatos del comentario	no medido
+cs-basic-advanced-20250824.ttl	basico / avanzado	no medido
+cs-citations-20250817.ttl	citas entre items	no medido
+cs-commentary-20250217.ttl	enlace item <-> comentario	no medido
+cs-dataset-20211229.ttl	dataset por nivel	no medido
+cs-items-20220830.ttl	los items del curriculo	no medido
+cs-metadata-20211211.ttl	metadatos	no medido
+cs-period-20211010.ttl	periodos de vigencia	no medido
+cs-revision-20211211.ttl	revisiones	no medido
+disability-category-20211122.ttl	categorias de discapacidad (educacion especial)	no medido
+school-20211122.ttl	tipos de escuela	no medido
+section-hierarchy-20240704.ttl	jerarquia de secciones	no medido
+source-20241228.ttl	fuentes	no medido
+stage-20211205.ttl	etapas	no medido
+subject-20241220.ttl	materias	no medido
+subjectArea-20241228.ttl	areas de materia	no medido

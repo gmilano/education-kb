@@ -8,6 +8,7 @@ updated: 2026-10-03
 
 > Bases sobre las cuales construir. Verificado repo por repo vía WebFetch el 2026-09-30 (capas del pase 10, el 2026-10-01).
 > Leer la columna **Licencia** antes de proponer: media KB de educación es GPL/AGPL, no permisiva.
+> **Pase 65 del 2026-10-03:** 🟢 **JAPÓN entra a la capa de currículo, y entra como la MEJOR pieza que tiene la KB: `jp-cos/jp-cos.github.io` —学習指導要領LOD— publica el currículo nacional japonés completo en RDF/Turtle bajo **CC BY 4.0**, con 22 volcados versionados, vocabulario, SHACL y endpoint SPARQL declarado.** 🔵 **CC BY 4.0 es MÁS permisiva que la alemana CC BY-SA 4.0: sin ShareAlike, no activa la compuerta de **P178**, así que el currículo derivado puede entregarse con licencia propia.** 🔴 **Y la acción 3 queda REFUTADA en su hipótesis: decía «si está publicado por MEXT sin licencia explícita, APAC replica el patrón alemán y **P174** gana una tercera región» — hay licencia explícita, así que P174 NO gana región por este caso.** 🟢 **La reserva de la tendencia 457 también cae: `dini-ag-kim/school-curriculum-pg` —la cobertura por LAND, que el pase 63 escribió como «la capa que agrega el valor específico y sigue sin licencia»— declara **CC BY-SA 4.0** en las 25 serializaciones, los 16 `lp-land-XX-full.owl` incluidos, con titulares por ORCID.** 🔴 **Las dos cesiones eran invisibles a los instrumentos de esta KB: ninguna está en un archivo `LICENSE` y las dos aparecieron sólo al abrir el dato** (**P172**, **P179**). Ver `compose/code/jp-cos-curriculum-gate/`.
 > **Pase 64 del 2026-10-03:** 🔴 **La acción 3 del pase 63 CIERRA y REFUTA el titular del pase 63 sobre Alemania: las TRES ontologías de `FWU-DE` SÍ declaran licencia —**CC BY-SA 4.0**, como anotación `dct:license` DENTRO del `.owl`— mientras no tienen archivo `LICENSE` ni la palabra «licencia» en el README. El pase 63 grepeó el README y concluyó «3 de 3 sin ninguna licencia»: la cesión existía, un nivel más abajo, en el PAYLOAD** (**P172**, y es el caso más fuerte de **P153**). 🔴 **Y la dependencia de la receta **P169** estaba al revés: `dini-ag-kim/school-curriculum-pg` no es el upstream que FWU importa — es una **lápida de 136 bytes** cuyo README entero dice *«This repo is outdated, please go to FWU-DE/lehrplan-ontologie»*, o sea apunta HACIA la pieza sin archivo de licencia** (**P173**). 🔵 **Consecuencia de instrumento: un verificador de licencias que mira raíz + README es ciego a toda la capa de DATO semántico; hay que grepear dentro del RDF/OWL/TTL, y en las DOS serializaciones (`<http://purl.org/dc/terms/license>` e `dcterms:license`).** 🟢 **Alta permisiva verificada: `1EdTech/openbadges-validator-core` (Apache-2.0, 13.184 B), que reemplaza al muerto `concentricsky/badgr-server`.**
 > **Pase 62 del 2026-10-03:** 🟢 **+3 repos fundacionales y la capa de currículo extendida a ALEMANIA (`FWU-DE/lehrplan-ontologie`: los 16 Bundesländer en RDF/OWL) y a ESPAÑA (`nmarafo/open-lex-edu`: 832 normas con frontmatter YAML e `index.yaml` de referencias cruzadas).** 🔴 **Y el dato que decide: de SIETE artefactos de currículo medidos en cuatro regiones, exactamente UNO es permisivo y legible (Corea, MIT) — dos son *share-alike*, uno CC BY, DOS NO TIENEN LICENCIA y uno es ilegible. La capa más cara de reconstruir es la peor licenciada, y la región con más presupuesto (NA) y la de mayor cobertura técnica (Alemania) son justo las dos sin cesión.** 🔴 **El `gap 255` del pase 61 se auto-refuta en España: declaraba «sin artefacto» un país que esta base cubre desde el pase 3 en siete archivos — una declaración de hueco tiene que correr contra el índice propio antes de salir a buscar** (**P162**). 🟢 **Y `open-lex-edu` es el control negativo que a P153 le faltaba y lo pasa: su licencia de DATO sí está en la raíz.**
 > **Pase 61 del 2026-10-03:** 🟢 **+12 filas fundacionales y las cuatro regiones tocadas, tras varios pases sin altas — porque este pase ejecutó la acción pre-registrada que llevaba ciclos pendiente: buscar `curriculum ontology`, `achievement standards`, `learning map` e `item bank` POR PAÍS, en vez de buscar «agentes educativos».** 🔴 **Leer las DOS columnas de licencia: la capa es dual (código permisivo / dato con atribución) y el archivo del DATO no está en la raíz en dos de tres casos —`dados/LICENSE.md` adentro del directorio de datos, `LICENSE-DADOS.md`, `DATA-LICENSE.md`—, así que el probe de raíz de P114/P115 reporta «MIT» para toda la capa y MIT cubre la parte sin valor** (**P153**). 🟢 **Lo licenciable es la COMPILACIÓN, no el currículo: los textos normativos son actos de Estado no protegidos (art. 8º IV de la Lei 9.610/98; OGL v3.0 como *public sector information*)** (**P154**). 🔴 **Y la asimetría regional invierte el gap 4: LATAM tiene CC BY 4.0 con procedencia por registro, EMEA tiene OGL v3.0 con permiso comercial explícito, APAC tiene publicación oficial del Estado — y North America, el 38 % del mercado, reparte sus estándares entre 50 estados y sus tres renderizaciones JSON en GitHub NO tienen archivo de licencia** (**P159**).
@@ -77,6 +78,67 @@ corre ése antes de escribir uno a mano** (tendencia **313**). 🟢 **Y el `gafa
 > y 5 en `schemas12/`, y contar sólo el primero es lo que hizo invisible el segundo dialecto de SCORM (**P106**).
 > **Pase 36 del 2026-10-02:** 🔵 **este pase no agrega repos: le pone FECHA a los que ya están, y la fecha cambia tres recomendaciones.** Se midió la capa PHP de evaluación y telemetría en Packagist —el único registro de los tres que entrega descargas en este entorno (`api.npmjs.org` y `pypistats.org` dan **403 a CONNECT**)— y el resultado está en `repos/trending.md`. **Lo que hay que saber antes de proponer desde este archivo:** 🔴 **la pieza xAPI más descargada de esta base, `rusticisoftware/tincan` (Apache-2.0, 6.178 desc./mes, 863.777 totales), no publica desde el 2022-11-02**, y ⚠️ **el único MIT de esa capa, `php-xapi/client`, está parado desde el 2021-03-24** con 825 desc./mes. 🔵 **La lectura es que en xAPI/PHP lo permisivo está quieto y lo vivo es copyleft**, así que la receta de telemetría se sostiene en **Ralph (MIT)** + **`lrsql` (Apache-2.0)** + **`learnmcp-xapi` (MIT)** y no en la capa PHP. 🟢 **Del lado de evaluación, lo activo es `oat-sa/extension-tao-testqti`** (**885 versiones**, release del **2026-09-30**) **y sigue siendo GPL-2.0-only**, mientras **lo permisivo es lo nuevo**: `@longsightgroup/qti3-cli` (**MIT**, 41 releases desde el 2026-05-21, último **2026-10-01**) con **cero dependencias de terceros** — sus 4 dependencias son todas `@longsightgroup/*` pinneadas a la misma versión exacta. **Su manifiesto MCP completo de 20 tools está escrito en `compose/patterns.md` (P76).** 🔴 **Y una corrección de catálogo: `oat-sa/qti-sdk` devuelve 404 en Packagist porque es el nombre del REPO — su paquete es `qtism/qtism`** (GPL-2.0-only, 218.212 descargas totales, 315 versiones). **Nombre de repo y nombre de paquete son identificadores distintos, y confundirlos produce un 404 que parece una ausencia** — pasó igual con `1edtech/oneroster`, `imsglobal/lti-1-3-php-library` y `packbackbooks/lti-1-3-php-library`, los tres **404**, que se anotan como *«no verificado en Packagist bajo ese nombre»* y **no** como inexistentes. ⚠️ **Acción pendiente que el pase 37 tiene asignada: este archivo nunca pasó por el control de *slugs* distintos ni por el de *backlink*** — los dos que en `agents/top.md` encontraron **un duplicado** y **dos colisiones** este mismo pase.
 > **Pase 11 del 2026-10-01:** aparece una licencia que las diez pasadas anteriores filtraban sin saberlo — **ECL-2.0**, con la que licencia todo Apereo (Sakai, Opencast, OpenLRW). Es Apache-2.0 con el alcance de patentes acotado, aprobada por OSI y FSF, y **es apta para construir arriba**. Ver la capa de analítica institucional, abajo.
+
+## 🇯🇵 La capa de currículo gana JAPÓN, y es la pieza mejor cedida de toda la capa (acción 3 del pase 65, pase 65 del 2026-10-03)
+
+El hueco de Japón venía **declarado sin medir desde el pase 61** —cuatro veces—. Cerró al buscar
+**en el idioma del país**: `学習指導要領` (*gakushū shidō yōryō*), no «Japan curriculum ontology».
+Es el mismo canal que en el pase 61 rindió 11 piezas tras diez pases sin altas.
+
+| Repo | Licencia | Qué es | Región |
+|---|---|---|---|
+| [`jp-cos/jp-cos.github.io`](https://github.com/jp-cos/jp-cos.github.io) | **CC BY 4.0** 🟢 *medida en el payload y en el HTML del repo* | **学習指導要領LOD** — el currículo nacional japonés completo como Linked Open Data: RDF/Turtle + HTML, todos los tipos de escuela, currículos nuevos y viejos. **22 volcados TTL versionados** (`all-20250927.ttl` el mayor), vocabulario (`schema-class`, `schema-property`), **SHACL `shapes-20250817.ttl`** (71 KB) y endpoint SPARQL declarado. 7 ★, **39 issues abiertos**, último cambio **2026-09-25** | **APAC** (Japón) |
+| [`ICT-CONNECT-21/CSCode2023`](https://github.com/ICT-CONNECT-21/CSCode2023) | **MIT** 🟢 *texto completo, 1.081 B* | El programa de referencia de búsqueda sobre los códigos del currículo, **por encargo de MEXT**. Es el lado SOFTWARE de la misma capa | **APAC** (Japón) |
+
+**Publicador del dato:** 教育データプラス研究会 (*Education Data Plus Research Group*), © 2021-2026 —
+**no es MEXT**. MEXT es el **出典** (la fuente): «学習指導要領コードのコード表（全体版）».
+**IRI canónico:** `https://w3id.org/jp-cos/`.
+
+### La cesión, y por qué los instrumentos de esta KB no la veían
+
+`LICENSE` **no existe** en los 14 nombres × ref `HEAD`, así que la capa de archivo clasifica este
+repo `UNLICENSED`. **Está declarada dos veces, las dos dentro del repositorio:**
+
+1. **En el HTML publicado** (`index.html`, rama por omisión):
+   `このデータセットは…クリエイティブ・コモンズライセンス 表示 4.0…として自由に利用できます。`
+   con el URI canónico `creativecommons.org/licenses/by/4.0/`.
+2. **En el PAYLOAD RDF** (`dataset-20250927.ttl`, descripción VOID/DCAT):
+   `dct:license [ rdf:value <https://creativecommons.org/licenses/by/4.0/> ; rdfs:label "Creative Commons license Attribution 4.0"@en ]`
+
+🔵 **La segunda forma —nodo en blanco, y en la línea 66, detrás de 6 KB de prefijos y literales
+largos— es la que define los defectos D2 y D3 del extractor** de
+`compose/code/p172-payload-license-sweep/`, cada uno con su control.
+
+### Por qué esto ordena la capa entera, con la licencia como clave
+
+| Región | Pieza | Licencia | ShareAlike | Entregable |
+|---|---|---|---|---|
+| **APAC — Japón** | `jp-cos` 学習指導要領LOD | **CC BY 4.0** | 🟢 no | 🟢 **sí, con atribución** |
+| APAC — Corea | pieza MIT de pases previos | MIT | 🟢 no | 🟢 sí |
+| **EMEA — Alemania** | `dini-ag-kim/school-curriculum-pg` (16 Länder) | **CC BY-SA 4.0** | 🔴 **sí** | ⚠️ derivado debe ir CC BY-SA (**P178**) |
+| EMEA — Alemania | `dini-ag-kim/schulfaecher` (materias) | CC0 1.0 | 🟢 no | 🟢 sí |
+| LATAM — Chile | `curriculumnacional.cl` | ⚠️ términos **no leídos** (dominio bloqueado) | — | 🔴 hay dato, no hay artefacto: se extrae |
+| NA — Common Core | 3 renderizaciones JSON | 🔴 **sin licencia** | — | 🔴 no |
+
+🔴 **El orden comercial se invierte respecto de lo que esta base venía diciendo: la región con el
+38 % del mercado (NA) sigue siendo la PEOR cedida, y la mejor es Japón**, que hasta este pase
+figuraba como hueco.
+
+### Canales declarados
+
+- 🔴 **`www.mext.go.jp` bloqueado por DOS canales independientes** (`curl` → `connect_rejected`;
+  WebFetch → `EGRESS_BLOCKED`), igual que los seis dominios alemanes del pase 64. Los términos de
+  MEXT —公共データ利用規約（第1.0版）, que permite reproducir, transmitir, traducir y adaptar—
+  quedan **corroborados por canal secundario, NO medidos**.
+- 🔴 **`jp-cos.github.io`, `w3id.org`, `zenodo.org` y `dydra.com` bloqueados.** 🟢 **La vuelta que
+  funcionó, y es reusable: un sitio Pages se sirve DESDE un repo, y `raw.githubusercontent.com`
+  está abierto** — `index.html` y `about.html` se leyeron por `raw`.
+- ⚠️ **El endpoint SPARQL no se verificó** (dominio bloqueado) y el publicador lo anuncia
+  **試験公開中** (*publicación de prueba*): **ninguna receta debe depender de él sin verificarlo.**
+- ⚠️ **El grafo está medido por MUESTRA**: se leyó entero un registro de ítem
+  (`710/0000000000000.ttl`, 1.102 B) y no se recorrieron los 104 directorios de código.
+
+---
 
 ## 🧬 La licencia del DATO vive DENTRO del dato: las tres ontologías de `FWU-DE` declaran CC BY-SA 4.0 en el `.owl`, y eso refuta el titular del pase 63 (acción 3 del pase 63, pase 64 del 2026-10-03)
 

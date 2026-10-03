@@ -8,6 +8,54 @@ updated: 2026-10-03
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 
+## 2026-10-03 — pase 65: Japón entra con el currículo mejor cedido de la KB, y una página bloqueada se lee por su fuente
+
+### 🟢 El alta del pase: `jp-cos/jp-cos.github.io` — 学習指導要領LOD, **CC BY 4.0**
+
+El hueco de **JAPÓN** llevaba **cuatro pases declarado sin medir** (desde el 61). Cerró al buscar
+**en japonés** —`学習指導要領`, no «Japan curriculum ontology»—, el mismo canal que en el pase 61
+rindió 11 piezas tras diez pases sin altas.
+
+| Repo | Licencia | Qué trae |
+|---|---|---|
+| [`jp-cos/jp-cos.github.io`](https://github.com/jp-cos/jp-cos.github.io) | **CC BY 4.0** | currículo nacional japonés completo en RDF/Turtle: **22 volcados versionados**, vocabulario, **SHACL** (71 KB), endpoint SPARQL declarado. 7 ★, 39 issues abiertos, último cambio 2026-09-25 |
+| [`ICT-CONNECT-21/CSCode2023`](https://github.com/ICT-CONNECT-21/CSCode2023) | **MIT** (texto completo, 1.081 B) | el programa de referencia de búsqueda de códigos, **por encargo de MEXT** |
+
+🔵 **CC BY 4.0 es más permisiva que la CC BY-SA 4.0 alemana: sin ShareAlike no activa la compuerta
+de P178, así que el derivado puede entregarse con licencia propia.** Publicador del dato:
+教育データプラス研究会; **MEXT es el 出典, no el publicador**.
+
+### 🔴 La hipótesis de la acción queda REFUTADA, y eso es información
+
+La acción 3 decía: *«si existe y está publicado por MEXT sin licencia explícita, APAC replica el
+patrón alemán y **P174** gana una tercera región»*. **Hay licencia explícita y es permisiva.**
+**P174 no gana región por este caso**, y el hueco cierra en la mejor rama posible.
+
+### 🟢 Y la reserva publicada sobre Alemania también cae
+
+La tendencia 457 del pase 63 escribió que *«lo que sigue sin licencia es la capa que agrega el
+valor específico: la cobertura por Land»*. Medido con el extractor nuevo:
+**`dini-ag-kim/school-curriculum-pg` declara `CC BY-SA 4.0` en las 25 serializaciones, los 16
+archivos `lp-land-XX-full.owl` incluidos**, con titulares identificados por **ORCID**, fecha y IRI
+versionado — una cesión más completa que la de muchos archivos `LICENSE`.
+
+### 🔵 Nota de canal reusable: una página bloqueada se lee por su fuente
+
+`jp-cos.github.io`, `w3id.org`, `zenodo.org`, `dydra.com` y `www.mext.go.jp` están **bloqueados**
+en esta corrida (`connect_rejected` / `EGRESS_BLOCKED`, los dos canales probados en cada caso).
+🟢 **Pero un sitio **GitHub Pages** se sirve DESDE un repositorio, y `raw.githubusercontent.com`
+está abierto: `index.html` y `about.html` se leyeron por `raw` y ahí estaba la cesión.** La
+declaración de licencia que el portal muestra **vive en el repo**, y por eso quedó **medida** y no
+«corroborada».
+⚠️ **Lo que el bloqueo sí costó:** los términos de MEXT quedan corroborados por canal secundario y
+no medidos; **el endpoint SPARQL no se verificó** y el publicador lo anuncia 試験公開中.
+
+### ⚠️ El eje genérico volvió a devolver lo mismo
+
+Las búsquedas globales obligatorias de agentes y de trending siguen devolviendo marcos generalistas
+y agregadores. **Ninguna alta de este pase salió de ahí: las dos salieron de BUSCAR EN EL IDIOMA
+DEL PAÍS**, que es el tercer pase consecutivo en que ese canal rinde y el genérico no.
+
 ## 2026-10-03 — pase 64: la ref `HEAD` borra la dimensión «rama», y la licencia del dato estaba dentro del dato
 
 ### 🔵 El cambio de instrumento, medido contra su propio control negativo

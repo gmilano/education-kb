@@ -1392,6 +1392,26 @@ Dónde se produce el software educativo abierto, que no es donde está la demand
 
 ### North America
 
+#### 📍 Pase 65 del 2026-10-03 — la región sigue siendo la PEOR cedida, y ahora el contraste tiene con qué compararse
+
+🔴 **North America no gana nada en este pase, y eso es el dato: las tres renderizaciones JSON del
+Common Core siguen SIN licencia, mientras Japón resultó estar cedido en CC BY 4.0 y la cobertura por
+Land alemana en CC BY-SA 4.0.** La región con **~36-38 % del mercado** es la única de las cuatro
+donde la capa de currículo **hay que producirla**, no licenciarla.
+
+🔵 **Lo que sí cambia para un engagement de NA, y vale dinero:** las 5 filas de `agents/top.md` que
+este pase reclasificó a **identificador de licencia** (`"license": "MIT"` sin texto) son todas
+puertas de **Canvas** y **Moodle**, que es la capa que un cliente de NA toca primero. **La intención
+del autor está documentada en dos canales (repo + registro npm), así que el pedido de un archivo
+`LICENSE` es un trámite de días, no una negociación** — pero hay que hacerlo **antes** de meter la
+pieza en una entrega, no después (**P179**).
+
+⚠️ **Y el caso que más pesa es el más forkeado:** `DMontgomery40/mcp-canvas-lms` y sus **39 forks**
+heredan MIT como identificador **sin una línea de texto en ninguna parte** —ni en el repo, ni en el
+tarball publicado— **y el manifiesto promete el `LICENSE` que no existe.** Si el cliente de NA tiene
+una oficina legal que pide el texto, esta puerta no pasa como está.
+
+
 #### 📍 Pase 64 del 2026-10-03 — el mercado más grande con el régimen más flojo
 
 | Indicador | Valor |
@@ -2754,6 +2774,31 @@ Artículo 50(2) **no es exigible** en North America — pero es **el requisito m
 multi-región conviene cotizarlo contra el techo europeo y no contra el piso local (ver **P103** y **P105**).
 
 ### EMEA
+
+#### 📍 Pase 65 del 2026-10-03 — Alemania pasa de «sin cesión» a «cedida con ShareAlike», y eso cambia el contrato, no el proyecto
+
+🟢 **La reserva que esta base venía publicando sobre la capa alemana cae: `dini-ag-kim/school-curriculum-pg`
+—la cobertura de los 16 Bundesländer, que la tendencia 457 llamó «la capa que agrega el valor
+específico y sigue sin licencia»— declara `CC BY-SA 4.0` en las 25 serializaciones, los 16 archivos
+`lp-land-XX-full.owl` incluidos**, con titulares identificados por **ORCID**, fecha y IRI versionado.
+
+🔴 **Pero la licencia es ShareAlike, y ahí está la consecuencia comercial: la compuerta de P178 se
+activa.** Un currículo **derivado** del alemán hereda la obligación CC BY-SA, así que **no se le puede
+prometer a un cliente de EMEA un artefacto de currículo derivado y cerrado.** Las dos salidas, y hay
+que elegir en la propuesta y no en la entrega:
+
+1. **Entregar el derivado bajo CC BY-SA 4.0** — barato, y obliga al cliente a publicar su capa.
+2. **Mantener el dato alemán como fuente consultada en runtime y no derivar** — el modelo propio del
+   cliente no toca el dato cedido, y la obligación no se propaga.
+
+🔵 **Y la capa de materias sigue siendo la salida sin condiciones:** `dini-ag-kim/schulfaecher` es
+**CC0 1.0**. **EMEA es la única región con las dos cosas: un vocabulario CC0 y una cobertura
+nacional completa cedida.**
+
+⚠️ **Reserva de canal, heredada y sin resolver:** los seis dominios alemanes del pase 64 siguen
+bloqueados por dos canales, así que nada de esto se pudo confirmar contra el sitio del publicador.
+**Lo medido salió del dato mismo, que es el canal más fuerte disponible.**
+
 
 #### 📍 Pase 64 del 2026-10-03 — la región donde la regulación es el producto
 
@@ -4246,6 +4291,39 @@ este pase dejó cubierto con código.
 
 ### APAC
 
+#### 📍 Pase 65 del 2026-10-03 — JAPÓN entra, y entra como la MEJOR oportunidad de currículo de las cuatro regiones
+
+El hueco de Japón venía **declarado sin medir desde el pase 61** —cuatro veces—. 🟢 **Cerró, y cerró
+en la mejor rama: existe artefacto estructurado, es oficial en su fuente y está CEDIDO de forma
+permisiva.**
+
+| | |
+|---|---|
+| Artefacto | [`jp-cos/jp-cos.github.io`](https://github.com/jp-cos/jp-cos.github.io) — **学習指導要領LOD**, el currículo nacional japonés completo en RDF/Turtle |
+| Licencia | **CC BY 4.0** — *medida en el payload RDF y en el HTML del repo* |
+| Fuente (出典) | **MEXT** 文部科学省 · publicador: 教育データプラス研究会 |
+| Qué trae hecho | **22 volcados TTL versionados**, vocabulario (`schema-class`/`schema-property`), **SHACL `shapes-20250817.ttl`** (71 KB), endpoint SPARQL declarado, 104 directorios de códigos resolubles |
+| Estado | vivo: **39 issues abiertos**, último cambio **2026-09-25** |
+| Software compañero | `ICT-CONNECT-21/CSCode2023` — **MIT** con texto completo, **por encargo de MEXT** |
+
+🔵 **Por qué es la mejor de las cuatro, y es una diferencia de CONTRATO: CC BY 4.0 no tiene
+ShareAlike.** La compuerta de **P178** no se activa, así que **el currículo derivado se puede
+entregar con licencia propia** — lo que en Alemania hay que negociar, en Japón ya está resuelto.
+**Y no hay capa que construir:** el vocabulario, las shapes de validación y los volcados versionados
+ya existen.
+
+🔴 **La hipótesis de la acción queda REFUTADA, y conviene registrarlo: decía que si Japón publicaba
+sin licencia explícita, APAC replicaría el patrón alemán y **P174** ganaría una tercera región. Hay
+licencia explícita y permisiva. P174 no gana región por este caso.**
+
+⚠️ **Lo que un engagement japonés NO debe suponer:** el **endpoint SPARQL no está verificado** —el
+dominio está bloqueado en esta corrida **y el publicador lo anuncia 試験公開中 (publicación de
+prueba)—**, así que una arquitectura que dependa de él necesita verificarlo primero o cargar los
+volcados TTL localmente, que es la opción robusta. ⚠️ Los términos upstream de **MEXT**
+(公共データ利用規約 第1.0版) quedan **corroborados por canal secundario, no medidos**: `www.mext.go.jp`
+está bloqueado por dos canales independientes.
+
+
 #### 📍 Pase 64 del 2026-10-03 — el eje es SOBERANÍA, y la brecha es de gobernanza
 
 | Indicador | Valor |
@@ -5440,6 +5518,29 @@ desplegado + puerta MCP permisiva (`jbnu-lms-mcp`, `canvas-lms-mcp`, las cuatro 
 depende de un tercero» son el mismo argumento.**
 
 ### LATAM
+
+#### 📍 Pase 65 del 2026-10-03 — LATAM no cambió de estado, y la comparación la deja como la segunda peor cedida
+
+⚠️ **Este pase no produjo dato nuevo de LATAM, y se dice en vez de llenarlo.** El barrido se gastó en
+las tres acciones que el pase 64 dejó escritas (licencia de payload, instrumento, Japón), y ninguna
+toca la región.
+
+🔴 **Lo que la comparación nueva sí cambia es el ORDEN, y no a favor de LATAM:** con Japón cedido en
+CC BY 4.0 y Alemania en CC BY-SA 4.0, **Chile queda como el único caso donde hay dato oficial completo
+y NINGÚN artefacto** — `curriculumnacional.cl` publica los Objetivos de Aprendizaje por curso y
+asignatura en PDF y HTML de consulta, sin repositorio, sin dataset en `datos.gob.cl` y sin API.
+
+🔵 **Eso mantiene la forma de la oportunidad que el pase 63 ya había identificado, y la abarata por
+comparación: en Chile no se vende «construir la capa de currículo» —se vende EXTRAERLA, licenciarla
+y ponerle puerta de agente—.** Y ahora hay dos plantillas medidas de cómo se ve el resultado:
+**el modelo japonés** (volcados versionados + vocabulario + SHACL + CC BY 4.0, sin ShareAlike) es el
+que conviene copiar, porque el alemán arrastra ShareAlike.
+
+⚠️ **Reserva heredada, sin resolver:** los **términos de uso de `curriculumnacional.cl` siguen sin
+leerse** —el dominio está bloqueado por el proxy de egreso— y **no se infieren de que sea un portal
+público.** Hasta leerlos, la extracción es una oportunidad técnica con un supuesto legal abierto, y
+así hay que presentarla.
+
 
 #### 📍 Pase 64 del 2026-10-03 — adopción altísima, construcción propia bajísima
 

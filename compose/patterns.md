@@ -8,6 +8,7 @@ updated: 2026-10-03
 
 > Recetas concretas: repos nombrados, licencias verificadas, wiring explícito y estimación.
 > Todos los repos citados fueron verificados vía WebFetch el 2026-09-30; los del pase 11, el 2026-10-01 (ver `agents/top.md`).
+> **Pase 65 del 2026-10-03:** 🔵 **Los patrones nuevos son **P179**–**P181**, y los tres salen de lo que este pase midió, no de lo que leyó.** **P179** separa el IDENTIFICADOR de licencia de la CESIÓN —un `"license": "MIT"` de manifiesto no trae titular, ni año, ni una línea de texto, y decide qué se le puede entregar a legales—; **P180** es la receta de currículo japonés sobre CC BY 4.0, la primera de esta KB que no arrastra ShareAlike; **P181** es la regla de canal que este pase usó tres veces: **una página bloqueada se lee por su fuente** cuando es GitHub Pages. 🔴 **Y una receta vieja se CORRIGE a favor: **P178** (la compuerta de ShareAlike) deja de ser la única salida para EMEA, porque ahora hay una fuente de currículo nacional CEDIDA SIN ShareAlike —Japón— y la elección de región cambia la obligación del entregable.**
 > **Pase 64 del 2026-10-03:** 🔵 **Tres recetas nuevas, las tres salidas de lo que este pase midió: **P176** el verificador de licencia de DOS CAPAS (archivo + payload), que es el único que no es ciego a la capa de dato semántico; **P177** la sustitución de una dependencia muerta por el organismo de estándares vivo, con Caliper y Open Badges como los dos casos trabajados; y **P178** la compuerta de ShareAlike, que es la que impide prometer un currículo derivado cerrado sobre dato CC BY-SA 4.0.** 🔴 **Y una receta vieja se CORRIGE: la dependencia upstream de **P169** era una lápida de 136 bytes — la salida CC0 existe pero cubre la capa de MATERIAS, no la de currículo.**
 > **Pase 62 del 2026-10-03:** 🟢 **los patrones nuevos son **P160**–**P163** y la receta **P164**, y los cuatro se promueven a sección en el mismo pase que los acuña (P157): ninguno queda citado sin texto.** 🔴 **Pero antes que los patrones va una corrección de CITA que afecta a cuatro archivos: esta base define **P150** como la regla de forks y **P151** como la de extractores, y hay SIETE citas que invocan «P151» para forks —incluida la acción del pase 60 que difirió el barrido a este pase. Es peor que una cita colgada: resuelve a un patrón real que habla de otra cosa, así que se lee como válida.** 🔵 **P160** la descripción se hereda y la superficie no (139 *tools* contra 103 a la misma release) · **P161** la licencia declarada sólo en prosa no es cesión, y la ausencia se hereda a 39 forks · **P162** un hueco por país se declara contra el índice propio antes que contra el mercado · **P163** una acción diferida lleva número de pase o se re-agenda para siempre.
 > **Pase 61 del 2026-10-03:** 🟢 **los patrones nuevos son **P153**–**P157**, la receta **P158** y **P159**, y todos salen de una sola medición: la capa de CURRÍCULO nacional estructurado, leída licencia por licencia en las cuatro regiones.** 🔴 **P153 es el que cambia una decisión de entrega: la capa entera es DUAL —código permisivo, dato con atribución— y el archivo que declara la licencia del DATO no está en la raíz en dos de tres casos (`dados/LICENSE.md`, `LICENSE-DADOS.md`, `DATA-LICENSE.md`): el probe de cinco nombres de raíz de P114/P115 devuelve «MIT» para toda la capa, y MIT es la licencia de la parte SIN valor.** 🟢 **P154: lo licenciable es la COMPILACIÓN, no el currículo —los textos normativos son actos de Estado no protegidos (art. 8º IV de la Lei 9.610/98; OGL v3.0 como *public sector information*)—, así que a un cliente no se le puede cobrar el currículo de su propio país.** 🔴 **P155: «Apache» en un README de esta vertical es más seguido el SERVIDOR web que la licencia —`Forma LMS` resulta GPLv2 y sin archivo de licencia, contra una recomendación secundaria que lo venía como «the most permissive licence»—.** 🟢 **P156 pone número al aterrizaje, en pares y con pre-registro: sin fuente 31,9 % de alucinación, con el dato en el prompt **0,2 %**, consultando el MCP **2,3 %** — la condición de CONTROL le gana a la herramienta por un orden de magnitud.** 🔴 **Y P159 es el hallazgo regional que invierte el gap 4: la región más grande es la peor servida —las tres renderizaciones JSON del Common Core en GitHub no tienen licencia y la única pieza permisiva de NA (`CEDS-Ontology`, Apache 2.0) no es currículo sino un modelo de entidades—.** ⚠️ **La acción 1 del pase 61 (abrir el PR a `toshieji`) NO se ejecutó: es una acción hacia AFUERA sobre un repo de terceros y esta corrida es automática, sin humano mirando — ver `agents/trending.md`.** Ver **P153**–**P159** y las tendencias **426**–**436**.
@@ -790,6 +791,134 @@ la de tendencias» y **su única evidencia era ella misma un error de cruce** (l
 el pedido de egreso de red; la pregunta de las fechas es el `gap 56`, del pase 32, cerrado en el 39).
 🔵 **El defecto es real; el caso citado no lo era. La ausencia se conserva como aserto para que no
 vuelva a escribirse.**
+
+## P179 — El IDENTIFICADOR de licencia no es una CESIÓN, y la diferencia decide qué se le entrega a legales (pase 65 del 2026-10-03)
+
+**El problema.** Un barrido de licencias que pregunta *«¿declara licencia?»* mezcla dos cosas que no
+valen lo mismo. Medido sobre las 29 filas que el pase 64 dio por `UNLICENSED`: **7 declaran algo en el
+payload, y son dos clases distintas.**
+
+| Clase | Qué trae | Qué NO trae | Ejemplo medido |
+|---|---|---|---|
+| **Identificador** | el nombre SPDX (`MIT`) en un manifiesto | titular, año, **y el texto entero** | `"license": "MIT"` en `package.json` de `DMontgomery40/mcp-canvas-lms` |
+| **Cesión** | la frase de otorgamiento completa, **titular y año**, versión | el archivo aparte (que la GPL no exige) | `@copyright 2024 Marcus Green` + otorgamiento GPL en `version.php` de `marcusgreen/moodle-tool_aiconnect` |
+
+🔵 **Es **P168** llevado al límite.** P168 midió que un `license.txt` de **19 bytes** (`License: GNU
+GPL V3`) es una afirmación y no una cesión. Un campo de manifiesto son **cero bytes de otorgamiento**.
+
+### La receta, y es de orden de operaciones en la propuesta
+
+1. **Correr las dos preguntas, no una**: archivo (`p170-headref-license-sweep`) **y** payload
+   (`p172-payload-license-sweep`). Un repo `UNLICENSED` por la primera puede estar cedido por la segunda
+   — pasó en **10 de 32**.
+2. **Clasificar el resultado en tres, no en dos**: cesión / identificador / silencio.
+3. **Con identificador**: la pieza **se usa en PoC** y **se pide el archivo antes de la entrega**. La
+   intención del autor está documentada, así que es un trámite — pero es un trámite que hay que abrir
+   en la semana 1, no en la semana 10.
+4. **Corroborar el identificador en un segundo canal** cuando el paquete está publicado: el registro
+   (npm/PyPI) declara su propio campo de licencia. Medido: npm confirmó MIT en 3 de 3.
+5. 🔴 **No confundir el array `files` con el archivo.** Dos manifiestos **PROMETEN** `"LICENSE"` y el
+   archivo no está ni en el repo ni en el tarball publicado. **La promesa se verifica bajando el
+   artefacto**, que es una llamada:
+
+```sh
+curl -s https://registry.npmjs.org/<pkg> | python3 -c 'import json,sys;d=json.load(sys.stdin);lt=d["dist-tags"]["latest"];print(d["versions"][lt]["license"], d["versions"][lt]["dist"]["tarball"])'
+curl -s <tarball> | tar tz | grep -iE 'licen[sc]e|copying' || echo "SIN archivo de licencia en el artefacto publicado"
+```
+
+⚠️ **Lo que P179 NO dice:** no dice que la pieza no sea MIT. Dice que **el repositorio no transporta la
+cesión**, y que la diferencia importa exactamente cuando hay una oficina legal del otro lado.
+
+---
+
+## P180 — Agente docente aterrizado al currículo JAPONÉS, sobre CC BY 4.0 y sin ShareAlike (pase 65 del 2026-10-03)
+
+**Para qué.** Es la receta de currículo nacional de esta KB **sin la obligación que arrastran las
+otras**: Japón cede en **CC BY 4.0**, así que el artefacto derivado del cliente **se entrega con
+licencia propia**. La compuerta de **P178** no se activa.
+
+### Las piezas, todas con licencia medida
+
+| Pieza | Licencia | Rol |
+|---|---|---|
+| [`jp-cos/jp-cos.github.io`](https://github.com/jp-cos/jp-cos.github.io) | **CC BY 4.0** | el currículo: 22 volcados TTL versionados, vocabulario (`schema-class`/`schema-property`), **SHACL** `shapes-20250817.ttl` |
+| [`ICT-CONNECT-21/CSCode2023`](https://github.com/ICT-CONNECT-21/CSCode2023) | **MIT** (texto completo) | programa de referencia de búsqueda de códigos, **encargo de MEXT** — el lado software |
+| [`FWU-DE/mem-mcp`](https://github.com/FWU-DE/mem-mcp) | **Unlicense** | 🔵 **la PUERTA, reusada de EMEA**: servidor MCP con 9 tools sobre un triple store de currículo (`sparql_query`, `get_lehrplan_tree`, `get_kompetenzen`, `search`) |
+| `toshieji/moodle-grading-mcp` | MIT | la escritura al LMS como **borrador no liberado** (`workflowstate=readyforreview`) con pie de divulgación |
+
+### El wiring
+
+```
+volcados TTL de jp-cos (CC BY 4.0, cargados LOCALMENTE)
+        │
+        ▼
+triple store propio (el que mem-mcp espera: SPARQL + bif:contains)
+        │   ── validar la carga con shapes-20250817.ttl (SHACL) ANTES de exponer
+        ▼
+mem-mcp (Unlicense) como puerta MCP  ─────►  agente docente
+        │                                         │
+        │                                         ▼
+        └── atribución CC BY 4.0 en la salida   toshieji/moodle-grading-mcp
+            («出典: 文部科学省» + el publicador)  → borrador, nunca publica
+```
+
+🔵 **Por qué `mem-mcp` se reusa y no se escribe de nuevo:** es **Unlicense** (dominio público), expone
+exactamente la forma de consulta que un currículo jerárquico necesita (`get_lehrplan_tree` con
+profundidad acotada, `get_children`, `get_kompetenzen`) y **esta KB ya lo midió tool por tool en el
+pase 63**. Lo que cambia es el grafo que se le pone debajo. ⚠️ **Sus nombres de tool y su vocabulario
+son alemanes**, así que el mapeo del esquema `cs:` japonés al que `mem-mcp` espera es trabajo real:
+**es la estimación principal de la receta, no un detalle.**
+
+### Estimación y condiciones
+
+**6–8 semanas**: 2 para la carga + validación SHACL, 2–3 para el mapeo de esquema `cs:` → la forma que
+espera la puerta, 1 para la atribución y el pie de divulgación, 1–2 de piloto docente.
+
+⚠️ **Tres condiciones que NO se pueden omitir:**
+1. **Cargar los volcados localmente.** El endpoint SPARQL público (`dydra.com`) **no está verificado en
+   esta corrida** (dominio bloqueado) **y el publicador lo anuncia 試験公開中** — *publicación de
+   prueba*. **Una receta no depende de un endpoint que su propio dueño llama experimental.**
+2. **La atribución es obligatoria** (es CC BY): la salida nombra a **MEXT** como 出典 y a
+   教育データプラス研究会 como publicador. **Es una línea de plantilla, y es la contraprestación entera.**
+3. **Validar con las SHACL shapes antes de exponer** — vienen en el mismo dataset (71 KB), así que la
+   validación no se escribe: se corre.
+
+---
+
+## P181 — Una página bloqueada se lee por su FUENTE cuando es GitHub Pages (pase 65 del 2026-10-03)
+
+**El problema.** Este pase necesitó leer tres sitios y los tres estaban bloqueados por el proxy de
+egreso: `jp-cos.github.io`, `w3id.org`, `zenodo.org` (y `www.mext.go.jp`, `dydra.com`). La regla de
+esta base es **declarar el canal agotado** en vez de inferir — y el pase 64 lo hizo así con seis
+dominios alemanes.
+
+🔵 **Pero hay una clase de sitio donde el bloqueo NO es final: un sitio GitHub Pages se SIRVE DESDE UN
+REPOSITORIO, y `raw.githubusercontent.com` está abierto y sin límite de alcance.** La página que el
+proxy no deja ver **está versionada**, así que se lee por su fuente:
+
+```sh
+# jp-cos.github.io/about → EGRESS_BLOCKED
+curl -s https://raw.githubusercontent.com/jp-cos/jp-cos.github.io/HEAD/about.html   # 200, 124 KB
+curl -s https://raw.githubusercontent.com/jp-cos/jp-cos.github.io/HEAD/index.html   # 200, 11 KB
+```
+
+**Y ahí estaba la cesión** (`CC BY 4.0`), que de otro modo se habría publicado como «corroborada por
+canal secundario» en vez de **medida**.
+
+### Cuándo aplica, y cómo no equivocarse
+
+1. **El dominio termina en `github.io`** (o el repo tiene un `CNAME`): el contenido vive en un repo.
+2. **El repo se adivina del dominio**: `<org>.github.io` → `<org>/<org>.github.io`.
+3. ⚠️ **Verificar la RAMA.** Pages puede servirse de una rama que no es la de omisión, y entonces la
+   ref `HEAD` de **P170** no la cubre. **Se mira `/branches/all` antes de concluir una ausencia.**
+   🟢 **Medido en este caso: `jp-cos/jp-cos.github.io` tiene UNA sola rama (`main`, por omisión), así
+   que la hipótesis de una `gh-pages` escondida quedó REFUTADA y P170 cubría el repo entero.**
+4. ⚠️ **Lo que esta vuelta NO resuelve:** un sitio que **no** es Pages (`www.mext.go.jp`,
+   `curriculumnacional.cl`, `zenodo.org`) **no tiene fuente pública**, y ahí el canal sigue agotado.
+   **Para un dataset de investigación eso duele en un lugar concreto: el depósito DOI de Zenodo es un
+   lugar canónico de licencia y quedó sin leer.**
+
+---
 
 ## P150 — Un fork no «hereda» ni «corrige»: hereda POR EJE, y la celda que uno no comparó queda abierta (agregado en el pase 60 del 2026-10-03)
 

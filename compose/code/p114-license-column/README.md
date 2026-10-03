@@ -6,6 +6,26 @@ updated: 2026-10-03
 
 # `p114-license-column` — la columna Licencia de `agents/top.md`, medida con P114
 
+> 🔴 **INSTRUMENTO SUPERADO — pase 65 del 2026-10-03, acción 2 del pase 64 ejecutada.**
+> `scan_license.sh` y `scan_altnames.sh` enumeraban **ramas** (`main`, `master`), y esa
+> especificación tiene dos ciegas medidas: **P170** (un repo cuya rama por omisión no es `main`
+> ni `master` se reporta sin licencia — `frappe/education` declara en `develop/license.txt`, y
+> sobre las 200 filas la forma acotada a ramas mal etiqueta **7 de 160** licenciados) y **P171**
+> (clasificar grepeando el CUERPO rotula GPL-3.0 como AGPL-3.0, porque el §13 de GPL-3.0 se
+> TITULA *«Use with the GNU Affero General Public License»*).
+> **`scan_license.sh` ahora delega en `../p170-headref-license-sweep/sweep_headref.sh`** (ref
+> `HEAD`, que cubre cualquier nombre de rama: 14 nombres × 1 ref). Los probes viejos se conservan
+> como **controles negativos fechados**: `scan_license.SUPERSEDED-2026-10-03.sh` y
+> `scan_altnames.SUPERSEDED-2026-10-03.sh`. El control reproduce el defecto a pedido:
+> sobre `frappe/education` el superado dice `sin-licencia` y el corregido lee `license.txt`.
+>
+> ⚠️ **Y la pregunta del ARCHIVO no es la única:** de las 32 filas que la capa de archivo llama
+> `UNLICENSED`, **10 declaran cesión dentro del dato o del manifiesto** — ver
+> `../p172-payload-license-sweep/` (**P172**, **P179**).
+>
+> 🔵 **Condición de vencimiento de esta acción, verificable:** si el pase 66 vuelve a escribir una
+> acción de licencia **con lista de ramas**, el reemplazo no se hizo.
+
 **Pase 51 del 2026-10-02.** Ejecuta la **acción 1** que el pase 50 dejó escrita: aplicar las cuatro
 preguntas de **P114** a **todos** los `github.com/org/repo` que cita `agents/top.md` y publicar la
 salida de **tres valores**.

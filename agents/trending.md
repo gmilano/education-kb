@@ -9,6 +9,66 @@ updated: 2026-10-03
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 > No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
 
+## 2026-10-03 — pase 65: la cesión estaba dentro del dato en 10 de 32 filas, y el identificador no es una cesión
+
+### 🔴 La cifra publicada se corrige: «32 sin licencia» era 22
+
+La acción 1 del pase 64 mandó abrir el **payload** de las 29 filas `UNLICENSED` que no son
+`FWU-DE`. **7 declaran cesión adentro.** Con las 3 de `FWU-DE` que el pase 64 ya había leído,
+**10 de las 32 no eran ausencias**, y el denominador real de la capa queda en **22**.
+
+| Fila | Dónde estaba | Qué dice | Clase |
+|---|---|---|---|
+| `DMontgomery40/mcp-canvas-lms` | `package.json` | `"license": "MIT"` | identificador |
+| `Timadey/proctor` | `package.json` | `"license": "MIT"` | identificador |
+| `ink-waffle/moodle-mcp` | `package.json` | `"license": "MIT"` | identificador |
+| `tejpalvirk/student` | `package.json` | `"license": "MIT"` | identificador |
+| `HKUDS/AI-Researcher` | `setup.cfg` | `license = MIT` | identificador |
+| `marcusgreen/moodle-tool_aiconnect` | `version.php` | otorgamiento GPL + `@copyright 2024 Marcus Green` | **cesión** |
+| `alvarogregori/moodle-ai-graded-assignment` | `lib.php` | otorgamiento GPL + `@copyright 2026 Alvaro Gregori` | **cesión** |
+
+🟢 **La relectura de las 23 filas del pase 51 que la acción pedía no costó un barrido aparte: están
+CONTENIDAS en estas 29** (`comm -23` da vacío). **5 de las 23 declaran en payload → aquella cifra
+estaba inflada un 22 %.**
+
+### 🔵 El patrón nuevo, que cambia qué se le entrega a legales (P179)
+
+Un `"license": "MIT"` de manifiesto **nombra** la licencia y no trae **ni titular, ni año, ni una
+línea del texto**. Es **P168** —el archivo de 19 bytes que es una afirmación y no una cesión—
+llevado a **cero bytes de otorgamiento**. El encabezado de fuente de Moodle, en cambio, trae la
+frase completa (*«you can redistribute it and/or modify it under the terms of…»*), **titular con
+nombre, año y versión**, y la GPL contempla explícitamente esa forma.
+
+⚠️ **Operativamente: las 5 de identificador se piden como trámite —la intención del autor está
+documentada— pero no se entregan como cesión. Las 2 de encabezado GPL se usan.**
+
+### 🔴 El identificador viaja por dos canales; el texto no viaja a ninguno
+
+| Paquete | repo | registro npm | ¿`LICENSE` en el tarball publicado? |
+|---|---|---|---|
+| `canvas-mcp-server` | MIT | **MIT** v2.2.3 | 🔴 **no** |
+| `@timadey/proctor` | MIT | **MIT** v1.2.6 | 🔴 **no** |
+| `@ink-waffle/moodle-mcp` | MIT | **MIT** v0.2.0 | 🔴 **no** |
+
+🔴 **Y dos manifiestos PROMETEN el archivo que no existe**: `DMontgomery40` y `Timadey` listan
+`"LICENSE"` en su array `files`, y no está ni en el repo (404 en 14 nombres) ni en el artefacto.
+**En `Timadey` la promesa es más vieja que el repo**: el pase 41 midió con `git log --all` que no
+hay `LICENSE` en **ningún commit de la historia**.
+⚠️ `tejpalvirk/student` **no está publicado en npm** (registro 404): un solo canal, sin corroborar.
+
+### 🟢 La fila más forkeada de la KB se da vuelta a favor
+
+La acción señaló `DMontgomery40/mcp-canvas-lms` porque **39 forks heredan la ausencia**. Medido:
+heredan una **cesión declarada** (MIT en manifiesto + registro). ⚠️ **Lo que heredan de verdad es
+un identificador sin texto**, así que la herencia mejora y no se resuelve.
+
+### ⚠️ Lo que este barrido NO puede afirmar
+
+La lista de rutas de payload es **por convención, no por listado**: `raw` no lista directorios y
+**`codeload.github.com` da 403 por el proxy de esta corrida** (medido), así que no se pudo bajar el
+árbol completo y grepearlo. **Las 22 `PAYLOAD-SILENT` son «silencio en los nombres probados», no
+«silencio probado».**
+
 ## 2026-10-03 — pase 64: el inventario de licencias pasa su propia auditoría, y una fila cotizaba un repo muerto
 
 ### 🟢 El barrido completo de las 200 filas, con el archivo leído — y el reparto no se movió
