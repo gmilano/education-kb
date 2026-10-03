@@ -106,6 +106,38 @@ updated: 2026-10-03
 > **Pase 27 del 2026-10-01:** se agrega **la columna que faltaba en veintiséis pasadas — ¿la vertical tiene puerta de agente?** Moodle **sí** (dos conectores **MIT**, uno que escribe notas) y Canvas **sí**; 🔴 **Open edX no tiene ninguna**, y es la de mayor huella pública en LATAM e India. **Las LMS son copyleft pero las puertas son MIT**, y por eso se pueden componer. Ver la sección del pase 27, abajo.
 
 
+## 🏫 Moodle: el «borrador» NO es una capacidad del conector, es una CASILLA de la instancia (pase 60 del 2026-10-03)
+
+🔴 **El dato de plataforma que cambia cómo se escribe un *statement of work* con Moodle, y que el pase 60
+midió en el código de la propia plataforma:** el estado «borrador» de una nota —`workflowstate =
+readyforreview`— **sólo existe si la *assignment* tiene `markingworkflow = 1`.** ⚠️ **Con
+`markingworkflow = 0` no hay borrador: cualquier escritura de nota PUBLICA, sin importar qué mande el
+conector.**
+
+| Qué decide | Dónde vive | Quién lo controla |
+|---|---|---|
+| Que exista el estado «borrador» | **casilla de la *assignment*** (`markingworkflow`) | 🔴 **el docente/instancia, NO el conector** |
+| Qué estado se escribe | `workflowstate` en `mod_assign_save_grade` | el conector |
+| Si el dato se puede LEER antes de escribir | `mod_assign_get_assignments` | 🟢 **el token que el conector YA tiene** |
+
+🟢 **Lo que esto habilita en una solución, y es barato:** el conector puede **verificar la casilla antes de
+escribir** con el mismo token, porque leerla exige `mod/assign:view` y escribir la nota exige
+`mod/assign:grade` —estrictamente más fuerte—. 🔵 **No hay permiso nuevo que pedirle al cliente: es un
+*read-before-write*, y está implementado en
+`compose/code/markingworkflow-read-before-write/`** (**P152**).
+
+🔴 **Lo que hay que poner en el *discovery* de cualquier engagement de corrección asistida sobre Moodle, y
+hoy no está en ningún checklist de esta base:** ⚠️ **«¿las *assignments* del alcance tienen el flujo de
+trabajo de calificación activado?»** Si la respuesta es no, **la promesa de «la AI deja un borrador y un
+humano libera» no se puede cumplir en esa instancia** — y el remedio correcto es **rehusar escribir**, no
+degradar a otro `workflowstate`, que es publicar con otro nombre.
+
+⚠️ **Y la advertencia de alcance, porque la tentación es generalizar: esto NO vale para Canvas.** Canvas no
+tiene *marking workflow*; la publicación depende de `post_manually` / `posting_policy` del *assignment*, y
+**ninguna** de las puertas de Canvas que esta KB midió lo consulta. **Es otra medición y otro parche.**
+⚠️ **Medido sobre Moodle `main` (5.3rc2 build 20261002); un cliente en 4.x necesita la misma lectura sobre
+su rama** (**gap 252**).
+
 ## 🔧 El requisito de configuración de plataforma se INVIERTE: protege a la puerta buena, no de la mala (pase 59 del 2026-10-03)
 
 **El pase 58 dejó escrito el requisito como una defensa:** activar *Marking workflow* en Moodle

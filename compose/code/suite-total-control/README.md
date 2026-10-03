@@ -1,3 +1,9 @@
+---
+industry: education
+region: Global
+updated: 2026-10-03
+---
+
 # `suite-total-control/` — la regla de P126, hecha ejecutable
 
 **Qué prueba:** que un contador de aserciones **por vocabulario** (el instrumento casero que el

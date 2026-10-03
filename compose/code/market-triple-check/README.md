@@ -1,3 +1,9 @@
+---
+industry: education
+region: Global
+updated: 2026-10-03
+---
+
 # `market-triple-check` — control de consistencia de ternas de mercado (P125, pase 54 del 2026-10-03)
 
 ## Qué problema resuelve

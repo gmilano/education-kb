@@ -1,3 +1,9 @@
+---
+industry: education
+region: Global
+updated: 2026-10-03
+---
+
 # `mcp-allowlist-gateway` — the generic P85 piece (gap 103, closed in pass 48)
 
 **What this is:** the allowlist gateway **P85** documents in `compose/patterns.md` and

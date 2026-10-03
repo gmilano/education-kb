@@ -1,3 +1,9 @@
+---
+industry: education
+region: Global
+updated: 2026-10-03
+---
+
 # `p114-license-column` — la columna Licencia de `agents/top.md`, medida con P114
 
 **Pase 51 del 2026-10-02.** Ejecuta la **acción 1** que el pase 50 dejó escrita: aplicar las cuatro

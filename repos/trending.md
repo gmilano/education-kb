@@ -8,6 +8,62 @@ updated: 2026-10-03
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 
+## 2026-10-03 (pase 60) — **el dato crudo: 2 pares de fork diffeados archivo por archivo (18 descargas), 1 árbol de Moodle leído por línea, 3 controles negativos de canal corridos ANTES de leer, y 1 extractor propio que falló devolviendo «idéntico»**
+
+### 🟢 La nota de canal, primero, y esta vez CIERRA una pregunta en vez de abrirla
+
+**Los tres controles negativos corrieron antes de leer nada** (regla de **P126**):
+
+| Control | Resultado | Qué habilita |
+|---|---|---|
+| Rama inexistente (`zzz-no-such-branch-9999`) | **`404`** | el canal discrimina rama |
+| Archivo inexistente (`NO_SUCH_FILE_9999.md`) | **`404`** | discrimina archivo |
+| Repo inexistente (`no-such-repo-9999`) | **`404`** | discrimina repo |
+
+🟢 **Así que un `200` de este pase significa algo** — y la pregunta de canal que el pase 59 dejó abierta
+queda **CONTESTADA por medición**: `codeload.github.com` **`403`**, `api.github.com` **`403`**,
+`raw.githubusercontent.com` archivo por archivo **ES** el canal correcto. 🔵 **Se retira del pedido de
+permisos del pase 61: ya no hay que gastar un intento en averiguarlo.**
+
+### Los repos tocados, con lo que se midió en cada uno
+
+| Repo | Licencia | Qué se hizo | Resultado |
+|---|---|---|---|
+| [`bruchris/canvas-lms-mcp`](https://github.com/bruchris/canvas-lms-mcp) | **MIT** | madre del par A; 10 archivos descargados | referencia |
+| [`algorithm0r/canvas-lms-mcp`](https://github.com/algorithm0r/canvas-lms-mcp) | **MIT** | fork del par A; 10 archivos diffeados | 🟢 **byte a byte idéntico, 10/10** |
+| [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | **MIT** | madre del par B; 9 archivos descargados | referencia |
+| [`abr-Projects/canvas-mcp`](https://github.com/abr-Projects/canvas-mcp) | **MIT** | fork del par B; 9 archivos diffeados | 🔴 **difiere en 8; idéntico en el eje** |
+| [`moodle/moodle`](https://github.com/moodle/moodle) | **GPL-3.0** | `public/mod/assign/externallib.php`, 3.146 líneas | 🟢 **`gap 250` cerrado** |
+
+**Las cuatro licencias del cuadrilátero Canvas re-verificadas en este pase leyendo el archivo `LICENSE`
+de cada repo: las cuatro MIT.** ⚠️ **`moodle/moodle` es GPL-3.0 y eso no cambia: se LEE como fuente de
+verdad sobre el web service, no se incorpora a un entregable.**
+
+### 🔴 El tamaño de la divergencia del par B, en bytes
+
+| Archivo | Madre | Fork | Δ |
+|---|---|---|---|
+| `src/canvas_mcp/tools/rubrics.py` | 83.623 | 59.436 | **−29 %** |
+| `src/canvas_mcp/tools/assignments.py` | 60.153 | 53.290 | −11 % |
+| `src/canvas_mcp/core/client.py` | 36.263 | 34.711 | −4 % |
+| `src/canvas_mcp/server.py` | 35.587 | 34.521 | −3 % |
+| `src/canvas_mcp/tools/student_write.py` | 43.997 | 46.665 | **+6 %** |
+| `src/canvas_mcp/tools/peer_reviews.py` | 10.695 | 10.345 | −3 % |
+| `README.md` | 39.479 | 37.048 | −6 % |
+| `pyproject.toml` | 4.056 | 4.065 | +0,2 % |
+
+⚠️ **Y una diferencia de SUPERFICIE que los bytes no muestran: la madre importa 26 registradores de
+herramientas y el fork 25 — falta `register_educator_course_tools`.**
+
+### 🔴 El defecto propio, que es el de siempre y hay que dejarlo escrito
+
+**El primer extractor de funciones de este pase devolvió 7 líneas para una función de 256**, y por lo
+tanto un `diff` de **0 líneas**: un **«IDÉNTICO» falso**. Rompía en la firma multilínea de
+`async def bulk_grade_submissions(`. 🔵 **Lo atrapó el control de plausibilidad —una función de calificado
+masivo no tiene 7 líneas—, no el `diff`.** 🔴 **Tercera reproducción de la forma: un extractor con pérdida
+no falla ruidosamente; devuelve un número más chico y más confiado.** ⚠️ **De haberse publicado, este
+archivo diría «el fork B es idéntico» — la conclusión exactamente opuesta a la verdadera.**
+
 ## 2026-10-03 (pase 59) — **el dato crudo: 16 repos tocados, 5 archivos de código leídos para el eje de publicación, 3 licencias probadas en 2 ramas cada una, 2 forks con padre declarado y 1 canal de verificación que hubo que cambiar**
 
 ### 🔴 La nota de canal, primero, porque invalida un método que esta base usaba

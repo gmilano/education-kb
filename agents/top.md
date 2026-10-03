@@ -8,6 +8,8 @@ updated: 2026-10-03
 
 > Agentes y herramientas AI open source para educación. Foco: MIT / Apache 2.0 / BSD.
 > Verificado repo por repo vía WebFetch el 2026-09-30 (stars y licencia leídos de la página del repo).
+> **Pase 60 del 2026-10-03:** 🔴 **La acción 1 del pase 59 CIERRA y su hipótesis falsable cae en una TERCERA rama que no había previsto. Los dos pares de fork dan veredictos OPUESTOS sobre la misma pregunta y los dos son correctos: `algorithm0r/canvas-lms-mcp` es byte a byte idéntico a `bruchris/canvas-lms-mcp` en los DIEZ archivos leídos —incluido `src/canvas/submissions.ts`, el del eje—, mientras que `abr-Projects/canvas-mcp` DIVERGE de `vishalsachdev/canvas-mcp` en ocho archivos y en 42 líneas de `bulk_grade_submissions`… y sin embargo es IDÉNTICO en el eje de publicación (1 `posted_grade`, 0 consultas de política en los dos).** 🟢 **Así que el denominador de 9 se SOSTIENE y P146 se confirma —pero sólo para ese eje.** 🔴 **Lo que cae es la lectura cómoda: la divergencia del par B cae entera sobre el eje de seguridad VECINO —la precondición de rúbrica— y el fork está del lado LAXO en las cuatro celdas: pierde la verificación POST-escritura `rubric_grade_is_confirmed` (2 usos → 0), convierte un aborto duro en `if "error" not in assignment_check:` —sigue y califica— y condiciona el segundo aborto a `and not dry_run`. Es un snapshot viejo que perdió el endurecimiento de la madre, no una mejora. « Identificar por commit » NO es una precaución de inventario: es sustantiva, en el eje que uno no estaba mirando** (**P150**). 🔵 **De ahí la regla general del pase: la herencia de un fork es RELATIVA AL EJE, nunca global — « es fork de X » cierra la celda que se comparó y deja abiertas todas las demás** (**P151**). 🟢 **Y la acción 2 CIERRA en su rama BUENA, que es la comercialmente útil: `markingworkflow` viene con el token normal. Leído de primera mano en `moodle/moodle` @ `main` (`public/mod/assign/externallib.php`, 3.146 líneas, 5.3rc2 build 20261002): el campo se asigna SIN condicional (l. 464), está en el contrato de salida y NO es `VALUE_OPTIONAL` (l. 584, contra 10 campos que sí lo son), y la única capacidad exigida es `require_capability('mod/assign:view')` (l. 401). Como escribir nota exige `mod/assign:grade` (l. 1033), el argumento es *a fortiori*: toda puerta que pueda CALIFICAR puede, por construcción, LEER la precondición. El *read-before-write* es código, no una escalada de permisos ni un pedido al cliente — y para `toshieji` es el PR de tres líneas que vuelve INCONDICIONAL su garantía** (**P152**). 🟢 **`gap 250` CERRADO** (el árbol se mudó a `public/`: `200` contra `404`). ⚠️ **Dos correcciones de método: la ruta que el pase 59 prescribió (`src/services/canvas-client.ts` en `algorithm0r`) NO EXISTE —es de `CharlieCardenasToledo/mcp-canvas-server`, colisión de ruta entre dos repos del mismo pase (**gap 251**)—; y el primer extractor de funciones de este pase devolvió 7 líneas para una función de 256 y un `diff` de 0: un «IDÉNTICO» falso que, de haberse publicado, era la conclusión opuesta a la verdadera.** Ver **P150**–**P152** y las tendencias **413**–**425**.
+>
 > **Pase 59 del 2026-10-03:** 🔴 **la acción 2 del pase 58 CIERRA y su hipótesis falsable cae en la rama de la UNICIDAD: ampliado el barrido de 6 a 9 puertas de escritura de nota leídas en el CÓDIGO, `peancor/moodle-mcp-server` sigue siendo la ÚNICA que AFIRMA la publicación. «Afirma la publicación» NO es una clase de la capa: es UNA fila, y la regla de entrega se confirma — se EXCLUYE, no se configura** (**P142** se sostiene). 🔴 **Y aparece la simetría que reencuadra toda la capa: el eje es BIPOLAR y ESCASO. Sólo 2 de 9 toman posición en el código, y son los dos extremos — `peancor` cablea `workflowstate: 'released'` y `toshieji/moodle-grading-mcp` cablea `"workflowstate": "readyforreview"` con `"released": False` (verificado en `server.py:570` de primera mano en este pase, no en el README). Las otras 6 no dicen nada: heredan. 🔴 **Pero NINGUNO de los dos polos consulta la precondición, así que las dos garantías son CONDICIONALES y en sentidos opuestos: a `peancor` no la salva `markingworkflow=1`, y a `toshieji` la DERROTA `markingworkflow=0`.** El único cumplimiento incondicional sigue siendo `AI-Teaching-Agent`, que no puede publicar (**P145**). 🔴 **Hallazgo estructural NUEVO y cambia cómo se cuenta esta capa: las puertas de Canvas se propagan por FORK. `algorithm0r/canvas-lms-mcp` es fork CONFIRMADO de `bruchris/canvas-lms-mcp` y `abr-Projects/canvas-mcp` es fork CONFIRMADO de `vishalsachdev/canvas-mcp` —ambos MIT, ambos escriben nota— así que heredan el camino de escritura ya medido y un barrido por REPO sobre-cuenta el código. La unicidad se cuenta sobre CÓDIGO DISTINTO, no sobre repos distintos** (**P146**). 🟢 **1 puerta NUEVA y no es fork: `CharlieCardenasToledo/mcp-canvas-server` (MIT, 0 ★, TS) — `posted_grade` crudo y CERO consultas de política de publicación en 60.194 bytes de `canvas-client.ts`; publica por OMISIÓN, así que la configuración correcta la neutraliza.** 🔴 **Y el dato de licencia que hay que decir antes de recomendar nada: el MCP de Moodle más estrellado que apareció en este barrido —`loyaniu/moodle-mcp`, 37 ★— NO TIENE LICENCIA: `LICENSE` ausente en `main` y `master` y sin clave `license` en `pyproject.toml`. Es inusable por Globant, y las que sí tienen licencia tienen 0 ★ — tercera reproducción de la curva invertida de P134/P138** (**P147**). ⚠️ **4 candidatas más SCREENEADAS y descartadas como puertas por ser de SÓLO LECTURA (`loyaniu`, `Jawadh-Salih/moodle-mcp-server` MIT-Go, `dddanielliu/NCCU-Moodle-MCP` sin licencia, `csmediapro/moodle-mcp-server` AGPL-3.0 *«Read-only — never modifies Moodle data»*) más `PabloPC05/mcp-usc`: se registran como ausencias MEDIDAS, no como silencio.** 🔴 **La acción 1 se entrega CON SU FIXTURE REFUTADO: el par que el pase 58 mandó usar de control negativo (acción 3 del pase 57 ↔ tendencia 392) NO EXISTE — el bloque de acciones del pase 57 cita gaps 249/232/100 y no afirma nada sobre fechas; la pregunta de las fechas es el `gap 56`, del pase 32, cerrado en el 39. El defecto que el pase 58 diagnosticó es real, pero su única evidencia era ella misma un error de cruce** (**P148**). ⚠️ **Nota de instrumento, segunda reproducción consecutiva: este entorno negó ejecutar el código clonado INCLUIDAS las suites OFFLINE, así que la suite nueva se publica con 17 asertos ESCRITOS y 0 CORRIDOS, declarado en su README.** Ver **P145**–**P148** y las tendencias **402**–**412**.
 > **Pase 58 del 2026-10-03:** 🔴 **la acción 1 del pase 57 CIERRA y su hipótesis falsable cae en la rama que obliga a trabajar: de las SEIS puertas de escritura de nota, leídas en el CÓDIGO y no en el README, **0 consultan la precondición de su plataforma** —`markingworkflow` en Moodle, `posting_policy`/`post_manually` en Canvas—, así que «borrador» es una palabra que esta capa usa sin respaldo y el requisito de Globant pasa a incluir la VERIFICACIÓN DE PLATAFORMA como paso obligado del despliegue.** 🔴 **Y aparece el eje que de verdad decide un despliegue, invisible desde el vocabulario de «borrador»: `peancor/moodle-mcp-server` manda `workflowstate: 'released'` CABLEADO en `src/index.ts`, de modo que es la ÚNICA de las seis que publica incluso con `markingworkflow=1` — 5 de 6 quedan NEUTRALIZADAS por la configuración correcta de la plataforma y 1 de 6 la DERROTA. Es la fila que hay que EXCLUIR, no la que hay que configurar** (**P142**). 🔵 **`NiccoloSalvini/mcp-moodle-staff` está fuera del eje por diseño y no por falta de dato: no llama al web service —*«the CSV import is Moodle's own way in»*—, así que la liberación humana es del PROCESO (una persona aprieta Importar en la UI) y no del servidor; ⚠️ pero el importador del libro de calificaciones tampoco pasa por marking workflow, así que no es «más seguro»** (**P143**). 🟢 **1 ALTA, la primera en DOCE pases, y entra por lo que CONTESTA: `littlecookie0722/AI-Teaching-Agent` (MIT verificado por el texto del `LICENSE`) cumple «borrador + liberación humana» incondicionalmente porque NO PUEDE publicar. El patrón no es una compuerta mejor adentro del camino de escritura: es separar la generación de la publicación** (**P144**). 🔴 **La acción 3 del pase 57 estaba CERRADA antes de escribirse y la cerró el propio pase 57 en su tendencia 392: las «dos fechas incompatibles» son DOS OBLIGACIONES DISTINTAS, no una contradicción — es el defecto del gap 54 aplicado ADENTRO, y el mecanismo es que la lista de acciones y la de tendencias se escriben por separado y nada las cruza.** 🟢 **Las fechas re-verificadas hoy por tres canales concordantes y la tabla del calendario re-anclada al 2026-10-03.** ⚠️ **Nota de instrumento que corrige al pase 52 en la dirección CONTRARIA: este entorno negó ejecutar el código clonado INCLUIDAS las suites OFFLINE, así que la columna «Hoy» del `README.md` NO se re-verificó y este pase no afirma ninguna de esas cifras como medida hoy.** Ver **P142**–**P144** y las tendencias **393**–**401**.
 > **Pase 57 del 2026-10-03:** 🔴 **el pase ejecuta las dos acciones del 56 y el hallazgo que manda borra la única celda verde que tenía la tabla de la capa docente: la garantía de borrador de `toshieji` —la ÚNICA pieza T2 y la única conforme al Artículo 50 de las ocho— NO es una propiedad del servidor, es una propiedad de una casilla de configuración POR TAREA que el servidor no mira, no documenta y no posee.** Leído de primera mano en `moodle/moodle` @ `main`, `public/mod/assign/locallib.php:2991-3001`, con el comentario del propio Moodle: *«If marking workflow is enabled, the workflow state is at 'released'»* y su SQL `WHERE (a.markingworkflow = 0 OR (a.markingworkflow = 1 AND uf.workflowstate = :wfreleased))`. 🔴 **Con `markingworkflow = 0` Moodle le manda la nota al alumno sea cual sea el `workflowstate`, y en `locallib.php:7960` el cambio de estado no se registra siquiera. El README de `toshieji` dice «Safety (enforced server-side)» y «No student notification (draft state)», y tiene CERO menciones de `markingworkflow` en sus 8.326 bytes** (**P139**). ⚠️ **Así que el T2 incondicional de la capa es 0 de 8, no 1 de 8.** 🔵 **La hipótesis falsable de la acción 1 cae por SEGUNDO pase consecutivo en el medio que ella misma declaró sin interpretar: la compuerta de arranque sobre la escritura de juicio da 3 de 8 (el 56 pidió ≥ 4 para «es la norma» y ≤ 2 para «hallazgo de riesgo»), así que no decide — pero como en el pase 54 apareció un predictor mejor que un porcentaje.** 🔴 **La escalera G0–G3 del pase 56 suelda DOS EJES INDEPENDIENTES: «impedir listar el tool» no es una propiedad de la granularidad.** `Dymayo` tiene la compuerta más gruesa (un booleano por ROL) y **sí** desregistra (*«Tools behind a disabled flag are not registered at all»*); `toshieji` tiene una más fina (allowlist por RECURSO) y **no** desregistra; y `CANVAS_ROLE` de `bruchris` filtra el listado **sin ser un límite**, dicho por el propio proyecto: *«`CANVAS_ROLE` hides tools from a listing; `block` means the handler is never registered»* (**P137**). 🔴 **Y el eje que de verdad decide un despliegue no está en la escalera: el SENTIDO DEL DEFECTO.** La compuerta más fina de las ocho —`ALLOWED_WRITE_TOOLS`, nacida de un *security release*— es **fail-OPEN en stdio**, que es el despliegue normal de un docente: *«HTTP servers are read-only unless configured … Local stdio servers are unchanged unless you set it»*. **De las 3 piezas con compuerta real sobre la nota, sólo 2 son fail-closed por defecto en local, y las dos tienen 0 ★ mientras la de 272 ★ es la fail-open** (**P138**, misma curva invertida que P134). ⚠️ **`bruchris` desregistra de verdad (`CANVAS_DESTRUCTIVE_TOOLS=block`) pero sobre los SIETE tools de borrado: la nota no está cubierta, así que en este eje es G0 — la compuerta más honesta de la capa apunta al objeto equivocado** (**P140**). 🟢 **Acción 2 cerrada con código versionado: `compose/code/grading-draft-gate/` (37/37, OFFLINE), con los controles negativos que el 56 exigió y tres mutaciones que prueban que la suite tiene dientes (31/37, 36/37, 35/37).** 🟢 **Y una pregunta hacia afuera del pase 56 se contesta MIDIENDO en vez de preguntando: `mcp-moodle-teacher` y `mcp-moodle-staff` sirven el MISMO README byte a byte (sha256 idéntico) y el canónico es `mcp-moodle-staff`, que es el que titula** — con control negativo de tres nombres plausibles del mismo dueño en 404. ⚠️ **La tabla NO crece (80 filas, 0 altas): undécimo pase sin altas.** Ver **P137**–**P141** y las tendencias **370**–**392**.
@@ -619,6 +621,159 @@ ecosistema.** ⚠️ **Dos instrumentos de este mismo pase dieron falsos positiv
 control** — un `grep` CJK orientado a bytes dio 8–23 coincidencias en 4 de 4 archivos que tienen cero, y
 una lista de palabras-marca de italiano dio 12–15 en 5 de 5 por compartir `per`/`con`/`file` con el
 inglés. **Ninguno se publicó como dato.** Ver **P130** y la tendencia **326**.
+
+## 🧬 La HERENCIA del fork, medida archivo por archivo — y la hipótesis del pase 59 cae en una TERCERA rama que no había previsto (acción 1 del pase 59, cerrada en el pase 60)
+
+**Canal:** `raw.githubusercontent.com`, rama `main`, archivo por archivo. **Controles negativos corridos
+ANTES de leer nada** (regla de **P126**): rama inexistente → `404`, archivo inexistente → `404`, repo
+inexistente → `404`. 🟢 **El canal discrimina, así que un `200` significa algo.** ⚠️ **`codeload.github.com`
+y `api.github.com` siguen en `403`: cuarta reproducción consecutiva.**
+
+### 🔴 La corrección de método que va antes de la tabla: la ruta que el pase 59 prescribió NO EXISTE
+
+El pase 59 mandó leer **`src/services/canvas-client.ts` en `algorithm0r/canvas-lms-mcp`**. 🔴 **Ese archivo
+no existe en ese repo** (`404`). **La ruta pertenece a `CharlieCardenasToledo/mcp-canvas-server`**, que es
+la pieza que el propio pase 59 dio de alta tres párrafos antes. 🔵 **Es una colisión de ruta entre dos
+repos del mismo pase, y se corrige sola si la acción cita `repo + ruta` en vez de ruta suelta** (**gap 251**).
+**La ruta real del eje en `canvas-lms-mcp` es `src/canvas/submissions.ts`.**
+
+### El par A — `bruchris` → `algorithm0r`: IDÉNTICO, byte a byte, en los nueve archivos
+
+| Archivo | Madre (bytes) | Fork (bytes) | Veredicto |
+|---|---|---|---|
+| `README.md` | 43.022 | 43.022 | 🟢 idéntico |
+| `package.json` | 2.883 | 2.883 | 🟢 idéntico |
+| `src/tools/index.ts` | 8.159 | 8.159 | 🟢 idéntico |
+| `src/canvas/index.ts` | 4.739 | 4.739 | 🟢 idéntico |
+| `src/canvas/client.ts` | 5.357 | 5.357 | 🟢 idéntico |
+| **`src/canvas/submissions.ts`** | **6.258** | **6.258** | 🟢 **idéntico — es el archivo del eje** |
+| `src/tools/catalog.ts` | 7.898 | 7.898 | 🟢 idéntico |
+| `src/tools/submissions.ts` | 7.004 | 7.004 | 🟢 idéntico |
+| `src/tools/assignments.ts` | 13.070 | 13.070 | 🟢 idéntico |
+| `src/tools/destructive-policy.ts` | 6.659 | 6.659 | 🟢 idéntico |
+
+**El literal del eje, verbatim en las dos copias** (`src/canvas/submissions.ts`, método `grade`):
+
+```ts
+body: JSON.stringify({ submission: { posted_grade: grade } }),
+```
+
+🟢 **Cero menciones de `post_manually`, `posting_policy`, `postPolicy`, `hide_grade` o `unpost` en los diez
+archivos de CUALQUIERA de las dos copias.** ⚠️ **El fork ni siquiera cambió los *badges* de CI del README:
+siguen apuntando a `bruchris/canvas-lms-mcp`.**
+
+### 🔴 El par B — `vishalsachdev` → `abr-Projects`: DIVERGE, y ahí está el hallazgo
+
+| Archivo | Madre (bytes) | Fork (bytes) | Veredicto |
+|---|---|---|---|
+| `pyproject.toml` | 4.056 | 4.065 | 🔴 difiere |
+| `README.md` | 39.479 | 37.048 | 🔴 difiere |
+| `src/canvas_mcp/server.py` | 35.587 | 34.521 | 🔴 difiere |
+| `src/canvas_mcp/core/client.py` | 36.263 | 34.711 | 🔴 difiere |
+| **`src/canvas_mcp/tools/assignments.py`** | **60.153** | **53.290** | 🔴 **difiere — es el archivo del eje** |
+| `src/canvas_mcp/tools/rubrics.py` | 83.623 | 59.436 | 🔴 difiere (−29 %) |
+| `src/canvas_mcp/tools/student_write.py` | 43.997 | 46.665 | 🔴 difiere |
+| `src/canvas_mcp/tools/peer_reviews.py` | 10.695 | 10.345 | 🔴 difiere |
+
+⚠️ **Y una diferencia de SUPERFICIE, no sólo de bytes: el fork no registra `register_educator_course_tools`.**
+La madre importa 26 registradores; el fork, 25.
+
+### 🔴 El resultado que ninguna de las dos ramas de la hipótesis describía (P150)
+
+El pase 59 escribió dos ramas: **«si el fork es idéntico en el eje, identificar por commit es una precaución
+de inventario»** o **«si DIVERGE, el fork es una fila propia y el denominador de 9 está mal contado»**.
+🔴 **El par B cae en una TERCERA: diverge en 42 líneas de `bulk_grade_submissions` —256 líneas en la madre,
+245 en el fork— y sin embargo es IDÉNTICO en el eje de publicación.**
+
+| Medición sobre `bulk_grade_submissions` | Madre | Fork |
+|---|---|---|
+| Líneas de la función | 256 | 245 |
+| Líneas de `diff` | — | **42** |
+| `submission[posted_grade]` | **1** | **1** |
+| Consultas de `post_manually` / `posting_policy` | **0** | **0** |
+
+🟢 **Así que el denominador de 9 SE SOSTIENE en el eje de publicación y P146 se confirma — pero sólo para
+ese eje.** 🔴 **Lo que NO se sostiene es la lectura cómoda de la primera rama: la divergencia del par B cae
+entera sobre un eje de seguridad VECINO —la precondición de rúbrica— y el fork está del lado LAXO en las
+cuatro celdas.**
+
+| Celda | Madre `vishalsachdev` | Fork `abr-Projects` | Dirección |
+|---|---|---|---|
+| Verificación POST-escritura `rubric_grade_is_confirmed` | **presente (2 usos)** | 🔴 **ausente (0 usos)** | fork más laxo |
+| Constante `RUBRIC_GRADE_UNCONFIRMED` | presente (2) | 🔴 ausente (0) | fork más laxo |
+| Si falla leer la config de rúbrica | 🟢 **aborta**: *«Could not verify rubric grading settings; no assessments were submitted.»* | 🔴 `if "error" not in assignment_check:` — **sigue y califica** | fork más laxo |
+| Si `use_rubric_for_grading` es falso | 🟢 **aborta siempre** | ⚠️ `if not use_rubric_for_grading and not dry_run:` | fork más laxo |
+| `include[]` al pedir la config | `["rubric", "rubric_settings"]` | `["rubric_settings"]` | fork pide menos |
+
+🔴 **La conclusión que cambia la recomendación, y es la de este pase: «identificar por commit» NO es una
+precaución de inventario. Es sustantiva — pero en el eje que uno no estaba mirando.** El fork es un
+**snapshot viejo que perdió el endurecimiento posterior de la madre**, no una modificación deliberada:
+pierde una verificación POST-escritura que existe para atrapar la nota que Canvas acepta y no guarda
+(**P150**).
+
+### 🔵 La regla general que deja este pase, y es la que hay que aplicar a las próximas 61 filas (P151)
+
+🔵 **La herencia de un fork es RELATIVA AL EJE, no global.** Un fork puede ser idéntico en el eje medido y
+divergente —y peor— en el de al lado. 🔴 **Por lo tanto «es fork de X» NUNCA cierra una celda por sí solo:
+cierra la celda del eje que se comparó, y deja abiertas todas las demás.** ⚠️ **El par A y el par B dan
+veredictos opuestos sobre la MISMA pregunta («¿hereda?»), y los dos son correctos: uno heredó todo y el
+otro heredó sólo el eje que medimos** (**P151**).
+
+### ⚠️ El defecto de instrumento que este pase se encontró a sí mismo, y es el de siempre
+
+🔴 **El primer extractor de funciones devolvió 7 líneas para una función de 256 y, en consecuencia, un
+`diff` de 0 líneas: un «IDÉNTICO» falso.** Rompía en la firma multilínea (`async def ...(` seguido de
+parámetros a la izquierda del margen). **Lo atrapó el control de plausibilidad —una función de grado masivo
+no tiene 7 líneas—, no el `diff`.** 🔵 **Tercera reproducción de la forma: un extractor con pérdida no falla
+ruidosamente; devuelve un número más chico y más confiado** (P107, pase 47, pase 49). ⚠️ **Si este pase
+hubiera confiado en la primera corrida, habría publicado «el fork B es idéntico» — la conclusión
+exactamente opuesta a la verdadera.**
+
+## 🔑 La PRECONDICIÓN se puede LEER con el token que la puerta YA tiene — medido en el código de Moodle (acción 2 del pase 59, cerrada en el pase 60)
+
+**Pregunta del pase 59, textual:** *«¿alguna de las nueve puertas puede verificar `markingworkflow` con el
+token que ya tiene?»* 🟢 **Respuesta: SÍ, las nueve, y sin pedir nada al cliente.**
+
+**Fuente, de primera mano:** `moodle/moodle` @ `main`, `public/mod/assign/externallib.php`, **3.146 líneas**,
+leído por `raw.githubusercontent.com` en este pase. 🟢 **`gap 250` CERRADO: el árbol efectivamente se mudó
+—`public/mod/assign/externallib.php` responde `200` y `mod/assign/externallib.php` responde `404`—.**
+**Versión del árbol leído:** `$release = '5.3rc2 (Build: 20261002)'`, `$version = 2026100200.00`.
+
+| Qué | Dónde, con número de línea | Qué dice |
+|---|---|---|
+| El campo se **selecciona** en SQL | `externallib.php:371` | `'m.markingworkflow, '` |
+| El campo se **asigna sin condicional** | `externallib.php:464` | `$assignment['markingworkflow'] = $module->markingworkflow;` |
+| El campo está en el **contrato de salida** | `externallib.php:584` | `'markingworkflow' => new external_value(PARAM_INT, 'enable marking workflow'),` |
+| La **única** capacidad exigida | `externallib.php:401` | `require_capability('mod/assign:view', $context);` |
+| La capacidad para **escribir** nota | `externallib.php:1033` | `require_capability('mod/assign:grade', $context);` |
+
+### 🟢 El argumento que cierra la pregunta, y es *a fortiori*
+
+🔴 **`mod/assign:view` es estrictamente MÁS DÉBIL que `mod/assign:grade`.** Toda puerta que pueda **escribir**
+una nota tiene, por construcción, la capacidad necesaria para **leer** `markingworkflow`. 🟢 **No hay un
+escenario en el que una de las nueve pueda calificar y no pueda consultar la precondición.** 🔵 **Por la
+rama que el propio pase 59 escribió: «si el dato viene con el token normal, entonces la verificación de
+plataforma es un PR de tres líneas y esta KB puede ofrecerlo hacia afuera».** **Es esa rama.**
+
+⚠️ **Tres precisiones que evitan que esto se cite mal:**
+
+1. 🟢 **El campo NO es `VALUE_OPTIONAL`.** En la misma estructura hay **10** campos que sí lo son
+   —`optionalmarkercount` y `preventsubmissionnotingroup` entre ellos—; `markingworkflow` **no**. **El
+   contrato garantiza que viene siempre**, no «si está configurado».
+2. ⚠️ **El parámetro `capabilities` de `get_assignments` (`externallib.php:333`, `has_all_capabilities`) es un
+   FILTRO DE CURSOS, no una compuerta de campos.** Pasarlo vacío —que es lo que hacen las nueve— no recorta
+   la estructura devuelta.
+3. ⚠️ **Esto se midió sobre `main` (5.3rc2), no sobre una LTS desplegada.** La celda vale para el árbol
+   leído; un cliente en 4.x necesita la misma lectura sobre su rama (**gap 252**).
+
+### 🟢 Lo que esto habilita, concretamente, y es trabajo cotizable
+
+🔵 **El parche es el mismo para las seis puertas silenciosas y para los dos polos: un *read-before-write*.**
+Llamar `mod_assign_get_assignments`, leer `markingworkflow`, y **rehusar escribir** si la casilla no sostiene
+la garantía que la pieza promete. 🔴 **No es una escalada de permisos ni un pedido al cliente: es código, y
+entra en el repo de la pieza.** 🟢 **Para `toshieji/moodle-grading-mcp` —la única que AFIRMA no publicar— es
+exactamente el PR de tres líneas que convierte su garantía CONDICIONAL en INCONDICIONAL, y es la
+contribución *upstream* más barata y más defendible que esta KB identificó hasta ahora** (**P152**).
 
 ## 🔬 La UNICIDAD de `peancor`, medida sobre NUEVE puertas (acción 2 del pase 58, cerrada en el pase 59)
 

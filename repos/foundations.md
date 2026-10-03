@@ -181,6 +181,37 @@ corre ése antes de escribir uno a mano** (tendencia **313**). 🟢 **Y el `gafa
 > sin saber de antemano qué archivo pedir— y además **fecha el `HEAD`**. Con `raw` no se habría encontrado ninguno de
 > los cuatro defectos del pase.
 
+## 🧱 `moodle/moodle` como FUENTE DE VERDAD del contrato de web service, no como dependencia (pase 60 del 2026-10-03)
+
+🔵 **El pase 60 usó `moodle/moodle` de una forma que esta sección no tenía registrada y que conviene
+dejar escrita como práctica: leerlo para resolver una pregunta de CONTRATO que ninguna de las piezas
+derivadas contesta.**
+
+| Dato | Valor |
+|---|---|
+| Repo | [`moodle/moodle`](https://github.com/moodle/moodle) |
+| Licencia | ⚠️ **GPL-3.0** |
+| Archivo leído | `public/mod/assign/externallib.php`, **3.146 líneas** |
+| Versión del árbol | `$release = '5.3rc2 (Build: 20261002)'`, `$version = 2026100200.00` |
+| Canal | `raw.githubusercontent.com` (`codeload` y `api.github.com` en `403`) |
+
+🟢 **Lo que resolvió, y no estaba en ningún README de las nueve puertas:** que `markingworkflow` se
+devuelve con el token normal —asignado sin condicional (l. 464), en el contrato y **no** `VALUE_OPTIONAL`
+(l. 584), con `require_capability('mod/assign:view')` como único gate (l. 401) contra el
+`mod/assign:grade` que exige escribir (l. 1033)—. 🔵 **Es un hecho del contrato de la plataforma, y por eso
+vale para las nueve piezas a la vez en vez de haber que medirlo una por una.**
+
+🔴 **La regla de uso, y es de licencia:** **GPL-3.0 se LEE como fuente de verdad, no se INCORPORA a un
+entregable.** Lo que sale de esta lectura es **conocimiento del contrato** —qué campo viene, con qué
+capacidad— y eso no es código derivado. ⚠️ **Lo que sí sería derivado es copiar su código a un
+entregable propietario: no se hizo y no se propone.**
+
+🟢 **`gap 250` cerrado por esta lectura:** el árbol de Moodle 5 se mudó a `public/` —
+`public/mod/assign/externallib.php` responde `200` y `mod/assign/externallib.php` responde `404`—, así
+que cualquier ruta de Moodle que esta KB citara con el prefijo viejo está desactualizada.
+⚠️ **`gap 252` abierto en su lugar:** esto es `main` (5.3rc2), **no** una LTS desplegada; un cliente en
+4.x necesita la misma lectura sobre su rama.
+
 ## 🧾 La LICENCIA se mide ANTES de la popularidad, y este pase tiene el contraejemplo más caro (pase 59 del 2026-10-03)
 
 **Cero plataformas nuevas: duodécimo pase con el barrido genérico devolviendo la capa de siempre**

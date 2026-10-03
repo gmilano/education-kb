@@ -1,3 +1,9 @@
+---
+industry: education
+region: Global
+updated: 2026-10-03
+---
+
 # `grading-draft-gate/` — el único patrón conforme de esta base, vuelto suite
 
 **Hoy: 37/37**, OFFLINE, sólo biblioteca estándar, sin red.

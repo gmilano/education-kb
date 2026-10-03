@@ -1,3 +1,9 @@
+---
+industry: education
+region: Global
+updated: 2026-10-03
+---
+
 # Provenance Policy
 
 Use one of these values for every consequential claim, task answer, rubric rule, feedback judgment, and Personal Skill rule:

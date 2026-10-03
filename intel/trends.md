@@ -5428,6 +5428,161 @@ inalcanzable desde este entorno**, así que las fechas de 399 son de tres canale
 primera mano**; (c) **`AI-Teaching-Agent` no declara región** y su único indicio es contenido bilingüe
 inglés/chino — **indicio débil, NO se infiere región** (regla de **P135**).
 
+## Las tendencias 413–425, del pase 60 del 2026-10-03
+
+**413.** 🔴 **La acción 1 del pase 59 cierra y su hipótesis falsable cae en una TERCERA rama: las dos que
+escribió —«idéntico en el eje» o «diverge en el eje»— no describen el resultado.** `abr-Projects/canvas-mcp`
+**diverge en 42 líneas** de `bulk_grade_submissions` (256 líneas en la madre, 245 en el fork) **y a la vez es
+IDÉNTICO en el eje medido**: `1` × `submission[posted_grade]` y `0` consultas de política en las dos copias.
+🔵 **Una hipótesis con dos ramas sobre un solo eje no puede describir un objeto con dos ejes** (**P150**).
+
+**414.** 🟢 **El denominador de 9 se sostiene y P146 se confirma — con el alcance recortado a UN eje.**
+`algorithm0r/canvas-lms-mcp` resultó **byte a byte idéntico** a `bruchris/canvas-lms-mcp` en los diez archivos
+leídos, `src/canvas/submissions.ts` incluido. ⚠️ **El fork ni cambió los *badges* de CI del README.**
+
+**415.** 🔴 **Lo que el pase descubrió al lado del eje, y cambia la recomendación: el fork del par B está del
+lado LAXO en las CUATRO celdas de la precondición de rúbrica.** Pierde `rubric_grade_is_confirmed` (2 usos →
+**0**) y `RUBRIC_GRADE_UNCONFIRMED` (2 → **0**); convierte el aborto duro de la madre en
+`if "error" not in assignment_check:` —**sigue y califica**—; condiciona el segundo aborto con
+`and not dry_run`; y pide `include[]=["rubric_settings"]` donde la madre pide `["rubric", "rubric_settings"]`.
+🔵 **Es un snapshot viejo que perdió el endurecimiento posterior, no una modificación deliberada.**
+
+**416.** 🔴 **Y por eso «identificar por commit» NO es una precaución de inventario, que es como la rama buena
+de la hipótesis la habría archivado: es sustantiva, y lo es en el eje que uno no estaba mirando.** La
+verificación que el fork perdió existe para atrapar **la nota que Canvas acepta y no guarda** — un fallo
+silencioso del lado del docente (**P150**).
+
+**417.** 🔵 **La regla general, y es la que hay que aplicar a las próximas filas: la herencia de un fork es
+RELATIVA AL EJE, no global.** Los dos pares contestan OPUESTO a la misma pregunta («¿hereda?») y los dos son
+correctos: uno heredó todo, el otro heredó sólo el eje medido. 🔴 **«Es fork de X» cierra la celda del eje que
+se comparó y deja abiertas todas las demás** (**P151**).
+
+**418.** 🟢 **La acción 2 del pase 59 cierra en su rama BUENA, que es la comercialmente útil: `markingworkflow`
+viene con el token normal.** Leído de primera mano en `moodle/moodle` @ `main`,
+`public/mod/assign/externallib.php` (**3.146 líneas**, `$release = '5.3rc2 (Build: 20261002)'`): el campo se
+**selecciona** en SQL (l. 371), se **asigna sin condicional** junto a `duedate` y `grade` (l. 464) y está en el
+**contrato de salida** (l. 584).
+
+**419.** 🟢 **El argumento que lo cierra es *a fortiori*, y por eso vale para las NUEVE puertas sin medir una
+por una: la única capacidad que exige `get_assignments` es `require_capability('mod/assign:view')` (l. 401), y
+escribir nota exige `mod/assign:grade` (l. 1033).** `view` es **estrictamente más débil** que `grade`. 🔴 **No
+existe el escenario en el que una puerta pueda calificar y no pueda leer la precondición.**
+
+**420.** 🟢 **El contrato GARANTIZA el campo, no lo ofrece: `markingworkflow` NO es `VALUE_OPTIONAL`**, contra
+**10** campos de la misma estructura que sí lo son (`optionalmarkercount`, `preventsubmissionnotingroup`, …).
+⚠️ **Y el parámetro `capabilities` de `get_assignments` (l. 333, `has_all_capabilities`) es un FILTRO DE
+CURSOS, no una compuerta de campos: pasarlo vacío —lo que hacen las nueve— no recorta la respuesta.**
+
+**421.** 🟢 **Lo que esto habilita es trabajo cotizable y una contribución *upstream* barata: el
+*read-before-write* es CÓDIGO, no una escalada de permisos ni un pedido al cliente.** 🔵 **Para
+`toshieji/moodle-grading-mcp` es el PR de tres líneas que convierte su garantía CONDICIONAL en INCONDICIONAL
+—la pieza que AFIRMA no publicar dejaría de depender de una casilla que hoy no consulta** (**P152**).
+⚠️ **Medido sobre `main` (5.3rc2), no sobre una LTS desplegada: un cliente en 4.x necesita la misma lectura
+sobre su rama** (**gap 252**).
+
+**422.** 🟢 **`gap 250` CERRADO, y con el control que lo hace afirmable:** `public/mod/assign/externallib.php`
+responde **`200`** y `mod/assign/externallib.php` responde **`404`** — el árbol de Moodle 5 efectivamente se
+mudó a `public/`. 🟢 **Los tres controles negativos del canal corrieron ANTES de leer nada** (rama, archivo y
+repo inexistentes → `404` los tres), así que un `200` de este pase significa algo. ⚠️ **`codeload.github.com`
+y `api.github.com` siguen en `403`: cuarta reproducción, y `raw.githubusercontent.com` archivo por archivo
+queda confirmado como EL canal.**
+
+**423.** 🔴 **El defecto de instrumento que este pase se encontró a sí mismo, y es la tercera reproducción de
+la misma forma: el primer extractor de funciones devolvió 7 líneas para una función de 256 y, por lo tanto, un
+`diff` de 0 — un «IDÉNTICO» falso.** Rompía en la firma multilínea. **Lo atrapó el control de plausibilidad,
+no el `diff`.** 🔵 **Un extractor con pérdida no falla ruidosamente: devuelve un número más chico y más
+confiado** (P107, pases 47 y 49). ⚠️ **De haberse publicado, era la conclusión EXACTAMENTE OPUESTA a la
+verdadera** — y habría archivado el hallazgo de 415 como «no hay nada que ver».
+
+**424.** 🔴 **Hallazgo estructural que este pase encontró con un control propio y no estaba buscando: la
+numeración de patrones tiene NUEVE números citados que NUNCA se definen, y suman 114 citas colgadas.**
+`compose/patterns.md` salta de **P125** a **P131** y de **P131** a **P136**: **P126, P127, P128, P129,
+P130, P132, P133, P134 y P135 no tienen encabezado de definición en ningún archivo de esta KB.**
+
+| Patrón citado | Citas | Archivos | ¿Definido? |
+|---|---|---|---|
+| **P135** | **23** | **8** | 🔴 no |
+| **P126** | **21** | 7 | 🔴 no |
+| **P134** | **19** | 5 | 🔴 no |
+| **P132** | **17** | 7 | 🔴 no |
+| **P129** | **12** | 5 | 🔴 no |
+| **P127** | 8 | 5 | 🔴 no |
+| **P133** | 6 | 3 | 🔴 no |
+| **P130** | 5 | 3 | 🔴 no |
+| **P128** | 3 | 3 | 🔴 no |
+| **TOTAL** | **114** | — | — |
+
+🔵 **Control positivo corrido para habilitar la medición: `P142`, que SÍ está definido, resuelve con 23
+citas** — así que el instrumento distingue definido de colgado y el 114 no es un artefacto del `grep`
+(**gap 253**).
+
+**425.** 🔴 **Y lo que esto dice del método, que es peor que el número: esta KB CONSTRUYÓ un instrumento
+para exactamente este defecto —`compose/code/trend-backlink-audit/`, pase 49— y lo construyó sólo para las
+TENDENCIAS.** Las tendencias tienen **0 citas colgadas** y están auditadas cada pase; **los patrones no
+tienen auditoría y tienen 114.** 🔵 **El defecto no es que falte rigor: es que el rigor se aplicó a un eje y
+el de al lado quedó sin cubrir** — ⚠️ **que es, literalmente, la misma forma que P151 acaba de nombrar para
+los forks, encontrada en el mismo pase sobre la propia KB.** 🔴 **P126 y P135 son los más citados de los
+nueve y son, los dos, reglas de MÉTODO que esta base invoca para justificar mediciones** («la regla de
+P126» para los controles negativos, «la regla de P135» para no inferir región de un antropónimo): **se
+están usando como autoridad y no tienen texto.**
+
+### 🌍 El barrido regional del pase 60, con lo que rindió cada región
+
+| Región | ¿Rindió? | Lo que trajo |
+|---|---|---|
+| **North America** | 🟢 **sí** | Mercado NA de AI en educación **951 M USD (2024) → 2.303,2 M USD (2029), CAGR 15,9 %**; superior reconocido en **285,7 M USD (2024)**. **66 % de las instituciones de educación superior ya usan AI, contra 49 % en 2024**; **86 % de los estudiantes** (16 países) la usa. ⚠️ **El hueco sigue siendo de gobernanza, no de herramienta: sólo 37 % recibe formación continua y 80 % del profesorado pide formación específica de su rol** — concuerda con el 58 % sin guía para CALIFICAR del pase 59 |
+| **EMEA** | 🟢 **sí, y trajo el IDENTIFICADOR que faltaba** | 🟢 **El *AI Omnibus* tiene número oficial y esta KB no lo tenía: `Regulation (EU) 2026/1744`, DOUE **2026-07-24**, en vigor **2026-07-27** (entrada a 3 días, no a 20). Las tres filas del calendario del Art. 50 se sostienen palabra por palabra y suman un CUARTO canal concordante.** 🔴 **Precisión que evita una mis-atribución futura: el Omnibus SÍ agregó dos prohibiciones nuevas al Art. 5 —imágenes íntimas no consentidas y CSAM— y NINGUNA toca educación.** Alto riesgo del Anexo III diferido a **2027-12-02**; Anexo I a **2028-08-02** |
+| **APAC** | 🟢 **sí** | Estudio comparado de Clarivate sobre **siete** jurisdicciones (China continental, India, Japón, Malasia, Singapur, Corea del Sur, Taiwán). ⚠️ **Sólo ~32 % de las instituciones de APAC empezó su recorrido de AI** — la brecha con NA (66 %) es de **34 puntos**. **Asia oriental (China, Japón, Corea) con coherencia de política avanzada; Sudeste asiático y Pacífico en etapa naciente.** Informe 2026 sobre **433 instituciones** |
+| **LATAM** | 🟢 **sí** | **DEC LATAM 2026 re-confirmada por canal independiente: 92 % de alumnos y 79 % de docentes usan AI**, con el salto docente de **61 % → 79 % (+18 pp)** contra la global 2025. **94 % del profesorado espera usarla; 65 % de los alumnos teme aprendizaje superficial y 61 % teme mal uso por pares.** 🔴 **Y el dato de gobernanza, que es el que vende: sólo 30 % cree que su institución respondió bien.** México: adopción **75,4 %** empujada por iniciativa INDIVIDUAL, *«ausencia de lineamientos formales»*. Brasil: CIAED 2026 con la regulación como eje |
+
+🟢 **Las cuatro regiones rindieron: este pase tampoco tiene región en silencio.** ⚠️ **Y los huecos que se
+declaran en vez de taparse:** (a) 🔴 **ninguna de las nueve puertas declara origen LATAM — décimocuarto pase
+con el hueco abierto**, y los dos forks medidos en este pase (`algorithm0r`, `abr-Projects`) **tampoco
+declaran región**, igual que la madre de cada uno; (b) **el texto consolidado del AI Act sigue inalcanzable:
+`gap 92` reconfirmado por sexto pase** — `eur-lex.europa.eu`, `artificialintelligenceact.eu`,
+`gibsondunn.com`, `usercentrics.com` y `ai-law-tracker.com` dieron **`EGRESS_BLOCKED`** en este pase, así que
+`Regulation (EU) 2026/1744` viene de secundarias concordantes y **no** de primera mano; (c) ⚠️ **la asimetría
+NA/APAC (66 % contra 32 %) está medida con instrumentos DISTINTOS y no debe presentarse como una sola serie.**
+
+## 🔵 Las tres acciones que el pase 60 deja escritas para el pase 61
+
+⚠️ **El orden cambió respecto de lo que este pase había redactado a mitad de camino: la acción 2 era el
+barrido retroactivo de forks (P151), y la DESPLAZA el hallazgo 424 — 114 citas colgadas es un defecto de
+integridad que afecta a ocho archivos y a dos reglas de método que esta base usa como autoridad.** 🔵 **El
+barrido de forks NO se descarta: queda explícitamente diferido al pase 62, con su motivo escrito, para que
+no desaparezca en silencio.**
+
+1. 🟢 **Entregar el *read-before-write* como PR real a `toshieji/moodle-grading-mcp`, que es lo que 418–421
+   habilitaron y es la contribución *upstream* más barata que esta KB identificó** (**421**). 🟢 **El pase 60
+   ya dejó el parche ESCRITO y versionado en
+   `compose/code/markingworkflow-read-before-write/toshieji.patch`, con la implementación de referencia y 20
+   asertos.** **La acción concreta del pase 61:** validar el parche contra el árbol real y, **con
+   autorización explícita**, abrirlo. 🔵 **Hipótesis falsable y las dos ramas sirven: si entra en menos de
+   ~25 líneas sin tocar la firma de la herramienta MCP, el *read-before-write* es receta reusable para las
+   nueve y se publica como patrón; si exige reestructurar el cliente, es trabajo de engagement y se cotiza
+   por pieza.** 🔴 **El PR no se abre sin autorización: es una acción con efecto externo.**
+
+2. 🔴 **Cerrar las 114 citas colgadas de patrón, y construir el control que faltaba** (**424**, **425**,
+   **gap 253**). Esta KB audita las citas de TENDENCIA cada pase y tiene 0 colgadas; **no audita las de
+   PATRÓN y tiene 114, sobre nueve números que nunca se definieron.** **La acción concreta, en este orden:**
+   **(a)** escribir el espejo de `trend-backlink-audit/` para patrones —`compose/code/pattern-backlink-audit/`—
+   **con control positivo obligatorio** (tiene que FALLAR sobre `P135` y PASAR sobre `P142`, que es el par
+   real que el pase 60 midió); **(b)** definir los nueve, **empezando por `P126` y `P135`**, que son reglas de
+   método invocadas como autoridad en 21 y 23 citas. ⚠️ **Y la regla de honestidad que gobierna (b): el texto
+   de cada patrón se RECONSTRUYE desde las citas existentes, que dicen qué regla se aplicó; donde las citas
+   no alcancen para reconstruirlo, el patrón se declara INDEFINIDO y se retiran sus citas — no se inventa la
+   definición para que cierre el número.**
+
+3. ⚠️ **Pedir el permiso angosto y correcto, ahora CON SU RAZÓN LITERAL, que es lo que faltaba en los pases
+   58 y 59** (**412**). 🔴 **Cuarta reproducción consecutiva de la negativa**, y este pase la provocó de
+   primera mano y leyó el motivo: **`[Code from External]`**. 🟢 **Eso vuelve el pedido mucho más angosto de
+   lo que los pases anteriores podían formularlo: no es `python3` —este pase corrió `python3` inline sin
+   problema— ni es red; es específicamente *ejecutar código proveniente del árbol clonado*. **El pedido:
+   permiso para correr las suites OFFLINE de `compose/code/`.** 🟢 **Y la otra mitad del pedido del pase 59 se
+   RETIRA por haber quedado contestada por medición: `codeload.github.com` da `403`, y
+   `raw.githubusercontent.com` archivo por archivo ES el canal correcto, con sus tres controles negativos
+   corridos.** 🔵 **Queda UN solo pedido, y no incluye red.**
+
 ## Las tendencias 402–412, del pase 59 del 2026-10-03
 
 **402.** 🔴 **La acción 2 del pase 58 cierra y su hipótesis falsable cae en la rama de la UNICIDAD:

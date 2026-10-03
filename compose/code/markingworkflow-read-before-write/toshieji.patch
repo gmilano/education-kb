@@ -1,0 +1,54 @@
+# Parche de P152 contra toshieji/moodle-grading-mcp @ main (server.py, 606 lineas).
+# ESCRITO EN EL PASE 60, NO ENVIADO. Ver README: abrir el PR es una accion con
+# efecto externo y requiere autorizacion explicita.
+#
+# Por que: la pieza cablea workflowstate="readyforreview" (l. 570) y devuelve
+# released=False, pero NO consulta markingworkflow. Si la assignment tiene
+# markingworkflow=0 el estado de borrador NO EXISTE en esa plataforma y la nota
+# se publica igual: la garantia que la pieza promete en su docstring
+# ("released には決してしない") es CONDICIONAL y esta casilla la derrota.
+#
+# Que lo habilita: moodle/moodle @ main, public/mod/assign/externallib.php
+# (5.3rc2 build 20261002) -- el campo se asigna sin condicional (l. 464), esta
+# en el contrato y no es VALUE_OPTIONAL (l. 584), y leerlo solo exige
+# mod/assign:view (l. 401), estrictamente mas debil que el mod/assign:grade
+# (l. 1033) que la pieza YA necesita para escribir. Token suficiente, sin pedir
+# nada al cliente.
+#
+# El repo ya llama mod_assign_get_assignments en _assign_index (l. 235) con el
+# mismo estilo de parametros, asi que el parche no agrega dependencias.
+
+--- a/server.py
++++ b/server.py
+@@ -556,6 +556,28 @@
+     fb = feedback_html or ""
+     footer_added = False
+     if _FOOTER_MARK not in fb:
+         fb += _FALLBACK_FOOTER
+         footer_added = True
++    # --- P152 read-before-write: la garantia de borrador depende de la plataforma ---
++    # markingworkflow=0 => "readyforreview" no existe y la nota se PUBLICA.
++    # Falla cerrado: si el dato no se puede determinar, no se escribe.
++    _mw = None
++    try:
++        _j = _call("mod_assign_get_assignments", {"courseids[0]": course_id})
++        for _c in (_j.get("courses") or []):
++            for _a in (_c.get("assignments") or []):
++                if _a.get("id") == assignid:
++                    _mw = int(_a.get("markingworkflow"))
++    except (TypeError, ValueError, AttributeError):
++        _mw = None
++    if _mw != 1:
++        _audit("grade_denied", reason="markingworkflow_off", course=course_id,
++               assign=assignid, userid=userid, markingworkflow=_mw)
++        await _safe_log(ctx, "warning",
++                        f"save_grade_draft denied (markingworkflow={_mw}) user={userid}")
++        raise RuntimeError(
++            f"assignment {assignid}: markingworkflow={_mw}。"
++            "評定ワークフローが無効なため readyforreview は存在せず、"
++            "書き込むと即時公開になります。書き込みを拒否しました。"
++        )
++    # --- fin P152 ---
+     _audit("grade_attempt", course=course_id, assign=assignid, userid=userid, grade=grade)
+     _call(
+         "mod_assign_save_grade",

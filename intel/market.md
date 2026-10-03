@@ -1313,6 +1313,28 @@ Dónde se produce el software educativo abierto, que no es donde está la demand
 
 ### North America
 
+#### 🟢 Pase 60 (2026-10-03) — la brecha de gobernanza tiene ahora su contraparte de adopción, y las dos cifras se mueven en direcciones opuestas
+
+| Medición | Valor | Lectura |
+|---|---|---|
+| Mercado NA de AI en educación (2024) | **951 M USD** | base |
+| Proyección 2029 | **2.303,2 M USD** | **CAGR 15,9 %** |
+| Segmento educación superior (2024) | **285,7 M USD** | ~30 % del total NA |
+| Instituciones de educación superior que usan AI | **66 %** | contra **49 % en 2024**: +17 pp en un año |
+| Estudiantes que usan AI (16 países) | **86 %** | — |
+| Instituciones con formación continua en AI | 🔴 **37 %** | — |
+| Profesorado que pide formación específica de su rol | 🔴 **80 %** | — |
+
+🔴 **El dato de encuadre, y es el que hay que decir en una reunión: la adopción institucional subió 17
+puntos en un año mientras la formación se quedó en 37 %.** 🔵 **Concuerda con el 58 % sin guía para
+CALIFICAR del pase 59 y lo refuerza por un instrumento distinto: no es que las instituciones no adopten
+—adoptan rápido—, es que adoptan sin la capa de control.** 🟢 **Eso es exactamente lo que el pase 60
+volvió entregable: el *read-before-write* de **P152** es código, no política, y se puede incluir en un
+*statement of work* sin depender de que el cliente escriba una guía primero.**
+
+⚠️ **Y lo que NO se debe hacer con estas cifras: compararlas con el 32 % de APAC como si fueran una
+serie.** Son instrumentos distintos y poblaciones distintas (ver el bloque de APAC de este pase).
+
 #### 🔴 Pase 59 (2026-10-03) — la cifra que convierte el hallazgo técnico de esta KB en una venta de NA
 
 🟢 **Dato nuevo, de Gallup + Walton Family Foundation, *«Teaching for Tomorrow: Closing the
@@ -2537,6 +2559,35 @@ Artículo 50(2) **no es exigible** en North America — pero es **el requisito m
 multi-región conviene cotizarlo contra el techo europeo y no contra el piso local (ver **P103** y **P105**).
 
 ### EMEA
+
+#### 🟢 Pase 60 (2026-10-03) — el *AI Omnibus* tiene por fin NÚMERO OFICIAL, y eso convierte una cita secundaria en una cita citable
+
+🟢 **El dato que esta KB no tenía y pedía desde el pase 57: el *AI Omnibus* es `Regulation (EU)
+2026/1744`.**
+
+| Hito | Fecha |
+|---|---|
+| Publicación en el **DOUE** | **2026-07-24** |
+| **Entrada en vigor** | **2026-07-27** (a 3 días, no a los 20 habituales) |
+| Alto riesgo **Anexo III** (incluye educación) | diferido a **2027-12-02** |
+| Alto riesgo **Anexo I** (embebidos) | diferido a **2028-08-02** |
+| **Artículo 50** (transparencia) | 🔴 **NO TOCADO — vigente desde 2026-08-02** |
+
+🔵 **Cuarto canal concordante sobre el calendario del Artículo 50, y las tres filas de `agents/top.md` se
+sostienen palabra por palabra.** 🟢 **Lo que cambia no es la fecha sino la CITABILIDAD: hasta este pase la
+KB decía «el Omnibus»; ahora dice `Regulation (EU) 2026/1744`, que es lo que un cliente puede verificar
+solo.**
+
+🔴 **Y una precisión que previene una mis-atribución futura, porque es el tipo de error que suena
+plausible en educación: el Omnibus SÍ agregó dos prohibiciones nuevas al Artículo 5 —imágenes íntimas no
+consentidas y material de abuso sexual infantil— y NINGUNA de las dos toca educación.** ⚠️ **La
+prohibición de reconocimiento de emociones en centros educativos es del Artículo 5 ORIGINAL, no del
+Omnibus. No confundirlas.**
+
+⚠️ **`gap 92` reconfirmado por sexto pase y ampliado a seis dominios:** `eur-lex.europa.eu`,
+`artificialintelligenceact.eu`, `data.europa.eu`, `digital-strategy.ec.europa.eu`, y nuevos en este pase
+`gibsondunn.com`, `usercentrics.com` y `ai-law-tracker.com` — **todos `EGRESS_BLOCKED`**. 🔴 **El número
+`2026/1744` viene de secundarias concordantes, NO del texto consolidado.**
 
 #### ⚠️ Pase 59 (2026-10-03) — los relojes NO se re-litigan, y una fuente secundaria que hay que descartar
 
@@ -3888,6 +3939,30 @@ este pase dejó cubierto con código.
 
 ### APAC
 
+#### ⚠️ Pase 60 (2026-10-03) — la región tiene la brecha de adopción más grande de las cuatro, y la cifra NO es comparable con la de NA
+
+| Medición | Valor |
+|---|---|
+| Instituciones de APAC que **empezaron** su recorrido de AI | ⚠️ **~32 %** |
+| Instituciones relevadas (informe 2026) | **433** |
+| Jurisdicciones del estudio comparado de Clarivate | **7** (China continental, India, Japón, Malasia, Singapur, Corea del Sur, Taiwán) |
+
+🔴 **La estratificación es el dato, no el promedio: Asia oriental (China, Japón, Corea del Sur) muestra
+coherencia de política avanzada, mientras Sudeste asiático y Pacífico siguen en etapa naciente de
+institucionalización formal.** ⚠️ **Un promedio regional de 32 % no describe a ninguno de los dos
+grupos** — es la misma advertencia que esta KB hace desde el pase 13 sobre la dispersión entre
+consultoras.
+
+🔴 **La advertencia de método, explícita porque la tentación es grande: 66 % (NA) contra 32 % (APAC) NO
+es una serie.** Son instrumentos distintos, poblaciones distintas y preguntas distintas («usa AI» contra
+«empezó su recorrido de AI»). 🔵 **Se pueden citar las dos, en frases separadas y con su instrumento; no
+se pueden restar.**
+
+🔵 **Y el dato de capa que esta región sigue aportando y ninguna otra: la única de las nueve puertas de
+escritura de nota que AFIRMA el borrador en su código es de APAC** (`toshieji/moodle-grading-mcp`, 0 ★,
+comentario en japonés en `server.py:570`). 🟢 **El pase 60 escribió el parche que vuelve INCONDICIONAL su
+garantía** (`compose/code/markingworkflow-read-before-write/toshieji.patch`, **no enviado**).
+
 #### 🟢 Pase 58 (2026-10-03) — tres relojes regulatorios con fecha, y uno de ellos es el único del mundo que nombra AI AGÉNTICA
 
 🔵 **La región dejó de ser «fragmentada sin fechas»: este pase ubica cuatro instrumentos con fecha, y el orden
@@ -4952,6 +5027,34 @@ desplegado + puerta MCP permisiva (`jbnu-lms-mcp`, `canvas-lms-mcp`, las cuatro 
 depende de un tercero» son el mismo argumento.**
 
 ### LATAM
+
+#### 🟢 Pase 60 (2026-10-03) — la adopción docente se re-confirma por canal independiente, y el cuello de botella medido es de GOBERNANZA, no de herramienta
+
+| Medición (DEC LATAM 2026, re-confirmada en este pase) | Valor |
+|---|---|
+| Estudiantes que usan AI | **92 %** |
+| Docentes que usan AI | **79 %** |
+| Salto docente contra la global 2025 | **61 % → 79 %, +18 pp** |
+| Profesorado que espera usarla a futuro | **94 %** |
+| Estudiantes que temen aprendizaje superficial | **65 %** |
+| Estudiantes que temen mal uso por pares | **61 %** |
+| 🔴 **Cree que su institución respondió bien** | 🔴 **30 %** |
+
+🔴 **El 30 % es la cifra que vende, y es la más alta de las cuatro regiones en términos de brecha
+declarada por los propios usuarios.** 🔵 **México lo muestra en el mecanismo: adopción de **75,4 %**
+empujada por **iniciativa individual**, en un entorno descrito como de *«ausencia de lineamientos
+formales y baja oferta de formación estructurada»*.** ⚠️ **Adopción alta + gobernanza ausente es
+exactamente el perfil de riesgo del Artículo 50(2) y de la corrección asistida — con la diferencia de
+que en LATAM no hay un reloj regulatorio que lo fuerce, así que la venta es por riesgo reputacional e
+integridad académica, no por cumplimiento.**
+
+🟢 **Brasil: CIAED 2026 con la regulación como eje declarado** (coexistencia presencial/distancia bajo
+presión de la AI).
+
+🔴 **Y el hueco que esta KB vuelve a declarar en vez de taparlo, décimocuarto pase consecutivo: ninguna
+de las nueve puertas de escritura de nota declara origen LATAM.** ⚠️ **Los dos forks medidos en el pase
+60 (`algorithm0r`, `abr-Projects`) tampoco declaran región, igual que sus madres.** 🔵 **La regla de
+**P135** se sostiene: un antropónimo hispanohablante no es evidencia de región.**
 
 #### 🟢 Pase 58 (2026-10-03) — la mejor serie propia que la región haya tenido en esta base, y trae el dato que es EXACTAMENTE esta capa
 

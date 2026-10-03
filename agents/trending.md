@@ -9,6 +9,64 @@ updated: 2026-10-03
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 > No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
 
+## 2026-10-03 (pase 60) — **la acción 1 cierra en una TERCERA rama: los dos forks contestan OPUESTO a la misma pregunta y los dos tienen razón — y la acción 2 cierra en su rama buena, que vale un PR de tres líneas**
+
+### 🔴 El hallazgo que manda: un fork hereda POR EJE, no entero (P150/P151)
+
+**La acción 1 del pase 59 pedía medir si el fork hereda el defecto o lo CORRIGE**, con la hipótesis
+escrita de antemano: *«si el fork es idéntico en el eje, "identificar por commit" es una precaución de
+inventario y basta nombrarla; si DIVERGE —en cualquiera de los dos sentidos— entonces el fork es una
+fila propia del eje y el denominador de 9 está mal contado.»*
+
+🔴 **Ninguna de las dos ramas describe el resultado, porque los dos pares contestan distinto:**
+
+| Par | Veredicto en el eje de publicación | Veredicto fuera del eje |
+|---|---|---|
+| `bruchris` → **`algorithm0r`** | 🟢 **idéntico byte a byte** (10/10 archivos) | 🟢 idéntico byte a byte |
+| `vishalsachdev` → **`abr-Projects`** | 🟢 **idéntico** (1 × `posted_grade`, 0 consultas, en las dos) | 🔴 **DIVERGE en 8 archivos y 42 líneas de `bulk_grade_submissions`** |
+
+🟢 **El denominador de 9 se sostiene y P146 se confirma — con el alcance recortado a UN eje.**
+🔴 **Y lo que cae es la lectura cómoda de la rama buena:** la divergencia del par B cae entera sobre el
+eje de seguridad **vecino** —la precondición de rúbrica— y **el fork está del lado LAXO en las cuatro
+celdas**: pierde `rubric_grade_is_confirmed` (2 usos → **0**), convierte el aborto duro de la madre en
+`if "error" not in assignment_check:` —**sigue y califica**— y condiciona el segundo aborto con
+`and not dry_run`. **Es un snapshot viejo que perdió el endurecimiento posterior, no una mejora.**
+
+🔵 **La regla que queda, y es la que hay que aplicar hacia atrás: «es fork de X» cierra la celda del eje
+que se comparó y deja abiertas todas las demás** (**P151**).
+
+### 🟢 La acción 2 cierra en la rama que vale plata: la precondición se LEE con el token que ya se tiene
+
+**Leído de primera mano en `moodle/moodle` @ `main`** (`public/mod/assign/externallib.php`, 3.146
+líneas, `5.3rc2 (Build: 20261002)`):
+
+| Qué | Línea | Qué dice |
+|---|---|---|
+| Se asigna **sin condicional** | `464` | `$assignment['markingworkflow'] = $module->markingworkflow;` |
+| Está en el **contrato de salida**, y **NO** es `VALUE_OPTIONAL` | `584` | `'markingworkflow' => new external_value(PARAM_INT, …)` |
+| Única capacidad exigida para **leer** | `401` | `require_capability('mod/assign:view', $context);` |
+| Capacidad exigida para **escribir** nota | `1033` | `require_capability('mod/assign:grade', $context);` |
+
+🟢 **El argumento es *a fortiori* y por eso vale para las NUEVE puertas sin medirlas una por una:
+`mod/assign:view` es estrictamente más débil que `mod/assign:grade`, así que toda puerta que pueda
+CALIFICAR puede, por construcción, LEER la precondición.** 🔵 **El *read-before-write* es código, no una
+escalada de permisos ni un pedido al cliente — y para `toshieji/moodle-grading-mcp` es el PR de tres
+líneas que vuelve INCONDICIONAL su garantía** (**P152**).
+
+### ⚠️ Lo que este pase NO hizo, dicho antes de que se cite mal
+
+- 🔴 **No se abrió ningún PR hacia afuera.** El parche queda **escrito** para el pase 61, no enviado.
+- ⚠️ **No se dio de alta ninguna puerta nueva.** `csmediapro/moodle-mcp-server` volvió a aparecer en el
+  barrido y **sigue siendo de sólo lectura** (AGPL-3.0, *«never modifies Moodle data»*) — ya estaba
+  screeneada en el pase 59 y **no** es la décima puerta.
+- ⚠️ **La medición de Moodle es sobre `main` (5.3rc2), no sobre una LTS desplegada** (**gap 252**).
+- 🔴 **Y un hallazgo que este pase NO fue a buscar y encontró con un control propio: esta KB tiene
+  **114 citas de patrón COLGADAS** sobre **nueve números que nunca se definieron** (P126–P130, P132–P135).
+  `compose/patterns.md` salta de P125 a P131 y de P131 a P136. **Los dos más citados —`P135` con 23 citas
+  y `P126` con 21— son reglas de MÉTODO que esta base invoca como autoridad y no tienen texto.**
+  🔵 **Control positivo corrido: `P142`, que sí está definido, resuelve con 23 citas.** ⚠️ **Es la acción 2
+  del pase 61, y no se cierra inventando definiciones** (**424**, **425**, **gap 253**).
+
 ## 2026-10-03 (pase 59) — **la acción 2 cierra en 1 de 9 y la unicidad se confirma: «afirma la publicación» no es una clase, es UNA fila — pero el eje resulta BIPOLAR y los dos polos dependen de la misma casilla en sentidos opuestos**
 
 ### 🔴 El hallazgo que manda: el eje tiene DOS polos, no uno (P145)

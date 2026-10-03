@@ -191,6 +191,99 @@ el pedido de egreso de red; la pregunta de las fechas es el `gap 56`, del pase 3
 🔵 **El defecto es real; el caso citado no lo era. La ausencia se conserva como aserto para que no
 vuelva a escribirse.**
 
+## P150 — Un fork no «hereda» ni «corrige»: hereda POR EJE, y la celda que uno no comparó queda abierta (agregado en el pase 60 del 2026-10-03)
+
+**El problema, medido:** el pase 59 estableció por la declaración de GitHub que dos puertas de Canvas eran
+forks, y cerró su celda del eje de publicación por parentesco. 🔴 **El pase 60 comparó el código y encontró
+que los dos pares contestan OPUESTO a la misma pregunta — y los dos están bien.**
+
+| Par | En el eje medido (publicación) | Fuera del eje |
+|---|---|---|
+| `bruchris` → `algorithm0r` | 🟢 idéntico byte a byte (10/10 archivos) | 🟢 idéntico byte a byte |
+| `vishalsachdev` → `abr-Projects` | 🟢 **idéntico** (1 × `posted_grade`, 0 consultas) | 🔴 **8 archivos distintos, 42 líneas de `diff`** |
+
+🔴 **El fork del par B está del lado LAXO en las cuatro celdas del eje vecino:** perdió
+`rubric_grade_is_confirmed` (2 usos → 0) —una verificación **posterior** a la escritura, que existe para
+atrapar la nota que Canvas acepta y no guarda—, convirtió un aborto duro en `if "error" not in …:` y
+condicionó el segundo con `and not dry_run`.
+
+**La regla, aplicable a cualquier fila de esta KB cerrada por parentesco:**
+
+1. **«Es fork de X» no es un veredicto; es un veredicto POR EJE.** Nombrá el eje que comparaste.
+2. **Comparalo en el archivo que hace la llamada**, no por el README ni por la declaración de GitHub.
+3. **Mirá el eje de al lado antes de archivar.** La divergencia del par B era invisible desde el eje de
+   publicación y es la que cambia la recomendación.
+4. ⚠️ **Un fork viejo no es un fork «igual»: es un snapshot que puede haber perdido endurecimiento
+   posterior.** La dirección por defecto de la deriva es hacia lo LAXO, porque la madre endurece con el
+   tiempo y el fork no la sigue.
+
+🔵 **Para un *engagement*:** si la pieza candidata es un fork, la pregunta de *discovery* no es «¿de quién
+es fork?» sino **«¿qué le falta de lo que la madre agregó después?»** — y se contesta con un `diff`, no con
+una conversación.
+
+## P151 — Un extractor se valida por plausibilidad ANTES de que su salida entre a un `diff` (agregado en el pase 60 del 2026-10-03)
+
+**El defecto, de primera mano en este pase:** el extractor de funciones devolvió **7 líneas para una función
+de 256** —rompía en la firma multilínea— y en consecuencia un `diff` de **0 líneas**. 🔴 **La salida fue un
+«IDÉNTICO» falso, que es exactamente la conclusión opuesta a la verdadera.**
+
+🔵 **Tercera reproducción de la MISMA forma en esta KB** (P107; pase 47, 44 % del inventario perdido por un
+`\b`; pase 49, 7,3 % de citas perdidas por un separador inalcanzable): **un extractor con pérdida no falla
+ruidosamente — devuelve un número más chico y más confiado.**
+
+**El control que lo atrapó, y es el que hay que correr siempre:**
+
+```sh
+# ANTES de diffear: ¿el tamaño extraído es plausible para lo que decís que extrajiste?
+python3 - <<'PY'
+body = extract(path, 'bulk_grade_submissions')
+assert len(body) > 50, f"extracción implausible: {len(body)} líneas para una función de grado masivo"
+PY
+```
+
+🔴 **La regla:** cuando un `diff` da **vacío**, el primer sospechoso **no** es la igualdad de los insumos
+— es el extractor. **Un `diff` vacío y un extractor roto producen la misma salida**, así que la igualdad
+sólo es afirmable si el extractor pasó un control de tamaño independiente.
+
+## P152 — *Read-before-write*: leer la precondición de plataforma con el token que la pieza YA tiene (agregado en el pase 60 del 2026-10-03)
+
+**Lo que lo habilita, medido en este pase** sobre `moodle/moodle` @ `main`
+(`public/mod/assign/externallib.php`, 5.3rc2 build 20261002):
+
+| Hecho | Línea | Consecuencia |
+|---|---|---|
+| `markingworkflow` se asigna **sin condicional** | 464 | viene siempre que venga la *assignment* |
+| Está en el contrato y **NO** es `VALUE_OPTIONAL` | 584 | el contrato lo **garantiza** |
+| Leer exige `mod/assign:view` | 401 | capacidad **débil** |
+| Escribir nota exige `mod/assign:grade` | 1033 | capacidad **fuerte** |
+
+🟢 **El argumento es *a fortiori*: `view` ⊂ `grade`, así que toda puerta que pueda CALIFICAR puede, por
+construcción, LEER la precondición.** 🔴 **No hay escalada de permisos, no hay pedido al cliente, no hay
+paso manual: es código.**
+
+**La receta, aplicable a las nueve puertas de la capa:**
+
+```
+1. mod_assign_get_assignments(courseids=[curso])     # token que la pieza ya usa
+2. leer assignment.markingworkflow                    # 0 | 1, garantizado por contrato
+3. decidir ANTES de escribir:
+     markingworkflow == 1  -> mod_assign_save_grade(workflowstate="readyforreview")  # borrador real
+     markingworkflow == 0  -> REHUSAR y devolver el motivo al llamador
+4. nunca: escribir y "avisar después"
+```
+
+⚠️ **El paso 3 es el que importa y es contraintuitivo:** con `markingworkflow = 0` **no existe** el estado
+«borrador» en esa plataforma, así que **cualquier** escritura publica. 🔴 **La respuesta correcta es rehusar,
+no degradar a un `workflowstate` distinto** — degradar es publicar con otro nombre.
+
+🔵 **Aplicación concreta y barata:** `toshieji/moodle-grading-mcp` es hoy la única pieza que AFIRMA no
+publicar (`"workflowstate": "readyforreview"`, `"released": False`), pero **no consulta la casilla**, así que
+su garantía es CONDICIONAL y `markingworkflow = 0` la derrota. **Este patrón la vuelve INCONDICIONAL.**
+⚠️ **Medido sobre `main` (5.3rc2): un cliente en 4.x necesita la misma lectura sobre su rama** (**gap 252**).
+⚠️ **Y el equivalente de Canvas NO es éste:** Canvas no tiene *marking workflow*; la publicación depende de
+`post_manually` / `posting_policy` del *assignment*, y **ninguna** de las puertas de Canvas medidas lo
+consulta.
+
 ## 🍳 Receta P149 — «Capa de corrección asistida que no puede publicar sola» (pase 59)
 
 **Para qué sirve:** un cliente de educación superior quiere devolución y pre-nota asistida por AI
