@@ -8,6 +8,7 @@ updated: 2026-10-03
 
 > Bases sobre las cuales construir. Verificado repo por repo vía WebFetch el 2026-09-30 (capas del pase 10, el 2026-10-01).
 > Leer la columna **Licencia** antes de proponer: media KB de educación es GPL/AGPL, no permisiva.
+> **Pase 76 del 2026-10-03:** 🔴 **La conclusión de P229 se cae con datos de su propio archivo: `bgwdotdev/go-oneroster` se publicaba 🟢 «vivo» en la tabla de licencias y ⚫ «muerto hace 6,9 años» en la tabla de frescura, a 1.662 líneas de distancia y en el mismo `HEAD`.** Medidas por separado, las tres condiciones (permisiva + viva + spec vigente) las cumplen 🔴 **CERO** piezas, no una. 🟢 **Y el permisivo con el spec VIGENTE que P229 declaró inexistente ya estaba en esta base, sin licencia: [`jdolny/OneRoster.NET`](https://github.com/jdolny/OneRoster.NET) — MIT (titular `theopenem`) con `v1p1` + `v1p2`** — porque el pase 75 registró su licencia como *«no verificada: repo muerto»*. 🧪 **«Muerto» no exime de medir la licencia: la hace más importante — un permisivo muerto se BIFURCA, un AGPL muerto no.** 🪜 **El eje nuevo es CAPA: CONSUMIR OneRoster con spec vigente y licencia permisiva se puede hoy; EXPONERLO no** (ningún servidor permisivo en v1p2). 🔴 **Corrección de spec que afecta a toda la capa: v1p1 NO es el spec vigente** — 1.2 se publicó en septiembre de 2022, superó a 1.1 en 2023 (7→14→22 CSV, 38→61→81 endpoints). **5 altas + 1 duplicado registrado; EMEA recupera 2 piezas, las dos sin archivo de licencia.** Instrumento y corrida en `compose/code/p230-rostering-layer-axis/`.
 > **Pase 73 del 2026-10-03:** 🟢 **La «tercera vía permisiva» de la plataforma de sistema educativo nacional (tendencia **24**) deja de ser hipótesis y tiene repositorio:** [`motiolabs-space/open-academic`](https://github.com/motiolabs-space/open-academic) — **MIT** medido (1.087 B, titular `PT Motiolabs Digital Indonesia`, persona jurídica), SIAKAD completo de admisión a graduación **con el reporte obligatorio al Estado ya construido** (PDDIKTI/Neo Feeder idempotente con *ledger* y diff, SISTER, KIP Kuliah, LKPS, IKU). 🔵 **0 ★ y 75 commits: el caso de libro de la tendencia **23** —las estrellas esconden la infraestructura desplegada—.** 🟢 **Y rompe la anti-correlación de **P209**: permisiva Y específica a la vez, desde APAC.**
 > **Pase 72 del 2026-10-03:** 🟢 **La capa de SIS gana su primera pieza LATAM y trae el único patrón de CREDENCIAL del inventario:** [`iDavi/usp-mcp`](https://github.com/iDavi/usp-mcp) + [`iDavi/heidy_backend`](https://github.com/iDavi/heidy_backend) (**GPL-3.0**, 35.148 B cada uno, Brasil) **sellan la Senha Única de la USP contra la clave pública del backend antes del login — ninguna otra pieza de esta base evita la contraseña en claro.** 🔴 **Y las dos cotas están medidas con test ejecutable y control negativo** (**P213**, 13 checks): los metadatos del sobre **no** están autenticados (el AAD es una constante) y el *key schedule* **no** es RFC 9180, así que el sobre interopera con UN backend. ⚠️ **Tercer corte institucional consecutivo ganado por copyleft** — para esta vertical, «permisivo» ya es la excepción, no el caso base.
 > **Pase 68 del 2026-10-03:** 🟢 **Entran los DOS documentos de estándar que ceden de verdad, y son la corrección más útil que este archivo recibió sobre la capa: [`adlnet/xAPI-Spec`](https://github.com/adlnet/xAPI-Spec) (**Apache-2.0**, 11.525 B, 952 ★, 403 forks) y [`Ed-Fi-Alliance-OSS/Ed-Fi-Standard`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-Standard) (**Apache-2.0**, 10.173 B, 46 ★, v6.2.0) publican el DOCUMENTO normativo bajo licencia permisiva, así que un perfil derivado se puede entregar con atribución y sin trámite.** 🔴 **Eso REFUTA lo que este archivo publicó en el pase 67 —*«la capa de estándares es la PEOR cedida de todas»*—: el régimen no se parte por «ser un estándar», se parte por **PUBLICADOR × TIPO DE ARTEFACTO**, sin una sola excepción en 8 archivos leídos** (**P191**). 🔴 **1EdTech cede su SOFTWARE bajo Apache-2.0 (4 de 4: OpenCASE, los dos validadores, la librería LTI 1.3) y sus DOCUMENTOS bajo la licencia que NIEGA derivados (2 de 2).** ⚠️ **Hueco nuevo y de los que importan: la versión VIGENTE de xAPI (IEEE 9274.1.1-2023) ya no está en GitHub —vive en `opensource.ieee.org`, que este entorno tiene EGRESS-BLOQUEADO—, así que los cuatro instrumentos de licencia de esta KB, todos apuntados a `raw.githubusercontent.com`, son ciegos a un estándar que migra** (**P195**). 🟢 **Y una pieza de agente: [`aemonge/opencode-sit`](https://github.com/aemonge/opencode-sit) (MIT, tutor socrático como plugin de OpenCode), con la identidad probada por `sha256` porque el paquete no declara repositorio** (**P193**). Ver `compose/code/p191-spec-license-sweep/`.
@@ -103,19 +104,57 @@ pase midió la capa completa por LICENCIA, y el resultado reordena la recomendac
 
 | Repo | Licencia (del archivo) | Estado medido | Spec | Qué cubre |
 |---|---|---|---|---|
-| 🟢 **`bgwdotdev/go-oneroster`** | **MIT** (`master/LICENSE`) | **vivo**, 8 ★, Go | **OneRoster v1p1** | servidor REST + MongoDB, y **extiende el spec con ESCRITURA** (PUT/POST en todos los endpoints) |
+| ⚠️ **`bgwdotdev/go-oneroster`** | **MIT** (`master/LICENSE`, titular **`fffnite`** 2019) | 🔴 **`HEAD` 2019-11-04 — 6,9 años** · 8 ★, Go | 🔴 **v1p1 — spec SUPERADO** (1.2 desde 2022; 1.1 *sunset*) | servidor REST + MongoDB, y **extiende el spec con ESCRITURA** (PUT/POST en todos los endpoints). 🔴 **Corregido en el pase 76: esta celda decía «vivo» y la tabla de frescura de ESTE MISMO archivo (más abajo) la data muerta hace 6,9 años.** 🔁 **Y es un duplicado byte a byte de [`fffnite/go-oneroster`](https://github.com/fffnite/go-oneroster), que es el upstream** |
 | 🔴 **`usechalk/chalk`** | **AGPL-3.0** (`main/LICENSE`) | vivo, 2 ★, Rust, **298** commits | OneRoster 1.1 + CSV | 🟢 **la única pieza que cubre las cinco propietarias**: PowerSchool, Infinite Campus, Skyward, **Clever** y **ClassLink** (importadores de migración + compat OAuth), más Google Workspace, AD/LDAP y Entra ID — **en un binario** |
 | 🔴 `bgwdotdev/libre-oneroster` | **AGPL** (`master/LICENSE`) | vivo, Rust | OneRoster 1.1 | servidor + librería + CLI |
 | 🔴 `lepo-project/roster-hub` | **AGPL** (`main/LICENSE`) | vivo | OneRoster v1.1 | gestión de *roster*, conversor CSV → REST |
 | ⚠️ `ridencww/uniroster-server` | **MIT** (`master/LICENSE`) | 🔴 **ARCHIVADO 2024-09-26**, 6 ★, Node | 🔴 **v1.0 solamente** | v1.1 y Ed-Fi figuran como **planeados**, no construidos |
 | 🔴 **`Tools4ever-NIM/*`** (familia) | 🔴 **NO HAY ARCHIVO DE LICENCIA** en `main` ni `master` | viva | OneRoster v1.1 y **v1.2** | los **únicos** conectores de **Skyward** (v1.1, v1.2) e **Infinite Campus** (v1.2) fuera de `chalk` |
+| 🟢 **`jdolny/OneRoster.NET`** | **MIT** (`master/LICENSE`, titular **`theopenem`** 2020) | ⚫ `HEAD` 2023-10-13 — 3,0 años | 🟢 **v1p1 + v1p2** | 🆕 **alta del pase 76, y es el ÚNICO permisivo de la capa con el spec VIGENTE.** Capa **cliente** (no servidor) y **sólo rostering** (*«Grade book has not been implemented»*). Dos flujos de credencial en la API pública: `V1p1(baseUrl, consumerKey, consumerSecret)` vs `V1p2(tokenUrl, baseUrl, clientId, clientSecret)`. ⚠️ **Su README dice haberse escrito contra un BORRADOR de 1.2** |
+| 🟢 `gotranseo/oneroster` | **Apache-2.0** (`main/LICENSE.txt`) | ⚫ `HEAD` 2023-05-01 — 3,4 años | v1p1 | alta del pase 76. Librería **Swift/Vapor**, capa cliente. **La licencia faltaba en la fila que esta base ya tenía** |
+| ⚫ `jrissler/ex_oneroster` | **Apache-2.0** (`master/LICENSE`) | 🔴 **sólo-lectura por decisión del autor** | v1p1 | alta del pase 76. Elixir/Phoenix. 🔵 **Donado *upstream* al organismo del estándar**: el README redirige a `IMSGlobal/ex-OR-code` (*«Now supporting this through IMS»*) |
+| 🔴 `the-glasgow-academy/oneroster-api-to-csv-sds` | 🔴 **SIN ARCHIVO DE LICENCIA** — ausencia **MEDIDA**: 10 nombres × `main` y `master` en 404, `README.md` en 200 | viva | v1p1 | alta del pase 76. **El único puente abierto a Microsoft School Data Sync**, al *«UK standard CSV»*. PowerShell Core. 📍 **EMEA** |
+| 🔴 `the-glasgow-academy/oneroster-api-to-csv-asm` | 🔴 **SIN ARCHIVO DE LICENCIA** (ídem, ausencia MEDIDA) | viva | v1p1 | alta del pase 76. **El único puente abierto a Apple School Manager**. PowerShell Core. 📍 **EMEA** |
 
-### 🔴 El hallazgo que manda: la capa es un CALLEJÓN DE LICENCIAS
+### 🔴 El hallazgo que manda, CORREGIDO en el pase 76: el callejón es de CAPA, y las piezas que cumplen las tres condiciones son CERO
 
-Las tres condiciones que esta KB le pide a una fundación —**permisiva** (MIT/Apache/BSD), **viva** y
-**con el spec vigente**— se cumplen juntas en 🟢 **exactamente una** pieza: **`go-oneroster`**. Y es
-un **servidor de spec**, no una plataforma: 🔴 **no trae un solo conector a PowerSchool, Skyward,
-Clever ni ClassLink.** El resto cae por un motivo distinto cada uno:
+⚠️ **Lo que esta sección decía hasta el pase 75** —«las tres condiciones se cumplen juntas en
+**exactamente una** pieza: `go-oneroster`»— 🔴 **se falsifica con datos de este mismo archivo.** Las
+tres condiciones, evaluadas **por separado** y cada una contra su propia evidencia
+(`compose/code/p230-rostering-layer-axis/`, **10/10** piezas medidas):
+
+| Condición | `go-oneroster` | Evidencia |
+|---|---|---|
+| permisiva | 🟢 **sí** | MIT, payload de `master/LICENSE` |
+| viva | 🔴 **no** | `HEAD` **2019-11-04 — 6,9 años**, por la tabla de frescura de ESTE archivo |
+| spec vigente | 🔴 **no** | **v1p1**; **1.2 se publicó en 2022, superó a 1.1 en 2023** y 1.1 quedó *sunset* |
+
+🔴 **El conteo correcto es 0, no 1 — y el callejón es más cerrado que lo que se publicó, no menos.**
+La celda «vivo» de la tabla de arriba contradecía a la tabla de frescura de más abajo **en el mismo
+`HEAD`**; P229 le preguntó la vitalidad a la prosa de su propia fila y no a la tabla que esta KB ya
+tenía.
+
+🪜 **Y el eje que SÍ explica la capa es CAPA, no licencia:**
+
+| Capa | Permisivo | Copyleft | Sin licencia | ¿Alguno con **v1p2**? |
+|---|---|---|---|---|
+| **servidor** | `go-oneroster` (MIT, v1p1, muerto) | `libre-oneroster` · `chalk` · `roster-hub` (AGPL-3.0) | — | 🔴 **ninguno** |
+| **cliente** | `OneRoster.NET` (MIT) · `gotranseo` (Apache-2.0) · `TCI/OneRoster` (MIT, 🟢 vivo) · `ex_oneroster` (Apache-2.0) | — | — | 🟢 **uno: `OneRoster.NET`** |
+| **puente** (SDS / Apple School Manager) | — | — | 🔴 **los dos de Glasgow** | 🔴 ninguno |
+| **conector SIS** | — | `chalk` (AGPL-3.0) | 🔴 `Tools4ever-NIM/*` | ⚠️ sí, **pero sin licencia** |
+
+🔵 **La frase que cotiza: CONSUMIR OneRoster con spec vigente y licencia permisiva se puede hoy
+(`OneRoster.NET`, MIT, v1p2); EXPONERLO no.** No existe servidor permisivo en v1p2, así que ser la
+**fuente** de *roster* obliga a **construir** o a tomar **AGPL-3.0** y asumir el despliegue del
+distrito. **Es una decisión de CAPA, no de licencia.**
+
+🧪 **Y el error de método que lo escondió, porque es el aporte más transferible del pase 76:**
+`repos/trending.md:3383` registraba la licencia de `OneRoster.NET` como **«— (no verificada: repo
+muerto)»**. 🔴 **«Muerto» no exime de medir la licencia: la hace más importante.** Un permisivo muerto
+**se bifurca**; un AGPL muerto **no**. El costo de la omisión fue **una petición HTTP**, y escondió el
+único dato que P229 declaró inexistente.
+
+Sobre el resto de la tabla, cada pieza cae por un motivo distinto:
 
 - **AGPL** (`chalk`, `libre-oneroster`, `roster-hub`) → sirve para un despliegue **del distrito**, no
   para embeber en producto propietario;
@@ -1763,9 +1802,9 @@ El barrido abierto de OneRoster devuelve **ocho** implementaciones. Medidas hoy 
 | `CSR2017/edfi-oneroster` | 2026-09-22 | 9 d | 🟢 usable |
 | `TCI/OneRoster` | 2026-09-11 | 20 d | 🟢 usable (Ruby) |
 | `trilogy-group/oneroster-ts` | 2025-06-27 | 15,2 meses | 🔴 congelado (0BSD) |
-| `jdolny/OneRoster.NET` | 2023-10-13 | 3,0 años | ⚫ muerto |
+| `jdolny/OneRoster.NET` | 2023-10-13 | 3,0 años | ⚫ muerto — 🟢 **pero MIT y v1p1+v1p2 (medido en el pase 76): muerto y BIFURCABLE** |
 | `gotranseo/oneroster` | 2023-05-01 | 3,4 años | ⚫ muerto |
-| `bgwdotdev/go-oneroster` | 2019-11-04 | 6,9 años | ⚫ muerto |
+| `bgwdotdev/go-oneroster` (= `fffnite/go-oneroster`, 🔁 **duplicado byte a byte**) | 2019-11-04 | 6,9 años | ⚫ muerto |
 | `EASOL/edfi-to-oneroster` | 2016-10-19 | 10,0 años | ⚫ muerto |
 
 🔵 **OneRoster es un estándar con mucho código escrito y poco código mantenido.** La consecuencia práctica: un barrido

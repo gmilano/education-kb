@@ -8,6 +8,73 @@ updated: 2026-10-03
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 
+## 2026-10-03 — pase 76: el barrido del pase 75 dejó el *topic* a medias — las piezas que faltaban son las de la capa CLIENTE, y una de ellas es el único permisivo con el spec VIGENTE
+
+### 🔴 Por qué el barrido del pase 75 no las trajo, y es un defecto de criterio y no de canal
+
+El pase 75 barrió el *topic* `oneroster` completo (**18** repos) y midió **seis**: las que se
+presentan como **servidor** o como **conector a un SIS propietario**. 🔴 **Las que se presentan como
+*«librería»* o *«cliente»* quedaron afuera del corte, y con ellas quedó afuera la única pieza
+permisiva de la capa que implementa el spec vigente.** El canal estaba bien; el **criterio de
+inclusión** filtraba por capa sin declararlo.
+
+🔵 **Y dos de ellas ya estaban en esta KB** —en la tabla de frescura de `repos/foundations.md:1766` y
+en `repos/trending.md:3383`— **registradas con fecha de `HEAD` y SIN licencia.** La de
+`OneRoster.NET` dice textualmente **«— (no verificada: repo muerto)»**.
+🔴 **«Muerto» no exime de medir la licencia: la hace más importante.** Un permisivo muerto **se
+bifurca**; un AGPL muerto **no**.
+
+### 🧾 Las piezas nuevas, con licencia leída del PAYLOAD (`compose/code/p230-rostering-layer-axis/`, 10/10)
+
+| Repo | Licencia (payload + titular) | Capa | Spec | Estado | Nota |
+|---|---|---|---|---|---|
+| 🟢 **[`jdolny/OneRoster.NET`](https://github.com/jdolny/OneRoster.NET)** | **MIT** (`master/LICENSE`, titular **`theopenem`** 2020) | **cliente** | 🟢 **v1p1 + v1p2** | ⚫ `HEAD` 2023-10-13 | 🆕 **el ÚNICO permisivo de la capa con el spec vigente.** Dos flujos de credencial distintos en la API pública: `V1p1(baseUrl, consumerKey, consumerSecret)` vs `V1p2(tokenUrl, baseUrl, clientId, clientSecret)` |
+| 🟢 [`gotranseo/oneroster`](https://github.com/gotranseo/oneroster) | **Apache-2.0** (`main/LICENSE.txt`) | cliente | v1p1 | ⚫ `HEAD` 2023-05-01 | librería Swift para **Vapor**; la licencia **faltaba** en la fila que esta base ya tenía |
+| ⚫ [`jrissler/ex_oneroster`](https://github.com/jrissler/ex_oneroster) | **Apache-2.0** (`master/LICENSE`) | cliente | v1p1 | 🔴 **sólo-lectura por decisión del autor** | Elixir/Phoenix. 🔵 El README **redirige a `IMSGlobal/ex-OR-code`**: *«Now supporting this through IMS»* — una donación *upstream* al organismo de estándar, patrón que esta base no tenía en la capa |
+| 🔁 [`fffnite/go-oneroster`](https://github.com/fffnite/go-oneroster) | **MIT** (`master/LICENSE`, titular `fffnite` 2019) | servidor | v1p1 | ⚫ idem | 🔴 **DUPLICADO byte a byte** de `bgwdotdev/go-oneroster`: `README.md` 3.978 B los dos, `LICENSE` idéntico. **Es el upstream**: la imagen publicada es `docker.pkg.github.com/fffnite/go-oneroster/goors:0.3.1` |
+| 🔴 [`the-glasgow-academy/oneroster-api-to-csv-sds`](https://github.com/the-glasgow-academy/oneroster-api-to-csv-sds) | 🔴 **sin archivo de licencia** — ausencia **MEDIDA**: 10 nombres × `main` y `master` en **404**, `README.md` en **200** | **puente** | v1p1 | vivo | **el único puente abierto a Microsoft School Data Sync**, al *«UK standard CSV»*. PowerShell Core |
+| 🔴 [`the-glasgow-academy/oneroster-api-to-csv-asm`](https://github.com/the-glasgow-academy/oneroster-api-to-csv-asm) | 🔴 **sin archivo de licencia** (ídem, ausencia MEDIDA) | **puente** | v1p1 | vivo | **el único puente abierto a Apple School Manager**. PowerShell Core |
+
+### 🪜 El eje nuevo: CAPA — y es el que explica el callejón mejor que la licencia
+
+| Capa | Permisivo | Copyleft | Sin licencia | ¿Alguno con **v1p2**? |
+|---|---|---|---|---|
+| **servidor** | `go-oneroster` / `fffnite` (MIT, v1p1, `HEAD` 2019) | `libre-oneroster` · `chalk` · `roster-hub` (AGPL-3.0) | — | 🔴 **ninguno** |
+| **cliente** | `OneRoster.NET` (MIT) · `gotranseo` (Apache-2.0) · `TCI/OneRoster` (MIT, 🟢 vivo) · `ex_oneroster` (Apache-2.0) | — | — | 🟢 **uno: `OneRoster.NET`** |
+| **puente** | — | — | 🔴 **los dos de Glasgow** | 🔴 ninguno |
+| **conector SIS** | — | `chalk` (AGPL-3.0) | 🔴 `Tools4ever-NIM/*` | ⚠️ **sí, pero sin licencia** (`Tools4ever` hace 1.1 y 1.2) |
+
+🔵 **La lectura que cotiza: CONSUMIR OneRoster con spec vigente y licencia permisiva se puede hoy;
+EXPONERLO no.** No hay servidor permisivo en v1p2 — ser la **fuente** de *roster* obliga a **construir**
+o a tomar **AGPL-3.0** y asumir el despliegue del distrito. 🔴 **Y el `v1.2` que sí existe del lado del
+conector propietario (`Tools4ever-NIM`) está sin archivo de licencia, así que no es una alternativa:
+es el mismo callejón por otra puerta.**
+
+### 🔴 La corrección de SPEC que afecta a todas las filas de esta capa, incluidas las del pase 75
+
+El pase 75 llamó **«spec vigente»** a **v1p1**. 🔴 **No lo es.** **OneRoster 1.2 se publicó en
+septiembre de 2022, superó a 1.1 en 2023, y 1.1 quedó *sunset* para certificaciones nuevas**
+(1.0 está deprecado desde julio de 2021). El salto no es cosmético: **1.0 → 7 CSV y 38 endpoints;
+1.1 → 14 CSV y 61; 1.2 → 22 CSV y 81.**
+
+⚠️ **Consecuencia sobre la tabla del pase 75: TODAS sus piezas de servidor están en un spec superado**,
+y la condición «spec vigente» —que P229 contaba como cumplida— **no la cumple ninguna**. La
+reevaluación está en `compose/code/p230-rostering-layer-axis/README.md`.
+
+### ⚠️ Lo que este barrido NO encontró, y se declara
+
+🔴 **Cero servidores OneRoster permisivos en `v1p2`**, por dos canales (*topic* `oneroster` del pase 75
++ búsqueda por `"OneRoster 1.2" implementation open source` de este pase). **No es que no se buscó: se
+buscó y no hay.** 🔵 **Es el candidato más limpio a contribución *upstream* propia que tiene esta KB
+en la capa** — y el precedente de cómo se hace ya está medido arriba: `ex_oneroster` donó su
+implementación al propio 1EdTech (`IMSGlobal/ex-OR-code`).
+
+🔴 **Y sigue sin aparecer un cliente OneRoster permisivo, vivo y en TypeScript** — el residuo que
+`repos/foundations.md` declaró en el pase 75 **sobrevive a este pase**: `oneroster-ts` congelado
+(0BSD, 15,2 meses), `OneRoster.NET` es .NET y está muerto, y el único cliente **vivo** del inventario
+sigue siendo Ruby (`TCI/OneRoster`).
+
+---
 ## 2026-10-03 — pase 75: la capa de rostering de K-12, medida entera por licencia — y pedir «permisivo + vivo + spec vigente» deja UNA pieza
 
 ### 🔴 Lo que apareció, y por qué el barrido lo encontró ahora

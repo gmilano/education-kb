@@ -109,6 +109,115 @@ updated: 2026-10-03
 > **Pase 11:** +2 patrones — **P25** (riesgo de abandono conforme al Anexo III, la capa con presupuesto ya asignado y sin oferta open source) y **P26** (agente docente sobre la ontología curricular nacional ya publicada).
 > **Pase 27:** **+4 patrones y una corrección.** 🔴 **P51 queda con premisa falsa** —el conector MCP de Moodle **sí existe y es MIT**— y lo reemplazan **P54** (corrección y devolución sobre Moodle con **compuerta humana**, el último tramo del gap 6, con piezas que ya escriben), **P55** (el conector de **Open edX**, que es el único que de verdad no existe), **P56** (**SCORM** como formato de salida de la capa generativa: cero integración, offline) y **P57** (evidencia por MCP cotizada sobre lo que CaSS **realmente** expone — 6 de 61 operaciones, con insignias y autoría de marcos **fuera**).
 
+## 🪜 P230 — el eje CAPA: en un estándar vertical, CONSUMIRLO y EXPONERLO son dos proyectos con dos licencias (pase 76 del 2026-10-03)
+
+**Medido:** `compose/code/p230-rostering-layer-axis/measure.sh`, corrida `result.2026-10-03.txt`,
+**10/10** piezas, licencia por **payload** y capa declarada en la tabla versionada.
+
+| Capa | Permisivo | Copyleft | Sin licencia | ¿Alguno con **v1p2**? |
+|---|---|---|---|---|
+| **servidor** | `go-oneroster` (MIT, v1p1, ⚫ `HEAD` 2019) | `libre-oneroster` · `chalk` · `roster-hub` (AGPL-3.0) | — | 🔴 **ninguno** |
+| **cliente** | `OneRoster.NET` (MIT, 🟢 **v1p1+v1p2**) · `gotranseo` (Apache-2.0) · `TCI/OneRoster` (MIT, 🟢 vivo) · `ex_oneroster` (Apache-2.0) | — | — | 🟢 **uno** |
+| **puente** (SDS / Apple School Manager) | — | — | 🔴 **los dos** | 🔴 ninguno |
+| **conector SIS propietario** | — | `chalk` (AGPL-3.0) | 🔴 `Tools4ever-NIM/*` | ⚠️ sí, **pero sin licencia** |
+
+🔵 **La regla, generalizable a cualquier estándar vertical (xAPI, Ed-Fi, LTI, FHIR en salud): el
+copyleft y la ausencia de licencia se concentran donde está el TRABAJO DE INTEGRACIÓN —servidor,
+puente, conector—, y lo permisivo sobrevive donde está la TRADUCCIÓN DE DATOS —cliente, librería—.
+Así que CONSUMIR el estándar con licencia permisiva suele poderse; EXPONERLO suele no.**
+
+### 🧭 La regla de decisión, que es lo que se lleva a una propuesta
+
+**Preguntá por la DIRECCIÓN del dato antes de elegir repo:**
+
+- **El agente LEE** (tutor que necesita saber quién está en qué clase, analítica, alerta temprana)
+  → 🟢 **camino permisivo hoy**: bifurcar `jdolny/OneRoster.NET` (**MIT**, v1p1+v1p2).
+  **Trabajo real: 2–3 semanas** para ponerlo contra el 1.2 **final** (su README admite haberse escrito
+  contra un borrador) **+ el libro de calificaciones, que no está construido** (*«Grade book has not
+  been implemented»*).
+- **El agente ESCRIBE o PUBLICA el *roster*** (aprovisionamiento, sincronización a Teams o Apple
+  School Manager, ser la fuente del distrito) → 🔴 **no hay camino permisivo.** Las dos opciones
+  reales: **(A)** `usechalk/chalk` **AGPL-3.0** desplegado **en** la infraestructura del cliente —cubre
+  las cinco propietarias (PowerSchool, Infinite Campus, Skyward, Clever, ClassLink) y es el camino
+  técnico corto—, o **(B)** construir el servidor **v1p2** que no existe en abierto.
+  ⚠️ **El camino técnico corto y el camino comercial corto son OPUESTOS, y por eso esto va en la
+  propuesta y no en la integración.**
+
+## 🧪 P231 — la columna de licencia se llena para las filas MUERTAS también, y es ahí donde más pesa
+
+🔴 **El error que este patrón previene, cometido por esta misma KB:** `repos/trending.md:3383` registró
+la licencia de `jdolny/OneRoster.NET` como **«— (no verificada: repo muerto)»**.
+
+🔵 **La inferencia está dada vuelta.** Un **permisivo muerto se BIFURCA**; un **AGPL muerto no**. En
+código sin mantenimiento la licencia es lo **único** que queda —no hay quien atienda un *issue*, no hay
+*roadmap*, no hay contraparte con quien negociar—, así que es **el** dato que decide si la pieza sirve.
+**El costo de la omisión fue una petición HTTP, y escondió el único dato que P229 declaró inexistente.**
+
+**Regla ejecutable:** *«muerto»* va en la columna **estado**, **nunca** en la columna **licencia**.
+El instrumento de `p230` la hace cumplir: mide el payload **antes** de consultar la frescura, así que
+la vitalidad no puede cortocircuitar la medición.
+
+## 🔁 P232 — antes de dar de alta, comparar BYTES: el dedupe por *slug* es ciego al duplicado exacto
+
+`fffnite/go-oneroster` y `bgwdotdev/go-oneroster` son **el mismo proyecto**: `README.md` de **3.978 B**
+los dos y `LICENSE` idéntico, titular `fffnite` en ambos. El README lo confirma solo —imagen publicada
+`docker.pkg.github.com/`**`fffnite`**`/go-oneroster/goors:0.3.1`, acompañantes en `fffnite/*`—.
+
+🔴 **Un dedupe que pregunta *«¿ya está este `owner/repo`?»* cuenta dos piezas donde hay una**, e infla
+el denominador de toda métrica de cobertura de la capa. 🟢 **Control barato, el que se usó acá:**
+
+```bash
+for R in fffnite/go-oneroster bgwdotdev/go-oneroster; do
+  curl -sS "https://raw.githubusercontent.com/$R/master/README.md" | wc -c
+done   # mismo byte count -> sospechar rename/fork antes del alta
+```
+
+🧾 **Y el corolario de identidad, medido: en esta capa, titular ≠ dueño es la NORMA —2 de 2 permisivos**
+(`go-oneroster`: dueño `bgwdotdev`, titular `fffnite`; `OneRoster.NET`: dueño `jdolny`, titular
+`theopenem`). **Preguntarle la licencia al dueño del repo da el titular equivocado la mitad de las
+veces. Hay que leer el payload.**
+
+## 🍳 Receta P233 — «agente docente que LEE el *roster*», con las piezas nombradas y el *wiring* explícito
+
+**Para:** K-12 o superior en NA, donde sin *rostering* no hay aprovisionamiento. **Promesa acotada:
+el agente LEE. No escribe el *roster*.**
+
+**Piezas, todas con licencia medida por payload en este pase o en pases citados:**
+
+| Rol en la receta | Pieza | Licencia |
+|---|---|---|
+| cliente de *roster* (v1p2) | [`jdolny/OneRoster.NET`](https://github.com/jdolny/OneRoster.NET) | **MIT** |
+| compuerta de efecto: lo escrito nace `DRAFT` | [`pengusto/google-classroom-mcp`](https://github.com/pengusto/google-classroom-mcp) (`GATE-IN-EFFECT`, **P221**) | **MIT** |
+| compuerta de capacidad: el token sin la bandera no tiene *scope* de escritura | [`DaviPac/Classroom-mcp`](https://github.com/DaviPac/Classroom-mcp) (`GATE-IN-SCOPE`, **P220**) | **MIT** |
+| tutoría con estado del alumno y repaso | [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) | **MIT** |
+| repaso espaciado | [`open-spaced-repetition/py-fsrs`](https://github.com/open-spaced-repetition/py-fsrs) | **MIT** |
+| telemetría de aprendizaje | [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) (xAPI LRS) | **Apache-2.0** |
+
+**Wiring:**
+
+1. `OneRoster.NET` en **modo `V1p2`** (`V1p2(tokenUrl, baseUrl, clientId, clientSecret)` — *client
+   credentials* de OAuth2, **no** el `consumerKey/consumerSecret` de v1p1) lee alumnos, clases y
+   matrículas del SIS del distrito. 🔴 **Pedir credencial de **sólo lectura**: el cliente no necesita
+   escritura y el *scope* es la única compuerta que no depende del código (**P220**).**
+2. El *roster* se materializa en una tabla local **con TTL**, no se consulta en caliente por turno de
+   conversación. ⚠️ **Es dato de alumno: el TTL es el control de minimización que pide el Anexo III en
+   EMEA y las leyes estatales de NA.**
+3. `tutor-mcp` + `py-fsrs` llevan el estado pedagógico **por alumno del *roster***, no por sesión de
+   chat — es lo que hace que la receta necesite *rostering* en vez de un *login* suelto.
+4. Toda escritura hacia el LMS pasa por la compuerta de **efecto**: nace `DRAFT` y la publica un
+   docente (**P221**). 🔵 **El riesgo de un agente docente no es que escriba: es que lo escrito llegue
+   al alumno sin revisión.**
+5. `lrsql` registra las declaraciones xAPI para la auditoría que el comprador va a pedir.
+
+**Estimación: 6–8 semanas**, de las cuales **2–3 son la puesta al día de `OneRoster.NET` contra el
+1.2 final** (ver P230).
+
+🔴 **Lo que esta receta NO promete, y hay que decirlo en la propuesta:** no publica *roster*, no
+sincroniza a **Microsoft School Data Sync** ni a **Apple School Manager** —los dos únicos puentes
+abiertos están **sin archivo de licencia** (fila «puente» de **P230**)—, y no trae libro de
+calificaciones. **Cada una de esas tres es un proyecto aparte con otro régimen de licencia.**
+
+---
 ## 🔐 P220 — `GATE-IN-SCOPE`: la compuerta que se hace cumplir FUERA del proceso, en los *scopes* del token (pase 74 del 2026-10-03)
 
 **Las seis clases de compuerta de los pases 70–73** (`GATE-IN-SURFACE`, `GATE-IN-SIGNATURE`,

@@ -9,6 +9,166 @@ updated: 2026-10-03
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 > No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
 
+## 2026-10-03 — pase 76: la conclusión del pase 75 se cae con datos de su propio archivo, y la pieza que la arreglaba estaba en la base sin licencia porque se la declaró «no verificada: repo muerto»
+
+### 🔴 La corrección, y esta vez no hizo falta salir a buscar: la refutación ya estaba escrita
+
+El pase 75 (**P229**) concluyó que la capa de *rostering* de K-12 es un **callejón de licencias** y que
+**permisivo + vivo + spec vigente** deja 🟢 **una** pieza: `bgwdotdev/go-oneroster`. 🔴 **Esa pieza se
+publica VIVA y MUERTA en el mismo `HEAD`, en los mismos cuatro archivos de inventario:**
+
+| Dónde | Qué dice de `bgwdotdev/go-oneroster` |
+|---|---|
+| `repos/foundations.md:106` | 🟢 «**vivo**, 8 ★, Go» |
+| `repos/foundations.md:1768` | ⚫ «2019-11-04 · 6,9 años · **muerto**» |
+| `repos/trending.md:24` | 🟢 «vivo, 8 ★» |
+| `agents/trending.md:4577` | ⚫ «2019-11-04 · **6,9 años**» |
+
+🔵 **Por qué ningún instrumento lo veía, y es el mismo defecto de clase que el pase 74:** P229 evaluó
+las tres condiciones **como un bloque** y le preguntó la vitalidad a la **prosa de su propia fila**,
+no a la tabla de frescura que esta KB mantiene 1.662 líneas más abajo **en el mismo archivo**. Un
+instrumento que lee filas no cruza dos tablas del mismo archivo si nadie le dice que son del mismo
+objeto.
+
+Evaluadas por separado, cada una contra su propia evidencia (`compose/code/p230-rostering-layer-axis/`,
+**10/10** piezas medidas):
+
+| Condición | `go-oneroster` | Evidencia |
+|---|---|---|
+| permisiva | 🟢 **sí** | MIT, **payload** de `master/LICENSE` medido en este pase |
+| viva | 🔴 **no** | `HEAD` 2019-11-04 — **6,9 años**, por la tabla de esta misma KB |
+| spec vigente | 🔴 **no** | implementa **v1p1**; **v1.2 superó a 1.1 en 2023**, y 1.1 está *sunset* para certificaciones nuevas |
+
+🔴 **El conteo correcto no es 1: es 0.** El callejón es **más** cerrado que lo que dijo el pase 75.
+
+### 🧪 El error de método del pase, que es el aporte más transferible
+
+`repos/trending.md:3383` registra la licencia de `jdolny/OneRoster.NET` como
+**«— (no verificada: repo muerto)»**.
+
+🔴 **«Muerto» no es un motivo para NO medir la licencia: es un motivo para medirla.** Un permisivo
+muerto **se bifurca**; un AGPL muerto **no**. En código sin mantenimiento la licencia pesa **más**, no
+menos — es lo único que queda cuando no hay quien atienda un *issue*. **El costo de la omisión fue una
+petición HTTP, y escondió exactamente el dato que P229 declaró inexistente.**
+
+### 🟢 El hallazgo: el único permisivo con spec VIGENTE de esta capa ya estaba en la base
+
+🟢 **`jdolny/OneRoster.NET` — MIT** (payload `master/LICENSE`, titular **`theopenem`**, 2020) — **e
+implementa `v1p1` Y `v1p2`**, con dos modelos de autenticación distintos en su API pública:
+`V1p1(baseUrl, consumerKey, consumerSecret)` contra `V1p2(tokenUrl, baseUrl, clientId, clientSecret)`
+— OAuth1 de dos patas contra *client credentials* de OAuth2. **No es una diferencia de nombre: son dos
+flujos de credencial distintos, y es la razón por la que un cliente v1p1 no habla con una fuente v1p2.**
+
+⚠️ **Las tres cotas se declaran, porque sin ellas la fila miente por omisión:** es **cliente**, no
+servidor; es **sólo rostering** (*«Grade book has not been implemented»*, dicho por el README); y su
+propio README afirma *«The OneRoster 1.2 specification has not yet been finalized»* — 🔴 **se escribió
+contra un BORRADOR de 1.2**, afirmación hoy vencida (1.2 se publicó en **septiembre de 2022**).
+**Sirve como punto de partida bifurcable, no como conformidad certificable.**
+
+### 🪜 El eje nuevo del pase: CAPA, y es el que explica la capa mejor que la licencia
+
+Medido, no inferido:
+
+| Capa | Permisivo | Copyleft | Sin licencia | ¿Alguno con **v1p2**? |
+|---|---|---|---|---|
+| **servidor** | `go-oneroster` (MIT, v1p1, muerto) | `libre-oneroster` · `chalk` (AGPL-3.0) | — | 🔴 **ninguno** |
+| **cliente** | `OneRoster.NET` (MIT) · `gotranseo` (Apache-2.0) · `TCI/OneRoster` (MIT) · `ex_oneroster` (Apache-2.0) | — | — | 🟢 **uno** |
+| **puente** | — | — | 🔴 **los dos** | 🔴 ninguno |
+
+🔵 **La frase comercial que sale de la tabla: CONSUMIR OneRoster con spec vigente y licencia permisiva
+se puede hoy; EXPONERLO no.** No existe servidor permisivo en v1p2, así que ser la **fuente** de
+*roster* obliga a **construir** o a **tomar AGPL-3.0** y asumir el despliegue del distrito.
+**Es una decisión de CAPA, no de licencia** — y el pase 75 la había planteado como de licencia.
+
+### 🔁 Dos hallazgos de identidad, y uno es un duplicado que el dedupe por *slug* no puede ver
+
+🔁 **`fffnite/go-oneroster` es el MISMO proyecto que `bgwdotdev/go-oneroster`:** `README.md` **byte a
+byte idéntico** (3.978 B los dos) y `LICENSE` idéntico. 🔴 **`fffnite` tiene 0 apariciones en 75
+pases**, y es el **titular** del MIT. El README se delata solo: la imagen publicada es
+`docker.pkg.github.com/`**`fffnite`**`/go-oneroster/goors:0.3.1` y los acompañantes viven en
+`fffnite/*`. **Un dedupe por *slug* cuenta dos piezas donde hay una.**
+
+🧾 **El desacople titular ≠ dueño es la NORMA en los permisivos de esta capa: 2 de 2.** `go-oneroster`
+(dueño `bgwdotdev`, titular `fffnite`) y `OneRoster.NET` (dueño `jdolny`, titular `theopenem`).
+🔵 **Para `p184`/`p190`: en esta capa, preguntarle la licencia al dueño del repo da el titular
+equivocado la mitad de las veces.** Hay que leer el payload.
+
+### 🆕 Las altas del pase, con licencia por PAYLOAD y región bajo **P135**
+
+| Pieza | Licencia (payload) | Capa | Spec | Región | Por qué entra |
+|---|---|---|---|---|---|
+| 🟢 [`jdolny/OneRoster.NET`](https://github.com/jdolny/OneRoster.NET) | **MIT** (`master/LICENSE`, titular `theopenem`) | cliente | **v1p1 + v1p2** | ⚠️ sin región verificable | **el único permisivo con v1p2 de la capa**; ya estaba en la base sin licencia ni spec |
+| 🟢 [`gotranseo/oneroster`](https://github.com/gotranseo/oneroster) | **Apache-2.0** (`main/LICENSE.txt`) | cliente | v1p1 | ⚠️ sin región verificable | cliente Swift/Vapor; **la licencia faltaba en la fila** |
+| ⚫ [`jrissler/ex_oneroster`](https://github.com/jrissler/ex_oneroster) | **Apache-2.0** (`master/LICENSE`) | cliente | v1p1 | ⚠️ sin región verificable | Elixir/Phoenix, **en sólo-lectura por decisión del autor**, que redirige a `IMSGlobal/ex-OR-code` |
+| 🔁 [`fffnite/go-oneroster`](https://github.com/fffnite/go-oneroster) | **MIT** (`master/LICENSE`) | servidor | v1p1 | ⚠️ sin región verificable | **duplicado byte a byte** de la fila que P229 usó; se registra para que el dedupe deje de contar dos |
+| 🔴 [`the-glasgow-academy/oneroster-api-to-csv-sds`](https://github.com/the-glasgow-academy/oneroster-api-to-csv-sds) | 🔴 **sin archivo de licencia** (10 nombres × 2 ramas en 404, `README.md` en 200) | puente | v1p1 | 🟢 **EMEA** | **el único puente abierto a Microsoft School Data Sync** |
+| 🔴 [`the-glasgow-academy/oneroster-api-to-csv-asm`](https://github.com/the-glasgow-academy/oneroster-api-to-csv-asm) | 🔴 **sin archivo de licencia** (ídem, ausencia MEDIDA) | puente | v1p1 | 🟢 **EMEA** | **el único puente abierto a Apple School Manager** |
+
+📍 **La región de los dos puentes es por CONFIGURACIÓN, no por antropónimo** (**P135**): el README del
+de Microsoft dice construir *«the **UK** standard CSV required by Microsoft School Data Sync»* y el
+dueño es un colegio de Glasgow — **afiliación institucional**. 🔵 **Los pases 74 y 75 declararon
+EMEA = 0 piezas; esta capa le devuelve dos — y las dos son NO ENTREGABLES por licencia.**
+
+### 🔴 La fila «puente» de P230: el lado de la EXPORTACIÓN está cerrado, y por una vía distinta a la del servidor
+
+Las dos consolas donde un colegio **realmente** aprovisiona cuentas son **Microsoft School Data Sync**
+y **Apple School Manager**. Los únicos puentes abiertos hacia ellas son los dos de Glasgow, 🔴 **los
+dos sin archivo de licencia**, los dos en PowerShell Core y los dos clavados a v1p1
+(`GOORS_URL=…/ims/oneroster/v1p1` — `GOORS` es el binario de `go-oneroster`, así que son el **anillo
+acompañante de la pieza muerta**).
+
+🔵 **Así que el callejón tiene TRES salidas y las tres están tapadas por motivos distintos:** el
+**servidor** por spec (ningún permisivo en v1p2), el **puente** por licencia (ausencia medida), y el
+**cliente** —la única abierta— por mantenimiento (MIT y v1p2, pero `HEAD` de 2023 y escrito contra un
+borrador). **Decirlo así es lo que permite cotizar: la salida abierta es la del cliente, y el trabajo
+es de bifurcación, no de integración.**
+
+### ⚠️ Una candidata RECHAZADA, medida, y es la que le devuelve una pieza a APAC
+
+[`helixnow/deep-student`](https://github.com/helixnow/deep-student) **v0.9.73** — banco de trabajo de
+aprendizaje *local-first* (materiales + notas + mapas mentales + *quizzes* con autocorrección +
+traducción + repaso con *flashcards*), con sistema de *skills* y extensiones **MCP**.
+🔴 **No entra: `AGPL-3.0-or-later`** — y la licencia está medida en **dos artefactos independientes del
+mismo árbol**, que además **coinciden**: payload de `LICENSE` (texto AGPL-3.0) y
+`package.json: "license": "AGPL-3.0-or-later"`, con la insignia del README de acuerdo.
+🔵 **Es el caso CONTRARIO a `P223`** (el `LICENSE` y el manifiesto que se desmienten en el mismo
+árbol): acá los dos canales concuerdan, así que el rechazo es firme y no hace falta un tercer canal.
+📍 **Región APAC por configuración y no por antropónimo:** `README_CN.md` versionado y sitio en
+`deepstudent.cn` (**TLD `.cn`**). 🔵 **Los pases 74 y 75 declararon APAC = 0; este pase le devuelve una
+pieza, y es un rechazo PLACED — un hueco informado vale más que un silencio.**
+
+### 🔴 El canal de cuota de mercado deja de ser un pendiente y pasa a ser INALCANZABLE
+
+🔵 **El pase 75 dijo que `SOURCE-VERIFIED` es un valor que el dato de cuota de esta KB no llevó nunca
+en 75 pases. Este pase mide la CAUSA, con dos canales independientes y en la misma corrida:**
+
+- `curl` → **403 al CONNECT**, y el propio proxy lo registra:
+  `{"kind":"connect_rejected","detail":"gateway answered 403 to CONNECT (policy denial or upstream
+  failure)","host":"en.wikipedia.org:443"}`
+- **WebFetch** → `{"error_type":"EGRESS_BLOCKED","domain":"en.wikipedia.org"}` para el mismo host
+
+🔴 **No es una rareza de WebFetch: es política de red del entorno.** Y la lista de excepciones del
+proxy son **registros de paquetes y hosts de código** (`registry.npmjs.org`, `pypi.org`,
+`files.pythonhosted.org`, `index.crates.io`, `proxy.golang.org`, `jsr.io`) — 🔵 **ni un solo host de
+investigación de mercado.** Conclusión estructural, y es una instrucción para los pases que vienen:
+**esta KB puede verificar CÓDIGO y LICENCIAS en la fuente, y NO puede verificar CUOTA en la fuente.
+Dejen de gastar presupuesto en intentarlo** — lo que sí se puede es lo que hizo el pase 75: declarar el
+canal y publicar el **orden** sin el porcentaje.
+
+### ⚠️ El barrido regional y las búsquedas globales, declarados
+
+**Las cuatro búsquedas globales obligatorias rindieron 1 pieza educativa nueva** (`deep-student`, y es
+un rechazo por licencia); el resto devolvió el inventario propio de esta base (`AI-Teaching-Agent`,
+`tutor-mcp`, `DeepTutor`, `educhain`, `AutoGen`, `CrewAI` ya estaban). **Las cuatro regionales
+devolvieron CERO cifras regulatorias nuevas, por segundo pase consecutivo:** NA (AB 1159, SB 1546 de
+Oregón, ~100 proyectos de ley estatales, requisito de competencia IA de Purdue), EMEA (*Digital
+Omnibus*, diferimiento de Anexo III a **2027-12-02**), APAC (*AI Promotion Act* de Japón, IndiaAI,
+etiquetado chino), LATAM (Observatorio de la UNESCO, **PL 2338/2023**) — 🔴 **todo ya publicado en
+`intel/market.md` e `intel/trends.md`.** 🔵 **Confirma desde el método lo que dijo el pase 75: el
+barrido por REGIÓN está agotado como dimensión de descubrimiento. Las dos dimensiones que rindieron en
+dos pases seguidos son internas: `(segmento, unidad)` en el 75 y `CAPA` en el 76.**
+
+---
 ## 2026-10-03 — pase 75: el hallazgo del pase 74 era cierto y su causa estaba mal, y el instrumento que lo prueba no existía
 
 ### 🔴 La corrección, porque reencuadra el pase anterior en vez de sumarle

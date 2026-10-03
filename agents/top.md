@@ -244,6 +244,51 @@ updated: 2026-10-03
 > modelo»**— y **ninguna de las dos sabe de la otra**. Ver la capa nueva al final de este archivo, las tendencias
 > **180**–**182** y el patrón **P99**.
 
+## 🧪 Altas de agente: 0 — y el pase gasta su presupuesto en refutar una conclusión propia (pase 76 del 2026-10-03)
+
+**Este pase no agregó una sola fila a este archivo, y se declara.** La única candidata de agente que
+devolvieron las cuatro búsquedas globales obligatorias **no entra por licencia**, y las cinco piezas
+nuevas del pase son de *rostering* — van a `repos/foundations.md`, `repos/trending.md` y
+`verticals/solutions.md` por la **regla del pase 25**. 🔵 **Fewer real rows beat padding.**
+
+### ⚠️ La candidata RECHAZADA, con el motivo medido en DOS artefactos del mismo árbol
+
+| Pieza | Licencia (medida) | Qué es | Veredicto |
+|---|---|---|---|
+| [`helixnow/deep-student`](https://github.com/helixnow/deep-student) **v0.9.73** | 🔴 **`AGPL-3.0-or-later`** — payload de `LICENSE` (texto AGPL-3.0) **y** `package.json: "license": "AGPL-3.0-or-later"`, con la insignia del README **de acuerdo** | banco de trabajo de aprendizaje *local-first*: materiales + notas + mapas mentales + *quizzes* con autocorrección sobre libros y exámenes + traducción + repaso con *flashcards*, con sistema de *skills* y extensiones **MCP** | 🔴 **NO ENTRA.** Copyleft fuerte de red: inembebible en entregable propietario |
+
+🔵 **Es el caso CONTRARIO a `P223`** —el `LICENSE` y el manifiesto que se desmienten en el mismo
+árbol—: acá **los dos canales concuerdan**, así que el rechazo es firme y **no hace falta un tercer
+canal** para sostenerlo. ⚠️ **Y conviene decir lo que sí vale de la pieza, porque la licencia no borra
+la señal de producto:** es la implementación más completa del inventario del patrón
+*«workbench* único sobre un mismo dato de aprendizaje»*, y su capa MCP la hace **componible sin
+bifurcarla** — un despliegue del cliente, sobre su propia infraestructura, no viola la AGPL.
+
+📍 **Región: APAC, por CONFIGURACIÓN y no por antropónimo** (regla **P135**): `README_CN.md`
+versionado en el árbol y sitio en `deepstudent.cn` (**TLD `.cn`**). 🔵 **Los pases 74 y 75 declararon
+APAC = 0 piezas; este pase le devuelve una, y es un rechazo PLACED. Un hueco informado vale más que un
+silencio: le dice al estudio que en APAC la capa de *workbench* existe y que el bloqueo es de
+licencia, no de madurez.**
+
+### 🔴 En qué se gastó el presupuesto, porque reencuadra la capa que el pase 75 cerró
+
+El pase 75 concluyó (**P229**) que la capa de *rostering* de K-12 es un **callejón de licencias** con
+🟢 **una** pieza permisiva, viva y en spec vigente. 🔴 **Esa conclusión se falsifica con datos que ya
+estaban en el archivo que la publica:** la misma pieza (`bgwdotdev/go-oneroster`) aparece 🟢 **«vivo»**
+en `repos/foundations.md:106` y ⚫ **«muerto hace 6,9 años»** en `repos/foundations.md:1768` — **mismo
+`HEAD`, 1.662 líneas de distancia.** Medidas por separado, las tres condiciones las cumplen
+🔴 **CERO** piezas.
+
+🟢 **Y el permisivo con el spec VIGENTE que P229 declaró inexistente ya estaba en esta base, sin
+licencia en la fila:** `jdolny/OneRoster.NET` — **MIT** (titular `theopenem`) con **`v1p1` + `v1p2`** —
+porque el pase 75 registró su licencia como **«no verificada: repo muerto»**.
+
+🧪 **El aporte transferible, y aplica a cualquier KB de esta familia: «muerto» no exime de medir la
+licencia — la hace MÁS importante.** Un permisivo muerto **se bifurca**; un AGPL muerto **no**. El
+costo de la omisión fue **una petición HTTP**. Instrumento, corrida (**10/10**) y controles en
+`compose/code/p230-rostering-layer-axis/`.
+
+---
 ## 🎓 El LMS más instalado del planeta tenía CERO filas en esta base, y abrirlo agrega DOS peldaños nuevos a la escalera de escritura (pase 74 del 2026-10-03)
 
 > **El hallazgo no es un repo: es un defecto de COBERTURA de esta KB, y es medible.** Este archivo

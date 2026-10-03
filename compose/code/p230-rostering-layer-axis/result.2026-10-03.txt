@@ -1,0 +1,12 @@
+SLUG                                           CAPA     SPEC        LICENCIA       TITULAR                  RUTA
+----------------------------------------------------------------------------------------------------------------------------
+bgwdotdev/go-oneroster                         servidor v1p1        MIT            2019 fffnite             master/LICENSE
+fffnite/go-oneroster                           servidor v1p1        MIT            2019 fffnite             master/LICENSE
+bgwdotdev/libre-oneroster                      servidor v1p1        AGPL-3.0       -                        master/LICENSE
+usechalk/chalk                                 servidor v1p1        AGPL-3.0       -                        main/LICENSE
+jdolny/OneRoster.NET                           cliente  v1p1+v1p2   MIT            2020 theopenem           master/LICENSE
+gotranseo/oneroster                            cliente  v1p1        Apache-2.0     -                        main/LICENSE.txt
+TCI/OneRoster                                  cliente  v1p1        MIT            2019 Bobby Julius        master/LICENSE.txt
+jrissler/ex_oneroster                          cliente  v1p1        Apache-2.0     -                        master/LICENSE
+the-glasgow-academy/oneroster-api-to-csv-sds   puente   v1p1        SIN-ARCHIVO-DE-LICENCIA -                        (main y master x 10 nombres)
+the-glasgow-academy/oneroster-api-to-csv-asm   puente   v1p1        SIN-ARCHIVO-DE-LICENCIA -                        (main y master x 10 nombres)

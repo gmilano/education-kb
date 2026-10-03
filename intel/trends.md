@@ -101,6 +101,129 @@ updated: 2026-10-03
 > están mal por ~2× y **un 403 de `curl` no es un 404**. Ver la nota de método del pase 12.
 > **Pase 11:** el Digital Omnibus es derecho vigente (tendencia 25), aparece la capa predictiva y está vacía (tendencia 26), y se corrige un error de método de diez pasadas sobre licencias permisivas (tendencia 27).
 
+## 🆕 Tendencias 594–601 — pase 76 del 2026-10-03
+
+> Continuación real de la serie: el pase 75 cerró en **593**. Las ocho salen de mediciones de primera
+> mano de este pase (`compose/code/p230-rostering-layer-axis/`, **10/10** piezas).
+
+### 594. 🔴 Una conclusión puede falsificarse con datos del archivo que la publica, y el defecto es de ALCANCE del instrumento
+
+El pase 75 concluyó (**P229**) que **permisivo + vivo + spec vigente** deja **una** pieza en la capa de
+*rostering*. 🔴 **La misma pieza (`bgwdotdev/go-oneroster`) se publica 🟢 «vivo» en
+`repos/foundations.md:106` y ⚫ «muerto hace 6,9 años» en `repos/foundations.md:1768` — mismo `HEAD`,
+1.662 líneas de distancia, mismo archivo.** Y cruzado: `repos/trending.md:24` (vivo) contra
+`agents/trending.md:4577` (muerto). **Evaluadas por separado, las tres condiciones las cumplen CERO
+piezas.**
+
+🔵 **La tendencia, y es de método: un instrumento que lee FILAS no cruza dos TABLAS del mismo archivo
+si nadie le dice que hablan del mismo objeto.** P229 le preguntó la vitalidad a la prosa de su propia
+fila, no a la tabla de frescura que esta KB ya mantenía. **Es la misma forma del defecto del pase 74
+(un barrido de cobertura contra la historia propia no puede encontrar una ausencia sistemática), sobre
+otro eje: una conjunción de condiciones evaluada en bloque no puede encontrar una contradicción
+interna.**
+
+### 595. 🧪 «Muerto» no exime de medir la licencia — la hace MÁS importante
+
+`repos/trending.md:3383` registró la licencia de `jdolny/OneRoster.NET` como
+**«— (no verificada: repo muerto)»**. 🔴 **La inferencia está dada vuelta.** Un **permisivo muerto se
+BIFURCA**; un **AGPL muerto no**. Para código sin mantenimiento la licencia es lo **único** que queda
+—no hay quien atienda un *issue*, no hay *roadmap*, no hay contraparte—, así que es **el** dato que
+decide si la pieza sirve.
+
+🔵 **El costo de la omisión fue UNA petición HTTP, y escondió exactamente el dato que P229 declaró
+inexistente:** `OneRoster.NET` es **MIT** (payload, titular `theopenem`) **y el único permisivo de la
+capa que implementa el spec vigente**. **Regla transferible a cualquier KB de esta familia: la
+columna de licencia se llena para TODAS las filas, vivas y muertas; «muerto» va en la columna de
+estado, nunca en la de licencia.**
+
+### 596. 🪜 En una capa de ESTÁNDAR, la CAPA explica la disponibilidad mejor que la licencia
+
+Medido sobre las 10 piezas del estándar OneRoster: **servidor** → permisivo sólo en spec superado y
+muerto, vivo sólo en AGPL-3.0. **Cliente** → cuatro permisivos, y uno con el spec vigente.
+**Puente** → los dos existentes **sin archivo de licencia**. **Conector a SIS propietario** → AGPL o
+sin licencia.
+
+🔵 **La tendencia: en un estándar, el copyleft y la ausencia de licencia se concentran donde está el
+TRABAJO DE INTEGRACIÓN (servidor, puente, conector), y lo permisivo sobrevive donde está la
+TRADUCCIÓN DE DATOS (cliente, librería).** La consecuencia comercial es directa y vale para cualquier
+estándar vertical: **CONSUMIR un estándar con licencia permisiva suele poderse; EXPONERLO suele no.**
+
+### 597. 🔴 La dirección del dato es un eje de cotización, y es asimétrica
+
+De 596 sale una regla de propuesta que esta base no tenía: **«el agente LEE» y «el agente ESCRIBE o
+PUBLICA» son dos proyectos distintos con dos regímenes de licencia distintos**, aunque el estándar,
+el cliente y el LMS sean los mismos. **Leer** tiene camino permisivo; **escribir o ser la fuente**
+obliga a AGPL con despliegue del cliente, o a construir. 🔵 **Se conversa en la propuesta: después de
+la integración ya es un problema de contrato.**
+
+### 598. ⚠️ El spec que una KB llama «vigente» caduca sin que ninguna fila cambie
+
+El pase 75 llamó **«spec vigente»** a **OneRoster v1p1**. 🔴 **1.2 se publicó en septiembre de 2022 y
+superó a 1.1 en 2023**; 1.1 quedó *sunset* para certificaciones nuevas, 1.0 está deprecado desde julio
+de 2021. **El salto es de superficie, no de forma: 7 → 14 → 22 archivos CSV y 38 → 61 → 81 endpoints.**
+
+🔵 **La tendencia: la versión de un estándar es un dato con fecha de vencimiento que vive FUERA del
+repo, así que ninguna medición del árbol la refresca.** Las cuatro capas de licencia de esta KB
+(`p114`, `p170`, `p172`, `p199`) pueden estar al día y la columna «spec» estar dos versiones atrás,
+**y la celda se ve idéntica.** **Un barrido de licencia no es un barrido de conformidad.**
+
+### 599. 🧾 En una capa concreta, titular ≠ dueño puede ser la NORMA y no la excepción
+
+Los dos permisivos de esta capa: `go-oneroster` (dueño `bgwdotdev`, titular **`fffnite`**) y
+`OneRoster.NET` (dueño `jdolny`, titular **`theopenem`**). 🔴 **2 de 2.** 🔵 **Consecuencia para
+`p184`/`p190`: en esta capa, preguntarle la licencia al dueño del repo devuelve el titular equivocado
+la mitad de las veces** — y `fffnite`, titular del MIT de la pieza sobre la que P229 apoyó toda su
+conclusión, tiene **0 apariciones en 75 pases.** **Hay que leer el payload; el *slug* no es el titular.**
+
+### 600. 🔁 Un duplicado byte a byte derrota al dedupe por *slug*
+
+`fffnite/go-oneroster` y `bgwdotdev/go-oneroster` son **el mismo proyecto**: `README.md` idéntico
+(3.978 B los dos) y `LICENSE` idéntico. El README se delata solo —la imagen publicada es
+`docker.pkg.github.com/`**`fffnite`**`/go-oneroster/goors:0.3.1`, los acompañantes viven en
+`fffnite/*`—. 🔴 **Un dedupe que pregunta *«¿ya está este `owner/repo`?»* cuenta dos piezas donde hay
+una**, e infla el denominador de cualquier métrica de cobertura de la capa. 🔵 **El control barato es
+el que se usó acá: comparar el tamaño en bytes del `README` y el `LICENSE` antes de dar de alta.**
+
+### 601. 🔴 El dato de CUOTA de esta KB no es un pendiente: es inalcanzable por este entorno, y ahora está medido
+
+Dos canales independientes, misma corrida, misma causa: `curl` devuelve **403 al CONNECT** —con la
+bitácora del propio proxy diciendo `{"kind":"connect_rejected","detail":"gateway answered 403 to
+CONNECT (policy denial or upstream failure)"}`— y **WebFetch** devuelve
+`{"error_type":"EGRESS_BLOCKED"}` para el mismo host. 🔵 **Y la lista de excepciones del proxy explica
+la forma del límite: pasan registros de paquetes y hosts de código** (`raw.githubusercontent.com`,
+`registry.npmjs.org`, `pypi.org`, `files.pythonhosted.org`, `index.crates.io`, `proxy.golang.org`,
+`jsr.io`) 🔴 **y ni un solo host de investigación de mercado** (`api.github.com/repos/*` también da
+403; el único endpoint que pasa es `rate_limit`, que no transporta dato de repo).
+
+🔵 **La asimetría estructural, y es la instrucción que reemplaza a cinco pases de intentos: esta KB
+puede verificar CÓDIGO y LICENCIAS en la fuente, y NO puede verificar CUOTA en la fuente.** Lo que sí
+se puede es lo del pase 75: **declarar el canal y publicar el ORDEN sin el porcentaje.** Un orden
+consistente en cinco fuentes de búsqueda es defendible; un porcentaje con
+`provenance='EGRESS_BLOCKED'` no lo es.
+
+### ⚠️ Lo que este pase buscó y NO encontró, declarado
+
+🔴 **Cero servidores OneRoster permisivos en `v1p2`**, por dos canales (*topic* `oneroster` del pase 75
++ búsqueda por implementación de 1.2 de este pase). 🔵 **Es el candidato más limpio a contribución
+*upstream* propia que tiene esta KB en la capa, y el precedente de cómo se hace ya está medido:
+`jrissler/ex_oneroster` donó su implementación al propio 1EdTech (`IMSGlobal/ex-OR-code`,
+*«Now supporting this through IMS»*).**
+
+🔴 **Y sigue sin aparecer un cliente OneRoster permisivo, VIVO y en TypeScript** — el residuo que el
+pase 75 declaró **sobrevive**: `oneroster-ts` congelado (0BSD, 15,2 meses), `OneRoster.NET` es .NET y
+está muerto, y el único cliente vivo del inventario sigue siendo Ruby (`TCI/OneRoster`).
+
+🔴 **Las cuatro búsquedas regionales obligatorias devolvieron CERO cifras regulatorias nuevas, por
+segundo pase consecutivo**, y todo lo que trajeron ya está publicado en `intel/market.md`: NA
+(AB 1159, **SB 1546** de Oregón, ~100 proyectos de ley, competencia IA de Purdue), EMEA (*Digital
+Omnibus*, Anexo III diferido a **2027-12-02**), APAC (*AI Promotion Act* de Japón, IndiaAI, etiquetado
+chino, marcos vinculantes de Corea del Sur y Vietnam), LATAM (Observatorio de la UNESCO, UNESCO–CENIA,
+**PL 2338/2023**, encuesta del Digital Education Council con 92 % / 79 %). 🔵 **Confirma la tendencia
+592 por segunda vez: el barrido por REGIÓN está agotado como dimensión de DESCUBRIMIENTO. Las dos
+dimensiones que rindieron en dos pases seguidos son internas — `(segmento, unidad)` en el 75 y `CAPA`
+en el 76.**
+
+---
 ## 1. El giro agéntico ya pasó de generativo a autónomo
 
 El mercado se movió de aplicaciones experimentales de GenAI al despliegue de **workflows agénticos autónomos**: corrección, scheduling y tareas administrativas. La evidencia en el código, no en los informes: los tres repos educativos más grandes de esta ventana son todos agent-native, no chatbots.

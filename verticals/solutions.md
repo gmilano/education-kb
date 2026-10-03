@@ -111,6 +111,65 @@ updated: 2026-10-03
 > **`qti3-pnp`**, que abren accesibilidad de evaluación como entregable auditable (**P72**). ⚠️ **Open edX cambia de
 > recomendación: proponer con presupuesto de mantenimiento (gap 70).** Ver la sección del pase 33, abajo.
 
+## 🪪 La capa de *rostering* se parte por CAPA, y eso cambia qué se puede PROMETER en una propuesta de K-12 (pase 76 del 2026-10-03)
+
+El pase 75 agregó a esta vertical el *«sustituto autoalojable de Clever/ClassLink»* (`usechalk/chalk`,
+AGPL-3.0) y cerró la capa como un **callejón de licencias** con una salida permisiva. 🔴 **Medida por
+CAPA en vez de en bloque, la capa tiene TRES salidas y las tres están tapadas por motivos distintos**
+(**P230**, instrumento y corrida **10/10** en `compose/code/p230-rostering-layer-axis/`):
+
+| Qué necesita el cliente | Pieza permisiva | Spec | Cota de entrega |
+|---|---|---|---|
+| **CONSUMIR** *roster* — leer alumnos y clases hacia un agente | 🟢 [`jdolny/OneRoster.NET`](https://github.com/jdolny/OneRoster.NET) — **MIT** (titular `theopenem`) | 🟢 **v1p1 + v1p2** | ⚫ `HEAD` 2023-10-13; **cliente**, no servidor; **sin libro de calificaciones**; escrito contra un **borrador** de 1.2 |
+| **EXPONER** *roster* — ser la fuente que el distrito consulta | 🔴 **no existe en v1p2** | — | permisivo sólo en **v1p1** y muerto (`go-oneroster`); vivo sólo en **AGPL-3.0** (`chalk`, `libre-oneroster`, `roster-hub`) |
+| **EXPORTAR** a las consolas donde se aprovisionan cuentas | 🔴 **los dos puentes están sin licencia** | v1p1 | `the-glasgow-academy/oneroster-api-to-csv-sds` (**Microsoft School Data Sync**) y `-asm` (**Apple School Manager**): ausencia **MEDIDA** (10 nombres × 2 ramas en 404) |
+
+### 🔴 El criterio de compra que esto agrega, y es de PROMESA antes que de técnica
+
+🔵 **La vertical de K-12 se elige por la DIRECCIÓN del dato, no por el LMS.** Las dos direcciones
+tienen costo asimétrico y esta base recién ahora lo puede decir con la licencia medida:
+
+- **Si el agente LEE** (tutor que necesita saber quién está en qué clase, analítica, alertas
+  tempranas) → 🟢 **hay camino permisivo hoy**, y el trabajo es de **bifurcación** de un cliente MIT
+  muerto, no de integración. Estimación realista: **2–3 semanas** para poner `OneRoster.NET` al día
+  contra 1.2 final, más el libro de calificaciones **que no está construido**.
+- **Si el agente ESCRIBE o PUBLICA el *roster*** (aprovisionamiento, sincronización con Teams o Apple
+  School Manager, ser la fuente del distrito) → 🔴 **no hay camino permisivo**, y la decisión es
+  **AGPL-3.0 con despliegue en infraestructura del cliente** o **construir el servidor v1p2**.
+  ⚠️ **Esto se conversa en la propuesta: después de la integración ya es un problema de contrato.**
+
+### 🔴 Corrección de spec que afecta a todas las filas de *rostering* de este archivo
+
+El pase 75 llamó **«spec vigente»** a **v1p1**. 🔴 **No lo es.** **OneRoster 1.2 se publicó en
+septiembre de 2022 y superó a 1.1 en 2023**; 1.1 quedó *sunset* para certificaciones nuevas y 1.0 está
+deprecado desde julio de 2021. **El salto no es cosmético: 1.0 → 7 CSV y 38 endpoints; 1.1 → 14 CSV y
+61; 1.2 → 22 CSV y 81.** ⚠️ **Consecuencia: ninguna pieza de servidor de esta vertical está en el spec
+que un comprador certifica hoy** — y el único `v1.2` abierto del lado del conector propietario
+(`Tools4ever-NIM/*`) 🔴 **está sin archivo de licencia**, así que no es alternativa: **es el mismo
+callejón por otra puerta.**
+
+### 📍 Reparto regional del pase, medido y no inferido
+
+**EMEA 2 · APAC 1 · North America 0 · LATAM 0 · sin región verificable 4.**
+
+🟢 **EMEA vuelve al inventario después de dos pases en cero**, y vuelve con los dos puentes de Glasgow
+—región por **configuración** (*«the **UK** standard CSV required by Microsoft School Data Sync»* en el
+README, dueño = colegio de Glasgow), no por antropónimo (**P135**)—. 🔴 **Y las dos son no entregables
+por licencia.** 🟢 **APAC vuelve con un rechazo medido** ([`helixnow/deep-student`](https://github.com/helixnow/deep-student),
+**AGPL-3.0-or-later** confirmada en `LICENSE` **y** `package.json`), que como capa de partida **sí
+sirve si el despliegue es del cliente**: la AGPL no prohíbe operar, prohíbe embeber.
+
+⚠️ **Las 4 sin región son resultado de APLICAR P135, no de no haber mirado:** en los cuatro casos el
+único indicio era el nombre propio del dueño o del titular del `LICENSE` (`fffnite`, `theopenem`,
+`jdolny`, `jrissler`). **Se declinaron en vez de inflar un bucket.**
+
+🔴 **LATAM 0 en esta capa, y es un hueco con sentido que conviene decirle al estudio: OneRoster y
+Ed-Fi son estándares de K-12 de EE. UU. que la región no adoptó.** El *roster* latinoamericano vive en
+SIS nacionales y universitarios, así que **la receta de *rostering* de NA no se transfiere a un
+engagement LATAM** — el trabajo equivalente es contra el SIS del país, y ahí esta base sí tiene piezas
+(`iDavi/usp-mcp`, `CaioCastro1/usp-mcp`).
+
+---
 ## 🪪 La vertical gana el SUSTITUTO AUTOALOJABLE de Clever/ClassLink, y la pieza llega con su licencia como principal restricción de entrega (pase 75 del 2026-10-03)
 
 🔵 **Lo que el pase 74 dejó planteado y este cierra.** Ese pase estableció que la plataforma con más

@@ -584,6 +584,30 @@ players 2026. Resultado honesto:
 | EMEA | **Confirmación.** Anexo III alto riesgo, Digital Omnibus, fechas 2027-12-02 / 2028-08-02 — ya estaba, y con identificadores citables (Reglamento (UE) 2026/1744). Nada nuevo |
 | APAC | **Un hallazgo nuevo:** la oficialización de los libros de texto digitales en Japón (abajo, en `### APAC
 
+#### 📍 Pase 76 del 2026-10-03 — sin cifra nueva, y la región recupera una pieza: la capa de *workbench* existe y está bloqueada por LICENCIA, no por madurez
+
+🔴 **El canal regulatorio devolvió el inventario propio:** el *AI Promotion Act* **no vinculante** de
+Japón, el etiquetado obligatorio de contenido sintético de China, la **IndiaAI Mission**, y los tres
+modelos regulatorios de la región (marcos vinculantes y basados en riesgo en **Corea del Sur** y
+**Vietnam**; regulación dirigida en **China**; enfoque voluntario y de principios en **Japón**,
+**Singapur** y **Australia**). **Cero cifras nuevas.**
+
+🟢 **Lo nuevo es de inventario:** los pases 74 y 75 declararon **APAC = 0 piezas**. Este pase le
+devuelve una, y **es un rechazo medido** —que es información, no silencio—:
+[`helixnow/deep-student`](https://github.com/helixnow/deep-student) **v0.9.73**, banco de trabajo de
+aprendizaje *local-first* (materiales + notas + mapas mentales + *quizzes* autocorregidos + traducción
++ *flashcards*) con sistema de *skills* y extensiones **MCP**. 🔴 **`AGPL-3.0-or-later`**, medida en
+**dos artefactos del mismo árbol que concuerdan** (payload de `LICENSE` + `package.json`), así que el
+rechazo es firme. 📍 **Región por configuración:** `README_CN.md` versionado y sitio en
+`deepstudent.cn`.
+
+🔵 **La lectura comercial, y es la que le sirve al estudio: en APAC el bloqueo de esta capa es de
+LICENCIA, no de madurez.** La implementación más completa del patrón *«un solo workbench sobre un
+mismo dato de aprendizaje»* ya existe y es de la región. ⚠️ **Y la AGPL no la saca de la mesa: no se
+puede embeber en un entregable propietario, pero un despliegue EN la infraestructura del cliente no la
+viola** — y su capa MCP la hace **componible sin bifurcarla**. **Es un camino de integración, no de
+producto.**
+
 #### 📍 Pase 73 del 2026-10-03 — sin cifra nueva, y la región entrega el activo más cotizable del pase: el reporte OBLIGATORIO al Estado, ya construido y PERMISIVO
 
 🔴 **El barrido de APAC no aportó cifra nueva.** Devolvió el **96 %** de organizaciones que planean
@@ -857,6 +881,30 @@ experimental) es un riesgo técnico **de esta región** tanto como de LATAM.
 **La soberanía dejó de ser retórica y es una lista.** Toda economía grande de APAC está construyendo modelo propio: **Sarvam AI** (India), **ILMU** (Malasia), **Sahabat AI** (Indonesia), **SEA-LION** (Singapur), **HyperCLOVA X Think** (Corea del Sur), **NTT Sarashina** (Japón) y **TAIDE** (Taiwán). Para un proyecto educativo en la región eso significa que **la capa de modelo es una decisión política del cliente, no técnica nuestra**: el entregable tiene que ser **agnóstico de proveedor** desde el diseño (LiteLLM o equivalente en el medio), porque el modelo lo elige el ministerio. Mercado de AI de la región: **~USD 102.000M (2025) → >USD 735.000M (2030), CAGR ~34,5%**; los compradores que dominan la vertical educativa siguen siendo **China, India y Japón**.
 
 | LATAM | **Confirmación** (Observatorio UNESCO, sandbox de la ANPD brasileña, Uruguay y el Convenio del Consejo de Europa, CENIA). Y **un vacío nuevo y medido** en la capa de skills (abajo, en `### LATAM
+
+#### 📍 Pase 76 del 2026-10-03 — sin cifra nueva y SIN pieza nueva: la región aporta 0 en este pase, y se declara
+
+🔴 **El canal regulatorio devolvió el inventario propio de esta base:** el **Observatorio de IA en
+Educación para América Latina y el Caribe** de la UNESCO, la alianza **UNESCO–CENIA**, el
+**PL 2338/2023** de Brasil (estatuto horizontal basado en riesgo, con arquitectura de transparencia y
+supervisión), las iniciativas federales mexicanas que espejan el enfoque de riesgo, el proyecto
+chileno, y la encuesta del **Digital Education Council** (**92 %** de alumnos y **79 %** de docentes de
+superior usando IA, con **88 %** de docentes en uso *«mínimo a moderado»*). **Cero cifras nuevas.**
+
+🔴 **Y el reparto de piezas de este pase es LATAM 0** — EMEA 2, APAC 1, sin región verificable 4.
+**Se dice en vez de taparse.** ⚠️ **Lo que NO se hizo, y es deliberado:** cuatro de las seis piezas del
+pase tienen como único indicio de origen el nombre propio del dueño o del titular del `LICENSE`
+(`fffnite`, `theopenem`, `jdolny`, `jrissler`), y **esta base prohíbe convertir un antropónimo en
+región** (**P135**). **Quedaron sin región en vez de inflar un bucket.**
+
+🔵 **El contraste que vale registrar, porque va en contra de la racha de la región:** los pases 72, 73
+y 74 fueron ganados por LATAM en el eje de **gobernanza de credencial** (`iDavi/usp-mcp` sellado
+contra la clave pública; `DaviPac/Classroom-mcp` con `GATE-IN-SCOPE`). 🔴 **En la capa de *rostering*
+—que es la que este pase midió entera— LATAM no tiene una sola pieza.** **Y es un hueco con sentido:
+OneRoster y Ed-Fi son estándares de K-12 de EE. UU.;** la región no los adoptó, así que el *roster*
+latinoamericano vive en SIS nacionales y universitarios (`open-academic`/PDDIKTI es APAC, `usp-mcp` es
+Brasil). ⚠️ **Consecuencia para un engagement LATAM: la receta de *rostering* de NA no se transfiere,
+y el trabajo equivalente es contra el SIS del país. No hay estándar al que conectarse.**
 
 #### 📍 Pase 73 del 2026-10-03 — sin cifra nueva, y la región entrega por segundo pase consecutivo el ACTIVO TÉCNICO que las otras tres no tienen
 
@@ -1684,6 +1732,35 @@ Dónde se produce el software educativo abierto, que no es donde está la demand
 ## Opportunities by region
 
 ### North America
+
+#### 📍 Pase 76 del 2026-10-03 — sexto pase sin cifra regulatoria nueva, y la oportunidad de la región se vuelve de CAPA: los datos de los alumnos entran por una puerta que no tiene servidor permisivo
+
+🔴 **El canal regional devolvió, por sexta vez consecutiva, el inventario propio de esta base:**
+**AB 1159** de California (prohibiría entrenar modelos con datos de alumnos salvo beneficio directo
+para la escuela), **SB 1546** de Oregón (diseño protector de menores, incluida la reducción de uso
+compulsivo), ~**100** proyectos de ley estatales seguidos en 2026, más de la mitad de los estados con
+guía propia de IA para K-12, y el requisito de **competencia en IA para todos los *undergrads*
+aprobado por el *board* de Purdue** (vigente desde el otoño de 2026). **Cero cifras nuevas; se declara
+en vez de taparse.**
+
+🟢 **Lo nuevo de la región es de CAPA, y es la restricción que ninguna cifra de mercado muestra**
+(**P230**). NA es el mercado donde el *rostering* es **obligatorio de hecho**: sin OneRoster o Ed-Fi
+no hay aprovisionamiento de cuentas ni libro de calificaciones. Medido entero, con licencia por
+payload:
+
+| Qué necesita un engagement de K-12 en NA | Se puede hoy con licencia permisiva | Cota |
+|---|---|---|
+| **CONSUMIR** *roster* (leer alumnos/clases hacia un agente) | 🟢 **sí** — `jdolny/OneRoster.NET`, **MIT**, **v1p1 + v1p2** | ⚫ `HEAD` 2023; **cliente**, no servidor; **sin libro de calificaciones** |
+| **EXPONER** *roster* (ser la fuente, lo que pide un distrito) | 🔴 **no** — **ningún servidor permisivo implementa v1p2** | la alternativa es **AGPL-3.0** (`chalk`, `libre-oneroster`) o **construir** |
+| **EXPORTAR** a las consolas donde se aprovisiona (Microsoft School Data Sync, Apple School Manager) | 🔴 **no** — los dos únicos puentes abiertos están **sin archivo de licencia** | ausencia **MEDIDA**, 10 nombres × 2 ramas |
+
+🔵 **La oportunidad, dicha como se cotiza: en NA el trabajo de *rostering* no es de integración, es de
+DERECHOS y de construcción.** El *delta* entre «leer *roster*» y «ser fuente de *roster*» no es un
+módulo — **es una licencia AGPL que decide el modelo de entrega, o un servidor v1p2 que todavía no
+existe en abierto.** ⚠️ **Y la conversación hay que abrirla en la propuesta, no en la integración:
+`chalk` (AGPL-3.0) es la única pieza que cubre las cinco propietarias (PowerSchool, Infinite Campus,
+Skyward, Clever, ClassLink), así que el camino técnico corto y el camino comercial corto son
+opuestos.**
 
 #### 📍 Pase 75 del 2026-10-03 — quinto pase sin cifra regulatoria nueva, y la oportunidad de la región se vuelve de DERECHOS en vez de de producto
 
@@ -3394,6 +3471,32 @@ Artículo 50(2) **no es exigible** en North America — pero es **el requisito m
 multi-región conviene cotizarlo contra el techo europeo y no contra el piso local (ver **P103** y **P105**).
 
 ### EMEA
+
+#### 📍 Pase 76 del 2026-10-03 — sin cifra nueva, y la región recupera las dos piezas que los pases 74 y 75 declararon inexistentes: las dos son NO ENTREGABLES por licencia
+
+🔴 **El canal regulatorio devolvió el inventario propio:** el *Digital Omnibus on AI* en vigor desde
+**2026-07-27** que diferió la mayoría de las obligaciones de **alto riesgo del Anexo III** —educación
+incluida— del **2026-08-02** al **2027-12-02**, la clasificación de la IA educativa como **alto riesgo**
+(Anexo III: acceso, evaluación de resultados, orientación del itinerario formativo) y la **prohibición
+de inferencia de emociones**. **Cero cifras nuevas.**
+
+🟢 **Lo nuevo es de inventario, y llega por la capa de *rostering*:** los pases 74 y 75 declararon
+**EMEA = 0 piezas**. 🔴 **Este pase le devuelve dos, y las dos están sin archivo de licencia:**
+
+| Pieza | Qué es | Licencia |
+|---|---|---|
+| `the-glasgow-academy/oneroster-api-to-csv-sds` | **el único puente abierto a Microsoft School Data Sync**, construido contra el *«**UK** standard CSV»* | 🔴 **sin archivo** — 10 nombres × `main` y `master` en 404, `README.md` en 200 (ausencia **MEDIDA**) |
+| `the-glasgow-academy/oneroster-api-to-csv-asm` | **el único puente abierto a Apple School Manager** | 🔴 **sin archivo** (ídem) |
+
+📍 **La región está puesta por CONFIGURACIÓN y no por antropónimo** (regla **P135**): el *«UK standard
+CSV»* está en el README y el dueño es un colegio de Glasgow — **afiliación institucional**.
+
+🔵 **Y el cruce con el reloj del Anexo III es la oportunidad real de EMEA:** un colegio europeo que en
+**2027-12-02** tenga que documentar la procedencia de los datos de sus alumnos para un sistema de alto
+riesgo **necesita exactamente esta capa auditada**, y hoy los dos puentes que la cubren son
+*all rights reserved* por omisión. ⚠️ **No es un pendiente de investigación: es un hueco de derechos
+con fecha de vencimiento regulatoria.** La ventana de 16 meses del *Omnibus* es el tiempo disponible
+para construirla limpia.
 
 #### 📍 Pase 75 del 2026-10-03 — el reloj regulatorio sin novedad, y la capa de *rostering* de la región resulta un hueco de ECOSISTEMA
 
@@ -8495,6 +8598,34 @@ región: **65 % de los alumnos teme que la AI vuelva el aprendizaje superficial*
 más directa a ese miedo que esta base puede ofrecer.**
 
 ### Global
+
+#### 📍 Pase 76 del 2026-10-03 — el dato de CUOTA de esta base pasa de «pendiente» a INALCANZABLE por este entorno, y se mide con dos canales independientes
+
+El pase 75 dejó anotado que **`SOURCE-VERIFIED` es un valor que el dato de cuota de mercado de esta KB
+no llevó nunca, en 75 pases.** 🟢 **Este pase mide la CAUSA, y no la hereda:**
+
+| Canal | Resultado sobre `en.wikipedia.org` | Evidencia |
+|---|---|---|
+| `curl` | 🔴 **403 al CONNECT** | bitácora del propio proxy: `{"kind":"connect_rejected","detail":"gateway answered 403 to CONNECT (policy denial or upstream failure)","host":"en.wikipedia.org:443"}` |
+| **WebFetch** | 🔴 **bloqueado** | `{"error_type":"EGRESS_BLOCKED","domain":"en.wikipedia.org"}` |
+
+🔴 **No es una rareza de WebFetch: es política de red del entorno**, y los dos canales fallan con la
+misma causa en la misma corrida. Lo mismo para `listedtech.com` y `cubite.io`.
+
+🔵 **Y la lista de excepciones del proxy explica el límite estructural:** las que pasan son
+**registros de paquetes y hosts de código** — `raw.githubusercontent.com`, `registry.npmjs.org`,
+`pypi.org`, `files.pythonhosted.org`, `index.crates.io`, `proxy.golang.org`, `jsr.io` — 🔴 **y ni un
+solo host de investigación de mercado.** (`api.github.com/repos/*` también da **403**: el único
+endpoint que pasa es `rate_limit`, que no transporta dato de repo.)
+
+🟢 **La conclusión que esto deja, y es una instrucción para los pases que vienen: esta KB puede
+verificar CÓDIGO y LICENCIAS en la fuente, y NO puede verificar CUOTA en la fuente. Dejen de gastar
+presupuesto en intentarlo.** Lo que sí se puede es lo que hizo el pase 75: **declarar el canal y
+publicar el ORDEN sin el porcentaje** — un orden consistente en cinco fuentes de búsqueda es una
+afirmación defendible; un porcentaje con `provenance='EGRESS_BLOCKED'` no lo es. ⚠️ **Por eso toda
+cifra de cuota de este archivo debe leerse como «del canal de búsqueda», y la asimetría del pase 76 es
+la que importa: el dato de LICENCIA de esta base está medido en el payload, y el dato de MERCADO no
+puede estarlo.**
 
 #### 📍 Pase 66 del 2026-10-03 — la cifra 2026 se actualiza, y el hueco del barrido regional se declara en vez de taparse
 
