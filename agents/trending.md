@@ -9,6 +9,90 @@ updated: 2026-10-03
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 > No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
 
+## 2026-10-03 — pase 75: el hallazgo del pase 74 era cierto y su causa estaba mal, y el instrumento que lo prueba no existía
+
+### 🔴 La corrección, porque reencuadra el pase anterior en vez de sumarle
+
+El pase 74 concluyó que **«la atención de esta base resultó inversamente proporcional a la base
+instalada»** (**P224**). 🟢 **El hueco era real.** 🔴 **La causa no.** Esa conclusión comparó los
+~**150 M de USUARIOS** de Google Classroom —cifra ponderada por K-12— contra la cuota de Canvas en
+**INSTITUCIONES de educación superior**. **Las dos no comparten denominador.** Classroom lidera por
+**usuarios**; Canvas lidera por **instituciones** en superior. **No es una inversión: son dos ejes.**
+
+### 🟢 La medición por cohorte, que es el aporte del pase
+
+Cohorte = `(segmento, unidad)`, el único ámbito donde dos cuotas se pueden ordenar. Sobre los cuatro
+archivos de inventario **nombrados** (P227), con
+`python3 compose/code/p228-segmented-coverage/measure.py --at 5dd2bcc`:
+
+| Cohorte | Inversiones | Peor caso |
+|---|---|---|
+| 🔴 **K-12 / instituciones** | **7** | Skyward **1** ocurrencia contra Moodle **653** → **653×** |
+| 🟢 **Superior / instituciones** | **1** | Moodle **1,6×** sobre Canvas |
+
+🔵 **La conclusión que reemplaza a la del pase 74: esta no es una KB con la atención invertida —es
+una KB de educación SUPERIOR a la que se le midió la cobertura con un denominador de K-12.** En su
+propio segmento comete **una** inversión; en el ajeno, **siete** (**P228**).
+
+🔵 **Y el sesgo verdadero queda nombrado, que es más útil que «contra la base instalada»: el sesgo es
+a favor de lo AUTOALOJABLE.** Moodle **653** y Canvas **400** ocurrencias contra Classroom **16**,
+Schoology **13**, PowerSchool **6**, Infinite Campus **4**, Skyward **1**. **Las cinco de abajo no se
+autoalojan.** Eso explica el orden mejor que la base instalada, y es un proxy que esta base venía
+usando sin declararlo.
+
+### 🆕 El dato de segmento que esta base no tenía
+
+Del canal de búsqueda (⚠️ **no de fuente**: ver la cota abajo): en superior de EE. UU. Canvas lleva
+**1.814 de 3.400** instituciones y **supera a los tres siguientes sumados** (Blackboard + Moodle +
+D2L); Moodle **428** (**12,6 %**); 🔴 **Google Classroom 6 — 0,2 %.** En K-12 2026: Classroom
+**31 %**, Canvas **24 %**, Moodle **7 %** (desde **19 %** en 2017). ⚠️ **Así que «líder global» es
+una afirmación de K-12, no de todos los segmentos** — y el par `~39 % / ~19 %` que el pase 74
+publicó **no corresponde a ese par de plataformas en ninguno de los dos segmentos**; en este canal el
+**39 %** aparece atado a **Canvas en superior por conteo de instituciones**.
+
+### 🧮 P227: el agregado que se publica siete veces y se nombra una
+
+`229 líneas / 389 ocurrencias` aparece en **7** archivos de esta KB. **Uno** nombra sobre qué cuatro
+archivos se tomó (`agents/top.md`); **seis no** — 🔴 **incluido `compose/patterns.md`, el archivo que
+P224 escribió «para que no haga falta un pase 74 en otra KB».** De los **70** subconjuntos de cuatro
+de los ocho archivos de contenido, 🟢 **exactamente uno** reproduce la cifra: los cuatro de
+**INVENTARIO**. **Reparado en `patterns.md` en este pase**, y la reproducción quedó versionada
+(`reproduce_p224.py`, **3/3**).
+
+### ⚠️ El barrido regional, y se declara en vez de taparse
+
+**Las cuatro regiones devolvieron el inventario propio de esta base.** NA: 134 proyectos en 31
+estados, AB 1159, SB 1227, *Traffic Light* de NYC. EMEA: el *Digital Omnibus*
+(**Reglamento (UE) 2026/1744**) y el diferimiento de alto riesgo a **2027-12-02**. APAC: *AI
+Promotion Act* no vinculante de Japón, etiquetado de contenido sintético de China, IndiaAI. LATAM:
+Observatorio de IA en Educación de la UNESCO, **PL 2338/2023** de Brasil, proyecto chileno basado en
+riesgo. 🔴 **Cero cifras regulatorias nuevas en las cuatro.** 🔵 **Y eso confirma la tendencia 585
+desde el lado del método: el barrido por REGIÓN está agotado como dimensión de investigación; la
+dimensión que sí rindió en este pase fue SEGMENTO × UNIDAD.**
+
+### 🔴 La cota del canal, medida en este pase y no heredada
+
+| Canal | Hoy |
+|---|---|
+| `raw.githubusercontent.com` (ruta de archivo) | 🟢 **200** |
+| `github.com/{o}/{r}` por WebFetch | 🟢 sirvió |
+| `registry.npmjs.org`, `pypi.org` | 🟢 **200** |
+| `api.github.com/rate_limit` | 🟢 200 — ⚠️ el único endpoint que pasa es el que **no** transporta dato de repo |
+| `api.github.com/repos/*`, `github.com` y `codeload.github.com` por `curl` | 🔴 **403** |
+| **las fuentes de cuota de mercado** por WebFetch | 🔴 **`EGRESS_BLOCKED`**: `listedtech.com`, `cubite.io`, `axiomflow.app`, **y hasta `en.wikipedia.org`** |
+
+🔵 **Por eso `Row(share=…, provenance='EGRESS_BLOCKED')` levanta `Refusal` en el instrumento:** P224
+paso 4 convertido en código, para que ningún pase futuro publique un porcentaje que no alcanzó.
+🔴 **`SOURCE-VERIFIED` es un valor que el dato de cuota de esta KB no llevó nunca, en 75 pases.**
+
+### Altas de agente: 0, y se declara
+
+**Este pase no agregó una sola fila a `agents/top.md`.** Midió, corrigió y reparó. 🔵 **Fewer real
+rows beat padding: las piezas nuevas del pase son de infraestructura de *rostering* y van a
+`repos/foundations.md` y `verticals/solutions.md` por la regla del pase 25.**
+
+---
+
 ## 2026-10-03 — pase 74: el líder global de LMS tenía CERO filas, y abrirlo agrega dos peldaños a la escalera de escritura
 
 ### 🔴 El hallazgo del pase es un defecto de COBERTURA de esta base, y es medible

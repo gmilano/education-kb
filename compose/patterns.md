@@ -258,13 +258,166 @@ que nadie editó.**
 
 ---
 
+## 🧮 P227 — Un agregado sobre varios archivos NOMBRA su conjunto, en cada archivo donde se publica (pase 75 del 2026-10-03)
+
+🔵 **Esta regla nace de un acierto del pase 74, no de un error de medición.** P224 publicó
+**«229 líneas / 389 ocurrencias de Canvas en los 4 archivos de contenido»**, y la cifra
+**reproduce exactamente**: `compose/code/p228-segmented-coverage/reproduce_p224.py` la vuelve a
+obtener sobre el commit citado (`81e3e9a`, `HEAD` del pase 73).
+
+🔴 **El defecto es de PROPAGACIÓN.** El mismo agregado aparece en **7** archivos de esta KB.
+**Uno** nombra sobre qué cuatro archivos se tomó (`agents/top.md`, línea 250); **los otros seis
+dicen «los 4 archivos de contenido» y nada más** — y entre esos seis está
+🔴 **`compose/patterns.md`, que es el archivo que P224 escribió explícitamente *«para que no haga
+falta un pase 74 en otra KB»*.** **La copia destinada a viajar es justamente la que no nombra su
+conjunto.**
+
+### 🔢 Por qué «los 4 archivos de contenido» no es una invocación
+
+Esta KB tiene **ocho** archivos de contenido. Los subconjuntos de cuatro son **70**, y
+**exactamente uno** da `229 / 389`:
+
+| | |
+|---|---|
+| subconjuntos de tamaño 3-5 evaluados | **182** |
+| de ellos, de tamaño 4 | **70** |
+| que reproducen `229 / 389` | 🟢 **1** |
+| cuál | `agents/top.md` + `repos/foundations.md` + `verticals/solutions.md` + `intel/market.md` — los cuatro de **INVENTARIO** |
+
+⚠️ **Y no son los cuatro que la frase sugiere:** «archivos de contenido» admite los de narrativa
+(`agents/trending.md`, `intel/trends.md`, `compose/patterns.md`, `repos/trending.md`), que son los
+**más grandes**. Un lector que probara «los cuatro más grandes» obtendría otra cifra y concluiría
+que la publicada está mal.
+
+🔵 **La regla, y es barata:** la cifra de **un** archivo se publica con el nombre del archivo —y la
+de P224 (**111 líneas / 241 ocurrencias** en `agents/top.md`) es inambigua por eso mismo—; la cifra
+**agregada** se publica con **la lista**. Es P107 (*«la cifra se publica con su invocación»*)
+extendida un nivel: **sobre varios archivos, el conjunto ES parte de la invocación.**
+
+🟢 **Hecho cumplir en código, no en prosa:** `aggregate()` **levanta `Refusal`** ante un conjunto
+vacío, y **devuelve el conjunto dentro del resultado**, para que quien publique el número tenga que
+publicar la lista. Un conjunto con una ruta repetida también se rechaza: duplicaría el conteo.
+
+---
+
+## 🧭 P228 — Una cuota de mercado sin SEGMENTO y sin UNIDAD no es un dato: es un número (pase 75 del 2026-10-03)
+
+🔴 **Corrige el encuadre de P224, no su hallazgo.** El pase 74 concluyó que *«la atención de esta
+base resultó INVERSAMENTE proporcional a la base instalada»* comparando dos cifras que **no
+comparten denominador**: los ~**150 M de USUARIOS** de Google Classroom (ponderados por K-12)
+contra la cuota de Canvas en **INSTITUCIONES de educación superior**. **Classroom lidera por
+usuarios; Canvas lidera por instituciones en superior. No es una inversión: son dos ejes.**
+
+### 🔬 La medición por cohorte, que es lo que cambia la conclusión
+
+Una **cohorte** es el par `(segmento, unidad)` — el único ámbito donde dos filas se pueden ordenar.
+Medido sobre los cuatro archivos de inventario **nombrados** (P227), con
+`python3 compose/code/p228-segmented-coverage/measure.py --at 5dd2bcc` — **el commit es parte de la
+invocación**, porque sobre el árbol de trabajo posterior a este pase la cifra de K-12 da **11**
+(tendencia **593**):
+
+| Cohorte | Inversiones | Peor caso | Lectura |
+|---|---|---|---|
+| 🔴 **K-12 / instituciones** | **7** | Skyward **1** ocurrencia contra Moodle **653** → **653×** | el hueco real |
+| 🟢 **Superior / instituciones** | **1** | Moodle **1,6×** sobre Canvas | el perfil es **casi correcto** |
+
+🔵 **La conclusión que reemplaza a la de P224: esta no es una KB con la atención invertida — es una
+KB de educación SUPERIOR a la que se le midió la cobertura contra un denominador de K-12.** En su
+propio segmento comete **una** inversión; en el ajeno, **siete**. ⚠️ **Y el hueco de K-12 NO
+desaparece con el reencuadre** —PowerSchool **6**, Infinite Campus **4**, Skyward **1**— pero queda
+**localizado en una capa** (SIS / *rostering*) en vez de atribuido a un sesgo general, que es la
+diferencia entre una acción y un lamento.
+
+### ⚠️ La cota del dato, que este pase tampoco pudo levantar
+
+**Las fuentes de cuota volvieron a dar `EGRESS_BLOCKED`** por WebFetch (`listedtech.com`,
+`cubite.io`, `axiomflow.app`, y hasta `en.wikipedia.org`), igual que en el pase 74. **Así que se
+publica el ORDEN y no el porcentaje**, y la restricción está **en el constructor**:
+`Row(share=…, provenance='EGRESS_BLOCKED')` levanta `Refusal`. Es P224 paso 4 vuelto código.
+
+🔵 **Lo que el canal de BÚSQUEDA devolvió, registrado como canal y no como fuente:** K-12 2026
+Classroom **31 %** / Canvas **24 %** / Moodle **7 %** (desde **19 %** en 2017); superior de
+EE. UU. Canvas **1.814 de 3.400** instituciones, Moodle **428** (**12,6 %**) y 🆕 **Google
+Classroom 6 instituciones — 0,2 %**, dato que esta base no tenía. Canvas supera **a los tres
+siguientes sumados** (Blackboard + Moodle + D2L). ⚠️ **El par que el pase 74 publicó (~39 %
+Classroom / ~19 % Canvas) no coincide con ninguno de los dos segmentos para ese par de
+plataformas**; en este canal el **39 %** aparece atado a **Canvas en superior por conteo de
+instituciones**. **No se afirma que el pase 74 haya copiado mal —no se puede, sin fuente
+alcanzable—: se afirma que una cifra sin segmento ni unidad no es comprobable.**
+
+### 🧪 El control que importa (regla 2 de P126)
+
+`test_coverage.py` sostiene **en el mismo archivo** la negativa y su contraejemplo: un *ranker*
+**ciego a la cohorte** que, con las **mismas** filas, **sí** reproduce la «inversión» del pase 74.
+🔵 **Si ese control dejara de encontrarla, el control se quedó ciego y la negativa ya no prueba
+nada.**
+
+---
+
+## 🪪 P229 — RECETA: la capa de ROSTERING de K-12, donde la licencia decide la arquitectura antes que la técnica (pase 75 del 2026-10-03)
+
+**Para quién:** distrito de K-12 (o ministerio) que quiere un agente sobre sus datos de alumno. 🔵
+**La tesis: en K-12 el cuello de botella no es el LMS, es el *rostering*** —quién es alumno, de qué
+curso, con qué identidad— **y es por ahí que entra o no entra cualquier agente.** Es la capa que
+P228 mide como *stub* en esta base.
+
+### 🧱 Las piezas, verificadas repo por repo en este pase
+
+Canal: `raw.githubusercontent.com` (200) para el archivo de licencia + `github.com` por WebFetch
+para descripción, estrellas y estado de archivo. `api.github.com/repos/*` dio **403**.
+
+| Pieza | Licencia (leída del archivo) | Estado | Qué cubre |
+|---|---|---|---|
+| 🟢 **`bgwdotdev/go-oneroster`** | **MIT** | **vivo**, 8 ★, Go | servidor OneRoster **v1p1** con **escritura** (PUT/POST más allá del spec read-only) |
+| 🔴 **`usechalk/chalk`** | **AGPL-3.0** | vivo, 2 ★, Rust, 298 commits | **la única pieza que cubre las cinco**: PowerSchool, Infinite Campus, Skyward, Clever y ClassLink + OneRoster 1.1/CSV, Google Workspace, AD/LDAP, Entra ID |
+| 🔴 `bgwdotdev/libre-oneroster` | **AGPL** | vivo, Rust | servidor + CLI + librería OneRoster 1.1 |
+| 🔴 `lepo-project/roster-hub` | **AGPL** | vivo | gestión de *roster*, CSV → REST sobre OneRoster v1.1 |
+| ⚠️ `ridencww/uniroster-server` | **MIT** | 🔴 **ARCHIVADO 2024-09-26**, 6 ★ | OneRoster **v1.0** solamente; v1.1 y Ed-Fi figuran como **planeados** |
+| 🔴 **familia `Tools4ever-NIM/*`** | 🔴 **SIN ARCHIVO DE LICENCIA** | viva | los **únicos** conectores de **Skyward** (v1.1 y v1.2) e **Infinite Campus** (v1.2) fuera de `chalk` |
+
+### 🔴 El hallazgo que manda, y es de licencia, no de técnica
+
+**La capa de *rostering* de K-12 es un callejón de licencias.** Pedir «permisivo + vivo + spec
+vigente» deja **exactamente una** pieza en pie: **`go-oneroster` (MIT)** — y es un **servidor de
+spec**, no una plataforma: **no trae conectores a PowerSchool, Skyward ni Clever.** Todo lo demás
+es **AGPL** (`chalk`, `libre-oneroster`, `roster-hub`), **archivado y v1.0** (`uniroster-server`) o
+🔴 **sin licencia** (`Tools4ever-NIM`, que es *all rights reserved* por defecto, y es la única vía
+a Skyward e Infinite Campus que no sea `chalk`).
+
+⚠️ **Y un caso de deriva de descripción (P165), medido acá:** el canal de búsqueda presentó a
+`uniroster-server` como *«multiple protocols (e.g., OneRoster, Ed-Fi, etc.)»*; **el repo dice v1.0
+soportado y los otros dos planeados, y está archivado desde septiembre de 2024.** La capacidad
+estaba en el *snippet*, no en el árbol.
+
+### 🧭 Las dos arquitecturas que quedan, y cómo se eligen
+
+| | **A — `go-oneroster` (MIT)** | **B — `chalk` (AGPL-3.0)** |
+|---|---|---|
+| Entrega | embebible en producto propietario | self-hosted del distrito; **no** embebible en SaaS propietario |
+| Trabajo propio | 🔴 **todos** los conectores de SIS | 🟢 ninguno: las cinco plataformas ya están |
+| Cuándo | el cliente quiere producto, y tiene **un** SIS | el distrito tiene **flota mixta** y acepta AGPL |
+
+🔵 **La regla de decisión: la licencia se resuelve ANTES que la técnica en esta capa**, porque el
+*delta* de trabajo entre A y B no es un módulo — son cinco integraciones propietarias. Y por P222,
+**AGPL bloquea en la propuesta, no después de la entrega**: se declara en la primera conversación.
+
+---
 ## 🎯 P224 — La COBERTURA se mide contra la BASE INSTALADA, no contra la historia propia (pase 74 del 2026-10-03)
 
 🔴 **El defecto que esta base se encontró a sí misma, con el instrumento al lado (P107):**
 `agents/top.md` menciona **Canvas en 111 líneas / 241 ocurrencias** y **Google Classroom en 0**; en
-los cuatro archivos de contenido, **229 líneas / 389 ocurrencias contra 0**
-(`grep -ic`, `grep -oi | wc -l`, `HEAD` del pase 73), siendo Classroom el **líder global de LMS (~39 %)** y
-Canvas el segundo (**~19 %**). **La atención resultó inversamente proporcional a la base instalada.**
+los cuatro archivos de **INVENTARIO** —`agents/top.md`, `repos/foundations.md`,
+`verticals/solutions.md` e `intel/market.md`— **229 líneas / 389 ocurrencias contra 0**
+(`grep -ic`, `grep -oi | wc -l`, `HEAD` del pase 73 = `81e3e9a`), siendo Classroom el **líder global
+de LMS (~39 %)** y Canvas el segundo (**~19 %**). **La atención resultó inversamente proporcional a
+la base instalada.**
+
+> 🔧 **Reparado en el pase 75 (P227):** esta cita decía «los 4 archivos de contenido» sin nombrarlos,
+> y era la copia que P224 destinó a viajar a otras KBs. El conjunto queda nombrado arriba y la cifra
+> es reproducible con `python3 compose/code/p228-segmented-coverage/reproduce_p224.py`.
+> ⚠️ **Y el encuadre de las dos últimas cuotas queda CORREGIDO por P228:** `~39 %` y `~19 %` no
+> comparten unidad (usuarios contra instituciones) ni segmento (K-12 contra superior). **La
+> conclusión de inversión se sostiene en K-12 —7 inversiones— y NO en superior, donde es 1.**
 
 ### 🔴 Por qué ningún instrumento podía verlo
 

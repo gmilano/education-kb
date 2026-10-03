@@ -54,6 +54,52 @@ updated: 2026-10-03
 > **LATAM:** 🔵 el hallazgo del pase — **existe una capa MCP nacional brasileña de datos públicos, activa y MIT, y
 > educación es el único dominio grande que falta** (**gap 69**).
 
+## 🧭 La cuota de LMS que esta base venía citando no tenía SEGMENTO ni UNIDAD, y con ellos la conclusión del pase 74 se parte en dos (pase 75 del 2026-10-03)
+
+🔵 **Esto corrige el encuadre del pase anterior, no su hallazgo.** El pase 74 midió que esta base
+mencionaba Canvas **229 líneas / 389 ocurrencias** y Google Classroom **0**, y concluyó que *«la
+atención resultó INVERSAMENTE proporcional a la base instalada»* (**P224**). 🟢 **El hueco era real y
+el pase 74 lo cerró.** 🔴 **La comparación que lo justificaba, no: puso los ~150 M de USUARIOS de
+Classroom (ponderados por K-12) contra la cuota de Canvas en INSTITUCIONES de superior.**
+
+### 🔬 La regla que sale de esto, y es de mercado antes que de método
+
+🔴 **Una cuota de mercado sin su SEGMENTO (K-12 / superior) y sin su UNIDAD (usuarios /
+instituciones / instalaciones) no es un dato: es un número** (**P228**). En educación el líder
+**se invierte** entre segmentos, así que una cifra «global» de LMS casi siempre es la de un segmento
+presentada sin él.
+
+| | **K-12** | **Superior (EE. UU.)** |
+|---|---|---|
+| Google Classroom | 🟢 **~31 % — primero** | 🔴 **6 instituciones de 3.400 — 0,2 %** |
+| Canvas | ~**24 %** — segundo | 🟢 **1.814 de 3.400**, y **supera a los tres siguientes sumados** |
+| Moodle | **7 %** (desde **19 %** en 2017) | **428** (**12,6 %**) |
+| Schoology | top-3 (los tres ≈ **74 %**) | — |
+
+⚠️ **Cota, y es la misma del pase 74 sin levantar:** las fuentes volvieron a dar
+**`EGRESS_BLOCKED`** por WebFetch (`listedtech.com`, `cubite.io`, `axiomflow.app`, **y
+`en.wikipedia.org`**). **Son cifras del canal de BÚSQUEDA, consistentes entre dos consultas
+independientes, y NO verificadas en fuente.** 🔵 **Lo que sí es verificable y vale más que los
+porcentajes: el ORDEN se invierte entre las dos columnas.** 🔴 **Y el par que el pase 74 publicó
+(~39 % Classroom / ~19 % Canvas) no corresponde a ese par de plataformas en ninguna de las dos
+columnas**; en este canal el **39 %** aparece atado a **Canvas en superior por conteo de
+instituciones**. **No se afirma un error de copia —sin fuente alcanzable no se puede—: se afirma que
+la cifra, sin segmento ni unidad, no era comprobable.**
+
+### 🟢 Qué cambia para un engagement, que es el punto
+
+Medido por cohorte sobre los cuatro archivos de inventario de esta KB
+(`compose/code/p228-segmented-coverage/measure.py --at 5dd2bcc`): 🔴 **7** inversiones en **K-12** contra 🟢 **1**
+en **superior**. 🔵 **Esta es una KB de educación SUPERIOR, y está bien surtida para eso.** Así que:
+
+- **engagement de SUPERIOR** (cualquier región) → esta base sirve tal cual; Canvas y Moodle están
+  cubiertos a fondo y el perfil de atención es correcto;
+- **engagement de K-12** → 🔴 la base llega **corta en la capa que decide**: PowerSchool **6**,
+  Infinite Campus **4**, Skyward **1** ocurrencia. **Y el trabajo ahí no es el LMS: es el
+  *rostering*** (**P229**), donde la restricción es de **licencia** y no de técnica.
+
+---
+
 ## 📊 Esta base midió el DINERO en más de cuarenta pases y nunca midió DÓNDE ESTÁN LOS ALUMNOS (pase 74 del 2026-10-03)
 
 > **El barrido de mercado por región se saturó por CUARTA vez consecutiva** (pases 72, 73 y 74), y
@@ -1638,6 +1684,46 @@ Dónde se produce el software educativo abierto, que no es donde está la demand
 ## Opportunities by region
 
 ### North America
+
+#### 📍 Pase 75 del 2026-10-03 — quinto pase sin cifra regulatoria nueva, y la oportunidad de la región se vuelve de DERECHOS en vez de de producto
+
+🔴 **El canal regional devolvió, por quinta vez consecutiva, el inventario propio de esta base:**
+**134** proyectos de ley en **31** estados, **AB 1159** de California, **SB 1227** de Idaho, los
+cuatro estados que exigen política distrital (Idaho, Maryland, Oklahoma, Virginia), el *Traffic Light
+Framework* de NYC y el **18 %** de docentes con guía escrita formal. **Cero cifras nuevas; se declara
+en vez de taparse.**
+
+🟢 **Lo nuevo de la región es de SEGMENTO, y corrige la lectura del pase 74** (**P228**). El dato de
+plataforma de NA, medido por cohorte en vez de en agregado:
+
+| Segmento de NA | Orden medido | Cota |
+|---|---|---|
+| **Superior (EE. UU.)** | Canvas **1.814 de 3.400** instituciones, **supera a los tres siguientes sumados**; Moodle **428** (**12,6 %**); 🔴 **Google Classroom 6 — 0,2 %** | canal de búsqueda |
+| **K-12** | Classroom **31 %**, Canvas **24 %**, Moodle **7 %** (desde **19 %** en 2017); top-3 con Schoology ≈ **74 %** | canal de búsqueda |
+
+⚠️ **Las fuentes de cuota dieron `EGRESS_BLOCKED` otra vez** (`listedtech.com`, `cubite.io`,
+`axiomflow.app`, `en.wikipedia.org`). **Se publica el orden, no se afirma el porcentaje en fuente.**
+🔵 **Y la consecuencia de encuadre: «Classroom es el líder» es una afirmación de K-12.** En superior
+de NA es **0,2 %**, así que un engagement de superior en NA **no** tiene problema de cobertura en
+esta base — tiene a Canvas bien surtido — y el hueco es **todo de K-12**.
+
+🔴 **La oportunidad concreta de la región, y cambió de naturaleza: es de DERECHOS, no de producto.**
+En K-12 de NA el cuello de botella es el *rostering* —Clever y ClassLink, los dos incumbentes, son
+productos **específicos de EE. UU.**— y la capa open source que los sustituye es un **callejón de
+licencias** (**P229**):
+
+- 🟢 **`usechalk/chalk`** (**AGPL-3.0**, Rust, 2 ★) es **la única** pieza que cubre PowerSchool,
+  Infinite Campus, Skyward, Clever y ClassLink a la vez → **vendible a un DISTRITO que autoaloja**,
+  no embebible en producto propietario;
+- 🟢 **`bgwdotdev/go-oneroster`** (**MIT**, v1p1, con escritura) → **la opción de producto**, a costa
+  de construir los cinco conectores;
+- 🔴 los únicos conectores sueltos a **Skyward** e **Infinite Campus** (`Tools4ever-NIM/*`) **no
+  tienen archivo de licencia**.
+
+🔵 **Por qué esto es oportunidad y no obstáculo en NA:** las cinco integraciones propietarias que
+`chalk` ya resolvió son **exactamente** el trabajo que un distrito no puede hacer solo y que un
+integrador cobra. **El entregable de NA es la migración Clever/ClassLink → autoalojado**, con la
+licencia declarada en la propuesta (**P222**).
 
 #### 📍 Pase 74 del 2026-10-03 — cuarto pase sin cifra regulatoria nueva, y la oportunidad de la región se mueve del LMS al ROSTERING
 
@@ -3308,6 +3394,36 @@ Artículo 50(2) **no es exigible** en North America — pero es **el requisito m
 multi-región conviene cotizarlo contra el techo europeo y no contra el piso local (ver **P103** y **P105**).
 
 ### EMEA
+
+#### 📍 Pase 75 del 2026-10-03 — el reloj regulatorio sin novedad, y la capa de *rostering* de la región resulta un hueco de ECOSISTEMA
+
+🔴 **Sin cifra regulatoria nueva: el canal devolvió el inventario propio.** El *Digital Omnibus*
+(**Reglamento (UE) 2026/1744**, publicado **2026-07-24**, en vigor **2026-07-27**) y el diferimiento
+del alto riesgo autónomo —**la educación entre ellos**— a **2027-12-02**, con la aplicación por la
+AI Office arrancada el **2026-08-02**. **Todo ya registrado en esta base; se confirma y no se
+recuenta como hallazgo.**
+
+🔴 **Lo nuevo de la región es una AUSENCIA medida, y vale declararla.** El barrido de la capa de
+*rostering* de este pase cubrió el *topic* `oneroster` completo (**18** repos) y 🔴 **no hay una sola
+pieza con región verificable en EMEA** — ni europea, ni africana, ni de Medio Oriente. **Los seis
+repos medidos son de EE. UU. o sin señal regional.**
+
+🔵 **Y la lectura no es «EMEA está atrasada», sino que la capa es específica de NA:** **Clever y
+ClassLink no operan en EMEA**, así que el sustituto integrado (`usechalk/chalk`) **pierde ahí la
+mayor parte de su valor** — sus cinco conectores apuntan a SIS de EE. UU. (PowerSchool, Infinite
+Campus, Skyward). 🟢 **La pieza de partida para EMEA es, por eliminación, `bgwdotdev/go-oneroster`
+(MIT, OneRoster v1p1, con escritura)**, contra el estándar nacional o regional de cada país.
+
+🟢 **Dónde el AGPL deja de ser un problema, y es un argumento propio de EMEA:** en un despliegue
+**autoalojado y pagado por un Estado** —el patrón de soberanía que esta base ya tiene registrado para
+la región— **AGPL-3.0 no estorba**: no hay producto multi-inquilino que proteger, y el copyleft de red
+es incluso un argumento de no-captura frente al proveedor. 🔵 **Así que la restricción que en NA
+empuja hacia `go-oneroster` (MIT) en EMEA se relaja, y `chalk`/`libre-oneroster` (AGPL) vuelven a ser
+cotizables — por modelo de financiamiento, no por técnica.**
+
+⚠️ **El hueco que queda abierto y nombrado, para el pase que lo tome:** no se midió qué estándar de
+*rostering* usa cada sistema nacional de EMEA (OneRoster, SIF, o uno propio). **Sin eso, no se puede
+decir qué parte de `go-oneroster` sirve tal cual y qué parte hay que escribir.**
 
 #### 📍 Pase 74 del 2026-10-03 — sin cifra nueva, 0 piezas de código, y la oportunidad está en que el AI Act premia la compuerta que este pase acaba de tipificar
 
@@ -5112,6 +5228,31 @@ este pase dejó cubierto con código.
 
 ### APAC
 
+#### 📍 Pase 75 del 2026-10-03 — el mapa regulatorio sin novedad, y la capa de *rostering* tampoco tiene pieza propia
+
+🔴 **Sin cifra regulatoria nueva; el canal devolvió el inventario propio de esta base:** el *AI
+Promotion Act* **no vinculante** de Japón (vigente junio 2025), el régimen chino con **registro de
+algoritmos, etiquetado de contenido sintético y revisión de seguridad** de modelos públicos, India
+**sin ley dedicada** y transitando de guías voluntarias a legislación propuesta, y Singapur con
+herramientas de prueba estatales sobre marcos **voluntarios**. **Se confirma, no se recuenta.**
+
+🔵 **El dato de demanda que sí ordena la región, ya registrado y que este pase vuelve a ver:** India
+es el mercado AI de mayor crecimiento de APAC (**38,9 %** CAGR) con la **IndiaAI Mission** y ~**2,6 M**
+de graduados STEM anuales. **El volumen está en India; el instrumento normativo más exigente, en
+China.**
+
+🔴 **La ausencia medida de este pase, igual que en EMEA:** del *topic* `oneroster` (**18** repos) 🔴
+**no hay ninguna pieza con región verificable en APAC.** ⚠️ **Y acá la ausencia es más informativa que
+en EMEA**, porque la región **sí** tiene producción open source educativa propia en esta base (el
+currículo japonés, la plataforma nacional indonesia): **no es que APAC no publique — es que la capa de
+*rostering* no se está construyendo ahí.**
+
+🔵 **La consecuencia de cotización:** para APAC la capa de identidad/*rostering* se cotiza como
+**construcción**, no como integración. **`go-oneroster` (MIT)** sirve de base de spec; los conectores
+al SIS local **no existen en ninguna licencia** y son trabajo propio. 🔴 **Y la asimetría de China hay
+que decirla: el etiquetado obligatorio de contenido sintético convierte al marcado —que esta base ya
+sabe hacer, `aiact-50-2-*`— en requisito de entrada, no en diferencial.**
+
 #### 📍 Pase 74 del 2026-10-03 — sin cifra nueva y 0 piezas, y es la región donde el régimen ya pide por escrito las dos clases de este pase
 
 🔴 **Canal regional: cero cifras nuevas, cuarto pase consecutivo.** Devolvió **96 %** de
@@ -6528,6 +6669,38 @@ desplegado + puerta MCP permisiva (`jbnu-lms-mcp`, `canvas-lms-mcp`, las cuatro 
 depende de un tercero» son el mismo argumento.**
 
 ### LATAM
+
+#### 📍 Pase 75 del 2026-10-03 — el canal devuelve el inventario propio, y la capa de *rostering* le queda MÁS accesible que a NA
+
+🔴 **Sin cifra regulatoria nueva.** El canal devolvió lo ya registrado: el **Observatorio de IA en
+Educación para América Latina** de la UNESCO (lanzado en Santiago, abril 2026), el **PL 2338/2023**
+de Brasil (transparencia, evaluación de impacto, registro de sistemas de alto riesgo), el proyecto
+chileno **basado en riesgo** al estilo del AI Act, y el **Reglamento de la Ley 31814** de Perú.
+**Adopción: Brasil ~76 %, México ~70 %; más del 50 % de docentes en Chile y Brasil; 🔴 menos del
+10 % de las instituciones con directrices formales.** **Se confirma; no es hallazgo nuevo.**
+
+🔵 **Lo nuevo de la región en este pase es de ARQUITECTURA, y por una vez LATAM queda MEJOR parada
+que NA.** La capa de *rostering* de K-12 es en NA un callejón de licencias **porque los incumbentes
+son propietarios y locales**: Clever y ClassLink. 🟢 **En LATAM esos dos no operan**, así que no hay
+nada que sustituir ni migrar: **la capa se construye directamente sobre el estándar.**
+
+| | NA | **LATAM** |
+|---|---|---|
+| Incumbente de *rostering* | Clever / ClassLink (propietarios) | 🟢 **ninguno dominante** |
+| Pieza de partida | `chalk` (**AGPL**) por sus 5 conectores | 🟢 **`go-oneroster` (MIT)**, sin conectores que sobren |
+| Restricción de entrega | 🔴 AGPL, o construir 5 integraciones | 🟢 **permisiva: embebible en producto propio** |
+
+🔵 **Por qué esto es la oportunidad concreta de la región:** el **menos del 10 %** de instituciones
+con directrices formales significa que la mayoría va a comprar **la primera** arquitectura que se le
+presente; y la pieza de partida disponible aquí es **MIT**, así que lo que se construya encima es
+**producto propio y revendible en los cuatro países que concentran >70 % de las iniciativas**
+(Brasil, México, Argentina, Chile). 🔴 **En NA, la misma solución nace AGPL o nace con cinco
+integraciones propietarias por delante.**
+
+⚠️ **La cota, igual que en las otras tres regiones:** del *topic* `oneroster` (**18** repos) 🔴 **no
+hay ninguna pieza con región verificable en LATAM** — la ventaja descrita es de **ausencia de
+incumbente**, no de ecosistema local existente. **Se declara así para que nadie la cotice como si
+hubiera una comunidad regional detrás.**
 
 #### 📍 Pase 74 del 2026-10-03 — sin cifra nueva, pero la región aporta por SEGUNDO pase consecutivo el mejor instrumento de gobernanza de la capa
 

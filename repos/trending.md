@@ -8,6 +8,62 @@ updated: 2026-10-03
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 
+## 2026-10-03 — pase 75: la capa de rostering de K-12, medida entera por licencia — y pedir «permisivo + vivo + spec vigente» deja UNA pieza
+
+### 🔴 Lo que apareció, y por qué el barrido lo encontró ahora
+
+El barrido de este pase **no fue por `education`** (regla del pase 22) **ni por el nombre de una
+plataforma** (regla del pase 74), sino por el **nombre del ESTÁNDAR de la capa**: `OneRoster`. Eso
+devolvió el *topic* `oneroster` de GitHub completo —**18** repos— y con él un **denominador externo**
+en vez de una muestra.
+
+### 🧾 Las piezas nuevas, con licencia leída del ARCHIVO
+
+| Repo | Licencia (del archivo) | Estado medido | Spec | Nota |
+|---|---|---|---|---|
+| 🟢 **`bgwdotdev/go-oneroster`** | **MIT** (`master/LICENSE`) | vivo, **8 ★**, Go | **v1p1** | servidor + MongoDB, **extiende el spec con ESCRITURA** (PUT/POST) |
+| 🔴 **`usechalk/chalk`** | **AGPL-3.0** (`main/LICENSE`) | vivo, **2 ★**, Rust, **298** commits | 1.1 + CSV | 🆕 **cubre las cinco propietarias**: PowerSchool, Infinite Campus, Skyward, Clever, ClassLink + Google/AD/Entra |
+| 🔴 `bgwdotdev/libre-oneroster` | **AGPL** (`master/LICENSE`) | vivo, Rust | 1.1 | 🔵 **mismo autor que `go-oneroster`, licencia distinta** |
+| 🔴 `lepo-project/roster-hub` | **AGPL** (`main/LICENSE`) | vivo | v1.1 | CSV → REST |
+| ⚠️ `ridencww/uniroster-server` | **MIT** (`master/LICENSE`) | 🔴 **ARCHIVADO 2024-09-26**, 6 ★ | 🔴 **v1.0** | v1.1 y Ed-Fi **planeados**, no construidos |
+| 🔴 **`Tools4ever-NIM/*`** | 🔴 **SIN ARCHIVO DE LICENCIA** | viva | 1.1 y **1.2** | únicos conectores de **Skyward** e **Infinite Campus** fuera de `chalk` |
+
+### 🔵 El hallazgo de licencia, que es el que decide la arquitectura
+
+**Permisiva + viva + spec vigente** se cumplen juntas en 🟢 **una** pieza: **`go-oneroster`** — y es
+un servidor de spec, **sin un solo conector** a los SIS propietarios. 🔴 **El hueco de Skyward e
+Infinite Campus no es de investigación: es de DERECHOS**, porque sus únicos conectores sueltos no
+declaran licencia (*all rights reserved* por defecto) y la única alternativa es AGPL.
+
+🔵 **Y el detalle más fino del pase: `bgwdotdev` publica DOS implementaciones del MISMO spec con
+licencias distintas** —`go-oneroster` **MIT** y `libre-oneroster` **AGPL**—. **Elegir entre las dos
+no es una decisión de lenguaje (Go contra Rust): es una decisión de licencia**, y esta base tenía
+sólo la primera de las dos desde pases anteriores, sin la comparación al lado.
+
+### 🟢 La distribución, con denominador externo
+
+De los **18** repos del *topic* `oneroster`: **1** supera 10 ★ (`Apereo-Learning-Analytics-Initiative/OpenLRW`,
+**62 ★**, *Educational Community License*, ya en esta base), **2** entre 2 y 8 ★, y 🔴 **15 con ≤ 1 ★.**
+🔵 **Confirma la tendencia 584 —la capa está atomizada— pero con un denominador del ecosistema en vez
+de una muestra propia: no hay incumbente open source al que sumarse en esta capa.**
+
+⚠️ **Una deriva de descripción (P165), medida:** el canal de búsqueda vendió `uniroster-server` como
+*«multiple protocols (OneRoster, Ed-Fi, etc.)»*; **el árbol dice v1.0 y archivado.** 🔵 **Por eso el
+estado de archivado entra como COLUMNA: una licencia permisiva sobre un árbol archivado es una trampa
+que la columna de licencia sola no muestra.**
+
+### ⚠️ Lo que este barrido NO encontró, declarado
+
+🔴 **Ni un solo repo de esta capa con región verificable fuera de NA.** Los seis medidos son de
+autores sin señal regional o de EE. UU.; el *topic* completo no tiene una pieza europea, asiática ni
+latinoamericana identificable. **EMEA, APAC y LATAM: sin hallazgo en esta capa en este pase** — y es
+coherente con que **Clever y ClassLink, los incumbentes que `chalk` sustituye, son productos
+específicos de EE. UU.** 🔵 **En las otras tres regiones la capa equivalente es OneRoster «a secas» o
+el estándar nacional, así que `go-oneroster` (MIT) es ahí la pieza de partida y `chalk` pierde buena
+parte de su ventaja**, porque sus cinco conectores son justamente a SIS de NA.
+
+---
+
 ## 2026-10-03 — pase 74: ocho conectores de una API que esta base no tenía, y el repo más capaz de los ocho es el único que no se puede usar
 
 ### 🔴 Lo que apareció esta semana, y por qué no había aparecido antes

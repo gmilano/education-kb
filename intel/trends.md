@@ -7,6 +7,7 @@ updated: 2026-10-03
 # 📡 Tendencias — education
 
 > Ventana de investigación: septiembre 2026. Verificado 2026-09-30; el pase 11, el 2026-10-01.
+> **Pase 75 del 2026-10-03:** 🟢 **Ocho tendencias nuevas, numeradas 586–593** (el pase 74 cerró en 585). 🔴 **586: una cuota de LMS sin SEGMENTO ni UNIDAD no es un dato, y el líder se INVIERTE entre segmentos** —Classroom ~31 % en K-12 contra **6 de 3.400 instituciones (0,2 %)** en superior—, **lo que corrige el encuadre de P224**: medido por cohorte hay **7** inversiones en K-12 y **1** en superior, así que esta es una KB de educación SUPERIOR medida con denominador de K-12 (**P228**). 🔵 **587: el sesgo real no es «contra la base instalada» sino a favor de lo AUTOALOJABLE**, que sí sugiere una acción. 🔴 **588: una cifra agregada se propaga sin su conjunto de archivos —7 copias, 1 lo nombra— y la que viaja a otras KBs es la que no** (**P227**, reparado en `patterns.md`). 🔴 **589: en la capa de *rostering* de K-12, «permisivo + vivo + spec vigente» deja UNA pieza y el hueco es de DERECHOS**, no de investigación (**P229**). 🔵 **590: el mismo autor publica el mismo estándar con dos licencias, y el dedupe por repo es ciego a eso.** ⚠️ **591: MIT sobre un árbol ARCHIVADO es una trampa que la columna de licencia no muestra.** 🟢 **592: el barrido por región se agotó otra vez, y lo que rindió fue cambiar de DIMENSIÓN** —`SEGMENTO × UNIDAD`, y por nombre de ESTÁNDAR en vez de `education`—, **que es exactamente lo que la tendencia 585 prescribía.** 🔴 **593: y el instrumento se encontró contaminado A SÍ MISMO — `measure.py` da 11 inversiones sobre el árbol de trabajo y 7 sobre `5dd2bcc`, porque la prosa que documenta el hueco menciona las plataformas *stub* en los mismos cuatro archivos que la métrica cuenta: hablar de una ausencia la borra del contador de ausencias, así que el COMMIT es parte de la invocación.**
 > **Pase 74 del 2026-10-03:** 🟢 **Ocho tendencias nuevas, numeradas 578–585** (continuación real de la serie; el pase 73 cerró en 577). 🔴 **578: la atención de esta base resultó INVERSAMENTE proporcional a la base instalada** —Canvas en 111 líneas / 241 ocurrencias de `agents/top.md` contra **0** de Google Classroom en 73 pases (229 / 389 contra 0 en los cuatro archivos de contenido), siendo Classroom el líder global (~39 % contra ~19 %)— **y el defecto es de instrumento: todos los barridos de cobertura miden contra la historia propia, así que no pueden encontrar una ausencia sistemática.** 🟢 **579–580: dos peldaños nuevos de compuerta, y uno es de otra naturaleza** — `GATE-IN-SCOPE` (**P220**) se hace cumplir **fuera del proceso**, en los *scopes* del token de OAuth, así que no depende de la corrección del código medido; `GATE-IN-EFFECT` (**P221**) gobierna la **visibilidad** del efecto y no la llamada, que es la forma correcta para educación. 🔴 **581: `LICENSE-REVOCABLE`** (**P222**) **es una categoría de riesgo distinta de una restrictiva, y la diferencia es de MOMENTO: la no-comercial bloquea en la propuesta, la revocable después de la entrega.** 🔴 **582: texto e identificador de licencia que se contradicen en el MISMO árbol → no gana ninguno** (**P223**). 🟢 **583: una vertical propietaria puede ser MEJOR terreno de partida que una open source copyleft**, porque el conector es obra propia. 🟢 **584: la capa está atomizada en 8 implementaciones de ≤2 ★ y ninguna se conoce.** 🔴 **585: el barrido de mercado por región se saturó por CUARTA vez, y la lección es que el problema ya no es el canal sino la dimensión.**
 > **Pase 72 del 2026-10-03:** 🟢 **Seis tendencias nuevas, numeradas 562–567** (continuación real de la serie; el pase 71 cerró en 561). 🟢 **562–563: el ACTOR es un eje independiente de la compuerta del pase 71, el hueco que lo produce es del PROTOCOLO** —`src/auth.ts` de `bb-mcp`: *«The MCP spec does not define end-user identity»*— **y cruzado con la compuerta está ANTI-correlacionado, que es la SEGUNDA vez que esta base mide esa forma sobre un par de ejes distinto** (la primera, pase 55). 🔴 **564: una corrección de método puede generalizarse de más** — la advertencia de caja del pase 71 no aplicaba a P170, y re-medidas sus 32 ausencias en las tres cajas, **32 de 32 se sostienen**. 🟢 **565: el único patrón de credencial que resuelve el problema estructural de esta capa vino de LATAM** (`iDavi/usp-mcp`, sobre sellado), **con sus dos cotas medidas** (**P213**). 🟢 **566: la divulgación de términos de uso empieza a viajar como ARCHIVO DEL REPO** y es un eje de selección que ni la licencia ni la compuerta muestran. 🔴 **567: el barrido de MERCADO por región se saturó** — las cuatro regiones devolvieron el inventario propio, con pase de origen identificable en cada caso.
 > **Pase 70 del 2026-10-03:** 🟢 **ÁFRICA entra a la capa de agente de esta base, y entra con el instrumento de gobernanza más fuerte que la base haya medido: la compuerta en la FIRMA de la operación.** `buriro-ezekia/mwalimulens-agent` (Apache-2.0, 11.357 B) exige `supporting_evidence_ids`, `counter_evidence_ids` y `uncertainty` como ARGUMENTOS de `flag_pattern_for_review` —no se puede emitir un juicio sobre un alumno sin citar evidencia, exhibir contra-evidencia y declarar incertidumbre— (**P203**, clase `GATE-IN-SIGNATURE`, **tendencia 136**). 🔴 **Y el contraejemplo entra en el MISMO pase:** `oliverhruby/edupage-mcp` (MIT, `HOLDER-MATCH`, 31 tools) escribe —mensajes, cambio de cuenta de alumno— **sin compuerta en código** y contra *«undocumented endpoints»*, lo que abre un SEGUNDO eje de evaluación que la columna Licencia no ve (**P204**, **tendencia 137**). 🔴 **La capa de SIS entra medida y está dominada por copyleft fuerte** —ClassroomIO AGPL-3.0, Gibbon GPL-3.0, y la única permisiva (Fedena) sólo medible en un ESPEJO porque el repo que la fuente llama oficial da 404— (**tendencia 138**). ⚠️ **Dos candidatas RECHAZADAS: `YeetingWaterbottle/canvas-mcp` es un fork con `LICENSE` byte a byte idéntico al upstream ya presente, y `hesham0-0nasser/tutor-lms-mcp` es un árbol real SIN cesión.** ⚠️ **Barrido regional completo: EMEA 2 piezas, NA 0, APAC 0, LATAM 0 —declarado, no tapado— (**tendencia 139**). 🔴 **`api.github.com` y `github.com` dieron 403 todo el pase: las licencias salen de `raw.githubusercontent.com`.**
@@ -12020,3 +12021,150 @@ con la corrección y con la norma a mano.** 🟢 **El aporte EMEA nuevo y verifi
 otro: el Código de Práctica sobre marcado y etiquetado de contenido generado por AI (junio de
 2026), que cae exactamente sobre el Artículo 50(2) para el que esta base ya tiene instrumento
 (`compose/code/aiact-50-2-marking/`).**
+
+---
+
+## 586. Una cuota de mercado sin SEGMENTO y sin UNIDAD no es un dato, y en educación el líder se INVIERTE entre segmentos (agregado en el pase 75 del 2026-10-03)
+
+🔴 **El pase 74 concluyó que la atención de esta base era «inversamente proporcional a la base
+instalada» comparando los ~150 M de USUARIOS de Google Classroom contra la cuota de Canvas en
+INSTITUCIONES de educación superior.** Las dos cifras **no comparten denominador**.
+
+| | **K-12** | **Superior (EE. UU.)** |
+|---|---|---|
+| Google Classroom | 🟢 **~31 %, primero** | 🔴 **6 de 3.400 — 0,2 %** |
+| Canvas | **~24 %** | 🟢 **1.814 de 3.400**, supera **a los tres siguientes sumados** |
+| Moodle | **7 %** (19 % en 2017) | **428** (12,6 %) |
+
+🔵 **La tendencia no es «Classroom gana» ni «Canvas gana»: es que en educación la pregunta «¿quién
+lidera el LMS?» NO TIENE RESPUESTA sin el segmento.** Un proveedor que cite una cuota «global» de
+LMS está citando la de un segmento sin decirlo. ⚠️ **Cifras del canal de búsqueda; las fuentes
+dieron `EGRESS_BLOCKED` por segundo pase consecutivo.** Ver **P228**.
+
+---
+
+## 587. La atención de una KB no se sesga «contra la base instalada»: se sesga a favor de lo AUTOALOJABLE (agregado en el pase 75 del 2026-10-03)
+
+🔵 **Refina la tendencia 578 nombrando la causa en vez del síntoma.** Medidas las ocurrencias en los
+cuatro archivos de inventario: **Moodle 653**, **Canvas 400**, Classroom **16**, Schoology **13**,
+PowerSchool **6**, Infinite Campus **4**, **Skyward 1**. 🔴 **Las cinco de abajo no se autoalojan; las
+dos de arriba sí.** El orden se explica mejor por **autoalojabilidad** que por base instalada.
+
+🔵 **Por qué importa más que la observación original:** «sesgo contra la base instalada» no sugiere
+ninguna acción; **«sesgo a favor de lo autoalojable» sí** — dice que el hueco está siempre en la capa
+de **integración** de las plataformas propietarias, y que buscar «repos de X» nunca lo va a encontrar
+porque X no tiene repo. Es el proxy que esta base venía usando sin declararlo (ver **P224** y
+**P228**).
+
+---
+
+## 588. Una cifra agregada sobre varios archivos se propaga SIN su conjunto, y la copia que viaja es la que no lo nombra (agregado en el pase 75 del 2026-10-03)
+
+🔴 **El agregado `229 líneas / 389 ocurrencias` se publica en SIETE archivos de esta KB. UNO nombra
+sobre qué cuatro archivos se tomó; seis no** — y entre los seis está **`compose/patterns.md`, el
+archivo que su propio autor escribió «para que no haga falta un pase 74 en otra KB».**
+
+🔵 **La medida del daño, y es concreta:** de los **70** subconjuntos de cuatro de los ocho archivos de
+contenido, **exactamente uno** reproduce la cifra. Un lector externo que llegue por `patterns.md`
+—sin el árbol— **no puede comprobarla**; y el pase 75 gastó una búsqueda de 70 subconjuntos antes de
+notar que `agents/top.md` ya lo nombraba. ⚠️ **La tendencia no es «el pase 74 se equivocó» —la cifra
+es correcta—: es que la REPRODUCIBILIDAD no se hereda al copiar una cifra de un archivo a otro.**
+Ver **P227**.
+
+---
+
+## 589. En la capa de *rostering* de K-12, pedir «permisivo + vivo + spec vigente» deja UNA pieza, y el hueco es de DERECHOS (agregado en el pase 75 del 2026-10-03)
+
+Medida la capa entera por licencia leída del archivo, las tres condiciones que esta KB le pide a una
+fundación se cumplen juntas en 🟢 **una sola** pieza: **`bgwdotdev/go-oneroster`** (MIT, OneRoster
+v1p1, con escritura) — **y es un servidor de spec, sin un conector a ningún SIS propietario.**
+
+| Motivo de caída | Piezas |
+|---|---|
+| **AGPL** | `usechalk/chalk`, `bgwdotdev/libre-oneroster`, `lepo-project/roster-hub` |
+| **archivada + spec viejo** | `ridencww/uniroster-server` (MIT, v1.0, archivada 2024-09-26) |
+| 🔴 **sin archivo de licencia** | familia `Tools4ever-NIM/*` — **únicos** conectores de Skyward e Infinite Campus fuera de `chalk` |
+
+🔵 **La tendencia transferible: en una capa dominada por incumbentes propietarios, el bloqueo no
+aparece como «no hay código» sino como «el código no tiene derechos de uso».** El hueco de Skyward e
+Infinite Campus no es de investigación: **es de licencia.** Ver **P229**.
+
+---
+
+## 590. El MISMO autor publica dos implementaciones del MISMO estándar con licencias distintas, así que elegir entre ellas no es una decisión técnica (agregado en el pase 75 del 2026-10-03)
+
+🔵 **`bgwdotdev` mantiene `go-oneroster` (MIT, Go) y `libre-oneroster` (AGPL, Rust)** — ambas
+servidores de OneRoster 1.1. 🔴 **La diferencia que decide la entrega no es Go contra Rust: es MIT
+contra AGPL.** Esta base tenía la primera desde pases anteriores y **no tenía la comparación al
+lado**, así que la elección se veía como de lenguaje.
+
+⚠️ **La lección de instrumento: el dedupe por nombre de repo (P217) no detecta esto.** `go-oneroster`
+estaba presente, así que un barrido que pregunta *«¿ya tengo este repo?»* da «sí» y nunca pregunta
+*«¿el mismo autor publicó una variante con otra licencia?»*. 🔵 **La pregunta correcta es por AUTOR ×
+ESTÁNDAR, no por repo.**
+
+---
+
+## 591. Una licencia permisiva sobre un árbol ARCHIVADO es una trampa que la columna de licencia no muestra (agregado en el pase 75 del 2026-10-03)
+
+🔴 **`ridencww/uniroster-server` es MIT —la licencia que esta KB prefiere— y es inservible como
+fundación:** archivado el **2024-09-26**, con **OneRoster v1.0** soportado y **v1.1 y Ed-Fi apenas
+planeados**. ⚠️ **Y el canal de búsqueda lo presentó como *«multiple protocols (OneRoster, Ed-Fi,
+etc.)»***: la capacidad estaba en el *snippet*, no en el árbol — un caso de **P165** (deriva de
+descripción) en la dirección más caras de las dos.
+
+🔵 **Por eso el estado de ARCHIVADO entra como columna propia en las tablas de este pase**, al lado de
+la licencia. **Dos piezas MIT pueden diferir en todo lo que importa, y la columna de licencia las
+muestra idénticas.**
+
+---
+
+## 592. El barrido por REGIÓN se agotó otra vez, y lo que rindió fue cambiar de DIMENSIÓN, no de canal (agregado en el pase 75 del 2026-10-03)
+
+🔴 **Las cuatro regiones devolvieron el inventario propio de esta base, sin una cifra regulatoria
+nueva:** NA (134 proyectos / 31 estados, AB 1159, SB 1227, *Traffic Light* de NYC), EMEA (*Digital
+Omnibus* **2026/1744**, alto riesgo diferido a **2027-12-02**), APAC (*AI Promotion Act* japonés no
+vinculante, etiquetado chino, IndiaAI), LATAM (Observatorio UNESCO, **PL 2338/2023**, Ley 31814 de
+Perú).
+
+🟢 **Confirma la tendencia 585 y la completa con la prescripción que esa tendencia pedía.** El pase 74
+cerró diciendo *«el problema ya no es el canal sino la dimensión»*. **Este pase lo probó: con el mismo
+canal saturado, cambiar la dimensión de REGIÓN a `SEGMENTO × UNIDAD` rindió cuatro hallazgos
+(586–589) y una corrección al pase anterior.** 🔵 **Y la dimensión del barrido de repos también
+cambió y también rindió: se buscó por el nombre del ESTÁNDAR (`OneRoster`) en vez de por `education`
+(pase 22) o por el nombre de la plataforma (pase 74), lo que trajo el *topic* completo —18 repos— y
+con él un DENOMINADOR EXTERNO: 1 repo sobre 10 ★, 2 entre 2 y 8, y 🔴 15 con ≤ 1 ★.**
+
+⚠️ **Y la ausencia regional de esa capa se declara en vez de callarse: de los 18 repos, NINGUNO tiene
+región verificable fuera de NA.** Coherente con que Clever y ClassLink, los incumbentes que la capa
+sustituye, son productos específicos de EE. UU. 🔵 **Consecuencia útil: en EMEA, APAC y LATAM la capa
+se cotiza como CONSTRUCCIÓN sobre `go-oneroster` (MIT) y no como migración — y en LATAM eso es una
+ventaja, porque no hay incumbente del que salir.**
+
+---
+
+## 593. Una métrica de cobertura leída del mismo árbol que documenta el hueco se CONTAMINA SOLA, y escribir sobre el hueco lo cierra en la métrica sin cerrarlo en la realidad (agregado en el pase 75 del 2026-10-03)
+
+🔴 **Este pase se lo encontró a sí mismo, con el instrumento recién escrito al lado.** La misma
+invocación de `measure.py` da:
+
+| Árbol leído | Inversiones en K-12 |
+|---|---|
+| `5dd2bcc` — `HEAD` del pase 74 | 🟢 **7** |
+| árbol de trabajo, **después** de que este pase escribiera el hueco | 🔴 **11** |
+
+🔵 **No cambió la cobertura de la KB: cambió el archivo que la mide.** La prosa con la que el pase 75
+documenta el hueco de K-12 **nombra** PowerSchool, Skyward e Infinite Campus, y esas menciones caen en
+`agents/top.md`, `repos/foundations.md`, `verticals/solutions.md` e `intel/market.md` — **exactamente
+los cuatro archivos que la métrica cuenta.**
+
+🔴 **La trampa, dicha para el pase que venga:** un pase futuro que corra el instrumento sobre el árbol
+de trabajo va a leer *«el hueco de K-12 mejoró»* cuando lo único que pasó es que **el pase 75 habló de
+él**. **Hablar de una ausencia la borra del contador de ausencias.** Es la tendencia **578** —«todos
+los barridos miden contra la historia propia»— reapareciendo un nivel más abajo: **ahora el barrido
+mide contra la historia que el propio pase está escribiendo mientras mide.**
+
+🟢 **La corrección, que es de instrumento y ya está versionada:** el **COMMIT es parte de la
+invocación**. `measure.py --at COMMIT` lee los cuatro archivos desde git, y **toda cifra publicada en
+este pase nombra `5dd2bcc`**. 🔵 **Generaliza P227 un paso más: si la cifra agregada necesita su
+conjunto de ARCHIVOS, una cifra sobre un árbol que cambia necesita además su COMMIT.**

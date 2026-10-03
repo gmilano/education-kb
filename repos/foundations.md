@@ -83,6 +83,68 @@ corre ése antes de escribir uno a mano** (tendencia **313**). 🟢 **Y el `gafa
 > **Pase 36 del 2026-10-02:** 🔵 **este pase no agrega repos: le pone FECHA a los que ya están, y la fecha cambia tres recomendaciones.** Se midió la capa PHP de evaluación y telemetría en Packagist —el único registro de los tres que entrega descargas en este entorno (`api.npmjs.org` y `pypistats.org` dan **403 a CONNECT**)— y el resultado está en `repos/trending.md`. **Lo que hay que saber antes de proponer desde este archivo:** 🔴 **la pieza xAPI más descargada de esta base, `rusticisoftware/tincan` (Apache-2.0, 6.178 desc./mes, 863.777 totales), no publica desde el 2022-11-02**, y ⚠️ **el único MIT de esa capa, `php-xapi/client`, está parado desde el 2021-03-24** con 825 desc./mes. 🔵 **La lectura es que en xAPI/PHP lo permisivo está quieto y lo vivo es copyleft**, así que la receta de telemetría se sostiene en **Ralph (MIT)** + **`lrsql` (Apache-2.0)** + **`learnmcp-xapi` (MIT)** y no en la capa PHP. 🟢 **Del lado de evaluación, lo activo es `oat-sa/extension-tao-testqti`** (**885 versiones**, release del **2026-09-30**) **y sigue siendo GPL-2.0-only**, mientras **lo permisivo es lo nuevo**: `@longsightgroup/qti3-cli` (**MIT**, 41 releases desde el 2026-05-21, último **2026-10-01**) con **cero dependencias de terceros** — sus 4 dependencias son todas `@longsightgroup/*` pinneadas a la misma versión exacta. **Su manifiesto MCP completo de 20 tools está escrito en `compose/patterns.md` (P76).** 🔴 **Y una corrección de catálogo: `oat-sa/qti-sdk` devuelve 404 en Packagist porque es el nombre del REPO — su paquete es `qtism/qtism`** (GPL-2.0-only, 218.212 descargas totales, 315 versiones). **Nombre de repo y nombre de paquete son identificadores distintos, y confundirlos produce un 404 que parece una ausencia** — pasó igual con `1edtech/oneroster`, `imsglobal/lti-1-3-php-library` y `packbackbooks/lti-1-3-php-library`, los tres **404**, que se anotan como *«no verificado en Packagist bajo ese nombre»* y **no** como inexistentes. ⚠️ **Acción pendiente que el pase 37 tiene asignada: este archivo nunca pasó por el control de *slugs* distintos ni por el de *backlink*** — los dos que en `agents/top.md` encontraron **un duplicado** y **dos colisiones** este mismo pase.
 > **Pase 11 del 2026-10-01:** aparece una licencia que las diez pasadas anteriores filtraban sin saberlo — **ECL-2.0**, con la que licencia todo Apereo (Sakai, Opencast, OpenLRW). Es Apache-2.0 con el alcance de patentes acotado, aprobada por OSI y FSF, y **es apta para construir arriba**. Ver la capa de analítica institucional, abajo.
 
+## 🪪 La capa de ROSTERING de K-12, medida ENTERA por licencia: pedir «permisivo + vivo + spec vigente» deja UNA pieza en pie (pase 75 del 2026-10-03)
+
+🔵 **Continúa el pase 74 por el lado que dejó abierto.** Ese pase estableció que en K-12 la fundación
+no es el LMS sino **la capa de integración**, y agregó el puente Ed-Fi → OneRoster → Clever. **Este
+pase midió la capa completa por LICENCIA, y el resultado reordena la recomendación.**
+
+### 🔬 El canal de verificación de este pase, dicho antes de las filas
+
+| Canal | Resultado | Para qué sirvió |
+|---|---|---|
+| `raw.githubusercontent.com/{o}/{r}/{main,master}/LICENSE` | 🟢 **200** | **el texto** de licencia, leído del archivo |
+| `github.com/{o}/{r}` por WebFetch | 🟢 sirvió | descripción, ★, lenguaje, **estado de archivado** |
+| `api.github.com/repos/{o}/{r}` | 🔴 **403** | — |
+| `api.github.com/rate_limit` | 🟢 200 | ⚠️ el único endpoint que pasa es el que **no** transporta dato de repo |
+| `github.com` / `codeload.github.com` por `curl` | 🔴 **403** | — |
+
+### 🧾 Las filas, con la licencia leída del ARCHIVO y no de una insignia
+
+| Repo | Licencia (del archivo) | Estado medido | Spec | Qué cubre |
+|---|---|---|---|---|
+| 🟢 **`bgwdotdev/go-oneroster`** | **MIT** (`master/LICENSE`) | **vivo**, 8 ★, Go | **OneRoster v1p1** | servidor REST + MongoDB, y **extiende el spec con ESCRITURA** (PUT/POST en todos los endpoints) |
+| 🔴 **`usechalk/chalk`** | **AGPL-3.0** (`main/LICENSE`) | vivo, 2 ★, Rust, **298** commits | OneRoster 1.1 + CSV | 🟢 **la única pieza que cubre las cinco propietarias**: PowerSchool, Infinite Campus, Skyward, **Clever** y **ClassLink** (importadores de migración + compat OAuth), más Google Workspace, AD/LDAP y Entra ID — **en un binario** |
+| 🔴 `bgwdotdev/libre-oneroster` | **AGPL** (`master/LICENSE`) | vivo, Rust | OneRoster 1.1 | servidor + librería + CLI |
+| 🔴 `lepo-project/roster-hub` | **AGPL** (`main/LICENSE`) | vivo | OneRoster v1.1 | gestión de *roster*, conversor CSV → REST |
+| ⚠️ `ridencww/uniroster-server` | **MIT** (`master/LICENSE`) | 🔴 **ARCHIVADO 2024-09-26**, 6 ★, Node | 🔴 **v1.0 solamente** | v1.1 y Ed-Fi figuran como **planeados**, no construidos |
+| 🔴 **`Tools4ever-NIM/*`** (familia) | 🔴 **NO HAY ARCHIVO DE LICENCIA** en `main` ni `master` | viva | OneRoster v1.1 y **v1.2** | los **únicos** conectores de **Skyward** (v1.1, v1.2) e **Infinite Campus** (v1.2) fuera de `chalk` |
+
+### 🔴 El hallazgo que manda: la capa es un CALLEJÓN DE LICENCIAS
+
+Las tres condiciones que esta KB le pide a una fundación —**permisiva** (MIT/Apache/BSD), **viva** y
+**con el spec vigente**— se cumplen juntas en 🟢 **exactamente una** pieza: **`go-oneroster`**. Y es
+un **servidor de spec**, no una plataforma: 🔴 **no trae un solo conector a PowerSchool, Skyward,
+Clever ni ClassLink.** El resto cae por un motivo distinto cada uno:
+
+- **AGPL** (`chalk`, `libre-oneroster`, `roster-hub`) → sirve para un despliegue **del distrito**, no
+  para embeber en producto propietario;
+- **archivada y v1.0** (`uniroster-server`) → MIT no alcanza si el spec quedó dos versiones atrás;
+- 🔴 **sin licencia** (`Tools4ever-NIM`) → *all rights reserved* por defecto. **Y es la única vía a
+  Skyward e Infinite Campus que no sea AGPL**, así que el hueco de esas dos plataformas **no es de
+  investigación: es de derechos.**
+
+⚠️ **Un caso de deriva de descripción (P165) medido en este pase:** el canal de búsqueda presentó
+`uniroster-server` como *«multiple protocols (e.g., OneRoster, Ed-Fi, etc.)»*. **El árbol dice v1.0
+soportado, v1.1 y Ed-Fi planeados, y archivado desde septiembre de 2024.** La capacidad estaba en el
+*snippet*. 🔵 **Por eso el estado de archivado se agregó a la tabla como columna propia: una licencia
+permisiva sobre un árbol archivado es una trampa que la columna de licencia sola no muestra.**
+
+### 🟢 La distribución de la capa, con denominador propio
+
+De los **18** repos del *topic* `oneroster` de GitHub: **1** supera 10 ★
+(`Apereo-Learning-Analytics-Initiative/OpenLRW`, **62 ★**, *Educational Community License*, ya en
+esta base), **2** están entre 2 y 8 ★, y 🔴 **15 tienen ≤ 1 ★.** Esto confirma la tendencia **584**
+con un denominador externo en vez de una muestra: **la capa está atomizada, y no hay un incumbente
+open source al que sumarse.**
+
+🔵 **La consecuencia práctica para un engagement de K-12, y es la recomendación que reemplaza a la
+del pase 74:** la elección **A (`go-oneroster`, MIT) vs B (`chalk`, AGPL-3.0)** se resuelve por
+**modelo de entrega antes que por técnica**, porque el *delta* entre las dos no es un módulo: **son
+cinco integraciones propietarias.** La receta completa, con la regla de decisión, en **P229**.
+
+---
+
 ## 🔌 La capa de ROSTERING gana el eslabón que le faltaba, y el pase reencuadra cuál es la plataforma fundacional de K-12 (pase 74 del 2026-10-03)
 
 ### 🔴 Primero el reencuadre, porque cambia qué cuenta como «fundacional»

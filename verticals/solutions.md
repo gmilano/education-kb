@@ -111,6 +111,58 @@ updated: 2026-10-03
 > **`qti3-pnp`**, que abren accesibilidad de evaluación como entregable auditable (**P72**). ⚠️ **Open edX cambia de
 > recomendación: proponer con presupuesto de mantenimiento (gap 70).** Ver la sección del pase 33, abajo.
 
+## 🪪 La vertical gana el SUSTITUTO AUTOALOJABLE de Clever/ClassLink, y la pieza llega con su licencia como principal restricción de entrega (pase 75 del 2026-10-03)
+
+🔵 **Lo que el pase 74 dejó planteado y este cierra.** Ese pase estableció que la plataforma con más
+alumnos del planeta (Google Classroom) **no se autoaloja**, así que la receta se corre a la capa de
+integración. 🔴 **Pero la capa de integración de K-12 en NA tiene a su vez dos incumbentes
+propietarios —Clever y ClassLink—, y esta base no tenía ningún sustituto autoalojable para ellos.**
+ClassLink llevaba **1** ocurrencia y Skyward **1** en los cuatro archivos de inventario.
+
+### 🧾 La pieza, verificada en este pase
+
+| | |
+|---|---|
+| Repo | **`usechalk/chalk`** |
+| Licencia | 🔴 **AGPL-3.0**, leída de `main/LICENSE` |
+| Estado | vivo, **2 ★**, **Rust**, **298** commits, **no archivado** |
+| Modelo | **self-hosted gratis «para siempre»** + hospedaje comercial del propio equipo (`usechalk.xyz`) |
+| Alcance | *rostering* + identidad + inventario de flota mixta + *help desk* + ciclo 1:1, **en un binario** |
+
+**Las integraciones que trae construidas**, y son exactamente las plataformas donde esta base era un
+*stub*: **PowerSchool**, **Infinite Campus**, **Skyward**, **OneRoster** (1.1 REST y CSV),
+**Clever** y **ClassLink** (importadores de migración + compatibilidad OAuth), **Google Workspace**
+(provisión de usuarios y OUs), **Active Directory** (LDAP) y **Entra ID**.
+
+### 🔵 Por qué es una vertical de partida y no un conector más
+
+🟢 **Es la única pieza medida en esta base que cubre las CINCO plataformas propietarias de K-12 a la
+vez.** La alternativa es integrarlas de a una: el *delta* de trabajo entre adoptar `chalk` y partir
+de un servidor de spec permisivo (`bgwdotdev/go-oneroster`, MIT) **no es un módulo — son cinco
+integraciones propietarias**, cada una con su contrato y su ciclo de certificación.
+
+🔴 **Y la restricción de entrega hay que decirla en la primera conversación, no en la última:
+AGPL-3.0 es copyleft de RED.** Un distrito que autoaloja `chalk` está perfectamente servido; **un
+producto propietario multi-inquilino construido encima, no** — la cláusula de red alcanza al servicio
+ofrecido por red, no sólo al binario distribuido. Por **P222**, esto **bloquea en la propuesta**, que
+es el momento barato, en vez de después de la entrega, que es el caro.
+
+### 🧭 Cómo se cotiza, según lo que el cliente quiere comprar
+
+| El cliente quiere… | Pieza | Por qué |
+|---|---|---|
+| que **su distrito** deje de pagar Clever/ClassLink | 🟢 **`chalk`** (AGPL) | las cinco integraciones ya están; el AGPL no molesta a un despliegue propio |
+| un **producto** propio que venda a muchos distritos | 🟢 **`go-oneroster`** (MIT) + conectores propios | la licencia permite embeber; el costo es construir la capa de SIS |
+| sólo **Skyward** o **Infinite Campus** | ⚠️ `chalk`, o nada | los únicos conectores sueltos (`Tools4ever-NIM/*`) 🔴 **no tienen archivo de licencia** |
+
+⚠️ **Cota de esta ficha:** ★, commits, estado de archivado y lista de integraciones se leyeron de la
+página del repo por **WebFetch** y la licencia del **archivo** por `raw.githubusercontent.com`
+(**200**). `api.github.com/repos/*` dio **403** en este pase, así que **no** hay verificación por API
+de las cifras. **2 ★ es una base de usuarios diminuta: la pieza se cotiza por su alcance medido, no
+por su adopción, y eso es un riesgo de continuidad que se declara.**
+
+---
+
 ## 🏫 La plataforma vertical con más alumnos del planeta NO se puede autoalojar, y eso cambia la forma de la receta (pase 74 del 2026-10-03)
 
 ### 🔴 El hueco que este archivo tenía, y es de categoría

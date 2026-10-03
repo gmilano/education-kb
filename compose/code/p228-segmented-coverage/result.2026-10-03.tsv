@@ -1,0 +1,31 @@
+file set (NAMED, per P227):
+  agents/top.md
+  repos/foundations.md
+  verticals/solutions.md
+  intel/market.md
+
+platform	segment	unit	rank	lines	occurrences	verdict
+Google Classroom	K-12	institutions	1	15	16	covered
+Canvas	K-12	institutions	2	256	400	covered
+Schoology	K-12	institutions	3	12	13	covered
+PowerSchool	K-12	institutions	4	4	6	STUB
+Infinite Campus	K-12	institutions	5	4	4	STUB
+Skyward	K-12	institutions	6	1	1	STUB
+Moodle	K-12	institutions	7	426	653	covered
+# K-12 / institutions: 7 inversion(s)
+#   Google Classroom(rank-higher, 16 occ) < Canvas(400 occ), 25.0x
+#   Google Classroom(rank-higher, 16 occ) < Moodle(653 occ), 40.8x
+#   Canvas(rank-higher, 400 occ) < Moodle(653 occ), 1.6x
+#   Schoology(rank-higher, 13 occ) < Moodle(653 occ), 50.2x
+#   PowerSchool(rank-higher, 6 occ) < Moodle(653 occ), 108.8x
+#   Infinite Campus(rank-higher, 4 occ) < Moodle(653 occ), 163.2x
+#   Skyward(rank-higher, 1 occ) < Moodle(653 occ), 653.0x
+Canvas	HigherEd	institutions	1	256	400	covered
+Moodle	HigherEd	institutions	2	426	653	covered
+Blackboard	HigherEd	institutions	3	22	35	covered
+Brightspace	HigherEd	institutions	4	13	27	covered
+Google Classroom	HigherEd	institutions	5	15	16	covered
+# HigherEd / institutions: 1 inversion(s)
+#   Canvas(rank-higher, 400 occ) < Moodle(653 occ), 1.6x
+
+PASS cross-cohort rank refused on the real tree: refusing to rank across cohorts HigherEd/institutions, K-12/institutions -- a share in users and a share in institutions have no common denominator (P228). Rank within one cohort, or rank neither.

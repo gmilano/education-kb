@@ -51,6 +51,23 @@ o la variable de entorno (regla de **P107**, pase 47):
 | **`suite-total-control/`** | **la regla de P126: un contador por vocabulario acierta en `PASS` y FALLA en `ok`; el lector del total propio acierta en los dos** | `python3 test_control.py` | **10/10** |
 | **`p183-nongithub-denominator/`** | **la capa de PAQUETE: que la pregunta de la DECLARACIÓN rechace los 7 tokens con FORMA de paquete que no lo son, y que el *build* por forma los acepte** | `python3 test_denominator.py` | **15/15** ✅ *(nuevo en el pase 66)* |
 | **`p184-holder-mismatch/`** | **el TITULAR de un archivo de licencia, y que el instrumento SE NIEGUE a contestar sin la familia en vez de publicar una frase del texto Apache o el copyright de la FSF** | `python3 test_holder.py` | **15/15** ✅ *(nuevo en el pase 66)* |
+| **`p228-segmented-coverage/`** | **los controles de P227+P228: el conjunto de archivos NOMBRADO, y la negativa a ordenar una cuota en USUARIOS contra una en INSTITUCIONES** | `python3 test_coverage.py` | **15/15** ✅ *(nuevo en el pase 75)* |
+| ídem, la reproducción del agregado del pase 74 contra el commit que citó | `python3 reproduce_p224.py` — **182** subconjuntos evaluados, **1** reproduce `229/389` | `python3 reproduce_p224.py` | **3/3** ✅ *(nuevo en el pase 75)* |
+| ídem, la medición por cohorte **en un commit fijo** (el commit es parte de la invocación: ver tendencia **593**) | inversiones por `(segmento, unidad)` | `python3 measure.py --at 5dd2bcc` | 🔴 **7** en K-12 / 🟢 **1** en superior |
+
+🟢 **Pase 75 del 2026-10-03 — las tres suites nuevas de este pase CORRIERON en este entorno, y las
+cifras de su fila son de hoy.** ⚠️ **No se re-verificó la columna «Hoy» de las filas anteriores, y no
+se afirma que estén vencidas ni vigentes: este pase no las midió.** 🔵 **Y no se publica ninguna
+conclusión general sobre la frontera de ejecución —es DEL ENTORNO y varía entre pases—, que es el
+error que los pases 50, 51 y 58 cometieron en una dirección y el 52 y el 66 en la otra.**
+
+🔵 **El canal medido hoy, que coincide con el del pase 67:** 🟢 `raw.githubusercontent.com` (**200** en
+ruta de archivo), `registry.npmjs.org` (**200**), `pypi.org` (**200**), `github.com` por **WebFetch**
+(sirvió) y `api.github.com/rate_limit` (**200**); 🔴 `api.github.com/repos/*`, `github.com` por `curl`
+y `codeload.github.com` dan **403**. ⚠️ **Otra vez el único endpoint de la API que pasa es el que NO
+transporta dato de repositorio.** 🔴 **Y las fuentes de cuota de mercado dieron `EGRESS_BLOCKED` por
+WebFetch** (`listedtech.com`, `cubite.io`, `axiomflow.app` **y `en.wikipedia.org`**), así que el dato
+de cuota de este pase es **del canal de búsqueda y no está verificado en fuente** — igual que en el 74.
 
 ⚠️ **Pase 67 del 2026-10-03 — la columna «Hoy» NO se re-verificó en este pase, y el motivo es del entorno:** la ejecución de las suites de este árbol clonado quedó **NEGADA** (`[Code from External]`), igual que en el pase 58 y al revés que en el 66. **No se reimplementaron a mano, no se buscó otro intérprete y no se troceó el comando** — la negativa es sobre el resultado, no sobre la forma. 🔴 **Consecuencia que se declara en vez de taparse: las cifras de la tabla de abajo son las que el pase 66 reprodujo; el pase 67 NO las afirma como medidas hoy.** ⚠️ **Y no se publica ninguna conclusión general sobre la frontera: es DEL ENTORNO y varía entre pases** — es el error que los pases 50, 51 y 58 cometieron en una dirección y el 52 y el 66 en la otra.
 

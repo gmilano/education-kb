@@ -8,6 +8,7 @@ updated: 2026-10-03
 
 > Agentes y herramientas AI open source para educación. Foco: MIT / Apache 2.0 / BSD.
 > Verificado repo por repo vía WebFetch el 2026-09-30 (stars y licencia leídos de la página del repo).
+> **Pase 75 del 2026-10-03:** 🔴 **El hallazgo del pase 74 era cierto y su CAUSA estaba mal, y el instrumento que lo prueba es nuevo en este árbol.** P224 concluyó que la atención de esta base es «inversamente proporcional a la base instalada» comparando los ~**150 M de USUARIOS** de Google Classroom contra la cuota de Canvas en **INSTITUCIONES de superior** — **dos cifras sin denominador común**. 🟢 **Medido por cohorte `(segmento, unidad)` con `compose/code/p228-segmented-coverage/` (**15/15** + **3/3**), la inversión es de SEGMENTO —medida en `5dd2bcc`, `HEAD` del pase 74, porque la cifra se contamina con la prosa de este mismo pase—: 🔴 **7** inversiones en **K-12** (peor caso Skyward **1** ocurrencia contra Moodle **653** → **653×**) contra 🟢 **1** en **superior** (Moodle 1,6× sobre Canvas). **Esta no es una KB con la atención invertida: es una KB de educación SUPERIOR a la que se le midió la cobertura con un denominador de K-12** (**P228**). 🆕 **Y el dato que esta base no tenía: Google Classroom es 6 de 3.400 instituciones de superior en EE. UU. — 0,2 %.** 🟢 **P227**: el agregado `229 / 389` se publica en **7** archivos y sólo **1** nombra su conjunto; de los **70** subconjuntos de cuatro, **exactamente uno** lo reproduce — reparado en `patterns.md`. 🔴 **P229**: la capa de *rostering* de K-12 es un **callejón de licencias** — pedir permisivo + vivo + spec vigente deja **una** pieza (`bgwdotdev/go-oneroster`, MIT, v1p1, con escritura), y los únicos conectores a **Skyward** e **Infinite Campus** fuera de `usechalk/chalk` (**AGPL-3.0**) son la familia `Tools4ever-NIM`, 🔴 **sin archivo de licencia**. Altas de agente: **0** — el pase midió y corrigió en vez de sumar filas, y se declara.
 > **Pase 74 del 2026-10-03:** 🔴 **El LMS más instalado del planeta tenía CERO filas en esta base: este archivo menciona Canvas en **111** líneas (**241** ocurrencias) y Google Classroom en **0**, en 73 pases, y Google Classroom es el líder global (~39 % contra ~19 % de Canvas). La atención de esta KB resultó INVERSAMENTE proporcional a la base instalada** (**P224**). 🟢 **Abierta la capa, 8 conectores independientes de la MISMA API agregan DOS peldaños a la escalera de escritura:** 🆕 **`GATE-IN-SCOPE`** (**P220**, `DaviPac`, Brasil) —la bandera cambia los *scopes* de OAuth al acuñar el token, así que la compuerta la hace cumplir **Google, fuera del proceso**: el peldaño más alto medido— y 🆕 **`GATE-IN-EFFECT`** (**P221**, `pengusto`) —la escritura ocurre pero nace `DRAFT` en los tres handlers (`src/index.ts:575`, `:670`, `:718`): gobierna la VISIBILIDAD, no la llamada—. 🔴 **Y la pieza MÁS capaz de la capa (~40 tools, `delete_student`) es la única que no es open source, con una clase que esta base no tenía: `LICENSE-REVOCABLE`** (**P222**) — `revocable` aparecía **0 veces** en 73 pases. 🆕 **P223**: `LICENSE` MIT con titular ajeno contra `package.json` ISC de andamio **en el mismo árbol** → no gana ninguna capa. Altas de agente: **6** (LATAM 1, NA 1, EMEA 0, APAC 0, sin región verificable 4 **por aplicar P135**) + **1** de infraestructura que va a `repos/foundations.md` por la regla del pase 25.
 > **Pase 73 del 2026-10-03:** 🟢 **La DIVULGACIÓN es un TERCER eje con cuatro clases (**P215**), independiente de la compuerta y del actor — y el pase que la mide encuentra la pieza que el pase 72 declaró inexistente.** `CaioCastro1/usp-mcp` (**MIT**, 16 ★, 376 commits, Brasil) es fuerte en los **tres** ejes, corre contra una institución **real** —lo que `attendai` explícitamente no hace— y aporta un **peldaño 0** por encima de la escalera del pase 71: 🟢 **`GATE-IN-SURFACE`**, la tool **no existe** hasta habilitarla (`listar_ferramentas()`: 11 tools sin la flag, 13 con ella). 🔴 **Y la razón por la que no estaba en la base es de MÉTODO (**P217**): dos repositorios independientes, mismo nombre, misma universidad — el pase 72 midió el flojo.** 🆕 Clase de licencia nueva: **`LICENSE-CLAIMED-IN-PROSE-ONLY`** (**P216**) — `mcp-powerschool` promete MIT en prosa con **404 en 11 nombres y ningún manifiesto**. Altas: **7** (LATAM 2, EMEA 2, APAC 1, NA 2).
 > **Pase 72 del 2026-10-03:** 🟢 **La escalera de la compuerta del pase 71 medía la mitad: de dónde sale el ACTOR es un SEGUNDO eje y, cruzado con el primero, está INVERTIDO** (**P212**, tendencias **562**–**563**). `attendai` es la única fuerte en los dos (compuerta 1 · actor A2); `bb-mcp` tiene la política más rica de la base **evaluada contra un actor que el cliente declara** (A3); `blackboard-mcp` tiene la compuerta más débil y el actor más fuerte (A1). El hueco es del PROTOCOLO y el propio `bb-mcp` lo escribe: *«The MCP spec does not define end-user identity»*. 🟢 **LATAM vuelve a la capa de código tras tres pases** con `iDavi/usp-mcp` + `iDavi/heidy_backend` (**GPL-3.0**, Brasil), **la única pieza del inventario que no manda la contraseña institucional en claro** —sobre sellado a la clave pública del backend—, 🔴 **con dos cotas medidas: los metadatos del sobre NO están autenticados y el *key schedule* NO es RFC 9180** (**P213**, 13 checks con control negativo). 🟢 **APAC rompe su hueco de CÓDIGO, abierto desde el pase 69**, con `codit04/TechMCP` (MIT, PSG College of Technology, India). 🔴 **Y la advertencia de CAJA del pase 71 era demasiado ancha: re-medidas las 32 ausencias de P170 en las TRES cajas, 32 de 32 se sostienen — P170 nunca fue un sondeo en mayúsculas** (**P211**, tendencia **564**). ⚠️ **Cuatro candidatas reales rechazadas por `NO-CESSION`**, una de ellas una segunda pieza APAC.
@@ -261,12 +262,43 @@ historia propia**: `p114`/`p170`/`p172` preguntan por la licencia **de las filas
 y el dedupe de cada pase pregunta *«¿esto ya está?»*. **Ninguna pregunta era *«¿qué plataforma
 tiene a los alumnos adentro, y la tengo?»*.**
 
+> 🔧 **Corregido en el pase 75 (P228): la columna de cuota de esta tabla mezcla unidades y
+> segmentos.** La tabla se conserva como la publicó el pase 74 —es el registro de lo que se
+> concluyó— y la lectura por cohorte, que es la que vale, está debajo.
+
 | Plataforma | Menciones en esta KB (pase 73) | Cuota de LMS del canal de este pase |
 |---|---|---|
-| Canvas | **111 líneas / 241 ocurrencias** en este archivo (**229 / 389** en los 4 archivos) | ~19 % (global), 41 % en superior de NA |
+| Canvas | **111 líneas / 241 ocurrencias** en este archivo (**229 / 389** en los 4 de inventario) | ~19 % (global), 41 % en superior de NA |
 | Moodle | presente desde el pase 1 | ~14 %, y **cayendo: 19 % (2017) → 7 % (2026)** |
 | **Google Classroom** | 🔴 **0** | 🟢 **~39 % — el primero** |
 | Schoology | 🔴 **0** | top-3 de K-12 con los dos de arriba (~¾ del mercado entre los tres) |
+
+#### 🧭 La lectura por COHORTE del pase 75, que reemplaza la conclusión de arriba
+
+Medido con `python3 compose/code/p228-segmented-coverage/measure.py --at 5dd2bcc` sobre los cuatro
+archivos de inventario **nombrados** (P227). ⚠️ **El commit es parte de la invocación:** leída sobre el
+árbol de trabajo *después* de que este pase escribiera el hueco de K-12, la misma cifra da **11** — la
+prosa que documenta el hueco menciona las plataformas *stub* y cae en los archivos que la métrica
+cuenta (tendencia **593**). Una cohorte es el par `(segmento, unidad)`: el único ámbito donde
+dos cuotas se pueden ordenar.
+
+| Cohorte | Inversiones | Peor caso | Veredicto |
+|---|---|---|---|
+| 🔴 **K-12 / instituciones** | **7** | Skyward **1** occ. contra Moodle **653** → **653×** | el hueco real, y está en la capa de SIS/*rostering* |
+| 🟢 **Superior / instituciones** | **1** | Moodle **1,6×** sobre Canvas | el perfil de atención de esta base es **casi correcto** acá |
+
+🔵 **Lo que la cohorte revela y el agregado escondía:** las tres plataformas de SIS de K-12 son
+*stubs* en los cuatro archivos de inventario —**PowerSchool 6**, **Infinite Campus 4**,
+**Skyward 1** ocurrencia— mientras Moodle lleva **653** y Canvas **400**. 🔴 **El sesgo no es
+«contra la base instalada»: es a favor de lo AUTOALOJABLE**, que es el proxy que esta base venía
+usando sin nombrarlo. Classroom, Schoology, PowerSchool, Skyward e Infinite Campus **no se
+autoalojan**, y por eso llegaron tarde o no llegaron.
+
+🆕 **El dato de segmento que esta base no tenía, del canal de búsqueda (no de fuente: ver la cota de
+P228):** en superior de EE. UU. Canvas lleva **1.814 de 3.400** instituciones y supera **a los tres
+siguientes sumados**; **Google Classroom lleva 6 — 0,2 %.** ⚠️ **Así que «líder global» es una
+afirmación de K-12, no de todos los segmentos**, y el par `~39 % / ~19 %` del pase 74 no corresponde
+a este par de plataformas en ninguno de los dos segmentos.
 
 ⚠️ **La cota de estas cifras, dicha antes de que alguien las cotice, y es grande:** las cinco
 fuentes de cuota (`listedtech.com`, `cubite.io`, `6sense.com`, `programs.com`, `xtendedview.com`)
