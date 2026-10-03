@@ -9,6 +9,90 @@ updated: 2026-10-03
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 > No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
 
+## 2026-10-03 — pase 70: ÁFRICA entra a la capa de agente, y entra con el instrumento de gobernanza más fuerte que esta base haya medido —la compuerta en la FIRMA— mientras la otra alta del pase es su contraejemplo exacto
+
+### 🟢 El hallazgo del pase: la compuerta no está en la prosa ni en el cuerpo, está en la FIRMA
+
+Esta base viene midiendo desde el pase 57 cuántas piezas afirman la aprobación humana **en el
+código** y no sólo en el README. El conteo publicado era **1 de 9**. 🟢 **Hoy entra la pieza que
+mueve ese eje, y lo mueve por un mecanismo que la base no tenía tipificado: la compuerta no es un
+`if` adentro de una función ni un test que la verifique desde afuera — es la FIRMA de la operación.**
+
+🟢 **`buriro-ezekia/mwalimulens-agent` (MwalimuLens).** La llamada que marca un patrón de un alumno
+para revisión es, leída del payload de `tests/test_teacher_review_gate.py` (**9.756 B**, HTTP 200):
+
+```python
+service.flag_pattern_for_review(
+    learner_id="L001",
+    competency_code="MATH-FRACTIONS",
+    claim="Fraction-equivalence performance is repeatedly strong across terms.",
+    supporting_evidence_ids=["EV-004", "EV-007", "EV-009"],
+    counter_evidence_ids=["EV-008"],
+    uncertainty="Open-ended explanation evidence is mixed.",
+```
+
+🔵 **Lo que eso significa, y es distinto de todo lo medido antes:** `supporting_evidence_ids`,
+`counter_evidence_ids` y `uncertainty` son **parámetros de la operación**, no campos opcionales de un
+reporte. **No se puede emitir un patrón sin citar evidencia, sin exhibir contra-evidencia y sin
+declarar incertidumbre, porque la función no se puede llamar sin esos tres argumentos.** 🟢 **Una
+compuerta en la firma no se puede saltar con un flag de configuración, que es exactamente la
+objeción que esta base le hizo a `johnswyou/autograder` en los pases 57-59** (ahí la norma de
+aprobación humana vivía en el README y por eso NO movió el conteo).
+
+⚠️ **Y la cota, dicha antes de que alguien la cotice:** el eje medido es **la firma de UNA
+operación**, no el sistema entero. Lo que está probado es que esa llamada exige los tres argumentos;
+**no** está probado que el servicio rechace una lista de evidencia vacía, porque eso vive en el
+cuerpo y el cuerpo no se leyó. 🔵 **Se declara como `GATE-IN-SIGNATURE`, que es una clase nueva y
+más fuerte que `GATE-IN-DOC`, pero NO equivale a «el sistema no puede etiquetar solo».**
+
+### 🟢 Las dos altas del pase, con licencia medida por PAYLOAD
+
+| Pieza | Repo | Licencia (medida: bytes + `sha256` + titular) | Región | Qué es |
+|---|---|---|---|---|
+| 🟢 **MwalimuLens** | [`buriro-ezekia/mwalimulens-agent`](https://github.com/buriro-ezekia/mwalimulens-agent) | **Apache-2.0**, **11.357 B**, `sha256:c71d239df917` — ⚠️ **titular ausente por construcción → `NOT-APPLICABLE`** (**P184**) | 🟢 **EMEA (África)** | **Agente educativo de seguimiento LONGITUDINAL** (evidencia cruzada entre trimestres y años) del *African Agentic AI Design Challenge*, pista *«Education — The Long View»*. Python, `src/mwalimulens/{agent,domain,mcp_server}`, **9 tests**. Stack declarado: **MCP propio + MCP Filesystem oficial de sólo lectura y en sandbox + Qwen local vía Ollama + datos sintéticos**. **0 ★ / 9 commits** |
+| 🟢 **EduPage MCP** | [`oliverhruby/edupage-mcp`](https://github.com/oliverhruby/edupage-mcp) | **MIT**, **1.070 B**, `sha256:e99290e1540b`, `Copyright (c) 2026 Oliver Hrubý` → 🟢 **`HOLDER-MATCH`** | **EMEA** (Europa central) | MCP sobre **EduPage**, sistema de información escolar *«used across Europe»*. **31 tools**: horarios, notas, deberes, suplencias, descubrimiento multi-colegio, detección de rol (padre/alumno/docente) y **2FA** (`two_factor_finish`). **1 ★ / 1 fork / 111 commits**, Python |
+
+### 🔴 El contraejemplo está en el MISMO pase, y es el que hay que llevar a la reunión
+
+🟢 **MwalimuLens pone la compuerta en la firma. `edupage-mcp` no pone ninguna**, y las dos entran
+hoy. 🔴 **`edupage-mcp` expone superficie de ESCRITURA —mensajes enviados, pedido de comida,
+cambio de cuenta de alumno— y el único control es PROSA en el README:**
+
+> *«Most tools are read-only. The ones marked **Writes? ✅** mutate EduPage state (sent messages,
+> ordered meals, switched accounts). Use them with care.»*
+
+🔴 **Leído contra lo que **P189** pide, el resultado es: no hay confirmación, no hay *dry-run*, no
+hay modo sólo-lectura y no hay flag de opt-in.** *«Use them with care»* es una advertencia al
+operador, no un control en el código. 🔴 **Y hay un segundo eje de riesgo que NO es de licencia:
+el servidor habla con EduPage a través de la librería comunitaria `edupage-api`, contra *«EduPage's
+undocumented endpoints»*** — o sea que la superficie de escritura se apoya en endpoints que el
+proveedor no documenta y puede cambiar sin aviso (**P204**, nuevo).
+
+🔵 **El par es el argumento comercial del pase:** la misma semana, la misma vertical y la misma
+región producen una pieza con la compuerta en la firma y otra con la compuerta en una frase.
+**Para un cliente de EMEA bajo Anexo III, esa diferencia es la diferencia entre adjuntar la pieza al
+expediente y tener que envolverla.**
+
+### 🔴 Dos cosas que el canal de búsqueda entregó como hallazgo y NO lo son
+
+| Lo que el canal ofreció | Lo medido | Veredicto |
+|---|---|---|
+| `YeetingWaterbottle/canvas-mcp`, presentado con **el mismo título y la misma descripción** que el upstream (*«up to 102 tools and 8 agent skills»*) | `LICENSE` **1.071 B**, `sha256:5385a26e2fac`, `Copyright (c) 2025 Vishal Sachdev` — 🔴 **byte a byte IDÉNTICO** al de [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp), que **ya está en esta base** | 🔴 **NO es alta: es un FORK** con el titular del upstream intacto. El canal lo listó como proyecto independiente. **No se agrega fila** (**P199**: el hash SEPARA bien, y acá separa un fork de un proyecto) |
+| `hesham0-0nasser/tutor-lms-mcp`, plugin de WordPress que expone Tutor LMS por MCP | 🟢 **El árbol EXISTE** (`master/README.md` → HTTP 200) pero 🔴 **NO tiene archivo de licencia: 404 en `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING` y `LICENCE`, en `main` y en `master`** | 🔴 **`NO-CESSION`.** Proyecto real, inutilizable por Globant: sin cesión no entra en entregable. ⚠️ **Y no es lo mismo que un 404 de árbol —se distinguió a propósito—** |
+
+### ⚠️ Lo que se buscó en este pase y NO rindió, dicho explícitamente
+
+- 🔴 **`projectfedena/fedena`**, que la fuente secundaria llama *«the official GitHub repository»* de
+  Fedena y le atribuye Apache-2.0: **404 en `README.md` y `readme.md` en `main` y `master`, y 404 en
+  los 5 nombres de licencia**. **No se pudo resolver el árbol, así que la atribución de la fuente no
+  se puede confirmar por este canal** (ver `repos/foundations.md` para el espejo que SÍ cede).
+- ⚠️ **`api.github.com` y `github.com` devuelven 403 por el proxy de este entorno** en todo el pase;
+  las estrellas y los commits vienen de WebFetch y **las licencias de `raw.githubusercontent.com`**,
+  que es el canal de payload que **P172** prefiere. **Ninguna cifra de este pase sale de la API.**
+- ⚠️ **APAC y LATAM no aportaron ninguna pieza nueva de código en este pase** (sí intel regional, ver
+  `intel/market.md`). **El canal de agentes educativos sigue produciendo casi sólo NA y EMEA**, y ese
+  sesgo es ya un dato de la base, no una casualidad de la consulta.
+
 ## 2026-10-03 — pase 69: la columna *Identidad* queda CONDICIONADA por 5 de 13, el hash del `LICENSE` resulta probar mucho menos de lo que se dijo ayer, y el titular de una pieza recomendada estaba mal en cuatro archivos
 
 ### 🔴 El hallazgo del pase: el instrumento de ayer prueba una CLASE, no un ÁRBOL

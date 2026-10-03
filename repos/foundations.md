@@ -81,6 +81,73 @@ corre ése antes de escribir uno a mano** (tendencia **313**). 🟢 **Y el `gafa
 > **Pase 36 del 2026-10-02:** 🔵 **este pase no agrega repos: le pone FECHA a los que ya están, y la fecha cambia tres recomendaciones.** Se midió la capa PHP de evaluación y telemetría en Packagist —el único registro de los tres que entrega descargas en este entorno (`api.npmjs.org` y `pypistats.org` dan **403 a CONNECT**)— y el resultado está en `repos/trending.md`. **Lo que hay que saber antes de proponer desde este archivo:** 🔴 **la pieza xAPI más descargada de esta base, `rusticisoftware/tincan` (Apache-2.0, 6.178 desc./mes, 863.777 totales), no publica desde el 2022-11-02**, y ⚠️ **el único MIT de esa capa, `php-xapi/client`, está parado desde el 2021-03-24** con 825 desc./mes. 🔵 **La lectura es que en xAPI/PHP lo permisivo está quieto y lo vivo es copyleft**, así que la receta de telemetría se sostiene en **Ralph (MIT)** + **`lrsql` (Apache-2.0)** + **`learnmcp-xapi` (MIT)** y no en la capa PHP. 🟢 **Del lado de evaluación, lo activo es `oat-sa/extension-tao-testqti`** (**885 versiones**, release del **2026-09-30**) **y sigue siendo GPL-2.0-only**, mientras **lo permisivo es lo nuevo**: `@longsightgroup/qti3-cli` (**MIT**, 41 releases desde el 2026-05-21, último **2026-10-01**) con **cero dependencias de terceros** — sus 4 dependencias son todas `@longsightgroup/*` pinneadas a la misma versión exacta. **Su manifiesto MCP completo de 20 tools está escrito en `compose/patterns.md` (P76).** 🔴 **Y una corrección de catálogo: `oat-sa/qti-sdk` devuelve 404 en Packagist porque es el nombre del REPO — su paquete es `qtism/qtism`** (GPL-2.0-only, 218.212 descargas totales, 315 versiones). **Nombre de repo y nombre de paquete son identificadores distintos, y confundirlos produce un 404 que parece una ausencia** — pasó igual con `1edtech/oneroster`, `imsglobal/lti-1-3-php-library` y `packbackbooks/lti-1-3-php-library`, los tres **404**, que se anotan como *«no verificado en Packagist bajo ese nombre»* y **no** como inexistentes. ⚠️ **Acción pendiente que el pase 37 tiene asignada: este archivo nunca pasó por el control de *slugs* distintos ni por el de *backlink*** — los dos que en `agents/top.md` encontraron **un duplicado** y **dos colisiones** este mismo pase.
 > **Pase 11 del 2026-10-01:** aparece una licencia que las diez pasadas anteriores filtraban sin saberlo — **ECL-2.0**, con la que licencia todo Apereo (Sakai, Opencast, OpenLRW). Es Apache-2.0 con el alcance de patentes acotado, aprobada por OSI y FSF, y **es apta para construir arriba**. Ver la capa de analítica institucional, abajo.
 
+## 🏫 La capa de SIS / plataforma escolar entra MEDIDA, y el resultado es incómodo: la categoría más citada de la vertical es copyleft fuerte (pase 70 del 2026-10-03)
+
+### 🔴 El resultado de categoría, antes de las filas
+
+El canal *«open source school management / SIS»* es el más citado por fuentes secundarias de toda
+esta vertical y esta base **no lo tenía medido pieza por pieza**. 🔴 **Medido hoy por payload: de
+las tres piezas que las fuentes ponen primero, DOS son copyleft fuerte —una de ellas AGPL— y la
+única permisiva sólo se pudo medir en un ESPEJO.**
+
+| Pieza | Repo | Licencia (**medida**: bytes + `sha256` + titular) | Región | Qué es |
+|---|---|---|---|---|
+| **ClassroomIO** | [`classroomio/classroomio`](https://github.com/classroomio/classroomio) | 🔴 **AGPL-3.0** — *«GNU AFFERO GENERAL PUBLIC LICENSE, Version 3, 19 November 2007»*, **34.523 B**, `sha256:8486a10c4393` · ⚠️ **boilerplate FSF sin titular → `NOT-APPLICABLE`** (**P184**) | sin región declarada | Plataforma educativa open source posicionada como alternativa a Moodle/edX/Thinkific. Trae **AI Course Builder**, **AI Lesson Tutor** y **MCP propio** publicado como `@classroomio/mcp` |
+| **Gibbon** | [`gibbonedu/core`](https://github.com/gibbonedu/core) | 🔴 **GPL-3.0** — *«GNU GENERAL PUBLIC LICENSE, Version 3, 29 June 2007»*, **35.121 B**, `sha256:93178a43d6d3` · ⚠️ boilerplate FSF sin titular → `NOT-APPLICABLE` | sin región declarada (base instalada global) | SIS/plataforma escolar completa: asistencia, horarios, libreta de notas, registro de conducta, mensajería. PHP + MySQL |
+| **Fedena** *(espejo)* | [`mazhar266/fedena`](https://github.com/mazhar266/fedena) | 🟢 **Apache-2.0**, **11.357 B**, `sha256:c71d239df917`, leída de `LICENSE.md` en rama **`master`** · ⚠️ prístina, titular ausente → `NOT-APPLICABLE` | sin región declarada (origen Foradian, India) | SIS en **Ruby on Rails**, liberado por Foradian Technologies y mantenido por la comunidad |
+
+### 🔴 La única permisiva de la categoría tiene la IDENTIDAD abierta, y así hay que cotizarla
+
+🔴 **La fuente secundaria atribuye Apache-2.0 a Fedena y nombra `projectfedena/fedena` como *«the
+official GitHub repository»*. Ese árbol NO resuelve por este canal: 404 en `README.md` y
+`readme.md` × `main`/`master`, y 404 en los 5 nombres de licencia.**
+
+🟢 **La cesión Apache-2.0 existe y está medida — pero en `mazhar266/fedena`, que es un ESPEJO, no el
+publicador que la fuente nombra.** 🔵 **Es exactamente el caso de **P200**: licencia MEDIDA,
+identidad del publicador ABIERTA.** En un entregable se escribe así y no de otro modo:
+
+> *«Fedena: Apache-2.0 leída del payload de un espejo (`mazhar266/fedena`, 11.357 B); el repositorio
+> que la fuente secundaria llama oficial no resuelve. La cesión es verificable, la cadena de
+> publicación no.»*
+
+⚠️ **Lo que NO se puede escribir: «Fedena es Apache-2.0 según su repositorio oficial».** Esa frase
+no está respaldada por ninguna medición de este pase.
+
+### 🔵 Nota de reachability sobre el espejo de Fedena — **P198** vuelve a aplicar en el mismo pase
+
+⚠️ **El primer sondeo de este pase sobre `mazhar266/fedena` dio un falso negativo**, porque preguntó por `README.md`/`readme.md`/`LICENSE` y el árbol **no tiene README**. 🟢 **Re-medido como MATRIZ (P198), el árbol resuelve y es de primera mano:**
+
+| Celda | HTTP | Qué prueba |
+|---|---|---|
+| `master/LICENSE.md` | 🟢 **200** | la cesión **Apache-2.0**, 11.357 B, `sha256:c71d239df917` |
+| `master/Gemfile` | 🟢 **200** | 🟢 **confirma Ruby on Rails por evidencia de primera mano**, no por la fuente secundaria |
+| `master/config/routes.rb` | 🟢 **200** | árbol de aplicación Rails real, no un repo vacío |
+| `master/README.md` · `master/README.rdoc` | 🔴 404 | **no tiene README** — y por eso el sondeo por nombre falló |
+| `main/LICENSE.md` | 🔴 404 | la rama es `master`, no `main` |
+
+🔵 **La lección es la de P198 y se repite por tercer pase: un árbol no se declara muerto por un sondeo de nombre único.** ⚠️ **Y no cambia el veredicto de identidad: sigue siendo un ESPEJO con cesión medida y publicador no comprobado** (**P200**).
+
+### 🧬 El `sha256:c71d239df917` es una CLASE que esta base ya conocía, y la triple coincidencia CONFIRMA P199
+
+🔵 **Tres piezas sin relación entre sí embarcan el mismo `sha256:c71d239df917` / 11.357 B:**
+`mazhar266/fedena` (SIS), `buriro-ezekia/mwalimulens-agent` (el agente que entra hoy en
+`agents/top.md`) y `webtech-network/autograder` (ya registrado). 🟢 **Es Apache-2.0 PRÍSTINA —el
+texto sin apéndice de titular— y la coincidencia confirma **P199** en su dirección útil: el hash
+identifica la CLASE del texto, nunca el árbol.** ⚠️ **Nadie debe leer linaje donde sólo hay
+boilerplate compartido.**
+
+### ⚠️ Lo que este canal NO rindió, declarado
+
+- ⚠️ **`os4ed/opensis-classic` y `francoisjacquet/rosariosis` ya estaban en la base** y no se
+  re-midieron: el pase se gastó en lo que faltaba.
+- 🔴 **No apareció ningún SIS open source con cesión permisiva Y publicador comprobable.** La
+  categoría está dominada por copyleft fuerte. **Es un resultado medido, no un hueco de búsqueda** —
+  y tiene consecuencia de arquitectura: en esta capa Globant integra **por API o proceso separado**,
+  no embebiendo.
+- 🔴 **`api.github.com` → 403, `github.com` → 403** por el proxy del entorno en todo el pase; todas
+  las licencias salen de `raw.githubusercontent.com`. **Ninguna cifra de la API.**
+- ⚠️ **APAC y LATAM: cero repos nuevos en este canal en este pase.**
+
 ## 🧾 El instrumento por ARCHIVO existe por fin, y lo primero que encuentra es que el alcance de una pieza RECOMENDADA no se puede cerrar (acción 3 del pase 68, pase 69 del 2026-10-03)
 
 ### 🔴 La corrección que este archivo tiene que hacerse, primero

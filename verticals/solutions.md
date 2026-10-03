@@ -109,6 +109,52 @@ updated: 2026-10-03
 > **`qti3-pnp`**, que abren accesibilidad de evaluación como entregable auditable (**P72**). ⚠️ **Open edX cambia de
 > recomendación: proponer con presupuesto de mantenimiento (gap 70).** Ver la sección del pase 33, abajo.
 
+## 🏫 La vertical gana la capa de SIS/plataforma escolar y la gana con una advertencia de cotización: la categoría más citada es copyleft fuerte (pase 70 del 2026-10-03)
+
+### 🔴 Lo que cambia para cotizar, dicho primero
+
+Esta vertical tenía bien cubierto el LMS (Moodle, Canvas, Open edX, Brightspace desde el pase 69,
+ILIAS, Chamilo, Sakai, OpenOLAT, OpenEduCat) y **mal cubierto el SIS/plataforma de gestión escolar**,
+que es la categoría que las fuentes secundarias ponen primero. 🔴 **Medida hoy por payload, la
+categoría obliga a un cambio de patrón de integración:**
+
+| Plataforma | Repo | Licencia (**medida**) | Cómo se integra con AI encima | Veredicto |
+|---|---|---|---|---|
+| **ClassroomIO** | [`classroomio/classroomio`](https://github.com/classroomio/classroomio) | 🔴 **AGPL-3.0**, **34.523 B**, `sha256:8486a10c4393`, sin titular | 🟢 **Ya trae su propia capa AI**: *AI Course Builder*, *AI Lesson Tutor* y **MCP propio** (`@classroomio/mcp`) | 🔴 **AGPL: plataforma ALOJADA por el cliente, nunca componente embebido.** 🟢 Útil cuando el cliente quiere alternativa a Moodle con AI de fábrica |
+| **Gibbon** | [`gibbonedu/core`](https://github.com/gibbonedu/core) | 🔴 **GPL-3.0**, **35.121 B**, `sha256:93178a43d6d3`, sin titular | Sin capa AI propia: la AI va **encima, por API**, sobre asistencia/horarios/libreta/conducta | 🔴 **GPL-3.0**: integración por **proceso separado o API**, no por enlace |
+| **Fedena** | [`mazhar266/fedena`](https://github.com/mazhar266/fedena) *(espejo)* | 🟢 **Apache-2.0**, **11.357 B**, `sha256:c71d239df917`, prístina sin titular | Sin capa AI propia. Ruby on Rails, apto para envolver con MCP | 🟢 **La única permisiva de la categoría** · ⚠️ **identidad del publicador ABIERTA** (ver abajo) |
+| **EduPage** *(plataforma comercial, agente open source)* | [`oliverhruby/edupage-mcp`](https://github.com/oliverhruby/edupage-mcp) | 🟢 **MIT** (del MCP), **1.070 B**, `Copyright (c) 2026 Oliver Hrubý` → `HOLDER-MATCH` | 🟢 **31 tools** de MCP sobre un SIS *«used across Europe»* | 🔵 **Clase que esta vertical usa poco: el código cede MIT, la plataforma NO es open source.** 🔴 **Y escribe sin compuerta** (ver abajo) |
+
+### 🔴 La advertencia que acompaña a la única pieza permisiva
+
+🔴 **La fuente secundaria llama a `projectfedena/fedena` *«the official GitHub repository»* y le
+atribuye Apache-2.0. Ese árbol no resuelve: 404 en `README.md`/`readme.md` × `main`/`master` y 404
+en los 5 nombres de licencia.** 🟢 **La cesión se midió en el espejo `mazhar266/fedena`.**
+🔵 **Para cotizar (**P200**): la licencia es verificable, la cadena de publicación no.** Se escribe
+*«Apache-2.0 leída en un espejo»*, no *«Apache-2.0 según su repo oficial»*.
+
+### 🔴 La pieza nueva de EMEA escribe sobre endpoints que el proveedor no documenta
+
+🟢 `edupage-mcp` le da a esta vertical una superficie de agente sobre **EduPage**, SIS con base
+instalada en Europa central. 🔴 **Pero de sus 31 tools, las marcadas `Writes? ✅` mutan estado real
+—mensajes enviados, pedido de comedor, cambio de cuenta de alumno— y el único control es prosa:**
+*«Use them with care»*. **No hay confirmación, ni *dry-run*, ni modo sólo-lectura, ni flag de
+opt-in** (**P189** incumplido).
+
+🔴 **Y el riesgo que no es de licencia: habla con EduPage vía la librería comunitaria `edupage-api`
+contra *«EduPage's undocumented endpoints»*.** 🔵 **Consecuencia de cotización: no se promete
+estabilidad de esa integración, y la escritura se envuelve con
+`compose/code/mcp-allowlist-gateway/`, que esta base ya tiene escrito** (**P204**, nuevo).
+
+### 🔵 El contraste de gobernanza que la vertical puede llevar a una reunión EMEA
+
+🟢 **El mismo pase trae la pieza opuesta: `buriro-ezekia/mwalimulens-agent` (Apache-2.0, África) pone
+la frontera de gobernanza en la FIRMA de la operación** —`flag_pattern_for_review` exige
+`supporting_evidence_ids`, `counter_evidence_ids` y `uncertainty` como argumentos—. 🔵 **Dos piezas
+de la misma región y la misma semana: una no puede emitir un juicio sobre un alumno sin citar
+evidencia y declarar incertidumbre; la otra puede enviar un mensaje a un padre sin confirmación.
+Esa es la diapositiva.**
+
 ## 🏫 La vertical gana Brightspace/D2L —el tercer LMS grande, que no estaba— y pierde el derecho a cotizar «AGPL-3.0 entero» sobre su pieza de corrección (pase 69 del 2026-10-03)
 
 ### 🟢 El hueco de plataforma que esta vertical tenía sin saberlo

@@ -1525,6 +1525,36 @@ Dónde se produce el software educativo abierto, que no es donde está la demand
 
 ### North America
 
+#### 📍 Pase 70 del 2026-10-03 — la región aporta un dato de VOLUMEN legislativo que esta base no tenía, y una cifra de participación que NO se debe promediar con la que ya está
+
+🟢 **Dato nuevo, y es el que mejor dimensiona el riesgo regulatorio de NA:** en la sesión
+legislativa **2026** se introdujeron **134 proyectos de ley sobre AI en educación en 31 estados**
+(*multistate.us*), dentro de **más de 1.500 proyectos relacionados con AI** en total; la red PIE
+contabiliza por su lado **cerca de 100 proyectos estatales** que afectan directamente el uso de AI
+por alumnos en K-12. 🔵 **Por qué importa y no es una cifra decorativa: esta base ya tenía los
+INSTRUMENTOS nombrados uno por uno —California AB 1159, Idaho SB 1227, el marco semáforo de NYC, el
+mandato de supervisión humana de Oklahoma y Maryland, los créditos de CS con AI de Georgia y
+Mississippi, el STUDENTS FIRST Act— pero no tenía la MAGNITUD. 134 en 31 estados dice que no es un
+puñado de casos: es dispersión estructural, y la dispersión es el argumento de venta.**
+
+⚠️ **Y una cifra que NO se promedia.** Este barrido devolvió **38 % de participación de NA en el
+mercado de AI educativa (2025)**. 🔴 **Esta base tiene publicado 36 % (pase 68)**. Son fuentes y
+cortes distintos y **se dejan las dos registradas con su origen, sin promediar** —misma regla que
+esta base aplica desde el pase 13 y el 17—. 🔵 **El rango 36-38 % es el dato; el punto medio es
+una invención.** Adicional del mismo barrido: **64 % de adolescentes de EE.UU. usan chatbots.**
+
+🟢 **La oportunidad, atada al pase:** el mandato de **supervisión humana** de Oklahoma y Maryland y
+la prohibición de que la AI decida en lo consecuente convierten al par de piezas de este pase en
+material de reunión. **La pieza de África que entra hoy
+([`buriro-ezekia/mwalimulens-agent`](https://github.com/buriro-ezekia/mwalimulens-agent), Apache-2.0)
+pone la frontera en la FIRMA de la operación** —no se puede emitir un patrón sobre un alumno sin
+citar evidencia, exhibir contra-evidencia y declarar incertidumbre—. 🔵 **Eso es exactamente lo que
+un distrito de NA tiene que poder mostrar, y es portable: la licencia es permisiva y el dominio no
+es africano, es longitudinal.**
+
+⚠️ **Lo que la región NO aportó en este pase: ninguna pieza de código nueva.** La única superficie
+nueva de NA sigue siendo la del pase 69 (Brightspace/D2L).
+
 #### 📍 Pase 69 del 2026-10-03 — el barrido regional devuelve CONFIRMACIÓN pura, y lo único nuevo de la región es una PIEZA: el tercer LMS grande pasa a ser direccionable
 
 ⚠️ **`AI education North America 2026 adoption regulation players` no devolvió un solo dato que esta
@@ -3038,6 +3068,39 @@ Artículo 50(2) **no es exigible** en North America — pero es **el requisito m
 multi-región conviene cotizarlo contra el techo europeo y no contra el piso local (ver **P103** y **P105**).
 
 ### EMEA
+
+#### 📍 Pase 70 del 2026-10-03 — 🟢 ÁFRICA entra a la capa de agente de esta base, y entra con el instrumento de gobernanza más fuerte que la base haya medido
+
+🟢 **El hallazgo regional del pase, y es de PIEZA, no de cifra:** EMEA aporta **dos** altas de
+código, y una de las dos **abre África**, que hasta hoy esta base sólo tenía con datos de mercado
+(pase 5) y sin una sola pieza de agente.
+
+| Pieza | Licencia **medida** | País/ámbito | Qué agrega a la región |
+|---|---|---|---|
+| 🟢 [`buriro-ezekia/mwalimulens-agent`](https://github.com/buriro-ezekia/mwalimulens-agent) | **Apache-2.0**, 11.357 B, `sha256:c71d239df917`, prístina | 🟢 **África** — *African Agentic AI Design Challenge*, pista *«Education — The Long View»* | **Seguimiento longitudinal de evidencia** entre trimestres y años, con la frontera de gobernanza **en la FIRMA**: `flag_pattern_for_review` exige `supporting_evidence_ids`, `counter_evidence_ids` y `uncertainty` como argumentos. Stack **soberano**: Qwen local vía **Ollama**, datos sintéticos, MCP Filesystem sólo-lectura en sandbox |
+| 🟢 [`oliverhruby/edupage-mcp`](https://github.com/oliverhruby/edupage-mcp) | **MIT**, 1.070 B, `Copyright (c) 2026 Oliver Hrubý` → `HOLDER-MATCH` | **Europa central** (EduPage, *«used across Europe»*) | **31 tools** sobre un SIS con base instalada europea, con **2FA** y detección de rol. 🔴 **Pero escribe sin compuerta** y contra **endpoints no documentados** |
+
+🔵 **El argumento EMEA del pase, y es el más vendible que la región ha dado:** la pieza africana es
+**la respuesta en código** a lo que el **Anexo III** pide en papel. El Anexo III educativo clasifica
+alto riesgo la evaluación de alumnos y exige supervisión humana, trazabilidad y gestión de riesgo;
+**MwalimuLens hace que la trazabilidad no sea una promesa de proceso sino una condición de
+compilación: la función no se puede llamar sin la evidencia.** 🟢 **Y el stack es soberano de punta
+a punta (pesos abiertos locales, sin salida de datos), que es la objeción número uno de un cliente
+público europeo.**
+
+⚠️ **Contra el calendario que esta base ya tiene medido, sin moverlo:** Artículo 50 de transparencia
+**vigente desde el 2026-08-02**; **Anexo III educativo diferido al 2027-12-02** por el *Digital
+Omnibus*; desde el **2026-08-02** la **AI Office y las autoridades de los Estados miembros** son
+responsables de implementar, supervisar y hacer cumplir el AI Act. 🔵 **Este barrido CONFIRMA ese
+reparto de competencias y no mueve ninguna de las dos fechas.** 🔴 **Y persiste la trampa comercial
+del pase 69: hay fuentes secundarias que siguen diciendo *«alto riesgo desde agosto de 2026»*. Un
+cliente puede llegar con la fecha equivocada; la posición medida de esta base es 2027-12-02.**
+
+🔴 **El contraejemplo interno, que también es material de reunión:** `edupage-mcp` manda mensajes y
+cambia de cuenta de alumno **sin confirmación, sin *dry-run* y sin modo sólo-lectura**, sobre
+endpoints que el proveedor no documenta. **Misma región, misma semana, mismo tipo de licencia: una
+pieza se adjunta al expediente de conformidad y la otra hay que envolverla** con
+`compose/code/mcp-allowlist-gateway/`.
 
 #### 📍 Pase 69 del 2026-10-03 — barrido de CONFIRMACIÓN, y el activo nuevo de la región es el currículo nacional de SUECIA, por fin alcanzable
 
@@ -4682,6 +4745,34 @@ este pase dejó cubierto con código.
 
 ### APAC
 
+#### 📍 Pase 70 del 2026-10-03 — la región aporta un dato de POLÍTICA DE INFRAESTRUCTURA que esta base no tenía, y vuelve a no aportar una sola pieza de código
+
+🟢 **Dato nuevo, y es de infraestructura curricular, no de regulación:** **Japón está en transición
+hacia el libro de texto digital OFICIAL**, y **Corea del Sur está expandiendo herramientas de AI
+para lenguas en educación** (*Edmentum, panorama APAC, mayo 2026*). 🔵 **Por qué vale: esta base
+tenía la capa regulatoria de APAC bien medida y la capa de SUSTRATO vacía. Un libro de texto digital
+oficial es el sustrato sobre el que se compone cualquier agente curricular — es el equivalente
+japonés de lo que en EMEA son las API de Skolverket.** ⚠️ **No se midió licencia ni API del programa
+japonés: queda declarado como hueco, no como hallazgo cerrado.**
+
+🟢 **Dato de opinión pública, que invierte el supuesto habitual:** el **Ipsos Education Monitor
+2026** encuentra **menor apoyo a PROHIBIR la AI en las escuelas en los mercados asiáticos**
+estudiados, mientras el apoyo a restringir redes sociales a menores se mantiene alto. 🔵 **Para una
+propuesta APAC eso significa que la objeción no es «no queremos AI» sino «no queremos
+desprotección»: el entregable se vende por la compuerta, no por la abstinencia.**
+
+⚠️ **Confirmaciones, sin mover nada:** la **Ley Marco de AI de Corea** alcanza *«high-impact AI»* en
+educación; **Vietnam** tiene la **Ley 134/2025/QH15 vigente desde el 2026-03-01**, con alto riesgo
+nombrando *«automated assessment and behavioural monitoring»*; **Singapur** sigue en enfoque liviano
+y **Australia** con barreras obligatorias propuestas. 🔵 **Las cuatro ya estaban medidas en esta base
+y el barrido las CONFIRMA.** 🔴 **La fragmentación sigue siendo el dato estructural de APAC: el
+marco de cumplimiento tiene que ser por jurisdicción, no regional.**
+
+🔴 **Lo que APAC NO aportó, por enésimo pase: cero piezas de código.** Las búsquedas de agentes y
+repos de este pase no devolvieron una sola pieza APAC con licencia medible. ⚠️ **Eso ya no es ruido
+de consulta — es una característica del canal open source educativo, que produce casi sólo NA y
+EMEA—, y se declara como hueco abierto en vez de taparse con piezas globales recicladas.**
+
 #### 📍 Pase 69 del 2026-10-03 — barrido de CONFIRMACIÓN, y la región sigue sin aportar pieza educativa-nativa en este canal
 
 ⚠️ **`AI education APAC 2026 adoption regulation players` devolvió casi enteramente AI
@@ -5974,6 +6065,41 @@ desplegado + puerta MCP permisiva (`jbnu-lms-mcp`, `canvas-lms-mcp`, las cuatro 
 depende de un tercero» son el mismo argumento.**
 
 ### LATAM
+
+#### 📍 Pase 70 del 2026-10-03 — la región aporta la cifra que mejor nombra su brecha, con una advertencia de ALCANCE que hay que respetar al citarla
+
+🟢 **Dato nuevo, y es el más citable que LATAM ha dado para abrir una conversación:** la adopción de
+AI en América Latina **creció 23 puntos porcentuales en un solo año**, mientras la gobernanza no
+acompañó — *«la brecha entre usar y gobernar es la mayor vulnerabilidad estratégica de la región»*
+(*gcerti.org, Inteligencia Artificial en Organizaciones 2026*).
+
+⚠️ **La advertencia de alcance, y es obligatoria al citarla:** esa cifra es de adopción de AI en
+**ORGANIZACIONES**, no específicamente en educación. 🔵 **Se registra como dato de contexto regional
+—no como cifra de adopción educativa— y así se dice en una propuesta.** 🔴 **Escribirla como «la
+adopción de AI educativa en LATAM creció 23 puntos» sería falsearla, y esta base ya cometió ese tipo
+de error de alcance antes (pases 54 y 69).**
+
+⚠️ **Confirmaciones del barrido, sin mover nada:** el estudio de **UNESCO IESALC** (lanzado el
+**2026-09-09** en la Semana de Aprendizaje Digital) sobre adopción generalizada de AI en educación
+superior de ALC **con la gobernanza rezagada**; el **Observatorio de IA en Educación para América
+Latina y el Caribe** de UNESCO (**2026-04-14**); el estudio del **BID** sobre 193 soluciones; y la
+previsión de que **2026 sea el año decisivo de regulación regional**, con leyes entrando en vigor
+bajo el molde de riesgo europeo. 🔵 **Las cuatro ya estaban en esta base; el barrido las CONFIRMA y
+ninguna fecha se mueve.**
+
+🟢 **La oportunidad, y este pase la refuerza con una pieza concreta:** el diagnóstico de LATAM es
+*«usamos sin gobernar»*, y lo que falta es **gobernanza instrumentada, no más capacidad de
+modelo**. 🟢 **La pieza que entra hoy por EMEA/África
+([`buriro-ezekia/mwalimulens-agent`](https://github.com/buriro-ezekia/mwalimulens-agent),
+Apache-2.0) es portable a LATAM casi sin fricción:** su frontera está en la FIRMA de la operación
+—evidencia, contra-evidencia e incertidumbre son argumentos obligatorios—, corre con **pesos
+abiertos locales (Qwen vía Ollama)** y **datos sintéticos**. 🔵 **Es la respuesta de ingeniería a la
+brecha de gobernanza de la región, y además responde la objeción de soberanía de datos y la de
+costo de inferencia al mismo tiempo.**
+
+🔴 **Lo que LATAM NO aportó en este pase: cero piezas de código.** Ni agentes ni repos ni
+plataformas con licencia medible salieron del barrido regional. ⚠️ **Se declara como hueco. La capa
+de currículo de esta base sigue teniendo a Chile como única jurisdicción LATAM.**
 
 #### 📍 Pase 69 del 2026-10-03 — barrido de CONFIRMACIÓN, y la cifra que vuelve es de STARTUPS, no del sector educativo
 

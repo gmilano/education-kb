@@ -107,6 +107,94 @@ updated: 2026-10-03
 > **Pase 11:** +2 patrones — **P25** (riesgo de abandono conforme al Anexo III, la capa con presupuesto ya asignado y sin oferta open source) y **P26** (agente docente sobre la ontología curricular nacional ya publicada).
 > **Pase 27:** **+4 patrones y una corrección.** 🔴 **P51 queda con premisa falsa** —el conector MCP de Moodle **sí existe y es MIT**— y lo reemplazan **P54** (corrección y devolución sobre Moodle con **compuerta humana**, el último tramo del gap 6, con piezas que ya escriben), **P55** (el conector de **Open edX**, que es el único que de verdad no existe), **P56** (**SCORM** como formato de salida de la capa generativa: cero integración, offline) y **P57** (evidencia por MCP cotizada sobre lo que CaSS **realmente** expone — 6 de 61 operaciones, con insignias y autoría de marcos **fuera**).
 
+## 🔐 P203 — La compuerta de gobernanza se clasifica por DÓNDE VIVE, y la firma es la clase fuerte (pase 70 del 2026-10-03)
+
+**El problema.** *«Requiere aprobación humana»* se dice de piezas que no ofrecen la misma garantía.
+Esta base lo medía en dos clases y el pase 70 encontró una tercera, más fuerte.
+
+| Clase | Garantía | Cómo se elude | Qué se puede prometer a un cliente |
+|---|---|---|---|
+| `GATE-IN-DOC` | documentación | se ignora al desplegar | 🔴 **nada**: es una norma de operación |
+| `GATE-IN-BODY` | `if` en la función | flag de config, otra ruta de código | ⚠️ *«el camino previsto valida»* |
+| 🟢 `GATE-IN-SIGNATURE` | **tipo de la operación** | 🟢 no se elude sin editar el código | 🟢 *«la operación es inexpresable sin la evidencia»* |
+
+**Cómo se mide** (coste: una lectura de payload):
+
+1. Leer la firma de la operación que produce el juicio sobre la persona.
+2. ¿Los insumos de justificación —evidencia, contra-evidencia, incertidumbre— son **parámetros
+   obligatorios**? → `GATE-IN-SIGNATURE`.
+3. ¿Están validados sólo adentro? → `GATE-IN-BODY`. ¿Sólo en el README? → `GATE-IN-DOC`.
+
+**Caso medido.** `buriro-ezekia/mwalimulens-agent` →
+`flag_pattern_for_review(..., supporting_evidence_ids, counter_evidence_ids, uncertainty)`, leído de
+`tests/test_teacher_review_gate.py` (9.756 B).
+
+⚠️ **Cota declarada:** la firma obliga a PASAR los argumentos, no garantiza que el cuerpo rechace una
+lista vacía. **`GATE-IN-SIGNATURE` es cota inferior de garantía.** Para cerrarla hay que leer el
+cuerpo, y en este pase no se leyó.
+
+## 🚨 P204 — Un conector se evalúa en DOS ejes, y la licencia sólo cubre uno (pase 70 del 2026-10-03)
+
+**El problema.** `oliverhruby/edupage-mcp` pasa el eje de licencia con nota perfecta —MIT, 1.070 B,
+`HOLDER-MATCH`, 111 commits, 2FA— **y es la pieza más riesgosa del pase 70.** La columna Licencia no
+lo ve.
+
+**El segundo eje, con tres preguntas y su acción:**
+
+| Pregunta | Respuesta de `edupage-mcp` | Acción obligatoria |
+|---|---|---|
+| ¿Tiene superficie de **escritura**? | 🔴 sí: mensajes, comedor, **cambio de cuenta de alumno** | inventariar las tools mutantes |
+| ¿La escritura tiene **compuerta en código**? | 🔴 no: sólo *«Use them with care»* | 🟢 envolver con `compose/code/mcp-allowlist-gateway/` |
+| ¿Va contra API **documentada** por el proveedor? | 🔴 no: *«EduPage's undocumented endpoints»* vía `edupage-api` | 🔴 **no prometer estabilidad**; contrato de pruebas y plan de rotura |
+
+🔵 **Regla de cotización:** una pieza **MIT que escribe sin compuerta sobre endpoints no
+documentados** se cotiza **con el envoltorio incluido en el alcance**, nunca como *«ya existe un MCP
+para eso»*.
+
+## 🌍 P205 — RECETA: seguimiento longitudinal AUDITABLE del alumno, soberano y portable entre jurisdicciones (pase 70 del 2026-10-03)
+
+**Para quién.** Institución o ministerio que necesita detectar patrones de aprendizaje a lo largo de
+años **y tiene que poder defender cada afirmación** ante Anexo III (EMEA), supervisión humana
+obligatoria (Oklahoma/Maryland, NA), Ley Marco coreana o Ley 134 vietnamita (APAC), o la brecha de
+gobernanza de LATAM. 🟢 **La misma receta sirve en las cuatro regiones porque la exigencia de las
+cuatro es la misma: que la afirmación cite su evidencia y que la decida una persona.**
+
+### Las piezas, con licencia MEDIDA en este pase
+
+| Rol | Pieza | Licencia medida |
+|---|---|---|
+| Núcleo de evidencia + compuerta | [`buriro-ezekia/mwalimulens-agent`](https://github.com/buriro-ezekia/mwalimulens-agent) | **Apache-2.0**, 11.357 B, `sha256:c71d239df917` |
+| Modelo (soberanía de datos) | **Qwen local vía Ollama** — ya es el stack declarado de la pieza | pesos abiertos, inferencia local |
+| Lectura de ficheros, acotada | **MCP Filesystem oficial**, sólo lectura y en sandbox | el propio proyecto lo usa así |
+| Compuerta de escritura hacia el SIS/LMS | `compose/code/mcp-allowlist-gateway/` + `compose/code/grading-draft-gate/` | código de esta base |
+| Origen de datos académicos | SIS del cliente — ⚠️ **si es Gibbon (GPL-3.0) o ClassroomIO (AGPL-3.0), por API o proceso separado**; si es Fedena, Apache-2.0 leída en espejo | medido en el pase 70 |
+
+### El wiring, en cuatro pasos
+
+1. **Cargar evidencia como inmutable.** Usar `domain/evidence.py` tal cual: `frozen=True`, y
+   `occurred_at` separado de `recorded_at`. 🔵 **Eso es lo que permite cargar una nota tarde sin
+   reescribir la cronología del expediente** — y es la propiedad que un auditor pide.
+2. **Emitir patrones sólo por `flag_pattern_for_review`.** No agregar una ruta alternativa: la
+   obligatoriedad de `supporting_evidence_ids`, `counter_evidence_ids` y `uncertainty` **es** el
+   control de cumplimiento (**P203**).
+3. **Escribir al SIS/LMS únicamente a través del gateway de allowlist**, con la nota en estado
+   borrador hasta que una persona la libere (`grading-draft-gate`). 🔴 **Nunca conectar un conector
+   con escritura sin compuerta —`edupage-mcp` es el ejemplo— directo al SIS** (**P204**).
+4. **Fijar el modelo local.** Qwen vía Ollama, sin salida de datos del alumno hacia un proveedor:
+   responde la objeción de soberanía de EMEA y la de costo de inferencia de LATAM con la misma
+   decisión.
+
+### Lo que esta receta NO promete, dicho antes de cotizar
+
+- ⚠️ **La pieza núcleo tiene 0 ★ y 9 commits, y es un *challenge build* con datos SINTÉTICOS.**
+  Entra por el patrón, no por tracción: **el trabajo de endurecerla está en el alcance**, no hecho.
+- ⚠️ **`GATE-IN-SIGNATURE` es cota inferior** (**P203**): hay que leer el cuerpo y agregar validación
+  de contenido —rechazar listas de evidencia vacías— antes de llamarlo control.
+- 🔴 **No promete conformidad.** Produce el **rastro** que Anexo III y los regímenes de supervisión
+  humana piden. **La conformidad la declara el cliente con su propia evaluación.**
+- ⚠️ **El ingreso de datos desde el SIS depende de la licencia del SIS**, y en esa capa la base midió
+  copyleft fuerte en dos de tres (**tendencia 138**).
+
 ## 🔌 P198 — La reachability de un repositorio es una MATRIZ, no un sondeo (pase 69 del 2026-10-03)
 
 **El defecto, medido sobre una pieza que esta KB RECOMIENDA.**

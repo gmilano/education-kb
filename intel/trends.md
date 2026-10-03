@@ -7,6 +7,7 @@ updated: 2026-10-03
 # 📡 Tendencias — education
 
 > Ventana de investigación: septiembre 2026. Verificado 2026-09-30; el pase 11, el 2026-10-01.
+> **Pase 70 del 2026-10-03:** 🟢 **ÁFRICA entra a la capa de agente de esta base, y entra con el instrumento de gobernanza más fuerte que la base haya medido: la compuerta en la FIRMA de la operación.** `buriro-ezekia/mwalimulens-agent` (Apache-2.0, 11.357 B) exige `supporting_evidence_ids`, `counter_evidence_ids` y `uncertainty` como ARGUMENTOS de `flag_pattern_for_review` —no se puede emitir un juicio sobre un alumno sin citar evidencia, exhibir contra-evidencia y declarar incertidumbre— (**P203**, clase `GATE-IN-SIGNATURE`, **tendencia 136**). 🔴 **Y el contraejemplo entra en el MISMO pase:** `oliverhruby/edupage-mcp` (MIT, `HOLDER-MATCH`, 31 tools) escribe —mensajes, cambio de cuenta de alumno— **sin compuerta en código** y contra *«undocumented endpoints»*, lo que abre un SEGUNDO eje de evaluación que la columna Licencia no ve (**P204**, **tendencia 137**). 🔴 **La capa de SIS entra medida y está dominada por copyleft fuerte** —ClassroomIO AGPL-3.0, Gibbon GPL-3.0, y la única permisiva (Fedena) sólo medible en un ESPEJO porque el repo que la fuente llama oficial da 404— (**tendencia 138**). ⚠️ **Dos candidatas RECHAZADAS: `YeetingWaterbottle/canvas-mcp` es un fork con `LICENSE` byte a byte idéntico al upstream ya presente, y `hesham0-0nasser/tutor-lms-mcp` es un árbol real SIN cesión.** ⚠️ **Barrido regional completo: EMEA 2 piezas, NA 0, APAC 0, LATAM 0 —declarado, no tapado— (**tendencia 139**). 🔴 **`api.github.com` y `github.com` dieron 403 todo el pase: las licencias salen de `raw.githubusercontent.com`.**
 > **Pase 69 del 2026-10-03:** 🟢 **De las tres acciones del pase 68, DOS se ejecutaron y rinden; la tercera está bloqueada por egress y se declara en vez de taparse.** 🔴 **Acción 1: antes de medir hay que corregir el denominador de la propia acción —pedía «los 16 nombres» de registro único y son **13** (21 filas → 18 nombres − 5 de doble registro); el «16» era un conteo de FILAS leído como de NOMBRES—.** 🔵 **Medidos los 13: **3 `IDENTITY-DECLARED` · 2 `IDENTITY-DECLARED-BUT-DEAD` · 3 `IDENTITY-PROVEN` · 5 `IDENTITY-UNKNOWN`**, y 5 ≥ 3 → gana la rama CARA: la columna *Identidad* es **CONDICIÓN** para publicar una fila de paquete, con el valor `desconocida` escrito y no omitido** (**P192** cerrado). ⚠️ **5 de 13 no es comparable con el «4 de 5» de ayer: otro denominador.** 🔴 **El hallazgo del pase ACOTA un patrón de ayer y está demostrado, no argumentado: el `sha256` del `LICENSE` prueba identidad sólo hasta donde llega su TITULAR. Dos paquetes DISTINTOS —`openedx-mcp` y `tutor-contrib-openedxmcp`— comparten `sha256:8d56b405468a`; y borrándole el nombre del titular al `LICENSE` de `@yunmiao/studymate` y al de `@schoolexl/mentor` los dos quedan **byte a byte** iguales al de `opencode-sit`, que es el caso con el que **P193** se escribió** (**P199**). 🟢 **El veredicto de ayer igual se sostiene por un instrumento MEJOR: el árbol NOMBRA al paquete en su `package.json`, que es un enlace de dos vías que el hash no es** (**P200**). 🔴 **Defecto de instrumento que esta serie arrastraba sin saberlo: `HEAD/README.md` da 404 sobre `INGInious` —una pieza RECOMENDADA— porque el repo embarca `README.rst`. Un sondeo de un nombre de archivo mide una convención, no la existencia, y fabrica lápidas** (**P198**). 🟢 **Acción 3 ejecutada: el instrumento por archivo de **P186** existe.** 🔴 **Y obliga dos cosas: el titular de `INGInious` NO es la FSF —está en un `COPYRIGHTS` de 622 B que ningún instrumento de esta base había abierto: *Anthony Gégo, Guillaume Derval and Pierre Reinbold*— y el ALCANCE no se puede cerrar, porque el proyecto declara archivos de terceros con otras licencias y NO los enumera** (**P197** gana una capa, **P201**). 🔴 **Acción 2 BLOQUEADA: `standards.1edtech.org` y `www.imsglobal.org` dan `403 CONNECT` por `curl` y `EGRESS_BLOCKED` por WebFetch, así que `1EdTech × documento` sigue **medido en 2 de 7** y se dice así cada vez.** ⚠️ **Barrido regional: CONFIRMACIÓN en las cuatro regiones, sin una cifra nueva del sector; lo nuevo son PIEZAS —Brightspace/D2L (NA) y el currículo nacional de Suecia (EMEA)—.** Ver las tendencias **548**–**553**.
 > **Pase 68 del 2026-10-03:** 🟢 **Las TRES acciones del pase 67 se ejecutaron, y las tres rinden; dos refutan la hipótesis con la que fueron escritas.** 🔴 **Acción 1: de los 5 nombres de doble registro, **4 son dos ARTEFACTOS distintos** y sólo `moodle-cli` es un proyecto en dos canales → gana la rama cara y lo que se agrega es la columna *Identidad*, NO la columna *Canal*** (**P192**). 🔵 **El caso duro es `canvas-lms-mcp`: dos proyectos REALES, los dos en GitHub, mismo nombre, titulares y `sha256` distintos.** 🟢 **Y el hash del `LICENSE` resulta servir en la otra dirección: UNE un paquete a su árbol cuando el registro no declara el enlace** (**P193**). 🟢 **Acción 2, debida por TERCERA vez, corrió: `sweep_holder.sh` REPRODUJO 68/31/61 exacto, así que la cifra del pase 66 queda verificada y no corregida** — y la ampliación del denominador a la capa de PAQUETE muestra que **`HOLDER-UNRELATED` casi DUPLICA** donde el cliente instala (19,4 % → 35,3 %, n=17) y que aparece una clase que en 160 archivos de árbol no existía (`NO-HOLDER`) (**P190**). 🔴 **Acción 3: la capa de estándares NO está cerrada —el régimen se parte por **PUBLICADOR × TIPO DE ARTEFACTO** sin una excepción en 8 archivos— y por eso la primera rama de su hipótesis es falsa aunque su umbral se cumpla** (**P191**, **P194**). ⚠️ **Hueco nuevo de los que importan: la versión VIGENTE de xAPI salió de GitHub a `opensource.ieee.org`, egress-bloqueado acá, y los cuatro instrumentos de licencia de esta KB son ciegos a eso** (**P195**). 🔴 **Y una regresión PROPIA, que es el hallazgo de método del pase: la corrección de `@eduware/oneroster` a 0BSD —medida en el pase 52 sobre el payload— fue sobrescrita en el pase 66 por `p183`, que pregunta por el identificador del registro. Ningún instrumento falló: la pregunta más superficial corrió última** (**P197**). Ver las tendencias **530**–**547**.
 > **Pase 67 del 2026-10-03:** 🟢 **De las tres acciones del pase 66, DOS se ejecutaron y las dos REFUTAN algo que esta base publicaba; la tercera quedó bloqueada por el entorno y se declara.** 🔴 **Acción 2: `1EdTech/openbadges-specification` SÍ cede y lo que cede NO es open source — la *Specification Document License* de IMS Global (12.324 B, `ob_v3p0/license.md`), que **niega los derivados**: una compuerta más dura que el ShareAlike de **P178**, sobre las 15 filas de estándares de esta base** (**P187**). 🔵 **Fue invisible porque el archivo vive en el subdirectorio de la VERSIÓN y en minúscula — y sólo en una de las tres versiones, así que la pregunta de licencia de un repo de estándar es POR VERSIÓN.** 🟢 **Con eso el encadenamiento de ausencias llega a cuatro eslabones (32 → 22 → 14 → **13**) y las 13 quedan medidas en tres capas.** 🔴 **Acción 3: se resuelve REFUTANDO su premisa — `educhain` y `frappe-mcp-server` no son dos canales con dos licencias, son dos ARTEFACTOS distintos (el `educhain` de npm no tiene repositorio ni descripción), así que las dos filas de esta KB están BIEN y la columna *Canal* NO se agrega hasta hacer la pregunta de identidad** (**P188**). ⚠️ **Acción 1 BLOQUEADA: el barrido de titular exige código de este repositorio y el entorno lo negó** (`[Code from External]`); **se aporta evidencia parcial leída a mano —2 de 7 altas con titular de un tercero, las dos forks— y ningún conteo comparable.** 🟢 **Patrón nuevo de alcance: un `LICENSE` puede acotarse A SÍ MISMO (`INGInious`: *«Most of the files…»*) y las cuatro capas que esta KB mide lo aprueban sin verlo** (**P186**, con gap de instrumento declarado). Ver las tendencias **512**–**529**.
@@ -11305,3 +11306,80 @@ implementación certificada, y en una venta a un distrito esa distinción se hac
 1. **Revisar si alguna otra ausencia declarada de esta KB ya fue cerrada por su propio proyecto** (**gap 54**). Este pase descubrió que el gap 48 estaba cerrado **dos meses antes** y el barrido no lo había notado, porque buscaba *«conector de terceros»* y la puerta la publicó el proyecto en **PyPI**, no en GitHub con nombre `*-mcp`. **La acción concreta: para cada ausencia de conector que esta base declara abierta, consultar el registro de paquetes del lenguaje de la plataforma (PyPI, npm, Packagist, RubyGems) con el nombre del proyecto, no del protocolo.** Es el canal que este pase demostró que faltaba.
 2. **Pedir `tools/list` a los dos sistemas que quedaron medidos en el papel pero no en ejecución** (**gaps 52 y 55**): `docker-compose up` en **OpenCASE** y pedirle su **OpenAPI 3** al endpoint de descubrimiento —lo que habilita **generar** el conector de **P60** en vez de escribirlo—, y `tutor plugins enable openedxmcp` para ver **cuántas tools expone realmente** el conector oficial de Open edX frente a sus 35 rutas de fachada. **Las dos mediciones convierten cifras de documentación en cifras de protocolo**, que es la distinción que este pase estableció con `oneroster-ts` (aliasing) y CaSS (supresión).
 3. 🔴 **Resolver el calendario del Anexo III contra el texto consolidado** (**gap 56**). Es la única de las tres que no es técnica y es la que más riesgo comercial descarga: esta KB tiene **dos fechas incompatibles publicadas en archivos distintos** —2027-12-02 por el pase 11 y «rige desde 2026-08-02» por el pase 28— y **sobre la segunda se construyó argumentación de venta para EMEA**. Hay que fechar cada afirmación con **el inciso del Anexo III** que le corresponde, porque educación es uno entre varios y el calendario no es único para todos.
+
+## 136. La compuerta de gobernanza más fuerte no está en el cuerpo del código ni en un test: está en la FIRMA de la operación (agregado en el pase 70 del 2026-10-03)
+
+Esta base viene midiendo desde el pase 57 cuántas piezas afirman la aprobación humana **en el
+código** y no sólo en el README, y el conteo publicado es **1 de 9**. 🟢 **El pase 70 encuentra una
+clase que la base no tenía tipificada y que es más fuerte que las dos que medía.**
+
+Las tres clases, ordenadas de más débil a más fuerte:
+
+| Clase | Dónde vive la garantía | Cómo se elude | Caso medido |
+|---|---|---|---|
+| `GATE-IN-DOC` | README / documentación | se ignora al desplegar | `johnswyou/autograder` (*«approve grades before release»*) |
+| `GATE-IN-BODY` | un `if` dentro de la función | flag de configuración o rama de código | la puerta de escritura de nota de `peancor` (pases 58-59) |
+| 🟢 **`GATE-IN-SIGNATURE`** | **la firma de la operación** | 🟢 **no se elude: el código no compila/llama sin los argumentos** | 🟢 **`buriro-ezekia/mwalimulens-agent`** |
+
+🟢 **El caso:** `flag_pattern_for_review(learner_id, competency_code, claim,
+supporting_evidence_ids, counter_evidence_ids, uncertainty, …)`. **Citar evidencia, exhibir
+contra-evidencia y declarar incertidumbre no son políticas del proyecto: son parámetros
+obligatorios.** No hay forma de emitir un juicio sobre un alumno sin los tres.
+
+🔵 **Por qué es una tendencia y no una anécdota:** las tres jurisdicciones que mandan en esta
+vertical —Anexo III europeo, Ley Marco coreana, Ley 134 de Vietnam— piden lo MISMO del software:
+trazabilidad y supervisión humana sobre decisiones que afectan a un alumno. 🟢 **Una compuerta en la
+firma convierte ese requisito de una promesa de proceso en una propiedad del tipo.** ⚠️ **Y la cota:
+que la firma exija los argumentos no prueba que el cuerpo valide su contenido —una lista vacía puede
+pasar—, así que `GATE-IN-SIGNATURE` es cota INFERIOR de garantía, no certificación.**
+
+## 137. La superficie de ESCRITURA sobre endpoints no documentados es un eje de riesgo independiente de la licencia, y la vertical acaba de producir el caso de libro (agregado en el pase 70 del 2026-10-03)
+
+🔴 **`oliverhruby/edupage-mcp` es MIT, con titular que coincide con el dueño del árbol, 111 commits y
+2FA: por el eje de LICENCIA está impecable. Y es la pieza más riesgosa que entró en el pase.**
+
+Dos riesgos que el eje de licencia no ve:
+
+1. 🔴 **Escribe sin compuerta.** De sus 31 tools, las marcadas `Writes? ✅` mutan estado real
+   —mensajes enviados, pedidos de comedor, **cambio de cuenta de alumno**— y el único control es
+   prosa: *«Use them with care»*. Sin confirmación, sin *dry-run*, sin modo sólo-lectura, sin flag.
+2. 🔴 **Escribe contra endpoints que el proveedor NO documenta**, vía la librería comunitaria
+   `edupage-api`. **La integración puede romperse sin aviso y sin changelog.**
+
+🔵 **La consecuencia de arquitectura, que es la parte útil:** la decisión de *«entra o no entra en el
+entregable»* **no se resuelve con la columna Licencia**. Hace falta un segundo eje —*¿escribe?, ¿con
+compuerta?, ¿contra API documentada?*— y esta base ya tiene el instrumento para el tercer caso
+(`compose/code/mcp-allowlist-gateway/`) y el patrón para el segundo (**P189**). 🟢 **El pase 70 los
+une en **P204**.**
+
+## 138. La categoría de SIS/plataforma escolar —la más citada de la vertical— está dominada por copyleft FUERTE, y eso cambia el patrón de integración, no sólo la nota al pie (agregado en el pase 70 del 2026-10-03)
+
+🔴 **Medida por payload en el pase 70, la capa de gestión escolar da: `classroomio/classroomio`
+AGPL-3.0 (34.523 B), `gibbonedu/core` GPL-3.0 (35.121 B), y la única permisiva —Fedena,
+Apache-2.0— sólo medible en un ESPEJO.**
+
+🔵 **Por qué es tendencia y no un accidente de muestreo:** el LMS de esta vertical tiene opciones
+permisivas y copyleft mezcladas, pero **la capa que toca el expediente del alumno —matrícula, notas,
+asistencia, conducta— es sistemáticamente copyleft fuerte.** 🟢 **Consecuencia práctica: en esta capa
+Globant no embebe, integra por API o proceso separado, y la plataforma la ALOJA el cliente.** Es una
+decisión de arquitectura derivada de una medición de licencia, que es la forma en que esta base
+quiere que se tomen.
+
+## 139. El canal open source educativo produce casi sólo NA y EMEA, y ya es una característica estructural y no un sesgo de consulta (agregado en el pase 70 del 2026-10-03)
+
+⚠️ **El pase 70 corrió el barrido regional completo —NA, EMEA, APAC, LATAM— y el resultado de CÓDIGO
+fue: EMEA 2 piezas (una de ellas africana), NA 0, APAC 0, LATAM 0.**
+
+🔵 **La asimetría no es de interés ni de adopción —APAC tiene la regulación más avanzada y LATAM el
+crecimiento de adopción más rápido—, es de PUBLICACIÓN: las dos regiones con más movimiento
+regulatorio y de adopción no publican piezas open source educativas con licencia medible.**
+
+🟢 **Lo que eso significa comercialmente, y es favorable:** en APAC y LATAM **no hay una base
+instalada de componentes locales que compita con un entregable de Globant**. El patrón ganador en
+esas regiones es **portar una pieza permisiva de EMEA/NA y adaptarla a la jurisdicción**, no buscar
+el componente local — que no existe. 🟢 **El pase 70 da el ejemplo: la pieza africana Apache-2.0 con
+compuerta en la firma y pesos abiertos locales es portable a LATAM casi sin fricción, y responde la
+brecha de gobernanza regional con ingeniería.**
+
+⚠️ **Se declara como hueco abierto y se vuelve a medir cada pase: una región que no aparece es una
+región medida en cero, no una región sin buscar.**

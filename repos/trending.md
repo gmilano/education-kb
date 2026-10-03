@@ -8,6 +8,53 @@ updated: 2026-10-03
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 
+## 2026-10-03 — pase 70: la capa de SIS/plataforma escolar entra medida por payload, y el resultado es que las dos piezas más citadas de la categoría son copyleft fuerte
+
+### 🔴 Lo primero, porque cambia cómo se cotiza la categoría entera
+
+El canal de *«open source school management / SIS»* es el más citado por fuentes secundarias de toda
+esta vertical, y esta base no lo tenía medido pieza por pieza. 🔴 **Medido hoy por payload, las dos
+piezas que esas fuentes ponen primero son copyleft fuerte, y una de las dos es AGPL:**
+
+| Pieza | Repo | Licencia (**medida**: bytes + `sha256` + titular) | Qué es | Veredicto de cotización |
+|---|---|---|---|---|
+| **ClassroomIO** | [`classroomio/classroomio`](https://github.com/classroomio/classroomio) | 🔴 **AGPL-3.0** — *«GNU AFFERO GENERAL PUBLIC LICENSE, Version 3, 19 November 2007»*, **34.523 B**, `sha256:8486a10c4393` · ⚠️ **boilerplate FSF sin titular → `NOT-APPLICABLE`** (**P184**) | Plataforma de educación open source que se posiciona como alternativa a Moodle/edX/Thinkific. Trae **AI Course Builder**, **AI Lesson Tutor** y **MCP propio** (`@classroomio/mcp` en npm) | 🔴 **AGPL-3.0 = no entra en entregable cerrado.** 🔵 Sirve como plataforma ALOJADA por el cliente, no como componente embebido |
+| **Gibbon** | [`gibbonedu/core`](https://github.com/gibbonedu/core) | 🔴 **GPL-3.0** — *«GNU GENERAL PUBLIC LICENSE, Version 3, 29 June 2007»*, **35.121 B**, `sha256:93178a43d6d3` · ⚠️ boilerplate FSF sin titular → `NOT-APPLICABLE` | SIS/plataforma escolar completa (asistencia, horarios, libreta, conducta, mensajería), PHP + MySQL, base instalada global | 🔴 **GPL-3.0**: copyleft fuerte. Integración por API/proceso separado, no por enlace |
+| **Fedena** *(espejo)* | [`mazhar266/fedena`](https://github.com/mazhar266/fedena) | 🟢 **Apache-2.0**, **11.357 B**, `sha256:c71d239df917` (`LICENSE.md`, rama `master`) · ⚠️ titular ausente por construcción → `NOT-APPLICABLE` | SIS en Ruby on Rails, originalmente de Foradian Technologies | 🟢 **La ÚNICA permisiva de la categoría en este pase** — pero ver la advertencia de identidad abajo |
+
+### 🔴 La advertencia de identidad sobre la única pieza permisiva de la categoría
+
+🔴 **La fuente secundaria atribuye Apache-2.0 a Fedena y señala `projectfedena/fedena` como *«the
+official GitHub repository»*. Ese árbol NO resuelve por este canal: 404 en `README.md` y
+`readme.md`, en `main` y en `master`, y 404 en los 5 nombres de licencia.**
+
+🟢 **La cesión Apache-2.0 sólo se pudo medir en `mazhar266/fedena`**, que es un espejo, no el
+publicador nombrado. 🔵 **Consecuencia práctica, y es exactamente **P200**: la licencia está
+medida, la IDENTIDAD del publicador no.** Para un entregable, eso se dice así: *«Apache-2.0 leída en
+un espejo; el repositorio que la fuente llama oficial no resuelve»*. ⚠️ **No se escribe la fila como
+si el proyecto oficial hubiera cedido, porque no se pudo comprobar.**
+
+### 🧬 El `sha256:c71d239df917` ya es una CLASE conocida de esta base, y eso es información
+
+🔵 **`mazhar266/fedena` y `buriro-ezekia/mwalimulens-agent` (la alta de agente de este pase) embarcan
+el MISMO `sha256:c71d239df917` / 11.357 B**, y es también el de `webtech-network/autograder`, que esta
+base ya tenía registrado. 🟢 **Es Apache-2.0 PRÍSTINA —el texto sin apéndice de titular—, y las tres
+coincidencias CONFIRMAN **P199** en su dirección útil: el hash identifica la CLASE del texto, no el
+árbol.** ⚠️ **Nadie debe leer esa coincidencia como linaje entre Fedena, MwalimuLens y un
+autograder: no hay relación, comparten boilerplate.**
+
+### ⚠️ Lo que este canal NO rindió en el pase, dicho explícitamente
+
+- ⚠️ **`openSIS` y `RosarioSIS` ya estaban en esta base** (`os4ed/opensis-classic`,
+  `francoisjacquet/rosariosis`) y **no se re-midieron**: el pase se gastó en lo que faltaba.
+- 🔴 **`api.github.com` → 403 y `github.com` → 403 por el proxy del entorno durante todo el pase.**
+  Todas las licencias de arriba se leyeron de `raw.githubusercontent.com` (payload), y las estrellas
+  por WebFetch. **Ninguna cifra viene de la API de GitHub.**
+- ⚠️ **No apareció ningún SIS open source nuevo con cesión permisiva y publicador comprobable.** La
+  categoría está dominada por copyleft fuerte, y eso es un resultado, no un hueco de búsqueda.
+- ⚠️ **APAC y LATAM: cero piezas nuevas de código en este canal.** La búsqueda regional del pase
+  rindió intel y regulación (ver `intel/market.md`), **no repos**.
+
 ## 2026-10-03 — pase 69: entra la capa de agente de Brightspace/D2L, Suecia entra a la capa de currículo, y un sondeo de un solo nombre de archivo resultó estar fabricando lápidas
 
 ### 🟢 El movimiento de repos del pase: tres piezas MIT, las tres con el archivo de licencia leído
