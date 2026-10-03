@@ -7,6 +7,7 @@ updated: 2026-10-03
 # 📡 Tendencias — education
 
 > Ventana de investigación: septiembre 2026. Verificado 2026-09-30; el pase 11, el 2026-10-01.
+> **Pase 61 del 2026-10-03:** 🟢 **el pase ejecutó una consigna vieja que nadie había corrido —buscar el currículo por PAÍS y en el idioma del país, no «agentes educativos»— y rindió 11 piezas nuevas en las cuatro regiones tras diez pases sin altas, mientras las cuatro búsquedas globales obligatorias volvían a devolver el eje agotado.** 🔴 **El hallazgo que manda es un defecto de INSTRUMENTO: la capa de currículo es dual —código permisivo, dato con atribución— y el archivo del DATO no está en la raíz en dos de tres casos, así que el probe de P114/P115 reporta «MIT» para toda la capa y MIT cubre la mitad sin valor** (**P153**). 🟢 **La hipótesis falsable cae en su primera rama y el falso positivo era propio: `dados/LICENSE.md` existe, no hay contradicción entre repos — la ciega era mi lista de nombres.** 🟢 **Y llega el número: 31,9 % → 0,2 % con el dato en el prompt, 2,3 % vía MCP, en pares y con pre-registro cerrado antes de la batería — la condición de CONTROL le gana a la herramienta por un orden de magnitud** (**P156**). 🔴 **La asimetría regional invierte el gap 4: NA, con el 38 % del mercado, es la PEOR servida —tres renderizaciones JSON del Common Core sin archivo de licencia—** (**P159**). 🔴 **Y la acción 2 del pase 60 CIERRA confirmando los nueve números y REFUTANDO su cifra: son 80 citas, no 114, y las nueve NUNCA estuvieron definidas en los 65 commits de la historia — nacieron colgadas** (**P157**). Ver las tendencias **426**–**437**.
 > **Pase 59 del 2026-10-03:** 🔴 **la acción 2 del pase 58 CIERRA en la rama de la UNICIDAD: ampliado el eje de 6 a 9 puertas de escritura de nota leídas en el CÓDIGO, `peancor` sigue siendo la ÚNICA que AFIRMA la publicación — «afirma la publicación» no es una clase de la capa, es UNA fila, y la regla de excluirla en vez de configurarla se sostiene con el denominador ampliado un 50 %.** 🔴 **Pero el denominador ampliado descubre el SEGUNDO POLO y reencuadra todo: el eje es BIPOLAR y ESCASO —sólo 2 de 9 toman posición en el código, y son los extremos: `peancor` cablea `'released'` y `toshieji` cablea `'readyforreview'` con `released: False`, verificado en `server.py:570` de primera mano y no en el README. Y NINGUNO de los dos consulta la precondición, así que las dos garantías son condicionales en sentidos OPUESTOS: a `peancor` no la salva `markingworkflow=1`, a `toshieji` la DERROTA `markingworkflow=0`. La mejor pieza de la capa y la peor dependen de la MISMA casilla** (**P145**). 🔴 **Hallazgo estructural nuevo: las puertas de Canvas se propagan por FORK —`algorithm0r/canvas-lms-mcp` ← `bruchris` y `abr-Projects/canvas-mcp` ← `vishalsachdev`, padre declarado por GitHub, ambos MIT y ambos escriben nota— así que la unicidad se cuenta sobre CÓDIGO DISTINTO y la pieza desplegada se identifica por el COMMIT, no por el nombre del proyecto** (**P146**). 🟢 **1 alta no-fork: `CharlieCardenasToledo/mcp-canvas-server` (MIT, 0 ★), `posted_grade` crudo y 0 menciones de política de publicación en 60.194 bytes: publica por omisión.** 🔴 **Y el dato de licencia que cambia el ORDEN de los filtros: el MCP de Moodle más estrellado del barrido —`loyaniu/moodle-mcp`, 37 ★— NO TIENE LICENCIA en ninguna rama ni en su `pyproject.toml`; el filtro de licencia va ANTES del de popularidad** (**P147**). 🔴 **La acción 1 se entrega con su FIXTURE REFUTADO: el par que el pase 58 mandó usar de control negativo no existe —el pase 57 cita gaps 249/232/100 y nada de fechas; la pregunta de las fechas es el `gap 56`, del pase 32, cerrado en el 39— y un barrido por número de gap da un falso positivo real (el `gap 51` del pase 48 es PRECEDENTE), así que la unidad de juicio es el ACTO DE HABLA de la cláusula** (**P148**). ⚠️ **Nota de instrumento, segunda reproducción: el entorno negó ejecutar el código clonado incluidas las suites OFFLINE, así que la suite nueva se publica con 17 asertos escritos y 0 corridos.** Tendencias **402**–**412**.
 > **Pase 58 del 2026-10-03:** 🔴 **la acción 1 del pase 57 CIERRA y su hipótesis falsable cae en la rama que obliga a trabajar: de las 6 puertas de escritura de nota, medidas de primera mano en el CÓDIGO, 0 consultan la precondición de plataforma** (`markingworkflow` en Moodle, `posting_policy`/`post_manually` en Canvas). 🔴 **Y aparece el eje que decide un despliegue y que el vocabulario de «borrador» no muestra: `peancor/moodle-mcp-server` manda `workflowstate: 'released'` CABLEADO, así que es la ÚNICA de las seis que publica incluso con `markingworkflow=1` — 5 de 6 quedan neutralizadas por la configuración correcta de la plataforma, 1 de 6 la DERROTA, y por eso `peancor` es la fila que hay que excluir y no la que hay que configurar** (**P142**). 🔵 **`mcp-moodle-staff` está fuera del eje por diseño: no llama al web service, genera CSV para el importador nativo, así que la liberación humana es del PROCESO y no del servidor** (**P143**). 🟢 **1 ALTA, la primera en doce pases, y entra porque contesta ARQUITECTÓNICAMENTE el 0 de 8 del pase 57 y el 0 de 6 de este: `littlecookie0722/AI-Teaching-Agent` (MIT verificado por el texto del `LICENSE`) cumple «borrador + liberación humana» de forma incondicional porque NO PUEDE publicar — *«The export does not call platform import, grading execution, or publishing paths»*. Separar la generación de la publicación es el patrón; una compuerta mejor adentro del camino de escritura no lo es** (**P144**). 🔴 **La acción 3 estaba CERRADA antes de escribirse, y la cerró el propio pase 57 en su tendencia 392: las «dos fechas incompatibles» son dos obligaciones distintas, no una contradicción. Es el defecto del gap 54 —declarar abierto lo que ya está cerrado— aplicado ADENTRO, y el mecanismo es que la lista de acciones y la de tendencias de un pase se escriben por separado y nada las cruza.** 🟢 **Las dos fechas se re-verificaron hoy por tres canales concordantes: Anexo III §3 → 2027-12-02 (AI Omnibus, DOUE 2026-07-24, en vigor 2026-07-27); Art. 50 NO tocado, vigente desde 2026-08-02; backstop del 50(2) el 2026-12-02 — a 60 días del 2026-10-03. Lo que sostiene la venta EMEA de esta base es justamente el reloj que no se movió.** ⚠️ **Nota de instrumento que corrige al pase 52 en la dirección contraria: este entorno negó ejecutar el código clonado INCLUIDAS las suites OFFLINE, así que la columna «Hoy» del README NO se re-verificó y este pase no afirma ninguna de esas cifras como medida hoy.** Tendencias **393**–**401**.
 > **Pase 55 del 2026-10-03:** 🔴 **el hallazgo que manda invierte la intuición de cualquier filtro de componentes: los dos ejes de la capa de conectores están ANTI-correlacionados.** Las tres piezas que someten trabajo calificado son las tres de PEOR procedencia de credencial y **las tres traen salvaguarda de integridad**; la de credencial más limpia (`peancor`, clase (a) con token de administración del **SITIO**) es la **única de las seis sin ninguna** — 🔴 **así que ordenar por higiene de credencial selecciona A FAVOR de la escritura de notas sin guarda** (**P127**). 🟢 **La clase (4) no existe en las seis y hay que decirlo: el ecosistema se autolimita donde la licencia no lo obliga** (**P128**), **y el «candidato natural a (4)» del pase 54 resultó el más estricto del conjunto.** ⚠️ **El esquema de cuatro clases es estudiante-céntrico y no ve la escritura del lado docente, que es donde está el agujero** (**P129**). 🟢 **Acción 2 cerrada con denominador ENUMERADO (14 filas → 9 determinables, 3 nuevas), y la tasa enumerada 2 de 9 (22,2 %) es MENOR que la oportunista 7 de 18 (38,9 %).** 🔴 **Y el pase se corrige a sí mismo antes de publicar: un `grep` escrito a mano dio «dos cifras del README vencidas» (49 y 34) y era FALSO POSITIVO — el instrumento versionado de esta KB da 46 y 33, que es lo que el README ya publicaba; el «control positivo» que lo habilitó era insensible al defecto** (**P126**). ⚠️ **Dos instrumentos de este pase dieron falsos positivos y se atraparon con control; ninguno se publicó como dato** (**P130**). 🟢 **El instrumento de terna del pase 54 se estrenó y disparó en la primera cifra nueva.** Tendencias **313**–**336**.
@@ -5427,6 +5428,125 @@ hueco abierto, y el pase 56 ya se atrapó inventándolo (**P135**); (b) **el tex
 inalcanzable desde este entorno**, así que las fechas de 399 son de tres canales secundarios concordantes, **no de
 primera mano**; (c) **`AI-Teaching-Agent` no declara región** y su único indicio es contenido bilingüe
 inglés/chino — **indicio débil, NO se infiere región** (regla de **P135**).
+
+## Las tendencias 426–437, del pase 61 del 2026-10-03
+
+**426.** 🟢 **La acción pre-registrada que llevaba ciclos sin correrse RINDIÓ, y es la lección de método
+del pase: un pase anterior dejó escrito *«buscar explícitamente `curriculum ontology`,
+`achievement standards`, `learning map` y `prerequisite graph` por país, en el idioma del país, en vez
+de esperar que aparezcan buscando agentes»*, y ejecutarla devolvió 11 piezas nuevas en las cuatro
+regiones después de diez pases sin altas.** 🔵 **El rendimiento no estaba en una fuente nueva: estaba
+en una consigna vieja que nadie había corrido.** ⚠️ **Y las cuatro búsquedas globales obligatorias de
+este pase volvieron a devolver el eje agotado —OpenClaw, OpenHands, opencode, CrewAI, LangGraph, todos
+generalistas ya inventariados y ninguno educativo—, así que la asimetría entre los dos canales está
+ahora medida dos veces.**
+
+**427.** 🔴 **La capa de currículo está DUALMENTE licenciada y el filtro de esta KB era ciego a su
+mitad valiosa: código permisivo, dato con atribución, y el archivo que declara la licencia del DATO no
+está en la raíz en dos de los tres casos** (`dados/LICENSE.md` **dentro** del directorio de datos en
+`bncc-dev/bncc-dados`; `LICENSE-DADOS.md` en los dos repos hermanos; `DATA-LICENSE.md` en
+`oaknational/oak-curriculum-ontology`). 🔵 **Tres convenciones de nombre en una sola capa, dos fuera de
+la raíz** (**P153**).
+
+**428.** 🔴 **Consecuencia que vuelve el hallazgo 427 un defecto de instrumento y no una curiosidad: el
+probe de cinco nombres de raíz de P114/P115 devuelve «MIT» para toda la capa, y MIT es la licencia de
+la parte que NO tiene valor.** El valor es el dato y el dato trae obligación de atribución. 🟢 **Filtro
+corregido: después del `LICENSE` de raíz hay que probar los sufijos `-DADOS`/`-DATA`/`DATA-` **y el
+mismo juego dentro del directorio de datos**; si la raíz dice permisiva y existe archivo de datos, la
+fila tiene DOS licencias y manda la del dato.**
+
+**429.** 🟢 **La hipótesis falsable de este pase cae en su PRIMERA rama y el falso positivo era propio.**
+Escrita antes de medir, cuando `bncc-pacotes` declaraba el dato de `bncc-dados` como CC BY 4.0 mientras
+el `LICENSE` de `bncc-dados` leía MIT: *«si `bncc-dados` también trae archivo de licencia de datos, la
+contradicción es de mi probe; si trae sólo el MIT, dos repos de la misma organización se contradicen
+sobre los mismos bytes»*. 🟢 **`dados/LICENSE.md` existe y dice CC BY 4.0: no hay contradicción entre
+repos — la ciega era la lista de nombres, que probó `dados/LICENSE` y no `dados/LICENSE.md`.** 🔵 **Un
+archivo de más en la lista habría evitado acusar a un proyecto ajeno de incoherencia: el instrumento
+se desancla antes de publicar un veredicto sobre un tercero.**
+
+**430.** 🟢 **Llega el número que esta KB venía argumentando sin tenerlo, y con diseño serio: aterrizar
+el currículo baja la alucinación de 31,9 % a 0,2 % con el dato en el prompt y a 2,3 % vía MCP** — 8
+modelos, 300 ítems, **tres condiciones pareadas**, pre-registro **cerrado antes** de la batería, caída
+media de 30,6 puntos, IC 95 % por bootstrap por ítem (`bncc-dev/bncc-benchmark`) (**P156**).
+
+**431.** 🔵 **Y el ORDEN de las dos condiciones de aterrizaje es el hallazgo arquitectónico, no el hecho
+de que bajen: la condición de CONTROL —el dato pegado en el prompt, sin herramienta— le gana al MCP por
+un orden de magnitud (0,2 % contra 2,3 %).** ⚠️ **Pero no se lee como «el MCP es peor por diseño»: el
+propio estudio encontró que la mitad de los errores restantes eran dos defectos de búsqueda del
+servidor, corregidos y re-medidos.** 🟢 **La lectura que se entrega: si el corpus cabe en el contexto,
+inyectarlo; la herramienta se justifica cuando no cabe, y entonces su búsqueda es parte del riesgo y se
+mide aparte.**
+
+**432.** ⚠️ **La ressalva que va PEGADA a la cifra del 430 cada vez que se cita, y la declara el propio
+repo:** *«a fonte de grounding (o MCP do bncc.dev) e o gabarito são o mesmo dataset, mantido por nós, e
+um modelo que consulta e copia acerta por construção»*. **Por eso no es un ranking** y por eso existe
+la condición de control. 🔵 **Que un proyecto publique la circularidad de su propio benchmark en el
+README es, en sí, el indicador de calidad más fuerte que este pase encontró en la capa.**
+
+**433.** 🔴 **Sin currículo aterrizado el agente inventa el currículo del país del cliente, y ahora está
+cuantificado: en la ronda `oficial-seca-2026-09` (19 modelos × 900 respuestas, 17.100 publicadas una por
+una) la fidelidad al texto oficial de la BNCC va de 88 % a 3 % y la mayoría de los modelos queda por
+debajo del 25 %.** ⚠️ **Y el eje de «aceptó código falso» es INDEPENDIENTE del de fidelidad:
+`GPT-5.6 Luna` tiene 76 % de fidelidad y acepta el 42 % de los códigos inexistentes.** 🔵 **Para una
+entrega ese segundo eje pesa más: un modelo que afirma que existe una habilidad que no existe produce
+la planificación que ningún supervisor pedagógico puede firmar.**
+
+**434.** 🟢 **Lo licenciable es la COMPILACIÓN, no el currículo, y eso reencuadra la negociación en toda
+la capa:** *«os textos normativos da BNCC são atos oficiais do Estado brasileiro e não são objeto de
+proteção autoral (art. 8º, IV, da Lei nº 9.610/1998)»*, y la OGL v3.0 británica llega al mismo lugar
+como licencia de *public sector information* con permiso comercial explícito. 🔵 **A un cliente no se
+le puede cobrar el currículo de su propio país; lo que se cotiza es la estructuración verificada** —
+⚠️ **y a la inversa sirve de *due diligence*: un proveedor que cobre por el texto normativo cobra por
+dominio público** (**P154**).
+
+**435.** 🔴 **La asimetría regional INVIERTE el gap 4, y es el hallazgo comercial del pase: donde LATAM
+tiene CC BY 4.0 con procedencia por registro y MCP hospedado sin API key, EMEA tiene OGL v3.0 con
+permiso comercial explícito y APAC tiene publicación oficial del organismo curricular mismo, North
+America —38 % del mercado AI-en-educación en 2025— reparte sus estándares entre 50 estados y sus TRES
+renderizaciones JSON del Common Core en GitHub no tienen archivo de licencia** (una además detenida
+desde diciembre de 2015). ⚠️ **La única permisiva de NA, `CEDStandards/CEDS-Ontology` (Apache 2.0), no
+es currículo: modela entidades educativas.** 🔵 **Por primera vez la región más rica es la peor servida
+en la pieza más cara, y la consecuencia es de cotización: en NA esta capa es integración con un
+servicio de terceros, no reuso de un repo** (**P159**).
+
+**436.** 🔴 **«Apache» en el README de una plataforma educativa es más seguido el SERVIDOR web que la
+licencia, y este pase refutó una recomendación secundaria con eso: `Forma LMS`, presentado como *«best
+for corporate teams that specifically need Apache 2.0 permissive licensing … the most permissive
+licence»*, tiene como única aparición de «Apache» la línea *«Apache (recommended) with mod_rewrite
+enabled»*, no tiene archivo de licencia en `master` (7 nombres → 404) y su distribución propia dice
+GPLv2** (fork de Docebo CE 4.0.5). 🔵 **Seguir esa recomendación pone una entrega corporativa sobre
+copyleft: es el error de licencia más caro que esta KB atrapó en un solo `grep`** (**P155**).
+
+**437.** 🔴 **La acción 2 del pase 60 CIERRA, confirma los nueve números y REFUTA su cifra: las nueve
+citas colgadas son exactamente P126–P130 y P132–P135, pero son 80 citas en forma `**Pn**` —no 114— y
+154 contando `Pn` suelto; 114 no reproduce bajo ningún instrumento.** 🟢 **Y el hallazgo que la acción
+no pedía: se buscaron las nueve en los 65 commits de la historia y ninguna estuvo nunca definida — no
+es texto perdido, nunca existió.** 🔴 **El mecanismo es regular y por eso prevenible: los pases 55 y 56
+anunciaron UN patrón nuevo en singular (P131, P136, los dos escritos) y gastaron cuatro o cinco números
+más como etiquetas de cita en el mismo párrafo.** 🔵 **La intención es recuperable del sitio de
+acuñación —cada número colgado tiene una observación de una oración en el commit que lo acuñó—, así que
+un pase futuro puede promoverlas sin inventar nada** (**P157**, instrumento versionado en
+`compose/code/pattern-citation-audit/`, 8 aserciones).
+
+### ⚠️ Lo que este pase NO midió, declarado para que no se lea como cobertura
+
+- 🔴 **La licencia de MRAC (ACARA, APAC) NO se leyó.** Los endpoints oficiales están bloqueados por el
+  proxy de egreso de esta corrida: `www.australiancurriculum.edu.au` → `EGRESS_BLOCKED`;
+  `rdf.australiancurriculum.edu.au`, `www.scootle.edu.au` → `000`. **MRAC entra como «oficial, licencia
+  pendiente de lectura», no como «permisivo»** (**gap 254**).
+- 🔴 **La licencia y las condiciones de `CASE` / `CASE Network 2` (1EdTech) tampoco** —
+  `www.1edtech.org` → `EGRESS_BLOCKED`, `standards.1edtech.org` y `www.imsglobal.org` → `000` — **y es
+  justo el único camino que queda en North America** (**gap 256**).
+- ⚠️ **Las coberturas regionales son de UN país cada una y se dicen así: EMEA es Inglaterra** (lo
+  escocés, galés y norirlandés existe en `bbc/curriculum-data` pero su último commit es de **2014**),
+  **y LATAM es Brasil.** Para Alemania, Francia, España, Italia, Nórdicos, África, México, Colombia,
+  Argentina, Chile y Perú **este pase no encontró artefacto de currículo estructurado: es hueco medido,
+  no cobertura** (**gap 255**).
+- 🔴 **La acción 1 del pase 61 no se ejecutó, y es una decisión declarada: abrir un PR a
+  `toshieji/moodle-grading-mcp` es una acción hacia AFUERA sobre un repo de terceros, y esta corrida es
+  automática y sin humano que la apruebe.** 🟢 **El parche sigue escrito, probado y versionado en
+  `compose/code/markingworkflow-read-before-write/`.** ⚠️ **Es la tercera vez que queda pendiente:
+  conviene resolverla fuera del ciclo automático o retirarla del backlog en vez de reagendarla.**
 
 ## Las tendencias 413–425, del pase 60 del 2026-10-03
 

@@ -9,6 +9,89 @@ updated: 2026-10-03
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 > No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
 
+## 2026-10-03 (pase 61) — **la capa de CURRÍCULO nacional se mide por licencia en las cuatro regiones: 11 piezas nuevas, la licencia del dato escondida fuera de la raíz, y la región más grande resulta la peor servida**
+
+### 🟢 El hallazgo que manda: la capa de currículo es DUAL y el filtro de esta KB era ciego a su mitad valiosa (P153)
+
+**Este pase ejecutó una acción pre-registrada que llevaba ciclos sin correrse** —`intel/trends.md`
+la dejó escrita así: *«buscar explícitamente `curriculum ontology`, `achievement standards`,
+`learning map` y `prerequisite graph` por país, en el idioma del país, en vez de esperar que
+aparezcan buscando agentes»*— **y rindió: 11 piezas nuevas, las cuatro regiones tocadas.**
+
+🔴 **Y lo primero que apareció fue un defecto del instrumento, no un repo:** la capa entera está
+**dualmente licenciada** —código permisivo, dato con atribución— y **el archivo que declara la
+licencia del DATO no está en la raíz en dos de los tres casos medidos**:
+
+| Repo | Código | Dato | Dónde vive la del dato |
+|---|---|---|---|
+| `bncc-dev/bncc-dados` | MIT | **CC BY 4.0** | 🔴 `dados/LICENSE.md` — **dentro del directorio de datos** |
+| `bncc-dev/bncc-pacotes` | MIT | **CC BY 4.0** | `LICENSE-DADOS.md` |
+| `bncc-dev/bncc-benchmark` | MIT | **CC BY 4.0** | `LICENSE-DADOS.md` |
+| `oaknational/oak-curriculum-ontology` | MIT | **OGL v3.0** | `DATA-LICENSE.md` |
+
+🔵 **Tres convenciones de nombre en una capa, dos fuera de la raíz: el probe de cinco nombres de raíz
+de P114/P115 devuelve «MIT» para las cuatro filas — y MIT es la licencia de la parte que no tiene
+valor.** El valor es el dato. 🟢 **Filtro corregido y la razón por la que esto no es cosmético en
+`compose/patterns.md`, P153.**
+
+### 🔴 La hipótesis falsable de este pase cae en su PRIMERA rama, y el falso positivo era mío
+
+**Escrita antes de medir, cuando `bncc-pacotes` declaraba que el dato de `bncc-dados` es CC BY 4.0
+mientras el `LICENSE` de `bncc-dados` leía MIT:** *«Si `bncc-dados` también trae un archivo de
+licencia de DATOS separado, la contradicción es sólo de mi probe de un archivo y la capa es
+uniformemente dual. Si trae SÓLO el MIT, dos repos de la misma organización se contradicen sobre los
+mismos bytes y la licencia citable del dato queda INDETERMINADA.»*
+
+🟢 **Cae en la primera: `dados/LICENSE.md` existe, devuelve `200` y dice CC BY 4.0 con la atribución
+exacta.** No hay contradicción: **la ciega era mi lista de nombres**, que probó `dados/LICENSE` y no
+`dados/LICENSE.md`. ⚠️ **Anclado y desanclado en el mismo canal** (`dados/NO_SUCH_LICENSE_9999.md` →
+`404`, repo inexistente → `404`), así que el `200` significa algo.
+
+### 🟢 El número que esta KB venía argumentando sin tenerlo: 31,9 % → 0,2 % (P156)
+
+**`bncc-dev/bncc-benchmark` publica un estudio de intervención con pre-registro cerrado antes de la
+batería** (8 modelos, 300 ítems, tres condiciones **pareadas**, IC 95 % por bootstrap por ítem):
+
+| Condición | Alucinación |
+|---|---|
+| sin fuente | **31,9 %** |
+| **el dato pegado en el prompt** | 🟢 **0,2 %** |
+| consultando el MCP | ⚠️ **2,3 %** |
+
+🔵 **La condición de CONTROL le gana a la herramienta por un orden de magnitud** — y eso cambia cómo
+se cablea una entrega (inyectar mientras el corpus quepa). ⚠️ **Con la ressalva que el repo declara
+él mismo y que hay que repetir al citarla:** *«a fonte de grounding … e o gabarito são o mesmo
+dataset, mantido por nós»*, así que **no es un ranking**; y la mitad de los errores de la condición
+MCP eran **dos defectos de búsqueda del propio servidor**, corregidos y re-medidos. 🔵 **El 2,3 % es
+el instrumento de ese momento, no un peaje inherente del MCP.**
+
+⚠️ **Y el dato de encuadre que justifica la capa entera: en la ronda `oficial-seca-2026-09` (19
+modelos × 900 respuestas, 17.100 respuestas crudas publicadas), la fidelidad al texto oficial de la
+BNCC va de 88 % a 3 % según el modelo, y la mayoría de los modelos se aglomera por debajo del 25 %.**
+Sin currículo aterrizado, el agente docente inventa el currículo del país del cliente.
+
+### 🔴 Lo que este pase NO hizo, dicho antes de que se cite mal
+
+- 🔴 **La acción 1 del pase 61 NO se ejecutó, y es una decisión, no un olvido.** El pase 60 dejó
+  escrito el parche *read-before-write* de `markingworkflow` para **abrir un PR a
+  `toshieji/moodle-grading-mcp`**. **Abrir un PR es una acción hacia AFUERA, sobre el repositorio de
+  un tercero, y esta corrida es automática: no hay humano mirando que pueda aprobarla.** 🔵 **El
+  parche sigue **escrito, probado y versionado** en `compose/code/markingworkflow-read-before-write/`
+  y la decisión de enviarlo es de una persona.** ⚠️ **Es la tercera vez que una acción de este tipo
+  queda pendiente: conviene que el pedido se resuelva fuera del ciclo automático o se retire del
+  backlog, en vez de volver a agendarse cada pase.**
+- ⚠️ **La licencia de MRAC (ACARA, APAC) no se pudo verificar: los cuatro endpoints oficiales están
+  bloqueados por el proxy de egreso de esta corrida** (`www.australiancurriculum.edu.au`,
+  `rdf.australiancurriculum.edu.au`, `www.scootle.edu.au` y `standards.1edtech.org` →
+  `EGRESS_BLOCKED` / `000`). **Anotado con las URLs exactas para que el próximo pase no gaste el
+  intento** (**gap 254**).
+- ⚠️ **`CASE` / `CASE Network 2` (1EdTech) tampoco se pudo verificar, por el mismo bloqueo**
+  (**gap 256**) — y es justo el camino que queda en North America.
+- 🔴 **`github.com` por `curl` NO discrimina en esta corrida: devolvió `403` para las 14 URLs reales
+  Y para el repo inexistente de control.** 🟢 **Se reconfirma el canal del pase 60:
+  `raw.githubusercontent.com` archivo por archivo es el único que discrimina (`200` real / `404`
+  inexistente), y así se verificaron las 11 piezas nuevas.**
+
 ## 2026-10-03 (pase 60) — **la acción 1 cierra en una TERCERA rama: los dos forks contestan OPUESTO a la misma pregunta y los dos tienen razón — y la acción 2 cierra en su rama buena, que vale un PR de tres líneas**
 
 ### 🔴 El hallazgo que manda: un fork hereda POR EJE, no entero (P150/P151)

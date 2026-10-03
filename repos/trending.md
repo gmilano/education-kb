@@ -8,6 +8,67 @@ updated: 2026-10-03
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 
+## 2026-10-03 (pase 61) — **el dato crudo: 14 repos probados por licencia archivo por archivo (≈120 requests), 4 archivos de licencia leídos enteros, 4 endpoints oficiales bloqueados y 1 recomendación secundaria refutada**
+
+### Los repos tocados, con lo que se midió en cada uno
+
+**Canal usado: `raw.githubusercontent.com` archivo por archivo.** 🔴 **`github.com` por `curl` devolvió
+`403` para las 14 URLs reales y también para el repo de control inexistente, así que NO discrimina y no
+sirve para verificar existencia en esta corrida.** 🟢 **Control de canal corrido: README real → `200`;
+`bncc-dev/no-such-repo-9999` → `404`; `dados/NO_SUCH_LICENSE_9999.md` → `404`.**
+
+| Repo | Región | Licencia **código** | Licencia **dato** | ★ | Qué se midió |
+|---|---|---|---|---|---|
+| `bncc-dev/bncc-dados` | LATAM | **MIT** (`LICENSE`) | **CC BY 4.0** (`dados/LICENSE.md`) | — | ya estaba en la KB desde el pase 11; **este pase le leyó la licencia del dato, que faltaba** |
+| `bncc-dev/bncc-pacotes` | LATAM | **MIT** (`LICENSE-CODIGO.md`) | **CC BY 4.0** (`LICENSE-DADOS.md`) | 9 | **NUEVO.** `@bncc/dados` 0.3.1 y `@bncc/mcp` 0.2.0 en npm, `bncc` 0.2.0 en PyPI; MCP hospedado en `https://mcp.bncc.dev` **sin API key**; 7 tools |
+| `bncc-dev/bncc-benchmark` | LATAM | **MIT** (`LICENSE-CODIGO.md`) | **CC BY 4.0** (`LICENSE-DADOS.md`) | 9 | **NUEVO.** Banco de ítems (1.721) + estudio de intervención **31,9 % → 0,2 % / 2,3 %**; held-out nunca publicado, a propósito |
+| `ayrtonmoura1/conectabncc` | LATAM | **MIT** (`LICENSE`) | — | — | **NUEVO.** ⚠️ `README.md` → `404` en `main` y `master`; `package.json` → `404`; `index.html` → `200`: **es un sitio estático, no un componente** |
+| `rodrigohgpontes/buscabase` | LATAM | **MIT** (`LICENSE`) | — | — | **NUEVO.** «Busca Base»: buscar, verificar y reusar el texto de la BNCC |
+| `dfdb76/bncc-mcp` | LATAM | **MIT** (`LICENSE`) | — | — | ya estaba; licencia **reconfirmada** de primera mano |
+| `oaknational/oak-curriculum-ontology` | EMEA | **MIT** (`CODE-LICENSE.md`) | **OGL v3.0** (`DATA-LICENSE.md`) | — | ya estaba; **este pase leyó el `LICENSE.md` entero y descubrió el reparto dual por directorio** (`ontology/`, `data/`, `docs/` → OGL; `scripts/`, workflows → MIT) |
+| `oaknational/oak-open-curriculum-ecosystem` | EMEA | **MIT** (`LICENCE`) | **OGL v3.0** | 8 | **NUEVO.** SDK TypeScript + Zod + metadata de tools MCP; MCP en **beta pública** `mcp.thenational.academy/mcp`; búsqueda híbrida sobre Elasticsearch. ⚠️ **API key necesaria** (gratuita a pedido) y **no acepta PRs externos** |
+| `bbc/curriculum-data` | EMEA | — | **CC BY 4.0** (`LICENSE`) | 24 | **NUEVO.** Turtle/RDF; GCSE y Key Stages de Inglaterra, National 4/5 y Higher de Escocia, TGAU de Gales, CCEA/WJEC de Irlanda del Norte. 🔴 **último commit 2014-09-12: de archivo, no vivo** |
+| `eVgKatis/CCSO` | EMEA | **GPL-3.0** (`master/LICENSE`) | — | — | **NUEVO.** *Curriculum Course Syllabus Ontology*. 🔴 **copyleft: queda fuera del filtro de Globant** |
+| `CEDStandards/CEDS-Ontology` | North America | **Apache 2.0** (`LICENSE`) | — | 15 | **NUEVO.** OWL de CEDS v14; genera JSON, JSON-LD, XML. ⚠️ **modela ENTIDADES educativas, no estándares de aprendizaje: no es currículo** |
+| `commoncurriculum/common-standards-project` | North America | 🔴 **ninguno** (5 nombres × 2 ramas → `404`) | registros declaran `CC BY 3.0 US` | 47 | **NUEVO.** «50 states, organizations, districts & schools». 🔴 **sin licencia de repo y detenido desde diciembre de 2015** |
+| `SirFizX/standards-data` | North America | 🔴 **ninguno** | — | 12 | **NUEVO.** Common Core Math terminado, Reading en curso; crudo de Achievement Standards Network |
+| `qdonnellan/commoncore` | North America | 🔴 **ninguno** | — | — | **NUEVO.** Parser XML→JSON del CCSS |
+| `formalms/formalms` | EMEA | 🔴 **ninguno** (7 nombres → `404`) | — | — | **probado para refutar una recomendación secundaria** — ver abajo |
+
+### 🔴 La recomendación secundaria que este pase refutó, con el mecanismo del error (P155)
+
+**Una comparativa de LMS decía que `Forma LMS` es *«best for corporate teams that specifically need
+Apache 2.0 permissive licensing … the most permissive licence»*.** 🔴 **Es falso y el error es
+mecánico:**
+
+| Qué se midió | Resultado |
+|---|---|
+| única aparición de «Apache» en `master/README.md` | **línea 21: *«Apache (recommended) with mod_rewrite enabled»*** → **el servidor web** |
+| `LICENSE`, `LICENSE.md`, `LICENCE`, `COPYING`, `license.txt`, `LICENSE-GPL`, `docs/LICENSE` | 🔴 **`404` los siete** |
+| licencia de la distribución propia del proyecto (SourceForge/OSDN) | **GPLv2**, fork de Docebo CE 4.0.5 |
+
+🔵 **El requisito de servidor web y el nombre de la licencia comparten la palabra, y en esta vertical
+el requisito es muchísimo más frecuente que la licencia.** ⚠️ **Seguir esa recomendación pone una
+entrega corporativa sobre copyleft.**
+
+### 🔴 Ruido medido y rechazos, para que el próximo pase no lo vuelva a pagar
+
+- 🔴 **4 endpoints oficiales bloqueados por el proxy de egreso**, con la URL exacta para no reintentar:
+  `www.australiancurriculum.edu.au/machine-readable-australian-curriculum` y `www.1edtech.org/standards/case/about`
+  → `EGRESS_BLOCKED`; `rdf.australiancurriculum.edu.au`, `standards.1edtech.org`, `www.imsglobal.org`
+  y `www.scootle.edu.au` → `000`. **Consecuencia: la licencia de MRAC (gap 254) y la de CASE (gap 256)
+  quedan sin verificar y NO se infieren.**
+- ⚠️ **`bncc.dev` (el sitio del leaderboard) también → `000`.** Las cifras del benchmark se leyeron del
+  `README.md` del repo por el canal que sí funciona, no del sitio.
+- ⚠️ **`fh-yarbouh/oak-curriculum-ontology` apareció en el barrido y es un fork sin archivo de
+  licencia** (5 nombres × 2 ramas → `404`). **No se da de alta**: por **P151**, «es fork de X» cierra
+  sólo la celda que se comparó, y acá no se comparó ninguna.
+- ⚠️ **Las búsquedas globales obligatorias (4) devolvieron, otra vez, el eje agotado:** OpenClaw,
+  OpenHands, opencode, CrewAI, LangGraph — **agentes generalistas ya inventariados en esta KB, ninguno
+  educativo.** 🟢 **Lo que rindió fue la consigna del pase 22/44: evitar la palabra `education` y
+  buscar por el artefacto del dominio.** `item bank` trajo `bncc-benchmark`; `curriculum ontology`
+  trajo la capa entera.
+
 ## 2026-10-03 (pase 60) — **el dato crudo: 2 pares de fork diffeados archivo por archivo (18 descargas), 1 árbol de Moodle leído por línea, 3 controles negativos de canal corridos ANTES de leer, y 1 extractor propio que falló devolviendo «idéntico»**
 
 ### 🟢 La nota de canal, primero, y esta vez CIERRA una pregunta en vez de abrirla

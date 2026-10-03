@@ -8,6 +8,7 @@ updated: 2026-10-03
 
 > Recetas concretas: repos nombrados, licencias verificadas, wiring explícito y estimación.
 > Todos los repos citados fueron verificados vía WebFetch el 2026-09-30; los del pase 11, el 2026-10-01 (ver `agents/top.md`).
+> **Pase 61 del 2026-10-03:** 🟢 **los patrones nuevos son **P153**–**P157**, la receta **P158** y **P159**, y todos salen de una sola medición: la capa de CURRÍCULO nacional estructurado, leída licencia por licencia en las cuatro regiones.** 🔴 **P153 es el que cambia una decisión de entrega: la capa entera es DUAL —código permisivo, dato con atribución— y el archivo que declara la licencia del DATO no está en la raíz en dos de tres casos (`dados/LICENSE.md`, `LICENSE-DADOS.md`, `DATA-LICENSE.md`): el probe de cinco nombres de raíz de P114/P115 devuelve «MIT» para toda la capa, y MIT es la licencia de la parte SIN valor.** 🟢 **P154: lo licenciable es la COMPILACIÓN, no el currículo —los textos normativos son actos de Estado no protegidos (art. 8º IV de la Lei 9.610/98; OGL v3.0 como *public sector information*)—, así que a un cliente no se le puede cobrar el currículo de su propio país.** 🔴 **P155: «Apache» en un README de esta vertical es más seguido el SERVIDOR web que la licencia —`Forma LMS` resulta GPLv2 y sin archivo de licencia, contra una recomendación secundaria que lo venía como «the most permissive licence»—.** 🟢 **P156 pone número al aterrizaje, en pares y con pre-registro: sin fuente 31,9 % de alucinación, con el dato en el prompt **0,2 %**, consultando el MCP **2,3 %** — la condición de CONTROL le gana a la herramienta por un orden de magnitud.** 🔴 **Y P159 es el hallazgo regional que invierte el gap 4: la región más grande es la peor servida —las tres renderizaciones JSON del Common Core en GitHub no tienen licencia y la única pieza permisiva de NA (`CEDS-Ontology`, Apache 2.0) no es currículo sino un modelo de entidades—.** ⚠️ **La acción 1 del pase 61 (abrir el PR a `toshieji`) NO se ejecutó: es una acción hacia AFUERA sobre un repo de terceros y esta corrida es automática, sin humano mirando — ver `agents/trending.md`.** Ver **P153**–**P159** y las tendencias **426**–**436**.
 > **Pase 58 del 2026-10-03:** 🔴 **los patrones nuevos son **P142**–**P144** y los tres salen de la misma medición: de las 6 puertas de escritura de nota, leídas en el CÓDIGO, **0 consultan la precondición de su plataforma**. 🔵 **P142 es el que cambia una decisión de entrega: las seis NO fallan igual, y la pregunta que las separa es una sola —con `markingworkflow = 1`, ¿publica igual?—. `peancor/moodle-mcp-server` manda `workflowstate: 'released'` CABLEADO, así que es la única que DERROTA la configuración correcta del cliente: 5 de 6 se CONFIGURAN, 1 de 6 se EXCLUYE.** ⚠️ **Y no se puede aplicar desde un README: `'released'` está en `src/index.ts`, no en la documentación.** 🔵 **P143 nombra una clase de garantía que esta KB no tenía: la que vive en el PROCESO** —`mcp-moodle-staff` no llama al web service, genera CSV para el importador nativo, así que la liberación humana es de quien aprieta Importar— **real, pero NO auditable en el código de la puerta, así que se entrega con el procedimiento o no existe.** 🟢 **P144 es la respuesta arquitectónica a tres pases de compuertas que fallaron por tres motivos distintos (P132, P138, P139, P142): separar la generación de la publicación, de modo que el proceso que genera NO tenga credencial de escritura al LMS. Lo funda `littlecookie0722/AI-Teaching-Agent` (MIT), la única pieza de esta KB que cumple «borrador + liberación humana» incondicionalmente —porque no puede publicar—.** ⚠️ **Lo que P144 NO compra: no automatiza la entrega de notas; si el cliente la pide, se vuelve a P142.** Ver **P142**–**P144** y las tendencias **393**–**401**.
 > **Pase 57 del 2026-10-03:** 🔴 **el patrón nuevo es **P137** y corrige el NIVEL 2 de **P136**, que este archivo agregó el pase anterior: el «borrador no liberado» no es una compuerta del servidor, es una compuerta de la PLATAFORMA, y sin su precondición no existe.** Leído de primera mano en `moodle/moodle` @ `main`, `public/mod/assign/locallib.php:2991-3001`: *«If marking workflow is enabled, the workflow state is at 'released'»*, con el SQL `WHERE (a.markingworkflow = 0 OR (a.markingworkflow = 1 AND uf.workflowstate = :wfreleased))`. 🔴 **Con `markingworkflow = 0` Moodle publica la nota sea cual sea el `workflowstate`, y el README de `toshieji` no menciona `markingworkflow` ni una vez en 8.326 bytes** (**P139**). ⚠️ **Las seis citas de `readyforreview` de este archivo quedan marcadas con su precondición: el patrón sigue siendo el mejor de la capa, pero se entrega con un paso de verificación, no solo.** 🔴 **Y el nivel 1 de P136 (que el tool no exista) se mide por primera vez sobre las 8 piezas y la escalera que el pase 56 propuso NO es ordinal: «impedir listar el tool» y «granularidad» son dos ejes independientes** — `Dymayo` es la compuerta más gruesa y desregistra, `toshieji` es más fina y no (**P137**). 🔴 **Más el eje que faltaba y que decide el despliegue: el SENTIDO DEL DEFECTO. `ALLOWED_WRITE_TOOLS` es fail-OPEN en stdio** (**P138**). 🟢 **Y el patrón llega entregable: `compose/code/grading-draft-gate/` (37/37, OFFLINE) afirma las tres propiedades por separado, con 12 asertos de control negativo y tres mutaciones que prueban que la suite puede fallar.** Ver **P137**–**P141** y las tendencias **370**–**392**.
 > **Pase 56 del 2026-10-03:** 🔴 **el patrón nuevo es **P136** y corrige a **P131**, que este archivo acababa de agregar: la mitad de CONFIRMACIÓN de P131 queda degradada por evidencia de primera mano del proyecto más adoptado de la capa.** `vishalsachdev/canvas-mcp` (MIT, 272 ★) publicó que *«a confirmation token cannot stop [a student-planted instruction] because the assistant can redeem its own token»* — **el atacante del lado docente es el alumno escribiendo en el contenido del curso, y el que redime el token es el propio asistente, así que la confirmación no es una segunda autoridad sino la misma dos veces.** 🟢 **P136 reordena las compuertas: (1) arranque, que el tool no exista (`ALLOWED_WRITE_TOOLS`); (2) estado del dato, borrador no liberado (`workflowstate=readyforreview`); (3) confirmación por llamada, que pasa a tercera y sólo protege del operador distraído.** 🔴 **Y la recomendación que sale de este archivo: `peancor/moodle-mcp-server` es clase **T4** —nota y devolución en firme, sin confirmación, sin borrador, sin divulgación— con token de administración del SITIO. Máximo privilegio, mínima guarda.** 🟢 **La que entra en su lugar: `toshieji/moodle-grading-mcp` (MIT, APAC), la única de las 8 piezas de escritura docente conforme al Artículo 50, envuelta en la puerta de *allowlist* que este repositorio ya versiona (`compose/code/mcp-allowlist-gateway/`, 34 aserciones).** ⚠️ **Dato de encuadre corregido en este pase: el conjunto expuesto al Artículo 50(2) es **33 de 66 (50 %)**, no 32/48 % — el defecto era de propagación y los dos escáneres de la capa ya usaban 33.** Ver **P132**–**P135**, el patrón **P136** y las tendencias **338**–**369**.
@@ -100,6 +101,173 @@ updated: 2026-10-03
 > no existe en open source permisivo).
 > **Pase 11:** +2 patrones — **P25** (riesgo de abandono conforme al Anexo III, la capa con presupuesto ya asignado y sin oferta open source) y **P26** (agente docente sobre la ontología curricular nacional ya publicada).
 > **Pase 27:** **+4 patrones y una corrección.** 🔴 **P51 queda con premisa falsa** —el conector MCP de Moodle **sí existe y es MIT**— y lo reemplazan **P54** (corrección y devolución sobre Moodle con **compuerta humana**, el último tramo del gap 6, con piezas que ya escriben), **P55** (el conector de **Open edX**, que es el único que de verdad no existe), **P56** (**SCORM** como formato de salida de la capa generativa: cero integración, offline) y **P57** (evidencia por MCP cotizada sobre lo que CaSS **realmente** expone — 6 de 61 operaciones, con insignias y autoría de marcos **fuera**).
+
+## 🧩 P153–P157, los patrones del pase 61 (2026-10-03)
+
+**Los cinco salen de la misma medición —la capa de CURRÍCULO estructurado por país, licencia por
+licencia— y cuatro de ellos cambian una decisión de entrega, no sólo un inventario.**
+
+### 🔴 P153 — En la capa de currículo, la licencia del DATO no está en la raíz y no es la licencia que el repo «tiene»
+
+**La capa entera es DUAL: código permisivo, dato con atribución.** Y el archivo que dice la licencia
+del dato **no está en la raíz** en dos de los tres casos medidos:
+
+| Repo | Licencia del CÓDIGO | Licencia del DATO | Dónde vive la del dato |
+|---|---|---|---|
+| `bncc-dev/bncc-dados` | MIT (`LICENSE`) | **CC BY 4.0** | `dados/LICENSE.md` — **dentro del directorio de datos** |
+| `bncc-dev/bncc-pacotes` | MIT (`LICENSE-CODIGO.md`) | **CC BY 4.0** | `LICENSE-DADOS.md` |
+| `bncc-dev/bncc-benchmark` | MIT (`LICENSE-CODIGO.md`) | **CC BY 4.0** | `LICENSE-DADOS.md` |
+| `oaknational/oak-curriculum-ontology` | MIT (`CODE-LICENSE.md`) | **OGL v3.0** | `DATA-LICENSE.md` |
+| `oaknational/oak-open-curriculum-ecosystem` | MIT (`LICENCE`) | **OGL v3.0** | declarada en el README |
+
+🔴 **Tres convenciones de nombre distintas en una sola capa, y dos de ellas no están en la raíz.**
+🔵 **Consecuencia operativa: el probe de cinco nombres de raíz de P114/P115 devuelve «MIT» para las
+cinco filas, y «MIT» es la licencia de la parte que NO tiene valor.** El valor es el dato, y el dato
+trae obligación de atribución. **Un filtro que lee un archivo de raíz produce un falso permisivo en
+toda esta capa.**
+
+🟢 **El filtro corregido, que es lo que hay que correr:** después del `LICENSE` de raíz, probar
+`LICENSE-DADOS.md`, `LICENSE-DATA.md`, `DATA-LICENSE.md`, `LICENCA-DADOS.md` **y el mismo juego dentro
+del directorio de datos** (`dados/LICENSE.md`, `data/LICENSE.md`). Si la raíz dice permisiva y existe
+un archivo de datos, **la fila tiene DOS licencias y la que manda para la entrega es la del dato.**
+
+### 🟢 P154 — Lo que se licencia es la COMPILACIÓN, no el currículo: el texto normativo es acto de Estado
+
+**Leído de primera mano en `bncc-dev/bncc-dados` @ `dados/LICENSE.md`:** *«os textos normativos da
+BNCC são atos oficiais do Estado brasileiro e não são objeto de proteção autoral (art. 8º, IV, da Lei
+nº 9.610/1998). Esta licença cobre a compilação, a estruturação, os identificadores, as relações e a
+curadoria produzidas por este projeto.»*
+
+🔵 **Y el caso del Reino Unido dice lo mismo por otra vía:** la OGL v3.0 de `oak-curriculum-ontology`
+es la licencia de *public sector information*, con la atribución exacta exigida —*«Contains public
+sector information licensed under the Open Government Licence v3.0»*— y permiso **explícito** de
+explotación comercial.
+
+🟢 **Lo que esto cambia en una negociación, y es plata:** el currículo **no** es el activo licenciable
+—es un acto de Estado—; lo licenciable es la **estructuración**. Así que a un cliente **no** se le
+puede cobrar el currículo de su propio país, y a Globant **no** se le puede cobrar por usarlo: lo que
+se compra, o se construye, es la compilación verificada. ⚠️ **Y el reverso: si el proveedor de una
+«base curricular propietaria» cobra por el texto normativo, está cobrando por algo que es de dominio
+público, y eso es una pregunta de *due diligence*, no una opinión.**
+
+### 🔴 P155 — «Apache» en el README de una plataforma educativa es más seguido el SERVIDOR que la LICENCIA
+
+**Este pase fue a verificar una recomendación secundaria que decía que `Forma LMS` es «best for
+corporate teams that specifically need Apache 2.0 permissive licensing … the most permissive
+licence».** 🔴 **Es falso, y el mecanismo del error es citable:**
+
+| Qué se midió | Resultado |
+|---|---|
+| Única aparición de «Apache» en `formalms/formalms` @ `master/README.md` | **línea 21: *«Apache (recommended) with mod_rewrite enabled»*** — el **servidor web** |
+| `LICENSE`, `LICENSE.md`, `LICENCE`, `COPYING`, `license.txt`, `LICENSE-GPL`, `docs/LICENSE` en `master` | **404 los siete** |
+| Licencia declarada por la distribución propia del proyecto (SourceForge/OSDN) | **GPLv2** — fork de Docebo CE 4.0.5 |
+
+🔵 **La regla: un token «Apache» en prosa no es una licencia. El requisito de servidor web y el
+nombre de la licencia comparten la palabra, y en esta vertical el requisito es muchísimo más
+frecuente.** 🟢 **La licencia se verifica con un ARCHIVO de licencia; si no hay archivo, la respuesta
+no es «permisiva por defecto», es «no hay permiso escrito» (P116).** ⚠️ **Y la recomendación
+secundaria que mandaba a `Forma LMS` por permisividad manda a un cliente a GPLv2: es el error de
+licencia más caro que esta KB atrapó en un solo `grep`.**
+
+### 🟢 P156 — Aterrizar por DATO EN EL PROMPT antes que por herramienta: 0,2 % contra 2,3 %, medido en pares
+
+**`bncc-dev/bncc-benchmark` publica el estudio de intervención que esta KB venía argumentando sin
+número** (8 modelos, 300 ítems, tres condiciones **pareadas**, pre-registro cerrado antes de la
+batería, IC 95 % por bootstrap por ítem):
+
+| Condición | Alucinación |
+|---|---|
+| **sin fuente** | **31,9 %** |
+| **el dato pegado en el prompt**, sin herramienta | 🟢 **0,2 %** |
+| **consultando el MCP** | ⚠️ **2,3 %** |
+
+🟢 **La caída vale para todos los modelos: media de 30,6 puntos.** 🔵 **Y el orden de las dos
+condiciones de aterrizaje es el hallazgo arquitectónico: la condición de CONTROL —el dato en el
+prompt— le gana a la herramienta por un orden de magnitud.**
+
+⚠️ **Con la ressalva que el propio repo declara y que hay que repetir al citarlo:** *«a fonte de
+grounding (o MCP do bncc.dev) e o gabarito são o mesmo dataset, mantido por nós, e um modelo que
+consulta e copia acerta por construção»*. **Por eso el estudio NO es un ranking** y por eso existe la
+condición de control: separa el mérito del dato del mérito del instrumento. ⚠️ **Y la mitad de los
+errores que quedaban en la condición MCP eran dos defectos de búsqueda del propio servidor,
+corregidos y re-medidos** — así que el 2,3 % **no** es un peaje inherente del MCP, es el instrumento
+de ese momento. 🔵 **La lectura prudente, que es la que se entrega: si el dato cabe en el contexto,
+inyectarlo; la herramienta se justifica cuando el corpus no cabe, y entonces su búsqueda es parte del
+riesgo y se mide aparte.**
+
+### 🔵 P157 — Un número de patrón se promueve a sección en el MISMO pase que lo acuña, o no es un patrón
+
+**Sale de la acción 2 de este pase** (`compose/code/pattern-citation-audit/`): **nueve números
+—P126–P130, P132–P135— cargan 80 citas en forma fuerte y nunca se definieron en ninguno de los 65
+commits de la historia.** No es texto perdido: **nunca existió.**
+
+🔴 **El mecanismo es regular, y por eso es prevenible:** los pases 55 y 56 anunciaron **un** patrón
+nuevo en singular —**P131** y **P136**, los dos efectivamente escritos— y **gastaron cuatro o cinco
+números más como etiquetas de cita en el mismo párrafo**. 🟢 **La regla: o el número recibe su
+sección `## Pn — …` en el pase que lo escribe, o la observación se cita por su MEDICIÓN y no se le
+pone número.** ⚠️ **Un número sin sección es peor que ninguna cita: parece autoridad y no la tiene.
+Las dos más citadas de esta base, `P135` (21 citas fuertes) y `P126` (12), son reglas de MÉTODO que
+`intel/market.md` invoca siete veces y no tienen una línea de texto.**
+
+## 🍳 Receta P158 — «Capa de currículo nacional aterrizada, por región, con la licencia del dato en la mano» (pase 61)
+
+**El problema que resuelve:** todo agente docente necesita el currículo del país del cliente —es la
+pieza más cara y la que ningún cliente quiere pagar dos veces (gap 4)—, y el pase 61 midió que la
+pieza **existe y es comercialmente usable en tres de las cuatro regiones**, con la licencia del dato
+en un archivo que el filtro habitual no mira (**P153**).
+
+**El wiring, con los nombres exactos y la región de cada uno:**
+
+| Región | Artefacto de currículo | Código / Dato | Cómo se consume |
+|---|---|---|---|
+| **LATAM** | `bncc-dev/bncc-dados` (1.721 aprendizajes, procedencia por registro) | MIT / **CC BY 4.0** | `npm i @bncc/dados` · `pip install bncc` · MCP: `npx -y @bncc/mcp` o el hospedado `https://mcp.bncc.dev` (**sin API key**) |
+| **EMEA** | `oaknational/oak-curriculum-ontology` (OWL/SKOS/SHACL, 31 clases, alineado al National Curriculum 2014) | MIT / **OGL v3.0** | RDF directo, o `oaknational/oak-open-curriculum-ecosystem` (SDK TypeScript + MCP en beta pública `mcp.thenational.academy/mcp`, **API key gratuita a pedido**) |
+| **APAC** | MRAC — Machine Readable Australian Curriculum V9 (ACARA) | oficial / ⚠️ **licencia NO verificada este pase** | RDF/XML, JSON-LD y endpoint SPARQL · ⚠️ **gap 254** |
+| **North America** | 🔴 **no hay artefacto permisivo usable** | — | ver **P159** abajo y el gap 255 |
+
+**Los tres pasos, y el orden importa:**
+
+1. **Elegir el artefacto por región y leer la licencia del DATO** con el filtro corregido de **P153**
+   —no el `LICENSE` de la raíz—. La atribución es obligatoria en las tres regiones que tienen pieza:
+   CC BY 4.0 pide *«bncc.dev (mantido pela Profy)»* con link; la OGL v3.0 pide la frase exacta
+   *«Contains public sector information licensed under the Open Government Licence v3.0»* y el crédito
+   a **«Oak National Academy»**. 🔵 **Se cablea en el pie de la salida del agente una sola vez, en el
+   mismo lugar donde ya va el pie de divulgación del Artículo 50(2) (P105/P109): es el mismo renglón.**
+2. **Aterrizar por INYECCIÓN, no por herramienta,** mientras el corpus quepa: **0,2 % contra 2,3 %**
+   de alucinación, medido en pares (**P156**). 1.721 registros de BNCC caben; un currículo nacional
+   completo con transcripciones no, y ahí entra el MCP y su búsqueda se mide aparte.
+3. **Separar generación de publicación** (**P144**): la capa de currículo es de LECTURA, así que el
+   proceso que redacta con el currículo **no** necesita credencial de escritura al LMS. Se compone con
+   `littlecookie0722/AI-Teaching-Agent` del lado de generación y la puerta de *allowlist* que este
+   repositorio ya versiona (`compose/code/mcp-allowlist-gateway/`) del lado de escritura.
+
+**Lo que esta receta NO compra:** ⚠️ no cubre North America (**P159**), ⚠️ no verifica la licencia de
+MRAC (**gap 254**), y ⚠️ el aterrizaje medido es sobre **un** currículo, el brasileño, con la
+circularidad que su propio autor declara (**P156**) — el número es el efecto del acceso al dato, no un
+ranking de modelos.
+
+### 🔴 P159 — La región más grande es la peor servida: North America no tiene currículo permisivo citable
+
+**Medido repo por repo en este pase, con la licencia leída de primera mano:**
+
+| Pieza | Licencia | Veredicto para una entrega |
+|---|---|---|
+| `commoncurriculum/common-standards-project` (47 ★, «50 states, organizations, districts & schools») | 🔴 **ningún archivo de licencia** (los registros declaran `CC BY 3.0 US` por conjunto) | 🔴 **no usable**: sin permiso a nivel repo; además **detenido desde diciembre de 2015** |
+| `SirFizX/standards-data` (12 ★) | 🔴 **ningún archivo de licencia** | 🔴 **no usable** (P116) |
+| `qdonnellan/commoncore` | 🔴 **ningún archivo de licencia** | 🔴 **no usable** |
+| `CEDStandards/CEDS-Ontology` (15 ★, CEDS v14) | 🟢 **Apache 2.0** | ⚠️ **usable, pero NO es currículo**: modela ENTIDADES educativas (escuelas K12, instituciones de postsecundaria, programas de primera infancia) y sus relaciones, no estándares de aprendizaje |
+
+🔴 **Así que la única pieza permisiva de NA es de otra clase de artefacto.** 🔵 **El contraste con las
+otras tres regiones es el hallazgo, y es el espejo invertido del gap 4: donde LATAM tiene CC BY 4.0
+con procedencia por registro, EMEA tiene OGL v3.0 con permiso comercial explícito y APAC tiene
+publicación oficial del Estado, el mercado más grande —38 % del mercado AI-en-educación en 2025—
+reparte sus estándares entre 50 estados y sus tres renderizaciones JSON en GitHub no tienen
+licencia.** ⚠️ **El camino que queda en NA es el estándar **CASE** de 1EdTech y el servicio **CASE
+Network 2** de Common Good Learning Tools, que cubre los 50 estados — pero es un **servicio
+hospedado**, no un artefacto que se pueda versionar dentro de una entrega, y su licencia no se pudo
+verificar este pase (**gap 256**).** 🔵 **Consecuencia de cotización: en NA la capa de currículo es
+trabajo de INTEGRACIÓN con un servicio de terceros, no reuso de un repo — y es el único de los cuatro
+casos donde hay que cotizar esa diferencia.**
 
 > **Pase 35 del 2026-10-02:** **+4 patrones, y tres de ellos existen porque aparecieron las piezas, no porque se haya inventado una receta.** 🟢 **P72** — *expediente de accesibilidad de la evaluación*: la obligación europea vencida que **P17** describía sin pieza por fin la tiene, y es **MIT y está adentro de la pila de evaluación** (`qti3-a11y` con `accessibilityProofMatrix` y guiones **VoiceOver/NVDA/JAWS**, `qti3-pnp` para *Personal Needs and Preferences*, `qti3-cli a11y-proof`, más **`accessibility audits`** del lado LMS en `bruchris/canvas-lms-mcp`). 🟢 **P73** — *el bucle cerrado docente*: **material propio → lección revisable → aula → nota**, con trazabilidad de punta a punta (`Claw-ED` MIT + `lineage-skill` Apache-2.0 + `coursecode` MIT + `canvas-lms-mcp` MIT); es el patrón que **P8** describía sin piezas, y **la rúbrica que califica sale del material del docente, no del modelo**. 🔵 **P74** — *el servidor MCP del dato educativo nacional*: Brasil tiene capa MCP de datos públicos (**IBGE/censo, BCB, DATASUS, firma**) y **educación es el único dominio grande que falta**; ⚠️ **se publica con la incógnita adelante —API o CSV— porque de eso depende si son 6 semanas o 4 meses, y esa medición es la acción 3 del pase 36.** 🔵 **P75** — *piloto sobre el LMS sin pedirle nada a sistemas*: `bunizao/moodle-cli` y `moon0825/jbnu-lms-student` trabajan **desde la sesión del navegador del usuario, con passkey y 2FA, sin token de administrador**, así que el valor se demuestra **antes** de la primera reunión con TI — 🔴 al costo de ser **sólo lectura**, que es un límite que se pone adelante. ⚠️ **Y P61 cambia de costo sin cambiar de contenido: la puerta oficial de Open edX publicó 12 releases en dos días y nada en los 70 siguientes (gap 70), así que se cotiza con presupuesto de mantenimiento.** ✅ **P56 gana su superconjunto:** `coursecode` expone **15 tools** y su `build` toma `format` como enum (`cmi5`/`scorm2004`/`scorm1.2`/`lti`), contra las 3 tools de `scorm-mcp-server`, que queda como la opción mínima *offline*. ⚠️ **P20 y P48 quedan más valiosos y más honestos: el QTI que el mundo despliega es GPL-2.0-only** (`oat-sa/qti-sdk`, 218.212 descargas, 293 versiones), **así que la pila permisiva es el diferencial — y hay que preguntar en el *discovery* si TAO ya está instalado.**
 

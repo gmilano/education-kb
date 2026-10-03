@@ -8,6 +8,8 @@ updated: 2026-10-03
 
 > Agentes y herramientas AI open source para educación. Foco: MIT / Apache 2.0 / BSD.
 > Verificado repo por repo vía WebFetch el 2026-09-30 (stars y licencia leídos de la página del repo).
+> **Pase 61 del 2026-10-03:** 🟢 **Este pase ejecutó una acción pre-registrada que llevaba ciclos sin correrse —buscar `curriculum ontology` / `achievement standards` / `item bank` por país y en el idioma del país, en vez de buscar «agentes»— y rindió **11 piezas nuevas en las cuatro regiones**, tras diez pases sin altas.** 🔴 **El hallazgo que manda es un defecto del INSTRUMENTO, no un repo: la capa de currículo está DUALMENTE licenciada —código permisivo, dato con atribución— y el archivo que declara la licencia del DATO no está en la raíz en dos de tres casos (`dados/LICENSE.md`, `LICENSE-DADOS.md`, `DATA-LICENSE.md`), así que el probe de cinco nombres de raíz de P114/P115 devuelve «MIT» para toda la capa y MIT es la licencia de la parte SIN valor** (**P153**). 🟢 **La hipótesis falsable del pase cae en su primera rama y el falso positivo era propio: `bncc-dados` SÍ trae `dados/LICENSE.md` (CC BY 4.0), así que no hay contradicción entre repos — la lista de nombres probó `dados/LICENSE` y no `dados/LICENSE.md`.** 🟢 **Y llega el número que esta KB venía argumentando sin tener: aterrizar el currículo baja la alucinación de **31,9 %** a **0,2 %** con el dato en el prompt y a **2,3 %** vía MCP —la condición de CONTROL le gana a la herramienta por un orden de magnitud—, en pares y con pre-registro cerrado antes de la batería** (**P156**). 🔴 **Y la región más grande resulta la peor servida: las tres renderizaciones JSON del Common Core en GitHub no tienen archivo de licencia y la única pieza permisiva de NA no es currículo** (**P159**). ⚠️ **La acción 1 del pase 61 —abrir el PR a `toshieji`— NO se ejecutó: es hacia AFUERA, sobre un repo de terceros, y esta corrida es automática sin humano que la apruebe; el parche sigue escrito y versionado.** Ver **P153**–**P159** y las tendencias **426**–**436**.
+>
 > **Pase 60 del 2026-10-03:** 🔴 **La acción 1 del pase 59 CIERRA y su hipótesis falsable cae en una TERCERA rama que no había previsto. Los dos pares de fork dan veredictos OPUESTOS sobre la misma pregunta y los dos son correctos: `algorithm0r/canvas-lms-mcp` es byte a byte idéntico a `bruchris/canvas-lms-mcp` en los DIEZ archivos leídos —incluido `src/canvas/submissions.ts`, el del eje—, mientras que `abr-Projects/canvas-mcp` DIVERGE de `vishalsachdev/canvas-mcp` en ocho archivos y en 42 líneas de `bulk_grade_submissions`… y sin embargo es IDÉNTICO en el eje de publicación (1 `posted_grade`, 0 consultas de política en los dos).** 🟢 **Así que el denominador de 9 se SOSTIENE y P146 se confirma —pero sólo para ese eje.** 🔴 **Lo que cae es la lectura cómoda: la divergencia del par B cae entera sobre el eje de seguridad VECINO —la precondición de rúbrica— y el fork está del lado LAXO en las cuatro celdas: pierde la verificación POST-escritura `rubric_grade_is_confirmed` (2 usos → 0), convierte un aborto duro en `if "error" not in assignment_check:` —sigue y califica— y condiciona el segundo aborto a `and not dry_run`. Es un snapshot viejo que perdió el endurecimiento de la madre, no una mejora. « Identificar por commit » NO es una precaución de inventario: es sustantiva, en el eje que uno no estaba mirando** (**P150**). 🔵 **De ahí la regla general del pase: la herencia de un fork es RELATIVA AL EJE, nunca global — « es fork de X » cierra la celda que se comparó y deja abiertas todas las demás** (**P151**). 🟢 **Y la acción 2 CIERRA en su rama BUENA, que es la comercialmente útil: `markingworkflow` viene con el token normal. Leído de primera mano en `moodle/moodle` @ `main` (`public/mod/assign/externallib.php`, 3.146 líneas, 5.3rc2 build 20261002): el campo se asigna SIN condicional (l. 464), está en el contrato de salida y NO es `VALUE_OPTIONAL` (l. 584, contra 10 campos que sí lo son), y la única capacidad exigida es `require_capability('mod/assign:view')` (l. 401). Como escribir nota exige `mod/assign:grade` (l. 1033), el argumento es *a fortiori*: toda puerta que pueda CALIFICAR puede, por construcción, LEER la precondición. El *read-before-write* es código, no una escalada de permisos ni un pedido al cliente — y para `toshieji` es el PR de tres líneas que vuelve INCONDICIONAL su garantía** (**P152**). 🟢 **`gap 250` CERRADO** (el árbol se mudó a `public/`: `200` contra `404`). ⚠️ **Dos correcciones de método: la ruta que el pase 59 prescribió (`src/services/canvas-client.ts` en `algorithm0r`) NO EXISTE —es de `CharlieCardenasToledo/mcp-canvas-server`, colisión de ruta entre dos repos del mismo pase (**gap 251**)—; y el primer extractor de funciones de este pase devolvió 7 líneas para una función de 256 y un `diff` de 0: un «IDÉNTICO» falso que, de haberse publicado, era la conclusión opuesta a la verdadera.** Ver **P150**–**P152** y las tendencias **413**–**425**.
 >
 > **Pase 59 del 2026-10-03:** 🔴 **la acción 2 del pase 58 CIERRA y su hipótesis falsable cae en la rama de la UNICIDAD: ampliado el barrido de 6 a 9 puertas de escritura de nota leídas en el CÓDIGO, `peancor/moodle-mcp-server` sigue siendo la ÚNICA que AFIRMA la publicación. «Afirma la publicación» NO es una clase de la capa: es UNA fila, y la regla de entrega se confirma — se EXCLUYE, no se configura** (**P142** se sostiene). 🔴 **Y aparece la simetría que reencuadra toda la capa: el eje es BIPOLAR y ESCASO. Sólo 2 de 9 toman posición en el código, y son los dos extremos — `peancor` cablea `workflowstate: 'released'` y `toshieji/moodle-grading-mcp` cablea `"workflowstate": "readyforreview"` con `"released": False` (verificado en `server.py:570` de primera mano en este pase, no en el README). Las otras 6 no dicen nada: heredan. 🔴 **Pero NINGUNO de los dos polos consulta la precondición, así que las dos garantías son CONDICIONALES y en sentidos opuestos: a `peancor` no la salva `markingworkflow=1`, y a `toshieji` la DERROTA `markingworkflow=0`.** El único cumplimiento incondicional sigue siendo `AI-Teaching-Agent`, que no puede publicar (**P145**). 🔴 **Hallazgo estructural NUEVO y cambia cómo se cuenta esta capa: las puertas de Canvas se propagan por FORK. `algorithm0r/canvas-lms-mcp` es fork CONFIRMADO de `bruchris/canvas-lms-mcp` y `abr-Projects/canvas-mcp` es fork CONFIRMADO de `vishalsachdev/canvas-mcp` —ambos MIT, ambos escriben nota— así que heredan el camino de escritura ya medido y un barrido por REPO sobre-cuenta el código. La unicidad se cuenta sobre CÓDIGO DISTINTO, no sobre repos distintos** (**P146**). 🟢 **1 puerta NUEVA y no es fork: `CharlieCardenasToledo/mcp-canvas-server` (MIT, 0 ★, TS) — `posted_grade` crudo y CERO consultas de política de publicación en 60.194 bytes de `canvas-client.ts`; publica por OMISIÓN, así que la configuración correcta la neutraliza.** 🔴 **Y el dato de licencia que hay que decir antes de recomendar nada: el MCP de Moodle más estrellado que apareció en este barrido —`loyaniu/moodle-mcp`, 37 ★— NO TIENE LICENCIA: `LICENSE` ausente en `main` y `master` y sin clave `license` en `pyproject.toml`. Es inusable por Globant, y las que sí tienen licencia tienen 0 ★ — tercera reproducción de la curva invertida de P134/P138** (**P147**). ⚠️ **4 candidatas más SCREENEADAS y descartadas como puertas por ser de SÓLO LECTURA (`loyaniu`, `Jawadh-Salih/moodle-mcp-server` MIT-Go, `dddanielliu/NCCU-Moodle-MCP` sin licencia, `csmediapro/moodle-mcp-server` AGPL-3.0 *«Read-only — never modifies Moodle data»*) más `PabloPC05/mcp-usc`: se registran como ausencias MEDIDAS, no como silencio.** 🔴 **La acción 1 se entrega CON SU FIXTURE REFUTADO: el par que el pase 58 mandó usar de control negativo (acción 3 del pase 57 ↔ tendencia 392) NO EXISTE — el bloque de acciones del pase 57 cita gaps 249/232/100 y no afirma nada sobre fechas; la pregunta de las fechas es el `gap 56`, del pase 32, cerrado en el 39. El defecto que el pase 58 diagnosticó es real, pero su única evidencia era ella misma un error de cruce** (**P148**). ⚠️ **Nota de instrumento, segunda reproducción consecutiva: este entorno negó ejecutar el código clonado INCLUIDAS las suites OFFLINE, así que la suite nueva se publica con 17 asertos ESCRITOS y 0 CORRIDOS, declarado en su README.** Ver **P145**–**P148** y las tendencias **402**–**412**.
@@ -229,6 +231,77 @@ updated: 2026-10-03
 > fila** —`lineage-skill`, con un vocabulario cerrado de 9 valores por afirmación, **4 de los 9 «esto lo produjo el
 > modelo»**— y **ninguna de las dos sabe de la otra**. Ver la capa nueva al final de este archivo, las tendencias
 > **180**–**182** y el patrón **P99**.
+
+## 🌍 Capa de CURRÍCULO nacional aterrizado — las piezas que consume un agente docente, por región (pase 61)
+
+> **Por qué esta capa está en `agents/top.md` y no sólo en `repos/`:** tres de estas piezas se
+> entregan **como servidor MCP**, así que son el agente —o la herramienta del agente— y no sólo un
+> dataset. **Verificado archivo por archivo vía `raw.githubusercontent.com` el 2026-10-03** (el canal
+> que discrimina; `github.com` por `curl` dio `403` incluso para un repo inexistente).
+
+### Las piezas con superficie de agente (MCP), con las DOS licencias de cada una
+
+| Pieza | Región | Código | Dato | Cómo se invoca | ¿API key? |
+|---|---|---|---|---|---|
+| `bncc-dev/bncc-pacotes` → `@bncc/mcp` 0.2.0 | **LATAM** | **MIT** | **CC BY 4.0** | `npx -y @bncc/mcp`, o el hospedado `https://mcp.bncc.dev` | 🟢 **no** |
+| `oaknational/oak-open-curriculum-ecosystem` | **EMEA** | **MIT** | **OGL v3.0** | MCP en beta pública: `mcp.thenational.academy/mcp` | ⚠️ **sí**, gratuita a pedido |
+| `dfdb76/bncc-mcp` | **LATAM** | **MIT** | — | servidor MCP de las habilidades de la BNCC | 🟢 no |
+
+**Los 7 tools que expone `@bncc/mcp`,** por si hay que cablear un *allowlist* encima (P136, nivel 1):
+`bncc_lookup`, `bncc_buscar`, `bncc_listar`, `bncc_decodificar`, `bncc_estatisticas`,
+`bncc_estrutura`, `bncc_progressao_ei`. 🟢 **Los siete son de LECTURA**, así que esta capa no necesita
+credencial de escritura al LMS y compone con **P144** sin fricción.
+
+### 🔴 La licencia del DATO no está donde el filtro la busca (P153)
+
+| Repo | Archivo del código | Archivo del **dato** | 🔴 ¿en la raíz? |
+|---|---|---|---|
+| `bncc-dev/bncc-dados` | `LICENSE` → MIT | `dados/LICENSE.md` → **CC BY 4.0** | 🔴 **no, dentro de `dados/`** |
+| `bncc-dev/bncc-pacotes` | `LICENSE-CODIGO.md` → MIT | `LICENSE-DADOS.md` → **CC BY 4.0** | 🟢 sí |
+| `bncc-dev/bncc-benchmark` | `LICENSE-CODIGO.md` → MIT | `LICENSE-DADOS.md` → **CC BY 4.0** | 🟢 sí |
+| `oaknational/oak-curriculum-ontology` | `CODE-LICENSE.md` → MIT | `DATA-LICENSE.md` → **OGL v3.0** | 🟢 sí |
+
+⚠️ **El `LICENSE` de raíz de `bncc-dados` dice MIT y el dato es CC BY 4.0: un probe de raíz reporta la
+licencia de la mitad sin valor.** 🔵 **La atribución exigida, textual, porque va en el pie de la salida
+del agente:** CC BY 4.0 pide **«bncc.dev (mantido pela Profy)»** con link al repo; la OGL v3.0 pide
+**«Contains public sector information licensed under the Open Government Licence v3.0»** y el crédito a
+**«Oak National Academy»**.
+
+### 🟢 Por qué esta capa cambia el riesgo del agente docente, con número (P156)
+
+**`bncc-dev/bncc-benchmark`, ronda `oficial-seca-2026-09`: 19 modelos × 900 respuestas, 17.100
+respuestas crudas publicadas una por una.** La fidelidad al texto oficial de la BNCC **va de 88 % a
+3 %** según el modelo, y **la mayoría se aglomera por debajo del 25 %**:
+
+| # | Modelo | Nota | Texto fiel | Aceptó código falso |
+|---|---|---|---|---|
+| 1 | GPT-6 Astra · OpenAI | 94,7 | **88 %** | 3 % |
+| 2 | Claude Fable 5.1 · Anthropic | 81,8 | 80 % | **0 %** |
+| 3 | Muse Spark 1.3 · Meta | 79,4 | 73 % | 10 % |
+| 4 | Gemini 3.1 Pro · Google | 78,0 | 67 % | 3 % |
+| 5 | Claude Opus 5 · Anthropic | 76,8 | 71 % | 4 % |
+
+⚠️ **Y el eje de «aceptó código falso» es independiente del de fidelidad:** `GPT-5.6 Luna` tiene 76 %
+de fidelidad y **acepta el 42 % de los códigos inexistentes**. 🔵 **Para una entrega eso importa más
+que la nota: un modelo que afirma que existe una habilidad que no existe es el que produce la
+planificación que ningún supervisor pedagógico puede firmar.**
+
+🟢 **El estudio de intervención pareado (8 modelos, 300 ítems, pre-registro cerrado antes de la
+batería, IC 95 % por bootstrap): sin fuente 31,9 %; con el dato en el prompt 0,2 %; vía MCP 2,3 %.**
+⚠️ **Ressalva declarada por el propio repo, obligatoria al citarlo:** la fuente de grounding y el
+gabarito son el mismo dataset, mantenido por el mismo proyecto, *«e um modelo que consulta e copia
+acerta por construção»* — **no es un ranking**, es el efecto del acceso al dato, y para eso existe la
+condición de control.
+
+### ⚠️ La región que esta capa NO cubre (P159)
+
+🔴 **North America no tiene currículo permisivo citable:** `commoncurriculum/common-standards-project`
+(47 ★, los 50 estados) **no tiene archivo de licencia** y está detenido desde **diciembre de 2015**;
+`SirFizX/standards-data` (12 ★) y `qdonnellan/commoncore` **tampoco tienen licencia**; y la única
+permisiva, `CEDStandards/CEDS-Ontology` (**Apache 2.0**, 15 ★, CEDS v14), **modela entidades
+educativas y no estándares de aprendizaje: no es currículo.** 🔵 **El camino que queda es el estándar
+**CASE** de 1EdTech y el servicio **CASE Network 2**, que cubre los 50 estados — pero es un servicio
+hospedado, no un artefacto versionable, y su licencia quedó sin verificar (gap 256).**
 
 ## 🔵 Clasificación por canal de credencial (P121/P123) — pase 53, **instrumento corregido en el pase 54**
 
