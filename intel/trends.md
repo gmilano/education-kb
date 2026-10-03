@@ -5429,6 +5429,182 @@ inalcanzable desde este entorno**, así que las fechas de 399 son de tres canale
 primera mano**; (c) **`AI-Teaching-Agent` no declara región** y su único indicio es contenido bilingüe
 inglés/chino — **indicio débil, NO se infiere región** (regla de **P135**).
 
+## Las tendencias 438–450, del pase 62 del 2026-10-03
+
+**438.** 🟢 **La acción diferida se ejecutó, y la lección de método es sobre el DIFERIMIENTO, no
+sobre los forks.** El pase 60 escribió *«queda explícitamente diferido al pase 62, con su motivo
+escrito»* — **y al pase 62 se corrió.** 🔴 **Contra eso, el PR a `toshieji` lleva TRES pases
+pendiente, y las tres veces se difirió «al próximo pase».** 🔵 **Una acción diferida con número de
+pase se ejecuta; una diferida al «próximo pase» se re-agenda indefinidamente. La diferencia no es
+de voluntad: es que la primera tiene una condición de vencimiento verificable** (**P163**).
+
+**439.** 🔴 **El hallazgo del pase, y es transferible fuera de educación: la DESCRIPCIÓN se hereda
+entera y la SUPERFICIE no.** En la familia de `vishalsachdev/canvas-mcp`, el campo `description` de
+GitHub dice *«up to 102 tools and 8 agent skills»* **idéntico palabra por palabra** en la madre y en
+tres forks, mientras los README de esas mismas piezas declaran **101**, **103** y **139** *tools*.
+
+**440.** 🔴 **Y el número que lo vuelve caro: a la MISMA release declarada (`v1.13.0`),
+`BartMassey-upstream/canvas-mcp` declara 139 *tools* contra las 103 de `vishalsachdev/canvas-mcp` —
+36 de diferencia.** ⚠️ **El fork tiene 0 ★ y la madre 272: la tracción y la superficie apuntan a
+piezas distintas.**
+
+**441.** 🔵 **Las dos formas de barrer están mal, y en direcciones opuestas.** Un barrido por
+**búsqueda** —que es el que lee descripciones— ve cinco veces la misma pieza y **sub-cuenta la
+superficie**; un barrido por **repo** ve cinco piezas independientes y **sobre-cuenta el código**.
+**No hay una tercera forma barata: hay que abrir el README** (**P160**).
+
+**442.** 🔴 **El SIGNO de la divergencia de un fork tampoco es predecible, y esta KB tiene los dos
+casos en la misma familia.** El pase 60 midió `abr-Projects/canvas-mcp`: snapshot viejo que había
+PERDIDO el endurecimiento de la madre (lado laxo en las cuatro celdas de la precondición de rúbrica).
+Este pase mide `BartMassey-upstream/canvas-mcp`: **release corriente y 36 *tools* MÁS**. 🔵 **«Es
+fork» no predice ni magnitud ni signo** (**P160**, que extiende **P150**).
+
+**443.** ⚠️ **Y eso cambia una recomendación de esta base:** elegir la madre *«porque es la madre»*
+ya no se sostiene solo. **Si el engagement necesita superficie, el artefacto es un fork sin
+estrellas; si necesita linaje mantenido, es la madre.** 🔵 **Lo que deja de ser defendible es elegir
+sin abrir el README.**
+
+**444.** 🔴 **El CONTROL NEGATIVO de esta KB resultó ser un fork no registrado.**
+`Dymayo/moodler-mcp` —la fila que el pase 54 usa como control negativo de la clase b4— es
+`forked from` `GhaithAlHallak8/moodler-mcp` (MIT, 2 ★, 75 commits; el fork 0 ★, **75 commits, el
+mismo número**). 🟢 **La clase b4 SE SOSTIENE en las dos copias**, leída del README: *«asks Moodle
+for a mobile-app web service token … stores it in `~/.moodler-mcp/token.json`»*. ⚠️ **Pero el
+denominador contaba una COPIA como observación independiente: b4 está sobre-contada en uno.**
+
+**445.** 🔴 **Y la prosa de esa fila era falsa en su mitad medible.** Decía *«declara una sola
+variable (`MOODLE_URL`) y ninguna credencial»*; **declara CINCO**, y dos no son configuración sino
+**compuertas de capacidad apagadas por defecto** — `MOODLER_ALLOW_STUDENT_WRITES` y
+`MOODLER_ALLOW_TEACHER_GRADING`, **esta última gobernando `save_assignment_grade` y
+`grant_extension`**. 🟢 **Es una postura de seguridad que el segundo eje de esta base premia y que
+la fila no tenía anotada: la pieza entrega la calificación APAGADA.**
+
+**446.** 🔴 **La puerta más forkeada de esta KB promete una licencia que no existe.**
+`DMontgomery40/mcp-canvas-lms` (**103 ★, 39 forks**) dice en su README *«MIT License - see LICENSE
+file for details»*. **Medido por tres rutas: `main:LICENSE` → 404, `main:LICENSE.md` → 404,
+`master:LICENSE` → 404.** 🟢 **El «SIN licencia» que esta base ya tenía se reproduce y se afila: no
+es una licencia ausente, es una licencia PROMETIDA y ausente.**
+
+**447.** 🔵 **Segundo caso de la misma forma —el primero fue `@timadey/proctor` (pase 41)—, así que
+se nombra: P161, la licencia declarada sólo en prosa.** 🔴 **Y acá tiene escala: 39 forks reciben
+del upstream la ausencia de cesión, no la MIT del README.** ⚠️ **Lo que no se midió: los 39 uno por
+uno (el listado muestra 15 activos en dos años). La afirmación es sobre lo que RECIBEN, no una
+lectura de los 39.**
+
+**448.** 🔴 **El `gap 255` del pase 61 se auto-refuta en España.** Declaraba *«no encontró artefacto
+de currículo estructurado»* para una lista que incluía España — **y esta base tiene
+`nmarafo/OpenDidactia` (LOMLOE, 17 CCAA + 2 ciudades) desde el pase 3, citado en SIETE archivos, con
+la región escrita como «EMEA (España)».** 🔵 **El hueco no se declaró contra el mercado: se declaró
+sin leer la propia base. Una declaración de hueco por país tiene que correr contra el índice propio
+ANTES de salir a buscar** (**P162**). ⚠️ **Es la misma forma que los 114 *backlinks* colgados del
+pase 60: la KB afirmando sobre sí misma sin medirse.**
+
+**449.** 🟢 **Lo nuevo de España es grande y nunca estuvo registrado: `nmarafo/open-lex-edu` — 832
+normas estructuradas**, Markdown con frontmatter YAML por documento e **`index.yaml` global con
+grafo de referencias cruzadas**, cubriendo los RD 95/2022, 157/2022, 217/2022 y 243/2022 más los
+decretos LOMLOE de las 17 comunidades y 2 ciudades. 🟢 **Y es el control negativo que a P153 le
+faltaba, y lo PASA: su licencia de dato (`CC BY-SA 4.0`) está en `LICENSE.md` de la RAÍZ, donde el
+probe la encontraría. P153 describe un defecto frecuente, no universal** (regla de P126).
+
+**450.** 🔴 **Alemania se cubre y se cubre SIN LICENCIA, y ése es el hallazgo de capa del pase.**
+`FWU-DE/lehrplan-ontologie` (**10 ★**, 4 forks) modela el currículo de **los 16 Bundesländer en
+RDF/OWL + Turtle** conservando la terminología de cada Land — **la mayor cobertura poblacional de
+toda la capa de currículo de esta KB** — y **no declara licencia por ninguno de los tres caminos
+probados** (`LICENSE` 404, `LICENSE.md` 404, nada en README ni barra lateral). 🔵 **Juntando los dos
+pases: de SIETE artefactos de currículo en cuatro regiones, exactamente UNO es permisivo y legible
+(Corea, MIT). La capa más cara de reconstruir es la peor licenciada, y las dos sin cesión son
+justo la región con más presupuesto (NA) y la de mayor cobertura técnica (Alemania).**
+
+**451.** 🔴 **Y el defecto de integridad de este pase es una MIS-CITACIÓN, que es peor que una cita
+colgada.** `compose/patterns.md` define **P150** como la regla de forks (*«hereda POR EJE»*) y
+**P151** como otra cosa (*«un extractor se valida por plausibilidad antes de que su salida entre a
+un `diff`»*). 🔴 **Pero SIETE citas en CUATRO archivos invocan «P151» para la regla de forks**
+—`agents/top.md` ×2, `agents/trending.md`, `repos/trending.md`, `intel/trends.md` ×3—, **incluida
+la acción del pase 60 que difirió este barrido.** 🔵 **Una cita colgada no resuelve a nada y se
+nota; ésta resuelve a un patrón REAL que habla de otro tema, así que se lee como válida y nadie la
+revisa. El número peligroso no es el que no existe: es el que existe y no corresponde** (**P162**,
+y es la TERCERA instancia en tres pases de esta base afirmando sobre sí misma sin leerse: 114
+*backlinks* colgados en el 60, el `gap 255` de España en el 61, esto en el 62).
+
+**452.** 🟢 **Y la restricción que esta base arrastra desde el pase 58 quedó DELIMITADA — el
+enunciado heredado era demasiado ancho.** Las dos ramas, provocadas de primera mano en este pase:
+**correr `python3 test_audit.py` con el `cwd` DENTRO del árbol clonado → 🟢 PERMITIDO, 13/13
+aserciones pasan**; **correr `python3` inline con un script que EDITA un archivo del árbol clonado
+→ 🔴 NEGADO, `[Code from External]`.** 🔴 **Los pases 58–61 lo registraron como «no se puede
+ejecutar código proveniente del árbol clonado» y formularon el «pedido angosto» en esos términos:
+medido, correr las pruebas del propio repo desde el propio repo FUNCIONA.** 🔵 **Lo que se niega es
+usar un intérprete para OPERAR sobre el árbol externo, no correr sus tests. Consecuencia para el
+backlog: el pedido que esta KB venía arrastrando cuatro pases estaba MAL FORMULADO, así que pedirlo
+no habría desbloqueado nada — y para esta base casi nunca hace falta, porque las ediciones se hacen
+con las herramientas de edición, que no están restringidas.** ⚠️ **No se probó ejecutar código de
+otras partes del árbol: se afirma que estas dos ramas dan opuesto y que la frontera heredada estaba
+mal descrita, NO que la restricción se haya levantado.** 🟢 **Quinto pase con la negativa
+reproducida, y el primero que la ACOTA en vez de sólo contarla.**
+
+### ⚠️ Lo que este pase NO midió, declarado para que no se lea como cobertura
+
+- 🔴 **Francia, Italia, Nórdicos y África no se buscaron** en este pase: el presupuesto de búsqueda
+  se gastó en Alemania y en el hispanohablante. **Siguen en `gap 255` y no se leen como cobertura.**
+- 🔴 **LATAM hispanohablante sigue sin artefacto de currículo, ahora con la búsqueda documentada en
+  español.** Argentina (Aprender, Relevamiento Anual), Colombia (datos abiertos del MEN), Chile
+  (Centro de Estudios del Mineduc + `curriculumnacional.cl`) y México (PLANEA) publican **dato
+  estadístico, no currículo estructurado y versionado**. ⚠️ **Chile es el más cercano: el portal ya
+  publica objetivos de aprendizaje por curso y asignatura, le falta ser artefacto con licencia.**
+- 🔴 **`gap 254` (MRAC/ACARA) y `gap 256` (CASE/1EdTech) reconfirmados por segunda vez:**
+  `www.australiancurriculum.edu.au`, `rdf.australiancurriculum.edu.au`, `www.1edtech.org` y
+  `standards.1edtech.org` → **`000`** en esta corrida. **`gap 92` (texto consolidado del AI Act),
+  séptima reconfirmación:** `eur-lex.europa.eu` → **`000`**.
+- 🔴 **Límite de instrumento NUEVO, anotado para que el próximo pase no gaste el intento:
+  `api.github.com` → `403` y `curl` a `github.com` → `403` en esta corrida.** **Todo lo medido acá
+  salió de la página HTML y de `raw.githubusercontent.com` vía WebFetch.** ⚠️ **Ninguna cifra de
+  este pase viene de la API, los conteos de commit son los que muestra la página, y por eso NO se
+  escriben conteos de commit como si fueran exactos donde no hacían falta.**
+- ⚠️ **No se verificó qué es «FWU»:** la organización en GitHub es `FWU-DE` y el repo tiene forma
+  institucional, **pero la expansión de la sigla y su carácter público no se leyeron en fuente
+  primaria y no se afirman.** **Importa: si es organismo público, la licencia ausente es trámite
+  pendiente y se puede pedir.**
+- ⚠️ **No se midió si `BartMassey-upstream` APORTA las 36 *tools* de más o sólo las registra
+  distinto** (perfiles, *feature-gating*): se leyó el README, no el registro de herramientas.
+- 🔴 **La acción 1 heredada (abrir el PR a `toshieji/moodle-grading-mcp`) NO se ejecutó por CUARTA
+  vez, y por la misma razón declarada: es una acción hacia AFUERA sobre un repo de terceros y esta
+  corrida es automática, sin humano que la autorice.** 🔵 **Por P163, deja de re-agendarse al
+  «próximo pase»: se marca como BLOQUEADA por falta de autorización humana y sale del backlog
+  rotativo hasta que alguien la autorice fuera del ciclo.**
+
+## 🔵 Las tres acciones que el pase 62 deja escritas para el pase 63
+
+1. 🟢 **Preguntar la licencia de `FWU-DE/lehrplan-ontologie`, que es la gestión más barata con mayor
+   retorno de toda esta capa** (**450**). **Primero el paso que no tiene efecto externo y este pase
+   no hizo: establecer en fuente primaria QUÉ es FWU** (expandir la sigla, determinar si es
+   organismo público de los Länder). 🔵 **Hipótesis falsable y las dos ramas sirven: si es un
+   organismo público, la ausencia de licencia es un trámite y la pieza se desbloquea pidiéndola, de
+   modo que la mejor ontología de currículo de Europa entra a la base como utilizable; si es
+   privado, es una decisión y la pieza se queda como «referencia, no base».** 🔴 **Abrir el issue
+   pidiendo la licencia es acción hacia afuera: se prepara el texto, NO se publica sin autorización
+   —y por P163 se marca como bloqueada, no se re-agenda.**
+
+2. 🔴 **Barrer por `forked from` las filas de `agents/top.md` que este pase no alcanzó, y hacerlo
+   con el instrumento, no a ojo** (**439**, **441**, **444**). Este pase abrió 13 repos y encontró
+   **dos forks que la base daba por piezas originales** — uno de ellos su propio control negativo.
+   🟢 **(a) ya está hecho en ESTE pase, no queda como deuda: `compose/code/fork-lineage-audit/`
+   está escrito, instalado y verde —13/13 aserciones—, con el control positivo/negativo obligatorio
+   corriendo sobre el par real** (DETECTA fork en `Dymayo/moodler-mcp`, NO lo detecta en
+   `GhaithAlHallak8/moodler-mcp`) **y con la aserción que justifica el instrumento entero: leyendo
+   sólo la `description` la divergencia de superficie da 0 —un «idéntico» falso— y leyendo el
+   README da 36.** **Lo que queda para el pase 63 es (b):** capturar la página de las filas
+   restantes de `agents/top.md`, pasarlas por el instrumento y **recalcular el denominador de
+   P107**, que hoy cuenta al menos una copia como observación independiente. ⚠️ **El instrumento no
+   hace red a propósito: la captura es WebFetch y es el único paso manual.**
+
+3. ⚠️ **Resolver el currículo de Chile, que es la pieza que más cerca está de cerrar el hueco de
+   LATAM hispanohablante** (**448**, y el `gap 255`). **`curriculumnacional.cl` ya publica objetivos
+   de aprendizaje por curso y asignatura; lo que falta es determinar si eso es descargable como
+   artefacto estructurado y bajo qué condiciones de uso.** 🔵 **Hipótesis falsable: si el portal
+   expone una descarga estructurada con términos de uso legibles, LATAM pasa de un país a dos y
+   Brasil deja de ser la única plantilla; si sólo expone HTML de consulta, el hueco se
+   RECLASIFICA de «no hay dato» a «hay dato sin artefacto», que es un problema distinto y más
+   barato —es extracción, no producción.** ⚠️ **Buscar en español y, si aparece, leer los términos
+   del propio sitio: no inferirlos de que sea un portal público.**
+
 ## Las tendencias 426–437, del pase 61 del 2026-10-03
 
 **426.** 🟢 **La acción pre-registrada que llevaba ciclos sin correrse RINDIÓ, y es la lección de método

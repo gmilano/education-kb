@@ -1,0 +1,4 @@
+DMontgomery40 / mcp-canvas-lms  Public
+Version 2.2 - 54 tools available - an MCP server for interacting with the Canvas LMS API.
+MIT License - see LICENSE file for details.
+103 stars 39 forks

@@ -8,6 +8,7 @@ updated: 2026-10-03
 
 > Agentes y herramientas AI open source para educación. Foco: MIT / Apache 2.0 / BSD.
 > Verificado repo por repo vía WebFetch el 2026-09-30 (stars y licencia leídos de la página del repo).
+> **Pase 62 del 2026-10-03:** 🟢 **Este pase ejecutó la acción que el pase 60 difirió EXPLÍCITAMENTE al 62 —el barrido retroactivo de forks (**P150**, que esta base venía citando mal como «P151»)— y rindió el hallazgo más transferible de la serie: a la MISMA release (`v1.13.0`), un fork de `vishalsachdev/canvas-mcp` declara 139 *tools* contra las 103 de la madre, mientras el campo `description` de GitHub es IDÉNTICO palabra por palabra en toda la familia. **La descripción se hereda entera; la superficie no**, así que un barrido por búsqueda sub-cuenta y uno por repo sobre-cuenta — los dos mal, en direcciones opuestas** (**P160**). 🔴 **Y el signo tampoco es predecible: el pase 60 midió un fork atrasado y más laxo; éste mide uno adelantado y más grande, en la misma familia.** 🔴 **El control negativo de esta base (`Dymayo/moodler-mcp`) resultó ser un fork no registrado: la clase b4 se sostiene en las dos copias, pero el denominador contaba una copia como observación independiente, y la prosa de la fila («una sola variable, ninguna credencial») es falsa — son CINCO, dos de ellas compuertas de capacidad apagadas por defecto.** 🔴 **La puerta más forkeada de la KB (`DMontgomery40/mcp-canvas-lms`, 103 ★, 39 forks) promete una licencia que NO EXISTE: el README dice «see LICENSE file» y `LICENSE`, `LICENSE.md` y la rama `master` dan 404 — 39 forks heredan la ausencia de cesión** (**P161**). 🔴 **Y el `gap 255` del pase 61 se auto-refuta en España: declaraba «no hay artefacto de currículo» para un país que esta KB cubre desde el pase 3 en siete archivos.**
 > **Pase 61 del 2026-10-03:** 🟢 **Este pase ejecutó una acción pre-registrada que llevaba ciclos sin correrse —buscar `curriculum ontology` / `achievement standards` / `item bank` por país y en el idioma del país, en vez de buscar «agentes»— y rindió **11 piezas nuevas en las cuatro regiones**, tras diez pases sin altas.** 🔴 **El hallazgo que manda es un defecto del INSTRUMENTO, no un repo: la capa de currículo está DUALMENTE licenciada —código permisivo, dato con atribución— y el archivo que declara la licencia del DATO no está en la raíz en dos de tres casos (`dados/LICENSE.md`, `LICENSE-DADOS.md`, `DATA-LICENSE.md`), así que el probe de cinco nombres de raíz de P114/P115 devuelve «MIT» para toda la capa y MIT es la licencia de la parte SIN valor** (**P153**). 🟢 **La hipótesis falsable del pase cae en su primera rama y el falso positivo era propio: `bncc-dados` SÍ trae `dados/LICENSE.md` (CC BY 4.0), así que no hay contradicción entre repos — la lista de nombres probó `dados/LICENSE` y no `dados/LICENSE.md`.** 🟢 **Y llega el número que esta KB venía argumentando sin tener: aterrizar el currículo baja la alucinación de **31,9 %** a **0,2 %** con el dato en el prompt y a **2,3 %** vía MCP —la condición de CONTROL le gana a la herramienta por un orden de magnitud—, en pares y con pre-registro cerrado antes de la batería** (**P156**). 🔴 **Y la región más grande resulta la peor servida: las tres renderizaciones JSON del Common Core en GitHub no tienen archivo de licencia y la única pieza permisiva de NA no es currículo** (**P159**). ⚠️ **La acción 1 del pase 61 —abrir el PR a `toshieji`— NO se ejecutó: es hacia AFUERA, sobre un repo de terceros, y esta corrida es automática sin humano que la apruebe; el parche sigue escrito y versionado.** Ver **P153**–**P159** y las tendencias **426**–**436**.
 >
 > **Pase 60 del 2026-10-03:** 🔴 **La acción 1 del pase 59 CIERRA y su hipótesis falsable cae en una TERCERA rama que no había previsto. Los dos pares de fork dan veredictos OPUESTOS sobre la misma pregunta y los dos son correctos: `algorithm0r/canvas-lms-mcp` es byte a byte idéntico a `bruchris/canvas-lms-mcp` en los DIEZ archivos leídos —incluido `src/canvas/submissions.ts`, el del eje—, mientras que `abr-Projects/canvas-mcp` DIVERGE de `vishalsachdev/canvas-mcp` en ocho archivos y en 42 líneas de `bulk_grade_submissions`… y sin embargo es IDÉNTICO en el eje de publicación (1 `posted_grade`, 0 consultas de política en los dos).** 🟢 **Así que el denominador de 9 se SOSTIENE y P146 se confirma —pero sólo para ese eje.** 🔴 **Lo que cae es la lectura cómoda: la divergencia del par B cae entera sobre el eje de seguridad VECINO —la precondición de rúbrica— y el fork está del lado LAXO en las cuatro celdas: pierde la verificación POST-escritura `rubric_grade_is_confirmed` (2 usos → 0), convierte un aborto duro en `if "error" not in assignment_check:` —sigue y califica— y condiciona el segundo aborto a `and not dry_run`. Es un snapshot viejo que perdió el endurecimiento de la madre, no una mejora. « Identificar por commit » NO es una precaución de inventario: es sustantiva, en el eje que uno no estaba mirando** (**P150**). 🔵 **De ahí la regla general del pase: la herencia de un fork es RELATIVA AL EJE, nunca global — « es fork de X » cierra la celda que se comparó y deja abiertas todas las demás** (**P151**). 🟢 **Y la acción 2 CIERRA en su rama BUENA, que es la comercialmente útil: `markingworkflow` viene con el token normal. Leído de primera mano en `moodle/moodle` @ `main` (`public/mod/assign/externallib.php`, 3.146 líneas, 5.3rc2 build 20261002): el campo se asigna SIN condicional (l. 464), está en el contrato de salida y NO es `VALUE_OPTIONAL` (l. 584, contra 10 campos que sí lo son), y la única capacidad exigida es `require_capability('mod/assign:view')` (l. 401). Como escribir nota exige `mod/assign:grade` (l. 1033), el argumento es *a fortiori*: toda puerta que pueda CALIFICAR puede, por construcción, LEER la precondición. El *read-before-write* es código, no una escalada de permisos ni un pedido al cliente — y para `toshieji` es el PR de tres líneas que vuelve INCONDICIONAL su garantía** (**P152**). 🟢 **`gap 250` CERRADO** (el árbol se mudó a `public/`: `200` contra `404`). ⚠️ **Dos correcciones de método: la ruta que el pase 59 prescribió (`src/services/canvas-client.ts` en `algorithm0r`) NO EXISTE —es de `CharlieCardenasToledo/mcp-canvas-server`, colisión de ruta entre dos repos del mismo pase (**gap 251**)—; y el primer extractor de funciones de este pase devolvió 7 líneas para una función de 256 y un `diff` de 0: un «IDÉNTICO» falso que, de haberse publicado, era la conclusión opuesta a la verdadera.** Ver **P150**–**P152** y las tendencias **413**–**425**.
@@ -231,6 +232,126 @@ updated: 2026-10-03
 > fila** —`lineage-skill`, con un vocabulario cerrado de 9 valores por afirmación, **4 de los 9 «esto lo produjo el
 > modelo»**— y **ninguna de las dos sabe de la otra**. Ver la capa nueva al final de este archivo, las tendencias
 > **180**–**182** y el patrón **P99**.
+
+## 🔁 El barrido retroactivo de FORKS, ejecutado — la acción que el pase 60 difirió explícitamente al 62 (P150 → **P160**)
+
+> **Acción diferida, ejecutada.** El pase 60 la dejó escrita así: *«El barrido de forks NO se descarta:
+> queda explícitamente diferido al pase 62, con su motivo escrito, para que no desaparezca en silencio.»*
+> **Éste es el pase 62 y el barrido se corrió.** 🟢 **Rinde, y rinde en el eje que **P150** había predicho** (⚠️ la acción del pase 60 lo citaba como «P151», que es otro patrón — ver el hallazgo de mis-citación más abajo).
+
+> ⚠️ **Canal de medición de todo este pase, declarado:** la página HTML del repo y
+> `raw.githubusercontent.com`, vía WebFetch. 🔴 **`api.github.com` devolvió `403` y `curl` a
+> `github.com` también `403`** en esta corrida, así que **no hay conteo de API detrás de ninguna cifra
+> de abajo**: los `★` y los conteos de commit están leídos de la página. **Las cifras de *tools* están
+> leídas del README, que es el artefacto que un integrador lee.**
+
+### 🔴 El hallazgo que manda: la DESCRIPCIÓN se hereda entera, la SUPERFICIE no
+
+**`vishalsachdev/canvas-mcp` —la puerta clase (a) de North America y la más traccionada de esta
+tabla— tiene una familia de forks que esta KB nunca enumeró.** Medidos uno por uno en este pase:
+
+| Pieza | ¿Fork de? | ★ | *Tools* que declara el **README** | Release | Licencia |
+|---|---|---|---|---|---|
+| [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | — **madre** | **272** | **103** | **v1.13.0** (sep 2026) | **MIT** ✅ |
+| [`BartMassey-upstream/canvas-mcp`](https://github.com/BartMassey-upstream/canvas-mcp) | 🔴 `vishalsachdev/canvas-mcp` | 0 | 🔴 **139** | **v1.13.0** — *la misma que la madre* | **MIT** ✅ |
+| [`lindsay-cheng/canvas-mcp`](https://github.com/lindsay-cheng/canvas-mcp) | 🔴 `vishalsachdev/canvas-mcp` | 0 | 103 | v1.12.0 (ago 2026) | **MIT** ✅ |
+| [`AmirF194/canvas-mcp`](https://github.com/AmirF194/canvas-mcp) | 🔴 `vishalsachdev/canvas-mcp` | 0 | **101** | — | **MIT** ✅ |
+| [`abr-Projects/canvas-mcp`](https://github.com/abr-Projects/canvas-mcp) | 🔴 `vishalsachdev/canvas-mcp` | 0 | *(pase 60: diverge 42 líneas, lado laxo)* | — | **MIT** ✅ |
+
+🔴 **El número que manda: a la MISMA release declarada (`v1.13.0`), el fork declara 139 *tools*
+contra las 103 de la madre — 36 de diferencia.**
+
+🟢 **Y el mecanismo del error quedó medido, que es lo que convierte esto en regla:** el campo
+`description` de GitHub dice *«Canvas LMS MCP server — up to 102 tools and 8 agent skills»*
+**idéntico y palabra por palabra** en la madre y en los forks, mientras los README de esas mismas
+piezas dicen **101**, **103** y **139**. **La descripción se hereda entera; la superficie no.**
+
+🔵 **Por eso las dos formas de barrer están mal, y lo están en direcciones opuestas: un barrido por
+BÚSQUEDA —que es el que lee descripciones— ve cinco veces la misma pieza y sub-cuenta la superficie;
+un barrido por REPO ve cinco piezas independientes y sobre-cuenta el código** (**P160**).
+
+### 🔴 Y el SIGNO de la divergencia tampoco se puede predecir: la familia tiene los dos
+
+**El pase 60 midió `abr-Projects/canvas-mcp` y encontró un snapshot viejo que había PERDIDO el
+endurecimiento posterior de la madre** (las cuatro celdas de la precondición de rúbrica, todas del
+lado laxo). **Este pase mide `BartMassey-upstream/canvas-mcp` y encuentra lo contrario: está en la
+release corriente y declara 36 *tools* MÁS que la madre.**
+
+🔴 **Eso corrige la intuición con la que el pase 60 cerró: «es fork» no predice la magnitud de la
+diferencia y tampoco su SIGNO.** Un fork puede estar atrás y más laxo, o adelante y más grande, **y
+los dos casos están medidos dentro de la misma familia** (**P160**, que extiende **P150**).
+
+⚠️ **Consecuencia comercial directa, y cambia una recomendación que esta KB venía dando:** elegir
+`vishalsachdev/canvas-mcp` *«porque es la madre»* ya no se sostiene por sí solo. Si el engagement
+necesita superficie, el artefacto más grande es un fork sin estrellas; si necesita linaje mantenido y
+tracción (272 ★, release de septiembre), es la madre. 🔵 **Lo que deja de ser defendible es elegir sin
+mirar — que es exactamente lo que la herencia invita a hacer.**
+
+### 🔴 El CONTROL NEGATIVO de esta base es un fork, y nadie lo había registrado
+
+[`Dymayo/moodler-mcp`](https://github.com/Dymayo/moodler-mcp) **—la fila que el pase 54 usa como
+control negativo de la clase b4— es `forked from`**
+[`GhaithAlHallak8/moodler-mcp`](https://github.com/GhaithAlHallak8/moodler-mcp) (**MIT**, **2 ★**,
+75 commits). **El fork: MIT, 0 ★, 75 commits — el mismo número de commits que la madre.**
+
+🟢 **La clase b4 SE SOSTIENE en las dos copias, y se sostiene con el README leído de primera mano:**
+*«moodler-mcp then asks Moodle for a mobile-app web service token, the same kind the official Moodle
+app uses, and stores it in `~/.moodler-mcp/token.json`»* — **token oficial mintado por la sesión del
+alumno; artefacto (a), emisor (b), invisible en un audit de configuración**, que es palabra por
+palabra la definición de b4 de esta KB. ⚠️ **Pero el denominador contaba una COPIA como observación
+independiente: la clase b4 está sobre-contada en uno.**
+
+🔴 **Y la prosa de la fila hay que corregirla.** Dice *«declara una sola variable (`MOODLE_URL`) y
+ninguna credencial»*. **Medido hoy declara CINCO**, y dos de ellas no son configuración sino
+**compuertas de capacidad, las dos apagadas por defecto**:
+
+| Variable | ¿Requerida? | Qué habilita |
+|---|---|---|
+| `MOODLE_URL` | ✅ | base del sitio, sin barra final |
+| `MOODLER_ALLOW_STUDENT_WRITES` | ❌ **off** | `submit_assignment`, `post_forum_reply`, `mark_activity_complete`, `create_calendar_event`, … |
+| `MOODLER_ALLOW_TEACHER_GRADING` | ❌ **off** | 🔴 `save_assignment_grade` y `grant_extension` |
+| `MOODLER_EMBED_FILES` | ❌ | adjuntar el archivo (`local` por defecto) |
+| `MOODLER_CACHE_DISABLED` | ❌ | desactiva la caché SQLite local |
+
+🟢 **Y eso es una postura que el SEGUNDO eje de esta KB premia y que la fila no tenía anotada: la
+pieza entrega la escritura del alumno y la CALIFICACIÓN apagadas, y hay que encenderlas a propósito.**
+🔵 **El control negativo no falla por la clase —b4 es correcta—: falla por el conteo y por la prosa.**
+
+### ⚠️ «Heredada» se usó donde había una MEDICIÓN disponible
+
+La fila de [`ashleycribb/learnmcp-xapi`](https://github.com/ashleycribb/learnmcp-xapi) declara
+*«**MIT** ✅ (heredada: «(c) 2025 David Romero»)»*. **Medido de primera mano en este pase:** el fork
+**trae su propio `LICENSE` en la raíz**, y su texto abre `MIT License` / `Copyright (c) 2025 David Romero`.
+
+🟢 **La licencia es correcta.** ⚠️ **Lo que estaba mal es la evidencia: no es «heredada», está
+DECLARADA en el fork** — la anotación registró el parentesco donde había un archivo que leer.
+🔵 **Es P150 aplicado a la licencia en vez de al código: la herencia se usó como sustituto de la
+medición, y el archivo estaba a un `raw` de distancia** (**P160**).
+
+⚠️ **Y un dato de la misma lectura que obliga a releer la fila:** el fork muestra **34 commits**
+contra los **32** de [`DavidLMS/learnmcp-xapi`](https://github.com/DavidLMS/learnmcp-xapi) (**15 ★**),
+y **la madre no muestra marca de archivado** y conserva issues y guía de contribución abiertas. **La
+fila dice «upstream congelado»: eso hay que volver a MEDIRLO, no heredarlo** (anotado como acción).
+
+### 🟢 El barrido aplicado hacia adelante, en el mismo pase, y evitó el error una vez
+
+**Buscando agentes de calificación, este pase encontró `Jazy1/rumi-pinokio` (Apache-2.0, 317 commits,
+15 idiomas) y estuvo a punto de darlo de alta como pieza original.** 🔴 **Es `forked from`
+[`Orenda-Project/rumi-platform`](https://github.com/Orenda-Project/rumi-platform)** — **Apache-2.0,
+17 ★, 16 forks, 677 commits, `LICENSE` en la raíz. 🟢 Se da de alta la MADRE.**
+
+🔵 **Esto es el barrido funcionando en prospectiva: la pieza llegó por búsqueda con la descripción
+heredada que la hacía ver original, y el chequeo de la línea `forked from` la colocó antes de entrar
+a la tabla.** ⚠️ **Queda como regla operativa de P160: ninguna alta entra a esta KB sin que se haya
+leído la línea `forked from` de su página.**
+
+### 🟢 Las altas del pase 62 — con la licencia leída, no inferida
+
+| Pieza | Repo | Licencia | ★ | Región | Qué es |
+|---|---|---|---|---|---|
+| **rumi-platform** | https://github.com/Orenda-Project/rumi-platform | **Apache-2.0** ✅ (`LICENSE` en la raíz) | **17** (16 forks, 677 commits) | **APAC** (Pakistán · India · Sri Lanka) | 🟢 **La primera pieza de esta KB cuyo canal es WhatsApp y nada más** — sin app que instalar. Coaching de aula con informe puntuado, **evaluación de fluidez lectora a partir de una nota de voz**, planes de clase, quizzes y desarrollo profesional. **15 idiomas**, incluidos punyabí, sindhi, pastún, baluchi, hindi, bengalí, maratí, telugu, tamil y canarés. Trae la **biblioteca Taleemabad: 890 videos de currículo y 10.929 preguntas certificadas**, alineadas al **currículo nacional paquistaní** de Nursery a 6.º. Diseñada para **escuelas rurales y aulas multigrado** |
+| **moodler-mcp (madre)** | https://github.com/GhaithAlHallak8/moodler-mcp | **MIT** ✅ | 2 (75 commits) | sin región declarada | La madre del control negativo b4 de esta KB, que estaba citado por su fork. Mismo flujo de token móvil y **las mismas dos compuertas apagadas por defecto** |
+| **canvas-mcp — 3 forks** | `BartMassey-upstream` · `lindsay-cheng` · `AmirF194` | **MIT** ✅ ×3 | 0 ×3 | sin región declarada | Familia de `vishalsachdev/canvas-mcp`. **Se registran como forks, no como piezas**, y con su cifra de *tools* propia (139 / 103 / 101) porque es el eje en que divergen |
 
 ## 🌍 Capa de CURRÍCULO nacional aterrizado — las piezas que consume un agente docente, por región (pase 61)
 

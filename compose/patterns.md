@@ -8,6 +8,7 @@ updated: 2026-10-03
 
 > Recetas concretas: repos nombrados, licencias verificadas, wiring explícito y estimación.
 > Todos los repos citados fueron verificados vía WebFetch el 2026-09-30; los del pase 11, el 2026-10-01 (ver `agents/top.md`).
+> **Pase 62 del 2026-10-03:** 🟢 **los patrones nuevos son **P160**–**P163** y la receta **P164**, y los cuatro se promueven a sección en el mismo pase que los acuña (P157): ninguno queda citado sin texto.** 🔴 **Pero antes que los patrones va una corrección de CITA que afecta a cuatro archivos: esta base define **P150** como la regla de forks y **P151** como la de extractores, y hay SIETE citas que invocan «P151» para forks —incluida la acción del pase 60 que difirió el barrido a este pase. Es peor que una cita colgada: resuelve a un patrón real que habla de otra cosa, así que se lee como válida.** 🔵 **P160** la descripción se hereda y la superficie no (139 *tools* contra 103 a la misma release) · **P161** la licencia declarada sólo en prosa no es cesión, y la ausencia se hereda a 39 forks · **P162** un hueco por país se declara contra el índice propio antes que contra el mercado · **P163** una acción diferida lleva número de pase o se re-agenda para siempre.
 > **Pase 61 del 2026-10-03:** 🟢 **los patrones nuevos son **P153**–**P157**, la receta **P158** y **P159**, y todos salen de una sola medición: la capa de CURRÍCULO nacional estructurado, leída licencia por licencia en las cuatro regiones.** 🔴 **P153 es el que cambia una decisión de entrega: la capa entera es DUAL —código permisivo, dato con atribución— y el archivo que declara la licencia del DATO no está en la raíz en dos de tres casos (`dados/LICENSE.md`, `LICENSE-DADOS.md`, `DATA-LICENSE.md`): el probe de cinco nombres de raíz de P114/P115 devuelve «MIT» para toda la capa, y MIT es la licencia de la parte SIN valor.** 🟢 **P154: lo licenciable es la COMPILACIÓN, no el currículo —los textos normativos son actos de Estado no protegidos (art. 8º IV de la Lei 9.610/98; OGL v3.0 como *public sector information*)—, así que a un cliente no se le puede cobrar el currículo de su propio país.** 🔴 **P155: «Apache» en un README de esta vertical es más seguido el SERVIDOR web que la licencia —`Forma LMS` resulta GPLv2 y sin archivo de licencia, contra una recomendación secundaria que lo venía como «the most permissive licence»—.** 🟢 **P156 pone número al aterrizaje, en pares y con pre-registro: sin fuente 31,9 % de alucinación, con el dato en el prompt **0,2 %**, consultando el MCP **2,3 %** — la condición de CONTROL le gana a la herramienta por un orden de magnitud.** 🔴 **Y P159 es el hallazgo regional que invierte el gap 4: la región más grande es la peor servida —las tres renderizaciones JSON del Common Core en GitHub no tienen licencia y la única pieza permisiva de NA (`CEDS-Ontology`, Apache 2.0) no es currículo sino un modelo de entidades—.** ⚠️ **La acción 1 del pase 61 (abrir el PR a `toshieji`) NO se ejecutó: es una acción hacia AFUERA sobre un repo de terceros y esta corrida es automática, sin humano mirando — ver `agents/trending.md`.** Ver **P153**–**P159** y las tendencias **426**–**436**.
 > **Pase 58 del 2026-10-03:** 🔴 **los patrones nuevos son **P142**–**P144** y los tres salen de la misma medición: de las 6 puertas de escritura de nota, leídas en el CÓDIGO, **0 consultan la precondición de su plataforma**. 🔵 **P142 es el que cambia una decisión de entrega: las seis NO fallan igual, y la pregunta que las separa es una sola —con `markingworkflow = 1`, ¿publica igual?—. `peancor/moodle-mcp-server` manda `workflowstate: 'released'` CABLEADO, así que es la única que DERROTA la configuración correcta del cliente: 5 de 6 se CONFIGURAN, 1 de 6 se EXCLUYE.** ⚠️ **Y no se puede aplicar desde un README: `'released'` está en `src/index.ts`, no en la documentación.** 🔵 **P143 nombra una clase de garantía que esta KB no tenía: la que vive en el PROCESO** —`mcp-moodle-staff` no llama al web service, genera CSV para el importador nativo, así que la liberación humana es de quien aprieta Importar— **real, pero NO auditable en el código de la puerta, así que se entrega con el procedimiento o no existe.** 🟢 **P144 es la respuesta arquitectónica a tres pases de compuertas que fallaron por tres motivos distintos (P132, P138, P139, P142): separar la generación de la publicación, de modo que el proceso que genera NO tenga credencial de escritura al LMS. Lo funda `littlecookie0722/AI-Teaching-Agent` (MIT), la única pieza de esta KB que cumple «borrador + liberación humana» incondicionalmente —porque no puede publicar—.** ⚠️ **Lo que P144 NO compra: no automatiza la entrega de notas; si el cliente la pide, se vuelve a P142.** Ver **P142**–**P144** y las tendencias **393**–**401**.
 > **Pase 57 del 2026-10-03:** 🔴 **el patrón nuevo es **P137** y corrige el NIVEL 2 de **P136**, que este archivo agregó el pase anterior: el «borrador no liberado» no es una compuerta del servidor, es una compuerta de la PLATAFORMA, y sin su precondición no existe.** Leído de primera mano en `moodle/moodle` @ `main`, `public/mod/assign/locallib.php:2991-3001`: *«If marking workflow is enabled, the workflow state is at 'released'»*, con el SQL `WHERE (a.markingworkflow = 0 OR (a.markingworkflow = 1 AND uf.workflowstate = :wfreleased))`. 🔴 **Con `markingworkflow = 0` Moodle publica la nota sea cual sea el `workflowstate`, y el README de `toshieji` no menciona `markingworkflow` ni una vez en 8.326 bytes** (**P139**). ⚠️ **Las seis citas de `readyforreview` de este archivo quedan marcadas con su precondición: el patrón sigue siendo el mejor de la capa, pero se entrega con un paso de verificación, no solo.** 🔴 **Y el nivel 1 de P136 (que el tool no exista) se mide por primera vez sobre las 8 piezas y la escalera que el pase 56 propuso NO es ordinal: «impedir listar el tool» y «granularidad» son dos ejes independientes** — `Dymayo` es la compuerta más gruesa y desregistra, `toshieji` es más fina y no (**P137**). 🔴 **Más el eje que faltaba y que decide el despliegue: el SENTIDO DEL DEFECTO. `ALLOWED_WRITE_TOOLS` es fail-OPEN en stdio** (**P138**). 🟢 **Y el patrón llega entregable: `compose/code/grading-draft-gate/` (37/37, OFFLINE) afirma las tres propiedades por separado, con 12 asertos de control negativo y tres mutaciones que prueban que la suite puede fallar.** Ver **P137**–**P141** y las tendencias **370**–**392**.
@@ -101,6 +102,172 @@ updated: 2026-10-03
 > no existe en open source permisivo).
 > **Pase 11:** +2 patrones — **P25** (riesgo de abandono conforme al Anexo III, la capa con presupuesto ya asignado y sin oferta open source) y **P26** (agente docente sobre la ontología curricular nacional ya publicada).
 > **Pase 27:** **+4 patrones y una corrección.** 🔴 **P51 queda con premisa falsa** —el conector MCP de Moodle **sí existe y es MIT**— y lo reemplazan **P54** (corrección y devolución sobre Moodle con **compuerta humana**, el último tramo del gap 6, con piezas que ya escriben), **P55** (el conector de **Open edX**, que es el único que de verdad no existe), **P56** (**SCORM** como formato de salida de la capa generativa: cero integración, offline) y **P57** (evidencia por MCP cotizada sobre lo que CaSS **realmente** expone — 6 de 61 operaciones, con insignias y autoría de marcos **fuera**).
+
+## 🧩 P160–P163, los patrones del pase 62 (2026-10-03) — y una corrección de CITA que afecta a cuatro archivos
+
+> **Los cuatro se promueven a sección en el MISMO pase que los acuña, que es lo que exige P157.**
+> **Ninguno de los números de abajo queda citado sin texto.**
+
+### 🔴 Primero la corrección, porque invalida citas que ya están escritas: **P151 ≠ la regla de forks**
+
+**Medido en este pase sobre el árbol:** `compose/patterns.md` define **P150** como *«Un fork no
+«hereda» ni «corrige»: hereda POR EJE»* y **P151** como *«Un extractor se valida por plausibilidad
+ANTES de que su salida entre a un `diff`»*. 🔴 **Pero SIETE citas en CUATRO archivos invocan «P151»
+para la regla de forks** (`agents/top.md` ×2, `agents/trending.md`, `repos/trending.md`,
+`intel/trends.md` ×3), **incluida la acción del pase 60 que difirió el barrido a este pase.**
+
+🔵 **Y es peor que una cita colgada de las 114 que el pase 60 contó: una cita colgada no resuelve a
+nada y se nota; ésta resuelve a un patrón REAL y EXISTENTE que habla de otra cosa, así que se lee
+como válida y nadie la revisa.** ⚠️ **La forma general, que es lo que hay que buscar en el resto:
+el número equivocado no es el que no existe — es el que existe y no corresponde.**
+
+🟢 **Corregido en el texto nuevo de este pase** (que cita **P150**). ⚠️ **Las siete citas previas se
+dejan donde están y NO se reescriben** —son historia y este archivo no reescribe hacia atrás—,
+**pero quedan anotadas acá para que el próximo pase las arregle con el instrumento de la acción 2,
+no a mano.**
+
+### 🔴 P160 — La DESCRIPCIÓN se hereda entera y la SUPERFICIE no: ningún fork se cuenta sin abrir su README (extiende **P150**)
+
+**El problema, medido en este pase.** La familia de `vishalsachdev/canvas-mcp`:
+
+| Pieza | ¿Fork? | ★ | `description` de GitHub | *Tools* en el **README** | Release |
+|---|---|---|---|---|---|
+| `vishalsachdev/canvas-mcp` | madre | **272** | *«up to 102 tools and 8 agent skills»* | **103** | **v1.13.0** |
+| `BartMassey-upstream/canvas-mcp` | 🔴 sí | 0 | **la misma, palabra por palabra** | 🔴 **139** | **v1.13.0** |
+| `lindsay-cheng/canvas-mcp` | 🔴 sí | 0 | **la misma** | 103 | v1.12.0 |
+| `AmirF194/canvas-mcp` | 🔴 sí | 0 | **la misma** | **101** | — |
+
+🔴 **A la misma release, 139 contra 103: 36 *tools* de diferencia bajo una descripción idéntica.**
+
+**La regla, en dos mitades que hay que aplicar juntas:**
+
+1. 🔵 **Un barrido por BÚSQUEDA lee descripciones, ve una sola pieza repetida y SUB-cuenta la
+   superficie. Un barrido por REPO ve piezas independientes y SOBRE-cuenta el código. Las dos
+   cuentas están mal y en direcciones opuestas: no hay atajo, hay que abrir el README.**
+2. 🔴 **Y el SIGNO de la divergencia no se puede predecir.** Esta KB tiene los dos casos en la
+   **misma** familia: `abr-Projects` (pase 60) estaba **atrás y más laxo** —había perdido el
+   endurecimiento posterior de la madre—; `BartMassey-upstream` está **en la release corriente y es
+   más grande**. **«Es fork» no predice magnitud ni dirección.**
+
+**Cómo se aplica, operativamente:** ninguna alta entra a esta base sin que se haya leído **la línea
+`forked from` de su página** y, si la hay, **la cifra de superficie del README de la madre y la del
+fork**. 🟢 **Funcionó en prospectiva en este mismo pase:** `Jazy1/rumi-pinokio` llegó por búsqueda
+con la descripción heredada que la hacía ver original; el chequeo la colocó como fork y **se dio de
+alta la madre, `Orenda-Project/rumi-platform`**.
+
+⚠️ **Y el costo de no aplicarlo, medido:** el control negativo de la clase b4 de esta KB
+(`Dymayo/moodler-mcp`) **era un fork de `GhaithAlHallak8/moodler-mcp` y nadie lo había registrado**,
+así que el denominador contaba una copia como observación independiente.
+
+### 🔴 P161 — La licencia declarada sólo en PROSA no es una licencia, y se hereda a cada fork
+
+**El problema, con el caso más caro de esta KB.** `DMontgomery40/mcp-canvas-lms` —**103 ★, 39 forks,
+la puerta más forkeada de esta base**— dice en su README, literalmente: *«MIT License - see LICENSE
+file for details»*. **Las tres rutas probadas: `main:LICENSE` → 404, `main:LICENSE.md` → 404,
+`master:LICENSE` → 404.**
+
+🔵 **Segundo caso de la misma forma** —el primero, `@timadey/proctor` (pase 41): MIT anunciada, sin
+`LICENSE` en ninguna rama de toda la historia—, **y por eso deja de ser anécdota.**
+
+**La regla:** 🔴 **una afirmación de licencia en README, en el campo de un registro (npm/PyPI) o en
+un *badge* NO es una cesión: la cesión es el archivo.** **Cuando el README promete un archivo que no
+existe, el resultado no es «MIT»: es *sin licencia*, y «sin licencia» significa que no hay permiso
+de uso, no que el permiso sea amplio.**
+
+⚠️ **Y lo que lo vuelve estructural en vez de puntual: la ausencia se HEREDA.** Los 39 forks reciben
+del upstream exactamente lo que el upstream cedió —**nada**—, con independencia de lo que diga el
+README que copiaron. 🔵 **Es el mismo mecanismo de P160 aplicado al permiso en vez de a la
+superficie: lo que se hereda es el texto, no el derecho.**
+
+**Cómo se aplica:** la licencia de cualquier pieza candidata se lee **del archivo, por `raw`**, y el
+404 se registra como el hallazgo que es. **Un repo sin archivo de licencia no entra a una propuesta
+comercial aunque su README diga MIT y aunque tenga 103 ★.**
+
+### 🔴 P162 — Un hueco por país se declara contra el ÍNDICE PROPIO antes que contra el mercado
+
+**El problema, de primera mano.** El pase 61 declaró el `gap 255`: *«Para Alemania, Francia, España,
+Italia, Nórdicos, África, México, Colombia, Argentina, Chile y Perú este pase no encontró artefacto
+de currículo estructurado: es hueco medido, no cobertura.»* 🔴 **España estaba cubierta desde el
+pase 3 por `nmarafo/OpenDidactia` (LOMLOE, 17 CCAA + 2 ciudades), citado en SIETE archivos de esta
+misma base, con la región escrita como «EMEA (España)».**
+
+🔵 **El gap no se midió contra el mercado: se midió contra la memoria del pase.** ⚠️ **Y es la misma
+forma que los 114 *backlinks* colgados del pase 60 y que la mis-citación de P151 de arriba — la KB
+afirmando sobre sí misma sin leerse.** **Tres instancias en tres pases: el objeto peor medido de
+esta base es esta base.**
+
+**La regla:** 🔴 **antes de escribir «no existe X para el país Y», correr `grep` sobre el árbol por
+el nombre del país, por el del artefacto y por el del estándar.** **Un hueco declarado de más es más
+caro que uno no declarado: el no declarado se descubre buscando; el declarado de más APAGA la
+búsqueda y además se cita.**
+
+### 🔵 P163 — Una acción diferida lleva número de pase, o se re-agenda para siempre
+
+**La evidencia, en la propia serie.** El pase 60 escribió *«el barrido de forks queda explícitamente
+diferido **al pase 62**»* — **y al pase 62 se ejecutó.** 🔴 **La acción «abrir el PR a
+`toshieji/moodle-grading-mcp`» se difirió «al próximo pase» y lleva CUATRO pases pendiente** (58,
+60, 61 y éste), **siempre por el mismo motivo real: es una acción hacia afuera y la corrida es
+automática, sin humano que la autorice.**
+
+**La regla, en dos partes:**
+
+1. 🟢 **Una acción diferida se fecha con NÚMERO de pase, no con «el próximo».** El número es una
+   condición de vencimiento verificable; «el próximo» es una intención y se renueva sola.
+2. 🔴 **Y una acción que falla cuatro veces por la MISMA causa estructural no es una acción
+   pendiente: es una acción BLOQUEADA, y se marca como tal.** ⚠️ **Re-agendarla es registrar como
+   trabajo futuro algo que esta corrida no puede hacer por diseño.** **El PR a `toshieji` sale del
+   backlog rotativo y queda marcado «bloqueado: requiere autorización humana, fuera del ciclo
+   automático», con el parche ya escrito y probado en
+   `compose/code/markingworkflow-read-before-write/`.**
+
+## 🍳 Receta P164 — «Elegir la puerta de LMS correcta de una familia de forks, con la cesión verificada» (pase 62)
+
+**Para qué sirve:** un engagement que necesita una puerta MCP sobre Canvas o Moodle encuentra en
+GitHub **ocho o diez repos que parecen piezas distintas y son cuatro familias**, con descripciones
+idénticas, superficies que difieren hasta en 36 *tools* y **al menos una cesión que no existe**.
+Esta receta es el orden de lectura que evita elegir mal.
+
+**Las piezas, todas verificadas en este pase:**
+
+| Rol | Pieza | Licencia | Por qué ésta |
+|---|---|---|---|
+| Puerta Canvas, **linaje + tracción** | [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | 🟢 **MIT** | 272 ★, release de sep 2026, **103 *tools*** |
+| Puerta Canvas, **superficie máxima** | [`BartMassey-upstream/canvas-mcp`](https://github.com/BartMassey-upstream/canvas-mcp) | 🟢 **MIT** | **139 *tools*** a la misma release; 0 ★ |
+| Puerta Canvas, **a descartar** | [`DMontgomery40/mcp-canvas-lms`](https://github.com/DMontgomery40/mcp-canvas-lms) | 🔴 **ninguna** | 103 ★ y 39 forks, **y sin cesión** (P161) |
+| Puerta Moodle, **calificación apagada por defecto** | [`GhaithAlHallak8/moodler-mcp`](https://github.com/GhaithAlHallak8/moodler-mcp) | 🟢 **MIT** | compuertas `MOODLER_ALLOW_*` **off** |
+| Puerta Moodle, **token institucional** | [`peancor/moodle-mcp-server`](https://github.com/peancor/moodle-mcp-server) | 🟢 **MIT** | clase (a): `MOODLE_API_TOKEN` de administración |
+| Precondición antes de escribir nota | `compose/code/markingworkflow-read-before-write/` | — | *read-before-write* (**P152**), parche probado |
+
+**El wiring, en el orden en que hay que ejecutarlo:**
+
+1. 🔴 **Resolver el LINAJE antes que nada.** Para cada candidato, leer **la línea `forked from`** de
+   su página. **Agrupar por madre.** Lo que parecían ocho piezas son cuatro familias (**P160**).
+2. 🔴 **Verificar la CESIÓN por archivo, no por README.** `raw` sobre `LICENSE`, `LICENSE.md` y la
+   rama alternativa. **Un 404 elimina al candidato** por más estrellas que tenga (**P161**). **Acá
+   es donde cae la pieza de 103 ★.**
+3. 🔵 **Recién entonces comparar SUPERFICIE, y leyendo el README de cada miembro de la familia, no
+   la descripción.** Si el proyecto necesita cobertura, el ganador puede ser un fork con 0 ★; si
+   necesita linaje mantenido, es la madre (**P160**).
+4. ⚠️ **Clasificar el CANAL DE CREDENCIAL** con el esquema de cinco clases de esta base. Clase (a)
+   —token emitido por la institución— es la única defendible sin conversación previa; **b4 es un
+   token oficial mintado por la sesión del alumno y es invisible en un audit de configuración**.
+5. 🟢 **Preferir, a igualdad de lo anterior, la pieza cuyas capacidades peligrosas vienen APAGADAS.**
+   `moodler-mcp` entrega `save_assignment_grade` y `grant_extension` detrás de
+   `MOODLER_ALLOW_TEACHER_GRADING=off`: **encenderlas es una decisión registrada del cliente, no un
+   default heredado.**
+6. 🔴 **Montar el *read-before-write* antes de habilitar cualquier escritura de nota** (**P152**):
+   `markingworkflow` viene en el token normal y `mod/assign:view` es estrictamente más débil que
+   `mod/assign:grade`, así que **no existe el caso en que la puerta pueda calificar y no pueda leer
+   la precondición**.
+
+**Estimación:** **1 semana** los pasos 1–4 sobre un catálogo de ~10 candidatos (es lectura, no
+desarrollo), **+2–3 semanas** el paso 6 integrado y probado contra una instancia real.
+
+**Lo que esta receta NO compra:** ⚠️ no decide entre Canvas y Moodle —eso lo decide el cliente—;
+⚠️ **no mide si las 36 *tools* extra de `BartMassey-upstream` son capacidad nueva o el mismo
+registro expuesto distinto** (se leyó el README, no el registro: **es la acción pendiente**); y
+🔴 **no cubre el caso de un cliente que YA desplegó `DMontgomery40/mcp-canvas-lms`** — ahí el
+entregable es la migración y el argumento es la cesión ausente, no la funcionalidad.
 
 ## 🧩 P153–P157, los patrones del pase 61 (2026-10-03)
 

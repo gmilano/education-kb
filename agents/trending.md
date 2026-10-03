@@ -9,6 +9,85 @@ updated: 2026-10-03
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 > No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
 
+## 2026-10-03 (pase 62) — **el barrido de forks que el pase 60 difirió al 62: la descripción se hereda entera y la superficie no (139 *tools* contra 103 en la misma release), el control negativo de esta base resultó ser un fork, y la puerta más forkeada promete una licencia que no existe**
+
+### 🟢 La acción diferida se ejecutó, y no se re-agendó
+
+El pase 60 escribió: *«El barrido de forks NO se descarta: queda explícitamente diferido al pase 62,
+con su motivo escrito, para que no desaparezca en silencio.»* **Éste es el pase 62. Se corrió.**
+🔵 **Se deja anotado como dato de método, porque esta serie viene arrastrando una acción que ya quedó
+pendiente tres veces (el PR a `toshieji`): una acción diferida CON número de pase se ejecuta; una
+diferida «al próximo pase» se re-agenda indefinidamente.**
+
+### 🔴 La familia de forks de `vishalsachdev/canvas-mcp`, medida
+
+| Pieza | ¿Fork de? | ★ | *Tools* (README) | Release |
+|---|---|---|---|---|
+| [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | — madre | **272** | **103** | **v1.13.0** |
+| [`BartMassey-upstream/canvas-mcp`](https://github.com/BartMassey-upstream/canvas-mcp) | 🔴 sí | 0 | 🔴 **139** | **v1.13.0** |
+| [`lindsay-cheng/canvas-mcp`](https://github.com/lindsay-cheng/canvas-mcp) | 🔴 sí | 0 | 103 | v1.12.0 |
+| [`AmirF194/canvas-mcp`](https://github.com/AmirF194/canvas-mcp) | 🔴 sí | 0 | **101** | — |
+| [`abr-Projects/canvas-mcp`](https://github.com/abr-Projects/canvas-mcp) | 🔴 sí | 0 | *(pase 60: lado laxo)* | — |
+
+🔴 **A la misma release declarada, el fork expone 36 *tools* más que la madre.** 🟢 **Y el campo
+`description` de GitHub es idéntico palabra por palabra en toda la familia —*«up to 102 tools and 8
+agent skills»*— mientras los README dicen 101, 103 y 139.** 🔵 **La descripción se hereda; la
+superficie no** (**P160**).
+
+⚠️ **Y la dirección no es predecible: el pase 60 midió un fork ATRASADO y más laxo; éste mide uno
+ADELANTADO y más grande. Misma familia, signos opuestos.**
+
+### 🔴 El control negativo de la clase b4 es un fork no registrado
+
+[`Dymayo/moodler-mcp`](https://github.com/Dymayo/moodler-mcp) es `forked from`
+[`GhaithAlHallak8/moodler-mcp`](https://github.com/GhaithAlHallak8/moodler-mcp) (MIT, 2 ★, 75
+commits; el fork 0 ★, 75 commits). 🟢 **La clase b4 se sostiene en las dos copias** —token oficial
+mintado por la sesión del alumno, guardado en `~/.moodler-mcp/token.json`—, ⚠️ **pero el denominador
+contaba la copia como observación independiente.** 🔴 **Y la prosa de la fila era falsa: declara
+CINCO variables, no una, y dos son compuertas de capacidad apagadas por defecto
+(`MOODLER_ALLOW_STUDENT_WRITES`, `MOODLER_ALLOW_TEACHER_GRADING` — esta última gobierna
+`save_assignment_grade` y `grant_extension`).**
+
+### 🔴 La licencia prometida que no existe, y se hereda 39 veces (P161)
+
+[`DMontgomery40/mcp-canvas-lms`](https://github.com/DMontgomery40/mcp-canvas-lms) — **103 ★, 39
+forks, la puerta más forkeada de esta KB.** Su README dice literalmente *«MIT License - see LICENSE
+file for details»*. **Medido:** `main:LICENSE` → **404**; `main:LICENSE.md` → **404**;
+`master:LICENSE` → **404**. 🟢 **El «SIN licencia» que esta KB ya tenía se REPRODUCE y se afila: no
+es una licencia ausente, es una licencia PROMETIDA y ausente.**
+
+🔵 **Segundo caso de la misma forma** —el primero fue `@timadey/proctor` (pase 41, MIT anunciada sin
+`LICENSE` en ninguna rama de toda la historia)—, **así que deja de ser anécdota y se nombra: P161,
+la licencia declarada sólo en prosa.** 🔴 **Y acá tiene escala: 39 forks heredan la ausencia de
+cesión, no la MIT del README.**
+
+### 🟢 Alta del pase: la primera pieza de canal WhatsApp
+
+[`Orenda-Project/rumi-platform`](https://github.com/Orenda-Project/rumi-platform) — **Apache-2.0**
+(`LICENSE` en la raíz), **17 ★**, 16 forks, 677 commits. Asistente docente que vive **enteramente en
+WhatsApp**: coaching de aula con informe puntuado, **evaluación de fluidez lectora desde una nota de
+voz**, planes de clase, quizzes y desarrollo profesional. **15 idiomas** (urdu, punyabí, sindhi,
+pastún, baluchi, hindi, bengalí, maratí, telugu, tamil, canarés, árabe, español, inglés). Trae la
+**biblioteca Taleemabad: 890 videos y 10.929 preguntas certificadas** alineadas al **currículo
+nacional paquistaní** N–6.º. **APAC (Pakistán, India, Sri Lanka).**
+
+⚠️ **Y entró por el chequeo de P160:** llegó a este pase como `Jazy1/rumi-pinokio`, que es su fork.
+🟢 **Se registró la madre.**
+
+### ⚠️ Lo que este pase NO midió, declarado para que no se lea como cobertura
+
+- 🔴 **`api.github.com` → `403`** y **`curl` a `github.com` → `403`** en esta corrida. Toda cifra de
+  arriba viene de la página HTML o de `raw.githubusercontent.com` vía WebFetch. **No hay conteo de
+  API detrás de ningún número de este pase**, y los conteos de commit son los que muestra la página.
+- ⚠️ **De los 39 forks de `DMontgomery40/mcp-canvas-lms` sólo se leyó el listado (15 activos en dos
+  años); no se abrió fork por fork** para ver si alguno agregó un `LICENSE` propio. **La afirmación
+  «39 heredan la ausencia» es sobre la cesión que reciben del upstream, no una lectura de los 39.**
+- 🔴 **`gap 254` (licencia de MRAC/ACARA) y `gap 256` (licencia de CASE/1EdTech) siguen abiertos y se
+  reconfirman por SEGUNDA vez:** `www.australiancurriculum.edu.au`, `rdf.australiancurriculum.edu.au`,
+  `www.1edtech.org` y `standards.1edtech.org` dieron **`000`** en esta corrida.
+- ⚠️ **No se midió si `BartMassey-upstream` aporta las 36 *tools* de más o sólo las registra distinto**
+  (perfiles, *feature-gating*): se leyó el README, no el registro de herramientas. **Queda como acción.**
+
 ## 2026-10-03 (pase 61) — **la capa de CURRÍCULO nacional se mide por licencia en las cuatro regiones: 11 piezas nuevas, la licencia del dato escondida fuera de la raíz, y la región más grande resulta la peor servida**
 
 ### 🟢 El hallazgo que manda: la capa de currículo es DUAL y el filtro de esta KB era ciego a su mitad valiosa (P153)

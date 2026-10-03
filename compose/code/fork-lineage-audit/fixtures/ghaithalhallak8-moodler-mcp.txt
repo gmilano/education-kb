@@ -1,0 +1,4 @@
+GhaithAlHallak8 / moodler-mcp  Public
+An open-source MCP server that plugs your Moodle account into Claude Desktop.
+75 Commits
+MOODLE_URL is the only required variable.

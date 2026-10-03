@@ -1,0 +1,5 @@
+BartMassey-upstream / canvas-mcp  Public
+forked from vishalsachdev/canvas-mcp
+Canvas LMS MCP server - up to 102 tools and 8 agent skills for students & educators.
+MCP server for Canvas LMS with up to 139 tools and 8 agent skills.
+Latest Release: v1.13.0

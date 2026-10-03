@@ -9,6 +9,7 @@ updated: 2026-10-03
 > Plataformas verticales reales, en producción, customizables con AI.
 > Modelo: partir de algo que ya funciona y que ya tiene los datos, y agregar la capa agéntica arriba.
 > Verificado vía WebFetch el 2026-09-30; las capas del pase 11, el 2026-10-01.
+> **Pase 62 del 2026-10-03:** 🟢 **el aporte de plataforma de este pase es la COLUMNA DE LICENCIA de la capa de currículo, que convierte el modelo del pase 61 en una decisión de entrega: de siete artefactos medidos en cuatro regiones, UNO es entregable sin condiciones (Corea, MIT), uno con atribución (Brasil), uno con *share-alike* en el contrato (España), DOS no tienen cesión (North America y Alemania) y uno es ilegible (Australia).** 🔴 **Por eso el mismo proyecto —agente docente sobre el LMS del cliente, aterrizado al currículo oficial— es un proyecto DISTINTO en cada región: en Corea se integra, en Alemania hay que gestionar una licencia antes de empezar y en North America hay que producir la capa.** 🟢 **Dos piezas nuevas: `FWU-DE/lehrplan-ontologie` (16 Bundesländer en RDF/OWL, sin licencia) y `nmarafo/open-lex-edu` (832 normas LOMLOE, CC BY-SA en la raíz).** ⚠️ **Y la búsqueda obligatoria de plataformas volvió a devolver monocultivo de SEO de un solo proveedor: se reconfirma como no-hallazgo en vez de re-investigarse.**
 > **Pase 61 del 2026-10-03:** 🔴 **el aporte de plataforma de este pase es una corrección al modelo de este archivo: «partir de algo que ya tiene los datos» NO vale para el currículo — Moodle, Open edX, Canvas y OpenEduCat traen el continente (cursos, actividades, libro de calificaciones) y NINGUNO trae el currículo nacional del país del cliente; Canvas trae *Outcomes* como estructura VACÍA.** 🟢 **La pieza que llena el hueco se midió este pase y es usable en tres de las cuatro regiones (LATAM MIT/CC BY 4.0, EMEA MIT/OGL v3.0, APAC oficial) — ver la receta **P158**.** 🔴 **Y se REFUTA una recomendación secundaria que manda a `Forma LMS` por «Apache 2.0, the most permissive licence»: la única aparición de «Apache» en su README es el SERVIDOR web (`mod_rewrite`), no tiene archivo de licencia en `master` (7 nombres → 404) y su distribución propia dice **GPLv2** — seguir esa recomendación pone una entrega corporativa sobre copyleft** (**P155**).
 > **Pase 57 del 2026-10-03:** 🔴 **el hallazgo de plataforma de este pase cambia un requisito de configuración de Moodle, no un repo: la pieza que el pase 56 declaró «la única entregable tal cual» —`toshieji/moodle-grading-mcp`— sólo cumple si la TAREA de Moodle tiene el *marking workflow* activado, y el servidor no lo mira.** Leído de primera mano en `moodle/moodle` @ `main`, `public/mod/assign/locallib.php:2991-3001`: *«If marking workflow is enabled, the workflow state is at 'released'»*, con el SQL `WHERE (a.markingworkflow = 0 OR (a.markingworkflow = 1 AND uf.workflowstate = :wfreleased))`. 🔴 **Con `markingworkflow = 0` Moodle le manda la nota al alumno sea cual sea el `workflowstate`.** 🔵 **Traducción a requisito de implantación, y es accionable en la primera reunión técnica: antes de instalar cualquier puerta de notas sobre Moodle hay que activar *Marking workflow* en cada tarea de destino (Ajustes de la tarea → Calificación → *Use marking workflow*) y verificarlo por API (`mod_assign_get_assignments` → `markingworkflow`), porque es la casilla de la que depende la palabra «borrador».** ⚠️ **Es configuración de plataforma, no desarrollo: cuesta minutos y sin ella el control no existe.** 🟢 **La suite nueva `compose/code/grading-draft-gate/` (37/37) afirma las tres propiedades del patrón y, en su control (iv-b), demuestra el fallo: con el chequeo apagado el servidor manda `readyforreview` correctamente y Moodle notifica al alumno igual.** 🔴 **Segundo hallazgo de plataforma, sobre Canvas: la compuerta que el *security release* del pase 56 recomendó (`ALLOWED_WRITE_TOOLS`) es **fail-OPEN en stdio** — *«HTTP servers are read-only unless configured … Local stdio servers are unchanged unless you set it»*. **Un piloto de docente en local no hereda la protección del despliegue HTTP**, así que el runbook tiene que fijarla explícitamente en los dos transportes. 🟢 **Y la pieza con más controles de plataforma de toda esta capa es `bruchris/canvas-lms-mcp` (16 variables `CANVAS_*`), con dos que ninguna otra tiene: `CANVAS_PROVENANCE_FENCING` (encendido por defecto, marca el texto de terceros — el único control de la capa que ataca el modelo de amenaza de P132 por donde entra) y `CANVAS_PSEUDONYMIZE_STUDENTS` (modo FERPA, los nombres no llegan al LLM).** ⚠️ **Pero su desregistro real (`CANVAS_DESTRUCTIVE_TOOLS=block`) cubre los SIETE tools de borrado y NO `grade_submission`: la nota no está cubierta** (**P140**). ⚠️ **Verticales de SIS/ERP rebarridas sin alta permisiva nueva: OpenEduCat (LGPL, sobre Odoo, 3 M+ usuarios declarados), openSIS (GPL), RosarioSIS, Gibbon y ERPNext — ninguna MIT/Apache, así que el encuadre de licencia de esta capa no cambia.** Ver **P137**–**P141** y las tendencias **370**–**392**.
 > **Pase 56 del 2026-10-03:** 🔴 **la advertencia que el pase 55 dejó sobre `peancor/moodle-mcp-server` queda CONFIRMADA por lectura directa y ascendida a la peor combinación medida de esta KB: token de administración del SITIO (máximo privilegio) con clase **T4** (mínima guarda) — cero menciones de confirmación, borrador, liberación o divulgación en los tres ejes barridos.** ⚠️ **Y esta base la recomienda en `compose/patterns.md`: la recomendación cambia en este pase.** 🔴 **El hallazgo de plataforma que decide una arquitectura: el *security release* de `vishalsachdev/canvas-mcp` (272 ★, Canvas) dice que una confirmación NO protege contra el ataque propio de educación —*«Instructions a student plants in course content can steer an instructor's assistant, and a confirmation token cannot stop that because the assistant can redeem its own token»*— y su remedio es quitar la herramienta de escritura en el ARRANQUE (`ALLOWED_WRITE_TOOLS`), no confirmar mejor.** 🔵 **Traducción a diseño de solución, y vale para Canvas, Moodle y Open edX por igual: en un despliegue donde el alumno puede escribir en el contenido del curso, la compuerta tiene que estar en el arranque del servidor o en el estado del dato (borrador no liberado), nunca sólo en el diálogo de confirmación.** 🟢 **La única pieza de escritura de notas entregable tal cual sigue siendo `toshieji/moodle-grading-mcp` (MIT, APAC): escribe `workflowstate=readyforreview`, *«never releases»* y agrega pie de divulgación — es la única conforme al Artículo 50, vigente hace dos meses.** ⚠️ **Moodle vuelve con 400 M usuarios / 150.000 sitios por segunda fuente independiente, pero su terna sigue sin cerrar contra el *«más de 300 M»* del pase 55, así que sigue sin publicarse como cifra firme.** 🟢 **Cifra de encuadre que SÍ es publicable: el mercado de LMS llegó a **$54,86 B** y las organizaciones con LMS open source reportan **31 % menos de TCO**.** Ver **P132**–**P135** y el patrón nuevo **P136** y las tendencias **338**–**369**.
@@ -102,6 +103,66 @@ updated: 2026-10-03
 > versiones), así que lo permisivo (`qti3-*`, `instructure/qti`) es **lo único proponible** — con **`qti3-a11y`** y
 > **`qti3-pnp`**, que abren accesibilidad de evaluación como entregable auditable (**P72**). ⚠️ **Open edX cambia de
 > recomendación: proponer con presupuesto de mantenimiento (gap 70).** Ver la sección del pase 33, abajo.
+
+## 🧱 La capa de currículo de la vertical, ahora con ALEMANIA y ESPAÑA — y la licencia como la variable que decide el modelo de entrega (pase 62 del 2026-10-03)
+
+> **El pase 61 estableció el modelo de esta sección: la plataforma (Moodle, Open edX, OpenEduCat,
+> Chamilo) trae el CONTENEDOR y no trae el CURRÍCULO, y el currículo es la pieza más cara de
+> reconstruir en cualquier engagement educativo.** **Este pase amplía la capa a dos países más y,
+> sobre todo, le pone la columna que faltaba: con qué licencia se puede entregar cada una.**
+
+### 🟢 Las dos piezas nuevas, con la licencia leída del archivo
+
+| Pieza | Región | Licencia | Formato | Qué le agrega a una plataforma |
+|---|---|---|---|---|
+| [`FWU-DE/lehrplan-ontologie`](https://github.com/FWU-DE/lehrplan-ontologie) | **EMEA** (Alemania) | 🔴 **ninguna** (`LICENSE` 404, `LICENSE.md` 404, nada en README ni barra lateral) | **RDF/OWL + Turtle**, 4 variantes (`lp.owl`, `-full`, `-base`, `-simple`) | **Los 16 Bundesländer** con la terminología de cada Land preservada: materias, cursos, tipos de escuela, itinerarios, niveles de titulación, competencias y contenidos. ⚠️ Fuera de alcance: FP y educación especial |
+| [`nmarafo/open-lex-edu`](https://github.com/nmarafo/open-lex-edu) | **EMEA** (España) | ⚠️ **CC BY-SA 4.0**, `LICENSE.md` **en la raíz** | **Markdown + frontmatter YAML**, `index.yaml` con grafo de referencias cruzadas | **832 normas** en 9 categorías: currículos mínimos del Estado (RD 95/2022, 157/2022, 217/2022, 243/2022) + decretos LOMLOE de **17 CCAA + 2 ciudades**, Infantil a Bachillerato |
+
+### 🔴 Y la columna que cambia el modelo de entrega: de siete artefactos, UNO es entregable sin condiciones
+
+| Región | Artefacto de currículo | Licencia | Qué modelo de entrega habilita |
+|---|---|---|---|
+| **North America** | renderizaciones JSON de Common Core | 🔴 **sin archivo** | 🔴 **construir o comprar la capa: no hay base citable** |
+| **EMEA** (Alemania) | `FWU-DE/lehrplan-ontologie` — **16 Länder** | 🔴 **ninguna** | ⚠️ **referencia interna, no entregable — hasta que se aclare** |
+| **EMEA** (España) | `OpenDidactia` + `open-lex-edu` | ⚠️ **CC BY-SA 4.0** | ⚠️ **entregable con *share-alike* como PARTIDA DEL CONTRATO** |
+| **LATAM** (Brasil) | `bncc-dev/bncc-dados` y familia | 🟢 **CC BY 4.0** | 🟢 **entregable con atribución** |
+| **APAC** (Corea) | `DECK6/korean-elementary-learning-map` | 🟢 **MIT** | 🟢 **entregable sin condiciones** |
+| **APAC** (Australia) | MRAC / ACARA | 🔴 **ilegible** (`gap 254`) | ⚠️ **indeterminado: no cotizar sobre esto** |
+
+🔵 **La lectura para esta vertical, que es distinta de la lectura de mercado:** la decisión de
+«partir de algo que ya funciona» **no se toma sobre la plataforma, se toma sobre el DATO**. La
+plataforma siempre está (Moodle es GPL y está en todas partes); **lo que varía por región, y varía
+hasta cambiar el modelo de negocio, es si el currículo se puede empaquetar en el entregable.**
+
+🔴 **Consecuencia concreta, y conviene decirla al cotizar:** el mismo proyecto —«agente docente
+sobre el LMS que el cliente ya tiene, aterrizado al currículo oficial»— **es un proyecto distinto
+en cada región.** En **Corea** se integra; en **Brasil** se integra y se atribuye; en **España** se
+integra y la obligación *share-alike* entra al contrato; en **Alemania** hay que gestionar una
+licencia antes de empezar; en **North America** hay que **producir** la capa. ⚠️ **Y la cifra que
+lo vuelve una conversación de dinero: es la pieza más cara de reconstruir y la peor licenciada de
+toda la cadena.**
+
+🟢 **La gestión más barata con mayor retorno de esta capa, anotada como acción:** `lehrplan-ontologie`
+es técnicamente la mejor ontología de currículo que esta base tiene medida —16 estados, RDF/OWL— y
+está bloqueada por un archivo ausente, no por una limitación. **Pedir o aclarar la licencia
+desbloquea Alemania entera.**
+
+### ⚠️ Reproducción del no-hallazgo de la búsqueda obligatoria de plataformas, por tercer pase
+
+**La búsqueda `open source platform education ERP CRM MIT Apache` volvió a devolver, en esta corrida,
+DIEZ resultados de los cuales nueve son `openeducat.org`** —el sitio de un solo proveedor, en varios
+idiomas y varias rutas— **más un enlace a `linux.com`.** 🔴 **Es el mismo monocultivo de SEO que los
+pases anteriores registraron, y se reconfirma en vez de volver a investigarse.**
+
+🟢 **OpenEduCat ya está medido en esta base: LGPL-3.0, 70+ módulos, sobre Odoo** —y la cifra que el
+proveedor publica, **30.000+ instituciones en 130+ países**, es de su propio sitio y **se registra
+como declaración del proveedor, no como dato verificado.** ⚠️ **LGPL-3.0 no es permisiva: entra en
+la misma conversación de copyleft que Moodle, no en la de MIT/Apache.**
+
+🔵 **Consigna que se mantiene para el próximo pase:** esta consulta está agotada y sigue en el
+barrido obligatorio. **El rendimiento de la vertical no está en buscar «plataforma»: está en buscar
+la CAPA que la plataforma no trae** —currículo, banco de ítems, rúbrica, rostering— **que es
+exactamente de donde salieron las piezas de los pases 61 y 62.**
 
 ## 🧱 La capa de CURRÍCULO como vertical de partida — el dato que la plataforma NO trae (pase 61)
 

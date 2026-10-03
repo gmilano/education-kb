@@ -8,6 +8,7 @@ updated: 2026-10-03
 
 > Bases sobre las cuales construir. Verificado repo por repo vía WebFetch el 2026-09-30 (capas del pase 10, el 2026-10-01).
 > Leer la columna **Licencia** antes de proponer: media KB de educación es GPL/AGPL, no permisiva.
+> **Pase 62 del 2026-10-03:** 🟢 **+3 repos fundacionales y la capa de currículo extendida a ALEMANIA (`FWU-DE/lehrplan-ontologie`: los 16 Bundesländer en RDF/OWL) y a ESPAÑA (`nmarafo/open-lex-edu`: 832 normas con frontmatter YAML e `index.yaml` de referencias cruzadas).** 🔴 **Y el dato que decide: de SIETE artefactos de currículo medidos en cuatro regiones, exactamente UNO es permisivo y legible (Corea, MIT) — dos son *share-alike*, uno CC BY, DOS NO TIENEN LICENCIA y uno es ilegible. La capa más cara de reconstruir es la peor licenciada, y la región con más presupuesto (NA) y la de mayor cobertura técnica (Alemania) son justo las dos sin cesión.** 🔴 **El `gap 255` del pase 61 se auto-refuta en España: declaraba «sin artefacto» un país que esta base cubre desde el pase 3 en siete archivos — una declaración de hueco tiene que correr contra el índice propio antes de salir a buscar** (**P162**). 🟢 **Y `open-lex-edu` es el control negativo que a P153 le faltaba y lo pasa: su licencia de DATO sí está en la raíz.**
 > **Pase 61 del 2026-10-03:** 🟢 **+12 filas fundacionales y las cuatro regiones tocadas, tras varios pases sin altas — porque este pase ejecutó la acción pre-registrada que llevaba ciclos pendiente: buscar `curriculum ontology`, `achievement standards`, `learning map` e `item bank` POR PAÍS, en vez de buscar «agentes educativos».** 🔴 **Leer las DOS columnas de licencia: la capa es dual (código permisivo / dato con atribución) y el archivo del DATO no está en la raíz en dos de tres casos —`dados/LICENSE.md` adentro del directorio de datos, `LICENSE-DADOS.md`, `DATA-LICENSE.md`—, así que el probe de raíz de P114/P115 reporta «MIT» para toda la capa y MIT cubre la parte sin valor** (**P153**). 🟢 **Lo licenciable es la COMPILACIÓN, no el currículo: los textos normativos son actos de Estado no protegidos (art. 8º IV de la Lei 9.610/98; OGL v3.0 como *public sector information*)** (**P154**). 🔴 **Y la asimetría regional invierte el gap 4: LATAM tiene CC BY 4.0 con procedencia por registro, EMEA tiene OGL v3.0 con permiso comercial explícito, APAC tiene publicación oficial del Estado — y North America, el 38 % del mercado, reparte sus estándares entre 50 estados y sus tres renderizaciones JSON en GitHub NO tienen archivo de licencia** (**P159**).
 > **Pase 59 del 2026-10-03:** ⚠️ **cero plataformas nuevas y el barrido obligatorio completo (cuatro globales + cuatro regionales, año calculado: 2026) volvió por DUODÉCIMA vez con la capa genérica y material didáctico *sobre* AI.** 🔴 **El hallazgo del pase es de LICENCIA y cambia el ORDEN de los filtros: el MCP de Moodle más estrellado que apareció —`loyaniu/moodle-mcp`, 37 ★, el segundo de toda esta capa tras los 272 de `vishalsachdev`— NO TIENE LICENCIA: `LICENSE` ausente en `main` y en `master` y sin clave `license` en `pyproject.toml`. Es inusable por Globant, y las tres permisivas del mismo barrido tienen 0 ★** (**P147**, tercera reproducción de la curva invertida de P134/P138, ahora sobre la licencia). 🔵 **Regla que queda escrita: el filtro de licencia se aplica ANTES del de popularidad, porque el orden inverso selecciona lo que no se puede entregar.** ⚠️ **Corrección de CANAL, y toca al verificador de licencias de esta base: `curl -sI` contra `github.com` devolvió `403` en los OCHO repos probados —el proxy de egreso bloquea `HEAD` sobre el HTML, no es un 404—, así que la verificación se hizo por `raw.githubusercontent.com` (200) y `WebFetch`, dos canales concordantes. Los veredictos de licencia de este pase siguen valiendo porque sus sondas fueron contra `raw`, que responde.** ⚠️ **Nota de instrumento: segunda reproducción consecutiva de la negativa a ejecutar el código clonado, incluidas las suites OFFLINE, así que ninguna cifra de `compose/code/` se re-verificó en este pase.** Ver **P145**–**P148** y las tendencias **402**–**412**.
 > **Pase 57 del 2026-10-03:** ⚠️ **cero repos nuevos y el barrido obligatorio completo (cuatro globales + cuatro regionales, año calculado: 2026) volvió por UNDÉCIMA vez con la capa genérica y material didáctico *sobre* AI** — y por segunda vez devolvió una pieza de esta propia base (`DeepTutor`) presentada como novedad. 🔴 **El hallazgo del pase es sobre un repo que esta base ya tenía y cuyo ÁRBOL SE MUDÓ: `moodle/moodle` relocalizó todo el código de la aplicación bajo `public/` en Moodle 5.** Medido con 12 sondas: `main/mod/assign/locallib.php` da **404** mientras `main/public/mod/assign/locallib.php` da **200** y `MOODLE_405_STABLE/mod/assign/locallib.php` da **200**. ⚠️ **Y la nota de instrumento que sale de ahí toca el verificador de licencias de esta base: `main/README.md` y `main/config-dist.php` dan 200 mientras `main/version.php` —de la MISMA raíz— da 404, así que una sonda de rama contra `README.md` NO prueba que el árbol esté en esa rama.** 🔵 **El veredicto «`LICENSE` 404 en `main` y `master`» sigue valiendo como *«no está en esa rama»*, pero no como *«el proyecto no tiene licencia»* cuando el proyecto mudó su árbol. Regla nueva: la sonda tiene que ser el archivo que se va a leer, no un hermano cualquiera** (**gap 250**). 🟢 **El valor del pase está en el instrumento, otra vez: 14 suites corridas OFFLINE con 383 aserciones y 0 fallas, una NUEVA (`grading-draft-gate` 37/37, la acción 2 del pase 56) y con TRES MUTACIONES que prueban que la suite nueva puede fallar (31/37, 36/37, 35/37).** 🔴 **Y una corrección que esta base se hace sobre su propia recomendación fundacional: nueve pases citaron el `readyforreview` de `toshieji/moodle-grading-mcp` como el patrón de cumplimiento a copiar, y la lectura del código de Moodle (`public/mod/assign/locallib.php:3001`) muestra que la garantía depende de `markingworkflow=1` en la TAREA — con `markingworkflow=0` Moodle publica la nota igual** (**P139**). ⚠️ **Dato de licencia que no cambia: la pieza de escritura docente mejor guardada de la capa sigue siendo MIT con 0 ★, y la puerta oficial de Open edX sigue siendo AGPL-3.0.** Ver **P137**–**P141** y las tendencias **370**–**392**.
@@ -75,6 +76,109 @@ corre ése antes de escribir uno a mano** (tendencia **313**). 🟢 **Y el `gafa
 > y 5 en `schemas12/`, y contar sólo el primero es lo que hizo invisible el segundo dialecto de SCORM (**P106**).
 > **Pase 36 del 2026-10-02:** 🔵 **este pase no agrega repos: le pone FECHA a los que ya están, y la fecha cambia tres recomendaciones.** Se midió la capa PHP de evaluación y telemetría en Packagist —el único registro de los tres que entrega descargas en este entorno (`api.npmjs.org` y `pypistats.org` dan **403 a CONNECT**)— y el resultado está en `repos/trending.md`. **Lo que hay que saber antes de proponer desde este archivo:** 🔴 **la pieza xAPI más descargada de esta base, `rusticisoftware/tincan` (Apache-2.0, 6.178 desc./mes, 863.777 totales), no publica desde el 2022-11-02**, y ⚠️ **el único MIT de esa capa, `php-xapi/client`, está parado desde el 2021-03-24** con 825 desc./mes. 🔵 **La lectura es que en xAPI/PHP lo permisivo está quieto y lo vivo es copyleft**, así que la receta de telemetría se sostiene en **Ralph (MIT)** + **`lrsql` (Apache-2.0)** + **`learnmcp-xapi` (MIT)** y no en la capa PHP. 🟢 **Del lado de evaluación, lo activo es `oat-sa/extension-tao-testqti`** (**885 versiones**, release del **2026-09-30**) **y sigue siendo GPL-2.0-only**, mientras **lo permisivo es lo nuevo**: `@longsightgroup/qti3-cli` (**MIT**, 41 releases desde el 2026-05-21, último **2026-10-01**) con **cero dependencias de terceros** — sus 4 dependencias son todas `@longsightgroup/*` pinneadas a la misma versión exacta. **Su manifiesto MCP completo de 20 tools está escrito en `compose/patterns.md` (P76).** 🔴 **Y una corrección de catálogo: `oat-sa/qti-sdk` devuelve 404 en Packagist porque es el nombre del REPO — su paquete es `qtism/qtism`** (GPL-2.0-only, 218.212 descargas totales, 315 versiones). **Nombre de repo y nombre de paquete son identificadores distintos, y confundirlos produce un 404 que parece una ausencia** — pasó igual con `1edtech/oneroster`, `imsglobal/lti-1-3-php-library` y `packbackbooks/lti-1-3-php-library`, los tres **404**, que se anotan como *«no verificado en Packagist bajo ese nombre»* y **no** como inexistentes. ⚠️ **Acción pendiente que el pase 37 tiene asignada: este archivo nunca pasó por el control de *slugs* distintos ni por el de *backlink*** — los dos que en `agents/top.md` encontraron **un duplicado** y **dos colisiones** este mismo pase.
 > **Pase 11 del 2026-10-01:** aparece una licencia que las diez pasadas anteriores filtraban sin saberlo — **ECL-2.0**, con la que licencia todo Apereo (Sakai, Opencast, OpenLRW). Es Apache-2.0 con el alcance de patentes acotado, aprobada por OSI y FSF, y **es apta para construir arriba**. Ver la capa de analítica institucional, abajo.
+
+## 🌍 La capa de currículo, ampliada a ALEMANIA y a ESPAÑA — y el reparto de licencias de toda la capa, que es el dato que decide (pase 62 del 2026-10-03)
+
+> **El pase 61 cerró declarando `gap 255`:** *«Para Alemania, Francia, España, Italia, Nórdicos,
+> África, México, Colombia, Argentina, Chile y Perú este pase no encontró artefacto de currículo
+> estructurado: es hueco medido, no cobertura.»* **Este pase lo trabajó país por país, buscando en el
+> idioma del país. 🔴 El primer resultado es que el gap estaba mal declarado.**
+
+### 🔴 `gap 255` se auto-refuta en España: la KB ya cubría el país desde el pase 3
+
+**España figura en el `gap 255` como país sin artefacto de currículo estructurado.** 🔴 **Esta base
+tiene [`nmarafo/OpenDidactia`](https://github.com/nmarafo/OpenDidactia) —LOMLOE, 17 comunidades
+autónomas + 2 ciudades, de Infantil a FP— registrado desde el pase 3 y citado en SIETE archivos**
+(`agents/top.md`, `agents/trending.md`, `repos/foundations.md`, `repos/trending.md`,
+`compose/patterns.md`, `intel/market.md`, `intel/trends.md`), **con la región escrita como
+«EMEA (España)»**.
+
+🔵 **El gap no se declaró contra el mercado: se declaró sin leer la propia base.** ⚠️ **Es un defecto
+del mismo tipo que los 114 *backlinks* colgados del pase 60 —la KB afirmando sobre sí misma sin
+medirse— y por eso se anota como regla: una declaración de hueco por país tiene que correr contra el
+índice de la base ANTES de salir a buscar** (**P162**).
+
+### 🟢 Lo que SÍ es nuevo en España, y es la pieza grande: `open-lex-edu`
+
+**`OpenDidactia` apuntaba a un repositorio de CONTENIDO que esta base nunca había registrado.**
+
+| Repo | Región | Licencia | Dónde está el archivo | Qué trae |
+|---|---|---|---|---|
+| [`nmarafo/open-lex-edu`](https://github.com/nmarafo/open-lex-edu) | **EMEA** (España) | ⚠️ **CC BY-SA 4.0** | 🟢 **`LICENSE.md` en la RAÍZ** | 🟢 **832 normas estructuradas** en 9 categorías canónicas: Markdown con **frontmatter YAML** por documento (jurisdicción, fechas, estado, relaciones) y un **`index.yaml` global con grafo de referencias cruzadas**. Currículos mínimos del Estado (**RD 95/2022, 157/2022, 217/2022, 243/2022**) + los decretos LOMLOE de las **17 comunidades + 2 ciudades**, Infantil a Bachillerato. Declara cobertura completa al **2026-09-15**. 143 commits, 0 ★ |
+
+🟢 **Y es el CONTROL NEGATIVO que a P153 le faltaba, y lo pasa:** P153 (pase 61) dice que en la capa
+de currículo *«el archivo que declara la licencia del DATO no está en la raíz»* y que por eso el
+probe de nombres de raíz devuelve la licencia de la parte sin valor. **Acá el dato declara su
+licencia en `LICENSE.md` de la raíz, y el probe lo encontraría.** 🔵 **P153 describe un defecto
+FRECUENTE, no universal — y ahora tiene su contraejemplo medido** (regla de P126).
+
+⚠️ **Pero la licencia es `CC BY-SA`, igual que `OpenDidactia`: *share-alike* en las dos piezas
+españolas.** 🔴 **España entera, en esta capa, es copyleft de contenido: derivar el esquema con los
+datos del cliente arrastra la obligación. No es un bloqueo, es una partida del contrato.**
+
+### 🟢 Alemania se cubre — y se cubre SIN licencia, que es el hallazgo
+
+| Repo | Región | Licencia | Cobertura | Medición |
+|---|---|---|---|---|
+| [`FWU-DE/lehrplan-ontologie`](https://github.com/FWU-DE/lehrplan-ontologie) | **EMEA** (Alemania) | 🔴 **NINGUNA** | **los 16 Bundesländer** (`lp-land-XX-full.owl`: BB, BE, BW, BY, HB, HE, HH, MV, NI, NW, RP, SH, SL, SN, ST, TH) | **10 ★**, 4 forks. **RDF/OWL + Turtle** en cuatro variantes (`lp.owl`, `lp-full`, `lp-base`, `lp-simple`). Modela competencias, contenidos, materias, cursos, tipos de escuela, itinerarios y niveles de titulación, **conservando la terminología de cada Land**. ⚠️ Fuera de alcance declarado: FP y educación especial |
+| [`teacherspet-cloud/schul-apps`](https://github.com/teacherspet-cloud/schul-apps) | **EMEA** (Alemania) | 🔴 **ninguna declarada** | ⚠️ **15 de los 16 Länder — falta Renania-Palatinado** | 0 ★, 216 commits. Temas de Lehrplan como dato estructurado + `resources/cefr/levels.json`. ⚠️ El propio README avisa que donde el documento oficial no decía nada *«bleibt das Feld leer»* |
+
+🔴 **`FWU-DE/lehrplan-ontologie` es la pieza de currículo con la mayor cobertura poblacional de toda
+esta capa —los 16 estados alemanes, en RDF/OWL— y NO TIENE LICENCIA.** Comprobado por tres caminos
+en esta corrida: **`main:LICENSE` → 404**, **`main:LICENSE.md` → 404**, **ninguna declaración de
+licencia en el README ni en la barra lateral del repo.**
+
+⚠️ **Lo que este pase NO verificó de primera mano: qué es «FWU».** La organización en GitHub se llama
+`FWU-DE` y el repo tiene forma de obra institucional, **pero la expansión de la sigla y su carácter
+público no se leyeron en ninguna fuente primaria en esta corrida: no se afirma.** 🔵 **Importa, porque
+si es un organismo público la ausencia de licencia es una gestión pendiente y se puede pedir; si no,
+es una decisión.** **Queda como acción del pase 63.**
+
+### 🔴 El reparto de licencias de TODA la capa de currículo, que es el dato que decide un engagement
+
+**Juntando lo del pase 61 con lo de éste, la capa completa que esta KB tiene medida:**
+
+| Región | Artefacto | Licencia | ¿Usable en entregable comercial? |
+|---|---|---|---|
+| **North America** | las tres renderizaciones JSON de Common Core en GitHub | 🔴 **sin archivo de licencia** (pase 61) | 🔴 **no** |
+| **EMEA** (Alemania) | `FWU-DE/lehrplan-ontologie` — **16 Länder, RDF/OWL** | 🔴 **ninguna** (3 comprobaciones, este pase) | 🔴 **no** |
+| **EMEA** (España) | `OpenDidactia` + `open-lex-edu` — LOMLOE, 17 CCAA, 832 normas | ⚠️ **CC BY-SA 4.0** | ⚠️ **sí, con *share-alike* como partida del contrato** |
+| **EMEA** (Inglaterra) | `bbc/curriculum-data` | — | ⚠️ **último commit 2014** |
+| **LATAM** (Brasil) | `bncc-dev/bncc-dados` y familia — BNCC | 🟢 **CC BY 4.0** (`dados/LICENSE.md`) | 🟢 **sí, con atribución** |
+| **APAC** (Corea) | `DECK6/korean-elementary-learning-map` — 620 anclas, 2.293 prerrequisitos | 🟢 **MIT** | 🟢 **sí** |
+| **APAC** (Australia) | MRAC / ACARA | 🔴 **ilegible** — `gap 254`, reconfirmado | ⚠️ **indeterminado** |
+
+🔴 **El dato que vende, y es el resumen de dos pases: de SIETE artefactos de currículo medidos en
+cuatro regiones, exactamente UNO es permisivo y legible —Corea, MIT—. Dos son *share-alike*, uno es
+CC BY, dos no tienen licencia y uno es ilegible.** 🔵 **La capa más cara de reconstruir en cualquier
+engagement educativo es también la peor licenciada, y el extremo permisivo es la EXCEPCIÓN.**
+
+⚠️ **Y la asimetría regional se invierte respecto de lo que uno esperaría:** la región con más
+presupuesto (**North America**) y la de mayor cobertura técnica (**Alemania**) son las dos que **no
+tienen cesión**, mientras las dos utilizables vienen de **Brasil y Corea**.
+
+### ⚠️ Lo que queda abierto de `gap 255`, medido y no inferido
+
+🔴 **Francia, Italia, Nórdicos y África: este pase no los buscó** (se gastó el presupuesto de
+búsqueda en Alemania y en el hispanohablante). **Siguen abiertos y NO se leen como cobertura.**
+
+🔴 **LATAM hispanohablante sigue sin artefacto, y ahora con la búsqueda documentada.** Buscado en
+español para México, Colombia, Argentina, Chile y Perú. **Lo que existe es dato ESTADÍSTICO, no
+currículo estructurado y versionado:**
+
+- **Argentina** — bases de la Evaluación Nacional **Aprender** y del **Relevamiento Anual**
+  (`argentina.gob.ar/educacion/evaluacion-e-informacion-educativa/datos-abiertos`), con escritorio
+  virtual y salida a R/Excel/PSPP. **Desempeño y variables del sistema, no el currículo.**
+- **Colombia** — conjunto de datos abiertos del **Ministerio de Educación Nacional**. Ídem.
+- **Chile** — **Datos Abiertos del Centro de Estudios del Mineduc** (establecimientos, estudiantes,
+  docentes) y el portal **`curriculumnacional.cl`**, que publica objetivos de aprendizaje por curso y
+  asignatura. ⚠️ **Es un PORTAL de consulta, no un artefacto versionado en un repositorio: es el
+  candidato más cercano de la región y la pieza a atacar primero.**
+- **México** — PLANEA usada para definir currículo y materiales; **sin artefacto estructurado hallado.**
+
+🔵 **Conclusión honesta de la región: Brasil sigue siendo el ÚNICO país de LATAM con la capa de
+currículo en un repositorio con licencia legible.** **No es que LATAM no tenga dato abierto: tiene
+mucho, y es del eje equivocado.**
 
 ## 🌍 Capa fundacional de CURRÍCULO nacional estructurado — las cuatro regiones, con la licencia del DATO medida (pase 61)
 

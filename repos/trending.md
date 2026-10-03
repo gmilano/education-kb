@@ -8,6 +8,75 @@ updated: 2026-10-03
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 
+## 2026-10-03 (pase 62) — **el dato crudo del barrido de forks: 13 repos abiertos uno por uno, 3 rutas de `LICENSE` probadas en la puerta más forkeada (las tres 404), y el canal de API caído**
+
+### 🔴 Canal de medición de esta corrida, declarado antes que los datos
+
+| Canal | Resultado | Consecuencia |
+|---|---|---|
+| `curl` → `github.com` | 🔴 **403** | inutilizable para verificar existencia |
+| `curl`/WebFetch → `api.github.com` | 🔴 **403** | 🔴 **ninguna cifra de este pase viene de la API** |
+| WebFetch → página HTML del repo | 🟢 **200** | de acá salen `★`, forks, commits y la línea `forked from` |
+| WebFetch → `raw.githubusercontent.com` | 🟢 **200** / **404** limpio | de acá salen las licencias leídas y los 404 |
+
+🟢 **Control de canal:** el mismo `raw` que devolvió **404** para `DMontgomery40/mcp-canvas-lms:LICENSE`
+devolvió **200** y el texto completo para `ashleycribb/learnmcp-xapi:LICENSE`. **El 404 discrimina.**
+
+### Los repos tocados, con lo que se midió en cada uno
+
+| Repo | ¿Fork de? | Licencia medida | ★ | Qué se midió |
+|---|---|---|---|---|
+| [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | — madre | **MIT** | **272** | README: **103 *tools*, 8 skills**, v1.13.0 (sep 2026) |
+| [`BartMassey-upstream/canvas-mcp`](https://github.com/BartMassey-upstream/canvas-mcp) | 🔴 `vishalsachdev` | **MIT** | 0 | 🔴 README: **139 *tools***, **v1.13.0 — la misma release que la madre** |
+| [`lindsay-cheng/canvas-mcp`](https://github.com/lindsay-cheng/canvas-mcp) | 🔴 `vishalsachdev` | **MIT** | 0 | README: 103 *tools*, v1.12.0 (ago 2026) |
+| [`AmirF194/canvas-mcp`](https://github.com/AmirF194/canvas-mcp) | 🔴 `vishalsachdev` | **MIT** | 0 | README: **101 *tools*** («80+» en la descripción) |
+| [`DMontgomery40/mcp-canvas-lms`](https://github.com/DMontgomery40/mcp-canvas-lms) | no | 🔴 **ninguna** | **103** (**39 forks**) | 🔴 **tres rutas probadas, las tres 404** (ver abajo) |
+| [`Dymayo/moodler-mcp`](https://github.com/Dymayo/moodler-mcp) | 🔴 `GhaithAlHallak8/moodler-mcp` | **MIT** | 0 | 75 commits; **5 variables declaradas**, 2 son compuertas apagadas |
+| [`GhaithAlHallak8/moodler-mcp`](https://github.com/GhaithAlHallak8/moodler-mcp) | no — **madre** | **MIT** | 2 | 75 commits; mismo flujo de token móvil |
+| [`ashleycribb/learnmcp-xapi`](https://github.com/ashleycribb/learnmcp-xapi) | 🔴 `DavidLMS/learnmcp-xapi` | 🟢 **MIT leída en el archivo** | 0 | 34 commits; `LICENSE` **propio en la raíz**: *«MIT License / Copyright (c) 2025 David Romero»* |
+| [`DavidLMS/learnmcp-xapi`](https://github.com/DavidLMS/learnmcp-xapi) | no — madre | **MIT** | 15 | 32 commits; ⚠️ **sin marca de archivado**, issues y guía de contribución abiertas |
+| [`Orenda-Project/rumi-platform`](https://github.com/Orenda-Project/rumi-platform) | no — **madre** | 🟢 **Apache-2.0** (`LICENSE` raíz) | **17** (16 forks) | 677 commits; 15 idiomas; 890 videos + 10.929 preguntas |
+| [`Jazy1/rumi-pinokio`](https://github.com/Jazy1/rumi-pinokio) | 🔴 `Orenda-Project/rumi-platform` | Apache-2.0 | 0 | 317 commits. **No se da de alta: se da de alta la madre** |
+| [`nmarafo/open-lex-edu`](https://github.com/nmarafo/open-lex-edu) | no | ⚠️ **CC BY-SA 4.0**, `LICENSE.md` **en la raíz** | 0 | 143 commits; **832 normas**, frontmatter YAML, `index.yaml` con grafo |
+| [`FWU-DE/lehrplan-ontologie`](https://github.com/FWU-DE/lehrplan-ontologie) | no | 🔴 **ninguna** | **10** (4 forks) | RDF/OWL + Turtle, **16 Bundesländer**; `LICENSE` 404, `LICENSE.md` 404, nada en README ni barra lateral |
+| [`teacherspet-cloud/schul-apps`](https://github.com/teacherspet-cloud/schul-apps) | no | 🔴 **ninguna declarada** | 0 | 216 commits; ⚠️ **15 de 16 Länder, falta Renania-Palatinado** |
+
+### 🔴 La puerta más forkeada de esta KB promete una licencia que no existe (P161)
+
+**`DMontgomery40/mcp-canvas-lms` — 103 ★, 39 forks.** El README dice literalmente
+*«MIT License - see LICENSE file for details»*. **Las tres rutas probadas en esta corrida:**
+
+| Ruta | Resultado |
+|---|---|
+| `main:LICENSE` | 🔴 **404** |
+| `main:LICENSE.md` | 🔴 **404** |
+| `master:LICENSE` | 🔴 **404** |
+
+🔵 **Segundo caso de la misma forma** (el primero: `@timadey/proctor`, pase 41 — MIT anunciada, sin
+`LICENSE` en ninguna rama de toda la historia). **Se nombra P161: la licencia declarada sólo en
+prosa.** 🔴 **Acá tiene escala: 39 forks reciben del upstream la ausencia de cesión, no la MIT que
+el README promete.**
+
+⚠️ **Lo que NO se midió:** el listado de forks sólo muestra **15 activos en dos años** de los 39.
+**No se abrió fork por fork** para ver si alguno agregó un `LICENSE` propio. **La frase «39 heredan
+la ausencia» es sobre lo que reciben del upstream, no una lectura de los 39.** 🔵 **Dato lateral que
+conviene anotar: entre esos 15 está `bruchris/mcp-canvas-lms`, y `bruchris/canvas-lms-mcp` es una
+puerta clase (a) independiente de esta KB — el mismo autor aparece a los dos lados del eje.**
+
+### 🔴 Ruido medido y rechazos, para que el próximo pase no lo vuelva a pagar
+
+- **La búsqueda global de «top open source AI agents education 2026 github MIT» devolvió, otra vez,
+  marcos de agente genéricos** (openclaw, browser-use, AutoGen, Flowise, dify, «Hermes Agent»)
+  **y ni una sola pieza de educación.** 🔴 **Es la quinta vez que esta consigna se confirma: en esta
+  industria el rendimiento está en buscar el DOMINIO (LMS, currículo, rúbrica, proctoring,
+  Lehrplan), no en buscar «agente».**
+- ⚠️ **Y una cifra de esa búsqueda que NO se copia a esta KB:** se afirmaba «Hermes Agent, MIT,
+  180.000 ★ desde su lanzamiento en febrero de 2026, el framework OSS de más rápido crecimiento».
+  🔴 **No se verificó, no es educación, y esta base ya se quemó con conteos de estrellas inflados
+  por el pipeline (ver la corrección registrada en `rotation.json` para technology). No entra.**
+- **`holt00/TFG-open-cvn-schema`** apareció buscando currículo español: 🔴 **es un esquema de
+  *curriculum vitae* académico, no de currículo escolar.** **Falso amigo del término, anotado.**
+
 ## 2026-10-03 (pase 61) — **el dato crudo: 14 repos probados por licencia archivo por archivo (≈120 requests), 4 archivos de licencia leídos enteros, 4 endpoints oficiales bloqueados y 1 recomendación secundaria refutada**
 
 ### Los repos tocados, con lo que se midió en cada uno

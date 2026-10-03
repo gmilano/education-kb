@@ -8,6 +8,7 @@ updated: 2026-10-03
 
 > Key players, market map y oportunidades por región.
 > Investigado 2026-09-30; el pase 11, el 2026-10-01. Las estimaciones de tamaño de mercado varían mucho entre firmas: se listan todas con su fuente en vez de elegir una.
+> **Pase 62 del 2026-10-03:** 🔴 **el aporte de mercado de este pase es el reparto de LICENCIAS de la capa de currículo, cerrado sobre dos pases y las cuatro regiones: de SIETE artefactos medidos, exactamente UNO es permisivo y legible (Corea, MIT) — dos *share-alike*, uno CC BY, DOS sin licencia y uno ilegible. La región con más presupuesto (North America) y la de mayor cobertura técnica (Alemania, 16 Bundesländer en RDF/OWL) son justo las dos SIN CESIÓN, así que la capa más cara de cualquier engagement educativo es también la peor licenciada.** 🟢 **Las cuatro regiones rindieron: NA con 134 proyectos de ley en 31 estados y sólo 18 % del profesorado con guía escrita; EMEA con el quinto canal concordante sobre el diferimiento del alto riesgo a 2027-12-02; APAC con la Ley Marco coreana EN VIGOR desde enero y la única pieza de currículo permisiva de la base; LATAM con UNESCO IESALC (91,5 % / 75 %) como SEGUNDO instrumento de la brecha de gobernanza — que no se mezcla con el 92 % / 79 % del DEC.**
 > **Pase 61 del 2026-10-03:** 🟢 **el aporte de mercado de este pase es una capa entera colocada por región —el currículo nacional estructurado, la pieza más cara de cualquier agente docente (gap 4)— y por primera vez las cuatro regiones tienen veredicto propio y medido.** 🟢 **LATAM gana: Brasil tiene el artefacto mejor instrumentado (MIT / dato CC BY 4.0, 1.721 aprendizajes con procedencia POR REGISTRO, MCP hospedado SIN API key) y encima produce el número que vende la capa —alucinación 31,9 % → 0,2 % con el dato en el prompt, 2,3 % vía MCP, en pares y con pre-registro—.** 🟢 **EMEA tiene la licencia más limpia: OGL v3.0 con permiso comercial EXPLÍCITO sobre una ontología OWL/SKOS/SHACL del National Curriculum inglés.** 🟢 **APAC es el único caso sin intermediario —MRAC lo publica ACARA, el organismo curricular mismo— ⚠️ pero su licencia quedó sin leer por bloqueo de egreso (gap 254).** 🔴 **Y North America, con el 38 % del mercado, es la PEOR servida: las tres renderizaciones JSON del Common Core en GitHub no tienen archivo de licencia, la única pieza permisiva (`CEDS-Ontology`, Apache 2.0) no es currículo sino un modelo de entidades, y el camino que queda —CASE Network 2— es un servicio hospedado que se COTIZA como integración, no como reuso** (**P159**). ⚠️ **Las coberturas se declaran: EMEA es Inglaterra y LATAM es Brasil — el resto de las dos regiones es hueco medido, no cobertura** (**gap 255**).
 > **Pase 59 del 2026-10-03:** 🔴 **el aporte de mercado de este pase es la cifra de NA que convierte el hallazgo técnico de esta KB en una venta: Gallup + Walton Family Foundation, *«Teaching for Tomorrow: Closing the Expectations Gap»* (campo 9-feb a 2-mar de 2026, n = 2.069 docentes de K-12 públicos de EE. UU.) mide que sólo el 18 % tiene guía FORMAL sobre uso de AI, el 34 % no tiene NINGUNA, el 48 % sólo informal — y 🔴 el 58 % no tiene guía para usar AI al CALIFICAR o dar devolución (69 % para tutoría 1-a-1).** 🔵 **Ese 58 % es exactamente la capa que esta KB mide, y las dos ausencias se refuerzan: los pases 56-59 establecieron que el ecosistema open source no tiene norma de «borrador + liberación humana» (1 de 9 lo afirma en código, y su garantía depende de una casilla de plataforma), y Gallup establece que la institución tampoco trae la regla. El control es ENTREGABLE, no un supuesto del proyecto.** ⚠️ **Y ya es obligatorio en cuatro estados: Idaho, Oklahoma, Virginia y Maryland exigen guía estatal Y política de distrito; Oklahoma y Maryland prohíben que la AI decida de forma determinante sobre un alumno.** 🔴 **Corrección de fuente EMEA que este pase hace en vez de propagar: una secundaria afirmó *«Entry into force of AI Act on 31 July 2026»* — es FALSO y se descarta; el AI Act entró en vigor el 2024-08-01 y lo de julio de 2026 fue el *AI Omnibus* (2026-07-27). Los tres relojes del pase 58 se sostienen y no se re-litigan.** 🟢 **Dato LATAM nuevo para elegir país de entrada: sólo Brasil (65,89), Chile (63,19) y Uruguay (62,21) entran al top 50 del AI Readiness Index, con Chile «pionero».** 🟢 **Y dato APAC nuevo: 96 % de las organizaciones planea invertir más y 88 % espera retorno este año, con ROI declarado de 2,85 USD por dólar.** ⚠️ **El hueco LATAM se declara por décimotercera vez: ninguna de las nueve puertas medidas declara origen LATAM, y este pase resistió inferirlo de un antropónimo (regla de **P135**).** Ver las tendencias **402**–**412**.
 > **Pase 56 del 2026-10-03:** 🔴 **el aporte de mercado de este pase es NEGATIVO y es el más caro de los que se pueden dar: la cifra de tamaño de mercado de APAC tampoco es publicable.** Corrida por el instrumento versionado (`market-triple-check/check.py`), la terna de APAC —**$591,6 M (2024) → $1.848,1 M (2029) @ 20,9 %**— exige **25,6 %** y no cierra, igual que la de North America (**15,9 %** declarado contra **19,4 %** exigido), que se reconfirma. 🔴 **Y el hallazgo es que el defecto es SISTEMÁTICO: las dos ternas por geografía del MISMO proveedor fallan en la MISMA dirección —el CAGR declarado es menor que el que exigen sus propios extremos— mientras la terna global de otra fuente cierra con 0,1 punto de holgura ($7,52 B 2025 → $10,6 B 2026 @ 40,9 %, exige 41,0 %).** 🔵 **Regla que endurece: una terna por geografía de este proveedor se asume sospechosa hasta que cierre, porque ya falló en las dos geografías medidas. Se declara el hueco en vez de pegar dos de tres números.** 🟢 **Lo que SÍ se publica de este barrido: el mercado de LMS en $54,86 B con 31 % menos de TCO reportado por quienes usan open source; el EU AI Act confirmado por un CUARTO canal independiente (obligaciones de documentación y transparencia desde agosto 2026, o sea vigentes hace dos meses); y el *backstop* del Artículo 50(2) a 60 días.** 🔴 **Dato regulatorio nuevo de North America, y cambia el guion de venta: no existe un equivalente a la FDA para edtech y la decisión la toma la escuela o el distrito, con Colorado y Texas legislando por pedazos — en EMEA se vende contra una fecha, acá contra un comité.** 🟢 **LATAM aporta el dato de brecha más citable del pase: 13 de los 19 países de la región no enseñan adopción temprana de AI en la escuela (UNESCO IESALC, 200 instituciones, 19 países, ago–oct 2025).** Ver **P132**–**P135** y el patrón nuevo **P136** y las tendencias **338**–**369**.
@@ -1314,6 +1315,34 @@ Dónde se produce el software educativo abierto, que no es donde está la demand
 
 ### North America
 
+#### Agregado en el pase 62 del 2026-10-03 — 🔴 la región legisla a 31 estados mientras el 18 % del profesorado recibe guía escrita, y el currículo sigue sin cesión
+
+**Lo que se midió este pase en la región, con la regulación como eje:**
+
+- 🔴 **134 proyectos de ley sobre AI en educación introducidos en 31 estados en 2026.** Los ejes son
+  tres: privacidad del dato del alumno, límites de uso en el aula y currículo de AI.
+- 🔴 **Cuatro estados —Maryland, Idaho, Oklahoma y Virginia— ya exigen las DOS cosas: guía estatal Y
+  adopción obligatoria de una política de AI a nivel distrito.** **Eso convierte la política de AI
+  en un entregable con fecha, no en una recomendación.**
+- **California AB 1159 prohíbe usar dato de alumnos para ENTRENAR modelos.** ⚠️ **Es la restricción
+  que más barato sale respetar al principio del proyecto y más cara sale después:** decide la
+  arquitectura de *fine-tuning* y de retención antes de la primera línea de código.
+- **Georgia y Misisipi exigen crédito de computación con contenido de AI** hacia fines de esta década.
+- **Nueva York publicó guía preliminar en marzo de 2026** y un *Playbook* completo en junio.
+- 🔴 **Y la cifra que abre la conversación comercial: sólo el 18 % del profesorado de K-12 público
+  recibe guía escrita formal sobre el uso de AI en su trabajo.** 🔵 **Concuerda con el 58 % sin guía
+  para CALIFICAR del pase 59 y con el 37 % de formación continua del pase 60: tres instrumentos
+  distintos, un mismo hueco de gobernanza.**
+- **`STUDENTS FIRST Act of 2026`:** marco nacional de uso responsable de AI en K-12 **redactado por
+  estudiantes de los 50 estados** en una conferencia de julio de 2026.
+
+🟢 **La oportunidad, y es de gobernanza y no de modelo:** el producto que esta región compra es
+**la política de AI del distrito y el expediente que demuestra que se cumple**, con la restricción
+de AB 1159 incorporada por diseño. 🔴 **Y la que NO se puede ofrecer: currículo estructurado
+citable — las tres renderizaciones JSON de Common Core en GitHub siguen sin archivo de licencia
+(pase 61), así que la región con más presupuesto es la que obliga a construir esa capa desde cero
+o a comprarla.** **Es una línea de cotización, no una objeción.**
+
 #### Agregado en el pase 61 del 2026-10-03 — 🔴 la región más grande es la PEOR servida en currículo estructurado, y eso es una línea de cotización
 
 **Medido repo por repo en este pase, con la licencia leída del archivo y no del README:** North
@@ -2583,6 +2612,31 @@ Artículo 50(2) **no es exigible** en North America — pero es **el requisito m
 multi-región conviene cotizarlo contra el techo europeo y no contra el piso local (ver **P103** y **P105**).
 
 ### EMEA
+
+#### Agregado en el pase 62 del 2026-10-03 — 🟢 el calendario del AI Act se sostiene por quinto canal, y Alemania aporta la mejor capa de currículo de la KB… sin licencia
+
+- 🟢 **El diferimiento del alto riesgo autónomo a `2027-12-02` se reconfirma por un canal
+  independiente más** (*Digital Omnibus on AI*, en vigor julio de 2026). **Concuerda con el
+  `Regulation (EU) 2026/1744` que el pase 60 identificó.** ⚠️ **Sigue sin leerse de primera mano:
+  `eur-lex.europa.eu` dio `000` otra vez — `gap 92`, séptima reconfirmación.**
+- **El encuadre que importa para vender acá no cambió y conviene repetirlo textual:** la AI usada en
+  **acceso y evaluación** —admisión, evaluación del alumno, corrección de exámenes— es **alto
+  riesgo**, y eso obliga a gestión de riesgo, gobernanza del dato, supervisión humana, transparencia
+  y evaluación de conformidad **antes del despliegue**.
+- **Alemania sostiene un compromiso de inversión en AI de €20 mil millones (2025–2030)**; el clúster
+  nórdico (Suecia, Dinamarca, Finlandia, Noruega) está **por encima de la media UE** en adopción.
+
+🟢 **Y el aporte de capa de este pase es alemán:** `FWU-DE/lehrplan-ontologie` modela el currículo de
+**los 16 Bundesländer en RDF/OWL**, conservando la terminología de cada Land — **la mayor cobertura
+poblacional de toda la capa de currículo que esta KB tiene medida.** 🔴 **Y no tiene licencia:
+`LICENSE` 404, `LICENSE.md` 404, nada en el README ni en la barra lateral.**
+
+🔵 **La oportunidad concreta, y es específica de EMEA:** la región **compra conformidad** (tesis que
+esta base sostiene desde el pase 4) **y acá hay una pieza técnica excelente bloqueada por un trámite,
+no por un impedimento.** 🟢 **Pedir o aclarar la licencia de `lehrplan-ontologie` es la gestión más
+barata con mayor retorno de esta capa: convierte la mejor ontología de currículo de Europa en base
+utilizable.** ⚠️ **España, en cambio, está cubierta pero es *share-alike* en sus dos piezas
+(`OpenDidactia`, `open-lex-edu`): usable, con la obligación como partida del contrato.**
 
 #### Agregado en el pase 61 del 2026-10-03 — 🟢 el Reino Unido tiene la licencia de currículo más limpia de las cuatro regiones, con permiso comercial EXPLÍCITO
 
@@ -3989,6 +4043,34 @@ este pase dejó cubierto con código.
 
 ### APAC
 
+#### Agregado en el pase 62 del 2026-10-03 — 🟢 Corea pone su ley en vigor en enero y la región suma la única pieza de currículo PERMISIVA de toda la KB
+
+- 🔴 **La Ley Marco de AI de Corea del Sur (*Basic Act on the Development of AI and the
+  Establishment of Trust*) entró en vigor en ENERO de 2026.** **Vietnam también estrena ley en 2026;
+  Australia tenía previsto firmar sus *guardrails* en 2026; Tailandia e Indonesia pasan sus
+  borradores a norma vinculante.** 🔵 **La consecuencia operativa que esta KB ya tenía y se refuerza:
+  en APAC no hay UN régimen, hay siete u ocho, y el entregable multi-jurisdicción es el producto.**
+- **~530 millones de alumnos de K-12 en Asia** es el denominador de la región.
+- ⚠️ **Y la advertencia de método del pase 60 se mantiene: la asimetría NA/APAC (66 % contra 32 % de
+  instituciones que arrancaron su recorrido de AI) está medida con instrumentos DISTINTOS y no debe
+  presentarse como una sola serie.**
+
+🟢 **El aporte de capa de este pase es doble y los dos son de APAC:**
+
+1. **Corea sigue siendo la única procedencia con currículo PERMISIVO** en toda esta base
+   (`DECK6/korean-elementary-learning-map`, **MIT**, 620 anclas de estándar, 2.293 relaciones de
+   prerrequisito). 🔵 **De siete artefactos de currículo medidos en cuatro regiones, es el único
+   permisivo y legible.**
+2. 🟢 **`Orenda-Project/rumi-platform` (Apache-2.0, 17 ★) agrega un canal que esta KB no tenía:
+   WhatsApp y nada más**, con evaluación de fluidez lectora desde una nota de voz, **15 idiomas** y
+   **890 videos + 10.929 preguntas alineadas al currículo nacional paquistaní** N–6.º.
+
+🔵 **La oportunidad, y es la que menos competencia tiene:** **el stack de bajo ancho de banda para
+aula multigrado y escuela rural.** 🟢 **Apache-2.0 + canal WhatsApp + contenido ya alineado a un
+currículo nacional es una base de partida que no existe en ninguna otra región de esta KB**, y es
+directamente transferible a los mercados de India, Sri Lanka, Indonesia y Filipinas. ⚠️ **Australia
+queda indeterminada: la licencia de MRAC/ACARA sigue ilegible (`gap 254`, segunda reconfirmación).**
+
 #### Agregado en el pase 61 del 2026-10-03 — 🟢 Australia publica su currículo como dato del Estado, y es el único caso regional sin intermediario
 
 **MRAC — Machine Readable Australian Curriculum V9, de ACARA** — es la publicación oficial del
@@ -5099,6 +5181,45 @@ desplegado + puerta MCP permisiva (`jbnu-lms-mcp`, `canvas-lms-mcp`, las cuatro 
 depende de un tercero» son el mismo argumento.**
 
 ### LATAM
+
+#### Agregado en el pase 62 del 2026-10-03 — 🔴 la brecha adopción/gobernanza ahora tiene DOS instrumentos concordantes, y la capa de currículo sigue siendo Brasil y nada más
+
+- 🟢 **UNESCO IESALC publicó un estudio de educación superior en América Latina y el Caribe: 91,5 %
+  del estudiantado y 75 % del profesorado usan AI.** 🔴 **Y hay que decir cómo se relaciona con la
+  cifra que esta KB ya tenía, en vez de mezclarlas: el Digital Education Council da 92 % y 79 %.
+  Son DOS instrumentos distintos con poblaciones distintas — concuerdan en la magnitud y no forman
+  una serie. No se promedian ni se encadenan.**
+- 🔴 **El hallazgo de gobernanza se confirma por tercer canal: la adopción creció 23 puntos
+  porcentuales en un año y la gobernanza no acompañó.** UNESCO lo dice con todas las letras: las
+  instituciones usan AI generativa **sin políticas claras que gobiernen su uso**. 🔵 **Concuerda con
+  el 30 % del pase 60 («sólo 30 % cree que su institución respondió bien») y con la *«ausencia de
+  lineamientos formales»* de México.**
+- 🟢 **UNESCO lanzó el **Observatorio de Inteligencia Artificial en Educación para América Latina y
+  el Caribe** el 14 de abril**, como plataforma regional de apoyo a los Estados. ⚠️ **Es un
+  interlocutor institucional nuevo y conviene anotarlo: en esta región el comprador de gobernanza
+  suele ser el ministerio, no la institución.**
+- **Regulación: el PL 2338 de Brasil como primera norma integral de AI de la región** (clasificación
+  por riesgo, transparencia obligatoria, requisitos de protección de dato), **y oleadas regulatorias
+  en Chile, Colombia, México y Argentina en el segundo trimestre de 2026.**
+
+🔴 **Y el hueco de capa, medido país por país en español este pase y declarado como tal:** fuera de
+Brasil, **LATAM no tiene currículo estructurado y versionado en un repositorio.** Argentina publica
+Aprender y el Relevamiento Anual; Colombia, los datos abiertos del MEN; Chile, los del Centro de
+Estudios del Mineduc **más el portal `curriculumnacional.cl`**; México usa PLANEA para definir
+currículo. 🔵 **Todo eso es dato ESTADÍSTICO: es del eje equivocado.** **No es que la región no tenga
+dato abierto — tiene mucho, y no es el que un agente docente necesita.**
+
+🟢 **Las dos oportunidades, en orden de qué tan listo está el camino:**
+
+1. **Gobernanza, que es lo que la región está pidiendo a gritos con tres instrumentos concordantes.**
+   El comprador es el ministerio o el sistema universitario, el interlocutor nuevo es el Observatorio
+   de UNESCO, y el entregable es la política + el expediente. **Es la venta más corta de las cuatro
+   regiones porque la brecha está medida y publicada.**
+2. ⚠️ **Estructurar el currículo de UN país hispanohablante, empezando por Chile**, que es el que
+   más cerca está: **`curriculumnacional.cl` ya publica objetivos de aprendizaje por curso y
+   asignatura**, le falta ser artefacto versionado con licencia. 🔵 **Brasil ya demostró que el
+   modelo funciona y con qué licencia (`bncc-dados`, CC BY 4.0 en `dados/LICENSE.md`): hay plantilla
+   regional, no hay que inventarla.**
 
 #### Agregado en el pase 61 del 2026-10-03 — 🟢 Brasil tiene el artefacto curricular MEJOR instrumentado de las cuatro regiones, y encima trae el número que vende la capa
 
