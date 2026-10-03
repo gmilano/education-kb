@@ -8,6 +8,7 @@ updated: 2026-10-03
 
 > Agentes y herramientas AI open source para educación. Foco: MIT / Apache 2.0 / BSD.
 > Verificado repo por repo vía WebFetch el 2026-09-30 (stars y licencia leídos de la página del repo).
+> **Pase 55 del 2026-10-03:** 🔴 **el pase ejecuta las dos acciones del 54 y el hallazgo que manda invierte la intuición de cualquier filtro de componentes: los dos ejes de esta capa están ANTI-correlacionados.** Las **tres** piezas que someten trabajo calificado son las tres de PEOR procedencia de credencial (`@ink-waffle` b4+b3, `mcp-usc` (a)+b2, `moodler-mcp` b4) **y las tres traen salvaguarda de integridad explícita**; la pieza de credencial más limpia —`peancor/moodle-mcp-server`, 🟢 clase (a) con token de administración del **SITIO**— es la **ÚNICA de las seis sin ninguna**: ni confirmación, ni borrador, ni divulgación, ni texto de integridad. 🔴 **Así que un filtro que ordene por higiene de credencial selecciona A FAVOR de la escritura de notas sin guarda** (**P127**). 🟢 **La clase (4) NO existe en las seis, y el pase 54 pidió decirlo: el ecosistema se autolimita donde la licencia no lo obliga** (**P128**) — 🔴 **y el «candidato natural a (4)» que el 54 nombró, `DUTIC-mcp`, resultó el de disciplina MÁS estricta** (*«Todo simula por defecto»*, dos flags obligatorios, *«se niega a completar en vez de inventarse una valoración»*). ⚠️ **El esquema de cuatro clases tiene un agujero que este pase declara en vez de tapar: es estudiante-céntrico y no clasifica la escritura del lado DOCENTE, que es justo donde está la pieza sin guarda** (**P129**, acción 1 del pase 56). 🟢 **Acción 2 cerrada con denominador ENUMERADO: 14 filas del mapa por LMS → 9 clientes de tercero determinables (3 medidas acá por primera vez), 2 no determinables, 1 que no es cliente de un tercero y 2 fuera del eje; y la tasa enumerada (2 de 9, 22,2 %) es MENOR que la oportunista (7 de 18, 38,9 %).** ⚠️ **La tabla NO crece (80 filas, 0 altas): noveno pase sin altas desde el barrido obligatorio.** 🟢 **Una región recuperada con evidencia de primera mano —`toshieji` → APAC, 800 caracteres CJK— y el tamaño del problema medido: 16 de 21 filas sin región declarada.** ⚠️ **Y una corrección que el pase se hace a sí mismo antes de publicar: un `grep` escrito a mano dio dos cifras del README como «vencidas» y era falso positivo** (**P126**). Ver **P126**–**P130** y las tendencias **313**–**336**.
 > **Pase 54 del 2026-10-03:** 🔴 **el pase corrige el instrumento que el pase 53 acababa de construir, y lo corrige por donde el pase 53 dijo que había que probarlo: su propio CONTROL NEGATIVO falló.** El pase 53 escribió que `Dymayo/moodler-mcp` *«usa web service token, así que si saliera (b) el instrumento está mal»* — **salió (b)**, y el defecto tiene nombre: **P121 leía el TIPO de la credencial y hay que leer su PROCEDENCIA** (**P123**). 🟢 **La clase nueva, b4, es la que ningún filtro ve: la pieza abre un navegador real, el alumno completa su SSO con passkey y 2FA, y entonces la pieza le pide a Moodle un token de web service de app móvil y lo guarda en disco** — *«requests a mobile-app web service token from Moodle and stores it locally»*. **Artefacto de clase (a), emisor de clase (b).** 🔴 **Y el corolario invierte la intuición de cualquier filtro de componentes: `moodler-mcp` declara UNA variable (`MOODLE_URL`) y NINGUNA credencial, precisamente porque se la consigue sola — un audit de `.env` lo aprueba.** 🔵 **La hipótesis falsable del pase 53 cae en el medio que había declarado sin interpretar (2 de 7 este pase, 28,6 %; acumulado 7 de 18, 38,9 %: ni el ~45 % ni el <15 %), así que no decide — pero apareció un predictor mejor que un porcentaje: el canal correlaciona con el ALCANCE, no con la plataforma. Pieza con nombre de universidad: 3 de 3 en clase (b). Conector genérico de producto: 11 de 13 en (a), y las 2 excepciones son justamente las dos que mintan su propio token.** ⚠️ **La tabla NO crece (80 filas, 0 altas): el pase se gastó en las dos acciones que el 53 dejó escritas, y las dos se ejecutaron completas.** 🔴 **Nota de instrumento que es también una frontera nueva: el barrido que enumera estas filas quedó negado por `[Credential Exploration]` —una TERCERA frontera, distinta de las dos del pase 53— y lo niega tanto sobre el markdown de esta propia KB como sobre READMEs públicos ya descargados; lo que sí corre es WebFetch, que es el canal que la acción 1 del pase 53 prescribía.** ✅ **Control del pase 53 reproducido de primera mano: `curl -sI` da 403 para `github.com/moodle/moodle` Y para un repo inventado — no discrimina; `raw.githubusercontent.com` da 200/404.** Ver **P123**, **P124**, **P125** y las tendencias **295**–**312**.
 > **Pase 53 del 2026-10-02:** 🔴 **la tabla NO crece (80 filas, 0 altas) y el pase se gastó en mirar las filas que ya estaban por un eje que nunca se les había aplicado — que es donde estaba el valor.** La acción 1 del pase 52 dejó una hipótesis falsable sobre P118 —*si `canvas-student-mcp` es un caso aislado, el barrido devuelve UNA fila en la clase (b)*— y **devolvió cinco: 12 README leídos, 11 clientes de LMS/SIS clasificables, 5 en clase (b) / 6 en clase (a) / 1 no aplica, con una pieza de clase (b) en CADA una de las cuatro regiones.** 🔵 **Los doce veredictos están escritos EN LA CELDA DEL REPO de cada fila y no en una nota al margen, por la lección del pase 52: quien copia un nombre de una celda se lleva el nombre, no la advertencia.** 🔴 **Y los tres valores de P118 no alcanzaban: la clase (b) son TRES clases —b1 monta la sesión conservando passkey/2FA, b2 pega la cookie de DevTools, b3 guarda usuario y contraseña reutilizables en el `.env`— así que una fila que dijera sólo «(b)» escondería la diferencia entre `jbnu-lms-student` y `DUTIC-mcp`.** ⚠️ **El único candidato nuevo del barrido (`ASEpochs/ai-digital-teacher`, 12 ★, APAC) se RECHAZA por dos motivos independientes y medidos: sin licencia (6 nombres × 2 ramas = 12 sondas en 404 + sidebar sin licencia) y del lado del art. 5(1)(f) del AI Act que hay que defender — razonamiento de conducta sobre alumnos desde cámara.** 🔴 **Nota de instrumento: el verificador `curl -sI` que la consigna prescribe devuelve 403 para TODO `github.com` (4 de 4 URLs verdaderas incluidas), así que todo este pase se verificó por `raw.githubusercontent.com` y WebFetch.** Ver **P121**, **P122** y las tendencias **281**–**293**.
 > **Pase 52 del 2026-10-02:** 🟢 **la tabla pasa de 74 a 80 filas (+6) y el hallazgo del pase es que el instrumento de licencia que el pase 51 declaró obligatorio tenía su propio supuesto cultural ADENTRO DE UNA EXPRESIÓN REGULAR.** El ancla del tarball —`^package/(LICEN[CS]E|COPYING)[^/]*$`, obligatoria desde la tendencia 259— **es CASE-SENSITIVE**, y por eso se publicó *«sin licencia en el tarball»* para `@learninglocker/xapi-agents`, que envía **`package/license`** en minúscula con **35.121 bytes de GPL-3.0** adentro. 🔵 **Es el mismo error que la tendencia 252 —una lista de nombres de archivo es un supuesto cultural— sólo que esta vez el supuesto lo había escrito el pase anterior.** Ancla corregida, con control **offline** de 24/24 que demuestra el defecto y conserva el control positivo de la tendencia 259 (144 licencias de `node_modules` → raíz=0). 🟢 **La acción 1 se ejecutó y su hipótesis falsable se CONFIRMA: cambian 3 de los 9 veredictos, y los tres los resuelve el TARBALL, no los 20 nombres** —`@eduware/oneroster` (0BSD), `@osu-cass/sb-components` (MPL-2.0) y `@learninglocker/xapi-agents` (GPL-3.0)—, así que *«indeterminado»* **no era una propiedad de los paquetes sino del canal que se les había aplicado.** 🔴 **Dos direcciones NUEVAS del defecto campo-vs-texto, y en las dos el campo y el texto nombran licencias DISTINTAS:** `@eduware/oneroster` declara `MIT` y envía **0BSD** en un archivo **byte a byte idéntico** (mismo sha256) al de `@superbuilders/oneroster`, **que nombra como titular a un tercero ajeno a las dos organizaciones**; y `@pie-qti/*` declara `MIT` en npm contra **`ISC`** en tres artefactos del repositorio — 🔵 **ahí el lado equivocado es el REGISTRO, así que la dirección del error no es predecible.** ⚠️ **Y una fila entra con una advertencia que NO es de licencia:** `canvas-student-mcp` es **MIT** verificado por dos artefactos **y su argumento de venta es eludir un control institucional** (cookie de sesión para sortear que la universidad deshabilitó los tokens) — **licencia impecable y no entregable sin consentimiento de la institución**, que es el eje nuevo de **P118**. ✅ **Control del gap 71 corrido en el mismo pase que tocó la tabla: 80 filas / 80 claves distintas / 0 duplicados, 60 cabeceras con sus 60 separadores y 0 encabezados usados como dato.** 🟢 **La acción 3 se ejecutó COMPLETA: 27 menciones corregidas en seis archivos y las DOS listas agregadas «MIT / Apache-2.0 ✅» DESARMADAS** —el pase 51 las había marcado al margen y la nota no viaja con el nombre. Código, control offline y TSV en `compose/code/registry-license-remeasure/`. Tendencias **265**–**280**.
@@ -272,7 +273,7 @@ determinable, 2 no determinables.** Reparto del pase: **5 (a) · 2 (b, las dos b
 | [`Dymayo/moodler-mcp`](https://github.com/Dymayo/moodler-mcp) | 🔴 **b4** — *el control negativo que falló* | token de web service de app móvil, en disco | 🔴 **la sesión SSO del propio alumno** (`login_to_moodle` abre Chrome/Chromium) | sin región declarada |
 | [`@ink-waffle/moodle-mcp`](https://github.com/ink-waffle/moodle-mcp) | 🔴 **b4 + b3** | token de web service en `~/.moodle-mcp/config.json` (*«treat as a password file»*) | 🔴 **la sesión del alumno por CDP**, y en sitios sin SSO **la contraseña pasada a `moodle_connect`** | sin región declarada |
 | [`mtgibbs/canvas-lms-mcp`](https://github.com/mtgibbs/canvas-lms-mcp) | 🟢 **(a)** | `CANVAS_API_TOKEN` + `CANVAS_BASE_URL` | la institución (*Account → Settings → Approved Integrations → New Access Token*) | sin región declarada |
-| [`toshieji/moodle-grading-mcp`](https://github.com/toshieji/moodle-grading-mcp) | 🟢 **(a)** — *control negativo que SÍ se sostiene* | `MOODLE_TOKEN` | la institución (*Site administration → Server → Web services → Manage tokens*) | sin región declarada |
+| [`toshieji/moodle-grading-mcp`](https://github.com/toshieji/moodle-grading-mcp) | 🟢 **(a)** — *control negativo que SÍ se sostiene* | `MOODLE_TOKEN` | la institución (*Site administration → Server → Web services → Manage tokens*) | 🟢 **APAC** (Japón — README bilingüe JA/EN, 800 caracteres CJK medidos por rango Unicode; **ubicada en el pase 55**, la celda decía *«sin región declarada»*) |
 | [`csmediapro/moodle-mcp-server`](https://github.com/csmediapro/moodle-mcp-server) | 🟢 **(a)** | `MOODLE_TOKEN` + `MOODLE_URL` | la institución (*Plugins → Web services → Manage tokens*). ⚠️ **AGPL-3.0** | sin región declarada |
 | [`gafapa/moodle-core-cli`](https://github.com/gafapa/moodle-core-cli) | 🟢 **(a)** | `MOODLE_TOKEN` o `--token` | la institución, y 🟢 **recomienda servicio externo dedicado con sólo las funciones necesarias** | sin región declarada |
 | [`redbeard-26/asfai-education`](https://github.com/redbeard-26/asfai-education) | 🟢 **(a)** | app OAuth web registrada (`ASFAI_GOOGLE_CLASSROOM_CLIENT_ID`/`_SECRET`) | el administrador del Workspace, que puede negarla | sin región declarada |
@@ -349,6 +350,96 @@ pases (11 del pase 53 + 7 del 54), **7 en clase (b)**, **2 no determinables por 
 del eje por no ser clientes de un tercero**. 🔴 **Las filas de este archivo que todavía no se miraron
 por este eje están en la acción 1 del pase 55**, y el barrido que las enumeraba quedó **negado por
 `[Credential Exploration]`** (ver `intel/trends.md`).
+
+### 🔵 El SEGUNDO eje, clasificado — la declaración de integridad académica (acción 1 del pase 54, pase 55)
+
+**El pase 54 encontró este eje de costado y pidió clasificar la tabla por él. Se clasificaron las seis
+piezas que ESCRIBEN en un LMS, leyendo cada README de primera mano por `raw.githubusercontent.com`.**
+🔴 **El resultado invierte la intuición de cualquier filtro de componentes y es el hallazgo del pase.**
+
+**Las cuatro clases** (del enunciado del pase 54): **(1)** no escribe · **(2)** escribe con confirmación
+previa · **(3)** escribe trabajo calificado y respeta la declaración · **(4)** escribe trabajo calificado
+y la elude.
+
+| Pieza | Clase de integridad | Qué escribe | Cita verbatim que lo decide | Clase de credencial (P123) |
+|---|---|---|---|---|
+| [`@ink-waffle/moodle-mcp`](https://www.npmjs.com/package/@ink-waffle/moodle-mcp) | 🟢 **(3)** — rehúsa, mecánico | `moodle_assignment_submit`, `moodle_quiz_*` | *«no-draft assignments requiring [a submission statement] must be completed in Moodle's UI because the save API cannot record acceptance»* | 🔴 **b4+b3** |
+| [`PabloPC05/mcp-usc`](https://github.com/PabloPC05/mcp-usc) | 🟢 **(3)** — delega, normativo | 20 operaciones con efecto, incluidas `submit_assignment`, `start_quiz`, `save_quiz_answers`, `finish_quiz` | *«`submit_assignment` puede cerrar la edición del borrador y **debe respetar la declaración de entrega** que muestre Moodle»* + *«Toda escritura sigue dos llamadas»* | ⚠️ **(a) + b2** |
+| [`Dymayo/moodler-mcp`](https://github.com/Dymayo/moodler-mcp) | 🟢 **(3)** — prohibición explícita | `submit_assignment` y 5 escrituras de alumno; `save_assignment_grade` y `grant_extension` del lado docente | *«This includes using an LLM to generate answers for quizzes, assignments, or exams accessed through this tool, submitting AI-generated work as your own, or any activity that violates your institution's academic integrity policy»* | 🔴 **b4** |
+| [`JOSETRA44/DUTIC-mcp`](https://github.com/JOSETRA44/DUTIC-mcp) | 🟢 **(2)** — y la más estricta del conjunto | `dutic_encuesta_fill_all`, `dutic_encuesta_submit` — **encuesta de evaluación DOCENTE, no trabajo calificado** | *«Todo simula por defecto; enviar exige `--enviar` **y** `--si-es-irreversible`»* · *«sin política configurada, la herramienta se niega a completar en vez de inventarse una valoración»* · *«Nunca se reenvía algo ya llenado»* | 🔴 **b3** |
+| [`toshieji/moodle-grading-mcp`](https://github.com/toshieji/moodle-grading-mcp) | 🟢 **(2)** — lado docente, con divulgación | `save_grade_draft`, *«the only writer»* | *«Grades are written as `workflowstate=readyforreview` (graded but **UNRELEASED**). This server **never releases**»* · *«An AI-assistance disclosure footer is appended if missing»* | 🟢 **(a)** |
+| [`peancor/moodle-mcp-server`](https://github.com/peancor/moodle-mcp-server) | 🔴 **sin guarda** — y no cae en ninguna de las cuatro | `provide_assignment_feedback`, `provide_quiz_feedback` — **escribe la nota autoritativa** | **No hay cita: el README no trae confirmación, ni borrador, ni divulgación, ni texto de integridad** | 🟢 **(a)** — token de administración del **SITIO** |
+
+#### 🔴 Lo que hay que leer de esta tabla antes de proponer cualquier fila
+
+🟢 **La clase (4) NO existe en las seis, y el pase 54 pidió decirlo si pasaba: el ecosistema se
+autolimita donde la licencia no lo obliga.** 🔴 **Pero el hallazgo que manda es la ANTI-correlación: las
+tres piezas que someten trabajo calificado son las tres de peor procedencia de credencial, y las tres
+traen salvaguarda. La pieza de credencial más limpia es la única sin ninguna.** ⚠️ **Consecuencia
+operativa, y es la que cambia un *checklist* de componentes: un filtro que ordene por higiene de
+credencial —el filtro natural, el que cualquiera escribiría— selecciona A FAVOR de la escritura de notas
+sin guarda.** Ver **P127**.
+
+⚠️ **Y el esquema de cuatro clases tiene un agujero que este pase declara en vez de tapar: es
+estudiante-céntrico.** `peancor` no somete trabajo del alumno, escribe **el juicio sobre** él, y por eso
+no entra en ninguna clase. 🔵 **El esquema del lado docente es la acción 1 del pase 56** (**P129**).
+
+🔵 **La diferencia entre las dos posturas de clase (3) no es de grado y conviene saber nombrarla:
+`@ink-waffle` REHÚSA por mecanismo** (la API no puede registrar la aceptación, así que no escribe)
+**y `mcp-usc` DELEGA por norma** (*«debe respetar»*). **Un verbo normativo no es un control.**
+
+🟢 **El activo reusable del pase, y vale más allá de educación: el protocolo de dos llamadas de
+`mcp-usc`.** Los `preview_*` **no escriben** — validan y devuelven `confirmation_token`; *«Los tokens
+viven solo en memoria, caducan a los cinco minutos y son de un solo uso»* y *«Cambiar texto,
+destinatario, archivos, respuestas, intento o cualquier otra entrada invalida la confirmación»*. **Es el
+mejor control de escritura medido en esta KB y hoy está atado a una universidad.**
+
+### 🟢 Denominador ENUMERADO de la capa de conectores por LMS (acción 2 del pase 54, pase 55)
+
+**Método, que es lo que faltaba:** se recorrió fila por fila la tabla *«El mapa, por LMS»* —acotada y ya
+escrita— leyendo cada pieza por `raw.githubusercontent.com`, **sin barrido por vocabulario** (el barrido
+sigue negado por `[Credential Exploration]`).
+
+| Reparto de las 14 filas | n | Filas |
+|---|---|---|
+| Cliente de un tercero, **canal determinable y determinado** | **9** | `bruchris`, `vishalsachdev`, **`mtgibbs`**, `peancor`, `MarcosNahuel`, **`csmediapro`**, `bunizao`, **`gafapa`**, `moon0825` |
+| Cliente de un tercero, **no determinable** | **2** | `@owen-x-tech/canvas-mcp` (repo 404 en 12 sondas) · `@imazhar101/mcp-canvas-server` (sin licencia declarada) |
+| **No** es cliente de un tercero | **1** | `openedx-mcp` — plugin **oficial del propio proyecto**, corre en proceso |
+| Fuera del eje: no pide credencial de LMS | **2** | `giacomomaria81/scorm-mcp-server` · `course-code-framework/coursecode` |
+
+**Las tres medidas por primera vez en este pase:**
+
+| Pieza | Clase | Credencial | Escritura | Cita |
+|---|---|---|---|---|
+| [`mtgibbs/canvas-lms-mcp`](https://github.com/mtgibbs/canvas-lms-mcp) | 🟢 **(a)** | `CANVAS_API_TOKEN` + `CANVAS_BASE_URL`, emitido en *Account → Settings → New Access Token* | 🟢 **ninguna** | *«This server only reads data; it cannot modify assignments or grades»* |
+| [`csmediapro/moodle-mcp-server`](https://github.com/csmediapro/moodle-mcp-server) | 🟢 **(a)** | `MOODLE_URL` + `MOODLE_TOKEN` de *Site administration → Plugins → Web services → Manage tokens* | 🟢 **ninguna** | *«never modifies Moodle data, safe for production»* |
+| [`gafapa/moodle-core-cli`](https://github.com/gafapa/moodle-core-cli) | 🟢 **(a)** | `MOODLE_BASE_URL` + `MOODLE_TOKEN`, o `--url` / `--token` | ⚠️ **sí, ya compuertada** | *«The CLI runs in read-only mode by default. Write operations require `--allow-write`, and destructive operations additionally require `--yes`»* |
+
+🟢 **El dato que abarata la recomendación que esta base viene haciendo desde el pase 35:** `gafapa` era
+*«el candidato más barato a envolver»* por no tener MCP (reconfirmado: **cero** menciones), **y ahora se
+sabe que la compuerta de escritura ya existe debajo** — el envoltorio hereda `--allow-write` / `--yes`
+en vez de tener que inventarlos.
+
+🔵 **Y el denominador enumerado corrige una tasa:** **2 de 9 (22,2 %)** en clase (b) acá, contra el
+**7 de 18 (38,9 %)** acumulado de los pases 53 y 54 — **consistente con que la muestra anterior se
+eligió por lo interesante.** 🔴 **El «73 de 80» del pase 53 sigue sin instrumento publicado: este pase
+cierra la tabla de 14, no esa población.** Ver tendencias **327** y **328**.
+
+### ⚠️ La capa mejor medida de esta KB es la que más región le falta — 16 de 21 (pase 55)
+
+**Medido, no estimado: de las 21 filas de las dos tablas de credencial, 16 dicen «sin región declarada»
+y 5 traen región.** 🟢 **Una se recuperó en este pase con evidencia de primera mano:
+`toshieji/moodle-grading-mcp` → **APAC**, por **330** han + **216** hiragana + **254** katakana en un
+README bilingüe JA/EN.** 🔴 **Y eso corrige parcialmente al pase 49: *«APAC no produce open source
+educativo-nativo»* se escribió con una pieza educativa-nativa, MIT, APAC y de la mejor postura de
+integridad de la capa ya en esta tabla, con la región en blanco** (tendencia **323**).
+
+🔴 **Pero el instrumento resuelve 1 de 5 y hay que decirlo:** las otras cuatro probadas publican **sólo
+en inglés** (0 CJK, dominancia inglesa medida), **y el inglés no lleva señal regional en este
+ecosistema.** ⚠️ **Dos instrumentos de este mismo pase dieron falsos positivos y se descartaron con
+control** — un `grep` CJK orientado a bytes dio 8–23 coincidencias en 4 de 4 archivos que tienen cero, y
+una lista de palabras-marca de italiano dio 12–15 en 5 de 5 por compartir `per`/`con`/`file` con el
+inglés. **Ninguno se publicó como dato.** Ver **P130** y la tendencia **326**.
 
 ## Agentes y herramientas destacadas
 

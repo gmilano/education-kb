@@ -8,6 +8,7 @@ updated: 2026-10-03
 
 > Recetas concretas: repos nombrados, licencias verificadas, wiring explícito y estimación.
 > Todos los repos citados fueron verificados vía WebFetch el 2026-09-30; los del pase 11, el 2026-10-01 (ver `agents/top.md`).
+> **Pase 55 del 2026-10-03:** 🟢 **el pase deja un patrón nuevo y sale de una medición, no de una idea: P131, la puerta de escritura académica con confirmación de dos llamadas**, construida sobre el único control de escritura de esta KB que está medido y citado —el `confirmation_token` de `PabloPC05/mcp-usc`, *«los tokens viven solo en memoria, caducan a los cinco minutos y son de un solo uso»*— más el patrón de borrador no liberado de `toshieji/moodle-grading-mcp` (`workflowstate=readyforreview`, *«This server never releases»*, pie de divulgación de asistencia AI). 🔴 **Y el patrón corrige una recomendación de este propio archivo: donde esta base propone `peancor/moodle-mcp-server` para «nota y devolución dentro del LMS», hay que leer que `peancor` escribe la nota autoritativa con token de administración del SITIO y SIN confirmación, borrador ni divulgación** — es la combinación de máximo privilegio con mínima guarda (**P127**, **P129**). 🟢 **Las cifras de suites citadas se remidieron y las once reproducen.** ⚠️ **Y el pase se corrige a sí mismo: un `grep` escrito a mano dio «dos vencidas» (49 y 34) y era falso positivo — el instrumento versionado de esta KB da 46 y 33** (**P126**). Ver tendencias **313**–**321**.
 > **Pase 54 del 2026-10-03:** **+3 patrones, y los tres CORRIGEN instrumentos que los dos pases anteriores acababan de declarar obligatorios.** **P123** corrige P121 por donde P121 pidió que se lo probara: su control negativo declarado FALLÓ — `Dymayo/moodler-mcp` salió clase (b) — y el defecto es que **P121 leía el TIPO de la credencial en vez de su PROCEDENCIA.** 🔴 **La clase nueva (b4) es la que ningún filtro ve: la pieza abre un navegador real, el alumno completa su SSO con passkey y 2FA, y la pieza MINTA un token de web service oficial y lo guarda en disco — artefacto de clase (a), emisor de clase (b).** 🔵 **Y el corolario invierte la intuición del filtro: `moodler-mcp` declara CERO variables de credencial (sólo `MOODLE_URL`) precisamente porque se la consigue sola, así que un audit de `.env` lo aprueba y ordena la capa al revés.** **P124** corrige P122 **en el artículo y en los hechos**: 15 términos de afecto medidos sobre los artefactos publicados de las tres piezas permisivas dan **3 coincidencias crudas y 3 falsos positivos verificados** (comentarios de Tailwind × 2 y una encuesta con emoticones) → 🟢 **cero inferencia de emoción, así que el art. 5(1)(f) NO parte esta capa.** 🔴 **La línea que sí la parte es evento contra CONDUCTA, que es alto riesgo y NO prohibido** — y `mereos`, que P122 clasificaba 🟢 permitido, envía `cheating`, `it_looks_suspicious` y una *«re-calculation of the suspiciousness»* por imagen. 🔴 **Dos trampas medidas que ningún README menciona: en `mereos` apagar el ajuste NO detiene la derivación** (*«Each characteristic is derived for every image, regardless of the settings is enabled or not»*) **y la taxonomía de AI se BAJA del servidor del proveedor** (`GET /sessions/ai_event/`), así que el clasificador no está en el paquete MIT. 🟢 **Y la conclusión más vendible del pase: `seb-server` (MPL-2.0) es la única pieza de la capa que se despliega en la UE sin análisis de art. 5(1)(f), porque sus siete indicadores son ping, contadores de log, batería y wifi — no observa al alumno, y todo su riesgo es IMPORTADO del servicio de sala.** **P125** deja dos controles de dos líneas: la **terna de mercado tiene que cerrar sola** (atrapó una inconsistencia de MEA con una sola fuente, en la misma frase donde la de Europa cierra perfecto) y **la taxonomía de un SDK vive en su archivo de localización, no en su README** (4 READMEs → cero; un `translation.json` → 108 cadenas), ⚠️ **con su límite medido: sobre un bundle los falsos positivos son altos — el `attention` de `exam-guard` era el tokenizador de Markdown de micromark.**
 > **Pase 53 del 2026-10-02:** **+2 patrones, y el primero convierte en puerta de entrada el eje que el pase 52 abrió como advertencia.** **P121** sube P118 a **paso obligatorio del filtro de componentes** porque la hipótesis del pase 52 se falsificó: **5 de 11 clientes de LMS/SIS de esta base eluden el control de acceso institucional, uno por cada región.** 🔵 **Y es barato: el mismo control produce dos respuestas opuestas y las dos están en el README, así que cuesta UNA lectura por pieza** (`vishalsachdev/canvas-mcp` manda al formulario de IT; `xmike04/canvas-student-mcp` manda a DevTools). 🔴 **Los tres valores de P118 se reemplazan por cinco, porque la clase (b) son tres clases y la peor guarda usuario y contraseña reutilizables del alumno en variables de entorno** (`DUTIC-mcp`). **P122** parte la capa de *proctoring* y analítica de aula por una línea que esta base no tenía: el **art. 5(1)(f)** del AI Act **prohíbe** inferir emociones en instituciones educativas desde biométricos **desde el 2025-02-02**, así que *«presencia y foco»* es Anexo III con plazo 2027-12-02 y *«estado interno»* es práctica prohibida — ⚠️ **una decisión de arquitectura que decide si la entrega EMEA es vendible en absoluto.** ⚠️ **Y la nota de alcance de P113 EMPEORA, no mejora: el pase 52 midió que la suite offline del probe corría y redujo el pedido a «salida de red»; este pase niega también la suite offline, así que hay que pedir la ejecución entera otra vez.**
 > **Pase 52 del 2026-10-02:** **+3 patrones, y el más importante abre un EJE que esta base no tenía.** **P118** agrega la tercera pregunta del filtro de componentes —*¿la pieza respeta los controles de acceso de la institución?*— porque `canvas-student-mcp` es **MIT verificado por dos artefactos**, pasa P115 y pasa P116, **y su argumento de venta es eludir que la universidad deshabilitó la emisión de tokens**, resolviéndolo con la cookie de sesión del alumno: 🔴 **licencia impecable y NO entregable**, con `@mtgibbs/canvas-lms-mcp` como contraejemplo de misma licencia y misma plataforma que sí usa el token institucional. **P119** corrige la regla que el pase 51 declaró obligatoria: el ancla del tarball era **CASE-SENSITIVE** y perdió `package/license` con **35.121 bytes de GPL-3.0**, así que el ancla tiene que ser insensible a mayúsculas **y seguir anclada** —si se desancla vuelve a publicar las **144** licencias de `node_modules`— 🔵 **y la regla de método que deja es que un instrumento recién corregido es el MENOS probado de todos, por lo que toda corrección sale con un control offline que reproduce el defecto y conserva el control positivo del anterior (24/24 sin red).** **P120** sube la unidad de cotización del paquete al **ALCANCE** (`@timeback/*` 3 de 3 sin licencia, `@ink-waffle/*` 2 de 2 con campo sin texto), ⚠️ **declara que un «3 de 3» con denominador encontrado de paso no es el del alcance enumerado** y marca su propio límite: **la organización de GitHub NO es clave**, porque `pie-framework` publica `pie-qti` (ISC) y `pie-elements-ng` (sin licencia). ⚠️ **Y la nota de alcance de P113 se precisa: la comparación de superficies de Canvas sigue sin instrumento único, pero este pase midió que la suite OFFLINE del probe CORRE y es la ejecución CON RED la que se niega, así que lo que falta pedir es salida de red.**
@@ -6529,6 +6530,87 @@ tools se contaron en el árbol.
 🟢 **Por qué esta receta vale más en APAC y en India en particular:** un mandato curricular nacional desde 3.º grado
 (ciclo 2026-27) genera volumen de acreditación que ningún proceso manual absorbe, y el credencial firmado es
 **portable entre instituciones** desde el día uno.
+
+## P131 — La puerta de escritura académica: confirmación de dos llamadas + borrador no liberado + pie de divulgación (agregado en el pase 55 del 2026-10-03)
+
+**Sale de una medición, no de una idea.** El pase 55 clasificó las seis piezas de esta base que escriben
+en un LMS por la **declaración de integridad académica** y encontró que **los dos ejes de la capa están
+anti-correlacionados**: las tres piezas que someten trabajo calificado son las tres de peor procedencia de
+credencial **y las tres traen salvaguarda**, mientras que la de credencial más limpia es la **única sin
+ninguna** (**P127**). 🔴 **Este patrón existe porque la pieza sin guarda es la que este archivo venía
+recomendando.**
+
+> 🔴 **Corrección que va arriba porque cambia lo que se puede proponer.** Donde esta base recomienda
+> **`peancor/moodle-mcp-server`** (MIT) para *«nota y devolución dentro del LMS»* —**gap 6**, **P54**,
+> **P55**—, hay que leer lo que el pase 55 midió: **escribe la nota autoritativa**
+> (`provide_assignment_feedback`, `provide_quiz_feedback`) **con un token de administración del SITIO y
+> sin confirmación, sin borrador, sin divulgación y sin texto de integridad.** No hay cita que lo
+> salve: **el README no trae ninguna.** ⚠️ **Es la combinación de máximo privilegio con mínima guarda**, y
+> sigue siendo proponible **sólo** detrás de la puerta de abajo.
+
+### El problema, en una frase
+
+Un agente que califica o entrega **escribe sobre el expediente académico de una persona**, y en esta capa
+la escritura llega sin tres cosas que un auditor pide por separado: **consentimiento explícito del
+acto**, **reversibilidad antes de que sea visible** y **divulgación de que hubo asistencia AI**.
+
+### Las cuatro piezas, todas permisivas y todas ya medidas en esta KB
+
+| Capa | Pieza | Licencia | Qué aporta, con su cita |
+|---|---|---|---|
+| **Puerta de tools** | [`compose/code/mcp-allowlist-gateway/`](code/mcp-allowlist-gateway/README.md) | **MIT** (propia) | *default deny*, filtro en `tools/list` **y** en `tools/call`, registro JSON por rechazo. **34 checks, reproducidos en el pase 55** |
+| **Confirmación** | [`PabloPC05/mcp-usc`](https://github.com/PabloPC05/mcp-usc) | **MIT** ✅ | el protocolo de **dos llamadas**: *«Toda escritura sigue dos llamadas»*; los `preview_*` **no escriben**, validan y devuelven `confirmation_token`; *«viven solo en memoria, caducan a los cinco minutos y son de un solo uso»*; *«Cambiar texto, destinatario, archivos, respuestas, intento o cualquier otra entrada invalida la confirmación»* |
+| **Escritura reversible + divulgación** | [`toshieji/moodle-grading-mcp`](https://github.com/toshieji/moodle-grading-mcp) | **MIT** ✅ | `save_grade_draft` es *«the only writer»*; escribe `workflowstate=readyforreview` (*«graded but UNRELEASED»*), *«This server never releases»*, *«No student notification (draft state)»* y *«An AI-assistance disclosure footer is appended if missing (override via `MOODLE_AI_FOOTER_FILE`)»* |
+| **Superficie de LMS** | [`gafapa/moodle-core-cli`](https://github.com/gafapa/moodle-core-cli) | **MIT** ✅ | cliente de *core web services* de Moodle 4.5+ **con la compuerta ya puesta**: *«read-only mode by default. Write operations require `--allow-write`, and destructive operations additionally require `--yes»`* |
+
+### Cómo se cablea
+
+```
+agente  →  mcp-allowlist-gateway        (1) default deny; sólo preview_* y las escrituras aprobadas
+           MCP_ALLOWLIST=preview_save_grade,save_grade_draft
+           MCP_HARD_DENY=provide_assignment_feedback,delete_*
+              │
+              ├─(2) preview_save_grade  → NO escribe; valida y devuelve confirmation_token (5 min, un uso)
+              │
+              └─(3) save_grade_draft    → consume el token; escribe workflowstate=readyforreview
+                                          + pie de divulgación AI (MOODLE_AI_FOOTER_FILE)
+                                             │
+                                             └─(4) un humano revisa y LIBERA en Moodle
+```
+
+🔴 **Las cuatro reglas que lo vuelven un control y no un adorno** (las dos primeras son de **P85**, las
+dos últimas son lo que agrega este patrón):
+
+1. **El filtro se aplica en `tools/list` Y en `tools/call`.** Recortar el listado no es un control.
+2. **Allowlist vacía ⇒ cero tools.** Una puerta que falla abierta no es una puerta.
+3. 🔴 **La confirmación es por TOKEN de un uso que se invalida si cambia cualquier entrada, no por un
+   parámetro `confirm=true`.** Un booleano lo puede poner el propio modelo en la misma llamada; **un token
+   emitido por una llamada anterior obliga a que el acto haya sido visible antes de ocurrir.** Esa es la
+   diferencia medida entre `mcp-usc` y el resto de la capa.
+4. 🔴 **La escritura entra como borrador no liberado, y la pieza NO libera.** La liberación es el único
+   punto donde hace falta una persona, y queda fuera de la superficie del agente — que es exactamente la
+   forma del art. 22 del GDPR (decisión individual automatizada) y del expediente de Anexo III.
+
+### Lo que este patrón habilita decir, y lo que prohíbe
+
+🟢 **Habilita:** *«el agente propone la nota, la propuesta queda registrada y no es visible para el
+alumno hasta que una persona la libera, y el texto que llega lleva declarada la asistencia AI»*.
+🔴 **Prohíbe:** *«el agente califica en el LMS»* a secas, y prohíbe proponer `peancor` desnudo.
+
+⚠️ **Y lo que NO resuelve, declarado para no venderlo de más:** el pie de divulgación es marcado del
+**artefacto entero**. **No** es marcado por afirmación: el pase 47 midió **0 de 33** piezas emitiendo
+límite de **tramo**, y esa sigue siendo la frontera — **marcado del curso entero es entregable, marcado
+por afirmación es desarrollo nuevo** (**P108**, **P113**). 🔵 **Dos instrumentos distintos; la resta no se
+escribe.**
+
+### Costo
+
+**Las cuatro piezas existen y son permisivas, así que el trabajo es de composición, no de construcción.**
+El único desarrollo nuevo es **extraer el protocolo de `confirmation_token` de `mcp-usc`**, que hoy está
+atado a una universidad: es la pieza de mayor valor reusable que esta KB midió en el pase 55, y está
+escrita en la acción hacia afuera del mismo pase. **Lo que no hay que escribir:** la compuerta de
+escritura de Moodle (la trae `gafapa`), el borrador no liberado (lo trae `toshieji`) ni la puerta de
+tools (está en este repositorio, con sus 34 checks).
 
 ## P102 — Cotizar un proveedor de *proctoring* por **alcance de red**, no por cantidad de métodos (reemplaza la fila corregida de **P94**, agregado en el pase 46 del 2026-10-02)
 

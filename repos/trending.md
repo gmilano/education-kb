@@ -8,6 +8,94 @@ updated: 2026-10-03
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 
+## 2026-10-03 (pase 55) — **el dato crudo: 11 suites corridas OFFLINE y 11 cifras reproducidas; y el falso positivo que este pase se encontró a sí mismo: un grep escrito a mano dio «2 vencidas» que no lo estaban**
+
+> ⚠️ **Cero repos nuevos, y por undécima vez consecutiva el canal genérico no devolvió infraestructura
+> agéntica educativa.** Lo que sigue es lo que se midió, con su denominador y su invocación.
+
+### Las once suites de `compose/code/`, remedidas hoy
+
+| Suite | Cifra publicada | Medida hoy | Veredicto |
+|---|---|---|---|
+| `aiact-50-2-pack/` | 27/27 | **27/27** | 🟢 reproduce |
+| `aiact-50-2-marking/` | 23/23 | **23/23** | 🟢 reproduce |
+| `registry-license-remeasure/` | 24/24 | **24/24** | 🟢 reproduce |
+| `npm-surface-probe/` | 19/19 | **19/19** | 🟢 reproduce |
+| `trend-backlink-audit/` | 22/22 | **22/22** | 🟢 reproduce |
+| `proctoring-reach-audit/` | 19/19 | **19/19** | 🟢 reproduce |
+| `patterns-figure-audit/` (suite) | 21/21 | **21/21** | 🟢 reproduce |
+| `sebserver-mcp-gate/` | 37/37 | **37/37** | 🟢 reproduce |
+| `seb-proctoring-validator/` | 21/21 | **21/21** | 🟢 reproduce |
+| `mcp-allowlist-gateway/` | 34 checks | **34 checks run** | 🟢 reproduce |
+| `unitime-mcp-gate/` | 46 | **46** | 🟢 reproduce *(con el instrumento versionado; ver abajo)* |
+| `openedx-course-generator/` | 33 | **33** | 🟢 reproduce *(con el instrumento versionado; ver abajo)* |
+
+### 🔴 El falso positivo que este pase se encontró a sí mismo, y es el hallazgo
+
+**Las dos suites que no imprimen total propio** —`unitime-mcp-gate` y `openedx-course-generator`, que sólo
+imprimen `ALL CHECKS PASSED`— **se re-midieron con un `grep` escrito a mano en este pase**:
+`grep -ciE '^ *ok|PASS'`. Devolvió **49** y **34**, y **estuvo a punto de publicarse como «dos cifras
+vencidas» del README.**
+
+| Instrumento | `unitime-mcp-gate` | `openedx-course-generator` | Veredicto |
+|---|---|---|---|
+| 🔴 `grep -ciE '^ *ok\|PASS'` (escrito a mano en este pase) | **49** | **34** | 🔴 **falso positivo** |
+| 🟢 `grep -ciE '^PASS '` (el de `extract_figures.py`, **versionado**) | **46** | **33** | 🟢 **coincide con el README** |
+| conteo de líneas `ok` en esas dos suites | **0** | **0** | — |
+
+🔴 **El defecto del grep propio: su segunda alternativa NO estaba anclada**, y con `-i` matcheó `PASS` y
+`passed` **en cualquier parte de la línea**, incluida la línea de resumen. **Las cifras del README no
+estaban vencidas: las once suites reproducen.**
+
+⚠️ **Y lo que invalidó el control, que es la lección de método del pase: el «control positivo» corrido
+para habilitar el instrumento —37 impreso = 37 líneas en `sebserver-mcp-gate`— era INSENSIBLE al
+defecto**, porque esa suite emite líneas **`ok`** y no `PASS` (medido: `^PASS ` da **0** ahí). **El control
+no ejercitó el caso donde el instrumento podía fallar, así que pasar no habilitaba nada.**
+
+🔵 **Las dos reglas que quedan (P126):** (1) **un control positivo que pasa no habilita un instrumento si
+no ejercita el caso donde ese instrumento puede fallar**; (2) **si este repositorio ya versiona un
+instrumento para una cifra, se corre ése antes de escribir uno a mano** — `extract_figures.py` existía,
+anclaba bien y estaba a un comando de distancia. ⚠️ **Tercer falso positivo propio de este pase**, junto
+con el `grep` CJK orientado a bytes y la lista de palabras-marca de italiano: **los tres de greps escritos
+a mano, los tres atrapados por un segundo instrumento, ninguno publicado como dato.**
+
+⚠️ **Nota de frontera del entorno, reconfirmada y precisada:** un barrido **en lote** de las once suites
+quedó **negado por `[Credential Exploration]`**, así que el control se obtuvo **suite por suite**. 🟢 **La
+ejecución OFFLINE sigue abierta** (las once corrieron) **y lo único bloqueado sigue siendo la salida de
+red del código clonado** (gap 232 / **P113**).
+
+### Control de frontera de red, reproducido de primera mano
+
+| Sonda | Resultado | Lectura |
+|---|---|---|
+| `curl -sI github.com/moodle/moodle` | **403** | 🔴 **no discrimina** |
+| `curl -sI github.com/<repo inventado>` | **403** | 🔴 ídem — **un 403 acá no es evidencia de nada** |
+| `raw.githubusercontent.com/moodle/moodle/main/README.md` | **200** | 🟢 discrimina |
+| `raw.githubusercontent.com/moodle/moodle/main/<archivo inventado>` | **404** | 🟢 ídem |
+
+**Por eso todo este pase se verificó por `raw.githubusercontent.com` y WebFetch**, como los pases 53 y 54.
+
+### Dos instrumentos propios de este pase que dieron FALSOS POSITIVOS
+
+| Instrumento | Qué reportó | Qué era | Cómo se atrapó |
+|---|---|---|---|
+| `grep` de rango CJK orientado a bytes | **8–23** «líneas CJK» en 4 de 4 archivos | 🔴 **cero** en los cuatro | conteo por **rango Unicode** (`toshieji`: 330 han + 216 hiragana + 254 katakana; los otros cuatro: 0) |
+| lista de palabras-marca de italiano | **12–15** marcas en 5 de 5 | 🔴 comparte `per`, `con` y `file` con el inglés y con las rutas | dominancia inglesa medida (59–364 marcas inglesas) |
+
+⚠️ **Ninguno de los dos se publicó como dato: se publican como defecto** (**P130**). 🔵 **Repite la
+tendencia 310 del pase 54 —alta tasa de falsos positivos en barridos de token— sobre el propio pase que
+la heredó.**
+
+### Barrido obligatorio de repos — lo que devolvió
+
+**Cuatro globales + cuatro regionales, año calculado (2026).** Capa genérica y material didáctico *sobre*
+AI; APAC devolvió *enterprise* y soberanía (RAG soberano, informe de open source AI de la Linux
+Foundation para APEC, Tailandia con meta de 30.000 profesionales de AI a 2027). **Cero infraestructura
+agéntica educativa nueva.** 🟢 **Lo único que cambia una recomendación vino de releer una fila vieja:
+`gafapa/moodle-core-cli` sigue sin MCP (cero menciones, reconfirmado) pero su compuerta de escritura ya
+existe** — *«read-only mode by default … require `--allow-write` … additionally require `--yes`»* —, **así
+que el envoltorio MCP la hereda en vez de inventarla.**
+
 ## 2026-10-03 (pase 54) — **el dato crudo: 11 piezas clasificadas por procedencia de credencial con 9 determinables, 4 artefactos de *proctoring* desempaquetados del registro, 15 términos de afecto con 3 coincidencias y 3 falsos positivos, 2 ternas de mercado con 1 inconsistente, 1 alcance npm cerrado en 4 de 4 y 12 sondas en 404 sobre el único nombre nuevo del canal agotado**
 
 > ⚠️ **Cero repos nuevos, y por décima vez consecutiva el canal genérico no devolvió infraestructura

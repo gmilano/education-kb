@@ -9,6 +9,61 @@ updated: 2026-10-03
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 > No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
 
+## 2026-10-03 (pase 55) — **los dos ejes de esta capa están ANTI-correlacionados: las tres piezas que someten trabajo calificado son las de PEOR credencial y las tres traen salvaguarda; la de credencial más limpia es la única sin ninguna**
+
+> ⚠️ **Pase de clasificación, no de altas: la tabla sigue en 80 filas y es el noveno pase consecutivo
+> sin altas desde el barrido obligatorio.** Las dos acciones que el pase 54 dejó escritas se ejecutaron
+> completas y las dos rindieron; una corrige al pase 54 y otra al pase 49.
+
+### El eje nuevo, clasificado — acción 1 (declaración de integridad académica)
+
+**Seis piezas que escriben en un LMS, cada README leído de primera mano por
+`raw.githubusercontent.com`.** Clases del enunciado del pase 54: **(1)** no escribe · **(2)** escribe con
+confirmación previa · **(3)** escribe trabajo calificado y respeta la declaración · **(4)** escribe
+trabajo calificado y la elude.
+
+| Pieza | Integridad | Credencial (P123) | Lo que decide |
+|---|---|---|---|
+| `@ink-waffle/moodle-mcp` | 🟢 **(3)** rehúsa, mecánico | 🔴 b4+b3 | *«the save API cannot record acceptance»* |
+| `PabloPC05/mcp-usc` | 🟢 **(3)** delega, normativo | ⚠️ (a)+b2 | *«debe respetar la declaración de entrega»* + dos llamadas con `confirmation_token` |
+| `Dymayo/moodler-mcp` | 🟢 **(3)** prohibición explícita | 🔴 b4 | prohíbe *«submitting AI-generated work as your own»*; ambas familias de escritura apagadas por defecto |
+| `JOSETRA44/DUTIC-mcp` | 🟢 **(2)** la más estricta | 🔴 b3 | *«Todo simula por defecto»*; `--enviar` **y** `--si-es-irreversible`; *«nunca se reenvía»* |
+| `toshieji/moodle-grading-mcp` | 🟢 **(2)** lado docente + divulgación | 🟢 (a) | `workflowstate=readyforreview`; *«This server never releases»*; pie de divulgación AI |
+| `peancor/moodle-mcp-server` | 🔴 **sin guarda, y fuera de las cuatro clases** | 🟢 (a) **de administración del SITIO** | **no hay cita: el README no trae ninguna** |
+
+🟢 **Clase (4): CERO de seis.** El pase 54 pidió decirlo si pasaba — **significa que el ecosistema se
+autolimita donde la licencia no lo obliga** (**P128**).
+🔴 **Anti-correlación (P127):** las tres de clase (3) son las tres de peor credencial; la de credencial
+más limpia es la única sin guarda. **Un filtro de higiene de credencial selecciona a favor de la
+escritura de notas sin guarda.**
+⚠️ **Agujero declarado (P129):** el esquema es estudiante-céntrico y `peancor` no cae en ninguna clase
+porque no somete trabajo del alumno — **escribe el juicio sobre él**. Acción 1 del pase 56.
+
+### Denominador enumerado — acción 2
+
+**14 filas del mapa por LMS, pieza por pieza, sin barrido por vocabulario:** **9** clientes de un tercero
+con canal determinado (3 nuevas: `mtgibbs` (a) sólo lectura, `csmediapro` (a) sólo lectura, `gafapa` (a)
+con escritura ya compuertada), **2** no determinables (`@owen-x-tech` 404, `@imazhar101` sin licencia),
+**1** que no es cliente de un tercero (`openedx-mcp`, plugin oficial en proceso), **2** fuera del eje
+(`scorm-mcp-server`, `coursecode`). 🔵 **Tasa enumerada 2 de 9 (22,2 %) contra la oportunista 7 de 18
+(38,9 %).** 🔴 **El «73 de 80» del pase 53 sigue sin instrumento.**
+
+### Una región recuperada, y el tamaño del problema
+
+🟢 **`toshieji/moodle-grading-mcp` → APAC**, por **330** han + **216** hiragana + **254** katakana
+(README bilingüe JA/EN, rango Unicode). 🔴 **Corrige parcialmente al pase 49: *«APAC no produce open
+source educativo-nativo»* se escribió con esta pieza —educativa-nativa, MIT, APAC y la de mejor postura
+de integridad de la capa— ya en la tabla, con la región en blanco.** ⚠️ **16 de 21 filas de credencial
+siguen sin región, y el instrumento resuelve 1 de 5: las otras cuatro publican sólo en inglés.**
+
+### Barrido obligatorio — lo que devolvió, con su denominador
+
+**Cuatro globales + cuatro regionales, año calculado (2026).** Capa genérica otra vez (openclaw 385.407
+★, dify 151.639, browser-use 108.128, Mem0 62.735, AutoGen 60.284, Flowise 55.226) y material didáctico
+*sobre* AI. **Cero piezas educativas nuevas — noveno pase.** 🔵 **Rechazo nuevo registrado:** *«Hermes
+Agent»*, declarado MIT con 180.000+ ★ desde feb-2026 por una secundaria — **agente general, no
+educativo, y sin terna que cierre.**
+
 ## 2026-10-03 (pase 54) — **el control negativo que el pase 53 declaró para probar su propio instrumento FALLÓ, y la clase que aparece es la que ningún filtro ve: la pieza que declara CERO credenciales porque se las consigue sola**
 
 > ⚠️ **Pase de corrección de instrumento, no de altas: la tabla sigue en 80 filas.** Las dos acciones
