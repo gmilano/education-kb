@@ -1,12 +1,117 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-02
+updated: 2026-10-03
 ---
 
 # 📈 Repos trending — education
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
+
+## 2026-10-03 (pase 54) — **el dato crudo: 11 piezas clasificadas por procedencia de credencial con 9 determinables, 4 artefactos de *proctoring* desempaquetados del registro, 15 términos de afecto con 3 coincidencias y 3 falsos positivos, 2 ternas de mercado con 1 inconsistente, 1 alcance npm cerrado en 4 de 4 y 12 sondas en 404 sobre el único nombre nuevo del canal agotado**
+
+> ⚠️ **Cero repos nuevos, y por décima vez consecutiva el canal genérico no devolvió infraestructura
+> agéntica educativa.** Lo que sigue es lo que se midió, con su denominador.
+
+### Lecturas por WebFetch — acción 1 (procedencia de credencial, P123)
+
+| Pieza | Veredicto | Lo que lo decide |
+|---|---|---|
+| `Dymayo/moodler-mcp` | 🔴 **b4** | `login_to_moodle` abre Chrome/Chromium, el alumno hace su SSO, la pieza **minta** un token de web service de app móvil y lo guarda. **Declara una sola variable: `MOODLE_URL`** |
+| `@ink-waffle/moodle-mcp` | 🔴 **b4 + b3** | sesión por **CDP** sobre un perfil de Chrome compartido; en sitios sin SSO, la contraseña va directo a `moodle_connect`. *«Treat `config.json` as a password file»* |
+| `mtgibbs/canvas-lms-mcp` | 🟢 **(a)** | `CANVAS_API_TOKEN` + `CANVAS_BASE_URL`; *Account → Settings → Approved Integrations*. Read-only declarado |
+| `toshieji/moodle-grading-mcp` | 🟢 **(a)** | `MOODLE_TOKEN` de *Manage tokens*; escritura doble-cerrada (`MOODLE_ALLOW_WRITE=1` + allowlist de cursos) y nota en borrador |
+| `csmediapro/moodle-mcp-server` | 🟢 **(a)** | `MOODLE_TOKEN` + `MOODLE_URL`; ⚠️ **AGPL-3.0 reconfirmada** |
+| `gafapa/moodle-core-cli` | 🟢 **(a)** | `MOODLE_TOKEN` o `--token`; 🟢 recomienda **servicio externo dedicado con sólo las funciones necesarias** |
+| `redbeard-26/asfai-education` | 🟢 **(a)** | app OAuth web registrada que el admin del Workspace puede negar; diseño *«accountless»* |
+| `Cicatriiz/openedu-mcp` | ⚪ **no aplica** | OpenLibrary + Wikipedia + Dictionary + arXiv: **no es cliente de LMS/SIS** |
+| `paulocymbaum/ed-tech-system-mcp` | ⚪ **no aplica** | Supabase propio; **la credencial de la propia app no es el control de un tercero** |
+| `owentaylor/canvas-mcp` | ⚫ **no determinable** | **10 sondas en 404** (`main`/`master` × 5 nombres de README) |
+| `imazhar101/mcp-canvas-server` | ⚫ **no determinable** | **10 sondas en 404**; ya excluido por licencia ausente (gap 232) |
+
+**9 determinables: 5 (a) / 2 (b) / 2 no aplica.** Acumulado con el pase 53: **18 determinables, 7 en
+clase (b)**.
+
+### Artefactos desempaquetados del registro — acción 2 (señal de *proctoring*)
+
+| Artefacto | Versión | Licencia | Archivos | Dónde estaba la taxonomía |
+|---|---|---|---|---|
+| `mereos` | **1.1.9** | MIT (campo + `LICENSE`) | 5,5 MB extraídos | 🟢 **`src/assets/locales/en/translation.json`: 1.113 claves, 108 del vocabulario de detección.** 🔴 Y la taxonomía de eventos de AI **se baja del servidor**: `getAllAiEvents()` → `GET /sessions/ai_event/` |
+| `@timadey/proctor` | **1.2.6** | MIT (campo; **sin texto**, pase 41) | 6 | `dist/index.esm.js`: **28 literales** de detección |
+| `exam-guard` | **10.0.4** | **ISC** (campo) | 27 | `dist/` bundleado: **45 literales**, ⚠️ **mayoría falsos positivos** |
+| `seb-server` | `master` | **MPL-2.0** (`LICENSE` leído) | 3 archivos leídos | 🟢 **enums Java: `ClientEvent.EventType` (7) + `Indicator.IndicatorType` (7)** |
+
+**Lo medido en `@timadey/proctor` 1.2.6, textual:** rasgos por fotograma `face_present`, `no_of_face`,
+`face_conf`, `gazePoint_x`, `gazePoint_y`, `gaze_direction`, `gaze_on_script`, `head_pitch`,
+`head_roll`, `head_yaw`, `head_pose`, `left_eye_x/y`, `right_eye_x/y` → **compuestos**
+`lookingAwayAndTalking`, `lookingLeftWhispering`, `lookingRightWhispering`, `headTurnedTalking`,
+`objectAndLookingAway`, `multipleFacesWithAudio`, `suspiciousTriplePattern`.
+
+**Lo medido en `seb-server` master, textual:** `EventType` = `UNKNOWN, DEBUG_LOG, INFO_LOG, WARN_LOG,
+ERROR_LOG, NOTIFICATION, NOTIFICATION_CONFIRMED`; `IndicatorType` = `NONE, LAST_PING, ERROR_COUNT,
+WARN_COUNT, INFO_COUNT, BATTERY_STATUS, WLAN_STATUS`. 🟢 **Ni cámara ni micrófono ni rostro: telemetría
+de dispositivo.**
+
+### El barrido de afecto, con sus falsos positivos
+
+**15 términos** (`emotion`, `mood`, `affect`, `anxiet`, `nervous`, `stress`, `confus`, `drowsy`,
+`fatigue`, `engagement`, `sentiment`, `arousal`, `valence`, `frustrat`, `bored`) × 3 artefactos
+permisivos → **3 coincidencias crudas, 3 falsos positivos verificados, 0 inferencia de emoción.**
+
+| Coincidencia | Qué era |
+|---|---|
+| `mereos` → `emotion` × 1 | `rate_experience_by_emotion` = *«Rate your experience by clicking on the emoticon»* — **encuesta de satisfacción** |
+| `exam-guard` → `affect` × 2 | **comentarios del reset de Tailwind CSS** (*«Prevent padding and border from affecting element width»*) |
+| `@timadey/proctor` | **0 de 15** |
+
+🔴 **Y el falso positivo que más cerca estuvo de publicarse: el barrido de `exam-guard` devolvió
+`attention` y `attentionSequence`, que son el tokenizador de énfasis de Markdown de micromark
+vendoreado en el bundle** — nada que ver con la atención de un alumno. **Habrían entrado como
+«inferencia de atención».** 🔵 **Regla: una cadena encontrada en un bundle no es un hallazgo hasta leer
+su contexto** (P125).
+
+### Alcances npm — uno cierra, el otro no, y el instrumento falla en las dos direcciones
+
+| Alcance | `total` del endpoint | Del alcance de verdad | Con texto de licencia | Estado |
+|---|---|---|---|---|
+| `@ink-waffle/*` | 347 | **4** | 🔴 **0 de 4** | 🟢 **CERRADO con denominador enumerado** |
+| `@timeback/*` | **0** | **≥ 3** (resuelven por nombre exacto) | — | 🔴 **ABIERTO, con causa medida** |
+
+**Control:** `@timeback/qti` **0.4.1**, `@timeback/oneroster` **0.3.3**, `@timeback/caliper` **0.3.3**,
+los tres con **`license=None`** — existen mientras la búsqueda dice `total=0`. 🔵 **`search?text=scope:X`
+no es un enumerador de alcances y su `total` no se debe publicar como denominador.**
+
+### Ternas de mercado (P125) — control sin segunda fuente
+
+| Terna | CAGR declarado | CAGR implicado | Veredicto |
+|---|---|---|---|
+| Europa, AI en educación: $2,64 B → $8,0 B (2026→2030) | 31,9 % | **31,9 %** | ✅ |
+| Middle East & Africa: $0,56 B → $1,6 B (2026→2030) | 34,3 % | 🔴 **30,0 %** | 🔴 **inconsistente** (con 34,3 % el final sería **$1,82 B**) |
+
+### El canal agotado, y su único nombre nuevo
+
+🔴 **El barrido de verticales devolvió el inventario propio por CUARTA vez** (Moodle, Canvas, Chamilo,
+Sakai, ILIAS, Open edX, OpenEduCat). **El único nombre que esta base no tenía es `.LRN` / dotLRN**,
+presentado como *«originally developed at MIT»* y *«the most widely adopted enterprise-class open
+source LMS»*. 🔴 **Medido: 12 sondas** (4 slugs × 3 ramas, incluida `oacs-5-10`) **y ninguna devuelve
+200: no hay repo alcanzable.** 🔵 **El canal declarado agotado por el pase 53 produjo exactamente un
+nombre nuevo y era uno muerto — que es un dato mejor que la cuarta repetición.**
+
+### Verificador prescripto — control reproducido
+
+| URL | `curl -sI` | `raw.githubusercontent.com` |
+|---|---|---|
+| `moodle/moodle` (verdadera) | 🔴 **403** | 🟢 **200** |
+| repo inventado | 🔴 **403** | 🟢 **404** |
+
+✅ **Reproducido de primera mano: el verificador que prescribe la consigna devuelve lo mismo para lo
+verdadero y lo falso.** Todo este pase se midió por `raw` y WebFetch.
+
+### Canales bloqueados por egreso (gap 92: sexto y séptimo)
+
+`docs.moodle.org` → **`EGRESS_BLOCKED`** · `seb-server.readthedocs.io` → **`EGRESS_BLOCKED`**.
+⚠️ **Los dos eran la PRIMARIA de una afirmación técnica de este pase**, así que las dos afirmaciones se
+publican citando el artefacto de la pieza en vez del manual.
 
 ## 2026-10-02 (pase 53) — **el dato crudo: 12 README leídos por el eje de control de acceso con 11 clasificables (5 clase b / 6 clase a), 12 sondas de licencia en 404 sobre el único repo APAC del barrido, 4 de 4 URLs verdaderas rechazadas por el verificador prescripto, y 2 hosts regulatorios bloqueados por egreso**
 

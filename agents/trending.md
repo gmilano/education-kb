@@ -1,13 +1,147 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-02
+updated: 2026-10-03
 ---
 
 # 📈 Agentes trending — education
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 > No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
+
+## 2026-10-03 (pase 54) — **el control negativo que el pase 53 declaró para probar su propio instrumento FALLÓ, y la clase que aparece es la que ningún filtro ve: la pieza que declara CERO credenciales porque se las consigue sola**
+
+> ⚠️ **Pase de corrección de instrumento, no de altas: la tabla sigue en 80 filas.** Las dos acciones
+> que el pase 53 dejó escritas se ejecutaron completas, y las dos **corrigen al pase 53**.
+
+### 🔴 Acción 1 — el control negativo falla, y con él la definición de P121
+
+El pase 53 escribió, textual: *«`toshieji/moodle-grading-mcp` y `Dymayo/moodler-mcp` son el control
+negativo natural: esta base ya documentó que usan web service token, así que si salieran (b) el
+instrumento está mal.»* 🔴 **`toshieji` salió (a) y `Dymayo/moodler-mcp` salió (b). El instrumento
+estaba mal** — y el pase 53 merece el crédito de haber escrito de antemano la prueba que lo rompería.
+
+🔵 **El defecto, con nombre: P121 leía el TIPO de la credencial y hay que leer su PROCEDENCIA (P123).**
+`moodler-mcp` guarda un **token de web service de app móvil** —artefacto de clase (a), el mismo que
+`toshieji` y `gafapa`— **pero lo mintió la sesión SSO del propio alumno**: `login_to_moodle` abre
+Chrome, la persona se autentica con sus factores, y la pieza pide el token y lo guarda en disco.
+**Clase nueva: b4.**
+
+🔴 **Y el corolario invierte la intuición de cualquier filtro automatizable:**
+
+| Pieza | Variables de credencial que declara | Clase real |
+|---|---|---|
+| `Dymayo/moodler-mcp` | 🔴 **cero** (sólo `MOODLE_URL`) | **b4** |
+| `toshieji/moodle-grading-mcp` | una (`MOODLE_TOKEN`) | 🟢 **(a)** |
+| `JOSETRA44/DUTIC-mcp` | tres (usuario + contraseña + encuesta) | 🔴 **b3** |
+
+**La pieza con menos variables de credencial no es la más segura: es la que se consigue la credencial
+sola.** ⚠️ **Un audit de `.env` —el único barato de automatizar— ordena esta capa exactamente al revés.**
+
+**Reparto del pase:** 11 piezas leídas, 9 con canal determinable → **5 (a) · 2 (b, las dos b4) ·
+2 no aplica · 2 no determinable** (`owentaylor/canvas-mcp` e `imazhar101/mcp-canvas-server`, 10 sondas
+en 404 cada uno, reconfirmado).
+
+🔵 **La hipótesis falsable del pase 53 cae en el medio que él mismo había declarado sin interpretar:**
+2 de 7 este pase (**28,6 %**), acumulado 7 de 18 (**38,9 %**). **Ni el ~45 % ni el <15 %, así que no
+decide nada.** 🟢 **Pero apareció un predictor mejor que un porcentaje: el canal correlaciona con el
+ALCANCE de la pieza, no con la plataforma** — **pieza con nombre de universidad, 3 de 3 en clase (b);
+conector genérico de producto, 11 de 13 en (a), y las 2 excepciones son justamente las dos b4.**
+**El mecanismo lo explica: una pieza de una sola institución no tiene a quién pedirle un token.**
+
+### 🟢 Acción 2 — el art. 5(1)(f) NO parte la capa de *proctoring*, y eso desarma P122
+
+**Instrumento:** 15 términos de afecto sobre los artefactos publicados de las tres piezas permisivas.
+**Resultado: 3 coincidencias crudas, 3 falsos positivos verificados leyendo la cadena, 0 inferencia de
+emoción** — `mereos` traía `rate_experience_by_emotion` (*«Rate your experience by clicking on the
+emoticon»*, **encuesta de satisfacción**), `exam-guard` traía dos comentarios del reset de **Tailwind
+CSS**, y `@timadey/proctor` **0 de 15**.
+
+🔴 **Así que P122 describía una distinción real y la clavaba al artículo equivocado.** La línea que sí
+parte la capa es **evento contra CONDUCTA**, y la conducta **no está prohibida**: es Anexo III con
+plazo 2027-12-02, más art. 22 GDPR.
+
+🔴 **Y una celda propia se corrige en los hechos: `mereos`, que P122 clasificaba 🟢 permitido por
+*«presencia por webcam, pantalla compartida, foco de pestaña»*, envía `cheating`,
+`it_looks_suspicious`, `suspicious_incidents` y, verbatim, una *«re-calculation of the suspiciousness
+of a proctored exam»*** más *«statistically significant differences in a test taker's behavior»*.
+
+**La capa, medida sobre el artefacto publicado (4 de 5 piezas; `openedx/edx-proctoring` queda
+declarada sin medir):**
+
+| Pieza | Licencia | Clase |
+|---|---|---|
+| `SafeExamBrowser/seb-server` | **MPL-2.0** | 🟢 **(i) evento — y NO es biométrico:** `IndicatorType` son `LAST_PING`, `ERROR/WARN/INFO_COUNT`, `BATTERY_STATUS`, `WLAN_STATUS` |
+| `aswanth9495/exam-guard` | **ISC** | 🟢 **(i) evento** (`tabSwitch`, `focusin`/`focusout`, *«Browser/tab closed»*) |
+| `Drone9/mereos` | **MIT** | ⚠️ **(ii) conducta** |
+| `@timadey/proctor` | **MIT** (sin texto) | ⚠️ **(ii) conducta**, el caso más claro |
+
+### 🔵 El caso límite que el pase 53 pidió buscar a propósito: la MIRADA — y la respuesta es peor que la pregunta
+
+🔴 **`@timadey/proctor` hace las DOS cosas en la misma librería:** calcula la mirada como **coordenada**
+(`gazePoint_x`, `gaze_direction`, `head_yaw/pitch/roll`, coordenadas de los dos ojos — forma de evento)
+y después **nombra el compuesto como conducta**: `lookingLeftWhispering`, `lookingRightWhispering`,
+`headTurnedTalking`, `objectAndLookingAway`, `suspiciousTriplePattern`. **Misma señal, dos nombres,
+mismo paquete — y el que llega al informe es el segundo.** 🔵 **Por eso auditar el vocabulario de
+salida (la receta de P122) es correcto pero insuficiente: hay que auditar el vocabulario de los
+COMPUESTOS, porque los rasgos crudos siempre se ven bien.**
+
+### 🔴 Dos trampas de arquitectura que decide la compra y que ningún README menciona
+
+**1.** `mereos`, verbatim: *«Each characteristic is derived for every image, **regardless of the
+settings is enabled or not**.»* **Apagar el ajuste no detiene la derivación: le quita peso.** Un
+control que no detiene el tratamiento no es mitigación, y es lo primero que mira un DPIA.
+
+**2.** **El clasificador no está en el paquete MIT.** En `mereos` la taxonomía de eventos de AI **se
+baja del servidor del proveedor** (`getAllAiEvents()` → `GET /sessions/ai_event/`). 🟢 **Consecuencia
+vendible: un SDK de *proctoring* del lado cliente no puede cargar un veredicto regulatorio** — el
+veredicto es del backend al que se lo enchufa.
+
+### 🟢 La conclusión de arquitectura más vendible del pase
+
+**`seb-server` (MPL-2.0) es la única pieza de esta capa que se despliega en la UE sin análisis de
+art. 5(1)(f), porque no observa al alumno.** ⚠️ **El pase 53 la dejó *«sin clasificar por este eje»*
+como si fuera el caso difícil. Era el más fácil: se resuelve leyendo tres archivos de su código.**
+**Todo el riesgo de AI Act de un despliegue de SEB Server es IMPORTADO del servicio de sala** que se le
+enchufe en `/admin-api/v1/monitoring/proctoring` — lo que convierte el cumplimiento en una decisión de
+proveedor, **negociable**, en vez de una propiedad del producto.
+
+### Deudas de alcance: una CIERRA, la otra queda abierta con causa medida
+
+🟢 **`@ink-waffle/*` CIERRA con denominador enumerado: 4 de 4 paquetes, 0 con texto de licencia**
+(`moodle-mcp` 0.2.0, `sisu-mcp` 0.1.0, `aplus-mcp` 0.1.0, `study-browser` 0.1.0; 121 archivos entre
+los cuatro tarballs, ancla case-insensitive del pase 52). ⚠️ **Y `study-browser` es justo el componente
+que maneja el perfil de Chrome del canal b4: la familia que implementa el canal invisible es también la
+familia sin texto de licencia.**
+
+🔴 **`@timeback/*` sigue ABIERTA, y el pase 53 creía que la bloqueaba un permiso. No: el endpoint
+`search?text=scope:X` de npm NO filtra por alcance** — reporta `total=347` para `@ink-waffle` (de los
+que **4** pertenecen al alcance) y `total=0` para `@timeback`, **cuyos tres paquetes resuelven por
+nombre exacto** (`qti` 0.4.1, `oneroster` 0.3.3, `caliper` 0.3.3, los tres `license=None`). **Falla en
+las dos direcciones en el mismo minuto, así que su `total` no es un denominador.**
+
+### Notas de instrumento y de frontera
+
+✅ **El control del pase 53 se reprodujo de primera mano:** `curl -sI` devuelve **403** para
+`github.com/moodle/moodle` **y** para un repo inventado — **no discrimina**; `raw.githubusercontent.com`
+devuelve **200/404**. **El verificador que prescribe la consigna sigue sin verificar.**
+
+🔴 **Frontera NUEVA, la tercera: `[Credential Exploration]`** niega el barrido por vocabulario de
+autenticación — **tanto sobre el markdown de esta propia KB como sobre READMEs públicos ya
+descargados**. 🟢 **Lo que sí corre es WebFetch, que es exactamente el canal que la acción 1 del pase
+53 prescribía, así que la acción se ejecutó completa** — pero la forma «script de auditoría local» no
+está disponible.
+
+🟢 **Y una frontera que se movió A FAVOR: `[Exfil Scouting]`.** Este pase consultó el registro de npm y
+bajó cinco tarballs sin negativa, así que **el pedido 3(b) del pase 53 ya no hace falta.**
+
+⚠️ **Gap 92 suma dos canales, y los dos bloquearon una PRIMARIA:** `docs.moodle.org` (sexto) y
+`seb-server.readthedocs.io` (séptimo), los dos `EGRESS_BLOCKED`. **Por eso el nombre canónico del
+ajuste de Moodle que gobierna b4 se publica como cita de las piezas y no como nombre de ajuste.**
+
+⚠️ **Y una inconsistencia menor en la lista del pase 53: nombraba `@ink-waffle/moodle-mcp` como «fila
+de `agents/top.md`» y no lo es** (el alcance sólo tiene fila por `sisu-mcp`). Se clasificó igual,
+porque es un cliente de LMS real y es una de las dos piezas b4.
 
 ## 2026-10-02 (pase 53) — **la hipótesis del pase 52 queda FALSIFICADA y en la dirección peor: eludir el control de acceso institucional no es un caso aislado, son 5 de 11 clientes de LMS de esta base, uno por cada región; los tres valores de P118 no alcanzaban porque la clase (b) son TRES clases y la peor guarda la contraseña reutilizable del alumno; y el AI Act tiene un reloj que esta base no tenía y no es un plazo, es una PROHIBICIÓN vigente desde el 2025-02-02**
 

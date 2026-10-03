@@ -1,13 +1,14 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-02
+updated: 2026-10-03
 ---
 
 # 🧩 Patrones de composición — Education
 
 > Recetas concretas: repos nombrados, licencias verificadas, wiring explícito y estimación.
 > Todos los repos citados fueron verificados vía WebFetch el 2026-09-30; los del pase 11, el 2026-10-01 (ver `agents/top.md`).
+> **Pase 54 del 2026-10-03:** **+3 patrones, y los tres CORRIGEN instrumentos que los dos pases anteriores acababan de declarar obligatorios.** **P123** corrige P121 por donde P121 pidió que se lo probara: su control negativo declarado FALLÓ — `Dymayo/moodler-mcp` salió clase (b) — y el defecto es que **P121 leía el TIPO de la credencial en vez de su PROCEDENCIA.** 🔴 **La clase nueva (b4) es la que ningún filtro ve: la pieza abre un navegador real, el alumno completa su SSO con passkey y 2FA, y la pieza MINTA un token de web service oficial y lo guarda en disco — artefacto de clase (a), emisor de clase (b).** 🔵 **Y el corolario invierte la intuición del filtro: `moodler-mcp` declara CERO variables de credencial (sólo `MOODLE_URL`) precisamente porque se la consigue sola, así que un audit de `.env` lo aprueba y ordena la capa al revés.** **P124** corrige P122 **en el artículo y en los hechos**: 15 términos de afecto medidos sobre los artefactos publicados de las tres piezas permisivas dan **3 coincidencias crudas y 3 falsos positivos verificados** (comentarios de Tailwind × 2 y una encuesta con emoticones) → 🟢 **cero inferencia de emoción, así que el art. 5(1)(f) NO parte esta capa.** 🔴 **La línea que sí la parte es evento contra CONDUCTA, que es alto riesgo y NO prohibido** — y `mereos`, que P122 clasificaba 🟢 permitido, envía `cheating`, `it_looks_suspicious` y una *«re-calculation of the suspiciousness»* por imagen. 🔴 **Dos trampas medidas que ningún README menciona: en `mereos` apagar el ajuste NO detiene la derivación** (*«Each characteristic is derived for every image, regardless of the settings is enabled or not»*) **y la taxonomía de AI se BAJA del servidor del proveedor** (`GET /sessions/ai_event/`), así que el clasificador no está en el paquete MIT. 🟢 **Y la conclusión más vendible del pase: `seb-server` (MPL-2.0) es la única pieza de la capa que se despliega en la UE sin análisis de art. 5(1)(f), porque sus siete indicadores son ping, contadores de log, batería y wifi — no observa al alumno, y todo su riesgo es IMPORTADO del servicio de sala.** **P125** deja dos controles de dos líneas: la **terna de mercado tiene que cerrar sola** (atrapó una inconsistencia de MEA con una sola fuente, en la misma frase donde la de Europa cierra perfecto) y **la taxonomía de un SDK vive en su archivo de localización, no en su README** (4 READMEs → cero; un `translation.json` → 108 cadenas), ⚠️ **con su límite medido: sobre un bundle los falsos positivos son altos — el `attention` de `exam-guard` era el tokenizador de Markdown de micromark.**
 > **Pase 53 del 2026-10-02:** **+2 patrones, y el primero convierte en puerta de entrada el eje que el pase 52 abrió como advertencia.** **P121** sube P118 a **paso obligatorio del filtro de componentes** porque la hipótesis del pase 52 se falsificó: **5 de 11 clientes de LMS/SIS de esta base eluden el control de acceso institucional, uno por cada región.** 🔵 **Y es barato: el mismo control produce dos respuestas opuestas y las dos están en el README, así que cuesta UNA lectura por pieza** (`vishalsachdev/canvas-mcp` manda al formulario de IT; `xmike04/canvas-student-mcp` manda a DevTools). 🔴 **Los tres valores de P118 se reemplazan por cinco, porque la clase (b) son tres clases y la peor guarda usuario y contraseña reutilizables del alumno en variables de entorno** (`DUTIC-mcp`). **P122** parte la capa de *proctoring* y analítica de aula por una línea que esta base no tenía: el **art. 5(1)(f)** del AI Act **prohíbe** inferir emociones en instituciones educativas desde biométricos **desde el 2025-02-02**, así que *«presencia y foco»* es Anexo III con plazo 2027-12-02 y *«estado interno»* es práctica prohibida — ⚠️ **una decisión de arquitectura que decide si la entrega EMEA es vendible en absoluto.** ⚠️ **Y la nota de alcance de P113 EMPEORA, no mejora: el pase 52 midió que la suite offline del probe corría y redujo el pedido a «salida de red»; este pase niega también la suite offline, así que hay que pedir la ejecución entera otra vez.**
 > **Pase 52 del 2026-10-02:** **+3 patrones, y el más importante abre un EJE que esta base no tenía.** **P118** agrega la tercera pregunta del filtro de componentes —*¿la pieza respeta los controles de acceso de la institución?*— porque `canvas-student-mcp` es **MIT verificado por dos artefactos**, pasa P115 y pasa P116, **y su argumento de venta es eludir que la universidad deshabilitó la emisión de tokens**, resolviéndolo con la cookie de sesión del alumno: 🔴 **licencia impecable y NO entregable**, con `@mtgibbs/canvas-lms-mcp` como contraejemplo de misma licencia y misma plataforma que sí usa el token institucional. **P119** corrige la regla que el pase 51 declaró obligatoria: el ancla del tarball era **CASE-SENSITIVE** y perdió `package/license` con **35.121 bytes de GPL-3.0**, así que el ancla tiene que ser insensible a mayúsculas **y seguir anclada** —si se desancla vuelve a publicar las **144** licencias de `node_modules`— 🔵 **y la regla de método que deja es que un instrumento recién corregido es el MENOS probado de todos, por lo que toda corrección sale con un control offline que reproduce el defecto y conserva el control positivo del anterior (24/24 sin red).** **P120** sube la unidad de cotización del paquete al **ALCANCE** (`@timeback/*` 3 de 3 sin licencia, `@ink-waffle/*` 2 de 2 con campo sin texto), ⚠️ **declara que un «3 de 3» con denominador encontrado de paso no es el del alcance enumerado** y marca su propio límite: **la organización de GitHub NO es clave**, porque `pie-framework` publica `pie-qti` (ISC) y `pie-elements-ng` (sin licencia). ⚠️ **Y la nota de alcance de P113 se precisa: la comparación de superficies de Canvas sigue sin instrumento único, pero este pase midió que la suite OFFLINE del probe CORRE y es la ejecución CON RED la que se niega, así que lo que falta pedir es salida de red.**
 > **Pase 51 del 2026-10-02:** **+3 patrones, y los tres salen de ejecutar las acciones 1 y 3 del pase 50.** **P115** convierte el filtro de licencias en una **auditoría de 5 pasos** con los 20 nombres de archivo, el control del hermano y el probe anclado por tarball — medido sobre **167** repos (**139/23/5**) y corrigiendo **4 falsos «sin licencia» de 27**, `moodle/moodle` entre ellos. **P116** separa las dos preguntas que esta base venía mezclando —*«¿hay permiso escrito?»* y *«¿se puede usar en una entrega comercial?»*— porque una pieza con `LICENSE` de 200 y texto real resultó ser **académica no comercial**. **P117** es el pipeline de descubrimiento por el `?text=` del registro, que **rompió nueve pases de sequía** con 4 altas y trae el control del gap 71 adentro. ⚠️ **Y la nota de alcance que P113 arrastra: la comparación de superficies de Canvas sigue sin poder hacerse con un instrumento único porque exige ejecutar código versionado, negado en los pases 50 y 51.**
@@ -111,6 +112,225 @@ updated: 2026-10-02
 > propuesta, no se descubre en la semana 6. Ver la sección de auditoría abajo y **P78**. 🟢 **Lo que sí está sano:** `lrsql`
 > (Apache-2.0, **v0.9.9 del 2026-10-01**), Ralph (MIT, vivo en `main`), las cuatro puertas de Canvas y Moodle-alumno
 > (commits de las últimas dos semanas) y `qti3-cli` (MIT). **El resto de las recetas no cambia.**
+
+## P123 — Leer la PROCEDENCIA de la credencial, no su tipo (agregado en el pase 54 del 2026-10-03; **las cuatro regiones**)
+
+> 🔴 **Corrige P121, y lo corrige por donde P121 pidió que se lo probara.** La acción 1 del pase 53
+> declaró un control negativo: *«`toshieji/moodle-grading-mcp` y `Dymayo/moodler-mcp` son el control
+> negativo natural: esta base ya documentó que usan web service token, así que si salieran (b) el
+> instrumento está mal.»* **`moodler-mcp` salió (b).** El instrumento estaba mal.
+
+**El defecto, en una línea.** P121 clasificaba leyendo **qué** credencial pide la pieza. Hay que leer
+**quién la emitió**. Son dos preguntas independientes y la primera no determina la segunda.
+
+| Campo | Valores |
+|---|---|
+| **Artefacto** — qué guarda la pieza | cookie de sesión · **token de web service** · credencial primaria (usuario+contraseña) · app OAuth registrada |
+| **Emisor** — quién lo emitió | **TI de la institución** · **la sesión del propio alumno** · el alumno tipeando su contraseña |
+
+🔴 **El caso que lo demuestra:** `Dymayo/moodler-mcp` guarda un **token de web service de app móvil**
+—artefacto de clase (a), el mismo artefacto que `toshieji` y que `gafapa`— **pero lo mintió la sesión
+SSO del propio alumno**: `login_to_moodle` abre Chrome, la persona se autentica con sus factores, y la
+pieza pide el token y lo guarda en disco. **Emisor de clase (b).** 🔵 **Clase nueva: b4.**
+
+### 🔴 El corolario que invierte la intuición del filtro, y es el valor del patrón
+
+**La pieza con MENOS variables de credencial en su configuración no es la más segura: es la que se
+consigue la credencial sola.**
+
+| Pieza | Variables de credencial declaradas | Clase real |
+|---|---|---|
+| `Dymayo/moodler-mcp` | 🔴 **cero** (sólo `MOODLE_URL`) | **b4** |
+| `toshieji/moodle-grading-mcp` | una (`MOODLE_TOKEN`) | 🟢 **(a)** |
+| `JOSETRA44/DUTIC-mcp` | tres (usuario, contraseña, encuesta) | 🔴 **b3** |
+
+⚠️ **Un audit de `.env` ordena esto exactamente al revés de lo que vale.** Y es un audit muy común,
+porque es el que se puede automatizar.
+
+### Qué cambia en el filtro de componentes
+
+1. **Preguntar «¿de dónde sale el token?», no «¿pide token?»** — la respuesta está en el README, en el
+   paso de instalación, no en la lista de variables.
+2. **Marcar b4 aparte de b1.** b1 guarda una cookie que muere con la sesión. **b4 se queda con un
+   bearer portable y durable**, y encima no se ve en la configuración.
+3. 🔵 **Usar el predictor de alcance antes de leer:** pieza con nombre de universidad → **3 de 3 en
+   clase (b)** en esta base; conector genérico de producto → **11 de 13 en (a)**, y **las 2 excepciones
+   son justamente las dos b4**. **El mecanismo lo explica: una pieza de una sola institución no tiene a
+   quién pedirle un token.**
+4. ⚠️ **Lo que b4 evade no es la emisión de tokens** —usa el endpoint oficial— **sino que el servicio
+   web móvil del sitio esté habilitado**, que casi nadie administra como control de acceso de agentes.
+   🔴 **El nombre canónico de ese ajuste de Moodle NO está verificado en esta base:** `docs.moodle.org`
+   devuelve `EGRESS_BLOCKED` (gap 92). **Se cita a las piezas, no al manual.**
+
+**Esfuerzo.** Una lectura por pieza, la misma que P121. **El cambio es de pregunta, no de presupuesto.**
+
+### 🔵 El eje que apareció al lado y hay que clasificar aparte: la declaración de integridad
+
+`@ink-waffle/moodle-mcp` es **b4+b3** en credencial **y ejemplar en integridad**: somete trabajo
+calificado pero **se niega a falsificar la declaración de integridad académica** —*«no-draft assignments
+requiring [a submission statement] must be completed in Moodle's UI because the save API cannot record
+acceptance»*— y avisa que *«starting/finishing a quiz or lesson may consume a graded attempt»*.
+⚠️ **Dos ejes ortogonales: una pieza puede ser mala en credencial y correcta en integridad.** La acción
+1 del pase 55 pide clasificar la tabla por el segundo.
+
+## P124 — La línea del *proctoring* no es la del art. 5(1)(f): es EVENTO contra CONDUCTA, y el régimen cambia por región (agregado en el pase 54 del 2026-10-03; **las cuatro regiones**)
+
+> 🔴 **Corrige P122 en el artículo y en los hechos, y las dos correcciones salen de medir el código.**
+> P122 partió la capa con el art. 5(1)(f) —*inferencia de emociones*, prohibida desde el 2025-02-02— y
+> clasificó `mereos` como 🟢 **permitido** por *«presencia por webcam, pantalla compartida, foco de
+> pestaña»*. **Las dos cosas se midieron de primera mano este pase y las dos salieron distinto.**
+
+### 🟢 El hallazgo que desarma P122: ninguna pieza permisiva de esta capa infiere emociones
+
+**Instrumento:** 15 términos de afecto (`emotion`, `mood`, `affect`, `anxiet`, `nervous`, `stress`,
+`confus`, `drowsy`, `fatigue`, `engagement`, `sentiment`, `arousal`, `valence`, `frustrat`, `bored`)
+sobre los artefactos publicados de las tres piezas permisivas. **Resultado: 3 coincidencias crudas,
+3 falsos positivos verificados leyendo la cadena, 0 inferencia de emoción.**
+
+| Pieza | Coincidencias | Qué eran de verdad |
+|---|---|---|
+| `Drone9/mereos` 1.1.9 | `emotion` × 1 | 🟢 `rate_experience_by_emotion` = *«Rate your experience by clicking on the emoticon»* — **encuesta de satisfacción autorreportada, no biometría** |
+| `aswanth9495/exam-guard` 10.0.4 | `affect` × 2 | 🟢 **comentarios del reset de Tailwind CSS** (*«Prevent padding and border from affecting element width»*) |
+| `@timadey/proctor` 1.2.6 | **0 de 15** | — |
+
+🔴 **Conclusión: el art. 5(1)(f) NO parte esta capa, porque no hay nada en ella que infiera emociones.**
+P122 describía una distinción real y la clavaba al artículo equivocado. **La línea que sí parte la capa
+es evento contra CONDUCTA**, y esa no está prohibida: es alto riesgo con plazo.
+
+### La línea corregida
+
+| Señal que el sistema emite | Clasificación | Reloj / régimen |
+|---|---|---|
+| *«pestaña fuera de foco»*, *«no hay rostro»*, *«dos pantallas»*, `LAST_PING` | 🟢 **evento** | Anexo III, expediente con plazo **2027-12-02** |
+| *«conducta sospechosa»*, *«puntaje de sospecha»*, *«mirando a la izquierda y susurrando»* | ⚠️ **inferencia de CONDUCTA** | 🔴 **Alto riesgo, NO prohibido.** Anexo III + **art. 22 GDPR**. En APAC y North America tiene gancho propio (abajo) |
+| *«el alumno parece ansioso»*, *«nivel de atención»* | 🔴 **inferencia de EMOCIÓN** | **art. 5(1)(f): prohibida desde 2025-02-02.** 🟢 **Ninguna pieza permisiva de esta base cae acá** |
+
+### Las cuatro piezas, medidas sobre el artefacto publicado
+
+| Pieza | Licencia | Señal medida de primera mano | Clase |
+|---|---|---|---|
+| [`SafeExamBrowser/seb-server`](https://github.com/SafeExamBrowser/seb-server) | **MPL-2.0** (`LICENSE` leído) | `ClientEvent.EventType` = **7 valores**: `UNKNOWN, DEBUG_LOG, INFO_LOG, WARN_LOG, ERROR_LOG, NOTIFICATION, NOTIFICATION_CONFIRMED`. `Indicator.IndicatorType` = **7 valores**: `NONE, LAST_PING, ERROR_COUNT, WARN_COUNT, INFO_COUNT, BATTERY_STATUS, WLAN_STATUS` | 🟢 **(i) evento — y NO es un sistema biométrico.** Ni cámara ni micrófono ni rostro en el modelo de indicadores: es **telemetría de dispositivo** |
+| [`aswanth9495/exam-guard`](https://github.com/aswanth9495/exam-guard) | **ISC** | `tabSwitch`, `focusin`/`focusout`, *«Browser/tab closed»*, `multiple`, `object`, `violation.worker.js`, *«Share system audio»* | 🟢 **(i) evento** |
+| [`Drone9/mereos`](https://github.com/Drone9/mereos) | **MIT** | eventos limpios **más** `cheating`, `it_looks_suspicious`, `suspicious_incidents`, y verbatim: *«re-calculation of the suspiciousness of a proctored exam»* y *«Abnormalties compare one test taker's actions to the rest of the exams in the class… statistically significant differences in a test taker's behavior»* | ⚠️ **(ii) CONDUCTA.** 🔴 **Y P122 lo tenía como «permitido» por una lista de rasgos que el paquete no sostiene** |
+| [`@timadey/proctor`](https://github.com/Timadey/proctor) | **MIT** (sin texto, pase 41) | rasgos por fotograma: `gazePoint_x/y`, `gaze_direction`, `head_yaw/pitch/roll`, `left_eye_x/y`, `right_eye_x/y`, `face_present` → **compuestos**: `lookingAwayAndTalking`, `lookingLeftWhispering`, `lookingRightWhispering`, `headTurnedTalking`, `objectAndLookingAway`, `multipleFacesWithAudio`, `suspiciousTriplePattern` | ⚠️ **(ii) CONDUCTA**, y el caso más claro de la capa |
+| [`openedx/edx-proctoring`](https://github.com/openedx/edx-proctoring) | **AGPL-3.0** | 🔴 **no leída en este pase** | ⚫ **(iii) sin medir — declarado** |
+
+⚠️ **Denominador: 4 de las 5 piezas de la capa, medidas sobre el artefacto publicado. La quinta queda
+nombrada y sin medir.**
+
+### 🔵 El caso límite que el pase 53 pidió buscar a propósito: la MIRADA, y la respuesta es peor que la pregunta
+
+El pase 53 preguntó si el sistema reporta *«mirada fuera de pantalla»* (evento) o *«falta de
+atención»* (estado). 🔴 **`@timadey/proctor` hace las DOS COSAS en la misma librería:** calcula la
+mirada como **coordenada** (`gazePoint_x`, `gaze_direction` — forma de evento) y después **nombra el
+compuesto como conducta** (`lookingLeftWhispering`). **Es la misma señal con dos nombres dentro del
+mismo paquete, y el que llega al informe es el segundo.** 🔵 **Así que auditar el vocabulario de salida
+—la receta de P122— es correcto pero insuficiente: hay que auditar el vocabulario de los COMPUESTOS,
+porque los rasgos crudos siempre se ven bien.**
+
+### 🔴 Las dos trampas de arquitectura que decide la compra, y ninguna se ve en el README
+
+**1. El toggle que no apaga la inferencia.** `mereos`, verbatim: *«Each characteristic is derived for
+every image, **regardless of the settings is enabled or not**.»* **Apagar el ajuste no detiene la
+derivación: sólo le quita peso.** ⚠️ **Un control que no detiene el tratamiento no es una medida de
+mitigación**, y es lo primero que pregunta un DPIA.
+
+**2. El clasificador no está en el paquete MIT.** En `mereos` la taxonomía de eventos de AI **se baja
+del servidor del proveedor**: `getAllAiEvents()` hace `GET /sessions/ai_event/` y la pieza postea con
+`POST /sessions/candidate_ai_event/`. 🔴 **Lo que decide si la señal es evento o estado vive fuera del
+código abierto.** 🟢 **La consecuencia vendible: un SDK de *proctoring* del lado cliente NO PUEDE
+cargar un veredicto regulatorio** — el veredicto es del backend al que se lo enchufa. (La detección de
+objetos sí corre local: `@tensorflow/tfjs` + `@tensorflow-models/coco-ssd`.)
+
+### 🟢 La conclusión de arquitectura, y es la más vendible del pase
+
+**`SafeExamBrowser/seb-server` es la única pieza de esta capa que se despliega en la UE sin análisis de
+art. 5(1)(f), porque no observa al alumno.** Sus siete indicadores son *ping*, contadores de log,
+batería y wifi. 🔵 **Todo el riesgo de AI Act de un despliegue de SEB Server es IMPORTADO del servicio
+de sala que se le enchufe en `/admin-api/v1/monitoring/proctoring`** — y eso convierte la decisión de
+cumplimiento en una decisión de proveedor, que es negociable, en vez de una propiedad del producto.
+⚠️ **El pase 53 dejó esta pieza *«sin clasificar por este eje»* como si fuera el caso difícil de la
+capa. Era el más fácil, y se resuelve leyendo tres archivos.**
+
+### El régimen por región, porque NO es el mismo gancho en las cuatro
+
+| Región | Qué agarra la clase (ii) conducta | Fecha |
+|---|---|---|
+| **APAC** | 🟢 **Vietnam nombra el caso en la ley:** su marco de AI de alto riesgo identifica la AI educativa de *«automated assessment and **behavioral monitoring**»* como de supervisión especial. Corea: *AI Basic Act*, educación entre los *«high-impact»* | **Vietnam 2026-03-01** · **Corea 2026-01-22** |
+| **North America** | **Oklahoma y Maryland** exigen supervisión humana y **prohíben que la AI tome decisiones de alto impacto sobre alumnos**; **California AB 1159** prohíbe usar datos de alumnos para entrenar modelos | vigente en el ciclo **2026** |
+| **EMEA** | **Anexo III** (alto riesgo) + **art. 22 GDPR**. 🔴 **NO el art. 5(1)(f)**, que sólo cubre emoción | obligaciones **2027-12-02** |
+| **LATAM** | **Perú: Reglamento de la Ley 31814** (publicado **2025-09-09**), estructura basada en riesgo con **prácticas prohibidas** y **supervisión humana** para alto riesgo | vigente |
+
+🔵 **El dato de encuadre que esto deja:** la clase de conducta que esta base midió en el código
+**está nombrada en una ley de APAC antes que en una de la UE.** ⚠️ **Y por eso la frase *«el AI Act es
+el régimen más estricto»* no se puede usar como atajo en esta capa: para una inferencia de conducta,
+Vietnam es más explícito.**
+
+### La receta de entrega, corregida
+
+1. **Auditar el vocabulario de los COMPUESTOS, no sólo de los rasgos.** Los rasgos crudos
+   (`gaze_direction`, `face_present`) siempre pasan; el riesgo está en cómo se los combina y nombra.
+2. **Preguntar por escrito si apagar un ajuste detiene la derivación o sólo su peso.** La respuesta de
+   `mereos` está en su propio texto y es *«sólo el peso»*.
+3. **Partir el despliegue en dos:** `seb-server` (MPL-2.0) para la capa que no observa al alumno, y un
+   proveedor **negociado** para la sala. 🟢 **El riesgo queda del lado del contrato, no del producto.**
+4. **Para integridad sin inferencia:** `exam-guard` (ISC) y los eventos limpios de `mereos`.
+   ⚠️ **`@timadey/proctor` y los compuestos de `mereos` requieren expediente de Anexo III**, no están
+   prohibidos — **y en North America requieren además decisión humana documentada**.
+5. **Dejar la nota en manos de una persona:** `toshieji/moodle-grading-mcp` (MIT) escribe **borrador
+   sin publicar** y exige `MOODLE_ALLOW_WRITE=1` **más** `MOODLE_WRITE_COURSE_ALLOWLIST`. 🟢 **Es el
+   mecanismo de supervisión humana que piden Oklahoma, Maryland y el reglamento peruano, ya
+   implementado y permisivo.**
+6. 🔴 **La frase que sigue prohibida**, y ahora por el motivo correcto: *«mide el nivel de atención»* o
+   *«detecta el estado emocional»*. **Ninguna pieza de esta base lo hace — así que decirlo sería, además
+   de ilegal en la UE, falso.**
+
+**Esfuerzo.** Tres archivos de código por pieza (el de localización, el del taxonómico y el
+`package.json`). 🔵 **Y el instrumento que lo hace barato está abajo, en P125.**
+
+## P125 — Dos controles de dos líneas que atrapan defectos sin segunda fuente (agregado en el pase 54 del 2026-10-03)
+
+> 🔵 **Los dos salieron de este pase y los dos sustituyen trabajo caro por aritmética o por un `grep`
+> en el archivo correcto.**
+
+### Control 1 — La terna de mercado tiene que cerrar sola (refuerza P107)
+
+P107 obliga a publicar el instrumento de cada cifra, y los pases 51 y 52 encontraron conflictos
+**comparando dos secundarias**, que es caro y a veces no se puede resolver. 🟢 **Hay un control más
+barato: casi toda cifra de mercado viene como TERNA —valor inicial, valor final, CAGR— y las tres
+tienen que ser consistentes entre sí.** Cuando no lo son, **el defecto está probado con una sola
+fuente.**
+
+Corrido este pase sobre las dos ternas de EMEA, de la **misma frase** y la misma fuente:
+
+| Terna | Declarado | CAGR que implican los extremos | Veredicto |
+|---|---|---|---|
+| Europa, AI en educación | $2,64 B (2026) → $8,0 B (2030) @ **31,9 %** | **31,9 %** | ✅ **consistente** |
+| Middle East & Africa | $0,56 B (2026) → $1,6 B (2030) @ **34,3 %** | 🔴 **30,0 %** | 🔴 **INCONSISTENTE** — con 34,3 % el final sería **$1,82 B** |
+
+🔵 **Y la asimetría es el dato: misma oración, misma fuente, mismo formato — una mitad cierra y la otra
+no.** ⚠️ **Así que el defecto no es «las secundarias no sirven»: es por cifra, y se atrapa con cuatro
+líneas de aritmética antes de pegar el número en una propuesta.** Código en
+`compose/code/market-triple-check/`.
+
+### Control 2 — La taxonomía de un SDK vive en su archivo de localización, no en su README
+
+**Medido este pase:** cuatro READMEs de *proctoring* leídos por WebFetch devolvieron **cero**
+taxonomía de detección (`mereos`: *«no violation taxonomy provided»*; `seb-server`: *«the specific
+signals collected are not detailed»*). **Un solo `en/translation.json` devolvió 108 cadenas** con los
+nombres exactos que ve el alumno y el supervisor. 🟢 **Para cualquier pieza con interfaz traducida, el
+archivo de localización es el inventario de capacidades más honesto que publica el proyecto**, porque
+hay que escribirlo para que la UI funcione.
+
+⚠️ **Y el límite del mismo instrumento, medido en el mismo pase: sobre un artefacto EMPAQUETADO
+(`dist/` bundleado) la tasa de falsos positivos es alta.** El barrido de `exam-guard` devolvió
+`attention` y `attentionSequence` — 🔴 **que son el tokenizador de énfasis de Markdown de micromark,
+vendoreado en el bundle, y nada que ver con la atención de un alumno.** **Habrían entrado a esta KB
+como «inferencia de atención».** 🔵 **La regla: cadena encontrada en un bundle no es un hallazgo hasta
+leer su contexto.** Y los otros dos falsos positivos del pase fueron comentarios del reset de Tailwind
+y una encuesta de satisfacción con emoticones.
+
+**Esfuerzo.** El control 1 son cuatro líneas. El control 2 es un `tar xzf` y abrir un JSON.
 
 ## P121 — El canal de credencial como paso OBLIGATORIO del filtro de componentes (agregado en el pase 53; **las cuatro regiones**)
 
