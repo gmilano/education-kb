@@ -7,6 +7,7 @@ updated: 2026-10-03
 # 📡 Tendencias — education
 
 > Ventana de investigación: septiembre 2026. Verificado 2026-09-30; el pase 11, el 2026-10-01.
+> **Pase 74 del 2026-10-03:** 🟢 **Ocho tendencias nuevas, numeradas 578–585** (continuación real de la serie; el pase 73 cerró en 577). 🔴 **578: la atención de esta base resultó INVERSAMENTE proporcional a la base instalada** —Canvas en 111 líneas / 241 ocurrencias de `agents/top.md` contra **0** de Google Classroom en 73 pases (229 / 389 contra 0 en los cuatro archivos de contenido), siendo Classroom el líder global (~39 % contra ~19 %)— **y el defecto es de instrumento: todos los barridos de cobertura miden contra la historia propia, así que no pueden encontrar una ausencia sistemática.** 🟢 **579–580: dos peldaños nuevos de compuerta, y uno es de otra naturaleza** — `GATE-IN-SCOPE` (**P220**) se hace cumplir **fuera del proceso**, en los *scopes* del token de OAuth, así que no depende de la corrección del código medido; `GATE-IN-EFFECT` (**P221**) gobierna la **visibilidad** del efecto y no la llamada, que es la forma correcta para educación. 🔴 **581: `LICENSE-REVOCABLE`** (**P222**) **es una categoría de riesgo distinta de una restrictiva, y la diferencia es de MOMENTO: la no-comercial bloquea en la propuesta, la revocable después de la entrega.** 🔴 **582: texto e identificador de licencia que se contradicen en el MISMO árbol → no gana ninguno** (**P223**). 🟢 **583: una vertical propietaria puede ser MEJOR terreno de partida que una open source copyleft**, porque el conector es obra propia. 🟢 **584: la capa está atomizada en 8 implementaciones de ≤2 ★ y ninguna se conoce.** 🔴 **585: el barrido de mercado por región se saturó por CUARTA vez, y la lección es que el problema ya no es el canal sino la dimensión.**
 > **Pase 72 del 2026-10-03:** 🟢 **Seis tendencias nuevas, numeradas 562–567** (continuación real de la serie; el pase 71 cerró en 561). 🟢 **562–563: el ACTOR es un eje independiente de la compuerta del pase 71, el hueco que lo produce es del PROTOCOLO** —`src/auth.ts` de `bb-mcp`: *«The MCP spec does not define end-user identity»*— **y cruzado con la compuerta está ANTI-correlacionado, que es la SEGUNDA vez que esta base mide esa forma sobre un par de ejes distinto** (la primera, pase 55). 🔴 **564: una corrección de método puede generalizarse de más** — la advertencia de caja del pase 71 no aplicaba a P170, y re-medidas sus 32 ausencias en las tres cajas, **32 de 32 se sostienen**. 🟢 **565: el único patrón de credencial que resuelve el problema estructural de esta capa vino de LATAM** (`iDavi/usp-mcp`, sobre sellado), **con sus dos cotas medidas** (**P213**). 🟢 **566: la divulgación de términos de uso empieza a viajar como ARCHIVO DEL REPO** y es un eje de selección que ni la licencia ni la compuerta muestran. 🔴 **567: el barrido de MERCADO por región se saturó** — las cuatro regiones devolvieron el inventario propio, con pase de origen identificable en cada caso.
 > **Pase 70 del 2026-10-03:** 🟢 **ÁFRICA entra a la capa de agente de esta base, y entra con el instrumento de gobernanza más fuerte que la base haya medido: la compuerta en la FIRMA de la operación.** `buriro-ezekia/mwalimulens-agent` (Apache-2.0, 11.357 B) exige `supporting_evidence_ids`, `counter_evidence_ids` y `uncertainty` como ARGUMENTOS de `flag_pattern_for_review` —no se puede emitir un juicio sobre un alumno sin citar evidencia, exhibir contra-evidencia y declarar incertidumbre— (**P203**, clase `GATE-IN-SIGNATURE`, **tendencia 136**). 🔴 **Y el contraejemplo entra en el MISMO pase:** `oliverhruby/edupage-mcp` (MIT, `HOLDER-MATCH`, 31 tools) escribe —mensajes, cambio de cuenta de alumno— **sin compuerta en código** y contra *«undocumented endpoints»*, lo que abre un SEGUNDO eje de evaluación que la columna Licencia no ve (**P204**, **tendencia 137**). 🔴 **La capa de SIS entra medida y está dominada por copyleft fuerte** —ClassroomIO AGPL-3.0, Gibbon GPL-3.0, y la única permisiva (Fedena) sólo medible en un ESPEJO porque el repo que la fuente llama oficial da 404— (**tendencia 138**). ⚠️ **Dos candidatas RECHAZADAS: `YeetingWaterbottle/canvas-mcp` es un fork con `LICENSE` byte a byte idéntico al upstream ya presente, y `hesham0-0nasser/tutor-lms-mcp` es un árbol real SIN cesión.** ⚠️ **Barrido regional completo: EMEA 2 piezas, NA 0, APAC 0, LATAM 0 —declarado, no tapado— (**tendencia 139**). 🔴 **`api.github.com` y `github.com` dieron 403 todo el pase: las licencias salen de `raw.githubusercontent.com`.**
 > **Pase 69 del 2026-10-03:** 🟢 **De las tres acciones del pase 68, DOS se ejecutaron y rinden; la tercera está bloqueada por egress y se declara en vez de taparse.** 🔴 **Acción 1: antes de medir hay que corregir el denominador de la propia acción —pedía «los 16 nombres» de registro único y son **13** (21 filas → 18 nombres − 5 de doble registro); el «16» era un conteo de FILAS leído como de NOMBRES—.** 🔵 **Medidos los 13: **3 `IDENTITY-DECLARED` · 2 `IDENTITY-DECLARED-BUT-DEAD` · 3 `IDENTITY-PROVEN` · 5 `IDENTITY-UNKNOWN`**, y 5 ≥ 3 → gana la rama CARA: la columna *Identidad* es **CONDICIÓN** para publicar una fila de paquete, con el valor `desconocida` escrito y no omitido** (**P192** cerrado). ⚠️ **5 de 13 no es comparable con el «4 de 5» de ayer: otro denominador.** 🔴 **El hallazgo del pase ACOTA un patrón de ayer y está demostrado, no argumentado: el `sha256` del `LICENSE` prueba identidad sólo hasta donde llega su TITULAR. Dos paquetes DISTINTOS —`openedx-mcp` y `tutor-contrib-openedxmcp`— comparten `sha256:8d56b405468a`; y borrándole el nombre del titular al `LICENSE` de `@yunmiao/studymate` y al de `@schoolexl/mentor` los dos quedan **byte a byte** iguales al de `opencode-sit`, que es el caso con el que **P193** se escribió** (**P199**). 🟢 **El veredicto de ayer igual se sostiene por un instrumento MEJOR: el árbol NOMBRA al paquete en su `package.json`, que es un enlace de dos vías que el hash no es** (**P200**). 🔴 **Defecto de instrumento que esta serie arrastraba sin saberlo: `HEAD/README.md` da 404 sobre `INGInious` —una pieza RECOMENDADA— porque el repo embarca `README.rst`. Un sondeo de un nombre de archivo mide una convención, no la existencia, y fabrica lápidas** (**P198**). 🟢 **Acción 3 ejecutada: el instrumento por archivo de **P186** existe.** 🔴 **Y obliga dos cosas: el titular de `INGInious` NO es la FSF —está en un `COPYRIGHTS` de 622 B que ningún instrumento de esta base había abierto: *Anthony Gégo, Guillaume Derval and Pierre Reinbold*— y el ALCANCE no se puede cerrar, porque el proyecto declara archivos de terceros con otras licencias y NO los enumera** (**P197** gana una capa, **P201**). 🔴 **Acción 2 BLOQUEADA: `standards.1edtech.org` y `www.imsglobal.org` dan `403 CONNECT` por `curl` y `EGRESS_BLOCKED` por WebFetch, así que `1EdTech × documento` sigue **medido en 2 de 7** y se dice así cada vez.** ⚠️ **Barrido regional: CONFIRMACIÓN en las cuatro regiones, sin una cifra nueva del sector; lo nuevo son PIEZAS —Brightspace/D2L (NA) y el currículo nacional de Suecia (EMEA)—.** Ver las tendencias **548**–**553**.
@@ -11400,6 +11401,186 @@ región medida en cero, no una región sin buscar.**
 > ⚠️ **Los cuatro duplicados del pase 70 se dejan donde están y NO se reescriben** —reescribir una
 > sección pasada rompe la regla append-only de esta base—, **pero quedan declarados acá para que se
 > corrijan en el archivo donde se compilan los ids, no a mano en la prosa.**
+
+## 578. La atención de una base de conocimiento puede ser inversamente proporcional a la base instalada, y medirlo exige una pregunta que ningún instrumento de cobertura hace (agregado en el pase 74 del 2026-10-03)
+
+**El dato, con su instrumento (regla de P107):** `agents/top.md` menciona **Canvas en 111 líneas
+(241 ocurrencias)** y **Google Classroom en 0**; en los cuatro archivos de contenido son **229
+líneas / 389 ocurrencias contra 0** (`grep -ic` y `grep -oi | wc -l` sobre `agents/top.md`,
+`repos/foundations.md`, `verticals/solutions.md` e `intel/market.md`, en `HEAD` del pase 73). Según el canal de mercado de este pase, Google Classroom es el **líder global de LMS
+(~39 %)** y Canvas el segundo (**~19 %**), con Moodle tercero (**~14 %**, cayendo de 19 % en 2017 a
+7 % en 2026) y Schoology completando un top-3 de K-12 que se reparte **≈¾** del mercado.
+
+🔴 **La forma del defecto, que es lo transferible:** los instrumentos de cobertura de esta base
+(`p114`, `p170`, `p172`, el dedupe de cada pase) miden **contra la historia propia** — preguntan
+*«¿la licencia de las filas que tengo?»* y *«¿esto ya está?»*. **Ninguno pregunta *«¿qué plataforma
+tiene a los usuarios adentro, y la tengo?»*.** Un barrido contra el propio inventario **no puede,
+por construcción**, encontrar una ausencia sistemática: sólo encuentra huecos dentro de lo que ya
+mira.
+
+🔵 **La causa plausible del sesgo, y conviene decirla porque se repite en la industria:** esta base
+eligió sus plataformas por **presencia en el ecosistema open source**, no por base instalada. Moodle
+y Canvas tienen repositorio; Google Classroom y Schoology no. **El criterio “¿tiene repo?” es un
+proxy de “¿importa?” que falla exactamente donde el líder es propietario.**
+
+⚠️ **Cota, grande y declarada:** las **cinco** fuentes de cuota (`listedtech.com`, `cubite.io`,
+`6sense.com`, `programs.com`, `xtendedview.com`) dieron **`EGRESS_BLOCKED`**. Los porcentajes son
+del canal de búsqueda y **no están verificados en la fuente**; el canal mismo advierte que la cuota
+varía según metodología (instituciones vs. usuarios vs. matrícula). **El orden es consistente en las
+cinco y el hueco de 241-a-0 no depende de la cifra exacta.** Ver **P224**.
+
+## 579. Hay una compuerta que se hace cumplir FUERA del proceso, y es de otra naturaleza que las seis que esta base tenía (agregado en el pase 74 del 2026-10-03)
+
+**Las seis clases de los pases 70–73** —`GATE-IN-SURFACE`, `GATE-IN-SIGNATURE`, `GATE-IN-HANDLER`,
+`GATE-IN-BODY`, `GATE-IN-ENV`, `GATE-IN-DOC`— comparten una propiedad que nadie había nombrado:
+**todas se hacen cumplir dentro del mismo proceso que podría estar comprometido.** Una inyección de
+prompt, un bug o un operador malicioso con acceso al entorno las atraviesan todas.
+
+🆕 **`GATE-IN-SCOPE`** (**P220**), medido en `DaviPac/Classroom-mcp` (MIT, Brasil): la bandera
+`ENABLE_TURN_IN` **no gobierna una rama del código, gobierna los *scopes* de OAuth que se piden al
+acuñar el refresh token** (`ENABLE_TURN_IN=true node auth.js` — *«os escopos pedidos mudam»*).
+🟢 **El token que queda en producción, acuñado sin la bandera, NO TIENE el permiso de escritura.**
+Quien controle el proceso **y** el entorno sigue sin poder escribir: necesitaría el navegador del
+usuario y un consentimiento nuevo. **La compuerta la hace cumplir Google.**
+
+🔵 **Por qué es el peldaño más alto de la escalera, y por naturaleza y no por grado:** es la primera
+clase de esta base donde la garantía **no depende de la corrección del código medido**. Las otras
+seis son promesas del proyecto; ésta es una propiedad de la credencial.
+
+🔴 **Su cota, dicha con el hallazgo:** la bandera gobierna **el acuñado**, no el uso. Un token ya
+acuñado **con** escritura **no se degrada** poniendo `ENABLE_TURN_IN=false` — hay que volver a
+acuñar. **En una entrega eso es un procedimiento, no una casilla de configuración**, y se cotiza así.
+
+## 580. Una compuerta puede gobernar el EFECTO en vez de la llamada, y para educación es la forma correcta (agregado en el pase 74 del 2026-10-03)
+
+🆕 **`GATE-IN-EFFECT`** (**P221**), medido en `pengusto/google-classroom-mcp` (MIT): **la escritura
+ocurre, y lo escrito no se ve.** Los tres handlers de creación —tarea, material, aviso— fijan
+`state: args.scheduledTime ? 'DRAFT' : (args.state ?? 'DRAFT')` (`src/index.ts:575`, `:670`,
+`:718`), el esquema declara `default: 'DRAFT'`, y hay un invariante cableado:
+`if (args.scheduledTime && args.state === 'PUBLISHED') return fail('Scheduled posts must be DRAFT.')`
+(`:66`).
+
+🟢 **El encuadre que lo vuelve una tendencia y no un detalle:** toda la literatura de agentes con
+permisos discute **si la operación debe ocurrir**. En educación la pregunta útil es otra —**si el
+alumno debe VERLA**— porque el daño no está en que un agente redacte una tarea equivocada, está en
+que 300 alumnos la reciban. 🔵 **`DRAFT` por omisión deja al agente redactar el trimestre completo y
+al docente publicar: es la única pieza del inventario que permite escritura masiva sin exponer al
+alumno.**
+
+🔴 **La cota: `DRAFT` es un *default*, no un candado.** Un `state: 'PUBLISHED'` explícito publica, y
+el cliente MCP decide; sólo el caso `scheduledTime` está cerrado con `fail()`. **Es más débil que
+`GATE-IN-SCOPE` y más usable que las seis anteriores**, y esa combinación es la que hay que explicar
+en una propuesta.
+
+## 581. Un permiso REVOCABLE es una categoría de riesgo distinta de un permiso restrictivo, y la diferencia es de MOMENTO (agregado en el pase 74 del 2026-10-03)
+
+🆕 **`LICENSE-REVOCABLE`** (**P222**), medido en `AStheTECH/mewcp-google-classroom`: la *AStheTECH
+Community License* (6.489 B, en `LICENSE.md` **y** en un `LICIENCE.md` mal escrito byte a byte
+idéntico) concede un permiso *«limited, non-exclusive, non-transferable, non-sublicensable, and
+**revocable**»*, sólo para uso personal, educativo o interno, y prohíbe explícitamente *«offer,
+provide, or make available the software as part of any hosted service, SaaS platform, API service,
+or similar commercial offering»*.
+
+🔵 **Se verificó que la clase era nueva antes de numerarla:** `revocable` aparecía **0 veces** en
+`agents/top.md`, `repos/foundations.md`, `verticals/solutions.md` y `compose/patterns.md` en 73
+pases, mientras `NONCOMMERCIAL` aparecía **28**. **La base tenía la familia no-comercial; no tenía la
+revocable.**
+
+🔴 **Y la distinción no es de severidad, es de CUÁNDO golpea:** una licencia no-comercial **bloquea
+en la propuesta** —se sabe antes de firmar y se descarta gratis—. Una **revocable bloquea después de
+la entrega**: el titular puede retirar el permiso con el sistema ya en producción, y esta ACL obliga
+entonces a *«promptly destroy or permanently delete all copies … including any modified versions»*.
+**Es riesgo de contraparte que SOBREVIVE al engagement**, y por eso no se cotiza ni como dependencia
+opcional ni como “lo evaluamos y lo reemplazamos después”.
+
+## 582. Cuando el texto de licencia y el identificador del manifiesto se contradicen EN EL MISMO ÁRBOL, no gana ninguno (agregado en el pase 74 del 2026-10-03)
+
+**P179** separó el **identificador** (`"license": "MIT"` de un manifiesto, cero bytes de
+otorgamiento) de la **cesión** (el texto, con titular y términos). Este pase encuentra la
+configuración que esa distinción no cubría: **los dos artefactos en el mismo árbol, diciendo cosas
+distintas.**
+
+`sevenc-nanashi/google-classroom-mcp-server`, leído de primera mano:
+
+| Artefacto | Dice | La señal que lo delata |
+|---|---|---|
+| `LICENSE` (1.063 B) | **MIT** | `Copyright (c) 2025 **Faizan**` — titular **ajeno** al dueño del repo (`HOLDER-UNRELATED`) |
+| `package.json` | **ISC** | `"name": "class"`, `"author": ""` — **andamio de `npm init` sin editar**, y `ISC` es su valor por omisión |
+
+🔵 **El pase 68 ya sabía que un `ISC` por omisión indica que un PAQUETE npm no es el proyecto. Lo
+nuevo es que acá no hay dos canales que distinguir** — hay un árbol con una contradicción interna.
+🟢 **Y las tres señales se explican con una sola hipótesis: un `LICENSE` de un tercero copiado dentro
+de un andamio sin editar.** Ninguna de las dos capas es evidencia de una **decisión** de
+licenciamiento, así que la pieza **no se recomienda aunque una lea `MIT`**. Ver **P223**.
+
+🔴 **La regla operativa, porque es barata y general: una contradicción entre capas de licencia es una
+señal de PROCEDENCIA antes que un problema de licencia.** No se resuelve eligiendo la capa más
+favorable.
+
+## 583. Una vertical propietaria puede ser MEJOR terreno de partida que una open source, y es lo contrario de lo que esta base asumía (agregado en el pase 74 del 2026-10-03)
+
+**Dos de las tres plataformas que se reparten ~¾ del K-12 no se autoalojan** (Google Classroom,
+Schoology). Esta base listaba verticales **desplegables** —Moodle GPL-3.0, Canvas AGPL-3.0, Open edX
+Apache-2.0, ILIAS, Chamilo, Sakai, Koha, Kolibri— y el criterio es correcto, pero tiene una
+consecuencia que nadie había escrito:
+
+| Tipo | Qué se customiza | Licencia que ata la obra de Globant |
+|---|---|---|
+| vertical **desplegable** | el núcleo (plugins, temas, bloques) | 🔴 la del núcleo — en Moodle y Canvas, **copyleft fuerte** |
+| vertical **SaaS con API** | sólo el borde | 🟢 **ninguna: el conector es obra propia** |
+
+🟢 **El corolario:** donde el cliente quiere quedarse con el código y no publicarlo, **la plataforma
+propietaria deja la propiedad intelectual del lado de Globant** y la open source copyleft no. Las
+**cinco** piezas MIT de este pase sobre la API de Classroom son la prueba: obra nueva, permisiva,
+sin núcleo que contaminar.
+
+🔴 **Y la cota que lo limita a su lugar:** sin autoalojamiento **no hay soberanía de dato**, así que
+el patrón EMEA del pase 63 (infraestructura pagada por el Estado) y la tercera vía permisiva de un
+sistema educativo nacional del pase 73 (Indonesia, MIT) **siguen exigiendo vertical desplegable**.
+**No es que una forma reemplace a la otra: es que esta base sólo tenía una de las dos.**
+
+## 584. Una capa entera puede estar atomizada en ocho implementaciones que no se conocen, y eso es la señal de oportunidad más limpia que hay (agregado en el pase 74 del 2026-10-03)
+
+El barrido por **nombre de plataforma** (no por `education`, ni por nombre de proyecto) devolvió
+**8 conectores independientes de la misma API**, y el reparto es el dato:
+
+- **5 de 8 son MIT con cesión verificada en el payload**; 3 no se pueden usar, **cada uno por un
+  motivo distinto** (revocable, contradictoria, identificador sin texto).
+- 🔴 **Ninguno de los 8 pasa de 2 ★**, y los ocho resuelven el mismo problema.
+- 🟢 **Cubren, entre todos, el rango completo de la escalera de escritura** —de lectura por
+  construcción a CRUD sin compuerta— **y dos de ellos aportan peldaños que esta base no tenía.**
+
+🔵 **La lectura comercial: una capa con ocho implementaciones de ≤2 ★ no tiene incumbente open source
+que desplazar**, y la plataforma de abajo tiene ~39 % del mercado. 🔴 **La lectura de riesgo, en la
+misma frase: tampoco tiene soporte, ni comunidad, ni nadie que arregle la API cuando Google la
+mueva.** Las dos cosas son el mismo hecho.
+
+🟢 **Y el método que lo encontró generaliza, que es lo que vale para los próximos pases:** el pase 73
+aprendió a barrer el **nombre del repo sin el dueño** (**P217**); este pase barre el **nombre de la
+plataforma**, un nivel más arriba. **Las dos formas atacan la misma clase de hueco: lo que no está
+porque nadie preguntó por su nombre.**
+
+## 585. El barrido de MERCADO por región se saturó por CUARTO pase consecutivo, y esta vez lo nuevo salió de preguntar por la PLATAFORMA (agregado en el pase 74 del 2026-10-03)
+
+Las cuatro búsquedas regionales con el año **calculado** (`date -u +%Y` → **2026**) devolvieron, otra
+vez, cifras que esta base ya tiene: 10,6 MM US$ para 2026 con CAGR 40,9 % y 42,48 MM a 2030; **NA**
+86 % de adopción organizacional, 134 proyectos de ley en 31 estados, AB 1159 de California, SB 1227
+de Idaho, el *STUDENTS FIRST Act of 2026*, el *Traffic Light Framework* de NYC; **EMEA** el EU AI Act
+con aplicación general del 2 de agosto de 2026 y la educación como alto riesgo; **APAC** 96 % con
+intención de más inversión, 66 % pilotando, ROI 2,85 US$, la Basic AI Act de Corea (enero 2026) y la
+ley de IA de Vietnam (marzo 2026); **LATAM** 92 % de estudiantes y 79 % de docentes, 30.000+
+respuestas en 29 instituciones con el Tec de Monterrey, CONPES 4144 de Colombia, y Brasil/Chile/
+Uruguay como los únicos del top-50 global.
+
+🔴 **Las cuatro regiones: CERO cifras nuevas. Se declara en vez de taparse**, y confirma por cuarta
+vez la tendencia **567** (pases 72, 73 y 74).
+
+🟢 **Y la salida fue la misma que en los tres pases anteriores, pero por un eje nuevo:** lo único
+nuevo del canal de mercado salió de preguntar por **la base instalada de la PLATAFORMA**, no por el
+tamaño del mercado — y es justo la pregunta que destapó el defecto de cobertura de la tendencia
+**578**. 🔵 **La lección de método: cuando el barrido de una dimensión se satura cuatro veces, el
+problema no es el canal, es la dimensión.** Esta base midió el **dinero** en más de cuarenta pases y
+nunca había medido **dónde están los alumnos**.
 
 ## 577. Un instrumento escrito en inglés fabrica ausencias falsas en las regiones no anglófonas, y es la misma forma de defecto que la caja de P206 (agregado en el pase 73 del 2026-10-03)
 

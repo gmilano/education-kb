@@ -9,6 +9,85 @@ updated: 2026-10-03
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 > No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
 
+## 2026-10-03 — pase 74: el líder global de LMS tenía CERO filas, y abrirlo agrega dos peldaños a la escalera de escritura
+
+### 🔴 El hallazgo del pase es un defecto de COBERTURA de esta base, y es medible
+
+**Canvas: 111 líneas / 241 ocurrencias en `agents/top.md`** (**229 / 389** en los cuatro archivos de
+contenido). **Google Classroom: 0 en los cuatro, en 73 pases.** Y según el canal de
+mercado de este pase, el orden de la base instalada es el inverso: **Google Classroom ~39 %
+(primero), Canvas ~19 % (segundo), Moodle ~14 % y cayendo (19 % en 2017 → 7 % en 2026)**.
+🔴 **La atención de esta KB resultó inversamente proporcional a la base instalada** (**P224**).
+
+🔵 **Por qué ningún instrumento lo veía:** `p114`, `p170` y `p172` preguntan por la licencia **de las
+filas que ya existen**, y el dedupe pregunta *«¿esto ya está?»*. **Ninguno preguntaba *«¿qué
+plataforma tiene a los alumnos adentro, y la tengo?»*.** Un barrido de cobertura contra la propia
+historia **no puede** encontrar una ausencia sistemática.
+
+⚠️ **Cota grande, declarada:** las **5** fuentes de cuota (`listedtech.com`, `cubite.io`,
+`6sense.com`, `programs.com`, `xtendedview.com`) dieron **`EGRESS_BLOCKED` las cinco**. Los
+porcentajes son del **canal de búsqueda, no verificados en la fuente**; se publican porque el
+**orden** es consistente en las cinco y el hueco de 241-a-0 no depende de la cifra exacta.
+
+### 🆕 Lo nuevo de la semana: 8 conectores independientes de la MISMA API, y dos peldaños nuevos
+
+| Clase nueva | Pieza | Qué gobierna | Dónde se hace cumplir |
+|---|---|---|---|
+| **`GATE-IN-SCOPE`** (**P220**) | `DaviPac/Classroom-mcp` (MIT, Brasil) | la **capacidad**, en la credencial | 🟢 **fuera del proceso: en Google** — el token acuñado sin la bandera **no tiene scope de escritura** |
+| **`GATE-IN-EFFECT`** (**P221**) | `pengusto/google-classroom-mcp` (MIT) | la **visibilidad** del efecto | en los 3 handlers: lo escrito nace `DRAFT` (`src/index.ts:575`, `:670`, `:718`) |
+
+🔵 **`GATE-IN-SCOPE` es el peldaño más alto que esta base haya medido, y por naturaleza y no por
+grado:** las seis clases de los pases 70–73 se hacen cumplir **dentro** del proceso que podría estar
+comprometido; un scope de OAuth lo hace cumplir el proveedor de identidad.
+
+🟢 **`GATE-IN-EFFECT` es la forma correcta para educación:** el riesgo de un agente docente no es que
+escriba, es que lo escrito **llegue al alumno sin revisión**. Es la única pieza del inventario que
+permite **escritura masiva sin exponer al alumno**.
+
+### 🔴 Y el cruce que ordena la conversación comercial: capacidad y licencia están ANTI-correlacionadas
+
+Primera vez que esta base puede cruzar los dos ejes **sobre una sola plataforma** sin confundir
+sistemas. La pieza **más capaz** de la capa (`AStheTECH/mewcp-google-classroom`: ~40 tools, CRUD
+completo, `delete_student`) **es la única que no es open source**, y su licencia trae una clase que
+esta base no tenía: **`LICENSE-REVOCABLE`** (**P222**). `revocable` aparecía **0 veces** en 73 pases.
+
+🔴 **Y el riesgo es de MOMENTO, no de grado:** una licencia no-comercial bloquea en la **propuesta**;
+una **revocable** bloquea **después de la entrega** —la ACL obliga a *«promptly destroy or
+permanently delete all copies … including any modified versions»*—. **Es riesgo de contraparte que
+sobrevive al engagement.**
+
+### 🧾 Clase de contradicción nueva: `LICENSE` y manifiesto que se desmienten EN EL MISMO ÁRBOL (**P223**)
+
+`sevenc-nanashi/google-classroom-mcp-server`: `LICENSE` **MIT** con `Copyright (c) 2025 Faizan`
+—titular **ajeno** al dueño— contra `package.json` **ISC** con `"name": "class"` y `"author": ""`
+—**andamio de `npm init` sin editar**—. 🔵 **El pase 68 ya sabía que `ISC` por omisión indica que un
+PAQUETE no es el proyecto; lo nuevo es la configuración interna:** los dos artefactos están en el
+**mismo árbol**, así que no hay canales que distinguir, hay una contradicción. **Las tres señales se
+explican juntas: un `LICENSE` de un tercero copiado dentro de un andamio.** No se recomienda **aunque
+una capa lea MIT**.
+
+### 📍 Reparto regional del pase, medido y no inferido
+
+**LATAM 1 · North America 2 · EMEA 0 · APAC 0 · sin región verificable 4.**
+
+🔵 **Las 4 sin región son resultado de APLICAR **P135**, no de no haber mirado:** en tres casos el
+único indicio era el nombre propio del dueño o del titular del `LICENSE`, y esta base prohíbe
+convertir un antropónimo en región. 🔴 **El caso que más tentaba era `pengusto`** —titular con nombre
+catalán— **y se declinó**; encima el código trae una palabra alemana (`'PUBLISHED oder DRAFT'`) que
+apunta a otro lado. **LATAM sí entra, y con indicio de CONFIGURACIÓN y no de nombre:**
+`TIMEZONE=America/Recife` en el `.env.example` de `DaviPac`, más tools y manifiesto íntegramente en
+portugués.
+
+⚠️ **EMEA y APAC: 0 piezas este pase, declarado y no tapado.** El barrido de la capa Google Classroom
+devolvió 8 conectores y ninguno declara afiliación institucional en esas dos regiones.
+
+### 🔁 Y una repetición regional que vale registrar
+
+🟢 **Por segundo pase consecutivo, el patrón de GOBERNANZA más fuerte de la capa vino de LATAM** — el
+pase 72 midió el único patrón de credencial del inventario (`iDavi/usp-mcp`, sellado, Brasil) y este
+pase mide el único `GATE-IN-SCOPE` (`DaviPac`, Brasil). **Dos pases no son una tendencia, y se dice
+así; pero el eje donde LATAM aporta es consistente: la credencial, no el modelo.**
+
 ## 2026-10-03 — pase 73: la DIVULGACIÓN es el tercer eje, y medirlo destapa que el pase 72 cotizó el `usp-mcp` equivocado — hay otro, independiente, con el mismo nombre, sobre la misma universidad, y es el mejor gobernado del inventario
 
 ### 🟢 El hallazgo del pase: hay un peldaño POR ENCIMA de la escalera, y la tool ni aparece

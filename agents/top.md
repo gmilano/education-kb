@@ -8,6 +8,7 @@ updated: 2026-10-03
 
 > Agentes y herramientas AI open source para educación. Foco: MIT / Apache 2.0 / BSD.
 > Verificado repo por repo vía WebFetch el 2026-09-30 (stars y licencia leídos de la página del repo).
+> **Pase 74 del 2026-10-03:** 🔴 **El LMS más instalado del planeta tenía CERO filas en esta base: este archivo menciona Canvas en **111** líneas (**241** ocurrencias) y Google Classroom en **0**, en 73 pases, y Google Classroom es el líder global (~39 % contra ~19 % de Canvas). La atención de esta KB resultó INVERSAMENTE proporcional a la base instalada** (**P224**). 🟢 **Abierta la capa, 8 conectores independientes de la MISMA API agregan DOS peldaños a la escalera de escritura:** 🆕 **`GATE-IN-SCOPE`** (**P220**, `DaviPac`, Brasil) —la bandera cambia los *scopes* de OAuth al acuñar el token, así que la compuerta la hace cumplir **Google, fuera del proceso**: el peldaño más alto medido— y 🆕 **`GATE-IN-EFFECT`** (**P221**, `pengusto`) —la escritura ocurre pero nace `DRAFT` en los tres handlers (`src/index.ts:575`, `:670`, `:718`): gobierna la VISIBILIDAD, no la llamada—. 🔴 **Y la pieza MÁS capaz de la capa (~40 tools, `delete_student`) es la única que no es open source, con una clase que esta base no tenía: `LICENSE-REVOCABLE`** (**P222**) — `revocable` aparecía **0 veces** en 73 pases. 🆕 **P223**: `LICENSE` MIT con titular ajeno contra `package.json` ISC de andamio **en el mismo árbol** → no gana ninguna capa. Altas de agente: **6** (LATAM 1, NA 1, EMEA 0, APAC 0, sin región verificable 4 **por aplicar P135**) + **1** de infraestructura que va a `repos/foundations.md` por la regla del pase 25.
 > **Pase 73 del 2026-10-03:** 🟢 **La DIVULGACIÓN es un TERCER eje con cuatro clases (**P215**), independiente de la compuerta y del actor — y el pase que la mide encuentra la pieza que el pase 72 declaró inexistente.** `CaioCastro1/usp-mcp` (**MIT**, 16 ★, 376 commits, Brasil) es fuerte en los **tres** ejes, corre contra una institución **real** —lo que `attendai` explícitamente no hace— y aporta un **peldaño 0** por encima de la escalera del pase 71: 🟢 **`GATE-IN-SURFACE`**, la tool **no existe** hasta habilitarla (`listar_ferramentas()`: 11 tools sin la flag, 13 con ella). 🔴 **Y la razón por la que no estaba en la base es de MÉTODO (**P217**): dos repositorios independientes, mismo nombre, misma universidad — el pase 72 midió el flojo.** 🆕 Clase de licencia nueva: **`LICENSE-CLAIMED-IN-PROSE-ONLY`** (**P216**) — `mcp-powerschool` promete MIT en prosa con **404 en 11 nombres y ningún manifiesto**. Altas: **7** (LATAM 2, EMEA 2, APAC 1, NA 2).
 > **Pase 72 del 2026-10-03:** 🟢 **La escalera de la compuerta del pase 71 medía la mitad: de dónde sale el ACTOR es un SEGUNDO eje y, cruzado con el primero, está INVERTIDO** (**P212**, tendencias **562**–**563**). `attendai` es la única fuerte en los dos (compuerta 1 · actor A2); `bb-mcp` tiene la política más rica de la base **evaluada contra un actor que el cliente declara** (A3); `blackboard-mcp` tiene la compuerta más débil y el actor más fuerte (A1). El hueco es del PROTOCOLO y el propio `bb-mcp` lo escribe: *«The MCP spec does not define end-user identity»*. 🟢 **LATAM vuelve a la capa de código tras tres pases** con `iDavi/usp-mcp` + `iDavi/heidy_backend` (**GPL-3.0**, Brasil), **la única pieza del inventario que no manda la contraseña institucional en claro** —sobre sellado a la clave pública del backend—, 🔴 **con dos cotas medidas: los metadatos del sobre NO están autenticados y el *key schedule* NO es RFC 9180** (**P213**, 13 checks con control negativo). 🟢 **APAC rompe su hueco de CÓDIGO, abierto desde el pase 69**, con `codit04/TechMCP` (MIT, PSG College of Technology, India). 🔴 **Y la advertencia de CAJA del pase 71 era demasiado ancha: re-medidas las 32 ausencias de P170 en las TRES cajas, 32 de 32 se sostienen — P170 nunca fue un sondeo en mayúsculas** (**P211**, tendencia **564**). ⚠️ **Cuatro candidatas reales rechazadas por `NO-CESSION`**, una de ellas una segunda pieza APAC.
 > **Pase 70 del 2026-10-03:** 🟢 **ÁFRICA entra a la capa de agente de esta base, y entra con el instrumento de gobernanza más fuerte que la base haya medido: la compuerta en la FIRMA de la operación.** `buriro-ezekia/mwalimulens-agent` (Apache-2.0, 11.357 B) exige `supporting_evidence_ids`, `counter_evidence_ids` y `uncertainty` como ARGUMENTOS de `flag_pattern_for_review` —no se puede emitir un juicio sobre un alumno sin citar evidencia, exhibir contra-evidencia y declarar incertidumbre— (**P203**, clase `GATE-IN-SIGNATURE`, **tendencia 136**). 🔴 **Y el contraejemplo entra en el MISMO pase:** `oliverhruby/edupage-mcp` (MIT, `HOLDER-MATCH`, 31 tools) escribe —mensajes, cambio de cuenta de alumno— **sin compuerta en código** y contra *«undocumented endpoints»*, lo que abre un SEGUNDO eje de evaluación que la columna Licencia no ve (**P204**, **tendencia 137**). 🔴 **La capa de SIS entra medida y está dominada por copyleft fuerte** —ClassroomIO AGPL-3.0, Gibbon GPL-3.0, y la única permisiva (Fedena) sólo medible en un ESPEJO porque el repo que la fuente llama oficial da 404— (**tendencia 138**). ⚠️ **Dos candidatas RECHAZADAS: `YeetingWaterbottle/canvas-mcp` es un fork con `LICENSE` byte a byte idéntico al upstream ya presente, y `hesham0-0nasser/tutor-lms-mcp` es un árbol real SIN cesión.** ⚠️ **Barrido regional completo: EMEA 2 piezas, NA 0, APAC 0, LATAM 0 —declarado, no tapado— (**tendencia 139**). 🔴 **`api.github.com` y `github.com` dieron 403 todo el pase: las licencias salen de `raw.githubusercontent.com`.**
@@ -241,6 +242,201 @@ updated: 2026-10-03
 > fila** —`lineage-skill`, con un vocabulario cerrado de 9 valores por afirmación, **4 de los 9 «esto lo produjo el
 > modelo»**— y **ninguna de las dos sabe de la otra**. Ver la capa nueva al final de este archivo, las tendencias
 > **180**–**182** y el patrón **P99**.
+
+## 🎓 El LMS más instalado del planeta tenía CERO filas en esta base, y abrirlo agrega DOS peldaños nuevos a la escalera de escritura (pase 74 del 2026-10-03)
+
+> **El hallazgo no es un repo: es un defecto de COBERTURA de esta KB, y es medible.** Este archivo
+> menciona **Canvas en 111 líneas (241 ocurrencias)** y **Google Classroom en 0**, en 73 pases;
+> en los cuatro archivos de contenido son **229 líneas / 389 ocurrencias contra 0**
+> (`grep -ic` y `grep -oi | wc -l` sobre `agents/top.md`, `repos/foundations.md`,
+> `verticals/solutions.md` e `intel/market.md` en `HEAD` del pase 73). Según el canal de
+> mercado de este pase, Google Classroom es el **líder global de LMS (~39 %)** y Canvas el
+> **segundo (~19 %)**. 🔴 **La atención de esta base resultó INVERSAMENTE proporcional a la base
+> instalada** (**P224**).
+
+### 🔴 Primero el defecto de método, porque es el aporte más transferible del pase
+
+Ningún instrumento de esta KB podía ver este hueco, y la razón es que **todos miden contra la
+historia propia**: `p114`/`p170`/`p172` preguntan por la licencia **de las filas que ya existen**,
+y el dedupe de cada pase pregunta *«¿esto ya está?»*. **Ninguna pregunta era *«¿qué plataforma
+tiene a los alumnos adentro, y la tengo?»*.**
+
+| Plataforma | Menciones en esta KB (pase 73) | Cuota de LMS del canal de este pase |
+|---|---|---|
+| Canvas | **111 líneas / 241 ocurrencias** en este archivo (**229 / 389** en los 4 archivos) | ~19 % (global), 41 % en superior de NA |
+| Moodle | presente desde el pase 1 | ~14 %, y **cayendo: 19 % (2017) → 7 % (2026)** |
+| **Google Classroom** | 🔴 **0** | 🟢 **~39 % — el primero** |
+| Schoology | 🔴 **0** | top-3 de K-12 con los dos de arriba (~¾ del mercado entre los tres) |
+
+⚠️ **La cota de estas cifras, dicha antes de que alguien las cotice, y es grande:** las cinco
+fuentes de cuota (`listedtech.com`, `cubite.io`, `6sense.com`, `programs.com`, `xtendedview.com`)
+dieron **`EGRESS_BLOCKED` las cinco**, así que **estos porcentajes están leídos del CANAL DE
+BÚSQUEDA y NO verificados en la fuente**. El propio canal advierte que la cuota varía según la
+metodología (instituciones vs. usuarios vs. matrícula). 🔵 **Se publican porque el ORDEN
+—Classroom > Canvas > Moodle— es consistente en las cinco, y porque el hueco de 241-a-0 no depende
+de la cifra exacta.** Queda como acción 1 del pase 75.
+
+### 🟢 Las altas del pase, con licencia medida por PAYLOAD y región bajo la regla de P135
+
+| Nombre | Repo | Licencia | Stars | Lenguaje | Descripción | Origen (región) |
+|--------|------|----------|-------|----------|-------------|-----------------|
+| Classroom-mcp (aluno) | https://github.com/DaviPac/Classroom-mcp | MIT (`package.json`) | 0 | TypeScript/JS | 🟢 **La compuerta más fuerte del inventario: vive en el TOKEN.** 11 tools de lectura; `entregar_tarefa`/`cancelar_entrega` sólo aparecen con `ENABLE_TURN_IN=true`, **y la bandera cambia los SCOPES de OAuth que se piden al acuñar el refresh token** (`ENABLE_TURN_IN=true node auth.js`). Servidor remoto HTTP; `buscar` cruza tareas/avisos/materiales de todas las turmas | **LATAM** (indicio de CONFIGURACIÓN, no antropónimo: `TIMEZONE=America/Recife` en el `.env.example` + tools y manifiesto íntegramente en portugués) |
+| google-classroom-mcp (docente) | https://github.com/pengusto/google-classroom-mcp | MIT (`LICENSE` 1.145 B + `package.json`) | 1 | TypeScript | 🟢 **Escribe, pero lo escrito NO SE VE: los tres handlers de creación fijan `DRAFT` por omisión** (`src/index.ts:575`, `:670`, `:718`) y el esquema declara `default: 'DRAFT'`. Invariante en código: `if (args.scheduledTime && args.state === 'PUBLISHED') return fail('Scheduled posts must be DRAFT.')` (`:66`). 21 tools (cursos, temas, tareas, materiales, avisos, adjuntos Drive), `v3.0.0-beta.1`, `private: true` | 🔴 **Sin región verificada.** El único indicio es el antropónimo del titular del `LICENSE` y **NO se infiere región de un antropónimo** (regla de **P135**); además el código trae una palabra alemana (`'PUBLISHED oder DRAFT'`, `:334`) que apunta a otro lado |
+| classroom-mcp (alumno) | https://github.com/OmarNiazi/classroom-mcp | MIT (`LICENSE` 1.067 B) | 0 | Python | Lectura **por construcción**: 3 tools (`get_all_courses`, `get_assessment_items` con filtro `only_pending`, `read_stream_announcements`) y **ninguna de escritura en la superficie**. La tabla de capacidades del README niega explícitamente entregar, editar, publicar y comentar. Todo el procesamiento es local | 🔴 **Sin región verificada** (sólo antropónimo — **P135**) |
+| classroom_mcp | https://github.com/SalShah20/classroom_mcp | MIT (`package.json`) | 1 | TypeScript | 14 tools de lectura sobre cursos, tareas, entregas y notas, con `calculate_grade` y `get_missing_assignments` calculados del lado del servidor. El README afirma lectura estricta: *«cannot create, modify, or delete anything»* | 🔴 **Sin región verificada** (sólo antropónimo — **P135**) |
+| google-classroom-mcp | https://github.com/Aaradhya-Dev-Tamrakar/google-classroom-mcp | MIT (`LICENSE` 1.078 B) | 0 | JavaScript (ESM) | 12 tools; 10 de lectura (cursos, tareas, entregas, avisos, materiales, docentes, alumnos) 🔴 **y 2 que MUTAN la entrega del alumno —`turn_in_assignment` y `reclaim_assignment`— sin compuerta de ningún tipo.** Es el contraste directo de las tres de arriba sobre la MISMA API | 🔴 **Sin región verificada** (antropónimo y ruta de Windows — **P135**) |
+| fcps-school-mcp | https://github.com/jibberswrld/fcps-school-mcp | MIT | 2 | JavaScript (Node 22+) | Conector de un DISTRITO real (Fairfax County Public Schools, Virginia) que une **cuatro** sistemas: Schoology (cursos y materiales), StudentVUE (notas oficiales del SIS), Ion (intranet de TJHSST) y ForgeRock (autenticación). Lectura salvo **una** escritura declarada: `ion_signup_eighth_period` | 🟢 **North America** (señal INSTITUCIONAL, no antropónimo: el distrito escolar está nombrado y es verificable) |
+
+**Altas de AGENTE: 6.** Reparto regional **medido, no inferido**: **LATAM 1 · North America 1 · EMEA 0 ·
+APAC 0 · sin región verificable 4**.
+
+🔵 **Y una séptima pieza verificada que NO va en este archivo, por la regla del pase 25:**
+`Ed-Fi-Exchange-OSS/Ed-Fi-Clever-Integration` (**Apache-2.0**, 2 ★, 30 commits, C#/.NET Core) **no es un
+agente** —es una API de *rostering* que genera endpoints OneRoster desde un Ed-Fi ODS v3.x para que Clever
+sincronice—, así que va a **`repos/foundations.md`**. Es la pieza que cierra la cadena de la receta de
+este pase, y su región sí es **North America** por señal institucional (Ed-Fi Alliance). 🔵 **Y las 4 sin región son el resultado de APLICAR P135, no de no
+haber mirado**: en tres casos el único indicio era el nombre propio del dueño o del titular, y la
+regla de esta base prohíbe convertir un antropónimo en una región.
+
+### 🪜 Los dos peldaños nuevos, y por qué no son variantes de lo que ya estaba
+
+La escalera de los pases 70–73 tenía seis clases, y **las seis gobiernan si la operación OCURRE**,
+todas dentro del proceso: `GATE-IN-SURFACE` (la tool no existe), `GATE-IN-SIGNATURE` (argumentos
+obligatorios), `GATE-IN-HANDLER`, `GATE-IN-BODY`, `GATE-IN-ENV`, `GATE-IN-DOC`. Este pase agrega
+dos que **no** preguntan eso:
+
+| Clase | Pieza | Qué gobierna | Dónde se hace cumplir | Por qué es distinta |
+|---|---|---|---|---|
+| 🆕 **`GATE-IN-SCOPE`** (**P220**) | `DaviPac/Classroom-mcp` | **la CAPACIDAD, en la credencial** | 🟢 **FUERA del proceso: en Google** | El refresh token acuñado sin la bandera **no tiene el scope de escritura**. Un atacante con control total del proceso **y** del entorno no puede escribir: necesitaría el navegador del usuario y un consentimiento OAuth nuevo |
+| 🆕 **`GATE-IN-EFFECT`** (**P221**) | `pengusto/google-classroom-mcp` | **la VISIBILIDAD del efecto** | dentro del proceso, en los 3 handlers | La escritura **sí ocurre**; lo escrito nace `DRAFT` y **ningún alumno lo ve** hasta que un humano publica. No es una compuerta sobre la llamada: es una compuerta sobre el efecto |
+
+🔵 **`GATE-IN-SCOPE` es el peldaño más alto que esta base haya medido, y la razón es de naturaleza,
+no de grado:** todas las clases anteriores —incluida la firma de `GATE-IN-SIGNATURE` del pase 70—
+se hacen cumplir en el mismo proceso que podría estar comprometido. Un scope de OAuth lo hace
+cumplir el proveedor de identidad.
+
+🟢 **Y `GATE-IN-EFFECT` es la forma CORRECTA para educación, que es un hallazgo comercial y no
+estético:** el problema de un agente docente no es que escriba, es que lo escrito llegue al alumno
+sin revisión. `DRAFT` por omisión deja al agente redactar las 30 tareas del trimestre y al docente
+publicar. **Es la única pieza del inventario que permite escritura masiva sin exponer al alumno.**
+
+🔴 **La cota de `GATE-IN-EFFECT`, antes de que alguien la cotice:** `DRAFT` es el **default**, no un
+candado — `state: 'PUBLISHED'` explícito publica, y el cliente MCP decide. Sólo el caso
+`scheduledTime` está cerrado con un `fail()`. **La cota de `GATE-IN-SCOPE` es distinta y menor:** la
+bandera gobierna el acuñado, así que un token ya acuñado **con** escritura no se degrada poniendo
+`ENABLE_TURN_IN=false`.
+
+### 🔴 El cruce de los dos ejes sobre UNA plataforma: capacidad y licencia están ANTI-correlacionadas
+
+Ocho conectores independientes de **la misma API** es el primer caso de esta base donde el eje de
+licencia y el eje de capacidad se pueden cruzar sin confundir plataformas. El resultado invierte la
+intuición comercial:
+
+| Pieza | Capacidad | Compuerta | Cesión | ¿Globant puede construir? |
+|---|---|---|---|---|
+| `AStheTECH/mewcp-google-classroom` | 🟢 **la mayor: ~40 tools, CRUD completo, `delete_student`** | 🔴 **ninguna** | 🔴 **ACL propia, 6.489 B** | ⛔ **NO** |
+| `Aaradhya-Dev-Tamrakar/...` | media (12 tools, muta entregas) | 🔴 ninguna | 🟢 MIT | ✅ sí, con el riesgo a la vista |
+| `pengusto/...` | alta (21 tools, escribe) | 🟢 **`GATE-IN-EFFECT`** | 🟢 MIT | ✅ **sí — la recomendada para docente** |
+| `DaviPac/...` | media (11+2) | 🟢 **`GATE-IN-SCOPE`** | 🟢 MIT | ✅ **sí — la recomendada para alumno** |
+| `OmarNiazi/...`, `SalShah20/...` | baja (3 y 14, lectura) | n/a por construcción | 🟢 MIT | ✅ sí |
+| `sevenc-nanashi/...` | baja | 🔴 ninguna | 🔴 **contradictoria** (**P223**) | ⛔ no hasta resolver |
+| `pnp-v/bo-...` | — | — | ⚠️ identificador `ISC` sin texto | ⚠️ no sin pedir cesión |
+| `coimf/schoology-mcp` | baja (2 tools) | n/a | 🔴 **sin cesión** | ⛔ no |
+
+🔴 **La pieza más capaz de la capa es la ÚNICA que no es open source — y su licencia no es
+«restrictiva», es REVOCABLE** (**P222**).
+
+### 🔴 `LICENSE-REVOCABLE`: una clase que esta base no tenía, y se buscó antes de declararla nueva
+
+`AStheTECH/mewcp-google-classroom` trae `LICENSE.md` **y** `LICIENCE.md` (mal escrito), **byte a
+byte idénticos, 6.489 B cada uno**: la *AStheTECH Community License (ACL)*, `Copyright (c) 2026
+AStheTech. All rights reserved.` Leída de primera mano, concede *«a limited, non-exclusive,
+non-transferable, non-sublicensable, and **revocable** license … solely for personal, educational,
+or internal business purposes»* y prohíbe explícitamente vender, sublicenciar, y *«offer, provide,
+or make available the software as part of any hosted service, SaaS platform, API service, or
+similar commercial offering»*.
+
+🔵 **Se verificó que la clase es nueva antes de numerarla:** `revocable` aparece **0 veces** en
+`agents/top.md`, `repos/foundations.md`, `verticals/solutions.md` y `compose/patterns.md` en 73
+pases, mientras `NONCOMMERCIAL` aparece 28. **La base tenía la familia no-comercial; no tenía la
+revocable.**
+
+🔴 **Y la distinción no es de grado, es de MOMENTO, que es lo que la vuelve peor para una
+consultora:** una licencia no-comercial bloquea en la **propuesta** —se sabe antes de firmar—.
+Una licencia revocable bloquea **después de la entrega**: el titular puede retirar el permiso
+cuando el sistema ya está en producción en el cliente, y la ACL obliga entonces a *«promptly
+destroy or permanently delete all copies … including any modified versions»*. **Es riesgo de
+contraparte que SOBREVIVE al engagement**, y por eso no se cotiza ni como dependencia opcional.
+
+### 🧾 `P223` — cuando el TEXTO y el IDENTIFICADOR se contradicen, no gana ninguno
+
+`sevenc-nanashi/google-classroom-mcp-server` tiene **las dos capas de P179 en el mismo árbol y
+dicen cosas distintas**, leídas de primera mano:
+
+| Artefacto | Dice | Detalle que lo delata |
+|---|---|---|
+| `LICENSE` (1.063 B) | **MIT** | 🔴 `Copyright (c) 2025 **Faizan**` — el titular **no** es el dueño del repo (`HOLDER-UNRELATED`) |
+| `package.json` | **ISC** | 🔴 `"name": "class"`, `"author": ""` — **andamio de `npm init` sin editar**, y `ISC` es su valor por omisión |
+
+🔵 **Lo que esta base ya sabía (pase 68) es que `ISC` por omisión indica que un PAQUETE npm no es el
+proyecto. Lo nuevo es la configuración INTERNA:** acá los dos artefactos viven en **el mismo
+árbol**, así que no hay dos canales que distinguir — hay una contradicción. **Y las tres señales se
+explican juntas: un `LICENSE` de un tercero copiado dentro de un andamio sin editar.** Ninguna de
+las dos capas es evidencia de una decisión de licenciamiento, así que la pieza **no se recomienda
+aunque una de ellas lea `MIT`**. Ver **P223**.
+
+### 🔴 Las candidatas que NO entran, con el motivo medido
+
+| Pieza | Medición de primera mano | Motivo |
+|---|---|---|
+| `AStheTECH/mewcp-google-classroom` | ACL propia, 6.489 B ×2 archivos | 🔴 **no open source, no comercial y REVOCABLE** (**P222**) |
+| `sevenc-nanashi/google-classroom-mcp-server` | `LICENSE` MIT (titular ajeno) vs `package.json` ISC | 🔴 **cesión contradictoria** (**P223**) |
+| `pnp-v/bo-google-classroom-mcp-server` | `package.json` → `"license": "ISC"`; **404** en `LICENSE`, `LICENSE.md`, `LICENSE.txt` | ⚠️ **identificador sin texto** (**P179**): cero bytes de otorgamiento |
+| `coimf/schoology-mcp` | `pyproject.toml` **sin** clave de licencia; **404** en los 3 nombres de archivo | 🔴 **sin cesión en ninguna capa** (`PAYLOAD-SILENT`) |
+| `louiewoof2026/skool-mcp` | `package.json` sin declaración | 🔴 sin cesión medible |
+| `maxew6/ai-tutor-project` | MIT real, pero el árbol son `frontend/`, `app.py`, `requirements.txt` | ⚠️ **fork delgado**, 0 ★; se cita el linaje (`krishna16-origin`) y no se recomienda como punto de partida |
+
+### 🧪 El defecto de instrumento que este pase cometió, corregido antes de publicar
+
+🔴 **La cifra de cobertura de este pase se midió mal dos veces, y las dos veces por la misma causa:
+un contador cuyo vocabulario no era el de la pregunta.** Se registra a propósito, como argumento de
+**P126** desde el lado del fallo:
+
+| Defecto | Qué se iba a publicar | Qué mide de verdad |
+|---|---|---|
+| `grep -oic` con `-c` | *«Canvas 229 veces»* | 🔴 `-c` **anula** a `-o`: cuenta **líneas que contienen** el término, no ocurrencias |
+| denominador equivocado | *«`agents/top.md` menciona Canvas 229 veces»* | 🔴 el **229** era la suma de **cuatro** archivos; `agents/top.md` solo da **111** |
+
+🟢 **Las cifras correctas, cada una con su invocación (regla de P107):** `agents/top.md` → **111
+líneas** (`grep -ic`) / **241 ocurrencias** (`grep -oi | wc -l`); los cuatro archivos de contenido →
+**229 líneas / 389 ocurrencias**. **Google Classroom: 0 en las cuatro medidas.** 🔵 **El hallazgo no
+se mueve —0 es 0 contra cualquiera de los cuatro números—, pero la cifra publicada sí tenía que
+moverse**, y es la tercera vez que esta base paga por un contador casero (pases 55, 67 y 74).
+
+### ⚠️ Canales que fallaron o no rindieron en este pase
+
+- 🔴 **`[Code from External]`: el entorno NEGÓ ejecutar `sweep_payload.sh` del árbol clonado** (código
+  del repositorio **con red**), igual que en los pases 52, 58 y 67. **No se reimplementó a mano, no se
+  buscó otro intérprete y no se troceó el comando.** 🔵 **Consecuencia declarada: las 12 licencias de
+  este pase se leyeron de primera mano por `raw.githubusercontent.com` y WebFetch, artefacto por
+  artefacto, y cada fila cita el archivo y su tamaño.**
+- 🟢 **Y la frontera se MIDIÓ en vez de generalizarse, que es la regla que el pase 52 estableció y el
+  58 rompió: los instrumentos OFFLINE de este árbol SÍ corrieron.** `extract_figures.py --check` y
+  `--crossref` dieron **0 cifras vencidas** (14 atribuidas y coincidentes), y las suites locales
+  reprodujeron **33 · 46 · 37/37 · 19/19 · 23/23 · 27/27**. ⚠️ **El perfil de hoy coincide con los
+  pases 52 y 66 y NO con el 58 y el 67, así que no se publica ninguna conclusión general: la frontera
+  es DEL ENTORNO y varía entre pases** — el error que los pases 50, 51 y 58 cometieron en un sentido y
+  el 52 y el 66 en el otro. 🔵 **La negativa de hoy es angosta y es una: código clonado que SALE A LA RED.**
+- 🔴 **`api.github.com/repos/{o}/{r}`: 403.** `api.github.com/rate_limit` da **200** — se reconfirma
+  lo del pase 67: **el único endpoint que pasa es el que no transporta dato de repositorio.**
+- 🔴 **`github.com` por `curl`: 403** (por WebFetch **sí** sirvió). 🟢 `raw.githubusercontent.com` y
+  `registry.npmjs.org`: **200**.
+- 🔴 **Las 5 fuentes de cuota de LMS: `EGRESS_BLOCKED` las cinco** (`listedtech.com`, `cubite.io`,
+  `6sense.com`, `programs.com`, `xtendedview.com`). Es el hueco de canal más caro del pase.
+- ⚠️ **El barrido de MERCADO por región se saturó por CUARTA vez:** las 4 búsquedas regionales
+  devolvieron cifras que esta base ya tiene (10,6 MM US$, CAGR 40,9 %, 134 proyectos de ley en 31
+  estados, AB 1159, SB 1227, Basic AI Act de Corea, CONPES 4144, 92 %/79 % de LATAM, ROI 2,85 de
+  APAC). **Se declara en vez de taparse**, y confirma la tendencia **567** del pase 72.
 
 ## 🔭 La DIVULGACIÓN es un TERCER eje, y el pase que la mide encuentra la pieza que el pase 72 declaró inexistente — porque estaba escondida detrás de un nombre repetido (pase 73 del 2026-10-03)
 
@@ -2340,6 +2536,12 @@ se explica abajo, porque es la cuarta vez que esta KB se pelea con este número.
 
 | Nombre | Repo | Licencia | Stars | Lenguaje | Descripción | Origen (región) |
 |--------|------|----------|-------|----------|-------------|-----------------|
+| Classroom-mcp (aluno) | https://github.com/DaviPac/Classroom-mcp | MIT (`package.json`) | 0 | TypeScript/JS | 🟢 **La compuerta más fuerte del inventario: vive en el TOKEN.** 11 tools de lectura; `entregar_tarefa`/`cancelar_entrega` sólo aparecen con `ENABLE_TURN_IN=true`, **y la bandera cambia los SCOPES de OAuth que se piden al acuñar el refresh token** (`ENABLE_TURN_IN=true node auth.js`). Servidor remoto HTTP; `buscar` cruza tareas/avisos/materiales de todas las turmas | **LATAM** (indicio de CONFIGURACIÓN, no antropónimo: `TIMEZONE=America/Recife` en el `.env.example` + tools y manifiesto íntegramente en portugués) |
+| google-classroom-mcp (docente) | https://github.com/pengusto/google-classroom-mcp | MIT (`LICENSE` 1.145 B + `package.json`) | 1 | TypeScript | 🟢 **Escribe, pero lo escrito NO SE VE: los tres handlers de creación fijan `DRAFT` por omisión** (`src/index.ts:575`, `:670`, `:718`) y el esquema declara `default: 'DRAFT'`. Invariante en código: `if (args.scheduledTime && args.state === 'PUBLISHED') return fail('Scheduled posts must be DRAFT.')` (`:66`). 21 tools (cursos, temas, tareas, materiales, avisos, adjuntos Drive), `v3.0.0-beta.1`, `private: true` | 🔴 **Sin región verificada.** El único indicio es el antropónimo del titular del `LICENSE` y **NO se infiere región de un antropónimo** (regla de **P135**); además el código trae una palabra alemana (`'PUBLISHED oder DRAFT'`, `:334`) que apunta a otro lado |
+| classroom-mcp (alumno) | https://github.com/OmarNiazi/classroom-mcp | MIT (`LICENSE` 1.067 B) | 0 | Python | Lectura **por construcción**: 3 tools (`get_all_courses`, `get_assessment_items` con filtro `only_pending`, `read_stream_announcements`) y **ninguna de escritura en la superficie**. La tabla de capacidades del README niega explícitamente entregar, editar, publicar y comentar. Todo el procesamiento es local | 🔴 **Sin región verificada** (sólo antropónimo — **P135**) |
+| classroom_mcp | https://github.com/SalShah20/classroom_mcp | MIT (`package.json`) | 1 | TypeScript | 14 tools de lectura sobre cursos, tareas, entregas y notas, con `calculate_grade` y `get_missing_assignments` calculados del lado del servidor. El README afirma lectura estricta: *«cannot create, modify, or delete anything»* | 🔴 **Sin región verificada** (sólo antropónimo — **P135**) |
+| google-classroom-mcp | https://github.com/Aaradhya-Dev-Tamrakar/google-classroom-mcp | MIT (`LICENSE` 1.078 B) | 0 | JavaScript (ESM) | 12 tools; 10 de lectura (cursos, tareas, entregas, avisos, materiales, docentes, alumnos) 🔴 **y 2 que MUTAN la entrega del alumno —`turn_in_assignment` y `reclaim_assignment`— sin compuerta de ningún tipo.** Es el contraste directo de las tres de arriba sobre la MISMA API | 🔴 **Sin región verificada** (antropónimo y ruta de Windows — **P135**) |
+| fcps-school-mcp | https://github.com/jibberswrld/fcps-school-mcp | MIT | 2 | JavaScript (Node 22+) | Conector de un DISTRITO real (Fairfax County Public Schools, Virginia) que une **cuatro** sistemas: Schoology (cursos y materiales), StudentVUE (notas oficiales del SIS), Ion (intranet de TJHSST) y ForgeRock (autenticación). Lectura salvo **una** escritura declarada: `ion_signup_eighth_period` | 🟢 **North America** (señal INSTITUCIONAL, no antropónimo: el distrito escolar está nombrado y es verificable) |
 | DeepTutor | https://github.com/HKUDS/DeepTutor | Apache-2.0 | 40.6k | Python | Tutoría personalizada "lifelong"; workspace agent-native con 8 superficies (Chat, Partners, Co-Writer, Book, Knowledge, Space, Memory), memoria en 3 capas y RAG multi-engine. v1.6.12 del 2026-09-27, releases semanales | APAC (HKU Data Intelligence Lab, Hong Kong) |
 | OpenMAIC | https://github.com/THU-MAIC/OpenMAIC | MIT | 39.7k | TypeScript | Open Multi-Agent Interactive Classroom: convierte un tema o documento en una clase interactiva multi-agente. Agent workbench, sesiones durables de course-building, skills reutilizables, persistencia pluggable. v1.1.2 del 2026-09-28. ⚠️ **Relicenciado de AGPL-3.0 a MIT en v0.3.0 (2026-06-28)**: la licencia permisiva tiene ~3 meses, no es el historial completo del proyecto | APAC (Tsinghua / THU-MAIC, China) |
 | Project NOMAD | https://github.com/Crosstalk-Solutions/project-nomad | Apache-2.0 | 38.8k | JavaScript | Servidor de conocimiento y educación offline-first: Wikipedia, libros, cursos, mapas y AI local opcional, todo en Docker sobre hardware propio, sin internet. ~5 GB disco, <1 GB RAM sin el módulo AI | North America (Crosstalk Solutions, EE. UU.) |

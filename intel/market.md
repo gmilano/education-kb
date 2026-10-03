@@ -54,6 +54,51 @@ updated: 2026-10-03
 > **LATAM:** 🔵 el hallazgo del pase — **existe una capa MCP nacional brasileña de datos públicos, activa y MIT, y
 > educación es el único dominio grande que falta** (**gap 69**).
 
+## 📊 Esta base midió el DINERO en más de cuarenta pases y nunca midió DÓNDE ESTÁN LOS ALUMNOS (pase 74 del 2026-10-03)
+
+> **El barrido de mercado por región se saturó por CUARTA vez consecutiva** (pases 72, 73 y 74), y
+> este pase deja de tratarlo como un problema de canal. 🔴 **Cuando una dimensión se satura cuatro
+> veces, el problema es la DIMENSIÓN.** Lo único nuevo salió de preguntar por la **base instalada de
+> la plataforma**, no por el tamaño del mercado.
+
+### 🔴 El eje que faltaba, y es el que decide dónde se construye
+
+Este archivo tiene, desde el pase 5, series de **tamaño de mercado** (10,6 MM US$ para 2026, CAGR
+40,9 %, 42,48 MM a 2030) y de **adopción** (86 % NA, 92 %/79 % LATAM, 66 % APAC). **Nunca tuvo una
+cifra de base instalada por plataforma** — y ésa es la que dice en qué sistema hay que integrarse:
+
+| Plataforma | Cuota de LMS (canal de este pase) | ¿Autoalojable? | Menciones en `agents/top.md` al pase 73 |
+|---|---|---|---|
+| **Google Classroom** | 🟢 **~39 % — primera** | 🔴 NO (SaaS propietario) | 🔴 **0** |
+| Canvas | **~19 %** (41 % en superior de NA; ~50 % ponderado por matrícula) | 🟢 sí (AGPL-3.0) | **229 líneas / 389 ocurrencias** (4 archivos); **111 / 241** sólo en `agents/top.md` |
+| Moodle | **~14 %**, y cayendo: **19 % (2017) → 7 % (2026)** | 🟢 sí (GPL-3.0) | fundacional desde el pase 1 |
+| Schoology | top-3 de K-12 (los tres ≈ **¾** del mercado) | 🔴 NO | 🔴 **0** |
+
+🔴 **Consecuencia comercial directa: la atención de esta KB resultó inversamente proporcional a la
+base instalada** (**P224**). Un engagement de K-12 que arranque leyendo este archivo habría llegado
+con Moodle y Canvas —14 % y 19 %— y sin una sola pieza para la plataforma donde está el 39 %.
+
+⚠️ **Cota, grande y declarada antes de que alguien cotice estas cifras:** las **cinco** fuentes
+(`listedtech.com`, `cubite.io`, `6sense.com`, `programs.com`, `xtendedview.com`) dieron
+**`EGRESS_BLOCKED` las cinco** por WebFetch. **Los porcentajes están leídos del canal de BÚSQUEDA y
+NO verificados en la fuente**, y el propio canal advierte que la cuota varía fuerte según la
+metodología (instituciones vs. usuarios vs. matrícula) — lo que explica que una serie dé Canvas 19 %
+global y otra 41 % en superior de NA sin contradecirse. 🔵 **Se publican porque el ORDEN
+—Classroom > Canvas > Moodle— es consistente en las cinco y porque el hueco de 241-a-0 no depende de
+la cifra exacta. Verificarlos en fuente es la acción 1 del pase 75.**
+
+### 🟢 La reconciliación con las series que este archivo ya tenía: no se contradicen, miden otra cosa
+
+| Serie | Qué mide | Estado |
+|---|---|---|
+| 10,6 MM US$ (2026), CAGR 40,9 %, 42,48 MM (2030) | **gasto en AI** para educación | 🟢 reconfirmada, **sin cifra nueva** este pase |
+| 86 % NA / 92 % LATAM / 66 % APAC | **adopción de AI** por personas e instituciones | 🟢 reconfirmada, **sin cifra nueva** |
+| 🆕 **~39 / ~19 / ~14 %** | **base instalada de la PLATAFORMA** donde ese gasto se ejecuta | 🆕 **nueva dimensión**, con la cota de arriba |
+
+🔵 **Las tres son compatibles y responden preguntas distintas: cuánto se gasta, cuántos lo usan, y
+—la que faltaba— SOBRE QUÉ.** La tercera es la única que determina qué conector hay que tener
+construido antes de que empiece el engagement.
+
 ## 🌍 El eje de 2026 no es el tamaño del mercado, es la ASIMETRÍA REGULATORIA entre regiones (pase 64 del 2026-10-03)
 
 **Las cuatro búsquedas regionales obligatorias de este pase devolvieron menos cifras de tamaño nuevas
@@ -1593,6 +1638,42 @@ Dónde se produce el software educativo abierto, que no es donde está la demand
 ## Opportunities by region
 
 ### North America
+
+#### 📍 Pase 74 del 2026-10-03 — cuarto pase sin cifra regulatoria nueva, y la oportunidad de la región se mueve del LMS al ROSTERING
+
+🔴 **El canal regional devolvió, por cuarta vez, el inventario propio de esta base:** 86 % de
+adopción organizacional, **134** proyectos de ley en **31** estados, **AB 1159** de California
+(prohíbe usar dato de alumno para entrenar modelos), **SB 1227** de Idaho, el *STUDENTS FIRST Act of
+2026* redactado por estudiantes de los 50 estados, el *Traffic Light Framework* de NYC (marzo 2026,
+con *Playbook* en junio), y las políticas propias de Chicago, Denver y Charlotte-Mecklenburg.
+**Cero cifras nuevas; se declara en vez de taparse.**
+
+🟢 **Lo nuevo de la región es de ARQUITECTURA, y sale del eje de base instalada:** NA es la región
+donde el dato de plataforma es **más** desigual y **más** accionable.
+
+| Dato de la región | Cifra | Qué implica para un engagement |
+|---|---|---|
+| Canvas en superior de NA | **41 %** (≈**50 %** ponderado por matrícula) | en **superior**, Canvas sigue siendo la apuesta correcta y esta base está bien surtida (**229 líneas / 389 ocurrencias** en los 4 archivos de contenido) |
+| Google Classroom en K-12 | 🟢 **líder, por gratuito y empaquetado** con lo que la escuela ya usa | 🔴 en **K-12** esta base llegaba con **0** piezas antes de este pase |
+| top-3 de K-12 (Classroom + Canvas + Schoology) | ≈ **¾** del mercado | la integración, no el despliegue, es el trabajo |
+
+🔵 **La oportunidad concreta que abre el pase, y es de NA por señal institucional verificable:** la
+cadena de *rostering* queda completa con
+**`Ed-Fi-Exchange-OSS/Ed-Fi-Clever-Integration`** (**Apache-2.0**, Ed-Fi Alliance) — genera endpoints
+**OneRoster** desde un **Ed-Fi ODS v3.x** para que **Clever** sincronice. Ed-Fi es el estándar de
+dato de los distritos de EE. UU. y Clever el proveedor de *rostering* que la mayoría usa, así que
+**el eslabón que faltaba era precisamente el de esta región.**
+
+🔴 **Y el encaje regulatorio es el que vuelve vendible al patrón, no un adorno:** con **AB 1159**
+prohibiendo el entrenamiento sobre dato de alumno y Oklahoma y Maryland exigiendo **supervisión
+humana** sobre decisiones de alto impacto, la pieza correcta no es la más capaz sino la que **puede
+demostrar la compuerta**. 🟢 **`GATE-IN-EFFECT`** (lo escrito nace `DRAFT`, un humano publica) **es
+exactamente el artefacto que un distrito de NA necesita mostrar para cumplir el requisito de
+supervisión humana** — y es MIT.
+
+⚠️ **Lo que NO se pudo medir de la región:** las cinco fuentes de cuota dieron `EGRESS_BLOCKED`, así
+que el **41 %** y el liderazgo de Classroom en K-12 son del canal de búsqueda y **no están
+verificados en fuente**.
 
 #### 📍 Pase 73 del 2026-10-03 — tercer pase consecutivo sin cifra nueva, y la oportunidad de la región se corre del EXPEDIENTE al PILOTO SIN EXPEDIENTE
 
@@ -3227,6 +3308,43 @@ Artículo 50(2) **no es exigible** en North America — pero es **el requisito m
 multi-región conviene cotizarlo contra el techo europeo y no contra el piso local (ver **P103** y **P105**).
 
 ### EMEA
+
+#### 📍 Pase 74 del 2026-10-03 — sin cifra nueva, 0 piezas de código, y la oportunidad está en que el AI Act premia la compuerta que este pase acaba de tipificar
+
+🔴 **Canal regional: cero cifras nuevas, por cuarto pase.** Devolvió el EU AI Act con la educación
+como **alto riesgo** (admisión, evaluación, puntuación de exámenes, detección de conducta prohibida
+durante evaluaciones), **aplicación general el 2 de agosto de 2026**, implementación por fases hasta
+2027, y la mayoría de las instituciones en modo **piloto / pre-cumplimiento**. Todo ya estaba en
+este archivo desde el pase 11, incluida la corrección del reloj del *Digital Omnibus*.
+
+🔴 **Y EMEA queda con 0 piezas de código en la capa de este pase, declarado y no tapado.** Ninguno
+de los 8 conectores de Google Classroom declara afiliación institucional europea. ⚠️ **El caso que
+más tentaba se DECLINÓ a propósito:** `pengusto/google-classroom-mcp` tiene un titular de `LICENSE`
+con nombre catalán **y una palabra alemana en el código** (`'PUBLISHED oder DRAFT'`), pero la regla
+**P135** de esta base prohíbe convertir un antropónimo en región. 🔵 **Es la segunda vez que P135
+cuesta una pieza a EMEA, y se registra: la regla es correcta y el costo es real.**
+
+🟢 **La oportunidad de la región, que es la más clara de las cuatro y no necesita cifra nueva:** el
+AI Act exige, para alto riesgo, **supervisión humana, transparencia y gobernanza del dato**
+demostrables **antes** del despliegue. Las dos clases nuevas de este pase son, literalmente,
+artefactos de cumplimiento:
+
+| Exigencia del AI Act | Clase medida en este pase | Por qué sirve como evidencia |
+|---|---|---|
+| **supervisión humana** sobre la decisión | 🟢 **`GATE-IN-EFFECT`** (**P221**) | lo que el agente escribe nace `DRAFT`: **ningún alumno lo ve hasta que un humano publica**, y está en el código (`src/index.ts:575`, `:670`, `:718`), no en la política |
+| **minimización y gobernanza del dato** | 🟢 **`GATE-IN-SCOPE`** (**P220**) | el token **no tiene** el permiso de escritura: la limitación es demostrable ante un auditor **en la credencial**, no en una promesa del proveedor |
+
+🔵 **El argumento comercial para EMEA, y es el más fuerte que esta base puede hacer hoy:** en una
+región donde el expediente de cumplimiento es el costo dominante del proyecto, **una compuerta que se
+hace cumplir fuera del proceso vale más que una funcionalidad**. 🔴 **Y el corolario incómodo que hay
+que decir igual: la pieza MÁS capaz de la capa (`AStheTECH`, ~40 tools, CRUD completo) es
+inutilizable acá por DOS motivos a la vez** — su licencia es revocable y no comercial (**P222**),
+**y** no tiene compuerta alguna sobre operaciones que el AI Act clasifica como alto riesgo.
+
+⚠️ **Y la cota de soberanía, que acota el patrón de este pase a su lugar:** Google Classroom **no se
+autoaloja**, así que el patrón de infraestructura soberana que el pase 63 midió en EMEA —la que paga
+el Estado— **sigue exigiendo vertical desplegable** (Moodle, Open edX). **Este pase no lo reemplaza:
+agrega la otra mitad.**
 
 #### 📍 Pase 73 del 2026-10-03 — sin cifra nueva, y la oportunidad de la región aparece en la capa que nadie mira: el INSTRUMENTO de la licencia, no su alcance
 
@@ -4994,6 +5112,39 @@ este pase dejó cubierto con código.
 
 ### APAC
 
+#### 📍 Pase 74 del 2026-10-03 — sin cifra nueva y 0 piezas, y es la región donde el régimen ya pide por escrito las dos clases de este pase
+
+🔴 **Canal regional: cero cifras nuevas, cuarto pase consecutivo.** Devolvió **96 %** de
+organizaciones con intención de aumentar inversión en AI, **66 %** pilotando o adoptando
+sistemáticamente, **88 %** esperando retorno este año con **ROI de 2,85 US$ por dólar**, la **Basic
+AI Act** de Corea del Sur **en vigor desde enero de 2026** (con alcance extraterritorial y
+requisitos de transparencia, evaluación de riesgo, **supervisión humana** y documentación), la **ley
+de IA de Vietnam** de marzo de 2026, y a Google, Microsoft, IBM, Pearson y Byju's como jugadores,
+con China, India y Japón dominando por inversión estatal e infraestructura. **Todo ya estaba.**
+
+🔴 **Y APAC queda con 0 piezas en la capa de este pase, declarado.** ⚠️ **Una candidata tentaba y se
+DECLINÓ por **P135**:** `Aaradhya-Dev-Tamrakar/google-classroom-mcp` (MIT) tiene antropónimo y rutas
+de Windows como únicos indicios, y **no se infiere región de un nombre propio**. 🔵 **Rompe la racha
+del pase 72, que había sido el primero en años con pieza APAC en la capa de código.**
+
+🟢 **Lo que sí se puede afirmar de la región, y refuerza la tendencia 560 con material nuevo:** la
+Basic AI Act coreana exige **supervisión humana y documentación** sobre sistemas que afectan a
+usuarios coreanos, **extraterritorialmente**. Las dos clases nuevas de este pase son instrumentos
+directos de ese requisito:
+
+| Requisito de la Basic AI Act | Clase de este pase | Forma de la evidencia |
+|---|---|---|
+| supervisión humana sobre el resultado | **`GATE-IN-EFFECT`** (**P221**) | el `DRAFT` por omisión **es** el punto de control humano, y es auditable en 3 líneas de código |
+| documentación y limitación de capacidad | **`GATE-IN-SCOPE`** (**P220**) | el *scope* del token documenta la capacidad **de forma verificable por un tercero** |
+
+🔵 **Y la asimetría comercial de APAC, actualizada con el eje nuevo:** es la región con la mayor
+intención de gasto (96 %) y un ROI declarado (2,85) que ninguna otra región de este archivo tiene,
+🔴 **pero esta base sigue sin una sola pieza de código de origen APAC verificable en la capa de
+conectores** — y con 4 pases de saturación de mercado, **el canal que rinde acá es el de sistema
+nombrado** (la lección del pase 73), no el de cifras regionales. Queda como acción 2 del pase 75:
+barrer los nombres de las plataformas **dominantes en APAC** (no Classroom ni Canvas) con el método
+de este pase.
+
 #### 📍 Pase 72 del 2026-10-03 — APAC rompe su hueco de CÓDIGO después de tres pases, y es la única región con hallazgo propio en este barrido
 
 🟢 **El hueco de CÓDIGO de APAC —abierto y declarado desde el pase 69— se CIERRA**, y no se cerró
@@ -6377,6 +6528,43 @@ desplegado + puerta MCP permisiva (`jbnu-lms-mcp`, `canvas-lms-mcp`, las cuatro 
 depende de un tercero» son el mismo argumento.**
 
 ### LATAM
+
+#### 📍 Pase 74 del 2026-10-03 — sin cifra nueva, pero la región aporta por SEGUNDO pase consecutivo el mejor instrumento de gobernanza de la capa
+
+🔴 **Canal regional: cero cifras nuevas, cuarto pase.** Devolvió **92 %** de estudiantes y **79 %** de
+docentes usando AI activamente (Digital Education Council, **30.000+** respuestas en **29**
+instituciones, con el Instituto para el Futuro de la Educación del **Tec de Monterrey**, AIGEN y
+RIE360), **94 %** de docentes esperando usarla, **61 %** de estudiantes temiendo el mal uso de sus
+pares, **CONPES 4144** de Colombia (febrero 2025, con presupuesto a 2030), **47 %** de despliegue
+empresarial regional y Brasil (65,89), Chile (63,19) y Uruguay (62,21) como los únicos del top-50
+global. **Todo ya estaba en este archivo.**
+
+🟢 **Pero el aporte de la región en este pase no es una cifra: es el mejor instrumento de gobernanza
+del inventario, y es el SEGUNDO pase consecutivo en que sale de LATAM.**
+
+| Pase | Pieza | Origen | Qué aportó |
+|---|---|---|---|
+| 72 | `iDavi/usp-mcp` | 🇧🇷 Brasil | el **único patrón de credencial** del inventario (sellado) |
+| **74** | **`DaviPac/Classroom-mcp`** (MIT) | 🇧🇷 **Brasil** | 🟢 **el único `GATE-IN-SCOPE`** (**P220**): **el peldaño más alto de la escalera de escritura** |
+
+🔵 **Y la región se afirma con indicio de CONFIGURACIÓN, no de antropónimo** —que es lo que la hace
+publicable bajo **P135**—: `TIMEZONE=America/Recife` en el `.env.example`, más tools y manifiesto
+íntegramente en portugués (`proximas_entregas`, `entregar_tarefa`, *«na perspectiva do aluno»*).
+**Es un artefacto de configuración, verificable, no un nombre propio.**
+
+🔴 **La lectura que importa, y se dice con su cota:** **dos pases no son una tendencia**, y así se
+publica. 🟢 **Pero el EJE en que LATAM aporta es consistente en los dos: la CREDENCIAL —el sellado
+en el 72, el *scope* del token en el 74— y no el modelo ni la pedagogía.** Para una región que este
+archivo venía describiendo con estadística de demanda (92 %, 79 %, 47 %), **aportar el instrumento
+técnico que las otras tres regiones no produjeron es un cambio de posición, no un dato más.**
+
+🟢 **La oportunidad concreta, y encaja con el dato de adopción que la región ya tenía:** con **92 %**
+de estudiantes usando AI y **61 %** temiendo el mal uso de sus pares, el producto que LATAM necesita
+es el del **alumno**, no el del docente — y `DaviPac/Classroom-mcp` es exactamente eso
+(*«na perspectiva do aluno»*), con las dos tools de entrega **apagadas por omisión y sin scope de
+escritura en el token**. 🔵 **Es la respuesta de arquitectura al 61 % de desconfianza: el agente del
+alumno no puede entregar en su nombre a menos que el alumno lo habilite explícitamente y vuelva a
+consentir en Google.**
 
 #### 📍 Pase 72 del 2026-10-03 — el canal regional devolvió el PROPIO INVENTARIO de esta base, y lo nuevo de LATAM no es una cifra: es CÓDIGO
 

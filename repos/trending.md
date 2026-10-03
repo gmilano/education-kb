@@ -8,6 +8,61 @@ updated: 2026-10-03
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 
+## 2026-10-03 — pase 74: ocho conectores de una API que esta base no tenía, y el repo más capaz de los ocho es el único que no se puede usar
+
+### 🔴 Lo que apareció esta semana, y por qué no había aparecido antes
+
+El barrido de este pase **no fue por la palabra `education`** —la regla del pase 22— sino por el
+**nombre de la plataforma con más alumnos adentro**. Devolvió **8 repositorios independientes** de
+conector a Google Classroom, **ninguno** de los cuales estaba en esta base, que llevaba **73 pases
+con 0 menciones de la plataforma** contra **229 líneas / 389 ocurrencias** de Canvas en los cuatro
+archivos de contenido (**P224**).
+
+🔵 **Es el mismo método que el pase 73 pagó con **P217** (barrer el nombre del repo sin el dueño),
+aplicado un nivel más arriba: barrer el nombre de la PLATAFORMA, no el del proyecto.**
+
+### 🟢 Los 8, con la licencia leída del payload y el tamaño del artefacto
+
+| Repo | Licencia (**medida**) | Artefacto leído | Superficie | Compuerta |
+|---|---|---|---|---|
+| [`pengusto/google-classroom-mcp`](https://github.com/pengusto/google-classroom-mcp) | 🟢 **MIT** | `LICENSE` 1.145 B **+** `package.json` (concuerdan) | 21 tools, escribe | 🆕 **`GATE-IN-EFFECT`** (**P221**) |
+| [`DaviPac/Classroom-mcp`](https://github.com/DaviPac/Classroom-mcp) | 🟢 **MIT** | `package.json` | 11 lectura + 2 escritura | 🆕 **`GATE-IN-SCOPE`** (**P220**) — la más fuerte |
+| [`SalShah20/classroom_mcp`](https://github.com/SalShah20/classroom_mcp) | 🟢 **MIT** | `package.json` | 14 tools, lectura | n/a por construcción |
+| [`OmarNiazi/classroom-mcp`](https://github.com/OmarNiazi/classroom-mcp) | 🟢 **MIT** | `LICENSE` 1.067 B | 3 tools, lectura | n/a por construcción |
+| [`Aaradhya-Dev-Tamrakar/google-classroom-mcp`](https://github.com/Aaradhya-Dev-Tamrakar/google-classroom-mcp) | 🟢 **MIT** | `LICENSE` 1.078 B | 12 tools, **muta entregas** | 🔴 **ninguna** |
+| [`AStheTECH/mewcp-google-classroom`](https://github.com/AStheTECH/mewcp-google-classroom) | 🔴 **ACL propia** | `LICENSE.md` **y** `LICIENCE.md`, **6.489 B byte a byte idénticos** | ~40 tools, CRUD, `delete_student` | 🔴 **ninguna** |
+| [`sevenc-nanashi/google-classroom-mcp-server`](https://github.com/sevenc-nanashi/google-classroom-mcp-server) | 🔴 **contradictoria** | `LICENSE` MIT (titular **ajeno**) vs `package.json` **ISC** | baja | 🔴 ninguna |
+| [`pnp-v/bo-google-classroom-mcp-server`](https://github.com/pnp-v/bo-google-classroom-mcp-server) | ⚠️ **identificador sin texto** | `package.json` → `ISC`; **404** en `LICENSE`, `.md`, `.txt` | — | — |
+
+**5 de 8 son MIT con cesión verificada. 3 de 8 no se pueden usar**, y cada uno por un motivo
+distinto — que es lo que hace a esta capa un buen material de enseñanza.
+
+### 🔴 El hallazgo que ordena la decisión: capacidad y licencia van al revés
+
+**La pieza más capaz de las ocho es la única que no es open source.** `AStheTECH` ofrece el CRUD
+completo (incluido `delete_student`) bajo la *AStheTECH Community License*: `All rights reserved`,
+uso *«solely for personal, educational, or internal business purposes»*, y prohibición explícita de
+*«offer, provide, or make available the software as part of any hosted service, SaaS platform, API
+service, or similar commercial offering»*.
+
+🆕 **Y la clase es nueva para esta base: `LICENSE-REVOCABLE`** (**P222**). El permiso es
+*«revocable»*, y al revocarse obliga a *«promptly destroy or permanently delete all copies …
+including any modified versions»*. 🔵 **Se verificó antes de numerarla: `revocable` aparecía 0 veces
+en 73 pases, contra 28 de `NONCOMMERCIAL`.** 🔴 **Una no-comercial bloquea en la propuesta; una
+revocable bloquea después de la entrega.**
+
+### ⚠️ Lo que el barrido NO devolvió, dicho antes de que se lea como cobertura
+
+- 🔴 **Schoology (top-3 de K-12): 2 repos y ninguno sirve de fundación.** `coimf/schoology-mcp` **no
+  declara licencia** (`pyproject.toml` sin la clave, 404 en los 3 nombres de archivo) y
+  `jibberswrld/fcps-school-mcp` (MIT, 2 ★) es **de un distrito concreto** (FCPS, Virginia) con
+  ForgeRock y StudentVUE cableados.
+- ⚠️ **EMEA 0 y APAC 0 en esta capa**, declarado: ninguno de los 8 declara afiliación institucional
+  en esas regiones, y **no se infirió región de los antropónimos** (**P135**) aunque dos tentaban.
+- 🔴 **Ninguno de los 8 pasa de 2 ★.** Es una capa **nueva y atomizada**, no una capa madura: ocho
+  equipos resolviendo la misma integración sin enterarse unos de otros. 🔵 **Para Globant eso es
+  oportunidad, no riesgo: no hay incumbente open source que desplazar.**
+
 ## 2026-10-03 — pase 73: una licencia puede estar ausente como ARCHIVO y presente en el PAYLOAD, o presente en PROSA y ausente del todo — y los dos casos aparecen en el mismo pase, sobre dos piezas que un lector humano clasificaría igual
 
 ### 🔴 El hallazgo del pase: la clase de error más barata de cometer es leer la licencia del README

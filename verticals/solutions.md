@@ -111,6 +111,59 @@ updated: 2026-10-03
 > **`qti3-pnp`**, que abren accesibilidad de evaluación como entregable auditable (**P72**). ⚠️ **Open edX cambia de
 > recomendación: proponer con presupuesto de mantenimiento (gap 70).** Ver la sección del pase 33, abajo.
 
+## 🏫 La plataforma vertical con más alumnos del planeta NO se puede autoalojar, y eso cambia la forma de la receta (pase 74 del 2026-10-03)
+
+### 🔴 El hueco que este archivo tenía, y es de categoría
+
+Este archivo lista verticales **que se despliegan y se customizan**: Moodle, Open edX, Canvas,
+ILIAS, Chamilo, Sakai, Koha, Kolibri. **Es el criterio correcto y por eso dejó afuera, durante 73
+pases, a la plataforma que el canal de mercado de este pase pone primera:**
+
+| Plataforma | Cuota de LMS (canal de este pase) | ¿Autoalojable? | Menciones en esta KB (pase 73) |
+|---|---|---|---|
+| **Google Classroom** | 🟢 **~39 %, primera** | 🔴 **NO — propietaria, SaaS** | 🔴 **0** |
+| Canvas | ~19 % · 41 % superior NA | 🟢 sí (AGPL-3.0) | **229 líneas / 389 ocurrencias** (4 archivos) |
+| Moodle | ~14 %, **19 % (2017) → 7 % (2026)** | 🟢 sí (GPL-3.0) | desde el pase 1 |
+| Schoology | top-3 K-12 | 🔴 NO — propietaria | 🔴 **0** |
+
+🔵 **Dos de las tres plataformas que se reparten ~¾ del K-12 no se autoalojan.** Así que un archivo
+de verticales que sólo admite lo desplegable **describe bien lo que se puede customizar y mal el
+mercado donde está el alumno.** Ver **P224**.
+
+⚠️ **Cota: las 5 fuentes de cuota dieron `EGRESS_BLOCKED`** (`listedtech.com`, `cubite.io`,
+`6sense.com`, `programs.com`, `xtendedview.com`). El **orden** es consistente en las cinco; los
+porcentajes **no están verificados en la fuente**.
+
+### 🟢 La distinción que resuelve el hueco sin romper el criterio del archivo
+
+**No se agrega Google Classroom como vertical de partida —no lo es, no hay nada que desplegar—.** Lo
+que se agrega es la categoría que faltaba:
+
+| Tipo de vertical | Qué se customiza | Dónde vive la propiedad intelectual de Globant | Ejemplos de esta base |
+|---|---|---|---|
+| **Desplegable** (lo que este archivo tenía) | el núcleo: plugins, temas, bloques | **dentro** de la plataforma | Moodle (GPL-3.0), Open edX (Apache-2.0), Canvas (AGPL-3.0), ILIAS, Chamilo, Koha, Kolibri |
+| 🆕 **SaaS con API** (lo que faltaba) | **nada del núcleo**: sólo el borde | 🟢 **100 % en el conector** — y por eso es MÁS defendible | Google Classroom (~39 %), Schoology |
+
+🟢 **El corolario comercial, que es el que vale:** en una vertical desplegable la customización queda
+atada a la licencia del núcleo —y en Moodle y Canvas eso es **copyleft fuerte** (GPL-3.0 y
+AGPL-3.0)—. 🔴 **En una vertical SaaS no hay núcleo que contaminar: el conector es obra propia y las
+cinco piezas MIT de este pase lo prueban.** Para un engagement donde el cliente quiere quedarse con
+el código, la vertical propietaria es **mejor** terreno de partida que la open source, que es lo
+contrario de lo que esta base venía asumiendo.
+
+### 🔴 Y la cota de la categoría nueva, antes de que alguien la cotice
+
+| Riesgo | Por qué | Evidencia de este pase |
+|---|---|---|
+| **el borde lo mueve el proveedor** | la API es de Google, no hay fork posible | los 8 conectores dependen de `googleapis` y del consentimiento OAuth |
+| **sin autoalojamiento no hay soberanía de dato** | descarta el patrón EMEA de soberanía del pase 63 | **inaplicable** donde el Estado paga la infraestructura |
+| **la capa es nueva y atomizada** | 8 equipos, **ninguno pasa de 2 ★** | ningún incumbente open source, y ningún soporte |
+| **la licencia puede no ser open source** | la pieza más capaz de las 8 es **ACL revocable** | `AStheTECH` (**P222**) |
+
+🔵 **Dónde NO usar la categoría nueva: donde el pase 63 midió soberanía pagada por el Estado (EMEA) y
+donde el pase 73 midió la tercera vía permisiva de un sistema educativo nacional (Indonesia, MIT).**
+Ahí la vertical desplegable sigue siendo la única respuesta, y este pase no la toca.
+
 ## 🏛️ La vertical gana el SIAKAD NACIONAL PERMISIVO y el PORTAL DE UN *LAND* — y la capa de partida deja de elegirse por LMS para elegirse por QUIÉN EXIGE EL REPORTE (pase 73 del 2026-10-03)
 
 El modelo de este archivo —partir de algo desplegado, que ya tiene los datos, y poner la capa

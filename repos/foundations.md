@@ -83,6 +83,84 @@ corre ése antes de escribir uno a mano** (tendencia **313**). 🟢 **Y el `gafa
 > **Pase 36 del 2026-10-02:** 🔵 **este pase no agrega repos: le pone FECHA a los que ya están, y la fecha cambia tres recomendaciones.** Se midió la capa PHP de evaluación y telemetría en Packagist —el único registro de los tres que entrega descargas en este entorno (`api.npmjs.org` y `pypistats.org` dan **403 a CONNECT**)— y el resultado está en `repos/trending.md`. **Lo que hay que saber antes de proponer desde este archivo:** 🔴 **la pieza xAPI más descargada de esta base, `rusticisoftware/tincan` (Apache-2.0, 6.178 desc./mes, 863.777 totales), no publica desde el 2022-11-02**, y ⚠️ **el único MIT de esa capa, `php-xapi/client`, está parado desde el 2021-03-24** con 825 desc./mes. 🔵 **La lectura es que en xAPI/PHP lo permisivo está quieto y lo vivo es copyleft**, así que la receta de telemetría se sostiene en **Ralph (MIT)** + **`lrsql` (Apache-2.0)** + **`learnmcp-xapi` (MIT)** y no en la capa PHP. 🟢 **Del lado de evaluación, lo activo es `oat-sa/extension-tao-testqti`** (**885 versiones**, release del **2026-09-30**) **y sigue siendo GPL-2.0-only**, mientras **lo permisivo es lo nuevo**: `@longsightgroup/qti3-cli` (**MIT**, 41 releases desde el 2026-05-21, último **2026-10-01**) con **cero dependencias de terceros** — sus 4 dependencias son todas `@longsightgroup/*` pinneadas a la misma versión exacta. **Su manifiesto MCP completo de 20 tools está escrito en `compose/patterns.md` (P76).** 🔴 **Y una corrección de catálogo: `oat-sa/qti-sdk` devuelve 404 en Packagist porque es el nombre del REPO — su paquete es `qtism/qtism`** (GPL-2.0-only, 218.212 descargas totales, 315 versiones). **Nombre de repo y nombre de paquete son identificadores distintos, y confundirlos produce un 404 que parece una ausencia** — pasó igual con `1edtech/oneroster`, `imsglobal/lti-1-3-php-library` y `packbackbooks/lti-1-3-php-library`, los tres **404**, que se anotan como *«no verificado en Packagist bajo ese nombre»* y **no** como inexistentes. ⚠️ **Acción pendiente que el pase 37 tiene asignada: este archivo nunca pasó por el control de *slugs* distintos ni por el de *backlink*** — los dos que en `agents/top.md` encontraron **un duplicado** y **dos colisiones** este mismo pase.
 > **Pase 11 del 2026-10-01:** aparece una licencia que las diez pasadas anteriores filtraban sin saberlo — **ECL-2.0**, con la que licencia todo Apereo (Sakai, Opencast, OpenLRW). Es Apache-2.0 con el alcance de patentes acotado, aprobada por OSI y FSF, y **es apta para construir arriba**. Ver la capa de analítica institucional, abajo.
 
+## 🔌 La capa de ROSTERING gana el eslabón que le faltaba, y el pase reencuadra cuál es la plataforma fundacional de K-12 (pase 74 del 2026-10-03)
+
+### 🔴 Primero el reencuadre, porque cambia qué cuenta como «fundacional»
+
+Este repositorio eligió sus fundaciones de K-12 por **presencia en la base de código abierto**
+(Moodle desde el pase 1; Canvas en **229 líneas / 389 ocurrencias** de los cuatro archivos de
+contenido). El canal de mercado de este pase dice que la
+**base instalada** ordena distinto:
+
+| Plataforma | Cuota de LMS (canal de este pase) | Estado en esta KB antes del pase 74 |
+|---|---|---|
+| **Google Classroom** | 🟢 **~39 % — primera** | 🔴 **0 menciones en 73 pases** |
+| Canvas | ~19 % (41 % en superior de NA) | **229 líneas / 389 ocurrencias** (4 archivos) |
+| Moodle | ~14 %, **19 % (2017) → 7 % (2026)** | fundacional desde el pase 1 |
+| Schoology | top-3 de K-12 (los tres ≈ ¾ del mercado) | 🔴 **0 menciones** |
+
+🔵 **La consecuencia para este archivo no es borrar nada: Moodle y Canvas siguen siendo las únicas
+dos fundaciones que se pueden *desplegar*** —Google Classroom es propietario y no se autoaloja—.
+🔴 **Pero sí cambia la pregunta de arranque de un engagement de K-12:** si el alumno está en
+Classroom, la fundación no es el LMS sino **la capa de integración**, y ahí es donde esta base tenía
+el hueco. Ver **P224**.
+
+⚠️ **Cota: las 5 fuentes de cuota dieron `EGRESS_BLOCKED`** (`listedtech.com`, `cubite.io`,
+`6sense.com`, `programs.com`, `xtendedview.com`). Cifras del canal de búsqueda, **no verificadas en
+la fuente**; el **orden** es consistente en las cinco.
+
+### 🟢 El alta del pase: el puente Ed-Fi → OneRoster → Clever, que es el eslabón que faltaba
+
+Esta base ya tenía los dos extremos de la cadena de *rostering* (`Ed-Fi-Alliance-OSS/Ed-Fi-ODS`,
+`Ed-Fi-Alliance-OSS/edfi-oneroster`, `Ed-Fi-Alliance-OSS/Ed-Fi-Data-Standard`, más cuatro
+implementaciones OneRoster de terceros). **Le faltaba la pieza que los une con el proveedor que la
+mayoría de los distritos de NA usa de verdad.**
+
+| Repo | Licencia (**medida por payload**) | ★ / commits | Región | Qué es |
+|---|---|---|---|---|
+| [`Ed-Fi-Exchange-OSS/Ed-Fi-Clever-Integration`](https://github.com/Ed-Fi-Exchange-OSS/Ed-Fi-Clever-Integration) | **Apache-2.0** | 2 ★ / 30 commits | 🟢 **North America** (señal INSTITUCIONAL: Ed-Fi Alliance / Ed-Fi Exchange) | API .NET Core que **genera endpoints OneRoster desde un Ed-Fi ODS v3.x sobre PostgreSQL** para que Clever sincronice el *rostering*. **7 endpoints**: Orgs, AcademicSessions, Courses, Classes, Users, Demographics, Enrollments |
+
+🔵 **El dato de diseño que lo vuelve utilizable y hay que decir antes de proponerlo:** **no implementa
+OneRoster completo**, sino —declarado por el propio proyecto— *«the endpoints and functionality
+required by Clever»*. 🔴 **Y es UNIDIRECCIONAL: Clever lee de Ed-Fi, no escribe.** Para un
+engagement eso es una ventaja de riesgo (no puede corromper el ODS) y una limitación de alcance
+(no resuelve la escritura de vuelta), y conviene cotizarlo así y no como «integración Ed-Fi–Clever».
+
+### 🔴 Por qué la capa de integración es la fundación correcta cuando el LMS es propietario
+
+Google Classroom no se autoaloja, así que un engagement de K-12 sobre Classroom **no tiene una
+fundación que desplegar** — tiene **tres decisiones de integración**, y las tres quedan medidas con
+código real a partir de este pase:
+
+| Decisión | Pieza fundacional | Licencia | Qué resuelve |
+|---|---|---|---|
+| ¿de dónde sale el ROSTER? | `Ed-Fi-ODS` + **`Ed-Fi-Clever-Integration`** | Apache-2.0 | la matrícula y las secciones, con OneRoster como contrato |
+| ¿cómo lee el agente? | `DaviPac/Classroom-mcp` · `OmarNiazi/classroom-mcp` · `SalShah20/classroom_mcp` | MIT | la superficie de lectura, sin exponer escritura |
+| ¿cómo escribe el agente sin exponer al alumno? | `pengusto/google-classroom-mcp` | MIT | **`GATE-IN-EFFECT`**: lo escrito nace `DRAFT` |
+
+🟢 **Las tres capas son permisivas (Apache-2.0 + MIT ×4), que es la primera vez que esta base puede
+armar una cadena completa de K-12 sin tocar copyleft fuerte** — la capa de SIS que el pase 70 midió
+estaba dominada por AGPL-3.0 y GPL-3.0 (ClassroomIO, Gibbon), y la de ERP del pase 71 tenía
+permisividad y especificidad educativa **anti**-correlacionadas.
+
+### ⚠️ Lo que este pase NO midió de este archivo, declarado como tal
+
+- 🔴 **`[Code from External]`: el entorno NEGÓ correr `sweep_payload.sh`** (código del repositorio
+  **con red**), como en los pases 52, 58 y 67. **No se reimplementó a mano ni se troceó el comando.**
+  Las licencias de este pase se leyeron artefacto por artefacto desde `raw.githubusercontent.com`.
+  🟢 **Y la frontera se midió, en vez de generalizarla: los instrumentos OFFLINE de este árbol SÍ
+  corrieron** — `extract_figures.py --check` y `--crossref` dieron **0 cifras vencidas** y las locales
+  reprodujeron 33 / 46 / 37 / 19 / 23 / 27. ⚠️ **Coincide con los pases 52 y 66 y NO con el 58 y el
+  67, así que no se publica ninguna conclusión general: la frontera es del ENTORNO y varía entre
+  pases.** 🔵 **La negativa de hoy es angosta y es una: código clonado que SALE A LA RED.**
+- 🔴 **La columna de licencia de las ~200 filas de este archivo NO se re-midió** en este pase; la
+  medición vigente es la del pase 64 (160 licenciado / 22 ausencias reales tras **P172** / 6
+  inalcanzable).
+- ⚠️ **Schoology queda abierto con UNA pieza y sin capa fundacional:** `coimf/schoology-mcp` **no
+  tiene cesión** en ninguna capa y `jibberswrld/fcps-school-mcp` es de **un distrito** (FCPS), no
+  genérico. **Schoology es top-3 de K-12 y esta base sigue sin una fundación para él** — queda como
+  acción 3 del pase 75.
+
 ## 🇮🇩 La «tercera vía permisiva» de la plataforma de sistema educativo nacional deja de ser una hipótesis y tiene repositorio: MIT, con la integración al reporte ministerial ya construida (pase 73 del 2026-10-03)
 
 La tendencia **24** de esta base (pase 10) sostuvo que *hay una tercera vía para la plataforma de

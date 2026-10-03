@@ -109,6 +109,283 @@ updated: 2026-10-03
 > **Pase 11:** +2 patrones — **P25** (riesgo de abandono conforme al Anexo III, la capa con presupuesto ya asignado y sin oferta open source) y **P26** (agente docente sobre la ontología curricular nacional ya publicada).
 > **Pase 27:** **+4 patrones y una corrección.** 🔴 **P51 queda con premisa falsa** —el conector MCP de Moodle **sí existe y es MIT**— y lo reemplazan **P54** (corrección y devolución sobre Moodle con **compuerta humana**, el último tramo del gap 6, con piezas que ya escriben), **P55** (el conector de **Open edX**, que es el único que de verdad no existe), **P56** (**SCORM** como formato de salida de la capa generativa: cero integración, offline) y **P57** (evidencia por MCP cotizada sobre lo que CaSS **realmente** expone — 6 de 61 operaciones, con insignias y autoría de marcos **fuera**).
 
+## 🔐 P220 — `GATE-IN-SCOPE`: la compuerta que se hace cumplir FUERA del proceso, en los *scopes* del token (pase 74 del 2026-10-03)
+
+**Las seis clases de compuerta de los pases 70–73** (`GATE-IN-SURFACE`, `GATE-IN-SIGNATURE`,
+`GATE-IN-HANDLER`, `GATE-IN-BODY`, `GATE-IN-ENV`, `GATE-IN-DOC`) comparten una propiedad que ningún
+pase había nombrado: **todas se hacen cumplir dentro del mismo proceso que podría estar
+comprometido.** Son promesas del proyecto medido.
+
+🆕 **`GATE-IN-SCOPE` no lo es.** Medido de primera mano en
+[`DaviPac/Classroom-mcp`](https://github.com/DaviPac/Classroom-mcp) (**MIT**):
+
+```sh
+node auth.js                        # acuña un refresh token de SOLO LECTURA
+ENABLE_TURN_IN=true node auth.js    # «os escopos pedidos mudam» -> acuña uno CON escritura
+```
+
+🟢 **La bandera no gobierna una rama del código: gobierna los *scopes* de OAuth que se piden al
+acuñar el refresh token.** El token que queda en producción, acuñado sin la bandera, **no tiene el
+permiso de escritura en el proveedor**.
+
+### 🔴 Cómo se mide, y en qué orden
+
+1. 🔴 **Leer el script de autenticación, no el servidor.** La clase vive en el acuñado, y el
+   `README` del servidor puede no mencionarla. Acá está en `auth.js` y en la línea del `README` que
+   dice *«Se quiser as tools de entrega, rode `ENABLE_TURN_IN=true node auth.js` — os escopos pedidos
+   mudam»*.
+2. 🔴 **Confirmar que la bandera cambia la LISTA DE SCOPES, no sólo la superficie de tools.** Si sólo
+   oculta tools, es `GATE-IN-SURFACE` (**P215b**) y es **más débil**: el token sigue pudiendo
+   escribir.
+3. 🟢 **Verificar el piso declarado:** *«sem elas os escopos são 100% de leitura e nada no seu
+   Classroom pode ser alterado»*.
+
+### 🟢 Por qué es el peldaño más alto, y es un argumento de arquitectura y no de grado
+
+| | Las seis clases anteriores | **`GATE-IN-SCOPE`** |
+|---|---|---|
+| ¿quién hace cumplir? | el **código medido** | 🟢 **el proveedor de identidad (Google)** |
+| ¿sobrevive a una inyección de prompt? | ⚠️ depende de la corrección del código | 🟢 **sí** |
+| ¿sobrevive a control del entorno? | 🔴 no (`GATE-IN-ENV` cae con una variable) | 🟢 **sí** |
+| ¿sobrevive a control total del proceso? | 🔴 no | 🟢 **sí — falta el permiso en el token** |
+| ¿qué hace falta para romperla? | editar código o entorno | 🔴 **el navegador del usuario y un consentimiento OAuth nuevo** |
+
+### 🔴 La cota, publicada con el hallazgo y no después
+
+**La bandera gobierna el ACUÑADO, no el uso.** Un token ya acuñado **con** escritura **no se
+degrada** poniendo `ENABLE_TURN_IN=false`: hay que **volver a acuñar**. 🔵 **En una entrega eso es un
+PROCEDIMIENTO con un artefacto verificable (qué *scopes* tiene el token que está en producción), no
+una casilla de configuración** — y así hay que cotizarlo y auditarlo.
+
+---
+
+## 📝 P221 — `GATE-IN-EFFECT`: la escritura ocurre y no se ve, que para educación es la forma correcta (pase 74 del 2026-10-03)
+
+Medido en [`pengusto/google-classroom-mcp`](https://github.com/pengusto/google-classroom-mcp)
+(**MIT**), **en el código y no en el README**:
+
+```ts
+// src/index.ts:575 (tarea), :670 (material), :718 (aviso) — los TRES handlers de creación
+state: args.scheduledTime ? 'DRAFT' : (args.state ?? 'DRAFT'),
+
+// src/index.ts:66 — invariante cableado
+if (args.scheduledTime && args.state === 'PUBLISHED') return fail('Scheduled posts must be DRAFT.');
+```
+
+🟢 **La escritura sí ocurre; lo escrito nace `DRAFT` y ningún alumno lo ve hasta que un humano
+publica.** El esquema de las tools además declara `default: 'DRAFT'`, así que la omisión está en las
+dos capas (superficie y handler).
+
+### 🟢 El reencuadre, que es el aporte conceptual
+
+Toda la discusión de permisos de agentes pregunta **si la operación debe ocurrir**. En educación la
+pregunta útil es otra: **si el alumno debe VERLA.** El daño no está en que un agente redacte una
+tarea equivocada —eso se corrige— sino en que **300 alumnos la reciban**.
+
+🔵 **Por eso `GATE-IN-EFFECT` habilita un caso de uso que ninguna otra clase habilita: escritura
+MASIVA sin exposición.** El agente redacta las 30 tareas del trimestre, las 30 quedan en borrador, y
+el docente publica las que apruebe. **Es la única pieza del inventario que permite eso.**
+
+### 🔴 La cota: es un *default*, no un candado
+
+`state: 'PUBLISHED'` explícito publica, y **el cliente MCP decide** — sólo el caso `scheduledTime`
+está cerrado con `fail()`. 🔵 **Más débil que `GATE-IN-SCOPE`** (que no se puede pedir desde el
+cliente) **y más usable que las seis anteriores**, y esa combinación exacta es lo que hay que
+explicar en una propuesta en vez de decir «tiene gobernanza».
+
+---
+
+## ⏳ P222 — `LICENSE-REVOCABLE`: el riesgo de licencia que SOBREVIVE a la entrega (pase 74 del 2026-10-03)
+
+Medido en `AStheTECH/mewcp-google-classroom` — la pieza **más capaz** de la capa de Google Classroom
+(~40 tools, CRUD completo, `delete_student`) y **la única que no es open source**. La *AStheTECH
+Community License* (**6.489 B**, en `LICENSE.md` **y** en un `LICIENCE.md` mal escrito **byte a byte
+idéntico**) dice, leída de primera mano:
+
+> *«a limited, non-exclusive, non-transferable, non-sublicensable, and **revocable** license to use,
+> reproduce, and modify the software solely for personal, educational, or internal business
+> purposes»* — y prohíbe *«offer, provide, or make available the software as part of any hosted
+> service, SaaS platform, API service, or similar commercial offering»*.
+
+🔵 **Se verificó que la clase era nueva ANTES de numerarla** (regla de P126, aplicada al vocabulario):
+`revocable` aparecía **0 veces** en `agents/top.md`, `repos/foundations.md`, `verticals/solutions.md`
+y `compose/patterns.md` en 73 pases; `NONCOMMERCIAL`, **28**. **La base tenía la familia
+no-comercial; no tenía la revocable.**
+
+### 🔴 La distinción que decide, y no es de severidad sino de MOMENTO
+
+| Clase | Cuándo golpea | Costo para una consultora |
+|---|---|---|
+| no-comercial (**P178**, ShareAlike; **P187**, IMS) | 🟢 **en la propuesta** | se descarta gratis, antes de firmar |
+| 🆕 **revocable** | 🔴 **después de la entrega** | el sistema ya está en producción en el cliente |
+
+🔴 **Al revocarse, la ACL obliga a *«promptly destroy or permanently delete all copies … including
+any modified versions»*.** Eso alcanza al código derivado de Globant y al despliegue del cliente.
+🟢 **Regla operativa: una licencia revocable no se cotiza — ni como dependencia principal, ni como
+opcional, ni como “lo evaluamos y lo reemplazamos en la fase 2”.** El permiso puede desaparecer en el
+medio de la fase 2.
+
+---
+
+## 🧾 P223 — Texto e identificador que se contradicen EN EL MISMO ÁRBOL: no gana ninguno (pase 74 del 2026-10-03)
+
+**P179** separó el **identificador** (`"license": "MIT"` de manifiesto: cero bytes de otorgamiento,
+sin titular ni año) de la **cesión** (el texto). Este pase encuentra la configuración que esa
+distinción no cubría: **los dos artefactos en el mismo árbol, diciendo cosas distintas.**
+
+`sevenc-nanashi/google-classroom-mcp-server`, leído de primera mano:
+
+| Artefacto | Dice | La señal que lo delata |
+|---|---|---|
+| `LICENSE` (1.063 B) | **MIT** | 🔴 `Copyright (c) 2025 **Faizan**` — titular **ajeno** al dueño (`HOLDER-UNRELATED`) |
+| `package.json` | **ISC** | 🔴 `"name": "class"`, `"author": ""` — **andamio de `npm init` sin editar**; `ISC` es su valor por omisión |
+
+🔵 **El pase 68 ya usaba el `ISC` por omisión para concluir que un PAQUETE npm no es el proyecto. Acá
+no hay dos canales que distinguir** — hay un árbol con una contradicción interna. 🟢 **Y las tres
+señales se explican con una sola hipótesis: un `LICENSE` de un tercero copiado dentro de un andamio
+que nadie editó.**
+
+### 🔴 El procedimiento, que es lo reutilizable
+
+1. Leer **las dos** capas siempre, incluso cuando la primera ya dice algo permisivo.
+2. Si **concuerdan** → la cesión es la del texto, y el identificador la corrobora (el caso bueno:
+   `pengusto`, `LICENSE` MIT **+** `package.json` MIT).
+3. Si **se contradicen** → 🔴 **no elegir la más favorable.** Tratar la contradicción como señal de
+   **PROCEDENCIA** y buscar la tercera señal: **el titular**. Si el titular tampoco corresponde, la
+   pieza **no se recomienda aunque una capa lea `MIT`**.
+4. 🔵 **Un identificador que coincide con el *default* de la herramienta de andamiaje (`ISC` en
+   `npm init`) no es evidencia de una DECISIÓN de licenciamiento.** Es evidencia de que nadie decidió.
+
+---
+
+## 🎯 P224 — La COBERTURA se mide contra la BASE INSTALADA, no contra la historia propia (pase 74 del 2026-10-03)
+
+🔴 **El defecto que esta base se encontró a sí misma, con el instrumento al lado (P107):**
+`agents/top.md` menciona **Canvas en 111 líneas / 241 ocurrencias** y **Google Classroom en 0**; en
+los cuatro archivos de contenido, **229 líneas / 389 ocurrencias contra 0**
+(`grep -ic`, `grep -oi | wc -l`, `HEAD` del pase 73), siendo Classroom el **líder global de LMS (~39 %)** y
+Canvas el segundo (**~19 %**). **La atención resultó inversamente proporcional a la base instalada.**
+
+### 🔴 Por qué ningún instrumento podía verlo
+
+**Todos los instrumentos de cobertura de esta base miden contra su propio inventario:**
+
+| Instrumento | Qué pregunta | Por qué es ciego a esto |
+|---|---|---|
+| `p114`, `p170`, `p172` | *¿la licencia de las filas que tengo?* | el denominador **son las filas que ya existen** |
+| dedupe de cada pase | *¿esto ya está?* | sólo compara contra lo propio |
+| **P217** (pase 73) | *¿hay otro repo con este nombre?* | 🟢 encuentra duplicados, no **plataformas ausentes** |
+
+🔵 **Un barrido contra el propio inventario no puede, por construcción, encontrar una ausencia
+sistemática: sólo encuentra huecos dentro de lo que ya mira.** Y la causa del sesgo es nombrable:
+esta base eligió plataformas por **presencia en el ecosistema open source** (¿tiene repo?), que es un
+proxy de *¿importa?* **que falla exactamente donde el líder es propietario.**
+
+### 🟢 El procedimiento, para que no haga falta un pase 74 en otra KB
+
+1. 🔴 **Listar las plataformas del dominio por BASE INSTALADA**, de una fuente externa, **antes** de
+   mirar el inventario propio.
+2. 🔴 **Contar menciones propias por plataforma** y ordenar por cuota. **Cualquier inversión del
+   orden es el hueco.**
+3. 🟢 **Para cada plataforma sin cobertura, barrer por NOMBRE DE PLATAFORMA** (no por el nombre del
+   dominio, no por el del proyecto) — la generalización de **P217** un nivel más arriba.
+4. ⚠️ **Declarar la cota del dato de cuota.** Acá las **5** fuentes dieron `EGRESS_BLOCKED`, así que
+   se publicó el **orden** (consistente en las cinco) y **no** se afirmaron los porcentajes como
+   verificados en fuente.
+5. 🔵 **Una plataforma propietaria NO se descarta por no tener repo**: se cubre por su **capa de
+   integración** (ver **P225**).
+
+---
+
+## 🏫 P225 — RECETA: agente docente sobre un LMS SaaS, con supervisión humana demostrable y sin expediente de alto riesgo (pase 74 del 2026-10-03)
+
+**Para quién:** distrito de K-12 o institución cuyo LMS es **Google Classroom** (~39 % del mercado) y
+que **no** puede autoalojar. **Por qué arranca acá:** es el caso que esta base no podía atender hasta
+este pase, y el que más instituciones tienen.
+
+### 🧱 Las piezas, todas con licencia verificada por payload en el pase 74
+
+| Capa | Pieza | Licencia | Por qué ésta |
+|---|---|---|---|
+| escritura del docente | [`pengusto/google-classroom-mcp`](https://github.com/pengusto/google-classroom-mcp) | **MIT** (`LICENSE` 1.145 B + manifiesto, **concuerdan**) | 🟢 **`GATE-IN-EFFECT`**: 21 tools, y lo escrito nace `DRAFT` en los 3 handlers |
+| lectura del alumno | [`DaviPac/Classroom-mcp`](https://github.com/DaviPac/Classroom-mcp) | **MIT** | 🟢 **`GATE-IN-SCOPE`**: el token del alumno **no tiene** scope de escritura |
+| roster y secciones | [`Ed-Fi-Exchange-OSS/Ed-Fi-Clever-Integration`](https://github.com/Ed-Fi-Exchange-OSS/Ed-Fi-Clever-Integration) + `Ed-Fi-Alliance-OSS/Ed-Fi-ODS` | **Apache-2.0** | OneRoster desde el ODS del distrito; **unidireccional**, no puede corromper el ODS |
+| orquestación | `langgraph` / `pydantic-ai` (ya en esta base) | MIT | nodos de política explícitos |
+| compuerta MCP | `compose/code/mcp-allowlist-gateway/` (**34** asertos, de esta KB) | — | lo no listado **no llega** al upstream |
+
+### 🔌 El cableado, y el orden importa
+
+1. 🔴 **Acuñar DOS tokens, no uno.** El del **alumno** sin `ENABLE_TURN_IN` (lectura por *scope*); el
+   del **docente** con escritura. 🟢 **Es `GATE-IN-SCOPE` haciendo el trabajo de separación de
+   privilegios que normalmente se delega a RBAC de aplicación.**
+2. Poner `mcp-allowlist-gateway` **delante de los dos** servidores MCP, con dos políticas distintas.
+   El del alumno **no lista** `entregar_tarefa`/`cancelar_entrega`.
+3. 🔴 **No pasar `state: 'PUBLISHED'` desde el orquestador.** La receta depende del `?? 'DRAFT'`: si
+   el orquestador lo fija explícitamente, **`GATE-IN-EFFECT` se pierde** y el patrón deja de cumplir
+   supervisión humana. **Prohibirlo en la *allowlist*, no en la documentación.**
+4. El roster sale de Ed-Fi → OneRoster, **no** de la API de Classroom: la fuente de verdad de la
+   matrícula es el SIS del distrito.
+5. La publicación la hace **una persona**, en la UI de Classroom, sobre los borradores.
+
+### 🟢 Por qué cumple sin expediente caro, y es el argumento comercial
+
+| Exigencia | Cómo la cumple esta receta | Evidencia auditable |
+|---|---|---|
+| **supervisión humana** (AI Act alto riesgo; Oklahoma/Maryland; Basic AI Act de Corea) | 🟢 ningún alumno ve nada hasta que un humano publica | `src/index.ts:575`, `:670`, `:718` + la *allowlist* |
+| **minimización de capacidad** | 🟢 el token del alumno **no puede** escribir | los *scopes* del token en producción |
+| **sin entrenamiento sobre dato de alumno** (AB 1159) | 🟢 ninguna pieza entrena; los 5 conectores son de lectura/escritura de API | — |
+
+🔵 **El patrón NO toca admisión, evaluación automática ni calificación**, que es lo que el AI Act
+clasifica como alto riesgo. **Redacta materiales y los deja en borrador.** Es la continuación directa
+de **P219** (el arranque sin expediente de privacidad) sobre la plataforma correcta.
+
+🔴 **Las tres cotas, antes de que alguien las cotice:** (1) `DRAFT` es *default*, no candado —de ahí
+el punto 3—; (2) un token ya acuñado con escritura no se degrada con la bandera, hay que **re-acuñar**;
+(3) **el borde lo mueve Google**: no hay fork posible de la API, y los 8 conectores dependen de
+`googleapis` y del consentimiento OAuth.
+
+---
+
+## 🎒 P226 — RECETA: el agente del ALUMNO para LATAM, que responde al 61 % de desconfianza con arquitectura (pase 74 del 2026-10-03)
+
+**Para quién:** institución de LATAM — la región donde el canal mide **92 %** de estudiantes usando
+AI, **79 %** de docentes, y 🔴 **61 % de estudiantes que temen el mal uso por parte de sus pares.**
+
+🔵 **La tesis de la receta: el 61 % no es un problema de comunicación, es un requisito de
+arquitectura.** Un agente de alumno que *pueda* entregar en su nombre es exactamente lo que ese 61 %
+teme. La respuesta no es una política de uso: es **un token sin permiso de escritura**.
+
+### 🧱 Las piezas
+
+| Capa | Pieza | Licencia | Aporte |
+|---|---|---|---|
+| núcleo | [`DaviPac/Classroom-mcp`](https://github.com/DaviPac/Classroom-mcp) | **MIT** | 11 tools de lectura; `buscar` cruza tareas, avisos y materiales de **todas** las turmas; `proximas_entregas` ordena por plazo y **marca las atrasadas** |
+| compuerta | el propio `ENABLE_TURN_IN` (**`GATE-IN-SCOPE`**) | — | 🟢 apagado por omisión **y sin scope de escritura en el token** |
+| tutoría | `HKUDS/DeepTutor` (Apache-2.0, ya en esta base) | Apache-2.0 | memoria y tutoría sobre el material que el conector lee |
+| compuerta MCP | `compose/code/mcp-allowlist-gateway/` | — | la *allowlist* **no lista** las dos tools de entrega |
+
+### 🔌 El cableado
+
+1. 🟢 **Acuñar el token con `node auth.js` SIN la bandera.** Ése es el entregable de seguridad de la
+   receta, y es verificable: **el token no tiene `.courses.me` de escritura.**
+2. `proximas_entregas` y `buscar` alimentan el contexto de `DeepTutor`: el tutor sabe **qué** debe el
+   alumno y **para cuándo**, sin poder tocarlo.
+3. 🔴 **Si el cliente pide la entrega asistida, se re-acuña con la bandera y se declara el cambio de
+   riesgo por escrito.** No se activa en caliente: `ENABLE_TURN_IN=true` **sin re-acuñar no habilita
+   nada**, y eso es una propiedad, no un bug.
+
+### 🟢 Por qué es la receta correcta para la región, y no una traducción de la de NA
+
+- 🔵 **El producto que LATAM necesita es el del alumno** (92 % de uso estudiantil), no el del docente
+  — y es el inverso de lo que el patrón de NA de **P225** prioriza.
+- 🟢 **La pieza es de la región** (indicio de configuración: `TIMEZONE=America/Recife`, tools y
+  manifiesto en portugués) y 🔵 **es el SEGUNDO pase consecutivo en que el mejor instrumento de
+  gobernanza de la capa sale de LATAM** (pase 72: `iDavi/usp-mcp`, sellado). **Dos pases no son una
+  tendencia y se dice así, pero el eje es consistente: la credencial.**
+- 🔴 **La cota de alcance:** es un servidor remoto HTTP con un secreto en la URL y **0 ★**. Para
+  producción institucional hay que poner autenticación propia delante — **la pieza aporta el patrón
+  de *scope*, no la operación.**
+
 ## 🔭 P215 — La DIVULGACIÓN es el tercer eje de un conector, con cuatro clases, y no se deduce de la licencia ni de la compuerta (pase 73 del 2026-10-03)
 
 **P204** (pase 70) dijo que un conector se evalúa en dos ejes y que la licencia sólo cubre uno.
