@@ -8,6 +8,7 @@ updated: 2026-10-03
 
 > Key players, market map y oportunidades por región.
 > Investigado 2026-09-30; el pase 11, el 2026-10-01. Las estimaciones de tamaño de mercado varían mucho entre firmas: se listan todas con su fuente en vez de elegir una.
+> **Pase 72 del 2026-10-03:** 🔴 **Las cuatro búsquedas regionales obligatorias se corrieron (año CALCULADO: 2026) y el resultado es el hallazgo del barrido: las CUATRO devolvieron el inventario propio de esta base.** North America repitió los $951 M → $2.303,2 M del pase 44, la terna irreconciliable de $3,37 B del 52 y el *«no hay equivalente a la FDA»* del 34; EMEA repitió el *AI Adoption Summit* británico de £200 M y la conferencia del Consejo de Europa del 34; APAC repitió el 48 %/57 % de gobernanza *enterprise*; LATAM repitió UNESCO-IESALC entero —200 instituciones, 19 países, 73,5/57,0/34,1/20,0 % y 26,0/18,5/9,0/8,0 %—, que esta base tiene desde los pases 44, 52 y 68. 🔵 **Con cuatro de cuatro devolviendo lo propio, el barrido de MERCADO por región está saturado como canal de descubrimiento, igual que le pasó al de agentes en el pase 48** (tendencia **567**). 🟢 **Lo nuevo de este pase vino todo por el canal de FUNCIÓN y por PAÍS en el idioma del país: APAC rompe su hueco de CÓDIGO abierto desde el pase 69** (`codit04/TechMCP`, MIT, PSG College of Technology, India) **y LATAM vuelve a la capa de código tras tres pases** (`iDavi/usp-mcp` + `heidy_backend`, GPL-3.0, USP). 🟢 **Y NA aporta un ARTEFACTO que vale más que una cifra repetida:** `chrischall/infinitecampus-mcp` embarca FERPA, COPPA y la admisión de posible violación de ToU **dentro del repositorio** — el primer expediente de esta base que viaja como archivo de código. ⚠️ **Único aporte cualitativo del barrido: la divisoria PÚBLICA/PRIVADA de LATAM** — son dos ofertas distintas, no una con descuento.
 > **Pase 71 del 2026-10-03:** 🟢 **Las cuatro búsquedas regionales obligatorias se corrieron (año calculado: 2026) y las cuatro rindieron, pero el aporte del pase es de RECONCILIACIÓN y de INSTRUMENTO más que de cifra nueva.** 🟢 **North America entrega el dato que CIERRA POR COMPLEMENTO una serie propia: Gallup (marzo 2026) mide 18 % de docentes con política ESCRITA formal y 34 % sin NINGUNA guía — y 18 % con política / 82 % sin ella son la misma medición por sus dos lados, que es la primera vez que las dos puntas de la tendencia 8 concuerdan con instrumento nombrado.** ⚠️ **Su cifra de participación (38 % del mercado en 2025) NO se promedia con el 36 % que esta base ya tiene de otra fuente: se listan las dos** (**P107**). 🟢 **EMEA aporta un documento nuevo que cae justo sobre una capa que esta KB venía midiendo sola: el Código de Práctica sobre marcado y etiquetado de contenido generado por AI (junio de 2026), sobre el Artículo 50(2) para el que ya hay instrumento corriendo.** 🔴 **Y el canal volvió a servir *«entered into force on 31 July 2026»*, que el pase 59 ya refutó: en vigor 2024-08-01, Omnibus 2026-07-27, aplicación general 2026-08-02, Anexo III educativo 2027-12-02 — el error es PERSISTENTE y conviene llegar a la reunión con la norma** (tendencia 561). 🟢 **APAC entrega el hallazgo de posicionamiento del pase: el marco de la IMDA de Singapur (2026-01-22) es específico de AI AGÉNTICA, o sea que un regulador pide por escrito exactamente lo que los pases 70 y 71 midieron en el código —dónde vive la compuerta, quién autoriza una escritura y si queda traza—, lo que vuelve la escalera de **P207** un argumento presentable** ⚠️ **(es guía, no reglamento con sanción).** ⚠️ **Su cifra regional nueva (~USD 102.000 M a marzo de 2026) es de AI TOTAL y no entra en ninguna terna educativa.** 🟢 **LATAM gana el aparato del estudio que esta base venía citando por resultados —más de 30.000 respuestas, 29 instituciones, con el IFE del Tec de Monterrey, AIGEN y RIE360— y dos datos que NO son de adopción: 94 % del profesorado espera usar AI a futuro (intención, no uso) y 🔴 61 % de los estudiantes teme el mal uso por parte de sus PARES.** 🔵 **Ese 61 % es el primer dato de DEMANDA de integridad académica expresado por el usuario final, y cambia a quién se le vende el proyecto: al área académica, no a compliance.** 🔴 **Y la disciplina del pase 54 se sostiene: con 18 % en NA, la brecha de gobernanza es la MISMA en dos regiones y no un diferencial de LATAM.** ⚠️ **El hueco de CÓDIGO de APAC sigue ABIERTO por tercer pase: entró Uzbekistán y se clasificó EMEA en vez de taparlo.**
 > **Pase 68 del 2026-10-03:** 🔴 **El barrido regional de este pase rinde un eje nuevo y es una INVERSIÓN: la región de MAYOR adopción es la de MENOR gobernanza.** LATAM declara **92 % de estudiantes** usando AI y docentes de **61 % → 79 %** (+18 pp), y al mismo tiempo **26 % de instituciones con estrategia formal, 8 % con presupuesto propio y 9 % con mecanismo de evaluación**. 🔴 **North America tiene el 36 % de la adopción regional y **71 % de docentes sin formación en AI** con **sólo 10 % de instituciones con guía formal**, en un vacío regulatorio federal que los estados llenan a parches (Colorado, Texas).** 🔵 **EMEA es la inversa exacta: la regulación más dura —**EU AI Act en vigor plena en agosto de 2026, con la AI educativa clasificada ALTO RIESGO**— sobre la dispersión interna más ancha de todas (**5,21 % Rumania a 42,03 % Dinamarca**), y los frenos declarados son de capacidad y de miedo legal, no de presupuesto: **70,89 % falta de expertise, 52,52 % incertidumbre legal, 48,83 % protección de datos**.** 🟢 **APAC es el de mayor CAGR (20,9 %) y el único donde la gobernanza se declara prioridad por delante del crecimiento (48 % contra 45 %), sin marco común y con la ASEAN Guide en etapa temprana.** ⚠️ **Todas las cifras de esta tanda son de consultora o de encuesta sectorial, sin instrumento propio: se listan con su fuente y su fecha como manda **P107**, y no se promedian entre sí.**
 > **Pase 67 del 2026-10-03:** 🟢 **Las cuatro búsquedas regionales obligatorias se corrieron (año calculado: 2026) y las cuatro rinden, con una pieza nueva en dos de ellas.** 🔴 **North America legisla EXACTAMENTE el control que la capa nueva de esta KB no trae en código: 134 proyectos en 31 estados, con **California AB 1159** prohibiendo usar datos de alumnos para ENTRENAR modelos y **Oklahoma y Maryland** exigiendo supervisión humana y prohibiendo que la AI decida de forma determinante — mientras la pieza de autograding que manda aprobación humana lo hace en su README y no en el código, así que el control es ENTREGABLE.** 🟢 **EMEA aporta SOFTWARE y no sólo reglamento: `INGInious` (UCLouvain, Bélgica) como *grader* externo de Moodle y edX vía LTI, y su AGPL-3.0 cambia de signo en compra pública europea igual que la EUPL-1.2 del pase 50.** 🟢 **APAC entrega el artefacto con la cesión MÁS LIMPIA de toda la KB —`crpf-mitadt/Indian-AI-for-Education`, **CC0 1.0**, dominio público— y conserva los tres relojes en vigor (Corea 2026-01-22, Vietnam 2026-03-01, **marco AGÉNTICO de la IMDA de Singapur 2026-01-22**), con 96 % de las organizaciones planeando invertir más y ROI declarado de 2,85 USD por dólar.** 🟢 **LATAM aporta el precedente institucional MULTI-PAÍS que esta base no tenía: **Labs UniversitarIA** (SEGIB — UBA, UFRJ, U. de Chile, UDC, UTEC) con dato en servidores de cada universidad y CC desde el día uno, más **TECgpt** abriéndose a cualquier institución de educación superior.** ⚠️ **Las dos se registran como INTEL y no como piezas: no se localizó repositorio, y una promesa de licencia no es una licencia medida.** 🔴 **Y la disciplina del pase 54 se respeta: la brecha de gobernanza NO es un diferencial de LATAM (78 % de empresas usando AI y 12 % gobernándola, contra 18 % de docentes de NA con guía escrita) — es una oferta global.**
@@ -1525,6 +1526,34 @@ Dónde se produce el software educativo abierto, que no es donde está la demand
 ## Opportunities by region
 
 ### North America
+
+#### 📍 Pase 72 del 2026-10-03 — el canal de NA devolvió el inventario propio, y lo único nuevo de la región es un ARTEFACTO de código, no una cifra
+
+🔴 **Dicho primero, porque es la disciplina de este archivo: el barrido de North America de este
+pase NO aportó una cifra nueva.** Devolvió, verificado contra lo ya publicado: los $951 M (2024) →
+$2.303,2 M (2029) a 15,9 % con 36 % de cuota (esta base los tiene desde el **pase 44**), la
+segunda terna irreconciliable de $3,37 B a 45 % CAGR (registrada como conflicto de canal en el
+**pase 52**, **P107**), el encuadre de *«no hay equivalente a la FDA en educación»* y la colcha de
+retazos estatal de Colorado y Texas (**pase 34**), y el 71 % de docentes sin formación con 10 % de
+instituciones con guías formales (ya en este archivo).
+
+🔵 **Con cuatro regiones devolviendo el propio inventario en el mismo pase, la conclusión ya no es
+sobre una región: el barrido de MERCADO por región está saturado como canal de descubrimiento.**
+⚠️ **Se sigue corriendo porque es obligatorio y porque un cambio de régimen hay que verlo, pero el
+rendimiento marginal medido es cero por segundo pase, y así se declara** (tendencia **567**).
+
+🟢 **Lo que SÍ es nuevo en NA es un artefacto, y vale más que una cifra repetida:**
+[`chrischall/infinitecampus-mcp`](https://github.com/chrischall/infinitecampus-mcp) (MIT, 320
+commits) embarca **dentro del repositorio** una sección *«Acknowledgement of Terms»* que cita
+textual el ToU de Infinite Campus, **admite que el proveedor puede tratar el canal usado como
+violación**, nombra **FERPA y COPPA**, y **fecha la lectura del término (2026-05-23)**.
+
+🔵 **Por qué eso es una oportunidad comercial concreta en esta región y no en EMEA:** en EMEA el
+expediente de conformidad lo exige la ley y el cliente lo presupuesta. 🔴 **En NA no lo exige
+nadie** —la decisión la toma cada distrito o universidad—, **así que el mismo expediente hay que
+venderlo como reducción de riesgo institucional (FERPA, COPPA, política del distrito), no como
+cumplimiento.** 🟢 **Y ahora hay un ejemplar para mostrar: el primer expediente de esta base que
+viaja como ARCHIVO DEL REPO y no como entregable aparte.**
 
 #### 📍 Pase 71 del 2026-10-03 — la región aporta la cifra que CIERRA por complemento el hueco de gobernanza que esta base venía midiendo, y una de participación que NO se promedia
 
@@ -3100,6 +3129,30 @@ Artículo 50(2) **no es exigible** en North America — pero es **el requisito m
 multi-región conviene cotizarlo contra el techo europeo y no contra el piso local (ver **P103** y **P105**).
 
 ### EMEA
+
+#### 📍 Pase 72 del 2026-10-03 — tampoco acá hubo cifra nueva; lo que cambió es que la pieza EMEA de código resultó el ejemplar MÁS FUERTE del eje de actor
+
+🔴 **El barrido de EMEA devolvió material que esta base ya tiene publicado:** el *AI Adoption
+Summit* del Reino Unido con £200 M+ (£100 M a Bridge AI, £53 M regional) y el modelo de entrega
+gobierno-*BigTech*-sindicatos-Skills England (**pase 34**), la segunda conferencia de trabajo del
+**Consejo de Europa** sobre dimensiones regulatorias de la AI en educación —**este mes**, con
+`coe.int` bloqueado otra vez (**pase 34**)—, y el 94 % de organizaciones dispuestas a invertir en
+formación en AI en 2026.
+
+🔴 **Y hay que decir lo que NO cambió, porque el canal tiende a sugerir lo contrario: ninguna
+fuente de este barrido aportó una fecha regulatoria nueva.** El régimen de Anexo III sobre
+educación sigue con el reloj medido en los pases 4, 11, 43 y 44 —aplicación general del AI Act
+desde el **2026-08-02**, obligaciones de Anexo III el **2027-12-02**— y **el Artículo 50(2) sigue
+siendo el vencimiento cercano**. 🔵 **No se inventa una fecha porque un titular diga «agosto de
+2026 entra en vigor»: eso ya pasó, hace dos meses.**
+
+🟢 **Lo nuevo de EMEA es de código y reencuadra una pieza propia:**
+[`felipedias-ie/blackboard-mcp`](https://github.com/felipedias-ie/blackboard-mcp) —que el pase 71
+clasificó en el peldaño **3** de compuerta, el más débil que igual es código— resulta el ejemplar
+**más fuerte del eje de ACTOR** (`A1`: la sesión se abre fuera de banda y el llamador **no puede
+nombrar otro actor**). 🔵 **Para un expediente de Anexo III eso es exactamente el cruce que hay que
+resolver, y la medición de este pase muestra que ninguna pieza sola lo resuelve: la que tiene la
+política más rica (`bb-mcp`) acepta la identidad como argumento** (**P212**, receta en **P214**).
 
 #### 📍 Pase 71 del 2026-10-03 — la región aporta un instrumento nuevo que cae justo sobre el Artículo 50(2), y el canal volvió a servir una fecha que esta base ya había refutado
 
@@ -4810,6 +4863,35 @@ este pase dejó cubierto con código.
 
 ### APAC
 
+#### 📍 Pase 72 del 2026-10-03 — APAC rompe su hueco de CÓDIGO después de tres pases, y es la única región con hallazgo propio en este barrido
+
+🟢 **El hueco de CÓDIGO de APAC —abierto y declarado desde el pase 69— se CIERRA**, y no se cerró
+cambiando la consulta de mercado: se cerró buscando **por función y por institución**.
+[`codit04/TechMCP`](https://github.com/codit04/TechMCP) (**MIT**, 4 ★, 26 commits) expone el portal
+e-campus del **PSG College of Technology** de Coimbatore, **India**: marcas CA1/CA2, asignaciones,
+tutoriales, asistencia con *bunk calculator* y horario. 🔴 **Es educación-nativa, que es
+exactamente lo que faltaba** — el pase 49 había encontrado capacidad agéntica APAC (HKUDS) **sin
+contenido educativo**, y esta vez el contenido educativo es el repo entero.
+
+⚠️ **Y una segunda pieza india quedó AFUERA por licencia:** `poorvika12-hub/student_mcp` (GPA,
+detección de falta de asistencia, consulta de reglamento) **no tiene cesión en 28 nombres y 3
+cajas**. 🔵 **Dicho de otro modo: APAC produjo DOS piezas educativas este pase y la mitad no se
+puede entregar.**
+
+🔴 **El canal de MERCADO de APAC, en cambio, volvió a devolver *enterprise* y material ya
+publicado**, por cuarto pase: 48 % de líderes de gobernanza con la adopción de AI como prioridad
+2026 y 57 % de organizaciones asiáticas con AI en algún área (ambos ya en este archivo); y en lo
+educativo, **proveedores y no sistema educativo** — LearnUpon con sede nueva en Sídney, NIIT MTS en
+el *Top 20* de contenido a medida, la alianza **TCS + Pearson**. ⚠️ **Los tres son mercado
+CORPORATIVO de aprendizaje y esta base ya los tenía registrados como tales.**
+
+⚠️ **Regulación APAC: dirección, no norma** — consultas de Singapur sobre uso de AI en
+instituciones financieras y una expectativa declarada de armonización por **principios** con
+ejecución distinta por mercado. 🔴 **Nada específico de educación en este barrido**; los dos
+instrumentos educativos reales de la región siguen siendo los que esta base ya midió: el **AI Basic
+Act** coreano (vigente 2026-01-22) y la **Decisión 33/2026/QD-TTg** de Vietnam, que nombra la
+evaluación automatizada y el monitoreo conductual.
+
 #### 📍 Pase 71 del 2026-10-03 — el regulador de la región ya pide por escrito el instrumento que esta base acaba de tipificar, y el hueco de CÓDIGO sigue abierto por TERCER pase
 
 🟢 **El hallazgo de posicionamiento del pase, y es el que cierra el circuito entre el código y la
@@ -6164,6 +6246,54 @@ desplegado + puerta MCP permisiva (`jbnu-lms-mcp`, `canvas-lms-mcp`, las cuatro 
 depende de un tercero» son el mismo argumento.**
 
 ### LATAM
+
+#### 📍 Pase 72 del 2026-10-03 — el canal regional devolvió el PROPIO INVENTARIO de esta base, y lo nuevo de LATAM no es una cifra: es CÓDIGO
+
+🔴 **Primero lo que NO es hallazgo, porque callarlo sería presentar lo viejo como nuevo.** El
+barrido regional de LATAM devolvió el estudio de **UNESCO-IESALC** —200 instituciones, 19 países,
+relevamiento agosto-octubre de 2025— con el reparto por dimensión (**enseñanza 73,5 % · investigación
+57,0 % · administración 34,1 % · vinculación 20,0 %**) y la brecha de gobernanza (**estrategia formal
+26,0 % · política institucional 18,5 % · evaluación 9,0 % · presupuesto 8,0 %**), más el 87 % de uso
+y el contraste con el 92 % de estudiantes.
+
+🔵 **Esta base ya tiene las cuatro cifras de gobernanza desde el pase 44, el instrumento declarado
+desde el 52, el 87 % desde el 68 y la advertencia de que la brecha NO es un diferencial
+latinoamericano desde el 54.** ⚠️ **El canal regional de LATAM entró en la fase que el pase 48
+diagnosticó en el canal de agentes: devuelve el inventario propio presentado como novedad.** 🔵 **Se
+registra como propiedad del canal, no como dato — y la consecuencia operativa es que el barrido de
+mercado LATAM rinde menos que una consulta por FUNCIÓN, que es de donde salió todo lo de hoy.**
+
+⚠️ **Lo único que el barrido agregó al aparato ya publicado es cualitativo: la divisoria PÚBLICA /
+PRIVADA** — las privadas con más capacidad de planificación estratégica, formación y gobernanza; las
+públicas con restricción de recursos. 🔵 **Importa comercialmente porque son dos ofertas distintas,
+no una con descuento**, y esta base no lo tenía escrito así.
+
+🟢 **Lo nuevo de LATAM en este pase es CÓDIGO, y es la primera pieza de la región desde el pase 68:**
+[`iDavi/usp-mcp`](https://github.com/iDavi/usp-mcp) + [`iDavi/heidy_backend`](https://github.com/iDavi/heidy_backend)
+(**GPL-3.0**, Universidade de São Paulo). 🟢 **Y aportan justo lo que las cuatro regiones
+necesitaban: el único patrón de credencial del inventario que NO manda la contraseña institucional
+en claro** — la Senha Única se sella contra la clave pública del backend antes del login (ver
+`repos/foundations.md` y **P213**). 🔴 **Con dos cotas medidas con test ejecutable** (los metadatos
+del sobre no están autenticados; el *key schedule* no es RFC 9180) ⚠️ **y una de LGPD: el backend
+por omisión es un tercero sobre fly.io, y las variables `HEIDY_USERNAME`/`HEIDY_PASSWORD` permiten
+dejar la contraseña en claro en el entorno del operador.**
+
+🔵 **Para una propuesta regional eso cambia el orden de la conversación: LATAM deja de ser la región
+que esta base describe sólo con estadística de demanda y pasa a tener un activo técnico propio que
+las otras tres no tienen.**
+
+⚠️ **Contexto de oferta del mismo barrido, registrado sin promediar con lo institucional:** 99 % de
+las *startups* LATAM usan alguna solución de AI en operaciones internas y 85 % la integran de forma
+nativa en su producto; edtech aparece entre los sectores más disruptivos junto a fintech y
+healthtech, con **Ednova (Chile)** citada como ejemplo — ⚠️ **cifra y ejemplo que esta base ya tenía
+del pase 34.** 🔵 **Es el lado de la OFERTA; IESALC es el de la DEMANDA institucional. No se
+promedian.**
+
+⚠️ **Declarado para el próximo pase: `unu.edu`, `ess.iesalc.unesco.org`,
+`timeshighereducation.com` y `completeaitraining.com` dieron `EGRESS_BLOCKED` / `000` otra vez** —
+es la undécima confirmación del límite de clase del pase 34 (0 de 11 dominios multilaterales
+alcanzables). **URLs anotadas:** `https://unu.edu/publication/ai-implementation-higher-education-latin-america-and-caribbean`
+y `https://ess.iesalc.unesco.org/index.php/ess3/article/view/v37i2-dt-14/868`.
 
 #### 📍 Pase 71 del 2026-10-03 — la región gana el instrumento más grande que esta base le haya podido citar, y un dato de DEMANDA que no es de adopción
 

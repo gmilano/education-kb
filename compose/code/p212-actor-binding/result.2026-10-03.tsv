@@ -1,0 +1,7 @@
+felipedias-ie/blackboard-mcp	A1-ACTOR-FROM-UPSTREAM-SESSION	src/server.ts	39:        'Blackboard Learn access for the signed-in student or instructor.',
+chrischall/infinitecampus-mcp	A1-ACTOR-FROM-UPSTREAM-SESSION	README.md	61:**1. This server accesses your own Campus Parent account.** Auth happens via your own credentials, scoped to the student records your school district has authorized you to view. It does not — and cannot — access anyone else's student
+codit04/techmcp	A1-ACTOR-FROM-UPSTREAM-SESSION	README.md	73:        "roll_number": "YOUR_ACTUAL_ROLL_NUMBER",
+SwarupRock/attendai	A2-ACTOR-FROM-LOCAL-CONFIG	README.md	275:3. Client-supplied `teacher_id` that disagrees with the session is rejected.
+nitsuah/bb-mcp	A3-ACTOR-FROM-CALL-ARGUMENT	src/auth.ts	7: *   1. A required `caller_identity` parameter on every tool call — the client
+peancor/moodle-mcp-server	A4-NO-ACTOR-MODELLED	src/index.ts	14:const MOODLE_API_TOKEN = process.env.MOODLE_API_TOKEN;
+oliverhruby/edupage-mcp	A1*-UPSTREAM-SESSION-CALLER-SUPPLIED-AND-SWITCHABLE	README.md	121:  school-wide for parents), `switch_to_student` (by id **or** name, parent only),

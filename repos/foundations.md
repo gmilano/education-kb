@@ -8,6 +8,7 @@ updated: 2026-10-03
 
 > Bases sobre las cuales construir. Verificado repo por repo vía WebFetch el 2026-09-30 (capas del pase 10, el 2026-10-01).
 > Leer la columna **Licencia** antes de proponer: media KB de educación es GPL/AGPL, no permisiva.
+> **Pase 72 del 2026-10-03:** 🟢 **La capa de SIS gana su primera pieza LATAM y trae el único patrón de CREDENCIAL del inventario:** [`iDavi/usp-mcp`](https://github.com/iDavi/usp-mcp) + [`iDavi/heidy_backend`](https://github.com/iDavi/heidy_backend) (**GPL-3.0**, 35.148 B cada uno, Brasil) **sellan la Senha Única de la USP contra la clave pública del backend antes del login — ninguna otra pieza de esta base evita la contraseña en claro.** 🔴 **Y las dos cotas están medidas con test ejecutable y control negativo** (**P213**, 13 checks): los metadatos del sobre **no** están autenticados (el AAD es una constante) y el *key schedule* **no** es RFC 9180, así que el sobre interopera con UN backend. ⚠️ **Tercer corte institucional consecutivo ganado por copyleft** — para esta vertical, «permisivo» ya es la excepción, no el caso base.
 > **Pase 68 del 2026-10-03:** 🟢 **Entran los DOS documentos de estándar que ceden de verdad, y son la corrección más útil que este archivo recibió sobre la capa: [`adlnet/xAPI-Spec`](https://github.com/adlnet/xAPI-Spec) (**Apache-2.0**, 11.525 B, 952 ★, 403 forks) y [`Ed-Fi-Alliance-OSS/Ed-Fi-Standard`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-Standard) (**Apache-2.0**, 10.173 B, 46 ★, v6.2.0) publican el DOCUMENTO normativo bajo licencia permisiva, así que un perfil derivado se puede entregar con atribución y sin trámite.** 🔴 **Eso REFUTA lo que este archivo publicó en el pase 67 —*«la capa de estándares es la PEOR cedida de todas»*—: el régimen no se parte por «ser un estándar», se parte por **PUBLICADOR × TIPO DE ARTEFACTO**, sin una sola excepción en 8 archivos leídos** (**P191**). 🔴 **1EdTech cede su SOFTWARE bajo Apache-2.0 (4 de 4: OpenCASE, los dos validadores, la librería LTI 1.3) y sus DOCUMENTOS bajo la licencia que NIEGA derivados (2 de 2).** ⚠️ **Hueco nuevo y de los que importan: la versión VIGENTE de xAPI (IEEE 9274.1.1-2023) ya no está en GitHub —vive en `opensource.ieee.org`, que este entorno tiene EGRESS-BLOQUEADO—, así que los cuatro instrumentos de licencia de esta KB, todos apuntados a `raw.githubusercontent.com`, son ciegos a un estándar que migra** (**P195**). 🟢 **Y una pieza de agente: [`aemonge/opencode-sit`](https://github.com/aemonge/opencode-sit) (MIT, tutor socrático como plugin de OpenCode), con la identidad probada por `sha256` porque el paquete no declara repositorio** (**P193**). Ver `compose/code/p191-spec-license-sweep/`.
 > **Pase 67 del 2026-10-03:** 🟢 **Entra la capa de CORRECCIÓN automática, que esta base tenía representada por UNA pieza: `INGInious` (AGPL-3.0, 243 ★, 150 forks, **UCLouvain** → EMEA) como *grader* externo de Moodle y edX vía LTI, más `webtech-network/autograder` (Apache-2.0), `johnswyou/autograder` (MIT, corrige MANUSCRITO con rúbrica y cola de revisión humana) y `zmievsa/autograder` (GPL-3.0) — las cuatro con el archivo de licencia LEÍDO.** 🟢 **Y APAC gana un índice regional con la cesión más limpia de toda la capa de dato de esta KB: `crpf-mitadt/Indian-AI-for-Education`, **CC0 1.0** (dominio público: ni atribución ni ShareAlike).** 🔴 **La corrección que este archivo tiene que hacerse: `IMSGlobal/openbadges-specification` figuraba como *«ninguna (ausencia MEDIDA) … alcanzable y sin cesión»* y es una ausencia FALSA — `ob_v3p0/license.md` trae 12.324 B de la *Specification Document License* de IMS Global, que ⚠️ **NIEGA los derivados**, o sea una cesión PEOR que el silencio para un entregable** (**P187**). 🔵 **El detalle de la fila vieja era correcto —los 14 nombres dan 404 en la RAÍZ— y el error fue leer «no hay licencia en la raíz» como «no hay cesión».** ⚠️ **Nuevo patrón de alcance: el `LICENSE` de `INGInious` declara cubrir *«la mayoría de los archivos»* y delega las excepciones a los encabezados por archivo, y esta base no tiene instrumento para un barrido POR ARCHIVO** (**P186**, gap declarado).
 > **Pase 65 del 2026-10-03:** 🟢 **JAPÓN entra a la capa de currículo, y entra como la MEJOR pieza que tiene la KB: `jp-cos/jp-cos.github.io` —学習指導要領LOD— publica el currículo nacional japonés completo en RDF/Turtle bajo **CC BY 4.0**, con 22 volcados versionados, vocabulario, SHACL y endpoint SPARQL declarado.** 🔵 **CC BY 4.0 es MÁS permisiva que la alemana CC BY-SA 4.0: sin ShareAlike, no activa la compuerta de **P178**, así que el currículo derivado puede entregarse con licencia propia.** 🔴 **Y la acción 3 queda REFUTADA en su hipótesis: decía «si está publicado por MEXT sin licencia explícita, APAC replica el patrón alemán y **P174** gana una tercera región» — hay licencia explícita, así que P174 NO gana región por este caso.** 🟢 **La reserva de la tendencia 457 también cae: `dini-ag-kim/school-curriculum-pg` —la cobertura por LAND, que el pase 63 escribió como «la capa que agrega el valor específico y sigue sin licencia»— declara **CC BY-SA 4.0** en las 25 serializaciones, los 16 `lp-land-XX-full.owl` incluidos, con titulares por ORCID.** 🔴 **Las dos cesiones eran invisibles a los instrumentos de esta KB: ninguna está en un archivo `LICENSE` y las dos aparecieron sólo al abrir el dato** (**P172**, **P179**). Ver `compose/code/jp-cos-curriculum-gate/`.
@@ -80,6 +81,57 @@ corre ése antes de escribir uno a mano** (tendencia **313**). 🟢 **Y el `gafa
 > y 5 en `schemas12/`, y contar sólo el primero es lo que hizo invisible el segundo dialecto de SCORM (**P106**).
 > **Pase 36 del 2026-10-02:** 🔵 **este pase no agrega repos: le pone FECHA a los que ya están, y la fecha cambia tres recomendaciones.** Se midió la capa PHP de evaluación y telemetría en Packagist —el único registro de los tres que entrega descargas en este entorno (`api.npmjs.org` y `pypistats.org` dan **403 a CONNECT**)— y el resultado está en `repos/trending.md`. **Lo que hay que saber antes de proponer desde este archivo:** 🔴 **la pieza xAPI más descargada de esta base, `rusticisoftware/tincan` (Apache-2.0, 6.178 desc./mes, 863.777 totales), no publica desde el 2022-11-02**, y ⚠️ **el único MIT de esa capa, `php-xapi/client`, está parado desde el 2021-03-24** con 825 desc./mes. 🔵 **La lectura es que en xAPI/PHP lo permisivo está quieto y lo vivo es copyleft**, así que la receta de telemetría se sostiene en **Ralph (MIT)** + **`lrsql` (Apache-2.0)** + **`learnmcp-xapi` (MIT)** y no en la capa PHP. 🟢 **Del lado de evaluación, lo activo es `oat-sa/extension-tao-testqti`** (**885 versiones**, release del **2026-09-30**) **y sigue siendo GPL-2.0-only**, mientras **lo permisivo es lo nuevo**: `@longsightgroup/qti3-cli` (**MIT**, 41 releases desde el 2026-05-21, último **2026-10-01**) con **cero dependencias de terceros** — sus 4 dependencias son todas `@longsightgroup/*` pinneadas a la misma versión exacta. **Su manifiesto MCP completo de 20 tools está escrito en `compose/patterns.md` (P76).** 🔴 **Y una corrección de catálogo: `oat-sa/qti-sdk` devuelve 404 en Packagist porque es el nombre del REPO — su paquete es `qtism/qtism`** (GPL-2.0-only, 218.212 descargas totales, 315 versiones). **Nombre de repo y nombre de paquete son identificadores distintos, y confundirlos produce un 404 que parece una ausencia** — pasó igual con `1edtech/oneroster`, `imsglobal/lti-1-3-php-library` y `packbackbooks/lti-1-3-php-library`, los tres **404**, que se anotan como *«no verificado en Packagist bajo ese nombre»* y **no** como inexistentes. ⚠️ **Acción pendiente que el pase 37 tiene asignada: este archivo nunca pasó por el control de *slugs* distintos ni por el de *backlink*** — los dos que en `agents/top.md` encontraron **un duplicado** y **dos colisiones** este mismo pase.
 > **Pase 11 del 2026-10-01:** aparece una licencia que las diez pasadas anteriores filtraban sin saberlo — **ECL-2.0**, con la que licencia todo Apereo (Sakai, Opencast, OpenLRW). Es Apache-2.0 con el alcance de patentes acotado, aprobada por OSI y FSF, y **es apta para construir arriba**. Ver la capa de analítica institucional, abajo.
+
+## 🇧🇷 La capa de SIS gana su primera pieza LATAM, y trae el único patrón de CREDENCIAL del inventario — con dos cotas medidas (pase 72 del 2026-10-03)
+
+### 🟢 Qué entra, y por qué entran DOS repos y no uno
+
+La capa de SIS del pase 70 quedó dominada por copyleft fuerte y **sin una sola pieza de LATAM**.
+🟢 **Hoy entra, y entra como par acoplado: el cliente no corre sin el backend.**
+
+| Repo | Licencia (**medida por payload**) | ★ / commits | Región | Qué es |
+|---|---|---|---|---|
+| [`iDavi/usp-mcp`](https://github.com/iDavi/usp-mcp) | 🔴 **GPL-3.0** · `LICENSE` **35.148 B** · texto íntegro · titular = *steward*, `NOT-APPLICABLE` (**P184**) | 5 ★ / 0 forks / 4 commits | 🟢 **LATAM** (Brasil) | MCP sobre los sistemas estudiantiles de la **Universidade de São Paulo**: e-Disciplinas (Moodle), JupiterWeb, notas, faltas, grade horária, planner. **16 tools.** Python, stdio + FastAPI/Streamable HTTP |
+| [`iDavi/heidy_backend`](https://github.com/iDavi/heidy_backend) | 🔴 **GPL-3.0** · `LICENSE` **35.148 B** | 1 ★ / 0 forks / **52 commits** | 🟢 **LATAM** (Brasil) | La **capa de acceso**: *vault* de credenciales y proxy a Moodle/JupiterWeb. El módulo que el cliente nombra —`HeidyApi.Credentials.Vault.Local.hkdf/2`— es **Elixir** |
+
+⚠️ **La relación hay que escribirla porque cambia la cotización:** `usp-mcp` **no habla con la USP**.
+Habla con Heidy, y Heidy habla con la USP. 🔵 **Quien adopte el cliente adopta el backend — o
+escribe uno compatible con su esquema de sobre, que es trabajo real** (ver la cota D2 abajo).
+
+### 🟢 El aporte que ninguna otra pieza de la base tiene: la contraseña institucional no viaja en claro
+
+Desde el pase 53 esta base viene midiendo que **la credencial es el eslabón sucio de la capa de
+conectores**: cookie de sesión del navegador, token de administración del sitio, contraseña en un
+`.env`. 🟢 **`usp-mcp` es la primera pieza del inventario que resuelve eso en el CÓDIGO.** Leído
+entero `src/usp_mcp/crypto.py` (**2.136 B**, HTTP 200,
+`sha256:bfe4ecaf4e48fd1c97028f7403f3bbaf985609e314d2927f34588a49bc680149`):
+
+- el cliente pide la clave pública vigente del backend (`GET /auth/login-key`),
+- sella la **Senha Única** en un sobre X25519 → HKDF-SHA256 → AES-256-GCM,
+- y la sesión —bearer token + *credential blob* opaco— **vive sólo en memoria y se descarta en el
+  `logout`**.
+
+🔵 **Para una propuesta, eso es lo que esta base venía diciendo que faltaba: un camino de
+credencial que la institución puede auditar en vez de tolerar.**
+
+### 🔴 Y las dos cotas, medidas con test ejecutable y control negativo (**P213**)
+
+`compose/code/p213-envelope-aad/test_envelope.py` — **13 checks, todos pasan**:
+
+| | Lo medido | Qué significa para una entrega |
+|---|---|---|
+| **D1** | 🔴 el *additional data* del AEAD es la **constante `HKDF_INFO`**, así que `key_id` y `encrypted_at` **no están atados al *ciphertext***: reescritos los dos, el tag de AES-GCM **sigue verificando** | ⚠️ **no es una vulnerabilidad declarada**: es una propiedad a conocer **antes** de meter un relay en ese camino. 🟢 **Control negativo: volteado un bit del *ciphertext*, falla con `InvalidTag`** — el AEAD está intacto donde aplica |
+| **D2** | 🔴 el *key schedule* tiene **forma** de HPKE pero **no es RFC 9180**: `_hkdf_sha256` es extract-and-expand de **un bloque con salt CERO**, sin `suite_id`, sin etiquetas `"HPKE-v1"`, sin `psk_id_hash` ni `info_hash`. El docstring lo admite: *«matching the backend's vault»* | 🔴 **Portabilidad: el sobre interopera con UN backend.** Un cliente que no pueda alcanzar `heidy-backend.fly.dev` **no se reconstruye con una biblioteca HPKE de estantería** — hay que reimplementar el esquema |
+| **D3** | ⚠️ el backend por omisión es **`https://heidy-backend.fly.dev`** (un **tercero**, del mismo autor, sobre fly.io) y `HEIDY_USERNAME`/`HEIDY_PASSWORD` permiten dejar la contraseña **en claro en el entorno** | 🔴 **Es la conversación de LGPD, y hay que tenerla antes y no después**: el sobre protege la contraseña **en tránsito**, no **en reposo** en la configuración del operador, y la residencia del dato no es la institución |
+
+### 🔴 Lo que la licencia obliga a decir antes de proponer
+
+🔴 **Las dos son GPL-3.0 con texto íntegro: hay cesión real, y es copyleft fuerte sobre el camino
+crítico.** 🔵 **Traducido a cotización: se puede desplegar, operar, modificar y contribuir; no se
+puede empaquetar un derivado cerrado.** ⚠️ **Y es el tercer corte institucional consecutivo donde
+el copyleft gana** —ClassroomIO AGPL-3.0 y Gibbon GPL-3.0 (pase 70), la capa de ERP (pase 71), la
+capa de SIS brasileña (hoy)—, **así que para la vertical educativa «permisivo» ya no es el caso
+base: es la excepción que hay que buscar.**
 
 ## 🏢 La capa de ERP/administración entra MEDIDA, y el hallazgo no está en ninguna columna de licencia: permisividad y especificidad educativa están ANTI-correlacionadas (pase 71 del 2026-10-03)
 

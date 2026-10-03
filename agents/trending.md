@@ -9,6 +9,150 @@ updated: 2026-10-03
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 > No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
 
+## 2026-10-03 — pase 72: la escalera de la compuerta sólo medía la MITAD — de dónde sale el ACTOR es un segundo eje, está INVERTIDO respecto del primero, y LATAM vuelve a la capa de código con la mejor respuesta al problema de credencial que esta base haya medido
+
+### 🟢 El hallazgo del pase: la compuerta dice qué se niega el servidor a HACER; no dice PARA QUIÉN
+
+El pase 71 cerró con la escalera de cuatro peldaños de la compuerta de escritura (**P207**) y con
+una cota escrita sobre su propio ejemplar más fuerte, `nitsuah/bb-mcp`: *«la política se hace
+cumplir, la IDENTIDAD no se autentica»*. 🟢 **Medido en siete piezas, eso no es el defecto de una
+pieza: es un SEGUNDO EJE, y el propio `bb-mcp` lo dice en el encabezado de su `src/auth.ts`:**
+
+> *«The MCP spec does not define end-user identity (that lives in the calling client).»*
+
+🔵 **O sea que el hueco no es de la pieza, es del PROTOCOLO** — y por eso cada servidor lo resuelve
+por su cuenta y de cuatro maneras distintas. **Una tabla de política evaluada contra un actor que
+el llamador DECLARA es una tabla de política evaluada contra una entrada auto-declarada.**
+
+| | Clase | Ejemplar medido | La línea que decide (archivo leído, no README) |
+|---|---|---|---|
+| **A1** | 🟢 `ACTOR-FROM-UPSTREAM-SESSION` | [`felipedias-ie/blackboard-mcp`](https://github.com/felipedias-ie/blackboard-mcp) | `src/server.ts:39` — *«Blackboard Learn access for the **signed-in** student or instructor»*; la sesión se abre fuera de banda (`blackboard-mcp auth login`) y **el llamador no puede nombrar otro actor** |
+| **A1** | 🟢 idem | [`chrischall/infinitecampus-mcp`](https://github.com/chrischall/infinitecampus-mcp) | `README.md:61` — *«accesses **your own** Campus Parent account … scoped to the student records your school district has authorized you to view»* |
+| **A1** | 🟢 idem | [`codit04/TechMCP`](https://github.com/codit04/TechMCP) | `README.md:73` — `"roll_number"` + contraseña del propio alumno en `config.json` |
+| **A2** | 🟢 `ACTOR-FROM-LOCAL-CONFIG` | [`SwarupRock/attendai`](https://github.com/SwarupRock/attendai) | `README.md:275` — *«Client-supplied `teacher_id` that **disagrees with the session is rejected**»*: el actor se fija al desplegar (`ATTENDAI_USER`) y la llamada **no lo puede cambiar** |
+| **A3** | 🔴 `ACTOR-FROM-CALL-ARGUMENT` | [`nitsuah/bb-mcp`](https://github.com/nitsuah/bb-mcp) | `src/auth.ts:7` — *«A **required `caller_identity` parameter** on every tool call»* |
+| **A4** | 🔴 `NO-ACTOR-MODELLED` | [`peancor/moodle-mcp-server`](https://github.com/peancor/moodle-mcp-server) | `src/index.ts:14` — `MOODLE_API_TOKEN` de sitio hace todo; el **sujeto** (`args.studentId`) es argumento y **no hay actor** |
+
+⚠️ **Y un sub-caso que NO entra en un peldaño, registrado como tal en vez de forzado:**
+[`oliverhruby/edupage-mcp`](https://github.com/oliverhruby/edupage-mcp) usa una credencial upstream
+**real** (fuerza de A1) pero **llega en una llamada a tool** (`login`, `login_from_session` con un
+`PHPSESSID`) y un segundo tool —**`switch_to_student`**— **cambia el actor a mitad de sesión sin
+re-autenticar**. 🔵 **El peldaño solo no describe esta pieza; el *switch* sí.** Medido en
+`compose/code/p212-actor-binding/` (**P212**).
+
+### 🔴 Lo que sale del cruce, y es lo que hay que llevar a una reunión de arquitectura
+
+🔴 **Cruzada la escalera de compuerta del pase 71 con el eje de actor de hoy, en las tres piezas de
+arriba el orden está INVERTIDO.**
+
+| Pieza | Compuerta (**P207**, pase 71) | Actor (**P212**, hoy) | Lo que eso significa |
+|---|---|---|---|
+| `SwarupRock/attendai` | 🟢 **1** · `GATE-IN-SIGNATURE` | 🟢 **A2** | **la única fuerte en los dos ejes** — y es la pieza más chica de las tres (1 ★) |
+| `nitsuah/bb-mcp` | 🟢 **2** · `GATE-IN-HANDLER` | 🔴 **A3** | **la política más rica de la base, evaluada contra un actor que el cliente declara** |
+| `felipedias-ie/blackboard-mcp` | 🔴 **3** · `GATE-IN-ENV-FLAG` | 🟢 **A1** | **la compuerta más débil que igual es código, con el actor más fuerte** |
+| `peancor/moodle-mcp-server` | 🔴 sin compuerta | 🔴 **A4** | el único caso donde **los dos ejes coinciden**, y coinciden abajo |
+
+🔵 **Es la misma anti-correlación que el pase 55 midió sobre otro par de ejes** (procedencia de
+credencial × salvaguarda de integridad). **Dos veces en diecisiete pases, sobre pares de ejes
+distintos, el filtro de «elegir la mejor pieza» falla por el mismo motivo: las piezas de esta capa
+son fuertes en el eje que su autor miró y ciegas en el otro.** 🔴 **La consecuencia operativa es
+que no hay una pieza para recomendar: hay una COMPOSICIÓN** — ver **P214**.
+
+### 🟢 Las altas del pase, con licencia medida por PAYLOAD
+
+| Pieza | Repo | Licencia (**medida**: bytes + `sha256` + titular) | ★ | Región | Qué es |
+|---|---|---|---|---|---|
+| 🟢 **usp-mcp** | [`iDavi/usp-mcp`](https://github.com/iDavi/usp-mcp) | 🔴 **GPL-3.0**, **35.148 B** — texto íntegro, ⚠️ titular = *steward*, `NOT-APPLICABLE` (**P184**) | 5 ★ / 0 forks / 4 commits | 🟢 **LATAM** (Brasil) | **Sistemas estudiantiles de la USP**: Moodle (e-Disciplinas), JupiterWeb, notas, faltas, grade horária, planner. **Primera pieza de código LATAM que esta base mide desde el pase 68** |
+| 🟢 **heidy_backend** | [`iDavi/heidy_backend`](https://github.com/iDavi/heidy_backend) | 🔴 **GPL-3.0**, **35.148 B** | 1 ★ / 0 forks / 52 commits | 🟢 **LATAM** (Brasil) | La **capa de acceso** de la anterior: *vault* de credenciales (`HeidyApi.Credentials.Vault.Local`, nombre de módulo **Elixir**) y proxy a Moodle/JupiterWeb |
+| 🟢 **TechMCP** | [`codit04/TechMCP`](https://github.com/codit04/TechMCP) | **MIT**, **1.063 B**, `Copyright (c) 2025 codit04` → 🟢 **`HOLDER-MATCH`** | 4 ★ / 3 forks / 26 commits | 🟢 **APAC** (India) | Portal e-campus del **PSG College of Technology** (Coimbatore): notas CA1/CA2, asistencia con *bunk calculator*, horario. **Rompe el hueco de CÓDIGO de APAC, abierto desde el pase 69** |
+| 🟢 **infinitecampus-mcp** | [`chrischall/infinitecampus-mcp`](https://github.com/chrischall/infinitecampus-mcp) | **MIT**, **1.066 B**, `Copyright (c) 2026 Chris Hall` → 🟢 **`HOLDER-MATCH`** | 4 ★ / 1 fork / **320 commits** | **North America** | **Infinite Campus** (Campus Parent), **20 tools**; el único tool de escritura/IO es `ic_download_document` |
+
+### 🟢 La pieza LATAM trae la mejor respuesta al problema de credencial que esta base haya medido — y hay que decir las dos cosas
+
+Esta base viene midiendo desde el pase 53 que **la credencial es el eslabón sucio de esta capa**:
+cookie de sesión robada al navegador, token de administración del sitio, contraseña en un `.env`.
+🟢 **`usp-mcp` es la primera pieza del inventario que se niega a mandar la contraseña
+institucional en claro, y lo hace en el código, no en el README** (`src/usp_mcp/crypto.py`,
+**2.136 B**, leído entero):
+
+```python
+server_public = X25519PublicKey.from_public_bytes(base64.b64decode(public_key_b64))
+ephemeral     = X25519PrivateKey.generate()
+shared        = ephemeral.exchange(server_public)
+key           = _hkdf_sha256(shared, HKDF_INFO)
+sealed        = AESGCM(key).encrypt(nonce, secret.encode(), HKDF_INFO)
+```
+
+🟢 **La Senha Única se sella contra la clave pública que el backend publica en
+`GET /auth/login-key`, la sesión vive sólo en memoria y se descarta en el `logout`.** 🔵 **Que esto
+venga de LATAM, y no de las dos regiones que producen casi toda esta capa, es el dato del pase.**
+
+🔴 **Y las dos cotas, medidas y no argumentadas** (`compose/code/p213-envelope-aad/`, 13 checks con
+control positivo y negativo, **P213**):
+
+- 🔴 **Los metadatos del sobre NO están autenticados.** El *additional data* del AEAD es la
+  constante `HKDF_INFO`, así que `key_id` y `encrypted_at` viajan al lado del *ciphertext* sin nada
+  que los ate. **Reescritos los dos, el tag de AES-GCM sigue verificando.** ⚠️ **No es una
+  afirmación de vulnerabilidad: es una propiedad que hay que saber antes de poner un relay en ese
+  camino.** 🟢 **Control negativo en la misma corrida: volteado UN bit del *ciphertext*, falla con
+  `InvalidTag`** — el AEAD está intacto donde sí aplica.
+- 🔴 **El *key schedule* tiene FORMA de HPKE pero NO es RFC 9180.** `_hkdf_sha256` es un
+  extract-and-expand de **un solo bloque con salt CERO**; no hay `suite_id`, ni etiquetas
+  `"HPKE-v1"`, ni `psk_id_hash`, ni `info_hash`. **El propio docstring lo dice** —*«matching the
+  backend's vault»*—. 🔵 **Consecuencia de portabilidad, que es la que cotiza: el sobre interopera
+  con UN backend, no con bibliotecas HPKE.**
+- ⚠️ **Y la que decide una conversación de LGPD:** el backend por omisión es
+  `https://heidy-backend.fly.dev` —**un tercero, del mismo autor, sobre fly.io**—, y
+  `HEIDY_USERNAME` / `HEIDY_PASSWORD` permiten dejar la contraseña **en claro en el entorno** para
+  login automático. 🔵 **El sobre protege la contraseña en TRÁNSITO, no en REPOSO en la
+  configuración del operador.**
+
+### 🔴 La pieza de NA es la que más lejos llega en el otro eje: declara que su propio canal puede violar los términos de uso
+
+[`chrischall/infinitecampus-mcp`](https://github.com/chrischall/infinitecampus-mcp) trae una sección
+*«Acknowledgement of Terms»* que **esta base no había visto en ninguna de las 100+ piezas medidas**:
+
+> *«This server uses Infinite Campus's mobile-app JSON endpoints (`/campus/api/oneRosterCampus`,
+> `/portal/api/…`) which are **not "publicly supported interfaces"** — **IC may treat this as a ToS
+> violation**.»*
+
+🔵 **Más FERPA y COPPA nombrados, el término citado textual, y la fecha en que el mantenedor lo
+leyó (2026-05-23).** 🟢 **Leído contra **P204** —el eje que la columna Licencia no ve— es el
+ejemplar OPUESTO de `edupage-mcp`: la misma clase de riesgo (endpoints no documentados) y la
+divulgación más completa del inventario.** 🔴 **Pero la divulgación no cambia el hecho: su camino
+de autenticación nº 2 es una **extensión de navegador que lee la cookie HttpOnly `JSESSIONID`**
+de la pestaña del usuario — que es, literalmente, la clase (b) que el pase 53 tipificó, ahora
+empaquetada como producto.** ⚠️ **Para un despliegue institucional eso es un `NO` de arquitectura,
+por más honesto que sea el README.**
+
+### ⚠️ Lo que se buscó en este pase y NO rindió, dicho explícitamente
+
+- 🔴 **`top open source AI agents education 2026 github MIT` y `github trending education AI 2026`
+  devolvieron el eje generalista por QUINTO pase consecutivo** —OpenClaw (385.407 ★ citadas por la
+  fuente, **no leídas del repo y por eso no se copian a ninguna tabla**), browser-use, Mem0,
+  AutoGen, Flowise, dify, CrewAI, LangGraph— **más listas de «aprender AI» y catálogos de SEO.**
+  🔴 **Cero altas educativas de esas dos consultas, por quinta vez.**
+- ⚠️ **`open source platform education ERP CRM MIT Apache` colapsó por UNDÉCIMA vez** sobre el SEO
+  de OpenEduCat (esta vez en seis idiomas del mismo dominio) y agregó **CK-ERP**, un proyecto cuyo
+  anuncio más reciente localizado es de **2010** sobre Drupal 6 — **se registra para que el próximo
+  pase no lo descubra como novedad.**
+- 🟢 **Las cuatro altas salieron, otra vez, de consultas por FUNCIÓN y por PAÍS en el idioma del
+  país** (`student information system attendance grading`, y en portugués `SIGAA / diário de classe
+  / Moodle professor Brasil`). **Es el quinto pase en que el canal por función rinde y el canal por
+  «agentes» no.**
+- 🔴 **Tres piezas reales quedaron INUTILIZABLES por falta de cesión**, medidas con la matriz de 28
+  nombres y con el árbol alcanzable: **`plyght/studentvue`** (biblioteca Rust + MCP sobre StudentVue),
+  **`poorvika12-hub/student_mcp`** (India — ⚠️ **habría sido una segunda pieza APAC**) y
+  **`moarshy/mcp-tutor`**. ⚠️ **También `Sadaf987/github_sdk`, que el canal presentó como «school
+  attendance MCP» y resultó un árbol sin cesión.**
+- ⚠️ **`unu.edu`, `ess.iesalc.unesco.org`, `timeshighereducation.com` y `completeaitraining.com`
+  dan `EGRESS_BLOCKED` / `000`.** Las cifras de UNESCO-IESALC de `intel/market.md` quedan
+  registradas **por snippets concordantes de tres fuentes**, con las URLs exactas anotadas para que
+  el próximo pase las abra — **no se presentan como verificadas de primera mano.**
+- ⚠️ **`api.github.com` y `github.com` dieron `403` por el proxy todo el pase.** Bytes, `sha256`,
+  titulares y **todo el código leído** salen de `raw.githubusercontent.com`; estrellas y commits, de
+  WebFetch. **Ninguna cifra de este pase sale de la API.**
+
 ## 2026-10-03 — pase 71: la compuerta de ESCRITURA deja de ser un sí/no y se vuelve una ESCALERA de CUATRO peldaños, los cuatro con ejemplar leído en código — y Blackboard, el cuarto LMS grande, entra en tres peldaños a la vez
 
 ### 🟢 El hallazgo del pase: el pase 70 tipificó UNA clase de compuerta; medidas cuatro piezas más, resulta que hay una ESCALERA y el peldaño se lee en el código

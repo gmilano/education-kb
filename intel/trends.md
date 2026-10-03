@@ -7,6 +7,7 @@ updated: 2026-10-03
 # 📡 Tendencias — education
 
 > Ventana de investigación: septiembre 2026. Verificado 2026-09-30; el pase 11, el 2026-10-01.
+> **Pase 72 del 2026-10-03:** 🟢 **Seis tendencias nuevas, numeradas 562–567** (continuación real de la serie; el pase 71 cerró en 561). 🟢 **562–563: el ACTOR es un eje independiente de la compuerta del pase 71, el hueco que lo produce es del PROTOCOLO** —`src/auth.ts` de `bb-mcp`: *«The MCP spec does not define end-user identity»*— **y cruzado con la compuerta está ANTI-correlacionado, que es la SEGUNDA vez que esta base mide esa forma sobre un par de ejes distinto** (la primera, pase 55). 🔴 **564: una corrección de método puede generalizarse de más** — la advertencia de caja del pase 71 no aplicaba a P170, y re-medidas sus 32 ausencias en las tres cajas, **32 de 32 se sostienen**. 🟢 **565: el único patrón de credencial que resuelve el problema estructural de esta capa vino de LATAM** (`iDavi/usp-mcp`, sobre sellado), **con sus dos cotas medidas** (**P213**). 🟢 **566: la divulgación de términos de uso empieza a viajar como ARCHIVO DEL REPO** y es un eje de selección que ni la licencia ni la compuerta muestran. 🔴 **567: el barrido de MERCADO por región se saturó** — las cuatro regiones devolvieron el inventario propio, con pase de origen identificable en cada caso.
 > **Pase 70 del 2026-10-03:** 🟢 **ÁFRICA entra a la capa de agente de esta base, y entra con el instrumento de gobernanza más fuerte que la base haya medido: la compuerta en la FIRMA de la operación.** `buriro-ezekia/mwalimulens-agent` (Apache-2.0, 11.357 B) exige `supporting_evidence_ids`, `counter_evidence_ids` y `uncertainty` como ARGUMENTOS de `flag_pattern_for_review` —no se puede emitir un juicio sobre un alumno sin citar evidencia, exhibir contra-evidencia y declarar incertidumbre— (**P203**, clase `GATE-IN-SIGNATURE`, **tendencia 136**). 🔴 **Y el contraejemplo entra en el MISMO pase:** `oliverhruby/edupage-mcp` (MIT, `HOLDER-MATCH`, 31 tools) escribe —mensajes, cambio de cuenta de alumno— **sin compuerta en código** y contra *«undocumented endpoints»*, lo que abre un SEGUNDO eje de evaluación que la columna Licencia no ve (**P204**, **tendencia 137**). 🔴 **La capa de SIS entra medida y está dominada por copyleft fuerte** —ClassroomIO AGPL-3.0, Gibbon GPL-3.0, y la única permisiva (Fedena) sólo medible en un ESPEJO porque el repo que la fuente llama oficial da 404— (**tendencia 138**). ⚠️ **Dos candidatas RECHAZADAS: `YeetingWaterbottle/canvas-mcp` es un fork con `LICENSE` byte a byte idéntico al upstream ya presente, y `hesham0-0nasser/tutor-lms-mcp` es un árbol real SIN cesión.** ⚠️ **Barrido regional completo: EMEA 2 piezas, NA 0, APAC 0, LATAM 0 —declarado, no tapado— (**tendencia 139**). 🔴 **`api.github.com` y `github.com` dieron 403 todo el pase: las licencias salen de `raw.githubusercontent.com`.**
 > **Pase 69 del 2026-10-03:** 🟢 **De las tres acciones del pase 68, DOS se ejecutaron y rinden; la tercera está bloqueada por egress y se declara en vez de taparse.** 🔴 **Acción 1: antes de medir hay que corregir el denominador de la propia acción —pedía «los 16 nombres» de registro único y son **13** (21 filas → 18 nombres − 5 de doble registro); el «16» era un conteo de FILAS leído como de NOMBRES—.** 🔵 **Medidos los 13: **3 `IDENTITY-DECLARED` · 2 `IDENTITY-DECLARED-BUT-DEAD` · 3 `IDENTITY-PROVEN` · 5 `IDENTITY-UNKNOWN`**, y 5 ≥ 3 → gana la rama CARA: la columna *Identidad* es **CONDICIÓN** para publicar una fila de paquete, con el valor `desconocida` escrito y no omitido** (**P192** cerrado). ⚠️ **5 de 13 no es comparable con el «4 de 5» de ayer: otro denominador.** 🔴 **El hallazgo del pase ACOTA un patrón de ayer y está demostrado, no argumentado: el `sha256` del `LICENSE` prueba identidad sólo hasta donde llega su TITULAR. Dos paquetes DISTINTOS —`openedx-mcp` y `tutor-contrib-openedxmcp`— comparten `sha256:8d56b405468a`; y borrándole el nombre del titular al `LICENSE` de `@yunmiao/studymate` y al de `@schoolexl/mentor` los dos quedan **byte a byte** iguales al de `opencode-sit`, que es el caso con el que **P193** se escribió** (**P199**). 🟢 **El veredicto de ayer igual se sostiene por un instrumento MEJOR: el árbol NOMBRA al paquete en su `package.json`, que es un enlace de dos vías que el hash no es** (**P200**). 🔴 **Defecto de instrumento que esta serie arrastraba sin saberlo: `HEAD/README.md` da 404 sobre `INGInious` —una pieza RECOMENDADA— porque el repo embarca `README.rst`. Un sondeo de un nombre de archivo mide una convención, no la existencia, y fabrica lápidas** (**P198**). 🟢 **Acción 3 ejecutada: el instrumento por archivo de **P186** existe.** 🔴 **Y obliga dos cosas: el titular de `INGInious` NO es la FSF —está en un `COPYRIGHTS` de 622 B que ningún instrumento de esta base había abierto: *Anthony Gégo, Guillaume Derval and Pierre Reinbold*— y el ALCANCE no se puede cerrar, porque el proyecto declara archivos de terceros con otras licencias y NO los enumera** (**P197** gana una capa, **P201**). 🔴 **Acción 2 BLOQUEADA: `standards.1edtech.org` y `www.imsglobal.org` dan `403 CONNECT` por `curl` y `EGRESS_BLOCKED` por WebFetch, así que `1EdTech × documento` sigue **medido en 2 de 7** y se dice así cada vez.** ⚠️ **Barrido regional: CONFIRMACIÓN en las cuatro regiones, sin una cifra nueva del sector; lo nuevo son PIEZAS —Brightspace/D2L (NA) y el currículo nacional de Suecia (EMEA)—.** Ver las tendencias **548**–**553**.
 > **Pase 68 del 2026-10-03:** 🟢 **Las TRES acciones del pase 67 se ejecutaron, y las tres rinden; dos refutan la hipótesis con la que fueron escritas.** 🔴 **Acción 1: de los 5 nombres de doble registro, **4 son dos ARTEFACTOS distintos** y sólo `moodle-cli` es un proyecto en dos canales → gana la rama cara y lo que se agrega es la columna *Identidad*, NO la columna *Canal*** (**P192**). 🔵 **El caso duro es `canvas-lms-mcp`: dos proyectos REALES, los dos en GitHub, mismo nombre, titulares y `sha256` distintos.** 🟢 **Y el hash del `LICENSE` resulta servir en la otra dirección: UNE un paquete a su árbol cuando el registro no declara el enlace** (**P193**). 🟢 **Acción 2, debida por TERCERA vez, corrió: `sweep_holder.sh` REPRODUJO 68/31/61 exacto, así que la cifra del pase 66 queda verificada y no corregida** — y la ampliación del denominador a la capa de PAQUETE muestra que **`HOLDER-UNRELATED` casi DUPLICA** donde el cliente instala (19,4 % → 35,3 %, n=17) y que aparece una clase que en 160 archivos de árbol no existía (`NO-HOLDER`) (**P190**). 🔴 **Acción 3: la capa de estándares NO está cerrada —el régimen se parte por **PUBLICADOR × TIPO DE ARTEFACTO** sin una excepción en 8 archivos— y por eso la primera rama de su hipótesis es falsa aunque su umbral se cumpla** (**P191**, **P194**). ⚠️ **Hueco nuevo de los que importan: la versión VIGENTE de xAPI salió de GitHub a `opensource.ieee.org`, egress-bloqueado acá, y los cuatro instrumentos de licencia de esta KB son ciegos a eso** (**P195**). 🔴 **Y una regresión PROPIA, que es el hallazgo de método del pase: la corrección de `@eduware/oneroster` a 0BSD —medida en el pase 52 sobre el payload— fue sobrescrita en el pase 66 por `p183`, que pregunta por el identificador del registro. Ningún instrumento falló: la pregunta más superficial corrió última** (**P197**). Ver las tendencias **530**–**547**.
@@ -11399,6 +11400,109 @@ región medida en cero, no una región sin buscar.**
 > ⚠️ **Los cuatro duplicados del pase 70 se dejan donde están y NO se reescriben** —reescribir una
 > sección pasada rompe la regla append-only de esta base—, **pero quedan declarados acá para que se
 > corrijan en el archivo donde se compilan los ids, no a mano en la prosa.**
+
+## 562. El ACTOR es un eje independiente de la compuerta, y el hueco que lo produce es del PROTOCOLO, no de las piezas (agregado en el pase 72 del 2026-10-03)
+
+La escalera del pase 71 (tendencia 554) mide **qué se niega el servidor a hacer**. No dice **para
+quién**. Medidas siete piezas por el segundo eje, aparecen cuatro clases: `A1` el actor es el dueño
+de la credencial guardada y el upstream decide sus derechos; `A2` el actor se fija al desplegar y
+un valor en conflicto en la llamada se rechaza; `A3` el llamador declara quién es en cada llamada;
+`A4` una credencial de sitio hace todo y no hay actor, sólo sujeto.
+
+**El origen del problema está escrito por la pieza que peor sale en el eje.** `src/auth.ts` de
+`nitsuah/bb-mcp`: *«The MCP spec does not define end-user identity (that lives in the calling
+client).»* **No es un descuido de implementación: es un hueco del protocolo que cada servidor tapa
+a su manera, y por eso hay cuatro maneras.** La consecuencia es que una tabla de política evaluada
+contra un actor que el llamador declara es una tabla evaluada contra una entrada auto-declarada —
+rigurosa en su lógica y vacía en su premisa.
+
+Medido en `compose/code/p212-actor-binding/`, con el archivo y la línea que decide por fila.
+
+## 563. Los dos ejes de un conector están ANTI-correlacionados, y es la SEGUNDA vez que esta base lo mide sobre un par distinto (agregado en el pase 72 del 2026-10-03)
+
+Cruzados compuerta (P207) y actor (P212) sobre las piezas que tienen los dos medidos, el orden se
+invierte: peldaño **2** de compuerta —la política más rica de la base, `bb-mcp`— con actor **A3**,
+el más débil; peldaño **3** —la compuerta más débil que igual es código, `blackboard-mcp`— con
+actor **A1**, el más fuerte. Sólo `attendai` es fuerte en los dos (1 / A2), y sólo
+`peancor/moodle-mcp-server` es débil en los dos.
+
+**El pase 55 midió exactamente esta forma sobre otro par de ejes** (procedencia de credencial ×
+salvaguarda de integridad): las tres piezas que someten trabajo calificado eran las de peor
+credencial y las únicas con salvaguarda. **Dos veces en diecisiete pases, sobre pares distintos, el
+mismo resultado.**
+
+**La generalización que esta base ya puede escribir: las piezas de esta capa son fuertes en el eje
+que su autor miró y ciegas en el otro, porque las escribe una persona resolviendo un problema, no
+un equipo cubriendo una matriz.** Operativamente eso mata el filtro «elegir la mejor pieza»: **lo
+que se entrega es una composición** (**P214**).
+
+## 564. Una corrección de método puede generalizarse de más, y entonces desinforma igual que el defecto que corrige (agregado en el pase 72 del 2026-10-03)
+
+El pase 71 descubrió un defecto real —`raw.githubusercontent.com` es *case-sensitive* y la primera
+corrida de P206 sólo probaba mayúsculas— y lo extendió a toda la base: *«todo veredicto
+`NO-CESSION` que esta base publicó queda condicionado por la caja»*.
+
+**Medido: P170, el instrumento que produjo la población grande de ausencias, probaba 14 nombres y
+tres ya eran minúscula. Nunca fue un sondeo en mayúsculas.** Re-medidas sus **32** filas con 28
+nombres en las tres cajas: **32 de 32 se sostienen, 0 flips** (`compose/code/p211-case-retro-sweep/`).
+
+**La forma del error es simétrica a la del defecto: el defecto afirmaba cobertura donde no la
+había; la corrección afirmó duda donde no la había.** Las dos dejan la base igual de mal informada,
+y la segunda además gasta pases re-midiendo lo cerrado. **Regla que queda: una corrección de
+instrumento se publica con el ALCANCE medido, no con el alcance supuesto** — y el control positivo
+es lo que lo mide (los cuatro controles de este pase resolvieron con nombres que ya estaban en la
+lista vieja, que es la prueba).
+
+## 565. Hay un patrón de credencial que resuelve el problema estructural de esta capa, y vino de LATAM (agregado en el pase 72 del 2026-10-03)
+
+Desde el pase 53 esta base mide que la credencial es el eslabón sucio de la capa de conectores:
+cookie de sesión del navegador, token de administración del sitio, contraseña en un `.env`.
+`iDavi/usp-mcp` (GPL-3.0, Universidade de São Paulo) es **la primera pieza del inventario que no
+manda la contraseña institucional en claro**: pide la clave pública vigente del backend, sella la
+Senha Única en un sobre X25519 → HKDF-SHA256 → AES-256-GCM, y mantiene la sesión sólo en memoria.
+
+**Que el patrón venga de LATAM, y no de las dos regiones que producen casi toda esta capa, es el
+dato de la tendencia:** la región que esta base describía casi sólo con estadística de demanda
+aportó el activo técnico que las otras tres no tienen.
+
+**Y la tendencia no se publica sin sus cotas, porque el valor está en que sean medibles**
+(**P213**, 13 checks con control negativo): el *additional data* del AEAD es una constante, así que
+`key_id` y `encrypted_at` **no están atados al ciphertext**; y el *key schedule* **no es RFC 9180**
+—extract-and-expand de un bloque con salt cero, sin `suite_id` ni etiquetas `"HPKE-v1"`—, así que
+el sobre interopera con **un** backend y no con bibliotecas HPKE.
+
+## 566. La divulgación de términos de uso empieza a viajar como ARCHIVO DEL REPO, y es un eje de selección que ni la licencia ni la compuerta muestran (agregado en el pase 72 del 2026-10-03)
+
+Tres piezas de este pase hablan con endpoints que el proveedor no documenta ni soporta. **La
+diferencia entre ellas no está en la licencia —las tres ceden— ni en la compuerta: está en qué
+declaran.** `chrischall/infinitecampus-mcp` trae una sección *«Acknowledgement of Terms»* que cita
+textual el ToU, **admite que el proveedor puede tratar el canal como violación**, nombra FERPA y
+COPPA y fecha la lectura del término; `iDavi/usp-mcp` documenta cómo protege la credencial y **no
+menciona el plano contractual**; `codit04/TechMCP` no declara nada y pide la contraseña del portal
+en claro en un `config.json`.
+
+**Para una propuesta institucional eso es criterio de selección: la única que permite al cliente
+decidir informado es la que le dice qué está aceptando.** Y es un activo reutilizable — el texto
+sirve de plantilla para el expediente de cualquier conector sobre un SIS propietario, en cualquier
+región.
+
+## 567. El barrido de MERCADO por región se saturó, igual que se había saturado el de agentes (agregado en el pase 72 del 2026-10-03)
+
+El pase 48 estableció la señal de saturación de un canal: **cuando una búsqueda de descubrimiento
+empieza a devolver el propio inventario, dejó de ser una búsqueda de descubrimiento.** Ese
+diagnóstico se hizo sobre el canal de agentes.
+
+**En este pase las CUATRO búsquedas regionales obligatorias de mercado devolvieron material que
+esta base ya tenía publicado**, con pase de origen identificable en cada caso: NA repitió los
+$951 M → $2.303,2 M del pase 44, la terna irreconciliable de $3,37 B del 52 y el *«no hay
+equivalente a la FDA»* del 34; EMEA repitió el *AI Adoption Summit* británico y la conferencia del
+Consejo de Europa del 34; APAC repitió el 48 %/57 % de gobernanza *enterprise*; LATAM repitió el
+estudio de UNESCO-IESALC entero, cuyas cuatro cifras de gobernanza están acá desde el pase 44.
+
+**Cuatro de cuatro es propiedad del canal, no casualidad de la consulta.** El barrido se sigue
+corriendo porque es obligatorio y porque un cambio de régimen hay que verlo — **pero el rendimiento
+marginal medido es cero por segundo pase, y lo nuevo de este pase (dos regiones rompiendo su hueco
+de código) salió entero del canal por FUNCIÓN y por PAÍS en el idioma del país.**
 
 ## 554. La compuerta de escritura no es un sí/no: es una ESCALERA de cuatro peldaños, y los cuatro tienen ejemplar leído en código (agregado en el pase 71 del 2026-10-03)
 

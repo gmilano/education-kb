@@ -9,6 +9,7 @@ updated: 2026-10-03
 > Plataformas verticales reales, en producción, customizables con AI.
 > Modelo: partir de algo que ya funciona y que ya tiene los datos, y agregar la capa agéntica arriba.
 > Verificado vía WebFetch el 2026-09-30; las capas del pase 11, el 2026-10-01.
+> **Pase 72 del 2026-10-03:** 🔵 **La vertical gana dos capas de partida que el modelo de este archivo no cubía — el SIS PROPIETARIO (Infinite Campus, K-12 EE.UU.) y el PORTAL UNIVERSITARIO PROPIO (PSG e-campus en India, JupiterWeb+e-Disciplinas en la USP) — y el modelo hay que corregirlo: cuando la plataforma no se puede tocar, la capa de partida es el CONECTOR y lo reutilizable no es la plataforma sino el ESQUEMA DE AUTENTICACIÓN.** 🔴 **Las tres hablan con endpoints no documentados y sólo UNA lo declara:** `infinitecampus-mcp` trae una sección de *«Acknowledgement of Terms»* que **admite que el proveedor puede tratarlo como violación del ToU** y nombra FERPA y COPPA — **la divulgación más completa del inventario**, y un criterio de selección que ni la licencia ni la escalera de compuerta muestran (tendencia **566**).
 > **Pase 68 del 2026-10-03:** 🔴 **La compuerta de ESTÁNDARES que el pase 67 cerró entera se ABRE a la mitad, y es la corrección más vendible de este archivo: el régimen no se parte por «ser un estándar», se parte por **PUBLICADOR × TIPO DE ARTEFACTO**, sin una excepción en 8 archivos de licencia leídos** (**P191**). 🟢 **Sobre **xAPI** y **Ed-Fi** un perfil derivado del documento SÍ se puede publicar: los dos ceden el documento normativo bajo **Apache-2.0** (`adlnet/xAPI-Spec` 11.525 B; `Ed-Fi-Alliance-OSS/Ed-Fi-Standard` 10.173 B, v6.2.0).** 🔴 **Sobre **Open Badges** y **Caliper** sigue cerrada, y por el mismo publicador: 1EdTech/IMS cede sus DOCUMENTOS bajo una licencia que niega derivados (2 de 2) y su SOFTWARE bajo Apache-2.0 (4 de 4).** 🔵 **Así que la frase para una reunión deja de ser *«el estándar no se puede adaptar»* y pasa a ser *«depende de QUIÉN lo publica y de si tocás el documento o el código»*.** ⚠️ **Y un riesgo de continuidad que esta vertical tiene que saber: la versión VIGENTE de xAPI (IEEE 9274.1.1-2023) ya no está en GitHub, vive en `opensource.ieee.org` y este entorno la tiene egress-bloqueada, así que lo medido es el documento ARCHIVADO** (**P195**). ⚠️ **El canal de plataformas vuelve saturado por OCTAVO pase, y la cifra autodeclarada de OpenEduCat se movió 30× (1.000+ → 30.000+ instituciones) sin instrumento: inestabilidad de cifra de vendedor, no crecimiento** (**P107**).
 > **Pase 67 del 2026-10-03:** 🟢 **La vertical gana la capa que DECIDE la nota, no la que la escribe: `INGInious` (UCLouvain, Bélgica → EMEA, 243 ★, 150 forks) es *grader* externo de **Moodle y edX vía LTI**, así que se cuelga del LMS del cliente sin pedir migración — el punto de inserción más barato de esta capa.** 🔴 **Y su licencia es la condición: AGPL-3.0 (34.764 B) ⚠️ de ALCANCE PARCIAL declarado por el propio archivo (*«Most of the files…»*), así que se implanta sin modificar y se compone por LTI y por proceso, nunca enlazando** (**P186**). 🔴 **El hallazgo que reencuadra la capa de ESTÁNDARES de esta vertical —15 filas— es que es la PEOR cedida de todas: `openbadges-specification` no estaba sin licencia, está bajo la *Specification Document License* de IMS Global, que **NIEGA los derivados**. Implementar contra el estándar no pide permiso; publicar un perfil derivado sí** (**P187**). 🟢 **Dos iniciativas institucionales nuevas, registradas como INTEL y no como piezas: **Labs UniversitarIA** (SEGIB: UBA, UFRJ, U. de Chile, UDC, UTEC — dato en servidores de cada universidad, CC desde el día uno) y **TECgpt** (Tec de Monterrey abre su ecosistema a cualquier institución de educación superior).** ⚠️ **Y el canal de plataformas vuelve saturado por SÉPTIMO pase: la novedad entró por la consulta de FUNCIÓN, no de categoría.**
 > **Pase 66 del 2026-10-03:** 🟢 **La capa de currículo de esta vertical queda MEDIDA en vez de estimada, y la pieza japonesa cambia de categoría: `jp-cos/jp-cos.github.io` trae el grafo nacional COMPLETO —69.288.422 B, 1.004.927 líneas, 39.958 ítems de currículo, 786 materias, 655 ítems del comentario oficial 学習指導要領解説, 34 revisiones, 260 enlaces entre materias y 17 *shapes* SHACL— y, lo que ninguna otra pieza de currículo de esta KB tiene, 特別支援学校 (educación especial) desglosada por categoría de discapacidad: visual 4.886, auditiva 4.721, intelectual 2.207/1.546/1.223, VHPH 157/76.** 🔴 **Y la corrección de canal, que es del tipo más barato de cometer: el pase 65 declaró el grafo completo «inalcanzable» por un 404 — `index.html` lo enumera como `all-20250927.ttl.gz` y el nombre se transcribió sin el sufijo. Los 22 volcados dan 200, los 22.** 🔵 **Consecuencia de plataforma, y es la que vale para cotizar: la receta NO necesita el endpoint SPARQL del publicador (anunciado 試験公開中 y bloqueado hoy) — se cargan 4,2 MB comprimidos en un *triplestore* propio y eso es todo el paso 1.** ⚠️ **Y la corrección a la capa alemana es a favor: `dini-ag-kim/school-curriculum-pg` SÍ cede, en `CC BY-SA 4.0` con titulares por ORCID — este archivo publicaba que la cobertura por *Land* «no tiene cesión» y era una ausencia FALSA. Lo que hay que cotizar ahí es el ShareAlike: el derivado alemán se publica con la misma licencia, el japonés se puede cerrar.** 🟢 **`OpenEduCat` reconfirmado por el canal del pase (3M+ usuarios, 300 módulos, 65 idiomas, 45 localizaciones, *community edition* open source): el canal de búsqueda de plataformas ERP/SIS está SATURADO para esta vertical — cuatro pases devolviendo la misma pieza ya registrada, y se declara en vez de volver a anotarla como novedad.** Ver **P185**, **P182** y `compose/code/jp-cos-curriculum-gate/`.
@@ -108,6 +109,50 @@ updated: 2026-10-03
 > versiones), así que lo permisivo (`qti3-*`, `instructure/qti`) es **lo único proponible** — con **`qti3-a11y`** y
 > **`qti3-pnp`**, que abren accesibilidad de evaluación como entregable auditable (**P72**). ⚠️ **Open edX cambia de
 > recomendación: proponer con presupuesto de mantenimiento (gap 70).** Ver la sección del pase 33, abajo.
+
+## 🏛️ La vertical gana el SIS PROPIETARIO y el portal UNIVERSITARIO PROPIO — dos capas de partida que el modelo de este archivo no cubría (pase 72 del 2026-10-03)
+
+### 🔵 Por qué estas dos capas rompen el modelo del archivo, y qué las reemplaza
+
+Este archivo parte de una premisa: *«partir de algo que ya funciona y que ya tiene los datos»* —
+Moodle, Open edX, Canvas, OpenEduCat. 🔵 **Las tres piezas de hoy tienen los datos y funcionan,
+pero NINGUNA es open source: lo open source es el CONECTOR.**
+
+| Plataforma | Qué es | Licencia de la PLATAFORMA | Lo open source que esta base midió hoy |
+|---|---|---|---|
+| **Infinite Campus** (Campus Parent / Campus Student) | SIS de K-12 en **Estados Unidos**: notas, asistencia, conducta, comedor, documentos, mensajería, tasas | 🔴 **propietaria** | [`chrischall/infinitecampus-mcp`](https://github.com/chrischall/infinitecampus-mcp) — **MIT**, **20 tools** |
+| **PSG e-campus** (PSG College of Technology, Coimbatore) | Portal académico **institucional propio** de un college indio: marcas CA, asignaciones, tutoriales, asistencia, horario | 🔴 **propietaria, de una sola institución** | [`codit04/TechMCP`](https://github.com/codit04/TechMCP) — **MIT**, sólo lectura |
+| **USP: JupiterWeb + e-Disciplinas** | Sistema académico + Moodle institucional de la **Universidade de São Paulo** | 🔴 JupiterWeb propietario · 🟢 e-Disciplinas es **Moodle** (GPL-3.0) | [`iDavi/usp-mcp`](https://github.com/iDavi/usp-mcp) + [`iDavi/heidy_backend`](https://github.com/iDavi/heidy_backend) — **GPL-3.0** |
+
+🔵 **El modelo que las tres comparten, y que esta vertical no tenía escrito: cuando la plataforma
+no se puede tocar, la capa de partida es el CONECTOR, y la unidad de reutilización no es la
+plataforma sino el ESQUEMA DE AUTENTICACIÓN.** 🔴 **Eso cambia qué se reutiliza entre engagements:
+de `TechMCP` no se reutiliza nada del PSG; se reutiliza la forma —*scraper* de portal + tools de
+sólo lectura + credencial del propio alumno— que vale para cualquier portal institucional de
+cualquier college.**
+
+### 🔴 Y por eso las tres traen el mismo riesgo, con tres grados de honestidad distintos
+
+🔴 **Las tres hablan con endpoints que el proveedor no documenta ni soporta.** La diferencia está
+en qué dice cada una:
+
+| Pieza | Lo que declara sobre su propio canal | Grado |
+|---|---|---|
+| [`chrischall/infinitecampus-mcp`](https://github.com/chrischall/infinitecampus-mcp) | 🟢 **sección entera de *«Acknowledgement of Terms»***, cita textual del ToU de IC, **admite que IC puede tratarlo como violación**, nombra FERPA y COPPA, y fecha la lectura del término (2026-05-23) | 🟢 **la divulgación más completa de todo el inventario** |
+| [`iDavi/usp-mcp`](https://github.com/iDavi/usp-mcp) | ⚠️ nada sobre términos de uso; sí documenta **cómo** protege la credencial | ⚠️ **parcial: resuelve el riesgo técnico y no menciona el contractual** |
+| [`codit04/TechMCP`](https://github.com/codit04/TechMCP) | 🔴 nada; pide la contraseña del e-campus en `config.json` en claro y anuncia *«server hosting coming soon»* | 🔴 **ninguno — y el *hosting* anunciado movería credenciales de alumnos a un tercero** |
+
+🔵 **Para una propuesta institucional eso es un criterio de selección que la columna Licencia no
+muestra y que la escalera de compuerta tampoco:** las tres son MIT/GPL y entregables; **sólo una
+permite al cliente tomar la decisión informada, porque es la única que le dice qué está aceptando.**
+
+### 🟢 Lo que SÍ se reutiliza, y es lo que hay que cotizar
+
+| Activo | De dónde sale | Para qué sirve en otro cliente |
+|---|---|---|
+| 🟢 **Sobre de credencial sellada** | `iDavi/usp-mcp` + `heidy_backend` (GPL-3.0) | **El patrón**, no el código: el portal publica una clave, el cliente sella la contraseña, el *vault* la abre. ⚠️ **Reimplementable: NO es RFC 9180** (**P213**) |
+| 🟢 **Superficie de sólo lectura por diseño** | `codit04/TechMCP` (MIT) | Plantilla de *scraper* de portal institucional con **cero** tools de escritura — el punto de partida más barato y más defendible |
+| 🟢 **Divulgación de términos como artefacto del repo** | `chrischall/infinitecampus-mcp` (MIT) | **Texto reutilizable** para el expediente de cualquier conector sobre SIS propietario |
 
 ## 🎓 La vertical gana BLACKBOARD —el cuarto LMS grande, que no estaba— y gana una ESCALERA para cotizar la compuerta de escritura en vez de declararla presente o ausente (pase 71 del 2026-10-03)
 

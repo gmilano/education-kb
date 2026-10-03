@@ -8,6 +8,7 @@ updated: 2026-10-03
 
 > Agentes y herramientas AI open source para educación. Foco: MIT / Apache 2.0 / BSD.
 > Verificado repo por repo vía WebFetch el 2026-09-30 (stars y licencia leídos de la página del repo).
+> **Pase 72 del 2026-10-03:** 🟢 **La escalera de la compuerta del pase 71 medía la mitad: de dónde sale el ACTOR es un SEGUNDO eje y, cruzado con el primero, está INVERTIDO** (**P212**, tendencias **562**–**563**). `attendai` es la única fuerte en los dos (compuerta 1 · actor A2); `bb-mcp` tiene la política más rica de la base **evaluada contra un actor que el cliente declara** (A3); `blackboard-mcp` tiene la compuerta más débil y el actor más fuerte (A1). El hueco es del PROTOCOLO y el propio `bb-mcp` lo escribe: *«The MCP spec does not define end-user identity»*. 🟢 **LATAM vuelve a la capa de código tras tres pases** con `iDavi/usp-mcp` + `iDavi/heidy_backend` (**GPL-3.0**, Brasil), **la única pieza del inventario que no manda la contraseña institucional en claro** —sobre sellado a la clave pública del backend—, 🔴 **con dos cotas medidas: los metadatos del sobre NO están autenticados y el *key schedule* NO es RFC 9180** (**P213**, 13 checks con control negativo). 🟢 **APAC rompe su hueco de CÓDIGO, abierto desde el pase 69**, con `codit04/TechMCP` (MIT, PSG College of Technology, India). 🔴 **Y la advertencia de CAJA del pase 71 era demasiado ancha: re-medidas las 32 ausencias de P170 en las TRES cajas, 32 de 32 se sostienen — P170 nunca fue un sondeo en mayúsculas** (**P211**, tendencia **564**). ⚠️ **Cuatro candidatas reales rechazadas por `NO-CESSION`**, una de ellas una segunda pieza APAC.
 > **Pase 70 del 2026-10-03:** 🟢 **ÁFRICA entra a la capa de agente de esta base, y entra con el instrumento de gobernanza más fuerte que la base haya medido: la compuerta en la FIRMA de la operación.** `buriro-ezekia/mwalimulens-agent` (Apache-2.0, 11.357 B) exige `supporting_evidence_ids`, `counter_evidence_ids` y `uncertainty` como ARGUMENTOS de `flag_pattern_for_review` —no se puede emitir un juicio sobre un alumno sin citar evidencia, exhibir contra-evidencia y declarar incertidumbre— (**P203**, clase `GATE-IN-SIGNATURE`, **tendencia 136**). 🔴 **Y el contraejemplo entra en el MISMO pase:** `oliverhruby/edupage-mcp` (MIT, `HOLDER-MATCH`, 31 tools) escribe —mensajes, cambio de cuenta de alumno— **sin compuerta en código** y contra *«undocumented endpoints»*, lo que abre un SEGUNDO eje de evaluación que la columna Licencia no ve (**P204**, **tendencia 137**). 🔴 **La capa de SIS entra medida y está dominada por copyleft fuerte** —ClassroomIO AGPL-3.0, Gibbon GPL-3.0, y la única permisiva (Fedena) sólo medible en un ESPEJO porque el repo que la fuente llama oficial da 404— (**tendencia 138**). ⚠️ **Dos candidatas RECHAZADAS: `YeetingWaterbottle/canvas-mcp` es un fork con `LICENSE` byte a byte idéntico al upstream ya presente, y `hesham0-0nasser/tutor-lms-mcp` es un árbol real SIN cesión.** ⚠️ **Barrido regional completo: EMEA 2 piezas, NA 0, APAC 0, LATAM 0 —declarado, no tapado— (**tendencia 139**). 🔴 **`api.github.com` y `github.com` dieron 403 todo el pase: las licencias salen de `raw.githubusercontent.com`.**
 > **Pase 69 del 2026-10-03:** 🔴 **La acción 1 CIERRA en su rama CARA, y lo primero que corrige es el denominador de la propia acción: la acción pedía «los 16 nombres» y los nombres de registro único son **13** —21 filas → 18 nombres, menos los 5 de doble registro del pase 68—. El «16» era un conteo de FILAS leído como conteo de NOMBRES.** 🔵 **Medidos los 13 con el canal que la acción exigía (pedir el repositorio declarado, no leerlo del manifiesto): **3 `IDENTITY-DECLARED` · 2 `IDENTITY-DECLARED-BUT-DEAD` · 3 `IDENTITY-PROVEN` · 5 `IDENTITY-UNKNOWN`**. 5 ≥ 3 → gana la rama cara: la columna *Identidad* es **CONDICIÓN** para publicar una fila de paquete y se escribe con el valor `desconocida`, nunca omitida** (**P192** cerrado). ⚠️ **5 de 13 NO es comparable con el «4 de 5» del pase 68: otro denominador (registro único vs. doble).** 🔴 **Y el hallazgo que acota un patrón de ayer: **el `sha256` del `LICENSE` NO prueba identidad cuando el texto no trae titular, y está DEMOSTRADO con una colisión de esta misma tanda** — `openedx-mcp` y `tutor-contrib-openedxmcp`, dos paquetes DISTINTOS, comparten `sha256:8d56b405468a` (34.524 B, AGPL-3.0 sin titular). 🔴 **Peor: quitarle el nombre del titular al `LICENSE` de `@yunmiao/studymate` (1.064 B, *Cattofu*) y al de `@schoolexl/mentor` (1.064 B, *CoreExL*) los vuelve **byte a byte** el de `opencode-sit` (1.056 B, `sha256:1126322e2cc8`), que dice *«Copyright (c) 2026»* **sin nombre** — o sea el caso ESTRELLA con el que **P193** se escribió ayer cae justo en la clase donde el hash prueba MENOS** (**P199**). 🟢 **El veredicto de ayer igual se sostiene, pero por otro instrumento: el `package.json` de `aemonge/opencode-sit` NOMBRA el paquete, y ése es un enlace de dos vías que el hash no es** (**P200**). 🟢 **Acción 3 EJECUTADA: el instrumento por archivo de **P186** existe y corrió sobre las 2 piezas de alcance declarado.** 🔴 **Y obliga una corrección que esta KB publica en CUATRO archivos: el titular de `INGInious` NO es `FSF → NOT-APPLICABLE`. El archivo `COPYRIGHTS` —622 B, que ningún instrumento de esta base había leído— dice *«Copyright (c) 2014-2026 Anthony Gégo, Guillaume Derval and Pierre Reinbold»*** (**P197** gana una capa). ⚠️ **Y el alcance de `INGInious` NO se puede cerrar: el propio proyecto declara que hay archivos de terceros con otras licencias y NO los enumera, así que «AGPL-3.0 entero» no es medible por ningún instrumento acotado** (**P201**). 🔴 **Acción 2 BLOQUEADA por egress en los dos canales (`standards.1edtech.org` y `www.imsglobal.org`: `403` por `curl`, `EGRESS_BLOCKED` por WebFetch), así que `1EdTech × documento` sigue **medido en 2 de 7** y se dice así cada vez, como el pase 68 exigió.** 🟢 **3 altas con licencia leída de primera mano, y una cierra un hueco de plataforma: **Brightspace/D2L** entra por fin a esta KB.**
 > **Pase 68 del 2026-10-03:** 🔴 **La acción 1 del pase 67 CIERRA en su rama CARA, y el defecto no es de dos filas: es de cómo esta KB transcribe un nombre de paquete.** Barridos los **5** nombres que viven en npm **y** PyPI —declarados antes de empezar: `canvas-lms-mcp`, `clawed`, `educhain`, `frappe-mcp-server`, `moodle-cli`—, **4 de 5 son dos ARTEFACTOS distintos** y sólo `moodle-cli` es un proyecto en dos canales. 🔵 **La hipótesis fijaba el corte en «más de 2» → se agrega la columna *Identidad*, NO la columna *Canal*** (**P192**). 🔴 **El caso que lo vuelve estructural: `canvas-lms-mcp` son DOS proyectos REALES, los dos en GitHub, los dos con el mismo nombre —`bruchris` (165 tools, TS, titular *Christian Bru*, 1.070 B) y `ahnopologetic` (minimal, titular *Canvas LMS MCP Server Contributors*, 1.091 B)—, separados por `sha256` distinto.** 🟢 **Y la identidad se puede PROBAR cuando el registro no la declara: `opencode-sit` no publica `repository`, y el `LICENSE` del repo `aemonge/opencode-sit` es byte a byte el del tarball (1.056 B, `sha256:1126322e…`), así que el hash que esta KB usa para SEPARAR forks también sirve para UNIR un paquete a su árbol** (**P193**). ⚠️ **Las cuatro búsquedas globales obligatorias volvieron a devolver el eje generalista agotado —openclaw, browser-use, AutoGen, CrewAI— y NINGUNA alta educativa salió de ellas, por segundo pase consecutivo.** 🔴 **Y el hallazgo que esta KB se hace a SÍ MISMA: una corrección del pase 52 fue REGRESADA en el pase 66 —`@eduware/oneroster` volvió a `MIT` porque un instrumento nuevo preguntó por el CAMPO del registro donde el viejo había leído el PAYLOAD—, así que una corrección sobrevive sólo si el instrumento que re-mide la conoce** (**P197**). Ver las tendencias **530**–**547**.
@@ -239,6 +240,66 @@ updated: 2026-10-03
 > fila** —`lineage-skill`, con un vocabulario cerrado de 9 valores por afirmación, **4 de los 9 «esto lo produjo el
 > modelo»**— y **ninguna de las dos sabe de la otra**. Ver la capa nueva al final de este archivo, las tendencias
 > **180**–**182** y el patrón **P99**.
+
+## 🧭 El ACTOR es un segundo eje, y está INVERTIDO respecto de la compuerta — además LATAM y APAC vuelven a la capa de código en el mismo pase (pase 72 del 2026-10-03)
+
+### 🟢 Las altas del pase, con licencia medida por PAYLOAD
+
+| Pieza | Repo | Licencia (**medida**: bytes + `sha256` + titular) | ★ | Región | Qué es, y en qué peldaño de ACTOR |
+|---|---|---|---|---|---|
+| 🟢 **usp-mcp** | [`iDavi/usp-mcp`](https://github.com/iDavi/usp-mcp) | 🔴 **GPL-3.0**, **35.148 B** — texto íntegro; titular = *steward*, ⚠️ `NOT-APPLICABLE` (**P184**) | 5 ★ / 0 forks / 4 commits | 🟢 **LATAM** (Brasil) | Sistemas estudiantiles de la **USP**: e-Disciplinas (Moodle), JupiterWeb, notas, faltas, grade horária, planner. **Actor `A1`**; escritura acotada al planner (`create_task`, `update_task_status`) y a `moodle_download_file` (≤ 10 MB). 🟢 **Única pieza del inventario que NO manda la contraseña institucional en claro** (**P213**) |
+| 🟢 **heidy_backend** | [`iDavi/heidy_backend`](https://github.com/iDavi/heidy_backend) | 🔴 **GPL-3.0**, **35.148 B** | 1 ★ / 0 forks / 52 commits | 🟢 **LATAM** (Brasil) | Capa de acceso de la anterior: *vault* de credenciales (`HeidyApi.Credentials.Vault.Local`, módulo **Elixir**) y proxy a Moodle/JupiterWeb. ⚠️ **Dependencia obligatoria: `usp-mcp` no corre sin un backend Heidy** |
+| 🟢 **TechMCP** | [`codit04/TechMCP`](https://github.com/codit04/TechMCP) | **MIT**, **1.063 B**, `Copyright (c) 2025 codit04` → 🟢 **`HOLDER-MATCH`** | 4 ★ / 3 forks / 26 commits | 🟢 **APAC** (India) | Portal e-campus del **PSG College of Technology** (Coimbatore): notas CA1/CA2, asignaciones, tutoriales, asistencia con *bunk calculator*, horario del día/semana. **Actor `A1`** (nº de matrícula + contraseña del propio alumno en `config.json`). 🔴 **Sólo lectura: ninguna tool escribe** |
+| 🟢 **infinitecampus-mcp** | [`chrischall/infinitecampus-mcp`](https://github.com/chrischall/infinitecampus-mcp) | **MIT**, **1.066 B**, `Copyright (c) 2026 Chris Hall` → 🟢 **`HOLDER-MATCH`** | 4 ★ / 1 fork / **320 commits** | **North America** | **Infinite Campus** (Campus Parent), **20 tools** en 8 dominios. **Actor `A1`**; el único tool de escritura/IO es `ic_download_document`. 🔴 **Camino de auth nº 2 = extensión de navegador que lee la cookie **HttpOnly** `JSESSIONID`** — clase (b) del pase 53, empaquetada |
+
+### 🧭 El eje nuevo: ¿de dónde sale el ACTOR? (**P212**)
+
+El pase 71 escribió su propia cota sobre `bb-mcp` —*«la política se hace cumplir, la IDENTIDAD no
+se autentica»*—. 🟢 **Medido en siete piezas, no es un defecto de una pieza: es un eje, y el hueco
+es del PROTOCOLO.** `src/auth.ts` de `bb-mcp` lo dice: *«The MCP spec does not define end-user
+identity (that lives in the calling client).»*
+
+| | Clase | Ejemplar | La línea que decide |
+|---|---|---|---|
+| **A1** | 🟢 `ACTOR-FROM-UPSTREAM-SESSION` | `blackboard-mcp` · `infinitecampus-mcp` · `TechMCP` | el actor es el dueño de la credencial; **el upstream decide sus derechos** y la llamada no lo puede cambiar |
+| **A2** | 🟢 `ACTOR-FROM-LOCAL-CONFIG` | `attendai` | fijado al desplegar y **un `teacher_id` en conflicto en la llamada SE RECHAZA** |
+| **A3** | 🔴 `ACTOR-FROM-CALL-ARGUMENT` | `bb-mcp` | `caller_identity` **requerido en cada llamada** — lo declara el cliente |
+| **A4** | 🔴 `NO-ACTOR-MODELLED` | `peancor/moodle-mcp-server` | un `MOODLE_API_TOKEN` de sitio hace todo; el **sujeto** es argumento y no hay actor |
+
+⚠️ **Sub-caso registrado, no forzado:** `oliverhruby/edupage-mcp` trae credencial upstream real
+(fuerza A1) **pero llega en una llamada** y `switch_to_student` **cambia el actor a mitad de sesión
+sin re-autenticar**. El peldaño solo no describe la pieza.
+
+### 🔴 El cruce con la escalera del pase 71, que es lo que cotiza
+
+| Pieza | Compuerta (**P207**) | Actor (**P212**) |
+|---|---|---|
+| `SwarupRock/attendai` | 🟢 **1** `GATE-IN-SIGNATURE` | 🟢 **A2** — **la única fuerte en los dos ejes** |
+| `nitsuah/bb-mcp` | 🟢 **2** `GATE-IN-HANDLER` | 🔴 **A3** — la política más rica, contra un actor declarado por el cliente |
+| `felipedias-ie/blackboard-mcp` | 🔴 **3** `GATE-IN-ENV-FLAG` | 🟢 **A1** — la compuerta más débil que igual es código, con el actor más fuerte |
+| `peancor/moodle-mcp-server` | 🔴 sin compuerta | 🔴 **A4** — el único donde los dos ejes coinciden, y coinciden abajo |
+
+🔵 **Misma anti-correlación que el pase 55 sobre otro par de ejes. No hay una pieza para
+recomendar: hay una COMPOSICIÓN** (**P214**).
+
+### 🔴 Cuatro candidatas que NO entran, con el motivo medido
+
+| Candidata | Lo medido (matriz de **28** nombres, 3 cajas, árbol alcanzable) | Veredicto |
+|---|---|---|
+| [`plyght/studentvue`](https://github.com/plyght/studentvue) | biblioteca **Rust** + MCP sobre StudentVue (notas, asistencia, mensajes). **404 en los 28 nombres**; árbol alcanzable vía `README.md` | 🔴 **`NO-CESSION`** |
+| [`poorvika12-hub/student_mcp`](https://github.com/poorvika12-hub/student_mcp) | GPA, asistencia con detección de faltante, reglamento del college. **404 en los 28**; árbol alcanzable. ⚠️ **Habría sido una SEGUNDA pieza APAC** | 🔴 **`NO-CESSION`** |
+| [`moarshy/mcp-tutor`](https://github.com/moarshy/mcp-tutor) | tutor que ingiere repos de documentación (4 tools + 6 prompts, DSPy). **404 en los 28**; árbol alcanzable | 🔴 **`NO-CESSION`** |
+| [`Sadaf987/github_sdk`](https://github.com/Sadaf987/github_sdk) | el canal lo presentó como *«school attendance MCP»*; es un SDK de GitHub con tools de asistencia pegadas. **404 en los 28** | 🔴 **`NO-CESSION`** |
+
+### ⚠️ Canales que fallaron o no rindieron en este pase
+
+- 🔴 **Quinto pase consecutivo sin una sola alta educativa desde `top open source AI agents …` y
+  `github trending …`.** Las cuatro altas salieron de consultas **por función** y **por país en el
+  idioma del país**.
+- ⚠️ **`api.github.com` y `github.com`: `403` por el proxy, todo el pase.** Todo el código leído y
+  todas las licencias salen de `raw.githubusercontent.com`; estrellas y commits, de WebFetch.
+- ⚠️ **`unu.edu`, `ess.iesalc.unesco.org`, `timeshighereducation.com`: `EGRESS_BLOCKED`.** Las
+  cifras de UNESCO-IESALC quedan por snippets concordantes, declarado en `intel/market.md`.
 
 ## 🪜 La compuerta de ESCRITURA deja de ser un sí/no: es una ESCALERA de cuatro peldaños y el peldaño se lee en el CÓDIGO (pase 71 del 2026-10-03)
 

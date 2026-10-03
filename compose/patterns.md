@@ -100,12 +100,136 @@ updated: 2026-10-03
 > inferidas), **P51** (el conector MCP de Moodle que no existe, construido sobre el patrón del que sí existe para
 > Canvas), **P52** (la capa agéntica de biblioteca sobre el bus de Kafka de FOLIO, Apache-2.0) y **P53** (*early warning*
 > con humano decidiendo, que es el único envoltorio facturable de la capa predictiva en las cuatro regiones).
+> **Pase 72:** **+4 patrones.** 🧭 **P212** (el ACTOR es un eje independiente de la compuerta de **P207**, con cuatro clases leídas en código —A1 upstream · A2 config local · A3 argumento de la llamada · A4 sin actor— y el hueco es del PROTOCOLO). 🔗 **P214** (RECETA: las dos escaleras están anti-correlacionadas, así que no hay pieza para recomendar — se compone actor de `blackboard-mcp` + política de `bb-mcp` + compuerta en la firma de `attendai` + sobre de `usp-mcp` + expediente de `infinitecampus-mcp`, las cinco MIT o GPL, **4-6 semanas** el núcleo). 🧪 **P213** (un sobre de credencial se evalúa por lo que su AEAD CUBRE y por si su *key schedule* es estándar, con control negativo). 🔁 **P211** (una corrección de instrumento se publica con el ALCANCE medido — el control positivo es lo que lo mide, y mirar CON QUÉ NOMBRE resuelve es la prueba).
 > **Pase 25:** +2 patrones — **P48** (del acervo QTI viejo a la aserción de competencia: migración → banco de ítems →
 > entrega **certificada** → evidencia xAPI filtrada → competencia en CaSS, **todo MIT/Apache-2.0**) y **P49** (integridad
 > de examen **sin** AI de vigilancia, que saca el entregable del **Annex III** en vez de buscar la pieza de proctoring que
 > no existe en open source permisivo).
 > **Pase 11:** +2 patrones — **P25** (riesgo de abandono conforme al Anexo III, la capa con presupuesto ya asignado y sin oferta open source) y **P26** (agente docente sobre la ontología curricular nacional ya publicada).
 > **Pase 27:** **+4 patrones y una corrección.** 🔴 **P51 queda con premisa falsa** —el conector MCP de Moodle **sí existe y es MIT**— y lo reemplazan **P54** (corrección y devolución sobre Moodle con **compuerta humana**, el último tramo del gap 6, con piezas que ya escriben), **P55** (el conector de **Open edX**, que es el único que de verdad no existe), **P56** (**SCORM** como formato de salida de la capa generativa: cero integración, offline) y **P57** (evidencia por MCP cotizada sobre lo que CaSS **realmente** expone — 6 de 61 operaciones, con insignias y autoría de marcos **fuera**).
+
+## 🧭 P212 — El ACTOR es un eje independiente de la compuerta, y se lee en el código con cuatro clases (pase 72 del 2026-10-03)
+
+**P207** mide **qué** se niega el servidor a hacer. **No dice para QUIÉN.** El pase 71 escribió esa
+cota sobre su propio mejor ejemplar y este patrón la convierte en eje medible.
+
+**El hueco es del protocolo, y lo escribe la pieza que peor sale en él** —`src/auth.ts` de
+`nitsuah/bb-mcp`—:
+
+> *«The MCP spec does not define end-user identity (that lives in the calling client).»*
+
+| | Clase | Qué significa | Ejemplar medido | La línea que decide |
+|---|---|---|---|---|
+| **A1** | `ACTOR-FROM-UPSTREAM-SESSION` | el actor es el dueño de la credencial guardada; **el upstream decide sus derechos** y la llamada no puede nombrar otro | `felipedias-ie/blackboard-mcp` | `src/server.ts:39` — *«access for the **signed-in** student or instructor»*; sesión abierta fuera de banda |
+| **A1** | idem | idem | `chrischall/infinitecampus-mcp` | `README.md:61` — *«accesses **your own** Campus Parent account … scoped to the student records your district has authorized»* |
+| **A1** | idem | idem | `codit04/TechMCP` | `README.md:73` — `"roll_number"` + contraseña **del propio alumno** |
+| **A2** | `ACTOR-FROM-LOCAL-CONFIG` | fijado al desplegar, **pinneado del lado del servidor**, conflicto en la llamada **rechazado** | `SwarupRock/attendai` | `README.md:275` — *«Client-supplied `teacher_id` that **disagrees with the session is rejected**»* |
+| **A3** | `ACTOR-FROM-CALL-ARGUMENT` | el llamador **declara** quién es en cada llamada | `nitsuah/bb-mcp` | `src/auth.ts:7` — *«A **required `caller_identity` parameter** on every tool call»* |
+| **A4** | `NO-ACTOR-MODELLED` | una credencial de **sitio** hace todo; el **sujeto** es argumento y **no hay actor** | `peancor/moodle-mcp-server` | `src/index.ts:14` — `MOODLE_API_TOKEN` + `args.studentId` |
+
+⚠️ **Sub-caso que NO entra en un peldaño y se registra como tal:** `oliverhruby/edupage-mcp` trae
+credencial upstream **real** (fuerza A1) **pero llega en una llamada** (`login`,
+`login_from_session` con `PHPSESSID`) y `switch_to_student` **cambia el actor a mitad de sesión sin
+re-autenticar**. **El peldaño solo no describe la pieza; el *switch* sí.**
+
+**Cómo se usa en una evaluación:** la pregunta no es *«¿tiene control de acceso?»* sino **«si el
+cliente MCP miente sobre quién es, ¿qué lo detiene?»**. En A1 lo detiene el upstream; en A2, el
+servidor; en A3, **nada**; en A4 la pregunta ni siquiera aplica, porque todo ocurre como el sitio.
+
+Instrumento: `compose/code/p212-actor-binding/bind_axis.sh` (7 filas, cada una con archivo y línea).
+
+## 🔗 P214 — RECETA: por qué no hay una pieza para recomendar, y cómo se compone la que falta (pase 72 del 2026-10-03)
+
+**El problema, medido y no argumentado.** Cruzados **P207** (compuerta) y **P212** (actor), las
+piezas de esta capa están **anti-correlacionadas**: la de política más rica acepta la identidad
+como argumento; la del actor más fuerte tiene la compuerta más débil.
+
+| Pieza | Compuerta | Actor | Lo que le falta |
+|---|---|---|---|
+| `nitsuah/bb-mcp` (MIT) | 🟢 **2** `GATE-IN-HANDLER`: tabla `Readonly` con denegación por omisión, FERPA, derecho de curso contra el upstream vivo, auditoría en concesión **y** en denegación | 🔴 **A3** | **a quién creerle** |
+| `felipedias-ie/blackboard-mcp` (MIT) | 🔴 **3** `GATE-IN-ENV-FLAG` | 🟢 **A1**: sesión abierta por CLI fuera de banda | **qué negar** |
+| `SwarupRock/attendai` (MIT) | 🟢 **1** `GATE-IN-SIGNATURE` | 🟢 **A2** | nada en estos dos ejes — ⚠️ pero es una pieza de **1 ★ y 1 commit** sobre un portal *mock* |
+
+**La receta: no elegir, componer.** Las tres son MIT, así que la composición es legal sin fricción.
+
+1. **El actor lo establece el upstream, nunca la llamada.** Tomar el patrón de
+   `blackboard-mcp`: login fuera de banda (`auth login`), sesión en el *state dir*, y el servidor
+   **no acepta ningún parámetro de identidad**. 🔴 **Si una tool tiene un argumento de identidad,
+   la composición ya falló** — es el defecto A3 reintroducido.
+2. **La política se evalúa contra ESA sesión, con el código de `bb-mcp`.** Su `checkAuthorization`
+   + `checkCourseEntitlement` + auditoría se reutilizan tal cual; **lo único que se cambia es de
+   dónde sale `CallerIdentity`: del `caller_identity` del argumento pasa a derivarse de la sesión
+   upstream.** 🟢 **Es un cambio de una función, no un rediseño: la tabla `TOOL_ROLE_RULES`, la
+   denegación por omisión y el *rate limit* por rol quedan intactos.**
+3. **La mutación se cierra en la FIRMA, con el patrón de `attendai`.** `confirm` como parámetro con
+   default `false` y *dry-run* que devuelve exactamente a quién afectaría, **antes** de cualquier
+   escritura. 🔵 **Esto es lo que vuelve auditable el paso 2: la auditoría registra la intención y
+   el commit por separado.**
+4. **La credencial no viaja en claro, con el patrón de `usp-mcp`.** El *vault* publica una clave, el
+   cliente sella, el *vault* abre. ⚠️ **Reimplementar, no copiar: no es RFC 9180** (**P213**) — y
+   **atar los metadatos del sobre al AEAD**, que es exactamente la cota D1.
+5. **El expediente viaja en el repo, con el patrón de `infinitecampus-mcp`.** Términos citados
+   textual, fecha de lectura, FERPA/COPPA nombrados, y la admisión explícita de qué endpoints se
+   usan y con qué estatus. 🔵 **En EMEA es insumo del Anexo III; en NA es el argumento de riesgo
+   institucional que reemplaza al mandato que no existe** (tendencia 566).
+
+**Qué se cotiza.** Pasos 1-3 sobre un LMS ya cubierto (Blackboard, Canvas, Moodle): **4-6 semanas**,
+porque el código de los tres existe y es MIT. Paso 4: **3-4 semanas** más si el cliente exige
+*vault* propio. Paso 5: **días**, y es el que más mueve una decisión de compra.
+
+🔴 **Lo que NO entrega esta receta, dicho antes de que lo pregunten:** no autentica al humano. **A1
+hereda la autenticación del LMS; si el LMS la tiene débil, la composición entera la hereda.**
+La receta cierra el hueco **entre** el cliente MCP y el servidor, no el de la institución.
+
+## 🧪 P213 — Un sobre de credencial se evalúa por lo que su AEAD CUBRE y por si su *key schedule* es estándar, no por la sigla del README (pase 72 del 2026-10-03)
+
+**De dónde sale.** `iDavi/usp-mcp` es la primera pieza del inventario que no manda la contraseña
+institucional en claro, y lo documenta en una línea: *«HPKE-Base(X25519, HKDF-SHA256,
+AES-256-GCM)»*. **Leído el código, la línea es más fuerte que lo implementado — en dos ejes que hay
+que preguntarle a cualquier sobre, no sólo a éste.**
+
+| Eje | La pregunta | Lo medido en `usp-mcp` | Por qué cotiza |
+|---|---|---|---|
+| **Alcance del AAD** | ¿qué campos del sobre quedan atados al *ciphertext*? | 🔴 el *additional data* es la **constante** `HKDF_INFO`: **`key_id` y `encrypted_at` no están atados** — reescritos los dos, el tag verifica | decide si se puede poner un **relay** en ese camino |
+| **Estándar del *schedule*** | ¿es RFC 9180 o tiene forma de HPKE? | 🔴 extract-and-expand de **un bloque con salt CERO**, sin `suite_id`, sin `"HPKE-v1"`, sin `psk_id_hash` ni `info_hash` | decide si el cliente se **reimplementa** o se toma de una biblioteca |
+| **Reposo vs tránsito** | ¿dónde está la contraseña cuando nadie se loguea? | ⚠️ `HEIDY_USERNAME`/`HEIDY_PASSWORD` permiten dejarla **en claro en el entorno** | es la conversación de **LGPD/GDPR**, y el sobre no la cubre |
+| **Residencia** | ¿quién tiene la clave de desencriptado? | ⚠️ el backend por omisión es **un tercero sobre fly.io** | decide si la institución puede adoptarlo **tal cual** |
+
+🟢 **Control negativo, obligatorio para que el patrón no se lea como alarma:** volteado **un bit**
+del *ciphertext*, falla con `InvalidTag`. **El AEAD está intacto donde aplica; lo que se mide es su
+ALCANCE.**
+
+Instrumento: `compose/code/p213-envelope-aad/test_envelope.py` (13 checks, control positivo y
+negativo, fuente vendorizada con `sha256`).
+
+## 🔁 P211 — Una corrección de instrumento se publica con el ALCANCE medido, y el control positivo es lo que lo mide (pase 72 del 2026-10-03)
+
+**El caso.** El pase 71 encontró un defecto real de caja y lo extendió a toda la base: *«todo
+veredicto `NO-CESSION` queda condicionado por la caja»*. **Medido: el instrumento que produjo la
+población grande de ausencias (P170) ya probaba minúsculas. La corrección se había generalizado de
+más.**
+
+**El procedimiento que queda escrito, y que vale para cualquier corrección de instrumento de esta
+base:**
+
+1. **Enumerar la población afectada antes de declarar el alcance.** No *«todo lo publicado»*:
+   la lista de filas, con el instrumento que las produjo.
+2. **Comparar la lista de sondas del instrumento viejo con la del nuevo.** Si el nombre que habría
+   flipeado ya estaba, **ese instrumento nunca estuvo condicionado** — y decirlo es parte de la
+   corrección.
+3. **Correr la re-medición igual, para CERRAR en vez de acotar.** 32 filas × 28 nombres × 3 cajas:
+   **32 de 32 se sostienen, 0 flips.** Los veredictos pasan de *condicionados* a **cerrados**.
+4. **Control positivo en la misma corrida, y mirar CON QUÉ NOMBRE resuelve.** Los cuatro controles
+   resolvieron con nombres **ya presentes** en la lista vieja — **esa es la prueba del punto 2, no
+   un adorno.**
+5. **Marcar cada *flip* con su causa.** El TSV distingue `FLIP-BY-CASE` de `FLIP-NOT-CASE`, para que
+   un *flip* futuro no se atribuya a la caja por defecto.
+
+🔵 **La regla general: un defecto afirma cobertura que no existe; una corrección sobre-generalizada
+afirma duda que no existe. Las dos desinforman, y la segunda además gasta pases re-midiendo lo
+cerrado.**
+
+Instrumento: `compose/code/p211-case-retro-sweep/`.
 
 ## 🪜 P207 — La compuerta de ESCRITURA es una ESCALERA de cuatro peldaños, y el peldaño se lee en el CÓDIGO (pase 71 del 2026-10-03)
 
@@ -3679,6 +3803,7 @@ Enumeradas las dos superficies, **la ruta MPL cuesta más código** — y **el L
 > cotiza:** son el **22-23 %** de cada clase de referencia. **Para presupuestar, usar P94, no esta tabla.**
 
 | Punto de integración | 🟢 Apache-2.0 (*carve-out*) | ⚠️ MPL-2.0 |
+|---|---|---|
 | Registro | *entry point* | 🟢 inyección de Spring, **sin tocar la fábrica** |
 | 🟢 **Divulgación obligatoria** | 🟢 ninguna | 🟢 **un valor de enum** (1 archivo *Covered*) |
 | Tu código | propietario | 🟢 propietario (archivo nuevo) |

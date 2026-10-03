@@ -8,6 +8,101 @@ updated: 2026-10-03
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 
+## 2026-10-03 — pase 72: la advertencia de caja del pase 71 era DEMASIADO AMPLIA — re-medidas las 32 ausencias publicadas en las tres cajas, las 32 se sostienen, y el instrumento que las produjo nunca había sido ciego a la caja
+
+### 🔴 Lo primero, porque corrige al pase que pidió esta medición
+
+El pase 71 descubrió que `raw.githubusercontent.com` es **case-sensitive**, corrigió dos
+`NO-CESSION` falsos (`frappe/education`, `frappe/erpnext`) y escribió una advertencia general:
+
+> ⚠️ *«todo veredicto `NO-CESSION` / `UNLICENSED` que esta base publicó salió de un sondeo en
+> mayúsculas, así que cada uno queda CONDICIONADO POR LA CAJA»*
+
+🔴 **Medido hoy, esa frase era más ancha que el defecto. P170 —el instrumento que produjo la
+población grande de ausencias— sondeaba 14 nombres y TRES ya eran minúscula** (`license`,
+`license.md`, `license.txt`), **más `LICENCE` y `LICENCE.md`. Nunca fue «un sondeo en
+mayúsculas».** 🔵 **El que sí lo era, y por eso fabricó las dos lápidas, fue la PRIMERA corrida de
+P206 — una sola corrida de un solo pase, no la serie entera.**
+
+🔵 **Es un defecto de la misma familia que el pase 71 estaba corrigiendo, una vuelta más arriba:
+generalizar una corrección sin medir su alcance deja la base igual de mal informada que el defecto
+original — sólo que en la dirección contraria.** ⚠️ **Una base que se declara condicionada donde no
+lo está gasta pases re-midiendo lo que ya estaba cerrado.**
+
+### 🟢 Y la re-medición se corrió igual, porque la condición había que CERRARLA, no sólo acotarla
+
+**P211** (`compose/code/p211-case-retro-sweep/`) barrió las **32 filas** que P170 devolvió como
+`UNLICENSED`, con **28 nombres** y, por primera vez, **las tres cajas** (UPPER / lower / Title) para
+cada raíz, más `copying` / `Copying` / `Copying.txt` y `COPYRIGHT`.
+
+**Hipótesis falsable, escrita antes de correr:** *si el defecto de caja es general, al menos una de
+las 32 vuelve `LICENSED`; si era específico del corte de ERP, las 32 se sostienen.*
+
+🟢 **Resultado: 32 de 32 se sostienen. 0 flips.** Las 32 pasan de **condicionadas** a **cerradas**.
+
+🟢 **Control positivo, en la misma corrida — y es el que prueba la corrección de arriba:** los
+cuatro casos que debían resolver resuelven, y **los cuatro resuelven con nombres que ya estaban en
+la lista de P170.**
+
+| Control | Archivo que resolvió | Bytes | Familia | ¿Estaba en la lista de P170? |
+|---|---|---|---|---|
+| `frappe/education` | `license.txt` | ⚠️ **19** | `UNCLASSIFIED` — los 19 bytes son `License: GNU GPL V3` (**P168**) | 🟢 **sí** |
+| `frappe/erpnext` | `license.txt` | 35.148 | GPL-3.0 | 🟢 **sí** |
+| `moodle/moodle` | `COPYING.txt` | 35.146 | GPL-3.0 | 🟢 **sí** |
+| `buriro-ezekia/mwalimulens-agent` | `LICENSE` | 11.356 | Apache-2.0 | 🟢 **sí** |
+
+🔵 **El control de `frappe/education` vuelve a exhibir, de paso, la asimetría que el pase 71
+levantó y que ninguna columna de licencia muestra: dentro de la MISMA organización, `frappe/hrms`
+embarca 34.916 B de texto GPL-3.0 íntegro en `license.txt`, y `frappe/education` —el módulo
+EDUCATIVO, el que importa acá— embarca 19 bytes que NOMBRAN la licencia sin concederla.** Mismo
+org, mismo nombre de archivo, misma caja. **La caja nunca fue la variable; la PROFUNDIDAD DEL
+PAYLOAD sí.**
+
+### 🟢 La capa de código vuelve a LATAM, y vuelve con dos repos acoplados
+
+Tres pases sin una pieza de código LATAM. 🟢 **Entran dos, y hay que leerlas juntas porque una no
+corre sin la otra:**
+
+| Repo | Licencia (**medida**) | ★ / commits | Qué aporta |
+|---|---|---|---|
+| [`iDavi/usp-mcp`](https://github.com/iDavi/usp-mcp) | 🔴 **GPL-3.0**, 35.148 B (texto íntegro) | 5 ★ / 4 commits | MCP sobre los sistemas estudiantiles de la **Universidade de São Paulo**: e-Disciplinas (Moodle), JupiterWeb, notas, faltas, grade horária, planner |
+| [`iDavi/heidy_backend`](https://github.com/iDavi/heidy_backend) | 🔴 **GPL-3.0**, 35.148 B | 1 ★ / **52 commits** | La **capa de acceso**: *vault* de credenciales y proxy a Moodle/JupiterWeb. El nombre de módulo que cita el cliente —`HeidyApi.Credentials.Vault.Local.hkdf/2`— es **Elixir** |
+
+🔴 **Las dos son GPL-3.0, que para la capa de FUNDACIÓN de esta base es la señal que importa:** no
+es `NO-CESSION` —hay texto íntegro y hay derecho de uso— pero **sí es copyleft fuerte sobre el
+camino crítico**, y el camino crítico acá incluye el backend. 🔵 **Para Globant eso ordena la
+cotización de una manera concreta: se puede DESPLEGAR y OPERAR (y contribuir), no se puede
+empaquetar derivado cerrado.** ⚠️ **Es, además, el **tercer** par consecutivo de piezas
+institucionales donde el copyleft gana: ClassroomIO AGPL-3.0 y Gibbon GPL-3.0 en el pase 70, la
+capa de ERP en el 71, y hoy la capa de SIS brasileña.**
+
+### 🔵 El reparto de licencias de las altas de este pase, contra el acumulado
+
+| Pase | Altas | Permisivas (MIT/Apache/BSD) | Copyleft | Sin cesión |
+|---|---|---|---|---|
+| **72 (hoy)** | **4 entran · 4 rechazadas** | **2** (TechMCP, infinitecampus-mcp) | **2** (usp-mcp, heidy_backend) | **4** (`plyght/studentvue`, `poorvika12-hub/student_mcp`, `moarshy/mcp-tutor`, `Sadaf987/github_sdk`) |
+| 71 | 4 entran · 5 fuera | 4 | 0 | 3 |
+| 70 | 2 entran · 2 fuera | 2 | 0 | 1 |
+
+🔴 **Ocho piezas medidas, cuatro entran: la tasa de rechazo por falta de cesión se sostiene arriba
+del 40 % tres pases seguidos.** 🔵 **Eso ya no es ruido de muestreo: es el estado de la capa.
+Cualquier plan que suponga «buscamos un MCP educativo y lo usamos» tiene que presupuestar que **una
+de cada dos piezas encontradas no se puede entregar**, y presupuestar la MEDICIÓN, no la búsqueda.**
+
+### ⚠️ Lo que NO rindió en la capa de repos, dicho explícitamente
+
+- ⚠️ **`open source platform education ERP CRM MIT Apache`, undécimo colapso.** El canal devolvió
+  la misma página de glosario de OpenEduCat en **seis idiomas** (`es`, `fr`, `ar`, `zh`, `pt-BR`,
+  raíz) y, como novedad, **CK-ERP** — cuyo anuncio más reciente localizado es de **julio de 2010**
+  sobre **Drupal 6.17**. 🔵 **Se registra con su fecha para que el próximo pase no lo levante como
+  hallazgo.**
+- 🔴 **El canal de `github trending` no entregó un solo repo educativo por quinto pase.** Lo que
+  devolvió —`rohitg00/ai-engineering-from-scratch`, `speedyapply/2026-AI-College-Jobs`,
+  `avinash201199/free-ai-agents-resources`— es **material para aprender AI**, no **AI para
+  educación**. ⚠️ **La distinción lleva veinte pases siendo la misma y el canal sigue sin verla.**
+- ⚠️ **No se re-midieron estrellas de las filas viejas en este pase.** Las cifras de las altas son
+  de WebFetch de hoy; las del resto del archivo conservan la fecha con que entraron.
+
 ## 2026-10-03 — pase 71: la capa de ERP entra medida, confirma el veredicto de copyleft del pase 70 con denominador más grande, y entrega el hallazgo que ninguna columna de licencia muestra: permisividad y especificidad educativa están ANTI-correlacionadas
 
 ### 🔴 Lo primero, porque es una corrección de MÉTODO y condiciona veredictos ya publicados
