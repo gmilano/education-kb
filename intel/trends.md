@@ -7,6 +7,7 @@ updated: 2026-10-04
 # 📡 Tendencias — education
 
 > Ventana de investigación: septiembre 2026. Verificado 2026-09-30; el pase 11, el 2026-10-01.
+> **Pase 95 del 2026-10-04:** 🟢 **Ocho tendencias nuevas (737–744), y la que manda es una PREDICCIÓN PROPIA FALSIFICADA: el pase 94 pre-registró que ~28 de 200 filas tendrían por veredicto de licencia un hueco de nombre; medido sobre las 200, los huecos de `P279` fueron 0.** 🔵 **`P286`: extrapolar un reparto poblacional desde UN control positivo (1 de 7) no es una estimación, es una corazonada con tabla — y falló por un factor de ~28.** 🔴 **La segunda es peor que un número mal: una corrección verificada por tres canales NO VIAJÓ.** El diferimiento del Anexo III a 2027-12-02 (pase 58) dejó **13 de 87** afirmaciones huérfanas en los archivos publicados, entre ellas **la tendencia #75 de ESTE archivo, cuya tesis —«la demanda de conformidad en EMEA está *vencida*»— se INVIERTE** (`P284`, anotadas sin reescribir: **88 afirmaciones, 0 huérfanas**). 🟢 **La tercera es que la saturación regional dejó de ser un adjetivo: 27 hechos devueltos, 27 ya publicados, 0 nuevos, con la lista publicada** (`P287`) — y eso vuelve decidible cambiar el EJE de la consulta en vez de repetirla. 🟢 **Y el aporte durable: las 5 filas que el pase 65 corrigió A MANO ahora las deriva un instrumento (clase `SOLO_MANIFIESTO`), más 17 filas que ganan precisión de familia por reusar `lib/license_family.sh` en vez de reescribirlo (`P237`), con `oat-sa/tao-core` = GPL-2.0 como la consecuente.**
 > **Pase 94 del 2026-10-04:** 🟢 **Ocho tendencias nuevas, numeradas 729–736** (el pase 93 cerro en 728). 🔴 **729: el cero del barrido global pasa a tener DENOMINADOR — `agents-radar` #328, fechado el mismo dia, 47 repos, 0 de la industria educativa.** 🔴 **730: la etiqueta `[EDUCATION]` de los radares generalistas confunde dos industrias —AI como MATERIA que se enseña vs educacion como SECTOR que se sirve— y una base que la ingiere importa filas inutiles** (**P281**). 🔴 **731: el canal de verificacion que el encargo ordena esta muerto aqui (`curl -sI` sobre `github.com/` → 403 en 3/3, reproduce el pase 81) y el que rinde ENTREGA EL PAYLOAD.** 🔴 **732: el nombre del archivo de licencia es sensible a MAYUSCULAS y una lista fija de variantes siempre tiene hueco; el manifiesto lo NOMBRA** (**P279**). 🔴 **733: un manifiesto en la raiz puede describir a OTRO proyecto, y su campo `license` no es la licencia de la fila** (**P280**). 🔴 **734: la derivacion AGRAVA — un repo sin cesion propia que hereda un arbol OSL-3.0 es menos usable que uno simplemente sin licencia, porque el gatillo del copyleft es el despliegue externo y eso es lo que hace un LMS.** 🟢 **735: las 8 filas `SIN LICENCIA` de esta base aguantan un instrumento ~33× mas ancho, 8/8, con testigo de alcance previo al veredicto.** 🟢 **736: el canal regional de esta base rinde POLITICA, no CODIGO, y las cuatro regiones lo hicieron a la vez** (**P282**). 🔵 **El eje que cruza las ocho: siete de estas ocho son sobre el INSTRUMENTO, no sobre la industria —y eso es informacion sobre en que estado esta esta base: su cuello de botella ya no es encontrar repos, es no publicar mal los que tiene.**
 > **Pase 93 del 2026-10-04:** 🟢 **Ocho tendencias nuevas, numeradas 721–728** (el pase 92 cerro en 720). 🔴 **721: dos canales que sondean la MISMA lista de nombres no se validan entre si — el pase 92 declaro una cifra «confirmada por segunda mano» y la replica era circular, porque un sondeo de lista fija no puede discrepar de otro sondeo de la misma lista.** 🔴 **722: un conteo que sondea nombres esta acotado por la LISTA — el bucle del pase 92 gasto una consulta en `Ollama`, que no existe en Chamilo, y ninguna en `Claude`, que si: son 7 y publico 6.** 🔵 **723: el acierto de Moodle fue suerte del denominador** (sus 7 nombres reales caian dentro de la lista sondeada). 🟢 **724: «siete proveedores» y «siete empresas» son dos columnas, y la diferencia es una herencia de una linea.** 🔴 **725: el swap de proveedor no es propiedad de la plataforma sino del PAR (proveedor, tipo de servicio) — `document_process` lo implementa 1 de 7.** 🔴 **726: una capacidad configurada que no satisface su interfaz se pierde en SILENCIO** (`error_log` + `continue`, sin error en la interfaz). 🟢 **727: para sostener una ausencia en un arbol hay que ENUMERARLO, y un clon sin blobs lo hace en menos de un segundo — ILIAS pasa de *sostenido con limite* a ausencia CERRADA en cuatro refs.** 🔴 **728: el veredicto se seguia deduciendo de la FORMA DE UN NOMBRE, y este pase lo cometio dos veces en su propio instrumento** (el falso positivo de `ai` dentro de `Mail`/`MainMenu`/`ScormAicc`, que valia cinco entidades inventadas, y un centinela que colisiona con la ruta de la raiz del repo).
 > **Pase 91 del 2026-10-04:** 🟢 **Seis tendencias nuevas, numeradas 706–711** (el pase 90 cerró en 705). 🔴 **706: el pase que demostró que un conjunto de proveedores necesita REF publicó, en el mismo instrumento, SIETE veredictos de plataforma SIN REF** — el defecto que acababa de nombrar, una capa más abajo. 🔴 **707: puesto a prueba, el veredicto «Open edX no liga proveedor de modelo» es FALSO en las tres releases nombradas que un cliente corre y verdadero sólo en `master`.** 🔴 **708: y lo que trae es `openai==0.28.1`, SDK PRE-1.0, declarada DIRECTA en el core — tres respuestas distintas a «¿con qué SDK hablo?» según dónde caiga el cliente.** 🟢 **709: el defecto NO es universal — Canvas sobrevive en las 2 refs que resuelven, así que 1 de 2, y no se generaliza desde una muestra de dos.** 🔵 **710: un control de ref invariante al layout PASA exactamente cuando la ruta medida se rompió, así que «el control dio 200» no autoriza a leer un 404 como ausencia.** 🔵 **711: la matriz de proveedor por ref pasa de medición única a REPLICADA (6/6 exacto por un bucle distinto), que es la primera vez que una cifra de esta base se confirma por segunda mano.**
@@ -66,7 +67,7 @@ updated: 2026-10-04
 > **SDK** que declara MCP en una línea del README. **La puerta de agente ya no es un producto, es una *feature* del
 > SDK** (tendencia **73**), y eso deja mal medidas todas las ausencias declaradas por etiqueta. **QTI queda medido por
 > tres métodos** (ausencia real) y **CASE queda sin medir** por la **cuarta colisión de término** de esta KB
-> (**gap 51**). En EMEA **el Annex III dejó de ser una fecha: rige desde el 2026-08-02** y la demanda de conformidad
+> (**gap 51**). En EMEA **el Annex III dejó de ser una fecha: rige desde el 2026-08-02** y la demanda de conformidad ⏸️ **[P284 — corrección del pase 95: el **Anexo III autónomo** quedó diferido a **2027-12-02** por el *Digital Omnibus* / Reglamento (UE) 2026/1744 (verificado por tres canales en el pase 58). El **art. 50** NO fue tocado: su reloj sigue en **2026-08-02**.]**
 > está **vencida** (tendencia **75**). Se corrige la regla de estrellas: **los agregadores no inflan, atrasan**
 > (tendencia **76**). 🔵 **Hallazgo de método: `raw.githubusercontent.com` responde**, así que se puede leer código sin
 > clonar ni instalar — es lo que hizo posible medir Open edX. Ver la nota de método del pase 28.
@@ -109,6 +110,158 @@ updated: 2026-10-04
 > (tendencia 29), se abre el **gap 20** y se registran dos advertencias de verificación: los agregadores de estrellas
 > están mal por ~2× y **un 403 de `curl` no es un 404**. Ver la nota de método del pase 12.
 > **Pase 11:** el Digital Omnibus es derecho vigente (tendencia 25), aparece la capa predictiva y está vacía (tendencia 26), y se corrige un error de método de diez pasadas sobre licencias permisivas (tendencia 27).
+
+## 🟢 Tendencias 737–744 — pase 95 del 2026-10-04: el pase gasta su esfuerzo en una predicción PROPIA y la falsifica
+
+🔵 **Seis de las ocho son sobre el instrumento y el método, no sobre la industria — y el barrido
+regional explica por qué: 27 hechos devueltos, 0 nuevos.** Cuando el canal externo satura, lo único
+que queda por mejorar es cómo esta base sabe lo que cree saber.
+
+### 737 — 🔴 La predicción pre-registrada del pase 94 es FALSA, y el modo en que falló tiene nombre
+
+El pase 94 dejó una acción *«para que no se pueda eludir»*: re-barrer las **200 filas `org/repo`** de
+los pases 62/64 con un instrumento manifiesto-consciente, **con la predicción de que ~28 tendrían por
+veredicto un hueco de nombre y no un dato**. Se corrió sobre las 200
+(`compose/code/p283-manifest-named-license/`, **34/34** + 200/200 filas):
+
+| Lo predicho | Lo medido |
+|---|---|
+| ~28 de 200 filas con hueco de `P279` | 🔴 **0 de 200** |
+
+🔵 **El razonamiento era: «si `P279` se reparte como en el control positivo, 1 de 7».** El control
+positivo era **UNA** fila (`openedx/XBlock`, cuya extensión real es `LICENSE.TXT` y no `LICENSE.txt`).
+🔴 **`P286`: extrapolar un reparto poblacional desde UN control positivo no es una estimación, es una
+corazonada con tabla.** La tasa real de `P279` sobre todo lo que esta base barrió es **1 de 201**, y
+su único caso **ni siquiera está en esas 200 filas** — vive en `repos/foundations.md`.
+
+🟢 **Lo que no falla es el método de pre-registrar.** Falla extrapolar sin razón para creer que el
+control es representativo. **La lección es escribir la predicción como falsable y después DECIR que
+falló**, no dejar de predecir.
+
+### 738 — 🔴 Una corrección verificada por tres canales no viaja sola: 13 de 87 afirmaciones quedaron huérfanas
+
+El pase 58 verificó por **tres canales concordantes** que el *Digital Omnibus* corrió el **Anexo III
+autónomo** del AI Act de **2026-08-02** a **2027-12-02** (Consejo 2026-06-29, DOUE 2026-07-24,
+Reglamento (UE) 2026/1744) **y que el art. 50 no fue tocado**. Lo escribió en `agents/top.md`.
+
+| Medido sobre los 9 archivos publicados (`P284`) | n |
+|---|---|
+| afirmaciones que atan un deber de **alto riesgo** a **agosto de 2026** | **87** |
+| 🟢 acompañadas por el diferimiento a ≤6 líneas | **74** |
+| 🔴 **huérfanas** | 🔴 **13** |
+
+🔴 **La más grave es de ESTE archivo y es la tendencia #75**, cuyo título afirma que *«el Annex III
+dejó de ser una fecha: rige desde el 2026-08-02, y la demanda de conformidad en EMEA está **vencida**,
+no anticipada»*. **Con el diferimiento la tesis se invierte**: para el Anexo III autónomo la demanda
+vuelve a ser anticipada y vence el **2027-12-02**.
+
+🟢 **Se anotaron las 13 sin reescribir una palabra** (`agents/trending.md` es append-only por encargo,
+y las tendencias numeradas son registro histórico): cada una conserva su texto y gana la fecha nueva a
+la vista. Resultado: **88 afirmaciones, 0 huérfanas**.
+
+**`P284`**: *cuando una fecha regulatoria se corrige, la corrección hay que MEDIRLA en todas las
+afirmaciones que dependen de ella, no escribirla una vez. Si vive en un archivo y las demás no la
+ven, la base publica dos relojes y el cliente planifica con el viejo.*
+
+### 739 — 🔵 Y la mitad del control es el EXIMENTE: son dos relojes, y sólo uno se movió
+
+🔴 **El error simétrico —exigir el diferimiento en todas partes— habría sido igual de caro.** El
+*Omnibus* **no tocó el artículo 50**: para la **transparencia** (el marcado de contenido generado,
+que es exactamente lo que `compose/code/aiact-50-2-*` implementa) **agosto de 2026 sigue siendo la
+fecha correcta**.
+
+| Reloj | Vence | ¿Se movió? |
+|---|---|---|
+| **art. 50(2)**, transparencia / marcado | 🔴 **2026-08-02** | 🟢 **no** |
+| **Anexo III autónomo**, expediente de alto riesgo | **2027-12-02** | 🔴 sí, +16 meses |
+
+🟢 **La consecuencia comercial, que conviene decir sin ambigüedad: el reloj que vence ANTES es el que
+esta base ya puede entregar corriendo, y no es el que el mercado está cotizando.** Vender la auditoría
+de alto riesgo como *«vencida»* es vender contra una fecha que ya no existe.
+
+### 740 — 🟢 Nace una clase de licencia que el inventario necesitaba: `SOLO_MANIFIESTO`
+
+El barrido viejo sólo sabía decir *con archivo* / *sin archivo*. El nuevo distingue una tercera cosa,
+y son **5 filas** del inventario: **no hay archivo de licencia, pero el manifiesto del PROPIO proyecto
+declara una expresión** (`HKUDS/AI-Researcher`, `Timadey/proctor`, `ink-waffle/moodle-mcp`,
+`tejpalvirk/student`, `DMontgomery40/mcp-canvas-lms`).
+
+🔵 **Para Globant la distinción es comercial, no estética:** no es «sin licencia», es una cesión
+**defectuosa pero intencional** — hay a quién pedirle el `LICENSE` que falta y el manifiesto es
+evidencia de intención. `P179` ya separaba *identificador* de *cesión*; esta clase lo hace **medible**.
+
+⚠️ **Y una de las 5 sale `WEAK`, no `OWN`:** el `package.json` de `DMontgomery40/mcp-canvas-lms` se
+llama `canvas-mcp-server` y el repo `mcp-canvas-lms`. **Se atribuye con reserva, y la reserva vive en
+la columna.**
+
+### 741 — 🟢 El aporte durable del pase: una corrección a mano se convierte en CONTROL
+
+Las 5 filas de la tendencia 740 son **exactamente** las que el **pase 65 corrigió a mano**, leyendo
+manifiestos uno por uno. 🟢 **Treinta pases después, un instrumento las deriva solo.**
+
+🔵 **Es `P237` aplicado a sí mismo:** *una regla que hay que recordar no es un control.* Lo que vivía
+como memoria de un pase —y por tanto se vuelve a perder— ahora se re-deriva en cada corrida. **El
+criterio para saber si un pase aportó algo durable es éste: ¿lo que descubrió quedó como instrumento
+o como prosa?**
+
+### 742 — 🔴 El artefacto más NUEVO del repositorio puede ser el más viejo en contenido
+
+Veredicto de integridad del re-barrido: 🟢 **la tabla publicada estaba correcta en 200 de 200 filas.**
+Las 22 discrepancias son todas sitios donde **la tabla dice MÁS** que el instrumento.
+
+🔴 **Lo que estaba viejo era el archivo de RESULTADO** (`p170/result.2026-10-03.tsv`), que es el
+artefacto **más nuevo** del repositorio y en **10** de sus 200 filas dice **menos** que la tabla: 5
+«sin licencia» que son `SOLO_MANIFIESTO` y 4 `UNKNOWN` ya classificadas. **Quien ordene por fecha y le
+crea a la TSV antes que a la tabla se lleva datos falsos.**
+
+**`P285`**: *el resultado de un instrumento es una medición FECHADA, no un veredicto. Cuando el trabajo
+a mano lo supera, el archivo tiene que decirlo* — marca de supersesión ya puesta.
+
+### 743 — 🟢 Reusar el classificador compartido corrige 17 filas, y una decide un fork
+
+El instrumento nuevo **no trae classificador propio: sourcea `lib/license_family.sh`** (`P237`), que
+classifica por **bloque de título** y no por el cuerpo (`P171`). Eso convierte **12** `GPL` genéricos
+en su versión y classifica **4** `UNKNOWN`:
+
+| Fila | Viejo | Hoy |
+|---|---|---|
+| `oat-sa/tao-core` | `GPL` | 🔴 **`GPL-2.0`** |
+| `kaldi-asr/kaldi` | `UNKNOWN` | **`Apache-2.0`** |
+| `trilogy-group/oneroster-ts` | `UNKNOWN` | 🟢 **`0BSD`** |
+| `nmarafo/OpenDidactia` | `UNKNOWN` | ⚠️ **`CC-BY-SA-4.0`** |
+| `dssg/student-early-warning` | `UNKNOWN` | **`UNCLASSIFIED`** (licencia académica **no comercial**) |
+
+🔴 **La consecuente es `oat-sa/tao-core` = `GPL-2.0`, no GPL-3.0:** son incompatibles en un sentido y
+TAO es la plataforma de evaluación QTI más madura del inventario. 🟢 **`UNCLASSIFIED` en
+`student-early-warning` es el classificador portándose BIEN:** negarse a ponerle familia OSI a una
+licencia académica no comercial es el comportamiento correcto.
+
+⚠️ **Límite declarado del propio barrido:** `kaldi-asr/kaldi` sale `Apache-2.0` y **es correcto** (el
+`COPYING` concede Apache 2.0 en su línea 51), **pero la evidencia que lo disparó es PROSA del bloque de
+título**, porque su `COPYING` es un *legal notice* de 364 líneas y no el texto de la licencia. **Es un
+acierto por una vía débil**, y el mismo patrón sobre un repo que sólo *mencione* «Apache» daría un
+falso positivo.
+
+### 744 — 🔴 La saturación regional deja de ser un adjetivo: 27 hechos, 0 nuevos
+
+Vigesimocuarto barrido regional (año **CALCULADO**: 2026). Los pases 91–94 ya registraban saturación,
+🔴 **pero «las cuatro regiones vuelven a dar saturación» no tiene denominador y no se distingue de no
+haber buscado.** Medido (`compose/code/p287-regional-saturation/`, **15/15**):
+
+| Región | Hechos devueltos | Nuevos |
+|---|---|---|
+| North America | 7 | **0** |
+| EMEA | 6 | **0** |
+| APAC | 7 | **0** |
+| LATAM | 7 | **0** |
+| **TOTAL** | **27** | 🔴 **0** |
+
+🟢 **Y eso vuelve decidible lo que cuatro pases venían repitiendo:** el valor marginal de estas cuatro
+consultas, tal como están redactadas, es **cero medido**; repetirlas literalmente un pase más no es
+rigor, es gasto. **Lo que rompería la saturación es cambiar el EJE** —proveedor/soberanía, licitación
+pública, fuente primaria fechada— y queda pre-registrado para el pase 96.
+
+**`P287`**: *una saturación sin denominador no se distingue de no haber buscado.*
 
 ## 🟢 Tendencias 729–736 — y siete de las ocho son sobre el INSTRUMENTO, no sobre la industria
 
@@ -4991,6 +5144,8 @@ son copyleft y las puertas son permisivas.** **P55** queda reescrito con el cort
 autoría.
 
 ## 75. El Annex III dejó de ser una fecha en el calendario: rige desde el 2026-08-02, y la demanda de conformidad en EMEA está **vencida**, no anticipada (agregado 2026-10-01, pase 28)
+
+> ⏸️ **[P284 — corrección del pase 95: el **Anexo III autónomo** quedó diferido a **2027-12-02** por el *Digital Omnibus* / Reglamento (UE) 2026/1744 (verificado por tres canales en el pase 58). El **art. 50** NO fue tocado: su reloj sigue en **2026-08-02**.]**
 
 Esta KB viene registrando el reloj regulatorio europeo en futuro desde el pase 11, y el pase 25 construyó **P49**
 sobre que el **Annex III** nombra la educación y los exámenes como alto riesgo. **Hoy el reloj se terminó:** el AI Act
@@ -13312,7 +13467,7 @@ America desde el 36. Lo que el barrido de este pase agrega es la **convergencia*
 
 | Jurisdicción | Instrumento | Estado medido en este barrido | Qué exige del software |
 |---|---|---|---|
-| **EMEA** | **AI Act** | **Desde el 2 de agosto de 2026 la AI Office y las autoridades nacionales lo APLICAN.** Educación —acceso, evaluación, scoring de exámenes, trayectoria— es **alto riesgo** | Supervisión humana sobre la decisión |
+| **EMEA** | **AI Act** | **Desde el 2 de agosto de 2026 la AI Office y las autoridades nacionales lo APLICAN.** Educación —acceso, evaluación, scoring de exámenes, trayectoria— es **alto riesgo** | Supervisión humana sobre la decisión ⏸️ **[P284 — corrección del pase 95: el **Anexo III autónomo** quedó diferido a **2027-12-02** por el *Digital Omnibus* / Reglamento (UE) 2026/1744 (verificado por tres canales en el pase 58). El **art. 50** NO fue tocado: su reloj sigue en **2026-08-02**.]** |
 | **North America** | Leyes estatales | **134 proyectos en 31 estados** (reconfirmado). **Oklahoma y Maryland exigen supervisión humana y prohíben que la AI tome decisiones de alto impacto sobre un alumno** | Lo mismo, por vía estatal |
 | **APAC** | 3 leyes marco nuevas | **Corea: AI Basic Act en vigor el 22-01-2026** (19 proyectos consolidados; **segunda jurisdicción del mundo con ley integral después de la UE**). **Vietnam: Ley de AI adoptada en dic-2025, en vigor marzo 2026**, y **nombra educación entre seis sectores de alto riesgo** (evaluación automatizada y monitoreo conductual). **Taiwán: Ley Básica de AI en vigor el 14-01-2026** | Lo mismo, en tres países más |
 | **LATAM** | Sin ley integral | Brasil, Chile, Colombia (CONPES) y México a velocidades distintas. **Uruguay fue el primero de la región en firmar el Convenio Marco del Consejo de Europa sobre AI** | Todavía por vía de privacidad y consumidor |
@@ -13633,7 +13788,7 @@ Las cuatro búsquedas regionales con el año **calculado** (`date -u +%Y` → **
 vez, cifras que esta base ya tiene: 10,6 MM US$ para 2026 con CAGR 40,9 % y 42,48 MM a 2030; **NA**
 86 % de adopción organizacional, 134 proyectos de ley en 31 estados, AB 1159 de California, SB 1227
 de Idaho, el *STUDENTS FIRST Act of 2026*, el *Traffic Light Framework* de NYC; **EMEA** el EU AI Act
-con aplicación general del 2 de agosto de 2026 y la educación como alto riesgo; **APAC** 96 % con
+con aplicación general del 2 de agosto de 2026 y la educación como alto riesgo; **APAC** 96 % con ⏸️ **[P284 — corrección del pase 95: el **Anexo III autónomo** quedó diferido a **2027-12-02** por el *Digital Omnibus* / Reglamento (UE) 2026/1744 (verificado por tres canales en el pase 58). El **art. 50** NO fue tocado: su reloj sigue en **2026-08-02**.]**
 intención de más inversión, 66 % pilotando, ROI 2,85 US$, la Basic AI Act de Corea (enero 2026) y la
 ley de IA de Vietnam (marzo 2026); **LATAM** 92 % de estudiantes y 79 % de docentes, 30.000+
 respuestas en 29 instituciones con el Tec de Monterrey, CONPES 4144 de Colombia, y Brasil/Chile/

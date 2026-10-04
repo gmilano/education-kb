@@ -8,6 +8,7 @@ updated: 2026-10-04
 
 > Bases sobre las cuales construir. Verificado repo por repo vía WebFetch el 2026-09-30 (capas del pase 10, el 2026-10-01).
 > Leer la columna **Licencia** antes de proponer: media KB de educación es GPL/AGPL, no permisiva.
+> **Pase 95 del 2026-10-04:** 🔴 **Sin repos fundacionales nuevos (el barrido `github trending education AI 2026`, año CALCULADO, devolvió por vigesimocuarta vez el eje generalista: 6 de infra de agentes, 4 de currículo para enseñar AI a ingenieros, 0 de la industria educativa — `P281`).** 🟢 **Pero el pase cierra el hueco que el 94 dejó ABIERTO sobre este archivo: `openedx/XBlock` estaba publicado como Apache-2.0 y el barrido no lo podía confirmar (33 sondas, 0 hits); hoy el payload se LEE —`master/LICENSE.TXT`, 200, abre con `Apache License`— porque el nombre se toma del manifiesto (`license-files = ["LICENSE.TXT"]`) en vez de adivinarse. La fila era CORRECTA y ahora está confirmada por payload.** 🔵 **Y queda medido que `P279` es real pero RARO: 1 de 201 sobre todo lo barrido, 0 de 200 en las filas de agentes (`P286` — la predicción de ~28 del pase 94 falló por un factor de ~28).** 🟢 **Cuatro repos de este archivo ganan familia de licencia leída del payload por reusar `lib/license_family.sh` (`P237`): `kaldi-asr/kaldi` Apache-2.0 (desde `UNKNOWN`), `trilogy-group/oneroster-ts` 0BSD, `nmarafo/OpenDidactia` CC-BY-SA-4.0, y `dssg/student-early-warning` queda `UNCLASSIFIED` porque su licencia académica NO comercial no tiene familia OSI — sigue fuera de lo que Globant puede construir encima.** 🔴 **Acción pre-registrada para el pase 96: correr `p283/sweep_named.sh` sobre las filas de ESTE archivo y de `verticals/solutions.md` que no están en las 200, que es el único sitio donde la tasa de `P279` puede subir.**
 > **Pase 94 del 2026-10-04:** 🔴 **Sin repos fundacionales nuevos, y el barrido global devolvio por NOVENA vez el eje generalista — pero el cero se publica con denominador ENUMERADO: `kouweizhu/agents-radar` #328, fechado el mismo 2026-10-04, lista 47 repos y 0 son de la industria educativa** (**P281**: su etiqueta `[EDUCATION]` marca curriculos para enseñar AI a ingenieros —`rasbt/LLMs-from-scratch`, `rohitg00/ai-engineering-from-scratch`, las dos YA en esta base— y no software que sirva a una institucion). 🔴 **El aporte del pase cae sobre una fila de ESTE archivo y es un defecto del INSTRUMENTO: `openedx/XBlock` se publica como Apache-2.0 —y es CORRECTO— pero el barrido de licencia no lo podia confirmar: 11 variantes de nombre × 3 ramas = 33 sondas, 0 hits, con el testigo de alcance en verde (`master/README.rst`, 200).** 🟢 **El payload es `master/LICENSE.TXT`, con la EXTENSION en mayuscula, y abre con `Apache License`. El nombre no hay que adivinarlo: `pyproject.toml` lo NOMBRA —`license = "Apache-2.0"`, `license-files = ["LICENSE.TXT"]`** (**P279**). 🔴 **Consecuencia directa para este archivo: si `P279` se reparte como en el control positivo (1 de 7), hay ~28 de las ~200 filas `org/repo` que los pases 62/64 barrieron cuyo veredicto de licencia es un hueco de nombre y no un dato. Queda PRE-REGISTRADO como accion 1 del pase 95.** 🔵 **Y la rama por defecto de XBlock es `master`, no `main`: caso de `P278` en el eje del nombre del payload.**
 > **Pase 93 del 2026-10-04:** 🔴 **Cero altas fundacionales, SEXTO pase consecutivo, y se declara.** El barrido (`open source platform education ERP CRM MIT Apache`) devolvio por **decimonovena** vez el catalogo ya verificado de este estante, y volvio a nombrar la *Kuali Foundation* en PRESENTE —medida en el pase 42: cuatro repos, los cuatro muertos hace 6–9 años. 🟢 **Lo que si cambia: este estante recupera la capacidad de sostener una AUSENCIA, que `P274` le habia retirado sin reemplazo.** Un clon `--filter=blob:none --no-checkout --depth 1` + `git ls-tree -d -r` enumera el arbol **completo** (< 1 s en ILIAS; 10.923 directorios en Moodle) sin truncar y sin `api.github.com`, que este arbol registra en **403** desde el pase 89 (**P275**). 🟢 **Cuatro filas pasan de *sostenidas por manifiesto + arbol truncable* a *sostenidas por arbol COMPLETO*, las cuatro con CERO capa de AI en el nucleo:** `frappe/erpnext` (39 modulos), `frappe/education` (11), `openeducat/openeducat_erp` (15, en la **raiz**) e `ILIAS` (180 en `release_11`). Para un *engagement*: la capa agentica sobre estas piezas es **desarrollo completo**, no integracion — y ahora es medido. 🔴 **`P278`: la ruta que contiene los modulos es propiedad de la (repo, ref)** —`components/ILIAS/` da 180 en `release_11` y **CERO** en `release_9`, donde viven en `Modules/`(54)+`Services/`(126)— **asi que todo conteo anclado a una ruta fija tiene fecha de vencimiento.** ⚠️ **Cota: mide el arbol publicado en esa ref, nada dice de plugins de terceros** (donde vive la AI de ILIAS y la del ecosistema Frappe). Instrumento: [`compose/code/p275-tree-enumeration/`](../compose/code/p275-tree-enumeration/).
 > **Pase 92 del 2026-10-04:** 🔴 **Cero altas fundacionales, QUINTO pase consecutivo, y se declara.** El barrido de plataformas (`open source platform education ERP CRM MIT Apache`) devolvió por **decimoctava** vez lo que este estante ya tiene (`OpenEduCat` sobre Odoo, `CK-ERP`, `ERPNext`/`frappe/education`, Moodle, Open edX, Chamilo, ILIAS). 🟢 **Lo que sí cambia, y afecta a CÓMO se lee este estante entero: dos de sus plataformas tienen una capa de proveedores de modelo EN EL NÚCLEO, y el manifiesto no la muestra.** Medido por ref (**P273**): `chamilo/chamilo-lms` liga **0 → 5 → 6** proveedores según versión en `src/CoreBundle/AiProvider/`, con `composer.json` en **cero tokens en las ocho refs**. 🔵 **Consecuencia para este estante: antes de clonar hay que preguntar la VERSIÓN, no sólo el repo** — el mismo repo da tres respuestas distintas a «¿qué proveedor tengo sin código de terceros?». 🟢 **Y las otras tres filas de este estante SOSTIENEN su veredicto medidas por ref:** `ILIAS` (sin componente de AI en el tramo **A–L**; **M–Z no listado**, se declara), `frappe/education` y `frappe/erpnext` (árbol completo, cero módulos de AI; la capacidad es de **apps de marketplace** de terceros). 🟢 **`openeducat/openeducat_erp` pasa de NO-CLAIM a MEDIDO y es `P270` otra vez:** el pase 90 probó `requirements.txt` → 404 y correctamente no afirmó ausencia; el manifiesto **real** es `openeducat_core/__manifest__.py` (200 en `16.0`, `17.0`, `18.0`), con `'depends': ['board','hr','web','website']` y cero proveedores. ⚠️ **Licencias de la capa, novena y décima lectura de payload: Chamilo `GPL-3.0`, OpenEduCat `LGPL-3.0` — sigue CERO permisivas en capa de plataforma** (tendencia **701**).
@@ -96,6 +97,72 @@ corre ése antes de escribir uno a mano** (tendencia **313**). 🟢 **Y el `gafa
 > y 5 en `schemas12/`, y contar sólo el primero es lo que hizo invisible el segundo dialecto de SCORM (**P106**).
 > **Pase 36 del 2026-10-02:** 🔵 **este pase no agrega repos: le pone FECHA a los que ya están, y la fecha cambia tres recomendaciones.** Se midió la capa PHP de evaluación y telemetría en Packagist —el único registro de los tres que entrega descargas en este entorno (`api.npmjs.org` y `pypistats.org` dan **403 a CONNECT**)— y el resultado está en `repos/trending.md`. **Lo que hay que saber antes de proponer desde este archivo:** 🔴 **la pieza xAPI más descargada de esta base, `rusticisoftware/tincan` (Apache-2.0, 6.178 desc./mes, 863.777 totales), no publica desde el 2022-11-02**, y ⚠️ **el único MIT de esa capa, `php-xapi/client`, está parado desde el 2021-03-24** con 825 desc./mes. 🔵 **La lectura es que en xAPI/PHP lo permisivo está quieto y lo vivo es copyleft**, así que la receta de telemetría se sostiene en **Ralph (MIT)** + **`lrsql` (Apache-2.0)** + **`learnmcp-xapi` (MIT)** y no en la capa PHP. 🟢 **Del lado de evaluación, lo activo es `oat-sa/extension-tao-testqti`** (**885 versiones**, release del **2026-09-30**) **y sigue siendo GPL-2.0-only**, mientras **lo permisivo es lo nuevo**: `@longsightgroup/qti3-cli` (**MIT**, 41 releases desde el 2026-05-21, último **2026-10-01**) con **cero dependencias de terceros** — sus 4 dependencias son todas `@longsightgroup/*` pinneadas a la misma versión exacta. **Su manifiesto MCP completo de 20 tools está escrito en `compose/patterns.md` (P76).** 🔴 **Y una corrección de catálogo: `oat-sa/qti-sdk` devuelve 404 en Packagist porque es el nombre del REPO — su paquete es `qtism/qtism`** (GPL-2.0-only, 218.212 descargas totales, 315 versiones). **Nombre de repo y nombre de paquete son identificadores distintos, y confundirlos produce un 404 que parece una ausencia** — pasó igual con `1edtech/oneroster`, `imsglobal/lti-1-3-php-library` y `packbackbooks/lti-1-3-php-library`, los tres **404**, que se anotan como *«no verificado en Packagist bajo ese nombre»* y **no** como inexistentes. ⚠️ **Acción pendiente que el pase 37 tiene asignada: este archivo nunca pasó por el control de *slugs* distintos ni por el de *backlink*** — los dos que en `agents/top.md` encontraron **un duplicado** y **dos colisiones** este mismo pase.
 > **Pase 11 del 2026-10-01:** aparece una licencia que las diez pasadas anteriores filtraban sin saberlo — **ECL-2.0**, con la que licencia todo Apereo (Sakai, Opencast, OpenLRW). Es Apache-2.0 con el alcance de patentes acotado, aprobada por OSI y FSF, y **es apta para construir arriba**. Ver la capa de analítica institucional, abajo.
+
+## 🟢 El hueco que el pase 94 dejó abierto sobre este archivo queda CERRADO: `openedx/XBlock`, confirmado por payload (pase 95 del 2026-10-04)
+
+El pase 94 descubrió que la fila de **`openedx/XBlock`** —publicada aquí como **Apache-2.0**— era
+**correcta** pero que **el barrido no la podía confirmar**: 11 variantes de nombre × 3 ramas = **33
+sondas, 0 hits**, con testigo de alcance en `200`. La diferencia era la **CAJA de la extensión**: se
+probaba `LICENSE.txt`, el archivo es `LICENSE.TXT`.
+
+🟢 **Hoy se LEE, y no por adivinar un nombre más sino por tomarlo del manifiesto:**
+
+| Sonda | Resultado |
+|---|---|
+| `master/pyproject.toml` → `license-files` | 🟢 **`["LICENSE.TXT"]`** (y `license = "Apache-2.0"`) |
+| `master/LICENSE.TXT` (el nombre NOMBRADO, con su caja) | 🟢 **`200`**, abre con `Apache License` |
+| propiedad del manifiesto (`P280`): `name = "XBlock"` vs repo `openedx/XBlock` | 🟢 **`OWN`** → atribuible |
+| sondas necesarias | **10** (contra 33 que no alcanzaban) |
+
+🔵 **La fila no cambia: cambia su EVIDENCIA.** Pasa de *«correcta según el badge»* a *«correcta según
+el payload»*, que es la diferencia que `P114` le costó a esta base aprender.
+
+### 🔵 Y queda medido que `P279` es real pero RARO
+
+El pase 94 pre-registró que si el hueco de caja se repartía como en su control positivo (1 de 7),
+**~28 de 200** filas tendrían un veredicto de licencia que es un hueco y no un dato. Medido sobre las
+200 filas de agentes: 🔴 **0**.
+
+| | valor |
+|---|---|
+| huecos de `P279` en las 200 filas de agentes | 🔴 **0** |
+| casos de `P279` conocidos en TODA la base | **1** (`openedx/XBlock`, de este archivo) |
+| tasa real | **1 de 201** |
+
+🔴 **`P286`**: *extrapolar un reparto poblacional desde UN control positivo no es una estimación, es
+una corazonada con tabla.* 🟢 **Y el dato útil para este archivo es el contrario del alarmante:** el
+único `P279` conocido vive **acá**, en la capa de **plataforma/empaquetado** —repos con manifiesto de
+distribución y ramas `master` viejas—, no en la capa de agentes.
+
+### 🟢 Cuatro filas de este archivo ganan familia de licencia LEÍDA DEL PAYLOAD
+
+Por reusar el classificador compartido `lib/license_family.sh` (`P237`), que classifica por **bloque
+de título** y no por el cuerpo (`P171`):
+
+| Repo | Antes | Hoy | Payload | Qué cambia para Globant |
+|---|---|---|---|---|
+| [`kaldi-asr/kaldi`](https://github.com/kaldi-asr/kaldi) | `UNKNOWN` | **Apache-2.0** | `COPYING` | 🟢 permisiva: utilizable como base de ASR |
+| [`trilogy-group/oneroster-ts`](https://github.com/trilogy-group/oneroster-ts) | `UNKNOWN` | 🟢 **0BSD** | `LICENSE` | 🟢 la **más permisiva** del inventario de *rostering*: ni atribución |
+| [`nmarafo/OpenDidactia`](https://github.com/nmarafo/OpenDidactia) | `UNKNOWN` | ⚠️ **CC-BY-SA-4.0** | `LICENSE.md` | ⚠️ *share-alike* **sobre el contenido**: el material derivado hereda |
+| [`dssg/student-early-warning`](https://github.com/dssg/student-early-warning) | `UNKNOWN` | **UNCLASSIFIED** | `LICENSE` | 🔴 licencia académica **NO comercial** (U. de Chicago): **fuera** de lo construible |
+
+🟢 **`UNCLASSIFIED` es el classificador portándose BIEN**, no fallando: negarse a asignar familia OSI a
+una licencia académica no comercial es el comportamiento correcto, y la fila ya estaba marcada como no
+open source.
+
+⚠️ **Límite declarado, sobre `kaldi`:** el veredicto **Apache-2.0 es correcto** —el `COPYING` concede
+Apache 2.0 en su línea 51 y repite el *grant* estándar en la 145— **pero la evidencia que lo disparó es
+PROSA del bloque de título**: el `COPYING` de Kaldi es un *legal notice* de 364 líneas, no el texto de
+la licencia. **Es un acierto por una vía débil**, y esta fila ya estaba marcada como *texto anómalo*
+desde el pase 36.
+
+### 🔴 Acción pre-registrada para el pase 96, con su razón
+
+Correr `compose/code/p283-manifest-named-license/sweep_named.sh` sobre las filas `org/repo` de **este
+archivo** y de **`verticals/solutions.md`** que **no** están en las 200 ya barridas. 🔵 **La razón, y es
+falsable:** el único `P279` conocido vive acá, en la capa de plataforma, así que **es el único sitio
+donde la tasa de 1 de 201 puede subir**. Si sube, `P279` es un patrón **de los repos de plataforma**;
+si no sube, es un **caso único** y hay que decirlo así en vez de seguir tratándolo como una clase.
 
 ## 🔴 Sin altas fundacionales — y una fila de este archivo revela que el barrido de licencia tiene un hueco de NOMBRE
 

@@ -8,6 +8,7 @@ updated: 2026-10-04
 
 > Agentes y herramientas AI open source para educación. Foco: MIT / Apache 2.0 / BSD.
 > Verificado repo por repo vía WebFetch el 2026-09-30 (stars y licencia leídos de la página del repo).
+> **Pase 95 del 2026-10-04:** 🔴 **La tabla se queda en 94 filas: CERO altas, SÉPTIMO pase consecutivo, con denominador enumerado otra vez.** 🟢 **Pero el pase corrió la acción que el 94 pre-registró «para que no se pueda eludir» —re-barrer las 200 filas `org/repo` de los pases 62/64 con un instrumento manifiesto-consciente— y el resultado es el CONTRARIO del predicho: el pase 94 estimó **~28 filas** con un hueco de nombre por licencia; medido sobre las 200, los huecos de `P279` fueron **0**.** 🔵 **`P286`: extrapolar un reparto desde UN control positivo (1 de 7) fue el error; la tasa real de `P279` es **1 de 201** sobre todo lo barrido, y su único caso —`openedx/XBlock`— ni siquiera está en estas 200 (vive en `repos/foundations.md`).** 🟢 **Lo que el barrido SÍ rinde, y es durable: las 5 filas que cambian de clase son EXACTAMENTE las que el pase 65 corrigió A MANO, así que lo que era memoria de un pase pasa a ser un instrumento que lo deriva solo** (`compose/code/p283-manifest-named-license/`, **34/34** + 200/200 filas). Nace la clase **`SOLO_MANIFIESTO`**: *sin archivo de licencia, pero el manifiesto del propio proyecto declara una expresión* — que para Globant no es «sin licencia», es una cesión **defectuosa pero intencional**. 🟢 **Y 17 filas ganan PRECISIÓN de familia por reusar `lib/license_family.sh` (`P237`) en vez de reescribir el classificador: 12 `GPL` → `GPL-2.0`/`GPL-3.0`, 4 `UNKNOWN` classificadas.** 🔴 **La consecuente es `oat-sa/tao-core` = `GPL-2.0`, no `GPL-3.0`** (incompatibles en un sentido, y es la plataforma QTI más madura del inventario). 🟢 **Veredicto de integridad: la tabla publicada estaba correcta en 200 de 200** — el artefacto viejo era el **archivo de resultado** del `p170`, que es el MÁS NUEVO del repo y decía MENOS que la tabla en 10 filas (`P285`, marca de supersesión ya puesta). 🔴 **Y el hallazgo que no era de licencia: la corrección regulatoria del pase 58 NO VIAJÓ.** De **87** afirmaciones que atan un deber de **alto riesgo** a **agosto de 2026**, **13 estaban huérfanas** del diferimiento del Anexo III a **2027-12-02** — entre ellas la **tendencia #75**, cuya tesis («la demanda de conformidad está *vencida*») **se invierte**. Anotadas las 13 sin reescribir una palabra → **88 afirmaciones, 0 huérfanas** (`P284`, `compose/code/p284-deferral-adjacency/`, **24/24**).
 > **Pase 94 del 2026-10-04:** 🔴 **La tabla se queda en 94 filas: CERO altas, SEXTO pase consecutivo — y esta vez el cero viene con DENOMINADOR ENUMERADO, que es lo que el pase 93 exigio de un conteo.** El canal dio hoy una señal fechada el MISMO dia (`kouweizhu/agents-radar`, issue **#328**, 2026-10-04): **47 repos listados, 0 de la INDUSTRIA educativa**. 🔵 **Y su propia etiqueta `[EDUCATION]` confunde dos industrias:** las 2 filas que marca asi —`rasbt/LLMs-from-scratch` (105.957 ★) y `rohitg00/ai-engineering-from-scratch` (63.183 ★)— son **curriculos para enseñar a INGENIEROS a construir AI**, no software que sirva a una institucion educativa; **las 2 ya estaban en esta base**. Una base que ingiera esa etiqueta al pie de la letra importa filas que no sirven a ningun cliente de educacion (**P281**). 🟢 **El aporte del pase es sobre la columna mas consecuente de este archivo —la de licencia— y tiene las dos mitades: los 8 veredictos `SIN LICENCIA` SE SOSTIENEN (8/8 ausencia confirmada, 33 sondas por fila + testigo de alcance en 8/8), y el instrumento que los produjo tenia DOS huecos.** 🔴 **`P279`: el canal es sensible a MAYUSCULAS tambien en la extension —`openedx/XBlock` da 0 hits en 11 variantes × 3 ramas y su payload es `master/LICENSE.TXT`, que el `pyproject.toml` NOMBRA en `license-files`. Un `SIN LICENCIA` cuya unica evidencia es `/blob/main/LICENSE → 404` no es un veredicto, es un hueco.** 🔴 **`P280`: el manifiesto hallado en la raiz puede describir a OTRO proyecto — el `composer.json` de `alfredang/ai-mms` declara `["OSL-3.0","AFL-3.0"]` y se nombra `openmage/magento-lts`; leerlo habria publicado una licencia FALSA en un LMS de Singapur. El discriminador es `name`.** 🔴 **Y la consecuencia va al REVES: `ai-mms` no esta solo sin cesion, HEREDA un arbol OSL-3.0 (medido `app/Mage.php` 200, upstream con `LICENSE.txt` + `LICENSE_AFL.txt`) —copyleft fuerte con disparo por despliegue externo, que es lo unico que un LMS hace. `SIN LICENCIA` SUBESTIMABA el riesgo; pasa a descarte DEFINITIVO, no diferido.** 🟢 **37/37 aserciones en `compose/code/p280-manifest-ownership/`.** 🔴 **El canal que el encargo ordena (`curl -sI` sobre `github.com/`) devolvio `403` en 3/3, reproduciendo el pase 81: se declara muerto y se usa `raw.githubusercontent.com`, que entrega el PAYLOAD.**
 > **Pase 93 del 2026-10-04:** 🔴 **La tabla se queda en 94 filas: CERO altas, QUINTO pase consecutivo, y se declara en vez de rellenar.** El barrido global devolvio por **OCTAVA** vez el eje generalista —y con las seis cifras de estrellas **identicas digito a digito** a las del pase 92, que es informacion sobre el CANAL (respuesta cacheada) y no sobre la industria. 🔴 **El aporte del pase es que una cifra que esta base publico en los ocho archivos estaba MAL y su validacion era circular: el pase 92 conto **6** proveedores en el nucleo de Chamilo `v3.0.x` sondeando la lista `OpenAi DeepSeek Gemini Mistral Grok Anthropic Ollama`, y `ClaudeProvider.php` no estaba en ella —mientras `Ollama`, que no existe en Chamilo, si. Son **7**.** 🔵 **Y su «replica por segunda mano» compartia el punto ciego: dos canales que sondean la MISMA lista no se validan entre si, porque no pueden discrepar** (**P276**). 🟢 **Matriz correcta: `0,0,5,5,7,7,7,7`.** 🔵 **7 CLAVES no son 7 EMPRESAS:** `AnthropicProvider extends ClaudeProvider` y las dos pegan a `api.anthropic.com` — **7 claves, 6 vendors**. 🔴 **Y la pregunta «¿que proveedor puedo usar?» pasa a tener respuesta POR TIPO DE SERVICIO: el swap es libre en texto y documento (7/7), cae a **3/7** en imagen y video y a **1/7** en `document_process` — solo OpenAI** (**P277**). 🟢 **Cerrado el LIMITE que el pase 92 declaro sobre si mismo: un clon sin blobs enumera el arbol completo en < 1 s, y las cuatro refs de ILIAS dan CERO componentes de AI** (**P275**); 🔴 **`P278`: la ruta que los contiene es propiedad de la (repo, ref) —`components/ILIAS/` da 180 en `release_11` y CERO en `release_9`, donde viven en `Modules/`+`Services/`.** 🟢 **43/43 suites verdes (41 py + 2 sh) y el linter de tablas da `total 0` sobre los ocho archivos.** Instrumentos: [`compose/code/p275-tree-enumeration/`](../compose/code/p275-tree-enumeration/) y [`compose/code/p276-provider-allowlist/`](../compose/code/p276-provider-allowlist/). Ver tendencias **721**–**728**.
 > **Pase 92 del 2026-10-04:** 🔴 **La tabla principal se queda en 94 filas: CERO altas, CUARTO pase consecutivo, y se declara en vez de rellenar.** El barrido global obligatorio (`top open source AI agents education 2026 github MIT`) devolvió por **SÉPTIMA** vez consecutiva el eje generalista —`openclaw` (385.407 ★), `dify` (151.639 ★), `browser-use` (108.128 ★), `Mem0` (62.735 ★), `AutoGen` (60.284 ★), `Flowise` (55.226 ★)—: marcos **horizontales** que pertenecen a la KB de `technology`, no a esta vertical. 🟢 **El aporte del pase a ESTA tabla no es una fila: es que la pregunta «¿qué proveedor puedo usar?» deja de ser una propiedad del AGENTE y pasa a ser también una de la PLATAFORMA que lo hospeda, con versión mínima.** Cerrada la **ACCIÓN** que el pase 91 dejó abierta (*«las otras cinco filas siguen sin ref»*), las **7** filas de veredicto de plataforma del pase 90 están medidas: **2 CONTRADICHAS, 5 SOSTENIDAS**. 🔴 **Y la segunda contradicción es de otra clase que la primera: Chamilo liga SEIS proveedores en el núcleo y su `composer.json` no nombra NINGUNO —en la MISMA ref—, así que el veredicto no falló por falta de ref sino porque el manifiesto es un instrumento CIEGO a un directorio de proveedores** (**P273**). 🟢 **Regla de entrega nueva, y es la segunda plataforma de la vertical que la recibe: Anthropic en el núcleo exige Moodle ≥ 5.3 y Chamilo ≥ 3.0; Mistral y Grok no están en el núcleo de Moodle a ninguna versión y sí en Chamilo ≥ 2.0.** 🔴 **Riesgo de migración que ninguna columna de licencia muestra: en Chamilo `1.11.x` los dos proveedores viven en `plugin/ai_helper/`, que da 404 desde `v2.0.0` — migrar no actualiza la integración, le cambia el punto de integración.** 🟢 **Y la capa de AUTOGRADING que este archivo inventaría desde el pase 67 ya está en el núcleo de Chamilo 2.0+** (`AiTaskGraderService`, `AiTutorChatService`), que es un hecho que esta base vendía sin tener registrado. 🔵 **Canal nuevo: `WebFetch` sobre las páginas de árbol de `github.com` LISTA directorios** —cuatro pases registraban 403 por `curl -sI` y `api.github.com`— **y con su límite medido: trunca los listados largos.** 🔴 **`P274` retira una clase entera de negativo de esta base: un path de DIRECTORIO da 404 en este canal SIEMPRE** (`public/ai` de Moodle: 404, y existe). 🟢 **Y la ejecución VOLVIÓ después de once pases: el árbol corrió entero —41/41 suites verdes (39 py + 2 sh)— el linter de integridad de tablas da `total 0` sobre los ocho archivos de contenido, y el instrumento de este pase quedó REPLICADO (8/8 refs exactas por un segundo canal).** Instrumento: [`compose/code/p273-platform-provider-dir/`](../compose/code/p273-platform-provider-dir/). Ver tendencias **712**–**719**.
@@ -261,6 +262,161 @@ updated: 2026-10-04
 > fila** —`lineage-skill`, con un vocabulario cerrado de 9 valores por afirmación, **4 de los 9 «esto lo produjo el
 > modelo»**— y **ninguna de las dos sabe de la otra**. Ver la capa nueva al final de este archivo, las tendencias
 > **180**–**182** y el patrón **P99**.
+
+## 🔴 Altas de agente: 0 — SÉPTIMO pase consecutivo, y el pase gasta su esfuerzo en la acción PRE-REGISTRADA
+
+### 🔬 El canal, declarado antes de cualquier veredicto (`P247`)
+
+Medido hoy, de nuevo, antes de escribir nada:
+
+| URL sondeada | resultado |
+|---|---|
+| `github.com/openedx/XBlock` (página del repo) | 🔴 `403` |
+| `api.github.com/repos/openedx/XBlock` | 🔴 `403` |
+| `raw.githubusercontent.com/openedx/XBlock/master/LICENSE.TXT` | 🟢 `200` **+ payload** |
+| `raw.githubusercontent.com/openedx/XBlock/main/LICENSE` | 🟢 `404` (discrimina) |
+
+🔴 **El `curl -sI` contra `github.com` que el encargo ordena sigue muerto en este entorno (403), y
+citarlo como verificación es citar un 403.** 🟢 Todo lo de abajo está medido por `raw`, que además
+**entrega el payload**: la licencia se LEE, no se infiere.
+
+### 🔴 El cero de altas, con denominador enumerado
+
+Barrido global obligatorio, **año CALCULADO** (`date -u +%Y` → **2026**, no fijado):
+`top open source AI agents education 2026 github MIT` + `github trending education AI 2026`.
+
+**Devolvió, por NOVENA vez consecutiva, el eje generalista**, y se enumera en vez de resumirse:
+
+| Lo que devolvió el barrido global | n |
+|---|---|
+| frameworks/infra de agentes genéricos (openclaw 385.407 ★, dify 151.639 ★, browser-use 108.128 ★, Mem0 62.735 ★, AutoGen 60.284 ★, Flowise 55.226 ★) | **6** |
+| 🔵 repos de *currículo para enseñar AI a ingenieros* (`ai-engineering-from-scratch`, `free-ai-agents-resources`, D2L, *Zero to Hero*) | **4** |
+| 🔴 **software de la INDUSTRIA educativa, nuevo, con licencia permisiva** | 🔴 **0** |
+
+🔵 **Reproduce `P281` del pase 94 con otra fuente:** lo que el canal etiqueta «education» son
+**currículos para formar ingenieros de AI**, no software que sirva a una institución educativa. Una
+base que ingiera esa etiqueta al pie de la letra importa filas que no sirven a ningún cliente de
+educación. **Las 4 son de la clase que `P281` ya nombró; ninguna es fila.**
+
+### 🔴 La acción pre-registrada, corrida, y su predicción FALSIFICADA
+
+El pase 94 la dejó escrita *«para que no se pueda eludir»*: re-correr el barrido sobre las **200
+filas `org/repo`** de los pases 62/64, con la predicción de que **~28** tendrían por veredicto de
+licencia un hueco de nombre y no un dato. **Se corrió sobre las 200**
+(`compose/code/p283-manifest-named-license/`, suite **34/34**, `result.2026-10-04.tsv` con 200 filas):
+
+| Lo medido | n |
+|---|---|
+| filas re-medidas | **200** |
+| 🔴 **huecos de NOMBRE de archivo (`P279`) — lo predicho era ~28** | 🔴 **0** |
+| payload hallado por el nombre que **NOMBRA** el manifiesto | **12** — *y las 12 resolvieron a `LICENSE`*, que la lista fija ya tenía |
+| veredictos que cambian de CLASE | **5** |
+| familias de licencia más precisas | **17** |
+| filas donde la **tabla publicada** ya era correcta | 🟢 **200 de 200** |
+
+🔵 **Por qué falló la predicción, que es el aporte de método:** `P279` es **real pero RARO**. Su único
+caso medido sigue siendo `openedx/XBlock` (`master/LICENSE.TXT`, la CAJA de la extensión), y **XBlock
+no está en estas 200 filas** — vive en `repos/foundations.md`. La tasa no es 1 de 7: es **1 de 201**.
+
+🔴 **`P286`**: *extrapolar un reparto poblacional desde UN control positivo no es una estimación, es
+una corazonada con tabla. El pase 94 convirtió «1 de 7» en «~28 de 200» sin ninguna razón para creer
+que el control era representativo — y se equivocó por un factor de ~28.* La lección no es que no
+haya que pre-registrar: **es que la predicción pre-registrada hay que escribirla como falsable y
+después DECIR que falló**, que es lo que este pase hace.
+
+### 🟢 Lo que sí rinde: la corrección a mano del pase 65 se vuelve CONTROL
+
+Las **5** filas que cambian de clase son **exactamente** las que el pase 65 corrigió **a mano**, leyendo
+manifiestos una por una. El instrumento las deriva solo:
+
+| Fila | Manifiesto | `name` declarado | Propiedad (`P280`) | Licencia |
+|---|---|---|---|---|
+| `HKUDS/AI-Researcher` | `setup.cfg` | `ai-researcher` | 🟢 `OWN` | MIT |
+| `Timadey/proctor` | `package.json` | `@timadey/proctor` | 🟢 `OWN` | MIT |
+| `ink-waffle/moodle-mcp` | `package.json` | `@ink-waffle/moodle-mcp` | 🟢 `OWN` | MIT |
+| `tejpalvirk/student` | `package.json` | `contextmanager-student` | 🟢 `OWN` | MIT |
+| `DMontgomery40/mcp-canvas-lms` | `package.json` | `canvas-mcp-server` | ⚠️ `WEAK` | MIT |
+
+🟢 **Ese es el aporte durable, y es el de `P237` aplicado a sí mismo:** lo que era **memoria de un
+pase** —y por tanto se vuelve a perder— pasa a ser un **instrumento que lo re-deriva en cada corrida**.
+La clase nueva **`SOLO_MANIFIESTO`** nombra lo que el barrido viejo no podía decir: *no hay archivo de
+licencia, pero el manifiesto del PROPIO proyecto declara una expresión*. 🔵 **Para Globant la
+distinción es comercial, no estética:** no es «sin licencia», es una cesión **defectuosa pero
+intencional** — hay a quién pedirle el `LICENSE` que falta, y el `package.json` es evidencia de intención.
+`P179` ya separaba *identificador* de *cesión*; esta clase lo hace **medible**.
+
+⚠️ **`DMontgomery40/mcp-canvas-lms` sale `WEAK`, no `OWN`:** su `package.json` se llama
+`canvas-mcp-server` y el repo `mcp-canvas-lms`. **Se atribuye con reserva, y la reserva vive en la
+columna**, no en la prosa.
+
+### 🟢 17 filas ganan precisión de familia, por NO reescribir el classificador (`P237`)
+
+El instrumento no trae classificador propio: **sourcea `lib/license_family.sh`**, que classifica por
+**bloque de título** y no por el cuerpo (`P171`). Resultado:
+
+| Fila | Archivo de resultado viejo | Medido hoy | Payload |
+|---|---|---|---|
+| `oat-sa/tao-core` | `GPL` | 🔴 **`GPL-2.0`** | `LICENSE` |
+| `moodle/moodle` | `GPL` | **`GPL-3.0`** | `COPYING.txt` |
+| `kaldi-asr/kaldi` | `UNKNOWN` | **`Apache-2.0`** | `COPYING` |
+| `trilogy-group/oneroster-ts` | `UNKNOWN` | 🟢 **`0BSD`** | `LICENSE` |
+| `nmarafo/OpenDidactia` | `UNKNOWN` | ⚠️ **`CC-BY-SA-4.0`** | `LICENSE.md` |
+| `dssg/student-early-warning` | `UNKNOWN` | **`UNCLASSIFIED`** | `LICENSE` |
+| + 11 filas `GPL` → `GPL-3.0` (Moodle plugins, Chamilo, OptiKey, cboard, tutor-gpt, …) | | | |
+
+🔴 **La consecuente es `oat-sa/tao-core`: `GPL-2.0`, no `GPL-3.0`.** Son incompatibles en un sentido, y
+TAO es la plataforma de evaluación QTI más madura del inventario — un cliente que planifique un fork
+con código GPL-3.0 se come el conflicto. 🟢 **La tabla publicada ya lo decía bien desde el pase 9**:
+el que estaba grueso era el archivo de resultado.
+
+🟢 **`dssg/student-early-warning` → `UNCLASSIFIED` es el classificador portándose BIEN**: su `LICENSE`
+es una licencia académica **NO comercial** de la Universidad de Chicago. **Negarse a ponerle familia
+OSI es el comportamiento correcto**, y la tabla ya la marca como no open source.
+
+### ⚠️ Límite declarado del propio barrido
+
+`kaldi-asr/kaldi` sale `Apache-2.0` y **el veredicto es correcto** —el `COPYING` concede Apache 2.0 en
+su línea 51 y repite el *grant* estándar en la 145— 🔴 **pero la evidencia que lo disparó es PROSA del
+bloque de título, no una línea de título canónica**: el `COPYING` de Kaldi es un *legal notice* de 364
+líneas, no el texto de la licencia. **Es un acierto por una vía débil**, y el mismo patrón sobre un
+repo que sólo *mencione* «Apache» daría un falso positivo. La tabla ya marcaba esta fila como **texto
+anómalo** desde el pase 36.
+
+### 🟢 El veredicto de integridad, que es el que vale para un cliente
+
+🟢 **La tabla publicada de esta base estaba correcta en 200 de 200 filas.** Las 22 discrepancias del
+barrido son todas sitios donde **la tabla dice MÁS** que el instrumento, por trabajo a mano de los
+pases 51/65/66.
+
+🔴 **Lo que estaba viejo era el archivo de RESULTADO del `p170`, y es el artefacto más nuevo del repo**
+(`result.2026-10-03.tsv`): en 10 de sus 200 filas dice menos que la tabla — 5 «sin licencia» que son
+`SOLO_MANIFIESTO` y 4 `UNKNOWN` ya classificadas. **Quien ordene por fecha y le crea a la TSV antes
+que a la tabla se lleva datos falsos.** Ya lleva marca de supersesión.
+
+🔴 **`P285`**: *el resultado de un instrumento es una medición FECHADA, no un veredicto. Cuando el
+trabajo a mano lo supera, el archivo tiene que decirlo — o el artefacto más nuevo del repositorio
+contradice a la tabla publicada.*
+
+### 🟢 Suites y canales
+
+| Suite | Invocación | Hoy |
+|---|---|---|
+| `compose/code/p283-manifest-named-license/` | `python3 test_manifest_license.py` | 🟢 **34/34** |
+| ídem, barrido en vivo 200 filas | `sh sweep_named.sh slugs.input.txt` | 🟢 **200/200** |
+| ídem, los 2 controles del pase 94 en vivo | `sh sweep_named.sh --repos openedx/XBlock alfredang/ai-mms` | 🟢 reproducidos |
+| `compose/code/p284-deferral-adjacency/` | `python3 test_adjacency.py` | 🟢 **24/24** |
+| `compose/code/p239-table-integrity/` (regresión, tras anotar 13 líneas) | `python3 check_tables.py <los 8>` | 🟢 **0 hallazgos** |
+| `compose/code/p243-frontmatter-coverage/` | `python3 test_check_frontmatter.py` | 🟢 **23/23** |
+| `compose/code/p265-region-contract/` | `python3 test_measure.py` | 🟢 **30/30** |
+
+### 🔴 Acción pre-registrada para el pase 96, falsable como la de este pase
+
+Correr `p283/sweep_named.sh` sobre las filas `org/repo` de `repos/foundations.md` y
+`verticals/solutions.md` que **no** están en estas 200. **Predicción falsable, y esta vez con su
+razón:** ahí vive `openedx/XBlock`, el único `P279` conocido, así que es el único sitio donde la tasa
+de **1 de 201** puede subir. 🔵 **Si sube, `P279` es de los repos de PLATAFORMA (que traen manifiesto
+de empaquetado y ramas `master` viejas) y no de los agentes; si no sube, `P279` es un caso único y hay
+que decirlo así en vez de seguir tratándolo como una clase.**
 
 ## 🔴 Altas de agente: 0 — SEXTO pase consecutivo, y el cero por fin trae DENOMINADOR ENUMERADO
 

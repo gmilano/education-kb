@@ -8,6 +8,7 @@ updated: 2026-10-04
 
 > Recetas concretas: repos nombrados, licencias verificadas, wiring explícito y estimación.
 > Todos los repos citados fueron verificados vía WebFetch el 2026-09-30; los del pase 11, el 2026-10-01 (ver `agents/top.md`).
+> **Pase 95 del 2026-10-04:** 🟢 **Una receta nueva —`R-LICENCIA-INTAKE`— y es la primera de esta base que se puede CORRER sobre un catálogo entero de cliente en una sola pasada: `p283/sweep_named.sh` barre 200 repos y devuelve, por cada uno, la familia de licencia LEÍDA DEL PAYLOAD, el manifiesto que la declara y el veredicto de PROPIEDAD.** 🔵 **La clase que la hace vendible es `SOLO_MANIFIESTO`:** 5 piezas del inventario no tienen archivo de licencia pero declaran MIT en su propio manifiesto, lo que para un comité de compras no es «sin licencia» sino una cesión **defectuosa pero intencional** — y es accionable, hay a quién pedirle el `LICENSE`. 🔴 **Y trae la compuerta que evita el error caro: con propiedad `FOREIGN` la licencia del manifiesto NO se publica** (el `composer.json` de `alfredang/ai-mms` se llama `openmage/magento-lts` y declara `OSL-3.0/AFL-3.0`: leerlo habría publicado una licencia FALSA sobre un LMS de Singapur). 🟢 **Segundo patrón nuevo: `P284`, el control de adyacencia regulatoria, que es la primera compuerta de esta base que corre sobre la PROSA publicada y devuelve código de salida** (13 huérfanas de 87 encontradas y anotadas; hoy 0). 🔴 **Y `P286`: ninguna receta de esta base vuelve a extrapolar un reparto desde un control positivo único — la predicción de ~28 del pase 94 falló por un factor de ~28.**
 > **Pase 94 del 2026-10-04:** 🟢 **Un patron nuevo y es de INTAKE: la compuerta de procedencia de licencia, que es lo primero que el estudio deberia correr sobre cualquier repo candidato y hasta hoy esta base no tenia escrito.** 🔴 **Nace de dos huecos medidos en el instrumento propio: `P279` —el nombre del payload de licencia es sensible a mayusculas y hay que LEERLO del manifiesto (`license-files`), no adivinarlo de una lista— y `P280` —el manifiesto hallado en la raiz puede describir a OTRO proyecto, y el discriminador es `name`.** 🔴 **El patron incluye el paso que ninguna receta de esta base tenia: detectar si el arbol es DERIVADO, porque una pieza sin cesion propia que hereda OSL-3.0 es MENOS usable que una sin licencia, no mas.** 🟢 **Implementado y verde: `compose/code/p280-manifest-ownership/` — `python3 test_license_probe.py` → 37/37, y `sh sweep.sh <org/repo>` para el barrido en vivo.** 🔵 **Y el patron arranca declarando su canal (`P247`), porque el que el encargo ordena —`curl -sI` sobre `github.com/`— devuelve 403 en 3/3 aqui.**
 > **Pase 93 del 2026-10-04:** 🆕 **Los patrones nuevos son **P275**, **P276**, **P277** y **P278**, y los cuatro salen de medicion de este pase.** **P275**: para sostener una ausencia en un arbol hay que ENUMERARLO — un canal que trunca sirve para HALLAR, y un clon `--filter=blob:none --no-checkout --depth 1` enumera completo en < 1 s, lo que **reemplaza el instrumento que `P274` retiro sin dejar sustituto**. **P276**: un conteo obtenido sondeando NOMBRES esta acotado por la lista, no por el repo — **dos canales que sondean la misma lista comparten su punto ciego y no se validan entre si**, asi que el estandar de replica del pase 91 sube: vale si el segundo canal ENUMERA. **P277**: el conjunto de proveedores y el de CAPACIDADES por proveedor son dos mediciones distintas — el swap es gratis solo en los tipos que las dos clases implementan, y hay que resolver **dos** aristas de herencia (de clase y de interfaz) o el veredicto sale al reves. **P278**: la ruta que contiene los componentes es propiedad de la (repo, ref), asi que un cero sobre una ruta inexistente mide la RUTA. 🆕 **Y la receta `R-CAPACIDAD`**: compuerta de pre-venta para *«cambiamos de proveedor cuando quieras»*, que entrega una frase con numero — 7 claves / 6 empresas para chat y documentos, 3 para imagen y video, **1 para procesamiento de documentos** — y dice **cual clausula no se puede firmar**. **1–2 semanas** por plataforma y ref.
 > **Pase 91 del 2026-10-04:** 🆕 **El patrón nuevo es **P272**, y sale de auditar al pase anterior con su propia regla.** **P272**: un veredicto publicado para una plataforma **sin REF no es un veredicto** — y el pase que demostró eso para el eje de proveedor (`P269`) publicó, en el mismo instrumento, **siete** veredictos de plataforma sin ref. Puestas a prueba dos: `openedx/edx-platform` **CONTRADICE** el suyo (`openai==0.28.1` declarada **directa** en `quince`, `redwood` y `sumac`; ausente sólo en `master`) y `canvas-lms` lo **sostiene** — **1 de 2**, y no se generaliza. 🔵 **Y el corolario de control que lo acompaña: un control de ref invariante al layout PASA justo cuando la ruta medida se rompió** (`MOODLE_501_STABLE`: `README.md` 200, `version.php` 404, `public/version.php` 200), así que «el control dio 200» no autoriza a leer un 404 como ausencia. 🟢 **Y la receta nueva es `R-SDK-POR-REF`: la compuerta que, antes de cotizar una integración sobre un LMS, dice con qué SDK y qué major se va a hablar — porque hoy esa pregunta tiene tres respuestas distintas en el mismo repo.**
@@ -119,6 +120,144 @@ updated: 2026-10-04
 > no existe en open source permisivo).
 > **Pase 11:** +2 patrones — **P25** (riesgo de abandono conforme al Anexo III, la capa con presupuesto ya asignado y sin oferta open source) y **P26** (agente docente sobre la ontología curricular nacional ya publicada).
 > **Pase 27:** **+4 patrones y una corrección.** 🔴 **P51 queda con premisa falsa** —el conector MCP de Moodle **sí existe y es MIT**— y lo reemplazan **P54** (corrección y devolución sobre Moodle con **compuerta humana**, el último tramo del gap 6, con piezas que ya escriben), **P55** (el conector de **Open edX**, que es el único que de verdad no existe), **P56** (**SCORM** como formato de salida de la capa generativa: cero integración, offline) y **P57** (evidencia por MCP cotizada sobre lo que CaSS **realmente** expone — 6 de 61 operaciones, con insignias y autoría de marcos **fuera**).
+
+## 🆕 `R-LICENCIA-INTAKE` — Receta: *due diligence* de licencia de un catálogo open source, en una pasada (pase 95 del 2026-10-04)
+
+**El problema que resuelve, y es el que ningún cliente tiene resuelto.** Una institución llega a un
+*engagement* con decenas o cientos de repos open source **ya instalados** —plugins de Moodle, servidores
+MCP, conectores de *rostering*, modelos de ASR— y **nadie sabe bajo qué licencia están**. El dato que
+circula es el **badge** del README, y esta base ya pagó por aprender que el badge **miente**: hay filas
+que prometen un `LICENSE` que no existe, y filas cuyo badge dice `MIT` sobre un repo sin cesión alguna.
+🔴 **En LATAM el estudio de UNESCO IESALC pone el número: sólo el **9,0 %** de las instituciones tiene
+mecanismos formales de evaluación, con **87 %** ya usando AI.** El inventario con licencia verificada es
+el entregable de entrada más barato de producir y el que nadie tiene.
+
+**A quién se le vende.** Institución o ministerio con un catálogo open source instalado y una cláusula
+de cumplimiento por delante (compras públicas, auditoría, o el expediente del **Anexo III** del AI Act
+que vence el **2027-12-02**). También sirve como **primer entregable facturable** en North America,
+donde **no hay regulador de edtech** y el riesgo de licencia es el que nadie audita.
+
+**Las piezas, todas ya en esta base y todas con suite.**
+
+| capa | pieza | licencia | qué aporta |
+|---|---|---|---|
+| barrido en vivo | [`p283-manifest-named-license/`](code/p283-manifest-named-license/) `sweep_named.sh` | instrumento propio | 200 repos en una pasada; por repo: ref viva, testigo de alcance, payload, familia, manifiesto, propiedad |
+| lectura de manifiesto | ídem, `manifest_license.py` | instrumento propio | el nombre **autoritativo** del archivo de licencia sale de `license-files`, no de una lista de variantes (**P279**) |
+| compuerta de propiedad | ídem, `ownership()` | instrumento propio | **P280**: si el manifiesto describe a otro proyecto, su licencia **no se atribuye** |
+| familia de licencia | [`lib/license_family.sh`](code/lib/license_family.sh) | instrumento propio | classifica por **bloque de título**, nunca por el cuerpo (**P171**); no se reescribe (**P237**) |
+| calibración de canal | [`p249-channel-calibration/`](code/p249-channel-calibration/) | instrumento propio | **P249**: antes de creerle un negativo al canal, se calibra contra una URL buena y una inexistente |
+
+**Cómo se arma, y el orden importa.**
+
+```sh
+# 0. calibrar el canal ANTES de creerle un negativo (P249).  En este entorno, hoy:
+#    github.com/ -> 403   api.github.com -> 403   raw.githubusercontent.com -> 200/404 + payload
+#    Un 403 no es un 404: de un canal que no discrimina NO se lee una ausencia.
+
+# 1. el catálogo del cliente, un `org/repo` por línea
+cat > slugs.cliente.txt <<'LIST'
+moodle/moodle
+oat-sa/tao-core
+...
+LIST
+
+# 2. una pasada. 8 en vuelo es lo que el canal tolera sin 429
+P283_JOBS=8 sh compose/code/p283-manifest-named-license/sweep_named.sh slugs.cliente.txt \
+  > licencias.$(date -u +%F).tsv
+
+# 3. el triage, que son TRES montones y no dos
+awk -F'\t' '$4=="SIN_LICENCIA"'    licencias.*.tsv   # riesgo: no hay cesión
+awk -F'\t' '$4=="SOLO_MANIFIESTO"' licencias.*.tsv   # accionable: pedir el LICENSE
+awk -F'\t' '$9=="FOREIGN"'         licencias.*.tsv   # ALERTA: el manifiesto es de otro proyecto
+awk -F'\t' '$4=="INDETERMINADO"'   licencias.*.tsv   # NO es ausencia: no se alcanzó el repo
+```
+
+**Las cuatro salidas, y qué se hace con cada una.**
+
+| veredicto | qué significa | qué se le dice al cliente |
+|---|---|---|
+| 🟢 `CON_LICENCIA` | hay payload y se leyó su familia | la familia **exacta**, no «GPL»: `GPL-2.0` y `GPL-3.0` son **incompatibles en un sentido** |
+| 🔵 `SOLO_MANIFIESTO` | sin archivo, pero el manifiesto del **propio** proyecto declara una expresión | cesión **defectuosa pero intencional**: se le pide el `LICENSE` al autor, y el manifiesto es la evidencia de intención |
+| 🔴 `SIN_LICENCIA` | alcanzado, sondado, y **no hay cesión** | sin licencia **no hay permiso**: ni fork ni redistribución, aunque el README prometa |
+| ⚠️ `INDETERMINADO` | el testigo de alcance no dio `200` en ninguna ref | 🔴 **no es ausencia**: no se puede afirmar nada, y decir «sin licencia» acá es inventar |
+
+**La compuerta que evita el error caro (`P280`).** Antes de atribuir la licencia de un manifiesto, el
+instrumento compara el `name` que el manifiesto declara con el repo que lo hospeda:
+
+| propiedad | ejemplo medido | qué hace |
+|---|---|---|
+| 🟢 `OWN` | `openedx/XBlock` → `name = "XBlock"` | atribuye |
+| ⚠️ `WEAK` | `DMontgomery40/mcp-canvas-lms` → `name = "canvas-mcp-server"` | atribuye **con reserva, y la reserva va en la columna** |
+| 🔴 `FOREIGN` | `alfredang/ai-mms` → `name = "openmage/magento-lts"`, `["OSL-3.0","AFL-3.0"]` | 🔴 **NO atribuye** |
+
+🔴 **El caso `FOREIGN` no es hipotético: `alfredang/ai-mms` es un LMS de Singapur cuyo `composer.json`
+en la raíz describe un fork de Magento.** Leerlo sin la compuerta habría publicado una licencia
+**falsa** sobre una pieza real del inventario.
+
+**Esfuerzo y entregable.** 1–2 semanas. El entregable es el TSV + una tabla de tres montones con la
+recomendación por fila, y **se reproduce corriendo un comando** — que es lo que lo distingue de un
+informe: el cliente puede volver a correrlo el trimestre siguiente sobre su catálogo cambiado.
+
+⚠️ **Límites declarados, porque la receta se vende con ellos y no a pesar de ellos.**
+
+- 🔴 **El canal no es `github.com`.** Hoy devuelve `403` acá; todo se mide por `raw.githubusercontent.com`,
+  que discrimina `200`/`404` **y entrega el payload**. Si el entorno del cliente bloquea `raw`, la receta
+  **no corre** hasta recalibrar (`P249`).
+- ⚠️ **La familia se classifica por bloque de título**, y hay payloads anómalos: el `COPYING` de
+  `kaldi-asr/kaldi` es un *legal notice* de 364 líneas, no el texto de la licencia. **Da Apache-2.0 y es
+  correcto, pero por una vía débil** — un repo que sólo *mencione* «Apache» daría un falso positivo.
+  Las filas marcadas *texto anómalo* se revisan a mano.
+- 🔴 **`UNCLASSIFIED` no es un fallo, es una negativa correcta:** `dssg/student-early-warning` tiene una
+  licencia académica **no comercial** de la Universidad de Chicago. **No tiene familia OSI y no se le
+  inventa una.**
+- ⚠️ **Una expresión de licencia no es un dictamen legal.** La receta entrega **evidencia leída del
+  payload con su ruta exacta**, que es lo que un abogado necesita para dictaminar — no el dictamen.
+
+## 🧩 `P284`–`P287`: la primera compuerta que corre sobre la PROSA, y una regla contra la corazonada con tabla (pase 95)
+
+### `P284` — una corrección verificada que vive en prosa no es un control: hay que MEDIRLA
+
+El pase 58 verificó por **tres canales** que el *Digital Omnibus* corrió el **Anexo III autónomo** a
+**2027-12-02** y que el **art. 50 no fue tocado**. 🔴 **La corrección no viajó: 13 de 87 afirmaciones
+publicadas seguían atando el deber de alto riesgo a agosto de 2026**, entre ellas la **tendencia #75**,
+cuya tesis se **invierte**.
+
+🟢 **El control es de adyacencia y devuelve código de salida**, así que sirve de compuerta de pase:
+
+```sh
+python3 compose/code/p284-deferral-adjacency/adjacency.py \
+  agents/top.md agents/trending.md repos/foundations.md repos/trending.md \
+  verticals/solutions.md intel/market.md intel/trends.md compose/patterns.md README.md
+# -> afirmaciones 88 / acompanadas 88 / huerfanas 0   (exit 0)
+```
+
+⚠️ **Y la mitad que evita el error simétrico: el eximente.** Las líneas que se declaran del **art. 50**
+están **exentas**, porque para la transparencia **agosto de 2026 sigue siendo la fecha correcta**. Un
+control que exigiera el diferimiento en todas partes produciría el error contrario.
+
+🔵 **Las 13 se ANOTARON, no se reescribieron**: `agents/trending.md` es append-only y las tendencias
+numeradas son registro histórico. **Anotar hace viajar la corrección sin borrar el registro.**
+
+### `P285` — el resultado de un instrumento es una medición fechada, no un veredicto
+
+🔴 **El archivo de resultado más NUEVO del repositorio decía MENOS que la tabla publicada en 10 de 200
+filas.** Toda receta que lea un TSV de `compose/code/` tiene que mirar primero si trae **marca de
+supersesión**, y por encima de cualquier TSV manda la **tabla curada** — que en este pase ganó 200 de 200.
+
+### `P286` — no se extrapola un reparto desde un control positivo único
+
+🔴 **El pase 94 convirtió «1 de 7» en «~28 de 200» y se equivocó por un factor de ~28** (los huecos de
+`P279` en esas 200 filas fueron **0**). Ninguna receta de esta base vuelve a dimensionar un esfuerzo así:
+**o se barre la población, o se dice que no se sabe.** 🟢 **Lo que no falla es pre-registrar la
+predicción; lo que falla es extrapolar sin razón para creer que el control es representativo.**
+
+### `P287` — una saturación sin denominador no se distingue de no haber buscado
+
+🟢 El barrido regional de hoy devolvió **27 hechos** y **0 nuevos**, enumerados fila por fila
+(`p287-regional-saturation/`, **15/15**). **Cuatro pases de saturación, y éste con la lista publicada:**
+el valor marginal de las cuatro consultas obligatorias, tal como están redactadas, es **cero medido**, y
+eso vuelve decidible **cambiar el eje** —proveedor/soberanía, licitación pública, fuente primaria
+fechada— en vez de repetirlas.
 
 ## 🟢 Patron nuevo — compuerta de PROCEDENCIA de licencia en el intake (pase 94)
 

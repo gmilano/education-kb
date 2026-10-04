@@ -8,6 +8,50 @@ updated: 2026-10-04
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 
+## 2026-10-04 — pase 95: GitHub trending vuelve vacío por VIGESIMOCUARTA vez, y la saturación se MIDE
+
+🔬 **Canal declarado (`P247`):** `github.com/` → **403**, `api.github.com` → **403**,
+`raw.githubusercontent.com` → **200/404 con payload**. Todo lo de abajo está medido por `raw`.
+
+🔴 **Repos fundacionales nuevos: 0.** `github trending education AI 2026` (año **CALCULADO**) devolvió,
+otra vez, el eje generalista y los currículos de formación en AI — **ninguno es un repo de la industria
+educativa**. El reparto enumerado está en el pase de hoy de `agents/trending.md`: **6** de infra
+generalista, **4** de currículo para ingenieros, **0** de la industria.
+
+🟢 **Lo que sí cambió en los repos que esta base YA tiene, y es de licencia.** El re-barrido de las 200
+filas `org/repo` con el instrumento manifiesto-consciente
+(`compose/code/p283-manifest-named-license/`, **34/34** + 200/200) corrigió la **familia** de 17 filas
+por reusar el classificador compartido `lib/license_family.sh` (`P237`) en vez de reescribirlo:
+
+| Repo | Antes | Hoy | Payload leído |
+|---|---|---|---|
+| [`oat-sa/tao-core`](https://github.com/oat-sa/tao-core) | `GPL` | 🔴 **`GPL-2.0`** | `LICENSE` |
+| [`moodle/moodle`](https://github.com/moodle/moodle) | `GPL` | **`GPL-3.0`** | `COPYING.txt` |
+| [`kaldi-asr/kaldi`](https://github.com/kaldi-asr/kaldi) | `UNKNOWN` | **`Apache-2.0`** | `COPYING` |
+| [`trilogy-group/oneroster-ts`](https://github.com/trilogy-group/oneroster-ts) | `UNKNOWN` | 🟢 **`0BSD`** | `LICENSE` |
+| [`nmarafo/OpenDidactia`](https://github.com/nmarafo/OpenDidactia) | `UNKNOWN` | ⚠️ **`CC-BY-SA-4.0`** | `LICENSE.md` |
+| [`dssg/student-early-warning`](https://github.com/dssg/student-early-warning) | `UNKNOWN` | **`UNCLASSIFIED`** | `LICENSE` |
+| + 11 filas `GPL` → `GPL-3.0` (plugins de Moodle, Chamilo, OptiKey, cboard, tutor-gpt, …) | | | |
+
+🔴 **La fila que decide un proyecto: `oat-sa/tao-core` es GPL-2.0, no GPL-3.0.** Un fork de TAO que
+mezcle código GPL-3.0 se come una incompatibilidad que ningún badge muestra. 🟢 **Y `0BSD` en
+`oneroster-ts` MEJORA la cotización**: es la licencia más permisiva del inventario de *rostering*.
+
+🟢 **`dssg/student-early-warning` → `UNCLASSIFIED` es el classificador portándose bien:** su `LICENSE`
+es una licencia académica **NO comercial** de la Universidad de Chicago, y negarse a ponerle familia
+OSI es lo correcto. **Sigue fuera de lo que Globant puede construir encima.**
+
+🔵 **Nota de método sobre los negativos de este archivo (`P287`):** el barrido regional de hoy devolvió
+**27 hechos** y **0 nuevos** (North America 7/0, EMEA 6/0, APAC 7/0, LATAM 7/0), medido con denominador
+enumerado en vez de declarado. **Cuatro pases de saturación, y éste con la lista publicada:** el valor
+marginal de las cuatro consultas obligatorias, tal como están redactadas, es **cero medido**. Queda
+pre-registrado cambiar el **eje** (proveedor/soberanía, licitación pública, fuente primaria fechada).
+
+🔴 **Y una advertencia sobre un artefacto de este repositorio (`P285`):**
+`compose/code/p170-headref-license-sweep/result.2026-10-03.tsv` es el archivo de resultado **más nuevo**
+y en **10** de sus 200 filas dice **menos** que la tabla publicada. Ya lleva marca de supersesión; para
+licencia manda `p283/result.2026-10-04.tsv` y, por encima de ambos, la tabla.
+
 ## 2026-10-04 — pase 94: GitHub trending vuelve vacio por VIGESIMOTERCERA vez, y el canal que rindio fue un radar fechado HOY cuyo propio etiquetado esta mal
 
 🔴 **Cero repos educativos nuevos.** Por primera vez el vacio se publica **enumerado** en vez

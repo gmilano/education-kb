@@ -9,6 +9,7 @@ updated: 2026-10-04
 > Plataformas verticales reales, en producción, customizables con AI.
 > Modelo: partir de algo que ya funciona y que ya tiene los datos, y agregar la capa agéntica arriba.
 > Verificado vía WebFetch el 2026-09-30; las capas del pase 11, el 2026-10-01.
+> **Pase 95 del 2026-10-04:** 🔴 **Sin verticales nuevas (el barrido `open source platform education LMS SIS MIT Apache 2026` devolvió el mismo mapa ya publicado: Moodle, Open edX, Sakai, ILIAS, Canvas LMS, Chamilo, OpenEduCat — 0 plataformas nuevas).** 🔴 **Pero el pase corrige la licencia de la plataforma de EVALUACIÓN más madura del inventario, y es la clase de error que decide un fork: `oat-sa/tao-core` (TAO) es GPL-2.0, no GPL-3.0** — leído del payload `LICENSE`, cuyo bloque de título dice `GNU GENERAL PUBLIC LICENSE / Version 2, June 1991`. 🔵 **Son incompatibles en un sentido: un derivado que mezcle código GPL-3.0 con TAO no se puede distribuir.** La tabla de este archivo ya lo decía bien desde el pase 9; el que estaba grueso era el archivo de resultado del barrido (`P285`). 🟢 **Moodle queda confirmada GPL-3.0 por payload (`COPYING.txt`), junto con 11 plugins y derivados de la misma familia**, por reusar `lib/license_family.sh` (`P237`) en vez de reescribir el classificador. 🔴 **Y una afirmación regulatoria de ESTE archivo (línea 256) ataba el deber de ALTO RIESGO del AI Act a agosto de 2026 sin el diferimiento del Anexo III a 2027-12-02 verificado en el pase 58: quedó anotada** (`P284` — 13 huérfanas de 87 en los archivos publicados, 0 tras anotar).
 > **Pase 94 del 2026-10-04:** 🔴 **Sin verticales nuevas (septimo pase consecutivo) y el barrido confirmo por vigesima vez el catalogo de este archivo** —`Moodle`, `Open edX`, `Sakai`, `OpenEduCat`, `OpenSIS`, `dotLRN`, `Richie`, `Gibbon` vuelven todas, y ninguna es alta. 🔵 **El aporte del pase es sobre la PROCEDENCIA de la licencia de una vertical y es util para cualquier compra: la licencia de una plataforma hay que leerla del PAYLOAD, y el payload hay que pedirle al MANIFIESTO que lo nombre, no adivinarlo** (**P279**, medido en `openedx/XBlock`: 33 sondas sin hit, y el archivo es `LICENSE.TXT` en mayuscula, nombrado por `pyproject.toml`). 🔴 **Y el caso que lo vuelve urgente en esta capa: una plataforma puede alojar en su raiz el manifiesto de la plataforma de la que DERIVA. `alfredang/ai-mms` —LMS de Singapur, «Tertiary Courses LMS»— corre sobre **OpenMage LTS v20.12.0** y su `composer.json` de raiz es el de `openmage/magento-lts`, sin modificar, declarando `["OSL-3.0","AFL-3.0"]`** (**P280**). 🔴 **Eso no lo salva: lo hunde. La pieza no tiene cesion propia Y hereda OSL-3.0, copyleft fuerte cuyo gatillo es el DESPLIEGUE EXTERNO —precisamente lo que hace un LMS. Para un encargo de cliente es inusable, y lo seria incluso si su autor agregara un `LICENSE`: habria que relicenciar el upstream.** 🟢 **Regla de compra que sale de aqui: antes de partir de una vertical, medir si su arbol es DERIVADO y bajo que cesion viene el upstream — `sh compose/code/p280-manifest-ownership/sweep.sh <org/repo>`.**
 > **Pase 93 del 2026-10-04:** 🔴 **Sin verticales nuevas (sexto pase consecutivo) y el barrido confirmo por decimonovena vez el catalogo de este archivo — pero una cifra que este archivo publicaba como verificada estaba MAL.** El pase 92 escribio que Chamilo liga **6** proveedores en el nucleo de `v3.0.x`: son **7**, y el que faltaba (`ClaudeProvider.php`) no estaba en la lista de nombres que ese pase sondeo (**P276**). 🟢 **Matriz correcta por ref: `0,0,5,5,7,7,7,7`.** 🔵 **Y este archivo necesita DOS columnas donde tenia una: 7 CLAVES configurables y 6 EMPRESAS distintas** —`AnthropicProvider extends ClaudeProvider` y las dos pegan a `api.anthropic.com/v1/messages`—, porque *«soporta 7 modelos de 7 empresas»* es la frase que una propuesta escribe sola y es **falsa**. 🔴 **La restriccion que rompe una clausula de contrato: este archivo vendia *«intercambiable de proveedor»* sin medir EN QUE. Medido, el swap es libre en texto y documento (7/7), cae a **3/7** en imagen y video, y a **1/7** en `document_process` — **solo OpenAI** (**P277**).** 🔵 **Tres hechos de OPERACION que se verifican en la instalacion y no en el repo:** el default lo decide el **orden del JSON** (`array_key_first`), un tipo solo se habilita si esta **explicitamente** en la config de ese proveedor, y si la clase no satisface la interfaz **el factory lo descarta con `error_log` y sigue** — la capacidad se pierde **sin error visible**. 🟢 **Y el veredicto de ILIAS pasa de *sostenido CON LIMITE* (tramo A–L) a AUSENCIA CERRADA en las cuatro refs, por enumeracion del arbol completo** (**P275**) — **con su consecuencia regulatoria para EMEA: si la AI no esta en el nucleo, bajo el EU AI Act (vigencia plena agosto 2026, educacion **alto riesgo**) el sujeto obligado de la evaluacion es el PLUGIN, no la plataforma.** 🔵 **Y el contraejemplo de soberania: de las 7 claves de Chamilo **ninguna** es autoalojable; de las 7 de Moodle, **`ollama` si** (nucleo desde 5.0).** La compuerta de pre-venta es la receta **`R-CAPACIDAD`** de `compose/patterns.md`.
 > **Pase 92 del 2026-10-04:** 🔴 **Sin verticales nuevas (quinto pase consecutivo) y el barrido de plataformas confirmó por decimoctava vez el catálogo de este archivo.** 🟢 **Pero este archivo salda la deuda que arrastraba del pase 90: sus SIETE veredictos de «ligadura de proveedor» por plataforma están ahora TODOS medidos por ref — 2 CONTRADICHOS, 5 SOSTENIDOS.** 🔴 **Y el contradicho nuevo obliga a reescribir cómo este archivo describe a Chamilo: liga SEIS proveedores de modelo en el NÚCLEO (`src/CoreBundle/AiProvider/`) y su `composer.json` no nombra NINGUNO en las ocho refs medidas, así que el veredicto no falló por falta de ref sino porque el manifiesto es CIEGO a un directorio de proveedores** (**P273**). 🟢 **Chamilo deja de ser «un LMS que se le puede agregar AI» y pasa a ser la segunda vertical de este archivo que trae la capa agéntica DE FÁBRICA**, con `AiTaskGraderService` (autograding) y `AiTutorChatService` (tutor) en el núcleo desde `v2.0.0`. 🔵 **Con versión mínima, que es lo que hay que preguntar antes de cotizar: 0 proveedores en `1.11.x`, 5 en `2.0`, 6 (con Anthropic) en `3.0`.** ⚠️ **`GPL-3.0`.** Ver la sección nueva de este archivo y [`compose/code/p273-platform-provider-dir/`](../compose/code/p273-platform-provider-dir/).
@@ -123,6 +124,63 @@ updated: 2026-10-04
 > versiones), así que lo permisivo (`qti3-*`, `instructure/qti`) es **lo único proponible** — con **`qti3-a11y`** y
 > **`qti3-pnp`**, que abren accesibilidad de evaluación como entregable auditable (**P72**). ⚠️ **Open edX cambia de
 > recomendación: proponer con presupuesto de mantenimiento (gap 70).** Ver la sección del pase 33, abajo.
+
+## 🔴 Sin verticales nuevas, y la licencia de la plataforma de evaluación más madura estaba GRUESA (pase 95 del 2026-10-04)
+
+El barrido obligatorio de plataformas (`open source platform education LMS SIS MIT Apache 2026`, año
+**CALCULADO**: 2026) devolvió **el mismo mapa que esta base ya publica** y conviene enumerarlo para que
+el cero sea auditable:
+
+| Lo que devolvió el barrido de plataformas | ¿Nueva para esta base? |
+|---|---|
+| Moodle (300 M+ usuarios), Open edX (MOOCs de edX y MIT OpenCourseWare), Sakai, ILIAS, Canvas LMS, Chamilo, OpenEduCat | 🔴 **ninguna** |
+
+🔵 **El eje que el barrido sí confirma, y ya estaba escrito:** las plataformas se reparten por
+**filosofía de diseño** —centradas en el curso (Moodle, Open edX), institucionales (Sakai, ILIAS),
+*open core* comercial (Canvas LMS), livianas (Chamilo) y ERP-educativo integrado (OpenEduCat)— y **la
+licencia es casi siempre copyleft (GPL/AGPL/LGPL)**, no permisiva. Eso es lo que hace que la columna de
+licencia de este archivo sea la más consecuente.
+
+### 🔴 La corrección que decide un fork: TAO es **GPL-2.0**, no GPL-3.0
+
+| Plataforma | Repo | Antes | Hoy, leído del payload | Bloque de título |
+|---|---|---|---|---|
+| **TAO** (evaluación QTI) | [`oat-sa/tao-core`](https://github.com/oat-sa/tao-core) | `GPL` | 🔴 **GPL-2.0** | `GNU GENERAL PUBLIC LICENSE` / `Version 2, June 1991` |
+| **Moodle** | [`moodle/moodle`](https://github.com/moodle/moodle) | `GPL` | **GPL-3.0** | `COPYING.txt` |
+| + 11 plugins y derivados de la familia Moodle/Chamilo | | `GPL` | **GPL-3.0** | |
+
+🔴 **Por qué importa y no es un detalle de nomenclatura:** GPL-2.0 y GPL-3.0 son **incompatibles en un
+sentido**. TAO es la plataforma de evaluación **QTI más madura** que encontró esta KB (22.533 commits), y
+un cliente que planifique un derivado mezclando componentes GPL-3.0 **no lo puede distribuir**. 🔵 **Un
+badge que dice «GPL» no distingue las dos, y es exactamente la distinción que decide el proyecto.**
+
+🟢 **La tabla de este archivo ya lo decía bien desde el pase 9** —`GPL-2.0 ⚠️`, con la nota de que no se
+puede forkear para un producto cerrado—. **El que estaba grueso era el archivo de resultado del barrido**
+(`p170/result.2026-10-03.tsv`, hoy con marca de supersesión, `P285`). 🔵 **Lección de este archivo: la
+tabla curada le ganó al instrumento automático, y el instrumento era el artefacto más nuevo.**
+
+### 🟢 Por qué el instrumento mejoró: no se reescribió el classificador
+
+El barrido nuevo (`compose/code/p283-manifest-named-license/`, **34/34** + 200/200 filas) **sourcea
+`lib/license_family.sh`** en vez de traer classificador propio. Ese módulo classifica por **bloque de
+título** y nunca por el cuerpo, porque la sección 13 de la GPL-3.0 se **titula** *«Use with the GNU
+Affero General Public License»* y un classificador que grepea el cuerpo etiqueta **AGPL** todo payload
+GPL-3.0 (`P171`). 🟢 **`P237` es la regla —*una regla que hay que recordar no es un control*— y este
+pase es la primera vez que un instrumento nuevo la cumple de entrada y cobra el beneficio: 17 filas más
+precisas sin escribir una línea de classificación.**
+
+### 🔴 Nota de integridad regulatoria sobre este archivo (`P284`)
+
+La **línea 256** de este archivo ataba la decisión de capacidad al **EU AI Act con «vigencia plena en
+agosto de 2026» y educación clasificada alto riesgo**, 🔴 **sin el diferimiento del Anexo III autónomo a
+2027-12-02** que el pase 58 verificó por tres canales (Consejo 2026-06-29, DOUE 2026-07-24, Reglamento
+(UE) 2026/1744). **Quedó anotada, no reescrita.**
+
+🔵 **Para la decisión que esa línea gobierna —si la capacidad de AI se compra o se construye— el
+encuadre correcto son DOS relojes:** el del **art. 50(2)** (marcado de contenido generado) **no se movió
+y vence el 2026-08-02**; el del **expediente de alto riesgo** vence el **2027-12-02**. 🟢 **La plataforma
+que no declara su proveedor de modelo en el manifiesto falla los dos**, y ése es el hallazgo de capa que
+este archivo ya tenía medido.
 
 ## 🔴 Sin verticales nuevas (septimo pase) — y una regla de COMPRA que esta capa no tenia: medir si la plataforma es DERIVADA
 
@@ -253,7 +311,7 @@ componente de AI.** La capacidad que las fuentes atribuyen a ILIAS (*AI Chat plu
 Assistant*) vive en **plugins de terceros**, fuera de este repo.
 
 🔴 **Y eso tiene una consecuencia regulatoria para EMEA que este archivo no tenía escrita:** bajo el
-EU AI Act —vigencia plena **agosto de 2026**, educación clasificada **alto riesgo**— si la capacidad
+EU AI Act —vigencia plena **agosto de 2026**, educación clasificada **alto riesgo**— si la capacidad ⏸️ **[P284 — corrección del pase 95: el **Anexo III autónomo** quedó diferido a **2027-12-02** por el *Digital Omnibus* / Reglamento (UE) 2026/1744 (verificado por tres canales en el pase 58). El **art. 50** NO fue tocado: su reloj sigue en **2026-08-02**.]**
 de AI no está en el núcleo del LMS, **el sujeto obligado de la evaluación es el plugin, no la
 plataforma**. Eso cambia quién firma la conformidad.
 

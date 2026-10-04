@@ -8,6 +8,7 @@ updated: 2026-10-04
 
 > Key players, market map y oportunidades por región.
 > Investigado 2026-09-30; el pase 11, el 2026-10-01. Las estimaciones de tamaño de mercado varían mucho entre firmas: se listan todas con su fuente en vez de elegir una.
+> **Pase 95 del 2026-10-04:** 🔴 **Vigesimocuarto barrido regional (año CALCULADO: 2026, no fijado) y las CUATRO regiones vuelven a dar SATURACIÓN — pero por primera vez la saturación se MIDIÓ con denominador enumerado en vez de declararse: 27 hechos devueltos, 27 ya publicados, 0 nuevos** (`compose/code/p287-regional-saturation/`, suite **15/15**, `facts.2026-10-04.tsv` + `result.2026-10-04.tsv`). 🔵 **El reparto: North America 7/0, EMEA 6/0, APAC 7/0, LATAM 7/0.** 🟢 **Y eso vuelve decidible lo que cuatro pases venían repitiendo: el valor marginal de estas cuatro consultas, tal como están redactadas, es CERO MEDIDO — repetirlas literalmente un pase más no es rigor, es gasto.** `P287`: *una saturación sin denominador no se distingue de no haber buscado.* Queda pre-registrado el cambio de EJE para el pase 96 (proveedor/soberanía, licitación pública, fuente primaria fechada) en vez de más esfuerzo en el mismo eje. 🔴 **Y el pase corrige una afirmación REGULATORIA de ESTE archivo: dos pasajes EMEA de `market.md` ataban el deber de ALTO RIESGO a agosto de 2026 sin el diferimiento del Anexo III a 2027-12-02 que el pase 58 había verificado por tres canales.** De **87** afirmaciones así en los 9 archivos publicados, **13 estaban huérfanas** y **5 de ellas son de este archivo** (líneas 239, 3795, 5272, 5393, 5739). Anotadas sin reescribir una palabra → **88 afirmaciones, 0 huérfanas** (`P284`, `compose/code/p284-deferral-adjacency/`, **24/24**). 🔵 **La consecuencia comercial no cambia y conviene decirla así: el reloj que vence ANTES sigue siendo el del art. 50(2), en 2026-08-02, y esta base ya tiene ese instrumento con suite; lo que se corrió 16 meses es el expediente de alto riesgo, que no desapareció.**
 > **Pase 94 del 2026-10-04:** 🟢 **Las CUATRO regiones devolvieron inteligencia ubicable este pase —ninguna queda en silencio— y la asimetria entre ejes es el hallazgo: las cuatro rindieron POLITICA y REGULACION, y las cuatro rindieron CERO codigo abierto educativo nuevo** (**P282**: el canal regional de esta base es un canal de politica, no de repos; pedirle agentes es pedirle lo que no tiene, y nueve pases de «barrido global vacio» lo venian confirmando sin nombrarlo). 🟢 **Mercado re-anclado con cifra fechada: $7,52 B (2025) → $10,6 B (2026), CAGR 40,9 %, → $42,48 B (2030).** 🟢 **NA: 134 proyectos de ley sobre AI en educacion en 31 estados en 2026; California AB 1159 prohibe entrenar modelos con datos de estudiantes; Idaho SB 1227 exige protecciones de privacidad; Oklahoma y Maryland exigen supervision humana y vedan a la AI las decisiones de alto impacto sobre un alumno; la H.R. 8747 (K-12 AI Literacy and Readiness Act of 2026) avanzo en comite en julio; 86 % de las organizaciones educativas ya adoptaron GenAI; Gemini for Education desplegado en +1.000 universidades de EEUU.** 🟢 **EMEA: el EU AI Act clasifica como ALTO RIESGO el acceso y la evaluacion educativa —admision, calificacion, puntuacion de examenes— y exige gestion de riesgo, gobierno de datos, supervision humana, transparencia y evaluacion de conformidad ANTES del despliegue; vigente el 2026-07-31, con codigos de practica publicados en junio y julio de 2026.** 🟢 **APAC, y es la region de regimenes DIVERGENTES: la Basic AI Act de Corea del Sur rige desde enero de 2026 y es EXTRATERRITORIAL; el IMDA de Singapur publico el 2026-01-22 un marco para AI AGENTICA; la ley de tecnologia digital de Vietnam trae provisiones de etiquetado y transparencia en 2026; Australia pone en operacion su AI Safety Institute a comienzos de 2026.** 🟢 **LATAM, con la encuesta mas grande que esta base haya podido citar: Digital Education Council LATAM 2026 — +30.000 respuestas, 29 instituciones, con el IFE del Tec de Monterrey, AIGEN y RIE360: 92 % de estudiantes y 79 % de docentes ya usan AI, 94 % de docentes espera usarla, y 61 % de estudiantes TEME el mal uso por parte de sus pares. Despliegue AI empresarial LATAM 47 %; Brasil (65,89), Chile (63,19) y Uruguay (62,21) son los unicos del top 50 global; Chile tiene proyecto de ley por clasificacion de riesgo y Colombia politica nacional via CONPES 4144 con presupuesto hasta 2030.** 🔵 **Lectura para el estudio: la oportunidad de 2026 no es el modelo, es la CONFORMIDAD — en las cuatro regiones el texto que manda pide trazabilidad, supervision humana y divulgacion, que es capa de ingenieria y no de modelo.**
 > **Pase 93 del 2026-10-04:** 🔴 **Vigesimosegundo barrido regional (año CALCULADO: 2026, no fijado) y las CUATRO regiones vuelven a dar SATURACION — declarado region por region, porque un barrido que no rinde y uno que no se corrio no se distinguen desde afuera.** 🔵 **El unico hecho nuevo del pase no es de mercado sino de CONTRATO, y aplica a las cuatro regiones por igual: la promesa *«cambiamos de proveedor de AI cuando quieras»* sobre Chamilo es verdadera en texto y documento (7/7) y FALSA en imagen y video (3/7) y en procesamiento de documentos (**1/7 — solo OpenAI**).** 🟢 **EMEA es la unica region con texto citable y fecha dura** (EU AI Act, vigencia plena **agosto 2026**, educacion **alto riesgo**), **y el hallazgo de plataforma de este pase aterriza ahi: ILIAS no tiene AI en el nucleo en ninguna de sus cuatro refs —medido sobre el arbol COMPLETO, no el tramo A–L— asi que el sujeto obligado de la evaluacion es el plugin, no el LMS.** 🔵 **APAC: de las 7 claves de Chamilo ninguna es autoalojable y de las 7 de Moodle `ollama` si, asi que con requisito de soberania **la eleccion de LMS precede a la de modelo**.** 🔴 **LATAM: OpenAI al **89 %** de integracion y <25 % con modelo propio, cruzado con `document_process` implementado por **un solo** proveedor, no es comodidad — es exposicion sin ruta de salida medida, y es la region donde mas se vendio esa promesa.** ⚠️ **Y las cifras de mercado siguen sin converger** ($6,4 B→$79,6 B a 31,35 % vs. $7,52 B→$10,6 B a 40,9 %): **dos series incompatibles**, listadas con su fuente en vez de promediadas.
 > **Pase 91 del 2026-10-04:** 🔴 **Vigésimo barrido regional (año CALCULADO: 2026, no fijado) y las CUATRO regiones vuelven a dar SATURACIÓN — y otra vez se MIDIÓ en vez de declararse.** De **23** tokens de hecho que los cuatro barridos regionales y los cuatro globales trajeron, **22 ya estaban en el árbol**, verificados por `grep` archivo por archivo antes de escribir esta línea: `86 %` de estudiantes, `92 %`, `71 %` de docentes sin formación, Colorado, Texas, `AI Adoption Summit`, `£200 M`, `Europe EdTech 200`, Consejo de Europa, Singapur, soberanía APAC, `99 %`/`85 %` de startups LATAM, `Ednova`, UNU/BID, `79.6`, `10.6`, `45.62 %`, `34.78 %`, `71.22 %`, `CK-ERP`, `OpenEduCat`. 🔵 **Se registra como CONFIRMACIÓN DE COBERTURA medida, no como hallazgo** — que es información distinta del silencio. 🟢 **El único token ausente del árbol es de North America y se escribe con su fuente nombrada: el mercado NA de AI en educación va de US$ 951 M (2024) a US$ 2.303,2 M en 2029, CAGR 15,9 %** (MarketsandMarkets). Es la primera vez que esta base tiene el **extremo 2029** de esa serie; el `951` ya estaba. ⚠️ **Es estimación de firma privada, no cifra oficial**: se lista con su fuente, como el resto de las estimaciones de este archivo. 🔴 **Y una corrección de fuente secundaria que afecta a EMEA y se repite en dos de los cuatro barridos: ambos escribieron que el EU AI Act «entra en vigor / toma pleno efecto en agosto de 2026».** El Reglamento **entró en vigor el 2024-08-01**; lo que cae en agosto de 2026 es una **fecha de APLICACIÓN**, no la entrada en vigor — y para el Anexo III (educación = alto riesgo) esta base ya tiene medido que el reloj se corrió a **2027-12-02** (Reglamento (UE) 2026/1744, pase 11). El barrido fusionó *entrada en vigor* con *fecha de aplicación*, y encima citó la aplicación desactualizada. 🟢 **El aporte cotizable del pase vale para las cuatro regiones por igual y es de la capa de plataforma: el veredicto «esta plataforma no liga proveedor de modelo» depende de la REF.** Ver la sección nueva de abajo y [`compose/code/p272-platform-ref-verdict/`](../compose/code/p272-platform-ref-verdict/).
@@ -61,6 +62,178 @@ updated: 2026-10-04
 > regulado — **STUDENTS FIRST Act of 2026**, marco de los estudiantes de los 50 estados (AASA, agosto 2026).
 > **LATAM:** 🔵 el hallazgo del pase — **existe una capa MCP nacional brasileña de datos públicos, activa y MIT, y
 > educación es el único dominio grande que falta** (**gap 69**).
+
+## 🔴 Barrido regional 24: saturación en las cuatro, MEDIDA con denominador (pase 95 del 2026-10-04)
+
+Las cuatro búsquedas obligatorias se corrieron con el **año CALCULADO** (`date -u +%Y` → **2026**):
+`AI education {North America|EMEA|APAC|LATAM} 2026 adoption regulation players`, más el barrido
+global de mercado (`AI education industry trends 2026`).
+
+🔴 **Las cuatro rindieron, y las cuatro rindieron SÓLO lo ya publicado.** El pase 93 dejó la regla
+—*un conteo sólo es un conteo si ENUMERA*— y aquí está aplicada al barrido regional: cada hecho que
+las búsquedas devolvieron está enumerado en `compose/code/p287-regional-saturation/facts.2026-10-04.tsv`
+con el patrón que lo identifica, y la intersección con el corpus publicado está medida:
+
+| Región | Hechos devueltos hoy | 🔴 Nuevos para esta base |
+|---|---|---|
+| **North America** | 7 | 🔴 **0** |
+| **EMEA** | 6 | 🔴 **0** |
+| **APAC** | 7 | 🔴 **0** |
+| **LATAM** | 7 | 🔴 **0** |
+| **TOTAL** | **27** | 🔴 **0** |
+
+**Lo que devolvió cada región, enumerado (para que el cero sea auditable):**
+
+- **North America** — cuota de adopción **36 %**; **$951 M** (2024) → **$2.303,2 M** (2029) al
+  **15,9 %** CAGR; **86 %** de estudiantes en 16 países ya usan AI; el **vacío regulatorio** de edtech
+  (no hay equivalente a la FDA, y la decisión queda en cada distrito o universidad); Colorado y Texas
+  con requisitos parciales.
+- **EMEA** — el **art. 50** rige desde **2026-08-02** y el **Anexo III autónomo** quedó en
+  **2027-12-02**; **94 %** de organizaciones invertirá en formación de AI en 2026; **£200 M+** del AI
+  Adoption Summit del Reino Unido; la **2.ª conferencia de trabajo del Consejo de Europa** sobre las
+  dimensiones regulatorias de la AI en educación, en **octubre de 2026**; el *Europe EdTech 200+*.
+- **APAC** — **48 %** de líderes de gobernanza pone la adopción de AI como prioridad 2026 y **57 %**
+  de las organizaciones de Asia ya la incorporó en al menos un área; consultas de Singapur sobre
+  transparencia y rendición de cuentas; la **soberanía de AI** marcando el paso; LearnUpon con HQ en
+  Sydney y *Create+*; la alianza **TCS + Pearson**; NIIT MTS en el top-20 de contenido 2026.
+- **LATAM** — el estudio **UNESCO IESALC + UNU-IAS** (**200 instituciones, 19 países**, agosto–octubre
+  de 2025): **87 %** usa AI en al menos un área y sólo **26 %** tiene estrategia formal; la jerarquía
+  **73,5 %** docencia / **57,0 %** investigación / **34,1 %** administración / **20,0 %** vinculación;
+  **18,5 %** políticas institucionales, **8,0 %** presupuesto propio, **9,0 %** mecanismos de
+  evaluación; **99 %** de las startups usa AI y **85 %** de forma nativa en producto; Ednova (Chile).
+
+### 🔵 Lo que la medición vuelve DECIDIBLE, y es el aporte del pase a este archivo
+
+🔴 **Cuatro pases consecutivos de saturación, y éste con denominador: el valor marginal de estas
+cuatro consultas, tal como están redactadas, es CERO MEDIDO.** Repetirlas literalmente un pase más no
+es rigor, es gasto — y hasta hoy no se podía afirmar, porque *«saturación»* dicha en prosa no se
+distingue de no haber buscado.
+
+🟢 **Lo que rompería la saturación no es más esfuerzo en el mismo eje, es cambiar el EJE.** Queda
+pre-registrado para el pase 96: el eje de **proveedor/soberanía** (quién procesa datos de alumnos y
+bajo qué contrato — donde `P269`–`P273` ya dieron hallazgos), el de **licitación pública**
+(ministerios y compras de LMS) y el de **fuente primaria fechada** (boletín oficial, repositorio
+institucional) en vez del agregador de prensa de mercado.
+
+**`P287`**: *una saturación sin denominador no se distingue de no haber buscado. Si un barrido
+obligatorio devuelve sólo cosas conocidas, hay que ENUMERAR lo que devolvió y medir la intersección
+con lo publicado — y entonces «cero nuevos» es un dato con el que se decide si cambiar el canal.*
+
+### 🔴 La corrección regulatoria que este archivo necesitaba, y es de las caras
+
+El pase 58 verificó por **tres canales concordantes** que el *Digital Omnibus* corrió el **Anexo III
+autónomo** de **2026-08-02** a **2027-12-02** (Consejo **2026-06-29**, DOUE **2026-07-24**, Reglamento
+(UE) **2026/1744**), **y que el artículo 50 no fue tocado**. 🔴 **La corrección quedó escrita en
+`agents/top.md` y no viajó: cinco pasajes de ESTE archivo seguían atando el deber de alto riesgo a
+agosto de 2026** — líneas **239**, **3795**, **5272**, **5393** y **5739**.
+
+Medido sobre los 9 archivos publicados con `compose/code/p284-deferral-adjacency/`:
+
+| | n |
+|---|---|
+| afirmaciones que atan un deber de **alto riesgo** a **agosto de 2026** | **87** |
+| 🟢 acompañadas por el diferimiento a **2027-12-02** a ≤6 líneas | **74** |
+| 🔴 **huérfanas** | 🔴 **13** (5 de este archivo) |
+| tras anotarlas | 🟢 **88 afirmaciones, 0 huérfanas** |
+
+⚠️ **Las 13 quedaron ANOTADAS, no reescritas**: conservan su texto palabra por palabra y ganan la
+fecha nueva a la vista. Reescribir habría borrado el registro de cuándo esta base creía qué.
+
+🔵 **Y la mitad que evita el error simétrico:** el *Omnibus* **no tocó el art. 50**, así que para la
+**transparencia** —el marcado de contenido generado— **agosto de 2026 sigue siendo la fecha correcta**,
+y las líneas que se declaran del art. 50 están **eximidas** del control.
+
+🟢 **Para una cotización EMEA la consecuencia es exactamente ésta, y conviene decirla sin ambigüedad:**
+el reloj que vence **antes** es el del **art. 50(2), en 2026-08-02**, y esta base ya tiene ese
+instrumento construido y con suite (`compose/code/aiact-50-2-*`). **Lo que se corrió 16 meses es el
+expediente de alto riesgo del Anexo III — no desapareció, vence el 2027-12-02, y el cliente EMEA lo
+sigue necesitando.** Vender la auditoría de alto riesgo como *«vencida»* es vender contra una fecha
+que ya no existe.
+
+## Opportunities by region
+
+> 🔵 **Nota de método de este pase:** las cuatro oportunidades de abajo salen de **dos** mediciones de
+> este pase —el re-barrido de licencia de las 200 filas (`P283`/`P285`) y el control de adyacencia
+> regulatoria (`P284`)— y se reparten por región según qué restricción manda en cada una. **No hay
+> sección sólo-LATAM**, y la región va en el vocabulario cerrado de cinco valores, con el país en la
+> prosa.
+
+### North America
+
+🟢 **La oportunidad es el *due diligence* de licencia como entregable de entrada, y este pase le puso
+precio en horas.** En la región donde **no hay regulador de edtech** —ni equivalente a la FDA— y la
+decisión de compra queda en cada distrito o universidad, **el riesgo que nadie audita es el de
+licencia del open source que ya está instalado**.
+
+🔵 **El insumo existe y es reproducible:** `p283` barre **200 filas en una corrida** y devuelve, por
+repo, la familia de licencia **leída del payload** (no del badge), el manifiesto que la declara y el
+veredicto de propiedad. **Lo que vende no es la lista, es la clase `SOLO_MANIFIESTO`**: 5 piezas del
+inventario **no tienen archivo de licencia pero declaran MIT en su propio manifiesto**. Para un
+comité de compras eso no es «sin licencia», es **una cesión defectuosa pero intencional** — y es
+accionable: hay a quién pedirle el `LICENSE` que falta.
+
+⚠️ **Y la advertencia que da credibilidad a la propuesta:** `oat-sa/tao-core` es **GPL-2.0**, no
+GPL-3.0. Un cliente que planifique un fork de TAO con código GPL-3.0 se come una incompatibilidad que
+no aparece en ningún badge.
+
+### EMEA
+
+🔴 **La oportunidad se vende contra una FECHA, y este pase la corrigió: son DOS relojes, no uno.**
+
+| Reloj | Vence | Qué exige | ¿Lo tiene esta base? |
+|---|---|---|---|
+| **art. 50(2)** — transparencia, marcado de contenido generado | 🔴 **2026-08-02** | marcar lo sintético de punta a punta | 🟢 **sí**, `compose/code/aiact-50-2-*` con suite (**27/27** y **37/37** con `xmllint`) |
+| **Anexo III autónomo** — expediente de alto riesgo | **2027-12-02** | gestión de riesgo, gobernanza de datos, supervisión humana, registro en base de datos UE, **alfabetización AI documentada del personal** | parcial: la matriz de proveedor por ref es el inventario |
+
+🟢 **El cruce que vende:** el que vence **primero** es el que esta base ya puede entregar corriendo, y
+**no** es el que todo el mercado está cotizando. Mientras los competidores venden el expediente de
+alto riesgo —que se corrió a 2027— **el marcado del art. 50(2) vence en agosto de 2026 y nadie lo
+movió**. Entrada corta, fecha dura, instrumento ya probado.
+
+🔵 **Y el ángulo institucional sigue abierto:** el Consejo de Europa celebra en **octubre de 2026** su
+2.ª conferencia de trabajo sobre las dimensiones regulatorias de la AI en educación — citar una
+conferencia en curso vale más que citar el Reglamento en abstracto.
+
+### APAC
+
+🔵 **La oportunidad es la brecha entre prioridad y gobernanza, que en esta región está medida en los
+dos lados:** **48 %** de los líderes de gobernanza pone la adopción de AI como prioridad 2026, **57 %**
+de las organizaciones ya la incorporó —y las expectativas de supervisión *todavía no están fijadas*,
+con Singapur en consultas y la **soberanía de AI** marcando el paso.
+
+🟢 **Lo que esta base aporta, y encaja con «soberanía» mejor que cualquier discurso:** el eje de
+**proveedor por ref** —qué modelo, de qué proveedor, bajo qué contrato procesa datos de alumnos— es
+literalmente el inventario que una exigencia de soberanía obliga a tener, y **hoy ninguna plataforma
+lo declara en su manifiesto**. En una región donde la regla todavía se está escribiendo, llegar con
+el inventario hecho es llegar antes que la regla.
+
+⚠️ **Límite declarado:** las consultas de Singapur que el barrido devuelve son sobre **instituciones
+financieras**, no educativas. Es señal **adyacente** —indica la dirección del régimen de supervisión—
+**no** una obligación educativa, y cotizarla como tal sería inventar un requisito.
+
+### LATAM
+
+🔴 **La oportunidad es la brecha de gobernanza, y es la mejor cuantificada de las cuatro regiones**
+gracias al estudio de **UNESCO IESALC + UNU-IAS** (**200 instituciones, 19 países**):
+
+| En educación superior de LATAM | % |
+|---|---|
+| usa AI en al menos un área | **87,0** |
+| 🔴 tiene **estrategia formal** de AI | 🔴 **26,0** |
+| 🔴 tiene **políticas institucionales** | 🔴 **18,5** |
+| 🔴 tiene **mecanismos formales de evaluación** | 🔴 **9,0** |
+| 🔴 tiene **presupuesto propio** de AI | 🔴 **8,0** |
+
+🟢 **El encuadre que vende, y sale de la propia asimetría:** **la adopción ya ocurrió y la gobernanza
+no** — **87 % contra 26 %**. No hay que convencer a nadie de adoptar AI; hay que **ordenar lo que ya
+está adoptado**. Y el entregable de entrada es el más barato de producir: **un inventario con
+licencia verificada** de lo que la institución ya tiene corriendo, que es exactamente lo que `p283`
+emite en una corrida, y que el **9 % de mecanismos de evaluación** dice que nadie tiene.
+
+🔵 **Y el dato de licencia aterriza acá con una pieza de la región:** `nmarafo/OpenDidactia` (España,
+currículo) es **CC BY-SA 4.0** — *share-alike* sobre el contenido, no MIT sobre el código. Para una
+institución que quiera generar material curricular derivado, **esa cláusula decide el proyecto**, y
+este pase la confirmó leyendo el payload (`LICENSE.md`), no el badge.
 
 ## 🟢 Las cuatro regiones hablan este pase — y la asimetria entre lo que dan y lo que no es el hallazgo (`P282`)
 
@@ -236,7 +409,7 @@ procesamiento de documentos. Ver `verticals/solutions.md` y **P277**.
 ### EMEA
 
 - 🟢 **El único dato regulatorio con fecha dura, y es el que manda la cotización:** el **EU AI Act**
-  entra en vigor pleno en **agosto de 2026** y clasifica la AI educativa como **alto riesgo**. Esta
+  entra en vigor pleno en **agosto de 2026** y clasifica la AI educativa como **alto riesgo**. Esta ⏸️ **[P284 — corrección del pase 95: el **Anexo III autónomo** quedó diferido a **2027-12-02** por el *Digital Omnibus* / Reglamento (UE) 2026/1744 (verificado por tres canales en el pase 58). El **art. 50** NO fue tocado: su reloj sigue en **2026-08-02**.]**
   base ya tiene el instrumento del artículo **50(2)** (marcado de contenido generado) construido y
   con suite: `compose/code/aiact-50-2-*`.
 - 🟢 **Y el hallazgo de plataforma de este pase aterriza justo acá:** la pieza de ILIAS —la
@@ -3792,7 +3965,7 @@ nada: la región lidera la adopción y no tiene regulador sectorial.** Ver tende
   EE. UU. opera en un **vacío regulatorio relativo —no hay equivalente de la FDA para edtech— y la
   decisión de adopción la toma cada escuela, distrito o universidad, con supervisión externa
   mínima**, mientras **estados sueltos legislan de a pedazos (Colorado, Texas)**. ⚠️ **Contra eso,
-  el EU AI Act clasifica la educación como alto riesgo desde agosto de 2026.** 🔵 **La consecuencia
+  el EU AI Act clasifica la educación como alto riesgo desde agosto de 2026.** 🔵 **La consecuencia ⏸️ **[P284 — corrección del pase 95: el **Anexo III autónomo** quedó diferido a **2027-12-02** por el *Digital Omnibus* / Reglamento (UE) 2026/1744 (verificado por tres canales en el pase 58). El **art. 50** NO fue tocado: su reloj sigue en **2026-08-02**.]**
   comercial: en North America el comprador del cumplimiento NO es el regulador, es la propia
   institución** —y por eso la venta es de gobernanza voluntaria y defensa reputacional, no de
   obligación legal.
@@ -5269,7 +5442,7 @@ cubre el cliente, no el currículo que devuelve** (**P172**).
 
 | Magnitud | Valor | Fuente / fecha |
 |---|---|---|
-| 🔴 **EU AI Act, vigencia plena** | **agosto de 2026**, con la AI educativa clasificada **ALTO RIESGO** | instrumento normativo |
+| 🔴 **EU AI Act, vigencia plena** | **agosto de 2026**, con la AI educativa clasificada **ALTO RIESGO** | instrumento normativo ⏸️ **[P284 — corrección del pase 95: el **Anexo III autónomo** quedó diferido a **2027-12-02** por el *Digital Omnibus* / Reglamento (UE) 2026/1744 (verificado por tres canales en el pase 58). El **art. 50** NO fue tocado: su reloj sigue en **2026-08-02**.]** |
 | Dispersión de adopción entre países UE | **5,21 % (Rumania) → 42,03 % (Dinamarca)** | serie UE 2026 |
 | Ritmo de adopción empresarial | ~**+30 %** interanual | ídem |
 | 🔴 Freno: falta de expertise | **70,89 %** de quienes consideraron y NO adoptaron | ídem |
@@ -5390,7 +5563,7 @@ bloqueados por dos canales, así que nada de esto se pudo confirmar contra el si
 
 | Indicador | Valor |
 |---|---|
-| **EU AI Act** | 🔴 **en vigor pleno desde agosto de 2026**; **AI educativa clasificada ALTO RIESGO**; 4 niveles (inaceptable / alto / limitado / mínimo) |
+| **EU AI Act** | 🔴 **en vigor pleno desde agosto de 2026**; **AI educativa clasificada ALTO RIESGO**; 4 niveles (inaceptable / alto / limitado / mínimo) ⏸️ **[P284 — corrección del pase 95: el **Anexo III autónomo** quedó diferido a **2027-12-02** por el *Digital Omnibus* / Reglamento (UE) 2026/1744 (verificado por tres canales en el pase 58). El **art. 50** NO fue tocado: su reloj sigue en **2026-08-02**.]** |
 | Organizaciones que invertirán en formación AI en 2026 | **94 %** |
 | Organizaciones EMEA que aún NO empezaron a pilotear | 🔴 **38 %** |
 | Compromiso público del Reino Unido | **£200 M+** en el AI Adoption Summit, con **Skills England** fijando el marco curricular y Cisco, IBM, BT y Rolls-Royce como socios de entrega |
@@ -5736,7 +5909,7 @@ base infiere emociones — es Anexo III con plazo 2027-12-02 más art. 22 del GD
 
 **🔵 Pase 51 del 2026-10-02 — hay una ventana de calendario abierta ESTE MES, y una pieza nueva con titular británico.**
 
-- 🟢 **El Consejo de Europa celebra en OCTUBRE de 2026 su 2.ª conferencia de trabajo sobre las dimensiones regulatorias de la AI en educación.** ⚠️ **Es el único evento de esta KB que cae dentro de la ventana del pase**: para una propuesta EMEA, citar la conferencia en curso vale más que citar el AI Act en abstracto. **Y el reloj del AI Act sigue en agosto de 2026 con AI educativa como alto riesgo.**
+- 🟢 **El Consejo de Europa celebra en OCTUBRE de 2026 su 2.ª conferencia de trabajo sobre las dimensiones regulatorias de la AI en educación.** ⚠️ **Es el único evento de esta KB que cae dentro de la ventana del pase**: para una propuesta EMEA, citar la conferencia en curso vale más que citar el AI Act en abstracto. **Y el reloj del AI Act sigue en agosto de 2026 con AI educativa como alto riesgo.** ⏸️ **[P284 — corrección del pase 95: el **Anexo III autónomo** quedó diferido a **2027-12-02** por el *Digital Omnibus* / Reglamento (UE) 2026/1744 (verificado por tres canales en el pase 58). El **art. 50** NO fue tocado: su reloj sigue en **2026-08-02**.]**
 - 🟢 **Alta con origen EMEA:** **`@gera-services/mcp-geralearn`** (**MIT**, titular `geraservicesuk`) — servidor MCP de una plataforma educativa con **cobertura declarada en 50+ países**. 🔴 **Advertencia de *due diligence* que hay que decir junto al alta: el repositorio que declara su manifiesto da 404 por dos canales independientes; la licencia está medida en el TARBALL publicado, que es lo que efectivamente se instala.** ⚠️ **Es proponible con el código a la vista del tarball, no con el repo a la vista.**
 - 🔵 **La pieza de marcado del Artículo 50(2) que esta base cotiza acaba de ganar dos componentes con licencia medida:** `contentauth/c2pa-rs` y `contentauth/c2pa-python` son **MIT** (texto en `LICENSE-MIT`), y esta KB los tenía archivados como **sin licencia** por un defecto del propio instrumento. **Para una entrega EMEA con obligación de marcar contenido generado, eso saca la implementación de referencia de C2PA de la lista de riesgos.**
 - **Encuadre:** **£200 M+** del AI Adoption Summit británico (**£100 M** Bridge AI, **£53 M** regional), **94 %** dispuesto a invertir en formación, 🔴 **38 % que todavía no empezó a pilotear**, modelo de entrega con **Skills England** fijando currículo y Cisco, IBM, BT y Rolls-Royce como socios de ejecución. ⚠️ **El 38 % sin pilotear es la cifra que vende: el mercado no está pidiendo escala, está pidiendo el primer piloto.**

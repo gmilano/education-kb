@@ -9,6 +9,60 @@ updated: 2026-10-04
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 > No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
 
+## 2026-10-04 — pase 95: el barrido global vuelve vacío por UNDÉCIMA vez, y el esfuerzo se gasta en una predicción propia FALSIFICADA
+
+🔬 **El canal, declarado antes de cualquier veredicto (`P247`).** Medido hoy: `github.com/` → **403**,
+`api.github.com` → **403**, `raw.githubusercontent.com` → **200/404 con payload**. El `curl -sI` que
+el encargo ordena **sigue muerto en este entorno**, y citarlo como verificación es citar un 403.
+
+🔴 **Altas: 0. La tabla principal se queda en 94 filas — séptimo pase consecutivo sin altas.** El
+barrido global obligatorio se corrió con el **año CALCULADO** (`date -u +%Y` → **2026**, no fijado):
+`top open source AI agents education 2026 github MIT` y `github trending education AI 2026`.
+
+**El cero, enumerado (el pase 93 dejó la regla: un conteo sólo es un conteo si ENUMERA):**
+
+| Lo que devolvió el barrido global de hoy | n |
+|---|---|
+| frameworks/infra de agentes genéricos (openclaw **385.407 ★**, dify **151.639 ★**, browser-use **108.128 ★**, Mem0 **62.735 ★**, AutoGen **60.284 ★**, Flowise **55.226 ★**) | **6** |
+| 🔵 repos de *currículo para enseñar AI a ingenieros* (`ai-engineering-from-scratch`, `free-ai-agents-resources`, D2L, *Zero to Hero*) | **4** |
+| 🔴 **software de la INDUSTRIA educativa, nuevo, con licencia permisiva** | 🔴 **0** |
+
+🔵 **Reproduce `P281` con otra fuente que la del pase 94:** lo que el canal etiqueta «education» son
+**currículos para formar ingenieros de AI**, no software que sirva a una institución educativa. Ninguna
+de las 4 es fila.
+
+🔴 **El aporte del pase, y es una predicción PROPIA que se cae.** El pase 94 pre-registró una acción
+*«para que no se pueda eludir»* —re-barrer las 200 filas `org/repo` de los pases 62/64 con un
+instrumento manifiesto-consciente— **y predijo ~28 filas con hueco de nombre**. Se corrió sobre las
+200 (`compose/code/p283-manifest-named-license/`, suite **34/34**):
+
+| Lo medido sobre las 200 | n |
+|---|---|
+| 🔴 **huecos de NOMBRE de archivo (`P279`) — lo predicho era ~28** | 🔴 **0** |
+| payload hallado por el nombre que **NOMBRA** el manifiesto | **12** — *las 12 resolvieron a `LICENSE`* |
+| veredictos que cambian de CLASE (`SIN_LICENCIA` → `SOLO_MANIFIESTO`) | **5** |
+| familias de licencia más precisas | **17** |
+| filas donde la **tabla publicada** ya era correcta | 🟢 **200 de 200** |
+
+🔵 **`P286`: extrapolar un reparto poblacional desde UN control positivo (1 de 7) no es una estimación,
+es una corazonada con tabla.** La tasa real de `P279` es **1 de 201**, y su único caso —`openedx/XBlock`,
+`master/LICENSE.TXT`— **no está en estas 200 filas**: vive en `repos/foundations.md`.
+
+🟢 **Lo durable: las 5 filas que cambian de clase son EXACTAMENTE las que el pase 65 corrigió a mano**,
+así que lo que era memoria de un pase pasa a ser un instrumento que lo deriva solo. Nace la clase
+**`SOLO_MANIFIESTO`** (*sin archivo de licencia, pero el manifiesto del propio proyecto declara una
+expresión*), que para Globant no es «sin licencia» sino una **cesión defectuosa pero intencional**.
+
+🟢 **Y 17 filas ganan precisión de familia por reusar `lib/license_family.sh` (`P237`):** 12 `GPL` →
+`GPL-2.0`/`GPL-3.0` y 4 `UNKNOWN` classificadas. 🔴 **La consecuente: `oat-sa/tao-core` es GPL-2.0, no
+GPL-3.0** — incompatibles en un sentido, y es la plataforma QTI más madura del inventario.
+
+🔴 **Nota de integridad sobre ESTE archivo (`P284`):** tres líneas de su historia (**1108**, **4497**,
+**4601**) ataban el deber de **alto riesgo** del AI Act a **agosto de 2026** sin el diferimiento del
+Anexo III a **2027-12-02**. ⚠️ **Quedaron ANOTADAS, no reescritas** — este archivo es **append-only**
+por encargo y reescribirlo destruye la tendencia que existe para registrar. La anotación hace viajar
+la corrección **sin borrar el registro** de cuándo esta base creía qué.
+
 ## 2026-10-04 — pase 94: el barrido global vuelve vacio por DECIMA vez, y por primera vez el vacio se publica con DENOMINADOR enumerado
 
 🔴 **Cero agentes educativos nuevos, sexto pase consecutivo.** Lo que cambia hoy no es el
@@ -1105,7 +1159,7 @@ descripcion por encima archiva una libreria de bolsa dentro de una KB de educaci
 Las cuatro busquedas regionales obligatorias se corrieron con el ano **calculado** (2026). **Cada
 hecho devuelto ya estaba publicado en esta base**, confirmado con `grep` antes de escribir: NA (134
 proyectos en 31 estados, **AB 1159**, Idaho **SB 1227**, Virginia, Maryland, *Traffic Light*, 18 %),
-EMEA (AI Act, aplicacion general **2026-08-02**, alto riesgo en acceso y evaluacion), APAC (**96 %**,
+EMEA (AI Act, aplicacion general **2026-08-02**, alto riesgo en acceso y evaluacion), APAC (**96 %**, ⏸️ **[P284 — corrección del pase 95: el **Anexo III autónomo** quedó diferido a **2027-12-02** por el *Digital Omnibus* / Reglamento (UE) 2026/1744 (verificado por tres canales en el pase 58). El **art. 50** NO fue tocado: su reloj sigue en **2026-08-02**.]**
 ROI **US$ 2,85**, Basic AI Act coreana, ley de AI de Vietnam), LATAM (Digital Education Council
 **92 % / 79 % / 94 % / 61 %**, Tec de Monterrey, AIGEN, RIE360, Chile, **CONPES 4144**).
 🔵 **Rendimiento marginal medido CERO por decima vez: el canal se corre porque es obligatorio y porque
@@ -4494,7 +4548,7 @@ vacío declarado es información; el silencio se lee como cobertura:**
 | Región | Qué devolvió | Altas |
 |---|---|---|
 | **North America** | **$951 M** (2024) → **$2.303,2 M** (2029, CAGR **15,9 %**), **36 %** de cuota global, **$169 M** federales en Q1 2026; **71 %** de docentes sin formación y **sólo 10 %** de instituciones con guías formales; **ChatGPT usado por 66 %** de los estudiantes; Colorado y Texas por partes. Jugadores **comerciales**: IBM, Microsoft, Google | **0** |
-| **EMEA** | el AI Act con el reloj de **agosto de 2026** y educación como **alto riesgo**; **£200 M+** del AI Adoption Summit del Reino Unido (**£100 M** Bridge AI, **£53 M** regional); **94 %** dispuesto a invertir en formación y 🔴 **38 % que todavía no piloteó**; 🟢 **el Consejo de Europa con su 2.ª conferencia de trabajo sobre regulación de AI en educación ESTE MES (octubre)**; modelo de entrega británico nombrado (Cisco, IBM, BT, Rolls-Royce, **Skills England** fijando currículo) | **0** |
+| **EMEA** | el AI Act con el reloj de **agosto de 2026** y educación como **alto riesgo**; **£200 M+** del AI Adoption Summit del Reino Unido (**£100 M** Bridge AI, **£53 M** regional); **94 %** dispuesto a invertir en formación y 🔴 **38 % que todavía no piloteó**; 🟢 **el Consejo de Europa con su 2.ª conferencia de trabajo sobre regulación de AI en educación ESTE MES (octubre)**; modelo de entrega británico nombrado (Cisco, IBM, BT, Rolls-Royce, **Skills England** fijando currículo) | **0** ⏸️ **[P284 — corrección del pase 95: el **Anexo III autónomo** quedó diferido a **2027-12-02** por el *Digital Omnibus* / Reglamento (UE) 2026/1744 (verificado por tres canales en el pase 58). El **art. 50** NO fue tocado: su reloj sigue en **2026-08-02**.]** |
 | **APAC** | 🟢 **y acá hay una novedad de ocho pases: por PRIMERA VEZ el canal genérico devolvió educación.** **Tailandia: 30.000 profesionales de AI para 2027**; **ETDA AI Governance Center** y **PDPA** como marco; **56 %** de las empresas de APAC ya con asistentes desplegados; *sovereign RAG* por reglas de datos; 🔵 **informe OSAI de la Linux Foundation para APEC: hasta $3,8 billones de productividad hasta 2038, con el open source como vía de auditabilidad** | **0** |
 | **LATAM** | **200 instituciones / 19 países** (UNU-UNESCO IESALC, ago–oct 2025) en cinco dimensiones; *edtech* entre los sectores más disruptivos con **Ednova (Chile)** nombrada; **BID** con su marco regulatorio habilitante (PDF directo); ⚠️ **conflicto de cifra: 70 % de adopción** (*ecosistemastartup*) **contra >85 %** (*La Estrella*) | **0** |
 
@@ -4598,7 +4652,7 @@ declaradas una por una —**un vacío declarado es información; el silencio se 
 | Región | Qué devolvió | Altas |
 |---|---|---|
 | **North America** | mercado y regulación: **36 %** de la adopción regional, **$951 M** (2024) → **$2.303,2 M** (2029, CAGR **15,9 %**), **$169 M** federales a AI en educación superior en Q1 2026; **71 %** de los docentes de EE. UU. sin formación en AI y **sólo 10 %** de las instituciones con guías formales; Colorado y Texas por partes. Jugadores **comerciales**: IBM, Microsoft, Google | **0** |
-| **EMEA** | el AI Act con el reloj de agosto de 2026 y la clasificación de **alto riesgo** para AI educativa; **£200 M+** del AI Adoption Summit del Reino Unido (**£100 M** a Bridge AI, **£53 M** regional); **94 %** de las organizaciones dispuestas a invertir en formación en AI y 🔴 **38 % que todavía no empezó a pilotear**; el Consejo de Europa convocando su 2.ª conferencia de trabajo sobre regulación de AI en educación (octubre); *Europe EdTech 200+* | **0** |
+| **EMEA** | el AI Act con el reloj de agosto de 2026 y la clasificación de **alto riesgo** para AI educativa; **£200 M+** del AI Adoption Summit del Reino Unido (**£100 M** a Bridge AI, **£53 M** regional); **94 %** de las organizaciones dispuestas a invertir en formación en AI y 🔴 **38 % que todavía no empezó a pilotear**; el Consejo de Europa convocando su 2.ª conferencia de trabajo sobre regulación de AI en educación (octubre); *Europe EdTech 200+* | **0** ⏸️ **[P284 — corrección del pase 95: el **Anexo III autónomo** quedó diferido a **2027-12-02** por el *Digital Omnibus* / Reglamento (UE) 2026/1744 (verificado por tres canales en el pase 58). El **art. 50** NO fue tocado: su reloj sigue en **2026-08-02**.]** |
 | **APAC** | 🔴 **otra vez ni siquiera devolvió educación**: *enterprise* y gobernanza (**48 %** de los líderes de gobernanza con AI como prioridad, **57 %** de las organizaciones de Asia ya con AI en algún área, **49 %** señalando infraestructura insuficiente para datos en tiempo real, soberanía como eje 2026, consultas de Singapur sobre uso de AI en instituciones financieras). **El propio buscador declaró que no había resultados de educación.** **Octava** confirmación por el canal genérico | **0** |
 | **LATAM** | adopción alta y gobernanza floja: **99 %** de las *startups* con alguna AI y **85 %** nativa en el producto; *edtech* entre los sectores más disruptivos junto a *fintech* y *healthtech*, con **Ednova (Chile)** nombrada; **>85 %** de las empresas de la región usando AI; fragmentación regulatoria como riesgo de consistencia normativa transfronteriza; **BID** y el *working paper* de la **UNU/UNESCO IESALC** sobre **200 instituciones de educación superior en 19 países** (encuesta agosto–octubre 2025) | **0** |
 

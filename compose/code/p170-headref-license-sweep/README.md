@@ -4,6 +4,34 @@ region: Global
 updated: 2026-10-04
 ---
 
+## ⛔ SUPERSEDIDO en parte por `p283-manifest-named-license/` (pase 95 del 2026-10-04) — `P285`
+
+🔴 **`result.2026-10-03.tsv` es la MEDICION de un instrumento en una fecha, no el veredicto de
+esta base, y en 10 de sus 200 filas dice MENOS que la tabla publicada.** El pase 95 corrio la
+accion que el pase 94 pre-registro —re-barrer estas 200 filas con el instrumento manifiesto-
+consciente— y el resultado fue el contrario del esperado:
+
+| | n |
+|---|---|
+| filas re-medidas | **200** |
+| veredicto de clase distinta al de este archivo | **5** (`UNLICENSED` -> `SOLO_MANIFIESTO`) |
+| familia de licencia mas precisa | **17** (12 `GPL` -> `GPL-2.0`/`GPL-3.0`, 4 `UNKNOWN` classificadas, 1 `CC-BY` -> `CC-BY-SA-4.0`) |
+| filas donde la TABLA PUBLICADA ya era correcta | 🟢 **200 de 200** |
+| huecos de NOMBRE de archivo (`P279`) hallados en estas 200 | 🔴 **0** |
+
+🟢 **Las 5 filas `SOLO_MANIFIESTO` son exactamente las que el pase 65 ya habia corregido A MANO**
+(`HKUDS/AI-Researcher`, `Timadey/proctor`, `ink-waffle/moodle-mcp`, `tejpalvirk/student`,
+`DMontgomery40/mcp-canvas-lms`): este archivo nunca se re-midio despues de esa correccion.
+
+⚠️ **Por eso el riesgo de este archivo no es que este mal, es que es el artefacto MAS NUEVO con
+una cifra vieja**: quien ordene por fecha y le crea a la TSV antes que a la tabla se lleva 5
+«sin licencia» FALSOS y 4 `UNKNOWN` que ya estan classificados.
+
+**P285**: *el resultado de un instrumento es una medicion fechada, no un veredicto. Cuando el
+trabajo a mano lo supera, el archivo tiene que DECIRLO, o el artefacto mas nuevo del repo
+contradice a la tabla publicada.* Para la licencia de estas 200 filas manda
+`p283-manifest-named-license/result.2026-10-04.tsv` y, por encima de ambos, la tabla.
+
 # P170 — Barrido de licencia por ref `HEAD` (pase 64 del 2026-10-03)
 
 Ejecuta la **acción 1 del pase 64**: medir la licencia de **las 200 filas `org/repo` distintas** que
