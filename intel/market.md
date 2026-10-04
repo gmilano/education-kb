@@ -55,6 +55,52 @@ updated: 2026-10-04
 > **LATAM:** 🔵 el hallazgo del pase — **existe una capa MCP nacional brasileña de datos públicos, activa y MIT, y
 > educación es el único dominio grande que falta** (**gap 69**).
 
+## 🔴 Decimocuarto barrido regional consecutivo agotado, y el dato del pase es de CATEGORÍA: la capa que compra un MINISTERIO entró al inventario, sin región (pase 85 del 2026-10-04)
+
+### 🔴 El barrido regional obligatorio: DECIMOCUARTA vez consecutiva sin rendimiento
+
+Las cuatro búsquedas regionales se corrieron con el año **computado** (2026) y **las cuatro
+devolvieron datos que esta base ya tiene**, verificado por `grep` **antes** de escribir una línea:
+
+| Región | Lo que devolvió el canal | ¿Nuevo? |
+|---|---|---|
+| **North America** | 134 proyectos de ley en 31 estados · *Traffic Light Framework* de NYC · 38 % del mercado 2025 · 18 % de docentes con guía escrita | 🔴 **No** — todo ya en este archivo |
+| **EMEA** | Digital Omnibus del 29 de junio de 2026 · **2 de diciembre de 2027** (alto riesgo autónomo) y **2 de agosto de 2028** (embebido) · AI Act anexo III sobre admisión y evaluación | 🔴 **No** — ya registrado |
+| **APAC** | *Framework Act* de Corea del Sur (**22 de enero de 2026**) · ley de IA de Vietnam (1 de marzo de 2026) · 96 % de organizaciones que planean más inversión | 🔴 **No** — ya registrado |
+| **LATAM** | Encuesta del Digital Education Council (**92 % alumnos / 79 % docentes**, 30.000 respuestas, 29 instituciones, con `RIE360` y `AIGEN`) · `CONPES 4144` de Colombia | 🔴 **No** — ya registrado |
+
+🔵 **Catorce pases seguidos es, a esta altura, una propiedad del canal y no un evento: las búsquedas
+regionales genéricas están AGOTADAS para esta base.** Se siguen corriendo porque el encargo las
+ordena y porque un cambio regulatorio aparecería ahí primero, pero **el rendimiento marginal medido
+es cero** y conviene decirlo en vez de volver a presentar lo mismo como hallazgo.
+
+### 🟢 Lo que sí aporta el pase, y es cotizable: una CATEGORÍA de comprador que faltaba
+
+🟢 **`OpenEMIS/core` (GPL-2.0, 24 ★ / 18 forks, PHP/MySQL) es la primera pieza de esta base cuya
+unidad de despliegue es el PAÍS y no la institución.** Esta base tenía LMS, SIS, *rostering*, LRS,
+*proctoring*, autograding y ERP académico; **no tenía el EMIS, que es el expediente con el que un
+ministerio planifica y reporta estadística oficial.**
+
+🔵 **Qué cambia para un *engagement*: cambia el comprador.** Un LMS lo compra una institución y el
+expediente que exige es de privacidad; un EMIS lo compra un ministerio y el expediente es de
+**estadística oficial y reporte**. Son dos ventas distintas y esta base sólo sabía cotizar una.
+
+🟢 **Y la licencia habilita la venta:** GPL-2.0 es copyleft, pero por `P250` **copyleft no es uso
+comercial prohibido**. Además, al ser **GPL-2.0 y no AGPL**, *servir* el sistema por red no dispara
+la obligación de liberar; **entregar** el derivado, sí. **Esa distinción decide la forma del
+contrato** y se pierde si se anota «GPL» sin versión.
+
+### 🔴 Y el hueco que el pase ABRE, declarado en vez de rellenado
+
+🔴 **La región de `OpenEMIS/core` NO se pudo verificar, y es el dato que más valdría.** El payload
+afirma *«widely used in many countries around the world»* y **no nombra ninguno**; los cuatro
+canales de primera mano que los nombrarían están los cuatro `EGRESS_BLOCKED`:
+`www.openemis.org`, `www.undp.org`, `knowledge.iadb.org`, `en.wikipedia.org`.
+
+⚠️ **Si la pieza resulta desplegada por ministerios de una región concreta, sería la referencia de
+sector público más fuerte de todo este archivo. Hoy no se puede afirmar, y no se afirma.**
+
+
 ## 🔴 Decimotercer barrido regional consecutivo agotado, y el dato del pase es de CAPA INSTALABLE: 9 paquetes publicados que el inventario no tenía (pase 84 del 2026-10-04)
 
 🔴 **Las cuatro regiones corridas con el año calculado (`2026`); los hechos devueltos estaban TODOS ya
@@ -1914,6 +1960,25 @@ Dónde se produce el software educativo abierto, que no es donde está la demand
 ## Opportunities by region
 
 ### North America
+
+#### 📍 Pase 85 del 2026-10-04 — sin cifra nueva, y las dos altas de la región NO son de la región: no tienen región
+
+⚠️ **Ninguna cifra de mercado nueva.** El canal devolvió los **134** proyectos de ley en **31
+estados**, el *Traffic Light Framework* de NYC, el **38 %** de cuota 2025 y el **18 %** de docentes
+de K-12 con guía escrita formal — **las cuatro ya en este archivo**.
+
+🔴 **Y la cota que este pase se pone a sí mismo: las dos altas de `agents/top.md` son piezas de
+*autograding* (`GradeMate`, `AI-Assignment-Grader`) y la tentación es contarlas acá, porque el
+*autograding* es donde la regulación de esta región está legislando** (Oklahoma y Maryland exigen
+supervisión humana y prohíben que la IA decida de forma vinculante sobre un alumno).
+
+🔴 **No se cuentan. Los dos titulares son antropónimos y de un antropónimo no se infiere región
+(`P135`).** 🔵 **Lo que sí se puede decir sin inventar: la capa que la regulación de North America
+nombra —corrección y evaluación— ganó dos piezas MIT, y `GradeMate` es la única de esa capa con
+RÚBRICA SUBIBLE, que es exactamente lo que un requisito de supervisión humana necesita** (la
+rúbrica es entrada auditable, no código). **La pieza es relevante para la región; su origen no está
+ubicado.**
+
 
 #### 📍 Pase 84 del 2026-10-04 — sin cifra nueva, y lo que entra es la capa INSTALABLE del LMS dominante de la región
 
@@ -3821,6 +3886,30 @@ Artículo 50(2) **no es exigible** en North America — pero es **el requisito m
 multi-región conviene cotizarlo contra el techo europeo y no contra el piso local (ver **P103** y **P105**).
 
 ### EMEA
+
+#### 📍 Pase 85 del 2026-10-04 — sin cifra nueva, y la capa de licencia de la región gana una distinción que cambia la forma del contrato
+
+⚠️ **Ninguna cifra ni fecha nueva.** El canal reprodujo el **Digital Omnibus** del 29 de junio de
+2026 y las fechas revisadas de alto riesgo —**2 de diciembre de 2027** (autónomo) y **2 de agosto de
+2028** (embebido en producto regulado)—, más el anexo III del AI Act sobre admisión y evaluación.
+**Todo ya registrado**, verificado por `grep`.
+
+🟢 **Lo que el pase agrega es de LICENCIA y afecta a la capa de plataforma europea de este archivo,
+que es la más copyleft de todas** (Moodle, Gibbon, INGInious, ClassroomIO, el `ais-chat` del
+`FWU-DE`):
+
+🔵 **`GPL-2.0` y `AGPL-3.0` no son el mismo riesgo de entrega, y esta base las venía anotando juntas
+como «copyleft».** En **AGPL-3.0**, servir el sistema por red a un tercero **dispara** la obligación
+de ofrecer el fuente; en **GPL-2.0** —generación anterior a la cláusula de red— **no**. ⚠️ **Para un
+despliegue SaaS de sector público europeo, esa diferencia decide si las extensiones hay que liberar
+o no**, y es la pregunta que un cliente hace antes de firmar.
+
+🟢 **Y las dos piezas europeas de plataforma se re-midieron sin deriva** con el instrumento
+compuertado de este pase: `openeducat/openeducat_erp` → **LGPL** (8.241 B, `528f84036800`),
+`gibbonedu/core` → **GPL-3.0** (35.121 B, `93178a43d6d3`), `classroomio/classroomio` →
+**AGPL-3.0** (34.523 B, `8486a10c4393`). 🔴 **A las dos últimas se les corrigió el DATO de titular:
+decía «Free Software Foundation» y ahora dice `NOT-APPLICABLE`.**
+
 
 #### 📍 Pase 84 del 2026-10-04 — sin cifra regulatoria ni de mercado nueva, y la capa instalable NO aporta ubicación
 
@@ -5848,6 +5937,23 @@ este pase dejó cubierto con código.
 
 ### APAC
 
+#### 📍 Pase 85 del 2026-10-04 — sin cifra nueva, y la región gana una PIEZA sin ganar un dato regional
+
+⚠️ **Ninguna cifra nueva.** El canal reprodujo la *Framework Act* de Corea del Sur (**22 de enero de
+2026**), la ley de IA de Vietnam (**1 de marzo de 2026**), el enfoque de principios de Japón, el
+Australian AI Safety Institute y el **96 %** de organizaciones APAC que planean más inversión.
+**Todo ya en este archivo.**
+
+🔵 **El dato de este pase para la región es de CATEGORÍA y es una hipótesis, no una medición: el
+EMIS nacional —la capa que entró hoy— es la forma que tiene el sector público de comprar software
+educativo, y APAC es la región donde esta base ya documentó compradores a escala nacional** (el
+SIAKAD nacional permisivo del pase 73, el índice CC0 de India del pase 67).
+
+🔴 **Y no se cierra, porque no se pudo medir: si `OpenEMIS/core` está desplegado en ministerios de
+APAC es exactamente lo que los cuatro canales `EGRESS_BLOCKED` de este pase habrían dicho.** Queda
+como acción con su canal nombrado.
+
+
 #### 📍 Pase 84 del 2026-10-04 — sin dato nuevo de educación: lo que devolvió el canal es gobernanza EMPRESARIAL
 
 🔴 **La búsqueda regional de este pase no devolvió un solo hecho de AI en EDUCACIÓN para APAC.** Lo
@@ -7434,6 +7540,30 @@ desplegado + puerta MCP permisiva (`jbnu-lms-mcp`, `canvas-lms-mcp`, las cuatro 
 depende de un tercero» son el mismo argumento.**
 
 ### LATAM
+
+#### 📍 Pase 85 del 2026-10-04 — sin cifra nueva, y un indicio institucional de la región que NO se eleva a dato
+
+⚠️ **Ninguna cifra nueva.** El canal reprodujo la encuesta del **Digital Education Council** en
+educación superior de LATAM (**92 % de alumnos / 79 % de docentes** activos con IA, **30.000**
+respuestas, **29** instituciones, con el Institute for the Future of Education del **Tecnológico de
+Monterrey**, `AIGEN` y `RIE360`), el **61 %** de alumnos que teme el mal uso de sus pares, la brecha
+**50 % / 19 %** en *feedback* asistido, y el `CONPES 4144` de Colombia con presupuesto a 2030.
+**Todo ya registrado**, verificado por `grep`.
+
+🔴 **Y acá va la disciplina del pase, porque la tentación era concreta: uno de los cuatro canales
+bloqueados es `knowledge.iadb.org` —el repositorio de conocimiento del BID, banco de desarrollo de
+América Latina y el Caribe— y aparece en el barrido justamente alojando una ficha de
+`OpenEMIS`.**
+
+🔴 **De eso NO se sigue que OpenEMIS esté desplegado en LATAM.** Que un banco regional publique una
+ficha sobre una pieza es un indicio de interés, no una medición de despliegue, y **la página está
+`EGRESS_BLOCKED`, así que ni la ficha se pudo leer.** 🔵 **Se registra como el indicio más
+accionable que dejó este pase —hay una fuente nombrada, verificable en cuanto el canal abra— y no
+como cobertura regional**, que es la diferencia que `P135` y la tendencia 617 exigen.
+
+⚠️ **Esta subsección NO declara una oportunidad LATAM nueva este pase.** La capa EMIS podría serlo
+y hoy está sin verificar.
+
 
 #### 📍 Pase 84 del 2026-10-04 — sin cifra nueva: las de la encuesta 2026 ya estaban, y se verificó con `grep` antes de escribir
 
@@ -9388,6 +9518,26 @@ región: **65 % de los alumnos teme que la AI vuelva el aprendizaje superficial*
 más directa a ese miedo que esta base puede ofrecer.**
 
 ### Global
+
+#### 📍 Pase 85 del 2026-10-04 — la primera fila del catálogo cuya unidad de despliegue es el PAÍS, y entra sin región
+
+🟢 **`OpenEMIS/core` entra como la primera pieza EMIS de esta base: GPL-2.0 (15.518 B,
+`sha256:b6f03c6715ee7b0f`), 24 ★ / 18 forks, PHP + JavaScript sobre MySQL, no archivada,
+autoalojable por declaración del propio árbol.** Gestiona alumnos y personal *«at school, district,
+and national level»*.
+
+🔴 **Y entra en `Global` por AUSENCIA de ubicación, no por presencia de alcance global** — la
+distinción importa, porque son dos cosas opuestas que caen en el mismo bucket. El payload afirma
+*«widely used in many countries around the world»* y **no nombra ninguno**; los cuatro canales de
+primera mano están `EGRESS_BLOCKED`; y el *«conceived by UNESCO»* que devolvió el buscador es
+**segunda mano** y no se eleva.
+
+🔵 **La oportunidad transversal, y es la única que este pase declara como nueva: existe una capa
+open source de nivel ministerial, con adopción medible y licencia que permite vender, y esta base
+no la tenía.** Para un *engagement* de sector público en **cualquier** región, el punto de partida
+dejó de ser «adaptar un LMS» y pasa a ser «extender un EMIS» — con la cota de que **entregar** un
+derivado obliga a liberarlo (GPL-2.0), mientras **servirlo** no.
+
 
 #### 📍 Pase 84 del 2026-10-04 — dos reglas de método, y las dos son de CAPA
 

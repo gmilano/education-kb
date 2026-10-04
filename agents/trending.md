@@ -9,6 +9,103 @@ updated: 2026-10-04
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 > No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
 
+## 2026-10-04 — pase 85: la pregunta del TITULAR no tenía control compartido, y el payload que lo prueba es la primera GPL-2.0 de esta base
+
+### 🟢 Altas de agente: 2 — y se declara qué se buscó
+
+Las cuatro búsquedas globales obligatorias se corrieron con el año **computado** (2026), y por
+**tercer pase consecutivo** el eje generalista volvió agotado (OpenClaw, opencode, CrewAI,
+LangGraph, OpenHands, Dify, n8n): **ninguna alta educativa salió de ellas**. Lo que **sí** rindió
+fue una búsqueda con vocabulario distinto —*grading / rubric / assessment*— y el eje **EMIS**, que
+esta base nunca había barrido.
+
+| Nombre | Repo | Licencia (payload) | ★ / forks | Lenguaje | Veredicto |
+|---|---|---|---|---|---|
+| **GradeMate** | https://github.com/laurauguc/grading_assistant | 🟢 **MIT**, 1.072 B, `sha256:3b21045edbad`, titular `Copyright (c) 2024 Laura Uguccioni` | **4 ★ / 7 forks** | JavaScript | 🟢 **FILA** |
+| **AI-Assignment-Grader** | https://github.com/KamoliddinS/AI-Assignment-Grader | 🟢 **MIT**, 1.077 B, `sha256:988f496a7b26`, titular `Copyright (c) 2012-2023 Kamoliddin Soliev and others` | **2 ★ / 2 forks** | — | 🟢 **FILA**, ⚠️ con una reserva de titular |
+
+⚠️ **La reserva de `AI-Assignment-Grader`, y es de la clase `P184`: su rango de copyright es
+`2012-2023` sobre una herramienta que llama a OpenAI.** El rango empieza nueve años antes de que
+existiera el servicio que el proyecto usa. No se eleva a `HOLDER-UNRELATED` —el titular
+*coincide* con el dueño del repo— pero el año es señal de texto **reutilizado**, así que la fila
+entra con el titular transcrito y el rango a la vista.
+
+### 🔴 Tres candidatas MEDIDAS que NO entran, y por qué — `P234`
+
+| Candidata | Lo medido | Veredicto |
+|---|---|---|
+| `sonowalvaibhav/gradeops` | 🟢 **MIT**, 1.107 B, tres titulares (`Himanshu Kumar, Akhil Lavudya, and Vaibhav Sonowal`, 2026) · Python · *human-in-the-loop* con VLM y rúbricas JSON | 🔴 **0 ★ / 0 forks → señal, no fila** |
+| `macsnoeren/genai-open-assessment` | 🔴 **GPL-3.0**, 35.149 B · *rubric-driven grading of open knowledge questions* · Docker, `ARCHITECTURE.md` | 🔴 **0 ★ / 0 forks → señal, no fila**, y copyleft |
+| `katoj65/emis` | 🟢 MIT 1.090 B — **y es el hallazgo, no el descarte**: ver abajo | 🔴 **0 ★ / 0 forks → señal, no fila** |
+
+🔴 **Y tres se descartan por AUSENCIA DE CESIÓN, medida en 9 nombres × 2 ramas:**
+`arockiasachin/ai-assessment-platform`, `omerbbbb/ai-graded-assessment-platform` y
+`forhadakhan/emis` — las tres **404** en todos los nombres. **La ausencia es MEDIDA, no supuesta.**
+
+### 🔴 `P255` — tres instrumentos de esta base preguntaban «¿quién es el titular?» y daban TRES respuestas
+
+**El hallazgo del pase, y es sobre esta base, no sobre el mundo.**
+
+| Instrumento | Pase | Sobre un payload GPL | Veredicto |
+|---|---|---|---|
+| `p184/extract_holder.py` | 66 | `NOT-APPLICABLE … by construction` — **compuertado por familia** | 🟢 **CORRECTO** |
+| `p198/holder_of.sh` | 69 | filtra **una** cadena fija, `Copyright \(C\) [0-9]{4} Free Software Foundation` | ⚠️ **correcto sólo en GPL-3.0** |
+| `p204/sweep_payload_license.sh` | 70 | `grep -m1 -i copyright`, **sin compuerta** | 🔴 **INCORRECTO siempre** |
+
+🟢 **El alta `OpenEMIS/core` es la primera GPL-2.0 real que esta base mide, y es la que destapa lo
+que ninguna GPL-3.0 podía:** su línea de la FSF dice `Copyright (C) **1989, 1991** Free Software
+Foundation`. 🔴 **DOS años con coma, así que `[0-9]{4} Free` NO coincide y el filtro de `p198` la
+deja pasar: reporta a la Free Software Foundation como titular de OpenEMIS.** Verificado
+ejecutando su regex verbatim contra el payload.
+
+🔴 **Y en GPL-3.0, donde ese filtro sí atrapa la línea de la FSF, el ancla cae en PROSA del cuerpo
+ya plegada:** `copyright on the Program, and are irrevocable provided the stated` — una oración de
+la sección 8 reportada como titular. **Los dos resultados están mal, en direcciones opuestas.**
+
+🔵 **La causa es la que `P237` ya resolvió para la FAMILIA: el titular está en el texto POR
+CONSTRUCCIÓN en MIT/BSD/ISC/0BSD y AUSENTE POR CONSTRUCCIÓN en toda la GPL, Apache-2.0, MPL-2.0,
+ECL-2.0, Unlicense y CC0** — ahí la única línea de copyright es del autor **de la licencia**.
+`lib/license_family.sh` era el control compartido de la familia y **nunca tuvo `holder_of`**.
+🟢 **Ahora lo tiene, con 13/13, y `p204` lo consume en vez de reescribirlo.**
+
+### 🔴 Y el instrumento nuevo falló su primera prueba de verdad — en el BARRIDO, no en la suite
+
+**Tercera vez en esta base, y se registra igual que las dos anteriores.** El primer corte de la
+compuerta exigía un **dígito** tras `Copyright (c)`. Con eso, `katoj65/emis` —*education management
+information system for the ministry of education in Uganda (MOU)*— devolvió `NO-HOLDER-LINE`, y su
+MIT de 1.090 B dice:
+
+```
+Copyright (c) Jonathan Reinink <jonathan@reinink.ca>
+```
+
+🔴 **SIN AÑO — y el titular era el hallazgo: `Jonathan Reinink` es el autor de Inertia.js / Ping
+CRM, no de un EMIS ministerial ugandés.** Un `HOLDER-UNRELATED` de libro, licencia **HEREDADA** y
+no otorgada (`P184`). 🔵 **Una compuerta que suprime la señal que `P184` existe para levantar es
+peor que no tener compuerta.** Corregida: la prueba es por **NOMBRE**, no por año. **11/11 → 13/13.**
+
+### 🟢 Suites y canales
+
+- 🟢 **36 suites verdes, 0 rojas** (`Python 3.11.15` / bash), incluida la nueva `p255` y la propia
+  `p184`, que no se tocó. **62/62 `.md` con *frontmatter* completo y región en vocabulario.**
+- 🟢 **`P249` reproduce exactamente:** `raw.githubusercontent.com` + ref `HEAD` es el **único**
+  canal calibrado (**200** a la URL buena, **404** a la inexistente); `github.com` por `HEAD` y por
+  `GET` y `api.github.com/repos` dan **403 a las dos** → `UNCALIBRATED-NO-DISCRIMINATION`.
+  `api.github.com/rate_limit` → **200**. **Ningún negativo de este pase sale de un canal no calibrado.**
+- 🔴 **Cuatro dominios `EGRESS_BLOCKED`:** `www.openemis.org`, `www.undp.org`,
+  `knowledge.iadb.org` y `en.wikipedia.org`. **Son justamente los cuatro que nombrarían los países
+  de despliegue de OpenEMIS**, así que su región queda **declarada como hueco** (ver `intel/market.md`).
+
+### 🔴 El barrido regional obligatorio se agota por DECIMOCUARTA vez consecutiva
+
+Las cuatro búsquedas regionales se corrieron y **las cuatro devolvieron datos que esta base ya
+tiene**, verificado por `grep` antes de escribir: Digital Omnibus y el `2 de diciembre de 2027`
+(EMEA), los 134 proyectos de ley en 31 estados y el *Traffic Light* de NYC (North America), la
+*Framework Act* coreana del `22 de enero de 2026` y Vietnam (APAC), la encuesta LATAM del Digital
+Education Council con `RIE360`/`AIGEN` y el `CONPES 4144` (LATAM). **Cero altas regionales, y se
+dice qué se buscó.**
+
+
 ## 2026-10-04 — pase 84: el nombre de paquete que el pase 83 llamó «publicado» no existe en npm, y 3 piezas que el inventario tenía «sin paquete» son instalables hoy
 
 ### 🔴 Altas de agente: 0 — y se declara qué se buscó

@@ -102,6 +102,113 @@ updated: 2026-10-04
 > están mal por ~2× y **un 403 de `curl` no es un 404**. Ver la nota de método del pase 12.
 > **Pase 11:** el Digital Omnibus es derecho vigente (tendencia 25), aparece la capa predictiva y está vacía (tendencia 26), y se corrige un error de método de diez pasadas sobre licencias permisivas (tendencia 27).
 
+## 🆕 Tendencias 659–666 — pase 85 del 2026-10-04
+
+### 659. 🔴 Una pregunta que se hace en tres instrumentos sin control compartido tiene tres respuestas, y dos están mal
+
+Esta base puso un control compartido para la **familia** de licencia en el pase 77 (`P237`,
+`lib/license_family.sh`) después de pagar dos veces el mismo defecto. **La pregunta del TITULAR
+nunca lo tuvo**, y este pase midió el resultado: `p184` (pase 66) compuerta por familia y
+**acierta**; `p198` (pase 69) filtra una cadena fija y acierta **sólo en GPL-3.0**; `p204`
+(pase 70) no compuerta nada y **falla siempre**.
+
+🔵 **La forma de la tendencia: el orden cronológico predice la corrección al revés de lo que uno
+espera.** El instrumento más ANTIGUO es el correcto, y los dos escritos DESPUÉS son los que están
+mal — porque no había de dónde heredar. **`P197` otra vez: una corrección sobrevive sólo si el
+instrumento que re-mide la conoce, y un instrumento sólo puede conocerla si existe como archivo.**
+
+### 660. 🔴 La variante de dato que rompe un filtro puede estar a UNA COMA de la que lo pasa
+
+El filtro de `p198` pide `Copyright \(C\) [0-9]{4} Free Software Foundation`. GPL-3.0 escribe
+`Copyright (C) 2007 Free Software Foundation` → **atrapada**. GPL-2.0 escribe
+`Copyright (C) 1989, 1991 Free Software Foundation` → **pasa**.
+
+🔵 **La diferencia entre detectar y no detectar es una coma y un segundo año.** Y la consecuencia
+no es cosmética: el instrumento reporta a la **Free Software Foundation** como titular de un
+proyecto ajeno, que es un dato falso con apariencia de dato preciso.
+
+⚠️ **La regla que sale: un filtro escrito contra UNA versión de un texto estándar está validado
+contra esa versión y nada más.** GPL-2.0 y GPL-3.0 no son la misma cadena, y esta base tenía once
+piezas copyleft antes de medir la primera GPL-2.0.
+
+### 661. 🔴 Un ancla sin cota sobre un texto de licencia devuelve prosa, y a veces devuelve un PLACEHOLDER
+
+Un payload GPL-3.0 real tiene **tres** líneas que empiezan por «copyright» y **ninguna** es el
+titular del proyecto: la de la FSF (línea 4), prosa del cuerpo ya plegada (líneas 157 y 426:
+*«copyright on the Program, and are irrevocable provided the stated»*) y —la peor— el apéndice
+*«How to Apply These Terms»* en la línea **635**, que dice literalmente
+`Copyright (C) <year>  <name of author>`.
+
+🔵 **Un instrumento sin cota puede publicar `<name of author>` como titular.** Es la misma
+unsoundness que `P171` nombró para la familia: **un cuerpo de licencia contiene el vocabulario de
+la pregunta que se le hace**, así que la pregunta se acota al bloque de título o no se hace.
+
+### 662. 🔴 Una compuerta nueva puede SUPRIMIR la señal que otro patrón existe para levantar
+
+El primer corte de `holder_of` exigía un dígito tras `Copyright (c)` —razonable: un año es parte de
+una cesión MIT bien formada—. Y en su primer barrido devolvió `NO-HOLDER-LINE` para `katoj65/emis`,
+cuyo MIT dice `Copyright (c) Jonathan Reinink <jonathan@reinink.ca>`, **sin año**.
+
+🔴 **Reinink es el autor de Inertia.js / Ping CRM, no de un EMIS del ministerio de Uganda: era un
+`HOLDER-UNRELATED` de libro, y la compuerta lo ocultó.** 🔵 **Un falso negativo de una compuerta de
+calidad es más caro que el dato sucio que la compuerta iba a filtrar, porque el dato sucio se ve y
+el silencio no.** La prueba pasó a ser por NOMBRE y no por año.
+
+⚠️ **Y la meta-tendencia, tercera vez en esta base: el instrumento nuevo falló en el BARRIDO y no
+en la suite.** Las suites las escribe quien ya sabe qué busca; el barrido trae el mundo.
+
+### 663. 🔵 Un `sha256` identifica un árbol sólo si la familia de la licencia lleva titular — en copyleft vale CERO
+
+`P193` (pase 68) y `P251` (pase 83) coronan el origen de un racimo de forks por `sha256(LICENSE)`,
+y funcionaron sobre el racimo Canvas-MCP. 🔴 **Funcionaron por una premisa que ninguno escribió:
+esos árboles son MIT, y un texto MIT lleva el titular DENTRO.**
+
+Medido este pase: `OpenEMIS/core` y `caravanadestrucs/coreemis` son dos árboles distintos con
+**el mismo hash de licencia** (`b6f03c6715ee7b0f`, 15.518 B), porque un texto GPL-2.0 no tiene
+ranura de titular y es idéntico para todos.
+
+🔵 **La tendencia: el poder discriminante de un hash no es una propiedad del hash, es una propiedad
+del CONTENIDO que se hashea.** Y sobre la capa copyleft de esta base —Moodle, Gibbon, ClassroomIO,
+OpenEduCat, INGInious, `frappe/education`— el método no decide nada. El linaje se prueba por el
+**manifiesto** (`composer.json`: `7865d398fc14` en los dos → copia verbatim).
+
+### 664. ⚠️ Un alcance declarado que no nombra ninguna instancia no es un dato de alcance
+
+El `README` de `OpenEMIS/core` afirma *«OpenEMIS is widely used in many countries around the
+world»*. 🔴 **Cero países nombrados.** Y los cuatro canales de primera mano que los nombrarían
+—`www.openemis.org`, `www.undp.org`, `knowledge.iadb.org`, `en.wikipedia.org`— están los cuatro
+`EGRESS_BLOCKED`.
+
+🔵 **Es `P135` en su forma de alcance y no de titular: de una afirmación de extensión no se infiere
+extensión.** La pieza entra al catálogo con licencia, adopción y capacidad **medidas** y región
+**declarada como hueco** — que es información, mientras que ponerle «Global» sería inventarla.
+
+⚠️ **Y el corolario de procedencia: un fragmento de buscador que dice *«conceived by UNESCO»* es
+SEGUNDA MANO.** Se registra como indicio y no se eleva, igual que el indicio neerlandés de
+`r-huijts` en el pase 82.
+
+### 665. 🔴 La lista de nombres de archivo de licencia es un eje de COBERTURA, y cinco nombres producen falsos «sin cesión»
+
+`p170` barre **14** nombres desde el pase 64. `p204`, escrito seis pases después, barría **5** —y
+sobre `frappe/education` devolvía `404` / `NO-LICENSE-FILE-FOUND`, cuando el proyecto **sí** cede:
+en `license.txt` **minúscula**.
+
+🔵 **Un «no tiene licencia» es una afirmación sobre el mundo, y su fuerza es exactamente la de la
+lista de nombres con que se midió.** Dos instrumentos de la misma base con listas distintas
+producen dos verdades distintas sobre el mismo repo. **Y el que gana es el que barre menos,
+porque su negativo es más llamativo.**
+
+### 666. 🔴 Un barrido que sale con código 1 habiendo acertado no se puede poner en una compuerta
+
+`sweep_payload_license.sh` terminaba con `[ "$found" = "0" ] && printf ...` como última sentencia,
+así que **salía con código `1` justamente cuando SÍ había encontrado la licencia**.
+
+🔵 **Un instrumento que miente en su código de salida no se puede encadenar, no se puede poner en
+un `set -e` y no se puede usar como compuerta de CI — y el defecto es invisible mientras alguien
+lea la salida con los ojos.** Es el mismo signo que `P239` (una tabla que renderiza perfecto y dejó
+de ser dato): **la parte legible está bien y la parte MECÁNICA está mal.**
+
+
 ## 🆕 Tendencias 651–658 — pase 84 del 2026-10-04
 
 **651. 🔴 El pase 83 llamó «publicado» a un `package.json`, y el nombre no existe en el registro.** La

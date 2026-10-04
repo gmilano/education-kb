@@ -8,6 +8,86 @@ updated: 2026-10-04
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 
+## 2026-10-04 — pase 85: el barrido de GitHub trending vuelve vacío por decimocuarta vez, y el canal que rindió fue un eje de categoría que esta base nunca había barrido: EMIS
+
+### 🔴 Altas de repo: 1 — y se declara QUÉ se buscó
+
+`github trending {industria} AI 2026` volvió, por **decimocuarta vez consecutiva**, sin una sola
+pieza educativa que esta base no tenga: devolvió `agents-radar`, `awesome-ai-agents-2026`,
+`LLMs-from-scratch`, `ultralytics`, cursos de DeepLearning.AI y HuggingFace. **Todo generalista o
+ya inventariado** (verificado por `grep` antes de buscar).
+
+🟢 **Lo que rindió fue preguntar por una CATEGORÍA en vez de por un *trending*: `EMIS` —*education
+management information system*—, el expediente de datos educativos a nivel NACIONAL.** Esta base
+tenía LMS, SIS, *rostering*, LRS, *proctoring*, autograding y ERP académico, y **no tenía la capa
+que un ministerio compra**.
+
+### 🟢 El alta: `OpenEMIS/core` — **GPL-2.0**, **24 ★ / 18 forks**, PHP, 🔴 **SIN REGIÓN VERIFICADA**
+
+| Campo | Valor medido | Canal |
+|---|---|---|
+| Licencia | 🔴 **GPL-2.0** — `LICENSE` **15.518 B**, `Version 2, June 1991` leída del BLOQUE DE TÍTULO | `raw…/HEAD/LICENSE` (calibrado) |
+| `sha256` del `LICENSE` | **`b6f03c6715ee7b0f`** | ídem |
+| Titular | 🟢 **`NOT-APPLICABLE (GPL-2.0: holder not in the license text by construction)`** — ver `P255` | `holder_of` de `lib/` |
+| ★ / forks | 🟢 **24 ★ / 18 forks** — muy por encima del piso de `P234` | WebFetch |
+| Lenguaje | PHP + JavaScript, base **MySQL** | payload + WebFetch |
+| Archivado | 🟢 **No** | WebFetch |
+| Descripción | *«Manage students and staff information at school, district, and national level»* | WebFetch |
+| Región | 🔴 **SIN VERIFICAR** — ver la cota de alcance abajo | — |
+
+🔵 **Por qué vale como alta y no como curiosidad: es la primera pieza de esta base cuya unidad de
+despliegue es el PAÍS, no la institución.** El `README` del árbol dice *«designed to manage
+education data at the national, district and school level»*. Eso es un comprador distinto
+(ministerio) y un expediente distinto del de un LMS.
+
+### ⚠️ La cota de ALCANCE, y es la que impide ponerle región
+
+🔴 **El payload afirma *«OpenEMIS is widely used in many countries around the world»* y NO NOMBRA
+NINGUNO.** Un alcance declarado sin extensión no es un dato regional. 🔴 **Y los cuatro canales de
+primera mano que nombrarían los países están los cuatro `EGRESS_BLOCKED`:**
+`www.openemis.org`, `www.undp.org`, `knowledge.iadb.org`, `en.wikipedia.org`.
+
+⚠️ **Un resultado de búsqueda dice que OpenEMIS *«was initially conceived by UNESCO»*. Eso es
+SEGUNDA MANO —un fragmento de buscador, no una fuente primaria— así que se registra como indicio
+y NO se eleva a dato**, igual que `P135` obliga con los antropónimos.
+
+🔴 **Y una contradicción de capa, que es `P172` otra vez: el `README` dice «GNU General Public
+License» SIN VERSIÓN y enlaza a una página del sitio; el PAYLOAD dice `Version 2, June 1991`.**
+Manda el payload: **GPL-2.0**.
+
+### 🔵 El hallazgo de método que trae el alta: en copyleft, el `sha256` del `LICENSE` vale CERO para el linaje
+
+El barrido trajo también `caravanadestrucs/coreemis`, con la **misma descripción exacta** que
+`OpenEMIS/core`. Su `LICENSE` es **15.518 B, `sha256:b6f03c6715ee7b0f` — byte a byte el de
+OpenEMIS.**
+
+🔴 **Y ese hash NO prueba nada.** Un texto GPL-2.0 **no tiene ranura de titular**, así que es
+idéntico para todo proyecto del planeta que lo embarque sin modificar. **Es exactamente lo que
+`P198` midió —un *boilerplate* prístino carga CERO identidad— y la consecuencia es que el método de
+`P193`/`P251`, que corona el padre de un racimo por `sha256(LICENSE)`, está VOID sobre toda la capa
+copyleft de esta base.** Para el racimo Canvas-MCP funcionaba porque **MIT lleva titular**.
+
+🟢 **El linaje se probó por un canal INDEPENDIENTE, y da verbatim:**
+
+| Archivo | `OpenEMIS/core` | `caravanadestrucs/coreemis` | |
+|---|---|---|---|
+| `composer.json` | `7865d398fc14` | `7865d398fc14` | 🟢 **IDÉNTICO** |
+| `README.md` | `e3dc70736884` | `e3dc70736884` | 🟢 **IDÉNTICO** |
+
+→ `caravanadestrucs/coreemis` es **copia VERBATIM** de `OpenEMIS/core`, establecida por el árbol y
+no por la licencia. 🔴 **No entra como fila: es un derivado sin delta medido.**
+
+### ⚠️ Canales que este pase midió y NO rindieron, declarados
+
+| Canal | Resultado |
+|---|---|
+| 🟢 `raw.githubusercontent.com` + ref `HEAD` | **200 / 404** — **CALIBRADO**, único del que se acepta un negativo |
+| 🔴 `github.com` por `HEAD` y por `GET` · `api.github.com/repos` | **403 a la URL buena Y a la inexistente** → no discrimina |
+| 🟢 `github.com` por **WebFetch** | sirvió — ★, forks, lenguaje, archivado |
+| 🟢 `api.github.com/rate_limit` | **200** |
+| 🔴 `www.openemis.org` · `www.undp.org` · `knowledge.iadb.org` · `en.wikipedia.org` | **`EGRESS_BLOCKED`**, los cuatro |
+
+
 ## 2026-10-04 — pase 84: el barrido de GitHub trending vuelve vacío por decimotercera vez, y el canal que SÍ rindió fue el registro de paquetes
 
 ### 🔴 Altas de repo: 0 — y se declara QUÉ se buscó

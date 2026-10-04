@@ -113,6 +113,81 @@ updated: 2026-10-04
 > **`qti3-pnp`**, que abren accesibilidad de evaluación como entregable auditable (**P72**). ⚠️ **Open edX cambia de
 > recomendación: proponer con presupuesto de mantenimiento (gap 70).** Ver la sección del pase 33, abajo.
 
+## 🏛️ Una vertical NUEVA, y es de CATEGORÍA: la capa que compra un MINISTERIO, no una institución (pase 85 del 2026-10-04)
+
+### 🔴 El hueco que este archivo tenía, y es el que más arriba estaba
+
+Este archivo tenía **LMS** (Moodle, Open edX, Canvas, ClassroomIO), **SIS** y **ERP académico**
+(ERPNext, Frappe Education, OpenEduCat, Gibbon), ***rostering*** de K-12, **LRS**, ***proctoring***
+y **autograding**. 🔴 **No tenía la capa cuya unidad de despliegue es el PAÍS: el EMIS —*education
+management information system*—, el expediente con el que un ministerio planifica y reporta.**
+
+🔵 **Es una categoría distinta y no un LMS más grande: el comprador es un ministerio, el dato es
+agregado nacional y distrital antes que de aula, y el expediente que exige no es de privacidad de
+un alumno sino de ESTADÍSTICA OFICIAL.** Ese barrido nunca se había hecho; se hizo este pase.
+
+### 🟢 La pieza, verificada en este pase por el canal calibrado
+
+| Plataforma | Repo | Licencia (**payload**) | ★ / forks | Región | Por qué es capa de partida |
+|---|---|---|---|---|---|
+| **OpenEMIS Core** | https://github.com/OpenEMIS/core | 🔴 **GPL-2.0** — `LICENSE` **15.518 B**, `sha256:b6f03c6715ee7b0f`, bloque de título `Version 2, June 1991` | **24 ★ / 18 forks** | 🔴 **SIN VERIFICAR** (ver la cota de alcance) | 🟢 **El único EMIS de nivel NACIONAL autoalojable y medido de esta base.** PHP + JavaScript sobre **MySQL**; gestiona alumnos y personal *«at school, district, and national level»*. No archivado |
+
+🟢 **Es autoalojable por el propio árbol**: el `README` ofrece descarga desde el sitio **o** desde
+GitHub *«and host it on your own infrastructure»*, con alojamiento en nube como alternativa
+**opcional**. Eso lo separa de la categoría que el pase 74 tuvo que inventar para las plataformas
+que **no** se pueden autoalojar.
+
+### 🔴 La restricción que viaja al cliente, y hay que decirla antes de cotizar
+
+🔴 **GPL-2.0 es copyleft, y es copyleft de la generación SIN cláusula de red.** Dos consecuencias
+que no son la misma:
+
+1. 🟢 **Uso comercial: PERMITIDO.** Por `P250` —el eje que el pase 82 agregó— **copyleft NO es lo
+   mismo que uso comercial prohibido**: una familia OSI identificada permite vender por
+   definición. Globant puede construir y facturar sobre esto.
+2. 🔴 **Distribución de un derivado: obliga a liberar el derivado bajo GPL-2.0.** Y por ser
+   **GPL-2.0 y no AGPL**, *servir* el sistema por red a terceros **no** dispara la obligación por
+   sí solo. 🔵 **La lectura práctica: un despliegue SaaS para un ministerio no fuerza liberar las
+   extensiones; ENTREGARLE el binario o el código modificado, sí.** Esa distinción decide la forma
+   del contrato, y es exactamente la que se pierde si se anota «GPL» sin versión.
+
+⚠️ **Y una contradicción de capa que hay que resolver a favor del payload (`P172`): el `README`
+dice «GNU General Public License» SIN VERSIÓN y enlaza a una página del sitio; el archivo dice
+`Version 2, June 1991`.** **Manda el archivo: GPL-2.0.**
+
+### 🔴 La cota de ALCANCE, y es la que impide ponerle región
+
+🔴 **El payload afirma *«OpenEMIS is widely used in many countries around the world»* y NO NOMBRA
+NINGUNO.** Un alcance DECLARADO sin extensión verificable no es un dato regional, y esta base ya
+tiene un instrumento para esa clase de afirmación (`proctoring-reach-audit`).
+
+🔴 **Los cuatro canales de primera mano que nombrarían los países están los cuatro
+`EGRESS_BLOCKED`:** `www.openemis.org`, `www.undp.org`, `knowledge.iadb.org`, `en.wikipedia.org`.
+⚠️ **Un fragmento de buscador dice que OpenEMIS *«was initially conceived by UNESCO»*: es SEGUNDA
+MANO y se registra como indicio, no como dato.**
+
+🔵 **Por qué esto importa para una propuesta y no es un detalle de método: si la pieza resulta
+desplegada por ministerios de una región concreta, es la referencia más fuerte que esta base podría
+ofrecer para un *engagement* de sector público — y hoy NO se puede afirmar.** Queda como acción con
+su canal nombrado, no como dato.
+
+### ⚠️ Y el derivado que el barrido trajo, que NO es una segunda fila
+
+`caravanadestrucs/coreemis` tiene la **misma descripción exacta** y su `LICENSE` es **byte a byte**
+el de OpenEMIS. 🔴 **Ese hash no prueba nada: un texto GPL-2.0 no tiene ranura de titular, así que
+es idéntico para todo proyecto que lo embarque sin modificar** (`P198`). 🟢 **El linaje se probó por
+otro canal: `composer.json` y `README.md` son byte a byte idénticos (`7865d398fc14`,
+`e3dc70736884`) → copia VERBATIM, sin delta medido.** **No entra.**
+
+### 🧾 Y las otras candidatas de plataforma del barrido: confirmación, por decimocuarta vez
+
+`openeducat/openeducat_erp` (🔴 **LGPL**, `LICENSE` 8.241 B, `sha256:528f84036800`) y
+`frappe/education` (🔴 **GPL-3.0 por DECLARACIÓN de 19 B**, `license.txt` minúscula) **ya estaban
+en este archivo**, y las dos se re-midieron con el instrumento compuertado de este pase sin
+deriva. 🟢 **`frappe/education` además deja de dar un falso `404`:** la lista de nombres de `p204`
+era de 5 y el archivo está en **minúscula**; ahora barre 9 y resuelve.
+
+
 ## 🧾 Sin verticales nuevas — el canal de plataformas devolvió por decimotercera vez lo que esta base ya tiene (pase 84 del 2026-10-04)
 
 🔴 **Cero plataformas nuevas, y se declara qué se buscó.** La consulta del encargo

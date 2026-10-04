@@ -138,3 +138,100 @@ family_of() {
   fi
   echo "$f"
 }
+
+# ---------------------------------------------------------------------------
+# P255, pass 85 — the HOLDER question gets the shared control the FAMILY
+# question got in P237, and the payload that proves it was needed is GPL-2.0.
+#
+# This base asks "who is the holder?" in THREE instruments, and until this pass they
+# gave THREE different answers on the same GPL payload:
+#
+#   * p184/extract_holder.py  (pass 66) -> NOT-APPLICABLE, gated on the family.  CORRECT.
+#   * p198/holder_of.sh       (pass 69) -> filters ONE hardcoded string,
+#                                          'Copyright \(C\) [0-9]{4} Free Software Foundation'.
+#   * p204/sweep_payload_license.sh (pass 70) -> `grep -m1 -i copyright`, no gate at all.
+#
+# Measured this pass on the two real payloads, not on a fixture:
+#
+#   GPL-2.0 (OpenEMIS/core, 15.518 B) -- the FSF line reads
+#       "Copyright (C) 1989, 1991 Free Software Foundation, Inc."
+#     TWO years separated by a comma, so `[0-9]{4} Free` does NOT match and p198's filter
+#     LETS IT THROUGH.  p198 reports the Free Software Foundation as the holder of OpenEMIS.
+#
+#   GPL-3.0 (gibbonedu/core, 35.121 B) -- the FSF line IS caught, and then the anchor
+#     `^[[:space:]]*(Copyright|\(c\))` matches WRAPPED BODY PROSE instead:
+#       "copyright on the Program, and are irrevocable provided the stated"
+#     A sentence out of section 8 is reported as a holder.
+#
+# Both are wrong, in opposite directions, and the root cause is the one P237 already fixed
+# for the family question: the question is sound only when it is GATED ON THE FAMILY FIRST.
+# A holder is present in the grant text BY CONSTRUCTION for MIT/BSD/ISC/0BSD and absent BY
+# CONSTRUCTION for every GPL-family, Apache-2.0, MPL-2.0, ECL-2.0, Unlicense and CC0 text --
+# in those the only copyright line belongs to the license's OWN author (the FSF, the ASF),
+# never to the project.  So the correct answer for them is not a name and not an empty
+# string: it is NOT-APPLICABLE, which is what p184 has said since pass 66.
+#
+# P197 is why this is a FILE and not a note: a correction survives only if the instrument
+# that re-measures knows it.  p184 knew; the two instruments written AFTER it inherited
+# nothing, because there was nothing to inherit.
+#
+# holder_of <payload> -> the project's holder line, or NOT-APPLICABLE (<family>: ...),
+#                        or NO-HOLDER-LINE when the family should carry one and does not.
+holder_of() {
+  local payload="$1" fam
+  fam=$(osi_family_of "$payload")
+
+  case "$fam" in
+    # Carries the holder in the grant text by construction -> ask.
+    MIT|BSD|ISC|0BSD) ;;
+    # A short DECLARATION ("License: GNU GPL V3", 19 B in frappe/education) names a family
+    # and cedes nothing, so it has no holder to carry.  Kept separate from the families
+    # below because the REASON differs: not "the license has its own author" but
+    # "there is no license text here at all" (P179: identifier, not cession).
+    *"(declaracion)"*)
+      echo "NOT-APPLICABLE ($fam: a declaration carries no holder -- P179)"; return ;;
+    UNCLASSIFIED|NONCOMMERCIAL-NOT-OSI)
+      # No family to gate on, so the question is still open -- but it is asked ONLY of the
+      # title block, never of a body this function cannot vouch for.
+      ;;
+    *)
+      echo "NOT-APPLICABLE ($fam: holder not in the license text by construction)"; return ;;
+  esac
+
+  # THE ANCHOR.  Only the title block (first 40 lines) -- the same bound P171 put on the
+  # family question, and for the same reason: a license BODY contains the vocabulary of the
+  # question being asked.  gibbonedu/core is the proof that an unbounded anchor returns prose.
+  local line
+  line=$(printf '%s' "$payload" | head -40 \
+    | grep -iE '^[[:space:]]*(Copyright|\(c\)|©)' \
+    | grep -viE 'Free Software Foundation|Apache Software Foundation|Open Source Initiative' \
+    | grep -viE 'copyright notice (and|shall)|COPYRIGHT HOLDERS? BE LIABLE|copyright holder, and you' \
+    | head -1 | sed 's/^[[:space:]]*//' | sed 's/[[:space:]]\+/ /g')
+
+  # A YEAR IS NOT A HOLDER, AND NEITHER IS A YEAR A REQUIREMENT.
+  #
+  # The first cut of this guard demanded a digit right after "Copyright (c)", and that cost a
+  # real finding on its FIRST sweep -- not in the suite, in the barrido, which is where this
+  # base's new instruments keep failing their first honest test.
+  #
+  #   katoj65/emis -- the EMIS of the Ministry of Education of Uganda -- ships an MIT text of
+  #   1.090 B whose holder line is
+  #       "Copyright (c) Jonathan Reinink <jonathan@reinink.ca>"
+  #   NO YEAR AT ALL.  The year-first guard returned NO-HOLDER-LINE and so HID the holder --
+  #   and the holder is the whole point here, because Jonathan Reinink is the author of
+  #   Inertia.js / Ping CRM, not of a Ugandan ministry EMIS.  That is a textbook P184
+  #   HOLDER-UNRELATED: an INHERITED license, not a granted one.  A guard that suppresses the
+  #   very signal P184 exists to raise is worse than no guard.
+  #
+  # So the test is for a NAME, not for a year: strip the keyword, the (c), the years and the
+  # punctuation, and ask whether an alphabetic token survives.
+  if [ -n "$line" ]; then
+    local rest
+    rest=$(printf '%s' "$line" \
+      | sed -E 's/^[[:space:]]*[Cc]opyright//; s/\((c|C)\)//g; s/©//g' \
+      | sed -E 's/[0-9]{4}//g; s/[0-9]//g' \
+      | sed -E 's/[[:punct:]]+/ /g' | tr -s ' ')
+    if printf '%s' "$rest" | grep -qE '[A-Za-z]{2}'; then echo "$line"; return; fi
+  fi
+  echo "NO-HOLDER-LINE"
+}

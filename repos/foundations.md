@@ -85,6 +85,65 @@ corre ése antes de escribir uno a mano** (tendencia **313**). 🟢 **Y el `gafa
 > **Pase 36 del 2026-10-02:** 🔵 **este pase no agrega repos: le pone FECHA a los que ya están, y la fecha cambia tres recomendaciones.** Se midió la capa PHP de evaluación y telemetría en Packagist —el único registro de los tres que entrega descargas en este entorno (`api.npmjs.org` y `pypistats.org` dan **403 a CONNECT**)— y el resultado está en `repos/trending.md`. **Lo que hay que saber antes de proponer desde este archivo:** 🔴 **la pieza xAPI más descargada de esta base, `rusticisoftware/tincan` (Apache-2.0, 6.178 desc./mes, 863.777 totales), no publica desde el 2022-11-02**, y ⚠️ **el único MIT de esa capa, `php-xapi/client`, está parado desde el 2021-03-24** con 825 desc./mes. 🔵 **La lectura es que en xAPI/PHP lo permisivo está quieto y lo vivo es copyleft**, así que la receta de telemetría se sostiene en **Ralph (MIT)** + **`lrsql` (Apache-2.0)** + **`learnmcp-xapi` (MIT)** y no en la capa PHP. 🟢 **Del lado de evaluación, lo activo es `oat-sa/extension-tao-testqti`** (**885 versiones**, release del **2026-09-30**) **y sigue siendo GPL-2.0-only**, mientras **lo permisivo es lo nuevo**: `@longsightgroup/qti3-cli` (**MIT**, 41 releases desde el 2026-05-21, último **2026-10-01**) con **cero dependencias de terceros** — sus 4 dependencias son todas `@longsightgroup/*` pinneadas a la misma versión exacta. **Su manifiesto MCP completo de 20 tools está escrito en `compose/patterns.md` (P76).** 🔴 **Y una corrección de catálogo: `oat-sa/qti-sdk` devuelve 404 en Packagist porque es el nombre del REPO — su paquete es `qtism/qtism`** (GPL-2.0-only, 218.212 descargas totales, 315 versiones). **Nombre de repo y nombre de paquete son identificadores distintos, y confundirlos produce un 404 que parece una ausencia** — pasó igual con `1edtech/oneroster`, `imsglobal/lti-1-3-php-library` y `packbackbooks/lti-1-3-php-library`, los tres **404**, que se anotan como *«no verificado en Packagist bajo ese nombre»* y **no** como inexistentes. ⚠️ **Acción pendiente que el pase 37 tiene asignada: este archivo nunca pasó por el control de *slugs* distintos ni por el de *backlink*** — los dos que en `agents/top.md` encontraron **un duplicado** y **dos colisiones** este mismo pase.
 > **Pase 11 del 2026-10-01:** aparece una licencia que las diez pasadas anteriores filtraban sin saberlo — **ECL-2.0**, con la que licencia todo Apereo (Sakai, Opencast, OpenLRW). Es Apache-2.0 con el alcance de patentes acotado, aprobada por OSI y FSF, y **es apta para construir arriba**. Ver la capa de analítica institucional, abajo.
 
+## 🧾 Altas fundacionales: 0 — y el estante pierde un INSTRUMENTO que creía tener: sobre un árbol copyleft, el `sha256` del `LICENSE` no identifica NADA (pase 85 del 2026-10-04)
+
+### 🔴 El método que este estante venía usando, y la mitad del catálogo donde está VOID
+
+Desde el pase 68 este estante corona el origen de una familia de forks con `sha256(LICENSE)`:
+**`P193`** («el hash que separa forks también UNE un paquete a su árbol») y **`P251`** (elegir punto
+de partida sin coronar al padre equivocado). 🟢 **Sobre el racimo Canvas-MCP funcionó, y funcionó
+bien: separó seis orígenes de once derivados.**
+
+🔴 **Y funcionó por una razón que nadie había escrito: porque esos árboles son MIT, y un texto MIT
+lleva el titular DENTRO.** El hash distingue porque el contenido distingue.
+
+🔴 **Sobre un árbol copyleft el contenido NO distingue.** GPL-2.0, GPL-3.0, AGPL-3.0, LGPL,
+Apache-2.0 y MPL-2.0 **no tienen ranura de titular**: el texto es idéntico, byte a byte, para todo
+proyecto del planeta que lo embarque sin modificar. **Medido este pase, no razonado:**
+
+| Árbol | `sha256` del archivo de licencia | |
+|---|---|---|
+| `OpenEMIS/core` (GPL-2.0, 15.518 B) | **`b6f03c6715ee7b0f`** | |
+| `caravanadestrucs/coreemis` (GPL-2.0, 15.518 B) | **`b6f03c6715ee7b0f`** | 🔴 **idéntico** |
+| `gibbonedu/core` (GPL-3.0, 35.121 B) | `93178a43d6d3` | |
+| `macsnoeren/genai-open-assessment` (GPL-3.0, 35.149 B) | `3972dc9744f6` | ⚠️ difiere sólo por 28 B de empaquetado |
+
+🔵 **Es exactamente lo que `P198` midió en el pase 69 —un *boilerplate* prístino carga CERO
+identidad y su hash colisiona por diseño— y lo que este pase agrega es la CONSECUENCIA PARA ESTE
+ESTANTE: la pregunta «¿de qué árbol parto?» no se puede responder por licencia sobre ninguna pieza
+copyleft, y copyleft es la familia de Moodle, Gibbon, ClassroomIO, OpenEduCat, INGInious,
+`frappe/education` y el alta de hoy.**
+
+### 🟢 Con qué se responde entonces, y está medido
+
+**Por el ÁRBOL, no por la cesión.** Sobre el par `OpenEMIS/core` ↔ `caravanadestrucs/coreemis`:
+
+| Canal | `OpenEMIS/core` | `caravanadestrucs/coreemis` | Veredicto |
+|---|---|---|---|
+| `sha256(LICENSE)` | `b6f03c6715ee` | `b6f03c6715ee` | 🔴 **idéntico y NO concluyente** |
+| `sha256(composer.json)` | `7865d398fc14` | `7865d398fc14` | 🟢 **idéntico — y SÍ concluyente** |
+| `sha256(README.md)` | `e3dc70736884` | `e3dc70736884` | 🟢 **idéntico — y SÍ concluyente** |
+
+→ **copia VERBATIM, establecida por el manifiesto y el *readme*.** 🔵 **La regla operativa para
+este estante: en MIT basta la licencia; en copyleft hay que pedir el MANIFIESTO (`composer.json`,
+`package.json`, `Cargo.toml`, `pyproject.toml`), que es el archivo que sí lleva identidad.**
+
+### 🟢 Lo que sí cambia para quien va a partir de una de estas piezas
+
+⚠️ **Y la cota, dicha antes de que alguien la use de atajo: dos manifiestos idénticos prueban COPIA,
+no prueban DIRECCIÓN.** Que `coreemis` sea copia de `OpenEMIS/core` y no al revés se sostiene en la
+adopción (**24 ★ / 18 forks** contra **0 / 0**) y en que el `README` copiado apunta al sitio de
+OpenEMIS, **no** en el hash. **La dirección sigue siendo una inferencia, y se declara como tal.**
+
+### 🔴 Y el barrido fundacional del pase, declarado
+
+`open source platform {industria} ERP CRM MIT Apache` devolvió, por **decimocuarta vez**,
+`openeducat`, `erpnext`/`frappe` y Odoo — **las tres ya en este estante**, confirmado por `grep`
+antes de buscar. 🟢 **Lo único no inventariado del canal fue el eje EMIS, y su pieza es
+plataforma, así que va a `verticals/solutions.md` y no acá** (misma regla con la que
+`frappe/education` salió de este estante en el pase 41).
+
+
 ## 🧾 Altas fundacionales: 0 — y el estante gana la pregunta que va ANTES de clonar: ¿de qué ÁRBOL se parte? (pase 84 del 2026-10-04)
 
 🔴 **Ninguna pieza fundacional nueva.** La búsqueda de plataformas del encargo

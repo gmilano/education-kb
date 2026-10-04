@@ -111,6 +111,127 @@ updated: 2026-10-04
 > **Pase 11:** +2 patrones — **P25** (riesgo de abandono conforme al Anexo III, la capa con presupuesto ya asignado y sin oferta open source) y **P26** (agente docente sobre la ontología curricular nacional ya publicada).
 > **Pase 27:** **+4 patrones y una corrección.** 🔴 **P51 queda con premisa falsa** —el conector MCP de Moodle **sí existe y es MIT**— y lo reemplazan **P54** (corrección y devolución sobre Moodle con **compuerta humana**, el último tramo del gap 6, con piezas que ya escriben), **P55** (el conector de **Open edX**, que es el único que de verdad no existe), **P56** (**SCORM** como formato de salida de la capa generativa: cero integración, offline) y **P57** (evidencia por MCP cotizada sobre lo que CaSS **realmente** expone — 6 de 61 operaciones, con insignias y autoría de marcos **fuera**).
 
+## 🧩 P255 — cómo preguntar «¿quién es el titular?» sin que la respuesta sea la Free Software Foundation (pase 85 del 2026-10-04)
+
+### 🔴 El problema, y es de esta base antes que del mundo
+
+Esta base pregunta por el titular en **tres** instrumentos y hasta este pase daban **tres**
+respuestas distintas sobre el mismo payload GPL. `P237` ya había puesto el control compartido para
+la **FAMILIA** (`lib/license_family.sh`, pase 77); **la pregunta del TITULAR nunca lo tuvo.**
+
+### La receta, y el paso 0 es el que no se puede saltar
+
+```bash
+# 0) COMPUERTAR POR FAMILIA. Antes de leer UNA línea de copyright.
+#    Un titular está en el texto de la cesión POR CONSTRUCCIÓN en MIT/BSD/ISC/0BSD,
+#    y AUSENTE POR CONSTRUCCIÓN en GPL-*/AGPL/LGPL/Apache-2.0/MPL-2.0/ECL-2.0/Unlicense/CC0.
+#    En esas familias la única línea de copyright es del autor DE LA LICENCIA.
+. compose/code/lib/license_family.sh
+holder_of "$(curl -s https://raw.githubusercontent.com/OWNER/REPO/HEAD/LICENSE)"
+#  -> MIT         : "Copyright (c) 2024 Laura Uguccioni"
+#  -> GPL-2.0     : "NOT-APPLICABLE (GPL-2.0: holder not in the license text by construction)"
+#  -> 19 B decl.  : "NOT-APPLICABLE (...: a declaration carries no holder -- P179)"
+#  -> MIT sin nombre: "NO-HOLDER-LINE"
+
+# 1) El ANCLA, acotada al bloque de título (head -40), por la razón de P171:
+#    un CUERPO de licencia contiene el vocabulario de la pregunta que se le hace.
+
+# 2) La prueba es por NOMBRE, no por año.  Ver el fallo de abajo.
+
+# 3) Recién entonces P184: ¿el titular PERTENECE al proyecto?  Son DOS capas.
+```
+
+### 🔴 Las tres trampas de un payload GPL real, las tres medidas
+
+| # | Trampa | Dónde | Qué devuelve un instrumento sin compuerta |
+|---|---|---|---|
+| 1 | **El copyright de la FSF** | línea 4 de cualquier GPL | `Copyright (C) 2007 Free Software Foundation, Inc.` |
+| 2 | **Prosa del cuerpo ya plegada** | líneas 157 y 426 de un GPL-3.0 real | `copyright on the Program, and are irrevocable provided the stated` |
+| 3 | **El PLACEHOLDER del apéndice** | línea 635, *«How to Apply These Terms»* | `Copyright (C) <year>  <name of author>` |
+
+🔵 **La 2 y la 3 viven en el `gpl-3.0-moodle-COPYING.txt` que esta base YA guardaba desde el pase
+66.** El defecto era visible con el material en la mano.
+
+### 🔴 Y por qué GPL-2.0 es el caso REQUERIDO de la suite, no uno más
+
+El filtro de `p198` se escribió contra la línea de GPL-3.0 —`Copyright (C) 2007 Free Software
+Foundation`— y **sobre GPL-3.0 acierta**. GPL-2.0 escribe **dos** años con coma:
+
+```
+Copyright (C) 1989, 1991 Free Software Foundation, Inc., <http://fsf.org/>
+```
+
+🔴 **`[0-9]{4} Free` no coincide, la línea pasa, y `p198` reporta a la FSF como titular de
+OpenEMIS.** 🔵 **Es la misma lección que `test_license_family.sh` ya daba para `P171`: un
+clasificador validado sólo sobre la clase que te importa saca 100 % estando roto.** Una suite sin
+fixture GPL-2.0 no puede ver esto, así que **GPL-2.0 es obligatorio**.
+
+### 🔴 El fallo del propio instrumento, en el BARRIDO y no en la suite — tercera vez en esta base
+
+El primer corte exigía un **dígito** tras `Copyright (c)`. Con eso `katoj65/emis` —el EMIS del
+*ministry of education in Uganda (MOU)*— devolvió `NO-HOLDER-LINE`, y su MIT de 1.090 B dice
+`Copyright (c) Jonathan Reinink <jonathan@reinink.ca>`: **sin año**.
+
+🔴 **La compuerta ocultó el titular, y el titular era el hallazgo: Reinink es el autor de
+Inertia.js / Ping CRM, no de un EMIS ministerial ugandés** → `HOLDER-UNRELATED`, licencia
+**heredada**. 🔵 **Una compuerta que suprime la señal que `P184` existe para levantar es peor que no
+tener compuerta.** Prueba cambiada a **NOMBRE**: se quitan la palabra clave, el `(c)`, los años y
+la puntuación, y se pregunta si sobrevive un token alfabético. **11/11 → 13/13.**
+
+### ⚠️ Lo que este patrón NO compra
+
+- 🔴 **No dice de quién ES el proyecto**, dice si el ARCHIVO puede responderlo. En copyleft la
+  respuesta correcta deja la pregunta **abierta**: hay que ir a los encabezados del código o al
+  manifiesto.
+- 🔴 **No reemplaza `P184`**, va antes que él.
+- 🔴 **Sobre `UNCLASSIFIED` sigue preguntando**, acotado al bloque de título y nunca al cuerpo.
+
+---
+
+## 🧬 P256 — elegir árbol de partida en una familia COPYLEFT, donde el método de `P193`/`P251` está VOID (pase 85 del 2026-10-04)
+
+### 🔴 La premisa que `P193` y `P251` nunca escribieron
+
+Las dos recetas coronan el origen de un racimo por `sha256(LICENSE)`. 🟢 **Y funcionan — sobre
+MIT.** 🔴 **Funcionan porque un texto MIT lleva el titular DENTRO, así que el hash distingue
+proyectos. Un texto copyleft no tiene ranura de titular y es idéntico para todos.** Medido:
+
+```
+OpenEMIS/core              GPL-2.0  15.518 B  sha256:b6f03c6715ee7b0f
+caravanadestrucs/coreemis  GPL-2.0  15.518 B  sha256:b6f03c6715ee7b0f   <- idéntico
+```
+
+🔴 **Dos árboles distintos, un hash. Sobre la capa copyleft —Moodle, Gibbon, ClassroomIO,
+OpenEduCat, INGInious, `frappe/education`— `P193` y `P251` no deciden nada.**
+
+### El cableado: al MANIFIESTO, que es el archivo que sí lleva identidad
+
+```bash
+# 1) Compuerta: ¿lleva la familia un titular? Si NO, el hash de licencia no sirve para linaje.
+. compose/code/lib/license_family.sh
+fam=$(family_of "$LICENSE_PAYLOAD")
+case "$fam" in MIT|BSD|ISC|0BSD) echo "sha256(LICENSE) SIRVE" ;;
+               *) echo "sha256(LICENSE) VOID -> ir al manifiesto" ;; esac
+
+# 2) Al MANIFIESTO, por el canal calibrado (P249), en los dos árboles:
+for f in composer.json package.json Cargo.toml pyproject.toml README.md; do
+  curl -s "https://raw.githubusercontent.com/$A/HEAD/$f" | sha256sum
+  curl -s "https://raw.githubusercontent.com/$B/HEAD/$f" | sha256sum
+done
+# idénticos -> COPIA probada. distintos -> hay delta, y el delta se puede medir.
+
+# 3) La DIRECCIÓN no sale del hash. Sale de la adopción y de a quién apunta el readme copiado.
+```
+
+### ⚠️ La cota, y es la que evita el error que esta receta podría causar
+
+🔴 **Dos manifiestos idénticos prueban COPIA, NO prueban DIRECCIÓN.** Que `coreemis` sea copia de
+`OpenEMIS/core` y no al revés se sostiene en **24 ★ / 18 forks contra 0 / 0** y en que el `README`
+copiado apunta al sitio de OpenEMIS. 🔵 **Eso es una inferencia bien fundada, no una medición, y se
+escribe como inferencia** — que es justamente la distinción que `P251` pedía y que el hash, cuando
+servía, dejaba resolver sin inferir.
+
+
 ## 🧩 P253 — `P188` EN EL SENTIDO CONTRARIO: un manifiesto de ÁRBOL que declara un paquete es una afirmación, y hay que medirla a su PROFUNDIDAD (pase 84 del 2026-10-04)
 
 **El caso.** El pase 83 escribió (tendencia **646**) que los 7 repos del racimo *«**publican** el MISMO
