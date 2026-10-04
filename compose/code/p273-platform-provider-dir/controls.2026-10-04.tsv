@@ -1,0 +1,17 @@
+# Controles del canal, pase 92 del 2026-10-04.
+# Regla (P249): sin un control malo que de 404, no se publica NINGUN negativo.
+# Regla NUEVA de este pase (P274): un path de DIRECTORIO da 404 en este canal SIEMPRE, exista o no.
+control	url	codigo	lectura
+compuerta-chamilo-buena	raw/chamilo/chamilo-lms/HEAD/README.md	200	el canal responde
+compuerta-chamilo-mala	raw/chamilo/chamilo-lms/zzz-fake-ref-92/README.md	404	DISCRIMINA -> CALIBRATED
+compuerta-ilias-mala	raw/ILIAS-eLearning/ILIAS/zzz-fake-ref-92/README.md	404	DISCRIMINA
+compuerta-frappe-edu-mala	raw/frappe/education/zzz-fake-ref-92/README.md	404	DISCRIMINA
+compuerta-erpnext-mala	raw/frappe/erpnext/zzz-fake-ref-92/README.md	404	DISCRIMINA
+compuerta-openeducat-mala	raw/openeducat/openeducat_erp/zzz-fake-ref-92/README.md	404	DISCRIMINA
+P274-dir-que-EXISTE	raw/moodle/moodle/MOODLE_503_STABLE/public/ai	404	un DIRECTORIO conocido-presente da 404
+P274-dir-que-EXISTE-2	raw/moodle/moodle/MOODLE_503_STABLE/public/ai/provider	404	idem, un nivel mas abajo
+P274-archivo-en-ese-dir	raw/moodle/moodle/MOODLE_503_STABLE/public/ai/provider/openai/version.php	200	el ARCHIVO si resuelve
+P274-archivo-inexistente	raw/moodle/moodle/MOODLE_503_STABLE/public/ai/zzz-fake-92.php	404	control negativo del mismo dir
+P270-nombre-conjeturado	raw/chamilo/chamilo-lms/2.0/src/CoreBundle/AiProvider/OpenAi.php	404	el 404 midio el NOMBRE: el real es OpenAiProvider.php
+P270-nombre-real	raw/chamilo/chamilo-lms/2.0/src/CoreBundle/AiProvider/OpenAiProvider.php	200	-
+determinismo	5 reps x 4 pares (ref,archivo)	20/20 iguales	el canal es DETERMINISTA

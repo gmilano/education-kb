@@ -9,6 +9,7 @@ updated: 2026-10-04
 > Key players, market map y oportunidades por región.
 > Investigado 2026-09-30; el pase 11, el 2026-10-01. Las estimaciones de tamaño de mercado varían mucho entre firmas: se listan todas con su fuente en vez de elegir una.
 > **Pase 91 del 2026-10-04:** 🔴 **Vigésimo barrido regional (año CALCULADO: 2026, no fijado) y las CUATRO regiones vuelven a dar SATURACIÓN — y otra vez se MIDIÓ en vez de declararse.** De **23** tokens de hecho que los cuatro barridos regionales y los cuatro globales trajeron, **22 ya estaban en el árbol**, verificados por `grep` archivo por archivo antes de escribir esta línea: `86 %` de estudiantes, `92 %`, `71 %` de docentes sin formación, Colorado, Texas, `AI Adoption Summit`, `£200 M`, `Europe EdTech 200`, Consejo de Europa, Singapur, soberanía APAC, `99 %`/`85 %` de startups LATAM, `Ednova`, UNU/BID, `79.6`, `10.6`, `45.62 %`, `34.78 %`, `71.22 %`, `CK-ERP`, `OpenEduCat`. 🔵 **Se registra como CONFIRMACIÓN DE COBERTURA medida, no como hallazgo** — que es información distinta del silencio. 🟢 **El único token ausente del árbol es de North America y se escribe con su fuente nombrada: el mercado NA de AI en educación va de US$ 951 M (2024) a US$ 2.303,2 M en 2029, CAGR 15,9 %** (MarketsandMarkets). Es la primera vez que esta base tiene el **extremo 2029** de esa serie; el `951` ya estaba. ⚠️ **Es estimación de firma privada, no cifra oficial**: se lista con su fuente, como el resto de las estimaciones de este archivo. 🔴 **Y una corrección de fuente secundaria que afecta a EMEA y se repite en dos de los cuatro barridos: ambos escribieron que el EU AI Act «entra en vigor / toma pleno efecto en agosto de 2026».** El Reglamento **entró en vigor el 2024-08-01**; lo que cae en agosto de 2026 es una **fecha de APLICACIÓN**, no la entrada en vigor — y para el Anexo III (educación = alto riesgo) esta base ya tiene medido que el reloj se corrió a **2027-12-02** (Reglamento (UE) 2026/1744, pase 11). El barrido fusionó *entrada en vigor* con *fecha de aplicación*, y encima citó la aplicación desactualizada. 🟢 **El aporte cotizable del pase vale para las cuatro regiones por igual y es de la capa de plataforma: el veredicto «esta plataforma no liga proveedor de modelo» depende de la REF.** Ver la sección nueva de abajo y [`compose/code/p272-platform-ref-verdict/`](../compose/code/p272-platform-ref-verdict/).
+> **Pase 92 del 2026-10-04:** 🔴 **Vigesimoprimer barrido regional (año CALCULADO: 2026, no fijado) y las CUATRO regiones vuelven a dar SATURACIÓN — medida, no declarada.** De **24** tokens de hecho que trajeron los cuatro barridos regionales y los cuatro globales, **22 ya estaban en el árbol**, verificados por `grep` archivo por archivo antes de escribir esta línea: `951`, `2.303,2`, `41,7`, `5,9 horas`, Colorado, Texas, `£200 M`, `Skills England`, `94 %`, `NIS2`, `EdTech 200`, `48 %`, `57 %`, Singapur, `LearnUpon`, `NIIT`, `IESALC`, `19 países`, `Ednova`, `200 instituciones`, `79,6`, `31,35`, `40,9`, `71,22`, `45,62`, `34,78`. 🔵 **Los únicos DOS ausentes son HORIZONTALES y por eso no se archivan como hecho de esta vertical: 4,3 millones de repos de AI en GitHub y +178 % interanual en repos de LLM — son hechos sobre GitHub, no sobre educación, y pertenecen a la KB de `technology`.** ⚠️ **Y una contradicción de secundarias que NO se resuelve eligiendo una: el mismo barrido global devolvió «$6,4 B (2025) → $79,6 B (2034) @ 31,35 %» y «$7,52 B (2025) → $10,6 B (2026) @ 40,9 %». Las dos no pueden ser verdad —la segunda implica un 2034 muy por encima del primero— y se listan las dos con su fuente, como manda el encabezado de este archivo.** 🟢 **La oportunidad de este pase no es de cifra sino de instrumento de pre-venta, y se reparte por región según qué restricción manda en cada una: la auditoría de VERSIÓN de la plataforma antes de cotizar una integración de AI** (**P273**).
 > **Pase 90 del 2026-10-04:** 🔴 **Decimonoveno barrido regional (año CALCULADO: 2026, no fijado) y las CUATRO regiones devolvieron CERO hechos ausentes de este árbol.** Y esta vez no se declara de memoria: se midió. De 11 tokens de hecho que los cuatro barridos trajeron —`AB 1159`, `SB 1227`, «134 proyectos de ley», `PL 2.338/2023`, `ANPD`, Observatorio UNESCO, `AI Framework Act` de Corea, Reglamento **(UE) 2026/1744**, Uruguay/Convenio del Consejo de Europa, `Latam-GPT`, Ley de IA de Vietnam— **10 ya estaban en el árbol**, con conteos por archivo. 🔵 **Se registra como CONFIRMACIÓN DE COBERTURA, no como hallazgo** — que es información distinta del silencio, y es lo que el encargo pide cuando una región no rinde. ⚠️ **El único token ausente es `Decreto 142/2026/ND-CP` de Vietnam (clasificación de riesgo de la Ley de IA), y NO se escribe como dato: los CINCO canales que lo documentan están bloqueados** (`loc.gov`, `iapp.org`, `lw.com`, `allenandgledhill.com`, `licentium.io` → `EGRESS_BLOCKED`). Queda como ACCIÓN con su bloqueo nombrado, no como fila (`P249`). 🔴 **Y una corrección de fuente secundaria que afecta a APAC: el barrido afirmó que «Vietnam aprobó su Digital Technology Industry Law con marco basado en riesgo».** Son **DOS** leyes distintas: la *Law on Digital Technology Industry* entró en vigor el **2026-01-01**, y el marco de riesgo en tres niveles es de la **Ley de IA** —la que esta base ya tiene como **N.º 134/2025/QH15**—, en vigor el **2026-03-01**. El barrido fusionó dos instrumentos en uno. 🟢 **El aporte cotizable del pase es de la capa de plataforma y vale para las cuatro regiones por igual: el proveedor de modelo en Moodle se compra con una VERSIÓN** (Anthropic exige 5.3; Gemini y Bedrock, 5.2; DeepSeek, 5.1; un cliente en 4.5 LTS tiene dos y ninguno de los cuatro), **y la capa de plataforma es COPYLEFT en 8 de 8 lecturas de payload, CERO permisivas.** Ver `verticals/solutions.md` y [`compose/code/p269-provider-release-matrix/`](../compose/code/p269-provider-release-matrix/).
 > **Pase 89 del 2026-10-04:** 🔴 **Decimoctavo barrido regional (año CALCULADO: 2026) y las CUATRO regiones devolvieron material que esta base YA tiene publicado — saturación, verificada por `grep` contra el árbol antes de escribir esta línea.** 🔵 **Se declara región por región en vez de dejar el silencio, porque un hueco informado es información y el silencio se parece exactamente a la cobertura.** 🟢 **Lo único que el canal externo rindió este pase no es regional sino de MÉTODO, y reencuadra una acción abierta desde el pase 10: un conteo de capacidades tiene SUPERFICIE, el repo canónico de Canvas dice 102 en su descripción y 103 en su README, y de 3 repos medidos CERO es citable sin nombrar la superficie (`P268`).** 🔴 **Consecuencia directa para este archivo: la comparación `227` vs `165` que esperaba permiso de red queda REENCUADRADA, no desbloqueada — aunque llegara la red, los dos números podían venir de superficies distintas y entonces nunca fueron comparables.**
 > **Pase 87 del 2026-10-04:** 🟢 **Decimosexto barrido regional (año CALCULADO: 2026) y las CUATRO regiones vuelven a rendir dato nuevo, por segundo pase consecutivo — pero el eje que las separa ya no es regulatorio, es de BRECHA ENTRE USO Y GOBIERNO.** 🔴 **El número que ordena el pase: en NA se legisla mucho y se instruye poco —134 proyectos de ley sobre AI educativa en 31 estados, y a la vez sólo el 18 % de los docentes de K-12 recibe guía ESCRITA y el 34 % no recibe ninguna.** 🟢 **LATAM es la región de MAYOR adopción medida del mundo en superior (92 % de alumnos, 79 % de docentes, Digital Education Council 2026) y la de regulación MÁS fragmentada (Brasil, Chile, CONPES 4144 de Colombia, reglas sectoriales de México a velocidades distintas).** 🔵 **EMEA tiene la fecha dura que las demás no tienen: el AI Act clasifica admisión, evaluación y corrección de exámenes como ALTO RIESGO, y sus enmiendas de junio 2026 entraron en vigor el 27-jul-2026 con aplicación corrida a 2-dic-2027 (autónomos) y 2-ago-2028 (embebidos).** 🟢 **APAC es la región que paga: 96 % de las organizaciones aumentan inversión en AI en 2026 y esperan USD 2,85 por dólar — con Corea del Sur (22-ene-2026) y Vietnam (1-mar-2026) ya con ley marco vigente.** 🔴 **Y la cota, por decimosexta vez: CERO fuentes primarias de norma en las cuatro regiones; el proxy de egreso bloquea los sitios oficiales y `arxiv.org`, así que toda la regulación de esta sección es de secundarias concordantes.**
@@ -58,6 +59,82 @@ updated: 2026-10-04
 > regulado — **STUDENTS FIRST Act of 2026**, marco de los estudiantes de los 50 estados (AASA, agosto 2026).
 > **LATAM:** 🔵 el hallazgo del pase — **existe una capa MCP nacional brasileña de datos públicos, activa y MIT, y
 > educación es el único dominio grande que falta** (**gap 69**).
+
+## Opportunities by region — agregado del pase 92
+
+> 🔵 **Nota de método de este pase:** las cuatro oportunidades de abajo salen de **una sola**
+> medición —la matriz de proveedor por ref de la capa de plataforma, extendida a Chamilo y cerrada
+> sobre las 7 filas del pase 90 (**P273**)— y se reparten por región según qué restricción manda en
+> cada una. **No hay sección sólo-LATAM**, y la región va en el vocabulario cerrado de cinco valores,
+> con el país en la prosa.
+
+### North America
+🔴 **La oportunidad es la auditoría de versión como primer entregable facturable, y acá tiene cifra
+de mercado.** La región concentra **~36 %** de la adopción global y **41,7 %** del crecimiento
+previsto 2026–2030, con un mercado regional de **$951 M (2024) → $2.303,2 M (2029)** a un CAGR
+declarado de **15,9 %** — ⚠️ **terna que el instrumento de esta base marcó NO PUBLICABLE** (pase 55:
+el par exige 19,35 %), así que se cita con su defecto y no como dato de propuesta.
+
+🔵 **Por qué pega acá:** es la región con **vacío regulatorio** —no hay equivalente a la FDA para
+edtech y la decisión es escuela por escuela, con Colorado y Texas legislando por partes—, así que la
+compra la decide un comité técnico institucional y no un plazo de cumplimiento. **Un informe que
+dice «su Chamilo 1.11 le da 2 proveedores vía un plugin que desaparece en 2.0; su Moodle 4.5 LTS le
+da 2 de los 7» es exactamente el insumo que ese comité no tiene** y que ningún vendor le va a
+entregar. Entrada de bajo riesgo, cierre rápido, y deja instalado el presupuesto de la migración.
+
+### EMEA
+🔵 **La oportunidad es la misma auditoría, pero vendida contra una FECHA, que es lo que esta región
+tiene y las otras no.** El **EU AI Act** entra en vigor pleno en **agosto de 2026** clasificando la
+AI educativa como **ALTO RIESGO** (Anexo III; el reloj autónomo que esta base fijó en **2027-12-02**
+por el Reglamento (UE) 2026/1744), y el Consejo de Europa sigue con su conferencia de trabajo sobre
+la dimensión regulatoria de la AI en educación.
+
+🟢 **El cruce que vende:** un sistema de alto riesgo exige saber **qué modelo, de qué proveedor, bajo
+qué contrato** procesa datos de alumnos. **La matriz por ref es literalmente ese inventario**, y hoy
+no existe: la plataforma no lo declara en su manifiesto. 🔵 **Y la fila de Mistral agrega el ángulo
+de soberanía que esta región compra: Chamilo ≥ 2.0 trae Mistral en el núcleo y Moodle no lo trae a
+ninguna versión** — una restricción de elección de plataforma, no de configuración, en la región que
+más mira el origen del modelo. Contexto de demanda: **£200 M+** del AI Adoption Summit británico con
+Skills England fijando currícula, y **94 %** de organizaciones con intención de invertir en formación
+de AI.
+
+### APAC
+🔵 **Acá la restricción que manda es la SOBERANÍA, y la matriz se lee al revés: no «qué proveedor
+puedo usar» sino «qué versión me deja NO usar un proveedor extranjero».** **48 %** de los líderes de
+gobernanza de la región pone la adopción de AI como prioridad 2026 y **57 %** de las organizaciones
+ya la tiene en al menos un área, con Singapur fijando el molde de transparencia y rendición de
+cuentas y la soberanía marcando el paso.
+
+🟢 **El dato de entrega:** Chamilo ≥ 2.0 documenta, además de los cinco proveedores, **la opción de
+un modelo propio compatible**, y Moodle ≥ 5.0 trae **`ollama`** en el núcleo — o sea **las dos
+plataformas tienen ruta local, pero cada una desde una versión distinta**, y esa versión es el dato
+que decide si un despliegue soberano es configuración o es un fork. ⚠️ **El canal de la región sigue
+siendo comercial y no abierto** (LearnUpon en Sídney con Create+, la alianza TCS–Pearson, NIIT MTS en
+su decimosexto Top-20), así que la pieza open source regional sigue sin aparecer y se declara.
+
+### LATAM
+🟢 **Es la región donde esta medición vale más, y por una razón estructural: el parque instalado de
+Chamilo es regional.** Chamilo nació y se sostiene con fuerte presencia en España y América Latina, y
+es la plataforma que este pase midió. **La auditoría de versión no es acá un informe de
+consultoría: es el inventario de la base instalada de la región.**
+
+🔴 **Y el riesgo que la región va a chocar primero es el de la tendencia 715: migrar 1.11 → 2.x/3.x
+mueve el punto de integración** —de `plugin/ai_helper/` a `AiProviderFactory` del núcleo—, así que
+toda institución con una integración de AI hecha sobre 1.11 tiene un conector a reescribir. **Esa es
+la oportunidad concreta y fechada**, no una hipótesis de mercado.
+
+🔵 **Contexto medido, ya en el árbol:** el relevamiento de **UNESCO IESALC** sobre **200
+instituciones de educación superior en 19 países** (campo agosto–octubre de 2025) mapea la adopción
+en cinco dimensiones —enseñanza, investigación, extensión, administración y gobernanza—, y la región
+combina **la adopción más alta medida del planeta en superior** con **la regulación más
+fragmentada** (Brasil con el Marco Legal, México sin ley, el marco habilitante del BID como
+referencia regional). 🔴 **La fragmentación es el argumento de la auditoría: una institución
+multi-país no puede responder «qué modelo procesa datos de mis alumnos» sin esta matriz, y cada
+jurisdicción le pide una respuesta distinta.**
+
+⚠️ **Hueco declarado, las cuatro regiones:** el barrido regional **no devolvió ninguna pieza de
+software open source nueva de la vertical** en ninguna de las cuatro, por vigesimoprimera vez. Se
+dice así, por región, para que el agotamiento del canal no se confunda con cobertura.
 
 ## Opportunities by region — agregado del pase 91
 

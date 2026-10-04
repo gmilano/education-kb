@@ -8,6 +8,32 @@ updated: 2026-10-04
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 
+## 2026-10-04 — pase 92: GitHub trending vuelve vacío por VIGESIMOPRIMERA vez, y los tres repos que devolvió se clasifican en vez de archivarse
+
+🔴 **GitHub trending vacío por vigesimoprimera vez consecutiva, y la causa sigue medida: el canal lee
+«AI education» como aprender SOBRE IA, no como edtech.** Lo que devolvió este pase, verificado repo
+por repo con su control de ref:
+
+| repo | licencia | `README` | ctrl ref falsa | por qué NO entra |
+|---|---|---|---|---|
+| [`rohitg00/ai-engineering-from-scratch`](https://github.com/rohitg00/ai-engineering-from-scratch) | **MIT** | 200 | 404 | currículo para aprender AI engineering — **horizontal**, no de la vertical |
+| [`avinash201199/free-ai-agents-resources`](https://github.com/avinash201199/free-ai-agents-resources) | **MIT** | 200 | 404 | lista curada de recursos de agentes — **horizontal** |
+| [`pguso/agents-from-scratch`](https://github.com/pguso/agents-from-scratch) | **MIT** | 200 | 404 | tutorial de agentes — **horizontal** |
+
+🔵 **Los tres son REALES, MIT y vivos: el motivo del rechazo no es la verificación, es la
+CLASIFICACIÓN.** Son contenido de aprendizaje *sobre* IA, no software del sector educativo. Se
+registran acá con su licencia y su veredicto para que el pase 93 no vuelva a gastar presupuesto en
+medirlos.
+
+🟢 **Lo que este estante sí gana del pase es de la capa de plataforma, por ref:** `chamilo/chamilo-lms`
+tiene un directorio de proveedores de modelo **en el núcleo** (`src/CoreBundle/AiProvider/`) que su
+`composer.json` **no nombra en ninguna de las ocho refs medidas** — **0 → 5 → 6** proveedores según
+versión (**P273**). ⚠️ **Y la advertencia de canal que vale para todo este archivo: un path de
+DIRECTORIO da 404 en `raw.githubusercontent.com` SIEMPRE** (**P274**), así que ningún «probé el
+directorio y no está» de pases anteriores es evidencia. 🔵 **El canal nuevo que sí enumera árboles es
+`WebFetch` sobre las páginas `tree/` de `github.com`**, con el límite de que **trunca** los listados
+largos.
+
 ## 2026-10-04 — pase 91: GitHub trending vuelve vacío por VIGÉSIMA vez, y el estante de plataforma se mide por REF en vez de por rama por defecto
 
 🔴 **GitHub trending vacío por vigésima vez consecutiva, y la causa está medida desde hace pases: el

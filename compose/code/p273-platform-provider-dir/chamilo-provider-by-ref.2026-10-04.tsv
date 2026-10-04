@@ -1,0 +1,13 @@
+# P273 -- Chamilo: la ligadura de proveedor NO vive en el manifiesto, vive en un DIRECTORIO del nucleo.
+# Medido el 2026-10-04 (pase 92) a mano con curl sobre raw.githubusercontent.com.
+# Ruta del directorio de proveedores: src/CoreBundle/AiProvider/<Nombre>Provider.php
+# ctrl_fake = archivo inexistente en el MISMO directorio y la MISMA ref (debe dar 404 para que un 404 signifique algo).
+ref	tipo	ref_resuelve	ctrl_fake	proveedores_en_nucleo	cuales	plugin_ai_helper	composer_json_tokens
+v1.11.40	tag	200	404	0/7	-	200	0
+1.11.x	rama	200	404	0/7	-	200	0
+v2.0.0	tag	200	404	5/7	OpenAi,DeepSeek,Gemini,Mistral,Grok	404	0
+2.0	rama	200	404	5/7	OpenAi,DeepSeek,Gemini,Mistral,Grok	404	0
+v3.0.0	tag	200	404	6/7	OpenAi,DeepSeek,Gemini,Mistral,Grok,Anthropic	404	0
+v3.0.1	tag	200	404	6/7	OpenAi,DeepSeek,Gemini,Mistral,Grok,Anthropic	404	0
+3.0	rama	200	404	6/7	OpenAi,DeepSeek,Gemini,Mistral,Grok,Anthropic	404	0
+master	rama	200	404	6/7	OpenAi,DeepSeek,Gemini,Mistral,Grok,Anthropic	404	0

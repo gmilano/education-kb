@@ -1,0 +1,12 @@
+# Las SIETE filas de veredicto de plataforma del pase 90, ahora TODAS medidas por ref.
+# pase 91 midio 2 (openedx, canvas). El pase 92 mide las 5 que quedaban + cierra el NO-CLAIM de openeducat.
+# instrumento: MANIFIESTO = manifiesto de runtime; DIR = directorio de proveedores; ARBOL = listado de arbol (WebFetch).
+plataforma	instrumento	refs_medidas	veredicto_por_ref	vs_pase_90	pase_que_lo_midio
+moodle/moodle	DIR (subplugins)	6	TIENE-PROVEEDOR 2->7 segun version	linea base	90 (replicado en 91)
+openedx/edx-platform	MANIFIESTO	4	TIENE-PROVEEDOR en quince/redwood/sumac	CONTRADICHO	91
+instructure/canvas-lms	MANIFIESTO	2	SIN-PROVEEDOR	SOSTENIDO	91
+chamilo/chamilo-lms	DIR (CoreBundle/AiProvider)	8	TIENE-PROVEEDOR 0->5->6 segun version	CONTRADICHO	92
+ILIAS-eLearning/ILIAS	MANIFIESTO + ARBOL(A-L)	4	SIN-PROVEEDOR en nucleo	SOSTENIDO (con limite)	92
+frappe/education	MANIFIESTO + ARBOL	2	SIN-PROVEEDOR	SOSTENIDO	92
+frappe/erpnext	MANIFIESTO + ARBOL	3	SIN-PROVEEDOR	SOSTENIDO	92
+openeducat/openeducat_erp	MANIFIESTO-REAL + ARBOL	3	SIN-PROVEEDOR	NO-CLAIM -> MEDIDO	92

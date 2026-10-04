@@ -9,6 +9,7 @@ updated: 2026-10-04
 > Recetas concretas: repos nombrados, licencias verificadas, wiring explícito y estimación.
 > Todos los repos citados fueron verificados vía WebFetch el 2026-09-30; los del pase 11, el 2026-10-01 (ver `agents/top.md`).
 > **Pase 91 del 2026-10-04:** 🆕 **El patrón nuevo es **P272**, y sale de auditar al pase anterior con su propia regla.** **P272**: un veredicto publicado para una plataforma **sin REF no es un veredicto** — y el pase que demostró eso para el eje de proveedor (`P269`) publicó, en el mismo instrumento, **siete** veredictos de plataforma sin ref. Puestas a prueba dos: `openedx/edx-platform` **CONTRADICE** el suyo (`openai==0.28.1` declarada **directa** en `quince`, `redwood` y `sumac`; ausente sólo en `master`) y `canvas-lms` lo **sostiene** — **1 de 2**, y no se generaliza. 🔵 **Y el corolario de control que lo acompaña: un control de ref invariante al layout PASA justo cuando la ruta medida se rompió** (`MOODLE_501_STABLE`: `README.md` 200, `version.php` 404, `public/version.php` 200), así que «el control dio 200» no autoriza a leer un 404 como ausencia. 🟢 **Y la receta nueva es `R-SDK-POR-REF`: la compuerta que, antes de cotizar una integración sobre un LMS, dice con qué SDK y qué major se va a hablar — porque hoy esa pregunta tiene tres respuestas distintas en el mismo repo.**
+> **Pase 92 del 2026-10-04:** 🆕 **Los patrones nuevos son **P273** y **P274**, y los dos salen de cerrar la ACCIÓN que el pase 91 dejó abierta.** **P273**: un veredicto «SIN-PROVEEDOR» leído en un **manifiesto de runtime** no es un veredicto negativo si la plataforma puede ligar proveedores en un **directorio del núcleo** — es la lectura de un instrumento **ciego** a esa forma. Medido: `chamilo/chamilo-lms` da **cero** tokens en `composer.json` en las **ocho** refs y trae **6** proveedores en `src/CoreBundle/AiProvider/`, **en la misma ref**. Con eso las 7 filas del pase 90 quedan medidas: **2 CONTRADICHAS, 5 SOSTENIDAS** — y las dos contradicciones tienen causas distintas, **ref** (Open edX) e **instrumento** (Chamilo), siendo la segunda peor porque agregar refs no la encuentra. 🔴 **P274**: en `raw.githubusercontent.com` un path de **DIRECTORIO** da **404 SIEMPRE**, exista o no (`public/ai` de Moodle: 404, y existe), así que un sondeo de directorio **no puede sostener una ausencia** — retira una clase entera de negativo de esta base. 🟢 **Y la receta nueva es `R-VERSION-PLATAFORMA`: la auditoría de versión que va ANTES de cotizar una integración de AI sobre un LMS instalado, porque el mismo repo da tres respuestas distintas a «¿qué proveedor tengo sin código de terceros?» según la versión — y porque migrar puede MOVER el punto de integración.**
 > **Pase 90 del 2026-10-04:** 🆕 **Los patrones nuevos son **P269**, **P270** y **P271**, y los tres salen de medición de este pase.** **P269** le pone **REF** al eje de proveedor: un conjunto de subplugins es propiedad del par (repo, ref), y medido así los proveedores en el núcleo de Moodle van de **2** (4.5.15) a **7** (5.3) — así que «la plataforma soporta X» es verdadero o falso según la versión. **P270** prohíbe publicar como ausencia un negativo sobre una ruta que codifica un NOMBRE: `ai/provider/bedrock` da 404 y `ai/provider/awsbedrock` da 200, y esta base ya tenía la trampa escrita desde el pase 19 sin que viajara. **P271** es la versión por CAPA de `P228`: una afirmación sobre la capa A no puede citar una medición cuyo denominador es la capa B — el pase 86 escribió «las plataformas no ligan proveedor» citando `P257`, cuyo denominador son 69 filas de agente y cero plataformas. 🟢 **Y la receta nueva es `R-VERSION-PROVEEDOR`: la compuerta de pre-venta que convierte «¿pueden poner Anthropic en nuestro Moodle?» en una versión mínima, un plan de salto y una familia de licencia, antes de cotizar.**
 > **Pase 89 del 2026-10-04:** 🆕 **Los patrones nuevos son **P265**, **P266**, **P267** y **P268**, y los cuatro salen de medición de este pase.** **P265** refuta la regla que el pase 88 dejó escrita: la pregunta de región son DOS preguntas con leniencia CONTRARIA, y ni los dos validadores coinciden —el veredicto depende de la SINTAXIS DEL PORTADOR—. **P266** es la regla que salió del fallo del propio módulo compartido: el comportamiento endurecido va en el DEFAULT, no detrás de un flag. **P267** mide que un vocabulario cerrado se enforcea en un portador y no en el otro (160 normalizaciones silenciosas, 0 accionables). **P268** le pone superficie a un conteo de capacidades: el repo canónico de Canvas dice **102** en su descripción y **103** en su README, y de 3 repos medidos **CERO** es citable sin nombrar la superficie. 🟢 **Y la receta nueva es `R-SUPERFICIE`: la auditoría de pre-adopción que esta base puede entregar hoy, con instrumento y suite, antes de que un engagement se pare sobre un fork cuyo claim está congelado.**
 > **Pase 88 del 2026-10-04:** 🆕 **Los patrones nuevos son **P262**, **P263** y **P264**, y los tres salen de medición de este pase.** **P262** convierte «hay mandato curricular de IA» en tres columnas —NIVEL, VIGENCIA, ENTREGA— y con eso refuta la frase que la prensa secundaria repite: lo de China es **municipal**, no nacional. **P263** es la regla que salió del fallo del propio instrumento: `P248` **regresó** a seis pases de distancia porque vivía dentro de un archivo y no en la librería compartida. **P264** separa «región del proveedor» de «región del currículo que sirve». 🟢 **Y la receta nueva es `R-MANDATO`: la capa de contenido curricular integrado sobre el LMS instalado, que es —medido— lo único que los 4 mandatos vigentes del mundo realmente compran.**
@@ -116,6 +117,121 @@ updated: 2026-10-04
 > no existe en open source permisivo).
 > **Pase 11:** +2 patrones — **P25** (riesgo de abandono conforme al Anexo III, la capa con presupuesto ya asignado y sin oferta open source) y **P26** (agente docente sobre la ontología curricular nacional ya publicada).
 > **Pase 27:** **+4 patrones y una corrección.** 🔴 **P51 queda con premisa falsa** —el conector MCP de Moodle **sí existe y es MIT**— y lo reemplazan **P54** (corrección y devolución sobre Moodle con **compuerta humana**, el último tramo del gap 6, con piezas que ya escriben), **P55** (el conector de **Open edX**, que es el único que de verdad no existe), **P56** (**SCORM** como formato de salida de la capa generativa: cero integración, offline) y **P57** (evidencia por MCP cotizada sobre lo que CaSS **realmente** expone — 6 de 61 operaciones, con insignias y autoría de marcos **fuera**).
+
+## 🧩 P273–P274 y la receta `R-VERSION-PLATAFORMA`: el manifiesto no es donde una plataforma liga su proveedor (pase 92 del 2026-10-04)
+
+> Cierra la **ACCIÓN** del pase 91 (*«las otras cinco filas siguen sin ref y quedan como ACCIÓN»*).
+> Instrumento, datos y controles:
+> [`compose/code/p273-platform-provider-dir/`](code/p273-platform-provider-dir/).
+
+### `P273` — un «SIN-PROVEEDOR» de manifiesto no es un veredicto si la plataforma liga en un directorio
+
+**Enunciado.** Antes de leer un manifiesto de runtime para decidir si una plataforma liga un
+proveedor de modelo, hay que establecer **si ese manifiesto es el lugar donde esa plataforma los
+liga**. Si la plataforma puede ligar proveedores como **clases o subplugins de un directorio del
+núcleo**, el manifiesto es un instrumento **ciego** y su silencio no es evidencia.
+
+**La medición que lo obliga.**
+
+| plataforma | `composer.json` / manifiesto | directorio del núcleo | veredicto |
+|---|---|---|---|
+| `chamilo/chamilo-lms` `v3.0.1` | **0 tokens** | **6** proveedores | 🔴 el manifiesto miente por omisión |
+| `chamilo/chamilo-lms` `v2.0.0` | **0 tokens** | **5** proveedores | 🔴 ídem |
+| `chamilo/chamilo-lms` `1.11.x` | **0 tokens** | **0** (2 en plugin embarcado) | 🟢 coincide por casualidad |
+| `moodle/moodle` | no se leyó manifiesto | **2 → 7** según versión | — (se midió con el instrumento correcto) |
+
+🔴 **El caso de `1.11.x` es la trampa: ahí el manifiesto y el directorio COINCIDEN**, así que una
+muestra tomada sólo en esa rama confirma el instrumento equivocado.
+
+**Cómo se aplica (compuerta de tres pasos, antes de publicar cualquier veredicto de proveedor):**
+
+1. **¿Dónde liga esta plataforma?** Enumerar el árbol (`WebFetch` sobre `tree/`), no sondear nombres.
+   Buscar un directorio de proveedores: `ai/provider/*`, `AiProvider/`, `providers/`, `llm/`.
+2. **Si existe directorio → medirlo por ref**, con control negativo **en el mismo directorio y la
+   misma ref**. El manifiesto pasa a ser información secundaria.
+3. **Si no existe → recién entonces el manifiesto**, y el veredicto se publica nombrando el
+   instrumento y las refs. Un árbol truncado se declara por **tramo** (ILIAS: A–L).
+
+### `P274` — un 404 sobre un path de DIRECTORIO mide el canal, no el repo
+
+**Enunciado.** En `raw.githubusercontent.com` un path de directorio devuelve **404 siempre**, porque
+el canal sirve archivos y no listados. Por lo tanto **un sondeo de directorio nunca puede sostener
+una afirmación de ausencia.**
+
+**Control, sobre rutas conocidas-presentes:**
+
+| path | tipo | código |
+|---|---|---|
+| `moodle/moodle/MOODLE_503_STABLE/public/ai` | **directorio, EXISTE** | **404** |
+| `.../public/ai/provider` | **directorio, EXISTE** | **404** |
+| `.../public/ai/provider/openai/version.php` | archivo, existe | **200** |
+| `.../public/ai/zzz-fake-92.php` | archivo, ausente | 404 |
+
+🔴 **Este pase cometió el error y lo retiró antes de publicar:** sondeó `public/ai` de Chamilo y
+`components/ILIAS/AI` y los dos dieron 404; publicarlos habría sido declarar dos ausencias falsas —y
+una de ellas, la de Chamilo, era **espectacularmente** falsa (6 proveedores).
+
+🔵 **Tercera forma de la misma familia en tres pases**, y conviene leerlas juntas: `P270` (un 404 sobre
+una ruta que codifica un **nombre** mide el nombre: `bedrock` 404 / `awsbedrock` 200, `OpenAi.php` 404
+/ `OpenAiProvider.php` 200), la tendencia **710** (un control invariante al layout **pasa** justo
+cuando la ruta medida se rompió) y `P274` (un 404 sobre un **directorio** mide el canal). **Regla
+común: un negativo necesita un control de la MISMA CLASE DE OBJETO que la medición.**
+
+## 🆕 `R-VERSION-PLATAFORMA` — Receta: auditoría de versión antes de cotizar una integración de AI sobre un LMS instalado
+
+**Para quién.** Cualquier engagement que llegue a un LMS **ya instalado** (el caso normal: Moodle o
+Chamilo con años de datos) y tenga que decir qué se puede construir encima y a qué costo.
+
+**Por qué existe.** La pregunta *«¿pueden poner Anthropic / Gemini / un modelo local en nuestro
+LMS?»* **no se contesta con un sí/no ni con «la plataforma tiene subsistema de AI»**: se contesta con
+una **versión mínima**, y la respuesta cambia dentro del mismo repo. Y hay un segundo riesgo que no
+está en ninguna columna: **el punto de integración se mueve entre versiones mayores.**
+
+**Insumos.** Sólo el par **(repo, ref)** del cliente y `curl`. Nada que instalar.
+
+**Pasos.**
+
+1. **Fijar la ref real del cliente.** No «Chamilo» ni «Moodle»: `v1.11.40`, `MOODLE_405_STABLE`. Si
+   el cliente no la sabe, leerla del árbol desplegado (`public/version.php` en Moodle).
+2. **Calibrar el canal** (`P249`): ref buena → 200, ref inventada → 404. Sin eso, ningún negativo se
+   publica. ⚠️ **Y no sondear directorios** (`P274`): sólo archivos.
+3. **Enumerar el directorio de proveedores** con `WebFetch` sobre
+   `github.com/<org>/<repo>/tree/<ref>/<path>` para obtener los **nombres reales** de las clases
+   (`P270`), y contarlos sobre la ref del cliente con control negativo en el mismo directorio.
+4. **Armar la tabla de versión mínima** por proveedor, usando la matriz ya medida:
+
+   | proveedor | Moodle | Chamilo |
+   |---|---|---|
+   | **Anthropic** | ≥ **5.3** | ≥ **3.0** |
+   | Gemini | ≥ 5.2 | ≥ 2.0 |
+   | Bedrock (`awsbedrock`) | ≥ 5.2 | — |
+   | DeepSeek | ≥ 5.1 | ≥ 2.0 (o 1.11 **vía plugin**) |
+   | Mistral / Grok | **ausentes del núcleo** | ≥ 2.0 |
+   | Ollama (local / soberano) | ≥ 5.0 | modelo propio compatible, ≥ 2.0 |
+   | OpenAI | ≥ 4.5 | ≥ 2.0 (o 1.11 **vía plugin**) |
+
+5. **Marcar el salto de punto de integración** (tendencia **715**). En Chamilo, cruzar 1.11 → 2.x
+   **elimina `plugin/ai_helper/`** (404 desde `v2.0.0`) y mueve todo a `AiProviderFactory` del
+   núcleo: se presupuesta **reescritura del conector**, no actualización.
+6. **Verificar qué capacidades ya vienen puestas antes de cotizar construirlas.** En Chamilo ≥ 2.0 el
+   núcleo ya trae `AiTaskGraderService` (autograding) y `AiTutorChatService` (tutor): si la propuesta
+   los cotizaba como desarrollo, hay que rehacerla.
+7. **Declarar la licencia de la capa.** Chamilo **GPL-3.0**, ILIAS **GPL**, OpenEduCat **LGPL-3.0**,
+   Moodle **GPL-3.0**: **cero permisivas** (tendencia **701**). El foco MIT/Apache **no es elegible en
+   esta capa** y eso se dice en la propuesta, no después.
+
+**Entregable.** Una tabla de una página: ref del cliente · proveedores disponibles hoy · versión
+mínima para los que falten · si la migración mueve el punto de integración · capacidades ya incluidas
+· licencia de la capa. **Es el primer entregable facturable del engagement y se produce en horas.**
+
+**Estimación.** **1–2 días** por plataforma para la auditoría. La migración que suele destapar
+(1.11 → 3.0 con reescritura de conector) es de otro orden y se cotiza aparte, con el dato en la mano.
+
+**Dónde pega por región.** **North America**: el comité técnico decide sin plazo regulatorio y no
+tiene este inventario. **EMEA**: es el insumo directo del expediente de alto riesgo del EU AI Act, y
+la fila de Mistral da el ángulo de soberanía. **APAC**: se lee al revés —qué versión permite **no**
+depender de un proveedor extranjero—. **LATAM**: el parque instalado de Chamilo es regional, así que
+esto no es consultoría sino inventario de la base instalada.
 
 ## 🧩 P272 y la receta `R-SDK-POR-REF`: un veredicto de plataforma sin REF no es un veredicto (pase 91 del 2026-10-04)
 

@@ -8,6 +8,7 @@ updated: 2026-10-04
 
 > Ventana de investigación: septiembre 2026. Verificado 2026-09-30; el pase 11, el 2026-10-01.
 > **Pase 91 del 2026-10-04:** 🟢 **Seis tendencias nuevas, numeradas 706–711** (el pase 90 cerró en 705). 🔴 **706: el pase que demostró que un conjunto de proveedores necesita REF publicó, en el mismo instrumento, SIETE veredictos de plataforma SIN REF** — el defecto que acababa de nombrar, una capa más abajo. 🔴 **707: puesto a prueba, el veredicto «Open edX no liga proveedor de modelo» es FALSO en las tres releases nombradas que un cliente corre y verdadero sólo en `master`.** 🔴 **708: y lo que trae es `openai==0.28.1`, SDK PRE-1.0, declarada DIRECTA en el core — tres respuestas distintas a «¿con qué SDK hablo?» según dónde caiga el cliente.** 🟢 **709: el defecto NO es universal — Canvas sobrevive en las 2 refs que resuelven, así que 1 de 2, y no se generaliza desde una muestra de dos.** 🔵 **710: un control de ref invariante al layout PASA exactamente cuando la ruta medida se rompió, así que «el control dio 200» no autoriza a leer un 404 como ausencia.** 🔵 **711: la matriz de proveedor por ref pasa de medición única a REPLICADA (6/6 exacto por un bucle distinto), que es la primera vez que una cifra de esta base se confirma por segunda mano.**
+> **Pase 92 del 2026-10-04:** 🟢 **Nueve tendencias nuevas, numeradas 712–720** (el pase 91 cerró en 711). 🔴 **712: la ligadura de proveedor de una plataforma puede vivir en un DIRECTORIO del núcleo, y entonces el manifiesto de runtime no da un veredicto negativo: da una lectura CIEGA — Chamilo trae 6 proveedores en el núcleo con `composer.json` en cero tokens, en la MISMA ref.** 🔴 **713: las dos contradicciones de la tabla del pase 90 tienen causas DISTINTAS —ref (Open edX) e instrumento (Chamilo)— y la de instrumento es peor, porque agregar refs no la encuentra.** 🟢 **714: con dos plataformas midiendo la misma forma, «¿puedo usar este proveedor?» se contesta con una VERSIÓN MÍNIMA y eso pasa de ser propiedad de Moodle a propiedad de la VERTICAL: Anthropic exige Moodle ≥ 5.3 o Chamilo ≥ 3.0.** 🔴 **715: hay un riesgo de migración que ninguna columna de licencia muestra — los 2 proveedores de Chamilo 1.11 viven en un plugin embarcado que da 404 desde v2.0.0, así que migrar CAMBIA el punto de integración.** 🟢 **716: la capa de autograding que esta base inventaría desde el pase 67 ya está en el NÚCLEO de Chamilo 2.0+, y esta KB la vendía sin tenerlo registrado.** 🔴 **717: en `raw.githubusercontent.com` un path de DIRECTORIO da 404 SIEMPRE, exista o no, así que «probé el directorio y no está» no es evidencia — y retira una clase entera de negativo de esta base.** 🟢 **718: canal nuevo después de cuatro pases de 403 — `WebFetch` sobre las páginas `tree/` de `github.com` LISTA directorios, con el límite medido de que trunca los listados largos.** 🔵 **719: vigesimoprimer barrido regional, y la saturación se MIDIÓ otra vez en vez de declararse: 22 de 24 tokens de hecho ya estaban en el árbol, y los 2 ausentes son horizontales —no de la vertical—.** 🟢 **720: la EJECUCIÓN volvió después de once pases NEGADOS, el árbol entero corre verde (41/41) y el linter de tablas da `total 0` sobre los ocho archivos de contenido — y lo primero que se gastó fue en REPLICAR la medición del propio pase, 8/8 refs exactas.** Ver los patrones **P273**–**P274** y [`compose/code/p273-platform-provider-dir/`](../compose/code/p273-platform-provider-dir/).
 > **Pase 90 del 2026-10-04:** 🟢 **Siete tendencias nuevas, numeradas 699–705** (el pase 89 cerró en 698). 🔴 **699: el eje de proveedor de esta base no tenía REF, y sin ref no significaba nada: los proveedores en el núcleo de Moodle van de 2 a 7 entre 4.5 y 5.3, así que «la plataforma soporta X» es verdadero o falso según la versión.** 🔵 **700: el «CERO `SWAPPABLE`» del pase 86 no era un hecho de la industria sino una cota de su denominador — midió 69 filas de AGENTE y la clase que no encontró vive en el NÚCLEO de la plataforma más instalada de la vertical.** 🔴 **701: la capa de plataforma de esta vertical es COPYLEFT en 8 de 8 lecturas de payload y CERO permisivas, así que el foco MIT/Apache del encargo no es elegible en esa capa: es una restricción de entrega.** 🔴 **702: un negativo sobre una ruta que codifica un NOMBRE mide el nombre — `bedrock` 404 / `awsbedrock` 200 — y la advertencia estaba escrita en este árbol desde el pase 19 y no viajó, que es la forma exacta de P266.** 🔴 **703: toda cifra de esta base anclada a `main` tiene fecha de vencimiento: el pase 19 fijó `main` = 5.3rc1 y hoy 5.3 SALIÓ y `main` es 6.0dev.** 🔴 **704: la prosa de release notes dató mal la entrada de un proveedor (dijo 5.1 para Ollama; medido, 5.0), así que una fuente secundaria no sustituye una lectura anclada a ref.** 🔵 **705: las cuatro regiones devolvieron CERO hechos ausentes y por primera vez eso se MIDIÓ en vez de declararse —10 de 11 tokens ya en el árbol—, y el único ausente es inverificable por cinco canales bloqueados.**
 > **Pase 89 del 2026-10-04:** 🟢 **Ocho tendencias nuevas, numeradas 691–698** (el pase 88 cerró en 690). 🔴 **691: la regla que el pase 88 escribió —«la pregunta de región se muda a `lib/`»— NO se puede cumplir como estaba escrita: no hay UNA pregunta de región, hay dos, y necesitan leniencia CONTRARIA.** 🔴 **692: los dos validadores del mismo vocabulario cerrado discrepan sobre `" APAC"` y los DOS tienen razón — el veredicto depende de la SINTAXIS DEL PORTADOR, no del vocabulario.** 🔵 **693: el comportamiento endurecido detrás de un argumento NO default no viajó, viajó a medias; el contraejemplo estaba en el árbol desde el pase 82.** 🔴 **694: el módulo compartido escrito para no volver a elegir un defecto eligió uno nuevo en su primera línea, y lo encontró la matriz al ver que su columna no coincidía con la del instrumento del que salió.** 🔴 **695: un vocabulario cerrado se aplica en un portador y no en el otro: 160 celdas normalizadas en silencio, 0 accionables — el árbol está limpio y el hueco es LATENTE.** 🔴 **696: el barrido sin compuerta devolvió 8 hallazgos y los 8 eran falsos positivos de la clase exacta que el instrumento auditado ya descartaba.** 🔴 **697: el repo CANÓNICO se contradice consigo mismo —102 en la descripción, 103 en el README, misma lectura, mismo día— así que un conteo de capacidades tiene SUPERFICIE y de 3 repos medidos CERO es citable sin nombrarla.** 🔵 **698: el canal externo se agotó por DECIMOCTAVA vez y lo que rindió fue, por cuarta vez consecutiva, una dimensión INTERNA.**
 > **Pase 87 del 2026-10-04:** 🟢 **Ocho tendencias nuevas, numeradas 675–682** (el pase 86 cerró en 674). 🟢 **675: la capa que faltaba —psicometría computacional permisiva y completa de un solo laboratorio APAC— y con ella el hueco de APAC cierra a los quince pases.** 🔴 **676: «hay paquete publicado» dejó de ser señal de vigencia: 5 de 6 releases del estante nuevo son de 2019-2022.** 🔴 **677: el titular no es uniforme dentro de un mismo `org` institucional, y eso mueve la contraparte de un contrato.** 🟢 **678: aparece la primera ligadura de proveedor que vive en la CONFIGURACIÓN y no en el manifiesto, y con ella el cero del pase 86 pasa a ser cota de instrumento.** 🔴 **679: en APAC el cuello dejó de ser el código y pasó a ser la cesión —producto desplegado en tres países, sin licencia.** 🔴 **680: NA legisla mucho y capacita poco; la brecha es de 134 proyectos de ley contra 18 % de docentes con guía escrita.** 🟢 **681: LATAM es la región de mayor adopción medida del planeta en superior y la de regulación más fragmentada.** 🔵 **682: EMEA es la única región con FECHA dura de cumplimiento, y la entrada comercial de la región es deliberadamente de bajo riesgo.**
@@ -106,6 +107,169 @@ updated: 2026-10-04
 > (tendencia 29), se abre el **gap 20** y se registran dos advertencias de verificación: los agregadores de estrellas
 > están mal por ~2× y **un 403 de `curl` no es un 404**. Ver la nota de método del pase 12.
 > **Pase 11:** el Digital Omnibus es derecho vigente (tendencia 25), aparece la capa predictiva y está vacía (tendencia 26), y se corrige un error de método de diez pasadas sobre licencias permisivas (tendencia 27).
+
+## 🟢 Tendencias 712–720 — pase 92 del 2026-10-04
+
+> Las ocho salen de cerrar la **ACCIÓN** del pase 91: ponerle ref a las cinco filas de veredicto de
+> plataforma que quedaban. Instrumento, datos y controles:
+> [`compose/code/p273-platform-provider-dir/`](../compose/code/p273-platform-provider-dir/).
+
+### 🔴 712 — La ligadura de proveedor de una plataforma puede vivir en un DIRECTORIO del núcleo, y ahí el manifiesto es un instrumento ciego
+
+El pase 90 leyó **un manifiesto de runtime** por plataforma y publicó siete veredictos. Medido por
+ref, `chamilo/chamilo-lms` da **cero** tokens de proveedor en su `composer.json` en las **ocho** refs
+—incluida `v3.0.1`— y al mismo tiempo trae **seis** clases de proveedor en
+`src/CoreBundle/AiProvider/`.
+
+🔴 **El veredicto y el hecho conviven en la MISMA ref.** Los proveedores no son dependencias: son
+clases del núcleo, igual que los subplugins `public/ai/provider/*` de Moodle. Esta base ya había
+medido esa forma en Moodle —con **otro instrumento**— y **no registró que eran instrumentos
+distintos**, así que aplicó el del manifiesto a las otras siete filas como si fuera equivalente.
+
+🔵 **La regla que queda (`P273`): un «SIN-PROVEEDOR» leído en un manifiesto no es un veredicto
+negativo mientras la plataforma pueda ligar proveedores en un directorio. Es una lectura de un
+instrumento que no alcanza esa forma.**
+
+### 🔴 713 — Las dos contradicciones de la misma tabla tienen causas distintas, y la de instrumento es la peor
+
+De las 7 filas del pase 90, ahora todas medidas: **2 contradichas, 5 sostenidas**. Pero no es el
+mismo error dos veces:
+
+| plataforma | causa | forma del error |
+|---|---|---|
+| `openedx/edx-platform` | **ref** | verdadero en `master`, falso en `quince`/`redwood`/`sumac` |
+| `chamilo/chamilo-lms` | **instrumento** | verdadero y falso **en la misma ref**, según dónde se lea |
+
+🔴 **La de instrumento es peor porque la disciplina que el pase 91 instauró —anclar a ref— NO la
+encuentra.** Se puede medir un repo en ocho refs, con controles en las ocho, y seguir equivocado en
+las ocho. Lo que falta no es una ref: es preguntar *¿este manifiesto es el lugar donde esta
+plataforma liga proveedores?* antes de leerlo.
+
+### 🟢 714 — Con dos plataformas, «¿puedo usar este proveedor?» se contesta con una versión mínima, y eso es propiedad de la VERTICAL
+
+`P269` sacó la regla para Moodle. Este pase la saca para Chamilo, y al repetirse deja de ser una
+rareza de un producto:
+
+| proveedor, sin código de terceros | Moodle | Chamilo |
+|---|---|---|
+| **Anthropic** | ≥ **5.3** | ≥ **3.0** |
+| Gemini | ≥ 5.2 | ≥ 2.0 |
+| DeepSeek | ≥ 5.1 | ≥ 2.0 (o 1.11 vía plugin) |
+| Mistral / Grok | **ausentes del núcleo** | ≥ 2.0 |
+| OpenAI | ≥ 4.5 | ≥ 2.0 (o 1.11 vía plugin) |
+
+🔵 **Y las dos plataformas NO coinciden en el conjunto**, que es el dato que impide generalizar de una
+a otra: Mistral y Grok están en el núcleo de Chamilo desde 2.0 y **no están en el de Moodle a ninguna
+versión**. Así que la respuesta es una función de **(plataforma, versión)**, no de la vertical.
+
+### 🔴 715 — Un riesgo de migración que ninguna columna de licencia muestra: el punto de integración se MUEVE entre versiones
+
+En Chamilo `1.11.x` (y el tag `v1.11.40`) los proveedores no están en el núcleo: están en
+`plugin/ai_helper/` —plugin **embarcado**, con `AiHelperPlugin.php`, constantes `OPENAI_API` y
+`DEEPSEEK_API`, y un `README` que declara integración en *Exercises* (import Aiken) y *Learnpaths*—.
+Ese directorio **da 404 desde `v2.0.0`**.
+
+🔴 **Un cliente que migre 1.11 → 2.x/3.x no actualiza su integración de AI: le cambia el punto de
+integración**, de un plugin a un servicio del núcleo (`AiProviderFactory`). Se presupuesta como
+**reescritura del conector**, no como actualización — y ninguna columna de este árbol (licencia,
+estrellas, actividad) lo muestra.
+
+### 🟢 716 — La capa de autograding que esta base inventaría desde el pase 67 ya viene en el núcleo de Chamilo 2.0+
+
+Medido 200 en `v2.0.0`, `v3.0.1` y `master`: `AiTaskGraderService.php` (**autograding**),
+`AiTutorChatService.php` (**tutor**), `AiMediaFailoverService.php` (failover entre proveedores),
+`AiProviderFactory.php`, más `AiImageProviderInterface` y `AiVideoProviderInterface`.
+
+🔴 **Esta KB venía vendiendo el autograding como algo a construir sobre el LMS, y en la segunda
+plataforma de la vertical ya está puesto.** Es la misma forma del pase 90 (*el «cero `SWAPPABLE`» del
+pase 86 era una cota del denominador, y la clase que no encontró vivía en el núcleo de la
+plataforma*): cuando esta base mide **sólo la capa de agente**, no ve lo que la **plataforma** trae.
+
+### 🔴 717 — En este canal un path de DIRECTORIO da 404 siempre, así que un sondeo de directorio no puede sostener una ausencia
+
+Control, sobre rutas **conocidas-presentes**:
+
+| path | tipo | código |
+|---|---|---|
+| `public/ai` (Moodle, `MOODLE_503_STABLE`) | **directorio, existe** | **404** |
+| `public/ai/provider` | **directorio, existe** | **404** |
+| `public/ai/provider/openai/version.php` | archivo, existe | **200** |
+| `public/ai/zzz-fake-92.php` | archivo, ausente | 404 |
+
+🔴 **`raw.githubusercontent.com` sirve archivos, no listados: el 404 de un directorio es una
+propiedad del canal y no un hecho sobre el repo.** Este pase cometió ese error en su primer intento
+—sondeó `public/ai` de Chamilo y `components/ILIAS/AI` y estuvo a punto de publicar las dos ausencias—
+y lo **retiró antes de publicar** (**P274**).
+
+🔵 **Y es la tercera forma de la misma familia en tres pases:** `P270` (un 404 sobre una ruta que
+codifica un nombre mide el **nombre**), la tendencia **710** (un control invariante al layout pasa
+justo cuando la ruta medida se rompió) y ahora `P274` (un 404 sobre un **directorio** mide el canal).
+Las tres dicen lo mismo: **un negativo necesita su control, y el control tiene que estar en la misma
+clase de objeto que la medición.**
+
+### 🟢 718 — Canal nuevo después de cuatro pases de 403: las páginas `tree/` de github.com sí se pueden enumerar
+
+Los pases 85, 86, 90 y 91 registran `curl -sI github.com` y `api.github.com` en **403 a la buena y a
+la inexistente** —el canal que no puede opinar—, y de ahí venía la imposibilidad de **enumerar un
+árbol**: esta base sólo podía **sondear nombres conjeturados**, que es la fábrica de `P270`.
+
+🟢 **`WebFetch` sobre `github.com/<org>/<repo>/tree/<ref>/<path>` devuelve el listado.** Es el canal
+que encontró `src/CoreBundle/AiProvider` y los nombres **reales** de las clases
+(`OpenAiProvider.php`, no `OpenAi.php`), y el que permitió cerrar `frappe/erpnext`,
+`frappe/education` y `openeducat_erp` por árbol completo en vez de por conjetura.
+
+⚠️ **Con su límite medido en el mismo pase: TRUNCA los listados largos.** `components/ILIAS` cortó en
+`LegalDocuments`, así que ILIAS quedó medido en **A–L** y su veredicto se publica *sostenido con
+límite*. **Sirve para hallar; un negativo suyo necesita el tramo declarado.**
+
+### 🔵 719 — Vigesimoprimer barrido regional, y la saturación se MIDIÓ otra vez en vez de declararse
+
+Año **CALCULADO: 2026**, no fijado. Los cuatro barridos regionales y los cuatro globales trajeron
+**24** tokens de hecho; **22 ya estaban en el árbol**, verificados por `grep` archivo por archivo
+antes de escribir esta línea: `951`, `2.303,2`, `41,7`, `5,9 horas`, Colorado, Texas, `£200 M`,
+`Skills England`, `94 %`, `NIS2`, `EdTech 200`, `48 %`, `57 %`, Singapur, `LearnUpon`, `NIIT`,
+`IESALC`, `19 países`, `Ednova`, `200 instituciones`, `79,6`, `31,35`, `40,9`, `71,22`, `45,62`,
+`34,78`.
+
+🔵 **Los únicos DOS ausentes son horizontales y por eso no entran:** *4,3 millones de repos de AI en
+GitHub* y *+178 % interanual en repos de LLM*. **Son hechos sobre GitHub, no sobre educación** —
+pertenecen a la KB de `technology`. Se registran acá para que el pase 93 no los vuelva a medir.
+
+🔴 **Vigesimoprimera confirmación de que el barrido regional de esta vertical está saturado como canal
+de descubrimiento**, y séptima consecutiva de que lo que rinde es una dimensión **INTERNA**. Se corre
+igual, porque declarar el hueco es obligatorio y el silencio se parece exactamente a la cobertura.
+
+### 🟢 720 — La ejecución volvió después de once pases, el árbol corre verde, y lo primero que se gastó fue en replicar la medición del propio pase
+
+Los pases **58, 67, 79, 80, 81, 84, 86, 89, 90 y 91** registran `ejecución NEGADA
+([Code from External])`. Por eso el pase 90 escribió explícitamente que su instrumento *«no publica
+`N/N`: publica los `.tsv` crudos y el bucle que los produjo»* (regla de `P107`).
+
+🟢 **En este pase la ejecución funciona, y el árbol entero está sano:**
+
+| medición | resultado |
+|---|---|
+| suites Python (`test_*.py`) | **39 / 39 verdes** |
+| suites shell (`test_*.sh`) | **2 / 2 verdes** |
+| total del árbol | **41 / 41, cero fallos** |
+| linter `P239`/`P240` sobre los 8 archivos de contenido | **`total 0`** |
+
+🟢 **El `total 0` del linter es el que más vale, porque mide el defecto más caro de esta
+infraestructura: cero filas huérfanas = cero encabezados compilados como entidad** (el defecto que
+produjo entidades llamadas *«nombre»* en varias industrias), y cero tablas de región incompletas.
+
+🟢 **Y lo primero que se gastó la ejecución recuperada fue en REPLICAR la medición de este mismo pase,
+que es el estándar que el pase 91 instauró:** `sweep_provider_dir.sh` —escrito, como manda el árbol,
+para registrar un bucle corrido a mano— **se corrió**, y sus **8 refs coinciden EXACTO** con la
+medición manual (`0,0,5,5,6,6,6,6`), con la demostración de `P274` en la misma corrida. **Segunda
+cifra de esta base confirmada por segunda mano**, después de la matriz de Moodle del pase 91.
+
+🔵 **La lección de método, y es sobre este pase: estas notas se escribieron con el `⚠️ ejecución
+NEGADA` puesto por INERCIA —once pases seguidos lo justificaban— y era FALSO.** Se corrigió antes de
+publicar, pero el defecto es el mismo que `P266` y la tendencia **702** nombran por tercera vez: **una
+condición medida en pases anteriores se arrastra como supuesto en vez de re-medirse.** La condición de
+canal se verifica en el pase, no se hereda.
+
 
 ## 🟢 Tendencias 699–705 — pase 90 del 2026-10-04
 

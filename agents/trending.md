@@ -9,6 +9,84 @@ updated: 2026-10-04
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 > No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
 
+## 2026-10-04 — pase 92: cero altas de agente por CUARTA vez, y el veredicto de plataforma que el pase 91 dejó pendiente se cae por una causa peor que la ref
+
+🔴 **Cero altas en `agents/top.md` (sigue en 94 filas), cuarto pase consecutivo, y se declara en vez
+de rellenar.** El barrido obligatorio (`top open source AI agents education 2026 github MIT`) devolvió
+por **séptima vez consecutiva** el eje generalista: `openclaw` (385.407 ★), `dify` (151.639 ★),
+`browser-use` (108.128 ★), `Mem0` (62.735 ★), `AutoGen` (60.284 ★), `Flowise` (55.226 ★). Son marcos
+**horizontales** — viven en la KB de `technology`. Sumarlos acá sería padding con nombre propio.
+
+🟢 **Lo que el pase sí rindió: cerró la ACCIÓN del pase 91 y, al cerrarla, encontró que el defecto
+tenía una SEGUNDA causa, peor que la ref.** El pase 91 escribió: *«las otras cinco filas siguen sin
+ref y quedan como ACCIÓN, no como veredicto»*. Las cinco están medidas, así que las **7** filas de
+veredicto de plataforma del pase 90 ya están todas ancladas:
+
+| plataforma | instrumento | refs | veredicto por ref | vs. pase 90 |
+|---|---|---|---|---|
+| `openedx/edx-platform` | manifiesto | 4 | TIENE-PROVEEDOR en `quince`/`redwood`/`sumac` | 🔴 **CONTRADICHO** (causa: **ref**) |
+| `chamilo/chamilo-lms` | **directorio del núcleo** | 8 | TIENE-PROVEEDOR, **0 → 5 → 6** | 🔴 **CONTRADICHO** (causa: **instrumento**) |
+| `instructure/canvas-lms` | manifiesto | 2 | SIN-PROVEEDOR | 🟢 sostenido |
+| `ILIAS-eLearning/ILIAS` | manifiesto + árbol **A–L** | 4 | SIN-PROVEEDOR en núcleo | 🟢 sostenido ⚠️ con límite |
+| `frappe/education` | manifiesto + árbol | 2 | SIN-PROVEEDOR | 🟢 sostenido |
+| `frappe/erpnext` | manifiesto + árbol | 3 | SIN-PROVEEDOR | 🟢 sostenido |
+| `openeducat/openeducat_erp` | manifiesto **real** + árbol | 3 | SIN-PROVEEDOR | 🟢 **NO-CLAIM → MEDIDO** |
+
+🔴 **Tally: 2 contradichas, 5 sostenidas — y las dos contradicciones NO son el mismo error.** La de
+Open edX es de **ref**: el veredicto era verdadero en `master` y falso en las releases. La de Chamilo
+es de **instrumento**: es verdadera y falsa **en la misma ref**. `composer.json` da **cero** tokens de
+proveedor en las **ocho** refs medidas, incluida `v3.0.1`, donde el núcleo trae **seis** proveedores en
+`src/CoreBundle/AiProvider/`. **Agregar refs no encuentra este defecto** (**P273**).
+
+🟢 **La matriz de Chamilo, que es el dato que viaja a una propuesta:**
+
+| ref | proveedores en núcleo | cuáles | `plugin/ai_helper` |
+|---|---|---|---|
+| `v1.11.40`, `1.11.x` | **0** | — | **200** (OpenAI + DeepSeek) |
+| `v2.0.0`, `2.0` | **5** | OpenAI, DeepSeek, Gemini, Mistral, Grok | **404** |
+| `v3.0.0`, `v3.0.1`, `3.0`, `master` | **6** | **+ Anthropic** | **404** |
+
+🔵 **Y la regla comercial queda con DOS plataformas, que es lo que la vuelve una propiedad de la
+vertical y no de Moodle:** Anthropic sin código de terceros exige **Moodle ≥ 5.3** o **Chamilo ≥ 3.0**;
+Mistral y Grok **no están en el núcleo de Moodle a ninguna versión** y sí en **Chamilo ≥ 2.0**.
+
+🔴 **Riesgo de migración que ninguna columna de licencia muestra:** en `1.11.x` los dos proveedores
+viven en `plugin/ai_helper/` (plugin **embarcado**, con `AiHelperPlugin.php` y sus constantes
+`OPENAI_API` / `DEEPSEEK_API`) y ese directorio **da 404 desde `v2.0.0`**. Migrar 1.11 → 2.x/3.x no
+actualiza la integración: **le cambia el punto de integración**, de plugin a servicio del núcleo
+(`AiProviderFactory`).
+
+🟢 **Y un hecho que esta base vendía sin tenerlo registrado: la capa de AUTOGRADING ya está en el
+núcleo de Chamilo 2.0+** — `AiTaskGraderService.php` y `AiTutorChatService.php` dan 200 en `v2.0.0`,
+`v3.0.1` y `master`, más `AiMediaFailoverService`, `AiProviderFactory` e interfaces de imagen y video.
+
+🔵 **Canal NUEVO para esta base, y es el que destapó todo:** `WebFetch` sobre
+`github.com/<org>/<repo>/tree/<ref>/<path>` **LISTA directorios**. Cuatro pases (85, 86, 90, 91)
+registran `curl -sI github.com` y `api.github.com` en **403**, y de ahí venía la imposibilidad de
+enumerar un árbol. ⚠️ **Con su límite medido en el mismo pase: trunca los listados largos** (ILIAS
+cortó en `LegalDocuments`), así que sirve para **hallar** y un negativo suyo necesita el tramo
+declarado.
+
+🔴 **`P274` retira una clase entera de negativo de esta base: en este canal un path de DIRECTORIO da
+404 SIEMPRE, exista o no.** Control: `public/ai` de Moodle **404** y `public/ai/provider` **404** —los
+dos **existen**— contra `public/ai/provider/openai/version.php` **200**. Este pase cometió ese error en
+su primer intento sobre Chamilo e ILIAS y lo **retiró antes de publicar**. 🔴 **Y `P270` por tercera
+vez: `OpenAi.php` → 404, `OpenAiProvider.php` → 200.**
+
+🟢 **Y el pase trae una corrección sobre sí mismo que vale más que un hallazgo: la ejecución VOLVIÓ.**
+Los pases 58, 67, 79, 80, 81, 84, 86, 89, 90 y 91 registran `ejecución NEGADA`; este pase **corrió el
+árbol entero: 41/41 suites verdes** (39 Python + 2 shell, cero fallos), y el linter `P239`/`P240`
+sobre los **ocho** archivos de contenido da **`total 0`** —cero encabezados compilados como dato, cero
+tablas de región incompletas—. 🟢 **Lo primero que se gastó la ejecución recuperada fue en REPLICAR
+la medición de este pase: `sweep_provider_dir.sh` se corrió y sus 8 refs coinciden EXACTO con el bucle
+manual (`0,0,5,5,6,6,6,6`), con la demostración de `P274` en la misma corrida.** Segunda cifra de esta
+base confirmada por segunda mano.
+
+🔵 **Canal:** `raw.githubusercontent.com` **DISCRIMINA** en los 5 repos y es **DETERMINISTA** (20/20
+en 5 repeticiones de 4 pares). Instrumento:
+[`compose/code/p273-platform-provider-dir/`](../compose/code/p273-platform-provider-dir/).
+Ver tendencias **712**–**719**.
+
 ## 2026-10-04 — pase 91: cero altas de agente por tercera vez, y el veredicto de plataforma del pase anterior se cae al pedirle una REF
 
 🔴 **Cero altas en `agents/top.md` (sigue en 94 filas), tercer pase consecutivo, y se declara en vez
