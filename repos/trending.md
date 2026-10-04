@@ -8,6 +8,51 @@ updated: 2026-10-04
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 
+## 2026-10-04 — pase 101: GitHub trending vuelve vacío por TRIGÉSIMA vez, y el canal útil fue otra vez el de mercado
+
+🔴 **El barrido obligatorio (`github trending education AI 2026`) no devolvió ninguna pieza de la
+industria educativa, por trigésima vez consecutiva.** Lo que devolvió, registrado para que el
+próximo pase no lo descubra como novedad:
+
+| Qué devolvió el canal de trending | Es de la industria? |
+|---|---|
+| `anthropics/claude-code` · `jamwithai/production-agentic-rag-course` | 🔴 no — herramienta y curso genéricos |
+| `ai-engineering-from-scratch` · `LLMs-from-scratch` · `ultralytics` | 🔴 no — **las dos primeras ya están en este archivo desde el pase 1** |
+| `kouweizhu/agents-radar` (issues #206, #328) · `caramaschiHG/awesome-ai-agents-2026` | 🔴 no — agregadores, no piezas |
+| cursos de DeepLearning.AI, HuggingFace, LangGraph Academy, Anthropic Cookbook | 🔴 no — material de formación **sobre** AI, no **para** educación |
+
+🔵 **Treinta pases es una propiedad del canal, no una racha de mala suerte: el *trending* de GitHub
+mide velocidad de estrellas sobre el agregado, y una pieza de una vertical educativa nunca compite
+ahí.** El rendimiento de esta base, pase tras pase, está en el **eje rotado** y en el **barrido de
+mercado**, no acá. Se mantiene el barrido porque el encargo lo ordena y porque su **cero es un dato**,
+pero el presupuesto de descubrimiento ya no se gasta esperando que rinda.
+
+🟢 **El canal que SÍ eligió el eje este pase fue el de mercado**, por segundo pase consecutivo: la
+tendencia de 2026 es el corrimiento *«away from generic AI tools toward platforms purpose-built for
+education»*, y en Norteamérica **Oklahoma y Maryland exigen supervisión humana y prohíben que la AI
+decida sobre un alumno**. De ahí salió la capa de **observación de aula**, que esta base no tenía, y
+las **3 altas fundacionales** del pase (ver `repos/foundations.md`).
+
+### 🟢 El dato plano del *upstream* que esta base ya tenía, para no dejar hueco en la serie
+
+| Repo | Lo que esta base publicaba | Medido hoy (`package.json` por `raw`) |
+|---|---|---|
+| `THU-MAIC/OpenMAIC` | `v1.1.2` del 2026-09-28, MIT | 🟢 **`1.2.0-rc.1`**, `license: MIT` |
+
+🔴 **Y el fork que la prensa linkea, medido al lado:** `wwyw4842-dot/OpenMAIC` está en **`0.2.1`** con
+**`AGPL-3.0`** en payload **y** en manifiesto — **un *minor* antes del relicenciamiento AGPL→MIT de
+v0.3.0 (2026-06-28)**. Ver **`P316`** en `compose/patterns.md`.
+
+### 🔴 Dos candidatas del canal secundario dan 404 en el único canal vivo
+
+`Manikandan-777/elearning-engagement-study` y
+`anupampatil44/Computer-Vision-System-for-Gauging-Student-Attentiveness-in-Online-Classes` dan
+**404** en `HEAD`, `main`, `master`, `Main` y `dev`. **La primera venía presentada por el buscador
+como existente Y como MIT.** 🔵 **Una 404 no es un hallazgo, y una licencia atribuida por el canal
+secundario a un repo que no resuelve es la forma más pura del dato falso con forma de dato bueno.**
+
+---
+
 ## 2026-10-04 — pase 100: GitHub trending vuelve vacío por VIGESIMONOVENA vez, y el canal que eligió el eje fue el de MERCADO
 
 🔬 **Canal declarado primero (`P247`), medido este pase.** `github.com/<org>/<repo>` → 🔴 **`403`** ·

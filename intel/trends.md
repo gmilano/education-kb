@@ -7,6 +7,7 @@ updated: 2026-10-04
 # 📡 Tendencias — education
 
 > Ventana de investigación: septiembre 2026. Verificado 2026-09-30; el pase 11, el 2026-10-01.
+> **Pase 101 del 2026-10-04:** 🟢 **Trece tendencias nuevas, numeradas 797–809** (el pase 100 cerró en 796). 🔴 **La que manda es sobre el control compartido y la encontró un payload de un ALTA, no una fixture: `commercial_use_ok` devolvía uso comercial PERMITIDO para `CC-BY-NC-4.0`, una familia cuyo NOMBRE dice NonCommercial.** 🔴 **797–799: dos defectos distintos en la misma rama — el ORDEN entre atributos ORTOGONALES perdía el `NC` de un `CC BY-NC-SA`, y la compuerta de `P250` tenía DETRÁS cuatro familias que no son OSI, así que se abría sobre justo las que existe para atrapar.** 🔵 **800: y la dirección del daño es la peor de las dos — `P308` perdía permiso sobre un texto permisivo (cuesta una oportunidad); esto INVENTA permiso sobre un texto que lo prohíbe en su propio nombre (cuesta el entregable).** 🟢 **802: `P237` CERRADO, y el orden importó: primero se hizo a la librería un superconjunto, después se rewirearon las cuatro copias — que es la condición que el pase 100 había declarado y que convertía al rewiring obvio en una pérdida de tres familias.** 🔴 **803: el rewiring rompió el control de `p206`, porque extraía la función del TEXTO del archivo con `sed` en vez de medir su comportamiento.** 🔴 **805: la licencia tiene un eje de CAPA — permisiva en el código y no comercial en los datos — y esta base la trataba como una respuesta por repo.** 🔴 **806: la concesión puede vivir en el README sin archivo de licencia, y el canal secundario la leyó de un BADGE de shields.io.** 🔴 **807: la prensa de industria linkea un fork AGPL congelado del repo MIT que esta base ya tiene.** 🔴 **809: el canal regulatorio no se degrada hacia el silencio sino hacia la CONFIANZA — sexta reproducción del AI Act, ahora con una fecha de entrada en vigor falsa y precisa.** Ver `compose/code/p312-nc-gate-inversion/` (**21/21**) y `lib/test_license_family.sh` (**106/106**).
 > **Pase 100 del 2026-10-04:** 🟢 **Trece tendencias nuevas, numeradas 784–796** (el pase 99 cerró en 783). 🔴 **La que manda es sobre esta base y la encontró el propio pase antes de publicar: casi anuncia como capa NUEVA una capa que tiene desde el pase 14.** 🔴 **784–786: la acción pre-registrada del pase 99 está CONFIRMADA —3 de 18 anclas eran frase cruda— y el daño del Unlicense es peor que el de `P304`: no pierde la familia en `UNCLASSIFIED`, INVIERTE el veredicto comercial a `NONCOMMERCIAL-NOT-OSI` sobre el texto más permisivo que existe, porque la compuerta de `P250` está condicionada a «familia identificada» y al perderse la familia se ABRE.** 🔴 **787: y el control negativo de la suite falló sobre un ancla que NO es frase — una cuenta de LÍNEAS no es una propiedad del documento, es una propiedad de dónde caen sus saltos, y eso perdía la AGPL que `P288` instaló (`P171` por tercera vez).** 🟢 **789: fragilidad PROBADA no es defecto DISPARANDO: 0 de 18, y el reparto queda sin extrapolar.** 🔴 **791–792: `P311` — todos los controles de esta base auditan una afirmación que el pase HACE, y la de que un alta es NUEVA es implícita; lo implícito no lo audita nada.** 🟢 **793: el eje que rindió lo eligió el cuarto barrido obligatorio, el de MERCADO, que veintiocho pases leyeron como color de fondo.** 🔵 **796: y la pieza que más valor trae tiene la misma postura de método que esta base — invariantes falsables que VETAN.** Ver `compose/code/p308-phrase-anchor-sweep/` (**100/100**) y `compose/code/p311-duplicate-alta-gate/` (**11/11**).
 > **Pase 97 del 2026-10-04:** 🟢 **Nueve tendencias nuevas, numeradas 753–761** (el pase 96 cerró en 752). 🔴 **La que manda es la misma forma de defecto en DOS planos a la vez, y los dos son de esta base: lo que se construye y no se CONECTA no existe.** 🔴 **753: el pase 96 diagnosticó que el barrido manifiesto-consciente es ciego a Java/Maven (tendencia 750), escribió el lector correcto —`p289`, 11/11— y NO lo conectó: medido hoy, `PARSERS` seguía con cinco nombres y NADA fuera de `p289/` lo referenciaba, así que el hueco seguía abierto justo donde se producen los veredictos.** 🔴 **754: y el cableado OBVIO habría publicado una respuesta nueva y equivocada — con `artifactId` como identidad única, `kuali/kc` y `sakaiproject/sakai` salen `FOREIGN` siendo PROPIOS (2 de 6), y el peor es el de la licencia más consecuente del inventario (AGPL-3.0 §13 sobre un ERP universitario entregado como SaaS).** 🟢 **755: la identidad de un pom es el `groupId`, que es un namespace reverse-DNS que CODIFICA a la organización (`org.kuali.coeus` en `kuali/kc`) — y `ownership()` descartaba el segmento de organización del slug, que era el único que podía resolverlo.** 🟢 **757: con el cableado puesto, dos canales INDEPENDIENTES concuerdan — la declaración del manifiesto contra el payload del archivo de licencia: 6 de 6 `OWN`, 4 acuerdos exactos, 1 de familia (DSpace) y 0 contradicciones.** 🔴 **759: y en el plano de la prosa, CATORCE tendencias anunciadas y nunca escritas (706–711 del pase 91, 745–752 del pase 96), con el agravante de que el control que existe para atraparlas es CIEGO a la forma con que esta base las anuncia.** 🟢 **Las 745–752 quedan RECUPERADAS en este pase (su contenido existía en la nota de cabecera del 96); las 706–711 se declaran IRRECUPERABLES —ningún commit de la historia las definió— y no se inventan.** Ver `compose/code/p294-pom-in-production/` (**27/27**) y `compose/code/trend-backlink-audit/` (**31/31**).
 > **Pase 96 del 2026-10-04:** 🟢 **Ocho tendencias nuevas, numeradas 745–752** (el pase 95 cerró en 744). 🔴 **745: el CONTROL COMPARTIDO que `P237` creó para que la corrección GPL/AGPL no tuviera que recordarse devolvía `GPL-3.0` para una AGPL-3.0 real — su rama AGPL es un glob de `case`, SENSIBLE A LA CAJA, mientras la rama GPL de abajo es `grep -qi`, insensible: un AGPL *reflowed* sin título en mayúsculas cae por la primera y la segunda lo atrapa.** 🔴 **746: y lo que lo atrapa es el PREÁMBULO DE LA PROPIA AGPL, que explica en qué se diferencia de la GPL («*The GNU General Public License permits … access it on a server*») — o sea que `P171` («clasificá por bloque de título, no por el cuerpo») se cumplió y NO alcanzó, porque el bloque de título de la AGPL nombra a la GPL.** 🔴 **747: `P126` punto 2, otra vez y sobre el control compartido mismo: las 41 aserciones pasaban y ninguna ejercitaba el caso, porque TODAS las fixtures AGPL de la suite traen el título canónico en mayúsculas — el control nació sin el caso que lo rompe, y la regla que lo exigía está escrita en el README de esta base desde el pase 56.** 🟢 **748: el arreglo correcto resultó MÁS ANGOSTO que el obvio — volver insensible la rama de título habría clasificado como AGPL la fixture GPL-3.0 de la propia suite (que incluye su §13); el ancla que sirve es la definición de la sección 0, y necesita las palabras `refers to` porque la §13 de la GPL dice «*under*».** 🔴 **749: la licencia de un consorcio es por REPO, no por organización — Kuali es `ECL-2.0` en `rice`, `AGPL-3.0` en `kfs` y `AGPL-3.0` en `kc`, y Wikipedia, linux.com y la ayuda de KFS en tres universidades dicen «ECL 2.0» para todo: aciertan en uno de tres.** 🔴 **750: el barrido manifiesto-consciente de esta base está CIEGO a la capa de plataforma que esta vertical tiene — `MANIFESTS` lista Python/JS/PHP/Rust y NO `pom.xml`, mientras Kuali, Sakai, TAO, OpenEMIS y SEB Server son Java/Maven; la tasa de `P279` ahí no es 0 ni alta, es NO MEDIBLE con el instrumento que el pase 95 pre-registró.** 🔵 **751: el corte regulatorio que esta base no tenía INVIERTE su propia prioridad — el Anexo III (que nombra educación) quedó diferido a `2027-12-02` por el Digital Omnibus aprobado en firme el `2026-06-29`, pero el ARTÍCULO 50 no se difirió: vigente desde `2026-08-02`, con la gracia de marcado venciendo el `2026-12-02`; lo que apremia es el art. 50, no el alto riesgo, y eso valida por una vía no buscada la familia `aiact-50-2-*` de esta base.** 🔴 **752: y el canal secundario sigue publicando la versión SUPERADA —los barridos de HOY de North America y EMEA devolvieron «*full effect in August 2026*»—, así que esta corrección hay que re-verificarla contra fuente legal y no contra prensa de industria: es `P281` en el eje regulatorio.** 🔵 **El eje que cruza las ocho, y conviene decirlo: cinco de las ocho son sobre el INSTRUMENTO y tres sobre el mundo. Es el mismo diagnóstico que el pase 94 dejó —el cuello de botella de esta base ya no es encontrar repos, es no publicar mal los que tiene— con una vuelta de tuerca: esta vez el defecto estaba en el control que se había creado precisamente para que ese tipo de defecto no volviera.** ⚠️ **Y una limitación del pase, declarada en vez de rellenada: la acción pre-registrada del pase 95 NO se corrió —el entorno niega enumerar destinos en lote (`[Exfil Scouting]`, 2 intentos, 2 vías)— así que el reparto poblacional del defecto 745 queda SIN MEDIR, y `P286` prohíbe estimarlo desde el único control positivo que hay.** Ver `compose/code/p288-agpl-casefold/` (**9/9**) y `compose/code/p289-maven-manifest/` (**11/11**).
@@ -113,6 +114,167 @@ updated: 2026-10-04
 > (tendencia 29), se abre el **gap 20** y se registran dos advertencias de verificación: los agregadores de estrellas
 > están mal por ~2× y **un 403 de `curl` no es un 404**. Ver la nota de método del pase 12.
 > **Pase 11:** el Digital Omnibus es derecho vigente (tendencia 25), aparece la capa predictiva y está vacía (tendencia 26), y se corrige un error de método de diez pasadas sobre licencias permisivas (tendencia 27).
+
+## 🟢 Tendencias 797–809 — pase 101 del 2026-10-04: la compuerta se abría sobre las familias que existe para atrapar
+
+### 🔴 797 — El orden de dos ramas decidía la respuesta, entre atributos que son ORTOGONALES
+
+La rama de Creative Commons de `lib/license_family.sh` se escribió en el pase 82 como una cadena de
+`elif`, con `ShareAlike` **antes** de `NonCommercial`. Las cláusulas de CC **se combinan** (BY, NC,
+SA, ND), así que la primera que matcheaba **retornaba** y las demás no se leían nunca:
+
+| payload | antes | después |
+|---|---|---|
+| `CC BY-NC-SA 4.0` | 🔴 `CC-BY-SA-4.0` — **el `NC` se perdía** | 🟢 `CC-BY-NC-SA-4.0` |
+| `CC BY-NC-ND 4.0` | 🔴 `CC-BY-NC-4.0` — el `ND` se perdía | 🟢 `CC-BY-NC-ND-4.0` |
+
+🔵 **La forma del defecto, que es lo transportable: una cadena de `elif` es una elección EXCLUYENTE,
+y se usó para describir atributos COMBINABLES.** El arreglo no es reordenar —reordenar arreglaba el
+espécimen y dejaba `CC BY-NC-ND` roto— sino **componer** la identidad: `CC-BY` + `-NC` + `-SA` + `-ND`.
+
+### 🔴 798 — Y el grave: la compuerta de `P250` abría sobre `CC-BY-NC-4.0`
+
+La premisa de la compuerta está escrita en la librería desde el pase 82 y **es correcta**: *«una
+familia OSI identificada permite uso comercial POR DEFINICIÓN, y por eso nunca se le hace
+token-match»*. 🔴 **El problema es que el MISMO pase que la escribió puso detrás de ella cuatro
+familias que no son OSI: la rama CC entera.**
+
+🔴 **Resultado medido:** `CC-BY-NC-4.0` —**una familia cuyo nombre dice NonCommercial**— volvía
+**uso comercial PERMITIDO**, porque la compuerta cortocircuitaba el token-match **antes** de que
+alguien leyera la palabra `NonCommercial` del payload. Lo mismo `CC-BY-NC-SA` y `CC-BY-NC-ND`.
+
+### 🔵 799 — El arreglo que sirve NOMBRA el conjunto, en vez de confiar en «identificada»
+
+«Identificada» era un *proxy* de «es OSI», y dejó de serlo el día que entró una familia no-OSI al
+catálogo. Ahora una familia no-OSI con restricción no comercial responde `PROHIBIDO` **sin consultar
+el payload**, y toda **otra** familia no-OSI (`CC-BY`, `CC-BY-SA`, `CC0`, `BUSL`, `Elastic`,
+`PolyForm`) **cae al token-match** en vez de pasar por la compuerta — que es exactamente lo que la
+premisa permite. 🟢 **Y los positivos quedan afirmados en la suite: `CC-BY-SA`, `CC-BY`, MIT,
+Apache-2.0 y AGPL-3.0 siguen `ALLOWED`.**
+
+### 🔵 800 — La dirección del daño importa, y ésta es la peor de las dos
+
+| Defecto | Dirección | Qué cuesta |
+|---|---|---|
+| `P308` (pase 100) | **pierde** permiso sobre un texto permisivo | una **oportunidad**: se descarta una pieza usable |
+| **`P312`** (este pase) | **inventa** permiso sobre un texto que lo prohíbe **en su nombre** | el **entregable**: se entrega algo que no se podía entregar |
+
+🔵 **Un instrumento que se equivoca hacia la cautela cuesta trabajo; uno que se equivoca hacia el
+permiso cuesta el cliente.** Esta base venía midiendo *si* el clasificador acierta; esta tendencia
+agrega que hay que medir **hacia qué lado** falla.
+
+### 🔴 801 — La suite llegó a 79/79 con esto roto, y la razón es `P126` punto 2, otra vez
+
+**Ninguna de las 79 aserciones le pasaba un payload de Creative Commons.** El control estaba
+completo en el eje que le importaba (GPL/AGPL, reflujo, familias OSI) y **vacío** en el eje donde
+podía fallar. 🔵 **Es la tercera vez que esta base paga la misma regla, y conviene decir la forma
+general: una suite crece hacia donde el pase anterior tuvo miedo, no hacia donde el instrumento es
+débil.** Las 23 aserciones nuevas van todas al eje que estaba vacío. **79/79 → 106/106.**
+
+### 🟢 802 — `P237` CERRADO, y el ORDEN de los dos pasos era la parte difícil
+
+El pase 100 dejó pre-registrado el rewiring de `p170`, `p206`, `p211` y `p230` **y declaró por qué no
+lo hacía**: la librería **no era un superconjunto** de las copias — `BUSL`, `Elastic` y `PolyForm`
+vivían sólo en `p170`, y adoptarla habría **perdido tres familias**.
+
+🟢 **Este pase hizo las dos cosas en ese orden:** primero las tres familias entraron a la librería
+**con sus seis controles negativos**, después se rewirearon las cuatro copias. 🔵 **La tendencia no
+es «se cerró una deuda»: es que una deuda declarada CON SU CONDICIÓN se puede cerrar un pase después
+sin volver a razonarla, y una declarada sin condición se re-agenda indefinidamente** (que es lo que
+el pase 88 nombró sobre otro eje).
+
+### 🔴 803 — El rewiring rompió el control de `p206`, y el defecto no es del rewiring
+
+`p206/test_family.py` extraía el cuerpo de `family_of` **del propio `sweep_erp.sh`** con
+`sed -n "/^family_of() {/,/^}/p"`. Al mudarse la función a la librería, el `sed` no encontró nada y
+las tres aserciones de `D2` —**las que guardan `P171`, el par GPL/AGPL**— devolvieron cadena
+**vacía** y fallaron.
+
+🔵 **Un control escrito contra el LAYOUT de un archivo se rompe con la consolidación que `P237`
+pide, justo cuando más falta hace que siga midiendo.** Reapuntado a la librería: **5/5**, fixtures
+intactas. 🔴 **Y el agravante: el modo de falla era cadena vacía, no un error** — un arnés que
+compara `""` contra `"GPL-3.0"` falla ruidosamente por suerte, y si hubiera comparado `""` contra
+`""` habría pasado en verde.
+
+### 🔴 804 — `p230` arrastraba un defecto YA PAGADO por esta base, y el rewiring lo cobró
+
+Las ramas de `p230/measure.sh` eran globs de `case`, **sensibles a la caja** — que es `P288`, el
+defecto que clasificaba una AGPL-3.0 *reflowed* como GPL-3.0. **Medido sobre la copia vieja antes de
+tocarla:**
+
+```
+copia vieja, "mit license" en minúsculas  ->  OTRO    🔴
+copia vieja, "MIT License" canónico       ->  MIT
+rewireada, los dos casos                  ->  MIT     🟢
+```
+
+🔵 **Una corrección que vive en cinco copias está corregida en las que alguien se acordó de tocar.**
+`P288` se instaló en el pase 96 en la librería; `p230` siguió once pases con el defecto porque nadie
+volvió a mirarla. **Es el argumento de `P237` medido en un caso concreto, no en abstracto.**
+
+### 🔴 805 — La licencia tiene un eje de CAPA: permisiva en el código, NO COMERCIAL en los datos
+
+`devissaputra/classroom_discourse_intelligence` (alta de este pase) trae `LICENSE` **MIT** y su
+`data/README.md` declara **`CC BY-NC-SA 4.0`, non-commercial**, sin redistribuir el corpus.
+
+🔵 **Esta base venía preguntando *«¿cuál es la licencia de este repo?»* como si tuviera una sola
+respuesta.** Para una pieza de ML eso es falso por construcción: **el código, el modelo y el corpus
+son tres artefactos con tres regímenes posibles**, y el que decide si se puede entregar suele ser el
+tercero. **La consecuencia operativa: se cita el método y la línea base, y el modelo se re-entrena
+sobre datos del cliente.**
+
+### 🔴 806 — La concesión puede vivir en el README, y el canal secundario la leyó de un BADGE
+
+`VedantGohel/Student-Eye` da **404 en 6 nombres de archivo de licencia** y trae el **texto íntegro de
+la MIT** en su sección `## 📜 License`, con titular `Copyright (c) 2026 Vedant Gohel`. 🔴 **Un
+barrido de payload lo habría publicado como SIN CESIÓN: un falso negativo que SUPRIME trabajo real**,
+que es la dirección contraria —y más costosa para esta base— del error que `P310` nombró.
+
+⚠️ **Y el canal secundario acertó por la razón equivocada:** reportó *«MIT License (copyright 2026)»*
+leyendo el **badge de shields.io** que el README trae arriba. 🔵 **Un badge es una imagen con un
+texto adentro: no concede nada.** Que acá coincidiera con el texto real **es suerte, no método.**
+
+### 🔴 807 — La prensa de industria linkea un fork AGPL congelado del repo MIT que esta base ya tiene
+
+| | `LICENSE` | `package.json` | Versión |
+|---|---|---|---|
+| `THU-MAIC/OpenMAIC` (upstream, en la tabla desde el pase 1) | **MIT**, 1.066 B | `MIT` | **1.2.0-rc.1** |
+| `wwyw4842-dot/OpenMAIC` (**el que linkea la prensa**) | 🔴 **AGPL-3.0**, 34.524 B | 🔴 `AGPL-3.0` | 🔴 **0.2.1** |
+
+`0.2.1` cae **un *minor* antes** del relicenciamiento **AGPL→MIT de v0.3.0 (2026-06-28)** que esta
+base ya tenía fechado. 🔵 **El riesgo no es una fila mal: la fila está bien. Es que el SLUG que el
+cliente trae no sea el slug que la fila mide** — y lo trae del artículo, no del repositorio. **La
+pregunta operativa que esto agrega a una propuesta es de un renglón: «¿de qué árbol partimos?», con
+el payload medido antes de estimar.**
+
+### 🟢 808 — El eje lo volvió a elegir el barrido de MERCADO, y el `grep` de control probó el hueco antes de gastarlo
+
+Segundo pase consecutivo en que el cuarto barrido del encargo —el que veintiocho pases leyeron como
+color de fondo— **es el que decide dónde buscar**: el corrimiento hacia plataformas que **embuten la
+pedagogía en el sistema**, más **Oklahoma y Maryland prohibiendo que la AI decida sobre un alumno**,
+señalan una capa que **no es un tutor**: observar y fundamentar.
+
+🟢 **Y antes de gastar el barrido se corrió un `grep` de control sobre los ocho archivos:**
+`classroom observation` / `observación de aula` → **cero ocurrencias**, contra `integridad
+académica`, `OneRoster`, `dropout` y `AI literacy`, que **ya estaban**. 🔵 **Es `P311` aplicado un
+paso antes: el gate pregunta «¿esta PIEZA ya está?» y esto pregunta «¿esta CAPA ya está?»** — más
+barato que medir catorce candidatas para descubrir que la capa estaba publicada, que es exactamente
+lo que le pasó al pase 100.
+
+### 🔴 809 — El canal regulatorio no se degrada hacia el silencio: se degrada hacia la CONFIANZA
+
+Sexta reproducción consecutiva de la versión **superada** del AI Act, y esta vez con un **error
+nuevo encima**: el barrido de EMEA afirma que *«the AI Act entered into force on 31 July 2026»* —
+entró en vigor en **2024**, y lo de 2026 son **tramos de aplicación**.
+
+🔵 **Las cinco anteriores erraban la fecha de aplicación del alto riesgo; ésta inventa una fecha de
+entrada en vigor, y la inventa PRECISA.** Un *«agosto de 2026»* vago invita a verificar; un
+*«31 de julio de 2026»* **pasa cualquier revisión que no vaya al reglamento**. 🔴 **Seis de seis
+dejan de ser error del canal y pasan a ser propiedad suya**, con una consecuencia que se escribe sin
+adornos: **el calendario regulatorio de una propuesta EMEA se sostiene contra fuente legal, nunca
+contra prensa de industria** (`P281`). ⚠️ **Y la cota de este pase, declarada: `arxiv.org` se suma a
+`openslr.org` y `huggingface.co` entre los hosts con egreso bloqueado, así que la verificación de
+primera mano NO está disponible y todo lo regional queda marcado 🔸 SIN VERIFICAR.**
 
 ## 🟢 Tendencias 784–796 — pase 100 del 2026-10-04: la predicción se confirma, y el pase se pilla redescubriendo una capa propia
 

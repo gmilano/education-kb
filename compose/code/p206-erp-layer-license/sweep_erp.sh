@@ -35,30 +35,19 @@ get() { # path -> body on stdout, 0 if HTTP 200
 }
 
 # Family from the license TEXT, never from a repo badge or a secondary source.
-family_of() {
-  # D2 (P171): the family is read from the TITLE BLOCK, never from the body.  GPL-3.0 sec. 13
-  # is literally headed "Use with the GNU Affero General Public License", so a body grep for
-  # AGPL classifies every GPL-3.0 text as AGPL.  Only the first 40 lines are consulted.
-  local t
-  t=$(printf '%s' "$1" | head -40 | tr -s '[:space:]' ' ')
-  case "$t" in
-    *"GNU AFFERO GENERAL PUBLIC LICENSE"*)  echo "AGPL-3.0"; return ;;
-    *"GNU LESSER GENERAL PUBLIC LICENSE"*)  echo "LGPL"; return ;;
-  esac
-  if printf '%s' "$t" | grep -qi 'GNU GENERAL PUBLIC LICENSE'; then
-     printf '%s' "$t" | grep -qi 'Version 3' && echo "GPL-3.0" || echo "GPL-2.0"; return; fi
-  printf '%s' "$t" | grep -qi 'Apache License' && { echo "Apache-2.0"; return; }
-  printf '%s' "$t" | grep -qi 'MIT License' && { echo "MIT"; return; }
-  printf '%s' "$1" | grep -qi 'Permission is hereby granted, free of charge' && { echo "MIT"; return; }
-  # P304 (pase 99): hueco ACOTADO Y DENTRO DE LA ORACION entre los dos tokens -- la identidad
-  # de BSD es una secuencia ORDENADA de palabras, no una frase contigua.  Especimen real:
-  # instructure/QTIMigrationTool inserta «of this software» y «(where applicable)».  El arreglo
-  # canonico vive en lib/license_family.sh; esta copia inline lo replica y el rewiring a la
-  # libreria compartida queda PRE-REGISTRADO (P237 sigue abierto para este archivo).
-  printf '%s' "$1" | tr -s '[:space:]' ' ' | grep -qiE 'redistribution and use[^.]{0,40}in source and binary forms' && { echo "BSD"; return; }
-  printf '%s' "$t" | grep -qi 'Mozilla Public License' && { echo "MPL-2.0"; return; }
-  echo "UNCLASSIFIED"
-}
+# P237 CERRADO en el pase 101 (P312).  Esta copia inline se REWIREO a la libreria
+# compartida.  La razon declarada en el pase 100 para no hacerlo era concreta y correcta
+# --«el control compartido todavia no es un superconjunto de las copias» (BUSL, Elastic y
+# PolyForm vivian SOLO aca)-- asi que el pase 101 primero las agrego a
+# `lib/license_family.sh` con sus controles negativos (6 aserciones nuevas) y DESPUES
+# rewireo.  Parchar la copia era el antipatron que P237 existe para nombrar.
+#
+# El vocabulario de esta copia y el de la libreria COINCIDEN exactamente (AGPL-3.0, LGPL,
+# GPL-3.0, GPL-2.0, Apache-2.0, MIT, BSD, MPL-2.0, UNCLASSIFIED), asi que no hace falta
+# traduccion: los TSV ya publicados siguen siendo comparables.  Y la copia GANA lo que la
+# libreria tiene y ella no: el eje de uso comercial (P250/P312), 0BSD, ISC, ECL-2.0,
+# Unlicense, la rama CC compuesta y las tres familias no-OSI.
+. "$(dirname "$0")/../lib/license_family.sh"
 
 for f in $NAMES; do
   body=$(get "$f") || continue

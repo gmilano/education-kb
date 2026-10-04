@@ -1,0 +1,14 @@
+wwyw4842-dot/OpenMAIC
+stanfordnlp/edu-convokit
+EduNLP/edu-convokit
+EduNLP/EduCoder
+devissaputra/classroom_discourse_intelligence
+VedantGohel/Student-Eye
+Manikandan-777/elearning-engagement-study
+joaopdmol/Automated_Classroom_Attendance
+yptheangel/attention-monitor
+anupampatil44/Computer-Vision-System-for-Gauging-Student-Attentiveness-in-Online-Classes
+abdulrhmanG-alahmadi/AI-Classroom-Engagement-Analysis
+liviaellen/engagementdetector
+Pvpit926/classmind-ai
+KayvanShah1/VirtuTA

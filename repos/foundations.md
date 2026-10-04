@@ -8,6 +8,7 @@ updated: 2026-10-04
 
 > Bases sobre las cuales construir. Verificado repo por repo vía WebFetch el 2026-09-30 (capas del pase 10, el 2026-10-01).
 > Leer la columna **Licencia** antes de proponer: media KB de educación es GPL/AGPL, no permisiva.
+> **Pase 101 del 2026-10-04:** 🟢 **3 altas fundacionales, y son una CAPA que este estante no tenía: el análisis del DISCURSO de aula — la librería, la herramienta de anotación y el modelo de referencia con su línea base.** `rosewang2008/edu-convokit` (**MIT**, 1.069 B, `Rose E. Wang` 2023, NAACL 2024) es el pipeline de tres módulos —preprocesar, anotar, analizar— sobre transcripciones de aula y tutoría; `EduNLP/EduCoder` (**MIT**, 1.068 B, `EduNLP Lab` 2026, ACL 2026) es la anotación en EQUIPO con video sincronizado y comparación humano–LLM; `devissaputra/classroom_discourse_intelligence` (**MIT** en código) trae la línea base medida (**macro-F1 0,5198** contra **0,1152** de mayoría sobre **175.129** enunciados docentes). 🔴 **Y la tercera es el espécimen de `P315`: es permisiva en el CÓDIGO y `CC BY-NC-SA 4.0` —NO COMERCIAL— en los DATOS, así que el método y la línea base se entregan y el modelo entrenado sobre ese corpus NO.** 🟢 **`P253`/`P306` otra vez, y esta vez el registro descartó a los dos candidatos en vez de elegir uno: el barrido devolvió `stanfordnlp/edu-convokit` (URL) y `EduNLP/edu-convokit` (título del mismo resultado), los dos sirven el payload, y `pypi.org` declara `Source: github.com/rosewang2008/edu-convokit` — un TERCERO.** 🔴 **El hallazgo de instrumento salió de medir el payload de datos de la tercera: la compuerta de uso comercial de esta base devolvía PERMITIDO para `CC-BY-NC-4.0`, una familia cuyo NOMBRE dice NonCommercial** (`P312`). 🟢 **`lib/license_family.sh` 79/79 → 106/106; `P237` CERRADO —las cuatro copias inline rewireadas, y primero se hizo a la librería un superconjunto con `BUSL`/`Elastic`/`PolyForm` como el pase 100 exigía—; 52 suites pasan, 0 fallan.** Ver **`P312`**–**`P316`**.
 > **Pase 100 del 2026-10-04:** 🟢 **1 alta fundacional, y es la pieza que COMPLETA una capa que este archivo tenía a medias desde el pase 14: el MODELO de evaluación de pronunciación.** `YuanGongND/gopt` (**BSD-3-Clause**, `LICENSE` 1.517 B, titular `Yuan Gong`, 2022) es GOPT —ICASSP 2022, MIT & PAII—, el primer modelo que puntúa **múltiples aspectos** (exactitud, fluidez, prosodia) en **múltiples granularidades** (fonema, palabra, oración) a la vez, y es **SOTA sobre `speechocean762`**, que es justo el corpus que este archivo ya inventariaba. 🔴 **Pero el hallazgo del pase es contra esta base, y este archivo es la prueba: el pase estuvo a punto de publicar la capa de habla como NUEVA, y la «Capa de habla y lectura oral» está acá desde el pase 14** con `OpenPronounce`, `kaldi` y `speechocean762` — **incluido el hallazgo de que el corpus no trae archivo de licencia**, que el pase iba a anunciar. 🟢 **`P311`: ningún control de esta base preguntaba «¿esto ya está acá?» —todos auditan una afirmación que el pase HACE, y la de que un alta es NUEVA es implícita— así que el gate quedó escrito y corrido antes de publicar** (`p311`, **11/11**; 14 slugs → **5 ya publicados**, con archivo, línea y sección). 🔴 **La cadena permisiva de esta capa queda CERRADA como irresoluble desde acá, y es una corrección de alcance sobre el pase 14:** ese pase dejó *«pedir los términos a SpeechOcean por escrito»*, y este intentó la vía de **registro** con la que `P306` desempató `examplary/qti` vía npm — **`openslr.org` y `huggingface.co` dan los dos `000` por egreso bloqueado**. **Se puede construir el evaluador entero permisivo (`OpenPronounce` MIT + `gopt` BSD-3 + `kaldi` Apache-2.0) y NO se puede verificar la licencia del corpus contra el que todo el campo se mide.** 🔴 **Y `P308`: 3 de 18 anclas del control compartido eran frase cruda; la del Unlicense INVIERTE el veredicto comercial a `NONCOMMERCIAL-NOT-OSI`, y la ventana del bloque de título contaba LÍNEAS, lo que perdía la AGPL de `P288`.** 🟢 **`lib/license_family.sh` 62/62 → 79/79; 51 suites pasan, 0 fallan.** Ver **`P308`**–**`P311`**.
 > **Pase 99 del 2026-10-04:** 🟢 **7 altas fundacionales, y son DOS CAPAS que este estante no tenía: el ALMACÉN xAPI y la librería de ÍTEMS QTI.** El barrido obligatorio (`open source platform education ERP CRM MIT Apache`) devolvió por vigesimosexta vez el eje generalista (ERPNext/Frappe, Odoo, OFBiz, Huly, AureusERP) — **cero** piezas fundacionales educativas nuevas. 🟢 **Pero el EJE ROTADO que el pase 98 pre-registró sí rindió: 15 candidatas medidas → 9 licenciadas, 6 sin cesión**, y 7 de las 9 son repo fundacional. 🔵 **Lo que abren no es un tema nuevo sino la OTRA MITAD de dos temas que esta base tenía a medias: tenía el CLIENTE xAPI (`learnmcp-xapi`) y no el ALMACÉN; tenía REPRODUCTORES de ítems QTI (`qti3-item-player`, `pie-qti`) y no las librerías de GENERACIÓN y MIGRACIÓN.** 🔴 **`P304` — el ancla BSD del control compartido estaba escrita como FRASE CONTIGUA y perdía una familia PERMISIVA:** `instructure/QTIMigrationTool` es BSD-3-Clause real (University of Cambridge, 1.392 B) y volvía `UNCLASSIFIED`, porque su oración de concesión inserta *«of this software»* y *«(where applicable)»* dentro de la frase canónica. **Cuarto eje del mismo defecto** (`P171` cuerpo-vs-título, `P288` caja, `P299` palabra-vs-subcadena, `P304` frase-vs-tokens-ordenados). 🟢 **`lib/license_family.sh` 50/50 → 62/62** (3 controles negativos), **51 suites pasan, 0 fallan**. 🔴 **`P305` — `adlnet/xapi-lab` declara DOS familias en DOS payloads del mismo repo:** `LICENSE` dice **MIT** (titular `Tyler Mulligan`, 2015) y el `README` dice **Apache-2.0** (titular `Advanced Distributed Learning`, 2016) — **familia, titular y año discrepan a la vez**, y la obligación de atribución corre hacia una parte distinta según cuál gobierne. 🟢 **`P306` — `examplary/qti` ≡ `examplary-ai/qti`, byte-idénticos en 3 archivos, y el REGISTRO desempata:** `registry.npmjs.org/@examplary/qti` nombra `github.com/examplary/qti` como canónico y confirma `MIT` por un canal independiente del payload. Ver **`P304`**–**`P306`**.
 
@@ -105,6 +106,82 @@ corre ése antes de escribir uno a mano** (tendencia **313**). 🟢 **Y el `gafa
 > y 5 en `schemas12/`, y contar sólo el primero es lo que hizo invisible el segundo dialecto de SCORM (**P106**).
 > **Pase 36 del 2026-10-02:** 🔵 **este pase no agrega repos: le pone FECHA a los que ya están, y la fecha cambia tres recomendaciones.** Se midió la capa PHP de evaluación y telemetría en Packagist —el único registro de los tres que entrega descargas en este entorno (`api.npmjs.org` y `pypistats.org` dan **403 a CONNECT**)— y el resultado está en `repos/trending.md`. **Lo que hay que saber antes de proponer desde este archivo:** 🔴 **la pieza xAPI más descargada de esta base, `rusticisoftware/tincan` (Apache-2.0, 6.178 desc./mes, 863.777 totales), no publica desde el 2022-11-02**, y ⚠️ **el único MIT de esa capa, `php-xapi/client`, está parado desde el 2021-03-24** con 825 desc./mes. 🔵 **La lectura es que en xAPI/PHP lo permisivo está quieto y lo vivo es copyleft**, así que la receta de telemetría se sostiene en **Ralph (MIT)** + **`lrsql` (Apache-2.0)** + **`learnmcp-xapi` (MIT)** y no en la capa PHP. 🟢 **Del lado de evaluación, lo activo es `oat-sa/extension-tao-testqti`** (**885 versiones**, release del **2026-09-30**) **y sigue siendo GPL-2.0-only**, mientras **lo permisivo es lo nuevo**: `@longsightgroup/qti3-cli` (**MIT**, 41 releases desde el 2026-05-21, último **2026-10-01**) con **cero dependencias de terceros** — sus 4 dependencias son todas `@longsightgroup/*` pinneadas a la misma versión exacta. **Su manifiesto MCP completo de 20 tools está escrito en `compose/patterns.md` (P76).** 🔴 **Y una corrección de catálogo: `oat-sa/qti-sdk` devuelve 404 en Packagist porque es el nombre del REPO — su paquete es `qtism/qtism`** (GPL-2.0-only, 218.212 descargas totales, 315 versiones). **Nombre de repo y nombre de paquete son identificadores distintos, y confundirlos produce un 404 que parece una ausencia** — pasó igual con `1edtech/oneroster`, `imsglobal/lti-1-3-php-library` y `packbackbooks/lti-1-3-php-library`, los tres **404**, que se anotan como *«no verificado en Packagist bajo ese nombre»* y **no** como inexistentes. ⚠️ **Acción pendiente que el pase 37 tiene asignada: este archivo nunca pasó por el control de *slugs* distintos ni por el de *backlink*** — los dos que en `agents/top.md` encontraron **un duplicado** y **dos colisiones** este mismo pase.
 > **Pase 11 del 2026-10-01:** aparece una licencia que las diez pasadas anteriores filtraban sin saberlo — **ECL-2.0**, con la que licencia todo Apereo (Sakai, Opencast, OpenLRW). Es Apache-2.0 con el alcance de patentes acotado, aprobada por OSI y FSF, y **es apta para construir arriba**. Ver la capa de analítica institucional, abajo.
+
+## 🟢 Altas fundacionales: 3 — la capa de ANÁLISIS DEL DISCURSO de aula, completa de un golpe (pase 101 del 2026-10-04)
+
+**Canal:** sólo `raw.githubusercontent.com` (**200 con payload**); `github.com`, `api.github.com` y
+`codeload.github.com` dan **403**; `pypi.org` da **200** y **se usó para desempatar un canónico**;
+`arxiv.org` da **000**. Las estrellas **no son verificables** este pase y ninguna fila las lleva.
+
+### Capa de observación de aula y análisis del discurso — agregada en el pase 101 del 2026-10-04
+
+| Repo | Familia (payload) | Bytes | Titular | Capa | Región |
+|---|---|---|---|---|---|
+| [`rosewang2008/edu-convokit`](https://github.com/rosewang2008/edu-convokit) | **MIT** | 1.069 | `Rose E. Wang`, 2023 | **librería base**: preprocesar · anotar · analizar conversación educativa | **North America** (`P261`) |
+| [`EduNLP/EduCoder`](https://github.com/EduNLP/EduCoder) | **MIT** | 1.068 | `EduNLP Lab`, 2026 | **anotación en equipo** con video sincronizado y comparación humano–LLM | 🔴 sin región (`P261`) |
+| [`devissaputra/classroom_discourse_intelligence`](https://github.com/devissaputra/classroom_discourse_intelligence) | **MIT** (código) · 🔴 **CC BY-NC-SA 4.0** (datos) | 1.073 | `Devis W. Saputra`, 2026 | **modelo de referencia** de *talk moves* + línea base medida | 🔴 sin región (`P261`) |
+
+🔵 **Por qué las tres y no una: son los tres eslabones distintos de la misma capa**, y es la primera
+vez que este estante incorpora una capa con los tres puestos a la vez. La librería **procesa**, la
+herramienta de anotación **produce las etiquetas** y el tercer repo **dice cuánto rinde un modelo
+transparente sobre esas etiquetas** — con la cifra, no con una promesa: **macro-F1 0,5198** contra
+**0,1152** de la línea base de mayoría, sobre **565** grupos de transcripción definidos por contenido
+y **175.129** enunciados docentes etiquetados, con el **SHA-256** del archivo de entrada registrado
+en `results/research_metrics.json`.
+
+🟢 **Y el tercero trae una honestidad que conviene citar porque es rara y porque es vendible:** su
+propio README declara que *«talk-move occurrence is not teaching quality»*, que el texto **omite
+gesto, prosodia, contexto de aula e intención instruccional**, y que **el modelo no está validado
+para rankear docentes ni para evaluar a un alumno individual**. Esas tres frases son exactamente las
+que un cliente educativo necesita ver escritas antes de comprar observación automatizada.
+
+### 🔴 `P315` — la licencia tiene un eje de CAPA, y este estante lo trataba como una respuesta por repo
+
+El `data/README.md` de `classroom_discourse_intelligence`, leído de primera mano el 2026-10-04:
+
+> `CC BY-NC-SA 4.0.` **Non-commercial** `and ShareAlike restrictions apply. This repository does not`
+> `redistribute the source corpus.`
+
+| Capa del repo | Licencia | Qué se puede entregar |
+|---|---|---|
+| código (`LICENSE`, 1.073 B) | **MIT** ✅ | el pipeline, el *loader*, el método, la línea base |
+| datos (corpus TalkMoves) | 🔴 **CC BY-NC-SA 4.0** | 🔴 **nada en un entregable comercial**, y el repo **no lo redistribuye** |
+
+🔵 **La consecuencia práctica para una propuesta, que es por qué esto va en este archivo y no en una
+nota al pie:** se cita el **método** y se usa la **línea base como vara**, y el modelo se **re-entrena
+sobre datos del cliente**. El repo no es un componente que se despliega: es un **punto de partida
+metodológico con su número de referencia**.
+
+⚠️ **Y la cota, dicha entera:** el corpus es de matemática **K-12 de EE. UU.**, así que la línea base
+de 0,5198 es **de ese dominio y de ese idioma**. Transportarla a otro currículo o a español es una
+hipótesis, no un dato heredable. 🔴 **No se puede verificar el corpus en su fuente**:
+`huggingface.co/api/datasets` da **000** por egreso bloqueado, igual que `openslr.org` en el pase
+100. **Es la segunda capa consecutiva de este estante donde el CORPUS contra el que todo el campo se
+mide no se puede leer desde acá**, y conviene registrarlo como propiedad del entorno y no como
+accidente.
+
+### 🟢 `P253`/`P306` — el registro descartó a los DOS candidatos en vez de elegir uno
+
+| Slug | De dónde salió | Payload |
+|---|---|---|
+| `stanfordnlp/edu-convokit` | la **URL** del resultado del buscador | MIT, 1.068 B, `Rose E. Wang` |
+| `EduNLP/edu-convokit` | el **TÍTULO** del *mismo* resultado | MIT, 1.068 B, `Rose E. Wang` |
+| 🟢 `rosewang2008/edu-convokit` | **`pypi.org/pypi/edu-convokit`** → `Source:` | MIT, 1.069 B, `Rose E. Wang` |
+
+🔵 **Un solo resultado de buscador trajo dos slugs distintos en dos campos distintos de sí mismo**, y
+los dos sirven payload, así que el canal secundario no se puede usar ni para desempatar su propia
+contradicción. El registro (`v0.4.0`, `License :: OSI Approved :: MIT License`) nombra un **tercero**
+y además **confirma la familia por un canal independiente del payload**. Los otros dos quedan
+anotados como **espejos**, no como piezas.
+
+### 🟢 `P237` CERRADO, y en el orden que la deuda exigía
+
+El pase 100 dejó pre-registrado el rewiring de `p170`, `p206`, `p211` y `p230` **con su razón para no
+hacerlo**: la librería compartida **no era un superconjunto** de las copias — `BUSL`, `Elastic` y
+`PolyForm` vivían sólo en `p170`, y adoptarla habría **perdido tres familias**. 🟢 **Este pase hizo
+primero el superconjunto (con sus controles negativos) y después el rewiring de las cuatro.** El
+vocabulario publicado de cada instrumento se conserva, así que los TSV ya escritos de este estante
+siguen siendo comparables. Ver `compose/code/p312-nc-gate-inversion/` (**21/21**).
 
 ## 🟢 La capa de habla gana su MODELO — y el pase descubre que casi publica la capa entera de nuevo (pase 100 del 2026-10-04)
 

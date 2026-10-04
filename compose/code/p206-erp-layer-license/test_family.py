@@ -38,13 +38,24 @@ AGPL3_HEAD = """                    GNU AFFERO GENERAL PUBLIC LICENSE
  Copyright (C) 2007 Free Software Foundation, Inc. <http://fsf.org/>
 """
 
+LIB = HERE.parent / "lib" / "license_family.sh"
+
 def family_of(text: str) -> str:
-    """Call the shell function under test, so the test exercises the shipped code."""
-    script = f'source "{SWEEP}" 2>/dev/null; family_of "$1"'
-    # sweep_erp.sh runs on source; guard by giving it no slug and ignoring its exit.
+    """Call the shell function under test, so the test exercises the shipped code.
+
+    P312 (pase 101).  Este arnes EXTRAIA el cuerpo de `family_of` del propio `sweep_erp.sh`
+    con `sed -n "/^family_of() {/,/^}/p"`, o sea que estaba acoplado al TEXTO de la copia y
+    no a su COMPORTAMIENTO.  Cuando el pase 101 cerro P237 y rewireo la copia a
+    `lib/license_family.sh`, el `sed` dejo de encontrar la funcion y las tres aserciones de
+    D2 --las que guardan P171, el par GPL/AGPL-- devolvieron cadena VACIA y fallaron.
+
+    El defecto no es del rewiring: es que un control escrito contra el LAYOUT de un archivo
+    se rompe con la consolidacion que P237 pide, justo cuando mas hace falta que siga
+    midiendo.  Ahora apunta a la libreria, que es donde vive el comportamiento, y por eso
+    el control sobrevive al proximo movimiento de codigo.  Las fixtures no se tocaron.
+    """
     out = subprocess.run(["bash", "-c",
-        f'family_of() {{ :; }}; . <(sed -n "/^family_of() {{/,/^}}/p" "{SWEEP}"); family_of "$1"',
-        "_", text], capture_output=True, text=True)
+        f'. "{LIB}"; family_of "$1"', "_", text], capture_output=True, text=True)
     return out.stdout.strip()
 
 def check(name, got, want):

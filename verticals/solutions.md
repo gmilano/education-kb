@@ -9,6 +9,7 @@ updated: 2026-10-04
 > Plataformas verticales reales, en producción, customizables con AI.
 > Modelo: partir de algo que ya funciona y que ya tiene los datos, y agregar la capa agéntica arriba.
 > Verificado vía WebFetch el 2026-09-30; las capas del pase 11, el 2026-10-01.
+> **Pase 101 del 2026-10-04:** 🔴 **Verticales nuevas: 0 — y por primera vez el cero viene con el gate que lo PRUEBA en vez de con una impresión.** El barrido obligatorio del encargo (`open source platform education ERP CRM MIT Apache`) devolvió por vigesimoséptima vez el mismo eje generalista, y las 5 candidatas se pasaron por `p311` antes de redactar nada: **`openeducat/openeducat_erp`, `aureuserp/aureuserp`, `frappe/education`, `frappe/erpnext` y `apache/ofbiz` → 5 de 5 YA PUBLICADAS**, con archivo, línea y sección. 🔵 **Veintisiete pases con el mismo resultado es una propiedad del barrido: la consulta pide «plataforma + ERP/CRM + licencia» y eso describe el mercado generalista, no la vertical educativa — su cero es un dato y se mantiene por eso, pero el presupuesto de descubrimiento ya no se gasta esperando que rinda.** 🔴 **Lo que SÍ cambia en este archivo es una advertencia de PROCEDENCIA sobre una fila que ya tenía, y es accionable antes de cotizar:** este archivo nombra `OpenMAIC` (MIT, Tsinghua) como una de las dos únicas bases de tutor open source **permisivas y de escala**, y el barrido de este pase destapó que la prensa de industria linkea como *«el proyecto OpenMAIC en GitHub»* un **fork congelado en `v0.2.1` con `AGPL-3.0`** — un *minor* antes del relicenciamiento AGPL→MIT de v0.3.0. **La fila es correcta para el upstream `THU-MAIC/OpenMAIC`; el riesgo es que el slug que el cliente traiga no sea ése** (`P316`). 🟢 **Y la capa nueva del pase —observación de aula y análisis del discurso, 3 piezas permisivas— se monta SOBRE lo desplegado y no reemplaza nada: es la que convierte la grabación que el LMS ya guarda en evidencia para el docente** (ver `compose/patterns.md`, `R-101-OBSERVACION-PERMISIVA`). Ver **`P312`**–**`P316`**.
 > **Pase 100 del 2026-10-04:** 🟢 **2 verticales nuevas, y las dos llenan el hueco que el pase 5 dejó ABIERTO en la capa de autograding de este archivo: una plataforma desplegada cuya licencia SÍ se pueda construir encima.** `Submitty/Submitty` (**BSD-3-Clause**, `LICENSE.md` 1.542 B, **titular organizacional** `Submitty`, 2014-2026 — RPI/RCOS) y `autolab/Autolab` (**Apache-2.0**, `LICENSE` 11.324 B — CMU). 🔴 **Por qué importa: la fila que este archivo tiene en esa capa desde el pase 5 es `Autograder.io`, de la Universidad de Michigan, con ~5.000 alumnos por semestre y la licencia marcada «no declarada» — y este pase la volvió a medir en 7 nombres de archivo y SIGUE sin ceder nada.** 🔵 **Así que la capa deja de tener un hueco: lo desplegado-y-no-usable ahora tiene dos alternativas desplegadas Y permisivas, con ~5.000 alumnos/semestre cada una en su institución.** 🟢 **Y `autolab/Autolab` trae una clase de indicio REGIONAL nueva para esta base: su `README` declara el DESPLIEGUE por sede —Pittsburgh, Silicon Valley, Qatar y Rwanda— o sea que una plataforma coloca DOS regiones (North America y EMEA) por huella de operación y no por domicilio del titular, que es lo que `P135` prohíbe inferir.** 🔴 **`P311`: el pase casi publica como alta a `INGInious/INGInious` y a `eecs-autograder/autograder.io`, las dos ya en ESTE archivo desde los pases 67 y 5; el gate nuevo las frenó antes de escribir** (`p311`, **11/11**, 14 slugs → 5 ya publicados). 🟢 **`lib/license_family.sh` 62/62 → 79/79; 51 suites pasan, 0 fallan.** Ver **`P308`**–**`P311`**.
 > **Pase 97 del 2026-10-04:** 🟢 **Sin filas nuevas, y a propósito: las seis plataformas Java/Maven que este pase midió YA están todas en este archivo. Lo que entra es el VEREDICTO DE LICENCIA de cada una leído por un segundo canal independiente —la declaración del `pom.xml`— y la capa Java/Maven de esta vertical era justo la que el barrido de esta base no podía leer** (**P294**).
 >
@@ -159,6 +160,75 @@ updated: 2026-10-04
 > versiones), así que lo permisivo (`qti3-*`, `instructure/qti`) es **lo único proponible** — con **`qti3-a11y`** y
 > **`qti3-pnp`**, que abren accesibilidad de evaluación como entregable auditable (**P72**). ⚠️ **Open edX cambia de
 > recomendación: proponer con presupuesto de mantenimiento (gap 70).** Ver la sección del pase 33, abajo.
+
+
+## 🔴 Verticales nuevas: 0 — y el cero viene PROBADO por el gate, no afirmado (pase 101 del 2026-10-04)
+
+### 🧾 La búsqueda obligatoria de plataformas, reproducida y pasada por `p311`
+
+El encargo ordena el barrido `open source platform education ERP CRM MIT Apache`. Corrido este pase,
+devolvió: `frappe.io/erpnext/for-education` y `frappe.io/education`, `openeducat/openeducat_erp`,
+`aureuserp/aureuserp` (MIT, Laravel + FilamentPHP), `apache/ofbiz` (Apache-2.0) y los agregadores de
+NocoBase, Webkul y opensource.com.
+
+🟢 **Antes de redactar una sola fila, las 5 candidatas se pasaron por el gate de duplicados:**
+
+| Candidata | Veredicto de `p311` |
+|---|---|
+| `openeducat/openeducat_erp` | 🔴 `ALREADY PUBLISHED` |
+| `aureuserp/aureuserp` | 🔴 `ALREADY PUBLISHED` |
+| `frappe/education` | 🔴 `ALREADY PUBLISHED` |
+| `frappe/erpnext` | 🔴 `ALREADY PUBLISHED` |
+| `apache/ofbiz` | 🔴 `ALREADY PUBLISHED` |
+
+🔵 **5 de 5.** Ésta es la diferencia que el gate del pase 100 introduce en un pase sin altas: antes,
+un cero se publicaba como *«el barrido no trajo nada nuevo»* y había que creerlo; ahora se publica
+con **archivo, línea y sección** de dónde está cada una. **Un cero verificable vale lo que no valía
+un cero afirmado.**
+
+⚠️ **Y la lectura de método, por vigesimoséptima vez y ya como propiedad declarada del instrumento:**
+la consulta pide *plataforma + ERP/CRM + licencia*, y eso **describe el mercado generalista**. No va
+a devolver una vertical educativa nueva porque no hay ninguna que compita en ese vocabulario. Se
+mantiene porque el encargo lo ordena y porque su cero es información; **el rendimiento está en el eje
+rotado**, que este pase puso en observación de aula y rindió 6 piezas licenciadas.
+
+### 🔴 La advertencia de procedencia que sí cambia este archivo, y hay que decirla antes de cotizar
+
+Este archivo sostiene, desde el pase 7, que **las únicas bases de tutor open source permisivas y de
+escala son las dos de APAC**: `DeepTutor` (Apache-2.0, HKU) y **`OpenMAIC` (MIT, Tsinghua)**. Esa
+afirmación **sigue en pie** y la licencia del upstream se re-midió hoy por **dos canales**:
+
+| | `LICENSE` (payload) | `package.json` | Versión |
+|---|---|---|---|
+| 🟢 `THU-MAIC/OpenMAIC` — **el que esta fila nombra** | **MIT**, 1.066 B, `© 2026 THU-MAIC` | `MIT` | **1.2.0-rc.1** |
+| 🔴 `wwyw4842-dot/OpenMAIC` — **el que linkea la prensa** | **AGPL-3.0**, 34.524 B | `AGPL-3.0` | **0.2.1** |
+
+🔵 **`0.2.1` cae un *minor* antes del relicenciamiento AGPL-3.0 → MIT de v0.3.0 (2026-06-28)** que
+esta base ya tenía fechado: **es un fork congelado en la era copyleft**, y tres medios de industria
+(`aitoolly.com`, `news.aibase.com`, `careerflora.com`) lo presentan como el repositorio del proyecto.
+
+🔴 **Lo que esto obliga en una propuesta, concreto:** cuando el cliente llega con *«queremos partir de
+OpenMAIC»*, **se pide el slug y se mide el payload antes de estimar**. Si el slug es el del artículo,
+el entregable hereda **AGPL-3.0 §13** —red incluida— sobre una plataforma educativa servida como
+servicio, que es la obligación más consecuente del inventario de esta base. **La fila no está mal; lo
+que falta es preguntar de qué árbol se parte** (`P183`, y ahora `P316`).
+
+### 🟢 Dónde entra la capa nueva: SOBRE lo desplegado, sin reemplazar nada
+
+La capa de observación de aula que el pase agrega (`edu-convokit` MIT, `EduCoder` MIT,
+`classroom_discourse_intelligence` MIT en código) **no es una vertical**: es lo que convierte un
+artefacto que la plataforma del cliente **ya guarda** —la grabación de clase, la transcripción de la
+videollamada— en **evidencia para el docente**.
+
+| Vertical ya inventariada acá | Qué ya produce | Qué le agrega la capa nueva |
+|---|---|---|
+| Moodle / Open edX con BBB | grabación y transcripción de la sesión | *talk moves* docentes, profundidad de preguntas, *uptake* del alumno |
+| Sakai · OpenOLAT (auto-hospedables, APAC/EMEA) | la sesión y su registro | la misma lectura **sin sacar el dato de la institución** |
+| Submitty · Autolab (altas del pase 100) | la entrega y su corrección | la clase **antes** de la entrega: por qué el alumno llegó así |
+
+⚠️ **La cota que viaja con la capa, y es de datos y no de código:** el modelo de referencia está
+entrenado sobre **TalkMoves, matemática K-12 de EE. UU., `CC BY-NC-SA 4.0` — NO COMERCIAL** (`P315`).
+**Se entrega el método y la línea base; el modelo se re-entrena con datos del cliente.**
 
 ## 🟢 La capa de autograding deja de tener un hueco: dos plataformas desplegadas Y permisivas (pase 100 del 2026-10-04)
 

@@ -38,27 +38,28 @@ the-glasgow-academy/oneroster-api-to-csv-sds|puente|v1p1
 the-glasgow-academy/oneroster-api-to-csv-asm|puente|v1p1
 "
 
+# P237 CERRADO en el pase 101 (P312).  Esta era la cuarta y ultima copia inline, y la que
+# el pase 100 dejo pre-registrada junto con p170, p206 y p211.  Ademas era la que seguia
+# arrastrando un defecto YA PAGADO por esta base: sus ramas son globs de `case`, que son
+# SENSIBLES A LA CAJA --exactamente P288, el defecto que clasificaba una AGPL-3.0 reflowed
+# como GPL-3.0--, asi que un titulo «MIT License» en minusculas o reflowed caia a `OTRO`.
+# Parchar la copia era el antipatron; se rewirea a la libreria, que ya es insensible.
+#
+# El vocabulario publicado de este instrumento se CONSERVA (`GPL` agrupado, `OTRO`,
+# `VACIO`), para que `result.2026-10-03.txt` siga siendo comparable.  La traduccion agrupa
+# y nunca inventa.
+. "$(dirname "$0")/../lib/license_family.sh"
 classify() { # stdin: payload de licencia -> clase
-  local p; p=$(head -40)
-  case "$p" in
-    *"MIT License"*|*"Permission is hereby granted, free of charge"*) echo "MIT" ;;
-    *"GNU AFFERO GENERAL PUBLIC LICENSE"*) echo "AGPL-3.0" ;;
-    *"GNU LESSER GENERAL PUBLIC"*) echo "LGPL" ;;
-    *"GNU GENERAL PUBLIC LICENSE"*) echo "GPL" ;;
-    *"Apache License"*) echo "Apache-2.0" ;;
-    # P304 (pase 99): la rama BSD SALE del `case`.  Un glob no puede expresar el hueco
-    # ACOTADO Y DENTRO DE LA ORACION que exige el arreglo, y el glob de dos estrellas
-    # que si lo "resuelve" (*"...use"*"in source..."*) es ILIMITADO y cruza oraciones,
-    # que es justo lo que el control negativo 1 de P304 prohibe.  Se pregunta con grep.
-    "") echo "VACIO" ;;
-    *) if printf '%s' "$p" | tr -s '[:space:]' ' ' \
-            | grep -qiE 'redistribution and use[^.]{0,40}in source and binary forms'; then
-         echo "BSD"
-       else
-         echo "OTRO"
-       fi ;;
+  local p; p=$(cat)
+  [ -z "$p" ] && { echo "VACIO"; return; }
+  case "$(family_of "$p")" in
+    GPL-2.0|GPL-3.0)       echo "GPL" ;;
+    UNCLASSIFIED)          echo "OTRO" ;;
+    NONCOMMERCIAL-NOT-OSI) echo "OTRO" ;;
+    *)                     family_of "$p" ;;
   esac
 }
+
 
 measure_one() { # $1 slug -> "clase|titular|ruta"
   local slug=$1 br f url code body

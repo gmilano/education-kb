@@ -1,0 +1,23 @@
+PASS  D1 CC BY-NC-SA canonico no se degrada a CC-BY-SA           CC-BY-NC-SA-4.0
+PASS  D1 CC BY-NC conserva NC                                    CC-BY-NC-4.0
+PASS  D1 POSITIVO CC BY-SA sigue CC-BY-SA                        CC-BY-SA-4.0
+PASS  D1 POSITIVO CC BY pelada sigue CC-BY                       CC-BY-4.0
+PASS  D2 CC BY-NC-SA uso comercial PROHIBIDO                     PROHIBITED
+PASS  D2 CC BY-NC uso comercial PROHIBIDO                        PROHIBITED
+PASS  D2 POSITIVO CC BY-SA ALLOWED                               ALLOWED
+PASS  D2 POSITIVO CC BY ALLOWED                                  ALLOWED
+PASS  ESPECIMEN data/README.md: NC reconocido por sigla          CC-BY-NC-SA-4.0
+PASS  ESPECIMEN data/README.md: comercial PROHIBIDO              PROHIBITED
+PASS  REFLUJO 70 CC BY-NC-SA sigue NC                            CC-BY-NC-SA-4.0
+PASS  REFLUJO 70 CC BY-NC-SA sigue PROHIBIDO                     PROHIBITED
+PASS  REFLUJO 40 CC BY-NC-SA sigue NC                            CC-BY-NC-SA-4.0
+PASS  REFLUJO 40 CC BY-NC-SA sigue PROHIBIDO                     PROHIBITED
+PASS  P313 BUSL clasificada                                      BUSL
+PASS  P313 Elastic clasificada                                   Elastic
+PASS  P313 PolyForm clasificada                                  PolyForm
+PASS  P313 p170 conserva su vocabulario: GPL agrupado            GPL
+PASS  P313 p170 conserva su vocabulario: CC-BY                   CC-BY
+PASS  P313 p170 conserva su vocabulario: UNKNOWN                 UNKNOWN
+PASS  P313 p170 NO agrupa lo que no debe: MIT                    MIT
+
+21/21 checks passed

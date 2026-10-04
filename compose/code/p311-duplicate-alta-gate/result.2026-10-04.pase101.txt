@@ -1,0 +1,67 @@
+ALREADY PUBLISHED  wwyw4842-dot/OpenMAIC
+    agents/top.md:11  [(before the first heading)]
+    agents/top.md:297  [🔴 El hallazgo que manda: la prensa linkea un FORK AGPL del repo MIT que esta tabla ya tiene]
+    agents/top.md:385  [🔴 Los descartes, con su razón — 8 de 14 candidatas no se publican]
+    agents/trending.md:40  [🔴 El hallazgo que manda, y lo destapó el gate que el pase 100 escribió]
+    compose/patterns.md:247  [🆕 `P316` — «¿De qué árbol partimos?»: la pregunta de un renglón que va antes de estimar]
+    intel/trends.md:242  [🔴 807 — La prensa de industria linkea un fork AGPL congelado del repo MIT que esta base ya tiene]
+    repos/trending.md:42  [🟢 El dato plano del *upstream* que esta base ya tenía, para no dejar hueco en la serie]
+    verticals/solutions.md:204  [🔴 La advertencia de procedencia que sí cambia este archivo, y hay que decirla antes de cotizar]
+ALREADY PUBLISHED  stanfordnlp/edu-convokit
+    agents/top.md:386  [🔴 Los descartes, con su razón — 8 de 14 candidatas no se publican]
+    repos/foundations.md:11  [(before the first heading)]
+    repos/foundations.md:167  [🟢 `P253`/`P306` — el registro descartó a los DOS candidatos en vez de elegir uno]
+ALREADY PUBLISHED  EduNLP/edu-convokit
+    agents/top.md:386  [🔴 Los descartes, con su razón — 8 de 14 candidatas no se publican]
+    repos/foundations.md:11  [(before the first heading)]
+    repos/foundations.md:168  [🟢 `P253`/`P306` — el registro descartó a los DOS candidatos en vez de elegir uno]
+ALREADY PUBLISHED  EduNLP/EduCoder
+    agents/top.md:324  [🟢 Las 6 altas, con la licencia leída del PAYLOAD y clasificada por el control compartido]
+    agents/top.md:368  [⚠️ La región, declarada en vez de rellenada (`P135` / `P261`)]
+    agents/top.md:1514  [🟢 El alta del pase: `r-huijts/canvas-mcp`, el PADRE]
+    compose/patterns.md:281  [🆕 `R-101-OBSERVACION-PERMISIVA` — observación de aula con evidencia citable, sin que la AI decid]
+    repos/foundations.md:11  [(before the first heading)]
+    repos/foundations.md:121  [Capa de observación de aula y análisis del discurso — agregada en el pase 101 del 2026-10-04]
+ALREADY PUBLISHED  devissaputra/classroom_discourse_intelligence
+    agents/top.md:325  [🟢 Las 6 altas, con la licencia leída del PAYLOAD y clasificada por el control compartido]
+    agents/top.md:349  [🔴 `P315` — un repo puede ser permisivo en el CÓDIGO y NO COMERCIAL en los DATOS]
+    agents/top.md:1515  [🟢 El alta del pase: `r-huijts/canvas-mcp`, el PADRE]
+    agents/trending.md:64  [🔴 Dos formas nuevas de que la pregunta de licencia tenga más de una respuesta por repo]
+    compose/patterns.md:222  [🆕 `P315` — La licencia tiene un eje de CAPA: código permisivo, datos NO COMERCIALES]
+    compose/patterns.md:282  [🆕 `R-101-OBSERVACION-PERMISIVA` — observación de aula con evidencia citable, sin que la AI decid]
+    intel/trends.md:217  [🔴 805 — La licencia tiene un eje de CAPA: permisiva en el código, NO COMERCIAL en los datos]
+    repos/foundations.md:11  [(before the first heading)]
+    repos/foundations.md:122  [Capa de observación de aula y análisis del discurso — agregada en el pase 101 del 2026-10-04]
+ALREADY PUBLISHED  VedantGohel/Student-Eye
+    agents/top.md:328  [🟢 Las 6 altas, con la licencia leída del PAYLOAD y clasificada por el control compartido]
+    agents/top.md:332  [🔴 `P314` — la concesión puede vivir en el README, y un barrido de payload la declara NO-CESSION]
+    agents/top.md:1516  [🟢 El alta del pase: `r-huijts/canvas-mcp`, el PADRE]
+    agents/trending.md:57  [🔴 Dos formas nuevas de que la pregunta de licencia tenga más de una respuesta por repo]
+    compose/patterns.md:202  [🆕 `P314` — La concesión puede vivir en el README, y un barrido de payload SUPRIME trabajo real]
+    intel/trends.md:228  [🔴 806 — La concesión puede vivir en el README, y el canal secundario la leyó de un BADGE]
+ALREADY PUBLISHED  Manikandan-777/elearning-engagement-study
+    agents/top.md:391  [🔴 Los descartes, con su razón — 8 de 14 candidatas no se publican]
+    agents/trending.md:122  [⚠️ Lo que este pase NO pudo colocar, dicho en vez de callado]
+    repos/trending.md:48  [🔴 Dos candidatas del canal secundario dan 404 en el único canal vivo]
+ALREADY PUBLISHED  joaopdmol/Automated_Classroom_Attendance
+    agents/top.md:326  [🟢 Las 6 altas, con la licencia leída del PAYLOAD y clasificada por el control compartido]
+    agents/top.md:1517  [🟢 El alta del pase: `r-huijts/canvas-mcp`, el PADRE]
+ALREADY PUBLISHED  yptheangel/attention-monitor
+    agents/top.md:327  [🟢 Las 6 altas, con la licencia leída del PAYLOAD y clasificada por el control compartido]
+    agents/top.md:1518  [🟢 El alta del pase: `r-huijts/canvas-mcp`, el PADRE]
+ALREADY PUBLISHED  anupampatil44/Computer-Vision-System-for-Gauging-Student-Attentiveness-in-Online-Classes
+    repos/trending.md:49  [🔴 Dos candidatas del canal secundario dan 404 en el único canal vivo]
+ALREADY PUBLISHED  abdulrhmanG-alahmadi/AI-Classroom-Engagement-Analysis
+    agents/top.md:388  [🔴 Los descartes, con su razón — 8 de 14 candidatas no se publican]
+ALREADY PUBLISHED  liviaellen/engagementdetector
+    agents/top.md:389  [🔴 Los descartes, con su razón — 8 de 14 candidatas no se publican]
+ALREADY PUBLISHED  Pvpit926/classmind-ai
+    agents/top.md:390  [🔴 Los descartes, con su razón — 8 de 14 candidatas no se publican]
+    agents/trending.md:119  [⚠️ Lo que este pase NO pudo colocar, dicho en vez de callado]
+ALREADY PUBLISHED  KayvanShah1/VirtuTA
+    agents/top.md:387  [🔴 Los descartes, con su razón — 8 de 14 candidatas no se publican]
+    agents/top.md:710  [🟢 Las cinco altas, con la licencia leída del PAYLOAD y clasificada por el control compartido]
+    agents/top.md:4430  [Agentes y herramientas destacadas]
+    agents/trending.md:473  [🟢 Las 5 altas, con licencia leída del PAYLOAD]
+
+# slugs checked: 14   already published: 14

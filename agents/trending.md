@@ -9,6 +9,137 @@ updated: 2026-10-04
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 > No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
 
+## 2026-10-04 — pase 101: la capa de OBSERVACIÓN DE AULA, y la prensa linkeando un fork AGPL del repo MIT
+
+🔬 **El canal, declarado antes de cualquier veredicto (`P247`).** `github.com` → 🔴 **403** ·
+`api.github.com` → 🔴 **403** · `codeload.github.com` → 🔴 **403** · `raw.githubusercontent.com` →
+🟢 **200 con payload** · `registry.npmjs.org` y `pypi.org` → 🟢 **200** ·
+`huggingface.co/api/datasets` → 🔴 **000** · 🆕 `arxiv.org` → 🔴 **000**.
+🆕 **Y una cota que CAMBIÓ:** el pase 52 registró que un script del repositorio **con red** estaba
+negado (`[Code from External]`); **este pase corrió `p170/sweep_headref.sh` con red y funcionó.**
+La negativa no se reproduce hoy y se re-mide en vez de citarse. **Las estrellas siguen sin ser
+verificables, así que ninguna fila nueva las lleva.**
+
+### 🟢 El eje lo eligió el barrido de MERCADO, y el `grep` de control confirmó el hueco antes de buscar
+
+El cuarto barrido del encargo devolvió dos cosas accionables: que la tendencia que define 2026 es el
+corrimiento *«away from generic AI tools toward platforms purpose-built for education»* que
+**embuten la estructura pedagógica en el sistema**, y que en Norteamérica **Oklahoma y Maryland ya
+exigen supervisión humana y PROHÍBEN que la AI tome decisiones de alto impacto sobre un alumno**.
+
+🔵 **La capa que esas dos cosas piden junto no es un tutor: es el instrumento que mira la clase y le
+devuelve EVIDENCIA al docente** — porque si la AI no puede decidir, lo único que puede hacer con
+valor es **observar y fundamentar**. 🟢 **Y el `grep` de control dio el hueco antes de gastar un
+barrido: `classroom observation` / `observación de aula` → CERO ocurrencias en los ocho archivos**,
+contra `integridad académica`, `OneRoster`, `dropout` y `AI literacy`, que ya estaban.
+
+**14 candidatas medidas de primera mano → 6 altas, 8 descartes con razón.**
+
+### 🔴 El hallazgo que manda, y lo destapó el gate que el pase 100 escribió
+
+`P311` marcó `wwyw4842-dot/OpenMAIC` como ⚠️ `NAME COLLISION`. Medido por **dos** canales en **dos**
+repos:
+
+| | `LICENSE` | `package.json` | Versión |
+|---|---|---|---|
+| `THU-MAIC/OpenMAIC` (upstream, ya en la tabla) | **MIT**, 1.066 B | `MIT` | **1.2.0-rc.1** |
+| `wwyw4842-dot/OpenMAIC` (**el que linkea la prensa**) | 🔴 **AGPL-3.0**, 34.524 B | 🔴 `AGPL-3.0` | 🔴 **0.2.1** |
+
+🔵 **Dentro de cada repo los dos canales concuerdan; entre repos se contradicen.** `0.2.1` cae un
+*minor* antes del relicenciamiento **AGPL→MIT en v0.3.0 (2026-06-28)** que esta base ya tenía
+fechado: **es un fork congelado en la era copyleft.** Tres medios de industria (`aitoolly.com`,
+`news.aibase.com`, `careerflora.com`) lo presentan como *«el proyecto OpenMAIC en GitHub»**.
+🔴 **El riesgo no es que la fila esté mal —está bien— sino que el slug que el cliente trae no sea el
+slug que la fila mide.** Ver **`P316`**.
+
+### 🔴 Dos formas nuevas de que la pregunta de licencia tenga más de una respuesta por repo
+
+🔴 **`P314`: la concesión puede vivir en el README.** `VedantGohel/Student-Eye` da **404 en 6
+nombres de archivo** y trae el **texto íntegro de la MIT** en su sección `## 📜 License`, con
+titular. Un barrido de payload lo habría publicado **sin cesión**: un falso negativo que **suprime
+trabajo real**. ⚠️ **Y el canal secundario leyó la licencia del BADGE de shields.io** — un badge es
+una imagen con texto adentro y no concede nada; que acá coincidiera con el texto real es suerte.
+
+🔴 **`P315`: permisivo en el CÓDIGO, no comercial en los DATOS.**
+`devissaputra/classroom_discourse_intelligence` es **MIT** en `LICENSE` y su `data/README.md` declara
+**`CC BY-NC-SA 4.0`, non-commercial**, sin redistribuir el corpus. **Se puede entregar el código y
+el método; el modelo entrenado sobre ese corpus, no.**
+
+### 🔴 Y medir ESE payload destapó el defecto del pase: `P312`
+
+La compuerta de uso comercial de esta base devolvía **PERMITIDO** para `CC-BY-NC-4.0`, **una familia
+cuyo nombre dice NonCommercial.** Dos defectos, y el segundo es el grave:
+
+- **D1** — la rama CC elegía por **orden** entre atributos **ortogonales**: `ShareAlike` iba antes de
+  `NonCommercial`, así que `CC BY-NC-SA` volvía `CC-BY-SA-4.0` y **el atributo NC se perdía**.
+- **D2** — la compuerta de `P250` (*«familia identificada → comercial por definición»*, premisa
+  correcta) tenía **detrás** cuatro familias que **no son OSI**: la rama CC entera.
+
+🔵 **Es la inversión que `P250` existe para evitar, cometida dentro del control que `P250` creó**, y
+en la dirección peor: `P308` **perdía** permiso sobre un texto permisivo (cuesta una oportunidad);
+esto **inventa** permiso sobre un texto que lo prohíbe en su propio nombre (**cuesta el entregable**).
+🟢 **`lib/license_family.sh` 79/79 → 106/106**, `p312` **21/21**, **52 suites pasan, 0 fallan.**
+
+### 🟢 `P237` CERRADO: las cuatro copias inline rewireadas, y en el orden que la deuda exigía
+
+El pase 100 dejó pre-registrado el rewiring de `p170`, `p206`, `p211` y `p230`, **con su razón para
+no hacerlo**: *«el control compartido todavía no es un superconjunto de las copias»* — `BUSL`,
+`Elastic` y `PolyForm` vivían **sólo** en `p170`. 🟢 **Este pase hizo las dos cosas en ese orden:
+primero las tres familias entraron a la librería con sus controles negativos, después se rewirearon
+las cuatro.** El vocabulario publicado de cada instrumento **se conserva** para que los TSV ya
+escritos sigan comparables.
+
+🔴 **Y `p230` arrastraba un defecto YA PAGADO: `P288`.** Sus ramas eran globs de `case`, sensibles a
+la caja. Medido sobre la copia vieja **antes** de tocarla: `"mit license"` en minúsculas → **`OTRO`**;
+`"MIT License"` → `MIT`. Rewireada, los dos → `MIT`.
+
+🔴 **El rewiring rompió el control de `p206`, y el defecto no es del rewiring.**
+`test_family.py` extraía el cuerpo de la función **del propio `sweep_erp.sh`** con `sed`: estaba
+acoplado al **texto** del archivo, no a su **comportamiento**. Al mudarse la función, las tres
+aserciones de `D2` —**las que guardan `P171`, el par GPL/AGPL**— devolvieron cadena **vacía**.
+🔵 **Un control escrito contra el layout de un archivo se rompe con la consolidación que `P237`
+pide, justo cuando más falta hace que siga midiendo.** Reapuntado a la librería: **5/5**.
+
+### 🟢 El registro nombró un canónico que NINGUNA candidata era
+
+El barrido devolvió **dos** slugs para Edu-ConvoKit: la URL del resultado decía `stanfordnlp/` y el
+**título del mismo resultado** decía `EduNLP/`. Los dos sirven el payload (1.068–1.069 B, titular
+`Rose E. Wang`). 🟢 **`pypi.org/pypi/edu-convokit` (v0.4.0, `License :: OSI Approved :: MIT`)
+declara `Source: github.com/rosewang2008/edu-convokit`** — un **tercero**. `P253`/`P306` otra vez,
+y esta vez el desempate no eligió entre los candidatos: **los descartó a los dos.**
+
+### ⚠️ Lo que este pase NO pudo colocar, dicho en vez de callado
+
+- 🔴 **1 de 6 altas con región.** Sólo `edu-convokit` reúne señales de `P261` (dominio
+  `cs.stanford.edu` en **README** y en **`setup.py`**, dos payloads independientes) → **North
+  America**. Las otras cinco son antropónimo puro ⇒ **sin región**. ⚠️ Y las dos señales son del
+  **mismo tipo** de la lista cerrada: la señal de perfil de `org` **no se puede obtener** con
+  `github.com` en `403`.
+- 🔴 **`ClassMind`, el artefacto de referencia académico de esta capa, no tiene repo que resuelva.**
+  El paper se declara *«open-source platform»*; el único slug homónimo (`Pvpit926/classmind-ai`) no
+  cede licencia y no es el del paper. ⚠️ **`arxiv.org` da `000`, así que ni el paper se leyó de
+  primera mano** — marcado 🔸 **SIN VERIFICAR**.
+- 🔴 **Dos candidatas del buscador dan 404 en el único canal vivo** (`Manikandan-777/elearning-engagement-study`,
+  `anupampatil44/Computer-Vision-System-…`), y una de las dos venía presentada **con licencia MIT**.
+  **Una 404 no es un hallazgo.**
+
+### 🔴 Acción pre-registrada para el pase 102, falsable
+
+**Afirmación a refutar:** *«`P315` no es un espécimen aislado: la licencia por CAPA es la norma en la
+capa de observación de aula, porque toda pieza útil ahí necesita un corpus de aula y los corpus de
+aula se publican no comerciales»*.
+🔵 **Predicción falsable: un barrido de los `data/`, `datasets/`, `corpus/` y `README` de datos de
+las 6 altas de este pase y de las 3 piezas de habla del pase 14 encontrará al menos DOS piezas más
+con licencia de datos distinta de la del código, y la mayoría de las que declaren datos serán
+`NC`.** Si todas las que declaran datos los declaran bajo la misma licencia del código, `P315` era
+específico de `classroom_discourse_intelligence` y esta sección estaba equivocada.
+
+⚠️ **Segunda acción, de deuda y no de descubrimiento:** la **unidad** que la predicción cuenta queda
+nombrada por la lección del pase 99 —*«piezas con licencia de datos distinta de la del código»*, no
+*«hallazgos»*— y el denominador también: **9 repos**, no «los que aparezcan».
+
+---
+
 ## 2026-10-04 — pase 100: el eje lo eligió el dato de MERCADO del propio pase, y el pase se pilla REDESCUBRIENDO una capa suya
 
 🔬 **El canal, declarado antes de cualquier veredicto (`P247`), medido este pase y no heredado.**

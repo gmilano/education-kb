@@ -436,5 +436,88 @@ for w in 70 40; do
   check "P308 0BSD invariante a $w"        0BSD       "$(family_of "$(printf '%s' "$ZEROBSD" | reflow $w)")"
 done
 
+# ---------------------------------------------------------------------------
+# CONTROL NEGATIVO 7 — P312 (pase 101).  EL CASO QUE ESTA SUITE NO TENIA, y la razon de que
+# no lo tuviera es la regla de P126 punto 2: la suite llego a 79/79 con la rama CC ROTA,
+# porque ninguna de sus 79 aserciones le pasaba un payload de Creative Commons.
+#
+# Dos defectos distintos, y el segundo es el grave:
+#   D1 — la rama CC elegia por ORDEN entre atributos ORTOGONALES: `ShareAlike` iba antes de
+#        `NonCommercial`, asi que CC BY-NC-SA volvia `CC-BY-SA-4.0` y el atributo NC se perdia.
+#   D2 — la compuerta de P250 («familia identificada -> comercial por definicion») tenia
+#        DETRAS cuatro familias que no son OSI, asi que `CC-BY-NC-4.0` --cuyo NOMBRE dice
+#        NonCommercial-- volvia uso comercial PERMITIDO.
+#
+# El payload de D1 no es una fixture inventada: es la licencia del corpus TalkMoves tal como
+# la declara `devissaputra/classroom_discourse_intelligence/data/README.md`, medida en el
+# pase 101.  El repo es MIT en el CODIGO y CC BY-NC-SA 4.0 en los DATOS.
+CCNCSA='Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
+NonCommercial and ShareAlike restrictions apply.  This repository does not redistribute the source corpus.'
+CCNC='Creative Commons Attribution-NonCommercial 4.0 International
+You may not use the material for commercial purposes.'
+CCSA='Creative Commons Attribution-ShareAlike 4.0 International'
+CCNCND='Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International'
+CCBY='Creative Commons Attribution 4.0 International'
+
+check "P312 D1 CC BY-NC-SA no se degrada a CC-BY-SA" CC-BY-NC-SA-4.0 "$(family_of "$CCNCSA")"
+check "P312 D1 CC BY-NC-ND conserva los dos atributos" CC-BY-NC-ND-4.0 "$(family_of "$CCNCND")"
+check "P312 D1 CC BY-NC sigue CC BY-NC"               CC-BY-NC-4.0    "$(family_of "$CCNC")"
+# Controles POSITIVOS de la misma rama: el arreglo no puede volver NC a lo que no lo es.
+check "P312 D1 CC BY-SA sigue CC-BY-SA (no gana NC)"  CC-BY-SA-4.0    "$(family_of "$CCSA")"
+check "P312 D1 CC BY pelada sigue CC-BY"              CC-BY-4.0       "$(family_of "$CCBY")"
+
+# D2: el eje del PERMISO, que es el que decide si la pieza entra en un entregable.
+cu() { if commercial_use_ok "$1"; then echo ALLOWED; else echo PROHIBITED; fi; }
+check "P312 D2 CC BY-NC-SA uso comercial PROHIBIDO"  PROHIBITED "$(cu "$CCNCSA")"
+check "P312 D2 CC BY-NC uso comercial PROHIBIDO"     PROHIBITED "$(cu "$CCNC")"
+check "P312 D2 CC BY-NC-ND uso comercial PROHIBIDO"  PROHIBITED "$(cu "$CCNCND")"
+# Y los positivos: la compuerta no puede cerrarse sobre lo que si permite uso comercial.
+check "P312 D2 CC BY-SA uso comercial ALLOWED"       ALLOWED    "$(cu "$CCSA")"
+check "P312 D2 CC BY uso comercial ALLOWED"          ALLOWED    "$(cu "$CCBY")"
+check "P312 D2 MIT uso comercial ALLOWED (positivo)" ALLOWED    "$(cu "$MIT")"
+check "P312 D2 Apache-2.0 uso comercial ALLOWED"     ALLOWED    "$(cu "$APACHE")"
+# P312 segundo tramo: la SIGLA como puerta de entrada a la rama CC, y los dos controles
+# NEGATIVOS que la acotan -- la sigla no puede robarle un payload a una familia OSI.
+CCSIGLA='## License
+CC BY-NC-SA 4.0. **Non-commercial** and ShareAlike restrictions apply.'
+check "P312 sigla sola: CC BY-NC-SA reconocida" CC-BY-NC-SA-4.0 "$(family_of "$CCSIGLA")"
+check "P312 sigla sola: comercial PROHIBIDO"    PROHIBITED      "$(cu "$CCSIGLA")"
+check "P312 NEG sigla no roba un MIT que la menciona" MIT "$(family_of "MIT License
+Copyright (c) 2026 X
+Permission is hereby granted, free of charge.  Docs are CC BY 4.0.")"
+check "P312 NEG sigla no roba un Apache que la menciona" Apache-2.0 "$(family_of "                                 Apache License
+                           Version 2.0, January 2004
+   Documentation is licensed CC BY-SA 4.0.")"
+check "P312 D2 AGPL-3.0 uso comercial ALLOWED"       ALLOWED    "$(cu "$AGPL3")"
+
+# D1/D2 bajo REFLUJO, que es la invariante que P308 instalo: el arreglo de P312 no puede
+# depender de donde caen los saltos de linea del payload.
+for w in 70 40; do
+  check "P312 CC BY-NC-SA invariante a $w" CC-BY-NC-SA-4.0 "$(family_of "$(printf '%s' "$CCNCSA" | reflow $w)")"
+  check "P312 CC BY-NC-SA PROHIBIDO a $w"  PROHIBITED      "$(cu "$(printf '%s' "$CCNCSA" | reflow $w)")"
+done
+
+# ---------------------------------------------------------------------------
+# CONTROL NEGATIVO 8 — P312/P237: las tres familias que vivian SOLO en la copia inline de
+# `p170`.  Eran la razon DECLARADA en el pase 100 para no rewirear esa copia a esta
+# libreria («adoptarla PERDERIA familias»), asi que entran aca ANTES del rewiring y la
+# suite lo afirma.  Las tres son no-OSI y las tres prohiben el uso que importa.
+BUSL='Business Source License 1.1
+
+Licensor: Example Corp
+Additional Use Grant: You may make production use of the Licensed Work.'
+ELASTIC='Elastic License 2.0
+
+URL: https://www.elastic.co/licensing/elastic-license'
+POLYFORM='PolyForm Noncommercial License 1.0.0
+
+<https://polyformproject.org/licenses/noncommercial/1.0.0>'
+check "P312 BUSL clasificada (venia solo de p170)"     BUSL     "$(family_of "$BUSL")"
+check "P312 Elastic clasificada (venia solo de p170)"  Elastic  "$(family_of "$ELASTIC")"
+check "P312 PolyForm clasificada (venia solo de p170)" PolyForm "$(family_of "$POLYFORM")"
+check "P312 BUSL uso comercial PROHIBIDO"     PROHIBITED "$(cu "$BUSL")"
+check "P312 Elastic uso comercial PROHIBIDO"  PROHIBITED "$(cu "$ELASTIC")"
+check "P312 PolyForm uso comercial PROHIBIDO" PROHIBITED "$(cu "$POLYFORM")"
+
 printf '\n%d/%d\n' "$((n-fail))" "$n"
 [ "$fail" = 0 ] || exit 1

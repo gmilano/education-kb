@@ -95,13 +95,45 @@ osi_family_of() {
   # back UNCLASSIFIED, so they are classified on the TITLE BLOCK like everything else (P171).
   printf '%s' "$t" | grep -qi 'BSD Zero Clause\|Zero-Clause BSD\|0BSD' && { echo "0BSD"; return; }
   printf '%s' "$t" | grep -qi 'ISC License' && { echo "ISC"; return; }
-  if printf '%s' "$t" | grep -qi 'Creative Commons\|creativecommons.org'; then
+  # -------------------------------------------------------------------------
+  # P312 (pase 101).  La rama CC se escribio en el pase 82 con las clausulas en el ORDEN
+  # EQUIVOCADO, y el orden decide la respuesta porque la primera que matchea RETORNA.
+  # `ShareAlike` iba ANTES de `NonCommercial`, asi que un payload REAL de
+  # CC BY-NC-SA 4.0 --el de la licencia del corpus TalkMoves que este pase midio en
+  # `devissaputra/classroom_discourse_intelligence/data/README.md`-- volvia
+  # `CC-BY-SA-4.0`: la familia se identificaba y el atributo NC, que es el UNICO que
+  # decide si la pieza puede entrar en un entregable, se PERDIA en silencio.
+  #
+  # El arreglo no es reordenar dos lineas: las clausulas de CC son ORTOGONALES (BY, NC,
+  # SA, ND se combinan), asi que la identidad se COMPONE en vez de elegirse. Una cadena
+  # de `elif` sobre atributos combinables es el defecto, no el orden de sus ramas.
+  # P312 (pase 101), segundo tramo.  La puerta de entrada a la rama pedia el NOMBRE
+  # «Creative Commons» o el dominio, y el especimen real de este pase no trae ninguno de
+  # los dos: `devissaputra/classroom_discourse_intelligence/data/README.md` declara
+  # «CC BY-NC-SA 4.0. Non-commercial and ShareAlike restrictions apply.» y nada mas.
+  # Caia a UNCLASSIFIED, y por ese camino el token-match SI corre y acierta el permiso --
+  # o sea que el especimen daba la respuesta correcta (PROHIBIDO) por la razon equivocada,
+  # mientras el texto canonico daba la incorrecta.  La SIGLA es un identificador
+  # inequivoco: entra como puerta, y queda DESPUES de los anclas de MIT/Apache/GPL de
+  # arriba, asi que no puede robarle un payload a una familia OSI.
+  if printf '%s' "$t" | grep -qi 'Creative Commons\|creativecommons.org\|CC BY\|CC-BY'; then
     printf '%s' "$t" | grep -qi 'CC0\|Public Domain Dedication' && { echo "CC0-1.0"; return; }
-    printf '%s' "$t" | grep -qi 'ShareAlike\|CompartirIgual\|BY-SA'   && { echo "CC-BY-SA-4.0"; return; }
-    printf '%s' "$t" | grep -qi 'NonCommercial\|NoComercial\|BY-NC'    && { echo "CC-BY-NC-4.0"; return; }
-    printf '%s' "$t" | grep -qi 'Attribution\|Atribuci'                && { echo "CC-BY-4.0"; return; }
+    local nc="" sa="" nd=""
+    printf '%s' "$t" | grep -qi 'NonCommercial\|Non-Commercial\|NoComercial\|BY-NC' && nc="-NC"
+    printf '%s' "$t" | grep -qi 'ShareAlike\|Share-Alike\|CompartirIgual\|BY..SA\|-SA ' && sa="-SA"
+    printf '%s' "$t" | grep -qi 'NoDerivatives\|NoDerivs\|SinDerivadas\|BY..ND\|-ND ' && nd="-ND"
+    if printf '%s' "$t" | grep -qi 'Attribution\|Atribuci\|CC BY'; then
+      echo "CC-BY${nc}${sa}${nd}-4.0"; return
+    fi
     echo "CC-UNSPECIFIED"; return
   fi
+  # P312: BUSL / Elastic / PolyForm.  Las tres vivian SOLO en la copia inline de `p170`, y
+  # eran la razon declarada en el pase 100 para NO rewirear esa copia a esta libreria:
+  # adoptarla habria PERDIDO tres familias.  Entran aca para que la condicion
+  # pre-registrada se cumpla y el rewiring sea una mejora y no una perdida.
+  printf '%s' "$t" | grep -qi 'Business Source License' && { echo "BUSL"; return; }
+  printf '%s' "$t" | grep -qi 'Elastic License'         && { echo "Elastic"; return; }
+  printf '%s' "$t" | grep -qi 'PolyForm'                && { echo "PolyForm"; return; }
   # P308: `$n`, no `$1`.  El ancla mide 43 columnas, asi que necesita un envoltorio mas
   # angosto que eso para partirse -- mas raro que el del Unlicense, y ademas esta SOMBREADA
   # por el ancla de titulo «MIT License» de arriba, que ya es normalizada.  Se arregla igual:
@@ -261,8 +293,31 @@ commercial_use_ok() {
   # nada se reportaba como apto para un entregable comercial.  Es el mismo error que P250
   # arreglo, en el eje contrario y sobre el unico caso donde la respuesta importa.
   [ "$(osi_family_of "$1")" = "NO-CESSION (negativa explicita)" ] && return 1
-  # THE GATE. Identified OSI family -> allowed, no token match, no false positive.
-  [ "$(osi_family_of "$1")" = "UNCLASSIFIED" ] || return 0
+  # -------------------------------------------------------------------------
+  # P312 (pase 101).  LA COMPUERTA SE ABRIA SOBRE LAS FAMILIAS QUE EXISTE PARA ATRAPAR.
+  # Su premisa esta escrita arriba y es correcta: «una familia OSI identificada permite
+  # uso comercial POR DEFINICION».  Pero el pase 82 --el mismo que escribio la compuerta--
+  # puso DETRAS de ella cuatro familias que NO son OSI: la rama CC.  Resultado medido:
+  # `CC-BY-NC-4.0`, una familia cuyo NOMBRE dice NonCommercial, volvia uso comercial
+  # PERMITIDO, porque la compuerta cortocircuitaba el token-match antes de leer la
+  # palabra «NonCommercial» del payload.
+  #
+  # Es la inversion de P250 cometida DENTRO del control que P250 creo, y en la direccion
+  # peligrosa: P308 perdia permiso sobre un texto permisivo (se sobre-restringe, cuesta
+  # una oportunidad); esto INVENTA permiso sobre un texto que lo prohibe en su nombre
+  # (se sub-restringe, cuesta el entregable).
+  #
+  # El arreglo nombra el conjunto en vez de confiar en «identificada»: una familia NO-OSI
+  # con restriccion de uso no comercial responde PROHIBIDO sin consultar el payload, y
+  # toda otra familia NO-OSI (CC-BY, CC-BY-SA, CC0, BUSL, Elastic, PolyForm) CAE AL
+  # TOKEN-MATCH en vez de pasar por la compuerta, que es lo que la premisa permite.
+  local __f; __f=$(osi_family_of "$1")
+  case "$__f" in
+    *-NC-*|*-NC|CC-BY-NC*) return 1 ;;
+    BUSL|Elastic|PolyForm) return 1 ;;
+    CC-*|UNCLASSIFIED)     : ;;
+    *)                     return 0 ;;
+  esac
   local d; d=$(printf '%s' "$1" | tr '[:upper:]' '[:lower:]' | tr -s '[:space:]' ' ')
   case "$d" in
     *"non-commercial"*|*"noncommercial"*|*"not-for-profit"*|*"non-profit purposes"*) return 1 ;;

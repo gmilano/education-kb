@@ -8,6 +8,7 @@ updated: 2026-10-04
 
 > Recetas concretas: repos nombrados, licencias verificadas, wiring explícito y estimación.
 > Todos los repos citados fueron verificados vía WebFetch el 2026-09-30; los del pase 11, el 2026-10-01 (ver `agents/top.md`).
+> **Pase 101 del 2026-10-04:** 🆕 **Los patrones nuevos son `P312`–`P316`, y la receta es `R-101-OBSERVACION-PERMISIVA`.** 🔴 **`P312` es el que cambia qué garantiza un veredicto de uso comercial de esta base: la compuerta de `P250` se abría sobre `CC-BY-NC-4.0`, una familia cuyo NOMBRE dice NonCommercial — y la destapó el payload de un ALTA, no una fixture.** 🟢 **`P313` cierra `P237`: las cuatro copias inline rewireadas, en el orden que la deuda exigía (primero superconjunto, después rewiring), y con el hallazgo de que el rewiring ROMPIÓ el control que guardaba a `p206` porque extraía la función del TEXTO del archivo.** 🔴 **`P314` es el que evita suprimir trabajo real: la concesión puede vivir en el README sin archivo de licencia, y un barrido de payload la declara `NO-CESSION`.** 🔴 **`P315` es el que paga en una propuesta: un repo puede ser permisivo en el CÓDIGO y no comercial en los DATOS, así que el entregable es el método y la línea base, no el modelo.** 🔴 **`P316` es la pregunta de un renglón que hay que hacer antes de estimar: «¿de qué árbol partimos?» — la prensa de industria linkea un fork `AGPL-3.0` congelado en `v0.2.1` del `OpenMAIC` MIT que esta base ya tiene.** 🆕 **`R-101-OBSERVACION-PERMISIVA` es cotizable porque los tres eslabones de código están verificados por payload y son MIT, y porque la restricción que la acota —el corpus no comercial— queda FUERA del entregable con su razón dicha.**
 > **Pase 100 del 2026-10-04:** 🆕 **Los patrones nuevos son `P308`–`P311`, y las recetas son `R-100-HABLA-PERMISIVA` y `R-100-AUTOGRADING-PERMISIVO`.** 🔴 **`P308` es el que cambia qué garantiza un veredicto de licencia de esta base: el reflujo del texto —re-envolver un payload sin cambiar una palabra— movía la respuesta, en DOS reglas; la del Unlicense no perdía la familia en `UNCLASSIFIED` sino que INVERTÍA el veredicto comercial a `NONCOMMERCIAL-NOT-OSI` sobre el texto más permisivo que existe, y la de la ventana del bloque de título perdía la AGPL que `P288` había instalado porque contaba LÍNEAS.** 🟢 **`P309` es el residual declarado en vez de tapado: `holder_of` devuelve una LÍNEA, y una línea depende del reflujo por construcción.** 🔴 **`P310` es el que paga en una propuesta: una pieza puede ser permisiva y no ceder ninguna CAPACIDAD —`speechsuper/SpeechSuper-API-Samples` es MIT real sobre muestras de una API paga— y es el primer espécimen de esta base donde el engaño viene de una licencia CORRECTA.** 🔴 **`P311` es el control que faltaba y que este pase necesitó contra sí mismo: todos los controles de esta base auditan una afirmación que el pase HACE, y la de que un alta es NUEVA es implícita.** 🆕 **`R-100-HABLA-PERMISIVA` es cotizable porque los cinco eslabones están verificados por payload y cuatro de los cinco son permisivos; el quinto —el corpus— queda FUERA del entregable con su razón dicha.**
 > **Pase 97 del 2026-10-04:** 🆕 **Los patrones nuevos son `P294`, `P295`, `P296` y `P297`, y los cuatro salen de cablear una sola pieza.** 🔴 **`P294` es el que cambia cómo esta base se audita a sí misma: un control que no está en el camino por donde pasan los datos no es un control, es una demostración — el pase 96 diagnosticó la ceguera a Java/Maven, escribió el lector correcto (`p289`, 11/11) y no lo conectó, así que `PARSERS` siguió con cinco nombres y el hueco siguió abierto donde se producen los veredictos.** 🔴 **`P295` es el mismo defecto en la prosa: `trend-backlink-audit` existe desde el pase 49 para atrapar citas colgadas y era CIEGO a la forma con que esta base ANUNCIA sus tendencias («tendencias nuevas, numeradas 745–752» → 0 citas), así que catorce números quedaron sin sección sin que nada lo marcara; y de paso era lossy en castellano, porque aceptaba «a» como conector y no como marca de rango.** 🟢 **`P296` es el que paga en una entrega: el veredicto de licencia tiene DOS canales independientes —la declaración del manifiesto y el payload del archivo— y medidos sobre la capa Java/Maven concuerdan 4 de 4 exactos, 1 de familia, 0 contradicciones; el manifiesto CORROBORA y además es la única fuente donde no hay archivo (`kuali/kc`).** 🟢 **`P297` es la pieza técnica que lo hizo posible: en Maven la identidad de propiedad es el `groupId` —un namespace reverse-DNS que codifica a la organización— y el `<parent>` NO presta ni identidad ni licencia.** 🆕 **La receta nueva es `R-97-COMPRA-SOBERANA-APAC`, y es cotizable porque la condición de compra que la dispara quedó medida este pase: la soberanía decidirá la infraestructura de ~la mitad de las empresas de APAC.**
 >
@@ -129,6 +130,199 @@ updated: 2026-10-04
 > no existe en open source permisivo).
 > **Pase 11:** +2 patrones — **P25** (riesgo de abandono conforme al Anexo III, la capa con presupuesto ya asignado y sin oferta open source) y **P26** (agente docente sobre la ontología curricular nacional ya publicada).
 > **Pase 27:** **+4 patrones y una corrección.** 🔴 **P51 queda con premisa falsa** —el conector MCP de Moodle **sí existe y es MIT**— y lo reemplazan **P54** (corrección y devolución sobre Moodle con **compuerta humana**, el último tramo del gap 6, con piezas que ya escriben), **P55** (el conector de **Open edX**, que es el único que de verdad no existe), **P56** (**SCORM** como formato de salida de la capa generativa: cero integración, offline) y **P57** (evidencia por MCP cotizada sobre lo que CaSS **realmente** expone — 6 de 61 operaciones, con insignias y autoría de marcos **fuera**).
+
+
+## 🆕 Patrones del pase 101 (2026-10-04) — `P312`–`P316` y `R-101-OBSERVACION-PERMISIVA`
+
+### 🆕 `P312` — La compuerta se abría sobre las familias que existe para atrapar
+
+**Dónde vive el control:** `compose/code/p312-nc-gate-inversion/` (`sh test_nc_gate.sh` → **21/21**)
+y `compose/code/lib/test_license_family.sh` (**106/106**, eran **79/79**).
+
+**El problema.** La compuerta de `P250` razona *«familia OSI identificada → permite uso comercial
+POR DEFINICIÓN, y por eso nunca se le hace token-match»*. **La premisa es correcta.** Lo que no era
+correcto es que el mismo pase que la escribió (el 82) puso **detrás** de ella cuatro familias que
+**no son OSI**: la rama de Creative Commons.
+
+| payload | `family_of` antes | `commercial_use_ok` antes | después |
+|---|---|---|---|
+| `CC BY-NC-SA 4.0` | 🔴 `CC-BY-SA-4.0` (perdía el `NC`) | 🔴 **ALLOWED** | 🟢 `CC-BY-NC-SA-4.0` · PROHIBITED |
+| `CC BY-NC 4.0` | `CC-BY-NC-4.0` | 🔴 **ALLOWED** | 🟢 PROHIBITED |
+| `CC BY-NC-ND 4.0` | 🔴 `CC-BY-NC-4.0` (perdía el `ND`) | 🔴 **ALLOWED** | 🟢 `CC-BY-NC-ND-4.0` · PROHIBITED |
+| `CC BY-SA 4.0` (positivo) | `CC-BY-SA-4.0` | 🟢 ALLOWED | 🟢 ALLOWED |
+
+**El patrón, en dos reglas transportables.**
+
+1. 🔴 **Una cadena de `elif` es una elección EXCLUYENTE; no se usa para atributos COMBINABLES.** Las
+   cláusulas de CC se combinan, así que la identidad se **compone** (`CC-BY` + `-NC` + `-SA` + `-ND`).
+   Reordenar las ramas arreglaba el espécimen y dejaba `CC BY-NC-ND` roto.
+2. 🔴 **Una compuerta nombra su conjunto; no confía en un *proxy*.** *«Identificada»* era un *proxy*
+   de *«es OSI»* y dejó de serlo el día que entró al catálogo una familia no-OSI. Ahora las familias
+   no-OSI con restricción no comercial responden `PROHIBIDO` sin consultar el payload, y las otras
+   no-OSI **caen al token-match** en vez de pasar por la compuerta.
+
+🔵 **Y la regla de método que deja, que vale para cualquier instrumento de esta base: hay que medir
+hacia QUÉ LADO falla, no sólo si falla.** `P308` perdía permiso sobre un texto permisivo —cuesta una
+oportunidad—; esto **inventaba** permiso sobre un texto que lo prohíbe en su propio nombre —**cuesta
+el entregable**.
+
+⚠️ **Por qué la suite pasaba en verde:** ninguna de sus 79 aserciones le pasaba un payload de
+Creative Commons (`P126` punto 2, tercera vez). Las 23 nuevas van **todas** al eje que estaba vacío.
+
+### 🆕 `P313` — `P237` CERRADO, y la consolidación rompe los controles acoplados al LAYOUT
+
+**Lo que se hizo, en el orden que la deuda exigía.** El pase 100 pre-registró el rewiring de `p170`,
+`p206`, `p211` y `p230` **con su condición**: la librería **no era un superconjunto** —`BUSL`,
+`Elastic` y `PolyForm` vivían sólo en `p170`— y adoptarla habría **perdido tres familias**.
+
+| Paso | Qué | Control |
+|---|---|---|
+| 1 | las tres familias entran a `lib/license_family.sh` | **6 aserciones negativas** nuevas |
+| 2 | se rewirean las cuatro copias | **4 aserciones** de equivalencia de vocabulario |
+| 3 | se corre el barrido rewireado contra payloads reales | **6 de 6** coinciden con la medición independiente |
+
+🟢 **El vocabulario publicado de cada instrumento se conserva a propósito** (`GPL` agrupado,
+`CC-BY`, `UNKNOWN`, `OTRO`, `VACIO`), para que los TSV ya escritos sigan comparables. **La traducción
+agrupa y nunca inventa.**
+
+🔴 **El hallazgo: el rewiring rompió el control que guardaba a `p206`.** `test_family.py` extraía el
+cuerpo de la función **del propio `sweep_erp.sh`** con `sed`, o sea que estaba acoplado al **texto**
+del archivo y no a su **comportamiento**. Al mudarse la función, las tres aserciones de `D2` —**las
+que guardan `P171`, el par GPL/AGPL**— devolvieron **cadena vacía**. 🔵 **Un control escrito contra
+el layout de un archivo se rompe con la consolidación que `P237` pide, justo cuando más falta hace
+que siga midiendo.** Y el modo de falla era **cadena vacía, no error**: falló ruidosamente por
+suerte, porque comparaba contra `"GPL-3.0"`.
+
+🔴 **Y `p230` arrastraba `P288`, un defecto ya pagado en el pase 96**, por once pases, porque la
+corrección vivía en la librería y nadie volvió a mirar la copia: `"mit license"` en minúsculas →
+**`OTRO`**. **Es el argumento de `P237` medido en un caso concreto.**
+
+### 🆕 `P314` — La concesión puede vivir en el README, y un barrido de payload SUPRIME trabajo real
+
+**Espécimen:** `VedantGohel/Student-Eye` (alta de este pase). **404 en `LICENSE`, `LICENSE.md`,
+`License`, `license.md`, `docs/LICENSE.md` y `NOTICE`** — y el **texto íntegro de la MIT** en la
+sección `## 📜 License` del README, con titular `Copyright (c) 2026 Vedant Gohel`.
+
+| Lo que concluye un barrido de payload | Lo que es |
+|---|---|
+| 🔴 `NO-CESSION` / `UNLICENSED` | 🟢 **MIT, concesión válida, sin archivo** |
+
+🔵 **La dirección del error es la que importa y es la más costosa para esta base:** `P310` nombró el
+engaño de una licencia correcta sobre una pieza sin capacidad —se **descarta** algo malo—; esto
+**suprime algo bueno**, que no deja rastro y no se audita. **La regla: antes de publicar
+`NO-CESSION`, se lee la sección `## License` del README.**
+
+⚠️ **Y la trampa del canal secundario, que acertó por la razón equivocada:** reportó *«MIT License
+(copyright 2026)»* leyendo el **badge de shields.io** del encabezado. **Un badge es una imagen con un
+texto adentro y no concede nada.** La fila se escribe por la sección `## License`; **el badge se
+ignora, incluso cuando coincide.**
+
+### 🆕 `P315` — La licencia tiene un eje de CAPA: código permisivo, datos NO COMERCIALES
+
+**Espécimen:** `devissaputra/classroom_discourse_intelligence`. `LICENSE` **MIT** (1.073 B) y
+`data/README.md`: *«`CC BY-NC-SA 4.0.` **Non-commercial** `and ShareAlike restrictions apply. This
+repository does not redistribute the source corpus.`»*
+
+| Artefacto | Licencia | ¿Entra en un entregable comercial? |
+|---|---|---|
+| código (pipeline, *loader*, método) | **MIT** ✅ | 🟢 sí |
+| línea base publicada (macro-F1 **0,5198** vs **0,1152**) | — (es un número) | 🟢 sí, como **vara** |
+| corpus TalkMoves | 🔴 **CC BY-NC-SA 4.0** | 🔴 **no**, y el repo **no lo redistribuye** |
+| modelo entrenado sobre ese corpus | 🔴 derivado del corpus | 🔴 **no** |
+
+🔵 **Esta base venía preguntando «¿cuál es la licencia de este repo?» como si tuviera una sola
+respuesta.** Para una pieza de ML es falso por construcción: **código, modelo y corpus son tres
+artefactos con tres regímenes posibles, y el que decide si se puede entregar suele ser el tercero.**
+
+**Lo que el patrón obliga en una propuesta:** se cita el **método**, se usa la **línea base como
+vara**, y el **modelo se re-entrena sobre datos del cliente**. ⚠️ Y se declara la cota de dominio: el
+corpus es **matemática K-12 de EE. UU.**, así que 0,5198 **no es heredable** a otro currículo ni a
+otro idioma.
+
+### 🆕 `P316` — «¿De qué árbol partimos?»: la pregunta de un renglón que va antes de estimar
+
+| | `LICENSE` (payload) | `package.json` | Versión |
+|---|---|---|---|
+| 🟢 `THU-MAIC/OpenMAIC` — upstream, **en esta base desde el pase 1** | **MIT**, 1.066 B, `© 2026 THU-MAIC` | `MIT` | **1.2.0-rc.1** |
+| 🔴 `wwyw4842-dot/OpenMAIC` — **el que linkea la prensa** | **AGPL-3.0**, 34.524 B | `AGPL-3.0` | **0.2.1** |
+
+🔵 **Los dos canales concuerdan dentro de cada repo y se contradicen entre repos**, así que no es
+ambigüedad de lectura: **`0.2.1` cae un *minor* antes del relicenciamiento AGPL→MIT de v0.3.0
+(2026-06-28)** que esta base ya tenía fechado. **Es un fork congelado en la era copyleft**, y tres
+medios de industria (`aitoolly.com`, `news.aibase.com`, `careerflora.com`) lo presentan como *«el
+proyecto OpenMAIC en GitHub»*.
+
+**El patrón.** Cuando el cliente llega con *«queremos partir de X»*, **el slug es un dato de entrada
+que se mide, no un nombre que se acepta**. Tres preguntas, en este orden:
+
+1. **¿Qué slug exactamente?** — no el nombre del proyecto: el `owner/repo`.
+2. **¿Qué dice el payload de su `LICENSE`, y qué dice su manifiesto?** — los dos, porque concordar
+   dentro de un repo es lo que descarta error de lectura (`P296`).
+3. **¿Qué versión?** — porque un relicenciamiento **parte la historia del proyecto en dos**, y un
+   fork congelado del lado viejo **es otra licencia con el mismo nombre**.
+
+🔴 **Lo que esto cuesta si no se hace:** el entregable hereda **AGPL-3.0 §13** —obligación de red
+incluida— sobre una plataforma educativa servida como servicio, que es la obligación **más
+consecuente** de todo el inventario de esta base. 🔵 **Y el gate de `P311` es lo que lo destapó
+gratis**, con el veredicto `NAME COLLISION` que existe precisamente para no suprimir trabajo real.
+
+### 🆕 `R-101-OBSERVACION-PERMISIVA` — observación de aula con evidencia citable, sin que la AI decida
+
+**Para qué cliente.** Un distrito de K-12 o una universidad en **North America**, donde 🔸 **Oklahoma
+y Maryland ya exigen supervisión humana y PROHÍBEN que la AI tome decisiones de alto impacto sobre un
+alumno**. 🔵 **Esa prohibición saca de la mesa la capa de decisión y deja exactamente una capa
+vendible: observar, medir y FUNDAMENTAR para que decida una persona.**
+
+**Los eslabones, los tres verificados por payload el 2026-10-04 vía `raw.githubusercontent.com`:**
+
+| Eslabón | Repo | Licencia (payload) | Qué hace acá |
+|---|---|---|---|
+| ingesta y análisis | [`rosewang2008/edu-convokit`](https://github.com/rosewang2008/edu-convokit) | **MIT**, 1.069 B | preprocesa la transcripción, la anota y la analiza |
+| anotación humana | [`EduNLP/EduCoder`](https://github.com/EduNLP/EduCoder) | **MIT**, 1.068 B | el docente y el equipo anotan con **video sincronizado**, y se compara humano vs LLM |
+| modelo y vara | [`devissaputra/classroom_discourse_intelligence`](https://github.com/devissaputra/classroom_discourse_intelligence) | **MIT** (código) | *talk moves* docentes + la **línea base** contra la cual medir |
+| fuente de la grabación | lo que el cliente **ya tiene** (Moodle/Open edX + BBB, o la videollamada) | — | **no se despliega nada nuevo** del lado de la plataforma |
+
+**Wiring, explícito.**
+
+```
+grabación de la clase (ya existe en el LMS del cliente)
+   │
+   ├─▶ transcripción + diarización                      → el LMS o el stack del cliente
+   │
+   ├─▶ edu-convokit: preprocess → annotate → analyze    (MIT)
+   │        │
+   │        ├─▶ talk moves docentes, profundidad de pregunta, uptake del alumno
+   │        └─▶ CADA etiqueta queda ligada a su LÍNEA de transcripción  ◀── esto es el producto
+   │
+   ├─▶ EduCoder: el docente revisa, corrige y ANOTA sobre el video      (MIT)
+   │        └─▶ las correcciones humanas son el dato de re-entrenamiento
+   │
+   └─▶ modelo propio, re-entrenado con los datos del cliente
+            └─▶ vara de referencia: macro-F1 0,5198 vs 0,1152 (línea base de mayoría)
+```
+
+🔵 **Por qué el producto es «la etiqueta ligada a su línea» y no un puntaje.** Bajo la regla de
+Oklahoma y Maryland, **un puntaje opaco es inusable y una cita es evidencia**. El docente ve
+*«acá preguntaste y acá el alumno elaboró»* con el minuto y la línea, y **decide él**. Es el mismo
+giro que esta base recomendó para LATAM en el pase 7 —medir el **proceso**, no perseguir el
+producto— ahora con la regulación de NA empujando en la misma dirección.
+
+⚠️ **La restricción que queda FUERA del entregable, con su razón dicha (`P315`).** El corpus de
+referencia es **TalkMoves, `CC BY-NC-SA 4.0`, no comercial**, y el repo **no lo redistribuye**. **No
+entra en el entregable**: se usa su **método** y su **número como vara**, y el modelo se entrena con
+datos del cliente. ⚠️ Y la línea base es de **matemática K-12 en inglés**: transportarla a otro
+currículo o a español **es una hipótesis que hay que medir**, no un dato heredable.
+
+**Estimación.** 8–10 semanas para el primer piloto con un modelo propio re-entrenado: 2 de ingesta y
+transcripción contra el LMS existente, 3 de anotación con docentes en `EduCoder` (es el cuello de
+botella real y es humano, no técnico), 2 de re-entrenamiento y validación contra la vara, 1–3 de
+*dashboard* y revisión de conformidad.
+
+**Dónde más aplica, con su condición.** 🔸 En **LATAM** la demanda medida es aún mejor —**92 %** de
+alumnos ya usa AI y **61 %** teme el mal uso **de sus compañeros**, o sea que el pedido es
+**integridad y evidencia**, no más generación—, **pero esta receta no tiene pieza de la región**:
+las 6 altas del pase dan **1 North America** y **5 sin región**. 🔴 **Se dice en vez de venderse como
+cobertura.**
 
 ## 🆕 Patrones del pase 100 — `P308`–`P311` y las recetas `R-100-*`
 

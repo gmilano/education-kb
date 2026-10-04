@@ -5,32 +5,28 @@
 # Three-way outcome: LICENSED / UNLICENSED (repo reachable, no license file) / UNREACHABLE.
 # TSV: slug \t status \t hit_path \t bytes \t license_id
 slug="$1"
+# P237 CERRADO en el pase 101 (P312).  Esta copia inline se REWIREO a la libreria
+# compartida.  La razon declarada en el pase 100 para no hacerlo era concreta y correcta
+# --«el control compartido todavia no es un superconjunto de las copias» (BUSL, Elastic y
+# PolyForm vivian SOLO aca)-- asi que el pase 101 primero las agrego a
+# `lib/license_family.sh` con sus controles negativos (6 aserciones nuevas) y DESPUES
+# rewireo.  Parchar la copia era el antipatron que P237 existe para nombrar.
+#
+# El VOCABULARIO publicado de este barrido se CONSERVA a proposito.  La libreria responde
+# mas fino que esta copia (`GPL-3.0` donde esta decia `GPL`, `CC-BY-4.0` donde decia
+# `CC-BY`, `UNCLASSIFIED` donde decia `UNKNOWN`), y adoptar el vocabulario fino en silencio
+# volveria incomparables los TSV ya publicados (`result.2026-10-03.tsv`,
+# `result.2026-10-04.pase99.tsv`).  La traduccion es explicita y es de UNA sola direccion:
+# agrupa, nunca inventa.
+. "$(dirname "$0")/../lib/license_family.sh"
 classify() {
-  local c="$1" head12 body
-  head12=$(printf '%s' "$c" | head -12)
-  if   printf '%s' "$head12" | grep -qi "GNU AFFERO GENERAL PUBLIC LICENSE"; then echo "AGPL-3.0"; return
-  elif printf '%s' "$head12" | grep -qi "GNU LESSER GENERAL PUBLIC LICENSE"; then echo "LGPL"; return
-  elif printf '%s' "$head12" | grep -qi "GNU GENERAL PUBLIC LICENSE"; then echo "GPL"; return
-  elif printf '%s' "$head12" | grep -qi "Apache License"; then echo "Apache-2.0"; return
-  elif printf '%s' "$head12" | grep -qi "Mozilla Public License"; then echo "MPL-2.0"; return
-  elif printf '%s' "$head12" | grep -qi "CC0 1.0\|Creative Commons Zero"; then echo "CC0-1.0"; return
-  elif printf '%s' "$head12" | grep -qi "Creative Commons Attribution"; then echo "CC-BY"; return
-  elif printf '%s' "$head12" | grep -qi "Business Source License"; then echo "BUSL"; return
-  elif printf '%s' "$head12" | grep -qi "Elastic License"; then echo "Elastic"; return
-  elif printf '%s' "$head12" | grep -qi "PolyForm"; then echo "PolyForm"; return
-  elif printf '%s' "$head12" | grep -qi "ISC License"; then echo "ISC"; return
-  elif printf '%s' "$head12" | grep -qi "MIT License\|MIT No Attribution"; then echo "MIT"; return
-  fi
-  body="$c"
-  if   printf '%s' "$body" | grep -qi "Permission is hereby granted, free of charge"; then echo "MIT"
-  # P304 (pase 99): hueco ACOTADO Y DENTRO DE LA ORACION entre los dos tokens -- la identidad
-  # de BSD es una secuencia ORDENADA de palabras, no una frase contigua.  Especimen real:
-  # instructure/QTIMigrationTool inserta «of this software» y «(where applicable)».  El arreglo
-  # canonico vive en lib/license_family.sh; esta copia inline lo replica y el rewiring a la
-  # libreria compartida queda PRE-REGISTRADO (P237 sigue abierto para este archivo).
-  elif printf '%s' "$body" | tr -s '[:space:]' ' ' | grep -qiE "redistribution and use[^.]{0,40}in source and binary"; then echo "BSD"
-  elif printf '%s' "$body" | grep -qi "free and unencumbered software"; then echo "Unlicense"
-  else echo "UNKNOWN"; fi
+  case "$(family_of "$1")" in
+    GPL-2.0|GPL-3.0)        echo "GPL" ;;
+    CC-BY-*|CC-BY)          echo "CC-BY" ;;
+    UNCLASSIFIED)           echo "UNKNOWN" ;;
+    NONCOMMERCIAL-NOT-OSI)  echo "UNKNOWN" ;;
+    *)                      family_of "$1" ;;
+  esac
 }
 for fn in LICENSE LICENSE.md LICENSE.txt COPYING COPYING.txt license license.md license.txt \
           LICENCE LICENCE.md LICENSE-MIT LICENSE-APACHE LICENSE.rst LICENSE-MIT.txt; do
