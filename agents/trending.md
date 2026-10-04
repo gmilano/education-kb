@@ -9,6 +9,85 @@ updated: 2026-10-04
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 > No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
 
+## 2026-10-04 — pase 100: el eje lo eligió el dato de MERCADO del propio pase, y el pase se pilla REDESCUBRIENDO una capa suya
+
+🔬 **El canal, declarado antes de cualquier veredicto (`P247`), medido este pase y no heredado.**
+`github.com/<org>/<repo>` → 🔴 **`403`** · `api.github.com` → 🔴 **`403`** · `codeload.github.com` →
+🔴 **`403`** · `raw.githubusercontent.com/<slug>/HEAD/<path>` → 🟢 **`200` con payload** ·
+`registry.npmjs.org` → 🟢 **`200`** · `pypi.org` → 🟢 **`200`** · 🆕 `openslr.org` → 🔴
+**`000 EGRESS_BLOCKED`** · 🆕 `huggingface.co/api/datasets` → 🔴 **`000 connect_rejected`**.
+**Las estrellas NO son verificables: ninguna fila nueva las lleva.**
+
+### 🔴 La señal del pase no es un repo: es que esta base puede redescubrirse a sí misma
+
+El eje rotado salió del tercer barrido obligatorio —el de **mercado**, que devolvió *«language
+learning is the fastest-growing segment»*— y la nota que estaba redactada anunciaba *«esta base no
+tenía ninguna pieza de habla»*. 🔴 **Falso: la «Capa de habla y lectura oral» existe en
+`repos/foundations.md` desde el pase 14**, con `Halleck45/OpenPronounce`, `kaldi-asr/kaldi` y
+`jimbozhang/speechocean762`, **y ya traía el hallazgo de que el corpus no tiene archivo de
+licencia**. Ídem `eecs-autograder/autograder.io`, en `verticals/solutions.md` desde el pase 5.
+
+🟢 **`P311`: el gate que faltaba quedó escrito y corrido antes de publicar** —
+`compose/code/p311-duplicate-alta-gate/`, **11/11**. 14 slugs medidos → **5 ya publicados**, con
+archivo, línea y **sección** («…agregada en el pase 14»), que es lo que convierte la respuesta de
+*«ya está»* en *«ya está, acá, y de este pase»*.
+
+### 🟢 Lo que SÍ es nuevo en la capa de habla, dicho con precisión
+
+🔵 **La capa tenía MOTOR (`OpenPronounce`, MIT) y CORPUS (`speechocean762`) desde el pase 14. Le
+faltaban el AGENTE y el MODELO.** Este pase pone los dos:
+
+| Pieza | Licencia (payload) | Qué agrega |
+|---|---|---|
+| `mikhailvs/loqui` | 🟢 MIT, 1.074 B, `Mikhail Slyusarev` (2026) | el **AGENTE**: arnés con invariantes que VETAN, bucle de voz local |
+| `YuanGongND/gopt` | 🟢 BSD-3-Clause, 1.517 B, `Yuan Gong` (2022) | el **MODELO**: GOPT, ICASSP 2022 (MIT & PAII), **SOTA** sobre el corpus que esta base ya tenía |
+
+🔴 **Y la cadena permisiva termina en un corpus sin cesión, que ahora queda CERRADO como
+irresoluble desde acá.** El pase 14 dejó *«pedir los términos a SpeechOcean por escrito»*. Este
+pase intentó resolverlo por **registro**, que es la vía con la que `P306` desempató `examplary/qti`
+vía npm — y **los dos canales de distribución están bloqueados por egreso**: `openslr.org` y
+`huggingface.co`. **Se puede construir el evaluador entero con licencia permisiva
+(`OpenPronounce` MIT + `gopt` BSD-3 + `kaldi` Apache-2.0) y no se puede verificar la licencia del
+corpus contra el que todo el campo se mide.**
+
+### 🟢 `loqui`, y por qué su arquitectura es un argumento de venta y no una curiosidad
+
+El LLM **sólo realiza** la jugada; el arnés es dueño del calendario, del estado del aprendiz y de
+**invariantes falsables que vetan** — *«nunca evaluar una palabra no enseñada»*, *«nunca amontonar
+un ítem»*, *«calificar sólo producción diferida»*. **El conjunto de invariantes ES el currículo
+auditable**, y eso es exactamente lo que un ministerio pide y un *prompt* no puede entregar. Cinco
+impulsos compiten por turno (Repair · Review · Progress · Engage · Consolidate).
+
+🔵 **El bucle entero es local** (`Whisper` → arnés → `claude -p` **o** `Ollama` → `edge-tts`), lo
+que lo pone del lado correcto de las dos condiciones regionales que esta base ya midió: la
+soberanía decide infraestructura en ~la mitad de las empresas de APAC, y en EMEA la voz de un
+alumno es el dato que menos se quiere ceder.
+
+### 🔴 La acción pre-registrada del pase 99, corrida: CONFIRMADA, y el daño es peor que `P304`
+
+**3 de 18 anclas** del clasificador compartido estaban escritas como **frase cruda**. La del
+**Unlicense** es la única **sin sombra** —ninguna rama de título contesta por esa familia— y a
+`fill-column` **70** el corte cae **dentro** del ancla (ocupa las columnas 9 a 70 de una primera
+línea de 71; Emacs usa 70 por omisión). 🔴 **No se pierde en `UNCLASSIFIED`: se ABRE la compuerta
+de `P250`, corre el token-match sobre el cuerpo, y el Unlicense concede con las palabras *«for any
+purpose, commercial or NON-COMMERCIAL»* → veredicto `NONCOMMERCIAL-NOT-OSI` sobre el texto más
+permisivo que existe.** Dirección de `P299` (inventa restricción), no de `P304` (pierde estante).
+
+🔴 **Y el control negativo de la propia suite falló sobre un ancla que NO es frase:** la definición
+de la sección 0 de la AGPL que `P288` instaló **es normalizada** y se perdía igual, porque la
+**VENTANA** del bloque de título contaba **LÍNEAS** (`head -40`). **Una cuenta de líneas no es una
+propiedad del documento: es una propiedad de dónde caen sus saltos.** `P171` reabierto por tercera
+vez y sobre el par exacto que existe para proteger.
+
+⚠️ **La mitad honesta: fragilidad PROBADA no es defecto DISPARANDO.** 0 de **18** payloads reales
+medidos **tal como se publican** estaban mal clasificados. El reparto poblacional queda **sin
+extrapolar** (`P286`), y el denominador es chico **por un límite del entorno** —niega enumerar
+destinos en lote (`[Exfil Scouting]`)— **no del método**.
+
+🟢 `lib/license_family.sh` **62/62 → 79/79** · `p308` **100/100** · **51 suites pasan, 0 fallan**.
+
+---
+
 ## 2026-10-04 — pase 99: la predicción pre-registrada del pase 98 se CONFIRMA, y el eje rotado abre DOS CAPAS que esta base no tenía
 
 🔬 **El canal, declarado antes de cualquier veredicto (`P247`), medido este pase y no heredado.**

@@ -379,5 +379,62 @@ check "P304 no se come al MIT"                            MIT        "$(family_o
 check "P304 no se come a la ISC"                          ISC        "$(family_of "$ISCL")"
 check "P304 no se come a la 0BSD"                         0BSD       "$(family_of "$ZEROBSD")"
 
+# ---------------------------------------------------------------------------
+# P308 (pase 100) — el REFLUJO como eje, y los dos controles que lo cierran.
+#
+# Un payload se re-envuelve sin cambiar una palabra (`fill-paragraph` de Emacs usa
+# fill-column 70, `fmt` 75) y esta base ya tiene el especimen REAL de la direccion inversa
+# en `p288/fixtures/agpl-3.0-kuali-kfs-reflowed.LICENSE`.  Las aserciones de abajo afirman
+# que el veredicto NO depende de donde caen los saltos de linea — ni la familia, ni el
+# veredicto comercial, que es el que llega a un entregable.
+#
+# Los dos casos que fallaban antes del arreglo, medidos sobre payloads reales:
+#   - Unlicense a fill-column 70: el ancla ocupa las columnas 9..70 de una primera linea de
+#     71, el corte cae DENTRO, se pierde la familia, se ABRE la compuerta de P250 y el
+#     token-match sobre el cuerpo encuentra «commercial or NON-COMMERCIAL» — que es la frase
+#     con la que el Unlicense CONCEDE.  Veredicto: NONCOMMERCIAL-NOT-OSI sobre el texto mas
+#     permisivo que existe.  Direccion de P299 (inventa restriccion), no de P304.
+#   - AGPL-3.0 a fill-column 70: el ancla de la seccion 0 que P288 instalo es NORMALIZADA y
+#     se perdia igual, porque la VENTANA del bloque de titulo contaba LINEAS (`head -40`).
+#     Caia por la rama GPL de abajo, que matchea el preambulo de la propia AGPL: GPL-2.0.
+reflow() { fold -s -w "$1"; }
+
+UNLIC='This is free and unencumbered software released into the public domain.
+
+Anyone is free to copy, modify, publish, use, compile, sell, or
+distribute this software, either in source code form or as a compiled
+binary, for any purpose, commercial or non-commercial, and by any
+means.'
+
+# CONTROL NEGATIVO 4 — la familia es invariante al reflujo, y el Unlicense es el caso.
+for w in 72 70 64 40 20; do
+  check "P308 Unlicense invariante a fill-column $w" Unlicense "$(family_of "$(printf '%s' "$UNLIC" | reflow $w)")"
+done
+
+# CONTROL NEGATIVO 5 — y el veredicto COMERCIAL tambien, que es el que decide si una fila
+# de esta KB puede entrar a una propuesta.  Sin esta asercion el arreglo se podria revertir
+# sin que ninguna suite lo notara, porque la familia y el permiso son preguntas distintas.
+for w in 70 40; do
+  if commercial_use_ok "$(printf '%s' "$UNLIC" | reflow $w)"; then
+    check "P308 Unlicense uso comercial ALLOWED a $w" ALLOWED ALLOWED
+  else
+    check "P308 Unlicense uso comercial ALLOWED a $w" ALLOWED PROHIBITED
+  fi
+done
+
+# CONTROL NEGATIVO 6 — la ventana en BYTES no afloja P171.  Es la contracara obligatoria del
+# arreglo: ensanchar o mover una ventana es exactamente como se reabre el par GPL/AGPL, que es
+# el par que P171 existe para proteger.  La seccion 13 de la GPL-3.0 esta en el byte 28.272 del
+# payload de moodle y la ventana son 4.000, asi que queda fuera por un factor de 7 — y se
+# afirma con el payload envuelto, no solo con el original.
+for w in 70 40; do
+  check "P308 GPL-3.0 sigue GPL-3.0 envuelta a $w (sec.13 fuera de ventana)" GPL-3.0 \
+        "$(family_of "$(printf '%s' "$GPL3" | reflow $w)")"
+  check "P308 Apache-2.0 invariante a $w"  Apache-2.0 "$(family_of "$(printf '%s' "$APACHE" | reflow $w)")"
+  check "P308 MIT invariante a $w"         MIT        "$(family_of "$(printf '%s' "$MIT" | reflow $w)")"
+  check "P308 ISC invariante a $w"         ISC        "$(family_of "$(printf '%s' "$ISCL" | reflow $w)")"
+  check "P308 0BSD invariante a $w"        0BSD       "$(family_of "$(printf '%s' "$ZEROBSD" | reflow $w)")"
+done
+
 printf '\n%d/%d\n' "$((n-fail))" "$n"
 [ "$fail" = 0 ] || exit 1

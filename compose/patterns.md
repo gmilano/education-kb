@@ -8,6 +8,7 @@ updated: 2026-10-04
 
 > Recetas concretas: repos nombrados, licencias verificadas, wiring explícito y estimación.
 > Todos los repos citados fueron verificados vía WebFetch el 2026-09-30; los del pase 11, el 2026-10-01 (ver `agents/top.md`).
+> **Pase 100 del 2026-10-04:** 🆕 **Los patrones nuevos son `P308`–`P311`, y las recetas son `R-100-HABLA-PERMISIVA` y `R-100-AUTOGRADING-PERMISIVO`.** 🔴 **`P308` es el que cambia qué garantiza un veredicto de licencia de esta base: el reflujo del texto —re-envolver un payload sin cambiar una palabra— movía la respuesta, en DOS reglas; la del Unlicense no perdía la familia en `UNCLASSIFIED` sino que INVERTÍA el veredicto comercial a `NONCOMMERCIAL-NOT-OSI` sobre el texto más permisivo que existe, y la de la ventana del bloque de título perdía la AGPL que `P288` había instalado porque contaba LÍNEAS.** 🟢 **`P309` es el residual declarado en vez de tapado: `holder_of` devuelve una LÍNEA, y una línea depende del reflujo por construcción.** 🔴 **`P310` es el que paga en una propuesta: una pieza puede ser permisiva y no ceder ninguna CAPACIDAD —`speechsuper/SpeechSuper-API-Samples` es MIT real sobre muestras de una API paga— y es el primer espécimen de esta base donde el engaño viene de una licencia CORRECTA.** 🔴 **`P311` es el control que faltaba y que este pase necesitó contra sí mismo: todos los controles de esta base auditan una afirmación que el pase HACE, y la de que un alta es NUEVA es implícita.** 🆕 **`R-100-HABLA-PERMISIVA` es cotizable porque los cinco eslabones están verificados por payload y cuatro de los cinco son permisivos; el quinto —el corpus— queda FUERA del entregable con su razón dicha.**
 > **Pase 97 del 2026-10-04:** 🆕 **Los patrones nuevos son `P294`, `P295`, `P296` y `P297`, y los cuatro salen de cablear una sola pieza.** 🔴 **`P294` es el que cambia cómo esta base se audita a sí misma: un control que no está en el camino por donde pasan los datos no es un control, es una demostración — el pase 96 diagnosticó la ceguera a Java/Maven, escribió el lector correcto (`p289`, 11/11) y no lo conectó, así que `PARSERS` siguió con cinco nombres y el hueco siguió abierto donde se producen los veredictos.** 🔴 **`P295` es el mismo defecto en la prosa: `trend-backlink-audit` existe desde el pase 49 para atrapar citas colgadas y era CIEGO a la forma con que esta base ANUNCIA sus tendencias («tendencias nuevas, numeradas 745–752» → 0 citas), así que catorce números quedaron sin sección sin que nada lo marcara; y de paso era lossy en castellano, porque aceptaba «a» como conector y no como marca de rango.** 🟢 **`P296` es el que paga en una entrega: el veredicto de licencia tiene DOS canales independientes —la declaración del manifiesto y el payload del archivo— y medidos sobre la capa Java/Maven concuerdan 4 de 4 exactos, 1 de familia, 0 contradicciones; el manifiesto CORROBORA y además es la única fuente donde no hay archivo (`kuali/kc`).** 🟢 **`P297` es la pieza técnica que lo hizo posible: en Maven la identidad de propiedad es el `groupId` —un namespace reverse-DNS que codifica a la organización— y el `<parent>` NO presta ni identidad ni licencia.** 🆕 **La receta nueva es `R-97-COMPRA-SOBERANA-APAC`, y es cotizable porque la condición de compra que la dispara quedó medida este pase: la soberanía decidirá la infraestructura de ~la mitad de las empresas de APAC.**
 >
 
@@ -128,6 +129,195 @@ updated: 2026-10-04
 > no existe en open source permisivo).
 > **Pase 11:** +2 patrones — **P25** (riesgo de abandono conforme al Anexo III, la capa con presupuesto ya asignado y sin oferta open source) y **P26** (agente docente sobre la ontología curricular nacional ya publicada).
 > **Pase 27:** **+4 patrones y una corrección.** 🔴 **P51 queda con premisa falsa** —el conector MCP de Moodle **sí existe y es MIT**— y lo reemplazan **P54** (corrección y devolución sobre Moodle con **compuerta humana**, el último tramo del gap 6, con piezas que ya escriben), **P55** (el conector de **Open edX**, que es el único que de verdad no existe), **P56** (**SCORM** como formato de salida de la capa generativa: cero integración, offline) y **P57** (evidencia por MCP cotizada sobre lo que CaSS **realmente** expone — 6 de 61 operaciones, con insignias y autoría de marcos **fuera**).
+
+## 🆕 Patrones del pase 100 — `P308`–`P311` y las recetas `R-100-*`
+
+### 🔴 `P308` — Un veredicto de licencia no puede depender de dónde caen los saltos de línea
+
+**El patrón.** Un archivo de licencia se **re-envuelve** sin cambiar una palabra: `fill-paragraph`
+de Emacs (`fill-column` 70), `fmt` (75), `prettier --prose-wrap` sobre un `LICENSE.md`. **La
+licencia es idéntica; el texto no.** Un clasificador que mide **frases contiguas** contra texto **sin
+normalizar** cambia de respuesta, porque `grep` es orientado a líneas.
+
+**Cómo se aplica.** Dos reglas, y la segunda no es una frase:
+
+1. **Normalizar UNA vez, para todo el payload.** El arreglo de `P304` normalizó sólo para la rama
+   BSD, **en una variable local** — y eso es precisamente lo que dejó a MIT y al Unlicense leyendo
+   el payload crudo. Una normalización local es una normalización que el próximo ancla no hereda.
+2. **Acotar el bloque de título en BYTES, no en líneas.** `head -40` cuenta líneas, y una cuenta de
+   líneas no es una propiedad del documento: es una propiedad de dónde caen sus saltos.
+
+**El límite se mide, no se elige.** `p308/window_probe.sh` imprime los offsets reales: la definición
+de la sección 0 de la AGPL en el byte **2.769** (`kuali/kfs`), la sección 13 de la GPL-3.0 —la trampa
+de `P171`— en el byte **28.272** (`moodle/moodle`). **4.000 B separa las dos por un factor de 7.**
+
+🔴 **El costo cuando no se aplica, y es asimétrico:** el Unlicense pasa a
+`NONCOMMERCIAL-NOT-OSI`, o sea que **la KB descarta una pieza usable** — el error que cuesta
+trabajo, no exactitud.
+
+### 🟢 `P309` — Un titular no se puede leer de una LÍNEA
+
+**El patrón.** `holder_of` devuelve la línea que empieza con `Copyright`, y el ancla `^Copyright` es
+load-bearing: `P255` lo instaló para que no se reporte prosa del cuerpo como titular (`gibbonedu/core`
+devolvía una oración de la sección 8). 🔴 **Pero una línea depende del reflujo por construcción:**
+`Copyright (c) 2015 Tyler Mulligan` mide 33 columnas, así que a `fill-column` 30 vuelve cortado en
+*«…Tyler»*.
+
+**Cómo se aplica, y qué NO hacer.** La ventana en bytes volvió a hacer **alcanzable** la línea, y eso
+alcanza para todo ancho realista. 🔴 **Lo que no hay que hacer es quitar el ancla `^Copyright`** para
+“arreglarlo”: se reabre `P255`. El arreglo correcto es leer un **tramo** sobre el texto normalizado,
+y queda **pre-registrado** en vez de improvisado.
+
+### 🔴 `P310` — Permisiva no es lo mismo que capaz: la licencia puede cubrir el EJEMPLO y no el motor
+
+**El patrón.** Un repo de **muestras de API** lleva una licencia permisiva **real** sobre el código de
+ejemplo, mientras la capacidad vive detrás de una clave paga. **Las dos respuestas del clasificador
+son correctas y las dos engañan**: `family_of` → `MIT`, `commercial_use_ok` → `allowed`.
+
+**Cómo se aplica.** Antes de publicar una fila, preguntar **qué se ejecuta con ella**:
+
+| Pregunta | `speechsuper/SpeechSuper-API-Samples` | `Halleck45/OpenPronounce` |
+|---|---|---|
+| ¿La licencia es permisiva y verificada por payload? | 🟢 MIT, 1.068 B | 🟢 MIT, 1.113 B |
+| ¿Corre sin credencial de tercero? | 🔴 **no** | 🟢 **sí, local, sin API key** |
+| ¿Qué cede entonces? | el **cliente** de una API paga | el **evaluador** |
+
+🔵 **No se descarta: se marca.** Un cliente que ya paga SpeechSuper puede usarla, y la fila le sirve.
+🔴 **Lo que no puede pasar es que entre a una propuesta como *«hay un evaluador MIT»*.**
+
+### 🔴 `P311` — Lo que el pase afirma tiene control; lo que el pase da por implícito, no
+
+**El patrón.** Todos los controles de esta base auditan una afirmación **explícita**: esta licencia
+es X, este titular es Y, esta región pertenece al vocabulario cerrado, esta tendencia citada existe.
+🔴 **La afirmación de que un alta es NUEVA no se escribe en ninguna parte: está implícita en llamarla
+alta.** Y lo implícito no tiene superficie que auditar.
+
+**Cómo se aplica.** `python3 p311-duplicate-alta-gate/check_duplicate.py --stdin < slugs.txt`
+**antes** de redactar, no después. Reporta **archivo, línea y sección**, que es lo que convierte
+*«ya está»* en *«ya está, en la capa de habla agregada en el pase 14»*.
+
+🔵 **Y tiene control negativo para las DOS direcciones, porque el falso `ALREADY` suprimiría trabajo
+real:** `AmirF194/canvas-mcp` y `BartMassey-upstream/canvas-mcp` son filas distintas y legítimas de
+esta base, igual que `examplary/qti` y `instructure/qti`. El gate las reporta como
+`NAME COLLISION`, **no** como duplicado.
+
+---
+
+### 🆕 `R-100-HABLA-PERMISIVA` — Práctica y evaluación de lengua hablada, auto-hospedada de punta a punta
+
+**Para quién.** Un ministerio, una universidad o una cadena de institutos de idiomas que necesita
+práctica conversacional y **puntaje de pronunciación auditable**, y que **no puede** mandar audio de
+alumnos a un tercero. 🔵 **La condición de compra está medida en dos regiones:** la soberanía decide
+la infraestructura de ~la mitad de las empresas de APAC, y en EMEA la voz de un alumno es el dato que
+menos se quiere ceder.
+
+**Las piezas, todas con familia leída del PAYLOAD este pase o el 14:**
+
+| Rol en la cadena | Pieza | Licencia (payload) | Bytes |
+|---|---|---|---|
+| Agente de práctica (decide **qué enseñar**) | [`mikhailvs/loqui`](https://github.com/mikhailvs/loqui) | 🟢 **MIT** | 1.074 |
+| Evaluador fonema a fonema (**puntaje operativo**) | [`Halleck45/OpenPronounce`](https://github.com/Halleck45/OpenPronounce) | 🟢 **MIT** | 1.113 |
+| Modelo comparable (**puntaje publicable**) | [`YuanGongND/gopt`](https://github.com/YuanGongND/gopt) | 🟢 **BSD-3-Clause** | 1.517 |
+| ASR de base | [`kaldi-asr/kaldi`](https://github.com/kaldi-asr/kaldi) | 🟢 **Apache-2.0** | 17.264 |
+| Almacén de analítica | [`pelotech/xapi-lrs`](https://github.com/pelotech/xapi-lrs) | 🟢 **Apache-2.0** | 11.357 |
+| Entrega y matrícula | [`moodle/moodle`](https://github.com/moodle/moodle) | 🔴 **GPL-3.0** | 35.147 |
+| 🔴 Corpus de referencia | `jimbozhang/speechocean762` | 🔴 **sin cesión verificable** | — |
+
+**El cableado, explícito:**
+
+```
+alumno habla
+   │
+   ├─► loqui: Whisper (STT) ──► ARNÉS ──► invariantes VETAN ──► LLM realiza la jugada
+   │                              │        (Ollama local/LAN, sin salida a nube)
+   │                              └──► edge-tts ──► le responde
+   │
+   └─► OpenPronounce ──► puntaje 0-100 + PER/WER + IPA oído + F0/energía
+                              │
+                              ├─► gopt ──► PCC fonema/palabra/oración  (sólo para CALIBRAR)
+                              │
+                              └─► sentencia xAPI ──► pelotech/xapi-lrs ──► panel docente
+                                                            │
+                                        Moodle (matrícula, cohorte, libro de notas) ──┘
+```
+
+🔴 **El corpus queda FUERA del entregable, y con la razón dicha.** `speechocean762` no trae archivo
+de licencia, y este pase cerró la vía de registro que `P306` había usado con éxito en npm: tanto
+`openslr.org` como `huggingface.co` dan `000` por egreso bloqueado. 🟢 **Se puede: `gopt` necesita el
+corpus para COMPARAR, no para OPERAR, y `OpenPronounce` no lo necesita en absoluto.** La calibración
+se hace **sobre audio del cliente**, que además es lo correcto técnicamente —ver abajo.
+
+🔴 **El riesgo técnico, medido y viejo en esta base:** los puntajes de un modelo evaluado contra
+`speechocean762` son de hablantes con **L1 mandarín** y **no son transferibles** a un despliegue
+LATAM o EMEA sin recalibrar. `OpenPronounce` declara español y portugués **experimentales** (sólo el
+inglés está calibrado). 🔵 **Eso no es un impedimento: es la línea de trabajo que un studio factura.**
+
+**Estimación.**
+
+| Fase | Semanas | Qué sale |
+|---|---|---|
+| Cadena mínima en pie (loqui + OpenPronounce, un idioma, local) | **3–4** | demo con audio real del cliente |
+| Calibración L1 del cliente (recolección + ajuste + umbrales) | **4–6** | puntajes defendibles ante un docente |
+| Analítica xAPI + panel + integración Moodle | **3–4** | libro de notas y cohortes |
+| Expediente del art. 50 (marcado de lo sintético) y DPIA | **2–3** | lo que EMEA compra |
+| **Total** | **12–17** | |
+
+⚠️ **Dos límites del presupuesto, declarados:** (1) el tutorial de inferencia de `gopt` tiene un
+**bug abierto** que su propio `README` dice que hay que resolver antes de usarlo, así que las 4–6
+semanas de calibración llevan riesgo real; (2) Moodle es **GPL-3.0** — no contamina el resto de la
+cadena porque se integra por **API**, no por enlace, y eso hay que mantenerlo así a propósito.
+
+---
+
+### 🆕 `R-100-AUTOGRADING-PERMISIVO` — Corrección automática desplegable, sin el §13 encima
+
+**Para quién.** Una facultad de ingeniería o un bootcamp que quiere autograding **a escala de
+cátedra** y necesita poder modificar y entregar el sistema **sin disparar copyleft de red**.
+
+🔵 **Por qué esta receta existe ahora y no antes.** La capa de autograding de esta base tenía, desde
+el pase 5, una pieza desplegada a escala real y **no construible** (`eecs-autograder/autograder.io`,
+~5.000 alumnos/semestre en Michigan, **sin cesión**, re-medido este pase en 7 nombres) y una
+permisiva-de-nombre pero **AGPL-3.0** (`INGInious`, 34.764 B, verificada por payload este pase).
+🟢 **Este pase pone las dos alternativas que faltaban.**
+
+| Pieza | Licencia (payload) | Qué la distingue | Región (indicio de primera mano) |
+|---|---|---|---|
+| [`Submitty/Submitty`](https://github.com/Submitty/Submitty) | 🟢 **BSD-3-Clause**, 1.542 B, titular **organizacional** | *black-box testing*, análisis estático y **fugas de memoria** (Valgrind / Dr Memory) en Python, C/C++, Java, Scheme, Prolog | North America (RPI/RCOS) |
+| [`autolab/Autolab`](https://github.com/autolab/Autolab) | 🟢 **Apache-2.0**, 11.324 B | ***scoreboards*** como primitiva, + *gradebooks*, anotación de código, días de gracia, **chequeo de copia** | North America **y EMEA** — su `README` declara despliegue en **Pittsburgh, Silicon Valley, Qatar y Rwanda** |
+
+**Cuál elegir, que es la pregunta real:**
+
+- **`Apache-2.0` si hay exposición a patentes o un cliente corporativo:** `Autolab` trae **concesión
+  expresa de patente**, que `BSD-3` **no** da. Es la diferencia que un departamento legal nota.
+- **`BSD-3` si la variedad de lenguajes evaluados manda:** `Submitty` cubre cinco familias con
+  análisis estático y chequeo de memoria incluidos.
+- 🔴 **`INGInious` sólo con el §13 resuelto:** un autograder entregado **como servicio** dispara la
+  cláusula de red de la AGPL-3.0. Las dos de arriba no.
+
+**El cableado con lo que esta base ya tiene probado:**
+
+```
+entrega del alumno ──► Submitty | Autolab  (sandbox Docker, casos de test)
+                              │
+                              ├─► borrador de nota + feedback
+                              │        │
+                              │        └─► grading-draft-gate/  ◄── P14 de esta base:
+                              │              el modelo PROPONE, el docente DISPONE
+                              │              (la nota no se escribe sin confirmación humana)
+                              │
+                              └─► sentencia xAPI ──► pelotech/xapi-lrs ──► analítica de cohorte
+```
+
+🔵 **La compuerta no es decorativa y es lo que vuelve la receta vendible en EMEA:** la corrección
+automatizada de exámenes es **alto riesgo** del Anexo III del AI Act (diferido a `2027-12-02`, no
+derogado), y `grading-draft-gate/` es la pieza de esta base que hace que **ninguna nota se escriba
+sin confirmación humana** — la supervisión humana que el expediente exige, implementada en vez de
+prometida.
+
+**Estimación: 6–9 semanas** para una cátedra piloto (despliegue + 2 lenguajes + compuerta de nota +
+panel), **+3–4** por cada integración con el SIS de la institución.
+
+---
 
 ## 🆕 Patrones del pase 99 — P304–P306 y la receta P307
 

@@ -9,6 +9,7 @@ updated: 2026-10-04
 > Plataformas verticales reales, en producción, customizables con AI.
 > Modelo: partir de algo que ya funciona y que ya tiene los datos, y agregar la capa agéntica arriba.
 > Verificado vía WebFetch el 2026-09-30; las capas del pase 11, el 2026-10-01.
+> **Pase 100 del 2026-10-04:** 🟢 **2 verticales nuevas, y las dos llenan el hueco que el pase 5 dejó ABIERTO en la capa de autograding de este archivo: una plataforma desplegada cuya licencia SÍ se pueda construir encima.** `Submitty/Submitty` (**BSD-3-Clause**, `LICENSE.md` 1.542 B, **titular organizacional** `Submitty`, 2014-2026 — RPI/RCOS) y `autolab/Autolab` (**Apache-2.0**, `LICENSE` 11.324 B — CMU). 🔴 **Por qué importa: la fila que este archivo tiene en esa capa desde el pase 5 es `Autograder.io`, de la Universidad de Michigan, con ~5.000 alumnos por semestre y la licencia marcada «no declarada» — y este pase la volvió a medir en 7 nombres de archivo y SIGUE sin ceder nada.** 🔵 **Así que la capa deja de tener un hueco: lo desplegado-y-no-usable ahora tiene dos alternativas desplegadas Y permisivas, con ~5.000 alumnos/semestre cada una en su institución.** 🟢 **Y `autolab/Autolab` trae una clase de indicio REGIONAL nueva para esta base: su `README` declara el DESPLIEGUE por sede —Pittsburgh, Silicon Valley, Qatar y Rwanda— o sea que una plataforma coloca DOS regiones (North America y EMEA) por huella de operación y no por domicilio del titular, que es lo que `P135` prohíbe inferir.** 🔴 **`P311`: el pase casi publica como alta a `INGInious/INGInious` y a `eecs-autograder/autograder.io`, las dos ya en ESTE archivo desde los pases 67 y 5; el gate nuevo las frenó antes de escribir** (`p311`, **11/11**, 14 slugs → 5 ya publicados). 🟢 **`lib/license_family.sh` 62/62 → 79/79; 51 suites pasan, 0 fallan.** Ver **`P308`**–**`P311`**.
 > **Pase 97 del 2026-10-04:** 🟢 **Sin filas nuevas, y a propósito: las seis plataformas Java/Maven que este pase midió YA están todas en este archivo. Lo que entra es el VEREDICTO DE LICENCIA de cada una leído por un segundo canal independiente —la declaración del `pom.xml`— y la capa Java/Maven de esta vertical era justo la que el barrido de esta base no podía leer** (**P294**).
 >
 > **La capa de plataforma Java/Maven, leída del `pom.xml` por el camino de producción** (payloads reales vía `raw.githubusercontent.com`, el único canal vivo; `curl -sI` sobre `github.com` da **403**):
@@ -158,6 +159,78 @@ updated: 2026-10-04
 > versiones), así que lo permisivo (`qti3-*`, `instructure/qti`) es **lo único proponible** — con **`qti3-a11y`** y
 > **`qti3-pnp`**, que abren accesibilidad de evaluación como entregable auditable (**P72**). ⚠️ **Open edX cambia de
 > recomendación: proponer con presupuesto de mantenimiento (gap 70).** Ver la sección del pase 33, abajo.
+
+## 🟢 La capa de autograding deja de tener un hueco: dos plataformas desplegadas Y permisivas (pase 100 del 2026-10-04)
+
+### 🔴 El hueco, que este archivo arrastraba desde el pase 5
+
+La capa de autograding de este archivo tenía una fila desplegada a escala real y **no construible**:
+
+| Fila (pase 5) | Licencia | Escala declarada |
+|---|---|---|
+| `Autograder.io` (`eecs-autograder/autograder.io`) | 🔴 **no declarada en el repo** | **~5.000 alumnos/semestre** en una docena de cursos, Universidad de Michigan |
+
+🔴 **Re-medido este pase y el veredicto no cambió: 7 nombres de archivo de licencia, 0 hits; el repo
+está vivo (`README.md` → `200`) y no cede nada.** Es la misma forma que el
+`chatt-state/banner-mcp-server` del pase 99 — **la pieza más desplegada de su capa es la que no se
+puede usar** — con una diferencia que ahora sí se puede escribir: **acá el hueco era de una opción,
+no de la capa.**
+
+### 🟢 Las dos altas, con la licencia leída del PAYLOAD
+
+| Plataforma | Licencia (payload) | Bytes | Titular | Qué agrega | Región |
+|---|---|---|---|---|---|
+| [`Submitty/Submitty`](https://github.com/Submitty/Submitty) | 🟢 **BSD-3-Clause** | 1.542 | `Copyright (c) 2014-2026, [Submitty…]` — **organizacional** | gestión de curso **+** entrega **+** examen **+** nota, con *black-box testing*, análisis estático y chequeo de fugas de memoria (Dr Memory / Valgrind) para Python, C/C++, Java, Scheme y Prolog | North America |
+| [`autolab/Autolab`](https://github.com/autolab/Autolab) | 🟢 **Apache-2.0** | 11.324 | n/a por construcción | autograding **+ *scoreboards*** (su segunda idea central), más *gradebooks*, *rosters*, anotación de código, corrección manual, penalidades por atraso, días de gracia, **chequeo de copia** y envíos masivos | North America **y** EMEA |
+
+🔵 **La diferencia entre las dos, que es la que decide cuál proponer.** `Submitty` es **BSD-3**, o sea
+la cesión más corta de las dos, con **titular organizacional** —lo que importa porque la atribución
+corre hacia una entidad y no hacia una persona (`P184`)— y su fuerte es la **variedad de lenguajes
+evaluados**. `Autolab` es **Apache-2.0**, trae **patente expresa** (lo que `BSD-3` no da) y su fuerte
+es que el *scoreboard* es una primitiva de producto, no un agregado: **gamificación de cátedra sin
+construirla.**
+
+### 🟢 Una clase de indicio regional nueva para esta base: la HUELLA DE DESPLIEGUE
+
+🔵 **`autolab/Autolab` coloca DOS regiones y ninguna sale del domicilio del titular**, que es
+justamente lo que `P135` prohíbe inferir. Sale del `README`, de primera mano:
+
+> *«Each semester, it is used by about 5,000 CMU students in courses in **Pittsburgh**, **Silicon
+> Valley**, **Qatar**, and **Rwanda**.»*
+
+| Sede declarada | Región (vocabulario cerrado) |
+|---|---|
+| Pittsburgh · Silicon Valley | **North America** |
+| Qatar · Rwanda | **EMEA** |
+
+🔵 **Por qué es una clase distinta y no una variante de las que esta base ya usa.** `P135` acepta
+indicios de primera mano como un dominio institucional (`.cam.ac.uk`, `webapps.ph.ed.ac.uk`) o una
+**forma jurídica** (`gGmbH`, la clase que el pase 99 agregó). **Los tres son del PROPIETARIO.** Una
+huella de despliegue es del **USO**: dice dónde la plataforma **corre en producción**, que es el dato
+que una propuesta necesita —*«¿hay precedente en mi región?»*— y que el domicilio del titular nunca
+contesta. **Amplía `P135` sin romperlo: sigue siendo primera mano y sigue sin inferirse de un
+nombre.**
+
+⚠️ **Y con su límite dicho: una sede de despliegue no es una referencia comercial.** Que Autolab
+corra en Qatar y Rwanda dice que **el software opera** en esas jurisdicciones, no que exista un caso
+citable ni soporte local. Para una propuesta EMEA es **un precedente técnico**, y se cotiza como tal.
+
+### 🔵 `INGInious`, re-verificada y sin ser alta
+
+`INGInious/INGInious` **ya está en este archivo desde el pase 67** y el gate de `P311` lo frenó antes
+de escribirlo como alta. Lo que este pase agrega es el veredicto por el control compartido:
+🔴 **`AGPL-3.0`** (`LICENSE`, 34.764 B), confirmado por payload. **Eso la deja del lado caro de la
+capa**: un autograder entregado como servicio dispara el §13, y las dos altas de arriba no.
+
+| Capa de autograding, después de este pase | Licencia | Construible para un entregable |
+|---|---|---|
+| `Submitty/Submitty` | 🟢 BSD-3-Clause | 🟢 sí |
+| `autolab/Autolab` | 🟢 Apache-2.0 (patente expresa) | 🟢 sí |
+| `INGInious/INGInious` | 🔴 AGPL-3.0 | ⚠️ sólo con el §13 resuelto |
+| `Ovsyanka83/autograder` | 🔴 GPL-3.0 | ⚠️ copyleft |
+| `eecs-autograder/autograder.io` | 🔴 **sin cesión** | 🔴 no |
+
+---
 
 ## 🟢 Una vertical nueva y un MOTOR DE EVALUACIÓN permisivo: la capa QTI deja de ser sólo reproducción (pase 99 del 2026-10-04)
 

@@ -22,49 +22,8 @@
 __decl() { printf '%s' "$1" | grep -qE "(^|[^a-z0-9])($2)([^a-z0-9]|\$)"; }
 
 osi_family_of() {
-  local t n
-  # -------------------------------------------------------------------------
-  # P308 (pase 100).  DOS cambios, y los dos son el mismo defecto medido por un eje nuevo:
-  # el REFLUJO del texto.  Un payload de licencia se re-envuelve sin cambiar una palabra
-  # --`fill-paragraph` de Emacs (fill-column 70), `fmt` (75), `prettier --prose-wrap` sobre
-  # un LICENSE.md-- y esta base YA tiene un especimen REAL de la direccion inversa
-  # (`p288/fixtures/agpl-3.0-kuali-kfs-reflowed.LICENSE`, parrafos unidos en lineas largas).
-  #
-  # (1) SE NORMALIZA UNA VEZ, PARA TODO EL PAYLOAD.  El arreglo de P304 normalizo el espacio
-  #     SOLO para la rama BSD (la variable local `nbsd`), y dejo las otras dos anclas de
-  #     frase leyendo el payload CRUDO.  `grep` es orientado a lineas: una frase contigua
-  #     medida contra texto sin normalizar no sobrevive a un salto de linea entre dos de sus
-  #     palabras.  Medido: el ancla del Unlicense ocupa las columnas 9..70 de una primera
-  #     linea de 71, asi que a fill-column 70 el corte cae DENTRO del ancla.  Y la perdida
-  #     no termina en UNCLASSIFIED: la compuerta de P250 esta condicionada a «familia
-  #     identificada», al perderse la familia la compuerta SE ABRE, y el token-match sobre
-  #     el cuerpo --que la compuerta existe para suprimir-- encuentra «for any purpose,
-  #     commercial or NON-COMMERCIAL», que es la frase con la que el Unlicense CONCEDE.
-  #     Veredicto: `NONCOMMERCIAL-NOT-OSI` sobre el texto mas permisivo que existe.  La
-  #     direccion es la de P299 (inventa una restriccion), no la de P304 (pierde estante).
-  #
-  # (2) LA VENTANA DEL BLOQUE DE TITULO SE MIDE EN BYTES, NO EN LINEAS.  `head -40` cuenta
-  #     LINEAS, y re-envolver mas angosto empuja el MISMO texto mas alla de la linea 40: una
-  #     cuenta de lineas no es una propiedad del documento, es una propiedad de donde caen
-  #     sus saltos.  Medido sobre el payload AGPL real de kuali/kfs: a fill-column 70 el
-  #     ancla de la seccion 0 que P288 instalo queda FUERA de la ventana, cae por la rama
-  #     GPL de abajo que matchea el preambulo de la propia AGPL, y el veredicto es
-  #     `GPL-2.0`; a 40, ni el titulo entra y termina en `NONCOMMERCIAL-NOT-OSI` por la
-  #     «noncommercially» de la seccion 6.  Es P171 reabierto por TERCERA vez y sobre el par
-  #     exacto que P171 existe para proteger (P288 fue la caja, esto es la ventana).
-  #
-  #     EL LIMITE ESTA MEDIDO, NO ELEGIDO.  `p308/window_probe.sh` imprime los offsets en el
-  #     texto normalizado de los payloads reales de esta base:
-  #       - definicion de la seccion 0 de la AGPL (ancla de P288), kuali/kfs ... byte  2.769
-  #       - «Version 3» en el mismo payload .......................... byte  2.779
-  #       - seccion 13 de la GPL-3.0 (la trampa de P171), moodle/COPYING  byte 28.272
-  #     4.000 B deja la primera DENTRO con margen y la segunda FUERA por un factor de 7, y
-  #     ademas ESTRECHA la ventana para los payloads de lineas largas, donde `head -40`
-  #     llegaba a leer el cuerpo entero.  El control negativo que lo afirma vive en
-  #     `p308-phrase-anchor-sweep/test_anchors.sh`.
-  # -------------------------------------------------------------------------
-  n=$(printf '%s' "$1" | tr -s '[:space:]' ' ')
-  t=$(printf '%s' "$n" | head -c 4000)
+  local t
+  t=$(printf '%s' "$1" | head -40 | tr -s '[:space:]' ' ')
   case "$t" in
     *"GNU AFFERO GENERAL PUBLIC LICENSE"*) echo "AGPL-3.0"; return ;;
     *"GNU LESSER GENERAL PUBLIC LICENSE"*) echo "LGPL"; return ;;
@@ -102,12 +61,7 @@ osi_family_of() {
     printf '%s' "$t" | grep -qi 'Attribution\|Atribuci'                && { echo "CC-BY-4.0"; return; }
     echo "CC-UNSPECIFIED"; return
   fi
-  # P308: `$n`, no `$1`.  El ancla mide 43 columnas, asi que necesita un envoltorio mas
-  # angosto que eso para partirse -- mas raro que el del Unlicense, y ademas esta SOMBREADA
-  # por el ancla de titulo «MIT License» de arriba, que ya es normalizada.  Se arregla igual:
-  # la sombra solo cubre a los payloads que TRAEN titulo, y un MIT sin titulo (el que abre
-  # directamente en «Copyright (c) ...») no tiene otra via que esta.
-  printf '%s' "$n" | grep -qi 'Permission is hereby granted, free of charge' && { echo "MIT"; return; }
+  printf '%s' "$1" | grep -qi 'Permission is hereby granted, free of charge' && { echo "MIT"; return; }
   # P304 (pase 99).  La linea de concesion BSD estaba anclada como FRASE CONTIGUA, y la
   # identidad de BSD es una SECUENCIA ORDENADA DE PALABRAS, no una cadena fija.  Medido, no
   # supuesto: `instructure/QTIMigrationTool` (BSD-3-Clause real, `LICENSE.txt` 1.392 B,
@@ -134,19 +88,14 @@ osi_family_of() {
   # que el hueco entre los dos tokens admite una insercion ACOTADA Y DENTRO DE LA ORACION:
   # el `[^.]` prohibe cruzar un punto, y el limite de 40 corta la deriva.  Se normaliza el
   # espacio porque la insercion puede caer sobre un salto de linea.
-  # P308: era una SEGUNDA normalizacion local (`nbsd`).  Ahora hay una sola, `$n`, arriba --
-  # y que fuera local es justo lo que dejo a MIT y al Unlicense leyendo el payload crudo.
-  printf '%s' "$n" | grep -qiE 'redistribution and use[^.]{0,40}in source and binary forms' \
+  local nbsd; nbsd=$(printf '%s' "$1" | tr -s '[:space:]' ' ')
+  printf '%s' "$nbsd" | grep -qiE 'redistribution and use[^.]{0,40}in source and binary forms' \
       && { echo "BSD"; return; }
   printf '%s' "$t" | grep -qi 'Mozilla Public License' && { echo "MPL-2.0"; return; }
   # The Unlicense. p170's inline classifier HAD this; this shared lib never did, so adopting
   # the lib would have LOST a family (FWU-DE/mem-mcp). P237 cuts both ways: the shared control
   # is only better than the copies once it is a superset of them.
-  # P308 -- ESTA es la que la prediccion del pase 99 nombro y la que FALLA.  Unica ancla del
-  # clasificador que es frase cruda Y NO TIENE SOMBRA: ninguna rama de titulo contesta por el
-  # Unlicense, asi que cuando el salto de linea cae dentro de la frase la familia se pierde
-  # del todo, la compuerta de P250 se abre y el veredicto comercial se INVIERTE.
-  printf '%s' "$n" | grep -qi 'free and unencumbered software released into the public domain' \
+  printf '%s' "$1" | grep -qi 'free and unencumbered software released into the public domain' \
       && { echo "Unlicense"; return; }
 
   # DECLARATION FALLBACK, added in pass 77 after frappe/education.
@@ -197,10 +146,7 @@ osi_family_of() {
 
   local bytes; bytes=$(printf '%s' "$1" | wc -c | tr -d ' ')
   if [ "$bytes" -le 400 ]; then
-    # P308: minuscula sobre `$n` (ya normalizado) y no sobre `$1`, para que los patrones de
-    # DOS tokens (`gpl ?v?-?3`) no se partan en un envoltorio angosto.  Los de un token solo
-    # eran seguros ya: una palabra no se puede partir en dos lineas.
-    local d; d=$(printf '%s' "$n" | tr '[:upper:]' '[:lower:]')
+    local d; d=$(printf '%s' "$1" | tr '[:upper:]' '[:lower:]')
     # Frontera de PALABRA.  Clases explicitas en vez de `\b` para no depender de la
     # extension GNU, y el token puede venir pegado a puntuacion (`License: MIT.`).
     __decl "$d" 'agpl|affero'      && { echo "AGPL-3.0 (declaracion)"; return; }
@@ -352,11 +298,7 @@ holder_of() {
   # family question, and for the same reason: a license BODY contains the vocabulary of the
   # question being asked.  gibbonedu/core is the proof that an unbounded anchor returns prose.
   local line
-  # P308: `head -c 4000` en vez de `head -40`.  Esta funcion SI necesita lineas --su ancla es
-  # `^[[:space:]]*Copyright`-- y `head -c` las conserva: recorta bytes sin tocar los saltos.
-  # Lo que elimina es la dependencia del reflujo, que aca importa porque un MIT de 1 kB
-  # envuelto a 30 columnas pasa de ~21 a ~40 lineas y empuja al titular fuera de la ventana.
-  line=$(printf '%s' "$payload" | head -c 4000 \
+  line=$(printf '%s' "$payload" | head -40 \
     | grep -iE '^[[:space:]]*(Copyright|\(c\)|©)' \
     | grep -viE 'Free Software Foundation|Apache Software Foundation|Open Source Initiative' \
     | grep -viE 'copyright notice (and|shall)|COPYRIGHT HOLDERS? BE LIABLE|copyright holder, and you' \

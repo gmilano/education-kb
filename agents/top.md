@@ -8,6 +8,7 @@ updated: 2026-10-04
 
 > Agentes y herramientas AI open source para educación. Foco: MIT / Apache 2.0 / BSD.
 > Verificado repo por repo vía WebFetch el 2026-09-30 (stars y licencia leídos de la página del repo).
+> **Pase 100 del 2026-10-04:** 🟢 **2 altas de agente, y el eje lo eligió el PROPIO dato de mercado de este pase:** el barrido de tendencias devolvió que *language learning* es **el segmento de mayor crecimiento**, y el eje rotado hacia práctica oral dio **14 candidatas medidas → 7 licenciadas nuevas, 2 sin cesión, 5 YA PUBLICADAS**. 🟢 **La alta que manda es `mikhailvs/loqui` (MIT, 1.074 B): un arnés de agente para lengua HABLADA donde la pedagogía vive en el ARNÉS y no en el prompt — cinco impulsos y un conjunto de INVARIANTES FALSABLES que VETAN la jugada que viole buena pedagogía, con el bucle entero local (Whisper → arnés → LLM → edge-tts).** 🔴 **Pero el hallazgo de método es peor y es sobre esta base: el pase estuvo a punto de publicar «esta base no tenía NINGUNA pieza de habla», y era FALSO — `repos/foundations.md` tiene la «Capa de habla y lectura oral» desde el pase 14, con `OpenPronounce`, `kaldi` y `speechocean762`, incluido el hallazgo de que el corpus no trae licencia.** 🔴 **`P311`: esta base tiene controles de frontmatter, integridad de tablas, vocabulario de región, citas colgadas, familia de licencia, titular, uso comercial y propiedad de manifiesto — y NINGUNO pregunta «¿esto ya está acá?». Todos auditan una afirmación que el pase HACE; la de que un alta es NUEVA es implícita, y lo implícito no lo audita nada.** 🟢 **El gate quedó escrito y corrido (`p311`, 11/11): 14 slugs → 5 ya publicados, con archivo, línea y sección.** 🔴 **La acción pre-registrada del pase 99 está CONFIRMADA: 3 de 18 anclas eran frase cruda, y la del Unlicense no sólo pierde la familia — INVIERTE el veredicto comercial a `NONCOMMERCIAL-NOT-OSI` sobre el texto más permisivo que existe.** 🔴 **Y el control negativo de la suite falló sobre un ancla que NO es frase: la de la AGPL que `P288` instaló es normalizada y se perdía igual, porque la VENTANA del bloque de título contaba LÍNEAS — `P171` reabierto por TERCERA vez.** 🟢 **`lib/license_family.sh` 62/62 → 79/79; `p308` 100/100; 51 suites pasan, 0 fallan.** ⚠️ **Fragilidad PROBADA no es defecto DISPARANDO: 0 de 18 payloads mal clasificados tal como se publican, y el reparto queda SIN EXTRAPOLAR (`P286`).** Ver **`P308`**–**`P311`**.
 > **Pase 99 del 2026-10-04:** 🔴 **La tabla se queda igual: CERO altas de agente — y por primera vez el cero es INFORMATIVO en vez de vacío.** 🟢 **La acción pre-registrada del pase 98 se corrió completa y su predicción se CONFIRMA en la letra:** los dos barridos del encargo (año **calculado**, `date -u +%Y` → **2026**) volvieron a **0** piezas de la industria, y el eje rotado (`xAPI`/LRS, generación de ítems QTI, MCP sobre SIS) devolvió **15 candidatas → 9 licenciadas, 6 sin cesión**. 🔴 **Pero NINGUNA de las 9 es un agente: son INFRAESTRUCTURA, y van a `repos/foundations.md` (7) y `verticals/solutions.md` (1).** 🔵 **Así que la predicción se cumple leída como *«≥1 pieza licenciada»* y se FALSIFICA leída como *«≥1 agente»* — y la lección de método es para el próximo pase que pre-registre: una predicción falsable tiene que nombrar la UNIDAD que se cuenta, porque *«pieza licenciada»* lo satisface casi cualquier barrido.** 🔴 **El descarte que decide un presupuesto: `chatt-state/banner-mcp-server`, el ÚNICO MCP sobre Ellucian Banner que el barrido encontró, está vivo, alcanzable por `package.json` y NO CEDE NADA (0 de 14 nombres de licencia) — la capa MCP sobre el SIS de educación superior no tiene punto de partida construible, al contrario de K-12 (`443pablo/mcp-powerschool`).** 🔴 **`P304` — el ancla BSD del control compartido estaba escrita como FRASE CONTIGUA y perdía una familia PERMISIVA:** `instructure/QTIMigrationTool` es BSD-3-Clause real y volvía `UNCLASSIFIED` porque inserta *«of this software»* y *«(where applicable)»* dentro de la oración canónica. **Cuarto eje del mismo defecto** (`P171` cuerpo-vs-título · `P288` caja · `P299` palabra-vs-subcadena · `P304` frase-vs-tokens). ⚠️ **Dirección contraria a `P299` —pierde estante en vez de inventar permiso— pero obliga igual: con la familia en `UNCLASSIFIED` la compuerta de `P250` no corta y el veredicto comercial de un payload permisivo salía del token-match sobre el CUERPO.** 🟢 **`lib/license_family.sh` 50/50 → 62/62 (3 controles negativos); 51 suites pasan, 0 fallan.** 🔴 **`P305`: `adlnet/xapi-lab` declara MIT en `LICENSE` y Apache-2.0 en el `README`, con titular y año distintos.** 🟢 **`P306`: `examplary/qti` ≡ `examplary-ai/qti` y el registro npm desempata el canónico.** Ver **`P304`**–**`P306`**.
 
 > **Pase 97 del 2026-10-04:** 🔴 **La tabla se queda en 94 filas: CERO altas, NOVENO pase consecutivo, con el cero enumerado (`P293`).** El barrido global corrió con el año **CALCULADO** (`date -u +%Y` → **2026**): `top open source AI agents education 2026 github MIT` y `github trending education AI 2026` devolvieron **6** frameworks generalistas (openclaw **385.407 ★**, dify **151.639 ★**, browser-use **108.128 ★**, Mem0 **62.735 ★**, AutoGen **60.284 ★**, Flowise **55.226 ★**), **4** repos de *currículo para enseñar AI a ingenieros* y 🔴 **0** piezas de la industria educativa. 🔵 **Las seis cifras de estrellas vuelven IDÉNTICAS por TERCER pase consecutivo** (95, 96, 97) — la saturación del canal deja de ser una impresión y es una medición repetida. 🔬 **Canal (`P247`):** `github.com/<org>/<repo>` → **403**, `github.com/` y `api.github.com/` → **400**, `raw.githubusercontent.com` → 🟢 **200 con payload**; el `curl -sI` que el encargo ordena sigue muerto acá y todo se leyó por `raw`. 🔴 **El esfuerzo del pase se gastó en otra parte, y encontró la misma forma de defecto en dos planos: lo que se construye y no se CONECTA no existe.** 🔴 **En el código: el pase 96 diagnosticó que el barrido manifiesto-consciente es ciego a Java/Maven, escribió el lector correcto (`p289`, 11/11) y no lo cableó — `PARSERS` seguía con cinco nombres y nada fuera de `p289/` lo referenciaba** (**P294**). 🔴 **Y el cableado obvio habría publicado una respuesta nueva y equivocada: con `artifactId` como identidad única, `kuali/kc` y `sakaiproject/sakai` salen `FOREIGN` siendo propios, y `FOREIGN` significa NO atribuir — se habría leído bien la `AGPL-3.0` de Kuali Coeus y se habría negado a publicarla.** 🟢 **Cerrado con la identidad en el `groupId` (`org.kuali.coeus`) y contra los dos segmentos del slug, sin tocar `ownership()`: 6 de 6 `OWN`, y dos canales independientes concuerdan 4 de 4.** 🔴 **En la prosa: CATORCE tendencias anunciadas y nunca escritas (706–711 del pase 91, 745–752 del pase 96), y el control que existe para atraparlas era CIEGO a la forma con que esta base las anuncia** (**P295**). 🟢 **Las 745–752 quedan recuperadas; las 706–711 se declaran irrecuperables y NO se inventan.** 🔴 **Y no fueron sólo tendencias: el pase 96 anunció también `P288`, `P289` y `P290` sin escribir sus secciones — ocho tendencias y tres patrones anunciados, cero definidos; los tres patrones quedan recuperados y el control de citas pasa de 263 a 271 definiciones.** Ver **P294**–**P297** y las tendencias **753**–**761**.
@@ -268,6 +269,131 @@ updated: 2026-10-04
 > fila** —`lineage-skill`, con un vocabulario cerrado de 9 valores por afirmación, **4 de los 9 «esto lo produjo el
 > modelo»**— y **ninguna de las dos sabe de la otra**. Ver la capa nueva al final de este archivo, las tendencias
 > **180**–**182** y el patrón **P99**.
+
+## 🟢 Altas de agente: 2 — y el pase se pilla a sí mismo REDESCUBRIENDO una capa propia (pase 100 del 2026-10-04)
+
+### 🔬 El canal, declarado antes de cualquier veredicto (`P247`)
+
+Medido este pase, no heredado. **Dos hosts nuevos, y los dos están cerrados:**
+
+| Canal | Código | Consecuencia |
+|---|---|---|
+| `github.com/<org>/<repo>` | 🔴 **403** | el `curl -sI` que el encargo ordena está **muerto acá** |
+| `api.github.com/repos/<org>/<repo>` | 🔴 **403** | sin estrellas, sin licencia declarada, sin fecha de *commit* |
+| `codeload.github.com` | 🔴 **403** | sin tarball |
+| `raw.githubusercontent.com/<slug>/HEAD/<path>` | 🟢 **200 con payload** | **el único canal de primera mano** |
+| `registry.npmjs.org` · `pypi.org` | 🟢 **200** | el desempate de registro de `P306` sigue disponible |
+| `openslr.org` | 🔴 **000 `EGRESS_BLOCKED`** | 🆕 la distribución canónica de corpus de habla **no se puede leer** |
+| `huggingface.co/api/datasets/…` | 🔴 **000 `connect_rejected`** | 🆕 el segundo canal de datasets, **tampoco** |
+
+🔴 **Consecuencia que se escribe en cada fila nueva: las ESTRELLAS no son verificables este pase.**
+Ninguna fila nueva las lleva. Una cifra leída del buscador puesta en una columna que el resto del
+archivo llena con medición de primera mano **es dato falso con forma de dato bueno**.
+
+### 🔴 El hallazgo de método, y es contra este pase: casi publica un REDESCUBRIMIENTO como alta
+
+El eje rotado de este pase salió de su propio barrido de mercado —*«language learning is the
+fastest-growing segment»*— y la nota de cabecera que estaba redactada decía que **esta base no
+tenía ninguna pieza de habla**. 🔴 **Era falso.** `repos/foundations.md` tiene una sección titulada
+**«Capa de habla y lectura oral»** desde el **pase 14 (2026-10-01)** con `Halleck45/OpenPronounce`,
+`kaldi-asr/kaldi` y `jimbozhang/speechocean762` — **incluido el hallazgo de que el corpus no trae
+archivo de licencia**, que este pase estaba por anunciar como nuevo. Lo mismo con
+`eecs-autograder/autograder.io`, inventariado en `verticals/solutions.md` desde el **pase 5** con
+su licencia ya marcada como no declarada.
+
+🔵 **El defecto no es una licencia mal leída ni un número mal: es que un ALTA estaba por publicarse
+sobre piezas que la base YA TENÍA, y nada en el repositorio habría objetado.** Y la razón es
+estructural, no un descuido: **todos los controles de esta base auditan una afirmación que el pase
+HACE** —la familia, el titular, el uso comercial, la región, la cita—, **y la afirmación de que un
+alta es NUEVA es implícita.** Lo implícito no lo audita nada.
+
+🟢 **`P311` queda escrito como instrumento, no como nota** (`compose/code/p311-duplicate-alta-gate/`,
+**11/11**, con control negativo para las dos direcciones de error: el falso `NEW` que es el defecto,
+y el falso `ALREADY` que suprimiría un alta real — `AmirF194/canvas-mcp` y
+`BartMassey-upstream/canvas-mcp` son filas distintas y legítimas de este archivo).
+
+### 🟢 El reparto real de las 14 candidatas, con el gate corrido ANTES de escribir
+
+| Veredicto | N | Slugs |
+|---|---|---|
+| 🟢 **licenciadas y NUEVAS** | **7** | `mikhailvs/loqui` · `Priyamakeshwari/TeachGPT` · `YuanGongND/gopt` · `Submitty/Submitty` · `autolab/Autolab` · `speechsuper/SpeechSuper-API-Samples` · `Ovsyanka83/autograder` |
+| 🔵 **YA PUBLICADAS** (no son alta) | **5** | `Halleck45/OpenPronounce`, `kaldi-asr/kaldi`, `jimbozhang/speechocean762` (pase **14**) · `INGInious/INGInious`, `eecs-autograder/autograder.io` (pases **5**/**67**) |
+| 🔴 **sin cesión / inalcanzable** | **2** | `speechace/speechace-api-samples` (viva, sin archivo de licencia) · `ABCoder1/mentorAI` (inalcanzable en 4 manifiestos) |
+
+### 🟢 Las dos altas de AGENTE, con la licencia leída del PAYLOAD
+
+| Pieza | Licencia (payload) | Titular | Capa que mueve |
+|---|---|---|---|
+| `mikhailvs/loqui` | 🟢 MIT (`LICENSE` 1.074 B) | `Mikhail Slyusarev` (2026) | 🟢 **ALTA DE CAPA: el primer AGENTE de lengua hablada del inventario** |
+| `Priyamakeshwari/TeachGPT` | 🟢 MIT (`LICENSE.md` 1.057 B, **sin línea de título**) | `Priyadharshini` (2023) | tutor que ajusta al estilo de aprendizaje |
+
+🔵 **La capa de habla de esta base tenía MOTOR y CORPUS desde el pase 14, y le faltaban dos cosas
+distintas: el AGENTE y el MODELO.** Este pase pone las dos — `loqui` acá, y `YuanGongND/gopt` en
+`repos/foundations.md`. **Eso es lo que el pase aporta sobre el eje, dicho con precisión en vez de
+con un «capa nueva» que era falso.**
+
+🔵 **`mikhailvs/loqui` es la pieza de más valor, y no por tamaño.** Su tesis es que **la pedagogía
+vive en el arnés, no en el prompt**: el LLM sólo *realiza* la jugada, y el arnés es dueño de la
+planificación, del estado del aprendiz y de un conjunto de **invariantes falsables que VETAN**
+cualquier jugada que viole buena pedagogía — *«nunca evaluar una palabra no enseñada»*, *«nunca
+amontonar un ítem»*, *«calificar sólo producción diferida»*. **El conjunto de invariantes ES el
+currículo auditable.** Cinco impulsos compiten cada turno (Repair · Review · Progress · Engage ·
+Consolidate) y el ganador pasa por el veto.
+
+🔵 **Y el bucle entero corre local:** `Whisper` (STT) → arnés → LLM (`claude -p` **o** un `Ollama`
+local/LAN) → `edge-tts`. **Esa es, literalmente, la condición de compra que esta base ya midió en
+dos regiones:** la soberanía decide la infraestructura de ~la mitad de las empresas de APAC, y en
+EMEA la voz de un alumno es el dato que menos se quiere mandar a un tercero. **Un tutor de
+conversación que no sube audio es un argumento comercial, no una preferencia técnica.**
+
+⚠️ **`Priyamakeshwari/TeachGPT` entra con su madurez declarada:** proyecto de 2023, cesión MIT real
+y verificada por payload, **sin el aparato de `loqui`** (ni invariantes, ni evidencia, ni bucle de
+voz). Entra porque la cesión es limpia y la capa es la correcta, **no porque sea comparable**.
+
+🔴 **Y trajo un espécimen que le hacía falta a `P308`:** su `LICENSE.md` abre directo en
+*«Copyright (c) 2023 Priyadharshini»*, **sin línea de título**, así que para esta fila el ancla
+frágil de MIT era **la única vía** a la familia MIT en todo el clasificador. **La población sin
+sombra existe en el campo** y no hubo que construirla.
+
+### 🔴 `P310` — una pieza puede ser permisiva y no ceder ninguna CAPACIDAD
+
+`speechsuper/SpeechSuper-API-Samples` tiene **MIT real y verificado por payload** (`LICENSE`,
+1.068 B, titular `speechsuper`, 2022) y cubre **muestras de llamada a una API COMERCIAL** de
+evaluación de pronunciación en 8 idiomas. **La licencia permisiva alcanza al código de ejemplo; el
+motor está detrás de una clave paga.** El control compartido vuelve `MIT`, `commercial_use_ok`
+vuelve `allowed`, y **las dos respuestas son correctas y las dos engañan** si la fila se lee como
+*«hay un evaluador de pronunciación MIT»*.
+
+🔵 **No es un eje nuevo —`P268` ya mide superficie de capacidad— pero es el primer espécimen donde
+el engaño viene de una licencia CORRECTA** en vez de de una ausente. La fila se publica **con la
+marca**, no se descarta: un cliente que ya paga SpeechSuper puede usarla.
+
+### 🔴 Acción pre-registrada para el pase 101, falsable — y con la UNIDAD nombrada
+
+**Afirmación a refutar:** *«la ventana del bloque de título era el último eje de reflujo: con `$n`
+normalizado y `head -c 4000`, ninguna otra respuesta de `lib/license_family.sh` cambia si se
+re-envuelve el payload»*.
+
+🔵 **Predicción falsable, y la unidad que se cuenta es «FUNCIONES EXPORTADAS de la librería cuya
+salida cambia con el ancho», no «anclas» ni «piezas».** La librería exporta **5**:
+`osi_family_of`, `family_of`, `commercial_use_ok`, `affero_lines` y `holder_of`. El pase 100 deja
+**1** medida como dependiente del ancho (`holder_of`, `P309`) y 4 afirmadas invariantes sobre 18
+payloads. **La predicción es que un barrido de las 5 contra los 18 payloads a 10 anchos encontrará
+exactamente 1 dependiente — la ya conocida.** 🔴 **Si aparece una segunda, la afirmación de arriba
+es falsa y el arreglo de `P308` quedó incompleto. `affero_lines` es la candidata declarada, porque
+CUENTA LÍNEAS por construcción** —es el discriminador secundario que el pase 77 midió en 3 líneas
+para GPL-3.0 y 15 para AGPL-3.0— **y re-envolver cambia las dos cifras sin cambiar una palabra del
+payload. Nadie midió todavía qué decide con su número.**
+
+⚠️ **Segunda acción, de DEUDA y es la MISMA que el pase 99 dejó sin pagar:** `P237` sigue **abierto**
+para `p170`, `p206`, `p211` y `p230`. El bloqueo que el pase 99 declaró **sigue vigente y ahora está
+cuantificado**: el control compartido no es superconjunto de las copias porque `p170` clasifica
+`BUSL`, `Elastic` y `PolyForm`, **tres familias que `lib/license_family.sh` no tiene**. 🔵 **El orden
+correcto quedó claro: primero AGREGAR las tres familias al control compartido con sus controles
+negativos, y sólo después cablear las cuatro copias.** Al revés **perdería** familias; no hacerlo es
+lo que ya pasó dos veces.
+
+---
 
 ## 🔴 Altas de agente: 0 — y el cero es INFORMATIVO: el eje rotado devolvió 9 piezas licenciadas y NINGUNA es un agente (pase 99 del 2026-10-04)
 

@@ -8,6 +8,65 @@ updated: 2026-10-04
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 
+## 2026-10-04 — pase 100: GitHub trending vuelve vacío por VIGESIMONOVENA vez, y el canal que eligió el eje fue el de MERCADO
+
+🔬 **Canal declarado primero (`P247`), medido este pase.** `github.com/<org>/<repo>` → 🔴 **`403`** ·
+`api.github.com` → 🔴 **`403`** · `codeload.github.com` → 🔴 **`403`** ·
+`raw.githubusercontent.com` → 🟢 **`200` con payload** · `registry.npmjs.org` → 🟢 **`200`** ·
+`pypi.org` → 🟢 **`200`** · 🆕 `openslr.org` → 🔴 **`000`** · 🆕 `huggingface.co` → 🔴 **`000`**.
+
+### 🔴 El barrido obligatorio, con el año CALCULADO, y su resultado enumerado
+
+`github trending education AI 2026` (año por `date -u +%Y` → **2026**) devolvió, otra vez, **dos
+cosas que no son la industria educativa**:
+
+| Lo que devolvió | Qué es en realidad |
+|---|---|
+| `rohitg00/ai-engineering-from-scratch` (#1 el 2026-05-24) | **currículo** para enseñar AI a ingenieros |
+| `pguso/agents-from-scratch` (MIT) | ídem, agentes desde cero con LLM local |
+| `avinash201199/free-ai-agents-resources` | ídem, colección de recursos |
+| `speedyapply/2026-AI-College-Jobs` | bolsa de trabajo, no educación |
+| `MadsLorentzen/ai-job-search` (#1 el 2026-07-07) | ídem |
+| `DietrichGebert/ponytail` | *skills* para agentes de código |
+| `openclaw` 385.407 ★ · `dify` 151.639 ★ · `browser-use` 108.128 ★ · `mem0` 62.735 ★ · `AutoGen` 60.284 ★ · `Flowise` 55.226 ★ · Semantic Kernel 27.470 ★ | infraestructura **generalista** de agentes |
+
+🔴 **0 repos de la industria educativa, por vigesimonovena vez.** Es `P281` otra vez: la etiqueta
+*education* de los radares generalistas nombra **AI como MATERIA que se enseña**, no **educación
+como SECTOR que se sirve**.
+
+🔵 **Lo que cambió este pase no es el canal, es QUIÉN eligió el eje.** El tercer barrido
+obligatorio —el de **mercado**— devolvió *«language learning is the fastest-growing segment»*, y
+de ahí salió el eje rotado que sí rindió. **Los cuatro barridos fijos no son cuatro consultas
+equivalentes: tres buscan repos en un canal medido saturado 29 veces, y el cuarto busca el mercado
+— y es el único que puede decir DÓNDE buscar repos.** Veintiocho pases lo leyeron como color de
+fondo.
+
+### 🟢 Los repos nuevos del pase, con familia leída del PAYLOAD
+
+| Repo | Familia (payload) | Bytes | Titular | Capa |
+|---|---|---|---|---|
+| [`YuanGongND/gopt`](https://github.com/YuanGongND/gopt) | 🟢 **BSD-3-Clause** | 1.517 | `Yuan Gong` (2022) | el **MODELO** de evaluación de pronunciación que a esta base le faltaba |
+| [`Submitty/Submitty`](https://github.com/Submitty/Submitty) | 🟢 **BSD-3-Clause** | 1.542 | `Submitty` (2014-2026) | autograding + gestión de curso, **titular organizacional** |
+| [`autolab/Autolab`](https://github.com/autolab/Autolab) | 🟢 **Apache-2.0** | 11.324 | n/a por construcción | autograding con *scoreboards*, CMU |
+| [`mikhailvs/loqui`](https://github.com/mikhailvs/loqui) | 🟢 **MIT** | 1.074 | `Mikhail Slyusarev` (2026) | agente de lengua hablada (ver `agents/top.md`) |
+| [`Priyamakeshwari/TeachGPT`](https://github.com/Priyamakeshwari/TeachGPT) | 🟢 **MIT** (sin título) | 1.057 | `Priyadharshini` (2023) | tutor virtual |
+| [`speechsuper/SpeechSuper-API-Samples`](https://github.com/speechsuper/SpeechSuper-API-Samples) | ⚠️ **MIT** sobre **muestras de API comercial** (`P310`) | 1.068 | `speechsuper` (2022) | 8 idiomas, **motor detrás de clave paga** |
+| [`Ovsyanka83/autograder`](https://github.com/Ovsyanka83/autograder) | 🔴 **GPL-3.0** | 35.149 | n/a por construcción | autograder de CLI, publicado en PyPI |
+
+🔵 **`Ovsyanka83/autograder` disparó el control negativo de `P311` en su dirección útil:** el slug
+es **nuevo**, pero el **nombre** `autograder` ya aparece en dos secciones de `agents/top.md`. El
+gate lo reportó como `NAME COLLISION` y **no** como duplicado — que es exactamente la distinción
+que hace que un gate así no suprima altas legítimas.
+
+### 🔵 Y las 5 candidatas que el gate frenó por YA ESTAR publicadas
+
+`Halleck45/OpenPronounce`, `kaldi-asr/kaldi` y `jimbozhang/speechocean762` (**pase 14**) ·
+`INGInious/INGInious` y `eecs-autograder/autograder.io` (**pases 5 / 67**). **Las cinco se habrían
+publicado como alta sin el gate**, y tres de ellas con un hallazgo —el corpus sin licencia— que la
+base ya tenía escrito.
+
+---
+
 ## 2026-10-04 — pase 99: GitHub trending vuelve vacío por VIGESIMOCTAVA vez, y el canal que rindió fue el REGISTRO DE PAQUETES
 
 🔬 **Canal declarado primero (`P247`), medido este pase.** `github.com/<org>/<repo>` →

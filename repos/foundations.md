@@ -8,6 +8,7 @@ updated: 2026-10-04
 
 > Bases sobre las cuales construir. Verificado repo por repo vía WebFetch el 2026-09-30 (capas del pase 10, el 2026-10-01).
 > Leer la columna **Licencia** antes de proponer: media KB de educación es GPL/AGPL, no permisiva.
+> **Pase 100 del 2026-10-04:** 🟢 **1 alta fundacional, y es la pieza que COMPLETA una capa que este archivo tenía a medias desde el pase 14: el MODELO de evaluación de pronunciación.** `YuanGongND/gopt` (**BSD-3-Clause**, `LICENSE` 1.517 B, titular `Yuan Gong`, 2022) es GOPT —ICASSP 2022, MIT & PAII—, el primer modelo que puntúa **múltiples aspectos** (exactitud, fluidez, prosodia) en **múltiples granularidades** (fonema, palabra, oración) a la vez, y es **SOTA sobre `speechocean762`**, que es justo el corpus que este archivo ya inventariaba. 🔴 **Pero el hallazgo del pase es contra esta base, y este archivo es la prueba: el pase estuvo a punto de publicar la capa de habla como NUEVA, y la «Capa de habla y lectura oral» está acá desde el pase 14** con `OpenPronounce`, `kaldi` y `speechocean762` — **incluido el hallazgo de que el corpus no trae archivo de licencia**, que el pase iba a anunciar. 🟢 **`P311`: ningún control de esta base preguntaba «¿esto ya está acá?» —todos auditan una afirmación que el pase HACE, y la de que un alta es NUEVA es implícita— así que el gate quedó escrito y corrido antes de publicar** (`p311`, **11/11**; 14 slugs → **5 ya publicados**, con archivo, línea y sección). 🔴 **La cadena permisiva de esta capa queda CERRADA como irresoluble desde acá, y es una corrección de alcance sobre el pase 14:** ese pase dejó *«pedir los términos a SpeechOcean por escrito»*, y este intentó la vía de **registro** con la que `P306` desempató `examplary/qti` vía npm — **`openslr.org` y `huggingface.co` dan los dos `000` por egreso bloqueado**. **Se puede construir el evaluador entero permisivo (`OpenPronounce` MIT + `gopt` BSD-3 + `kaldi` Apache-2.0) y NO se puede verificar la licencia del corpus contra el que todo el campo se mide.** 🔴 **Y `P308`: 3 de 18 anclas del control compartido eran frase cruda; la del Unlicense INVIERTE el veredicto comercial a `NONCOMMERCIAL-NOT-OSI`, y la ventana del bloque de título contaba LÍNEAS, lo que perdía la AGPL de `P288`.** 🟢 **`lib/license_family.sh` 62/62 → 79/79; 51 suites pasan, 0 fallan.** Ver **`P308`**–**`P311`**.
 > **Pase 99 del 2026-10-04:** 🟢 **7 altas fundacionales, y son DOS CAPAS que este estante no tenía: el ALMACÉN xAPI y la librería de ÍTEMS QTI.** El barrido obligatorio (`open source platform education ERP CRM MIT Apache`) devolvió por vigesimosexta vez el eje generalista (ERPNext/Frappe, Odoo, OFBiz, Huly, AureusERP) — **cero** piezas fundacionales educativas nuevas. 🟢 **Pero el EJE ROTADO que el pase 98 pre-registró sí rindió: 15 candidatas medidas → 9 licenciadas, 6 sin cesión**, y 7 de las 9 son repo fundacional. 🔵 **Lo que abren no es un tema nuevo sino la OTRA MITAD de dos temas que esta base tenía a medias: tenía el CLIENTE xAPI (`learnmcp-xapi`) y no el ALMACÉN; tenía REPRODUCTORES de ítems QTI (`qti3-item-player`, `pie-qti`) y no las librerías de GENERACIÓN y MIGRACIÓN.** 🔴 **`P304` — el ancla BSD del control compartido estaba escrita como FRASE CONTIGUA y perdía una familia PERMISIVA:** `instructure/QTIMigrationTool` es BSD-3-Clause real (University of Cambridge, 1.392 B) y volvía `UNCLASSIFIED`, porque su oración de concesión inserta *«of this software»* y *«(where applicable)»* dentro de la frase canónica. **Cuarto eje del mismo defecto** (`P171` cuerpo-vs-título, `P288` caja, `P299` palabra-vs-subcadena, `P304` frase-vs-tokens-ordenados). 🟢 **`lib/license_family.sh` 50/50 → 62/62** (3 controles negativos), **51 suites pasan, 0 fallan**. 🔴 **`P305` — `adlnet/xapi-lab` declara DOS familias en DOS payloads del mismo repo:** `LICENSE` dice **MIT** (titular `Tyler Mulligan`, 2015) y el `README` dice **Apache-2.0** (titular `Advanced Distributed Learning`, 2016) — **familia, titular y año discrepan a la vez**, y la obligación de atribución corre hacia una parte distinta según cuál gobierne. 🟢 **`P306` — `examplary/qti` ≡ `examplary-ai/qti`, byte-idénticos en 3 archivos, y el REGISTRO desempata:** `registry.npmjs.org/@examplary/qti` nombra `github.com/examplary/qti` como canónico y confirma `MIT` por un canal independiente del payload. Ver **`P304`**–**`P306`**.
 
 > **Pase 97 del 2026-10-04:** 🔴 **Sin repos fundacionales nuevos — el barrido `github trending education AI 2026` (año CALCULADO) devolvió por vigesimoquinta vez el eje generalista: 6 de infra de agentes, 4 de currículo para formar ingenieros de AI, 0 de la industria educativa, y las seis cifras de estrellas IDÉNTICAS a las de los pases 95 y 96.** 🟢 **Pero este archivo gana algo que no tenía: la capa de plataforma Java/Maven queda leída por un SEGUNDO canal independiente —la declaración del `pom.xml`— y concuerda con lo publicado.** Medido punta a punta sobre payloads reales: `sakaiproject/sakai` declara `Educational Community License, Version 2.0` → 🟢 **`ECL-2.0`, igual que la fila**; `UniTime/unitime` declara `Apache Software License (ASL), Version 2.0` → 🟢 **`Apache-2.0`, igual**; `DSpace/DSpace` declara `DSpace BSD License` → 🔵 **`BSD`, acuerdo de FAMILIA pero menos preciso que el `BSD-3-Clause` publicado, porque de un nombre de fantasía no sale el número de cláusulas**; `kuali/kc` → 🔴 **`AGPL-3.0`, y el pom es la ÚNICA fuente porque no tiene archivo de licencia entre los nombres sondeados**. 🟢 **4 acuerdos exactos, 1 de familia, 0 contradicciones: el manifiesto es canal CORROBORANTE, no reemplazo.** 🔴 **El cableado que lo hizo posible tuvo que esquivar un defecto propio: con `artifactId` como identidad, `sakaiproject/sakai` (artifactId `base`) sale `FOREIGN` siendo su propio pom raíz** (**P294**). ⚠️ **Y un límite declarado: un `pom.xml` NO responde `P279`** —no nombra archivos de licencia—, así que la pregunta del pase 95 sobre las filas de este archivo fuera de las 200 **sigue abierta** por el lado del nombre de archivo; lo que se cerró es el lado de la **declaración**. Ver `compose/code/p294-pom-in-production/` (**27/27**) y la tendencia **757**.
@@ -104,6 +105,77 @@ corre ése antes de escribir uno a mano** (tendencia **313**). 🟢 **Y el `gafa
 > y 5 en `schemas12/`, y contar sólo el primero es lo que hizo invisible el segundo dialecto de SCORM (**P106**).
 > **Pase 36 del 2026-10-02:** 🔵 **este pase no agrega repos: le pone FECHA a los que ya están, y la fecha cambia tres recomendaciones.** Se midió la capa PHP de evaluación y telemetría en Packagist —el único registro de los tres que entrega descargas en este entorno (`api.npmjs.org` y `pypistats.org` dan **403 a CONNECT**)— y el resultado está en `repos/trending.md`. **Lo que hay que saber antes de proponer desde este archivo:** 🔴 **la pieza xAPI más descargada de esta base, `rusticisoftware/tincan` (Apache-2.0, 6.178 desc./mes, 863.777 totales), no publica desde el 2022-11-02**, y ⚠️ **el único MIT de esa capa, `php-xapi/client`, está parado desde el 2021-03-24** con 825 desc./mes. 🔵 **La lectura es que en xAPI/PHP lo permisivo está quieto y lo vivo es copyleft**, así que la receta de telemetría se sostiene en **Ralph (MIT)** + **`lrsql` (Apache-2.0)** + **`learnmcp-xapi` (MIT)** y no en la capa PHP. 🟢 **Del lado de evaluación, lo activo es `oat-sa/extension-tao-testqti`** (**885 versiones**, release del **2026-09-30**) **y sigue siendo GPL-2.0-only**, mientras **lo permisivo es lo nuevo**: `@longsightgroup/qti3-cli` (**MIT**, 41 releases desde el 2026-05-21, último **2026-10-01**) con **cero dependencias de terceros** — sus 4 dependencias son todas `@longsightgroup/*` pinneadas a la misma versión exacta. **Su manifiesto MCP completo de 20 tools está escrito en `compose/patterns.md` (P76).** 🔴 **Y una corrección de catálogo: `oat-sa/qti-sdk` devuelve 404 en Packagist porque es el nombre del REPO — su paquete es `qtism/qtism`** (GPL-2.0-only, 218.212 descargas totales, 315 versiones). **Nombre de repo y nombre de paquete son identificadores distintos, y confundirlos produce un 404 que parece una ausencia** — pasó igual con `1edtech/oneroster`, `imsglobal/lti-1-3-php-library` y `packbackbooks/lti-1-3-php-library`, los tres **404**, que se anotan como *«no verificado en Packagist bajo ese nombre»* y **no** como inexistentes. ⚠️ **Acción pendiente que el pase 37 tiene asignada: este archivo nunca pasó por el control de *slugs* distintos ni por el de *backlink*** — los dos que en `agents/top.md` encontraron **un duplicado** y **dos colisiones** este mismo pase.
 > **Pase 11 del 2026-10-01:** aparece una licencia que las diez pasadas anteriores filtraban sin saberlo — **ECL-2.0**, con la que licencia todo Apereo (Sakai, Opencast, OpenLRW). Es Apache-2.0 con el alcance de patentes acotado, aprobada por OSI y FSF, y **es apta para construir arriba**. Ver la capa de analítica institucional, abajo.
+
+## 🟢 La capa de habla gana su MODELO — y el pase descubre que casi publica la capa entera de nuevo (pase 100 del 2026-10-04)
+
+### 🟢 El alta, con la familia leída del payload por el control compartido
+
+| Repo | Familia (payload) | Bytes | Titular | Capa | Región |
+|---|---|---|---|---|---|
+| [`YuanGongND/gopt`](https://github.com/YuanGongND/gopt) | 🟢 **BSD-3-Clause** | 1.517 | `Copyright (c) 2022, Yuan Gong` | **modelo** de *pronunciation assessment* multi-aspecto y multi-granularidad | North America |
+
+🔵 **Por qué completa la capa y no la repite.** Este archivo tenía, desde el pase 14:
+
+| Pieza | Qué es | Qué le faltaba a la capa |
+|---|---|---|
+| `Halleck45/OpenPronounce` (MIT) | el **motor** listo para usar: fonema a fonema, PER/WER, DTW, prosodia, local | — |
+| `kaldi-asr/kaldi` (Apache-2.0) | la **infraestructura** ASR genérica | — |
+| `jimbozhang/speechocean762` (⚠️ sin licencia) | el **corpus** de referencia | 🔴 **el MODELO entrenable y comparable** |
+
+🔵 **`gopt` es ese modelo, y trae su número:** `0,612` de PCC a nivel **fonema**, `0,549` a nivel
+**palabra** y `0,742` a nivel **oración** sobre `speechocean762` — las tres, las mejores publicadas
+sobre ese corpus. Trae **pesos preentrenados** y un notebook de Colab, y el `README` declara que
+sus salidas intermedias de Kaldi están publicadas **para poder reproducir sin Kaldi**.
+
+⚠️ **Límite declarado, y es del repo, no de la lectura:** el propio `README` anota que el tutorial
+de inferencia sobre datos propios **tiene un bug reportado y abierto** (issue #15) que *«needs to be
+addressed before use»*. **La cesión es BSD-3 y es limpia; el camino de inferencia sobre audio nuevo
+no está liso.** Se cotiza como *modelo a integrar*, no como *servicio a desplegar*.
+
+### 🔴 La corrección de alcance sobre el pase 14, y decide una cotización
+
+El pase 14 cerró el hueco del corpus con una acción: *«pedir los términos a SpeechOcean por escrito
+antes de cotizar»*. Este pase intentó resolverlo por el camino que esta base ya tenía probado —**el
+REGISTRO**, con el que `P306` desempató `examplary/qti` leyendo npm— y **las dos distribuciones
+canónicas están cerradas por egreso**:
+
+| Canal | Código | Qué habría resuelto |
+|---|---|---|
+| `raw.githubusercontent.com/jimbozhang/speechocean762/HEAD/LICENSE` | 🔴 **404** en 6 nombres | la cesión en el repo |
+| `openslr.org/101/` | 🔴 **000 `EGRESS_BLOCKED`** | los términos de la distribución canónica |
+| `huggingface.co/api/datasets/mispeech/speechocean762` | 🔴 **000 `connect_rejected`** | el campo `license` de la tarjeta del dataset |
+
+🔴 **El hueco pasa de «pendiente de una gestión» a «no verificable por ningún canal disponible», y
+eso cambia la forma de la propuesta:** la cadena **técnica** es permisiva de punta a punta, y el
+**benchmark** con el que se demuestra que funciona no lo es. 🔵 **La salida de ingeniería está a la
+vista y es cotizable: `gopt` compara contra `speechocean762`, pero `OpenPronounce` NO necesita ese
+corpus para OPERAR** — lo necesita para *comparar*. **Una entrega puede usar la cadena permisiva en
+producción y dejar el corpus fuera del entregable**, con la medición hecha sobre datos del cliente.
+
+### 🔵 La región, y de dónde sale cada placa (`P135`)
+
+| Pieza | Región | Indicio, de primera mano |
+|---|---|---|
+| `YuanGongND/gopt` | **North America** | el `README` nombra la filiación de los autores: **MIT & PAII** |
+| `jimbozhang/speechocean762` | **APAC** | el `README`: *«All the speakers are non-native, and their mother tongue is **Mandarin**»* |
+| `Halleck45/OpenPronounce` | 🔸 **sin región** | el titular es un antropónimo con blog propio; **de un antropónimo no se infiere región** (`P135`) y no se eleva el indicio a dato |
+
+### 🔴 `P311` — el control que esta base no tenía, y este archivo es el espécimen
+
+Todos los controles de esta base auditan una afirmación que el pase **hace**: la familia de
+licencia, el titular, el uso comercial, el vocabulario de región, la cita de una tendencia, la
+propiedad de un manifiesto. 🔴 **La afirmación de que un alta es NUEVA es implícita, y lo implícito
+no lo audita nada** — así que un pase 100 pases y ~250 slugs adentro puede republicar su propia
+capa sin que nada objete.
+
+🟢 El gate vive en `compose/code/p311-duplicate-alta-gate/` (**11/11**) y reporta **archivo, línea y
+sección**, que es lo que vuelve la respuesta accionable: no *«ya está»* sino *«ya está, en la capa
+de habla agregada en el pase 14»*. Tiene control negativo para **las dos** direcciones de error — el
+falso `NEW`, que es el defecto, y el falso `ALREADY`, que **suprimiría** un alta real
+(`AmirF194/canvas-mcp` y `BartMassey-upstream/canvas-mcp` son filas distintas y legítimas de esta
+base, igual que `examplary/qti` y `instructure/qti`).
+
+---
 
 ## 🟢 Altas fundacionales: 7 — y son DOS CAPAS, no siete piezas sueltas: el ALMACÉN xAPI y la librería de ÍTEMS QTI (pase 99 del 2026-10-04)
 

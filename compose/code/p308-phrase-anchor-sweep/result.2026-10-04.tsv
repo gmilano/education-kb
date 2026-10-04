@@ -1,0 +1,23 @@
+slug	bytes	family_repaired	family_prefix	disagree	commercial	holder
+FWU-DE/mem-mcp	1211	Unlicense	Unlicense	no	allowed	NOT-APPLICABLE (Unlicense: holder not in the license text by construction)
+adlnet/xapi-lab	1082	MIT	MIT	no	allowed	Copyright (c) 2015 Tyler Mulligan
+kuali/kfs	33755	AGPL-3.0	AGPL-3.0	no	allowed	NOT-APPLICABLE (AGPL-3.0: holder not in the license text by construction)
+moodle/moodle	35147	GPL-3.0	GPL-3.0	no	allowed	NOT-APPLICABLE (GPL-3.0: holder not in the license text by construction)
+OpenEMIS/core	15518	GPL-2.0	GPL-2.0	no	allowed	NOT-APPLICABLE (GPL-2.0: holder not in the license text by construction)
+HKUDS/DeepTutor	11408	Apache-2.0	Apache-2.0	no	allowed	NOT-APPLICABLE (Apache-2.0: holder not in the license text by construction)
+frappe/education	19	GPL-3.0 (declaracion)	GPL-3.0 (declaracion)	no	allowed	NOT-APPLICABLE (GPL-3.0 (declaracion): a declaration carries no holder -- P179)
+katoj65/emis	294	MIT	MIT	no	allowed	Copyright (c) Jonathan Reinink <jonathan@reinink.ca>
+Halleck45/OpenPronounce	1113	MIT	MIT	no	allowed	Copyright (c) 2025 Jean-François Lépine <http://blog.lepine.pro>
+YuanGongND/gopt	1517	BSD	BSD	no	allowed	Copyright (c) 2022, Yuan Gong
+Submitty/Submitty	1542	BSD	BSD	no	allowed	Copyright (c) 2014-2026, [Submitty team](AUTHORS.md) 
+autolab/Autolab	11324	Apache-2.0	Apache-2.0	no	allowed	NOT-APPLICABLE (Apache-2.0: holder not in the license text by construction)
+INGInious/INGInious	34764	AGPL-3.0	AGPL-3.0	no	allowed	NOT-APPLICABLE (AGPL-3.0: holder not in the license text by construction)
+kaldi-asr/kaldi	17264	Apache-2.0	Apache-2.0	no	allowed	NOT-APPLICABLE (Apache-2.0: holder not in the license text by construction)
+Ovsyanka83/autograder	35149	GPL-3.0	GPL-3.0	no	allowed	NOT-APPLICABLE (GPL-3.0: holder not in the license text by construction)
+speechsuper/SpeechSuper-API-Samples	1068	MIT	MIT	no	allowed	Copyright (c) 2022 speechsuper
+mikhailvs/loqui	1074	MIT	MIT	no	allowed	Copyright (c) 2026 Mikhail Slyusarev
+Priyamakeshwari/TeachGPT	1057	MIT	MIT	no	allowed	Copyright (c) 2023 Priyadharshini
+
+# payloads measured as shipped: 18
+# the defect FIRING on a payload as shipped: 0
+# NOT extrapolated to the 215-slug inventory (P286): batch enumeration is denied here.

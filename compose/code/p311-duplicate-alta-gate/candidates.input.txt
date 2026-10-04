@@ -1,0 +1,14 @@
+mikhailvs/loqui
+Priyamakeshwari/TeachGPT
+YuanGongND/gopt
+Submitty/Submitty
+autolab/Autolab
+speechsuper/SpeechSuper-API-Samples
+Ovsyanka83/autograder
+Halleck45/OpenPronounce
+kaldi-asr/kaldi
+jimbozhang/speechocean762
+INGInious/INGInious
+eecs-autograder/autograder.io
+speechace/speechace-api-samples
+ABCoder1/mentorAI
