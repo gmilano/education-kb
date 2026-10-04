@@ -8,6 +8,81 @@ updated: 2026-10-04
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 
+## 2026-10-04 — pase 80: la columna que `P235` no registró en ninguna de sus 9 filas era la que decidía, y al medirla aparece un servidor nuevo y una licencia sin titular
+
+### 🧭 La pregunta, y por qué no era opcional
+
+**P235** (pase 77) midió la capa xAPI por **CAPA** y cerró con *«EXPONER xAPI se puede hoy»*. 🔴 **Pero
+su `result.tsv` dice `(sin version en el arbol)` en las nueve filas** — y la versión de spec es
+exactamente la columna que volvió **inusable** a `go-oneroster` (**MIT**, permisivo, y clavado en un
+**v1p1 superado en 2023**). **Medirla era obligatorio.**
+
+### 🟢 Altas y mediciones del pase
+
+| Repo | Licencia (**bloque de título**) | Titular | Spec | ★ | Estado |
+|---|---|---|---|---|---|
+| 🆕 **`pelotech/xapi-lrs`** | 🟢 **Apache-2.0** (`LICENSE`, 11.357 B, 0 `affero`) | 🔴 **AUSENTE — medido** | 🟢 **1.0.3 + 2.0.0**, y el único **en CI** | 🔴 **0** | **alta**, con cota: v0.9.6 **pre-1.0**, `HEAD` 2026-08-08 |
+| 🆕 **`adlnet/ADL_LRS`** (a la tabla de capa) | 🟢 **Apache-2.0** | 🟢 `Advanced Distributed Learning` (`readme.md:23`) | 🟢 **IEEE 9274.1.1 (xAPI 2.0)** | **331** | ⚠️ **PoC por su propio `readme.md:5`** |
+| `yetanalytics/lrsql` (re-medido) | 🟢 **Apache-2.0** | 🟢 `Yet Analytics, Inc.` | 🟢 **1.0.3 + 2.0.0** (`doc/xapi_versioning.md`) | — | 🟢 **sigue siendo la recomendación de capa** |
+| `openfun/ralph` (re-medido) | 🟢 **MIT** (`LICENSE.md`) | 🟢 `France Université Numérique` 📍 **EMEA** | 🔴 **1.0.3 SOLAMENTE** | — | 🔴 **pierde el patrón de soberanía EMEA al subir de spec** |
+
+🔵 **Resultado: pedir *permisivo + vivo + spec vigente* en la capa SERVIDOR deja CERO piezas en
+OneRoster y TRES en xAPI. La trampa de `go-oneroster` es del ESTÁNDAR, no del sector** — generalizarla
+habría descartado una capa sana. Ver **P244**.
+
+### 🔴 El hallazgo de licencia: permisiva y **sin titular en ninguna parte del árbol**
+
+En `pelotech/xapi-lrs` la única línea candidata a titular es el **apéndice SIN RELLENAR** de la
+Apache-2.0 (`LICENSE:189` → `Copyright [yyyy] [name of copyright owner]`), con `NOTICE` **404**,
+`AUTHORS` **404** y `package.json` **sin `author` y sin `license`**. 🔵 **Veredicto `HOLDER-ABSENT`, y
+es el caso exacto que `p184-holder-mismatch` existe para no errar: el instrumento debe NEGARSE a
+publicar esa línea como titular.** ⚠️ **§4(c) obliga a conservar los avisos de copyright y no hay
+aviso que conservar**; `pelotech` es un **nombre de cuenta**, no una persona jurídica declarada.
+
+### 🟢 Y el dato operativo que vale más que las filas: toma de posesión de una base `lrsql` viva
+
+`xapi-lrs` declara **paridad de catálogo con la forma Postgres de `lrsql` v0.9.5** y que puede
+**apuntarse a una base `lrsql` viva y tomarla en el lugar**, *«no dump/restore needed»*, con
+*statements*, actores, documentos y **credenciales** intactos. **Está en CI, no sólo en el README:**
+
+```
+driver: [pg, pglite] × xapi-version: ['1.0.3', '2.0.0'] × schema-source: [migration, lrsql]   → 8 trabajos
+```
+
+⚠️ **Y la auto-corrección del pase:** un título de *commit* habla de *«ADL conformance **fork** bumps»*
+e invitaba a publicar *«descansa sobre un fork de la suite»*. 🔴 **Es falso:** `package.json:62` fija la
+suite **OFICIAL** `github:adlnet/lrs-conformance-test-suite` **por SHA** `5bc232d349c6…`, que es la
+forma **más fuerte** posible. 🔵 **Comprobado antes de escribir; sin comprobar, este pase habría
+calificado de menos el dato más fuerte de su propia tabla.**
+
+### 🔬 Los falsos que se evitaron, porque son reproducibles
+
+1. 🔴 **El *readme* de `ADL_LRS` se llama `readme.md`, en MINÚSCULA.** `README`, `README.md`,
+   `README.rst` y `README.txt` dan **404 en `master`, `main` y `develop`** — se habría publicado *«sin
+   readme, spec no declarado»* sobre el repo de **331 ★** que precisamente declara xAPI 2.0.
+   🔵 **Es la lección de caso de `p206`/`p211`, reproducida sobre un repo NUEVO.**
+2. 🔴 **`grep -E '2\.0\.0'` sobre `ralph` da 3 coincidencias y las TRES son falsos positivos** (el
+   enlace a `semver.org/spec/v2.0.0.html` y su propio *release* v2.0.0 de 2021). Su spec sale de
+   `docs/index.md:63` y de los manejadores de ruta, **no de un `grep` de versión**.
+3. 🔴 **La primera sonda devolvió «0 líneas de spec» en los tres *readmes*, y uno de esos ceros era
+   artefacto** (el 404 de `ADL_LRS`). **Se verificaron los códigos de estado antes de creerle al cero.**
+
+### 🟡 La trampa de configuración que conviene no descubrir en producción
+
+`lrsql`/`doc/xapi_versioning.md`, literal: **por omisión** una petición con
+`X-Experience-API-Version: 1.0.3` **puede recibir *statements* `2.0.0`**; degradarlos exige
+`LRSQL_ENABLE_STRICT_VERSION`. ⚠️ **Un cliente legado recibe el formato nuevo en silencio si nadie puso
+la variable**, y las *reactions* nacen `1.0.3`: crearlas en 2.0.0 y luego restringir el LRS **rompe el
+Admin UI**, con procedimiento de recuperación declarado.
+
+### ⚠️ Descartadas, medidas, para que un pase futuro no gaste el canal
+
+| Candidata | Motivo medido |
+|---|---|
+| `bandup-spec/exam-suite` | 🔴 README de 1.674 B que dice *«This is a just a test»* y **sin archivo de licencia** en `main` ni `master`. No es un hallazgo |
+| `openHPI/openLRS` | 🔴 **archivado por su dueño el 2026-02-20** (dato del canal de búsqueda; no se midió de fuente este pase) |
+| `Transcordia/jupiter` | 🔵 ya medida en **P235**: MIT, `HEAD` **2015-04-19** — 11,5 años |
+
 ## 2026-10-04 — pase 79: 6 candidatas medidas, 2 altas, y la cota de la mejor la declara su propio README
 
 ### 🟢 Lo que el canal devolvió, medido pieza por pieza

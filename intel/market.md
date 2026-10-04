@@ -55,6 +55,33 @@ updated: 2026-10-04
 > **LATAM:** 🔵 el hallazgo del pase — **existe una capa MCP nacional brasileña de datos públicos, activa y MIT, y
 > educación es el único dominio grande que falta** (**gap 69**).
 
+## 🔴 Décimo barrido regional consecutivo agotado — y el dato de este pase es de CAPA, no de mercado (pase 80 del 2026-10-04)
+
+La batería obligatoria (4 regiones × regulación / adopción / *players*) se corrió completa y **las
+cuatro regiones devolvieron cero hechos nuevos.** 🔵 **Verificado por `grep` contra los archivos
+publicados ANTES de escribir**, uno por uno:
+
+| Hecho que devolvió el canal | Menciones ya publicadas |
+|---|---|
+| EU AI Act, aplicación general **2026-08-02**; *Digital Omnibus* y el corrimiento a **2027-12-02** | `Digital Omnibus` **58** · `omnibus` **113** · `2027` **378** |
+| **134** proyectos en **31** estados · `AB 1159` · `SB 1227` | **127** · **116** · **53** |
+| `AI Framework Act` / `AI Basic Act` coreana (**2026-01-22**) · Vietnam | **4** · **41** |
+| **CENIA** · **Latam-GPT** · Observatorio UNESCO · Uruguay (Convenio Marco) | **26** · **31** · **44** · **37** |
+| Serie de tamaño: **10,6 B USD** 2026 · **40,9 %** CAGR · **42,48 B** a 2030 | **28/18** · **38** · **13/2** |
+| **38 %** de cuota de North America · Gallup · AASA | **53** · **14** · **23** |
+| **530 M** de alumnos K-12 en Asia · **79 %** de docentes LATAM · *sandbox* brasileño | **11** · **65** · **19** |
+
+⚠️ **Dos ítems volvieron finos y se declaran en vez de reclamarse:** **Erasmus+** (2 menciones) y el
+compromiso alemán de **20.000 millones de euros 2025-2030** (1 mención). **Están, pero apenas, y este
+pase NO los cuenta como hecho nuevo** — se dejan señalados para que un pase futuro los mida de fuente.
+
+🔵 **La consecuencia de método, que es la que vale después de diez pases: el canal de BÚSQUEDA
+regional está saturado para esta industria.** Lo que sí devolvió dato nuevo este pase fue mirar **la
+capa de estándares repo por repo** (**P244**), no el canal de noticias. **Un barrido agotado es
+información; repetirlo esperando otro resultado no lo es.**
+
+---
+
 ## 🧭 La cuota de LMS que esta base venía citando no tenía SEGMENTO ni UNIDAD, y con ellos la conclusión del pase 74 se parte en dos (pase 75 del 2026-10-03)
 
 🔵 **Esto corrige el encuadre del pase anterior, no su hallazgo.** El pase 74 midió que esta base
@@ -1788,6 +1815,24 @@ Dónde se produce el software educativo abierto, que no es donde está la demand
 ## Opportunities by region
 
 ### North America
+
+#### Agregado en el pase 80 del 2026-10-04 — la capa LRS de esta región tiene los dos titulares jurídicos, y uno de ellos declara su propia cota
+
+🟢 **Los dos LRS permisivos con titular identificado y spec VIGENTE son de esta región** (**P244**):
+`yetanalytics/lrsql` (**Apache-2.0**, `Yet Analytics, Inc.`, **1.0.3 + 2.0.0**) y `adlnet/ADL_LRS`
+(**Apache-2.0**, `Advanced Distributed Learning`, **IEEE 9274.1.1**, **331 ★**). 🔵 **Señal
+INSTITUCIONAL en los dos casos, no antropónimo:** una sociedad con forma legal declarada (`Inc.`) y la
+iniciativa del estándar.
+
+⚠️ **Y la cota la pone el propio repo del organismo**: `ADL_LRS`/`readme.md:5` se autodeclara apto
+*«only to support a small amount of users as a proof of concept»*. 🔵 **Oportunidad concreta para un
+engagement de esta región: el *blessing* del organismo del estándar está disponible con licencia
+Apache-2.0, pero la capa de PRODUCCIÓN que lo acompaña hay que construirla** — y la pieza que la
+sostiene (`lrsql`) también es de acá.
+
+🔴 **Cero hechos regulatorios o de mercado nuevos en esta región este pase** (décimo barrido agotado;
+ver la tabla de verificación al tope de este archivo).
+
 
 #### 📍 Pase 79 del 2026-10-04 — sin instrumento nuevo, y la reserva del pase 78 NO se pudo cerrar: el mismo bloqueo, medido dos veces
 
@@ -3619,6 +3664,34 @@ Artículo 50(2) **no es exigible** en North America — pero es **el requisito m
 multi-región conviene cotizarlo contra el techo europeo y no contra el piso local (ver **P103** y **P105**).
 
 ### EMEA
+
+#### Agregado en el pase 80 del 2026-10-04 — 🔴 el patrón de soberanía de esta región pierde su pieza al subir de spec, y es un dato de arquitectura, no una preferencia
+
+El patrón de **soberanía EMEA** (**P63**) venía apoyándose en `openfun/ralph`: **MIT**, titular
+**France Université Numérique** —persona jurídica **pública francesa**, el perfil ideal para un pliego
+europeo—. 🔴 **Este pase midió su versión de spec y está clavado en xAPI 1.0.3**, en **dos** lugares
+independientes del árbol: `docs/index.md:63` (*«we're following the xAPI specification 1.0.3»*) y
+`src/ralph/api/routers/statements.py`, que fija sus cuatro referencias al tag `1.0.3` del spec.
+
+🔴 **Consecuencia: la combinación *EMEA-soberano + xAPI 2.0 / IEEE 9274.1.1* NO existe hoy en open
+source.** Un cliente europeo que necesite el spec vigente debe elegir entre:
+
+| Opción | Costo que acepta |
+|---|---|
+| `yetanalytics/lrsql` (Apache-2.0, **1.0.3 + 2.0.0**) | titular **estadounidense** — el punto que un pliego de soberanía suele querer evitar |
+| `pelotech/xapi-lrs` (Apache-2.0, **2.0 en CI**) | 🔴 **titular AUSENTE** (§4(c): no hay aviso que conservar) y **0 ★** |
+| quedarse en `ralph` / **1.0.3** | no cumple un requisito de spec vigente |
+
+🔵 **La oportunidad de esta región, entonces, es de CONTRIBUCIÓN antes que de integración:** llevar
+`ralph` a 2.0 es la vía que preserva el único titular público europeo de la capa, y es trabajo
+acotado y medible —la negociación por `X-Experience-API-Version` que `lrsql` ya documenta es la
+referencia—. ⚠️ **Y es la primera vez que esta base puede nombrar el *gap* de soberanía con una
+pieza, una línea de archivo y una versión**, en vez de como principio general.
+
+🔴 **Cero hechos regulatorios nuevos en esta región este pase.** ⚠️ **Erasmus+** (2 menciones) y los
+**20.000 millones** alemanes (1 mención) volvieron del canal pero ya estaban: se declaran como finos,
+no como nuevos.
+
 
 #### 📍 Pase 79 del 2026-10-04 — sin instrumento nuevo, y entra una señal de LOCALE que la región no tenía medida
 
@@ -5549,6 +5622,40 @@ este pase dejó cubierto con código.
 
 ### APAC
 
+#### Agregado en el pase 80 del 2026-10-04 — 🟢 entra la primera pieza atada a una rúbrica de examen NACIONAL de la región, y el hueco que cierra tenía CERO menciones en 79 pases
+
+**`BaijayantaRoy/bandup`** — **MIT** (bloque de título, 1.071 B, titular `Baijayanta Roy` 2026),
+🔴 **2 ★ / 0 forks**, Python, no archivado. 📍 **APAC (Singapur)**, y la ubicación **no** sale del
+antropónimo del titular (**P135**) sino del **currículo**, que es verificable:
+
+| Papel nacional | Rúbrica implementada |
+|---|---|
+| **PSLE** composición | Contenido **/20** + Lenguaje **/20** = **/40** |
+| **A-Level General Paper** | Contenido **/30** + Lenguaje **/20** = **/50** |
+| **O-Level** composición | **/30** — declarado *coming soon* |
+
+Con descriptores estilo **SEAB/Cambridge**, declarados **no oficiales** por el propio README, y nota de
+recuento de palabras contra las normas reales de cada papel.
+
+🔴 **El hueco que cierra: `Singapore`, `PSLE`, `A-Level`, `O-Level`, `General Paper` y `Cambridge`
+tenían CERO menciones reales en 79 pases.** ⚠️ **Las 10 coincidencias de `SEAB` eran falsos positivos
+de subcadena** (`deseable`, `indeseable`, `parseable`, `imparseable`) — **comprobado antes de
+publicar**, que es **P126 regla 2**.
+
+🟢 **Lo que vale para la región no es el marcador, es la compuerta:** corre **local por omisión**
+(Ollama, sin cuenta ni telemetría) y **muestra una advertencia persistente cuando se elige un proveedor
+no local**, porque el ensayo deja la máquina → clase **`GATE-ON-EGRESS`** (**P245**), que se suma a
+`GATE-IN-SCOPE` y `GATE-IN-EFFECT`. 🔵 **Para el expediente de privacidad de K-12 de esta región —y
+para cualquiera— ése es el patrón que se copia.**
+
+⚠️ **Veredicto honesto: 2 ★ no sostienen una recomendación de construcción** (precedente
+`ChatBarAI/ai_lms`, 5 ★, rechazada). **Entra como señal regional y como clase de compuerta, no como
+pieza fundacional.**
+
+🔴 **Cero hechos regulatorios nuevos en esta región este pase**; la ley coreana (`AI Framework Act`,
+2026-01-22), la de Vietnam y la cifra de **530 M** de alumnos K-12 ya estaban todas.
+
+
 #### 📍 Pase 79 del 2026-10-04 — noveno barrido sin instrumento nuevo, y el hueco de CÓDIGO de la región se RECLASIFICA sin cerrarse
 
 🔴 **Noveno barrido consecutivo de APAC sin instrumento regulatorio nuevo.** Se reconfirmó lo que este
@@ -7050,6 +7157,27 @@ desplegado + puerta MCP permisiva (`jbnu-lms-mcp`, `canvas-lms-mcp`, las cuatro 
 depende de un tercero» son el mismo argumento.**
 
 ### LATAM
+
+#### Agregado en el pase 80 del 2026-10-04 — sin dato nuevo de la región, y el aporte del pase es un PRECEDENTE de método que nació acá
+
+🔴 **Cero hechos nuevos en esta región** (décimo barrido agotado): **CENIA**, **Latam-GPT**, el
+Observatorio de UNESCO para América Latina y el Caribe, el Convenio Marco firmado por **Uruguay**, el
+*sandbox* regulatorio brasileño hasta diciembre de 2026 y el **79 %** de docentes de educación
+superior usando AI **ya estaban publicados, los seis**. 🔵 **Se declara en vez de rellenar.**
+
+🟢 **El aporte del pase a esta región es indirecto y conviene registrarlo, porque es un precedente que
+nació acá y hoy se reusó en APAC:** la regla de que **una región se declara por señal de CONFIGURACIÓN
+o de INSTITUCIÓN, nunca por antropónimo** (**P135**) se estableció en esta KB ubicando
+`DaviPac/Classroom-mcp` como **LATAM** por `TIMEZONE=America/Recife` y por tener sus *tools* y su
+manifiesto íntegramente en **portugués** — no por el nombre de su autor.
+
+🔵 **Este pase aplicó ese mismo criterio para ubicar a `bandup` en APAC por su atadura a las rúbricas
+PSLE y A-Level GP de Singapur.** ⚠️ **La consecuencia práctica para los *engagements* de LATAM: el
+camino para que una pieza de la región quede BIEN ubicada en esta base es el artefacto —*locale*, zona
+horaria, currículo nacional, organismo nombrado—, no la biografía del autor.** El hueco de currículo
+de LATAM hispanohablante que este archivo ya declara sigue abierto, y ahora tiene un **patrón de
+cierre medido**: una pieza atada a una rúbrica nacional **se ubica sola**.
+
 
 #### 📍 Pase 79 del 2026-10-04 — LATAM confirma sin novedad, y se dice en vez de rellenar
 

@@ -85,6 +85,112 @@ corre ése antes de escribir uno a mano** (tendencia **313**). 🟢 **Y el `gafa
 > **Pase 36 del 2026-10-02:** 🔵 **este pase no agrega repos: le pone FECHA a los que ya están, y la fecha cambia tres recomendaciones.** Se midió la capa PHP de evaluación y telemetría en Packagist —el único registro de los tres que entrega descargas en este entorno (`api.npmjs.org` y `pypistats.org` dan **403 a CONNECT**)— y el resultado está en `repos/trending.md`. **Lo que hay que saber antes de proponer desde este archivo:** 🔴 **la pieza xAPI más descargada de esta base, `rusticisoftware/tincan` (Apache-2.0, 6.178 desc./mes, 863.777 totales), no publica desde el 2022-11-02**, y ⚠️ **el único MIT de esa capa, `php-xapi/client`, está parado desde el 2021-03-24** con 825 desc./mes. 🔵 **La lectura es que en xAPI/PHP lo permisivo está quieto y lo vivo es copyleft**, así que la receta de telemetría se sostiene en **Ralph (MIT)** + **`lrsql` (Apache-2.0)** + **`learnmcp-xapi` (MIT)** y no en la capa PHP. 🟢 **Del lado de evaluación, lo activo es `oat-sa/extension-tao-testqti`** (**885 versiones**, release del **2026-09-30**) **y sigue siendo GPL-2.0-only**, mientras **lo permisivo es lo nuevo**: `@longsightgroup/qti3-cli` (**MIT**, 41 releases desde el 2026-05-21, último **2026-10-01**) con **cero dependencias de terceros** — sus 4 dependencias son todas `@longsightgroup/*` pinneadas a la misma versión exacta. **Su manifiesto MCP completo de 20 tools está escrito en `compose/patterns.md` (P76).** 🔴 **Y una corrección de catálogo: `oat-sa/qti-sdk` devuelve 404 en Packagist porque es el nombre del REPO — su paquete es `qtism/qtism`** (GPL-2.0-only, 218.212 descargas totales, 315 versiones). **Nombre de repo y nombre de paquete son identificadores distintos, y confundirlos produce un 404 que parece una ausencia** — pasó igual con `1edtech/oneroster`, `imsglobal/lti-1-3-php-library` y `packbackbooks/lti-1-3-php-library`, los tres **404**, que se anotan como *«no verificado en Packagist bajo ese nombre»* y **no** como inexistentes. ⚠️ **Acción pendiente que el pase 37 tiene asignada: este archivo nunca pasó por el control de *slugs* distintos ni por el de *backlink*** — los dos que en `agents/top.md` encontraron **un duplicado** y **dos colisiones** este mismo pase.
 > **Pase 11 del 2026-10-01:** aparece una licencia que las diez pasadas anteriores filtraban sin saberlo — **ECL-2.0**, con la que licencia todo Apereo (Sakai, Opencast, OpenLRW). Es Apache-2.0 con el alcance de patentes acotado, aprobada por OSI y FSF, y **es apta para construir arriba**. Ver la capa de analítica institucional, abajo.
 
+## 🧭 P244 — el eje SPEC sobre la capa SERVIDOR de xAPI, que **P235** midió sin medirlo: la trampa de OneRoster NO se reproduce, y el permisivo con respaldo EMEA es el único que se queda afuera (pase 80 del 2026-10-04)
+
+**P235** (pase 77) midió la capa xAPI por **CAPA** y concluyó que *«EXPONER xAPI —ser el LRS— se puede
+hoy, con licencia permisiva y mantenimiento de esta semana»*. 🔴 **Lo que su `result.tsv` NO registró
+en ninguna de las nueve filas fue la VERSIÓN DE SPEC: las nueve dicen `(sin version en el arbol)`.**
+
+Y esa es exactamente la columna que decidió la capa OneRoster: `go-oneroster` es **MIT, permisivo y
+vivo de licencia**, y resulta **inusable** porque implementa **v1p1**, un spec **superado en 2023**.
+🔵 **Este pase le hace a xAPI la pregunta que esa lección obliga: ¿hay un LRS permisivo en el spec
+VIGENTE —xAPI 2.0 / IEEE 9274.1.1— o sólo en 1.0.3?**
+
+### 🟢 Resultado: hay TRES, y la trampa de OneRoster no se reproduce
+
+| Servidor | Licencia (**bloque de título**) | Titular (**P184**) | xAPI 2.0 / IEEE 9274.1.1 | ★ | Evidencia **en el árbol** |
+|---|---|---|---|---|---|
+| 🟢 **`yetanalytics/lrsql`** | **Apache-2.0** | 🟢 `Yet Analytics, Inc.` → **`HOLDER-MATCH`** (persona jurídica) | 🟢 **SÍ — 1.0.3 + 2.0.0**, negociado **por request** con `X-Experience-API-Version` | — | `doc/xapi_versioning.md` |
+| 🟢 **`adlnet/ADL_LRS`** | **Apache-2.0** | 🟢 `Advanced Distributed Learning` (`readme.md:23`) | 🟢 **SÍ — IEEE 9274.1.1 por su propio readme** | **331** | `readme.md:3` · ⚠️ y `:5` se autodeclara **PoC**: *«only intended to support a small amount of users»* |
+| ⚠️ **`pelotech/xapi-lrs`** | **Apache-2.0** | 🔴 **AUSENTE — medido** (ver abajo) | 🟢 **SÍ — 1.0.3 + 2.0.0, y es el único con conformidad EN CI** | 🔴 **0** | `package.json` · `.github/workflows/ci.yml` |
+| 🔴 **`openfun/ralph`** | **MIT** (`LICENSE.md`) | 🟢 `France Université Numérique` → **`HOLDER-MATCH`** · 📍 **EMEA** | 🔴 **NO — clavado en 1.0.3** | — | `docs/index.md:63` *(«we're following the xAPI specification **1.0.3**»)* **+** `src/ralph/api/routers/statements.py`, que fija sus 4 referencias al tag `1.0.3` del spec |
+
+🔵 **Por lo tanto el eje SPEC separa a los dos estándares por segunda vez y en el MISMO sentido que el
+eje CAPA de P235:** en OneRoster, pedir *permisivo + vivo + spec vigente* en la capa servidor deja
+**cero** piezas; en xAPI deja **tres**. **La trampa de `go-oneroster` es una propiedad de OneRoster,
+no del sector** — y generalizarla a xAPI habría descartado una capa que está sana.
+
+### 🔴 La consecuencia que cuesta dinero, y es regional
+
+**El único de los cuatro con respaldo institucional EMEA es el único que NO llega a 2.0.** `ralph` es
+**MIT** y su titular es **France Université Numérique** —una persona jurídica pública francesa—, que
+es precisamente el perfil que el patrón de **soberanía EMEA** (**P63**) venía recomendando. 🔴 **En
+xAPI 2.0 ese perfil no está disponible:** la combinación *EMEA-soberano + spec vigente* obliga hoy a
+elegir entre `lrsql` (Apache-2.0, titular estadounidense) o una pieza **sin titular**. ⚠️ **Es un
+dato de arquitectura para un pliego público europeo, no una preferencia.**
+
+### 🔴 `pelotech/xapi-lrs` — permisivo y **sin titular en ninguna parte del árbol**, ausencia MEDIDA
+
+| Dónde debería estar el titular | Resultado medido |
+|---|---|
+| `LICENSE`, líneas con `Copyright` | **12 coincidencias, y las 11 primeras son el CUERPO de la Apache-2.0** |
+| `LICENSE:189` — la única candidata | 🔴 **`Copyright [yyyy] [name of copyright owner]`** — el **apéndice SIN RELLENAR** |
+| `NOTICE` | 🔴 **404** |
+| `AUTHORS` | 🔴 **404** |
+| `package.json` → `author` | 🔴 **ausente** |
+| `package.json` → `license` | 🔴 **ausente** (la licencia sólo está en el archivo y en la prosa del README) |
+
+🔵 **Veredicto `HOLDER-ABSENT`, y es justo el caso que `p184-holder-mismatch` existe para no errar:**
+el instrumento **debe NEGARSE** a publicar la línea del apéndice como titular, igual que debe negarse
+a publicar una frase del cuerpo de Apache o el *copyright* de la FSF. ⚠️ **Consecuencia para una
+consultora:** la **Apache-2.0 §4(c)** obliga a **conservar los avisos de copyright** de la obra — **y
+no hay aviso que conservar**; el otorgante de la cesión no está identificado. El nombre de la
+organización en GitHub (`pelotech`) es un **nombre de CUENTA**, no una persona jurídica declarada.
+🔵 **Es una bandera de diligencia, no un bloqueo:** el texto de la licencia es permisivo y completo.
+
+### 🟢 El hallazgo OPERATIVO, que vale más que la fila de catálogo: toma de posesión de una base `lrsql` VIVA
+
+`xapi-lrs` declara **paridad de catálogo con la forma Postgres de `lrsql` v0.9.5**, y que por eso
+**puede apuntarse a una base `lrsql` viva y tomarla en el lugar** — *«no dump/restore needed»*, con
+*statements*, actores, documentos y **credenciales** pasando sin modificación. **Y no es sólo prosa
+del README: está en la matriz de CI.**
+
+```
+driver: [pg, pglite] × xapi-version: ['1.0.3', '2.0.0'] × schema-source: [migration, lrsql]
+```
+
+🟢 **8 trabajos de conformidad por *commit***, con `SCHEMA_SOURCE=lrsql` como una de las dos fuentes de
+esquema — o sea que **la toma de posesión se ejercita en CI contra las DOS versiones de spec y los DOS
+drivers**, no se afirma de palabra.
+
+⚠️ **Y la auto-corrección del pase, que importa porque casi calificó de menos el dato más fuerte de la
+tabla:** un título de *commit* de ese repo habla de *«ADL conformance **fork** bumps need
+inspection»*, lo que invitaba a publicar *«su conformidad 2.0 descansa sobre un fork de la suite»*.
+🔴 **Es falso.** `package.json:62` fija la suite **OFICIAL** y **por SHA**:
+
+```
+"adl-lrs-conformance-tests": "github:adlnet/lrs-conformance-test-suite#5bc232d349c60faded8240da698f195106091638"
+```
+
+🔵 **Suite oficial de ADL, anclada por SHA, que es la forma MÁS fuerte posible —reproducible— y no la
+más débil.** (El `pool: 'forks'` de `vitest.config.ts` es el pool de procesos de vitest y no tiene
+relación.) **Se comprobó antes de escribir; de no haberse comprobado, este pase habría publicado una
+calificación falsa sobre la única pieza con conformidad en CI.**
+
+### ⚠️ La cota de `xapi-lrs`, por delante de cualquier recomendación
+
+🔴 **0 ★ / 0 forks** · `HEAD` **2026-08-08** · **v0.9.6, pre-1.0** · y un **cambio incompatible
+declarado**: las bases anteriores a **v0.6.0** *no son actualizables* —la sonda de arranque detecta el
+esquema desajustado y **se niega a arrancar** en vez de servir contra él (lo cual, en sí, es buen
+comportamiento). 🔵 **Por eso NO entra como recomendación de estante: entra como la ÚNICA ruta medida
+de «xAPI 2.0 + toma de posesión de `lrsql`», con su cota escrita.** La recomendación de capa sigue
+siendo **`lrsql`** (Apache-2.0, titular jurídico, 1.0.3 + 2.0.0) y, si el cliente necesita el
+*blessing* del organismo, **`ADL_LRS`** con su cota de PoC declarada por su propio readme.
+
+### 🟡 La trampa de interoperabilidad que `lrsql` documenta y conviene no descubrir en producción
+
+De `doc/xapi_versioning.md`, literal: **por omisión, una petición con
+`X-Experience-API-Version: 1.0.3` puede recibir *statements* en formato `2.0.0`.** Para que los
+`2.0.0` se **degraden** a `1.0.3` hay que encender `LRSQL_ENABLE_STRICT_VERSION`
+(`enableStrictVersion`). ⚠️ **Un cliente 1.0.3 legado recibe cargas 2.0.0 en silencio si nadie puso
+esa variable** — y el *default* es el permisivo. 🔵 **Y las *reactions* generan `1.0.3` por omisión
+(`LRSQL_REACTION_VERSION`): crearlas en `2.0.0` y después restringir el LRS a `1.0.3` rompe el
+front-end del Admin UI**, con un procedimiento de recuperación declarado (reactivar 2.0.0, borrar las
+incompatibles, volver). **Es configuración de un renglón que decide si una migración de spec es
+transparente o un incidente.**
+
+---
+
 ## 🧪 Altas fundacionales: 0 — y la mejor candidata del pase se autodescalifica de este estante, por escrito (pase 79 del 2026-10-04)
 
 El canal devolvió **seis repos que esta KB no tenía** (verificado por `grep` sobre los *slugs* ya

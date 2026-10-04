@@ -102,6 +102,52 @@ updated: 2026-10-04
 > están mal por ~2× y **un 403 de `curl` no es un 404**. Ver la nota de método del pase 12.
 > **Pase 11:** el Digital Omnibus es derecho vigente (tendencia 25), aparece la capa predictiva y está vacía (tendencia 26), y se corrige un error de método de diez pasadas sobre licencias permisivas (tendencia 27).
 
+## 🆕 Tendencias 623–628 — pase 80 del 2026-10-04
+
+**623. El spec vigente de xAPI llegó al open source permisivo, y llegó por triplicado — al revés que
+en OneRoster.** `yetanalytics/lrsql` (Apache-2.0) sirve **1.0.3 + 2.0.0** negociados por el header
+`X-Experience-API-Version` (`doc/xapi_versioning.md`); `adlnet/ADL_LRS` (Apache-2.0, **331 ★**)
+declara **IEEE 9274.1.1** en `readme.md:3`; `pelotech/xapi-lrs` (Apache-2.0) lo ejercita **en CI**.
+🔵 **Pedir *permisivo + vivo + spec vigente* en la capa servidor deja CERO piezas en OneRoster y TRES
+en xAPI: la trampa de `go-oneroster` es del estándar, no del sector.** Ver **P244**.
+
+**624. Y la asimetría regional que eso deja: el permisivo con titular público europeo es el único que
+no llegó.** `openfun/ralph` es **MIT** con titular **France Université Numérique**, y está **clavado
+en 1.0.3** —medido en dos lugares del árbol: `docs/index.md:63` y los manejadores de ruta—. 🔴 **La
+combinación *EMEA-soberano + xAPI 2.0* no existe hoy**, y obliga a elegir entre un titular
+estadounidense y una pieza sin titular. 📍 **EMEA.**
+
+**625. Aparece una licencia permisiva SIN TITULAR, y la ausencia es medible.** `pelotech/xapi-lrs`
+trae **Apache-2.0** completa, y su única línea candidata a titular es el **apéndice sin rellenar**
+(`LICENSE:189`, `Copyright [yyyy] [name of copyright owner]`), con `NOTICE` **404**, `AUTHORS` **404**
+y `package.json` **sin `author` ni `license`**. 🔵 **Veredicto `HOLDER-ABSENT`:** la **§4(c)** obliga a
+conservar los avisos de copyright **y no hay aviso que conservar**. ⚠️ **Un nombre de cuenta de GitHub
+no es una persona jurídica declarada.**
+
+**626. `GATE-ON-EGRESS` — tercera clase de compuerta de esta base, y mira al dato que SALE, no al que
+se escribe.** `BaijayantaRoy/bandup` (MIT) corre **local por omisión** con Ollama y **muestra una
+advertencia persistente en el momento en que se elige un proveedor no local**, porque el ensayo deja
+la máquina. 🔵 **Es el eje de `p215-disclosure-axis` del otro lado: el Art. 50(2) obliga a declarar
+que un contenido es *sintético*; esto declara que un dato *personal de un menor* está SALIENDO.** Se
+suma a `GATE-IN-SCOPE` (**P220**) y `GATE-IN-EFFECT` (**P221**).
+
+**627. La primera atadura a una rúbrica de examen NACIONAL de APAC entra a esta KB, y es por currículo
+—no por antropónimo—.** `bandup` marca contra **PSLE** (Contenido /20 + Lenguaje /20 = /40) y
+**A-Level General Paper** (/30 + /20 = /50), con descriptores estilo **SEAB/Cambridge** declarados **no
+oficiales**. 🔴 **`Singapore`, `PSLE`, `A-Level`, `O-Level`, `General Paper` y `Cambridge` tenían CERO
+menciones reales en 79 pases** (las 10 de `SEAB` son falsos positivos de subcadena, comprobados).
+⚠️ **Cota: 2 ★ — señal, no recomendación.** 📍 **APAC (Singapur).** Ver **P245**.
+
+**628. El `default` permisivo de una negociación de versión es una trampa de interoperabilidad, y está
+documentada.** En `lrsql`, **por omisión** una petición `X-Experience-API-Version: 1.0.3` **puede
+recibir *statements* `2.0.0`**; degradarlos exige encender `LRSQL_ENABLE_STRICT_VERSION`. 🔵 **Un
+cliente legado recibe cargas del spec nuevo en silencio si nadie puso la variable** — y las
+*reactions* nacen `1.0.3`, de modo que crearlas en 2.0.0 y luego restringir el LRS **rompe el Admin
+UI**. **Configuración de un renglón que decide si una migración de spec es transparente o un
+incidente.**
+
+---
+
 ## 🆕 Tendencias 616–622 — pase 79 del 2026-10-04
 
 ### 616. 🔴 En la capa que el regulador nombra, la CAPACIDAD y la LIBERTAD DE USO están anti-correlacionadas

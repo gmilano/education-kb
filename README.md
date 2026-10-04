@@ -57,6 +57,39 @@ o la variable de entorno (regla de **P107**, pase 47):
 | **`p243-frontmatter-coverage/`** | **la cobertura de *frontmatter* sobre los 56 `.md`, y el control NEGATIVO que importa: que 7 variantes de vocabulario regional (`Latam`, `Europe`, `Asia Pacific`, `Brazil`…) sean RECHAZADAS** | `python3 test_check_frontmatter.py` | ⚠️ **sin medir — ver abajo** *(nuevo en el pase 79)* |
 
 
+⚠️ **Pase 80 del 2026-10-04 — la columna «Hoy» tampoco se re-verificó en este pase, por el mismo
+motivo del entorno.** La ejecución de las suites del árbol clonado quedó **NEGADA**
+(`[Code from External]`), igual que en los pases **58**, **67** y **79**, y al revés que en el **66** y
+el **75**. **No se reimplementaron a mano, no se buscó otro intérprete y no se troceó el comando** — la
+negativa es sobre el resultado, no sobre la forma. 🔴 **Consecuencia declarada en vez de tapada: las
+cifras de la tabla son las que el pase 75 (y antes el 66) reprodujo; el pase 80 NO las afirma como
+medidas hoy**, y la celda «Hoy» de `p243-frontmatter-coverage/` **sigue vacía a propósito** desde el
+pase 79. 🔵 **Y no se publica ninguna conclusión general sobre la frontera de ejecución: es DEL
+ENTORNO y varía entre pases** — el error que los pases 50, 51 y 58 cometieron en una dirección y el 52,
+el 66 y el 75 en la otra.
+
+🔵 **El canal medido hoy, idéntico al de los pases 67, 75 y 79:** 🟢 `raw.githubusercontent.com`
+(**200** en ruta de archivo), `registry.npmjs.org` (**200**), `pypi.org` (**200**),
+`api.github.com/rate_limit` (**200**) y `github.com` por **WebFetch** (sirvió); 🔴
+`api.github.com/repos/*`, `codeload.github.com` y `github.com` por `curl` dan **403**.
+⚠️ **Otra vez el único endpoint de la API que pasa es el que NO transporta dato de repositorio.**
+
+🟢 **Lo que este pase sí midió sin ejecutar código del árbol, y es el aporte del pase: el eje SPEC
+de la capa SERVIDOR de xAPI, que `P235` dejó sin medir en sus nueve filas** (las nueve dicen
+`(sin version en el arbol)`). Resultado: **tres** LRS permisivos llegan al spec vigente —`lrsql`
+(Apache-2.0, 1.0.3 + 2.0.0), `ADL_LRS` (Apache-2.0, IEEE 9274.1.1, **331 ★**, PoC por su propio
+readme) y `pelotech/xapi-lrs` (Apache-2.0, 2.0 **en CI**)— contra **cero** en la capa servidor de
+OneRoster, 🔵 **así que la trampa de `go-oneroster` es del ESTÁNDAR y no del sector.**
+🔴 **Y la asimetría que deja: el único permisivo con titular público europeo (`openfun/ralph`, MIT,
+`France Université Numérique`) está clavado en 1.0.3**, de modo que *EMEA-soberano + xAPI 2.0* no
+existe hoy. Ver **P244** y **P246**.
+
+⚠️ **Las mediciones de este pase vienen de `curl` sobre `raw.githubusercontent.com` y de WebFetch,
+con cada hallazgo verificado de primera mano en el archivo del árbol que se cita** (licencia por
+**bloque de título**, titular por `NOTICE`/`AUTHORS`/manifiesto, spec por el documento o el código que
+lo fija). **No salen del instrumento versionado** — orden invertido respecto de **P126 regla 1**, y se
+declara porque cambia qué tan fuerte es la cifra, igual que en el pase 79.
+
 ⚠️ **Pase 79 del 2026-10-04 — la columna «Hoy» NO se re-verificó, y el instrumento nuevo de este pase
 tampoco se pudo correr.** La ejecución de las suites del árbol clonado quedó **NEGADA**
 (`[Code from External]`), igual que en los pases 58 y 67 y al revés que en el 66 y el 75. **No se

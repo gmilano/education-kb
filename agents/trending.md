@@ -9,6 +9,54 @@ updated: 2026-10-04
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 > No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
 
+## 2026-10-04 — pase 80: entra la primera pieza atada a una rúbrica de examen nacional de APAC, y su compuerta es de una clase que esta base no tenía
+
+### 🟢 El alta: `BaijayantaRoy/bandup` — **MIT**, 🔴 **2 ★**, 📍 **APAC (Singapur)**
+
+| Campo | Medido este pase |
+|---|---|
+| Licencia | 🟢 **MIT** — **bloque de título** de `LICENSE`, **1.071 B**, titular `Baijayanta Roy` 2026, **0 líneas `affero`** |
+| Señal | 🔴 **2 ★ / 0 forks**, Python 3.10+, no archivado |
+| Región | 🟢 **APAC (Singapur)** por **CURRÍCULO**, no por antropónimo (**P135**): **PSLE** (/20+/20=/40) y **A-Level General Paper** (/30+/20=/50), descriptores estilo **SEAB/Cambridge** declarados **no oficiales**; **O-Level /30** *coming soon* |
+| Compuerta | 🟢 **`GATE-ON-EGRESS`** — local por omisión (Ollama, sin cuenta ni telemetría) y **advertencia PERSISTENTE en pantalla al elegir un proveedor no local**, porque el ensayo deja la máquina |
+| Veredicto | ⚠️ **señal, NO recomendación**: 2 ★ no sostienen una construcción (precedente `ChatBarAI/ai_lms`, 5 ★, rechazada). **No entra a `repos/foundations.md`** |
+
+🔴 **El hueco que cierra era total: `Singapore`, `PSLE`, `A-Level`, `O-Level`, `General Paper` y
+`Cambridge` tenían CERO menciones reales en 79 pases.** ⚠️ **Y las 10 coincidencias de `SEAB` eran
+falsos positivos de subcadena** (dentro de `deseable`, `indeseable`, `parseable`, `imparseable`):
+comprobadas antes de publicar, que es **P126 regla 2** — un `grep -i` sin anclar no es una medición.
+
+### 🔵 Por qué la compuerta es el hallazgo y no el marcador
+
+Esta base ya clasificaba `GATE-IN-SCOPE` (la capacidad vive en la credencial, **P220**) y
+`GATE-IN-EFFECT` (lo escrito nace `DRAFT`, **P221**). `bandup` aporta un **tercer eje**: la compuerta
+no está sobre la llamada ni sobre la visibilidad del efecto, sino sobre **la salida del dato**, y se
+hace cumplir **informando al operador en el momento en que el dato cruza**.
+
+🟢 **Es `p215-disclosure-axis` del otro lado:** el Artículo 50(2) obliga a declarar que un contenido es
+**sintético**; esto declara que un dato **personal de un menor está SALIENDO**. Para el expediente de
+privacidad de K-12 —el *«pegar la escritura de un chico en un chatbot de nube»* que el propio README
+nombra como la línea que muchas escuelas no cruzan— **ése es el patrón que se copia.**
+
+🔵 **Y la honestidad citable**, del README: *«A rubric score from a model is not a teacher's
+judgement»*, con el trabajo de la máquina acotado a la parte *incansable* y la reescritura al
+siguiente nivel hecha **con las palabras del propio alumno**.
+
+**Resto medido del árbol:** manuscrito por foto/escaneo (JPG/PNG/WEBP/HEIC, BMP/TIFF, PDF multipágina)
+transcrito **literal con los errores preservados**, 🟢 **modelo de OCR elegido SEPARADO del de
+marcado**, historial local en **SQLite** con tendencia por alumno y autoguardado al transcribir.
+
+### ⚠️ Lo que este pase NO pudo hacer, declarado
+
+🔴 **Ejecución de las suites del árbol clonado: NEGADA** (`[Code from External]`), igual que en los
+pases **58**, **67** y **79**, y al revés que en el **66** y el **75**. **No se reimplementaron a mano,
+no se buscó otro intérprete y no se troceó el comando.** Consecuencia: la columna «Hoy» del README **no
+se re-verificó**; sus cifras son las que el pase 75 reprodujo. 🔵 **Y no se publica ninguna conclusión
+general sobre la frontera de ejecución: es DEL ENTORNO y varía entre pases.**
+
+🔴 **Décimo barrido regional consecutivo agotado** — las 4 regiones, cero hechos nuevos, verificado por
+`grep` contra los archivos publicados antes de escribir. Ver la tabla en `intel/market.md`.
+
 ## 2026-10-04 — pase 79: la capa que el regulador nombra existe, y 2 de sus 3 piezas no tienen licencia
 
 ### 🔴 La señal del pase: una capa completa, medida, y comercialmente inusable

@@ -246,6 +246,104 @@ updated: 2026-10-04
 > modelo»**— y **ninguna de las dos sabe de la otra**. Ver la capa nueva al final de este archivo, las tendencias
 > **180**–**182** y el patrón **P99**.
 
+## 🇸🇬 P245 — la primera pieza de esta KB atada a un RÚBRICA DE EXAMEN NACIONAL de APAC, y lo que vale es su COMPUERTA, no su marcador (pase 80 del 2026-10-04)
+
+**`BaijayantaRoy/bandup`** — 🟢 **MIT** (bloque de título de `LICENSE`, **1.071 B**, titular
+`Baijayanta Roy`, 2026, **0 líneas `affero`**) · 🔴 **2 ★ / 0 forks** · Python 3.10+ · no archivado.
+
+### 🟢 La región sale del CURRÍCULO, no del antropónimo — y por eso se puede declarar
+
+El titular del `LICENSE` es un **antropónimo**, y de un antropónimo **no se infiere región** (regla de
+**P135**). Lo que ubica a esta pieza es otra cosa, y es verificable: **está atada al sistema de
+exámenes nacionales de Singapur.**
+
+| Papel | Rúbrica que implementa, leída del README |
+|---|---|
+| **PSLE** (composición) | Contenido **/20** + Lenguaje **/20** = **/40** |
+| **A-Level General Paper** | Contenido **/30** + Lenguaje **/20** = **/50** |
+| **O-Level** (composición) | **/30** — declarado *coming soon*, no construido |
+
+Con descriptores de banda de estilo **SEAB/Cambridge** (el README los declara **no oficiales**) y una
+nota de recuento de palabras contra las normas reales de cada papel. 🔵 **Un organismo nacional de
+examen es un ancla INSTITUCIONAL y verificable** — la misma clase de señal que permitió ubicar a
+`DaviPac/Classroom-mcp` como **LATAM** por `TIMEZONE=America/Recife` en vez de por un nombre.
+📍 **APAC (Singapur).**
+
+🔴 **Y el hueco que cierra es grande: `Singapore`, `PSLE`, `A-Level`, `O-Level`, `General Paper` y
+`Cambridge` tenían CERO menciones reales en 79 pases.** ⚠️ **`SEAB` devuelve 10 coincidencias y las
+**diez** son falsos positivos de subcadena** — dentro de `deseable`, `indeseable`, `parseable` e
+`imparseable`. 🔵 **Se comprobó en vez de creerle al conteo**, que es **P126 regla 2** otra vez: un
+`grep` sin anclar y con `-i` no es una medición.
+
+### 🟢 `GATE-ON-EGRESS` — la clase de compuerta nueva, y es la parte transferible
+
+Esta base ya tiene clasificadas `GATE-IN-SCOPE` (la capacidad vive en la credencial, **P220**) y
+`GATE-IN-EFFECT` (lo escrito nace `DRAFT`, **P221**). `bandup` aporta una tercera, sobre otro eje:
+
+> **Local por omisión** vía **Ollama** — sin cuenta, sin suscripción, sin telemetría, ningún ensayo
+> sale de la máquina. 🟢 **Y en el momento en que se selecciona un proveedor NO local, la aplicación
+> muestra una advertencia PERSISTENTE en pantalla, porque el ensayo ahora sí sale del equipo.**
+
+🔵 **`GATE-ON-EGRESS`: la compuerta no está sobre la llamada (`IN-SCOPE`) ni sobre la visibilidad del
+efecto (`IN-EFFECT`), sino sobre la SALIDA DEL DATO, y se hace cumplir informando al operador en el
+momento en que el dato cruza.** Es el mismo eje que mide `p215-disclosure-axis`, **pero del otro
+lado**: el Artículo 50(2) obliga a declarar que un contenido es *sintético*; esto declara que un
+contenido *personal de un menor* **está saliendo**. Para un expediente de privacidad de K-12 —el
+«pegar la escritura de un chico en un chatbot de nube» que el propio README nombra como la línea que
+muchas escuelas no cruzan— es la pieza de arquitectura que se copia, no el marcador.
+
+### ⚠️ El veredicto, con la cota por delante
+
+🔴 **2 ★ NO sostienen una recomendación de construcción, y esta pieza NO entra a
+`repos/foundations.md`.** Es el precedente de `ChatBarAI/ai_lms` (MIT, repo y licencia reales y
+verificados, **5 ★**, rechazada por eso mismo): **esta base prefiere menos filas reales que relleno.**
+🟢 **Entra como SEÑAL** —atadura curricular de APAC + clase de compuerta nueva— **en
+`agents/trending.md` y en la región APAC de `intel/market.md`**, con sus 2 ★ escritos.
+
+🔵 **Y la honestidad que sí se puede citar en una reunión con un cliente**, del propio README: *«A
+rubric score from a model is not a teacher's judgement»*, con las bandas declaradas **no oficiales** y
+el trabajo de la máquina acotado a la parte *incansable* (marcar cada error, reescritura con cambios
+rastreados, un párrafo al siguiente nivel **con las palabras del propio chico**) para que la atención
+experta del docente vaya a lo que sólo hace un humano.
+
+**Lo demás que se midió del árbol:** entrada de **manuscrito** (JPG/PNG/WEBP/HEIC, BMP/TIFF y PDF
+multipágina, transcrito **literal, con los errores preservados**), 🟢 **el modelo de OCR se elige
+SEPARADO del modelo de marcado**, historial local en **SQLite** con tendencia por alumno, y los
+guiones subidos se **autoguardan al transcribirse** —aparecen como `Unmarked` antes de marcarse.
+
+---
+
+
+### 🔬 Cómo se midió, y los tres falsos que se evitaron por comprobar antes de publicar
+
+| Canal | Resultado de hoy |
+|---|---|
+| `raw.githubusercontent.com` (ruta de archivo) | 🟢 **200** — de acá salen licencia, *readme* y código leído |
+| `github.com` por **WebFetch** | 🟢 sirvió — ★, *forks*, lenguaje, archivado |
+| `api.github.com/rate_limit` | 🟢 **200** |
+| `api.github.com/repos/*` · `codeload.github.com` · `github.com` por `curl` | 🔴 **403**, los tres |
+| Ejecución de las suites del árbol clonado | 🔴 **NEGADA** (`[Code from External]`) |
+
+⚠️ **Otra vez el único endpoint de la API que pasa es el que NO transporta dato de repositorio**, igual
+que en los pases 67, 75 y 79.
+
+🔴 **Los tres falsos que este pase estuvo a punto de publicar, y que sólo se evitaron por comprobar:**
+
+1. **El *readme* de `adlnet/ADL_LRS` se llama `readme.md`, en minúscula.** Un barrido sobre
+   `README`, `README.md`, `README.rst`, `README.txt` da **404 en las tres ramas** (`master`, `main`,
+   `develop`) y habría publicado *«sin readme, spec no declarado»* sobre el repo de **331 ★** que
+   justamente declara xAPI 2.0. Se encontró al **quinto** nombre. 🔵 **Es la lección de caso de
+   `p206`/`p211` reproducida sobre un repo NUEVO, y en la dirección que cuesta un hallazgo.**
+2. **Un `grep -E '2\.0\.0'` sobre `openfun/ralph` devuelve 3 coincidencias y las TRES son falsos
+   positivos**: el enlace a `semver.org/spec/v2.0.0.html` y su propio *release* `v2.0.0` de 2021. El
+   spec de ralph **no** sale de un *grep* de versión: sale de `docs/index.md:63` y de los
+   manejadores de ruta.
+3. **La primera sonda de los tres *readmes* devolvió «0 líneas de spec» en los tres, y uno de esos
+   ceros era artefacto** (el 404 de `ADL_LRS`). 🔵 **Se verificaron los códigos de estado ANTES de
+   creerle al cero** — que es el defecto de `awk -F'|'` del pase 67, evitado esta vez.
+
+---
+
 ## 🔒 La capa que el único estatuto del mundo nombra por su nombre EXISTE en open source y es COMERCIALMENTE INUSABLE: 2 de 3 piezas sin licencia, y la permisiva tiene 3 ★ (pase 79 del 2026-10-04)
 
 > ⚠️ **Lo que este pase NO pudo hacer, dicho antes de cualquier cifra:** la ejecución de las suites

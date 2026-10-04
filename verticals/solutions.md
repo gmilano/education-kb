@@ -112,6 +112,41 @@ updated: 2026-10-04
 > **`qti3-pnp`**, que abren accesibilidad de evaluación como entregable auditable (**P72**). ⚠️ **Open edX cambia de
 > recomendación: proponer con presupuesto de mantenimiento (gap 70).** Ver la sección del pase 33, abajo.
 
+## 🗄️ La capa LRS como vertical de partida, y la ruta de migración que no obliga a volcar la base (pase 80 del 2026-10-04)
+
+Este archivo venía tratando al LRS como pieza de *analítica* y no como **vertical desplegable**. Con el
+eje SPEC de **P244** medido, la capa se puede presentar como se presenta un Moodle o un Open edX: una
+plataforma que el cliente **aloja**, sobre la que Globant construye el borde.
+
+| Qué necesita el cliente | Pieza permisiva | Spec | Cota de entrega |
+|---|---|---|---|
+| **SER el LRS** — almacenar *statements* y servir la API | 🟢 [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) — **Apache-2.0**, titular `Yet Analytics, Inc.` | 🟢 **1.0.3 + 2.0.0** | SQLite / Postgres 14–18 / MariaDB / MySQL; **encender `LRSQL_ENABLE_STRICT_VERSION`** o un cliente 1.0.3 recibe cargas 2.0.0 |
+| **El *blessing* del organismo del estándar** | 🟢 [`adlnet/ADL_LRS`](https://github.com/adlnet/ADL_LRS) — **Apache-2.0**, `Advanced Distributed Learning`, **331 ★** | 🟢 **IEEE 9274.1.1 (xAPI 2.0)** | 🔴 **su propio `readme.md:5` lo declara PoC**: *«a small amount of users»*. No es capa de producción masiva |
+| **Soberanía EMEA con titular público europeo** | ⚠️ [`openfun/ralph`](https://github.com/openfun/ralph) — **MIT**, `France Université Numérique` | 🔴 **1.0.3 solamente** | 🔴 **no llega al spec vigente**: la combinación *EMEA-soberano + 2.0* **no existe hoy** en esta capa |
+| **Pasar una base `lrsql` viva a 2.0 sin volcarla** | ⚠️ [`pelotech/xapi-lrs`](https://github.com/pelotech/xapi-lrs) — **Apache-2.0**, 🔴 **titular AUSENTE** | 🟢 **1.0.3 + 2.0.0 (en CI)** | 🔴 **0 ★**, v0.9.6 pre-1.0, bases pre-0.6 no actualizables |
+
+🔵 **Lo que cambia para un *engagement*: la pregunta del LRS dejó de ser «¿hay algo permisivo?» —hay
+tres— y pasó a ser «¿con titular, con spec vigente, o con respaldo regional?», porque hoy ninguna
+pieza da las tres cosas a la vez.**
+
+### 🟢 La ruta de migración, y es la parte que no se improvisa
+
+`xapi-lrs` declara **paridad de catálogo (CI-enforced) con la forma Postgres de `lrsql` v0.9.5** y por
+eso puede **apuntarse a la base `lrsql` existente y tomarla en el lugar**: *statements*, actores,
+documentos y **credenciales** pasan sin modificación, **sin `dump`/`restore`**. Se ejercita en CI con
+`SCHEMA_SOURCE=lrsql` cruzado contra `[pg, pglite] × ['1.0.3', '2.0.0']` — **8 trabajos**, suite
+**oficial** `adlnet/lrs-conformance-test-suite` **anclada por SHA** `5bc232d`.
+
+⚠️ **La cota, otra vez por delante:** es una pieza de **0 ★** y **pre-1.0**. 🔵 **El valor para una
+propuesta no es «desplegar `xapi-lrs`», es que existe una ruta MEDIDA de `lrsql` → xAPI 2.0 que no
+exige migrar el dato**, y eso se puede ofrecer con la pieza puesta detrás de una evaluación.
+
+🟢 **Y el modo `PGlite`** —un Postgres completo embebido en proceso por WASM, sin Docker ni base
+externa— **hace que la capa entera se pueda demostrar en una laptop**, que es lo que suele faltar en
+una reunión técnica.
+
+---
+
 ## 🧪 Sin verticales nuevas, y el barrido de plataformas se saturó por tercer pase consecutivo (pase 79 del 2026-10-04)
 
 El barrido obligatorio de plataformas (`open source platform education ERP CRM MIT Apache`, más la

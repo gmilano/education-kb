@@ -110,6 +110,62 @@ updated: 2026-10-04
 > **Pase 11:** +2 patrones — **P25** (riesgo de abandono conforme al Anexo III, la capa con presupuesto ya asignado y sin oferta open source) y **P26** (agente docente sobre la ontología curricular nacional ya publicada).
 > **Pase 27:** **+4 patrones y una corrección.** 🔴 **P51 queda con premisa falsa** —el conector MCP de Moodle **sí existe y es MIT**— y lo reemplazan **P54** (corrección y devolución sobre Moodle con **compuerta humana**, el último tramo del gap 6, con piezas que ya escriben), **P55** (el conector de **Open edX**, que es el único que de verdad no existe), **P56** (**SCORM** como formato de salida de la capa generativa: cero integración, offline) y **P57** (evidencia por MCP cotizada sobre lo que CaSS **realmente** expone — 6 de 61 operaciones, con insignias y autoría de marcos **fuera**).
 
+## 🗄️ P246 — LRS xAPI **2.0** permisivo, y la toma de posesión de una base `lrsql` viva sin volcarla (pase 80 del 2026-10-04)
+
+**Cuándo se usa.** El cliente ya emite *statements* xAPI (Moodle, Open edX, un SCORM envuelto) contra
+un LRS **1.0.3**, y necesita llegar a **xAPI 2.0 / IEEE 9274.1.1** —porque un pliego lo pide, porque su
+proveedor subió el spec, o porque quiere analítica sobre el formato nuevo— **sin una ventana de
+migración de datos.**
+
+### Las piezas, con licencia y spec medidos este pase (**P244**)
+
+| Rol | Pieza | Licencia | Spec |
+|---|---|---|---|
+| LRS de producción | [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) | **Apache-2.0** (`Yet Analytics, Inc.`) | **1.0.3 + 2.0.0** |
+| Ruta a 2.0 + toma de posesión | [`pelotech/xapi-lrs`](https://github.com/pelotech/xapi-lrs) | **Apache-2.0** (🔴 **titular ausente**) | **1.0.3 + 2.0.0**, en CI |
+| Referencia del organismo | [`adlnet/ADL_LRS`](https://github.com/adlnet/ADL_LRS) | **Apache-2.0** (`Advanced Distributed Learning`) | **IEEE 9274.1.1** ⚠️ PoC |
+| Suite de conformidad | [`adlnet/lrs-conformance-test-suite`](https://github.com/adlnet/lrs-conformance-test-suite) | — | anclada por SHA `5bc232d` |
+| Emisores | `php-xapi/model` (MIT) · `RusticiSoftware/TinCanPHP` (Apache-2.0) | permisivos | ⚠️ **congelados** (**P235**) |
+
+### Cómo se cablea
+
+1. **Antes de tocar nada, fijar la versión en el LRS que ya corre.** En `lrsql`, encender
+   `LRSQL_ENABLE_STRICT_VERSION` (`enableStrictVersion`) y dejar `LRSQL_SUPPORTED_VERSIONS` explícito.
+   🔵 **Sin esto, un cliente que pide `1.0.3` puede estar recibiendo `2.0.0` desde antes de empezar**, y
+   la migración «rompe» algo que ya estaba roto en silencio. **Este paso es diagnóstico, no cosmético.**
+2. **Inventariar las *reactions*.** Nacen `1.0.3` (`LRSQL_REACTION_VERSION`). Las creadas en `2.0.0`
+   **rompen el Admin UI** si después se restringe el LRS a 1.0.3; el procedimiento de recuperación
+   —reactivar 2.0.0, borrar las incompatibles, volver— se corre **ahora**, no durante el corte.
+3. **Levantar `xapi-lrs` en modo `PGlite`** (Postgres embebido en proceso por WASM, sin Docker) y
+   correr su conformidad contra las dos versiones:
+   `pnpm test:conformance` y `CONFORMANCE_XAPI_VERSION=2.0.0 pnpm test:conformance`.
+   🟢 **Esto se demuestra en una laptop**, que es donde se gana la reunión técnica.
+4. **Ensayar la toma de posesión contra una COPIA** de la base `lrsql`: apuntar
+   `PGHOST`/`PGPORT`/`PGDATABASE`/`PGUSER`/`PGPASSWORD` (o `DATABASE_URL`) a la copia, con
+   `SCHEMA_SOURCE=lrsql`. 🔴 **Verificar primero la versión de `lrsql`: la paridad declarada es con
+   v0.9.5.** Y 🔴 **si existió una base `xapi-lrs` anterior a v0.6.0, no es actualizable** — la sonda de
+   arranque se niega a arrancar contra un esquema desajustado.
+5. **Requisito de autenticación que corta despliegues:** la base **debe** usar `scram-sha-256`
+   (*default* de Postgres 14+). El proveedor FIPS rechaza MD5 y `node-postgres` calcula un digest MD5
+   para responder `AuthenticationMD5Password` → `Unrecognized algorithm name`. **Migrar el rol
+   (`ALTER ROLE … PASSWORD …` con `password_encryption = 'scram-sha-256'`), no degradar la imagen.**
+6. **Decidir con el eje de titular a la vista.** Si el entregable es un **producto** de Globant o un
+   pliego público europeo, el `HOLDER-ABSENT` de `xapi-lrs` es una **bandera de diligencia** (§4(c): no
+   hay aviso de copyright que conservar). 🔵 **Patrón recomendado: `lrsql` como LRS de producción
+   —titular jurídico, spec vigente— y `xapi-lrs` como ruta de evaluación medida**, no como la pieza
+   que se entrega.
+
+### Cota de entrega y lo que NO resuelve
+
+| | |
+|---|---|
+| **Cota** | 6–8 semanas para el corte de LRS con conformidad reproducible en CI; **más** el inventario de *reactions*, que es el que suele sorprender |
+| 🔴 **No resuelve EMEA-soberano** | el único permisivo con titular público europeo (`openfun/ralph`, **MIT**, `France Université Numérique`) **está clavado en 1.0.3** |
+| 🔴 **No resuelve la capa CLIENTE** | los emisores permisivos siguen **congelados** (**P235**): `php-xapi/model` (1,7 a), `TinCanPHP` (3,9 a), `TinCanPython` (6,1 a) |
+| ⚠️ **No cierra el PUENTE** | la puerta MCP de xAPI sigue con el problema del pase 77 (**P238**) |
+
+---
+
 ## 🔒 P242 — monitoreo conductual de examen cuando la pieza capaz NO tiene licencia: la receta es de ARQUITECTURA, no de catálogo (pase 79 del 2026-10-04)
 
 **Disparador real:** un cliente de APAC —**Vietnam** (ley de AI vigente **2026-03-01**, con educación
