@@ -9,6 +9,88 @@ updated: 2026-10-04
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 > No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
 
+## 2026-10-04 — pase 81: el canal que el encargo ordena usar marca muerto el 100 % del catalogo, y el alta real es un cuarto servidor xAPI que la licencia deja afuera
+
+### 🔴 El hallazgo del pase es un defecto de CANAL, y es el que podia destruir el archivo
+
+Las **81** URLs distintas de `github.com` de la tabla principal de `agents/top.md` se pidieron una por
+una con `curl -L`. Resultado: **`403` en 81 de 81**, **0** respuestas `200`, **0** respuestas `404`,
+**varianza cero**. Las mismas URLs por **WebFetch** resuelven normal.
+
+| Canal | Muestra | `200` | `403` | Lectura |
+|---|---|---|---|---|
+| 🔴 `curl -L` | **81** | **0** | 🔴 **81** | 🔴 defecto de canal |
+| 🟢 WebFetch (control) | **3** | 🟢 **3** | 0 | 🟢 los repos estan vivos |
+
+🔵 **Varianza cero sobre 81 muestras no es el estado de 81 repos: es el estado del canal.** 🔴 **Y el
+encargo de esta KB pide textualmente verificar con `curl -sI` y recuerda que «un 404 no es un
+hallazgo»: obedecerlo al pie de la letra habria marcado el 100 % del catalogo como muerto, con la
+coartada de estar siguiendo el procedimiento.** 🆕 **Regla nueva `P247`: un canal de verificacion se
+calibra contra una URL que se sabe buena antes de creerle un negativo, y un negativo uniforme sobre
+una muestra grande es defecto de canal hasta que un segundo canal independiente lo confirme pieza por
+pieza.** ⚠️ **Su cota, declarada: esto no dice que las 81 filas esten vivas — dice que este canal no
+puede pronunciarse sobre ninguna. Las 78 no comprobadas quedan como las dejo el pase que las midio.**
+
+### 🟢 El alta de datos: `raif-s-naffah/xapi-rs` — cuarto servidor xAPI 2.0 conformante, 🔴 `GPL-3.0-or-later`, 🔴 0 ★
+
+| Campo | Valor | Fuente de primera mano |
+|---|---|---|
+| Spec | 🟢 **IEEE 9274.1.1 v2.0.0** | descripcion del repo |
+| Licencia | 🔴 **`GPL-3.0-or-later`** | **payload** `Cargo.toml` (**P172**) |
+| Titular | 🔴 `Raif S. Naffah <raif@mailbox.org>` | `authors` de `Cargo.toml` |
+| Region | 🔴 **Sin region verificada** (**P135**) | — |
+| Adopcion | 🔴 **0 ★ / 0 forks** | WebFetch |
+
+🔴 **Entra como SENAL y no como fila** (**P234**): copyleft fuerte en la capa que el cliente instala,
+con adopcion nula. 🔵 **Lo que cambia es que el conteo de la tendencia 623 pasa de TRES supuesto a
+TRES medido sobre 4 de 4**: el unico conformante que faltaba resulto copyleft.
+
+### 🟢 La tendencia 624 del pase 80 SOBREVIVE, y por una segunda razon independiente
+
+*EMEA-soberano + xAPI 2.0* sigue sin existir. `openfun/ralph` (**MIT**, **France Universite
+Numerique**, 📍 **EMEA**) **reproduce su pin en 1.0.3** —su README sigue remitiendo al
+`xAPI-Communication.md` de `adlnet/xAPI-Spec`, que es el texto de 1.0.3— y el unico candidato nuevo
+falla por **dos** motivos a la vez: **no declara afiliacion** (**P135**) **y** es copyleft.
+⚠️ **Re-medicion menor: `ralph` pasa de 50 ★ a 51 ★** (esta base tenia 50 en este archivo, linea 8758,
+y en `repos/foundations.md:2505`). No mueve ningun juicio; se anota para no leer un movimiento viejo
+como nuevo.
+
+### 🔴 El `xapi-rs` equivocado: el nombre resuelve a DOS repos y uno es de TRADING
+
+`pawelkn/xapi-rs` es *«the xStation5 API Rust library … execute trades»*: **una libreria de trading
+financiero**. 🔴 **`xAPI` es un acronimo colisionante —*Experience API* en educacion, *xStation API* en
+bolsa— con el nombre de repo EXACTAMENTE igual**, asi que un barrido que filtre por nombre y lea la
+descripcion por encima archiva una libreria de bolsa dentro de una KB de educacion. Confirma **P188**
+(el nombre no es una identidad) en su version mas dura. La desambiguacion que funciono: leer el
+`Cargo.toml`, no el slug.
+
+### ⚠️ Lo que este pase NO pudo medir, dicho explicitamente
+
+| Canal | Resultado | Consecuencia |
+|---|---|---|
+| 🔴 Ejecucion de suites | **NEGADA**, tercer pase consecutivo | **Propiedad del canal**, no evento. La columna «Hoy» **no** se re-verifico y no se debe citar como re-verificada |
+| 🔴 `lib.rs` | `EGRESS_BLOCKED` | Sustituido por el `Cargo.toml` del arbol, que es mejor fuente |
+| 🔴 `www.ceu.edu` | `EGRESS_BLOCKED` | El unico hecho regional nuevo del pase queda **sin verificar** (ver `intel/market.md`) |
+| 🔴 Registro del proxy | **NEGADO** | `P247` se sostiene con la varianza cero + el canal de control, que alcanzan |
+
+### 🔴 Decimo barrido regional consecutivo agotado, verificado por `grep` antes de escribir
+
+Las cuatro busquedas regionales obligatorias se corrieron con el ano **calculado** (2026). **Cada
+hecho devuelto ya estaba publicado en esta base**, confirmado con `grep` antes de escribir: NA (134
+proyectos en 31 estados, **AB 1159**, Idaho **SB 1227**, Virginia, Maryland, *Traffic Light*, 18 %),
+EMEA (AI Act, aplicacion general **2026-08-02**, alto riesgo en acceso y evaluacion), APAC (**96 %**,
+ROI **US$ 2,85**, Basic AI Act coreana, ley de AI de Vietnam), LATAM (Digital Education Council
+**92 % / 79 % / 94 % / 61 %**, Tec de Monterrey, AIGEN, RIE360, Chile, **CONPES 4144**).
+🔵 **Rendimiento marginal medido CERO por decima vez: el canal se corre porque es obligatorio y porque
+un cambio de regimen hay que verlo, no porque descubra.**
+
+### 🆕 Candidata ABIERTA que este pase deja escrita con numero
+
+**`mdweaver/canvas-mcp`**: **0 coincidencias** en los 56 `.md` de esta base, pero **no se midio de
+primera mano en este pase**, asi que **no se escribe fila**. 🔵 **Queda como accion del pase 82 con
+nombre propio** — una accion diferida con numero de pase se ejecuta; una diferida «al proximo pase» se
+re-agenda indefinidamente.
+
 ## 2026-10-04 — pase 80: entra la primera pieza atada a una rúbrica de examen nacional de APAC, y su compuerta es de una clase que esta base no tenía
 
 ### 🟢 El alta: `BaijayantaRoy/bandup` — **MIT**, 🔴 **2 ★**, 📍 **APAC (Singapur)**

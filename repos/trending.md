@@ -8,6 +8,45 @@ updated: 2026-10-04
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 
+## 2026-10-04 — pase 81: el cuarto servidor xAPI 2.0 conformante existe, es copyleft, y el conteo permisivo pasa de supuesto a medido sobre 4 de 4
+
+### 🟢 El repo nuevo
+
+| Repo | Licencia (**payload**) | Titular (**P184**) | xAPI 2.0 / IEEE 9274.1.1 | ★ | Lenguaje | Veredicto |
+|---|---|---|---|---|---|---|
+| 🔴 [`raif-s-naffah/xapi-rs`](https://github.com/raif-s-naffah/xapi-rs) | 🔴 **`GPL-3.0-or-later`** (`Cargo.toml`) | 🔴 `Raif S. Naffah <raif@mailbox.org>` — persona fisica · **sin region** (**P135**) | 🟢 **SI — v2.0.0 conformante** | 🔴 **0** (0 forks) | Rust (`edition 2024`) | 🔴 **Senal, no fila de catalogo** (**P234**): copyleft fuerte en la capa servidor + adopcion nula |
+
+🔵 **El aporte no es la pieza: es que cierra el denominador.** La tendencia **623** del pase 80 afirmo
+que *permisivo + vivo + spec vigente* deja **TRES** servidores en xAPI (`yetanalytics/lrsql`,
+`adlnet/ADL_LRS`, `pelotech/xapi-lrs`). 🟢 **Con el cuarto conformante medido, el conteo permisivo
+sigue en TRES — pero ahora es 4 de 4 medido y no 3 encontrados**: el unico que faltaba resulto
+copyleft, y eso es una afirmacion mas fuerte que la del pase 80.
+
+### 🔴 Y el pin de `ralph` reproduce, asi que la asimetria regional de la tendencia 624 sigue en pie
+
+| Repo | Licencia | Titular / region | xAPI 2.0 | Re-medicion de este pase |
+|---|---|---|---|---|
+| 🔴 [`openfun/ralph`](https://github.com/openfun/ralph) | 🟢 **MIT** | 🟢 `France Universite Numerique` 📍 **EMEA** | 🔴 **NO — 1.0.3** | 🟢 **El pin REPRODUCE**: el README sigue remitiendo al `xAPI-Communication.md` de `adlnet/xAPI-Spec`, que es el texto de 1.0.3. ⚠️ **★ de 50 → 51** |
+
+🔴 **La combinacion *EMEA-soberano + xAPI 2.0* sigue sin existir**, y este pase lo sostiene por una
+**segunda** razon independiente: el unico candidato nuevo **no declara afiliacion** (**P135**) **y** es
+`GPL-3.0-or-later`. ⚠️ **Sigue obligando a elegir entre un titular estadounidense y una pieza sin
+titular.**
+
+### 🔴 La colision de nombre, porque el barrido trae la pieza equivocada primero
+
+**`pawelkn/xapi-rs`** — mismo nombre de repo, **exacto** — es *«the xStation5 API Rust library …
+execute trades»*: **trading financiero**. 🔵 **`xAPI` es un acronimo colisionante: *Experience API* en
+educacion, *xStation API* en bolsa.** Confirma **P188** en su version mas dura (nombre identico, no
+solo parecido). Se desambigua leyendo el `Cargo.toml` y la descripcion completa, **no** el slug.
+
+### ⚠️ Canales: el `curl` a `github.com` no sirve para verificar nada en este entorno
+
+**`403` en 81 de 81** URLs de la tabla principal, varianza cero, mientras WebFetch resuelve las mismas
+URLs. 🆕 **Ver `P247` en `compose/patterns.md`**: calibrar antes de creerle un negativo. 🔴 **`lib.rs`
+dio `EGRESS_BLOCKED`**, asi que la ficha del crate se leyo del arbol — que es la mejor fuente de todas
+formas (**P172**).
+
 ## 2026-10-04 — pase 80: la columna que `P235` no registró en ninguna de sus 9 filas era la que decidía, y al medirla aparece un servidor nuevo y una licencia sin titular
 
 ### 🧭 La pregunta, y por qué no era opcional

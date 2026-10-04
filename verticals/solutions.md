@@ -9,6 +9,7 @@ updated: 2026-10-04
 > Plataformas verticales reales, en producción, customizables con AI.
 > Modelo: partir de algo que ya funciona y que ya tiene los datos, y agregar la capa agéntica arriba.
 > Verificado vía WebFetch el 2026-09-30; las capas del pase 11, el 2026-10-01.
+> **Pase 81 del 2026-10-04:** 🔴 **Sin verticales nuevas: el barrido obligatorio de plataformas (`open source platform education ERP CRM MIT Apache`) se saturo por CUARTO pase consecutivo** — devolvio **OpenEduCat** y su marco ERP, ya inventariados en este archivo, y **CK-ERP**, que es de 2010 y no es una capa de partida viva. 🟢 **Lo que si gana la vertical es una RESTRICCION DE ENTREGA medida sobre la capa LRS del pase 80: aparecio el cuarto servidor xAPI 2.0 conformante (`raif-s-naffah/xapi-rs`) y es `GPL-3.0-or-later`, asi que la eleccion de LRS permisivo queda cerrada POR ELIMINACION sobre 4 de 4 conformantes medidos** — y 🔴 **la combinacion *EMEA-soberano + xAPI 2.0 + permisivo* sigue sin existir, con el pin de `openfun/ralph` en 1.0.3 re-medido y reproducido.**
 > **Pase 77 del 2026-10-03:** 🔴 **Sin verticales nuevas, y el barrido obligatorio de plataformas se saturó otra vez sobre OpenEduCat y Frappe/ERPNext** —las dos ya inventariadas acá, y **re-medidas de primera mano en este pase con licencia CONCORDANTE**: `openeducat/openeducat_erp` **LGPL** (`LICENSE`, 8.240 B, rama por defecto `19.0`) y `frappe/education` **GPL-3.0**. 🔵 **Lo que sí aportó esa re-medición es una cota de instrumento: `frappe/education` no publica un TEXTO de licencia, publica una DECLARACIÓN de una línea** (`license.txt` = `License: GNU GPL V3`, **20 B**), y un clasificador por bloque de título —que es el correcto según **P171**— devuelve `UNCLASSIFIED` sobre ella. 🟢 **Reparado en `compose/code/lib/license_family.sh` con un *fallback* de declaración GUARDADO POR TAMAÑO (≤ 400 B): un payload corto no tiene cuerpo con el cual confundirse, y el guard es lo que impide reabrir P171** (**18/18**). 🔵 **Y la capa de telemetría cambia de recomendación por una medición de CAPA, no de licencia** (**P235**): para **ser el LRS** —exponer xAPI— hay 🟢 **dos opciones permisivas y VIVAS** ([`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql), **Apache-2.0**, `HEAD` **2 d**; [`openfun/ralph`](https://github.com/openfun/ralph), **MIT**, **26 d**), mientras **consumir** xAPI obliga a bifurcar un cliente congelado hace **1,7 a 6,1 años**. ⚠️ **Y `LearningLocker` —el LRS más adoptado de la categoría— es GPL-3.0 y está MUERTO hace 4,9 años** (`HEAD` 2021-11-16): sigue siendo el *«el cliente ya lo tiene»* más probable de la capa, pero no es terreno de construcción. 🔴 **La advertencia de compra que sale del pase, y es la más caliente de este archivo: NO se clasifica una licencia con un `grep` del cuerpo del archivo.** GPL-3.0 §13 se titula *«Use with the GNU Affero General Public License»*, así que ese método marca a **Moodle** —la vertical de mayor huella de esta KB— como **AGPL-3.0**, y **AGPL §13 contra GPL-3.0 es exactamente lo que decide si se le puede montar un producto ALOJADO encima.** ✅ **Auditadas, las cinco verticales/piezas que esta base declara AGPL lo son de verdad** (`canvas-lms`, `chalk`, `certo`, `deep-student`, `moodle-mcp-server` de csmediapro). Ver **P236**/**P237**.
 > **Pase 73 del 2026-10-03:** 🟢 **La vertical gana CUATRO capas de partida y un criterio de compra nuevo.** 🟢 **SIAKAD nacional PERMISIVO** ([`open-academic`](https://github.com/motiolabs-space/open-academic), **MIT**, Indonesia) con el reporte al Estado construido — **para educación superior en jurisdicción con registro nacional, la capa de partida la decide quién exige el REPORTE, no qué LMS usan los docentes**. 🟢 **Portal de un *LAND* alemán** (`Lanis`, comprador = administración pública). 🟢 **Portal universitario propio bien gobernado** ([`CaioCastro1/usp-mcp`](https://github.com/CaioCastro1/usp-mcp), **MIT**, fuerte en los tres ejes). 🟢 **Dato PÚBLICO de campus** ([`sharziki/purdue-mcp`](https://github.com/sharziki/purdue-mcp), **MIT**, **sin credencial**: sin FERPA, sin actor, sin compuerta — el arranque más barato del inventario). 🔭 **Y la DIVULGACIÓN (**P215**) entra como criterio de compra con cuatro clases: `D4` no entra en una propuesta institucional.**
 > **Pase 72 del 2026-10-03:** 🔵 **La vertical gana dos capas de partida que el modelo de este archivo no cubía — el SIS PROPIETARIO (Infinite Campus, K-12 EE.UU.) y el PORTAL UNIVERSITARIO PROPIO (PSG e-campus en India, JupiterWeb+e-Disciplinas en la USP) — y el modelo hay que corregirlo: cuando la plataforma no se puede tocar, la capa de partida es el CONECTOR y lo reutilizable no es la plataforma sino el ESQUEMA DE AUTENTICACIÓN.** 🔴 **Las tres hablan con endpoints no documentados y sólo UNA lo declara:** `infinitecampus-mcp` trae una sección de *«Acknowledgement of Terms»* que **admite que el proveedor puede tratarlo como violación del ToU** y nombra FERPA y COPPA — **la divulgación más completa del inventario**, y un criterio de selección que ni la licencia ni la escalera de compuerta muestran (tendencia **566**).
@@ -111,6 +112,33 @@ updated: 2026-10-04
 > versiones), así que lo permisivo (`qti3-*`, `instructure/qti`) es **lo único proponible** — con **`qti3-a11y`** y
 > **`qti3-pnp`**, que abren accesibilidad de evaluación como entregable auditable (**P72**). ⚠️ **Open edX cambia de
 > recomendación: proponer con presupuesto de mantenimiento (gap 70).** Ver la sección del pase 33, abajo.
+
+## 🗄️ La capa LRS de partida queda cerrada POR ELIMINACION, y la restriccion que viaja al cliente es de licencia y de titular (pase 81 del 2026-10-04)
+
+El pase 80 incorporo la **capa LRS** como vertical de partida y eligio entre **tres** servidores
+permisivos con spec vigente. 🟢 **Este pase cierra el denominador de esa eleccion**: se midio un
+**cuarto** servidor conformante con **IEEE 9274.1.1 v2.0.0** y queda fuera por licencia.
+
+| Capa de partida | Licencia (**payload**) | Autoalojable | Spec xAPI | Titular / region | Veredicto de entrega |
+|---|---|---|---|---|---|
+| 🟢 `yetanalytics/lrsql` | **Apache-2.0** | 🟢 SI | 🟢 **1.0.3 + 2.0.0** | `Yet Analytics, Inc.` · **North America** | 🟢 **La capa de partida por omision** |
+| ⚠️ `adlnet/ADL_LRS` | **Apache-2.0** | 🟢 SI | 🟢 **IEEE 9274.1.1** | `Advanced Distributed Learning` · **North America** | ⚠️ **Con cota: se autodeclara PoC** (*«only intended to support a small amount of users»*) — no es capa de produccion |
+| ⚠️ `pelotech/xapi-lrs` | **Apache-2.0** | 🟢 SI | 🟢 **1.0.3 + 2.0.0**, unico con conformidad **en CI** | 🔴 **Titular AUSENTE** | ⚠️ **Usable, pero sin titular que presentarle a legales** (**P179**) |
+| 🟢 `openfun/ralph` | **MIT** | 🟢 SI | 🔴 **1.0.3 SOLAMENTE** (pin re-medido y reproducido en este pase) | `France Universite Numerique` · 🟢 **EMEA** | 🟢 **Como *pipeline* de ingesta, no como LRS 2.0** — convierte *tracking logs* de Open edX a xAPI de fabrica |
+| 🔴 `raif-s-naffah/xapi-rs` | 🔴 **`GPL-3.0-or-later`** (`Cargo.toml`) | 🟢 SI | 🟢 **v2.0.0 conformante** | 🔴 Persona fisica · 🔴 **sin region** (**P135**) | 🔴 **FUERA de un entregable permisivo** — copyleft fuerte justo en la capa que el cliente INSTALA. 🔴 **0 ★ / 0 forks** |
+
+🔵 **Por que esto es una decision de vertical y no de catalogo:** el LRS es la capa que el cliente
+**instala y opera**, asi que su licencia se propaga a la entrega de una manera que la de una libreria
+no. 🔴 **Un `GPL-3.0-or-later` ahi no es una preferencia de estilo: cambia que se le puede entregar al
+cliente y bajo que condiciones**, y por eso `xapi-rs` se registra como senal y no como capa de partida
+(regla de **P234**, con su cota de adopcion por delante).
+
+⚠️ **La restriccion que hay que decir en voz alta en una propuesta europea:** no existe hoy ninguna
+capa LRS que sea **permisiva + spec vigente + con titular juridico europeo**. 🔵 **El wiring que si
+existe —y es el que se cotiza— es `lrsql` (Apache-2.0, titular estadounidense) como LRS 2.0 mas
+`ralph` (MIT, France Universite Numerique) como *pipeline* de ingesta**, que es exactamente lo que
+`ralph` hace de fabrica y **no** depende de su version de spec. Ver **P246** y **P247** en
+`compose/patterns.md`.
 
 ## 🗄️ La capa LRS como vertical de partida, y la ruta de migración que no obliga a volcar la base (pase 80 del 2026-10-04)
 

@@ -1816,6 +1816,27 @@ Dónde se produce el software educativo abierto, que no es donde está la demand
 
 ### North America
 
+#### Agregado en el pase 81 del 2026-10-04 — 🟢 el dominio de esta region sobre la capa LRS permisiva se REFUERZA, por eliminacion del unico candidato nuevo
+
+🟢 **El pase 80 registro que los dos LRS permisivos con titular JURIDICO y spec vigente son de esta
+region** (`yetanalytics/lrsql`, `Yet Analytics, Inc.`; `adlnet/ADL_LRS`, `Advanced Distributed
+Learning`). 🟢 **Este pase lo refuerza cerrando el denominador:** aparecio un **cuarto** servidor
+conformante con **IEEE 9274.1.1 v2.0.0** —`raif-s-naffah/xapi-rs`, Rust— y **es
+`GPL-3.0-or-later` con titular persona fisica y sin region declarada**, asi que **no compite en la
+capa permisiva y no se ubica en ninguna region**.
+
+🔵 **El conteo pasa de *tres encontrados* a *tres permisivos sobre cuatro conformantes MEDIDOS*, y la
+posicion de North America en esta capa es ahora un resultado por eliminacion y no por ausencia de
+busqueda.** ⚠️ **La cota de siempre sigue en pie: `ADL_LRS` se autodeclara PoC en su propio readme
+(*«only intended to support a small amount of users»*), asi que *titular juridico* no es *listo para
+produccion*.**
+
+🔴 **Del barrido regulatorio, cero hechos nuevos:** 134 proyectos de ley en 31 estados, **California
+AB 1159**, **Idaho SB 1227**, el *Traffic Light* de Nueva York, los cuatro estados con guia estatal y
+politica distrital obligatoria y el 18 % de docentes con guia escrita ya estaban todos publicados
+(confirmado por `grep`).
+
+
 #### Agregado en el pase 80 del 2026-10-04 — la capa LRS de esta región tiene los dos titulares jurídicos, y uno de ellos declara su propia cota
 
 🟢 **Los dos LRS permisivos con titular identificado y spec VIGENTE son de esta región** (**P244**):
@@ -3664,6 +3685,31 @@ Artículo 50(2) **no es exigible** en North America — pero es **el requisito m
 multi-región conviene cotizarlo contra el techo europeo y no contra el piso local (ver **P103** y **P105**).
 
 ### EMEA
+
+#### Agregado en el pase 81 del 2026-10-04 — 🔴 el hueco de soberania de la capa LRS se CONFIRMA, y el unico hecho nuevo de la region es INALCANZABLE
+
+🔴 **El hueco se confirma, no se cierra.** La tendencia **624** del pase 80 declaro que la combinacion
+**EMEA-soberano + xAPI 2.0** no existe. Este pase la re-midio y **reproduce**: `openfun/ralph` —el
+unico LRS permisivo con titular juridico europeo (**MIT**, `France Universite Numerique`)— **sigue
+clavado en 1.0.3**; su README remite al `xAPI-Communication.md` de `adlnet/xAPI-Spec`, que es el texto
+de 1.0.3. 🔴 **Y el unico candidato nuevo del pase no la refuta por DOS motivos a la vez:**
+`raif-s-naffah/xapi-rs` es conformante con **v2.0.0** pero **no declara afiliacion** (**P135**) **y**
+es **`GPL-3.0-or-later`**.
+
+🔵 **Consecuencia comercial, sin adornos: un cliente europeo que pida LRS permisivo CON spec vigente
+sigue obligado a elegir entre un titular estadounidense (`lrsql`/`ADL_LRS`, Apache-2.0) y una pieza
+sin titular (`pelotech/xapi-lrs`).** No hay tercera opcion soberana hoy. ⚠️ **`ralph` pasa de 50 ★ a
+51 ★** — no mueve el juicio, se anota para no leer un movimiento viejo como nuevo.
+
+🔴 **Y el UNICO hecho regional nuevo que el barrido entrego queda SIN VERIFICAR, declarado como hueco
+y no como dato:** una colaboracion entre la **Central European University** y **GitHub** para
+formacion e investigacion *AI-ready*, fechada en **abril de 2026**. ⚠️ **`www.ceu.edu` responde
+`EGRESS_BLOCKED` en el proxy de egreso, asi que no hay lectura de primera mano: no se escribe como
+cifra ni como *player*, y NO se debe citar en una propuesta.** 🔵 **Es la misma clase que el gap 92
+(canales institucionales bloqueados), y por la regla del pase 80 un bloqueo medido una sola vez
+todavia es un evento: queda anotado para que el pase 82 lo reintente UNA vez y, si repite, lo archive
+como propiedad del canal en vez de seguir gastando presupuesto.**
+
 
 #### Agregado en el pase 80 del 2026-10-04 — 🔴 el patrón de soberanía de esta región pierde su pieza al subir de spec, y es un dato de arquitectura, no una preferencia
 
@@ -5622,6 +5668,21 @@ este pase dejó cubierto con código.
 
 ### APAC
 
+#### Agregado en el pase 81 del 2026-10-04 — 🔴 la region NO rindio nada nuevo, y eso se escribe
+
+🔴 **Cero hechos nuevos.** `AI education APAC 2026 adoption regulation players` devolvio el material
+que esta base ya publica: **96 %** de organizaciones que planean invertir mas, **66 %** pilotando o
+adoptando, **ROI de US$ 2,85 por dolar**, **88 %** esperando retorno, la **Basic AI Act** coreana
+(enero de 2026) y la **ley de AI de Vietnam** (vigente **2026-03-01**), mas los *players* de siempre
+(Google, Microsoft, IBM, Pearson, Byju's) y el liderazgo de China/India/Japon. **Todo confirmado por
+`grep` antes de escribir.**
+
+⚠️ **Y el hueco de la capa de monitoreo conductual que el pase 79 dejo ABIERTO sigue abierto:** la ley
+de Vietnam es el unico estatuto del mundo que nombra esa capa por su nombre, las tres piezas open
+source que la implementan **declaran afiliacion NINGUNA**, y de un antroponimo no se infiere region
+(**P135**). 🔴 **Una capa medida no es una region cubierta — no cotizar como cerrado.**
+
+
 #### Agregado en el pase 80 del 2026-10-04 — 🟢 entra la primera pieza atada a una rúbrica de examen NACIONAL de la región, y el hueco que cierra tenía CERO menciones en 79 pases
 
 **`BaijayantaRoy/bandup`** — **MIT** (bloque de título, 1.071 B, titular `Baijayanta Roy` 2026),
@@ -7157,6 +7218,21 @@ desplegado + puerta MCP permisiva (`jbnu-lms-mcp`, `canvas-lms-mcp`, las cuatro 
 depende de un tercero» son el mismo argumento.**
 
 ### LATAM
+
+#### Agregado en el pase 81 del 2026-10-04 — 🔴 la region NO rindio nada nuevo, y eso se escribe
+
+🔴 **Cero hechos nuevos.** La busqueda obligatoria `AI education LATAM 2026 adoption regulation
+players` se corrio con el ano **calculado** (2026) y devolvio, otra vez, el inventario propio de esta
+base: la encuesta del **Digital Education Council** (**92 %** de estudiantes / **79 %** de docentes /
+**94 %** de intencion / **61 %** de temor al mal uso por pares), su aparato (**mas de 30.000
+respuestas, 29 instituciones**, IFE del **Tec de Monterrey**, **AIGEN**, **RIE360**), el borrador
+chileno con clasificacion por riesgo y el **CONPES 4144** colombiano. **Cada uno confirmado como ya
+presente con `grep` ANTES de escribir.**
+
+🔵 **Se registra como hueco informado y no como silencio:** decimo barrido consecutivo con rendimiento
+marginal **cero** en esta region. ⚠️ **Tampoco entro ninguna pieza de codigo nueva de LATAM en este
+pase** — el unico repo medido no declara region (**P135**).
+
 
 #### Agregado en el pase 80 del 2026-10-04 — sin dato nuevo de la región, y el aporte del pase es un PRECEDENTE de método que nació acá
 
@@ -9054,6 +9130,24 @@ región: **65 % de los alumnos teme que la AI vuelva el aprendizaje superficial*
 más directa a ese miedo que esta base puede ofrecer.**
 
 ### Global
+
+#### Agregado en el pase 81 del 2026-10-04 — 🆕 el riesgo de metodo que afecta a TODAS las regiones por igual
+
+🔴 **El canal de verificacion que el encargo de esta KB ordena usar no funciona en este entorno, y
+falla de la manera peligrosa: en silencio y de forma uniforme.** Las **81** URLs de `github.com` de la
+tabla principal pedidas con `curl -L` devolvieron **`403` las 81** —**0** `200`, **0** `404`, varianza
+**cero**— mientras **WebFetch resuelve las mismas URLs** (3 de 3 de control).
+
+🔴 **Aplicar la instruccion al pie de la letra habria marcado el 100 % del catalogo como muerto.**
+🆕 **Regla permanente `P247`: calibrar el canal contra una URL que se sabe buena antes de creerle un
+negativo; un negativo uniforme sobre muestra grande es defecto de canal hasta que un segundo canal
+independiente lo confirme pieza por pieza.** ⚠️ **Su cota: esto no afirma que las 81 filas esten
+vivas — afirma que ese canal no puede pronunciarse sobre ninguna.**
+
+🔵 **Por que va en la seccion Global y no en una region:** es una propiedad del entorno de medicion,
+asi que degrada por igual la evidencia de North America, EMEA, APAC y LATAM, y cualquier cifra de
+disponibilidad de repos citada sin decir por que canal se midio es una cifra sin respaldo.
+
 
 #### 📍 Pase 77 del 2026-10-03 — sin cifra de mercado nueva, y la oportunidad transversal es de CAPA con el signo invertido
 

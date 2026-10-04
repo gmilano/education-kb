@@ -102,6 +102,78 @@ updated: 2026-10-04
 > están mal por ~2× y **un 403 de `curl` no es un 404**. Ver la nota de método del pase 12.
 > **Pase 11:** el Digital Omnibus es derecho vigente (tendencia 25), aparece la capa predictiva y está vacía (tendencia 26), y se corrige un error de método de diez pasadas sobre licencias permisivas (tendencia 27).
 
+## 🆕 Tendencias 629–634 — pase 81 del 2026-10-04
+
+**629. 🔴 Un canal de verificacion puede fallar de forma UNIFORME, y entonces su negativo no es un
+dato sino el canal.** Las **81** URLs distintas de `github.com` de la tabla principal de
+`agents/top.md` se pidieron con `curl -L`: **`403` en 81 de 81**, **0** respuestas `200`, **0**
+respuestas `404`, **varianza cero**. Las mismas URLs por **WebFetch** resuelven normal —control
+positivo de 3 de 3, con dato util y no solo codigo de estado: `adaptive-knowledge-graph` **17 ★ MIT**
+(coincide celda por celda con el pase 79), `openfun/ralph` **51 ★ MIT**, `raif-s-naffah/xapi-rs`
+**0 ★**. 🔵 **Varianza cero sobre 81 muestras independientes no describe 81 repositorios: describe un
+canal.** 🔴 **Y el encargo de esta KB ordena textualmente verificar con `curl -sI` recordando que «un
+404 no es un hallazgo»: obedecerlo al pie de la letra habria marcado el 100 % del catalogo como muerto
+y justificado borrar la tabla — con la coartada de estar siguiendo el procedimiento.** Ver **P247**.
+
+**630. 🆕 La regla que sale, y su cota, que importa tanto como la regla.** **P247**: *(a)* un canal de
+verificacion se **calibra** contra una URL que se sabe buena **antes** de creerle un negativo; *(b)* un
+negativo **uniforme** sobre una muestra grande se lee como **defecto de canal** hasta que un segundo
+canal independiente lo confirme **pieza por pieza**. ⚠️ **La cota, declarada para que nadie la estire:
+esto NO dice que las 81 filas esten vivas.** Dice que **ese** canal no puede pronunciarse sobre
+ninguna. Las 3 comprobadas estan vivas; **las otras 78 quedan exactamente en el estado en que las dejo
+el pase que las midio por WebFetch**, sin heredar de este pase ni confirmacion ni duda. 🔵 **Un canal
+mudo no agrega evidencia en ninguna de las dos direcciones, y escribir lo contrario es el mismo error
+con el signo cambiado.**
+
+**631. 🟢 El cuarto servidor xAPI 2.0 conformante existe, es copyleft, y por eso el conteo permisivo
+pasa de SUPUESTO a MEDIDO.** `raif-s-naffah/xapi-rs` (Rust, `edition = "2024"`) se autodescribe *«HTTP
+Server implementation of IEEE Standard … version 2.0.0 LRS»* y **no estaba en ninguno de los 56 `.md`
+de esta base** (`grep`: 0 coincidencias antes de escribir). 🔴 **Su licencia, leida del payload
+(`Cargo.toml`, regla de P172), es `GPL-3.0-or-later`**, y su titular es **`Raif S. Naffah
+<raif@mailbox.org>`** — persona fisica con correo generico. 🔴 **0 ★ / 0 forks: entra como SENAL y no
+como fila** (**P234**). 🔵 **La tendencia 623 afirmaba TRES permisivos en la capa servidor de xAPI;
+sigue siendo TRES, pero ahora sobre 4 de 4 conformantes MEDIDOS en vez de 3 encontrados** — el unico
+que faltaba resulto copyleft, lo que vuelve la afirmacion del pase 80 **mas** fuerte, no mas debil.
+
+**632. 🟢 Una afirmacion que sobrevive a un candidato nuevo vale mas que una que nunca fue
+desafiada.** La tendencia **624** declaro que la combinacion **EMEA-soberano + xAPI 2.0** no existe.
+Este pase la ataco con el unico candidato posible y **sobrevive por DOS razones independientes**:
+`xapi-rs` **no declara afiliacion** (antroponimo + `mailbox.org` → **P135**) **y** es copyleft. 🟢 **Y
+el pin de `openfun/ralph` REPRODUCE**: su README sigue remitiendo al `xAPI-Communication.md` de
+`adlnet/xAPI-Spec`, que es el texto de **1.0.3**, sin ninguna declaracion de 2.0.0 — suma al
+`grep -E '2\.0\.0'` del pase 80, que dio 3 coincidencias y las 3 falsos positivos. ⚠️ **Re-medicion
+menor registrada: `ralph` pasa de 50 ★ a 51 ★** (esta base tenia 50 en `agents/trending.md:8758` y
+`repos/foundations.md:2505`); no mueve ningun juicio, se anota para que la proxima re-medicion no lea
+un movimiento viejo como nuevo. 🔵 **La disciplina de fondo: la reserva declarada de un pase es
+trabajo del siguiente, y cerrarla o confirmar que no se puede cerrar son los dos resultados validos.**
+
+**633. 🔴 Un acronimo colisionante hace que el barrido por NOMBRE traiga la pieza equivocada, y la
+traiga primero.** `xapi-rs` resuelve tambien a **`pawelkn/xapi-rs`** —**nombre de repo exactamente
+igual**— que es *«the xStation5 API Rust library … connect to the xStation5 trading platform, retrieve
+market data, and execute trades»*: **una libreria de trading financiero, sin ninguna relacion con
+educacion ni con IEEE 9274.1.1**. 🔵 **`xAPI` significa *Experience API* en educacion y *xStation API*
+en bolsa.** 🔴 **Es `P188` (el nombre de un paquete no es una identidad) en su version mas dura:
+en `P188` los nombres se parecian; aqui son identicos y la coincidencia es semanticamente plausible**,
+asi que un barrido que filtre por nombre y lea la descripcion por encima **archiva una libreria de
+bolsa dentro de una KB de educacion**. La desambiguacion que funciono: leer el `Cargo.toml` y la
+descripcion completa, **no** el slug.
+
+**634. 🔴 Dos canales mas pasan de evento a PROPIEDAD, y uno nuevo entra como evento.** Por la regla
+del pase 80 —un bloqueo medido dos veces con el mismo resultado deja de ser un evento y es una
+propiedad del canal, y se deja de gastar presupuesto en reintentarlo—: *(a)* 🔴 **la ejecucion de las
+suites de este repositorio quedo NEGADA por TERCER pase consecutivo** (`[Code from External]`, pases
+79, 80 y 81), asi que **es propiedad del canal y la columna «Hoy» no se re-verifico — no se debe citar
+como re-verificada**; *(b)* 🔴 **el `curl` a `github.com` queda caracterizado por la tendencia 629**;
+*(c)* ⚠️ **`www.ceu.edu` entra como EVENTO, primera medicion**: `EGRESS_BLOCKED`, y con el se cae el
+**unico** hecho regional nuevo del barrido (una colaboracion Central European University × GitHub de
+abril de 2026 para formacion e investigacion *AI-ready*), **que por lo tanto NO se escribe como dato y
+queda declarado como hueco**. 🔵 **Anotado con numero: el pase 82 lo reintenta UNA vez y, si repite, lo
+archiva como propiedad en vez de reintentarlo a ciegas.** 🔴 **Y el barrido regional obligatorio se
+agota por DECIMA vez consecutiva**: las cuatro regiones corridas con el ano **calculado** (2026), cada
+hecho devuelto confirmado por `grep` como ya presente antes de escribir. 🔵 **Rendimiento marginal
+medido CERO por decima vez: el canal se corre porque es obligatorio y porque un cambio de regimen hay
+que verlo, no porque descubra.**
+
 ## 🆕 Tendencias 623–628 — pase 80 del 2026-10-04
 
 **623. El spec vigente de xAPI llegó al open source permisivo, y llegó por triplicado — al revés que

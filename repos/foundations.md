@@ -96,14 +96,25 @@ vivo de licencia**, y resulta **inusable** porque implementa **v1p1**, un spec *
 🔵 **Este pase le hace a xAPI la pregunta que esa lección obliga: ¿hay un LRS permisivo en el spec
 VIGENTE —xAPI 2.0 / IEEE 9274.1.1— o sólo en 1.0.3?**
 
-### 🟢 Resultado: hay TRES, y la trampa de OneRoster no se reproduce
+### 🟢 Resultado: hay TRES PERMISIVOS sobre CUATRO conformantes medidos, y la trampa de OneRoster no se reproduce
 
 | Servidor | Licencia (**bloque de título**) | Titular (**P184**) | xAPI 2.0 / IEEE 9274.1.1 | ★ | Evidencia **en el árbol** |
 |---|---|---|---|---|---|
 | 🟢 **`yetanalytics/lrsql`** | **Apache-2.0** | 🟢 `Yet Analytics, Inc.` → **`HOLDER-MATCH`** (persona jurídica) | 🟢 **SÍ — 1.0.3 + 2.0.0**, negociado **por request** con `X-Experience-API-Version` | — | `doc/xapi_versioning.md` |
 | 🟢 **`adlnet/ADL_LRS`** | **Apache-2.0** | 🟢 `Advanced Distributed Learning` (`readme.md:23`) | 🟢 **SÍ — IEEE 9274.1.1 por su propio readme** | **331** | `readme.md:3` · ⚠️ y `:5` se autodeclara **PoC**: *«only intended to support a small amount of users»* |
 | ⚠️ **`pelotech/xapi-lrs`** | **Apache-2.0** | 🔴 **AUSENTE — medido** (ver abajo) | 🟢 **SÍ — 1.0.3 + 2.0.0, y es el único con conformidad EN CI** | 🔴 **0** | `package.json` · `.github/workflows/ci.yml` |
+| 🔴 **`raif-s-naffah/xapi-rs`** | 🔴 **`GPL-3.0-or-later`** (**payload**: `Cargo.toml`) | 🔴 `Raif S. Naffah <raif@mailbox.org>` — persona fisica, correo generico → **sin region** (**P135**) | 🟢 **SI — v2.0.0 conformante** (*«HTTP Server implementation of IEEE Standard … version 2.0.0 LRS»*) | 🔴 **0** (0 forks) | `Cargo.toml` (`license`, `authors`, `edition = "2024"`) · **pase 81** |
 | 🔴 **`openfun/ralph`** | **MIT** (`LICENSE.md`) | 🟢 `France Université Numérique` → **`HOLDER-MATCH`** · 📍 **EMEA** | 🔴 **NO — clavado en 1.0.3** | — | `docs/index.md:63` *(«we're following the xAPI specification **1.0.3**»)* **+** `src/ralph/api/routers/statements.py`, que fija sus 4 referencias al tag `1.0.3` del spec |
+
+🆕 **Pase 81: la cuarta fila cierra el denominador, y el conteo permisivo no se mueve.**
+`raif-s-naffah/xapi-rs` es **conformante con v2.0.0** y **`GPL-3.0-or-later` leido del payload**, con
+**0 ★ / 0 forks**. 🟢 **Asi que *permisivo + spec vigente* sigue dando TRES, pero ahora sobre 4 de 4
+conformantes MEDIDOS en vez de 3 encontrados** — el unico que faltaba resulto copyleft, lo que vuelve
+la afirmacion del pase 80 mas fuerte y no mas debil. 🔴 **Y la asimetria regional de la tendencia 624
+se sostiene por una segunda razon independiente: el candidato nuevo no declara afiliacion (**P135**) y
+encima es copyleft, asi que *EMEA-soberano + xAPI 2.0* sigue sin existir.** ⚠️ **Colision de nombre
+registrada: `pawelkn/xapi-rs` —nombre EXACTAMENTE igual— es una libreria de trading xStation5, sin
+relacion con educacion** (**P188**).
 
 🔵 **Por lo tanto el eje SPEC separa a los dos estándares por segunda vez y en el MISMO sentido que el
 eje CAPA de P235:** en OneRoster, pedir *permisivo + vivo + spec vigente* en la capa servidor deja

@@ -8,6 +8,7 @@ updated: 2026-10-04
 
 > Recetas concretas: repos nombrados, licencias verificadas, wiring explícito y estimación.
 > Todos los repos citados fueron verificados vía WebFetch el 2026-09-30; los del pase 11, el 2026-10-01 (ver `agents/top.md`).
+> **Pase 81 del 2026-10-04:** 🆕 **El patron nuevo es **P247**, y sale del defecto que este pase se encontro encima: el canal de verificacion que el propio encargo ordena usar (`curl -sI`) devuelve `403` en **81 de 81** URLs de `github.com` del catalogo, con varianza CERO, mientras WebFetch resuelve las mismas URLs.** 🔴 **Obedecer la instruccion al pie de la letra habria marcado el 100 % del catalogo como muerto.** 🟢 **P247 es la receta de CALIBRACION: control positivo obligatorio antes de creerle un negativo, lectura de varianza, y confirmacion pieza por pieza por un segundo canal independiente — con su cota declarada (un canal mudo no prueba que las filas esten vivas, prueba que no puede opinar).** 🟢 **Y **P246** se ACTUALIZA con la medicion del pase: el cuarto servidor xAPI 2.0 conformante existe (`raif-s-naffah/xapi-rs`) y es `GPL-3.0-or-later`, asi que la eleccion de LRS permisivo de P246 queda confirmada por eliminacion sobre 4 de 4 conformantes medidos, y el hueco EMEA-soberano sigue abierto.**
 > **Pase 77 del 2026-10-03:** 🔵 **Los patrones nuevos son **P234**–**P238**, y los cinco salen de mediciones de primera mano de este pase.** **P234**: la tabla de «repo muerto ⇒ licencia no verificada» cierra con **5 de 5 permisivas** y su nota de honestidad queda refutada entera — **y la fila que se midió traía además el ROL mal archivado**, que es el error de signo peligroso porque INCLUYE una pieza inservible en vez de excluir una usable. **P235**: el eje CAPA se reproduce en otro estándar y **su SIGNO se INVIERTE** — en xAPI exponer está abierto y consumir está congelado, al revés que en OneRoster, **así que un eje se traslada y un resultado medido sobre ese eje no**. **P236**: cómo se mide una familia de licencia sin reabrir P171, con el control negativo que lo prueba sobre Moodle. **P237**: el patrón que esta KB se aplica a sí misma por segunda vez — **una corrección almacenada como conocimiento se re-pierde en cada herramienta nueva; sólo sobrevive como código compartido con un test** (`compose/code/lib/`). **P238**: la receta para juzgar un fork, que es comparar ARCHIVOS y no asuntos de commit — con fuente idéntico byte a byte, **lo que se bifurcó es el suite de pruebas**.
 > **Pase 68 del 2026-10-03:** 🔵 **Los patrones nuevos son **P190**–**P195**, y los seis salen de mediciones de primera mano de este pase, con su texto escrito en el mismo pase que los acuña (**P157**).** **P190**: el titular es PEOR en la capa que el cliente INSTALA (`HOLDER-UNRELATED` 19,4 % en árbol → 35,3 % en paquete, n=17) y ahí vive una clase que el árbol no tiene (`NO-HOLDER`). **P191**: el régimen de licencia de un estándar se parte por **PUBLICADOR × TIPO DE ARTEFACTO** —1EdTech×documento niega derivados (2/2), 1EdTech×software es Apache-2.0 (4/4), ADL y Ed-Fi×documento son Apache-2.0 (2/2)— sin una excepción en 8 archivos. **P192**: la pregunta de IDENTIDAD va antes que la de canal, y está medida: 4 de 5 nombres de doble registro son dos artefactos. **P193**: el `sha256` del `LICENSE` UNE un paquete a su árbol cuando el registro no declara el enlace, y es cota inferior. **P194**: un umbral sobre un conteo no distingue una propiedad de la CAPA de una del PUBLICADOR si la muestra está desbalanceada. **P195**: los cuatro instrumentos de licencia de esta KB son GitHub-shaped, así que un estándar que migra se cae de todos los denominadores en silencio. 🟢 **La receta nueva es **P196**: elegir el estándar por su LICENCIA cuando el entregable incluye un perfil derivado.** 🔴 **Y **P197** es el patrón que esta KB se aplica a sí misma: una corrección sobrevive sólo si el instrumento que re-mide la conoce — el pase 66 regresó a `MIT` una celda que el pase 52 había corregido a 0BSD leyendo el payload, y la regresión es invisible en la celda.**
 > **Pase 67 del 2026-10-03:** 🔵 **Los patrones nuevos son **P186**–**P188**, y los tres salen de mediciones de primera mano de este pase.** **P186**: un archivo de licencia puede acotarse A SÍ MISMO —`INGInious` declara cubrir *«la mayoría de los archivos»* y delega las excepciones a los encabezados por archivo, y las cuatro capas que esta KB mide lo aprueban sin ver el alcance—. **P187**: la licencia de ESPECIFICACIÓN (`1EdTech/openbadges-specification`, IMS Global, 12.324 B en `ob_v3p0/license.md`) **cede el documento y NIEGA el derivado**, así que es una compuerta más dura que el ShareAlike de **P178** y afecta a las 15 filas de estándares de esta base. **P188**: el NOMBRE de un paquete no es una IDENTIDAD —`educhain` en npm no tiene repositorio ni descripción y no es el proyecto—, así que la pregunta de identidad va ANTES que la de canal. 🟢 **Y la acción 4 del pase 66 se ejecuta parcialmente: `P126`, `P170`, `P171` y `P172` ya tienen sección propia, consolidada desde donde su texto ya vivía (rama buena de la hipótesis); quedan 11 debidos.** ⚠️ **Ninguna cifra de suite se re-midió: el entorno negó ejecutar el código de este repositorio** (`[Code from External]`).
@@ -109,6 +110,82 @@ updated: 2026-10-04
 > no existe en open source permisivo).
 > **Pase 11:** +2 patrones — **P25** (riesgo de abandono conforme al Anexo III, la capa con presupuesto ya asignado y sin oferta open source) y **P26** (agente docente sobre la ontología curricular nacional ya publicada).
 > **Pase 27:** **+4 patrones y una corrección.** 🔴 **P51 queda con premisa falsa** —el conector MCP de Moodle **sí existe y es MIT**— y lo reemplazan **P54** (corrección y devolución sobre Moodle con **compuerta humana**, el último tramo del gap 6, con piezas que ya escriben), **P55** (el conector de **Open edX**, que es el único que de verdad no existe), **P56** (**SCORM** como formato de salida de la capa generativa: cero integración, offline) y **P57** (evidencia por MCP cotizada sobre lo que CaSS **realmente** expone — 6 de 61 operaciones, con insignias y autoría de marcos **fuera**).
+
+## 🧪 P247 — calibrar el canal ANTES de creerle un negativo: la receta que evita borrar un catalogo entero (pase 81 del 2026-10-04)
+
+### 🔴 El problema, medido sobre esta propia KB
+
+El encargo de esta base pide **verificar cada URL antes de escribirla con `curl -sI`** y recuerda que
+**«un 404 no es un hallazgo»**. Ejecutado sobre el universo entero de `agents/top.md`:
+
+| Canal | Muestra | `200` | `404` | `403` | Varianza |
+|---|---|---|---|---|---|
+| 🔴 `curl -L` → `github.com` | **81 URLs** | **0** | **0** | 🔴 **81** | 🔴 **CERO** |
+| 🟢 WebFetch → `github.com` (control) | **3 URLs** | 🟢 **3** | 0 | 0 | — |
+
+🔴 **Seguir la instruccion literalmente habria marcado el 100 % del catalogo como muerto y justificado
+borrar la tabla**, con la coartada de estar cumpliendo el procedimiento. 🔵 **Ese es el riesgo real que
+esta receta ataca: no un dato mal escrito, sino un archivo destruido por un instrumento mudo.**
+
+### 🟢 La receta, en cuatro pasos y con los comandos concretos
+
+1. **Control positivo primero.** Antes de barrer, pedir por el mismo canal **una URL que se sabe
+   buena** —en esta KB, cualquier fila ya verificada por WebFetch, p. ej.
+   `https://github.com/jupyterlab/jupyter-ai`—. 🔴 **Si el control no da `200`, el canal esta fuera de
+   servicio y el barrido NO se corre:** sus negativos no son datos.
+2. **Barrer registrando el codigo, no un booleano.**
+   `curl -s -o /dev/null -w '%{http_code}' --max-time 25 -L "$URL"`, una linea por URL en un archivo.
+   ⚠️ **Guardar el codigo crudo es lo que permite el paso 3; un `ok/fail` lo destruye.**
+3. **Leer la VARIANZA antes de leer las filas.** `awk '{print $1}' status.txt | sort | uniq -c`.
+   🔴 **Un unico codigo repetido en toda la muestra = defecto de canal.** Una mezcla de `200`/`404`/
+   `301` = el canal funciona y los negativos son candidatos a hallazgo.
+4. **Confirmar pieza por pieza con un SEGUNDO canal independiente.** En este entorno, **WebFetch** al
+   repo (y el `LICENSE`/`Cargo.toml`/`package.json` por `raw.githubusercontent.com` para la licencia,
+   regla de **P172**). 🔴 **Solo un negativo confirmado por dos canales independientes se escribe como
+   muerto.**
+
+### ⚠️ La cota, que vale tanto como la receta
+
+🔴 **Un canal mudo no prueba que las filas esten vivas.** Prueba que **no puede opinar**. En este pase,
+**3** filas quedaron confirmadas vivas por WebFetch y **las otras 78 quedaron exactamente en el estado
+en que las dejo el pase que las midio** — sin heredar confirmacion ni duda. 🔵 **Escribir «las 81 estan
+vivas» seria el mismo error con el signo cambiado**, y es el error que una receta de calibracion mal
+leida invita a cometer.
+
+### 🔵 Donde mas aplica dentro de esta KB
+
+🟢 **La forma se generaliza a los cuatro canales que esta base usa y que fallan distinto:** el proxy de
+egreso (`EGRESS_BLOCKED` — determinista por dominio, asi que un control positivo contra **otro**
+dominio no sirve: hay que probar **el mismo**), los registros de paquetes (**gap 82**: PyPI responde
+`200` con contenido vacio, asi que **el control de CONTENIDO es obligatorio y no alcanza el de
+estado**), la ejecucion de suites (negada — *propiedad* del canal desde el pase 81) y `curl` a
+`github.com` (tendencia **629**). ⚠️ **El patron comun: cada uno de los cuatro produce un negativo que
+se parece a un hallazgo, y ninguno lo es.**
+
+### 🗄️ Y la actualizacion que este pase le hace a **P246**
+
+**P246** eligio LRS permisivo con spec vigente entre **tres** piezas. 🟢 **Este pase cierra el
+denominador: aparecio un CUARTO servidor conformante con IEEE 9274.1.1 v2.0.0 —
+`raif-s-naffah/xapi-rs`, Rust— y es `GPL-3.0-or-later` leido del payload (`Cargo.toml`), con 0 ★ / 0
+forks y titular persona fisica sin region declarada (**P135**).** 🔵 **Asi que la eleccion de P246 queda
+confirmada POR ELIMINACION sobre 4 de 4 conformantes medidos, que es mas fuerte que 3 encontrados:**
+
+| Servidor | Licencia | Entra en un entregable permisivo | Region del titular |
+|---|---|---|---|
+| 🟢 `yetanalytics/lrsql` | **Apache-2.0** | 🟢 **SI** | **North America** (`Yet Analytics, Inc.`) |
+| 🟢 `adlnet/ADL_LRS` | **Apache-2.0** | ⚠️ **SI, con cota** — se autodeclara PoC (*«only intended to support a small amount of users»*) | **North America** (`Advanced Distributed Learning`) |
+| ⚠️ `pelotech/xapi-lrs` | **Apache-2.0** | 🟢 **SI** — y es el unico con conformidad **en CI** | 🔴 **Titular AUSENTE** |
+| 🔴 `raif-s-naffah/xapi-rs` | 🔴 **`GPL-3.0-or-later`** | 🔴 **NO** — copyleft fuerte en la capa que el cliente instala | 🔴 **Sin region** (**P135**) |
+
+🔴 **Consecuencia para un entregable EMEA, sin adornos: la combinacion *EMEA-soberano + xAPI 2.0 +
+permisivo* NO existe hoy.** El unico LRS permisivo con titular juridico europeo —`openfun/ralph`,
+**MIT**, `France Universite Numerique`— **sigue clavado en 1.0.3** (pin **re-medido y reproducido** en
+este pase). 🟢 **El wiring que queda, y es el que se cotiza:** `lrsql` **Apache-2.0** como LRS 2.0 +
+`ralph` **MIT** como *pipeline* de ingesta de *tracking logs* de Open edX hacia xAPI (que es lo que
+`ralph` hace de fabrica y no depende de su version de spec) + `DavidLMS/learnmcp-xapi` **MIT** como
+puerta MCP, **intercambiables por configuracion** gracias al sistema de plugins de `ralph` v2.0.0.
+⚠️ **Decirle al cliente europeo que el titular del LRS es estadounidense es parte del entregable, no
+una nota al pie.**
 
 ## 🗄️ P246 — LRS xAPI **2.0** permisivo, y la toma de posesión de una base `lrsql` viva sin volcarla (pase 80 del 2026-10-04)
 
