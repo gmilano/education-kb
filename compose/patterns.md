@@ -8,6 +8,7 @@ updated: 2026-10-04
 
 > Recetas concretas: repos nombrados, licencias verificadas, wiring explícito y estimación.
 > Todos los repos citados fueron verificados vía WebFetch el 2026-09-30; los del pase 11, el 2026-10-01 (ver `agents/top.md`).
+> **Pase 87 del 2026-10-04:** 🆕 **Los patrones nuevos son **P259**, **P260** y **P261**, y los tres salen de medición de este pase.** **P259** acota el instrumento del pase 86: la ligadura de proveedor puede vivir en la CONFIGURACIÓN y no en el manifiesto, así que un barrido de dependencias no la ve y el cero de `SWAPPABLE` es cota y no propiedad. **P260** separa dos preguntas que esta base venía haciendo como una: «¿hay paquete?» y «¿está vigente?» — se leen de la API JSON de PyPI y en el estante nuevo dan 6 y 1 respectivamente. **P261** fija cómo se declara región sin violar `P135`: desde la bio, el sitio y la ubicación declaradas por la ORGANIZACIÓN, nunca desde un antropónimo. 🟢 **Y la receta nueva es `R-PSICO`: la capa adaptativa sobre el LMS que el cliente ya tiene, con `EduCDM` como dependencia, el resto vendorizado, y la compuerta de alto riesgo del AI Act declarada por delante.**
 > **Pase 86 del 2026-10-04:** 🆕 **Los patrones nuevos son **P257** y **P258**, y los dos salen de medición de este pase: P257 convierte la palabra `lock-in` —que estaba en los ocho archivos de este árbol sin un solo instrumento— en una pregunta con respuesta reproducible, y P258 es la regla que salió del SEGUNDO fallo del propio instrumento. 🔵 **Y la receta nueva (`R-86`) es la primera de esta base que se puede cotizar con una cifra de ligadura por pieza.**
 > **Pase 81 del 2026-10-04:** 🆕 **El patron nuevo es **P247**, y sale del defecto que este pase se encontro encima: el canal de verificacion que el propio encargo ordena usar (`curl -sI`) devuelve `403` en **81 de 81** URLs de `github.com` del catalogo, con varianza CERO, mientras WebFetch resuelve las mismas URLs.** 🔴 **Obedecer la instruccion al pie de la letra habria marcado el 100 % del catalogo como muerto.** 🟢 **P247 es la receta de CALIBRACION: control positivo obligatorio antes de creerle un negativo, lectura de varianza, y confirmacion pieza por pieza por un segundo canal independiente — con su cota declarada (un canal mudo no prueba que las filas esten vivas, prueba que no puede opinar).** 🟢 **Y **P246** se ACTUALIZA con la medicion del pase: el cuarto servidor xAPI 2.0 conformante existe (`raif-s-naffah/xapi-rs`) y es `GPL-3.0-or-later`, asi que la eleccion de LRS permisivo de P246 queda confirmada por eliminacion sobre 4 de 4 conformantes medidos, y el hueco EMEA-soberano sigue abierto.**
 > **Pase 77 del 2026-10-03:** 🔵 **Los patrones nuevos son **P234**–**P238**, y los cinco salen de mediciones de primera mano de este pase.** **P234**: la tabla de «repo muerto ⇒ licencia no verificada» cierra con **5 de 5 permisivas** y su nota de honestidad queda refutada entera — **y la fila que se midió traía además el ROL mal archivado**, que es el error de signo peligroso porque INCLUYE una pieza inservible en vez de excluir una usable. **P235**: el eje CAPA se reproduce en otro estándar y **su SIGNO se INVIERTE** — en xAPI exponer está abierto y consumir está congelado, al revés que en OneRoster, **así que un eje se traslada y un resultado medido sobre ese eje no**. **P236**: cómo se mide una familia de licencia sin reabrir P171, con el control negativo que lo prueba sobre Moodle. **P237**: el patrón que esta KB se aplica a sí misma por segunda vez — **una corrección almacenada como conocimiento se re-pierde en cada herramienta nueva; sólo sobrevive como código compartido con un test** (`compose/code/lib/`). **P238**: la receta para juzgar un fork, que es comparar ARCHIVOS y no asuntos de commit — con fuente idéntico byte a byte, **lo que se bifurcó es el suite de pruebas**.
@@ -111,6 +112,144 @@ updated: 2026-10-04
 > no existe en open source permisivo).
 > **Pase 11:** +2 patrones — **P25** (riesgo de abandono conforme al Anexo III, la capa con presupuesto ya asignado y sin oferta open source) y **P26** (agente docente sobre la ontología curricular nacional ya publicada).
 > **Pase 27:** **+4 patrones y una corrección.** 🔴 **P51 queda con premisa falsa** —el conector MCP de Moodle **sí existe y es MIT**— y lo reemplazan **P54** (corrección y devolución sobre Moodle con **compuerta humana**, el último tramo del gap 6, con piezas que ya escriben), **P55** (el conector de **Open edX**, que es el único que de verdad no existe), **P56** (**SCORM** como formato de salida de la capa generativa: cero integración, offline) y **P57** (evidencia por MCP cotizada sobre lo que CaSS **realmente** expone — 6 de 61 operaciones, con insignias y autoría de marcos **fuera**).
+
+## 🧩 P259–P261 y la receta `R-PSICO`: la capa adaptativa encima del LMS que el cliente ya tiene (pase 87 del 2026-10-04)
+
+### 🆕 P259 — La ligadura de proveedor puede vivir en la CONFIGURACIÓN, no en el manifiesto
+
+**Problema.** El pase 86 midió la ligadura de proveedor sobre 69 filas leyendo el **manifiesto de runtime**
+(`package.json`, `requirements.txt`, `pyproject.toml`) y publicó **cero `SWAPPABLE`**. El resultado es
+correcto sobre lo que midió, y **se puede leer mal** como «ninguna pieza de esta base permite cambiar de
+proveedor».
+
+**Contraejemplo medido.** `SwissLearningAnalytics/LLMTutor` **no** declara `litellm`, `langchain` ni
+`@ai-sdk/*` —el instrumento del pase 86 la clasificaría `UNBOUND`— y sin embargo el proveedor **se elige
+desde el panel de administración**, entre `OpenAI` y `Ollama`.
+
+**El patrón.**
+
+1. Clasificar por manifiesto como hasta ahora (`SWAPPABLE` / `UNBOUND` / `MULTI-DIRECT` / `SINGLE-VENDOR`).
+2. **Antes de publicar un `UNBOUND`**, buscar en el árbol un **punto de configuración de proveedor**:
+   `provider`, `baseURL`, `base_url`, `OPENAI_API_BASE`, `OLLAMA_HOST`, `model` en esquema de settings, o una
+   pantalla de admin que lo exponga.
+3. Si existe, la etiqueta es **`CONFIG-SWAPPABLE`** y **no** `UNBOUND`.
+4. **Declarar la diferencia**: `SWAPPABLE` se verifica leyendo un archivo; `CONFIG-SWAPPABLE` se verifica
+   **ejecutando** o leyendo el esquema de settings — es una afirmación más débil y hay que decirlo.
+
+**Por qué vale dinero.** `CONFIG-SWAPPABLE` con `Ollama` entre las opciones significa **inferencia dentro de
+la institución**, que es el requisito con el que se gana o se pierde una licitación en EMEA. Un instrumento
+que sólo lee manifiestos **descarta por error** justo las piezas que satisfacen ese requisito.
+
+### 🆕 P260 — «¿Hay paquete?» y «¿está vigente?» son dos mediciones, no una
+
+**Problema.** El pase 84 inventarió «9 paquetes instalables» como señal de madurez, **sin medir la fecha de
+release**. «Instalable» se convirtió, de hecho, en «mantenido», y no es lo mismo.
+
+**El patrón.** Sobre `https://pypi.org/pypi/<pkg>/json` (o el equivalente de npm), leer **tres** campos y no
+uno:
+
+| Campo | Qué responde | Veredicto |
+|---|---|---|
+| `HTTP 200` vs `{"message": "Not Found"}` | ¿Existe el paquete? | `PUBLICADO` / `AUSENTE` |
+| `releases[version][0].upload_time` | ¿De cuándo es la última? | `VIGENTE` (< ~18 meses) / `VIEJO` |
+| `len(releases)` | ¿Es serie o disparo único? | `SERIE` / `UNA-SOLA` |
+
+**Resultado sobre el estante nuevo de este pase:** **6 `PUBLICADO`**, **2 `AUSENTE`** (negativos calibrados),
+**1 `VIGENTE`** (`EduCDM` 1.0.1, 2024-10-25, 13 versiones) y **5 `VIEJO`** (2019-2022). `EduCAT` es
+`UNA-SOLA`.
+
+**La regla de entrega que sale de esto:** `VIGENTE` ⇒ **dependencia pinneada**. `VIEJO` con licencia
+permisiva ⇒ **vendorizar** (copiar el algoritmo al proyecto con su aviso Apache/MIT y tests propios).
+`AUSENTE` ⇒ **clonar y versionar**, nunca `pip install`.
+
+### 🆕 P261 — Cómo declarar región sin violar `P135`: desde la ORGANIZACIÓN, nunca desde el nombre propio
+
+**Problema.** `P135` prohíbe inferir región de un antropónimo, y con razón: esta base lo resistió catorce
+veces (`pablocaeg`, `CharlieCardenasToledo`, y en este pase `Sidiq-coder` y `attoyibi`). Pero la prohibición,
+sola, produce **parálisis**: quince pases declarando «APAC sin código propio» mientras el código existía.
+
+**El patrón.** La región se declara si y sólo si hay **al menos dos señales de primera mano de la propia
+entidad**, de esta lista cerrada:
+
+1. **Bio/descripción del `org`** que nombre una institución.
+2. **Dominio propio con TLD o subdominio institucional** (`.ustc.edu.cn`, `.ac.uk`, `.edu.ar`).
+3. **Ubicación declarada** en el perfil de la organización.
+4. **Currículo, rúbrica o norma nacional** citada en el README (el canal del pase 80).
+5. **Razón social** con sufijo jurídico de país (`Pte. Ltd.`, `S.A. de C.V.`, `GmbH`).
+
+**Aplicado en este pase:**
+
+| Entidad | Señales | Región |
+|---|---|---|
+| `bigdata-ustc` | bio `中国科学技术大学大数据实验室` + sitio `bigdata.ustc.edu.cn` + ubicación `Hefei 合肥` ⇒ **3 señales** | 🟢 **APAC**, declarada |
+| `SwissLearningAnalytics` | nombre de org + sitio `www.learning-analytics.ch` + proyecto `BeLEARN` ⇒ **3 señales** | 🟢 **EMEA**, declarada |
+| `alfredang` | razón social `Tertiary Infotech Academy Pte. Ltd.` + dominios `.com.sg` ⇒ **2 señales** | 🟢 **APAC**, declarada |
+| `Sidiq-coder`, `attoyibi`, `Vashishtha05` | sólo antropónimo ⇒ **0 señales** | 🔴 **sin región** (`P135`) |
+
+**Lo que el patrón NO autoriza:** declarar región por el idioma del README, por el *timezone* de los
+commits, ni por el país de un coautor de paper. **Y declara la cota**: la afiliación de `EduCAT` no se pudo
+leer del paper porque `arxiv.org` está bloqueado por el proxy de egreso — se declaró **desde el `org`**, que
+es señal de primera mano **de la organización** pero no del paper.
+
+---
+
+### 🟢 `R-PSICO` — Capa adaptativa sobre el LMS que el cliente YA tiene (receta nueva)
+
+**Para quién.** Institución de superior o K-12 con LMS instalado (Moodle, Canvas u Open edX) que pide
+«aprendizaje personalizado» y **no quiere migrar de LMS**.
+
+**La idea que la hace vendible:** el LMS queda como **sistema de registro**; la psicometría es **el
+producto**. No se reemplaza nada.
+
+**Piezas, todas con licencia leída del payload:**
+
+| Rol | Pieza | Licencia | Cómo se consume |
+|---|---|---|---|
+| Diagnóstico cognitivo (núcleo) | [`EduCDM`](https://github.com/bigdata-ustc/EduCDM) | Apache-2.0 | 🟢 **Dependencia pinneada** — `EduCDM==1.0.1` (2024-10-25, la única vigente) |
+| Trazado de conocimiento | [`EduKTM`](https://github.com/bigdata-ustc/EduKTM) | Apache-2.0 | ⚠️ **Vendorizar** (release 2022-05-18) |
+| Selección de ítems / CAT | [`EduCAT`](https://github.com/bigdata-ustc/EduCAT) | MIT | ⚠️ **Vendorizar** (1 sola release) |
+| Datasets de calibración | [`EduData`](https://github.com/bigdata-ustc/EduData) | Apache-2.0 | ⚠️ **Vendorizar** (release 2021-08-20; los loaders apuntan a URLs viejas) |
+| Ítems con fórmula/figura | [`EduNLP`](https://github.com/bigdata-ustc/EduNLP) | Apache-2.0 | ⚠️ Vendorizar, sólo si los ítems son multimodales |
+| Validar la política sin alumnos | [`EduSim`](https://github.com/bigdata-ustc/EduSim) | MIT | 🔬 **Sólo banco de pruebas** (release 2019) |
+| Lectura/escritura en el LMS | `vishalsachdev/canvas-mcp` · `csmediapro/moodle-mcp-server` · `toshieji/moodle-grading-mcp` | *ver `agents/top.md`* | MCP, **detrás de la compuerta de allowlist (`P100`)** |
+| Tutor conversacional | [`SwissLearningAnalytics/LLMTutor`](https://github.com/SwissLearningAnalytics/LLMTutor) | **MPL-2.0** | `CONFIG-SWAPPABLE`: `Ollama` si el cliente exige inferencia interna |
+
+**Wiring, en orden:**
+
+1. **Extraer** roster, ítems e historial de respuestas del LMS por el servidor MCP correspondiente, **en
+   modo lectura** y detrás de la allowlist de `P100`. Nada de escritura en este paso.
+2. **Calibrar** el modelo de ítems con `EduCDM` (IRT/MIRT/DINA según cuántos rasgos pida el cliente) sobre el
+   historial extraído. **Este paso es *offline* y es el que decide si el proyecto es viable**: sin suficiente
+   historial de respuestas, no hay calibración y el resto no se sostiene.
+3. **Estimar** el estado de conocimiento por alumno con `EduKTM` (vendorizado) sobre la secuencia temporal.
+4. **Seleccionar** el próximo ítem con `EduCAT` (vendorizado) — el objetivo medible es **misma precisión de
+   medición con menos ítems**, que es la promesa cuantificable de toda la receta.
+5. **Validar la política de selección en `EduSim`** antes de exponerla a un alumno real.
+6. **Conversar** con `LLMTutor`, al que se le pasa el estado estimado como contexto. **El tutor no estima
+   nada**: lee la estimación de los pasos 3-4. Mezclar ambas cosas es el error que vuelve la receta
+   inauditable.
+7. **Escribir de vuelta** al LMS **sólo como borrador no publicado** — `toshieji/moodle-grading-mcp` ya
+   impone exactamente esa semántica (*unreleased grade drafts*), y es el patrón correcto.
+
+**Compuerta regulatoria, y va ANTES del paso 1, no al final:**
+
+- 🔴 **EMEA**: los pasos 2-4 **son evaluación de alumnos** ⇒ **ALTO RIESGO** del AI Act. Expediente de
+  conformidad, supervisión humana y trazabilidad **de diseño**. Calendario: **2-dic-2027**.
+- 🔴 **North America**: si el cliente está en **Oklahoma o Maryland**, el paso 4 **no puede decidir solo**
+  sobre un alumno (supervisión humana obligatoria). En **California**, **AB 1159** prohíbe usar los datos
+  del alumno para **entrenar** ⇒ **la calibración del paso 2 debe quedar dentro de la institución y
+  documentada como tal**. En **Idaho, Maryland, Oklahoma y Virginia** hace falta además **política de
+  distrito**.
+- 🟡 **LATAM**: sin exigencia dura equivalente hoy, pero **Chile** clasifica por riesgo y **Colombia** tiene
+  vehículo presupuestario (**CONPES 4144**, hasta 2030). **Se entrega con el gobierno puesto igual**, porque
+  es la carencia medida de la región (92 % de uso, poco gobierno).
+- 🟡 **APAC**: multi-jurisdicción desde el día uno (KR y VN ya con ley marco; CN con etiquetado de contenido
+  sintético). La portabilidad entre jurisdicciones **es el entregable**, no un detalle.
+
+**Lo que esta receta NO promete, dicho por delante:** no hay **ninguna** medición en esta base de la
+**precisión** de estos modelos sobre datos de un cliente real; la promesa cuantificable es **«menos ítems
+para la misma precisión de medición»**, y se verifica en el paso 5 **antes** de prometerla. Y el estante es
+**viejo** (**P260**): el presupuesto tiene que incluir **vendorizar y testear**, no sólo integrar.
 
 ## 🆕 P257 — *Familia de licencia* y *ligadura de proveedor* son dos preguntas distintas, y la segunda también va en dos columnas (pase 86 del 2026-10-04)
 

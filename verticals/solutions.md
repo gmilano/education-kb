@@ -9,6 +9,7 @@ updated: 2026-10-04
 > Plataformas verticales reales, en producción, customizables con AI.
 > Modelo: partir de algo que ya funciona y que ya tiene los datos, y agregar la capa agéntica arriba.
 > Verificado vía WebFetch el 2026-09-30; las capas del pase 11, el 2026-10-01.
+> **Pase 87 del 2026-10-04:** 🟢 **Una capa vertical NUEVA, y es la que estaba debajo de todo lo que este archivo ya vendía sin tenerla: la PSICOMETRÍA COMPUTACIONAL (trazado de conocimiento, diagnóstico cognitivo, testing adaptativo). Ningún LMS de este archivo la trae — Moodle, Canvas, Open edX y OpenEduCat gestionan cursos, no estiman rasgos latentes.** 🟢 **La capa llega completa y permisiva de `BigData Lab @USTC` (Hefei): detalle en `repos/foundations.md`.** 🔴 **Y el barrido obligatorio de plataformas (`open source platform education ERP CRM MIT Apache`) se saturó por DECIMOQUINTA vez: devolvió Moodle, Open edX, Canvas, ILIAS, Sakai, Chamilo, Totara, Odoo, Forma y OpenEduCat — todo ya inventariado.** 🔴 **La única candidata de plataforma nueva del pase, `alfredang/ai-mms`, es un LMS/TMS de formación financiada DESPLEGADO en tres países (🇸🇬 🇲🇾 🇬🇭) y queda AFUERA por no tener licencia: es la segunda vez en este archivo que una vertical real se cae por cesión y no por técnica.**
 > **Pase 86 del 2026-10-04:** 🔴 **Sin verticales nuevas, y por una vez el barrido obligatorio de plataformas (`open source platform education ERP CRM MIT Apache`) nombró algo que esta base NO tiene: `Opigno`, LMS sobre Drupal, con CERO menciones en los ocho archivos de este árbol.** ⚠️ **Y su licencia queda `NO-CLAIM` en vez de inferida:** `www.drupal.org` y `git.drupalcode.org` dan `connect_rejected` del proxy de egreso, y la calibración de `P249` sobre los dos sale **000 a la URL buena Y 000 a la inexistente → el canal NO DISCRIMINA**; WebFetch sobre `www.drupal.org` devolvió `EGRESS_BLOCKED`, segundo canal y misma respuesta. 🔵 **Un módulo de Drupal es GPL-2.0+ por la política del proyecto, pero eso es inferencia de política y no lectura de payload, que es la única cosa que esta base publica como licencia** — así que Opigno entra como ACCIÓN con su bloqueo nombrado, no como fila. 🟢 **El resto de la lista del barrido (Moodle, Open edX, OpenEduCat, Chamilo, Sakai, ILIAS, Odoo eLearning, Forma LMS) ya estaba acá, verificado**, lo que es una medición de la COBERTURA de este archivo y no un hallazgo nuevo. 🟢 **Y la vertical gana un eje cotizable del pase: las plataformas no ligan proveedor de modelo — la ligadura aparece recién en la capa agéntica de arriba, y ahí está medida pieza por pieza** (`P257`, 0 de 69 con capa de abstracción).
 > **Pase 81 del 2026-10-04:** 🔴 **Sin verticales nuevas: el barrido obligatorio de plataformas (`open source platform education ERP CRM MIT Apache`) se saturo por CUARTO pase consecutivo** — devolvio **OpenEduCat** y su marco ERP, ya inventariados en este archivo, y **CK-ERP**, que es de 2010 y no es una capa de partida viva. 🟢 **Lo que si gana la vertical es una RESTRICCION DE ENTREGA medida sobre la capa LRS del pase 80: aparecio el cuarto servidor xAPI 2.0 conformante (`raif-s-naffah/xapi-rs`) y es `GPL-3.0-or-later`, asi que la eleccion de LRS permisivo queda cerrada POR ELIMINACION sobre 4 de 4 conformantes medidos** — y 🔴 **la combinacion *EMEA-soberano + xAPI 2.0 + permisivo* sigue sin existir, con el pin de `openfun/ralph` en 1.0.3 re-medido y reproducido.**
 > **Pase 77 del 2026-10-03:** 🔴 **Sin verticales nuevas, y el barrido obligatorio de plataformas se saturó otra vez sobre OpenEduCat y Frappe/ERPNext** —las dos ya inventariadas acá, y **re-medidas de primera mano en este pase con licencia CONCORDANTE**: `openeducat/openeducat_erp` **LGPL** (`LICENSE`, 8.240 B, rama por defecto `19.0`) y `frappe/education` **GPL-3.0**. 🔵 **Lo que sí aportó esa re-medición es una cota de instrumento: `frappe/education` no publica un TEXTO de licencia, publica una DECLARACIÓN de una línea** (`license.txt` = `License: GNU GPL V3`, **20 B**), y un clasificador por bloque de título —que es el correcto según **P171**— devuelve `UNCLASSIFIED` sobre ella. 🟢 **Reparado en `compose/code/lib/license_family.sh` con un *fallback* de declaración GUARDADO POR TAMAÑO (≤ 400 B): un payload corto no tiene cuerpo con el cual confundirse, y el guard es lo que impide reabrir P171** (**18/18**). 🔵 **Y la capa de telemetría cambia de recomendación por una medición de CAPA, no de licencia** (**P235**): para **ser el LRS** —exponer xAPI— hay 🟢 **dos opciones permisivas y VIVAS** ([`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql), **Apache-2.0**, `HEAD` **2 d**; [`openfun/ralph`](https://github.com/openfun/ralph), **MIT**, **26 d**), mientras **consumir** xAPI obliga a bifurcar un cliente congelado hace **1,7 a 6,1 años**. ⚠️ **Y `LearningLocker` —el LRS más adoptado de la categoría— es GPL-3.0 y está MUERTO hace 4,9 años** (`HEAD` 2021-11-16): sigue siendo el *«el cliente ya lo tiene»* más probable de la capa, pero no es terreno de construcción. 🔴 **La advertencia de compra que sale del pase, y es la más caliente de este archivo: NO se clasifica una licencia con un `grep` del cuerpo del archivo.** GPL-3.0 §13 se titula *«Use with the GNU Affero General Public License»*, así que ese método marca a **Moodle** —la vertical de mayor huella de esta KB— como **AGPL-3.0**, y **AGPL §13 contra GPL-3.0 es exactamente lo que decide si se le puede montar un producto ALOJADO encima.** ✅ **Auditadas, las cinco verticales/piezas que esta base declara AGPL lo son de verdad** (`canvas-lms`, `chalk`, `certo`, `deep-student`, `moodle-mcp-server` de csmediapro). Ver **P236**/**P237**.
@@ -113,6 +114,82 @@ updated: 2026-10-04
 > versiones), así que lo permisivo (`qti3-*`, `instructure/qti`) es **lo único proponible** — con **`qti3-a11y`** y
 > **`qti3-pnp`**, que abren accesibilidad de evaluación como entregable auditable (**P72**). ⚠️ **Open edX cambia de
 > recomendación: proponer con presupuesto de mantenimiento (gap 70).** Ver la sección del pase 33, abajo.
+
+## 🧮 Una capa vertical nueva, y es la que estaba DEBAJO de todo lo que este archivo ya vendía: la psicometría computacional (pase 87 del 2026-10-04)
+
+### 🔴 El hueco que este archivo tenía, y era estructural
+
+Este archivo venía eligiendo la vertical de partida por **quién gestiona el curso** (LMS), **quién tiene el
+legajo** (SIS), **quién exige el reporte** (ministerio) o **quién tiene el dato de actividad** (LRS/xAPI).
+Las cuatro son correctas y ninguna responde la pregunta que un cliente hace **en la primera reunión**:
+
+> «Si ponen un tutor adaptativo, ¿cómo sabe qué sabe mi alumno?»
+
+**Ninguna plataforma de este archivo lo sabe.** Moodle, Canvas, Open edX, Chamilo, ILIAS, Sakai y OpenEduCat
+**administran** el aprendizaje: cursos, matrícula, entregas, calificaciones. **Estimar un rasgo latente**
+—qué concepto domina el alumno, con cuánta certeza, y cuál es el próximo ítem que más información aporta—
+es otra disciplina (psicometría + ML) y vive en **otra capa de software**.
+
+Hasta este pase, esta KB vendía «aprendizaje personalizado» **sin tener en el inventario la capa que lo
+calcula**. El pase 87 la pone.
+
+### 🟢 La capa, y qué resuelve cada pieza
+
+| Pregunta del cliente | Pieza | Licencia | Disciplina |
+|---|---|---|---|
+| «¿Qué sabe mi alumno ahora?» | [`EduKTM`](https://github.com/bigdata-ustc/EduKTM) | Apache-2.0 | *Knowledge tracing* |
+| «¿En qué concepto exactamente falla?» | [`EduCDM`](https://github.com/bigdata-ustc/EduCDM) | Apache-2.0 | Diagnóstico cognitivo (IRT, MIRT, DINA) |
+| «¿Puedo medir lo mismo con menos preguntas?» | [`EduCAT`](https://github.com/bigdata-ustc/EduCAT) | MIT | Testing adaptativo (CAT) |
+| «¿Con qué datos entreno y valido esto?» | [`EduData`](https://github.com/bigdata-ustc/EduData) | Apache-2.0 | Datasets educativos |
+| «Mis ítems tienen fórmulas y figuras, no sólo texto» | [`EduNLP`](https://github.com/bigdata-ustc/EduNLP) | Apache-2.0 | NLP de ítems multimodales |
+| «¿Puedo probar la política sin experimentar con alumnos?» | [`EduSim`](https://github.com/bigdata-ustc/EduSim) | MIT | Simulación de entorno educativo |
+
+**Por qué es una vertical de partida y no una librería más:** porque **cambia el orden de la propuesta**.
+Con esta capa, el LMS pasa a ser **el sistema de registro** y la capa adaptativa **el producto**. El LMS
+aporta roster, ítems y entregas; la psicometría aporta la estimación; el agente aporta la conversación.
+**Se puede cotizar la capa adaptativa sin reemplazar el LMS del cliente** — que es, en esta vertical, la
+única forma de entrar sin un proyecto de migración.
+
+### 🔴 La restricción que viaja al cliente, y hay que decirla antes de cotizar
+
+- **`EduCDM` es la única con release vigente (2024-10-25).** El resto del estante publicado es de
+  **2019-2022**. ⇒ **`EduCDM` como dependencia; el resto vendorizado** (**P260**).
+- **`EduSim` es un simulador, no un entorno de producción**, y su release es de **2019**. Sirve para
+  justificar una política de selección de ítems **antes** de exponerla a alumnos, no para operar.
+- **El titular no es uniforme**: `EduCAT` y `EduSim` tienen copyright de un **individuo** (`tswsxk`), no de
+  la institución. Para un contrato con cesión explícita, **la contraparte cambia según la pieza**.
+- **Alcance regional declarable: APAC** (Hefei, China). Para un cliente de EMEA con exigencia de soberanía
+  de dato, **esto es código permisivo que se autoaloja** —no un servicio—, así que la procedencia no mueve
+  el dato; pero **sí hay que decirla**, porque en algunos pliegos públicos la procedencia se declara.
+- 🔴 **Y el régimen que manda encima**: en **EMEA**, usar esta capa para **evaluar o admitir** cae en
+  **ALTO RIESGO** del AI Act (ver `intel/market.md`). La capa es permisiva; **la obligación de conformidad
+  no desaparece por eso**.
+
+### 🔴 La candidata de plataforma que queda AFUERA, y es la segunda vez que pasa por lo mismo
+
+[`alfredang/ai-mms`](https://github.com/alfredang/ai-mms) — LMS/TMS de **formación financiada** (flujos
+WSQ/IBF de Singapur), con registro de cursos, formación de clases, asistencia y emisión de certificados,
+**un solo código base desplegado por sede** en `tertiarycourses.com.sg`, `.com.my` y `.com.gh`
+(🇸🇬 🇲🇾 🇬🇭), de **Tertiary Infotech Academy Pte. Ltd.** 7 ★ / 3 forks, PHP, deploy automático por Coolify.
+
+**Es exactamente la forma de vertical que este archivo busca**: real, en producción, con los datos adentro,
+multi-país y con la capa AI ya encima (proveedor configurable entre OpenAI y Claude). **Y queda afuera:
+no tiene archivo de licencia** (`/blob/main/LICENSE` → `404`, y ausente del listado del repo).
+
+⇒ **Segunda vez en este archivo que una vertical real se cae por CESIÓN y no por técnica.** La regla que
+esto consolida: **en la capa de plataforma vertical, «desplegado» no implica «reutilizable»**, y la licencia
+se mide **antes** de escribir la fila, no después de enamorarse del despliegue.
+
+### 🧾 Y el barrido obligatorio de plataformas: confirmación por decimoquinta vez
+
+`open source platform education ERP CRM MIT Apache` devolvió **Moodle, Open edX, Canvas LMS (Community),
+ILIAS, Sakai, Chamilo, Totara Learn, Odoo LMS, Forma LMS, Open LMS y OpenEduCat** — **todas ya
+inventariadas en este archivo**. Confirmación de saturación, no hallazgo.
+
+Dos precisiones de licencia que el barrido sí dejó y conviene tener a mano: **Open edX es AGPLv3** (y su
+*steward* es la fundación **Axim Collaborative**, no MIT/Harvard, aunque el origen sea de ahí);
+**Sakai es Apache-2.0** bajo la **Apereo Foundation**; **OpenEduCat es LGPLv3** y es **la única del grupo
+que integra LMS con SIS** en un mismo árbol sobre PostgreSQL.
 
 ## 🏛️ Una vertical NUEVA, y es de CATEGORÍA: la capa que compra un MINISTERIO, no una institución (pase 85 del 2026-10-04)
 

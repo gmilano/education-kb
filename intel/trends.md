@@ -7,6 +7,7 @@ updated: 2026-10-04
 # 📡 Tendencias — education
 
 > Ventana de investigación: septiembre 2026. Verificado 2026-09-30; el pase 11, el 2026-10-01.
+> **Pase 87 del 2026-10-04:** 🟢 **Ocho tendencias nuevas, numeradas 675–682** (el pase 86 cerró en 674). 🟢 **675: la capa que faltaba —psicometría computacional permisiva y completa de un solo laboratorio APAC— y con ella el hueco de APAC cierra a los quince pases.** 🔴 **676: «hay paquete publicado» dejó de ser señal de vigencia: 5 de 6 releases del estante nuevo son de 2019-2022.** 🔴 **677: el titular no es uniforme dentro de un mismo `org` institucional, y eso mueve la contraparte de un contrato.** 🟢 **678: aparece la primera ligadura de proveedor que vive en la CONFIGURACIÓN y no en el manifiesto, y con ella el cero del pase 86 pasa a ser cota de instrumento.** 🔴 **679: en APAC el cuello dejó de ser el código y pasó a ser la cesión —producto desplegado en tres países, sin licencia.** 🔴 **680: NA legisla mucho y capacita poco; la brecha es de 134 proyectos de ley contra 18 % de docentes con guía escrita.** 🟢 **681: LATAM es la región de mayor adopción medida del planeta en superior y la de regulación más fragmentada.** 🔵 **682: EMEA es la única región con FECHA dura de cumplimiento, y la entrada comercial de la región es deliberadamente de bajo riesgo.**
 > **Pase 86 del 2026-10-04:** 🟢 **Ocho tendencias nuevas, numeradas 667–674** (el pase 85 cerró en 666). Las ocho salen de un eje que esta base escribía en prosa en los ocho archivos y nunca había medido: la LIGADURA DE PROVEEDOR.
 > **Pase 77 del 2026-10-03:** 🟢 **Nueve tendencias nuevas, numeradas 602–610** (el pase 76 cerró en 601). 🔴 **602: una nota de honestidad puede estar equivocada en el 100 % de sus filas y seguir pareciendo prudente** — las cinco filas de `— (no verificada: repo muerto)` son **5 de 5 permisivas**, y el cierre costó **cinco peticiones HTTP** (**P234**). 🔴 **603: «muerto» tampoco exime de medir el ROL, y el rol es peor que la licencia porque su error tiene el signo contrario** — una licencia mal archivada EXCLUYE una pieza usable, un rol mal archivado **INCLUYE una inservible**, y llega a una propuesta. 🪜 **604: el eje CAPA se reproduce en otro estándar y su SIGNO SE INVIERTE** — en xAPI el servidor está abierto y vivo y el cuello está en el cliente, al revés que en OneRoster, **así que el signo es propiedad del ESTÁNDAR y no del sector** (**P235**). 🔴 **605: una corrección de esta base no viaja si vive en prosa y en N instrumentos: el pase 77 reintrodujo P171 en dos instrumentos nuevos** y leyó `LearningLocker` (GPL-3.0) como AGPL-3.0 (**P237**). 🔴 **606: un clasificador de licencias validado sobre la clase que INTERESA saca 5/5 y sigue roto** — hay que validarlo contra la clase con la que se puede CONFUNDIR. 🟢 **607: el discriminador cuantitativo que faltaba —GPL-3.0 nombra la AGPL en 3 líneas, una AGPL real en 15, GPL-2.0 en 0— y con él el defecto queda ACOTADO A UNA VERSIÓN.** 🔴 **608: cuando el FUENTE de un fork es idéntico byte a byte, lo que se bifurcó es el SUITE DE PRUEBAS, y el asunto del commit no lo dice** (**P238**: `upstream` 0/3 · fork 3/3). ⚠️ **609: un archivo de licencia no siempre es un TEXTO de licencia: puede ser una DECLARACIÓN de una línea, y la regla correcta de P171 devuelve `UNCLASSIFIED` sobre ella** — el *fallback* se vuelve sano sólo con un guard de TAMAÑO. 🔵 **610: el barrido por región se agotó por TERCERA vez consecutiva, y las tres dimensiones que rindieron en esos tres pases son INTERNAS** — `(segmento, unidad)`, `CAPA`, y ahora la auditoría de los instrumentos propios. Ver los patrones **P234**–**P238** y `compose/code/lib/`.
 > **Pase 75 del 2026-10-03:** 🟢 **Ocho tendencias nuevas, numeradas 586–593** (el pase 74 cerró en 585). 🔴 **586: una cuota de LMS sin SEGMENTO ni UNIDAD no es un dato, y el líder se INVIERTE entre segmentos** —Classroom ~31 % en K-12 contra **6 de 3.400 instituciones (0,2 %)** en superior—, **lo que corrige el encuadre de P224**: medido por cohorte hay **7** inversiones en K-12 y **1** en superior, así que esta es una KB de educación SUPERIOR medida con denominador de K-12 (**P228**). 🔵 **587: el sesgo real no es «contra la base instalada» sino a favor de lo AUTOALOJABLE**, que sí sugiere una acción. 🔴 **588: una cifra agregada se propaga sin su conjunto de archivos —7 copias, 1 lo nombra— y la que viaja a otras KBs es la que no** (**P227**, reparado en `patterns.md`). 🔴 **589: en la capa de *rostering* de K-12, «permisivo + vivo + spec vigente» deja UNA pieza y el hueco es de DERECHOS**, no de investigación (**P229**). 🔵 **590: el mismo autor publica el mismo estándar con dos licencias, y el dedupe por repo es ciego a eso.** ⚠️ **591: MIT sobre un árbol ARCHIVADO es una trampa que la columna de licencia no muestra.** 🟢 **592: el barrido por región se agotó otra vez, y lo que rindió fue cambiar de DIMENSIÓN** —`SEGMENTO × UNIDAD`, y por nombre de ESTÁNDAR en vez de `education`—, **que es exactamente lo que la tendencia 585 prescribía.** 🔴 **593: y el instrumento se encontró contaminado A SÍ MISMO — `measure.py` da 11 inversiones sobre el árbol de trabajo y 7 sobre `5dd2bcc`, porque la prosa que documenta el hueco menciona las plataformas *stub* en los mismos cuatro archivos que la métrica cuenta: hablar de una ausencia la borra del contador de ausencias, así que el COMMIT es parte de la invocación.**
@@ -102,6 +103,102 @@ updated: 2026-10-04
 > (tendencia 29), se abre el **gap 20** y se registran dos advertencias de verificación: los agregadores de estrellas
 > están mal por ~2× y **un 403 de `curl` no es un 404**. Ver la nota de método del pase 12.
 > **Pase 11:** el Digital Omnibus es derecho vigente (tendencia 25), aparece la capa predictiva y está vacía (tendencia 26), y se corrige un error de método de diez pasadas sobre licencias permisivas (tendencia 27).
+
+## 🟢 Tendencias 675–682 — pase 87 del 2026-10-04
+
+El pase 86 cerró en **674**. Estas ocho continúan la serie. Las cuatro primeras salen de medición de primera
+mano de este pase; las cuatro últimas, del decimosexto barrido regional.
+
+### 🟢 675 — La capa que esta KB vendía sin tener: la psicometría computacional llega completa, permisiva y de un solo laboratorio, y con ella cierra el hueco de APAC
+
+Durante 86 pases este árbol inventarió plataformas, conectores y servidores MCP, y prometió «aprendizaje
+adaptativo» **sin tener en el catálogo la capa que lo calcula**. `BigData Lab @USTC` (`中科大大数据实验室`,
+`bigdata.ustc.edu.cn`, Hefei) la aporta entera: **trazado de conocimiento** (`EduKTM`, 265 ★),
+**diagnóstico cognitivo** (`EduCDM`, 197 ★, IRT/MIRT/DINA), **testing adaptativo** (`EduCAT`, 76 ★),
+**datasets** (`EduData`, 310 ★), **NLP de ítems multimodales** (`EduNLP`, 64 ★) y **simulación** (`EduSim`,
+29 ★). **7 de 8 piezas permisivas** (4 Apache-2.0 + 3 MIT, leídas del payload).
+
+**Lo que la vuelve tendencia y no hallazgo aislado:** es la primera vez que una capa funcional **completa**
+entra a esta KB **de un solo origen institucional con dirección verificable**, y es la primera pieza de
+código con **procedencia APAC declarable** en quince pases de hueco declarado.
+
+### 🔴 676 — «Hay paquete publicado» dejó de ser señal de vigencia, y esta base lo venía usando como si lo fuera
+
+El pase 84 inventarió 9 paquetes instalables **sin medirles la fecha**. Medida, el estante nuevo dice:
+`EduSim` 0.0.2 → **2019-11-29**; `EduData` 0.0.18 → **2021-08-20**; `EduKTM` 0.0.10 → **2022-05-18**;
+`EduNLP` 0.0.9 → **2022-11-14**; `EduCAT` 0.0.1 → 2024-01-24 (**una sola versión**); `EduCDM` 1.0.1 →
+**2024-10-25** (13 versiones). ⇒ **5 de 6 publicados tienen última release de 2019-2022**, mediana ~4 años.
+
+**La regla que queda:** *instalable* y *mantenido* son dos mediciones, y la segunda se lee de la **fecha de
+release de la API JSON de PyPI**, no de la existencia del paquete (**P260**).
+
+### 🔴 677 — El titular del copyright no es uniforme dentro de un mismo `org` institucional
+
+`EduData` y `EduCDM` traen `Copyright [2020] [bigdata-ustc]` (la organización), pero `EduCAT` trae
+`Copyright (c) 2019 tswsxk` —**un individuo**— y `EduSim` es **fork de `tswsxk/EduSim`**. ⇒ **2 de 8 piezas
+no las tiene la institución.**
+
+**Consecuencia comercial directa:** en un *engagement* con cesión explícita o auditoría de procedencia,
+**a quién se le pide la cesión cambia pieza por pieza**, y el nombre del `org` no lo revela: hay que leer el
+`LICENSE` de cada árbol. Es la lección del pase 85 (**P255**) reapareciendo **dentro de un solo propietario
+aparente**.
+
+### 🟢 678 — Aparece la ligadura de proveedor que vive en la CONFIGURACIÓN, y el cero del pase 86 pasa a ser cota de instrumento
+
+El pase 86 midió 69 filas y publicó **cero `SWAPPABLE`**, midiendo el **manifiesto de runtime**.
+`SwissLearningAnalytics/LLMTutor` no declara `litellm` ni `langchain` —habría salido `UNBOUND`— y sin embargo
+**el proveedor se elige en el panel de admin, entre `OpenAI` y `Ollama`**.
+
+⇒ **La sustituibilidad puede ser de configuración y no de dependencia**, y un instrumento que sólo lee
+manifiestos **no la ve**. El cero del pase 86 sigue siendo correcto sobre lo que midió, y desde este pase
+viaja con su cota al lado (**P259**). **Y el caso tiene valor regional**: `Ollama` significa **inferencia
+dentro de la institución**, que es el argumento que EMEA pide.
+
+### 🔴 679 — En APAC el cuello dejó de ser el código y pasó a ser la CESIÓN
+
+Las dos piezas APAC con producto real que este pase encontró son del **mismo titular** (Tertiary Infotech
+Academy Pte. Ltd., Singapur) y **las dos están sin licencia**: `ai-mms` (7 ★ / 3 forks, **desplegado en
+producción** en 🇸🇬 🇲🇾 🇬🇭, un código base por sede) y `ai4kids` (1 ★ / 1 fork). **Hay código, está
+desplegado, y no se puede usar.**
+
+⇒ El hueco de APAC **se movió de categoría**: de *no encontramos* a *encontramos y no cede*. **Un hueco
+informado, no silencio.** Y corrige dato propio: `ai4kids` se publicaba con licencia `?` en dos archivos de
+este árbol; ahora es **ausencia medida**.
+
+### 🔴 680 — North America legisla mucho y capacita poco, y la brecha es medible
+
+**134 proyectos de ley** sobre AI en educación en **31 estados** en la sesión 2026, con privacidad como línea
+dura (**California AB 1159** prohíbe usar datos de alumnos para **entrenar**; **Idaho SB 1227** exige
+protecciones), supervisión humana obligatoria en Oklahoma y Maryland, y **cuatro estados** (Idaho, Maryland,
+Oklahoma, Virginia) exigiendo **guía estatal + política obligatoria por distrito**.
+
+**Y del otro lado del mismo mercado:** sólo **18 %** de los docentes de K-12 recibe guía **escrita**, y
+**34 % no recibe ninguna**, con **64 %** de adolescentes usando chatbots. **La norma corre muy por delante
+de la capacidad de cumplirla**, y el producto que falta es operativo, no normativo.
+
+### 🟢 681 — LATAM: la mayor adopción medida del planeta en superior, sobre la regulación más fragmentada
+
+**92 % de estudiantes** y **79 % de docentes** usan AI activamente, y **94 % de docentes** espera usarla
+(*AI in Higher Education LATAM Survey 2026*, Digital Education Council, con el **Institute for the Future of
+Education** del **Tec de Monterrey**, **AIGEN** y **RIE360**). Simultáneamente, el mapa normativo corre a
+velocidades distintas: proyecto de ley de **Brasil**, marco por riesgo de **Chile** atado a su futura
+autoridad de datos, **CONPES 4144** de **Colombia** (feb-2025, presupuesto **hasta 2030**) y reglas
+**sectoriales** de **México**.
+
+⇒ **Es la inversa exacta de North America**: uso casi universal, gobierno escaso. El entregable no es
+«implantar AI», es **ordenar la que ya entró**.
+
+### 🔵 682 — EMEA es la única región con FECHA dura, y por eso su entrada comercial es deliberadamente de bajo riesgo
+
+El AI Act clasifica **acceso/admisión, evaluación de alumnos y corrección de exámenes** como **ALTO
+RIESGO**; las enmiendas de **junio 2026** entraron **en vigor el 27-jul-2026**, con aplicación corrida a
+**2-dic-2027** (autónomos) y **2-ago-2028** (embebidos en productos regulados).
+
+**Y el despliegue real de la región esquiva esa categoría a propósito**: flujos administrativos (consultas,
+matrícula, horarios, catálogo, comunicación con familias) y **chatbots para familias** —consecuencia ligera,
+sin expediente de conformidad—. ⇒ **La región se vende en dos ofertas separadas**: *quick win*
+administrativo hoy, y **expediente de conformidad** para evaluación con la ventana **2027-2028** como
+calendario.
 
 ## 🆕 Tendencias 667–674 — pase 86 del 2026-10-04
 

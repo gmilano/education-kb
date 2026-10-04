@@ -9,6 +9,61 @@ updated: 2026-10-04
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 > No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
 
+## 2026-10-04 — pase 87: el hueco de APAC cierra a los quince pases, y no cierra con una pieza sino con una capa entera que esta base vendía sin tener
+
+🟢 **El alta de agente del pase es UNA y es de EMEA**, pero el movimiento grande está una capa más abajo.
+
+| Pieza | Licencia (payload) | ★ / forks | Región (declarada) | Qué es |
+|---|---|---|---|---|
+| [`SwissLearningAnalytics/LLMTutor`](https://github.com/SwissLearningAnalytics/LLMTutor) | **MPL-2.0** | 0 ★ / 1 fork | **EMEA** — Suiza | Tutor por escenarios de caso, autoalojable; proveedor configurable `OpenAI`/`Ollama` |
+
+🟢 **Y vale por una razón que no es su popularidad, que es cero:** es la **primera pieza de esta base cuyo
+proveedor de inferencia es una elección de CONFIGURACIÓN** y no una ligadura de manifiesto. El pase 86 midió
+69 filas buscando `SWAPPABLE` en los manifiestos y encontró **cero**; esta liga en el **panel de admin**, así
+que el instrumento no la habría visto. El cero del pase 86 pasa a ser **cota de instrumento** y no propiedad
+del catálogo (**P259**). Con `Ollama` entre las opciones, significa **inferencia dentro de la institución**:
+el argumento de soberanía de dato que pide EMEA.
+
+🔴 **Las cuatro candidatas rechazadas del pase caen TODAS por lo mismo, y ninguna por estrellas: SIN
+LICENCIA.**
+
+| Candidata | Licencia (medida) | ★ / forks | Región | Nota |
+|---|---|---|---|---|
+| [`alfredang/ai-mms`](https://github.com/alfredang/ai-mms) | 🔴 sin licencia (`LICENSE` → `404`) | 7 ★ / 3 forks | APAC — Singapur | **Desplegado en producción en 🇸🇬 🇲🇾 🇬🇭.** La pérdida más dolorosa del pase |
+| [`alfredang/ai4kids`](https://github.com/alfredang/ai4kids) | 🔴 sin licencia | 1 ★ / 1 fork | APAC — Singapur | **Corrige el `?` que este archivo publicaba** |
+| [`Vashishtha05/An-Adaptive-LLM-Based-AI-Tutor-for-Multi-Level-Learning`](https://github.com/Vashishtha05/An-Adaptive-LLM-Based-AI-Tutor-for-Multi-Level-Learning) | 🔴 sin licencia | 0 ★ / 0 forks | 🔴 sin región (`P135`) | Proyecto de estudiante: Flask + OpenRouter |
+| [`attoyibi/lms-with-ai`](https://github.com/attoyibi/lms-with-ai) | 🔴 sin licencia | 1 ★ / 0 forks | 🔴 sin región (`P135`) | Demo Next.js, 43 commits |
+
+🟢 **Corrección de dato de ESTE archivo:** la fila de `alfredang/ai4kids` se venía publicando con licencia
+`?`. **Ya no es `?`: es ausencia medida.** El `?` era honesto como «no medido»; dejarlo doce pases no lo era.
+
+🔴 **El hueco de APAC cambia de categoría, y es el hallazgo del pase:** las dos piezas APAC con producto real
+son del **mismo titular** singapurense y **las dos están sin licencia**. Hay código, está desplegado, **y no
+se puede usar**. ⇒ APAC dejó de ser un hueco de **búsqueda** y pasó a ser, en la capa de producto, un hueco
+de **CESIÓN**.
+
+🟢 **Donde APAC sí cede es en la capa de medición**, y ahí entra lo grande del pase: **`BigData Lab @USTC`**
+(`中科大大数据实验室`, `bigdata.ustc.edu.cn`, Hefei) aporta **8 repos `Edu*`, 7 permisivos**, con trazado de
+conocimiento, diagnóstico cognitivo, testing adaptativo, datasets, NLP de ítems y simulación. **Detalle
+completo en `repos/foundations.md`; la receta que los compone es `R-PSICO`, en `compose/patterns.md`.**
+
+🔴 **Y la cota del estante nuevo, que es de FECHA y no de licencia:** 5 de sus 6 paquetes publicados tienen
+última release de **2019-2022**; sólo `EduCDM` (2024-10-25) está vigente. **«Hay paquete» no es «hay
+mantenimiento»** (**P260**).
+
+⚠️ **Canales de este pase, declarados.** `curl` → `github.com` devolvió **`403` en el 100 %** de las pruebas,
+**incluida `tutor-mcp`, que esta base sabe real** ⇒ canal inválido para negativos, todos descartados por
+`P247`; se verificó por `WebFetch`. Las páginas HTML de PyPI fallaron en 3 de 3 `Edu*` pero **respondieron
+para `requests`** ⇒ fallo de render, no ausencia; se recontó por la **API JSON**. **`arxiv.org` está
+bloqueado por el proxy de egreso** (`EGRESS_BLOCKED`), así que la afiliación institucional **no** se leyó del
+paper: se declaró desde el `org` por **tres señales de primera mano** (**P261**).
+
+🔴 **Las cuatro búsquedas globales obligatorias se corrieron (año CALCULADO: 2026) y volvieron al eje
+generalista agotado por QUINTO pase consecutivo**: devolvieron `OpenClaw` (~362k ★), `OpenHands` (~70k ★,
+Serie A de USD 18,8 M), `CrewAI`, `SWE-agent` y listados de «mejores agentes 2026» — **marcos horizontales
+que esta base ya tiene y que no son de la vertical**. **El rendimiento del pase vino de los canales
+verticales, no de los globales.**
+
 ## 2026-10-04 — pase 86: la palabra que esta base escribía en los ocho archivos sin medirla nunca, y al medirla sale CERO
 
 🔴 **`lock-in` estaba en PROSA en los ocho `.md` de este árbol y no tenía instrumento.** Este pase lo construye
@@ -9640,7 +9695,7 @@ Los star counts de ciclos anteriores estaban inflados por el pipeline, no medido
 
 | Nombre | Licencia | Descripción | Stars |
 |--------|----------|-------------|-------|
-| [ai4kids](https://github.com/alfredang/ai4kids) | ? | 🤖 AI Kids Academy — a kids' AI learning portal (ages 4–16): gamified AI storyte | 1 |
+| [ai4kids](https://github.com/alfredang/ai4kids) | sin licencia (medido, pase 87) | 🤖 AI Kids Academy — a kids' AI learning portal (ages 4–16): gamified AI storyte | 1 |
 | [flashcards-open-source-app](https://github.com/kirill-markin/flashcards-open-source-app) | MIT | AI-powered flashcards app built for serious daily study on iOS, Android, and the | 24 |
 | [vacademy_platform](https://github.com/Vacademy-io/vacademy_platform) | AGPL-3.0 | Open source comprehensive e-learning platform with a focus on educational conten | 14 |
 | [Edyfra](https://github.com/marsley01/Edyfra) | ? | Edyfra is a modern, modular web application built primarily in TypeScript and Ja | 2 |

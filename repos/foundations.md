@@ -8,6 +8,7 @@ updated: 2026-10-04
 
 > Bases sobre las cuales construir. Verificado repo por repo vía WebFetch el 2026-09-30 (capas del pase 10, el 2026-10-01).
 > Leer la columna **Licencia** antes de proponer: media KB de educación es GPL/AGPL, no permisiva.
+> **Pase 87 del 2026-10-04:** 🟢 **7 altas fundacionales de una sola vez, y es la primera vez en este estante: no son siete piezas sueltas sino UNA CAPA DE MEDICIÓN EDUCATIVA completa —trazado de conocimiento, diagnóstico cognitivo, testing adaptativo, datasets, NLP de ítems y simulación— de un laboratorio con nombre y dirección: BigData Lab @USTC (`中国科学技术大学大数据实验室`), `bigdata.ustc.edu.cn`, Hefei.** 🟢 **7 de 8 son permisivas (4 Apache-2.0 + 3 MIT, leídas del payload) y 6 de 8 están publicadas en PyPI.** 🔴 **Y la cota que decide si se cotiza o no: el estante está PUBLICADO pero VIEJO. `EduSim` 0.0.2 es de 2019-11-29, `EduData` 0.0.18 de 2021-08-20, `EduKTM` 0.0.10 de 2022-05-18, `EduNLP` 0.0.9 de 2022-11-14; sólo `EduCDM` 1.0.1 (2024-10-25) está vigente. «Hay paquete» NO es «hay mantenimiento» (**P260**).** 🔴 **El titular NO es uniforme dentro del mismo `org`: `EduData` y `EduCDM` dicen `Copyright [2020] [bigdata-ustc]`, pero `EduCAT` dice `Copyright (c) 2019 tswsxk` —un INDIVIDUO— y `EduSim` es fork de `tswsxk/EduSim`. Dos de las ocho no las tiene la institución, y eso cambia a quién se le pide cesión en un contrato.** 🔴 **`EduX` queda AFUERA: es el paraguas del conjunto y es la única SIN LICENCIA.** 🟢 **Y el hueco de APAC, abierto quince pases, cierra acá y por método correcto: la región sale de la bio, el sitio y la ubicación declaradas del `org`, no de un antropónimo (**P261**).**
 > **Pase 86 del 2026-10-04:** 🟢 **Cero altas de repo, y una columna nueva para TODA la tabla: la LIGADURA DE PROVEEDOR, medida del manifiesto de runtime.** Hasta este pase, «¿lo podemos usar de base?» se contestaba sólo con la licencia; ahora se contesta además con «¿a qué proveedor de modelo ata al cliente?». 🔴 **El resultado sobre las 69 filas recomendables: `SWAPPABLE` = 0.** Ninguna rutea por `litellm`, `langchain` ni `@ai-sdk/*`, así que **las 10 que ligan son 10 cambios A MANO** si un cliente manda su proveedor. 🟢 **Y la buena noticia es más grande que la mala: 36 son `UNBOUND` y 21 de los 25 servidores MCP no ligan NADA** — la elección de modelo vive en el host, así que construir sobre ellos no compromete al cliente. ⚠️ **21 quedan `NO-CLAIM` (sin manifiesto alcanzable por este canal): no se afirma que no liguen, se afirma que no se pudo leer.** 🔵 **La columna de licencia de esta tabla NO cambia y no se re-litiga** — es otro eje, y `P257` existe justamente para no volver a mezclarlos. Ver `compose/code/p257-provider-binding/` (**37/37**) y las tendencias **667**–**674**.
 > **Pase 77 del 2026-10-03:** 🟢 **La tabla de «repo muerto ⇒ licencia no verificada» cierra, y era un patrón y no una excepción: 5 de 5 permisivas** (3 MIT + 2 Apache-2.0) — `compose/code/p234-dead-license-closeout/`, cinco peticiones HTTP. 🆕 **Dos piezas ganan licencia tras 76 pases:** [`EASOL/edfi-to-oneroster`](https://github.com/EASOL/edfi-to-oneroster) (**Apache-2.0**) y [`Transcordia/jupiter`](https://github.com/Transcordia/jupiter) (**MIT**, titular `Transcordia`). 🧾 **Y las dos cotas de titular son Apache-2.0 y son la NORMA, no una anomalía: `EASOL` no trae ninguna línea de copyright y `gotranseo` trae el apéndice sin llenar** (`Copyright [yyyy] [name of copyright owner]`) — el archivo responde el titular **sólo** para MIT/BSD/ISC (**P184**). 🪜 **La capa xAPI medida por CAPA invierte el signo de P230** (**P235**): servidor 🟢 **dos permisivos VIVOS** (`lrsql` Apache-2.0 **2 d** · `ralph` MIT **26 d**) · cliente ⚠️ **permisivos pero TODOS congelados** (`php-xapi/model` MIT **1,7 a** · `TinCanPHP` Apache-2.0 **3,9 a** · `TinCanPython` Apache-2.0 **6,1 a**) · puente 🟡 MIT con el *upstream* congelado **1,1 a**. **8 de 9 permisivas, y la única copyleft (`LearningLocker`, GPL-3.0) es la que está muerta.** 🔵 **Para esta capa la frase comercial es la INVERSA de la de OneRoster: EXPONER xAPI se puede hoy, permisivo y con mantenimiento de esta semana; CONSUMIRLO obliga a bifurcar un cliente congelado.** ⚠️ **Corrección de fecha a esta base: la familia `php-xapi/*` se databa en «último tag 2021-03-24» y el `HEAD` de `php-xapi/model` es 2025-01-20.** ✅ **`gap 79` estaba CERRADO desde el pase 39 y tres archivos de esta KB seguían diciendo «sin resolver» cuatro pases después — reparado acá, en `repos/trending.md` y en `verticals/solutions.md`.** 🔴 **Y la advertencia de instrumento que vale para todo barrido futuro de este archivo: un clasificador de licencias que `grep`-ea el CUERPO marca a `moodle/moodle` como AGPL-3.0**, porque GPL-3.0 §13 se titula *«Use with the GNU Affero General Public License»*. El clasificador pasa a vivir en **`compose/code/lib/license_family.sh`** con test (**12/12**): **no se inlinea uno** (**P237**).
 > **Pase 76 del 2026-10-03:** 🔴 **La conclusión de P229 se cae con datos de su propio archivo: `bgwdotdev/go-oneroster` se publicaba 🟢 «vivo» en la tabla de licencias y ⚫ «muerto hace 6,9 años» en la tabla de frescura, a 1.662 líneas de distancia y en el mismo `HEAD`.** Medidas por separado, las tres condiciones (permisiva + viva + spec vigente) las cumplen 🔴 **CERO** piezas, no una. 🟢 **Y el permisivo con el spec VIGENTE que P229 declaró inexistente ya estaba en esta base, sin licencia: [`jdolny/OneRoster.NET`](https://github.com/jdolny/OneRoster.NET) — MIT (titular `theopenem`) con `v1p1` + `v1p2`** — porque el pase 75 registró su licencia como *«no verificada: repo muerto»*. 🧪 **«Muerto» no exime de medir la licencia: la hace más importante — un permisivo muerto se BIFURCA, un AGPL muerto no.** 🪜 **El eje nuevo es CAPA: CONSUMIR OneRoster con spec vigente y licencia permisiva se puede hoy; EXPONERLO no** (ningún servidor permisivo en v1p2). 🔴 **Corrección de spec que afecta a toda la capa: v1p1 NO es el spec vigente** — 1.2 se publicó en septiembre de 2022, superó a 1.1 en 2023 (7→14→22 CSV, 38→61→81 endpoints). **5 altas + 1 duplicado registrado; EMEA recupera 2 piezas, las dos sin archivo de licencia.** Instrumento y corrida en `compose/code/p230-rostering-layer-axis/`.
@@ -85,6 +86,94 @@ corre ése antes de escribir uno a mano** (tendencia **313**). 🟢 **Y el `gafa
 > y 5 en `schemas12/`, y contar sólo el primero es lo que hizo invisible el segundo dialecto de SCORM (**P106**).
 > **Pase 36 del 2026-10-02:** 🔵 **este pase no agrega repos: le pone FECHA a los que ya están, y la fecha cambia tres recomendaciones.** Se midió la capa PHP de evaluación y telemetría en Packagist —el único registro de los tres que entrega descargas en este entorno (`api.npmjs.org` y `pypistats.org` dan **403 a CONNECT**)— y el resultado está en `repos/trending.md`. **Lo que hay que saber antes de proponer desde este archivo:** 🔴 **la pieza xAPI más descargada de esta base, `rusticisoftware/tincan` (Apache-2.0, 6.178 desc./mes, 863.777 totales), no publica desde el 2022-11-02**, y ⚠️ **el único MIT de esa capa, `php-xapi/client`, está parado desde el 2021-03-24** con 825 desc./mes. 🔵 **La lectura es que en xAPI/PHP lo permisivo está quieto y lo vivo es copyleft**, así que la receta de telemetría se sostiene en **Ralph (MIT)** + **`lrsql` (Apache-2.0)** + **`learnmcp-xapi` (MIT)** y no en la capa PHP. 🟢 **Del lado de evaluación, lo activo es `oat-sa/extension-tao-testqti`** (**885 versiones**, release del **2026-09-30**) **y sigue siendo GPL-2.0-only**, mientras **lo permisivo es lo nuevo**: `@longsightgroup/qti3-cli` (**MIT**, 41 releases desde el 2026-05-21, último **2026-10-01**) con **cero dependencias de terceros** — sus 4 dependencias son todas `@longsightgroup/*` pinneadas a la misma versión exacta. **Su manifiesto MCP completo de 20 tools está escrito en `compose/patterns.md` (P76).** 🔴 **Y una corrección de catálogo: `oat-sa/qti-sdk` devuelve 404 en Packagist porque es el nombre del REPO — su paquete es `qtism/qtism`** (GPL-2.0-only, 218.212 descargas totales, 315 versiones). **Nombre de repo y nombre de paquete son identificadores distintos, y confundirlos produce un 404 que parece una ausencia** — pasó igual con `1edtech/oneroster`, `imsglobal/lti-1-3-php-library` y `packbackbooks/lti-1-3-php-library`, los tres **404**, que se anotan como *«no verificado en Packagist bajo ese nombre»* y **no** como inexistentes. ⚠️ **Acción pendiente que el pase 37 tiene asignada: este archivo nunca pasó por el control de *slugs* distintos ni por el de *backlink*** — los dos que en `agents/top.md` encontraron **un duplicado** y **dos colisiones** este mismo pase.
 > **Pase 11 del 2026-10-01:** aparece una licencia que las diez pasadas anteriores filtraban sin saberlo — **ECL-2.0**, con la que licencia todo Apereo (Sakai, Opencast, OpenLRW). Es Apache-2.0 con el alcance de patentes acotado, aprobada por OSI y FSF, y **es apta para construir arriba**. Ver la capa de analítica institucional, abajo.
+
+## 🟢 7 altas fundacionales de un golpe, y es una CAPA entera que este estante no tenía: la psicometría computacional del aprendizaje, de un laboratorio con nombre y dirección (pase 87 del 2026-10-04)
+
+### 🔴 El hueco que este estante tenía, y era el más caro de todos
+
+Este estante sabía inventariar **plataformas** (LMS, SIS, ERP educativo), **conectores** (*rostering*, xAPI,
+OneRoster, Ed-Fi) y **servidores MCP**. Lo que no tenía —en 86 pases— era la capa que está **debajo de
+cualquier promesa de «aprendizaje personalizado»**:
+
+- **¿Cómo se estima qué sabe un alumno?** → *knowledge tracing*
+- **¿Cómo se diagnostica en qué concepto falla?** → *cognitive diagnosis* (IRT, MIRT, DINA)
+- **¿Cómo se elige el próximo ítem para medir con menos preguntas?** → *computerized adaptive testing*
+- **¿Con qué datos se entrena y evalúa todo eso?** → datasets educativos normalizados
+
+Sin esa capa, «tutor adaptativo» es una promesa de prosa. **Ningún LMS de este árbol la trae**: Moodle,
+Canvas, Open edX y OpenEduCat gestionan cursos, no estiman rasgos latentes. Este pase la pone, y la pone
+completa, de **un solo origen institucional**.
+
+### 🟢 La procedencia, medida de primera mano (y es lo que cierra el hueco de APAC)
+
+`P135` de esta base prohíbe inferir región de un antropónimo, y este pase **no la infiere**. La declara con
+**tres lecturas de primera mano de la propia organización**:
+
+| Señal | Valor leído |
+|---|---|
+| Nombre del `org` | **BigData Lab @USTC** · `中科大大数据实验室` |
+| Bio del `org` | `中国科学技术大学大数据实验室` — Laboratorio de Big Data de la **Universidad de Ciencia y Tecnología de China** |
+| Sitio declarado | `http://bigdata.ustc.edu.cn/index.html` |
+| Ubicación declarada | **`Hefei 合肥`** (Anhui, China) |
+| Tamaño | 73 repositorios públicos · 354 seguidores |
+
+⇒ **Región: APAC**, declarada desde la institución y su dominio `.ustc.edu.cn`, **no desde un nombre propio**
+(**P261**). Es el **decimoquinto** pase que este árbol declaraba «APAC sin código educativo propio en el
+inventario». **Cierra.**
+
+### 🟢 Las 8 filas, con licencia leída del PAYLOAD y release leída de la API de PyPI
+
+| Repo | Licencia (payload) | Titular (payload, verbatim) | ★ / forks | PyPI | Última release | Veredicto |
+|---|---|---|---|---|---|---|
+| [`bigdata-ustc/EduData`](https://github.com/bigdata-ustc/EduData) | 🟢 **Apache-2.0** | `Copyright [2020] [bigdata-ustc]` | 310 ★ / *no medido* | 🟢 `EduData` 0.0.18 (18 versiones) | 🔴 **2021-08-20** | 🟢 Permisivo · 🔴 estante viejo. Datasets educativos + interfaz de descarga y preproceso. **Es la puerta de entrada del resto.** |
+| [`bigdata-ustc/EduKTM`](https://github.com/bigdata-ustc/EduKTM) | 🟢 **Apache-2.0** | 🔴 *sin línea de titular en el árbol leído* | 265 ★ / 70 forks | 🟢 `EduKTM` 0.0.10 (10 versiones) | 🔴 **2022-05-18** | 🟢 *Model Zoo* de **trazado de conocimiento**. Cita «A Survey of Knowledge Tracing» (Liu et al., 2021, `arXiv:2105.15106`). |
+| [`bigdata-ustc/EduCDM`](https://github.com/bigdata-ustc/EduCDM) | 🟢 **Apache-2.0** | `Copyright [2020] [bigdata-ustc]` | 197 ★ / *no medido* | 🟢 `EduCDM` 1.0.1 (13 versiones) | 🟢 **2024-10-25** | 🟢🟢 **La más vigente del conjunto y la única con release de 2024 en serie larga.** *Model Zoo* de **diagnóstico cognitivo**: IRT, MIRT, DINA y variantes neuronales. |
+| [`bigdata-ustc/EduCAT`](https://github.com/bigdata-ustc/EduCAT) | 🟢 **MIT** | ⚠️ `Copyright (c) 2019 tswsxk` — **INDIVIDUO, no la institución** | 76 ★ / 32 forks | 🟢 `EduCAT` 0.0.1 (**1 sola versión**) | 2024-01-24 | 🟢 **Testing adaptativo computarizado** (CAT). Cita «Survey of Computerized Adaptive Testing» (`arXiv:2404.00712`). ⚠️ Una sola release publicada. |
+| [`bigdata-ustc/EduNLP`](https://github.com/bigdata-ustc/EduNLP) | 🟢 **Apache-2.0** | README se declara *«commercial open-source software, released under the Apache-2.0 license»* | 64 ★ / 20 forks | 🟢 `EduNLP` 0.0.9 (9 versiones) | 🔴 **2022-11-14** | 🟢 NLP sobre **ítems educativos multimodales** (enunciados con fórmula, figura y texto). `pip install EduNLP[full]`. |
+| [`bigdata-ustc/EduSim`](https://github.com/bigdata-ustc/EduSim) | 🟢 **MIT** | ⚠️ **fork de `tswsxk/EduSim`** — el árbol upstream es de un individuo | 29 ★ / 13 forks | 🟢 `EduSim` 0.0.2 (2 versiones) | 🔴 **2019-11-29** | ⚠️ Simulador de entornos para **recomendadores educativos**, con interacción secuencial con el alumno. **Release de 2019: se usa como referencia, no como dependencia.** |
+| [`bigdata-ustc/EduRec`](https://github.com/bigdata-ustc/EduRec) | 🟢 **MIT** | 🔴 *no medido* | 4 ★ / 2 forks | 🔴 **NO publicado** (`404` calibrado) | — | ⚠️ Recomendación educativa. Tiene estructura real (`setup.py`, `pytest.ini`, `Makefile`, `examples/`), pero **4 ★ y sin paquete**: es semilla. |
+| [`bigdata-ustc/EduX`](https://github.com/bigdata-ustc/EduX) | 🔴 **SIN LICENCIA** | — | 11 ★ / 5 forks | 🔴 **NO publicado** (`404` calibrado) | — | 🔴 **AFUERA.** Es el **paraguas** que indexa a los demás y es justamente el único sin cesión. Se cita como mapa, **no se construye encima**. |
+
+**Recuento, para que no haya que contarlo:** **8 repos medidos · 7 con licencia permisiva (4 Apache-2.0 +
+3 MIT) · 1 sin licencia · 6 publicados en PyPI · 2 ausentes de PyPI con negativo calibrado · 1 sola con
+release de 2024.**
+
+### 🔴 El defecto de cotización que esta capa trae encima, y hay que decirlo ANTES de proponerla
+
+**«Hay paquete publicado» y «hay paquete mantenido» son dos preguntas distintas, y este estante sólo venía
+haciendo la primera** (el pase 84 inventarió 9 paquetes instalables sin mirarles la fecha). Medida la fecha,
+el resultado es incómodo:
+
+- **5 de 6** paquetes publicados tienen su última release **entre 2019 y 2022**.
+- **1 de 6** (`EduCDM`) está vigente, con 13 versiones y release de **2024-10-25**.
+- La mediana de antigüedad del estante publicado es de **~4 años**.
+
+⇒ **La recomendación no es «instalar la familia»**, es: **`EduCDM` como dependencia; el resto, VENDORIZADO**
+(copia del algoritmo dentro del proyecto, con su aviso Apache/MIT) y con los tests propios encima. Apache-2.0
+y MIT lo permiten sin fricción. Lo que **no** conviene es pinnear `EduData==0.0.18` en un proyecto de cliente
+y descubrir en integración que el loader de datasets apunta a URLs de 2021 (**P260**).
+
+### 🔴 Y el hallazgo de TITULAR, que es el que aparece en la mesa de contrato
+
+Dentro de **un mismo `org` institucional**, el titular del copyright **no es uniforme**:
+
+- `EduData`, `EduCDM` → `Copyright [2020] [bigdata-ustc]` (la **organización**)
+- `EduCAT` → `Copyright (c) 2019 tswsxk` (un **individuo**)
+- `EduSim` → **fork** de `tswsxk/EduSim` (el árbol original es del **individuo**)
+
+⇒ **2 de las 8 piezas no las tiene la institución.** Para un *engagement* con cesión explícita o auditoría de
+procedencia, **a quién se le pide la cesión cambia según la pieza**, y el `org` no lo dice: hay que leer el
+`LICENSE` de cada árbol. Esta base ya había pagado esta lección en el pase 85 (**P255**, el titular leído del
+payload y no de una insignia); acá se repite **dentro de un solo propietario aparente**.
+
+### ⚠️ Lo que este pase NO midió de estas filas, declarado en vez de rellenado
+
+- **Forks de `EduData` y `EduCDM`**: no medidos. Se dejan como *no medido* y no se estiman.
+- **Fecha del último commit**: ninguna de las 8 la expuso por el canal usado. **La vigencia de este pase se
+  afirma sobre la fecha de RELEASE de PyPI, que sí es de primera mano, no sobre actividad de repo.**
+- **Titular de `EduKTM`, `EduNLP`, `EduRec`**: sin línea de copyright localizada en la lectura hecha. La
+  licencia sí está medida; el titular **no**.
+- **`EduX` no se re-midió por un segundo canal**: su ausencia de licencia viene de una sola lectura.
 
 ## 🧾 Altas fundacionales: 0 — y el estante pierde un INSTRUMENTO que creía tener: sobre un árbol copyleft, el `sha256` del `LICENSE` no identifica NADA (pase 85 del 2026-10-04)
 

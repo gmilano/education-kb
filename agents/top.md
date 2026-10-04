@@ -8,6 +8,7 @@ updated: 2026-10-04
 
 > Agentes y herramientas AI open source para educación. Foco: MIT / Apache 2.0 / BSD.
 > Verificado repo por repo vía WebFetch el 2026-09-30 (stars y licencia leídos de la página del repo).
+> **Pase 87 del 2026-10-04:** 🟢 **El hueco de APAC, declarado abierto QUINCE pases seguidos, CIERRA — y no cierra con una pieza sino con una CAPA DE MEDICIÓN entera, de un laboratorio con nombre: BigData Lab @USTC (`中科大大数据实验室`), Hefei.** 🟢 **8 repos `Edu*`, 6 permisivos y 6 publicados en PyPI; el detalle fundacional está en `repos/foundations.md`.** 🟢 **El alta de ESTA tabla es una sola y es de EMEA: `SwissLearningAnalytics/LLMTutor` (MPL-2.0, 0 ★ / 1 fork, Suiza, proyecto BeLEARN), y vale por lo que el pase 86 no encontró: es la PRIMERA pieza de esta base cuyo proveedor de inferencia es una ELECCIÓN DE CONFIGURACIÓN (OpenAI **u** Ollama) y no una ligadura de manifiesto — el pase 86 midió 69 filas y encontró CERO `SWAPPABLE` porque midió el MANIFIESTO, y esta liga en el PANEL DE ADMIN (**P259**).** 🔴 **Y la región de APAC se declara desde la ORGANIZACIÓN y no desde un antropónimo, que es lo que `P135` prohíbe: la bio del `org` dice `中国科学技术大学大数据实验室`, el sitio es `bigdata.ustc.edu.cn` y la ubicación declarada es `Hefei 合肥` — tres lecturas de primera mano, cero inferencia de nombre propio (**P261**).** 🔴 **Cuatro candidatas se caen por la MISMA causa y ninguna por estrellas: SIN LICENCIA.** Entre ellas la mejor del pase: `alfredang/ai-mms` (7 ★ / 3 forks), un LMS/TMS **desplegado en producción en tres países** (🇸🇬 🇲🇾 🇬🇭) de Tertiary Infotech Academy Pte. Ltd., Singapur — **APAC real, desplegado, y no reutilizable**. 🟢 **Y corrige dato de ESTA base: `alfredang/ai4kids` se publicaba con licencia `?` en `agents/trending.md` y `repos/trending.md`; medido, es SIN LICENCIA.** ⚠️ **El canal `curl` a `github.com` devolvió `403` en el 100 % de las pruebas, `tutor-mcp` incluido —una pieza que esta base sabe real—, así que todo negativo de ese canal se descartó por `P247` antes de creerle.**
 > **Pase 86 del 2026-10-04:** 🔴 **Sin altas: las cuatro búsquedas globales obligatorias volvieron al eje generalista agotado por CUARTO pase consecutivo** (devolvieron `openclaw`, `dify`, `browser-use`, `AutoGen`, `Flowise` — marcos horizontales que esta base ya tiene y que no son de la vertical). 🟢 **El aporte es un EJE NUEVO y es el que esta base reclamaba sin medir: la LIGADURA DE PROVEEDOR.** La palabra `lock-in` estaba escrita en PROSA en los ocho `.md` de este árbol y **nunca se había medido**; ahora se mide del manifiesto de runtime, repo por repo, por el canal CALIBRADO (`compose/code/p257-provider-binding/`, **37/37**). 🔴 **El resultado sobre las 69 filas recomendables: CERO `SWAPPABLE`.** Ninguna de las 69 rutea por una capa de abstracción (`litellm`, `langchain`, `@ai-sdk/*`) en su manifiesto de runtime — **36 `UNBOUND`, 21 `NO-CLAIM`, 6 `MULTI-DIRECT`, 4 `SINGLE-VENDOR`, 2 `MONOREPO-ROOT`**. 🔵 **Y la cifra que vale comercialmente sale del cruce con la capa MCP: de los 25 servidores MCP medidos, 21 (84 %) no ligan NADA — la ligadura vive en el HOST, así que construir sobre ellos no cuesta *lock-in*; los otros 4 llaman al modelo DESDE el servidor.** 🔴 **Y el instrumento falló DOS veces en su propio barrido, y las dos quedan versionadas como control negativo:** primero leyó la raíz de un monorepo (`FWU-DE/ais-chat`: `private`, cero dependencias de runtime, `turbo`) y publicó `UNBOUND` sobre un producto que **sí** liga OpenAI en `apps/api`; después el gate que lo corrigió salió **demasiado ancho** y silenció a dos `canvas-lms-mcp` cuya raíz **sí** es un paquete con cuatro dependencias reales (**P257**, **P258**). ⚠️ **Las 35 suites PREEXISTENTES de este árbol NO se corrieron: ejecución NEGADA (`[Code from External]`), igual que en los pases 58, 67, 79, 80, 81 y 84 — la columna «Hoy» del README no se afirma como medida en este pase.** 🔵 **Canal calibrado hoy, idéntico al del pase 85:** 🟢 `raw.githubusercontent.com` (200/404), `registry.npmjs.org` (200/404) y `pypi.org` (200/404) **discriminan**; 🔴 `github.com` por `curl` da **403 a la buena Y a la inexistente**, así que el `curl -sI` que el encargo ordena es, medido, el canal que no puede opinar. Ver las tendencias **667**–**674**.
 > **Pase 85 del 2026-10-04:** 🟢 **2 altas en la capa de AUTOGRADING, las dos MIT con titular leido del payload: GradeMate (`laurauguc/grading_assistant`, 1.072 B, 4 ★ / 7 forks, rubrica SUBIBLE por el docente) y `KamoliddinS/AI-Assignment-Grader` (1.077 B, 2 ★ / 2 forks, feedback por correo en PDF).** 🔴 **Y el hallazgo es sobre esta base: la pregunta del TITULAR no tenia control compartido, y TRES instrumentos daban TRES respuestas sobre el mismo payload GPL — `p184` correcto, `p198` correcto solo en GPL-3.0, `p204` incorrecto siempre** (**P255**). 🔵 **Lo destapa la primera GPL-2.0 real de esta base (`OpenEMIS/core`, alta de `verticals/solutions.md`): su linea de la FSF trae DOS anos con coma (`1989, 1991`) y el filtro de `p198` pide uno, asi que reporta a la Free Software Foundation como titular de OpenEMIS; en GPL-3.0 el ancla devuelve PROSA del cuerpo.** 🟢 **Arreglado como `holder_of` en `lib/license_family.sh`, 13/13, y `p204` lo consume: 2 filas de dato corregidas, cero deriva en bytes y `sha256`.** 🔴 **Y el instrumento nuevo fallo su primera prueba en el BARRIDO y no en la suite: exigia un ano y oculto el titular de `katoj65/emis` —`Jonathan Reinink`, autor de Inertia.js, sobre el EMIS del ministerio de Uganda—, que es un `HOLDER-UNRELATED` de libro; corregido a prueba por NOMBRE, 11/11 → 13/13.** ⚠️ **Las cuatro busquedas globales volvieron al eje generalista agotado por TERCER pase consecutivo y el barrido regional se agota por DECIMOCUARTA vez.** 🟢 **36 suites verdes / 0 rojas · 62/62 frontmatter.** Ver las tendencias **659**–**666**.
 > **Pase 82 del 2026-10-04:** 🟢 **El catalogo NO estaba muerto: 66 de 69 `org/repo` de este archivo estan VIVOS (95,7 %), medidos por un canal CALIBRADO.** El pase 81 concluyo *«100 % muerto»* desde `curl -sI` a `github.com`; este pase calibro cada canal contra una URL buena Y una inexistente antes de creerle, y el resultado es que **tres canales no discriminan** (`github.com` por `HEAD` y por `GET`, y `api.github.com`: **403 a la buena y 403 a la inexistente**) mientras **`raw.githubusercontent.com` + ref `HEAD` da 200 a la buena y 404 a la inexistente**. 🔵 **Ese canal lo tiene esta base desde el pase 64, en `p170`: el pase 81 declaro el catalogo inverificable teniendo el instrumento a 17 pases de distancia** → de ahi sale **`P249`**, la compuerta de calibracion, ahora como codigo con **20/20**. 🟢 **Reparto medido: 43 `LICENSED` · 23 `UNLICENSED` (ausencia MEDIDA) · 3 `UNREACHABLE`, y CERO deriva en los 58 slugs que comparte con el resultado del pase 64** — un canal que reproduce exactamente otra medicion no es el que estaba roto. 🟢 **Las suites de `compose/code/` CORREN por primera vez en cuatro pases** (32 invocaciones, `Python 3.11.15`): **31 verdes y 1 roja**, y la roja tenia razon → **`P248`**, el normalizador de `check_frontmatter.py` hacia `strip()` ANTES de validar, asi que `region: APAC ` —la variante con espacio que su propio control negativo exige rechazar— era **indetectable por construccion**; corregido, **22/23 → 23/23**, y el barrido real sigue en **57/57**. 🟢 **El alta es el PADRE que esta base nunca inventario: `r-huijts/canvas-mcp` (MIT, 12 ★ / 8 forks, 69 tools leidas del payload), con CERO coincidencias en los 57 `.md` de una base que cita 18 de sus derivados.** 🔴 **Y el eje nuevo es el que esta KB de verdad pregunta: `UNCLASSIFIED` y «uso comercial PROHIBIDO» eran la MISMA cadena** — ahora se preguntan aparte (**`P250`**, libreria compartida de **18/18 → 41/41**), con **42 `OK` · 1 `PROHIBIDO` · 26 `SIN-DETERMINAR`** sobre las 69 filas. ⚠️ **El detector fallo su primera prueba real y se corrigio en el mismo pase: marcaba `PROHIBIDO` a tres repos AGPL-3.0 y a The Unlicense**, porque el cuerpo de AGPL dice *«occasionally and noncommercially»* (seccion 6) y The Unlicense **concede** con *«commercial or non-commercial»* — la falta de solidez que **`P171`** nombra; la compuerta es que **una familia OSI identificada no se somete a ningun token**.
@@ -250,6 +251,73 @@ updated: 2026-10-04
 > fila** —`lineage-skill`, con un vocabulario cerrado de 9 valores por afirmación, **4 de los 9 «esto lo produjo el
 > modelo»**— y **ninguna de las dos sabe de la otra**. Ver la capa nueva al final de este archivo, las tendencias
 > **180**–**182** y el patrón **P99**.
+
+## 🟢 Altas de agente: 1, y es de EMEA — la primera pieza de esta base cuyo PROVEEDOR es una elección de configuración, que es justo lo que el pase 86 midió y no encontró (pase 87 del 2026-10-04)
+
+### 🔵 Por qué esta fila vale más que su cuenta de estrellas, y la cuenta de estrellas es CERO
+
+El pase 86 midió la **ligadura de proveedor** sobre las 69 filas recomendables de este árbol y publicó un
+resultado rotundo: **cero `SWAPPABLE`**. Ninguna ruteaba por una capa de abstracción (`litellm`, `langchain`,
+`@ai-sdk/*`) **en su manifiesto de runtime**.
+
+Este pase encuentra la pieza que explica el cero: **la ligadura no siempre vive en el manifiesto**.
+`SwissLearningAnalytics/LLMTutor` no declara `litellm` ni `langchain` en sus dependencias —así que el
+instrumento del pase 86 la habría clasificado `UNBOUND`— y sin embargo **el proveedor se elige desde el panel
+de administración**, entre `OpenAI` y `Ollama`. Es decir: **la sustituibilidad es de CONFIGURACIÓN, no de
+dependencia**, y `Ollama` como opción significa que **la inferencia puede quedarse dentro de la institución**.
+
+Eso convierte el cero del pase 86 en una **cota del instrumento** y no en una propiedad del catálogo
+(**P259**). El instrumento sigue siendo correcto en lo que mide; lo que hay que decir al lado es **qué no ve**.
+
+### 🟢 La fila, con la licencia leída del PAYLOAD
+
+| Pieza | Licencia (payload, canal calibrado) | ★ / forks | Región (declarada, no inferida) | Qué agrega a la capa |
+|---|---|---|---|---|
+| [`SwissLearningAnalytics/LLMTutor`](https://github.com/SwissLearningAnalytics/LLMTutor) | **MPL-2.0** (copyleft DÉBIL, por archivo) | 0 ★ / 1 fork | **EMEA** — Suiza (`www.learning-analytics.ch`, proyecto BeLEARN) | Tutor por **ESCENARIOS DE CASO**, autoalojable por la institución; proveedor **configurable** (`OpenAI` u `Ollama`); modos *study* / *non-study*; alta de tutores por interfaz de admin |
+
+**Lo que hay que decir antes de cotizarla**, y es de licencia: **MPL-2.0 no es MIT/Apache/BSD**. Es copyleft
+**por archivo**: Globant puede construir encima y vender el resultado, pero **todo archivo MPL que se
+modifique vuelve a salir MPL**. No contamina el resto del árbol —a diferencia de GPL/AGPL— así que
+**sí es cotizable**, con la obligación de devolución delimitada a los archivos tocados. Esta base ya había
+fijado la distinción en el pase 82: **copyleft ≠ uso comercial PROHIBIDO**.
+
+**Y la cota de madurez, por delante:** **0 ★ / 1 fork**. Es código de un proyecto de investigación
+(`BeLEARN`, sobre cómo los LLM apoyan el aprendizaje en cursos metodológicos como estadística), no un producto
+con comunidad. Se propone como **arranque de referencia para un piloto institucional**, no como base de
+plataforma.
+
+### 🔴 Cuatro candidatas medidas que NO son fila, y las cuatro caen por lo MISMO: sin licencia
+
+Ninguna cae por estrellas. **Las cuatro caen porque no hay cesión**: sin archivo de licencia, el
+código es «todos los derechos reservados» y **no se puede construir encima**.
+
+| Candidata | Licencia (medida) | ★ / forks | Región | Por qué no entra |
+|---|---|---|---|---|
+| [`alfredang/ai-mms`](https://github.com/alfredang/ai-mms) | 🔴 **SIN LICENCIA** (`/blob/main/LICENSE` → `404`, y ausente del listado del repo) | 7 ★ / 3 forks | **APAC** — Singapur (Tertiary Infotech Academy Pte. Ltd.) | **La mejor candidata del pase, y la más dolorosa**: LMS/TMS de formación financiada, **desplegado en producción** en `tertiarycourses.com.sg`, `.com.my` y `.com.gh` (🇸🇬 🇲🇾 🇬🇭) con un solo código base por sede. **APAC real, desplegado, y no reutilizable.** |
+| [`alfredang/ai4kids`](https://github.com/alfredang/ai4kids) | 🔴 **SIN LICENCIA** (medido) | 1 ★ / 1 fork | **APAC** — Singapur (mismo titular) | **Corrige dato de esta base**: se publicaba con licencia `?` en `agents/trending.md` y `repos/trending.md`. Ya no es `?`: es **ausencia medida**. |
+| [`Vashishtha05/An-Adaptive-LLM-Based-AI-Tutor-for-Multi-Level-Learning`](https://github.com/Vashishtha05/An-Adaptive-LLM-Based-AI-Tutor-for-Multi-Level-Learning) | 🔴 **SIN LICENCIA** | 0 ★ / 0 forks | 🔴 **sin región declarable** (sólo antropónimo ⇒ `P135` prohíbe inferir) | Proyecto de estudiante: Flask + OpenRouter, notebook de investigación junto a la app, sin releases ni paquete. |
+| [`attoyibi/lms-with-ai`](https://github.com/attoyibi/lms-with-ai) | 🔴 **SIN LICENCIA** | 1 ★ / 0 forks | 🔴 **sin región declarable** (sólo antropónimo ⇒ `P135`) | Demo Next.js con front de usuario y de admin, Figma y deploy en Vercel; 43 commits. Prototipo, no plataforma. |
+
+### 🔴 El hallazgo de capa que sale de esta tabla de rechazos, y es regional
+
+Las dos piezas de **APAC** que este pase encontró **con producto real detrás** son del **mismo titular**
+(Tertiary Infotech Academy Pte. Ltd., Singapur) y **las dos están sin licencia**. Así que el hueco de APAC
+de este archivo **no cierra por acá**: cierra por el laboratorio chino de `repos/foundations.md`, que sí cede.
+
+La forma honesta de decirlo: **APAC dejó de ser un hueco de BÚSQUEDA y pasó a ser, en la capa de producto,
+un hueco de CESIÓN.** Hay código, está desplegado, y no se puede usar. Eso es un hueco informado, no silencio.
+
+### 🔬 El canal, declarado antes de cualquier veredicto (`P247` aplicado dos veces)
+
+1. **`curl` a `github.com` → `403` en el 100 % de las pruebas.** Entre las pruebas iba
+   [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp), **una pieza que esta base ya
+   tiene inventariada como real**. Un canal que marca muerto lo que se sabe vivo **no produce negativos
+   válidos**: todos los `403` se descartaron y la verificación se hizo por `WebFetch`.
+2. **`pypi.org/project/<pkg>/` por `WebFetch` falló en 3 de 3 páginas `Edu*`** — y habría producido tres
+   «no está publicado» falsos. La calibración lo evitó: la misma llamada sobre `pypi.org/project/requests/`
+   **sí** respondió (v2.34.2), así que el canal estaba vivo y el fallo era de render. Se recontó por la **API
+   JSON** (`pypi.org/pypi/<pkg>/json`), que devolvió `200` en 6 paquetes y `{"message": "Not Found"}` en 2.
+   **Los dos negativos de PyPI de este pase son calibrados; los de `curl`/GitHub se tiraron.**
 
 ## 🟢 Altas de agente: 2 en la capa de AUTOGRADING, y el eje de LICENCIA de este archivo gana el control compartido que le faltaba desde el pase 70 (pase 85 del 2026-10-04)
 

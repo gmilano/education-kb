@@ -8,6 +8,57 @@ updated: 2026-10-04
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 
+## 2026-10-04 — pase 87: el barrido de GitHub trending vuelve vacío por decimosexta vez, y el canal que rindió fue la búsqueda VERTICAL — 7 repos fundacionales de un solo laboratorio
+
+🔴 **`github trending education AI 2026` y las otras tres búsquedas globales obligatorias se corrieron (año
+CALCULADO: 2026) y devolvieron, por QUINTO pase consecutivo, el eje generalista agotado:** `OpenClaw`
+(~362k ★, MIT, 5.700+ *skills* de comunidad), `OpenHands` (~70k ★, MIT, Serie A de USD 18,8 M con
+contribuciones de AMD, Apple, Google, Amazon, Netflix y NVIDIA), `CrewAI` (MIT), `SWE-agent` (MIT, Princeton)
+y agregadores (`awesome-ai-agents-2026`, `500-AI-Agents-Projects`, `agents-radar`). **Nada de la vertical
+educativa.** Lo educativo que trajo el canal global fueron **cursos** (DeepLearning.AI, HuggingFace Agents,
+LangGraph Academy, `ai-engineering-from-scratch`), que son material de formación y **no** repos de producto.
+
+🟢 **El canal que rindió fue el vertical, y rindió como nunca en este archivo: 7 altas fundacionales de un
+solo origen institucional.**
+
+| Repo | Licencia (payload) | ★ / forks | PyPI | Última release |
+|---|---|---|---|---|
+| [`bigdata-ustc/EduData`](https://github.com/bigdata-ustc/EduData) | Apache-2.0 | 310 ★ / *n/m* | 🟢 `EduData` 0.0.18 | 🔴 2021-08-20 |
+| [`bigdata-ustc/EduKTM`](https://github.com/bigdata-ustc/EduKTM) | Apache-2.0 | 265 ★ / 70 f | 🟢 `EduKTM` 0.0.10 | 🔴 2022-05-18 |
+| [`bigdata-ustc/EduCDM`](https://github.com/bigdata-ustc/EduCDM) | Apache-2.0 | 197 ★ / *n/m* | 🟢 `EduCDM` 1.0.1 | 🟢 **2024-10-25** |
+| [`bigdata-ustc/EduCAT`](https://github.com/bigdata-ustc/EduCAT) | MIT | 76 ★ / 32 f | 🟢 `EduCAT` 0.0.1 | 2024-01-24 |
+| [`bigdata-ustc/EduNLP`](https://github.com/bigdata-ustc/EduNLP) | Apache-2.0 | 64 ★ / 20 f | 🟢 `EduNLP` 0.0.9 | 🔴 2022-11-14 |
+| [`bigdata-ustc/EduSim`](https://github.com/bigdata-ustc/EduSim) | MIT | 29 ★ / 13 f | 🟢 `EduSim` 0.0.2 | 🔴 2019-11-29 |
+| [`bigdata-ustc/EduRec`](https://github.com/bigdata-ustc/EduRec) | MIT | 4 ★ / 2 f | 🔴 ausente (`404` calibrado) | — |
+| [`bigdata-ustc/EduX`](https://github.com/bigdata-ustc/EduX) | 🔴 **sin licencia** | 11 ★ / 5 f | 🔴 ausente | — **queda afuera** |
+
+🟢 **Lo que las vuelve tendencia y no ocho filas:** son **la capa funcional completa** que esta KB venía
+prometiendo sin tener —estimar qué sabe un alumno, diagnosticar en qué falla, elegir el próximo ítem,
+simular la política— y entran **de un solo laboratorio con dirección verificable**: `BigData Lab @USTC`,
+bio `中国科学技术大学大数据实验室`, sitio `bigdata.ustc.edu.cn`, ubicación `Hefei 合肥`, 73 repos públicos.
+**Región APAC declarada por tres señales de primera mano de la organización, cero inferencia de antropónimo**
+(**P261**) ⇒ **cierra el hueco de «APAC sin código educativo propio» que este árbol declaraba desde el pase
+72**.
+
+🔴 **Y el defecto que el pase se encontró encima, que es de MÉTODO de este archivo:** este archivo venía
+publicando «paquete instalable» como señal de madurez (pase 84, 9 paquetes) **sin medir la fecha**. Medida
+por la API JSON de PyPI: **5 de 6 releases son de 2019-2022**, mediana ~4 años, y **sólo `EduCDM` está
+vigente**. ⇒ **`EduCDM` como dependencia; el resto VENDORIZADO** (**P260**). Pinnear `EduData==0.0.18` en un
+proyecto de cliente y descubrir en integración que sus *loaders* apuntan a URLs de 2021 es el fallo concreto
+que este patrón evita.
+
+🔴 **El titular no es uniforme dentro del mismo `org`:** `EduData` y `EduCDM` dicen
+`Copyright [2020] [bigdata-ustc]`, pero `EduCAT` dice `Copyright (c) 2019 tswsxk` —**un individuo**— y
+`EduSim` es **fork de `tswsxk/EduSim`**. **2 de 8 no las tiene la institución**, y eso cambia a quién se le
+pide la cesión en un contrato.
+
+⚠️ **Calibración de canal, por `P247`, y este pase la necesitó dos veces.** (1) `curl` a `github.com` dio
+**`403` en el 100 %** de las pruebas —**incluida una pieza que esta base sabe real**— ⇒ todos sus negativos
+descartados. (2) Las páginas HTML de PyPI fallaron en **3 de 3** `Edu*` y **funcionaron para `requests`**
+(v2.34.2) ⇒ fallo de render, no ausencia; **los dos `AUSENTE` de esta tabla salen de la API JSON**, que
+devolvió `{"message": "Not Found"}` literal. **Sin calibrar, este pase habría publicado seis «no está
+publicado» falsos.**
+
 ## 2026-10-04 — pase 86: el barrido de GitHub trending vuelve vacío por decimoquinta vez, y el canal que rindió fue el MANIFIESTO de lo que la base ya tenía
 
 🔴 **`github trending education AI 2026` y las otras tres búsquedas globales obligatorias se corrieron (año
@@ -6878,7 +6929,7 @@ Adyacentes que aparecieron en trending de educación AI sin que pudiéramos veri
 
 | Nombre | Licencia | Descripción | Stars |
 |--------|----------|-------------|-------|
-| [ai4kids](https://github.com/alfredang/ai4kids) | ? | 🤖 AI Kids Academy — a kids' AI learning portal (ages 4–16): gamified AI storyte | 1 |
+| [ai4kids](https://github.com/alfredang/ai4kids) | sin licencia (medido, pase 87) | 🤖 AI Kids Academy — a kids' AI learning portal (ages 4–16): gamified AI storyte | 1 |
 | [flashcards-open-source-app](https://github.com/kirill-markin/flashcards-open-source-app) | MIT | AI-powered flashcards app built for serious daily study on iOS, Android, and the | 24 |
 | [vacademy_platform](https://github.com/Vacademy-io/vacademy_platform) | AGPL-3.0 | Open source comprehensive e-learning platform with a focus on educational conten | 14 |
 | [Edyfra](https://github.com/marsley01/Edyfra) | ? | Edyfra is a modern, modular web application built primarily in TypeScript and Ja | 2 |
