@@ -9,6 +9,64 @@ updated: 2026-10-04
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 > No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
 
+## 2026-10-04 — pase 83: el padre que el pase anterior coronó no tiene UN derivado medido, y el racimo real es de otro autor
+
+### 🔴 Altas: 0. Lo que cambia es una RELACIÓN, no el inventario
+
+**Nada nuevo entró a la capa de agente este pase.** Las cuatro búsquedas globales y las cuatro
+regionales se corrieron con el año **calculado** (`2026`) y devolvieron, por duodécima vez, la capa
+genérica (OpenClaw, OpenHands, CrewAI, LangChain) y material didáctico *sobre* AI — que no es un agente
+de educación. 🔵 **Lo que rindió fue auditar la conclusión principal del pase 82, y no se sostiene.**
+
+### 🟢 La topología del cohorte Canvas-MCP, medida por tres canales
+
+Barrido sobre los **17** `org/repo` Canvas que esta base cita, con el canal **CALIBRADO** antes de
+creerle (`raw…/HEAD`: **200** a una URL buena, **404** a una inexistente; `github.com` y
+`api.github.com`: **403/403**, sin discriminación):
+
+| Clase | n | Miembros |
+|---|---|---|
+| 🟢 `DERIVATIVE-OF` **`vishalsachdev/canvas-mcp`** | **6** | `AmirF194` · `BartMassey-upstream` · `abr-Projects` · `fdis111` · `lindsay-cheng` · `sirdanielm` |
+| 🟢 `DERIVATIVE-OF` **`bruchris/canvas-lms-mcp`** | **1** | `algorithm0r` |
+| 🟢 `ORIGIN-CANDIDATE` | **6** | `vishalsachdev` · `bruchris` · `r-huijts` · `CharlieCardenasToledo` · `mtgibbs` · `xmike04` |
+| ⚠️ `UNDETERMINED` (sin licencia) | **3** | `DMontgomery40` · `imazhar101` · `owentaylor` |
+| ⚠️ `UNDETERMINED` (titular colectivo) | **1** | `ahnopologetic` |
+
+🔴 **`r-huijts/canvas-mcp`, declarado «el PADRE de la capa» por el pase 82, da `NO-CLAIM`: 0 de 16
+llevan su `LICENSE` (`sha256:ab5109aafdb8d1b0…`), 0 lo mencionan en su `README` y 0 lo apuntan en
+`package.json`.** 🔵 **Es un origen legítimo sin derivados en este cohorte; su fila se conserva, porque
+el error era la relación y no la pieza.** 🟢 **El racimo grande lleva `Copyright (c) 2025 Vishal
+Sachdev` en 7 repos, byte a byte** — y la base ya lo había medido en los pases **59**, **60** y **62**.
+
+### 🔴 La capa de paquete, medida a escala de cohorte
+
+🔴 **Los 7 del racimo `Vishal Sachdev` publican el MISMO `name` (`canvas-mcp-code-api`) y NINGUNO trae
+el campo `repository`.** 🔵 **Siete repos, un nombre, cero punteros: la resolución por paquete acá es
+INDECIDIBLE, no desviada** — la versión más fuerte de `P190` que esta base midió. 🟢 **En el racimo
+chico sí resuelve, y al origen correcto:** `algorithm0r` y `bruchris` declaran los dos `canvas-lms-mcp`
+→ `repository` `bruchris/canvas-lms-mcp`, lo que confirma el fork con **2** peticiones donde el pase 60
+usó una comparación de 10 archivos.
+
+### 🔴 Y la pregunta que el pase 82 declaró habilitada sigue sin instrumento
+
+🔴 **`docs/TOOLS.md` existe en 1 de los 17 repos** (sólo en `r-huijts/canvas-mcp`, 19.578 B); las otras
+16 dan **404**. 🔵 **La medida que produjo «69 tools» y el delta «+20» NO generaliza al cohorte**, así
+que «qué agrega cada fork» se sigue leyendo de la prosa de cada `README` — lo que `P160` desaconseja.
+🟢 **Hueco declarado con su causa medida.**
+
+### 🔴 Dos defectos de dato, cerrados
+
+- **`radhepa/Teacher-MCP`** — **CUARTA** confirmación de 404 (pases 64, 81, 82 y éste). La fila de este
+  archivo seguía diciendo `MIT ✅` a secas; **queda anotada en el lugar donde vivía el dato**, sin
+  reescribir la historia. Por **`P163`**, una acción diferida lleva número de pase: ésta llevaba cuatro.
+- **La región de `r-huijts/canvas-mcp`** — escrita de **tres** maneras por el mismo pase 82, y la que
+  quedó como dato (📍 *«EMEA (Paises Bajos)»*, en un encabezado de `repos/trending.md`) violaba el
+  **`P135`** que los otros dos archivos citan. 🆕 **`P252`**, anotado allí.
+
+🟢 **Tablero: 36 invocaciones de suite, 36 con código de salida 0** (`Python 3.11.15`). El instrumento
+nuevo es `compose/code/p251-cohort-lineage/` — **26/26**, con la afirmación literal del pase 82 como
+control negativo.
+
 ## 2026-10-04 — pase 82: las suites CORREN por primera vez en cuatro pases, y lo que destapan es que el catalogo nunca estuvo muerto — 66 de 69 vivos por el canal que esta base ya tenia
 
 ### 🟢 El desbloqueo del pase, y es el que habilita todo lo demas
@@ -9144,7 +9202,7 @@ Buscando por la pieza técnica aparecen **cinco servidores MCP independientes** 
 | https://github.com/woodstocksoftware/student-progress-tracker | MIT ✅ | 1 | 9 | Perfiles, inscripciones, resultados de evaluación, cálculo de mastery por tema, detección de learning gaps y recomendación de foco. Telemetría a nivel de pregunta |
 | https://github.com/tejpalvirk/student | MIT ✅ | 1 | 6 | Grafo de conocimiento académico (cursos, trabajos, exámenes, conceptos) con persistencia entre sesiones |
 | https://github.com/znecho9/knowledge-forest-mcp | Apache-2.0 ✅ | 0 | 3 | Árboles de prerequisitos + **mastery con evidencia obligatoria**: exige desempeño novedoso, sin asistencia y a libro cerrado antes de declarar dominio |
-| https://github.com/radhepa/Teacher-MCP | MIT ✅ | 0 | 2 | MCP-first con memoria persistente SQLite, personas docentes y andamiaje en tres niveles. Trae además un Claude Skill que funciona solo o contra el server |
+| https://github.com/radhepa/Teacher-MCP | 🔴 **CORREGIDO (pase 83): el repo NO EXISTE — la licencia no es verificable.** Esta celda decía `MIT ✅` y se conserva tachada como registro histórico: ~~MIT ✅~~. `raw:HEAD` da **404** en `LICENSE`, `README.md` y `package.json`, con el control positivo del mismo barrido en **200** (CUARTA confirmación, tras los pases 64, 81 y 82) | 0 | 2 | MCP-first con memoria persistente SQLite, personas docentes y andamiaje en tres niveles. Trae además un Claude Skill que funciona solo o contra el server. ⚠️ **Descripción conservada como registro histórico: el artefacto no es obtenible, así que no se puede proponer en una receta** |
 
 **La lectura correcta, que es una señal de mercado y no un hallazgo técnico:** cinco autores sin relación entre sí llegaron a la misma idea en la misma ventana. El patrón *"el agente consulta el estado de mastery antes de decidir qué preguntar"* **se está reinventando en paralelo**, lo cual valida que el problema es real y sentido por muchos.
 

@@ -102,6 +102,100 @@ updated: 2026-10-04
 > están mal por ~2× y **un 403 de `curl` no es un 404**. Ver la nota de método del pase 12.
 > **Pase 11:** el Digital Omnibus es derecho vigente (tendencia 25), aparece la capa predictiva y está vacía (tendencia 26), y se corrige un error de método de diez pasadas sobre licencias permisivas (tendencia 27).
 
+## 🆕 Tendencias 643–650 — pase 83 del 2026-10-04
+
+**643. 🔴 El pase 82 coronó un padre que las mediciones de los pases 59, 60 y 62 de esta misma base ya
+contradecían.** La afirmación fue *«`r-huijts/canvas-mcp`, el PADRE de la capa Canvas-MCP de esta base,
+que citaba 18 de sus derivados»*. Medido este pase sobre los **17** `org/repo` Canvas que la base cita,
+por tres canales independientes: 🔴 **CERO de los 16 llevan el `LICENSE` de `r-huijts` (`sha256:
+ab5109aafdb8d1b0…`), CERO lo mencionan en su `README`** (control corrido aparte, 0 coincidencias × 16)
+**y CERO apuntan a él en `package.json`**. 🟢 **El racimo grande es de otro: 7 repos comparten
+`sha256:5385a26e2face987` con el titular `Copyright (c) 2025 Vishal Sachdev` —y 6 de ellos son forks
+que PRESERVARON el titular—, más un racimo de 2 con `Copyright (c) 2026 Christian Bru`.** 🔵 **Y la
+base ya lo sabía: el pase 59 escribió «`abr-Projects/canvas-mcp` es fork CONFIRMADO de
+`vishalsachdev/canvas-mcp`» y «`algorithm0r/canvas-lms-mcp` es fork CONFIRMADO de
+`bruchris/canvas-lms-mcp`», y los pases 60 y 62 los midieron archivo por archivo.** La contradicción no
+fue con el mundo: fue con la propia base, tres pases después.
+
+**644. 🆕 `P251` — la paternidad no se infiere del SILENCIO PROPIO.** El razonamiento del pase 82 fue:
+*«`r-huijts` tiene CERO coincidencias en los 57 `.md` y el archivo cita 18 piezas Canvas-MCP → es el
+padre»*. 🔴 **Una ausencia en el índice propio es un hecho sobre el índice, no sobre el mundo** — y es
+el mismo defecto de instrumento que la tendencia **578** nombró para la cobertura (*«todos los barridos
+miden contra la historia propia, así que no pueden encontrar una ausencia sistemática»*), ahora
+aplicado al linaje con el signo invertido: **ahí la ausencia ocultaba una pieza; acá la ausencia
+INVENTÓ una relación.** 🟢 **Ahora es código con compuerta: `paternity_claim()` devuelve `NO-CLAIM`
+salvo que el candidato tenga al menos UN derivado MEDIDO, y no hay camino por el que una ausencia de
+menciones produzca `PARENT`.** Su control negativo es la afirmación literal del pase 82, que debe salir
+`NO-CLAIM`. **26/26** en `compose/code/p251-cohort-lineage/`.
+
+**645. ⚠️ Y la cota del instrumento nuevo se declara antes de su resultado, porque el hash invita a
+leer de más: un `LICENSE` byte a byte idéntico prueba MISMO TITULAR, no linaje.** Dos repos del mismo
+autor coinciden sin que ninguno sea fork del otro. 🟢 **Por eso el discriminador no es el hash sino el
+TITULAR contra el DUEÑO del repositorio —el eje de `P184`, usado acá como instrumento de linaje—:
+titular ≈ dueño → `ORIGIN-CANDIDATE`; titular ≈ dueño de OTRO del cohorte → `DERIVATIVE-OF`; sin
+correspondencia → `UNDETERMINED`.** 🔴 **`UNDETERMINED`, nunca `INDEPENDENT`: la ausencia de
+correspondencia no es evidencia de independencia**, y el control 4 de la suite es el par del mismo
+autor que debe salir «los dos origen, ninguno derivado».
+
+**646. 🔴 `P190` medido a escala de cohorte deja de ser «aterriza en el padre» y pasa a «no aterriza en
+ninguna parte».** El pase 82 lo midió en UN caso (`mdweaver` declaraba la identidad del padre). Medido
+en los 17: 🔴 **los 7 del racimo `Vishal Sachdev` publican el MISMO `name` —`canvas-mcp-code-api`— y
+los 7 tienen el campo `repository` AUSENTE.** 🔵 **Siete repositorios, un nombre de paquete, cero
+punteros: quien resuelva por paquete no aterriza en el padre equivocado, no aterriza en ninguno.** La
+resolución por capa de paquete en esta familia es **indecidible**, no desviada. ⚠️ **Contraste medido
+en el racimo chico: `algorithm0r` y `bruchris` publican los dos `canvas-lms-mcp` → `repository`
+`bruchris/canvas-lms-mcp`, así que ahí la capa de paquete SÍ resuelve** — y resuelve al origen
+correcto, de paso confirmando el fork con **2** peticiones en vez de la comparación de 10 archivos que
+usó el pase 60.
+
+**647. 🔴 La pregunta que el pase 82 declaró «ya se puede» sigue sin instrumento, y la causa está
+medida: `docs/TOOLS.md` existe en 1 de los 17 repos.** Ese pase midió la superficie del padre (**69
+tools**, 19.578 B) y el delta de un fork (**+20**) leyendo ese archivo del payload, y concluyó que con
+el origen inventariado ya se podía medir qué agrega cada fork. 🔴 **Barridos los 17: el archivo sólo
+está en `r-huijts/canvas-mcp`. Las otras 16 dan 404.** 🔵 **Así que la medida no generaliza al cohorte,
+y la superficie por fork se sigue leyendo de la PROSA de cada `README` —exactamente lo que `P160`
+desaconseja, porque la `description` se hereda entera y la superficie no—.** 🟢 **Queda como hueco
+DECLARADO con su causa medida, en vez de como capacidad anunciada.**
+
+**648. 🔴 Un mismo pase escribió TRES veredictos de región para el mismo repo, en tres archivos, y el
+que quedó como DATO es el que viola el principio que los otros dos citan.** Pase 82, sobre
+`r-huijts/canvas-mcp`: `agents/top.md` dice 🔴 *«Sin region verificada por fuente de primera mano. El
+titular es un antroponimo y de un antroponimo no se infiere region (**P135**); el indicio de los Paises
+Bajos no se eleva a dato»*; `intel/market.md` dice *«tiene indicio de Paises Bajos»* (matizado); y
+`repos/trending.md` lo titula 📍 **«EMEA (Paises Bajos)»**, afirmado y sin matiz. 🆕 **`P252`: una
+corrección no viaja a UN archivo, viaja a TODOS —es `P237` generalizado de los instrumentos a los
+archivos—, y el encabezado de una sección es la forma más fuerte de afirmar, no la más débil.**
+🔵 **El riesgo no es editorial: `region` es campo TIPADO del compilador, así que un antropónimo leído
+como país entra al balde `EMEA` y sesga el filtro por el que se arma una propuesta.**
+
+**649. 🟢 Las suites de este árbol corren por segundo pase consecutivo: 36 invocaciones, 36 con código
+de salida 0.** (`Python 3.11.15`; el pase 82 corrió 34.) ⚠️ **Y la única que salió roja tenía razón y
+el defecto era MÍO, no suyo:** `reproduce_p224.py` no podía leer `81e3e9a:agents/top.md` porque este
+pase clonó con `--depth 1`, y el mensaje de la propia suite nombraba el remedio
+(`git fetch --depth`). 🟢 **Hecho el fetch acotado: 3/3.** 🔵 **La lección no es sobre la suite: un
+instrumento que depende de la HISTORIA del repositorio falla por la FORMA del clon, y eso no es un
+hallazgo sobre el dato — es una precondición de entorno que conviene leer del mensaje antes de
+declararla roja.** ⚠️ **Se repite la cota de lectura del pase 82: 9 de las 36 publican su total en
+vocabularios que un contador de una sola forma no lee, así que el roll-up honesto sigue siendo el
+código de salida.** 🔴 **Y el primer roll-up de ESTE pase leyó 2 de 36 porque su glob `test_*.py` se
+expandía en el directorio equivocado: otra vez el lector, no lo leído.**
+
+🔴 **Y un TERCER defecto del mismo pase, atrapado por el linter que esta base construyó para él:** el script que insertó las notas regionales en `intel/market.md` ancló con un `find()` sin anclaje de línea, y **`### APAC` y `### LATAM` coincidieron primero DENTRO DE UNA CELDA de tabla** (*«abajo, en `### APAC`»*), de modo que las dos notas se insertaron **en el medio de la tabla de barrido regional y la partieron en dos**. 🟢 **`check_tables.py` lo marcó al instante: `P239-ORPHAN-ROW` en la fila `LATAM` y `P240-REGION-GAP` «FALTA=LATAM»** — es decir, el compilador habría leído la fila `LATAM` como ENCABEZADO y el barrido habría quedado publicado con tres regiones de cuatro, que es exactamente el par de defectos que `P239`/`P240` existen para detectar. 🔵 **Corregido antes de publicar, y el control de que quedó bien no es que el linter dé 0: es que el `git diff` de esa tabla esté VACÍO.** ⚠️ **Tres defectos de instrumento en un pase, los tres del lado del ESCRITOR o del LECTOR y ninguno del dato — y los tres atrapados por instrumentos que esta base ya tenía.**
+
+**650. 🔵 El barrido regional obligatorio se agota por DUODÉCIMA vez consecutiva.** Las cuatro regiones
+corridas con el año **calculado** (`2026`), más las cuatro búsquedas globales. **Todos los hechos
+devueltos estaban ya publicados**, confirmado con `grep` ANTES de escribir: `Vietnam` (204
+coincidencias), `Oklahoma` (144), `AB 1159` (123), `Digital Omnibus` (64), `Observatorio` de UNESCO
+(52), `Digital Education Council` (52), `CONPES` (49), `Uruguay` (45), `IMDA` (39), `Traffic Light`
+(34), `CENIA` (30), `31814` (14), `Framework Act` de Corea (13), la aplicación del AI Act del **2 de
+agosto de 2026** (7) y `AASA` (24). ⚠️ **Y las cuatro búsquedas globales devolvieron por duodécima vez
+la capa genérica** (OpenClaw, OpenHands, CrewAI, LangChain) **y material didáctico *sobre* AI, que no es
+un agente de educación**; la de verticales devolvió `OpenEduCat` (167 coincidencias ya en la base) y
+`CK-ERP` (22), **y `CK-ERP` se descarta por fecha: su anuncio más reciente localizable es de 2010.**
+🔵 **Rendimiento marginal medido CERO por duodécima vez; el canal se corre porque un cambio de régimen
+hay que verlo, no porque descubra** — y lo que rindió en este pase fue, por cuarta vez consecutiva, una
+dimensión INTERNA: la auditoría de una conclusión del pase anterior.
+
 ## 🆕 Tendencias 635–642 — pase 82 del 2026-10-04
 
 **635. 🟢 El catalogo de esta base nunca estuvo muerto, y la diferencia entre «100 % muerto» y «95,7 %

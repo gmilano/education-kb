@@ -55,6 +55,36 @@ updated: 2026-10-04
 > **LATAM:** 🔵 el hallazgo del pase — **existe una capa MCP nacional brasileña de datos públicos, activa y MIT, y
 > educación es el único dominio grande que falta** (**gap 69**).
 
+## 🔴 Duodécimo barrido regional consecutivo agotado, y el dato del pase es de PROCEDENCIA: la capa más forkeada de esta base está regionalmente SIN UBICAR (pase 83 del 2026-10-04)
+
+🔴 **Las cuatro regiones corridas con el año calculado (`2026`); los hechos devueltos estaban TODOS ya
+publicados**, confirmado con `grep` antes de escribir: `Vietnam` (**204** coincidencias), `Oklahoma`
+(**144**), `AB 1159` (**123**), `Digital Omnibus` (**64**), Observatorio de UNESCO (**52**),
+`Digital Education Council` (**52**), `CONPES` (**49**), `Uruguay` (**45**), `IMDA` (**39**),
+*Traffic Light* (**34**), `CENIA` (**30**), `AASA` (**24**), ley peruana `31814` (**14**),
+`Framework Act` de Corea (**13**) y la aplicación del AI Act del **2 de agosto de 2026** (**7**).
+🔵 **Rendimiento marginal medido CERO por duodécima vez.**
+
+🟢 **Lo que sí aporta el pase, y es una cota comercial que ninguna columna de licencia muestra: de los
+6 ORÍGENES medidos de la capa Canvas-MCP —la más forkeada de esta base— exactamente UNO tiene región
+verificada por fuente de primera mano.**
+
+| Origen medido | Región | Cómo se estableció |
+|---|---|---|
+| `vishalsachdev/canvas-mcp` | 🟢 **North America** | verificada de primera mano en el pase 56 |
+| `r-huijts/canvas-mcp` | 🔴 **sin verificar** | antropónimo; **`P135`** prohíbe inferirla, y el pase 82 la afirmó igual en un encabezado (corregido, **`P252`**) |
+| `bruchris/canvas-lms-mcp` | 🔴 **sin verificar** | titular `Christian Bru`: antropónimo |
+| `CharlieCardenasToledo/mcp-canvas-server` | 🔴 **sin verificar** | antropónimo hispanohablante; **el indicio NO se eleva a dato** |
+| `mtgibbs/canvas-lms-mcp` | 🔴 **sin verificar** | seudónimo |
+| `xmike04/canvas-student-mcp` | 🔴 **sin verificar** | seudónimo |
+| **Total** | 🔴 **1 de 6 (16,7 %)** | — |
+
+🔴 **La consecuencia es de propuesta, no de catálogo: una entrega en EMEA, APAC o LATAM que quiera
+apoyarse en esta capa no puede alegar procedencia local, porque 5 de 6 orígenes no están ubicados.**
+🔵 **Y la tentación de ubicarlos por el nombre del titular es exactamente lo que `P135` prohíbe y lo que
+el pase 82 hizo** — un antropónimo neerlandés, uno hispanohablante y dos seudónimos no son cuatro
+regiones.
+
 ## 🔴 Undecimo barrido regional consecutivo agotado, un canal institucional que pasa a PROPIEDAD, y el dato del pase es de LICENCIA por region (pase 82 del 2026-10-04)
 
 ### 🔴 `www.ceu.edu` se archiva: segunda medicion identica, asi que es propiedad del canal
@@ -1846,6 +1876,8 @@ Dónde se produce el software educativo abierto, que no es donde está la demand
 ## Opportunities by region
 
 ### North America
+
+**🟢 Pase 83 del 2026-10-04 — la región sigue siendo la ÚNICA con un origen de la capa Canvas-MCP ubicado de primera mano.** `vishalsachdev/canvas-mcp` (verificado en el pase 56) es **1 de 6** orígenes medidos con región; los otros 5 no están ubicados. 🔵 **Para una entrega en esta región eso es una ventaja concreta: es la única que puede alegar procedencia local sobre la capa de agente más forkeada de esta base.** ⚠️ **Y la pieza es el PADRE de 6 derivados medidos, no un fork**, así que el soporte y la dirección técnica están en la región. Barrido regulatorio del pase: `134` proyectos en `31` estados devueltos por el canal, **todos sobre regímenes ya publicados acá** (`AB 1159`, `SB 394` de Virginia, `SB 720` de Maryland, Oklahoma, *Traffic Light* de Nueva York, marco estudiantil de `AASA`): **cero altas**.
 
 #### Agregado en el pase 82 del 2026-10-04 — 🔴 el UNICO bloqueo de uso comercial de todo el catalogo es de esta region, y no lo pone una empresa: lo pone una oficina de transferencia tecnologica
 
@@ -3738,6 +3770,8 @@ Artículo 50(2) **no es exigible** en North America — pero es **el requisito m
 multi-región conviene cotizarlo contra el techo europeo y no contra el piso local (ver **P103** y **P105**).
 
 ### EMEA
+
+**🔴 Pase 83 del 2026-10-04 — la región PIERDE una atribución que el pase 82 le había dado, y la pierde por método.** Ese pase tituló `r-huijts/canvas-mcp` como 📍 *«EMEA (Paises Bajos)»* en `repos/trending.md` mientras `agents/top.md`, en el mismo pase, declaraba que **de un antropónimo no se infiere región** (**`P135`**). 🔴 **Corregido en el pase 83 (`P252`): EMEA no suma esta pieza.** 🔵 **No es una pérdida de inventario sino de una atribución que no existía**, y conviene decirlo así porque una propuesta que la hubiera citado habría alegado procedencia neerlandesa sobre un dato que nadie midió. ⚠️ **La asimetría de los pases 81–82 sigue en pie: el único LRS permisivo con titular público europeo (`openfun/ralph`, MIT, `France Université Numérique`) sigue clavado en xAPI 1.0.3, así que *EMEA-soberano + xAPI 2.0* no existe hoy.** Barrido regulatorio: la aplicación del AI Act arrancó el **2 de agosto de 2026** —ya publicado acá (7 coincidencias)—; **cero altas**.
 
 #### Agregado en el pase 82 del 2026-10-04 — 🔴 un defecto de instrumento estuvo a punto de descalificar justo a la capa PUBLICA de esta region, y la correccion la devuelve entera
 
@@ -5748,6 +5782,8 @@ concordantes**. El Artículo 50(2) —la obligación de transparencia del conten
 este pase dejó cubierto con código.
 
 ### APAC
+
+**🔴 Pase 83 del 2026-10-04 — cero orígenes de la capa Canvas-MCP ubicados en la región, y es una ausencia MEDIDA, no un silencio.** De los 6 orígenes medidos, ninguno resuelve a APAC; el único antecedente APAC de capa de escritura en esta base sigue siendo `toshieji/moodle-grading-mcp`, que es de Moodle y no de Canvas. 🔵 **Así que una entrega APAC sobre Canvas compone piezas de procedencia no ubicada, y eso conviene declararlo en la propuesta en vez de omitirlo.** Barrido regulatorio del pase: Corea (`Framework Act`, vigente 22-ene-2026), Vietnam (`Ley 134/2025/QH15`, vigente 1-mar-2026) y el marco de **AI agéntica** de `IMDA` de Singapur (22-ene-2026) — **los tres ya publicados acá** (`Vietnam` 204 coincidencias, `IMDA` 39, `Framework Act` 13): **cero altas**.
 #### Agregado en el pase 82 del 2026-10-04 — ⚠️ hueco DECLARADO: esta region no devolvio nada nuevo, ni de mercado ni de licencia
 
 🔵 **Se escribe explicitamente porque un hueco declarado es informacion y el silencio se lee igual que
@@ -7320,6 +7356,8 @@ desplegado + puerta MCP permisiva (`jbnu-lms-mcp`, `canvas-lms-mcp`, las cuatro 
 depende de un tercero» son el mismo argumento.**
 
 ### LATAM
+
+**⚠️ Pase 83 del 2026-10-04 — la región tiene el indicio más tentador del cohorte y el pase se NIEGA a convertirlo en dato.** `CharlieCardenasToledo/mcp-canvas-server` (MIT, origen medido, titular `Copyright (c) 2025 Charlie Cárdenas Toledo`) es un antropónimo hispanohablante, y **`P135` prohíbe inferir región de un antropónimo** — la misma regla que este pase acaba de hacer cumplir contra una atribución a EMEA. 🔵 **Se registra como candidata a ubicar con fuente de primera mano, no como pieza LATAM**, y aplicar la regla en las dos direcciones es lo que la vuelve una regla. 🟢 **Lo que la región sí tiene medido sigue siendo el patrón de credencial de `iDavi/usp-mcp` (sellado, **`P213`**), el único que resuelve el problema estructural de esa capa.** Barrido regulatorio: `CONPES` 4144, Uruguay y el Convenio Marco del Consejo de Europa, ley peruana `31814`, Observatorio de UNESCO y `CENIA` — **todos ya publicados acá**: **cero altas**.
 
 #### Agregado en el pase 82 del 2026-10-04 — ⚠️ hueco DECLARADO, y una pieza en español que NO se coloca en esta region por disciplina
 

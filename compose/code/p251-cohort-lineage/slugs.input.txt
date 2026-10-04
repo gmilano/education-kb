@@ -1,0 +1,17 @@
+r-huijts/canvas-mcp
+AmirF194/canvas-mcp
+BartMassey-upstream/canvas-mcp
+CharlieCardenasToledo/mcp-canvas-server
+DMontgomery40/mcp-canvas-lms
+abr-Projects/canvas-mcp
+ahnopologetic/canvas-lms-mcp
+algorithm0r/canvas-lms-mcp
+bruchris/canvas-lms-mcp
+fdis111/canvas-mcp
+imazhar101/mcp-canvas-server
+lindsay-cheng/canvas-mcp
+mtgibbs/canvas-lms-mcp
+owentaylor/canvas-mcp
+sirdanielm/canvas-mcp
+vishalsachdev/canvas-mcp
+xmike04/canvas-student-mcp

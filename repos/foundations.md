@@ -85,6 +85,37 @@ corre ése antes de escribir uno a mano** (tendencia **313**). 🟢 **Y el `gafa
 > **Pase 36 del 2026-10-02:** 🔵 **este pase no agrega repos: le pone FECHA a los que ya están, y la fecha cambia tres recomendaciones.** Se midió la capa PHP de evaluación y telemetría en Packagist —el único registro de los tres que entrega descargas en este entorno (`api.npmjs.org` y `pypistats.org` dan **403 a CONNECT**)— y el resultado está en `repos/trending.md`. **Lo que hay que saber antes de proponer desde este archivo:** 🔴 **la pieza xAPI más descargada de esta base, `rusticisoftware/tincan` (Apache-2.0, 6.178 desc./mes, 863.777 totales), no publica desde el 2022-11-02**, y ⚠️ **el único MIT de esa capa, `php-xapi/client`, está parado desde el 2021-03-24** con 825 desc./mes. 🔵 **La lectura es que en xAPI/PHP lo permisivo está quieto y lo vivo es copyleft**, así que la receta de telemetría se sostiene en **Ralph (MIT)** + **`lrsql` (Apache-2.0)** + **`learnmcp-xapi` (MIT)** y no en la capa PHP. 🟢 **Del lado de evaluación, lo activo es `oat-sa/extension-tao-testqti`** (**885 versiones**, release del **2026-09-30**) **y sigue siendo GPL-2.0-only**, mientras **lo permisivo es lo nuevo**: `@longsightgroup/qti3-cli` (**MIT**, 41 releases desde el 2026-05-21, último **2026-10-01**) con **cero dependencias de terceros** — sus 4 dependencias son todas `@longsightgroup/*` pinneadas a la misma versión exacta. **Su manifiesto MCP completo de 20 tools está escrito en `compose/patterns.md` (P76).** 🔴 **Y una corrección de catálogo: `oat-sa/qti-sdk` devuelve 404 en Packagist porque es el nombre del REPO — su paquete es `qtism/qtism`** (GPL-2.0-only, 218.212 descargas totales, 315 versiones). **Nombre de repo y nombre de paquete son identificadores distintos, y confundirlos produce un 404 que parece una ausencia** — pasó igual con `1edtech/oneroster`, `imsglobal/lti-1-3-php-library` y `packbackbooks/lti-1-3-php-library`, los tres **404**, que se anotan como *«no verificado en Packagist bajo ese nombre»* y **no** como inexistentes. ⚠️ **Acción pendiente que el pase 37 tiene asignada: este archivo nunca pasó por el control de *slugs* distintos ni por el de *backlink*** — los dos que en `agents/top.md` encontraron **un duplicado** y **dos colisiones** este mismo pase.
 > **Pase 11 del 2026-10-01:** aparece una licencia que las diez pasadas anteriores filtraban sin saberlo — **ECL-2.0**, con la que licencia todo Apereo (Sakai, Opencast, OpenLRW). Es Apache-2.0 con el alcance de patentes acotado, aprobada por OSI y FSF, y **es apta para construir arriba**. Ver la capa de analítica institucional, abajo.
 
+## 🧾 Altas fundacionales: 0 — y el estante gana una COTA de reutilización: 7 de sus piezas Canvas son el mismo árbol con siete dueños (pase 83 del 2026-10-04)
+
+🔴 **El dato que cambia cómo se cuenta este estante: de los 17 `org/repo` Canvas que esta base cita, 7
+comparten el `LICENSE` byte a byte (`sha256:5385a26e2face987`, titular `Copyright (c) 2025 Vishal
+Sachdev`) y son UN origen más 6 derivados.** 🔵 **Un estante que los cuenta como 7 puntos de partida
+distintos sobre-cuenta el código disponible por un factor de 7** — es **`P146`** («la unicidad se cuenta
+sobre CÓDIGO DISTINTO, no sobre repos distintos») medido ahora sobre el cohorte completo y no sobre
+pares.
+
+| Lo que el estante tiene | Lo que el estante OFRECE |
+|---|---|
+| **17** `org/repo` Canvas citados | 🔴 **6 orígenes** (`vishalsachdev`, `bruchris`, `r-huijts`, `CharlieCardenasToledo`, `mtgibbs`, `xmike04`) |
+| de ésos, **14** con licencia legible | 🟢 **6 de 6 orígenes permisivos** — MIT en los seis, medida por bloque de título |
+| **7** derivados medidos | ⚠️ **heredan el árbol del origen: no son puntos de partida independientes** |
+| **4** indeterminados | 🔴 **3 sin archivo de licencia** (`DMontgomery40` **existe** y no lo tiene: `P161`) **+ 1 con titular colectivo** (`ahnopologetic`) |
+
+🟢 **Para elegir punto de partida sobre Canvas el estante real tiene SEIS candidatos, no diecisiete, y
+los seis son MIT.** 🔵 **Y el que concentra la adopción y la dirección técnica es `vishalsachdev/canvas-mcp`,
+el único con región verificada de primera mano (North America, pase 56).**
+
+⚠️ **Cota de reutilización que no se ve en la licencia: los 7 del racimo publican el MISMO nombre de
+paquete (`canvas-mcp-code-api`) y ninguno declara `repository`**, así que **fijar una dependencia por
+nombre de paquete en esta familia no es ambiguo — es indecidible** (`P190` a escala de cohorte). 🟢 **La
+forma correcta de fijarla es por `org/repo` + commit**, que es lo que **`P150`** ya pedía por otra razón.
+
+🔴 **Y una medida que NO se puede tomar con el instrumento del pase 82: `docs/TOOLS.md` existe en 1 de
+los 17 repos**, así que la superficie comparada entre candidatos de este estante **no está medida** y se
+declara como hueco en vez de estimarse de la prosa.
+
+Instrumento, compuerta y controles en `compose/code/p251-cohort-lineage/` — **26/26**.
+
 ## 🧾 Altas fundacionales: 0 — y el estante entero pasa a tener una columna que no tenia: si Globant puede VENDER sobre cada pieza (pase 82 del 2026-10-04)
 
 🔴 **Sin altas de repo fundacional en este pase.** 🟢 **Lo que cambia es el criterio con el que se

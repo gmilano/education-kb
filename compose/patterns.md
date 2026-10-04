@@ -111,6 +111,52 @@ updated: 2026-10-04
 > **Pase 11:** +2 patrones — **P25** (riesgo de abandono conforme al Anexo III, la capa con presupuesto ya asignado y sin oferta open source) y **P26** (agente docente sobre la ontología curricular nacional ya publicada).
 > **Pase 27:** **+4 patrones y una corrección.** 🔴 **P51 queda con premisa falsa** —el conector MCP de Moodle **sí existe y es MIT**— y lo reemplazan **P54** (corrección y devolución sobre Moodle con **compuerta humana**, el último tramo del gap 6, con piezas que ya escriben), **P55** (el conector de **Open edX**, que es el único que de verdad no existe), **P56** (**SCORM** como formato de salida de la capa generativa: cero integración, offline) y **P57** (evidencia por MCP cotizada sobre lo que CaSS **realmente** expone — 6 de 61 operaciones, con insignias y autoría de marcos **fuera**).
 
+## 🧬 P251 — cómo elegir punto de partida en una familia de forks sin coronar al padre equivocado (pase 83 del 2026-10-04)
+
+**El problema real que esta receta resuelve.** Un engagement sobre Canvas LMS empieza buscando «canvas
+mcp» y encuentra **17** repositorios. Elegir mal cuesta dos cosas concretas: se parte de un **fork
+atrasado** que perdió el endurecimiento de su origen (es lo que el pase 60 midió en `abr-Projects`, que
+pierde `rubric_grade_is_confirmed`), o se fija una dependencia por **nombre de paquete** que en esta
+familia no identifica nada. 🔴 **Y el pase 82 de esta misma base demostró que el error es fácil: coronó
+como padre a un repo con CERO derivados medidos, razonando desde la ausencia de menciones en su propio
+índice.**
+
+### Los pasos, con el comando de cada uno
+
+| # | Paso | Comando / artefacto | Por qué |
+|---|---|---|---|
+| 1 | **Calibrar el canal antes de creerle un negativo** | `compose/code/p249-channel-calibration/` → `sh sweep_channels.sh` | 🔴 **`github.com` y `api.github.com` dan `403` a una URL buena Y a una inexistente**: un negativo suyo no es dato (**`P247`**, **`P249`**) |
+| 2 | **Barrer el cohorte por tres canales** | `compose/code/p251-cohort-lineage/` → `sh sweep_lineage.sh > rows.tsv` | `sha256` del `LICENSE` + titular vs dueño + `package.json`. **Se niega a correr (`exit 3`) si el canal no discrimina** |
+| 3 | **Clasificar la topología** | `python3 lineage.py rows.tsv` | `ORIGIN-CANDIDATE` / `DERIVATIVE-OF` / `UNDETERMINED`. **Nunca `INDEPENDENT`** por ausencia de correspondencia |
+| 4 | **Exigir la compuerta de paternidad** | `paternity_claim(rows, candidato)` | 🟢 **`NO-CLAIM` salvo que haya UN derivado MEDIDO.** Una ausencia de menciones NO produce `PARENT` |
+| 5 | **Fijar la dependencia por `org/repo` + commit, nunca por nombre de paquete** | `package.json` del cohorte | 🔴 **7 repos publican `canvas-mcp-code-api` y ninguno declara `repository`**: la resolución por paquete es **indecidible** (**`P190`**) |
+| 6 | **Medir el eje de seguridad en el CÓDIGO del candidato elegido, no heredarlo del origen** | `compose/code/grading-draft-gate/` (**37/37**) · `markingworkflow-read-before-write/` (**20/20**) | 🔴 **`P151`: la herencia de un fork es RELATIVA AL EJE** — «es fork de X» cierra la celda comparada y deja abiertas todas las demás |
+| 7 | **Verificar uso comercial aparte de la familia de licencia** | `compose/code/p250-commercial-use-axis/` + `lib/` (**41/41**) | **`P250`**: familia y uso comercial son **dos** preguntas, dos columnas |
+
+### Aplicada al cohorte Canvas-MCP, el resultado es una lista de SEIS y no de diecisiete
+
+| Candidato | Clase | Licencia | Región | Recomendación |
+|---|---|---|---|---|
+| 🟢 **`vishalsachdev/canvas-mcp`** | `ORIGIN` · **6 derivados medidos** | **MIT** | 🟢 **North America** (1ª mano, pase 56) | 🟢 **Punto de partida por omisión**: concentra adopción, dirección técnica y es el único origen ubicado |
+| 🟢 `bruchris/canvas-lms-mcp` | `ORIGIN` · 1 derivado | **MIT** | 🔴 sin verificar | 🟢 Alternativa viva, con registro MCP propio (`io.github.bruchris`) |
+| ⚠️ `r-huijts/canvas-mcp` | `ORIGIN` · **0 derivados** | **MIT** | 🔴 sin verificar | ⚠️ **Origen legítimo y aislado**: 69 tools documentadas, pero **nadie construyó encima**. No es el padre de esta familia |
+| ⚠️ `CharlieCardenasToledo/mcp-canvas-server` | `ORIGIN` | **MIT** | 🔴 sin verificar (**no** inferir de antropónimo, **`P135`**) | 🔴 **Publica por OMISIÓN** (`posted_grade` crudo, pase 59): exige configuración que lo neutralice |
+| ⚠️ `mtgibbs/canvas-lms-mcp` | `ORIGIN` | **MIT** | 🔴 sin verificar | ⚠️ Sin `package.json`: integración manual |
+| 🔴 `xmike04/canvas-student-mcp` | `ORIGIN` | **MIT** | 🔴 sin verificar | 🔴 **NO entregable sin consentimiento de la institución**: su mecanismo es la cookie de sesión, que elude un control institucional deliberado (**`P118`**) |
+| 🔴 `DMontgomery40/mcp-canvas-lms` | `UNDETERMINED` | 🔴 **sin archivo de licencia** | — | 🔴 **Excluido**: el repo existe, el `LICENSE` no (**`P161`**; 39 forks heredan la ausencia) |
+
+🔵 **Los 7 derivados no entran en esta tabla como candidatos: heredan el árbol de su origen.** Si uno de
+ellos trae una capacidad que hace falta, la ruta es **el commit del derivado sobre el origen**, medido en
+el eje que importa (paso 6), no adoptarlo como base.
+
+### ⚠️ Lo que esta receta NO entrega, declarado
+
+🔴 **No entrega superficie comparada entre candidatos.** `docs/TOOLS.md` —la fuente de la que el pase 82
+leyó «69 tools»— **existe en 1 de los 17 repos**, así que comparar cuántas herramientas expone cada
+candidato **exige leer su código**, y la prosa de su `README` no sirve: **`P160`** midió que la
+`description` se hereda entera y la superficie no. 🔵 **Un paso 8 honesto está sin instrumento, y esta
+receta lo dice en vez de estimarlo.**
+
 ## 🧪 P249 — la COMPUERTA DE CALIBRACIÓN: cómo no borrar un catálogo entero por creerle a un canal roto (pase 82 del 2026-10-04)
 
 **El problema concreto, y casi costó el archivo.** El **pase 81** verificó las URLs de `agents/top.md`

@@ -1,0 +1,18 @@
+slug	lic_code	lic_bytes	lic_sha16	holder	pkg_name	pkg_repo	cites
+r-huijts/canvas-mcp	200	1065	ab5109aafdb8d1b0	Copyright (c) 2024 R.Huijts	@r-huijts/canvas-mcp	r-huijts/canvas-mcp	r-huijts
+AmirF194/canvas-mcp	200	1071	5385a26e2face987	Copyright (c) 2025 Vishal Sachdev	canvas-mcp-code-api	-	bruchris,vishalsachdev
+BartMassey-upstream/canvas-mcp	200	1071	5385a26e2face987	Copyright (c) 2025 Vishal Sachdev	canvas-mcp-code-api	-	bruchris,vishalsachdev
+CharlieCardenasToledo/mcp-canvas-server	200	1081	ad9002968a48a8f2	Copyright (c) 2025 Charlie Cárdenas Toledo	@charlie.act7/canvas-mcp-server	CharlieCardenasToledo/mcp-canvas-server	-
+DMontgomery40/mcp-canvas-lms	404	0	-	-	canvas-mcp-server	DMontgomery40/mcp-canvas-lms	-
+abr-Projects/canvas-mcp	200	1071	5385a26e2face987	Copyright (c) 2025 Vishal Sachdev	canvas-mcp-code-api	-	bruchris,vishalsachdev
+ahnopologetic/canvas-lms-mcp	200	1091	830feaa6c3635dc3	Copyright (c) 2023 Canvas LMS MCP Server Contributors	-	-	-
+algorithm0r/canvas-lms-mcp	200	1070	c29329c5ef3bc011	Copyright (c) 2026 Christian Bru	canvas-lms-mcp	bruchris/canvas-lms-mcp	bruchris,vishalsachdev
+bruchris/canvas-lms-mcp	200	1070	c29329c5ef3bc011	Copyright (c) 2026 Christian Bru	canvas-lms-mcp	bruchris/canvas-lms-mcp	bruchris,vishalsachdev
+fdis111/canvas-mcp	200	1071	5385a26e2face987	Copyright (c) 2025 Vishal Sachdev	canvas-mcp-code-api	-	vishalsachdev
+imazhar101/mcp-canvas-server	404	0	-	-	-	-	-
+lindsay-cheng/canvas-mcp	200	1071	5385a26e2face987	Copyright (c) 2025 Vishal Sachdev	canvas-mcp-code-api	-	bruchris,vishalsachdev
+mtgibbs/canvas-lms-mcp	200	1064	6923a6b4bf1c8174	Copyright (c) 2025 mtgibbs	-	-	-
+owentaylor/canvas-mcp	404	0	-	-	-	-	-
+sirdanielm/canvas-mcp	200	1071	5385a26e2face987	Copyright (c) 2025 Vishal Sachdev	canvas-mcp-code-api	-	bruchris,vishalsachdev
+vishalsachdev/canvas-mcp	200	1071	5385a26e2face987	Copyright (c) 2025 Vishal Sachdev	canvas-mcp-code-api	-	bruchris,vishalsachdev
+xmike04/canvas-student-mcp	200	1064	0ca0fad6d8f518ef	Copyright (c) 2026 xmike04	canvas-student-mcp	xmike04/canvas-student-mcp	vishalsachdev

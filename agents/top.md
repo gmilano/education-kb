@@ -249,6 +249,107 @@ updated: 2026-10-04
 > modelo»**— y **ninguna de las dos sabe de la otra**. Ver la capa nueva al final de este archivo, las tendencias
 > **180**–**182** y el patrón **P99**.
 
+## 🔴 El padre que el pase 82 coronó no tiene UN derivado en este cohorte, y la base ya lo sabía desde el pase 59 (pase 83 del 2026-10-04)
+
+**Altas de agente: 0.** El presupuesto se gastó en auditar la conclusión principal del pase anterior, y
+la conclusión **no se sostiene**.
+
+🔴 **La afirmación del pase 82:** *«`r-huijts/canvas-mcp`, el PADRE de la capa Canvas-MCP de esta base,
+que citaba 18 de sus derivados y CERO veces a él»*, con la acción declarada *«con el padre dentro ya se
+puede medir qué agrega cada fork»*.
+
+🟢 **Medido este pase sobre los 17 `org/repo` Canvas que esta base cita, por TRES canales
+independientes** (`sha256` del `LICENSE`, titular contra dueño, y `package.json`), **con el canal
+CALIBRADO antes de creerle** (`raw.githubusercontent.com` + ref `HEAD`: **200** a una URL buena y
+**404** a una inexistente; `github.com` y `api.github.com` dieron **403/403**, sin poder de
+discriminación, igual que en el pase 82):
+
+| Canal | Resultado sobre `r-huijts/canvas-mcp` |
+|---|---|
+| `sha256` del `LICENSE` (`ab5109aafdb8d1b0…`) | 🔴 **0 de 16** lo llevan |
+| Mención en el `README` del derivado | 🔴 **0 de 16** (control corrido aparte: 0 coincidencias × 16) |
+| `package.json` → `repository` | 🔴 **0 de 16** apuntan a él |
+
+🔵 **Es un origen legítimo —titular propio, paquete propio, no es fork de nada— y tiene CERO derivados
+en el cohorte que esta base cita.** La fila de `r-huijts` **se conserva**: el error no era la pieza,
+era la relación.
+
+### 🟢 La topología REAL del cohorte, medida
+
+| Clase | n | Miembros | Evidencia |
+|---|---|---|---|
+| 🟢 **`DERIVATIVE-OF vishalsachdev/canvas-mcp`** | **6** | `AmirF194` · `BartMassey-upstream` · `abr-Projects` · `fdis111` · `lindsay-cheng` · `sirdanielm` | `LICENSE` **1.071 B**, `sha256:5385a26e2face987`, titular `Copyright (c) 2025 **Vishal Sachdev**` — **titular de un tercero PRESERVADO** |
+| 🟢 **`DERIVATIVE-OF bruchris/canvas-lms-mcp`** | **1** | `algorithm0r` | `LICENSE` **1.070 B**, `sha256:c29329c5ef3bc011`, titular `Copyright (c) 2026 **Christian Bru**`; **y su `package.json` apunta a `bruchris/canvas-lms-mcp`** |
+| 🟢 **`ORIGIN-CANDIDATE`** (titular ≈ dueño) | **6** | `vishalsachdev` · `bruchris` · `r-huijts` · `CharlieCardenasToledo` · `mtgibbs` · `xmike04` | cada uno con titular, hash y nombre de paquete PROPIOS |
+| ⚠️ **`UNDETERMINED` — sin archivo de licencia** | **3** | `DMontgomery40/mcp-canvas-lms` · `imazhar101/mcp-canvas-server` · `owentaylor/canvas-mcp` | `DMontgomery40` **existe** (`package.json` **200**) y no tiene `LICENSE`: **`P161` reconfirmado**. Los otros dos, 404 por tres canales — ya declarados |
+| ⚠️ **`UNDETERMINED` — titular sin correspondencia** | **1** | `ahnopologetic/canvas-lms-mcp` | titular COLECTIVO (`Canvas LMS MCP Server Contributors`, **2023** — anterior a `r-huijts`), no resoluble a un dueño del cohorte |
+
+**7 derivados · 6 candidatos a origen · 4 indeterminados = 17.** 🔵 **Y los 7 derivados PRESERVARON el
+titular del origen, que es el comportamiento correcto y el contrario de la falla de `P184`.**
+
+🔵 **La base ya tenía la respuesta:** el **pase 59** escribió *«`abr-Projects/canvas-mcp` es fork
+CONFIRMADO de `vishalsachdev/canvas-mcp`»* y *«`algorithm0r/canvas-lms-mcp` es fork CONFIRMADO de
+`bruchris/canvas-lms-mcp`»*; los pases **60** y **62** los midieron archivo por archivo y hasta
+publicaron los deltas de superficie por fork (`AmirF194` **+21**, `lindsay-cheng` **+1**,
+`xmike04` **+10**). 🔴 **La contradicción del pase 82 no fue con el mundo: fue con su propia base, tres
+pases después.**
+
+### ⚠️ La cota del instrumento, declarada antes de su resultado
+
+⚠️ **Un `LICENSE` byte a byte idéntico prueba MISMO TITULAR, no linaje** — dos repos del mismo autor
+coinciden sin que ninguno sea fork del otro. 🟢 **Por eso el veredicto sale del titular contra el
+DUEÑO** (el eje de **`P184`**, usado acá como instrumento de linaje), **y la ausencia de
+correspondencia sale `UNDETERMINED`, nunca `INDEPENDENT`.** Código, compuerta y **26/26** en
+`compose/code/p251-cohort-lineage/`, con la afirmación literal del pase 82 como control negativo.
+
+### 🔴 `P190` a escala de cohorte: no aterriza en el padre equivocado — no aterriza en ninguno
+
+| Capa de paquete | Medido |
+|---|---|
+| 🔴 Los **7** del racimo `Vishal Sachdev` | **el MISMO `name`: `canvas-mcp-code-api`**, y el campo `repository` **AUSENTE en los 7** |
+| 🟢 Los **2** del racimo `Christian Bru` | los dos `canvas-lms-mcp` → `repository` **`bruchris/canvas-lms-mcp`**: acá la capa de paquete **sí** resuelve, y al origen correcto |
+| 🟢 Los **4** orígenes singulares | nombre propio y `repository` propio (`@r-huijts/canvas-mcp`, `@charlie.act7/canvas-mcp-server`, `canvas-student-mcp`) |
+
+🔵 **Siete repositorios, un nombre de paquete, cero punteros: la resolución por paquete en esta familia
+es INDECIDIBLE, no desviada** — y es la versión más fuerte de `P190` que esta base midió. ⚠️ **En
+cambio el racimo chico da el detector BARATO: `algorithm0r` repite el `repository` y hasta el badge de
+CI de `bruchris`, así que el fork se confirma con 2 peticiones** donde el pase 60 usó una comparación
+de 10 archivos.
+
+### 🔴 La pregunta que el pase 82 declaró resuelta sigue sin instrumento de cohorte
+
+🔴 **`docs/TOOLS.md` —el archivo del que ese pase leyó «69 tools» y el delta «+20»— existe en 1 de los
+17 repos.** Las otras 16 dan **404**. 🔵 **La medida no generaliza, así que «qué agrega cada fork» se
+sigue contestando con la PROSA de cada `README`, que es lo que `P160` desaconseja.** 🟢 **Queda como
+hueco declarado con su causa medida, y no como capacidad anunciada.**
+
+### 🔴 Dos defectos de dato de este archivo y del árbol, cerrados en vez de re-anotados
+
+🔴 **`radhepa/Teacher-MCP` — CUARTA confirmación, y se cierra.** El pase 64 lo midió 404 por dos
+canales, el 82 sumó la tercera, y **la fila de `agents/trending.md` seguía diciendo `MIT ✅` a secas**.
+Re-medido este pase por el canal calibrado: `LICENSE` **404**, `README.md` **404**, `package.json`
+**404**, con el control positivo del mismo barrido en **200**. 🟢 **Anotada en el lugar donde vivía el
+dato**, sin reescribir la historia del archivo *append-only*. 🔵 **Por `P163`, una acción diferida
+lleva número de pase o se re-agenda para siempre: ésta llevaba cuatro.**
+
+🔴 **La región de `r-huijts/canvas-mcp` estaba escrita de TRES maneras por el MISMO pase.**
+`agents/top.md` (este archivo): *«Sin region verificada… de un antroponimo no se infiere region
+(**P135**)»*. `intel/market.md`: *«tiene indicio de Paises Bajos»*. `repos/trending.md`: 📍 **«EMEA
+(Paises Bajos)»**, en un ENCABEZADO y sin matiz. 🆕 **`P252`: una corrección no viaja a un archivo,
+viaja a TODOS** —`P237` generalizado de los instrumentos a los archivos— **y un encabezado es la forma
+más fuerte de afirmar, no la más débil.** 🔵 **`region` es campo TIPADO del compilador: un antropónimo
+leído como país entra al balde `EMEA` y sesga el filtro con el que se arma una propuesta.** Anotado en
+`repos/trending.md`.
+
+### 🟢 El tablero, re-verificado
+
+🟢 **36 invocaciones de suite, 36 con código de salida 0** (`Python 3.11.15`; el pase 82 corrió 34).
+⚠️ **La única roja tenía razón y el defecto era de este pase, no suyo:** `reproduce_p224.py` no podía
+leer `81e3e9a:agents/top.md` porque el clon se hizo con `--depth 1`, y **el mensaje de la suite
+nombraba el remedio**. Hecho el `fetch` acotado: **3/3**. 🔴 **Y el primer roll-up de este pase leyó 2
+de 36 porque su glob `test_*.py` se expandía en el directorio equivocado** — otra vez el instrumento de
+LECTURA, como en el pase 82.
+
 ## 🟢 El catalogo nunca estuvo muerto: 66 de 69 vivos por un canal CALIBRADO, y el alta es el PADRE de 18 derivados que esta base jamas inventario (pase 82 del 2026-10-04)
 
 ### 🟢 El ledger de calibracion, que es lo que al pase 81 le falto correr

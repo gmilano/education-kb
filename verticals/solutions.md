@@ -113,6 +113,31 @@ updated: 2026-10-04
 > **`qti3-pnp`**, que abren accesibilidad de evaluación como entregable auditable (**P72**). ⚠️ **Open edX cambia de
 > recomendación: proponer con presupuesto de mantenimiento (gap 70).** Ver la sección del pase 33, abajo.
 
+## 🧾 Sin verticales nuevas — el canal de plataformas devolvió lo que esta base ya tiene, y una candidata se descarta por FECHA (pase 83 del 2026-10-04)
+
+🔴 **Barrido `open source platform education ERP CRM MIT Apache` corrido con el año calculado (`2026`):
+las cinco piezas devueltas estaban las cinco ya en esta base**, confirmado con `grep` antes de escribir:
+
+| Pieza devuelta | Coincidencias ya en la base | Veredicto |
+|---|---|---|
+| `OpenEduCat` (sobre Odoo) | **167** | 🔵 ya inventariada |
+| `frappe/education` | **54** | 🔵 ya inventariada (GPL-3.0) |
+| `Odoo` | **61** | 🔵 ya inventariada |
+| `aureuserp` | **23** | 🔵 ya inventariada (MIT) |
+| **`CK-ERP`** | **22** | 🔴 **se descarta por FECHA, no por licencia**: el anuncio más reciente localizable de este proyecto es de **2010** (lista `development` de Drupal, v0.30.1 con conector para Drupal 6.17). **Una vertical de 16 años sin señal no es punto de partida** |
+
+🔵 **La lección del canal se repite y conviene no re-litigarla: en educación el open source produce
+capas de interoperabilidad, evaluación y administración, y las plataformas que existen ya están las
+cinco acá.** El crecimiento de esta KB está en **cómo se componen**, no en cuántas hay (**`P48`**,
+**`P49`**).
+
+⚠️ **Cota de método que este pase agrega al estante: `CK-ERP` ilustra que la columna de licencia no
+basta para descartar una vertical.** Un proyecto puede ser permisivo, estar archivado y seguir
+apareciendo en un canal de búsqueda; **la fecha de la última señal es una columna independiente de la
+licencia**, y es la que lo descarta. 🔵 **Es la misma forma que `P234` (una cota de adopción) y que la
+advertencia del pase 75 sobre «MIT sobre un árbol ARCHIVADO»** — tres pases distintos llegando a que
+**vitalidad y licencia son ejes separados**.
+
 ## 🧾 Sin verticales nuevas — y la capa de plataforma gana la pregunta que decide una propuesta: COPYLEFT no es lo mismo que uso comercial PROHIBIDO (pase 82 del 2026-10-04)
 
 🔴 **Cero verticales nuevas: el barrido de plataformas devolvio solo confirmacion por cuarto pase

@@ -8,9 +8,38 @@ updated: 2026-10-04
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 
+## 2026-10-04 — pase 83: el barrido de GitHub trending vuelve vacío por duodécima vez, y el valor del pase está en re-medir lo que la base ya tenía
+
+### 🔴 Altas de repo: 0 — y se declara QUÉ se buscó
+
+| Búsqueda (año **calculado** = 2026) | Resultado |
+|---|---|
+| `github trending education AI 2026` | 🔴 **material didáctico *sobre* AI**, no repos de educación: `ai-engineering-from-scratch`, *AI Engineering Hub*, *Awesome LLM*, *Agents Towards Production*, Karpathy *Zero to Hero*. **Ninguno es una pieza de la industria educativa** |
+| `top open source AI agents education 2026 github MIT` | 🔴 **la capa genérica, duodécima vez**: OpenClaw, OpenHands, CrewAI, LangChain. ⚠️ **Y dos de los nueve resultados eran agregadores SEO sin repo verificable** (`gumloop`, `munderdiffl.in`): descartados sin medirlos, y se declara |
+| `open source platform education ERP CRM MIT Apache` | 🔴 **todo ya en la base**: `OpenEduCat` (**167** coincidencias), `CK-ERP` (**22**), `frappe/education` (**54**), `aureuserp` (**23**), `Odoo` (**61**). ⚠️ **`CK-ERP` se descarta además por fecha: su anuncio más reciente localizable es de 2010** |
+| `AI education industry trends 2026` | ⚠️ **dos informes dan cifras INCOMPATIBLES para el mismo año**: USD **6,4 B** (2025) → 79,6 B (2034) al 31,35 %, contra USD **7,52 B** (2025) → **10,6 B** (2026) al 40,9 %. **Las dos son internamente consistentes y la base 2025 difiere 17 %** — no se adopta ninguna como dato |
+
+🔵 **Rendimiento marginal del canal de *trending*: CERO, por duodécima vez consecutiva.** Se corre
+porque un cambio de régimen hay que verlo, no porque descubra.
+
+### 🟢 Lo que SÍ se midió: la topología del cohorte Canvas-MCP
+
+El pase re-midió los **17** `org/repo` Canvas que esta base cita, por tres canales independientes, con
+el canal **CALIBRADO** antes de creerle. 🔴 **Resultado que corrige al pase 82: `r-huijts/canvas-mcp`,
+el alta de ese pase, tiene CERO derivados medidos en el cohorte** — 0 de 16 llevan su `LICENSE`, 0 lo
+mencionan, 0 lo apuntan en `package.json`. 🟢 **El racimo real es de `vishalsachdev/canvas-mcp` (6
+derivados, titular preservado byte a byte) más `bruchris/canvas-lms-mcp` (1).** Detalle completo en
+`agents/top.md` y en `compose/code/p251-cohort-lineage/` (**26/26**).
+
+⚠️ **Y un hueco que este pase declara en vez de anunciar resuelto:** `docs/TOOLS.md` —el archivo del
+que el pase 82 leyó la superficie— **existe en 1 de los 17 repos**, así que la medida de «qué agrega
+cada fork» **no generaliza al cohorte**.
+
 ## 2026-10-04 — pase 82: el padre de 18 derivados de Canvas-MCP entra al inventario, y el catalogo pasa de «100 % muerto» a 95,7 % vivo por un canal que esta base ya tenia
 
-### 🟢 El alta: `r-huijts/canvas-mcp` — **MIT**, **12 ★ / 8 forks**, 📍 **EMEA (Paises Bajos)**
+### 🟢 El alta: `r-huijts/canvas-mcp` — **MIT**, **12 ★ / 8 forks**, 🔴 **SIN REGIÓN VERIFICADA**
+
+> 🔴 **CORREGIDO en el pase 83 (`P252`).** Este encabezado decía 📍 *«EMEA (Paises Bajos)»*, afirmado y sin matiz, mientras `agents/top.md` —en el MISMO pase 82— decía *«Sin region verificada por fuente de primera mano: el titular es un antroponimo y de un antroponimo no se infiere region (**P135**); el indicio de los Paises Bajos no se eleva a dato»*, e `intel/market.md` lo dejaba como *«indicio»*. **Tres archivos, tres veredictos, un solo pase**, y el que quedó como DATO era el que violaba el principio que los otros dos citan. `region` es campo TIPADO del compilador, así que un antropónimo leído como país entra al balde `EMEA` y sesga el filtro con el que se arma una propuesta. **El resto de esta sección se conserva sin reescribir.**
 
 | Campo | Medido este pase | Canal |
 |---|---|---|
