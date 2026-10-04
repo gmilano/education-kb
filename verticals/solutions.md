@@ -9,6 +9,7 @@ updated: 2026-10-04
 > Plataformas verticales reales, en producción, customizables con AI.
 > Modelo: partir de algo que ya funciona y que ya tiene los datos, y agregar la capa agéntica arriba.
 > Verificado vía WebFetch el 2026-09-30; las capas del pase 11, el 2026-10-01.
+> **Pase 90 del 2026-10-04:** 🔴 **Sin verticales nuevas (tercer pase consecutivo) y el barrido de plataformas confirmó por decimosexta vez el catálogo de este archivo.** 🔴 **Pero este archivo tenía una afirmación que su propia cita no sostiene, y se corrige acá: el pase 86 escribió «las plataformas no ligan proveedor de modelo … (`P257`, 0 de 69 con capa de abstracción)».** El README de `P257` dice textualmente que su denominador son *«las 69 filas recomendables»* — **filas de AGENTE, cero plataformas.** Una afirmación sobre la capa de PLATAFORMA citando una medición de la capa de AGENTE es un desajuste de denominador por capa (**P271**, la versión por capa de `P228`). 🟢 **Medida la capa correcta —8 plataformas, manifiesto de runtime por el canal calibrado—, la dirección se sostiene para 6 de 8, pero Moodle es el CONTRAEJEMPLO y es el que más importa: su núcleo trae una ABSTRACCIÓN DE PROVEEDOR con 7 proveedores intercambiables** (`openai`, `azureai`, `ollama`, `deepseek`, `gemini`, `awsbedrock`, `anthropic`), que es exactamente la clase `SWAPPABLE` de la que `P257` reportó **CERO** en 69 filas. 🔵 **Así que el cero de `P257` no era un hecho de la industria: era una cota de su denominador.** 🔴 **Y la licencia de esta capa, leída del payload 8 de 8: GPL-3.0-or-later, AGPL-3.0 ×2, GPL-3.0 ×4, LGPL-3.0 ×1 — COPYLEFT 8 de 8, CERO permisivas**, con AGPL (alcance en RED) en las dos plataformas más grandes. Ver la sección nueva de abajo e [`compose/code/p269-provider-release-matrix/`](../compose/code/p269-provider-release-matrix/).
 > **Pase 89 del 2026-10-04:** 🔴 **Sin verticales nuevas por segundo pase consecutivo: el barrido obligatorio devolvió las ocho que ya están en este archivo o en `repos/foundations.md`, verificado por `grep`.** 🟢 **Lo que trajo nuevo es de PRODUCTO, no de catálogo, y refuerza al vertical que este archivo ya encabeza: `OpenEduCat` declara hoy **300 módulos, 65 idiomas y 45 localizaciones**, construido sobre el framework de Odoo (ORM, web framework, motor de reportes y modelo de seguridad), con SIS y módulo CRM propios en la edición Community.** 🔵 **Que esté construido sobre Odoo es exactamente el modelo de este archivo —partir de algo que ya funciona y que ya tiene los datos— y las 45 localizaciones son el argumento regional más concreto que el estante tiene: un despliegue LATAM o APAC no arranca de cero en fiscalidad ni en idioma.**
 > 🔴 **Y la advertencia de método que este pase le agrega a la hora de comparar verticales: `P268` midió que un conteo de capacidades tiene SUPERFICIE.** Las cifras de arriba vienen del **sitio del proyecto**, no de su árbol ni de su manifiesto; el upstream de Canvas, medido el mismo día, publica **102** herramientas en su `description` y **103** en su README. 🔵 **Así que «300 módulos» sirve para dimensionar y NO para comparar contra el conteo de otro vertical leído de otra superficie.** Ver [`compose/code/p268-capability-surface/`](../compose/code/p268-capability-surface/), **25/25**.
 > **Pase 88 del 2026-10-04:** 🔴 **Sin verticales nuevas: el barrido obligatorio de plataformas (`open source platform education ERP CRM student information system MIT Apache 2026`) devolvió `OpenEduCat`, `ERPNext`/`frappe-education`, `Apache OFBiz`, `OpenSIS`, `Moodle`, `Open edX`, `Kolibri` e `INGInious` — las ocho ya están en este archivo o en `repos/foundations.md`, verificado por `grep`.** 🟢 **Pero el pase le da a este archivo el argumento de demanda que le faltaba, y es fuerte: `P262` midió que de los 4 mandatos curriculares de IA VIGENTES en el mundo (UAE nacional, Pekín provincial, India Clases 3-8 nacional, CABA ciudad), los 4 entregan el contenido **INTEGRADO en materias que ya existen** y CERO piden una asignatura propia.** 🔵 **La UAE lo escribe literal —integrado en *Computing, Design and Innovation*, «without extending instructional hours»—, India también —«interwoven into existing subjects»— y Pekín permite las dos formas.**
@@ -118,6 +119,92 @@ updated: 2026-10-04
 > versiones), así que lo permisivo (`qti3-*`, `instructure/qti`) es **lo único proponible** — con **`qti3-a11y`** y
 > **`qti3-pnp`**, que abren accesibilidad de evaluación como entregable auditable (**P72**). ⚠️ **Open edX cambia de
 > recomendación: proponer con presupuesto de mantenimiento (gap 70).** Ver la sección del pase 33, abajo.
+
+## 🔌 El eje de proveedor baja a la capa de PLATAFORMA, y el «cero» del pase 86 resulta ser una cota de denominador (pase 90 del 2026-10-04)
+
+### 🔴 La afirmación de este archivo que su propia cita no sostenía
+
+El pase 86 dejó escrito, en el encabezado de este archivo:
+
+> 🟢 *«Y la vertical gana un eje cotizable del pase: las plataformas no ligan proveedor de modelo —
+> la ligadura aparece recién en la capa agéntica de arriba, y ahí está medida pieza por pieza»*
+> (`P257`, 0 de 69 con capa de abstracción).
+
+**El problema no es la dirección de la frase: es la cita.** El README de `P257` dice, textualmente,
+qué midió:
+
+> `## Lo medido sobre las 69 filas recomendables (el catálogo que fijó `p250`)`
+
+Esas 69 son **filas de agente** —`canvas-mcp`, `moodle-mcp`, `tutor-mcp`, detectores, benchmarks—.
+**Plataformas en ese denominador: CERO.** `moodle/moodle` no está; lo que está son forks de
+`moodle-mcp`, que son clientes de Moodle y no Moodle.
+
+🔵 **La regla que esto deja, y es permanente: una afirmación sobre la capa A no puede citar una
+medición cuyo denominador es la capa B** (**P271**). Es la versión por capa de `P228`, que ya
+prohibía ordenar una cuota en usuarios contra una en instituciones.
+
+### 🟢 Medida la capa correcta: 8 plataformas, y Moodle es el contraejemplo
+
+| plataforma | manifiesto leído | veredicto en el eje de proveedor |
+|---|---|---|
+| `moodle/moodle` | subplugins `aiprovider` del núcleo | 🟢 **`ABSTRACCION-EN-NUCLEO` — 7 proveedores** |
+| `openedx/edx-platform` | `requirements/edx/base.txt` | `SIN-PROVEEDOR-DE-MODELO` |
+| `instructure/canvas-lms` | `Gemfile` | `SIN-PROVEEDOR-DE-MODELO` |
+| `chamilo/chamilo-lms` | `composer.json` | `SIN-PROVEEDOR-DE-MODELO` |
+| `ILIAS-eLearning/ILIAS` | `composer.json` | `SIN-PROVEEDOR-DE-MODELO` |
+| `frappe/education` | `pyproject.toml` | `SIN-PROVEEDOR-DE-MODELO` |
+| `frappe/erpnext` | `pyproject.toml` | `SIN-PROVEEDOR-DE-MODELO` |
+| `openeducat/openeducat_erp` | `requirements.txt` → **404** | ⚠️ **`NO-CLAIM`** (ruta que falla no afirma ausencia) |
+
+🔴 **Moodle trae en el NÚCLEO la clase `SWAPPABLE` de la que `P257` reportó CERO en 69 filas**:
+`openai`, `azureai`, `ollama`, `deepseek`, `gemini`, `awsbedrock`, `anthropic` — siete subplugins
+`aiprovider`, intercambiables desde el panel de administración. 🔵 **Así que el cero de `P257` no
+era un hecho de la industria sobre la vertical: era una propiedad de su denominador.** Y encaja con
+`P259` del pase 87, que ya había encontrado la primera ligadura que vive en la CONFIGURACIÓN y no en
+el manifiesto: **ésta es la misma clase, pero en el núcleo de la plataforma más instalada de la
+vertical, no en un repo de 0 ★.**
+
+### 🔴 La restricción que viaja al cliente, y hay que decirla antes de cotizar
+
+**1. El proveedor se compra con una VERSIÓN, no con una plataforma.** Medido rama por rama:
+
+| proveedor | versión mínima de Moodle que lo trae en núcleo |
+|---|---|
+| `openai`, `azureai` | ≤ **4.5** |
+| `ollama` | **5.0** |
+| `deepseek` | **5.1** |
+| `awsbedrock`, `gemini` | **5.2** |
+| `anthropic` | **5.3** |
+
+⚠️ **Un cliente en 4.5 LTS tiene dos proveedores en núcleo y ninguno de esos cuatro.** Prometer
+Gemini o Anthropic «porque Moodle tiene subsistema de AI» obliga a un salto de versión o a un plugin
+de terceros, y las dos cosas se cotizan.
+
+**2. La licencia de esta capa es COPYLEFT en 8 de 8**, leída del payload:
+
+| familia | plataformas |
+|---|---|
+| **GPL-3.0-or-later** | `moodle/moodle` |
+| **AGPL-3.0** | `openedx/edx-platform`, `instructure/canvas-lms` |
+| **GPL-3.0** | `chamilo/chamilo-lms`, `ILIAS`, `frappe/erpnext`, `frappe/education` |
+| 🔵 **LGPL-3.0** | `openeducat/openeducat_erp` |
+
+🔴 **CERO permisivas.** El foco MIT/Apache/BSD del encargo se cumple en la capa de agente; **en la
+de plataforma no hay permisiva que elegir**, así que la restricción no es de selección sino de
+entrega. 🔵 **Las dos únicas distinciones que cambian una cotización:** `openeducat_erp` es **LGPL**
+(la única cuyos términos de enlace dejan un módulo propietario al lado sin heredar), y
+`edx-platform` + `canvas-lms` son **AGPL**, cuyo alcance incluye el uso **en RED** — que es
+exactamente la forma en que se entrega un LMS.
+
+### 🧾 Y el barrido obligatorio de plataformas: confirmación por decimosexta vez
+
+`open source platform education ERP CRM MIT Apache` devolvió `OpenEduCat`, `ERPNext` /
+`frappe/education`, Moodle, Open edX, Chamilo, ILIAS — **todo ya estaba en este archivo,
+verificado**. Es una medición de la cobertura de este archivo, no un hallazgo. 🟢 **Y confirma del
+payload un dato que este archivo traía de fuente secundaria: `OpenEduCat` es LGPL-3.0**, no GPL.
+
+Instrumento, datos crudos y controles:
+[`compose/code/p269-provider-release-matrix/`](../compose/code/p269-provider-release-matrix/).
 
 ## 🧮 Una capa vertical nueva, y es la que estaba DEBAJO de todo lo que este archivo ya vendía: la psicometría computacional (pase 87 del 2026-10-04)
 

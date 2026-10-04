@@ -74,7 +74,47 @@ o la variable de entorno (regla de **P107**, pase 47):
 | ídem, el barrido de grafías sobre el árbol | ¿hay variantes de vocabulario que el detector normaliza en silencio? | `python3 measure_variants.py` | 🟢 **160** normalizadas, **0** accionables *(y el control negativo sin compuerta dio 8, los 8 falsos positivos)* |
 | **`p268-capability-surface/`** | **la SUPERFICIE de un conteo de capacidades, con el control NEGATIVO que importa: dos superficies que dicen LO MISMO no son conflicto** | `python3 test_surface.py` | 🟢 **25/25** *(nuevo en el pase 89)* |
 | ídem, el veredicto por repo | ¿se puede citar «N herramientas» sin nombrar la superficie? | `python3 surface.py` | 🔴 **0 de 3** citables · **2** repos se contradicen consigo mismos · **2** forks con claim congelado |
+| **`p269-provider-release-matrix/`** | **el eje de proveedor anclado a REF, y la capa de PLATAFORMA que `P257` nunca midió** | ⚠️ **sin suite a propósito** — ver abajo | 🔵 **6 refs × 7 proveedores = 42 celdas** · 🟢 **2→3→4→6→7** proveedores en núcleo de 4.5.15 a 5.3 |
+| ídem, la capa de plataforma | ¿alguna plataforma rutea por una abstracción de proveedor? | `sh sweep_matrix.sh` *(registrado, no ejecutado acá)* | 🟢 **1 `ABSTRACCION-EN-NUCLEO`** (Moodle, 7 proveedores) · 6 sin proveedor de modelo · ⚠️ 1 `NO-CLAIM` |
+| ídem, la licencia de esa capa | leída del payload, 8 de 8 | ídem | 🔴 **COPYLEFT 8 de 8, CERO permisivas** (GPL-3.0+ · AGPL-3.0 ×2 · GPL-3.0 ×4 · LGPL-3.0 ×1) |
 
+
+🔴 **Pase 90 del 2026-10-04 — el tablero NO se re-verificó, y la columna «Hoy» de arriba NO se
+afirma como medida en este pase.** La ejecución de código del árbol estuvo **NEGADA**
+(`[Code from External]`), igual que en los pases 58, 67, 79, 80, 81, 84 y 86. 🔵 **Las cifras que
+siguen en pie son las del pase 89 —42 invocaciones, 42 con código de salida 0— como ÚLTIMA medición,
+no como medición de hoy**, y la distinción es la que `P107` existe para mantener.
+
+🟢 **Lo que este pase sí midió, por un canal que no necesita ejecutar nada del árbol: 42 celdas de
+código HTTP sobre `raw.githubusercontent.com`, más 5 controles.** De ahí
+`p269-provider-release-matrix/`, que es el único instrumento de este árbol que **no publica `N/N` a
+propósito**: publica los cuatro `.tsv` crudos y el bucle que los produjo. Escribir un total de
+aserciones sin haber corrido la suite sería inventar la cifra.
+
+🔴 **Y lo que el pase corrige del árbol son dos cosas, las dos de denominador o de ref:** el pase 86
+escribió *«las plataformas no ligan proveedor de modelo»* citando `P257`, **cuyo denominador son 69
+filas de AGENTE y cero plataformas** (`P271`); y el eje de proveedor se citaba **sin ref**, cuando
+medido va de **2** proveedores en 4.5.15 a **7** en 5.3 (`P269`). ⚠️ **Además este pase repitió una
+trampa que el árbol ya tenía escrita desde el pase 19** —`ai/provider/bedrock` → 404, el nombre real
+es `awsbedrock`— lo que deja `P270` y vuelve a probar la lección de `P266`: **una regla puede estar en
+el árbol y seguir sin viajar.**
+
+⚠️ **Y una cifra de la tabla de arriba queda vencida por este pase, que es `P107` otra vez:** la
+celda del barrido de *frontmatter* dice **67 de 67** y este pase agregó **un** `.md` (el README del
+instrumento nuevo), así que el árbol trae **68**. 🔵 **Medido acá por un `grep` de las tres claves
+—`industry`, `region`, `updated`— sobre los 68: 68 completos, 0 incompletos, y los valores de
+`region` todos en vocabulario cerrado (`Global` ×62, `EMEA` ×4, `APAC` ×1, `North America` ×1).**
+🔴 **La celda NO se reescribe con esa cifra, a propósito:** un `grep` de tres claves no es
+`check_frontmatter.py`, que trae la lectura de `P248` y su control de siete grafías. **La cifra de
+la celda es de la suite, y la suite no corrió acá** — queda registrado el desvío de exactamente uno,
+para que el próximo pase con ejecución la remida.
+
+🔵 **Calibración del canal, antes de creerle cualquier negativo (`P249`):** 🟢
+`raw.githubusercontent.com` da **200** a la buena y **404** a la inexistente → **DISCRIMINA**. 🔴
+`curl -sI github.com` y `api.github.com` dan **403 a la buena Y a la inexistente** → **NO
+DISCRIMINAN**, tercer pase (85, 86, 90) que lo reconfirma.
+
+---
 
 🟢 **Pase 89 del 2026-10-04 — el tablero se re-verificó COMPLETO: 42 invocaciones de suite, 42 con
 código de salida 0** (`Python 3.11.15`). El total subió de **38** a **42** porque este pase agregó

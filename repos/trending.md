@@ -8,6 +8,39 @@ updated: 2026-10-04
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 
+## 2026-10-04 — pase 90: GitHub trending vuelve vacío por DECIMONOVENA vez, y el estante de plataforma se mide por licencia en vez de por estrellas
+
+🔴 **Cero altas, declarado en vez de rellenado.** `github trending education AI 2026` devolvió otra
+vez repos de **aprender sobre IA** y no de edtech: `anthropics/claude-code`,
+`jamwithai/production-agentic-rag-course`, `rohitg00/ai-engineering-from-scratch`,
+`caramaschiHG/awesome-ai-agents-2026`. **Decimonovena vez consecutiva.** La causa es la misma que el
+pase 89 dejó medida: el canal lee *«AI education»* como **educación SOBRE IA**, no como tecnología
+PARA educación, y ninguna variante de la consulta obligatoria corrige el sesgo del índice.
+
+🟢 **Lo que el pase rindió sobre este estante es una columna, no una fila: la licencia de la capa de
+plataforma, leída del PAYLOAD.** 8 de 8 de primera mano por el canal calibrado:
+
+| plataforma | archivo leído | familia |
+|---|---|---|
+| `moodle/moodle` | `main/COPYING.txt` + `public/version.php` | **GPL-3.0-or-later** |
+| `openedx/edx-platform` | `HEAD/LICENSE` | **AGPL-3.0** |
+| `instructure/canvas-lms` | `HEAD/LICENSE` | **AGPL-3.0** |
+| `chamilo/chamilo-lms` | `HEAD/LICENSE` | **GPL-3.0** |
+| `ILIAS-eLearning/ILIAS` | `HEAD/LICENSE` | **GPL-3.0** |
+| `frappe/erpnext` | `HEAD/license.txt` | **GPL-3.0** |
+| `frappe/education` | `HEAD/license.txt` (19 bytes: `License: GNU GPL V3`) | **GPL-3.0** |
+| `openeducat/openeducat_erp` | `HEAD/LICENSE` | 🔵 **LGPL-3.0** |
+
+🔴 **8 de 8 COPYLEFT, CERO permisivas.** El encargo pide foco MIT/Apache/BSD: se cumple en la capa
+de agente y **en la de plataforma no hay permisiva que elegir**.
+
+⚠️ **Y un falso positivo del barrido queda versionado porque su clase se repite:** el detector de
+tokens de proveedor marcó **`boto3`** en `openedx/edx-platform`. **`boto3` es el SDK de AWS, no un
+proveedor de modelo.** Un SDK de nube y un proveedor de modelo se parecen en la cadena y no en lo
+que ligan.
+
+Datos crudos: [`compose/code/p269-provider-release-matrix/licenses.2026-10-04.tsv`](../compose/code/p269-provider-release-matrix/licenses.2026-10-04.tsv).
+
 ## 2026-10-04 — pase 89: el barrido de GitHub trending vuelve vacío por DECIMOCTAVA vez, y este pase mide por qué el canal no puede rendir
 
 🔴 **Cero altas, declarado en vez de rellenado.** `github trending education AI 2026` devolvió, otra

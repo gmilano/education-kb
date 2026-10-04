@@ -7,6 +7,7 @@ updated: 2026-10-04
 # 📡 Tendencias — education
 
 > Ventana de investigación: septiembre 2026. Verificado 2026-09-30; el pase 11, el 2026-10-01.
+> **Pase 90 del 2026-10-04:** 🟢 **Siete tendencias nuevas, numeradas 699–705** (el pase 89 cerró en 698). 🔴 **699: el eje de proveedor de esta base no tenía REF, y sin ref no significaba nada: los proveedores en el núcleo de Moodle van de 2 a 7 entre 4.5 y 5.3, así que «la plataforma soporta X» es verdadero o falso según la versión.** 🔵 **700: el «CERO `SWAPPABLE`» del pase 86 no era un hecho de la industria sino una cota de su denominador — midió 69 filas de AGENTE y la clase que no encontró vive en el NÚCLEO de la plataforma más instalada de la vertical.** 🔴 **701: la capa de plataforma de esta vertical es COPYLEFT en 8 de 8 lecturas de payload y CERO permisivas, así que el foco MIT/Apache del encargo no es elegible en esa capa: es una restricción de entrega.** 🔴 **702: un negativo sobre una ruta que codifica un NOMBRE mide el nombre — `bedrock` 404 / `awsbedrock` 200 — y la advertencia estaba escrita en este árbol desde el pase 19 y no viajó, que es la forma exacta de P266.** 🔴 **703: toda cifra de esta base anclada a `main` tiene fecha de vencimiento: el pase 19 fijó `main` = 5.3rc1 y hoy 5.3 SALIÓ y `main` es 6.0dev.** 🔴 **704: la prosa de release notes dató mal la entrada de un proveedor (dijo 5.1 para Ollama; medido, 5.0), así que una fuente secundaria no sustituye una lectura anclada a ref.** 🔵 **705: las cuatro regiones devolvieron CERO hechos ausentes y por primera vez eso se MIDIÓ en vez de declararse —10 de 11 tokens ya en el árbol—, y el único ausente es inverificable por cinco canales bloqueados.**
 > **Pase 89 del 2026-10-04:** 🟢 **Ocho tendencias nuevas, numeradas 691–698** (el pase 88 cerró en 690). 🔴 **691: la regla que el pase 88 escribió —«la pregunta de región se muda a `lib/`»— NO se puede cumplir como estaba escrita: no hay UNA pregunta de región, hay dos, y necesitan leniencia CONTRARIA.** 🔴 **692: los dos validadores del mismo vocabulario cerrado discrepan sobre `" APAC"` y los DOS tienen razón — el veredicto depende de la SINTAXIS DEL PORTADOR, no del vocabulario.** 🔵 **693: el comportamiento endurecido detrás de un argumento NO default no viajó, viajó a medias; el contraejemplo estaba en el árbol desde el pase 82.** 🔴 **694: el módulo compartido escrito para no volver a elegir un defecto eligió uno nuevo en su primera línea, y lo encontró la matriz al ver que su columna no coincidía con la del instrumento del que salió.** 🔴 **695: un vocabulario cerrado se aplica en un portador y no en el otro: 160 celdas normalizadas en silencio, 0 accionables — el árbol está limpio y el hueco es LATENTE.** 🔴 **696: el barrido sin compuerta devolvió 8 hallazgos y los 8 eran falsos positivos de la clase exacta que el instrumento auditado ya descartaba.** 🔴 **697: el repo CANÓNICO se contradice consigo mismo —102 en la descripción, 103 en el README, misma lectura, mismo día— así que un conteo de capacidades tiene SUPERFICIE y de 3 repos medidos CERO es citable sin nombrarla.** 🔵 **698: el canal externo se agotó por DECIMOCTAVA vez y lo que rindió fue, por cuarta vez consecutiva, una dimensión INTERNA.**
 > **Pase 87 del 2026-10-04:** 🟢 **Ocho tendencias nuevas, numeradas 675–682** (el pase 86 cerró en 674). 🟢 **675: la capa que faltaba —psicometría computacional permisiva y completa de un solo laboratorio APAC— y con ella el hueco de APAC cierra a los quince pases.** 🔴 **676: «hay paquete publicado» dejó de ser señal de vigencia: 5 de 6 releases del estante nuevo son de 2019-2022.** 🔴 **677: el titular no es uniforme dentro de un mismo `org` institucional, y eso mueve la contraparte de un contrato.** 🟢 **678: aparece la primera ligadura de proveedor que vive en la CONFIGURACIÓN y no en el manifiesto, y con ella el cero del pase 86 pasa a ser cota de instrumento.** 🔴 **679: en APAC el cuello dejó de ser el código y pasó a ser la cesión —producto desplegado en tres países, sin licencia.** 🔴 **680: NA legisla mucho y capacita poco; la brecha es de 134 proyectos de ley contra 18 % de docentes con guía escrita.** 🟢 **681: LATAM es la región de mayor adopción medida del planeta en superior y la de regulación más fragmentada.** 🔵 **682: EMEA es la única región con FECHA dura de cumplimiento, y la entrada comercial de la región es deliberadamente de bajo riesgo.**
 > **Pase 86 del 2026-10-04:** 🟢 **Ocho tendencias nuevas, numeradas 667–674** (el pase 85 cerró en 666). Las ocho salen de un eje que esta base escribía en prosa en los ocho archivos y nunca había medido: la LIGADURA DE PROVEEDOR.
@@ -104,6 +105,112 @@ updated: 2026-10-04
 > (tendencia 29), se abre el **gap 20** y se registran dos advertencias de verificación: los agregadores de estrellas
 > están mal por ~2× y **un 403 de `curl` no es un 404**. Ver la nota de método del pase 12.
 > **Pase 11:** el Digital Omnibus es derecho vigente (tendencia 25), aparece la capa predictiva y está vacía (tendencia 26), y se corrige un error de método de diez pasadas sobre licencias permisivas (tendencia 27).
+
+## 🟢 Tendencias 699–705 — pase 90 del 2026-10-04
+
+> Las siete salen de una sola medición: el eje de proveedor llevado a la capa de PLATAFORMA y
+> anclado a **ref**. Instrumento, datos y controles:
+> [`compose/code/p269-provider-release-matrix/`](../compose/code/p269-provider-release-matrix/).
+
+### 🔴 699 — El eje de proveedor no tenía REF, y sin ref «la plataforma soporta X» no significa nada
+
+Esta base viene escribiendo desde el pase 18 qué proveedores trae el núcleo de Moodle. Medido rama
+por rama por el canal calibrado, **la respuesta depende de la versión y varía por un factor de 3,5**:
+
+| ref | `$release` | proveedores en núcleo |
+|---|---|---|
+| `MOODLE_405_STABLE` | 4.5.15 | **2** |
+| `MOODLE_500_STABLE` | 5.0.11 | **3** |
+| `MOODLE_501_STABLE` | 5.1.8 | **4** |
+| `MOODLE_502_STABLE` | 5.2.4 | **6** |
+| `MOODLE_503_STABLE` | 5.3 | **7** |
+| `main` | 6.0dev | **7** |
+
+Entradas: `ollama` en **5.0**, `deepseek` en **5.1**, `awsbedrock` y `gemini` en **5.2**,
+`anthropic` en **5.3**.
+
+🔵 **Por qué es tendencia y no dato suelto:** es la misma forma que `P268` encontró en los conteos de
+capacidades (*«un conteo tiene SUPERFICIE»*). Acá la superficie es la **ref**. Un conjunto de
+subplugins es propiedad del par **(repo, ref)**, y esta base lo citaba sin el segundo término
+(**P269**).
+
+### 🔵 700 — El «CERO `SWAPPABLE`» no era un hecho de la industria: era una cota del denominador
+
+El pase 86 midió la ligadura de proveedor sobre **69 filas** y encontró **0** con capa de
+abstracción; el pase 86 de `verticals/solutions.md` convirtió eso en *«las plataformas no ligan
+proveedor de modelo»*. **El README de `P257` dice que su denominador son «las 69 filas
+recomendables» — filas de AGENTE, cero plataformas.**
+
+🔴 **Medida la capa de plataforma, la clase `SWAPPABLE` existe y está en el núcleo de Moodle:**
+siete subplugins `aiprovider` intercambiables desde el panel de administración. 🔵 **De 8 plataformas
+medidas, 6 no traen proveedor de modelo en su manifiesto, 1 es `NO-CLAIM` y 1 trae la abstracción
+completa** — así que la dirección de la frase del pase 86 se sostiene para la mayoría y **su
+contraejemplo es justamente la plataforma más instalada de la vertical**. La regla: una afirmación
+sobre la capa A no puede citar una medición cuyo denominador es la capa B (**P271**).
+
+### 🔴 701 — La capa de plataforma de esta vertical es COPYLEFT 8 de 8, así que «foco MIT/Apache» no es elegible ahí
+
+Leído del payload, 8 de 8: **GPL-3.0-or-later** (`moodle`), **AGPL-3.0** (`edx-platform`,
+`canvas-lms`), **GPL-3.0** (`chamilo`, `ILIAS`, `frappe/erpnext`, `frappe/education`), **LGPL-3.0**
+(`openeducat_erp`). **Permisivas: CERO.**
+
+🔵 **La consecuencia de encuadre:** el encargo pide foco MIT/Apache/BSD, y eso es satisfacible en la
+capa de **agente** —donde esta base tiene 94 filas, mayoría permisiva— pero **no en la capa de
+plataforma, donde no hay ninguna opción permisiva que elegir.** No es una restricción de
+*selección*: es una restricción de **entrega**. Y la única distinción que mueve una cotización es
+**LGPL** (una sola fila) contra **GPL/AGPL** (siete), con **AGPL** —alcance en RED— en las dos más
+grandes, que es exactamente cómo se entrega un LMS.
+
+### 🔴 702 — Un negativo sobre una ruta que codifica un NOMBRE mide el nombre, y la advertencia ya estaba escrita
+
+Este pase probó `ai/provider/bedrock` → **404**. El nombre real es **`awsbedrock`** → **200**. Cuatro
+nombres más conjeturados (`googleai`, `mistral`, `openrouter`, `vertexai`) dieron 404 y **no** se
+publicaron como ausencia.
+
+🔴 **Lo que lo hace tendencia es que esta base ya tenía la trampa escrita, con ese mismo nombre, desde
+el pase 19** (*«`ai/provider/bedrock` → “404, no está en el núcleo”: sí está, y el nombre es
+`awsbedrock`. El 404 midió el nombre»*). 🔵 **Es la forma exacta de `P266` del pase 89: una regla
+puede estar en el árbol y seguir sin viajar** — y acá no viajó a quien repitió la medición dos meses
+después. De ahí `P270`: la lista de nombres se toma de una fuente **enumerable** o el negativo no se
+publica.
+
+### 🔴 703 — Toda cifra anclada a `main` tiene fecha de vencimiento, y ésta venció
+
+El pase 19 fijó `main` = **5.3rc1** y auditó los siete proveedores sobre ese árbol. Hoy
+`MOODLE_503_STABLE` lee `$release = '5.3'` —**5.3 salió**— y `main` lee **`6.0dev`**, rama `600`.
+
+🔵 **La cifra de siete sobrevivió el cambio** (se reprodujo por otro canal y otra ruta, lo que la
+hace más fuerte), **pero la ETIQUETA no**: cualquier lectura futura de «`main`» en este árbol apunta
+ahora a 6.0dev, que es otra cosa. Es `P107` aplicado a refs en vez de a invocaciones: **una cifra de
+cobertura se vence cuando el árbol crece, y una cifra anclada a una rama móvil se vence cuando la
+rama avanza.**
+
+### 🔴 704 — La prosa de *release notes* dató mal la entrada de un proveedor
+
+El canal de blogs de Moodle-AI afirma que **5.1** agregó soporte para proveedores adicionales *«entre
+ellos Ollama y DeepSeek»*. Medido: **`ollama` ya estaba en 5.0** (200 en `MOODLE_500_STABLE`); sólo
+`deepseek` es nuevo de 5.1.
+
+🔵 **Por qué importa más allá del detalle:** el error es de **una versión**, que es exactamente la
+magnitud que convierte una promesa de propuesta en un salto de versión no cotizado. Una fuente
+secundaria sirve para encontrar el eje; **no sustituye una lectura anclada a ref**, y el costo de la
+lectura es un código HTTP.
+
+### 🔵 705 — Las cuatro regiones devolvieron CERO hechos ausentes, y por primera vez eso se MIDIÓ
+
+Decimonoveno barrido regional. De **11** tokens de hecho que los cuatro barridos trajeron, **10 ya
+estaban en el árbol** con conteos por archivo (`AB 1159`, `SB 1227`, 134 proyectos, `PL 2.338/2023`,
+`ANPD`, Observatorio UNESCO de la UNESCO para ALC, `AI Framework Act` coreano, Reglamento (UE)
+**2026/1744**, Uruguay/Consejo de Europa, `Latam-GPT`).
+
+🔵 **La novedad de método es que la saturación dejó de ser una impresión y pasó a ser una medición:**
+antes se declaraba *«el canal se agotó»*; acá se cuenta cuántos tokens volvieron y cuántos ya
+estaban. ⚠️ **El único ausente —`Decreto 142/2026/ND-CP` de Vietnam— es inverificable desde acá:
+`loc.gov`, `iapp.org`, `lw.com`, `allenandgledhill.com` y `licentium.io` dan `EGRESS_BLOCKED`.
+Cinco canales, cinco bloqueos → se declara, no se escribe.** 🔴 **Y el barrido de APAC fusionó dos
+leyes vietnamitas en una**: la *Law on Digital Technology Industry* (vigor 2026-01-01) no es la que
+trae el marco de riesgo; ése es de la **Ley de IA N.º 134/2025/QH15** (vigor 2026-03-01), que esta
+base ya tenía.
 
 ## 🔴 Tendencias 691–698 — pase 89 del 2026-10-04
 

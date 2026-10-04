@@ -1,0 +1,10 @@
+# Licencia de la capa de plataforma, leida del PAYLOAD (no de la pagina del repo ni de politica de proyecto).
+plataforma	archivo_leido	codigo	linea_leida	familia
+moodle/moodle	main/COPYING.txt + MOODLE_503_STABLE/public/version.php	200	"GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007" + "either version 3 of the License, or (at your option) any later version"	GPL-3.0-or-later
+openedx/edx-platform	HEAD/LICENSE	200	"GNU AFFERO GENERAL PUBLIC LICENSE Version 3, 19 November 2007"	AGPL-3.0
+instructure/canvas-lms	HEAD/LICENSE	200	"GNU AFFERO GENERAL PUBLIC LICENSE Version 3, 19 November 2007"	AGPL-3.0
+chamilo/chamilo-lms	HEAD/LICENSE	200	"GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007"	GPL-3.0
+ILIAS-eLearning/ILIAS	HEAD/LICENSE	200	"GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007"	GPL-3.0
+frappe/erpnext	HEAD/license.txt	200	"GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007"	GPL-3.0
+frappe/education	HEAD/license.txt	200	"License: GNU GPL V3" (19 bytes, archivo completo)	GPL-3.0
+openeducat/openeducat_erp	HEAD/LICENSE	200	"OpenEduCat is published under the GNU LESSER GENERAL PUBLIC LICENSE, Version 3"	LGPL-3.0

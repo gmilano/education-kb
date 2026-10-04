@@ -9,6 +9,60 @@ updated: 2026-10-04
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 > No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
 
+## 2026-10-04 — pase 90: cero altas de agente, y la columna de proveedor de esta base resulta no tener REF (así que no significaba nada)
+
+🔴 **Cero altas en `agents/top.md` (sigue en 94 filas), y se declara en vez de rellenar.** El barrido
+obligatorio (`top open source AI agents education 2026 github MIT`) devolvió por **quinta vez
+consecutiva** el eje generalista: `openclaw`, `CrewAI`, `OpenHands`, `LangChain`, `AutoGPT`. Son
+marcos **horizontales**: viven en la KB de `technology` y no son de la vertical. Sumarlos acá sería
+padding con nombre propio.
+
+🟢 **Lo que el pase sí rindió, y es interno otra vez (quinta vez consecutiva): el eje de proveedor
+no tenía REF.** Esta base viene escribiendo «Moodle trae proveedor X en el núcleo» desde el pase 18,
+y medido rama por rama eso **es verdadero o falso según la versión**:
+
+| ref | `$release` | proveedores en núcleo |
+|---|---|---|
+| `MOODLE_405_STABLE` | 4.5.15 | **2** (`openai`, `azureai`) |
+| `MOODLE_500_STABLE` | 5.0.11 | **3** (+`ollama`) |
+| `MOODLE_501_STABLE` | 5.1.8 | **4** (+`deepseek`) |
+| `MOODLE_502_STABLE` | 5.2.4 | **6** (+`awsbedrock`, +`gemini`) |
+| `MOODLE_503_STABLE` | **5.3** | **7** (+`anthropic`) |
+| `main` | **6.0dev** | **7** |
+
+🔵 **La regla comercial, que es lo que viaja a una propuesta:** «¿puedo usar Anthropic / Gemini /
+Bedrock / DeepSeek en Moodle sin plugin de terceros?» no se contesta con *«sí, Moodle tiene
+subsistema de AI»* — **se contesta con una versión mínima.** Anthropic exige **5.3**; Gemini y
+Bedrock, **5.2**; DeepSeek, **5.1**. Un cliente en **4.5 LTS** tiene **dos** y ninguno de los cuatro.
+
+🟢 **Y la línea de release se movió desde el pase 19, que es la fecha en que esta base la fijó:** el
+pase 19 registró `main` = **5.3rc1**; hoy `MOODLE_503_STABLE` lee `$release = '5.3'` (5.3 **salió**) y
+`main` lee **`6.0dev`**, rama `600`. Toda cifra de esta base anclada a `main` tiene fecha de
+vencimiento, y ésta venció.
+
+🔴 **La corrección que este pase se hace a sí mismo, y es la lección:** probó
+`ai/provider/bedrock` → **404** y estuvo a punto de publicarlo como ausencia. **El nombre real es
+`awsbedrock` → 200**, y esta base **ya tenía la trampa escrita desde el pase 19** (*«el 404 midió el
+nombre»*). Otros cuatro nombres conjeturados —`googleai`, `mistral`, `openrouter`, `vertexai`—
+dieron 404 y **no** se publican como ausencia (**P270**). 🔵 **Es la forma exacta de `P266` del pase
+89: la advertencia estaba en el árbol y no viajó.**
+
+🔴 **Y una corrección a la fuente secundaria, que es por qué esto se mide y no se lee:** el canal de
+blogs de Moodle-AI dice que **5.1** «agregó soporte para proveedores adicionales, entre ellos Ollama
+y DeepSeek». Medido: **`ollama` ya estaba en 5.0** (200 en `MOODLE_500_STABLE`). Sólo `deepseek` es
+nuevo de 5.1. La prosa de *release notes* no sustituye una lectura anclada a ref.
+
+⚠️ **Las suites del árbol NO se corrieron: ejecución NEGADA (`[Code from External]`)**, igual que en
+los pases 58, 67, 79, 80, 81, 84 y 86. Por eso el instrumento nuevo de este pase **no publica
+`N/N`**: publica los `.tsv` crudos y el bucle que los produjo.
+
+🔵 **Canal, calibrado antes de creerle un negativo (`P249`):** 🟢 `raw.githubusercontent.com`
+**200** a la buena / **404** a la inexistente → **DISCRIMINA**. 🔴 `curl -sI github.com` y
+`api.github.com`: **403 a la buena Y a la inexistente** → **NO DISCRIMINAN**. Tercer pase (85, 86,
+90) que reconfirma que el `curl -sI` del encargo es el canal que no puede opinar.
+
+Instrumento, datos y controles: [`compose/code/p269-provider-release-matrix/`](../compose/code/p269-provider-release-matrix/).
+
 ## 2026-10-04 — pase 89: cero altas de agente, dos forks nuevos verificados que NO son altas, y el repo canónico del cohorte más grande de esta base se contradice consigo mismo
 
 🔴 **Cero altas en `agents/top.md`, y se declara en vez de rellenar.** El barrido obligatorio

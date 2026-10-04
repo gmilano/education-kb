@@ -1,0 +1,12 @@
+# Moodle core: subplugins `aiprovider` presentes por REF, medido por codigo HTTP sobre
+# raw.githubusercontent.com (canal CALIBRADO: 200 a la buena, 404 a la inexistente).
+# Ruta leida: <prefix>/provider/<name>/version.php  con prefix = "ai" (layout root) o
+# "public/ai" (layout public). 200 = el subplugin esta en el nucleo de esa rama; 404 = no esta.
+# Medido 2026-10-04 (pase 90). Build de todas las ramas: 20261005.
+ref	layout	release	anthropic	awsbedrock	azureai	deepseek	gemini	ollama	openai	total
+MOODLE_405_STABLE	root	4.5.15	404	404	200	404	404	404	200	2
+MOODLE_500_STABLE	root	5.0.11	404	404	200	404	404	200	200	3
+MOODLE_501_STABLE	public	5.1.8	404	404	200	200	404	200	200	4
+MOODLE_502_STABLE	public	5.2.4	404	200	200	200	200	200	200	6
+MOODLE_503_STABLE	public	5.3	200	200	200	200	200	200	200	7
+main	public	6.0dev	200	200	200	200	200	200	200	7

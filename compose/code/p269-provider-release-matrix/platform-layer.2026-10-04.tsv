@@ -1,0 +1,12 @@
+# La CAPA DE PLATAFORMA en el eje de ligadura de proveedor: el denominador que P257 nunca tuvo
+# (P257 midio 69 filas de AGENTE, cero plataformas). Token de proveedor buscado en el manifiesto
+# de runtime: litellm|langchain|@ai-sdk/*|openai|anthropic|ollama|azure-openai|google-generativeai|vertexai|boto3
+plataforma	manifiesto_leido	codigo	tokens_hallados	veredicto
+moodle/moodle	public/ai/provider/*/version.php (subplugins en nucleo)	200	7 proveedores en nucleo	ABSTRACCION-EN-NUCLEO
+openedx/edx-platform	requirements/edx/base.txt	200	boto3	SIN-PROVEEDOR-DE-MODELO (boto3 = SDK de AWS, NO es proveedor de modelo: falso positivo del barrido)
+instructure/canvas-lms	Gemfile	200	-	SIN-PROVEEDOR-DE-MODELO
+chamilo/chamilo-lms	composer.json	200	-	SIN-PROVEEDOR-DE-MODELO
+ILIAS-eLearning/ILIAS	composer.json	200	-	SIN-PROVEEDOR-DE-MODELO
+frappe/education	pyproject.toml	200	-	SIN-PROVEEDOR-DE-MODELO
+frappe/erpnext	pyproject.toml	200	-	SIN-PROVEEDOR-DE-MODELO
+openeducat/openeducat_erp	requirements.txt	404	-	NO-CLAIM (el manifiesto no esta en esa ruta; no se afirma ausencia)

@@ -1,0 +1,11 @@
+# Controles del pase 90. Un canal que no discrimina no puede sostener un negativo (P249).
+control	url_probada	codigo	lectura
+canal-positivo	raw/moodle/moodle/HEAD/README.md	200	el canal responde
+canal-negativo	raw/moodle/moodle/HEAD/NO-SUCH-FILE-zzz9.md	404	el canal DISCRIMINA -> CALIBRATED
+layout-cruzado-1	raw/moodle/moodle/MOODLE_503_STABLE/ai/provider/openai/version.php	404	prefix root sobre ref de layout public
+layout-cruzado-2	raw/moodle/moodle/MOODLE_500_STABLE/public/ai/provider/openai/version.php	404	prefix public sobre ref de layout root
+proveedor-inexistente	raw/moodle/moodle/main/public/ai/provider/nosuchprov9/version.php	404	un nombre inventado da 404 -> la celda 200 significa algo
+github-html-head-bueno	curl -sI github.com/openedx/edx-platform	403	-
+github-html-head-malo	curl -sI github.com/nonexistent-org-zzz/nonexistent-repo-xyz9	403	403 a la buena Y a la inexistente -> NO DISCRIMINA
+api-github-bueno	api.github.com/repos/openedx/edx-platform	403	-
+api-github-malo	api.github.com/repos/nonexistent-org-zzz/nonexistent-repo-xyz9	403	403 a las dos -> NO DISCRIMINA

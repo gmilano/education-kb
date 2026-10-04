@@ -8,6 +8,7 @@ updated: 2026-10-04
 
 > Key players, market map y oportunidades por región.
 > Investigado 2026-09-30; el pase 11, el 2026-10-01. Las estimaciones de tamaño de mercado varían mucho entre firmas: se listan todas con su fuente en vez de elegir una.
+> **Pase 90 del 2026-10-04:** 🔴 **Decimonoveno barrido regional (año CALCULADO: 2026, no fijado) y las CUATRO regiones devolvieron CERO hechos ausentes de este árbol.** Y esta vez no se declara de memoria: se midió. De 11 tokens de hecho que los cuatro barridos trajeron —`AB 1159`, `SB 1227`, «134 proyectos de ley», `PL 2.338/2023`, `ANPD`, Observatorio UNESCO, `AI Framework Act` de Corea, Reglamento **(UE) 2026/1744**, Uruguay/Convenio del Consejo de Europa, `Latam-GPT`, Ley de IA de Vietnam— **10 ya estaban en el árbol**, con conteos por archivo. 🔵 **Se registra como CONFIRMACIÓN DE COBERTURA, no como hallazgo** — que es información distinta del silencio, y es lo que el encargo pide cuando una región no rinde. ⚠️ **El único token ausente es `Decreto 142/2026/ND-CP` de Vietnam (clasificación de riesgo de la Ley de IA), y NO se escribe como dato: los CINCO canales que lo documentan están bloqueados** (`loc.gov`, `iapp.org`, `lw.com`, `allenandgledhill.com`, `licentium.io` → `EGRESS_BLOCKED`). Queda como ACCIÓN con su bloqueo nombrado, no como fila (`P249`). 🔴 **Y una corrección de fuente secundaria que afecta a APAC: el barrido afirmó que «Vietnam aprobó su Digital Technology Industry Law con marco basado en riesgo».** Son **DOS** leyes distintas: la *Law on Digital Technology Industry* entró en vigor el **2026-01-01**, y el marco de riesgo en tres niveles es de la **Ley de IA** —la que esta base ya tiene como **N.º 134/2025/QH15**—, en vigor el **2026-03-01**. El barrido fusionó dos instrumentos en uno. 🟢 **El aporte cotizable del pase es de la capa de plataforma y vale para las cuatro regiones por igual: el proveedor de modelo en Moodle se compra con una VERSIÓN** (Anthropic exige 5.3; Gemini y Bedrock, 5.2; DeepSeek, 5.1; un cliente en 4.5 LTS tiene dos y ninguno de los cuatro), **y la capa de plataforma es COPYLEFT en 8 de 8 lecturas de payload, CERO permisivas.** Ver `verticals/solutions.md` y [`compose/code/p269-provider-release-matrix/`](../compose/code/p269-provider-release-matrix/).
 > **Pase 89 del 2026-10-04:** 🔴 **Decimoctavo barrido regional (año CALCULADO: 2026) y las CUATRO regiones devolvieron material que esta base YA tiene publicado — saturación, verificada por `grep` contra el árbol antes de escribir esta línea.** 🔵 **Se declara región por región en vez de dejar el silencio, porque un hueco informado es información y el silencio se parece exactamente a la cobertura.** 🟢 **Lo único que el canal externo rindió este pase no es regional sino de MÉTODO, y reencuadra una acción abierta desde el pase 10: un conteo de capacidades tiene SUPERFICIE, el repo canónico de Canvas dice 102 en su descripción y 103 en su README, y de 3 repos medidos CERO es citable sin nombrar la superficie (`P268`).** 🔴 **Consecuencia directa para este archivo: la comparación `227` vs `165` que esperaba permiso de red queda REENCUADRADA, no desbloqueada — aunque llegara la red, los dos números podían venir de superficies distintas y entonces nunca fueron comparables.**
 > **Pase 87 del 2026-10-04:** 🟢 **Decimosexto barrido regional (año CALCULADO: 2026) y las CUATRO regiones vuelven a rendir dato nuevo, por segundo pase consecutivo — pero el eje que las separa ya no es regulatorio, es de BRECHA ENTRE USO Y GOBIERNO.** 🔴 **El número que ordena el pase: en NA se legisla mucho y se instruye poco —134 proyectos de ley sobre AI educativa en 31 estados, y a la vez sólo el 18 % de los docentes de K-12 recibe guía ESCRITA y el 34 % no recibe ninguna.** 🟢 **LATAM es la región de MAYOR adopción medida del mundo en superior (92 % de alumnos, 79 % de docentes, Digital Education Council 2026) y la de regulación MÁS fragmentada (Brasil, Chile, CONPES 4144 de Colombia, reglas sectoriales de México a velocidades distintas).** 🔵 **EMEA tiene la fecha dura que las demás no tienen: el AI Act clasifica admisión, evaluación y corrección de exámenes como ALTO RIESGO, y sus enmiendas de junio 2026 entraron en vigor el 27-jul-2026 con aplicación corrida a 2-dic-2027 (autónomos) y 2-ago-2028 (embebidos).** 🟢 **APAC es la región que paga: 96 % de las organizaciones aumentan inversión en AI en 2026 y esperan USD 2,85 por dólar — con Corea del Sur (22-ene-2026) y Vietnam (1-mar-2026) ya con ley marco vigente.** 🔴 **Y la cota, por decimosexta vez: CERO fuentes primarias de norma en las cuatro regiones; el proxy de egreso bloquea los sitios oficiales y `arxiv.org`, así que toda la regulación de esta sección es de secundarias concordantes.**
 > **Pase 73 del 2026-10-03:** 🔴 **Las cuatro búsquedas regionales obligatorias se corrieron (año CALCULADO: 2026) y por TERCER pase consecutivo las cuatro devolvieron material que esta base ya tenía publicado** —NA: los 134 proyectos en 31 estados, el 86 %, el *Traffic Light* y el STUDENTS FIRST Act; EMEA: el calendario del AI Act y la clasificación de alto riesgo; APAC: el 96 %, el 66 %, el ROI de US$ 2,85 y la Basic AI Act coreana; LATAM: la encuesta del Digital Education Council (92 % / 79 % / 94 % / 61 %) con el Tec de Monterrey, AIGEN y RIE360, más Chile y el CONPES 4144—. 🔵 **Saturación confirmada por tercera vez (tendencia **567**): el canal se sigue corriendo porque es obligatorio y porque un cambio de régimen hay que verlo, con rendimiento marginal medido CERO.** 🟢 **Lo nuevo de las cuatro regiones es, en las cuatro, un ARTEFACTO de código:** NA el piloto **sin expediente** (`purdue-mcp`, sin credencial) y Blackbaud (`myschoolapp-mcp`); EMEA el portal de un *Land* y un problema de **INSTRUMENTO** de licencia (Unlicense en derecho alemán); APAC el **reporte obligatorio al Estado ya construido y MIT** (`open-academic`, PDDIKTI); LATAM, por segundo pase seguido, **la pieza mejor gobernada de la base** (`CaioCastro1/usp-mcp`).
@@ -56,6 +57,80 @@ updated: 2026-10-04
 > regulado — **STUDENTS FIRST Act of 2026**, marco de los estudiantes de los 50 estados (AASA, agosto 2026).
 > **LATAM:** 🔵 el hallazgo del pase — **existe una capa MCP nacional brasileña de datos públicos, activa y MIT, y
 > educación es el único dominio grande que falta** (**gap 69**).
+
+## Opportunities by region — agregado del pase 90
+
+> 🔵 **Nota de método de este pase:** las cuatro oportunidades de abajo salen de **una sola**
+> medición —la matriz de proveedor por ref y la licencia de la capa de plataforma— y se reparten por
+> región según qué restricción manda en cada una. **No hay sección sólo-LATAM**, y la región va en el
+> vocabulario cerrado de cinco valores, con el país en la prosa.
+
+### North America
+
+🟢 **La oportunidad: el salto de versión como entregable con nombre.** NA es la región con la
+adopción institucional más alta medida (**86 %** de organizaciones educativas con GenAI en uso
+administrativo o instruccional) y, a la vez, la de mayor presión normativa de detalle: **134
+proyectos de ley en 31 estados** en 2026, con **AB 1159** (California, prohíbe usar dato de alumno
+para entrenar) y **SB 1227** (Idaho) ya nombrados en este archivo, y **cuatro estados** —Idaho,
+Maryland, Oklahoma, Virginia— exigiendo guía estatal **más** política distrital obligatoria.
+
+🔵 **Por qué la medición de este pase es la que vende acá:** la combinación «no entrenar con dato de
+alumno» + «supervisión humana» empuja a **inferencia local o de nube propia**, y en Moodle eso es
+`ollama` (**5.0**) o `awsbedrock` (**5.2**) en el núcleo. 🔴 **Un distrito en 4.5 LTS no tiene
+ninguno de los dos**: tiene `openai` y `azureai`, que son exactamente los que su propia política de
+dato cuestiona. **El engagement es el salto 4.5 → 5.2/5.3 con el expediente de conformidad, no un
+piloto de tutor.**
+
+### EMEA
+
+🟢 **La oportunidad: la única región con FECHA dura, y la fecha se movió a favor del proveedor.** El
+Reglamento **(UE) 2026/1744** (Digital Omnibus, DOUE 2026-07-24, en vigor 2026-07-27) difirió las
+obligaciones de alto riesgo del **Anexo III** —donde cae educación: acceso, evaluación y orientación
+del itinerario— a **2027-12-02**, y a **2028-08-02** las embebidas en producto ya regulado. Este
+árbol ya lo tenía; **se reconfirma, no se descubre.**
+
+🔴 **La restricción que la medición de este pase agrega, y es de licencia, no de plazo:** las dos
+plataformas más grandes de la capa de partida (`edx-platform`, `canvas-lms`) son **AGPL-3.0**, cuyo
+alcance incluye el uso **en RED**. En una región que compra soberanía y auditabilidad, **AGPL no es
+un problema: es el argumento** — pero obliga a que el expediente de entrega contemple la oferta de
+fuente, y eso se cotiza desde el día uno.
+
+### APAC
+
+🟢 **La oportunidad: la región donde el marco de riesgo ya obliga, con la ventana más corta.** Corea
+tiene el **AI Framework Act** en vigor desde **2026-01-22**; Vietnam tiene su **Ley de IA N.º
+134/2025/QH15** en vigor desde **2026-03-01** con clasificación de riesgo en **tres** niveles (alto,
+medio, bajo) y obligación de clasificar **antes** del despliegue.
+
+⚠️ **Y la cota de este pase sobre APAC, declarada:** el **Decreto 142/2026/ND-CP**, que sería el
+instrumento de clasificación, **no se pudo verificar**: `loc.gov`, `iapp.org`, `lw.com`,
+`allenandgledhill.com` y `licentium.io` dan `EGRESS_BLOCKED`. **Cinco canales, cinco bloqueos** → se
+declara el hueco en vez de escribir el dato (`P249`).
+
+🔴 **Y el cuello real de la región sigue siendo de financiación, no de norma:** cerca del **75 %** de
+las instituciones públicas de las economías en desarrollo de APAC reportan dificultad para financiar
+iniciativas de IA. 🔵 **Eso hace que `ollama` (Moodle 5.0) y `deepseek` (5.1) sean la entrada
+comercial de APAC y no un detalle técnico:** son los dos proveedores de núcleo con costo marginal
+por token más bajo o nulo.
+
+### LATAM
+
+🟢 **La oportunidad: la adopción más alta del planeta en superior, contra la menor cobertura de
+gobierno.** **79 %** del profesorado en LATAM declara usar IA en su enseñanza, pero **88 %** reporta
+un involucramiento de «mínimo» a «moderado» y **menos del 10 %** de las instituciones tiene guía
+formal y capacidad suficiente. Brasil regula por **PL 2.338/2023** con el *sandbox* regulatorio de la
+**ANPD** abierto hasta **diciembre de 2026**; Uruguay fue el primer país de la región en firmar el
+Convenio Marco del Consejo de Europa; Chile aporta **CENIA** y **Latam-GPT**. Todo esto ya estaba en
+el árbol: **confirmación de cobertura.**
+
+🔵 **Por qué la medición de este pase es la que convierte esa brecha en alcance facturable:** la
+distancia entre «79 % usa» y «<10 % tiene guía» **no se cierra con un modelo, se cierra con
+gobierno dentro de la plataforma** — y en Moodle eso ya existe y es auditable: `core_ai` guarda
+`prompt` y `generatedcontent` en **6 tablas declaradas** y sabe borrarlos (pase 19), mientras los
+**7** proveedores **no guardan: transmiten**. 🔴 **La restricción que hay que decir antes de
+cotizar:** el punto donde la supresión se queda sin nada que suprimir es el proveedor, así que una
+guía institucional en LATAM que prometa borrado tiene que elegir `ollama` **5.0+** (inferencia
+propia) o aceptar que el dato ya salió.
 
 ## 🔴 Decimoctavo barrido regional: las cuatro regiones SATURADAS, declarado región por región en vez de dejar el silencio (pase 89 del 2026-10-04)
 

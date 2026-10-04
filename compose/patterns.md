@@ -8,6 +8,7 @@ updated: 2026-10-04
 
 > Recetas concretas: repos nombrados, licencias verificadas, wiring explícito y estimación.
 > Todos los repos citados fueron verificados vía WebFetch el 2026-09-30; los del pase 11, el 2026-10-01 (ver `agents/top.md`).
+> **Pase 90 del 2026-10-04:** 🆕 **Los patrones nuevos son **P269**, **P270** y **P271**, y los tres salen de medición de este pase.** **P269** le pone **REF** al eje de proveedor: un conjunto de subplugins es propiedad del par (repo, ref), y medido así los proveedores en el núcleo de Moodle van de **2** (4.5.15) a **7** (5.3) — así que «la plataforma soporta X» es verdadero o falso según la versión. **P270** prohíbe publicar como ausencia un negativo sobre una ruta que codifica un NOMBRE: `ai/provider/bedrock` da 404 y `ai/provider/awsbedrock` da 200, y esta base ya tenía la trampa escrita desde el pase 19 sin que viajara. **P271** es la versión por CAPA de `P228`: una afirmación sobre la capa A no puede citar una medición cuyo denominador es la capa B — el pase 86 escribió «las plataformas no ligan proveedor» citando `P257`, cuyo denominador son 69 filas de agente y cero plataformas. 🟢 **Y la receta nueva es `R-VERSION-PROVEEDOR`: la compuerta de pre-venta que convierte «¿pueden poner Anthropic en nuestro Moodle?» en una versión mínima, un plan de salto y una familia de licencia, antes de cotizar.**
 > **Pase 89 del 2026-10-04:** 🆕 **Los patrones nuevos son **P265**, **P266**, **P267** y **P268**, y los cuatro salen de medición de este pase.** **P265** refuta la regla que el pase 88 dejó escrita: la pregunta de región son DOS preguntas con leniencia CONTRARIA, y ni los dos validadores coinciden —el veredicto depende de la SINTAXIS DEL PORTADOR—. **P266** es la regla que salió del fallo del propio módulo compartido: el comportamiento endurecido va en el DEFAULT, no detrás de un flag. **P267** mide que un vocabulario cerrado se enforcea en un portador y no en el otro (160 normalizaciones silenciosas, 0 accionables). **P268** le pone superficie a un conteo de capacidades: el repo canónico de Canvas dice **102** en su descripción y **103** en su README, y de 3 repos medidos **CERO** es citable sin nombrar la superficie. 🟢 **Y la receta nueva es `R-SUPERFICIE`: la auditoría de pre-adopción que esta base puede entregar hoy, con instrumento y suite, antes de que un engagement se pare sobre un fork cuyo claim está congelado.**
 > **Pase 88 del 2026-10-04:** 🆕 **Los patrones nuevos son **P262**, **P263** y **P264**, y los tres salen de medición de este pase.** **P262** convierte «hay mandato curricular de IA» en tres columnas —NIVEL, VIGENCIA, ENTREGA— y con eso refuta la frase que la prensa secundaria repite: lo de China es **municipal**, no nacional. **P263** es la regla que salió del fallo del propio instrumento: `P248` **regresó** a seis pases de distancia porque vivía dentro de un archivo y no en la librería compartida. **P264** separa «región del proveedor» de «región del currículo que sirve». 🟢 **Y la receta nueva es `R-MANDATO`: la capa de contenido curricular integrado sobre el LMS instalado, que es —medido— lo único que los 4 mandatos vigentes del mundo realmente compran.**
 > **Pase 87 del 2026-10-04:** 🆕 **Los patrones nuevos son **P259**, **P260** y **P261**, y los tres salen de medición de este pase.** **P259** acota el instrumento del pase 86: la ligadura de proveedor puede vivir en la CONFIGURACIÓN y no en el manifiesto, así que un barrido de dependencias no la ve y el cero de `SWAPPABLE` es cota y no propiedad. **P260** separa dos preguntas que esta base venía haciendo como una: «¿hay paquete?» y «¿está vigente?» — se leen de la API JSON de PyPI y en el estante nuevo dan 6 y 1 respectivamente. **P261** fija cómo se declara región sin violar `P135`: desde la bio, el sitio y la ubicación declaradas por la ORGANIZACIÓN, nunca desde un antropónimo. 🟢 **Y la receta nueva es `R-PSICO`: la capa adaptativa sobre el LMS que el cliente ya tiene, con `EduCDM` como dependencia, el resto vendorizado, y la compuerta de alto riesgo del AI Act declarada por delante.**
@@ -114,6 +115,112 @@ updated: 2026-10-04
 > no existe en open source permisivo).
 > **Pase 11:** +2 patrones — **P25** (riesgo de abandono conforme al Anexo III, la capa con presupuesto ya asignado y sin oferta open source) y **P26** (agente docente sobre la ontología curricular nacional ya publicada).
 > **Pase 27:** **+4 patrones y una corrección.** 🔴 **P51 queda con premisa falsa** —el conector MCP de Moodle **sí existe y es MIT**— y lo reemplazan **P54** (corrección y devolución sobre Moodle con **compuerta humana**, el último tramo del gap 6, con piezas que ya escriben), **P55** (el conector de **Open edX**, que es el único que de verdad no existe), **P56** (**SCORM** como formato de salida de la capa generativa: cero integración, offline) y **P57** (evidencia por MCP cotizada sobre lo que CaSS **realmente** expone — 6 de 61 operaciones, con insignias y autoría de marcos **fuera**).
+
+## 🧩 P269–P271 y la receta `R-VERSION-PROVEEDOR`: el eje de proveedor tiene REF, y una capa no responde por otra (pase 90 del 2026-10-04)
+
+### 🆕 P269 — Un conjunto de proveedores (o subplugins, o capacidades) es propiedad del par (repo, REF)
+
+**Qué lo motiva.** Esta base afirmaba desde el pase 18 qué proveedores trae el núcleo de Moodle.
+Medido rama por rama: **2** en 4.5.15, **3** en 5.0.11, **4** en 5.1.8, **6** en 5.2.4, **7** en 5.3
+y en `main` (6.0dev). La afirmación sin ref no era imprecisa: **era indecidible**.
+
+**La regla.** Toda cifra de inventario de un repo —subplugins, herramientas MCP, proveedores— se
+publica con la **ref** contra la que se resolvió. 🔴 **Y `HEAD` no es una ref útil para Moodle**:
+`HEAD` resuelve a `main`, y desde 5.1 el *webroot* vive en `public/`, así que **la misma ruta da 404
+en `main` y 200 en 5.0 sin que nada haya desaparecido**.
+
+**Cómo se verifica.** Prefijo elegido por ref (`ai/` para ≤5.0, `public/ai/` para ≥5.1) y control
+cruzado obligatorio: el prefijo equivocado sobre la ref correcta **tiene** que dar 404 en los dos
+sentidos. Medido: `MOODLE_503_STABLE/ai/provider/openai` → 404 y
+`MOODLE_500_STABLE/public/ai/provider/openai` → 404. **Es la prueba de que el layout se midió y no se
+supuso.**
+
+### 🆕 P270 — Un negativo sobre una ruta que codifica un NOMBRE no se publica como ausencia
+
+**Qué lo motiva.** Este pase probó `ai/provider/bedrock` → **404**. El nombre real es
+**`awsbedrock`** → **200**. Y esta base **ya tenía esa trampa escrita, con ese nombre, desde el pase
+19**; la advertencia no viajó a quien repitió la medición.
+
+**La regla.** Si la ruta probada contiene un **nombre** (directorio de plugin, nombre de paquete,
+slug), el 404 mide el **nombre** y no la ausencia, **a menos que la lista de nombres venga de una
+fuente enumerable** (un listado de árbol, un índice de registro, una auditoría previa repo-por-repo).
+Sin esa fuente, el resultado es **`NO-CLAIM`**, no «no está».
+
+**Control negativo permanente.** `bedrock` → 404 / `awsbedrock` → 200, más
+`main/public/ai/provider/nosuchprov9` → 404, que prueba que un nombre inventado da 404 y por lo tanto
+**una celda 200 significa algo**. 🔵 **Es `P266` otra vez en su forma social: la regla estaba en el
+árbol y no viajó.**
+
+### 🆕 P271 — Una afirmación sobre la capa A no puede citar una medición cuyo denominador es la capa B
+
+**Qué lo motiva.** El pase 86 escribió en `verticals/solutions.md`: *«las plataformas no ligan
+proveedor de modelo … (`P257`, 0 de 69 con capa de abstracción)»*. El README de `P257` dice que midió
+*«las 69 filas recomendables»*: **filas de agente, cero plataformas.** `moodle/moodle` no estaba en
+ese denominador; estaban forks de `moodle-mcp`, que son **clientes** de Moodle, no Moodle.
+
+**La regla.** La capa del denominador se declara junto a la cifra, y una cifra no se cita fuera de su
+capa. Es la versión por capa de **`P228`** (que ya prohibía ordenar una cuota en usuarios contra una
+en instituciones).
+
+**Lo que la regla recuperó.** Medida la capa correcta, la clase **`SWAPPABLE`** que `P257` reportó en
+**0 de 69** **existe, y está en el núcleo de la plataforma más instalada de la vertical**: 7
+subplugins `aiprovider` intercambiables. 🔵 **El cero no era un hecho de la industria: era una cota
+del denominador.**
+
+## 🆕 `R-VERSION-PROVEEDOR` — Receta: compuerta de pre-venta para «¿pueden poner <proveedor> en nuestro Moodle?»
+
+**El problema que resuelve.** La pregunta llega como una pregunta de producto y se responde, mal, con
+una capacidad (*«sí, Moodle tiene subsistema de AI desde 4.5»*). **Medido, se responde con una
+versión mínima**, y la diferencia entre las dos respuestas es un salto de versión no cotizado.
+
+**Las piezas, con licencia leída del payload:**
+
+| pieza | repo / ref | licencia | rol en la receta |
+|---|---|---|---|
+| plataforma | [`moodle/moodle`](https://github.com/moodle/moodle) | **GPL-3.0-or-later** | el núcleo y sus subplugins `aiprovider` |
+| matriz de referencia | [`compose/code/p269-provider-release-matrix/`](code/p269-provider-release-matrix/) | — | qué proveedor entra en qué versión |
+| inferencia local | [`ollama/ollama`](https://github.com/ollama/ollama) | **MIT** | el proveedor sin costo por token, núcleo desde **5.0** |
+| capa MCP sobre el LMS | los servidores `moodle-mcp` del catálogo de `p250` | ver `agents/top.md` | lectura/escritura agéntica; **84 % no liga proveedor** (`P257`) |
+
+**Los cuatro pasos, en orden, y ninguno es opcional:**
+
+1. **Leer la versión del cliente, no preguntarla.** `$release` de `version.php` —y **la ruta depende
+   de la serie**: `version.php` hasta 5.0, `public/version.php` desde 5.1 (**P269**). Si el equipo
+   del cliente reporta la versión de memoria, se verifica: es el dato del que cuelgan los otros tres
+   pasos.
+2. **Resolver proveedor → versión mínima** contra la matriz:
+
+   | proveedor pedido | versión mínima en núcleo |
+   |---|---|
+   | `openai`, `azureai` | ≤ **4.5** |
+   | `ollama` | **5.0** |
+   | `deepseek` | **5.1** |
+   | `awsbedrock`, `gemini` | **5.2** |
+   | `anthropic` | **5.3** |
+
+3. **Elegir la rama del presupuesto, y decirla antes de cotizar.** Si `versión_cliente ≥
+   versión_mínima` → es **configuración** (panel de administración, sin desarrollo). Si no → son
+   **dos entregables**: el salto de versión **más** el expediente de conformidad del salto. 🔴 **El
+   caso que más aparece en NA: un distrito en 4.5 LTS con política de “no entrenar con dato de
+   alumno” pide inferencia local o de nube propia, y 4.5 trae `openai` y `azureai` — exactamente los
+   dos que su política cuestiona.** `ollama` exige 5.0; `awsbedrock`, 5.2.
+4. **Cerrar con la pregunta de supresión, que es la que audita un regulador.** `core_ai` guarda
+   `prompt` y `generatedcontent` en **6 tablas declaradas** y sabe borrarlos; los **7** proveedores
+   **no guardan: transmiten** (pase 19). ⚠️ **Así que una promesa de borrado sólo es cumplible hasta
+   el borde del proveedor:** con `ollama` autoalojado el borde es del cliente; con cualquier
+   proveedor remoto, el dato salió y la promesa hay que reescribirla.
+
+**La restricción de entrega, que no es técnica.** La plataforma es **GPL-3.0-or-later** y la capa de
+partida entera es **copyleft 8 de 8** (`AGPL-3.0` en `edx-platform` y `canvas-lms`, con alcance en
+**RED**; `LGPL-3.0` sólo en `openeducat_erp`). **Un plugin `aiprovider` propio es obra derivada de
+Moodle**, así que se entrega bajo GPL-3.0-or-later: eso es decisión comercial, no detalle, y va en la
+propuesta.
+
+⚠️ **Lo que esta receta NO tiene, y se dice:** suite propia. La ejecución de código del árbol está
+**NEGADA** en este pase (`[Code from External]`), así que los pasos 1–2 están medidos (los `.tsv` del
+instrumento) y **no** automatizados con aserciones. Un pase futuro con ejecución puede convertir el
+paso 2 en una compuerta con control negativo —`bedrock` tiene que salir `NO-CLAIM` y no «no
+existe»—, que es la prueba que le falta.
 
 ## 🧩 P265–P268 y la receta `R-SUPERFICIE`: una regla compartida tiene contrato, y un número tiene superficie (pase 89 del 2026-10-04)
 
