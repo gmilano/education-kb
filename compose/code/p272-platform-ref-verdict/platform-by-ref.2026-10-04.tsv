@@ -1,0 +1,16 @@
+# El hallazgo del pase 91: las 7 filas de veredicto de plataforma del pase 90
+# (platform-layer.2026-10-04.tsv) se publicaron SIN REF -- en el mismo pase que demostro, para
+# Moodle, que un conjunto de proveedores es propiedad del par (repo, ref).
+# Aca se les pone ref a dos de ellas. Token de proveedor de modelo buscado al INICIO de linea
+# del manifiesto: litellm|langchain*|openai|anthropic|ollama|vertexai|google-generativeai.
+# boto3 NO cuenta (SDK de AWS, no proveedor de modelo) -- falso positivo ya marcado por el pase 90.
+plataforma	ref	control	manifiesto	codigo	tokens_proveedor	veredicto_por_ref	veredicto_pase90_sin_ref
+openedx/edx-platform	open-release/quince.master	200	requirements/edx/base.txt	200	openai==0.28.1 (linea 767, via kernel.in = DIRECTA)	TIENE-PROVEEDOR	SIN-PROVEEDOR-DE-MODELO -> CONTRADICHO
+openedx/edx-platform	open-release/redwood.master	200	requirements/edx/base.txt	200	openai==0.28.1 (linea 767, via kernel.in = DIRECTA)	TIENE-PROVEEDOR	SIN-PROVEEDOR-DE-MODELO -> CONTRADICHO
+openedx/edx-platform	open-release/sumac.master	200	requirements/edx/base.txt	200	openai==0.28.1 (linea 809, via kernel.in = DIRECTA)	TIENE-PROVEEDOR	SIN-PROVEEDOR-DE-MODELO -> CONTRADICHO
+openedx/edx-platform	master	200	requirements/edx/base.txt	200	-	SIN-PROVEEDOR	SIN-PROVEEDOR-DE-MODELO -> COINCIDE
+instructure/canvas-lms	master	200	Gemfile	200	-	SIN-PROVEEDOR	SIN-PROVEEDOR-DE-MODELO -> COINCIDE
+instructure/canvas-lms	prod	200	Gemfile	200	-	SIN-PROVEEDOR	SIN-PROVEEDOR-DE-MODELO -> COINCIDE
+# Refs NO resueltas: no se publica ningun veredicto sobre ellas (P270: un 404 sobre un nombre
+# CONJETURADO mide el nombre). openedx: main, open-release/teak.master, ulmo, verawood -> 404.
+# canvas: stable, release/2026-09-17, release/2026-08-20 -> 404.

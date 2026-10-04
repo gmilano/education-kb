@@ -9,6 +9,45 @@ updated: 2026-10-04
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 > No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
 
+## 2026-10-04 — pase 91: cero altas de agente por tercera vez, y el veredicto de plataforma del pase anterior se cae al pedirle una REF
+
+🔴 **Cero altas en `agents/top.md` (sigue en 94 filas), tercer pase consecutivo, y se declara en vez
+de rellenar.** El barrido obligatorio (`top open source AI agents education 2026 github MIT`) devolvió
+por **sexta vez consecutiva** el eje generalista: `openclaw` (385 k ★), `browser-use`, `Mem0`,
+`AutoGen`, `Flowise`, `dify`. Son marcos **horizontales** — viven en la KB de `technology`. Sumarlos
+acá sería padding con nombre propio.
+
+🟢 **Lo que el pase sí rindió, y es interno otra vez (sexta consecutiva): el veredicto de proveedor de
+la capa de PLATAFORMA tampoco tenía REF — en el mismo instrumento que exigió ref para los agentes.**
+
+| plataforma | ref | token de proveedor | vs. veredicto del pase 90 |
+|---|---|---|---|
+| `openedx/edx-platform` | `open-release/quince.master` | **`openai==0.28.1`** (l. 767, `via kernel.in`) | 🔴 **CONTRADICHO** |
+| `openedx/edx-platform` | `open-release/redwood.master` | **`openai==0.28.1`** (l. 767, `via kernel.in`) | 🔴 **CONTRADICHO** |
+| `openedx/edx-platform` | `open-release/sumac.master` | **`openai==0.28.1`** (l. 809, `via kernel.in`) | 🔴 **CONTRADICHO** |
+| `openedx/edx-platform` | `master` | — | 🟢 coincide |
+| `instructure/canvas-lms` | `master` | — | 🟢 coincide |
+| `instructure/canvas-lms` | `prod` | — | 🟢 coincide |
+
+🔴 **El veredicto publicado acierta exactamente en la rama que ningún cliente corre.** Y lo que traen
+las tres releases nombradas es **`openai==0.28.1`**, el último major **pre-1.0** del SDK de Python de
+OpenAI, **declarado directo** en el core.
+
+🟢 **Canvas sobrevive**, así que el defecto es **real pero no universal: 1 de 2**. ⚠️ **Las otras cinco
+filas siguen sin ref y quedan como ACCIÓN**, no como veredicto.
+
+🟢 **Y la matriz de Moodle del pase 90 queda REPLICADA**: remedida a mano con un bucle distinto,
+**6/6 refs coinciden exacto** (2 → 3 → 4 → 6 → 7 → 7). Primera cifra de esta base confirmada por
+segunda mano.
+
+⚠️ **Suites NO corridas: ejecución NEGADA (`[Code from External]`)**, como en los pases 58, 67, 79,
+80, 81, 84, 86, 89 y 90.
+
+🔵 **Canal:** `raw.githubusercontent.com` **DISCRIMINA** y es **DETERMINISTA** (30/30);
+`curl -sI github.com` y `api.github.com` dan **403 a la buena Y a la inexistente** — cuarto pase
+consecutivo. Instrumento: [`compose/code/p272-platform-ref-verdict/`](../compose/code/p272-platform-ref-verdict/).
+Ver tendencias **706**–**711**.
+
 ## 2026-10-04 — pase 90: cero altas de agente, y la columna de proveedor de esta base resulta no tener REF (así que no significaba nada)
 
 🔴 **Cero altas en `agents/top.md` (sigue en 94 filas), y se declara en vez de rellenar.** El barrido

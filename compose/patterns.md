@@ -8,6 +8,7 @@ updated: 2026-10-04
 
 > Recetas concretas: repos nombrados, licencias verificadas, wiring explícito y estimación.
 > Todos los repos citados fueron verificados vía WebFetch el 2026-09-30; los del pase 11, el 2026-10-01 (ver `agents/top.md`).
+> **Pase 91 del 2026-10-04:** 🆕 **El patrón nuevo es **P272**, y sale de auditar al pase anterior con su propia regla.** **P272**: un veredicto publicado para una plataforma **sin REF no es un veredicto** — y el pase que demostró eso para el eje de proveedor (`P269`) publicó, en el mismo instrumento, **siete** veredictos de plataforma sin ref. Puestas a prueba dos: `openedx/edx-platform` **CONTRADICE** el suyo (`openai==0.28.1` declarada **directa** en `quince`, `redwood` y `sumac`; ausente sólo en `master`) y `canvas-lms` lo **sostiene** — **1 de 2**, y no se generaliza. 🔵 **Y el corolario de control que lo acompaña: un control de ref invariante al layout PASA justo cuando la ruta medida se rompió** (`MOODLE_501_STABLE`: `README.md` 200, `version.php` 404, `public/version.php` 200), así que «el control dio 200» no autoriza a leer un 404 como ausencia. 🟢 **Y la receta nueva es `R-SDK-POR-REF`: la compuerta que, antes de cotizar una integración sobre un LMS, dice con qué SDK y qué major se va a hablar — porque hoy esa pregunta tiene tres respuestas distintas en el mismo repo.**
 > **Pase 90 del 2026-10-04:** 🆕 **Los patrones nuevos son **P269**, **P270** y **P271**, y los tres salen de medición de este pase.** **P269** le pone **REF** al eje de proveedor: un conjunto de subplugins es propiedad del par (repo, ref), y medido así los proveedores en el núcleo de Moodle van de **2** (4.5.15) a **7** (5.3) — así que «la plataforma soporta X» es verdadero o falso según la versión. **P270** prohíbe publicar como ausencia un negativo sobre una ruta que codifica un NOMBRE: `ai/provider/bedrock` da 404 y `ai/provider/awsbedrock` da 200, y esta base ya tenía la trampa escrita desde el pase 19 sin que viajara. **P271** es la versión por CAPA de `P228`: una afirmación sobre la capa A no puede citar una medición cuyo denominador es la capa B — el pase 86 escribió «las plataformas no ligan proveedor» citando `P257`, cuyo denominador son 69 filas de agente y cero plataformas. 🟢 **Y la receta nueva es `R-VERSION-PROVEEDOR`: la compuerta de pre-venta que convierte «¿pueden poner Anthropic en nuestro Moodle?» en una versión mínima, un plan de salto y una familia de licencia, antes de cotizar.**
 > **Pase 89 del 2026-10-04:** 🆕 **Los patrones nuevos son **P265**, **P266**, **P267** y **P268**, y los cuatro salen de medición de este pase.** **P265** refuta la regla que el pase 88 dejó escrita: la pregunta de región son DOS preguntas con leniencia CONTRARIA, y ni los dos validadores coinciden —el veredicto depende de la SINTAXIS DEL PORTADOR—. **P266** es la regla que salió del fallo del propio módulo compartido: el comportamiento endurecido va en el DEFAULT, no detrás de un flag. **P267** mide que un vocabulario cerrado se enforcea en un portador y no en el otro (160 normalizaciones silenciosas, 0 accionables). **P268** le pone superficie a un conteo de capacidades: el repo canónico de Canvas dice **102** en su descripción y **103** en su README, y de 3 repos medidos **CERO** es citable sin nombrar la superficie. 🟢 **Y la receta nueva es `R-SUPERFICIE`: la auditoría de pre-adopción que esta base puede entregar hoy, con instrumento y suite, antes de que un engagement se pare sobre un fork cuyo claim está congelado.**
 > **Pase 88 del 2026-10-04:** 🆕 **Los patrones nuevos son **P262**, **P263** y **P264**, y los tres salen de medición de este pase.** **P262** convierte «hay mandato curricular de IA» en tres columnas —NIVEL, VIGENCIA, ENTREGA— y con eso refuta la frase que la prensa secundaria repite: lo de China es **municipal**, no nacional. **P263** es la regla que salió del fallo del propio instrumento: `P248` **regresó** a seis pases de distancia porque vivía dentro de un archivo y no en la librería compartida. **P264** separa «región del proveedor» de «región del currículo que sirve». 🟢 **Y la receta nueva es `R-MANDATO`: la capa de contenido curricular integrado sobre el LMS instalado, que es —medido— lo único que los 4 mandatos vigentes del mundo realmente compran.**
@@ -115,6 +116,82 @@ updated: 2026-10-04
 > no existe en open source permisivo).
 > **Pase 11:** +2 patrones — **P25** (riesgo de abandono conforme al Anexo III, la capa con presupuesto ya asignado y sin oferta open source) y **P26** (agente docente sobre la ontología curricular nacional ya publicada).
 > **Pase 27:** **+4 patrones y una corrección.** 🔴 **P51 queda con premisa falsa** —el conector MCP de Moodle **sí existe y es MIT**— y lo reemplazan **P54** (corrección y devolución sobre Moodle con **compuerta humana**, el último tramo del gap 6, con piezas que ya escriben), **P55** (el conector de **Open edX**, que es el único que de verdad no existe), **P56** (**SCORM** como formato de salida de la capa generativa: cero integración, offline) y **P57** (evidencia por MCP cotizada sobre lo que CaSS **realmente** expone — 6 de 61 operaciones, con insignias y autoría de marcos **fuera**).
+
+## 🧩 P272 y la receta `R-SDK-POR-REF`: un veredicto de plataforma sin REF no es un veredicto (pase 91 del 2026-10-04)
+
+### 🆕 P272 — Un veredicto publicado para una plataforma sin REF no es un veredicto
+
+**La regla.** `P269` estableció que un conjunto de proveedores es propiedad del par **(repo, ref)**.
+**P272** es su consecuencia inmediata sobre cualquier tabla de veredictos: **una fila que diga «esta
+plataforma hace / no hace X» y no nombre la ref no es verificable, y puede ser falsa justo en las
+refs que importan.**
+
+**Por qué hace falta como patrón aparte.** Porque el propio pase 90, en el mismo instrumento donde
+demostró la regla, publicó **siete** filas sin ref en
+[`platform-layer.2026-10-04.tsv`](code/p269-provider-release-matrix/platform-layer.2026-10-04.tsv).
+🔵 **La advertencia no viajó treinta centímetros**, de un archivo al de al lado: la forma exacta de
+`P266`.
+
+**La medición.** Instrumento: [`code/p272-platform-ref-verdict/`](code/p272-platform-ref-verdict/).
+
+| plataforma | refs medidas | resultado |
+|---|---|---|
+| `openedx/edx-platform` | `quince`, `redwood`, `sumac`, `master` | 🔴 **CONTRADICE**: `openai==0.28.1` directa en las 3 releases; ausente sólo en `master` |
+| `instructure/canvas-lms` | `master`, `prod` | 🟢 **SOSTIENE**: sin token de proveedor en ninguna |
+
+🔴 **1 de 2 se cayó.** ⚠️ **Y no se generaliza a las otras cinco filas** (`chamilo`, `ILIAS`,
+`frappe/education`, `frappe/erpnext`, `openeducat`): no fueron medidas por ref, así que quedan como
+**ACCIÓN**, no como veredicto. Generalizar desde una muestra de dos sería el error de denominador de
+`P228` / `P271`.
+
+**El corolario de control (y es la parte reusable).** Un control de ref prueba que **la ref existe**;
+no prueba que la **ruta medida** siga siendo la dirección correcta en esa ref:
+
+| situación | el 404 mide… |
+|---|---|
+| control de ref **falla** | la **REF**, o el nombre conjeturado (`P270`) |
+| control de ref **pasa** y la ruta medida da 404 | la **RUTA**: ausencia real **o** layout movido |
+
+🔴 **Contraejemplo medido:** sobre `MOODLE_501_STABLE`, `README.md` / `composer.json` / `index.php`
+dan **200** y `version.php` da **404** — porque en 5.1 el webroot se mudó a `public/`. Un control
+invariante al layout **pasa en las seis refs**, y una matriz ingenua habría publicado **«0
+proveedores»** en 5.1/5.2/5.3/`main`: **un cero falso con el control en verde.**
+
+🔵 **Regla operativa:** el control debe **co-moverse** con la ruta medida (probar `root` **y**
+`public/` y exigir que **exactamente uno** resuelva), o no es control de esa ruta.
+
+### 🆕 `R-SDK-POR-REF` — Receta: con qué SDK vamos a hablar, dicho antes de cotizar
+
+**El problema que resuelve.** Un engagement sobre un LMS cotiza «integramos un LLM» asumiendo el SDK
+actual. Medido, la misma plataforma da **tres respuestas distintas** según dónde caiga el cliente.
+
+**Los insumos.** Nada más que el canal calibrado y 3 llamadas por ref:
+
+1. **Compuerta de canal** — `raw/<repo>/HEAD/<ctrl>` → 200 y `raw/<repo>/zzz-fake-ref-91/<ctrl>` →
+   404. Si no discrimina: **`NO-CLAIM`**, no se publica ningún negativo.
+2. **Control de ref** — `raw/<repo>/<ref>/<ctrl>` → 200. Si no: **`REF-NO-RESUELTA`**, y no se
+   escribe nada sobre esa ref (`P270`).
+3. **Lectura del manifiesto** — `requirements/edx/base.txt` (Open edX), `Gemfile` (Canvas),
+   `composer.json` (Chamilo / ILIAS), `pyproject.toml` (Frappe),
+   `<prefix>/ai/provider/*/version.php` (Moodle, con `prefix` = `` o `public/`).
+
+**El wiring.** [`code/p272-platform-ref-verdict/sweep_platform_ref.sh`](code/p272-platform-ref-verdict/sweep_platform_ref.sh)
+registra el bucle exacto; `scan <repo> <ctrl> <manifiesto> <refs…>` emite una línea TSV por ref con
+`TIENE-PROVEEDOR` / `SIN-PROVEEDOR` / `NO-CLAIM`.
+
+**El entregable de pre-venta (media hora, no una semana).** Una tabla de tres columnas —**ref del
+cliente · SDK y major en el core · qué hay que mover**— que convierte una discusión de arquitectura
+en una línea de manifiesto citable. Ejemplo medido hoy:
+
+| si el cliente corre… | en el core tiene… | lo que hay que decirle |
+|---|---|---|
+| Open edX `quince` / `redwood` / `sumac` | 🔴 **`openai==0.28.1`** (pre-1.0, `via kernel.in`) | el core habla el estilo `openai.ChatCompletion`; asumir `openai>=1.0` rompe, y migrarlo toca `kernel.in`, no un plugin |
+| Open edX `master` | 🟢 sin dependencia de proveedor | la ligadura la pone el integrador; no hay major heredado |
+| Moodle 4.5 LTS | 🔴 **2 proveedores** (`openai`, `azureai`) | ni `anthropic` ni `gemini` ni `ollama`: es **salto de versión**, no configuración |
+| Moodle 5.3+ | 🟢 **7 proveedores** en núcleo | se elige por configuración, con abstracción en el núcleo |
+
+⚠️ **Lo que esta receta NO afirma:** no se corrió ninguna suite de este árbol en el pase 91
+(ejecución **NEGADA**, `[Code from External]`), así que no lleva total de aserciones (`P107`).
 
 ## 🧩 P269–P271 y la receta `R-VERSION-PROVEEDOR`: el eje de proveedor tiene REF, y una capa no responde por otra (pase 90 del 2026-10-04)
 

@@ -8,6 +8,37 @@ updated: 2026-10-04
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 
+## 2026-10-04 — pase 91: GitHub trending vuelve vacío por VIGÉSIMA vez, y el estante de plataforma se mide por REF en vez de por rama por defecto
+
+🔴 **GitHub trending vacío por vigésima vez consecutiva, y la causa está medida desde hace pases: el
+canal lee «AI education» como aprender SOBRE IA, no como edtech.** Lo que devolvió este pase:
+`ai-engineering-from-scratch`, el curso *Neural Networks: Zero to Hero* de Karpathy,
+`2026-AI-College-Jobs`, `Semantic Kernel`. **Ninguno es de la vertical.** No se escriben como
+trending de educación.
+
+🔴 **El barrido de plataformas devolvió por decimoséptima vez el catálogo que este estante ya tiene**
+(`OpenEduCat` sobre Odoo, `CK-ERP`, `ERPNext`/`frappe/education`, Moodle, Open edX, Chamilo, ILIAS).
+⚠️ **`CK-ERP` parecía alta y no lo es: `grep` lo encuentra ya archivado en 6 archivos del árbol**, y
+su rastro público es de 2010.
+
+🟢 **Lo que sí se midió, y es nuevo para este estante: el manifiesto de runtime de la capa de
+plataforma, POR REF.**
+
+| repo | ref | manifiesto | hallazgo |
+|---|---|---|---|
+| `openedx/edx-platform` | `quince` / `redwood` / `sumac` | `requirements/edx/base.txt` | 🔴 **`openai==0.28.1` DIRECTA** (`via kernel.in`) |
+| `openedx/edx-platform` | `master` | ídem | 🟢 la dependencia **ya no está** |
+| `instructure/canvas-lms` | `master`, `prod` | `Gemfile` | 🟢 sin token de proveedor |
+
+🔴 **La dependencia se cayó entre `sumac` y `master`**, así que una fila de estante que diga «Open edX
+usa / no usa OpenAI» es falsa en dos tercios de los casos si no dice en qué ref.
+
+⚠️ **Refs que no resolvieron y sobre las que NO se publica nada** (`P270`: un 404 sobre un nombre
+conjeturado mide el nombre): `openedx` → `main`, `teak`, `ulmo`, `verawood`; `canvas` → `stable`,
+`release/2026-09-17`, `release/2026-08-20`.
+
+Instrumento y datos crudos: [`compose/code/p272-platform-ref-verdict/`](../compose/code/p272-platform-ref-verdict/).
+
 ## 2026-10-04 — pase 90: GitHub trending vuelve vacío por DECIMONOVENA vez, y el estante de plataforma se mide por licencia en vez de por estrellas
 
 🔴 **Cero altas, declarado en vez de rellenado.** `github trending education AI 2026` devolvió otra

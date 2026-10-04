@@ -7,6 +7,7 @@ updated: 2026-10-04
 # 📡 Tendencias — education
 
 > Ventana de investigación: septiembre 2026. Verificado 2026-09-30; el pase 11, el 2026-10-01.
+> **Pase 91 del 2026-10-04:** 🟢 **Seis tendencias nuevas, numeradas 706–711** (el pase 90 cerró en 705). 🔴 **706: el pase que demostró que un conjunto de proveedores necesita REF publicó, en el mismo instrumento, SIETE veredictos de plataforma SIN REF** — el defecto que acababa de nombrar, una capa más abajo. 🔴 **707: puesto a prueba, el veredicto «Open edX no liga proveedor de modelo» es FALSO en las tres releases nombradas que un cliente corre y verdadero sólo en `master`.** 🔴 **708: y lo que trae es `openai==0.28.1`, SDK PRE-1.0, declarada DIRECTA en el core — tres respuestas distintas a «¿con qué SDK hablo?» según dónde caiga el cliente.** 🟢 **709: el defecto NO es universal — Canvas sobrevive en las 2 refs que resuelven, así que 1 de 2, y no se generaliza desde una muestra de dos.** 🔵 **710: un control de ref invariante al layout PASA exactamente cuando la ruta medida se rompió, así que «el control dio 200» no autoriza a leer un 404 como ausencia.** 🔵 **711: la matriz de proveedor por ref pasa de medición única a REPLICADA (6/6 exacto por un bucle distinto), que es la primera vez que una cifra de esta base se confirma por segunda mano.**
 > **Pase 90 del 2026-10-04:** 🟢 **Siete tendencias nuevas, numeradas 699–705** (el pase 89 cerró en 698). 🔴 **699: el eje de proveedor de esta base no tenía REF, y sin ref no significaba nada: los proveedores en el núcleo de Moodle van de 2 a 7 entre 4.5 y 5.3, así que «la plataforma soporta X» es verdadero o falso según la versión.** 🔵 **700: el «CERO `SWAPPABLE`» del pase 86 no era un hecho de la industria sino una cota de su denominador — midió 69 filas de AGENTE y la clase que no encontró vive en el NÚCLEO de la plataforma más instalada de la vertical.** 🔴 **701: la capa de plataforma de esta vertical es COPYLEFT en 8 de 8 lecturas de payload y CERO permisivas, así que el foco MIT/Apache del encargo no es elegible en esa capa: es una restricción de entrega.** 🔴 **702: un negativo sobre una ruta que codifica un NOMBRE mide el nombre — `bedrock` 404 / `awsbedrock` 200 — y la advertencia estaba escrita en este árbol desde el pase 19 y no viajó, que es la forma exacta de P266.** 🔴 **703: toda cifra de esta base anclada a `main` tiene fecha de vencimiento: el pase 19 fijó `main` = 5.3rc1 y hoy 5.3 SALIÓ y `main` es 6.0dev.** 🔴 **704: la prosa de release notes dató mal la entrada de un proveedor (dijo 5.1 para Ollama; medido, 5.0), así que una fuente secundaria no sustituye una lectura anclada a ref.** 🔵 **705: las cuatro regiones devolvieron CERO hechos ausentes y por primera vez eso se MIDIÓ en vez de declararse —10 de 11 tokens ya en el árbol—, y el único ausente es inverificable por cinco canales bloqueados.**
 > **Pase 89 del 2026-10-04:** 🟢 **Ocho tendencias nuevas, numeradas 691–698** (el pase 88 cerró en 690). 🔴 **691: la regla que el pase 88 escribió —«la pregunta de región se muda a `lib/`»— NO se puede cumplir como estaba escrita: no hay UNA pregunta de región, hay dos, y necesitan leniencia CONTRARIA.** 🔴 **692: los dos validadores del mismo vocabulario cerrado discrepan sobre `" APAC"` y los DOS tienen razón — el veredicto depende de la SINTAXIS DEL PORTADOR, no del vocabulario.** 🔵 **693: el comportamiento endurecido detrás de un argumento NO default no viajó, viajó a medias; el contraejemplo estaba en el árbol desde el pase 82.** 🔴 **694: el módulo compartido escrito para no volver a elegir un defecto eligió uno nuevo en su primera línea, y lo encontró la matriz al ver que su columna no coincidía con la del instrumento del que salió.** 🔴 **695: un vocabulario cerrado se aplica en un portador y no en el otro: 160 celdas normalizadas en silencio, 0 accionables — el árbol está limpio y el hueco es LATENTE.** 🔴 **696: el barrido sin compuerta devolvió 8 hallazgos y los 8 eran falsos positivos de la clase exacta que el instrumento auditado ya descartaba.** 🔴 **697: el repo CANÓNICO se contradice consigo mismo —102 en la descripción, 103 en el README, misma lectura, mismo día— así que un conteo de capacidades tiene SUPERFICIE y de 3 repos medidos CERO es citable sin nombrarla.** 🔵 **698: el canal externo se agotó por DECIMOCTAVA vez y lo que rindió fue, por cuarta vez consecutiva, una dimensión INTERNA.**
 > **Pase 87 del 2026-10-04:** 🟢 **Ocho tendencias nuevas, numeradas 675–682** (el pase 86 cerró en 674). 🟢 **675: la capa que faltaba —psicometría computacional permisiva y completa de un solo laboratorio APAC— y con ella el hueco de APAC cierra a los quince pases.** 🔴 **676: «hay paquete publicado» dejó de ser señal de vigencia: 5 de 6 releases del estante nuevo son de 2019-2022.** 🔴 **677: el titular no es uniforme dentro de un mismo `org` institucional, y eso mueve la contraparte de un contrato.** 🟢 **678: aparece la primera ligadura de proveedor que vive en la CONFIGURACIÓN y no en el manifiesto, y con ella el cero del pase 86 pasa a ser cota de instrumento.** 🔴 **679: en APAC el cuello dejó de ser el código y pasó a ser la cesión —producto desplegado en tres países, sin licencia.** 🔴 **680: NA legisla mucho y capacita poco; la brecha es de 134 proyectos de ley contra 18 % de docentes con guía escrita.** 🟢 **681: LATAM es la región de mayor adopción medida del planeta en superior y la de regulación más fragmentada.** 🔵 **682: EMEA es la única región con FECHA dura de cumplimiento, y la entrada comercial de la región es deliberadamente de bajo riesgo.**
@@ -111,6 +112,91 @@ updated: 2026-10-04
 > Las siete salen de una sola medición: el eje de proveedor llevado a la capa de PLATAFORMA y
 > anclado a **ref**. Instrumento, datos y controles:
 > [`compose/code/p269-provider-release-matrix/`](../compose/code/p269-provider-release-matrix/).
+
+### 🔴 706 — El pase que exigió REF publicó, en el mismo instrumento, siete veredictos sin REF
+
+El pase 90 demostró (**P269**) que un conjunto de proveedores es propiedad del par **(repo, ref)**: en
+el núcleo de Moodle van de **2** (4.5.15) a **7** (5.3). En el **mismo** instrumento, el archivo
+[`platform-layer.2026-10-04.tsv`](../compose/code/p269-provider-release-matrix/platform-layer.2026-10-04.tsv)
+publicó **siete** veredictos de plataforma (`openedx → SIN-PROVEEDOR-DE-MODELO`, `canvas → SIN-…`,
+etc.), cada uno leyendo **un** manifiesto en **una** ref implícita: la rama por defecto.
+
+🔵 **La forma del fallo es la de `P266`, otra vez: la advertencia no viajó ni treinta centímetros**,
+del archivo de la matriz al archivo de al lado, dentro del mismo pase y del mismo instrumento. No es
+que la regla faltara — es que **se aplicó a la tabla que la motivó y no a su vecina**.
+
+### 🔴 707 — Medido por ref, el veredicto de Open edX es verdadero sólo en la rama que ningún cliente corre
+
+`openedx/edx-platform` figura en el pase 90 como `SIN-PROVEEDOR-DE-MODELO`. Medido por ref, con
+control de ref (`README.rst` → 200) y canal calibrado:
+
+| ref | `openai` en `requirements/edx/base.txt` | veredicto |
+|---|---|---|
+| `open-release/quince.master` | **`openai==0.28.1`** (l. 767) | 🔴 **TIENE-PROVEEDOR** |
+| `open-release/redwood.master` | **`openai==0.28.1`** (l. 767) | 🔴 **TIENE-PROVEEDOR** |
+| `open-release/sumac.master` | **`openai==0.28.1`** (l. 809) | 🔴 **TIENE-PROVEEDOR** |
+| `master` | — | 🟢 SIN-PROVEEDOR (coincide) |
+
+🔴 **No es transitiva:** la propia línea del manifiesto dice `via -r requirements/edx/kernel.in`, o
+sea **declarada a mano**. 🔵 **Y la asimetría es la que importa comercialmente:** el veredicto
+publicado acierta exactamente en `master` —la rama de desarrollo— y falla en las **tres releases
+nombradas** que son las que un cliente despliega.
+
+### 🔴 708 — Lo que traen esas tres releases es un SDK pre-1.0, y eso cambia el presupuesto de integración
+
+El pin es **`openai==0.28.1`**, la última release **pre-1.0** del SDK de Python de OpenAI. La API de
+ese major **no** es la de `openai>=1.0` (`openai.OpenAI()`): es el estilo `openai.ChatCompletion`.
+
+🔴 **Un engagement que llegue a un Open edX Quince/Redwood/Sumac y asuma el SDK moderno se choca con
+un major antiguo EN EL CORE**, no en su propio código — y migrarlo toca el `kernel.in` de la
+plataforma, no un plugin. 🔵 **Y `master` ya no la trae**: la dependencia se cayó entre `sumac` y
+`master`, así que la pregunta «¿con qué SDK hablo?» tiene **tres respuestas distintas** (pre-1.0,
+pre-1.0, ninguna) según dónde caiga el cliente. Una sola respuesta sin ref sería falsa en dos tercios
+de los casos.
+
+### 🟢 709 — El defecto es real pero NO universal: 1 de 2, y no se generaliza
+
+`instructure/canvas-lms` se midió igual, con el mismo control y el mismo canal: en `master` y en
+`prod` —las 2 refs que resuelven— **no** aparece ningún token de proveedor de modelo. **El veredicto
+sin ref de Canvas se sostiene.**
+
+🔵 **Así que la lección no es «todos los veredictos sin ref están mal», sino «un veredicto sin ref no
+se sabe si está mal, y averiguarlo cuesta una medición».** De dos medidas, **una** se cayó. 🔴 **Las
+cinco filas restantes** (`chamilo`, `ILIAS`, `frappe/education`, `frappe/erpnext`, `openeducat`)
+**siguen sin ref y quedan como ACCIÓN, no como veredicto**: generalizar desde una muestra de dos sería
+exactamente el error de denominador que `P228` y `P271` ya nombraron en esta base.
+
+### 🔵 710 — Un control de ref invariante al layout pasa justo cuando la ruta medida se rompió
+
+Un control de ref prueba que **la ref existe**; **no** prueba que la ruta medida siga siendo la
+dirección correcta en esa ref. Contraejemplo medido en este pase, sobre `MOODLE_501_STABLE`:
+
+| ruta | código |
+|---|---|
+| `README.md`, `composer.json`, `index.php` | 🟢 **200** |
+| `version.php` | 🔴 **404** |
+| `public/version.php` | 🟢 **200** (`$release = '5.1.8'`) |
+
+No falta: **en 5.1 el webroot se mudó a `public/`**. 🔴 **Un control invariante al layout (`README.md`)
+PASA en las seis refs**, incluidas las cuatro donde la ruta medida se había roto — y una matriz
+ingenua habría leído **«0 proveedores»** en 5.1/5.2/5.3/`main`, que es un **cero falso con el control
+en verde**. 🟢 **El pase 90 ya tenía esta compuerta** (`sweep_matrix.sh` alterna prefijo `ai` /
+`public/ai` y `controls.tsv` trae los dos controles cruzados); lo que agrega este pase es la **regla
+explícita**: el control debe co-moverse con la ruta medida, o no es control de esa ruta.
+
+### 🔵 711 — Por primera vez una cifra de esta base se confirma por segunda mano
+
+La matriz de proveedor por ref del pase 90 se **remidió entera** en este pase, a mano, con un bucle
+`curl` distinto y escrito de cero. **6 de 6 refs coinciden EXACTO**: mismo `$release`, mismo layout,
+mismo conjunto de proveedores, mismos totales **2 → 3 → 4 → 6 → 7 → 7**.
+
+🟢 **Es la primera replicación independiente de un número de esta base.** Hasta acá toda cifra era de
+medición única, y una medición única no distingue «es así» de «lo medí mal una vez». 🔵 **Y el canal
+se recalibró de primera mano**: `raw.githubusercontent.com` **DISCRIMINA** (200 a la buena, 404 a la
+inventada, en los tres repos) y además es **DETERMINISTA** —5 repeticiones × 6 pares `(ref, ruta)` =
+**30/30** idénticos—, así que ningún 404 publicado acá es un *flake*. 🔴 **`curl -sI github.com` y
+`api.github.com` dan 403 a la buena Y a la inexistente: cuarto pase consecutivo** (85, 86, 90, 91)
+midiendo que **el canal que el encargo ordena no puede opinar**.
 
 ### 🔴 699 — El eje de proveedor no tenía REF, y sin ref «la plataforma soporta X» no significa nada
 

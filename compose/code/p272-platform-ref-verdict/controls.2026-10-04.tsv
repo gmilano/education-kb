@@ -1,0 +1,14 @@
+# Controles del canal y del PORTADOR, pase 91 del 2026-10-04.
+# Regla: un 404 solo es evidencia sobre la RUTA si un control resuelve 200 sobre la MISMA ref.
+control	url	codigo	lectura
+canal-bueno	raw/moodle/moodle/MOODLE_500_STABLE/version.php	200	el canal responde
+canal-malo	raw/moodle/moodle/zzz-fake-branch-91/README.md	404	DISCRIMINA -> CALIBRATED
+canal-malo-2	raw/moodle/moodle/MOODLE_999_STABLE/version.php	404	ref inventada da 404 en TODA ruta
+curl-sI-bueno	curl -sI github.com/moodle/moodle	403	-
+curl-sI-malo	curl -sI github.com/moodle/zzz-does-not-exist-91	403	403 a la buena Y a la inexistente -> NO DISCRIMINA
+api-bueno	api.github.com/repos/moodle/moodle	403	NO DISCRIMINA
+determinismo	5 repeticiones de 6 pares (ref,ruta)	30/30 iguales	el canal es DETERMINISTA, no hay flake
+openedx-malo	raw/openedx/edx-platform/zzz-fake-ref-91/README.rst	404	DISCRIMINA
+openedx-bueno	raw/openedx/edx-platform/master/README.rst	200	-
+canvas-malo	raw/instructure/canvas-lms/zzz-fake-91/Gemfile	404	DISCRIMINA
+canvas-bueno	raw/instructure/canvas-lms/master/Gemfile	200	-

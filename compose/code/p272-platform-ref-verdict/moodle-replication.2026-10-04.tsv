@@ -1,0 +1,10 @@
+# REPLICACION INDEPENDIENTE de la matriz del pase 90 (P269), medida de nuevo a mano en el pase 91
+# por un bucle curl distinto. 6/6 refs coinciden EXACTO con matrix.2026-10-04.tsv: mismo $release,
+# mismo layout, mismo conjunto de proveedores. La matriz pasa de medicion unica a REPRODUCIDA.
+ref	layout	release	n_proveedores	proveedores	coincide_con_pase90
+MOODLE_405_STABLE	root	4.5.15	2	openai,azureai	SI
+MOODLE_500_STABLE	root	5.0.11	3	openai,azureai,ollama	SI
+MOODLE_501_STABLE	public/	5.1.8	4	openai,azureai,ollama,deepseek	SI
+MOODLE_502_STABLE	public/	5.2.4	6	openai,azureai,ollama,deepseek,gemini,awsbedrock	SI
+MOODLE_503_STABLE	public/	5.3	7	openai,azureai,ollama,deepseek,gemini,awsbedrock,anthropic	SI
+main	public/	6.0dev	7	openai,azureai,ollama,deepseek,gemini,awsbedrock,anthropic	SI

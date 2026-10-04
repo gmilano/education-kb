@@ -77,7 +77,28 @@ o la variable de entorno (regla de **P107**, pase 47):
 | **`p269-provider-release-matrix/`** | **el eje de proveedor anclado a REF, y la capa de PLATAFORMA que `P257` nunca midió** | ⚠️ **sin suite a propósito** — ver abajo | 🔵 **6 refs × 7 proveedores = 42 celdas** · 🟢 **2→3→4→6→7** proveedores en núcleo de 4.5.15 a 5.3 |
 | ídem, la capa de plataforma | ¿alguna plataforma rutea por una abstracción de proveedor? | `sh sweep_matrix.sh` *(registrado, no ejecutado acá)* | 🟢 **1 `ABSTRACCION-EN-NUCLEO`** (Moodle, 7 proveedores) · 6 sin proveedor de modelo · ⚠️ 1 `NO-CLAIM` |
 | ídem, la licencia de esa capa | leída del payload, 8 de 8 | ídem | 🔴 **COPYLEFT 8 de 8, CERO permisivas** (GPL-3.0+ · AGPL-3.0 ×2 · GPL-3.0 ×4 · LGPL-3.0 ×1) |
+| **`p272-platform-ref-verdict/`** | **los veredictos de plataforma del pase 90, que se publicaron SIN REF en el mismo instrumento que exigió ref** | ⚠️ **sin suite a propósito** — ver abajo | 🔴 **1 de 2** plataformas CONTRADICE su veredicto sin ref |
+| ídem, Open edX por ref | ¿el veredicto `SIN-PROVEEDOR-DE-MODELO` aguanta una ref? | `sh sweep_platform_ref.sh` *(registrado, no ejecutado acá)* | 🔴 **`openai==0.28.1` DIRECTA** en `quince`/`redwood`/`sumac` · 🟢 ausente en `master` |
+| ídem, la replicación de la matriz del pase 90 | ¿la matriz de Moodle se sostiene remedida por otra mano? | ídem | 🟢 **6/6 refs EXACTO** (2→3→4→6→7→7) — primera cifra REPLICADA de esta base |
 
+
+🔴 **Pase 91 del 2026-10-04 — el tablero TAMPOCO se re-verificó, y la columna «Hoy» sigue sin
+afirmarse como medida.** La ejecución de código del árbol estuvo **NEGADA** otra vez
+(`[Code from External]`): van los pases 58, 67, 79, 80, 81, 84, 86, 89, 90 y **91**. 🔵 **Las cifras
+en pie siguen siendo las del pase 89 —42 invocaciones, 42 con código de salida 0— como ÚLTIMA
+medición, no como medición de hoy** (`P107`).
+
+🟢 **Lo que este pase sí midió, por el mismo canal que no necesita ejecutar nada del árbol:** la
+matriz del pase 90 **replicada entera** (6 refs × 7 proveedores, **6/6 exacto** — primera cifra de
+esta base confirmada por segunda mano), más **6 veredictos de plataforma por ref** y **11 controles**,
+incluido un control de **determinismo** (5 repeticiones × 6 pares `(ref, ruta)` = **30/30** iguales).
+
+🔴 **Y lo que el pase corrige del árbol es al pase anterior, con su propia regla:** `P269` demostró
+que un conjunto de proveedores es propiedad del par **(repo, ref)** y, en el mismo instrumento,
+publicó **siete** veredictos de plataforma **sin ref**. Medidas dos: `openedx/edx-platform`
+**CONTRADICE** el suyo —`openai==0.28.1`, SDK **pre-1.0**, declarada **directa** en `quince`,
+`redwood` y `sumac`, ausente sólo en `master`— y `canvas-lms` lo **sostiene**. **1 de 2**, y las otras
+cinco filas **siguen sin ref**: quedan como ACCIÓN, no como veredicto (**P272**).
 
 🔴 **Pase 90 del 2026-10-04 — el tablero NO se re-verificó, y la columna «Hoy» de arriba NO se
 afirma como medida en este pase.** La ejecución de código del árbol estuvo **NEGADA**
