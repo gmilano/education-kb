@@ -1,7 +1,7 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-03
+updated: 2026-10-04
 ---
 
 # 🗺️ Mapa de mercado — Education
@@ -584,6 +584,7 @@ players 2026. Resultado honesto:
 | North America | **Confirmación.** 134 proyectos de ley en 31 estados, los mandatos de MD/ID/OK/VA, el 86% de adopción, el marco estudiantil de AASA — **todo ya estaba registrado.** Nada nuevo |
 | EMEA | **Confirmación.** Anexo III alto riesgo, Digital Omnibus, fechas 2027-12-02 / 2028-08-02 — ya estaba, y con identificadores citables (Reglamento (UE) 2026/1744). Nada nuevo |
 | APAC | **Un hallazgo nuevo:** la oficialización de los libros de texto digitales en Japón (abajo, en `### APAC
+| LATAM | **Confirmación** (Observatorio UNESCO, sandbox de la ANPD brasileña, Uruguay y el Convenio del Consejo de Europa, CENIA). Y **un vacío nuevo y medido** en la capa de skills (abajo, en `### LATAM`) |
 
 #### 📍 Pase 77 del 2026-10-03 — séptimo pase sin cifra regulatoria nueva, y entran dos cifras de RETORNO que la región no tenía
 
@@ -891,7 +892,6 @@ multi-jurisdicción. Para un despliegue que cruce Corea + Singapur + India, lo q
 por jurisdicción sobre un núcleo común**, con la divulgación coreana y la supervisión humana como configuración.
 **Nota de encuadre:** Open edX es la base de huella pública grande **de India**, así que el **gap 50** (authoring
 experimental) es un riesgo técnico **de esta región** tanto como de LATAM.
-`) |
 
 **Agregado en el pase 23 (2026-10-01) — tres relojes regulatorios con fecha y la lista completa de modelos soberanos.** El barrido regional de este pase cierra con números y fechas lo que los pases 6 y 7 habían registrado como «ola»:
 
@@ -905,7 +905,6 @@ experimental) es un riesgo técnico **de esta región** tanto como de LATAM.
 
 **La soberanía dejó de ser retórica y es una lista.** Toda economía grande de APAC está construyendo modelo propio: **Sarvam AI** (India), **ILMU** (Malasia), **Sahabat AI** (Indonesia), **SEA-LION** (Singapur), **HyperCLOVA X Think** (Corea del Sur), **NTT Sarashina** (Japón) y **TAIDE** (Taiwán). Para un proyecto educativo en la región eso significa que **la capa de modelo es una decisión política del cliente, no técnica nuestra**: el entregable tiene que ser **agnóstico de proveedor** desde el diseño (LiteLLM o equivalente en el medio), porque el modelo lo elige el ministerio. Mercado de AI de la región: **~USD 102.000M (2025) → >USD 735.000M (2030), CAGR ~34,5%**; los compradores que dominan la vertical educativa siguen siendo **China, India y Japón**.
 
-| LATAM | **Confirmación** (Observatorio UNESCO, sandbox de la ANPD brasileña, Uruguay y el Convenio del Consejo de Europa, CENIA). Y **un vacío nuevo y medido** en la capa de skills (abajo, en `### LATAM
 
 #### 📍 Pase 77 del 2026-10-03 — entra la cifra que completa el cuadro de desconfianza de la región, y es del instrumento que esta base ya usaba
 
@@ -1789,6 +1788,49 @@ Dónde se produce el software educativo abierto, que no es donde está la demand
 ## Opportunities by region
 
 ### North America
+
+#### 📍 Pase 78 del 2026-10-03 — se CORTA la racha de siete pases sin instrumento regulatorio nuevo, y el que entra trae DOS relojes con fecha y un número de documento citable
+
+🟢 **El hallazgo del pase, y es el primero de su clase en esta base: una política de AI de SISTEMA
+universitario público completo, no de un estado ni de un distrito.** La **SUNY Systemwide
+Artificial Intelligence Policy**, **Document Number 6904**, **vigente desde 2026-04-30**. Es la
+unidad de adopción que faltaba entre «ley estatal» y «guía de distrito K-12», que eran las dos
+únicas clases que esta base tenía registradas para la región.
+
+🗓️ **Dos relojes con fecha, que es lo que cotiza en una propuesta:**
+
+| Reloj | Fecha | Qué obliga | A quién |
+|---|---|---|---|
+| Alfabetización en AI como **competencia central** del *General Education Framework* | **Otoño 2026** | Incorporarla a *gen ed* | Todos los alumnos de grado que ingresan |
+| Publicar o actualizar la política de AI institucional | 🔴 **2026-12-31** | Publicar o actualizar | Cada institución del sistema |
+
+🟢 **Y la cifra de alcance, que es la que dimensiona el trabajo:** currícula de AI o relacionada ya
+se ofrece en **61 de los 64 campus** de SUNY.
+
+⚠️ **Advertencia de fuente, y es de este entorno, no de la fuente:** la primaria
+(`suny.edu/sunypp/documents.cfm?doc_id=933`) está **bloqueada por el proxy de egreso de este
+entorno** (`EGRESS_BLOCKED`, medido en este pase). El dato queda registrado desde resultados de
+búsqueda secundarios y **NO está verificado contra la primaria** — pendiente de confirmación en un
+pase con el canal abierto. El número de documento y las dos fechas se publican con esa reserva.
+
+⚠️ **Una cifra de mercado nueva que NO se promedia, porque es un TERCER alcance.** El barrido
+devolvió **US$ 3,68 B (2026) → US$ 32 B (2030)** con **36 % de cuota regional**. Esta base ya carga
+dos cifras no conciliables para la región —**US$ 951 M (2024) → US$ 2.303,2 M (2029), CAGR 15,9 %**
+y **EE. UU. US$ 2,01 B (2025) → US$ 32,64 B (2034)**—. Son **tres firmas y tres alcances
+distintos**: 🔴 **no se promedian y no se citan juntas como si fueran una serie.**
+
+🔵 **Confirmaciones, sin novedad:** **35 estados + Puerto Rico** con guía o política oficial de AI
+para K-12. ⚠️ **Ojo de método: NO contradice** el «134 proyectos de ley en 31 estados» que esta
+base publica — son **clases de instrumento distintas** (guía ejecutiva vigente vs. proyecto
+legislativo presentado) y son complementarias, no cifras rivales. El *STUDENTS FIRST Act of 2026*,
+**AB 1159** e **Idaho SB 1227** ya estaban registrados.
+
+**Oportunidad.** El **2026-12-31 de SUNY es una fecha de cumplimiento direccionable sobre 64
+campus**, con el entregable nombrado por la propia política (publicar o actualizar la política de
+AI institucional) y con la competencia de *gen ed* de otoño 2026 como segundo frente. Es el tipo de
+encargo que esta base venía pidiendo para la región: **con fecha, con unidad de compra y con
+alcance contable** — y no depende de que avance ninguna ley federal sectorial, que esta base ya
+registró como inexistente (*«no equivalent to the FDA exists for educational technology»*).
 
 #### 📍 Pase 77 del 2026-10-03 — séptimo pase sin cifra regulatoria nueva, y la oportunidad de la región cambia de SIGNO en la capa de telemetría
 
@@ -3554,6 +3596,29 @@ Artículo 50(2) **no es exigible** en North America — pero es **el requisito m
 multi-región conviene cotizarlo contra el techo europeo y no contra el piso local (ver **P103** y **P105**).
 
 ### EMEA
+
+#### 📍 Pase 78 del 2026-10-03 — el canal de EMEA no devuelve instrumento nuevo, y el pase lo DECLARA en vez de reescribir lo que ya estaba
+
+🔴 **Vacío declarado, no silencio.** La búsqueda regional obligatoria se corrió
+(`AI education EMEA 2026 adoption regulation players`, año calculado: 2026) y **no devolvió ningún
+instrumento regulatorio que esta base no tenga ya**. Lo devuelto es confirmación exacta de lo
+publicado: el **Anexo III** de alto riesgo cubre la AI que determina acceso a la educación, evalúa
+resultados de aprendizaje o influye en la trayectoria formativa; el corrimiento del plazo de alto
+riesgo autónomo a **2027-12-02** por el Omnibus; y el inicio de la **aplicación por la AI Office y
+las autoridades nacionales el 2026-08-02**, que esta base ya tenía como fecha viva.
+
+🔵 **Lo que importa que siga en pie, y se reconfirma por un canal distinto:** el Omnibus **no tocó
+el Artículo 50**, que es la obligación que esta KB vende y sobre la que tiene herramienta propia
+medida (`compose/code/aiact-50-2-*`). Un dato que se reconfirma por otra fuente y no se mueve
+**sube de confianza aunque no sume fila**.
+
+🔵 **Dato de infraestructura institucional, sin número:** el barrido nombra el **AI Act Service
+Desk** como canal de soporte de implementación y la **AI Skills Academy** como anunciada a futuro.
+⚠️ Ninguno trae fecha exigible ni obligación, así que entran como contexto y **no como reloj**.
+
+**Oportunidad, sin cambios:** la ventana entre la aplicación ya iniciada (**2026-08-02**) y el alto
+riesgo educativo (**2027-12-02**) sigue siendo el plazo para **llegar con el expediente armado, no
+para empezarlo** — y el Artículo 50, que no se corrió, es la parte que ya obliga.
 
 #### 📍 Pase 77 del 2026-10-03 — la región aporta CERO cifras y CERO piezas en este pase, y se declara
 
@@ -5437,6 +5502,30 @@ este pase dejó cubierto con código.
 
 ### APAC
 
+#### 📍 Pase 78 del 2026-10-03 — octavo barrido de APAC sin instrumento nuevo, y la confirmación vale porque REFUERZA un dato propio por un canal distinto
+
+🔴 **Vacío declarado.** La búsqueda regional obligatoria se corrió y **todo lo devuelto ya estaba en
+esta base**, verificado por `grep` antes de escribirlo: el **segundo AI Basic Plan de Japón**
+(aprobado por el Gabinete el **14 de julio**, revisando el de diciembre de 2025) ya estaba
+registrado; la **AI Promotion Act** deliberadamente flexible y pro-innovación también; el **AI
+Basic Act coreano** vigente desde **2026-01-22** con educación entre los sistemas de *high-impact*;
+**Vietnam**; y la señal de **India** de ir a **legislación dedicada con modelo basado en riesgo**
+(julio de 2026) ya estaba. El **Ipsos Education Monitor 2026** —menor apoyo a prohibir la AI en las
+escuelas en los mercados asiáticos relevados— también.
+
+🔵 **Por qué la confirmación igual sirve, y es un criterio que esta base aplica:** es la **segunda
+vez** que el canal devuelve el segundo AI Basic Plan japonés con **la misma fecha (14 de julio)** y
+el mismo encuadre de «documento de estrategia, no ley». Un dato que se reconfirma por un canal
+distinto y **no se mueve** sube de confianza. Lo que no hace es sumar fila, y este pase no la suma.
+
+🔵 **Reconfirmado sin cambio de fondo:** **no hay ni se anunció marco común regional.** Singapur por
+guías maduras de AI responsable, China por normas contra la mala conducta algorítmica, India
+aplicando derecho penal existente.
+
+**Oportunidad, sin cambios:** con obligación por país y sin convergencia regional, lo que cotiza
+sigue siendo **la política por jurisdicción como nodo configurable sobre un núcleo común**, no el
+producto único.
+
 #### 📍 Pase 75 del 2026-10-03 — el mapa regulatorio sin novedad, y la capa de *rostering* tampoco tiene pieza propia
 
 🔴 **Sin cifra regulatoria nueva; el canal devolvió el inventario propio de esta base:** el *AI
@@ -6878,6 +6967,35 @@ desplegado + puerta MCP permisiva (`jbnu-lms-mcp`, `canvas-lms-mcp`, las cuatro 
 depende de un tercero» son el mismo argumento.**
 
 ### LATAM
+
+#### 📍 Pase 78 del 2026-10-03 — LATAM confirma sin novedad, y el pase lo DICE en vez de rellenar
+
+🔴 **Vacío declarado.** La búsqueda regional obligatoria se corrió en español
+(`AI educación LATAM 2026 adopción regulación Brasil México Chile`) y **no aportó una sola cifra ni
+un solo instrumento que esta base no tuviera**, verificado por `grep` contra el archivo: el **PL
+2338/2023** brasileño aprobado por el Senado y pendiente en Diputados (clasificación por riesgo,
+transparencia, evaluación de impacto algorítmico, registro nacional de alto riesgo); la **Ley
+21.719** chilena de datos personales con **vigencia diferida al 2026-12-01** y el proyecto de ley de
+AI en trámite; las directrices del **INAI** mexicano; el **ILIA/AI Readiness** reconfirmando a
+**Brasil (65,89), Chile (63,19) y Uruguay (62,21)** como los únicos de la región en el top 50
+global; y el **47 %** de implementación empresarial de AI de la región.
+
+🟢 **La única cosa que el barrido movió es el SIGNO de una confirmación, no su número:** las tres
+puntuaciones del índice volvieron **idénticas a las publicadas** (65,89 / 63,19 / 62,21) y con la
+**misma asignación por país**. Esta base las traía desde el pase 58; ahora están reconfirmadas por
+un canal distinto, lo que **cierra el riesgo de haber invertido país y puntaje** al transcribirlas
+—un error que en esta vertical ya se cometió con la columna «Rol» (**P234**) y que acá no ocurrió.
+
+🔵 **Nota de método, y es la razón por la que este pase no infla LATAM:** esta base tiene registrado
+desde el pase 26 que **las fuentes primarias de la región siguen bloqueadas** desde este entorno.
+Cuando el canal secundario devuelve sólo lo ya publicado, **la única salida honesta es declarar el
+vacío**: la alternativa —reescribir lo mismo con otras palabras y fecharlo hoy— convierte una
+región sin novedad en **una región que parece cubierta**, que es exactamente el daño que el
+encuadre de esta KB pide evitar.
+
+**Oportunidad, sin cambios:** la brecha institucional sigue siendo la venta — **92 % de alumnos y
+79 % de docentes usando AI contra sólo el 30 % que dice que el uso institucional de AI cumple sus
+expectativas** (Digital Education Council LATAM, con el Tec de Monterrey).
 
 #### 📍 Pase 75 del 2026-10-03 — el canal devuelve el inventario propio, y la capa de *rostering* le queda MÁS accesible que a NA
 

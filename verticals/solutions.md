@@ -1,7 +1,7 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-03
+updated: 2026-10-04
 ---
 
 # 🏭 Verticales de partida — Education
@@ -111,6 +111,36 @@ updated: 2026-10-03
 > versiones), así que lo permisivo (`qti3-*`, `instructure/qti`) es **lo único proponible** — con **`qti3-a11y`** y
 > **`qti3-pnp`**, que abren accesibilidad de evaluación como entregable auditable (**P72**). ⚠️ **Open edX cambia de
 > recomendación: proponer con presupuesto de mantenimiento (gap 70).** Ver la sección del pase 33, abajo.
+
+## 🔴 Catorce filas de este archivo habían dejado de ser datos, y el render se veía perfecto (pase 78 del 2026-10-03)
+
+🔴 **El defecto, en una línea:** en `:1501` había un **comentario HTML** (`<!-- pase 39 del
+2026-10-02: las nueve filas siguientes salen del barrido por REGISTRO ... -->`) **entre la última
+fila de la tabla de puertas MCP y las catorce siguientes**. En Markdown un comentario entre filas
+**corta el bloque**: el trozo de abajo queda **sin encabezado y sin separadora**, y el compilador
+**lee su primera fila de datos como encabezado**.
+
+| Qué se perdía | Detalle |
+|---|---|
+| Filas que dejaron de ser datos | 🔴 **14** (de `PabloPC05/mcp-usc` a `cassproject/CASS`) |
+| Fila que pasaba a ser encabezado | 🔴 `\| **Moodle** \| PabloPC05/mcp-usc \| **MIT** \| …` — una entidad llamada **«Moodle»** con columnas llamadas **«PabloPC05/mcp-usc»** y **«MIT»** |
+| Qué se veía al revisar | 🟢 **nada raro**: el render de un bloque de pipes sin encabezado sigue pareciendo una tabla |
+
+🟢 **La reparación:** re-emitir **encabezado + separadora** justo después del comentario. Las 14
+filas vuelven a ser filas de la misma tabla, el comentario conserva su procedencia (y su nota sobre
+las **nueve** del barrido por registro, que son las nueve primeras; las otras cinco se agregaron en
+pases posteriores), y la tabla queda contigua.
+
+🔵 **La regla que queda, y aplica a los 8 archivos:** la anotación de procedencia va **arriba** de la
+tabla, o la tabla **re-emite encabezado + separadora** después. **Nunca un comentario entre filas.**
+Medido ahora por `compose/code/p239-table-integrity/` (**P239**), que cierra en **0 hallazgos** sobre
+toda la KB.
+
+⚠️ **Nota de alcance sobre este archivo:** la tabla de criterio de elección de `:2127`
+(«Si el cliente es…») **no es una tabla de región** aunque su primera columna nombre regiones
+(*«Ministerio o sistema educativo público, APAC / LATAM / África»* es un **perfil de cliente**). El
+eje **P240** la reclamó en su v2 y **fue un falso positivo del instrumento, no un defecto del
+archivo**; quedó como test de regresión.
 
 ## 🪪 La capa de *rostering* se parte por CAPA, y eso cambia qué se puede PROMETER en una propuesta de K-12 (pase 76 del 2026-10-03)
 
@@ -1499,6 +1529,8 @@ filas de `agents/top.md`. **49 de 49 respondieron, cero 404.** Detalle completo 
 | **Open edX** | `openedx-mcp` + `tutor-contrib-openedxmcp` | 🔴 **AGPL-3.0** | — (PyPI) | 🔴 **gap 68**: 12 releases en 2 días y nada en 70 | Oficial, en proceso, **copyleft y en proceso Django** |
 | **xAPI / LRS** | 🔴 `DavidLMS/learnmcp-xapi` | **MIT** | 🔴 **2025-08-29** | 🔴 **CONGELADO (13,1 m)**, **1 sola rama** | 🔴 **Es «la única puerta» del gap 64 y la pieza más citada de esta base (42 menciones).** Ver abajo |
 <!-- pase 39 del 2026-10-02: las nueve filas siguientes salen del barrido por REGISTRO de paquetes (npm/PyPI/Packagist/RubyGems) por nombre de PROYECTO, no de protocolo. Licencia leída del archivo o del tarball; vitalidad por `git ls-remote` + commit de la rama por defecto; tools contadas en el código. Ver `repos/trending.md` y `agents/trending.md` del mismo pase. -->
+| LMS / estándar | Puerta | Licencia | `HEAD` | Estado | Qué se puede prometer |
+|---|---|---|---|---|---|
 | **Moodle** | `PabloPC05/mcp-usc` | **MIT** | 🟢 **2026-08-27** | 🟢 activo (1,2 m) | 🟢 **91 tools y 22 gemelos `preview_*`: el único freno de escritura imponible desde afuera.** ⚠️ Mitad institucional (USC) |
 | **Moodle** | `JOSETRA44/DUTIC-mcp` | **MIT** | 🟢 **2026-09-24** | 🟢 activo (8 d) | 🟢 **Única puerta LATAM con licencia verificada** (UNSA, Perú). 12 tools + biblioteca. ⚠️ `encuesta_fill_all` es escritura discutible |
 | **Moodle** | `Dymayo/moodler-mcp` | **MIT** | 🟢 **2026-09-19** | 🟢 activo (13 d), **0 tags** | ⚠️ **38 tools (30/8), pero PUBLICA la nota** (`workflowstate=""`). Huella grande: `playwright` |

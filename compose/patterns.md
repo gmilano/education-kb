@@ -1,7 +1,7 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-03
+updated: 2026-10-04
 ---
 
 # 🧩 Patrones de composición — Education
@@ -109,6 +109,86 @@ updated: 2026-10-03
 > no existe en open source permisivo).
 > **Pase 11:** +2 patrones — **P25** (riesgo de abandono conforme al Anexo III, la capa con presupuesto ya asignado y sin oferta open source) y **P26** (agente docente sobre la ontología curricular nacional ya publicada).
 > **Pase 27:** **+4 patrones y una corrección.** 🔴 **P51 queda con premisa falsa** —el conector MCP de Moodle **sí existe y es MIT**— y lo reemplazan **P54** (corrección y devolución sobre Moodle con **compuerta humana**, el último tramo del gap 6, con piezas que ya escriben), **P55** (el conector de **Open edX**, que es el único que de verdad no existe), **P56** (**SCORM** como formato de salida de la capa generativa: cero integración, offline) y **P57** (evidencia por MCP cotizada sobre lo que CaSS **realmente** expone — 6 de 61 operaciones, con insignias y autoría de marcos **fuera**).
+
+## 🧾 P239 + P240 — la integridad de tabla y la cobertura regional son medibles, y esta KB las estaba fallando (pase 78 del 2026-10-03)
+
+**Instrumento:** `compose/code/p239-table-integrity/` — `check_tables.py`, 23 tests, salida TSV.
+
+| Eje | Qué mide | Modo de falla que evita |
+|---|---|---|
+| **P239** | Fila de datos cuyo bloque de pipes **no tiene separadora arriba** | El compilador lee **la primera fila de datos como encabezado**: se pierde una fila real y nace una entidad con nombre de dato |
+| **P240** | Tabla con **columna de región** a la que le falta una del vocabulario cerrado | Una tabla regional incompleta **se lee como cobertura completa** |
+
+**Receta de uso, concreta:**
+
+```sh
+# 1. antes de cada commit de la KB
+python3 compose/code/p239-table-integrity/check_tables.py \
+        agents/*.md repos/*.md verticals/*.md intel/*.md compose/patterns.md \
+  > compose/code/p239-table-integrity/result.$(date +%F).tsv
+# salida 1 = hay hallazgos; 0 = limpio
+
+# 2. una tabla legitimamente parcial DECLARA su alcance, no lo deja implicito
+#    <!-- p240-scope: North America, EMEA -->
+```
+
+🔴 **La reserva de método, que es la parte que se transfiere:** este linter produjo **7 falsos
+positivos** antes de medir bien, y **las 7 tablas reclamadas estaban correctas**. **El instrumento se
+valida antes de tocar el archivo** — si no, el pase «arregla» datos buenos para callar a su propia
+medición. Los 7 quedaron como tests.
+
+---
+
+## 🗓️ P241 — el expediente de política de AI institucional contra un reloj de sistema, armado con piezas que esta KB ya midió (pase 78 del 2026-10-03)
+
+**Disparador real:** la **SUNY Systemwide AI Policy** (**Document Number 6904**, vigente
+**2026-04-30**) obliga a **cada institución del sistema** a **publicar o actualizar su política de AI
+antes del 2026-12-31**, y mete la alfabetización en AI como competencia central de *gen ed* para todo
+ingresante desde **otoño 2026**. Son **64 campus con el mismo entregable y la misma fecha**.
+⚠️ **Reserva: la primaria (`suny.edu`) está bloqueada por el proxy de egreso de este entorno**; el
+dato viene de secundarias y la receta se cotiza con esa salvedad verificada en la primera reunión.
+
+### Las piezas, todas ya medidas por esta base (licencia por payload, `HEAD` verificado)
+
+| Rol en la receta | Pieza | Licencia | Qué aporta, leído en el código |
+|---|---|---|---|
+| Puerta al LMS, lado docente | `bruchris/canvas-lms-mcp` | **MIT** | 165 tools; `CANVAS_PSEUDONYMIZE_STUDENTS=true` seudonimiza y **la reversión exige una segunda bandera** — es el control FERPA que la política pide poder describir |
+| Puerta al LMS, alternativa Moodle | `toshieji/moodle-grading-mcp` | **MIT** | `save_grade_draft` → `workflowstate=readyforreview`: **la nota la publica una persona**, no el agente |
+| Compuerta de publicación de nota | `compose/code/grading-draft-gate/` | — (de esta KB) | Verifica que ninguna ruta publique nota sin paso humano: es el **test** del párrafo de supervisión humana |
+| Divulgación de asistencia AI | `compose/code/aiact-50-2-marking/` + `-pack/` | — (de esta KB) | Marca y empaqueta la divulgación. 🔵 **Se construyó para el Art. 50 del AI Act y aplica igual acá**, porque la política de SUNY pide *uso responsable declarado* |
+| Allowlist de superficie | `compose/code/mcp-allowlist-gateway/` | — (de esta KB) | Limita qué operaciones del LMS quedan expuestas al agente: el anexo de alcance técnico del expediente |
+| Integridad del propio expediente | `compose/code/p239-table-integrity/` | — (de esta KB) | 🔴 **Que las tablas del entregable no pierdan filas ni regiones** — el defecto que este pase encontró en su propia KB |
+
+### Cómo se cablea
+
+```
+        ┌─ canvas-lms-mcp (MIT) ──┐
+agente ─┤                          ├─> mcp-allowlist-gateway ─> grading-draft-gate ─> LMS
+        └─ moodle-grading-mcp (MIT)┘           (alcance)          (nota la libera
+                                                                   una persona)
+                                   └─> aiact-50-2-marking ─> expediente de divulgacion
+```
+
+1. **Inventario por campus** (semana 1–2): qué herramientas de AI toca el LMS, con la allowlist como
+   forma del inventario. El entregable de la política **es** esa lista más su justificación.
+2. **Controles medibles** (semana 3–5): seudonimización encendida con la doble bandera, y
+   `grading-draft-gate` corriendo en CI para que *«la nota la libera una persona»* sea un **test que
+   pasa**, no una promesa de la propuesta.
+3. **Divulgación** (semana 5–6): `aiact-50-2-marking` + `-pack` producen el artefacto de divulgación.
+4. **Alfabetización de *gen ed*** (paralelo): el reloj de **otoño 2026** es de currícula, no de
+   software — entra como taller y material, no como desarrollo.
+5. **Expediente** (semana 6–8): se publica antes del **2026-12-31**.
+
+**Por qué cotiza:** ⏱️ **6–8 semanas por campus con fuerte reuso entre campus** (la política es de
+sistema, así que el armazón se escribe una vez y se instancia 64 veces). 🟢 **Todas las piezas
+externas son MIT**, así que no hay restricción de entrega — a diferencia de la capa ERP de esta base,
+que es AGPL/LGPL.
+
+🔴 **Las dos reservas que van en la propuesta, no en la letra chica:** (1) la **primaria de SUNY está
+sin verificar** desde este entorno —se confirma en la primera reunión—; y (2) 🔴 **`compose/code/`
+contiene herramientas de esta KB sin archivo de licencia propio**: antes de entregarlas a un cliente
+hay que **ponerles licencia explícita**, que es una tarea de minutos y un bloqueo legal si se
+descubre tarde.
 
 ## 🧾 P234 — la columna de MUERTOS es la reserva bifurcable, y se mide igual que las demás (pase 77 del 2026-10-03)
 
@@ -9762,6 +9842,7 @@ verifica con una llamada a `tools/list`, que es la única prueba de que el tool 
 **El requisito regulatorio de las dos regiones que legislan sobre la nota es el mismo —la libera una
 persona— y las dos lo piden del RESULTADO, no del código.**
 
+<!-- p240-scope: North America, EMEA -->
 | Región | Instrumento | Lo que exige |
 |---|---|---|
 | **North America** | Oklahoma **SB 1734** (antes del ciclo 2027-28) | la AI no puede ser *«the primary basis for grading»*; *«educator-directed human-in-the-loop»* |

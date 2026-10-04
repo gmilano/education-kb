@@ -1,7 +1,7 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-03
+updated: 2026-10-04
 ---
 
 # 📡 Tendencias — education
@@ -101,6 +101,65 @@ updated: 2026-10-03
 > (tendencia 29), se abre el **gap 20** y se registran dos advertencias de verificación: los agregadores de estrellas
 > están mal por ~2× y **un 403 de `curl` no es un 404**. Ver la nota de método del pase 12.
 > **Pase 11:** el Digital Omnibus es derecho vigente (tendencia 25), aparece la capa predictiva y está vacía (tendencia 26), y se corrige un error de método de diez pasadas sobre licencias permisivas (tendencia 27).
+
+## 🆕 Tendencias 611–615 — pase 78 del 2026-10-03
+
+### 611. 🔴 Una tabla regional a la que le falta una región no deja hueco: deja cobertura APARENTE
+
+El defecto más caro que encontró este pase no es una cifra equivocada, es una **ausencia que se lee
+como presencia**. `intel/market.md:582` publicaba *«qué devolvió el barrido del pase 12»* con **North
+America, EMEA y APAC**. La fila de **LATAM** existía, pero estaba **partida en dos mitades** que
+vivían a 300 líneas de distancia (`:894` y `:908`, la segunda dentro de la sección de **APAC**).
+
+🔴 **El punto es el modo de falla, no el bug.** Una fila faltante en un catálogo de repos deja un
+hueco que se nota. **Una región faltante en una tabla de cuatro regiones se lee exactamente igual que
+un barrido que midió cuatro y encontró tres.** La asimetría es estructural: *el silencio y la
+cobertura tienen la misma forma*. Por eso el hueco se declara con fila propia —como la fila de
+**APAC** que este pase agregó a la tabla de la tendencia 59x— en vez de dejarse implícito.
+
+### 612. 🔴 El comentario HTML entre filas es un cortador de tablas silencioso
+
+`verticals/solutions.md:1501` tenía un `<!-- pase 39 ... -->` entre la última fila de una tabla y
+las catorce siguientes. En Markdown eso **corta el bloque**: el segundo trozo queda sin encabezado
+ni separadora y **el compilador lee su primera fila de datos como encabezado**. 🔴 **14 filas
+dejaron de ser datos**, y el render se veía bien. Es la variante estructural del defecto que esta KB
+ya venía persiguiendo en su forma literal (`| Nombre | Repo | Licencia |` compilado como entidad).
+
+🟢 **La regla operativa:** la anotación de procedencia va **arriba** de la tabla, o la tabla
+**re-emite encabezado + separadora** después del comentario. Nunca un comentario entre filas.
+
+### 613. 🔴 Un eje nuevo no se puede afirmar hasta que su instrumento deja de mentir
+
+El linter de este pase produjo **siete falsos positivos** en dos versiones antes de medir bien: la
+v1 no normalizaba emoji ni paréntesis ni celdas combinadas (3), la v2 leía como región cualquier
+celda que **contuviera** el nombre de una (4) — `86 % NA / 92 % LATAM / 66 % APAC` es una celda de
+cifras, no de región.
+
+🔴 **El contrafáctico es la tendencia:** las siete tablas reclamadas estaban **bien**. Si el pase
+hubiera «arreglado» tablas para callar al linter, **habría dañado siete tablas correctas para tapar
+un defecto de medición propio.** El orden correcto es **instrumento primero, archivo después** — y
+cada falso positivo queda como test de regresión, no como anécdota.
+
+### 614. 🟢 La unidad de adopción de AI en educación superior de EE. UU. subió de la institución al SISTEMA
+
+La **SUNY Systemwide AI Policy** (**Document Number 6904**, vigente **2026-04-30**) es la primera
+pieza de esta base que regula AI **a nivel de sistema universitario público completo** —64 campus—
+y no por estado ni por distrito. Trae **dos relojes**: alfabetización en AI como competencia central
+de *gen ed* para todo ingresante desde **otoño 2026**, y **2026-12-31** como fecha para que cada
+institución publique o actualice su política.
+
+🔵 **Por qué es una tendencia y no una noticia:** cambia la **unidad de compra**. Un encargo deja de
+ser «una universidad» y pasa a ser «un sistema con una fecha y 64 campus con el mismo entregable».
+⚠️ **Con la reserva de fuente declarada:** la primaria (`suny.edu`) está bloqueada por el proxy de
+egreso de este entorno y el dato viene de secundarias.
+
+### 615. 🔴 La variante de vocabulario regional es el defecto que rompe el filtro sin romper la lectura
+
+`repos/trending.md` publicaba **`Asia Pacific`** donde el vocabulario cerrado de esta KB dice
+**`APAC`**. La fila se leía perfecta en Markdown y **desaparecía de todo filtro por región**: una
+variante no es un sinónimo, **es un balde nuevo**. 🔵 **Lo interesante del hallazgo es el camino:** lo
+detectó un eje diseñado para buscar **filas faltantes**, que reportó «falta APAC» en una tabla que
+*parecía* tener la región. Un eje puede cubrir más superficie de la que se le pidió.
 
 ## 🆕 Tendencias 602–610 — pase 77 del 2026-10-03
 
@@ -3648,13 +3707,14 @@ por esa vía, por cuarta vez.** Las dos altas de este pase salieron **las dos de
 El pase 38 encontró la primera: `toshieji/moodle-grading-mcp` **no publica la nota**, la deja en
 `workflowstate=readyforreview`, y eso es exactamente lo que el régimen de alto riesgo del AI Act y las reglas de
 supervisión humana de Oklahoma y Maryland piden del software. **Lo anotó como un caso.** Este pase, midiendo otras dos
-piezas, encuentra que **no es un caso: es un patrón, y ya hay un miembro por cada región donde esta KB vende.**
+piezas, encuentra que **no es un caso: es un patrón, y ya hay un miembro en TRES de las cuatro regiones donde esta KB vende** — ⚠️ **corregido en el pase 78: se leía «por cada región», y el barrido de `P240` midió que APAC no tiene miembro** (fila de hueco declarada abajo).**
 
 | Región | Pieza (permisiva) | Estatuto | Mecanismo, leído en el código |
 |---|---|---|---|
 | **North America** | `bruchris/canvas-lms-mcp` (MIT) | **FERPA** | `CANVAS_PSEUDONYMIZE_STUDENTS=true` seudonimiza; la reversión exige **una segunda bandera**; `resolve_pseudonym` **sólo se registra en stdio**, como tool 166 |
 | **EMEA** | `toshieji/moodle-grading-mcp` (MIT) | **AI Act, Anexo III §3** | `save_grade_draft` → `readyforreview`: **la persona publica**. Allowlist de cursos, audit trail JSONL, sin notificación al alumno |
 | **LATAM** | `dasgltd/mcp-brasil` (MIT) | **LGPD** | `COLUNAS_DISTINCT_PERMITIDAS`: *frozenset* de **8 columnas agregadas**. `SOURCES.md` clasifica educación como **RISCO ALTO**, documenta el retiro de microdatos de 2022 y remite a **SEDAP**; re-identificación vedada |
+| 🔴 **APAC** | 🔴 **— ninguna pieza medida** | **Vietnam, Decisión 33** (evaluación automatizada y monitoreo conductual) + **Corea, AI Basic Act** | 🔴 **Hueco declarado en el pase 78:** la región con el único estatuto que nombra *monitoreo conductual* es la única **sin** pieza permisiva medida que lo implemente. Es el hueco más caro del eje, porque es donde la obligación es más específica |
 
 🟢 **Por qué esto cambia una conversación comercial y no sólo el catálogo.** La objeción de cumplimiento en educación
 no se contesta bien con una cláusula ni con una promesa de *roadmap*: se contesta mostrando **el mecanismo**. Las tres
@@ -4191,6 +4251,7 @@ corroborar.**
 
 **Las dos mitades de este pase se cruzan en un punto, y el cruce es la oportunidad.**
 
+<!-- p240-scope: EMEA, APAC -->
 | Regulador | Instrumento | Qué nombra | Fecha de cumplimiento |
 |---|---|---|---|
 | 🇪🇺 **EMEA** | AI Act, **Anexo III punto 3** | *«monitoreo durante exámenes»*, además de acceso, admisión y evaluación de resultados | **2027-12-02** |

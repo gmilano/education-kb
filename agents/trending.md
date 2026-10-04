@@ -1,7 +1,7 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-03
+updated: 2026-10-04
 ---
 
 # 📈 Agentes trending — education
@@ -9,6 +9,68 @@ updated: 2026-10-03
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 > No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
 
+## 2026-10-03 — pase 78: 14 filas de `verticals/` habían dejado de ser datos, la fila de LATAM se había caído de su tabla, y el linter que lo mide falló siete veces antes de medir bien
+
+> ⚠️ **Nota de fecha:** las mediciones de este pase se tomaron el **2026-10-03** (de ahí
+> `result.2026-10-03.tsv` y los encabezados de sección). La publicación cruzó la medianoche,
+> así que el `updated:` del frontmatter y el commit quedan en **2026-10-04**. Se deja dicho
+> para que la serie temporal de este archivo no parezca tener un salto.
+
+### 🔴 El hallazgo del pase no es un agente: son dos tablas que el compilador ya no podía leer
+
+Este pase corrió las búsquedas obligatorias (año calculado: **2026**) y **no dio de alta ningún
+agente**. Lo que encontró, auditando el archivo publicado, son **dos defectos estructurales** que
+ningún pase anterior medía — y que no se ven leyendo el Markdown renderizado:
+
+| Sitio | Qué pasaba | Filas afectadas |
+|---|---|---|
+| `verticals/solutions.md:1501` | Un **comentario HTML** entre la última fila y las siguientes **parte la tabla**. El segundo trozo queda sin encabezado ni separadora, así que **el compilador lee su primera fila de datos como encabezado** | 🔴 **14** |
+| `intel/market.md:582` | La tabla de cuatro regiones publicaba **tres**: la fila **LATAM** estaba **partida en dos mitades** que vivían a 300 líneas de distancia, en `:894` (`` `) \| ``) y `:908`, esta última **dentro de la sección de APAC** | 🔴 **1, y es la de LATAM** |
+
+🔴 **Por qué la segunda es la más cara, y no por el tamaño.** Una fila perdida de un catálogo deja un
+hueco visible. **Una región perdida de una tabla regional no deja hueco: deja cobertura aparente.**
+La tabla decía *«qué devolvió el barrido del pase 12»* con North America, EMEA y APAC, y **se leía
+exactamente igual** que si el barrido hubiera medido cuatro regiones y encontrado tres. Es el daño
+que el encuadre de esta KB nombra: *un hueco declarado es información, el silencio se parece a la
+cobertura*.
+
+🟢 **Las dos reparaciones, con verificación:** encabezado + separadora re-emitidos tras el comentario
+(14 filas recuperadas) y la fila de LATAM reunida desde sus dos mitades y restituida a su tabla. El
+barrido posterior sobre los 8 archivos da **0 hallazgos** (`compose/code/p239-table-integrity/result.2026-10-03.tsv`).
+
+### 🧪 El defecto de instrumento de este pase, que fue PEOR que el defecto del archivo
+
+🔴 **El linter falló siete veces antes de medir bien, y cada falla reclamaba una tabla que estaba
+BIEN.** Se registra porque es la parte transferible:
+
+| Versión | Falsos positivos | Qué leía mal |
+|---|---|---|
+| v1 | **3** | el **emoji** en `\| 🔴 **LATAM** \|`; el paréntesis en `APAC (Vietnam)`; `**APAC / LATAM**` como **una** celda con **dos** regiones |
+| v2 | **4** | cualquier celda que **contuviera** el nombre de una región: `86 % NA / 92 % LATAM / 66 % APAC` es una celda de **cifras**, `Ministerio…, APAC / LATAM / África` es de **perfil de cliente** |
+| v3 | **0** | — |
+
+🔴 **El contrafáctico es el dato:** si este pase hubiera «arreglado» las tablas para callar al linter,
+**habría dañado siete tablas correctas para tapar un defecto de medición propio.** La regla que
+queda: **un eje nuevo no se afirma hasta que su instrumento deja de mentir**, y cada falso positivo
+queda como test de regresión (23 tests, todos pasando).
+
+### ⚠️ La única candidata del barrido de agentes, y NO entra
+
+| Candidata | Licencia | ★ | Veredicto medido |
+|---|---|---|---|
+| `ChatBarAI/ai_lms` — LMS Rails con tutor AI en cada lección | 🟢 **MIT** | 🔴 **5** | 🔴 **NO entra.** Licencia y repo reales, verificados por WebFetch; **5 estrellas no sostienen una recomendación de estudio.** Queda registrada para que un pase futuro no la vuelva a «descubrir» |
+
+🔵 **Y una confirmación que ahorra trabajo:** el barrido devolvió **DeepTutor con ~40,4k ★**. Esta
+base ya publica **40,6k** — **la KB está adelante del canal**, así que no hay actualización que
+hacer. Se anota para no re-medirlo el pase que viene.
+
+### ⚠️ Canales que fallaron en este pase
+
+- 🔴 **`github.com` por `curl -sI`: 403 en las 6 URLs probadas.** ⚠️ **Un 403 del proxy NO es un 404
+  y no se registra como repo muerto** — es la trampa de método más fácil de este entorno. La
+  verificación se hizo por **WebFetch**, que sí pasa.
+- 🔴 **`suny.edu` bloqueado por el proxy de egreso** (`EGRESS_BLOCKED`), que es la primaria del único
+  hallazgo regulatorio nuevo del pase. Ver la reserva en `intel/market.md`, sección North America.
 ## 2026-10-03 — pase 77: la nota de honestidad de esta base estaba equivocada en las CINCO filas, el eje CAPA se da vuelta al cambiar de estándar, y la puerta xAPI que esta KB recomienda desde el pase 6 no pasa sus propios tests
 
 ### 🟢 La tabla de muertos cierra, y no era una excepción: era un patrón de 5 de 5

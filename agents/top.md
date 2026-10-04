@@ -1,7 +1,7 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-03
+updated: 2026-10-04
 ---
 
 # 🎯 Agentes AI — education
@@ -244,6 +244,60 @@ updated: 2026-10-03
 > fila** —`lineage-skill`, con un vocabulario cerrado de 9 valores por afirmación, **4 de los 9 «esto lo produjo el
 > modelo»**— y **ninguna de las dos sabe de la otra**. Ver la capa nueva al final de este archivo, las tendencias
 > **180**–**182** y el patrón **P99**.
+
+## 🧪 Altas de agente: 0 — y el presupuesto se gastó en que dos tablas de esta KB vuelvan a ser datos (pase 78 del 2026-10-03)
+
+🔴 **Cero altas, y conviene decir por qué antes de decir qué se hizo.** Las búsquedas obligatorias se
+corrieron (año calculado: **2026**): agentes open source de educación, trending de GitHub,
+plataformas verticales, tendencias, y **las cuatro regionales**. El canal de agentes devolvió, otra
+vez, **listicles de agentes de propósito general** (OpenClaw, OpenHands, opencode, CrewAI,
+LangChain) que **no son de esta vertical** y que esta base ya descartó por encuadre en pases
+anteriores.
+
+### ⚠️ La única candidata nueva, con el motivo medido
+
+| Candidata | Licencia | ★ | Lenguaje | Veredicto |
+|---|---|---|---|---|
+| `ChatBarAI/ai_lms` — LMS Rails con tutor AI integrado en cada lección | 🟢 **MIT** | 🔴 **5** | Ruby | 🔴 **NO entra.** Repo y licencia **reales y verificados** (WebFetch). Pero **5 estrellas no sostienen una recomendación de estudio**, y esta base prefiere menos filas reales que relleno. Queda registrada para que un pase futuro no la vuelva a «descubrir» |
+
+🔵 **Una confirmación que ahorra una medición:** el canal devolvió **DeepTutor ~40,4k ★** y esta base
+ya publica **40,6k** (`github.com/HKUDS/DeepTutor`). 🟢 **La KB está adelante del canal** — no hay
+actualización que hacer y se anota para no re-medirlo el pase que viene.
+
+### 🔴 Dónde se gastó el presupuesto: dos tablas que el compilador ya no podía leer
+
+Auditando el **archivo publicado** (no el canal), este pase encontró **dos defectos estructurales
+que ningún pase anterior medía** — y que **no se ven en el Markdown renderizado**:
+
+| Sitio | Qué pasaba | Filas |
+|---|---|---|
+| `verticals/solutions.md:1501` | Un **comentario HTML** entre filas **parte la tabla**; el trozo de abajo queda sin encabezado ni separadora y **su primera fila de datos pasa a ser el encabezado** | 🔴 **14** |
+| `intel/market.md:582` | La tabla de cuatro regiones publicaba **tres**: la fila de **LATAM** estaba **partida en dos mitades** a 300 líneas de distancia, la segunda **dentro de la sección de APAC** | 🔴 **1, la de LATAM** |
+
+🔴 **La segunda es la que importa, y no por tamaño.** Es la forma estructural del defecto que esta
+base viene persiguiendo en su forma literal (`| Nombre | Repo | Licencia |` compilado como entidad
+llamada «nombre»): **una fila de catálogo perdida deja un hueco visible; una REGIÓN perdida de una
+tabla regional deja cobertura aparente.** El silencio y la cobertura tienen la misma forma.
+
+🟢 **Reparadas y verificadas:** 14 filas recuperadas, fila de LATAM reunida y restituida, y el
+barrido completo sobre los 8 archivos cierra en **0 hallazgos**
+(`compose/code/p239-table-integrity/`, **P239** + **P240**, 23 tests).
+
+### 🧪 El defecto de instrumento de este pase, que fue peor que el defecto del archivo
+
+🔴 **El linter falló SIETE veces antes de medir bien, y cada falla reclamaba una tabla correcta**
+(v1: emoji, paréntesis y celda combinada — 3; v2: celdas que *contienen* el nombre de una región sin
+ser de región — 4). **Si el pase hubiera «arreglado» tablas para callar al linter, habría dañado
+siete tablas correctas para tapar un defecto de medición propio.** Los siete quedaron como tests de
+regresión. La regla: **instrumento primero, archivo después.**
+
+### ⚠️ Canales que fallaron en este pase
+
+- 🔴 **`github.com` por `curl -sI`: 403 en las 6 URLs probadas.** ⚠️ **Un 403 del proxy NO es un 404**
+  y **no se registra como repo muerto** — es la trampa de método más fácil de este entorno. La
+  verificación se hizo por **WebFetch**, que sí pasa.
+- 🔴 **`suny.edu`: `EGRESS_BLOCKED`.** Es la primaria del único hallazgo regulatorio nuevo del pase;
+  el dato queda publicado **con la reserva declarada** en `intel/market.md`.
 
 ## 🧪 Altas de agente: 0 — y el pase gasta su presupuesto en refutar una conclusión propia (pase 76 del 2026-10-03)
 

@@ -1,13 +1,48 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-03
+updated: 2026-10-04
 ---
 
 # 📈 Repos trending — education
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 
+## 2026-10-03 — pase 78: este archivo tenía una deriva de vocabulario regional (`Asia Pacific` ≠ `APAC`), y es el defecto que rompe el filtro sin romper la lectura
+
+### 🔴 La deriva, medida y corregida
+
+`repos/trending.md:1577` publicaba la terna de mercado de la región como **`Asia Pacific`**. El
+vocabulario de región de esta KB es **cerrado**: `North America` · `EMEA` · `APAC` · `LATAM` ·
+`Global`. 🔴 **`Asia Pacific` no es `APAC`: es un balde nuevo.** La fila se leía perfectamente en
+Markdown y **desaparecía de cualquier filtro por `APAC`** — que es justo el tipo de defecto que no
+se ve revisando el render.
+
+| Antes | Después | Efecto |
+|---|---|---|
+| `\| **Asia Pacific** \|` | `\| **APAC** \|` | La terna inconsistente de la región vuelve a ser **encontrable por región** |
+
+🔵 **Lo que la corrección NO toca:** el dato ni el veredicto. La terna sigue siendo
+**$0,5916 B (2024) → $1,8481 B (2029) @ 20,9 %** contra el **25,6 %** que exigen sus extremos, y
+sigue siendo 🔴 **inconsistente**. Se corrigió la **etiqueta**, no la medición — y se deja dicho acá
+para que la serie temporal de este archivo no pierda el rastro del cambio.
+
+🟢 **Y se declaró el alcance de esa tabla**, que es legítimamente parcial: el proveedor publica
+**tres** ternas (North America, APAC, Global), no cinco. Ahora lo dice un marcador
+(`<!-- p240-scope: North America, APAC -->`) en vez de dejarlo implícito, así que la ausencia de
+EMEA y LATAM **es una ausencia declarada y no un hueco**.
+
+### 🧪 El instrumento que lo encontró
+
+`compose/code/p239-table-integrity/` (**P239** + **P240**, 23 tests). El eje **P240** busca tablas
+con columna de región a las que les falte una del vocabulario; esta deriva apareció **como falta de
+`APAC`** en una tabla que *parecía* tener a la región. 🔵 **Un eje diseñado para detectar filas
+faltantes detectó una etiqueta equivocada** — vale anotarlo porque significa que el eje cubre más
+superficie de la que se le pidió.
+
+🔴 **Advertencia de método heredada y reconfirmada en este pase:** `github.com` devolvió **403 por
+`curl -sI` en las 6 URLs probadas**. ⚠️ **Un 403 del proxy no es un 404 y no se registra como repo
+muerto.** La verificación de licencia y estrellas de este pase se hizo por **WebFetch**.
 ## 2026-10-03 — pase 77: la tabla de muertos de este archivo cierra con 5 de 5 permisivas, y su nota de honestidad queda refutada entera
 
 ### 🟢 La medición, fila por fila
@@ -1571,10 +1606,11 @@ citada con una invocación que no la genera no se puede reproducir, aunque sea c
 
 **Corridas por el instrumento versionado `market-triple-check/check.py`, como manda su propia regla.**
 
+<!-- p240-scope: North America, APAC -->
 | Terna | Declarado | CAGR que exigen sus extremos | Veredicto |
 |---|---|---|---|
 | **North America** | $0,951 B (2024) → $2,3032 B (2029) @ 15,9 % | 🔴 **19,4 %** | 🔴 **inconsistente** *(reconfirma el 55)* |
-| **Asia Pacific** | $0,5916 B (2024) → $1,8481 B (2029) @ 20,9 % | 🔴 **25,6 %** | 🔴 **inconsistente** *(NUEVA)* |
+| **APAC** | $0,5916 B (2024) → $1,8481 B (2029) @ 20,9 % | 🔴 **25,6 %** | 🔴 **inconsistente** *(NUEVA)* |
 | **Global** | $7,52 B (2025) → $10,6 B (2026) @ 40,9 % | **41,0 %** | ✅ **consistente** |
 
 🔴 **El defecto es sistemático, no aleatorio: las dos ternas por geografía del mismo proveedor fallan y

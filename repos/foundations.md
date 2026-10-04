@@ -1,7 +1,7 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-03
+updated: 2026-10-04
 ---
 
 # 🏗️ Repos fundacionales — education
@@ -84,6 +84,31 @@ corre ése antes de escribir uno a mano** (tendencia **313**). 🟢 **Y el `gafa
 > y 5 en `schemas12/`, y contar sólo el primero es lo que hizo invisible el segundo dialecto de SCORM (**P106**).
 > **Pase 36 del 2026-10-02:** 🔵 **este pase no agrega repos: le pone FECHA a los que ya están, y la fecha cambia tres recomendaciones.** Se midió la capa PHP de evaluación y telemetría en Packagist —el único registro de los tres que entrega descargas en este entorno (`api.npmjs.org` y `pypistats.org` dan **403 a CONNECT**)— y el resultado está en `repos/trending.md`. **Lo que hay que saber antes de proponer desde este archivo:** 🔴 **la pieza xAPI más descargada de esta base, `rusticisoftware/tincan` (Apache-2.0, 6.178 desc./mes, 863.777 totales), no publica desde el 2022-11-02**, y ⚠️ **el único MIT de esa capa, `php-xapi/client`, está parado desde el 2021-03-24** con 825 desc./mes. 🔵 **La lectura es que en xAPI/PHP lo permisivo está quieto y lo vivo es copyleft**, así que la receta de telemetría se sostiene en **Ralph (MIT)** + **`lrsql` (Apache-2.0)** + **`learnmcp-xapi` (MIT)** y no en la capa PHP. 🟢 **Del lado de evaluación, lo activo es `oat-sa/extension-tao-testqti`** (**885 versiones**, release del **2026-09-30**) **y sigue siendo GPL-2.0-only**, mientras **lo permisivo es lo nuevo**: `@longsightgroup/qti3-cli` (**MIT**, 41 releases desde el 2026-05-21, último **2026-10-01**) con **cero dependencias de terceros** — sus 4 dependencias son todas `@longsightgroup/*` pinneadas a la misma versión exacta. **Su manifiesto MCP completo de 20 tools está escrito en `compose/patterns.md` (P76).** 🔴 **Y una corrección de catálogo: `oat-sa/qti-sdk` devuelve 404 en Packagist porque es el nombre del REPO — su paquete es `qtism/qtism`** (GPL-2.0-only, 218.212 descargas totales, 315 versiones). **Nombre de repo y nombre de paquete son identificadores distintos, y confundirlos produce un 404 que parece una ausencia** — pasó igual con `1edtech/oneroster`, `imsglobal/lti-1-3-php-library` y `packbackbooks/lti-1-3-php-library`, los tres **404**, que se anotan como *«no verificado en Packagist bajo ese nombre»* y **no** como inexistentes. ⚠️ **Acción pendiente que el pase 37 tiene asignada: este archivo nunca pasó por el control de *slugs* distintos ni por el de *backlink*** — los dos que en `agents/top.md` encontraron **un duplicado** y **dos colisiones** este mismo pase.
 > **Pase 11 del 2026-10-01:** aparece una licencia que las diez pasadas anteriores filtraban sin saberlo — **ECL-2.0**, con la que licencia todo Apereo (Sakai, Opencast, OpenLRW). Es Apache-2.0 con el alcance de patentes acotado, aprobada por OSI y FSF, y **es apta para construir arriba**. Ver la capa de analítica institucional, abajo.
+
+## 🧪 Cero altas de repo fundacional, y el barrido de plataformas devolvió sólo confirmación (pase 78 del 2026-10-03)
+
+🔴 **Cero altas, con lo buscado escrito.** La consulta obligatoria de plataformas verticales se corrió
+(`open source education ERP SIS student information system MIT Apache self-hosted 2026`) y **todo lo
+devuelto ya estaba en esta base**, verificado por `grep` antes de escribirlo:
+
+| Pieza devuelta | Estado en esta KB |
+|---|---|
+| **OpenEduCat** (ERP educativo, 70+ módulos) | 🔵 ya registrada (159 menciones) |
+| **GegoK12** (MIT, PHP 8.4 + Laravel 12, v1.1 de marzo 2026) | 🔵 ya registrada (47 menciones) |
+| **RosarioSIS** (SIS, PHP + PostgreSQL) | 🔵 ya registrada (31 menciones) |
+| **openSIS** / **OS4ED** | 🔵 ya registrada (37 / 12 menciones) |
+| **ERPNext** (módulo Education) | 🔵 ya registrada (81 menciones) |
+
+🟢 **La única pieza del barrido que esta base NO tenía, y por qué igual no entra:** **eduTrac SIS**
+(0 menciones) — ⚠️ el canal lo ofrece desde **SourceForge**, no desde un repo con licencia y `HEAD`
+verificables por los instrumentos de esta KB (**P170** / **P172** miden por `raw.githubusercontent`
+con `ref HEAD`). 🔴 **Sin medición de licencia por payload no entra como fundacional**, y se registra
+como **candidata pendiente de canal**, no como hallazgo.
+
+🔵 **Lectura del agotamiento, que es el dato y no el fracaso:** es el enésimo barrido consecutivo en
+que la capa de plataformas verticales **no mueve**. Esa capa está **cubierta**; el margen de esta KB
+dejó de estar en descubrir plataformas y está en **medir lo que ya tiene** — que es exactamente donde
+este pase gastó su presupuesto (ver `agents/top.md` y `compose/code/p239-table-integrity/`).
 
 ## 🪪 La capa de ROSTERING de K-12, medida ENTERA por licencia: pedir «permisivo + vivo + spec vigente» deja UNA pieza en pie (pase 75 del 2026-10-03)
 
