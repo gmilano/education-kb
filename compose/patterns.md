@@ -129,6 +129,171 @@ updated: 2026-10-04
 > **Pase 11:** +2 patrones — **P25** (riesgo de abandono conforme al Anexo III, la capa con presupuesto ya asignado y sin oferta open source) y **P26** (agente docente sobre la ontología curricular nacional ya publicada).
 > **Pase 27:** **+4 patrones y una corrección.** 🔴 **P51 queda con premisa falsa** —el conector MCP de Moodle **sí existe y es MIT**— y lo reemplazan **P54** (corrección y devolución sobre Moodle con **compuerta humana**, el último tramo del gap 6, con piezas que ya escriben), **P55** (el conector de **Open edX**, que es el único que de verdad no existe), **P56** (**SCORM** como formato de salida de la capa generativa: cero integración, offline) y **P57** (evidencia por MCP cotizada sobre lo que CaSS **realmente** expone — 6 de 61 operaciones, con insignias y autoría de marcos **fuera**).
 
+## 🆕 Patrones del pase 99 — P304–P306 y la receta P307
+
+### 🔴 P304 — una licencia se identifica por TOKENS ORDENADOS, no por una frase contigua
+
+**El espécimen, y es real.** `instructure/QTIMigrationTool`, `LICENSE.txt` **1.392 B**, BSD-3-Clause
+de la **University of Cambridge**, con sus tres cláusulas completas. El ancla del clasificador
+compartido era un literal:
+
+```sh
+grep -qi 'Redistribution and use in source and binary forms'   # ← frase CONTIGUA
+```
+
+y el payload real dice:
+
+> *«Redistribution and use **of this software** in source and binary forms **(where applicable)**,
+> with or without modification, are permitted provided that the following conditions are met»*
+
+🔴 **Dos inserciones dentro de la misma oración —un complemento y un parentético— y el literal no
+matchea. Veredicto: `UNCLASSIFIED` sobre una licencia PERMISIVA.**
+
+**El arreglo, y es MÍNIMO a propósito:**
+
+```sh
+nbsd=$(printf '%s' "$1" | tr -s '[:space:]' ' ')          # la inserción puede caer en un salto
+printf '%s' "$nbsd" | grep -qiE 'redistribution and use[^.]{0,40}in source and binary forms'
+```
+
+🔵 **No se agrega un segundo requisito conjuntivo (`are permitted provided that`), porque eso
+ENDURECERÍA el contrato vigente y volvería `UNCLASSIFIED` a todo aviso BSD abreviado que hoy
+clasifica bien** — incluida la fixture que la suite ya tenía. **Lo único que cambia es que el hueco
+entre los dos tokens admite una inserción acotada y dentro de la oración: `[^.]` prohíbe cruzar un
+punto y el límite de 40 corta la deriva.**
+
+🔵 **Es el CUARTO eje del mismo defecto, y la serie es el patrón:**
+
+| Patrón | Eje | Qué se midió mal |
+|---|---|---|
+| `P171` | cuerpo **vs** título | la sección 13 de la GPL-3.0 nombra la AGPL |
+| `P288` | **caja** | un AGPL *reflowed* sin título en mayúsculas caía a la rama GPL |
+| `P299` | palabra **vs** subcadena | `mit` es subcadena de `permit`, `submit`, `limit` |
+| 🟢 `P304` | **frase contigua vs tokens ordenados** | una inserción dentro de la oración de concesión |
+
+⚠️ **Dirección contraria a `P299`, y por eso casi no se arregla:** `P299` convertía una negativa en
+permiso MIT —falla de **cumplimiento**—, `P304` **pierde** una fila permisiva —falla de **estante**.
+🔴 **Lo que obliga el arreglo es el efecto de método: con la familia en `UNCLASSIFIED` la compuerta
+de `P250` NO corta, así que el veredicto de uso comercial de un payload PERMISIVO lo producía el
+token-match sobre el CUERPO — la vía que `P171` declara insegura. `allowed` correcto por la vía
+equivocada.**
+
+🟢 **Suite: `compose/code/lib/test_license_family.sh` 50/50 → 62/62**, con **tres controles
+negativos** que es lo que `P126` punto 2 exige: (1) el hueco **no cruza oración**, (2) la **cota de
+40** se declara como límite conocido, (3) la relajación **no se come** a GPL-3.0, Apache-2.0, MIT,
+ISC ni 0BSD. 🔴 **Y la fixture nueva sale de un PAYLOAD REAL, porque la fixture canónica que la
+suite tenía era el único caso donde el ancla no puede fallar: 50/50 pasaba con el defecto puesto.**
+
+### 🔴 P305 — dos payloads del MISMO repo pueden declarar familias, titulares y años distintos
+
+| Fuente en `adlnet/xapi-lab` | Familia | Titular | Año |
+|---|---|---|---|
+| `LICENSE` (1.082 B) | 🟢 **MIT** | `Tyler Mulligan` — **persona física** | 2015 |
+| `README.md`, sección *License* | ⚠️ **Apache-2.0** | `Advanced Distributed Learning` — **organización** | 2016 |
+
+🔵 **Las dos son permisivas, así que el riesgo comercial es bajo — y no es ahí donde duele: difiere
+el TITULAR.** 🔴 **La obligación de atribución corre hacia una parte distinta según cuál gobierne:**
+una persona física bajo MIT, o la **ADL Initiative** (iniciativa del Departamento de Defensa de
+EE. UU.) bajo Apache-2.0. **Un aviso de atribución en un entregable de cliente nombra a uno y se
+equivoca con el otro.**
+
+⚠️ **Eje nuevo para esta base:** `P184` y `P280` miden licencia-vs-**MANIFIESTO**; éste es
+archivo-de-licencia-vs-**README**, con familia, titular y año discrepando a la vez.
+
+🔵 **La regla de método, y es la que importa:** una KB de medición **declara el conflicto** en vez de
+elegir en silencio. **Una fila con una sola celda de licencia habría elegido** — y la convención
+(«gobierna el `LICENSE`») es una opinión jurídica, no una medición. 🔴 **Qué hacer en un
+*engagement*: escalarlo a legal del cliente ANTES de redactar el aviso de atribución, con los dos
+payloads adjuntos.**
+
+### 🟢 P306 — el `sha256` dice «mismo artefacto»; el REGISTRO dice cuál es el CANÓNICO
+
+**El hueco que `P306` cierra es del pase 98.** Ese pase midió tres repos byte-idénticos
+(`zijinz456`, `iriseye395`, `itsnone-liu`) y eligió el canónico porque **ya estaba en la tabla**, no
+porque un canal lo afirmara. 🔴 **El `sha256` prueba identidad y es ciego a la canonicidad.**
+
+**Medido este pase sobre un caso real:** `examplary/qti` y `examplary-ai/qti`, byte-idénticos en los
+tres archivos probados (`README.md` `e04864bfc0706da0…`, `LICENSE` `38164d198cfe2ea7…`,
+`package.json` `e30cc496a3bfaa57…`). 🟢 **Y el registro desempata:**
+
+```sh
+curl -s https://registry.npmjs.org/@examplary/qti   # → 200
+# dist-tags.latest = 1.16.0
+# license          = MIT                                   ← concuerda con el payload
+# repository.url   = git+https://github.com/examplary/qti.git   ← nombra al canónico
+```
+
+🟢 **Canónico `examplary/qti`, espejo `examplary-ai/qti`, y la familia confirmada por DOS canales
+independientes que concuerdan.** ⚠️ **Cota declarada: sirve sólo para piezas PUBLICADAS en un
+registro.** De las 9 licenciadas del pase, **una** lo estaba; `pelotech/xapi-lrs` trae
+`package.json` **sin campo `license`**, así que su cesión vive sólo en el `LICENSE` y el registro no
+la respalda. 🔵 **El orden correcto es: payload primero (la cesión), registro después (la identidad
+y la confirmación) — nunca el registro solo, que es `P179`: un identificador no es una cesión.**
+
+### 🆕 Receta P307 — `R-99-MEDICION-APRENDIZAJE-PERMISIVA`: del agente al LRS y al ítem estándar, todo permisivo
+
+🔵 **El hueco que cierra, y era de venta:** esta KB vendía «medición del aprendizaje» con el lado
+**cliente** del xAPI y sin dónde **guardar** los *statements*; y vendía evaluación estándar
+entrando por **TAO (`oat-sa/tao-core`, GPL-2.0** — corregido en el pase 95**)**, que es copyleft
+fuerte. 🟢 **El pase 99 completó las dos cadenas con piezas permisivas medidas por payload.**
+
+**Cadena A — analítica de aprendizaje (toda permisiva):**
+
+| Paso | Pieza | Licencia (payload) | Qué aporta |
+|---|---|---|---|
+| 1. el agente que observa | `DavidLMS/learnmcp-xapi` | 🟢 MIT | servidor MCP: 3 tools (registrar *statement*, recuperar progreso, vocabulario de actividad) |
+| 2. el almacén | `pelotech/xapi-lrs` | 🟢 **Apache-2.0** (11.357 B) | LRS conformante **xAPI 1.0.3 y 2.0**; `PGlite` embebido para arrancar sin PostgreSQL |
+| 3. el origen de eventos del LMS | `KI-Campus/LRS-Moodle` + `KI-Campus/LRS` | 🟢 **MIT** (1.122 B) | plugin Moodle + LRS para **H5P/LTI** |
+
+**El cableado concreto, y es lo que hace a esta receta una receta:**
+
+```
+agente (Claude/MCP) ──► learnmcp-xapi ──► POST /statements  ──┐
+                                   (xAPI 1.0.3)              ├──► pelotech/xapi-lrs
+Moodle + H5P ──► LRS-Moodle plugin ──► POST /lrs ─────────────┘        (PGlite en dev,
+                                                                        PostgreSQL en prod)
+                                                                              │
+                                                             SSE /statements ─┘ ──► tablero
+```
+
+⚠️ **Y la decisión de arquitectura que esta receta tiene que declarar: los dos orígenes NO comparten
+endpoint.** `learnmcp-xapi` habla xAPI estándar (`/statements`); `KI-Campus/LRS` expone `/lrs` y
+**exige una cabecera `X-Signature`**. 🔴 **No se enchufan uno al otro sin un adaptador, y el
+adaptador es trabajo de la cuenta, no una pieza que exista.**
+
+🟢 **Propiedad de MIGRACIÓN que decide una venta de reemplazo:** el esquema de `pelotech/xapi-lrs` es
+**compatible con `yetanalytics/lrsql` v0.9.5** y su `README` afirma que puede **tomar una base de
+`lrsql` en caliente**, con control en CI. ⚠️ **Afirmación del `README`, NO verificada por esta base —
+se cita como tal y se prueba en la cuenta antes de prometerla.**
+
+**Cadena B — evaluación estándar (permisiva, con un hueco dicho):**
+
+| Paso | Pieza | Licencia (payload) | Qué aporta |
+|---|---|---|---|
+| 1. generar ítems | `examplary/qti` | 🟢 MIT (+ npm) | **QTI 3.0** y 2.1 tipado: ítems, tests, secciones, interacciones, *response processing* |
+| 2. migrar lo heredado | `instructure/QTIMigrationTool` | 🟢 **BSD-3-Clause** | QTI 1.x → 2.0 |
+| 3. importar al LMS | `instructure/qti` | 🟢 MIT | importador QTI 1.2/2.1 (gema Ruby), el del fabricante de Canvas |
+| 4. entregar y puntuar | `OpenOLAT/qtiworks` | 🟢 **BSD-3-Clause** | motor de entrega/renderizado QTI 2.1 + `JQTI+` + **MathAssess** |
+
+🔴 **El hueco, y se declara con precisión en vez de taparse: NO hay una sola pieza permisiva que
+ENTREGUE QTI 3.0.** Se **genera** 3.0 (paso 1, MIT) y se **entrega** 2.1 (paso 4, BSD). ⚠️ **Y
+QTIWorks cubre «un subconjunto grande» de 2.1 —lo dice su propio `README`—, cota que esta base NO
+verificó.** 🔵 **Consecuencia de propuesta: si el cliente exige entrega 3.0, la opción permisiva no
+existe y hay que ir a TAO (GPL-2.0) o construir — y eso se dice en la pre-venta, no en la
+integración.**
+
+**El gate de cumplimiento que esta receta hereda, y es el que la vuelve vendible en North America:**
+
+🟢 **Toda escritura hacia el LMS pasa por `compose/code/grading-draft-gate/`** —nace `DRAFT`, un
+humano publica—, que es **exactamente** lo que **Oklahoma** y **Maryland** exigen (supervisión
+humana, prohibición de que la AI decida cuestiones de alto impacto sobre un alumno). 🔵 **Y en EMEA
+la cadena B cae en **alto riesgo** del Anexo III (evaluación de estudiantes, corrección de
+exámenes), con fecha de aplicación **2027-12-02** — se diseña ahora y se certifica entonces, porque
+la evaluación de conformidad es PREVIA al despliegue.** 🔴 **La cadena A (analítica) NO es alto riesgo
+por sí misma, salvo que alimente una decisión de acceso o calificación — y ahí lo es por FUNCIÓN, que
+es `P302` del pase 98.**
+
+
 ## 🆕 Patrones del pase 98 — P299–P302 y la receta P303
 
 ### 🔴 P299 — la frontera de PALABRA en la rama de declaración, y por qué el defecto empujaba hacia MIT

@@ -62,7 +62,35 @@ osi_family_of() {
     echo "CC-UNSPECIFIED"; return
   fi
   printf '%s' "$1" | grep -qi 'Permission is hereby granted, free of charge' && { echo "MIT"; return; }
-  printf '%s' "$1" | grep -qi 'Redistribution and use in source and binary forms' && { echo "BSD"; return; }
+  # P304 (pase 99).  La linea de concesion BSD estaba anclada como FRASE CONTIGUA, y la
+  # identidad de BSD es una SECUENCIA ORDENADA DE PALABRAS, no una cadena fija.  Medido, no
+  # supuesto: `instructure/QTIMigrationTool` (BSD-3-Clause real, `LICENSE.txt` 1.392 B,
+  # titular `University of Cambridge`) dice
+  #     «Redistribution and use OF THIS SOFTWARE in source and binary forms
+  #      (WHERE APPLICABLE), with or without modification, are permitted provided that...»
+  # Dos inserciones DENTRO de la misma oracion -- un complemento («of this software») y un
+  # parentetico («(where applicable)») -- y el ancla de frase contigua no matchea: veredicto
+  # UNCLASSIFIED sobre una licencia PERMISIVA.
+  #
+  # Es el tercer eje del mismo defecto que esta base ya pago dos veces: P171 lo midio por el
+  # CUERPO-vs-TITULO, P288 por la CAJA y P299 por PALABRA-vs-SUBCADENA.  Este es
+  # FRASE-vs-TOKENS-ORDENADOS, y la direccion es la contraria a la de P299: aca se PIERDE
+  # una fila permisiva en vez de inventarse un permiso, o sea que el costo es de estante y
+  # no de cumplimiento -- pero el segundo efecto si es de metodo y es el que obliga el
+  # arreglo: con la familia en UNCLASSIFIED, la compuerta de P250 NO corta, y el veredicto
+  # de uso comercial de un payload permisivo lo producia el token-match sobre el CUERPO --
+  # exactamente la via que P171 declara insegura.  La respuesta era ALLOWED, que es la
+  # correcta para BSD-3-Clause, obtenida por la via equivocada: acierto por suerte.
+  #
+  # EL ARREGLO ES MINIMO A PROPOSITO.  No se agrega un segundo requisito conjuntivo
+  # («are permitted provided that»), porque eso ENDURECERIA el contrato vigente y volveria
+  # UNCLASSIFIED a todo aviso BSD abreviado que hoy clasifica bien.  Lo unico que cambia es
+  # que el hueco entre los dos tokens admite una insercion ACOTADA Y DENTRO DE LA ORACION:
+  # el `[^.]` prohibe cruzar un punto, y el limite de 40 corta la deriva.  Se normaliza el
+  # espacio porque la insercion puede caer sobre un salto de linea.
+  local nbsd; nbsd=$(printf '%s' "$1" | tr -s '[:space:]' ' ')
+  printf '%s' "$nbsd" | grep -qiE 'redistribution and use[^.]{0,40}in source and binary forms' \
+      && { echo "BSD"; return; }
   printf '%s' "$t" | grep -qi 'Mozilla Public License' && { echo "MPL-2.0"; return; }
   # The Unlicense. p170's inline classifier HAD this; this shared lib never did, so adopting
   # the lib would have LOST a family (FWU-DE/mem-mcp). P237 cuts both ways: the shared control

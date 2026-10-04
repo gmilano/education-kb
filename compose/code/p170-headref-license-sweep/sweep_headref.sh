@@ -23,7 +23,12 @@ classify() {
   fi
   body="$c"
   if   printf '%s' "$body" | grep -qi "Permission is hereby granted, free of charge"; then echo "MIT"
-  elif printf '%s' "$body" | grep -qi "Redistribution and use in source and binary"; then echo "BSD"
+  # P304 (pase 99): hueco ACOTADO Y DENTRO DE LA ORACION entre los dos tokens -- la identidad
+  # de BSD es una secuencia ORDENADA de palabras, no una frase contigua.  Especimen real:
+  # instructure/QTIMigrationTool inserta «of this software» y «(where applicable)».  El arreglo
+  # canonico vive en lib/license_family.sh; esta copia inline lo replica y el rewiring a la
+  # libreria compartida queda PRE-REGISTRADO (P237 sigue abierto para este archivo).
+  elif printf '%s' "$body" | tr -s '[:space:]' ' ' | grep -qiE "redistribution and use[^.]{0,40}in source and binary"; then echo "BSD"
   elif printf '%s' "$body" | grep -qi "free and unencumbered software"; then echo "Unlicense"
   else echo "UNKNOWN"; fi
 }

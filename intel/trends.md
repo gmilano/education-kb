@@ -113,6 +113,122 @@ updated: 2026-10-04
 > están mal por ~2× y **un 403 de `curl` no es un 404**. Ver la nota de método del pase 12.
 > **Pase 11:** el Digital Omnibus es derecho vigente (tendencia 25), aparece la capa predictiva y está vacía (tendencia 26), y se corrige un error de método de diez pasadas sobre licencias permisivas (tendencia 27).
 
+## 🟢 Tendencias 773–783 — pase 99 del 2026-10-04: la predicción se confirma en la letra y se falsifica en la UNIDAD
+
+🔬 **Canal, declarado antes de cualquier veredicto (`P247`).** `github.com/<org>/<repo>` → 🔴 **403** ·
+`api.github.com/repos/…` → 🔴 **403** · `codeload.github.com` → 🔴 **403** ·
+`raw.githubusercontent.com` → 🟢 **200 con payload** · `registry.npmjs.org` → 🟢 **200** ·
+`pypi.org` → 🟢 **200**. 🔴 **Las ESTRELLAS no son verificables este pase y ninguna fila nueva las
+lleva.** 🟢 **Y el canal de REGISTRO se usó por primera vez para resolver identidad (`P306`).**
+
+### 🔴 773 — Una predicción falsable tiene que nombrar la UNIDAD que se cuenta
+
+El pase 98 predijo que el eje rotado devolvería *«≥1 pieza licenciada»*. **Devolvió 9.** 🔴 **Y
+ninguna es un agente: las 9 son infraestructura.** 🔵 **La predicción se cumple leída en su letra y
+se falsifica leída como lo que `agents/top.md` mide.** ⚠️ **«Pieza licenciada» es un predicado que
+casi cualquier barrido satisface; «agente de la industria educativa» es el que la tabla cuenta. Una
+predicción que se cumple con cualquier cosa no era falsable** — y el defecto no está en el
+resultado sino en la redacción de la apuesta.
+
+### 🟢 774 — Un eje con filas no es un eje cubierto: la pregunta es de qué LADO hay filas
+
+El pase 98 nombró tres ejes rotados como *«no barridos todavía»*. **Dos de los tres ya tenían filas**:
+`learnmcp-xapi` cubría xAPI y tres MCP cubrían SIS. 🔵 **Lo que el eje rotado abrió no fue un tema
+virgen: fue la OTRA MITAD de dos temas a medias** — el **cliente** xAPI sin el **almacén**, los
+**reproductores** de ítems QTI sin la **generación** y la **migración**. ⚠️ **La pregunta productiva
+no es «¿barrí este tema?» sino «¿de qué lado de este tema tengo filas?».**
+
+### 🔴 775 — La identidad de una licencia es una SECUENCIA ORDENADA DE PALABRAS, no una frase fija
+
+`instructure/QTIMigrationTool` es BSD-3-Clause de libro y volvía `UNCLASSIFIED`, porque su oración
+de concesión inserta **«of this software»** y **«(where applicable)»** dentro de la frase canónica.
+🔵 **Cuarto eje del mismo defecto que esta base ya pagó tres veces:** `P171` **cuerpo-vs-título**,
+`P288` **caja**, `P299` **palabra-vs-subcadena**, `P304` **frase-vs-tokens-ordenados**. ⚠️ **Cuatro
+formas de escribir mal la misma pregunta, y la quinta va a existir: el patrón es que un ancla
+escrita como literal falla ante cualquier variación que preserve el significado.**
+
+### 🔴 776 — Un defecto que pierde en la dirección SEGURA igual hay que arreglarlo, y el motivo es la COMPUERTA
+
+`P299` convertía una negativa de licencia en un permiso MIT: falla de **cumplimiento**, obvia de
+arreglar. `P304` **pierde** una fila permisiva: falla de **estante**, fácil de postergar. 🔴 **Lo que
+obliga el arreglo es el segundo efecto: con la familia en `UNCLASSIFIED` la compuerta de `P250` NO
+corta, así que el veredicto de uso comercial de un payload PERMISIVO lo producía el token-match
+sobre el CUERPO — la vía que `P171` declara insegura.** 🔵 **La respuesta era `allowed`, que es la
+correcta para BSD-3-Clause, obtenida por la vía equivocada: acierto por suerte.** ⚠️ **Un acierto por
+la vía insegura es un defecto latente, no un resultado.**
+
+### 🔴 777 — Una fixture CANÓNICA certifica un clasificador roto
+
+La suite del control compartido pasaba **50/50** con `P304` puesto, porque su única fixture BSD era
+la oración **canónica** — **el único caso donde un ancla de frase no puede fallar.** 🔵 **Es `P126`
+punto 2 por tercera vez** (el pase 55 midió `PASS` contra `PASS`; `P288` midió AGPL en mayúsculas
+contra AGPL en mayúsculas; ahora BSD canónica contra BSD canónica). ⚠️ **Regla que se deriva: toda
+fixture de licencia nueva se toma de un PAYLOAD REAL, no se escribe a mano desde la plantilla, porque
+la plantilla es exactamente el caso que no discrimina.**
+
+### 🔴 778 — Dos payloads del MISMO repo pueden declarar familias, titulares y años distintos
+
+`adlnet/xapi-lab`: `LICENSE` dice **MIT** (titular `Tyler Mulligan`, 2015), el `README` dice
+**Apache-2.0** (titular `Advanced Distributed Learning`, 2016). 🔵 **Las dos son permisivas, así que
+el riesgo comercial es bajo — y no es ahí donde duele: difiere el TITULAR**, y la obligación de
+atribución corre hacia una parte distinta según cuál gobierne (una persona física, o una iniciativa
+del Departamento de Defensa de EE. UU.). ⚠️ **Eje nuevo: `P184` y `P280` miden
+licencia-vs-MANIFIESTO; éste es licencia-vs-README.** 🔴 **Y la respuesta correcta de una KB de
+medición es DECLARAR el conflicto, no elegir en silencio** — una fila con una sola celda de licencia
+habría elegido.
+
+### 🟢 779 — El `sha256` dice «mismo artefacto» y NO dice cuál es el canónico; el REGISTRO sí
+
+El pase 98 midió tres repos byte-idénticos y eligió el canónico porque **ya estaba en la tabla**, no
+porque un canal lo afirmara. 🟢 **Este pase cerró ese hueco: `examplary/qti` ≡ `examplary-ai/qti`
+(3 `sha256` idénticos), y `registry.npmjs.org/@examplary/qti` declara `repository.url` =
+`github.com/examplary/qti` y `license` = `MIT`.** 🔵 **Canónico afirmado por un canal independiente,
+y la familia confirmada por DOS canales que concuerdan.** ⚠️ **Cota: sirve sólo para piezas
+publicadas en un registro — 1 de las 9 altas de este pase lo estaba.**
+
+### 🟢 780 — La FORMA JURÍDICA del titular es un indicio regional que `P135` sí admite
+
+`P135` prohíbe inferir región del **nombre** del titular. 🟢 **`KI-Campus/LRS` resuelve a EMEA por
+otra vía: su titular es *«Hasso Plattner Institute for Digital Engineering gGmbH»*, y `gGmbH` es una
+figura del derecho societario ALEMÁN.** 🔵 **No es el nombre: es la jurisdicción bajo la cual la
+entidad existe, que es un hecho de constitución y no una conjetura onomástica.** ⚠️ **Amplía `P135`
+sin romperlo, y se suma a los dos indicios ya admitidos: host institucional (`moodle.epfl.ch`,
+`.cam.ac.uk`, `.ed.ac.uk`) y configuración (`TIMEZONE=America/Recife`).**
+
+### 🔴 781 — La capa agéntica sobre el SIS de educación superior NO tiene punto de partida construible
+
+`chatt-state/banner-mcp-server` es el **único** MCP sobre **Ellucian Banner** que el barrido
+encontró; está **vivo** y alcanzable por `package.json`; y **no cede nada** (0 de 14 nombres de
+archivo de licencia). 🔵 **Banner es uno de los SIS de educación superior más instalados del mundo,
+así que la consecuencia es de presupuesto y no de catálogo: esa capa se cotiza como desarrollo
+propio.** 🟢 **Y la asimetría queda medida: en K-12 sí hay punto de partida
+(`443pablo/mcp-powerschool`, MIT).** ⚠️ **K-12 y educación superior no son la misma madurez de
+ecosistema, y esta base ya puede decirlo con filas en vez de con impresiones.**
+
+### 🟢 782 — La capa de evaluación estándar permisiva está completa en GENERACIÓN y ENTREGA, y vacía en QTI 3.0
+
+🟢 **Antes de este pase, entregar y puntuar ítems estándar exigía entrar por TAO (`oat-sa/tao-core`,
+**GPL-2.0** — corregido en el pase 95).** Ahora hay camino permisivo: `examplary/qti` (**MIT**)
+genera **QTI 3.0**, `instructure/QTIMigrationTool` (**BSD-3-Clause**) migra 1.x → 2.0,
+`instructure/qti` (**MIT**) importa a Canvas, `OpenOLAT/qtiworks` (**BSD-3-Clause**) entrega y
+puntúa **2.1**. 🔴 **Y el hueco se declara con precisión: NO hay una sola pieza permisiva que
+ENTREGUE QTI 3.0.** ⚠️ **QTIWorks cubre «un subconjunto grande» de 2.1 —lo dice su propio README— y
+esta base no lo verificó.**
+
+### 🟢 783 — APAC regula AGENTES como categoría propia, y es la primera jurisdicción del inventario que lo hace
+
+🟢 **Singapur emitió un marco para AI AGÉNTICA el 2026-01-22**, junto con la entrada en vigor del
+*Framework Act* coreano (misma fecha) y la ley de AI de Vietnam (2026-03-01). 🔵 **Todo lo que esta
+KB compone son agentes —MCP sobre LMS, tutores, correctores—, así que APAC es la región donde el
+entregable de esta KB tiene un marco explícito al cual mapearse: es ventaja de propuesta, no
+carga.** 🟢 **Y el eje de SOBERANÍA refuerza lo mismo por el lado de la arquitectura:** cada economía
+construye modelo propio (Sarvam, ILMU, Sahabat AI, SEA-Lion, HyperCLOVA X Think, NTT Sarashina,
+TAIDE), **así que la capa de modelo es una VARIABLE del contrato y no una constante.** 🔴 **Un diseño
+que cablea un solo proveedor no es vendible en esta región**, que es exactamente por qué esta base
+mide **ligadura de proveedor por versión**.
+
+---
+
 ## 🟢 Tendencias 762–772 — pase 98 del 2026-10-04: la saturación medida era de DOS CONSULTAS, no de la industria
 
 🔬 **Canal, declarado antes de cualquier veredicto (`P247`).** `github.com/<org>/<repo>` → 🔴 **403** ·

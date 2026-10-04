@@ -8,6 +8,8 @@ updated: 2026-10-04
 
 > Agentes y herramientas AI open source para educación. Foco: MIT / Apache 2.0 / BSD.
 > Verificado repo por repo vía WebFetch el 2026-09-30 (stars y licencia leídos de la página del repo).
+> **Pase 99 del 2026-10-04:** 🔴 **La tabla se queda igual: CERO altas de agente — y por primera vez el cero es INFORMATIVO en vez de vacío.** 🟢 **La acción pre-registrada del pase 98 se corrió completa y su predicción se CONFIRMA en la letra:** los dos barridos del encargo (año **calculado**, `date -u +%Y` → **2026**) volvieron a **0** piezas de la industria, y el eje rotado (`xAPI`/LRS, generación de ítems QTI, MCP sobre SIS) devolvió **15 candidatas → 9 licenciadas, 6 sin cesión**. 🔴 **Pero NINGUNA de las 9 es un agente: son INFRAESTRUCTURA, y van a `repos/foundations.md` (7) y `verticals/solutions.md` (1).** 🔵 **Así que la predicción se cumple leída como *«≥1 pieza licenciada»* y se FALSIFICA leída como *«≥1 agente»* — y la lección de método es para el próximo pase que pre-registre: una predicción falsable tiene que nombrar la UNIDAD que se cuenta, porque *«pieza licenciada»* lo satisface casi cualquier barrido.** 🔴 **El descarte que decide un presupuesto: `chatt-state/banner-mcp-server`, el ÚNICO MCP sobre Ellucian Banner que el barrido encontró, está vivo, alcanzable por `package.json` y NO CEDE NADA (0 de 14 nombres de licencia) — la capa MCP sobre el SIS de educación superior no tiene punto de partida construible, al contrario de K-12 (`443pablo/mcp-powerschool`).** 🔴 **`P304` — el ancla BSD del control compartido estaba escrita como FRASE CONTIGUA y perdía una familia PERMISIVA:** `instructure/QTIMigrationTool` es BSD-3-Clause real y volvía `UNCLASSIFIED` porque inserta *«of this software»* y *«(where applicable)»* dentro de la oración canónica. **Cuarto eje del mismo defecto** (`P171` cuerpo-vs-título · `P288` caja · `P299` palabra-vs-subcadena · `P304` frase-vs-tokens). ⚠️ **Dirección contraria a `P299` —pierde estante en vez de inventar permiso— pero obliga igual: con la familia en `UNCLASSIFIED` la compuerta de `P250` no corta y el veredicto comercial de un payload permisivo salía del token-match sobre el CUERPO.** 🟢 **`lib/license_family.sh` 50/50 → 62/62 (3 controles negativos); 51 suites pasan, 0 fallan.** 🔴 **`P305`: `adlnet/xapi-lab` declara MIT en `LICENSE` y Apache-2.0 en el `README`, con titular y año distintos.** 🟢 **`P306`: `examplary/qti` ≡ `examplary-ai/qti` y el registro npm desempata el canónico.** Ver **`P304`**–**`P306`**.
+
 > **Pase 97 del 2026-10-04:** 🔴 **La tabla se queda en 94 filas: CERO altas, NOVENO pase consecutivo, con el cero enumerado (`P293`).** El barrido global corrió con el año **CALCULADO** (`date -u +%Y` → **2026**): `top open source AI agents education 2026 github MIT` y `github trending education AI 2026` devolvieron **6** frameworks generalistas (openclaw **385.407 ★**, dify **151.639 ★**, browser-use **108.128 ★**, Mem0 **62.735 ★**, AutoGen **60.284 ★**, Flowise **55.226 ★**), **4** repos de *currículo para enseñar AI a ingenieros* y 🔴 **0** piezas de la industria educativa. 🔵 **Las seis cifras de estrellas vuelven IDÉNTICAS por TERCER pase consecutivo** (95, 96, 97) — la saturación del canal deja de ser una impresión y es una medición repetida. 🔬 **Canal (`P247`):** `github.com/<org>/<repo>` → **403**, `github.com/` y `api.github.com/` → **400**, `raw.githubusercontent.com` → 🟢 **200 con payload**; el `curl -sI` que el encargo ordena sigue muerto acá y todo se leyó por `raw`. 🔴 **El esfuerzo del pase se gastó en otra parte, y encontró la misma forma de defecto en dos planos: lo que se construye y no se CONECTA no existe.** 🔴 **En el código: el pase 96 diagnosticó que el barrido manifiesto-consciente es ciego a Java/Maven, escribió el lector correcto (`p289`, 11/11) y no lo cableó — `PARSERS` seguía con cinco nombres y nada fuera de `p289/` lo referenciaba** (**P294**). 🔴 **Y el cableado obvio habría publicado una respuesta nueva y equivocada: con `artifactId` como identidad única, `kuali/kc` y `sakaiproject/sakai` salen `FOREIGN` siendo propios, y `FOREIGN` significa NO atribuir — se habría leído bien la `AGPL-3.0` de Kuali Coeus y se habría negado a publicarla.** 🟢 **Cerrado con la identidad en el `groupId` (`org.kuali.coeus`) y contra los dos segmentos del slug, sin tocar `ownership()`: 6 de 6 `OWN`, y dos canales independientes concuerdan 4 de 4.** 🔴 **En la prosa: CATORCE tendencias anunciadas y nunca escritas (706–711 del pase 91, 745–752 del pase 96), y el control que existe para atraparlas era CIEGO a la forma con que esta base las anuncia** (**P295**). 🟢 **Las 745–752 quedan recuperadas; las 706–711 se declaran irrecuperables y NO se inventan.** 🔴 **Y no fueron sólo tendencias: el pase 96 anunció también `P288`, `P289` y `P290` sin escribir sus secciones — ocho tendencias y tres patrones anunciados, cero definidos; los tres patrones quedan recuperados y el control de citas pasa de 263 a 271 definiciones.** Ver **P294**–**P297** y las tendencias **753**–**761**.
 
 > **Pase 96 del 2026-10-04:** 🔴 **La tabla se queda en 94 filas: CERO altas, OCTAVO pase consecutivo, con el cero enumerado otra vez (`P293`).** El barrido global corrió con el año **CALCULADO** (`date -u +%Y` → **2026**) y devolvió, por duodécima vez, el eje generalista con las MISMAS cifras que el pase 95 —openclaw **385.407 ★**, dify **151.639 ★**, browser-use **108.128 ★**, Mem0 **62.735 ★**, AutoGen **60.284 ★**, Flowise **55.226 ★**— más 4 currículos para enseñar AI a ingenieros (`agents-from-scratch`, `ai-engineering-from-scratch`, `free-ai-agents-resources`, *Zero to Hero*) y 🔴 **0 piezas de la industria educativa** (`P281`, reproducido con fuente distinta). 🟢 **Lo que el pase aporta no es una fila: es un defecto en el CONTROL COMPARTIDO, sobre el par exacto que ese control existe para proteger.** `lib/license_family.sh` devolvía **`GPL-3.0` para una AGPL-3.0** real (`kuali/kfs`, 33.755 B): su rama AGPL es un glob de `case` —**sensible a la caja**— y un AGPL *reflowed* sin título en mayúsculas cae por ahí y lo atrapa la rama GPL, que es `grep -qi` y matchea **el preámbulo de la propia AGPL** («*The GNU General Public License permits … access it on a server*»). 🔵 **Es `P171` reabierto por el eje de la CAJA, y es `P126` punto 2 al pie de la letra: las 41 aserciones pasaban y NINGUNA ejercitaba el caso, porque todas las fixtures AGPL de la suite traen el título canónico en mayúsculas.** 🟢 **Arreglado con el ancla de la sección 0 —`refers to version 3 of the GNU Affero…`, que la sección 13 de la GPL-3.0 NO contiene (dice «*under*», no «*refers to*»)—, con su control negativo versionado:** `compose/code/p288-agpl-casefold/` **9/9** y la suite vieja intacta en **41/41**. ⚠️ **Deliberadamente NO se volvió insensible la rama de título: eso habría reabierto P171 sobre la fixture GPL-3.0 de la propia suite — el arreglo correcto era más angosto que el obvio.** 🔴 **La consecuente de negocio: la licencia de Kuali es por REPO, no por organización** — `kuali/rice` **ECL-2.0** (la fuente secundaria acierta), `kuali/kfs` **AGPL-3.0** y `kuali/kc` **AGPL-3.0 por manifiesto** (las dos donde falla). Wikipedia, linux.com y la ayuda de KFS en MSU/WVU/IU dicen «Kuali is licensed pursuant to the **ECL 2.0**»; **el payload dice AGPL-3.0**, y entre las dos está la diferencia entre construir encima y publicar el derivado. 🔴 **Y la acción pre-registrada del pase 95 NO se pudo correr —el entorno niega enumerar destinos en lote (`[Exfil Scouting]`, 2 intentos, 2 vías)— pero su PREGUNTA quedó respondida mejor que con un número: `p283` no lee `pom.xml`, y la capa de plataforma educativa es JAVA/MAVEN, así que la tasa de `P279` ahí no es 0 ni alta, es NO MEDIBLE con el instrumento que se pre-registró** (`compose/code/p289-maven-manifest/`, **11/11**). Ver **`P288`**–**`P290`**.
@@ -266,6 +268,144 @@ updated: 2026-10-04
 > fila** —`lineage-skill`, con un vocabulario cerrado de 9 valores por afirmación, **4 de los 9 «esto lo produjo el
 > modelo»**— y **ninguna de las dos sabe de la otra**. Ver la capa nueva al final de este archivo, las tendencias
 > **180**–**182** y el patrón **P99**.
+
+## 🔴 Altas de agente: 0 — y el cero es INFORMATIVO: el eje rotado devolvió 9 piezas licenciadas y NINGUNA es un agente (pase 99 del 2026-10-04)
+
+### 🔬 El canal, declarado antes de cualquier veredicto (`P247`)
+
+| Canal | Código | Consecuencia |
+|---|---|---|
+| `github.com/<org>/<repo>` | 🔴 **403** | el `curl -sI` que el encargo ordena está **muerto acá** |
+| `api.github.com/repos/<org>/<repo>` | 🔴 **403** | sin estrellas, sin licencia declarada, sin fecha de *commit* |
+| `codeload.github.com` | 🔴 **403** | sin clon por tarball |
+| `raw.githubusercontent.com/<slug>/HEAD/<path>` | 🟢 **200 con payload** | **el canal de primera mano** |
+| `registry.npmjs.org` | 🟢 **200** | segundo canal independiente, usado este pase (`P306`) |
+| `pypi.org` | 🟢 **200** | disponible |
+
+### 🟢 La acción pre-registrada del pase 98: corrida, y su predicción CONFIRMADA en la letra
+
+| Mitad de la predicción | Resultado medido |
+|---|---|
+| *«un pase que corra SÓLO los dos barridos del encargo volverá a 0»* | 🟢 **CONFIRMADA.** Año **calculado** (`date -u +%Y` → **2026**). Devolvieron OpenClaw, opencode, OpenHands, CrewAI, LangChain, AutoGen, Flowise, `rasbt/LLMs-from-scratch`, `ashishpatel26/500-AI-Agents-Projects`, `caramaschiHG/awesome-ai-agents-2026` y cursos de Microsoft/DeepLearning.AI/HuggingFace. **Cero piezas de la industria educativa.** |
+| *«uno que rote a `xAPI`/LRS, generación de ítems o MCP sobre SIS devolverá ≥1 pieza licenciada»* | 🟢 **CONFIRMADA, y por 9.** 15 candidatas medidas → **9 licenciadas**, 6 sin cesión. |
+
+### 🔴 Y acá está el cero de ESTA tabla, que es el dato que la predicción NO capturaba
+
+🔴 **Las 9 piezas licenciadas son INFRAESTRUCTURA, no agentes: ninguna entra en este archivo.**
+
+| Pieza licenciada | Qué es | Archivo que la recibe |
+|---|---|---|
+| `pelotech/xapi-lrs` (Apache-2.0) | almacén xAPI 1.0.3 + 2.0 | `repos/foundations.md` |
+| `KI-Campus/LRS` (MIT) | LRS para H5P/LTI | `repos/foundations.md` |
+| `adlnet/xapi-lab` (MIT/Apache-2.0, `P305`) | constructor de *statements* | `repos/foundations.md` |
+| `instructure/qti` (MIT) | importador QTI 1.2/2.1 | `repos/foundations.md` |
+| `examplary/qti` (MIT) | generación QTI 3.0 | `repos/foundations.md` |
+| `instructure/QTIMigrationTool` (BSD-3-Clause) | migración QTI 1.x → 2.0 | `repos/foundations.md` |
+| `OpenOLAT/qtiworks` (BSD-3-Clause) | motor de entrega QTI 2.1 | `repos/foundations.md` |
+| `ishandutta2007/Awesome-University-Management` (MIT) | índice, no sistema | 🔴 **ninguno** — al denominador |
+| `aureuserp/aureuserp` (MIT) | ERP genérico | `verticals/solutions.md` |
+
+🔵 **Así que la predicción del pase 98 se confirma LEÍDA EN SU LETRA —*«≥1 pieza licenciada»*— y se
+FALSIFICA leída como lo que esta tabla necesita —*«≥1 agente»*.** ⚠️ **Y la distinción no es
+retórica: es la diferencia entre un pase que llena este archivo y uno que llena el de al lado.**
+🔴 **La lección de método se escribe para el próximo pase que pre-registre: una predicción falsable
+tiene que nombrar la UNIDAD que se va a contar.** *«Pieza licenciada»* es un predicado que casi
+cualquier barrido satisface; *«agente de la industria educativa»* es el que esta tabla mide. **Una
+predicción que se cumple con cualquier cosa no era falsable.**
+
+### 🔴 El cero, con el denominador enumerado — 11 candidatas agénticas, 0 altas
+
+El eje rotado se corrió también **buscando agentes explícitamente** (MCP sobre SIS, ayudantes de
+cátedra, *knowledge tracing*), y lo agéntico que devolvió ya estaba o no cede:
+
+| Candidata agéntica | Veredicto | Motivo |
+|---|---|---|
+| `chatt-state/banner-mcp-server` | 🔴 **descarte** | **SIN CESIÓN**: alcanzable por `package.json`, 0 de 14 nombres de licencia |
+| `pawalshriram06-ops/mcp-student-management-system` | 🔴 descarte | SIN CESIÓN |
+| `mihir-webmavens/student-management-system` | 🔴 descarte | SIN CESIÓN; su `README` dice *«learning mcp server»* |
+| `DavidLMS/learnmcp-xapi` | 🔵 **ya en esta tabla** | el lado agente del xAPI ya estaba |
+| `ashleycribb/learnmcp-xapi` | 🔵 **ya en esta tabla** | fork del anterior |
+| `443pablo/mcp-powerschool` | 🔵 **ya en esta tabla** | capa SIS K-12 ya cubierta |
+| `chrischall/infinitecampus-mcp` | 🔵 **ya en esta tabla** | ídem |
+| `6a6179/myschoolapp-mcp` | 🔵 **ya en esta tabla** | ídem |
+| `Citolab/qti-convert` · `amp-up-io/qti3-item-player` · `pie-framework/pie-qti` | 🔵 **ya inventariados** | la capa QTI de reproducción ya estaba |
+
+🔴 **`chatt-state/banner-mcp-server` es el descarte que una pre-venta necesita saber.** Es el
+**único** servidor MCP sobre **Ellucian Banner** que el barrido encontró; Banner es uno de los SIS
+de educación superior más instalados del mundo; el repo está **vivo** y **no cede nada**.
+🔵 **Consecuencia: la capa MCP sobre el SIS de educación superior NO tiene punto de partida
+construible, y se presupuesta como desarrollo propio.** En K-12 sí lo hay
+(`443pablo/mcp-powerschool`), **así que la asimetría K-12 / educación superior es ahora una
+medición de esta base y no una impresión.**
+
+### 🔴 El pase corrige la PREMISA de la predicción que confirmó, y la corrección incomoda
+
+El pase 98 llamó a los tres ejes rotados *«no barridos todavía»*. **Medido contra este mismo
+archivo, dos de los tres ya estaban barridos en parte** (ver la tabla de arriba: `learnmcp-xapi`
+para xAPI, tres MCP de SIS, cuatro piezas QTI). 🔵 **Lo que el eje rotado abrió no fue un eje
+virgen: fue la OTRA MITAD de dos ejes que esta base tenía a medias** — el **cliente** xAPI sin el
+**almacén**, y los **reproductores** de ítems sin las librerías de **generación y migración**.
+⚠️ **Un eje con filas no es un eje cubierto, y la pregunta que rinde no es «¿barrí este tema?» sino
+«¿de qué LADO de este tema tengo filas?».**
+
+### 🟢 Lo que este pase le deja al CONTROL COMPARTIDO: `P304`, cuarto eje del mismo defecto
+
+`instructure/QTIMigrationTool` no se quedó en fila ajena: su payload reventó el clasificador.
+
+🔴 **El ancla de BSD estaba escrita como FRASE CONTIGUA, y la identidad de BSD es una SECUENCIA
+ORDENADA DE PALABRAS.** El payload real (BSD-3-Clause de la **University of Cambridge**, 1.392 B)
+dice *«Redistribution and use **of this software** in source and binary forms **(where
+applicable)**, with or without modification, are permitted provided that…»*: **dos inserciones
+dentro de la misma oración**, y el `grep` de frase fija no matchea → **`UNCLASSIFIED` sobre una
+licencia permisiva.**
+
+| Patrón | Eje del defecto |
+|---|---|
+| `P171` | cuerpo **vs** título |
+| `P288` | **caja** |
+| `P299` | palabra **vs** subcadena |
+| 🟢 `P304` | **frase contigua vs tokens ordenados** |
+
+⚠️ **Dirección contraria a `P299`** —aquél inventaba un permiso, éste **pierde** una fila
+permisiva— 🔴 **pero el efecto que obliga el arreglo es de método: con la familia en `UNCLASSIFIED`
+la compuerta de `P250` NO corta, y el veredicto de uso comercial de un payload PERMISIVO lo
+producía el token-match sobre el CUERPO, la vía que `P171` declara insegura. `allowed` correcto por
+la vía equivocada.**
+
+🟢 **Suite del control compartido: 50/50 → 62/62** (12 aserciones, **3 controles negativos**).
+🟢 **51 suites pasan, 0 fallan.** 🔴 **Y por qué 50/50 pasaba con el defecto puesto:** la fixture BSD
+era la oración **canónica**, el único caso donde el ancla de frase **no puede fallar** — `P126`
+punto 2 otra vez.
+
+### 🔴 `P305` y `P306`, en una línea cada uno (desarrollados en `repos/foundations.md`)
+
+- 🔴 **`P305`** — `adlnet/xapi-lab` declara **MIT** en `LICENSE` (titular `Tyler Mulligan`, 2015) y
+  **Apache-2.0** en el `README` (titular `Advanced Distributed Learning`, 2016): **familia, titular
+  y año discrepan a la vez**, y la atribución corre hacia una parte distinta según cuál gobierne.
+  Eje nuevo: `P184`/`P280` miden licencia-vs-**manifiesto**; éste es licencia-vs-**README**.
+- 🟢 **`P306`** — `examplary/qti` ≡ `examplary-ai/qti` (3 `sha256` idénticos), y el **registro**
+  desempata lo que el `sha256` no puede: npm nombra `examplary/qti` como canónico y confirma `MIT`.
+
+### 🔴 Acción pre-registrada para el pase 100, falsable — y con la UNIDAD nombrada
+
+**Afirmación a refutar:** *«el defecto de `P304` no es de la rama BSD solamente: hay más anclas
+escritas como FRASE CONTIGUA en `lib/license_family.sh`, y cada una pierde sus variantes con
+inserción»*.
+
+🔵 **Predicción falsable, y la unidad que se cuenta es «ANCLAS DEL CLASIFICADOR mal escritas», no
+«piezas»:** un barrido de las anclas de frase contra payloads **reales** con inserción encontrará
+**≥1 familia más** mal clasificada. **Candidatos declarados por nombre: el ancla de MIT
+(`Permission is hereby granted, free of charge`), la de Unlicense (`free and unencumbered software
+released into the public domain`) y la de MPL-2.0.** 🔴 **Si las tres aguantan la variante con
+inserción, `P304` era específico de BSD y esta sección estaba equivocada.**
+
+⚠️ **Segunda acción, de DEUDA y no de descubrimiento:** `P237` sigue **abierto** para `p170`,
+`p206`, `p211` y `p230`. Este pase parchó sus cuatro copias del ancla **para no dejar instrumentos
+rotos a sabiendas**, pero **parchar cuatro copias ES el antipatrón que `P237` nombra.** El rewiring
+queda pre-registrado **con su bloqueo dicho: el control compartido no es todavía superconjunto de
+las copias** (`p170` clasifica `BUSL`, `Elastic` y `PolyForm`), **y adoptarlo sin eso PERDERÍA
+familias.**
+
 
 ## 🟢 Altas de agente: 5 — la racha de NUEVE pases en cero se ROMPE, y se rompe cambiando el EJE de búsqueda, no repitiendo el barrido (pase 98 del 2026-10-04)
 

@@ -297,5 +297,87 @@ else
   check "P299 does not disarm the P250 gate (AGPL still allowed)" allowed forbidden
 fi
 
+
+# ---------------------------------------------------------------------------
+# P304 (pase 99) — FRASE CONTIGUA vs TOKENS ORDENADOS, el tercer eje del mismo defecto.
+#
+# El especimen es REAL, no sintetico: `instructure/QTIMigrationTool`, `LICENSE.txt` 1.392 B,
+# BSD-3-Clause de la University of Cambridge.  Inserta DOS cosas dentro de la oracion de
+# concesion -- un complemento y un parentetico -- y el ancla de frase contigua no matchea.
+#
+# POR QUE ESTE CASO ES OBLIGATORIO Y NO OPCIONAL (P126 pt.2).  La fixture BSD que esta suite
+# ya tenia es la oracion CANONICA, o sea el unico caso donde el ancla de frase no puede
+# fallar: 50/50 pasaba con el defecto puesto.  Una fixture canonica valida la rama feliz y
+# certifica un classificador roto -- es el mismo error que el pase 55 cometio midiendo
+# `PASS` contra `PASS`, y el que P288 encontro midiendo AGPL en MAYUSCULAS contra AGPL en
+# MAYUSCULAS.  La variante con insercion es el caso que ejercita el fallo.
+BSD_INSERTED='Copyright (c) 2004-2008, University of Cambridge.
+GUI Code Copyright (c) 2004-2008, Pierre Gorissen
+
+All rights reserved.
+
+Redistribution and use of this software in source and binary forms
+(where applicable), with or without modification, are permitted
+provided that the following conditions are met:'
+check "P304: BSD con insercion en la oracion de concesion" BSD "$(family_of "$BSD_INSERTED")"
+
+# La fixture canonica NO se toca: el arreglo es una relajacion del hueco, no un contrato nuevo.
+check "P304: la BSD canonica sigue clasificando" BSD "$(family_of "$BSD")"
+
+# CONSECUENCIA DE METODO, y es la razon por la que este defecto se arregla aunque pierda
+# en la direccion segura.  Con la familia en UNCLASSIFIED la compuerta de P250 NO corta, y
+# el veredicto de uso comercial de un payload PERMISIVO lo producia el token-match sobre el
+# CUERPO, que es la via que P171 declara insegura: ALLOWED correcto por la via equivocada.
+# Lo que se afirma aca es la COMPUERTA, no la respuesta -- la respuesta ya era ALLOWED.
+check "P304: la familia identificada es lo que ARMA la compuerta de P250" BSD \
+      "$(osi_family_of "$BSD_INSERTED")"
+if commercial_use_ok "$BSD_INSERTED"; then
+  check "P304: BSD-3-Clause permite uso comercial, POR LA COMPUERTA" allowed allowed
+else
+  check "P304: BSD-3-Clause permite uso comercial, POR LA COMPUERTA" allowed forbidden
+fi
+
+# BSD carga el titular en el texto de concesion por construccion, asi que una vez que la
+# familia se reconoce, `holder_of` entra por la rama que PREGUNTA en vez de la de
+# UNCLASSIFIED -- y devuelve el titular del artefacto, no prosa del cuerpo.
+case "$(holder_of "$BSD_INSERTED")" in
+  *"University of Cambridge"*) check "P304: holder_of entra por la rama BSD" ok ok ;;
+  *)                           check "P304: holder_of entra por la rama BSD" ok \
+                                     "$(holder_of "$BSD_INSERTED")" ;;
+esac
+
+# CONTROL NEGATIVO 1 — el hueco NO cruza una oracion.  Sin el `[^.]` esta relajacion
+# convertiria en BSD a cualquier texto que nombre las dos mitades en oraciones distintas,
+# que es precisamente como las nombra una NEGATIVA de redistribucion.
+NOT_BSD_TWO_SENTENCES='Copyright (c) 2026 Alguien
+
+This notice governs redistribution and use. In source and binary forms
+this software may not be redistributed without written consent.'
+case "$(family_of "$NOT_BSD_TWO_SENTENCES")" in
+  BSD) check "P304 control negativo: dos oraciones distintas NO son BSD" not-BSD BSD ;;
+  *)   check "P304 control negativo: dos oraciones distintas NO son BSD" not-BSD not-BSD ;;
+esac
+
+# CONTROL NEGATIVO 2 — el limite de 40 es un limite y se declara como tal.  Una insercion
+# mas larga que el limite NO matchea, y eso es una COTA CONOCIDA del instrumento, no un
+# descuido: se afirma para que el proximo pase la encuentre medida en vez de suponerla.
+NOT_BSD_LONG_GAP='Copyright (c) 2026 Alguien
+
+Redistribution and use of the whole of this particular software distribution
+and every one of its parts in source and binary forms are permitted.'
+case "$(family_of "$NOT_BSD_LONG_GAP")" in
+  BSD) check "P304 cota declarada: insercion > 40 chars NO matchea" not-BSD BSD ;;
+  *)   check "P304 cota declarada: insercion > 40 chars NO matchea" not-BSD not-BSD ;;
+esac
+
+# CONTROL NEGATIVO 3 — la relajacion no toca a NINGUNA otra familia.  El riesgo de aflojar
+# un ancla es que se coma payloads de otras familias, y las dos que comparten vocabulario
+# de redistribucion con BSD son las que hay que afirmar.
+check "P304 no se come a la GPL-3.0 (seccion 13 intacta)" GPL-3.0 "$(family_of "$GPL3")"
+check "P304 no se come a la Apache-2.0"                   Apache-2.0 "$(family_of "$APACHE")"
+check "P304 no se come al MIT"                            MIT        "$(family_of "$MIT")"
+check "P304 no se come a la ISC"                          ISC        "$(family_of "$ISCL")"
+check "P304 no se come a la 0BSD"                         0BSD       "$(family_of "$ZEROBSD")"
+
 printf '\n%d/%d\n' "$((n-fail))" "$n"
 [ "$fail" = 0 ] || exit 1

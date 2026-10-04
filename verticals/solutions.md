@@ -159,6 +159,89 @@ updated: 2026-10-04
 > **`qti3-pnp`**, que abren accesibilidad de evaluación como entregable auditable (**P72**). ⚠️ **Open edX cambia de
 > recomendación: proponer con presupuesto de mantenimiento (gap 70).** Ver la sección del pase 33, abajo.
 
+## 🟢 Una vertical nueva y un MOTOR DE EVALUACIÓN permisivo: la capa QTI deja de ser sólo reproducción (pase 99 del 2026-10-04)
+
+### 🔬 El canal, declarado antes de cualquier veredicto (`P247`)
+
+`github.com` y `api.github.com` → 🔴 **403** · `codeload.github.com` → 🔴 **403** ·
+`raw.githubusercontent.com` → 🟢 **200 con payload** · `registry.npmjs.org` → 🟢 **200**.
+**Todas las familias de abajo salen del payload, ninguna del buscador.**
+
+### 🔴 El barrido obligatorio de plataformas, con su cero enumerado
+
+`open source platform education ERP CRM MIT Apache` devolvió por **vigesimosexta** vez el eje
+generalista. **Confirmación del catálogo por vigesimoprimera vez, y una sola alta:**
+
+| Lo que devolvió | Veredicto |
+|---|---|
+| ERPNext / Frappe Education | 🔵 ya inventariado — su `license.txt` de 19 B es el espécimen que originó la rama de DECLARACIÓN del control compartido |
+| OpenEduCat | 🔵 ya inventariado (**LGPL-3.0**) |
+| Odoo · Apache OFBiz · Huly Platform | 🔴 **ERP genérico, sin modelo de dominio educativo** |
+| `aureuserp/aureuserp` | 🟢 **ALTA, con reserva declarada** (abajo) |
+
+### 🟢 La alta, y su reserva dicha en la misma fila
+
+| Plataforma | Repo | Licencia (payload, DOS fuentes) | Stack | Reserva |
+|---|---|---|---|---|
+| **AureusERP** | `aureuserp/aureuserp` | 🟢 **MIT** (`LICENSE` 1.077 B, `sha256:c6dca3b0db5b68fd…`, titular `Webkul Software`) **+** `composer.json` → `"license": "MIT"` | Laravel + FilamentPHP, sistema de plugins | 🔴 **NO trae modelo de dominio educativo** |
+
+🔵 **Por qué entra igual, y la reserva es la mitad del dato.** El `composer.json` se describe como
+*«Open Source ERP Solution built on Laravel for SMEs and large-scale enterprises»* — **no nombra
+educación en ninguna parte.** 🔴 **Así que no compite con OpenEduCat ni con Frappe Education, que
+sí traen alumno, matrícula, curso y evaluación de fábrica.** 🟢 **Lo que aporta es la única cosa que
+esta capa no tenía: un ERP de base **MIT**.** Todo lo demás de este estante es GPL/AGPL/LGPL, y
+**la licencia es lo que decide si Globant puede entregar un derivado cerrado.**
+
+⚠️ **Regla de elección que sale de ahí, y es nueva para este archivo:** con OpenEduCat (LGPL-3.0) o
+Frappe se arranca **con el dominio puesto y la licencia como restricción**; con AureusERP se arranca
+**con la licencia libre y el dominio por construir**. 🔵 **El costo se mueve de legal a ingeniería,
+y es una decisión de pre-venta, no una preferencia técnica.**
+
+### 🟢 La capa de EVALUACIÓN gana un motor permisivo, y era el hueco más caro de este archivo
+
+🔴 **Hasta este pase, la plataforma de evaluación más madura del inventario era `oat-sa/tao-core`,
+y es **GPL-2.0** —corregido en el pase 95, no GPL-3.0—, o sea copyleft fuerte e incompatible en un
+sentido.** 🟢 **El eje rotado devolvió un motor de entrega QTI **BSD-3-Clause**:**
+
+| Pieza | Licencia (payload) | Qué es | Región |
+|---|---|---|---|
+| **QTIWorks** (`OpenOLAT/qtiworks`) | 🟢 **BSD-3-Clause** (`LICENSE.txt` 2.058 B, `sha256:a5c692f120907d58…`, *«3-clause BSD»* textual) | motor de **entrega y renderizado** QTI 2.1 + `JQTI+` (librería Java de lectura/escritura/modelado) + extensiones **MathAssess** | 🟢 **EMEA** (`webapps.ph.ed.ac.uk/qtiworks/`, University of Edinburgh) |
+
+🔵 **La consecuencia comercial, que es la que un cliente paga:** para entregar y puntuar ítems
+estándar había que entrar por **TAO (GPL-2.0)**; ahora hay un camino **permisivo** para el mismo
+trabajo. 🔴 **Y la cota se declara: QTIWorks cubre «un subconjunto grande» de QTI 2.1 —lo dice su
+propio `README`— y NO cubre QTI 3.0.** Para 3.0, la pieza es `examplary/qti` (MIT, generación y
+parseo), que **no entrega ni puntúa**. ⚠️ **Así que la capa permisiva de evaluación está completa en
+GENERACIÓN (QTI 3.0) y en ENTREGA (QTI 2.1), y NO hay una sola pieza permisiva que entregue 3.0.**
+
+### 🟢 Y la capa de ANALÍTICA de aprendizaje gana su almacén, que esta base no tenía
+
+| Pieza | Licencia (payload) | Qué es | Región |
+|---|---|---|---|
+| `pelotech/xapi-lrs` | 🟢 **Apache-2.0** (11.357 B) | LRS conformante **xAPI 1.0.3 y 2.0**, Hono + PostgreSQL o **PGlite** embebido; SSE, JWT/Basic, OpenTelemetry, UI de admin | 🔴 sin indicio |
+| `KI-Campus/LRS` (`openLRS`) | 🟢 **MIT** (1.122 B) | LRS para **H5P/LTI** con **plugin Moodle** (`KI-Campus/LRS-Moodle`); Express + React | 🟢 **EMEA** (titular `… gGmbH`, forma jurídica alemana) |
+
+🔵 **Lo que cambia para una propuesta: esta base vendía «medición del aprendizaje» con el lado
+CLIENTE del xAPI (`learnmcp-xapi`) y sin dónde guardar los *statements*.** 🟢 **Ahora el camino
+está completo y es permisivo de punta a punta: agente → `learnmcp-xapi` (MIT) → `xapi-lrs`
+(Apache-2.0).**
+
+🟢 **Y `pelotech/xapi-lrs` trae una propiedad de MIGRACIÓN que vale declarar, porque decide una
+venta de reemplazo:** su esquema es **compatible con `yetanalytics/lrsql` v0.9.5** y su `README`
+afirma que puede **tomar una base de `lrsql` en caliente**, con el control en CI. ⚠️ **No está
+verificado por esta base —es una afirmación del `README`, no una medición— y se cita como tal.**
+
+### 🔴 La capa SIS de educación superior queda medida como HUECO, y es un dato de presupuesto
+
+🔴 **`chatt-state/banner-mcp-server` —el único MCP sobre Ellucian Banner que el barrido
+encontró— está vivo, alcanzable por `package.json`, y NO CEDE NADA** (0 de 14 nombres de archivo de
+licencia probados). 🔵 **Banner es uno de los SIS de educación superior más instalados del mundo, y
+la consecuencia es directa: la capa agéntica sobre el SIS de educación superior NO tiene punto de
+partida construible y se presupuesta como desarrollo propio.** ⚠️ **Contrasta con K-12, donde sí lo
+hay (`443pablo/mcp-powerschool`, en `agents/top.md`): la asimetría K-12 / educación superior pasa a
+ser una medición de esta base y no una impresión.**
+
+
 ## 🟢 Sin verticales nuevas, y el eje que esta capa le debía a una venta: COSTO DE OPERACIÓN por plataforma (pase 98 del 2026-10-04)
 
 🔬 **Canal (`P247`):** `raw.githubusercontent.com` → 🟢 **200**; `github.com` y `api.github.com` →

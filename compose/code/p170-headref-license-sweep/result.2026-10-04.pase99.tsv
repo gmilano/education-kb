@@ -1,0 +1,20 @@
+# pase 99 del 2026-10-04 — eje ROTADO: xAPI/LRS + generacion de items QTI + MCP sobre SIS
+# instrumento: sweep_headref.sh (versionado), canal raw.githubusercontent.com/<slug>/HEAD/<path>
+# invocacion: while read -r s; do sh sweep_headref.sh "$s"; done < slugs.pase99.input.txt
+# NOTA: instructure/QTIMigrationTool decia UNKNOWN antes de P304; ahora dice BSD.
+slug	status	hit_path	bytes	license_id
+pelotech/xapi-lrs	LICENSED	LICENSE	11358	Apache-2.0
+tunapanda/wp-xapi-lrs	UNLICENSED	-	0	(reachable via README.md)
+dmccreary/learning-record-store	UNLICENSED	-	0	(reachable via README.md)
+adlnet/xapi-lab	LICENSED	LICENSE	1083	MIT
+KI-Campus/LRS	LICENSED	LICENSE	1123	MIT
+instructure/qti	LICENSED	LICENSE	1085	MIT
+examplary/qti	LICENSED	LICENSE	1070	MIT
+instructure/QTIMigrationTool	LICENSED	LICENSE.txt	1393	BSD
+OpenOLAT/qtiworks	LICENSED	LICENSE.txt	2059	BSD
+chatt-state/banner-mcp-server	UNLICENSED	-	0	(reachable via package.json)
+ishandutta2007/Awesome-University-Management	LICENSED	LICENSE	1069	MIT
+api-evangelist/powerschool	UNLICENSED	-	0	(reachable via README.md)
+pawalshriram06-ops/mcp-student-management-system	UNLICENSED	-	0	(reachable via README.md)
+mihir-webmavens/student-management-system	UNLICENSED	-	0	(reachable via package.json)
+aureuserp/aureuserp	LICENSED	LICENSE	1078	MIT

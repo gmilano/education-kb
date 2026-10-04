@@ -58,7 +58,12 @@ family_of() {
   printf '%s' "$t" | grep -qi 'Apache License' && { echo "Apache-2.0"; return; }
   printf '%s' "$t" | grep -qi 'MIT License' && { echo "MIT"; return; }
   printf '%s' "$1" | grep -qi 'Permission is hereby granted, free of charge' && { echo "MIT"; return; }
-  printf '%s' "$1" | grep -qi 'Redistribution and use in source and binary forms' && { echo "BSD"; return; }
+  # P304 (pase 99): hueco ACOTADO Y DENTRO DE LA ORACION entre los dos tokens -- la identidad
+  # de BSD es una secuencia ORDENADA de palabras, no una frase contigua.  Especimen real:
+  # instructure/QTIMigrationTool inserta «of this software» y «(where applicable)».  El arreglo
+  # canonico vive en lib/license_family.sh; esta copia inline lo replica y el rewiring a la
+  # libreria compartida queda PRE-REGISTRADO (P237 sigue abierto para este archivo).
+  printf '%s' "$1" | tr -s '[:space:]' ' ' | grep -qiE 'redistribution and use[^.]{0,40}in source and binary forms' && { echo "BSD"; return; }
   printf '%s' "$t" | grep -qi 'Mozilla Public License' && { echo "MPL-2.0"; return; }
   echo "UNCLASSIFIED"
 }

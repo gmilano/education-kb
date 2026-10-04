@@ -8,6 +8,113 @@ updated: 2026-10-04
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 
+## 2026-10-04 — pase 99: GitHub trending vuelve vacío por VIGESIMOCTAVA vez, y el canal que rindió fue el REGISTRO DE PAQUETES
+
+🔬 **Canal declarado primero (`P247`), medido este pase.** `github.com/<org>/<repo>` →
+🔴 **`403`** · `api.github.com` → 🔴 **`403`** · `codeload.github.com` → 🔴 **`403`** ·
+`raw.githubusercontent.com` → 🟢 **`200` con payload** · `registry.npmjs.org` → 🟢 **`200`** ·
+`pypi.org` → 🟢 **`200`**.
+
+🔴 **La serie de estrellas sigue CORTADA, igual que en el pase 98, y por el mismo motivo: el canal,
+no la saturación.** Ninguna fila nueva de este pase lleva estrellas, y eso es una decisión y no un
+olvido: **una cifra leída del buscador, puesta en una columna que el resto del archivo llena con
+medición de primera mano, es dato falso con forma de dato bueno.**
+
+### 🔴 El denominador del vacío, enumerado
+
+`github trending education AI 2026` (año **calculado**, `date -u +%Y` → **2026**) devolvió, por
+vigesimoctava vez consecutiva, **cero repos de la industria educativa**:
+
+| Lo que devolvió | Por qué no es fila de esta KB |
+|---|---|
+| `rasbt/LLMs-from-scratch` | enseña a construir un LLM — es **AI como TEMA**, no AI **para** educación |
+| `ashishpatel26/500-AI-Agents-Projects` | índice multi-industria, ya evaluado en pases anteriores |
+| `caramaschiHG/awesome-ai-agents-2026` | índice generalista |
+| `kouweizhu/agents-radar` (issue #328, fechada **hoy**) | radar generalista; `P281` ya registró que su etiquetado confunde dos industrias |
+| Microsoft `AI Agents for Beginners`, cursos DeepLearning.AI / HuggingFace / LangGraph Academy | **currículo sobre** AI |
+| AutoGen, CrewAI, Flowise, OpenClaw, opencode, OpenHands | frameworks generalistas, ya inventariados |
+
+🔵 **El patrón es estable y conviene nombrarlo de una vez: la consulta `education` + `AI` en un
+canal de *trending* devuelve «AI como asignatura», no «AI como producto para la industria». Son dos
+industrias distintas compartiendo una palabra**, y veintiocho pases de vacío son la medida de esa
+colisión, no de la ausencia de software educativo.
+
+### 🟢 El canal que SÍ rindió, y es NUEVO para este archivo: `registry.npmjs.org`
+
+🔴 Hasta este pase, la identidad de un repo se resolvía por **payload** (`sha256` sobre `raw`), que
+dice *«estos dos nombres son el mismo artefacto»* pero **no dice cuál es el canónico**. El pase 98
+quedó exactamente ahí con `iriseye395`/`itsnone-liu`/`zijinz456`: tres nombres, un artefacto, y el
+canónico se eligió porque **ya estaba en la tabla**, no porque un canal lo afirmara.
+
+🟢 **El registro de paquetes contesta esa pregunta, y este pase lo midió sobre un caso real.**
+`examplary/qti` y `examplary-ai/qti` son byte-idénticos en `README.md`, `LICENSE` y `package.json`
+(tres `sha256` coincidentes). Y `registry.npmjs.org/@examplary/qti` → 🟢 `200` declara:
+
+| Campo del registro | Valor |
+|---|---|
+| `dist-tags.latest` | `1.16.0` |
+| `license` | 🟢 `MIT` — **concuerda con el payload** |
+| `repository.url` | 🟢 `git+https://github.com/examplary/qti.git` |
+
+🔵 **O sea: el registro nombra al canónico y confirma la familia por un canal independiente del
+payload.** Es `P253` (identidad por registro) aplicado donde `P306` lo necesitaba. ⚠️ **Y la cota se
+declara: esto sirve sólo para piezas PUBLICADAS en un registro.** De las 9 piezas licenciadas de
+este pase, **una** tenía paquete en npm; `pelotech/xapi-lrs` trae `package.json` **sin campo
+`license`**, así que su cesión vive sólo en el `LICENSE` y el registro no la respalda.
+
+### 🟢 Las altas de repo de este pase: 6, y son DOS CAPAS, no seis piezas sueltas
+
+El eje rotado (ver `agents/trending.md` de este pase) devolvió **15 candidatas → 9 licenciadas**.
+Las que son **repo fundacional** y no agente:
+
+| Repo | Familia (payload) | Capa |
+|---|---|---|
+| `pelotech/xapi-lrs` | 🟢 Apache-2.0 (11.358 B) | **almacén** xAPI 1.0.3 **y** 2.0, Hono + PostgreSQL/PGlite |
+| `adlnet/xapi-lab` | ⚠️ MIT en `LICENSE` / Apache-2.0 en `README` (`P305`) | constructor y validador de *statements* |
+| `KI-Campus/LRS` | 🟢 MIT (1.123 B) | LRS para H5P/LTI, con plugin Moodle |
+| `instructure/qti` | 🟢 MIT (1.085 B) | importador QTI 1.2/2.1 (Ruby) |
+| `examplary/qti` | 🟢 MIT (1.070 B) **+ npm** | generación QTI **3.0** tipada (TypeScript) |
+| `instructure/QTIMigrationTool` | 🟢 **BSD-3-Clause** (1.392 B) | migración QTI 1.x → 2.0 |
+| `OpenOLAT/qtiworks` | 🟢 BSD-3-Clause (2.059 B) | motor de **entrega** QTI 2.1 + `JQTI+` |
+
+🔵 **Las dos capas que abren, y el motivo por el que valen más que su cuenta:** esta base tenía el
+lado **cliente** del xAPI (`learnmcp-xapi`) sin el **almacén**, y **reproductores** de ítems QTI sin
+las **librerías de generación y migración**. **Un eje con filas no es un eje cubierto.**
+
+### 🔴 Un repo que este archivo NO puede citar, y es el que más dolería
+
+`chatt-state/banner-mcp-server` — servidor MCP para **Ellucian Banner**, vivo, alcanzable por
+`package.json`, **y sin cesión en ninguno de los 14 nombres de archivo de licencia probados.**
+🔴 **Es el único MCP sobre Banner que el barrido encontró, y Banner es uno de los SIS de educación
+superior más instalados del mundo.** 🔵 **Consecuencia para una pre-venta: la capa MCP sobre el SIS
+de educación superior no tiene punto de partida construible y se presupuesta como desarrollo
+propio** — al contrario de K-12, donde `443pablo/mcp-powerschool` sí está en esta base.
+
+### 🟢 Lo que este pase deja en el ÁRBOL DE CÓDIGO
+
+🔴 **`P304` — el ancla BSD del clasificador compartido estaba escrita como FRASE CONTIGUA**, y un
+payload BSD-3-Clause real con dos inserciones dentro de la oración de concesión
+(`instructure/QTIMigrationTool`) volvía `UNCLASSIFIED`. Cuarto eje de la misma familia de defectos
+(`P171` cuerpo-vs-título, `P288` caja, `P299` palabra-vs-subcadena, `P304`
+frase-vs-tokens-ordenados).
+
+- `lib/license_family.sh` — 🟢 **62/62** (era 50/50; 12 aserciones nuevas, **3 controles
+  negativos**: el hueco no cruza oración, la cota de 40 caracteres se declara, y ninguna otra
+  familia se come la relajación).
+- 🟢 **Barrido total: 51 suites pasan, 0 fallan**
+  (`find compose/code -name 'test_*.py' -o -name 'test_*.sh' -o -name 'run_test.sh'`).
+- ⚠️ **`p230-rostering-layer-axis/measure.sh` cambió de forma, no sólo de ancla:** la rama BSD
+  **salió del `case`**, porque un glob no puede expresar un hueco **acotado y dentro de la
+  oración** — y el glob de dos estrellas que sí lo "resuelve" es **ilimitado y cruza oraciones**,
+  justo lo que el control negativo 1 de `P304` prohíbe. Se pregunta con `grep`.
+- 🔴 **`P237` queda ABIERTO y declarado:** `p170`, `p206`, `p211` y `p230` llevan **copia propia** del
+  ancla. Este pase las parchó las cuatro para no dejar instrumentos rotos a sabiendas, **pero
+  parchar cuatro copias es el antipatrón que `P237` nombra.** El rewiring queda pre-registrado y su
+  bloqueo se dice: **el control compartido todavía no es superconjunto de las copias** (`p170`
+  clasifica `BUSL`, `Elastic` y `PolyForm`, que el control no tiene).
+
+---
+
 ## 2026-10-04 — pase 98: GitHub trending vuelve vacío por VIGESIMOSÉPTIMA vez, y el CANAL DE ESTRELLAS se murió del todo
 
 🔬 **Canal declarado (`P247`), medido este pase.** `github.com/<org>/<repo>` → 🔴 **`403`** ·

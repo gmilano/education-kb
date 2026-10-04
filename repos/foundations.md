@@ -8,6 +8,8 @@ updated: 2026-10-04
 
 > Bases sobre las cuales construir. Verificado repo por repo vía WebFetch el 2026-09-30 (capas del pase 10, el 2026-10-01).
 > Leer la columna **Licencia** antes de proponer: media KB de educación es GPL/AGPL, no permisiva.
+> **Pase 99 del 2026-10-04:** 🟢 **7 altas fundacionales, y son DOS CAPAS que este estante no tenía: el ALMACÉN xAPI y la librería de ÍTEMS QTI.** El barrido obligatorio (`open source platform education ERP CRM MIT Apache`) devolvió por vigesimosexta vez el eje generalista (ERPNext/Frappe, Odoo, OFBiz, Huly, AureusERP) — **cero** piezas fundacionales educativas nuevas. 🟢 **Pero el EJE ROTADO que el pase 98 pre-registró sí rindió: 15 candidatas medidas → 9 licenciadas, 6 sin cesión**, y 7 de las 9 son repo fundacional. 🔵 **Lo que abren no es un tema nuevo sino la OTRA MITAD de dos temas que esta base tenía a medias: tenía el CLIENTE xAPI (`learnmcp-xapi`) y no el ALMACÉN; tenía REPRODUCTORES de ítems QTI (`qti3-item-player`, `pie-qti`) y no las librerías de GENERACIÓN y MIGRACIÓN.** 🔴 **`P304` — el ancla BSD del control compartido estaba escrita como FRASE CONTIGUA y perdía una familia PERMISIVA:** `instructure/QTIMigrationTool` es BSD-3-Clause real (University of Cambridge, 1.392 B) y volvía `UNCLASSIFIED`, porque su oración de concesión inserta *«of this software»* y *«(where applicable)»* dentro de la frase canónica. **Cuarto eje del mismo defecto** (`P171` cuerpo-vs-título, `P288` caja, `P299` palabra-vs-subcadena, `P304` frase-vs-tokens-ordenados). 🟢 **`lib/license_family.sh` 50/50 → 62/62** (3 controles negativos), **51 suites pasan, 0 fallan**. 🔴 **`P305` — `adlnet/xapi-lab` declara DOS familias en DOS payloads del mismo repo:** `LICENSE` dice **MIT** (titular `Tyler Mulligan`, 2015) y el `README` dice **Apache-2.0** (titular `Advanced Distributed Learning`, 2016) — **familia, titular y año discrepan a la vez**, y la obligación de atribución corre hacia una parte distinta según cuál gobierne. 🟢 **`P306` — `examplary/qti` ≡ `examplary-ai/qti`, byte-idénticos en 3 archivos, y el REGISTRO desempata:** `registry.npmjs.org/@examplary/qti` nombra `github.com/examplary/qti` como canónico y confirma `MIT` por un canal independiente del payload. Ver **`P304`**–**`P306`**.
+
 > **Pase 97 del 2026-10-04:** 🔴 **Sin repos fundacionales nuevos — el barrido `github trending education AI 2026` (año CALCULADO) devolvió por vigesimoquinta vez el eje generalista: 6 de infra de agentes, 4 de currículo para formar ingenieros de AI, 0 de la industria educativa, y las seis cifras de estrellas IDÉNTICAS a las de los pases 95 y 96.** 🟢 **Pero este archivo gana algo que no tenía: la capa de plataforma Java/Maven queda leída por un SEGUNDO canal independiente —la declaración del `pom.xml`— y concuerda con lo publicado.** Medido punta a punta sobre payloads reales: `sakaiproject/sakai` declara `Educational Community License, Version 2.0` → 🟢 **`ECL-2.0`, igual que la fila**; `UniTime/unitime` declara `Apache Software License (ASL), Version 2.0` → 🟢 **`Apache-2.0`, igual**; `DSpace/DSpace` declara `DSpace BSD License` → 🔵 **`BSD`, acuerdo de FAMILIA pero menos preciso que el `BSD-3-Clause` publicado, porque de un nombre de fantasía no sale el número de cláusulas**; `kuali/kc` → 🔴 **`AGPL-3.0`, y el pom es la ÚNICA fuente porque no tiene archivo de licencia entre los nombres sondeados**. 🟢 **4 acuerdos exactos, 1 de familia, 0 contradicciones: el manifiesto es canal CORROBORANTE, no reemplazo.** 🔴 **El cableado que lo hizo posible tuvo que esquivar un defecto propio: con `artifactId` como identidad, `sakaiproject/sakai` (artifactId `base`) sale `FOREIGN` siendo su propio pom raíz** (**P294**). ⚠️ **Y un límite declarado: un `pom.xml` NO responde `P279`** —no nombra archivos de licencia—, así que la pregunta del pase 95 sobre las filas de este archivo fuera de las 200 **sigue abierta** por el lado del nombre de archivo; lo que se cerró es el lado de la **declaración**. Ver `compose/code/p294-pom-in-production/` (**27/27**) y la tendencia **757**.
 
 > 🔴 **Acción pre-registrada para el pase 98, falsable en las dos direcciones y con su número escrito ANTES de correrla.** Este pase midió que el canal de **declaración** es menos preciso que el de **payload** en 1 de 5 casos (`DSpace BSD License` → `BSD`, contra `BSD-3-Clause` leído del archivo), y la pregunta que eso deja abierta es si esa pérdida es **estructural** —los poms de esta vertical declaran prosa— o **incidental** —DSpace es el raro—. **Acción:** sondear el `pom.xml` de **seis** repos Java/Maven educativos NO tocados por este pase, nombrados a mano (el entorno niega enumerar destinos en lote), y clasificar cada `<name>` en **PROSA** (`Apache Software License (ASL), Version 2.0`) o **SPDX PRECISO** (`BSD-3-Clause`, `Apache-2.0`). **Predicción pre-registrada: 0 de 6 declararán un identificador SPDX preciso**, o sea que la pérdida de precisión de `P296` es estructural en esta vertical. 🔵 **Qué la refuta:** **una sola** declaración SPDX precisa en los seis — y entonces el canal de declaración puede, a veces, ser **más** preciso que una lista fija de nombres de archivo, y `P296` hay que reescribirlo con esa rama. ⚠️ **Lo que NO puede pasar es que se publique sin número:** si el entorno niega las seis sondas, se dice *no se pudo correr* como hizo el pase 96, y no se rellena.
@@ -102,6 +104,189 @@ corre ése antes de escribir uno a mano** (tendencia **313**). 🟢 **Y el `gafa
 > y 5 en `schemas12/`, y contar sólo el primero es lo que hizo invisible el segundo dialecto de SCORM (**P106**).
 > **Pase 36 del 2026-10-02:** 🔵 **este pase no agrega repos: le pone FECHA a los que ya están, y la fecha cambia tres recomendaciones.** Se midió la capa PHP de evaluación y telemetría en Packagist —el único registro de los tres que entrega descargas en este entorno (`api.npmjs.org` y `pypistats.org` dan **403 a CONNECT**)— y el resultado está en `repos/trending.md`. **Lo que hay que saber antes de proponer desde este archivo:** 🔴 **la pieza xAPI más descargada de esta base, `rusticisoftware/tincan` (Apache-2.0, 6.178 desc./mes, 863.777 totales), no publica desde el 2022-11-02**, y ⚠️ **el único MIT de esa capa, `php-xapi/client`, está parado desde el 2021-03-24** con 825 desc./mes. 🔵 **La lectura es que en xAPI/PHP lo permisivo está quieto y lo vivo es copyleft**, así que la receta de telemetría se sostiene en **Ralph (MIT)** + **`lrsql` (Apache-2.0)** + **`learnmcp-xapi` (MIT)** y no en la capa PHP. 🟢 **Del lado de evaluación, lo activo es `oat-sa/extension-tao-testqti`** (**885 versiones**, release del **2026-09-30**) **y sigue siendo GPL-2.0-only**, mientras **lo permisivo es lo nuevo**: `@longsightgroup/qti3-cli` (**MIT**, 41 releases desde el 2026-05-21, último **2026-10-01**) con **cero dependencias de terceros** — sus 4 dependencias son todas `@longsightgroup/*` pinneadas a la misma versión exacta. **Su manifiesto MCP completo de 20 tools está escrito en `compose/patterns.md` (P76).** 🔴 **Y una corrección de catálogo: `oat-sa/qti-sdk` devuelve 404 en Packagist porque es el nombre del REPO — su paquete es `qtism/qtism`** (GPL-2.0-only, 218.212 descargas totales, 315 versiones). **Nombre de repo y nombre de paquete son identificadores distintos, y confundirlos produce un 404 que parece una ausencia** — pasó igual con `1edtech/oneroster`, `imsglobal/lti-1-3-php-library` y `packbackbooks/lti-1-3-php-library`, los tres **404**, que se anotan como *«no verificado en Packagist bajo ese nombre»* y **no** como inexistentes. ⚠️ **Acción pendiente que el pase 37 tiene asignada: este archivo nunca pasó por el control de *slugs* distintos ni por el de *backlink*** — los dos que en `agents/top.md` encontraron **un duplicado** y **dos colisiones** este mismo pase.
 > **Pase 11 del 2026-10-01:** aparece una licencia que las diez pasadas anteriores filtraban sin saberlo — **ECL-2.0**, con la que licencia todo Apereo (Sakai, Opencast, OpenLRW). Es Apache-2.0 con el alcance de patentes acotado, aprobada por OSI y FSF, y **es apta para construir arriba**. Ver la capa de analítica institucional, abajo.
+
+## 🟢 Altas fundacionales: 7 — y son DOS CAPAS, no siete piezas sueltas: el ALMACÉN xAPI y la librería de ÍTEMS QTI (pase 99 del 2026-10-04)
+
+### 🔬 El canal, declarado antes de cualquier veredicto (`P247`)
+
+| Canal | Código | Consecuencia |
+|---|---|---|
+| `github.com/<org>/<repo>` | 🔴 **403** | el `curl -sI` del encargo está **muerto acá** |
+| `api.github.com/repos/<org>/<repo>` | 🔴 **403** | sin estrellas, sin licencia declarada, sin fecha de *commit* |
+| `codeload.github.com` | 🔴 **403** | sin clon por tarball |
+| `raw.githubusercontent.com/<slug>/HEAD/<path>` | 🟢 **200 con payload** | **el canal de primera mano**, y por él se midió todo lo de abajo |
+| `registry.npmjs.org` | 🟢 **200** | segundo canal independiente, y este pase lo USÓ (`P306`) |
+| `pypi.org` | 🟢 **200** | disponible, no necesario este pase |
+
+🔴 **Ninguna fila nueva lleva estrellas, y es decisión y no olvido:** el canal que las sirve da
+**403**, y una cifra leída del buscador puesta en una columna que el resto del archivo llena con
+medición de primera mano es **dato falso con forma de dato bueno**.
+
+### 🔴 El cero del barrido del encargo, con el denominador enumerado
+
+`open source platform education ERP CRM MIT Apache` (año **calculado**, `date -u +%Y` → **2026**)
+devolvió, por vigesimosexta vez, el eje generalista de ERP:
+
+| Lo que devolvió | Veredicto |
+|---|---|
+| ERPNext / Frappe Education | 🔵 ya inventariado (y su `license.txt` de 19 B es el espécimen que originó la rama de DECLARACIÓN del control compartido) |
+| OpenEduCat | 🔵 ya inventariado (LGPL-3.0) |
+| Odoo, Apache OFBiz, Huly Platform | 🔴 ERP **genérico**, sin modelo de dominio educativo |
+| `aureuserp/aureuserp` | 🟢 **MIT medida** — pero ERP **genérico**: va a `verticals/`, no a este estante |
+
+### 🟢 Las 7 altas, con la familia leída del PAYLOAD y clasificada por el control compartido
+
+| Repo | Familia (payload) | Bytes / `sha256` | Capa | Región |
+|---|---|---|---|---|
+| `pelotech/xapi-lrs` | 🟢 **Apache-2.0** | `LICENSE` 11.357 B · `c71d239df91726fc…` | 🟢 **ALTA DE CAPA: el ALMACÉN xAPI, conformante 1.0.3 **y** 2.0** — Hono + PostgreSQL, o **PGlite** embebido sin dependencias | 🔴 sin indicio |
+| `KI-Campus/LRS` (`openLRS`) | 🟢 **MIT** | `LICENSE` 1.122 B · `d0ad2ec8573230da…` | LRS para H5P/LTI con **plugin Moodle** (`KI-Campus/LRS-Moodle`); Express + React | 🟢 **EMEA** |
+| `adlnet/xapi-lab` | ⚠️ **MIT en `LICENSE`, Apache-2.0 en `README`** (`P305`) | `LICENSE` 1.082 B · `7625cb30bac8c76b…` | constructor y **validador** de *statements* xAPI, sobre `XAPIWrapper` | 🔴 sin indicio que resuelva |
+| `instructure/qti` | 🟢 **MIT** | `LICENSE` 1.084 B · `e5edc6e4b0be1559…` | 🟢 **ALTA DE CAPA: importador QTI 1.2/2.1 del fabricante de Canvas** (gema Ruby) | 🔴 sin indicio |
+| `examplary/qti` | 🟢 **MIT** (payload **+ npm**) | `LICENSE` 1.069 B · `38164d198cfe2ea7…` | 🟢 **generación QTI 3.0** tipada en TypeScript, con parseo y detección de versión | 🔴 sin indicio |
+| `instructure/QTIMigrationTool` | 🟢 **BSD-3-Clause** — 🔴 **la medía `UNCLASSIFIED` hasta este pase** (`P304`) | `LICENSE.txt` 1.392 B · `26f8e53396b60ac4…` | migración QTI 1.x → 2.0 | 🟢 **EMEA** |
+| `OpenOLAT/qtiworks` | 🟢 **BSD-3-Clause** (*«3-clause BSD»* textual en el payload) | `LICENSE.txt` 2.058 B · `a5c692f120907d58…` | motor de **ENTREGA** QTI 2.1 + `JQTI+` (librería Java) + extensiones **MathAssess** | 🟢 **EMEA** |
+
+🔵 **Por qué valen más que su cuenta.** Esta base ya tenía `DavidLMS/learnmcp-xapi` —el lado
+**agente** del xAPI— y no tenía dónde **guardar** los *statements*; y tenía `amp-up-io/qti3-item-player`
+y `pie-framework/pie-qti` —**reproductores**— y no tenía con qué **generar** ni **migrar** los ítems.
+⚠️ **Un eje con filas no es un eje cubierto: la pregunta que rinde no es «¿barrí este tema?» sino
+«¿de qué LADO de este tema tengo filas?».**
+
+🟢 **Y las tres de QTI se componen entre sí, que es lo que las hace una capa:** `examplary/qti`
+**genera** QTI 3.0, `instructure/QTIMigrationTool` **migra** lo heredado de 1.x, `instructure/qti`
+**importa** a Canvas y `OpenOLAT/qtiworks` lo **entrega y puntúa**. **Las cuatro son permisivas**
+(3 MIT + 2 BSD-3-Clause), que es raro en esta vertical: la mitad de este estante es GPL/AGPL.
+
+### 🔴 Los 6 descartes, enumerados — y el más caro es de la capa SIS
+
+| Candidata | Veredicto medido | Canal |
+|---|---|---|
+| `chatt-state/banner-mcp-server` | 🔴 **SIN CESIÓN** — alcanzable por `package.json`, **0 de 14 nombres** de archivo de licencia | `raw` |
+| `tunapanda/wp-xapi-lrs` | 🔴 SIN CESIÓN (alcanzable por `README.md`) | `raw` |
+| `dmccreary/learning-record-store` | 🔴 SIN CESIÓN (alcanzable por `README.md`) | `raw` |
+| `api-evangelist/powerschool` | 🔴 SIN CESIÓN — y es un **perfil de API**, no software | `raw` |
+| `pawalshriram06-ops/mcp-student-management-system` | 🔴 SIN CESIÓN | `raw` |
+| `mihir-webmavens/student-management-system` | 🔴 SIN CESIÓN — su `README` dice *«learning mcp server»* | `raw` |
+
+🔴 **`chatt-state/banner-mcp-server` es el descarte que decide un presupuesto.** Es el **único** MCP
+sobre **Ellucian Banner** que el barrido encontró, Banner es uno de los SIS de educación superior
+más instalados del mundo, el repo está **vivo y alcanzable**, y **no cede nada**. 🔵 **Consecuencia
+para una pre-venta de educación superior: la capa MCP sobre el SIS no tiene punto de partida
+construible y se presupuesta como desarrollo propio** — al contrario de K-12, donde
+`443pablo/mcp-powerschool` sí está en esta base. ⚠️ **Y `ishandutta2007/Awesome-University-Management`
+es MIT medida (1.069 B) y tampoco es fila: es un ÍNDICE, no un sistema.** Entra al denominador.
+
+### 🔴 `P304` — el ancla BSD era una FRASE CONTIGUA, y perdía una familia PERMISIVA
+
+El payload de `instructure/QTIMigrationTool` dice:
+
+> *«Redistribution and use **of this software** in source and binary forms **(where applicable)**,
+> with or without modification, are permitted provided that the following conditions are met»*
+
+🔴 **Dos inserciones dentro de la misma oración** —un complemento y un parentético— **y el `grep` de
+frase fija no matchea.** Veredicto: `UNCLASSIFIED` sobre un BSD-3-Clause de libro, con sus tres
+cláusulas y su *«Neither the name of the University of Cambridge…»*.
+
+🔵 **Es el CUARTO eje del mismo defecto, y la serie es la lección:**
+
+| Patrón | Eje del defecto | Qué se midió mal |
+|---|---|---|
+| `P171` | cuerpo **vs** título | la sección 13 de la GPL-3.0 nombra la AGPL |
+| `P288` | **caja** | un AGPL *reflowed* sin título en mayúsculas caía a la rama GPL |
+| `P299` | palabra **vs** subcadena | `mit` es subcadena de `permit`, `submit`, `limit` |
+| 🟢 `P304` | **frase contigua vs tokens ordenados** | una inserción dentro de la oración de concesión |
+
+⚠️ **La dirección es la CONTRARIA a la de `P299`, y por eso casi no se arregla:** `P299` convertía
+una negativa en un permiso MIT —falla de **cumplimiento**—, mientras `P304` **pierde** una fila
+permisiva —falla de **estante**—. 🔴 **Lo que obliga el arreglo es el segundo efecto: con la familia
+en `UNCLASSIFIED`, la compuerta de `P250` NO corta, así que el veredicto de uso comercial de un
+payload PERMISIVO lo producía el token-match sobre el CUERPO — justo la vía que `P171` declara
+insegura. La respuesta era `allowed`, que es la correcta, obtenida por la vía equivocada.**
+
+| Eje | Antes de `P304` | Después |
+|---|---|---|
+| familia | 🔴 `UNCLASSIFIED` | 🟢 `BSD` |
+| uso comercial | ⚠️ `allowed` **por token-match sobre el cuerpo** | 🟢 `allowed` **por la compuerta** |
+| titular | ⚠️ acertado por la rama `UNCLASSIFIED` | 🟢 por la rama BSD, que lo carga por construcción |
+
+🔴 **Y por qué 50/50 pasaba con el defecto puesto, que es `P126` punto 2 otra vez:** la fixture BSD
+de la suite era la oración **CANÓNICA**, o sea **el único caso donde el ancla de frase no puede
+fallar**. **Una fixture canónica valida la rama feliz y certifica un clasificador roto.**
+
+🟢 **`lib/license_family.sh` — 50/50 → 62/62**, con **tres controles negativos** que es lo que
+`P126` exige: (1) el hueco **no cruza una oración** (`[^.]`), (2) la **cota de 40 caracteres** se
+declara y se afirma como límite conocido, (3) la relajación **no se come** a GPL-3.0, Apache-2.0,
+MIT, ISC ni 0BSD.
+
+⚠️ **`p230-rostering-layer-axis/measure.sh` cambió de FORMA, no sólo de ancla:** la rama BSD **salió
+del `case`**, porque un glob no puede expresar un hueco acotado con clase negada — y el glob de dos
+estrellas que sí lo "resuelve" es **ilimitado y cruza oraciones**, justo lo que el control negativo
+1 prohíbe.
+
+🔴 **`P237` queda ABIERTO y declarado para cuatro instrumentos.** `p170`, `p206`, `p211` y `p230`
+llevan **copia propia** del ancla y ninguno hace `source` del control compartido. Este pase parchó
+las cuatro **para no dejar instrumentos rotos a sabiendas**, pero **parchar cuatro copias ES el
+antipatrón que `P237` existe para nombrar.** El rewiring queda pre-registrado **con su bloqueo
+dicho: el control compartido todavía no es superconjunto de las copias** —`p170` clasifica `BUSL`,
+`Elastic` y `PolyForm`, que el control no tiene—, **y adoptarlo sin eso PERDERÍA familias**, que es
+la advertencia que `lib/README.md` ya traía escrita desde el pase 77.
+
+### 🔴 `P305` — dos payloads del MISMO repo declaran familias, titulares y años distintos
+
+| Fuente en `adlnet/xapi-lab` | Familia | Titular | Año |
+|---|---|---|---|
+| `LICENSE` (1.082 B) | 🟢 **MIT** | `Tyler Mulligan` — **persona física** | 2015 |
+| `README.md`, sección *License* | ⚠️ **Apache-2.0** | `Advanced Distributed Learning` — **organización** | 2016 |
+
+🔵 **Las dos son permisivas, así que el riesgo comercial es bajo — y no es ahí donde duele.**
+🔴 **Difiere el TITULAR, y la obligación de atribución corre hacia una parte distinta según cuál
+gobierne:** una persona bajo MIT, o la **ADL Initiative** (iniciativa del Departamento de Defensa de
+EE. UU.) bajo Apache-2.0. **Un aviso de atribución en un entregable nombra a uno y se equivoca con
+el otro.** ⚠️ **Esta base NO resuelve el conflicto —la pregunta es legal, no de medición— y la fila
+lo lleva declarado en vez de elegir en silencio.** 🔵 **El eje es nuevo acá: `P184` y `P280` miden
+licencia-vs-**manifiesto**; este es archivo-de-licencia-vs-**README**.**
+
+### 🟢 `P306` — identidad por REGISTRO, que es lo que al `sha256` le faltaba
+
+`examplary/qti` y `examplary-ai/qti`, byte-idénticos en los **tres** archivos probados
+(`README.md` `e04864bfc0706da0…`, `LICENSE` `38164d198cfe2ea7…`, `package.json` `e30cc496a3bfaa57…`).
+
+🔴 **El `sha256` dice «son el mismo artefacto» y NO dice cuál es el canónico.** El pase 98 quedó
+exactamente ahí con `iriseye395`/`itsnone-liu`/`zijinz456`: el canónico se eligió porque **ya estaba
+en la tabla**, no porque un canal lo afirmara. 🟢 **El registro contesta eso:**
+`registry.npmjs.org/@examplary/qti` (🟢 `200`) declara `repository.url` =
+`git+https://github.com/examplary/qti.git` y `license` = `MIT`. **Canónico `examplary/qti`, espejo
+`examplary-ai/qti`, y la familia confirmada por DOS canales independientes que concuerdan.**
+
+⚠️ **Cota declarada: sirve sólo para piezas PUBLICADAS en un registro.** De las 9 licenciadas de
+este pase **una** tenía paquete en npm, y `pelotech/xapi-lrs` trae `package.json` **sin campo
+`license`** — su cesión vive sólo en el `LICENSE` y el registro no la respalda.
+
+### 🟢 Regiones: dos ganadas por indicio de primera mano, y cuatro huecos declarados
+
+| Repo | Región | Indicio, y es del PAYLOAD |
+|---|---|---|
+| `instructure/QTIMigrationTool` | 🟢 **EMEA** | `README` fija `qtitools.caret.cam.ac.uk` y el contacto `swl10@cam.ac.uk`; el `LICENSE.txt` nombra la **University of Cambridge** |
+| `OpenOLAT/qtiworks` | 🟢 **EMEA** | `README` fija `webapps.ph.ed.ac.uk/qtiworks/` — **University of Edinburgh** |
+| `KI-Campus/LRS` | 🟢 **EMEA** | 🔵 **clase de indicio NUEVA: la FORMA JURÍDICA.** Titular *«Hasso Plattner Institute for Digital Engineering **gGmbH**»*, y `gGmbH` es una figura del derecho societario **alemán** |
+| `pelotech/xapi-lrs` | 🔴 **ninguna** | sólo el nombre del titular |
+| `adlnet/xapi-lab` | 🔴 **ninguna** | los dos indicios son nombres de titular **y además se contradicen** (`P305`) |
+| `instructure/qti` · `examplary/qti` | 🔴 **ninguna** | sólo nombres de titular |
+
+🔵 **`gGmbH` merece el subrayado porque amplía `P135` sin romperlo:** `P135` prohíbe inferir región
+del **nombre** del titular, y una **forma de constitución** no es el nombre — es la jurisdicción
+bajo la cual la entidad existe. 🔴 **Y los cuatro huecos se dicen en vez de rellenarse: elevar
+«North America» desde «Instructure es de Utah» sería inventar dato con forma de dato medido.**
+
+### 🟢 Suites y canales
+
+- `lib/test_license_family.sh` — 🟢 **62/62** (era **50/50**; 12 aserciones nuevas, 3 negativas).
+- Barrido total — 🟢 **51 suites pasan, 0 fallan**, con su invocación, que es la regla de `P107`:
+  `find compose/code -name 'test_*.py' -o -name 'test_*.sh' -o -name 'run_test.sh'`.
+- `p170-headref-license-sweep/sweep_headref.sh instructure/QTIMigrationTool` → 🟢 `LICENSED LICENSE.txt 1393 BSD` (era `UNKNOWN`).
+- Canal: todo por `raw.githubusercontent.com` + `registry.npmjs.org`; `github.com`, `api.github.com`
+  y `codeload.github.com` → **403**.
+
 
 ## 🔴 Altas fundacionales: 0 — pero las SIETE plataformas de esta capa quedan re-medidas por payload, y NINGUNA es permisiva (pase 98 del 2026-10-04)
 

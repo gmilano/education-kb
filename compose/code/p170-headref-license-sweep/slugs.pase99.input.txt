@@ -1,0 +1,15 @@
+pelotech/xapi-lrs
+tunapanda/wp-xapi-lrs
+dmccreary/learning-record-store
+adlnet/xapi-lab
+KI-Campus/LRS
+instructure/qti
+examplary/qti
+instructure/QTIMigrationTool
+OpenOLAT/qtiworks
+chatt-state/banner-mcp-server
+ishandutta2007/Awesome-University-Management
+api-evangelist/powerschool
+pawalshriram06-ops/mcp-student-management-system
+mihir-webmavens/student-management-system
+aureuserp/aureuserp

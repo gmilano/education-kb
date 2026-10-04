@@ -46,9 +46,17 @@ classify() { # stdin: payload de licencia -> clase
     *"GNU LESSER GENERAL PUBLIC"*) echo "LGPL" ;;
     *"GNU GENERAL PUBLIC LICENSE"*) echo "GPL" ;;
     *"Apache License"*) echo "Apache-2.0" ;;
-    *"Redistribution and use in source and binary forms"*) echo "BSD" ;;
+    # P304 (pase 99): la rama BSD SALE del `case`.  Un glob no puede expresar el hueco
+    # ACOTADO Y DENTRO DE LA ORACION que exige el arreglo, y el glob de dos estrellas
+    # que si lo "resuelve" (*"...use"*"in source..."*) es ILIMITADO y cruza oraciones,
+    # que es justo lo que el control negativo 1 de P304 prohibe.  Se pregunta con grep.
     "") echo "VACIO" ;;
-    *) echo "OTRO" ;;
+    *) if printf '%s' "$p" | tr -s '[:space:]' ' ' \
+            | grep -qiE 'redistribution and use[^.]{0,40}in source and binary forms'; then
+         echo "BSD"
+       else
+         echo "OTRO"
+       fi ;;
   esac
 }
 
