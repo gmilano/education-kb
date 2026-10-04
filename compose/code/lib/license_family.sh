@@ -23,6 +23,23 @@ osi_family_of() {
     *"GNU AFFERO GENERAL PUBLIC LICENSE"*) echo "AGPL-3.0"; return ;;
     *"GNU LESSER GENERAL PUBLIC LICENSE"*) echo "LGPL"; return ;;
   esac
+  # P288 (pase 96).  La rama AGPL de arriba es un glob de `case`, o sea SENSIBLE A LA CAJA, y
+  # TODAS las fixtures AGPL de la suite traian el titulo canonico EN MAYUSCULAS -- asi que las
+  # 41 aserciones pasaban sin ejercitar nunca el caso donde esta rama puede fallar (P126 pt.2).
+  # Un payload AGPL-3.0 REFLOWED (kuali/kfs, 33.755 B) no trae esa linea de titulo: caia por la
+  # rama, y entonces lo atrapaba la rama GPL de abajo, que usa `grep -qi` y matchea el
+  # PREAMBULO DE LA PROPIA AGPL -- «The GNU General Public License permits making a modified
+  # version and letting the public access it on a server...».  Veredicto: GPL-3.0.  Es P171
+  # reabierto por el eje de la CAJA, y sobre el par exacto que P171 existe para proteger.
+  #
+  # El ancla es la DEFINICION de la seccion 0, que es mutuamente excluyente:
+  #   AGPL-3.0 -> «"This License" REFERS TO version 3 of the GNU Affero General Public License»
+  #   GPL-3.0  -> «"This License" refers to version 3 of the GNU General Public License»
+  # La seccion 13 de la GPL-3.0 nombra la AGPL, pero dice «licensed UNDER version 3 of the GNU
+  # Affero...», no «refers to» -- por eso el ancla lleva «refers to» y P171 queda cerrado.
+  # El control NEGATIVO que lo afirma vive en `p288-agpl-casefold/test_casefold.sh`.
+  printf '%s' "$t" | grep -qi 'refers to version 3 of the GNU Affero General Public License' \
+      && { echo "AGPL-3.0"; return; }
   if printf '%s' "$t" | grep -qi 'GNU GENERAL PUBLIC LICENSE'; then
      printf '%s' "$t" | grep -qi 'Version 3' && echo "GPL-3.0" || echo "GPL-2.0"; return; fi
   printf '%s' "$t" | grep -qi 'Educational Community License' && { echo "ECL-2.0"; return; }

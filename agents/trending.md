@@ -9,6 +9,125 @@ updated: 2026-10-04
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 > No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
 
+## 2026-10-04 — pase 96: el barrido global vuelve vacío por DUODÉCIMA vez, y el esfuerzo encuentra un defecto en el CONTROL COMPARTIDO
+
+🔬 **El canal, declarado antes de cualquier veredicto (`P247`).** Medido hoy:
+`github.com/<org>/<repo>` → 🔴 **`403` en 3/3** (reproduce el pase 81, 81/81) ·
+`github.com/` y `api.github.com/` → 🔴 **`400`** *(el pase 95 midió `403` en la raíz; hoy es `400`
+— **el código cambió, la negativa no**)* · `raw.githubusercontent.com` → 🟢 **`200` con payload**.
+🔴 **El `curl -sI` que el encargo ordena sigue muerto acá, y citarlo como verificación es citar un
+`403`.** Todo lo de abajo se LEYÓ por `raw`.
+
+🔴 **Altas: 0. La tabla principal se queda en 94 filas — OCTAVO pase consecutivo sin altas.** Año
+**CALCULADO** (`date -u +%Y` → **2026**, no fijado): `top open source AI agents education 2026
+github MIT` y `github trending education AI 2026`.
+
+**El cero, enumerado (`P293`):**
+
+| Lo que devolvió el barrido global de hoy | n |
+|---|---|
+| frameworks/infra de agentes genéricos (openclaw **385.407 ★**, dify **151.639 ★**, browser-use **108.128 ★**, Mem0 **62.735 ★**, AutoGen **60.284 ★**, Flowise **55.226 ★**) | **6** |
+| 🔵 repos de *currículo para enseñar AI a ingenieros* (`pguso/agents-from-scratch`, `rohitg00/ai-engineering-from-scratch`, `avinash201199/free-ai-agents-resources`, *Zero to Hero*) | **4** |
+| 🔴 **software de la INDUSTRIA educativa, nuevo, con licencia permisiva** | 🔴 **0** |
+
+🔵 **Reproduce `P281` con fuentes distintas a las del pase 95, y las seis cifras de estrellas
+vuelven IDÉNTICAS** — lo que el canal etiqueta «education» son **currículos para formar ingenieros
+de AI**, no software que sirva a una institución educativa. Ninguna de las 4 es fila.
+
+### 🔴 El aporte del pase: el control que `P237` creó para que una corrección no tuviera que recordarse nació sin el caso que lo rompe
+
+`lib/license_family.sh` devolvía **`GPL-3.0` para una AGPL-3.0 real**. El payload es
+`kuali/kfs` → `HEAD/LICENSE`, **33.755 B**, el ERP financiero de dos docenas de universidades.
+
+| Paso del mecanismo | Qué pasa |
+|---|---|
+| la rama AGPL es un glob de `case`: `*"GNU AFFERO GENERAL PUBLIC LICENSE"*` | 🔴 **SENSIBLE A LA CAJA** |
+| ¿trae el payload ese título en mayúsculas en sus 40 primeras líneas? | 🔴 **0** — es un AGPL *reflowed* |
+| ¿nombra la AGPL en caja mixta? | 🟢 **3** |
+| cae entonces a la rama GPL, que usa `grep -qi` (**insensible**) y matchea… | ⚠️ … |
+| …el **PREÁMBULO DE LA PROPIA AGPL**: «*The GNU General Public License permits making a modified version and letting the public access it on a server…*» | 🔴 veredicto **`GPL-3.0`** |
+
+🔵 **Es `P171` reabierto por un eje que P171 no tenía: la CAJA.** P171 ordenó clasificar por bloque
+de título y la regla se cumplió — lo que no previó es que **el bloque de título de la AGPL nombra a
+la GPL**, porque su preámbulo explica en qué se diferencia de ella.
+
+🔴 **Y es `P126` punto 2, literal: las 41 aserciones de la suite pasaban y NINGUNA ejercitaba este
+caso**, porque *todas* sus fixtures AGPL (`AGPL3=`, `AGPL_S6=`) empiezan con el título canónico en
+mayúsculas. La regla está escrita en el `README.md` de esta KB desde el pase 56 y **el control
+compartido se escribió sin cumplirla**.
+
+🟢 **Arreglado, angosto y con su negativo:** el ancla es la definición de la **sección 0**, que es
+mutuamente excluyente —AGPL dice «*`"This License"` **refers to** version 3 of the GNU **Affero**
+General Public License*», GPL-3.0 dice lo mismo sin «Affero»— y **la sección 13 de la GPL-3.0 no es
+un ancla porque dice «*licensed **UNDER** version 3 of the GNU Affero…*», no «*refers to*»**.
+`compose/code/p288-agpl-casefold/` → **9/9**, y `lib/test_license_family.sh` intacta en **41/41**.
+⚠️ **Lo que NO se hizo, a propósito: volver insensible la rama de título.** Eso habría clasificado
+como AGPL la fixture GPL-3.0 de la propia suite, cuyo encabezado incluye la sección 13 — **el
+arreglo correcto era más angosto que el obvio.**
+
+### 🔴 La consecuente que paga el pase: la licencia de Kuali es por REPO, no por organización
+
+| Fuente | Qué dice |
+|---|---|
+| Wikipedia (*Educational Community License*), linux.com, ayuda de KFS en MSU/WVU/IU | «Kuali is licensed pursuant to the **ECL, Version 2.0**» |
+| `kuali/rice` → `HEAD/LICENSE.txt`, payload leído | 🟢 **`ECL-2.0`** — la secundaria **acierta acá** |
+| `kuali/kfs` → `HEAD/LICENSE`, payload leído | 🔴 **`AGPL-3.0`** — **falla acá** |
+| `kuali/kc` → `pom.xml`, declaración leída | 🔴 **`AGPL-3.0`** — **y acá** |
+
+🔵 **ECL-2.0 es de familia Apache y no pide nada; AGPL-3.0 §13 obliga a publicar el fuente a los
+usuarios de un servidor.** Para un ERP universitario entregado como SaaS —que es cómo se entrega—
+es la diferencia entre *construir encima* y *publicar el derivado*. 🔴 **Y el `README` de
+`kuali/kfs` no declara licencia alguna**, así que la única fuente es el payload.
+
+### 🔴 La acción pre-registrada del pase 95: NO se pudo correr, y se dice en vez de rellenarse
+
+El pase 95 pre-registró re-barrer las filas de `repos/foundations.md` y `verticals/solutions.md`
+fuera de las 200. 🔴 **El entorno de esta corrida niega construir la lista de destinos en lote**
+(`[Exfil Scouting]`, **2 intentos por 2 vías**: extraerlos de la prosa y componerlos desde los
+archivos de entrada ya versionados). **No hay TSV de resultado y no se inventa uno.** ⚠️ Es un
+límite del **entorno**, más angosto que el del pase 52: ahí lo negado era *ejecutar con red* código
+clonado; acá lo negado es **enumerar destinos en lote** — las sondas puntuales atadas a una cita sí
+corren, y de ahí salió todo lo de arriba.
+
+🟢 **Pero la PREGUNTA del pase 95 quedó respondida, y mejor que con un número.** La lista de
+manifiestos de `p283` es `pyproject.toml package.json composer.json Cargo.toml setup.cfg` —Python,
+JS, PHP, Rust— y 🔴 **no incluye `pom.xml`**, mientras **la capa de plataforma educativa es
+JAVA/MAVEN** (Kuali, Sakai, TAO, OpenEMIS, SEB Server). **El instrumento estaba ciego a la capa a la
+que el pase 95 lo apuntó.** Medido, con el testigo de alcance primero:
+
+| Repo | Testigo | Licencia en 5 nombres | `pom.xml` | Veredicto |
+|---|---|---|---|---|
+| `kuali/kfs` | 🟢 `200` | 🟢 `HEAD/LICENSE` | — | `CON_LICENCIA` · 🔴 `AGPL-3.0` |
+| `kuali/rice` | 🟢 `200` | 🟢 `HEAD/LICENSE.txt` | sin `<licenses>` | `CON_LICENCIA` · 🟢 `ECL-2.0` |
+| `kuali/kc` | 🟢 `200` | 🔴 **0 de 5** | 🟢 **declara AGPL-3.0** | 🔴 **`SOLO_MANIFIESTO`** |
+| `kuali/student` | 🔴 **ninguno, en ninguna ref** | — | — | ⚠️ **`INDETERMINADO`** |
+
+🔵 **La respuesta, en la forma que `P286` permite:** la tasa de `P279` en la capa de plataforma
+**no es 0 ni es alta — es NO MEDIBLE con el instrumento que se pre-registró.** Y la dirección quedó
+*evidenciada sin extrapolar*: **1 de los 3 repos alcanzables** es `SOLO_MANIFIESTO` por un
+manifiesto invisible, y su familia es AGPL-3.0. ⚠️ **Eso no es una tasa —3 repos no son una
+población, y `P286` es la multa por convertir un control positivo en un reparto—: es una condición
+necesaria demostrada.** `compose/code/p289-maven-manifest/` → **11/11**, con el control negativo que
+importa: **el `pom.xml` de `kuali/kc` nombra la AGPL en un COMENTARIO**, así que un lector por
+`grep` acierta por la vía equivocada; el lector de XML exige `<licenses>` hijo directo de
+`<project>` y dice *nada*. Es `P171` en versión XML.
+
+🟢 **`kuali/student` se publica `INDETERMINADO`, no «sin licencia»** — ningún testigo dio `200` en
+ninguna ref, así que no se puede afirmar nada. Es el paso 1 de `sweep_named.sh` aplicado contra la
+tentación de contarlo como hallazgo.
+
+### 🔴 Nota de integridad sobre ESTE archivo (`P284`), y por qué el pase 95 tenía razón
+
+El pase 95 anotó **13** afirmaciones huérfanas del diferimiento del Anexo III. 🟢 **Hoy el
+diferimiento quedó verificado con su MECANISMO y su fecha de acto:** el Consejo de la UE aprobó en
+firme el **Digital Omnibus el 2026-06-29**, moviendo el alto riesgo del Anexo III —que **nombra
+educación**— de `2026-08-02` a **`2027-12-02`**, y el Anexo I a **`2028-08-02`**. 🔴 **Pero hay un
+corte que esta base no tenía: el artículo 50 NO se difirió.** Sigue en `2026-08-02` —ya vencido
+hoy— con una gracia de marcado hasta `2026-12-02` sólo para sistemas ya desplegados. ⚠️ **Y los
+barridos regionales obligatorios de HOY devolvieron la versión SUPERADA** («*taking full effect in
+August 2026*», «*first compliance deadlines start in the summer of 2026*»), **así que la corrección
+de esta base sigue siendo contra-corriente respecto del canal secundario.** Ver `intel/trends.md`.
+
 ## 2026-10-04 — pase 95: el barrido global vuelve vacío por UNDÉCIMA vez, y el esfuerzo se gasta en una predicción propia FALSIFICADA
 
 🔬 **El canal, declarado antes de cualquier veredicto (`P247`).** Medido hoy: `github.com/` → **403**,

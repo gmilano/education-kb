@@ -8,6 +8,55 @@ updated: 2026-10-04
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 
+## 2026-10-04 — pase 96: GitHub trending vuelve vacío por VIGESIMOQUINTA vez, y las cifras vuelven IDÉNTICAS — la saturación deja de ser una impresión
+
+🔬 **Canal declarado (`P247`):** `github.com/<org>/<repo>` → **403 en 3/3** · `github.com/` y
+`api.github.com/` → **400** *(el pase 95 midió 403 en la raíz: el código cambió, la negativa no)* ·
+`raw.githubusercontent.com` → **200 con payload**. Todo lo de abajo está medido por `raw`.
+
+🔴 **0 repos fundacionales nuevos. Año CALCULADO** (`date -u +%Y` → **2026**).
+
+**El cero, enumerado (`P293`):**
+
+| Lo que devolvió `github trending education AI 2026` | n |
+|---|---|
+| infra/frameworks de agentes genéricos | **6** |
+| 🔵 currículo para enseñar AI a ingenieros (`pguso/agents-from-scratch`, `rohitg00/ai-engineering-from-scratch`, `avinash201199/free-ai-agents-resources`, *Zero to Hero*) | **4** |
+| listas de empleo / rankings (`speedyapply/2026-AI-College-Jobs`) | **1** |
+| 🔴 **de la industria educativa, nuevo, permisivo** | 🔴 **0** |
+
+### 🟢 La saturación, por fin con una medida y no con un adjetivo
+
+Las seis cifras de estrellas del eje generalista volvieron **idénticas** a las del pase 95:
+
+| Repo | pase 95 | pase 96 | Δ |
+|---|---|---|---|
+| openclaw | 385.407 ★ | 385.407 ★ | **0** |
+| dify | 151.639 ★ | 151.639 ★ | **0** |
+| browser-use | 108.128 ★ | 108.128 ★ | **0** |
+| Mem0 | 62.735 ★ | 62.735 ★ | **0** |
+| AutoGen | 60.284 ★ | 60.284 ★ | **0** |
+| Flowise | 55.226 ★ | 55.226 ★ | **0** |
+
+⚠️ **Y la lectura honesta de ese cero es sobre el CANAL, no sobre el mundo:** seis deltas exactos en
+cero no significan que seis proyectos activos no ganaran una estrella en el intervalo — significa que
+**el canal de búsqueda está devolviendo la misma instantánea cacheada**. 🔵 **Así que la cifra que
+este archivo publica no es «el eje generalista no creció», es «el canal no se movió», y la segunda
+es la que vale para decidir cada cuánto vale la pena volver a barrer.** Tratarlas como la misma cosa
+sería el error que `P107` existe para evitar, cometido sobre la fuente en vez de sobre el número.
+
+### 🔴 Lo que sí se movió está en la capa de PLATAFORMA, y no lo trajo el trending
+
+Ningún hallazgo de este pase vino del barrido de trending: vinieron de sondas puntuales sobre la
+capa Java/Maven, que el trending no indexa y que el barrido manifiesto-consciente de esta base **no
+puede leer** (`MANIFESTS` no incluye `pom.xml`). Ver `agents/trending.md` del mismo pase,
+`compose/code/p288-agpl-casefold/` (**9/9**) y `compose/code/p289-maven-manifest/` (**11/11**).
+
+🔵 **La consecuencia de método para ESTE archivo:** veinticinco barridos consecutivos en cero con el
+canal congelado son evidencia de que **el trending de GitHub no es un canal de descubrimiento para
+esta industria**, y que el presupuesto de los pases que vienen rinde más en la capa de plataforma
+—donde hoy aparecieron tres veredictos de licencia nuevos— que en repetir la misma consulta.
+
 ## 2026-10-04 — pase 95: GitHub trending vuelve vacío por VIGESIMOCUARTA vez, y la saturación se MIDE
 
 🔬 **Canal declarado (`P247`):** `github.com/` → **403**, `api.github.com` → **403**,

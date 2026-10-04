@@ -63,6 +63,170 @@ updated: 2026-10-04
 > **LATAM:** 🔵 el hallazgo del pase — **existe una capa MCP nacional brasileña de datos públicos, activa y MIT, y
 > educación es el único dominio grande que falta** (**gap 69**).
 
+## 🔴 Barrido regional 25: las cuatro regiones responden, y la que más aporta es LATAM con un denominador propio (pase 96 del 2026-10-04)
+
+Las cuatro búsquedas obligatorias se corrieron con el **año CALCULADO** (`date -u +%Y` → **2026**):
+`AI education {North America|EMEA|APAC|LATAM} 2026 adoption regulation players`.
+
+🔬 **Canal declarado (`P247`):** `github.com/<org>/<repo>` → **403 en 3/3** · `github.com/` y
+`api.github.com/` → **400** · `raw.githubusercontent.com` → **200 con payload**.
+
+### 🟢 Tamaño de mercado, re-anclado y con la DISPERSIÓN declarada
+
+⚠️ **Las fuentes de hoy no concuerdan, y publicarlas como un número sería inventar precisión:**
+
+| Fuente del barrido de hoy | Cifra |
+|---|---|
+| mercado AI-en-educación 2025 → 2034 | **USD 6,4 B → 79,6 B**, CAGR **31,35 %** (2026-2034) |
+| mercado AI-en-educación 2025 → 2026 | **USD 7,52 B → 10,6 B**, CAGR **40,9 %** |
+| North America, AI-en-educación 2024 → 2029 | **USD 951 M → 2.303,2 M**, CAGR **15,9 %** |
+| APAC, AI-en-educación 2024 → 2029 | **USD 591,6 M → 1.848,1 M**, CAGR **20,9 %** |
+
+🔴 **Dos fuentes dan la MISMA magnitud para años distintos (6,4 B en 2025 contra 7,52 B en 2025) y
+CAGR que difieren en 10 puntos.** 🔵 **Lo robusto no es el nivel sino el ORDEN: North America ≈ 1,6×
+APAC hoy, y APAC crece ≈ 5 puntos de CAGR más rápido — las dos cifras salen del mismo proveedor y la
+misma metodología, así que la RAZÓN entre ellas es comparable aunque el nivel absoluto no lo sea.**
+Es la regla de `P107` aplicada a mercado: una cifra sin su metodología no se puede comparar con otra.
+
+🟢 **Adopción, que sí converge en dos fuentes independientes:** uso estudiantil global **66 % (2024)
+→ 92 % (2025)**, y **86 % de estudiantes en 16 países** usando AI al inicio de 2026. North America
+lidera con **36 % de cuota** del mercado; cloud **71,22 %** de cuota (2024); K-12 **45,62 %** de la
+adopción; STEM **34,78 %** de los ingresos, con idiomas como el segmento más rápido.
+
+### 🔴 La corrección regulatoria del pase, con MECANISMO y fecha de acto — y el corte que esta base no tenía
+
+El pase 95 anotó 13 afirmaciones huérfanas del diferimiento del Anexo III. 🟢 **Hoy el diferimiento
+tiene acto, fecha y alcance:**
+
+| Qué | Cuándo | Estado |
+|---|---|---|
+| Consejo de la UE aprueba en firme el **Digital Omnibus** | **2026-06-29** | 🟢 hecho |
+| Anexo III **alto riesgo** *(y el Anexo III **nombra educación**)* | `2026-08-02` → 🔴 **`2027-12-02`** | **diferido** |
+| Anexo I (AI embebida en producto regulado) | → **`2028-08-02`** | **diferido** |
+| 🔴 **Artículo 50 — transparencia** | **`2026-08-02`**, sin cambio | 🔴 **NO diferido** |
+| marcado de contenido sintético, sistemas **ya desplegados** | gracia hasta **`2026-12-02`** | ⚠️ **a menos de 2 meses** |
+
+🔵 **Motivo del diferimiento, que es el dato accionable y no la fecha:** las normas armonizadas del
+**CEN-CENELEC JTC 21** no estarán antes de fines de 2026, así que no se puede saber con certeza si
+una documentación técnica cumple. **Diferido no es cancelado.**
+
+🔴 **Y el corte invierte la prioridad que esta base venía publicando.** Lo que apremia en un
+engagement educativo **no** es la conformidad de alto riesgo —a 14 meses— sino **el artículo 50, que
+ya está vigente** y cuya gracia de marcado vence el **2026-12-02**. 🟢 **Lo cual valida, por una vía
+que no era la buscada, la familia de instrumentos `aiact-50-2-*` de esta base: su objeto es el
+marcado del artículo 50(2), justo el deber que NO se difirió.**
+
+⚠️ **Nota de calibración sobre el canal, y es `P281` en el eje regulatorio: los barridos de HOY de
+North America y EMEA devolvieron la versión SUPERADA** —«*the EU AI Act, taking full effect in
+August 2026, classifies education AI as high-risk*», «*first compliance deadlines start in the
+summer of 2026*», «*documentation and transparency obligations taking effect in August 2026*»—.
+🔵 **O sea que la corrección de esta base sigue siendo contra-corriente respecto del canal
+secundario, y por eso hay que re-verificarla contra fuente legal y no contra prensa de industria.**
+
+### 🟢 LATAM: la región que aporta el denominador propio este pase
+
+| Hecho, con su fuente y su n | Valor |
+|---|---|
+| **CENIA** (centro nacional de AI de Chile): países de LAC que **no** enseñan adopción temprana de AI en la escuela | 🔴 **13 de 19** |
+| **UNESCO IESALC / UNU**, encuesta a instituciones de educación superior, **ago–oct 2025**, 5 dimensiones (docencia, investigación, extensión, administración, gobernanza) | **200 IES en 19 países** |
+| LATAM en descargas mundiales de aplicaciones de AI generativa | **3.º mercado** |
+| adopción proyectada de AI en LATAM | **50 % para 2029** |
+| plan nacional de AI de Brasil | **USD 4 B** |
+
+🔵 **El cuello de botella que CENIA nombra es de FORMACIÓN, no de infraestructura** —«*un cuello de
+botella en la formación avanzada*» que limita la capacidad de la región de producir sus propias
+soluciones—, y **13 de 19 es un denominador**, no un adjetivo. 🟢 **Y el estudio del IESALC es la
+primera fuente de este archivo que mide las CINCO dimensiones por separado: la gobernanza es
+medible, no sólo la adopción.** `Latam-GPT` (CENIA) sigue siendo el activo regional entrenado con
+datos de la región.
+
+## Opportunities by region
+
+### North America
+
+- 🔵 **La oportunidad es de GOBERNANZA, y el vacío es la razón.** El barrido de hoy lo dice sin
+  rodeos: *«education AI operates in a relative regulatory vacuum, with no equivalent to the FDA for
+  educational technology»*, y las decisiones las toma **cada escuela, distrito o universidad** con
+  mínima supervisión externa. 🔴 **Eso no reduce el trabajo de conformidad: lo mueve del regulador al
+  comprador**, y un *due diligence* de AI por distrito es un entregable vendible.
+- 🔴 **Fragmentación estatal, con nombres:** Colorado y Texas con requisitos parciales. No hay marco
+  federal. 🔵 **Un cliente multi-estado necesita una matriz de cumplimiento por estado**, que es
+  exactamente lo que el Anexo III le da gratis a un cliente europeo.
+- 🟢 **Capa de plataforma: Kuali.** El consorcio es de universidades norteamericanas y su componente
+  **permisivo es `kuali/rice` (ECL-2.0)** — workflow, reglas e identidad. **Es el punto de entrada
+  agéntico sin heredar la AGPL** de KFS/KC. ⚠️ Ver la advertencia de `P179` en
+  `verticals/solutions.md`: la cesión del repo no cubre los productos comerciales de Kuali Inc.
+- 🔴 **Brecha declarada, que sigue abierta desde `P159`:** la región de **36 % de cuota** reparte sus
+  estándares curriculares entre 50 estados, y las tres renderizaciones JSON del Common Core en GitHub
+  **no tienen archivo de licencia**. **La región más grande sigue siendo la peor servida en la capa
+  de currículo.**
+
+### EMEA
+
+- 🔴 **El reloj que importa cambió, y es la oportunidad más concreta de este pase.** No es el alto
+  riesgo del Anexo III (**diferido a `2027-12-02`**): es el **artículo 50, vigente desde
+  `2026-08-02`**, con la gracia de marcado venciendo el **`2026-12-02`**. 🟢 **Una oferta de
+  «marcado de contenido sintético conforme al art. 50(2)» tiene menos de dos meses de ventana y
+  compradores obligados** — y esta base ya tiene los instrumentos (`aiact-50-2-pack/`, `-marking/`,
+  `-exposure/`).
+- 🔵 **Y el diferimiento es él mismo una oferta:** el motivo es que las normas del **CEN-CENELEC
+  JTC 21** no llegan antes de fines de 2026. Un cliente que prepare su documentación técnica **ahora**
+  lo hace sin norma; uno que espere llega tarde. **El entregable es un expediente que sobreviva a la
+  norma cuando salga**, no un certificado.
+- 🟢 **Adopción: 72 %** de las organizaciones EMEA usan o planean usar AI en dos años (IDC EMEA
+  Emerging Tech Survey); mercado AI de la región proyectado en **€40,8 B**.
+- ⚠️ **La asimetría ya registrada se mantiene: EMEA va adelantada en REGULACIÓN, no en uso**
+  (adopción empresarial UE **19,95 %** contra OCDE **20,2 %**).
+
+### APAC
+
+- 🔴 **La oportunidad es la fragmentación misma, y el barrido la nombra sin eufemismo:** *«a common
+  APAC-wide AI legislative framework will remain a distant dream»*. **Singapur** con guías maduras de
+  AI responsable, **China** con leyes contra la mala conducta algorítmica, **India** aplicando derecho
+  penal existente, y la **ASEAN Guide on AI Governance and Ethics** todavía temprana.
+- 🟢 **Por eso el patrón que rinde acá es el de nodos de política por jurisdicción** (el patrón
+  multi-jurisdicción que esta base ya tiene), **no** un marco único: cada país exige cumplimiento
+  propio.
+- 🟢 **Es la región que crece más rápido:** **USD 591,6 M (2024) → 1.848,1 M (2029)**, CAGR
+  **20,9 %** — unos 5 puntos por encima de North America, con la misma metodología.
+- 🔵 **El eje de 2026 es SOBERANÍA:** los líderes regionales priorizan soberanía, seguridad y
+  despliegue responsable, con la AI metida en infraestructura nacional; **48 %** de los responsables
+  de gobernanza ponen la adopción de AI como prioridad estratégica. 🟢 **Eso favorece despliegues
+  on-premise / soberanos** (Ollama, vLLM, Qdrant) sobre API de terceros.
+- ⚠️ **Brecha declarada:** el barrido de hoy devolvió **gobernanza y mercado, pero ninguna pieza
+  de software educativo APAC nueva con licencia permisiva.** Es un hueco informado, no cobertura.
+
+### LATAM
+
+- 🔵 **La oportunidad está medida y es de FORMACIÓN antes que de plataforma:** **13 de 19** países de
+  LAC no enseñan adopción temprana de AI en la escuela (**CENIA**), y el propio CENIA lo llama *un
+  cuello de botella en la formación avanzada* que limita a la región para producir sus propias
+  soluciones. 🟢 **Un programa de capacitación docente es un entregable de mayor alcance que un
+  piloto de tutor AI**, y el denominador lo sostiene.
+- 🟢 **Y por primera vez hay un instrumento de diagnóstico con n y fecha para vender encima:** la
+  encuesta **UNESCO IESALC / UNU** a **200 IES en 19 países** (**ago–oct 2025**) mide **cinco
+  dimensiones** — docencia, investigación, extensión, administración y **gobernanza**. **Un
+  *assessment* de madurez institucional puede anclarse a ese marco en vez de inventar uno.**
+- 🟢 **Demanda probada pese al capital escaso:** LATAM es el **3.er mercado mundial** en descargas de
+  aplicaciones de AI generativa; adopción proyectada del **50 % para 2029**; plan de AI de Brasil de
+  **USD 4 B**. `Latam-GPT` (CENIA) es el activo entrenado con datos regionales.
+- 🔴 **El riesgo que la propia región declara, y conviene decirlo al cliente:** el temor a los
+  *riesgos* de la AI puede **acelerar la brecha** en vez de cerrarla. 🔵 **El contrapeso vendible es
+  el aterrizaje documentado: `P156` de esta base mide 31,9 % → 0,2 % de alucinación con el dato
+  curricular en el prompt.** La soberanía del dato curricular (CC BY 4.0 con procedencia por
+  registro) sigue siendo la ventaja estructural de LATAM sobre North America.
+- ⚠️ **`gap 69` sigue abierto:** existe una capa MCP nacional brasileña de datos públicos, activa y
+  MIT, y **educación es el único dominio grande que falta.**
+
+### 🔴 Brechas declaradas de este pase, por región
+
+| Región | Lo que el barrido NO dio |
+|---|---|
+| North America | 🔴 currículo con licencia: las 3 renderizaciones JSON del Common Core siguen **sin archivo de licencia** (`P159`) |
+| EMEA | ⚠️ ninguna pieza de software educativo EMEA **nueva**; lo que dio fue regulación y adopción |
+| APAC | 🔴 **ninguna** pieza de software educativo APAC nueva con licencia permisiva — hueco informado |
+| LATAM | ⚠️ el estudio del IESALC se citó por reseña; **el PDF con el reparto por dimensión no se leyó** en este pase |
+
 ## 🔴 Barrido regional 24: saturación en las cuatro, MEDIDA con denominador (pase 95 del 2026-10-04)
 
 Las cuatro búsquedas obligatorias se corrieron con el **año CALCULADO** (`date -u +%Y` → **2026**):
