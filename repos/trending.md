@@ -8,6 +8,69 @@ updated: 2026-10-04
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 
+## 2026-10-04 — pase 98: GitHub trending vuelve vacío por VIGESIMOSÉPTIMA vez, y el CANAL DE ESTRELLAS se murió del todo
+
+🔬 **Canal declarado (`P247`), medido este pase.** `github.com/<org>/<repo>` → 🔴 **`403`** ·
+`api.github.com/repos/…` → 🔴 **`403`** (el pase 97 registró **`400`** acá: **la cifra cambió**) ·
+`raw.githubusercontent.com` → 🟢 **`200` con payload** · 🔴 **`WebFetch` sobre una página de repo →
+`404` enmascarado.**
+
+### 🔴 El hallazgo de ESTE archivo: la serie de estrellas se CORTA, y no por saturación sino por canal
+
+Los pases 95, 96 y 97 publicaron la misma tabla de seis cifras idénticas y la leyeron como
+**saturación medida** (`P281`). 🔴 **Este pase no puede continuar la serie: los dos canales que
+devuelven una cuenta de estrellas (`github.com/<org>/<repo>` y `api.github.com`) dan 403, y
+`WebFetch` —que el pase 97 usó para leerlas— ahora da 404 enmascarado.**
+
+| Repo | pase 95 | pase 96 | pase 97 | pase 98 |
+|---|---|---|---|---|
+| `openclaw` | 385.407 | 385.407 | 385.407 | 🔴 **sin canal** |
+| `dify` | 151.639 | 151.639 | 151.639 | 🔴 **sin canal** |
+| `browser-use` | 108.128 | 108.128 | 108.128 | 🔴 **sin canal** |
+| `Mem0` | 62.735 | 62.735 | 62.735 | 🔴 **sin canal** |
+| `AutoGen` | 60.284 | 60.284 | 60.284 | 🔴 **sin canal** |
+| `Flowise` | 55.226 | 55.226 | 55.226 | 🔴 **sin canal** |
+
+🔵 **La distinción importa y es la razón de esta entrada: «la cifra no cambió» y «no hay cifra» son
+hallazgos distintos, y escribir el último como si fuera el primero habría hecho pasar un CUARTO
+pase de saturación que nadie midió.** El canal de búsqueda ofrecía cifras (`opencode` «194.461 ★»,
+`CrewAI` «~55,8k ★», `LangGraph` «~37,7k ★», `OpenHands` «70K+ ★»): 🔴 **no se promueven a esta
+tabla, porque esta tabla es de medición de primera mano y ésas son de canal secundario**
+(tendencia **762**).
+
+🔴 **Altas fundacionales: 0** — VIGESIMOSÉPTIMO pase. Barrido `github trending education AI 2026`,
+año **CALCULADO** (`date -u +%Y` → **2026**).
+
+### 🟢 Pero el eje ROTADO sí devolvió repos, y es lo que separa a este pase de los nueve anteriores
+
+El barrido de *trending* genérico está agotado; **los barridos por CAPA no.** Medido:
+
+| Eje rotado (no está en el encargo) | Repos alcanzables medidos | Con licencia permisiva |
+|---|---|---|
+| servidores **MCP de Moodle** | 5 | 🟢 **2 MIT** + ⚠️ 1 GPL-3.0 |
+| tutoría **auto-hospedada** | 5 | 🟢 **1 MIT** (+2 redistribuciones, +1 sin licencia, +1 negativa explícita) |
+| **ayudantes de cátedra** | 3 | 🟢 **1 MIT** (+1 sin licencia, +1 ya inventariado) |
+
+🔵 **Dos de los repos que devolvió el eje rotado YA estaban en esta base** (`littlecookie0722/AI-Teaching-Agent`,
+`sirhanmacx/claw-ed`): **la superposición ahora está MEDIDA en vez de supuesta**, que es lo que
+convierte «el canal se repite» en un número.
+
+### 🔴 Un repo del *trending* de hoy que esta base NO puede citar, y el motivo es de licencia
+
+`studyield/studyield` apareció con descripción completa y **«81 stars, Apache 2.0»** textuales del
+buscador. 🔴 **404 en las 15 combinaciones de rama y ruta probadas por `raw`.** No entra, y queda
+escrito acá porque **es el espécimen más limpio de una familia de licencia afirmada sobre un árbol
+que no existe** (tendencia **762**).
+
+### 🟢 Lo que este pase deja en el ÁRBOL DE CÓDIGO de este repo
+
+`P299` en `compose/code/lib/license_family.sh` — la rama de declaración matcheaba **subcadena**, y
+`mit` ⊂ `permit`/`submit`/`limit`/`commit`/`omit`. 🔴 **Una negativa explícita de licencia volvía
+`MIT (declaracion)`** (tendencias **764**–**766**). 🟢 **Suite 41/41 → 50/50; las 50 suites del
+repo pasan, 0 fallan.**
+
+---
+
 ## 2026-10-04 — pase 97: GitHub trending vuelve vacío por VIGESIMOSEXTA vez, y las cifras vuelven IDÉNTICAS por TERCER pase
 
 🔬 **Canal declarado (`P247`):** `github.com/<org>/<repo>` → 🔴 **`403`** · `github.com/` y

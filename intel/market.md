@@ -65,6 +65,160 @@ updated: 2026-10-04
 > **LATAM:** 🔵 el hallazgo del pase — **existe una capa MCP nacional brasileña de datos públicos, activa y MIT, y
 > educación es el único dominio grande que falta** (**gap 69**).
 
+## 🟢 Barrido regional 27: las cuatro regiones responden, y la que más aporta es EMEA con un CALENDARIO que esta base tenía viejo (pase 98 del 2026-10-04)
+
+🔬 **Canal (`P247`).** Las cuatro consultas regionales del encargo corrieron con el año
+**CALCULADO** (`date -u +%Y` → **2026**). 🔴 **El egreso a hosts no-GitHub sigue BLOQUEADO**
+(tendencia **761**), así que **toda la inteligencia de esta sección es de CANAL SECUNDARIO: leída
+del buscador, no verificada en la fuente primaria.** Se declara acá una vez y vale para todas las
+cifras de abajo. 🟢 Las licencias de plataforma de este pase sí son de primera mano, y viven en
+`repos/foundations.md`.
+
+### 🟢 Tamaño de mercado 2026, con la DISPERSIÓN declarada en vez de promediada
+
+| Fuente | 2026 | Horizonte | CAGR |
+|---|---|---|---|
+| Grand View Research | **USD 11,4 B** | — | — |
+| (serie a 2030) | **USD 10,6 B** | USD 42,48 B (2030) | **41,5 %** |
+| (serie a 2035) | **USD 8,7 B** | USD 100,21 B (2035) | — |
+| HolonIQ | **USD 12,3 B** | — | 36 % (desde 2022) |
+| **AI tutors**, segmento propio | **USD 2,7 B** | — | (USD 2,1 B en 2025) |
+
+🔴 **La dispersión 2026 es de 8,7 a 12,3 B —un factor de 1,4×— y no se promedia.** 🔵 **Lo que sí es
+consistente entre las cuatro series es el ORDEN de magnitud (unidades de miles de millones) y que
+el segmento de TUTORÍA es ~1/4 del total**, lo que ubica el resto en administración, evaluación y
+analítica — que es donde viven las piezas MCP que esta base inventaría.
+
+⚠️ **Y una afirmación que el canal repite y conviene marcar: «83 % de las instituciones planea
+desplegar asistentes de cátedra AI para 2026».** 🔴 **Sin fuente primaria alcanzable y sin
+denominador de muestra: no se usa como base de dimensionamiento**, se registra como señal.
+
+## Opportunities by region
+
+### North America
+
+🔸 **Canal secundario.** Lo nuevo de este pase es **regulatorio y es de VOLUMEN legislativo**:
+
+| Hecho | Valor |
+|---|---|
+| proyectos de ley sobre AI en educación en 2026 | **134**, en **31 estados** |
+| estados que introdujeron legislación desde 2025 | **35** + D.C. + Puerto Rico |
+| estados que **promulgaron** ley o resolución | **24** |
+| estándar curricular federal **vinculante** | 🔴 **CERO** (a mayo de 2026) |
+| alumnos de *college* que usan AI como herramienta primaria de investigación | **~90 %**, promedio **2,1 herramientas**; ChatGPT **66 %** |
+
+**Actos nombrados, con mecanismo:**
+- 🔴 **California A.B. 1159** (*propuesto*) — **prohibiría usar datos de alumnos para ENTRENAR
+  modelos** salvo que beneficie directamente a la escuela. 🔵 **Es el acto que convierte «dónde
+  corre el modelo» en requisito de arquitectura**, y es exactamente la celda que las piezas de
+  proveedor configurable de esta base (`LEARNableLabs/opentutor` con Ollama local,
+  `a2br/moodle-mcp` que procesa en la máquina del usuario) responden sin reescribirse.
+- 🟢 **Oregon S.B. 1546** (*promulgado*) — exige rasgos de diseño que protejan a menores, **incluida
+  la reducción de uso compulsivo**. ⚠️ **Es un requisito de PRODUCTO, no de modelo**: ningún
+  *framework* lo resuelve, lo resuelve el diseño de la sesión de aprendizaje.
+- 🟢 **Purdue** — primera universidad de EE.UU. con **requisito de competencia en AI aprobado por su
+  Board para TODO el grado**, vigente **otoño 2026**.
+
+🟢 **La oportunidad de NA sigue siendo de GOBERNANZA, y este pase le pone el número que le faltaba:
+134 proyectos en 31 estados sobre CERO estándar federal vinculante.** 🔵 **Un cliente multi-estado
+no necesita un modelo mejor: necesita una capa de política configurable POR JURISDICCIÓN**, que es
+el patrón `P6` que `compose/patterns.md` ya tiene para APAC y que acá aplica por estado.
+
+### EMEA
+
+🟢 **La región que más aporta este pase, y el aporte es que el CALENDARIO que esta base citaba era
+el viejo.** Reglamento (UE) **2024/1689**, en vigor **2024-08-01**:
+
+| Hito | Fecha | Estado |
+|---|---|---|
+| prohibiciones + obligaciones de **alfabetización en AI** | **2025-02-02** | 🟢 ya rige |
+| gobernanza de **GPAI** | **2025-08-02** | 🟢 ya rige |
+| aplicación general citada | **2026-08-02** | ⚠️ con excepciones |
+| 🔴 **alto riesgo AUTÓNOMO** (*stand-alone*) | 🔴 **2027-12-02** | **fecha REVISADA** |
+| 🔴 **alto riesgo EMBUTIDO** en producto regulado | 🔴 **2028-08-02** | **fecha REVISADA** |
+
+🔴 **La educación es la vertical donde esto pega más fuerte, porque el Anexo III la nombra casi
+entera:** admisión, **evaluación**, *proctoring*, **detección de plagio/AI usada en evaluación**, y
+aprendizaje personalizado **que dirige la ruta del alumno**.
+
+🔵 **El corte fino que decide el alcance, y conviene decirlo así: no es «AI en educación es alto
+riesgo», es la FUNCIÓN la que lo es.** Un tutor que explica no dirige la ruta; un tutor que decide
+qué viene después sí. 🟢 **Las piezas de esta base caen a los dos lados y eso es vendible:**
+`a2br/moodle-mcp` es **sólo lectura** y no evalúa ni dirige → fuera del Anexo III por función;
+`Hefi002/tfg-mcp-moodle-server` **escribe notas** → dentro.
+
+⚠️ **La consecuencia de calendario para una propuesta: el margen real para alto riesgo es
+2027-12-02, no 2026-08-02.** 🔵 **Esta base citaba agosto de 2026 como el muro; el muro del alto
+riesgo autónomo está 16 meses más allá, y una propuesta que lo trate como inminente se auto-descarta
+contra una que planifique.** 🟢 **Y el árbol de código de esta KB ya tiene los instrumentos del
+Artículo 50(2)** (`compose/code/aiact-50-2-*`): el marcado de contenido generado es la obligación de
+**transparencia**, que rige antes y por separado del alto riesgo.
+
+### APAC
+
+🔸 **Canal secundario.** La región sigue siendo la de **fragmentación regulatoria máxima**, y este
+pase le agrega fechas de acto:
+
+| País | Instrumento | Postura |
+|---|---|---|
+| **China** | *Interim AI Measures*, en vigor **2023-08-15** | 🔴 la más **asertiva**; foco en desinformación, ciberataque, discriminación, privacidad |
+| **Japón** | **Segundo AI Basic Plan**, aprobado por el Gabinete **2026-07-14**; *AI Promotion Act* | 🟢 **light-touch**, voluntaria, pro-innovación |
+| **India** | señal de **legislación dedicada** (**julio 2026**), marco **basado en riesgo** | ⚠️ en definición |
+
+| Mercado | Valor |
+|---|---|
+| mercado AI de APAC (marzo 2026) | **~USD 102 B** |
+| India, crecimiento | **38,9 % CAGR** — 🟢 **el más rápido de APAC** |
+| dominantes en AI-en-educación | **China, Japón, India** |
+
+🔵 **La oportunidad de APAC no es un producto, es una ARQUITECTURA: tres regímenes incompatibles en
+un mercado de USD 102 B.** 🟢 **La pieza de esta base que apunta ahí es la única con currículo
+nacional nombrado** (`SimonsTang/xiaofei-liberal-arts`, K-12 chino): **el eje de `P262` —nivel de
+mandato— es el que ordena esta región**, porque un despliegue que cruza China/Japón/India no cambia
+de modelo, cambia de política. ⚠️ **Japón tiene además un driver demográfico explícito (población
+envejecida) que no es regulatorio y se mide aparte.**
+
+### LATAM
+
+🟢 **El dato que manda este pase es una PAREJA de cifras, y juntas dicen lo contrario de lo que cada
+una dice sola:**
+
+| Hecho | Valor |
+|---|---|
+| profesorado de LATAM que **usa** AI en su enseñanza | 🟢 **79 %** (**+18 pp** sobre la cifra global 2025) |
+| profesorado con compromiso **«mínimo» a «moderado»** | 🔴 **88 %** |
+| despliegue AI empresarial en la región | **47 %** |
+| únicos del top-50 global | **Brasil 65,89** · **Chile 63,19** · **Uruguay 62,21** |
+
+🔴 **Adopción ANCHA y POCO PROFUNDA (tendencia 771): el cuello de botella de LATAM NO es el acceso,
+es la profundidad de uso.** 🔵 **Eso mueve la oferta de «llevar AI al aula» —que ya pasó— a
+«convertir uso superficial en resultado medido», que es un trabajo de instrumentación y evaluación,
+no de modelo.** 🟢 **Y es justo donde esta base es fuerte: `pykt-team/pykt-toolkit` (knowledge
+tracing) y la capa de *autograding* miden aprendizaje; la capa MCP la conecta al LMS que la
+institución ya tiene.**
+
+**Regulación, con mecanismo:**
+- 🟢 **Brasil — PL 2.338/2023**: enfoque **basado en riesgo**, **exige evaluación preliminar de
+  riesgo ANTES de poner en mercado, desplegar o usar**, más arquitectura de transparencia y
+  supervisión. 🔵 **Brasil lidera en madurez y regulación de la región.**
+- ⚠️ **México**: activo pero **su propuesta NO contiene prohibición explícita** de sistemas de riesgo
+  «inaceptable» — 🔵 **es la asimetría regulatoria intra-LATAM que una propuesta regional tiene que
+  contemplar: el mismo producto no necesita el mismo expediente en São Paulo que en CDMX.**
+
+**Programa con dinero y fechas, que es lo que falta casi siempre:**
+- 🟢 **Google.org + Raspberry Pi Foundation — USD 4,6 M** para AI en educación en **9 países**
+  (Argentina, Brasil, Chile, Colombia, R. Dominicana, El Salvador, México, Perú, Uruguay), meta
+  **1,25 M de alumnos para 2028** y **24.000 docentes** formados, modelo ***train the trainer***.
+  🔵 **Es un canal de entrada concreto: donde hay 24.000 docentes formados hay demanda de
+  herramienta, y la herramienta no está en el programa.**
+- 🔵 **UNESCO** — *Observatory on AI in Education for Latin America and the Caribbean*; **BID** —
+  análisis de **193 soluciones** de la región.
+
+🔴 **La cota honesta que el propio canal declara, y esta base la hereda: «la implementación
+responsable y escalable sigue siendo el mayor desafío de la región — la mayoría de las iniciativas
+reconoce riesgos éticos y necesidad de evidencia, pero POCAS tienen evaluación rigurosa».** 🟢 **Ese
+hueco es la oferta: evaluación rigurosa es un entregable, no un disclaimer.**
+
 ## 🔴 Barrido regional 26: las cuatro regiones responden, y el hallazgo que manda es sobre el CANAL, no sobre el mercado (pase 97 del 2026-10-04)
 
 🔬 **El canal, declarado antes de cualquier veredicto (`P247`) — y este pase lo mide donde nunca

@@ -16,6 +16,11 @@
 #   Classifies on the TITLE BLOCK (first 40 lines), never the body (P171).
 #   Falls back to a body test only for MIT/BSD, whose grant line IS their identity and whose
 #   texts carry no confusable title.
+# __decl <lowercased-payload> <token-regex> -> exit 0 if the token appears as a WORD.
+# P299: the declaration branch used `case` globs, which match SUBSTRINGS, and "mit" is a
+# substring of permit/submit/limit/commit/omit.  A licence token is a word or it is noise.
+__decl() { printf '%s' "$1" | grep -qE "(^|[^a-z0-9])($2)([^a-z0-9]|\$)"; }
+
 osi_family_of() {
   local t
   t=$(printf '%s' "$1" | head -40 | tr -s '[:space:]' ' ')
@@ -78,18 +83,51 @@ osi_family_of() {
   # over a body is unsound.  A SHORT payload has no body to be confused by: there is nothing in
   # 200 bytes but the declaration itself.  So the token match runs ONLY under the guard, and
   # the guard is what keeps this from re-opening P171.
+  # -------------------------------------------------------------------------
+  # P299 (pase 98).  La rama de DECLARACION tenia dos defectos y los dos empujaban en la
+  # UNICA direccion que esta base no puede permitirse: convertir una NEGATIVA de licencia
+  # en un permiso MIT, que es el permiso sobre el que Globant construye.
+  #
+  # (1) SUBCADENA, NO PALABRA.  Los globs de `case` matchean subcadena, y "mit" es
+  #     subcadena de permit, submit, limit, limitations, commit, omit, transmit, summit y
+  #     admit -- todas palabras ordinarias de la prosa juridica inglesa.  Medido, no
+  #     supuesto: un aviso de 225 B que dice literalmente «has not declared a project-wide
+  #     reuse license. Nothing here is granted. Do not submit changes or permit
+  #     redistribution» volvia `MIT (declaracion)`.  Tres palabras lo gatillaban
+  #     (`submit`, `permit`, `limitations`) y ninguna es una licencia.
+  # (2) LA GUARDA DE TAMANIO NO PROTEGIA DE (1).  Se razono para P171 --un CUERPO de
+  #     licencia contiene el vocabulario de otras licencias-- y no dice nada sobre
+  #     palabra-vs-subcadena.  El especimen real que trajo esto es `murderszn/open-tutor`,
+  #     cuyo archivo LLAMADO `LICENSE` declara que NO hay licencia: se salvaba SOLO por
+  #     pesar 868 B > 400 B, o sea por LARGO, por accidente, no por solidez.
+  #
+  # LA NEGATIVA SE MIDE PRIMERO Y SIN GUARDA DE TAMANIO.  Es segura aca porque esta rama
+  # se alcanza solo cuando `osi_family_of` ya agoto todas las familias: un texto
+  # Apache-2.0 real dice «does not grant permission to use the trade names» y NUNCA llega
+  # hasta este punto, porque lo captura la rama `Apache License` del title block.  Y
+  # «no cede» es una respuesta mas FUERTE que UNCLASSIFIED: un archivo que se niega
+  # explicitamente no es un archivo que no supimos leer, y la diferencia decide si una
+  # fila de esta KB puede entrar a un entregable.
+  local dl; dl=$(printf '%s' "$1" | tr '[:upper:]' '[:lower:]' | tr -s '[:space:]' ' ')
+  case "$dl" in
+    *"has not declared"*|*"no project-wide reuse license"*|*"has not been licensed"*|\
+    *"is not licensed"*|*"no license has been"*|*"does not grant additional rights"*|\
+    *"not itself a declaration of an open-source"*)
+      echo "NO-CESSION (negativa explicita)"; return ;;
+  esac
+
   local bytes; bytes=$(printf '%s' "$1" | wc -c | tr -d ' ')
   if [ "$bytes" -le 400 ]; then
     local d; d=$(printf '%s' "$1" | tr '[:upper:]' '[:lower:]')
-    case "$d" in
-      *agpl*|*affero*)              echo "AGPL-3.0 (declaracion)"; return ;;
-      *lgpl*)                       echo "LGPL (declaracion)"; return ;;
-      *"gpl v3"*|*"gpl-3"*|*gplv3*) echo "GPL-3.0 (declaracion)"; return ;;
-      *"gpl v2"*|*"gpl-2"*|*gplv2*) echo "GPL-2.0 (declaracion)"; return ;;
-      *apache*)                     echo "Apache-2.0 (declaracion)"; return ;;
-      *mit*)                        echo "MIT (declaracion)"; return ;;
-      *bsd*)                        echo "BSD (declaracion)"; return ;;
-    esac
+    # Frontera de PALABRA.  Clases explicitas en vez de `\b` para no depender de la
+    # extension GNU, y el token puede venir pegado a puntuacion (`License: MIT.`).
+    __decl "$d" 'agpl|affero'      && { echo "AGPL-3.0 (declaracion)"; return; }
+    __decl "$d" 'lgpl'             && { echo "LGPL (declaracion)"; return; }
+    __decl "$d" 'gpl ?v?-?3(\.0)?' && { echo "GPL-3.0 (declaracion)"; return; }
+    __decl "$d" 'gpl ?v?-?2(\.0)?' && { echo "GPL-2.0 (declaracion)"; return; }
+    __decl "$d" 'apache'           && { echo "Apache-2.0 (declaracion)"; return; }
+    __decl "$d" 'mit'              && { echo "MIT (declaracion)"; return; }
+    __decl "$d" 'bsd'              && { echo "BSD (declaracion)"; return; }
   fi
   echo "UNCLASSIFIED"
 }
@@ -133,6 +171,14 @@ commercial_use_ok() {
 
 # commercial_use_ok <payload> -> exit 0 if nothing in the payload forbids commercial use.
 commercial_use_ok() {
+  # P299 (pase 98).  LA NEGATIVA VA ANTES DE LA COMPUERTA, y si no fuera asi la compuerta
+  # la daria por permitida.  `NO-CESSION` no es una familia OSI: es la ausencia de cesion.
+  # La compuerta de P250 razona «familia identificada -> permite uso comercial POR
+  # DEFINICION», y es correcta para toda familia OSI -- pero `NO-CESSION` entraba por el
+  # `|| return 0` y volvia ALLOWED, o sea: un repo que declara EXPLICITAMENTE que no cede
+  # nada se reportaba como apto para un entregable comercial.  Es el mismo error que P250
+  # arreglo, en el eje contrario y sobre el unico caso donde la respuesta importa.
+  [ "$(osi_family_of "$1")" = "NO-CESSION (negativa explicita)" ] && return 1
   # THE GATE. Identified OSI family -> allowed, no token match, no false positive.
   [ "$(osi_family_of "$1")" = "UNCLASSIFIED" ] || return 0
   local d; d=$(printf '%s' "$1" | tr '[:upper:]' '[:lower:]' | tr -s '[:space:]' ' ')
@@ -207,6 +253,11 @@ holder_of() {
     # "there is no license text here at all" (P179: identifier, not cession).
     *"(declaracion)"*)
       echo "NOT-APPLICABLE ($fam: a declaration carries no holder -- P179)"; return ;;
+    # P299.  Sin esta rama caia en el `*)` de abajo y afirmaba «holder not in the license
+    # text by construction», que es la razon de Apache/GPL y es FALSA aca: no es que el
+    # titular viva en otro lado, es que no hay cesion de la cual haya titular.
+    "NO-CESSION (negativa explicita)")
+      echo "NOT-APPLICABLE ($fam: nothing is granted, so there is no grant to hold)"; return ;;
     UNCLASSIFIED|NONCOMMERCIAL-NOT-OSI)
       # No family to gate on, so the question is still open -- but it is asked ONLY of the
       # title block, never of a body this function cannot vouch for.

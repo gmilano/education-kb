@@ -9,6 +9,108 @@ updated: 2026-10-04
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 > No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
 
+## 2026-10-04 — pase 98: la racha de NUEVE pases en cero se ROMPE, y se rompe ROTANDO EL EJE, no repitiendo el barrido
+
+🔬 **El canal, declarado antes de cualquier veredicto (`P247`).** `github.com/<org>/<repo>` →
+🔴 **`403`** · `api.github.com/repos/…` → 🔴 **`403`** (el pase 97 registró **`400`** para este
+host: **la cifra cambió y se declara en vez de heredarse**) · `raw.githubusercontent.com` →
+🟢 **`200` con payload** · 🔴 **`WebFetch` sobre `github.com/<org>/<repo>` → `404` enmascarado, y
+el pase 97 lo daba por vivo para leer estrellas.** El `curl -sI` que el encargo ordena sigue
+muerto acá; **todo lo de abajo se leyó por `raw`.**
+
+🔴 **Consecuencia que se escribe en las filas, no en una nota: las ESTRELLAS no son verificables
+este pase.** Las 5 altas llevan `🔴 no verificable (canal 403)` en esa columna. **Copiar ahí la
+cifra del buscador habría puesto un dato de canal secundario en una columna que el resto del
+archivo llena con medición de primera mano** — que es exactamente el defecto de la tendencia
+**762**.
+
+🟢 **Altas: 5. La tabla principal pasa de 94 a 99 filas.** Año **CALCULADO** (`date -u +%Y` →
+**2026**, no fijado).
+
+### 🔴 Primero lo que confirma al pase 97: los dos barridos del encargo volvieron a fallar
+
+| Lo que devolvió el barrido global de hoy | n |
+|---|---|
+| frameworks/infra de agentes genéricos (`opencode`, `OpenClaw`, `browser-use`, `CrewAI`, `LangGraph`, `OpenHands`) | **6** |
+| 🔵 repos de *currículo para enseñar AI a ingenieros* | **4** |
+| 🔴 **software de la INDUSTRIA educativa, nuevo, con licencia permisiva** | 🔴 **0** |
+
+🔵 **O sea que el pase 97 tenía razón sobre esos dos canales. Lo que no tenía era el alcance de la
+conclusión.**
+
+### 🟢 El hallazgo del pase: «saturado» era una afirmación sobre DOS CONSULTAS, usada como afirmación sobre la INDUSTRIA
+
+Nueve pases (89–97) cerraron en cero y lo atribuyeron a saturación del canal. 🔴 **Pero los dos
+barridos del encargo son DOS CONSULTAS, no un censo de la vertical.** Este pase corrió además
+cuatro ejes que el encargo no enumera, y los cuatro devolvieron piezas reales:
+
+| Eje rotado | Candidatas medidas | Altas |
+|---|---|---|
+| servidores **MCP de Moodle** | 5 | 🟢 **3** |
+| plataformas de **tutoría auto-hospedada** | 5 | 🟢 **1** |
+| **ayudantes de cátedra** desplegados | 3 | 🟢 **1** |
+| ***knowledge tracing*** 2026 | 3 | 🔴 0 (todo *paper* sin repo alcanzable o ya inventariado) |
+| **TOTAL** | **11** (+ 2 ya en la base) | 🟢 **5** |
+
+🟢 **Tendencia 768.** El costo de confundir las dos afirmaciones fue de nueve pases.
+
+### 🟢 Las 5 altas, con licencia leída del PAYLOAD
+
+| Pieza | Licencia (payload) | Qué mueve | Región |
+|---|---|---|---|
+| `a2br/moodle-mcp` | 🟢 MIT (`LICENSE` 1.073 B **+** `pyproject.toml`, **dos fuentes**) | *page map* de PDF: **127 diapositivas ≈1,4k tokens mapeadas vs ≈9k volcadas** | 🟢 **EMEA** |
+| `SaadRahman01/moodle-mcp` | 🟢 MIT (`LICENSE` 1.068 B) | 🟢 **ALTA DE CAPA: primer MCP de Moodle del PLANO DE DESARROLLO** (docs, Hooks API, XMLDB, Jira) | 🔴 sin región |
+| `LEARNableLabs/opentutor` | 🟢 MIT (1.079 B, titular **organizacional**) | llega con **293 cursos cargados**; proveedor configurable (OpenRouter/Ollama/Claude Code) | 🔴 sin región |
+| `Hefi002/tfg-mcp-moodle-server` | ⚠️ **GPL-3.0** (35.187 B) | superficie de **escritura** más ancha (cursos, usuarios, matrículas, notas), Moodle **5.1+** | 🔴 **no elevada** (t. **769**) |
+| `KayvanShah1/VirtuTA` | 🟢 MIT (1.068 B) | 🟢 única pieza que contesta en un **foro de curso** (Piazza), no en un LMS | 🔴 sin región |
+
+🔵 **La de más valor no es la más grande: es `SaadRahman01/moodle-mcp`.** Los siete servidores
+Moodle que esta base ya tenía viven todos en el **plano de datos**; éste es el primero que acelera
+a quien **construye** sobre Moodle en vez de a quien lo usa.
+
+### 🔴 Los 6 descartes, enumerados — el cero de nueve pases nunca trajo esto
+
+| Candidata | Veredicto medido |
+|---|---|
+| `studyield/studyield` | 🔴 **404 en 15 combinaciones**, con el buscador afirmando **«81 stars»** y **«Apache 2.0»** (t. **762**) |
+| `murderszn/open-tutor` | 🔴 archivo **llamado `LICENSE`** que declara que **NO hay licencia** (t. **763**) |
+| `iriseye395/OpenTutor` | 🔴 **redistribución**: `README` y `LICENSE` byte-idénticos a una fila existente (t. **767**) |
+| `itsnone-liu/OpenTutor` | 🔴 **redistribución**: mismo par de `sha256` |
+| `Johnson1662/OpenTutor` | 🔴 `README` sí, `LICENSE` no → **sin cesión** |
+| `i-ninte/grad-agent` | 🔴 `README` sí, `LICENSE` no → **sin cesión** |
+
+⚠️ **Y uno deferido que cuesta explicar:** `anoopreddy2007/OpenTutor` tiene **MIT medida en el
+payload** (1.070 B) y repo alcanzable, pero **su README completo es UNA ORACIÓN**. Entra al
+denominador, no a la tabla: *«fewer real rows always beat padding»*.
+
+### 🟢 Lo que el pase le deja al CÓDIGO: `P299`, y el defecto empujaba hacia MIT
+
+El descarte `murderszn/open-tutor` no se quedó en descarte. Trazado contra
+`lib/license_family.sh`, el control COMPARTIDO de esta base: 🔴 **los globs de `case` de la rama de
+declaración matcheaban SUBCADENA, y `mit` es subcadena de `permit`, `submit`, `limit`,
+`limitations`, `commit` y `omit`.** Un aviso de **225 B** que dice *«has not declared a
+project-wide reuse license. Nothing here is granted»* volvía **`MIT (declaracion)`**
+(tendencia **764**).
+
+⚠️ **El espécimen real de 868 B se salvaba sólo por pasar la guarda de 400 B — por LARGO, no por
+solidez** (tendencia **765**). Y el veredicto nuevo tuvo que viajar a los otros dos ejes, que es
+`P237`: la compuerta de `P250` daba **`ALLOWED`** al uso comercial de una negativa explícita
+(tendencia **766**).
+
+🟢 **Suite del control: 41/41 → 50/50** (9 aserciones nuevas, 4 negativas + 1 control negativo que
+afirma que la compuerta de `P250` sigue intacta para una familia OSI real). 🟢 **Las 50 suites del
+repo pasan, 0 fallan.** 🔵 **La corrección viaja sola: 8 instrumentos hacen `source` del control y
+ninguno llevaba copia propia de esos globs.**
+
+### 🔴 Acción pre-registrada para el pase 99, falsable
+
+**Predicción:** un pase que corra **sólo** los dos barridos del encargo volverá a **0**; uno que
+rote a un eje no barrido —`xAPI`/LRS agéntico, generación de ítems alineada a estándar, MCP sobre
+**SIS** (PowerSchool/Kuali)— devolverá **≥1 pieza licenciada**. 🔵 **Si el eje rotado también vuelve
+cero, la saturación es de la INDUSTRIA y la tendencia 768 estaba equivocada.**
+
+---
+
 ## 2026-10-04 — pase 97: el barrido global vuelve vacío por DECIMOTERCERA vez, y lo que se construye y no se CONECTA no existe
 
 🔬 **El canal, declarado antes de cualquier veredicto (`P247`) — y este pase lo mide donde nunca

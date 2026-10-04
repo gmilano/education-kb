@@ -13,7 +13,7 @@ updated: 2026-10-04
 | Qué prueba | Invocación | Hoy |
 |---|---|---|
 | el caso que las 41 aserciones no ejercitaban, + el negativo de `P171` | `sh test_casefold.sh` | 🟢 **9/9** |
-| que la suite vieja no se rompe con el arreglo | `sh ../lib/test_license_family.sh` | 🟢 **41/41** |
+| que la suite vieja no se rompe con el arreglo | `sh ../lib/test_license_family.sh` | 🟢 **41/41** *(medido en el pase 96; hoy **50/50** tras `P299`)* |
 
 ## 🔬 El canal, declarado antes de cualquier veredicto (`P247`)
 

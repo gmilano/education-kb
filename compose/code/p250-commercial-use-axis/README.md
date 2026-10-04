@@ -57,7 +57,7 @@ sh sweep_commercial.sh r-huijts/canvas-mcp
 # el catálogo, en paralelo
 cat slugs.input.txt | xargs -P 8 -I{} sh ./sweep_commercial.sh {}
 # la librería compartida que hace la clasificación
-sh ../lib/test_license_family.sh     # 41/41
+sh ../lib/test_license_family.sh     # 50/50 (41/41 cuando se escribio este README; P299 sumo 9)
 ```
 
 | Archivo | Qué es |

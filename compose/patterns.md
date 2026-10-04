@@ -129,6 +129,123 @@ updated: 2026-10-04
 > **Pase 11:** +2 patrones — **P25** (riesgo de abandono conforme al Anexo III, la capa con presupuesto ya asignado y sin oferta open source) y **P26** (agente docente sobre la ontología curricular nacional ya publicada).
 > **Pase 27:** **+4 patrones y una corrección.** 🔴 **P51 queda con premisa falsa** —el conector MCP de Moodle **sí existe y es MIT**— y lo reemplazan **P54** (corrección y devolución sobre Moodle con **compuerta humana**, el último tramo del gap 6, con piezas que ya escriben), **P55** (el conector de **Open edX**, que es el único que de verdad no existe), **P56** (**SCORM** como formato de salida de la capa generativa: cero integración, offline) y **P57** (evidencia por MCP cotizada sobre lo que CaSS **realmente** expone — 6 de 61 operaciones, con insignias y autoría de marcos **fuera**).
 
+## 🆕 Patrones del pase 98 — P299–P302 y la receta P303
+
+### 🔴 P299 — la frontera de PALABRA en la rama de declaración, y por qué el defecto empujaba hacia MIT
+
+Ya narrado en `agents/top.md` y en las tendencias **764**–**766**. Como patrón reutilizable:
+🔴 **un clasificador de licencia que matchea SUBCADENA sobre prosa jurídica inglesa convierte una
+NEGATIVA en un permiso**, porque `mit` ⊂ `permit`/`submit`/`limit`/`limitations`/`commit`/`omit`.
+🟢 **La regla: un token de licencia es una PALABRA o es ruido, y el veredicto nuevo tiene que viajar
+a los TRES ejes del control** (familia, uso comercial, titular) **o el control queda
+internamente inconsistente** — que es `P237` aplicado a un veredicto en vez de a una corrección.
+
+### 🟢 P300 — el plano de DESARROLLO es una capa de composición, no «herramientas de developer»
+
+Los siete servidores MCP de Moodle que esta base tenía viven en el **plano de datos** (cursos,
+notas, entregas). `SaadRahman01/moodle-mcp` vive en el **plano de desarrollo**: documentación,
+Hooks API, XMLDB, tipos de plugin, Jira. 🔵 **El patrón es que son capas COMPONIBLES en el mismo
+despliegue y no alternativas:** el agente que construye el plugin y el agente que lo opera piden
+servidores distintos, y un *engagement* necesita los dos. 🔴 **Tratar el plano de desarrollo como
+«herramienta interna del equipo» y dejarlo fuera del diagrama es lo que hace que la estimación de
+integración se quede corta**, porque el costo real de un plugin Moodle está en conocer `XMLDB` y
+las capabilities, no en escribir el *handler*.
+
+### 🟢 P301 — enchufarse por PLUGIN es también la ruta de menor fricción de LICENCIA
+
+Medido este pase: el core de Moodle es **GPL-3.0** (`COPYING.txt`, 35.147 B) y la plataforma expone
+**+2.000 plugins** de comunidad. 🔵 **Las dos cosas se leen juntas: el punto de extensión que
+minimiza el trabajo de integración es el MISMO que minimiza el acoplamiento de licencia.** 🔴 **El
+anti-patrón es el fork del core:** cuesta más mantener Y arrastra la obligación copyleft sobre el
+derivado. 🟢 **Y la pieza nueva de este pase lo ejemplifica sin tocar el core: `a2br/moodle-mcp` no
+modifica Moodle, le habla por Web Services, así que su MIT y el GPL-3.0 del core nunca se mezclan.**
+
+### 🟢 P302 — el Anexo III se decide por FUNCIÓN, no por sector, y eso parte el inventario en dos vendibles
+
+🔴 **«AI en educación es alto riesgo» es falso como regla y caro como promesa.** El Anexo III
+nombra funciones: admisión, **evaluación**, *proctoring*, **detección de AI usada en evaluación**, y
+personalización **que dirige la ruta del alumno**. 🟢 **Aplicado al inventario de esta base, la
+línea cae limpia:**
+
+| Pieza | Función medida | Anexo III |
+|---|---|---|
+| `a2br/moodle-mcp` | 🟢 **sólo lectura**; no evalúa ni dirige ruta | 🟢 **fuera, por función** |
+| `SaadRahman01/moodle-mcp` | 🟢 documentación y esquema; no toca al alumno | 🟢 **fuera** |
+| `LEARNableLabs/opentutor` | ⚠️ **dirige qué lección viene después** | 🔴 **dentro** (personalización que dirige) |
+| `Hefi002/tfg-mcp-moodle-server` | 🔴 **escribe NOTAS** | 🔴 **dentro** (evaluación) |
+| capa de *autograding* de esta base | 🔴 evaluación | 🔴 **dentro** |
+
+🔵 **El valor de venta es poder empezar por lo de afuera:** una primera entrega de lectura y
+desarrollo **no dispara el expediente de alto riesgo**, y deja el de evaluación para una fase con
+presupuesto de *compliance*. ⚠️ **Y el deber que SÍ rige ya es otro: el art. 50(2) de
+transparencia** — para eso están `compose/code/aiact-50-2-*`, y es independiente del Anexo III.
+
+### 🆕 Receta P303 — `R-98-MOODLE-DOS-PLANOS`: *engagement* Moodle con los dos planos y la licencia bajo control
+
+**La condición de compra, medida este pase:** Moodle es **el default seguro** de la capa (+400 M de
+usuarios, ~150.000 sitios, +2.000 plugins) 🔴 **pero su core es GPL-3.0, y las dos plataformas de
+despliegue público grande de la capa —Open edX y Canvas— son AGPL-3.0, cuya §13 alcanza el uso por
+RED.** 🟢 **Así que para un entregable SaaS, Moodle-por-plugin es la ruta de menor fricción y Sakai
+(ECL-2.0) la única permisiva de las siete.**
+
+**Las piezas, con licencia medida en el PAYLOAD este pase:**
+
+| Capa | Pieza | Licencia (payload) |
+|---|---|---|
+| LMS base | [`moodle/moodle`](https://github.com/moodle/moodle) | **GPL-3.0** (`COPYING.txt`, 35.147 B) — **no se forkea, se extiende** |
+| plano de **datos** (lectura) | [`a2br/moodle-mcp`](https://github.com/a2br/moodle-mcp) | 🟢 **MIT** (`LICENSE` 1.073 B **+** `pyproject.toml`) |
+| plano de **desarrollo** | [`SaadRahman01/moodle-mcp`](https://github.com/SaadRahman01/moodle-mcp) | 🟢 **MIT** (`LICENSE` 1.068 B) |
+| tutoría con contenido ya cargado | [`LEARNableLabs/opentutor`](https://github.com/LEARNableLabs/opentutor) | 🟢 **MIT** (1.079 B, titular organizacional) |
+| medición de aprendizaje | [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) | 🟢 **MIT** |
+| inferencia local | `ollama` / `vLLM` | 🟢 **MIT** / **Apache-2.0** |
+
+🔴 **Y la pieza que queda FUERA con su motivo:** `Hefi002/tfg-mcp-moodle-server` es **GPL-3.0** y
+además **declara no haber pasado auditoría de seguridad** mientras expone escritura de notas y
+matrículas. 🔵 **Sirve como mapa del alcance de la API de Moodle Web Services —es el más ancho que
+esta base midió— pero no como dependencia de un entregable** (regla de `P234`).
+
+**El wiring, con lo que esta base ya tiene corriendo:**
+
+1. **Extender por PLUGIN, nunca forkear el core** (`P301`): el MIT de los MCP y el GPL-3.0 de
+   Moodle nunca se mezclan porque la frontera es Web Services, no código compartido.
+2. **Los dos planos, en el mismo despliegue** (`P300`): `a2br/moodle-mcp` para que el agente lea
+   el curso del alumno **con el costo en tokens acotado** —*page map* de PDF: **127 diapositivas
+   ≈1,4k tokens mapeadas contra ≈9k volcadas**— y `SaadRahman01/moodle-mcp` para que el equipo que
+   construye el plugin tenga Hooks API, XMLDB y capabilities en contexto.
+3. **Puerta de herramientas** con [`mcp-allowlist-gateway/`](code/mcp-allowlist-gateway/): el
+   agente ve sólo las operaciones permitidas. 🔵 **Acá importa una celda medida: las dos tools de
+   instancia del plano de desarrollo (`list_ws_functions`, `call_ws_function`) ya vienen con guarda
+   SSRF y lista blanca de funciones, y exponen `readOnlyHint`/`destructiveHint`** — la puerta las
+   complementa, no las reemplaza.
+4. **Empezar por lo que está FUERA del Anexo III** (`P302`): fase 1 = lectura + desarrollo, sin
+   expediente de alto riesgo; fase 2 = evaluación y personalización, con él. ⚠️ **El art. 50(2) de
+   transparencia rige en las dos fases**: [`aiact-50-2-pack/`](code/aiact-50-2-pack/) (**27/27**) se
+   entrega primero, no último.
+5. **Inferencia local** con `ollama`/`vLLM`: responde a la vez al dato de **NA** (California
+   **A.B. 1159** prohibiría entrenar con datos de alumnos) y al de **EMEA** (procesamiento en el
+   perímetro). 🟢 **`LEARNableLabs/opentutor` toma el proveedor por configuración
+   (`OPENTUTOR_LLM`), así que esto no se programa: se configura.**
+6. **Medir aprendizaje, no uso** con `pykt-toolkit`: 🔴 **es la respuesta directa al dato de LATAM
+   —79 % usa AI, 88 % con compromiso mínimo-moderado (tendencia 771)— donde el entregable que falta
+   es evidencia, no acceso.**
+7. **Licencia en CI** con [`lib/license_family.sh`](code/lib/license_family.sh) (**50/50**): 🟢 **y
+   desde `P299` el control distingue `NO-CESSION` de `UNCLASSIFIED`, así que una dependencia que
+   declara explícitamente que no cede nada ROMPE el build en vez de pasar como «no se pudo
+   clasificar».**
+
+**Estimación:** **6–8 semanas** para los dos planos sobre un Moodle existente (MCP de datos + MCP de
+desarrollo + puerta de herramientas + marcado del art. 50), **+4 semanas** si entra tutoría con
+`opentutor` y medición con `pykt`.
+
+⚠️ **Lo que NO cubre, declarado:** (a) **las estrellas y la actividad de las piezas nuevas no son
+verificables en este entorno** (`github.com` y `api.github.com` dan **403**), así que la madurez se
+afirma por payload —tools, guardas, manifiestos— **y no por popularidad**; (b) `a2br/moodle-mcp`
+está construido contra **`moodle.epfl.ch` y macOS** (Keychain), así que portarlo a otro Moodle y a
+Linux es trabajo real, no configuración; (c) la columna de **costo de operación** de
+`verticals/solutions.md` es de canal secundario; (d) 🔴 **`VirtuTA` queda fuera de esta receta a
+propósito**: su superficie es **Piazza**, no Moodle, y mezclar las dos superficies en una sola
+receta es lo que haría la estimación irreal.
+
 ## 🆕 Patrones del pase 97 — `P294`–`P297` y la receta `R-97-COMPRA-SOBERANA-APAC`
 
 ### P294 — un control que no está en el camino de los datos no es un control
@@ -259,7 +376,7 @@ encima*. 🟢 **Si hace falta la capa Kuali, la permisiva del consorcio es `kual
    III se difirió a `2027-12-02`, el art. 50 no— así que es lo primero que se entrega, no lo
    último.
 4. **Verificación de licencia en CI**, con [`p294-pom-in-production/`](code/p294-pom-in-production/)
-   (**27/27**) y [`lib/license_family.sh`](code/lib/license_family.sh) (**41/41**): cada
+   (**27/27**) y [`lib/license_family.sh`](code/lib/license_family.sh) (**50/50**): cada
    dependencia Java/Maven queda leída por los dos canales, y un `AGPL` que entre por
    actualización **rompe el build** en vez de aparecer en una auditoría de cliente.
 
@@ -1930,7 +2047,7 @@ Program»*, marcada en PROSA desde el pase 51 y devolviendo `UNKNOWN` en todos l
 |---|---|---|---|
 | **1. Calibrar el canal** | `compose/code/p249-channel-calibration/` | `sh sweep_channels.sh` | 🟢 Que un `404` signifique ausencia. Mide cada canal contra una URL buena Y una inexistente; **tres canales de `github.com` dan 403/403 y no sirven**, `raw.githubusercontent.com` + ref `HEAD` da **200/404** |
 | **2. Leer la licencia del payload** | `compose/code/p170-headref-license-sweep/sweep_headref.sh` | `sh sweep_headref.sh <org/repo>` | 🟢 14 nombres de archivo × **1 ref** (`HEAD` cubre `main`, `master`, `develop`, `trunk`), con control de alcanzabilidad de 3 estados |
-| **3. Clasificar, una sola vez y en un solo lugar** | `compose/code/lib/license_family.sh` | `. license_family.sh; family_of "$payload"` | 🟢 **41/41**. Familia por **bloque de titulo** (`P171`), con `0BSD`, `ISC`, familia CC, `Unlicense` y `NONCOMMERCIAL-NOT-OSI` |
+| **3. Clasificar, una sola vez y en un solo lugar** | `compose/code/lib/license_family.sh` | `. license_family.sh; family_of "$payload"` | 🟢 **50/50**. Familia por **bloque de titulo** (`P171`), con `0BSD`, `ISC`, familia CC, `Unlicense`, `NONCOMMERCIAL-NOT-OSI` y 🆕 `NO-CESSION` para la **negativa explicita** (`P299`) |
 | **4. Preguntar el uso comercial APARTE** | ídem, `commercial_use_ok` | `commercial_use_ok "$payload"` | 🔴 **Una familia OSI identificada no se somete a ningun token**: la compuerta que impide marcar AGPL-3.0 o The Unlicense como prohibidas |
 | **5. Barrer el catalogo** | `compose/code/p250-commercial-use-axis/` | `cat slugs.input.txt \| xargs -P 8 -I{} sh ./sweep_commercial.sh {}` | 🟢 TSV de 6 columnas: `slug · status · hit_path · bytes · family · commercial_use` |
 

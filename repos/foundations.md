@@ -103,6 +103,68 @@ corre ése antes de escribir uno a mano** (tendencia **313**). 🟢 **Y el `gafa
 > **Pase 36 del 2026-10-02:** 🔵 **este pase no agrega repos: le pone FECHA a los que ya están, y la fecha cambia tres recomendaciones.** Se midió la capa PHP de evaluación y telemetría en Packagist —el único registro de los tres que entrega descargas en este entorno (`api.npmjs.org` y `pypistats.org` dan **403 a CONNECT**)— y el resultado está en `repos/trending.md`. **Lo que hay que saber antes de proponer desde este archivo:** 🔴 **la pieza xAPI más descargada de esta base, `rusticisoftware/tincan` (Apache-2.0, 6.178 desc./mes, 863.777 totales), no publica desde el 2022-11-02**, y ⚠️ **el único MIT de esa capa, `php-xapi/client`, está parado desde el 2021-03-24** con 825 desc./mes. 🔵 **La lectura es que en xAPI/PHP lo permisivo está quieto y lo vivo es copyleft**, así que la receta de telemetría se sostiene en **Ralph (MIT)** + **`lrsql` (Apache-2.0)** + **`learnmcp-xapi` (MIT)** y no en la capa PHP. 🟢 **Del lado de evaluación, lo activo es `oat-sa/extension-tao-testqti`** (**885 versiones**, release del **2026-09-30**) **y sigue siendo GPL-2.0-only**, mientras **lo permisivo es lo nuevo**: `@longsightgroup/qti3-cli` (**MIT**, 41 releases desde el 2026-05-21, último **2026-10-01**) con **cero dependencias de terceros** — sus 4 dependencias son todas `@longsightgroup/*` pinneadas a la misma versión exacta. **Su manifiesto MCP completo de 20 tools está escrito en `compose/patterns.md` (P76).** 🔴 **Y una corrección de catálogo: `oat-sa/qti-sdk` devuelve 404 en Packagist porque es el nombre del REPO — su paquete es `qtism/qtism`** (GPL-2.0-only, 218.212 descargas totales, 315 versiones). **Nombre de repo y nombre de paquete son identificadores distintos, y confundirlos produce un 404 que parece una ausencia** — pasó igual con `1edtech/oneroster`, `imsglobal/lti-1-3-php-library` y `packbackbooks/lti-1-3-php-library`, los tres **404**, que se anotan como *«no verificado en Packagist bajo ese nombre»* y **no** como inexistentes. ⚠️ **Acción pendiente que el pase 37 tiene asignada: este archivo nunca pasó por el control de *slugs* distintos ni por el de *backlink*** — los dos que en `agents/top.md` encontraron **un duplicado** y **dos colisiones** este mismo pase.
 > **Pase 11 del 2026-10-01:** aparece una licencia que las diez pasadas anteriores filtraban sin saberlo — **ECL-2.0**, con la que licencia todo Apereo (Sakai, Opencast, OpenLRW). Es Apache-2.0 con el alcance de patentes acotado, aprobada por OSI y FSF, y **es apta para construir arriba**. Ver la capa de analítica institucional, abajo.
 
+## 🔴 Altas fundacionales: 0 — pero las SIETE plataformas de esta capa quedan re-medidas por payload, y NINGUNA es permisiva (pase 98 del 2026-10-04)
+
+🔬 **Canal (`P247`):** `github.com/<org>/<repo>` y `api.github.com` → 🔴 **403**;
+`raw.githubusercontent.com` → 🟢 **200 con payload**. Todo lo de abajo se leyó por `raw`.
+
+### 🔴 El cero, con el denominador enumerado
+
+El barrido `open source platform education LMS SIS MIT Apache` devolvió **7 plataformas
+nombradas** —Moodle, Open edX, Canvas LMS, ILIAS, Sakai, Chamilo, OpenEduCat— y 🔴 **las 7 ya
+estaban en esta base.** No hay alta fundacional porque **no había nada nuevo que dar de alta**, no
+porque no se buscara.
+
+### 🟢 El aporte del pase: las 7 licencias, medidas en el PAYLOAD de una sola barrida
+
+| Plataforma | Repo | Licencia **leída del payload** | Bytes | Ruta que la tenía |
+|---|---|---|---|---|
+| Moodle | `moodle/moodle` | **GPL-3.0** (`affero_lines=3` → **no** es AGPL, `P171` discriminando bien) | 35.147 | 🔵 **`main/COPYING.txt`** |
+| Open edX | `openedx/edx-platform` | 🔴 **AGPL-3.0** (`affero_lines=15`, `sha256:106a1b4b8b71324a…`) | 35.135 | `master/LICENSE` |
+| Canvas LMS | `instructure/canvas-lms` | 🔴 **AGPL-3.0** | 34.520 | `master/LICENSE` |
+| Chamilo | `chamilo/chamilo-lms` | **GPL-3.0** | 35.147 | `master/LICENSE` |
+| ILIAS | `ILIAS-eLearning/ILIAS` | **GPL-3.0** | 35.147 | `master/LICENSE` |
+| Sakai | `sakaiproject/sakai` | 🟢 **ECL-2.0** | 11.120 | `master/LICENSE` |
+| OpenEduCat | `openeducat/openeducat_erp` | **LGPL** | 8.241 | `master/LICENSE` |
+
+🔴 **El resultado que manda para una venta: CERO de las siete es MIT/Apache/BSD.** 🟢 **La única
+permisiva es Sakai, por ECL-2.0** —la *Educational Community License*, derivada de Apache-2.0 y
+aprobada por la OSI—, y eso la vuelve **la única de las siete sobre la que se puede construir un
+entregable cerrado sin pedir permiso.**
+
+⚠️ **Y las DOS de copyleft de red son justo las dos de despliegue público grande:** Open edX y
+Canvas son **AGPL-3.0**, cuya sección 13 alcanza al uso **por red** — o sea que un SaaS montado
+encima **dispara la obligación de fuente**. 🔵 **Es el hecho de licencia más caro de toda esta capa
+y es el que hay que decir en la primera reunión, no en la due diligence.**
+
+### 🔴 El canal de búsqueda afirmó Apache-2.0 sobre Open edX, y esta base ya lo tenía bien
+
+El barrido de hoy devolvió textualmente *«Open edX uses the Apache License 2.0»*. 🔴 **Falso, y en
+la dirección CARA:** el payload de `openedx/edx-platform` es el título **`GNU AFFERO GENERAL PUBLIC
+LICENSE Version 3`** con **15 líneas nombrando la AGPL** (un cuerpo GPL-3.0 la nombra en 3 — el
+discriminador de `P171`).
+
+🟢 **Y el valor del pase está acá: esta base YA registraba `AGPL-3.0 ⚠️` para ese repo, así que la
+disciplina de payload-primero la defendió de una afirmación externa equivocada sin que nadie
+tuviera que acordarse de nada.** 🔵 **La confusión del canal tiene explicación y conviene anotarla:
+hay COMPONENTES de Open edX que sí son Apache-2.0 —`openedx/XBlock`, que el pase 95 confirmó por
+payload, y `Aspects`— así que «Open edX es Apache-2.0» es un component-vs-plataforma mal
+generalizado.** La pregunta correcta no es «¿qué licencia tiene Open edX?» sino **«¿qué licencia
+tiene el artefacto que voy a desplegar?»**.
+
+### ⚠️ Nota de instrumento, para el próximo barrido que se escriba
+
+🔴 **Un sondeo que pruebe sólo `LICENSE` devuelve «sin licencia» para `moodle/moodle`** —el LMS más
+desplegado del mundo— **porque su texto vive en `COPYING.txt`.** El primer sondeo de este pase cayó
+justo ahí. 🔵 **No se eleva a defecto de esta base: los instrumentos del árbol ya prueban `COPYING`
+y `COPYING.txt` entre los nombres.** Queda como cautela para instrumentos NUEVOS, que es donde esta
+base viene fallando sus primeras pruebas honestas.
+
+### 🟢 Suites
+
+- `lib/test_license_family.sh` — 🟢 **50/50** (era 41/41; `P299`, ver `agents/top.md`).
+- Barrido total del árbol — 🟢 **50 suites pasan, 0 fallan.**
+
 ## 🟢 El hueco que el pase 94 dejó abierto sobre este archivo queda CERRADO: `openedx/XBlock`, confirmado por payload (pase 95 del 2026-10-04)
 
 El pase 94 descubrió que la fila de **`openedx/XBlock`** —publicada aquí como **Apache-2.0**— era

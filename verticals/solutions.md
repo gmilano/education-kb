@@ -159,6 +159,63 @@ updated: 2026-10-04
 > **`qti3-pnp`**, que abren accesibilidad de evaluación como entregable auditable (**P72**). ⚠️ **Open edX cambia de
 > recomendación: proponer con presupuesto de mantenimiento (gap 70).** Ver la sección del pase 33, abajo.
 
+## 🟢 Sin verticales nuevas, y el eje que esta capa le debía a una venta: COSTO DE OPERACIÓN por plataforma (pase 98 del 2026-10-04)
+
+🔬 **Canal (`P247`):** `raw.githubusercontent.com` → 🟢 **200**; `github.com` y `api.github.com` →
+🔴 **403**. Licencias leídas del payload; cifras de escala e indicaciones de operación leídas del
+**canal de búsqueda** y marcadas como tales.
+
+### 🔴 El cero, enumerado
+
+Barrido `open source platform education LMS SIS MIT Apache`: **7 plataformas nombradas, las 7 ya en
+esta base.** Sin altas. 🔵 **Pero el barrido devolvió un eje que esta capa NO tenía, y es de compra.**
+
+### 🟢 El eje nuevo: la licencia no es el único costo — el EQUIPO que la plataforma exige también
+
+Esta capa venía midiendo licencia, derivación y proveedor. 🔴 **Le faltaba la celda que decide la
+mitad de las implementaciones: cuánta gente hace falta para operarla.** Leído del canal de búsqueda
+de este pase, y se declara como tal:
+
+| Plataforma | Licencia (**payload**) | Lo que exige para operar (**canal de búsqueda**) | Cuándo la recomienda esta base |
+|---|---|---|---|
+| **Moodle** | GPL-3.0 (`COPYING.txt`, 35.147 B) | 🟢 **el default seguro** *si* hay un admin dedicado o un partner certificado | el caso general; **+2.000 plugins** y 2 releases de *feature* al año más ramas LTS |
+| **Open edX** | 🔴 **AGPL-3.0** (35.135 B) | 🔴 **exige un equipo de DevOps completo** | sólo con escala y equipo; **AGPL §13 alcanza el uso por RED** |
+| **Chamilo** | GPL-3.0 (35.147 B) | 🟢 **la más liviana de auto-hospedar** | piloto, presupuesto chico, infra modesta |
+| **ILIAS** | GPL-3.0 (35.147 B) | ⚠️ puntea en **compliance**, *si* hay soporte en alemán | sector público europeo con requisito documental |
+| **Canvas LMS** | 🔴 **AGPL-3.0** (34.520 B) | base instalada grande en HE norteamericana | migración/extensión, **no** SaaS cerrado encima |
+| **Sakai** | 🟢 **ECL-2.0** | consorcio académico (Apereo) | 🟢 **la ÚNICA permisiva de las siete** |
+| **OpenEduCat** | LGPL (8.241 B) | stack Odoo (ERP educativo) | cuando el requisito es **ERP**, no LMS |
+
+🔵 **La celda que cambia una conversación de venta es la de Open edX: «gratis» y «exige un equipo de
+DevOps completo» son el mismo renglón**, y esta capa lo tenía sólo como licencia y escala.
+
+### 🟢 La regla de elección que sale de las dos columnas juntas, y es NUEVA para esta capa
+
+🔴 **Las dos preguntas que esta capa hacía por separado —«¿qué licencia?» y «¿qué plataforma?»— se
+responden juntas o no se responden:**
+
+1. **¿El entregable es un SaaS multi-inquilino cerrado?** → 🔴 **Open edX y Canvas quedan fuera por
+   AGPL-3.0 §13**, no por capacidad. 🟢 **Sakai (ECL-2.0) es la única de las siete que lo admite sin
+   obligación de fuente.**
+2. **¿El entregable es un despliegue para el cliente, que lo opera él?** → copyleft deja de ser el
+   problema y **el equipo que exige pasa a ser el problema**: Moodle con partner, Chamilo si la
+   infra es chica, Open edX sólo con DevOps propio.
+3. **¿El requisito es ERP/administración y no cursos?** → **OpenEduCat** sobre Odoo, y la capa de AI
+   va encima del ERP, no del LMS.
+
+⚠️ **Cota declarada: la columna «lo que exige para operar» es de CANAL SECUNDARIO** —de guías de
+comparación 2026, no de medición propia—, y el egreso a hosts no-GitHub sigue **bloqueado**
+(tendencia **761**), así que **no se verificó en la fuente.** 🔵 **Se publica porque la licencia, que
+es la columna que decide, sí está medida en el payload, y porque el ORDEN de exigencia operativa es
+consistente en las cinco guías que el barrido devolvió.**
+
+### 🔵 Escala de Moodle, como contexto y con su cota
+
+**+400 M de usuarios**, **~150.000 sitios registrados**, **+2.000 plugins** de comunidad. ⚠️ **Canal
+secundario, no verificado en la fuente.** 🔵 **Importa para esta capa por una razón concreta: el
+volumen de plugins es la superficie donde un agente se enchufa sin tocar el core** — y el core es
+GPL-3.0, así que **enchufarse por plugin es también la ruta de menor fricción de licencia.**
+
 ## 🔴 Sin verticales nuevas, y la licencia de la plataforma de evaluación más madura estaba GRUESA (pase 95 del 2026-10-04)
 
 El barrido obligatorio de plataformas (`open source platform education LMS SIS MIT Apache 2026`, año

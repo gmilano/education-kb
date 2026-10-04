@@ -113,6 +113,126 @@ updated: 2026-10-04
 > están mal por ~2× y **un 403 de `curl` no es un 404**. Ver la nota de método del pase 12.
 > **Pase 11:** el Digital Omnibus es derecho vigente (tendencia 25), aparece la capa predictiva y está vacía (tendencia 26), y se corrige un error de método de diez pasadas sobre licencias permisivas (tendencia 27).
 
+## 🟢 Tendencias 762–772 — pase 98 del 2026-10-04: la saturación medida era de DOS CONSULTAS, no de la industria
+
+🔬 **Canal, declarado antes de cualquier veredicto (`P247`).** `github.com/<org>/<repo>` → 🔴 **403** ·
+`api.github.com/repos/…` → 🔴 **403** (el pase 97 registró **400** para este host: **la cifra cambió y
+se declara**) · `raw.githubusercontent.com` → 🟢 **200 con payload** · `WebFetch` sobre
+`github.com/<org>/<repo>` → 🔴 **404 enmascarado**, y el pase 97 lo daba por vivo para leer estrellas.
+🔴 **Consecuencia: las ESTRELLAS no son verificables este pase, y las 5 filas nuevas lo dicen en la
+celda en vez de copiar la cifra del buscador.**
+
+### 🟢 762 — El canal de búsqueda afirma LICENCIA y ESTRELLAS sobre un repo que no se puede alcanzar
+
+`studyield/studyield` volvió del buscador con descripción completa, **«81 stars»** y **«Apache 2.0»**
+textuales. Medido por `raw`: 🔴 **404 en las 15 combinaciones probadas** (`main`/`master`/`dev`/
+`develop`/`prod` × `README.md`/`LICENSE`/`package.json`). 🔵 **Lo que la tendencia nombra no es que el
+buscador se equivoque —eso ya estaba—, es que la familia de licencia y la cuenta de estrellas vinieron
+JUNTAS y en el mismo registro que las piezas reales, o sea con la FORMA de un dato medido.** El encargo
+dice *«a 404 is not a finding»*; éste es el espécimen que explica por qué hace falta decirlo.
+
+### 🔴 763 — Un archivo LLAMADO `LICENSE` puede declarar que NO hay licencia
+
+`murderszn/open-tutor` trae `LICENSE` de **868 B** cuyo texto dice *«This repository has not declared a
+project-wide reuse license… does not grant additional rights… A public GitHub repository is not itself
+a declaration of an open-source or open-content license»*, y sólo cede terceros (la SIL OFL de una
+tipografía embutida). 🔴 **La PRESENCIA del archivo no es CESIÓN**, y cualquier instrumento que
+pregunte «¿existe `LICENSE`?» en vez de «¿qué dice?» lo cuenta como licenciado.
+
+### 🔴 764 — `mit` es subcadena de la prosa jurídica inglesa, y por eso un clasificador por subcadena convierte una NEGATIVA en MIT
+
+Medido sobre el control compartido de esta base, no sobre una hipótesis: un aviso de **225 B** que dice
+*«has not declared a project-wide reuse license. Nothing here is granted. Do not submit changes or
+permit redistribution… Limitations apply»* volvía **`MIT (declaracion)`**. Las tres palabras que lo
+gatillaban son `submit`, `permit` y `limitations`; ninguna es una licencia. 🔴 **La dirección del error
+es la peor posible: una negativa explícita se convertía en la ÚNICA familia sobre la que esta KB
+recomienda construir.** Cerrado en `P299`.
+
+### 🔴 765 — Una guarda razonada para un defecto no protege de otro: el espécimen real se salvaba por LARGO
+
+La rama de declaración del control tenía una guarda de **≤400 B**, y estaba bien razonada: `P171` existe
+porque un CUERPO de licencia contiene el vocabulario de otras licencias, y 200 B no tienen cuerpo que
+confunda. 🔴 **Pero la guarda no dice nada sobre palabra-vs-subcadena**, así que no protegía de la
+tendencia **764** en absoluto. El espécimen real de **868 B** devolvía `UNCLASSIFIED` —respuesta
+correcta— **sólo por pesar más que el umbral: por accidente de tamaño, no por solidez del
+instrumento.** 🔵 **Un control que acierta por una razón que no es la suya está esperando el input que
+le quite la suerte.**
+
+### 🔴 766 — `P237` otra vez, y ahora sobre un veredicto NUEVO: la corrección tiene que viajar a los TRES ejes
+
+`NO-CESSION` no es una familia OSI, y los otros dos ejes del control razonan sobre familias:
+
+| Eje | Qué hacía con la negativa | Por qué |
+|---|---|---|
+| `commercial_use_ok` | 🔴 **`ALLOWED`** | la compuerta de `P250` («familia identificada → permite por definición») lo tomaba por el `\|\| return 0` |
+| `holder_of` | 🔴 *«holder not in the license text by construction»* | es la razón de Apache/GPL, y es **falsa** acá |
+
+🔵 **Un repo que declara explícitamente que no cede nada se reportaba como apto para un entregable
+comercial.** No es que el titular viva en otro lado: **no hay cesión de la cual haya titular.**
+
+### 🟢 767 — Tres nombres de repo, UN artefacto: el `sha256` del par decide linaje sin opinar sobre forks
+
+`zijinz456/opentutor` (ya inventariado), `iriseye395/OpenTutor` e `itsnone-liu/OpenTutor` tienen
+`README.md` **byte-idéntico** (`sha256:274d94acdd565ff479de…`) **y** `LICENSE` byte-idéntico
+(`sha256:5352b49679829689…`, titular `Zijin Zhang`). 🔵 **Con los dos hashes coincidiendo no hay que
+decidir si son forks, ni leer la página del repo —que acá da 403—: son el mismo artefacto.** El canal
+de búsqueda los listó como tres proyectos distintos.
+
+### 🟢 768 — La saturación medida era de DOS CONSULTAS, no de la industria
+
+Nueve pases consecutivos (89–97) cerraron con **0 altas** y lo atribuyeron a saturación del canal. Los
+dos barridos del encargo volvieron a fallar este pase también, **así que esa parte era cierta**. 🔵
+**Pero «el canal está saturado» era una afirmación sobre DOS CONSULTAS y se usó como afirmación sobre
+la INDUSTRIA.** Rotando a cuatro ejes que el encargo no enumera —MCP de Moodle, tutoría
+auto-hospedada, *knowledge tracing* 2026, ayudantes de cátedra desplegados— salieron **11 candidatas
+medidas → 5 altas**. 🔴 **El costo de la confusión es de nueve pases.**
+
+### 🟢 769 — Un indicio regional que estrecha a DOS regiones del vocabulario cerrado resuelve a NINGUNA
+
+`Hefi002/tfg-mcp-moodle-server` se llama `tfg` y su README dice *«Final Degree Project (TFG)»*:
+**Trabajo Fin de Grado**, convención de la academia hispanohablante. 🔴 **Y ésa abarca EMEA y LATAM a
+la vez, así que el indicio no resuelve a una región: resuelve a ninguna.** 🔵 **Es una forma de
+`P135` que esta base no tenía escrita: la regla conocida prohíbe inferir región de un ANTROPÓNIMO, y
+ésta prohíbe elevar un indicio de CONFIGURACIÓN que es ambiguo entre dos buckets del vocabulario
+cerrado.** El contraste que lo fija es `DaviPac/Classroom-mcp`, cuyo `TIMEZONE=America/Recife` sí
+resuelve a una.
+
+### 🟢 770 — EMEA: las fechas del AI Act para alto riesgo se CORRIERON, y el calendario que esta base citaba era el viejo
+
+El Reglamento (UE) 2024/1689 entró en vigor el **2024-08-01** y su aplicación general se cita en
+**2026-08-02**, pero las fechas revisadas mueven lo que importa a la capa educativa: 🔴 **alto riesgo
+AUTÓNOMO → 2027-12-02** y 🔴 **alto riesgo EMBUTIDO en producto regulado → 2028-08-02**. Prohibiciones
+y obligaciones de **alfabetización en AI** rigen desde **2025-02-02**; gobernanza de GPAI desde
+**2025-08-02**. 🔵 **La educación es la vertical donde esto pega más fuerte porque el Anexo III la
+nombra casi entera:** admisión, evaluación, *proctoring*, detección de plagio/AI **usada en
+evaluación**, y aprendizaje personalizado **que dirige la ruta del alumno**. ⚠️ **Canal secundario:
+leído del canal de búsqueda, no de `eur-lex` de primera mano** (el egreso no-GitHub sigue bloqueado,
+tendencia **761**).
+
+### 🔴 771 — LATAM: la adopción es ANCHA y POCO PROFUNDA, y ahora tiene las dos cifras juntas
+
+**79 % del profesorado** de LATAM declara usar AI en su enseñanza (**+18 pp** sobre la cifra global de
+2025) — 🔴 **y 88 % declara un compromiso «mínimo» a «moderado»**. 🔵 **Las dos cifras juntas son el
+dato: el cuello de botella de la región NO es el acceso, es la PROFUNDIDAD de uso**, lo que mueve la
+oportunidad de «llevar AI al aula» a «convertir uso superficial en uso con resultado medido».
+Contexto: LATAM en **47 %** de despliegue AI empresarial, y sólo **Brasil (65,89)**, **Chile (63,19)**
+y **Uruguay (62,21)** entran al top-50 global. ⚠️ Canal secundario.
+
+### 🔴 772 — La deuda de DEFINICIONES de tendencia lleva 7 pases abierta, y no es reconstruible por orden narrativo
+
+El propio instrumento de esta base lo reporta y nadie lo cerró: 🔴 **14 números citados y nunca
+definidos por debajo del máximo** (**232, 233, 247–250, 451, 452, 706–711**), con **24 citas colgadas**
+en 8 archivos sobre ~1.800 citas totales. El pase 91 cerró su relato remitiendo a un rango que va del
+**706** al **711** —seis números— en dos archivos, y no definió ninguno. ⚠️ **Nótese que esta sección
+NO los cita en la forma «tendencia N»: hacerlo sumaría seis citas colgadas más, porque el propio
+instrumento cuenta como cita todo número pegado a esa palabra. Documentar la deuda en la sintaxis de
+la deuda la AGRANDA, y este pase lo midió de primera mano al escribir el párrafo.** 🔴 **Y este pase midió por qué no se cierra con una lectura del relato: la única
+descripción sobreviviente del número **710** —la remisión de `intel/trends.md:834`, *«un control
+invariante al layout pasa justo cuando la ruta medida se rompió»*— NO corresponde al quinto hallazgo
+del relato del pase 91 leído en orden.** 🔵 **Así que asignar los seis hallazgos de ese pase a los seis
+números sería inventar la correspondencia, y una correspondencia inventada es dato falso con forma de
+reparación.** Queda declarada como deuda, con su denominador, en vez de cerrada a ojo.
+
 ## 🟢 Tendencias 753–761 — pase 97 del 2026-10-04: lo que se construye y no se conecta no existe
 
 ### 753 — 🔴 El pase 96 escribió el lector que cerraba su propio diagnóstico y no lo conectó

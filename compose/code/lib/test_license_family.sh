@@ -74,6 +74,61 @@ DECL='License: GNU GPL V3'
 check "one-line declaration is read"  "GPL-3.0 (declaracion)" "$(family_of "$DECL")"
 check "declaration: MIT"              "MIT (declaracion)"     "$(family_of "License: MIT")"
 check "declaration: AGPL before GPL"  "AGPL-3.0 (declaracion)" "$(family_of "License: AGPL-3.0")"
+
+# -----------------------------------------------------------------------------
+# P299 (pase 98).  La rama de declaracion matcheaba SUBCADENA, y "mit" es subcadena de
+# permit/submit/limit/limitations/commit/omit.  Estos casos son NEGATIVOS: lo que se
+# afirma es que un aviso que NIEGA la licencia no vuelve nunca como familia permisiva.
+#
+# Especimen real: murderszn/open-tutor ships a file NAMED `LICENSE` that declares no
+# licence exists.  Antes de P299 se salvaba solo por pesar 868 B > la guarda de 400 B.
+NOLIC_SHORT='Project License Status
+
+This repository has not declared a project-wide reuse license. Nothing here is
+granted. Do not submit changes or permit redistribution without written consent
+from the rights holder. Limitations apply.'
+check "P299: explicit refusal is NOT MIT (substring permit/submit/limit)" \
+      "NO-CESSION (negativa explicita)" "$(family_of "$NOLIC_SHORT")"
+
+# El especimen real, completo (868 B) -- por encima de la guarda de tamanio, asi que
+# prueba que la negativa se mide SIN depender del largo.
+NOLIC_REAL='OpenTutor — Project License Status
+
+This repository has not declared a project-wide reuse license. This notice
+documents that status and does not grant additional rights to the repository'"'"'s
+original materials. Obtain the relevant rights holder'"'"'s permission when your
+intended use requires it. A public GitHub repository is not itself a declaration
+of an open-source or open-content license.
+
+Third-party materials retain their own terms. In particular, the bundled
+Instrument Serif font is covered by the SIL Open Font License recorded in
+site/assets/instrument-serif-license.txt.'
+check "P299: the real 868 B refusal is NO-CESSION, not UNCLASSIFIED" \
+      "NO-CESSION (negativa explicita)" "$(family_of "$NOLIC_REAL")"
+
+# Y la frontera de palabra, aislada: prosa con las palabras trampa y SIN negativa
+# explicita no debe inventar una familia.
+check "P299: 'permit'/'submit' alone never yield MIT" UNCLASSIFIED \
+      "$(family_of 'Do not submit patches; permit nothing. Limitations apply here.')"
+check "P299: 'apachemit' glued is not a token"        UNCLASSIFIED \
+      "$(family_of 'internal notice apachemitbsd placeholder text')"
+# ...y las declaraciones REALES siguen leyendose (no se gano solidez perdiendo la funcion).
+check "P299: real declaration still read (punctuated)" "MIT (declaracion)" \
+      "$(family_of 'License: MIT.')"
+check "P299: real declaration still read (GPLv3 glued)" "GPL-3.0 (declaracion)" \
+      "$(family_of 'License: GPLv3')"
+
+# P299, los OTROS DOS EJES.  Un veredicto nuevo no vale si solo viaja al eje de familia
+# (P237): la compuerta de P250 daba ALLOWED a la negativa, y holder_of le atribuia la
+# razon de Apache/GPL.
+if commercial_use_ok "$NOLIC_REAL"; then
+  check "P299: explicit refusal does NOT permit commercial use" forbidden allowed
+else
+  check "P299: explicit refusal does NOT permit commercial use" forbidden forbidden
+fi
+check "P299: refusal has no grant to hold" \
+      "NOT-APPLICABLE (NO-CESSION (negativa explicita): nothing is granted, so there is no grant to hold)" \
+      "$(holder_of "$NOLIC_REAL")"
 # THE GUARD: a full GPL-3.0 BODY must never reach the token match, or P171 reopens.  Padding it
 # past the threshold must still yield GPL-3.0 from the TITLE, never AGPL from the sec.13 text.
 check "guard holds: full GPL-3.0 body stays GPL-3.0" GPL-3.0 "$(family_of "$GPL3")"
@@ -233,6 +288,13 @@ if commercial_use_ok "$UCHI"; then
   check "gate does not disarm the real restriction" forbidden allowed
 else
   check "gate does not disarm the real restriction" forbidden forbidden
+fi
+
+# CONTROL NEGATIVO: la compuerta de P250 sigue intacta para una familia OSI real.
+if commercial_use_ok "$AGPL_S6"; then
+  check "P299 does not disarm the P250 gate (AGPL still allowed)" allowed allowed
+else
+  check "P299 does not disarm the P250 gate (AGPL still allowed)" allowed forbidden
 fi
 
 printf '\n%d/%d\n' "$((n-fail))" "$n"

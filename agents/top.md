@@ -267,6 +267,164 @@ updated: 2026-10-04
 > modelo»**— y **ninguna de las dos sabe de la otra**. Ver la capa nueva al final de este archivo, las tendencias
 > **180**–**182** y el patrón **P99**.
 
+## 🟢 Altas de agente: 5 — la racha de NUEVE pases en cero se ROMPE, y se rompe cambiando el EJE de búsqueda, no repitiendo el barrido (pase 98 del 2026-10-04)
+
+### 🔬 El canal, declarado antes de cualquier veredicto (`P247`)
+
+Medido este pase, no heredado:
+
+| Canal | Código | Consecuencia |
+|---|---|---|
+| `github.com/<org>/<repo>` | 🔴 **403** | el `curl -sI` que el encargo ordena está **muerto acá** |
+| `api.github.com/repos/<org>/<repo>` | 🔴 **403** | sin estrellas, sin licencia declarada, sin fecha de *commit* |
+| `raw.githubusercontent.com/<org>/<repo>/<ref>/<path>` | 🟢 **200 con payload** | **el único canal de primera mano**, y por él se midió todo lo de abajo |
+| `WebFetch` sobre `github.com/<org>/<repo>` | 🔴 **404 enmascarado** | el pase 97 lo daba por vivo para leer estrellas; **ya no lo está** |
+
+🔴 **Consecuencia que manda sobre la tabla, y se escribe en las cinco filas nuevas: las ESTRELLAS no
+son verificables este pase.** Las cinco altas llevan `🔴 no verificable (canal 403)` en esa columna
+en vez de la cifra que el canal de búsqueda ofrecía. **Una cifra leída del buscador y puesta en una
+columna que el resto del archivo llena con medición de primera mano es dato falso con forma de dato
+bueno** — y este pase tiene un espécimen de exactamente ese defecto, abajo.
+
+### 🟢 Por qué el cero se rompe: el barrido saturado no se repitió, se ROTÓ
+
+Los dos barridos que el encargo fija —`top open source AI agents education 2026 github MIT` y
+`github trending education AI 2026`, con el año **CALCULADO** (`date -u +%Y` → **2026**)— volvieron
+otra vez con frameworks generalistas y repos de currículo: **el pase 97 tenía razón sobre esos dos
+canales.** 🔵 **Pero «el canal está saturado» era una afirmación sobre DOS CONSULTAS, no sobre la
+industria,** y nueve pases la trataron como si fuera lo segundo. Este pase corrió además cuatro ejes
+que el encargo no enumera —servidores MCP de **Moodle**, plataformas de tutoría **auto-hospedadas**,
+**knowledge tracing** 2026 y **ayudantes de cátedra desplegados**— y los cuatro devolvieron piezas
+reales. **Las 5 altas salen de ahí, no de los dos barridos del encargo.**
+
+### 🟢 Las cinco altas, con la licencia leída del PAYLOAD y clasificada por el control compartido
+
+| Pieza | Licencia (payload) | Capa que mueve |
+|---|---|---|
+| `a2br/moodle-mcp` | 🟢 MIT (`LICENSE` 1.073 B **+** `pyproject.toml`) | primer Moodle MCP con **costo en tokens** como decisión declarada |
+| `SaadRahman01/moodle-mcp` | 🟢 MIT (`LICENSE` 1.068 B) | 🟢 **ALTA DE CAPA: el primer MCP de Moodle del PLANO DE DESARROLLO** |
+| `LEARNableLabs/opentutor` | 🟢 MIT (`LICENSE` 1.079 B, titular organizacional) | tutoría que **llega con 293 cursos cargados** |
+| `Hefi002/tfg-mcp-moodle-server` | ⚠️ **GPL-3.0** (`LICENSE` 35.187 B) | la superficie de **escritura** más ancha, y la más inmadura |
+| `KayvanShah1/VirtuTA` | 🟢 MIT (`LICENSE` 1.068 B) | 🟢 la **única** pieza que contesta en un **foro de curso** (Piazza), no en un LMS |
+
+🔵 **La de más valor para un cliente no es la más grande: es `SaadRahman01/moodle-mcp`.** Los siete
+servidores Moodle que esta base ya inventariaba apuntan todos al **plano de datos** —cursos, notas,
+entregas—, y éste apunta a la **documentación y el esquema**: Hooks API, XMLDB, tipos de plugin,
+Jira. **Es la pieza que acelera a quien CONSTRUYE sobre Moodle, no a quien lo usa**, y esta base no
+tenía ninguna.
+
+### 🔴 Seis candidatas medidas que NO son fila, con el denominador enumerado
+
+El cero de los nueve pases anteriores nunca trajo esto, y es la mitad que vale: **qué se descartó y
+por qué.** 11 candidatas medidas → **5 altas, 6 descartes.**
+
+| Candidata | Veredicto medido | Canal |
+|---|---|---|
+| `studyield/studyield` | 🔴 **404 en 15 combinaciones** (`main`/`master`/`dev`/`develop`/`prod` × `README.md`/`LICENSE`/`package.json`) | `raw` |
+| `murderszn/open-tutor` | 🔴 **Archivo LLAMADO `LICENSE` que declara que NO hay licencia** | `raw`, 868 B leídos |
+| `iriseye395/OpenTutor` | 🔴 **Redistribución**: `README` y `LICENSE` **byte-idénticos** a una fila que ya existe | `raw`, `sha256` |
+| `itsnone-liu/OpenTutor` | 🔴 **Redistribución**: idem, mismo par de `sha256` | `raw`, `sha256` |
+| `Johnson1662/OpenTutor` | 🔴 `README` sí, **`LICENSE` no** → sin cesión | `raw` |
+| `i-ninte/grad-agent` | 🔴 `README` sí, **`LICENSE` no** → sin cesión | `raw` |
+
+🔴 **`studyield/studyield` es el espécimen más nítido que esta base tiene del canal de búsqueda
+AFIRMANDO UNA LICENCIA SOBRE UN REPO QUE NO SE PUEDE ALCANZAR.** El buscador devolvió descripción
+completa, **«81 stars»** y **«Apache 2.0»** textuales; el canal de payload devuelve **404 en las
+quince rutas probadas**. El encargo ya lo dice —*«a 404 is not a finding»*— y acá se ve por qué lo
+dice: **la cifra y la familia venían juntas y sonaban medidas.**
+
+### 🔴 `iriseye395` + `itsnone-liu` + `zijinz456`: TRES nombres de repo, UN artefacto
+
+El canal de búsqueda los presentó como tres proyectos distintos. Medido por `sha256` sobre `raw`:
+
+| Repo | `sha256` de `README.md` | `sha256` de `LICENSE` | Titular |
+|---|---|---|---|
+| `zijinz456/opentutor` **(ya en esta tabla)** | `274d94acdd565ff479de…` | `5352b49679829689…` | `Zijin Zhang` |
+| `iriseye395/OpenTutor` | 🔴 **`274d94acdd565ff479de…`** | 🔴 **`5352b49679829689…`** | `Zijin Zhang` |
+| `itsnone-liu/OpenTutor` | 🔴 **`274d94acdd565ff479de…`** | 🔴 **`5352b49679829689…`** | `Zijin Zhang` |
+
+🔵 **Los dos pares de hashes coinciden al byte, así que no hay que opinar sobre si son forks: son el
+mismo artefacto.** Contarlos como altas habría inflado esta tabla en un 2 % con cero información
+nueva — y habría sido *altas: 7*, que es exactamente la clase de número que una racha de nueve ceros
+vuelve tentador.
+
+### 🔴 El descarte que cuesta explicar, y se explica: `anoopreddy2007/OpenTutor`
+
+**MIT medida en el payload** (`LICENSE` 1.070 B, titular `Anoop Reddy T`), repo alcanzable, nombre
+prometedor — y **su README completo es UNA ORACIÓN**: *«An open-source AI system that personalizes
+learning based on individual knowledge, progress, and learning behavior.»* No hay tools, ni
+instalación, ni arquitectura, ni nada medible. 🔵 **Entra en el denominador, no en la tabla:** el
+encargo dice *«fewer real rows always beat padding»*, y una fila cuya única celda verdadera es la
+licencia es padding con `sha256`.
+
+### 🟢 Lo que este pase le deja al CONTROL COMPARTIDO: `P299`, y el defecto empujaba hacia MIT
+
+El espécimen `murderszn/open-tutor` no se quedó en descarte. Al trazarlo contra
+`lib/license_family.sh` apareció un defecto en la rama de DECLARACIÓN del control compartido, y
+**apunta en la única dirección que esta base no puede permitirse**:
+
+🔴 **Los globs de `case` matcheaban SUBCADENA, no palabra, y `mit` es subcadena de `permit`,
+`submit`, `limit`, `limitations`, `commit` y `omit`** — prosa jurídica ordinaria. Medido, no
+supuesto: un aviso de **225 B** cuyo texto dice *«has not declared a project-wide reuse license.
+Nothing here is granted. Do not submit changes or permit redistribution»* volvía
+**`MIT (declaracion)`**. 🔴 **Una NEGATIVA explícita de licencia se convertía en la licencia sobre la
+que Globant construye.**
+
+⚠️ **Y la guarda de tamaño no protegía de esto.** Se razonó para `P171` —un CUERPO de licencia
+contiene el vocabulario de otras licencias— y no dice nada sobre palabra-vs-subcadena. El espécimen
+real **se salvaba sólo por pesar 868 B > 400 B: por LARGO, por accidente, no por solidez.**
+
+🔴 **El veredicto nuevo tuvo que viajar a los OTROS DOS EJES, que es `P237`:** `NO-CESSION` no es una
+familia OSI, así que la compuerta de `P250` lo tomaba por el `|| return 0` y devolvía
+**`commercial_use_ok` = ALLOWED** — un repo que declara que no cede nada, reportado como apto para
+un entregable comercial. Y `holder_of` le atribuía la razón de Apache/GPL (*«holder not in the
+license text by construction»*), que es falsa acá: no es que el titular viva en otro lado, es que
+**no hay cesión de la cual haya titular**.
+
+| Eje | Antes de `P299` | Después |
+|---|---|---|
+| familia | 🔴 `MIT (declaracion)` sobre una negativa de 225 B | 🟢 `NO-CESSION (negativa explicita)` |
+| familia, espécimen real de 868 B | ⚠️ `UNCLASSIFIED` (correcto **por tamaño**, no por solidez) | 🟢 `NO-CESSION (negativa explicita)` |
+| uso comercial | 🔴 **`ALLOWED`** | 🟢 `forbidden` |
+| titular | 🔴 razón de Apache/GPL, falsa | 🟢 *«nothing is granted, so there is no grant to hold»* |
+
+🟢 **Suite del control compartido: 41/41 → 50/50** (9 aserciones nuevas, **cuatro de ellas
+NEGATIVAS**, más un control negativo que afirma que la compuerta de `P250` sigue intacta para una
+familia OSI real). 🟢 **Las 50 suites del repo pasan, 0 fallan.** 🔵 **Y la corrección viaja sola:
+ocho instrumentos hacen `source` de `lib/license_family.sh` y ninguno llevaba copia propia de esos
+globs** — el linaje Python (`manifest_license.py`) ya tokenizaba por `re.split(r"[^A-Za-z0-9]+")`,
+o sea que esa rama nunca tuvo el defecto.
+
+### 🟢 Dos regiones ganadas, y una NO elevada a propósito
+
+🟢 **`a2br/moodle-mcp` → EMEA**, y es el tipo de indicio que `P135` sí admite: el README fija el
+servidor **`moodle.epfl.ch`** y el `pyproject.toml` trae **`"epfl"`** entre los `keywords`. **Dos
+fuentes de primera mano en el payload, y ninguna es el nombre del titular.**
+
+🔴 **`Hefi002/tfg-mcp-moodle-server` → NINGUNA, y el motivo es nuevo para esta base: el indicio
+resuelve a DOS regiones a la vez.** `tfg` + *«Final Degree Project (TFG)»* es la convención del
+**Trabajo Fin de Grado**, que estrecha a la academia hispanohablante — **y ésa abarca EMEA y LATAM
+simultáneamente.** 🔵 **Un indicio que estrecha a dos regiones del vocabulario cerrado no resuelve a
+una: resuelve a ninguna, y decirlo es el dato.** Contrástese con `DaviPac/Classroom-mcp`, cuyo
+`TIMEZONE=America/Recife` sí resuelve.
+
+### 🟢 Suites y canales
+
+- `lib/test_license_family.sh` — 🟢 **50/50** (era 41/41).
+- Barrido total del repo — 🟢 **50 suites pasan, 0 fallan.**
+- `p239-table-integrity` sobre los 8 archivos — 🟢 **0 hallazgos**, antes y después de esta edición.
+- Canal: todo lo de arriba por `raw.githubusercontent.com`; `github.com` y `api.github.com` **403**.
+
+### 🔴 Acción pre-registrada para el pase 99, falsable
+
+**Afirmación a refutar:** *«la rotación de EJE, y no la repetición del barrido, es lo que produce
+altas»*. El pase 98 la sostiene con 5 altas de 4 ejes nuevos y 0 de los 2 ejes del encargo.
+**Predicción falsable: un pase 99 que corra SÓLO los dos barridos del encargo volverá a cero, y uno
+que rote a ejes no barridos todavía —`xAPI`/LRS agéntico, generación de ítems alineada a estándar,
+MCP sobre SIS (PowerSchool/Kuali)— devolverá al menos una pieza licenciada.** Si el eje rotado
+también vuelve cero, la saturación es de la INDUSTRIA y no de las consultas, y esta sección estaba
+equivocada.
+
 ## 🔴 Altas de agente: 0 — SÉPTIMO pase consecutivo, y el pase gasta su esfuerzo en la acción PRE-REGISTRADA
 
 ### 🔬 El canal, declarado antes de cualquier veredicto (`P247`)
@@ -3857,6 +4015,11 @@ se explica abajo, porque es la cuarta vez que esta KB se pelea con este número.
 | AI-Assignment-Grader | https://github.com/KamoliddinS/AI-Assignment-Grader | 🟢 **MIT** ✅ **medida en el PAYLOAD** (`LICENSE` **1.077 B**, `sha256:988f496a7b26`, titular `Copyright (c) 2012-2023 Kamoliddin Soliev and others`) | **2** (2 forks) | — | ⚠️ **Corrección automática de entregas con OpenAI y devolución del *feedback* en PDF por correo.** Es la única pieza de esta capa cuyo canal de entrega al alumno es el **correo**, no un panel: eso la vuelve la más fácil de enchufar a un proceso que ya existe y la más difícil de auditar, porque el *feedback* sale del sistema. 🔴 **La reserva de titular, de la clase `P184`: el rango `2012-2023` empieza NUEVE AÑOS antes de que existiera el servicio que el proyecto llama.** El titular coincide con el dueño del repo, así que no se eleva a `HOLDER-UNRELATED`, pero el rango es señal de texto REUTILIZADO y se deja a la vista. ⚠️ **Y no proponerlo sin liberación humana: no declara paso de borrador.** *Agregado en el pase 85 del 2026-10-04* | 🔴 **Sin región verificada por fuente de primera mano** (**P135**) |
 | AITutorAgent | https://github.com/Ebimsv/AITutorAgent | 🟢 **MIT** ✅ **medida en el PAYLOAD** (`main:LICENSE` → *«MIT License»*, titular `Copyright (c) 2025 Ebrahim Mousavi`) | **15** | Python | Tutor por **grafo de estados de LangGraph**: tutorial estructurado → sesión de preguntas → evaluación de conocimiento, con el ciclo pedagógico escrito como nodos y no como prompt. 🔵 **Lo que agrega a esta base no es tamaño: es la primera pieza donde el ORDEN pedagógico es inspeccionable como grafo**, que es la forma que un currículo obligatorio pide cuando hay que auditarlo (ver `P262`). | ⚠️ **`NO-CLAIM`** — el titular es un **antropónimo** y `P135` prohíbe derivar región de un nombre propio; el `org` no declara bio, sitio ni ubicación |
 | xiaofei-liberal-arts | https://github.com/SimonsTang/xiaofei-liberal-arts | 🟢 **MIT** ✅ **medida en el PAYLOAD** (`main:LICENSE` → *«MIT License»*, titular `Copyright (c) 2025 学来学去学习社 | Xue Lai Xue Qu Learning Society` — **titular ORGANIZACIONAL**, no antropónimo) | **3** | (sin lenguaje declarado) | Tutoría de **humanidades** sobre el currículo chino de K-12: poesía clásica (诗词), redacción (作文) e inglés, con enfoque de *red de conocimiento* y referencia explícita a los libros de texto en uso en escuelas chinas. 🔵 **Es la ÚNICA pieza de esta base que apunta a un currículo NACIONAL nombrado**, y por eso entra: es el estante del eje de `P262`. | ⚠️ **`NO-CLAIM` para el PROVEEDOR** (el titular es un `org` pero no declara ubicación) 🔵 **y `APAC` para el CURRÍCULO que sirve** — dos preguntas distintas, ver `P264` |
+| moodle-mcp (EPFL) | https://github.com/a2br/moodle-mcp | 🟢 **MIT** ✅ **medida en el PAYLOAD por DOS fuentes** (`LICENSE` **1.073 B**, `sha256:5b4bad3aa359c096…`, titular `Copyright (c) 2026 Anatole Debierre`; y `pyproject.toml` declara `license = "MIT"` + `license-files = ["LICENSE"]`) | 🔴 **no verificable** (canal 403) | Python ≥3.12 | 🟢 **La primera pieza Moodle de esta base cuyo COSTO EN TOKENS es una decisión de diseño declarada, y es la celda que la distingue de los otros seis servidores Moodle del inventario.** 13 tools de SOLA LECTURA sobre el Moodle del alumno (`upcoming_deadlines`, `course_overview`, `grades`, `announcements`, `read_discussion`, `whats_new`…). 🔵 **Un PDF largo NO se vuelca: se abre como *page map*** —una línea por página, *builds* repetidos de diapositiva fusionados en rangos, más el *outline* del PDF— y el agente pide después `pages="12-14"`: **un mazo de 127 diapositivas cuesta ~1,4k tokens mapeado contra ~9k volcado**, medido por el propio README. `search_in_files` indexa los PDF del curso en el primer uso y cachea el texto en `~/.cache/moodle-mcp/files`. ⚠️ **`sync_course` escribe, pero sólo al disco del propio usuario** (`~/Moodle/<code>` con un `INDEX.md`), nunca a Moodle: la superficie de escritura hacia el LMS es CERO. Clave de Moodle en el Keychain de macOS; el README declara que **no tiene afiliación con EPFL ni con Moodle**. *Agregada en el pase 98 del 2026-10-04* | 🟢 **EMEA** — **indicio de CONFIGURACIÓN, no antropónimo** (regla de **P135** respetada: el titular `Anatole Debierre` NO es la evidencia): el README fija el servidor `moodle.epfl.ch` y el `pyproject.toml` trae `"epfl"` entre los `keywords`. Son dos fuentes de primera mano en el payload |
+| moodle-mcp (plano de DESARROLLO) | https://github.com/SaadRahman01/moodle-mcp | 🟢 **MIT** ✅ **medida en el PAYLOAD** (`LICENSE` **1.068 B**, `sha256:df0b3e71710cd545…`, titular `Copyright (c) 2026 Saad Rahman`) | 🔴 **no verificable** (canal 403) | Python ≥3.10 | 🟢 **ALTA DE CAPA, y es la razón por la que entra: los SIETE servidores Moodle que esta base ya inventariaba viven todos en el PLANO DE DATOS —cursos, notas, entregas— y éste es el primero del PLANO DE DESARROLLO.** No le habla al LMS del alumno: le habla a la DOCUMENTACIÓN de Moodle. 10 tools sobre `moodledev.io` (búsqueda con expansión de sinónimos y *rerank* BM25 + coseno de trigramas sobre el *sitemap* público, con vía rápida opcional por Algolia DocSearch), el índice de la **Hooks API**, la tabla de capacidades con tarjeta `RISK_*`, el esquema **XMLDB**, los tipos de plugin, las versiones de release y el **Jira de `tracker.moodle.org`**. ⚠️ **Dos tools SÍ tocan una instancia real** (`list_ws_functions`, `call_ws_function`) y son las únicas con superficie de mutación: **con guarda SSRF, lista blanca de nombres de función, y rechazo de hosts privados/loopback salvo override explícito** (`MOODLE_WS_ALLOW_INSECURE=1`, documentado como sólo-dev). Expone `readOnlyHint`/`destructiveHint` de MCP para que el cliente sepa cuál es cuál. *Agregada en el pase 98 del 2026-10-04* | 🔴 **Sin región verificada** (sólo antropónimo — **P135**) |
+| OpenTutor (LEARNableLabs) | https://github.com/LEARNableLabs/opentutor | 🟢 **MIT** ✅ **medida en el PAYLOAD** (`LICENSE` **1.079 B**, `sha256:279e98b086239716…`, titular `Copyright (c) 2026 OpenTutor Contributors` — **titular ORGANIZACIONAL**, no antropónimo) | 🔴 **no verificable** (canal 403) | JavaScript (Node ≥22) | 🟢 **La pieza con más CONTENIDO ya cargado de toda esta capa: trae 293 cursos** —de teoría de juegos a química del pan— **y construye uno nuevo para cualquier tema que se le nombre**, así que no llega vacía como casi todo el inventario de tutoría. El ciclo pedagógico está en el PRODUCTO, no en un prompt: enseña una lección corta por vez, **pregunta antes de explicar**, trabaja sobre lo que el alumno sigue fallando y **re-expone una idea días después en otra forma** (recuperación espaciada como comportamiento, no como librería). 🔵 **El proveedor es una elección de configuración**, que es el eje que el pase 87 midió: `OPENTUTOR_LLM` toma OpenRouter, un modelo local por **Ollama**, o Claude Code. El progreso persiste **en la máquina del alumno** (`workspace/`), y el texto de la lección es lo único que sale hacia el proveedor elegido. ⚠️ **`npm run web` NO lee `.env`**: las variables van en el shell, y el propio README lo advierte. *Agregada en el pase 98 del 2026-10-04* | 🔴 **Sin región verificada.** El titular es organizacional pero **no declara ubicación**; el despliegue de demostración vive en `vercel.app`, que no es indicio regional |
+| tfg-mcp-moodle-server | https://github.com/Hefi002/tfg-mcp-moodle-server | ⚠️ **GPL-3.0** — **medida en el PAYLOAD** (`LICENSE` **35.187 B**, `sha256:f7fe4d0adcbc680d…`, texto íntegro de la GPL; clasificada por el control compartido `osi_family_of` → `GPL-3.0`, y el titular vuelve `NOT-APPLICABLE` **por construcción**, que es lo correcto para la familia GPL). 🔴 **COPYLEFT: queda FUERA del foco MIT/Apache/BSD de esta KB y no se propone como base de un entregable cerrado** | 🔴 **no verificable** (canal 403) | Python ≥3.11 | ⚠️ **Es el servidor Moodle con la superficie de ESCRITURA más ancha del inventario, y la más declaradamente inmadura.** Administra **cursos, usuarios, matrículas y notas** además de leer contenido, sobre Moodle Web Services con autenticación por token; `setup.py` interactivo escribe el `.env`. Apunta a **Moodle 5.1+**, que es la versión más alta que esta base tiene registrada en la capa MCP. 🔴 **Su propio README declara que NO pasó auditoría de seguridad** y pide, textualmente, autenticación/autorización propias, revisión previa y *rate limiting* antes de producción: entra como referencia de ALCANCE de la API, no como base de despliegue (regla de **P234**). *Agregada en el pase 98 del 2026-10-04* | 🔴 **Región NO elevada, y el motivo es que el indicio resuelve a DOS regiones a la vez.** `tfg` + «*Final Degree Project (TFG)*» es la convención del **Trabajo Fin de Grado**, que estrecha a la academia HISPANOHABLANTE — y ésa abarca **EMEA y LATAM simultáneamente**, así que no resuelve a ninguna. `README`, `setup.py` y `.env.example` están íntegramente en inglés y el `.env.example` trae `MOODLE_URL=http://localhost:8000`: **no hay indicio de configuración regional** (contrástese con el `TIMEZONE=America/Recife` de `DaviPac/Classroom-mcp`, que SÍ resuelve) |
+| VirtuTA | https://github.com/KayvanShah1/VirtuTA | 🟢 **MIT** ✅ **medida en el PAYLOAD** (`LICENSE` **1.068 B**, `sha256:9182ffc261fc2291…`, titular `Copyright (c) 2024 Kayvan Shah`) | 🔴 **no verificable** (canal 403) | Python | 🟢 **La ÚNICA pieza de esta base cuya superficie de atención es un FORO DE CURSO y no un LMS: contesta en Piazza.** Entra porque mueve el eje de INTEGRACIÓN que el inventario tenía saturado en Canvas/Classroom/Moodle: el ayudante no vive donde está la nota, vive donde está la pregunta. Login automatizado y recolección en tiempo real sobre Piazza y foros web; respuestas sensibles al contexto por *embeddings* contra contenido estático y dinámico; **respuestas multimodales** (imágenes y video); apoyo logístico del curso además de conceptual; *workflow* agéntico sobre Gemini + LangChain. ⚠️ **Es un proyecto final de asignatura y se declara como tal** (`DSCI 560: Data Science Professional Practicum`), con `2024` en el titular: entra como referencia de SUPERFICIE, no como base mantenida. *Agregada en el pase 98 del 2026-10-04* | 🔴 **Sin región verificada.** El único indicio es un **código de asignatura** (`DSCI 560`) que el payload NO ata a ninguna institución nombrada; elevarlo exigiría conocimiento externo al payload, y eso es justo lo que **P135** prohíbe |
 
 
 
