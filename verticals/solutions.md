@@ -113,6 +113,43 @@ updated: 2026-10-04
 > **`qti3-pnp`**, que abren accesibilidad de evaluación como entregable auditable (**P72**). ⚠️ **Open edX cambia de
 > recomendación: proponer con presupuesto de mantenimiento (gap 70).** Ver la sección del pase 33, abajo.
 
+## 🧾 Sin verticales nuevas — y la capa de plataforma gana la pregunta que decide una propuesta: COPYLEFT no es lo mismo que uso comercial PROHIBIDO (pase 82 del 2026-10-04)
+
+🔴 **Cero verticales nuevas: el barrido de plataformas devolvio solo confirmacion por cuarto pase
+consecutivo** (`OpenOLAT` Apache-2.0, `Sakai` Apache-2.0 con origen en el consorcio
+Michigan/Indiana/Stanford/MIT, `Open edX` AGPL-3.0 bajo Axim, `OpenEduCat` LGPL-3.0 como ERP,
+`Moodle` GPL-3.0 — las cinco ya medidas por payload en esta base).
+
+### 🔴 La distincion que faltaba, y afecta a la capa LMS entera
+
+La capa vertical de educacion es **mayoritariamente copyleft**: `Moodle` (GPL-3.0), `Open edX`
+(AGPL-3.0), `OpenEduCat` (LGPL-3.0). 🔴 **Este pase midio por primera vez el eje de uso comercial
+aparte de la familia, y el primer corte del instrumento marco `PROHIBIDO` a tres repos AGPL-3.0** —
+porque el cuerpo de AGPL-3.0 dice *«allowed only occasionally and **noncommercially**»* en su
+**seccion 6**.
+
+🟢 **Corregido con una compuerta, y la correccion es la que vale para esta capa:**
+
+| Familia | Uso comercial | Lo que significa para una propuesta |
+|---|---|---|
+| 🟢 **Apache-2.0** (`OpenOLAT`, `Sakai`) | 🟢 **OK** | **Capa de partida sin condiciones.** Las dos unicas LMS permisivas del estante |
+| ⚠️ **GPL-3.0 / AGPL-3.0 / LGPL-3.0** (`Moodle`, `Open edX`, `OpenEduCat`) | 🟢 **OK — permitido** | 🔵 **El copyleft NO prohibe vender un servicio: obliga sobre la DISTRIBUCION del derivado.** Es una decision de arquitectura (¿la pieza se instala en el cliente o se consume como servicio?), **no un bloqueo comercial** |
+| ⚠️ **CC-BY-SA-4.0** (contenido curricular) | 🟢 OK | **ShareAlike viaja al entregable**: el contenido derivado del cliente queda `BY-SA` |
+| 🔴 **NONCOMMERCIAL-NOT-OSI** | 🔴 **PROHIBIDO** | **Bloqueo duro.** 1 pieza en todo el catalogo, y no es de esta capa |
+
+🔵 **Por que importa escribirlo: confundir «copyleft» con «no se puede vender» descarta `Moodle` y
+`Open edX` —el LMS mas instalado del planeta y la plataforma de Axim— de una propuesta en la que son
+perfectamente usables.** ⚠️ **Y al reves: `Apache-2.0` en `OpenOLAT` y `Sakai` sigue siendo la unica
+via que NO obliga a discutir arquitectura de distribucion con legales antes de firmar.**
+
+### 🟢 Una pieza de esta capa mejora su cotizacion, y es de un organismo PUBLICO de EMEA
+
+`FWU-DE/mem-mcp` pasa de `UNCLASSIFIED` a 🟢 **The Unlicense (dominio publico)**, 1.210 B, con titular
+institucional publico aleman. 🔵 **Es la pieza con menos condiciones de todo el inventario —sin
+copyleft, sin atribucion obligatoria— y un instrumento mal calibrado la habia marcado como
+comercialmente inusable en el mismo pase.** ⚠️ **No reemplaza una LMS: es una pieza de memoria para
+agentes, y se anota aqui porque la capa vertical se compone con ella, no porque compita.**
+
 ## 🗄️ La capa LRS de partida queda cerrada POR ELIMINACION, y la restriccion que viaja al cliente es de licencia y de titular (pase 81 del 2026-10-04)
 
 El pase 80 incorporo la **capa LRS** como vertical de partida y eligio entre **tres** servidores

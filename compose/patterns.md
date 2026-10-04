@@ -111,6 +111,177 @@ updated: 2026-10-04
 > **Pase 11:** +2 patrones — **P25** (riesgo de abandono conforme al Anexo III, la capa con presupuesto ya asignado y sin oferta open source) y **P26** (agente docente sobre la ontología curricular nacional ya publicada).
 > **Pase 27:** **+4 patrones y una corrección.** 🔴 **P51 queda con premisa falsa** —el conector MCP de Moodle **sí existe y es MIT**— y lo reemplazan **P54** (corrección y devolución sobre Moodle con **compuerta humana**, el último tramo del gap 6, con piezas que ya escriben), **P55** (el conector de **Open edX**, que es el único que de verdad no existe), **P56** (**SCORM** como formato de salida de la capa generativa: cero integración, offline) y **P57** (evidencia por MCP cotizada sobre lo que CaSS **realmente** expone — 6 de 61 operaciones, con insignias y autoría de marcos **fuera**).
 
+## 🧪 P249 — la COMPUERTA DE CALIBRACIÓN: cómo no borrar un catálogo entero por creerle a un canal roto (pase 82 del 2026-10-04)
+
+**El problema concreto, y casi costó el archivo.** El **pase 81** verificó las URLs de `agents/top.md`
+con `curl -sI` contra `github.com`, recibió **`403` en 81 de 81** y escribió que el canal marcaba
+**muerto el 100 % del catálogo**. 🔴 **Aplicar al pie de la letra la regla del encargo —«verificá cada
+URL con `curl -sI`; un 404 no es un hallazgo»— habría borrado la tabla completa.**
+
+### La receta, y el paso 0 es el que no se puede saltar
+
+```sh
+# 0) CALIBRAR: dos controles por canal, una URL buena y una inexistente
+sh compose/code/p249-channel-calibration/sweep_channels.sh
+#   github-html-head  403  403  UNCALIBRATED-NO-DISCRIMINATION  False
+#   github-html-get   403  403  UNCALIBRATED-NO-DISCRIMINATION  False
+#   github-api        403  403  UNCALIBRATED-NO-DISCRIMINATION  False
+#   raw-headref       200  404  CALIBRATED                      True   <- el único utilizable
+
+# 1) recién ahora, barrer — y sólo por el canal que salió CALIBRATED
+cat slugs.txt | xargs -P 8 -I{} sh compose/code/p170-headref-license-sweep/sweep_headref.sh {}
+```
+
+| Veredicto del canal | Qué se puede afirmar |
+|---|---|
+| 🟢 `CALIBRATED` (200 a la buena, 404 a la inexistente) | 🟢 **Un `404` es ausencia.** Se puede borrar una fila |
+| 🔴 `UNCALIBRATED-NO-DISCRIMINATION` (lo mismo a las dos) | 🔴 **Nada.** Ni un negativo ni ochenta y uno |
+| 🔴 `UNCALIBRATED-NO-EGRESS` (`000` a las dos) | 🔴 Nada, y es otro problema: no hay salida |
+| ⚠️ `UNCALIBRATED-BAD-NOT-ABSENT` | ⚠️ La ausencia **no es medible** por este canal |
+
+### Los dos controles que convierten la receta en instrumento
+
+1. 🔵 **La lectura de uniformidad.** `channel_defect_from_uniformity()` toma los códigos de un barrido
+   y, si **todos** son el mismo código distinto de `200` sobre una muestra suficiente, devuelve
+   **defecto de canal**. **La medición literal del pase 81 (`403` × 81) entra como control negativo de
+   la suite y debe salir `NO-CLAIM`.** ⚠️ **Y al revés: un barrido uniforme en `200` NO es un defecto
+   —un uniforme positivo no es un negativo— y uno con varianza real tampoco.**
+2. 🔴 **Buscar el instrumento propio ANTES de escribir el defecto.** El canal que discrimina estaba en
+   `p170`, **del pase 64**: `raw.githubusercontent.com/<slug>/HEAD/<archivo>`, con la ref literal
+   `HEAD` resolviendo la rama por omisión cualquiera sea su nombre. 🔵 **El pase 81 declaró el catálogo
+   inverificable teniendo el instrumento a 17 pases de distancia.**
+
+### Lo que devolvió al aplicarla
+
+🟢 **66 de 69 `org/repo` alcanzables (95,7 %)**: 43 `LICENSED` · 23 `UNLICENSED` con **ausencia
+medida** · 3 `UNREACHABLE`. 🟢 **Y el control que cierra el caso es de reproducibilidad: de los 58
+slugs compartidos con el resultado del pase 64, los 58 dan el mismo estado y la misma familia — cero
+deriva.** 🔵 **Un canal que reproduce exactamente la medición de otro pase no es el que estaba roto.**
+
+⚠️ **Cota: `raw.githubusercontent.com` sirve el PAYLOAD, no la página.** No da estrellas, forks ni
+estado de archivado — para eso el canal es WebFetch, y **tiene su propia calibración pendiente**.
+
+---
+
+## 🧾 P248 — cuando el normalizador borra el defecto que el instrumento existe para detectar (pase 82 del 2026-10-04)
+
+**El caso concreto.** `check_frontmatter.py` hace cumplir el vocabulario **CERRADO** de `region`
+—`North America`, `EMEA`, `APAC`, `LATAM`, `Global`— porque, como dice el encargo, *cada variante se
+convierte en su propio balde y el filtro deja de funcionar*. Su control negativo del pase 79 incluye
+`'APAC '`, **con espacio al final**, precisamente por eso.
+
+🔴 **Pero el parser hacía `v.strip()` al leer el campo, ANTES de preguntar por el vocabulario.** El
+espacio desaparecía en el parseo, la variante llegaba a la validación como `'APAC'`, caía dentro del
+vocabulario y no se reportaba nada. **La suite marcaba 22/23 y tenía razón durante tres pases, sin que
+nadie pudiera correrla.**
+
+### La regla
+
+> **P248.** Cuando un instrumento **normaliza y después valida**, el normalizador puede ser el que
+> borra la evidencia. La pregunta se hace contra el **dato crudo**; la normalización se aplica al
+> **reporte**, no a la comparación.
+
+### La receta
+
+```python
+# ANTES — el defecto es indetectable por construcción
+fields[k.strip()] = v.strip()          # el espacio muere acá
+if fields["region"] not in REGIONS: ...  # nunca ve la variante
+
+# DESPUÉS — se pregunta contra el byte, se reporta normalizado
+fields[k.strip()] = v.lstrip(" \t")    # el separador SÍ es sintaxis; lo de la derecha NO
+region = fields.get("region")
+if region is not None and region not in REGIONS:
+    found.append(("REGION-NOT-IN-VOCABULARY", region.strip()))   # normalizar el REPORTE
+```
+
+🔵 **La asimetría es deliberada y es el corazón de la receta:** el espacio que **separa** la clave del
+valor es sintaxis y se saca siempre; lo que viene **después** del valor no es sintaxis y es justamente
+el defecto. ⚠️ **Y el detalle se publica normalizado para que `Latam` y `Latam ` no abran dos
+hallazgos distintos — el CÓDIGO ya dice que no está en vocabulario.**
+
+### Cómo se verifica
+
+```sh
+cd compose/code/p243-frontmatter-coverage
+python3 test_check_frontmatter.py   # 23/23  (era 22/23)
+python3 check_frontmatter.py        # 59 de 59 archivos .md limpios
+```
+
+⚠️ **Por qué esto importa más allá del `frontmatter`: es el mismo error que `P250` cometió en el mismo
+pase, en la otra dirección.** Allí el token corría sobre un cuerpo ya normalizado a minúsculas y sin
+saltos de línea, y marcó **The Unlicense** como no comercial. 🔵 **Normalizar antes de preguntar
+cambia la pregunta.**
+
+---
+
+## 🧾 P250 — la COMPUERTA DE LICENCIA de un engagement: dos preguntas, dos columnas, y un no-OSI que no vuelve a entrar (pase 82 del 2026-10-04)
+
+**El problema concreto.** Antes de proponerle a un cliente una base open source, alguien tiene que
+poder afirmar dos cosas distintas: *«que familia de licencia es»* y *«puede Globant vender un
+servicio construido sobre esto»*. 🔴 **Esta base contestaba las dos con una sola cadena, y cuando no
+sabia contestaba `UNCLASSIFIED` — que es indistinguible de «el uso comercial esta PROHIBIDO».**
+`dssg/student-early-warning` estuvo en `agents/top.md` **31 pases** con licencia academica de la
+Universidad de Chicago que excluye *«any service or part of selling a service that uses the
+Program»*, marcada en PROSA desde el pase 51 y devolviendo `UNKNOWN` en todos los instrumentos.
+
+### Las piezas, que son todas de este repositorio y corren hoy
+
+| Paso | Pieza | Invocacion | Que garantiza |
+|---|---|---|---|
+| **1. Calibrar el canal** | `compose/code/p249-channel-calibration/` | `sh sweep_channels.sh` | 🟢 Que un `404` signifique ausencia. Mide cada canal contra una URL buena Y una inexistente; **tres canales de `github.com` dan 403/403 y no sirven**, `raw.githubusercontent.com` + ref `HEAD` da **200/404** |
+| **2. Leer la licencia del payload** | `compose/code/p170-headref-license-sweep/sweep_headref.sh` | `sh sweep_headref.sh <org/repo>` | 🟢 14 nombres de archivo × **1 ref** (`HEAD` cubre `main`, `master`, `develop`, `trunk`), con control de alcanzabilidad de 3 estados |
+| **3. Clasificar, una sola vez y en un solo lugar** | `compose/code/lib/license_family.sh` | `. license_family.sh; family_of "$payload"` | 🟢 **41/41**. Familia por **bloque de titulo** (`P171`), con `0BSD`, `ISC`, familia CC, `Unlicense` y `NONCOMMERCIAL-NOT-OSI` |
+| **4. Preguntar el uso comercial APARTE** | ídem, `commercial_use_ok` | `commercial_use_ok "$payload"` | 🔴 **Una familia OSI identificada no se somete a ningun token**: la compuerta que impide marcar AGPL-3.0 o The Unlicense como prohibidas |
+| **5. Barrer el catalogo** | `compose/code/p250-commercial-use-axis/` | `cat slugs.input.txt \| xargs -P 8 -I{} sh ./sweep_commercial.sh {}` | 🟢 TSV de 6 columnas: `slug · status · hit_path · bytes · family · commercial_use` |
+
+### Como se cablea, y el orden NO es negociable
+
+```sh
+# 0) el canal primero: sin esto, un 404 no se puede leer como ausencia
+sh compose/code/p249-channel-calibration/sweep_channels.sh
+#    -> raw-headref  200  404  CALIBRATED  True     <- unico canal utilizable
+
+# 1) el catalogo entero, dos columnas de salida
+cd compose/code/p250-commercial-use-axis
+cat slugs.input.txt | xargs -P 8 -I{} sh ./sweep_commercial.sh {} > result.tsv
+
+# 2) la compuerta del engagement: lo que NO puede entrar en una propuesta
+awk -F'\t' '$6=="PROHIBIDO"' result.tsv            # uso comercial vedado
+awk -F'\t' '$5=="CC-BY-SA-4.0"' result.tsv         # ShareAlike: viaja al entregable
+awk -F'\t' '$5 ~ /AGPL/' result.tsv                # copyleft fuerte: decision de arquitectura
+awk -F'\t' '$6=="SIN-DETERMINAR"' result.tsv       # sin licencia: pedir, no asumir
+```
+
+### Lo que devuelve hoy sobre las 69 filas recomendables
+
+| Columna | Reparto medido |
+|---|---|
+| **Familia** | MIT 30 · Apache-2.0 3 · AGPL-3.0 3 · CC0-1.0 2 · Unlicense 1 · 0BSD 1 · BSD 1 · CC-BY-SA-4.0 1 · **NONCOMMERCIAL-NOT-OSI 1** → 🟢 **38/43 permisivas (88,4 %)** |
+| **Uso comercial** | 🟢 42 `OK` · 🔴 **1 `PROHIBIDO`** · ⚠️ 26 `SIN-DETERMINAR` |
+
+### Los tres controles que hacen que esta receta valga, y los tres nacieron de un error propio
+
+1. 🔴 **La compuerta OSI.** La primera version marco `PROHIBIDO` a tres repos AGPL-3.0 y a The
+   Unlicense: AGPL dice *«occasionally and **noncommercially**»* en su seccion 6 y The Unlicense
+   **concede** con *«commercial or non-commercial»*. 🔵 **El cuerpo de una licencia contiene el
+   vocabulario de otras condiciones (`P171`), asi que la familia se decide primero y el token solo
+   corre si no hay familia.**
+2. ⚠️ ***Fixtures* completos, no comodos.** Los controles negativos originales no atraparon el bug
+   porque usaban bloques de titulo truncados. **Ahora la suite trae la seccion 6 de AGPL-3.0 entera y
+   el texto de The Unlicense**, que son las dos entradas que producian el falso positivo.
+3. 🟢 **El control compartido tiene que ser SUPERCONJUNTO de las copias.** `p170` reconocia The
+   Unlicense y `lib/license_family.sh` no: adoptar la libreria tal como estaba **habria perdido una
+   familia** (`FWU-DE/mem-mcp`). 🔵 **Centralizar sin verificar cobertura es perder cobertura
+   (`P237`, leido al reves).**
+
+### Cota honesta
+
+⚠️ **26 de 69 filas salen `SIN-DETERMINAR`** y eso no es un fallo de la receta: 23 no tienen archivo
+de licencia en 14 nombres probados (**ausencia MEDIDA**) y 3 no son alcanzables. 🔵 **«Sin licencia»
+no es «permisivo por omision»: es una pregunta abierta para el cliente, y la receta la deja
+nombrada en vez de resolverla por optimismo.**
+
 ## 🧪 P247 — calibrar el canal ANTES de creerle un negativo: la receta que evita borrar un catalogo entero (pase 81 del 2026-10-04)
 
 ### 🔴 El problema, medido sobre esta propia KB

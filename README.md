@@ -54,8 +54,31 @@ o la variable de entorno (regla de **P107**, pase 47):
 | **`p228-segmented-coverage/`** | **los controles de P227+P228: el conjunto de archivos NOMBRADO, y la negativa a ordenar una cuota en USUARIOS contra una en INSTITUCIONES** | `python3 test_coverage.py` | **15/15** ✅ *(nuevo en el pase 75)* |
 | ídem, la reproducción del agregado del pase 74 contra el commit que citó | `python3 reproduce_p224.py` — **182** subconjuntos evaluados, **1** reproduce `229/389` | `python3 reproduce_p224.py` | **3/3** ✅ *(nuevo en el pase 75)* |
 | ídem, la medición por cohorte **en un commit fijo** (el commit es parte de la invocación: ver tendencia **593**) | inversiones por `(segmento, unidad)` | `python3 measure.py --at 5dd2bcc` | 🔴 **7** en K-12 / 🟢 **1** en superior |
-| **`p243-frontmatter-coverage/`** | **la cobertura de *frontmatter* sobre los 56 `.md`, y el control NEGATIVO que importa: que 7 variantes de vocabulario regional (`Latam`, `Europe`, `Asia Pacific`, `Brazil`…) sean RECHAZADAS** | `python3 test_check_frontmatter.py` | ⚠️ **sin medir — ver abajo** *(nuevo en el pase 79)* |
+| **`p243-frontmatter-coverage/`** | **la cobertura de *frontmatter* sobre los 59 `.md`, y el control NEGATIVO que importa: que 7 variantes de vocabulario regional (`Latam`, `Europe`, `Asia Pacific`, `Brazil`, `APAC `…) sean RECHAZADAS** | `python3 test_check_frontmatter.py` | 🟢 **23/23** *(era **22/23**: el pase 82 corrigió `P248` — ver abajo)* |
+| ídem, el barrido real sobre el árbol | ¿cuántos `.md` tienen `frontmatter` completo y `region` en vocabulario? | `python3 check_frontmatter.py` | 🟢 **59 de 59** |
+| **`p249-channel-calibration/`** | **la compuerta de `P249`: que un canal de verificación se CALIBRE —200 a una URL buena, 404 a una inexistente— antes de que se le crea un negativo; con la medición literal del pase 81 (`403` × 81) como control negativo que debe salir `NO-CLAIM`** | `python3 test_calibrate.py` | 🟢 **20/20** *(nuevo en el pase 82)* |
+| ídem, el ledger vivo de los 4 canales | ¿cuál de los canales discrimina de verdad? | `sh sweep_channels.sh` | 🔴 **3 de 4 no discriminan** (`403`/`403`) · 🟢 `raw`+`HEAD` **CALIBRATED** |
+| **`p250-commercial-use-axis/`** | **el barrido de licencia Y uso comercial en DOS columnas, primero del catálogo que consume la librería COMPARTIDA en vez de traer su propio clasificador (`P237`)** | `cat slugs.input.txt \| xargs -P 8 -I{} sh ./sweep_commercial.sh {}` | 🟢 **42 `OK`** · 🔴 **1 `PROHIBIDO`** · ⚠️ **26 `SIN-DETERMINAR`** *(nuevo en el pase 82)* |
+| **`lib/`** (clasificador compartido) | **familia por bloque de título (`P171`) + el eje de uso comercial con su COMPUERTA OSI** | `sh test_license_family.sh` | 🟢 **41/41** *(era **18/18**; `P250` agregó `0BSD`, `ISC`, familia CC, `Unlicense` y `NONCOMMERCIAL-NOT-OSI`)* |
 
+
+🟢 **Pase 82 del 2026-10-04 — la columna «Hoy» se re-verificó COMPLETA, y era la primera vez en
+CUATRO pases que se pudo.** La ejecución de las suites de este árbol estuvo **NEGADA**
+(`[Code from External]`) en los pases **79**, **80** y **81**, lo que dejó todo el tablero *citado* y
+no *medido*. 🟢 **Corrida aquí con `Python 3.11.15`: 34 invocaciones de suite, 34 con código de salida
+0.** 🔴 **Y la re-verificación valió exactamente para lo que existe: UNA suite estaba ROJA y tenía
+razón** — `p243-frontmatter-coverage` marcaba **22/23** porque su parser hacía `strip()` del valor
+**antes** de preguntar por el vocabulario cerrado, así que `region: APAC ` era **indetectable por
+construcción** (**`P248`**). Corregida: **23/23**, y el barrido real sigue en **59 de 59**.
+
+⚠️ **Dos cotas honestas sobre esta tabla, y las dos son del instrumento de LECTURA, no de las
+suites.** *(a)* 🔵 **7 de las suites publican su total en vocabularios distintos** (`16/16`, `TODAS LAS
+ASERCIONES PASAN (14)`, `all 7 cases pass`, `24/24 controles pasados`, `8/8`…), así que **un contador
+de una sola forma las lee como «sin total» aunque PASEN** — es `P126` otra vez, esta vez contra el
+lector del propio pase, y por eso el roll-up honesto es el **código de salida** y no el `grep`.
+*(b)* ⚠️ **`proctoring-reach-audit` imprime la palabra `FAILED` en su PROSA** (*«Control (c) FAILED on
+the first run of the extractor»*): un lector ingenuo la marca roja cuando da **19/19**. 🔵 **También un
+instrumento de lectura necesita su control.**
 
 ⚠️ **Pase 80 del 2026-10-04 — la columna «Hoy» tampoco se re-verificó en este pase, por el mismo
 motivo del entorno.** La ejecución de las suites del árbol clonado quedó **NEGADA**

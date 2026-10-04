@@ -1,0 +1,5 @@
+channel	good_code	bad_code	verdict	may_believe_negative
+github-html-head	403	403	UNCALIBRATED-NO-DISCRIMINATION	False
+github-html-get	403	403	UNCALIBRATED-NO-DISCRIMINATION	False
+github-api	403	403	UNCALIBRATED-NO-DISCRIMINATION	False
+raw-headref	200	404	CALIBRATED	True

@@ -8,6 +8,8 @@ updated: 2026-10-04
 
 > Agentes y herramientas AI open source para educación. Foco: MIT / Apache 2.0 / BSD.
 > Verificado repo por repo vía WebFetch el 2026-09-30 (stars y licencia leídos de la página del repo).
+> **Pase 82 del 2026-10-04:** 🟢 **El catalogo NO estaba muerto: 66 de 69 `org/repo` de este archivo estan VIVOS (95,7 %), medidos por un canal CALIBRADO.** El pase 81 concluyo *«100 % muerto»* desde `curl -sI` a `github.com`; este pase calibro cada canal contra una URL buena Y una inexistente antes de creerle, y el resultado es que **tres canales no discriminan** (`github.com` por `HEAD` y por `GET`, y `api.github.com`: **403 a la buena y 403 a la inexistente**) mientras **`raw.githubusercontent.com` + ref `HEAD` da 200 a la buena y 404 a la inexistente**. 🔵 **Ese canal lo tiene esta base desde el pase 64, en `p170`: el pase 81 declaro el catalogo inverificable teniendo el instrumento a 17 pases de distancia** → de ahi sale **`P249`**, la compuerta de calibracion, ahora como codigo con **20/20**. 🟢 **Reparto medido: 43 `LICENSED` · 23 `UNLICENSED` (ausencia MEDIDA) · 3 `UNREACHABLE`, y CERO deriva en los 58 slugs que comparte con el resultado del pase 64** — un canal que reproduce exactamente otra medicion no es el que estaba roto. 🟢 **Las suites de `compose/code/` CORREN por primera vez en cuatro pases** (32 invocaciones, `Python 3.11.15`): **31 verdes y 1 roja**, y la roja tenia razon → **`P248`**, el normalizador de `check_frontmatter.py` hacia `strip()` ANTES de validar, asi que `region: APAC ` —la variante con espacio que su propio control negativo exige rechazar— era **indetectable por construccion**; corregido, **22/23 → 23/23**, y el barrido real sigue en **57/57**. 🟢 **El alta es el PADRE que esta base nunca inventario: `r-huijts/canvas-mcp` (MIT, 12 ★ / 8 forks, 69 tools leidas del payload), con CERO coincidencias en los 57 `.md` de una base que cita 18 de sus derivados.** 🔴 **Y el eje nuevo es el que esta KB de verdad pregunta: `UNCLASSIFIED` y «uso comercial PROHIBIDO» eran la MISMA cadena** — ahora se preguntan aparte (**`P250`**, libreria compartida de **18/18 → 41/41**), con **42 `OK` · 1 `PROHIBIDO` · 26 `SIN-DETERMINAR`** sobre las 69 filas. ⚠️ **El detector fallo su primera prueba real y se corrigio en el mismo pase: marcaba `PROHIBIDO` a tres repos AGPL-3.0 y a The Unlicense**, porque el cuerpo de AGPL dice *«occasionally and noncommercially»* (seccion 6) y The Unlicense **concede** con *«commercial or non-commercial»* — la falta de solidez que **`P171`** nombra; la compuerta es que **una familia OSI identificada no se somete a ningun token**.
+
 > **Pase 81 del 2026-10-04:** 🔴 **El canal de verificacion que el propio encargo ordena usar (`curl -sI`) devuelve `403` en 81 de 81 URLs de esta tabla, y los repos estan VIVOS.** Medido de punta a punta: las 81 URLs de `github.com` de la tabla principal se pidieron con `curl -L` y las **81** contestaron **`403`** —ni un `200`, ni un `404`, varianza CERO—; las mismas URLs por **WebFetch** resuelven normal (3 de 3 comprobadas: `adaptive-knowledge-graph` **17 ★ MIT**, `openfun/ralph` **51 ★ MIT**, `raif-s-naffah/xapi-rs` **0 ★**). 🔵 **Una varianza de cero sobre 81 muestras no es el estado de 81 repos: es el estado del canal.** 🔴 **Aplicar la regla al pie de la letra —«verifica cada URL con `curl -sI`; un 404 no es un hallazgo»— habria marcado el 100 % del catalogo como muerto y borrado la tabla entera.** 🆕 **De ahi sale `P247`, la regla permanente: un canal de verificacion se CALIBRA contra una URL que se sabe buena antes de creerle un negativo, y un negativo uniforme sobre una muestra grande se lee como defecto de canal hasta que un segundo canal independiente lo confirme.** 🟢 **El alta de datos del pase es de la capa estandar: existe un CUARTO servidor xAPI conformante con IEEE 9274.1.1 v2.0.0 —`raif-s-naffah/xapi-rs`, Rust— y 🔴 es `GPL-3.0-or-later` leido del payload (`Cargo.toml`), asi que el conteo PERMISIVO de la tendencia 623 NO se mueve: sigue en TRES.** ⚠️ **Y por eso la tendencia 624 del pase 80 sobrevive, por una segunda razon independiente: el unico candidato nuevo no declara afiliacion (antroponimo + `mailbox.org` → **P135**) y encima es copyleft, asi que *EMEA-soberano + xAPI 2.0* sigue sin existir.** 🔴 **Altas al catalogo: 0** — con **0 ★ / 0 forks**, `xapi-rs` entra como SENAL, no como fila (regla de **P234**). 🔴 **Decimo barrido regional consecutivo agotado** (las 4 regiones corridas con el ano CALCULADO, cada hecho confirmado ya presente por `grep` antes de escribir) y 🔴 **tercer pase consecutivo con la ejecucion de suites NEGADA, que por la regla del pase 80 deja de ser un evento y pasa a ser propiedad del canal: la columna «Hoy» no se re-verifico y no se debe citar como re-verificada.**
 > **Pase 79 del 2026-10-04:** 🔴 **La capa que el ÚNICO estatuto del mundo nombra por su nombre —monitoreo conductual, ley de AI de Vietnam vigente 2026-03-01— EXISTE en open source y es COMERCIALMENTE INUSABLE.** Medidas 3 piezas: la más capaz y más adoptada (`aungkhantmyat/The-Online-Exam-Proctor`, **32 ★**, YOLOv8+MediaPipe+Dlib, *liveness* facial, postura, teclas prohibidas, abandono de ventana y voz) 🚫 **no tiene licencia —ausencia MEDIDA en DOS canales—** y la única **MIT** (`lavsharmaa/proctxam-ai-proctoring`) tiene **3 ★** y es la más angosta. 🔵 **La capa pasa de `NO-MEDIDA` a `MEDIDA-Y-BLOQUEADA-POR-LICENCIA`**, igual que el *workbench* del pase 76. 🔴 **Y el hueco de APAC del pase 78 NO se cierra: las tres declaran afiliación NINGUNA y de un antropónimo no se infiere región (P135), así que queda ABIERTO y declarado** — una capa medida no es una región cubierta. 🟢 **Altas: 2** (`adaptive-knowledge-graph` MIT 17 ★, la referencia de arquitectura KG-RAG+BKT/IRT local más completa de esta KB, admitida con su cota de *demo* declarada por regla de **P234**; + la pieza MIT de la capa). 🆕 **P243**: la regla de *frontmatter* se hacía cumplir en 8 archivos y nunca se midió en los otros 48 — **15 de 56 `.md` no tienen frontmatter, los 15 en `compose/code/`**, así que el compilador los lee sin `industry` ni `region`. Reparados los 15. ⚠️ **Noveno barrido regional consecutivo agotado (0 hechos nuevos en las 4 regiones, verificado por `grep` antes de escribir)** y 🔴 **la ejecución de las suites quedó NEGADA, así que la columna «Hoy» no se re-verificó.** 🔧 **Y dos filas de este archivo perdían dato en el render sin que nada lo midiera: una celda SOBRANTE se DESCARTA al renderizar, y las dos que la tenían se llevaban un hallazgo de licencia del pase 65 (39 forks heredando una cesión declarada, invisible en la tabla 14 pases) y la trazabilidad de la fila de Open edX. Reparadas sin perder texto** (**P244**). ⚠️ **El contador que las encontró reclamó antes 83 defectos falsos contra la línea base 0 del pase 78: dos bugs propios, corregidos antes de tocar nada** (tendencia **622**). Ver los patrones **P242**–**P244** y las tendencias **616**–**622**.
 > **Pase 77 del 2026-10-03:** 🔴 **La nota de honestidad de esta base estaba equivocada en las CINCO filas, no en una.** El pase 76 refutó en una fila el criterio *«repo muerto ⇒ no hace falta medir la licencia»*; medidas las cinco (`compose/code/p234-dead-license-closeout/`), 🔴 **5 de 5 son permisivas** (3 MIT + 2 Apache-2.0, cero copyleft, cero sin archivo) — **costo del cierre: cinco peticiones HTTP** para un dato que estuvo 76 pases sin medir. 🔵 **La columna de muertos de esta KB no es un cementerio: es su reserva de código bifurcable.** 🆕 **Y una corrección de ROL, que es más cara que una de licencia:** la fila de `Transcordia/jupiter` promete «LRS xAPI + **Caliper**» y el árbol medido (31 archivos, 100.040 B) tiene 🔴 **CERO Caliper**, **sin ruta de consulta** —no es un LRS, es un ingestor de statements— y **valida contra `xapi-0.9.5.schema`, un borrador PRE-1.0** dos años anterior a su último commit. **La columna «Rol» heredó la AMBICIÓN del README** (*«we submit Jupiter for their consideration»*) **en vez de la capacidad del código**, y el signo del error es el peligroso: una licencia mal archivada EXCLUYE una pieza usable, **un rol mal archivado INCLUYE una inservible** (**P234**). ✅ **Efecto colateral bueno: la ausencia de Caliper open source de este archivo queda REFORZADA** — se declaraba *«reconfirmada por `grep` sobre los 8 archivos, sin contradicción»*, **había una contradicción disponible** (esta fila decía «Caliper») **y ahora está medida en el CÓDIGO y resuelta a favor de la ausencia.** 🪜 **El eje CAPA de P230 se reproduce en otro estándar y su SIGNO SE INVIERTE** (**P235**, 9 piezas): en xAPI el **servidor** está 🟢 **abierto y vivo** (`lrsql` Apache-2.0 `HEAD` 2 d · `ralph` MIT 26 d) y el cuello está en el **cliente** (permisivo pero congelado 1,7–6,1 años) — **así que «CONSUMIR se puede, EXPONER no» es una propiedad de ONEROSTER, no de educación**, y generalizarla habría invertido la recomendación en la capa de telemetría. **8 de 9 piezas de la capa xAPI son permisivas y la única copyleft es la que está muerta.** 🔴 **P238: la puerta xAPI que este archivo recomienda desde el pase 6 no pasa sus propios tests.** `DavidLMS/learnmcp-xapi` y el fork que el pase 38 descartó como «sólo Cloud Run» tienen **14 de 14 archivos de FUENTE idénticos byte a byte** y **cinco archivos de TEST distintos**; de las tres afirmaciones divergentes, el fuente compartido sostiene **fork 3/3 · upstream 0/3**. 🔵 **El error del pase 38 fue de CANAL: clasificó un fork leyendo los ASUNTOS de los commits.** ⚠️ **Cota: prueba estática de contradicción, no corrida de tests —las dependencias de terceros no se pueden instalar en este entorno— y se afirma la versión más débil.** 🔴 **Y el hallazgo de método es contra esta base: una corrección que NO VIAJÓ.** Los dos instrumentos nuevos reintrodujeron el defecto **P171** (GPL-3.0 §13 se titula *«Use with the GNU Affero General Public License»*, así que un `grep` del cuerpo etiqueta **todo** GPL-3.0 como AGPL) **que esta base arregló hace cinco instrumentos y testea en `p206`** — y leyó `LearningLocker` (GPL-3.0) como AGPL-3.0. 🔴 **Control negativo: un `grep` de cuerpo marca a MOODLE como AGPL-3.0**, y AGPL §13 contra GPL-3.0 es justo lo que decide si se puede construir un producto alojado encima. ✅ **Auditados, los CINCO veredictos AGPL de esta base son correctos** — 🔴 **y es la trampa: un clasificador probado sólo sobre AGPL saca 5/5 y sigue roto.** 🟢 **Cotas nuevas: GPL-3.0 nombra la AGPL en 3 líneas y una AGPL real en 15; GPL-2.0 en 0, así que la capa QTI nunca estuvo en riesgo.** Reparado en `compose/code/lib/license_family.sh` (**12/12**) — **una regla que hay que recordar no es un control** (**P236**, **P237**). **Altas de agente: 0, declarado.**
@@ -247,6 +249,98 @@ updated: 2026-10-04
 > modelo»**— y **ninguna de las dos sabe de la otra**. Ver la capa nueva al final de este archivo, las tendencias
 > **180**–**182** y el patrón **P99**.
 
+## 🟢 El catalogo nunca estuvo muerto: 66 de 69 vivos por un canal CALIBRADO, y el alta es el PADRE de 18 derivados que esta base jamas inventario (pase 82 del 2026-10-04)
+
+### 🟢 El ledger de calibracion, que es lo que al pase 81 le falto correr
+
+**Un canal se calibra contra una URL que se sabe buena Y una que se sabe mala ANTES de creerle un
+negativo.** Medido hoy, con los dos controles por canal
+(`compose/code/p249-channel-calibration/result.2026-10-04.tsv`):
+
+| Canal | URL buena | URL inexistente | Veredicto | ¿Se le cree un negativo? |
+|---|---|---|---|---|
+| 🔴 `curl -sI` a `github.com` | **403** | **403** | `UNCALIBRATED-NO-DISCRIMINATION` | 🔴 **NO** |
+| 🔴 `curl` GET a `github.com` | **403** | **403** | `UNCALIBRATED-NO-DISCRIMINATION` | 🔴 **NO** |
+| 🔴 `curl` a `api.github.com` | **403** | **403** | `UNCALIBRATED-NO-DISCRIMINATION` | 🔴 **NO** |
+| 🟢 `raw.githubusercontent.com` + ref `HEAD` | 🟢 **200** | 🟢 **404** | 🟢 **`CALIBRATED`** | 🟢 **SI** |
+
+🔵 **El canal calibrado no es nuevo: es el de `p170`, del pase 64.** 🆕 **`P249`: antes de escribir un
+defecto de canal, se busca en `compose/code/` si esta base ya tiene uno que discrimine.**
+
+### 🟢 Las 69 filas `org/repo` de este archivo, re-medidas
+
+| Estado | n | % |
+|---|---|---|
+| 🟢 `LICENSED` — archivo de licencia LEIDO | **43** | 62,3 % |
+| ⚠️ `UNLICENSED` — alcanzable, **ausencia MEDIDA** | **23** | 33,3 % |
+| 🔴 `UNREACHABLE` | **3** | 4,3 % |
+| 🟢 **Alcanzables** | **66 de 69** | 🟢 **95,7 %** |
+
+🟢 **Control de reproducibilidad: de los 58 slugs compartidos con el resultado del pase 64, los 58
+dan el MISMO estado y la MISMA familia. Cero deriva.**
+
+🔴 **Los 3 inalcanzables:** `imazhar101/mcp-canvas-server`, `owentaylor/canvas-mcp` y
+`radhepa/Teacher-MCP` — ⚠️ **este ultimo es la TERCERA confirmacion** y su fila sigue afirmando
+«MIT ✅» sobre un repo que no existe.
+
+### 🔴 `P250` — `UNCLASSIFIED` y «uso comercial PROHIBIDO» eran la misma cadena
+
+| Uso comercial (69 filas) | n |
+|---|---|
+| 🟢 `OK` | **42** |
+| 🔴 `PROHIBIDO` | **1** — `dssg/student-early-warning` |
+| ⚠️ `SIN-DETERMINAR` | **26** (23 sin archivo de licencia + 3 inalcanzables) |
+
+Familias sobre las 43 licenciadas: **MIT 30 · Apache-2.0 3 · AGPL-3.0 3 · CC0-1.0 2 · Unlicense 1 ·
+0BSD 1 · BSD 1 · CC-BY-SA-4.0 1 · NONCOMMERCIAL-NOT-OSI 1** → 🟢 **38 de 43 (88,4 %) permisivas de
+software.**
+
+⚠️ **Las cuatro familias que el instrumento daba como `UNKNOWN` ya estaban resueltas EN PROSA desde
+los pases 51 y 64. No es un hallazgo de datos: es `P237` —la correccion nunca llego al codigo— y por
+eso se arreglo en `lib/license_family.sh`, el control compartido, que pasa de 18/18 a 41/41.**
+
+### 🟢 El alta del pase: `r-huijts/canvas-mcp`, el PADRE
+
+| Nombre | Repo | Licencia | Stars | Lenguaje | Descripción | Origen (región) |
+|--------|------|----------|-------|----------|-------------|-----------------|
+| canvas-mcp (**el original**) | https://github.com/r-huijts/canvas-mcp | 🟢 **MIT** (`LICENSE` 1.066 B, titular `2024 R.Huijts`, `sha256:ab5109aafdb8d1b0…`) | 12 | TypeScript | 🟢 **El PADRE de la capa Canvas-MCP de esta base, que citaba 18 de sus derivados y CERO veces a el.** **69 tools + 1 prompt contadas en el PAYLOAD** (`docs/TOOLS.md`, 19.578 B), no en el README: cursos, tareas, calificacion, paginas, modulos, rubricas, quizzes, archivos. **No es fork de nada** — proyecto original, `@r-huijts/canvas-mcp` v1.5.1, 8 forks. 🔵 **Con el padre inventariado se puede medir por fin que agrega cada fork, que es la pregunta que `description-drift-audit` y `fork-lineage-audit` existen para responder y no podian: tienen *fixtures* de cinco derivados y les faltaba el origen** | 🔴 **Sin region verificada por fuente de primera mano.** El titular es un antroponimo y **de un antroponimo no se infiere region** (**P135**); el indicio de los Paises Bajos no se eleva a dato |
+
+### 🟢 La candidata diferida del pase 81 queda CERRADA, con veredicto medido
+
+**`mdweaver/canvas-mcp`** — medida de primera mano, como exigia la accion:
+
+| Campo | Medido | Canal |
+|---|---|---|
+| Licencia | 🟢 **MIT**, **1.066 B** | `raw…/HEAD/LICENSE` |
+| `sha256` del `LICENSE` | 🟢 **`ab5109aafdb8d1b0…` — byte a byte el del padre** | ídem |
+| Titular | 🟢 **`2024 R.Huijts` — el del PADRE, preservado** (no sustituyo el copyright: la falla de **P184**) | ídem |
+| ★ / forks | 🔴 **0 ★ / 0 forks** | WebFetch |
+| Superficie | 🟢 **89 tools** en el payload (27.131 B) → **delta medido +20** sobre el padre | `raw…/HEAD/docs/TOOLS.md` |
+| Linaje | 🟢 **Fork DECLARADO** en `README.md:9`, con credito completo al autor original | payload |
+| Capa de paquete | ⚠️ **sigue declarando la identidad del PADRE** (`name` `@r-huijts/canvas-mcp`, `repository.url` → `r-huijts/canvas-mcp`): **quien resuelva por paquete aterriza en el padre** (**P190**) | `package.json` |
+
+🔴 **No se escribe fila: 0 ★ / 0 forks es la misma cota que `P234` le aplico a `raif-s-naffah/xapi-rs`
+en el pase 81, y la regla se aplica igual cuando el hallazgo es simpatico.** 🟢 **Señal, no fila — y la
+accion diferida se CIERRA con veredicto medido en vez de re-agendarse.**
+
+⚠️ **Cifra que no se debe leer como aritmetica:** la cadena `(fork)` aparece **23** veces en su
+`docs/TOOLS.md` y el delta de payload es **+20**. **No coinciden porque algunas marcas estan sobre
+tools CAMBIADAS, no nuevas** (el README lista 4). 🔵 **El delta medido es +20; las 23 marcas no son un
+conteo de altas.**
+
+### 🟢 Las suites de este repositorio corren, y la columna «Hoy» vuelve a estar MEDIDA
+
+🔴 **Negada en los pases 79, 80 y 81.** 🟢 **Corrida aqui: 32 invocaciones, `Python 3.11.15`, 31
+verdes y 1 roja.** La roja (`p243-frontmatter-coverage`, **22/23**) tenia razon y su defecto es
+`P248`: el parser hacia `strip()` del valor **antes** de preguntar por el vocabulario cerrado, asi que
+`region: APAC ` era **indetectable por construccion**. 🟢 **Corregido: 23/23, y el barrido real sigue
+en 57/57.**
+
+⚠️ **Y 7 de las 32 publican su total en vocabularios que un contador de UNA forma no lee** (`16/16`,
+`TODAS LAS ASERCIONES PASAN (14)`, `all 7 cases pass`, `24/24 controles pasados`…). **Las siete
+PASAN**; el que fallaba era el contador — `P126` en vivo, esta vez contra mi propio instrumento de
+lectura.
+
 ## 🧪 El canal que el encargo ordena usar marca MUERTO el 100 % del catalogo, y el alta real del pase es un CUARTO servidor xAPI que la licencia deja afuera (pase 81 del 2026-10-04)
 
 ### 🔴 Primero el defecto de canal, porque es lo que habria destruido el archivo
@@ -363,7 +457,7 @@ libreria de bolsa dentro de una KB de educacion.** La desambiguacion que funcion
 | `raif-s-naffah/xapi-rs` | `GPL-3.0-or-later` en el payload + **0 ★ / 0 forks** | 🔴 **Senal, no fila** (**P234**) |
 | `pawelkn/xapi-rs` | **Libreria de trading xStation5**, ninguna relacion con educacion | 🔴 **Colision de nombre** — fuera |
 | `csmediapro/moodle-mcp-server`, `GhaithAlHallak8/moodler-mcp`, `ahnopologetic/canvas-lms-mcp`, `loyaniu/moodle-mcp`, `BartMassey-upstream/canvas-mcp`, `vishalsachdev/canvas-mcp`, `DMontgomery40/mcp-canvas-lms`, `CharlieCardenasToledo/mcp-canvas-server` | 🟢 **Ya estan en esta base** (confirmado por `grep` antes de buscar) | — ya inventariadas |
-| `mdweaver/canvas-mcp` | **0 coincidencias** en los 56 `.md`, pero **no se midio de primera mano en este pase** | ⚠️ **Candidata ABIERTA para el pase 82** — no se escribe fila sin medirla |
+| `mdweaver/canvas-mcp` | 🟢 **MEDIDA en el pase 82**: **MIT**, `LICENSE` 1.066 B byte a byte el del padre con titular `R.Huijts` preservado, **89 tools** en el payload, fork DECLARADO con credito — pero 🔴 **0 ★ / 0 forks** | 🔴 **Señal, no fila** (**P234**, igual que `xapi-rs`) — ✅ **accion CERRADA.** 🟢 **Y destapo el alta real: su PADRE `r-huijts/canvas-mcp`, que esta base no tenia** |
 | La capa generica (OpenClaw, opencode, CrewAI, LangGraph, OpenHands, Hermes Agent) | **Agentes genericos**, no educativos | 🔴 Fuera, igual que en los pases 45–80 |
 
 ## 🇸🇬 P245 — la primera pieza de esta KB atada a un RÚBRICA DE EXAMEN NACIONAL de APAC, y lo que vale es su COMPUERTA, no su marcador (pase 80 del 2026-10-04)

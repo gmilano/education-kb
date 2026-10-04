@@ -102,6 +102,110 @@ updated: 2026-10-04
 > están mal por ~2× y **un 403 de `curl` no es un 404**. Ver la nota de método del pase 12.
 > **Pase 11:** el Digital Omnibus es derecho vigente (tendencia 25), aparece la capa predictiva y está vacía (tendencia 26), y se corrige un error de método de diez pasadas sobre licencias permisivas (tendencia 27).
 
+## 🆕 Tendencias 635–642 — pase 82 del 2026-10-04
+
+**635. 🟢 El catalogo de esta base nunca estuvo muerto, y la diferencia entre «100 % muerto» y «95,7 %
+vivo» fue enteramente de instrumento.** El pase 81 pidio `curl -sI` a `github.com` para las URLs de
+`agents/top.md`, recibio **403 en 81 de 81** y escribio que el canal marcaba muerto el catalogo
+completo. Este pase calibro cada canal contra **una URL que se sabe buena Y una que se sabe
+inexistente** antes de creerle: `github.com` por `HEAD` **403/403**, `github.com` por `GET`
+**403/403**, `api.github.com` **403/403** —los tres sin poder de discriminacion— y
+`raw.githubusercontent.com` con ref `HEAD` **200 a la buena / 404 a la inexistente**. Medido por el
+canal que si discrimina: **43 `LICENSED` · 23 `UNLICENSED` con ausencia MEDIDA · 3 `UNREACHABLE` →
+66 de 69 alcanzables, 95,7 %**. 🔵 **Un 403 uniforme no es el estado de los repos: es el estado del
+canal, y eso ya lo decia `P247`. Lo que faltaba no era el diagnostico, era la compuerta.**
+
+**636. 🔵 Y el canal que lo resuelve lo tenia esta base desde 17 pases antes.**
+`p170-headref-license-sweep`, del pase 64, lee `raw.githubusercontent.com/<slug>/HEAD/<archivo>` y
+documenta en su propio encabezado que la ref literal `HEAD` resuelve la rama por omision cualquiera
+sea su nombre. 🔴 **El pase 81 declaro el catalogo inverificable teniendo el instrumento en el mismo
+repositorio.** 🆕 **De ahi sale `P249`: antes de creerle un negativo a un canal se lo calibra con dos
+controles, y antes de escribir un defecto de canal se busca en `compose/code/` si esta base ya tiene
+uno calibrado.** Ahora es codigo con **20/20**, y su control negativo es la medicion literal del pase
+81 (`403` × 81), que debe salir `NO-CLAIM`.
+
+**637. 🟢 El control que cierra el caso no es el conteo, es la REPRODUCIBILIDAD.** De los **58** slugs
+que este barrido comparte con el resultado del pase 64, los **58** devuelven el mismo estado y la
+misma familia de licencia. **Cero deriva en un dia.** 🔵 **Un canal que reproduce exactamente la
+medicion de otro pase no es el que estaba roto — y esa comparacion vale mas que volver a contar.**
+⚠️ **`radhepa/Teacher-MCP` suma su TERCERA confirmacion de 404** por canales independientes y su fila
+sigue afirmando «MIT ✅».
+
+**638. 🔴 Un normalizador puede ser el que borra el defecto que el instrumento existe para detectar.**
+`check_frontmatter.py` valida que `region` caiga en el vocabulario CERRADO de cinco valores, y su
+control negativo del pase 79 incluye `'APAC '` con espacio al final porque cada variante abre su
+propio balde. 🔴 **Pero el parser hacia `v.strip()` al leer el campo, antes de preguntar: el espacio
+desaparecia en el parseo y la variante llegaba a la validacion ya curada.** La suite marcaba
+**22/23** y tenia razon por tres pases, sin que nadie pudiera correrla. 🆕 **`P248`: la pregunta se
+hace contra el dato CRUDO; la normalizacion se aplica al REPORTE, no a la comparacion.** Corregido:
+**23/23**, barrido real **57/57** sin cambio.
+
+**639. 🟢 Las suites de este repositorio vuelven a correr, y la columna «Hoy» vuelve a ser una
+medicion.** Negada en los pases 79, 80 y 81 (`[Code from External]`), lo que dejo todo el tablero
+citado y no verificado. Corrida aqui: **32 invocaciones, `Python 3.11.15`, 31 verdes y 1 roja** —y la
+roja era `P248`—. ⚠️ **Ademas, 7 de las 32 publican su total en vocabularios que un contador de UNA
+sola forma no lee** (`16/16`, `TODAS LAS ASERCIONES PASAN (14)`, `all 7 cases pass`, `all 8 cases
+pass`, `24/24 controles pasados`, `8/8`): las siete PASAN, el que fallaba era el contador. 🔵 **`P126`
+en vivo, esta vez contra el instrumento de LECTURA del propio pase, y la moraleja es la misma:
+tambien un lector necesita su control positivo.**
+
+**640. 🔴 `UNCLASSIFIED` y «el uso comercial esta PROHIBIDO» eran la misma cadena, y son respuestas
+OPUESTAS a la unica pregunta para la que existe esta KB.** `dssg/student-early-warning` esta en
+`agents/top.md` —tabla cuyo proposito declarado es *«MIT / Apache 2.0 / BSD, las que Globant puede usar
+de base»*— con una licencia academica de la Universidad de Chicago que excluye *«any service or part
+of selling a service that uses the Program»*. La base lo tenia marcado **en prosa desde el pase 51**;
+sus instrumentos devolvian `UNKNOWN`. 🆕 **`P250`: familia de licencia y uso comercial son DOS
+preguntas, y se contestan en dos columnas.** Medido sobre las 69 filas: 🟢 **42 `OK` · 🔴 1
+`PROHIBIDO` · ⚠️ 26 `SIN-DETERMINAR`**. Familias: **MIT 30 · Apache-2.0 3 · AGPL-3.0 3 · CC0-1.0 2 ·
+Unlicense 1 · 0BSD 1 · BSD 1 · CC-BY-SA-4.0 1 · no-OSI 1** → **38 de 43 (88,4 %) permisivas**.
+
+**641. 🔴 Y el detector nuevo fallo su primera prueba REAL —en el barrido, no en la suite— por la
+razon que esta base ya tenia escrita.** La primera version marco `PROHIBIDO` a **cuatro** filas que no
+lo son: tres **AGPL-3.0** y **The Unlicense**. Causas medidas: el cuerpo real de GPL-3.0/AGPL-3.0 dice
+*«allowed only occasionally and **noncommercially**»* en su seccion 6 (**linea 259** del payload),
+describiendo una condicion de distribucion y no una restriccion al licenciatario; y The Unlicense
+**concede** el permiso con las palabras *«for any purpose, **commercial or non-commercial**»* — la
+licencia mas permisiva que existe, marcada por el token con el que otorga el permiso. 🔴 **Es la falta
+de solidez exacta que `P171` nombra: el cuerpo de una licencia contiene el vocabulario de otras
+condiciones.** 🟢 **La correccion es una COMPUERTA, no mas tokens: una familia OSI identificada
+permite uso comercial por definicion y no se somete a ningun token.** ⚠️ **Y los controles negativos
+que acompañaban al detector no lo atraparon porque usaban *fixtures* TRUNCADOS: un *fixture* lo
+bastante corto para ser comodo es lo bastante corto para no ver el defecto.** Libreria compartida:
+**18/18 → 41/41**, con la seccion 6 completa y el texto de The Unlicense como los controles que
+faltaban.
+
+**642. 🔴 Esta base venia midiendo los hijos de un repo que nunca nombro.** `agents/top.md` cita
+**18** derivados de Canvas-MCP y `description-drift-audit` y `fork-lineage-audit` traen *fixtures* de
+cinco de ellos; **`r-huijts/canvas-mcp`, el padre, tenia CERO coincidencias en los 57 `.md`**. Medido
+este pase: **MIT**, **12 ★ / 8 forks**, **69 tools + 1 prompt leidas del payload** (`docs/TOOLS.md`,
+19.578 B), **no es fork de nada**. 🔵 **Sin el origen inventariado, «que agrega cada fork» —la
+pregunta que esos dos instrumentos existen para contestar— no tenia denominador.** 🟢 **Con el padre
+dentro ya se puede: el fork `mdweaver/canvas-mcp` lleva 89 tools → delta medido +20.** ⚠️ **Y una
+cifra que no se debe leer como aritmetica: la cadena `(fork)` aparece 23 veces en su `docs/TOOLS.md`,
+que NO es el conteo de altas** —algunas marcas estan sobre tools cambiadas— **asi que el delta es +20
+y las 23 marcas son otra cosa.** 🔴 **El fork no entra como fila: 0 ★ / 0 forks es la cota de `P234`,
+que se aplica igual cuando el hallazgo es simpatico** —y lo es: declara el fork con credito completo y
+su `LICENSE` es byte a byte el del padre, con el titular del padre intacto—. ⚠️ **Su `package.json`,
+en cambio, sigue declarando la identidad del PADRE, asi que la capa de PAQUETE aterriza en el origen y
+no en el fork (`P190`).**
+
+### 🔴 Dos cierres de canal y el barrido regional, que se agota por UNDECIMA vez
+
+🔴 **`www.ceu.edu` pasa de evento a PROPIEDAD del canal.** El pase 81 lo dejo anotado con numero para
+que el pase 82 lo reintentara UNA vez. Reintentado: **`connect_rejected`** —el proxy de egreso niega
+el `CONNECT` por politica de la organizacion—, **dos de dos**. 🔵 **Por la regla del pase 80 se
+archiva y no se vuelve a gastar presupuesto; y el hecho que dependia de el (una colaboracion Central
+European University × GitHub de abril de 2026) sigue DECLARADO COMO HUECO y no como dato: no se debe
+citar en una propuesta.**
+
+🔴 **El barrido regional obligatorio se agota por UNDECIMA vez consecutiva.** Las cuatro regiones
+corridas con el año **calculado** (2026). **Los doce hechos devueltos estaban los doce ya publicados
+en esta base**, confirmado con `grep` antes de escribir: `Digital Omnibus` (60 coincidencias),
+`AB 1159` (119), `SB 1227` (56), *Traffic Light* (30), `CONPES` (43), `Uruguay` (39), la ley peruana
+`31814` (8), el Observatorio de UNESCO (46), `Erasmus` (4) y los 530 M de alumnos K-12 de Asia (13).
+🔵 **Rendimiento marginal medido CERO por undecima vez: el canal se corre porque es obligatorio y
+porque un cambio de regimen hay que verlo, no porque descubra.**
+
 ## 🆕 Tendencias 629–634 — pase 81 del 2026-10-04
 
 **629. 🔴 Un canal de verificacion puede fallar de forma UNIFORME, y entonces su negativo no es un

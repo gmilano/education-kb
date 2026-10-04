@@ -55,6 +55,37 @@ updated: 2026-10-04
 > **LATAM:** 🔵 el hallazgo del pase — **existe una capa MCP nacional brasileña de datos públicos, activa y MIT, y
 > educación es el único dominio grande que falta** (**gap 69**).
 
+## 🔴 Undecimo barrido regional consecutivo agotado, un canal institucional que pasa a PROPIEDAD, y el dato del pase es de LICENCIA por region (pase 82 del 2026-10-04)
+
+### 🔴 `www.ceu.edu` se archiva: segunda medicion identica, asi que es propiedad del canal
+
+El pase 81 dejo anotado **con numero de pase** que el pase 82 reintentara **UNA** vez el unico hecho
+regional nuevo de su barrido: una colaboracion **Central European University × GitHub** de **abril de
+2026** para formacion e investigacion *AI-ready*. 🔴 **Reintentado una vez y repite:
+`connect_rejected` — el proxy de egreso NIEGA el `CONNECT` por politica de la organizacion, dos de
+dos.** 🔵 **Por la regla del pase 80 (un bloqueo medido dos veces con el mismo resultado deja de ser
+un evento y es una propiedad del canal) se ARCHIVA y no se vuelve a gastar presupuesto en el.**
+⚠️ **Y el hecho que dependia de el sigue DECLARADO COMO HUECO y NO como dato: no hay lectura de
+primera mano, asi que no se escribe como cifra ni como *player*, y NO se debe citar en una
+propuesta.** Es de la misma clase que el **gap 92** (canales institucionales bloqueados).
+
+### 🔴 El barrido regional obligatorio: UNDECIMA vez consecutiva sin rendimiento
+
+Las cuatro busquedas se corrieron con el año **calculado** (2026). **Los doce hechos devueltos
+estaban los doce ya publicados en esta base**, confirmado con `grep` ANTES de escribir:
+
+| Region | Hechos devueltos por el barrido | Ya en la base |
+|---|---|---|
+| **North America** | 134 proyectos de ley en 31 estados · California **AB 1159** · Idaho **SB 1227** · Maryland/Idaho/Oklahoma/Virginia con guia estatal + politica distrital · *Traffic Light* de Nueva York · 18 % de docentes con guia escrita · 38 % del mercado en 2025 | 🔵 **SI** (`AB 1159` 119 coincidencias, `SB 1227` 56, *Traffic Light* 30) |
+| **EMEA** | EU AI Act, aplicacion general **2026-08-02** · alto riesgo en acceso y evaluacion · **Digital Omnibus** mueve los autonomos de alto riesgo a **2027-12-02** · Erasmus+ con convocatorias 2026 | 🔵 **SI** (`Digital Omnibus` 60, `Erasmus` 4) |
+| **APAC** | China/India/Japon dominan · ~**530 M** de alumnos K-12 en Asia (2024) · ley coreana de proteccion de datos de IA · 88 % de empleados usando IA en 2025 | 🔵 **SI** (`530` 13 coincidencias) |
+| **LATAM** | >50 % de docentes en Chile y Brasil usan IA con <10 % de instituciones con guia formal · Observatorio de UNESCO para America Latina y el Caribe · CENIA / ILIA / Latam-GPT · Uruguay primero en firmar el Convenio Marco del Consejo de Europa · reglamento de la ley peruana **31814** (2025-09-09) · **CONPES** de Colombia | 🔵 **SI** (`Observatorio` 46, `Uruguay` 39, `31814` 8, `CONPES` 43) |
+
+🔵 **Rendimiento marginal medido CERO por undecima vez. El canal se corre porque es obligatorio y
+porque un cambio de regimen hay que verlo, no porque descubra. El dato de este pase no salio del
+barrido de mercado: salio de medir la LICENCIA de lo que esta base ya recomienda, y ese reparto SI
+tiene lectura regional — abajo, por region.**
+
 ## 🔴 Décimo barrido regional consecutivo agotado — y el dato de este pase es de CAPA, no de mercado (pase 80 del 2026-10-04)
 
 La batería obligatoria (4 regiones × regulación / adopción / *players*) se corrió completa y **las
@@ -1815,6 +1846,28 @@ Dónde se produce el software educativo abierto, que no es donde está la demand
 ## Opportunities by region
 
 ### North America
+
+#### Agregado en el pase 82 del 2026-10-04 — 🔴 el UNICO bloqueo de uso comercial de todo el catalogo es de esta region, y no lo pone una empresa: lo pone una oficina de transferencia tecnologica
+
+🟢 **Este pase midio el eje de uso comercial sobre las 69 filas `org/repo` de `agents/top.md`: 42
+`OK` · 🔴 **1 `PROHIBIDO`** · 26 `SIN-DETERMINAR`.** 🔴 **El unico prohibido es de North America:
+`dssg/student-early-warning`, de *Data Science for Social Good* de la **Universidad de Chicago**, con
+una licencia academica que permite uso *«for academic research or other not-for-profit scholarly
+purposes … at a non-profit or government institution»* y 🔴 **excluye explicitamente *«any service or
+part of selling a service that uses the Program»***. Licencia comercial: Polsky Center,
+`polsky@uchicago.edu`.
+
+🔵 **La lectura regional, que es la util para un engagement: en esta region la capa de investigacion
+educativa de mayor prestigio sale de universidades, y una licencia universitaria no se lee en el
+campo SPDX — se lee en la oficina de transferencia.** ⚠️ **`NOASSERTION` u `Other` en un repo
+universitario de North America no es un pendiente administrativo: puede ser un bloqueo duro para una
+consultora que vende servicios.** 🟢 **Oportunidad concreta: el valor reutilizable de estas piezas es
+su METODOLOGIA y su *feature engineering*, no su codigo — reimplementar el metodo publicado sale mas
+barato que negociar una licencia comercial, y no hereda la restriccion.**
+
+🔵 **Y la posicion de la region en la capa permisiva no cambia por esto:** sigue teniendo los dos LRS
+permisivos con titular juridico (`yetanalytics/lrsql`, `adlnet/ADL_LRS`). **El reparto de familias del
+catalogo entero es 38 de 43 permisivas (88,4 %), y el unico no-OSI es este.**
 
 #### Agregado en el pase 81 del 2026-10-04 — 🟢 el dominio de esta region sobre la capa LRS permisiva se REFUERZA, por eliminacion del unico candidato nuevo
 
@@ -3685,6 +3738,34 @@ Artículo 50(2) **no es exigible** en North America — pero es **el requisito m
 multi-región conviene cotizarlo contra el techo europeo y no contra el piso local (ver **P103** y **P105**).
 
 ### EMEA
+
+#### Agregado en el pase 82 del 2026-10-04 — 🔴 un defecto de instrumento estuvo a punto de descalificar justo a la capa PUBLICA de esta region, y la correccion la devuelve entera
+
+🟢 **El pase midio familia de licencia y uso comercial como DOS columnas separadas sobre el catalogo.
+La primera version del detector marco `PROHIBIDO` a cuatro filas, y 🔴 dos de las cuatro son de la
+familia `FWU-DE` — la institucion publica alemana que esta base abrio en el pase 63**:
+
+| Pieza | Veredicto ERRONEO del primer corte | 🟢 Medicion correcta |
+|---|---|---|
+| `FWU-DE/mem-mcp` | 🔴 `NONCOMMERCIAL-NOT-OSI` / **PROHIBIDO** | 🟢 **The Unlicense — DOMINIO PUBLICO**, 1.210 B |
+| `FWU-DE/ais-chat` | 🔴 **PROHIBIDO** | 🟢 **AGPL-3.0**, uso comercial **permitido** (copyleft, no restriccion de uso) |
+
+🔴 **Las causas, y las dos son del mismo tipo:** el cuerpo real de AGPL-3.0 dice *«allowed only
+occasionally and **noncommercially**»* en su **seccion 6** (linea 259 del payload), que es una
+condicion de DISTRIBUCION y no una restriccion al licenciatario; y **The Unlicense CONCEDE el permiso
+con las palabras *«for any purpose, commercial or non-commercial»*** — la licencia mas permisiva que
+existe, marcada por el token con el que otorga el permiso.
+
+🔵 **La lectura regional importa mas que la anecdota del bug: la pieza mas permisiva de todo el
+catalogo —dominio publico, sin ninguna condicion— la publica un organismo PUBLICO de EMEA, y un
+instrumento mal calibrado la habria clasificado como inusable.** 🟢 **Oportunidad concreta para un
+pliego europeo: `FWU-DE/mem-mcp` es dominio publico y titular institucional publico aleman, que es el
+perfil ideal para una licitacion de esta region** —y a diferencia de `openfun/ralph` (MIT, France
+Universite Numerique, clavado en xAPI 1.0.3) **no arrastra una cota de spec**.
+
+⚠️ **Cota que sigue en pie y que este pase NO movio:** la combinacion *EMEA-soberano + xAPI 2.0*
+**sigue sin existir**. ⚠️ **Y `r-huijts/canvas-mcp`, el alta del pase, tiene indicio de Paises Bajos
+pero titular ANTROPONIMO: por `P135` no se eleva a region, asi que NO se cuenta como pieza de EMEA.**
 
 #### Agregado en el pase 81 del 2026-10-04 — 🔴 el hueco de soberania de la capa LRS se CONFIRMA, y el unico hecho nuevo de la region es INALCANZABLE
 
@@ -5667,6 +5748,27 @@ concordantes**. El Artículo 50(2) —la obligación de transparencia del conten
 este pase dejó cubierto con código.
 
 ### APAC
+#### Agregado en el pase 82 del 2026-10-04 — ⚠️ hueco DECLARADO: esta region no devolvio nada nuevo, ni de mercado ni de licencia
+
+🔵 **Se escribe explicitamente porque un hueco declarado es informacion y el silencio se lee igual que
+la cobertura.**
+
+🔴 **Del barrido de mercado, cero hechos nuevos:** China/India/Japon dominando por inversion estatal,
+los ~**530 M** de alumnos K-12 de Asia (2024), la ley coreana de proteccion de datos aplicada a
+*EdTech* con IA y el 88 % de empleados usando IA en 2025 **ya estaban todos publicados** (confirmado
+por `grep` antes de escribir).
+
+🔴 **Y del barrido de licencia —que es donde este pase SI produjo dato— esta region no aporto ninguna
+fila:** de las 69 filas del catalogo, **ninguna de las altas ni de las correcciones de este pase es
+de APAC**. La ultima pieza APAC que entro sigue siendo `BaijayantaRoy/bandup` (MIT, 2 ★, Singapur,
+pase 80), **y su region se declaro por el CURRICULO —una rubrica de examen nacional— no por el
+antroponimo** (`P245`).
+
+⚠️ **El hueco estructural de la region no se movio: la asimetria regulatoria de APAC sigue siendo
+jurisdiccion por jurisdiccion** (Corea, Japon, Vietnam, China con regimenes distintos), **y esta base
+sigue sin una pieza open source que modele esa fragmentacion** — el patron `P6` de nodos de politica
+por jurisdiccion sigue siendo una receta a construir, no un repo a adoptar.
+
 
 #### Agregado en el pase 81 del 2026-10-04 — 🔴 la region NO rindio nada nuevo, y eso se escribe
 
@@ -7218,6 +7320,31 @@ desplegado + puerta MCP permisiva (`jbnu-lms-mcp`, `canvas-lms-mcp`, las cuatro 
 depende de un tercero» son el mismo argumento.**
 
 ### LATAM
+
+#### Agregado en el pase 82 del 2026-10-04 — ⚠️ hueco DECLARADO, y una pieza en español que NO se coloca en esta region por disciplina
+
+🔵 **Se escribe explicitamente: esta region no devolvio hecho nuevo en este pase.**
+
+🔴 **Del barrido de mercado, cero hechos nuevos:** el >50 % de docentes de Chile y Brasil usando IA
+contra <10 % de instituciones con guia formal, el **Observatorio de UNESCO** para America Latina y el
+Caribe, **CENIA / ILIA / Latam-GPT**, Uruguay como primer firmante del Convenio Marco del Consejo de
+Europa, el reglamento de la ley peruana **31814** y el **CONPES** colombiano **ya estaban todos
+publicados** (confirmado por `grep`: `Observatorio` 46, `Uruguay` 39, `31814` 8, `CONPES` 43).
+
+⚠️ **Y la tentacion que este pase NO se permitio:** la correccion de licencia alcanzo a
+`nmarafo/OpenDidactia` —**CC-BY-SA-4.0**, con su `LICENSE.md` escrito **en español**— y **el idioma NO
+es una region**. 🔴 **Un archivo en español puede ser de España (EMEA) o de cualquier pais de LATAM, y
+colocarlo aqui por el idioma es exactamente el error que `P135` prohibe para los antroponimos.**
+🔵 **Queda SIN REGION, como estaba, y se anota para que ningun pase futuro lo lea como pieza de LATAM
+por el idioma del archivo.**
+
+🟢 **Lo que si vale para un engagement de esta region, y sale del dato de licencia del pase:**
+`OpenDidactia` es **ShareAlike sobre CONTENIDO curricular**, no sobre codigo. ⚠️ **En una region donde
+la oportunidad medida esta en generar programaciones y situaciones de aprendizaje a escala, una
+licencia `BY-SA` sobre los ESQUEMAS obliga a que el contenido derivado del cliente siga siendo
+`BY-SA`** — una condicion que hay que poner sobre la mesa antes de la propuesta, no despues.
+🔵 **Desde este pase la condicion es DETECTABLE POR MAQUINA y no depende de que alguien recuerde la
+prosa del pase 51.**
 
 #### Agregado en el pase 81 del 2026-10-04 — 🔴 la region NO rindio nada nuevo, y eso se escribe
 

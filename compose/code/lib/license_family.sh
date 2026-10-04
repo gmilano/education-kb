@@ -16,7 +16,7 @@
 #   Classifies on the TITLE BLOCK (first 40 lines), never the body (P171).
 #   Falls back to a body test only for MIT/BSD, whose grant line IS their identity and whose
 #   texts carry no confusable title.
-family_of() {
+osi_family_of() {
   local t
   t=$(printf '%s' "$1" | head -40 | tr -s '[:space:]' ' ')
   case "$t" in
@@ -28,9 +28,25 @@ family_of() {
   printf '%s' "$t" | grep -qi 'Educational Community License' && { echo "ECL-2.0"; return; }
   printf '%s' "$t" | grep -qi 'Apache License' && { echo "Apache-2.0"; return; }
   printf '%s' "$t" | grep -qi 'MIT License' && { echo "MIT"; return; }
+  # Added in pass 82 (P250).  Three families reached this base's catalogue and all three came
+  # back UNCLASSIFIED, so they are classified on the TITLE BLOCK like everything else (P171).
+  printf '%s' "$t" | grep -qi 'BSD Zero Clause\|Zero-Clause BSD\|0BSD' && { echo "0BSD"; return; }
+  printf '%s' "$t" | grep -qi 'ISC License' && { echo "ISC"; return; }
+  if printf '%s' "$t" | grep -qi 'Creative Commons\|creativecommons.org'; then
+    printf '%s' "$t" | grep -qi 'CC0\|Public Domain Dedication' && { echo "CC0-1.0"; return; }
+    printf '%s' "$t" | grep -qi 'ShareAlike\|CompartirIgual\|BY-SA'   && { echo "CC-BY-SA-4.0"; return; }
+    printf '%s' "$t" | grep -qi 'NonCommercial\|NoComercial\|BY-NC'    && { echo "CC-BY-NC-4.0"; return; }
+    printf '%s' "$t" | grep -qi 'Attribution\|Atribuci'                && { echo "CC-BY-4.0"; return; }
+    echo "CC-UNSPECIFIED"; return
+  fi
   printf '%s' "$1" | grep -qi 'Permission is hereby granted, free of charge' && { echo "MIT"; return; }
   printf '%s' "$1" | grep -qi 'Redistribution and use in source and binary forms' && { echo "BSD"; return; }
   printf '%s' "$t" | grep -qi 'Mozilla Public License' && { echo "MPL-2.0"; return; }
+  # The Unlicense. p170's inline classifier HAD this; this shared lib never did, so adopting
+  # the lib would have LOST a family (FWU-DE/mem-mcp). P237 cuts both ways: the shared control
+  # is only better than the copies once it is a superset of them.
+  printf '%s' "$1" | grep -qi 'free and unencumbered software released into the public domain' \
+      && { echo "Unlicense"; return; }
 
   # DECLARATION FALLBACK, added in pass 77 after frappe/education.
   #
@@ -66,3 +82,59 @@ family_of() {
 # a GPL-3.0 payload names the AGPL on 3 lines (its section 13); a real AGPL-3.0 payload names
 # it on 15.  GPL-2.0 names it on 0 — it predates the AGPL, so only GPL-3.0 was ever at risk.
 affero_lines() { printf '%s' "$1" | grep -ci affero; }
+
+# commercial_use_ok <payload> -> exit 0 if nothing in the payload forbids commercial use.
+#
+# A SECOND, independent axis (P250, pass 82).  Family and commercial-use are not the same
+# question: `CC-BY-SA-4.0` is a real family AND a problem for a client deliverable, while
+# `Apache-2.0` is a real family and no problem.  Asking them separately keeps a restriction
+# from being hidden behind a family name -- or behind UNCLASSIFIED.
+commercial_use_ok() {
+  local d; d=$(printf '%s' "$1" | tr '[:upper:]' '[:lower:]' | tr -s '[:space:]' ' ')
+  case "$d" in
+    *"non-commercial"*|*"noncommercial"*|*"not-for-profit"*|*"non-profit purposes"*) return 1 ;;
+    *"obtain a commercial license"*|*"commercial licence must"*|*"for academic research or other not-for-profit"*) return 1 ;;
+    *"excludes any service or part of selling a service"*) return 1 ;;
+  esac
+  return 0
+}
+
+# ---------------------------------------------------------------------------
+# P250, pass 82 — commercial use as a SECOND axis, and the gate that makes it sound.
+#
+# The first cut of this detector token-matched the payload for "non-commercial" and
+# friends. It then reported THREE AGPL-3.0 repos and The Unlicense as commercial-use
+# PROHIBITED, which is the opposite of true:
+#   * AGPL-3.0 / GPL-3.0 say "occasionally and noncommercially" in section 6 (line 259 of
+#     the real payload) -- describing a CONDITION, not a restriction on the licensee.
+#   * The Unlicense grants use "for any purpose, commercial or non-commercial" -- the most
+#     permissive text there is, flagged by the word it uses to GRANT the permission.
+# This is precisely the unsoundness P171 names: a full licence BODY contains the vocabulary
+# of other terms, so a token match over a body cannot be trusted. The gate is the fix -- an
+# identified OSI family permits commercial use BY DEFINITION and is never token-matched.
+# ---------------------------------------------------------------------------
+
+# commercial_use_ok <payload> -> exit 0 if nothing in the payload forbids commercial use.
+commercial_use_ok() {
+  # THE GATE. Identified OSI family -> allowed, no token match, no false positive.
+  [ "$(osi_family_of "$1")" = "UNCLASSIFIED" ] || return 0
+  local d; d=$(printf '%s' "$1" | tr '[:upper:]' '[:lower:]' | tr -s '[:space:]' ' ')
+  case "$d" in
+    *"non-commercial"*|*"noncommercial"*|*"not-for-profit"*|*"non-profit purposes"*) return 1 ;;
+    *"obtain a commercial license"*|*"commercial licence must"*) return 1 ;;
+    *"excludes any service or part of selling a service"*) return 1 ;;
+  esac
+  return 0
+}
+
+# family_of <payload> -> OSI family, or NONCOMMERCIAL-NOT-OSI when the payload is not a
+# known licence AND forbids commercial use. UNCLASSIFIED and "commercial use is PROHIBITED"
+# are opposite answers to the only question this KB exists to answer; they must never be
+# the same string.
+family_of() {
+  local f; f=$(osi_family_of "$1")
+  if [ "$f" = "UNCLASSIFIED" ] && ! commercial_use_ok "$1"; then
+    echo "NONCOMMERCIAL-NOT-OSI"; return
+  fi
+  echo "$f"
+}

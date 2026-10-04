@@ -1,0 +1,5 @@
+channel	good_url	bad_url
+github-html-head	https://github.com/moodle/moodle	https://github.com/gmilano/nope-does-not-exist-99999
+github-html-get	https://github.com/moodle/moodle	https://github.com/gmilano/nope-does-not-exist-99999
+github-api	https://api.github.com/repos/moodle/moodle	https://api.github.com/repos/gmilano/nope-does-not-exist-99999
+raw-headref	https://raw.githubusercontent.com/moodle/moodle/HEAD/COPYING.txt	https://raw.githubusercontent.com/gmilano/nope-does-not-exist-99999/HEAD/LICENSE

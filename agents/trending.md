@@ -9,6 +9,205 @@ updated: 2026-10-04
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 > No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
 
+## 2026-10-04 — pase 82: las suites CORREN por primera vez en cuatro pases, y lo que destapan es que el catalogo nunca estuvo muerto — 66 de 69 vivos por el canal que esta base ya tenia
+
+### 🟢 El desbloqueo del pase, y es el que habilita todo lo demas
+
+🔴 **Los pases 79, 80 y 81 declararon la ejecucion de `compose/code/` NEGADA (`[Code from External]`)
+y por eso la columna «Hoy» del `README.md` quedo sin re-verificar tres pases seguidos.** 🟢 **Este
+pase las corrio: 32 invocaciones de suite, con interprete `Python 3.11.15`.** El resultado completo,
+medido y no citado:
+
+| Resultado | n | Detalle |
+|---|---|---|
+| 🟢 Suites verdes | **31 de 32** | reproducen el total que su celda publica |
+| 🔴 Suite ROJA | **1 de 32** | `p243-frontmatter-coverage` a **22/23** — ver abajo |
+
+🔵 **Y el barrido se tropezo con la regla `P126` de esta base en vivo: 7 de las 32 suites publican su
+total en un vocabulario que un contador de UNA sola forma no lee** (`16/16`, `TODAS LAS ASERCIONES
+PASAN (14)`, `all 7 cases pass`, `all 8 cases pass`, `24/24 controles pasados`, `8/8`). Las siete
+PASAN; el que fallaba era mi contador. ⚠️ **Mismo origen en `proctoring-reach-audit`: mi `grep`
+levanto la palabra `FAILED` de la PROSA de la suite (*«Control (c) FAILED on the first run»*), no de
+su resultado — la suite da **19/19**.** 🔵 **Un instrumento de lectura tambien necesita su control.**
+
+### 🔴 `P248` — el normalizador borraba el defecto que el instrumento existia para detectar
+
+**La unica suite roja tenia razon, y el defecto es de los que el encargo nombra explicitamente.**
+`check_frontmatter.py` valida que `region` este en el vocabulario CERRADO de cinco valores. Su
+control negativo del pase 79 incluye `'APAC '` —con espacio al final— porque *«cada variante se
+convierte en su propio balde y el filtro deja de funcionar»*.
+
+🔴 **Pero el parser hacia `v.strip()` al leer el campo, ANTES de preguntar por el vocabulario.** El
+espacio desaparecia en el parseo, `'APAC '` llegaba a la validacion como `'APAC'`, caia dentro del
+vocabulario y **no se reportaba nada**. 🔵 **El normalizador no estaba equivocado: estaba borrando la
+unica evidencia del defecto antes de que se pudiera preguntar por el.**
+
+🟢 **Corregido:** `parse_frontmatter(text, raw=True)` devuelve el valor **sin normalizar por la
+derecha** —el espacio que SEPARA la clave del valor si es sintaxis, y se sigue sacando por la
+izquierda— y la pregunta de vocabulario se hace contra el **byte**. Suite: **22/23 → 23/23**.
+Barrido real: **57 de 57 `.md` con frontmatter completo y region en vocabulario**, sin cambio.
+
+🆕 **`P248`, regla permanente: cuando un instrumento normaliza y despues valida, el normalizador
+puede ser el que borra el defecto. La pregunta se hace contra el dato crudo; la normalizacion se
+aplica al REPORTE, no a la comparacion.**
+
+### 🟢 `P249` — la compuerta de calibracion que al pase 81 le falto, ahora como codigo
+
+El pase 81 pidio `curl -sI` contra `github.com`, recibio **403 en 81 de 81** y escribio que el canal
+marcaba MUERTO el 100 % del catalogo. 🔵 **El diagnostico de canal fue correcto (`P247`). Lo que
+faltaba es que esta base YA TENIA un canal `curl` que funciona, y lo tenia desde el pase 64:**
+`p170-headref-license-sweep` lee `raw.githubusercontent.com/<slug>/HEAD/<archivo>`.
+
+🟢 **Ledger de calibracion medido hoy, con un control bueno y un control malo por canal**
+(`compose/code/p249-channel-calibration/result.2026-10-04.tsv`):
+
+| Canal | URL buena | URL inexistente | Veredicto | ¿Se le puede creer un negativo? |
+|---|---|---|---|---|
+| 🔴 `curl -sI` a `github.com` | **403** | **403** | `UNCALIBRATED-NO-DISCRIMINATION` | 🔴 **NO** |
+| 🔴 `curl` GET a `github.com` | **403** | **403** | `UNCALIBRATED-NO-DISCRIMINATION` | 🔴 **NO** |
+| 🔴 `curl` a `api.github.com` | **403** | **403** | `UNCALIBRATED-NO-DISCRIMINATION` | 🔴 **NO** |
+| 🟢 `curl` a `raw.githubusercontent.com` + ref `HEAD` | 🟢 **200** | 🟢 **404** | **`CALIBRATED`** | 🟢 **SI** |
+
+🆕 **`P249`: antes de creerle un NEGATIVO a un canal, el canal se calibra contra una URL que se sabe
+buena Y una que se sabe mala. Un canal que contesta lo mismo a las dos no discrimina, y de uno que no
+discrimina no se lee una ausencia — ni una ni ochenta y una. Y antes de escribir un defecto de canal,
+se busca en `compose/code/` si esta base ya tiene uno calibrado: el pase 81 declaro el catalogo
+inverificable teniendo el instrumento a 17 pases de distancia.** Suite: **20/20**, con la medicion
+literal del pase 81 (`403` × 81) como control negativo que debe salir `NO-CLAIM`.
+
+### 🟢 El catalogo, medido por el canal calibrado: 66 de 69 VIVOS
+
+| Estado | n | % |
+|---|---|---|
+| 🟢 `LICENSED` — archivo de licencia leido | **43** | 62,3 % |
+| ⚠️ `UNLICENSED` — repo alcanzable, **ausencia medida** | **23** | 33,3 % |
+| 🔴 `UNREACHABLE` — 404 por canal calibrado | **3** | 4,3 % |
+| 🟢 **Alcanzables (43 + 23)** | **66 de 69** | 🟢 **95,7 %** |
+
+🔵 **Contra el *«100 % muerto»* del pase 81: 95,7 % vivo.** 🟢 **Y la reproducibilidad es el control
+que cierra el caso: de los 58 slugs que este barrido comparte con el resultado del pase 64, los
+**58** dan el MISMO estado y la MISMA familia de licencia. Cero deriva.** Un canal que reproduce
+exactamente la medicion de otro pase no es el que estaba roto.
+
+🔴 **Los 3 `UNREACHABLE`:** `imazhar101/mcp-canvas-server`, `owentaylor/canvas-mcp` y
+`radhepa/Teacher-MCP`. ⚠️ **El tercero ya estaba marcado por el pase 64 como 404 por dos canales
+independientes** — tercera confirmacion, y sigue afirmando «MIT ✅» sobre un repo que no existe.
+
+### 🟢 `P250` — el classificador compartido gana tres familias, y gana el eje que esta KB de verdad pregunta
+
+El barrido dejo **4 familias en `UNKNOWN`** por el classificador EN LINEA de `p170`. ⚠️ **Ninguna era
+desconocida para esta base: las cuatro estan resueltas en PROSA desde los pases 51 y 64.** 🔵 **O sea
+que no es un hallazgo de datos, es `P237` otra vez: la correccion vivia en el texto y nunca llego al
+instrumento.** Y `lib/license_family.sh` —el control compartido del pase 77— tampoco las tenia.
+
+🟢 **Corregido en el control compartido, que es donde se arregla una vez:**
+
+| Familia | Antes | Ahora | Caso que la trajo |
+|---|---|---|---|
+| **0BSD** | `UNCLASSIFIED` | 🟢 **`0BSD`** | `trilogy-group/oneroster-ts` (710 B) |
+| **CC BY-SA 4.0** | `UNCLASSIFIED` | 🟢 **`CC-BY-SA-4.0`** | `nmarafo/OpenDidactia` (2.122 B, en español) |
+| **Unlicense** | `UNCLASSIFIED` | 🟢 **`Unlicense`** | `FWU-DE/mem-mcp` — 🔴 **`p170` SI la tenia y la libreria NO: adoptar el control compartido habria PERDIDO una familia.** `P237` corta para los dos lados |
+| **no-OSI** | `UNCLASSIFIED` | 🔴 **`NONCOMMERCIAL-NOT-OSI`** | `dssg/student-early-warning` |
+
+🔴 **La ultima fila es la que importa, y es la peor falla posible en esta base: `UNCLASSIFIED` y «el
+uso comercial esta PROHIBIDO» son respuestas OPUESTAS a la unica pregunta para la que existe esta KB,
+y eran la MISMA cadena.** 🟢 **Ahora el eje de uso comercial se pregunta aparte** (`commercial_use_ok`),
+porque familia y uso comercial no son la misma pregunta: `CC-BY-SA-4.0` es familia real Y problema
+para un entregable; `Apache-2.0` es familia real y no es problema.
+
+### 🔴 Y el instrumento nuevo fallo su primera prueba de verdad — en el barrido, no en la suite
+
+🔴 **La primera version del detector marco `PROHIBIDO` a CUATRO filas que no lo son:** tres repos
+**AGPL-3.0** (`FWU-DE/ais-chat`, `csmediapro/moodle-mcp-server`, `helixnow/deep-student`) y **The
+Unlicense** (`FWU-DE/mem-mcp`).
+
+🔵 **Las causas, medidas:** el cuerpo real de GPL-3.0/AGPL-3.0 dice *«allowed only occasionally and
+**noncommercially**»* en su seccion 6 (**linea 259** del payload), describiendo una CONDICION y no una
+restriccion al licenciatario; y The Unlicense **concede** el permiso con las palabras *«for any
+purpose, **commercial or non-commercial**»* — la licencia mas permisiva que existe, marcada por el
+token con el que otorga el permiso. 🔴 **Es exactamente la falta de solidez que `P171` nombra: el
+cuerpo de una licencia contiene el vocabulario de OTRAS condiciones, asi que un token sobre el cuerpo
+no se puede creer.**
+
+⚠️ **Y los controles negativos que yo mismo habia escrito NO lo atraparon, porque usaban *fixtures*
+TRUNCADOS** —bloques de titulo sin seccion 6 y sin la frase de concesion—. 🔵 **Un *fixture* lo
+bastante corto para ser comodo es lo bastante corto para no ver el defecto.**
+
+🟢 **Arreglado con una COMPUERTA, no con mas tokens:** `osi_family_of()` decide primero, y **una
+familia OSI identificada permite uso comercial POR DEFINICION y no se somete a ningun token**. El
+detector solo corre cuando no hay familia que lo proteja. 🟢 **Suite del control compartido: 18/18 →
+41/41**, con los dos *fixtures* completos (seccion 6 de AGPL-3.0 y el texto de The Unlicense) como
+los controles que faltaban.
+
+### 🟢 El eje de uso comercial sobre las 69 filas recomendables
+
+| Uso comercial | n | Lectura |
+|---|---|---|
+| 🟢 `OK` | **42** | familia OSI identificada o sin restriccion medida |
+| 🔴 `PROHIBIDO` | **1** | `dssg/student-early-warning` |
+| ⚠️ `SIN-DETERMINAR` | **26** | sin archivo de licencia (23) o inalcanzable (3) |
+
+Reparto de familias sobre las 43 licenciadas: **MIT 30 · Apache-2.0 3 · AGPL-3.0 3 · CC0-1.0 2 ·
+Unlicense 1 · 0BSD 1 · BSD 1 · CC-BY-SA-4.0 1 · NONCOMMERCIAL-NOT-OSI 1** → 🟢 **38 de 43 (88,4 %)
+permisivas de software.** 🔴 **Y la fila `NONCOMMERCIAL-NOT-OSI` sigue EN una tabla cuyo proposito
+declarado es *«MIT / Apache 2.0 / BSD — las que Globant puede usar de base»*.** Ya estaba marcada en
+prosa desde el pase 51; 🟢 **desde este pase es DETECTABLE POR MAQUINA**, que es lo que faltaba.
+
+### 🟢 El alta del pase: el PADRE de 18 derivados que esta base nunca inventario
+
+La accion diferida con nombre propio del pase 81 era medir **`mdweaver/canvas-mcp`**. Medida, y lo que
+destapo es mas grande que la candidata.
+
+| Campo | `r-huijts/canvas-mcp` (**PADRE**) | `mdweaver/canvas-mcp` (fork) |
+|---|---|---|
+| Licencia | 🟢 **MIT**, 1.066 B | 🟢 **MIT**, 1.066 B |
+| `sha256` del `LICENSE` | `ab5109aafdb8d1b0…` | 🟢 **IDENTICO** |
+| Titular | `2024 R.Huijts` | 🟢 **`2024 R.Huijts`** — preservado |
+| ★ / forks | **12 ★ / 8 forks** | 🔴 **0 ★ / 0 forks** |
+| *Tools* leidas del **payload** | 🟢 **69** (`docs/TOOLS.md`, 19.578 B) | 🟢 **89** (27.131 B) |
+| ¿Es fork? | 🟢 **NO** — proyecto original | 🟢 **SI**, declarado |
+
+🔴 **Y el hueco de inventario: esta base cita 18 derivados de Canvas-MCP** (`abr-projects`,
+`ahnopologetic`, `algorithm0r`, `amirf194`, `bartmassey-upstream`, `bruchris` ×2, `dmontgomery40`,
+`fdis111`, `lindsay-cheng`, `mdweaver`, `mtgibbs`, `owen-x-tech`, `owentaylor`, `sirdanielm`,
+`vishalsachdev`, `xmike04`, `yeetingwaterbottle`) **y tenia CERO coincidencias de `r-huijts` en los
+57 `.md`.** 🔵 **Venia midiendo los hijos de un repo que nunca nombro.** 🟢 **El padre entra a la
+tabla.**
+
+🟢 **El fork, en cambio, es de los honestos, y se midio para poder decirlo:** su `README.md:9` declara
+el fork y da credito completo al autor original, y **su `LICENSE` es byte a byte el del padre con el
+titular del padre intacto** — no sustituyo el copyright, que es la falla que esta base persigue con
+`P184`. ⚠️ **Pero su `package.json` sigue declarando la identidad del PADRE** (`name`
+`@r-huijts/canvas-mcp`, `author` `R.Huijts`, `repository.url` → `r-huijts/canvas-mcp`), asi que
+**quien resuelva la capa de PAQUETE aterriza en el padre y no en el fork** (`P190`).
+
+🔴 **No se escribe fila para el fork: 0 ★ / 0 forks es exactamente la cota que `P234` le aplico a
+`raif-s-naffah/xapi-rs` en el pase 81, y la regla se aplica igual cuando el hallazgo es simpatico.**
+🟢 **Señal, no fila — y la accion diferida queda CERRADA con veredicto medido, no re-agendada.**
+
+⚠️ **Una cifra que NO se debe leer como aritmetica:** el delta de payload es **+20 tools** (89 − 69),
+pero la cadena `(fork)` aparece **23** veces en `docs/TOOLS.md`. **No coinciden porque algunas marcas
+estan sobre tools CAMBIADAS, no nuevas** (el propio README lista 4 cambiadas). 🔵 **El delta medido es
++20; las 23 marcas no son un conteo de altas.**
+
+### 🔴 `www.ceu.edu` pasa de evento a PROPIEDAD del canal
+
+El pase 81 dejo anotado con numero que **el pase 82 reintentara UNA vez** el unico hecho regional
+nuevo de su barrido (una colaboracion **Central European University × GitHub** de abril de 2026).
+🔴 **Reintentado una vez: `connect_rejected` — el proxy de egreso NIEGA el `CONNECT` por politica de
+la organizacion, dos de dos.** 🔵 **Segunda medicion identica, asi que por la regla del pase 80 deja
+de ser un evento y es **propiedad del canal**: se archiva, no se vuelve a gastar presupuesto en el, y
+el hecho sigue **declarado como hueco y NO como dato** — no se debe citar en una propuesta.**
+
+### 🔴 El barrido regional obligatorio se agota por UNDECIMA vez consecutiva
+
+Las cuatro busquedas regionales se corrieron con el año **calculado** (2026). **Los doce hechos
+devueltos estaban los doce ya publicados en esta base**, confirmado con `grep` antes de escribir:
+`Digital Omnibus` (60), `AB 1159` (119), `SB 1227` (56), `Traffic Light` (30), `CONPES` (43),
+`Uruguay` (39), `31814` (8), `Observatorio` (46), `Erasmus` (4), `530` M de alumnos K-12 en Asia (13).
+🔵 **Rendimiento marginal medido CERO por undecima vez. El canal se corre porque es obligatorio y
+porque un cambio de regimen hay que verlo, no porque descubra.**
+
 ## 2026-10-04 — pase 81: el canal que el encargo ordena usar marca muerto el 100 % del catalogo, y el alta real es un cuarto servidor xAPI que la licencia deja afuera
 
 ### 🔴 El hallazgo del pase es un defecto de CANAL, y es el que podia destruir el archivo

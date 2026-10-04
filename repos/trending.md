@@ -8,6 +8,84 @@ updated: 2026-10-04
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 
+## 2026-10-04 — pase 82: el padre de 18 derivados de Canvas-MCP entra al inventario, y el catalogo pasa de «100 % muerto» a 95,7 % vivo por un canal que esta base ya tenia
+
+### 🟢 El alta: `r-huijts/canvas-mcp` — **MIT**, **12 ★ / 8 forks**, 📍 **EMEA (Paises Bajos)**
+
+| Campo | Medido este pase | Canal |
+|---|---|---|
+| Licencia | 🟢 **MIT** — bloque de titulo, **1.066 B**, titular `2024 R.Huijts` | `raw…/HEAD/LICENSE` |
+| ★ / forks | **12 ★ / 8 forks** · no archivado | WebFetch |
+| Lenguaje | TypeScript | WebFetch |
+| Superficie | 🟢 **69 tools + 1 prompt**, contadas en el **payload** (`docs/TOOLS.md`, 19.578 B) | `raw…/HEAD/docs/TOOLS.md` |
+| ¿Es fork? | 🟢 **NO** — proyecto original | WebFetch + `package.json` |
+| Identidad de paquete | `@r-huijts/canvas-mcp` v1.5.1 | `raw…/HEAD/package.json` |
+
+🔴 **Por que es un alta y no una fila mas: esta base cita 18 derivados de Canvas-MCP y tenia CERO
+coincidencias del padre en los 57 `.md`.** Venia midiendo los hijos de un repo que nunca nombro —
+`description-drift-audit` y `fork-lineage-audit` tienen *fixtures* de cinco de esos forks, y el
+original no estaba. 🔵 **Un inventario de derivados sin su origen no permite medir que agrega cada
+fork, que es justo la pregunta que esos dos instrumentos existen para responder.**
+
+🟢 **Y ahora se puede medir: el fork `mdweaver/canvas-mcp` lleva 89 tools en su payload contra las 69
+del padre → delta medido +20.** ⚠️ **La cadena `(fork)` aparece 23 veces en su `docs/TOOLS.md`, que NO
+es el conteo de altas**: algunas marcas estan sobre tools cambiadas (el README lista 4). 🔵 **El delta
+es +20; las 23 marcas son otra cosa.**
+
+### 🟢 El catalogo recomendable, re-medido entero por un canal CALIBRADO
+
+🔴 **El pase 81 escribio que el canal que el encargo ordena usar (`curl -sI`) marcaba MUERTO el 100 %
+del catalogo.** 🟢 **Este pase lo re-midio con el canal que esta base tiene desde el pase 64
+(`raw.githubusercontent.com` + ref `HEAD`, de `p170`), y antes lo CALIBRO contra una URL buena y una
+inexistente:**
+
+| Canal | buena | inexistente | Veredicto |
+|---|---|---|---|
+| 🔴 `curl -sI`/GET a `github.com`, `api.github.com` | **403** | **403** | no discrimina → **no se le cree un negativo** |
+| 🟢 `raw.githubusercontent.com` + `HEAD` | 🟢 **200** | 🟢 **404** | **`CALIBRATED`** |
+
+| Estado de los 69 `org/repo` de `agents/top.md` | n | % |
+|---|---|---|
+| 🟢 `LICENSED` | **43** | 62,3 % |
+| ⚠️ `UNLICENSED` (ausencia MEDIDA) | **23** | 33,3 % |
+| 🔴 `UNREACHABLE` | **3** | 4,3 % |
+| 🟢 **Alcanzables** | **66 de 69** | 🟢 **95,7 %** |
+
+🟢 **El control que cierra el caso es de reproducibilidad: de los 58 slugs compartidos con el
+resultado del pase 64, los 58 dan el MISMO estado y la MISMA familia. Cero deriva en un dia.** 🔵 **Un
+canal que reproduce exactamente la medicion de otro pase no es el que estaba roto.**
+
+🔴 **Los 3 inalcanzables:** `imazhar101/mcp-canvas-server`, `owentaylor/canvas-mcp`,
+`radhepa/Teacher-MCP` — ⚠️ **el ultimo es la TERCERA confirmacion consecutiva** y sigue afirmando
+«MIT ✅» sobre un repo que no existe.
+
+### 🟢 Dos familias de licencia que esta base tenia en prosa y sus instrumentos no
+
+| Repo | Familia real | Antes (instrumento) | Byte |
+|---|---|---|---|
+| `trilogy-group/oneroster-ts` | 🟢 **0BSD** — mas permisiva que MIT | `UNKNOWN` | 710 B |
+| `nmarafo/OpenDidactia` | ⚠️ **CC-BY-SA-4.0** — *ShareAlike* de CONTENIDO | `UNKNOWN` | 2.122 B |
+| `FWU-DE/mem-mcp` | 🟢 **Unlicense** — dominio publico | `UNCLASSIFIED` en la libreria | 1.210 B |
+| `dssg/student-early-warning` | 🔴 **NONCOMMERCIAL-NOT-OSI** | `UNKNOWN` | 2.068 B |
+| `kaldi-asr/kaldi` | 🟢 **Apache-2.0** | `UNKNOWN` en `p170` | 17.263 B |
+
+🔵 **Ninguna es un descubrimiento: las cuatro primeras estan resueltas en prosa desde los pases 51 y
+64. Es `P237` otra vez —la correccion nunca llego al instrumento— y por eso se arreglo en el control
+COMPARTIDO (`lib/license_family.sh`), no en el barrido de turno.** Suite de la libreria: **18/18 →
+41/41**.
+
+⚠️ **`FWU-DE/mem-mcp` deja la leccion en la otra direccion: `p170` SI reconocia The Unlicense y la
+libreria compartida NO. Adoptar el control compartido tal como estaba habria PERDIDO una familia.**
+🔵 **Un control compartido solo es mejor que las copias cuando es un superconjunto de ellas; si no,
+centralizar es perder cobertura.**
+
+### 🔴 El eje nuevo: uso comercial, preguntado aparte de la familia
+
+🟢 **42 `OK` · 🔴 1 `PROHIBIDO` · ⚠️ 26 `SIN-DETERMINAR`** sobre las 69 filas. El unico prohibido es
+`dssg/student-early-warning` (licencia academica de la Universidad de Chicago que excluye *«any
+service or part of selling a service that uses the Program»*). 🔵 **Estaba en prosa desde el pase 51;
+desde hoy es detectable por maquina, que es lo que faltaba para que no vuelva a entrar.**
+
 ## 2026-10-04 — pase 81: el cuarto servidor xAPI 2.0 conformante existe, es copyleft, y el conteo permisivo pasa de supuesto a medido sobre 4 de 4
 
 ### 🟢 El repo nuevo

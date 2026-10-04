@@ -85,6 +85,48 @@ corre ése antes de escribir uno a mano** (tendencia **313**). 🟢 **Y el `gafa
 > **Pase 36 del 2026-10-02:** 🔵 **este pase no agrega repos: le pone FECHA a los que ya están, y la fecha cambia tres recomendaciones.** Se midió la capa PHP de evaluación y telemetría en Packagist —el único registro de los tres que entrega descargas en este entorno (`api.npmjs.org` y `pypistats.org` dan **403 a CONNECT**)— y el resultado está en `repos/trending.md`. **Lo que hay que saber antes de proponer desde este archivo:** 🔴 **la pieza xAPI más descargada de esta base, `rusticisoftware/tincan` (Apache-2.0, 6.178 desc./mes, 863.777 totales), no publica desde el 2022-11-02**, y ⚠️ **el único MIT de esa capa, `php-xapi/client`, está parado desde el 2021-03-24** con 825 desc./mes. 🔵 **La lectura es que en xAPI/PHP lo permisivo está quieto y lo vivo es copyleft**, así que la receta de telemetría se sostiene en **Ralph (MIT)** + **`lrsql` (Apache-2.0)** + **`learnmcp-xapi` (MIT)** y no en la capa PHP. 🟢 **Del lado de evaluación, lo activo es `oat-sa/extension-tao-testqti`** (**885 versiones**, release del **2026-09-30**) **y sigue siendo GPL-2.0-only**, mientras **lo permisivo es lo nuevo**: `@longsightgroup/qti3-cli` (**MIT**, 41 releases desde el 2026-05-21, último **2026-10-01**) con **cero dependencias de terceros** — sus 4 dependencias son todas `@longsightgroup/*` pinneadas a la misma versión exacta. **Su manifiesto MCP completo de 20 tools está escrito en `compose/patterns.md` (P76).** 🔴 **Y una corrección de catálogo: `oat-sa/qti-sdk` devuelve 404 en Packagist porque es el nombre del REPO — su paquete es `qtism/qtism`** (GPL-2.0-only, 218.212 descargas totales, 315 versiones). **Nombre de repo y nombre de paquete son identificadores distintos, y confundirlos produce un 404 que parece una ausencia** — pasó igual con `1edtech/oneroster`, `imsglobal/lti-1-3-php-library` y `packbackbooks/lti-1-3-php-library`, los tres **404**, que se anotan como *«no verificado en Packagist bajo ese nombre»* y **no** como inexistentes. ⚠️ **Acción pendiente que el pase 37 tiene asignada: este archivo nunca pasó por el control de *slugs* distintos ni por el de *backlink*** — los dos que en `agents/top.md` encontraron **un duplicado** y **dos colisiones** este mismo pase.
 > **Pase 11 del 2026-10-01:** aparece una licencia que las diez pasadas anteriores filtraban sin saberlo — **ECL-2.0**, con la que licencia todo Apereo (Sakai, Opencast, OpenLRW). Es Apache-2.0 con el alcance de patentes acotado, aprobada por OSI y FSF, y **es apta para construir arriba**. Ver la capa de analítica institucional, abajo.
 
+## 🧾 Altas fundacionales: 0 — y el estante entero pasa a tener una columna que no tenia: si Globant puede VENDER sobre cada pieza (pase 82 del 2026-10-04)
+
+🔴 **Sin altas de repo fundacional en este pase.** 🟢 **Lo que cambia es el criterio con el que se
+mira el estante, y cambia para las 69 filas `org/repo` del catalogo a la vez.**
+
+### 🔴 El defecto que este estante tenia y no se veia
+
+Un repo fundacional entra aqui porque su licencia permite construir encima. 🔴 **Pero el instrumento
+que medía la licencia devolvía `UNKNOWN` cuando no reconocía el texto, y `UNKNOWN` es indistinguible
+de *«el uso comercial esta PROHIBIDO»*** — que es justamente la respuesta que descalifica una pieza de
+este estante. 🟢 **Desde este pase son dos columnas separadas** (`P250`):
+
+| Familia de licencia | Uso comercial | Lectura para el estante |
+|---|---|---|
+| 🟢 MIT · Apache-2.0 · BSD · **0BSD** · **Unlicense** · CC0-1.0 | 🟢 `OK` | **Apto sin condiciones** — 38 de 43 licenciadas (**88,4 %**) |
+| ⚠️ AGPL-3.0 · GPL-3.0 | 🟢 `OK` | **Apto con decision de ARQUITECTURA**: el copyleft no prohibe vender, obliga sobre la distribucion |
+| ⚠️ **CC-BY-SA-4.0** | 🟢 `OK` | **ShareAlike de CONTENIDO**: viaja al entregable del cliente |
+| 🔴 **NONCOMMERCIAL-NOT-OSI** | 🔴 `PROHIBIDO` | **Fuera del estante.** 1 de 43 |
+| ⚠️ sin archivo de licencia / inalcanzable | ⚠️ `SIN-DETERMINAR` | **26 de 69** — pregunta abierta, **no** «permisivo por omision» |
+
+### 🟢 Tres familias que este estante no sabia nombrar, y una de ellas MEJORA la cotizacion
+
+| Pieza | Antes | 🟢 Ahora | Por que importa aqui |
+|---|---|---|---|
+| `trilogy-group/oneroster-ts` | `UNKNOWN` | 🟢 **0BSD**, 710 B | **Mas permisiva que MIT**: sin obligacion de atribucion. Es la licencia mas comoda de todo el estante |
+| `FWU-DE/mem-mcp` | `UNCLASSIFIED` | 🟢 **Unlicense**, 1.210 B | **Dominio publico, con titular institucional PUBLICO aleman** — el perfil ideal para un pliego de EMEA |
+| `nmarafo/OpenDidactia` | `UNKNOWN` | ⚠️ **CC-BY-SA-4.0**, 2.122 B | ShareAlike sobre esquemas curriculares: **condicion que hay que poner sobre la mesa antes de la propuesta** |
+| `kaldi-asr/kaldi` | `UNKNOWN` en `p170` | 🟢 **Apache-2.0**, 17.263 B | Su `COPYING` abre con un aviso legal y el bloque de titulo queda abajo: **el classificador compartido lo resuelve y el de `p170` no** |
+
+⚠️ **Honestidad sobre el hallazgo: ninguna de las cuatro es un descubrimiento. Las cuatro estaban
+resueltas EN PROSA desde los pases 51 y 64.** 🔵 **Es `P237` otra vez —la correccion nunca llego al
+codigo— y por eso se arreglo en `lib/license_family.sh`, el control compartido (18/18 → **41/41**), y
+no en el barrido de turno.**
+
+### 🟢 Y el barrido confirma que el estante esta VIVO
+
+🔴 **El pase 81 escribio que el canal de verificacion marcaba muerto el 100 % del catalogo.**
+🟢 **Re-medido por un canal CALIBRADO (200 a una URL buena, 404 a una inexistente): 43 `LICENSED` ·
+23 `UNLICENSED` con ausencia MEDIDA · 3 `UNREACHABLE` → **66 de 69 alcanzables (95,7 %)**, y CERO
+deriva en los 58 slugs que comparte con el resultado del pase 64.** 🔵 **Ningun repo de este estante
+se cae por el pase 81.**
+
 ## 🧭 P244 — el eje SPEC sobre la capa SERVIDOR de xAPI, que **P235** midió sin medirlo: la trampa de OneRoster NO se reproduce, y el permisivo con respaldo EMEA es el único que se queda afuera (pase 80 del 2026-10-04)
 
 **P235** (pase 77) midió la capa xAPI por **CAPA** y concluyó que *«EXPONER xAPI —ser el LRS— se puede

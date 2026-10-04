@@ -39,8 +39,17 @@ def markdown_files(root):
     return sorted(out)
 
 
-def parse_frontmatter(text):
-    """Devuelve (dict, error). error None si el bloque esta bien formado."""
+def parse_frontmatter(text, raw=False):
+    """Devuelve (dict, error). error None si el bloque esta bien formado.
+
+    Con `raw=True` los valores se devuelven SIN normalizar por la derecha.
+    P248: un normalizador no puede borrar el defecto que el instrumento debe
+    detectar. `region: APAC ` se lee identico en Markdown, y si el compilador
+    de abajo NO limpia, es un balde nuevo que rompe el filtro -- asi que la
+    pregunta de vocabulario se hace contra el byte, no contra el valor ya
+    limpiado. El espacio que SEPARA la clave del valor si es sintaxis, y por
+    eso se saca siempre por la izquierda.
+    """
     lines = text.split("\n")
     if not lines or lines[0].strip() != "---":
         return None, "NO-FRONTMATTER"
@@ -57,14 +66,14 @@ def parse_frontmatter(text):
         if ":" not in ln:
             return None, "MALFORMED-LINE"
         k, v = ln.split(":", 1)
-        fields[k.strip()] = v.strip()
+        fields[k.strip()] = (v.lstrip(" \t") if raw else v.strip())
     return fields, None
 
 
 def findings_for(path, text):
     """Lista de (codigo, detalle) para un archivo."""
     found = []
-    fields, err = parse_frontmatter(text)
+    fields, err = parse_frontmatter(text, raw=True)
     if err:
         return [(err, "")]
     for key in REQUIRED:
@@ -72,8 +81,11 @@ def findings_for(path, text):
             found.append(("MISSING-KEY", key))
     region = fields.get("region")
     if region is not None and region not in REGIONS:
-        # el caso que importa: variante de vocabulario, no ausencia
-        found.append(("REGION-NOT-IN-VOCABULARY", region))
+        # el caso que importa: variante de vocabulario, no ausencia.
+        # El detalle se publica normalizado para que `Latam` y `Latam ` no
+        # abran dos hallazgos distintos; el CODIGO ya dice que no esta en
+        # vocabulario, y el byte crudo es lo que decidio el rechazo (P248).
+        found.append(("REGION-NOT-IN-VOCABULARY", region.strip()))
     return found
 
 
