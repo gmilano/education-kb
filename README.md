@@ -55,7 +55,7 @@ o la variable de entorno (regla de **P107**, pase 47):
 | ídem, la reproducción del agregado del pase 74 contra el commit que citó | `python3 reproduce_p224.py` — **182** subconjuntos evaluados, **1** reproduce `229/389` | `python3 reproduce_p224.py` | **3/3** ✅ *(nuevo en el pase 75)* |
 | ídem, la medición por cohorte **en un commit fijo** (el commit es parte de la invocación: ver tendencia **593**) | inversiones por `(segmento, unidad)` | `python3 measure.py --at 5dd2bcc` | 🔴 **7** en K-12 / 🟢 **1** en superior |
 | **`p243-frontmatter-coverage/`** | **la cobertura de *frontmatter* sobre los 59 `.md`, y el control NEGATIVO que importa: que 7 variantes de vocabulario regional (`Latam`, `Europe`, `Asia Pacific`, `Brazil`, `APAC `…) sean RECHAZADAS** | `python3 test_check_frontmatter.py` | 🟢 **23/23** *(era **22/23**: el pase 82 corrigió `P248` — ver abajo)* |
-| ídem, el barrido real sobre el árbol | ¿cuántos `.md` tienen `frontmatter` completo y `region` en vocabulario? | `python3 check_frontmatter.py` | 🟢 **59 de 59** |
+| ídem, el barrido real sobre el árbol | ¿cuántos `.md` tienen `frontmatter` completo y `region` en vocabulario? | `python3 check_frontmatter.py` | 🟢 **67 de 67** *(la celda decía **59** y estaba VENCIDA desde antes del pase 88: el árbol en `HEAD` ya traía **64** `.md`. Los 3 que suman hoy son los dos README de instrumento nuevos y el fixture de P267 — y como los 67 pasan, los 64 de `HEAD` también)* |
 | **`p249-channel-calibration/`** | **la compuerta de `P249`: que un canal de verificación se CALIBRE —200 a una URL buena, 404 a una inexistente— antes de que se le crea un negativo; con la medición literal del pase 81 (`403` × 81) como control negativo que debe salir `NO-CLAIM`** | `python3 test_calibrate.py` | 🟢 **20/20** *(nuevo en el pase 82)* |
 | ídem, el ledger vivo de los 4 canales | ¿cuál de los canales discrimina de verdad? | `sh sweep_channels.sh` | 🔴 **3 de 4 no discriminan** (`403`/`403`) · 🟢 `raw`+`HEAD` **CALIBRATED** |
 | **`p250-commercial-use-axis/`** | **el barrido de licencia Y uso comercial en DOS columnas, primero del catálogo que consume la librería COMPARTIDA en vez de traer su propio clasificador (`P237`)** | `cat slugs.input.txt \| xargs -P 8 -I{} sh ./sweep_commercial.sh {}` | 🟢 **42 `OK`** · 🔴 **1 `PROHIBIDO`** · ⚠️ **26 `SIN-DETERMINAR`** *(nuevo en el pase 82)* |
@@ -68,7 +68,51 @@ o la variable de entorno (regla de **P107**, pase 47):
 | ídem, el cruce con la capa MCP | ¿la ligadura vive en el servidor o en el host? | `cat slugs.input.txt \| xargs -P 8 -I{} sh ./mcp_layer.sh {}` | 🟢 **21 de 25 servidores MCP no ligan nada** · 🔴 4 sí |
 | **`p262-mandate-level/`** | **el eje de MANDATO CURRICULAR en tres columnas (nivel, vigencia, entrega), con la frase secundaria *«China and the UAE are the only nations running compulsory, national AI curricula»* como control negativo: la mitad china tiene que salir `SUBNATIONAL-PROVINCE`** | `python3 test_classify.py` | 🟢 **47/47** *(nuevo en el pase 88)* |
 | ídem, el reparto real de las 12 filas | ¿cuántos tramos obligan HOY, y cuántos piden asignatura propia? | ídem | 🟢 **4 obligan hoy** · 🔴 **0 piden asignatura propia** · 🟢 **4 de 4 integran** |
+| **`lib/region.py`** | **la pregunta de región, que son DOS preguntas con contratos OPUESTOS; el caso obligatorio es que las dos funciones DISIENTAN sobre la clase de divergencia** | `python3 test_region.py` | 🟢 **79/79** *(nuevo en el pase 89)* |
+| **`p265-region-contract/`** | **la matriz diferencial de la pregunta de región: 34 valores × 7 implementaciones, con el control POSITIVO del fixture de grafías plantadas** | `python3 test_measure.py` | 🟢 **30/30** *(nuevo en el pase 89)* |
+| ídem, la matriz medida | ¿qué responde hoy cada implementación del árbol? | `python3 measure.py` | 🔴 **1** discrepancia entre los validadores preexistentes · **18** de 34 con veredicto validador/detector OPUESTO |
+| ídem, el barrido de grafías sobre el árbol | ¿hay variantes de vocabulario que el detector normaliza en silencio? | `python3 measure_variants.py` | 🟢 **160** normalizadas, **0** accionables *(y el control negativo sin compuerta dio 8, los 8 falsos positivos)* |
+| **`p268-capability-surface/`** | **la SUPERFICIE de un conteo de capacidades, con el control NEGATIVO que importa: dos superficies que dicen LO MISMO no son conflicto** | `python3 test_surface.py` | 🟢 **25/25** *(nuevo en el pase 89)* |
+| ídem, el veredicto por repo | ¿se puede citar «N herramientas» sin nombrar la superficie? | `python3 surface.py` | 🔴 **0 de 3** citables · **2** repos se contradicen consigo mismos · **2** forks con claim congelado |
 
+
+🟢 **Pase 89 del 2026-10-04 — el tablero se re-verificó COMPLETO: 42 invocaciones de suite, 42 con
+código de salida 0** (`Python 3.11.15`). El total subió de **38** a **42** porque este pase agregó
+tres suites —`lib/test_region.py` (**79/79**), `p265-region-contract/test_measure.py` (**30/30**) y
+`p268-capability-surface/test_surface.py` (**25/25**)— y **ninguna preexistente se tocó**.
+
+🟢 **Y la re-verificación de este pase prueba algo más que el tablero, porque este pase MOVIÓ código
+de tres instrumentos:** `p262`, `p243` y `p239` dejaron de llevar su propia copia del vocabulario de
+región y pasan a delegar en `compose/code/lib/region.py` (**P263**). 🔵 **Los tres reprodujeron su
+total exacto de antes —47/47, 23/23 y 23 tests `OK`—, y eso es lo que hace que la migración sea una
+migración y no un cambio de comportamiento sin medir.** Las copias locales (`REGIONS`, `NORM_DROP`,
+`PAREN`) se **borraron**: una copia muerta es la invitación concreta a incumplir P263.
+
+🔴 **La corrección que este pase le hace a la regla del pase anterior, y es la lección de método:
+`P263` decía que la pregunta de región tenía que mudarse a `lib/`, y no se puede cumplir como estaba
+escrita, porque no hay UNA pregunta de región.** Hay dos —VALIDADOR y DETECTOR— que necesitan
+leniencia **contraria**, y ni los dos validadores coinciden: `p243` acepta `" APAC"` y `p262` lo
+rechaza, **y los dos tienen razón**, porque en YAML el blanco de la izquierda es sintaxis y en una
+celda de dato no. ⚠️ **Una sola función compartida habría reabierto `P248` o habría devuelto a `p239`
+los tres falsos positivos que su v1 pagó.** Ver **P265** y las tendencias **691**–**692**.
+
+🔴 **Y la corrección que este pase tiene que hacerse a sí mismo: el módulo compartido escrito para no
+volver a elegir un defecto eligió uno nuevo en su primera línea.** `regions_named()` salió con
+`strict=False` por default; `p239`, de donde salió el cuerpo, tiene `strict=True`. 🟢 **Lo encontró la
+matriz de P265**, al ver que la columna de la librería no coincidía con la del instrumento del que
+venía. 🔵 **De ahí `P266`, que es regla permanente de este repositorio al lado de la de P126: cuando
+una función tiene una versión segura y una lenient, la segura es el DEFAULT y la lenient se PIDE.** El
+contraejemplo estaba en el árbol desde el pase 82: `p243.parse_frontmatter(text, raw=False)` tiene la
+lectura que cierra P248 detrás de un argumento **no default**, así que el próximo llamador hereda la
+floja sin pedirla. ⚠️ **Una regla puede estar en la librería y seguir sin viajar.**
+
+⚠️ **Y una cifra de esta propia tabla estaba vencida, que es `P107` sobre el instrumento de `P107`:**
+la celda del barrido de *frontmatter* decía **59** y el árbol en `HEAD` ya traía **64** `.md`. 🔵 **La
+causa es la de siempre: una cifra de cobertura se vence cuando el árbol crece, y crece en todos los
+pases que agregan un instrumento** — así que la celda hay que remedirla en cada pase que agregue un
+directorio, no sólo cuando cambia el código que la produce.
+
+---
 
 🟢 **Pase 88 del 2026-10-04 — la columna «Hoy» se re-verificó COMPLETA, y era la primera vez en
 DOS pases que se pudo:** la ejecución estuvo **NEGADA** (`[Code from External]`) en los pases **84** y

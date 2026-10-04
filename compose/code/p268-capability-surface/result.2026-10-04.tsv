@@ -1,0 +1,11 @@
+slug	rol	superficies	conflicto_intra_repo	citable_sin_superficie	claim_congelado
+harrywang/canvas-mcp	FORK	DESCRIPTION=80	False	COTA-DE-INSTRUMENTO	True
+jsrodr/canvas-mcp	FORK	DESCRIPTION=80, README-BODY=99	True	NO-CITABLE	True
+vishalsachdev/canvas-mcp	UPSTREAM	DESCRIPTION=102, README-BODY=103	True	NO-CITABLE	False
+
+5 mediciones de superficie sobre 3 repos
+2 repos donde DOS superficies del MISMO repo se contradicen
+2 forks cuya DESCRIPCION repite un claim que el upstream ya no publica
+2 repos con veredicto NO-CITABLE
+1 repos con veredicto COTA-DE-INSTRUMENTO
+0 repos con veredicto CITABLE

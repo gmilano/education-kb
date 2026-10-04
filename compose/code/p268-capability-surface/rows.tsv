@@ -1,0 +1,11 @@
+# P268 — un conteo de capacidades tiene SUPERFICIE, y las superficies de un mismo repo
+# se contradicen. Medido por WebFetch el 2026-10-04 (pase 89); el proxy de egreso
+# devuelve 403 a `curl` y a `api.github.com`, asi que la lectura es de la pagina del repo.
+#
+# superficie: DESCRIPTION (el campo `description` del repo) | README-HEADER | README-BODY
+# slug	rol	superficie	herramientas	skills	release	licencia	estrellas
+vishalsachdev/canvas-mcp	UPSTREAM	DESCRIPTION	102	8	v1.13.0	MIT	274
+vishalsachdev/canvas-mcp	UPSTREAM	README-BODY	103	8	v1.13.0	MIT	274
+harrywang/canvas-mcp	FORK	DESCRIPTION	80	5	v1.12.0	MIT	0
+jsrodr/canvas-mcp	FORK	DESCRIPTION	80	5	v1.10.0	MIT	0
+jsrodr/canvas-mcp	FORK	README-BODY	99	NO-CLAIM	v1.10.0	MIT	0

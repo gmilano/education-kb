@@ -21,7 +21,16 @@ Uso:  python3 check_tables.py ARCHIVO.md [ARCHIVO.md ...]
 import re
 import sys
 
-REGIONS = ("North America", "EMEA", "APAC", "LATAM", "Global")
+# 🟢 Pase 89: el vocabulario y el DETECTOR vienen de `compose/code/lib/region.py` (P263).
+# Este instrumento es el unico de la base que hace la pregunta en su forma DETECTOR —«¿esta
+# celda publicada NOMBRA regiones?»—, que necesita leniencia CONTRARIA a la del validador de
+# `p243`/`p262`. Por eso la lib expone dos funciones y no una: ver P265 y la matriz de
+# `p265-region-contract/`, donde las dos dan veredicto opuesto en 18 de 34 valores.
+import os
+sys.path.insert(0, os.path.join(
+    os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "lib"))
+from region import REGIONS, regions_named  # noqa: E402
+
 SEP_RE = re.compile(r"^\|[\s:|-]+\|$")
 
 
@@ -71,41 +80,32 @@ def find_orphans(lines):
     return out
 
 
-NORM_DROP = re.compile(r"[^A-Za-z ]")          # emoji, **, backticks, numeros
-PAREN = re.compile(r"\s*\([^)]*\)")             # "APAC (Vietnam)" -> "APAC"
+# 🟢 Pase 89: `NORM_DROP` y `PAREN` se fueron con el cuerpo del detector a
+# `lib/region.py`. Dejarlas aqui muertas invitaba al proximo pase a reusar la copia —que es
+# la forma exacta en que P263 se incumple— asi que se borran en vez de quedarse de adorno.
 SCOPE = re.compile(r"<!--\s*p240-scope:\s*([^>]*?)\s*-->", re.I)
 
 
 def regions_in_cell(cell, strict=True):
-    """Regiones nombradas en UNA celda, normalizando lo que v1 no normalizaba.
+    """Regiones nombradas en UNA celda. Delega en `lib.region.regions_named`.
 
-    Los tres falsos positivos de la v1 de este instrumento, medidos sobre el
-    archivo publicado y corregidos antes de publicarlo:
+    🟢 Pase 89: el cuerpo se mudo a la lib (P263) y aqui queda la firma, porque este nombre
+    es el que el resto de este archivo y su suite usan. Lo que la lib conserva literal son
+    los tres falsos positivos que la v1 de este instrumento pago, medidos sobre el archivo
+    publicado:
+
       - `| 🔴 **LATAM** |`      el emoji impedia el match exacto
       - `| APAC (Vietnam) |`    el calificativo entre parentesis lo impedia
       - `| **APAC / LATAM** |`  una celda puede nombrar DOS regiones
+
+    y el arreglo de la v3, que es `strict=True` por default: la celda cuenta como celda de
+    REGION solo si no queda residuo, porque `86 % NA / 92 % LATAM` es una celda de CIFRAS y
+    `Ministerio..., APAC / LATAM / Africa` es una de PERFIL DE CLIENTE. Cuatro falsos
+    positivos mas, todos de esa causa.
+
+    🔵 Que el default sea el ESTRICTO es parte del contrato, no una comodidad: ver **P266**.
     """
-    c = PAREN.sub("", cell)
-    out, residue = set(), False
-    for part in re.split(r"[/,]| y ", c):
-        t = NORM_DROP.sub(" ", part)
-        t = re.sub(r"\s+", " ", t).strip()
-        if not t:
-            continue
-        hit = next((r for r in REGIONS if t.casefold() == r.casefold()), None)
-        if hit:
-            out.add(hit)
-        else:
-            residue = True
-    # En modo estricto la celda cuenta como celda de REGION solo si no queda
-    # nada mas que regiones. Es el arreglo de la v3: la v2 leia como region
-    # cualquier celda que CONTUVIERA el nombre de una, y reclamaba tablas cuya
-    # primera columna no es regional —`86 % NA / 92 % LATAM / 66 % APAC` es una
-    # celda de CIFRAS, y `Ministerio..., APAC / LATAM / Africa` es una de
-    # PERFIL DE CLIENTE—. Cuatro falsos positivos, todos de esta causa.
-    if strict and residue:
-        return set()
-    return out
+    return regions_named(cell, strict=strict)
 
 
 def find_region_gaps(lines):

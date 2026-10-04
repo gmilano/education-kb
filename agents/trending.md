@@ -9,6 +9,44 @@ updated: 2026-10-04
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 > No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
 
+## 2026-10-04 — pase 89: cero altas de agente, dos forks nuevos verificados que NO son altas, y el repo canónico del cohorte más grande de esta base se contradice consigo mismo
+
+🔴 **Cero altas en `agents/top.md`, y se declara en vez de rellenar.** El barrido obligatorio
+(`top open source AI agents education 2026 github MIT`) devolvió **frameworks generalistas** —openclaw
+385k ★, browser-use, Mem0, AutoGen, dify, Flowise—, que viven en la KB de `technology` y no son
+agentes educativos. El de GitHub trending volvió **vacío por decimoctava vez**, y conviene dejar
+escrita la causa medida: el canal lee *«AI education»* como **aprender SOBRE IA**
+(`ai-engineering-from-scratch`, Karpathy *Zero to Hero*, D2L), no como edtech.
+
+🟢 **Lo que sí rindió fue mirar un cohorte que esta base ya tenía.** Dos forks nuevos de
+`canvas-mcp`, verificados uno por uno por WebFetch hoy:
+
+| Repo | Fork de | Licencia | ★ | Lenguaje | Release | `description` |
+|---|---|---|---|---|---|---|
+| [`harrywang/canvas-mcp`](https://github.com/harrywang/canvas-mcp) | `vishalsachdev/canvas-mcp` | **MIT** | 0 | Python | v1.12.0 (ago-2026) | *«80+ tools and 5 agent skills»* |
+| [`jsrodr/canvas-mcp`](https://github.com/jsrodr/canvas-mcp) | `vishalsachdev/canvas-mcp` | **MIT** | 0 | Python | v1.10.0 (ago-2026) | *«80+ tools and 5 agent skills»* |
+
+🔴 **Y no entran como filas de `agents/top.md`, a propósito: son forks de un repo que ya está
+listado, con 0 ★ y sin divergencia de producto medida.** Sumarlos infla el catálogo con el mismo
+software contado tres veces — que es exactamente lo que `P251` y `description-drift-audit/` existen
+para evitar.
+
+⚠️ **`EastArctica/canvas-mcp`, que el canal devolvió como repo vivo con la misma descripción, da
+404.** No se escribe como fila: un 404 no es un hallazgo.
+
+🔴 **El hallazgo del pase está en el UPSTREAM, y es de método: se contradice consigo mismo.**
+[`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) (MIT, **274 ★**, **94
+forks**, v1.13.0 de sep-2026) publica **102** herramientas en su campo `description` y **103** en el
+cuerpo de su README — misma lectura, mismo día. 🔵 **Así que un conteo de capacidades tiene
+SUPERFICIE, y de los 3 repos medidos del cohorte CERO es citable sin nombrarla.** Instrumento con
+suite: [`compose/code/p268-capability-surface/`](../compose/code/p268-capability-surface/),
+**25/25**. Ver **`P268`** y la tendencia **697**.
+
+🔵 **Consecuencia para el catálogo entero de esta KB, no sólo para estas tres filas:** cada vez que
+`agents/top.md` cita «N herramientas», esa N salió de una superficie que no está anotada. **No se
+corrige retroactivamente en este pase** —exigiría re-leer 94 filas y el proxy bloquea
+`api.github.com`— pero queda registrado como lo que es: una cota de la columna, no un dato firme.
+
 ## 2026-10-04 — pase 88: las dos altas son de 15 ★ y 3 ★, y lo que mueve el tablero es que el mandato que todos citan como nacional es, medido, municipal
 
 🔴 **El eje generalista vuelve vacío por SEXTO pase consecutivo.** Las cuatro búsquedas globales

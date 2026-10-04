@@ -8,6 +8,7 @@ updated: 2026-10-04
 
 > Key players, market map y oportunidades por región.
 > Investigado 2026-09-30; el pase 11, el 2026-10-01. Las estimaciones de tamaño de mercado varían mucho entre firmas: se listan todas con su fuente en vez de elegir una.
+> **Pase 89 del 2026-10-04:** 🔴 **Decimoctavo barrido regional (año CALCULADO: 2026) y las CUATRO regiones devolvieron material que esta base YA tiene publicado — saturación, verificada por `grep` contra el árbol antes de escribir esta línea.** 🔵 **Se declara región por región en vez de dejar el silencio, porque un hueco informado es información y el silencio se parece exactamente a la cobertura.** 🟢 **Lo único que el canal externo rindió este pase no es regional sino de MÉTODO, y reencuadra una acción abierta desde el pase 10: un conteo de capacidades tiene SUPERFICIE, el repo canónico de Canvas dice 102 en su descripción y 103 en su README, y de 3 repos medidos CERO es citable sin nombrar la superficie (`P268`).** 🔴 **Consecuencia directa para este archivo: la comparación `227` vs `165` que esperaba permiso de red queda REENCUADRADA, no desbloqueada — aunque llegara la red, los dos números podían venir de superficies distintas y entonces nunca fueron comparables.**
 > **Pase 87 del 2026-10-04:** 🟢 **Decimosexto barrido regional (año CALCULADO: 2026) y las CUATRO regiones vuelven a rendir dato nuevo, por segundo pase consecutivo — pero el eje que las separa ya no es regulatorio, es de BRECHA ENTRE USO Y GOBIERNO.** 🔴 **El número que ordena el pase: en NA se legisla mucho y se instruye poco —134 proyectos de ley sobre AI educativa en 31 estados, y a la vez sólo el 18 % de los docentes de K-12 recibe guía ESCRITA y el 34 % no recibe ninguna.** 🟢 **LATAM es la región de MAYOR adopción medida del mundo en superior (92 % de alumnos, 79 % de docentes, Digital Education Council 2026) y la de regulación MÁS fragmentada (Brasil, Chile, CONPES 4144 de Colombia, reglas sectoriales de México a velocidades distintas).** 🔵 **EMEA tiene la fecha dura que las demás no tienen: el AI Act clasifica admisión, evaluación y corrección de exámenes como ALTO RIESGO, y sus enmiendas de junio 2026 entraron en vigor el 27-jul-2026 con aplicación corrida a 2-dic-2027 (autónomos) y 2-ago-2028 (embebidos).** 🟢 **APAC es la región que paga: 96 % de las organizaciones aumentan inversión en AI en 2026 y esperan USD 2,85 por dólar — con Corea del Sur (22-ene-2026) y Vietnam (1-mar-2026) ya con ley marco vigente.** 🔴 **Y la cota, por decimosexta vez: CERO fuentes primarias de norma en las cuatro regiones; el proxy de egreso bloquea los sitios oficiales y `arxiv.org`, así que toda la regulación de esta sección es de secundarias concordantes.**
 > **Pase 73 del 2026-10-03:** 🔴 **Las cuatro búsquedas regionales obligatorias se corrieron (año CALCULADO: 2026) y por TERCER pase consecutivo las cuatro devolvieron material que esta base ya tenía publicado** —NA: los 134 proyectos en 31 estados, el 86 %, el *Traffic Light* y el STUDENTS FIRST Act; EMEA: el calendario del AI Act y la clasificación de alto riesgo; APAC: el 96 %, el 66 %, el ROI de US$ 2,85 y la Basic AI Act coreana; LATAM: la encuesta del Digital Education Council (92 % / 79 % / 94 % / 61 %) con el Tec de Monterrey, AIGEN y RIE360, más Chile y el CONPES 4144—. 🔵 **Saturación confirmada por tercera vez (tendencia **567**): el canal se sigue corriendo porque es obligatorio y porque un cambio de régimen hay que verlo, con rendimiento marginal medido CERO.** 🟢 **Lo nuevo de las cuatro regiones es, en las cuatro, un ARTEFACTO de código:** NA el piloto **sin expediente** (`purdue-mcp`, sin credencial) y Blackbaud (`myschoolapp-mcp`); EMEA el portal de un *Land* y un problema de **INSTRUMENTO** de licencia (Unlicense en derecho alemán); APAC el **reporte obligatorio al Estado ya construido y MIT** (`open-academic`, PDDIKTI); LATAM, por segundo pase seguido, **la pieza mejor gobernada de la base** (`CaioCastro1/usp-mcp`).
 > **Pase 72 del 2026-10-03:** 🔴 **Las cuatro búsquedas regionales obligatorias se corrieron (año CALCULADO: 2026) y el resultado es el hallazgo del barrido: las CUATRO devolvieron el inventario propio de esta base.** North America repitió los $951 M → $2.303,2 M del pase 44, la terna irreconciliable de $3,37 B del 52 y el *«no hay equivalente a la FDA»* del 34; EMEA repitió el *AI Adoption Summit* británico de £200 M y la conferencia del Consejo de Europa del 34; APAC repitió el 48 %/57 % de gobernanza *enterprise*; LATAM repitió UNESCO-IESALC entero —200 instituciones, 19 países, 73,5/57,0/34,1/20,0 % y 26,0/18,5/9,0/8,0 %—, que esta base tiene desde los pases 44, 52 y 68. 🔵 **Con cuatro de cuatro devolviendo lo propio, el barrido de MERCADO por región está saturado como canal de descubrimiento, igual que le pasó al de agentes en el pase 48** (tendencia **567**). 🟢 **Lo nuevo de este pase vino todo por el canal de FUNCIÓN y por PAÍS en el idioma del país: APAC rompe su hueco de CÓDIGO abierto desde el pase 69** (`codit04/TechMCP`, MIT, PSG College of Technology, India) **y LATAM vuelve a la capa de código tras tres pases** (`iDavi/usp-mcp` + `heidy_backend`, GPL-3.0, USP). 🟢 **Y NA aporta un ARTEFACTO que vale más que una cifra repetida:** `chrischall/infinitecampus-mcp` embarca FERPA, COPPA y la admisión de posible violación de ToU **dentro del repositorio** — el primer expediente de esta base que viaja como archivo de código. ⚠️ **Único aporte cualitativo del barrido: la divisoria PÚBLICA/PRIVADA de LATAM** — son dos ofertas distintas, no una con descuento.
@@ -55,6 +56,101 @@ updated: 2026-10-04
 > regulado — **STUDENTS FIRST Act of 2026**, marco de los estudiantes de los 50 estados (AASA, agosto 2026).
 > **LATAM:** 🔵 el hallazgo del pase — **existe una capa MCP nacional brasileña de datos públicos, activa y MIT, y
 > educación es el único dominio grande que falta** (**gap 69**).
+
+## 🔴 Decimoctavo barrido regional: las cuatro regiones SATURADAS, declarado región por región en vez de dejar el silencio (pase 89 del 2026-10-04)
+
+> Las cuatro búsquedas obligatorias se corrieron con el año **CALCULADO** (2026), no fijado. Las
+> cuatro devolvieron material ya publicado en esta base. 🔵 **Un hueco informado es información; el
+> silencio se parece exactamente a la cobertura**, así que las cuatro subsecciones de abajo existen
+> igual y dicen qué trajo cada canal y contra qué sección del árbol se verificó.
+
+### 🔴 El barrido obligatorio, canal por canal
+
+| Canal | Consulta corrida | Resultado |
+|---|---|---|
+| Agentes OSS | `top open source AI agents education 2026 github MIT` | 🔴 devolvió frameworks GENERALISTAS (openclaw 385k ★, browser-use, Mem0, AutoGen, dify, Flowise) — nada de educación; los generalistas viven en la KB de `technology`, no acá |
+| GitHub trending | `github trending education AI 2026` | 🔴 **vacío por decimoctava vez.** Y con una causa que conviene dejar escrita: el canal lee *«AI education»* como **aprender SOBRE IA** (`ai-engineering-from-scratch`, Karpathy *Zero to Hero*, D2L), no como edtech |
+| Plataformas | `open source platform education ERP CRM student information system MIT Apache 2026` | 🔴 devolvió `OpenEduCat` (300 módulos, 65 idiomas, 45 localizaciones, sobre Odoo) — **ya archivado**, igual que las otras siete |
+| Tendencias | `AI education industry trends 2026` | 🔴 US$ 7,52 B (2025) → **10,6 B (2026)**, CAGR 40,9 %; 66 % → 92 % de alumnos; 86 % en superior; 71,22 % cloud — **las cuatro cifras ya publicadas** |
+
+## Opportunities by region — agregado del pase 89
+
+### North America
+
+🔴 **Saturado.** El canal devolvió los **US$ 951 M (2024) → 2.303,2 M (2029), CAGR 15,9 %** de
+MarketsandMarkets y el encuadre de vacío regulatorio con **Colorado y Texas** como los dos estados
+con requisitos parciales — las tres cosas ya están en este archivo (pases 19 y 87) y en
+`intel/trends.md` (tendencias 680, 688).
+
+🟢 **Lo que sí sostiene la oportunidad de NA este pase es de `P268` y es cotizable:** el cohorte
+`canvas-mcp` —que es **infraestructura de NA**, sobre Canvas LMS— tiene **94 forks** sobre el
+upstream y los dos forks nuevos medidos hoy publican un conteo de capacidades **congelado** en
+`80+ / 5 skills` contra las `102–103 / 8` del upstream. 🔵 **La propuesta concreta: una auditoría de
+superficie antes de adoptar un fork**, porque la descripción del fork es lo que un comprador lee y es
+lo que está vencido.
+
+### EMEA
+
+🔴 **Saturado.** El canal devolvió el calendario del **AI Act** (alto riesgo para admisión,
+evaluación y corrección; enmiendas vigentes 27-jul-2026, aplicación 2-dic-2027 y 2-ago-2028), la
+**2ª Working Conference del Council of Europe** sobre dimensiones regulatorias de IA en educación
+(octubre 2026), el **Europe EdTech 200+ de QS** y el **AI Adoption Summit del Reino Unido** (£200 M+,
+con Cisco, IBM, BT y Rolls-Royce como *delivery partners*) — **los cuatro ya publicados**.
+
+⚠️ **La cota, por decimoctava vez: CERO fuentes primarias de norma.** El proxy de egreso bloquea los
+sitios oficiales y `arxiv.org`, así que toda la regulación de esta sección sigue siendo de
+**secundarias concordantes**. 🔵 **Eso no cambió este pase y no se va a cerrar leyendo más
+secundarias: lo que hay que pedir es salida de red para los dominios oficiales.**
+
+### APAC
+
+🔴 **Saturado.** El canal devolvió el **96 %** de organizaciones que aumentan inversión en IA, el
+ROI esperado de **US$ 2,85 por dólar**, el 57 % con IA ya incorporada, el 48 % de líderes de
+gobernanza que la ponen como prioridad 2026, y las consultas de **Singapur** — todo ya publicado.
+Los nombres de proveedor que trajo (LearnUpon con HQ en Sídney, NIIT MTS, la alianza TCS–Pearson,
+Alteryx Academy) son **corporate learning propietario**, no edtech open source: no entran a este
+inventario.
+
+🟢 **Lo que queda en pie de los pases 87 y 88 y sigue siendo la oportunidad más dura de la región:**
+el mandato de Pekín es **provincial**, no nacional (`P262`), así que un producto K-12 cotizado «para
+el mandato nacional chino» tiene mercado direccionable **municipal**. Esa corrección no la tocó este
+barrido y sigue siendo el dato que ordena la región.
+
+### LATAM
+
+🔴 **Saturado.** El canal devolvió el *working paper* de **UNU/UNESCO** sobre implementación de IA en
+educación superior en América Latina y el Caribe —**encuesta regional a 200 instituciones de 19
+países, agosto-octubre 2025**, en cinco dimensiones (enseñanza, investigación, vinculación,
+administración, gobernanza)—, la encuesta del **Digital Education Council** (92 % de alumnos / 79 %
+de docentes) y el marco regulatorio del **BID** para la región; **los tres ya publicados**. El resto
+—99 % de startups LATAM con IA interna, 85 % nativa en producto, tercer mercado mundial de descargas
+de apps GenAI— es **transversal, no educativo**, y entra sólo como contexto.
+
+🔵 **Y la oportunidad de LATAM sigue siendo la de regulación FRAGMENTADA, sin cambio este pase:**
+Brasil, Chile, el CONPES 4144 de Colombia y las reglas sectoriales de México a velocidades distintas,
+sobre la **mayor adopción medida del planeta en superior**. 🟢 **Un dato de `P262` que esta sección
+puede usar y no estaba conectado: CABA es la única ciudad de América Latina con IA curricular
+obligatoria**, y como los otros tres tramos vigentes del mundo, **pide contenido INTEGRADO** en
+materias que ya están en el horario — no una asignatura propia.
+
+### 🔴 Lo que este barrido NO cerró, declarado en vez de rellenado
+
+1. 🔴 **Las cuatro regiones, saturadas en el mismo pase.** Es la primera vez desde el pase 85 que las
+   cuatro vuelven vacías a la vez. 🔵 **El canal se sigue corriendo porque es obligatorio y porque un
+   cambio de régimen hay que verlo, con rendimiento marginal medido CERO** — y por cuarto pase
+   consecutivo lo que rindió fue una dimensión **interna** (tendencia **698**).
+2. ⚠️ **CERO fuentes primarias de norma, por decimoctava vez.** El permiso que hay que pedir es
+   salida de red para los dominios oficiales y `arxiv.org`, no más búsquedas.
+3. 🔴 **La comparación `227` vs `165` de las superficies de Canvas NO se desbloqueó: se
+   REENCUADRÓ.** `P268` midió que un conteo de capacidades depende de la superficie donde se lee, y
+   que el upstream se contradice consigo mismo (102 vs 103). 🔵 **Así que el permiso de red, cuando
+   llegue, no alcanza: hay que nombrar la superficie de cada número antes de restarlos.**
+4. 🟢 **Lo que este pase SÍ puede ofrecer y antes no: una auditoría de superficie de capacidades**
+   como entregable de pre-adopción, con instrumento y suite
+   ([`compose/code/p268-capability-surface/`](../compose/code/p268-capability-surface/), **25/25**).
+   De **3** repos medidos del cohorte más grande de la base, **0** tienen un conteo citable sin
+   nombrar la superficie.
+
 
 ## 🔴 Decimoséptimo barrido regional: las cuatro regiones rinden, y el eje que las ordena es el NIVEL de la autoridad que firma el mandato — porque el mandato que todos citan como nacional es municipal (pase 88 del 2026-10-04)
 

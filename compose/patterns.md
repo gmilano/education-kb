@@ -8,6 +8,7 @@ updated: 2026-10-04
 
 > Recetas concretas: repos nombrados, licencias verificadas, wiring explícito y estimación.
 > Todos los repos citados fueron verificados vía WebFetch el 2026-09-30; los del pase 11, el 2026-10-01 (ver `agents/top.md`).
+> **Pase 89 del 2026-10-04:** 🆕 **Los patrones nuevos son **P265**, **P266**, **P267** y **P268**, y los cuatro salen de medición de este pase.** **P265** refuta la regla que el pase 88 dejó escrita: la pregunta de región son DOS preguntas con leniencia CONTRARIA, y ni los dos validadores coinciden —el veredicto depende de la SINTAXIS DEL PORTADOR—. **P266** es la regla que salió del fallo del propio módulo compartido: el comportamiento endurecido va en el DEFAULT, no detrás de un flag. **P267** mide que un vocabulario cerrado se enforcea en un portador y no en el otro (160 normalizaciones silenciosas, 0 accionables). **P268** le pone superficie a un conteo de capacidades: el repo canónico de Canvas dice **102** en su descripción y **103** en su README, y de 3 repos medidos **CERO** es citable sin nombrar la superficie. 🟢 **Y la receta nueva es `R-SUPERFICIE`: la auditoría de pre-adopción que esta base puede entregar hoy, con instrumento y suite, antes de que un engagement se pare sobre un fork cuyo claim está congelado.**
 > **Pase 88 del 2026-10-04:** 🆕 **Los patrones nuevos son **P262**, **P263** y **P264**, y los tres salen de medición de este pase.** **P262** convierte «hay mandato curricular de IA» en tres columnas —NIVEL, VIGENCIA, ENTREGA— y con eso refuta la frase que la prensa secundaria repite: lo de China es **municipal**, no nacional. **P263** es la regla que salió del fallo del propio instrumento: `P248` **regresó** a seis pases de distancia porque vivía dentro de un archivo y no en la librería compartida. **P264** separa «región del proveedor» de «región del currículo que sirve». 🟢 **Y la receta nueva es `R-MANDATO`: la capa de contenido curricular integrado sobre el LMS instalado, que es —medido— lo único que los 4 mandatos vigentes del mundo realmente compran.**
 > **Pase 87 del 2026-10-04:** 🆕 **Los patrones nuevos son **P259**, **P260** y **P261**, y los tres salen de medición de este pase.** **P259** acota el instrumento del pase 86: la ligadura de proveedor puede vivir en la CONFIGURACIÓN y no en el manifiesto, así que un barrido de dependencias no la ve y el cero de `SWAPPABLE` es cota y no propiedad. **P260** separa dos preguntas que esta base venía haciendo como una: «¿hay paquete?» y «¿está vigente?» — se leen de la API JSON de PyPI y en el estante nuevo dan 6 y 1 respectivamente. **P261** fija cómo se declara región sin violar `P135`: desde la bio, el sitio y la ubicación declaradas por la ORGANIZACIÓN, nunca desde un antropónimo. 🟢 **Y la receta nueva es `R-PSICO`: la capa adaptativa sobre el LMS que el cliente ya tiene, con `EduCDM` como dependencia, el resto vendorizado, y la compuerta de alto riesgo del AI Act declarada por delante.**
 > **Pase 86 del 2026-10-04:** 🆕 **Los patrones nuevos son **P257** y **P258**, y los dos salen de medición de este pase: P257 convierte la palabra `lock-in` —que estaba en los ocho archivos de este árbol sin un solo instrumento— en una pregunta con respuesta reproducible, y P258 es la regla que salió del SEGUNDO fallo del propio instrumento. 🔵 **Y la receta nueva (`R-86`) es la primera de esta base que se puede cotizar con una cifra de ligadura por pieza.**
@@ -113,6 +114,166 @@ updated: 2026-10-04
 > no existe en open source permisivo).
 > **Pase 11:** +2 patrones — **P25** (riesgo de abandono conforme al Anexo III, la capa con presupuesto ya asignado y sin oferta open source) y **P26** (agente docente sobre la ontología curricular nacional ya publicada).
 > **Pase 27:** **+4 patrones y una corrección.** 🔴 **P51 queda con premisa falsa** —el conector MCP de Moodle **sí existe y es MIT**— y lo reemplazan **P54** (corrección y devolución sobre Moodle con **compuerta humana**, el último tramo del gap 6, con piezas que ya escriben), **P55** (el conector de **Open edX**, que es el único que de verdad no existe), **P56** (**SCORM** como formato de salida de la capa generativa: cero integración, offline) y **P57** (evidencia por MCP cotizada sobre lo que CaSS **realmente** expone — 6 de 61 operaciones, con insignias y autoría de marcos **fuera**).
+
+## 🧩 P265–P268 y la receta `R-SUPERFICIE`: una regla compartida tiene contrato, y un número tiene superficie (pase 89 del 2026-10-04)
+
+> **El eje del pase: el pase 88 escribió `P263` —«la pregunta de región se muda a `lib/`»— y este
+> pase fue a cumplirlo. La regla no sobrevivió al contacto, y lo que quedó en su lugar es más útil.**
+> Instrumentos con suite: [`lib/region.py`](code/lib/) (**79/79**),
+> [`p265-region-contract/`](code/p265-region-contract/) (**30/30**),
+> [`p268-capability-surface/`](code/p268-capability-surface/) (**25/25**). `Python 3.11.15`.
+> 🟢 **Tablero completo re-verificado: 42 suites, 42 con código de salida 0.**
+
+### 🆕 P265 — Antes de compartir una regla, hay que medir si es UNA regla
+
+🔴 **`P263` daba por sentado que había una pregunta de región. Hay dos, y necesitan leniencia
+contraria.** La matriz: **34 valores × 7 implementaciones**, todas invocadas por su superficie
+pública.
+
+| Pregunta | Quién la hace | Qué necesita | `"APAC "` | `🔴 **LATAM**` |
+|---|---|---|---|---|
+| **VALIDADOR** | `p243` (frontmatter), `p262` (filas) | rigor: un valor fuera de vocabulario es un balde nuevo | RECHAZA | RECHAZA |
+| **DETECTOR** | `p239` (tablas publicadas) | leniencia: mide prosa, con emoji y negrita | acepta | acepta |
+
+**El procedimiento, que es lo transferible:**
+
+1. **Enumerar los llamadores** antes de escribir la función compartida. `grep` por el vocabulario,
+   no por el nombre de la función: la copia local casi nunca se llama igual.
+2. **Invocar cada implementación por su superficie pública**, no reimplementarla. Si hay que
+   reescribirla para medirla, lo que se mide es la reescritura.
+3. **Correr una matriz de valores, no un caso bueno.** Las clases que rindieron acá: `EXACTO`,
+   `P248` (blanco pegado), `CASO` (capitalización), `ADORNO` (markup), `MULTIPLE`, `RESIDUO`,
+   `BALDE` (variante fuera de vocabulario), `AUSENTE`.
+4. **Si dos implementaciones discrepan, la pregunta es por qué ANTES de unificarlas.** Acá la
+   respuesta fue que las dos tenían razón.
+5. **Afirmar la divergencia en la suite como caso obligatorio.** Si la divergencia no está
+   afirmada, el próximo pase la "arregla".
+
+🔴 **El resultado medido: 18 de 34 valores dan veredicto OPUESTO entre validador y detector.** Esa
+divergencia **es el contrato**. Unificarlas en una función habría reabierto `P248` o habría devuelto
+a `p239` los tres falsos positivos que su v1 pagó.
+
+### 🆕 P266 — El comportamiento endurecido va en el DEFAULT, no detrás de un flag
+
+🔴 **El caso que lo produjo es el peor posible: el módulo compartido escrito para no volver a elegir
+un defecto eligió uno nuevo en su primera línea.** `regions_named()` salió con `strict=False` por
+default; `p239`, de donde salió el cuerpo, tiene `strict=True`.
+
+⚠️ **Y el contraejemplo ya estaba en el árbol desde el pase 82:**
+`p243.parse_frontmatter(text, raw=False)` tiene la lectura que cierra `P248` **detrás de un argumento
+no default.** El instrumento es correcto porque su único llamador pasa `raw=True` — **el próximo que
+importe la función hereda la floja sin pedirla.**
+
+🟢 **La regla, aplicable a todo `lib/`:**
+
+| | |
+|---|---|
+| 🔴 **Mal** | `def leer(x, seguro=False)` — hay que acordarse de pedir lo seguro |
+| 🟢 **Bien** | `def leer(x, lenient=False)` — lo seguro es lo que pasa si no se dice nada |
+
+🔵 **Y el encuadre que corrige a `P263`: una regla puede estar en la librería y seguir sin viajar.**
+Vive en el lugar correcto y la elige quien pasa el argumento correcto — que es otra forma de «hay que
+acordarse», exactamente lo que `lib/` existe para eliminar.
+
+### 🆕 P267 — Un vocabulario cerrado se enforcea por PORTADOR, así que hay que medir los dos
+
+🔴 **`p243` reclama `region: Latam` en el frontmatter. La misma grafía en una celda de tabla la
+normaliza el detector y no se reporta nunca.** El vocabulario que esta base declara cerrado estaba
+cerrado en un portador y abierto en el otro.
+
+Medido sobre el árbol real (**66** `.md` = los 67 del árbol menos el fixture plantado): **160** celdas normalizadas en silencio, **todas** de
+clase `MARKUP` (formato), **0** accionables. 🟢 **El árbol está limpio y el hueco es LATENTE: el
+instrumento es guarda, no limpieza.**
+
+**Las dos compuertas que el instrumento necesitó, y son el patrón:**
+
+| Compuerta | Sin ella | Por qué |
+|---|---|---|
+| **Clasificar formato vs grafía** | 172 hallazgos, **164** eran `**LATAM**` | negrita es formato, no una variante de vocabulario |
+| **Gatear por el veredicto del instrumento auditado** | 8 hallazgos, **8** falsos positivos | la población no es «toda celda»: es «las celdas que `p239` CUENTA como celdas de región» |
+
+⚠️ **Los dos errores tienen la misma forma —una cifra grande que parece hallazgo y es una población
+mal elegida— y los dos los encontró comparar la cifra contra lo que el instrumento viejo ya sabía.**
+🔵 **Y el cero exige control positivo:** un fixture con dos grafías plantadas (una `CASO`, una
+`SEPARADOR`) más dos de vocabulario con negrita y una exacta, que el barrido tiene que encontrar
+**exactamente**. Un cero sin control positivo no se puede distinguir de un instrumento muerto.
+
+### 🆕 P268 — Un conteo de capacidades tiene SUPERFICIE, y las superficies del mismo repo se contradicen
+
+Leído por WebFetch el **2026-10-04** (el proxy devuelve **403** a `curl` y a `api.github.com`):
+
+| Repo | Rol | `DESCRIPTION` | `README-BODY` | Release | Lic. | ★ | Veredicto |
+|---|---|---|---|---|---|---|---|
+| [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | UPSTREAM | **102** / 8 skills | **103** | v1.13.0 (sep-2026) | MIT | 274 | 🔴 `NO-CITABLE` |
+| [`jsrodr/canvas-mcp`](https://github.com/jsrodr/canvas-mcp) | FORK | **80+** / 5 skills | **99** | v1.10.0 (ago-2026) | MIT | 0 | 🔴 `NO-CITABLE` |
+| [`harrywang/canvas-mcp`](https://github.com/harrywang/canvas-mcp) | FORK | **80+** / 5 skills | — | v1.12.0 (ago-2026) | MIT | 0 | ⚠️ `COTA-DE-INSTRUMENTO` |
+
+🔴 **El upstream dice 102 en su descripción y 103 en su README, el mismo día y en la misma lectura.**
+🔵 **Y el fork no sólo congela el claim viejo: hereda la contradicción y la agranda.**
+
+**Las tres columnas del patrón:**
+
+| Columna | Pregunta | Valores |
+|---|---|---|
+| `superficie` | ¿de dónde se leyó el número? | `DESCRIPTION` · `README-HEADER` · `README-BODY` |
+| `conflicto_intra_repo` | ¿dos superficies del mismo repo discrepan? | sí / no |
+| `citable_sin_superficie` | ¿se puede citar el número a secas? | `CITABLE` · `NO-CITABLE` · `COTA-DE-INSTRUMENTO` |
+
+⚠️ **El tri-estado es obligatorio:** un repo con **una sola** superficie medida no está «de acuerdo
+consigo mismo», **no se midió**. La primera versión lo daba por `CITABLE`. Y `NO-CLAIM` **no es
+cero**: un conteo ausente no entra a la comparación como un conteo bajo.
+
+🔴 **La consecuencia para esta base: la acción abierta desde el pase 10 (`227` vs `165` de Canvas)
+queda REENCUADRADA, no desbloqueada.** Aunque llegara el permiso de red, restar dos números sin saber
+de qué superficie salió cada uno no produce una comparación.
+
+⚠️ **Y la regla de siempre, ejercida: `EastArctica/canvas-mcp`, que el canal devolvió como repo vivo
+con la misma descripción que los demás, da 404. No se escribió como fila.**
+
+## 🆕 `R-SUPERFICIE` — Receta: auditoría de superficie de capacidades antes de adoptar un fork
+
+**El problema del cliente, concreto:** un engagement elige un servidor MCP educativo por su
+descripción —*«80+ tools and 5 agent skills»*— y descubre en integración que el upstream va por
+`102–103 / 8` y que el fork elegido está **dos releases atrás**. La descripción es lo que el
+comprador lee y es justamente lo que está vencido.
+
+**Qué se compone, todo verificado en este pase:**
+
+| Pieza | Rol en la receta | Licencia |
+|---|---|---|
+| [`compose/code/p268-capability-surface/`](code/p268-capability-surface/) | el clasificador y su suite (**25/25**): conflicto intra-repo, claim congelado, citabilidad tri-estado | de esta KB |
+| [`compose/code/description-drift-audit/`](code/description-drift-audit/) | la deriva de descripción **entre** fork y upstream, que es el eje complementario | de esta KB |
+| [`compose/code/fork-lineage-audit/`](code/fork-lineage-audit/) | quién es el padre real del fork (`P251`/`P193`) | de esta KB |
+| [`compose/code/lib/license_family.sh`](code/lib/) | la familia de licencia por bloque de título (`P171`), **12/12** | de esta KB |
+| [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | el upstream canónico del cohorte, MIT, 274 ★, v1.13.0 | MIT |
+
+**El wiring, en el orden en que hay que correrlo:**
+
+1. **Resolver el padre real** con `fork-lineage-audit/` antes de leer cualquier número: un claim de un
+   fork de un fork no se compara contra el upstream equivocado.
+2. **Leer las TRES superficies** de cada candidato —`description`, encabezado del README, cuerpo del
+   README— y cargarlas en `rows.tsv` con **una fila por superficie**. Una fila por repo es
+   exactamente lo que oculta el conflicto.
+3. **Correr `surface.py`.** Lo que decide la adopción no es el número más alto: es el veredicto.
+   `NO-CITABLE` significa que el repo no sabe cuántas herramientas tiene, y eso es una señal de
+   mantenimiento, no un detalle de documentación.
+4. **Correr `description-drift-audit/`** para separar «el fork cambió el producto» de «el fork
+   heredó el texto».
+5. **Correr `lib/license_family.sh`** sobre el payload de licencia del candidato, no sobre el badge:
+   `P171` existe porque el badge y el texto no son la misma lectura.
+6. **Entregar la tabla de veredictos**, no el número. El entregable es «de N candidatos, M tienen
+   conteo citable», que es una afirmación reproducible.
+
+**Estimación:** **1–2 semanas** para un cohorte de hasta 15 candidatos, incluyendo la lectura manual
+de superficies (el proxy bloquea `api.github.com`, así que la lectura es por página y no se
+automatiza en este entorno).
+
+🔴 **La cota honesta de esta receta: hoy sólo mide lo que el repo DICE, no lo que el servidor
+EXPONE.** Contar las herramientas realmente registradas exige levantar el servidor, y eso es
+`npm-surface-probe/` **con red** — que es justamente el permiso que esta base viene pidiendo desde el
+pase 52. 🔵 **Lo cual no invalida la receta: un repo cuyas propias superficies se contradicen ya es
+accionable antes de levantar nada.**
+
 
 ## 🧩 P262–P264 y la receta `R-MANDATO`: contenido curricular integrado sobre el LMS instalado (pase 88 del 2026-10-04)
 

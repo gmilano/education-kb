@@ -8,6 +8,33 @@ updated: 2026-10-04
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 
+## 2026-10-04 — pase 89: el barrido de GitHub trending vuelve vacío por DECIMOCTAVA vez, y este pase mide por qué el canal no puede rendir
+
+🔴 **Cero altas, declarado en vez de rellenado.** `github trending education AI 2026` devolvió, otra
+vez, repos de **aprender sobre IA** y no de edtech: `rohitg00/ai-engineering-from-scratch` (que llegó
+a #1 de GitHub Trending el 24-may-2026), *Neural Networks: Zero to Hero* de Karpathy, *Dive into Deep
+Learning*, `speedyapply/2026-AI-College-Jobs` (5,2k ★), *Awesome LLM*.
+
+🔵 **Y esta vez el pase midió la causa en vez de volver a anotar el vacío: el canal resuelve la
+cadena «AI education» al sentido APRENDER SOBRE IA.** Las dieciocho corridas vacías no son dieciocho
+señales de que no hay repos de edtech: son **una** señal, sobre la consulta. 🔴 **La consecuencia de
+método: seguir corriendo la misma cadena no es evidencia acumulada. Lo que haría falta es entrar por
+la PLATAFORMA** —`moodle`, `canvas-lms`, `open-edx`, `xapi`, `oneroster`, `scorm`— que es por donde
+entraron todas las altas reales de esta base desde el pase 10.
+
+🔴 **El barrido de plataformas tampoco rindió:**
+`open source platform education ERP CRM student information system MIT Apache 2026` devolvió
+`OpenEduCat` (300 módulos, 65 idiomas, 45 localizaciones, construido sobre Odoo) y las otras siete que
+ya están archivadas —`ERPNext`/`frappe-education`, `Apache OFBiz`, `OpenSIS`, `Moodle`, `Open edX`,
+`Kolibri`, `INGInious`—, **verificado por `grep` contra el árbol antes de escribir esta línea.**
+
+🟢 **Lo único verificado de primera mano este pase, y no vino de trending sino de un cohorte ya
+archivado:** dos forks nuevos de `canvas-mcp` (`harrywang`, MIT, 0 ★, v1.12.0; `jsrodr`, MIT, 0 ★,
+v1.10.0) y el upstream [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) hoy
+en **274 ★ / 94 forks / v1.13.0**. ⚠️ **Un tercero que el canal devolvió como vivo,
+`EastArctica/canvas-mcp`, da 404 y no se escribe.** Ninguno entra a `repos/foundations.md`: son forks
+de un repo ya listado. Ver **`P268`** y la tendencia **697**.
+
 ## 2026-10-04 — pase 88: el barrido de GitHub trending vuelve vacío por decimoséptima vez, y este pase NO agrega filas fundacionales — lo dice en vez de rellenar
 
 🔴 **`github trending education AI 2026` y las otras tres búsquedas globales obligatorias se

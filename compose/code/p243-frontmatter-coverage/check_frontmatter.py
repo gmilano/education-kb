@@ -16,7 +16,14 @@ Uso:
 import os
 import sys
 
-REGIONS = ("North America", "EMEA", "APAC", "LATAM", "Global")
+# 🟢 Pase 89: el vocabulario y la regla vienen de `compose/code/lib/region.py` (P263). Este
+# instrumento usa el validador del portador FRONTMATTER, porque en YAML el blanco de la
+# IZQUIERDA separa la clave del valor y no es dato — lo cual es, medido, la unica diferencia
+# de veredicto entre este instrumento y `p262` (ver P265 y `p265-region-contract/`).
+sys.path.insert(0, os.path.join(
+    os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "lib"))
+from region import REGIONS, region_ok_frontmatter  # noqa: E402
+
 REQUIRED = ("industry", "region", "updated")
 
 
@@ -80,7 +87,9 @@ def findings_for(path, text):
         if key not in fields:
             found.append(("MISSING-KEY", key))
     region = fields.get("region")
-    if region is not None and region not in REGIONS:
+    # `parse_frontmatter(raw=True)` ya saco el separador de la izquierda y NADA de la
+    # derecha, asi que el valor que llega aqui es el que `region_ok_frontmatter` espera.
+    if region is not None and not region_ok_frontmatter(region):
         # el caso que importa: variante de vocabulario, no ausencia.
         # El detalle se publica normalizado para que `Latam` y `Latam ` no
         # abran dos hallazgos distintos; el CODIGO ya dice que no esta en

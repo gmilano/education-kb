@@ -12,8 +12,17 @@ de entrada en vigor no hay vigencia; sin el texto del instrumento no hay modo de
 La respuesta en ese caso es NO-CLAIM, nunca el valor optimista.
 """
 
-# --- vocabulario CERRADO de region (el mismo de P243/P261; no se amplia aqui) ------------
-REGIONS = ("North America", "EMEA", "APAC", "LATAM", "Global")
+# --- vocabulario CERRADO de region: ya NO vive aqui -------------------------------------
+# 🟢 Pase 89: esto era una copia local, y la copia local es la causa de P263. Ahora la
+# pregunta viene de `compose/code/lib/region.py`, que es donde P263 dijo que tenia que vivir.
+# `region_ok` de la lib es la version de portador DATO —sin perdon a izquierda ni a derecha—,
+# que es exactamente la que esta instrumento necesita: sus filas son celdas TSV.
+import os as _os
+import sys as _sys
+
+_sys.path.insert(0, _os.path.join(
+    _os.path.dirname(_os.path.dirname(_os.path.abspath(__file__))), "lib"))
+from region import REGIONS, region_ok as _region_ok  # noqa: E402,F401
 
 # --- vocabulario CERRADO de nivel --------------------------------------------------------
 NATIONAL = "NATIONAL"
@@ -107,12 +116,17 @@ def classify(row):
 def region_ok(row):
     """La region va en vocabulario cerrado. UAE es EMEA, no APAC: el pais manda, no el titular.
 
-    🔴 NO se hace strip() del valor antes de preguntar por el vocabulario: eso es exactamente
-    P248 (el defecto que el pase 82 corrigio en p243-frontmatter-coverage). `"APAC "` con espacio
-    es un valor DISTINTO y tiene que salir rechazado, porque el compilador lo bucketea aparte.
-    Este instrumento lo reintrodujo en su primera version -> de ahi P263.
+    🟢 Pase 89: el cuerpo de esta funcion ya no esta aqui — delega en `lib.region.region_ok`.
+    Lo unico propio que queda es la ADAPTACION: esta instrumento recibe una FILA y la lib
+    recibe un VALOR. Es la forma concreta de cumplir **P263**: el instrumento sigue teniendo
+    su funcion con su nombre y su firma, pero la REGLA es compartida y se endurece en un
+    solo lugar.
+
+    🔴 El defecto que la lib garantiza no volver a elegir: no se hace `strip()` antes de
+    preguntar por el vocabulario (**P248**). `"APAC "` es un valor DISTINTO y sale rechazado,
+    porque el compilador lo bucketea aparte.
     """
-    return (row.get("region") or "") in REGIONS
+    return _region_ok(row.get("region") or "")
 
 
 def refutes_national_claim(rows, jurisdiction):

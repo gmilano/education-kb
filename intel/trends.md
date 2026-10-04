@@ -7,6 +7,7 @@ updated: 2026-10-04
 # 📡 Tendencias — education
 
 > Ventana de investigación: septiembre 2026. Verificado 2026-09-30; el pase 11, el 2026-10-01.
+> **Pase 89 del 2026-10-04:** 🟢 **Ocho tendencias nuevas, numeradas 691–698** (el pase 88 cerró en 690). 🔴 **691: la regla que el pase 88 escribió —«la pregunta de región se muda a `lib/`»— NO se puede cumplir como estaba escrita: no hay UNA pregunta de región, hay dos, y necesitan leniencia CONTRARIA.** 🔴 **692: los dos validadores del mismo vocabulario cerrado discrepan sobre `" APAC"` y los DOS tienen razón — el veredicto depende de la SINTAXIS DEL PORTADOR, no del vocabulario.** 🔵 **693: el comportamiento endurecido detrás de un argumento NO default no viajó, viajó a medias; el contraejemplo estaba en el árbol desde el pase 82.** 🔴 **694: el módulo compartido escrito para no volver a elegir un defecto eligió uno nuevo en su primera línea, y lo encontró la matriz al ver que su columna no coincidía con la del instrumento del que salió.** 🔴 **695: un vocabulario cerrado se aplica en un portador y no en el otro: 160 celdas normalizadas en silencio, 0 accionables — el árbol está limpio y el hueco es LATENTE.** 🔴 **696: el barrido sin compuerta devolvió 8 hallazgos y los 8 eran falsos positivos de la clase exacta que el instrumento auditado ya descartaba.** 🔴 **697: el repo CANÓNICO se contradice consigo mismo —102 en la descripción, 103 en el README, misma lectura, mismo día— así que un conteo de capacidades tiene SUPERFICIE y de 3 repos medidos CERO es citable sin nombrarla.** 🔵 **698: el canal externo se agotó por DECIMOCTAVA vez y lo que rindió fue, por cuarta vez consecutiva, una dimensión INTERNA.**
 > **Pase 87 del 2026-10-04:** 🟢 **Ocho tendencias nuevas, numeradas 675–682** (el pase 86 cerró en 674). 🟢 **675: la capa que faltaba —psicometría computacional permisiva y completa de un solo laboratorio APAC— y con ella el hueco de APAC cierra a los quince pases.** 🔴 **676: «hay paquete publicado» dejó de ser señal de vigencia: 5 de 6 releases del estante nuevo son de 2019-2022.** 🔴 **677: el titular no es uniforme dentro de un mismo `org` institucional, y eso mueve la contraparte de un contrato.** 🟢 **678: aparece la primera ligadura de proveedor que vive en la CONFIGURACIÓN y no en el manifiesto, y con ella el cero del pase 86 pasa a ser cota de instrumento.** 🔴 **679: en APAC el cuello dejó de ser el código y pasó a ser la cesión —producto desplegado en tres países, sin licencia.** 🔴 **680: NA legisla mucho y capacita poco; la brecha es de 134 proyectos de ley contra 18 % de docentes con guía escrita.** 🟢 **681: LATAM es la región de mayor adopción medida del planeta en superior y la de regulación más fragmentada.** 🔵 **682: EMEA es la única región con FECHA dura de cumplimiento, y la entrada comercial de la región es deliberadamente de bajo riesgo.**
 > **Pase 86 del 2026-10-04:** 🟢 **Ocho tendencias nuevas, numeradas 667–674** (el pase 85 cerró en 666). Las ocho salen de un eje que esta base escribía en prosa en los ocho archivos y nunca había medido: la LIGADURA DE PROVEEDOR.
 > **Pase 77 del 2026-10-03:** 🟢 **Nueve tendencias nuevas, numeradas 602–610** (el pase 76 cerró en 601). 🔴 **602: una nota de honestidad puede estar equivocada en el 100 % de sus filas y seguir pareciendo prudente** — las cinco filas de `— (no verificada: repo muerto)` son **5 de 5 permisivas**, y el cierre costó **cinco peticiones HTTP** (**P234**). 🔴 **603: «muerto» tampoco exime de medir el ROL, y el rol es peor que la licencia porque su error tiene el signo contrario** — una licencia mal archivada EXCLUYE una pieza usable, un rol mal archivado **INCLUYE una inservible**, y llega a una propuesta. 🪜 **604: el eje CAPA se reproduce en otro estándar y su SIGNO SE INVIERTE** — en xAPI el servidor está abierto y vivo y el cuello está en el cliente, al revés que en OneRoster, **así que el signo es propiedad del ESTÁNDAR y no del sector** (**P235**). 🔴 **605: una corrección de esta base no viaja si vive en prosa y en N instrumentos: el pase 77 reintrodujo P171 en dos instrumentos nuevos** y leyó `LearningLocker` (GPL-3.0) como AGPL-3.0 (**P237**). 🔴 **606: un clasificador de licencias validado sobre la clase que INTERESA saca 5/5 y sigue roto** — hay que validarlo contra la clase con la que se puede CONFUNDIR. 🟢 **607: el discriminador cuantitativo que faltaba —GPL-3.0 nombra la AGPL en 3 líneas, una AGPL real en 15, GPL-2.0 en 0— y con él el defecto queda ACOTADO A UNA VERSIÓN.** 🔴 **608: cuando el FUENTE de un fork es idéntico byte a byte, lo que se bifurcó es el SUITE DE PRUEBAS, y el asunto del commit no lo dice** (**P238**: `upstream` 0/3 · fork 3/3). ⚠️ **609: un archivo de licencia no siempre es un TEXTO de licencia: puede ser una DECLARACIÓN de una línea, y la regla correcta de P171 devuelve `UNCLASSIFIED` sobre ella** — el *fallback* se vuelve sano sólo con un guard de TAMAÑO. 🔵 **610: el barrido por región se agotó por TERCERA vez consecutiva, y las tres dimensiones que rindieron en esos tres pases son INTERNAS** — `(segmento, unidad)`, `CAPA`, y ahora la auditoría de los instrumentos propios. Ver los patrones **P234**–**P238** y `compose/code/lib/`.
@@ -103,6 +104,161 @@ updated: 2026-10-04
 > (tendencia 29), se abre el **gap 20** y se registran dos advertencias de verificación: los agregadores de estrellas
 > están mal por ~2× y **un 403 de `curl` no es un 404**. Ver la nota de método del pase 12.
 > **Pase 11:** el Digital Omnibus es derecho vigente (tendencia 25), aparece la capa predictiva y está vacía (tendencia 26), y se corrige un error de método de diez pasadas sobre licencias permisivas (tendencia 27).
+
+## 🔴 Tendencias 691–698 — pase 89 del 2026-10-04
+
+> **El eje del pase es uno y es de método: una regla compartida mal especificada rompe un
+> instrumento justo cuando se la cumple.** El pase 88 cerró con **P263** —«mientras la pregunta no
+> viva en `compose/code/lib/`, cada instrumento nuevo la reimplementa y vuelve a elegir el bug»—. El
+> pase 89 fue a cumplirlo y la regla no sobrevivió al contacto. Instrumentos con suite:
+> [`compose/code/lib/region.py`](../compose/code/lib/) (**79/79**),
+> [`compose/code/p265-region-contract/`](../compose/code/p265-region-contract/) (**30/30**) y
+> [`compose/code/p268-capability-surface/`](../compose/code/p268-capability-surface/) (**25/25**),
+> `Python 3.11.15`. 🟢 **Y este pase re-verificó el tablero completo: 42 invocaciones de suite, 42
+> con código de salida 0** (40 preexistentes + las 2 nuevas; el total subió de 38 a 42 porque este
+> pase agregó tres suites y ninguna preexistente se tocó).
+
+### 🔴 691 — La pregunta de región son DOS preguntas con leniencia contraria, así que «mudarla a la librería» rompe una de las dos
+
+`P263` daba por sentado que había una pregunta. Medido, hay dos:
+
+| Pregunta | Quién la hace | `"APAC "` | `🔴 **LATAM**` |
+|---|---|---|---|
+| **VALIDADOR** — ¿este valor está en vocabulario? | `p243` (frontmatter), `p262` (filas) | RECHAZA | RECHAZA |
+| **DETECTOR** — ¿esta celda NOMBRA regiones? | `p239` (tablas publicadas) | acepta | acepta |
+
+🔴 **Una sola función compartida habría roto una de las dos.** Con la leniencia del detector, `p243`
+y `p262` vuelven a aceptar `"APAC "` y **P248 se reabre**. Con el rigor del validador, `p239` deja de
+reconocer sus propias celdas publicadas —`| 🔴 **LATAM** |`, `| APAC (Vietnam) |`,
+`| **APAC / LATAM** |`— y **vuelve a reclamar como incompletas tablas que están completas**: los tres
+falsos positivos que su v1 ya pagó.
+
+🔵 **La medición: 34 valores contra 7 implementaciones, y validador y detector dan veredicto OPUESTO
+en 18.** Esa divergencia no es algo a conciliar: **es el contrato**, y está afirmada valor por valor
+como caso obligatorio de la suite. Ver **`P265`**.
+
+### 🔴 692 — Dos validadores del MISMO vocabulario discrepan, y los dos tienen razón: el veredicto depende de la SINTAXIS DEL PORTADOR
+
+De los 34 valores de la matriz, **uno** separa a los dos validadores que ya estaban en el árbol:
+`" APAC"`, con el blanco a la **izquierda**. `p243` lo **acepta**; `p262` lo **rechaza**.
+
+🟢 **No es que uno esté roto.** El portador de `p243` es YAML, donde `region:   APAC` separa la clave
+del valor con blanco arbitrario: **a la izquierda el blanco es SINTAXIS, no dato.** El portador de
+`p262` es una celda TSV, donde **sí es dato**.
+
+🔵 **La consecuencia para esta base, que venía tratando el vocabulario cerrado como una propiedad del
+VALOR: «¿está en vocabulario?» no tiene una sola respuesta ni siquiera entre validadores.** Por eso
+la librería expone `region_ok()` y `region_ok_frontmatter()` y **no un parámetro**: un parámetro
+invita a pasar el default. ⚠️ **A la derecha ninguno de los cuatro perdona**, y eso sigue siendo
+**P248**.
+
+### 🔵 693 — Una regla endurecida detrás de un argumento NO default no viajó: viajó a medias
+
+`p243.parse_frontmatter(text, raw=False)` tiene la lectura que **cierra P248** —la que no limpia la
+derecha— **detrás de un argumento no default**. Hoy el único llamador interno pasa `raw=True`, así
+que el instrumento es correcto; **el próximo que importe la función hereda la versión floja sin
+pedirla.**
+
+🟢 **La regla que sale, y vale para todo `lib/`: cuando una función tiene una versión segura y una
+lenient, la segura es el DEFAULT y la lenient se PIDE.** 🔵 **Y el encuadre que corrige a P263: una
+regla puede estar en la librería y seguir sin viajar.** Vive en el lugar correcto y la elige quien
+pasa el argumento correcto, que es otra forma de «hay que acordarse» — exactamente lo que
+`lib/` existe para eliminar. Ver **`P266`**.
+
+### 🔴 694 — El módulo compartido escrito para no repetir un defecto eligió uno nuevo en su primera línea
+
+La primera versión de `regions_named()` en `lib/region.py` puso **`strict=False`** por default.
+`p239`, el instrumento del que salió el cuerpo de la función, tiene **`strict=True`**.
+
+🟢 **Lo encontró la matriz de `P265`**, al ver que la columna de la librería no coincidía con la de
+`p239` sobre `86 % NA / 92 % LATAM` —una celda de CIFRAS, que el modo estricto existe para
+descartar—. 🔴 **Pero el hallazgo de fondo es que el defecto es el MISMO de 693, cometido por el
+archivo que lo estaba documentando**, y con el agravante de que acá el default flojo era el único
+camino: nadie tenía que acordarse de nada para equivocarse.
+
+⚠️ **Para esta base es la tercera vez en dos pases que una regla se reintroduce en el instrumento
+nuevo** (`P248` en el pase 88, `P171` en el 77, esto). 🔵 **Lo que las tres comparten no es
+distracción: es que la regla estaba escrita en prosa y el código la tenía que volver a elegir.**
+
+### 🔴 695 — Un vocabulario cerrado se aplica en un portador y no en el otro: 160 normalizaciones silenciosas, 0 accionables
+
+`p243` reclama `region: Latam` en el **frontmatter**. La misma grafía en una **celda de tabla** la
+normaliza el detector de `p239` —casefold, sin emoji, sin negrita— y **no se reporta nunca**. O sea
+que el vocabulario cerrado que esta base declara como cerrado **se enforcea en un portador y no en el
+otro.**
+
+Medido sobre el árbol real (**66** archivos `.md`, que son los 67 del árbol menos el fixture plantado):
+
+| Clase | Qué es | Celdas |
+|---|---|---|
+| `MARKUP` | `**LATAM**`, `` `EMEA` ``, `🔴 **LATAM**` — FORMATO, no una variante | **160** |
+| `CASO` | la capitalización cambia (`latam`) | **0** |
+| `SEPARADOR` | guion o doble espacio (`North-America`) | **0** |
+
+🟢 **Así que el árbol está limpio hoy y el hueco es LATENTE**: el instrumento es una guarda para los
+pases que vienen, no una limpieza para este. ⚠️ **Y el cero tiene control positivo**, porque un cero
+sin él no vale nada: un fixture con dos grafías plantadas —una `CASO` y una `SEPARADOR`— que el
+barrido tiene que encontrar **exactamente**. Ver **`P267`**.
+
+### 🔴 696 — El barrido sin compuerta devolvió 8 hallazgos y los 8 eran falsos positivos de la clase que el instrumento auditado ya descartaba
+
+Antes de la compuerta, el barrido de grafías reclamó **8 celdas**. Las 8 eran celdas de **CIFRAS**
+(`92 % LATAM`, `**APAC $591,6M`) o de **PROSA** donde `global` es adjetivo (`Uso de AI por
+estudiantes, global`).
+
+🔴 **Es exactamente la clase que el modo `strict` de `p239` existe para descartar**, y que su v3
+pagó con cuatro falsos positivos. 🔵 **El error de población: la pregunta no es «¿qué grafías hay en
+las celdas?» sino «¿qué grafías hay en las celdas que `p239` CUENTA como celdas de región?»** — o
+sea, el denominador correcto era el **veredicto del instrumento auditado**, no el conjunto de todas
+las celdas.
+
+⚠️ **Y hubo un segundo error de población en la misma corrida: la primera versión devolvió 172
+hallazgos, de los cuales 164 eran `**LATAM**`.** Negrita no es una variante de grafía: es formato.
+🔵 **Los dos errores tienen la misma forma —una cifra grande que parece un hallazgo y es una
+población mal elegida— y los dos los encontró comparar la cifra contra lo que el instrumento viejo ya
+sabía.** El control negativo quedó archivado, no borrado.
+
+### 🔴 697 — El repo CANÓNICO se contradice consigo mismo: un conteo de capacidades tiene SUPERFICIE, y de 3 repos CERO es citable sin nombrarla
+
+Esta base cita conteos de herramientas desde el pase 10 y dejó abierta la comparación **227 vs 165**
+de Canvas esperando salida de red. Leído hoy por WebFetch (el proxy devuelve **403** a `curl` y a
+`api.github.com`):
+
+| Repo | Rol | `DESCRIPTION` | `README-BODY` | Release | Lic. | ★ |
+|---|---|---|---|---|---|---|
+| [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | UPSTREAM | **102** / 8 skills | **103** | v1.13.0 (sep-2026) | MIT | 274 |
+| [`harrywang/canvas-mcp`](https://github.com/harrywang/canvas-mcp) | FORK | **80+** / 5 skills | — | v1.12.0 (ago-2026) | MIT | 0 |
+| [`jsrodr/canvas-mcp`](https://github.com/jsrodr/canvas-mcp) | FORK | **80+** / 5 skills | **99** | v1.10.0 (ago-2026) | MIT | 0 |
+
+🔴 **El upstream dice 102 en su descripción y 103 en su README, el mismo día y en la misma lectura.**
+No es un fork vencido ni una secundaria mal citada: son **dos superficies del repositorio canónico.**
+🔵 **Y el fork no sólo congela el claim viejo: hereda la contradicción y la agranda** —`jsrodr`
+publica `80+` y **99**, dos números que no coinciden ni entre sí ni con ninguna superficie del
+upstream—.
+
+🟢 **La regla: un conteo de capacidades se cita con su superficie o no se cita.** 🔴 **Y la acción
+abierta del pase 10 queda REENCUADRADA, no desbloqueada: aunque llegara el permiso de red, comparar
+`227` contra `165` sin saber de qué superficie salió cada uno no produce una comparación.** ⚠️ **Un
+cuarto repo que el canal devolvió como vivo, `EastArctica/canvas-mcp`, da 404 y no se escribió como
+fila.** Ver **`P268`**.
+
+### 🔵 698 — El canal externo se agotó por DECIMOCTAVA vez, y por cuarta vez consecutiva lo que rindió fue una dimensión INTERNA
+
+Las cuatro búsquedas regionales obligatorias se corrieron (año **CALCULADO**: 2026) y las cuatro
+devolvieron material que esta base **ya tiene publicado**, verificado por `grep` contra el árbol antes
+de escribir esta línea: NA los US$ 951 M → 2.303,2 M y Colorado/Texas; EMEA el calendario del AI Act,
+la conferencia del Council of Europe y el *Europe EdTech 200+* de QS; APAC el 96 % y el ROI de
+US$ 2,85; LATAM el *working paper* de UNU/UNESCO (200 instituciones, 19 países) y el CONPES 4144.
+🔴 **El barrido de GitHub trending volvió vacío por decimoctava vez, y el de plataformas devolvió las
+ocho que ya están archivadas.**
+
+🔵 **Lo que sí rindió, y es el cuarto pase consecutivo en que pasa: una dimensión INTERNA.** El pase
+77 midió sus propios instrumentos, el 86 la ligadura de proveedor, el 88 el nivel del mandato, y este
+el **contrato** de una regla compartida. 🟢 **Y la única alta externa del pase no vino del canal
+regional sino de mirar un cohorte que esta base ya tenía: dos forks nuevos verificados uno por uno,
+de los cuales ninguno entra como fila de agente —son forks de un repo ya listado— pero los dos
+sostienen `P268`.**
+
 
 ## 🔴 Tendencias 683–690 — pase 88 del 2026-10-04
 
