@@ -7,6 +7,7 @@ updated: 2026-10-04
 # 📡 Tendencias — education
 
 > Ventana de investigación: septiembre 2026. Verificado 2026-09-30; el pase 11, el 2026-10-01.
+> **Pase 86 del 2026-10-04:** 🟢 **Ocho tendencias nuevas, numeradas 667–674** (el pase 85 cerró en 666). Las ocho salen de un eje que esta base escribía en prosa en los ocho archivos y nunca había medido: la LIGADURA DE PROVEEDOR.
 > **Pase 77 del 2026-10-03:** 🟢 **Nueve tendencias nuevas, numeradas 602–610** (el pase 76 cerró en 601). 🔴 **602: una nota de honestidad puede estar equivocada en el 100 % de sus filas y seguir pareciendo prudente** — las cinco filas de `— (no verificada: repo muerto)` son **5 de 5 permisivas**, y el cierre costó **cinco peticiones HTTP** (**P234**). 🔴 **603: «muerto» tampoco exime de medir el ROL, y el rol es peor que la licencia porque su error tiene el signo contrario** — una licencia mal archivada EXCLUYE una pieza usable, un rol mal archivado **INCLUYE una inservible**, y llega a una propuesta. 🪜 **604: el eje CAPA se reproduce en otro estándar y su SIGNO SE INVIERTE** — en xAPI el servidor está abierto y vivo y el cuello está en el cliente, al revés que en OneRoster, **así que el signo es propiedad del ESTÁNDAR y no del sector** (**P235**). 🔴 **605: una corrección de esta base no viaja si vive en prosa y en N instrumentos: el pase 77 reintrodujo P171 en dos instrumentos nuevos** y leyó `LearningLocker` (GPL-3.0) como AGPL-3.0 (**P237**). 🔴 **606: un clasificador de licencias validado sobre la clase que INTERESA saca 5/5 y sigue roto** — hay que validarlo contra la clase con la que se puede CONFUNDIR. 🟢 **607: el discriminador cuantitativo que faltaba —GPL-3.0 nombra la AGPL en 3 líneas, una AGPL real en 15, GPL-2.0 en 0— y con él el defecto queda ACOTADO A UNA VERSIÓN.** 🔴 **608: cuando el FUENTE de un fork es idéntico byte a byte, lo que se bifurcó es el SUITE DE PRUEBAS, y el asunto del commit no lo dice** (**P238**: `upstream` 0/3 · fork 3/3). ⚠️ **609: un archivo de licencia no siempre es un TEXTO de licencia: puede ser una DECLARACIÓN de una línea, y la regla correcta de P171 devuelve `UNCLASSIFIED` sobre ella** — el *fallback* se vuelve sano sólo con un guard de TAMAÑO. 🔵 **610: el barrido por región se agotó por TERCERA vez consecutiva, y las tres dimensiones que rindieron en esos tres pases son INTERNAS** — `(segmento, unidad)`, `CAPA`, y ahora la auditoría de los instrumentos propios. Ver los patrones **P234**–**P238** y `compose/code/lib/`.
 > **Pase 75 del 2026-10-03:** 🟢 **Ocho tendencias nuevas, numeradas 586–593** (el pase 74 cerró en 585). 🔴 **586: una cuota de LMS sin SEGMENTO ni UNIDAD no es un dato, y el líder se INVIERTE entre segmentos** —Classroom ~31 % en K-12 contra **6 de 3.400 instituciones (0,2 %)** en superior—, **lo que corrige el encuadre de P224**: medido por cohorte hay **7** inversiones en K-12 y **1** en superior, así que esta es una KB de educación SUPERIOR medida con denominador de K-12 (**P228**). 🔵 **587: el sesgo real no es «contra la base instalada» sino a favor de lo AUTOALOJABLE**, que sí sugiere una acción. 🔴 **588: una cifra agregada se propaga sin su conjunto de archivos —7 copias, 1 lo nombra— y la que viaja a otras KBs es la que no** (**P227**, reparado en `patterns.md`). 🔴 **589: en la capa de *rostering* de K-12, «permisivo + vivo + spec vigente» deja UNA pieza y el hueco es de DERECHOS**, no de investigación (**P229**). 🔵 **590: el mismo autor publica el mismo estándar con dos licencias, y el dedupe por repo es ciego a eso.** ⚠️ **591: MIT sobre un árbol ARCHIVADO es una trampa que la columna de licencia no muestra.** 🟢 **592: el barrido por región se agotó otra vez, y lo que rindió fue cambiar de DIMENSIÓN** —`SEGMENTO × UNIDAD`, y por nombre de ESTÁNDAR en vez de `education`—, **que es exactamente lo que la tendencia 585 prescribía.** 🔴 **593: y el instrumento se encontró contaminado A SÍ MISMO — `measure.py` da 11 inversiones sobre el árbol de trabajo y 7 sobre `5dd2bcc`, porque la prosa que documenta el hueco menciona las plataformas *stub* en los mismos cuatro archivos que la métrica cuenta: hablar de una ausencia la borra del contador de ausencias, así que el COMMIT es parte de la invocación.**
 > **Pase 74 del 2026-10-03:** 🟢 **Ocho tendencias nuevas, numeradas 578–585** (continuación real de la serie; el pase 73 cerró en 577). 🔴 **578: la atención de esta base resultó INVERSAMENTE proporcional a la base instalada** —Canvas en 111 líneas / 241 ocurrencias de `agents/top.md` contra **0** de Google Classroom en 73 pases (229 / 389 contra 0 en los cuatro archivos de contenido), siendo Classroom el líder global (~39 % contra ~19 %)— **y el defecto es de instrumento: todos los barridos de cobertura miden contra la historia propia, así que no pueden encontrar una ausencia sistemática.** 🟢 **579–580: dos peldaños nuevos de compuerta, y uno es de otra naturaleza** — `GATE-IN-SCOPE` (**P220**) se hace cumplir **fuera del proceso**, en los *scopes* del token de OAuth, así que no depende de la corrección del código medido; `GATE-IN-EFFECT` (**P221**) gobierna la **visibilidad** del efecto y no la llamada, que es la forma correcta para educación. 🔴 **581: `LICENSE-REVOCABLE`** (**P222**) **es una categoría de riesgo distinta de una restrictiva, y la diferencia es de MOMENTO: la no-comercial bloquea en la propuesta, la revocable después de la entrega.** 🔴 **582: texto e identificador de licencia que se contradicen en el MISMO árbol → no gana ninguno** (**P223**). 🟢 **583: una vertical propietaria puede ser MEJOR terreno de partida que una open source copyleft**, porque el conector es obra propia. 🟢 **584: la capa está atomizada en 8 implementaciones de ≤2 ★ y ninguna se conoce.** 🔴 **585: el barrido de mercado por región se saturó por CUARTA vez, y la lección es que el problema ya no es el canal sino la dimensión.**
@@ -101,6 +102,88 @@ updated: 2026-10-04
 > (tendencia 29), se abre el **gap 20** y se registran dos advertencias de verificación: los agregadores de estrellas
 > están mal por ~2× y **un 403 de `curl` no es un 404**. Ver la nota de método del pase 12.
 > **Pase 11:** el Digital Omnibus es derecho vigente (tendencia 25), aparece la capa predictiva y está vacía (tendencia 26), y se corrige un error de método de diez pasadas sobre licencias permisivas (tendencia 27).
+
+## 🆕 Tendencias 667–674 — pase 86 del 2026-10-04
+
+> Las ocho salen del mismo barrido (`compose/code/p257-provider-binding/`, **37/37**, 69 repos por el canal
+> CALIBRADO) y de los **dos** fallos que ese barrido cometió sobre sí mismo.
+
+### 667. 🔴 Una palabra que aparece en los ocho archivos de una base y en ninguna medición es una creencia, no un dato
+
+`lock-in` estaba escrita en `agents/top.md`, `agents/trending.md`, `repos/foundations.md`, `repos/trending.md`,
+`verticals/solutions.md`, `intel/market.md`, `intel/trends.md` y `compose/patterns.md` — **los ocho** — y no
+existía un instrumento que la contestara. 🔵 **El síntoma es específico y es detectable: una palabra con
+cobertura TOTAL en prosa y cobertura CERO en `compose/code/` es una candidata a creencia heredada.**
+🟢 **Y al medirla, el resultado no fue el que la prosa sugería: en la capa MCP la ligadura es casi inexistente
+(21 de 25), pero en TODO el catálogo la abstracción es exactamente cero.** O sea que la prosa estaba
+simultáneamente **pesimista** sobre un eje y **ciega** al otro.
+
+### 668. 🔴 Cero de 69 piezas de una vertical rutea por una capa de abstracción de proveedor
+
+Ninguna de las 69 filas recomendables de esta base declara `litellm`, `langchain`, `@ai-sdk/*` ni equivalente en
+su manifiesto de runtime. 🔵 **La lectura correcta no es «están mal hechas»: 36 no ligan nada porque no llaman a
+un modelo (son servidores MCP, benchmarks o librerías), así que no necesitan capa.** 🔴 **La lectura que sí
+cuesta dinero es sobre las 10 que SÍ ligan: ninguna puso capa, así que cada una de las 10 es un cambio A MANO
+cuando un cliente manda su proveedor.** 🟢 **Y eso es alcance cotizable y acotado: diez piezas, no sesenta y
+nueve.**
+
+### 669. 🟢 La capa MCP desplaza la ligadura de proveedor al HOST, y ahora está medido en 21 de 25
+
+Esta base venía afirmándolo en prosa desde que entró la primera puerta MCP. Medido: **21 de 25 servidores MCP
+(84 %) no declaran ningún SDK de proveedor**; su manifiesto trae `@modelcontextprotocol/sdk` + `zod` y nada más.
+🔵 **Es el argumento de venta más limpio que sale de este pase: construir sobre esos 21 no compromete al cliente
+con ningún proveedor de modelo, porque la elección del modelo no vive en el servidor.**
+🔴 **Y el 16 % restante es la excepción que hay que cotizar, no el ruido:** cuatro servidores MCP llaman al
+modelo desde adentro (`CharlieCardenasToledo/mcp-canvas-server`, `MarcosNahuel/moodle-mcp`,
+`poorvika12-hub/student_mcp`, `moarshy/mcp-tutor`), y ahí el mandato de proveedor del cliente **sí** es trabajo
+de código.
+
+### 670. 🔵 «Es un servidor MCP» se mide por la dependencia del SDK, no por el `-mcp` del nombre
+
+El slug es prosa. De los 69, hay piezas con `-mcp` en el nombre cuyo manifiesto no trae el SDK, y piezas sin
+`-mcp` que sí lo traen. 🟢 **El instrumento de este pase pregunta por `@modelcontextprotocol/sdk`, `mcp`,
+`fastmcp` o `mcp-*` en las dependencias de runtime**, y recién entonces clasifica. 🔵 **Es la misma clase de
+error que `P253` ya había nombrado para la identidad de paquete: el NOMBRE no es el dato.**
+
+### 671. 🔴 La raíz de un monorepo publica `UNBOUND` sobre un producto que sí liga
+
+Primer fallo de este pase, versionado en `result-monoroot.NEGATIVE-CONTROL-2026-10-04.tsv`:
+`FWU-DE/ais-chat` tiene una raíz `private` con **cero dependencias de runtime** y `turbo` en dev, así que el
+barrido la leyó y publicó **`UNBOUND`** — sobre un producto cuyo `apps/api/package.json` trae **`openai`**.
+🔵 **La lección general: un manifiesto no es el manifiesto de un PRODUCTO sólo porque esté en la raíz del
+repositorio.** 🟢 **El veredicto correcto es un `NO-CLAIM` con la causa nombrada (`MONOREPO-ROOT`): negarse a
+contestar desde ahí, en vez de contestar mal.**
+
+### 672. 🔴 El gate que corrige un falso negativo puede salir demasiado ancho y silenciar dato bueno
+
+Segundo fallo del mismo pase, versionado en `result-overbroadgate.NEGATIVE-CONTROL-2026-10-04.tsv`: el primer
+corte del gate de `671` tomaba **la presencia de un marcador de workspace** como suficiente, y silenció a
+`algorithm0r/canvas-lms-mcp` y `bruchris/canvas-lms-mcp`, cuyas raíces traen `pnpm-workspace.yaml` **y** cuatro
+dependencias de runtime reales. 🔵 **Una raíz CON dependencias es un paquete.** 🟢 **La condición correcta es
+conjunta: marcador de workspace **Y** cero dependencias de runtime.**
+🔴 **Y la tendencia de método, que es la que importa: la corrección de un falso negativo introdujo un falso
+positivo en el mismo pase, y sólo se vio porque se corrió el barrido COMPLETO otra vez y se diffeó contra el
+corte anterior.** 🔵 **Un gate nuevo exige re-barrido y diff, no sólo suite verde** — la suite estaba en 34/34
+cuando el gate ancho ya estaba silenciando dos filas.
+
+### 673. 🟡 En la capa de DETECCIÓN, el proveedor más frecuente es «pesos abiertos», y no es ideología
+
+Entre las 10 piezas que ligan, `local` (pesos abiertos vía `transformers` / `sentence-transformers` /
+`llama-cpp-python`) empata en el primer puesto con OpenAI, 5 a 5. 🔵 **La causa es técnica y conviene saberla al
+cotizar: cinco de esas diez son detectores de texto generado o benchmarks (`ahans30/Binoculars`,
+`baoguangsheng/fast-detect-gpt`, `liamdugan/raid`, `eth-lre/mathtutorbench`, `pablocaeg/sloptotal`), y un
+detector necesita VEROSIMILITUDES por token, que una API de chat no entrega.**
+🟢 **Consecuencia: la capa de integridad académica de esta base corre on-premise por necesidad del método, no por
+preferencia** — y eso es justamente lo que un cliente EMEA con requisito de soberanía quiere oír.
+
+### 674. 🔵 Dos jurisdicciones obligan a MARCAR contenido sintético, y eso duplica el valor del mismo instrumento
+
+El art. 50(2) del EU AI Act (vigente desde 2026-08-02, *backstop* el 2026-12-02) y el régimen chino de
+etiquetado de contenido sintético piden, los dos, una marca legible por máquina. 🟢 **El instrumento de marcado
+que esta base ya tiene corriendo deja de ser un activo de EMEA y pasa a ser un activo de EMEA + APAC**, que es un
+argumento de alcance mucho mayor. ⚠️ **No se afirma equivalencia técnica entre los dos regímenes: no se leyó el
+texto chino y el canal fue de búsqueda, así que la afirmación es de EXISTENCIA de la obligación, no de
+interoperabilidad de la marca.**
 
 ## 🆕 Tendencias 659–666 — pase 85 del 2026-10-04
 

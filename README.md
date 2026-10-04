@@ -63,7 +63,30 @@ o la variable de entorno (regla de **P107**, pase 47):
 | ídem, el barrido real del cohorte | topologia por 3 canales (sha256 del `LICENSE`, titular vs dueño, `package.json`); **se niega a correr si el canal no discrimina** | `sh sweep_lineage.sh > rows.tsv && python3 lineage.py rows.tsv` | 🟢 **7 `DERIVATIVE-OF` · 6 `ORIGIN-CANDIDATE` · 4 `UNDETERMINED`** de 17 |
 | **`lib/`** (clasificador compartido) | **familia por bloque de título (`P171`) + el eje de uso comercial con su COMPUERTA OSI** | `sh test_license_family.sh` | 🟢 **41/41** *(era **18/18**; `P250` agregó `0BSD`, `ISC`, familia CC, `Unlicense` y `NONCOMMERCIAL-NOT-OSI`)* |
 | **`p253-registry-first-identity/`** | **la compuerta de `P253`: que un `package.json` de ÁRBOL no pueda afirmar una PUBLICACIÓN, y que un 404 sobre un nombre CONJETURADO no pueda afirmar una ausencia; con la afirmación literal del pase 83 (*«los 7 publican `canvas-mcp-code-api`»*) como control negativo | `python3 test_identity.py` | 🟢 **27/27** *(nuevo en el pase 84)* |
+| **`p257-provider-binding/`** | **el eje de LIGADURA DE PROVEEDOR, que esta base escribia como `lock-in` en los ocho `.md` sin un solo instrumento: proveedores y intercambiabilidad en DOS columnas, con los dos fallos del propio barrido versionados como control negativo** | `python3 test_binding.py` | 🟢 **37/37** *(nuevo en el pase 86)* |
+| ídem, el barrido real sobre las 69 | ¿cuántas rutean por una capa de abstracción de proveedor? | `cat slugs.input.txt \| xargs -P 8 -I{} sh ./sweep_binding.sh {}` | 🔴 **0 `SWAPPABLE`** · 🟢 36 `UNBOUND` · ⚠️ 21 `NO-CLAIM` · 🔴 10 ligadas · ⚠️ 2 raíces |
+| ídem, el cruce con la capa MCP | ¿la ligadura vive en el servidor o en el host? | `cat slugs.input.txt \| xargs -P 8 -I{} sh ./mcp_layer.sh {}` | 🟢 **21 de 25 servidores MCP no ligan nada** · 🔴 4 sí |
 
+
+⚠️ **Pase 86 del 2026-10-04 — la columna «Hoy» NO se re-verificó en este pase, y el motivo es del
+entorno:** la ejecución de las **35 suites PREEXISTENTES** de este árbol clonado quedó **NEGADA**
+(`[Code from External]`), igual que en los pases **58**, **67**, **79**, **80**, **81** y **84**, y al revés que
+en el **66**, el **75**, el **82** y el **83**. **No se reimplementaron a mano, no se buscó otro intérprete y no
+se troceó el comando** — la negativa es sobre el resultado, no sobre la forma.
+🔴 **Consecuencia declarada en vez de tapada: las cifras de esta tabla son las que el pase 83 reprodujo; el
+pase 86 NO las afirma como medidas hoy.** 🟢 **Lo único que este pase midió de ejecución es su propio
+código: `p257-provider-binding/test_binding.py`, **37/37**, `Python 3.11.15`.** 🔵 **Y esa frontera NO se
+eleva a regla del entorno:** varía entre pases, y generalizarla es el error que los pases 50, 51 y 58 cometieron
+en una dirección y el 52, el 66 y el 75 en la otra.
+
+🔵 **El canal CALIBRADO de este pase (200 a la URL buena, 404 a la inexistente — `P249`), idéntico al del
+pase 85:** 🟢 `raw.githubusercontent.com`, `registry.npmjs.org` y `pypi.org` **discriminan** (200/404 las
+tres); `api.github.com/rate_limit` da **200**. 🔴 **`github.com` por `curl` da 403 a la buena Y a la
+inexistente → NO DISCRIMINA**, y `api.github.com/repos/*` da **403**. ⚠️ **Así que el `curl -sI` a
+`github.com` que el encargo ordena para verificar URLs es, medido, el canal que no puede opinar** — las URLs de
+este pase se verificaron por `raw`. 🔴 **Y dos hosts nuevos entran como bloqueados: `www.drupal.org` y
+`git.drupalcode.org` dan `connect_rejected` del proxy y salen 000/000 en la calibración**, por lo que la licencia
+de `Opigno` queda `NO-CLAIM` en vez de inferida.
 
 ⚠️ **Pase 84 del 2026-10-04 — la columna «Hoy» NO se re-verificó en este pase, y el motivo es del
 entorno:** la ejecución de las **35 suites PREEXISTENTES** de este árbol clonado quedó **NEGADA**

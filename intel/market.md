@@ -55,6 +55,122 @@ updated: 2026-10-04
 > **LATAM:** 🔵 el hallazgo del pase — **existe una capa MCP nacional brasileña de datos públicos, activa y MIT, y
 > educación es el único dominio grande que falta** (**gap 69**).
 
+## 🟢 Decimoquinto barrido regional: por primera vez en cuatro pases las CUATRO regiones devuelven dato NUEVO, y el eje que las ordena es regulatorio (pase 86 del 2026-10-04)
+
+> Las cuatro búsquedas regionales obligatorias se corrieron con el año **CALCULADO** (2026), no fijado.
+> 🟢 **Y rompen la serie: las cuatro rindieron material que esta base no tenía**, después de catorce pases de
+> agotamiento. ⚠️ **Todo lo de esta sección es de canal de BÚSQUEDA, no verificado en fuente primaria**: las
+> fuentes de norma que esta base intenta abrir desde el pase 33 (`eur-lex.europa.eu`, `data.europa.eu`) siguen
+> bloqueadas por el proxy de egreso, y este pase no volvió a intentarlas por tercera vez.
+
+### 🔵 El eje que ordena el pase, y es nuevo: la regla educativa se está escribiendo en el ESTADO, no en el país
+
+En las cuatro regiones el instrumento que avanza es **subnacional o sectorial**, y el nacional se demora:
+🇺🇸 134 proyectos en 31 estados contra **cero** estándar federal de currícula; 🇪🇺 el Anexo III diferido a
+2027-12-02 mientras los ministerios publican guía propia; 🌏 China y EAU con currícula nacional obligatoria
+contra Japón con una ley promocional sin sanción; 🌎 LATAM con un marco aprobado en Brasil y cuatro olas
+provinciales/sectoriales en curso. 🔵 **Consecuencia comercial directa: el comprador de gobernanza es el
+ESTADO, el DISTRITO o la INSTITUCIÓN, y no un ministerio nacional** — que corrobora por cuarta región lo que el
+pase 55 nombró para North America (no hay equivalente a la FDA para edtech).
+
+## Opportunities by region — agregado del pase 86
+
+### North America
+
+🟢 **Dato nuevo y es de VOLUMEN legislativo:** **134 proyectos de ley sobre AI en educación presentados en 31
+estados en 2026**, y la red PIE rastreó cerca de 100 que tocan directamente el uso de AI por parte de alumnos.
+🟢 **Cinco leyes K-12 ya firmadas, y tres son altas para esta base** (el pase 59 tenía Idaho, Oklahoma, Virginia
+y Maryland):
+
+| Estado | Instrumento | Qué fija |
+|---|---|---|
+| Idaho | **SB 1227** | ya registrado desde el pase 59 |
+| Maryland | **SB 720**, *Artificial Intelligence Ready Schools Act*, Cap. 634, firmada **2026-05-26** | 🟢 **la fecha de firma es alta de este pase** |
+| Ohio | **HB 96** | 🟢 alta |
+| Georgia | **SB 179** | 🟢 alta |
+| Tennessee | **SB 1580** | 🟢 alta — **prohíbe que una herramienta de AI haga evaluación o tamizaje de salud mental del alumno** |
+| Oregon | **SB 1546** | 🟢 alta — exige rasgos de diseño que **reduzcan el uso excesivo o compulsivo** cuando el usuario es o se presume menor |
+
+🔴 **Y el dato de contraste, que es el que conviene llevar a la reunión: a mayo de 2026 EE. UU. tiene CERO
+estándares federales vinculantes de currícula de AI.** Más de la mitad de los departamentos estatales de
+educación emitió **guía**, y muy pocos **ley**. 🔵 **El patrón es «la guía proliferante y la norma dura escasa»,
+que es exactamente el hueco de gobernanza que los pases 59 y 71 midieron por el lado del docente** (18 % con
+política escrita formal, 34 % sin ninguna guía). 🔵 **Las dos puntas ahora concuerdan con instrumento nombrado
+en los dos niveles: el aula y la legislatura.**
+🟢 **Oportunidad cotizable:** Tennessee y Oregon no piden un modelo mejor, piden un **control de producto**
+(no-tamizaje de salud mental; límite de uso compulsivo para menores). Es la capa de **compuerta** que los pases
+70, 71 y 86 ya midieron en el código de esta base — y **P257** agrega el argumento de que 21 de 25 servidores MCP
+no ligan proveedor, así que el control se puede entregar sin comprometer al cliente con un vendor.
+
+### EMEA
+
+⚠️ **El barrido devolvió el titular «el deadline de agosto de 2026 llegó y la mayoría de las reglas se
+difirió», que es material que esta base YA tiene medido y no se re-litiga**: Anexo III §3 (educación) →
+**2027-12-02**, diferido por el *Digital Omnibus on AI* (en vigor **2026-07-27**); art. 50 (transparencia) en
+aplicación desde **2026-08-02**, **no tocado** por el Omnibus. 🔵 **Lo nuevo es la confirmación de que el titular
+difusor persiste en secundarias de 2026**, que ya es la cuarta medición concordante del mismo error de canal
+(pases 55, 59, 71 y 86) — **así que conviene seguir llegando con la norma** (tendencia 561).
+🔴 **El reloj que SÍ corre y hay que decir en voz alta:** el *backstop* del **art. 50(2)** (marcado legible por
+máquina para sistemas **ya en el mercado** antes del 2026-08-02) vence el **2026-12-02** — **a 59 días de hoy.**
+🟢 **Oportunidad cotizable, y es la única región donde esta capa es obligación legal con fecha:** el marcado
+legible por máquina, para el que esta base ya tiene instrumento corriendo
+(`compose/code/aiact-50-2-pack/`, `aiact-50-2-marking/`). ⚠️ **Y el hueco propio que sigue abierto desde el pase
+80: *EMEA-soberano + xAPI 2.0* no existe hoy** — el único LRS permisivo con titular público europeo
+(`openfun/ralph`, MIT, France Université Numérique) está clavado en el spec 1.0.3.
+
+### APAC
+
+🟢 **Dato nuevo y es de CURRÍCULA, que es una categoría de comprador que esta base no tenía en APAC:**
+
+| País | Instrumento | Estado |
+|---|---|---|
+| 🇨🇳 China | currícula nacional **obligatoria** de AI | en vigor desde el ciclo escolar **2025-26** — junto con EAU, los únicos dos países del mundo |
+| 🇮🇳 India | AI y pensamiento computacional **obligatorios desde 3.er grado**, público y privado | **desde el ciclo 2026-27**; centro de excelencia de **Rs 500 crore**, India AI Mission de **Rs 10.372 crore** |
+| 🇯🇵 Japón | **segundo AI Basic Plan**, aprobado por el Gabinete el **2026-07-14** | ⚠️ **es estrategia, no ley**; la *AI Promotion Act* sigue siendo promocional y sin sanción |
+| 🇨🇳 China | filing de algoritmos + **etiquetado de contenido sintético** + revisión de seguridad de modelos públicos | 🔴 en vigor — **es la otra jurisdicción, además de la UE, que obliga a MARCAR** |
+
+🔵 **El hallazgo de posicionamiento: China obliga a etiquetar contenido sintético y la UE también (art. 50(2)).**
+🟢 **Eso vuelve el instrumento de marcado de esta base un activo de DOS jurisdicciones y no de una**, que es un
+argumento mucho más fuerte que el de EMEA sola. ⚠️ **No se afirma equivalencia técnica entre los dos regímenes:
+no se leyó el texto chino, y el canal fue de búsqueda.**
+🔴 **El hueco de CÓDIGO educativo de APAC se declara ABIERTO por DECIMOQUINTA vez**, y este pase midió por qué
+no lo cerró: los modelos soberanos que el barrido nombra (**SEA-LION** de Singapur, **Sarvam** de India,
+**Sahabat AI** de Indonesia, **TAIDE** de Taiwán, **ILMU** de Malasia, **HyperCLOVA X Think** de Corea) son
+**modelos, no agentes educativos**, y los cuatro slugs que este pase intentó anclar al payload **eran
+conjeturados**, así que sus 404 **no afirman ausencia** (`P253`).
+
+### LATAM
+
+🟢 **Dato nuevo y es regulatorio: el marco legal de Brasil pasó de proyecto a APROBADO** — **PL 2338/2023**, con
+exigencias de transparencia, evaluación de impacto y **registro de sistemas de alto riesgo**.
+🔵 **Es la primera jurisdicción de LATAM con un régimen de alto riesgo registrable, y educación cae ahí por el
+mismo razonamiento que en la UE** (acceso y evaluación). ⚠️ **No se leyó el texto: canal de búsqueda.**
+🟢 **Y cuatro olas más en curso en el Q2 de 2026:** Chile (ley de IA en trámite), Colombia (lineamientos de
+**MinTIC**), México (directrices del **INAI**), Argentina (anteproyecto).
+🟢 **Dato de adopción nuevo:** **Brasil 76 % y México 70 %**, con LATAM en **47 %** contra un promedio global de
+**45 %** — o sea **la región adopta por encima del mundo**. ⚠️ **El 47 % concuerda con el que esta base ya tenía
+del pase 76 y no se promedia con nada** (`P107`).
+🔴 **Y la inversión que el pase 68 nombró se sostiene y ahora tiene norma de un lado: la región de MAYOR
+adopción sigue siendo de MENOR capacidad institucional de regular** — el propio barrido lo dice con sus palabras
+(*«avanza mucho más rápido que la capacidad institucional de regularlo»*).
+⚠️ **El conflicto de fuentes sobre Latam-GPT PERSISTE sin resolver y se sigue listando por los dos lados
+(`P107`, desde el pase 55): «30+ instituciones, 8 países» contra el registro de esta red «60+ instituciones, 15
+países, feb-2026».** 🔵 **Dos mediciones, dos fuentes, cero promedio.**
+🟢 **Oportunidad cotizable:** Brasil es hoy el único país de la región donde el entregable de alto riesgo es
+**registrable** ante un régimen, así que el paquete de evidencia (evaluación de impacto + trazabilidad +
+marcado) es vendible como cumplimiento y no sólo como calidad. 🔵 **Y el 61 % de estudiantes que teme el mal uso
+por parte de sus PARES, que el pase 71 midió, sigue siendo el dato que decide a quién se le vende: al área
+académica, no a compliance.**
+
+### 🔴 Lo que este barrido NO cerró, declarado en vez de rellenado
+
+- **Ninguna de las piezas de código medidas declara origen LATAM** — decimocuarta declaración, y este pase
+  volvió a resistir inferirlo de un antropónimo (`P135`), aunque `pablocaeg/sloptotal` y
+  `CharlieCardenasToledo/mcp-canvas-server` lo sugieran.
+- **APAC sigue sin código educativo propio en el inventario** (decimoquinta vez), con la causa medida arriba.
+- **Cero fuentes primarias de norma** en las cuatro regiones: el proxy de egreso sigue bloqueando los sitios
+  oficiales, así que toda la regulación de esta sección es de secundarias concordantes.
+
 ## 🔴 Decimocuarto barrido regional consecutivo agotado, y el dato del pase es de CATEGORÍA: la capa que compra un MINISTERIO entró al inventario, sin región (pase 85 del 2026-10-04)
 
 ### 🔴 El barrido regional obligatorio: DECIMOCUARTA vez consecutiva sin rendimiento

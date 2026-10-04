@@ -8,6 +8,55 @@ updated: 2026-10-04
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 
+## 2026-10-04 — pase 86: el barrido de GitHub trending vuelve vacío por decimoquinta vez, y el canal que rindió fue el MANIFIESTO de lo que la base ya tenía
+
+🔴 **`github trending education AI 2026` y las otras tres búsquedas globales obligatorias se corrieron (año
+CALCULADO: 2026) y devolvieron, por CUARTO pase consecutivo, el eje generalista agotado:** `openclaw` (385.407 ★),
+`dify` (151.639 ★), `browser-use` (108.128 ★), `Mem0` (62.735 ★), `AutoGen` (60.284 ★), `Flowise` (55.226 ★).
+🔵 **Ninguno es de la vertical educativa y los seis ya están en esta red de KBs.** ⚠️ **Una parte del resultado
+fueron issues auto-generados de forks de `agents-radar` (`kouweizhu`, `duanyytop`, `ghub1821239`,
+`845421145-lang`), que es ruido de canal y se declara en vez de citarse como hallazgo.**
+
+### 🟢 El canal que SÍ rindió: el manifiesto de runtime de los repos que esta base ya listaba
+
+**Cero altas, y el valor del pase es de re-medición sobre el inventario propio.** El eje nuevo es la **ligadura de
+proveedor** (`compose/code/p257-provider-binding/`), y sobre los 69 `org/repo` del catálogo:
+
+| | n |
+|---|---|
+| manifiesto de runtime LEÍDO | **48** (`package.json` 29 · `requirements.txt` 10 · `pyproject.toml` 9) |
+| sin manifiesto alcanzable por este canal | ⚠️ **21** |
+| 🔴 **con capa de abstracción de proveedor** | **0 de 48** |
+
+🔵 **Que 48 de 69 tengan manifiesto legible por `raw` es, de paso, una medición del CANAL** y refina lo del pase
+84: el registro de paquetes contesta por lo publicado, el `raw` del manifiesto contesta por el árbol, y **los 21
+restantes no están muertos — están fuera del alcance de los dos** (varios se distribuyen por Docker Hub o se
+instalan desde el código, como midió el pase 33).
+
+### ⚠️ La plataforma vertical que el barrido nombró y esta base NO tiene, con su licencia SIN AFIRMAR
+
+El barrido de plataformas (`open source platform education ERP CRM MIT Apache`) devolvió una lista en la que
+**todo estaba ya en `verticals/solutions.md` salvo una**: **Opigno** (LMS sobre Drupal), con **0 menciones en los
+ocho archivos de este árbol**. 🔴 **Y su licencia queda `NO-CLAIM`, no inferida**: `www.drupal.org` y
+`git.drupalcode.org` dan **`connect_rejected` del proxy de egreso**, y la calibración de `P249` sobre ellos sale
+**000 a la URL buena Y 000 a la inexistente → el canal NO DISCRIMINA**, así que no se le cree ni un positivo ni un
+negativo. ⚠️ **WebFetch sobre `www.drupal.org` devolvió `EGRESS_BLOCKED`, segundo canal, misma respuesta.**
+🔵 **Opigno queda como ACCIÓN con su bloqueo nombrado, no como fila con una licencia conjeturada** — un módulo de
+Drupal es GPL-2.0+ por la política del proyecto, pero eso es una inferencia de política y no una lectura de
+payload, que es la única cosa que esta base publica como licencia.
+
+### 🔴 El hueco APAC de CÓDIGO se declara por DECIMOQUINTA vez, y este pase midió por qué
+
+La búsqueda regional de APAC rindió material **de política y de modelos soberanos**, no de código educativo:
+China y EAU como únicos países con currícula nacional obligatoria de AI (ciclo 2025-26), India con AI obligatoria
+desde 3.º grado a partir de 2026-27, y la lista de modelos soberanos (SEA-LION de Singapur, Sarvam de India,
+Sahabat AI de Indonesia, TAIDE de Taiwán, ILMU de Malasia, HyperCLOVA X Think de Corea).
+⚠️ **Se intentó anclar cuatro de ellos al payload y los cuatro dieron 404 en el canal CALIBRADO** — pero
+**los slugs eran CONJETURADOS por este pase** (`aisingapore/sea-lion`, `aisingapore/SEA-LION`,
+`sarvamai/sarvam-models`, `GoToCompany/sahabat-ai`), y **un 404 sobre un nombre conjeturado no puede afirmar una
+ausencia**: es exactamente el control que `P253` existe para imponer. 🔵 **Así que no entra ninguna fila, no se
+afirma que esos repos no existan, y el hueco APAC de código educativo sigue ABIERTO con su causa nombrada.**
+
 ## 2026-10-04 — pase 85: el barrido de GitHub trending vuelve vacío por decimocuarta vez, y el canal que rindió fue un eje de categoría que esta base nunca había barrido: EMIS
 
 ### 🔴 Altas de repo: 1 — y se declara QUÉ se buscó

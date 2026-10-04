@@ -8,6 +8,7 @@ updated: 2026-10-04
 
 > Recetas concretas: repos nombrados, licencias verificadas, wiring explícito y estimación.
 > Todos los repos citados fueron verificados vía WebFetch el 2026-09-30; los del pase 11, el 2026-10-01 (ver `agents/top.md`).
+> **Pase 86 del 2026-10-04:** 🆕 **Los patrones nuevos son **P257** y **P258**, y los dos salen de medición de este pase: P257 convierte la palabra `lock-in` —que estaba en los ocho archivos de este árbol sin un solo instrumento— en una pregunta con respuesta reproducible, y P258 es la regla que salió del SEGUNDO fallo del propio instrumento. 🔵 **Y la receta nueva (`R-86`) es la primera de esta base que se puede cotizar con una cifra de ligadura por pieza.**
 > **Pase 81 del 2026-10-04:** 🆕 **El patron nuevo es **P247**, y sale del defecto que este pase se encontro encima: el canal de verificacion que el propio encargo ordena usar (`curl -sI`) devuelve `403` en **81 de 81** URLs de `github.com` del catalogo, con varianza CERO, mientras WebFetch resuelve las mismas URLs.** 🔴 **Obedecer la instruccion al pie de la letra habria marcado el 100 % del catalogo como muerto.** 🟢 **P247 es la receta de CALIBRACION: control positivo obligatorio antes de creerle un negativo, lectura de varianza, y confirmacion pieza por pieza por un segundo canal independiente — con su cota declarada (un canal mudo no prueba que las filas esten vivas, prueba que no puede opinar).** 🟢 **Y **P246** se ACTUALIZA con la medicion del pase: el cuarto servidor xAPI 2.0 conformante existe (`raif-s-naffah/xapi-rs`) y es `GPL-3.0-or-later`, asi que la eleccion de LRS permisivo de P246 queda confirmada por eliminacion sobre 4 de 4 conformantes medidos, y el hueco EMEA-soberano sigue abierto.**
 > **Pase 77 del 2026-10-03:** 🔵 **Los patrones nuevos son **P234**–**P238**, y los cinco salen de mediciones de primera mano de este pase.** **P234**: la tabla de «repo muerto ⇒ licencia no verificada» cierra con **5 de 5 permisivas** y su nota de honestidad queda refutada entera — **y la fila que se midió traía además el ROL mal archivado**, que es el error de signo peligroso porque INCLUYE una pieza inservible en vez de excluir una usable. **P235**: el eje CAPA se reproduce en otro estándar y **su SIGNO se INVIERTE** — en xAPI exponer está abierto y consumir está congelado, al revés que en OneRoster, **así que un eje se traslada y un resultado medido sobre ese eje no**. **P236**: cómo se mide una familia de licencia sin reabrir P171, con el control negativo que lo prueba sobre Moodle. **P237**: el patrón que esta KB se aplica a sí misma por segunda vez — **una corrección almacenada como conocimiento se re-pierde en cada herramienta nueva; sólo sobrevive como código compartido con un test** (`compose/code/lib/`). **P238**: la receta para juzgar un fork, que es comparar ARCHIVOS y no asuntos de commit — con fuente idéntico byte a byte, **lo que se bifurcó es el suite de pruebas**.
 > **Pase 68 del 2026-10-03:** 🔵 **Los patrones nuevos son **P190**–**P195**, y los seis salen de mediciones de primera mano de este pase, con su texto escrito en el mismo pase que los acuña (**P157**).** **P190**: el titular es PEOR en la capa que el cliente INSTALA (`HOLDER-UNRELATED` 19,4 % en árbol → 35,3 % en paquete, n=17) y ahí vive una clase que el árbol no tiene (`NO-HOLDER`). **P191**: el régimen de licencia de un estándar se parte por **PUBLICADOR × TIPO DE ARTEFACTO** —1EdTech×documento niega derivados (2/2), 1EdTech×software es Apache-2.0 (4/4), ADL y Ed-Fi×documento son Apache-2.0 (2/2)— sin una excepción en 8 archivos. **P192**: la pregunta de IDENTIDAD va antes que la de canal, y está medida: 4 de 5 nombres de doble registro son dos artefactos. **P193**: el `sha256` del `LICENSE` UNE un paquete a su árbol cuando el registro no declara el enlace, y es cota inferior. **P194**: un umbral sobre un conteo no distingue una propiedad de la CAPA de una del PUBLICADOR si la muestra está desbalanceada. **P195**: los cuatro instrumentos de licencia de esta KB son GitHub-shaped, así que un estándar que migra se cae de todos los denominadores en silencio. 🟢 **La receta nueva es **P196**: elegir el estándar por su LICENCIA cuando el entregable incluye un perfil derivado.** 🔴 **Y **P197** es el patrón que esta KB se aplica a sí misma: una corrección sobrevive sólo si el instrumento que re-mide la conoce — el pase 66 regresó a `MIT` una celda que el pase 52 había corregido a 0BSD leyendo el payload, y la regresión es invisible en la celda.**
@@ -110,6 +111,109 @@ updated: 2026-10-04
 > no existe en open source permisivo).
 > **Pase 11:** +2 patrones — **P25** (riesgo de abandono conforme al Anexo III, la capa con presupuesto ya asignado y sin oferta open source) y **P26** (agente docente sobre la ontología curricular nacional ya publicada).
 > **Pase 27:** **+4 patrones y una corrección.** 🔴 **P51 queda con premisa falsa** —el conector MCP de Moodle **sí existe y es MIT**— y lo reemplazan **P54** (corrección y devolución sobre Moodle con **compuerta humana**, el último tramo del gap 6, con piezas que ya escriben), **P55** (el conector de **Open edX**, que es el único que de verdad no existe), **P56** (**SCORM** como formato de salida de la capa generativa: cero integración, offline) y **P57** (evidencia por MCP cotizada sobre lo que CaSS **realmente** expone — 6 de 61 operaciones, con insignias y autoría de marcos **fuera**).
+
+## 🆕 P257 — *Familia de licencia* y *ligadura de proveedor* son dos preguntas distintas, y la segunda también va en dos columnas (pase 86 del 2026-10-04)
+
+Esta base contestaba «¿lo podemos usar?» con la licencia, y escribía `lock-in` en prosa en **los ocho** `.md`
+del árbol sin instrumento. Son dos preguntas: una licencia MIT permite construir; **no** dice a qué proveedor de
+modelo queda atado el cliente cuando construimos.
+
+> **P257.** *Proveedores ligados* y *intercambiabilidad de la ligadura* son dos columnas, y se leen del
+> **manifiesto de runtime** (`dependencies`, `peerDependencies`, `[project].dependencies`), nunca del README ni
+> del nombre del repo. Una **capa de abstracción** (`litellm`, `langchain-*`, `@ai-sdk/*`, `@langchain/*`) hace
+> intercambiable la ligadura **por definición** y no se somete a ningún token de proveedor: el detector de «un
+> solo proveedor» corre **sólo** cuando la compuerta de abstracción dice que no hay capa.
+> Y la regla de `P251` en este eje: **sin manifiesto LEÍDO la respuesta es `NO-CLAIM`, nunca «no liga nada».**
+
+**Instrumento:** `compose/code/p257-provider-binding/` — `python3 test_binding.py` → **37/37**.
+**Barrido:** `cat slugs.input.txt | xargs -P 8 -I{} sh ./sweep_binding.sh {}` → `result.2026-10-04.tsv`.
+Se **niega a correr** si el canal no discrimina (`sh sweep_binding.sh --calibrate`, regla de `P249`).
+
+### Lo medido sobre las 69 filas recomendables
+
+| Veredicto | n |
+|---|---|
+| 🟢 `UNBOUND` | **36** |
+| ⚠️ `NO-CLAIM` | **21** |
+| 🔴 `MULTI-DIRECT` | **6** |
+| 🔴 `SINGLE-VENDOR` | **4** |
+| ⚠️ `MONOREPO-ROOT` | **2** |
+| 🔴 **`SWAPPABLE`** | **0 de 69** |
+
+🟢 **Cruce con la capa MCP:** **21 de 25** servidores MCP no ligan proveedor (la ligadura vive en el host);
+🔴 **4 llaman al modelo desde el servidor.** Frecuencia entre las 10 ligadas: **local 5 · OpenAI 5 · Google 3 ·
+Anthropic 2 · Ollama 1 · Groq 1 · Cohere 1.**
+
+### Los cuatro falsos positivos que este instrumento tiene que NO cometer, y están en la suite
+
+| Dependencia | Ingenuo diría | 🟢 Correcto | Por qué |
+|---|---|---|---|
+| `@langchain/openai` | OpenAI directo | **`SWAPPABLE`** | es **capa**; el substring `openai` está dentro del nombre de la abstracción |
+| `tiktoken` | OpenAI | **`UNBOUND`** | es un **tokenizador**, no un cliente de inferencia |
+| `boto3` | AWS Bedrock | **`UNBOUND`** | es el SDK **entero** de AWS; Bedrock es `@aws-sdk/client-bedrock-runtime` |
+| `openai-whisper` | OpenAI | **`UNBOUND`** | pesos abiertos, corre **local** |
+
+🔵 **Es la misma falta de solidez que `P171` nombró para las licencias: el nombre de la abstracción CONTIENE el
+token del proveedor que abstrae**, igual que el cuerpo de AGPL-3.0 contiene la palabra con la que un detector
+ingenuo lo marca no-comercial.
+
+---
+
+## 🆕 P258 — Una raíz de monorepo no es un manifiesto de runtime, pero el marcador de workspace por sí solo no la silencia (pase 86 del 2026-10-04)
+
+El instrumento de `P257` falló **dos veces en su propio barrido**, en direcciones opuestas, y las dos quedaron
+versionadas como control negativo con el payload literal.
+
+> **P258.** La raíz de un workspace se declara **incontestable** (`MONOREPO-ROOT`, que es un `NO-CLAIM` con la
+> causa nombrada) **sólo** cuando se cumplen las **dos** condiciones: hay marcador de workspace **Y** la raíz no
+> declara **ninguna** dependencia de runtime. Una raíz **con** dependencias es un paquete y se contesta.
+> El marcador se busca **fuera** del manifiesto (`pnpm-workspace.yaml`, `lerna.json`), porque pnpm y lerna no lo
+> escriben en el `package.json` y desde el manifiesto solo la raíz parece un paquete sin dependencias.
+
+| Corte | Publicó | 🟢 Correcto | Causa |
+|---|---|---|---|
+| `result-monoroot.NEGATIVE-CONTROL-2026-10-04.tsv` | `FWU-DE/ais-chat` → **UNBOUND** | **MONOREPO-ROOT** | raíz `private`, 0 dependencias de runtime, `turbo` en dev. 🔴 **`apps/api/package.json` trae `openai`** |
+| `result-overbroadgate.NEGATIVE-CONTROL-2026-10-04.tsv` | los dos `canvas-lms-mcp` → **MONOREPO-ROOT** | **UNBOUND** | el gate tomaba el marcador como suficiente; esas raíces traen 4 dependencias reales |
+
+🔴 **La lección de método, que es la más cara de las dos: la suite estaba en 34/34 cuando el gate ancho ya
+silenciaba dos filas de dato bueno.** 🔵 **Un gate nuevo no se valida con la suite verde: se valida con el
+barrido COMPLETO corrido otra vez y diffeado contra el corte anterior.** Es `P126` regla 2 aplicada a un gate en
+vez de a un contador — un control positivo que pasa no habilita un gate si no ejercita el caso donde ese gate
+puede silenciar.
+
+---
+
+## 🆕 R-86 — Receta: entregar una capa agéntica educativa sin comprometer al cliente con un proveedor de modelo
+
+**Para quién:** un engagement donde el cliente llega con un mandato de proveedor (soberanía EMEA, un acuerdo
+corporativo con un hyperscaler, o una política de «nada que salga del país»).
+**Lo que `P257` cambia:** antes esto se contestaba con una estimación; ahora se contesta con una cifra por pieza.
+
+### El wiring, con los repos nombrados
+
+| Capa | Pieza | Licencia | Ligadura medida | Qué hay que hacer |
+|---|---|---|---|---|
+| **Acceso al LMS** | `NiccoloSalvini/mcp-moodle-teacher`, `AmirF194/canvas-mcp`, `algorithm0r/canvas-lms-mcp`, `bruchris/canvas-lms-mcp` | ver `p250` | 🟢 **`UNBOUND`** | **nada**: el modelo lo elige el host |
+| **Compuerta de escritura** | `compose/code/mcp-allowlist-gateway/` + `sebserver-mcp-gate/` + `unitime-mcp-gate/` | de esta base | 🟢 **sin ligadura** | configurar la allowlist |
+| **Host / orquestación** | el host MCP del cliente | — | 🔵 **acá vive la elección de proveedor, y es del cliente** | **es la decisión, no el trabajo** |
+| **Marcado art. 50(2) / etiquetado APAC** | `compose/code/aiact-50-2-pack/` + `aiact-50-2-marking/` | de esta base | 🟢 **sin ligadura** | fijar el dialecto SCORM |
+| **Integridad académica** | `ahans30/Binoculars`, `baoguangsheng/fast-detect-gpt`, `liamdugan/raid` | ver `p250` | 🟡 **`local` / pesos abiertos** | corre **on-premise por necesidad del método** (tendencia 673) |
+| **Los 4 que ligan desde dentro** | `CharlieCardenasToledo/mcp-canvas-server`, `MarcosNahuel/moodle-mcp`, `poorvika12-hub/student_mcp`, `moarshy/mcp-tutor` | ver `p250` | 🔴 **Google / Groq / Anthropic+OpenAI** | 🔴 **acá sí hay trabajo: no tienen capa, así que el swap es a mano** |
+
+### 🟢 Por qué esto se puede decir en una reunión
+
+**De las 48 piezas con manifiesto legible, 38 no obligan a ninguna decisión de proveedor** (36 `UNBOUND` + 2
+raíces que no ligan por sí mismas). 🔴 **Las 10 restantes son alcance acotado y nombrado, y ninguna tiene capa de
+abstracción**, así que el estimado es «diez swaps a mano», no «hay que auditar el catálogo».
+🔵 **Y el argumento de soberanía tiene un refuerzo que no es retórico: la capa de detección ya corre con pesos
+abiertos porque un detector necesita verosimilitudes por token**, así que la parte más sensible del sistema es la
+que menos sale a una API.
+
+⚠️ **La cota honesta: los 21 `NO-CLAIM` no entran en esta receta.** No se afirma que no liguen — se afirma que
+este canal no pudo leer su manifiesto, y varias de esas piezas se distribuyen por Docker Hub o se instalan desde
+el código (pase 33). **Antes de proponer una de ellas hay que medirla.**
+
+---
 
 ## 🧩 P255 — cómo preguntar «¿quién es el titular?» sin que la respuesta sea la Free Software Foundation (pase 85 del 2026-10-04)
 

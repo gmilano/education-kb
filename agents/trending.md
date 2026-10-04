@@ -9,6 +9,102 @@ updated: 2026-10-04
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 > No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
 
+## 2026-10-04 — pase 86: la palabra que esta base escribía en los ocho archivos sin medirla nunca, y al medirla sale CERO
+
+🔴 **`lock-in` estaba en PROSA en los ocho `.md` de este árbol y no tenía instrumento.** Este pase lo construye
+(`compose/code/p257-provider-binding/`, **37/37 controles**) y lo corre sobre las **69** filas recomendables que
+`p250` ya había fijado como catálogo, por el canal **CALIBRADO** (`raw.githubusercontent.com`, 200 a la ruta buena
+y 404 a la inexistente).
+
+### La pregunta, partida en DOS columnas como manda `P250`
+
+No es una pregunta, son dos, y mezclarlas es lo que hacía la prosa:
+
+| Columna | Qué contesta |
+|---|---|
+| **proveedores** | qué SDK de proveedor aparece en el manifiesto de **runtime** |
+| **ligadura** | si la ligadura es **intercambiable** (hay capa de abstracción) o hay que cambiarla a mano |
+
+La compuerta es la de `P250`: el detector de «un solo proveedor» corre **sólo** cuando la compuerta de abstracción
+dice que no hay capa. Una capa hace intercambiable la ligadura **por definición** y no se somete a ningún token.
+
+### Lo medido sobre las 69
+
+| Veredicto | n | Qué significa |
+|---|---|---|
+| 🟢 `UNBOUND` | **36** | manifiesto LEÍDO, cero SDK de proveedor y cero capa |
+| ⚠️ `NO-CLAIM` | **21** | ningún manifiesto alcanzable — **no se afirma ausencia de ligadura** (`P251`) |
+| 🔴 `MULTI-DIRECT` | **6** | dos o más proveedores directos, sin capa |
+| 🔴 `SINGLE-VENDOR` | **4** | un proveedor directo, sin capa |
+| ⚠️ `MONOREPO-ROOT` | **2** | la raíz de un workspace no es un manifiesto de runtime |
+| 🔴 **`SWAPPABLE`** | **0** | **ninguna de las 69 rutea por `litellm`, `langchain` ni `@ai-sdk/*`** |
+
+🔴 **El cero es el hallazgo.** No hay una sola pieza en este catálogo que haya puesto una capa de abstracción de
+proveedor en su manifiesto de runtime.
+
+### Las 10 que SÍ ligan, con el manifiesto del que sale cada una
+
+| Repo | Manifiesto | Veredicto | Proveedores |
+|---|---|---|---|
+| `CharlieCardenasToledo/mcp-canvas-server` | `package.json` | 🔴 MULTI-DIRECT | Google, Ollama (local) |
+| `MarcosNahuel/moodle-mcp` | `package.json` | 🔴 SINGLE-VENDOR | Google |
+| `SirhanMacx/Claw-ED` | `pyproject.toml` | 🔴 MULTI-DIRECT | Anthropic, OpenAI |
+| `ahans30/Binoculars` | `requirements.txt` | 🟡 SINGLE-VENDOR | local (pesos abiertos) |
+| `baoguangsheng/fast-detect-gpt` | `requirements.txt` | 🔴 MULTI-DIRECT | OpenAI, local |
+| `eth-lre/mathtutorbench` | `requirements.txt` | 🔴 MULTI-DIRECT | Google, OpenAI, local |
+| `liamdugan/raid` | `requirements.txt` | 🔴 MULTI-DIRECT | Cohere, OpenAI, local |
+| `moarshy/mcp-tutor` | `pyproject.toml` | 🔴 MULTI-DIRECT | Anthropic, OpenAI |
+| `pablocaeg/sloptotal` | `requirements.txt` | 🟡 SINGLE-VENDOR | local (pesos abiertos) |
+| `poorvika12-hub/student_mcp` | `requirements.txt` | 🔴 SINGLE-VENDOR | Groq |
+
+Frecuencia entre las 10: **local 5 · OpenAI 5 · Google 3 · Anthropic 2 · Ollama 1 · Groq 1 · Cohere 1.**
+🔵 **Que `local` empate con OpenAI en el primer puesto no es casual: cinco de las diez son piezas de DETECCIÓN
+o de BENCHMARK, que corren pesos abiertos porque necesitan verosimilitudes, no una API.**
+
+### 🟢 El cruce con la capa MCP, que es de donde sale la cifra cotizable
+
+La pregunta «¿es un servidor MCP?» se midió por la **dependencia de runtime del SDK**, no por el `-mcp` del slug,
+que es prosa (`mcp_layer.sh` → `mcp-layer.2026-10-04.tsv`):
+
+| | `UNBOUND` | liga algo | raíz |
+|---|---|---|---|
+| **servidor MCP** (25) | 🟢 **21** | 🔴 4 | — |
+| **no MCP** (23) | 16 | 🔴 6 | 1 |
+| `NO-CLAIM` (21) | — | — | — |
+
+🟢 **21 de 25 servidores MCP (84 %) no ligan NINGÚN proveedor: la ligadura vive en el HOST.** Es la primera
+evidencia MEDIDA de algo que esta base venía afirmando en prosa, y es un argumento de venta: **construir sobre
+esos 21 no compromete al cliente con ningún proveedor de modelo.**
+🔴 **Y los 4 que sí ligan desde dentro del servidor son la excepción que hay que cotizar**, porque ahí el mandato
+de proveedor de un cliente se vuelve trabajo de código: `CharlieCardenasToledo/mcp-canvas-server`,
+`MarcosNahuel/moodle-mcp`, `poorvika12-hub/student_mcp` y `moarshy/mcp-tutor`.
+
+### 🔴 El instrumento falló DOS veces en su propio barrido, y las dos están versionadas
+
+| Corte | Qué publicó | 🟢 Correcto | Causa |
+|---|---|---|---|
+| `result-monoroot.NEGATIVE-CONTROL-2026-10-04.tsv` | `FWU-DE/ais-chat` → **UNBOUND** | **MONOREPO-ROOT** | leyó la RAÍZ de un monorepo pnpm (`private`, cero dependencias de runtime, `turbo` en dev). 🔴 **El producto SÍ liga: `apps/api/package.json` trae `openai`** — verificado de primera mano |
+| `result-overbroadgate.NEGATIVE-CONTROL-2026-10-04.tsv` | `algorithm0r/canvas-lms-mcp` y `bruchris/canvas-lms-mcp` → **MONOREPO-ROOT** | **UNBOUND** | el gate nuevo salió **demasiado ancho**: traen `pnpm-workspace.yaml` **y** una raíz con cuatro dependencias de runtime reales (`@modelcontextprotocol/sdk`, `zod`, `@iarna/toml`, `prompts`), así que su raíz **sí** es un paquete |
+
+🔵 **La regla que queda es la del segundo fallo, no la del primero: un marcador de workspace por sí solo no hace
+incontestable a una raíz — hace falta que la raíz NO declare ninguna dependencia de runtime.** Ver **P258**.
+🔵 **Y el primer fallo repite exactamente la lección del pase 67: un barrido escrito en el pase devuelve ausencias
+que son falsos negativos, y sólo la lectura de primera mano las destapa.** La destapó una: el
+`allowBuilds: '@google/genai'` del propio `pnpm-workspace.yaml` de `ais-chat`, que no es el manifiesto de un
+paquete pero sí prueba que el árbol liga.
+
+### ⚠️ Lo que este pase NO midió, declarado en vez de tapado
+
+- 🔴 **Las 35 suites PREEXISTENTES: ejecución NEGADA** (`[Code from External]`), como en los pases 58, 67, 79, 80,
+  81 y 84, y al revés que en el 66, el 75, el 82 y el 83. **No se reimplementaron a mano, no se buscó otro
+  intérprete y no se troceó el comando.** La columna «Hoy» del README son las cifras del pase 83; **este pase no
+  las afirma**. 🟢 **Lo único que midió de ejecución es su propio código: `test_binding.py`, 37/37, `Python 3.11.15`.**
+  🔵 **Y esa frontera NO se eleva a regla del entorno** — varía entre pases, y generalizarla es el error que los
+  pases 50, 51 y 58 cometieron en una dirección y el 52, el 66 y el 75 en la otra.
+- ⚠️ **Los 21 `NO-CLAIM` no son 21 piezas sin ligadura: son 21 piezas sin manifiesto alcanzable por este canal.**
+  Varias de esta base se distribuyen por Docker Hub o se instalan desde el código (lo midió el pase 33), así que
+  el hueco es del CANAL y queda abierto como acción.
+
 ## 2026-10-04 — pase 85: la pregunta del TITULAR no tenía control compartido, y el payload que lo prueba es la primera GPL-2.0 de esta base
 
 ### 🟢 Altas de agente: 2 — y se declara qué se buscó
