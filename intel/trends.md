@@ -7,6 +7,7 @@ updated: 2026-10-04
 # 📡 Tendencias — education
 
 > Ventana de investigación: septiembre 2026. Verificado 2026-09-30; el pase 11, el 2026-10-01.
+> **Pase 94 del 2026-10-04:** 🟢 **Ocho tendencias nuevas, numeradas 729–736** (el pase 93 cerro en 728). 🔴 **729: el cero del barrido global pasa a tener DENOMINADOR — `agents-radar` #328, fechado el mismo dia, 47 repos, 0 de la industria educativa.** 🔴 **730: la etiqueta `[EDUCATION]` de los radares generalistas confunde dos industrias —AI como MATERIA que se enseña vs educacion como SECTOR que se sirve— y una base que la ingiere importa filas inutiles** (**P281**). 🔴 **731: el canal de verificacion que el encargo ordena esta muerto aqui (`curl -sI` sobre `github.com/` → 403 en 3/3, reproduce el pase 81) y el que rinde ENTREGA EL PAYLOAD.** 🔴 **732: el nombre del archivo de licencia es sensible a MAYUSCULAS y una lista fija de variantes siempre tiene hueco; el manifiesto lo NOMBRA** (**P279**). 🔴 **733: un manifiesto en la raiz puede describir a OTRO proyecto, y su campo `license` no es la licencia de la fila** (**P280**). 🔴 **734: la derivacion AGRAVA — un repo sin cesion propia que hereda un arbol OSL-3.0 es menos usable que uno simplemente sin licencia, porque el gatillo del copyleft es el despliegue externo y eso es lo que hace un LMS.** 🟢 **735: las 8 filas `SIN LICENCIA` de esta base aguantan un instrumento ~33× mas ancho, 8/8, con testigo de alcance previo al veredicto.** 🟢 **736: el canal regional de esta base rinde POLITICA, no CODIGO, y las cuatro regiones lo hicieron a la vez** (**P282**). 🔵 **El eje que cruza las ocho: siete de estas ocho son sobre el INSTRUMENTO, no sobre la industria —y eso es informacion sobre en que estado esta esta base: su cuello de botella ya no es encontrar repos, es no publicar mal los que tiene.**
 > **Pase 93 del 2026-10-04:** 🟢 **Ocho tendencias nuevas, numeradas 721–728** (el pase 92 cerro en 720). 🔴 **721: dos canales que sondean la MISMA lista de nombres no se validan entre si — el pase 92 declaro una cifra «confirmada por segunda mano» y la replica era circular, porque un sondeo de lista fija no puede discrepar de otro sondeo de la misma lista.** 🔴 **722: un conteo que sondea nombres esta acotado por la LISTA — el bucle del pase 92 gasto una consulta en `Ollama`, que no existe en Chamilo, y ninguna en `Claude`, que si: son 7 y publico 6.** 🔵 **723: el acierto de Moodle fue suerte del denominador** (sus 7 nombres reales caian dentro de la lista sondeada). 🟢 **724: «siete proveedores» y «siete empresas» son dos columnas, y la diferencia es una herencia de una linea.** 🔴 **725: el swap de proveedor no es propiedad de la plataforma sino del PAR (proveedor, tipo de servicio) — `document_process` lo implementa 1 de 7.** 🔴 **726: una capacidad configurada que no satisface su interfaz se pierde en SILENCIO** (`error_log` + `continue`, sin error en la interfaz). 🟢 **727: para sostener una ausencia en un arbol hay que ENUMERARLO, y un clon sin blobs lo hace en menos de un segundo — ILIAS pasa de *sostenido con limite* a ausencia CERRADA en cuatro refs.** 🔴 **728: el veredicto se seguia deduciendo de la FORMA DE UN NOMBRE, y este pase lo cometio dos veces en su propio instrumento** (el falso positivo de `ai` dentro de `Mail`/`MainMenu`/`ScormAicc`, que valia cinco entidades inventadas, y un centinela que colisiona con la ruta de la raiz del repo).
 > **Pase 91 del 2026-10-04:** 🟢 **Seis tendencias nuevas, numeradas 706–711** (el pase 90 cerró en 705). 🔴 **706: el pase que demostró que un conjunto de proveedores necesita REF publicó, en el mismo instrumento, SIETE veredictos de plataforma SIN REF** — el defecto que acababa de nombrar, una capa más abajo. 🔴 **707: puesto a prueba, el veredicto «Open edX no liga proveedor de modelo» es FALSO en las tres releases nombradas que un cliente corre y verdadero sólo en `master`.** 🔴 **708: y lo que trae es `openai==0.28.1`, SDK PRE-1.0, declarada DIRECTA en el core — tres respuestas distintas a «¿con qué SDK hablo?» según dónde caiga el cliente.** 🟢 **709: el defecto NO es universal — Canvas sobrevive en las 2 refs que resuelven, así que 1 de 2, y no se generaliza desde una muestra de dos.** 🔵 **710: un control de ref invariante al layout PASA exactamente cuando la ruta medida se rompió, así que «el control dio 200» no autoriza a leer un 404 como ausencia.** 🔵 **711: la matriz de proveedor por ref pasa de medición única a REPLICADA (6/6 exacto por un bucle distinto), que es la primera vez que una cifra de esta base se confirma por segunda mano.**
 > **Pase 92 del 2026-10-04:** 🟢 **Nueve tendencias nuevas, numeradas 712–720** (el pase 91 cerró en 711). 🔴 **712: la ligadura de proveedor de una plataforma puede vivir en un DIRECTORIO del núcleo, y entonces el manifiesto de runtime no da un veredicto negativo: da una lectura CIEGA — Chamilo trae 6 proveedores en el núcleo con `composer.json` en cero tokens, en la MISMA ref.** 🔴 **713: las dos contradicciones de la tabla del pase 90 tienen causas DISTINTAS —ref (Open edX) e instrumento (Chamilo)— y la de instrumento es peor, porque agregar refs no la encuentra.** 🟢 **714: con dos plataformas midiendo la misma forma, «¿puedo usar este proveedor?» se contesta con una VERSIÓN MÍNIMA y eso pasa de ser propiedad de Moodle a propiedad de la VERTICAL: Anthropic exige Moodle ≥ 5.3 o Chamilo ≥ 3.0.** 🔴 **715: hay un riesgo de migración que ninguna columna de licencia muestra — los 2 proveedores de Chamilo 1.11 viven en un plugin embarcado que da 404 desde v2.0.0, así que migrar CAMBIA el punto de integración.** 🟢 **716: la capa de autograding que esta base inventaría desde el pase 67 ya está en el NÚCLEO de Chamilo 2.0+, y esta KB la vendía sin tenerlo registrado.** 🔴 **717: en `raw.githubusercontent.com` un path de DIRECTORIO da 404 SIEMPRE, exista o no, así que «probé el directorio y no está» no es evidencia — y retira una clase entera de negativo de esta base.** 🟢 **718: canal nuevo después de cuatro pases de 403 — `WebFetch` sobre las páginas `tree/` de `github.com` LISTA directorios, con el límite medido de que trunca los listados largos.** 🔵 **719: vigesimoprimer barrido regional, y la saturación se MIDIÓ otra vez en vez de declararse: 22 de 24 tokens de hecho ya estaban en el árbol, y los 2 ausentes son horizontales —no de la vertical—.** 🟢 **720: la EJECUCIÓN volvió después de once pases NEGADOS, el árbol entero corre verde (41/41) y el linter de tablas da `total 0` sobre los ocho archivos de contenido — y lo primero que se gastó fue en REPLICAR la medición del propio pase, 8/8 refs exactas.** Ver los patrones **P273**–**P274** y [`compose/code/p273-platform-provider-dir/`](../compose/code/p273-platform-provider-dir/).
@@ -108,6 +109,88 @@ updated: 2026-10-04
 > (tendencia 29), se abre el **gap 20** y se registran dos advertencias de verificación: los agregadores de estrellas
 > están mal por ~2× y **un 403 de `curl` no es un 404**. Ver la nota de método del pase 12.
 > **Pase 11:** el Digital Omnibus es derecho vigente (tendencia 25), aparece la capa predictiva y está vacía (tendencia 26), y se corrige un error de método de diez pasadas sobre licencias permisivas (tendencia 27).
+
+## 🟢 Tendencias 729–736 — y siete de las ocho son sobre el INSTRUMENTO, no sobre la industria
+
+🔵 **Eso es, en si, el dato de estado de esta base: su cuello de botella ya no es encontrar
+repos educativos, es no publicar mal los que ya tiene.**
+
+### 729 — 🔴 El cero del barrido global pasa de afirmacion a CUENTA
+
+El pase 93 dejo la regla: *un conteo solo es un conteo si ENUMERA*. Aplicada hoy:
+[`kouweizhu/agents-radar` #328](https://github.com/kouweizhu/agents-radar/issues/328),
+fechado el **mismo 2026-10-04**, lista **47 repos**: **45** de infraestructura generalista de
+agentes, **2** etiquetadas `[EDUCATION]`, **0** de la industria educativa. **Decimo barrido
+global seguido en vacio, y el primero con denominador.**
+
+### 730 — 🔴 La etiqueta de industria de un radar generalista confunde dos industrias (`P281`)
+
+Las 2 filas `[EDUCATION]` del radar son `rasbt/LLMs-from-scratch` (105.957 ★) y
+`rohitg00/ai-engineering-from-scratch` (63.183 ★): **AI como MATERIA que se enseña a
+ingenieros**, no **educacion como SECTOR servido**. Ninguna toca un LMS, un SIS, una rubrica,
+un expediente ni una calificacion. **Y las dos ya estaban en esta base** (en 5 y 7 archivos).
+🔵 Consecuencia: una base vertical que ingiera esa etiqueta literalmente **importa filas que
+no sirven a ningun cliente de su industria** —y creera que su canal funciona.
+
+### 731 — 🔴 El canal de verificacion que el encargo ordena esta muerto aqui
+
+`curl -sI` sobre `github.com/` → **`403` en 3/3**, con los repos vivos. Reproduce exacto el
+pase 81 (**81 de 81**), trece pases despues. 🟢 El que rinde es `raw.githubusercontent.com`, y
+rinde **mas**: no solo discrimina `200`/`404`, **entrega el payload**, asi que la licencia se
+**lee** en vez de inferirse. 🔵 **Regla general: un canal que solo devuelve codigo de estado
+es mas debil que uno que devuelve contenido, aunque los dos «verifiquen».**
+
+### 732 — 🔴 El nombre del archivo de licencia es sensible a MAYUSCULAS, y toda lista fija tiene hueco (`P279`)
+
+`openedx/XBlock` —Apache-2.0, y la fila es **correcta**— da **0 hits en 11 variantes × 3
+ramas** con el testigo de alcance en verde. Su payload es **`master/LICENSE.TXT`**, extension
+en mayuscula; se habia probado `LICENSE.txt`. 🟢 **El nombre no se adivina: `pyproject.toml` lo
+NOMBRA** —`license-files = ["LICENSE.TXT"]`. ⚠️ **Por lo tanto un `SIN LICENCIA` cuya unica
+evidencia sea `/blob/main/LICENSE → 404` no es un veredicto, es un hueco del instrumento.**
+Control positivo: 6 de 7 hallados en la primera pasada —**un control de 7/7 habria dejado el
+hueco invisible**.
+
+### 733 — 🔴 Un manifiesto en la raiz puede describir a OTRO proyecto (`P280`)
+
+De las 8 filas sin cesion, **exactamente 1** devolvio licencia de manifiesto:
+`alfredang/ai-mms` → `composer.json` → **`["OSL-3.0","AFL-3.0"]`**. Y el campo de al lado la
+refuta: **`"name": "openmage/magento-lts"`**. Es el manifiesto de OpenMage, sin modificar,
+alojado en otro repo. **El discriminador es `name`.** 🔵 Misma familia que `P276` del pase 93:
+**dos señales que no pueden discrepar no se validan entre si** —un campo `license` y el repo
+que lo aloja no se validan, porque el archivo nunca hablo del repo. 🔴 Leerlo habria publicado
+una licencia **falsa** en un LMS de Singapur, en este mismo pase.
+
+### 734 — 🔴 La derivacion AGRAVA: heredar copyleft es peor que no tener licencia
+
+Medido: `ai-mms` tiene `app/Mage.php` (`200`), se declara **OpenMage LTS v20.12.0**, y su
+upstream lleva `LICENSE.txt` (**OSL-3.0**) y `LICENSE_AFL.txt` (**AFL-3.0**). 🔴 **OSL-3.0 es
+copyleft fuerte con gatillo de DESPLIEGUE EXTERNO —y desplegar frente a usuarios es lo unico
+que un LMS hace.** Asi que `SIN LICENCIA` **subestimaba** el riesgo: la pieza no tiene cesion
+propia **y** la heredada es la forma mas hostil para un encargo de cliente. 🔵 **Y cambia la
+clase de descarte: no es «a revisar si aparece un LICENSE» —habria que relicenciar el
+UPSTREAM, que no esta al alcance de su autor. Descarte DEFINITIVO.**
+
+### 735 — 🟢 La columna de licencia de esta base aguanta un instrumento ~33× mas ancho: 8/8
+
+Re-medidas las 8 filas `SIN LICENCIA` con **33 sondas por fila (264), 6 manifiestos por fila,
+y testigo de alcance ANTES del veredicto**: **8/8 alcanzadas, 8/8 AUSENCIA CONFIRMADA.** 🔵 El
+orden importa y es la parte transferible: **sin testigo, una «ausencia» mide el alcance del
+canal y no el contenido del repo** —y se publica como hallazgo algo que es una falla de red.
+
+### 736 — 🟢 El canal regional de esta base rinde POLITICA, no CODIGO (`P282`)
+
+Las cuatro regiones devolvieron intel ubicable **a la vez** —NA: 134 bills en 31 estados y
+H.R. 8747; EMEA: EU AI Act con educacion como **alto riesgo**, vigente 2026-07-31; APAC: Basic
+AI Act coreana **extraterritorial** (enero 2026), marco **agentico** del IMDA (2026-01-22),
+ley vietnamita, AI Safety Institute australiano; LATAM: DEC con **+30.000** respuestas, 92 %
+de estudiantes, **61 % que teme el mal uso entre pares**, CONPES 4144— y **las cuatro
+devolvieron 0 repos educativos nuevos**. 🔵 **La asimetria es estable y hay que diseñar con
+ella: junto con `P281`, explica los diez barridos en vacio sin recurrir a la mala suerte —
+ningun canal de esta base esta apuntado a open source educativo POR REGION.** Mercado de
+contexto: **$7,52 B (2025) → $10,6 B (2026), CAGR 40,9 % → $42,48 B (2030)**, con el OECD
+*Digital Education Outlook 2026* recomendando salir de la AI de proposito general hacia AI
+**construida para educacion**.
+
 
 ## 🟢 Tendencias 721–728 — pase 93 del 2026-10-04
 

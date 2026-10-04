@@ -1,0 +1,13 @@
+# Pase 94 del 2026-10-04. Re-medicion de las 8 filas que esta base publica como SIN LICENCIA.
+# Instrumento: raw.githubusercontent.com — 11 variantes de nombre x 3 ramas = 33 sondas por fila,
+# mas 6 manifiestos, mas un TESTIGO (README) para calibrar el ALCANCE antes del veredicto.
+# curl -sI contra github.com/ devolvio 403 en 3/3: ese canal NO sirve aqui (reproduce el pase 81).
+repo	region	testigo	alcance	veredicto_licencia	licencia_de_manifiesto	nota
+Vashishtha05/An-Adaptive-LLM-Based-AI-Tutor-for-Multi-Level-Learning	sin region declarable	main/README.md	ALCANZADO	AUSENCIA-CONFIRMADA	-	sin archivo y sin declaracion en 6 manifiestos
+alfredang/ai-mms	APAC	main/README.md	ALCANZADO	AUSENCIA-CONFIRMADA	OSL-3.0+AFL-3.0 AJENA (P280)	composer.json de raiz se nombra openmage/magento-lts: manifiesto ajeno, licencia NO adjudicable; y app/Mage.php presente -> derivado de OSL-3.0
+alfredang/ai4kids	APAC	main/README.md	ALCANZADO	AUSENCIA-CONFIRMADA	-	sin archivo y sin declaracion en 6 manifiestos
+attoyibi/lms-with-ai	sin region declarable	main/README.md	ALCANZADO	AUSENCIA-CONFIRMADA	-	sin archivo y sin declaracion en 6 manifiestos
+bigdata-ustc/EduX	APAC	main/README.md	ALCANZADO	AUSENCIA-CONFIRMADA	-	sin archivo y sin declaracion en 6 manifiestos
+dddanielliu/NCCU-Moodle-MCP	APAC	main/README.md	ALCANZADO	AUSENCIA-CONFIRMADA	-	sin archivo y sin declaracion en 6 manifiestos
+loyaniu/moodle-mcp	sin region declarable	main/README.md	ALCANZADO	AUSENCIA-CONFIRMADA	-	sin archivo y sin declaracion en 6 manifiestos
+vilcaaguilerandrea-oss/carrera-lectora	LATAM	main/README.md	ALCANZADO	AUSENCIA-CONFIRMADA	-	sin archivo y sin declaracion en 6 manifiestos

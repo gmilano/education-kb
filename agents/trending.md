@@ -9,6 +9,69 @@ updated: 2026-10-04
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 > No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
 
+## 2026-10-04 — pase 94: el barrido global vuelve vacio por DECIMA vez, y por primera vez el vacio se publica con DENOMINADOR enumerado
+
+🔴 **Cero agentes educativos nuevos, sexto pase consecutivo.** Lo que cambia hoy no es el
+resultado: es que el cero deja de ser una afirmacion y pasa a ser una **cuenta**.
+
+### 🔬 El canal, declarado primero (`P247`)
+
+| Canal | Medicion de hoy |
+|---|---|
+| `curl -sI` sobre `github.com/` (el que ordena el encargo) | 🔴 **`403` en 3/3** — reproduce el pase 81 (81/81) |
+| `raw.githubusercontent.com` | 🟢 vivo, discrimina `200`/`404` **y entrega el payload** |
+
+### 🔴 La señal del dia, fechada el mismo dia, y lo que contiene
+
+[`kouweizhu/agents-radar` #328](https://github.com/kouweizhu/agents-radar/issues/328) —
+«AI Open Source Trends», **2026-10-04**:
+
+- **47** repos listados.
+- **45** son infraestructura generalista de agentes: harnesses, memoria, RAG, vector DBs,
+  frameworks (`langchain` 147.415 ★, `ollama` 182.128 ★, `browser-use` 117.075 ★,
+  `mem0` 66.538 ★, `ragflow` 91.635 ★, `firecrawl` 188.301 ★…).
+- **2** llevan la etiqueta `[EDUCATION]` del propio radar.
+- 🔴 **0 son de la industria educativa.**
+
+### 🔵 `P281` — la etiqueta del radar confunde dos industrias
+
+| Fila etiquetada `[EDUCATION]` | ★ | Que es | ¿Nueva para esta base? |
+|---|---|---|---|
+| [`rasbt/LLMs-from-scratch`](https://github.com/rasbt/LLMs-from-scratch) | 105.957 | implementar un LLM tipo ChatGPT en PyTorch | 🔴 no, ya en 5 archivos |
+| [`rohitg00/ai-engineering-from-scratch`](https://github.com/rohitg00/ai-engineering-from-scratch) | 63.183 | curriculo de ingenieria de AI | 🔴 no, ya en 7 archivos |
+
+**Las dos son AI como MATERIA que se enseña a ingenieros, no educacion como SECTOR que se
+sirve.** Ninguna toca un LMS, un SIS, una rubrica, un expediente ni una calificacion.
+
+**P281**: *la etiqueta de industria de un radar generalista se asigna por el TEMA del
+contenido, no por el SECTOR servido.* 🔵 **Eso explica estructuralmente —y no por mala
+suerte— los diez barridos seguidos en vacio: el canal no tiene el dato, y su etiqueta hace
+creer que si.** Una base vertical que la ingiera literalmente se llena de filas que no
+sirven a ningun cliente de su industria.
+
+### 🟢 Lo que SI rindio el pase: los veredictos de licencia de esta capa, re-medidos
+
+Re-medidas las **8** filas publicadas como 🔴 `SIN LICENCIA`, con **33 sondas por fila** y
+**testigo de alcance antes del veredicto**: 🟢 **8/8 alcanzadas, 8/8 AUSENCIA CONFIRMADA.**
+Y dos defectos del instrumento quedan nombrados: **`P279`** (el nombre del payload es
+sensible a mayusculas; el manifiesto lo NOMBRA en `license-files`) y **`P280`** (el
+manifiesto de la raiz puede describir a OTRO proyecto: el `composer.json` de
+`alfredang/ai-mms` se nombra `openmage/magento-lts`).
+
+🔴 **Y una fila de esta capa cambia de categoria: `alfredang/ai-mms` no esta solo sin cesion
+—hereda un arbol OSL-3.0 (`app/Mage.php` 200; upstream con `LICENSE.txt` + `LICENSE_AFL.txt`).
+Copyleft fuerte con gatillo de despliegue externo, que es lo unico que hace un LMS: descarte
+definitivo, no diferido.** Detalle y suite (37/37) en
+`compose/code/p280-manifest-ownership/`.
+
+### Brechas declaradas de este pase
+
+- 🔴 **Agentes educativos nuevos: 0.** Canal global agotado por el motivo de `P281`.
+- 🔴 **Las cuatro regiones devolvieron 0 codigo abierto educativo nuevo** —y si devolvieron
+  politica y regulacion (`P282`, en `intel/market.md`). El canal regional de esta base es un
+  canal de POLITICA, no de repos.
+
+
 ## 2026-10-04 — pase 93: cero altas de agente por QUINTA vez, y la cifra que el pase 92 declaró «confirmada por segunda mano» estaba acotada por su propia lista de nombres
 
 🔴 **Cero altas en `agents/top.md` (sigue en 94 filas), quinto pase consecutivo, y se declara en vez

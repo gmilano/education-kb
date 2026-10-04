@@ -8,6 +8,7 @@ updated: 2026-10-04
 
 > Recetas concretas: repos nombrados, licencias verificadas, wiring explícito y estimación.
 > Todos los repos citados fueron verificados vía WebFetch el 2026-09-30; los del pase 11, el 2026-10-01 (ver `agents/top.md`).
+> **Pase 94 del 2026-10-04:** 🟢 **Un patron nuevo y es de INTAKE: la compuerta de procedencia de licencia, que es lo primero que el estudio deberia correr sobre cualquier repo candidato y hasta hoy esta base no tenia escrito.** 🔴 **Nace de dos huecos medidos en el instrumento propio: `P279` —el nombre del payload de licencia es sensible a mayusculas y hay que LEERLO del manifiesto (`license-files`), no adivinarlo de una lista— y `P280` —el manifiesto hallado en la raiz puede describir a OTRO proyecto, y el discriminador es `name`.** 🔴 **El patron incluye el paso que ninguna receta de esta base tenia: detectar si el arbol es DERIVADO, porque una pieza sin cesion propia que hereda OSL-3.0 es MENOS usable que una sin licencia, no mas.** 🟢 **Implementado y verde: `compose/code/p280-manifest-ownership/` — `python3 test_license_probe.py` → 37/37, y `sh sweep.sh <org/repo>` para el barrido en vivo.** 🔵 **Y el patron arranca declarando su canal (`P247`), porque el que el encargo ordena —`curl -sI` sobre `github.com/`— devuelve 403 en 3/3 aqui.**
 > **Pase 93 del 2026-10-04:** 🆕 **Los patrones nuevos son **P275**, **P276**, **P277** y **P278**, y los cuatro salen de medicion de este pase.** **P275**: para sostener una ausencia en un arbol hay que ENUMERARLO — un canal que trunca sirve para HALLAR, y un clon `--filter=blob:none --no-checkout --depth 1` enumera completo en < 1 s, lo que **reemplaza el instrumento que `P274` retiro sin dejar sustituto**. **P276**: un conteo obtenido sondeando NOMBRES esta acotado por la lista, no por el repo — **dos canales que sondean la misma lista comparten su punto ciego y no se validan entre si**, asi que el estandar de replica del pase 91 sube: vale si el segundo canal ENUMERA. **P277**: el conjunto de proveedores y el de CAPACIDADES por proveedor son dos mediciones distintas — el swap es gratis solo en los tipos que las dos clases implementan, y hay que resolver **dos** aristas de herencia (de clase y de interfaz) o el veredicto sale al reves. **P278**: la ruta que contiene los componentes es propiedad de la (repo, ref), asi que un cero sobre una ruta inexistente mide la RUTA. 🆕 **Y la receta `R-CAPACIDAD`**: compuerta de pre-venta para *«cambiamos de proveedor cuando quieras»*, que entrega una frase con numero — 7 claves / 6 empresas para chat y documentos, 3 para imagen y video, **1 para procesamiento de documentos** — y dice **cual clausula no se puede firmar**. **1–2 semanas** por plataforma y ref.
 > **Pase 91 del 2026-10-04:** 🆕 **El patrón nuevo es **P272**, y sale de auditar al pase anterior con su propia regla.** **P272**: un veredicto publicado para una plataforma **sin REF no es un veredicto** — y el pase que demostró eso para el eje de proveedor (`P269`) publicó, en el mismo instrumento, **siete** veredictos de plataforma sin ref. Puestas a prueba dos: `openedx/edx-platform` **CONTRADICE** el suyo (`openai==0.28.1` declarada **directa** en `quince`, `redwood` y `sumac`; ausente sólo en `master`) y `canvas-lms` lo **sostiene** — **1 de 2**, y no se generaliza. 🔵 **Y el corolario de control que lo acompaña: un control de ref invariante al layout PASA justo cuando la ruta medida se rompió** (`MOODLE_501_STABLE`: `README.md` 200, `version.php` 404, `public/version.php` 200), así que «el control dio 200» no autoriza a leer un 404 como ausencia. 🟢 **Y la receta nueva es `R-SDK-POR-REF`: la compuerta que, antes de cotizar una integración sobre un LMS, dice con qué SDK y qué major se va a hablar — porque hoy esa pregunta tiene tres respuestas distintas en el mismo repo.**
 > **Pase 92 del 2026-10-04:** 🆕 **Los patrones nuevos son **P273** y **P274**, y los dos salen de cerrar la ACCIÓN que el pase 91 dejó abierta.** **P273**: un veredicto «SIN-PROVEEDOR» leído en un **manifiesto de runtime** no es un veredicto negativo si la plataforma puede ligar proveedores en un **directorio del núcleo** — es la lectura de un instrumento **ciego** a esa forma. Medido: `chamilo/chamilo-lms` da **cero** tokens en `composer.json` en las **ocho** refs y trae **6** proveedores en `src/CoreBundle/AiProvider/`, **en la misma ref**. Con eso las 7 filas del pase 90 quedan medidas: **2 CONTRADICHAS, 5 SOSTENIDAS** — y las dos contradicciones tienen causas distintas, **ref** (Open edX) e **instrumento** (Chamilo), siendo la segunda peor porque agregar refs no la encuentra. 🔴 **P274**: en `raw.githubusercontent.com` un path de **DIRECTORIO** da **404 SIEMPRE**, exista o no (`public/ai` de Moodle: 404, y existe), así que un sondeo de directorio **no puede sostener una ausencia** — retira una clase entera de negativo de esta base. 🟢 **Y la receta nueva es `R-VERSION-PLATAFORMA`: la auditoría de versión que va ANTES de cotizar una integración de AI sobre un LMS instalado, porque el mismo repo da tres respuestas distintas a «¿qué proveedor tengo sin código de terceros?» según la versión — y porque migrar puede MOVER el punto de integración.**
@@ -118,6 +119,83 @@ updated: 2026-10-04
 > no existe en open source permisivo).
 > **Pase 11:** +2 patrones — **P25** (riesgo de abandono conforme al Anexo III, la capa con presupuesto ya asignado y sin oferta open source) y **P26** (agente docente sobre la ontología curricular nacional ya publicada).
 > **Pase 27:** **+4 patrones y una corrección.** 🔴 **P51 queda con premisa falsa** —el conector MCP de Moodle **sí existe y es MIT**— y lo reemplazan **P54** (corrección y devolución sobre Moodle con **compuerta humana**, el último tramo del gap 6, con piezas que ya escriben), **P55** (el conector de **Open edX**, que es el único que de verdad no existe), **P56** (**SCORM** como formato de salida de la capa generativa: cero integración, offline) y **P57** (evidencia por MCP cotizada sobre lo que CaSS **realmente** expone — 6 de 61 operaciones, con insignias y autoría de marcos **fuera**).
+
+## 🟢 Patron nuevo — compuerta de PROCEDENCIA de licencia en el intake (pase 94)
+
+> Lo primero que el estudio deberia correr sobre cualquier repo candidato, y que hasta hoy
+> esta base no tenia escrito. Nace de dos huecos medidos en el instrumento propio, no de una
+> buena practica generica.
+
+### 🔴 Por que hace falta: los dos huecos, medidos
+
+| Hueco | Medicion | Consecuencia si no se cierra |
+|---|---|---|
+| **`P279`** el nombre del payload es sensible a MAYUSCULAS y toda lista fija tiene agujero | `openedx/XBlock`: **0 hits en 11 variantes × 3 ramas**, testigo en verde, y el archivo es `master/LICENSE.TXT` | se publica **`SIN LICENCIA`** sobre un repo **Apache-2.0** |
+| **`P280`** el manifiesto de la raiz puede describir a OTRO proyecto | `alfredang/ai-mms`: `composer.json` → `["OSL-3.0","AFL-3.0"]` con `name: openmage/magento-lts` | se publica una licencia **FALSA** (la del upstream) sobre la pieza |
+
+🔴 **Y el paso que ninguna receta de esta base tenia: detectar DERIVACION.** Una pieza sin
+cesion propia que hereda **OSL-3.0** es **menos** usable que una sin licencia, porque el
+gatillo del copyleft es el **despliegue externo** —lo unico que hace un LMS.
+
+### La receta, en cinco pasos y con el canal declarado primero (`P247`)
+
+```
+[0] DECLARAR EL CANAL
+    curl -sI  https://github.com/<org>/<repo>        -> 403 en 3/3 aqui: INUTIL
+    curl -sI  https://raw.githubusercontent.com/...  -> 200/404 y ENTREGA PAYLOAD  ✅
+          |
+[1] TESTIGO DE ALCANCE  (antes de cualquier veredicto)
+    README.md | readme.md | README.rst | README.txt  x  main | master | develop
+    sin testigo -> veredicto INDETERMINADO, nunca "ausencia"
+          |
+[2] PAYLOAD NOMBRADO POR EL MANIFIESTO            (cierra P279)
+    pyproject.toml -> license-files = ["LICENSE.TXT"]
+    package.json   -> licenseFilename
+    ... y se sondea ESE nombre, con su caja exacta
+          |
+[3] PROPIEDAD DEL MANIFIESTO                      (cierra P280)
+    manifiesto.name  ==  proyecto del repo ?
+      no  -> manifiesto AJENO: su `license` NO es la de la fila
+      si  -> cesion declarada (pero sin payload, no adjunta)
+          |
+[4] DERIVACION DEL ARBOL
+    app/Mage.php            -> openmage/magento-lts   (OSL-3.0 + AFL-3.0)
+    version.php + lib/moodlelib.php -> moodle          (GPL-3.0)
+    manage.py + cms/envs/   -> open edx                (AGPL-3.0)
+      derivado -> la cesion que GOBIERNA es la del upstream
+          |
+[5] VEREDICTO con PROCEDENCIA
+    LICENCIADO (payload:<nombre>) | LICENCIADO (solo manifiesto)
+    SIN LICENCIA PROPIA (+ upstream) | AUSENCIA CONFIRMADA (n sondas + testigo)
+```
+
+### Como se cablea, con los repos y archivos concretos
+
+| Pieza | Repo / archivo | Rol en la receta |
+|---|---|---|
+| instrumento | `compose/code/p280-manifest-ownership/license_probe.py` | pasos 2–5, sin red |
+| barrido en vivo | `compose/code/p280-manifest-ownership/sweep.sh` | pasos 0–4 contra `raw.githubusercontent.com` |
+| suite | `compose/code/p280-manifest-ownership/test_license_probe.py` | 🟢 **37/37** |
+| ledger medido | `compose/code/p280-manifest-ownership/relicense.2026-10-04.tsv` | las 8 filas, con testigo y veredicto |
+| caso `P279` | [`openedx/XBlock`](https://github.com/openedx/XBlock) | Apache-2.0 via `LICENSE.TXT`, nombrado por `pyproject.toml` |
+| caso `P280` | [`alfredang/ai-mms`](https://github.com/alfredang/ai-mms) + [`openmage/magento-lts`](https://github.com/openmage/magento-lts) | manifiesto ajeno + arbol derivado OSL-3.0 |
+
+Invocacion:
+
+```sh
+cd compose/code/p280-manifest-ownership
+python3 test_license_probe.py                      # 37/37, offline
+sh sweep.sh openedx/XBlock alfredang/ai-mms        # barrido en vivo
+```
+
+### 🔵 Donde encaja en un encargo
+
+Antes de elegir la base de un proyecto, no despues. 🔴 **Un `SIN LICENCIA` mal medido cuesta
+dos veces: descarta un repo usable (`P279`, el caso XBlock) o adopta uno inusable creyendolo
+licenciado (`P280`, el caso ai-mms).** Y el paso [4] es el que decide si lo que se hereda es
+MIT o un copyleft con gatillo de despliegue —la diferencia entre poder entregar el sistema a
+un cliente y no poder.
+
 
 ## 🧩 P275–P278 y la receta `R-CAPACIDAD`: un conteo sólo es un conteo si ENUMERA (pase 93 del 2026-10-04)
 

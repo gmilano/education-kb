@@ -9,6 +9,7 @@ updated: 2026-10-04
 > Plataformas verticales reales, en producción, customizables con AI.
 > Modelo: partir de algo que ya funciona y que ya tiene los datos, y agregar la capa agéntica arriba.
 > Verificado vía WebFetch el 2026-09-30; las capas del pase 11, el 2026-10-01.
+> **Pase 94 del 2026-10-04:** 🔴 **Sin verticales nuevas (septimo pase consecutivo) y el barrido confirmo por vigesima vez el catalogo de este archivo** —`Moodle`, `Open edX`, `Sakai`, `OpenEduCat`, `OpenSIS`, `dotLRN`, `Richie`, `Gibbon` vuelven todas, y ninguna es alta. 🔵 **El aporte del pase es sobre la PROCEDENCIA de la licencia de una vertical y es util para cualquier compra: la licencia de una plataforma hay que leerla del PAYLOAD, y el payload hay que pedirle al MANIFIESTO que lo nombre, no adivinarlo** (**P279**, medido en `openedx/XBlock`: 33 sondas sin hit, y el archivo es `LICENSE.TXT` en mayuscula, nombrado por `pyproject.toml`). 🔴 **Y el caso que lo vuelve urgente en esta capa: una plataforma puede alojar en su raiz el manifiesto de la plataforma de la que DERIVA. `alfredang/ai-mms` —LMS de Singapur, «Tertiary Courses LMS»— corre sobre **OpenMage LTS v20.12.0** y su `composer.json` de raiz es el de `openmage/magento-lts`, sin modificar, declarando `["OSL-3.0","AFL-3.0"]`** (**P280**). 🔴 **Eso no lo salva: lo hunde. La pieza no tiene cesion propia Y hereda OSL-3.0, copyleft fuerte cuyo gatillo es el DESPLIEGUE EXTERNO —precisamente lo que hace un LMS. Para un encargo de cliente es inusable, y lo seria incluso si su autor agregara un `LICENSE`: habria que relicenciar el upstream.** 🟢 **Regla de compra que sale de aqui: antes de partir de una vertical, medir si su arbol es DERIVADO y bajo que cesion viene el upstream — `sh compose/code/p280-manifest-ownership/sweep.sh <org/repo>`.**
 > **Pase 93 del 2026-10-04:** 🔴 **Sin verticales nuevas (sexto pase consecutivo) y el barrido confirmo por decimonovena vez el catalogo de este archivo — pero una cifra que este archivo publicaba como verificada estaba MAL.** El pase 92 escribio que Chamilo liga **6** proveedores en el nucleo de `v3.0.x`: son **7**, y el que faltaba (`ClaudeProvider.php`) no estaba en la lista de nombres que ese pase sondeo (**P276**). 🟢 **Matriz correcta por ref: `0,0,5,5,7,7,7,7`.** 🔵 **Y este archivo necesita DOS columnas donde tenia una: 7 CLAVES configurables y 6 EMPRESAS distintas** —`AnthropicProvider extends ClaudeProvider` y las dos pegan a `api.anthropic.com/v1/messages`—, porque *«soporta 7 modelos de 7 empresas»* es la frase que una propuesta escribe sola y es **falsa**. 🔴 **La restriccion que rompe una clausula de contrato: este archivo vendia *«intercambiable de proveedor»* sin medir EN QUE. Medido, el swap es libre en texto y documento (7/7), cae a **3/7** en imagen y video, y a **1/7** en `document_process` — **solo OpenAI** (**P277**).** 🔵 **Tres hechos de OPERACION que se verifican en la instalacion y no en el repo:** el default lo decide el **orden del JSON** (`array_key_first`), un tipo solo se habilita si esta **explicitamente** en la config de ese proveedor, y si la clase no satisface la interfaz **el factory lo descarta con `error_log` y sigue** — la capacidad se pierde **sin error visible**. 🟢 **Y el veredicto de ILIAS pasa de *sostenido CON LIMITE* (tramo A–L) a AUSENCIA CERRADA en las cuatro refs, por enumeracion del arbol completo** (**P275**) — **con su consecuencia regulatoria para EMEA: si la AI no esta en el nucleo, bajo el EU AI Act (vigencia plena agosto 2026, educacion **alto riesgo**) el sujeto obligado de la evaluacion es el PLUGIN, no la plataforma.** 🔵 **Y el contraejemplo de soberania: de las 7 claves de Chamilo **ninguna** es autoalojable; de las 7 de Moodle, **`ollama` si** (nucleo desde 5.0).** La compuerta de pre-venta es la receta **`R-CAPACIDAD`** de `compose/patterns.md`.
 > **Pase 92 del 2026-10-04:** 🔴 **Sin verticales nuevas (quinto pase consecutivo) y el barrido de plataformas confirmó por decimoctava vez el catálogo de este archivo.** 🟢 **Pero este archivo salda la deuda que arrastraba del pase 90: sus SIETE veredictos de «ligadura de proveedor» por plataforma están ahora TODOS medidos por ref — 2 CONTRADICHOS, 5 SOSTENIDOS.** 🔴 **Y el contradicho nuevo obliga a reescribir cómo este archivo describe a Chamilo: liga SEIS proveedores de modelo en el NÚCLEO (`src/CoreBundle/AiProvider/`) y su `composer.json` no nombra NINGUNO en las ocho refs medidas, así que el veredicto no falló por falta de ref sino porque el manifiesto es CIEGO a un directorio de proveedores** (**P273**). 🟢 **Chamilo deja de ser «un LMS que se le puede agregar AI» y pasa a ser la segunda vertical de este archivo que trae la capa agéntica DE FÁBRICA**, con `AiTaskGraderService` (autograding) y `AiTutorChatService` (tutor) en el núcleo desde `v2.0.0`. 🔵 **Con versión mínima, que es lo que hay que preguntar antes de cotizar: 0 proveedores en `1.11.x`, 5 en `2.0`, 6 (con Anthropic) en `3.0`.** ⚠️ **`GPL-3.0`.** Ver la sección nueva de este archivo y [`compose/code/p273-platform-provider-dir/`](../compose/code/p273-platform-provider-dir/).
 > **Pase 91 del 2026-10-04:** 🔴 **Sin verticales nuevas (cuarto pase consecutivo) y el barrido de plataformas confirmó por decimoséptima vez el catálogo de este archivo.** 🔴 **Pero este archivo hereda del pase 90 una tabla de veredictos que no se puede sostener como está: las siete filas de «ligadura de proveedor» por plataforma se midieron SIN REF**, en el mismo pase que demostró —para Moodle— que un conjunto de proveedores es propiedad del par **(repo, ref)**. 🟢 **Puestas a prueba dos de las siete, una CONTRADICE su veredicto:** `openedx/edx-platform` figura como `SIN-PROVEEDOR-DE-MODELO`, y medido por ref trae **`openai==0.28.1` DIRECTA** (`via kernel.in`) en `quince`, `redwood` y `sumac`; sólo `master` —la rama que ningún cliente corre— coincide con el veredicto publicado. 🟢 **`instructure/canvas-lms` sobrevive** en las 2 refs que resuelven (`master`, `prod`). Así que el defecto es **real pero no universal: 1 de 2 medidas** (**P272**). ⚠️ **Las cinco filas restantes (`chamilo`, `ILIAS`, `frappe/education`, `frappe/erpnext`, `openeducat`) siguen SIN REF y quedan como ACCIÓN, no como veredicto** — no se generaliza desde una muestra de dos. 🔵 **Y la matriz de Moodle de este archivo queda REPLICADA**: 6 de 6 refs remedidas a mano coinciden exacto con el pase 90. Ver [`compose/code/p272-platform-ref-verdict/`](../compose/code/p272-platform-ref-verdict/).
@@ -122,6 +123,57 @@ updated: 2026-10-04
 > versiones), así que lo permisivo (`qti3-*`, `instructure/qti`) es **lo único proponible** — con **`qti3-a11y`** y
 > **`qti3-pnp`**, que abren accesibilidad de evaluación como entregable auditable (**P72**). ⚠️ **Open edX cambia de
 > recomendación: proponer con presupuesto de mantenimiento (gap 70).** Ver la sección del pase 33, abajo.
+
+## 🔴 Sin verticales nuevas (septimo pase) — y una regla de COMPRA que esta capa no tenia: medir si la plataforma es DERIVADA
+
+### 🟢 El catalogo, reconfirmado por vigesima vez
+
+El barrido de plataformas devolvio otra vez `Moodle`, `Open edX`, `Sakai` (Apache-2.0,
+Apereo), `OpenEduCat`, `OpenSIS`, `dotLRN`, `Richie` y `Gibbon`. **Ninguna es alta: las ocho
+ya estan en este archivo.** 🔵 Que el canal no mueva el catalogo en veinte pases es, a esta
+altura, un dato sobre la MADUREZ de la capa: el estante de plataformas base de educacion esta
+cerrado, y el trabajo util ya no es encontrar otra, es saber **bajo que cesion** se parte de
+las que hay.
+
+### 🔴 La regla nueva, y el caso que la obliga
+
+Una plataforma puede alojar **en su raiz el manifiesto de la plataforma de la que DERIVA**, y
+leerlo como propio publica una licencia falsa.
+
+[`alfredang/ai-mms`](https://github.com/alfredang/ai-mms) —«**Tertiary Courses LMS**», LMS de
+formacion subvencionada operado como franquicia, Singapur— medido hoy:
+
+| Sonda | Resultado |
+|---|---|
+| `main/composer.json` → `license` | **`["OSL-3.0", "AFL-3.0"]`** |
+| `main/composer.json` → `name` | 🔴 **`openmage/magento-lts`** — manifiesto AJENO |
+| `main/app/Mage.php`, `main/index.php`, `main/composer.lock` | 🟢 `200` — arbol de Magento-1 |
+| auto-descripcion del `README` | **OpenMage LTS v20.12.0**, PHP 8.2, MySQL 5.7, Docker |
+| upstream `openmage/magento-lts` → `LICENSE.txt` / `LICENSE_AFL.txt` | 🟢 `200` / `200` |
+| archivo de licencia PROPIO, 11 variantes × 3 ramas | 🔴 **ninguno** |
+
+**P280**: *una licencia leida de un manifiesto solo es la licencia de la pieza si el
+manifiesto se NOMBRA como ese proyecto; el discriminador es el campo `name`.*
+
+🔴 **Y el veredicto empeora en vez de mejorar.** La pieza no tiene cesion propia **y** hereda
+**OSL-3.0**: copyleft fuerte cuyo gatillo es el **despliegue externo** —es decir, poner el
+sistema frente a alumnos, que es lo unico que un LMS hace. 🔵 **No es una candidata a revisar
+si algun dia aparece un `LICENSE`: para ser usable habria que relicenciar el UPSTREAM.
+Descarte definitivo.**
+
+### 🟢 La regla de compra que sale de aqui, en tres pasos medibles
+
+1. **Leer la licencia del PAYLOAD, no de la pagina** —`raw.githubusercontent.com` lo entrega;
+   `curl -sI` sobre `github.com/` devuelve `403` en 3/3 aqui.
+2. **Pedirle al MANIFIESTO que NOMBRE el payload** en vez de adivinar el nombre: `openedx/XBlock`
+   da 0 hits en 33 sondas y su archivo es `LICENSE.TXT` —extension en mayuscula— nombrado por
+   `pyproject.toml` en `license-files` (**`P279`**).
+3. **Comprobar que el manifiesto DESCRIBE a la pieza** (`name`) y **si el arbol es DERIVADO**
+   (marcadores del upstream): la cesion que gobierna es la del upstream.
+
+Implementado: `sh compose/code/p280-manifest-ownership/sweep.sh <org/repo>`; logica verde en
+`python3 test_license_probe.py` → 🟢 **37/37**.
+
 
 ## 🔌 El eje de proveedor de este archivo tenía una cifra MAL y la columna que faltaba no es la licencia: es la CAPACIDAD (pase 93 del 2026-10-04)
 

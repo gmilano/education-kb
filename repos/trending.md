@@ -8,6 +8,59 @@ updated: 2026-10-04
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 
+## 2026-10-04 — pase 94: GitHub trending vuelve vacio por VIGESIMOTERCERA vez, y el canal que rindio fue un radar fechado HOY cuyo propio etiquetado esta mal
+
+🔴 **Cero repos educativos nuevos.** Por primera vez el vacio se publica **enumerado** en vez
+de afirmado, que es la regla que dejo el pase 93.
+
+### 🔬 Canal declarado primero (`P247`)
+
+| Canal | Hoy |
+|---|---|
+| `curl -sI` sobre `github.com/` (el que ordena el encargo) | 🔴 **`403` en 3/3**, repos vivos — reproduce el pase 81 (81/81) |
+| `raw.githubusercontent.com` | 🟢 vivo; discrimina `200`/`404` **y entrega el payload** |
+
+### 🔴 El denominador
+
+[`kouweizhu/agents-radar` #328](https://github.com/kouweizhu/agents-radar/issues/328),
+fechado **2026-10-04** (el mismo dia de este pase): **47 repos, 0 de la industria educativa.**
+Las **2** que el radar etiqueta `[EDUCATION]` son curriculos para enseñar AI a ingenieros
+—[`rasbt/LLMs-from-scratch`](https://github.com/rasbt/LLMs-from-scratch) (105.957 ★) y
+[`rohitg00/ai-engineering-from-scratch`](https://github.com/rohitg00/ai-engineering-from-scratch)
+(63.183 ★)— y **las dos ya estaban en esta base** (en 5 y 7 archivos respectivamente).
+Ver **`P281`** en `agents/trending.md`.
+
+### 🔴 El hallazgo que si toca a ESTE archivo: ~28 de sus filas pueden tener la licencia mal
+
+`openedx/XBlock`, fila fundacional de esta base publicada como **Apache-2.0** —y la fila es
+**correcta**— resulta **invisible** al barrido de licencia:
+
+| Sonda | Resultado |
+|---|---|
+| 11 variantes de nombre × 3 ramas = **33 sondas** | 🔴 **0 hits** |
+| testigo de alcance (`master/README.rst`) | 🟢 `200` — el repo SI se alcanzaba |
+| `master/LICENSE.TXT` | 🟢 `200`, abre con `Apache License` |
+
+La variante probada fue `LICENSE.txt`; el archivo es `LICENSE.TXT`. **El canal distingue
+mayusculas, tambien en la extension** (**`P279`**), y el nombre autoritativo lo da el
+manifiesto: `license-files = ["LICENSE.TXT"]` en `pyproject.toml`. 🔵 La rama tambien importa:
+`master`, no `main` (**`P278`** en el eje del nombre).
+
+🔴 **Control positivo: 6 de 7 repos de licencia conocida se hallaron en la primera pasada; el
+septimo fue XBlock. Si ese reparto se mantiene, de las ~200 filas `org/repo` que los pases
+62/64 barrieron con el instrumento viejo hay ~28 cuyo veredicto de licencia es un hueco de
+nombre y no un dato.** Queda **pre-registrado** como accion 1 del pase 95.
+
+### 🟢 Y las 8 filas `SIN LICENCIA` aguantan el instrumento nuevo: 8/8
+
+264 sondas, testigo de alcance en 8/8, **8/8 AUSENCIA CONFIRMADA**. Enumeradas en
+`compose/code/p280-manifest-ownership/relicense.2026-10-04.tsv`. 🔴 **De las 8, exactamente 1
+devolvio licencia de manifiesto y era AJENA: `alfredang/ai-mms` aloja el `composer.json` de
+`openmage/magento-lts` (`["OSL-3.0","AFL-3.0"]`) sin modificar. Leerlo habria publicado una
+licencia falsa** (**`P280`**; el discriminador es `name`). Suite: `python3
+test_license_probe.py` → 🟢 **37/37**.
+
+
 ## 2026-10-04 — pase 93: GitHub trending vuelve vacío por VIGESIMOSEGUNDA vez, y el canal que rindió fue un clon SIN BLOBS que enumera árboles completos
 
 🔴 **GitHub trending vacío por vigesimosegunda vez consecutiva, y la causa sigue siendo la medida:

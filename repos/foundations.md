@@ -8,6 +8,7 @@ updated: 2026-10-04
 
 > Bases sobre las cuales construir. Verificado repo por repo vía WebFetch el 2026-09-30 (capas del pase 10, el 2026-10-01).
 > Leer la columna **Licencia** antes de proponer: media KB de educación es GPL/AGPL, no permisiva.
+> **Pase 94 del 2026-10-04:** 🔴 **Sin repos fundacionales nuevos, y el barrido global devolvio por NOVENA vez el eje generalista — pero el cero se publica con denominador ENUMERADO: `kouweizhu/agents-radar` #328, fechado el mismo 2026-10-04, lista 47 repos y 0 son de la industria educativa** (**P281**: su etiqueta `[EDUCATION]` marca curriculos para enseñar AI a ingenieros —`rasbt/LLMs-from-scratch`, `rohitg00/ai-engineering-from-scratch`, las dos YA en esta base— y no software que sirva a una institucion). 🔴 **El aporte del pase cae sobre una fila de ESTE archivo y es un defecto del INSTRUMENTO: `openedx/XBlock` se publica como Apache-2.0 —y es CORRECTO— pero el barrido de licencia no lo podia confirmar: 11 variantes de nombre × 3 ramas = 33 sondas, 0 hits, con el testigo de alcance en verde (`master/README.rst`, 200).** 🟢 **El payload es `master/LICENSE.TXT`, con la EXTENSION en mayuscula, y abre con `Apache License`. El nombre no hay que adivinarlo: `pyproject.toml` lo NOMBRA —`license = "Apache-2.0"`, `license-files = ["LICENSE.TXT"]`** (**P279**). 🔴 **Consecuencia directa para este archivo: si `P279` se reparte como en el control positivo (1 de 7), hay ~28 de las ~200 filas `org/repo` que los pases 62/64 barrieron cuyo veredicto de licencia es un hueco de nombre y no un dato. Queda PRE-REGISTRADO como accion 1 del pase 95.** 🔵 **Y la rama por defecto de XBlock es `master`, no `main`: caso de `P278` en el eje del nombre del payload.**
 > **Pase 93 del 2026-10-04:** 🔴 **Cero altas fundacionales, SEXTO pase consecutivo, y se declara.** El barrido (`open source platform education ERP CRM MIT Apache`) devolvio por **decimonovena** vez el catalogo ya verificado de este estante, y volvio a nombrar la *Kuali Foundation* en PRESENTE —medida en el pase 42: cuatro repos, los cuatro muertos hace 6–9 años. 🟢 **Lo que si cambia: este estante recupera la capacidad de sostener una AUSENCIA, que `P274` le habia retirado sin reemplazo.** Un clon `--filter=blob:none --no-checkout --depth 1` + `git ls-tree -d -r` enumera el arbol **completo** (< 1 s en ILIAS; 10.923 directorios en Moodle) sin truncar y sin `api.github.com`, que este arbol registra en **403** desde el pase 89 (**P275**). 🟢 **Cuatro filas pasan de *sostenidas por manifiesto + arbol truncable* a *sostenidas por arbol COMPLETO*, las cuatro con CERO capa de AI en el nucleo:** `frappe/erpnext` (39 modulos), `frappe/education` (11), `openeducat/openeducat_erp` (15, en la **raiz**) e `ILIAS` (180 en `release_11`). Para un *engagement*: la capa agentica sobre estas piezas es **desarrollo completo**, no integracion — y ahora es medido. 🔴 **`P278`: la ruta que contiene los modulos es propiedad de la (repo, ref)** —`components/ILIAS/` da 180 en `release_11` y **CERO** en `release_9`, donde viven en `Modules/`(54)+`Services/`(126)— **asi que todo conteo anclado a una ruta fija tiene fecha de vencimiento.** ⚠️ **Cota: mide el arbol publicado en esa ref, nada dice de plugins de terceros** (donde vive la AI de ILIAS y la del ecosistema Frappe). Instrumento: [`compose/code/p275-tree-enumeration/`](../compose/code/p275-tree-enumeration/).
 > **Pase 92 del 2026-10-04:** 🔴 **Cero altas fundacionales, QUINTO pase consecutivo, y se declara.** El barrido de plataformas (`open source platform education ERP CRM MIT Apache`) devolvió por **decimoctava** vez lo que este estante ya tiene (`OpenEduCat` sobre Odoo, `CK-ERP`, `ERPNext`/`frappe/education`, Moodle, Open edX, Chamilo, ILIAS). 🟢 **Lo que sí cambia, y afecta a CÓMO se lee este estante entero: dos de sus plataformas tienen una capa de proveedores de modelo EN EL NÚCLEO, y el manifiesto no la muestra.** Medido por ref (**P273**): `chamilo/chamilo-lms` liga **0 → 5 → 6** proveedores según versión en `src/CoreBundle/AiProvider/`, con `composer.json` en **cero tokens en las ocho refs**. 🔵 **Consecuencia para este estante: antes de clonar hay que preguntar la VERSIÓN, no sólo el repo** — el mismo repo da tres respuestas distintas a «¿qué proveedor tengo sin código de terceros?». 🟢 **Y las otras tres filas de este estante SOSTIENEN su veredicto medidas por ref:** `ILIAS` (sin componente de AI en el tramo **A–L**; **M–Z no listado**, se declara), `frappe/education` y `frappe/erpnext` (árbol completo, cero módulos de AI; la capacidad es de **apps de marketplace** de terceros). 🟢 **`openeducat/openeducat_erp` pasa de NO-CLAIM a MEDIDO y es `P270` otra vez:** el pase 90 probó `requirements.txt` → 404 y correctamente no afirmó ausencia; el manifiesto **real** es `openeducat_core/__manifest__.py` (200 en `16.0`, `17.0`, `18.0`), con `'depends': ['board','hr','web','website']` y cero proveedores. ⚠️ **Licencias de la capa, novena y décima lectura de payload: Chamilo `GPL-3.0`, OpenEduCat `LGPL-3.0` — sigue CERO permisivas en capa de plataforma** (tendencia **701**).
 > **Pase 91 del 2026-10-04:** 🔴 **Cero altas fundacionales, CUARTO pase consecutivo, y se declara.** El barrido de plataformas (`open source platform education ERP CRM MIT Apache`) devolvió por **decimoséptima** vez lo que este estante ya tiene (`OpenEduCat` sobre Odoo, `CK-ERP`, `ERPNext`/`frappe/education`, Moodle, Open edX, Chamilo, ILIAS). ⚠️ **`CK-ERP` venía como posible alta y NO entra: `grep` contra el árbol lo encuentra ya archivado en 6 archivos**, y su rastro público es de 2010 — es cobertura, no hallazgo. 🟢 **El aporte es una columna que este estante nunca midió: el MANIFIESTO DE RUNTIME de la capa de plataforma, leído POR REF y no en la rama por defecto.** Medido así, `openedx/edx-platform` trae **`openai==0.28.1` declarada DIRECTA** (`via -r requirements/edx/kernel.in`) en las tres releases nombradas que resuelven —`quince` (l. 767), `redwood` (l. 767), `sumac` (l. 809)— y **no** la trae en `master`. 🔴 **Consecuencia de entrega: `0.28.1` es la última release PRE-1.0 del SDK de Python de OpenAI**, cuya API no es la de `openai>=1.0` (`openai.OpenAI()`), así que un engagement que caiga en un Open edX Quince/Redwood/Sumac se choca con un **major antiguo en el core**, no en su propio código. Instrumento y datos crudos: [`compose/code/p272-platform-ref-verdict/`](../compose/code/p272-platform-ref-verdict/) (**P272**).
@@ -95,6 +96,64 @@ corre ése antes de escribir uno a mano** (tendencia **313**). 🟢 **Y el `gafa
 > y 5 en `schemas12/`, y contar sólo el primero es lo que hizo invisible el segundo dialecto de SCORM (**P106**).
 > **Pase 36 del 2026-10-02:** 🔵 **este pase no agrega repos: le pone FECHA a los que ya están, y la fecha cambia tres recomendaciones.** Se midió la capa PHP de evaluación y telemetría en Packagist —el único registro de los tres que entrega descargas en este entorno (`api.npmjs.org` y `pypistats.org` dan **403 a CONNECT**)— y el resultado está en `repos/trending.md`. **Lo que hay que saber antes de proponer desde este archivo:** 🔴 **la pieza xAPI más descargada de esta base, `rusticisoftware/tincan` (Apache-2.0, 6.178 desc./mes, 863.777 totales), no publica desde el 2022-11-02**, y ⚠️ **el único MIT de esa capa, `php-xapi/client`, está parado desde el 2021-03-24** con 825 desc./mes. 🔵 **La lectura es que en xAPI/PHP lo permisivo está quieto y lo vivo es copyleft**, así que la receta de telemetría se sostiene en **Ralph (MIT)** + **`lrsql` (Apache-2.0)** + **`learnmcp-xapi` (MIT)** y no en la capa PHP. 🟢 **Del lado de evaluación, lo activo es `oat-sa/extension-tao-testqti`** (**885 versiones**, release del **2026-09-30**) **y sigue siendo GPL-2.0-only**, mientras **lo permisivo es lo nuevo**: `@longsightgroup/qti3-cli` (**MIT**, 41 releases desde el 2026-05-21, último **2026-10-01**) con **cero dependencias de terceros** — sus 4 dependencias son todas `@longsightgroup/*` pinneadas a la misma versión exacta. **Su manifiesto MCP completo de 20 tools está escrito en `compose/patterns.md` (P76).** 🔴 **Y una corrección de catálogo: `oat-sa/qti-sdk` devuelve 404 en Packagist porque es el nombre del REPO — su paquete es `qtism/qtism`** (GPL-2.0-only, 218.212 descargas totales, 315 versiones). **Nombre de repo y nombre de paquete son identificadores distintos, y confundirlos produce un 404 que parece una ausencia** — pasó igual con `1edtech/oneroster`, `imsglobal/lti-1-3-php-library` y `packbackbooks/lti-1-3-php-library`, los tres **404**, que se anotan como *«no verificado en Packagist bajo ese nombre»* y **no** como inexistentes. ⚠️ **Acción pendiente que el pase 37 tiene asignada: este archivo nunca pasó por el control de *slugs* distintos ni por el de *backlink*** — los dos que en `agents/top.md` encontraron **un duplicado** y **dos colisiones** este mismo pase.
 > **Pase 11 del 2026-10-01:** aparece una licencia que las diez pasadas anteriores filtraban sin saberlo — **ECL-2.0**, con la que licencia todo Apereo (Sakai, Opencast, OpenLRW). Es Apache-2.0 con el alcance de patentes acotado, aprobada por OSI y FSF, y **es apta para construir arriba**. Ver la capa de analítica institucional, abajo.
+
+## 🔴 Sin altas fundacionales — y una fila de este archivo revela que el barrido de licencia tiene un hueco de NOMBRE
+
+### 🔬 Canal declarado primero (`P247`)
+
+`curl -sI` sobre `github.com/` → 🔴 **`403` en 3/3** (reproduce el pase 81, 81/81). 🟢 Lo que
+rinde es `raw.githubusercontent.com`, que **entrega el payload**: la licencia se LEE.
+
+### 🔴 El denominador del cero
+
+[`kouweizhu/agents-radar` #328](https://github.com/kouweizhu/agents-radar/issues/328),
+fechado **2026-10-04**: **47 repos, 0 de la industria educativa**; las 2 etiquetadas
+`[EDUCATION]` son curriculos de AI para ingenieros y **las 2 ya estan en este archivo**
+(`rasbt/LLMs-from-scratch`, `rohitg00/ai-engineering-from-scratch`). Ver **`P281`**.
+
+### 🔴 `P279` — `openedx/XBlock` es Apache-2.0, la fila es correcta, y el barrido no lo podia probar
+
+| Sonda | Resultado |
+|---|---|
+| 11 variantes de nombre × 3 ramas = **33 sondas** | 🔴 **0 hits** |
+| testigo de alcance: `master/README.rst` | 🟢 `200` — se alcanzaba |
+| `master/LICENSE.TXT` | 🟢 `200`, abre con `Apache License` |
+| `master/pyproject.toml` | 🟢 `license = "Apache-2.0"` · `license-files = ["LICENSE.TXT"]` |
+
+Se probo `LICENSE.txt`; el archivo es **`LICENSE.TXT`**. **El canal distingue mayusculas,
+tambien en la extension.**
+
+**P279**: *una lista fija de nombres de archivo de licencia siempre tiene un hueco, porque el
+espacio de nombres es libre y el canal es sensible a la caja. El nombre autoritativo esta en
+el manifiesto del paquete (`license-files`): hay que LEERLO de ahi y sondear ESE nombre.*
+🔵 Y la ref importa: la rama por defecto de XBlock es **`master`**, no `main` —caso de
+**`P278`** en el eje del nombre del payload.
+
+### 🔴 Cuanto de este archivo puede estar afectado, y la accion queda pre-registrada
+
+Control positivo del instrumento: **7** repos de licencia conocida, **6 hallados** en la
+primera pasada, **1 (`XBlock`) solo por manifiesto**.
+
+🔴 **Si ese reparto (1 de 7) se mantiene, de las ~200 filas `org/repo` que los pases 62/64
+barrieron con el instrumento viejo hay ~28 cuyo veredicto de licencia es un hueco de nombre y
+no un dato.** Es la accion de mayor valor pendiente de esta base y se **pre-registra como
+accion 1 del pase 95** para que no se pueda eludir:
+`sh compose/code/p280-manifest-ownership/sweep.sh <org/repo>`.
+
+### 🟢 Lo que si quedo cerrado: las 8 filas `SIN LICENCIA`, 8/8
+
+264 sondas (33 por fila), 6 manifiestos por fila, y **testigo de alcance antes del veredicto**
+—porque sin alcance la «ausencia» mide el canal, no el repo: 🟢 **8/8 alcanzadas, 8/8 AUSENCIA
+CONFIRMADA**. Enumeradas en `compose/code/p280-manifest-ownership/README.md`.
+
+🔴 **La unica de las 8 que devolvio licencia de manifiesto la devolvio AJENA** (**`P280`**):
+`alfredang/ai-mms` aloja en su raiz el `composer.json` de `openmage/magento-lts`
+(`["OSL-3.0","AFL-3.0"]`), sin modificar. Y la medicion del arbol (`app/Mage.php` → `200`;
+upstream con `LICENSE.txt` **y** `LICENSE_AFL.txt`) muestra que **hereda OSL-3.0**: copyleft
+fuerte con gatillo de **despliegue externo**. 🔵 **Para esta capa: una base que parte de un
+repo DERIVADO hereda la cesion del upstream, no la del repo —y hay que medirlo antes de
+elegirlo como fundacion.** Suite: `python3 test_license_probe.py` → 🟢 **37/37**.
+
 
 ## 🧾 Altas fundacionales: 0 — SEXTO pase consecutivo, y el estante gana el instrumento que le faltaba para sostener una AUSENCIA (pase 93 del 2026-10-04)
 

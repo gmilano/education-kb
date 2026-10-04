@@ -1,0 +1,14 @@
+<div align="center">
+
+# Tertiary Courses LMS (ai-mms)
+
+[![OpenMage](https://img.shields.io/badge/OpenMage-LTS%20v20.12.0-f46f25)](https://www.openmage.org/)
+[![PHP](https://img.shields.io/badge/PHP-8.2-777BB4?logo=php&logoColor=white)](https://www.php.net/)
+[![MySQL](https://img.shields.io/badge/MySQL-5.7-4479A1?logo=mysql&logoColor=white)](https://www.mysql.com/)
+[![Apache](https://img.shields.io/badge/Apache-2.4-D22128?logo=apache&logoColor=white)](https://httpd.apache.org/)
+[![Docker](https://img.shields.io/badge/Docker-Compose-2496ED?logo=docker&logoColor=white)](https://www.docker.com/)
+[![Deploy](https://img.shields.io/badge/Deploy-Coolify-8b5cf6)](https://coolify.io/)
+
+**An end-to-end, full-fledged Learning Management System for instructor-led, funded training — run as a franchise.**
+
+[Live Site](https://www.tertiarycourses.com.sg/) · [Report Bug](https://github.com/alfredang/ai-mms/issues) · [Request Feature](https://github.com/alfredang/ai-mms/issues)
