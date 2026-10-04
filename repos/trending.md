@@ -8,6 +8,61 @@ updated: 2026-10-04
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 
+## 2026-10-04 — pase 88: el barrido de GitHub trending vuelve vacío por decimoséptima vez, y este pase NO agrega filas fundacionales — lo dice en vez de rellenar
+
+🔴 **`github trending education AI 2026` y las otras tres búsquedas globales obligatorias se
+corrieron (año **CALCULADO**: 2026) y el eje generalista sigue agotado por SEXTO pase consecutivo:**
+`OpenClaw` (~362k ★, MIT), `OpenHands` (~70k ★, MIT), `CrewAI` (MIT), `LangChain` (MIT),
+`Hermes Agent` (MIT, Nous Research), `OpenAI Codex`/`gemini-cli`, y agregadores
+(`caramaschiHG/awesome-ai-agents-2026`, `ashishpatel26/500-AI-Agents-Projects`,
+`kouweizhu/agents-radar`, `trendshift.io`).
+
+⚠️ **Y lo educativo que trajo el canal es, otra vez, material de FORMACIÓN y no repos de producto:**
+`jamwithai/production-agentic-rag-course`, `ai-engineering-from-scratch`, DeepLearning.AI Agent
+Courses, HuggingFace Agents Course, LangGraph Academy, Microsoft *GenAI for Beginners*.
+🔵 **Un curso sobre agentes no es un repo fundacional para construir un producto educativo**, y esta
+base ya decidió en pases anteriores no mezclar las dos cosas.
+
+### 🔴 Este pase no agrega ninguna fila a `repos/foundations.md`, y el motivo es que no encontró ninguna
+
+**Lo que se buscó, textual:** `top open source AI agents education 2026 github MIT`,
+`github trending education AI 2026`, `open source platform education ERP CRM student information
+system MIT Apache 2026`, `AI education industry trends 2026`, más
+`open source AI tutor agent github 2026 adaptive learning LMS MIT Apache` y las cuatro regionales.
+
+**Lo que devolvió en capa de plataforma, y estaba TODO ya en esta base:** `OpenEduCat` (73+ módulos),
+`ERPNext` + `frappe/education`, `Apache OFBiz` (Apache-2.0), `OpenSIS`, `Moodle`, `Open edX`,
+`Kolibri`, `INGInious`. 🟢 **Verificado por `grep` contra el árbol antes de escribir esta frase:
+`OpenSIS` aparece en 6 archivos, `EduCDM` en 6, `INGInious` en 10, `frappe/education` en los de
+`P255`.** ⚠️ **La única que el canal trajo y esta base casi no tiene es `Dolibarr` (1 archivo), y NO
+entra: es ERP generalista, su módulo educativo no existe como tal, y entraría sólo para llenar la
+cuota de 5.**
+
+🔵 **Se declara el vacío en vez de taparlo**, que es la regla que el encargo pide y que esta base
+viene aplicando desde el pase 52: **menos filas reales siempre le ganan al relleno.** Las 2 altas de
+este pase son de AGENTE y están en [`agents/top.md`](../agents/top.md) y
+[`agents/trending.md`](../agents/trending.md).
+
+### 🟢 Lo que este pase sí midió, y reencuadra qué repo fundacional hay que buscar
+
+El instrumento nuevo [`compose/code/p262-mandate-level/`](../compose/code/p262-mandate-level/)
+(**47/47**) midió los mandatos curriculares de IA por **nivel de la autoridad que firma**. Resultado:
+de los **4 tramos que obligan hoy** (UAE nacional, Pekín provincial, India Clases 3-8 nacional, CABA
+ciudad), **CERO piden una asignatura propia de IA: los 4 entregan contenido INTEGRADO** en materias
+que ya están en el horario.
+
+🔴 **Consecuencia directa para este archivo:** el repo fundacional que el mandato vigente pide **no**
+es otro framework de agentes —de esos hay 362k ★ de sobra— sino **capa de contenido curricular
+alineado a un currículo nombrado**: esquemas curriculares, bancos de ítems, mapeo a estándares. 🔵 **Y
+ahí esta base está mejor parada de lo que parecía:** los cuatro esquemas curriculares nacionales
+verificados del pase 10 y la capa `Edu*` de BigData Lab @USTC del pase 87 son exactamente eso, y
+ninguna de las dos se había justificado por el lado de la DEMANDA hasta hoy.
+
+⚠️ **Cota de canal:** la calibración multi-host de `P249` **no se pudo correr en este pase** (acción
+negada por el entorno, motivo `[Exfil Scouting]`), así que **no se publica ledger de canales**. Las
+licencias de las 2 altas se leyeron de primera mano por WebFetch sobre `raw.githubusercontent.com`.
+
+
 ## 2026-10-04 — pase 87: el barrido de GitHub trending vuelve vacío por decimosexta vez, y el canal que rindió fue la búsqueda VERTICAL — 7 repos fundacionales de un solo laboratorio
 
 🔴 **`github trending education AI 2026` y las otras tres búsquedas globales obligatorias se corrieron (año

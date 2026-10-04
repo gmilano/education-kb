@@ -8,6 +8,7 @@ updated: 2026-10-04
 
 > Recetas concretas: repos nombrados, licencias verificadas, wiring explícito y estimación.
 > Todos los repos citados fueron verificados vía WebFetch el 2026-09-30; los del pase 11, el 2026-10-01 (ver `agents/top.md`).
+> **Pase 88 del 2026-10-04:** 🆕 **Los patrones nuevos son **P262**, **P263** y **P264**, y los tres salen de medición de este pase.** **P262** convierte «hay mandato curricular de IA» en tres columnas —NIVEL, VIGENCIA, ENTREGA— y con eso refuta la frase que la prensa secundaria repite: lo de China es **municipal**, no nacional. **P263** es la regla que salió del fallo del propio instrumento: `P248` **regresó** a seis pases de distancia porque vivía dentro de un archivo y no en la librería compartida. **P264** separa «región del proveedor» de «región del currículo que sirve». 🟢 **Y la receta nueva es `R-MANDATO`: la capa de contenido curricular integrado sobre el LMS instalado, que es —medido— lo único que los 4 mandatos vigentes del mundo realmente compran.**
 > **Pase 87 del 2026-10-04:** 🆕 **Los patrones nuevos son **P259**, **P260** y **P261**, y los tres salen de medición de este pase.** **P259** acota el instrumento del pase 86: la ligadura de proveedor puede vivir en la CONFIGURACIÓN y no en el manifiesto, así que un barrido de dependencias no la ve y el cero de `SWAPPABLE` es cota y no propiedad. **P260** separa dos preguntas que esta base venía haciendo como una: «¿hay paquete?» y «¿está vigente?» — se leen de la API JSON de PyPI y en el estante nuevo dan 6 y 1 respectivamente. **P261** fija cómo se declara región sin violar `P135`: desde la bio, el sitio y la ubicación declaradas por la ORGANIZACIÓN, nunca desde un antropónimo. 🟢 **Y la receta nueva es `R-PSICO`: la capa adaptativa sobre el LMS que el cliente ya tiene, con `EduCDM` como dependencia, el resto vendorizado, y la compuerta de alto riesgo del AI Act declarada por delante.**
 > **Pase 86 del 2026-10-04:** 🆕 **Los patrones nuevos son **P257** y **P258**, y los dos salen de medición de este pase: P257 convierte la palabra `lock-in` —que estaba en los ocho archivos de este árbol sin un solo instrumento— en una pregunta con respuesta reproducible, y P258 es la regla que salió del SEGUNDO fallo del propio instrumento. 🔵 **Y la receta nueva (`R-86`) es la primera de esta base que se puede cotizar con una cifra de ligadura por pieza.**
 > **Pase 81 del 2026-10-04:** 🆕 **El patron nuevo es **P247**, y sale del defecto que este pase se encontro encima: el canal de verificacion que el propio encargo ordena usar (`curl -sI`) devuelve `403` en **81 de 81** URLs de `github.com` del catalogo, con varianza CERO, mientras WebFetch resuelve las mismas URLs.** 🔴 **Obedecer la instruccion al pie de la letra habria marcado el 100 % del catalogo como muerto.** 🟢 **P247 es la receta de CALIBRACION: control positivo obligatorio antes de creerle un negativo, lectura de varianza, y confirmacion pieza por pieza por un segundo canal independiente — con su cota declarada (un canal mudo no prueba que las filas esten vivas, prueba que no puede opinar).** 🟢 **Y **P246** se ACTUALIZA con la medicion del pase: el cuarto servidor xAPI 2.0 conformante existe (`raif-s-naffah/xapi-rs`) y es `GPL-3.0-or-later`, asi que la eleccion de LRS permisivo de P246 queda confirmada por eliminacion sobre 4 de 4 conformantes medidos, y el hueco EMEA-soberano sigue abierto.**
@@ -112,6 +113,126 @@ updated: 2026-10-04
 > no existe en open source permisivo).
 > **Pase 11:** +2 patrones — **P25** (riesgo de abandono conforme al Anexo III, la capa con presupuesto ya asignado y sin oferta open source) y **P26** (agente docente sobre la ontología curricular nacional ya publicada).
 > **Pase 27:** **+4 patrones y una corrección.** 🔴 **P51 queda con premisa falsa** —el conector MCP de Moodle **sí existe y es MIT**— y lo reemplazan **P54** (corrección y devolución sobre Moodle con **compuerta humana**, el último tramo del gap 6, con piezas que ya escriben), **P55** (el conector de **Open edX**, que es el único que de verdad no existe), **P56** (**SCORM** como formato de salida de la capa generativa: cero integración, offline) y **P57** (evidencia por MCP cotizada sobre lo que CaSS **realmente** expone — 6 de 61 operaciones, con insignias y autoría de marcos **fuera**).
+
+## 🧩 P262–P264 y la receta `R-MANDATO`: contenido curricular integrado sobre el LMS instalado (pase 88 del 2026-10-04)
+
+### 🆕 P262 — Un mandato curricular tiene NIVEL, VIGENCIA y ENTREGA, y ninguna se infiere de otra
+
+> **P262.** Un mandato curricular se declara en **tres** columnas: **NIVEL** (¿quién obliga?), que
+> sale del **alcance de la autoridad que firma** y nunca del titular de la nota; **VIGENCIA** (¿obliga
+> ya, está anunciado para un ciclo futuro, o es sólo una guía?), que exige el **ciclo** de entrada en
+> vigor; y **ENTREGA** (¿asignatura propia o contenido integrado en materias que ya existen?), que se
+> lee del **texto del instrumento**. Sin autoridad leída, sin ciclo o sin instrumento: **`NO-CLAIM`**.
+
+Instrumento con suite: [`compose/code/p262-mandate-level/`](code/p262-mandate-level/) — **47/47**,
+`Python 3.11.15`. **12 tramos** medidos, **3 columnas**, y el reparto:
+
+| Nivel | Tramos | Cuáles |
+|---|---|---|
+| 🟢 `NATIONAL` | **3** | UAE; India Clases 3-8; India Clases 9-10 *(anunciado)* |
+| 🔴 `SUBNATIONAL-PROVINCE` | **1** | **Pekín** (municipio de rango provincial) |
+| 🔴 `SUBNATIONAL-CITY` | **1** | **CABA** |
+| 🔴 `SUBNATIONAL-STATE` | **2** | Georgia, Mississippi |
+| 🟢 `NO-MANDATE` *(ausencia **medida**)* | **3** | China nacional *(sólo guías)*; EEUU federal; UE *(obligación de despliegue)* |
+| ⚠️ `NO-CLAIM` *(hueco **declarado**)* | **2** | Brasil, Chile |
+
+🔵 **Y la regla de `P251` en este eje, que es la que parte la ausencia en dos:** una búsqueda propia
+que no encontró mandato es **silencio**, no ausencia. `NO-MANDATE` exige el instrumento que **midió**
+la ausencia —para EEUU federal: *la competencia curricular es estatal, 134 proyectos en 31 estados en
+2026 y ninguno federal*—; sin ese instrumento la respuesta es `NO-CLAIM`. 🟢 **`NO-MANDATE` se puede
+cotizar; `NO-CLAIM` manda a medir.**
+
+### 🆕 P263 — Una regla corregida DENTRO de un instrumento no es todavía una regla de la base
+
+> **P263.** Mientras la pregunta no viva en la **librería compartida** (`compose/code/lib/`), cada
+> instrumento nuevo la reimplementa y vuelve a elegir el bug. La prueba de que una regla es de la base
+> no es que un archivo la cumpla: es que **un archivo nuevo no pueda incumplirla**.
+
+🔴 **Salió de un fallo propio.** La primera versión de `region_ok()` en `p262-mandate-level/` hacía
+`strip()` del valor **antes** de preguntar por el vocabulario cerrado, así que `"APAC "` con espacio
+salía **aceptado** — **exactamente `P248`**, el defecto que el pase 82 corrigió en
+`p243-frontmatter-coverage/`, reintroducido **seis pases después** en un archivo nuevo.
+
+⚠️ **Acreditación honesta:** esto es `P237`/`P252` otra vez (clasificador compartido; una corrección
+viaja a todos los archivos), pero ninguna de las dos lo había dicho sobre una regla **ya corregida**.
+🟢 **Lo encontró su propio control negativo**, que es la razón por la que esos controles existen.
+
+### 🆕 P264 — «Región del proveedor» y «región del currículo que sirve» son dos columnas
+
+> **P264.** Un agente educativo tiene **dos** regiones y no se promedian: la del **proveedor** (de
+> dónde sale el código, declarada como manda `P261`) y la del **currículo** que sirve (de qué sistema
+> escolar habla su contenido). Una pieza puede tener la segunda y no la primera.
+
+El caso que lo prueba: [`SimonsTang/xiaofei-liberal-arts`](https://github.com/SimonsTang/xiaofei-liberal-arts)
+(MIT, 3 ★). Titular **organizacional** (`学来学去学习社 | Xue Lai Xue Qu Learning Society`, así que
+`P135` no lo tumba) **pero sin bio, sitio ni ubicación declarados** → proveedor `NO-CLAIM`; y contenido
+que nombra los **libros de texto en uso en escuelas chinas** → currículo **`APAC`**, sin inferencia.
+
+## 🆕 R-MANDATO — Receta: contenido curricular de IA integrado sobre el LMS que la institución ya tiene
+
+**El supuesto que la hace distinta de todo lo que este archivo ya tiene, y está medido:** de los **4
+mandatos curriculares de IA vigentes en el mundo**, **CERO** piden una asignatura propia y **4 de 4**
+piden contenido **integrado** en materias que ya están en el horario. Así que la receta **no** entrega
+un tutor ni una plataforma: entrega **material alineado a un currículo nombrado, dentro del LMS
+instalado**, con el expediente de cumplimiento por delante.
+
+### A quién se le vende, con el nivel ya medido
+
+| Comprador | Nivel | Qué obliga hoy | Forma |
+|---|---|---|---|
+| **UAE** — Ministry of Education | 🟢 nacional | KG-G12 desde **2025-26**, 7 ejes | integrado en *Computing, Design and Innovation*, **sin agregar horas** |
+| **India** — CBSE/NCERT | 🟢 nacional | Clases 3-8 desde **2026-27** | entretejido en lengua, ciencias, matemática |
+| **Pekín** — Municipal Education Commission | 🔴 provincial | ≥**8 h/ciclo** desde **2025-26** | **independiente o integrado** |
+| **CABA** — Min. de Educación de la Ciudad | 🔴 ciudad | primaria+secundaria desde **2026** | integrado, progresivo por grado |
+
+### El wiring, con piezas nombradas de esta base
+
+1. **Capa de plataforma — no se compra, se usa la instalada.** `Moodle` (GPL-3.0) u `Open edX`
+   (AGPL-3.0) para el curso; `OpenSIS` u `OpenEduCat` (LGPL-3.0) si el alcance toca legajo. ⚠️ **Las
+   tres familias son copyleft: la capa propia va como SERVICIO SEPARADO contra sus APIs, no como fork
+   del core** — es `P256`, y acá es la diferencia entre entregar y tener que abrir el entregable.
+2. **Capa de empaquetado de contenido — es la que hace «integrado» verificable.**
+   [`compose/code/openedx-course-generator/`](code/openedx-course-generator/) (**33/33**) genera el
+   curso sin levantar la plataforma, y [`compose/code/aiact-50-2-pack/`](code/aiact-50-2-pack/)
+   (**27/27**; **37/37** con `xmllint` contra los XSD de los dos dialectos) **marca el paquete SCORM
+   ya construido**. 🔵 **Eso resuelve de entrada la obligación que la UE ya tiene vigente** (art. 50
+   de transparencia, desde 2026-08-02): el contenido sintético sale **marcado en el manifiesto**.
+3. **Capa pedagógica inspeccionable.** [`Ebimsv/AITutorAgent`](https://github.com/Ebimsv/AITutorAgent)
+   (**MIT**, 15 ★) como punto de partida: el ciclo **tutorial → Q&A → evaluación** está escrito como
+   **grafo de LangGraph**, o sea **auditable nodo por nodo**, que es la forma que un currículo
+   obligatorio pide cuando hay que mostrarlo a un ministerio. ⚠️ **15 ★: es un punto de partida de
+   arquitectura, no una dependencia de producción — se vendoriza.**
+4. **Capa adaptativa, sólo si el pliego la pide.** `EduCDM` como dependencia y el resto vendorizado,
+   tal como lo dejó `R-PSICO` en el pase 87. 🔴 **Y con la compuerta de alto riesgo por delante: si
+   adapta la PROGRESIÓN del alumno, es Anexo III.**
+5. **Capa de contenido por currículo.** Los cuatro esquemas curriculares nacionales del pase 10 y la
+   capa `Edu*` de BigData Lab @USTC del pase 87; para currículo chino de humanidades,
+   [`xiaofei-liberal-arts`](https://github.com/SimonsTang/xiaofei-liberal-arts) (MIT) es la única
+   pieza del catálogo que ya apunta a uno nombrado (**P264**).
+6. **Compuerta de cumplimiento, por región y antes de cotizar.**
+   [`compose/code/p250-commercial-use-axis/`](code/p250-commercial-use-axis/) para licencia **y** uso
+   comercial en dos columnas, y [`compose/code/p262-mandate-level/`](code/p262-mandate-level/) para no
+   cotizar un mercado municipal como si fuera nacional.
+
+### Estimación y las compuertas que la mueven
+
+| Tramo | Semanas | Qué lo mueve |
+|---|---|---|
+| Contenido + empaquetado SCORM marcado, 1 materia, 1 nivel | **4-6** | nº de ejes del currículo (UAE: 7) |
+| ídem sobre LMS instalado, con rostering | **+2-3** | si toca `OpenSIS`/`OpenEduCat` (legajo) |
+| Capa pedagógica en grafo, auditable | **+3-4** | si el ministerio pide traza de decisión |
+| Expediente **Anexo III** (sólo si adapta progresión o evalúa) | **+6-8** | plazo **2027-12-02** en la UE |
+
+🔴 **La compuerta comercial que esta receta hace explícita, y es la que más plata ahorra:** **si el
+cliente pide "una asignatura de IA", el mandato vigente no la respalda en ninguna jurisdicción
+medida.** La asignatura propia existe en **India Clases 9-10 (2027-28)** y en **Georgia y Mississippi
+(fines de la década)**. 🔵 **Antes de 2027 lo que hay es integración, y cotizar asignatura es cotizar
+contra un pliego que todavía no existe.**
+
+⚠️ **Cota declarada de toda la receta:** `rows.tsv` de `P262` **no es un censo** — son las
+jurisdicciones que el pase 88 alcanzó. **Falta medir** Corea (AI Basic Act vigente desde enero de
+2026), Singapur, y si otras municipalidades chinas de rango provincial siguieron a Pekín. **Que una
+jurisdicción no esté en la tabla no dice nada sobre ella** (`P251`).
 
 ## 🧩 P259–P261 y la receta `R-PSICO`: la capa adaptativa encima del LMS que el cliente ya tiene (pase 87 del 2026-10-04)
 

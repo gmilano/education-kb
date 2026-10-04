@@ -9,6 +9,79 @@ updated: 2026-10-04
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 > No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
 
+## 2026-10-04 — pase 88: las dos altas son de 15 ★ y 3 ★, y lo que mueve el tablero es que el mandato que todos citan como nacional es, medido, municipal
+
+🔴 **El eje generalista vuelve vacío por SEXTO pase consecutivo.** Las cuatro búsquedas globales
+obligatorias se corrieron con el año **CALCULADO** (2026) y devolvieron otra vez lo mismo:
+`OpenClaw` (~362k ★, MIT), `OpenHands` (~70k ★, MIT, Serie A de USD 18,8 M), `CrewAI` (MIT),
+`LangChain` (MIT), `Hermes Agent` (MIT, Nous Research) y los agregadores de siempre
+(`awesome-ai-agents-2026`, `500-AI-Agents-Projects`, `agents-radar`). **Nada de la vertical
+educativa**, y lo educativo que trajo el canal global fueron otra vez **cursos**
+(`production-agentic-rag-course`, `ai-engineering-from-scratch`, DeepLearning.AI, HuggingFace
+Agents), que son material de formación y no repos de producto.
+
+🟢 **El canal vertical rindió dos altas, las dos chicas y las dos por un motivo que no es el tamaño.**
+
+| Pieza | Licencia (payload) | ★ | Región del PROVEEDOR | Qué agrega |
+|---|---|---|---|---|
+| [`Ebimsv/AITutorAgent`](https://github.com/Ebimsv/AITutorAgent) | 🟢 **MIT** (`main:LICENSE`, titular `Copyright (c) 2025 Ebrahim Mousavi`) | **15** | ⚠️ **`NO-CLAIM`** (antropónimo — `P135`) | El ciclo pedagógico como **grafo de LangGraph**: tutorial → Q&A → evaluación, en nodos inspeccionables |
+| [`SimonsTang/xiaofei-liberal-arts`](https://github.com/SimonsTang/xiaofei-liberal-arts) | 🟢 **MIT** (`main:LICENSE`, titular `Copyright (c) 2025 学来学去学习社 \| Xue Lai Xue Qu Learning Society`) | **3** | ⚠️ **`NO-CLAIM`** (titular organizacional **sin** ubicación declarada) | **La única pieza de la base que apunta a un currículo NACIONAL nombrado**: humanidades K-12 chino (诗词, 作文, inglés) |
+
+### 🆕 P264 — «región del proveedor» y «región del currículo que sirve» son dos columnas
+
+`xiaofei-liberal-arts` las separa sola: su titular es un **`org`** (no un antropónimo, así que `P135`
+no lo tumba) **pero no declara bio, sitio ni ubicación**, de modo que la región del proveedor es
+`NO-CLAIM`; y al mismo tiempo el producto nombra los **libros de texto en uso en escuelas chinas**,
+así que el currículo que sirve es **`APAC`** sin ninguna inferencia.
+
+> **P264.** Un agente educativo tiene **dos** regiones y no se promedian: la del **proveedor** (de
+> donde sale el código, que se declara como manda `P261`) y la del **currículo** que sirve (de qué
+> sistema escolar habla su contenido). Una pieza puede tener la segunda y no la primera.
+
+🔵 **Por qué importa para un engagement:** la región del proveedor decide soberanía de dato y
+contratación; la del currículo decide si el contenido sirve sin reescribirlo. Esta base venía
+escribiendo una sola columna «Origen (región)» y perdía la segunda.
+
+### 🔴 El hallazgo del pase, y es una refutación de fuente secundaria
+
+La búsqueda regional de APAC devolvió, repetida, esta frase:
+
+> *«China and the UAE are the only nations running compulsory, national AI curricula since the
+> 2025-26 school year.»*
+
+**Medida contra la autoridad que firma cada instrumento, la mitad china es falsa:**
+
+| Jurisdicción | Autoridad | Alcance medido | Nivel | Vigencia |
+|---|---|---|---|---|
+| **UAE** | Ministry of Education (federal) | nacional | 🟢 **`NATIONAL`** | vigente **2025-26** |
+| **China / Pekín** | **Beijing** Municipal Education Commission | **municipio de rango provincial** | 🔴 **`SUBNATIONAL-PROVINCE`** | vigente **2025-26**, ≥**8 h de clase**/ciclo |
+| **China / nacional** | Ministry of Education (PRC) | nacional | 🔴 **`NO-MANDATE`** — sólo **guías** | — |
+| **India** | CBSE + NCERT | consejo de alcance nacional | 🟢 **`NATIONAL`** | vigente **2026-27**, Clases 3-8 |
+| **India** (asignatura propia) | CBSE | ídem | 🟢 **`NATIONAL`** | 🔵 **anunciada 2027-28**, Clases 9-10 |
+| **Argentina / CABA** | Min. de Educación de la Ciudad | **ciudad** | 🔴 **`SUBNATIONAL-CITY`** | vigente **2026** |
+
+🟢 **Instrumento nuevo con su suite: [`compose/code/p262-mandate-level/`](../compose/code/p262-mandate-level/), 47/47, `Python 3.11.15`.** Ver **`P262`** y **`P263`**.
+
+🔴 **Y la consecuencia que toca el catálogo entero de este archivo: de los 4 tramos que obligan HOY,
+CERO exigen una asignatura propia de IA. Los 4 entregan contenido INTEGRADO** en materias que ya
+están en el horario —la UAE lo dice literal (*«without extending instructional hours»*), India
+también (*«interwoven into existing subjects, not taught as a separate discipline»*) y Pekín permite
+las dos formas—. 🔵 **Así que el agente que el mandato vigente pide no es un tutor de IA: es material
+de IA dentro de lengua, matemática y ciencias**, y eso favorece a las piezas con capa de contenido
+curricular que esta base ya tiene por encima de las de tutoría genérica.
+
+🟢 **Re-verificación del tablero:** este pase **sí** pudo ejecutar las suites preexistentes —**38
+invocaciones (35 Python + 3 shell), 38 con código de salida 0**— al revés que los pases 84 y 86.
+
+⚠️ **Cota de canal declarada:** la calibración multi-host de `P249` **no se pudo correr en este pase**
+(la acción quedó negada por el clasificador del entorno, motivo `[Exfil Scouting]`), así que **este
+pase no publica un ledger de canales**. Las verificaciones de licencia se hicieron por **WebFetch
+sobre `raw.githubusercontent.com`** —canal que los pases 82-86 midieron como discriminante— con el
+bloque de título y el titular leídos de primera mano en cada archivo. 🔵 **Se declara porque cambia
+qué tan fuerte es la cifra: hay verificación de primera mano, pero no hay prueba de calibración de
+HOY.**
+
+
 ## 2026-10-04 — pase 87: el hueco de APAC cierra a los quince pases, y no cierra con una pieza sino con una capa entera que esta base vendía sin tener
 
 🟢 **El alta de agente del pase es UNA y es de EMEA**, pero el movimiento grande está una capa más abajo.

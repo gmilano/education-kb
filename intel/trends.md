@@ -104,6 +104,124 @@ updated: 2026-10-04
 > están mal por ~2× y **un 403 de `curl` no es un 404**. Ver la nota de método del pase 12.
 > **Pase 11:** el Digital Omnibus es derecho vigente (tendencia 25), aparece la capa predictiva y está vacía (tendencia 26), y se corrige un error de método de diez pasadas sobre licencias permisivas (tendencia 27).
 
+## 🔴 Tendencias 683–690 — pase 88 del 2026-10-04
+
+> **El eje del pase es uno y reencuadra la demanda entera: un mandato curricular tiene NIVEL, y el
+> mandato que la prensa secundaria cita como nacional es, medido, municipal.** Instrumento con suite:
+> [`compose/code/p262-mandate-level/`](../compose/code/p262-mandate-level/), **47/47**,
+> `Python 3.11.15`. 🟢 **Y este pase re-verificó el tablero completo: 38 invocaciones de suite
+> preexistente (35 Python + 3 shell), 38 con código de salida 0.**
+
+### 🔴 683 — «China tiene currículo nacional obligatorio de IA» es falso, y el error es de NIVEL, no de magnitud
+
+La búsqueda regional de APAC devolvió repetida la frase *«China and the UAE are the only nations
+running compulsory, national AI curricula since the 2025-26 school year»*. Medida contra la autoridad
+que firma: **lo de Pekín es un mandato municipal de rango provincial** —*«the first provincial-level
+region in China to launch compulsory comprehensive artificial intelligence education»*, **mínimo 8
+horas de clase por ciclo** desde **2025-26**, desde primer grado, cursos **independientes o
+integrados** con informática— y **lo del Ministerio son guías**: un aviso de **diciembre de 2024** y
+dos documentos de **mayo de 2025** (*General AI Education Guide for Primary and Secondary Schools,
+2025 Edition*; *Guide for the Use of Generative AI by Primary and Secondary Students, 2025 Edition*).
+
+🔵 **Por qué es de unidad y no de tamaño:** un producto K-12 cotizado «para el mandato nacional chino»
+tiene mercado direccionable **municipal**. Mismo error que `P228` encontró ordenando una cuota en
+USUARIOS contra una en INSTITUCIONES. 🟢 **La otra mitad de la frase sí se sostiene: la UAE es
+nacional, federal, KG-G12, vigente 2025-26.** Ver **`P262`**.
+
+### 🔴 684 — Cero jurisdicciones obligan hoy una ASIGNATURA PROPIA de IA, y las cuatro que obligan piden contenido INTEGRADO
+
+De los 12 tramos medidos, **4 obligan hoy**: UAE (nacional), Pekín (provincial), India Clases 3-8
+(nacional) y CABA (ciudad). **Ninguno pide una asignatura separada.** Los instrumentos lo dicen
+literal: la UAE integra en la asignatura existente *Computing, Design and Innovation* **«without
+extending instructional hours»**; India *«interwoven into existing subjects, not taught as a separate
+discipline»*; Pekín permite **las dos** formas.
+
+🔴 **Consecuencia comercial directa, y contradice el reflejo de catálogo de esta base:** el mandato
+vigente **no compra un tutor de IA**. Compra **material de IA dentro de lengua, matemática, ciencias e
+informática**. 🔵 **La asignatura propia existe pero está en el futuro:** India la anuncia para Clases
+9-10 en **2027-28**; Georgia y Mississippi, a **fines de la década**. **Vender currículo de IA como
+asignatura hoy es vender contra 2027-2030.**
+
+### 🟢 685 — El mandato nacional de APAC que sí se puede cotizar este ciclo es el de India, y está vigente
+
+CBSE publicó el currículo oficial de **Computational Thinking and AI** para **Clases 3 a 8**,
+**obligatorio**, ciclo **2026-27**, con NCERT, KVS y NVS en el marco; material, formación docente y
+contenido digital previstos para **diciembre de 2025**. En **Clase 3** va entretejido en lengua,
+ciencias y matemática. 🔵 **Y trae su propio *runway*: la asignatura obligatoria propia llega en
+Clases 9-10 el ciclo 2027-28**, así que el mismo cliente tiene dos compras separadas por un año y
+media con formas distintas.
+
+### 🟢 686 — La primera ciudad de América Latina con IA curricular obligatoria es CABA, y el nivel es de CIUDAD
+
+La Ciudad de Buenos Aires incorporó **IA y protección digital** como contenido obligatorio en los
+diseños curriculares de **primaria y secundaria**, con progresión explícita: en **1.º a 3.º** se
+conoce qué es la IA, se reconocen usos cotidianos y se identifican riesgos **sin interactuar con las
+herramientas**; después, uso autónomo para crear, investigar y resolver. 🔵 **La cifra que la propia
+jurisdicción declara como motivo: 58 % de los chicos de 9 a 17 años usa IA y dos de cada tres la usa
+para tareas escolares.**
+
+🔵 **Lo que la hace replicable y por eso es tendencia y no anécdota:** es un **pliego público de
+ciudad** con progresión por grado, y LATAM decide esto en el nivel **subnacional** —no nacional—, así
+que el patrón es el vendible.
+
+### 🔵 687 — «Obligación de currículo» y «obligación de despliegue» son categorías distintas, y la UE sólo tiene la segunda
+
+La UE **no** tiene mandato curricular de IA. Tiene obligación sobre **quien despliega**: **art. 4 de
+alfabetización en IA vigente desde 2025-02-02**, aplicable a toda organización que use sistemas de IA
+y **por lo tanto a toda escuela**; y **Anexo III de alto riesgo el 2027-12-02** (admisión, evaluación,
+progresión, vigilancia de examen), corrido desde 2026-08-02 por el *Digital Omnibus* (**Reglamento
+(UE) 2026/1744**), con el **art. 50** de transparencia **no tocado** y vigente desde 2026-08-02.
+
+🔴 **Confundirlas sobrevalúa EMEA en el eje equivocado:** no hay currículo que proveer, hay
+**expediente** que armar. 🟢 **Y la región tiene las dos cosas en jurisdicciones distintas:** el
+**Golfo** (UAE) compra currículo, la **UE** compra cumplimiento. **No se cotizan igual.**
+
+### 🔴 688 — North America legisla el USO y no el currículo, y la ausencia federal ahora está MEDIDA
+
+**134 proyectos** sobre IA en educación en **31 estados** en la sesión 2026, **ninguno federal** (más
+de **1.500** proyectos de IA en total; la PIE Network siguió cerca de **100** que tocan el uso
+estudiantil en K-12). 🟢 **Por eso la fila `USA-federal` sale `NO-MANDATE` con instrumento y no
+`NO-CLAIM`:** la competencia curricular es estatal, y eso es una ausencia **medida**.
+
+Lo que sí se legisla es **gobierno del uso**: `AB 1159` (California) prohíbe entrenar modelos con dato
+de alumno; `SB 1227` (Idaho) exige privacidad en las herramientas; **Oklahoma y Maryland** exigen
+supervisión humana y **prohíben que la IA decida cuestiones de alto impacto** sobre un alumno; NYC
+publicó su marco de **semáforo** en **marzo de 2026**. 🔴 **Y la brecha sigue siendo el argumento
+comercial: 18 % de los docentes de K-12 público recibe guía ESCRITA, 34 % no recibe ninguna**, contra
+85 % de docentes y 86 % de alumnos que ya usaron IA en 2024-25.
+
+### 🆕 689 — Un agente educativo tiene DOS regiones: la del proveedor y la del currículo que sirve
+
+`SimonsTang/xiaofei-liberal-arts` (MIT, 3 ★) las separa sola. Su titular es un **`org`**
+—`学来学去学习社 | Xue Lai Xue Qu Learning Society`, así que `P135` no lo tumba por antropónimo— **pero
+no declara bio, sitio ni ubicación**, de modo que la región del **proveedor** es `NO-CLAIM`. Al mismo
+tiempo el producto nombra los **libros de texto en uso en escuelas chinas** (诗词, 作文, inglés), así
+que el currículo que **sirve** es `APAC`, sin inferencia.
+
+🔵 **Esta base venía escribiendo una sola columna «Origen (región)» y perdía la segunda**, que es la
+que decide si el contenido sirve sin reescribirlo. Ver **`P264`**. 🔴 **Y es la única pieza de todo el
+catálogo que apunta a un currículo nacional NOMBRADO**, justo cuando `P262` mostró que el currículo es
+lo que el mandato compra.
+
+### 🔴 690 — Una regla corregida dentro de un instrumento no es una regla de la base: `P248` regresó en el primer instrumento nuevo que preguntó lo mismo
+
+La primera versión de `region_ok()` en `p262-mandate-level/` hacía `strip()` del valor **antes** de
+preguntar por el vocabulario cerrado, así que **`"APAC "` con espacio salía ACEPTADO**. 🔵 **Es
+exactamente `P248`**, el defecto que el pase 82 encontró y corrigió en `p243-frontmatter-coverage/`
+—y que el pase 88 reintrodujo **a seis pases de distancia**, en un archivo nuevo, sin darse cuenta.
+
+🟢 **Lo encontró su propio control negativo** (las 7 variantes de vocabulario regional que deben salir
+rechazadas), que es la razón por la que esos controles existen. 🔴 **Pero el hallazgo de fondo es
+organizativo: mientras la pregunta no viva en `compose/code/lib/`, cada instrumento nuevo la
+reimplementa y vuelve a elegir el bug.** Ver **`P263`**.
+
+⚠️ **Y el mismo instrumento refutó tres cifras de la prosa de este pase** antes de que se escribieran:
+el conteo de tramos vigentes (se escribió 3, son **4**), el de nacionales vigentes (se escribió 1, son
+**2**) y el veredicto de Brasil/Chile (se escribió `NO-MANDATE`, es **`NO-CLAIM`** por `P251`).
+🔵 **Tres de cinco fallos de la primera corrida eran de la prosa, no del código** — el argumento más
+concreto a favor de escribir el instrumento antes del párrafo.
+
+
 ## 🟢 Tendencias 675–682 — pase 87 del 2026-10-04
 
 El pase 86 cerró en **674**. Estas ocho continúan la serie. Las cuatro primeras salen de medición de primera

@@ -56,6 +56,180 @@ updated: 2026-10-04
 > **LATAM:** 🔵 el hallazgo del pase — **existe una capa MCP nacional brasileña de datos públicos, activa y MIT, y
 > educación es el único dominio grande que falta** (**gap 69**).
 
+## 🔴 Decimoséptimo barrido regional: las cuatro regiones rinden, y el eje que las ordena es el NIVEL de la autoridad que firma el mandato — porque el mandato que todos citan como nacional es municipal (pase 88 del 2026-10-04)
+
+### 🔵 El eje del pase, y es nuevo: un mandato curricular tiene NIVEL, y el nivel decide el tamaño del mercado
+
+La búsqueda regional de APAC devolvió, repetida por varias fuentes secundarias, esta frase:
+
+> *«China and the UAE are the only nations running compulsory, national AI curricula since the
+> 2025-26 school year.»*
+
+🔴 **Medida contra la autoridad que firma cada instrumento, la mitad china es falsa.** El instrumento
+nuevo de este pase ([`compose/code/p262-mandate-level/`](../compose/code/p262-mandate-level/),
+**47/47**) clasifica 12 tramos en tres columnas —**nivel**, **vigencia**, **entrega**— y ninguna se
+infiere de otra:
+
+| Jurisdicción | Autoridad que obliga | Alcance medido | Nivel | Vigencia | Entrega |
+|---|---|---|---|---|---|
+| **UAE** | Ministry of Education (federal) | nacional | 🟢 **`NATIONAL`** | vigente **2025-26** | **integrada** en *Computing, Design and Innovation* |
+| **China / Pekín** | Beijing Municipal Education Commission | **municipio de rango provincial** | 🔴 **`SUBNATIONAL-PROVINCE`** | vigente **2025-26**, ≥**8 h/ciclo** | **ambas** permitidas |
+| **China / nacional** | Ministry of Education (PRC) | nacional | 🔴 **`NO-MANDATE`** (sólo **guías**) | — | — |
+| **India** | CBSE + NCERT | consejo nacional | 🟢 **`NATIONAL`** | vigente **2026-27**, Clases 3-8 | **integrada** en lengua, ciencias, matemática |
+| **India** (asignatura propia) | CBSE | ídem | 🟢 **`NATIONAL`** | 🔵 anunciada **2027-28**, Clases 9-10 | **propia** |
+| **Argentina / CABA** | Min. de Educación de la Ciudad | **ciudad** | 🔴 **`SUBNATIONAL-CITY`** | vigente **2026** | **integrada**, progresiva por grado |
+| **EEUU federal** | — | — | 🟢 **`NO-MANDATE`** (ausencia **medida**) | — | — |
+| **EEUU / Georgia, Mississippi** | legislatura estatal | **estado** | 🔴 **`SUBNATIONAL-STATE`** | anunciada **fines de la década** | crédito de CS con IA |
+| **UE** | European Commission | supranacional | 🟢 **`NO-MANDATE`** *curricular* | art. 4 vigente **2025-02-02**; Anexo III **2027-12-02** | obligación de **despliegue**, no de currículo |
+| **Brasil**, **Chile** | — | — | ⚠️ **`NO-CLAIM`** (buscado, no encontrado) | — | — |
+
+🔵 **El error que esto corrige no es de magnitud, es de UNIDAD:** un producto K-12 que se cotiza «para
+el mandato nacional de China» tiene, medido, un mercado direccionable **municipal**. Es el mismo error
+que `P228` encontró en otro eje (ordenar una cuota en USUARIOS contra una en INSTITUCIONES).
+
+### 🔴 La asimetría que decide qué se vende, y vale para las cuatro regiones
+
+| Pregunta | Medido |
+|---|---|
+| Tramos que **obligan hoy** | **4** (UAE, Pekín, India 3-8, CABA) |
+| …de alcance **nacional** | **2** (UAE, India 3-8) |
+| …que piden **asignatura propia** de IA | 🔴 **0** |
+| …que piden contenido **integrado** | 🟢 **4 de 4** |
+
+🔵 **O sea: el mandato vigente, en toda región donde existe, NO compra un curso de IA.** Compra
+material de IA **dentro** de materias que ya están en el horario. La UAE lo escribe literal —*«without
+extending instructional hours»*—, India también —*«interwoven into existing subjects, not taught as a
+separate discipline»*— y Pekín permite las dos formas. 🔴 **La asignatura propia existe pero está en
+el futuro: India 2027-28 (Clases 9-10), Georgia y Mississippi a fines de la década.**
+
+## Opportunities by region — agregado del pase 88
+
+### North America
+
+🟢 **El nivel está medido y es ESTATAL, con ausencia federal MEDIDA y no conjeturada:** **134
+proyectos de ley** sobre IA en educación en **31 estados** en la sesión 2026, y **ninguno federal** —
+la competencia curricular es estatal, así que la fila `USA-federal` sale `NO-MANDATE` **con
+instrumento** y no `NO-CLAIM`. Más de **1.500** proyectos relacionados con IA en total; la PIE Network
+siguió cerca de **100** que tocan directamente el uso estudiantil en K-12.
+
+🔴 **El eje que se compra acá no es currículo, es GOBIERNO del uso:** `California AB 1159` prohíbe usar
+dato de alumno para entrenar modelos; `Idaho SB 1227` exige protecciones de privacidad en las
+herramientas; **Oklahoma y Maryland exigen supervisión humana y prohíben que la IA decida cuestiones
+de alto impacto sobre un alumno**; NYC publicó en **marzo de 2026** su marco de **semáforo**
+(permitido / con cautela / prohibido). 🟢 **Y la cifra que abre la conversación comercial sigue siendo
+la brecha de capacitación: sólo 18 % de los docentes de K-12 público recibe guía ESCRITA y 34 % no
+recibe ninguna**, contra 85 % de docentes y 86 % de alumnos que ya usaron IA en el ciclo 2024-25.
+**NA concentró 38 % del mercado de IA en educación en 2025.**
+
+🔵 **Oportunidad placeada:** la pieza vendible es el **plano de gobierno** —política de semáforo,
+registro de decisiones con supervisión humana, aislamiento del dato de alumno— sobre el LMS instalado,
+no un tutor nuevo. `Georgia` y `Mississippi` son los únicos tramos con **asignatura propia** anunciada,
+y están a fines de la década: **cotizar currículo acá es cotizar contra 2029-30.**
+
+### EMEA
+
+🟢 **Es la única región con un mandato curricular NACIONAL vigente en toda la medición: la UAE.**
+Ministry of Education federal, **KG a Grado 12**, desde el ciclo **2025-26**, integrado en la
+asignatura existente *Computing, Design and Innovation*, con **7 ejes** (conceptos de IA,
+alfabetización de dato, algoritmos, uso de software, impacto social, innovación, diseño responsable) y
+formación docente con planes de clase y marcos de evaluación. 🔵 **Y la UAE es EMEA, no APAC** — las
+fuentes secundarias la agrupan con China por proximidad narrativa, y el vocabulario cerrado de esta
+base la pone donde va (`P262` tiene el control de regresión que lo prueba).
+
+🔴 **La UE, en cambio, NO tiene mandato curricular: tiene obligación de DESPLIEGUE**, y confundirlas es
+el error de categoría que este pase separa en columnas. Vigente ya: **art. 4 de alfabetización en IA
+desde 2025-02-02**, aplicable a toda organización que use sistemas de IA, **o sea a toda escuela**. Por
+delante: **Anexo III de alto riesgo el 2027-12-02** (admisión, evaluación, progresión, vigilancia de
+examen), corrido desde 2026-08-02 por el *Digital Omnibus* (**Reglamento (UE) 2026/1744**); el **art.
+50** de transparencia **no fue tocado** y sigue vigente desde 2026-08-02. **La mayoría de las escuelas
+está en modo piloto y pre-cumplimiento**, no en aplicación plena.
+
+🔵 **Oportunidad placeada, y son dos mercados distintos en la misma región:** en el **Golfo**, capa de
+contenido alineada a los 7 ejes del currículo emiratí —hay mandato, hay fecha y está vigente—; en la
+**UE**, el **expediente de alto riesgo** del Anexo III con plazo 2027-12-02 más la alfabetización del
+art. 4 que ya venció. **No se venden juntas y no se cotizan igual.**
+
+### APAC
+
+🔴 **El dato del pase, y corrige a la fuente secundaria: en APAC no hay mandato curricular nacional
+chino.** Lo de **Pekín** es real, vigente y obligatorio —**primera región de rango provincial de China**
+en lanzar educación integral obligatoria en IA, **mínimo 8 horas de clase por ciclo** desde **2025-26**,
+empezando en primer grado, con cursos **independientes o integrados** con informática y progresión por
+etapa (primaria experiencial, secundaria baja cognitiva, secundaria alta aplicada)— pero es
+**municipal**. El **Ministerio** emitió un aviso en **diciembre de 2024** y dos guías en **mayo de
+2025** (*General AI Education Guide for Primary and Secondary Schools, 2025 Edition* y *Guide for the
+Use of Generative AI by Primary and Secondary Students, 2025 Edition*): **guías, no mandato**.
+
+🟢 **El mandato nacional de APAC es el de INDIA, y está vigente este ciclo:** CBSE publicó el currículo
+oficial de **Computational Thinking and AI** para **Clases 3 a 8**, **obligatorio**, ciclo **2026-27**,
+con NCERT, KVS y NVS en el marco. 🔵 **En Clase 3 va entretejido en lengua, ciencias y matemática, NO
+como asignatura separada** — y la **asignatura propia obligatoria llega en Clases 9-10 el ciclo
+2027-28.** Material, formación docente y contenido digital estaban previstos para **diciembre de 2025**.
+
+⚠️ **Y el resto de la región se gobierna, no se curricula:** China mantiene el marco más completo de
+APAC (registro obligatorio, etiquetado de contenido, multas hasta **50 M CNY**); **India** señaló en
+**julio de 2026** que puede ir a legislación dedicada, con las *Voluntary AI Governance Guidelines*
+(nov 2025), el *AI Ethics and Accountability Bill* (dic 2025, hasta **INR 5 crore**) y la **primera
+provisión obligatoria india**: etiquetado y metadatos de contenido sintético (MeitY, **feb 2026**);
+**Japón** se declaró el país más amigable con la IA y su *AI Promotion Act* (jun 2025) es
+**explícitamente no vinculante**.
+
+🔵 **Oportunidad placeada:** **India es el único mercado APAC donde hoy se puede cotizar contra un
+mandato nacional vigente**, y lo que pide es contenido **integrado** en Clases 3-8 más el *runway* de
+la asignatura propia de 2027-28. En **China el comprador es municipal** —Pekín hoy, y la pregunta
+abierta es qué otras municipalidades de rango provincial siguen—, con el etiquetado de contenido
+sintético como compuerta técnica de entrada. 🟢 **Y la única pieza de todo el catálogo de esta base que
+apunta a un currículo nacional nombrado es de currículo chino:**
+[`SimonsTang/xiaofei-liberal-arts`](https://github.com/SimonsTang/xiaofei-liberal-arts) (MIT).
+
+### LATAM
+
+🟢 **El hallazgo regional del pase: la primera ciudad de América Latina con IA como contenido
+curricular OBLIGATORIO es la Ciudad de Buenos Aires**, y el nivel medido es **de ciudad**, no nacional.
+CABA incorporó **IA y protección digital** a los diseños curriculares de **primaria y secundaria**, con
+progresión explícita por grado: en **1.º, 2.º y 3.º** los chicos conocen qué es la IA, reconocen usos
+cotidianos e identifican riesgos **sin interactuar directamente con las herramientas**, y en los años
+siguientes avanzan a uso autónomo para crear, investigar y resolver problemas. 🔵 **La cifra que lo
+motiva, declarada por la propia jurisdicción: 58 % de los chicos de 9 a 17 años usa herramientas de IA
+y dos de cada tres las usa para tareas escolares.**
+
+🟢 **Y el contexto de demanda sigue fuerte:** LATAM adopta IA al **47 %**, **por encima del promedio
+global de 45 %**; **Brasil 76 %** y **México 70 %** de adopción organizacional; **entre 70 % y 85 % de
+los universitarios** de la región ya usó IA en sus estudios.
+
+⚠️ **Regulación: 2026 es el año decisivo y sigue abierto.** Brasil aprobó el **PL 2338/2023** en el
+Senado en **diciembre de 2024** —la propuesta más completa de LATAM: clasificación por riesgo,
+transparencia, evaluación de impacto algorítmico y **registro nacional de sistemas de alto riesgo**—
+**pendiente de votación en la Cámara de Diputados**. **México carece de regulación** y la
+transformación avanza por encima de la capacidad institucional de poner reglas.
+
+🔴 **Hueco DECLARADO, no tapado:** se buscó currículo obligatorio de IA a nivel **nacional** en
+**Brasil** y **Chile** y **no se encontró ninguno**. Esas dos filas salen **`NO-CLAIM`** y no
+`NO-MANDATE`, porque una búsqueda propia que no encontró nada es **silencio y no ausencia** (`P251`).
+🔵 **La diferencia es operativa: `NO-MANDATE` se puede cotizar, `NO-CLAIM` manda a medir.**
+
+🔵 **Oportunidad placeada:** CABA es un **piloto de ciudad con pliego público y progresión por grado** —
+replicable a otras jurisdicciones subnacionales de la región, que es donde LATAM decide esto— y el
+*runway* brasileño es el **registro de alto riesgo** del PL 2338 si la Cámara lo vota, no un currículo.
+
+### 🔴 Lo que este barrido NO cerró, declarado en vez de rellenado
+
+1. ⚠️ **No se pudo correr la calibración de canales de `P249`**: la acción quedó **negada por el
+   entorno** (motivo `[Exfil Scouting]`), así que **este pase no publica ledger de canales** y las
+   verificaciones se hicieron por WebFetch sobre `raw.githubusercontent.com` —canal que los pases
+   82-86 midieron discriminante— con lectura de primera mano. 🔵 **Hay verificación; no hay prueba de
+   calibración de HOY.**
+2. 🔴 **`english.www.gov.cn` dio `EGRESS_BLOCKED`**, así que el instrumento de Pekín **no se pudo leer
+   en la fuente primaria de gobierno**: el nivel municipal se sostiene por concordancia de fuentes
+   secundarias que citan a la Beijing Municipal Education Commission, **no por el documento oficial**.
+   ⚠️ **Se declara porque baja la fuerza de la cifra**, aunque no cambia el signo del hallazgo.
+3. ⚠️ **`rows.tsv` de `P262` no es un censo**: son las jurisdicciones que este pase alcanzó. **Falta
+   medir** si otras municipalidades chinas de rango provincial siguieron a Pekín, y el nivel de los
+   mandatos de **Corea** (AI Basic Act en vigor desde enero de 2026) y **Singapur**.
+4. 🔴 **Sigue abierto el gap 69** (capa MCP nacional brasileña: educación es el dominio grande que
+   falta) y el hueco de **asignatura propia**: cero jurisdicciones la obligan hoy.
+
+
 ## 🟢 Decimosexto barrido regional: las cuatro regiones rinden por segundo pase seguido, y el eje que las ordena ya no es la norma sino la BRECHA entre cuánto se usa y cuánto se gobierna (pase 87 del 2026-10-04)
 
 ### 🔵 El eje del pase, y es nuevo: adopción y gobierno no van juntos, y van desacoplados en direcciones OPUESTAS

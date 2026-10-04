@@ -1,0 +1,16 @@
+# P262 — mandatos curriculares de IA medidos en el pase 88 (2026-10-04).
+# Una fila por (jurisdiccion, tramo). El nivel sale de authority_scope, NO del titular de la nota.
+# force: IN-FORCE | ANNOUNCED-FUTURE | GUIDANCE-ONLY   delivery: STANDALONE | INTEGRATED | BOTH-PERMITTED | -
+jurisdiction	region	authority	authority_scope	force	in_force	delivery	grades	instrument
+UAE	EMEA	Ministry of Education (federal)	national	IN-FORCE	2025-26	INTEGRATED	KG-G12	curriculo nacional de IA integrado en la asignatura Computing, Design and Innovation; 7 ejes
+China-Beijing	APAC	Beijing Municipal Education Commission	municipality-provincial-rank	IN-FORCE	2025-26	BOTH-PERMITTED	G1-G12	minimo 8 horas de clase por ciclo; cursos independientes O integrados con informatica
+China-national	APAC	Ministry of Education (PRC)	national	GUIDANCE-ONLY	-	-	-	aviso 12-2024 + General AI Education Guide (2025 Ed.) + Guide for Generative AI Use (2025 Ed.)
+India-CBSE-3-8	APAC	CBSE + NCERT	national-board	IN-FORCE	2026-27	INTEGRATED	Classes 3-8	curriculo Computational Thinking and AI; en Class 3 entretejido en lengua, ciencias y matematica
+India-CBSE-9-10	APAC	CBSE	national-board	ANNOUNCED-FUTURE	2027-28	STANDALONE	Classes 9-10	asignatura obligatoria propia, anunciada para el ciclo 2027-28
+Argentina-CABA	LATAM	Ministerio de Educacion de la Ciudad de Buenos Aires	city	IN-FORCE	2026	INTEGRATED	primaria+secundaria	IA y proteccion digital como contenido obligatorio en los disenos curriculares, progresivo por grado
+USA-federal	North America		none	-	-	-	-	ausencia MEDIDA: la competencia curricular es estatal; 134 proyectos de ley sobre IA en educacion en 31 estados en 2026 y ninguno federal
+USA-Georgia	North America	Georgia state legislature	state	ANNOUNCED-FUTURE	2029-30	STANDALONE	secundaria	credito de computer science que incluye instruccion en IA
+USA-Mississippi	North America	Mississippi state legislature	state	ANNOUNCED-FUTURE	2029-30	STANDALONE	secundaria	credito de computer science que incluye instruccion en IA
+EU-AIAct	EMEA	European Commission	supranational	-	-	-	-	obligacion de DESPLIEGUE, no de curriculo: art. 4 alfabetizacion en IA vigente 2025-02-02; Anexo III alto riesgo 2027-12-02
+Brazil	LATAM		none	-	-	-	-	
+Chile	LATAM		none	-	-	-	-	

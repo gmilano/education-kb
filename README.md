@@ -66,6 +66,38 @@ o la variable de entorno (regla de **P107**, pase 47):
 | **`p257-provider-binding/`** | **el eje de LIGADURA DE PROVEEDOR, que esta base escribia como `lock-in` en los ocho `.md` sin un solo instrumento: proveedores y intercambiabilidad en DOS columnas, con los dos fallos del propio barrido versionados como control negativo** | `python3 test_binding.py` | 🟢 **37/37** *(nuevo en el pase 86)* |
 | ídem, el barrido real sobre las 69 | ¿cuántas rutean por una capa de abstracción de proveedor? | `cat slugs.input.txt \| xargs -P 8 -I{} sh ./sweep_binding.sh {}` | 🔴 **0 `SWAPPABLE`** · 🟢 36 `UNBOUND` · ⚠️ 21 `NO-CLAIM` · 🔴 10 ligadas · ⚠️ 2 raíces |
 | ídem, el cruce con la capa MCP | ¿la ligadura vive en el servidor o en el host? | `cat slugs.input.txt \| xargs -P 8 -I{} sh ./mcp_layer.sh {}` | 🟢 **21 de 25 servidores MCP no ligan nada** · 🔴 4 sí |
+| **`p262-mandate-level/`** | **el eje de MANDATO CURRICULAR en tres columnas (nivel, vigencia, entrega), con la frase secundaria *«China and the UAE are the only nations running compulsory, national AI curricula»* como control negativo: la mitad china tiene que salir `SUBNATIONAL-PROVINCE`** | `python3 test_classify.py` | 🟢 **47/47** *(nuevo en el pase 88)* |
+| ídem, el reparto real de las 12 filas | ¿cuántos tramos obligan HOY, y cuántos piden asignatura propia? | ídem | 🟢 **4 obligan hoy** · 🔴 **0 piden asignatura propia** · 🟢 **4 de 4 integran** |
+
+
+🟢 **Pase 88 del 2026-10-04 — la columna «Hoy» se re-verificó COMPLETA, y era la primera vez en
+DOS pases que se pudo:** la ejecución estuvo **NEGADA** (`[Code from External]`) en los pases **84** y
+**86**, lo que dejó el tablero *citado* y no *medido*. 🟢 **Corrida aquí con `Python 3.11.15`: 38
+invocaciones de suite preexistente —35 Python + 3 shell— y 38 con código de salida 0**, más la suite
+nueva de este pase (`p262-mandate-level/test_classify.py`, **47/47**). 🔵 **Y esa frontera NO se eleva
+a regla del entorno:** varía entre pases, y generalizarla es el error que los pases 50, 51 y 58
+cometieron en una dirección y el 52, el 66 y el 75 en la otra.
+
+🔴 **El aporte del pase es una REFUTACIÓN de fuente secundaria, y es del eje de DEMANDA:** la frase
+*«China and the UAE are the only nations running compulsory, national AI curricula since the 2025-26
+school year»*, que varias fuentes repiten, **es falsa en su mitad china**. Medido contra la autoridad
+que firma: lo de **Pekín** es un mandato **municipal de rango provincial** (≥8 h de clase/ciclo desde
+2025-26) y el Ministerio chino sólo emitió **guías**. 🟢 **La UAE sí sostiene la frase** (federal,
+KG-G12, 2025-26), y el otro mandato nacional vigente es el de **India** (CBSE, Clases 3-8, 2026-27).
+🔴 **Y la consecuencia que reencuadra el catálogo entero: de los 4 tramos que obligan hoy, CERO piden
+una asignatura propia de IA — los 4 entregan contenido INTEGRADO en materias que ya están en el
+horario.** 🆕 **`P262`** (nivel/vigencia/entrega en tres columnas), 🆕 **`P263`** (una regla corregida
+dentro de un instrumento no es una regla de la base: `P248` **regresó** seis pases después) y 🆕
+**`P264`** (región del proveedor ≠ región del currículo que sirve). Receta nueva: **`R-MANDATO`**.
+
+⚠️ **Dos cotas de canal de este pase, declaradas porque bajan la fuerza de las cifras.** *(a)* 🔴 **La
+calibración multi-host de `P249` NO se pudo correr:** la acción quedó **negada por el clasificador del
+entorno** (motivo `[Exfil Scouting]`), así que **este pase no publica ledger de canales** y no afirma
+calibración de hoy; las licencias de las 2 altas se leyeron de primera mano por **WebFetch sobre
+`raw.githubusercontent.com`**, canal que los pases 82-86 midieron discriminante. *(b)* 🔴
+**`english.www.gov.cn` dio `EGRESS_BLOCKED`**, así que el instrumento de Pekín **no se leyó en la
+fuente primaria de gobierno**: el nivel municipal se sostiene por concordancia de fuentes secundarias
+que citan a la Beijing Municipal Education Commission.
 
 
 ⚠️ **Pase 86 del 2026-10-04 — la columna «Hoy» NO se re-verificó en este pase, y el motivo es del
