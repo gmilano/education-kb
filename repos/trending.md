@@ -8,6 +8,93 @@ updated: 2026-10-04
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 
+## 2026-10-04 — pase 93: GitHub trending vuelve vacío por VIGESIMOSEGUNDA vez, y el canal que rindió fue un clon SIN BLOBS que enumera árboles completos
+
+🔴 **GitHub trending vacío por vigesimosegunda vez consecutiva, y la causa sigue siendo la medida:
+el canal lee «AI education» como *aprender SOBRE IA*, no como *edtech*.** Lo que devolvió este pase,
+clasificado en vez de archivado:
+
+| lo que devolvió el canal | qué es | ¿alta? |
+|---|---|---|
+| `rohitg00/ai-engineering-from-scratch` | curso de ingeniería de AI; #1 en trending el 2026-05-24 | 🔴 **no** — contenido **sobre** AI |
+| *Neural Networks: Zero to Hero* (Karpathy) | material didáctico de redes neuronales | 🔴 **no** — contenido **sobre** AI |
+| `speedyapply/2026-AI-College-Jobs` (5,2k ★ / 206 forks) | listado de empleos y prácticas de AI/ML | 🔴 **no** — bolsa de trabajo, no edtech |
+
+🔵 **Es el mismo resultado por vigesimosegunda vez, y ya no es una ausencia de hallazgo sino un
+hecho medido del canal:** la consulta `github trending {industry} AI {year}` no discrimina la
+preposición, y en esta vertical **«AI para educar» y «educación sobre AI» son industrias
+distintas**. Se declara en vez de rellenar.
+
+### 🟢 Altas de repo: 0 — y se declara QUÉ se buscó
+
+🔴 **Cero altas en `repos/foundations.md`, SEXTO pase consecutivo.** El barrido vertical
+(`open source platform education ERP CRM MIT Apache`) devolvió por **decimonovena** vez el catálogo
+que este árbol ya tiene verificado: `OpenEduCat` (LGPL-3.0), `ERPNext` / `frappe/education`,
+Moodle, Open edX, Chamilo, ILIAS, `openSIS`.
+
+⚠️ **Y nombró una vez más la *Kuali Foundation* descrita en PRESENTE** (*«consorcio de más de dos
+docenas de universidades que produce ERP, SIS y administración de investigación»*). Esta base ya la
+midió en el **pase 42** y el resultado no cambió: `kuali/rice` y `KualiCo/rice` (ECL-2.0),
+`kuali/kc` y `kuali/kfs` (AGPL-3.0), **los cuatro sin commits desde hace 6–9 años**, y
+`KualiCo/kc`, `KualiCo/kfs` y `KualiCo/kuali-student` **no existen**. 🔵 **Una propuesta escrita
+desde el buscador la habría ofrecido como opción viva: es el valor acumulado de haberla medido una
+vez.**
+
+### 🟢 El canal que SÍ rindió, y retira una cota que el pase 92 había declarado sobre sí mismo
+
+El pase 92 abrió `WebFetch` sobre las páginas `tree/` de `github.com` y midió su límite en el mismo
+pase: **trunca los listados largos** (el de `components/ILIAS` cortó en `LegalDocuments`), por lo
+que ILIAS quedó medido en el tramo **A–L** y su veredicto se publicó *sostenido con límite*.
+
+🟢 **Canal nuevo de este pase: `git clone --filter=blob:none --no-checkout --depth 1` + `git ls-tree -d -r`.**
+Baja commit y árboles **sin ningún blob** y enumera el árbol **completo**: sin truncar, sin paginar
+y sin tocar `api.github.com` —que esta base registra en **403** desde el pase 89—. Medido: el clon
+de ILIAS tarda **< 1 s**, y sobre Moodle enumera **10.923** directorios de una vez.
+
+**P275**: *para sostener una ausencia en un árbol hay que ENUMERARLO. Un canal que trunca sirve para
+HALLAR; un negativo suyo sólo vale con el tramo declarado.* 🔵 Y le pone instrumento al hueco que
+`P274` dejó abierto en el pase 92: ese patrón retiró una clase de negativo (*un path de DIRECTORIO
+da 404 en `raw` SIEMPRE*) **sin reemplazo**, y la ausencia quedó incognoscible en este árbol. Ya no.
+
+| repo | ref | layout resuelto | componentes | árbol (dirs) | veredicto |
+|---|---|---|---|---|---|
+| `ILIAS-eLearning/ILIAS` | `release_9` | `Modules` + `Services` | **180** | 3.597 | 🟢 `SIN-AI-EN-NUCLEO` |
+| `ILIAS-eLearning/ILIAS` | `release_10` | `components/ILIAS` | **193** | 4.112 | 🟢 `SIN-AI-EN-NUCLEO` |
+| `ILIAS-eLearning/ILIAS` | `release_11` | `components/ILIAS` | **180** | 4.266 | 🟢 `SIN-AI-EN-NUCLEO` |
+| `ILIAS-eLearning/ILIAS` | `trunk` | `components/ILIAS` | **176** | 4.369 | 🟢 `SIN-AI-EN-NUCLEO` |
+| `frappe/erpnext` | `develop` | `erpnext` | 39 | 1.427 | 🟢 `SIN-AI-EN-NUCLEO` |
+| `frappe/education` | `develop` | `education` | 11 | 159 | 🟢 `SIN-AI-EN-NUCLEO` |
+| `openeducat/openeducat_erp` | `18.0` | **raíz del repo** | 15 | 173 | 🟢 `SIN-AI-EN-NUCLEO` |
+
+🟢 **El tramo M–Z de ILIAS existe, está listado y no tiene un solo componente de AI** (`Mail`
+… `soap`, 76 nombres). Las cuatro refs dan cero, ahora sobre el árbol entero y no sólo el primer
+nivel. La capacidad de AI que las fuentes atribuyen a ILIAS (*AI Chat plugin*, *ILIAS Assistant*)
+vive en **plugins de terceros**, fuera de este repo.
+
+### 🔴 `P278` — la ruta que contiene los componentes es propiedad de la (repo, ref)
+
+🔴 **`components/ILIAS/` da 180 directorios en `release_11` y CERO en `release_9`**, donde el mismo
+árbol los tiene en `Modules/` (54) + `Services/` (126) = **180**: el layout se movió en la 10.
+Publicar ese cero como *«ILIAS 9 no tiene componentes»* sería dato incorrecto. Es `P270` subido una
+capa: ese patrón decía que un negativo sobre una ruta que codifica un **nombre** mide el nombre;
+éste dice lo mismo del **layout**. Por eso el barrido es una **compuerta** y no un contador.
+
+### ⚠️ Canales que este pase midió y NO rindieron, declarados
+
+- 🔴 `github trending education AI 2026` → vigesimosegunda vez sin edtech (detalle arriba).
+- 🔴 `top open source AI agents education 2026 github MIT` → eje generalista por octava vez, **con
+  las seis cifras de estrellas idénticas dígito a dígito a las del pase 92**: el canal sirve una
+  respuesta cacheada, y eso es información sobre el canal, no sobre la industria.
+- 🔴 Los cuatro barridos regionales → vigesimosegunda saturación; ninguno nombró un repo.
+- ⚠️ `api.github.com` sigue en **403** (quinto pase consecutivo). El clon sin blobs lo vuelve
+  irrelevante para enumerar: no hace falta la API.
+
+### 🟢 Suites
+
+🟢 **43/43 verdes (41 py + 2 sh)**, dos suites más que el pase 92. 🟢 **Linter de tablas: `total 0`
+sobre los ocho archivos.** Instrumento:
+[`compose/code/p275-tree-enumeration/`](../compose/code/p275-tree-enumeration/).
+
 ## 2026-10-04 — pase 92: GitHub trending vuelve vacío por VIGESIMOPRIMERA vez, y los tres repos que devolvió se clasifican en vez de archivarse
 
 🔴 **GitHub trending vacío por vigesimoprimera vez consecutiva, y la causa sigue medida: el canal lee

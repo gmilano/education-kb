@@ -9,6 +9,7 @@ updated: 2026-10-04
 > Plataformas verticales reales, en producción, customizables con AI.
 > Modelo: partir de algo que ya funciona y que ya tiene los datos, y agregar la capa agéntica arriba.
 > Verificado vía WebFetch el 2026-09-30; las capas del pase 11, el 2026-10-01.
+> **Pase 93 del 2026-10-04:** 🔴 **Sin verticales nuevas (sexto pase consecutivo) y el barrido confirmo por decimonovena vez el catalogo de este archivo — pero una cifra que este archivo publicaba como verificada estaba MAL.** El pase 92 escribio que Chamilo liga **6** proveedores en el nucleo de `v3.0.x`: son **7**, y el que faltaba (`ClaudeProvider.php`) no estaba en la lista de nombres que ese pase sondeo (**P276**). 🟢 **Matriz correcta por ref: `0,0,5,5,7,7,7,7`.** 🔵 **Y este archivo necesita DOS columnas donde tenia una: 7 CLAVES configurables y 6 EMPRESAS distintas** —`AnthropicProvider extends ClaudeProvider` y las dos pegan a `api.anthropic.com/v1/messages`—, porque *«soporta 7 modelos de 7 empresas»* es la frase que una propuesta escribe sola y es **falsa**. 🔴 **La restriccion que rompe una clausula de contrato: este archivo vendia *«intercambiable de proveedor»* sin medir EN QUE. Medido, el swap es libre en texto y documento (7/7), cae a **3/7** en imagen y video, y a **1/7** en `document_process` — **solo OpenAI** (**P277**).** 🔵 **Tres hechos de OPERACION que se verifican en la instalacion y no en el repo:** el default lo decide el **orden del JSON** (`array_key_first`), un tipo solo se habilita si esta **explicitamente** en la config de ese proveedor, y si la clase no satisface la interfaz **el factory lo descarta con `error_log` y sigue** — la capacidad se pierde **sin error visible**. 🟢 **Y el veredicto de ILIAS pasa de *sostenido CON LIMITE* (tramo A–L) a AUSENCIA CERRADA en las cuatro refs, por enumeracion del arbol completo** (**P275**) — **con su consecuencia regulatoria para EMEA: si la AI no esta en el nucleo, bajo el EU AI Act (vigencia plena agosto 2026, educacion **alto riesgo**) el sujeto obligado de la evaluacion es el PLUGIN, no la plataforma.** 🔵 **Y el contraejemplo de soberania: de las 7 claves de Chamilo **ninguna** es autoalojable; de las 7 de Moodle, **`ollama` si** (nucleo desde 5.0).** La compuerta de pre-venta es la receta **`R-CAPACIDAD`** de `compose/patterns.md`.
 > **Pase 92 del 2026-10-04:** 🔴 **Sin verticales nuevas (quinto pase consecutivo) y el barrido de plataformas confirmó por decimoctava vez el catálogo de este archivo.** 🟢 **Pero este archivo salda la deuda que arrastraba del pase 90: sus SIETE veredictos de «ligadura de proveedor» por plataforma están ahora TODOS medidos por ref — 2 CONTRADICHOS, 5 SOSTENIDOS.** 🔴 **Y el contradicho nuevo obliga a reescribir cómo este archivo describe a Chamilo: liga SEIS proveedores de modelo en el NÚCLEO (`src/CoreBundle/AiProvider/`) y su `composer.json` no nombra NINGUNO en las ocho refs medidas, así que el veredicto no falló por falta de ref sino porque el manifiesto es CIEGO a un directorio de proveedores** (**P273**). 🟢 **Chamilo deja de ser «un LMS que se le puede agregar AI» y pasa a ser la segunda vertical de este archivo que trae la capa agéntica DE FÁBRICA**, con `AiTaskGraderService` (autograding) y `AiTutorChatService` (tutor) en el núcleo desde `v2.0.0`. 🔵 **Con versión mínima, que es lo que hay que preguntar antes de cotizar: 0 proveedores en `1.11.x`, 5 en `2.0`, 6 (con Anthropic) en `3.0`.** ⚠️ **`GPL-3.0`.** Ver la sección nueva de este archivo y [`compose/code/p273-platform-provider-dir/`](../compose/code/p273-platform-provider-dir/).
 > **Pase 91 del 2026-10-04:** 🔴 **Sin verticales nuevas (cuarto pase consecutivo) y el barrido de plataformas confirmó por decimoséptima vez el catálogo de este archivo.** 🔴 **Pero este archivo hereda del pase 90 una tabla de veredictos que no se puede sostener como está: las siete filas de «ligadura de proveedor» por plataforma se midieron SIN REF**, en el mismo pase que demostró —para Moodle— que un conjunto de proveedores es propiedad del par **(repo, ref)**. 🟢 **Puestas a prueba dos de las siete, una CONTRADICE su veredicto:** `openedx/edx-platform` figura como `SIN-PROVEEDOR-DE-MODELO`, y medido por ref trae **`openai==0.28.1` DIRECTA** (`via kernel.in`) en `quince`, `redwood` y `sumac`; sólo `master` —la rama que ningún cliente corre— coincide con el veredicto publicado. 🟢 **`instructure/canvas-lms` sobrevive** en las 2 refs que resuelven (`master`, `prod`). Así que el defecto es **real pero no universal: 1 de 2 medidas** (**P272**). ⚠️ **Las cinco filas restantes (`chamilo`, `ILIAS`, `frappe/education`, `frappe/erpnext`, `openeducat`) siguen SIN REF y quedan como ACCIÓN, no como veredicto** — no se generaliza desde una muestra de dos. 🔵 **Y la matriz de Moodle de este archivo queda REPLICADA**: 6 de 6 refs remedidas a mano coinciden exacto con el pase 90. Ver [`compose/code/p272-platform-ref-verdict/`](../compose/code/p272-platform-ref-verdict/).
 > **Pase 90 del 2026-10-04:** 🔴 **Sin verticales nuevas (tercer pase consecutivo) y el barrido de plataformas confirmó por decimosexta vez el catálogo de este archivo.** 🔴 **Pero este archivo tenía una afirmación que su propia cita no sostiene, y se corrige acá: el pase 86 escribió «las plataformas no ligan proveedor de modelo … (`P257`, 0 de 69 con capa de abstracción)».** El README de `P257` dice textualmente que su denominador son *«las 69 filas recomendables»* — **filas de AGENTE, cero plataformas.** Una afirmación sobre la capa de PLATAFORMA citando una medición de la capa de AGENTE es un desajuste de denominador por capa (**P271**, la versión por capa de `P228`). 🟢 **Medida la capa correcta —8 plataformas, manifiesto de runtime por el canal calibrado—, la dirección se sostiene para 6 de 8, pero Moodle es el CONTRAEJEMPLO y es el que más importa: su núcleo trae una ABSTRACCIÓN DE PROVEEDOR con 7 proveedores intercambiables** (`openai`, `azureai`, `ollama`, `deepseek`, `gemini`, `awsbedrock`, `anthropic`), que es exactamente la clase `SWAPPABLE` de la que `P257` reportó **CERO** en 69 filas. 🔵 **Así que el cero de `P257` no era un hecho de la industria: era una cota de su denominador.** 🔴 **Y la licencia de esta capa, leída del payload 8 de 8: GPL-3.0-or-later, AGPL-3.0 ×2, GPL-3.0 ×4, LGPL-3.0 ×1 — COPYLEFT 8 de 8, CERO permisivas**, con AGPL (alcance en RED) en las dos plataformas más grandes. Ver la sección nueva de abajo e [`compose/code/p269-provider-release-matrix/`](../compose/code/p269-provider-release-matrix/).
@@ -121,6 +122,115 @@ updated: 2026-10-04
 > versiones), así que lo permisivo (`qti3-*`, `instructure/qti`) es **lo único proponible** — con **`qti3-a11y`** y
 > **`qti3-pnp`**, que abren accesibilidad de evaluación como entregable auditable (**P72**). ⚠️ **Open edX cambia de
 > recomendación: proponer con presupuesto de mantenimiento (gap 70).** Ver la sección del pase 33, abajo.
+
+## 🔌 El eje de proveedor de este archivo tenía una cifra MAL y la columna que faltaba no es la licencia: es la CAPACIDAD (pase 93 del 2026-10-04)
+
+### 🔴 La corrección, y afecta a una cifra que este archivo publicó como verificada
+
+El pase 92 escribió en este archivo que Chamilo liga **6** proveedores en el núcleo de `v3.0.x`.
+🔴 **Son 7.** La medición del pase 92 sondeaba una lista de nombres candidatos —`OpenAi DeepSeek
+Gemini Mistral Grok Anthropic Ollama`— y `ClaudeProvider.php` no estaba en ella, mientras `Ollama`
+—que no existe en Chamilo— sí. Enumerado el directorio (`p275`) y leída la **allowlist** que el
+factory aplica en runtime (`p276`), la matriz correcta es:
+
+| ref de Chamilo | claves de proveedor en núcleo | cuáles |
+|---|---|---|
+| `v1.11.40`, `1.11.x` | **0** | — (dos proveedores en el plugin embarcado `plugin/ai_helper/`) |
+| `v2.0.0`, `2.0` | **5** | `openai` `deepseek` `grok` `mistral` `gemini` |
+| `v3.0.0`, `v3.0.1`, `3.0`, `master` | **7** | **+ `claude` + `anthropic`** |
+
+🔵 **Y el `6` no era un conteo de clases mal hecho: coincidía con el número de EMPRESAS por
+casualidad.** Medido en el payload, `final class AnthropicProvider extends ClaudeProvider` sólo
+sobreescribe la clave de configuración y la etiqueta; las dos pegan a
+`api.anthropic.com/v1/messages`. Así que este archivo necesita **dos columnas donde tenía una**:
+
+- **7 claves configurables** — lo que un administrador puede poner en el JSON.
+- **6 empresas distintas** — `claude` y `anthropic` son la misma.
+
+🔴 **Para pre-venta:** *«Chamilo 3 soporta 7 opciones de proveedor»* es cierto. *«Soporta 7 modelos de
+7 empresas»* es falso, y es la frase que una propuesta escribe sola.
+
+### 🔴 La restricción que viaja al cliente, y es la que rompe una cláusula de contrato
+
+Este archivo vendía *«plataforma intercambiable de proveedor»* sin medir en **qué** es
+intercambiable. Leídas las interfaces de cada clase contra el mapa `$typeInterface` del factory en
+`v3.0.1`:
+
+| clave | clase | tipos de servicio registrables | n |
+|---|---|---|---|
+| `openai` | `OpenAiProvider` | text, image, video, document, **document_process** | **5 / 5** |
+| `grok` | `GrokProvider` | text, image, video, document | 4 / 5 |
+| `gemini` | `GeminiProvider` | text, image, video, document | 4 / 5 |
+| `deepseek` | `DeepSeekProvider` | text, document | 2 / 5 |
+| `mistral` | `MistralProvider` | text, document | 2 / 5 |
+| `claude` | `ClaudeProvider` | text, document | 2 / 5 |
+| `anthropic` | `AnthropicProvider` (hereda) | text, document | 2 / 5 |
+
+🔴 **El swap es gratis en texto y documento (7 de 7), cae a 3 de 7 en imagen y video, y a 1 de 7 en
+procesamiento de documentos — sólo OpenAI** (**P277**). Un cliente que firmó *«cambiamos de proveedor
+cuando quieras»* y usa `document_process` **no tiene a dónde cambiar**. 🔵 **Ninguna columna de
+licencia, estrellas ni versión mínima muestra esto**, y es la restricción más caliente que este
+archivo tiene sobre la plataforma.
+
+🔵 **Tres hechos de OPERACIÓN que hay que verificar en la instalación, no en el repo:**
+
+1. **El default no se elige: lo decide el ORDEN del JSON** (`array_key_first($config)`).
+2. **Un tipo sólo se habilita si está explícitamente presente** en la config de ese proveedor.
+3. 🔴 **Si la clase no satisface la interfaz del tipo, el factory lo descarta con `error_log` y
+   SIGUE** — la capacidad se pierde **sin error visible en la interfaz de administración**.
+
+La compuerta de pre-venta que sale de esto es la receta **`R-CAPACIDAD`** de `compose/patterns.md`.
+
+### 🟢 Y el veredicto de ILIAS de este archivo pasa de «sostenido CON LÍMITE» a ausencia CERRADA
+
+El pase 92 declaró su propia cota: su canal truncaba los listados largos, así que ILIAS quedó medido
+en el tramo **A–L** (cortó en `LegalDocuments`) y el tramo **M–Z no fue listado**.
+
+🟢 **Enumerado el árbol completo con un clon sin blobs (`p275`), las cuatro refs dan CERO componentes
+de AI en el núcleo:**
+
+| ref | layout resuelto | componentes | árbol (dirs) | veredicto |
+|---|---|---|---|---|
+| `release_9` | `Modules` + `Services` | **180** | 3.597 | 🟢 `SIN-AI-EN-NUCLEO` |
+| `release_10` | `components/ILIAS` | **193** | 4.112 | 🟢 `SIN-AI-EN-NUCLEO` |
+| `release_11` | `components/ILIAS` | **180** | 4.266 | 🟢 `SIN-AI-EN-NUCLEO` |
+| `trunk` | `components/ILIAS` | **176** | 4.369 | 🟢 `SIN-AI-EN-NUCLEO` |
+
+🟢 **El tramo M–Z existe y está listado** (`Mail` … `soap`, 76 nombres) **y no tiene un solo
+componente de AI.** La capacidad que las fuentes atribuyen a ILIAS (*AI Chat plugin*, *ILIAS
+Assistant*) vive en **plugins de terceros**, fuera de este repo.
+
+🔴 **Y eso tiene una consecuencia regulatoria para EMEA que este archivo no tenía escrita:** bajo el
+EU AI Act —vigencia plena **agosto de 2026**, educación clasificada **alto riesgo**— si la capacidad
+de AI no está en el núcleo del LMS, **el sujeto obligado de la evaluación es el plugin, no la
+plataforma**. Eso cambia quién firma la conformidad.
+
+🟢 **Las otras tres filas de la capa pasan de *sostenidas por manifiesto + árbol truncable* a
+*sostenidas por árbol COMPLETO*:** `frappe/erpnext` (39 módulos), `frappe/education` (11) y
+`openeducat/openeducat_erp` (15, en la **raíz** del repo), las tres con cero módulos de AI.
+
+### 🟢 El contraejemplo de soberanía, que es el dato APAC de este archivo
+
+De las **7** claves del núcleo de Chamilo, **ninguna es autoalojable**: las siete son APIs de
+terceros. De las **7** de Moodle, **`ollama` sí lo es** (en núcleo desde **5.0**).
+
+🔵 **Para un cliente con requisito de soberanía de datos, la elección de LMS precede a la de
+modelo**, y ahora esa frase tiene una versión mínima detrás en vez de ser una intuición.
+
+### 🧾 Y el barrido obligatorio de plataformas: confirmación por decimonovena vez
+
+`open source platform education ERP CRM MIT Apache` devolvió `OpenEduCat`, `ERPNext` /
+`frappe/education`, Moodle, Open edX, Chamilo, ILIAS y `openSIS` — **todo ya está en este archivo,
+verificado**. Es una medición de la cobertura de este archivo, no un hallazgo. ⚠️ Nombró también la
+**Kuali Foundation descrita en presente**, que esta base midió en el pase 42: cuatro repos, los
+cuatro **sin commits desde hace 6–9 años**, y tres de los `KualiCo/*` **inexistentes**.
+
+🔴 **La licencia de esta capa sigue COPYLEFT en 8 de 8** —la tendencia **701** se sostiene por cuarto
+pase—: el foco MIT/Apache/BSD del encargo se cumple en la capa de agente y **en la de plataforma no
+hay permisiva que elegir**.
+
+Instrumentos: [`compose/code/p275-tree-enumeration/`](../compose/code/p275-tree-enumeration/) y
+[`compose/code/p276-provider-allowlist/`](../compose/code/p276-provider-allowlist/).
 
 ## 🔌 Chamilo deja de ser «LMS al que se le agrega AI» y pasa a traer la capa agéntica de fábrica — con versión mínima (pase 92 del 2026-10-04)
 

@@ -1,0 +1,9 @@
+ref	claves	n
+v1.11.40	SIN-FACTORY	0
+1.11.x	SIN-FACTORY	0
+v2.0.0	openai,deepseek,grok,mistral,gemini	5
+2.0	openai,deepseek,grok,mistral,gemini	5
+v3.0.0	openai,deepseek,grok,mistral,gemini,claude,anthropic	7
+v3.0.1	openai,deepseek,grok,mistral,gemini,claude,anthropic	7
+3.0	openai,deepseek,grok,mistral,gemini,claude,anthropic	7
+master	openai,deepseek,grok,mistral,gemini,claude,anthropic	7

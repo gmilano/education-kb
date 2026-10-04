@@ -7,6 +7,7 @@ updated: 2026-10-04
 # 📡 Tendencias — education
 
 > Ventana de investigación: septiembre 2026. Verificado 2026-09-30; el pase 11, el 2026-10-01.
+> **Pase 93 del 2026-10-04:** 🟢 **Ocho tendencias nuevas, numeradas 721–728** (el pase 92 cerro en 720). 🔴 **721: dos canales que sondean la MISMA lista de nombres no se validan entre si — el pase 92 declaro una cifra «confirmada por segunda mano» y la replica era circular, porque un sondeo de lista fija no puede discrepar de otro sondeo de la misma lista.** 🔴 **722: un conteo que sondea nombres esta acotado por la LISTA — el bucle del pase 92 gasto una consulta en `Ollama`, que no existe en Chamilo, y ninguna en `Claude`, que si: son 7 y publico 6.** 🔵 **723: el acierto de Moodle fue suerte del denominador** (sus 7 nombres reales caian dentro de la lista sondeada). 🟢 **724: «siete proveedores» y «siete empresas» son dos columnas, y la diferencia es una herencia de una linea.** 🔴 **725: el swap de proveedor no es propiedad de la plataforma sino del PAR (proveedor, tipo de servicio) — `document_process` lo implementa 1 de 7.** 🔴 **726: una capacidad configurada que no satisface su interfaz se pierde en SILENCIO** (`error_log` + `continue`, sin error en la interfaz). 🟢 **727: para sostener una ausencia en un arbol hay que ENUMERARLO, y un clon sin blobs lo hace en menos de un segundo — ILIAS pasa de *sostenido con limite* a ausencia CERRADA en cuatro refs.** 🔴 **728: el veredicto se seguia deduciendo de la FORMA DE UN NOMBRE, y este pase lo cometio dos veces en su propio instrumento** (el falso positivo de `ai` dentro de `Mail`/`MainMenu`/`ScormAicc`, que valia cinco entidades inventadas, y un centinela que colisiona con la ruta de la raiz del repo).
 > **Pase 91 del 2026-10-04:** 🟢 **Seis tendencias nuevas, numeradas 706–711** (el pase 90 cerró en 705). 🔴 **706: el pase que demostró que un conjunto de proveedores necesita REF publicó, en el mismo instrumento, SIETE veredictos de plataforma SIN REF** — el defecto que acababa de nombrar, una capa más abajo. 🔴 **707: puesto a prueba, el veredicto «Open edX no liga proveedor de modelo» es FALSO en las tres releases nombradas que un cliente corre y verdadero sólo en `master`.** 🔴 **708: y lo que trae es `openai==0.28.1`, SDK PRE-1.0, declarada DIRECTA en el core — tres respuestas distintas a «¿con qué SDK hablo?» según dónde caiga el cliente.** 🟢 **709: el defecto NO es universal — Canvas sobrevive en las 2 refs que resuelven, así que 1 de 2, y no se generaliza desde una muestra de dos.** 🔵 **710: un control de ref invariante al layout PASA exactamente cuando la ruta medida se rompió, así que «el control dio 200» no autoriza a leer un 404 como ausencia.** 🔵 **711: la matriz de proveedor por ref pasa de medición única a REPLICADA (6/6 exacto por un bucle distinto), que es la primera vez que una cifra de esta base se confirma por segunda mano.**
 > **Pase 92 del 2026-10-04:** 🟢 **Nueve tendencias nuevas, numeradas 712–720** (el pase 91 cerró en 711). 🔴 **712: la ligadura de proveedor de una plataforma puede vivir en un DIRECTORIO del núcleo, y entonces el manifiesto de runtime no da un veredicto negativo: da una lectura CIEGA — Chamilo trae 6 proveedores en el núcleo con `composer.json` en cero tokens, en la MISMA ref.** 🔴 **713: las dos contradicciones de la tabla del pase 90 tienen causas DISTINTAS —ref (Open edX) e instrumento (Chamilo)— y la de instrumento es peor, porque agregar refs no la encuentra.** 🟢 **714: con dos plataformas midiendo la misma forma, «¿puedo usar este proveedor?» se contesta con una VERSIÓN MÍNIMA y eso pasa de ser propiedad de Moodle a propiedad de la VERTICAL: Anthropic exige Moodle ≥ 5.3 o Chamilo ≥ 3.0.** 🔴 **715: hay un riesgo de migración que ninguna columna de licencia muestra — los 2 proveedores de Chamilo 1.11 viven en un plugin embarcado que da 404 desde v2.0.0, así que migrar CAMBIA el punto de integración.** 🟢 **716: la capa de autograding que esta base inventaría desde el pase 67 ya está en el NÚCLEO de Chamilo 2.0+, y esta KB la vendía sin tenerlo registrado.** 🔴 **717: en `raw.githubusercontent.com` un path de DIRECTORIO da 404 SIEMPRE, exista o no, así que «probé el directorio y no está» no es evidencia — y retira una clase entera de negativo de esta base.** 🟢 **718: canal nuevo después de cuatro pases de 403 — `WebFetch` sobre las páginas `tree/` de `github.com` LISTA directorios, con el límite medido de que trunca los listados largos.** 🔵 **719: vigesimoprimer barrido regional, y la saturación se MIDIÓ otra vez en vez de declararse: 22 de 24 tokens de hecho ya estaban en el árbol, y los 2 ausentes son horizontales —no de la vertical—.** 🟢 **720: la EJECUCIÓN volvió después de once pases NEGADOS, el árbol entero corre verde (41/41) y el linter de tablas da `total 0` sobre los ocho archivos de contenido — y lo primero que se gastó fue en REPLICAR la medición del propio pase, 8/8 refs exactas.** Ver los patrones **P273**–**P274** y [`compose/code/p273-platform-provider-dir/`](../compose/code/p273-platform-provider-dir/).
 > **Pase 90 del 2026-10-04:** 🟢 **Siete tendencias nuevas, numeradas 699–705** (el pase 89 cerró en 698). 🔴 **699: el eje de proveedor de esta base no tenía REF, y sin ref no significaba nada: los proveedores en el núcleo de Moodle van de 2 a 7 entre 4.5 y 5.3, así que «la plataforma soporta X» es verdadero o falso según la versión.** 🔵 **700: el «CERO `SWAPPABLE`» del pase 86 no era un hecho de la industria sino una cota de su denominador — midió 69 filas de AGENTE y la clase que no encontró vive en el NÚCLEO de la plataforma más instalada de la vertical.** 🔴 **701: la capa de plataforma de esta vertical es COPYLEFT en 8 de 8 lecturas de payload y CERO permisivas, así que el foco MIT/Apache del encargo no es elegible en esa capa: es una restricción de entrega.** 🔴 **702: un negativo sobre una ruta que codifica un NOMBRE mide el nombre — `bedrock` 404 / `awsbedrock` 200 — y la advertencia estaba escrita en este árbol desde el pase 19 y no viajó, que es la forma exacta de P266.** 🔴 **703: toda cifra de esta base anclada a `main` tiene fecha de vencimiento: el pase 19 fijó `main` = 5.3rc1 y hoy 5.3 SALIÓ y `main` es 6.0dev.** 🔴 **704: la prosa de release notes dató mal la entrada de un proveedor (dijo 5.1 para Ollama; medido, 5.0), así que una fuente secundaria no sustituye una lectura anclada a ref.** 🔵 **705: las cuatro regiones devolvieron CERO hechos ausentes y por primera vez eso se MIDIÓ en vez de declararse —10 de 11 tokens ya en el árbol—, y el único ausente es inverificable por cinco canales bloqueados.**
@@ -107,6 +108,110 @@ updated: 2026-10-04
 > (tendencia 29), se abre el **gap 20** y se registran dos advertencias de verificación: los agregadores de estrellas
 > están mal por ~2× y **un 403 de `curl` no es un 404**. Ver la nota de método del pase 12.
 > **Pase 11:** el Digital Omnibus es derecho vigente (tendencia 25), aparece la capa predictiva y está vacía (tendencia 26), y se corrige un error de método de diez pasadas sobre licencias permisivas (tendencia 27).
+
+## 🟢 Tendencias 721–728 — pase 93 del 2026-10-04
+
+### 🔴 721 — Dos canales que sondean la MISMA lista de nombres no se validan entre sí: comparten el punto ciego
+
+El pase 92 publicó *«Chamilo liga 6 proveedores en el núcleo»* y lo declaró **confirmado por segunda
+mano** porque su script reprodujo la cifra en las 8 refs. 🔴 **La réplica era circular:** el script y
+la medición manual sondeaban la misma lista —`OpenAi DeepSeek Gemini Mistral Grok Anthropic
+Ollama`— y `Claude` no estaba en ella. Enumerado el directorio hay **siete** clases `*Provider.php`.
+
+🔵 **Lo que esto le hace al estándar de réplica que el pase 91 fijó:** replicar **no** es correr el
+mismo criterio por un segundo transporte. Dos canales son independientes cuando pueden **discrepar**,
+y un sondeo de lista fija no puede discrepar de otro sondeo de la misma lista. **El estándar sube:
+una réplica vale si el segundo canal ENUMERA**, porque sólo entonces puede devolver algo que el
+primero no buscó.
+
+### 🔴 722 — Un conteo obtenido sondeando nombres está acotado por la lista, no por el repo
+
+El bucle del pase 92 gastó una consulta en `Ollama` —**que no existe en Chamilo**— y no gastó
+ninguna en `Claude`, que sí existe. 🔵 **El pase 92 tenía el patrón correcto y lo aplicó a medias:**
+su propio `P270` exigía que el nombre saliera del listado del árbol y no de una conjetura. Lo cumplió
+para **hallar** los nombres y lo rompió para **contarlos**, porque el bucle quedó escrito contra una
+lista fija. **Un conteo sólo es un conteo si enumera** (**P276**).
+
+### 🔵 723 — El acierto de la otra plataforma fue suerte del denominador, y eso también se mide
+
+Enumerado `public/ai/provider/` de Moodle en `MOODLE_503_STABLE`: **7** proveedores, y son
+exactamente los 7 que el pase 92 sondeó. 🔴 **El punto ciego existía en los dos barridos; sólo mordió
+donde un nombre real caía fuera de la lista.** Así que el acierto de Moodle **no valida el método**:
+mide que esa lista cubría ese repo. Tercera confirmación de la cifra de Moodle en esta base, y la
+primera por **enumeración** en vez de por sondeo.
+
+### 🟢 724 — «Siete proveedores» y «siete empresas» son dos columnas, y la diferencia es una herencia de una línea
+
+Medido en el payload de `v3.0.1`:
+`final class AnthropicProvider extends ClaudeProvider`, y sólo sobreescribe `getProviderKey()` →
+`'anthropic'` y la etiqueta. Las dos claves pegan a `api.anthropic.com/v1/messages`. 🔵 **Así que las
+cifras correctas son 7 CLAVES configurables y 6 VENDORS distintos**, y el `6` del pase 92 coincidía
+con el número de vendors **por casualidad**: no era un conteo de clases mal hecho que diera el
+vendor correcto, era un conteo acotado cuyo error compensaba exactamente el alias.
+
+🔴 **Para una propuesta:** *«Chamilo 3 soporta 7 opciones de proveedor»* es cierto; *«soporta 7
+modelos de 7 empresas»* es falso. El eje necesita las dos columnas y esta base publicaba una.
+
+### 🔴 725 — El «swap de proveedor» no es una propiedad de la plataforma: es una propiedad del PAR (proveedor, tipo de servicio)
+
+Leídas las interfaces que declara cada clase contra el mapa `$typeInterface` del factory, la
+superficie **no es uniforme**: `openai` llega a **5/5** tipos registrables; `grok` y `gemini` a 4/5;
+`deepseek`, `mistral`, `claude` y `anthropic` a **2/5** (sólo texto y documento).
+
+🔴 **La consecuencia cuesta dinero y ninguna columna de licencia la muestra:** *«Chamilo es
+intercambiable de proveedor»* es verdadero en **text** y **document** (7 de 7), se cae a **3 de 7**
+en imagen y video, y a **1 de 7** en `document_process` — **sólo OpenAI**. Un cliente que compró
+*«cambiamos cuando quieras»* y usa procesamiento de documentos **no tiene a dónde cambiar**
+(**P277**).
+
+### 🔴 726 — Una capacidad configurada que no satisface su interfaz se pierde en SILENCIO
+
+Tres hechos del mismo factory, y los tres son de operación, no de catálogo:
+
+1. **El default no se elige: lo decide el ORDEN del JSON.**
+   `$this->defaultProvider = array_key_first($config) ?? 'openai'`.
+2. **Un tipo sólo se habilita si está explícitamente presente** en la config de ese proveedor
+   (`if (!\array_key_exists($type, $providerConfig)) continue;`).
+3. 🔴 **Y si la clase no satisface la interfaz del tipo, el factory lo descarta con `error_log` y
+   SIGUE.** No hay error en la interfaz de administración: la capacidad simplemente no aparece.
+
+🔵 **Es una clase de defecto que no se diagnostica desde la KB ni desde la licencia: se diagnostica
+leyendo el log.** Y para una entrega significa que *«lo configuramos»* y *«quedó registrado»* son
+dos afirmaciones distintas.
+
+### 🟢 727 — Para sostener una ausencia en un árbol hay que ENUMERARLO, y un clon sin blobs lo hace en menos de un segundo
+
+El pase 92 declaró su propia cota: `WebFetch` sobre las páginas `tree/` **trunca** los listados
+largos, y por eso ILIAS quedó medido en **A–L** con veredicto *sostenido con límite*.
+
+🟢 **`git clone --filter=blob:none --no-checkout --depth 1` + `git ls-tree -d -r` enumera el árbol
+completo: sin truncar, sin paginar y sin `api.github.com` —que esta base registra en 403 desde el
+pase 89—.** Sobre ILIAS el clon tarda **< 1 s**; sobre Moodle enumera **10.923** directorios.
+
+🟢 **Resultado: ILIAS pasa de *sostenido con límite* a AUSENCIA CERRADA en las cuatro refs**
+(`release_9` 180, `release_10` 193, `release_11` 180, `trunk` 176 componentes; cero de AI en todas),
+y las filas de `frappe/erpnext`, `frappe/education` y `openeducat_erp` pasan de *sostenidas por
+manifiesto* a **sostenidas por árbol completo**. 🔵 **Y le pone instrumento al hueco que `P274` dejó
+abierto:** ese patrón retiró una clase de negativo sin reemplazo y dejó la ausencia incognoscible en
+este árbol (**P275**).
+
+### 🔴 728 — El veredicto se seguía deduciendo de la FORMA DE UN NOMBRE, y este pase lo cometió dos veces en su propio instrumento
+
+Los dos defectos se encontraron y corrigieron antes de publicar, y tienen la **misma forma**:
+
+1. **Falso positivo de subcadena, y valía cinco entidades inventadas.** Buscar `ai` como subcadena en
+   los 180 componentes de ILIAS devuelve `Mail`, `MainMenu`, `Container`, `ContainerReference` y
+   `ScormAicc`. ⚠️ Con su distinción medida: `Chatroom` y `OnScreenChat` entran por `chat`, no por
+   `ai` — dos efectos distintos, separados en la suite.
+2. **Un centinela que colisiona con un valor real de dato.** La bandera de *encontrado* era la cadena
+   del layout, y la ruta de la **raíz** del repo es la cadena **vacía**: `openeducat_erp` salía
+   `NO-CLAIM` **con sus 15 módulos ya contados**. Misma clase que `P250`.
+
+🔵 **Y `P278` es la versión de alto nivel del mismo error, pero del lado del dato y no del
+instrumento:** `components/ILIAS/` da 180 en `release_11` y **CERO** en `release_9`, donde los
+componentes viven en `Modules/` + `Services/`. **La ruta que los contiene es propiedad de la (repo,
+ref)**, así que un cero sobre una ruta inexistente mide la **ruta**. Es `P270` subido una capa: de
+negativos sobre un **nombre** a negativos sobre un **layout**.
 
 ## 🟢 Tendencias 712–720 — pase 92 del 2026-10-04
 

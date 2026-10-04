@@ -1,0 +1,14 @@
+== C1: compuerta de ref inventada ==
+ILIAS: ref falsa RECHAZADA (canal discrimina)
+== ILIAS, las cuatro refs, con compuerta de layout (C2) ==
+ILIAS-eLearning/ILIAS	release_9	Modules Services	SIN-AI-EN-NUCLEO	componentes=180	arbol=3597
+ILIAS-eLearning/ILIAS	release_10	components/ILIAS	SIN-AI-EN-NUCLEO	componentes=193	arbol=4112
+ILIAS-eLearning/ILIAS	release_11	components/ILIAS	SIN-AI-EN-NUCLEO	componentes=180	arbol=4266
+ILIAS-eLearning/ILIAS	trunk	components/ILIAS	SIN-AI-EN-NUCLEO	componentes=176	arbol=4369
+== C3: control POSITIVO sobre Moodle (deben salir los 7 proveedores) ==
+proveedores: 7
+anthropic awsbedrock azureai deepseek gemini ollama openai 
+== Resto de la capa de plataforma, arbol completo ==
+frappe/erpnext	develop	erpnext	SIN-AI-EN-NUCLEO	componentes=39	arbol=1427
+frappe/education	develop	education	SIN-AI-EN-NUCLEO	componentes=11	arbol=159
+openeducat/openeducat_erp	18.0	<raiz>	SIN-AI-EN-NUCLEO	componentes=15	arbol=173

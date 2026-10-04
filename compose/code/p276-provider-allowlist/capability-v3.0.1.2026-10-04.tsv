@@ -1,0 +1,8 @@
+clase	extends	tipos_registrables	n	interfaces_sin_tipo
+OpenAiProvider	-	text,image,video,document,document_process	5	AiSearchMediaTextProviderInterface
+DeepSeekProvider	-	text,document	2	-
+GrokProvider	-	text,image,video,document	4	-
+MistralProvider	-	text,document	2	-
+GeminiProvider	-	text,image,video,document	4	-
+ClaudeProvider	-	text,document	2	-
+AnthropicProvider	ClaudeProvider	text,document	2	-

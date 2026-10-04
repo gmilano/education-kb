@@ -8,6 +8,7 @@ updated: 2026-10-04
 
 > Agentes y herramientas AI open source para educación. Foco: MIT / Apache 2.0 / BSD.
 > Verificado repo por repo vía WebFetch el 2026-09-30 (stars y licencia leídos de la página del repo).
+> **Pase 93 del 2026-10-04:** 🔴 **La tabla se queda en 94 filas: CERO altas, QUINTO pase consecutivo, y se declara en vez de rellenar.** El barrido global devolvio por **OCTAVA** vez el eje generalista —y con las seis cifras de estrellas **identicas digito a digito** a las del pase 92, que es informacion sobre el CANAL (respuesta cacheada) y no sobre la industria. 🔴 **El aporte del pase es que una cifra que esta base publico en los ocho archivos estaba MAL y su validacion era circular: el pase 92 conto **6** proveedores en el nucleo de Chamilo `v3.0.x` sondeando la lista `OpenAi DeepSeek Gemini Mistral Grok Anthropic Ollama`, y `ClaudeProvider.php` no estaba en ella —mientras `Ollama`, que no existe en Chamilo, si. Son **7**.** 🔵 **Y su «replica por segunda mano» compartia el punto ciego: dos canales que sondean la MISMA lista no se validan entre si, porque no pueden discrepar** (**P276**). 🟢 **Matriz correcta: `0,0,5,5,7,7,7,7`.** 🔵 **7 CLAVES no son 7 EMPRESAS:** `AnthropicProvider extends ClaudeProvider` y las dos pegan a `api.anthropic.com` — **7 claves, 6 vendors**. 🔴 **Y la pregunta «¿que proveedor puedo usar?» pasa a tener respuesta POR TIPO DE SERVICIO: el swap es libre en texto y documento (7/7), cae a **3/7** en imagen y video y a **1/7** en `document_process` — solo OpenAI** (**P277**). 🟢 **Cerrado el LIMITE que el pase 92 declaro sobre si mismo: un clon sin blobs enumera el arbol completo en < 1 s, y las cuatro refs de ILIAS dan CERO componentes de AI** (**P275**); 🔴 **`P278`: la ruta que los contiene es propiedad de la (repo, ref) —`components/ILIAS/` da 180 en `release_11` y CERO en `release_9`, donde viven en `Modules/`+`Services/`.** 🟢 **43/43 suites verdes (41 py + 2 sh) y el linter de tablas da `total 0` sobre los ocho archivos.** Instrumentos: [`compose/code/p275-tree-enumeration/`](../compose/code/p275-tree-enumeration/) y [`compose/code/p276-provider-allowlist/`](../compose/code/p276-provider-allowlist/). Ver tendencias **721**–**728**.
 > **Pase 92 del 2026-10-04:** 🔴 **La tabla principal se queda en 94 filas: CERO altas, CUARTO pase consecutivo, y se declara en vez de rellenar.** El barrido global obligatorio (`top open source AI agents education 2026 github MIT`) devolvió por **SÉPTIMA** vez consecutiva el eje generalista —`openclaw` (385.407 ★), `dify` (151.639 ★), `browser-use` (108.128 ★), `Mem0` (62.735 ★), `AutoGen` (60.284 ★), `Flowise` (55.226 ★)—: marcos **horizontales** que pertenecen a la KB de `technology`, no a esta vertical. 🟢 **El aporte del pase a ESTA tabla no es una fila: es que la pregunta «¿qué proveedor puedo usar?» deja de ser una propiedad del AGENTE y pasa a ser también una de la PLATAFORMA que lo hospeda, con versión mínima.** Cerrada la **ACCIÓN** que el pase 91 dejó abierta (*«las otras cinco filas siguen sin ref»*), las **7** filas de veredicto de plataforma del pase 90 están medidas: **2 CONTRADICHAS, 5 SOSTENIDAS**. 🔴 **Y la segunda contradicción es de otra clase que la primera: Chamilo liga SEIS proveedores en el núcleo y su `composer.json` no nombra NINGUNO —en la MISMA ref—, así que el veredicto no falló por falta de ref sino porque el manifiesto es un instrumento CIEGO a un directorio de proveedores** (**P273**). 🟢 **Regla de entrega nueva, y es la segunda plataforma de la vertical que la recibe: Anthropic en el núcleo exige Moodle ≥ 5.3 y Chamilo ≥ 3.0; Mistral y Grok no están en el núcleo de Moodle a ninguna versión y sí en Chamilo ≥ 2.0.** 🔴 **Riesgo de migración que ninguna columna de licencia muestra: en Chamilo `1.11.x` los dos proveedores viven en `plugin/ai_helper/`, que da 404 desde `v2.0.0` — migrar no actualiza la integración, le cambia el punto de integración.** 🟢 **Y la capa de AUTOGRADING que este archivo inventaría desde el pase 67 ya está en el núcleo de Chamilo 2.0+** (`AiTaskGraderService`, `AiTutorChatService`), que es un hecho que esta base vendía sin tener registrado. 🔵 **Canal nuevo: `WebFetch` sobre las páginas de árbol de `github.com` LISTA directorios** —cuatro pases registraban 403 por `curl -sI` y `api.github.com`— **y con su límite medido: trunca los listados largos.** 🔴 **`P274` retira una clase entera de negativo de esta base: un path de DIRECTORIO da 404 en este canal SIEMPRE** (`public/ai` de Moodle: 404, y existe). 🟢 **Y la ejecución VOLVIÓ después de once pases: el árbol corrió entero —41/41 suites verdes (39 py + 2 sh)— el linter de integridad de tablas da `total 0` sobre los ocho archivos de contenido, y el instrumento de este pase quedó REPLICADO (8/8 refs exactas por un segundo canal).** Instrumento: [`compose/code/p273-platform-provider-dir/`](../compose/code/p273-platform-provider-dir/). Ver tendencias **712**–**719**.
 > **Pase 91 del 2026-10-04:** 🔴 **La tabla principal se queda en 94 filas: CERO altas, TERCER pase consecutivo, y se declara en vez de rellenar.** El barrido global obligatorio (`top open source AI agents education 2026 github MIT`) devolvió por **SEXTA** vez el eje generalista (`openclaw` 385 k ★, `browser-use`, `Mem0`, `AutoGen`, `Flowise`, `dify`): marcos **horizontales** que pertenecen a la KB de `technology`, no a la vertical. 🟢 **El aporte del pase a ESTA tabla es que la matriz de proveedor por ref dejó de ser una medición única: se REPLICÓ.** Medida de nuevo a mano, por un bucle `curl` distinto del pase 90, las **6 de 6** refs del núcleo de Moodle coinciden EXACTO —mismo `$release`, mismo layout, mismo conjunto— **2** (4.5.15) → **3** (5.0.11) → **4** (5.1.8) → **6** (5.2.4) → **7** (5.3 y `main`=6.0dev). Datos: [`compose/code/p272-platform-ref-verdict/moodle-replication.2026-10-04.tsv`](../compose/code/p272-platform-ref-verdict/moodle-replication.2026-10-04.tsv). 🔴 **Y el hallazgo del pase es contra el pase 90 mismo: en el mismo instrumento en que demostró que un conjunto de proveedores es propiedad del par (repo, ref), publicó SIETE veredictos de plataforma SIN REF.** Puestas a prueba dos de las siete, **Open edX CONTRADICE su veredicto**: `openai==0.28.1` está declarada **directa** (`via kernel.in`) en `quince`, `redwood` y `sumac`, y sólo falta en `master` — la rama que ningún cliente corre (**P272**). 🟢 **Canvas sobrevive** en las 2 refs que resuelven: el defecto es real pero **no universal, 1 de 2**. ⚠️ **Las suites de este árbol NO se corrieron: ejecución NEGADA (`[Code from External]`)**, como en los pases 58, 67, 79, 80, 81, 84, 86, 89 y 90 — la columna «Hoy» del README no se afirma como medida. 🔵 **Canal recalibrado de primera mano:** 🟢 `raw.githubusercontent.com` **DISCRIMINA** y además es **DETERMINISTA** (30/30 en 5 repeticiones × 6 pares); 🔴 `curl -sI github.com` y `api.github.com` dan **403 a la buena Y a la inexistente** — cuarto pase consecutivo midiendo que el canal que el encargo ordena no puede opinar. Ver tendencias **706**–**711**.
 > **Pase 90 del 2026-10-04:** 🔴 **La tabla principal se queda en 94 filas: CERO altas, segundo pase consecutivo, y se declara en vez de rellenar.** El barrido global obligatorio devolvió por QUINTA vez el eje generalista (`openclaw`, `CrewAI`, `OpenHands`, `LangChain`, `AutoGPT`) — marcos horizontales que pertenecen a la KB de `technology` y no a la vertical. 🔴 **El aporte del pase a ESTA tabla es una cota sobre una columna, y es de la clase de `P268`: la columna de proveedor de esta base no tiene REF, y sin ref no significa nada.** Medido rama por rama sobre el núcleo de Moodle por el canal calibrado: los proveedores en núcleo pasan de **2** (4.5.15) a **3** (5.0.11) a **4** (5.1.8) a **6** (5.2.4) a **7** (5.3 y `main`=6.0dev) — así que «Moodle soporta Ollama / Gemini / Anthropic» es verdadero o falso **según la versión**, y esta tabla nunca lo dijo. Instrumento: [`compose/code/p269-provider-release-matrix/`](../compose/code/p269-provider-release-matrix/) (**P269**). 🔴 **Y este pase repitió, él mismo, una trampa que esta base ya tenía escrita desde el pase 19: probó `ai/provider/bedrock` → 404 y lo iba a leer como ausencia; el nombre real es `awsbedrock` → 200.** Cuatro nombres más (`googleai`, `mistral`, `openrouter`, `vertexai`) dieron 404 y **no** se publican como ausencia, porque un 404 sobre un nombre CONJETURADO mide el nombre (**P270**). 🔵 **La lección de método es la de `P266` otra vez: la advertencia estaba en el árbol y no viajó.** ⚠️ **Las suites de este árbol NO se corrieron: ejecución NEGADA (`[Code from External]`), como en los pases 58, 67, 79, 80, 81, 84 y 86 — la columna «Hoy» del README no se afirma como medida en este pase.** 🔵 **Canal calibrado hoy:** 🟢 `raw.githubusercontent.com` **200/404 → DISCRIMINA**; 🔴 `github.com` por `curl -sI` y `api.github.com` dan **403 a la buena Y a la inexistente**, así que el `curl -sI` que el encargo ordena sigue siendo, medido, el canal que no puede opinar. Ver tendencias **699**–**705**.
@@ -259,6 +260,101 @@ updated: 2026-10-04
 > fila** —`lineage-skill`, con un vocabulario cerrado de 9 valores por afirmación, **4 de los 9 «esto lo produjo el
 > modelo»**— y **ninguna de las dos sabe de la otra**. Ver la capa nueva al final de este archivo, las tendencias
 > **180**–**182** y el patrón **P99**.
+
+## 🧾 Altas de agente: 0 — QUINTO pase consecutivo, y el aporte es que una cifra de esta tabla estaba acotada por su lista de nombres (pase 93 del 2026-10-04)
+
+### 🔴 Se declara qué se buscó, en vez de rellenar
+
+🔴 **La tabla principal se queda en 94 filas.** El barrido global obligatorio
+(`top open source AI agents education 2026 github MIT`, año **CALCULADO** `date -u +%Y` → 2026)
+devolvió por **OCTAVA** vez consecutiva el eje generalista, **y con las seis cifras de estrellas
+idénticas dígito a dígito a las del pase 92**: `openclaw` (385.407 ★), `dify` (151.639 ★),
+`browser-use` (108.128 ★), `Mem0` (62.735 ★), `AutoGen` (60.284 ★), `Flowise` (55.226 ★).
+
+🔵 **Que repitan exactas no es confirmación: es información sobre el CANAL.** El barrido está
+sirviendo una respuesta cacheada, así que su valor marginal para esta vertical es cero y conviene
+decirlo en vez de volver a listarlas como novedad. Son marcos **horizontales** y pertenecen a la KB
+de `technology`.
+
+🔴 **`github trending education AI 2026` volvió vacío de edtech por vigesimosegunda vez**: devolvió
+`rohitg00/ai-engineering-from-scratch`, *Neural Networks: Zero to Hero* y
+`speedyapply/2026-AI-College-Jobs` — contenido **sobre** AI y una bolsa de trabajo, no agentes
+**para** educación. La causa sigue medida: el canal no discrimina la preposición.
+
+### 🔴 El aporte del pase a ESTA tabla: el eje de proveedor tenía una cifra mal, y su validación era circular
+
+El pase 92 publicó que Chamilo liga **6** proveedores en el núcleo de `v3.0.x`, y lo declaró
+*confirmado por segunda mano* porque su script reprodujo la cifra en las 8 refs.
+
+🔴 **Son 7.** El script y la medición manual sondeaban la **misma** lista de nombres candidatos
+—`OpenAi DeepSeek Gemini Mistral Grok Anthropic Ollama`— y `ClaudeProvider.php` **no estaba en
+ella**, mientras `Ollama` —que no existe en Chamilo— sí. Las dos coincidieron porque **compartían el
+punto ciego**, no porque la cifra fuera correcta (**P276**).
+
+🔵 **Lo que esto le hace al estándar de réplica que el pase 91 fijó para esta base:** replicar **no**
+es correr el mismo criterio por un segundo transporte. **Dos canales son independientes cuando pueden
+DISCREPAR**, y un sondeo de lista fija no puede discrepar de otro sondeo de la misma lista. El
+estándar sube: una réplica vale si el segundo canal **ENUMERA**.
+
+🟢 **La matriz correcta, leída de la allowlist que el factory aplica en runtime: `0,0,5,5,7,7,7,7`**
+(el pase 92 publicó `0,0,5,5,6,6,6,6`).
+
+⚠️ **Y el acierto de Moodle fue suerte del denominador:** enumerado `public/ai/provider/` en
+`MOODLE_503_STABLE` da **7** y son exactamente los 7 que el pase 92 sondeó. El punto ciego existía en
+los dos barridos; sólo mordió donde un nombre real caía fuera de la lista.
+
+### 🔴 Y la pregunta de esta tabla cambia: «¿qué proveedor puedo usar?» tiene respuesta POR TIPO DE SERVICIO
+
+El pase 92 movió la pregunta del AGENTE a la PLATAFORMA. Este pase la mueve una vez más: la respuesta
+no es un conjunto de proveedores sino un **par (proveedor, tipo de servicio)**. Medido en
+`chamilo/chamilo-lms@v3.0.1`:
+
+| clave | clase | tipos de servicio registrables | n |
+|---|---|---|---|
+| `openai` | `OpenAiProvider` | text, image, video, document, **document_process** | **5 / 5** |
+| `grok` | `GrokProvider` | text, image, video, document | 4 / 5 |
+| `gemini` | `GeminiProvider` | text, image, video, document | 4 / 5 |
+| `deepseek` | `DeepSeekProvider` | text, document | 2 / 5 |
+| `mistral` | `MistralProvider` | text, document | 2 / 5 |
+| `claude` | `ClaudeProvider` | text, document | 2 / 5 |
+| `anthropic` | `AnthropicProvider` (hereda de `ClaudeProvider`) | text, document | 2 / 5 |
+
+🔴 **Así que «la plataforma es intercambiable de proveedor» es verdadera en texto y documento (7 de
+7), se cae a 3 de 7 en imagen y video, y a 1 de 7 en procesamiento de documentos — sólo OpenAI**
+(**P277**). 🔵 **Y 7 CLAVES no son 7 EMPRESAS:** `final class AnthropicProvider extends
+ClaudeProvider` sólo cambia la clave y la etiqueta, y las dos pegan a
+`api.anthropic.com/v1/messages` — **7 claves, 6 vendors**.
+
+### 🟢 Dos piezas de esta tabla ganan una columna que no tenían, y es de ENTREGA
+
+🔵 **De las 7 claves del núcleo de Chamilo, ninguna es autoalojable.** De las 7 de Moodle, **`ollama`
+sí** (en núcleo desde **5.0**). Para las filas de esta tabla que se despliegan sobre un LMS con
+requisito de soberanía, **la elección de plataforma precede a la de modelo**.
+
+### 🟢 El límite que el pase 92 declaró sobre sí mismo queda CERRADO
+
+El pase 92 midió ILIAS en el tramo **A–L** porque su canal truncaba los listados largos. 🟢 **Un clon
+`--filter=blob:none --no-checkout --depth 1` + `git ls-tree -d -r` enumera el árbol completo en < 1 s
+(`P275`): las cuatro refs de ILIAS dan CERO componentes de AI en el núcleo** (`release_9` 180,
+`release_10` 193, `release_11` 180, `trunk` 176), y el tramo **M–Z** está listado y vacío de AI.
+🔴 **`P278`: `components/ILIAS/` da 180 en `release_11` y CERO en `release_9`, donde viven en
+`Modules/` + `Services/` — la ruta que los contiene es propiedad de la (repo, ref), no del repo.**
+
+### 🟢 Suites y canales
+
+🟢 **43/43 verdes (41 py + 2 sh)**, dos suites más que el pase 92. 🟢 **Linter de integridad de tablas:
+`total 0` sobre los ocho archivos de contenido** — cero encabezados compilados como dato.
+
+🔴 **Y dos defectos que este pase cometió en su propio instrumento y corrigió antes de publicar:** el
+falso positivo de subcadena (`ai` dentro de `Mail`, `MainMenu`, `Container`, `ContainerReference`,
+`ScormAicc` → **cinco componentes de AI inventados en ILIAS**) y un centinela que colisiona con un
+valor real (la ruta de la **raíz** del repo es la cadena **vacía**, y `openeducat_erp` salía
+`NO-CLAIM` con sus 15 módulos ya contados). Los dos deducían el veredicto de la **forma de un
+nombre** en vez de de una medición.
+
+Instrumentos: [`compose/code/p275-tree-enumeration/`](../compose/code/p275-tree-enumeration/) y
+[`compose/code/p276-provider-allowlist/`](../compose/code/p276-provider-allowlist/).
+Ver tendencias **721**–**728** y los patrones **P275**–**P278**.
 
 ## 🟢 Altas de agente: 1, y es de EMEA — la primera pieza de esta base cuyo PROVEEDOR es una elección de configuración, que es justo lo que el pase 86 midió y no encontró (pase 87 del 2026-10-04)
 

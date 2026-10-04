@@ -8,6 +8,7 @@ updated: 2026-10-04
 
 > Recetas concretas: repos nombrados, licencias verificadas, wiring explícito y estimación.
 > Todos los repos citados fueron verificados vía WebFetch el 2026-09-30; los del pase 11, el 2026-10-01 (ver `agents/top.md`).
+> **Pase 93 del 2026-10-04:** 🆕 **Los patrones nuevos son **P275**, **P276**, **P277** y **P278**, y los cuatro salen de medicion de este pase.** **P275**: para sostener una ausencia en un arbol hay que ENUMERARLO — un canal que trunca sirve para HALLAR, y un clon `--filter=blob:none --no-checkout --depth 1` enumera completo en < 1 s, lo que **reemplaza el instrumento que `P274` retiro sin dejar sustituto**. **P276**: un conteo obtenido sondeando NOMBRES esta acotado por la lista, no por el repo — **dos canales que sondean la misma lista comparten su punto ciego y no se validan entre si**, asi que el estandar de replica del pase 91 sube: vale si el segundo canal ENUMERA. **P277**: el conjunto de proveedores y el de CAPACIDADES por proveedor son dos mediciones distintas — el swap es gratis solo en los tipos que las dos clases implementan, y hay que resolver **dos** aristas de herencia (de clase y de interfaz) o el veredicto sale al reves. **P278**: la ruta que contiene los componentes es propiedad de la (repo, ref), asi que un cero sobre una ruta inexistente mide la RUTA. 🆕 **Y la receta `R-CAPACIDAD`**: compuerta de pre-venta para *«cambiamos de proveedor cuando quieras»*, que entrega una frase con numero — 7 claves / 6 empresas para chat y documentos, 3 para imagen y video, **1 para procesamiento de documentos** — y dice **cual clausula no se puede firmar**. **1–2 semanas** por plataforma y ref.
 > **Pase 91 del 2026-10-04:** 🆕 **El patrón nuevo es **P272**, y sale de auditar al pase anterior con su propia regla.** **P272**: un veredicto publicado para una plataforma **sin REF no es un veredicto** — y el pase que demostró eso para el eje de proveedor (`P269`) publicó, en el mismo instrumento, **siete** veredictos de plataforma sin ref. Puestas a prueba dos: `openedx/edx-platform` **CONTRADICE** el suyo (`openai==0.28.1` declarada **directa** en `quince`, `redwood` y `sumac`; ausente sólo en `master`) y `canvas-lms` lo **sostiene** — **1 de 2**, y no se generaliza. 🔵 **Y el corolario de control que lo acompaña: un control de ref invariante al layout PASA justo cuando la ruta medida se rompió** (`MOODLE_501_STABLE`: `README.md` 200, `version.php` 404, `public/version.php` 200), así que «el control dio 200» no autoriza a leer un 404 como ausencia. 🟢 **Y la receta nueva es `R-SDK-POR-REF`: la compuerta que, antes de cotizar una integración sobre un LMS, dice con qué SDK y qué major se va a hablar — porque hoy esa pregunta tiene tres respuestas distintas en el mismo repo.**
 > **Pase 92 del 2026-10-04:** 🆕 **Los patrones nuevos son **P273** y **P274**, y los dos salen de cerrar la ACCIÓN que el pase 91 dejó abierta.** **P273**: un veredicto «SIN-PROVEEDOR» leído en un **manifiesto de runtime** no es un veredicto negativo si la plataforma puede ligar proveedores en un **directorio del núcleo** — es la lectura de un instrumento **ciego** a esa forma. Medido: `chamilo/chamilo-lms` da **cero** tokens en `composer.json` en las **ocho** refs y trae **6** proveedores en `src/CoreBundle/AiProvider/`, **en la misma ref**. Con eso las 7 filas del pase 90 quedan medidas: **2 CONTRADICHAS, 5 SOSTENIDAS** — y las dos contradicciones tienen causas distintas, **ref** (Open edX) e **instrumento** (Chamilo), siendo la segunda peor porque agregar refs no la encuentra. 🔴 **P274**: en `raw.githubusercontent.com` un path de **DIRECTORIO** da **404 SIEMPRE**, exista o no (`public/ai` de Moodle: 404, y existe), así que un sondeo de directorio **no puede sostener una ausencia** — retira una clase entera de negativo de esta base. 🟢 **Y la receta nueva es `R-VERSION-PLATAFORMA`: la auditoría de versión que va ANTES de cotizar una integración de AI sobre un LMS instalado, porque el mismo repo da tres respuestas distintas a «¿qué proveedor tengo sin código de terceros?» según la versión — y porque migrar puede MOVER el punto de integración.**
 > **Pase 90 del 2026-10-04:** 🆕 **Los patrones nuevos son **P269**, **P270** y **P271**, y los tres salen de medición de este pase.** **P269** le pone **REF** al eje de proveedor: un conjunto de subplugins es propiedad del par (repo, ref), y medido así los proveedores en el núcleo de Moodle van de **2** (4.5.15) a **7** (5.3) — así que «la plataforma soporta X» es verdadero o falso según la versión. **P270** prohíbe publicar como ausencia un negativo sobre una ruta que codifica un NOMBRE: `ai/provider/bedrock` da 404 y `ai/provider/awsbedrock` da 200, y esta base ya tenía la trampa escrita desde el pase 19 sin que viajara. **P271** es la versión por CAPA de `P228`: una afirmación sobre la capa A no puede citar una medición cuyo denominador es la capa B — el pase 86 escribió «las plataformas no ligan proveedor» citando `P257`, cuyo denominador son 69 filas de agente y cero plataformas. 🟢 **Y la receta nueva es `R-VERSION-PROVEEDOR`: la compuerta de pre-venta que convierte «¿pueden poner Anthropic en nuestro Moodle?» en una versión mínima, un plan de salto y una familia de licencia, antes de cotizar.**
@@ -117,6 +118,146 @@ updated: 2026-10-04
 > no existe en open source permisivo).
 > **Pase 11:** +2 patrones — **P25** (riesgo de abandono conforme al Anexo III, la capa con presupuesto ya asignado y sin oferta open source) y **P26** (agente docente sobre la ontología curricular nacional ya publicada).
 > **Pase 27:** **+4 patrones y una corrección.** 🔴 **P51 queda con premisa falsa** —el conector MCP de Moodle **sí existe y es MIT**— y lo reemplazan **P54** (corrección y devolución sobre Moodle con **compuerta humana**, el último tramo del gap 6, con piezas que ya escriben), **P55** (el conector de **Open edX**, que es el único que de verdad no existe), **P56** (**SCORM** como formato de salida de la capa generativa: cero integración, offline) y **P57** (evidencia por MCP cotizada sobre lo que CaSS **realmente** expone — 6 de 61 operaciones, con insignias y autoría de marcos **fuera**).
+
+## 🧩 P275–P278 y la receta `R-CAPACIDAD`: un conteo sólo es un conteo si ENUMERA (pase 93 del 2026-10-04)
+
+### 🆕 `P275` — para sostener una ausencia en un árbol hay que enumerarlo
+
+**Enunciado:** *un canal que TRUNCA sirve para HALLAR. Un negativo suyo sólo vale con el tramo
+declarado. Para publicar una ausencia cerrada hay que enumerar el árbol completo.*
+
+**De dónde sale:** el pase 92 abrió `WebFetch` sobre las páginas `tree/` de `github.com` y midió su
+cota en el mismo pase —trunca los listados largos—, por lo que ILIAS quedó medido en el tramo
+**A–L** (cortó en `LegalDocuments`) y su veredicto se publicó *sostenido con límite*.
+
+**Instrumento:**
+
+```sh
+git clone --filter=blob:none --no-checkout --depth 1 -b "$REF" "https://github.com/$REPO" "$DIR"
+git -C "$DIR" ls-tree -d --name-only -r HEAD
+```
+
+🟢 Baja commit y árboles **sin ningún blob**. Sobre ILIAS tarda **< 1 s**; sobre Moodle enumera
+**10.923** directorios de una vez. No toca `api.github.com`, que esta base registra en **403** desde
+el pase 89.
+
+🔵 **Y cierra el hueco que `P274` dejó abierto.** El pase 92 demostró que en el canal `raw` un path
+de **directorio** da 404 **siempre**, y retiró esa clase de negativo **sin reemplazo**: la ausencia
+quedó incognoscible en este árbol. `P275` es el reemplazo.
+
+**Cota declarada:** `--depth 1` mide **una ref por clon** (el costo crece con las refs, no con el
+tamaño del repo), y mide el árbol **publicado en esa ref**: nada dice de plugins de terceros.
+
+### 🆕 `P276` — un conteo obtenido sondeando NOMBRES está acotado por la lista, no por el repo
+
+**Enunciado:** *un conteo que sondea una lista de nombres candidatos mide la LISTA. Dos canales que
+sondean la misma lista no se validan entre sí: comparten el punto ciego. Un conteo sólo es un conteo
+si ENUMERA.*
+
+**De dónde sale:** el pase 92 publicó **6** proveedores en el núcleo de Chamilo `v3.0.x` y lo declaró
+*confirmado por segunda mano* porque su script reprodujo la cifra en las 8 refs. Su lista era
+`OpenAi DeepSeek Gemini Mistral Grok Anthropic Ollama`: gastó una consulta en `Ollama` —que no existe
+en Chamilo— y **ninguna en `Claude`**, que sí existe. Son **7**.
+
+🔴 **Consecuencia sobre el estándar de réplica del pase 91:** replicar no es correr el mismo criterio
+por un segundo transporte. **Dos canales son independientes cuando pueden DISCREPAR**, y un sondeo de
+lista fija no puede discrepar de otro sondeo de la misma lista.
+
+**Regla operativa:** un conteo de piezas en un árbol se publica **sólo** si salió de una enumeración
+(`P275`). Si salió de un sondeo, se publica como **cota inferior** y se dice contra qué lista.
+
+### 🆕 `P277` — el conjunto de proveedores y el de CAPACIDADES son dos mediciones distintas
+
+**Enunciado:** *«la plataforma soporta el proveedor X» está incompleto. El swap es gratis sólo en los
+tipos de servicio que las dos clases implementan; en los demás el swap es un desarrollo.*
+
+**Medido** en `chamilo/chamilo-lms@v3.0.1`, leyendo las interfaces de cada clase contra el mapa
+`$typeInterface` del factory: `openai` **5/5**, `grok` y `gemini` **4/5**, y `deepseek`, `mistral`,
+`claude`, `anthropic` **2/5** (sólo `text` y `document`).
+
+🔴 **`document_process` lo implementa 1 de 7.** Y dos aristas de herencia que, sin resolver, dan el
+veredicto al revés:
+
+- **De CLASE:** `AnthropicProvider` no declara `implements` propio → sin resolver `extends` saldría
+  «cero capacidades».
+- **De INTERFAZ:** **ningún** proveedor declara `AiVideoProviderInterface`, que es la que el factory
+  exige para `video`; los tres que hacen video declaran `AiVideoJobProviderInterface`, que la
+  **extiende** → comparando nombres literalmente saldría «cero video» teniendo tres.
+
+⚠️ **Y una interfaz declarada no es un tipo registrable:** `OpenAiProvider` declara **6** interfaces y
+llega a **5** tipos (`AiSearchMediaTextProviderInterface` no está en el mapa del factory).
+
+### 🆕 `P278` — la ruta que contiene los componentes es propiedad de la (repo, ref)
+
+**Enunciado:** *un conteo de CERO sobre una ruta que no existe en esa ref mide la RUTA, no el
+contenido.*
+
+**Medido:** `components/ILIAS/` da **180** directorios en `release_11` y **CERO** en `release_9`,
+donde el mismo árbol los tiene en `Modules/` (54) + `Services/` (126) = **180**. El layout se movió en
+la 10.
+
+🔵 Es `P270` subido una capa: ese patrón decía que un negativo sobre una ruta que codifica un
+**nombre** mide el nombre; éste dice lo mismo del **layout**. Por eso un barrido de árbol se escribe
+como **compuerta** —recibe las rutas candidatas, elige la poblada, y devuelve `NO-CLAIM` si ninguna lo
+está— y no como contador.
+
+## 🆕 `R-CAPACIDAD` — Receta: compuerta de pre-venta para «cambiamos de proveedor de AI cuando quieras»
+
+**El problema que resuelve, y es de contrato.** Esta vertical vende intercambiabilidad de proveedor
+como si fuera una propiedad de la plataforma. Medido, es una propiedad del **par (proveedor, tipo de
+servicio)**: sobre Chamilo 3 la promesa es verdadera en texto y documento, y falsa en imagen, video y
+procesamiento de documentos. Un cliente en `document_process` **no tiene a dónde cambiar**.
+
+**A quién se le vende.** Institución con un LMS instalado (Moodle ≥ 4.5 o Chamilo ≥ 2.0) que ya tiene
+—o está por firmar— una cláusula de independencia de proveedor.
+
+**Las piezas, todas ya en esta base.**
+
+| capa | pieza | licencia | qué aporta |
+|---|---|---|---|
+| enumeración de árbol | [`p275-tree-enumeration/`](code/p275-tree-enumeration/) | instrumento propio | lista el árbol completo por ref, sin truncar |
+| allowlist de proveedor | [`p276-provider-allowlist/`](code/p276-provider-allowlist/) `extract_allowlist.py` | instrumento propio | las claves que el factory ADMITE, no las que un sondeo adivina |
+| superficie de capacidad | [`p276-provider-allowlist/`](code/p276-provider-allowlist/) `capability.py` | instrumento propio | tipos registrables por proveedor, resolviendo las dos herencias |
+| versión mínima por proveedor | [`p269-provider-release-matrix/`](code/p269-provider-release-matrix/) | instrumento propio | qué versión del LMS trae cada proveedor en núcleo |
+| plataforma | `moodle/moodle` | **GPL-3.0-or-later** | 7 subplugins `aiprovider`, uno de ellos (`ollama`) autoalojable |
+| plataforma | `chamilo/chamilo-lms` | **GPL-3.0** | 7 claves en núcleo, `AiTaskGraderService` + `AiTutorChatService` desde 2.0 |
+
+**El wiring, en el orden en que se corre.**
+
+1. **Enumerar, no sondear.** Clon sin blobs de la ref **que el cliente corre** (no `master`) y
+   `ls-tree` del directorio de proveedores: `public/ai/provider/` en Moodle,
+   `src/CoreBundle/AiProvider/` en Chamilo. 🔴 Un sondeo por nombres da una **cota inferior**
+   (`P276`), y ésa es la medición que hay que no repetir.
+2. **Leer la allowlist del factory**, que es lo que de verdad limita al administrador:
+   `python3 extract_allowlist.py AiProviderFactory.php`. En Chamilo `v3.0.x` devuelve 7 claves.
+3. **Separar CLAVES de VENDORS.** `claude` y `anthropic` son dos claves sobre una implementación y un
+   endpoint. La columna que viaja a la propuesta es **vendors**; la que viaja al manual de
+   administración es **claves**.
+4. **Levantar la superficie de capacidad:** `python3 capability.py *Provider.php`. Devuelve los tipos
+   registrables por proveedor con las dos herencias resueltas.
+5. **Cruzar con la versión instalada** (`p269`): un proveedor que existe en `master` y no en la rama
+   del cliente no es una opción, es una migración.
+6. **Entregar la compuerta como una sola tabla:** por cada tipo de servicio que el cliente usa, qué
+   proveedores lo implementan **en su versión**. Las celdas con **un solo** proveedor son las
+   cláusulas que no se pueden firmar.
+
+**Lo que se entrega, y es una frase con número.** *«En su Chamilo 3.0 puede cambiar entre 7 claves de
+proveedor (6 empresas) para chat y documentos. Para imagen y video las opciones son 3. Para
+procesamiento de documentos hay 1: OpenAI. La cláusula de independencia de proveedor se puede firmar
+para los dos primeros grupos y no para el tercero.»*
+
+**Estimación:** **1–2 semanas** para la compuerta sobre una plataforma y una ref (los instrumentos ya
+están escritos y con suite); **+1 semana** por plataforma adicional. 🔴 **No incluye** cerrar el hueco
+de `document_process`: implementar un segundo proveedor para ese tipo es desarrollo sobre el núcleo
+GPL del LMS, con la obligación de distribución que eso arrastra, y se cotiza aparte.
+
+⚠️ **Cota de la receta, declarada:** mide lo que el **repo** declara en esa ref. Qué proveedores están
+**activos** es propiedad del ajuste `ai_helpers.ai_providers` de cada institución y **no se lee del
+repo** — hay que pedir el JSON. Y tres hechos de operación que hay que verificar en la instalación y
+no en el código: el **default lo decide el orden del JSON**
+(`array_key_first`), un tipo **sólo** se habilita si está explícitamente en la config de ese
+proveedor, y si la clase no satisface la interfaz del tipo **el factory lo descarta con `error_log` y
+sigue** — la capacidad se pierde **sin error visible en la interfaz**.
 
 ## 🧩 P273–P274 y la receta `R-VERSION-PLATAFORMA`: el manifiesto no es donde una plataforma liga su proveedor (pase 92 del 2026-10-04)
 

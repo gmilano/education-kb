@@ -8,6 +8,7 @@ updated: 2026-10-04
 
 > Bases sobre las cuales construir. Verificado repo por repo vía WebFetch el 2026-09-30 (capas del pase 10, el 2026-10-01).
 > Leer la columna **Licencia** antes de proponer: media KB de educación es GPL/AGPL, no permisiva.
+> **Pase 93 del 2026-10-04:** 🔴 **Cero altas fundacionales, SEXTO pase consecutivo, y se declara.** El barrido (`open source platform education ERP CRM MIT Apache`) devolvio por **decimonovena** vez el catalogo ya verificado de este estante, y volvio a nombrar la *Kuali Foundation* en PRESENTE —medida en el pase 42: cuatro repos, los cuatro muertos hace 6–9 años. 🟢 **Lo que si cambia: este estante recupera la capacidad de sostener una AUSENCIA, que `P274` le habia retirado sin reemplazo.** Un clon `--filter=blob:none --no-checkout --depth 1` + `git ls-tree -d -r` enumera el arbol **completo** (< 1 s en ILIAS; 10.923 directorios en Moodle) sin truncar y sin `api.github.com`, que este arbol registra en **403** desde el pase 89 (**P275**). 🟢 **Cuatro filas pasan de *sostenidas por manifiesto + arbol truncable* a *sostenidas por arbol COMPLETO*, las cuatro con CERO capa de AI en el nucleo:** `frappe/erpnext` (39 modulos), `frappe/education` (11), `openeducat/openeducat_erp` (15, en la **raiz**) e `ILIAS` (180 en `release_11`). Para un *engagement*: la capa agentica sobre estas piezas es **desarrollo completo**, no integracion — y ahora es medido. 🔴 **`P278`: la ruta que contiene los modulos es propiedad de la (repo, ref)** —`components/ILIAS/` da 180 en `release_11` y **CERO** en `release_9`, donde viven en `Modules/`(54)+`Services/`(126)— **asi que todo conteo anclado a una ruta fija tiene fecha de vencimiento.** ⚠️ **Cota: mide el arbol publicado en esa ref, nada dice de plugins de terceros** (donde vive la AI de ILIAS y la del ecosistema Frappe). Instrumento: [`compose/code/p275-tree-enumeration/`](../compose/code/p275-tree-enumeration/).
 > **Pase 92 del 2026-10-04:** 🔴 **Cero altas fundacionales, QUINTO pase consecutivo, y se declara.** El barrido de plataformas (`open source platform education ERP CRM MIT Apache`) devolvió por **decimoctava** vez lo que este estante ya tiene (`OpenEduCat` sobre Odoo, `CK-ERP`, `ERPNext`/`frappe/education`, Moodle, Open edX, Chamilo, ILIAS). 🟢 **Lo que sí cambia, y afecta a CÓMO se lee este estante entero: dos de sus plataformas tienen una capa de proveedores de modelo EN EL NÚCLEO, y el manifiesto no la muestra.** Medido por ref (**P273**): `chamilo/chamilo-lms` liga **0 → 5 → 6** proveedores según versión en `src/CoreBundle/AiProvider/`, con `composer.json` en **cero tokens en las ocho refs**. 🔵 **Consecuencia para este estante: antes de clonar hay que preguntar la VERSIÓN, no sólo el repo** — el mismo repo da tres respuestas distintas a «¿qué proveedor tengo sin código de terceros?». 🟢 **Y las otras tres filas de este estante SOSTIENEN su veredicto medidas por ref:** `ILIAS` (sin componente de AI en el tramo **A–L**; **M–Z no listado**, se declara), `frappe/education` y `frappe/erpnext` (árbol completo, cero módulos de AI; la capacidad es de **apps de marketplace** de terceros). 🟢 **`openeducat/openeducat_erp` pasa de NO-CLAIM a MEDIDO y es `P270` otra vez:** el pase 90 probó `requirements.txt` → 404 y correctamente no afirmó ausencia; el manifiesto **real** es `openeducat_core/__manifest__.py` (200 en `16.0`, `17.0`, `18.0`), con `'depends': ['board','hr','web','website']` y cero proveedores. ⚠️ **Licencias de la capa, novena y décima lectura de payload: Chamilo `GPL-3.0`, OpenEduCat `LGPL-3.0` — sigue CERO permisivas en capa de plataforma** (tendencia **701**).
 > **Pase 91 del 2026-10-04:** 🔴 **Cero altas fundacionales, CUARTO pase consecutivo, y se declara.** El barrido de plataformas (`open source platform education ERP CRM MIT Apache`) devolvió por **decimoséptima** vez lo que este estante ya tiene (`OpenEduCat` sobre Odoo, `CK-ERP`, `ERPNext`/`frappe/education`, Moodle, Open edX, Chamilo, ILIAS). ⚠️ **`CK-ERP` venía como posible alta y NO entra: `grep` contra el árbol lo encuentra ya archivado en 6 archivos**, y su rastro público es de 2010 — es cobertura, no hallazgo. 🟢 **El aporte es una columna que este estante nunca midió: el MANIFIESTO DE RUNTIME de la capa de plataforma, leído POR REF y no en la rama por defecto.** Medido así, `openedx/edx-platform` trae **`openai==0.28.1` declarada DIRECTA** (`via -r requirements/edx/kernel.in`) en las tres releases nombradas que resuelven —`quince` (l. 767), `redwood` (l. 767), `sumac` (l. 809)— y **no** la trae en `master`. 🔴 **Consecuencia de entrega: `0.28.1` es la última release PRE-1.0 del SDK de Python de OpenAI**, cuya API no es la de `openai>=1.0` (`openai.OpenAI()`), así que un engagement que caiga en un Open edX Quince/Redwood/Sumac se choca con un **major antiguo en el core**, no en su propio código. Instrumento y datos crudos: [`compose/code/p272-platform-ref-verdict/`](../compose/code/p272-platform-ref-verdict/) (**P272**).
 > **Pase 90 del 2026-10-04:** 🔴 **Cero altas fundacionales, tercer pase consecutivo, y se declara.** El barrido de plataformas (`open source platform education ERP CRM MIT Apache`) devolvió por decimosexta vez lo que este estante ya tiene (`OpenEduCat`, `ERPNext`/`frappe/education`, `Moodle`, `Open edX`, `Chamilo`, `ILIAS`) — es una medición de la COBERTURA de este archivo, no un hallazgo. 🟢 **El aporte es una columna que este estante nunca midió del payload: la LICENCIA de la capa de plataforma, leída archivo por archivo.** 8 de 8 verificadas de primera mano (no por política de proyecto, no por la página del repo): `moodle/moodle` **GPL-3.0-or-later** · `openedx/edx-platform` **AGPL-3.0** · `instructure/canvas-lms` **AGPL-3.0** · `chamilo/chamilo-lms` **GPL-3.0** · `ILIAS-eLearning/ILIAS` **GPL-3.0** · `frappe/erpnext` **GPL-3.0** · `frappe/education` **GPL-3.0** · `openeducat/openeducat_erp` **LGPL-3.0**. 🔴 **8 de 8 son COPYLEFT y CERO son permisivas**, así que el foco MIT/Apache/BSD que el encargo pide se cumple en la capa de AGENTE y **en la capa de PLATAFORMA no hay ninguna permisiva que elegir**: la restricción no es de selección, es de entrega. 🔵 **La única fila cuya familia cambia una cotización es `openeducat_erp` (LGPL-3.0)**, y las dos plataformas más grandes son **AGPL-3.0**, que alcanza el uso **en red** — que es exactamente la forma en que se entrega un LMS. ⚠️ **`openeducat/openeducat_erp` queda `NO-CLAIM` en el eje de proveedor**: su `requirements.txt` da 404 en esa ruta y no se afirma ausencia desde una ruta que falla. Instrumento y datos crudos: [`compose/code/p269-provider-release-matrix/`](../compose/code/p269-provider-release-matrix/).
@@ -94,6 +95,84 @@ corre ése antes de escribir uno a mano** (tendencia **313**). 🟢 **Y el `gafa
 > y 5 en `schemas12/`, y contar sólo el primero es lo que hizo invisible el segundo dialecto de SCORM (**P106**).
 > **Pase 36 del 2026-10-02:** 🔵 **este pase no agrega repos: le pone FECHA a los que ya están, y la fecha cambia tres recomendaciones.** Se midió la capa PHP de evaluación y telemetría en Packagist —el único registro de los tres que entrega descargas en este entorno (`api.npmjs.org` y `pypistats.org` dan **403 a CONNECT**)— y el resultado está en `repos/trending.md`. **Lo que hay que saber antes de proponer desde este archivo:** 🔴 **la pieza xAPI más descargada de esta base, `rusticisoftware/tincan` (Apache-2.0, 6.178 desc./mes, 863.777 totales), no publica desde el 2022-11-02**, y ⚠️ **el único MIT de esa capa, `php-xapi/client`, está parado desde el 2021-03-24** con 825 desc./mes. 🔵 **La lectura es que en xAPI/PHP lo permisivo está quieto y lo vivo es copyleft**, así que la receta de telemetría se sostiene en **Ralph (MIT)** + **`lrsql` (Apache-2.0)** + **`learnmcp-xapi` (MIT)** y no en la capa PHP. 🟢 **Del lado de evaluación, lo activo es `oat-sa/extension-tao-testqti`** (**885 versiones**, release del **2026-09-30**) **y sigue siendo GPL-2.0-only**, mientras **lo permisivo es lo nuevo**: `@longsightgroup/qti3-cli` (**MIT**, 41 releases desde el 2026-05-21, último **2026-10-01**) con **cero dependencias de terceros** — sus 4 dependencias son todas `@longsightgroup/*` pinneadas a la misma versión exacta. **Su manifiesto MCP completo de 20 tools está escrito en `compose/patterns.md` (P76).** 🔴 **Y una corrección de catálogo: `oat-sa/qti-sdk` devuelve 404 en Packagist porque es el nombre del REPO — su paquete es `qtism/qtism`** (GPL-2.0-only, 218.212 descargas totales, 315 versiones). **Nombre de repo y nombre de paquete son identificadores distintos, y confundirlos produce un 404 que parece una ausencia** — pasó igual con `1edtech/oneroster`, `imsglobal/lti-1-3-php-library` y `packbackbooks/lti-1-3-php-library`, los tres **404**, que se anotan como *«no verificado en Packagist bajo ese nombre»* y **no** como inexistentes. ⚠️ **Acción pendiente que el pase 37 tiene asignada: este archivo nunca pasó por el control de *slugs* distintos ni por el de *backlink*** — los dos que en `agents/top.md` encontraron **un duplicado** y **dos colisiones** este mismo pase.
 > **Pase 11 del 2026-10-01:** aparece una licencia que las diez pasadas anteriores filtraban sin saberlo — **ECL-2.0**, con la que licencia todo Apereo (Sakai, Opencast, OpenLRW). Es Apache-2.0 con el alcance de patentes acotado, aprobada por OSI y FSF, y **es apta para construir arriba**. Ver la capa de analítica institucional, abajo.
+
+## 🧾 Altas fundacionales: 0 — SEXTO pase consecutivo, y el estante gana el instrumento que le faltaba para sostener una AUSENCIA (pase 93 del 2026-10-04)
+
+### 🔴 El barrido, declarado
+
+🔴 **Cero altas.** El barrido fundacional obligatorio
+(`open source platform education ERP CRM MIT Apache`, año **CALCULADO**: 2026) devolvió por
+**decimonovena** vez el catálogo que este estante ya tiene verificado repo por repo: `OpenEduCat`
+(**LGPL-3.0**), `ERPNext` / `frappe/education` (**GPL-3.0**), Moodle, Open edX, Chamilo, ILIAS,
+`openSIS`. Es una medición de la **cobertura** de este estante, no un hallazgo.
+
+⚠️ **Y nombró una vez más la *Kuali Foundation* descrita en PRESENTE** (*«consorcio de más de dos
+docenas de universidades»*). Este estante la midió en el **pase 42** y el veredicto no cambió:
+`kuali/rice` y `KualiCo/rice` (**ECL-2.0**), `kuali/kc` y `kuali/kfs` (**AGPL-3.0**), los cuatro
+**sin commits desde hace 6–9 años**; `KualiCo/kc`, `KualiCo/kfs` y `KualiCo/kuali-student` **no
+existen**. 🔵 **Haberla medido una vez es lo que impide ofrecerla hoy como opción viva.**
+
+### 🟢 Lo que sí cambia para quien va a partir de una de estas piezas: la ausencia pasa a ser MEDIBLE
+
+El pase 85 retiró un instrumento de este estante (sobre un árbol copyleft el `sha256` del `LICENSE`
+no identifica nada) y el pase 92 retiró otra clase de negativo con **`P274`** (en el canal `raw` un
+path de **directorio** da 404 **siempre**, exista o no) **sin dejar reemplazo**. Desde entonces este
+estante no podía sostener *«esta pieza no trae X»* más que con el tramo declarado.
+
+🟢 **Reemplazo, y es de este pase (`P275`):**
+
+```sh
+git clone --filter=blob:none --no-checkout --depth 1 -b "$REF" "https://github.com/$REPO" "$DIR"
+git -C "$DIR" ls-tree -d --name-only -r HEAD
+```
+
+Baja commit y árboles **sin ningún blob** y enumera el árbol **completo**: sin truncar, sin paginar y
+**sin `api.github.com`**, que este árbol registra en **403** desde el pase 89. Medido: el clon de
+ILIAS tarda **< 1 s**; sobre Moodle enumera **10.923** directorios de una vez.
+
+🔵 **Para este estante eso cambia una clase de pregunta entera.** *«¿Esta pieza trae su propia capa de
+AI o hay que ponerla?»* dejó de contestarse con un sondeo de nombres —que mide la lista sondeada— y
+se contesta enumerando. Las tres filas de ERP/SIS de este estante quedan re-medidas sobre el árbol
+completo:
+
+| pieza | ref | layout resuelto | módulos | árbol (dirs) | ¿capa de AI en el núcleo? |
+|---|---|---|---|---|---|
+| `frappe/erpnext` | `develop` | `erpnext` | 39 | 1.427 | 🟢 **no** — ausencia CERRADA |
+| `frappe/education` | `develop` | `education` | 11 | 159 | 🟢 **no** — ausencia CERRADA |
+| `openeducat/openeducat_erp` | `18.0` | **raíz del repo** | 15 | 173 | 🟢 **no** — ausencia CERRADA |
+| `ILIAS-eLearning/ILIAS` | `release_11` | `components/ILIAS` | 180 | 4.266 | 🟢 **no** — ausencia CERRADA |
+
+🟢 **Pasan de *sostenidas por manifiesto + árbol truncable* a *sostenidas por árbol COMPLETO*.** Para
+un *engagement* eso significa que la capa agéntica sobre estas cuatro piezas es **desarrollo
+completo**, no integración con algo que ya viene — y ahora es una afirmación medida y no una
+inferencia.
+
+### 🔴 `P278` — la ruta que contiene los módulos es propiedad de la (repo, ref), y este estante iba a tropezar con eso
+
+🔴 **`components/ILIAS/` da 180 directorios en `release_11` y CERO en `release_9`**, donde el mismo
+árbol los tiene en `Modules/` (54) + `Services/` (126) = **180**: el layout se movió en la 10.
+Publicar ese cero sería *«ILIAS 9 no tiene componentes»*, que es dato incorrecto.
+
+🔵 Es `P270` subido una capa: de negativos sobre un **nombre** a negativos sobre un **layout**. Por
+eso el barrido de este estante se escribe como **compuerta** —recibe las rutas candidatas, elige la
+poblada en esa ref, y devuelve `NO-CLAIM` si ninguna lo está— y no como contador.
+⚠️ **Y es una advertencia para las piezas de este estante que esta base fechó en ramas antiguas:**
+cualquier conteo de módulos tomado de una ruta fija tiene **fecha de vencimiento** cuando el proyecto
+reorganiza su árbol.
+
+### ⚠️ Lo que este pase NO midió de estas filas, declarado
+
+- ⚠️ **Mide el árbol PUBLICADO en esa ref.** Nada dice de **plugins de terceros**, que es exactamente
+  donde vive la capacidad de AI de ILIAS (*AI Chat plugin*, *ILIAS Assistant*) y la del ecosistema
+  Frappe (`noviz_ai`, `nextai`, `ChatNext`, apps de marketplace).
+- ⚠️ **`--depth 1` mide una ref por clon.** El costo crece con el número de refs, no con el tamaño del
+  repo; ninguna de estas cuatro filas está medida en todas sus ramas de soporte.
+- 🔴 **Licencias sin cambio y sin permisiva nueva:** la capa de plataforma de esta vertical sigue
+  **copyleft 8 de 8** (tendencia **701**, cuarto pase sostenida). El foco MIT/Apache/BSD del encargo
+  se cumple en la capa de agente; acá la restricción es de **entrega**, no de selección.
+
+Instrumento, datos crudos y controles:
+[`compose/code/p275-tree-enumeration/`](../compose/code/p275-tree-enumeration/).
 
 ## 🟢 7 altas fundacionales de un golpe, y es una CAPA entera que este estante no tenía: la psicometría computacional del aprendizaje, de un laboratorio con nombre y dirección (pase 87 del 2026-10-04)
 
