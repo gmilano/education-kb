@@ -9,6 +9,51 @@ updated: 2026-10-04
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 > No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
 
+## 2026-10-04 — pase 84: el nombre de paquete que el pase 83 llamó «publicado» no existe en npm, y 3 piezas que el inventario tenía «sin paquete» son instalables hoy
+
+### 🔴 Altas de agente: 0 — y se declara qué se buscó
+
+**Nada nuevo entró a la capa de agente.** Las cuatro búsquedas globales del encargo devolvieron, por
+**decimotercera** vez, la capa genérica (OpenClaw, OpenHands, CrewAI, LangChain) y material didáctico
+*sobre* AI, que no es un agente de educación. **Los 6 candidatos específicos que sí devolvieron
+—`HKUDS/DeepTutor`, `plastic-labs/tutor-gpt`, `Open-TutorAi/open-tutor-ai-CE`, `artcc/freelingo`,
+`24kchengye/human-skill-tree`, `zijinz456/opentutor`— estaban YA los 6 en el inventario**, verificado
+con `grep` sobre los 483 `org/repo` que esta base cita **antes** de escribir.
+
+### 🟢 Lo que sí es alta: la identidad INSTALABLE de la capa Canvas-MCP
+
+⚠️ **No son repos nuevos: es un dato nuevo sobre entidades que ya estaban** — qué se puede `npx`
+hoy. Medido contra `registry.npmjs.org` por un canal **calibrado** (200 a un paquete que existe,
+404 a uno que no):
+
+| Repo del inventario | Paquete publicado | Versión | Mantenedor |
+|---|---|---|---|
+| `r-huijts/canvas-mcp` | `@r-huijts/canvas-mcp` | **1.5.1** | `r-huijts` |
+| `vishalsachdev/canvas-mcp` | `canvas-mcp` *(desde `./cli`)* | **1.1.0** | `vishalsachdev` |
+| `CharlieCardenasToledo/mcp-canvas-server` | `@charlie.act7/canvas-mcp-server` | **1.3.1** | `charlie.act7` |
+| `DMontgomery40/mcp-canvas-lms` | `canvas-mcp-server` | **2.2.3** | `dmontgomery40` |
+| `bruchris/canvas-lms-mcp` | `canvas-lms-mcp` | **1.30.0** | `bruchris` |
+| `xmike04/canvas-student-mcp` | `canvas-student-mcp` | **1.3.3** | `xmike04` |
+| `imazhar101/mcp-canvas-server` | `@imazhar101/mcp-canvas-server` | **2.1.3** | `imazhar101` |
+| `mtgibbs/canvas-lms-mcp` | `@mtgibbs/canvas-lms-mcp` | **0.2.18** | `mtgibbs` |
+| `owentaylor/canvas-mcp` | `@owen-x-tech/canvas-mcp` | **1.1.0** | `owen-x-tech` |
+
+🔴 **Las tres últimas filas el inventario las tenía como «sin paquete» (`pkg_name = -`)**, porque la
+medición del pase 83 leyó el `package.json` del ÁRBOL y esas tres publican bajo *scope*. **Son
+instalables hoy.**
+
+### 🔴 Y la baja de una afirmación: `canvas-mcp-code-api` no existe
+
+El pase 83 escribió que los 7 repos del racimo *«**publican** el MISMO `name`
+`canvas-mcp-code-api`»*. **Ese nombre da 404 en npm.** Los 7 árboles lo **DECLARAN**; ninguno lo
+publica. 🔵 **Un `package.json` es una declaración, no una publicación** → **`P253`**, con compuerta
+ejecutable en `compose/code/p253-registry-first-identity/` (**27/27**).
+
+⚠️ **El *scope* de npm NO es el dueño de GitHub** (`@owen-x-tech` ← `owentaylor`), así que los **8**
+nombres conjeturados de este pase dieron 404 y **ninguno se publica como ausencia**: salen
+`UNDETERMINED`.
+
+
 ## 2026-10-04 — pase 83: el padre que el pase anterior coronó no tiene UN derivado medido, y el racimo real es de otro autor
 
 ### 🔴 Altas: 0. Lo que cambia es una RELACIÓN, no el inventario

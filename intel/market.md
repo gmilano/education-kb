@@ -55,6 +55,44 @@ updated: 2026-10-04
 > **LATAM:** 🔵 el hallazgo del pase — **existe una capa MCP nacional brasileña de datos públicos, activa y MIT, y
 > educación es el único dominio grande que falta** (**gap 69**).
 
+## 🔴 Decimotercer barrido regional consecutivo agotado, y el dato del pase es de CAPA INSTALABLE: 9 paquetes publicados que el inventario no tenía (pase 84 del 2026-10-04)
+
+🔴 **Las cuatro regiones corridas con el año calculado (`2026`); los hechos devueltos estaban TODOS ya
+publicados**, confirmado con `grep` antes de escribir: `Claude Corps` (**3**), `Council of Europe`
+(**3** / `Consejo de Europa` **59**), `EdTech 200` (**15**), `Digital Education Council` (**52**),
+`IMDA` (**40**), `UNAM` (**9**), `Tecnológico de Monterrey` (**25**) y las cifras de la encuesta LATAM
+de educación superior 2026 (**73,5 %** ×28, **26,0 %** ×16). 🔵 **Rendimiento marginal medido CERO por
+decimotercera vez.**
+
+🔴 **Y el pase se pilló a sí mismo un falso negativo de LECTOR, que es la cota honesta de ese «cero»:**
+el *token* `2303` dio **cero** coincidencias y pareció cifra nueva, pero esta base escribe la terna de
+North America **`$951 M (2024) → $2.303,2 M (2029)`, CAGR 15,9 %** — **presente desde el pase 44, con
+su conflicto interno de CAGR ya registrado**. 🔵 **Un separador decimal convirtió un dato presente en
+un «hallazgo»: el defecto es del instrumento de LECTURA, no del dato**, como en las tendencias 622 y
+649. ⚠️ **Ninguna cifra de mercado nueva entra en este pase, y se dice así en vez de rellenar.**
+
+### 🟢 Lo que sí aporta, y es cotizable: qué de esta base se puede instalar hoy
+
+**La capa Canvas-MCP —la más forkeada del inventario— pasa de «repos citados» a «paquetes
+instalables», medido contra `registry.npmjs.org` por canal CALIBRADO (200 al que existe, 404 al que
+no).** **9 publicaciones**, de las cuales **3 el inventario tenía como «sin paquete»**:
+`@imazhar101/mcp-canvas-server` **2.1.3**, `@mtgibbs/canvas-lms-mcp` **0.2.18** y
+`@owen-x-tech/canvas-mcp` **1.1.0**. Ver `compose/code/p253-registry-first-identity/` (**27/27**) y la
+tabla completa en `agents/trending.md`.
+
+🔴 **Y la cota comercial que ninguna columna de licencia muestra: el paquete del origen del racimo
+grande (`canvas-mcp` 1.1.0, mantenedor `vishalsachdev`) son 5 archivos y 2.704 B de *setup wizard* —
+NO trae servidor MCP ni una sola herramienta.** 🔵 **Quien cotice «hay paquete publicado» como «hay
+producto instalable» cotiza mal: en este caso lo publicado es el instalador, y el servidor está sólo
+en el árbol.**
+
+⚠️ **Lo que este pase NO pudo colocar por región, declarado:** `registry.npmjs.org` **no transporta
+ningún campo de país ni de organización**, así que la capa instalable **no añade una sola ubicación
+regional**. 🔴 **De los 6 orígenes medidos de Canvas-MCP sigue habiendo exactamente UNO con región
+verificada por fuente de primera mano** (dato del pase 83, sin avance este pase), y de un antropónimo
+no se infiere región (**P135**).
+
+
 ## 🔴 Duodécimo barrido regional consecutivo agotado, y el dato del pase es de PROCEDENCIA: la capa más forkeada de esta base está regionalmente SIN UBICAR (pase 83 del 2026-10-04)
 
 🔴 **Las cuatro regiones corridas con el año calculado (`2026`); los hechos devueltos estaban TODOS ya
@@ -1876,6 +1914,19 @@ Dónde se produce el software educativo abierto, que no es donde está la demand
 ## Opportunities by region
 
 ### North America
+
+#### 📍 Pase 84 del 2026-10-04 — sin cifra nueva, y lo que entra es la capa INSTALABLE del LMS dominante de la región
+
+⚠️ **Ninguna cifra de mercado nueva.** La terna de la región (**$951 M 2024 → $2.303,2 M 2029**, CAGR
+declarado **15,9 %**) sigue siendo la del pase 44, **con su conflicto interno de CAGR sin cerrar**, y
+este pase la volvió a encontrar por búsqueda sin que sea nueva (ver el falso negativo de lector,
+arriba).
+
+🟢 **Lo cotizable del pase: los 9 paquetes npm de la capa Canvas-MCP están medidos y 3 eran
+desconocidos para el inventario.** Canvas (Instructure) es el LMS de mayor presencia en la región, así
+que es la capa que un *engagement* de North America toca primero — y ahora se sabe **qué se instala con
+`npx` y qué sólo existe como árbol**. 🔴 **La cota que hay que decirle al cliente: el paquete del
+origen del racimo grande es un *setup wizard* de 5 archivos, no el servidor.**
 
 **🟢 Pase 83 del 2026-10-04 — la región sigue siendo la ÚNICA con un origen de la capa Canvas-MCP ubicado de primera mano.** `vishalsachdev/canvas-mcp` (verificado en el pase 56) es **1 de 6** orígenes medidos con región; los otros 5 no están ubicados. 🔵 **Para una entrega en esta región eso es una ventaja concreta: es la única que puede alegar procedencia local sobre la capa de agente más forkeada de esta base.** ⚠️ **Y la pieza es el PADRE de 6 derivados medidos, no un fork**, así que el soporte y la dirección técnica están en la región. Barrido regulatorio del pase: `134` proyectos en `31` estados devueltos por el canal, **todos sobre regímenes ya publicados acá** (`AB 1159`, `SB 394` de Virginia, `SB 720` de Maryland, Oklahoma, *Traffic Light* de Nueva York, marco estudiantil de `AASA`): **cero altas**.
 
@@ -3770,6 +3821,20 @@ Artículo 50(2) **no es exigible** en North America — pero es **el requisito m
 multi-región conviene cotizarlo contra el techo europeo y no contra el piso local (ver **P103** y **P105**).
 
 ### EMEA
+
+#### 📍 Pase 84 del 2026-10-04 — sin cifra regulatoria ni de mercado nueva, y la capa instalable NO aporta ubicación
+
+🔴 **Nada nuevo para la región en este pase, y se declara en vez de dejarlo en silencio.** La búsqueda
+regional devolvió `Council of Europe` (ya en la base), `EdTech 200` (**15** coincidencias),
+el **94 %** de intención de inversión en formación y el **38 %** que aún no pilotea — **todo material
+de AI empresarial, no de educación**, salvo lo ya publicado. La aplicación del AI Act del **2 de agosto
+de 2026** sigue con **ocho fuentes secundarias concordantes y cero primarias** (gap 56, límite de
+clase).
+
+⚠️ **Y la cota del canal nuevo del pase: `registry.npmjs.org` no transporta país ni organización**, así
+que los 9 paquetes medidos **no colocan a nadie en EMEA**. 🔴 **El único permisivo con titular público
+europeo de la capa xAPI (`openfun/ralph`, MIT, *France Université Numérique*) sigue clavado en 1.0.3**,
+así que *EMEA-soberano + xAPI 2.0* **sigue sin existir** (P244, P246 — sin avance este pase).
 
 **🔴 Pase 83 del 2026-10-04 — la región PIERDE una atribución que el pase 82 le había dado, y la pierde por método.** Ese pase tituló `r-huijts/canvas-mcp` como 📍 *«EMEA (Paises Bajos)»* en `repos/trending.md` mientras `agents/top.md`, en el mismo pase, declaraba que **de un antropónimo no se infiere región** (**`P135`**). 🔴 **Corregido en el pase 83 (`P252`): EMEA no suma esta pieza.** 🔵 **No es una pérdida de inventario sino de una atribución que no existía**, y conviene decirlo así porque una propuesta que la hubiera citado habría alegado procedencia neerlandesa sobre un dato que nadie midió. ⚠️ **La asimetría de los pases 81–82 sigue en pie: el único LRS permisivo con titular público europeo (`openfun/ralph`, MIT, `France Université Numérique`) sigue clavado en xAPI 1.0.3, así que *EMEA-soberano + xAPI 2.0* no existe hoy.** Barrido regulatorio: la aplicación del AI Act arrancó el **2 de agosto de 2026** —ya publicado acá (7 coincidencias)—; **cero altas**.
 
@@ -5783,6 +5848,19 @@ este pase dejó cubierto con código.
 
 ### APAC
 
+#### 📍 Pase 84 del 2026-10-04 — sin dato nuevo de educación: lo que devolvió el canal es gobernanza EMPRESARIAL
+
+🔴 **La búsqueda regional de este pase no devolvió un solo hecho de AI en EDUCACIÓN para APAC.** Lo
+que trajo —**48 %** de líderes de gobernanza con AI como prioridad 2026, **57 %** de organizaciones
+asiáticas ya con AI en alguna operación, las consultas de Singapur sobre AI en instituciones
+financieras, la soberanía como eje de infraestructura— es **AI empresarial y regulación financiera**,
+y el propio canal lo advirtió. ⚠️ **Se registra como hueco informado: la región no quedó sin cubrir por
+silencio, quedó sin cifra EDUCATIVA nueva.**
+
+🟢 **Lo ya medido que sigue en pie:** `IMDA` (**40** coincidencias), el `Framework Act` de Corea, la
+rúbrica de examen nacional japonesa y el currículo de educación especial de Japón — **el único marco
+del mundo que nombra agentes sigue siendo de APAC**. **Sin avance este pase.**
+
 **🔴 Pase 83 del 2026-10-04 — cero orígenes de la capa Canvas-MCP ubicados en la región, y es una ausencia MEDIDA, no un silencio.** De los 6 orígenes medidos, ninguno resuelve a APAC; el único antecedente APAC de capa de escritura en esta base sigue siendo `toshieji/moodle-grading-mcp`, que es de Moodle y no de Canvas. 🔵 **Así que una entrega APAC sobre Canvas compone piezas de procedencia no ubicada, y eso conviene declararlo en la propuesta en vez de omitirlo.** Barrido regulatorio del pase: Corea (`Framework Act`, vigente 22-ene-2026), Vietnam (`Ley 134/2025/QH15`, vigente 1-mar-2026) y el marco de **AI agéntica** de `IMDA` de Singapur (22-ene-2026) — **los tres ya publicados acá** (`Vietnam` 204 coincidencias, `IMDA` 39, `Framework Act` 13): **cero altas**.
 #### Agregado en el pase 82 del 2026-10-04 — ⚠️ hueco DECLARADO: esta region no devolvio nada nuevo, ni de mercado ni de licencia
 
@@ -7356,6 +7434,21 @@ desplegado + puerta MCP permisiva (`jbnu-lms-mcp`, `canvas-lms-mcp`, las cuatro 
 depende de un tercero» son el mismo argumento.**
 
 ### LATAM
+
+#### 📍 Pase 84 del 2026-10-04 — sin cifra nueva: las de la encuesta 2026 ya estaban, y se verificó con `grep` antes de escribir
+
+🔴 **Cero hechos nuevos para la región.** La búsqueda devolvió la encuesta de educación superior LATAM
+2026 —**92 %** de estudiantes usando AI, **67 %** semanal, docentes **61 % → 79 %**, enseñanza
+**73,5 %**, investigación **57,0 %**, administración **34,1 %**, y la capacidad institucional: **26,0 %**
+con estrategia formal de AI, **18,5 %** con política institucional, **8,0 %** con presupuesto dedicado,
+**9,0 %** con mecanismos formales de evaluación— y **todas estaban publicadas** (`73,5` ×28, `26,0`
+×16). También ya en la base: Chile con Política Nacional de AI desde 2021, `CONPES` (**49**), la ley
+peruana `31814` (**14**), `CENIA` (**30**), `UNAM` (**9**), `Tecnológico de Monterrey` (**25**).
+
+🔵 **La asimetría que estas cifras sostienen, y es la que vale para una propuesta: la adopción es alta
+y la CAPACIDAD INSTITUCIONAL es baja** —92 % de alumnos contra 26,0 % de instituciones con estrategia—,
+así que el entregable que cotiza en la región es **gobernanza y evaluación**, no otro tutor.
+**Sin avance nuevo este pase.**
 
 **⚠️ Pase 83 del 2026-10-04 — la región tiene el indicio más tentador del cohorte y el pase se NIEGA a convertirlo en dato.** `CharlieCardenasToledo/mcp-canvas-server` (MIT, origen medido, titular `Copyright (c) 2025 Charlie Cárdenas Toledo`) es un antropónimo hispanohablante, y **`P135` prohíbe inferir región de un antropónimo** — la misma regla que este pase acaba de hacer cumplir contra una atribución a EMEA. 🔵 **Se registra como candidata a ubicar con fuente de primera mano, no como pieza LATAM**, y aplicar la regla en las dos direcciones es lo que la vuelve una regla. 🟢 **Lo que la región sí tiene medido sigue siendo el patrón de credencial de `iDavi/usp-mcp` (sellado, **`P213`**), el único que resuelve el problema estructural de esa capa.** Barrido regulatorio: `CONPES` 4144, Uruguay y el Convenio Marco del Consejo de Europa, ley peruana `31814`, Observatorio de UNESCO y `CENIA` — **todos ya publicados acá**: **cero altas**.
 
@@ -9295,6 +9388,20 @@ región: **65 % de los alumnos teme que la AI vuelva el aprendizaje superficial*
 más directa a ese miedo que esta base puede ofrecer.**
 
 ### Global
+
+#### 📍 Pase 84 del 2026-10-04 — dos reglas de método, y las dos son de CAPA
+
+🆕 **`P253` — la identidad de paquete de un repositorio no es un hecho a una sola profundidad.**
+Profundidad 0 es una **DECLARACIÓN**, el registro es la **PUBLICACIÓN**, y en un monorepo el manifiesto
+publicado puede vivir a profundidad N y decirlo (`repository.directory`). 🔴 **Leer profundidad 0 y
+preguntarle al registro por ESE nombre no mide ninguna de las dos cosas.** Orden correcto:
+**registry-first**. Compuerta con **27/27** en `compose/code/p253-registry-first-identity/`.
+
+🆕 **`P254` — «publicado» y «presente en el árbol del origen» son ejes INDEPENDIENTES.** El *tarball*
+es inmutable y el árbol se mueve: los 5 archivos de `canvas-mcp@1.1.0` dan **404 en el repo al que el
+paquete apunta** y **200 en un fork**, 4 de 5 byte a byte idénticos. 🔵 **Un fork puede ser el único
+árbol desde el que el artefacto publicado del origen sigue siendo reproducible, así que la ausencia en
+el `HEAD` del origen no es evidencia de que nunca lo tuvo.**
 
 #### Agregado en el pase 81 del 2026-10-04 — 🆕 el riesgo de metodo que afecta a TODAS las regiones por igual
 

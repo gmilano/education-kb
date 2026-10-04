@@ -85,6 +85,39 @@ corre ése antes de escribir uno a mano** (tendencia **313**). 🟢 **Y el `gafa
 > **Pase 36 del 2026-10-02:** 🔵 **este pase no agrega repos: le pone FECHA a los que ya están, y la fecha cambia tres recomendaciones.** Se midió la capa PHP de evaluación y telemetría en Packagist —el único registro de los tres que entrega descargas en este entorno (`api.npmjs.org` y `pypistats.org` dan **403 a CONNECT**)— y el resultado está en `repos/trending.md`. **Lo que hay que saber antes de proponer desde este archivo:** 🔴 **la pieza xAPI más descargada de esta base, `rusticisoftware/tincan` (Apache-2.0, 6.178 desc./mes, 863.777 totales), no publica desde el 2022-11-02**, y ⚠️ **el único MIT de esa capa, `php-xapi/client`, está parado desde el 2021-03-24** con 825 desc./mes. 🔵 **La lectura es que en xAPI/PHP lo permisivo está quieto y lo vivo es copyleft**, así que la receta de telemetría se sostiene en **Ralph (MIT)** + **`lrsql` (Apache-2.0)** + **`learnmcp-xapi` (MIT)** y no en la capa PHP. 🟢 **Del lado de evaluación, lo activo es `oat-sa/extension-tao-testqti`** (**885 versiones**, release del **2026-09-30**) **y sigue siendo GPL-2.0-only**, mientras **lo permisivo es lo nuevo**: `@longsightgroup/qti3-cli` (**MIT**, 41 releases desde el 2026-05-21, último **2026-10-01**) con **cero dependencias de terceros** — sus 4 dependencias son todas `@longsightgroup/*` pinneadas a la misma versión exacta. **Su manifiesto MCP completo de 20 tools está escrito en `compose/patterns.md` (P76).** 🔴 **Y una corrección de catálogo: `oat-sa/qti-sdk` devuelve 404 en Packagist porque es el nombre del REPO — su paquete es `qtism/qtism`** (GPL-2.0-only, 218.212 descargas totales, 315 versiones). **Nombre de repo y nombre de paquete son identificadores distintos, y confundirlos produce un 404 que parece una ausencia** — pasó igual con `1edtech/oneroster`, `imsglobal/lti-1-3-php-library` y `packbackbooks/lti-1-3-php-library`, los tres **404**, que se anotan como *«no verificado en Packagist bajo ese nombre»* y **no** como inexistentes. ⚠️ **Acción pendiente que el pase 37 tiene asignada: este archivo nunca pasó por el control de *slugs* distintos ni por el de *backlink*** — los dos que en `agents/top.md` encontraron **un duplicado** y **dos colisiones** este mismo pase.
 > **Pase 11 del 2026-10-01:** aparece una licencia que las diez pasadas anteriores filtraban sin saberlo — **ECL-2.0**, con la que licencia todo Apereo (Sakai, Opencast, OpenLRW). Es Apache-2.0 con el alcance de patentes acotado, aprobada por OSI y FSF, y **es apta para construir arriba**. Ver la capa de analítica institucional, abajo.
 
+## 🧾 Altas fundacionales: 0 — y el estante gana la pregunta que va ANTES de clonar: ¿de qué ÁRBOL se parte? (pase 84 del 2026-10-04)
+
+🔴 **Ninguna pieza fundacional nueva.** La búsqueda de plataformas del encargo
+(`open source platform education ERP CRM MIT Apache`) devolvió `OpenEduCat` y `Moodle`, **las dos ya
+inventariadas**, y las búsquedas de agentes devolvieron la capa genérica por decimotercera vez.
+
+### 🟢 Lo que sí cambia para quien va a partir de una de estas piezas
+
+**El pase 84 midió que, para una pieza con paquete publicado, el árbol del ORIGEN puede NO reproducir
+el artefacto que el cliente instala.** Caso medido: los 5 archivos del *tarball* de `canvas-mcp@1.1.0`
+dan **404 en `vishalsachdev/canvas-mcp`** —el repo al que el propio paquete apunta con
+`repository.directory: "cli"`— y **200 en el fork `fdis111/canvas-mcp`**, con **4 de 5 byte a byte
+idénticos**. ✅ **Control positivo: la raíz del origen (`package.json`, `README.md`, `LICENSE`) da 200,
+así que `HEAD` resuelve y los 404 son reales.**
+
+🔵 **La regla operativa para este estante, que es `P254`:**
+
+1. **Bajar el *tarball* del registro** — es la única copia **inmutable** de lo que el cliente instala.
+2. **Comparar por `sha256` archivo por archivo** contra el árbol del origen **y contra los forks**.
+3. 🟢 **Partir del árbol que REPRODUCE el *tarball*, no del que lleva el nombre del autor.**
+4. ⚠️ **Declararlo en la propuesta:** el titular del `LICENSE` sigue siendo del origen (**`P184`**) y el
+   código de partida puede no serlo.
+
+### ⚠️ Y la cota que hay que leer antes de cotizar «hay paquete, hay producto»
+
+🔴 **El paquete publicado del origen del racimo más forkeado de esta base son 5 archivos y 2.704 B de
+*setup wizard*: `bin/cli.js`, `lib/wizard.js`, `lib/clients.js`, `lib/config-writer.js`.** **No trae
+servidor MCP ni UNA herramienta** — el servidor existe sólo en el árbol, bajo un nombre
+(`canvas-mcp-code-api`) que **no está publicado**. 🔵 **Así que «publicado» e «instalable como
+producto» son cosas distintas, y el estante lo dice ahora explícitamente.** Ver **`P253`** y
+`compose/code/p253-registry-first-identity/` (**27/27**).
+
+
 ## 🧾 Altas fundacionales: 0 — y el estante gana una COTA de reutilización: 7 de sus piezas Canvas son el mismo árbol con siete dueños (pase 83 del 2026-10-04)
 
 🔴 **El dato que cambia cómo se cuenta este estante: de los 17 `org/repo` Canvas que esta base cita, 7

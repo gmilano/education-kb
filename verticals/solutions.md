@@ -113,6 +113,33 @@ updated: 2026-10-04
 > **`qti3-pnp`**, que abren accesibilidad de evaluación como entregable auditable (**P72**). ⚠️ **Open edX cambia de
 > recomendación: proponer con presupuesto de mantenimiento (gap 70).** Ver la sección del pase 33, abajo.
 
+## 🧾 Sin verticales nuevas — el canal de plataformas devolvió por decimotercera vez lo que esta base ya tiene (pase 84 del 2026-10-04)
+
+🔴 **Cero plataformas nuevas, y se declara qué se buscó.** La consulta del encargo
+(`open source platform education ERP CRM MIT Apache`) devolvió **`OpenEduCat`** y **`Moodle`**, las dos
+ya inventariadas en este archivo, verificado con `grep` **antes** de escribir. ⚠️ **No se agrega una
+fila nueva ni se re-escribe una existente: el canal no rindió y eso es el dato.**
+
+🔵 **Rendimiento marginal del canal de plataformas: CERO por decimotercera vez consecutiva.** Se corre
+porque un cambio de régimen hay que verlo, no porque descubra.
+
+### ⚠️ Lo que este pase sí agrega a la capa vertical, y es una advertencia de integración
+
+**Las plataformas de este archivo se integran con conectores MCP, y el pase 84 midió que el nombre de
+un conector no identifica a su pieza.** Casos medidos sobre la capa Canvas:
+
+| Trampa medida | Caso | Consecuencia al integrar |
+|---|---|---|
+| el nombre declarado en el árbol **no está publicado** | `canvas-mcp-code-api` → **404** en npm (7 repos lo declaran) | 🔴 un `npm i` del nombre del repo **falla** |
+| el nombre de npm **igual** al del repo aterriza en **otro actor** | `mcp-canvas-lms` lo mantiene `mistercommand` sin puntero; el repo `DMontgomery40/mcp-canvas-lms` publica `canvas-mcp-server` | 🔴 **se instala código de un tercero** |
+| el *scope* **no** es el dueño de GitHub | `owentaylor/canvas-mcp` publica como `@owen-x-tech/canvas-mcp` | ⚠️ conjeturar el scope da 404 falso |
+| lo publicado **no es** el servidor | `canvas-mcp` 1.1.0 = *setup wizard*, 5 archivos, 2.704 B | 🔴 se cotiza un producto que no está ahí |
+
+🔵 **La regla para una propuesta que integre una de estas verticales con un conector: resolver la
+identidad REGISTRY-FIRST —nombre → mantenedor → `repository` (+ `directory`)— y no por el nombre del
+repo.** Ver **`P253`**, **`P254`** y `compose/code/p253-registry-first-identity/` (**27/27**).
+
+
 ## 🧾 Sin verticales nuevas — el canal de plataformas devolvió lo que esta base ya tiene, y una candidata se descarta por FECHA (pase 83 del 2026-10-04)
 
 🔴 **Barrido `open source platform education ERP CRM MIT Apache` corrido con el año calculado (`2026`):

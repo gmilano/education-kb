@@ -8,6 +8,52 @@ updated: 2026-10-04
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 
+## 2026-10-04 — pase 84: el barrido de GitHub trending vuelve vacío por decimotercera vez, y el canal que SÍ rindió fue el registro de paquetes
+
+### 🔴 Altas de repo: 0 — y se declara QUÉ se buscó
+
+| Búsqueda (año **calculado** = 2026) | Resultado |
+|---|---|
+| `top open source AI agents education 2026 github MIT` | 🔴 capa genérica (OpenClaw, OpenHands, CrewAI, LangChain) + material didáctico *sobre* AI |
+| `github trending education AI 2026 open source tutor repository` | ⚠️ **6 candidatos, los 6 ya en la base** (`DeepTutor`, `tutor-gpt`, `open-tutor-ai-CE`, `freelingo`, `human-skill-tree`, `opentutor`) |
+| `open source platform education ERP CRM MIT Apache` | 🔴 `OpenEduCat` y `Moodle`, ya inventariados |
+| `AI education industry trends 2026 adoption` | ⚠️ cifras de mercado, **todas ya publicadas** |
+
+🔵 **Rendimiento marginal del canal de búsqueda: CERO por decimotercera vez consecutiva.** Se corre
+porque un cambio de régimen hay que verlo, no porque descubra.
+
+### 🟢 El canal que rindió, y no es GitHub: `registry.npmjs.org`
+
+⚠️ **Nuevos repos, 0. Hechos nuevos sobre repos que ya estaban, 9** — ver la tabla de identidad
+instalable en `agents/trending.md` de este mismo pase y el instrumento en
+`compose/code/p253-registry-first-identity/`.
+
+🔴 **El hallazgo de topología del pase: el artefacto publicado del ORIGEN sólo se reproduce hoy desde
+un FORK.** Los 5 archivos del *tarball* de `canvas-mcp@1.1.0` dan **404 en
+`vishalsachdev/canvas-mcp`** (el repo al que el propio paquete apunta, con
+`repository.directory: "cli"`) y **200 en `fdis111/canvas-mcp`**, con **4 de 5 byte a byte
+idénticos**. ✅ **Control positivo en la misma corrida:** `package.json`, `README.md` y `LICENSE` de la
+raíz del origen dan **200**, así que `HEAD` resuelve y los 404 son reales.
+
+⚠️ **El quinto archivo no es copia: es REFACTORIZACIÓN.** `cli/lib/config-writer.js` del fork colapsa
+`configureJsonClient` + `configureCodexClient` en un `updateConfigFile(client, mutate)` con
+interruptor de formato: **86 → 78 líneas**. 🔵 **Un fork puede ser el único árbol desde el que el
+artefacto publicado del origen sigue siendo reproducible** → **`P254`**.
+
+### ⚠️ Canales que este pase midió y NO rindieron, declarados
+
+| Canal probado como enumerador de árbol | Resultado |
+|---|---|
+| `data.jsdelivr.com` | 🔴 **403 a CONNECT** (egreso bloqueado) |
+| `ungh.cc` | 🔴 **403 a CONNECT** |
+| `api.deps.dev` | 🔴 **403 a CONNECT** |
+| `archive.softwareheritage.org` | 🔴 **403 a CONNECT** |
+
+🔵 **Los cuatro dan 403 a la URL buena Y a la inexistente, así que NO DISCRIMINAN y ningún negativo
+suyo es publicable** (P249). 🔴 **Sigue sin existir en este entorno un canal que enumere el árbol de
+un repo**, que es la causa de que el gap 647 no se cierre por esta vía.
+
+
 ## 2026-10-04 — pase 83: el barrido de GitHub trending vuelve vacío por duodécima vez, y el valor del pase está en re-medir lo que la base ya tenía
 
 ### 🔴 Altas de repo: 0 — y se declara QUÉ se buscó

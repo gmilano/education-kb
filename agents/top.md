@@ -249,6 +249,55 @@ updated: 2026-10-04
 > modelo»**— y **ninguna de las dos sabe de la otra**. Ver la capa nueva al final de este archivo, las tendencias
 > **180**–**182** y el patrón **P99**.
 
+## 🟢 Altas de agente: 0 — y la capa Canvas-MCP pasa de «repos citados» a PAQUETES INSTALABLES, con una afirmación del pase 83 refutada (pase 84 del 2026-10-04)
+
+🔴 **Ningún agente nuevo entra en este pase, y se declara qué se buscó en vez de rellenar.** Las cuatro
+búsquedas globales del encargo devolvieron por **decimotercera** vez la capa genérica (OpenClaw,
+OpenHands, CrewAI, LangChain) y material didáctico *sobre* AI, que no es un agente de educación. **Los
+6 candidatos específicos que sí aparecieron estaban YA los 6 en este archivo**, verificado con `grep`
+sobre los 483 `org/repo` que esta base cita **antes** de escribir: `HKUDS/DeepTutor`,
+`plastic-labs/tutor-gpt`, `Open-TutorAi/open-tutor-ai-CE`, `artcc/freelingo`,
+`24kchengye/human-skill-tree`, `zijinz456/opentutor`.
+
+### 🟢 El dato nuevo, que es sobre entidades que YA estaban: qué se puede instalar hoy
+
+Medido contra `registry.npmjs.org` por canal **CALIBRADO** (200 al paquete que existe, 404 al que no;
+ver **P249**). ⚠️ **Nueve publicaciones, y el inventario tenía TRES de ellas como «sin paquete»:**
+
+| Repo (ya en este archivo) | Paquete publicado | Versión | Mantenedor | `repository` del paquete |
+|---|---|---|---|---|
+| `r-huijts/canvas-mcp` | `@r-huijts/canvas-mcp` | **1.5.1** | `r-huijts` | 🟢 `r-huijts/canvas-mcp` |
+| `vishalsachdev/canvas-mcp` | `canvas-mcp` | **1.1.0** | `vishalsachdev` | 🟢 `vishalsachdev/canvas-mcp` *(`directory: cli`)* |
+| `CharlieCardenasToledo/mcp-canvas-server` | `@charlie.act7/canvas-mcp-server` | **1.3.1** | `charlie.act7` | 🟢 el propio repo |
+| `DMontgomery40/mcp-canvas-lms` | `canvas-mcp-server` | **2.2.3** | `dmontgomery40` | 🟢 el propio repo |
+| `bruchris/canvas-lms-mcp` | `canvas-lms-mcp` | **1.30.0** | `bruchris` | 🟢 el propio repo |
+| `xmike04/canvas-student-mcp` | `canvas-student-mcp` | **1.3.3** | `xmike04` | 🟢 el propio repo |
+| 🆕 `imazhar101/mcp-canvas-server` | `@imazhar101/mcp-canvas-server` | **2.1.3** | `imazhar101` | 🔴 **ABSENT** |
+| 🆕 `mtgibbs/canvas-lms-mcp` | `@mtgibbs/canvas-lms-mcp` | **0.2.18** | `mtgibbs` | 🟢 el propio repo |
+| 🆕 `owentaylor/canvas-mcp` | `@owen-x-tech/canvas-mcp` | **1.1.0** | `owen-x-tech` | 🟢 `owentaylor/canvas-mcp` |
+
+⚠️ **Las tres filas 🆕 el pase 83 las anotó `pkg_name = -` («sin paquete») porque leyó el
+`package.json` del ÁRBOL, y las tres publican bajo *scope*.** 🔴 **Y el *scope* NO es el dueño de
+GitHub** (`@owen-x-tech` ← `owentaylor`), así que **conjeturar `@<dueño>/<repo>` y leer su 404 como
+ausencia es inválido**: los **8** nombres conjeturados de este pase dieron 404 y **ninguno se publica
+como hallazgo** — salen `UNDETERMINED`.
+
+### 🔴 La afirmación del pase 83 que este pase refuta
+
+Ese pase escribió que los 7 repos del racimo *«**publican** el MISMO `name` `canvas-mcp-code-api`»* y
+que la resolución por capa de paquete era *«indecidible»*. **Medido: `canvas-mcp-code-api` da 404 en
+npm** (confirmado por un segundo instrumento independiente, con control positivo). 🔵 **Los 7 lo
+DECLARAN; ninguno lo publica — un `package.json` es una declaración, no una publicación.** 🟢 **Y la
+resolución no es indecidible: aterriza en `vishalsachdev/canvas-mcp`, el MISMO origen que el canal del
+titular del `LICENSE` había coronado** — dos canales independientes convergiendo. Ver **`P253`**,
+**`P254`** y `compose/code/p253-registry-first-identity/` (**27/27**).
+
+⚠️ **La cota comercial, que ninguna columna de licencia muestra: el paquete publicado del origen son 5
+archivos y 2.704 B de *setup wizard* — NO trae servidor MCP ni UNA herramienta.** 🔴 **«Hay paquete
+publicado» no es «hay producto instalable»**, y por eso el gap **647** (cuántas *tools* agrega cada
+fork) **sigue abierto**.
+
+
 ## 🔴 El padre que el pase 82 coronó no tiene UN derivado en este cohorte, y la base ya lo sabía desde el pase 59 (pase 83 del 2026-10-04)
 
 **Altas de agente: 0.** El presupuesto se gastó en auditar la conclusión principal del pase anterior, y

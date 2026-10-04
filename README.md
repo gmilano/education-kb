@@ -62,7 +62,29 @@ o la variable de entorno (regla de **P107**, pase 47):
 | **`p251-cohort-lineage/`** | **la compuerta de `P251`: que la paternidad NO se pueda afirmar desde la ausencia de menciones en el indice propio, con la afirmacion LITERAL del pase 82 como control negativo (debe salir `NO-CLAIM`)** | `python3 test_lineage.py` | 🟢 **26/26** *(nuevo en el pase 83)* |
 | ídem, el barrido real del cohorte | topologia por 3 canales (sha256 del `LICENSE`, titular vs dueño, `package.json`); **se niega a correr si el canal no discrimina** | `sh sweep_lineage.sh > rows.tsv && python3 lineage.py rows.tsv` | 🟢 **7 `DERIVATIVE-OF` · 6 `ORIGIN-CANDIDATE` · 4 `UNDETERMINED`** de 17 |
 | **`lib/`** (clasificador compartido) | **familia por bloque de título (`P171`) + el eje de uso comercial con su COMPUERTA OSI** | `sh test_license_family.sh` | 🟢 **41/41** *(era **18/18**; `P250` agregó `0BSD`, `ISC`, familia CC, `Unlicense` y `NONCOMMERCIAL-NOT-OSI`)* |
+| **`p253-registry-first-identity/`** | **la compuerta de `P253`: que un `package.json` de ÁRBOL no pueda afirmar una PUBLICACIÓN, y que un 404 sobre un nombre CONJETURADO no pueda afirmar una ausencia; con la afirmación literal del pase 83 (*«los 7 publican `canvas-mcp-code-api`»*) como control negativo | `python3 test_identity.py` | 🟢 **27/27** *(nuevo en el pase 84)* |
 
+
+⚠️ **Pase 84 del 2026-10-04 — la columna «Hoy» NO se re-verificó en este pase, y el motivo es del
+entorno:** la ejecución de las **35 suites PREEXISTENTES** de este árbol clonado quedó **NEGADA**
+(`[Code from External]`), igual que en los pases **58**, **67**, **79**, **80** y **81**, y al revés que
+en el **66**, el **75**, el **82** y el **83**. **No se reimplementaron a mano, no se buscó otro
+intérprete y no se troceó el comando** — la negativa es sobre el resultado, no sobre la forma.
+🔴 **Consecuencia declarada en vez de tapada: las cifras de esta tabla son las que el pase 83 reprodujo;
+el pase 84 NO las afirma como medidas hoy.** 🟢 **Lo único que este pase midió de ejecución es su propio
+código: `p253-registry-first-identity/test_identity.py`, **27/27**, `Python 3.11.15`.** 🔵 **La frontera
+medida fue exactamente ésa —código escrito en este pase sí, suites preexistentes no— y NO se eleva a
+regla del entorno: varía entre pases, y generalizarla es el error que los pases 50, 51 y 58 cometieron en
+una dirección y el 52, el 66 y el 75 en la otra.** ⚠️ **Tampoco se pudo leer el estado del proxy
+(`__agentproxy/status`): negado por contención, así que el egreso permitido se sigue conociendo host por
+host.**
+
+🔵 **El canal CALIBRADO de este pase (200 a la URL buena, 404 a la inexistente — `P249`):** 🟢
+`raw.githubusercontent.com`, `registry.npmjs.org` y `pypi.org` **discriminan**; `api.github.com/rate_limit`
+da **200**. 🔴 **`github.com` por `curl` y `api.github.com/repos/*` dan 403 a la buena Y a la inexistente
+→ NO DISCRIMINAN**, y `data.jsdelivr.com`, `ungh.cc`, `api.deps.dev` y `archive.softwareheritage.org` dan
+**403 a CONNECT**. ⚠️ **Así que el `curl -sI` a `github.com` que el encargo ordena para verificar URLs es,
+medido, el canal que no puede opinar** — las URLs de este pase se verificaron por `raw` y por el registro.
 
 🟢 **Pase 83 del 2026-10-04 — la columna «Hoy» se re-verificó COMPLETA por SEGUNDO pase consecutivo: 36 invocaciones de suite, 36 con código de salida 0** (`Python 3.11.15`; el pase 82 corrió 34). ⚠️ **La única que salió roja tenía razón y el defecto era del pase, no suyo:** `reproduce_p224.py` no podía leer `81e3e9a:agents/top.md` porque este pase clonó con `--depth 1`, y **el mensaje de la propia suite nombraba el remedio** (`git fetch --depth`); hecho el *fetch* acotado, **3/3**. 🔵 **Un instrumento que depende de la HISTORIA del repositorio falla por la FORMA del clon, y eso es una precondición de entorno — no un hallazgo sobre el dato.** 🔴 **Y el primer roll-up de este pase leyó 2 de 36 porque su glob `test_*.py` se expandía en el directorio equivocado: otra vez el instrumento de LECTURA, como en el pase 82.**
 

@@ -102,6 +102,126 @@ updated: 2026-10-04
 > están mal por ~2× y **un 403 de `curl` no es un 404**. Ver la nota de método del pase 12.
 > **Pase 11:** el Digital Omnibus es derecho vigente (tendencia 25), aparece la capa predictiva y está vacía (tendencia 26), y se corrige un error de método de diez pasadas sobre licencias permisivas (tendencia 27).
 
+## 🆕 Tendencias 651–658 — pase 84 del 2026-10-04
+
+**651. 🔴 El pase 83 llamó «publicado» a un `package.json`, y el nombre no existe en el registro.** La
+frase fue *«los 7 del racimo `Vishal Sachdev` **publican** el MISMO `name` `canvas-mcp-code-api`»*.
+Medido contra `registry.npmjs.org` por canal **calibrado**: **`canvas-mcp-code-api` da 404**, y la
+ausencia se confirmó con un **segundo instrumento independiente** (el *endpoint* de búsqueda del
+registro: **cero coincidencias exactas**, mientras su **control positivo** —`canvas-lms-mcp`— devuelve
+el nombre exacto como **primer** resultado). 🔵 **Un `package.json` en un árbol es una DECLARACIÓN de
+intención; el registro es la PUBLICACIÓN**, y son hechos de capas distintas. 🆕 **`P253`**, con
+compuerta ejecutable: **27/27** en `compose/code/p253-registry-first-identity/`.
+
+⚠️ **Y la acreditación honesta, porque esto NO es un eje nuevo de esta base: `P188` (pase 67) ya había
+escrito que «una URL de `repository` DECLARADA es una afirmación, no un canal», con la prueba de dos
+pasos ¿declara? / ¿resuelve?** 🔴 **Pero la escribió sólo en la dirección registro → repo, y el caso de
+este pase es el ESPEJO —árbol → registro—, que `P188` no cubría.** 🔵 **Así que el pase 83 violó un
+principio que esta base tenía escrito 16 pases antes, y la causa es `P237`/`P252` otra vez: `P188`
+nunca se volvió compuerta ejecutable en la dirección que faltaba.** ⚠️ **Es también la QUINTA aparición
+de la clase «promesa que no existe» de `P188`, ahora sobre el PAQUETE.**
+
+**652. 🟢 Y la segunda mitad de esa conclusión también cae, en la dirección CONTRARIA: la resolución
+por capa de paquete no es «indecidible» — aterriza, y aterriza bien.** `canvas-mcp` **sí** está
+publicado: mantenedor **`vishalsachdev`**, `repository.url` → **`vishalsachdev/canvas-mcp`**. 🔵 **Es
+el MISMO origen que el canal del titular del `LICENSE` coronó en el pase 83, alcanzado por un canal
+que no comparte nada con aquél** — y dos canales independientes que convergen es justo la condición
+que esta base exige antes de promover una afirmación. ⚠️ **Así que el pase 83 acertó el padre y erró
+el método para decirlo**, y el pase 84 lo confirma por el camino que aquél declaró cerrado.
+
+**653. 🪜 La causa del error es de PROFUNDIDAD, y es un eje que esta base no tenía.** El repo lleva
+**dos** manifiestos: `./package.json` declara `canvas-mcp-code-api@1.0.6` con `repository` **ABSENT**
+y **no se publica**; `./cli/package.json` declara `canvas-mcp@1.1.0` con **`repository.directory:
+"cli"`** y **sí se publica**. 🔴 **Un instrumento que lee profundidad 0 y le pregunta al registro por
+ESE nombre no mide ninguna de las dos cosas: mide la intersección de sus propias dos conjeturas.**
+🟢 **El orden correcto es registry-first** —nombre → mantenedor → `repository` (+ `directory`)— **y no
+tree-first**, que es el orden que los pases 82 y 83 usaron.
+
+**654. ⚠️ Lo que aterriza no es lo que se busca, así que el gap 647 sigue abierto y ahora su causa es
+de CAPA.** El paquete publicado son **2.704 B y 5 archivos** (`bin/cli.js`, `lib/clients.js`,
+`lib/config-writer.js`, `lib/wizard.js`, `package.json`) y se describe como *«Setup wizard for Canvas
+MCP»*: 🔴 **no trae servidor MCP ni UNA herramienta.** 🔵 **La resolución acierta el REPOSITORIO y no
+contesta la superficie** — el gap 647 (cuántas *tools* agrega cada fork) no se cierra por la capa de
+paquete, igual que no se cerró por `docs/TOOLS.md` (**1 de 17**). ⚠️ **Y los cuatro enumeradores de
+árbol que este pase probó —`data.jsdelivr.com`, `ungh.cc`, `api.deps.dev`,
+`archive.softwareheritage.org`— dan 403 a CONNECT a la URL buena Y a la inexistente: NO DISCRIMINAN**,
+así que sigue sin existir en este entorno un canal que enumere el árbol de un repo.
+
+**655. 🔴 El artefacto publicado del ORIGEN sólo se reproduce hoy desde un FORK.** Los 5 archivos del
+*tarball* sondeados a `HEAD` en los dos árboles: **404 los 5 en `vishalsachdev/canvas-mcp`** —el repo
+al que el propio paquete apunta— y **200 los 5 en `fdis111/canvas-mcp`**, con **4 de 5 byte a byte
+idénticos** al *tarball*. ✅ **Control positivo en la misma corrida: `package.json`, `README.md` y
+`LICENSE` de la raíz del origen dan 200**, así que `HEAD` resuelve y los 404 son **reales**.
+⚠️ **El quinto no es copia: es REFACTORIZACIÓN** — el fork colapsa `configureJsonClient` +
+`configureCodexClient` en un `updateConfigFile(client, mutate)` con interruptor de formato, **86 → 78
+líneas**. 🆕 **`P254`: «publicado» y «presente en el árbol del origen» son ejes INDEPENDIENTES** — el
+*tarball* es inmutable y el árbol se mueve, así que **la ausencia en el `HEAD` del origen no es
+evidencia de que el origen nunca lo tuvo**, y un fork puede ser el único árbol reproducible.
+
+**656. 🔴 La lectura de árbol falla en LOS DOS sentidos, y el pase 83 sólo vio uno.** Sobre-reporta en
+**5** filas (declaran un nombre que el registro no tiene) y **sub-reporta en 3**: `imazhar101`,
+`mtgibbs` y `owentaylor` quedaron anotados `pkg_name = -` («sin paquete») y publican
+**`@imazhar101/mcp-canvas-server` 2.1.3**, **`@mtgibbs/canvas-lms-mcp` 0.2.18** y
+**`@owen-x-tech/canvas-mcp` 1.1.0**. 🔵 **Tres piezas del inventario son instalables hoy y la base las
+tenía sin paquete** — y el signo importa, como en la tendencia **603**: sobre-reportar excluye una
+pieza usable, **sub-reportar la esconde**.
+
+**657. 🔴 El *scope* de npm NO es el dueño de GitHub, y por eso un 404 conjeturado no es una ausencia.**
+El caso que lo prueba: `owentaylor/canvas-mcp` publica como **`@owen-x-tech/canvas-mcp`**. 🔵 **Así que
+construir `@<dueño>/<repo>` y leer su 404 como «no publica» es P249 otra vez, en la capa de nombres:
+los 8 nombres conjeturados de este pase dieron 404 y ninguno se publica como hallazgo** — salen
+`UNDETERMINED`, y la compuerta no tiene camino para convertirlos en ausencia. ⚠️ **Y la trampa
+simétrica, medida: el nombre de npm `mcp-canvas-lms` lo mantiene `mistercommand` SIN puntero de
+repositorio, mientras el repo `DMontgomery40/mcp-canvas-lms` publica bajo `canvas-mcp-server`.
+Casar «nombre de npm == nombre de repo» aterriza en OTRO actor.**
+
+**658. 🔵 El barrido regional obligatorio se agota por DECIMOTERCERA vez, y el pase se pilló a sí mismo
+un falso negativo de LECTOR.** Las cuatro regiones y las cuatro búsquedas globales corridas con el año
+**calculado** (`2026`); todos los hechos devueltos estaban ya publicados, confirmado con `grep`
+**antes** de escribir: `Claude Corps`, `Council of Europe`, `EdTech 200`, `Digital Education Council`
+(52), `IMDA` (40), las cifras LATAM de la encuesta 2026 (**73,5 %** ×28, **26,0 %** ×16), `UNAM`,
+`Tecnológico de Monterrey`. 🔴 **Y la única cifra que pareció nueva no lo era: el *token* `2303` dio
+CERO coincidencias porque esta base la escribe `2.303,2`** —la terna de North America
+(**$951 M → $2.303,2 M**, CAGR 15,9 %) está desde el pase 44, **con su conflicto interno de CAGR ya
+registrado**. 🔵 **Un separador decimal convirtió un dato presente en un «hallazgo»: otra vez el
+instrumento de LECTURA y no el dato**, como en las tendencias 622 y 649. ⚠️ **Rendimiento marginal del
+canal de búsqueda: CERO por decimotercera vez; lo que rindió fue, por quinta vez consecutiva, una
+dimensión INTERNA — auditar una conclusión del pase anterior.**
+
+### ⚠️ La frontera de ejecución de este pase, medida y NO generalizada
+
+🔴 **La ejecución de las 35 suites PREEXISTENTES de este árbol clonado quedó NEGADA
+(`[Code from External]`)**, como en los pases 58, 67, 79, 80 y 81 y al revés que en el 66, el 75, el 82
+y el 83. **No se reimplementaron a mano, no se buscó otro intérprete y no se troceó el comando.**
+🔴 **Consecuencia declarada en vez de tapada: la columna «Hoy» del `README.md` de la raíz NO se
+re-verificó en el pase 84, y este pase NO afirma esas cifras como medidas hoy** — son las que el
+pase 83 reprodujo. 🟢 **Lo que SÍ corrió fue el código escrito en este pase: `test_identity.py`,
+**27/27**, `Python 3.11.15`.** 🔵 **La frontera medida fue exactamente ésa —código de este pase sí,
+suites preexistentes no— y no se eleva a regla del entorno: varía entre pases, y generalizarla es el
+error que los pases 50, 51 y 58 cometieron en una dirección y el 52, el 66 y el 75 en la otra.**
+⚠️ **Tampoco se pudo leer el estado del propio proxy** (`__agentproxy/status`): **negado por
+contención**, así que la lista de egreso permitido sigue conociéndose sólo host por host.
+
+🔴 **Y como `check_tables.py` y `check_frontmatter.py` son código PREEXISTENTE de este árbol, tampoco
+corrieron, así que este pase verificó sus propias inserciones con un contador escrito en el pase — con
+el resultado previsible.** 🟢 **Lo que ese contador sí afirma, y es la parte sólida: `0` defectos de
+tabla en las 596 líneas que este pase agregó, y `61 de 61` archivos `.md` con *frontmatter* completo y
+`region` en vocabulario cerrado.** ⚠️ **Lo que NO se publica como hallazgo: las 32 filas que marcó en
+líneas PREEXISTENTES.** 🔵 **El contador no maneja pipes escapados (`\|`) ni pipes dentro de código en
+línea, y un control positivo que no ejercita ESE caso no lo habilita (regla 2 de `P126`)** — es la
+cuarta vez que un contador escrito en el pase produce falsos positivos antes que hallazgos
+(tendencias **326**, **622**, **649**), y esta vez se detuvo antes de publicarlos.
+
+🔵 **El canal medido hoy:** 🟢 `raw.githubusercontent.com` (**200** a archivo que existe, **404** al
+que no → **CALIBRADO**), `registry.npmjs.org` (**200/404 → CALIBRADO**), `pypi.org` (**200/404 →
+CALIBRADO**), `api.github.com/rate_limit` (**200**); 🔴 `github.com` por `curl` y
+`api.github.com/repos/*` dan **403 a la buena Y a la inexistente → NO DISCRIMINAN**, y
+`data.jsdelivr.com`, `ungh.cc`, `api.deps.dev` y `archive.softwareheritage.org` dan **403 a CONNECT**.
+⚠️ **Otra vez el único *endpoint* de la API que pasa es el que NO transporta dato de repositorio — y
+el `curl -sI` a `github.com` que el encargo ordena para verificar URLs es, medido, el canal que no
+discrimina.**
+
+
 ## 🆕 Tendencias 643–650 — pase 83 del 2026-10-04
 
 **643. 🔴 El pase 82 coronó un padre que las mediciones de los pases 59, 60 y 62 de esta misma base ya

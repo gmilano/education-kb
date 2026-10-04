@@ -111,6 +111,152 @@ updated: 2026-10-04
 > **Pase 11:** +2 patrones — **P25** (riesgo de abandono conforme al Anexo III, la capa con presupuesto ya asignado y sin oferta open source) y **P26** (agente docente sobre la ontología curricular nacional ya publicada).
 > **Pase 27:** **+4 patrones y una corrección.** 🔴 **P51 queda con premisa falsa** —el conector MCP de Moodle **sí existe y es MIT**— y lo reemplazan **P54** (corrección y devolución sobre Moodle con **compuerta humana**, el último tramo del gap 6, con piezas que ya escriben), **P55** (el conector de **Open edX**, que es el único que de verdad no existe), **P56** (**SCORM** como formato de salida de la capa generativa: cero integración, offline) y **P57** (evidencia por MCP cotizada sobre lo que CaSS **realmente** expone — 6 de 61 operaciones, con insignias y autoría de marcos **fuera**).
 
+## 🧩 P253 — `P188` EN EL SENTIDO CONTRARIO: un manifiesto de ÁRBOL que declara un paquete es una afirmación, y hay que medirla a su PROFUNDIDAD (pase 84 del 2026-10-04)
+
+**El caso.** El pase 83 escribió (tendencia **646**) que los 7 repos del racimo *«**publican** el MISMO
+`name` `canvas-mcp-code-api`»* y que, sin `repository`, *«la resolución por capa de paquete en esta
+familia es **indecidible**»*. **Medido contra `registry.npmjs.org` por canal CALIBRADO, las dos mitades
+caen, y en direcciones opuestas:**
+
+| Afirmación del pase 83 | Medición del pase 84 |
+|---|---|
+| los 7 **publican** `canvas-mcp-code-api` | 🔴 **ese nombre da 404: ninguno lo publica.** Los 7 lo **DECLARAN** |
+| la resolución por paquete es **indecidible** | 🟢 **resuelve, y bien:** `canvas-mcp` existe, mantenedor **`vishalsachdev`**, `repository.url` → `vishalsachdev/canvas-mcp` |
+
+🔵 **Y el padre al que aterriza es el MISMO que el canal del titular del `LICENSE` coronó en el pase 83,
+por un canal que no comparte nada con aquél** — dos canales independientes convergiendo, que es la
+condición que esta base exige antes de promover una afirmación. ⚠️ **Así que el pase 83 acertó el padre
+y erró el método para decirlo.**
+
+### 🔴 Lo que esto es, dicho con precisión: no es un eje nuevo, es `P188` sin su espejo
+
+**`P188` (pase 67) ya había establecido** que *«una URL de `repository` DECLARADA es una afirmación, no
+un canal»*, con la prueba de dos pasos: **(1) ¿declara?, (2) ¿resuelve?** 🔴 **Pero la escribió sólo en
+la dirección registro → repo.** El caso de este pase es **el espejo exacto**, y `P188` no lo cubría:
+
+| Dirección | Quién declara | Qué hay que verificar | Patrón |
+|---|---|---|---|
+| registro → repo | el manifiesto **publicado** declara un `repository` | ¿ese repo **resuelve**? | **`P188`** (pase 67) |
+| **árbol → registro** | el `package.json` del **árbol** declara un `name` | 🔴 **¿ese nombre está PUBLICADO?** | 🆕 **`P253`** |
+
+⚠️ **Es la QUINTA aparición de la clase «promesa que no existe» de `P188`, ahora sobre el PAQUETE: un
+manifiesto de árbol prometiendo una publicación que nadie verificó.** 🔵 **Y es `P237`/`P252` otra vez
+—una corrección que vive en prosa no viaja—: el pase 83 violó un principio que esta base tenía escrito
+**16 pases antes**, porque `P188` nunca se volvió compuerta ejecutable en la dirección que faltaba.
+Ahora lo es.**
+
+### 🪜 El eje que sí es nuevo: la PROFUNDIDAD
+
+El repo lleva **dos** manifiestos, y ninguno de los dos solo contesta la pregunta:
+
+| Profundidad | Manifiesto | ¿Publicado? |
+|---|---|---|
+| `./package.json` | `canvas-mcp-code-api@1.0.6`, `repository` **ABSENT** | 🔴 **no** (404) |
+| `./cli/package.json` | `canvas-mcp@1.1.0`, **`repository.directory: "cli"`** | 🟢 **sí** |
+
+🔴 **Un instrumento que lee profundidad 0 y le pregunta al registro por ESE nombre no mide ninguna de
+las dos cosas: mide la intersección de sus propias dos conjeturas.**
+
+### El cableado — REGISTRY-FIRST, que es el orden inverso al de los pases 82 y 83
+
+```sh
+# 1. Al REGISTRO primero: es la capa AUTORITATIVA de publicación.
+#    Calibrar antes de creerle un negativo (P249): 200 al que existe, 404 al que no.
+sh compose/code/p253-registry-first-identity/sweep_identity.sh \
+   canvas-mcp canvas-mcp-code-api canvas-lms-mcp canvas-mcp-server
+# -> pkg_name  http  latest  maintainers  pub_repo  pub_dir
+```
+```sh
+# 2. Al ÁRBOL después, y en las DOS profundidades: la raíz Y el directorio que el registro nombró.
+for p in package.json cli/package.json; do
+  curl -sS -o /dev/null -w "$p %{http_code}\n" \
+    "https://raw.githubusercontent.com/<org>/<repo>/HEAD/$p"
+done
+```
+```sh
+# 3. La COMPUERTA: ninguna lectura de árbol niega sola, ningún 404 conjeturado niega.
+python3 compose/code/p253-registry-first-identity/test_identity.py   # 27/27
+```
+
+### ⚠️ La COMPUERTA, y el caso del mundo que la obliga
+
+🔴 **El *scope* de npm NO es el dueño de GitHub:** `owentaylor/canvas-mcp` publica como
+**`@owen-x-tech/canvas-mcp`**. 🔵 **Así que construir `@<dueño>/<repo>` y leer su 404 como «no publica»
+es `P249` en la capa de nombres.** Los **8** nombres conjeturados de este pase dieron 404 y **ninguno se
+publica como ausencia**: salen `UNDETERMINED`, y la compuerta no tiene camino para convertirlos en
+ausencia.
+
+### 🔴 Y la lectura de árbol falla en LOS DOS sentidos
+
+| Dirección | Caso | Cuántos | Consecuencia comercial |
+|---|---|---|---|
+| **sobre-reporta** | el árbol declara un nombre que el registro no tiene | **5** | se promete un instalable que no existe |
+| **sub-reporta** | el registro publica algo que el árbol anotó `-` | **3** | 🔴 **se esconde una pieza instalable** |
+
+Los 3 escondidos, instalables hoy: `@imazhar101/mcp-canvas-server` **2.1.3**,
+`@mtgibbs/canvas-lms-mcp` **0.2.18**, `@owen-x-tech/canvas-mcp` **1.1.0**. 🔵 **El signo importa, como
+en la tendencia 603: sobre-reportar excluye una pieza usable; sub-reportar la esconde.**
+
+### ⚠️ Lo que este patrón NO compra
+
+🔴 **No contesta la superficie, así que el gap 647 sigue abierto.** El paquete publicado del origen son
+**5 archivos y 2.704 B** de *setup wizard* (`bin/cli.js`, `lib/wizard.js`, `lib/clients.js`,
+`lib/config-writer.js`): **no trae servidor MCP ni UNA herramienta.** 🔵 **Quien cotice «hay paquete
+publicado» como «hay producto instalable» cotiza mal.** ⚠️ **Y los 4 enumeradores de árbol probados
+—`data.jsdelivr.com`, `ungh.cc`, `api.deps.dev`, `archive.softwareheritage.org`— dan 403 a CONNECT a la
+URL buena Y a la inexistente: NO DISCRIMINAN**, así que sigue sin existir un canal que enumere el árbol.
+
+### 🔴 La trampa de colisión, medida
+
+El nombre de npm **`mcp-canvas-lms`** lo mantiene **`mistercommand`** y **no trae puntero de
+repositorio**, mientras el repo `DMontgomery40/mcp-canvas-lms` publica bajo **`canvas-mcp-server`**.
+🔵 **Casar «nombre de npm == nombre de repo» aterriza en OTRO actor** — y es el riesgo directo de la
+receta de descubrimiento de **`P117`**, que busca por `?text=` y devuelve nombres.
+
+---
+
+## 🧬 P254 — «publicado» y «presente en el árbol del origen» son ejes INDEPENDIENTES, y a veces el único árbol reproducible es un FORK (pase 84 del 2026-10-04)
+
+**El caso.** El paquete `canvas-mcp@1.1.0` declara `repository.url` → `vishalsachdev/canvas-mcp` con
+`directory: "cli"`. **Sondeados los 5 archivos del *tarball* a `HEAD` en los dos árboles:**
+
+| Archivo del *tarball* | `vishalsachdev/canvas-mcp` (origen) | `fdis111/canvas-mcp` (fork) | vs *tarball* |
+|---|---|---|---|
+| `cli/package.json` | 🔴 **404** | 🟢 200 | **idéntico** |
+| `cli/bin/cli.js` | 🔴 **404** | 🟢 200 | **idéntico** |
+| `cli/lib/clients.js` | 🔴 **404** | 🟢 200 | **idéntico** |
+| `cli/lib/wizard.js` | 🔴 **404** | 🟢 200 | **idéntico** |
+| `cli/lib/config-writer.js` | 🔴 **404** | 🟢 200 | ⚠️ **DIFIERE** |
+
+✅ **Control positivo en la misma corrida, obligatorio antes de creerle a los 404:** `package.json`,
+`README.md` y `LICENSE` de la raíz del origen dan **200**, así que `HEAD` resuelve y **los 404 de
+`cli/` son reales**, no un artefacto del *ref*.
+
+**La regla.** 🔵 **El *tarball* es inmutable y el árbol se mueve, así que la ausencia de un archivo en
+el `HEAD` del origen NO es evidencia de que el origen nunca lo tuvo** — y el puntero del registro puede
+apuntar, de buena fe, a un camino que ya no existe en el repo al que apunta.
+
+⚠️ **Y el quinto archivo no es una copia: es una REFACTORIZACIÓN.** El fork colapsa
+`configureJsonClient` + `configureCodexClient` en un solo `updateConfigFile(client, mutate)` con
+interruptor de formato (`isToml`): **86 → 78 líneas, 2.170 B → 2.128 B.**
+
+### 🟢 Qué cambia para un engagement, que es el punto
+
+🔴 **Si hay que PARTIR del artefacto publicado de una pieza, el árbol del origen puede no servir.**
+La receta:
+
+1. **Bajar el *tarball*** (`registry.npmjs.org/<pkg>/-/<pkg>-<ver>.tgz`) — es la única copia inmutable.
+2. **Comparar por `sha256` archivo por archivo** contra el árbol del origen **y contra los forks**.
+3. 🟢 **Elegir el árbol que reproduce el *tarball*, no el que tiene el nombre del autor** — acá es un
+   fork, y además trae una mejora que el publicado no tiene.
+4. ⚠️ **Decir en la propuesta de qué árbol se partió**, porque el linaje del entregable deja de ser
+   obvio: el titular del `LICENSE` sigue siendo del origen (`P184`), y el código de partida no.
+
+🔵 **Es el complemento de `P238`** (*«cuando el FUENTE de un fork es idéntico byte a byte, lo que se
+bifurcó es el SUITE DE PRUEBAS»*): acá el fuente **no** es idéntico, y lo que se bifurcó fue **un
+archivo con una refactorización que el artefacto publicado no incorporó**.
+
+
 ## 🧬 P251 — cómo elegir punto de partida en una familia de forks sin coronar al padre equivocado (pase 83 del 2026-10-04)
 
 **El problema real que esta receta resuelve.** Un engagement sobre Canvas LMS empieza buscando «canvas
