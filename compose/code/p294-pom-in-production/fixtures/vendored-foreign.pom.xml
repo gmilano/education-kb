@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SINTETICO. Control negativo de P280 en version Maven: un pom de un tercero
+     vendorizado dentro del repo de una institucion. Su licencia NO es la del repo. -->
+<project xmlns="http://maven.apache.org/POM/4.0.0">
+  <groupId>com.thirdparty.reporting</groupId>
+  <artifactId>jasper-widgets</artifactId>
+  <name>Jasper Widgets</name>
+  <licenses>
+    <license><name>GNU General Public License, Version 2</name></license>
+  </licenses>
+</project>

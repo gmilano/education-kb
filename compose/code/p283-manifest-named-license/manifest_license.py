@@ -167,12 +167,115 @@ def _ini_manifest(body):
     return (name, lic, files)
 
 
+
+# ---------------------------------------------------------------------------
+# P294 (pase 97): `pom.xml` entra al camino de PRODUCCION.
+#
+# El pase 96 diagnostico que este modulo es CIEGO a Maven --su `PARSERS` son Python, JS, PHP
+# y Rust-- mientras la capa de plataforma educativa es JAVA/MAVEN (Kuali, Sakai, DSpace,
+# OpenOLAT, UniTime, SEB Server), y escribio el lector correcto en `p289-maven-manifest/`
+# con su suite en 11/11.  Lo que NO hizo fue conectarlo: medido hoy, `PARSERS` seguia con
+# cinco nombres y NADA fuera de `p289/` referenciaba ese lector.  El hueco que el pase 96
+# diagnostico seguia abierto justo donde se producen los veredictos.
+#
+# El XML no se reimplementa (P237): se importa de p289, que conserva su suite como el
+# control de la lectura.  `test_wiring.py` de `p294-pom-in-production/` afirma que este
+# import resuelve a ese archivo, para que mover p289 FALLE en voz alta en vez de que esta
+# base termine con dos lectores de XML divergentes.
+def _p289_reader():
+    import importlib.util
+    import os
+    here = os.path.dirname(os.path.abspath(__file__))
+    path = os.path.normpath(os.path.join(here, "..", "p289-maven-manifest", "maven_license.py"))
+    spec = importlib.util.spec_from_file_location("p289_maven_license", path)
+    if spec is None or spec.loader is None:
+        raise ImportError("P294: no se pudo cargar el lector de pom.xml de p289: %s" % path)
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    return mod
+
+
+def _maven_identity(body):
+    """Los nombres con que un `pom.xml` se identifica, en orden de fuerza (P294).
+
+    `groupId` primero porque es un namespace reverse-DNS que suele CODIFICAR a la
+    organizacion dueniaa (`org.kuali.coeus` en `kuali/kc`), que es exactamente la identidad
+    que P280 quiere comparar.  Despues `artifactId` y el `<name>` humano.
+
+    Solo hijos DIRECTOS de `<project>`: el `<parent>` de un pom es OTRO proyecto --el de
+    `SafeExamBrowser/seb-server` es `org.springframework.boot`-- y tomar su identidad como
+    propia es el error que P280 existe para impedir.  La suite lo afirma con su negativo.
+    """
+    import xml.etree.ElementTree as ET
+    def local(tag):
+        return tag.rsplit("}", 1)[-1] if "}" in tag else tag
+    try:
+        root = ET.fromstring(body)
+    except ET.ParseError:
+        return []
+    if local(root.tag) != "project":
+        return []
+    found = {}
+    for child in root:
+        key = local(child.tag)
+        if key in ("groupId", "artifactId", "name") and (child.text or "").strip():
+            found.setdefault(key, " ".join(child.text.split()))
+    return [found[k] for k in ("groupId", "artifactId", "name") if k in found]
+
+
+def _maven_manifest(body):
+    """pom.xml -> (candidatos_de_identidad, licencia_declarada, []).
+
+    Devuelve el nombre como LISTA: un pom se identifica con hasta tres campos y ninguno
+    solo alcanza (medido: con `artifactId` como identidad unica, `kuali/kc` y
+    `sakaiproject/sakai` salen FOREIGN siendo propios).  `read_manifest` sabe resolver
+    una lista con `ownership_any`.
+
+    Un pom no NOMBRA archivos de licencia, asi que la tercera posicion es siempre `[]`:
+    de esta capa no sale la respuesta a P279, sale la DECLARACION.
+    """
+    names = _p289_reader().declared_license_names(body)
+    lic = " OR ".join(names) if names else None
+    ids = _maven_identity(body)
+    return (ids or None, lic, [])
+
+
+# Orden de preferencia de un veredicto de propiedad: OWN gana, NONAME es "no se sabe".
+_OWN_RANK = {OWN: 3, WEAK: 2, FOREIGN: 1, NONAME: 0}
+
+
+def ownership_any(repo, candidates):
+    """El MEJOR veredicto de P280 entre varios candidatos, contra los DOS segmentos del slug.
+
+    -> (veredicto, candidato_que_lo_gano)
+
+    Por que los dos segmentos: `ownership()` compara contra `repo.split("/")[-1]`, o sea
+    descarta la organizacion.  En Maven eso es fatal --`kuali/kc` declara `org.kuali.coeus`
+    y `Kuali Coeus`, y NINGUNO se parece a `kc`, pero los dos se parecen a `kuali`--, y la
+    fila perdida es la de licencia mas consecuente del inventario (AGPL-3.0 §13 sobre un ERP
+    universitario entregado como SaaS).
+
+    `ownership()` queda INTACTA: sus 34 aserciones siguen valiendo y las 200 filas ya
+    publicadas no se mueven.  Esto es una capa de resolucion ENCIMA, no un cambio de regla.
+    """
+    if not candidates:
+        return (NONAME, None)
+    org = repo.split("/")[0] if "/" in repo else repo
+    best, who = NONAME, None
+    for cand in candidates:
+        for target in (repo, "org/" + org):
+            v = ownership(target, cand)
+            if _OWN_RANK[v] > _OWN_RANK[best]:
+                best, who = v, cand
+    return (best, who)
+
 PARSERS = {
     "package.json": _json_manifest,
     "composer.json": _json_manifest,
     "pyproject.toml": _toml_manifest,
     "Cargo.toml": _toml_manifest,
     "setup.cfg": _ini_manifest,
+    "pom.xml": _maven_manifest,
 }
 
 
@@ -184,10 +287,19 @@ def read_manifest(filename, body, repo):
     name, lic, files = parser(body)
     if name is None and lic is None and not files:
         return None
-    own = ownership(repo, name)
+    # P294: un parser puede devolver VARIOS candidatos de identidad (pom.xml). El contrato de
+    # salida no cambia -- "name" sigue siendo una cadena, la que GANO el veredicto -- porque
+    # `sweep_named.sh` lee esa clave.
+    candidates = list(name) if isinstance(name, (list, tuple)) else None
+    if candidates is not None:
+        own, winner = ownership_any(repo, candidates)
+        name = winner if winner is not None else (candidates[0] if candidates else None)
+    else:
+        own = ownership(repo, name)
     return {
         "manifest": filename,
         "name": name,
+        "names": candidates,
         "license": lic,
         "license_files": files,
         "ownership": own,

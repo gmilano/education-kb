@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SINTETICO, con la forma REAL de SafeExamBrowser/seb-server: el <parent> es
+     org.springframework.boot. Tomar la identidad del parent como propia es el error
+     que P280 existe para impedir, y ademas arrastraria una licencia ajena. -->
+<project xmlns="http://maven.apache.org/POM/4.0.0">
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>3.2.0</version>
+  </parent>
+  <artifactId>seb-server</artifactId>
+  <licenses>
+    <license><name>Mozilla Public License, Version 2.0</name></license>
+  </licenses>
+</project>

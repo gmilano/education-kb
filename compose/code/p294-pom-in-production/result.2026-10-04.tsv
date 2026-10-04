@@ -1,0 +1,7 @@
+slug	pom_bytes	ganador	propiedad	atribuible	declarado	familia	publicado	acuerdo
+kuali/kc	118096	org.kuali.coeus	OWN	True	GNU Affero General Public License, Version 3	AGPL-3.0 (declaracion)	AGPL-3.0	ACUERDO
+sakaiproject/sakai	14871	org.sakaiproject	OWN	True	Educational Community License, Version 2.0	ECL-2.0	ECL-2.0	ACUERDO
+UniTime/unitime	26622	org.unitime	OWN	True	Apache Software License (ASL), Version 2.0	Apache-2.0 (declaracion)	Apache-2.0	ACUERDO
+OpenOLAT/OpenOLAT	84781	org.openolat	OWN	True	Apache 2.0 Open Source L6icense	Apache-2.0 (declaracion)	Apache-2.0	ACUERDO
+DSpace/DSpace	100203	org.dspace	OWN	True	DSpace BSD License	BSD (declaracion)	BSD-3-Clause	ACUERDO_MENOS_PRECISO
+SafeExamBrowser/seb-server	15918	seb-server	OWN	True	<NADA>	-	MPL-2.0	SIN_DECLARACION

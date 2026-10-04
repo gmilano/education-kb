@@ -89,11 +89,12 @@ ck("trend context ENDS at the next, non-trend header",
 # -- citation parsing: the shapes this base actually writes -----------------
 def cites_in(line):
     out = []
-    for m in A.CITE.finditer(line):
+    for m in A.cite_matches(line):
         blob = m.group(1)
         nums = [int(x) for x in A.NUM.findall(blob)]
         import re as _re
-        ranged = _re.search(r"\d\s*%s\s*\d" % A.DASH, blob) and len(nums) == 2
+        ranged = (_re.search(r"\d\s*(?:%s|\s+a\s+)\s*\d" % A.DASH, blob)
+                  and len(nums) == 2)
         if ranged and nums[0] < nums[1] and nums[1] - nums[0] < 100:
             nums = list(range(nums[0], nums[1] + 1))
         out.extend(nums)
@@ -110,6 +111,32 @@ ck("a line with no citation yields none",
    cites_in("el gap 103 quedo cerrado con codigo"), [])
 ck("'gap N' is never read as a trend citation",
    cites_in("gap 65 y gap 92 siguen abiertos"), [])
+
+# --- P295 (pase 97): la forma con que esta base ANUNCIA sus tendencias --------------------
+# El pase 96 escribio "**Ocho tendencias nuevas, numeradas 745-752**" y el control devolvia
+# CERO, asi que las ocho quedaron sin seccion y nada lo marco.
+ck("la forma del pase 96 ('tendencias nuevas, numeradas N-M') se lee",
+   cites_in("Ocho tendencias nuevas, numeradas 745-752"),
+   list(range(745, 753)))
+ck("y con el guion largo igual",
+   cites_in("**Ocho tendencias nuevas, numeradas 745\u2013752** (el pase 95 cerro en 744)"),
+   list(range(745, 753)))
+ck("'tendencias numeradas N a M' se lee",
+   cites_in("Tendencias numeradas 745 a 752"), list(range(745, 753)))
+ck("singular numerada tambien", cites_in("una tendencia numerada 751"), [751])
+
+# Los NEGATIVOS, que son la razon por la que el ancla es `numerad*` y no "cualquier palabra":
+# si se permitiera texto libre, un anio se leeria como cita (y `\d{1,3}` lo truncaria a 3).
+ck("un anio NO es una cita, con 'de' en el medio",
+   cites_in("las tendencias de 2026 muestran otra cosa"), [])
+ck("un anio NO es una cita, ni con el ancla ausente",
+   cites_in("las tendencias nuevas de 2026 son ocho"), [])
+ck("'numerad*' sin la palabra tendencia no es una cita",
+   cites_in("las filas numeradas 1-5 de la tabla"), [])
+ck("el texto intermedio esta ACOTADO: 60 caracteres no cuelan",
+   cites_in("tendencias " + "x" * 60 + " numeradas 745-752"), [])
+ck("una cita ya legible no se cuenta DOS veces",
+   cites_in("Ver tendencias 706-711."), [706, 707, 708, 709, 710, 711])
 
 print("\n%d/%d checks passed" % (sum(CHECKS), len(CHECKS)))
 sys.exit(0 if all(CHECKS) else 1)

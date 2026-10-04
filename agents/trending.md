@@ -9,6 +9,133 @@ updated: 2026-10-04
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 > No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
 
+## 2026-10-04 — pase 97: el barrido global vuelve vacío por DECIMOTERCERA vez, y lo que se construye y no se CONECTA no existe
+
+🔬 **El canal, declarado antes de cualquier veredicto (`P247`) — y este pase lo mide donde nunca
+se había medido.** `github.com/<org>/<repo>` → 🔴 **`403`** · `github.com/` y `api.github.com/`
+→ 🔴 **`400`** · `raw.githubusercontent.com` → 🟢 **`200` con payload**. 🔴 **Y fuera de GitHub:
+`unu.edu`, `coe.int`, `unesco.org` y `example.com` dan `000` por `curl` y `EGRESS_BLOCKED` por
+el fetcher de la herramienta** — o sea que el egreso a hosts no-GitHub está **bloqueado**, no
+caído, y eso convierte toda la inteligencia regional de esta base en **canal secundario**
+(tendencia **761**). El `curl -sI` que el encargo ordena sigue muerto acá; todo lo de abajo se
+leyó por `raw`.
+
+🔴 **Altas: 0. La tabla principal se queda en 94 filas — NOVENO pase consecutivo sin altas.**
+Año **CALCULADO** (`date -u +%Y` → **2026**, no fijado).
+
+**El cero, enumerado (`P293`):**
+
+| Lo que devolvió el barrido global de hoy | n |
+|---|---|
+| frameworks/infra de agentes genéricos (openclaw **385.407 ★**, dify **151.639 ★**, browser-use **108.128 ★**, Mem0 **62.735 ★**, AutoGen **60.284 ★**, Flowise **55.226 ★**) | **6** |
+| 🔵 repos de *currículo para enseñar AI a ingenieros* (`agents-from-scratch`, `ai-engineering-from-scratch`, `free-ai-agents-resources`, *Awesome LLM Apps*) | **4** |
+| 🔴 **software de la INDUSTRIA educativa, nuevo, con licencia permisiva** | 🔴 **0** |
+
+🔵 **Tercera reproducción IDÉNTICA de `P281`.** Las seis cifras de estrellas vuelven exactamente
+iguales a las de los pases **95** y **96** — tres pases, tres fuentes distintas, mismos números.
+La saturación del canal global deja de ser una impresión y es una **medición repetida**: lo que
+el canal etiqueta «education» son **currículos para formar ingenieros de AI**, no software que
+sirva a una institución educativa.
+
+### 🔴 El aporte del pase: el pase 96 escribió el lector que cerraba su propio diagnóstico y no lo conectó
+
+El pase 96 dejó escrito el hueco (tendencia **750**): el barrido manifiesto-consciente de esta
+base es ciego a **Java/Maven**, que es la capa de plataforma de esta vertical. Escribió el
+lector correcto —`p289-maven-manifest/`, **11/11**, con su control negativo— y ahí se detuvo.
+
+**Medido hoy, antes de tocar nada:**
+
+| Lo que se midió | Resultado |
+|---|---|
+| nombres en `PARSERS` de `manifest_license.py` (el módulo que produce los veredictos) | **5** — 🔴 sin `pom.xml` |
+| referencias a `maven_license.py` fuera de `p289-maven-manifest/` | 🔴 **0** (una mención en prosa, en el README de `p288`) |
+| suite de `p289` | 🟢 **11/11** — el lector era correcto todo el tiempo |
+
+🔵 **El diagnóstico, el lector y la suite estaban bien, y el defecto seguía vivo en producción.**
+Un control que no está en el camino por donde pasan los datos no es un control: es una
+demostración (**`P294`**).
+
+### 🔴 Y el cableado OBVIO habría publicado una respuesta nueva y equivocada
+
+| Repo | `artifactId` | P280 con `artifactId` solo | ¿es propio? |
+|---|---|---|---|
+| `kuali/kc` | `coeus` | 🔴 **`FOREIGN`** | 🟢 sí — *Kuali **Coeus*** |
+| `sakaiproject/sakai` | `base` | 🔴 **`FOREIGN`** | 🟢 sí — es su pom raíz |
+| `UniTime/unitime` | `unitime` | 🟢 `OWN` | sí |
+| `OpenOLAT/OpenOLAT` | `openolat-lms` | 🟢 `OWN` | sí |
+| `DSpace/DSpace` | `dspace-parent` | 🟢 `OWN` | sí |
+| `SafeExamBrowser/seb-server` | `seb-server` | 🟢 `OWN` | sí |
+
+🔴 **2 de 6 falsos `FOREIGN`, y `FOREIGN` significa NO atribuir (P280):** el cableado obvio
+habría **leído bien** la `AGPL-3.0` de `kuali/kc` y **se habría negado a publicarla** — la
+licencia más consecuente del inventario, porque §13 obliga a publicar el fuente a los usuarios
+de un servidor y un ERP universitario se entrega como SaaS.
+
+🟢 **El arreglo, y otra vez resultó más angosto que el obvio:** la identidad de un pom son
+**tres** candidatos (`groupId`, `artifactId`, `<name>`) comparados contra los **dos** segmentos
+del slug. El `groupId` es un namespace reverse-DNS que codifica a la organización
+(`org.kuali.coeus` ↔ `kuali/kc`) y **gana en 5 de 6**. ⚠️ **`ownership()` queda INTACTA** —sus 34
+aserciones siguen valiendo y las 200 filas publicadas no se mueven—: la resolución es una capa
+**encima**, no un cambio de regla. Y el `<parent>` **no presta identidad**: `seb-server` hereda
+de `org.springframework.boot` (**`P297`**).
+
+### 🟢 La consecuente que paga el pase: dos canales independientes, y concuerdan
+
+Camino de producción corrido punta a punta sobre los **payloads reales**, contra lo que esta
+base ya publica (que viene del **otro** canal, el archivo de licencia):
+
+| Repo | declara el `pom.xml` | familia | publicado | acuerdo |
+|---|---|---|---|---|
+| `kuali/kc` | `GNU Affero General Public License, Version 3` | `AGPL-3.0` | `AGPL-3.0` | 🟢 **ACUERDO** — y el pom es la **única** fuente |
+| `sakaiproject/sakai` | `Educational Community License, Version 2.0` | `ECL-2.0` | `ECL-2.0` | 🟢 **ACUERDO** |
+| `UniTime/unitime` | `Apache Software License (ASL), Version 2.0` | `Apache-2.0` | `Apache-2.0` | 🟢 **ACUERDO** |
+| `OpenOLAT/OpenOLAT` | `Apache 2.0 Open Source L6icense` | `Apache-2.0` | `Apache-2.0` | 🟢 **ACUERDO** |
+| `DSpace/DSpace` | `DSpace BSD License` | `BSD` | `BSD-3-Clause` | 🔵 **familia, menos preciso** |
+| `SafeExamBrowser/seb-server` | *(sin `<licenses>`)* | — | `MPL-2.0` | ⚠️ **sin declaración** |
+
+🟢 **6 de 6 `OWN`, 4 acuerdos exactos, 0 contradicciones** (**`P296`**). ⚠️ **Dos límites, que
+son del canal y no errores:** `DSpace BSD License` es un nombre de fantasía y de un nombre **no
+sale el número de cláusulas**; y un pom **nunca responde `P279`** —no nombra archivos de
+licencia—, así que la pregunta del pase 95 sigue abierta por el lado del **nombre de archivo**.
+
+### 🔴 La errata que no rompió nada, y el motivo importa
+
+`OpenOLAT/OpenOLAT` declara, textualmente: `<name>Apache 2.0 Open Source L6icense</name>`.
+🔴 **`L6icense`, y es de upstream:** dos lecturas del payload dan el mismo `sha256`
+(`be4f685dc879236118f522c3…`). 🟢 **Clasifica `Apache-2.0` igual, pero sólo porque el respaldo
+de `lib/license_family.sh` ancla en el token de FAMILIA (`*apache*`) y no en la palabra
+«License»** — un classificador por bloque de título devuelve `UNCLASSIFIED` sobre esa cadena.
+**La robustez vino del token, no de la gramática.**
+
+### 🔴 El mismo defecto en la prosa: catorce tendencias anunciadas y nunca escritas
+
+`trend-backlink-audit/` existe desde el pase 49 para atrapar citas colgadas y reportaba **6**.
+El pase 96 anunció las suyas como «**Ocho tendencias nuevas, numeradas 745–752**», y el
+extractor exige el número **pegado** a la palabra «tendencias»: con dos palabras en el medio
+devuelve **cero**.
+
+| Rango | Pase | ¿secciones escritas? | ¿recuperable? |
+|---|---|---|---|
+| **706–711** | 91 | 🔴 **0 de 6** | 🔴 **no** — `git log --all -S` da **0 commits** |
+| **745–752** | 96 | 🔴 **0 de 8** | 🟢 **sí** — estaba en la nota de cabecera |
+
+🟢 **Arreglado con ancla en `numerad*` y sus negativos (suite 22/22 → 31/31); el control ahora
+reporta 20 colgadas donde veía 6.** 🔵 **Y apareció un segundo defecto en el mismo instrumento:
+aceptaba «a» como conector pero no como marca de rango, así que «745 a 752» daba `[745, 752]` en
+vez de los ocho** — el extractor lossy que el propio archivo advierte desde el pase 49,
+reapareciendo por el eje del **idioma**. 🟢 **Las 745–752 quedan recuperadas; las 706–711 se
+declaran irrecuperables y NO se inventan.**
+
+### ⚠️ Lo que este pase NO hizo, declarado en vez de rellenado
+
+🔴 **No hubo altas de agente, noveno pase consecutivo**, y el barrido global se corrió completo
+antes de gastar el esfuerzo en el instrumento. ⚠️ **Las fuentes primarias de la inteligencia
+regional quedaron SIN VERIFICAR** —egreso bloqueado a todo host no-GitHub—, así que se
+**nombran** y se marcan una por una en `intel/market.md`, en vez de citarse como verificadas.
+⚠️ **Y la acción del pase 61 —abrir el PR a `toshieji`— sigue sin ejecutarse:** es una acción
+hacia AFUERA sobre un repo de terceros y esta corrida es automática, sin humano que la apruebe;
+el parche sigue escrito y versionado.
+
 ## 2026-10-04 — pase 96: el barrido global vuelve vacío por DUODÉCIMA vez, y el esfuerzo encuentra un defecto en el CONTROL COMPARTIDO
 
 🔬 **El canal, declarado antes de cualquier veredicto (`P247`).** Medido hoy:

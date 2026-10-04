@@ -8,6 +8,9 @@ updated: 2026-10-04
 
 > Recetas concretas: repos nombrados, licencias verificadas, wiring explícito y estimación.
 > Todos los repos citados fueron verificados vía WebFetch el 2026-09-30; los del pase 11, el 2026-10-01 (ver `agents/top.md`).
+> **Pase 97 del 2026-10-04:** 🆕 **Los patrones nuevos son `P294`, `P295`, `P296` y `P297`, y los cuatro salen de cablear una sola pieza.** 🔴 **`P294` es el que cambia cómo esta base se audita a sí misma: un control que no está en el camino por donde pasan los datos no es un control, es una demostración — el pase 96 diagnosticó la ceguera a Java/Maven, escribió el lector correcto (`p289`, 11/11) y no lo conectó, así que `PARSERS` siguió con cinco nombres y el hueco siguió abierto donde se producen los veredictos.** 🔴 **`P295` es el mismo defecto en la prosa: `trend-backlink-audit` existe desde el pase 49 para atrapar citas colgadas y era CIEGO a la forma con que esta base ANUNCIA sus tendencias («tendencias nuevas, numeradas 745–752» → 0 citas), así que catorce números quedaron sin sección sin que nada lo marcara; y de paso era lossy en castellano, porque aceptaba «a» como conector y no como marca de rango.** 🟢 **`P296` es el que paga en una entrega: el veredicto de licencia tiene DOS canales independientes —la declaración del manifiesto y el payload del archivo— y medidos sobre la capa Java/Maven concuerdan 4 de 4 exactos, 1 de familia, 0 contradicciones; el manifiesto CORROBORA y además es la única fuente donde no hay archivo (`kuali/kc`).** 🟢 **`P297` es la pieza técnica que lo hizo posible: en Maven la identidad de propiedad es el `groupId` —un namespace reverse-DNS que codifica a la organización— y el `<parent>` NO presta ni identidad ni licencia.** 🆕 **La receta nueva es `R-97-COMPRA-SOBERANA-APAC`, y es cotizable porque la condición de compra que la dispara quedó medida este pase: la soberanía decidirá la infraestructura de ~la mitad de las empresas de APAC.**
+>
+
 > **Pase 96 del 2026-10-04:** 🆕 **Los patrones nuevos son `P288`, `P289` y `P290`, y los tres salen de medición de este pase.** **`P288`**: *un control compartido hereda el punto ciego de las fixtures con las que nació* — la rama AGPL de `lib/license_family.sh` es un glob de `case` (**sensible a la caja**) y la rama GPL de abajo es `grep -qi` (**insensible**), así que un AGPL *reflowed* sin título en mayúsculas sale **`GPL-3.0`**, atrapado por el **preámbulo de la propia AGPL**. 🔵 **Es `P171` reabierto por un eje nuevo —la CAJA— y la lección de método es que `P171` («clasificá por título, no por el cuerpo») se cumplió y NO alcanzó, porque el bloque de título de la AGPL nombra a la GPL.** 🔴 **Y es `P126` punto 2 sobre el control compartido mismo: 41 aserciones en verde, 0 ejercitando el caso, porque todas sus fixtures AGPL traen el título canónico.** 🟢 **`P289`**: *la lista de manifiestos de un barrido de licencia es un denominador, y el de esta base no incluye `pom.xml`* — la capa de plataforma de esta vertical es **Java/Maven** (Kuali, Sakai, TAO, OpenEMIS, SEB Server), así que el instrumento estaba **ciego a la capa a la que el pase 95 lo apuntó**: la tasa de `P279` ahí **no es 0 ni alta, es NO MEDIBLE**. 🔵 **`P290`**: *la licencia de un consorcio es por REPO, no por organización* — Kuali es `ECL-2.0` en `rice`, `AGPL-3.0` en `kfs` y `AGPL-3.0` en `kc`, mientras tres fuentes secundarias independientes afirman «ECL 2.0» para todo el consorcio: **aciertan en 1 de 3**, y el error es del lado caro (permisivo declarado donde hay copyleft de red).
 >
 > 🆕 **La receta nueva es `R-96-CAPA-PERMISIVA-DEL-CONSORCIO`, y es cotizable porque nombra la pieza exacta:** cuando un cliente de educación superior quiere capa agéntica sobre su ERP/SIS y el ERP es **AGPL-3.0**, **no se construye sobre el ERP: se construye sobre el middleware.** Wiring concreto → **[`kuali/rice`](https://github.com/kuali/rice) (`ECL-2.0`, familia Apache, payload leído en `HEAD/LICENSE.txt`)** expone *workflow, reglas e identidad*, que es exactamente donde un agente necesita enganchar; **[`kuali/kfs`](https://github.com/kuali/kfs) (`AGPL-3.0`) y [`kuali/kc`](https://github.com/kuali/kc) (`AGPL-3.0`, `SOLO_MANIFIESTO` vía `pom.xml`)** quedan **detrás de la frontera de proceso**, consumidos por su interfaz y nunca enlazados. 🟢 **El entregable propio queda sobre ECL-2.0 y no hereda §13**; la capa de orquestación va con `LangGraph`/`pydantic-ai` (MIT) y la compuerta de escritura con `compose/code/mcp-allowlist-gateway/` que esta base ya versiona. 🔴 **La compuerta que evita el error caro es de ARQUITECTURA, no de licencia: si el derivado enlaza KFS o KC, el despliegue SaaS dispara §13 y hay que publicar el fuente a los usuarios del servidor** — y un ERP universitario se entrega como SaaS. **Estimación: 6–8 semanas** para la capa sobre Rice, **+3** si hay que mediar KFS por interfaz. ⚠️ **Y la advertencia de `P179` va en la propuesta: `ECL-2.0` cubre el CÓDIGO de ese repo, no los productos que Kuali Inc. comercializa hoy, que no son open source.**
@@ -125,6 +128,201 @@ updated: 2026-10-04
 > no existe en open source permisivo).
 > **Pase 11:** +2 patrones — **P25** (riesgo de abandono conforme al Anexo III, la capa con presupuesto ya asignado y sin oferta open source) y **P26** (agente docente sobre la ontología curricular nacional ya publicada).
 > **Pase 27:** **+4 patrones y una corrección.** 🔴 **P51 queda con premisa falsa** —el conector MCP de Moodle **sí existe y es MIT**— y lo reemplazan **P54** (corrección y devolución sobre Moodle con **compuerta humana**, el último tramo del gap 6, con piezas que ya escriben), **P55** (el conector de **Open edX**, que es el único que de verdad no existe), **P56** (**SCORM** como formato de salida de la capa generativa: cero integración, offline) y **P57** (evidencia por MCP cotizada sobre lo que CaSS **realmente** expone — 6 de 61 operaciones, con insignias y autoría de marcos **fuera**).
+
+## 🆕 Patrones del pase 97 — `P294`–`P297` y la receta `R-97-COMPRA-SOBERANA-APAC`
+
+### P294 — un control que no está en el camino de los datos no es un control
+
+**Qué pasó.** El pase 96 midió que `p283/sweep_named.sh` es ciego a Java/Maven (su `MANIFESTS`
+es Python/JS/PHP/Rust), escribió el lector de `pom.xml` correcto en
+[`p289-maven-manifest/`](code/p289-maven-manifest/) con suite **11/11** y control negativo, y
+**ahí se detuvo**. Medido en el pase 97, antes de tocar nada: `PARSERS` tenía **5** nombres sin
+`pom.xml`, y las referencias a `maven_license.py` fuera de `p289/` eran **0**.
+
+**La regla.** Un instrumento nuevo no está terminado cuando su suite pasa: está terminado
+cuando **está en el camino por donde pasan los datos que se publican**. Si no, lo que existe es
+una demostración de que el defecto *se podría* arreglar.
+
+**Cómo se verifica, y es baratísimo.** Una aserción que afirme que el camino de producción
+**referencia** al instrumento:
+
+```python
+check("pom.xml registrado en PARSERS", "pom.xml" in ml.PARSERS, True)
+check("y el lector es el de p289", "p289-maven-manifest" in reader.__file__, True)
+```
+
+🔵 **La segunda aserción es la que evita el daño colateral de `P237`:** si un pase futuro mueve
+o duplica `p289`, el import **falla en voz alta** en vez de dejar dos lectores de XML que
+divergen en silencio.
+
+### P295 — el control de citas era ciego a la forma con que esta base anuncia sus propias tendencias
+
+**Qué pasó.** `trend-backlink-audit/` existe desde el pase 49 y reportaba **6** citas colgadas.
+Su extractor exige que el número vaya **pegado** a la palabra «tendencias» —adyacencia que es lo
+que lo protege de leer un año como cita, verificado—. Pero esta base anuncia así:
+
+> **Ocho tendencias nuevas, numeradas 745–752**
+
+Con dos palabras en el medio, el extractor devuelve **cero**, y las ocho quedaron sin sección
+sin que nada lo marcara. Con el ancla en `numerad*` el control reporta **20**: **14 números
+distintos** anunciados y nunca escritos (**706–711** del pase 91, **745–752** del pase 96).
+
+**La regla.** Cuando un control vigila un texto que la propia base escribe, hay que
+ejercitarlo con **la forma real en que la base escribe**, no con la forma canónica. Es `P126`
+punto 2 aplicado a la prosa.
+
+**El corolario, que es lo que cambia una decisión.** Las **745–752** se recuperaron (su
+contenido existía en una nota de cabecera). Las **706–711** se declararon **irrecuperables**:
+`git log --all -S` sobre sus encabezados da **0 commits**, y **fabricarlas para que un control
+dé verde sería meter dato falso en una KB**. 🔵 **El número a vigilar no es «0 colgadas»: es
+«0 colgadas NUEVAS».**
+
+### P296 — el veredicto de licencia tiene dos canales independientes, y hay que correrlos contra sí mismos
+
+**El patrón.** Una licencia se puede leer por **dos** vías que no comparten modo de fallo:
+
+| Canal | Qué lee | Falla cuando |
+|---|---|---|
+| **payload** | el texto del archivo (`LICENSE`, `COPYING`…) | el archivo no existe, o su nombre no está en la lista (`P279`) |
+| **declaración** | lo que el manifiesto del propio proyecto declara (`pom.xml`, `package.json`…) | el proyecto no declara, o declara un nombre de fantasía |
+
+**Medido sobre la capa Java/Maven de esta vertical:** **4 acuerdos exactos**
+(`kuali/kc` AGPL-3.0, `sakaiproject/sakai` ECL-2.0, `UniTime/unitime` Apache-2.0,
+`OpenOLAT/OpenOLAT` Apache-2.0), **1 acuerdo de familia con pérdida de precisión**
+(`DSpace/DSpace` declara `DSpace BSD License` → `BSD`, mientras el payload da `BSD-3-Clause`),
+**1 sin declaración** (`SafeExamBrowser/seb-server`), **0 contradicciones**.
+
+**La regla.** El manifiesto **corrobora**, no reemplaza. Donde el archivo existe, confirma el
+veredicto con un modo de fallo distinto; **donde no existe, es la única fuente** —y ése es el
+caso que paga: `kuali/kc` no tiene archivo de licencia entre los nombres sondeados y su
+`AGPL-3.0` sólo se puede afirmar por el pom—. ⚠️ **Y la pérdida de precisión se publica, no se
+redondea:** de un nombre no sale el número de cláusulas, y para una decisión de entrega la
+cláusula importa.
+
+### P297 — en Maven la identidad de propiedad es el `groupId`, y el `<parent>` no la presta
+
+**El defecto que evita.** P280 obliga a no publicar la licencia de un manifiesto que describe a
+**otro** proyecto. Su test compara contra `repo.split("/")[-1]`, o sea **descarta la
+organización**. En Maven eso produce falsos `FOREIGN` sobre proyectos propios:
+
+| Repo | `artifactId` | veredicto con `artifactId` solo |
+|---|---|---|
+| `kuali/kc` | `coeus` | 🔴 `FOREIGN` — y `FOREIGN` significa **no atribuir** |
+| `sakaiproject/sakai` | `base` | 🔴 `FOREIGN` — siendo su propio pom raíz |
+
+**La regla, en dos mitades.** (1) Los candidatos de identidad son **`groupId`, `artifactId` y
+`<name>`**, y se compara contra **los dos** segmentos del slug: el `groupId` es un namespace
+reverse-DNS que suele codificar a la organización (`org.kuali.coeus` ↔ `kuali/kc`), y **gana en
+5 de 6**. (2) **Sólo hijos directos de `<project>`:** el `<parent>` es otro proyecto
+—`SafeExamBrowser/seb-server` hereda de `org.springframework.boot`— y tomar su identidad como
+propia arrastraría además una licencia ajena.
+
+⚠️ **El costo, declarado:** dentro de una misma organización el `groupId` puede dar `WEAK` a un
+pom vendorizado del mismo consorcio. Es `WEAK` («atribuible con reserva»), no `OWN`, y el
+negativo que mantiene P280 cerrado está en la suite: un pom de un tercero
+(`com.thirdparty.reporting` / `Jasper Widgets`) en un repo de institución **sigue `FOREIGN`** y
+su GPL-2 **se lee pero no se atribuye**.
+
+### 🆕 Receta P298 — `R-97-COMPRA-SOBERANA-APAC`: plataforma educativa auto-hospedada con licencia confirmada por dos canales
+
+**La condición de compra, medida este pase:** la soberanía moldeará las decisiones de
+infraestructura de **~la mitad** de las empresas de APAC, y los marcos de gobernanza **no
+alcanzan el ritmo** de la implementación. 🔵 **Eso mueve la pregunta del cliente de «qué modelo»
+a «quién procesa datos de alumnos y dónde»** — y eso es una pregunta de **licencia y
+despliegue**, no de modelo.
+
+**Las piezas, todas con licencia confirmada por DOS canales en este pase (`P296`):**
+
+| Capa | Pieza | Licencia (payload **y** declaración) |
+|---|---|---|
+| LMS / evaluación | [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | **Apache-2.0** |
+| LMS educación superior | [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | **ECL-2.0** *(familia Apache, sin obligaciones de red)* |
+| horarios y aulas | [`UniTime/unitime`](https://github.com/UniTime/unitime) | **Apache-2.0** |
+| repositorio institucional | [`DSpace/DSpace`](https://github.com/DSpace/DSpace) | **BSD-3-Clause** *(el payload da la cláusula; la declaración sólo la familia)* |
+| inferencia local | `ollama` / `vLLM` | **MIT** / **Apache-2.0** |
+
+🔴 **Y la pieza que queda FUERA, con su motivo:** `kuali/kc` y `kuali/kfs` son **AGPL-3.0**, y
+§13 obliga a publicar el fuente a los usuarios de un servidor. Para un ERP universitario
+entregado como SaaS —que es cómo se entrega— eso es *publicar el derivado*, no *construir
+encima*. 🟢 **Si hace falta la capa Kuali, la permisiva del consorcio es `kuali/rice`
+(`ECL-2.0`)**, que es el patrón `R-96-CAPA-PERMISIVA-DEL-CONSORCIO`.
+
+**El wiring, con lo que esta base ya tiene corriendo:**
+
+1. **Despliegue en infraestructura del cliente**, inferencia con `ollama`/`vLLM`: ningún dato de
+   alumno sale del perímetro — que es la condición de compra, no un extra.
+2. **Puerta de herramientas** con [`mcp-allowlist-gateway/`](code/mcp-allowlist-gateway/): el
+   agente sólo ve las operaciones permitidas de cada plataforma, y las superficies de
+   `sebserver-mcp-gate/` y `unitime-mcp-gate/` ya están extraídas y probadas.
+3. **Marcado del art. 50** con [`aiact-50-2-pack/`](code/aiact-50-2-pack/) (**27/27**, y
+   **37/37** con `xmllint` contra los dos dialectos SCORM): es el deber **vigente** —el Anexo
+   III se difirió a `2027-12-02`, el art. 50 no— así que es lo primero que se entrega, no lo
+   último.
+4. **Verificación de licencia en CI**, con [`p294-pom-in-production/`](code/p294-pom-in-production/)
+   (**27/27**) y [`lib/license_family.sh`](code/lib/license_family.sh) (**41/41**): cada
+   dependencia Java/Maven queda leída por los dos canales, y un `AGPL` que entre por
+   actualización **rompe el build** en vez de aparecer en una auditoría de cliente.
+
+**Estimación:** 8–10 semanas para una vertical (LMS + horarios + repositorio) con puerta de
+herramientas y marcado del art. 50. ⚠️ **Lo que NO cubre, declarado:** la regulación de APAC
+**se ejecuta distinto por mercado** sobre principios comunes, así que el paso de política por
+jurisdicción es trabajo aparte; y las consultas regulatorias de Singapur que el barrido devolvió
+son del sector **financiero**, no educativo — no sirven como base regulatoria de esta receta.
+
+## 🟢 Patrones P288–P290 — pase 96 del 2026-10-04 · ⚠️ SECCIONES RECUPERADAS EN EL PASE 97
+
+⚠️ **Nota de procedencia, y es lo primero que hay que leer.** El pase 96 **anunció** estos tres
+patrones en su nota de cabecera y **nunca escribió las secciones**: medido en el pase 97, cada
+uno aparecía **una sola vez** en este archivo —en esa nota— y
+`pattern-citation-audit` los contaba entre sus citas colgadas. El contenido de abajo es **del
+pase 96**, expandido desde esa nota. **No se agregó ningún hallazgo nuevo acá**: los del pase 97
+son `P294`–`P297` y la receta `P298`. 🔵 **Es el mismo defecto que las tendencias 745–752
+(`P295`): el pase 96 anunció ocho tendencias y tres patrones y no definió ninguno.**
+
+### P288 — un control compartido hereda el punto ciego de las fixtures con las que nació
+
+La rama AGPL de `lib/license_family.sh` es un glob de `case` —**sensible a la caja**— y la rama
+GPL de abajo es `grep -qi` —**insensible**—, así que un **AGPL-3.0 *reflowed*** sin el título en
+mayúsculas cae por la primera y la segunda lo atrapa, **por el preámbulo de la propia AGPL**.
+Veredicto: `GPL-3.0` para una AGPL-3.0 real (`kuali/kfs`, `HEAD/LICENSE`, 33.755 B).
+
+🔵 **Es `P171` reabierto por un eje nuevo —la CAJA— y la lección de método es que `P171`
+(«clasificá por título, no por el cuerpo») se cumplió y NO alcanzó, porque el bloque de título
+de la AGPL nombra a la GPL.** 🔴 **Y es `P126` punto 2 sobre el control compartido mismo: 41
+aserciones en verde, 0 ejercitando el caso, porque todas sus fixtures AGPL traen el título
+canónico en mayúsculas.** 🟢 **El arreglo correcto fue más angosto que el obvio:** el ancla es la
+definición de la **sección 0** y necesita las palabras `refers to`, porque la §13 de la GPL-3.0
+dice «*licensed **under** version 3 of the GNU Affero…*». Instrumento:
+[`p288-agpl-casefold/`](code/p288-agpl-casefold/) (**9/9**).
+
+### P289 — la lista de manifiestos de un barrido de licencia es un DENOMINADOR
+
+`MANIFESTS` de `p283/sweep_named.sh` era `pyproject.toml package.json composer.json Cargo.toml
+setup.cfg` —Python, JS, PHP, Rust— y **no `pom.xml`**, mientras la capa de plataforma de esta
+vertical es **Java/Maven** (Kuali, Sakai, TAO, OpenEMIS, SEB Server). 🔴 **El instrumento estaba
+ciego a la capa a la que el pase 95 lo apuntó**, así que la tasa de `P279` ahí **no es 0 ni
+alta: es NO MEDIBLE**. Instrumento: [`p289-maven-manifest/`](code/p289-maven-manifest/)
+(**11/11**), con el control negativo que importa —el `pom.xml` de `kuali/kc` nombra la AGPL en un
+**comentario**, así que un lector por `grep` acierta por la vía equivocada—.
+
+⚠️ **Y la secuela que el pase 96 no vio:** escribió el lector y **no lo conectó** al camino de
+producción, así que el denominador siguió sin `pom.xml` donde se producen los veredictos. Eso es
+`P294`, y se cerró en el pase 97.
+
+### P290 — la licencia de un consorcio es por REPO, no por organización
+
+| Repo | Licencia leída del payload |
+|---|---|
+| `kuali/rice` | 🟢 `ECL-2.0` |
+| `kuali/kfs` | 🔴 `AGPL-3.0` |
+| `kuali/kc` | 🔴 `AGPL-3.0` *(`SOLO_MANIFIESTO`, vía `pom.xml`)* |
+
+🔴 **Tres fuentes secundarias independientes —Wikipedia, linux.com y la ayuda de KFS en tres
+universidades— afirman «ECL 2.0» para todo el consorcio: aciertan en 1 de 3.** 🔵 **Y el error es
+del lado caro:** declaran permisivo donde hay **copyleft de red**, y §13 obliga a publicar el
+fuente a los usuarios de un servidor. Para un ERP universitario entregado como SaaS, eso decide
+la arquitectura — ver la receta `R-96-CAPA-PERMISIVA-DEL-CONSORCIO`.
+
 
 ## 🆕 `R-LICENCIA-INTAKE` — Receta: *due diligence* de licencia de un catálogo open source, en una pasada (pase 95 del 2026-10-04)
 

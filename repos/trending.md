@@ -8,6 +8,65 @@ updated: 2026-10-04
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 
+## 2026-10-04 — pase 97: GitHub trending vuelve vacío por VIGESIMOSEXTA vez, y las cifras vuelven IDÉNTICAS por TERCER pase
+
+🔬 **Canal declarado (`P247`):** `github.com/<org>/<repo>` → 🔴 **`403`** · `github.com/` y
+`api.github.com/` → 🔴 **`400`** · `raw.githubusercontent.com` → 🟢 **`200` con payload**.
+🔴 **Fuera de GitHub el egreso está BLOQUEADO** (`000` por `curl`, `EGRESS_BLOCKED` por el
+fetcher): medido sobre `unu.edu`, `coe.int`, `unesco.org` y `example.com` (tendencia **761**).
+
+🔴 **Altas fundacionales: 0.** Barrido `github trending education AI 2026`, año **CALCULADO**
+(`date -u +%Y` → **2026**, no fijado).
+
+**La serie de estrellas, tres pases seguidos — y es el punto de esta entrada:**
+
+| Repo | pase 95 | pase 96 | pase 97 | Δ |
+|---|---|---|---|---|
+| `openclaw` | 385.407 | 385.407 | **385.407** | 🔵 **0** |
+| `dify` | 151.639 | 151.639 | **151.639** | 🔵 **0** |
+| `browser-use` | 108.128 | 108.128 | **108.128** | 🔵 **0** |
+| `Mem0` | 62.735 | 62.735 | **62.735** | 🔵 **0** |
+| `AutoGen` | 60.284 | 60.284 | **60.284** | 🔵 **0** |
+| `Flowise` | 55.226 | 55.226 | **55.226** | 🔵 **0** |
+
+🔵 **Seis repos, tres pases, fuentes distintas, delta CERO en los seis.** Para una serie temporal
+eso no es «el mercado no se movió»: es que **el canal está devolviendo una instantánea
+cacheada**, y seguir consultándolo con el mismo eje no puede producir información nueva. Es
+`P281` con la evidencia más fuerte que esta base tiene hasta ahora.
+
+**El reparto, enumerado (`P293`):** **6** frameworks generalistas · **4** repos de *currículo
+para enseñar AI a ingenieros* (`agents-from-scratch`, `ai-engineering-from-scratch`,
+`free-ai-agents-resources`, *Awesome LLM Apps*) · 🔴 **0** de la industria educativa.
+
+### 🟢 Lo que SÍ cambió en este archivo: la capa Java/Maven queda leída por un segundo canal
+
+Sin filas nuevas, pero cuatro repos de este inventario ganan un veredicto de licencia
+**corroborado por una vía independiente** —la declaración del `pom.xml`, leída por el camino de
+producción recién cableado (**`P294`**)— contra el payload del archivo de licencia que esta base
+ya había leído:
+
+| Repo | declara el `pom.xml` | familia | publicado acá | acuerdo |
+|---|---|---|---|---|
+| `sakaiproject/sakai` | `Educational Community License, Version 2.0` | `ECL-2.0` | `ECL-2.0` | 🟢 **ACUERDO** |
+| `UniTime/unitime` | `Apache Software License (ASL), Version 2.0` | `Apache-2.0` | `Apache-2.0` | 🟢 **ACUERDO** |
+| `OpenOLAT/OpenOLAT` | `Apache 2.0 Open Source L6icense` | `Apache-2.0` | `Apache-2.0` | 🟢 **ACUERDO** |
+| `DSpace/DSpace` | `DSpace BSD License` | `BSD` | `BSD-3-Clause` | 🔵 **familia, menos preciso** |
+
+🟢 **Tres acuerdos exactos y uno de familia, 0 contradicciones** (**`P296`**): los veredictos
+permisivos de este archivo **aguantan un segundo canal**. ⚠️ **Y el límite se publica:** de
+`DSpace BSD License` —un nombre de fantasía— **no sale el número de cláusulas**, así que
+`BSD-3-Clause` sigue dependiendo del payload. 🔴 **Más la errata de upstream en OpenOLAT
+(`L6icense`, mismo `sha256` en dos lecturas), que no rompe el veredicto sólo porque el respaldo
+ancla en el token de familia y no en la palabra «License».**
+
+### ⚠️ Lo pendiente de este archivo, sin rellenar
+
+🔴 **La acción del pase 95 sobre las filas fuera de las 200 sigue abierta por el lado del NOMBRE
+de archivo:** un `pom.xml` no responde `P279` —no nombra archivos de licencia—, así que lo que
+este pase cerró es el eje de la **declaración**, no el del nombre. ⚠️ **Y el barrido en lote de
+destinos sigue negado por el entorno**, así que la re-medición masiva de esas filas no se corrió
+ni se simuló.
+
 ## 2026-10-04 — pase 96: GitHub trending vuelve vacío por VIGESIMOQUINTA vez, y las cifras vuelven IDÉNTICAS — la saturación deja de ser una impresión
 
 🔬 **Canal declarado (`P247`):** `github.com/<org>/<repo>` → **403 en 3/3** · `github.com/` y

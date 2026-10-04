@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- REDUCIDO del payload real: raw.githubusercontent.com/sakaiproject/sakai/HEAD/pom.xml
+     (14.871 B, leido el 2026-10-04). El <parent> es real: la raiz de Sakai hereda de
+     `master`, y su propio artifactId es `base`, que no se parece a `sakai`. -->
+<project xmlns="http://maven.apache.org/POM/4.0.0">
+  <parent>
+    <artifactId>master</artifactId>
+    <groupId>org.sakaiproject</groupId>
+  </parent>
+  <groupId>org.sakaiproject</groupId>
+  <artifactId>base</artifactId>
+  <name>Sakai base pom</name>
+  <licenses>
+    <license>
+      <name>Educational Community License, Version 2.0</name>
+    </license>
+  </licenses>
+</project>

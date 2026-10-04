@@ -7,6 +7,7 @@ updated: 2026-10-04
 # 📡 Tendencias — education
 
 > Ventana de investigación: septiembre 2026. Verificado 2026-09-30; el pase 11, el 2026-10-01.
+> **Pase 97 del 2026-10-04:** 🟢 **Nueve tendencias nuevas, numeradas 753–761** (el pase 96 cerró en 752). 🔴 **La que manda es la misma forma de defecto en DOS planos a la vez, y los dos son de esta base: lo que se construye y no se CONECTA no existe.** 🔴 **753: el pase 96 diagnosticó que el barrido manifiesto-consciente es ciego a Java/Maven (tendencia 750), escribió el lector correcto —`p289`, 11/11— y NO lo conectó: medido hoy, `PARSERS` seguía con cinco nombres y NADA fuera de `p289/` lo referenciaba, así que el hueco seguía abierto justo donde se producen los veredictos.** 🔴 **754: y el cableado OBVIO habría publicado una respuesta nueva y equivocada — con `artifactId` como identidad única, `kuali/kc` y `sakaiproject/sakai` salen `FOREIGN` siendo PROPIOS (2 de 6), y el peor es el de la licencia más consecuente del inventario (AGPL-3.0 §13 sobre un ERP universitario entregado como SaaS).** 🟢 **755: la identidad de un pom es el `groupId`, que es un namespace reverse-DNS que CODIFICA a la organización (`org.kuali.coeus` en `kuali/kc`) — y `ownership()` descartaba el segmento de organización del slug, que era el único que podía resolverlo.** 🟢 **757: con el cableado puesto, dos canales INDEPENDIENTES concuerdan — la declaración del manifiesto contra el payload del archivo de licencia: 6 de 6 `OWN`, 4 acuerdos exactos, 1 de familia (DSpace) y 0 contradicciones.** 🔴 **759: y en el plano de la prosa, CATORCE tendencias anunciadas y nunca escritas (706–711 del pase 91, 745–752 del pase 96), con el agravante de que el control que existe para atraparlas es CIEGO a la forma con que esta base las anuncia.** 🟢 **Las 745–752 quedan RECUPERADAS en este pase (su contenido existía en la nota de cabecera del 96); las 706–711 se declaran IRRECUPERABLES —ningún commit de la historia las definió— y no se inventan.** Ver `compose/code/p294-pom-in-production/` (**27/27**) y `compose/code/trend-backlink-audit/` (**31/31**).
 > **Pase 96 del 2026-10-04:** 🟢 **Ocho tendencias nuevas, numeradas 745–752** (el pase 95 cerró en 744). 🔴 **745: el CONTROL COMPARTIDO que `P237` creó para que la corrección GPL/AGPL no tuviera que recordarse devolvía `GPL-3.0` para una AGPL-3.0 real — su rama AGPL es un glob de `case`, SENSIBLE A LA CAJA, mientras la rama GPL de abajo es `grep -qi`, insensible: un AGPL *reflowed* sin título en mayúsculas cae por la primera y la segunda lo atrapa.** 🔴 **746: y lo que lo atrapa es el PREÁMBULO DE LA PROPIA AGPL, que explica en qué se diferencia de la GPL («*The GNU General Public License permits … access it on a server*») — o sea que `P171` («clasificá por bloque de título, no por el cuerpo») se cumplió y NO alcanzó, porque el bloque de título de la AGPL nombra a la GPL.** 🔴 **747: `P126` punto 2, otra vez y sobre el control compartido mismo: las 41 aserciones pasaban y ninguna ejercitaba el caso, porque TODAS las fixtures AGPL de la suite traen el título canónico en mayúsculas — el control nació sin el caso que lo rompe, y la regla que lo exigía está escrita en el README de esta base desde el pase 56.** 🟢 **748: el arreglo correcto resultó MÁS ANGOSTO que el obvio — volver insensible la rama de título habría clasificado como AGPL la fixture GPL-3.0 de la propia suite (que incluye su §13); el ancla que sirve es la definición de la sección 0, y necesita las palabras `refers to` porque la §13 de la GPL dice «*under*».** 🔴 **749: la licencia de un consorcio es por REPO, no por organización — Kuali es `ECL-2.0` en `rice`, `AGPL-3.0` en `kfs` y `AGPL-3.0` en `kc`, y Wikipedia, linux.com y la ayuda de KFS en tres universidades dicen «ECL 2.0» para todo: aciertan en uno de tres.** 🔴 **750: el barrido manifiesto-consciente de esta base está CIEGO a la capa de plataforma que esta vertical tiene — `MANIFESTS` lista Python/JS/PHP/Rust y NO `pom.xml`, mientras Kuali, Sakai, TAO, OpenEMIS y SEB Server son Java/Maven; la tasa de `P279` ahí no es 0 ni alta, es NO MEDIBLE con el instrumento que el pase 95 pre-registró.** 🔵 **751: el corte regulatorio que esta base no tenía INVIERTE su propia prioridad — el Anexo III (que nombra educación) quedó diferido a `2027-12-02` por el Digital Omnibus aprobado en firme el `2026-06-29`, pero el ARTÍCULO 50 no se difirió: vigente desde `2026-08-02`, con la gracia de marcado venciendo el `2026-12-02`; lo que apremia es el art. 50, no el alto riesgo, y eso valida por una vía no buscada la familia `aiact-50-2-*` de esta base.** 🔴 **752: y el canal secundario sigue publicando la versión SUPERADA —los barridos de HOY de North America y EMEA devolvieron «*full effect in August 2026*»—, así que esta corrección hay que re-verificarla contra fuente legal y no contra prensa de industria: es `P281` en el eje regulatorio.** 🔵 **El eje que cruza las ocho, y conviene decirlo: cinco de las ocho son sobre el INSTRUMENTO y tres sobre el mundo. Es el mismo diagnóstico que el pase 94 dejó —el cuello de botella de esta base ya no es encontrar repos, es no publicar mal los que tiene— con una vuelta de tuerca: esta vez el defecto estaba en el control que se había creado precisamente para que ese tipo de defecto no volviera.** ⚠️ **Y una limitación del pase, declarada en vez de rellenada: la acción pre-registrada del pase 95 NO se corrió —el entorno niega enumerar destinos en lote (`[Exfil Scouting]`, 2 intentos, 2 vías)— así que el reparto poblacional del defecto 745 queda SIN MEDIR, y `P286` prohíbe estimarlo desde el único control positivo que hay.** Ver `compose/code/p288-agpl-casefold/` (**9/9**) y `compose/code/p289-maven-manifest/` (**11/11**).
 > **Pase 95 del 2026-10-04:** 🟢 **Ocho tendencias nuevas (737–744), y la que manda es una PREDICCIÓN PROPIA FALSIFICADA: el pase 94 pre-registró que ~28 de 200 filas tendrían por veredicto de licencia un hueco de nombre; medido sobre las 200, los huecos de `P279` fueron 0.** 🔵 **`P286`: extrapolar un reparto poblacional desde UN control positivo (1 de 7) no es una estimación, es una corazonada con tabla — y falló por un factor de ~28.** 🔴 **La segunda es peor que un número mal: una corrección verificada por tres canales NO VIAJÓ.** El diferimiento del Anexo III a 2027-12-02 (pase 58) dejó **13 de 87** afirmaciones huérfanas en los archivos publicados, entre ellas **la tendencia #75 de ESTE archivo, cuya tesis —«la demanda de conformidad en EMEA está *vencida*»— se INVIERTE** (`P284`, anotadas sin reescribir: **88 afirmaciones, 0 huérfanas**). 🟢 **La tercera es que la saturación regional dejó de ser un adjetivo: 27 hechos devueltos, 27 ya publicados, 0 nuevos, con la lista publicada** (`P287`) — y eso vuelve decidible cambiar el EJE de la consulta en vez de repetirla. 🟢 **Y el aporte durable: las 5 filas que el pase 65 corrigió A MANO ahora las deriva un instrumento (clase `SOLO_MANIFIESTO`), más 17 filas que ganan precisión de familia por reusar `lib/license_family.sh` en vez de reescribirlo (`P237`), con `oat-sa/tao-core` = GPL-2.0 como la consecuente.**
 > **Pase 94 del 2026-10-04:** 🟢 **Ocho tendencias nuevas, numeradas 729–736** (el pase 93 cerro en 728). 🔴 **729: el cero del barrido global pasa a tener DENOMINADOR — `agents-radar` #328, fechado el mismo dia, 47 repos, 0 de la industria educativa.** 🔴 **730: la etiqueta `[EDUCATION]` de los radares generalistas confunde dos industrias —AI como MATERIA que se enseña vs educacion como SECTOR que se sirve— y una base que la ingiere importa filas inutiles** (**P281**). 🔴 **731: el canal de verificacion que el encargo ordena esta muerto aqui (`curl -sI` sobre `github.com/` → 403 en 3/3, reproduce el pase 81) y el que rinde ENTREGA EL PAYLOAD.** 🔴 **732: el nombre del archivo de licencia es sensible a MAYUSCULAS y una lista fija de variantes siempre tiene hueco; el manifiesto lo NOMBRA** (**P279**). 🔴 **733: un manifiesto en la raiz puede describir a OTRO proyecto, y su campo `license` no es la licencia de la fila** (**P280**). 🔴 **734: la derivacion AGRAVA — un repo sin cesion propia que hereda un arbol OSL-3.0 es menos usable que uno simplemente sin licencia, porque el gatillo del copyleft es el despliegue externo y eso es lo que hace un LMS.** 🟢 **735: las 8 filas `SIN LICENCIA` de esta base aguantan un instrumento ~33× mas ancho, 8/8, con testigo de alcance previo al veredicto.** 🟢 **736: el canal regional de esta base rinde POLITICA, no CODIGO, y las cuatro regiones lo hicieron a la vez** (**P282**). 🔵 **El eje que cruza las ocho: siete de estas ocho son sobre el INSTRUMENTO, no sobre la industria —y eso es informacion sobre en que estado esta esta base: su cuello de botella ya no es encontrar repos, es no publicar mal los que tiene.**
@@ -111,6 +112,292 @@ updated: 2026-10-04
 > (tendencia 29), se abre el **gap 20** y se registran dos advertencias de verificación: los agregadores de estrellas
 > están mal por ~2× y **un 403 de `curl` no es un 404**. Ver la nota de método del pase 12.
 > **Pase 11:** el Digital Omnibus es derecho vigente (tendencia 25), aparece la capa predictiva y está vacía (tendencia 26), y se corrige un error de método de diez pasadas sobre licencias permisivas (tendencia 27).
+
+## 🟢 Tendencias 753–761 — pase 97 del 2026-10-04: lo que se construye y no se conecta no existe
+
+### 753 — 🔴 El pase 96 escribió el lector que cerraba su propio diagnóstico y no lo conectó
+
+El pase 96 midió el hueco y lo nombró (tendencia **750**): `p283/sweep_named.sh` lista
+`pyproject.toml package.json composer.json Cargo.toml setup.cfg` —Python, JS, PHP, Rust— y
+**no `pom.xml`**, mientras la capa de plataforma de esta vertical es **Java/Maven**. Escribió
+el lector correcto, con su suite en **11/11** y su control negativo. Y ahí se detuvo.
+
+**Medido hoy, antes de tocar nada:**
+
+| Lo que se midió | Resultado |
+|---|---|
+| nombres en `PARSERS` de `manifest_license.py` (el módulo que produce los veredictos) | **5** — 🔴 sin `pom.xml` |
+| referencias a `maven_license.py` fuera de `p289-maven-manifest/` | 🔴 **0** (sólo una mención en prosa, en el README de `p288`) |
+| suite de `p289` | 🟢 **11/11** — el lector era correcto todo el tiempo |
+
+🔵 **O sea: el diagnóstico, el lector y la suite estaban bien, y el defecto seguía vivo en
+producción.** Un control que no está en el camino por donde pasan los datos no es un control:
+es una demostración. Queda como `P294`.
+
+### 754 — 🔴 El cableado OBVIO habría publicado una respuesta nueva y equivocada
+
+La identidad natural de un artefacto Maven parece ser el `artifactId`. Medido sobre los seis
+repos Java/Maven del inventario, con `ownership()` tal como está:
+
+| Repo | `artifactId` | P280 con `artifactId` | ¿es propio? |
+|---|---|---|---|
+| `kuali/kc` | `coeus` | 🔴 **`FOREIGN`** | 🟢 sí — *Kuali **Coeus*** |
+| `sakaiproject/sakai` | `base` | 🔴 **`FOREIGN`** | 🟢 sí — es el pom raíz de Sakai |
+| `UniTime/unitime` | `unitime` | 🟢 `OWN` | sí |
+| `OpenOLAT/OpenOLAT` | `openolat-lms` | 🟢 `OWN` | sí |
+| `DSpace/DSpace` | `dspace-parent` | 🟢 `OWN` | sí |
+| `SafeExamBrowser/seb-server` | `seb-server` | 🟢 `OWN` | sí |
+
+🔴 **2 de 6 falsos `FOREIGN`, y el peor es `kuali/kc`:** su pom declara `GNU Affero General
+Public License, Version 3`, y `FOREIGN` significa *no atribuir* (P280), así que el cableado
+obvio habría **leído bien la licencia y se habría negado a publicarla**. Es la licencia más
+consecuente del inventario —AGPL-3.0 §13 obliga a publicar el fuente a los usuarios de un
+servidor, y un ERP universitario se entrega como SaaS—.
+
+🔵 **Es el patrón del pase 96 otra vez: el arreglo correcto era más angosto que el obvio**, y
+esta vez el obvio no fallaba por caja sino por **qué campo se toma como identidad**.
+
+### 755 — 🟢 La identidad de un pom es el `groupId`, y lo que faltaba era el segmento de ORGANIZACIÓN
+
+`ownership()` compara contra `repo.split("/")[-1]`, o sea **descarta la organización**. Para
+npm y Composer alcanza. En Maven es fatal: `kuali/kc` declara `org.kuali.coeus` y
+`Kuali Coeus`, y **ninguno de los dos se parece a `kc`** — los dos se parecen a **`kuali`**,
+que es justo el segmento que la función tira.
+
+🟢 **El `groupId` es un namespace reverse-DNS que suele codificar a la organización dueña**,
+que es exactamente la identidad que P280 quiere comparar. Medido: con los tres candidatos
+(`groupId`, `artifactId`, `<name>`) contra los **dos** segmentos del slug, los seis repos dan
+`OWN` y **el que gana es el `groupId` en 5 de 6**.
+
+⚠️ **Y `ownership()` queda INTACTA**: sus 34 aserciones siguen valiendo y las 200 filas ya
+publicadas no se mueven. La resolución es una capa **encima** (`ownership_any`), no un cambio
+de regla — porque cambiar la regla habría movido filas que nadie midió de nuevo.
+
+### 756 — 🟢 El `<parent>` de un pom es OTRO proyecto, y no presta ni identidad ni licencia
+
+`SafeExamBrowser/seb-server` hereda de `org.springframework.boot` /
+`spring-boot-starter-parent`. 🔴 **Si el `<parent>` prestara identidad, el repo reclamaría ser
+Spring Boot** —y un pom con `<licenses>` heredado arrastraría una licencia ajena—. La lectura
+toma **sólo hijos directos de `<project>`**, y el control negativo que lo afirma está en la
+suite con la forma real de seb-server.
+
+🔵 **Lo mismo vale para Sakai, que también tiene `<parent>` (`master`):** sus candidatos salen
+`['org.sakaiproject', 'base', 'Sakai base pom']` y el `<parent>` no agrega ninguno.
+
+### 757 — 🟢 Dos canales independientes, y concuerdan: la declaración contra el payload
+
+Con el cableado puesto, el camino de producción corrido punta a punta sobre los **payloads
+reales** (no las fixtures), y comparado contra lo que esta base ya publica para esas filas
+—que viene del **otro** canal, el archivo de licencia leído en pases anteriores—:
+
+| Repo | declara el `pom.xml` | familia | publicado | acuerdo |
+|---|---|---|---|---|
+| `kuali/kc` | `GNU Affero General Public License, Version 3` | `AGPL-3.0` | `AGPL-3.0` | 🟢 **ACUERDO** |
+| `sakaiproject/sakai` | `Educational Community License, Version 2.0` | `ECL-2.0` | `ECL-2.0` | 🟢 **ACUERDO** |
+| `UniTime/unitime` | `Apache Software License (ASL), Version 2.0` | `Apache-2.0` | `Apache-2.0` | 🟢 **ACUERDO** |
+| `OpenOLAT/OpenOLAT` | `Apache 2.0 Open Source L6icense` | `Apache-2.0` | `Apache-2.0` | 🟢 **ACUERDO** |
+| `DSpace/DSpace` | `DSpace BSD License` | `BSD` | `BSD-3-Clause` | 🔵 **acuerdo de FAMILIA, menos preciso** |
+| `SafeExamBrowser/seb-server` | *(sin `<licenses>`)* | — | `MPL-2.0` | ⚠️ **sin declaración** |
+
+🟢 **4 acuerdos exactos, 1 de familia, 0 contradicciones.** Eso convierte al manifiesto en un
+canal **corroborante**, no en un reemplazo: donde el archivo de licencia existe, lo confirma;
+donde no existe (`kuali/kc`), es la única fuente.
+
+🔵 **Y el límite se declara, porque es el del canal y no un error:** `DSpace BSD License` es un
+nombre de fantasía y **de un nombre no sale el número de cláusulas** — `BSD-3-Clause` sólo lo
+da el payload. Un pom nunca responde `P279` (qué archivo nombra la licencia): responde la
+**declaración**.
+
+### 758 — 🔴 El nombre de una licencia en un manifiesto es texto libre, y trae erratas
+
+`OpenOLAT/OpenOLAT` declara, textualmente:
+
+```xml
+<name>Apache 2.0 Open Source L6icense</name>
+```
+
+🔴 **`L6icense`. Es real y es de upstream**, no del transporte: dos lecturas del payload dan el
+mismo `sha256` (`be4f685dc879236118f522c3…`), y el string está dentro del `<name>`.
+
+🟢 **No rompe el veredicto, y el motivo importa:** el respaldo de declaración de
+`lib/license_family.sh` ancla en el token de FAMILIA (`*apache*`), no en la palabra «License»,
+así que clasifica `Apache-2.0` igual. 🔴 **Pero un classificador por bloque de título
+—exactamente lo que `P171` ordena para los payloads largos— devuelve `UNCLASSIFIED` sobre esta
+cadena.** Es un argumento medido a favor del diseño del respaldo, y una fragilidad latente:
+**la robustez vino del token, no de la gramática**.
+
+### 759 — 🔴 Catorce tendencias anunciadas y nunca escritas, y el control no podía verlas
+
+| Rango | Pase que lo anunció | ¿secciones escritas? | ¿contenido recuperable? |
+|---|---|---|---|
+| **706–711** | 91 | 🔴 **0 de 6** | 🔴 **no** — ningún commit de la historia definió ninguna |
+| **745–752** | 96 | 🔴 **0 de 8** | 🟢 **sí** — el contenido está en la nota de cabecera del 96 |
+
+🔴 **Y el agravante:** `trend-backlink-audit/` existe desde el pase 49 justo para atrapar citas
+colgadas, y reportaba **6**. El pase 96 anunció las suyas así —
+
+> **Ocho tendencias nuevas, numeradas 745–752**
+
+— y el extractor exige que el número vaya **pegado** a la palabra «tendencias». Con dos
+palabras en el medio devuelve **cero**. 🔵 **Es `P126` punto 2 una vez más: la suite pasaba en
+22/22 y ninguna aserción ejercitaba la forma con que esta base ANUNCIA sus propias
+tendencias.** Arreglado con ancla en `numerad*` y sus negativos: el control ahora reporta
+**20** citas colgadas donde antes veía 6.
+
+🔴 **Y no fueron sólo tendencias: el mismo pase 96 anunció «los patrones nuevos son `P288`,
+`P289` y `P290`» y tampoco escribió esas tres secciones** — medido con el otro control de esta
+base, `pattern-citation-audit`, que los contaba entre sus citas colgadas. **El pase 96 anunció
+ocho tendencias y tres patrones y definió cero.** 🟢 **Los tres patrones quedan recuperados en
+este pase** (su contenido también estaba en una nota de cabecera): el control pasa de **263** a
+**271** definiciones y de **32** a **25** números colgados.
+
+🟢 **Las 745–752 se recuperan en este pase.** 🔴 **Las 706–711 se declaran IRRECUPERABLES y no
+se inventan:** el pase 91 dejó sólo el puntero «Ver tendencias 706–711» en dos archivos, sin
+contenido en ninguna parte, y fabricarlo sería peor que el hueco.
+
+### 760 — 🔵 El mismo extractor era LOSSY en castellano: «a» es un rango, no una lista
+
+Al cerrar el hueco de 759 apareció un segundo defecto en el mismo instrumento: el conjunto de
+conectores aceptaba la palabra **«a»**, pero la expansión de rango sólo miraba el **guion**.
+
+| Entrada | Antes | Ahora |
+|---|---|---|
+| `tendencias 745–752` | 🟢 los 8 | 🟢 los 8 |
+| `tendencias numeradas 745 a 752` | 🔴 **`[745, 752]`** — dos | 🟢 **los 8** |
+
+🔵 **Es la advertencia que el propio archivo tiene escrita desde el pase 49** —«*un extractor
+lossy reporta un número más chico y confiado*»— reapareciendo por el eje del **idioma**: en
+castellano «745 a 752» es un rango, y aceptar «a» como conector sin aceptarlo como marca de
+rango convierte ocho en dos. Arreglado en los **dos** lugares donde vivía la lógica duplicada.
+
+### 761 — 🔴 La declaración de canal de esta base sólo cubría GitHub, y fuera de GitHub el egreso está BLOQUEADO
+
+`P247` obliga a declarar el canal antes de cualquier veredicto, y esta base lo venía cumpliendo
+**sobre hosts de GitHub**. Medido en el pase 97 sobre hosts cualesquiera:
+
+| Host | `curl` | fetcher de la herramienta |
+|---|---|---|
+| `raw.githubusercontent.com` | 🟢 **200 con payload** | — |
+| `github.com/<org>/<repo>` | 🔴 `403` | — |
+| `unu.edu`, `coe.int`, `unesco.org`, `example.com` | 🔴 **`000`** | 🔴 **`EGRESS_BLOCKED`** |
+
+🔴 **Consecuencia sobre `intel/market.md` entero: las fuentes primarias de la inteligencia
+regional NO son verificables en este entorno.** Todo lo regional viene de los resúmenes del
+buscador, y la regla que esta base aplica a los repos —*citar un `403` no es verificar*— vale
+igual: **citar un resumen de buscador no es citar la fuente**. Por eso el barrido 26 marca cada
+bloque regional 🔸 **SIN VERIFICAR** y **nombra** la fuente para que un humano con egreso la
+abra.
+
+🟢 **Y explica dos cosas que estaban escritas como rarezas.** Primero, por qué la corrección del
+art. 50 es contra-corriente (tendencia **752**): la fuente legal no se puede abrir desde acá, y
+lo único abrible es la prensa de industria, que publica la versión superada. Segundo, el **gap
+254** —la licencia del MRAC de ACARA «sin leer por bloqueo de egreso»— deja de ser un incidente
+y pasa a ser la **regla**: `acara.edu.au` no es GitHub, y el egreso a no-GitHub está bloqueado,
+no caído.
+
+🔵 **La distinción importa para no repetir el gasto:** `000`/`EGRESS_BLOCKED` no es un host
+muerto ni un 404. Un pase futuro **no** tiene que re-sondear estos hosts para confirmar que no
+responden — tiene que **marcar la cita como secundaria** y dejar la verificación primaria
+anotada como trabajo para un entorno con egreso.
+
+## 🟢 Tendencias 745–752 — pase 96 del 2026-10-04 · ⚠️ SECCIONES RECUPERADAS EN EL PASE 97
+
+⚠️ **Nota de procedencia, y es lo primero que hay que leer de esta sección.** El pase 96
+**anunció** estas ocho tendencias en su nota de cabecera y **nunca escribió las secciones**
+(tendencia **759**). El contenido de abajo es **del pase 96**, expandido desde esa nota por el
+pase 97 para que las ocho citas dejen de colgar. **No se agregó ningún hallazgo nuevo acá**: lo
+del pase 97 son las tendencias 753–760. Los instrumentos del 96 son
+[`p288-agpl-casefold/`](../compose/code/p288-agpl-casefold/) (**9/9**) y
+[`p289-maven-manifest/`](../compose/code/p289-maven-manifest/) (**11/11**).
+
+### 745 — 🔴 El control compartido devolvía `GPL-3.0` para una AGPL-3.0 real
+
+`lib/license_family.sh` —creado por `P237` precisamente para que la corrección GPL/AGPL no
+tuviera que recordarse— clasificaba mal el payload de `kuali/kfs` (`HEAD/LICENSE`, 33.755 B,
+el ERP financiero de dos docenas de universidades). Su rama AGPL es un glob de `case`, o sea
+**sensible a la caja**; la rama GPL de abajo usa `grep -qi`, **insensible**. Un AGPL *reflowed*
+sin el título en mayúsculas cae por la primera y la segunda lo atrapa.
+
+### 746 — 🔴 Y lo que lo atrapa es el PREÁMBULO DE LA PROPIA AGPL
+
+La rama GPL matchea «*The GNU General Public License permits making a modified version and
+letting the public access it on a server…*», que es el preámbulo de la AGPL explicando en qué
+se diferencia de la GPL. 🔵 **O sea que `P171` («clasificá por bloque de título, no por el
+cuerpo») se cumplió y NO alcanzó, porque el bloque de título de la AGPL nombra a la GPL.**
+
+### 747 — 🔴 `P126` punto 2, sobre el control compartido mismo
+
+Las **41** aserciones de la suite pasaban y **ninguna** ejercitaba el caso: *todas* las
+fixtures AGPL traen el título canónico en mayúsculas. 🔴 **El control nació sin el caso que lo
+rompe, y la regla que lo exigía está escrita en el README de esta base desde el pase 56.**
+
+### 748 — 🟢 El arreglo correcto resultó MÁS ANGOSTO que el obvio
+
+Volver insensible la rama de título habría clasificado como AGPL la fixture **GPL-3.0** de la
+propia suite, cuyo encabezado incluye su §13. 🟢 **El ancla que sirve es la definición de la
+sección 0, y necesita las palabras `refers to`**, porque la §13 de la GPL-3.0 dice «*licensed
+**under** version 3 of the GNU Affero…*», no «*refers to*».
+
+### 749 — 🔴 La licencia de un consorcio es por REPO, no por organización
+
+| Repo | Licencia leída del payload |
+|---|---|
+| `kuali/rice` | 🟢 `ECL-2.0` |
+| `kuali/kfs` | 🔴 `AGPL-3.0` |
+| `kuali/kc` | 🔴 `AGPL-3.0` |
+
+🔴 **Wikipedia, linux.com y la ayuda de KFS en tres universidades dicen «ECL 2.0» para todo:
+aciertan en uno de tres.** ECL-2.0 es de familia Apache y no pide nada; AGPL-3.0 §13 obliga a
+publicar el fuente a los usuarios de un servidor.
+
+### 750 — 🔴 El barrido manifiesto-consciente está CIEGO a la capa de plataforma de esta vertical
+
+`MANIFESTS` lista Python/JS/PHP/Rust y **no `pom.xml`**, mientras Kuali, Sakai, TAO, OpenEMIS y
+SEB Server son **Java/Maven**. 🔵 **La tasa de `P279` ahí no es 0 ni es alta: es NO MEDIBLE con
+el instrumento que el pase 95 pre-registró.** *(Cerrado en el pase 97 — tendencia 753.)*
+
+### 751 — 🔵 El corte regulatorio que esta base no tenía INVIERTE su propia prioridad
+
+El **Anexo III** (que nombra educación) quedó diferido a **`2027-12-02`** por el Digital
+Omnibus aprobado en firme el **`2026-06-29`**. 🔴 **Pero el ARTÍCULO 50 no se difirió:** vigente
+desde `2026-08-02`, con la gracia de marcado venciendo el `2026-12-02`. 🟢 **Lo que apremia es
+el art. 50, no el alto riesgo**, y eso valida por una vía no buscada la familia `aiact-50-2-*`
+de esta base.
+
+### 752 — 🔴 Y el canal secundario sigue publicando la versión SUPERADA
+
+Los barridos regionales devolvieron «*full effect in August 2026*». 🔴 **Esta corrección hay
+que re-verificarla contra fuente legal y no contra prensa de industria: es `P281` en el eje
+regulatorio.** *(Reproducido por tercera vez en el pase 97.)*
+
+## ⚠️ 706–711 — SEIS NÚMEROS SIN DEFINICIÓN, declarados irrecuperables (pase 97)
+
+🔴 **El pase 91 citó «Ver tendencias 706–711» en `agents/top.md` y en `agents/trending.md` y
+nunca escribió las secciones.** Medido en el pase 97, sobre la historia completa del
+repositorio:
+
+| Verificación | Resultado |
+|---|---|
+| encabezados `### 706`…`### 711` en el archivo hoy | 🔴 **0 de 6** |
+| commits de la historia que hayan tocado alguno de esos encabezados | 🔴 **0** (`git log --all -S`) |
+| contenido recuperable en la nota de cabecera del pase 91 | 🔴 **ninguno** — sólo el puntero |
+| secciones vecinas | 699–705 (pase 90) → **hueco** → 712–720 (pase 92) |
+
+🔴 **No se inventan.** Las 745–752 del pase 96 sí se recuperaron en este pase porque su
+contenido existía escrito en una nota de cabecera; acá no existe en ninguna parte, y fabricar
+seis tendencias para tapar seis citas sería meter dato falso en una KB para que un control dé
+verde. ⚠️ **Consecuencia aceptada y declarada: `trend-backlink-audit` seguirá reportando citas
+colgadas sobre estos seis números, y eso es CORRECTO — están colgadas.** Al cierre del pase 97
+son **24** citas sobre los seis (706: 5 · 707: 3 · 708: 3 · 709: 3 · 710: 5 · 711: 5), y
+🔵 **subieron de 18 a 24 por culpa de ESTE pase**: declarar el hueco obliga a nombrar los
+números, y nombrarlos cuenta como citarlos. **El número a vigilar no es «0 colgadas» sino «0
+colgadas NUEVAS por un hallazgo no declarado»** — las 6 que agrega este pase apuntan todas a
+esta misma sección, que es la que explica por qué no se pueden resolver.
+
+🔵 **Hallazgo lateral del mismo barrido, más leve y que conviene no confundir con lo de
+arriba:** hay **otros ocho** números sin definición por debajo del máximo —**232, 233,
+247–250, 451, 452**— que **nadie cita**. Son huecos de numeración, no citas colgadas: no
+rompen ninguna referencia, y se registran para que un pase futuro no los lea como pérdida.
 
 ## 🟢 Tendencias 737–744 — pase 95 del 2026-10-04: el pase gasta su esfuerzo en una predicción PROPIA y la falsifica
 

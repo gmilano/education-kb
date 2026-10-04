@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- REDUCIDO del payload real: raw.githubusercontent.com/kuali/kc/HEAD/pom.xml (118.096 B,
+     leido el 2026-10-04). Se conservan los campos de identidad y el <licenses> textuales. -->
+<project xmlns="http://maven.apache.org/POM/4.0.0">
+  <groupId>org.kuali.coeus</groupId>
+  <artifactId>coeus</artifactId>
+  <name>Kuali Coeus</name>
+  <licenses>
+    <license>
+      <name>GNU Affero General Public License, Version 3</name>
+      <url>${kuali.agpl3.license.url}</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+</project>

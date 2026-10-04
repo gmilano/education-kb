@@ -29,7 +29,14 @@ WITNESS="README.md readme.md README.rst README.txt README Readme.md .gitignore"
 VARIANTES="LICENSE LICENSE.txt LICENSE.TXT LICENSE.md LICENSE.rst LICENCE LICENCE.txt LICENCE.md
 COPYING COPYING.txt COPYING.md COPYING.LESSER LICENSE-MIT LICENSE-APACHE LICENSE.html
 license license.txt license.md licence LICENSE-2.0.txt UNLICENSE NOTICE"
-MANIFESTS="pyproject.toml package.json composer.json Cargo.toml setup.cfg"
+# P294 (pase 97): `pom.xml` AGREGADO al final.  La capa de plataforma educativa es Java/Maven
+# y este barrido era ciego a ella.  Va al final y no al principio porque el bucle corta en el
+# PRIMER manifiesto que parsea, y el orden solo decide cuando hay colision: medido en los 6
+# repos Java del inventario (kuali/kc, UniTime, OpenOLAT, DSpace, sakai, seb-server),
+# `package.json` y `composer.json` en la raiz dan 404 en 6/6 -- o sea la colision NO esta
+# observada y esta eleccion queda sin ejercitar.  Si aparece un repo poliglota, el orden pasa
+# a ser una decision con consecuencia y hay que medirla, no heredarla de aca.
+MANIFESTS="pyproject.toml package.json composer.json Cargo.toml setup.cfg pom.xml"
 
 code() { curl -sI -o /dev/null -w '%{http_code}' --max-time 12 "$1" 2>/dev/null; }
 body() { curl -s --max-time 12 "$1" 2>/dev/null; }

@@ -65,6 +65,42 @@ ROW = re.compile(r"^\|\s*\**(\d{1,3})\**\s*\|")
 CITE = re.compile(
     r"tendencias?\s+((?:\**\d{1,3}\**(?:\s*(?:%s|,|\by\b|\be\b)\s*)?)+)" % DASH,
     re.I)
+
+#: P295 (pase 97).  `CITE` exige que el numero vaya PEGADO a la palabra "tendencias", y esa
+#: adyacencia es lo que la protege de leer un anio como cita ("las tendencias de 2026" -> 0,
+#: verificado).  Pero el pase 96 anuncio sus ocho tendencias asi:
+#:
+#:     **Ocho tendencias nuevas, numeradas 745-752**
+#:
+#: ...con dos palabras en el medio, y `CITE` devuelve CERO sobre esa linea.  O sea: el control
+#: que existe para atrapar citas colgadas es CIEGO a la forma con que esta base ANUNCIA sus
+#: propias tendencias, y las ocho de 745 a 752 quedaron sin seccion sin que nada lo marcara.
+#: Es la misma forma de defecto que P126 pt.2: la suite pasaba y no ejercitaba el caso.
+#:
+#: El ancla es la palabra `numerad*`, que NO es ambigua: "numeradas 745-752" declara un rango.
+#: Se permite texto intermedio sin digitos y acotado, para no reabrir el hueco del anio -- el
+#: negativo que lo afirma esta en la suite.
+CITE_NUMBERED = re.compile(
+    r"tendencias?\b[^\d\n]{0,40}?numerad[ao]s?\s+"
+    r"((?:\**\d{1,3}\**(?:\s*(?:%s|,|\by\b|\be\b|\ba\b)\s*)?)+)" % DASH,
+    re.I)
+
+#: Las dos formas, en un solo paso.  Se devuelven los `match` para que el llamador siga
+#: leyendo `group(1)` como antes.
+def cite_matches(line):
+    """Todas las citas de tendencia de una linea, en las DOS formas (P295)."""
+    seen = []
+    spans = []
+    for rx in (CITE, CITE_NUMBERED):
+        for m in rx.finditer(line):
+            # Una linea con "tendencias numeradas 745-752" la matchea solo la segunda; si
+            # alguna forma futura matchea las dos, no se cuenta la cita dos veces.
+            key = (m.start(1), m.group(1))
+            if key in spans:
+                continue
+            spans.append(key)
+            seen.append(m)
+    return seen
 NUM = re.compile(r"\d{1,3}")
 
 
@@ -101,10 +137,12 @@ def citations():
         if not os.path.exists(path):
             continue
         for lineno, line in enumerate(open(path).read().split("\n"), 1):
-            for m in CITE.finditer(line):
+            for m in cite_matches(line):
                 blob = m.group(1)
                 nums = [int(x) for x in NUM.findall(blob)]
-                ranged = re.search(r"\d\s*%s\s*\d" % DASH, blob) and len(nums) == 2
+                # P295: el guion O la palabra "a" ("745 a 752" es un rango, no una lista de dos).
+                ranged = (re.search(r"\d\s*(?:%s|\s+a\s+)\s*\d" % DASH, blob)
+                          and len(nums) == 2)
                 if ranged and nums[0] < nums[1] and nums[1] - nums[0] < 100:
                     nums = list(range(nums[0], nums[1] + 1))
                 for n in nums:
