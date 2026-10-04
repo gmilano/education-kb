@@ -85,6 +85,32 @@ corre ése antes de escribir uno a mano** (tendencia **313**). 🟢 **Y el `gafa
 > **Pase 36 del 2026-10-02:** 🔵 **este pase no agrega repos: le pone FECHA a los que ya están, y la fecha cambia tres recomendaciones.** Se midió la capa PHP de evaluación y telemetría en Packagist —el único registro de los tres que entrega descargas en este entorno (`api.npmjs.org` y `pypistats.org` dan **403 a CONNECT**)— y el resultado está en `repos/trending.md`. **Lo que hay que saber antes de proponer desde este archivo:** 🔴 **la pieza xAPI más descargada de esta base, `rusticisoftware/tincan` (Apache-2.0, 6.178 desc./mes, 863.777 totales), no publica desde el 2022-11-02**, y ⚠️ **el único MIT de esa capa, `php-xapi/client`, está parado desde el 2021-03-24** con 825 desc./mes. 🔵 **La lectura es que en xAPI/PHP lo permisivo está quieto y lo vivo es copyleft**, así que la receta de telemetría se sostiene en **Ralph (MIT)** + **`lrsql` (Apache-2.0)** + **`learnmcp-xapi` (MIT)** y no en la capa PHP. 🟢 **Del lado de evaluación, lo activo es `oat-sa/extension-tao-testqti`** (**885 versiones**, release del **2026-09-30**) **y sigue siendo GPL-2.0-only**, mientras **lo permisivo es lo nuevo**: `@longsightgroup/qti3-cli` (**MIT**, 41 releases desde el 2026-05-21, último **2026-10-01**) con **cero dependencias de terceros** — sus 4 dependencias son todas `@longsightgroup/*` pinneadas a la misma versión exacta. **Su manifiesto MCP completo de 20 tools está escrito en `compose/patterns.md` (P76).** 🔴 **Y una corrección de catálogo: `oat-sa/qti-sdk` devuelve 404 en Packagist porque es el nombre del REPO — su paquete es `qtism/qtism`** (GPL-2.0-only, 218.212 descargas totales, 315 versiones). **Nombre de repo y nombre de paquete son identificadores distintos, y confundirlos produce un 404 que parece una ausencia** — pasó igual con `1edtech/oneroster`, `imsglobal/lti-1-3-php-library` y `packbackbooks/lti-1-3-php-library`, los tres **404**, que se anotan como *«no verificado en Packagist bajo ese nombre»* y **no** como inexistentes. ⚠️ **Acción pendiente que el pase 37 tiene asignada: este archivo nunca pasó por el control de *slugs* distintos ni por el de *backlink*** — los dos que en `agents/top.md` encontraron **un duplicado** y **dos colisiones** este mismo pase.
 > **Pase 11 del 2026-10-01:** aparece una licencia que las diez pasadas anteriores filtraban sin saberlo — **ECL-2.0**, con la que licencia todo Apereo (Sakai, Opencast, OpenLRW). Es Apache-2.0 con el alcance de patentes acotado, aprobada por OSI y FSF, y **es apta para construir arriba**. Ver la capa de analítica institucional, abajo.
 
+## 🧪 Altas fundacionales: 0 — y la mejor candidata del pase se autodescalifica de este estante, por escrito (pase 79 del 2026-10-04)
+
+El canal devolvió **seis repos que esta KB no tenía** (verificado por `grep` sobre los *slugs* ya
+catalogados antes de medir) y 🔴 **ninguno es fundacional.** Se dice en vez de promover una pieza a
+este estante para que no quede vacío.
+
+🔵 **La candidata que más cerca estuvo, y el motivo exacto por el que no entra acá.**
+`MysterionRise/adaptive-knowledge-graph` (🟢 **MIT**, `LICENSE` 1.520 B, **17 ★**, 137 commits) es la
+referencia de **arquitectura** más completa que esta KB tiene de **KG-RAG + BKT/IRT con inferencia
+local** —Neo4j con aristas de prerrequisito, BM25 + vectorial en OpenSearch con *reranking*, Ollama
+local, citas con fragmento, y un arnés de **50+ casos dorados de OpenStax**—. ⚠️ **Y su propio README
+la descalifica de este estante por escrito:** *«controlled client-demo and AI engineering portfolio
+prototype»*, *«not as a production certification platform»*, **sin LMS/LTI, sin modelo de
+inquilinos, sin certificación de cumplimiento, sin IRT calibrado** y **perfiles de alumno
+sintéticos**.
+
+🟢 **Entró a `agents/top.md` como referencia de arquitectura y NO acá como base de producción.** Es
+la regla de **P234** aplicada en su dirección útil: la fila hereda la **capacidad** del código, no la
+**ambición** del README — con la diferencia, poco común, de que acá el README fue el honesto y lo que
+había que respetar era su propia cota.
+
+⚠️ **Y el barrido de plataformas sólo devolvió confirmación:** **OpenOLAT** (Apache-2.0, 20.3.4 de
+junio de 2026), el SDK de **OpenProct**, **OpenEduCat**, **ERPNext/`frappe/education`** y
+**`frappe/lms`** 🔵 **ya estaban todos en esta base.** El estante no crece este pase, y la razón no es
+que no se buscó.
+
 ## 🧪 Cero altas de repo fundacional, y el barrido de plataformas devolvió sólo confirmación (pase 78 del 2026-10-03)
 
 🔴 **Cero altas, con lo buscado escrito.** La consulta obligatoria de plataformas verticales se corrió

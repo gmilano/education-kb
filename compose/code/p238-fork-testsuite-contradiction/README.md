@@ -1,3 +1,9 @@
+---
+industry: education
+region: Global
+updated: 2026-10-04
+---
+
 # P238 — cuando el FUENTE de un fork es idéntico byte a byte, lo que se bifurcó es el SUITE DE PRUEBAS
 
 **Pase 77 del 2026-10-03.** Instrumento: `check_contract.py` · test: `test_check_contract.py` (**8/8**)

@@ -1,3 +1,9 @@
+---
+industry: education
+region: Global
+updated: 2026-10-04
+---
+
 # fork-lineage-audit — el instrumento de P160 (pase 62, 2026-10-03)
 
 **Qué mide.** Dado el texto de la página de un repo de GitHub, separa **dos ejes que esta base

@@ -1,3 +1,9 @@
+---
+industry: education
+region: Global
+updated: 2026-10-04
+---
+
 # P170 — Barrido de licencia por ref `HEAD` (pase 64 del 2026-10-03)
 
 Ejecuta la **acción 1 del pase 64**: medir la licencia de **las 200 filas `org/repo` distintas** que

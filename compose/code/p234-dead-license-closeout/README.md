@@ -1,3 +1,9 @@
+---
+industry: education
+region: Global
+updated: 2026-10-04
+---
+
 # P234 — cerrar la tabla de «repo muerto ⇒ licencia no verificada»
 
 **Pase 77 del 2026-10-03.** Instrumento: `sweep_dead.sh`. Salida ejecutada: `result.2026-10-03.tsv`.

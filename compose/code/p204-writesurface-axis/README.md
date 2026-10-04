@@ -1,3 +1,9 @@
+---
+industry: education
+region: Global
+updated: 2026-10-04
+---
+
 # p204 — Barrido de licencia por PAYLOAD + el segundo eje (escritura) · pase 70 del 2026-10-03
 
 ## Qué hace `sweep_payload_license.sh`

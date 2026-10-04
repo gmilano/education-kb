@@ -1,3 +1,9 @@
+---
+industry: education
+region: Global
+updated: 2026-10-04
+---
+
 # P235 — el eje CAPA de P230 se reproduce, y su SIGNO se INVIERTE entre estándares
 
 **Pase 77 del 2026-10-03.** Instrumentos: `measure.sh`, `classify_title.sh`,

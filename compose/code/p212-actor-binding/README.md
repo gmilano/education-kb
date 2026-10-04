@@ -1,3 +1,9 @@
+---
+industry: education
+region: Global
+updated: 2026-10-04
+---
+
 # P212 — ¿De dónde sale el ACTOR? El eje ortogonal a la escalera del pase 71 (pase 72 del 2026-10-03)
 
 **De dónde sale.** El pase 71 construyó la escalera de cuatro peldaños de la **compuerta de

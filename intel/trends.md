@@ -102,6 +102,155 @@ updated: 2026-10-04
 > están mal por ~2× y **un 403 de `curl` no es un 404**. Ver la nota de método del pase 12.
 > **Pase 11:** el Digital Omnibus es derecho vigente (tendencia 25), aparece la capa predictiva y está vacía (tendencia 26), y se corrige un error de método de diez pasadas sobre licencias permisivas (tendencia 27).
 
+## 🆕 Tendencias 616–622 — pase 79 del 2026-10-04
+
+### 616. 🔴 En la capa que el regulador nombra, la CAPACIDAD y la LIBERTAD DE USO están anti-correlacionadas
+
+La ley de AI de Vietnam (vigente **2026-03-01**) es el único estatuto del mundo que nombra el
+**monitoreo conductual** por su nombre en educación. Este pase midió las tres piezas open source que
+lo implementan y el resultado va al revés de lo que una curva de adopción sugeriría:
+
+| Pieza | Licencia (medida) | ★ | Capacidad |
+|---|---|---|---|
+| `aungkhantmyat/The-Online-Exam-Proctor` | 🚫 **sin licencia (ausencia MEDIDA, dos canales)** | **32** | 🟢 la más completa |
+| `lavsharmaa/proctxam-ai-proctoring` | 🟢 **MIT** | **3** | ⚠️ la más angosta |
+| `kmamit5296/Online-Proctoring-System` | 🚫 **sin licencia (ausencia MEDIDA)** | — | sin medir |
+
+🔴 **32 ★ sin un archivo de licencia contra 3 ★ con MIT.** La pieza que el mercado eligió es la que
+una consultora no puede usar, y la que puede usar cubre un tercio del supuesto. 🔵 **Es la misma
+inversión que el pase 56 midió sobre la divulgación (la más adoptada era la que menos divulgaba) y
+que el pase 74 midió sobre una sola plataforma: la adopción no selecciona por licencia.** ⚠️ **Para
+una propuesta la consecuencia es concreta: en esta capa la elección se hace por licencia primero y
+por *features* después**, y el pedido de mayor retorno es de gestión, no de ingeniería — un `LICENSE`
+permisivo en la pieza de 32 ★ convierte código ya escrito en base bifurcable. Ver **P242**.
+
+### 617. 🟢 Una capa MEDIDA no es una región CUBIERTA, y el hueco se reclasifica en vez de cerrarse
+
+El pase 78 declaró un hueco: *APAC es la única región con un estatuto que nombra el monitoreo
+conductual y la única sin pieza permisiva medida que lo implemente.* Este pase **encontró tres
+piezas** y **el hueco sigue abierto**.
+
+🔴 **El motivo es de regla y se declara:** las tres tienen **afiliación declarada ninguna** —
+verificado en el repo y en la página de GitHub de cada una — y **de un antropónimo no se infiere
+región** (**P135**). 🔵 **Lo que cambió no es la cobertura de la región, es la CLASE del hueco:** pasa
+de `NO-MEDIDA` a 🔴 **`MEDIDA-Y-BLOQUEADA-POR-LICENCIA`**, la misma reclasificación que el pase 76
+hizo con la capa de *workbench* (*existe y está bloqueada por licencia, no por madurez*) y el 66 con
+`NOT-A-LICENSE`.
+
+🟢 **La tendencia de método, que es la que vale: un hueco que se reclasifica informa más que un hueco
+que se cierra mal.** Haber puesto esas tres piezas en APAC —por el antropónimo, que es el único
+indicio disponible— habría convertido un hueco declarado en cobertura aparente, que es el modo de
+falla de la tendencia **611**. ⚠️ **Es la misma decisión que el pase 71 tomó con `mcp_hemis_student`,
+y se repite a propósito: la regla sólo sirve si se aplica cuando cuesta.**
+
+### 618. 🔴 Un alcance DECLARADO es correcto y crea un punto ciego — y lo crea justamente por estar bien declarado
+
+`P239`/`P240` (pase 78) declaran su alcance en los **8** archivos de contenido. 🟢 **Esa declaración
+es correcta**: un instrumento que declara su alcance es estrictamente mejor que uno que lo deja
+implícito, y es la regla que esta KB venía pidiendo.
+
+🔴 **Y creó un punto ciego que duró 79 pases.** Los otros **48** `.md` del árbol quedaron fuera de
+**toda** medición de *frontmatter*: **41 de 56 lo tenían, y los 15 que faltaban eran todos `README.md`
+de `compose/code/`**, leídos por el compilador **sin `industry` y sin `region`**. ⚠️ **Nadie lo notó
+precisamente porque el alcance estaba escrito: un límite declarado se lee como una decisión tomada,
+no como una pregunta abierta.**
+
+🔵 **La regla que sale, y es permanente:** *cada vez que un instrumento declara su alcance, queda
+abierta la pregunta de quién mide el complemento.* 🟢 **La respuesta no es ampliar el alcance del
+instrumento que declaró bien —mide otra cosa— sino versionar el del complemento.** Reparados los 15 →
+**56 de 56**, e instrumento nuevo en `compose/code/p243-frontmatter-coverage/`. Ver **P243**.
+
+### 619. ⚠️ El LOCALE del contenido y el ORIGEN del código son ejes independientes, y confundirlos es la versión fina de lo que P135 prohíbe
+
+`abdomoaz58-tech/OpenLearn-AI` es la primera pieza medida de esta KB con **contenido educativo en
+árabe como primera clase** (OCR + RAG + grafo de conocimiento sobre documentos, multilingüe encima).
+🔵 **Eso es una señal de mercado real y nueva para esta base: el hueco de contenido árabe pasa de «no
+medido» a «medido y ocupado».**
+
+🔴 **Y no ubica a la pieza en EMEA.** Su afiliación declarada es **ninguna**, así que queda **sin
+región verificada**. ⚠️ **La tentación es fina y por eso se registra:** a diferencia del antropónimo
+—que P135 ya prohíbe—, el **idioma del contenido** *parece* evidencia de origen. **No lo es.** Un
+equipo de cualquier región puede construir una pieza árabe-primero, igual que una pieza en inglés no
+ubica a su autor en North America.
+
+🟢 **Lo que el locale sí informa es la DEMANDA, no la oferta**, y así queda archivado: la señal es de
+*a qué mercado apunta el artefacto*, no de *dónde se escribió*. ⚠️ **Sus dos cotas duras, medidas:
+AGPL-3.0 en el payload** (35.184 B, texto completo de la AGPLv3) **y 0 ★ / 0 *forks* con el repo
+autodeclarado *pre-alpha*** — no entra al catálogo, se registra como señal.
+
+### 620. 🔵 Un canal bloqueado medido DOS veces deja de ser un evento y pasa a ser una propiedad del canal
+
+El pase 78 publicó la **SUNY Systemwide AI Policy** (*Document Number 6904*, vigente **2026-04-30**,
+**64** campus) **con reserva declarada**: el dato venía de fuentes secundarias porque `suny.edu` está
+bloqueada por el proxy de egreso. Este pase volvió a intentar la fuente primaria y obtuvo
+**`EGRESS_BLOCKED`** otra vez.
+
+🔵 **No hay dato nuevo, y la segunda medición vale igual, por otra razón:** un bloqueo medido una vez
+es un evento que el próximo pase va a reintentar a ciegas; **medido dos veces con el mismo resultado
+es una propiedad del canal**, y eso cambia qué hacer con él — se deja de gastar presupuesto en
+reintentarlo y se registra como pendiente de **otro** canal. ⚠️ **La reserva sigue en pie y sin
+cambios: el número de documento y las fechas NO están verificados en fuente primaria, y no se deben
+citar como verificados en una propuesta.**
+
+🟢 **La tendencia de método: la reserva declarada de un pase es trabajo del siguiente, y cerrarla o
+confirmar que no se puede cerrar son los dos resultados válidos.** El inválido es dejarla envejecer
+sin volver a tocarla, que es cómo una cifra con reserva se convierte en una cifra sin reserva por
+simple paso del tiempo.
+
+### 621. 🔴 El SIGNO del error de celdas decide si se pierde dato: sobrantes destruye en silencio, faltantes no
+
+Dos filas de esta KB tenían **una celda más que su encabezado**. 🔴 **Markdown descarta las celdas
+sobrantes al renderizar, sin avisar**, así que el texto estaba en el fuente y **no** en la tabla
+publicada. Las faltantes, en cambio, se rellenan con celdas vacías: **26 filas del árbol las tienen y
+ninguna pierde texto.**
+
+| Caso | Render | Gravedad |
+|---|---|---|
+| 🔴 celdas **sobrantes** | **descarta** las extra | 🔴 **destructivo y silencioso** |
+| ⚠️ celdas **faltantes** | rellena con vacías | 🟢 benigno |
+
+🔴 **Y las dos instancias perdían justamente las dos clases de dato que esta KB más cuida.** Una, un
+**hallazgo de licencia** completo del pase 65 sobre `DMontgomery40/mcp-canvas-lms` —MIT como
+identificador en `package.json`, **39 forks heredando una cesión declarada**, y el texto de licencia
+ausente del repo y del tarball—, **invisible en la tabla publicada durante 14 pases**. La otra, la
+**trazabilidad** de la fila de Open edX (`gap 48`, `gap 50`, `gap 55`, `gap 57`, `P55`, `P63`).
+
+🔵 **No es casualidad estadística, y es la parte transferible: las celdas que sobran son las notas que
+alguien agrega al FINAL de una fila en un pase posterior, sin recontar el encabezado.** Por eso el
+defecto se concentra en las filas más anotadas, que son las más valiosas. ⚠️ **Es el mismo encuadre
+que la tendencia 612 (el comentario HTML que parte una tabla) sobre un eje nuevo: el defecto que no se
+ve en el render es peor que el que se ve** — acá literalmente, porque el render se ve perfecto.
+🟢 **Las dos reparadas sin perder texto.** Ver **P244**.
+
+### 622. 🔴 Un contador escrito en el pase produce falsos positivos antes que hallazgos, y la señal de que son falsos es que CONTRADICEN una línea base ya medida — tercera vez en esta KB
+
+Este pase escribió un contador de estructura de tablas **a mano**, para autocontrolar sus propias
+ediciones, porque el instrumento versionado (`P239`) **no se pudo correr** (ejecución negada).
+🔴 **Reclamó 83 bloques «sin separadora» contra la línea base de 0 que el pase 78 había medido con el
+instrumento versionado.**
+
+🔵 **La contradicción fue el diagnóstico, no el hallazgo.** Un contador casero que encuentra 83
+defectos donde un instrumento versionado midió 0 **está roto**, y buscar el defecto en el contador
+antes que en el archivo es lo que separa este pase del 55. Tenía **dos defectos independientes**:
+
+1. 🔴 **La separadora se reconocía con `^\|[\s:-]+\|`, y ese patrón también matchea un encabezado cuya
+   primera celda está vacía** (`| | Antes | Después |`), porque `[\s:-]+` matchea el espacio. El
+   encabezado se leía como separadora y la primera fila de datos se reportaba como huérfana.
+2. 🔴 **No se saltaban los bloques de código**, así que una tabla de **ejemplo** dentro de un
+   ` ```markdown ` contaba como tabla real — y el falso positivo cayó **dentro del README del
+   instrumento que mide exactamente ese defecto** (`p239-table-integrity/README.md:45`).
+
+🟢 **Corregidos los dos, los 83 pasaron a 0 — la línea base exacta del pase 78 — y recién entonces el
+contador habilitó el eje nuevo de la tendencia 621.** 🔵 **La coincidencia con el instrumento
+versionado es lo que habilita una medición casera; sin ella no hay nada.**
+
+🔴 **Y el contrafactual es el valor de la tendencia: si este pase hubiera «reparado» esos 83, habría
+roto 83 tablas correctas para callar a su propio contador.** ⚠️ **Van tres pases con esta misma
+lección —el 55 con su `grep` sin anclar, el 67 con su `awk -F'|'` y cuatro falsos negativos de cinco,
+y ahora el 79— y las tres veces el instrumento casero apareció porque el versionado no estaba
+disponible o no existía.** 🔵 **Eso vuelve a P126 regla 1 con un corolario: cuando el instrumento
+versionado no se puede correr, lo primero que hay que medir es el instrumento casero, no el archivo.**
+
 ## 🆕 Tendencias 611–615 — pase 78 del 2026-10-03
 
 ### 611. 🔴 Una tabla regional a la que le falta una región no deja hueco: deja cobertura APARENTE

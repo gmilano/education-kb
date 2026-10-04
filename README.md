@@ -1,7 +1,7 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-03
+updated: 2026-10-04
 ---
 
 # 📚 Education KB
@@ -54,6 +54,34 @@ o la variable de entorno (regla de **P107**, pase 47):
 | **`p228-segmented-coverage/`** | **los controles de P227+P228: el conjunto de archivos NOMBRADO, y la negativa a ordenar una cuota en USUARIOS contra una en INSTITUCIONES** | `python3 test_coverage.py` | **15/15** ✅ *(nuevo en el pase 75)* |
 | ídem, la reproducción del agregado del pase 74 contra el commit que citó | `python3 reproduce_p224.py` — **182** subconjuntos evaluados, **1** reproduce `229/389` | `python3 reproduce_p224.py` | **3/3** ✅ *(nuevo en el pase 75)* |
 | ídem, la medición por cohorte **en un commit fijo** (el commit es parte de la invocación: ver tendencia **593**) | inversiones por `(segmento, unidad)` | `python3 measure.py --at 5dd2bcc` | 🔴 **7** en K-12 / 🟢 **1** en superior |
+| **`p243-frontmatter-coverage/`** | **la cobertura de *frontmatter* sobre los 56 `.md`, y el control NEGATIVO que importa: que 7 variantes de vocabulario regional (`Latam`, `Europe`, `Asia Pacific`, `Brazil`…) sean RECHAZADAS** | `python3 test_check_frontmatter.py` | ⚠️ **sin medir — ver abajo** *(nuevo en el pase 79)* |
+
+
+⚠️ **Pase 79 del 2026-10-04 — la columna «Hoy» NO se re-verificó, y el instrumento nuevo de este pase
+tampoco se pudo correr.** La ejecución de las suites del árbol clonado quedó **NEGADA**
+(`[Code from External]`), igual que en los pases 58 y 67 y al revés que en el 66 y el 75. **No se
+reimplementaron a mano, no se buscó otro intérprete y no se troceó el comando** — la negativa es sobre
+el resultado, no sobre la forma. 🔴 **Consecuencia declarada en vez de tapada: las cifras de la tabla
+son las que el pase 75 (y antes el 66) reprodujo; el pase 79 NO las afirma como medidas hoy, y la fila
+nueva de `p243-frontmatter-coverage/` va con la celda «Hoy» VACÍA A PROPÓSITO** en vez de con un número
+que nadie corrió. 🔵 **Y no se publica ninguna conclusión general sobre la frontera de ejecución: es
+DEL ENTORNO y varía entre pases** — el error que los pases 50, 51 y 58 cometieron en una dirección y el
+52, el 66 y el 75 en la otra.
+
+🔵 **El canal medido hoy, idéntico al de los pases 67 y 75:** 🟢 `raw.githubusercontent.com` (**200** en
+ruta de archivo), `registry.npmjs.org` (**200**), `pypi.org` (**200**), `api.github.com/rate_limit`
+(**200**) y `github.com` por **WebFetch** (sirvió); 🔴 `api.github.com/repos/*`, `codeload.github.com` y
+`github.com` por `curl` dan **403**. ⚠️ **Otra vez el único endpoint de la API que pasa es el que NO
+transporta dato de repositorio.** 🔴 **Y `www.suny.edu` volvió a dar `EGRESS_BLOCKED`, así que la
+reserva del pase 78 sobre el *Document Number 6904* sigue sin cerrar — mismo bloqueo, dos pases, dos
+mediciones.**
+
+🟢 **Lo que este pase sí midió sin ejecutar código del árbol: la cobertura de *frontmatter*.** 41 de
+56 archivos `.md` la tenían; **los 15 que faltaban eran todos `README.md` de `compose/code/`**, fuera
+del alcance declarado de `P239`/`P240`. Reparados los 15 → **56 de 56**. ⚠️ **La cifra viene de un loop
+de `sh` del pase, con los 15 hallazgos verificados de primera mano uno por uno** (se imprimió la primera
+línea real de cada archivo), **no del instrumento versionado** — que es un orden invertido respecto de
+**P126 regla 1**, y se declara porque cambia qué tan fuerte es la cifra. Ver **P243**.
 
 🟢 **Pase 75 del 2026-10-03 — las tres suites nuevas de este pase CORRIERON en este entorno, y las
 cifras de su fila son de hoy.** ⚠️ **No se re-verificó la columna «Hoy» de las filas anteriores, y no

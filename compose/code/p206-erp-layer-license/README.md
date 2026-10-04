@@ -1,3 +1,9 @@
+---
+industry: education
+region: Global
+updated: 2026-10-04
+---
+
 # P206 — the ERP/administrative layer, measured by payload (pase 71 del 2026-10-03)
 
 ## What this asks

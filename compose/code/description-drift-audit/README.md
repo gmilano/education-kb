@@ -1,3 +1,9 @@
+---
+industry: education
+region: Global
+updated: 2026-10-04
+---
+
 # description-drift-audit — el instrumento de P165 (pase 63, 2026-10-03)
 
 **Qué mide.** Dentro de **un mismo repo**, separa dos cifras que la base venía leyendo como una:

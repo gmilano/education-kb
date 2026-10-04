@@ -1789,6 +1789,29 @@ Dónde se produce el software educativo abierto, que no es donde está la demand
 
 ### North America
 
+#### 📍 Pase 79 del 2026-10-04 — sin instrumento nuevo, y la reserva del pase 78 NO se pudo cerrar: el mismo bloqueo, medido dos veces
+
+🔴 **El barrido de North America no devolvió instrumento regulatorio nuevo.** Todo lo que el canal
+entregó ya estaba en este archivo, verificado por `grep` **antes** de escribir: los **134 proyectos de
+ley en 31 estados**, `AB 1159` de California (prohíbe usar dato de alumno para entrenar modelos),
+`SB 1227` de Idaho, los requisitos de supervisión humana de Oklahoma y Maryland, el *Traffic Light
+Framework* de NYC (marzo de 2026), `H.R. 8747` (*K-12 AI Literacy and Readiness Act*, avanzada en
+comisión en julio) y el marco estudiantil *STUDENTS FIRST Act of 2026*. 🔵 **Se declara como barrido
+agotado y no como cobertura.**
+
+⚠️ **Y la reserva que el pase 78 dejó declarada sigue EN PIE.** Ese pase registró la *SUNY Systemwide
+AI Policy, Document Number 6904* (vigente **2026-04-30**; alfabetización en AI como competencia de
+*gen ed* desde otoño de 2026, **2026-12-31** como fecha para que cada institución publique su
+política, sobre **64 campus** con currícula de AI ya en 61) **con la reserva explícita de que el dato
+venía de fuentes secundarias porque `suny.edu` está bloqueada por el proxy de egreso.**
+
+🔴 **Este pase volvió a intentar la fuente primaria y obtuvo `EGRESS_BLOCKED` otra vez.** 🔵 **El
+valor de la segunda medición no es el dato —no hay dato nuevo— sino que el bloqueo deja de ser un
+evento y pasa a ser una propiedad del canal: dos pases, dos mediciones, mismo resultado.** ⚠️ **La
+cifra sigue publicada con su reserva, y la reserva sigue siendo la misma: el número de documento y
+las fechas NO están verificados en fuente primaria.** 🟢 **Se deja dicho para que nadie lo cite como
+verificado en una propuesta.**
+
 #### 📍 Pase 78 del 2026-10-03 — se CORTA la racha de siete pases sin instrumento regulatorio nuevo, y el que entra trae DOS relojes con fecha y un número de documento citable
 
 🟢 **El hallazgo del pase, y es el primero de su clase en esta base: una política de AI de SISTEMA
@@ -3596,6 +3619,30 @@ Artículo 50(2) **no es exigible** en North America — pero es **el requisito m
 multi-región conviene cotizarlo contra el techo europeo y no contra el piso local (ver **P103** y **P105**).
 
 ### EMEA
+
+#### 📍 Pase 79 del 2026-10-04 — sin instrumento nuevo, y entra una señal de LOCALE que la región no tenía medida
+
+🔴 **El canal de EMEA no devolvió instrumento regulatorio nuevo.** El calendario del AI Act que este
+archivo ya publica se reconfirmó sin cambios —**2026-08-02** para el cuerpo general, con los sistemas
+de alto riesgo **diferidos a 2027-12-02** (*stand-alone*) y **2028-08-02** (embebidos en producto
+regulado)—, junto con la clasificación de alto riesgo de los sistemas que deciden acceso, evalúan
+resultados de aprendizaje o influyen en la trayectoria educativa. 🔵 **Nada de eso es nuevo y se
+declara como confirmación, no como hallazgo.**
+
+🟢 **Lo que sí entra, y es de capa de contenido y no de regulación:** `abdomoaz58-tech/OpenLearn-AI`
+es la primera pieza medida de esta KB con **contenido educativo en árabe como primera clase** (OCR +
+RAG + grafo de conocimiento sobre documentos educativos, multilingüe encima, con modos de despliegue
+local/híbrido/nube). ⚠️ **Y entra con dos cotas duras: AGPL-3.0 medida en el payload** (35.184 B, el
+texto completo de la AGPLv3 — fricción dura para una consultora) **y 0 ★ / 0 *forks* con el propio
+repo declarándose *pre-alpha*.**
+
+🔴 **La pieza NO ubica a la región, y conviene decirlo con precisión porque es un error fino.** Su
+afiliación declarada es **ninguna**, así que queda **sin región verificada** por **P135**. 🔵 **Lo que
+la pieza documenta es que la demanda de contenido árabe-primero tiene al menos un actor open source
+ocupándose; el idioma del CONTENIDO y el ORIGEN del código son ejes independientes, y tratarlos como
+uno es la versión sutil del error que P135 prohíbe.** 🟢 **El hueco de contenido árabe de esta base
+pasa de «no medido» a «medido y ocupado por una pieza AGPL pre-alpha»**, que es información
+cotizable: si un cliente de la región lo pide, hay de dónde partir y hay que negociar licencia.
 
 #### 📍 Pase 78 del 2026-10-03 — el canal de EMEA no devuelve instrumento nuevo, y el pase lo DECLARA en vez de reescribir lo que ya estaba
 
@@ -5502,6 +5549,42 @@ este pase dejó cubierto con código.
 
 ### APAC
 
+#### 📍 Pase 79 del 2026-10-04 — noveno barrido sin instrumento nuevo, y el hueco de CÓDIGO de la región se RECLASIFICA sin cerrarse
+
+🔴 **Noveno barrido consecutivo de APAC sin instrumento regulatorio nuevo.** Se reconfirmó lo que este
+archivo ya tiene: el **AI Basic Act** coreano (vigente **2026-01-22**, segundo país del mundo con
+legislación integral, con la educación entre sus dominios de *high-impact AI*), la **ley de AI de
+Vietnam** (vigente **2026-03-01**, con educación entre los seis sectores de alto riesgo y la
+evaluación automatizada y el **monitoreo conductual** nombrados), las seis regulaciones vinculantes de
+China con registro de algoritmos ante la CAC y etiquetado obligatorio de contenido generado, el
+*test-and-learn* de Singapur y la **AI Promotion Act** japonesa, explícitamente no vinculante. 🔵
+**Confirmación, no hallazgo.**
+
+🟢 **Lo que este pase sí movió es el hueco de CÓDIGO que el pase 78 declaró para la región, y lo movió
+sin cerrarlo.** Ese pase registró que **APAC es la única región con un estatuto que nombra el
+monitoreo conductual y la única sin una pieza permisiva medida que lo implemente.**
+
+🔵 **Este pase buscó esa pieza y encontró tres, y el resultado reclasifica el hueco en vez de
+cerrarlo:**
+
+| Pieza | Licencia (medida) | ★ | Capacidad |
+|---|---|---|---|
+| `aungkhantmyat/The-Online-Exam-Proctor` | 🚫 **sin licencia (ausencia MEDIDA, dos canales)** | **32** | 🟢 la más completa: *liveness* facial, postura, caras múltiples, teclas prohibidas, abandono de ventana, voz |
+| `lavsharmaa/proctxam-ai-proctoring` | 🟢 **MIT** | **3** | ⚠️ la más angosta: ojos, boca, cabeza |
+| `kmamit5296/Online-Proctoring-System` | 🚫 **sin licencia (ausencia MEDIDA)** | — | sin medir; la licencia ya la excluye |
+
+🔴 **El hueco de APAC NO se cierra, y el motivo es de regla y se declara:** las tres piezas tienen
+**afiliación declarada ninguna** —verificado en el repo y en la página de GitHub de cada una— y **de
+un antropónimo no se infiere región** (**P135**). ⚠️ **Una capa medida no es una región cubierta.**
+🟢 **Es la misma decisión que el pase 71 tomó con `mcp_hemis_student`:** usar una pieza de origen no
+evidenciado para tapar el hueco de la región sería exactamente el sesgo que esta base declara evitar.
+
+🔵 **Lo que la región gana de todas formas, y es cotizable:** la capa que su estatuto nombra pasa de
+`NO-MEDIDA` a 🔴 **`MEDIDA-Y-BLOQUEADA-POR-LICENCIA`**. Para un engagement en Vietnam o Corea con
+requisito de monitoreo conductual, la conclusión operativa es que **la capa de visión no se elige del
+estante**: o se parte de `SafeExamBrowser/seb-server`, o se acepta AGPL-3.0 con
+`openedx/edx-proctoring`, o se gestiona la licencia de la pieza de 32 ★ con su titular. Ver **P242**.
+
 #### 📍 Pase 78 del 2026-10-03 — octavo barrido de APAC sin instrumento nuevo, y la confirmación vale porque REFUERZA un dato propio por un canal distinto
 
 🔴 **Vacío declarado.** La búsqueda regional obligatoria se corrió y **todo lo devuelto ya estaba en
@@ -6967,6 +7050,27 @@ desplegado + puerta MCP permisiva (`jbnu-lms-mcp`, `canvas-lms-mcp`, las cuatro 
 depende de un tercero» son el mismo argumento.**
 
 ### LATAM
+
+#### 📍 Pase 79 del 2026-10-04 — LATAM confirma sin novedad, y se dice en vez de rellenar
+
+🔴 **El barrido de LATAM no devolvió instrumento ni cifra nueva.** Se reconfirmó, sin cambios, lo que
+este archivo ya publica: el reglamento de la **Ley N.º 31814** peruana con estructura basada en riesgo
+y supervisión humana obligatoria para usos de alto riesgo, **Uruguay** como primer país de la región
+en firmar el Convenio Marco del Consejo de Europa sobre AI y derechos humanos, el **Observatorio de
+UNESCO sobre AI en la Educación para América Latina y el Caribe** (lanzado el 14 de abril), el
+**CONPES** de AI colombiano, el marco chileno con el **CENIA** como actor regional, el proyecto de ley
+brasileño y las reglas sectoriales mexicanas, todos avanzando a velocidades distintas.
+
+🔵 **Y la cifra de adopción docente de la región volvió por el mismo canal que esta base ya usaba**
+—**79 %** de docentes de educación superior usando AI, con **88 %** declarando compromiso *«mínimo a
+moderado»*, y más del **50 %** de docentes en Chile y Brasil contra **menos del 10 %** de
+instituciones con lineamientos formales—. ⚠️ **Ya estaba, y la inversión que describe (adopción alta
+sobre gobernanza baja) es la que este archivo publica desde el pase 68. No se vuelve a escribir como
+si fuera nueva.**
+
+🟢 **La región aporta 0 en este pase y se declara así, igual que el pase 76 declaró su 0.** 🔵 **Un
+hueco declarado es información; rellenar el turno de LATAM con material reciclado haría que el
+archivo pareciera cubrir lo que no midió.**
 
 #### 📍 Pase 78 del 2026-10-03 — LATAM confirma sin novedad, y el pase lo DICE en vez de rellenar
 

@@ -8,6 +8,7 @@ updated: 2026-10-04
 
 > Agentes y herramientas AI open source para educación. Foco: MIT / Apache 2.0 / BSD.
 > Verificado repo por repo vía WebFetch el 2026-09-30 (stars y licencia leídos de la página del repo).
+> **Pase 79 del 2026-10-04:** 🔴 **La capa que el ÚNICO estatuto del mundo nombra por su nombre —monitoreo conductual, ley de AI de Vietnam vigente 2026-03-01— EXISTE en open source y es COMERCIALMENTE INUSABLE.** Medidas 3 piezas: la más capaz y más adoptada (`aungkhantmyat/The-Online-Exam-Proctor`, **32 ★**, YOLOv8+MediaPipe+Dlib, *liveness* facial, postura, teclas prohibidas, abandono de ventana y voz) 🚫 **no tiene licencia —ausencia MEDIDA en DOS canales—** y la única **MIT** (`lavsharmaa/proctxam-ai-proctoring`) tiene **3 ★** y es la más angosta. 🔵 **La capa pasa de `NO-MEDIDA` a `MEDIDA-Y-BLOQUEADA-POR-LICENCIA`**, igual que el *workbench* del pase 76. 🔴 **Y el hueco de APAC del pase 78 NO se cierra: las tres declaran afiliación NINGUNA y de un antropónimo no se infiere región (P135), así que queda ABIERTO y declarado** — una capa medida no es una región cubierta. 🟢 **Altas: 2** (`adaptive-knowledge-graph` MIT 17 ★, la referencia de arquitectura KG-RAG+BKT/IRT local más completa de esta KB, admitida con su cota de *demo* declarada por regla de **P234**; + la pieza MIT de la capa). 🆕 **P243**: la regla de *frontmatter* se hacía cumplir en 8 archivos y nunca se midió en los otros 48 — **15 de 56 `.md` no tienen frontmatter, los 15 en `compose/code/`**, así que el compilador los lee sin `industry` ni `region`. Reparados los 15. ⚠️ **Noveno barrido regional consecutivo agotado (0 hechos nuevos en las 4 regiones, verificado por `grep` antes de escribir)** y 🔴 **la ejecución de las suites quedó NEGADA, así que la columna «Hoy» no se re-verificó.** 🔧 **Y dos filas de este archivo perdían dato en el render sin que nada lo midiera: una celda SOBRANTE se DESCARTA al renderizar, y las dos que la tenían se llevaban un hallazgo de licencia del pase 65 (39 forks heredando una cesión declarada, invisible en la tabla 14 pases) y la trazabilidad de la fila de Open edX. Reparadas sin perder texto** (**P244**). ⚠️ **El contador que las encontró reclamó antes 83 defectos falsos contra la línea base 0 del pase 78: dos bugs propios, corregidos antes de tocar nada** (tendencia **622**). Ver los patrones **P242**–**P244** y las tendencias **616**–**622**.
 > **Pase 77 del 2026-10-03:** 🔴 **La nota de honestidad de esta base estaba equivocada en las CINCO filas, no en una.** El pase 76 refutó en una fila el criterio *«repo muerto ⇒ no hace falta medir la licencia»*; medidas las cinco (`compose/code/p234-dead-license-closeout/`), 🔴 **5 de 5 son permisivas** (3 MIT + 2 Apache-2.0, cero copyleft, cero sin archivo) — **costo del cierre: cinco peticiones HTTP** para un dato que estuvo 76 pases sin medir. 🔵 **La columna de muertos de esta KB no es un cementerio: es su reserva de código bifurcable.** 🆕 **Y una corrección de ROL, que es más cara que una de licencia:** la fila de `Transcordia/jupiter` promete «LRS xAPI + **Caliper**» y el árbol medido (31 archivos, 100.040 B) tiene 🔴 **CERO Caliper**, **sin ruta de consulta** —no es un LRS, es un ingestor de statements— y **valida contra `xapi-0.9.5.schema`, un borrador PRE-1.0** dos años anterior a su último commit. **La columna «Rol» heredó la AMBICIÓN del README** (*«we submit Jupiter for their consideration»*) **en vez de la capacidad del código**, y el signo del error es el peligroso: una licencia mal archivada EXCLUYE una pieza usable, **un rol mal archivado INCLUYE una inservible** (**P234**). ✅ **Efecto colateral bueno: la ausencia de Caliper open source de este archivo queda REFORZADA** — se declaraba *«reconfirmada por `grep` sobre los 8 archivos, sin contradicción»*, **había una contradicción disponible** (esta fila decía «Caliper») **y ahora está medida en el CÓDIGO y resuelta a favor de la ausencia.** 🪜 **El eje CAPA de P230 se reproduce en otro estándar y su SIGNO SE INVIERTE** (**P235**, 9 piezas): en xAPI el **servidor** está 🟢 **abierto y vivo** (`lrsql` Apache-2.0 `HEAD` 2 d · `ralph` MIT 26 d) y el cuello está en el **cliente** (permisivo pero congelado 1,7–6,1 años) — **así que «CONSUMIR se puede, EXPONER no» es una propiedad de ONEROSTER, no de educación**, y generalizarla habría invertido la recomendación en la capa de telemetría. **8 de 9 piezas de la capa xAPI son permisivas y la única copyleft es la que está muerta.** 🔴 **P238: la puerta xAPI que este archivo recomienda desde el pase 6 no pasa sus propios tests.** `DavidLMS/learnmcp-xapi` y el fork que el pase 38 descartó como «sólo Cloud Run» tienen **14 de 14 archivos de FUENTE idénticos byte a byte** y **cinco archivos de TEST distintos**; de las tres afirmaciones divergentes, el fuente compartido sostiene **fork 3/3 · upstream 0/3**. 🔵 **El error del pase 38 fue de CANAL: clasificó un fork leyendo los ASUNTOS de los commits.** ⚠️ **Cota: prueba estática de contradicción, no corrida de tests —las dependencias de terceros no se pueden instalar en este entorno— y se afirma la versión más débil.** 🔴 **Y el hallazgo de método es contra esta base: una corrección que NO VIAJÓ.** Los dos instrumentos nuevos reintrodujeron el defecto **P171** (GPL-3.0 §13 se titula *«Use with the GNU Affero General Public License»*, así que un `grep` del cuerpo etiqueta **todo** GPL-3.0 como AGPL) **que esta base arregló hace cinco instrumentos y testea en `p206`** — y leyó `LearningLocker` (GPL-3.0) como AGPL-3.0. 🔴 **Control negativo: un `grep` de cuerpo marca a MOODLE como AGPL-3.0**, y AGPL §13 contra GPL-3.0 es justo lo que decide si se puede construir un producto alojado encima. ✅ **Auditados, los CINCO veredictos AGPL de esta base son correctos** — 🔴 **y es la trampa: un clasificador probado sólo sobre AGPL saca 5/5 y sigue roto.** 🟢 **Cotas nuevas: GPL-3.0 nombra la AGPL en 3 líneas y una AGPL real en 15; GPL-2.0 en 0, así que la capa QTI nunca estuvo en riesgo.** Reparado en `compose/code/lib/license_family.sh` (**12/12**) — **una regla que hay que recordar no es un control** (**P236**, **P237**). **Altas de agente: 0, declarado.**
 > **Pase 75 del 2026-10-03:** 🔴 **El hallazgo del pase 74 era cierto y su CAUSA estaba mal, y el instrumento que lo prueba es nuevo en este árbol.** P224 concluyó que la atención de esta base es «inversamente proporcional a la base instalada» comparando los ~**150 M de USUARIOS** de Google Classroom contra la cuota de Canvas en **INSTITUCIONES de superior** — **dos cifras sin denominador común**. 🟢 **Medido por cohorte `(segmento, unidad)` con `compose/code/p228-segmented-coverage/` (**15/15** + **3/3**), la inversión es de SEGMENTO —medida en `5dd2bcc`, `HEAD` del pase 74, porque la cifra se contamina con la prosa de este mismo pase—: 🔴 **7** inversiones en **K-12** (peor caso Skyward **1** ocurrencia contra Moodle **653** → **653×**) contra 🟢 **1** en **superior** (Moodle 1,6× sobre Canvas). **Esta no es una KB con la atención invertida: es una KB de educación SUPERIOR a la que se le midió la cobertura con un denominador de K-12** (**P228**). 🆕 **Y el dato que esta base no tenía: Google Classroom es 6 de 3.400 instituciones de superior en EE. UU. — 0,2 %.** 🟢 **P227**: el agregado `229 / 389` se publica en **7** archivos y sólo **1** nombra su conjunto; de los **70** subconjuntos de cuatro, **exactamente uno** lo reproduce — reparado en `patterns.md`. 🔴 **P229**: la capa de *rostering* de K-12 es un **callejón de licencias** — pedir permisivo + vivo + spec vigente deja **una** pieza (`bgwdotdev/go-oneroster`, MIT, v1p1, con escritura), y los únicos conectores a **Skyward** e **Infinite Campus** fuera de `usechalk/chalk` (**AGPL-3.0**) son la familia `Tools4ever-NIM`, 🔴 **sin archivo de licencia**. Altas de agente: **0** — el pase midió y corrigió en vez de sumar filas, y se declara.
 > **Pase 74 del 2026-10-03:** 🔴 **El LMS más instalado del planeta tenía CERO filas en esta base: este archivo menciona Canvas en **111** líneas (**241** ocurrencias) y Google Classroom en **0**, en 73 pases, y Google Classroom es el líder global (~39 % contra ~19 % de Canvas). La atención de esta KB resultó INVERSAMENTE proporcional a la base instalada** (**P224**). 🟢 **Abierta la capa, 8 conectores independientes de la MISMA API agregan DOS peldaños a la escalera de escritura:** 🆕 **`GATE-IN-SCOPE`** (**P220**, `DaviPac`, Brasil) —la bandera cambia los *scopes* de OAuth al acuñar el token, así que la compuerta la hace cumplir **Google, fuera del proceso**: el peldaño más alto medido— y 🆕 **`GATE-IN-EFFECT`** (**P221**, `pengusto`) —la escritura ocurre pero nace `DRAFT` en los tres handlers (`src/index.ts:575`, `:670`, `:718`): gobierna la VISIBILIDAD, no la llamada—. 🔴 **Y la pieza MÁS capaz de la capa (~40 tools, `delete_student`) es la única que no es open source, con una clase que esta base no tenía: `LICENSE-REVOCABLE`** (**P222**) — `revocable` aparecía **0 veces** en 73 pases. 🆕 **P223**: `LICENSE` MIT con titular ajeno contra `package.json` ISC de andamio **en el mismo árbol** → no gana ninguna capa. Altas de agente: **6** (LATAM 1, NA 1, EMEA 0, APAC 0, sin región verificable 4 **por aplicar P135**) + **1** de infraestructura que va a `repos/foundations.md` por la regla del pase 25.
@@ -244,6 +245,132 @@ updated: 2026-10-04
 > fila** —`lineage-skill`, con un vocabulario cerrado de 9 valores por afirmación, **4 de los 9 «esto lo produjo el
 > modelo»**— y **ninguna de las dos sabe de la otra**. Ver la capa nueva al final de este archivo, las tendencias
 > **180**–**182** y el patrón **P99**.
+
+## 🔒 La capa que el único estatuto del mundo nombra por su nombre EXISTE en open source y es COMERCIALMENTE INUSABLE: 2 de 3 piezas sin licencia, y la permisiva tiene 3 ★ (pase 79 del 2026-10-04)
+
+> ⚠️ **Lo que este pase NO pudo hacer, dicho antes de cualquier cifra:** la ejecución de las suites
+> del árbol clonado quedó **NEGADA** (`[Code from External]`), igual que en los pases 58 y 67 y al
+> revés que en el 66 y el 75. **No se reimplementaron a mano, no se buscó otro intérprete y no se
+> troceó el comando** — la negativa es sobre el resultado, no sobre la forma. 🔴 **Consecuencia
+> declarada en vez de tapada: la columna «Hoy» del README no se re-verificó en este pase, y este
+> pase NO la afirma como medida hoy.** 🔵 **Y no se publica ninguna conclusión general sobre la
+> frontera de ejecución —es DEL ENTORNO y varía entre pases—, que es el error que los pases 50, 51
+> y 58 cometieron en una dirección y el 52, el 66 y el 75 en la otra.**
+
+### 🔴 El hallazgo del pase, y reclasifica un hueco que el pase 78 dejó abierto
+
+El pase 78 cerró con una **fila de hueco declarada para APAC**: *la región con el único estatuto del
+mundo que nombra **monitoreo conductual** por su nombre —la ley de AI de Vietnam, vigente
+**2026-03-01**, que clasifica la evaluación automatizada y el monitoreo conductual como alto riesgo
+en educación— es la única **sin pieza permisiva medida que lo implemente**.*
+
+🔵 **Este pase buscó esa pieza y la encontró. Tres veces. Y el hueco NO se cierra — se reclasifica,
+que es peor para el cliente y mejor para la KB:**
+
+| Pieza | Repo | Licencia (medida este pase) | ★ | Qué implementa del supuesto del estatuto |
+|---|---|---|---|---|
+| The-Online-Exam-Proctor | https://github.com/aungkhantmyat/The-Online-Exam-Proctor | 🚫 **sin licencia — ausencia MEDIDA en DOS canales** | **32** | **La más completa y la más adoptada de las tres.** Postura de cabeza, caras múltiples, verificación + *liveness* facial, teclas prohibidas, abandono de la ventana del examen y detección de voz. YOLOv8 + MediaPipe + Dlib + OpenCV, Flask/MySQL, con *Trust Score* y registro de violaciones por alumno |
+| proctxam-ai-proctoring | https://github.com/lavsharmaa/proctxam-ai-proctoring | 🟢 **MIT** (`LICENSE`, 1.098 B, titulares `Samuel Monteiro, Lav Sharma, Rutuja Bhate`, 2022) | **3** | Seguimiento de **ojos, boca y cabeza** por webcam, Dlib CNN, Flask + PostgreSQL. **La única permisiva de la capa**, y la más angosta de las tres |
+| Online-Proctoring-System | https://github.com/kmamit5296/Online-Proctoring-System | 🚫 **sin licencia — ausencia MEDIDA** (`README.md` **200 sólo en `master`**, `main` **404**) | — | Monitoreo por visión computacional. Señal más baja de las tres; no se le midió capacidad porque la licencia ya la excluye |
+
+🔴 **Por qué «existe» no significa «usable», y es el dato que cotiza.** La capa que el regulador
+nombra está construida, pero **la pieza capaz no tiene licencia y la pieza con licencia no tiene
+capacidad**: 32 ★ sin un archivo de licencia contra 3 ★ con MIT. ⚠️ **Para una consultora eso no es
+un pendiente administrativo, es un bloqueo duro**: sin concesión expresa del titular, «sin licencia»
+es *todos los derechos reservados*. 🔵 **La capa pasa de `NO-MEDIDA` a `MEDIDA-Y-BLOQUEADA-POR-LICENCIA`**,
+que es la misma reclasificación que el pase 76 hizo con la capa de *workbench* y el 66 con la clase
+`NOT-A-LICENSE` de LATAM.
+
+### 🔴 Y el hueco de APAC queda ABIERTO, por la regla de P135 — dicho explícitamente para que nadie lo cotice cerrado
+
+⚠️ **Ninguna de las tres piezas tiene región verificable.** Se buscó afiliación institucional,
+país o universidad **en el repo y en la página de GitHub de cada una: las tres declaran NINGUNA.**
+🔴 **El único indicio disponible es el antropónimo del titular o del dueño de la cuenta, y de un
+antropónimo NO se infiere región** (regla de **P135**, y el falso positivo de «Italia» por subcadena
+de `Italicia` que el pase 56 atrapó es el precedente).
+
+🔵 **Así que las tres entran como `sin región verificada`, y el hueco de CÓDIGO de monitoreo
+conductual de APAC sigue DECLARADO Y ABIERTO.** 🟢 **Es la misma decisión que el pase 71 tomó con
+`mcp_hemis_student`**: usar una pieza de región no evidenciada para tapar el hueco de una región
+sería exactamente el sesgo que esta base declara evitar. ⚠️ **Una capa medida no es una región
+cubierta.**
+
+### 🟢 Las altas del pase: 2 de 6 candidatas, con licencia leída del archivo
+
+| Pieza | Repo | Licencia (medida) | ★ | Lenguaje | Qué hace, leído del repo y no del titular | Región |
+|---|---|---|---|---|---|---|
+| adaptive-knowledge-graph | https://github.com/MysterionRise/adaptive-knowledge-graph | 🟢 **MIT** (`LICENSE`, 1.520 B, titular `Adaptive Knowledge Graph Contributors`, 2025) | **17** (6 *forks*, 137 commits) | Python + Next.js | **Tutoría ANCLADA sobre grafo, con el stack entero local.** Neo4j (conceptos/módulos/*chunks* con aristas de prerrequisito), recuperación híbrida BM25 + vectorial en OpenSearch con *reranking*, LLM local por Ollama, citas y fragmentos de fuente, práctica adaptativa con estado de dominio e IRT/BKT, y evaluación con **50+ casos dorados de OpenStax** que comparan recuperación expandida por grafo contra recuperación plana | 🔴 **Sin región verificada** (sólo antropónimo de cuenta — **P135**) |
+| proctxam-ai-proctoring | https://github.com/lavsharmaa/proctxam-ai-proctoring | 🟢 **MIT** (`LICENSE`, 1.098 B) | **3** (6 *forks*) | Python | **La única pieza PERMISIVA de monitoreo conductual que esta KB tiene medida.** Ojos, boca y cabeza por webcam con Dlib CNN, sobre Flask + PostgreSQL | 🔴 **Sin región verificada** (sólo antropónimo — **P135**) |
+
+⚠️ **La cota de la primera, dicha antes de que alguien la cotice, porque el repo es inusualmente
+honesto y la fila tiene que heredar la CAPACIDAD y no la AMBICIÓN (regla de P234).** Su propio
+README se declara *«controlled client-demo and AI engineering portfolio prototype»* y
+*«not as a production certification platform»*, y enumera sus propios límites: **sin integración
+LMS/LTI, sin modelo de inquilinos, sin certificación de cumplimiento y sin IRT calibrado
+psicométricamente**; los perfiles de alumno son **sintéticos**. 🔵 **Entra igual, y entra por lo que
+sí es: la referencia de ARQUITECTURA más completa que esta KB tiene de KG-RAG + BKT/IRT con
+inferencia local, con su arnés de evaluación incluido y bajo MIT.** 🔴 **No entra como base de
+producción, y `repos/foundations.md` lo dice en su nota de este pase.**
+
+### 🔧 Las dos reparaciones estructurales del pase, y las dos perdían el dato más caro del archivo
+
+El autocontrol de las ediciones de este pase encontró un eje que **ningún instrumento de esta KB
+mide**: el **conteo de celdas** de una fila contra el de su encabezado. 🔴 **Y el signo del error
+decide la gravedad: Markdown DESCARTA las celdas sobrantes al renderizar, sin avisar** (las faltantes
+las rellena con vacías, que es benigno).
+
+| Fila | Qué se descartaba del render | Reparación |
+|---|---|---|
+| `DMontgomery40/mcp-canvas-lms` — tabla de **4** columnas, fila con **5** | 🔴 **Un hallazgo de LICENCIA completo del pase 65**: MIT como *identificador* en `package.json` + registro npm, **39 forks heredando una CESIÓN DECLARADA**, y la contradicción de que el texto de licencia no está ni en el repo (404 en 14 nombres) ni en el tarball publicado. 🔴 **Invisible en la tabla publicada desde el pase 65 — catorce pases** | Celda extra movida a **prosa** bajo la tabla, con nota de rescate |
+| **Open edX** — tabla de **6** columnas, fila con **7** | La **trazabilidad** de la fila: `Gap 48` y `gap 50` cerrados · `gap 55` medido · `gap 57` · `P55` · `P63` | 7ª celda **fusionada** en la 6ª con `·`, sin perder texto |
+
+🔵 **Por qué el defecto se concentra en las filas valiosas, que es la parte transferible:** una celda
+sobrante es, casi siempre, **una nota que alguien agregó al FINAL de una fila en un pase posterior sin
+recontar el encabezado**. 🔴 **O sea que el eje muerde justamente las filas más anotadas** — y las dos
+instancias de este árbol perdían **licencia** y **trazabilidad**, las dos clases de dato que esta base
+más cuida. ⚠️ **Verificado el árbol entero: 2 filas con celdas sobrantes (las 2 reparadas) y 26 con
+celdas faltantes (declaradas y NO reparadas, porque no pierden texto).** Ver **P244** y la tendencia
+**621**.
+
+### 🔴 El defecto de instrumento que este pase cometió, corregido antes de tocar un solo archivo
+
+⚠️ **El contador que encontró lo de arriba estaba roto, y reclamó 83 defectos que no existían.** Como
+`P239` no se pudo correr, el pase escribió un contador de tablas **a mano**; reclamó **83 bloques «sin
+separadora»** 🔴 **contra la línea base de 0 que el pase 78 había medido con el instrumento
+versionado.**
+
+🔵 **La contradicción fue el diagnóstico.** Un contador casero que encuentra 83 defectos donde el
+versionado midió 0 está roto, y tenía **dos bugs independientes**: (1) su patrón de separadora
+`^\|[\s:-]+\|` **también matchea un encabezado cuya primera celda está vacía**, porque `[\s:-]+`
+matchea el espacio; y (2) **no saltaba los bloques de código**, así que una tabla de *ejemplo* dentro
+de un ` ```markdown ` contaba como real — y ese falso positivo cayó **dentro del README del
+instrumento que mide exactamente ese defecto**.
+
+🟢 **Corregidos los dos, los 83 pasaron a 0: la línea base exacta del pase 78.** 🔴 **El contrafactual
+es el valor: «reparar» esos 83 habría roto 83 tablas correctas para callar al propio contador.**
+⚠️ **Van tres pases con esta lección (55, 67 y 79) y las tres veces el instrumento casero apareció
+porque el versionado no estaba disponible.** 🔵 **Corolario de P126 regla 1: cuando el instrumento
+versionado no se puede correr, lo primero que se mide es el instrumento casero, no el archivo.**
+
+### 🔴 Las 4 candidatas que NO entran, con el motivo medido
+
+| Candidata | Repo | Motivo medido |
+|---|---|---|
+| The-Online-Exam-Proctor | https://github.com/aungkhantmyat/The-Online-Exam-Proctor | 🚫 **Sin licencia, ausencia MEDIDA en dos canales independientes**: 9 nombres de archivo × `main` y `master` dan **404** con `README.md` en **200**, y la barra lateral de GitHub **no muestra licencia**. ⚠️ **Es la pieza más capaz y más adoptada (32 ★) de la capa que el regulador nombra, y es la que no se puede usar.** Entra en la tabla del hallazgo, no en el catálogo |
+| Online-Proctoring-System | https://github.com/kmamit5296/Online-Proctoring-System | 🚫 **Sin licencia, ausencia MEDIDA.** Además `README.md` responde **200 sólo en `master`** y **404 en `main`** |
+| OpenLearn-AI | https://github.com/abdomoaz58-tech/OpenLearn-AI | ⚠️ **AGPL-3.0 medida en el PAYLOAD** (35.184 B, el texto completo de la AGPLv3) — fricción dura para una consultora, no permisiva. 🔴 **Y 0 ★ / 0 *forks* con el propio repo declarándose *pre-alpha*.** 🔵 **Se registra igual en `agents/trending.md` por su señal de LOCALE, que no es señal de origen:** es **árabe primero** con multilingüe encima, y la capa de contenido en árabe es un hueco que esta KB no tenía medido. ⚠️ **Afiliación declarada: ninguna. El locale del artefacto NO ubica a su autor** (**P135**) |
+| Adaptive-Learning-System | https://github.com/Bentheghost/Adaptive-Learning-System | ⚠️ **MIT medida** (`LICENSE`, 1.080 B, titular `Muhammad Uzair Warraich`, 2025), pero **0 ★ / 0 *forks* / 0 *releases* y UN commit en `main`**, un solo contribuyente y sin campo de descripción. **Proyecto académico individual**: por debajo de cualquier cota de esta base. Se deja medido para que el próximo pase no vuelva a gastar el canal en él |
+
+### ⚠️ Canales que fallaron o no rindieron en este pase
+
+| Canal | Resultado | Consecuencia |
+|---|---|---|
+| Ejecución de las suites del árbol clonado | 🔴 **NEGADA** (`[Code from External]`) | La columna «Hoy» del README no se re-verificó. **Declarado, no tapado** |
+| `www.suny.edu` por WebFetch | 🔴 **`EGRESS_BLOCKED`**, segundo pase consecutivo | La **reserva declarada del pase 78** sobre el *Document Number 6904* **no se pudo cerrar**. Sigue en pie, y ahora con dos mediciones del mismo bloqueo |
+| `api.github.com/repos/*`, `codeload.github.com`, `github.com` por `curl` | 🔴 **403**, los tres | Licencias medidas por `raw.githubusercontent.com` (**200**) y estrellas por `github.com` vía **WebFetch** (sirvió) |
+| `api.github.com/rate_limit` | 🟢 **200** | ⚠️ **Otra vez el único endpoint de la API que pasa es el que NO transporta dato de repositorio**, igual que en los pases 67 y 75 |
+| Batería regional obligatoria (4 regiones × regulación/adopción/players) | 🔴 **0 hechos nuevos, las 4 regiones** | **Noveno barrido consecutivo agotado.** Verificado por `grep` contra el archivo publicado **antes** de escribir: `AI Basic Act` coreana, ley de AI de Vietnam, `H.R. 8747`, `AB 1159`, `SB 1227`, *Traffic Light* de NYC, los **134 proyectos en 31 estados**, el reglamento de la **Ley 31814** peruana, el Convenio Marco firmado por Uruguay, el Observatorio de UNESCO para LATAM y el **CENIA** chileno **ya estaban todos**. Se declara en `intel/market.md` región por región |
+
 
 ## 🧪 Altas de agente: 0 — y el presupuesto se gastó en que dos tablas de esta KB vuelvan a ser datos (pase 78 del 2026-10-03)
 
@@ -1872,11 +1999,20 @@ veredictos — y el pase 55 debería clasificar la tabla por el segundo.**
 | [`moon0825/jbnu-lms-student`](https://github.com/moon0825/jbnu-lms-student) | ⚠️ **b1** | `MoodleSession` + `sesskey` en DPAPI/Keychain, **sin contraseña ni passkey** | **APAC** (Corea — JBNU) |
 | [`bruchris/canvas-lms-mcp`](https://github.com/bruchris/canvas-lms-mcp) | 🟢 **(a)** | `CANVAS_API_TOKEN`, o `oauth_brokered` con client id/secret registrados | sin región declarada |
 | [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | 🟢 **(a)** | `CANVAS_API_TOKEN` + `CANVAS_API_URL` | **North America** |
-| [`DMontgomery40/mcp-canvas-lms`](https://github.com/DMontgomery40/mcp-canvas-lms) | 🟢 **(a)** | `CANVAS_API_TOKEN` + `CANVAS_DOMAIN` | sin región declarada | 🔵 **licencia, pase 65: MIT como IDENTIFICADOR en `package.json` + registro npm (`canvas-mcp-server` v2.2.3) — los 39 forks heredan una CESIÓN DECLARADA, no la ausencia que el pase 64 temía. 🔴 Pero el texto no está en ninguna parte: ni en el repo (404 en 14 nombres) ni en el tarball publicado, y el manifiesto PROMETE `"LICENSE"` en `files`** (**P179**) |
+| [`DMontgomery40/mcp-canvas-lms`](https://github.com/DMontgomery40/mcp-canvas-lms) | 🟢 **(a)** | `CANVAS_API_TOKEN` + `CANVAS_DOMAIN` | sin región declarada |
 | [`MarcosNahuel/moodle-mcp`](https://github.com/MarcosNahuel/moodle-mcp) | 🟢 **(a)** | `MOODLE_WS_TOKEN` — *«No cookie auth, no web scraping, no direct DB access»* | sin región declarada |
 | [`NiccoloSalvini/mcp-moodle-teacher`](https://github.com/NiccoloSalvini/mcp-moodle-teacher) | 🟢 **(a)** | `MOODLE_TOKEN` del web service móvil | sin región declarada |
 | [`peancor/moodle-mcp-server`](https://github.com/peancor/moodle-mcp-server) | 🟢 **(a)** | `MOODLE_API_TOKEN` de administración del sitio | sin región declarada |
 | [`SirhanMacx/Claw-ED`](https://github.com/SirhanMacx/Claw-ED) | ⚪ **no aplica** | OAuth del usuario a su **propia** cuenta de Google | sin región declarada |
+
+⚠️ **Nota de licencia de `DMontgomery40/mcp-canvas-lms`, RESCATADA del render en el pase 79.**
+Este texto vivía en una **quinta celda** de una fila de la tabla de arriba, que tiene **cuatro**
+columnas. 🔴 **Markdown descarta las celdas sobrantes al renderizar, así que este hallazgo de
+licencia —de los más caros de esta KB— estaba en el fuente y NO en la tabla publicada, desde el
+pase 65.** 🟢 **Movido a prosa, donde se lee.** Ver la tendencia **622**.
+
+🔵 **licencia, pase 65: MIT como IDENTIFICADOR en `package.json` + registro npm (`canvas-mcp-server` v2.2.3) — los 39 forks heredan una CESIÓN DECLARADA, no la ausencia que el pase 64 temía. 🔴 Pero el texto no está en ninguna parte: ni en el repo (404 en 14 nombres) ni en el tarball publicado, y el manifiesto PROMETE `"LICENSE"` en `files`** (**P179**)
+
 
 ⚠️ **Denominador acumulado y honesto (P107):** **18 clientes de LMS/SIS con canal determinable** en dos
 pases (11 del pase 53 + 7 del 54), **7 en clase (b)**, **2 no determinables por repo 404**, **3 fuera
@@ -2668,6 +2804,8 @@ se explica abajo, porque es la cuarta vez que esta KB se pelea con este número.
 
 | Nombre | Repo | Licencia | Stars | Lenguaje | Descripción | Origen (región) |
 |--------|------|----------|-------|----------|-------------|-----------------|
+| adaptive-knowledge-graph | https://github.com/MysterionRise/adaptive-knowledge-graph | 🟢 **MIT** (`LICENSE`, 1.520 B, titular `Adaptive Knowledge Graph Contributors`) | 17 | Python + Next.js | **Tutoría anclada en grafo con el stack entero local.** Neo4j (conceptos/módulos/*chunks*, aristas de prerrequisito) + recuperación híbrida BM25/vectorial en OpenSearch con *reranking* + LLM local por Ollama + citas con fragmento de fuente + práctica adaptativa con IRT/BKT. Trae arnés de evaluación: **50+ casos dorados de OpenStax** que comparan recuperación expandida por grafo contra plana. ⚠️ **Su propio README se declara *«controlled client-demo»* y *«not a production certification platform»*: sin LTI/LMS, sin inquilinos, sin IRT calibrado, perfiles de alumno SINTÉTICOS. Entra como referencia de ARQUITECTURA, no como base de producción (regla de P234)** | 🔴 **Sin región verificada** (sólo antropónimo — **P135**) |
+| proctxam-ai-proctoring | https://github.com/lavsharmaa/proctxam-ai-proctoring | 🟢 **MIT** (`LICENSE`, 1.098 B, titulares `Samuel Monteiro, Lav Sharma, Rutuja Bhate`) | 3 | Python | **La ÚNICA pieza permisiva de monitoreo conductual medida en esta KB.** Seguimiento de ojos, boca y postura de cabeza por webcam con Dlib CNN, sobre Flask + PostgreSQL. 🔴 **Es la más angosta de las tres piezas de la capa: la más capaz (32 ★, `The-Online-Exam-Proctor`) NO tiene licencia.** Es la capa que la ley de AI de Vietnam (vigente 2026-03-01) nombra por su nombre | 🔴 **Sin región verificada** (sólo antropónimo — **P135**) |
 | Classroom-mcp (aluno) | https://github.com/DaviPac/Classroom-mcp | MIT (`package.json`) | 0 | TypeScript/JS | 🟢 **La compuerta más fuerte del inventario: vive en el TOKEN.** 11 tools de lectura; `entregar_tarefa`/`cancelar_entrega` sólo aparecen con `ENABLE_TURN_IN=true`, **y la bandera cambia los SCOPES de OAuth que se piden al acuñar el refresh token** (`ENABLE_TURN_IN=true node auth.js`). Servidor remoto HTTP; `buscar` cruza tareas/avisos/materiales de todas las turmas | **LATAM** (indicio de CONFIGURACIÓN, no antropónimo: `TIMEZONE=America/Recife` en el `.env.example` + tools y manifiesto íntegramente en portugués) |
 | google-classroom-mcp (docente) | https://github.com/pengusto/google-classroom-mcp | MIT (`LICENSE` 1.145 B + `package.json`) | 1 | TypeScript | 🟢 **Escribe, pero lo escrito NO SE VE: los tres handlers de creación fijan `DRAFT` por omisión** (`src/index.ts:575`, `:670`, `:718`) y el esquema declara `default: 'DRAFT'`. Invariante en código: `if (args.scheduledTime && args.state === 'PUBLISHED') return fail('Scheduled posts must be DRAFT.')` (`:66`). 21 tools (cursos, temas, tareas, materiales, avisos, adjuntos Drive), `v3.0.0-beta.1`, `private: true` | 🔴 **Sin región verificada.** El único indicio es el antropónimo del titular del `LICENSE` y **NO se infiere región de un antropónimo** (regla de **P135**); además el código trae una palabra alemana (`'PUBLISHED oder DRAFT'`, `:334`) que apunta a otro lado |
 | classroom-mcp (alumno) | https://github.com/OmarNiazi/classroom-mcp | MIT (`LICENSE` 1.067 B) | 0 | Python | Lectura **por construcción**: 3 tools (`get_all_courses`, `get_assessment_items` con filtro `only_pending`, `read_stream_announcements`) y **ninguna de escritura en la superficie**. La tabla de capacidades del README niega explícitamente entregar, editar, publicar y comentar. Todo el procesamiento es local | 🔴 **Sin región verificada** (sólo antropónimo — **P135**) |
@@ -3214,7 +3352,7 @@ arriba suma las tres piezas nuevas; acá queda el mapa completo, que es lo que s
 | 🟢 **Moodle** | GPL-3.0+ | **`bunizao/moodle-cli`** | **MIT** ✅ | No — **lado alumno** | 🔵 **La única puerta que no pide token de administrador**: trabaja desde la **sesión del navegador del usuario**. Vencimientos, notas, archivos, devoluciones, revisión de quizzes. **20 versiones**, última 2026-09-27 *(pase 35)* |
 | ⚪ **Moodle** | GPL-3.0+ | `gafapa/moodle-core-cli` — **sin MCP** | **MIT** ✅ | — (cliente) | **Cliente de *core web services* de Moodle 4.5+, cero menciones de MCP: el candidato más barato a envolver.** 11 versiones, última 2026-09-24 *(pase 35)* |
 | 🔵 **LMS institucional** (no producto) | — | **`moon0825/jbnu-lms-student`** | **MIT** ✅ | 🔴 **No — sólo lectura por diseño** | **Categoría nueva.** LMS de la Univ. Nac. de Jeonbuk (Corea), **25 tools**, STDIO local, login por el navegador del usuario con **passkey y 2FA**. **No oficial por declaración propia**: arquitectura de referencia, no pieza instalable *(pase 35)* |
-| 🟡 **Open edX** | **AGPL-3.0** | **`openedx-mcp` + `tutor-contrib-openedxmcp`** (oficial del proyecto, PyPI) | ⚠️ **AGPL-3.0** — corre **en proceso** como plugin Django | **Sí — 19 escrituras en 6 scopes** | **La fila cambia de «hueco» a «existe y es copyleft» (pase 30), y el pase 31 la mide desde el wheel publicado:** **35 rutas** (28 LMS + 7 CMS), **19 herramientas de escritura**, **11 con *confirm token* y 8 sin él**. AGPL-3.0 **leída del `LICENSE` del artefacto**, no de la metadata. 🔴 **Ninguna de las 19 crea un curso** — y tampoco lo hace ninguna de las **cinco** versiones REST (`v0`–`v4`): el `v0` de authoring está **deprecado en favor del `v1`** con `DeprecationWarning` en runtime, y el único primitivo de nivel curso es **`course_rerun`** (clona). Ver **gap 50 (cerrado)**, **gap 55 (medido)**, **gap 57** y **P63** | Gap 48 y **gap 50** cerrados · gap 55 medido · **gap 57** · P55 · **P63** |
+| 🟡 **Open edX** | **AGPL-3.0** | **`openedx-mcp` + `tutor-contrib-openedxmcp`** (oficial del proyecto, PyPI) | ⚠️ **AGPL-3.0** — corre **en proceso** como plugin Django | **Sí — 19 escrituras en 6 scopes** | **La fila cambia de «hueco» a «existe y es copyleft» (pase 30), y el pase 31 la mide desde el wheel publicado:** **35 rutas** (28 LMS + 7 CMS), **19 herramientas de escritura**, **11 con *confirm token* y 8 sin él**. AGPL-3.0 **leída del `LICENSE` del artefacto**, no de la metadata. 🔴 **Ninguna de las 19 crea un curso** — y tampoco lo hace ninguna de las **cinco** versiones REST (`v0`–`v4`): el `v0` de authoring está **deprecado en favor del `v1`** con `DeprecationWarning` en runtime, y el único primitivo de nivel curso es **`course_rerun`** (clona). Ver **gap 50 (cerrado)**, **gap 55 (medido)**, **gap 57** y **P63** · Gap 48 y **gap 50** cerrados · gap 55 medido · **gap 57** · P55 · **P63** |
 | **SCORM** (formato) | — | `giacomomaria81/scorm-mcp-server` | **MIT** ✅ | Genera paquetes | 3 tools, offline. **P56** |
 | 🟢 **Empaquetado LMS** (SCORM 1.2 + 2004 + cmi5 + LTI 1.3) | — | **`course-code-framework/coursecode`** | **MIT** ✅ | 🟢 **Sí — `coursecode_build` toma `format` como enum `cmi5 \| scorm2004 \| scorm1.2 \| lti`** | **15 tools medidas en el código: 9 de lectura, 6 de escritura, 1 destructiva (`coursecode_reset`).** Superconjunto estricto de `scorm-mcp-server`. ⚠️ El CLI tiene 33 comandos y **la capa de despliegue alojada (login/deploy/promote/CDN) NO está en MCP** *(pase 35, acción 2 del pase 32)* |
 

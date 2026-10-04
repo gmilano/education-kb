@@ -112,6 +112,36 @@ updated: 2026-10-04
 > **`qti3-pnp`**, que abren accesibilidad de evaluación como entregable auditable (**P72**). ⚠️ **Open edX cambia de
 > recomendación: proponer con presupuesto de mantenimiento (gap 70).** Ver la sección del pase 33, abajo.
 
+## 🧪 Sin verticales nuevas, y el barrido de plataformas se saturó por tercer pase consecutivo (pase 79 del 2026-10-04)
+
+El barrido obligatorio de plataformas (`open source platform education ERP CRM MIT Apache`, más la
+variante de *student information system*) 🔴 **no devolvió ninguna plataforma que esta KB no tuviera.**
+Verificado por `grep` contra el archivo publicado **antes** de escribir:
+
+| Plataforma que el canal devolvió | Estado en esta KB |
+|---|---|
+| **OpenEduCat** (LGPL-3.0, sobre Odoo, 73+ módulos) | 🔵 **ya estaba** |
+| **ERPNext / `frappe/education`** (sobre Frappe) | 🔵 **ya estaban las dos** |
+| **`frappe/lms`** | 🔵 **ya estaba** |
+| **OpenOLAT** (Apache-2.0, 20.3.4 de junio de 2026) | 🔵 **ya estaba** |
+| **SDK de OpenProct** | 🔵 **ya estaba** |
+| **`openedx/edx-proctoring`** (AGPL-3.0) | 🔵 **ya estaba** |
+
+🟢 **Lo que sí cambia para esta vertical, y viene de `agents/top.md`:** la capa de **monitoreo
+conductual** que se le monta encima a cualquiera de estas plataformas quedó **medida** este pase, y el
+resultado condiciona lo que se puede prometer. 🔴 **De tres piezas, dos no tienen licencia (ausencia
+MEDIDA) y la única MIT (`lavsharmaa/proctxam-ai-proctoring`, 3 ★) es la más angosta; la más capaz
+(`aungkhantmyat/The-Online-Exam-Proctor`, 32 ★, con *liveness*, postura, teclas prohibidas, abandono
+de ventana y voz) es la que NO se puede usar.**
+
+⚠️ **Consecuencia de propuesta, dicha acá porque es donde se cotiza:** para un cliente con requisito
+de proctoring, la capa de visión **no** es un componente que se elija del estante open source. Las
+opciones medidas son **`SafeExamBrowser/seb-server`** (la pieza con alcance de red ya auditado en
+`compose/code/proctoring-reach-audit/`), **`openedx/edx-proctoring`** 🔴 **bajo AGPL-3.0** — que para
+un SaaS es una decisión de arquitectura, no un detalle — o **gestionar la licencia** de la pieza de 32 ★
+con su titular antes de prometerla. 🔵 **La receta concreta está en `compose/patterns.md`, patrón
+**P242**.**
+
 ## 🔴 Catorce filas de este archivo habían dejado de ser datos, y el render se veía perfecto (pase 78 del 2026-10-03)
 
 🔴 **El defecto, en una línea:** en `:1501` había un **comentario HTML** (`<!-- pase 39 del

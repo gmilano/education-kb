@@ -8,6 +8,58 @@ updated: 2026-10-04
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 
+## 2026-10-04 — pase 79: 6 candidatas medidas, 2 altas, y la cota de la mejor la declara su propio README
+
+### 🟢 Lo que el canal devolvió, medido pieza por pieza
+
+Las búsquedas obligatorias corrieron con el año **calculado** (2026). 🔵 **El canal devolvió seis
+repos que esta KB no tenía** —verificado por `grep` sobre los 471 *slugs* ya catalogados **antes** de
+medir nada— y **ninguno de los seis es un repo fundacional**. Se midieron los seis igual, porque una
+candidata descartada con motivo medido le ahorra el canal al próximo pase:
+
+| Repo | Licencia (medida hoy, del archivo) | ★ / *forks* | Veredicto |
+|---|---|---|---|
+| https://github.com/MysterionRise/adaptive-knowledge-graph | 🟢 **MIT** (`LICENSE`, 1.520 B, titular `Adaptive Knowledge Graph Contributors`, 2025) | **17 / 6**, 137 commits | 🟢 **ALTA** a `agents/top.md`, **con cota declarada** (abajo) |
+| https://github.com/lavsharmaa/proctxam-ai-proctoring | 🟢 **MIT** (`LICENSE`, 1.098 B) | **3 / 6** | 🟢 **ALTA** — la única pieza **permisiva** de monitoreo conductual de esta KB |
+| https://github.com/aungkhantmyat/The-Online-Exam-Proctor | 🚫 **sin licencia — ausencia MEDIDA en dos canales** (9 nombres × `main`/`master` = **404**, `README.md` **200**; barra lateral de GitHub **sin licencia**) | **32 / 15** | 🔴 **NO entra.** La más capaz y más adoptada de su capa, y la inusable |
+| https://github.com/kmamit5296/Online-Proctoring-System | 🚫 **sin licencia — ausencia MEDIDA** | — | 🔴 **NO entra.** `README.md` **200 sólo en `master`**, **404** en `main` |
+| https://github.com/abdomoaz58-tech/OpenLearn-AI | ⚠️ **AGPL-3.0 medida en el PAYLOAD** (35.184 B, texto completo de la AGPLv3) | **0 / 0** | 🔴 **NO entra** (AGPL + *pre-alpha* declarado). 🔵 Registrado en `agents/trending.md` por su señal de **locale árabe primero**, que **no** es señal de origen |
+| https://github.com/Bentheghost/Adaptive-Learning-System | ⚠️ **MIT medida** (`LICENSE`, 1.080 B, titular `Muhammad Uzair Warraich`, 2025) | **0 / 0**, **1 commit**, 0 *releases* | 🔴 **NO entra.** Proyecto académico individual, por debajo de cualquier cota de esta base |
+
+⚠️ **Nota de método sobre la ausencia de licencia:** se midió con **9 nombres de archivo × `main` y
+`master`** (`LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING`, `COPYING.txt`, `LICENCE`,
+`LICENSE-MIT`, `LICENSE-APACHE`, `license`) **más el control de alcanzabilidad de P114**: `README.md`
+en **200** sobre la misma rama. 🔵 **Sin ese control, un repo inalcanzable y un repo sin licencia dan
+el mismo 404** — es la lección que el pase 51 pagó. 🟢 **Y las dos ausencias se confirmaron por un
+segundo canal independiente** (la barra lateral de GitHub vía WebFetch), que es lo que P126 regla 2
+pide: un control que ejercite el caso donde el instrumento puede fallar.
+
+### ⚠️ La cota de la mejor alta, declarada antes de que alguien la cotice
+
+`adaptive-knowledge-graph` es la referencia de **arquitectura** más completa que esta KB tiene de
+**KG-RAG + BKT/IRT con inferencia local**: Neo4j con aristas de prerrequisito, recuperación híbrida
+BM25 + vectorial en OpenSearch con *reranking*, Ollama local por omisión, citas con fragmento de
+fuente, y un arnés de evaluación de **50+ casos dorados de OpenStax** que compara recuperación
+expandida por grafo contra recuperación plana.
+
+🔴 **Y no es una base de producción, lo dice su propio README:** *«controlled client-demo and AI
+engineering portfolio prototype»*, *«not as a production certification platform»*, con los límites
+enumerados por el autor — **sin integración LMS/LTI, sin modelo de inquilinos, sin certificación de
+cumplimiento, sin IRT calibrado psicométricamente** y **perfiles de alumno sintéticos**.
+
+🔵 **Por eso la fila hereda la CAPACIDAD y no la AMBICIÓN, que es la regla de P234** — el pase 77
+pagó esa lección con `Transcordia/jupiter`, cuya columna «Rol» había heredado la frase de deseo del
+README. ⚠️ **El signo del error importa: una licencia mal archivada EXCLUYE una pieza usable; un rol
+mal archivado INCLUYE una inservible.** 🟢 **Acá el README fue honesto y la fila lo respeta: entra
+como referencia de arquitectura, no como punto de partida de producción.**
+
+### 🔴 Altas fundacionales: 0, y el motivo
+
+**Ninguna de las seis es fundacional** y se dice en vez de promover una a ese estante para llenarlo.
+Las dos plataformas que el canal sí devolvió con peso —**OpenOLAT** (Apache-2.0, 20.3.4 de junio de
+2026) y el **SDK de OpenProct**— 🔵 **ya estaban en esta KB**, verificado por `grep` antes de
+escribir. ⚠️ **`repos/foundations.md` registra el 0 con su razón.**
+
 ## 2026-10-03 — pase 78: este archivo tenía una deriva de vocabulario regional (`Asia Pacific` ≠ `APAC`), y es el defecto que rompe el filtro sin romper la lectura
 
 ### 🔴 La deriva, medida y corregida

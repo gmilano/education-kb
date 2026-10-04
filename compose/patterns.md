@@ -110,6 +110,166 @@ updated: 2026-10-04
 > **Pase 11:** +2 patrones — **P25** (riesgo de abandono conforme al Anexo III, la capa con presupuesto ya asignado y sin oferta open source) y **P26** (agente docente sobre la ontología curricular nacional ya publicada).
 > **Pase 27:** **+4 patrones y una corrección.** 🔴 **P51 queda con premisa falsa** —el conector MCP de Moodle **sí existe y es MIT**— y lo reemplazan **P54** (corrección y devolución sobre Moodle con **compuerta humana**, el último tramo del gap 6, con piezas que ya escriben), **P55** (el conector de **Open edX**, que es el único que de verdad no existe), **P56** (**SCORM** como formato de salida de la capa generativa: cero integración, offline) y **P57** (evidencia por MCP cotizada sobre lo que CaSS **realmente** expone — 6 de 61 operaciones, con insignias y autoría de marcos **fuera**).
 
+## 🔒 P242 — monitoreo conductual de examen cuando la pieza capaz NO tiene licencia: la receta es de ARQUITECTURA, no de catálogo (pase 79 del 2026-10-04)
+
+**Disparador real:** un cliente de APAC —**Vietnam** (ley de AI vigente **2026-03-01**, con educación
+entre los seis sectores de alto riesgo y la **evaluación automatizada** y el **monitoreo conductual**
+nombrados en el texto) o **Corea** (**AI Basic Act** vigente **2026-01-22**, con educación entre sus
+dominios de *high-impact AI*)— pide proctoring con requisito regulatorio, no con requisito de producto.
+
+🔴 **Lo que este pase midió, y es la premisa de la receta:** la capa de visión que el regulador nombra
+**existe en open source y no se puede tomar del estante.**
+
+| Pieza medida | Licencia (medida el 2026-10-04) | ★ | Capacidad |
+|---|---|---|---|
+| `aungkhantmyat/The-Online-Exam-Proctor` | 🚫 **sin licencia (ausencia MEDIDA, dos canales)** | **32** | 🟢 *liveness* + verificación facial, postura de cabeza, caras múltiples, teclas prohibidas, abandono de ventana, voz |
+| `lavsharmaa/proctxam-ai-proctoring` | 🟢 **MIT** (`LICENSE`, 1.098 B) | **3** | ⚠️ ojos, boca, cabeza |
+| `openedx/edx-proctoring` | 🔴 **AGPL-3.0** | — | subsistema de examen de Open edX, en producción |
+| `SafeExamBrowser/seb-server` | 🟢 permisiva (ya medida por esta KB) | — | 🟢 navegador bloqueado + servidor, **con el alcance de red de sus 14 métodos SPI ya auditado** |
+
+🔴 **La anti-correlación es el dato: 32 ★ sin archivo de licencia contra 3 ★ con MIT.** Capacidad y
+libertad de uso van al revés en esta capa. ⚠️ **«Sin licencia» no es un pendiente administrativo: sin
+concesión expresa del titular es *todos los derechos reservados*.**
+
+### La receta, con las tres variantes y su costo
+
+```
+                 ┌─ Variante A (recomendada) ────────────────────────────────┐
+LMS              │  SafeExamBrowser/seb-server   (permisiva, ya medida)      │
+(Moodle / Open   │    └── compose/code/seb-proctoring-validator/  ← rechaza  │
+ edX / Canvas)   │          ajustes de terceros incompletos (21/21)          │
+   │             │    └── compose/code/sebserver-mcp-gate/  ← puerta MCP     │
+   │             │          SOLO LECTURA, `-32601` a todo lo demas (37/37)   │
+   ├── LTI 1.3 ──┤    └── compose/code/proctoring-reach-audit/  ← alcance    │
+   │  (Cvmcosta/ │          de red REAL de los 14 metodos SPI (19/19)        │
+   │   ltijs)    └──────────────────────────────────────────────────────────┘
+   │
+   ├── Variante B: openedx/edx-proctoring  → 🔴 AGPL-3.0 sobre el servicio
+   │
+   └── Variante C: The-Online-Exam-Proctor → 🔴 gestion de licencia PRIMERO
+                   (YOLOv8 + MediaPipe + Dlib + OpenCV, Flask/MySQL)
+
+   evidencia  ──→  xAPI: DavidLMS/learnmcp-xapi + yetanalytics/lrsql
+   expediente ──→  compose/code/aiact-50-2-marking/ (marcado de contenido sintetico)
+```
+
+**Cómo se eligen, y el criterio es de licencia antes que de *features*:**
+
+1. 🟢 **Variante A — `SafeExamBrowser/seb-server`.** Es la única de la capa que esta KB tiene con
+   licencia permisiva **y** con el alcance de red medido en código, no leído del README
+   (`proctoring-reach-audit/`, **19/19**, y **20/20** contra el árbol upstream). 🔵 **La puerta MCP ya
+   está construida y es de sólo lectura con `hard_deny()` de piso** (`sebserver-mcp-gate/`,
+   **37/37**): un agente puede *leer* estado de examen y **no puede** mutarlo, que es lo que el
+   requisito de supervisión humana necesita. ⚠️ **Su cota: es navegador bloqueado + servidor, NO
+   visión por computadora.** Si el requisito pide detección conductual por cámara, A **sola no
+   alcanza**.
+2. ⚠️ **Variante B — `openedx/edx-proctoring` bajo AGPL-3.0.** Funciona y está en producción. 🔴 **Para
+   un SaaS la AGPL es una decisión de arquitectura, no un detalle de *compliance*:** se decide **antes**
+   de escribir código, y se decide con legal.
+3. 🔴 **Variante C — la pieza de 32 ★, y sólo después de gestionar la licencia.** Es la única que cubre
+   el supuesto completo del estatuto (*liveness*, postura, caras múltiples, teclas, ventana, voz) y **no
+   se puede usar como está**. 🔵 **El pedido al titular es chico y concreto —agregar un `LICENSE`
+   permisivo— y es la acción de mayor retorno de toda esta capa:** convierte 32 ★ de código ya escrito
+   en base bifurcable. ⚠️ **Mientras no esté, la pieza MIT (`proctxam-ai-proctoring`) cubre ojos, boca
+   y cabeza y nada más: hay que decirle al cliente qué NO cubre.**
+
+### 🔴 La cota de esta receta, dicha antes de que alguien la cotice
+
+⚠️ **Esta receta NO ubica la capa en APAC.** Las tres piezas de visión tienen **afiliación declarada
+ninguna**, y de un antropónimo **no se infiere región** (**P135**). 🔵 **El disparador es de APAC; las
+piezas son de región no verificada.** 🟢 **El hueco de código de monitoreo conductual de APAC que el
+pase 78 declaró sigue ABIERTO**, y esta receta lo que hace es reclasificarlo: de `NO-MEDIDA` a
+🔴 **`MEDIDA-Y-BLOQUEADA-POR-LICENCIA`**.
+
+⚠️ **Y la cota de instrumento:** las cifras de aserciones citadas acá (**21/21**, **37/37**, **19/19**,
+**20/20**) son las que los pases 66 y 75 reprodujeron. 🔴 **El pase 79 NO las re-verificó: la ejecución
+de las suites del árbol clonado quedó NEGADA** (`[Code from External]`), y se dice en vez de taparse —
+la regla de **P107** es que una cifra de aserciones viaja con su invocación **y con la fecha en que
+alguien la corrió**.
+
+---
+
+## 🧾 P243 — un alcance declarado es correcto y deja un punto ciego: la regla de *frontmatter* se hacía cumplir en 8 archivos y nunca se midió en los otros 48 (pase 79 del 2026-10-04)
+
+**Instrumento:** `compose/code/p243-frontmatter-coverage/` — `check_frontmatter.py` + suite con
+control negativo. ⚠️ **Versionado y NO CORRIDO en este pase** (ejecución negada); su fila del README
+de la raíz va con la celda «Hoy» vacía a propósito.
+
+| Eje | Qué mide | Modo de falla que evita |
+|---|---|---|
+| **Ausencia** | `NO-FRONTMATTER`, `UNCLOSED-FRONTMATTER` | El compilador lee el archivo **sin `industry` ni `region`**, así que hay que inferirlas de la prosa — y **la inferencia se vuelve dato** |
+| **Incompletitud** | `MISSING-KEY` sobre `industry`, `region`, `updated` | Un bloque bien formado al que le falta la clave por la que se filtra |
+| 🔴 **Vocabulario** | `REGION-NOT-IN-VOCABULARY` contra el cerrado de 5 valores | **`Latam`, `Europe`, `Asia Pacific`, `Brazil` se leen perfectamente y son baldes nuevos.** Es el defecto que el pase 78 encontró **a mano** en `repos/trending.md:1577` |
+
+**La medición de este pase:**
+
+```
+antes : 41 de 56 archivos .md con frontmatter   (los 15 faltantes, TODOS README de compose/code/)
+despues: 56 de 56
+```
+
+🔴 **El punto de método, que es lo transferible y no es «faltaba frontmatter».** `P239`/`P240`
+**declaran su alcance** en los 8 archivos de contenido, y esa declaración **es correcta**: un
+instrumento que declara su alcance es mejor que uno que lo deja implícito. ⚠️ **Y exactamente por
+estar bien declarado, el alcance creó un punto ciego que duró 79 pases:** los 48 `.md` restantes
+quedaron fuera de **toda** medición de *frontmatter*, y nadie lo notó porque **el alcance estaba
+escrito**.
+
+🔵 **La regla que sale de esto, y vale para todo instrumento de esta KB:** *un alcance declarado
+protege contra la sobre-afirmación y NO protege contra el punto ciego. Cada vez que un instrumento
+declara su alcance, queda abierta la pregunta de quién mide el complemento.* 🟢 **La respuesta no es
+ampliar el alcance de `P239` —mide otra cosa— sino versionar el instrumento del complemento**, que es
+lo que este pase hizo.
+
+⚠️ **Y la reserva de método, declarada:** la cifra 41 → 56 **no** viene del instrumento versionado,
+viene de un loop de `sh` del pase, **con los 15 hallazgos verificados de primera mano uno por uno**.
+🔴 **Es el orden invertido respecto de P126 regla 1** (primero el versionado, después el casero), y lo
+invirtió el entorno al negar la ejecución, no una decisión. 🔵 **Se dice porque cambia qué tan fuerte
+es la cifra** — y la verificación individual de cada hallazgo es lo que la sostiene, que es más de lo
+que el pase 67 tenía cuando su `awk -F'|'` publicó **cuatro falsos negativos de cinco**.
+
+---
+
+## 🧾 P244 — una fila con celdas SOBRANTES pierde datos en silencio; una con celdas FALTANTES no. Son dos defectos con el mismo síntoma y distinta gravedad (pase 79 del 2026-10-04)
+
+**Eje que `P239` no cubre.** `P239` mide *«fila de datos cuyo bloque no tiene separadora arriba»*.
+🔵 **Este pase encontró un eje vecino que ese instrumento no mira: el CONTEO DE CELDAS de la fila
+contra el de su encabezado.** Y lo que importa es que **el signo del error decide la gravedad**:
+
+| Caso | Qué hace el render de Markdown | Gravedad |
+|---|---|---|
+| 🔴 **Fila con celdas SOBRANTES** (`n > encabezado`) | **DESCARTA las celdas extra** | 🔴 **destructivo y silencioso: el dato está en el fuente y NO en la tabla publicada** |
+| ⚠️ **Fila con celdas FALTANTES** (`n < encabezado`) | **Rellena con celdas vacías** | 🟢 **benigno: no se pierde texto, sólo queda una celda vacía** |
+
+**Medido en este pase sobre los 57 `.md`:** 🔴 **2 filas con celdas sobrantes** (las dos reparadas) y
+⚠️ **26 con celdas faltantes** (declaradas, **no** reparadas: no pierden dato).
+
+### 🔴 Las dos reparaciones, y las dos perdían justamente lo más caro
+
+| Sitio | Qué se descartaba del render | Reparación |
+|---|---|---|
+| `agents/top.md`, fila de `DMontgomery40/mcp-canvas-lms` (tabla de 4 columnas, fila con 5) | 🔴 **Un hallazgo de LICENCIA completo del pase 65**: MIT como *identificador* en `package.json` + registro npm, **39 forks heredando una cesión declarada**, y la contradicción de que el texto no está ni en el repo (404 en 14 nombres) ni en el tarball. **Invisible en la tabla publicada desde el pase 65** | Celda extra movida a **prosa** debajo de la tabla, con nota de rescate |
+| `agents/top.md`, fila de **Open edX** (tabla de 6 columnas, fila con 7) | Los metadatos de cruce de la fila: **`Gap 48` y `gap 50` cerrados · `gap 55` medido · `gap 57` · `P55` · `P63`** — o sea **la trazabilidad de la fila**, que es lo que permite auditarla | 7ª celda **fusionada** en la 6ª con `·`, sin perder texto |
+
+🔵 **El patrón es el mismo que el pase 78 nombró y en un eje nuevo:** *el defecto estructural que no
+se ve revisando el render es peor que el que se ve.* 🔴 **Acá es literal: el render se ve perfecto
+porque Markdown tira la celda sobrante sin avisar.** ⚠️ **Y las dos instancias perdían contenido de
+licencia y de trazabilidad, que son las dos clases de dato que esta KB más cuida** — no es casualidad
+estadística, es que las celdas que alguien agrega al final de una fila son justamente las notas que
+se agregan después, en un pase posterior, sin recontar el encabezado.
+
+### Qué hacer con esto
+
+🟢 **El eje debería vivir en `compose/code/p239-table-integrity/`, no en un instrumento nuevo** — es
+integridad de tabla, igual que `P239`. ⚠️ **Este pase NO lo agregó ahí porque no pudo correr esa
+suite** (ejecución negada), **y agregar un eje a un instrumento sin poder correr su suite de
+regresión es exactamente lo que P239 aprendió a no hacer: su linter dio 7 falsos positivos en dos
+versiones antes de medir bien.** 🔵 **Queda como acción declarada para el próximo pase que pueda
+ejecutar**, con los dos casos de arriba como **tests de regresión ya identificados** y con la regla
+del signo (sobrantes destruye / faltantes no) como la aserción a verificar.
+
+---
+
 ## 🧾 P239 + P240 — la integridad de tabla y la cobertura regional son medibles, y esta KB las estaba fallando (pase 78 del 2026-10-03)
 
 **Instrumento:** `compose/code/p239-table-integrity/` — `check_tables.py`, 23 tests, salida TSV.

@@ -1,3 +1,9 @@
+---
+industry: education
+region: Global
+updated: 2026-10-04
+---
+
 # P215 — The DISCLOSURE axis, measured
 
 ## Why this exists

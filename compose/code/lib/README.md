@@ -1,3 +1,9 @@
+---
+industry: education
+region: Global
+updated: 2026-10-04
+---
+
 # `lib/` — los controles compartidos, no una referencia para copiar
 
 **Pase 77 del 2026-10-03.**

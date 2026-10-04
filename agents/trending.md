@@ -9,6 +9,76 @@ updated: 2026-10-04
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 > No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
 
+## 2026-10-04 — pase 79: la capa que el regulador nombra existe, y 2 de sus 3 piezas no tienen licencia
+
+### 🔴 La señal del pase: una capa completa, medida, y comercialmente inusable
+
+El pase 78 dejó declarado un hueco: **APAC es la región con el único estatuto del mundo que nombra
+el monitoreo conductual por su nombre** —la ley de AI de Vietnam, vigente **2026-03-01**, que
+clasifica evaluación automatizada y monitoreo conductual como alto riesgo en educación— **y la única
+sin una pieza permisiva medida que lo implemente.**
+
+🔵 **Este pase fue a buscar esa pieza. Encontró tres. Y la conclusión es peor que «no hay»:**
+
+| Pieza | Licencia (medida hoy) | ★ | Capacidad medida |
+|---|---|---|---|
+| `aungkhantmyat/The-Online-Exam-Proctor` | 🚫 **sin licencia (ausencia MEDIDA, dos canales)** | **32** | 🟢 **la más completa**: verificación + *liveness* facial, postura de cabeza, caras múltiples, teclas prohibidas, abandono de la ventana del examen, detección de voz; YOLOv8 + MediaPipe + Dlib + OpenCV, Flask/MySQL, *Trust Score* y registro de violaciones |
+| `lavsharmaa/proctxam-ai-proctoring` | 🟢 **MIT** (`LICENSE`, 1.098 B) | **3** | ⚠️ **la más angosta**: ojos, boca y cabeza por webcam, Dlib CNN, Flask + PostgreSQL |
+| `kmamit5296/Online-Proctoring-System` | 🚫 **sin licencia (ausencia MEDIDA)** | — | sin medir: la licencia ya la excluye. `README.md` **200 sólo en `master`**, **404** en `main` |
+
+🔴 **La curva va al revés, y es el dato que cotiza: 32 ★ sin archivo de licencia contra 3 ★ con
+MIT.** La capacidad y la libertad de uso están **anti-correlacionadas** en esta capa, que es el mismo
+cruce que el pase 74 midió sobre una sola plataforma y el 73 sobre la divulgación. ⚠️ **«Sin
+licencia» no es un pendiente administrativo: sin concesión expresa del titular es *todos los
+derechos reservados*, y para una consultora es un bloqueo duro.**
+
+🔵 **La reclasificación, que es el aporte permanente del pase:** la capa pasa de `NO-MEDIDA` a
+🔴 **`MEDIDA-Y-BLOQUEADA-POR-LICENCIA`**. Es la misma forma de hallazgo que el pase 76 produjo con la
+capa de *workbench* (*existe y está bloqueada por licencia, no por madurez*) y el 66 con la clase
+`NOT-A-LICENSE` de LATAM. 🟢 **Un hueco que se reclasifica vale más que un hueco que se cierra mal.**
+
+### 🔴 Y el hueco de APAC sigue ABIERTO — por regla, no por pereza
+
+⚠️ **Las tres piezas declaran afiliación institucional NINGUNA**, verificado en el repo y en la
+página de GitHub de cada una. 🔴 **El único indicio es el antropónimo del titular o del dueño de la
+cuenta, y de un antropónimo NO se infiere región** (**P135**; el precedente es el falso positivo de
+«Italia» por subcadena de `Italicia` que el pase 56 atrapó).
+
+🟢 **Así que las tres quedan `sin región verificada` y el hueco de código de monitoreo conductual de
+APAC sigue declarado y abierto** — la misma decisión que el pase 71 tomó con `mcp_hemis_student`.
+**Una capa medida no es una región cubierta**, y usar una pieza de origen no evidenciado para tapar
+el hueco de una región sería exactamente el sesgo que esta base declara evitar.
+
+### 🟢 La otra señal del pase, y es de LOCALE y no de origen
+
+`abdomoaz58-tech/OpenLearn-AI` — ⚠️ **AGPL-3.0 medida en el payload** (35.184 B, el texto completo de
+la AGPLv3), **0 ★ / 0 *forks***, el propio repo se declara *pre-alpha*. **No entra al catálogo**: la
+AGPL es fricción dura para una consultora y la adopción es nula.
+
+🔵 **Se registra igual, por una señal que esta KB no tenía medida: es *árabe primero* con multilingüe
+encima** (OCR + RAG + grafos de conocimiento sobre documentos educativos, con modos de despliegue
+local/híbrido/nube y abstracción de proveedor de LLM). 🟢 **La capa de contenido educativo en árabe
+es un hueco de esta base, y ahora tiene al menos una pieza medida ocupándolo.** ⚠️ **El locale del
+artefacto NO ubica a su autor:** afiliación declarada ninguna, así que **sin región verificada**
+(**P135**). El idioma del contenido y el origen del código son ejes independientes, y confundirlos
+es la versión fina del error que P135 prohíbe.
+
+### ⚠️ Lo que el canal NO devolvió, declarado en vez de rellenado
+
+🔴 **Noveno barrido regional consecutivo agotado: 0 hechos regulatorios o de mercado nuevos en las
+cuatro regiones.** Se verificó por `grep` contra el archivo publicado **antes** de escribir, y ya
+estaban todos: el **AI Basic Act** coreano (vigente 2026-01-22), la ley de AI de Vietnam, `H.R. 8747`,
+`AB 1159`, `SB 1227`, el *Traffic Light Framework* de NYC, los **134 proyectos de ley en 31 estados**,
+el reglamento de la **Ley 31814** peruana, el Convenio Marco firmado por Uruguay, el **Observatorio
+de UNESCO** para LATAM y el Caribe, y el **CENIA** chileno. 🔵 **Se declara región por región en
+`intel/market.md`, porque un hueco declarado es información y el silencio se parece a la cobertura.**
+
+🔴 **Y dos canales que fallaron:** la **ejecución de las suites** del árbol clonado quedó **NEGADA**
+(`[Code from External]`, igual que en los pases 58 y 67), así que la columna «Hoy» del README **no se
+re-verificó y este pase no la afirma**; y `www.suny.edu` volvió a dar **`EGRESS_BLOCKED`**, de modo
+que **la reserva declarada del pase 78 sobre el *Document Number 6904* sigue sin cerrar**, ahora con
+dos mediciones del mismo bloqueo.
+
 ## 2026-10-03 — pase 78: 14 filas de `verticals/` habían dejado de ser datos, la fila de LATAM se había caído de su tabla, y el linter que lo mide falló siete veces antes de medir bien
 
 > ⚠️ **Nota de fecha:** las mediciones de este pase se tomaron el **2026-10-03** (de ahí

@@ -1,3 +1,9 @@
+---
+industry: education
+region: Global
+updated: 2026-10-04
+---
+
 # P230 — la capa OneRoster no es un callejón de LICENCIAS, es un callejón de CAPA
 
 **Pase 76 del 2026-10-03.** Instrumento: `measure.sh`. Salida ejecutada: `result.2026-10-03.txt`

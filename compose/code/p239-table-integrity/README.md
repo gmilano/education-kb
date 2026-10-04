@@ -1,3 +1,9 @@
+---
+industry: education
+region: Global
+updated: 2026-10-04
+---
+
 # P239 / P240 — integridad de tablas y cobertura regional
 
 **Pase 78 del 2026-10-03.** Instrumento nacido de **dos defectos reales encontrados en el archivo

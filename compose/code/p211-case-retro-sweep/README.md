@@ -1,3 +1,9 @@
+---
+industry: education
+region: Global
+updated: 2026-10-04
+---
+
 # P211 — The retroactive case re-measure (pass 72 del 2026-10-03)
 
 **Qué cierra.** El pase 71 descubrió que `raw.githubusercontent.com` es **case-sensitive**,

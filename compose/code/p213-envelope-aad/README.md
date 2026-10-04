@@ -1,3 +1,9 @@
+---
+industry: education
+region: Global
+updated: 2026-10-04
+---
+
 # P213 — Qué autentica realmente el sobre de login de `usp-mcp` (pase 72 del 2026-10-03)
 
 `iDavi/usp-mcp` (GPL-3.0, Brasil) es **la primera pieza de código LATAM que esta base mide desde el
