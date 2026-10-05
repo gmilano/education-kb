@@ -7,6 +7,7 @@ updated: 2026-10-05
 # 📡 Tendencias — education
 
 > Ventana de investigación: septiembre 2026. Verificado 2026-09-30; el pase 11, el 2026-10-01.
+> **Pase 117 del 2026-10-05:** 🟢 **Tendencias 912–917, citadas una por una para que ninguna quede anunciada sin sección (`P97`).** 🆕 **La que manda es **917** y no es de educación: `P384` — la rotación de 12 industrias no avanza, y por eso este estante lleva ~24 pases/día desde el 2026-09-30 mientras las otras 11 industrias están congeladas desde ~2026-08-02. `rotation.json@main` dice `next: 8` desde el **2026-09-02**; el avance se commitea en una rama por sesión (**1.487** ramas `claude/*` en el origin) que nadie mergea. **Un contador guardado donde el escritor no puede escribir no es un contador: es una constante**, y el síntoma que lo delata no es un error sino la repetición EXITOSA.** 🆕 **912: `P379`, el fork con archivo propaga la cesión Y el titular ajeno ⇒ el doble conteo infla *cesiones verificadas*, que es peor que inflar afirmaciones porque pasa el control. 🆕 913: `P380`, la cesión segmentada por ESTADO DE COMPILACIÓN, eje que ningún escáner de rutas ve. 🆕 914: `P381`, dos instrumentos reales fusionados en un par falso — la unidad de verificación es la TUPLA, no el campo. 🆕 915: `P382`, el ancla `{year}` corre las fechas hacia hoy y acá corrió el 100 % de lo nuevo. 🆕 916: `P383`, el vocabulario cerrado se rompe un nivel abajo del que se estaba gateando.** ⚠️ **`P365` sigue NO evaluable (faltan 20 h 03 m) y se re-registra contra el mismo instante absoluto, sin re-basar.**
 > **Pase 115 del 2026-10-05:** 🟢 **Tendencias 906–911, citadas una por una para que ninguna quede anunciada sin seccion (`P97`).** 🆕 **La que manda es **906**: `P370`, la compuerta simetrica — `p311` gatea lo que ENTRA desde el pase 100 y nada gateaba lo que se declara AUSENTE, asi que un hueco falso se re-publico como racha cuatro pases. 29 huecos con region → 2 contradichos, **27 sin alcance**.** 🆕 **907: `P371`, el calificador se cae y el numero sobrevive. 🆕 908: `P372`, un canal ciego que devuelve el codigo de EXITO es peor que uno que devuelve error. 🆕 909: `P373`, una cifra inventada adosada a un artefacto real. 🆕 910: `P374`, titular / dueño / dominio son tres ejes. 🔴 911: las estrellas no miden respaldo institucional — dos piezas de **0 ★** de este pase son, una, despliegue en produccion del **Banco Mundial**, y la otra, codigo financiado por el **SNCTI** de Colombia.**
 > **Pase 114 del 2026-10-05:** 🔴 **El marco de mercado 2026 se publica como RANGO y no como cifra, porque las cuatro casas discrepan 1,4×: USD 8,7 MM (MarkWide) · 10,6 MM (Research and Markets) · 11,4 MM (Grand View) · 12,3 MM (HolonIQ) para el MISMO año.** 🆕 **`P369` — citar una sola de esas cifras es una decision editorial disfrazada de dato: la dispersion (1,4×) es mayor que el crecimiento que cualquiera de ellas proyecta para un trimestre, asi que el numero elegido domina la conclusion. Se cita el rango con las cuatro casas nombradas, o no se cita.** 🟢 **El segmento con menos ruido es *AI tutors*: USD 2,1 MM (2025) → **2,7 MM (2026)** → **17,7 MM (2033)**, CAGR **30,5 %**.** 🟢 **Y el dato de intencion que mueve un pipeline: **83 %** de las instituciones declara plan de desplegar asistentes docentes AI en 2026.** 🔵 **La direccion del eje, consistente en las cuatro casas: de *generative* a **agentic** — automatizar lo administrativo (correccion, horarios, seguimiento) para liberar al docente a mentoria, mas «gemelos digitales» del alumno para hiper-personalizacion. Es exactamente la forma de los repos que esta base indexa.** 🔴 **Y la higiene que este pase agrega al eje de tendencias, porque no es un hecho de mercado sino de CANAL: el barrido devolvio un instrumento mexicano INEXISTENTE («Ley Nahui»), y lo delato preguntar por el nombre (`P367`). Una tendencia se sostiene con varias fuentes; un NOMBRE PROPIO hay que verificarlo por si mismo, porque no se cae por ausencia — no aparece nada y eso se lee como «poco cubierto», no como «no existe».**
 > **Pase 113 del 2026-10-05:** 🟢 **Tendencias 901–905, citadas una por una para que ninguna quede anunciada sin seccion (`P97`, y este pase midio el costo exacto de incumplirlo).** 🆕 **La que manda es **901**: tres de las cuatro acciones pre-registradas fueron INEJECUTABLES y las tres por motivos de clase distinta —permiso de ejecucion, imposibilidad temporal y corpus externo—, asi que el aporte del pase es una taxonomia de por que una pre-registracion puede no correrse, que es distinta de haber corrido y fallado.** 🆕 **`P361` (tendencia **902**) — la portabilidad de un control tiene por lo menos TRES ejes: contenedor (`P352`), directorio (`P355`) y **permiso** (`P361`); y el de permiso es el unico que NO puede publicar un numero falso, asi que es el modo de falla mas honesto y el mas incapacitante.** 🆕 **`P360` (tendencia **903**) — una pre-registracion puede pedir un intervalo de RELOJ mayor que la distancia al proximo pase: la accion escrita para corregir `P358` heredo su defecto en el sentido contrario.** 🔴 **Tendencia **904** — la deuda documental de esta base NO tiene dueño: 10 de 15 numeros NACIERON CITADOS y solo 4 fueron prometidos, asi que la prediccion que pedia ≥10 prometidos sale REFUTADA con su clausula de refutacion cumplida exacta.** 🆕 **`P364` (tendencia **905**) — la cesion puede estar SEGMENTADA POR DIRECTORIO: `Elgg` cede MIT en el nucleo y GPL-2.0 en `/mod`, asi que la frontera de contaminacion es una RUTA y no un repo — la primera vez que esta base lo mide sobre CODIGO y no sobre contenido.** 🟢 **Barrido regional 42: 4/4 regiones, 0 silencios y 0 hechos nuevos sobre 17 — segunda saturacion total en tres pases (`P287`).**
@@ -235,6 +236,82 @@ sector público significa que **cada municipio forkea para desplegar**. La estre
 el fork, instalaciones. ⚠️ **Y su lado malo es el encargo:** 547 árboles divergentes sin ruta de
 actualización.
 
+
+
+## 🟢 Pase 117 del 2026-10-05 (lectura `14:45Z`) — tendencias 912–917, y la más cara no es de educación
+
+### 🆕 Tendencia 912 — `P379`: el doble conteo que PASA el control es peor que el que lo falla
+
+Ver `P379` en `agents/top.md`. 🔵 **La forma general, que sirve fuera de licencias:** cuando un
+control se cumple copiando un archivo, forkear **satisface el control sin agregar la sustancia**. El
+conteo sube, el control da verde, y la cantidad real no se movió. Un control que se verifica por
+*presencia de artefacto* es forkeable por construcción; uno que se verifica por *identidad del
+artefacto* (`sha256` + titular) no lo es.
+
+### 🆕 Tendencia 913 — `P380`: hay ejes de licencia que no viven en el árbol
+
+Ver `P380` en `repos/foundations.md`. 🔵 **Lo transferible:** esta base clasifica cesión por repo
+(`P269`), por ref, por directorio (`P364`) y por capa de contenido (`P317`/`P322`). **`pupilfirst`
+agrega el estado de COMPILACIÓN**, que no es una propiedad del árbol sino del *pipeline*. Un
+inventario que sólo sabe mirar rutas tiene un punto ciego estructural, no un dato faltante.
+
+### 🆕 Tendencia 914 — `P381`: la unidad de verificación de un hecho regulatorio es la TUPLA
+
+Ver `P381` en `intel/market.md`. 🔴 **Y el riesgo concreto para esta base:** `compose/code/` ya tiene
+compuertas que dependen de fecha de vigencia (`aiact-50-2-*`). Un par *(nombre, fecha)* cruzado **no
+rompe la compuerta** — la corre contra el calendario equivocado y devuelve verde. Falla silenciosa,
+no ruidosa.
+
+### 🆕 Tendencia 915 — `P382`: el ancla temporal de la consulta sesga la EDAD de lo que vuelve
+
+Ver `P382` en `agents/trending.md`. 🔴 **La medición de este pase: 2 de 2 hechos nuevos del barrido
+regional venían corridos ~2 años** (UK £4 M → 2024-08-29; TEQSA → 2024-06-03). 🔵 Hermano de `P368`
+en el eje del calendario: una consulta que lleva el eje adentro recibe por construcción cosas que lo
+satisfacen, sean o no del período.
+
+### 🆕 Tendencia 916 — `P383`: el vocabulario cerrado se rompió un nivel abajo del gate
+
+Ver `P383` en `intel/market.md`. 🔵 **La lección de gobernanza de formato:** `p311` gatea altas,
+`P370` gatea huecos declarados, y **nada gateaba los ENCABEZADOS**, que es donde el compilador
+infiere el tipo de entidad. 24 instancias fuera de vocabulario, incluidas dos variantes de acento
+del mismo concepto.
+
+### 🔧 `P384` — defecto de INFRAESTRUCTURA fuera de esta KB, y explica los 117 pases: la rotación no avanza
+
+🔴 **Este estante recibió ~24 pases por día desde el 2026-09-30 y las otras 11 industrias ninguno.
+No es una decisión de prioridad: es un bug de persistencia, y se mide.**
+
+| Medición | Valor |
+|---|---|
+| Pases sobre `education-kb` (2026-10-01 → 10-05) | **24 + 25 + 24 + 24 + 16** |
+| `rotation.json` en `globant-kb@main`: `next` | **8** (= `education`), inmóvil |
+| Último commit que tocó `rotation.json` en `main` | **2026-09-02** |
+| `last_updated` dentro del archivo | **2026-08-02** |
+| Ramas `claude/*` en el origin de `globant-kb` | **1.487** |
+
+🔵 **Causa raíz:** el encargo manda escribir `rotation.json` en `globant-kb`, pero la sesión tiene
+prohibido empujar a `main` — empuja a una rama por sesión (`claude/ecstatic-mccarthy-*`). El avance
+`8 → 9` se commitea **1.487 veces, cada vez en una rama que nadie mergea**. La próxima sesión clona
+`main`, lee `next: 8` y vuelve a hacer `education`. **El bucle es estable y silencioso: cada corrida
+individual cumple el encargo al pie de la letra.**
+
+🔴 **Por qué es el hallazgo más caro de este pase aunque no sea de educación:** el valor del encargo
+es la COBERTURA de 12 industrias, y la cobertura real es 1/12 con 11 estantes congelados desde
+~2026-08-02, mientras este sobre-indexa hasta saturarse — que es justamente lo que `P287` viene
+midiendo como «saturación» pase tras pase. 🆕 **`P384` — un contador de rotación guardado donde el
+escritor no puede escribir no es un contador: es una constante.** Y el síntoma que lo delata no es
+un error (nunca hubo uno) sino la **repetición exitosa**, que es el modo de falla más difícil de ver
+desde adentro de una corrida. 🔵 **Esta KB no puede arreglarlo** —el arreglo es de permisos o de
+dónde vive el estado— **pero sí puede dejarlo escrito acá, que es el único soporte que sobrevive
+entre corridas**, porque `education-kb` sí persiste y `globant-kb/rotation.json` no.
+
+### ⚠️ `P365` — no evaluable todavía, y se RE-REGISTRA contra el mismo instante absoluto
+
+`P365` pedía un pase en o después de **`2026-10-06T10:48Z`** para medir deriva de estrellas con
+≥24 h de intervalo. Este pase corrió a **`2026-10-05T14:45Z`** ⇒ faltan **20 h 03 m**. **No es
+evaluable y no se re-basa**: queda pendiente contra el **mismo instante absoluto**, que es
+exactamente la corrección que `P365` introdujo (fijar un instante, no una distancia a «el próximo
+pase»). Se dice en vez de dejarlo caer en silencio.
 
 
 ## 2026-10-05 — pase 116: la IA de LMS se estabilizó como ARQUITECTURA, y ahí es donde hay que mirar

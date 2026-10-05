@@ -7,6 +7,7 @@ updated: 2026-10-05
 # 📈 Repos trending — education
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
+> **Pase 117 del 2026-10-05:** 🔴 **El canal generalista vuelve a fallar del mismo modo y ya es medible como regla: las consultas globales obligatorias devolvieron el eje *enseñar-sobre-IA* (`ai-engineering-from-scratch`, `awesome-llm`, listas de empleos) y no el de *IA-en-educación* — mientras la consulta NOMINAL rindió 7 filas.** 🟢 **Canal medido este pase, no heredado: `raw.githubusercontent.com` **DISCRIMINA** · `git ls-remote --symref` **DISCRIMINA** y además devuelve la rama por defecto (el instrumento que `P269` pedía) · `WebFetch` **VIVO** (3.er pase) · 🔴 `curl -sI github.com` **403/403** con DOS líneas de estado y `200` del proxy en la primera (`P366` + `P372` juntos) · 🔴 `api.github.com` **403/403**.** 🟢 **Ramas por defecto que NO son `main`, leídas y no asumidas: `pupilfirst` → `master`, `frappe/lms` → `develop`, `openedx/openedx-platform` → `master` (404 en `main`).** 🆕 **`P379`: dos repos del linaje `ai-tutor` con `LICENSE` de `sha256` idéntico ⇒ el *trending* de licencias permisivas se puede inflar forkeando.**
 > **Pase 115 del 2026-10-05:** 🟢 **El trending de la industria DEJA de estar vacio por el canal del CURRICULO, no por el generalista: las 4 consultas globales obligatorias volvieron a devolver el eje de *enseñar-sobre-IA* (`ai-agents-for-beginners`, `agents-from-scratch`, roadmaps) y no el de *IA-en-educacion* — mientras el ancla de curriculo en idioma local rindio una cohorte LATAM entera.** 🟢 **Altas con fecha de commit leida de clon shallow: `portabilis/i-educar` **2026-10-02** (717 ★, **547 forks** — ratio de fork **0,76**, firma de software que se DESPLIEGA por municipio y no que se mira) · `thiagoluzin/pemara-edu-mira` **2026-09-27** · `eai6/ai-tutor` **2026-08-20** · `yunger7/enem-api` **2025-12-14** (la API del banco de items del ENEM lleva ~10 meses sin tocarse, asi que NO trae el examen 2026).** 🔴 **`portabilis/i-educar` tiene rama por defecto **`2.12`**, no `main` ni `master`: leer su `LICENSE` de `master` —como hizo el primer intento de este pase— es leer una rama que NO es la por defecto (`P269`: el conjunto es propiedad del par *(repo, ref)*).** 🔵 **Canal, medido este pase y no heredado (`P366`): 🟢 `raw.githubusercontent.com` 200/404 DISCRIMINA · 🟢 `git ls-remote` sha/`fatal` DISCRIMINA · 🟢 `WebFetch` payload/404 DISCRIMINA (vivo, 2º pase seguido) · 🔴 `curl -sI github.com` y `api.github.com` **403/403**, y leido con `head -1` da **200 al repo inventado** (🆕 `P372`).** ⚠️ **Y una restriccion de acceso declarada: los tools `mcp__github__*` estan presentes pero la sesion esta acotada a `gmilano/*`, asi que la capa de API autenticada NO es un canal disponible para repos de terceros en esta corrida.**
 > **Pase 114 del 2026-10-05:** 🆕 **`openedx/edx-platform` RENOMBRO a `openedx/openedx-platform`** (8.2k ★, AGPL-3.0): la URL vieja redirige, asi que nada se rompe HOY, pero el `full_name` canonico cambio y un *pin* al viejo es deuda silenciosa que ningun 301 anuncia. 🟢 **4 foundations permisivas re-medidas de payload: `oppia` (Apache-2.0, 6.8k ★), `sakai` (ECL-2.0, 1.2k ★), `kolibri` (MIT, 1.1k ★), `pyBKT` (MIT, 281 ★).** 🔴 **Y el dato estructural con denominador: de 11 plataformas verticales medidas hoy, solo **4 son permisivas** y 7 son copyleft ⇒ en educacion elegir plataforma ES elegir licencia.** 🔵 **`kolibri` es la de mejor relacion licencia/encaje para contextos sin conectividad: MIT **y** *offline-first* por diseño.**
 > **Pase 113 del 2026-10-05:** 🔴 **El trending de la industria vuelve a estar vacio (barrido 42), y el motivo es NUEVO: el listado por topico que el pase 112 estreno con 5 altas devuelve ahora 19 de 20 candidatas YA PUBLICADAS. No se agoto el canal — se SATURO contra el inventario de esta propia base.** 🔵 **Eso refina `P281` en vez de repetirlo: el listado mide STOCK, no FLUJO, porque no esta ordenado por fecha; un archivo que se llama *trending* necesita un canal con reloj y este no lo tiene. Se declara como gap de METODO.** 🟢 **Lo que SI se movio esta en la capa de PLATAFORMA y lo trajo la consulta del encargo, no el topico: `Elgg/Elgg` (1.7k ★ ±50, 665 forks, PHP) con **0 menciones en 112 pases** ⇒ 🆕 `P364`, la cesion SEGMENTADA POR DIRECTORIO — `/mod` es GPL-2.0 unicamente y el resto es MIT o GPL-2.0 a eleccion, leido del payload de `LICENSE.txt` (`LICENSE` da 404, `P279` otra vez).** 🟢 **Primera serie de estrellas de este arbol con INSTANTE (`2026-10-05T10:48Z`) y no con fecha: 6 filas, las 6 sin movimiento.** 🔴 **Pero el enunciado de deriva no se publica ⇒ 🆕 `P360`: la accion pedia ≥24 h de intervalo a un pase que corre el mismo dia, asi que el intervalo solo se ACOTA a [0 h, 10 h 48 m].** 🔴 **Tablero NO medido: el entorno deniega la ejecucion del codigo del arbol (🆕 `P361`), que es el tercer eje de portabilidad y el unico que no puede publicar un numero falso.**
@@ -15,6 +16,59 @@ updated: 2026-10-05
 > **Pase 110 del 2026-10-05:** 🔴 **Trending de la industria vacio por TRIGESIMONOVENA vez.** 🟢 **Lo que se mueve es el CANAL: `WebFetch` sobre `github.com` devuelve estrellas donde `curl` da 403, con control negativo en 404 — asi que la columna de estrellas de este arbol vuelve a existir, con resolucion de 3 cifras significativas.** 🔴 **Y lo primero que mide es un repo de 8 ★ sin licencia que el canal de busqueda presento junto a uno de 40,8 ★k.**
 > **Pase 107 del 2026-10-05:** 🔴 **Trending de la industria vacio por TRIGESIMOSEXTA vez: curriculo, catalogos, una bolsa de trabajo y dos generalistas (`microsoft/semantic-kernel` 27.470 ★, `NousResearch/hermes-agent` MIT), con las SEIS cifras del eje generalista identicas digito a digito a los pases 105 y 106 ⇒ informacion sobre el CANAL, no sobre la industria.** 🟢 **Lo que SI se movio es una capa de BINARIOS que este archivo nunca conto: 2.443 archivos de figura (~156 MiB, 1.326 imagenes distintas) en `CAHLR/OATutor-Content`, con la extension `.gif` falsa en 2.443 de 2.443 (`P332`).** 🔵 **`git ls-remote` da TRES refs, y una se llama `gpt-science-study`: la unica de este arbol cuyo nombre anuncia contenido sintetico.** 🔴 **Defecto propio corregido: los 49.481 JSON contra los 49.479 del pase 106 son los 6 caminos con bytes de control (U+007F/U+0080/U+0081) en el nombre del paso — la identidad de un paso NO es un slug seguro.**
 > **Pase 106 del 2026-10-05:** 🔴 **Trending de la industria vacio por TRIGESIMOQUINTA vez: el canal devuelve generalista o educativo-sobre-AI, no AI-para-educacion.** 🟢 **Lo que SI se movio esta en el eje de `ref` y no de repo: las ramas `1e` de 5 bundles de `openstax` contienen la UNICA cesion `CC BY 4.0` de 10 colecciones cuyas versiones vivas son `NC-SA` — cesion y vigencia apuntan en direcciones opuestas.** 🔵 **Canal nuevo calibrado: `git ls-remote` para enumerar refs (responde a repo real, falla a repo inventado), el unico de este arbol que contesta «que refs tiene este repo» con `api.github.com` en 403 — sin el, la accion A de este pase era imposible.**
+
+
+## 2026-10-05 — pase 117: el canal nominal rinde y el generalista no, y las ramas por defecto que no son `main`
+
+**Canal, medido ESTE pase a las `2026-10-05T14:45Z` y no heredado (`P249`/`P366`), con control negativo en cada sonda** (`gmilano/this-repo-does-not-exist-zzq7`):
+🟢 `raw.githubusercontent.com` → **200** para el ancla buena, **404** para el inventado en 2 ramas ⇒ **DISCRIMINA**.
+🟢 `git ls-remote --symref` → `sha` + **rama por defecto** para el real, `FATAL` para el inventado ⇒ **DISCRIMINA**, y además es el canal que RESUELVE la rama por defecto, o sea el instrumento que `P269` pedía.
+🟢 `WebFetch` sobre `github.com` → payload con ★, forks y licencia ⇒ **VIVO, 3.er pase seguido**.
+🔴 `curl -sI github.com` → **403 para el real y 403 para el inventado**, y emite **DOS** líneas de estado (`HTTP/1.1 200 Connection Established` del PROXY + `HTTP/1.1 403 Forbidden` del origen) ⇒ **`P366` y `P372` confirmados los dos en la misma sonda**: el método que prescribe el encargo no discrimina, y leído con `head -1` devuelve **`200` a un repo inventado**.
+🔴 `api.github.com` → **403/403**, apagado.
+🟢 **`P269` re-confirmado de paso:** `openedx/openedx-platform` sirve `README.rst` en **`master` (200)** y **404 en `main`** — el conjunto sigue siendo propiedad del par *(repo, ref)*.
+🟢 **`P279` re-confirmado:** `frappe/lms` cede en **`license.txt` (200)** y da **404 en `LICENSE`**, sobre rama por defecto **`develop`**.
+
+### 🔴 Las 4 consultas globales del encargo, y qué devolvieron
+
+| Consulta | Devolvió | Veredicto |
+|---|---|---|
+| `top open source AI agents education 2026 github MIT` | frameworks de agentes **generales** (openclaw 385.407 ★, browser-use 108.128 ★, Mem0 62.735 ★, AutoGen 60.284 ★, Flowise 55.226 ★, dify 151.639 ★) | 🔴 **0 de educación.** Eje equivocado: son *builders*, no piezas de dominio. |
+| `github trending education AI 2026` | `rohitg00/ai-engineering-from-scratch` (#1 del trending el 2026-05-24), `awesome-llm`, `speedyapply/2026-AI-College-Jobs` (5,2k ★ / 206 forks) | 🔴 **Eje *enseñar-sobre-IA*, no *IA-en-educación*.** Mismo modo de falla que los pases 113 y 115. |
+| `open source platform education ERP CRM MIT Apache` | **OpenEduCat** sobre Odoo (300 módulos, 65 idiomas, 45 localizaciones, 3 M+ usuarios), `.LRN` (originado en el MIT), Moodle | 🟢 Útil para `verticals/`, 🔴 ya publicado. |
+| `AI education industry trends 2026` | mercado y gobernanza (ver `intel/`) | 🟢 Rinde marco, 🔴 **0 repos**. |
+
+🔵 **La regla, ya con tres pases de evidencia: en educación el *trending* NO es el canal de
+descubrimiento.** Lo que rinde es la consulta **nominal** (`"AI tutor" OR "intelligent tutoring"`,
+que dio las 7 filas de este pase) y el **linaje** (forks y upstreams, que dio `P379`). El listado
+por popularidad no puede devolver una cohorte cuyo ★ máximo es **8**.
+
+### 🆕 `P379` — el fork CON archivo: la cesión sí viaja, el TITULAR no; y el deduplicador no es el repo
+
+`P377` (pase 116) midió un linaje de 2 nodos **sin** archivo de licencia y encontró el mecanismo
+asimétrico: forkear copia el `README` —y con él la afirmación— pero no copia el `LICENSE` porque
+no existe, así que el fork **manufactura una segunda afirmación del MISMO permiso inexistente**.
+Cerró pidiendo la métrica correcta: no cuántos nodos afirman.
+
+🆕 **Este pase mide el caso ESPEJO —el archivo SÍ existe— y el resultado no es el simétrico que se
+esperaría.** `krishna16-origin/ai-tutor` → `maxew6/ai-tutor-project`: las dos `LICENSE` miden
+**1.073 B** y dan el **MISMO `sha256:de8107bf9312862c`**. O sea el fork copió la cesión **al byte**,
+y por eso mismo **copió al TITULAR**: el `LICENSE` de `maxew6` otorga en nombre de
+**`krishna16-origin`**.
+
+🔴 **La consecuencia invierte el signo del riesgo de `P377`.** Ahí el doble conteo inflaba
+*afirmaciones* y era detectable porque el denominador de cesiones estaba en cero. Acá el doble
+conteo infla **cesiones verificadas**: los dos nodos pasan el control «¿hay archivo de licencia
+permisiva, leído del payload?» con 200 y texto canónico. Un auditor que cuente *repos con cesión
+verificada* cuenta **2**, y las cesiones distintas son **1**, con **un solo** titular a quien
+reclamar. El doble conteo que *parece* seguro es más peligroso que el que parece roto.
+
+🟢 **Y da el instrumento que `P377` pedía, que es barato:** la clave de deduplicación de una
+cesión es el par **(`sha256` del texto de licencia, titular nombrado)**, no el repo ni el `full_name`.
+Dos filas con el mismo par son **una** cesión. Esta base ya venía anotando `sha256` de licencia por
+fila desde pases anteriores (y ya usó la coincidencia de `sha256` entre `i-educar` y `enem-api` en el
+pase 115, aunque ahí como curiosidad de texto canónico y no como clave) ⇒ **el dato para correrlo ya
+está en el estante; lo que faltaba era leerlo como clave.**
 
 
 ## 2026-10-05 — pase 116: el trending de este pase es un número de VERSIÓN, no un repo

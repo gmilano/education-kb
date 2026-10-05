@@ -8,6 +8,7 @@ updated: 2026-10-05
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 > No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
+> **Pase 117 del 2026-10-05:** 🟢 **Barrido 46: 4/4 regiones, 0 silencios, denominador ENUMERADO con `grep` antes de escribir — 23 hechos sondeados, 20 ya publicados, 3 candidatos.** 🔴 **Y de los 3: **2 son reales con la fecha corrida ~2 años** (UK £4 M es del **2024-08-29**; TEQSA es del **2024-06-03**) y **1 se RECHAZA por fusión** ⇒ 🆕 `P382` (el ancla `{year}` premia páginas que MENCIONAN el año, no eventos ocurridos en él) y 🆕 `P381` (nombre de un instrumento + fecha de OTRO; las dos mitades reales, falso sólo el PAR).** 🟢 **7 filas nuevas de agente, todas de ★ de un dígito o cero.** 🆕 **`P379` con identidad criptográfica: fork y upstream con el MISMO `sha256` de licencia ⇒ 2 repos, 1 cesión, 1 titular.** 🔴 **LATAM devolvió **0 hechos nuevos sobre 7 sondas**: es hoy la región MÁS saturada de este estante, que es la segunda corrección consecutiva del relato del hueco LATAM (la primera fue `P370`).**
 > **Pase 115 del 2026-10-05:** 🟢 **Barrido 44 (4/4 regiones, 0 silencios) y 5 ALTAS verificadas de payload, pero el hallazgo del pase no es un alta: es que esta base declaraba un hueco que su propio indice refuta.** 🆕 **`P370`/`P371` con instrumento (`p370-gap-gate/`, **27/27**): 29 huecos con region → **2 CONTRADICHOS**, **27 sin marcador de alcance**; y **12 repos UBICADOS en LATAM** contra el «CERO repositorios» declarado 4 pases seguidos.** 🟢 **Las altas: `eai6/ai-tutor` (MIT, titular **World Bank Group**, Seychelles, EMEA, produccion en Azure, **0 ★**) · `portabilis/i-educar` (**GPL-2.0**, 717 ★ / **547 forks**, Brasil, commit del **2026-10-02**, rama por defecto **`2.12`**) · `yunger7/enem-api` (**GPL-2.0**, 349 ★, Brasil, ultimo commit **2025-12-14**) · `Magnusvron/llm-benchmark-quality-index` (**MIT** codigo + **CC BY 4.0** dato, **Mexico** — CICATA-Queretaro, Instituto Politecnico Nacional) · `thiagoluzin/pemara-edu-mira` (MIT, **1 commit**, Brasil, LAN sin internet).** 🔴 **Y una candidata RECHAZADA con el motivo escrito: `madununes07/IA-na-escola` es `index.html` + `style.css` + `script.js` sin descripcion — el buscador la devolvio por el TEXTO DE LA LICENCIA, no por la pieza.** 🆕 **`P373` — una CIFRA puede llegar inventada adosada a un artefacto REAL: el resumen de busqueda atribuyo «1.517 habilidades» a `conectabncc`, que no publica ese numero. Hermano numerico de `P367`, y mas dificil de cazar porque el artefacto SI existe: el conflicto 1.517-vs-1.721 se disuelve antes de publicarse.** 🔵 **Tablero 70/70.**
 > **Pase 114 del 2026-10-05:** 🟢 **Primer intervalo de este arbol con los DOS extremos a RELOJ (`10:48Z` → `11:50Z` = 1 h 02 m): las 5 filas de banda `EXACTO` devuelven las 5 el MISMO entero ⇒ deriva = 0 ★ / 5 repos / 1 h 02 m, una tasa acotada por los dos lados y no un cero sin denominador.** 🔴 **Sigue sin testear la prediccion de ≥24 h ⇒ 🆕 `P365`: re-registrada contra un INSTANTE ABSOLUTO (`2026-10-06T10:48Z`) y no contra «el proximo pase», que es el defecto que `P360` nombro.** ⚠️ **Dos deltas fuera de la cohorte, sin intervalo porque su lectura previa esta fechada por DIA: `educhain` 389 → **388**, `canvas-mcp` 272 → **276**.** 🟢 **`DeepTutor` publica `v1.6.13` (2026.10.4), 40.8k ★, Apache-2.0.** 🔴 **0 altas: lo de este pase es RE-MEDICION, y se dice.**
 > **Pase 113 del 2026-10-05:** 🔴 **0 altas (barrido 35), cero ENUMERADO: 20 candidatas devueltas por el LISTADO → 19 frenadas por `P311` + 1 fuera de alcance (`mahseema/aibooks`, lista de libros) → 0 nuevas.** 🔵 **Y el reparto 19/20 es el dato: el mismo canal que el pase 112 estreno con 5 altas de golpe devuelve ahora el inventario de esta propia base — no se agoto, se SATURO.** 🟢 **Primera serie de estrellas con INSTANTE y no fecha (`2026-10-05T10:48Z`): 6 filas remedidas, las 6 sin movimiento (106, 105, 91, 72, 57 y `DeepTutor` 40.8k).** 🔴 **Pero el enunciado de deriva NO se publica, por segunda vez y por un motivo nuevo ⇒ 🆕 `P360`: la accion B pedia un intervalo de reloj ≥24 h a un pase que corre el MISMO dia que el que la escribio. El intervalo solo se ACOTA a [0 h, 10 h 48 m]. La accion fue escrita para corregir `P358` y heredo su defecto en el sentido contrario.** 🔴 **Acciones A y C NO MEDIBLES: el entorno deniega la EJECUCION del codigo del arbol ⇒ 🆕 `P361`, el tercer eje de portabilidad (contenedor `P352` · directorio `P355` · **permiso** `P361`) y el unico que no puede publicar un numero falso.** 🟢 **Accion D REFUTADA con su clausula de refutacion cumplida EXACTA: 4 prometidas contra ≥10 pedidas, y 10 de 15 NACIERON CITADAS.** 🆕 **`P362`: el instrumento que lo midio fallo su primera validacion por sensibilidad a MAYUSCULAS — leyo «el pase 5» de la prosa ignorando el encabezado `**Pase 100**`.**
@@ -16,6 +17,92 @@ updated: 2026-10-05
 > **Pase 110 del 2026-10-05:** 🔴 **0 altas permisivas (trigesimosegundo barrido), cero ENUMERADO: 6 candidatas → 4 ya publicadas (`P311`), 2 nuevas sin cesion.** 🟢 **Lo que SE MUEVE este pase no es el trending: es que las ESTRELLAS VUELVEN a ser medibles — `WebFetch` sobre `github.com` sirve 200 donde `curl` da 403, con control negativo en 404.** 🔴 **Y al volver, cobran: `OATutor` 264 ★ contra «~1,5k» publicado, y `open-tutor-ai-CE` BSD-3-Clause / 108 ★ contra «Apache-2.0 / ~600 ★».**
 > **Pase 107 del 2026-10-05:** 🔴 **0 altas permisivas (trigesimo barrido, 3 candidatas MEDIDAS del payload y las 3 con su bloqueo nombrado) y las TRES acciones pre-registradas corridas: A con la cota NO CERRADA y su clausula de atribucion FALSIFICADA, B CONFIRMADA, C CONFIRMADA en dos clausulas y FALSIFICADA en la tercera.** 🔴 **`P332`: la EXTENSION de un archivo de imagen no es su FORMATO — 2.443 de 2.443 `.gif` son PNG/JPEG/WEBP, y un barrido por extension habria dado «0 solapamiento» desde una premisa falsa.** 🔴 **`P334`: el titular de una FIGURA se resuelve por BYTES y vive en una obra DISTINTA de la que el item cita (36 pares leidos).** 🔴 **`P333`: `fa4e32e5e622` era la huella del archivo SIN su salto final — defecto de dato, no de upstream.** 🔴 **`P335`: tercera sub-clase de `P320` — lo denegado fue el LOTE, no la pieza nombrada.** 🟢 **Canal nuevo: `gitlab.com/-/raw`.**
 > **Pase 106 del 2026-10-05:** 🟢 **0 altas (vigesimonoveno barrido, 5 candidatas, las 5 frenadas por el gate de `P311`) y las TRES acciones pre-registradas corridas: A CONFIRMADA, B FALSIFICADA, C CONFIRMADA.** 🔴 **`P328`: la cesion de un OER se ESTRECHA entre ediciones — 10 de 10 colecciones con el mismo `collection-id` pasan de `CC BY 4.0` en `1e` a `CC BY-NC-SA 4.0` en `main`, y el slug cambia de nombre, que es por lo que esta base no lo veia.** 🔴 **El denominador se corrige de 13.371 a 82.492 unidades y aparece una capa sintetica de 6.886 unidades (`oer: openai`) sin cesion.** 🟢 **Canal nuevo: `git ls-remote` para enumerar refs — es el que abrio la accion A.**
+
+
+## 2026-10-05 — pase 117: barrido 46, 7 filas nuevas, y los dos modos en que un hecho REAL llega falso
+
+### 🔬 Denominador del barrido, enumerado con `grep` ANTES de escribir (`P287`/`P311`)
+
+**23 hechos sondeados contra el inventario propio → 20 ya publicados, 3 candidatos nuevos.** De los
+3: **2 reales con fecha corrida** (UK £4 M, TEQSA — ver `P382`, se publican con su fecha real) y
+**1 rechazado por fusión** (China — ver `P381`). **Hechos netos nuevos: 2, los dos regulatorios.**
+
+🔴 **Y el dato que invierte un relato de esta base: LATAM devolvió CERO hechos nuevos.** Las 7
+sondas de LATAM —*Digital Education Council* (72 ocurrencias previas), 92 % alumnos / 79 % docentes
+(162), Tec de Monterrey (65), AIGEN/RIE360 (95), CONPES 4144 (50), UNESCO (245), Chile (329)— están
+**todas** ya publicadas. **LATAM es hoy la región MÁS saturada de este estante, no la más vacía**,
+y es la segunda corrección consecutiva del mismo relato: el pase 115 refutó el «cero repositorios
+LATAM» con 12 repos propios (`P370`), y este pase refuta el «LATAM devuelve mercado pero no
+hallazgos» mostrando que no devuelve hallazgos **porque ya está cubierto**. 🔵 **Las 2 regiones que
+sí rindieron son EMEA y APAC, y las dos por la vía del MANDATO, no del repo.**
+
+### 🆕 `P381` — dos instrumentos REALES fusionados en un par falso: el nombre de A con la fecha de B
+
+🔴 **El barrido de APAC devolvió: «*China enforces the Generative AI Services Management Measures
+effective September 1, 2025*». Se rechaza como venía, y lo interesante es POR QUÉ no se cae sola.**
+Consultada la cadena, las dos mitades son reales y pertenecen a instrumentos **distintos**:
+
+| Instrumento real | Emitido | **En vigor** |
+|---|---|---|
+| *Interim Measures for the Management of Generative AI Services* | **2023-07-10** | **2023-08-15** |
+| *Measures for Labeling of AI-Generated Synthetic Content* (CAC + MIIT + MPS + NRTA) | **2025-03-14** | **2025-09-01** |
+
+🆕 **El mecanismo, y es una familia nueva:** `P367` cazó un **nombre inventado** («Ley Nahui») y lo
+delató preguntar por el nombre. `P373` cazó una **cifra inventada pegada a un artefacto real** y lo
+delató pedir la cifra en la fuente. 🔴 **Acá no hay nada inventado: el nombre existe, la fecha
+existe, y la falsedad está sólo en el PAR.** Preguntar por el nombre lo confirma. Preguntar por la
+fecha lo confirma. **Sólo preguntar por los dos juntos lo rompe** — y un verificador que valide
+campo por campo, que es lo que hace un chequeo normal, da verde a las dos celdas y publica el par.
+
+🔵 **La regla operativa que deja:** en un hecho regulatorio, la unidad de verificación es la TUPLA
+*(instrumento, órgano, fecha de vigencia)*, nunca el campo. Y para esta base importa doble porque
+`compose/code/` ya tiene instrumentos que gatean por fecha de vigencia (`aiact-50-2-*`): un par
+nombre/fecha cruzado no rompe el gate, **lo corre contra el calendario equivocado**.
+
+### 🆕 `P382` — el barrido anclado en `{year}` devuelve hechos REALES con la fecha corrida hacia hoy
+
+🔴 **Los 3 únicos candidatos nuevos de 23 sondeados salieron del barrido regional, y DOS de los 3
+son hechos de 2024 presentados como de 2026.** No son falsos: son reales, bien atribuidos y viejos.
+
+- 🟢 **UK, £4 M.** Real, y la fecha es **2024-08-29**, no 2026. Desglose: **£3 M** para el almacén
+  de contenido (guía curricular, planes de clase, evaluaciones anonimizadas de alumnos, para que las
+  edtech entrenen sobre material oficial) + **£1 M** de *catalyst fund* para construir corrección y
+  feedback. Ministros citados: **Stephen Morgan** (Early Education) y **Peter Kyle** (Science).
+- 🟢 **Australia, TEQSA.** Real, y la fecha es **2024-06-03**: *request for information* a los
+  **203** proveedores de educación superior pidiendo un plan de acción institucional con gobernanza
+  frente al riesgo de la IA generativa sobre la integridad del título. **100 % de respuesta**, y de
+  ahí salió el toolkit *Gen AI Strategies for Australian Higher Education: Emerging Practice*
+  (**66 páginas**, ejemplos de **77 instituciones**).
+
+🆕 **El sesgo es de la FUNCIÓN DE RECUPERACIÓN y es direccional:** una consulta que lleva el token
+`2026` premia páginas que *mencionan* 2026, no eventos *ocurridos* en 2026 — y las páginas que más
+lo mencionan son las recopilaciones («*trends 2026*», «*what schools are deploying*»), que arrastran
+hechos viejos sin fecharlos. 🔴 **El error no es el año mal: es que el barrido regional de este pase
+rindió 2 hechos y los 2 estaban corridos ~2 años, o sea la TASA de deriva fue del 100 % de lo nuevo.**
+Hermano de `P368` (la región del proveedor no es la del mercado) pero en el eje del CALENDARIO: ahí
+el barrido colapsaba geografía, acá colapsa tiempo, **y por el mismo motivo — la consulta lleva el
+eje adentro, así que todo lo que vuelve lo satisface por construcción.**
+
+🔵 **Se publican los dos hechos, con SU fecha**, porque siguen siendo los dos únicos mandatos reales
+que el barrido agregó; lo que no se publica es su encuadre como novedad.
+
+### 🟢 Las 7 filas nuevas del barrido 46
+
+Tabla completa con `sha256`, titular y veredicto en `agents/top.md` (pase 117). Resumen:
+**4 MIT con archivo leído del payload** (`mitodl/open-learning-ai-tutor` 1 ★ · `krishna16-origin/ai-tutor` 0 ★ ·
+`BlackyDrum/ai-tutor` **8 ★ / 5 forks / 818 commits / PHP** · `oompas/open-lms` 0 ★),
+**1 segmentada** (`pupilfirst/pupilfirst`, `P380`), **1 fork byte-idéntico** (`maxew6/ai-tutor-project`, `P379`)
+y **1 sin cesión** (`VedShh/Tutor-AI`, `P342`).
+🔴 **El dato de cohorte: ★ máximo = 8, y 4 de 7 están en 0 o 1.** Es la tercera vez que esta base lo
+mide y la lectura ya no es sobre los repos sino sobre el CANAL — una consulta generalista en inglés
+ordenada por popularidad **no puede** devolver esta capa, así que el inventario de agentes de
+educación no se descubre por *trending* sino por consulta nominal y por linaje.
+
+### ⚠️ Restricción de acceso declarada (se repite porque sigue vigente)
+
+Los tools `mcp__github__*` están presentes pero la sesión está acotada a `gmilano/*`, así que la
+**capa de API autenticada no es un canal disponible** para repos de terceros. Todo número de este
+pase sale de `raw.githubusercontent.com`, `git ls-remote` o `WebFetch`.
 
 
 ## 2026-10-05 — pase 116: 2 altas MIT, 2 rechazos medidos, y el fork que duplica la afirmación sin duplicar la licencia
