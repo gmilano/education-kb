@@ -30,6 +30,10 @@ o la variable de entorno (regla de **P107**, pase 47):
 
 | Carpeta | Qué prueba | Invocación | Hoy |
 |---|---|---|---|
+| **`p391-structured-binding/`** | **la accion B del pase 118: el binding `huella → repo` leido de la CELDA y de la COLUMNA TIPADA en vez de la LINEA — el intervalo `[3, 22]` de `P385` se angosta a `[5, 14]` y el canonico por CONJUNTO de repos da **10**; con el punto ciego propio declarado en la suite (el canonico de celda compuesta no se liga)** | `python3 test_structured_binding.py` | 🟢 **17/17** *(nuevo en el pase 120)* |
+| ídem, el censo del estante | ¿cuantos racimos de colision de licencia tiene esta base, y por que lectura? | `python3 structured_binding.py agents/top.md … compose/patterns.md` | 🔵 **5** (celda) · **13** (columna tipada) · **14** (union) · 🟢 **10** (canonico) |
+| **`p394-holder-absent-census/`** | **la accion D del pase 118: el censo de titular sobre las filas con huella de licencia, con la clase MUDA contada APARTE porque es un negativo DEBIL (clase de `P160`)** | `python3 test_holder_census.py` | 🟢 **19/19** *(nuevo en el pase 120)* |
+| ídem, el censo sobre `HEAD` | ¿para que fraccion del estante tiene respuesta la compuerta de `P386`? | `python3 holder_census.py agents/top.md … compose/patterns.md` | 🔴 **15 ausentes** · 46 presentes · 🔴 **125 MUDAS** de **186** ⇒ la compuerta cubre **32,8 %** |
 | `aiact-50-2-pack/` | marca un paquete SCORM ya construido, con un portador por dialecto | `python3 test_pack.py` | **27/27** |
 | ídem, conformidad real | ídem + `xmllint` contra los XSD de los **dos** dialectos | `SCORM_SCHEMAS=… SCORM_SCHEMAS12=… python3 test_pack.py --with-xmllint` | **37/37** |
 | `aiact-50-2-marking/` | mapea los 9 valores de `lineage-skill` a `synthetic` + etiqueta | `python3 test_marking.py` | **23/23** |

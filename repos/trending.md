@@ -7,6 +7,7 @@ updated: 2026-10-05
 # 📈 Repos trending — education
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
+> **Pase 120 del 2026-10-05 (lectura `17:45Z`):** 🔴 **El canal generalista falla por CUARTA vez del mismo modo (eje *enseñar-sobre-IA*: `rasbt/LLMs-from-scratch`, `pguso/agents-from-scratch`, `awesome-ai-agents-2026`, `500-AI-Agents-Projects`) ⇒ **0** repos trending de industria.** 🆕 **Y el hallazgo que manda le pega a ESTE archivo: `P392` — la tabla del trío `OpenTutor` de este archivo tiene **DOS** columnas de huella (`README.md` y `LICENSE`) y las dos se titulan de modo que un lector estructurado las tipa igual ⇒ el censo contó el MISMO trío como DOS racimos. Una huella no se identifica por su digest, sino por el par (ARCHIVO, digest).** 🆕 **`P393` — y el par `blackboard-mcp` de este archivo lo contó dos veces por otro motivo: `fa4e32e5e622` es una huella que `P333` **RETRACTÓ** y que este archivo, APPEND-ONLY por encargo, conserva escrita ⇒ un censo que lee el corpus RE-ANIMA lo retractado.** 🟢 **Instrumento nuevo `p391-structured-binding/`: el intervalo de `P385` se angosta de `[3, 22]` a `[5, 14]`, y el canónico por CONJUNTO de repos da **10**.** 🟢 **2 altas por la sonda de la OBLIGACIÓN, no por trending: `agentanywhere/shuddhi` (Apache-2.0, 2 ★) y `AKIVA-AI/toolkit-ml-provenance` (Apache-2.0, 1 ★).**
 > **Pase 119 del 2026-10-05:** 🔵 **Lo más valioso del pase llegó por el canal equivocado a propósito: la sonda era de obligación regulatoria y devolvió una COLISIÓN DE IDENTIDAD que el canal de repos no podía ver, porque sondeando por repo sólo se ve el que ya se tiene.** 🆕 **`P390` — tres `awesome-eu-ai-act`, dos linajes independientes; este estante publicaba el de **21 ★** y le faltaba el original de **110 ★**.** 🆕 **Trending como número de VERSIÓN por segunda vez en la serie: `HKUDS/DeepTutor` `v1.6.13` (`2026-10-04`), con **barajado de opciones para no exponer la respuesta** como la única línea del changelog con forma de requisito pedagógico. ⚠️ La página de *releases* NO muestra licencia.**
 > **Pase 118 del 2026-10-05 (lectura `15:58Z`):** 🔴 **El canal generalista falla por TERCERA vez del mismo modo y la regla ya está medida: las 4 consultas globales obligatorias devolvieron el eje *enseñar-sobre-IA* (listas de «mejores agentes 2026», `awesome-ai-agents-2026`, `500-AI-Agents-Projects`) y no el de *IA-en-educación*.** 🔴 **14/14 candidatas ya publicadas ⇒ 0 altas de repo, cero ENUMERADO.** 🟢 **Canal medido este pase y no heredado (`P366`): `WebFetch` → `github.com` **VIVO** (licencia + ★ leídas de `mazhar266/fedena` y `webtech-network/autograder`) · 🔴 `curl -sI github.com` **403** en 7/7 · 🔴 `curl` a sitios jurídicos **000** en 4/4 · 🔴 `WebFetch` a `allenandgledhill.com` y `globalpolicywatch.com` **EGRESS_BLOCKED por dominio**.** 🆕 **`P385` sobre este archivo también: el `sha256` de licencia que esta base usa como identidad **no identifica un repo** cuando la licencia es prístina — `c71d239df917` (Apache-2.0, 11.357 B) es el MISMO en un agente de África, un **ERP escolar** y un **autocorrector**, tres proyectos sin relación ⇒ **un *trending* de licencias permisivas se puede inflar sin forkear nada, simplemente eligiendo Apache-2.0.**** 🔵 **`webtech-network/autograder` (**61 ★**, Apache-2.0, rúbrica + sandbox + GitHub Actions) y `mazhar266/fedena` (**5 ★**, Apache-2.0, ERP de campus en Rails) quedan con ★ leídas de payload por primera vez.**
 > **Pase 117 del 2026-10-05:** 🔴 **El canal generalista vuelve a fallar del mismo modo y ya es medible como regla: las consultas globales obligatorias devolvieron el eje *enseñar-sobre-IA* (`ai-engineering-from-scratch`, `awesome-llm`, listas de empleos) y no el de *IA-en-educación* — mientras la consulta NOMINAL rindió 7 filas.** 🟢 **Canal medido este pase, no heredado: `raw.githubusercontent.com` **DISCRIMINA** · `git ls-remote --symref` **DISCRIMINA** y además devuelve la rama por defecto (el instrumento que `P269` pedía) · `WebFetch` **VIVO** (3.er pase) · 🔴 `curl -sI github.com` **403/403** con DOS líneas de estado y `200` del proxy en la primera (`P366` + `P372` juntos) · 🔴 `api.github.com` **403/403**.** 🟢 **Ramas por defecto que NO son `main`, leídas y no asumidas: `pupilfirst` → `master`, `frappe/lms` → `develop`, `openedx/openedx-platform` → `master` (404 en `main`).** 🆕 **`P379`: dos repos del linaje `ai-tutor` con `LICENSE` de `sha256` idéntico ⇒ el *trending* de licencias permisivas se puede inflar forkeando.**
@@ -19,6 +20,53 @@ updated: 2026-10-05
 > **Pase 107 del 2026-10-05:** 🔴 **Trending de la industria vacio por TRIGESIMOSEXTA vez: curriculo, catalogos, una bolsa de trabajo y dos generalistas (`microsoft/semantic-kernel` 27.470 ★, `NousResearch/hermes-agent` MIT), con las SEIS cifras del eje generalista identicas digito a digito a los pases 105 y 106 ⇒ informacion sobre el CANAL, no sobre la industria.** 🟢 **Lo que SI se movio es una capa de BINARIOS que este archivo nunca conto: 2.443 archivos de figura (~156 MiB, 1.326 imagenes distintas) en `CAHLR/OATutor-Content`, con la extension `.gif` falsa en 2.443 de 2.443 (`P332`).** 🔵 **`git ls-remote` da TRES refs, y una se llama `gpt-science-study`: la unica de este arbol cuyo nombre anuncia contenido sintetico.** 🔴 **Defecto propio corregido: los 49.481 JSON contra los 49.479 del pase 106 son los 6 caminos con bytes de control (U+007F/U+0080/U+0081) en el nombre del paso — la identidad de un paso NO es un slug seguro.**
 > **Pase 106 del 2026-10-05:** 🔴 **Trending de la industria vacio por TRIGESIMOQUINTA vez: el canal devuelve generalista o educativo-sobre-AI, no AI-para-educacion.** 🟢 **Lo que SI se movio esta en el eje de `ref` y no de repo: las ramas `1e` de 5 bundles de `openstax` contienen la UNICA cesion `CC BY 4.0` de 10 colecciones cuyas versiones vivas son `NC-SA` — cesion y vigencia apuntan en direcciones opuestas.** 🔵 **Canal nuevo calibrado: `git ls-remote` para enumerar refs (responde a repo real, falla a repo inventado), el unico de este arbol que contesta «que refs tiene este repo» con `api.github.com` en 403 — sin el, la accion A de este pase era imposible.**
 
+
+## 🔴 2026-10-05 · Pase 120 (lectura `17:45Z`) — el canal falla por 4.ª vez, y el censo de huellas de este archivo se cuenta a sí mismo de más
+
+### 🔴 El canal generalista, 4.ª falla de la misma forma
+
+| Consulta del encargo | Qué devolvió | Eje | Altas |
+|---|---|---|---|
+| `github trending education AI 2026` | `rasbt/LLMs-from-scratch` (100k+ ★), `rohitg00/ai-engineering-from-scratch`, `pguso/agents-from-scratch`, `jamwithai/production-agentic-rag-course`, ChatTutor, human-skill-tree | 🔴 *enseñar-sobre-IA* | 🔴 **0** |
+| `top open source AI agents education 2026 github MIT` | `awesome-ai-agents-2026`, `500-AI-Agents-Projects`, OpenHands, SWE-agent, browser-use | 🔴 agentes de **código** | 🔴 **0** |
+| `open source platform education ERP CRM MIT Apache SIS` | OpenEduCat, ERPNext, RosarioSIS, openSIS | 🔵 ya publicados los 4 | 🔴 **0** |
+| `AI education industry trends 2026` | cifras de mercado, ya publicadas | 🔵 intel, no repos | 🔴 **0** |
+
+🔵 **Cuatro pases con la misma falla y la misma forma dejan de ser un silencio y pasan a ser una propiedad medida de la sonda.** Las 2 altas de hoy (`shuddhi`, `toolkit-ml-provenance`) entraron por una consulta de **obligación**, no de trending.
+
+### 🆕 `P392` — la tabla de huellas de ESTE archivo tiene una ambigüedad de formato, y el censo la cobró
+
+El instrumento nuevo `p391-structured-binding/` leyó los 8 archivos buscando el binding `huella → repo` en **columnas tipadas por su encabezado**, y devolvió **13 racimos** donde el lector anclado al token devolvía 5. Pero dos de esos 13 son **el mismo conjunto de repos contado dos veces**, y uno de los dos casos está en este archivo:
+
+| Fila de este archivo | Columna 1 | Columna 2 | Qué pasó |
+|---|---|---|---|
+| `zijinz456/opentutor` · `iriseye395/OpenTutor` · `itsnone-liu/OpenTutor` | `274d94acdd565ff479de…` = huella del **`README.md`** | `5352b49679829689…` = huella del **`LICENSE`** | 🔴 el lector tipó **las dos** como columna de huella y emitió **dos racimos** para **un** trío |
+
+🔵 **Y el daño no es del contador: la compuerta de `P386` razona sobre la huella del `LICENSE` para decidir procedencia. Alimentada con la del `README.md`, dictaminaría linaje leyendo prosa de presentación.** ⚠️ **Regla que sale de acá: la clave de todo censo de huellas de este estante es el par `(archivo, digest)`, y una columna de huella cuyo encabezado no nombra el archivo es ambigua por construcción.** Pre-registrado abajo como acción **F** para medir cuántas columnas así tiene el estante.
+
+### 🆕 `P393` — y el par `blackboard-mcp` se contó dos veces por un motivo distinto: la historia
+
+| Digest | Estado | Lo que sostiene |
+|---|---|---|
+| 🟢 `d65abf96e389` (1.084 B) | **VIVO** — huella corregida | los dos `blackboard-mcp` son el mismo archivo byte a byte |
+| 🔴 `fa4e32e5e622` (1.083 B) | 🔴 **RETRACTADO por `P333`** (pase 107): salía de hashear por sustitución de comando `$(cat LICENSE)`, que recorta el `\n` final | lo mismo, con el número equivocado |
+
+🔴 **La retractación está escrita en el estante. El número viejo también sigue escrito, porque estos archivos son APPEND-ONLY por encargo.** Así que el censo de hoy formó racimo con la huella muerta **y** con la viva, y los contó aparte: el mismo par de repos, dos veces.
+
+🔵 **La consecuencia es estructural y va empeorando sola:** un censo sobre un corpus append-only necesita una **lista de retractaciones**, no un lector mejor. Sin ella, el numerador acumula fantasmas pase a pase y el denominador no. ⚠️ **Esto no es un argumento contra el append-only — el append-only es lo que hace que la tendencia sea legible. Es un argumento por una capa de retractaciones encima.** Pre-registrado como acción **E**.
+
+### 🟢 El intervalo de `P385`, angostado y publicado con sus dos puntas
+
+| Lectura | Racimos | Qué sesgo le queda |
+|---|---|---|
+| prosa anclada a URL *(piso de `P385`)* | **3** | no ve handles pelados |
+| prosa permisiva *(techo de `P385`)* | **22** | liga por co-ocurrencia de línea |
+| 🆕 celda anclada al token `sha256` | **5** | no ve columnas tipadas por encabezado |
+| 🆕 columna tipada por encabezado | **13** | cuenta de más por `P392` y `P393` |
+| 🆕 unión | **14** | — |
+| 🟢 **canónico por CONJUNTO de repos** | 🟢 **10** | — |
+
+🟢 **Cláusula de la acción B (pedía dentro de `[3, 22]` y ≥4): CONFIRMADA por las cuatro lecturas.** 🔵 **Pero la acción pedía CERRAR el intervalo y sólo lo angostó, y eso es el hallazgo (`P391`): el ancho que queda ya no es convención de escritura, es la historia del propio estante.**
 
 ## 2026-10-05 — pase 119: el canal de MERCADO entregó una corrección de IDENTIDAD de repo, que es lo que el canal de repos no había podido
 

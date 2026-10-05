@@ -8,6 +8,7 @@ updated: 2026-10-05
 
 > Agentes y herramientas AI open source para educación. Foco: MIT / Apache 2.0 / BSD.
 > Verificado repo por repo vía WebFetch el 2026-09-30 (stars y licencia leídos de la página del repo).
+> **Pase 120 del 2026-10-05 (lectura `17:45Z`):** 🟢 **Las 2 acciones pre-registradas que quedaban vivas se corrieron y las 2 quedaron CONFIRMADAS por su propia cláusula; la acción A **NO** se corrió y se dice por qué (su instante es `2026-10-06T10:48Z`, faltan **17 h 03 m**, y `P365` prohíbe re-basarlo).** 🆕 **`P391` — leer el binding por CELDA/COLUMNA no cierra el intervalo de `P385`: lo angosta de `[3, 22]` a `[5, 14]` y el canónico por CONJUNTO de repos da **10**. Lo que queda de ancho ya no es la convención de escritura: es la HISTORIA del propio estante.** 🆕 **`P392` — una huella no se identifica por su digest: se identifica por el par (ARCHIVO, digest). El trío `OpenTutor` entró dos veces porque su tabla tiene dos columnas de huella — `README.md` y `LICENSE` — y el lector tipó las dos como «sha256».** 🆕 **`P393` — un archivo APPEND-ONLY conserva las mediciones RETRACTADAS, así que un censo que lee el corpus las RE-ANIMA: `fa4e32e5e622` sigue formando racimo aunque `P333` lo retractó.** 🆕 **`P394` — acción D: **15** filas con titular ausente explícito (pedía ≥5), pero la clase que manda es la MUDA: **125 de 186** (67,2 %), y para ésa la compuerta de `P386` **no tiene rama**.** 🆕 **`P395` — hay **DOS** variantes legítimas del boilerplate prístino de Apache-2.0 (**11.357 B** y **11.358 B**) y la diferencia es una línea en blanco **INICIAL**: los dos controles de dos puntas FALLAN, así que la regla de `P333` («difiere en 1 byte ⇒ artefacto de salto final») da aquí un FALSO POSITIVO.** 🆕 **`P396` — el disyunto `is_pristine` de `dedup_gate.py` está **MUERTO**: 0 de 80 combinaciones enumeradas cambian la decisión, y su tabla de tamaños además le falta la variante de 11.358 B.** 🆕 **`P397` — la REGIÓN de una herramienta de cumplimiento se lee de las OBLIGACIONES que implementa, no del domicilio de su autor: `shuddhi` es inubicable por autor y queda ubicada en **EMEA + APAC** por los identificadores que su `pii.py` sabe redactar, con un cero MEDIDO para North America y LATAM (8 identificadores probados, 0 aciertos).** 🟢 **2 altas Apache-2.0 verificadas por RUTA: [`agentanywhere/shuddhi`](https://github.com/agentanywhere/shuddhi) (2 ★) y [`AKIVA-AI/toolkit-ml-provenance`](https://github.com/AKIVA-AI/toolkit-ml-provenance) (1 ★).** 🔴 **2 correcciones de dato propio: `pelotech/xapi-lrs` y `yptheangel/attention-monitor` estaban publicados con **11.358 B** y miden **11.357 B**.** 🔴 **Cero ENUMERADO del canal del encargo: las 4 consultas globales devolvieron por 4.ª vez el eje *enseñar-sobre-IA*, y los **14** hechos regionales que trajeron las 4 sondas por región ya estaban los 14 publicados en este estante.**
 > **Pase 119 del 2026-10-05:** 🟢 **La acción que el pase 118 pre-registró se corrió y RINDIÓ: entrar por el eje de la OBLIGACIÓN regulatoria destapó software nuevo, pero sólo en 1 de sus 3 sub-ejes.** 🆕 **`P388` — el agotamiento no se mide por EJE, se mide por OBLIGACIÓN: etiquetado generativo (art. 31 Corea) = oferta OSS **vacía**; *testing* de gobernanza (AI Verify/IMDA) = **saturada**, los 2 repos ya estaban; expediente FRIA (art. 27) = **abriéndose**. Promediar las tres devuelve el número de ninguna.** 🆕 **`P389` — alta MIT verificada por ruta: [`microsoft/agent-governance-toolkit`](https://github.com/microsoft/agent-governance-toolkit) (**6,4k ★**, `LICENSE` leído), cuya `docs/compliance/fria-template.md` cita el art. 27 y tiene **§3.6 «Right to Education»** preguntando literal por *acceso a la educación* y por *admisiones, calificación o evaluación* — los DOS supuestos del Anexo III punto 3 que este estante cotiza desde el pase 58 sin tener herramienta.** 🔬 **Nota de método de la clase de `P160`: la lectura de la RAÍZ del repo dijo «no FRIA template present» y el archivo EXISTE ⇒ una lectura de raíz es un NEGATIVO DÉBIL; una afirmación sobre un ARCHIVO se verifica por RUTA.** 🔴 **2 rechazos medidos: `XCINDYZ/AFRIA` y `sabuhi-huseynli-grc/High-Risk-Deployer-FRIA-Governance-Toolkit.`, los dos vivos y los dos **sin archivo de licencia** ⇒ todos los derechos reservados, fuera del estante (se dejan escritos como negativos INFORMADOS, `P343`).**
 > **Pase 117 del 2026-10-05 (lectura `2026-10-05T14:45Z`):** 🟢 **7 filas nuevas de agente leídas del payload, y la cohorte entera tiene ★ de un dígito o cero — otra vez el sesgo de la función de orden del pase 115, no un hueco de oferta.** 🆕 **`P379` — el fork CON archivo: `krishna16-origin/ai-tutor` → `maxew6/ai-tutor-project` tienen `LICENSE` de **1.073 B** con el **MISMO `sha256:de8107bf9312862c`** ⇒ la cesión viajó al byte y con ella el TITULAR, así que el fork otorga **en nombre del upstream**. Espejo de `P377` (que midió el linaje SIN archivo) y con el signo del riesgo invertido: acá el doble conteo infla *cesiones verificadas*, no afirmaciones. Deduplicador = par (`sha256`, titular), no el repo.** 🆕 **`P380` — `pupilfirst/pupilfirst` segmenta la cesión por **ESTADO DE COMPILACIÓN** («*when served directly or after being compiled, arranged, augmented, or combined*») y no sólo por ruta como `Elgg`/`P364`; y su `docs/` es **CC BY-SA 4.0**, o sea share-alike que el resumen «MIT» de la búsqueda borró.** 🔴 **`VedShh/Tutor-AI`: README afirma MIT, `LICENSE`/`.md`/`.txt` los tres **404** ⇒ `P342` limpio, fuera del gate.** 🟢 **`mitodl/open-learning-ai-tutor` es MIT con titular **`Romain Puech`** (persona) bajo dueño `mitodl` ⇒ `P374`.** ⚠️ **`P365` NO evaluable (faltan 20 h 03 m) y se re-registra contra el mismo instante absoluto.** Ver **`P379`**–**`P384`**.
 > **Pase 115 del 2026-10-05 (lectura `2026-10-05T12:45Z`):** 🔴 **El hallazgo que manda es un defecto ESTRUCTURAL de esta base, y lo encontro el indice propio: 🆕 `P370` — un hueco DECLARADO necesita la misma compuerta que un ALTA, y no la tenia. `p311` gatea lo que ENTRA desde el pase 100; nada gateaba lo que se declara AUSENTE. Medido con instrumento nuevo (`p370-gap-gate/`, **27/27**): de **29** huecos declarados con region, **2 estan CONTRADICHOS por filas de esta misma base** y **27 no traen marcador de alcance**.** 🔴 **La instancia concreta: «**CERO repositorios de origen LATAM**», declarado por CUARTO pase consecutivo, contra **12 repos UBICADOS en LATAM** en el indice propio — entre ellos `LabSirius/TutorIA` (**MIT**, titular `Grupo Sirius`, Universidad Tecnologica de Pereira, financiado por el **SNCTI** colombiano, marcado **ACTIVO** por esta base) y `JOSETRA44/DUTIC-mcp`, cuya propia fila dice ser «*la primera puerta de LMS LATAM con licencia verificada de esta KB*».** 🆕 **`P371` — el CALIFICADOR se cae y el NUMERO sobrevive: el pase 113 escribio el hueco con su alcance puesto («*este canal no encuentra codigo de LATAM*») y nombro una pieza LATAM propia en la misma oracion; el **ledger** del 114 lo mantuvo y su **titular** lo solto («*la capa de CODIGO de LATAM sigue abierta*»). Una racha («Nº pase consecutivo») premia repetir el titular, no la condicion.** 🟢 **5 altas verificadas de payload, y la que manda tiene 0 estrellas: `eai6/ai-tutor` — **MIT** con titular **`World Bank Group and contributors`**, modelo 5E, Geografia y Matematica para secundarias de **Seychelles** (EMEA), en PRODUCCION sobre Azure (Pulumi IaC, GitHub Actions, PostgreSQL).** 🆕 **`P374` — titular, dueño y dominio son TRES ejes y aca no coinciden: titular Banco Mundial, dueño una cuenta personal (`eai6`), despliegue en un dominio personal. Espejo de `P368`.** 🔴 **🆕 `P372` — el metodo de verificacion que prescribe el encargo es PEOR que no discriminante en este entorno: `curl -sI github.com` emite **DOS** lineas de estado y `head -1` lee la del PROXY ⇒ **`200` para un repo INVENTADO** (2/2). El origen da 403/403 (confirma `P366`). Un canal ciego que devuelve el codigo de EXITO es peor que uno que devuelve error.** ⚠️ **`P365` NO es evaluable todavia: pedia un pase en o despues de `2026-10-06T10:48Z` y este corrio `12:45Z` del 05 — se dice y no se re-registra.** Ver **`P370`**–**`P374`**.
@@ -19,6 +20,203 @@ updated: 2026-10-05
 > **Pase 109 del 2026-10-05:** 🔴 **0 altas permisivas (trigesimoprimer barrido) y por primera vez la razon se MIDE en vez de declararse: las 5 candidatas que el canal devolvio (`DeepTutor`, `open-tutor-ai-CE`, `AITutorAgent`, Freelingo, Bloom) ya estaban las 5 en el arbol — 5 devueltas / 5 publicadas / 0 nuevas (`P311`, `P287`).** 🔴 **`P342` — un badge de licencia y una entrada de arbol del README son una AFIRMACION de cesion, no una cesion: `Javi111003/OlivIA-RAG`, publicado DOS veces por esta base como «sin licencia», afirma MIT en la linea 3 (badge hipervinculado a `LICENSE`) y en la linea 50 (su propio arbol de directorios), con el archivo en 404 en 20/20 sondas ⇒ FALSO NEGATIVO publicado, y una pieza LATAM recuperable por una gestion y no un descarte.** 🔸 **Accion B CONFIRMADA en su mitad fuerte (0 de 9 «sin licencia» tienen archivo) y DEBIL en la otra (el unico caso de ortografia, `openedx/XBlock`/`LICENSE.TXT`, ya lo tenia `P279`).** 🔴 **Accion C FALSIFICADA en sus dos clausulas, y lo que se cumple es la clausula de refutacion que el pase 108 escribio contra si mismo: 5 de 5 huellas son del archivo COMPLETO, 0 de 5 del archivo sin su ultimo byte, 5 de 5 terminan en `0a` ⇒ `P333` cerrado por ausencia medida.** 🔴 **`P343` — defecto de ESTE pase, y su primer diagnostico tambien estaba mal: un prefijo GOLOSO `^.*` sin frontera izquierda en la captura leyo el `35.121 B` publicado como `5.121 B` (no fue el cuantificador acotado, que solo captura bien), y POSIX ERE no da con que frenarlo porque `grep -E`/`sed -E` no tienen cuantificadores perezosos (`.*?` es goloso) ni *lookbehind*; la misma corrida dejo una fila cuyo «repo» es la RUTA `master/LICENSE.TXT`. Lo atrapo la huella y nada mas, y el enunciado lo corrigio la SUITE.** 🔴 **Accion A NO CORRIDA (tercer pase de deuda declarada) y `github.com` degradado a 403 ⇒ 0 estrellas medidas.**
 > **Pase 108 del 2026-10-05:** 🟢 **5 altas permisivas, y rompen una racha de TREINTA barridos en cero** — las cinco leidas del PAYLOAD, no del nombre: `THU-MAIC/OpenMAIC` (**MIT**, `v1.2.0-rc.1` del 2026-10-04) 🔴 **con `packages/mathml2omml` en `LGPL-3.0-or-later` leido de SU PROPIO `package.json`: la licencia de la raiz no es la licencia del arbol**; `oaknational/oak-open-curriculum-ecosystem` (**MIT** en el codigo, 🔴 **OGL v3.0** en los datos de curriculo — `P315` otra vez); `Cicatriiz/openedu-mcp` (**MIT**); `davidlms/learnmcp-xapi` (**MIT**); y `54yyyu/school-mcp` (**MIT solo en el cuerpo del README, sin archivo** — `P314`). 🆕 **`P340` — el 404 de un archivo de licencia puede ser una ORTOGRAFIA y no una ausencia: `oak` cede en `LICENCE` y el barrido de esta base pide `LICENSE`; un pase que solo mirara `LICENSE` habria publicado «sin cesion» sobre un repo MIT.** 🔴 **La accion A pre-registrada NO se corrio: el clon del arbol del titular quedo DENEGADO por el clasificador de la sesion, y eso se declara en vez de callarse (`P335` sigue en pie, pero esta vez ni la pieza nombrada paso).** 🔴 **La accion B resulta NO CORRIBLE contra el artefacto al que su propia pre-registracion la mando (`P336`): `accion-a-b.2026-10-05.tsv` colapsa `oer` a DOS valores (`openstax`/`otro`) y el slug del libro —lo unico que separa una edicion `2e` de una `1e`, que es toda la pregunta— no esta en el archivo; las «825 ya enumeradas» no estan enumeradas ahi.** 🔴 **Y al ir a buscarlo aparece el hallazgo que manda: dos artefactos del MISMO pase, sobre el MISMO sha `1925dec`, se contradicen por exactamente 41 figuras en el corte openstax/no-openstax (**1.611/832** contra **1.570/873**, los dos suman 2.443), y la cifra que llego a la PROSA es la menor (`P337`).** 🔴 **La causa, medida y no supuesta: `oer` es TEXTO LIBRE con dos formas de URL —y al ampliar la muestra de 694 a **1.685** unidades resultaron **CUATRO**, dos de ellas invisibles para el patron inicial—, con solapamiento **PARCIAL** entre formas: un extractor afirmado sobre `/details/books/` pierde **3 obras completas** y ademas **SUB-CUENTA** una cuarta sin que nada avise. Y `precalculus` a secas existe en el corpus y NO esta en ninguna de las 10 filas del censo publicado (`P338`).** 🔴 **La version de este MISMO pase que decia «las dos formas PARTEN el espacio sin solaparse» quedo FALSIFICADA por su propia medicion ampliada, y se corrige en vez de dejarse.** 🆕 **`P341` — 9 unidades nombran al TITULAR y no a la OBRA: sin obra no hay edicion y sin edicion no hay cesion resoluble, con ningun extractor.** 🟢 **La accion C sale CONFIRMADA en su clausula de conteo: **17** pares (bytes, huella) publicados junto a un archivo de licencia, la prediccion pedia ≥10.** 🔴 **Y FALSIFICADA como instrumento (`P339`): el delta de 1 byte NO es diagnostico, porque `P327` (el archivo no trae salto final) y `P333` (`$(cat)` se lo come al medir) producen la MISMA firma — esta base ya publica `21.442` y `21.443` B del mismo texto por la primera causa.** 🟢 **Tablero re-verificado COMPLETO: 59 suites (53 Python + 6 shell), 0 fallos, 203 aserciones (`Python 3.11.15`).**
 
+
+## 🟢 Pase 120 del 2026-10-05 (lectura `17:45Z`) — las 2 acciones vivas corridas y confirmadas, y el ancho que queda del intervalo es HISTORIA, no convención
+
+**Canal medido ESTE pase a las `2026-10-05T17:45Z`, no heredado (`P249`/`P366`), con control negativo en cada sonda** (`gmilano/this-repo-does-not-exist-zzq7`):
+
+| Sonda | Ancla buena | Control negativo | Veredicto |
+|---|---|---|---|
+| `raw.githubusercontent.com` | **200**, 1.071 B | **404**, 14 B | 🟢 **DISCRIMINA** |
+| `git ls-remote --symref` | `ref: refs/heads/main` + `9c263afd06b0…` | `FATAL` (pide credencial) | 🟢 **DISCRIMINA** — y resuelve la rama por defecto |
+| `WebFetch` sobre `github.com` | payload con ★, forks, licencia | — | 🟢 **VIVO, 4.º pase seguido** |
+| 🔴 `curl -sI github.com` *(el método que prescribe el encargo)* | **403** | **403** | 🔴 **NO DISCRIMINA**, y emite DOS líneas de estado (`200 Connection Established` del proxy + `403` del origen) ⇒ leído con `head -1` devuelve **`200` a un repo inventado** |
+| 🔴 `api.github.com` | **403** | **403** | 🔴 apagado |
+| 🔴 `docs.github.com` | — | — | 🔴 **bloqueado por el proxy de egreso** (`EGRESS_BLOCKED`) — importa abajo, en el rechazo informado |
+
+🔵 **`P366`/`P372` re-confirmados por 4.º pase consecutivo: el método de verificación que pide el encargo (`curl -sI`) es el único de la tabla que no distingue un repo real de uno inventado.** Todo lo que sigue se midió por `raw` + `ls-remote`.
+
+### 📋 Las acciones pre-registradas por el pase 118, con su cláusula al pie
+
+| Acción | Pedía | Medido este pase | Veredicto |
+|---|---|---|---|
+| **A** — `P365`, deriva de ★ | correr en o después de `2026-10-06T10:48Z` | **NO CORRIDA**: son las `17:45Z` del 05, faltan **17 h 03 m** | ⏸️ **NO EVALUABLE — y el instante NO se re-basa** |
+| **B** — cerrar `P385` con extractor ESTRUCTURADO | conteo **dentro de `[3, 22]`** y **≥4**; refutada si **≤3** | **5** (celda anclada al token) · **13** (columna tipada) · **14** (unión) · **10** (canónico por conjunto) | 🟢 **CONFIRMADA** — las cuatro lecturas caen en `[3, 22]` y las cuatro son **≥4** |
+| **D** — `P386` sobre el estante entero | filas con huella y titular ausente **≥5**; refutada si **≤2** | **15** | 🟢 **CONFIRMADA** |
+
+⚠️ **Lo que la acción B pedía era cerrar el intervalo, y NO se cerró. Se angostó.** Eso no es un fracaso de la acción: es el hallazgo, y está abajo como `P391`.
+
+### 🆕 `P391` — la lectura estructurada ANGOSTA el intervalo de `P385`, no lo cierra; y el ancho residual cambia de dueño
+
+Instrumento: `p391-structured-binding/`. Dos lectores nuevos, sobre los mismos 8 archivos:
+
+| Lectura | Filas | Fingerprints | Racimos | Sesgo que le queda |
+|---|---|---|---|---|
+| prosa, anclada a URL *(`P385`, piso)* | — | 54 | **3** | 🔴 no ve los handles pelados |
+| prosa, permisiva *(`P385`, techo)* | — | 54 | **22** | 🔴 liga por co-ocurrencia de línea |
+| 🆕 **celda, anclada al token `sha256`** | 155 | 44 | **5** | 🔴 no ve el digest escrito en una COLUMNA cuyo encabezado dice `sha256` y cuya celda trae el hex pelado |
+| 🆕 **columna tipada por su ENCABEZADO** | 144 | 61 | **13** | 🔴 cuenta dos veces el mismo conjunto de repos cuando el estante publicó dos digests para él |
+| 🆕 **unión estructurada** | 299 | 79 | **14** | — |
+| 🟢 **unión canonizada por CONJUNTO de repos** | — | — | 🟢 **10** | — |
+
+🔬 **La celda sola no alcanzaba, y el instrumento lo destapó contra sí mismo:** el primer extractor de celda exigía el token literal `sha256` pegado al hex, y varias tablas de esta base **no lo escriben así** — lo ponen en el **encabezado** de la columna y dejan el hex pelado en las celdas. Para esas filas, un extractor anclado al token cuenta **cero**. Leer la columna por su encabezado es la única lectura verdaderamente estructurada, y sube el conteo de **5 a 13**.
+
+🔵 **Y acá está el cambio de dueño del error.** El ancho de `P385` (`22 − 3 = 19`) era **convención de escritura**. El ancho que queda (`14 − 5 = 9`) **ya no**: se descompone en dos causas medidas, y ninguna es ortográfica.
+
+| Causa del ancho residual | Cuánto | Proposición |
+|---|---|---|
+| el lector anclado al token no ve columnas tipadas por encabezado | 8 racimos | 🟢 **se arregla**: es el lector, y ya está arreglado |
+| el mismo conjunto de repos con **más de un digest** publicado | **2 conjuntos** | 🆕 `P392` y `P393` — **no** se arregla con un parser |
+
+**Los 10 racimos canónicos, con su conteo de digests:**
+
+| Conjunto de repos | Repos | Digests | n |
+|---|---|---|---|
+| familia `canvas-mcp` (`vishalsachdev` + 6 forks) | **7** | `5385a26e2fac` | 1 |
+| bundles OpenStax (`biology` · `college-physics` · `introductory-statistics` · `prealgebra`) | 4 | `ab1a44bbba58` | 1 |
+| `buriro-ezekia/mwalimulens-agent` · `mazhar266/fedena` · `pelotech/xapi-lrs` | 3 | `c71d239df917` | 1 |
+| 🔴 trío `OpenTutor` (`iriseye395` · `itsnone-liu` · `zijinz456`) | 3 | `274d94acdd56` **+** `5352b4967982` | **2** |
+| 🔴 par `blackboard-mcp` (`bibo242` · `felipedias-ie`) | 2 | `d65abf96e389` **+** `fa4e32e5e622` | **2** |
+| `college-algebra-bundle` · `university-physics-bundle` | 2 | `8e63d319b3d0` | 1 |
+| `ki-campus/lrs` · `openlrs` | 2 | `d0ad2ec85732` | 1 |
+| `krishna16-origin/ai-tutor` · `maxew6/ai-tutor-project` | 2 | `de8107bf9312` | 1 |
+| `openedx-mcp` · `tutor-contrib-openedxmcp` | 2 | `8d56b405468a` | 1 |
+| `RohanMuppa/purdue-mcp` · `sharziki/purdue-mcp` | 2 | `cfb32038c0ba` | 1 |
+
+### 🆕 `P392` — una huella no se identifica por su digest, sino por el par (ARCHIVO, digest)
+
+🔴 **El trío `OpenTutor` produjo DOS racimos para UN conjunto de repos, y el motivo no es un error de nadie:** su tabla (`repos/trending.md`) tiene **dos columnas de huella** —`274d94acdd565ff479de…` es el `README.md` y `5352b49679829689…` es el `LICENSE`— y el lector tipado, que busca `sha256|huella|fingerprint|digest` en el encabezado, **tipó las dos como columna de huella** y las contó como dos identidades.
+
+🔵 **Por qué importa más allá del contador:** la compuerta de `P386` razona sobre la huella del **`LICENSE`** para decidir procedencia. Alimentada con la huella del **`README.md`** razonaría sobre el artefacto equivocado y daría un veredicto de linaje leyendo prosa de presentación. **El digest por sí solo no dice de qué archivo es.** ⇒ La clave de todo censo de huellas de este estante es el par `(archivo, digest)`, y una columna de huella cuyo encabezado no nombra el archivo es **ambigua por construcción**.
+
+### 🆕 `P393` — un corpus APPEND-ONLY conserva lo RETRACTADO, y un censo que lo lee lo RE-ANIMA
+
+🔴 **El par `blackboard-mcp` también dio dos digests, y éste sí es un defecto — pero no del parser.** `fa4e32e5e622` es la huella que **este estante retractó** en el pase 107: `P333` midió que salía de hashear el archivo por **sustitución de comando** (`$(cat LICENSE)`), que recorta el `\n` final, y publicó la huella corregida **`d65abf96e389`** (1.084 B). La retractación está escrita. **Y el número viejo también sigue escrito, porque estos archivos son APPEND-ONLY por encargo.**
+
+🔵 **Así que el censo de este pase, leyendo el corpus tal como está, volvió a formar el racimo con la huella muerta — y lo contó aparte del racimo con la huella viva. El mismo par de repos, dos veces.** ⚠️ **La regla, y es una compuerta de censo, no de parser:** un digest es una medición **viva** sólo si ningún pase posterior lo retractó. Un censo sobre un archivo append-only necesita una **lista de retractaciones**, no un lector mejor. Sin ella, la calidad del censo se degrada monótonamente con cada pase, porque el numerador acumula fantasmas y el denominador no.
+
+### 🆕 `P394` — acción D confirmada en su cláusula, y la clase que manda es la que la cláusula no nombró
+
+Instrumento: `p394-holder-absent-census/`. Universo: filas de tabla con huella (≥12 hex) **y** mención de licencia.
+
+| Clase de titular | Filas | Fracción |
+|---|---|---|
+| 🔴 **AUSENTE explícito** (`NOT-APPLICABLE`, «sin titular», «titular ausente») | **15** | 8,1 % |
+| 🟢 **PRESENTE** | 46 | 24,7 % |
+| ⚠️ **MUDO** (la fila no dice nada del titular) | 🔴 **125** | 🔴 **67,2 %** |
+| **Universo** | **186** | 100 % |
+
+🟢 **La cláusula de la acción D pedía ≥5 y midió 15 ⇒ CONFIRMADA.** La compuerta de `P386` no es para un caso: es para una fracción medible. Y **8 de esas 15** llevan además un conteo de bytes de boilerplate prístino conocido, o sea que en poco más de la mitad el titular está ausente **por construcción de la licencia** y no por omisión de quien escribió la fila.
+
+🔴 **Pero el hallazgo que la cláusula no pidió es el denominador.** La acción preguntó «ausente vs. presente», y esa pregunta tiene respuesta para **61 de 188** filas (32,4 %). Las otras **127 son MUDAS**, y la compuerta de `P386` **no tiene rama para ellas**. Las dos salidas disponibles son malas:
+
+- tratar MUDO como **ausente** ⇒ la compuerta se abstiene en **140 de 186** (75,3 %) y deja de ser compuerta: pasa a ser el comportamiento por defecto;
+- tratar MUDO como **presente** ⇒ funde proyectos ajenos exactamente como `P386` advirtió.
+
+🔬 **Defecto del instrumento, encontrado por su PROPIA suite y medido antes de publicar la cifra (`P107`):** la primera versión del censo buscaba los nombres de licencia sin frontera de palabra, así que **`MIT` casaba dentro de «com-MIT»** y toda fila que nombrara un *commit* entraba al universo. 🟢 **Arreglado con `\b`, y el radio del daño se midió en vez de suponerse: el universo baja de 188 a **186** filas — **2** filas de más, **las 2 en la clase MUDA**, y los conteos de AUSENTE (15) y PRESENTE (46) **no se mueven**. ⇒ La cláusula de la acción D da el mismo veredicto con el instrumento roto y con el arreglado, y eso se dice porque es lo que vuelve la cifra defendible, no porque el defecto fuera inofensivo.** ⚠️ **Invocación de la cifra publicada arriba: el censo arreglado, corrido sobre los 8 archivos **tal como estaban en `HEAD`**, o sea sin las filas que este pase agrega. Corrido DESPUÉS de escribirlas da `23 / 46 / 139` sobre 208, porque este pase agrega 8 filas de titular ausente explícito (las 2 altas prístinas y las tablas de corrección).**
+
+🔵 **La corrección es una tercera rama, y es de la clase de `P160` re-confirmada el pase pasado: la ausencia de la PALABRA no es la ausencia del TITULAR.** Una fila muda es un **negativo DÉBIL**; con ella la compuerta no decide, **manda a medir el archivo** y recién entonces decide. Dicho en una línea: `ausente ⇒ abstenerse` · `presente ⇒ linaje` · `mudo ⇒ MEDIR, no inferir`.
+
+### 🆕 `P395` — hay DOS boilerplates prístinos de Apache-2.0, y la regla de off-by-one de `P333` les da un falso positivo
+
+Las 2 altas de este pase llegaron con **11.358 B** de `LICENSE` y digest `cfc7749b96f63bd3`; el racimo prístino que esta base ya tenía es de **11.357 B** y `c71d239df91726fc`. Un byte de diferencia. **`P333` tiene una regla barata para eso:** «una huella cuyo conteo de bytes difiere del payload en EXACTAMENTE 1 es artefacto de salto final; se remide antes de escribir una palabra». Se remidió, **con los dos controles de dos puntas**:
+
+| Control | Resultado | Qué prueba |
+|---|---|---|
+| `diff` de los dos archivos | **`0a1 > `** (una línea vacía agregada **al principio**) | 🔴 la diferencia está en la **CABEZA**, no en la cola |
+| últimos 12 bytes de ambos (`od -c`) | `h e   L i c e n s e . \n` en **los dos** | 🔴 los dos terminan igual ⇒ no es el salto final |
+| primer byte del de 11.358 B | **`\n`** | 🟢 es una línea en blanco inicial |
+| 11.358 B **menos** su último byte | `58d1e17ffe51` ≠ `c71d239df917` | 🔴 **control FALLA** |
+| 11.357 B **más** un salto | `c95bae1d1ce0` ≠ `cfc7749b96f6` | 🔴 **control FALLA** |
+| `shuddhi` vs `toolkit-ml-provenance` | `cmp` ⇒ **idénticos byte a byte** | 🟢 la variante de 11.358 B es real y circula |
+
+🔵 **Veredicto: los dos archivos son payloads legítimos de Apache-2.0 que circulan en el mundo, y la diferencia es una línea en blanco INICIAL.** La regla de `P333` habría localizado el byte en el lugar equivocado y, peor, habría tratado una variante real como artefacto de medición propia. ⚠️ **La regla se re-enuncia así: un off-by-one es una SOSPECHA que obliga a remedir, no un veredicto sobre QUÉ byte es; y lo que distingue «artefacto de mi medición» de «dos variantes reales» son los controles de las DOS puntas.** Sin ellos, la regla barata es una conjetura con cara de medición.
+
+**Los dos racimos prístinos, los 8 miembros re-medidos del payload ESTE pase:**
+
+| Digest | Bytes | Miembros medidos hoy | Relación entre ellos |
+|---|---|---|---|
+| `c71d239df917` | **11.357** | `buriro-ezekia/mwalimulens-agent` · `mazhar266/fedena` · `pelotech/xapi-lrs` · `yptheangel/attention-monitor` · `cisco-ai-defense/model-provenance-kit` | 🔴 **ninguna** — un agente docente, un ERP de campus, un almacén xAPI, un medidor de atención y un kit de procedencia de modelos |
+| `cfc7749b96f6` | **11.358** | `openedx/XBlock` · `agentanywhere/shuddhi` · `AKIVA-AI/toolkit-ml-provenance` | 🔴 **ninguna** |
+
+🟢 **Corrida la compuerta de `P386` sobre los 10 pares medidos hoy: 1 racimo con linaje (`canvas-mcp`, titular `Vishal Sachdev` PRESENTE) y 8 abstenciones.** 🔴 **Control de qué pasaría sin la compuerta: 2 fusiones indebidas, de 5 y de 3 proyectos sin relación.**
+
+### 🆕 `P396` — el disyunto `is_pristine` de la compuerta está MUERTO, y su tabla de tamaños está incompleta
+
+`dedup_gate.py` decide con `if is_pristine(bytes, holder) or holder_absent(holder): return None`. Y `is_pristine` se define como `size in PRISTINE_SIZES **and** holder_absent(holder)`. ⇒ `is_pristine` **implica** `holder_absent`, así que la disyunción es idéntica a su segundo término.
+
+🔬 **Probado por enumeración, no por argumento** (13 tamaños × 10 titulares = **80** combinaciones): **0** combinaciones en las que `is_pristine` cambia la decisión. 🔴 **Veredicto: DISYUNTO MUERTO — la tabla `PRISTINE_SIZES` no aporta ningún bit a la decisión de la compuerta.**
+
+🔴 **Y de paso, la tabla además está incompleta:** `is_pristine(11357, 'NOT-APPLICABLE')` = `True`, `is_pristine(11358, 'NOT-APPLICABLE')` = **`False`**, porque la variante de 11.358 B de `P395` **no está en la tabla** — y es igual de prístina y funde igual de bien (ya fundió 3 proyectos ajenos).
+
+🔵 **Las dos cosas caen sobre las mismas 4 líneas y el arreglo no es agregar el 11.358:** mientras la decisión la tome el titular, el tamaño es decorativo. El tamaño vuelve a tener trabajo real sólo bajo `P394`, en la rama **MUDA**: ahí el titular no decide, y un tamaño de boilerplate conocido es evidencia **a favor** de que el titular no vive en el texto. **Ese es el lugar donde la tabla sirve; donde está hoy, no.**
+
+### 🟢 Las 2 altas, con la cesión leída por RUTA y la región leída de la OBLIGACIÓN (`P397`)
+
+| Pieza | Repo | Licencia (leída por ruta) | ★ / forks | Región | Qué es, y por qué entra |
+|---|---|---|---|---|---|
+| 🆕 **Shuddhi** | https://github.com/agentanywhere/shuddhi | **Apache-2.0** ✅ — `main/LICENSE` **11.358 B**, `sha256:cfc7749b96f63bd3`, titular **ausente** → `NOT-APPLICABLE` | **2 ★ / 1 fork**, 46 commits, Python | 🆕 **EMEA + APAC** por `P397` (autor inubicable) | *«Prove what your model was trained on»*: fábrica de corpus con **compuerta de procedencia** (rechaza datos de clase cliente *antes* de procesarlos), dedup MinHash/LSH, redacción de PII y chequeo de contaminación contra sets de evaluación, sellado con un **BUILD-MANIFEST reproducible**. 🟢 **Emite el resumen de contenido de entrenamiento del art. 53(1)(d) del AI Act** (`shuddhi report --eu-ai-act`), contra la plantilla de la AI Office del 2025-07-24. 🆕 **Es la primera pieza de este estante para la obligación de PROBAR que un dato de alumno NO entró al entrenamiento** — el supuesto de la clase de la AB 1159 californiana que esta base cotiza sin herramienta. |
+| 🆕 **toolkit-ml-provenance** | https://github.com/AKIVA-AI/toolkit-ml-provenance | **Apache-2.0** ✅ — `main/LICENSE` **11.358 B**, `sha256:cfc7749b96f63bd3` ⇒ **byte-idéntico al de `shuddhi`** (`cmp` limpio), titular **ausente** → `NOT-APPLICABLE` | **1 ★ / 0 forks**, 4 commits, Python | ⚠️ **NO UBICADA** — ni por autor ni por obligación: las normas que nombra (CycloneDX 1.6, in-toto v1, OpenSSF Model Signing) son **globales** | Generador de **SBOM de ML**: manifiesto determinista con SHA-256 por archivo, firma **Ed25519**, ML-BOM **CycloneDX 1.6**, escaneo estático de pickles inseguros (sin des-serializar) e importación de runs de MLflow. Entra por **licencia y por capa** (la capa de *atestación firmada* que `shuddhi` no cubre), no por tracción: **1 ★**. |
+
+⚠️ **Las dos se dicen con su cota: 2 ★ y 1 ★, 46 y 4 commits.** No son tracción; son **cesión permisiva + capa que faltaba**. Precedente explícito de este estante: `oompas/open-lms` entró con 0 ★ «por licencia, no por tracción».
+
+### 🆕 `P397` — la región de una herramienta de cumplimiento se lee de la OBLIGACIÓN que implementa, no del domicilio de su autor
+
+Este estante arrastra una pila de filas `⚠️ NO UBICADA`, porque `P135` prohíbe ubicar por antropónimo y muchos repos no declaran domicilio. **Para una herramienta de cumplimiento hay un atributo mejor, y se lee del payload.**
+
+🔬 **Medido por RUTA en `shuddhi/pii.py` (5.601 B, `sha256:39d86f59b49532f6`), no del resumen de la búsqueda:**
+
+| Detector en el archivo | Jurisdicción que implica | Región |
+|---|---|---|
+| `iban` (`[A-Z]{2}\d{2}…`) | identificador bancario de la UE | **EMEA** |
+| `phone_in` (`+91…`), `aadhaar`, `pan` | India | **APAC** |
+| `email`, `ip`, tarjeta (candidata Luhn) | — | Global |
+| 🟢 `report --eu-ai-act` → art. 53(1)(d) | obligación de la UE | **EMEA** |
+
+🔴 **Control negativo, 8 identificadores probados contra el mismo archivo, 0 aciertos cada uno:** `SSN`, `social security`, `CPF`, `CURP`, `RUT`, `DNI`, `CUIT`, `NIF`. ⇒ **North America: cobertura 0 medida. LATAM: cobertura 0 medida.** No es una sospecha: es un `grep` con su archivo y su digest.
+
+🔵 **Y eso es justo lo que una práctica necesita saber, porque convierte un hueco en un presupuesto:** la pieza entra tal cual en un encargo de EMEA o de India, y un encargo de LATAM o de North America necesita **un detector más**, en un archivo de 5,6 KB cuyo punto de extensión es un único diccionario de regex. ⚠️ **La distinción que `P397` obliga a escribir y que esta fila respeta: el `pii.py` ubica a la HERRAMIENTA por dónde SIRVE, no a su AUTOR por dónde VIVE. La región del autor sigue siendo `NO UBICADA`, y las dos cosas van en columnas distintas.**
+
+### 🔴 2 correcciones de dato propio: dos filas publicadas con 11.358 B miden 11.357 B
+
+Al armar los racimos de `P395` apareció una contradicción **interna** del estante: `pelotech/xapi-lrs` estaba publicado con `LICENSE` de **11.358 B** y al mismo tiempo caía en el racimo de `c71d239df917`, que es el digest de **11.357 B**. Las dos cosas no pueden ser verdad. **Se remidió del payload, hoy:**
+
+| Repo | Rama | Archivo | Publicado | 🟢 Medido hoy | Digest medido |
+|---|---|---|---|---|---|
+| `pelotech/xapi-lrs` | `main` | `LICENSE` | 🔴 11.358 B | 🟢 **11.357 B** | `c71d239df917` |
+| `yptheangel/attention-monitor` | `master` | `LICENSE` | 🔴 11.358 B | 🟢 **11.357 B** | `c71d239df917` |
+| `openedx/XBlock` | `master` | `LICENSE.TXT` | 11.358 B | 🟢 **11.358 B** ✅ | `cfc7749b96f6` |
+
+🔵 **De los tres repos que este estante tenía anotados con 11.358 B, sólo UNO lo era.** Los otros dos arrastraban el número de la variante equivocada, y ninguno de los dos se había remedido porque el conteo de bytes nunca entró en contradicción visible hasta que el racimo lo forzó. ⚠️ **Y notar la dirección: el error estaba del lado del 11.358, o sea el off-by-one iba al revés de como `P333` lo describe. Una razón más para `P395`.**
+
+### 🔴 El cero del canal del encargo, ENUMERADO (`P370`)
+
+**Las 4 consultas globales obligatorias** devolvieron por **4.ª vez consecutiva** el eje *enseñar-sobre-IA* y no el eje *IA-para-educación*: cursos (`AI Agents for Beginners`, `LLMs-from-scratch`, `agents-from-scratch`), listas (`awesome-ai-agents-2026`, `500-AI-Agents-Projects`) y agentes de **código** (OpenHands, SWE-agent, browser-use) que esta base ya tiene o que no son de la industria. 🔴 **0 altas por el canal de oferta generalista.**
+
+**Las 4 sondas por región respondieron las 4 — 0 silencios — y el cero está en el NUMERADOR, no en la cobertura:** los **14** hechos que trajeron se buscaron uno por uno en el estante con `grep -ril` y **los 14 ya estaban publicados**.
+
+| Región | Hechos devueltos | Ya publicados | Netos |
+|---|---|---|---|
+| **North America** | 36 % de cuota / $3,68 B → $32 B (2030); 134 proyectos de ley en 31 estados; AB 1159; SB 1006 / Khanmigo $10 M; HB 96 y el plazo del 1-jul-2026 de Ohio | 6 / 6 | 🔴 **0** |
+| **EMEA** | $2,64 B (2026) → $8,0 B (2030) al 31,9 %; aplicación del AI Act desde el 2-ago-2026; *Digital Omnibus* con fechas revisadas 2-dic-2027 / 2-ago-2028 | 3 / 3 | 🔴 **0** |
+| **APAC** | AI Basic Act de Corea en vigor 22-ene-2026; ley de Vietnam 134/2025/QH15 en vigor 1-mar-2026; marco de IA agéntica de la IMDA del 22-ene-2026 | 3 / 3 | 🔴 **0** |
+| **LATAM** | encuesta del Digital Education Council 2026 (92 % alumnos / 79 % docentes); hueco de gobernanza señalado por UNESCO; CONPES 4144 | 3 / 3 | 🔴 **0** |
+
+🔵 **Con esto `P388` queda re-confirmado por su lado flaco, y es el aporte de este cero:** el canal de **oferta** ya se sabía agotado; este pase mide que el canal de **intel regional** también lo está **para la consulta que prescribe el encargo**. 🟢 **Y la salida fue la misma que el pase 119 encontró: entrar por la OBLIGACIÓN.** Las 2 altas de hoy no vinieron de «mejores agentes de educación 2026»; vinieron de preguntar *«¿con qué software se PRUEBA que un dato de alumno no entró al entrenamiento?»* ⇒ **el agotamiento sigue siendo de SONDA.**
+
+### 🔴 1 rechazo informado, y el motivo es de CANAL, no de mercado
+
+La sonda de la obligación de *opt-out* devolvió un bloque de afirmaciones fuertes y **sin fuente primaria**: un «GitHub Opt-Out Registry for AI Training» adoptado por «más de 37 proveedores», un archivo canónico `.optout` con la línea `ai-training: false`, y un estudio de la OSSF con «94 % de reducción». 🔴 **No se publica ninguna de las tres.** El intento de verificarlas contra la fuente primaria (`docs.github.com`) devolvió **`EGRESS_BLOCKED` del proxy de egreso de esta sesión**.
+
+⚠️ **La distinción, que esta base ya usa y que acá importa: esto es un negativo de CANAL, no un negativo MEDIDO.** No se afirma que las tres sean falsas; se afirma que **no son verificables por los canales vivos de este pase**, y por eso quedan fuera del estante con el motivo escrito. Lo que sí se midió es el bloqueo, y está en la tabla de canal de arriba.
+
+### 📌 Acciones pre-registradas para el próximo pase (con cláusula de refutación)
+
+- **A — `P365`, intacta, re-heredada SIN re-basar por 3.ª vez.** Evaluar deriva de ★ en el primer pase que corra en o después de **`2026-10-06T10:48Z`**. **Faltan 17 h 03 m.** 🔴 **El instante no se re-basa, y este pase deja constancia de que tampoco se re-basó hoy.**
+- **E — construir la lista de RETRACTACIONES que pide `P393`.** Barrer los 8 archivos por digests que un pase posterior declaró retractados/corregidos y contar cuántos **siguen formando racimo** en el censo de `P391`. **Hipótesis:** son **≥2** (`fa4e32e5e622` más al menos uno) ⇒ la degradación del censo por historia es sistémica y no un caso. **Refutada si** es **exactamente 1** ⇒ entonces `fa4e32e5e622` es anecdótico y `P393` es una nota al pie, no una compuerta.
+- **F — resolver la ambigüedad de `P392` midiendo su tamaño.** Contar cuántas columnas de huella de este estante tienen un encabezado que **NO nombra el archivo** (`sha256` a secas, vs. `sha256 del LICENSE`). **Hipótesis:** son **≥3** ⇒ la ambigüedad `(archivo, digest)` es de formato y pide una regla de encabezado. **Refutada si** son **≤1** ⇒ el caso `OpenTutor` es un accidente de una tabla y se arregla en esa tabla.
+- **G — darle a la rama MUDA de `P394` su primera medición.** Tomar **10** filas MUDAS al azar del censo y medir el titular del payload por RUTA. **Hipótesis:** **≥3** resultan con titular **PRESENTE** ⇒ tratar MUDO como ausente habría perdido linaje real, y la tercera rama es obligatoria. **Refutada si** son **0** ⇒ MUDO se comporta como ausente en la práctica y la tercera rama puede ser una nota.
+- **H — poner a prueba `P397` fuera de su caso.** Aplicar la lectura de región-por-obligación a las filas `NO UBICADA` que ya tiene el estante. **Hipótesis:** **≥2** quedan ubicadas por los identificadores o normas que su código implementa. **Refutada si** **0** quedan ubicadas ⇒ `P397` sirve para herramientas de cumplimiento y no generaliza, y hay que decirlo con ese alcance.
 
 ## 🟢 Pase 119 del 2026-10-05 (lectura `16:53Z`) — la acción pre-registrada se corrió y RINDIÓ: el eje de la OBLIGACIÓN devuelve software nuevo, pero sólo en 1 de sus 3 sub-ejes
 

@@ -7,6 +7,7 @@ updated: 2026-10-05
 # 📡 Tendencias — education
 
 > Ventana de investigación: septiembre 2026. Verificado 2026-09-30; el pase 11, el 2026-10-01.
+> **Pase 120 del 2026-10-05 (lectura `17:45Z`):** 🟢 **Tendencias 922–926, citadas una por una.** 🆕 **`P397` — la REGIÓN de una herramienta de cumplimiento se lee de la OBLIGACIÓN que implementa, no del domicilio de su autor: convierte la pila de filas `NO UBICADA` de este árbol en un atributo medible del payload, y de paso convierte un hueco regional en un presupuesto de un detector de regex.** 🆕 **`P393` — un corpus APPEND-ONLY conserva lo RETRACTADO, así que todo censo que lo lea RE-ANIMA mediciones muertas: la calidad del censo se degrada MONÓTONAMENTE con cada pase si no hay capa de retractaciones. Es la primera tendencia de este árbol que es un costo de su propio método.** 🆕 **`P395` — el prístino de Apache-2.0 circula en DOS variantes (11.357 / 11.358 B) que difieren en una línea en blanco INICIAL; la regla barata de off-by-one de `P333` les da un falso positivo, y lo que la salva son los controles de las DOS puntas.** 🔴 **Y la tendencia de canal: el barrido regional 48 devolvió 4/4 regiones, 0 silencios y **0 hechos netos** (14/14 ya publicados) ⇒ el agotamiento alcanzó al canal de INTEL, no sólo al de oferta.**
 > **Pase 119 del 2026-10-05:** 🟢 **Tendencias 918–921, y la del pase es de MÉTODO: 🆕 `P388` — la oferta open source de cumplimiento no es una curva, son TRES en estadios distintos al mismo tiempo (etiquetado generativo **vacía**, *testing* de gobernanza **saturada**, expediente FRIA **abriéndose**), y el estadio dice qué hacer: donde está vacía se CONSTRUYE, donde está saturada se INTEGRA, donde se abre se ADOPTA temprano.** 🟢 **Primera vez que el giro «de la experimentación a la gobernanza» que esta base escribe desde el pase 109 aparece como SOFTWARE PERMISIVO y no como afirmación de analista: plantilla FRIA MIT con 6,4k ★, y la AI Verify Foundation de 4 miembros premier a 90+ organizaciones.** 🔴 **Hueco de OFERTA vendible porque está vacío: el art. 31(3) coreano exige marca perceptible por el usuario final y no hay pieza OSS — y NO se cierra con C2PA, que cubre el art. 50(2) europeo.** 🔵 **Pre-registrado para el próximo pase, derivado de `P388` y falsable: sondear UNA obligación por consulta — art. 26 (registro del *deployer*) y prohibición de reconocimiento de EMOCIONES en centros educativos. Predicción: estadios DISTINTOS entre sí (art. 26 saturado, emociones vacía porque una prohibición no genera oferta). Si vuelven iguales, `P388` queda REFUTADA.**
 > **Pase 117 del 2026-10-05:** 🟢 **Tendencias 912–917, citadas una por una para que ninguna quede anunciada sin sección (`P97`).** 🆕 **La que manda es **917** y no es de educación: `P384` — la rotación de 12 industrias no avanza, y por eso este estante lleva ~24 pases/día desde el 2026-09-30 mientras las otras 11 industrias están congeladas desde ~2026-08-02. `rotation.json@main` dice `next: 8` desde el **2026-09-02**; el avance se commitea en una rama por sesión (**1.487** ramas `claude/*` en el origin) que nadie mergea. **Un contador guardado donde el escritor no puede escribir no es un contador: es una constante**, y el síntoma que lo delata no es un error sino la repetición EXITOSA.** 🆕 **912: `P379`, el fork con archivo propaga la cesión Y el titular ajeno ⇒ el doble conteo infla *cesiones verificadas*, que es peor que inflar afirmaciones porque pasa el control. 🆕 913: `P380`, la cesión segmentada por ESTADO DE COMPILACIÓN, eje que ningún escáner de rutas ve. 🆕 914: `P381`, dos instrumentos reales fusionados en un par falso — la unidad de verificación es la TUPLA, no el campo. 🆕 915: `P382`, el ancla `{year}` corre las fechas hacia hoy y acá corrió el 100 % de lo nuevo. 🆕 916: `P383`, el vocabulario cerrado se rompe un nivel abajo del que se estaba gateando.** ⚠️ **`P365` sigue NO evaluable (faltan 20 h 03 m) y se re-registra contra el mismo instante absoluto, sin re-basar.**
 > **Pase 115 del 2026-10-05:** 🟢 **Tendencias 906–911, citadas una por una para que ninguna quede anunciada sin seccion (`P97`).** 🆕 **La que manda es **906**: `P370`, la compuerta simetrica — `p311` gatea lo que ENTRA desde el pase 100 y nada gateaba lo que se declara AUSENTE, asi que un hueco falso se re-publico como racha cuatro pases. 29 huecos con region → 2 contradichos, **27 sin alcance**.** 🆕 **907: `P371`, el calificador se cae y el numero sobrevive. 🆕 908: `P372`, un canal ciego que devuelve el codigo de EXITO es peor que uno que devuelve error. 🆕 909: `P373`, una cifra inventada adosada a un artefacto real. 🆕 910: `P374`, titular / dueño / dominio son tres ejes. 🔴 911: las estrellas no miden respaldo institucional — dos piezas de **0 ★** de este pase son, una, despliegue en produccion del **Banco Mundial**, y la otra, codigo financiado por el **SNCTI** de Colombia.**
@@ -238,6 +239,60 @@ el fork, instalaciones. ⚠️ **Y su lado malo es el encargo:** 547 árboles di
 actualización.
 
 
+
+## 🟢 Pase 120 del 2026-10-05 (lectura `17:45Z`) — tendencias 922–926: la región se lee de la obligación, y el método de esta base paga su primer costo medido
+
+### 922 · 🆕 `P397` — la región de una herramienta de cumplimiento se lee de la OBLIGACIÓN que implementa, no del domicilio de su autor
+
+Este árbol arrastra una pila de filas `⚠️ NO UBICADA`: `P135` prohíbe ubicar por antropónimo y la mayoría de los repos chicos no declara domicilio. 🟢 **Para una herramienta de cumplimiento hay un atributo mejor, y vive en el payload.** Medido por RUTA en `shuddhi/pii.py` (**5.601 B**, `sha256:39d86f59b49532f6`):
+
+| Lo que el archivo implementa | Jurisdicción que implica | Región |
+|---|---|---|
+| detector `iban` + `report --eu-ai-act` (art. 53(1)(d)) | Unión Europea | **EMEA** |
+| detectores `aadhaar`, `pan`, `phone_in` (`+91`) | India | **APAC** |
+| `email`, `ip`, tarjeta (candidata Luhn) | — | Global |
+| 🔴 `SSN`, `social security`, `CPF`, `CURP`, `RUT`, `DNI`, `CUIT`, `NIF` | 8 probados, **0 aciertos** | 🔴 **North America: 0 · LATAM: 0**, medido |
+
+🔵 **La forma general, y sirve fuera de educación:** una herramienta de cumplimiento *declara* su geografía en el código, porque un identificador nacional o un artículo citado **son** la jurisdicción. ⚠️ **La frontera que hay que respetar para que no sea un atajo: eso ubica a la HERRAMIENTA por dónde SIRVE, no a su AUTOR por dónde VIVE. Las dos cosas van en columnas distintas y la del autor sigue siendo `NO UBICADA`.** 🟢 **Y el rendimiento práctico es el que importa: un hueco regional deja de ser conjetura y pasa a ser presupuesto — un detector de regex en un archivo de 5,6 KB cubre LATAM o North America sobre una pieza que ya cede permisivamente.**
+
+### 923 · 🆕 `P393` — el primer costo MEDIDO del método de esta base: un corpus append-only re-anima lo retractado
+
+Los archivos `trending` son **APPEND-ONLY por encargo**, y con razón: reescribirlos cada hora destruye la tendencia que existen para registrar. 🔴 **Este pase midió lo que eso cuesta.** El censo de huellas de `P391` formó racimo con **`fa4e32e5e622`** — una huella que **`P333` retractó en el pase 107** (salía de hashear por sustitución de comando, que recorta el `\n` final; la corregida es `d65abf96e389`). La retractación está escrita. **El número muerto también, porque nada se borra.** Resultado: el mismo par de repos contado **dos veces**, una por la huella viva y otra por la muerta.
+
+🔵 **Por qué es una tendencia y no una anécdota:** el defecto **crece solo**. Cada pase agrega mediciones, algunas se corrigen, y el censo siguiente hereda numerador inflado con denominador intacto. ⚠️ **La corrección no es un lector mejor ni dejar de ser append-only: es una CAPA DE RETRACTACIONES encima del corpus — una lista de digests que un pase posterior declaró muertos, que el censo consulta antes de contar.** 🔬 **Y la generalización para cualquier base de conocimiento incremental: un archivo que acumula es una buena FUENTE y un mal CENSO. Lo que se acumula necesita un índice de vigencia, o el método se degrada a la velocidad a la que produce.**
+
+### 924 · 🆕 `P395` — una regla barata sin controles de dos puntas es una conjetura con cara de medición
+
+`P333` dejó una regla de bajo costo: *«una huella cuyo conteo de bytes difiere del payload en EXACTAMENTE 1 es artefacto de salto final»*. Este pase le trajo un caso: dos boilerplates prístinos de Apache-2.0, **11.357 B** y **11.358 B**.
+
+| Control corrido | Resultado |
+|---|---|
+| `diff` de los dos archivos | **`0a1 > `** — línea vacía agregada **al principio** |
+| últimos 12 bytes de ambos | idénticos (`… h e   L i c e n s e . \n`) |
+| 11.358 B **menos** el último byte ≟ 11.357 B | 🔴 **FALLA** (`58d1e17ffe51` ≠ `c71d239df917`) |
+| 11.357 B **más** un salto ≟ 11.358 B | 🔴 **FALLA** (`c95bae1d1ce0` ≠ `cfc7749b96f6`) |
+
+🔴 **La regla habría dictaminado «artefacto de salto final» y el byte está en la CABEZA, y los dos archivos son payloads reales.** 🔵 **La tendencia de método: una heurística de un byte es barata porque no mira; lo que la vuelve medición es el par de controles que prueba cada extremo por separado. Sin ellos, su salida y una conjetura son indistinguibles — y el precio de confundirlas acá habría sido tratar una variante real del mundo como error propio.**
+
+### 925 · 🆕 La tendencia de instrumento: una lectura estructurada ANGOSTA los intervalos pero no los cierra, y el residuo cambia de dueño
+
+`P385` publicó el censo de colisiones de licencia como el intervalo **`[3, 22]`**, con las dos puntas producidas por sesgos opuestos de la **convención de escritura**. La acción B de este pase lo leyó por **celda y por columna tipada**:
+
+| Lectura | Racimos |
+|---|---|
+| prosa anclada a URL *(piso)* | 3 |
+| prosa permisiva *(techo)* | 22 |
+| celda anclada al token | **5** |
+| columna tipada por encabezado | **13** |
+| 🟢 canónico por CONJUNTO de repos | 🟢 **10** |
+
+🔵 **El intervalo pasa de ancho 19 a ancho 9, y el residuo ya no es ortográfico: son `P392` (una huella se identifica por el par (ARCHIVO, digest), y el trío `OpenTutor` entró dos veces porque su tabla tiene columna de `README` y de `LICENSE`) y `P393`.** ⚠️ **La forma general: cuando una medición mejora de instrumento y el intervalo se angosta sin cerrarse, lo que queda NO es más del mismo ruido — hay que re-preguntar de qué es, porque suele ser de otra cosa. Acá pasó de ser la convención de escritura a ser la historia y el formato del propio estante, y ninguna de las dos se arregla con un parser.**
+
+### 926 · 🔴 La tendencia de canal: el agotamiento alcanzó al INTEL, no sólo a la oferta
+
+**Barrido regional 48: 4/4 regiones respondieron, 0 silencios, 14 hechos devueltos, 14/14 ya publicados ⇒ 0 netos.** Las 4 consultas globales devolvieron por **4.ª vez** el eje *enseñar-sobre-IA*.
+
+🔵 **La lectura, y es la que manda para el próximo pase:** esta base ya sabía que el canal de **oferta** estaba agotado. Ahora sabe que el de **intel regional** también lo está **para la consulta prescrita** — y las dos cosas tienen la misma causa y la misma salida. 🟢 **La prueba de que es la sonda y no el mercado es que las 2 altas del pase existen: salieron de preguntar por la OBLIGACIÓN** (*«¿con qué software se prueba que un dato de alumno no entró al entrenamiento?»*) **y no por la oferta.** 🔴 **Único hecho neto del barrido, y es de linaje: la *model policy* que los distritos de Ohio adoptan para HB 96 viene del *Department of Education and Workforce* con la Ohio AI in Education Coalition, sobre el AI Toolkit de InnovateOhio + aiEDU (feb-2024) — y no tiene implementación open source, lo que la deja como hueco con forma de encargo.**
 
 ## 🟢 Pase 119 del 2026-10-05 (lectura `16:53Z`) — tendencias 918–921: el agotamiento se mide por OBLIGACIÓN, y la oferta OSS de cumplimiento está partida en tres curvas
 

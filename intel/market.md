@@ -8,6 +8,7 @@ updated: 2026-10-05
 
 > Key players, market map y oportunidades por región.
 > Investigado 2026-09-30; el pase 11, el 2026-10-01. Las estimaciones de tamaño de mercado varían mucho entre firmas: se listan todas con su fuente en vez de elegir una.
+> **Pase 120 del 2026-10-05 (lectura `17:45Z`):** 🔴 **Barrido regional 48: las 4 regiones respondieron, **0 silencios**, y el cero está en el NUMERADOR — los **14** hechos que trajeron se buscaron uno por uno con `grep -ril` y **14/14 ya estaban publicados** en este archivo ⇒ el canal de INTEL de esta industria está saturado para la consulta que prescribe el encargo, igual que el de oferta.** 🟢 **El único hecho NETO del pase es de LINAJE, no de cifra, y es de North America: la plantilla que los distritos de Ohio adoptan para cumplir HB 96 no es anónima — la publicó el *Department of Education and Workforce* con la **Ohio AI in Education Coalition**, sobre el **AI Toolkit** que **InnovateOhio** lanzó con **aiEDU** en febrero de 2024. Esta base tenía la obligación y el plazo; no tenía de quién es el artefacto que se adopta.** 🆕 **`P397` — y con él una oportunidad nueva en las 4 regiones a la vez, por primera vez con una pieza MEDIDA para dos de ellas y un cero MEDIDO para las otras dos: `shuddhi` cubre EMEA (IBAN + art. 53(1)(d)) y APAC (Aadhaar, PAN, `+91`) y tiene cobertura **0 medida** para North America y LATAM ⇒ el hueco regional deja de ser una conjetura y pasa a ser un presupuesto de un detector.**
 > **Pase 119 del 2026-10-05:** 🟢 **Barrido regional 47: 4/4 regiones, 0 silencios, denominador ENUMERADO antes de escribir — 19 hechos sondeados, 15 ya publicados, 3 netos nuevos, 1 rechazado por ser el mismo hecho en otra redacción.** 🔴 **Y el dato que manda para leer este pase: el hallazgo más valioso NO salió de las 4 consultas regionales, salió de la consulta por OBLIGACIÓN que el pase 118 pre-registró ⇒ el barrido de mercado por región está saturado y el de obligación no (`P388`).** 🟢 **APAC: la soberanía pasó de discurso a INVENTARIO con siete modelos nacionales nombrados (Sarvam/IN, ILMU/MY, Sahabat/ID, SEA-LION/SG, HyperCLOVA X Think/KR, NTT Sarashina/JP, TAIDE/TW); India 38,9 % CAGR; Singapur 60,9 % de difusión.** 🟢 **LATAM con las DOS puntas medidas: **+50 % de docentes de Chile y Brasil ya usa IA** y **<10 % de instituciones tiene guías formales y capacidad** ⇒ la adopción ocurrió por abajo y la gobernanza no existe por arriba, que es demanda de expediente.** ⚠️ **Dos cifras que NO se fusionan: ILIA Chile 70,56/Brasil 67,39 de este barrido contra Brasil 65,89/Chile 63,19/Uruguay 62,21 del registro previo (ediciones distintas, `P381`); y en NA, 60 % de docentes con «alguna herramienta de IA» NO es el 53 % de «chatbots con alumnos» — distinto denominador, se citan las dos (`P369`).** 🟢 **Sexto pase sin reproducir el calendario SUPERADO del AI Act: `P321` sigue sin reproducirse.**
 > **Pase 117 del 2026-10-05:** 🔴 **El hallazgo de este archivo es un defecto de su propio FORMATO, y lo encontró un instrumento: 🆕 `P383` — el encargo pide **un** `## Opportunities by region` y hay **27**, pero el daño no está en el 27 sino en el NIVEL: **24 encabezados `###` fuera de vocabulario** son hermanos sintácticos de las regiones, así que un compilador que lea «todo `###` bajo ese `##` es una región» produce **28 entidades y 24 son basura** (una se llama `🔴 Brechas declaradas de este pase, por región`, otra tiene ~180 caracteres).** 🔵 **Y la prueba en miniatura está en el propio listado: `por región` y `por region` aparecen **1 vez cada una** ⇒ dos cubos para un concepto, que es el daño que el encargo describe para `region:` ocurriendo un nivel más abajo, donde nada lo gateaba.** 🟢 **Lo que SÍ está bien y cuesta más: las 4 regiones aparecen en **27/27** bloques, **0** secciones sólo-LATAM, y `region:` es `Global` en los 8 archivos, dentro del vocabulario cerrado.** 🟢 **Barrido 46: 23 hechos sondeados, **20 ya publicados**, 3 candidatos → 2 reales con fecha corrida (`P382`) y 1 rechazado por fusión (`P381`).** 🔴 **LATAM: **0 hechos nuevos sobre 7 sondas** ⇒ es hoy la región MÁS saturada de este estante, segunda corrección consecutiva del relato del hueco LATAM.** 🟢 **Reparto regional nuevo: NA **3,68 MM (2026) → 32 MM (2030)**, **36 %** del global; EMEA **2,64 MM → 8,0 MM**, CAGR **31,9 %**.**
 > **Pase 115 del 2026-10-05:** 🔴 **El hueco LATAM que este archivo declaro cuatro pases seguidos queda REFUTADO por el indice de esta misma base, con instrumento: 🆕 `P370` (`p370-gap-gate/`, **27/27**) mide **29** huecos declarados con region → **2 CONTRADICHOS** y **27 SIN MARCADOR DE ALCANCE**, y el piso de filas que lo refutan es **12 repos UBICADOS en LATAM** (17 filas nombran LATAM; 5 solo la mencionan).** 🆕 **`P371` — el calificador se cae y el numero sobrevive: el pase 113 escribio «*este canal no encuentra codigo de LATAM*» y nombro una pieza propia en la misma oracion; el **ledger** del 114 conservo el alcance y su **titular** lo solto. El defecto no esta en el ledger: esta en el titular, y el gate los separa dentro del MISMO pase.** 🔵 **La reformulacion que corresponde, y que cambia el encargo: LATAM no tiene un hueco de PRODUCCION, tiene un hueco de CESION — 4 de 8 piezas medidas no traen archivo de licencia, 2 son GPL-2.0 y 3 permisivas. Conseguir cesion escrita es trabajo negociable; producir la capa desde cero no.** 🟢 **Barrido regional 44: 4/4 regiones, 0 silencios.** 🔴 **Y el marco 2026 gana una QUINTA casa que cae FUERA del rango de `P369`: USD **6,4 MM** en 2025 → **79,6 MM** en 2034 (31,35 % CAGR). Con `P369` (8,7 / 10,6 / 11,4 / 12,3 MM para 2026) la dispersion deja de ser 1,4× y el rango sigue siendo la unica forma honesta de citarlo.**
@@ -26,6 +27,38 @@ updated: 2026-10-05
 > **Pase 100 del 2026-10-04:** 🟢 **Vigesimonoveno barrido regional (año CALCULADO: 2026), las cuatro regiones responden, 0 silencios.** 🔴 **Y el hallazgo que manda es una REINCIDENCIA del canal, no del mercado: el canal secundario reprodujo la versión SUPERADA del AI Act por CUARTA y QUINTA vez — los barridos de HOY de North America («*taking full effect in August 2026, classifies education AI as high-risk*») y de LATAM («*cuyo marco entró en vigor progresivamente desde agosto de 2026*») siguen diciendo agosto de 2026 para el ALTO RIESGO, cuando el Anexo III se difirió a `2027-12-02` y lo vigente es el artículo 50.** 🔵 **Cinco reproducciones en cinco pases es una propiedad del canal, no un error: la prensa de industria NO va a corregir esto, así que la corrección de esta base hay que sostenerla contra fuente legal cada vez que se cotiza en EMEA** (`P281`). 🟢 **NA aporta el dato que vuelve accionable su vacío federal: los estados ya legislan en concreto —Colorado y Texas con requisitos parciales— sobre un mercado de USD 951 M (2024) → USD 2.303,2 M (2029) al 15,9 % CAGR y 36 % del global.** 🟢 **EMEA aporta un CALENDARIO que cae este mes: la 2ª conferencia de trabajo del Consejo de Europa sobre las dimensiones regulatorias de la AI en educación es en OCTUBRE de 2026, y el Consejo de Europa son 46 estados con un instrumento SEPARADO del AI Act.** 🟢 **APAC confirma su eje de soberanía con el número de gobernanza: 48 % de los líderes de gobernanza ponen la adopción de AI como prioridad estratégica 2026 y 57 % de las organizaciones de Asia ya la tienen en producción en al menos un área.** 🟢 **LATAM aporta el dato que invierte la lectura habitual de la región: es el TERCER mercado mundial de descargas de aplicaciones de AI generativa, con adopción empresarial por encima del 85 %.** 🔴 **Y la región que NO se pudo colocar con una PIEZA este pase es LATAM: de las 7 piezas nuevas, 3 quedan en North America, 1 en North America **y** EMEA por huella de despliegue, 1 en APAC y 2 sin región — cero en LATAM, y se dice en vez de dejarlo en silencio.** Ver **`P308`**–**`P311`**.
 > **Pase 97 del 2026-10-04:** 🔴 **Vigesimosexto barrido regional (año CALCULADO: 2026) y el hallazgo que manda es del CANAL, no del mercado: la declaración de canal de esta base sólo se había medido sobre hosts de GitHub, y medida sobre hosts cualesquiera el egreso está BLOQUEADO —`unu.edu`, `coe.int`, `unesco.org` y `example.com` dan `000`/`EGRESS_BLOCKED` por `curl` y por el fetcher— así que TODA la inteligencia regional de este archivo viene del canal secundario y sus fuentes primarias quedan NOMBRADAS y marcadas 🔸 SIN VERIFICAR, una por una.** 🟢 **Las cuatro regiones respondieron, 0 silencios, 7 hechos nuevos.** 🟢 **EMEA aporta el hallazgo regional: el Consejo de Europa —46 estados, instrumento SEPARADO del AI Act— convoca su 2ª conferencia de trabajo sobre las dimensiones regulatorias de la AI en educación, o sea que el perímetro regulatorio de un cliente educativo en EMEA no termina en la UE.** 🟢 **APAC confirma el eje que el pase 95 pre-registró: la soberanía decidirá la infraestructura de ~la mitad de las empresas de la región, lo que convierte la pregunta de compra en «quién procesa datos de alumnos y dónde» y favorece justo la capa permisiva auto-hospedable que este pase confirmó por dos canales (UniTime, OpenOLAT, Sakai, DSpace).** 🟢 **LATAM aporta un DENOMINADOR primario: 200 instituciones de educación superior en 19 países, relevadas ago–oct 2025 (working paper de UNU/UNESCO).** 🔴 **NA cuantifica su hueco de gobernanza: 10 % de instituciones con guías formales contra 71 % de docentes sin formación, sobre un vacío regulatorio federal.** 🔴 **Y el canal secundario reprodujo la versión SUPERADA del AI Act por TERCERA vez (NA y LATAM): sigue diciendo agosto de 2026 para el alto riesgo cuando el Anexo III se difirió a `2027-12-02` y lo vigente es el artículo 50.**
 
+
+## 🔴 Pase 120 del 2026-10-05 (lectura `17:45Z`) — barrido regional 48: 4/4 regiones, 0 silencios, y 0 hechos netos
+
+### 🔴 El cero, enumerado hecho por hecho
+
+**Denominador explícito:** 4 sondas regionales + 4 consultas globales. **Las 4 regiones respondieron ⇒ 0 silencios.** Cada hecho devuelto se buscó en el estante con `grep -ril` antes de escribirlo:
+
+| Región | Hechos devueltos por la sonda | Ya publicados | Netos |
+|---|---|---|---|
+| **North America** | cuota 36 % · USD 3,68 MM (2026) → 32 MM (2030) · 134 proyectos en 31 estados · California **AB 1159** · Carolina del Norte **SB 1006** / Khanmigo USD 10 M · Ohio **HB 96** + plazo **1-jul-2026** | **6 / 6** | 🔴 **0** |
+| **EMEA** | USD 2,64 MM (2026) → 8,0 MM (2030), CAGR 31,9 % · aplicación del AI Act desde **2-ago-2026** · *Digital Omnibus* con fechas revisadas **2-dic-2027** / **2-ago-2028** · liderazgo K-12 Finlandia/Estonia/Países Bajos | **4 / 4** | 🔴 **0** |
+| **APAC** | **AI Basic Act** de Corea en vigor **22-ene-2026** · ley de Vietnam **134/2025/QH15** en vigor **1-mar-2026** · marco de IA agéntica de la **IMDA** del **22-ene-2026** · China/India/Japón dominan la cuota regional | **4 / 4** | 🔴 **0** |
+| **LATAM** | encuesta **Digital Education Council 2026**: **92 %** de alumnos y **79 %** de docentes · **88 %** de docentes con integración «mínima a moderada» · hueco de gobernanza institucional señalado por **UNESCO** · **CONPES 4144** (Colombia) · fragmentación Brasil/Chile/México | **5 / 5** | 🔴 **0** |
+
+🔵 **Lo que este cero agrega, y por eso se escribe en vez de callarse (`P370`):** esta base ya tenía medido que el canal de **oferta** open source estaba agotado. Este pase mide que el canal de **intel regional** lo está también, **para la consulta que prescribe el encargo**. 🟢 **Y la salida medida es la misma que encontró el pase 119: entrar por la OBLIGACIÓN.** Las 2 altas de hoy no salieron de «tendencias de IA en educación 2026»; salieron de preguntar *«¿con qué software se prueba que un dato de alumno no entró al entrenamiento?»* ⇒ **el agotamiento es de SONDA, no de mercado** (`P388` re-confirmado por su lado flaco).
+
+### 🟢 El único hecho NETO: el linaje del artefacto que adoptan los distritos de Ohio
+
+Esta base ya tenía **HB 96** y el plazo del **1-jul-2026** (todo distrito público, *community* y STEM de Ohio con política de IA aprobada por su consejo). 🆕 **Lo que no tenía es de quién es la plantilla que se adopta**, y para un encargo de North America eso es lo accionable:
+
+| Capa | Quién | Qué |
+|---|---|---|
+| obligación | **HB 96** (Ohio) | política de IA aprobada por el consejo, antes del **1-jul-2026** |
+| plantilla oficial | **Ohio Department of Education and Workforce** + **Ohio AI in Education Coalition** | *model policy* que los distritos pueden adoptar tal cual **o personalizar** |
+| base de la plantilla | **InnovateOhio** + **aiEDU** (*AI Education Project*) | el **AI Toolkit** lanzado en **febrero de 2024** |
+| alcance declarado | — | currículo, **evaluación de herramientas de terceros**, y alineación con las políticas ya existentes de acoso, integridad académica y **compras** |
+
+⚠️ **Y la cota, dicha: se buscó una implementación open source de generador/validador de esa plantilla y NO se encontró ninguna.** El artefacto que 600+ distritos adoptan es un **documento**, no software. 🔵 **Ese es el hueco con forma de encargo: la plantilla ya existe y es pública; lo que no existe es la pieza que verifica que la política adoptada por un distrito cubre los puntos que HB 96 pide, ni la que la mantiene versionada contra las compras que la política condiciona.**
+
+### 🔴 1 rechazo informado, y el motivo es de CANAL
+
+La sonda de la obligación de *opt-out* devolvió tres afirmaciones fuertes sin fuente primaria (un «GitHub Opt-Out Registry for AI Training» con «37+ proveedores», un archivo canónico `.optout` con `ai-training: false`, y un estudio de la OSSF con «94 % de reducción»). 🔴 **Ninguna se publica.** El intento de verificación contra la fuente primaria (`docs.github.com`) devolvió **`EGRESS_BLOCKED`** del proxy de egreso de esta sesión. ⚠️ **Negativo de CANAL, no negativo MEDIDO: no se afirma que sean falsas, se afirma que no son verificables por los canales vivos de este pase, y se deja escrito para que el próximo no las re-descubra como si fueran nuevas.**
 
 ## 🟢 Pase 119 del 2026-10-05 (lectura `16:53Z`) — barrido regional 47: 4/4 regiones, 0 silencios; y el hecho neto NO vino del barrido de mercado sino del eje de la OBLIGACIÓN
 
@@ -228,7 +261,17 @@ por coincidencia entre dos. Instrumento nuevo: `p387-shared-date-control/`.
   semanalmente; y **53 %** usa **chatbots CON ALUMNOS** al menos semanalmente (registro previo). ⚠️
   **«Cualquier herramienta» ⊃ «chatbots con alumnos»: se citan las dos con su denominador o se citan
   mal** (`P369` en el eje de adopción, no del tamaño de mercado).
-
+- 🆕 **Oportunidad del pase 120, y es la primera con su hueco MEDIDO:** la obligación de la clase de
+  **AB 1159** (prohibido usar datos de alumnos para entrenar modelos) ya tiene software permisivo que
+  la atiende — [`agentanywhere/shuddhi`](https://github.com/agentanywhere/shuddhi) (**Apache-2.0**,
+  compuerta de procedencia + `BUILD-MANIFEST` reproducible). 🔴 **Pero su `pii.py` (5.601 B,
+  `sha256:39d86f59b49532f6`, leído por RUTA) tiene cobertura MEDIDA de CERO para identificadores de
+  esta región: 8 probados (`SSN`, `social security`, `CPF`, `CURP`, `RUT`, `DNI`, `CUIT`, `NIF`), 0
+  aciertos.** 🟢 **Eso convierte el hueco en presupuesto: un detector de `SSN` en un diccionario de
+  regex de un archivo de 5,6 KB, y la región queda cubierta por una pieza que ya cede permisivamente**
+  (`P397`). ⚠️ **Y el segundo hueco de la región sigue abierto y no es de software: la *model policy*
+  de Ohio es un documento, sin implementación open source que verifique la política adoptada contra
+  lo que HB 96 pide.**
 ### EMEA
 
 - **Calendario, con el registro legal de esta base:** art. 50(2) → `2026-12-02`; Anexo III →
@@ -251,7 +294,16 @@ por coincidencia entre dos. Instrumento nuevo: `p387-shared-date-control/`.
   por *acceso a la educación* y por *admisiones, calificación o evaluación* — **los dos supuestos del
   Anexo III punto 3**. 🔵 **Eso mueve el entregable de «redactar el expediente» a «versionarlo junto al
   código que audita», que es integración y no consultoría de texto** (`P389`, receta `R-P119-A`).
-
+- 🆕 **Oportunidad del pase 120, la región que queda cubierta SIN trabajo de extensión:**
+  [`agentanywhere/shuddhi`](https://github.com/agentanywhere/shuddhi) (**Apache-2.0**, `LICENSE`
+  11.358 B, `sha256:cfc7749b96f63bd3`, titular ausente) emite el **resumen de contenido de
+  entrenamiento del art. 53(1)(d)** contra la plantilla de la **AI Office** publicada el
+  **2025-07-24** (`shuddhi report --eu-ai-act`), y su `pii.py` ya trae detector de **`iban`** ⇒
+  ubicada en esta región **por la obligación que implementa**, no por el domicilio de su autor, que
+  es desconocido (`P397`). 🟢 **Compone con la pieza del pase 119 para el art. 27**
+  (`microsoft/agent-governance-toolkit`, MIT): una cubre el expediente **FRIA** del *deployer*, la
+  otra el expediente del **corpus**. ⚠️ **Cota: 2 ★ y 46 commits — se cotiza como capa disponible y
+  auditable, no como producto maduro.**
 ### APAC
 
 - 🟢 **El hecho neto del pase está acá:** la **IMDA** publicó en **mayo de 2026** el *Discussion
@@ -280,7 +332,15 @@ por coincidencia entre dos. Instrumento nuevo: `p387-shared-date-control/`.
   usuario final** en salida generativa, y **no existe pieza open source que lo cumpla**. ⚠️ **C2PA
   resuelve el art. 50(2) europeo (procedencia firmada), NO el art. 31(3) coreano.** Para un cliente con
   alumnos en Corea, esa capa **hoy se construye a medida**.
-
+- 🆕 **Oportunidad del pase 120, y la región entra por un detalle del payload que la búsqueda no
+  dice:** el `pii.py` de [`agentanywhere/shuddhi`](https://github.com/agentanywhere/shuddhi) trae
+  detectores de **`aadhaar`**, **`pan`** y teléfono **`+91`** ⇒ la pieza está construida con India
+  adentro, y queda ubicada acá **por los identificadores que sabe redactar** (`P397`), medidos por
+  RUTA en el archivo y no inferidos del resumen. 🔵 **Para qué sirve en concreto en la región:** con
+  el **AI Basic Act** de Corea en vigor (**22-ene-2026**), la ley de Vietnam **134/2025/QH15**
+  (**1-mar-2026**) y el marco de IA agéntica de la **IMDA** (**22-ene-2026**), el expediente que
+  piden es jurisdiccional y plural; una compuerta de corpus que ya redacta identificadores locales se
+  extiende por jurisdicción agregando regex, no re-arquitecturando.
 ### LATAM
 
 - 🔴 **Cero hechos nuevos, y esta vez contra un control adversario.** Las 12 sondas regionales
@@ -307,7 +367,17 @@ por coincidencia entre dos. Instrumento nuevo: `p387-shared-date-control/`.
   tenía **Brasil 65,89 / Chile 63,19 / Uruguay 62,21**. **Ediciones o metodologías distintas ⇒ se
   publican las dos con su barrido, no se promedian** (`P381`). Estable en ambas: **Chile y Brasil
   arriba, Uruguay tercero.**
-
+- 🆕 **Oportunidad del pase 120, con el hueco MEDIDO igual que en North America:** la región tiene
+  el problema que la encuesta del **Digital Education Council 2026** describe (**92 %** de alumnos y
+  **79 %** de docentes usando IA, con el hueco de gobernanza institucional que **UNESCO** señala), y
+  la pieza que atiende la capa de procedencia del dato —
+  [`agentanywhere/shuddhi`](https://github.com/agentanywhere/shuddhi), **Apache-2.0** — tiene
+  🔴 **cobertura MEDIDA de CERO para identificadores de esta región**: `CPF`, `CURP`, `RUT`, `DNI`,
+  `CUIT`, `NIF` probados contra su `pii.py`, **0 aciertos cada uno**. 🟢 **Presupuesto, no conjetura:
+  un detector por jurisdicción en un diccionario de regex de 5,6 KB, y la capa de procedencia queda
+  disponible para una región cuyo problema declarado es justamente la falta de expediente**
+  (`P397`). ⚠️ **Se dice en qué NO ayuda: la pieza documenta qué entró al corpus; no escribe la
+  política institucional que la encuesta encuentra ausente.**
 ### Global
 
 - **Mercado:** $7,52 MM (2025) → **$10,6 MM (2026)**, CAGR 40,9 %; destino en disputa **$42,48 MM
