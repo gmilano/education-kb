@@ -8,6 +8,7 @@ updated: 2026-10-05
 
 > Plataformas verticales reales, en producción, customizables con AI.
 > Modelo: partir de algo que ya funciona y que ya tiene los datos, y agregar la capa agéntica arriba.
+> **Pase 111 del 2026-10-05:** 🔴 **0 verticales nuevas (trigesimo barrido): el canal devuelve las ya publicadas —OpenEduCat sobre Odoo, Open edX via Axim, Moodle, Chamilo, OpenOLAT, Fedena, ERPNext/Frappe Education— mas Sakai e ILIAS, que ya estan.** 🆕 **Lo que se agrega es la COTA con que se pueden citar sus cifras (`P349`/`P353`), y el testigo es la plataforma mas citada del estante: `moodle/moodle` renderiza **`7.5k` ★** — **DOS** cifras significativas, no tres, y el canal no distingue 7.450 de 7.550. Una ficha que publique un entero exacto publica una precision SIN canal que la sostenga, y en este estante las cifras grandes son la norma.** 🟢 **La licencia, en cambio, se lee del PAYLOAD y es firme: GPL-3.0 para Moodle, confirmada contra lo publicado.** 🔵 **Esa es la asimetria util del pase: la CESION de una plataforma es verificable al byte, su POPULARIDAD solo por magnitud — y para una decision de compra esta bien ordenado, porque lo que decide es la licencia.** 🔴 **Barrido regional 40: 15 hechos devueltos, 0 nuevos (`P287`) — el eje que sigue rindiendo es el de la PROCEDENCIA DEL ACTIVO, que es justo lo que una vertical tiene que contestar antes de entregarse con contenido adentro.**
 > Verificado vía WebFetch el 2026-09-30; las capas del pase 11, el 2026-10-01.
 > **Pase 110 del 2026-10-05:** 🔴 **0 verticales nuevas (vigesimonoveno barrido): el canal devuelve OpenEduCat, Open edX, Moodle, Chamilo, OpenOLAT, Fedena, ERPNext/Frappe Education — las SIETE ya publicadas.** 🆕 **`P347` — y el aporte del pase es un espécimen de la clase que el pase 109 habia escrito como rama de refutacion sin encontrarla: «un archivo de licencia puede EXISTIR y no contener licencia». `frappe/education`, repo citado 106 veces por esta base, trae `license.txt` de **19 BYTES** cuyo contenido completo es `License: GNU GPL V3` (sin salto final), con el texto de la GPL en **404 en 5 rutas mas**; `frappe/erpnext`, MISMA organizacion y MISMO nombre de archivo, trae **35.149 B** con el texto entero.** 🔵 **Asi que la pregunta de compra cambia de «¿esta licenciado?» a «¿la licencia tiene TEXTO?», y para una redistribucion la consecuencia es concreta: el obligado a acompañar el texto de la GPL pasa a ser QUIEN ENTREGA, porque el upstream no lo incluye.** ⚠️ **Y un hueco INFORMADO: «SchoolTool» aparece en el barrido como SIS open source y NO tiene repositorio alcanzable — `schooltool/schooltool` y `SchoolTool/schooltool` dan 404 — asi que no entra como fila; se registra como ausencia medida y no como plataforma.**
 > **Pase 109 del 2026-10-05:** 🔴 **0 verticales nuevas (vigesimoctavo barrido): las SEIS plataformas devueltas —OpenEduCat sobre Odoo, Open edX via Axim Collaborative, Moodle, Chamilo, OpenOLAT (Apache-2.0) y Fedena (Apache-2.0)— estan las seis ya en este estante.** 🟢 **Unica cifra nueva, y entra como escala y no como alta: Open edX declara 140 M+ de alumnos.** 🟢 **La cesion de dos piezas se re-midio del payload y confirma lo publicado digito a digito: Gibbon GPL-3.0 (35.121 B, `93178a43d6d3`) y OpenEduCat (8.241 B, `528f84036800`) ⇒ la AI sigue yendo ENCIMA y por API, en proceso separado.** ⚠️ **`P343`: en este pase un extractor con prefijo GOLOSO y sin frontera izquierda en la captura leyo `35.121` como `5.121` y la huella fue lo unico que lo detecto — una cifra de bytes publicada SIN huella no es verificable.**
@@ -168,6 +169,40 @@ updated: 2026-10-05
 > **`qti3-pnp`**, que abren accesibilidad de evaluación como entregable auditable (**P72**). ⚠️ **Open edX cambia de
 > recomendación: proponer con presupuesto de mantenimiento (gap 70).** Ver la sección del pase 33, abajo.
 
+
+## 🔴 Pase 111 (2026-10-05) — 0 verticales nuevas (barrido 30), y lo que se agrega es la COTA con que se pueden citar sus cifras
+
+🔴 **0 verticales nuevas.** El canal devolvio las ya publicadas (OpenEduCat sobre Odoo, Open edX via
+Axim Collaborative, Moodle, Chamilo, OpenOLAT, Fedena, ERPNext/Frappe Education) mas Sakai e
+ILIAS, que ya estan en este estante, y una comparativa de LMS que no agrega plataforma.
+
+### 🆕 Lo que este pase le cambia a una ficha de plataforma: la cifra lleva COTA y FECHA
+
+`P349` + `P353`, y el testigo es la plataforma mas citada de este estante:
+
+| plataforma | re-leido en este pase | lo que se puede publicar |
+|---|---|---|
+| [`moodle/moodle`](https://github.com/moodle/moodle) | **`7.5k` ★** / 7.7k forks / 🟢 **GPL-3.0** | 🔴 **`7,5k ★ ±50`, nunca un entero** |
+
+🔴 **`7.5k` son DOS cifras significativas, no tres:** el canal no distingue 7.450 de 7.550. Asi que
+una ficha de plataforma que publique un entero exacto de estrellas publica una precision que **no
+tiene canal que la sostenga** — y en este estante las cifras grandes son la norma.
+
+🟢 **La licencia, en cambio, se lee del PAYLOAD y es firme:** GPL-3.0 para Moodle, confirmada contra
+lo publicado. 🔵 **Es la asimetria util de este pase: la CESION de una plataforma es verificable al
+byte, su POPULARIDAD solo por magnitud.** Para una decision de compra eso esta bien ordenado — lo
+que decide es la licencia, no el conteo de estrellas.
+
+### 🔵 El eje que sigue rindiendo en este estante, y el que ya no
+
+🔴 **El barrido regional 40 devolvio 15 hechos y 0 nuevos** (`P287`): marco, dinero y adopcion estan
+resueltos para las cuatro regiones y el canal generalista esta agotado. 🟢 **El eje que sigue
+devolviendo hallazgos es el de la PROCEDENCIA DEL ACTIVO** —`P347` (una licencia de 19 bytes),
+`P348` (la tasa del corpus es 76,4 % y no 58,0 %), `P352` (una suite que no corre fuera de su
+contenedor)—, que es exactamente la pregunta que una vertical de partida tiene que contestar antes
+de entregarse con contenido adentro.
+
+---
 
 ## 🔴 Verticales nuevas: 0 — vigesimonoveno barrido con el conjunto ya publicado, y el aporte es `P347`: un archivo de licencia que EXISTE y no contiene licencia (pase 110 del 2026-10-05)
 

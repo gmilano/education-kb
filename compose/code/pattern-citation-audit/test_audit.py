@@ -75,3 +75,64 @@ class DesanclaDetector(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main(verbosity=2)
+
+class ConvencionEBackticks(unittest.TestCase):
+    """`P354` — regresion: el numero en CODIGO INLINE es la forma que
+    patterns.md usa desde el pase ~95, y el detector era ciego a ella."""
+
+    def _defs(self, text):
+        import tempfile, os
+        fd, p = tempfile.mkstemp(suffix='.md')
+        with os.fdopen(fd, 'w', encoding='utf-8') as fh:
+            fh.write(text)
+        try:
+            return definitions(p)
+        finally:
+            os.unlink(p)
+
+    def test_backticks_con_emoji_se_definen(self):
+        """La forma exacta del pase 111."""
+        d = self._defs('### \U0001f534 `P348` \u2014 contar por el ARCHIVO\n')
+        self.assertIn(348, d)
+
+    def test_backticks_sin_emoji_se_definen(self):
+        d = self._defs('## `P284` \u2014 titulo\n')
+        self.assertIn(284, d)
+
+    def test_rango_con_backticks_se_expande(self):
+        """La convencion C con backticks. \U0001f535 Sin prosa antes del numero:
+        un encabezado de GRUPO con titulo ('Patrones del pase 111 \u2014 `P348`...')
+        NO define por rango, y esta bien que no lo haga — cada patron lleva su
+        propia subseccion. Lo verifica `test_NEGATIVE_encabezado_con_prosa_antes`."""
+        d = self._defs('## `P360`\u2013`P362` \u2014 los tres patrones del pase\n')
+        for n in (360, 361, 362):
+            self.assertIn(n, d)
+
+    def test_la_forma_VIEJA_sigue_funcionando(self):
+        """El arreglo no puede romper las convenciones A/B/C/D que ya andaban."""
+        d = self._defs('## P142 \u2014 titulo\n### **P146** \u2014 otro\n'
+                       '## Receta P149 \u2014 x\n')
+        for n in (142, 146, 149):
+            self.assertIn(n, d)
+
+    def test_NEGATIVE_una_CITA_en_backticks_no_es_definicion(self):
+        """\U0001f534 El control que importa: `P999` citado en prosa o en una FILA
+        de tabla no define nada. Si lo hiciera, el detector no detectaria."""
+        d = self._defs('Ver `P999`, que es la causa.\n\n| `P998` | x |\n')
+        self.assertNotIn(999, d)
+        self.assertNotIn(998, d)
+
+    def test_NEGATIVE_encabezado_sin_guion_no_define(self):
+        """La convencion pide separador (guion o coma) despues del numero."""
+        d = self._defs('### `P997` es interesante\n')
+        self.assertNotIn(997, d)
+
+    def test_NEGATIVE_encabezado_con_prosa_antes_no_define(self):
+        """Un encabezado de GRUPO que lista numeros no los define por si solo;
+        cada patron lleva su propia subseccion."""
+        d = self._defs('## Patrones del pase 110 (2026-10-05) \u2014 `P996`, `P995`\n')
+        self.assertNotIn(996, d)
+
+
+if __name__ == '__main__':
+    unittest.main(verbosity=2)

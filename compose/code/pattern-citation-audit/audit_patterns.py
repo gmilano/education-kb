@@ -13,14 +13,22 @@ una produce falsos positivos (fue lo que paso: P145-P148 y la receta P149):
   B  "### P146 - titulo"             subseccion dentro de un encabezado de grupo
   C  "## P145-P148, los patrones..." encabezado de RANGO (define los cuatro)
   D  "## Receta P149 - ..."          receta: otro namespace, NO es patron
+  E  "### `P348` - titulo"           el numero en CODIGO INLINE (backticks)
+
+`P354`: la convencion E es la que patterns.md usa desde el pase ~95 y este detector
+era CIEGO a ella -- 42 numeros (284-287, 308-319, 328-353) estaban definidos con
+backticks y salian COLGADOS. Es el mismo defecto que su propio docstring documenta
+haber tenido con P145-P148: apareció una tercera forma de escribir el encabezado y
+el detector solo conocia dos. La familia es la de P171/P288/P299/P304: el ancla
+reconoce una ORTOGRAFIA y no el OBJETO.
 
 Uso:  python3 audit_patterns.py [raiz-del-kb]
 Salida: TSV por numero + resumen. Codigo 1 si hay colgadas.
 """
 import re, sys, glob, os, collections
 
-DEF_A_B = re.compile(r'^#{2,4}\s*(?:[^\w\n]*\s)?\*{0,2}P(\d+)\*{0,2}\s*(?:[—–-]|,)', re.M)
-DEF_RANGE = re.compile(r'^#{2,4}\s*(?:[^\w\n]*\s)?P(\d+)\s*[—–-]\s*P(\d+)', re.M)
+DEF_A_B = re.compile(r'^#{2,4}\s*(?:[^\w\n]*\s)?[`*]{0,3}P(\d+)[`*]{0,3}\s*(?:[—–-]|,)', re.M)
+DEF_RANGE = re.compile(r'^#{2,4}\s*(?:[^\w\n]*\s)?[`*]{0,3}P(\d+)[`*]{0,3}\s*[—–-]\s*[`*]{0,3}P(\d+)', re.M)
 DEF_RECIPE = re.compile(r'^#{2,4}\s*(?:[^\w\n]*\s)?Receta\s+P(\d+)', re.M | re.I)
 CITE_BOLD = re.compile(r'\*\*P(\d+)\*\*')
 CITE_ANY = re.compile(r'\bP(\d+)\b')

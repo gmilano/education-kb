@@ -1,0 +1,19 @@
+=== LA COMPARACION, EN LA MISMA UNIDAD (el problema) ===
+corpus          10210 resoluble /  13371 unidades =  76.4 %
+con_figura       1005 resoluble /   1586 unidades =  63.4 %
+sin_figura       9205 resoluble /  11785 unidades =  78.1 %
+
+=== EL CONTEO DEL PASE 110, ponderado por ARCHIVO DE FIGURA ===
+por_figura       1418 resoluble /   2443 figuras  =  58.0 %
+
+ACCION C pedia: tasa del corpus POR DEBAJO de 58,0 %%
+ACCION C medido: 76.4 % -> REFUTADA (+18.4 pp)
+de los cuales FORMA DEL DENOMINADOR: +5.3 pp (58,0 -> 63.4 por unidad)
+
+=== EL MECANISMO: figuras por unidad, por clase ===
+RESOLUBLE              unidades  1005  figuras  1418  figuras/unidad 1.411
+AUSENTE                unidades   385  figuras   586  figuras/unidad 1.522
+VERSION-SIN-VARIANTE   unidades    99  figuras   146  figuras/unidad 1.475
+NO-ES-CESION           unidades    97  figuras   293  figuras/unidad 3.021
+
+FACTOR DE SESGO (no-resoluble / resoluble): 1.250

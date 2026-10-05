@@ -8,9 +8,79 @@ updated: 2026-10-05
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 > No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
+> **Pase 111 del 2026-10-05:** 🔴 **0 altas (barrido 33), cero ENUMERADO: 13 candidatas → 12 ya publicadas (`P311`), 1 nueva de OTRA industria (`OpenOSINT`).** 🆕 **Lo que se mueve es la COTA de la cifra que el pase 110 acababa de recuperar: `P349` — la resolucion del canal es una FUNCION ESCALON, no «3 cifras significativas». Debajo de 1.000 da el entero EXACTO (`264`, `107`); en 1.000-9.999 da solo DOS (`7.5k`, ±50). Peor error relativo al pie de la banda k (±5,0 %), peor absoluto arriba (±500).** 🆕 **Y la primera DERIVA medida: `open-tutor-ai-CE` 108 → **107 ★** en un pase, con `OATutor` en 265 (2026-09-30) → 264 → 264. En la banda EXACTO una cifra sin fecha no es un dato (`P353`), y lo que volvio medible la deriva fue una tabla de ESTE archivo que SI estaba fechada.** 🔴 **93 de las 262 ocurrencias de cifras con 4+ digitos exactos viven aca —el archivo mas cargado del arbol—, 0 posteriores al pase 110; pero el barrido cuenta la CITA igual que el DATO, asi que el conteo crudo sobreestima (`P351`).** 🔵 **Ruido de canal registrado y NO tomado como correccion: la busqueda reporta `openclaw` en ~362k contra los 385.407 publicados — ninguna de las dos tiene canal que la sostenga.**
 > **Pase 110 del 2026-10-05:** 🔴 **0 altas permisivas (trigesimosegundo barrido), cero ENUMERADO: 6 candidatas → 4 ya publicadas (`P311`), 2 nuevas sin cesion.** 🟢 **Lo que SE MUEVE este pase no es el trending: es que las ESTRELLAS VUELVEN a ser medibles — `WebFetch` sobre `github.com` sirve 200 donde `curl` da 403, con control negativo en 404.** 🔴 **Y al volver, cobran: `OATutor` 264 ★ contra «~1,5k» publicado, y `open-tutor-ai-CE` BSD-3-Clause / 108 ★ contra «Apache-2.0 / ~600 ★».**
 > **Pase 107 del 2026-10-05:** 🔴 **0 altas permisivas (trigesimo barrido, 3 candidatas MEDIDAS del payload y las 3 con su bloqueo nombrado) y las TRES acciones pre-registradas corridas: A con la cota NO CERRADA y su clausula de atribucion FALSIFICADA, B CONFIRMADA, C CONFIRMADA en dos clausulas y FALSIFICADA en la tercera.** 🔴 **`P332`: la EXTENSION de un archivo de imagen no es su FORMATO — 2.443 de 2.443 `.gif` son PNG/JPEG/WEBP, y un barrido por extension habria dado «0 solapamiento» desde una premisa falsa.** 🔴 **`P334`: el titular de una FIGURA se resuelve por BYTES y vive en una obra DISTINTA de la que el item cita (36 pares leidos).** 🔴 **`P333`: `fa4e32e5e622` era la huella del archivo SIN su salto final — defecto de dato, no de upstream.** 🔴 **`P335`: tercera sub-clase de `P320` — lo denegado fue el LOTE, no la pieza nombrada.** 🟢 **Canal nuevo: `gitlab.com/-/raw`.**
 > **Pase 106 del 2026-10-05:** 🟢 **0 altas (vigesimonoveno barrido, 5 candidatas, las 5 frenadas por el gate de `P311`) y las TRES acciones pre-registradas corridas: A CONFIRMADA, B FALSIFICADA, C CONFIRMADA.** 🔴 **`P328`: la cesion de un OER se ESTRECHA entre ediciones — 10 de 10 colecciones con el mismo `collection-id` pasan de `CC BY 4.0` en `1e` a `CC BY-NC-SA 4.0` en `main`, y el slug cambia de nombre, que es por lo que esta base no lo veia.** 🔴 **El denominador se corrige de 13.371 a 82.492 unidades y aparece una capa sintetica de 6.886 unidades (`oer: openai`) sin cesion.** 🟢 **Canal nuevo: `git ls-remote` para enumerar refs — es el que abrio la accion A.**
+
+## 2026-10-05 — pase 111: 0 altas (barrido 33), y lo que se mueve es la COTA de la cifra que el pase 110 acababa de recuperar
+
+### 🔴 El barrido de la semana: 0 altas, con el reparto escrito
+
+Año **CALCULADO** (`date -u +%Y` → **2026**). `top open source AI agents education 2026 github MIT`
+y `github trending education AI 2026` devolvieron por **trigesimotercera** vez el eje generalista.
+
+| candidata devuelta | gate `P311` | veredicto |
+|---|---|---|
+| `openclaw` · `opencode` · `OpenHands` · `CrewAI` · `LangChain` | 🔴 ya publicadas | descarte |
+| `500-AI-Agents-Projects` · `awesome-ai-agents-2026` · `agents-radar` | 🔴 ya publicados | catalogo, no agente |
+| `ai-engineering-from-scratch` · `LLMs-from-scratch` · `production-agentic-rag-course` | 🔴 ya publicados | **curriculo**, no software que educa |
+| `OpenOSINT` | 🟢 **0 menciones — NUEVA** | 🔴 **descarte: OSINT en terminal, no industria educativa** |
+
+🔴 **13 candidatas medidas → 12 ya publicadas, 1 nueva y de otra industria. 0 altas.** El unico slug
+que el gate dejo pasar no sirve a ninguna institucion educativa (`P281`).
+
+### 🆕 La cota de la cifra, que es lo que de verdad se movio esta semana
+
+El pase 110 recupero las estrellas y publico una cota: *«3 cifras significativas»*. Medida sobre
+cinco repos en cuatro magnitudes, **esa cota es falsa en las dos direcciones**:
+
+| repo | renderiza | cifras | cota | banda (`P349`) |
+|---|---|---|---|---|
+| [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | `264` | 3 | 🟢 **0 — EXACTO** | `EXACTO` |
+| [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) | `107` | 3 | 🟢 **0 — EXACTO** | `EXACTO` |
+| [`moodle/moodle`](https://github.com/moodle/moodle) | `7.5k` | 🔴 **2** | ±50 | `K-2CIFRAS` |
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | `40.8k` | 3 | ±50 | `K-3CIFRAS` |
+| [`browser-use/browser-use`](https://github.com/browser-use/browser-use) | `117k` | 3 | ±500 | `K-ENTERO` |
+
+🔵 **Debajo de 1.000 el canal da el entero EXACTO; en 1.000–9.999 da solo DOS cifras.** El peor
+error **relativo** esta al pie de la banda `k` (±5,0 %) y el peor **absoluto** arriba (±500) — dos
+lugares distintos, que una sola cifra de «cifras significativas» no puede expresar.
+
+### 🆕 Y la primera DERIVA medida de este arbol, en la banda donde se puede ver
+
+| repo | 2026-09-30 | pase 110 | 🟢 pase 111 (2026-10-05) |
+|---|---|---|---|
+| `CAHLR/OATutor` | 265 ★ | 264 ★ | 🟢 **264 ★** |
+| `Open-TutorAi/open-tutor-ai-CE` | — | 108 ★ | 🔴 **107 ★** |
+
+🔴 **`open-tutor-ai-CE` perdio 1 estrella en un pase.** En la banda `EXACTO` eso es visible, asi que
+ahi **una cifra sin fecha no es un dato**: la precision que la vuelve checkeable es la misma que la
+hace envejecer (`P353`).
+
+🟢 **Lo que hizo medible la deriva fue una tabla de este archivo que SI estaba fechada** («Real
+2026-09-30»). La fila de catalogo, que llevaba un `265` desnudo, es la que habia que arreglar — y
+quedo fechada en este pase.
+
+### 🔴 Lo que el barrido de cifras encuentra en este archivo, y lo que SOBREESTIMA
+
+La accion B pre-registrada barrio los `.md` por cifras de estrellas con 4+ digitos exactos: **265 ocurrencias al cierre del pase, 42 valores distintos, 8 archivos**, y **94 de ellas viven aca** — el archivo mas
+cargado del arbol. 🟢 **Ninguna es posterior al pase 110**, asi que la regla que ese pase escribio
+no se violo.
+
+🔴 **Pero el instrumento cuenta la CITA igual que el DATO:** dos ocurrencias son el pase 110
+citando «385.407 ★» *para refutarla*. **Una cifra citada para refutarla es el registro
+FUNCIONANDO, no el defecto** — asi que el numero que hay que arreglar son los **42 valores
+distintos** y sobre todo las **31 de la region de CATALOGO**, no las 265 (`P351`, forma inversa de
+`P344`).
+
+### 🔵 Un dato sobre el canal, no sobre la industria
+
+La capa de busqueda reporta ahora `openclaw` en **~362k** mientras esta base publica **385.407**.
+Por `P349` las dos son irreproducibles en esa banda (±500 en el mejor caso), asi que **el par se
+registra como ruido de canal y NO como correccion**: ninguna de las dos tiene canal que la sostenga.
+
+---
 
 ## 2026-10-05 — pase 110: 0 altas (barrido 32), y lo que se mueve es que las ESTRELLAS vuelven a ser medibles — con una cota de resolucion y dos cifras del catalogo refutadas
 

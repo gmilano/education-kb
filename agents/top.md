@@ -8,6 +8,7 @@ updated: 2026-10-05
 
 > Agentes y herramientas AI open source para educación. Foco: MIT / Apache 2.0 / BSD.
 > Verificado repo por repo vía WebFetch el 2026-09-30 (stars y licencia leídos de la página del repo).
+> **Pase 111 del 2026-10-05:** 🔴 **0 altas permisivas (trigesimotercer barrido), cero ENUMERADO: 13 candidatas medidas → 12 ya publicadas (`P311`) y 1 nueva de OTRA industria (`OpenOSINT`, agente de OSINT en terminal).** 🔴 **`P350` — la accion A sale NO MEDIBLE, y el hallazgo es que la FRONTERA estaba un paso antes de donde la pre-registracion la puso: ella se detuvo en «no mandar nada», y ENUMERAR un canal de contacto en repos de terceros ya es manejo de datos personales — DENEGADO por politica. Las dos ramas pre-registradas solo admitian numeros; el tercer resultado es que el numero no se obtiene aca, y callarlo lo dejaria indistinguible de un cero (`P343`).** 🟢 **Lo que SI se midio es estructura y decide igual: 120 sondas, README 200 en 6/6 (testigo de alcance) y `CODEOWNERS`/`CITATION.cff`/`.github/CODEOWNERS` en **0/6** ⇒ ninguna superficie de contacto LEGIBLE POR MAQUINA, la unica es prosa libre y el unico manifiesto tiene 69 B. `P342` queda recuperable en teoria y NI ENUMERABLE en este entorno — enunciado sobre el ENTORNO, no sobre los repos.** 🟢 **Accion B CONFIRMADA (265 ocurrencias al cierre del pase, 42 valores distintos, 8 archivos; 0 posteriores al pase 110), y `P351`: el barrido no distingue el DATO de la CITA que lo refuta — 20 de las 262 son CITAS, entre ellas el pase 110 citando «385.407 ★» para refutarla, asi que el conteo crudo SOBREESTIMA; el defecto son los 42 valores distintos y sobre todo las 31 de la region de CATALOGO. Forma INVERSA de `P344`.** ⚠️ **Y el barrido se midio sobre el arbol TAL COMO ESTE PASE LO DEJA: de las 265, 11 son de este pase y las 11 son CITAS — el conteo crudo NO es estable bajo su propia publicacion (262 antes de redactar la seccion, 265 al cerrarla), mientras los 42 valores distintos y las 31 de catalogo NO se movieron. La cifra que un pase publica tiene que ser INVARIANTE bajo el acto de publicarla, y de las tres solo dos lo son. Lo que obligo a cambiar el instrumento: su clasificador era LEXICO (una lista de palabras) y el texto de ESTE pase lo rompio —tres citas claras contadas como dato—, asi que la rama de refutacion disparo sobre el pase 111. El arreglo NO fue alargar la lista (eso es `P354`): la senal es ESTRUCTURAL —citada va entre «» o en codigo inline, publicada va desnuda o en celda de tabla— y la lexica queda secundaria. Suite 19/19 → 26/26.** 🔴 **Accion C REFUTADA por DOS motivos apilados: la tasa SUBE a 76,4 % (+18,4 pp, pedia caer por debajo de 58,0 %) y los dos numeros NO ERAN COMPARABLES —58,0 % cuenta FIGURAS, 76,4 % cuenta PROBLEMAS—. En la misma unidad: con figura 63,4 %, sin figura 78,1 %, corpus 76,4 %. `P348`: los 5,3 pp son forma del denominador y el mecanismo esta MEDIDO — las unidades mal cedidas cargan 25,0 % mas figuras/unidad y `NO-ES-CESION` carga 3,021, mas del doble. Usar 58,0 % como tasa del corpus subestima la entregabilidad en 18,4 pp.** 🆕 **`P349`: la cota del canal de estrellas es una FUNCION ESCALON, no «3 cifras significativas» — debajo de 1.000 es EXACTO (`264`, `107`) y en 1.000-9.999 son DOS cifras (`7.5k`, ±50); peor error relativo al pie de la banda k, peor absoluto arriba (±500).** 🆕 **`P353`: en la banda exacta la deriva se ve a 1 unidad, asi que ahi la cifra no se publica SIN FECHA — `open-tutor-ai-CE` 108 → **107** en un pase. Y el primer diagnostico de este pase estaba MAL y se corrige: la tabla de correccion publica 265 ★ bajo el encabezado «Real 2026-09-30», asi que **esta fechada y es correcta** — es lo que vuelve MEDIBLE la deriva y da una serie de tres puntos (265 → 264 → 264). El defecto era la FILA DE CATALOGO, con un `265` DESNUDO sin fecha ni canal (`P156`/`P47`), invisible para el barrido de la accion B porque 265 tiene TRES digitos. Queda fechada. La leccion sale al reves de lo que parecia: la tabla CON fecha sobrevivio al pase, la que no la tenia, no.** 🆕 **`P352`: una suite que pasa solo en el contenedor que la escribio no es un control — `test_p345.py` («21/21» del pase 110) NO IMPORTA en un clon nuevo por un default en `/tmp`; arreglada contra el artefacto versionado y reproduce 1.418/2.443 digito a digito.** 🟢 **Tablero medido DESDE EL CLON: 66 suites (60 Python + 6 shell), 0 fallos; `p348` 21/21, `p349` 21/21, `p350` 12/12, `p351` 26/26, control compartido 106/106 y 79/79.** 🆕 **`P354`: el control que audita a ESTE archivo era CIEGO a la notacion que este archivo usa — el auditor de citas de patron conocia cuatro convenciones de encabezado y no la quinta (numero en CODIGO INLINE, la de `patterns.md` desde el pase ~95), asi que reporto `P348`-`P353` como colgadas estando DEFINIDAS; 42 numeros afectados (`P284`-`P287`, `P308`-`P319`, `P328`-`P353`) y el control seguia EN VERDE. Arreglado: colgadas 63 → 21, definidos 288 → 330, suite 8/8 → 15/15 con tres controles negativos. Familia `P171`/`P288`/`P299`/`P304`.** ⚠️ **Las 21 restantes son deuda real de pases viejos (la peor: `P135`, 84 citas en negrita y 0 definiciones) y NO se corrigen — inventar la definicion de un patron ajeno es fabricar doctrina (`P286`).** 🟢 **Barrido regional 40: 4/4 regiones, 0 silencios y **0 hechos nuevos** — saturacion MEDIDA con el grep de control sobre 13 hechos devueltos (`P287`).** Ver **`P348`**–**`P354`**.
 > **Pase 110 del 2026-10-05:** 🔴 **0 altas permisivas (trigesimosegundo barrido), con el cero ENUMERADO: 6 candidatas medidas → 4 ya publicadas (`P311`) y 2 nuevas que no ceden nada (`sumedhakoranga/TutorAI`, `tutornew/OpenTutor`, 10 sondas cada una, README 200 como testigo).** 🔴 **`P344` — la accion A sale FALSIFICADA en su clausula principal (0 de 13, pedia ≥2) y el motivo es de CONSTRUCCION DEL DENOMINADOR: los 13 son las filas `SILENT-3-LAYERS` del pase 66, y el pase 66 ya habia apartado con otras etiquetas (`README-BADGE`, `README-PROMISE-BROKEN`, `README-IDENTIFIER`, `README-CONTRADICTION`) justo a los repos que SI afirman. Medido sobre las 9 que la pre-registracion EXCLUYO: 6 de 9 son `P342`. Las dos ramas de refutacion disparan a la vez, sobre denominadores distintos.** 🔴 **Y el instrumento de la accion A tenia DOS puntos ciegos propios: era de sintaxis Markdown y no veia los badges en HTML (`<img src="…shields.io/badge/License-MIT…">`, que es como afirman `NLP2CT` y `SafeTutors`), ni el nombre envuelto en `**enfasis**`. El pase 66 los habia visto porque leyo la pagina RENDERIZADA: el canal de PAYLOAD tiene MENOR recall para AFIRMACIONES, al reves que para cesiones.** 🟢 **Los 13 quedan cerrados por el canal fuerte: arbol enumerado (`P275`), 0 archivos de cesion en 9.886 rutas, y el instrumento PASA los dos controles de respuesta conocida que este arbol ya tenia (`1EdTech/openbadges-specification` → `ob_v3p0/license.md`, 12.324 B, replica `P187` AL BYTE y le corrige el denominador: son CINCO superficies de cesion, no una; `dini-ag-kim` → CC BY-SA 4.0 en `lp-base.ttl:24`) y FALLA con el repo inventado.** 🔴 **Pero el arbol introduce un error nuevo y medido: `dini-ag-kim/src/ontology/utils/owl2shacl/LICENSE` es **LGPL-3.0** (7.652 B, titular FSF) y es de una herramienta EMPOTRADA — tres canales, tres respuestas para UN repo, y un barrido de arbol que tome el primer archivo le pega copyleft de CODIGO a un repo cuyo entregable es DATO con atribucion.** 🟢 **Accion B REFUTADA, y por el mecanismo mas filoso de `P320` hasta ahora: el canal es propiedad de la HERRAMIENTA, no del dominio.** `curl` → `github.com` **403**; **`WebFetch` → `github.com` 200**, sirve estrellas, forks y licencia, y da **404 en repo inventado** (control negativo pasa). El pase 109 publico *«`github.com` degradado a 403 ⇒ 0 estrellas medidas»*, y eso era un enunciado sobre `curl` publicado como enunciado sobre el DOMINIO. ⚠️ **Con una cota: la resolucion es de 3 cifras significativas («40,8k»), asi que las estrellas vuelven como MAGNITUD con el canal nombrado, nunca como los enteros exactos que esta base publicaba.** 🔴 **Y el canal recuperado cobra de inmediato: `CAHLR/OATutor` tiene **264 ★** y esta base publico «~1,3k» y «~1,5k» (inflado ~5-6×); `Open-TutorAi/open-tutor-ai-CE` es **BSD-3-Clause** y **108 ★**, publicado como «Apache-2.0, ~600 ★» — mal la licencia Y las estrellas, y la licencia importa porque Apache-2.0 trae concesion EXPLICITA de patentes y BSD-3-Clause NO.** 🟢 **Accion C CONFIRMADA en la letra: el corte converge a **1.611/832**, y `P337` cierra con el mecanismo MEDIDO — las 41 de diferencia son la cuarta forma, un DOMINIO DESNUDO (`https://openstax.org/`), asi que nunca fue una contradiccion sino un PREDICADO NO DICHO.** 🔴 **`P346` — y lo que cierra es que la pregunta no decidia nada: medido el campo `license` de las 2.443 figuras, entregable sin gestion son **1.418** (58,0 %), con **368 figuras del lado OPENSTAX que no ceden NADA** y **175 del lado NO-OPENSTAX con `CC BY 4.0` impecable**. Procedencia y cesion son ejes INDEPENDIENTES, medido en las dos direcciones.** 🟢 **Tablero: 62 suites (56 Python + 6 shell), 0 fallos; `p344` 31/31, `p345` 21/21, control compartido 106/106 (`Python 3.11.15`).** Ver **`P344`**–**`P346`**.
 > **Pase 109 del 2026-10-05:** 🔴 **0 altas permisivas (trigesimoprimer barrido) y por primera vez la razon se MIDE en vez de declararse: las 5 candidatas que el canal devolvio (`DeepTutor`, `open-tutor-ai-CE`, `AITutorAgent`, Freelingo, Bloom) ya estaban las 5 en el arbol — 5 devueltas / 5 publicadas / 0 nuevas (`P311`, `P287`).** 🔴 **`P342` — un badge de licencia y una entrada de arbol del README son una AFIRMACION de cesion, no una cesion: `Javi111003/OlivIA-RAG`, publicado DOS veces por esta base como «sin licencia», afirma MIT en la linea 3 (badge hipervinculado a `LICENSE`) y en la linea 50 (su propio arbol de directorios), con el archivo en 404 en 20/20 sondas ⇒ FALSO NEGATIVO publicado, y una pieza LATAM recuperable por una gestion y no un descarte.** 🔸 **Accion B CONFIRMADA en su mitad fuerte (0 de 9 «sin licencia» tienen archivo) y DEBIL en la otra (el unico caso de ortografia, `openedx/XBlock`/`LICENSE.TXT`, ya lo tenia `P279`).** 🔴 **Accion C FALSIFICADA en sus dos clausulas, y lo que se cumple es la clausula de refutacion que el pase 108 escribio contra si mismo: 5 de 5 huellas son del archivo COMPLETO, 0 de 5 del archivo sin su ultimo byte, 5 de 5 terminan en `0a` ⇒ `P333` cerrado por ausencia medida.** 🔴 **`P343` — defecto de ESTE pase, y su primer diagnostico tambien estaba mal: un prefijo GOLOSO `^.*` sin frontera izquierda en la captura leyo el `35.121 B` publicado como `5.121 B` (no fue el cuantificador acotado, que solo captura bien), y POSIX ERE no da con que frenarlo porque `grep -E`/`sed -E` no tienen cuantificadores perezosos (`.*?` es goloso) ni *lookbehind*; la misma corrida dejo una fila cuyo «repo» es la RUTA `master/LICENSE.TXT`. Lo atrapo la huella y nada mas, y el enunciado lo corrigio la SUITE.** 🔴 **Accion A NO CORRIDA (tercer pase de deuda declarada) y `github.com` degradado a 403 ⇒ 0 estrellas medidas.**
 > **Pase 108 del 2026-10-05:** 🟢 **5 altas permisivas, y rompen una racha de TREINTA barridos en cero** — las cinco leidas del PAYLOAD, no del nombre: `THU-MAIC/OpenMAIC` (**MIT**, `v1.2.0-rc.1` del 2026-10-04) 🔴 **con `packages/mathml2omml` en `LGPL-3.0-or-later` leido de SU PROPIO `package.json`: la licencia de la raiz no es la licencia del arbol**; `oaknational/oak-open-curriculum-ecosystem` (**MIT** en el codigo, 🔴 **OGL v3.0** en los datos de curriculo — `P315` otra vez); `Cicatriiz/openedu-mcp` (**MIT**); `davidlms/learnmcp-xapi` (**MIT**); y `54yyyu/school-mcp` (**MIT solo en el cuerpo del README, sin archivo** — `P314`). 🆕 **`P340` — el 404 de un archivo de licencia puede ser una ORTOGRAFIA y no una ausencia: `oak` cede en `LICENCE` y el barrido de esta base pide `LICENSE`; un pase que solo mirara `LICENSE` habria publicado «sin cesion» sobre un repo MIT.** 🔴 **La accion A pre-registrada NO se corrio: el clon del arbol del titular quedo DENEGADO por el clasificador de la sesion, y eso se declara en vez de callarse (`P335` sigue en pie, pero esta vez ni la pieza nombrada paso).** 🔴 **La accion B resulta NO CORRIBLE contra el artefacto al que su propia pre-registracion la mando (`P336`): `accion-a-b.2026-10-05.tsv` colapsa `oer` a DOS valores (`openstax`/`otro`) y el slug del libro —lo unico que separa una edicion `2e` de una `1e`, que es toda la pregunta— no esta en el archivo; las «825 ya enumeradas» no estan enumeradas ahi.** 🔴 **Y al ir a buscarlo aparece el hallazgo que manda: dos artefactos del MISMO pase, sobre el MISMO sha `1925dec`, se contradicen por exactamente 41 figuras en el corte openstax/no-openstax (**1.611/832** contra **1.570/873**, los dos suman 2.443), y la cifra que llego a la PROSA es la menor (`P337`).** 🔴 **La causa, medida y no supuesta: `oer` es TEXTO LIBRE con dos formas de URL —y al ampliar la muestra de 694 a **1.685** unidades resultaron **CUATRO**, dos de ellas invisibles para el patron inicial—, con solapamiento **PARCIAL** entre formas: un extractor afirmado sobre `/details/books/` pierde **3 obras completas** y ademas **SUB-CUENTA** una cuarta sin que nada avise. Y `precalculus` a secas existe en el corpus y NO esta en ninguna de las 10 filas del censo publicado (`P338`).** 🔴 **La version de este MISMO pase que decia «las dos formas PARTEN el espacio sin solaparse» quedo FALSIFICADA por su propia medicion ampliada, y se corrige en vez de dejarse.** 🆕 **`P341` — 9 unidades nombran al TITULAR y no a la OBRA: sin obra no hay edicion y sin edicion no hay cesion resoluble, con ningun extractor.** 🟢 **La accion C sale CONFIRMADA en su clausula de conteo: **17** pares (bytes, huella) publicados junto a un archivo de licencia, la prediccion pedia ≥10.** 🔴 **Y FALSIFICADA como instrumento (`P339`): el delta de 1 byte NO es diagnostico, porque `P327` (el archivo no trae salto final) y `P333` (`$(cat)` se lo come al medir) producen la MISMA firma — esta base ya publica `21.442` y `21.443` B del mismo texto por la primera causa.** 🟢 **Tablero re-verificado COMPLETO: 59 suites (53 Python + 6 shell), 0 fallos, 203 aserciones (`Python 3.11.15`).**
@@ -280,6 +281,469 @@ updated: 2026-10-05
 > fila** —`lineage-skill`, con un vocabulario cerrado de 9 valores por afirmación, **4 de los 9 «esto lo produjo el
 > modelo»**— y **ninguna de las dos sabe de la otra**. Ver la capa nueva al final de este archivo, las tendencias
 > **180**–**182** y el patrón **P99**.
+
+## 🔴 Altas de agente: 0 permisivas — trigesimotercer barrido, y el aporte del pase es que la FRONTERA de una accion hacia afuera estaba un paso antes de donde la pre-registracion la puso (pase 111 del 2026-10-05)
+
+> **Las tres acciones del pase 110, corridas: A NO MEDIBLE (y el motivo es la frontera), B
+> CONFIRMADA (con un punto ciego propio), C REFUTADA (y por DOS motivos apilados).**
+
+### 🔬 El canal, declarado antes de cualquier veredicto (`P247`)
+
+| canal | estado en este pase | que habilita |
+|---|---|---|
+| `raw.githubusercontent.com` | 🟢 **200**, control negativo **20/20 · 404** | leer cesion del payload |
+| `WebFetch` → `github.com` | 🟢 **200** — **segunda medicion consecutiva** | estrellas, forks y licencia del sidebar |
+| `curl` → `github.com` | 🔴 **403** | — |
+| `api.github.com` | 🔴 **403** | — |
+| `img.shields.io`, `repos.ecosyste.ms` | 🔴 **000** (politica de egress) | — |
+| `openstax.org` | 🔴 **000**, bloqueado | — |
+| enumerar canal de CONTACTO en payload de terceros | 🔴 **DENEGADO por politica** (`PII`) | 🆕 **y es el hallazgo del pase** |
+
+🟢 **El tablero replica al del pase 110 en las seis primeras filas.** 🆕 **La septima es nueva y no
+es de red: es de POLITICA, y aparece porque la accion A fue la primera de este arbol en pedir un
+dato de PERSONA en vez de un dato de repo.**
+
+---
+
+### 🔴 `P350` — la accion A: NO MEDIBLE, y la frontera estaba un paso antes de donde la pre-registracion la puso
+
+| clausula pre-registrada por el pase 110 | pedia | medido | veredicto |
+|---|---|---|---|
+| *«de los 6, **≥4** tienen canal de contacto resoluble desde el payload»* | ≥ 4 | ⚠️ **sin cifra** | 🔴 **NO MEDIBLE** |
+| rama de refutacion: *«que sean ≤2 ⇒ `P342` vuelve a descarte»* | ≤ 2 | ⚠️ **sin cifra** | no evaluable |
+| la frontera que la pre-registracion declaro | *«se detiene en REDACTAR: no se manda nada»* | 🔴 **insuficiente** | la real esta **antes** |
+
+🔴 **Enumerar un canal de contacto en repos de terceros ya es manejo de datos personales, y la
+extraccion fue DENEGADA por politica.** La pre-registracion fue cuidadosa en el eje que anticipo
+—no mandar nada, la misma frontera que el pase 61 respeto con el PR a `toshieji`— y **se equivoco
+en cual era el eje**: la accion sensible es RECOLECTAR correos y perfiles de personas, no enviarlos.
+
+⚠️ **No se intento por otra via, ni con otra herramienta, ni con un sub-agente, ni en otro turno.**
+La denegacion se registra y se respeta, que es lo que el pase 96 hizo con `[Exfil Scouting]`.
+
+🔵 **Y el tercer resultado es el que hay que escribir: las dos ramas de la pre-registracion solo
+admitian NUMEROS, y el resultado real es que el numero no se puede obtener aca.** Una
+pre-registracion con dos ramas supone que el instrumento corre. Si no corre, callarse lo deja
+indistinguible de un cero — que es exactamente la leccion de `P343`.
+
+### 🟢 Lo que SI se midio de la accion A: ESTRUCTURA, no contenido
+
+**120 sondas** (6 repos × 10 rutas × 2 ramas) por `raw.githubusercontent.com`. Presencia y tamano;
+el contenido **no se leyo y no se publica**.
+
+| ruta | repos | seria legible por maquina sin persona |
+|---|---|---|
+| `README.md` | 🟢 **6 / 6** | 🔴 no — es prosa libre |
+| `package.json` | 1 / 6 (**69 B**) | 🔴 no — `author` es dato personal |
+| `CODEOWNERS` · `.github/CODEOWNERS` · `CITATION.cff` | 🔴 **0 / 6** | 🟢 si lo seria |
+| `CONTRIBUTING.md` · `pyproject.toml` · `setup.py` · `README.rst` · `readme.md` | 🔴 **0 / 6** | — |
+
+🟢 **Testigo de alcance: README 200 en 6 de 6.** El canal llega, asi que los 404 son **ausencia** y
+no incapacidad de leer (`P294`). **0 superficies legibles CON 6 de 6 alcanzables** es un hallazgo;
+0 y 0 seria un canal muerto, y son dos cosas distintas.
+
+🔵 **El resultado estructural contesta la pregunta de todas formas, y en la direccion de la rama de
+refutacion: ninguno de los 6 tiene superficie de contacto LEGIBLE POR MAQUINA.** La unica presente
+en los 6 es prosa libre, que es exactamente lo que la politica protege, y el unico manifiesto que
+existe tiene 69 bytes.
+
+🔴 **Asi que `P342` queda: recuperable en teoria, y en este entorno NI ENUMERABLE.** Es mas fuerte
+que el *«inalcanzable en la practica»* que la rama ofrecia, y es un enunciado sobre el **entorno y
+su politica**, no sobre los 6 repos ni sobre sus titulares. Un entorno con una persona que apruebe
+el paso puede reabrirlo; este no. Ver `compose/code/p350-contact-surface/` (**12/12**).
+
+---
+
+### 🟢 `P351` — la accion B: CONFIRMADA en el conteo, y el instrumento tiene un punto ciego propio
+
+| clausula pre-registrada por el pase 110 | pedia | medido | veredicto |
+|---|---|---|---|
+| *«**≥20** cifras de estrellas con digitos exactos que ningun canal reproduce»* | ≥ 20 | 🟢 **265 ocurrencias · 42 valores distintos · 8 archivos** | 🟢 **CONFIRMADA** |
+| rama: *«que sean <20»* | — | no dispara | — |
+| rama: *«que **alguna** sea posterior al pase 110»* | — | 🟢 **0** | no dispara |
+
+🟢 **La regla que el pase 110 escribio no se violo en el 111.**
+
+| archivo | ocurrencias |
+|---|---|
+| `agents/trending.md` | 94 |
+| `agents/top.md` | 57 |
+| `repos/trending.md` | 57 |
+| `intel/trends.md` | 36 |
+| `repos/foundations.md` | 6 |
+| `verticals/solutions.md` · `intel/market.md` | 4 cada uno |
+| `compose/patterns.md` | 4 |
+
+🔴 **Pero dos ocurrencias caen DENTRO de la seccion del pase 110 y las dos son META-MENCIONES:** el
+pase 110 citando «385.407 ★» precisamente para decir que no es reproducible, y el texto de la
+pre-registracion de esta accion citandola como ejemplo. **Un `grep` por la cifra las cuenta igual
+que un dato publicado.**
+
+🔵 **Consecuencia: el conteo crudo SOBREESTIMA el defecto.** Lo que hay que arreglar no son 265 ediciones: son
+los **42 valores distintos** y, sobre todo, las **31 que viven en la region de CATALOGO** —antes de
+cualquier encabezado de pase—, que es la unica region que un lector lee como dato vigente. **Una
+cifra citada para refutarla es el registro FUNCIONANDO, no el defecto.**
+
+🔵 **Es la forma INVERSA de `P344`:** ahi el denominador EXCLUIA los casos que importaban; aca
+INCLUYE casos que no son el defecto. Las dos veces el numero salio bien y significaba otra cosa.
+
+### 🔴 Y el defecto que ESTE pase se hizo A SI MISMO, con el arreglo que NO fue alargar una lista
+
+🔴 **La primera version del clasificador de meta-mencion era LEXICA** —una lista de palabras que
+suelen aparecer cuando una linea cita una cifra (`no son reproducibles`, `del tipo`, `refuta`…)— **y
+el texto de este mismo pase la rompio.** Tres citas claras quedaron contadas como DATO porque no
+traian ninguna de esas palabras, y **la rama de refutacion de la accion B disparo sobre el pase
+111**:
+
+| la cita que la version lexica no vio | donde |
+|---|---|
+| *pase 110 citando «385.407 ★» precisamente para decir que no es reproducible* | `agents/top.md` |
+| *(«385.407 ★») que ningun canal de este entorno reproduce* | `compose/patterns.md` |
+| *«DeepTutor, 40.823 ★» no lo es, y es la forma que…* | `compose/patterns.md` |
+
+🔵 **Las tres van entre comillas latinas, y el arreglo correcto es ESTRUCTURAL:** en este arbol una
+cifra **citada** va entre `«»` o en codigo inline, y una cifra **publicada** va desnuda en prosa o
+en una celda de tabla. 🔴 **Alargar la lista de palabras habria sido `P354` otra vez** — un ancla que
+reconoce una **ortografia** y no el **objeto**, en el mismo pase que escribio ese patron.
+
+🟢 **La senal lexica se conserva como SECUNDARIA**, para la cita sin delimitador. Y el control mas
+fino de la suite es el que exige la **posicion** del match: si una linea tiene un tramo citado pero
+la cifra cae **fuera** de el, la cifra es dato — sin la posicion, el clasificador **contagiaria toda
+la linea**. Suite **19/19 → 26/26**.
+
+⚠️ **Nota de denominador, que hay que decir:** las 262 se midieron sobre el arbol **tal como este
+pase lo deja**, y **8 de ellas son de este pase**, las 8 citas. El instrumento se esta midiendo a si
+mismo, y por eso el conteo crudo nunca fue la cifra que decide.
+
+🔴 **Y hay un ultimo hallazgo, que es del instrumento midiendo el arbol que lo contiene: el conteo
+crudo NO ES ESTABLE bajo su propia publicacion.** Al escribir esta seccion, las citas que la seccion
+usa para explicar el defecto **entran en el denominador**: el barrido dio **262** antes de redactarla
+y **265** al cerrarla. 🟢 **Las otras dos cifras NO se movieron: 42 valores distintos y 31 en region
+de CATALOGO.**
+
+🔵 **Eso no es una curiosidad: es la confirmacion de cual era el numero correcto.** La cifra que un
+pase elige publicar tiene que ser **invariante bajo el acto de publicarla**, y de las tres que este
+barrido produce, las dos que lo son son justamente las que esta seccion viene diciendo que importan.
+**El conteo de ocurrencias no es una medida del defecto: es una medida del defecto MAS la de su
+propia documentacion.** Por eso la suite asevera una **cota** (`>= 254`) y no una igualdad: congelar
+el conteo exacto haria fallar el control por una edicion de prosa, que es el modo de falla de
+`P352`.
+
+⚠️ **Y una nuance del atribuidor, con test: una pre-registracion atribuye a un pase que todavia NO
+corrio.** El encabezado *«Acciones pre-registradas para el pase 111»* hace que las lineas
+siguientes caigan en el pase 111 por atribucion de linea, asi que la rama de refutacion se evalua
+**excluyendo meta-menciones** y no por el maximo del pase. Ver
+`compose/code/p351-star-digit-sweep/` (**26/26**).
+
+---
+
+### 🔴 `P348` — la accion C: REFUTADA, y por DOS motivos que se apilan
+
+| clausula pre-registrada por el pase 110 | pedia | medido | veredicto |
+|---|---|---|---|
+| *«la tasa `RESOLUBLE` sobre las 13.371 cae **por debajo** del 58,0 %»* | < 58,0 % | 🔴 **76,4 %** | 🔴 **REFUTADA** |
+| rama de refutacion: *«que suba o quede igual (±2 pp)»* | — | 🔸 **+18,4 pp** | **dispara** |
+| el motivo previsto: *«las figuras viven en los problemas de OpenStax, que traen `CC BY 4.0`»* | — | 🔴 **al reves** | tener figura es predictor **NEGATIVO** |
+
+**Primer motivo: la direccion es la contraria.** Sobre las 13.371 unidades la tasa es **76,4 %**
+(10.210 `RESOLUBLE`), no «menos de 58,0 %».
+
+**Segundo motivo, y es de metodo: los dos numeros NO ERAN COMPARABLES.** El 58,0 % cuenta
+**archivos de figura** (2.443); el 76,4 % cuenta **problemas** (13.371). Puestos en la misma unidad:
+
+| conjunto | unidades | `RESOLUBLE` | tasa |
+|---|---|---|---|
+| corpus completo | 13.371 | 10.210 | 🟢 **76,4 %** |
+| unidades **con** figura | 1.586 | 1.005 | 🔴 **63,4 %** |
+| unidades **sin** figura | 11.785 | 9.205 | 🟢 **78,1 %** |
+| *(el conteo del pase 110, por figura)* | *2.443 figuras* | *1.418* | *58,0 %* |
+
+🔵 **Los 5,3 pp que separan 58,0 de 63,4 son FORMA DEL DENOMINADOR, no cesion.** Es `P344` otra vez,
+**un pase despues y en otra forma**: ahi el denominador excluia los casos que importaban, aca pesa
+de mas unos sobre otros.
+
+### 🟢 El mecanismo de `P348`, medido y no supuesto
+
+| clase de cesion de la unidad | unidades | figuras | figuras/unidad |
+|---|---|---|---|
+| `RESOLUBLE` | 1.005 | 1.418 | 1,411 |
+| `AUSENTE` | 385 | 586 | 1,522 |
+| `VERSION-SIN-VARIANTE` | 99 | 146 | 1,475 |
+| 🔴 `NO-ES-CESION` | 97 | 293 | **3,021** |
+
+🔴 **Factor de sesgo (no-resoluble / resoluble): 1,250.** Las unidades mal cedidas cargan **25,0 %
+mas figuras por unidad**, y la PEOR cubeta —`NO-ES-CESION`, que es una URL de fuente y no concede
+nada— carga **mas del doble**. **Por eso el conteo ponderado por figura sale mas bajo: no mide peor
+cesion, mide que lo mal cedido trae mas archivos.**
+
+### 🔴 Lo que `P348` le cambia a un presupuesto, que es la unica razon de haberlo medido
+
+🔴 **La tasa del corpus es 76,4 %, no 58,0 %.** Usar el 58,0 % como tasa del corpus —que es
+exactamente lo que la pre-registracion queria concluir, *«un numero mucho mas util para un
+presupuesto»*— **subestima la entregabilidad en 18,4 pp**. Y el enunciado commensurable sobre la
+capa de figura es **−13,0 pp contra el corpus**, no −18,4.
+
+🟢 **Dato lateral que acota la negociacion: los 10.210 `RESOLUBLE` llevan UN SOLO identificador,
+`CC BY 4.0`.** No hay seis licencias que negociar: hay una. 🔵 **Y las dos cubetas sucias estan
+separadas por lado:** los **402** `VERSION-SIN-VARIANTE` son todos la cadena literal `CC4.0` y los
+402 caen del lado **NO-OPENSTAX**; los **54** `NO-RECONOCIDO` son todos la cadena `openstax` y caen
+los 54 del lado **OPENSTAX**. Ver `compose/code/p348-figure-weight-bias/` (**21/21**), con el
+control que ata este pase al 110: **reproduce el 1.418 / 2.443 AL ENTERO**.
+
+---
+
+### 🆕 `P349` — la cota del canal de estrellas es una FUNCION ESCALON, no «3 cifras significativas»
+
+El pase 110 publico: *«la resolucion es de **3 cifras significativas**»*. Medido por `WebFetch`
+sobre cinco repos de este catalogo, en cuatro magnitudes:
+
+| repo | renderiza | cifras | cota | banda |
+|---|---|---|---|---|
+| [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | `264` | 3 | 🟢 **0 — EXACTO** | `EXACTO` |
+| [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) | `107` | 3 | 🟢 **0 — EXACTO** | `EXACTO` |
+| [`moodle/moodle`](https://github.com/moodle/moodle) | `7.5k` | 🔴 **2** | ±50 | `K-2CIFRAS` |
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | `40.8k` | 3 | ±50 | `K-3CIFRAS` |
+| [`browser-use/browser-use`](https://github.com/browser-use/browser-use) | `117k` | 3 | ±500 | `K-ENTERO` |
+
+🔴 **El enunciado del pase 110 es falso en LAS DOS direcciones:** por debajo de 1.000 el canal
+entrega el **entero exacto** (mejor que 3 cifras), y en la banda 1.000–9.999 entrega solo **2**
+(peor que 3 — `moodle/moodle` no distingue 7.450 de 7.550).
+
+🔵 **El peor error RELATIVO esta al pie de la banda `k`** (`1.0k` → ±5,0 %) **y el peor ABSOLUTO
+arriba** (±500). Las dos cosas no pasan en el mismo lugar, que es justo lo que una sola cifra de
+«cifras significativas» no puede decir. ⚠️ **La banda de millones se declara `NO-MEDIDA`:** ningun
+repo de este catalogo la alcanza y extrapolarla es lo que `P286` prohibe.
+
+> **Regla operativa:** un **entero exacto** de estrellas solo es publicable **por debajo de 1.000**.
+> Arriba va como magnitud, con la banda nombrada y la cota al lado.
+
+🔴 **Y la cota se lee POR FILA, no por cohorte:** de las seis cifras del eje generalista que esta
+base publicaba, tres pasan de 100.000 (`385.407`, `151.639`, `108.128` → ±500) y tres no
+(`62.735`, `60.284`, `55.226` → ±50). Ver `compose/code/p349-star-resolution-band/` (**21/21**).
+
+---
+
+### 🆕 `P353` — debajo de 1.000 el canal es EXACTO, asi que la deriva se ve a 1 unidad, y esta base no fecha sus estrellas
+
+| repo | 2026-09-30 | pase 110 | 🟢 pase 111 (2026-10-05) | banda |
+|---|---|---|---|---|
+| [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | 265 ★ | 264 ★ | 🟢 **264 ★** | `EXACTO` |
+| [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) | — | 108 ★ | 🔴 **107 ★** | `EXACTO` |
+
+🔴 **En la banda exacta una diferencia de 1 unidad no es redondeo: es deriva o es un error de
+lectura, y NADA en la cifra dice cual, porque la cifra no lleva fecha.** La regla que el pase 110
+escribio —*«estrellas como magnitud con el canal nombrado»*— es **necesaria y no suficiente**:
+le falta la FECHA, y precisamente en la banda donde el canal es exacto, que es donde la precision
+que vuelve checkeable a la cifra es la misma que la hace envejecer.
+
+🟢 **Y aca hay que corregir a este pase a si mismo, porque su primer diagnostico estaba mal:** la
+tabla de correccion de este archivo publica **265 ★** bajo un encabezado que dice
+**«Real 2026-09-30»**, asi que esa cifra **esta fechada y es correcta** — no es el defecto. 🔵 **Al
+contrario: es lo que vuelve MEDIBLE la deriva**, y gracias a ella la serie tiene tres puntos
+(265 el 2026-09-30 → 264 en el pase 110 → 264 hoy) en vez de dos cifras en disputa.
+
+🔴 **El defecto es la FILA DE CATALOGO, que llevaba un `265` DESNUDO, sin fecha ni canal.** Esa es
+la familia `P156`/`P47`: el pase 110 corrigio en su narrativa y no propago a la fila. 🟢 **Queda
+fechada en este pase**, que es lo unico que vuelve auditable la deriva — y la leccion es la
+contraria de la que parecia: **la tabla con fecha sobrevivio al pase; la que no la tenia, no.**
+
+🔵 **Lo encontro una via distinta de la que lo buscaba:** el barrido de la accion B solo ve cifras
+de **4 o mas digitos**, y `265` tiene **tres** — asi que ese denominador **nunca** iba a encontrarlo.
+**Tercera vez en dos pases que el denominador de una accion decide que defectos son encontrables
+por ella** (`P344`, `P351`, y esta).
+
+> **Regla que deja `P353`, y es mas angosta que «fechar todo»:** en la banda `EXACTO` de `P349` la
+> cifra **no se publica sin fecha**, porque ahi el canal resuelve a 1 unidad y la deriva es visible
+> dentro de un pase. En las bandas `k` la cota (±50 / ±500) **ya absorbe** varios pases de deriva,
+> asi que ahi la fecha es higiene y no correccion.
+
+---
+
+### 🔴 `P352` — una suite que pasa solo en el contenedor que la escribio no es un control, es una memoria
+
+🔴 **`test_p345.py` —la suite que el pase 110 publico como «21/21»— FALLA en un clon nuevo.** No
+por una aserción: **no llega a importar.** `entregabilidad.py` hace su trabajo a nivel de MODULO y
+su censo por defecto era `/tmp/oat-censo/unidades-oer.tsv`, una ruta **efimera del contenedor del
+pase 110**. Fuera de ese contenedor, `from entregabilidad import clasificar` levanta
+`FileNotFoundError`.
+
+🔵 **Es `P294` en el eje del TIEMPO: lo que se construye y no se CONECTA no existe — y una ruta de
+`/tmp` conecta a un contenedor, no a un arbol.** El pase 110 no mintio: midio 21/21 donde estaba.
+El defecto es que esa medicion **no era reproducible por nadie mas**, y una suite que no se puede
+re-correr es una memoria con forma de control.
+
+🟢 **Arreglado, y el arreglo es el que hace auditable a `P348`:** el default pasa al artefacto
+**versionado** (`censo-unidades.2026-10-05.tsv.gz`, con lectura `gzip`-aware) y el cuerpo de reporte
+baja a `main()` bajo `if __name__ == '__main__'`. 🟢 **Y reproduce las cifras del pase 110 digito a
+digito: 1.418 / 2.443 = 58,0 % y 368 `OPENSTAX AUSENTE`** — asi que el arreglo no movio ningun
+numero publicado, solo lo volvio re-corrible.
+
+🔵 **Hallazgo lateral del mismo arreglo:** la primera version de `sesgo.py` (`P348`) cargaba
+`clasificar` **partiendo el fuente** en `lic = {}` y haciendo `exec` del trozo de arriba, porque el
+modulo no era importable. Al volverse importable, el truco sobra — pero mientras existio, **el
+reuso dependia de donde cayera una linea**. Un lector que reusa por fragmento de fuente es un
+acoplamiento invisible.
+
+⚠️ **Y el control de este pase fallo DOS veces antes de pasar, las dos por el test y no por el
+codigo:** `assertIs` sobre `__code__` entre dos cargas del mismo fuente es falso aunque no haya
+copia (lo que afirma «no es una copia» es la PROCEDENCIA: mismo archivo, misma linea), y la cohorte
+de seis cifras del eje generalista **no esta toda en la misma banda** de `P349`. Las dos
+correcciones son del test.
+
+---
+
+### 🆕 `P354` — el control que audita a ESTE archivo era CIEGO a la notacion que este archivo usa
+
+Al correr los controles de esta base sobre las secciones de este pase, el auditor de citas de
+patron (`compose/code/pattern-citation-audit/`) reporto `P348`–`P353` como **colgadas** — citadas y
+sin definir. 🔴 **Y estaban definidas.** El detector conocia cuatro convenciones de encabezado y
+**no la quinta**: el numero en **codigo inline**, `` ### 🆕 `P348` — titulo ``, que es la que
+`compose/patterns.md` usa **desde el pase ~95**.
+
+| medido | antes | 🟢 despues |
+|---|---|---|
+| numeros definidos que el detector ve | 288 | **330** |
+| citas colgadas reportadas | 🔴 **63** | 🟢 **21** |
+
+🔴 **42 numeros estaban definidos y salian colgados** (`P284`–`P287`, `P308`–`P319`, `P328`–`P353`):
+los patrones de los ultimos ~16 pases, los cuatro del pase 110 incluidos. 🔵 **El fallo era
+silencioso en la direccion peligrosa: el control no se caia, seguia EN VERDE, y reportaba como
+defecto justo lo que estaba bien.**
+
+🔵 **Y el detector documenta en su propio docstring haber tenido este mismo defecto antes** (con
+`P145`–`P148`). Aparecio una tercera forma de escribir el encabezado y volvio a pasar: es la familia
+de `P171`/`P288`/`P299`/`P304` — **el ancla reconoce una ortografia, no el objeto.**
+
+🟢 **Arreglado como convencion `E`**, con las cuatro viejas intactas (suite original **8/8** sin
+tocar) y 7 aserciones nuevas, **tres de ellas controles negativos** — una cita en backticks en prosa
+o en una fila de tabla no define nada; un encabezado de **grupo** con prosa antes tampoco.
+`test_audit.py` **15/15**.
+
+⚠️ **Quedan 21 colgadas REALES, todas de pases muy anteriores, y este pase NO las corrige:** la peor
+es **`P135`, citada 84 veces en negrita y sin una sola seccion que la defina**. Escribir hoy la
+seccion de un patron que otro pase nombro es **fabricar doctrina y firmarla con un numero ajeno**:
+se nombran, se cuentan y se dejan como deuda enumerada (`P286`).
+
+---
+
+### 🔴 El barrido de altas: 0 permisivas, con el cero ENUMERADO (`P287`, `P311`)
+
+**Barrido global** (año **CALCULADO**, `date -u +%Y` → **2026**): `top open source AI agents
+education 2026 github MIT` y `github trending education AI 2026` devolvieron por
+**trigesimotercera** vez el eje generalista y curriculo-para-ingenieros.
+
+| candidata devuelta | gate `P311` | veredicto |
+|---|---|---|
+| `openclaw` · `opencode` · `OpenHands` · `CrewAI` · `LangChain` | 🔴 ya publicadas | descarte |
+| `500-AI-Agents-Projects` · `awesome-ai-agents-2026` · `agents-radar` | 🔴 ya publicados | catalogo, no agente |
+| `ai-engineering-from-scratch` · `LLMs-from-scratch` · `production-agentic-rag-course` (`jamwithai`) | 🔴 ya publicados | **curriculo**, no software que educa |
+| `OpenOSINT` | 🟢 **0 menciones — NUEVA** | 🔴 **descarte: agente de OSINT en terminal, no de la industria educativa** |
+
+🔴 **13 candidatas medidas → 12 ya publicadas, 1 nueva y de otra industria. 0 altas.** El unico
+slug que el gate dejo pasar no sirve a ninguna institucion educativa, que es `P281` otra vez.
+
+🔵 **Y un dato sobre el CANAL, no sobre la industria:** la capa de busqueda reporta ahora `openclaw`
+en **~362k** mientras esta base publica **385.407**. Por `P349` las dos son irreproducibles en esta
+banda (±500 en el mejor caso), asi que **el par se registra como ruido de canal y NO como
+correccion**: ninguna de las dos tiene canal que la sostenga.
+
+---
+
+### 🟢 Barrido regional 40: 4/4 regiones, 0 silencios, y 0 hechos nuevos — SATURACION medida
+
+Las cuatro consultas regionales corrieron con el año calculado. 🔴 **Todas devolvieron material
+relevante y NINGUNA un hecho que este arbol no tuviera**, medido con el `grep` de control antes de
+escribir:
+
+| hecho devuelto | region | ocurrencias ya en el arbol |
+|---|---|---|
+| ley de AI de Vietnam (educacion en alto riesgo) | APAC | 210 |
+| `AI Basic Act` de Corea (vigente 2026-01-22) | APAC | 44 |
+| California **AB 1159** (prohibe datos de alumno para entrenar) | North America | 143 |
+| Idaho **SB 1227** | North America | 75 |
+| NYC *Traffic Light Framework* | North America | 44 |
+| *STUDENTS FIRST Act of 2026* | North America | 21 |
+| 134 proyectos de ley en 31 estados | North America | 4 |
+| `Digital Omnibus` y el diferimiento del Anexo III | EMEA | 104 |
+| CENIA · Latam-GPT | LATAM | 41 · 37 |
+| Uruguay · Peru · CONPES de Colombia | LATAM | 59 · 73 · 72 |
+| Observatorio UNESCO de AI en Educacion para LATAM | LATAM | 4 |
+| Ipsos *Education Monitor 2026* | APAC | 9 |
+| Digital Education Council (encuesta LATAM) | LATAM | 69 |
+
+⚠️ **La UNICA cadena con 0 ocurrencias fue «31 states», y es el MISMO hecho que «134 bills» en otra
+redaccion — asi que no es un hueco.** 🔵 **Es `P287` reproducido en la capa regional: el eje
+regional de esta KB esta SATURADO para consulta generalista, y el contenido informativo del barrido
+40 es el cero mismo.** Un barrido que devuelve 13 hechos y 0 nuevos dice que hay que **cambiar el
+eje de la consulta**, no que la region este quieta.
+
+---
+
+### 🟢 El tablero de suites, re-verificado COMPLETO en este pase
+
+| medido | valor |
+|---|---|
+| suites Python | **60** (pase 110: 56) |
+| suites shell | **6** |
+| **total** | 🟢 **66 suites, 0 fallos** (`Python 3.11.15`) |
+| nuevas de este pase | `p348` **21/21** · `p349` **21/21** · `p350` **12/12** · `p351` **19/19** |
+| reparada | `p345` **21/21** (1 *skip* declarado) — **no corria en clon nuevo** (`P352`) |
+| control compartido | `lib/license_family.sh` **106/106** · `lib/region.py` **79/79** |
+
+🔴 **El tablero del pase 110 decia «62 suites, 0 fallos» y en un clon nuevo era «65 y 1 fallo».** La
+diferencia no es una suite que se rompio: es una que **nunca se podia correr fuera de su
+contenedor**. El tablero de este pase se midio **desde el clon**, que es la unica forma en que la
+cifra significa algo.
+
+---
+
+### 🔴 Acciones pre-registradas para el pase 112, falsables, con su numero escrito ANTES de correrlas
+
+**Accion A — `P352` contra el resto del arbol, que es donde se repite o no.**
+`p345` resulto no re-corrible por una ruta de `/tmp` en un default. Barrer los **86** directorios de
+`compose/code/` buscando toda referencia a una ruta absoluta efimera (`/tmp/`, `$TMPDIR`, `/var/tmp`)
+en codigo o en default de argumento, y correr **cada** suite desde un `cwd` distinto del suyo.
+
+**Prediccion falsable:** *hay **≥3** suites mas que fallan o se saltan por una ruta efimera o por
+un `cwd` asumido.* 🔵 **Que la refuta:** que sean **0** —y entonces `P352` es un espécimen de `p345`
+y el tablero de 66 es solido—; o que sean **1 o 2**, y entonces es una clase chica y se nombra
+fila por fila en vez de declararse como patron.
+
+**Accion B — la deriva de `P353`, medida en vez de supuesta.**
+Las 2 filas de la banda `EXACTO` quedaron fechadas hoy. Re-medirlas en el pase 112 por el mismo
+canal y comparar contra lo fechado.
+
+**Prediccion falsable:** *al menos **1** de las 2 cambia en ±1 o mas dentro de un pase, y entonces
+la fecha no es un adorno: es la mitad del dato.* 🔵 **Que la refuta:** que las **2** devuelvan el
+mismo entero, y entonces la deriva en esta banda es mas lenta que un pase y **fechar por pase
+alcanza**; lo que haria falta medir es cada cuantos pases se mueve, no cada pase.
+
+**Accion C — `P348` contra la capa que esta base NO midio: las 82.492 unidades.**
+El pase 106 corrigio el denominador de 13.371 a **82.492** unidades (69.121 de *hint*), y `P348` se
+midio sobre las 13.371 **unidades-problema**. Medir la misma clasificacion de cesion sobre la capa
+de *hint*, con el censo ya materializado.
+
+**Prediccion falsable:** *la tasa `RESOLUBLE` de la capa de *hint* queda **dentro de ±3 pp** del
+76,4 % de los problemas, porque el *hint* hereda el `license` de su problema padre.* 🔵 **Que la
+refuta:** que se aparte **mas de 3 pp** en cualquier direccion — y entonces la herencia de cesion
+entre problema e *hint* **no es la identidad** que esta base viene suponiendo desde el pase 107
+(donde la herencia implicita se midio en 9.971 unidades, 76,7 %), y hay que medirla y no deducirla.
+
+**Accion D — las 21 colgadas, repartidas por ORIGEN antes de decidir que hacer con ellas.**
+`P354` dejo 21 citas de patron genuinamente colgadas y este pase las conto sin tocarlas. Para cada
+una, buscar en los `.md` del arbol la **primera** aparicion y determinar si el numero fue
+**anunciado y nunca escrito** (la clase de `P295`/`P297`, que esta base ya recupero dos veces) o si
+es un **error de numeracion** —una cita a un numero que nunca se quiso definir, p. ej. un dedazo de
+`P153` por `P135`—.
+
+**Prediccion falsable:** *de las 21, **≥14** son de la clase «anunciado y nunca escrito», porque es
+el modo de falla que esta base ya documento dos veces (`P295`, `P297`).* 🔵 **Que la refuta:** que
+sean **≤7**, y entonces la mayoria son errores de NUMERACION, el remedio es corregir la cita y no
+escribir la seccion, y `P135` con sus 84 citas en negrita pasa a ser el caso mas urgente de la base
+en vez de una deuda documental. ⚠️ **La accion se detiene en CLASIFICAR: no escribe ninguna seccion
+de patron, por la misma razon que este pase no la escribio.**
+
+---
 
 ## 🔴 Altas de agente: 0 permisivas — trigesimosegundo barrido, y el aporte del pase es que una PRE-REGISTRACION puede construir su denominador CONTRA su propia hipotesis (pase 110 del 2026-10-05)
 
@@ -5939,7 +6403,7 @@ se explica abajo, porque es la cuarta vez que esta KB se pelea con este número.
 | FreeLingo | https://github.com/artcc/freelingo | **AGPL-3.0** ⚠️ | 150 | Python | Plataforma self-hosted de aprendizaje de idiomas con AI: evalúa nivel CEFR con un LLM local (Ollama) o cloud, genera plan de estudio personalizado, tutor conversacional por voz, flashcards y repetición espaciada. FastAPI + Next.js + Postgres + Redis, todo en Docker Compose | Sin región verificada (el repo no declara ubicación) |
 | Bloom | https://github.com/Li-Evan/Bloom | MIT | 278 | Python | Tutor personal que genera un syllabus, entrega una lección a la vez, lee anotaciones y feedback y ajusta la siguiente lección al nivel real de comprensión. Dos modos: CLI como skill de Claude Code (sin backend) y web self-hosted (React + FastAPI, cualquier LLM OpenAI-compatible) | Sin región verificada |
 | pyBKT | https://github.com/CAHLR/pyBKT | MIT | 281 | Python | **Bayesian Knowledge Tracing en Python**, del mismo laboratorio que OATutor. Estima mastery cognitivo desde secuencias de resolución de problemas, con variantes que individualizan parámetros por alumno y tasas de aprendizaje por ítem. 379 commits, publicado en **EDM 2021** (Badrinath, Wang & Pardos). Tampoco es un agente: es la alternativa **de procedencia estadounidense** a pyKT en la capa de modelado — más interpretable, menos potente (BKT clásico vs. deep learning). *Agregado en el pase 5* | North America (CAHLR, UC Berkeley) |
-| OATutor | https://github.com/CAHLR/OATutor | MIT | 265 | JavaScript | Intelligent Tutoring System con Bayesian Knowledge Tracing para estimar mastery. Deploy en dos clicks a GitHub Pages, A/B testing incorporado. 🔴 **«3 libros de contenido curado (OpenStax) en JSON» era la cifra equivocada y se corrige con lo medido en `CAHLR/OATutor-Content` (`main`, sha `1925dec`, pases 105–107): 51.929 rutas · 13.371 problemas · 69.121 unidades de hint (82.492 en total) · 10 obras de OpenStax citadas y 22 colecciones del titular medidas · 2.443 archivos de figura (~156 MiB) cuya extension `.gif` es falsa en 2.443 de 2.443 (`P332`).** El codigo MIT no esta en discusion; la capa de CONTENIDO cede aparte y se audita aparte (`P322`/`P328`/`P334`) | North America (CAHLR, UC Berkeley) |
+| OATutor | https://github.com/CAHLR/OATutor | MIT | **264 ★** (medido 2026-10-05, banda `EXACTO` de `P349`; 265 ★ el 2026-09-30 ⇒ deriva de −1 en 5 dias, `P353`) | JavaScript | Intelligent Tutoring System con Bayesian Knowledge Tracing para estimar mastery. Deploy en dos clicks a GitHub Pages, A/B testing incorporado. 🔴 **«3 libros de contenido curado (OpenStax) en JSON» era la cifra equivocada y se corrige con lo medido en `CAHLR/OATutor-Content` (`main`, sha `1925dec`, pases 105–107): 51.929 rutas · 13.371 problemas · 69.121 unidades de hint (82.492 en total) · 10 obras de OpenStax citadas y 22 colecciones del titular medidas · 2.443 archivos de figura (~156 MiB) cuya extension `.gif` es falsa en 2.443 de 2.443 (`P332`).** El codigo MIT no esta en discusion; la capa de CONTENIDO cede aparte y se audita aparte (`P322`/`P328`/`P334`) | North America (CAHLR, UC Berkeley) |
 | Alvarmethod | https://github.com/vasanthsreeram/Alvarmethod | MIT ✅ | 160 | Shell/Markdown | **Pedagogía empaquetada como skill portable**, instalable con `npx skills add vasanthsreeram/Alvarmethod -g --all` en Claude Code, Codex, Grok, Pi, OpenCode y Cursor a la vez. Implementa un loop explícito de cuatro pasos: *probe* (MCQ calificado para ubicar el hueco), *plan* (DAG en Mermaid armado para ese alumno), *teach* (un solo paso de razonamiento por vez, con visuales opcionales) y *lock-in quiz* con remediación. **Sólo 4 commits:** es una especificación pedagógica, no un producto — y eso es justamente lo que la hace reusable. Ver la tendencia 9 en `intel/trends.md`. *Agregado en el pase 11* | Sin región declarada |
 | OpenTutor | https://github.com/zijinz456/OpenTutor | MIT | 127 | Python | Workspace de aprendizaje adaptativo block-based que corre local: subís material → notas, quizzes, flashcards y tutor adaptativo. FSRS + detección de carga cognitiva, 10+ providers LLM | Sin región verificada |
 | OpenTutorAI-CE | https://github.com/Open-TutorAi/open-tutor-ai-CE | BSD-3-Clause | 107 | Python | Plataforma de tutoría personalizada: multi-model, RAG local, interacción por voz y video, control de acceso por roles. PWA multilingüe (árabe, francés, inglés). Community Edition que sirve de base a una Enterprise Edition | **EMEA (Marruecos)** — el perfil de la organización declara `Morocco` y `opentutorai.com`. *Región cerrada en el pase 4* |

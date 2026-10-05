@@ -1,0 +1,30 @@
+=== ACCION B: cifras de estrellas con 4+ digitos exactos ===
+ocurrencias        265   (la prediccion pedia >= 20)
+valores distintos  42
+archivos           8
+
+=== por archivo ===
+agents/trending.md           94
+agents/top.md                60
+repos/trending.md            57
+intel/trends.md              36
+repos/foundations.md          6
+verticals/solutions.md        4
+intel/market.md               4
+compose/patterns.md           4
+
+region de CATALOGO (dato vigente)  31
+META-MENCIONES (cita, no dato)     23
+pase mas alto con una ocurrencia   111
+
+posteriores al pase 110, sin contar meta-menciones: 0
+
+=== valores mas repetidos ===
+385.407 ★        51
+108.128 ★        26
+151.639 ★        23
+62.735 ★         22
+60.284 ★         22
+55.226 ★         20
+2.900 ★           8
+27.470 ★          7

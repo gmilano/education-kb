@@ -8,6 +8,7 @@ updated: 2026-10-05
 
 > Bases sobre las cuales construir. Verificado repo por repo vía WebFetch el 2026-09-30 (capas del pase 10, el 2026-10-01).
 > Leer la columna **Licencia** antes de proponer: media KB de educación es GPL/AGPL, no permisiva.
+> **Pase 111 del 2026-10-05:** 🔴 **0 altas fundacionales (trigesimo barrido, mismo conjunto: OpenEduCat, Open edX, Moodle, Chamilo, OpenOLAT, Fedena, ERPNext/Frappe, SchoolTool); 12 de 13 candidatas ya publicadas (`P311`) y la unica nueva (`OpenOSINT`) es de otra industria.** 🆕 **El aporte es que la columna de ESTRELLAS de este estante queda con cota por BANDA (`P349`): el canal es un ESCALON, no «3 cifras significativas». 🔵 **Y para este estante la consecuencia es FAVORABLE:** buena parte del inventario fundacional educativo vive por debajo de 1.000 ★ (los lectores QTI, los pilotos universitarios, `EduKTM`) y ahi el canal da el ENTERO EXACTO, asi que esas filas se pueden publicar con cifra verificable y FECHA (`P353`). ⚠️ **Y eso vuelve a este estante el que mas deuda tiene: la fila de `EduKTM` publica `265 ★ / 70 forks` SIN fecha, que es justo lo que `P353` pide no hacer en esta banda — se nombra como deuda y NO se corrige a ojo, porque no se re-midio.** Las grandes no: `moodle/moodle` renderiza `7.5k`, que son DOS cifras y ±50.** ⚠️ **Testigo re-leido: `moodle/moodle` → 7.5k ★ / 7.7k forks / GPL-3.0 — la licencia confirma lo publicado y la cifra NO es publicable como entero.** 🔴 **Y un defecto de reproducibilidad del codigo de este estante (`P352`): `test_p345.py` («21/21» del pase 110) no llega a IMPORTAR en un clon nuevo por un censo en `/tmp`; arreglada contra el artefacto versionado, reproduce 1.418/2.443 y 368 `OPENSTAX AUSENTE` digito a digito. Tablero real medido desde el clon: **66 suites, 0 fallos**.**
 > **Pase 110 del 2026-10-05:** 🔴 **0 altas fundacionales (vigesimonoveno barrido, mismo conjunto: OpenEduCat, Open edX, Moodle, Chamilo, OpenOLAT, Fedena, ERPNext/Frappe, SchoolTool).** 🟢 **El aporte es que el expediente de los 13 «sin licencia» queda CERRADO por el canal fuerte: arbol enumerado (`P275`), **9.886 rutas**, **0** archivos de cesion en cualquier profundidad y cualquier caja, con README alcanzable en 13 de 13 como testigo.** 🟢 **Y el instrumento esta VALIDADO contra dos respuestas que este arbol ya tenia: `1EdTech/openbadges-specification` → `ob_v3p0/license.md` (12.324 B, replica `P187` AL BYTE) y `dini-ag-kim` → CC BY-SA 4.0 en `lp-base.ttl:24` — las DOS invisibles para el sondeo de raiz.** 🔴 **`P187` ademas queda con denominador: no es UNA superficie de cesion, son CINCO en un mismo repo de especificacion.** 🔴 **Pero el arbol trae su propio error, medido: `dini-ag-kim/src/ontology/utils/owl2shacl/LICENSE` es **LGPL-3.0** (7.652 B, titular FSF) y pertenece a una herramienta EMPOTRADA — un barrido que tome el primer archivo hallado le pega copyleft de CODIGO a un repo cuyo entregable es DATO con atribucion.**
 > **Pase 109 del 2026-10-05:** 🔴 **0 altas fundacionales — el barrido devuelve por vigesimoctava vez el conjunto publicado (OpenEduCat, Open edX, Moodle, Chamilo, OpenOLAT, Fedena).** 🟢 **La cesion de este estante se RE-MIDIO del payload con 300 sondas (15 repos × 10 nombres × 2 ramas) y control negativo en 20/20 · 404: `openedx/XBlock` → Apache-2.0 en `master/LICENSE.TXT` (11.358 B, `cfc7749b96f6`, replica `P279`); `oak` → MIT en `LICENCE` (1.086 B, `02c5a8e84229`, replica `P340`); y las cifras publicadas de `gibbonedu/core` (35.121 B) y `openeducat_erp` (8.241 B) se confirman DIGITO A DIGITO contra su huella.** 🔴 **Y el estante tenia un falso negativo: `Javi111003/OlivIA-RAG` afirma MIT por badge y por arbol de README sin archivo que lo respalde (`P342`) ⇒ reclasificado de «descartable» a `P314`, cesion a pedir por escrito.** ⚠️ **El denominador vivo de «sin licencia» es 13, no 32: esta base ya corrigio esa cadena (32 → 22 → 13, pases 65–67, `P172`).**
 > **Pase 107 del 2026-10-05:** 🟢 **1 alta fundacional, y es la pieza que el hallazgo de este pase vuelve necesaria: [`oer/emacs-reveal`](https://gitlab.com/oer/emacs-reveal) (EMEA, GitLab) emite la atribucion de CADA figura en forma legible por maquina (RDFa) desde metadatos por archivo — cede **por archivo** bajo REUSE (`GPL-3.0-or-later` + `CC BY-SA 4.0`), asi que entra por su DISENO y no por su binario.** 🔴 **`P332` — regla nueva para este estante: cuando dos arboles se comparan por contenido el filtro es la FIRMA de bytes, nunca la extension: 2.443 de 2.443 `.gif` del corpus son PNG/JPEG/WEBP y un filtro por extension da «0 solapamiento» desde una premisa falsa (por `sha256` da 36).** 🔴 **`P334` — la procedencia de un binario no esta en el repo que su `oer` nombra: los 36 pares citan `introductory-statistics` y viven en `osbooks-statistics`.** 🔴 **Rechazo medido por FRESCURA, no por licencia: `CK-ERP` (32 modulos, capa educativa completa) cuyo ultimo anuncio del canal es de 2010.**
@@ -114,6 +115,46 @@ corre ése antes de escribir uno a mano** (tendencia **313**). 🟢 **Y el `gafa
 > y 5 en `schemas12/`, y contar sólo el primero es lo que hizo invisible el segundo dialecto de SCORM (**P106**).
 > **Pase 36 del 2026-10-02:** 🔵 **este pase no agrega repos: le pone FECHA a los que ya están, y la fecha cambia tres recomendaciones.** Se midió la capa PHP de evaluación y telemetría en Packagist —el único registro de los tres que entrega descargas en este entorno (`api.npmjs.org` y `pypistats.org` dan **403 a CONNECT**)— y el resultado está en `repos/trending.md`. **Lo que hay que saber antes de proponer desde este archivo:** 🔴 **la pieza xAPI más descargada de esta base, `rusticisoftware/tincan` (Apache-2.0, 6.178 desc./mes, 863.777 totales), no publica desde el 2022-11-02**, y ⚠️ **el único MIT de esa capa, `php-xapi/client`, está parado desde el 2021-03-24** con 825 desc./mes. 🔵 **La lectura es que en xAPI/PHP lo permisivo está quieto y lo vivo es copyleft**, así que la receta de telemetría se sostiene en **Ralph (MIT)** + **`lrsql` (Apache-2.0)** + **`learnmcp-xapi` (MIT)** y no en la capa PHP. 🟢 **Del lado de evaluación, lo activo es `oat-sa/extension-tao-testqti`** (**885 versiones**, release del **2026-09-30**) **y sigue siendo GPL-2.0-only**, mientras **lo permisivo es lo nuevo**: `@longsightgroup/qti3-cli` (**MIT**, 41 releases desde el 2026-05-21, último **2026-10-01**) con **cero dependencias de terceros** — sus 4 dependencias son todas `@longsightgroup/*` pinneadas a la misma versión exacta. **Su manifiesto MCP completo de 20 tools está escrito en `compose/patterns.md` (P76).** 🔴 **Y una corrección de catálogo: `oat-sa/qti-sdk` devuelve 404 en Packagist porque es el nombre del REPO — su paquete es `qtism/qtism`** (GPL-2.0-only, 218.212 descargas totales, 315 versiones). **Nombre de repo y nombre de paquete son identificadores distintos, y confundirlos produce un 404 que parece una ausencia** — pasó igual con `1edtech/oneroster`, `imsglobal/lti-1-3-php-library` y `packbackbooks/lti-1-3-php-library`, los tres **404**, que se anotan como *«no verificado en Packagist bajo ese nombre»* y **no** como inexistentes. ⚠️ **Acción pendiente que el pase 37 tiene asignada: este archivo nunca pasó por el control de *slugs* distintos ni por el de *backlink*** — los dos que en `agents/top.md` encontraron **un duplicado** y **dos colisiones** este mismo pase.
 > **Pase 11 del 2026-10-01:** aparece una licencia que las diez pasadas anteriores filtraban sin saberlo — **ECL-2.0**, con la que licencia todo Apereo (Sakai, Opencast, OpenLRW). Es Apache-2.0 con el alcance de patentes acotado, aprobada por OSI y FSF, y **es apta para construir arriba**. Ver la capa de analítica institucional, abajo.
+
+## 🔴 Pase 111 (2026-10-05) — 0 altas fundacionales (barrido 30), y el aporte es que la columna de ESTRELLAS de este estante queda con cota por banda
+
+🔴 **0 altas.** El barrido devolvio por **trigesima** vez el mismo conjunto (OpenEduCat, Open edX,
+Moodle, Chamilo, OpenOLAT, Fedena, ERPNext/Frappe, SchoolTool) mas catalogos y curriculo para
+enseñar AI a ingenieros. 12 de 13 candidatas ya publicadas (gate `P311`); la unica nueva
+(`OpenOSINT`) es un agente de OSINT en terminal, de otra industria.
+
+### 🆕 La cota de la columna de estrellas, que para este estante cambia que se puede publicar
+
+`P349`: la resolucion del canal es una **funcion escalon**, no «3 cifras significativas».
+
+| banda | rango | se ve | cota | que se puede publicar aca |
+|---|---|---|---|---|
+| `EXACTO` | < 1.000 | `264` | 🟢 **0** | 🟢 **entero exacto + FECHA** (`P353`) |
+| `K-2CIFRAS` | 1.000–9.999 | `7.5k` | ±50 | magnitud con banda |
+| `K-3CIFRAS` | 10.000–99.999 | `40.8k` | ±50 | magnitud con banda |
+| `K-ENTERO` | ≥ 100.000 | `117k` | ±500 | magnitud con banda |
+
+🔵 **Para este estante la consecuencia es concreta y favorable:** buena parte del inventario
+fundacional educativo vive **por debajo de 1.000 ★** —los lectores QTI, los pilotos universitarios,
+`EduKTM`—, y ahi el canal da el **entero exacto**, asi que esas filas se pueden publicar con cifra
+verificable y fecha. ⚠️ **Y eso convierte a este estante en el que mas trabajo tiene por delante:**
+la fila de `EduKTM` publica **`265 ★ / 70 forks` SIN fecha**, que es exactamente lo que `P353` pide
+no hacer en esta banda. No se re-midio en este pase y **no se toca**: queda nombrada como deuda, no
+corregida a ojo. 🔴 **Las grandes no**, por mas que se vean tres digitos: `moodle/moodle`
+renderiza **`7.5k`**, que son **dos** cifras significativas y una cota de ±50.
+
+⚠️ **Y un testigo del propio estante:** `moodle/moodle` se re-leyo en este pase por el canal
+nombrado y da **`7.5k` ★ / 7.7k forks / GPL-3.0** — la licencia confirma lo publicado, y la cifra
+**no es publicable como entero**.
+
+### 🔴 El defecto de reproducibilidad que este estante tenia en su propio codigo (`P352`)
+
+🔴 **`test_p345.py` —la suite que el pase 110 publico como «21/21»— no llega a IMPORTAR en un clon
+nuevo:** su modulo leia un censo en `/tmp/oat-censo/` al importarse. 🟢 **Arreglado contra el
+artefacto versionado; reproduce 1.418/2.443 y 368 `OPENSTAX AUSENTE` digito a digito**, asi que no
+movio ningun numero publicado. 🟢 **Tablero real, medido desde el clon: 66 suites, 0 fallos.**
+
+---
 
 ## 🟢 Altas fundacionales: 0 — y el pase CIERRA el expediente de los 13 «sin licencia» con el canal fuerte, validando el instrumento contra dos respuestas conocidas (pase 110 del 2026-10-05)
 

@@ -8,6 +8,7 @@ updated: 2026-10-05
 
 > Key players, market map y oportunidades por región.
 > Investigado 2026-09-30; el pase 11, el 2026-10-01. Las estimaciones de tamaño de mercado varían mucho entre firmas: se listan todas con su fuente en vez de elegir una.
+> **Pase 111 del 2026-10-05:** 🟢 **Barrido regional 40, cuatro regiones, 0 silencios — y **0 hechos nuevos**, con el denominador ENUMERADO: 15 hechos devueltos, 15 ya publicados.** Vietnam (210 ocurrencias), `AI Basic Act` de Corea (44), AB 1159 (143), SB 1227 (75), Traffic Light de NYC (44), STUDENTS FIRST (21), Digital Omnibus (104), CENIA/Latam-GPT (41/37), Uruguay (59), Peru (73), CONPES (72), Observatorio UNESCO para LATAM (4), Ipsos Education Monitor (9), DEC LATAM (69). ⚠️ **La unica cadena con 0 ocurrencias fue «31 states», y es el MISMO hecho que «134 bills» en otra redaccion: no es un hueco y no se publica como tal.** 🔵 **Es `P287` en la capa regional: el eje esta SATURADO para consulta generalista y el contenido informativo del barrido es el cero mismo — hay que cambiar el EJE de la consulta, no concluir que las regiones estan quietas.** 🔴 **Y la consecuencia de posicionamiento: lo que diferencia una propuesta por region ya no es saber que regula cada region —eso esta publicado y cualquiera lo cita— sino poder decir DE QUE LICENCIA CEDE el activo que se entrega ahi, que es lo que ningun barrido de mercado contesta y es donde cayeron `P348`, `P349` y `P352` de este pase.** 🟢 **Las Opportunities by region siguen vigentes sin cambios; lo que se agrega es la COTA con que se pueden citar sus cifras de repo (`P349`: entero exacto solo por debajo de 1.000).**
 > **Pase 110 del 2026-10-05:** 🟢 **Barrido regional 39, cuatro regiones, 0 silencios — y lo que las separa este pase es el INSTRUMENTO DE POLITICA, no el marco ni el dinero: NA regula por ESTADO con mandato de politica distrital, APAC por LEY NACIONAL con fecha de vigencia, EMEA por reglamento supranacional en escalonado, y LATAM por ENCUESTA de adopcion sin estatuto educativo propio.** 🟢 **La racha del calendario SUPERADO del AI Act sigue CORTADA (segundo pase): el canal devuelve «escalonado 2026-2027» y «la mayoria de las escuelas en piloto y pre-cumplimiento, no en aplicacion plena», que es el calendario CORREGIDO por el pase 103 — `P321` deja de reproducirse.** 🔴 **Pero el canal recae en OTRO eje y hay que escribirlo: la consulta de LATAM devolvio una pagina de politica de SUDAFRICA (EMEA) y una de legislacion de NORTH AMERICA — contaminacion cruzada de region (`P247`), asi que un barrido «por region» no garantiza que lo devuelto SEA de la region.** 🔴 **Y una incoherencia aritmetica del canal, medida: «crecer USD 3.367,8 millones entre 2026 y 2030 al 45,0 % CAGR» es incompatible con «42,48 B en 2030» partiendo de ~11 B en 2026 — un incremento de 3,37 B no llega a 42 B. Las dos cifras salieron del MISMO barrido.** 🟢 **El rango 2026 se publica como RANGO y no como numero: **USD 8,7 B – 12,3 B** (Grand View 11,4 B; Research&Markets 7,52 B en 2025 → 10,6 B en 2026).** 🟢 **LATAM trae el unico dato duro NUEVO del pase, y es de adopcion: **92 % de estudiantes y 79 % de docentes** ya usan AI en educacion superior (DEC LATAM Survey 2026, con Tec de Monterrey), **94 %** de docentes esperan usarla, y **61 %** de estudiantes teme el mal uso de sus pares — la preocupacion de integridad es de PARES, no de institucion.**
 > **Pase 109 del 2026-10-05:** 🟢 **Barrido regional 38, cuatro regiones, 0 silencios, y la saturacion MEDIDA con denominador enumerado: 27 hechos devueltos, 23 ya publicados, 4 nuevos (`P287`).** 🔴 **El hallazgo que manda es doble y va contra esta base: (1) la racha de OCHO pases en que el canal reproducia el calendario SUPERADO del AI Act SE CORTA — dos consultas independientes devuelven `2027-12-02`, una nombrando a educacion, con 9 fuentes concordantes y la aprobacion del Consejo fechada el `2026-06-29` ⇒ la afirmacion del pase 100 («la prensa de industria NO va a corregir esto») queda FALSIFICADA, y el guion de correccion automatica pasa a ser el que PUEDE INTRODUCIR el error; (2) la condicionalidad del diferimiento corre al REVES de lo publicado: `2027-12-02` es un LIMITE EXTERIOR que la Comision puede ADELANTAR a 6 meses de confirmar las normas, no una fecha garantizada ⇒ no se vende un plan con fecha, se vende un expediente permanentemente listo.** 🟢 **El reloj que cierra la venta sigue siendo el art. 50(2), con gracia hasta el `2026-12-02`, DOS MESES.** 🟢 **Unico hecho regional nuevo: la *Agenda Nacional de IA 2024–2030* de Mexico, presentada en el Senado — primer instrumento mexicano de nivel nacional en este archivo.** 🔴 **NA y APAC dan 0 hechos nuevos: el eje de legislacion estatal esta agotado para este canal.**
 > **Pase 107 del 2026-10-05:** 🟢 **Barrido regional 36, cuatro regiones, 0 silencios — y lo que las separa este pase es el DINERO COMPROMETIDO: Norteamerica con $169 M a *responsible AI* en superior y un programa de OpenAI con OCHO socios nacionales (Q1 2026); EMEA con £200 M+ de la primera AI Adoption Summit del Reino Unido y la 2ª conferencia del Consejo de Europa sobre regulacion de AI en educacion en octubre; APAC con la soberania determinando la infraestructura de ~la mitad de sus empresas y Canberra endureciendo copyright; LATAM con un working paper de 200 instituciones en 19 paises y el marco HABILITANTE del BID.** 🔴 **Y el rango de mercado se ABRE en vez de cerrarse: $42,48 B a 2030, $79,6 B a 2034 y $100,21 B a 2035 son tres curvas distintas; el CAGR de Norteamerica (15,9 %) es menos de la mitad del global (31-41 %). Se publica como contradiccion, no como promedio.** 🟢 **El hallazgo que une a las cuatro: todas tienen resuelto el dinero o la adopcion y NINGUNA la PROCEDENCIA DEL ACTIVO — primera vez en 36 barridos que el mismo hueco aparece en las cuatro.** 🔴 **Egress a las seis fuentes primarias medido en este pase: 000 las seis, con control positivo en verde ⇒ todo lo de abajo es fuente SECUNDARIA.**
@@ -73,6 +74,55 @@ updated: 2026-10-05
 > regulado — **STUDENTS FIRST Act of 2026**, marco de los estudiantes de los 50 estados (AASA, agosto 2026).
 > **LATAM:** 🔵 el hallazgo del pase — **existe una capa MCP nacional brasileña de datos públicos, activa y MIT, y
 > educación es el único dominio grande que falta** (**gap 69**).
+
+## 🟢 Barrido regional 40 (pase 111 del 2026-10-05) — 4/4 regiones, 0 silencios y **0 hechos nuevos**: la saturacion, medida con denominador enumerado
+
+Las cuatro consultas corrieron con el año **CALCULADO** (`date -u +%Y` → **2026**), una por region,
+con la plantilla del encargo (`AI {industry} {region} {year} adoption regulation players`).
+🟢 **Las cuatro devolvieron material relevante: 0 silencios.** 🔴 **Y ninguna devolvio un hecho que
+este arbol no tuviera ya**, medido con el `grep` de control **antes** de escribir una linea.
+
+| hecho devuelto | region | ocurrencias ya en el arbol |
+|---|---|---|
+| ley de AI de Vietnam, educacion entre los 6 sectores de alto riesgo | APAC | 210 |
+| `AI Basic Act` de Corea, vigente 2026-01-22, educacion como *high-impact* | APAC | 44 |
+| Ipsos *Education Monitor 2026* (ANZ mas a favor de prohibir que Asia) | APAC | 9 |
+| California **AB 1159** — prohibe usar datos de alumno para entrenar | North America | 143 |
+| Idaho **SB 1227** | North America | 75 |
+| NYC *Traffic Light Framework* (marzo 2026) | North America | 44 |
+| *STUDENTS FIRST Act of 2026* | North America | 21 |
+| 134 proyectos de ley en 31 estados | North America | 4 |
+| `Digital Omnibus` y el diferimiento del Anexo III a `2027-12-02` | EMEA | 104 |
+| CENIA · Latam-GPT | LATAM | 41 · 37 |
+| Uruguay (Convenio del Consejo de Europa) | LATAM | 59 |
+| Peru (practicas prohibidas, supervision humana) | LATAM | 73 |
+| CONPES de AI de Colombia | LATAM | 72 |
+| Observatorio UNESCO de AI en Educacion para LATAM y el Caribe | LATAM | 4 |
+| Digital Education Council — encuesta LATAM de superior | LATAM | 69 |
+
+⚠️ **La UNICA cadena con 0 ocurrencias fue «31 states», y es el MISMO hecho que «134 bills» en otra
+redaccion — asi que no es un hueco y no se publica como tal.**
+
+🔵 **Es `P287` reproducido en la capa regional, y con el denominador escrito: 15 hechos medidos, 15
+ya publicados, 0 nuevos.** El eje regional de esta KB esta **saturado para consulta generalista**, y
+el contenido informativo del barrido 40 **es el cero mismo**: un barrido que devuelve 15 hechos y 0
+nuevos dice que hay que **cambiar el eje de la consulta**, no que las regiones esten quietas.
+
+### 🔴 Lo que esta saturacion significa para una propuesta, que no es «no hay nada»
+
+Cuarenta barridos regionales dejan las cuatro regiones con **marco, dinero y adopcion resueltos** y
+el canal generalista agotado. 🔵 **El unico eje que sigue devolviendo hallazgos nuevos en los
+ultimos pases no es regional: es el de la PROCEDENCIA DEL ACTIVO** —de que licencia cede cada pieza
+que se entrega—, que es donde `P348`, `P349` y `P352` de este pase cayeron.
+
+⚠️ **Y eso es, en si, un dato de posicionamiento:** lo que diferencia una propuesta por region ya no
+es saber que regula cada region —eso esta publicado y cualquiera lo cita— sino poder decir **de que
+licencia cede el activo que se va a entregar ahi**, que es lo que ningun barrido de mercado
+contesta. Las **Opportunities by region** de este archivo siguen vigentes sin cambios por este
+pase; lo que este pase agrega es la cota con que se pueden citar sus cifras de repo
+(`P349`: entero exacto solo por debajo de 1.000).
+
+---
 
 ## 🟢 Barrido regional 39: las cuatro regiones responden (0 silencios) — y lo que las separa este pase es el INSTRUMENTO DE POLITICA, no el marco ni el dinero (pase 110 del 2026-10-05)
 

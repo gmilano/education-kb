@@ -7,9 +7,62 @@ updated: 2026-10-05
 # 📈 Repos trending — education
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
+> **Pase 111 del 2026-10-05:** 🔴 **Trending de la industria vacio por CUADRAGESIMA vez:** catalogos, curriculo para ingenieros y el eje generalista; 12 de 13 candidatas ya publicadas (`P311`) y la unica nueva (`OpenOSINT`) es OSINT en terminal. 🆕 **El aporte es la COTA de la columna de estrellas de este archivo, medida por BANDA: `P349` — es un ESCALON, no «3 cifras significativas». Las filas chicas (la mayoria del inventario educativo) se pueden publicar con ENTERO EXACTO y fecha; las grandes NO, por mas que se vean tres digitos. La banda del millon se declara NO-MEDIDA (`P286`).** 🔴 **57 de las 265 ocurrencias de cifras con 4+ digitos viven aca, 0 posteriores al pase 110.** 🔴 **Y el tablero se midio DESDE EL CLON: el pase 110 publico «62 suites, 0 fallos» y en un clon nuevo era «65 y 1 fallo» — `test_p345.py` no se podia importar fuera de su contenedor por un censo en `/tmp` (`P352`); arreglada, el tablero real es **66 suites, 0 fallos**.**
 > **Pase 110 del 2026-10-05:** 🔴 **Trending de la industria vacio por TRIGESIMONOVENA vez.** 🟢 **Lo que se mueve es el CANAL: `WebFetch` sobre `github.com` devuelve estrellas donde `curl` da 403, con control negativo en 404 — asi que la columna de estrellas de este arbol vuelve a existir, con resolucion de 3 cifras significativas.** 🔴 **Y lo primero que mide es un repo de 8 ★ sin licencia que el canal de busqueda presento junto a uno de 40,8 ★k.**
 > **Pase 107 del 2026-10-05:** 🔴 **Trending de la industria vacio por TRIGESIMOSEXTA vez: curriculo, catalogos, una bolsa de trabajo y dos generalistas (`microsoft/semantic-kernel` 27.470 ★, `NousResearch/hermes-agent` MIT), con las SEIS cifras del eje generalista identicas digito a digito a los pases 105 y 106 ⇒ informacion sobre el CANAL, no sobre la industria.** 🟢 **Lo que SI se movio es una capa de BINARIOS que este archivo nunca conto: 2.443 archivos de figura (~156 MiB, 1.326 imagenes distintas) en `CAHLR/OATutor-Content`, con la extension `.gif` falsa en 2.443 de 2.443 (`P332`).** 🔵 **`git ls-remote` da TRES refs, y una se llama `gpt-science-study`: la unica de este arbol cuyo nombre anuncia contenido sintetico.** 🔴 **Defecto propio corregido: los 49.481 JSON contra los 49.479 del pase 106 son los 6 caminos con bytes de control (U+007F/U+0080/U+0081) en el nombre del paso — la identidad de un paso NO es un slug seguro.**
 > **Pase 106 del 2026-10-05:** 🔴 **Trending de la industria vacio por TRIGESIMOQUINTA vez: el canal devuelve generalista o educativo-sobre-AI, no AI-para-educacion.** 🟢 **Lo que SI se movio esta en el eje de `ref` y no de repo: las ramas `1e` de 5 bundles de `openstax` contienen la UNICA cesion `CC BY 4.0` de 10 colecciones cuyas versiones vivas son `NC-SA` — cesion y vigencia apuntan en direcciones opuestas.** 🔵 **Canal nuevo calibrado: `git ls-remote` para enumerar refs (responde a repo real, falla a repo inventado), el unico de este arbol que contesta «que refs tiene este repo» con `api.github.com` en 403 — sin el, la accion A de este pase era imposible.**
+
+## 2026-10-05 — pase 111: trending de la industria vacio por CUADRAGESIMA vez, y el aporte es que la COTA de la columna de estrellas queda medida por banda
+
+### 🔴 El cero, con el reparto escrito
+
+Año **CALCULADO** (`date -u +%Y` → **2026**). El canal devolvio catalogos
+(`500-AI-Agents-Projects`, `awesome-ai-agents-2026`, `agents-radar`), curriculo para enseñar AI a
+ingenieros (`ai-engineering-from-scratch`, `LLMs-from-scratch`,
+`jamwithai/production-agentic-rag-course`) y el eje generalista. 🔴 **0 repos de la industria
+educativa.** Las 12 de 13 candidatas estaban ya publicadas (gate `P311`); la unica nueva
+(`OpenOSINT`) es un agente de OSINT en terminal.
+
+### 🆕 La columna de estrellas de este archivo, con su cota real por banda
+
+El pase 110 devolvio esta columna a la vida y le puso una cota de *«3 cifras significativas»*.
+🔴 **Medida, la cota es un ESCALON y el enunciado falla en las dos direcciones** (`P349`):
+
+| banda | rango | se ve | cota absoluta | cota relativa |
+|---|---|---|---|---|
+| `EXACTO` | < 1.000 | `264` | 🟢 **0** | 🟢 **0 %** |
+| `K-2CIFRAS` | 1.000–9.999 | `7.5k` | ±50 | 🔴 hasta **±5,0 %** |
+| `K-3CIFRAS` | 10.000–99.999 | `40.8k` | ±50 | ±0,5 % → ±0,05 % |
+| `K-ENTERO` | ≥ 100.000 | `117k` | 🔴 **±500** | ±0,5 % → |
+| `NO-MEDIDA` | ≥ 1.000.000 | — | ⚠️ **sin medir** | — |
+
+🔵 **Para este archivo la consecuencia es directa:** las filas chicas —que son la mayoria del
+inventario educativo— se pueden publicar con **entero exacto y fecha**, y las grandes **no**, por
+mas que se vean tres digitos. ⚠️ **La banda del millon se declara `NO-MEDIDA` y no se infiere
+(`P286`).**
+
+### 🔴 El barrido de cifras sobre este archivo: 57 ocurrencias
+
+De las **265** ocurrencias de cifras con 4+ digitos exactos que la accion B encontro en el arbol,
+**57 viven aca** — segundo archivo mas cargado. 🟢 **Ninguna posterior al pase 110.** 🔴 **Pero el
+barrido no distingue el dato de la cita que lo refuta, asi que el conteo crudo sobreestima el defecto: lo que
+hay que arreglar son 42 valores distintos y, sobre todo, los que viven en region de catalogo**
+(`P351`).
+
+### 🟢 El tablero de suites de este arbol, medido DESDE EL CLON
+
+| medido | valor |
+|---|---|
+| suites Python | **60** |
+| suites shell | **6** |
+| **total** | 🟢 **66, 0 fallos** (`Python 3.11.15`) |
+
+🔴 **El pase 110 publico «62 suites, 0 fallos» y en un clon nuevo era «65 y 1 fallo».** La
+diferencia no es una suite que se rompio: `test_p345.py` **nunca se podia correr fuera del
+contenedor que la escribio**, porque su modulo leia un censo en `/tmp` al importarse (`P352`).
+🟢 **Arreglada contra el artefacto versionado, reproduce 1.418/2.443 digito a digito.**
+
+---
 
 ## 2026-10-05 — pase 110: trending de la industria vacio (barrido 39), y el movimiento es de INSTRUMENTO: la columna de estrellas vuelve a ser medible
 

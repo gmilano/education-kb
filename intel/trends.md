@@ -7,6 +7,7 @@ updated: 2026-10-05
 # 📡 Tendencias — education
 
 > Ventana de investigación: septiembre 2026. Verificado 2026-09-30; el pase 11, el 2026-10-01.
+> **Pase 111 del 2026-10-05:** 🟢 **Tendencias 891–900.** 🆕 **`P349` — una cota de precision declarada en «cifras significativas» miente en los extremos: el canal de estrellas es un ESCALON (0 / ±50 / ±50 / ±500), da el entero EXACTO debajo de 1.000 y solo DOS cifras en 1.000-9.999; el peor error relativo y el peor absoluto no viven en el mismo lugar.** 🆕 **`P353` — la precision que vuelve checkeable a una cifra es la misma que la hace envejecer: `open-tutor-ai-CE` 108 → 107 ★ en un pase, y lo que volvio medible la deriva fue una tabla que SI estaba fechada.** 🆕 **`P350` — la frontera de una accion hacia afuera esta ANTES del envio, y una pre-registracion puede ponerla en el eje equivocado: enumerar contacto de personas en repos de terceros ya es PII y fue denegado, asi que el resultado es un TERCERO que las dos ramas no admitian.** 🔴 **Y lo medible sin tocar dato personal alcanzo para decidir: 0 de 6 superficies de contacto legibles por maquina, con README 200 en 6/6 como testigo.** 🆕 **`P351` — un barrido por una cifra publicada no distingue el DATO de la CITA que lo refuta: el conteo crudo sobreestima, el defecto son 42 valores y 31 en region de catalogo. Forma INVERSA de `P344`.** 🔴 **`P348` — contar por ARCHIVO en vez de por UNIDAD sobresamplea lo que no cede: la tasa del corpus es 76,4 %, no 58,0 %; las mal cedidas cargan 25,0 % mas figuras/unidad y `NO-ES-CESION` carga 3,021. Usar 58,0 % como tasa del corpus subestima la entregabilidad en 18,4 pp.** 🟢 **Los 10.210 RESOLUBLE llevan UN solo identificador (`CC BY 4.0`) y las dos cubetas sucias estan separadas por lado: se negocia dos veces, no por item.** 🆕 **`P352` — una suite que pasa solo en el contenedor que la escribio es una memoria, no un control.** 🆕 **`P354` — un control que reconoce una ORTOGRAFIA y no un OBJETO falla EN SILENCIO y en la direccion peligrosa: el auditor de citas de patron reportaba 42 numeros DEFINIDOS como colgados y seguia en verde; arreglado, colgadas 63 → 21 y suite 8/8 → 15/15.** ⚠️ **Y las 21 que quedan se dejan como deuda ENUMERADA (la peor: `P135`, 84 citas en negrita y 0 definiciones), porque escribir hoy la seccion de un patron ajeno es fabricar doctrina (`P286`).** 🟢 **Barrido regional 40: 4/4 regiones, 0 silencios y 0 hechos nuevos — saturacion medida (`P287`).**
 > **Pase 110 del 2026-10-05:** 🟢 **Tendencias 883–890.** 🔴 **`P344` — una pre-registracion puede construir su denominador CONTRA su propia hipotesis: 0 de 13 afirman cesion, y las 6 que SI lo hacen estaban en las 9 filas que la pre-registracion excluyo.** 🟢 **`P320` en su forma mas filosa: el canal es propiedad del par (herramienta, destino) — `WebFetch` sirve `github.com` donde `curl` da 403, asi que las ESTRELLAS vuelven, con resolucion de 3 cifras significativas y dos cifras del catalogo refutadas.** 🟢 **`P337` CERRADO: el corte converge a 1.611/832 y las 41 de diferencia son un DOMINIO DESNUDO — nunca fue una contradiccion, era un predicado no dicho.** 🔴 **`P346` — y lo que cierra es que la pregunta no decidia nada: entregable sin gestion son 1.418 de 2.443 (58,0 %), con 368 figuras OPENSTAX que no ceden NADA y 175 NO-OPENSTAX con CC BY 4.0 impecable.** 🆕 **`P347` — un archivo de licencia puede EXISTIR y no contener licencia: `frappe/education` cede «GNU GPL V3» en 19 BYTES.** 🟢 **Barrido regional 39: 4/4 regiones, 0 silencios, y la racha del calendario superado del AI Act sigue cortada por segundo pase.**
 > **Pase 109 del 2026-10-05:** 🟢 **Tendencias 875–882.** 🔴 **La racha de OCHO pases del calendario superado del AI Act se corta, y la condicionalidad del diferimiento corre al REVES: `2027-12-02` es un LIMITE EXTERIOR adelantable a 6 meses de aviso, no una fecha garantizada (tendencias 875–877).** 🔴 **`P342` — un badge de licencia y una entrada de arbol del README son una afirmacion de cesion, no una cesion, y esta base tenia el falso negativo publicado dos veces (tendencia 878).** 🔴 **`P343` — un prefijo GOLOSO sin frontera izquierda le roba los digitos de orden superior a un numero capturado (`35.121` → `5.121`), POSIX ERE no tiene con que frenarlo (ni cuantificadores perezosos ni *lookbehind*), y la huella es el UNICO campo que lo detecta; el primer diagnostico de este pase culpo a la causa equivocada y la refuto su propia suite (tendencia 879).** 🟢 **`P333` cerrado por ausencia medida: 5 de 5 huellas del archivo completo, 0 de 5 del archivo sin su ultimo byte (tendencia 880).** 🔴 **Saturacion del eje de agentes educativos medida: 5 devueltas, 5 publicadas, 0 nuevas (tendencia 881), y el canal de estrellas degradado a 403 (tendencia 882).**
 > **Pase 107 del 2026-10-05:** 🟢 **Tendencias 859–866.** 🔴 **`P332` — la EXTENSION de un archivo de imagen no es su FORMATO: 2.443 de 2.443 `.gif` de un corpus OER son PNG/JPEG/WEBP, y un barrido por extension entre dos arboles da «0 solapamiento» con varianza cero desde una premisa falsa (por `sha256` da 36).** 🔴 **`P334` — el titular de una FIGURA se resuelve por BYTES y vive en una obra DISTINTA de la que el item cita: los 36 pares citan `introductory-statistics` y sus bytes se publican en `osbooks-statistics`.** 🟢 **La herencia implicita de cesion EXISTE y es de 9.971 unidades (76,7 %), con la accion pre-registrada CONFIRMADA — y en 3.876 el padre tampoco declara nada.** 🔴 **`P333` — una huella tomada por sustitucion de comando no es la huella del archivo: `fa4e32e5e622` era el archivo MENOS su salto final.** 🔴 **`P335` — tercera sub-clase de `P320`: lo denegado fue la FORMA (lote) y no el derecho (pieza nombrada).** 🟢 **Barrido regional 36: las cuatro regiones tienen resuelto el dinero o la adopcion y NINGUNA la procedencia del activo.**
@@ -123,7 +124,193 @@ updated: 2026-10-05
 > están mal por ~2× y **un 403 de `curl` no es un 404**. Ver la nota de método del pase 12.
 > **Pase 11:** el Digital Omnibus es derecho vigente (tendencia 25), aparece la capa predictiva y está vacía (tendencia 26), y se corrige un error de método de diez pasadas sobre licencias permisivas (tendencia 27).
 
+### 891 · 🆕 `P349` — una cota de precision que se declara en «cifras significativas» miente en los extremos
+
+El pase 110 recupero el canal de estrellas y lo publico con una cota: *«3 cifras significativas»*.
+Medido sobre cinco repos en cuatro magnitudes, el enunciado **falla en las dos direcciones**: por
+debajo de 1.000 el canal entrega el **entero exacto** (`264`, `107` — mejor que 3 cifras) y en la
+banda 1.000–9.999 entrega solo **dos** (`7.5k`, que no distingue 7.450 de 7.550 — peor que 3).
+
+La cota real es una **funcion escalon**: 0 / ±50 / ±50 / ±500 segun la banda. 🔵 **Y las dos peores
+cotas no viven en el mismo lugar:** el peor error **relativo** esta al pie de la banda `k` (±5,0 %)
+y el peor **absoluto** arriba (±500). Una sola cifra de «cifras significativas» no puede expresar
+eso, y por eso una cota asi **se publica por banda o no se publica**.
+
+**Para una entrega:** la regla operativa es que un **entero exacto** solo es publicable por debajo
+de 1.000; arriba va magnitud con banda y cota. ⚠️ La banda del millon queda `NO-MEDIDA` y no se
+infiere (`P286`).
+
+---
+
+### 892 · 🆕 `P353` — la precision que vuelve checkeable a una cifra es la misma que la hace envejecer
+
+En la banda `EXACTO` de `P349` el canal resuelve a **1 unidad**, asi que la deriva es visible dentro
+de un pase: `Open-TutorAi/open-tutor-ai-CE` paso de **108 ★** (pase 110) a **107 ★** (pase 111).
+Una diferencia de 1 ahi **no es redondeo** — es deriva o es un error de lectura, y **nada en la
+cifra dice cual si la cifra no lleva fecha**.
+
+🟢 **Lo que volvio medible la deriva fue una tabla que SI estaba fechada** («Real 2026-09-30»),
+que da una serie de tres puntos para `OATutor` (265 → 264 → 264) en vez de dos cifras en disputa.
+La que habia que arreglar era la fila de **catalogo**, con un `265` desnudo sin fecha ni canal.
+
+**La regla que deja es mas angosta que «fechar todo»:** en la banda `EXACTO` la cifra no se publica
+sin fecha; en las bandas `k` la cota (±50 / ±500) **ya absorbe** varios pases de deriva, asi que
+ahi la fecha es higiene y no correccion.
+
+---
+
+### 893 · 🆕 `P350` — la frontera de una accion hacia afuera esta antes del envio, y una pre-registracion puede ponerla en el eje equivocado
+
+La accion A del pase 110 queria convertir `P342` en plata: redactar 6 pedidos de cesion y medir
+cuantos de los 6 tienen canal de contacto resoluble desde el payload. **Puso su frontera en el
+envio** —*«se detiene en REDACTAR: no se manda nada»*— que es la frontera que el pase 61 respeto
+con el PR a `toshieji`.
+
+🔴 **La frontera real esta un paso antes: ENUMERAR correos y perfiles de personas en repos de
+terceros ya es manejo de datos personales, y fue DENEGADO por politica.** La pre-registracion fue
+cuidadosa en el eje que anticipo y **se equivoco en cual era el eje**: la accion sensible es
+recolectar, no enviar.
+
+🔵 **Y el resultado es un TERCERO que las dos ramas no admitian.** Las ramas (≥4 / ≤2) solo
+aceptaban numeros; el resultado real es que el numero **no se obtiene en este entorno**. Callarlo
+lo dejaria indistinguible de un cero, que es la leccion de `P343`. **Una pre-registracion con dos
+ramas supone que el instrumento corre; si no corre, hay que escribirlo.**
+
+---
+
+### 894 · 🔴 Lo que se puede medir sin tocar un dato personal alcanza para decidir, y en este caso decidio
+
+Con la enumeracion de contacto denegada, lo que quedo medible fue **estructura**: presencia y
+tamano de archivo, sin leer contenido. **120 sondas** sobre los 6 repos dieron `README` **6/6**
+(testigo de alcance: el canal llega, los 404 son ausencia) y 🔴 **`CODEOWNERS`, `.github/CODEOWNERS`
+y `CITATION.cff` en 0/6**.
+
+🔵 **Ninguno de los 6 tiene superficie de contacto LEGIBLE POR MAQUINA.** La unica presente en los
+6 es prosa libre —exactamente lo que la politica protege— y el unico manifiesto que existe tiene
+**69 bytes**. Asi que `P342` queda **recuperable en teoria y ni enumerable en este entorno**, que es
+mas fuerte que la rama de refutacion ofrecia, y es un enunciado **sobre el entorno**, no sobre los
+repos ni sobre sus titulares.
+
+**Para una entrega:** cuando un dato esta vedado, medir la **forma** del soporte suele contestar la
+pregunta de negocio. «¿Es automatizable pedir estas cesiones?» se contesta con 0/6 superficies
+legibles, sin abrir un solo README.
+
+---
+
+### 895 · 🆕 `P351` — un barrido por una cifra publicada no distingue el dato de la cita que lo refuta
+
+La accion B barrio el arbol por cifras de estrellas con 4+ digitos exactos: **265 ocurrencias al cierre del pase, 42
+valores distintos, 8 archivos**, 🟢 **0 posteriores al pase 110**. Prediccion confirmada en el
+conteo.
+
+🔴 **Pero dos ocurrencias son el pase 110 citando «385.407 ★» *para refutarla*, y el `grep` las
+cuenta igual que un dato publicado.** Asi que **el conteo crudo sobreestima el defecto**: lo que hay que
+arreglar son los **42 valores distintos** y sobre todo las **31 que viven en region de catalogo**,
+que es la unica que un lector lee como dato vigente. **Una cifra citada para refutarla es el
+registro funcionando, no el defecto.**
+
+🔵 **Es la forma INVERSA de `P344`:** ahi el denominador excluia los casos que importaban, aca
+incluye casos que no son el defecto. Las dos veces el numero salio bien y significaba otra cosa.
+
+---
+
+### 896 · 🆕 `P348` — contar por el archivo en vez de por la unidad sobresamplea justo lo que no cede
+
+La accion C pidio medir la cesion del corpus completo y predijo que la tasa **caeria** por debajo
+del 58,0 % de las figuras. **Sale refutada por dos motivos apilados.** La tasa **sube a 76,4 %**
+(+18,4 pp) **y los dos numeros no eran comparables**: el 58,0 % cuenta **archivos de figura**
+(2.443), el 76,4 % cuenta **problemas** (13.371).
+
+En la misma unidad: con figura **63,4 %**, sin figura **78,1 %**, corpus **76,4 %**. 🔵 **Los 5,3 pp
+que separan 58,0 de 63,4 son forma del denominador, no cesion.**
+
+🟢 **El mecanismo esta medido:** las unidades mal cedidas cargan **25,0 % mas figuras por unidad**
+(1,764 contra 1,411), y la peor cubeta —`NO-ES-CESION`, una URL de fuente que no concede nada—
+carga **3,021**, mas del doble. **El conteo ponderado por figura no mide peor cesion: mide que lo
+mal cedido trae mas archivos.**
+
+**Para un presupuesto:** la tasa del corpus es **76,4 %**, no 58,0 %. Usar el 58,0 % como tasa del
+corpus —que es lo que la pre-registracion queria concluir— **subestima la entregabilidad en
+18,4 pp**, y el enunciado commensurable sobre la capa de figura es **−13,0 pp**, no −18,4.
+
+---
+
+### 897 · 🟢 Un activo OER con una sola licencia se negocia una vez, y ese dato cambia el precio de la gestion
+
+Medido el campo `license` de las 13.371 unidades: los **10.210 `RESOLUBLE`** llevan **un solo
+identificador, `CC BY 4.0`**. No hay seis licencias que conciliar: hay una.
+
+🔵 **Y las dos cubetas sucias estan separadas por lado, lo que las vuelve direccionables:** los
+**402** `VERSION-SIN-VARIANTE` son todos la cadena literal `CC4.0` y los 402 caen del lado
+**NO-OPENSTAX**; los **54** `NO-RECONOCIDO` son todos la cadena `openstax` y caen los 54 del lado
+**OPENSTAX**. Una cubeta es un problema de **plantilla de terceros**, la otra de **plantilla del
+titular** — y se arreglan con dos conversaciones distintas, no con una auditoria por item.
+
+---
+
+### 898 · 🆕 `P352` — una suite que pasa solo en el contenedor que la escribio es una memoria, no un control
+
+`test_p345.py` se publico como «21/21» en el pase 110 y **no llega a importar en un clon nuevo**:
+`entregabilidad.py` hacia su trabajo a nivel de modulo y su censo por defecto era
+`/tmp/oat-censo/unidades-oer.tsv`, una ruta **efimera del contenedor**. El pase 110 no mintio —
+midio 21/21 donde estaba—; el defecto es que **esa medicion no era reproducible por nadie mas**.
+
+🔵 **Es `P294` en el eje del TIEMPO: lo que se construye y no se conecta no existe, y una ruta de
+`/tmp` conecta a un contenedor, no a un arbol.** El tablero del pase 110 decia «62 suites, 0
+fallos» y desde un clon era «65 y 1 fallo».
+
+🟢 **Arreglado contra el artefacto versionado, y reproduce las cifras publicadas digito a digito**
+(1.418/2.443 y 368 `OPENSTAX AUSENTE`), asi que no movio ningun numero: solo volvio re-corrible la
+medicion. **Un tablero de suites se mide desde el clon, que es la unica forma en que la cifra
+significa algo.**
+
+---
+
 ## 🟢 Tendencias 883–890 — pase 110 del 2026-10-05: un denominador construido contra su hipotesis, el canal que es propiedad de la herramienta, `P337` cerrado por un dominio desnudo, y una licencia de 19 bytes
+
+### 899 · 🆕 `P354` — un control que reconoce una ORTOGRAFIA y no un OBJETO falla en silencio, y en la direccion peligrosa
+
+El auditor de citas de patron de esta base conocia cuatro convenciones de encabezado y no la
+quinta: el numero en **codigo inline** (`` ### `P348` — titulo ``), que es la que `patterns.md` usa
+**desde el pase ~95**. 🔴 **Resultado: 42 numeros definidos salian reportados como COLGADOS**
+(`P284`–`P287`, `P308`–`P319`, `P328`–`P353`) — los patrones de los ultimos ~16 pases.
+
+🔵 **Lo que vuelve grave a este modo de falla es que es silencioso en la direccion peligrosa:** el
+control no se cae, **sigue en verde**, y empieza a reportar como defecto lo que esta bien. Un
+equipo que lo lea concluye que su documentacion esta rota cuando lo roto es el medidor.
+
+🔵 **Y el detector documenta en su propio docstring haber tenido este defecto antes** (con
+`P145`–`P148`). Aparecio una tercera notacion y volvio a pasar: familia de `P171` (cuerpo vs.
+titulo), `P288` (caja), `P299` (palabra vs. subcadena), `P304` (frase vs. tokens).
+
+🟢 **Arreglado como convencion `E`: colgadas 63 → 21, definidos 288 → 330, suite 8/8 → 15/15** con
+tres controles negativos, que son los que impiden que el arreglo convierta cualquier cita en
+definicion.
+
+**Para una entrega:** un control de consistencia documental **se valida contra la notacion REAL del
+arbol**, no contra la que tenia cuando se escribio — y lo que lo detecta es un control positivo por
+cada convencion viva, no un conteo global en verde.
+
+---
+
+### 900 · ⚠️ Una deuda ENUMERADA vale mas que una deuda arreglada a ojo
+
+Con el detector arreglado quedan **21 citas de patron genuinamente colgadas**, todas de pases muy
+anteriores: `P127`–`P130`, `P132`–`P135`, `P173`–`P175`, `P239`, `P240`, `P245`, `P252`,
+`P279`–`P283`, `P293`. 🔴 **La peor es `P135`: citada 84 veces en NEGRITA y sin una sola seccion que
+la defina** — y 84 citas en negrita es precisamente la forma en que esta base dice «esto es un
+patron».
+
+⚠️ **Este pase NO las corrige, y la razon es de metodo:** escribir hoy la seccion de un patron que
+otro pase nombro —reconstruyendo de sus citas lo que quiso decir— es **fabricar doctrina y firmarla
+con un numero ajeno**. Queda nombrada, contada y fechada, que es lo que `P286` pide: medir sin
+extrapolar.
+
+🔵 **La leccion general:** una base que crece por pases acumula citas a conceptos que nunca se
+escribieron. La forma correcta de tratarlas no es rellenarlas ni borrarlas: es **contarlas con un
+instrumento que corra**, para que el proximo pase decida con un numero en vez de una impresion.
+
+---
 
 ### 883 · 🔴 Una pre-registracion puede construir su denominador CONTRA su propia hipotesis (`P344`)
 
