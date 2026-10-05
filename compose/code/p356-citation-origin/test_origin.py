@@ -72,9 +72,37 @@ class AsimetriaDelAuditor(unittest.TestCase):
         self.assertIn('patterns_md', src)
 
     def test_hay_numeros_definidos_fuera_de_patterns_md(self):
+        """🆕 **Accion M (pase 122): retrato -> PROPIEDAD.**
+
+        Esta prueba afirmaba `len(fuera) == 3` y `sorted(fuera) == [245, 279, 281]`: dos
+        cardinalidades congeladas del corpus. Cada pase que define un patron fuera de
+        `compose/patterns.md` las volvia rojas sin que nada se hubiera roto -y el dia de
+        esta reescritura el conjunto medía **26**, no 3 (clase de `P399`).
+
+        🔵 **Lo que la prueba DEBE sostener** no es el tamaño del conjunto sino el defecto
+        que lo motivo: el auditor que lee SOLO `patterns.md` se pierde definiciones que
+        viven en otra parte del arbol, o sea el ALCANCE del instrumento es mas angosto que
+        el corpus. Esa es una propiedad invariante y se afirma en dos mitades:
+          (1) el conjunto es NO VACIO -si fuera vacio el defecto no existiria y la
+              prueba pasaria por vacuidad, que es como muere un retrato-;
+          (2) cada miembro esta REALMENTE definido fuera, con la convencion del propio
+              auditor y en un archivo que no es `patterns.md` -verificado contra `WHERE`,
+              no supuesto-.
+        El defecto original sigue detectandose: si alguien cambiara el auditor para que
+        leyera todo el arbol, (1) caeria a cero y la prueba fallaria."""
         fuera = {n for n in WHERE if n not in IN_PATTERNS}
-        self.assertEqual(len(fuera), 3)
-        self.assertEqual(sorted(fuera), [245, 279, 281])
+        self.assertTrue(
+            fuera,
+            'el conjunto es VACIO: o el auditor ya lee todo el arbol -y entonces el '
+            'defecto que esta suite documenta dejo de existir y hay que retirarla- o el '
+            'escaneo se rompio')
+        for n in sorted(fuera):
+            archivos = [a for a, _ in WHERE[n]]
+            self.assertTrue(archivos, 'P%d en el conjunto sin archivo que lo defina' % n)
+            for a in archivos:
+                self.assertNotEqual(
+                    os.path.normpath(a), os.path.join('compose', 'patterns.md'),
+                    'P%d se declaro definido FUERA pero %s es patterns.md' % (n, a))
 
 
 class ControlesNegativos(unittest.TestCase):

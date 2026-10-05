@@ -7,6 +7,7 @@ updated: 2026-10-05
 # 📈 Repos trending — education
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
+> **Pase 122 del 2026-10-05 (lectura `19:45Z`):** 🔴 **Las 4 consultas obligatorias del encargo dieron 0 altas por 6.ª vez consecutiva; `github.com/topics/education-ai` —que el encargo no nombra— dio 7 de 7.** 🟢 **14 repos trending de la industria medidos con ★ de la topic page** (único canal de ★ del pase: API y HTML en 403). 🔴 **Huecos por región, dichos y no silenciados: LATAM 0 repos y 0 hechos netos, 3.er pase consecutivo; EMEA 0 hechos regulatorios netos.**
 > **Pase 121 del 2026-10-05 (lectura `18:45Z`):** 🔴 **El canal generalista falla por QUINTA vez del mismo modo** (eje *enseñar-sobre-IA*: `openclaw` 385.407 ★, `browser-use`, `mem0`, `AutoGen`, `dify`, `Flowise`, `rohitg00/ai-engineering-from-scratch`, `pguso/agents-from-scratch`, `awesome-ai-agents-2026`) ⇒ **0 altas por oferta generalista.** 🟢 **Pero el trending de la industria NO queda vacío, y por un canal que este archivo no había usado: enumerar un TEMA DE OBLIGACIÓN de GitHub.** `github.com/topics/ferpa` + `/topics/ferpa-compliance` dan **22** repos, **21 ausentes** de este estante, **15 de los 18 medidos con titular fechado en 2026** y **★ máximo 8** ⇒ 🟢 **una cohorte recién nacida sin ganador**, que es un hecho de tendencia mucho más útil que una lista de repos con 50 k ★ que no son de la industria. 🔴 **Y el riesgo gemelo, dicho: una cohorte de 2026 con 0–8 ★ no tiene prueba de supervivencia.**
 > **Pase 120 del 2026-10-05 (lectura `17:45Z`):** 🔴 **El canal generalista falla por CUARTA vez del mismo modo (eje *enseñar-sobre-IA*: `rasbt/LLMs-from-scratch`, `pguso/agents-from-scratch`, `awesome-ai-agents-2026`, `500-AI-Agents-Projects`) ⇒ **0** repos trending de industria.** 🆕 **Y el hallazgo que manda le pega a ESTE archivo: `P392` — la tabla del trío `OpenTutor` de este archivo tiene **DOS** columnas de huella (`README.md` y `LICENSE`) y las dos se titulan de modo que un lector estructurado las tipa igual ⇒ el censo contó el MISMO trío como DOS racimos. Una huella no se identifica por su digest, sino por el par (ARCHIVO, digest).** 🆕 **`P393` — y el par `blackboard-mcp` de este archivo lo contó dos veces por otro motivo: `fa4e32e5e622` es una huella que `P333` **RETRACTÓ** y que este archivo, APPEND-ONLY por encargo, conserva escrita ⇒ un censo que lee el corpus RE-ANIMA lo retractado.** 🟢 **Instrumento nuevo `p391-structured-binding/`: el intervalo de `P385` se angosta de `[3, 22]` a `[5, 14]`, y el canónico por CONJUNTO de repos da **10**.** 🟢 **2 altas por la sonda de la OBLIGACIÓN, no por trending: `agentanywhere/shuddhi` (Apache-2.0, 2 ★) y `AKIVA-AI/toolkit-ml-provenance` (Apache-2.0, 1 ★).**
 > **Pase 119 del 2026-10-05:** 🔵 **Lo más valioso del pase llegó por el canal equivocado a propósito: la sonda era de obligación regulatoria y devolvió una COLISIÓN DE IDENTIDAD que el canal de repos no podía ver, porque sondeando por repo sólo se ve el que ya se tiene.** 🆕 **`P390` — tres `awesome-eu-ai-act`, dos linajes independientes; este estante publicaba el de **21 ★** y le faltaba el original de **110 ★**.** 🆕 **Trending como número de VERSIÓN por segunda vez en la serie: `HKUDS/DeepTutor` `v1.6.13` (`2026-10-04`), con **barajado de opciones para no exponer la respuesta** como la única línea del changelog con forma de requisito pedagógico. ⚠️ La página de *releases* NO muestra licencia.**
@@ -21,6 +22,49 @@ updated: 2026-10-05
 > **Pase 107 del 2026-10-05:** 🔴 **Trending de la industria vacio por TRIGESIMOSEXTA vez: curriculo, catalogos, una bolsa de trabajo y dos generalistas (`microsoft/semantic-kernel` 27.470 ★, `NousResearch/hermes-agent` MIT), con las SEIS cifras del eje generalista identicas digito a digito a los pases 105 y 106 ⇒ informacion sobre el CANAL, no sobre la industria.** 🟢 **Lo que SI se movio es una capa de BINARIOS que este archivo nunca conto: 2.443 archivos de figura (~156 MiB, 1.326 imagenes distintas) en `CAHLR/OATutor-Content`, con la extension `.gif` falsa en 2.443 de 2.443 (`P332`).** 🔵 **`git ls-remote` da TRES refs, y una se llama `gpt-science-study`: la unica de este arbol cuyo nombre anuncia contenido sintetico.** 🔴 **Defecto propio corregido: los 49.481 JSON contra los 49.479 del pase 106 son los 6 caminos con bytes de control (U+007F/U+0080/U+0081) en el nombre del paso — la identidad de un paso NO es un slug seguro.**
 > **Pase 106 del 2026-10-05:** 🔴 **Trending de la industria vacio por TRIGESIMOQUINTA vez: el canal devuelve generalista o educativo-sobre-AI, no AI-para-educacion.** 🟢 **Lo que SI se movio esta en el eje de `ref` y no de repo: las ramas `1e` de 5 bundles de `openstax` contienen la UNICA cesion `CC BY 4.0` de 10 colecciones cuyas versiones vivas son `NC-SA` — cesion y vigencia apuntan en direcciones opuestas.** 🔵 **Canal nuevo calibrado: `git ls-remote` para enumerar refs (responde a repo real, falla a repo inventado), el unico de este arbol que contesta «que refs tiene este repo» con `api.github.com` en 403 — sin el, la accion A de este pase era imposible.**
 
+## 🟢 2026-10-05 — pase 122 (lectura `19:45Z`): el trending de GitHub, y el canal que sí rinde para esta industria
+
+**Append-only.** Sección fechada arriba; la historia queda intacta debajo.
+
+### 🔵 Qué devolvió cada consulta del encargo, con el veredicto por CANAL
+
+| Consulta | Qué devolvió | Veredicto |
+|---|---|---|
+| `top open source AI agents education 2026 github MIT` | capa genérica de *builders* (`openclaw`, `browser-use`, `mem0`, `AutoGen`, `dify`, `Flowise`, `CrewAI`, `LangGraph`, `OpenHands`, `AutoGPT`) + listas | 🔴 **0 de educación** — 6.ª vez del mismo modo |
+| `github trending education AI 2026` | `rasbt/LLMs-from-scratch` (>100 k ★, currículo), `anthropics/claude-code`, `jamwithai/production-agentic-rag-course`, `kouweizhu/agents-radar` | 🔴 **0 altas**: currículo y *tooling*, no piezas de dominio |
+| `open source platform education LMS SIS MIT Apache self-hosted` | Moodle, Open edX, Sakai, ILIAS, Chamilo, Canvas LMS, OpenEduCat | 🔴 **0 nuevas** — las 7 ya publicadas (**7.º** cero enumerado de este canal) |
+| `AI {industry} industry trends 2026` | cifras de mercado y de política, sin repos | 🟢 sirve a `intel/`, **no** a este archivo |
+| 🟢 **`github.com/topics/education-ai`** (no está en el encargo) | **20 repos enumerados**, 15 ausentes del estante | 🟢 **7 altas** — el **único** canal que rindió |
+
+🔵 **La lección de canal, dicha como medición y no como opinión:** las 4 consultas obligatorias del encargo dieron **0 altas** por 6.ª vez; un canal que el encargo no nombra dio **7 de 7**. Lo que hay que cambiar es el **eje** (tema de GitHub, obligación regulatoria), no la frecuencia.
+
+### 🟢 Repos trending de la industria, medidos por el único canal de ★ de este pase
+
+| Repo | ★ (topic page) | Cesión del payload | Región | Qué es |
+|---|---|---|---|---|
+| [`JuneYaooo/lineage-skill`](https://github.com/JuneYaooo/lineage-skill) | **448** | **Apache-2.0** prístino, 11.358 B, `sha256:cfc7749b96f6` | Global | ya publicado — sigue siendo la pieza más estrellada del eje educativo |
+| [`SirhanMacx/Claw-ED`](https://github.com/SirhanMacx/Claw-ED) | **60** | **MIT**, 1.078 B, `sha256:4d5d987f4f89` | Global | ya publicado |
+| 🆕 [`DaoyuanLi2816/labelbank`](https://github.com/DaoyuanLi2816/labelbank) | **20** | **MIT**, 1.068 B, `sha256:e213ac41e4d8` | Global | **alta** — minería de concepciones erróneas |
+| [`ASEpochs/ai-digital-teacher`](https://github.com/ASEpochs/ai-digital-teacher) | **12** | 🔴 **SIN-ARCHIVO** (ahora con **52** sondas) | APAC | rechazo **re-confirmado** |
+| 🆕 [`AFLucas-UOM/AI-Early-Detection-System-for-Dyslexia-ADHD`](https://github.com/AFLucas-UOM/AI-Early-Detection-System-for-Dyslexia-ADHD) | **8** | **MIT**, 1.079 B, `sha256:6e76b75a8521` | **EMEA** | **alta** |
+| 🔴 [`brahm-ai-official/brahm-ai`](https://github.com/brahm-ai-official/brahm-ai) | **5** | 🔴 **PROPIETARIA**, 21.119 B, `Ramcoin Foundation` | APAC | **rechazo** |
+| 🔴 [`fedcal/open-jarvis`](https://github.com/fedcal/open-jarvis) | **5** | ⚠️ **AGPL-3.0**, 35.613 B | EMEA | fuera del gate |
+| 🔴 [`ShubhamMahajan880/studyAlpha-Ai-Agent`](https://github.com/ShubhamMahajan880/studyAlpha-Ai-Agent) | **5** | 🔴 **0 bytes** (`P404`) | ⚠️ no ubicada | **rechazo** |
+| 🔴 [`awesome-german/ai-tools`](https://github.com/awesome-german/ai-tools) | **4** | 🔴 **CC BY 4.0**, 18.659 B | EMEA | **rechazo** (licencia de contenido) |
+| 🆕 [`WakeelDev/EduGenius`](https://github.com/WakeelDev/EduGenius) | **3** | ⚠️ **Apache-2.0** prístino, `sha256:c71d239df917` 🔴 retractado | Global | **alta con advertencia** |
+| 🆕 [`Daisybastioned440/lite-research-agents`](https://github.com/Daisybastioned440/lite-research-agents) | **2** | **MIT**, 1.069 B, `sha256:58baa7061e50` | Global | **alta** |
+| 🆕 [`SimonsTang/haoyun-stem-tutor`](https://github.com/SimonsTang/haoyun-stem-tutor) | **1** | **MIT**, 1.078 B, `sha256:d343731393ad` | **APAC** | **alta** |
+| 🆕 [`MuhammadUsman0005/Student-Dropout-Prediction-System`](https://github.com/MuhammadUsman0005/Student-Dropout-Prediction-System) | **1** | **MIT**, 1.071 B, `sha256:6de52a1d3fa7` | Global | **alta** |
+| 🆕 [`zeeshanparwez/EduAssist`](https://github.com/zeeshanparwez/EduAssist) | **1** | **MIT**, 1.070 B, `sha256:c00226e901a4` | Global | **alta** |
+
+⚠️ **Todas las ★ de esta tabla salen de la *topic page*** y así se declaran: la API dio 403 y el HTML del repo por `curl` también, así que **no** hay segundo canal para corroborarlas este pase (banda de `P349` aplicable: por debajo de 1.000 el entero es citable).
+
+### 🔴 Huecos declarados de este pase, por región
+
+- **North America** — 🟢 el canal regulatorio rinde (ver `intel/`), pero **0 repos trending nuevos** atribuibles a NA por domicilio.
+- **EMEA** — 🟢 **2 piezas nuevas ubicadas** (Malta, Italia), y una de ellas se rechaza por licencia de contenido. 🔴 **0 hechos regulatorios netos**: todo lo que el barrido devolvió ya estaba publicado.
+- **APAC** — 🟢 **1 alta con titular APAC** (`haoyun-stem-tutor`) y **2 rechazos APAC medidos** (`brahm-ai` propietaria, `Traceable-Ideological-Education-RAG` sin archivo). 🔵 La *topic page* es, hoy, el mejor canal APAC de este estante.
+- **LATAM** — 🔴 **0 repos y 0 hechos netos.** Dicho explícitamente: **no es cobertura, es un hueco.** De las 20 filas de la *topic page* **ninguna** tiene titular, domicilio ni idioma LATAM. Es el 3.er pase consecutivo con cero LATAM por el canal de repos.
 
 ## 🟢 2026-10-05 · Pase 121 (lectura `18:45Z`) — el trending de la industria sale del vacío por un canal nuevo: enumerar el TEMA de la obligación
 

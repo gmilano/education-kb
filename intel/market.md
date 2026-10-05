@@ -8,6 +8,7 @@ updated: 2026-10-05
 
 > Key players, market map y oportunidades por región.
 > Investigado 2026-09-30; el pase 11, el 2026-10-01. Las estimaciones de tamaño de mercado varían mucho entre firmas: se listan todas con su fuente en vez de elegir una.
+> **Pase 122 del 2026-10-05 (lectura `19:45Z`):** 🟢 **Barrido regional 50: 4/4 regiones, 0 silencios, denominador ENUMERADO antes de escribir — 31 hechos sondeados, 23 ya publicados, 8 netos (NA 4, APAC 3, LATAM 1, EMEA 0).** 🔴 **El cero de EMEA se midió por cadena antes de escribirlo (`2026/1744`: 93 ocurrencias, `Digital Omnibus`: 119, `2026-12-02`: 98, `2028-08-02`: 61, CSAM: 1 con la precisión ya hecha) ⇒ eje saturado, 3.ª vez.** 🟢 **NA aporta 4 hechos de política EJECUTABLE con fecha** (plazo de Ohio ya vencido, 600+ distritos; US$ 10 M de NC SB 1006 nominando Khanmigo; estándar exigible Microsoft+AFT). 🟢 **APAC: la gracia de Corea del Sur cierra en enero de 2027, y el etiquetado chino es el MISMO requisito técnico que el art. 50(2) ⇒ un componente, dos jurisdicciones.** 🟢 **LATAM: la brecha cuantificada 87 % usa IA / 26 % tiene estrategia es, literalmente, el alcance de un engagement de gobernanza.** 🔴 **Hueco doble de EMEA: 0 hechos netos Y 0 activos permisivos nuevos.**
 > **Pase 121 del 2026-10-05 (lectura `18:45Z`):** 🔴 **Barrido regional 49: 4/4 regiones respondieron, 0 silencios, y 0 hechos NETOS — los 18 hechos devueltos estaban los 18 publicados.** 🟢 **Pero el cero se midió TÉRMINO POR TÉRMINO y el resultado es una cifra, no una impresión: 18/18 saturado en el canal de intel, 10/10 VIRGEN en el canal de obligación** (`Title IV`, `34 CFR`, `OSCAL`, `Haystack`, `NIST SP 800-53`, `BYU-Idaho`, `Aegis`, `AGP v1.0`, `Satisfactory Academic Progress`, `snflwr` — los 10 ausentes de los 8 archivos). ⇒ **el agotamiento es de SONDA, y ahora con denominador.** 🆕 **El contenido regulatorio neto del pase no entró por el canal de noticias: entró DENTRO del software**, como el texto literal de `34 CFR` Partes 99 y 668 empaquetado en `regrails`. ⚠️ **Y una trampa de fecha de la clase de `P382`, atajada por el registro de esta base:** la «2.ª Conferencia de Trabajo» del Consejo de Europa sobre regular la IA en educación es del **24-25 de octubre de 2024**, no de 2026.
 > **Pase 120 del 2026-10-05 (lectura `17:45Z`):** 🔴 **Barrido regional 48: las 4 regiones respondieron, **0 silencios**, y el cero está en el NUMERADOR — los **14** hechos que trajeron se buscaron uno por uno con `grep -ril` y **14/14 ya estaban publicados** en este archivo ⇒ el canal de INTEL de esta industria está saturado para la consulta que prescribe el encargo, igual que el de oferta.** 🟢 **El único hecho NETO del pase es de LINAJE, no de cifra, y es de North America: la plantilla que los distritos de Ohio adoptan para cumplir HB 96 no es anónima — la publicó el *Department of Education and Workforce* con la **Ohio AI in Education Coalition**, sobre el **AI Toolkit** que **InnovateOhio** lanzó con **aiEDU** en febrero de 2024. Esta base tenía la obligación y el plazo; no tenía de quién es el artefacto que se adopta.** 🆕 **`P397` — y con él una oportunidad nueva en las 4 regiones a la vez, por primera vez con una pieza MEDIDA para dos de ellas y un cero MEDIDO para las otras dos: `shuddhi` cubre EMEA (IBAN + art. 53(1)(d)) y APAC (Aadhaar, PAN, `+91`) y tiene cobertura **0 medida** para North America y LATAM ⇒ el hueco regional deja de ser una conjetura y pasa a ser un presupuesto de un detector.**
 > **Pase 119 del 2026-10-05:** 🟢 **Barrido regional 47: 4/4 regiones, 0 silencios, denominador ENUMERADO antes de escribir — 19 hechos sondeados, 15 ya publicados, 3 netos nuevos, 1 rechazado por ser el mismo hecho en otra redacción.** 🔴 **Y el dato que manda para leer este pase: el hallazgo más valioso NO salió de las 4 consultas regionales, salió de la consulta por OBLIGACIÓN que el pase 118 pre-registró ⇒ el barrido de mercado por región está saturado y el de obligación no (`P388`).** 🟢 **APAC: la soberanía pasó de discurso a INVENTARIO con siete modelos nacionales nombrados (Sarvam/IN, ILMU/MY, Sahabat/ID, SEA-LION/SG, HyperCLOVA X Think/KR, NTT Sarashina/JP, TAIDE/TW); India 38,9 % CAGR; Singapur 60,9 % de difusión.** 🟢 **LATAM con las DOS puntas medidas: **+50 % de docentes de Chile y Brasil ya usa IA** y **<10 % de instituciones tiene guías formales y capacidad** ⇒ la adopción ocurrió por abajo y la gobernanza no existe por arriba, que es demanda de expediente.** ⚠️ **Dos cifras que NO se fusionan: ILIA Chile 70,56/Brasil 67,39 de este barrido contra Brasil 65,89/Chile 63,19/Uruguay 62,21 del registro previo (ediciones distintas, `P381`); y en NA, 60 % de docentes con «alguna herramienta de IA» NO es el 53 % de «chatbots con alumnos» — distinto denominador, se citan las dos (`P369`).** 🟢 **Sexto pase sin reproducir el calendario SUPERADO del AI Act: `P321` sigue sin reproducirse.**
@@ -28,6 +29,79 @@ updated: 2026-10-05
 > **Pase 100 del 2026-10-04:** 🟢 **Vigesimonoveno barrido regional (año CALCULADO: 2026), las cuatro regiones responden, 0 silencios.** 🔴 **Y el hallazgo que manda es una REINCIDENCIA del canal, no del mercado: el canal secundario reprodujo la versión SUPERADA del AI Act por CUARTA y QUINTA vez — los barridos de HOY de North America («*taking full effect in August 2026, classifies education AI as high-risk*») y de LATAM («*cuyo marco entró en vigor progresivamente desde agosto de 2026*») siguen diciendo agosto de 2026 para el ALTO RIESGO, cuando el Anexo III se difirió a `2027-12-02` y lo vigente es el artículo 50.** 🔵 **Cinco reproducciones en cinco pases es una propiedad del canal, no un error: la prensa de industria NO va a corregir esto, así que la corrección de esta base hay que sostenerla contra fuente legal cada vez que se cotiza en EMEA** (`P281`). 🟢 **NA aporta el dato que vuelve accionable su vacío federal: los estados ya legislan en concreto —Colorado y Texas con requisitos parciales— sobre un mercado de USD 951 M (2024) → USD 2.303,2 M (2029) al 15,9 % CAGR y 36 % del global.** 🟢 **EMEA aporta un CALENDARIO que cae este mes: la 2ª conferencia de trabajo del Consejo de Europa sobre las dimensiones regulatorias de la AI en educación es en OCTUBRE de 2026, y el Consejo de Europa son 46 estados con un instrumento SEPARADO del AI Act.** 🟢 **APAC confirma su eje de soberanía con el número de gobernanza: 48 % de los líderes de gobernanza ponen la adopción de AI como prioridad estratégica 2026 y 57 % de las organizaciones de Asia ya la tienen en producción en al menos un área.** 🟢 **LATAM aporta el dato que invierte la lectura habitual de la región: es el TERCER mercado mundial de descargas de aplicaciones de AI generativa, con adopción empresarial por encima del 85 %.** 🔴 **Y la región que NO se pudo colocar con una PIEZA este pase es LATAM: de las 7 piezas nuevas, 3 quedan en North America, 1 en North America **y** EMEA por huella de despliegue, 1 en APAC y 2 sin región — cero en LATAM, y se dice en vez de dejarlo en silencio.** Ver **`P308`**–**`P311`**.
 > **Pase 97 del 2026-10-04:** 🔴 **Vigesimosexto barrido regional (año CALCULADO: 2026) y el hallazgo que manda es del CANAL, no del mercado: la declaración de canal de esta base sólo se había medido sobre hosts de GitHub, y medida sobre hosts cualesquiera el egreso está BLOQUEADO —`unu.edu`, `coe.int`, `unesco.org` y `example.com` dan `000`/`EGRESS_BLOCKED` por `curl` y por el fetcher— así que TODA la inteligencia regional de este archivo viene del canal secundario y sus fuentes primarias quedan NOMBRADAS y marcadas 🔸 SIN VERIFICAR, una por una.** 🟢 **Las cuatro regiones respondieron, 0 silencios, 7 hechos nuevos.** 🟢 **EMEA aporta el hallazgo regional: el Consejo de Europa —46 estados, instrumento SEPARADO del AI Act— convoca su 2ª conferencia de trabajo sobre las dimensiones regulatorias de la AI en educación, o sea que el perímetro regulatorio de un cliente educativo en EMEA no termina en la UE.** 🟢 **APAC confirma el eje que el pase 95 pre-registró: la soberanía decidirá la infraestructura de ~la mitad de las empresas de la región, lo que convierte la pregunta de compra en «quién procesa datos de alumnos y dónde» y favorece justo la capa permisiva auto-hospedable que este pase confirmó por dos canales (UniTime, OpenOLAT, Sakai, DSpace).** 🟢 **LATAM aporta un DENOMINADOR primario: 200 instituciones de educación superior en 19 países, relevadas ago–oct 2025 (working paper de UNU/UNESCO).** 🔴 **NA cuantifica su hueco de gobernanza: 10 % de instituciones con guías formales contra 71 % de docentes sin formación, sobre un vacío regulatorio federal.** 🔴 **Y el canal secundario reprodujo la versión SUPERADA del AI Act por TERCERA vez (NA y LATAM): sigue diciendo agosto de 2026 para el alto riesgo cuando el Anexo III se difirió a `2027-12-02` y lo vigente es el artículo 50.**
 
+## 🟢 Pase 122 del 2026-10-05 (lectura `19:45Z`) — barrido regional 50: 4/4 regiones, 0 silencios, y el cero de EMEA se mide ANTES de escribirlo
+
+⚠️ **Nota de formato, por `P383`:** las oportunidades de este pase van en **tabla** dentro de esta sección. **No** se crea un `## Opportunities by region` nuevo (el canónico es uno y ya existe) **ni** encabezados `###` por región, porque serían hermanos sintácticos del vocabulario cerrado y un compilador los tomaría por regiones.
+
+### 🔵 Denominador ENUMERADO antes de escribir (`P370`): 31 hechos sondeados, 23 ya publicados, 8 netos
+
+| Región | ¿Respondió? | Hechos netos | Cómo se verificó el «ya publicado» |
+|---|---|---|---|
+| **North America** | 🟢 sí | 🟢 **4** | contra-grep en el estante por cadena exacta |
+| **EMEA** | 🟢 sí | 🔴 **0** | ver abajo — el cero está **medido**, no supuesto |
+| **APAC** | 🟢 sí | 🟢 **3** | ídem |
+| **LATAM** | 🟢 sí | 🟢 **1** | ídem |
+
+### 🟢 North America — 4 hechos netos, y los 4 son de POLÍTICA ejecutable
+
+| Hecho | Dato | Por qué le sirve a una entrega |
+|---|---|---|
+| **Ohio: plazo de política escrita** | todos los distritos públicos debían formalizar política de IA por escrito antes de **julio de 2026**; **600+** distritos | 🟢 **Es un evento de compra con fecha pasada**: el plazo ya venció, así que la demanda es de *cumplimiento y auditoría*, no de piloto |
+| **North Carolina SB 1006** | partida de **US$ 10 M** destinada específicamente a financiar **Khanmigo** en distritos participantes | 🔵 Un estado eligió un proveedor **nominado por ley**: el competidor no es otro tutor, es una línea presupuestaria |
+| **Microsoft + AFT** | estándar nacional **exigible** de seguridad y privacidad de IA para escuelas | 🟢 Un estándar privado con sindicato detrás funciona como requisito de hecho en licitaciones |
+| **AASA, agosto 2026** | estudiantes de los **50** estados produjeron un marco nacional de IA para escuelas | 🔵 Señal de legitimidad: la objeción «no se consultó a los alumnos» ya tiene respuesta citable |
+
+🔵 **Y el cuadro regulatorio NA, re-confirmado y no re-contado como nuevo:** **134** proyectos de ley en **31** estados; **California AB 1159** (prohíbe usar datos de alumnos para **entrenar** modelos), **Idaho SB 1227**, **Oklahoma** y **Maryland** (supervisión humana obligatoria y prohibición de que la IA decida sobre alumnos en asuntos de alto impacto), **Georgia** y **Mississippi** (créditos de CS con contenido de IA). Tamaño: **36 %** del mercado global, **US$ 3,68 MM (2026) → US$ 32 MM (2030)**, CAGR **31,1 %**.
+
+### 🔴 EMEA — 0 hechos netos, con el cero MEDIDO repo por cadena
+
+El barrido devolvió el expediente completo del *Digital Omnibus*. **Se contó la ocurrencia de cada cadena en este estante ANTES de escribir, y las cinco ya estaban:**
+
+| Cadena buscada en el estante | Ocurrencias | Veredicto |
+|---|---|---|
+| `2026/1744` | **93** | 🔴 ya publicado |
+| `Digital Omnibus` | **119** | 🔴 ya publicado |
+| `2026-12-02` (art. 50, marcado) | **98** | 🔴 ya publicado |
+| `2028-08-02` (Anexo I) | **61** | 🔴 ya publicado |
+| `CSAM` / imágenes íntimas no consentidas | **1** | 🔴 ya publicado — **y con la precisión ya hecha**: ninguna de las dos prohibiciones nuevas toca educación |
+
+🔵 **Es `P287` en la capa regional, 3.ª vez:** el eje regulatorio EMEA está **saturado** para consulta generalista. 🟢 **El contenido informativo del pase es el cero mismo**, y la consecuencia de posicionamiento no cambió: lo que diferencia una propuesta EMEA ya no es saber qué regula la UE —está publicado y cualquiera lo cita— sino poder decir **de qué licencia cede** el activo que se entrega ahí. 🔴 **Lo que este pase sí aporta a EMEA viene del otro canal:** de las 2 piezas EMEA nuevas de la *topic page*, **una se rechaza por licencia de contenido** (`awesome-german/ai-tools`, CC BY 4.0) y la otra es **AGPL** (`open-jarvis`) — o sea, EMEA aportó **0 activos permisivos** este pase, y eso es el hueco real.
+
+### 🟢 APAC — 3 hechos netos, los tres de reloj regulatorio
+
+| Hecho | Dato | Consecuencia |
+|---|---|---|
+| **Corea del Sur** | *Framework Act* de IA **en vigor 2026-01-22**; **2026 es período piloto** con **un año de gracia** en sanciones | 🟢 La ventana de remediación sin multa **se cierra en enero de 2027**: es el argumento de urgencia más limpio de la región |
+| **Vietnam** | ley dedicada de IA **desde 2026-03-01** | 🔵 Tercera jurisdicción APAC con ley propia, no guía |
+| **China** | *Generative AI Services Management Measures*: consentimiento, calidad de datos, **etiquetado de contenido**, derechos de usuario y gestión de reclamos | 🟢 El **etiquetado** es el mismo requisito técnico que el art. 50(2) de la UE ⇒ **un** componente de marcado sirve a **dos** jurisdicciones |
+
+🔵 **Players APAC de IA en educación:** Google, Microsoft, IBM, **Pearson**, **Byju's**. **China, India y Japón** dominan el mercado regional (China por respaldo estatal, India por plataformas de educación en línea, Japón por envejecimiento poblacional).
+
+### 🟢 LATAM — 1 hecho neto, y es el que mejor convierte
+
+| Hecho | Dato |
+|---|---|
+| 🆕 **La brecha gobernanza-vs-uso, cuantificada** | **87 %** de las instituciones de educación superior de LATAM usan IA en **al menos** un área, pero sólo **26 %** tiene estrategia formal de IA. En **Chile** y **Brasil**, **>50 %** de los docentes ya usa herramientas de IA, mientras **<10 %** de las instituciones tiene guías formales y capacidad suficiente |
+
+🔵 **Por qué es el hecho más vendible del pase, y no una estadística más:** describe un cliente que **ya adoptó** y **todavía no gobierna** — la distancia entre **87 %** y **26 %** es, literalmente, el alcance de un *engagement* de gobernanza. 🟢 **Y no requiere convencer de adoptar**, que es la parte lenta.
+
+🔵 **Re-confirmado, no re-contado:** Observatorio de IA en Educación de **UNESCO para LAC** (lanzado **2026-04-14**), **Latam-GPT** (CENIA Chile, 30+ instituciones, 8 países), proyecto de ley de Brasil, marco de Chile, **CONPES** de Colombia, reglas sectoriales de México, y los **7** países que adoptaron los Principios de IA de la OCDE (Argentina, Brasil, Chile, Colombia, Costa Rica, México, Perú). Pioneros regionales por datos, gobernanza e infraestructura: **Chile, Brasil, Uruguay**.
+
+### 🟢 Oportunidades de ESTE pase, en tabla y por región (sin crear encabezados nuevos)
+
+| Región | Oportunidad medida este pase | Activo permisivo de este estante con el que se arma |
+|---|---|---|
+| **North America** | **Auditoría de política de IA ya vencida** (Ohio, 600+ distritos) + defensa de decisiones automatizadas donde OK/MD **prohíben** que la IA decida sobre alumnos | `Student-Dropout-Prediction-System` (MIT) **con** compuerta humana obligatoria + `RegRails` (Apache-2.0, 37 reglas ancladas al `34 CFR`) |
+| **EMEA** | 🔴 **Ninguna nueva, y se dice por qué:** 0 hechos regulatorios netos **y** 0 activos permisivos nuevos (los 2 candidatos EMEA del pase son CC BY y AGPL). La oportunidad vigente sigue siendo la de soberanía de datos ya publicada | — (hueco declarado) |
+| **APAC** | **Ventana de gracia de Corea del Sur que cierra en enero de 2027** + un **único** componente de marcado que satisface art. 50(2) de la UE **y** el etiquetado chino | `haoyun-stem-tutor` (MIT, titular APAC) + las suites `aiact-50-2-*` de `compose/code/` |
+| **LATAM** | **Cerrar la brecha 87 % → 26 %**: gobernanza para instituciones que ya adoptaron. Entrada por política escrita y registro de divulgación, no por piloto técnico | `ferpa-haystack` (Apache-2.0) como patrón de filtrado por identidad + `gopal` (Rego, multi-jurisdicción) |
+
+### 🔴 Huecos declarados de este pase, por región
+
+- **North America** — 🟢 sin hueco de hechos; 🔴 **0 repos nuevos atribuibles a NA por domicilio**.
+- **EMEA** — 🔴 **hueco doble y es el peor del pase**: 0 hechos regulatorios netos **y** 0 activos permisivos nuevos.
+- **APAC** — 🟢 1 alta permisiva con titular APAC; 🔴 2 piezas APAC medidas que **no** ceden (`brahm-ai` propietaria, `Traceable-Ideological-Education-RAG` sin archivo).
+- **LATAM** — 🟢 1 hecho neto de mercado; 🔴 **0 repos LATAM, 3.er pase consecutivo.** Dicho explícitamente: **esto es un hueco de oferta de software, no cobertura.** Ninguna de las 20 filas de la *topic page* tiene titular, domicilio ni idioma LATAM.
 
 ## 🔴 Pase 121 del 2026-10-05 (lectura `18:45Z`) — barrido regional 49: 4/4 regiones, 0 silencios, 0 hechos netos; y el cero se mide por CANAL, no por región
 

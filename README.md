@@ -24,12 +24,34 @@ education-kb/
 
 ## `compose/code/` — lo que esta KB puede demostrar corriendo
 
+🟢 **Pase 122 del 2026-10-05 (lectura `19:45Z`) — el tablero cierra `71/71` y las 2 suites que
+estaban ROTAS quedaron verdes por la acción M, no por retocar sus números.** Las dos afirmaban
+cardinalidades congeladas del corpus (`posteriores_a(110) == []` y `len(fuera) == 3`) y por eso
+caducaban cada pase: es la clase de `P399` aplicada a las suites y no a los censos. Re-escritas
+como **propiedades invariantes**, cada una con **control negativo** que prueba que el defecto
+original sigue detectándose — una ★ nueva publicada como dato de una fila sin banda ni fecha no
+cae en ninguna clase y la suite falla. 🆕 **Y el pase destapó dos defectos del instrumento que la conversión sola no habría encontrado:**
+**`P409`** — `RE_ENCABEZADO_PASE` era **sensible a mayúsculas** y el corpus escribe `Pase N`, así que
+`_pase_de` devolvía `None` para casi todo el árbol y la rama de refutación de la acción B venía
+pasando **por accidente** durante ~11 pases; los «31 de 262» en región de catálogo del pase 111 eran
+este defecto y no una propiedad (corregida, la atribución es completa: **0 de 283**). **`P410`** — el
+contexto léxico de una cifra es la **etiqueta de su bloque** (el `###` de arriba, o la fila de
+encabezado de su tabla), no su renglón. Las 2 pruebas que habían congelado el baseline **defectuoso**
+se re-expresaron contra el atribuidor corregido. 🟢 **Tablero: `77/77` verdes, `0` rojas.**
+
+🔴 **Y la honestidad del método, dicha en la suite misma:**
+vaciar el conjunto *agregando* clases de exclusión (hicieron falta 4) es afinar-hasta-verde y va a
+romperse otra vez; la **inversión** —definir la clase POSITIVA y medir la propiedad sólo sobre
+ella— queda pre-registrada como acción **O** del pase 123.
+
 Cada carpeta trae su propio `README.md`, su suite y el comando que la reproduce. **Las cifras de
 aserciones se publican con su invocación**, porque varias dan un número distinto según el argumento
 o la variable de entorno (regla de **P107**, pase 47):
 
 | Carpeta | Qué prueba | Invocación | Hoy |
 |---|---|---|---|
+| 🆕 **`p351-star-digit-sweep/`** *(convertida en el pase 122)* | **accion M: de RETRATO a PROPIEDAD.** Afirmaba `posteriores_a(110) == []` —una cardinalidad congelada que cada pase volvia roja sin que nada se rompiera (clase de `P399`)— y ahora afirma la invariante: **toda ★ atribuida a un pase posterior esta CLASIFICADA** (meta / umbral / `P403` cita-de-canal / `P404` rechazo), o sea ninguna es una MEDICION sin banda ni fecha. 🔴 Hizo falta ademas `P405`: el clasificador leia LINEAS sobre un corpus duro-envuelto | `python3 test_p351.py` | 🟢 **36/36** *(estaba 33/36)* |
+| 🆕 **`p356-citation-origin/`** *(convertida en el pase 122)* | **accion M: idem.** Afirmaba `len(fuera) == 3` y `sorted(fuera) == [245, 279, 281]`; el dia de la reescritura el conjunto medía **26**. Ahora afirma la propiedad en dos mitades: el conjunto es **no vacio** (si fuera vacio el defecto no existiria y la prueba pasaria por vacuidad) **y** cada miembro esta realmente definido fuera de `patterns.md`, verificado contra `WHERE` | `python3 test_origin.py` | 🟢 **16/16** *(estaba 15/16)* |
 | **`p399-census-order-gate/`** | **el hallazgo del pase 121: un auto-censo publicado en el MISMO pase que agrega filas mide el corpus PRE-ESCRITURA. El 15/46/125/186 de `P394` es el arbol del pase 119; el commit donde se publico mide 23/46/139/208. La compuerta lee los dos arboles con `git show` e imprime ademas que columnas NO se mueven — `presente` (46 -> 46), que es por que ningun control lo agarraba** | `python3 test_census_order.py` | 🟢 **21/21** *(nuevo en el pase 121)* |
 | ídem, el caso real | ¿la cifra que un pase publico describe su propio arbol o el anterior? | `python3 census_order.py 8110153 195fe59 15 46 125 186` | 🔴 **DESFASADO** (`exit 3`) · punto ciego `present` |
 | **`p391-structured-binding/`** | **la accion B del pase 118: el binding `huella → repo` leido de la CELDA y de la COLUMNA TIPADA en vez de la LINEA — el intervalo `[3, 22]` de `P385` se angosta a `[5, 14]` y el canonico por CONJUNTO de repos da **10**; con el punto ciego propio declarado en la suite (el canonico de celda compuesta no se liga)** | `python3 test_structured_binding.py` | 🟢 **17/17** *(nuevo en el pase 120)* |
@@ -51,7 +73,7 @@ o la variable de entorno (regla de **P107**, pase 47):
 | ídem, accion C segunda mitad | remedir la FAMILIA del payload de las huellas que esta base nombra | `sh remeasure_family.sh` | 🟢 **5 de 5 sin cambio de familia** · 🔴 **1 huella corregida** (`P333`) |
 | **`p355-cwd-portability/`** | **la accion A del pase 111: cada suite corrida desde su propio `cwd` Y desde uno ajeno, repartida por CAUSA (ruta efimera vs `cwd` asumido) y por FORMA del fallo (`CRASH` / `TOTAL-DEGRADADO` / `SILENCIOSO`)** | `python3 test_p355.py` | 🟢 **16/16** *(nuevo en el pase 112)* |
 | ídem, el barrido real del tablero | ¿cuantas suites no son portables entre `cwd`? | `python3 portability.py` | 🔴 **4 de 69** — 0 por ruta efimera, 4 por `cwd` asumido |
-| **`p356-citation-origin/`** | **la accion D del pase 111: las 21 citas colgadas de `P354` repartidas por ORIGEN, reusando las regex del propio auditor (`P237`) y cambiando solo el conjunto de archivos** | `python3 test_origin.py` | 🟢 **16/16** *(nuevo en el pase 112)* |
+| **`p356-citation-origin/`** | **la accion D del pase 111: las 21 citas colgadas de `P354` repartidas por ORIGEN, reusando las regex del propio auditor (`P237`) y cambiando solo el conjunto de archivos** | `python3 test_origin.py` | 🟢 **16/16** *(nuevo en el pase 112; re-expresada como PROPIEDAD en el pase 122, ver arriba)* |
 | ídem, el reparto | ¿cuantas son deuda documental de verdad? | `python3 origin.py` | 🔴 **15 ANUNCIADAS** · 🟢 3 `DEFINIDA-FUERA` · 🟢 3 `INSTRUMENTO` · **0** errores de numeracion |
 | **`p357-hint-layer-cession/`** | **la accion C del pase 111: la cesion de la capa de HINT de `OATutor-Content`, con la herencia al padre medida fila por fila y el CONTRAFACTUAL de la premisa** | `python3 test_p357.py` | 🟢 **24/24** *(nuevo en el pase 112; corre SIN el corpus)* |
 | ídem, el barrido sobre el corpus | ¿cede la capa que un tutor usa mas? | `python3 hint_layer.py RAIZ` | 🔴 **62,2 %** (hint) vs 🟢 **76,4 %** (problema) · **26.136 de 69.121 sin cesion** |

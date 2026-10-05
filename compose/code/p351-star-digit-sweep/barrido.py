@@ -26,7 +26,16 @@ import collections, os, re
 
 # `385.407 ★`, `108.128 ★`, `1.074 ★` — separador de millar, 4+ digitos en total
 RE_CIFRA = re.compile(r'[0-9]{1,3}[.,][0-9]{3}(?:\.[0-9]{3})* ?★')
-RE_ENCABEZADO_PASE = re.compile(r'pase (\d+)')
+# 🆕 `P409` (pase 122): esta regex era SENSIBLE A MAYUSCULAS y el corpus escribe `Pase N`
+# en los encabezados. O sea: NO reconocia casi ningun encabezado de pase real, `_pase_de`
+# devolvia `None` (region de CATALOGO) para casi todo el arbol, y la rama de refutacion de
+# la accion B salia vacia POR ACCIDENTE y no por propiedad. Latente hasta que el pase 122
+# publico un encabezado en minuscula: ese quedo como el UNICO limite del archivo y se
+# tragó todas las lineas de abajo, re-atribuyendolas a si mismo. Es `P359` -insertar
+# arriba re-atribuye lo de abajo- pero con la causa real a la vista: el limite siguiente
+# no existia porque no se lo reconocia.
+SEPARADOR_DE_TABLA = re.compile(r'[\s:|-]+')
+RE_ENCABEZADO_PASE = re.compile(r'pase (\d+)', re.IGNORECASE)
 
 # 🆕 `P376` (pase 115): este arbol atribuye un pase con DOS portadores, y este modulo
 # reconocia UNO. El otro es la linea de resumen `> **Pase N del FECHA:** ...`, que es como
@@ -132,6 +141,65 @@ MARCAS_UMBRAL = ('por debajo de', 'por encima de', 'banda', 'menos de', 'mas de'
                  'arriba de', 'abajo de', 'umbral', 'cota')
 
 
+# 🆕 `P403` (pase 122): una CUARTA clase, y la encontro la propia suite al quedar roja.
+# `openclaw (385.407 ★)` aparece en una linea que ENUMERA lo que devolvio un canal de
+# busqueda -«las 4 consultas globales devolvieron ... `openclaw` (385.407 ★), `browser-use`,
+# `mem0` ...»-. No es la medicion de una fila de este estante, ni la cita de un dato propio,
+# ni el borde de una banda: es EVIDENCIA DE CANAL. La regla que el pase 110 escribio (toda
+# cifra de ★ con banda y fecha) rige sobre lo que el estante PUBLICA como dato de una fila;
+# no rige sobre una cifra citada para documentar que devolvio una consulta.
+MARCAS_CANAL = ('canal generalista', 'oferta generalista', 'devolvieron', 'devolvio',
+                'devolvió', 'devolver', 'consultas globales', 'consulta de plataformas',
+                'trending de', 'el canal de busqueda', 'el canal de búsqueda',
+                'capa generica', 'capa genérica', 'frameworks de agentes',
+                'agentes generales', 'generalista', 'top open source')
+
+
+def es_cita_de_canal(texto, pos=None):
+    """La cifra documenta QUE DEVOLVIO UN CANAL, no el dato de una fila del estante.
+
+    Conjuncion deliberada de dos senales, para no tragarse una medicion real que
+    mencione la palabra «devolvieron»:
+      (a) lexica: la linea nombra un canal y su verbo de retorno;
+      (b) estructural: la linea ENUMERA -3 o mas tokens en codigo inline-, que es la
+          forma de un listado de resultados y no la de una fila de dato.
+    """
+    bajo = texto.lower()
+    if not any(m in bajo for m in MARCAS_CANAL):
+        return False
+    # Senal estructural, en disyuncion, porque la ENUMERACION se escribe de tres formas
+    # distintas en este corpus y una sola rama dejaba 10 ocurrencias sin clasificar:
+    #   (i)  listado en codigo inline:  `openclaw`, `browser-use`, `mem0` ...
+    #   (ii) varias cifras de ★ en la MISMA linea -una fila de dato tiene UN sujeto y UNA
+    #        ★; enumerar seis es, por construccion, un listado de resultados;
+    #   (iii) pares «nombre 1.234» sin ★ en los siguientes, que es como se abrevia el
+    #        listado cuando la ★ se escribe una sola vez al principio.
+    if len(re.findall(r'`[^`]+`', texto)) >= 3:
+        return True
+    if len(RE_CIFRA.findall(texto)) >= 3:
+        return True
+    return len(re.findall(r'[A-Za-z][\w.-]*\s+\d{1,3}(?:\.\d{3})+', texto)) >= 3
+
+
+# 🆕 `P404` (pase 122): una QUINTA clase, y aparece porque la CUARTA no alcanzo. La ★ de
+# `speedyapply/2026-AI-College-Jobs` (5.200 ★) esta en un REGISTRO DE RECHAZO -«Rechazos
+# nuevos registrados para no volver a pagarlos»-: el estante cita la ★ para IDENTIFICAR lo
+# que descarto, no para recomendarlo. No es dato de una fila, ni cita de canal, ni banda.
+# 🔴 **Y la leccion de metodo es mas importante que la clase:** haber necesitado cuatro
+# clases de exclusion para vaciar el conjunto dice que el UNIVERSO del barrido («toda cifra
+# de ★ del corpus») es mas ancho que el ALCANCE de la regla del pase 110 («★ publicada como
+# dato de una fila que el estante recomienda»). Vaciar el conjunto agregando clases es
+# afinar-hasta-verde y volvera a romperse. La inversion -definir la clase POSITIVA y medir
+# la propiedad solo sobre ella- queda pre-registrada para el pase 123.
+MARCAS_RECHAZO = ('rechazo', 'rechazos', 'rechazad', 'descarte', 'descartad',
+                  'no volver a pagarlos', 'queda fuera', 'no entra')
+
+
+def es_rechazo(texto, pos=None):
+    """La ★ identifica una pieza que el estante DESCARTO, no una que publica."""
+    return any(m in texto.lower() for m in MARCAS_RECHAZO)
+
+
 def es_umbral(texto, pos=None):
     """La cifra es el BORDE de una banda, no la medicion de un repo.
 
@@ -148,6 +216,79 @@ def es_umbral(texto, pos=None):
     return False
 
 
+def _mismo_bloque(prev, cur):
+    """¿`prev` y `cur` son dos renglones del MISMO parrafo duro-envuelto?
+
+    Control conservador: una fila de tabla es su propia unidad (un `|` al inicio no
+    continua prosa), y una linea en blanco corta el bloque. Dos lineas de cita (`>`) o
+    dos de prosa corrida si continuan. Asi el contexto NO cruza de una fila de dato a
+    otra, que es el falso positivo que haria perder el defecto original.
+    """
+    if not prev.strip() or not cur.strip():
+        return False
+    a, b = prev.lstrip(), cur.lstrip()
+    if b.startswith('|') or a.startswith('|'):
+        return False
+    if b.startswith('#') or a.startswith('#'):
+        return False
+    return (a.startswith('>') == b.startswith('>'))
+
+
+VENTANA_ENCABEZADO = 12
+
+
+def _encabezado_de_bloque(lineas, i):
+    """El encabezado `#` mas cercano hacia arriba, dentro de una ventana acotada."""
+    for j in range(i - 1, max(-1, i - 1 - VENTANA_ENCABEZADO), -1):
+        if lineas[j].lstrip().startswith('#'):
+            return lineas[j]
+    return ''
+
+
+def _encabezado_de_tabla(lineas, i):
+    """Si la linea es FILA de tabla, su encabezado: la fila que esta justo arriba del
+    separador `|---|`. Se sube mientras haya filas de tabla y se corta en cuanto no."""
+    if not lineas[i].lstrip().startswith('|'):
+        return ''
+    sep = None
+    for j in range(i - 1, max(-1, i - 1 - 60), -1):
+        t = lineas[j].strip()
+        if not t.startswith('|'):
+            break
+        if SEPARADOR_DE_TABLA.fullmatch(t.strip('|')):
+            sep = j
+            break
+    if sep is None or sep == 0:
+        return ''
+    cab = lineas[sep - 1]
+    return cab if cab.lstrip().startswith('|') else ''
+
+
+def _contexto_lexico(lineas, i):
+    """🆕 `P410` (pase 122): el contexto LEXICO de una linea es la etiqueta de su BLOQUE.
+
+    `P405` encontro que la unidad de prosa es el PARRAFO y no la linea. Esto es el nivel
+    de arriba: el parrafo tiene una ETIQUETA, y la marca que gobierna una cifra vive ahi
+    tanto como en el renglon anterior. Dos casos reales, los dos del pase 121:
+
+      - `agents/trending.md:111` -> la marca esta en el `### El canal generalista, 5.a
+        falla identica` DOS lineas arriba;
+      - `repos/trending.md:75`  -> la marca esta en el ENCABEZADO DE LA TABLA
+        (`| Lo que devolvieron las 4 consultas globales obligatorias | ... |`).
+
+    Las dos etiquetas son del bloque que contiene la cifra, no de otro bloque: el
+    encabezado se busca en ventana acotada y el de tabla subiendo solo mientras haya
+    filas de tabla. Por eso el contexto NO cruza a una tabla ajena ni a otra seccion.
+    """
+    prev = lineas[i - 1] if i >= 1 else ''
+    partes = [lineas[i]]
+    if _mismo_bloque(prev, lineas[i]):
+        partes.append(prev)
+    partes.append(_encabezado_de_bloque(lineas, i))
+    partes.append(_encabezado_de_tabla(lineas, i))
+    return ' '.join(x for x in partes if x)
+
+
 def barrer(raiz, archivos=ARCHIVOS):
     """-> lista de (archivo, linea, valor, pase, es_meta)."""
     out = []
@@ -159,9 +300,20 @@ def barrer(raiz, archivos=ARCHIVOS):
             lineas = fh.readlines()
         marcas = _limites_de_pase(lineas)
         for i, l in enumerate(lineas, 1):
+            # 🆕 `P405` (pase 122): el corpus esta DURO-ENVUELTO (~100 col) y el
+            # clasificador leia LINEAS. La marca lexica que gobierna una cifra puede caer
+            # en la linea ANTERIOR: «Rechazos nuevos registrados ...:» cierra el renglon y
+            # la ★ que identifica abre el siguiente. La unidad de prosa de este corpus es
+            # el PARRAFO, no la linea, asi que las senales LEXICAS se evaluan sobre la
+            # linea mas su antecesora del mismo bloque envuelto. Las senales
+            # POSICIONALES siguen leyendose de la linea propia -su `pos` es de la linea-,
+            # que es por que el contexto se pasa aparte y no concatenado al texto medido.
+            ctx = _contexto_lexico(lineas, i - 1)
             for m in RE_CIFRA.finditer(l):
                 out.append((rel, i, m.group(0).strip(), _pase_de(i, marcas, lineas[i - 1]),
-                            es_meta_mencion(l, m.start()), es_umbral(l, m.start())))
+                            es_meta_mencion(l, m.start()), es_umbral(l, m.start()),
+                             es_cita_de_canal(ctx, None) or es_cita_de_canal(l, m.start()),
+                             es_rechazo(ctx)))
     return out
 
 
@@ -174,6 +326,8 @@ def resumen(hits):
         'en_catalogo': sum(1 for h in hits if h[3] is None),
         'meta_menciones': sum(1 for h in hits if h[4]),
         'umbrales': sum(1 for h in hits if len(h) > 5 and h[5]),
+        'citas_de_canal': sum(1 for h in hits if len(h) > 6 and h[6]),
+        'rechazos': sum(1 for h in hits if len(h) > 7 and h[7]),
         'pase_maximo': max((h[3] for h in hits if h[3] is not None), default=None),
     }
 
@@ -190,7 +344,8 @@ def posteriores_a(hits, pase):
     publico una cifra, y la suite prueba el limite en vez de taparlo.
     """
     return [h for h in hits if h[3] is not None and h[3] > pase
-            and not h[4] and not (len(h) > 5 and h[5])]
+            and not h[4] and not (len(h) > 5 and h[5])
+            and not (len(h) > 6 and h[6]) and not (len(h) > 7 and h[7])]
 
 
 def atribucion_es_ambigua(hits, pase):

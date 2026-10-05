@@ -7,6 +7,7 @@ updated: 2026-10-05
 # 📡 Tendencias — education
 
 > Ventana de investigación: septiembre 2026. Verificado 2026-09-30; el pase 11, el 2026-10-01.
+> **Pase 122 del 2026-10-05 (lectura `19:45Z`):** 🟢 **Cuatro fuentes independientes dan la MISMA inflexión para 2026: «de la experimentación a la gobernanza», aceleración selectiva con foco en ética/transparencia/casos agénticos, y desplazamiento desde herramientas genéricas hacia plataformas hechas a propósito — que es exactamente lo que este estante mide desde el pase 58 (el eje que devuelve software es la OBLIGACIÓN, no «mejores agentes»).** 🟢 **Convergencia de ETIQUETADO: art. 50(2) de la UE (2026-12-02, NO diferido) + etiquetado chino + gracia coreana hasta enero de 2027 ⇒ un solo componente de marcado sirve a dos jurisdicciones, y las suites `aiact-50-2-*` ya lo implementan con tests.** 🔴 **Y los DOS relojes que no hay que confundir: Anexo III/art. 27 corre a 2027-12-02, el marcado del art. 50 corre a 2026-12-02 — mismo cliente, fechas distintas.** 🆕 **Tendencia 4: la diligencia de licencia es diferenciador real, porque el titular NO está donde todos lo buscan (0 de 26 filas copyleft lo tienen en el payload).**
 > **Pase 121 del 2026-10-05 (lectura `18:45Z`):** 🟢 **Tendencias 927–932, citadas una por una** (el pase 120 cerró en 926). 🆕 **`P398` — la cesión puede estar segmentada por INTERVALO DE FECHAS: `snflwr.ai` re-licenció de AGPL-3.0 a propietario el 2026-09-18 y su propio archivo declara irrevocable la ventana 2026-02-27 → 2026-09-18. Tercer eje de segmentación después del directorio (`P113`) y del estado de compilación (`P380`), y el peor de los tres porque no se ve en el árbol: la pregunta «¿se puede construir sobre esto?» deja de tener respuesta sin la FECHA DE LA COPIA.** 🆕 **`P399` — un auto-censo publicado en el mismo pase que agrega filas mide el corpus PRE-ESCRITURA, y es un error de ORDEN, no de aritmética: el 15/46/125/186 de `P394` es el árbol del pase 119 y el commit del 120 mide 23/46/139/208. La columna `presente` no se movió (46→46), así que el control que un humano verifica a mano es justo el que no detecta nada.** 🆕 **`P402` — el boilerplate copyleft devuelve bits EQUIVOCADOS donde el prístino de Apache devuelve cero: la línea de copyright de GPL/LGPL es de la **FSF**, y una lectura con cara de éxito pasa cualquier compuerta de «¿hay titular?».** 🟢 **Y la tendencia de mercado del pase, que es la primera con DOS cifras opuestas sobre el mismo día: 18/18 saturado en el canal de intel regional, 10/10 virgen en el canal de obligación.**
 > **Pase 120 del 2026-10-05 (lectura `17:45Z`):** 🟢 **Tendencias 922–926, citadas una por una.** 🆕 **`P397` — la REGIÓN de una herramienta de cumplimiento se lee de la OBLIGACIÓN que implementa, no del domicilio de su autor: convierte la pila de filas `NO UBICADA` de este árbol en un atributo medible del payload, y de paso convierte un hueco regional en un presupuesto de un detector de regex.** 🆕 **`P393` — un corpus APPEND-ONLY conserva lo RETRACTADO, así que todo censo que lo lea RE-ANIMA mediciones muertas: la calidad del censo se degrada MONÓTONAMENTE con cada pase si no hay capa de retractaciones. Es la primera tendencia de este árbol que es un costo de su propio método.** 🆕 **`P395` — el prístino de Apache-2.0 circula en DOS variantes (11.357 / 11.358 B) que difieren en una línea en blanco INICIAL; la regla barata de off-by-one de `P333` les da un falso positivo, y lo que la salva son los controles de las DOS puntas.** 🔴 **Y la tendencia de canal: el barrido regional 48 devolvió 4/4 regiones, 0 silencios y **0 hechos netos** (14/14 ya publicados) ⇒ el agotamiento alcanzó al canal de INTEL, no sólo al de oferta.**
 > **Pase 119 del 2026-10-05:** 🟢 **Tendencias 918–921, y la del pase es de MÉTODO: 🆕 `P388` — la oferta open source de cumplimiento no es una curva, son TRES en estadios distintos al mismo tiempo (etiquetado generativo **vacía**, *testing* de gobernanza **saturada**, expediente FRIA **abriéndose**), y el estadio dice qué hacer: donde está vacía se CONSTRUYE, donde está saturada se INTEGRA, donde se abre se ADOPTA temprano.** 🟢 **Primera vez que el giro «de la experimentación a la gobernanza» que esta base escribe desde el pase 109 aparece como SOFTWARE PERMISIVO y no como afirmación de analista: plantilla FRIA MIT con 6,4k ★, y la AI Verify Foundation de 4 miembros premier a 90+ organizaciones.** 🔴 **Hueco de OFERTA vendible porque está vacío: el art. 31(3) coreano exige marca perceptible por el usuario final y no hay pieza OSS — y NO se cierra con C2PA, que cubre el art. 50(2) europeo.** 🔵 **Pre-registrado para el próximo pase, derivado de `P388` y falsable: sondear UNA obligación por consulta — art. 26 (registro del *deployer*) y prohibición de reconocimiento de EMOCIONES en centros educativos. Predicción: estadios DISTINTOS entre sí (art. 26 saturado, emociones vacía porque una prohibición no genera oferta). Si vuelven iguales, `P388` queda REFUTADA.**
@@ -240,6 +241,61 @@ el fork, instalaciones. ⚠️ **Y su lado malo es el encargo:** 547 árboles di
 actualización.
 
 
+## 🟢 Pase 122 del 2026-10-05 (lectura `19:45Z`) — la tendencia que el mercado nombra y este estante puede PROBAR: de «IA en educación» a «IA gobernada en educación»
+
+### 🟢 Tendencia 1 — el mercado dejó de pedir personalización y empezó a pedir gobernanza, y las cifras lo sostienen
+
+El barrido de tendencias de este pase devolvió, en cuatro fuentes independientes, la **misma** inflexión para 2026:
+
+| Señal | Dato |
+|---|---|
+| Tamaño y velocidad | **US$ 10,6 MM (2026) → US$ 42,48 MM (2030)**, CAGR **41,5 %**; la IA generativa podría agregar **US$ 200 MM** al sector educativo global |
+| Hacia dónde se mueve el gasto | *«aceleración selectiva»*: foco en **ética, transparencia, casos agénticos y beneficio instruccional probado**, por encima de promesas amplias de personalización |
+| El eje explícito | *«de la experimentación a la gobernanza»*: políticas claras, límites de datos y supervisión como condición de adopción |
+| Lo que desplaza | movimiento **desde** herramientas de IA genéricas **hacia** plataformas construidas a propósito para educación |
+
+🔵 **Por qué esto es la tendencia y no una frase de informe:** las cuatro señales dicen lo mismo por vías distintas, y **coinciden con lo que este estante mide desde el pase 58**: el eje que devuelve software nuevo es la **obligación** (FERPA, `34 CFR`, Anexo III), no «mejores agentes de educación». 🟢 **El pase 121 lo confirmó con 6 altas y este pase lo vuelve a confirmar: las 7 altas de hoy salieron del canal temático, y el canal generalista dio 0 por 6.ª vez.**
+
+### 🟢 Tendencia 2 — el requisito de ETIQUETADO converge entre jurisdicciones, y eso convierte un componente en un activo multi-región
+
+| Jurisdicción | Obligación de marcado | Fecha |
+|---|---|---|
+| **UE** | art. 50(2) de la AI Act — marcado de contenido sintético. 🔴 **No fue diferido por el `Reg (EU) 2026/1744`** | **2026-12-02** |
+| **China** | *Generative AI Services Management Measures* — **etiquetado de contenido**, consentimiento, calidad de datos, derechos de usuario | vigente |
+| **Corea del Sur** | *Framework Act* con período piloto y gracia de un año en sanciones | en vigor **2026-01-22**, gracia hasta **enero de 2027** |
+
+🟢 **La consecuencia que este estante puede respaldar con código corriendo:** las suites `aiact-50-2-marking`, `aiact-50-2-pack`, `aiact-50-2-spans` y `aiact-50-2-exposure` de `compose/code/` implementan el marcado del art. 50(2) **con tests**. 🔵 **Un componente de marcado satisface la UE y el etiquetado chino**, así que lo que se construyó para EMEA es reutilizable en APAC — y eso es un argumento de costo, no de cumplimiento.
+
+🔴 **Y la precisión que evita vender un plazo equivocado, re-afirmada porque es la confusión más caro de este dominio:** el `Reg (EU) 2026/1744` (DOUE 2026-07-24, en vigor 2026-07-27) difirió el **alto riesgo del Anexo III a 2027-12-02** y el **Anexo I a 2028-08-02**, pero **dejó intacto** el art. 50. Educación es **Anexo III** ⇒ la FRIA del art. 27 corre a **2027-12-02**; el **marcado** corre igual a **2026-12-02**. 🔵 **Son dos relojes distintos sobre el mismo cliente**, y es el error que un barrido generalista comete.
+
+### 🟢 Tendencia 3 — la brecha entre usar y gobernar es, hoy, el mercado de servicios más grande del sector
+
+| Región | Usa IA | Gobierna |
+|---|---|---|
+| **LATAM** (educación superior) | **87 %** en al menos un área | **26 %** con estrategia formal |
+| **Chile y Brasil** (docentes) | **>50 %** ya usa herramientas | **<10 %** de instituciones con guías formales y capacidad |
+| **North America** (K-12, ciclo 2024-25) | **60 %** de docentes usó IA; **32 %** semanalmente | **Ohio**: política escrita obligatoria, plazo **vencido** en julio de 2026 |
+| **APAC** | adopción liderada por China, India y Japón | **brecha de gobernanza** reconocida como el problema regional |
+
+🔵 **La tendencia no es «hay que adoptar IA»** —eso ya pasó, en las cuatro regiones y con números— **sino que la adopción ocurrió POR DEBAJO de la gobernanza**, de forma distribuida y sin política. 🟢 **Es la forma de demanda más favorable para un AI Studio:** el cliente no necesita ser convencido del valor, necesita que alguien ponga límites auditables sobre lo que ya está corriendo.
+
+### 🆕 Tendencia 4 (nueva este pase) — la diligencia de licencia es un diferenciador real, porque el dato que todos citan NO ESTÁ en el lugar donde todos lo buscan
+
+Este pase midió el payload de licencia de **26** filas copyleft y de **15** candidatas nuevas. Los tres modos de falla **no son teóricos**:
+
+| Modo de falla | Caso medido | Qué cree un lector apurado |
+|---|---|---|
+| **Titular inexistente** (`P403`) | **0 de 26** filas copyleft tienen titular de proyecto; devuelven la FSF (l. 4) o el **placeholder** del apéndice (`Copyright (C) <year>  <name of author>`, l. 635) | *«el titular es la Free Software Foundation»* o, peor, *«el titular se llama `<name of author>`»* |
+| **Archivo vacío** (`P404`) | `studyAlpha-Ai-Agent`: `LICENSE` en **200** y **0 bytes** | *«tiene licencia: sí»* |
+| **Familia por tamaño** | 18.659 B = **CC BY 4.0** (contenido); 21.119 B = **propietaria** declarada | *«pesa como una GPL, debe ser copyleft»* |
+
+🔵 **Por qué esto es una tendencia de mercado y no una nota técnica:** el cuadro regulatorio de las cuatro regiones ya está publicado y cualquier competidor lo cita igual de bien. 🟢 **Lo que NO está disponible como *commodity* es poder decir, con la ruta y el digest al lado, de qué licencia cede exactamente el activo que se entrega** — y en una industria cuyos cimientos son **10 de 11 copyleft**, esa pregunta decide si el cliente puede o no construir producto encima.
+
+### 🔴 Lo que este pase NO encontró, dicho como hueco y no como silencio
+
+- 🔴 **EMEA: 0 hechos regulatorios netos** (3.ª vez) **y 0 activos permisivos nuevos** — las 2 piezas EMEA del pase son CC BY y AGPL.
+- 🔴 **LATAM: 0 repos**, 3.er pase consecutivo. La oferta de software educativo con titular LATAM sigue sin aparecer por ningún canal de este estante.
+- 🔴 **Ningún agente de evaluación/observabilidad dominante** para pipelines educativos — hueco heredado y sin novedad este pase.
 
 ## 🟢 Pase 121 del 2026-10-05 (lectura `18:45Z`) — tendencias 927–932: la licencia con fecha de validez, el censo que mide un árbol que ya no existe, y dos cifras opuestas sobre el mismo mercado
 

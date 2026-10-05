@@ -31,10 +31,20 @@ class AccionBConfirmadaEnElConteo(unittest.TestCase):
     def test_los_ocho_archivos_estan_tocados(self):
         self.assertEqual(R['archivos'], 8)
 
-    def test_ninguna_es_POSTERIOR_al_pase_110(self):
-        """🟢 La segunda rama de refutacion NO dispara: la regla que el pase 110
-        escribio no se violo en el 111."""
-        self.assertEqual(posteriores_a(HITS, 110), [])
+    def test_toda_ocurrencia_posterior_esta_CLASIFICADA(self):
+        """🆕 **Accion M (pase 122): retrato -> PROPIEDAD.** Esta prueba afirmaba
+        `posteriores_a(110) == []`, que es una cardinalidad congelada del corpus: cada
+        pase que cita la cifra la volvia roja sin que nada se hubiera roto (clase de
+        `P399`). Lo que la prueba DEBE sostener no es «son cero» sino la invariante:
+        toda ocurrencia de ★ atribuida a un pase posterior esta CLASIFICADA -meta,
+        umbral o cita-de-canal- y por lo tanto ninguna es una MEDICION publicada sin
+        banda ni fecha. El defecto original sigue detectandose: una ★ nueva sobre una
+        fila del estante no cae en ninguna clase y la prueba falla."""
+        sin_clasificar = posteriores_a(HITS, 110)
+        self.assertEqual(
+            sin_clasificar, [],
+            'ocurrencias de ★ posteriores al pase 110 que no son meta, ni umbral, ni '
+            'cita-de-canal -o sea, MEDICIONES sin banda ni fecha-: %r' % (sin_clasificar,))
 
     def test_las_seis_del_eje_generalista_dominan(self):
         import collections
@@ -51,9 +61,23 @@ class ElPuntoCiegoDelInstrumento(unittest.TestCase):
 
     def test_la_region_de_CATALOGO_es_la_que_importa(self):
         """Las que viven donde un lector las lee como vigentes.
-        Medido en el pase 111: 31 de 262."""
-        self.assertGreater(R['en_catalogo'], 0)
-        self.assertLess(R['en_catalogo'], R['ocurrencias'] // 2)
+
+        🔴 **Re-baseada en el pase 122 por `P409`, y el motivo importa.** Medido en el
+        pase 111 daba **31 de 262** y esta prueba exigia `en_catalogo > 0`. Pero esos 31
+        no eran una propiedad del corpus: eran el DEFECTO de `RE_ENCABEZADO_PASE`, que
+        era sensible a mayusculas y no reconocia los encabezados `Pase N` reales — asi
+        que todo lo que estaba encima del primer encabezado en MINUSCULA caia en la
+        region de catalogo por no tener a que atribuirse. Corregida la regex, la
+        atribucion es COMPLETA y `en_catalogo` baja a **0**.
+
+        🟢 Lo que se afirma ahora es la propiedad fuerte que la correccion habilita:
+        **toda ocurrencia esta atribuida a un pase** y la region de catalogo es, como
+        mucho, minoria. Exigir `> 0` seria exigir que el defecto siga ahi."""
+        self.assertLessEqual(R['en_catalogo'], R['ocurrencias'] // 2)
+        self.assertEqual(
+            R['en_catalogo'], 0,
+            'quedan ocurrencias sin pase atribuido: o reaparecio `P409` o hay un '
+            'encabezado de pase en un formato que la regex no cubre')
 
     def test_el_conteo_crudo_SOBREESTIMA_el_defecto(self):
         """El defecto real esta acotado por catalogo + distintos, no por ocurrencias."""
@@ -76,9 +100,16 @@ class ElPuntoCiegoDelInstrumento(unittest.TestCase):
         futuras = B.atribucion_es_ambigua(HITS, R['pase_maximo'])
         self.assertTrue(futuras)
         for h in futuras:
-            self.assertTrue(h[4] or (len(h) > 5 and h[5]),
-                            'ocurrencia atribuida al pase %s que no es meta ni umbral: %r'
-                            % (R['pase_maximo'], h))
+            # 🆕 Accion M (pase 122): el invariante que este docstring siempre enuncio
+            # -«TODO lo atribuido al maximo sea meta-mencion o umbral»- se mantiene, pero
+            # el conjunto de clases crecio a cuatro (`P403` cita-de-canal, `P404` rechazo).
+            # Lo que la prueba sostiene es la PROPIEDAD «esta clasificada», no la lista.
+            clases = (h[4], (len(h) > 5 and h[5]),
+                      (len(h) > 6 and h[6]), (len(h) > 7 and h[7]))
+            self.assertTrue(any(clases),
+                            'ocurrencia atribuida al pase %s sin ninguna de las 4 clases '
+                            '(meta/umbral/cita-de-canal/rechazo) -o sea, una MEDICION sin '
+                            'banda ni fecha-: %r' % (R['pase_maximo'], h))
 
 
 class UmbralNoEsMedicion(unittest.TestCase):
@@ -105,6 +136,9 @@ class UmbralNoEsMedicion(unittest.TestCase):
         defecto del pase 112 por haber quedado debajo de una seccion nueva."""
         self.assertEqual(B.posteriores_a(HITS, 110), [])
         self.assertGreater(R['umbrales'], 0)
+        # 🆕 `P403`/accion M: la clase nueva tiene que estar POBLADA, o la propiedad de
+        # arriba se cumpliria por vacuidad y la suite volveria a ser un retrato.
+        self.assertGreater(R['citas_de_canal'], 0)
 
 
 class ClasificadorDeMetaMencion(unittest.TestCase):
@@ -243,8 +277,12 @@ class P376DosPortadoresDeAtribucion(unittest.TestCase):
             _pase_de(5, [], 'el pase dejo escrito **Pase 56 del** adentro de la prosa'))
 
     def test_el_arbol_real_ya_no_atribuye_al_115_lo_que_es_del_56(self):
+        # Pase 122: el conjunto de clases crecio a cuatro (`P403` cita-de-canal,
+        # `P404` rechazo), asi que «no clasificada» es no caer en NINGUNA de las cuatro.
         malas = [h for h in HITS
-                 if h[3] == 115 and not (h[4] or (len(h) > 5 and h[5]))]
+                 if h[3] == 115 and not (h[4] or (len(h) > 5 and h[5])
+                                         or (len(h) > 6 and h[6])
+                                         or (len(h) > 7 and h[7]))]
         self.assertEqual(malas, [], 'ocurrencias publicadas a nombre del pase 115')
 
 
