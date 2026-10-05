@@ -7,6 +7,7 @@ updated: 2026-10-05
 # 📡 Tendencias — education
 
 > Ventana de investigación: septiembre 2026. Verificado 2026-09-30; el pase 11, el 2026-10-01.
+> **Pase 114 del 2026-10-05:** 🔴 **El marco de mercado 2026 se publica como RANGO y no como cifra, porque las cuatro casas discrepan 1,4×: USD 8,7 MM (MarkWide) · 10,6 MM (Research and Markets) · 11,4 MM (Grand View) · 12,3 MM (HolonIQ) para el MISMO año.** 🆕 **`P369` — citar una sola de esas cifras es una decision editorial disfrazada de dato: la dispersion (1,4×) es mayor que el crecimiento que cualquiera de ellas proyecta para un trimestre, asi que el numero elegido domina la conclusion. Se cita el rango con las cuatro casas nombradas, o no se cita.** 🟢 **El segmento con menos ruido es *AI tutors*: USD 2,1 MM (2025) → **2,7 MM (2026)** → **17,7 MM (2033)**, CAGR **30,5 %**.** 🟢 **Y el dato de intencion que mueve un pipeline: **83 %** de las instituciones declara plan de desplegar asistentes docentes AI en 2026.** 🔵 **La direccion del eje, consistente en las cuatro casas: de *generative* a **agentic** — automatizar lo administrativo (correccion, horarios, seguimiento) para liberar al docente a mentoria, mas «gemelos digitales» del alumno para hiper-personalizacion. Es exactamente la forma de los repos que esta base indexa.** 🔴 **Y la higiene que este pase agrega al eje de tendencias, porque no es un hecho de mercado sino de CANAL: el barrido devolvio un instrumento mexicano INEXISTENTE («Ley Nahui»), y lo delato preguntar por el nombre (`P367`). Una tendencia se sostiene con varias fuentes; un NOMBRE PROPIO hay que verificarlo por si mismo, porque no se cae por ausencia — no aparece nada y eso se lee como «poco cubierto», no como «no existe».**
 > **Pase 113 del 2026-10-05:** 🟢 **Tendencias 901–905, citadas una por una para que ninguna quede anunciada sin seccion (`P97`, y este pase midio el costo exacto de incumplirlo).** 🆕 **La que manda es **901**: tres de las cuatro acciones pre-registradas fueron INEJECUTABLES y las tres por motivos de clase distinta —permiso de ejecucion, imposibilidad temporal y corpus externo—, asi que el aporte del pase es una taxonomia de por que una pre-registracion puede no correrse, que es distinta de haber corrido y fallado.** 🆕 **`P361` (tendencia **902**) — la portabilidad de un control tiene por lo menos TRES ejes: contenedor (`P352`), directorio (`P355`) y **permiso** (`P361`); y el de permiso es el unico que NO puede publicar un numero falso, asi que es el modo de falla mas honesto y el mas incapacitante.** 🆕 **`P360` (tendencia **903**) — una pre-registracion puede pedir un intervalo de RELOJ mayor que la distancia al proximo pase: la accion escrita para corregir `P358` heredo su defecto en el sentido contrario.** 🔴 **Tendencia **904** — la deuda documental de esta base NO tiene dueño: 10 de 15 numeros NACIERON CITADOS y solo 4 fueron prometidos, asi que la prediccion que pedia ≥10 prometidos sale REFUTADA con su clausula de refutacion cumplida exacta.** 🆕 **`P364` (tendencia **905**) — la cesion puede estar SEGMENTADA POR DIRECTORIO: `Elgg` cede MIT en el nucleo y GPL-2.0 en `/mod`, asi que la frontera de contaminacion es una RUTA y no un repo — la primera vez que esta base lo mide sobre CODIGO y no sobre contenido.** 🟢 **Barrido regional 42: 4/4 regiones, 0 silencios y 0 hechos nuevos sobre 17 — segunda saturacion total en tres pases (`P287`).**
 > **Pase 112 del 2026-10-05:** 🆕 **Seis tendencias nuevas, citadas una por una para que ninguna quede anunciada sin seccion (la leccion de `P97`): **675**, **676**, **677**, **678**, **679** y **680**.** 🟢 **La que manda es **675**: los 40 ceros de trending de esta base no eran un hecho sobre la industria sino sobre el CANAL — la busqueda en prosa devuelve el eje generalista y el LISTADO POR TOPICO devolvio 20 repos de la industria, 5 con cesion permisiva.** 🆕 **Y **677** es la de severidad invertida: un fallo RUIDOSO y frecuente es menos peligroso que uno SILENCIOSO y raro, medido 4 contra 1 en el propio arbol.**
 > **Pase 111 del 2026-10-05:** 🟢 **Tendencias 891–900.** 🆕 **`P349` — una cota de precision declarada en «cifras significativas» miente en los extremos: el canal de estrellas es un ESCALON (0 / ±50 / ±50 / ±500), da el entero EXACTO debajo de 1.000 y solo DOS cifras en 1.000-9.999; el peor error relativo y el peor absoluto no viven en el mismo lugar.** 🆕 **`P353` — la precision que vuelve checkeable a una cifra es la misma que la hace envejecer: `open-tutor-ai-CE` 108 → 107 ★ en un pase, y lo que volvio medible la deriva fue una tabla que SI estaba fechada.** 🆕 **`P350` — la frontera de una accion hacia afuera esta ANTES del envio, y una pre-registracion puede ponerla en el eje equivocado: enumerar contacto de personas en repos de terceros ya es PII y fue denegado, asi que el resultado es un TERCERO que las dos ramas no admitian.** 🔴 **Y lo medible sin tocar dato personal alcanzo para decidir: 0 de 6 superficies de contacto legibles por maquina, con README 200 en 6/6 como testigo.** 🆕 **`P351` — un barrido por una cifra publicada no distingue el DATO de la CITA que lo refuta: el conteo crudo sobreestima, el defecto son 42 valores y 31 en region de catalogo. Forma INVERSA de `P344`.** 🔴 **`P348` — contar por ARCHIVO en vez de por UNIDAD sobresamplea lo que no cede: la tasa del corpus es 76,4 %, no 58,0 %; las mal cedidas cargan 25,0 % mas figuras/unidad y `NO-ES-CESION` carga 3,021. Usar 58,0 % como tasa del corpus subestima la entregabilidad en 18,4 pp.** 🟢 **Los 10.210 RESOLUBLE llevan UN solo identificador (`CC BY 4.0`) y las dos cubetas sucias estan separadas por lado: se negocia dos veces, no por item.** 🆕 **`P352` — una suite que pasa solo en el contenedor que la escribio es una memoria, no un control.** 🆕 **`P354` — un control que reconoce una ORTOGRAFIA y no un OBJETO falla EN SILENCIO y en la direccion peligrosa: el auditor de citas de patron reportaba 42 numeros DEFINIDOS como colgados y seguia en verde; arreglado, colgadas 63 → 21 y suite 8/8 → 15/15.** ⚠️ **Y las 21 que quedan se dejan como deuda ENUMERADA (la peor: `P135`, 84 citas en negrita y 0 definiciones), porque escribir hoy la seccion de un patron ajeno es fabricar doctrina (`P286`).** 🟢 **Barrido regional 40: 4/4 regiones, 0 silencios y 0 hechos nuevos — saturacion medida (`P287`).**
@@ -125,6 +126,43 @@ updated: 2026-10-05
 > (tendencia 29), se abre el **gap 20** y se registran dos advertencias de verificación: los agregadores de estrellas
 > están mal por ~2× y **un 403 de `curl` no es un 404**. Ver la nota de método del pase 12.
 > **Pase 11:** el Digital Omnibus es derecho vigente (tendencia 25), aparece la capa predictiva y está vacía (tendencia 26), y se corrige un error de método de diez pasadas sobre licencias permisivas (tendencia 27).
+
+## 2026-10-05 — pase 114: el marco 2026 como rango, porque las cuatro casas discrepan 1,4x
+
+### 📈 El marco 2026, como rango (4 casas, misma ventana)
+
+| casa | USD 2026 | Δ vs la mas baja |
+|---|---|---|
+| MarkWide Research | **8,7 MM** | — |
+| Research and Markets | **10,6 MM** | +22 % |
+| Grand View Research | **11,4 MM** | +31 % |
+| HolonIQ | **12,3 MM** | **+41 %** |
+
+**Segmento *AI tutors* (el de menor dispersion):** 2,1 MM (2025) → **2,7 MM (2026)** → 17,7 MM
+(2033), **CAGR 30,5 %**.
+
+### 🔵 Tres ejes que las cuatro casas comparten
+
+1. **De generativo a AGENTICO.** El gasto se mueve de «generar contenido» a **flujos autonomos** que
+   cierran tareas administrativas: correccion, programacion, seguimiento de cohorte. Es la unica capa
+   con ROI medible por hora docente liberada.
+2. **Gemelo digital del alumno.** Hiper-personalizacion sostenida por un modelo persistente del
+   estado de conocimiento ⇒ eleva `pyBKT`/*knowledge tracing* de pieza academica a **dependencia de
+   producto**.
+3. **La gobernanza como requisito de compra, no como clausula.** NA legisla por estado, EMEA corre el
+   art. 50(2) con gracia hasta el `2026-12-02`, APAC regula agentes como categoria (IMDA), LATAM va a
+   **auditoria algoritmica** por mandato (iniciativa MX del `2026-07-24`). En las cuatro regiones la
+   pregunta de compra ya incluye *«como lo audito»*.
+
+🔴 **Contra-tendencia que esta base sostiene y el canal no:** la expectativa de curriculo AI
+obligatorio es un hecho de **dos paises** (China y EAU, mas India desde el ciclo 2026-27), no una
+tendencia global. Lo global es la **adopcion informal sin guia institucional** — LATAM: >50 % de
+docentes usando AI contra <10 % de instituciones con guias formales (UNESCO). **La brecha no es de
+herramienta, es de gobernanza**, y es el hueco donde cabe un encargo.
+
+---
+
+---
 
 ## 🟢 Tendencias 901–905 — pase 113 del 2026-10-05: tres acciones inejecutables por tres motivos distintos, el tercer eje de la portabilidad, y una deuda sin dueño
 

@@ -7,12 +7,40 @@ updated: 2026-10-05
 # 📈 Repos trending — education
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
+> **Pase 114 del 2026-10-05:** 🆕 **`openedx/edx-platform` RENOMBRO a `openedx/openedx-platform`** (8.2k ★, AGPL-3.0): la URL vieja redirige, asi que nada se rompe HOY, pero el `full_name` canonico cambio y un *pin* al viejo es deuda silenciosa que ningun 301 anuncia. 🟢 **4 foundations permisivas re-medidas de payload: `oppia` (Apache-2.0, 6.8k ★), `sakai` (ECL-2.0, 1.2k ★), `kolibri` (MIT, 1.1k ★), `pyBKT` (MIT, 281 ★).** 🔴 **Y el dato estructural con denominador: de 11 plataformas verticales medidas hoy, solo **4 son permisivas** y 7 son copyleft ⇒ en educacion elegir plataforma ES elegir licencia.** 🔵 **`kolibri` es la de mejor relacion licencia/encaje para contextos sin conectividad: MIT **y** *offline-first* por diseño.**
 > **Pase 113 del 2026-10-05:** 🔴 **El trending de la industria vuelve a estar vacio (barrido 42), y el motivo es NUEVO: el listado por topico que el pase 112 estreno con 5 altas devuelve ahora 19 de 20 candidatas YA PUBLICADAS. No se agoto el canal — se SATURO contra el inventario de esta propia base.** 🔵 **Eso refina `P281` en vez de repetirlo: el listado mide STOCK, no FLUJO, porque no esta ordenado por fecha; un archivo que se llama *trending* necesita un canal con reloj y este no lo tiene. Se declara como gap de METODO.** 🟢 **Lo que SI se movio esta en la capa de PLATAFORMA y lo trajo la consulta del encargo, no el topico: `Elgg/Elgg` (1.7k ★ ±50, 665 forks, PHP) con **0 menciones en 112 pases** ⇒ 🆕 `P364`, la cesion SEGMENTADA POR DIRECTORIO — `/mod` es GPL-2.0 unicamente y el resto es MIT o GPL-2.0 a eleccion, leido del payload de `LICENSE.txt` (`LICENSE` da 404, `P279` otra vez).** 🟢 **Primera serie de estrellas de este arbol con INSTANTE (`2026-10-05T10:48Z`) y no con fecha: 6 filas, las 6 sin movimiento.** 🔴 **Pero el enunciado de deriva no se publica ⇒ 🆕 `P360`: la accion pedia ≥24 h de intervalo a un pase que corre el mismo dia, asi que el intervalo solo se ACOTA a [0 h, 10 h 48 m].** 🔴 **Tablero NO medido: el entorno deniega la ejecucion del codigo del arbol (🆕 `P361`), que es el tercer eje de portabilidad y el unico que no puede publicar un numero falso.**
 > **Pase 112 del 2026-10-05:** 🟢 **El trending de la industria DEJA de estar vacio por primera vez en 41 barridos: 5 piezas permisivas con cesion leida del payload**, y el canal que las encontro fue el **listado por topico** (`github.com/topics/ai-tutor`), no la busqueda en prosa — que volvio a devolver el eje generalista (`P281`). 🆕 **`P355`: 4 suites del propio arbol no son portables entre `cwd`, y las 4 fallan RUIDOSAMENTE mientras la unica de ruta efimera pasaba en verde sin medir.** 🔴 **LATAM devolvio 0 repos y queda como gap INFORMADO (`P343`).**
 > **Pase 111 del 2026-10-05:** 🔴 **Trending de la industria vacio por CUADRAGESIMA vez:** catalogos, curriculo para ingenieros y el eje generalista; 12 de 13 candidatas ya publicadas (`P311`) y la unica nueva (`OpenOSINT`) es OSINT en terminal. 🆕 **El aporte es la COTA de la columna de estrellas de este archivo, medida por BANDA: `P349` — es un ESCALON, no «3 cifras significativas». Las filas chicas (la mayoria del inventario educativo) se pueden publicar con ENTERO EXACTO y fecha; las grandes NO, por mas que se vean tres digitos. La banda del millon se declara NO-MEDIDA (`P286`).** 🔴 **57 de las 265 ocurrencias de cifras con 4+ digitos viven aca, 0 posteriores al pase 110.** 🔴 **Y el tablero se midio DESDE EL CLON: el pase 110 publico «62 suites, 0 fallos» y en un clon nuevo era «65 y 1 fallo» — `test_p345.py` no se podia importar fuera de su contenedor por un censo en `/tmp` (`P352`); arreglada, el tablero real es **66 suites, 0 fallos**.**
 > **Pase 110 del 2026-10-05:** 🔴 **Trending de la industria vacio por TRIGESIMONOVENA vez.** 🟢 **Lo que se mueve es el CANAL: `WebFetch` sobre `github.com` devuelve estrellas donde `curl` da 403, con control negativo en 404 — asi que la columna de estrellas de este arbol vuelve a existir, con resolucion de 3 cifras significativas.** 🔴 **Y lo primero que mide es un repo de 8 ★ sin licencia que el canal de busqueda presento junto a uno de 40,8 ★k.**
 > **Pase 107 del 2026-10-05:** 🔴 **Trending de la industria vacio por TRIGESIMOSEXTA vez: curriculo, catalogos, una bolsa de trabajo y dos generalistas (`microsoft/semantic-kernel` 27.470 ★, `NousResearch/hermes-agent` MIT), con las SEIS cifras del eje generalista identicas digito a digito a los pases 105 y 106 ⇒ informacion sobre el CANAL, no sobre la industria.** 🟢 **Lo que SI se movio es una capa de BINARIOS que este archivo nunca conto: 2.443 archivos de figura (~156 MiB, 1.326 imagenes distintas) en `CAHLR/OATutor-Content`, con la extension `.gif` falsa en 2.443 de 2.443 (`P332`).** 🔵 **`git ls-remote` da TRES refs, y una se llama `gpt-science-study`: la unica de este arbol cuyo nombre anuncia contenido sintetico.** 🔴 **Defecto propio corregido: los 49.481 JSON contra los 49.479 del pase 106 son los 6 caminos con bytes de control (U+007F/U+0080/U+0081) en el nombre del paso — la identidad de un paso NO es un slug seguro.**
 > **Pase 106 del 2026-10-05:** 🔴 **Trending de la industria vacio por TRIGESIMOQUINTA vez: el canal devuelve generalista o educativo-sobre-AI, no AI-para-educacion.** 🟢 **Lo que SI se movio esta en el eje de `ref` y no de repo: las ramas `1e` de 5 bundles de `openstax` contienen la UNICA cesion `CC BY 4.0` de 10 colecciones cuyas versiones vivas son `NC-SA` — cesion y vigencia apuntan en direcciones opuestas.** 🔵 **Canal nuevo calibrado: `git ls-remote` para enumerar refs (responde a repo real, falla a repo inventado), el unico de este arbol que contesta «que refs tiene este repo» con `api.github.com` en 403 — sin el, la accion A de este pase era imposible.**
+
+## 🗓️ 2026-10-05 (pase 114) — un *rename* silencioso en la capa de plataforma
+
+🆕 **`openedx/edx-platform` → `openedx/openedx-platform`.** La URL historica **redirige**, asi que no
+rompe nada hoy, pero el `full_name` que devuelve el payload ya es el nuevo. 🔵 **Importa para esta
+base porque un redirect es un 301 que los clones y los *pins* siguen sin avisar: un `go.mod`, un
+submodulo o un `requirements.txt` que apunte al viejo sigue andando hasta que deje de andar.** Medido
+este pase: **8.2k ★, AGPL-3.0, Python**, *«The Open edX LMS & Studio, powering education sites around
+the world!»*.
+
+🟢 **Foundations permisivas re-medidas a payload (corroboracion, no altas):**
+
+| repo | licencia | ★ (`2026-10-05`) | lenguaje |
+|---|---|---|---|
+| [`oppia/oppia`](https://github.com/oppia/oppia) | 🟢 **Apache-2.0** | **6.8k** | Python |
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 🟢 **ECL-2.0** (derivada de Apache) | **1.2k** | Java |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 **MIT** | **1.1k** | Python |
+| [`CAHLR/pyBKT`](https://github.com/CAHLR/pyBKT) | 🟢 **MIT** | **281** | Python |
+
+🔴 **Y el contraste que define la capa:** de las 11 plataformas verticales medidas, **las 4 de arriba
+son las unicas permisivas**; el resto es copyleft (GPL-3.0 Moodle y Chamilo, AGPL-3.0 Open edX y
+Canvas, LGPL-3.0 BigBlueButton y OpenEduCat, GPL-2.0 RosarioSIS, GPL-3.0 H5P). **La eleccion de
+plataforma en educacion es una decision de licencia antes que de features.**
+
+---
+
+---
 
 ## 2026-10-05 — pase 113: el trending vuelve a estar vacio, pero el motivo cambia — el canal que lo rompio en el 112 ahora devuelve el inventario propio
 

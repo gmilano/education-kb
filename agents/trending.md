@@ -8,12 +8,44 @@ updated: 2026-10-05
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 > No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
+> **Pase 114 del 2026-10-05:** 🟢 **Primer intervalo de este arbol con los DOS extremos a RELOJ (`10:48Z` → `11:50Z` = 1 h 02 m): las 5 filas de banda `EXACTO` devuelven las 5 el MISMO entero ⇒ deriva = 0 ★ / 5 repos / 1 h 02 m, una tasa acotada por los dos lados y no un cero sin denominador.** 🔴 **Sigue sin testear la prediccion de ≥24 h ⇒ 🆕 `P365`: re-registrada contra un INSTANTE ABSOLUTO (`2026-10-06T10:48Z`) y no contra «el proximo pase», que es el defecto que `P360` nombro.** ⚠️ **Dos deltas fuera de la cohorte, sin intervalo porque su lectura previa esta fechada por DIA: `educhain` 389 → **388**, `canvas-mcp` 272 → **276**.** 🟢 **`DeepTutor` publica `v1.6.13` (2026.10.4), 40.8k ★, Apache-2.0.** 🔴 **0 altas: lo de este pase es RE-MEDICION, y se dice.**
 > **Pase 113 del 2026-10-05:** 🔴 **0 altas (barrido 35), cero ENUMERADO: 20 candidatas devueltas por el LISTADO → 19 frenadas por `P311` + 1 fuera de alcance (`mahseema/aibooks`, lista de libros) → 0 nuevas.** 🔵 **Y el reparto 19/20 es el dato: el mismo canal que el pase 112 estreno con 5 altas de golpe devuelve ahora el inventario de esta propia base — no se agoto, se SATURO.** 🟢 **Primera serie de estrellas con INSTANTE y no fecha (`2026-10-05T10:48Z`): 6 filas remedidas, las 6 sin movimiento (106, 105, 91, 72, 57 y `DeepTutor` 40.8k).** 🔴 **Pero el enunciado de deriva NO se publica, por segunda vez y por un motivo nuevo ⇒ 🆕 `P360`: la accion B pedia un intervalo de reloj ≥24 h a un pase que corre el MISMO dia que el que la escribio. El intervalo solo se ACOTA a [0 h, 10 h 48 m]. La accion fue escrita para corregir `P358` y heredo su defecto en el sentido contrario.** 🔴 **Acciones A y C NO MEDIBLES: el entorno deniega la EJECUCION del codigo del arbol ⇒ 🆕 `P361`, el tercer eje de portabilidad (contenedor `P352` · directorio `P355` · **permiso** `P361`) y el unico que no puede publicar un numero falso.** 🟢 **Accion D REFUTADA con su clausula de refutacion cumplida EXACTA: 4 prometidas contra ≥10 pedidas, y 10 de 15 NACIERON CITADAS.** 🆕 **`P362`: el instrumento que lo midio fallo su primera validacion por sensibilidad a MAYUSCULAS — leyo «el pase 5» de la prosa ignorando el encabezado `**Pase 100**`.**
 > **Pase 112 del 2026-10-05:** 🟢 **5 ALTAS PERMISIVAS (barrido 34) — la primera cifra distinta de cero en 34 barridos**, 4 MIT + 1 Apache-2.0, cada una con familia leida del payload y huella publicada. 🟢 **Y 3 de las 5 cierran parcialmente el hueco de codigo de APAC por ancla de CURRICULO NACIONAL (Gaokao, 人教版) — la forma de evidencia de `P245`, no el antroponimo que `P135` prohibe.** 🆕 **`P355`: la severidad de un fallo de portabilidad va al REVES de su frecuencia — 4 suites fallan ruidosamente por `cwd` asumido, 0 por ruta efimera, y la unica efimera (`P352`) pasaba en VERDE sin medir.** 🆕 **`P358`: «un pase» no es unidad de tiempo — los pases 111 y 112 corren el mismo dia, asi que la accion B remidio HORAS y el enunciado de deriva no se publica.**
 > **Pase 111 del 2026-10-05:** 🔴 **0 altas (barrido 33), cero ENUMERADO: 13 candidatas → 12 ya publicadas (`P311`), 1 nueva de OTRA industria (`OpenOSINT`).** 🆕 **Lo que se mueve es la COTA de la cifra que el pase 110 acababa de recuperar: `P349` — la resolucion del canal es una FUNCION ESCALON, no «3 cifras significativas». Debajo de 1.000 da el entero EXACTO (`264`, `107`); en 1.000-9.999 da solo DOS (`7.5k`, ±50). Peor error relativo al pie de la banda k (±5,0 %), peor absoluto arriba (±500).** 🆕 **Y la primera DERIVA medida: `open-tutor-ai-CE` 108 → **107 ★** en un pase, con `OATutor` en 265 (2026-09-30) → 264 → 264. En la banda EXACTO una cifra sin fecha no es un dato (`P353`), y lo que volvio medible la deriva fue una tabla de ESTE archivo que SI estaba fechada.** 🔴 **93 de las 262 ocurrencias de cifras con 4+ digitos exactos viven aca —el archivo mas cargado del arbol—, 0 posteriores al pase 110; pero el barrido cuenta la CITA igual que el DATO, asi que el conteo crudo sobreestima (`P351`).** 🔵 **Ruido de canal registrado y NO tomado como correccion: la busqueda reporta `openclaw` en ~362k contra los 385.407 publicados — ninguna de las dos tiene canal que la sostenga.**
 > **Pase 110 del 2026-10-05:** 🔴 **0 altas permisivas (trigesimosegundo barrido), cero ENUMERADO: 6 candidatas → 4 ya publicadas (`P311`), 2 nuevas sin cesion.** 🟢 **Lo que SE MUEVE este pase no es el trending: es que las ESTRELLAS VUELVEN a ser medibles — `WebFetch` sobre `github.com` sirve 200 donde `curl` da 403, con control negativo en 404.** 🔴 **Y al volver, cobran: `OATutor` 264 ★ contra «~1,5k» publicado, y `open-tutor-ai-CE` BSD-3-Clause / 108 ★ contra «Apache-2.0 / ~600 ★».**
 > **Pase 107 del 2026-10-05:** 🔴 **0 altas permisivas (trigesimo barrido, 3 candidatas MEDIDAS del payload y las 3 con su bloqueo nombrado) y las TRES acciones pre-registradas corridas: A con la cota NO CERRADA y su clausula de atribucion FALSIFICADA, B CONFIRMADA, C CONFIRMADA en dos clausulas y FALSIFICADA en la tercera.** 🔴 **`P332`: la EXTENSION de un archivo de imagen no es su FORMATO — 2.443 de 2.443 `.gif` son PNG/JPEG/WEBP, y un barrido por extension habria dado «0 solapamiento» desde una premisa falsa.** 🔴 **`P334`: el titular de una FIGURA se resuelve por BYTES y vive en una obra DISTINTA de la que el item cita (36 pares leidos).** 🔴 **`P333`: `fa4e32e5e622` era la huella del archivo SIN su salto final — defecto de dato, no de upstream.** 🔴 **`P335`: tercera sub-clase de `P320` — lo denegado fue el LOTE, no la pieza nombrada.** 🟢 **Canal nuevo: `gitlab.com/-/raw`.**
 > **Pase 106 del 2026-10-05:** 🟢 **0 altas (vigesimonoveno barrido, 5 candidatas, las 5 frenadas por el gate de `P311`) y las TRES acciones pre-registradas corridas: A CONFIRMADA, B FALSIFICADA, C CONFIRMADA.** 🔴 **`P328`: la cesion de un OER se ESTRECHA entre ediciones — 10 de 10 colecciones con el mismo `collection-id` pasan de `CC BY 4.0` en `1e` a `CC BY-NC-SA 4.0` en `main`, y el slug cambia de nombre, que es por lo que esta base no lo veia.** 🔴 **El denominador se corrige de 13.371 a 82.492 unidades y aparece una capa sintetica de 6.886 unidades (`oer: openai`) sin cesion.** 🟢 **Canal nuevo: `git ls-remote` para enumerar refs — es el que abrio la accion A.**
+
+## 🗓️ 2026-10-05 (pase 114, lectura `2026-10-05T11:50Z`) — primer intervalo con DOS extremos a reloj
+
+🟢 **Re-medicion de la cohorte `EXACTO` del pase 113, a instante NOMBRADO.** Intervalo
+**`10:48Z` → `11:50Z` = 1 h 02 m**, los dos extremos a reloj (el 113 solo tenia el superior).
+
+| repo | licencia | `10:48Z` | **`11:50Z`** | Δ | region |
+|---|---|---|---|---|---|
+| [`flysheep-ai/education-skills`](https://github.com/flysheep-ai/education-skills) | **MIT** | 106 | **106** | 🔵 0 | APAC (skills educativas en chino) |
+| [`SimonsTang/feifei-companion`](https://github.com/SimonsTang/feifei-companion) | **Apache-2.0** | 105 | **105** | 🔵 0 | APAC (K12, sistema de acompañamiento) |
+| [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | **MIT** | 91 | **91** | 🔵 0 | **EMEA** (Polonia, `selleo.com`) |
+| [`codeXsidd/Studivexa`](https://github.com/codeXsidd/Studivexa) | **MIT** | 72 | **72** | 🔵 0 | APAC |
+| [`Zenglian990/AI_Tutor_Release`](https://github.com/Zenglian990/AI_Tutor_Release) | **MIT** | 57 | **57** | 🔵 0 | APAC (RAG, K-9) |
+
+**Deriva = 0 ★ / 5 repos / 1 h 02 m.** Es una tasa acotada por los dos lados, no un cero sin
+denominador. 🔴 **No testea la prediccion de ≥24 h** — re-registrada contra instante ABSOLUTO
+(`P365`): evaluable por el primer pase en o despues de **`2026-10-06T10:48Z`**.
+
+⚠️ **Dos deltas fuera de esta cohorte, publicados SIN intervalo** (su lectura previa esta fechada por
+DIA, no por reloj ⇒ no son tasas): `satvik314/educhain` **389 → 388 (−1)**;
+`vishalsachdev/canvas-mcp` **272 → 276 (+4)**.
+
+🟢 **Novedad de catalogo, no de estrellas:** `HKUDS/DeepTutor` publica **`v1.6.13` (2026.10.4)** —
+Apache-2.0, **40.8k ★**, 5,2k forks. Sigue siendo el repo de agente educativo mas grande del indice.
+
+🔴 **0 altas este pase.** El barrido permisivo no dio candidatas sobre el gate; lo de arriba es
+RE-MEDICION. Se dice en vez de presentar corroboracion como descubrimiento.
+
+---
+
+---
 
 ## 2026-10-05 — pase 113: 0 altas (barrido 35), el canal que estreno 5 altas devuelve el inventario propio, y la primera serie de estrellas con INSTANTE
 

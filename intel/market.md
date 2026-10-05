@@ -8,6 +8,7 @@ updated: 2026-10-05
 
 > Key players, market map y oportunidades por región.
 > Investigado 2026-09-30; el pase 11, el 2026-10-01. Las estimaciones de tamaño de mercado varían mucho entre firmas: se listan todas con su fuente en vez de elegir una.
+> **Pase 114 del 2026-10-05:** 🟢 **Barrido regional 43: 4/4 regiones responden, 0 silencios, denominador ENUMERADO con `grep` de control ANTES de escribir — 17 hechos sondeados, 15 ya publicados, **2 candidatos a nuevos**, y de esos 2 **uno queda REFUTADO y el otro RE-UBICADO de region**. Hechos netos nuevos: 2, los dos de instrumento mexicano.** 🔴 **El hallazgo que manda es un error de canal cazado ANTES de publicarse: el barrido de LATAM devolvio una **«Ley Nahui»** mexicana como instrumento en proceso. Consulta dirigida a esa cadena: **no existe bajo ese nombre** («the search did not return specific results about "Ley Nahui" by that exact name»). 🆕 **`P367` — un nombre PROPIO inventado es mas peligroso que una fecha mal: una fecha falsa se cae contra fuente legal, pero un nombre propio falso es inbuscable y por lo tanto **no se puede falsar por ausencia**; solo lo delata preguntar POR EL NOMBRE.** No se publica como hecho. Familia de `P281`, en el eje del nombre y no del calendario.** 🟢 **Y la consulta que lo refuto devolvio los instrumentos REALES, los dos con 0 ocurrencias en esta base:** iniciativa de **abril de 2026** (Camara de Diputados) para reformar el **articulo 73 constitucional** y facultar al Congreso a legislar IA; y la **`Ley Federal para el Desarrollo Etico, Soberano e Inclusivo de la IA`**, presentada el **`2026-07-24`**, que crea un **Consejo Nacional de IA** (organismo descentralizado) y una 🆕 **`Plataforma Nacional de Auditoria Algoritmica`**. 🔵 **Esa Plataforma es el unico hallazgo del pase con forma de ENCARGO y no de contexto: un mandato estatal de auditoria algoritmica es demanda de servicio, no marco a citar.** 🔴 **El segundo candidato se RE-UBICA y la correccion es de region, que es justo el error que el encargo pide no cometer: `IGNITE Copilot` entro por el barrido de LATAM, y es **EMEA de origen** — Sant Cugat del Valles, España, ronda de **€500.000 en primavera de 2025** (no 2026), +14.000 docentes desde 2024. Lo que es LATAM es su ALINEACION CURRICULAR: Nueva Escuela Mexicana (MX), Lineamientos MEN (CO), Bases Curriculares MINEDUC (CL), CNEB (PE).** 🆕 **`P368` — la region de un proveedor no es la region de su mercado, y un barrido regional las COLAPSA por construccion: preguntar «AI education LATAM» devuelve vendedores EMEA con clientes LATAM. Colocar por el pais de la consulta es como colocar por antroponimo (`P135`) — hay que leer la SEDE.** 🟢 **Y el patron que si es replicable: alinearse al curriculo OFICIAL de cada pais es la barrera de entrada real en LATAM, y es un trabajo de localizacion, no de modelo.** 🔴 **Hueco declarado por CUARTO pase consecutivo: LATAM devuelve mercado, adopcion, regulacion y ahora dos instrumentos nuevos — y **CERO repositorios**. La capa de CODIGO de LATAM sigue abierta.**
 > **Pase 113 del 2026-10-05:** 🟢 **Barrido regional 42, cuatro regiones, 0 silencios, denominador ENUMERADO: 17 hechos sondeados con el `grep` de control ANTES de escribir, **17 ya publicados**, **0 nuevos** (`P287`).** 🔵 **Es la SEGUNDA saturacion total en tres pases (el 111 dio 0/15, el 112 dio 2/27, este 0/17), y ya no se lee como un accidente del canal: el eje de MARCO REGULATORIO de esta base esta saturado para consulta generalista en las cuatro regiones.** 🔴 **Los 17 que volvieron y ya estaban, nombrados: Corea `AI Basic Act` (vigente 2026-01-22, extraterritorial), Vietnam `Ley 134/2025/QH15` (2026-03-01), marco de **AI AGENTICA** de la IMDA de Singapur (2026-01-22), AI Act con el calendario corregido (`2027-12-02` stand-alone / `2028-08-02` empotrado), California `AB 1159`, Idaho `SB 1227`, Ohio (politica escrita obligatoria, jul-2026, 600+ distritos), Carolina del Norte `SB 1006` (US$ 10 M para Khanmigo), Colombia `CONPES 4144`, Chile (clasificacion por riesgo), encuesta DEC LATAM 2026 (92 % alumnos / 79 % docentes, 30.000+ respuestas, 29 instituciones, con Tec de Monterrey, `AIGEN` y `RIE360`), Microsoft+AFT, y el marco de mercado 2026.** 🔵 **La consecuencia de posicionamiento, que es lo unico que un barrido saturado todavia produce: lo que diferencia una propuesta por region ya no es citar el marco —esta publicado y lo cita cualquiera— sino poder decir **de que licencia cede el activo que se entrega ahi**. Y este pase da justo eso en la capa de plataforma: 🆕 `P364`, la cesion SEGMENTADA POR DIRECTORIO de `Elgg` (nucleo MIT, `/mod` GPL-2.0), que convierte una pregunta de licencia en una decision de arquitectura de semana 1.** 🔴 **Y el hueco que este pase tampoco cierra, declarado por tercer pase consecutivo: LATAM devuelve mercado, adopcion y regulacion y **CERO repositorios**. La capa de CODIGO de LATAM sigue abierta; APAC sigue siendo la unica con cierre parcial (3 piezas del pase 112 ancladas a curriculo nacional).**
 > **Pase 112 del 2026-10-05:** 🟢 **Barrido regional 41, cuatro regiones, 0 silencios, denominador ENUMERADO: 27 hechos sondeados con el `grep` de control ANTES de escribir, 25 ya publicados y **2 nuevos** (`P287`).** 🆕 **Los 2 nuevos son de dinero y de velocidad, no de marco: (a) Carolina del Norte defendio un *earmark* de **US$ 10 M** en la **SB 1006** para financiar Khanmigo a nivel estatal —esta base solo tenia Khanmigo en el piloto de Maryland (~4.350 alumnos), nunca una compra estatal—, y (b) **Corea del Sur fue el mayor salto del mundo en difusion de AI en el H2 2025, +4,8 pp**.** 🔵 **El resto confirma la saturacion de `P287` en la capa de marco regulatorio: AB 1159, SB 1227, Ohio, AASA, AI Verify, IndiaAI, SEA-LION, Sarvam, Ley 21.719 de Chile y la prohibicion de inferencia de emociones del AI Act ya estaban todos.** 🔴 **Y el hueco que este pase NO cierra y declara: LATAM devolvio mercado y regulacion y **CERO repositorios** — la capa de CODIGO de LATAM sigue abierta, mientras APAC cerro parcialmente la suya con 3 piezas permisivas ancladas a curriculo nacional.**
 > **Pase 111 del 2026-10-05:** 🟢 **Barrido regional 40, cuatro regiones, 0 silencios — y **0 hechos nuevos**, con el denominador ENUMERADO: 15 hechos devueltos, 15 ya publicados.** Vietnam (210 ocurrencias), `AI Basic Act` de Corea (44), AB 1159 (143), SB 1227 (75), Traffic Light de NYC (44), STUDENTS FIRST (21), Digital Omnibus (104), CENIA/Latam-GPT (41/37), Uruguay (59), Peru (73), CONPES (72), Observatorio UNESCO para LATAM (4), Ipsos Education Monitor (9), DEC LATAM (69). ⚠️ **La unica cadena con 0 ocurrencias fue «31 states», y es el MISMO hecho que «134 bills» en otra redaccion: no es un hueco y no se publica como tal.** 🔵 **Es `P287` en la capa regional: el eje esta SATURADO para consulta generalista y el contenido informativo del barrido es el cero mismo — hay que cambiar el EJE de la consulta, no concluir que las regiones estan quietas.** 🔴 **Y la consecuencia de posicionamiento: lo que diferencia una propuesta por region ya no es saber que regula cada region —eso esta publicado y cualquiera lo cita— sino poder decir DE QUE LICENCIA CEDE el activo que se entrega ahi, que es lo que ningun barrido de mercado contesta y es donde cayeron `P348`, `P349` y `P352` de este pase.** 🟢 **Las Opportunities by region siguen vigentes sin cambios; lo que se agrega es la COTA con que se pueden citar sus cifras de repo (`P349`: entero exacto solo por debajo de 1.000).**
@@ -76,6 +77,112 @@ updated: 2026-10-05
 > regulado — **STUDENTS FIRST Act of 2026**, marco de los estudiantes de los 50 estados (AASA, agosto 2026).
 > **LATAM:** 🔵 el hallazgo del pase — **existe una capa MCP nacional brasileña de datos públicos, activa y MIT, y
 > educación es el único dominio grande que falta** (**gap 69**).
+
+## 2026-10-05 — pase 114: barrido regional 43, un nombre propio refutado y una region mal atribuida
+
+### 🔬 Barrido 43 — el denominador, enumerado antes de escribir (`P287`)
+
+| hecho sondeado | ocurrencias previas | veredicto |
+|---|---|---|
+| `Digital Omnibus` / calendario AI Act | 106 | ya publicado |
+| California `AB 1159` | 154 | ya publicado |
+| Idaho `SB 1227` | 86 | ya publicado |
+| Oregon `SB 1546` | 4 | ya publicado |
+| `134 bills` / 31 estados | 7 | ya publicado |
+| Observatorio UNESCO para LATAM | 14 | ya publicado |
+| Chile ley `21.719` | 27 | ya publicado |
+| Colombia `CONPES` | 80 | ya publicado |
+| India `₹10.372 crore` AI Mission | 1 | ya publicado |
+| India AI obligatoria desde `Class 3` | 3 | ya publicado |
+| Singapur `AI Verify` | 37 | ya publicado |
+| Sarvam AI / `SEA-LION` (modelos soberanos) | 12 / 12 | ya publicado |
+| AI tutors `$17.7B` 2033 / CAGR `30.5 %` | 4 / 3 | ya publicado |
+| México **«Ley Nahui»** | 0 | 🔴 **REFUTADO — no existe bajo ese nombre (`P367`)** |
+| México **art. 73** + **Ley Federal Etico/Soberano** (`2026-07-24`) | 0 | 🆕 **NUEVO** |
+| México **Plataforma Nacional de Auditoria Algoritmica** | 0 | 🆕 **NUEVO** |
+| `IGNITE Copilot` (Sant Cugat / CNEB / Nueva Escuela Mexicana) | 0 / 0 / 0 | 🆕 **NUEVO, pero EMEA de origen (`P368`)** |
+
+**Marco global 2026, como RANGO y sin elegir fuente:** USD **8,7 MM** (MarkWide) · **10,6 MM**
+(Research and Markets) · **11,4 MM** (Grand View) · **12,3 MM** (HolonIQ) ⇒ **dispersion de 1,4×
+entre la mas baja y la mas alta para el MISMO año**. Segmento *AI tutors*: USD 2,1 MM (2025) →
+**2,7 MM (2026)** → **17,7 MM (2033)**, CAGR **30,5 %**. **83 %** de las instituciones declara plan de
+desplegar asistentes docentes AI en 2026.
+
+## Opportunities by region
+
+### North America
+
+- **Instrumento, no marco:** sin estandar curricular federal vinculante (a mayo de 2026), la
+  regulacion es estatal y CONCRETA: Idaho `SB 1227` (framework estatal K-12, estandares de
+  alfabetizacion AI, formacion docente, **prohibe que la AI reemplace al docente**), Oregon `SB 1546`
+  (features de proteccion de menores, reduccion de uso compulsivo), California `AB 1159` (propuesta:
+  veta entrenar modelos con datos de alumnos salvo beneficio directo a la escuela).
+- **Volumen legislativo:** desde 2025, 35 estados + DC + PR introdujeron proyectos sobre AI en
+  educacion y **24** los promulgaron; en 2026, **134 proyectos en 31 estados**, 27 con proyectos
+  activos y **5 ya ley**.
+- **Palanca de compra:** el Dept. of Education prioriza AI en la asignacion de *discretionary grants*
+  desde el **2026-05-13** ⇒ hay presupuesto federal con criterio, aunque no haya estandar federal.
+- **Oportunidad Globant:** la capa vendible es **observar y fundamentar** una decision, no decidirla:
+  trazabilidad por alumno, expediente de por-que, y *human-in-the-loop* obligatorio por diseño.
+
+### EMEA
+
+- **Calendario, sostenido contra fuente legal (`P281`):** lo vigente HOY es el **art. 50(2)** del AI
+  Act, con gracia hasta el **`2026-12-02`** — **dos meses**. El Anexo III autonomo corrio al
+  **`2027-12-02`** por el *Digital Omnibus*, y es un **LIMITE EXTERIOR condicionado** a que la
+  Comision confirme las normas armonizadas, que la Comision puede **ADELANTAR**. ⇒ **no se vende un
+  plan con fecha, se vende un expediente permanentemente listo.**
+- **Prohibicion ya vigente:** reconocimiento de **emociones** en centros educativos.
+- **Perimetro mas ancho que la UE:** el Consejo de Europa (46 estados) corre un instrumento SEPARADO.
+- 🆕 **Patron de expansion medido este pase:** `IGNITE Copilot` (Sant Cugat del Valles) — €500k
+  (primavera 2025), +14.000 docentes, y **alineacion al curriculo oficial de 4 paises LATAM** como
+  via de entrada. Es el molde EMEA→LATAM: **la barrera es curricular y de idioma, no de modelo**.
+- **Oportunidad Globant:** expediente de conformidad como PRODUCTO (no consultoria): marcado art. 50,
+  registro de riesgo Anexo III, y la prueba de que no hay inferencia de emociones.
+
+### APAC
+
+- **La unica region con curriculo nacional OBLIGATORIO:** China (junto con EAU) desde el ciclo
+  2025-26, AI obligatoria **desde los 6 años**; Beijing debe **≥8 h** de instruccion AI por alumno y
+  año. India: AI y pensamiento computacional **obligatorios desde `Class 3`** en escuelas publicas y
+  privadas desde el ciclo **2026-27**, con la India AI Mission de **₹10.372 crore**; en julio de 2026
+  el gobierno señalo que ira a legislacion AI dedicada, de enfoque por riesgo.
+- **Gobernanza por herramienta, no por prohibicion:** Singapur con `AI Verify` y un marco especifico
+  de **AI AGENTICA** (IMDA, `2026-01-22`) — el primer instrumento del mundo que regula agentes como
+  categoria. Japon: gobernanza voluntaria, *light-touch*.
+- **Soberania de modelo como eje de compra:** Sarvam AI (IN), SEA-LION (SG), HyperCLOVA X Think (KR),
+  NTT Sarashina (JP), TAIDE (TW) ⇒ la pregunta de compra es **quien procesa datos de alumnos y donde**.
+- **Unica region con cierre PARCIAL de capa de codigo:** 3 piezas ancladas a curriculo nacional
+  (Gaokao / 人教版) por evidencia del repo y no por antroponimo.
+- **Oportunidad Globant:** desplegar sobre modelo soberano auto-hospedado (`Ollama`/`vLLM` + LMS
+  permisivo), con el curriculo nacional como esquema de datos de primera clase.
+
+### LATAM
+
+- **La asimetria que decide un encargo:** adopcion ALTA y marco sectorial educativo FINO. Chile y
+  Brasil con **>50 % de docentes** ya usando AI, pero **<10 % de las instituciones** con guias
+  formales y capacidad para integrarla (UNESCO). En educacion superior, **92 % de alumnos** y **79 %
+  de docentes** ya la usan (DEC LATAM 2026).
+- 🆕 **Instrumentos mexicanos nuevos en esta base:** iniciativa de **abril de 2026** para reformar el
+  **art. 73 constitucional**; y la **Ley Federal para el Desarrollo Etico, Soberano e Inclusivo de la
+  IA** (`2026-07-24`), que crea el **Consejo Nacional de IA** y la **Plataforma Nacional de Auditoria
+  Algoritmica**. ⚠️ **Iniciativas EN PROCESO, no ley vigente.**
+- 🔴 **No existe «Ley Nahui»** — el canal la devolvio y la consulta dirigida no la encuentra (`P367`).
+- **Resto del mapa:** Brasil con ley de IA aprobada en 2025 (enfoque por riesgo); Chile con ley
+  `21.719` de datos y proyecto de IA por riesgo, estilo europeo; Colombia con decretos de sector
+  publico + *sandbox* (`CONPES`); Observatorio UNESCO de IA en Educacion para America Latina, con
+  sede en la CEPAL, Santiago.
+- **Oportunidad Globant:** la demanda es **gobernanza e integridad**, no mas generacion — y la
+  **Plataforma Nacional de Auditoria Algoritmica** mexicana es un mandato de auditoria con
+  presupuesto implicito. Entrada replicable: **alineacion al curriculo oficial por pais** (el molde
+  `IGNITE`), que es trabajo de localizacion y no de modelo.
+- 🔴 **Hueco declarado (4º pase consecutivo): CERO repositorios de origen LATAM.** Lo buscado este
+  pase: `AI educacion LATAM 2026 adopcion regulacion`, edtech regional. Devuelve politica y
+  adopcion; **no devuelve codigo**. Un informado hueco, no cobertura.
+
+---
+
+---
 
 ## 🟢 Barrido regional 42 (pase 113 del 2026-10-05) — 4/4 regiones, 0 silencios y 0 hechos nuevos sobre 17 sondeados: la saturacion deja de ser un accidente
 

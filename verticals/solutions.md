@@ -8,6 +8,7 @@ updated: 2026-10-05
 
 > Plataformas verticales reales, en producción, customizables con AI.
 > Modelo: partir de algo que ya funciona y que ya tiene los datos, y agregar la capa agéntica arriba.
+> **Pase 114 del 2026-10-05:** 🟢 **11 plataformas verticales re-medidas de payload el mismo dia, con licencia leida del repo y no inferida.** 🔴 **El veredicto, con denominador enumerado: 4 permisivas / 7 copyleft** ⇒ en educacion la plataforma base se elige por **licencia** antes que por features, porque decide si el activo entregado al cliente se puede ceder. 🟢 **Las 4 que ceden: `oppia` (Apache-2.0, 6.8k ★, plataforma de aprendizaje completa), `sakai` (ECL-2.0, 1.2k ★, derivada de Apache), `kolibri` (MIT, 1.1k ★, *offline-first*), `pyBKT` (MIT, 281 ★, motor de *knowledge tracing*).** 🆕 **`openedx/edx-platform` renombro a `openedx/openedx-platform`.** 🔵 **Y la pieza nueva de la capa AI-native: `Selleo/mentingo` (MIT, 91 ★, TypeScript, EMEA/Polonia) se posiciona explicitamente como alternativa self-hosted a Moodle, Docebo, Thinkific, Teachable y Open edX — es el unico LMS AI-native MIT del indice, o sea la unica via para entregar un LMS con mentor AI SIN arrastrar copyleft de red.**
 > **Pase 113 del 2026-10-05:** 🟢 **1 vertical nueva, y con ella la capa de plataforma gana su segunda pieza no-copyleft: `Elgg/Elgg` (1.7k ★ ±50 al `2026-10-05T10:48Z`, 665 forks, PHP) con **0 menciones en 112 pases** de este arbol.** 🆕 **`P364` — y no entra como una fila mas, entra como un EJE: la cesion esta SEGMENTADA POR DIRECTORIO, leida del payload de `master/LICENSE.txt` — *«Bundled plugins (the contents of the "/mod" directory) are available only under the GPLv2 license. The remainder of the project is available under either MIT or GPLv2»*.** 🔵 **Lo que eso le cambia a una COTIZACION: el nucleo se puede construir y cerrar encima (MIT a eleccion), pero empaquetar `/mod` arrastra GPL-2.0 ⇒ la frontera de contaminacion es una RUTA, no el repo, y la ficha de esta plataforma necesita DOS filas y no una. Un barrido de raiz habria publicado «MIT» o «GPL-2.0» y las dos habrian sido falsas.** 🔴 **Y `LICENSE` da 404 mientras `LICENSE.txt` da 200: `P279` en el repo donde mas caro sale — probar solo `LICENSE` habria descartado por «sin cesion» un nucleo permisivo.** 🔵 **El hueco de 112 pases es mas util que la fila: `Elgg` no es nuevo ni oscuro, es que este arbol busca *education/LMS/tutor* y `Elgg` se describe como *socially aware web applications*. La pieza estaba a una consulta de distancia y la consulta era la del encargo.** 🔴 **`formalms/formalms` (37 ★) medido y descartado por cesion, con el negativo declarado DEBIL: 2 sondas contra las 12 del estandar de este arbol.** ⚠️ **Region de `Elgg`: `sin region verificada` — el `LICENSE.txt` nombra `The MITRE Corporation` (EE. UU.) y `Curverider Ltd` (R. Unido), que es evidencia de titulares NA+EMEA pero de una lista de copyright de 2017, no una sede actual (`P135`).**
 > **Pase 112 del 2026-10-05:** 🟢 **La capa de plataforma deja de ser COPYLEFT 8 de 8: `Selleo/mentingo` (MIT, 91 ★, TypeScript, EMEA/Polonia) es el primer LMS self-hosted PERMISIVO que esta base mide.** El pase 90 habia medido 8 de 8 copyleft (Moodle GPL-3.0, Open edX AGPL-3.0, Sakai ECL, OpenEduCat LGPL-3.0…) y la capa quedaba `MEDIDA-Y-BLOQUEADA-POR-LICENCIA` para un entregable cerrado. ⚠️ **Con la cota dicha: 91 ★ y 28 forks no son dos decadas de Moodle — lo que compra es ausencia de friccion de licencia, no madurez.**
 > **Pase 111 del 2026-10-05:** 🔴 **0 verticales nuevas (trigesimo barrido): el canal devuelve las ya publicadas —OpenEduCat sobre Odoo, Open edX via Axim, Moodle, Chamilo, OpenOLAT, Fedena, ERPNext/Frappe Education— mas Sakai e ILIAS, que ya estan.** 🆕 **Lo que se agrega es la COTA con que se pueden citar sus cifras (`P349`/`P353`), y el testigo es la plataforma mas citada del estante: `moodle/moodle` renderiza **`7.5k` ★** — **DOS** cifras significativas, no tres, y el canal no distingue 7.450 de 7.550. Una ficha que publique un entero exacto publica una precision SIN canal que la sostenga, y en este estante las cifras grandes son la norma.** 🟢 **La licencia, en cambio, se lee del PAYLOAD y es firme: GPL-3.0 para Moodle, confirmada contra lo publicado.** 🔵 **Esa es la asimetria util del pase: la CESION de una plataforma es verificable al byte, su POPULARIDAD solo por magnitud — y para una decision de compra esta bien ordenado, porque lo que decide es la licencia.** 🔴 **Barrido regional 40: 15 hechos devueltos, 0 nuevos (`P287`) — el eje que sigue rindiendo es el de la PROCEDENCIA DEL ACTIVO, que es justo lo que una vertical tiene que contestar antes de entregarse con contenido adentro.**
@@ -171,6 +172,34 @@ updated: 2026-10-05
 > **`qti3-pnp`**, que abren accesibilidad de evaluación como entregable auditable (**P72**). ⚠️ **Open edX cambia de
 > recomendación: proponer con presupuesto de mantenimiento (gap 70).** Ver la sección del pase 33, abajo.
 
+
+## 2026-10-05 — pase 114: 11 plataformas medidas, y la licencia como decision de arquitectura
+
+### 🗺️ Plataformas verticales, medidas a `2026-10-05`
+
+| plataforma | repo | licencia | ★ | rol |
+|---|---|---|---|---|
+| **Moodle** | [`moodle/moodle`](https://github.com/moodle/moodle) | GPL-3.0 | 7.5k | LMS de referencia, mayor ecosistema de plugins |
+| **Open edX** | [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) | AGPL-3.0 | 8.2k | LMS + Studio, MOOC a escala (Harvard/MIT) |
+| **Canvas** | [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | AGPL-3.0 | 6.9k | LMS dominante en HE de NA |
+| **BigBlueButton** | [`bigbluebutton/bigbluebutton`](https://github.com/bigbluebutton/bigbluebutton) | LGPL-3.0 | 9.2k | aula virtual / conferencia |
+| **Oppia** | [`oppia/oppia`](https://github.com/oppia/oppia) | 🟢 **Apache-2.0** | 6.8k | plataforma de aprendizaje con lecciones interactivas |
+| **Sakai** | [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 🟢 **ECL-2.0** | 1.2k | LMS + investigacion y colaboracion |
+| **Kolibri** | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 **MIT** | 1.1k | **offline-first**, contextos sin conectividad |
+| **Chamilo** | [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | GPL-3.0 | 1.0k | LMS liviano, foco accesibilidad |
+| **OpenEduCat** | [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | LGPL-3.0 | 884 | **ERP academico** (Odoo), LMS+SIS+fees en una base |
+| **RosarioSIS** | [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | GPL-2.0 | 645 | **SIS**: matricula, notas, asistencia, facturacion |
+| **H5P** | [`h5p/h5p-php-library`](https://github.com/h5p/h5p-php-library) | GPL-3.0 | 150 | contenido interactivo embebible en LMS |
+| **Mentingo** | [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | 🟢 **MIT** | 91 | 🆕 **LMS AI-native** con mentor AI y *role-play* |
+
+🔵 **Lectura de arquitectura:** el eje ERP/SIS (OpenEduCat LGPL, RosarioSIS GPL-2.0) es donde el
+copyleft pesa menos — son sistemas de registro que se INTEGRAN, no se redistribuyen. El eje de
+experiencia (LMS) es donde AGPL-3.0 muerde, porque el despliegue SaaS activa la clausula de red.
+**Regla practica: registro en copyleft si hace falta, capa de agente y de experiencia en permisivo.**
+
+---
+
+---
 
 ## 🟢 La capa de plataforma gana un EJE: la cesion segmentada por directorio (pase 113 del 2026-10-05)
 

@@ -8,6 +8,7 @@ updated: 2026-10-05
 
 > Recetas concretas: repos nombrados, licencias verificadas, wiring explícito y estimación.
 > Todos los repos citados fueron verificados vía WebFetch el 2026-09-30; los del pase 11, el 2026-10-01 (ver `agents/top.md`).
+> **Pase 114 del 2026-10-05:** 🟢 **Dos recetas nuevas, las dos armadas SOLO con piezas medidas de payload este pase y con la licencia como criterio de diseño y no como nota al pie.** 🔵 **`R-P114-A` resuelve el problema que la capa vertical impone (4 permisivas contra 7 copyleft): entregar un LMS con mentor AI sin arrastrar AGPL de red, usando `mentingo` (MIT) como experiencia y `rosariosis`/`openeducat` como registro integrado, no redistribuido.** 🔵 **`R-P114-B` es la receta de la oportunidad LATAM nueva — la `Plataforma Nacional de Auditoria Algoritmica` mexicana (iniciativa del `2026-07-24`): un expediente de auditoria por decision, con `pyBKT` como fundamento medible y `learnmcp-xapi` como registro inmutable.** 🔴 **Ninguna de las dos usa `curl -sI` como control de existencia: `P366` lo midio NO DISCRIMINANTE en este entorno (403 uniforme, 7/7 incluido un repo inventado).**
 > **Pase 113 del 2026-10-05:** 🆕 **Los patrones nuevos son `P360`–`P364` y la receta nueva es `R-113-PLATAFORMA-SOCIAL-CON-CESION-POR-RUTA` — la primera de esta base cuya compuerta de entrega se decide por un ARBOL DE DIRECTORIOS y no por un archivo de licencia.** 🆕 **`P360`: una pre-registracion puede pedir un intervalo de RELOJ mayor que la distancia al proximo pase — la accion escrita para corregir `P358` heredo su defecto en el sentido contrario y era inejecutable desde que se escribio. Una pre-registracion puede exigir que se MIDA el intervalo; no que el intervalo TENGA un tamaño.** 🆕 **`P361`: la portabilidad de un control tiene TRES ejes —contenedor (`P352`), directorio (`P355`) y PERMISO— y el de permiso es el unico que no puede publicar un numero falso, asi que es el modo de falla mas honesto y el mas incapacitante. Un control cuya unica validacion es la EJECUCION es inverificable en cualquier entorno restringido; uno que versiona su RESULTADO es auditable por lectura.** 🆕 **`P362`: un instrumento de ORIGEN sensible a MAYUSCULAS atribuye la autoria al CITADO en vez de al AUTOR — en este arbol el encabezado es `**Pase N**` y la referencia cruzada es `el pase N`, asi que una regex minuscula ve exactamente lo contrario de lo que busca. Familia de `P288`/`P354`, causa raiz de `P359`.** 🆕 **`P363`: una cita que declara la UBICACION de su definicion es PEOR que una cita muda — ofrece una procedencia falsable y nadie la falsa, asi que se lee como verificacion ya hecha. Es `P342` trasladado de la licencia a la doctrina.** 🆕 **`P364`: la cesion puede estar SEGMENTADA POR DIRECTORIO y la frontera de contaminacion es una RUTA, no un repo — el clasificador resuelve una familia por ARCHIVO cuando hace falta una por SUBARBOL.**
 > **Pase 112 del 2026-10-05:** 🆕 **Los patrones nuevos son `P355`, `P356`, `P357`, `P358` y `P359`, y la receta nueva es `R-112-TUTOR-PERMISIVO-CON-CESION-MEDIDA` — el primer tutor K-12 que esta base puede armar con cesion permisiva de punta a punta, con la trampa del corpus MEDIDA y presupuestada en vez de descubierta en produccion.** 🔴 **`P355`: la severidad de un fallo de portabilidad va al REVES de su frecuencia (4 ruidosos contra 1 silencioso), y una prediccion con forma de DISYUNCION se confirma sin decir cual rama la sostuvo.** 🔴 **`P356`: un auditor cuyo denominador de DEFINICIONES y de CITAS son conjuntos de archivos distintos FABRICA hallazgos — 6 de las 21 colgadas no eran deuda.** 🔴 **`P357`: la herencia entre capas de un corpus se mide fila por fila, no se deduce del agregado — 19,8 % de los hints divergen y la asimetria es 66 a 1.** 🔴 **`P358`: «un pase» no es una unidad de TIEMPO.**
 > **Pase 111 del 2026-10-05:** 🆕 **Los patrones nuevos son `P348`–`P354`, y la receta nueva es `R-111-CIFRA-CON-COTA-Y-FECHA` — como se publica una cifra de repo en esta base y como se cita en una propuesta.** 🔴 **`P348`: contar por ARCHIVO en vez de por UNIDAD sobresamplea lo que no cede — la tasa del corpus es 76,4 % y no 58,0 %, y el mecanismo esta medido (25,0 % mas figuras/unidad en lo mal cedido, 3,021 en `NO-ES-CESION`). Es `P344` en otra forma.** 🆕 **`P349`: una cota declarada en «cifras significativas» miente en los extremos — el canal es un ESCALON (0/±50/±50/±500), exacto debajo de 1.000 y de DOS cifras en 1.000-9.999.** 🆕 **`P350`: la frontera de una accion hacia afuera esta ANTES del envio; la pre-registracion la puso en «no mandar nada» y lo denegado fue ENUMERAR contacto de personas, asi que el resultado es un TERCERO que sus dos ramas no admitian.** 🆕 **`P351`: un barrido por una cifra publicada no distingue el DATO de la CITA que lo refuta — forma INVERSA de `P344`.** 🆕 **`P352`: una suite que pasa solo en el contenedor que la escribio es una memoria, no un control; el tablero se mide DESDE EL CLON.** 🆕 **`P354`: un control que reconoce una ORTOGRAFIA y no un OBJETO queda ciego cuando cambia la notacion — el auditor de citas de patron conocia cuatro convenciones de encabezado y no la quinta (el numero en CODIGO INLINE, la que `patterns.md` usa desde el pase ~95), asi que 42 numeros definidos (`P284`-`P287`, `P308`-`P319`, `P328`-`P353`) salian COLGADOS y el control seguia en verde. Arreglado como convencion `E`: colgadas 63 → 21, suite 8/8 → 15/15 con tres controles negativos. Misma familia que `P171`/`P288`/`P299`/`P304`.** ⚠️ **Las 21 que quedan son deuda real de pases viejos —la peor es `P135`, citada 84 veces en negrita y sin definicion— y NO se corrigen: escribir hoy la seccion de un patron que otro pase nombro es fabricar doctrina con un numero ajeno.** 🆕 **`P353`: la precision que vuelve checkeable a una cifra es la misma que la hace envejecer — en la banda EXACTO la cifra no se publica sin fecha.**
@@ -141,6 +142,160 @@ updated: 2026-10-05
 > **Pase 11:** +2 patrones — **P25** (riesgo de abandono conforme al Anexo III, la capa con presupuesto ya asignado y sin oferta open source) y **P26** (agente docente sobre la ontología curricular nacional ya publicada).
 > **Pase 27:** **+4 patrones y una corrección.** 🔴 **P51 queda con premisa falsa** —el conector MCP de Moodle **sí existe y es MIT**— y lo reemplazan **P54** (corrección y devolución sobre Moodle con **compuerta humana**, el último tramo del gap 6, con piezas que ya escriben), **P55** (el conector de **Open edX**, que es el único que de verdad no existe), **P56** (**SCORM** como formato de salida de la capa generativa: cero integración, offline) y **P57** (evidencia por MCP cotizada sobre lo que CaSS **realmente** expone — 6 de 61 operaciones, con insignias y autoría de marcos **fuera**).
 
+
+## 2026-10-05 — pase 114: dos recetas con la licencia como criterio de diseño
+
+### 🧩 `R-P114-A` — LMS AI-native que CEDE: mentor AI sin copyleft de red
+
+**Problema.** El cliente quiere LMS + mentor AI y quiere el codigo cedido. Moodle (GPL-3.0), Open edX
+y Canvas (AGPL-3.0) obligan a ceder la derivada, y en SaaS la AGPL activa la clausula de red.
+
+**Piezas (todas medidas `2026-10-05`):**
+
+| rol | pieza | licencia | ★ |
+|---|---|---|---|
+| experiencia + mentor AI | [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | **MIT** | 91 |
+| motor de maestria | [`CAHLR/pyBKT`](https://github.com/CAHLR/pyBKT) | **MIT** | 281 |
+| contenido interactivo | [`oppia/oppia`](https://github.com/oppia/oppia) | **Apache-2.0** | 6.8k |
+| registro academico (SIS) | [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | GPL-2.0 ⚠️ | 645 |
+| modo sin conectividad | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | **MIT** | 1.1k |
+
+**Cableado.**
+1. `mentingo` es el front y el *runtime* del mentor; es MIT ⇒ la derivada se cede sin obligacion.
+2. `pyBKT` corre como **servicio aparte** (HTTP interno): recibe la secuencia de intentos, devuelve
+   `p(mastery)` por *skill*. Aparte y no embebido para que el mentor pueda citar POR QUE propuso algo.
+3. `oppia` aporta las lecciones interactivas; Apache-2.0 ⇒ se puede forkear el contenido y el motor.
+4. `rosariosis` queda como **sistema de registro INTEGRADO por API, nunca redistribuido** — la
+   GPL-2.0 no alcanza a un consumidor por red. **Esta es la frontera de licencia del diseño.**
+5. `kolibri` (MIT) se despliega como nodo local sincronizable donde la conectividad no se garantiza.
+
+**Entregable que cede:** todo lo que Globant escribe vive en el lado MIT/Apache (1-3, 5). El unico
+copyleft (4) se consume, no se distribuye. **4-6 semanas** para un piloto de una carrera.
+
+### 🧩 `R-P114-B` — Expediente de auditoria algoritmica por decision (LATAM / MX)
+
+**Problema.** La iniciativa mexicana del `2026-07-24` crea una **Plataforma Nacional de Auditoria
+Algoritmica**; y NA ya prohibe en varios estados que la AI decida sobre un alumno (Idaho `SB 1227`
+prohibe que reemplace al docente). ⇒ hay que poder **fundamentar cada decision**, no solo emitirla.
+
+**Piezas (todas medidas `2026-10-05`):**
+
+| rol | pieza | licencia | ★ |
+|---|---|---|---|
+| fundamento medible | [`CAHLR/pyBKT`](https://github.com/CAHLR/pyBKT) | **MIT** | 281 |
+| registro inmutable (xAPI/LRS) | [`DavidLMS/learnmcp-xapi`](https://github.com/DavidLMS/learnmcp-xapi) | **MIT** | 15 |
+| accion sobre el LMS | [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | **MIT** | 276 |
+| accion sobre Moodle | [`peancor/moodle-mcp-server`](https://github.com/peancor/moodle-mcp-server) | **MIT** | 43 |
+| evaluacion pedagogica | [`AI-for-Education/pedagogy-benchmark`](https://github.com/AI-for-Education/pedagogy-benchmark) | **MIT** | 12 |
+| orquestacion | [`huggingface/smolagents`](https://github.com/huggingface/smolagents) | **Apache-2.0** | 29.7k |
+
+**Cableado.**
+1. `smolagents` orquesta; cada paso **escribe un *statement* xAPI** via `learnmcp-xapi` ANTES de
+   actuar ⇒ el expediente existe aunque la accion falle.
+2. `pyBKT` provee el numero que fundamenta: `p(mastery)` antes y despues. Un expediente sin cifra es
+   una opinion.
+3. La accion sobre el LMS va por `canvas-mcp` o `moodle-mcp-server`. 🔴 **Control obligatorio:**
+   `canvas-mcp` expone `ALLOWED_WRITE_TOOLS` en **arranque**, y esta base ya midio que es
+   **fail-closed en HTTP y fail-OPEN en stdio** ⇒ **desplegar solo en HTTP** y exigir confirmacion
+   por llamada para cualquier *grading*.
+4. `pedagogy-benchmark` corre como **gate de regresion** del prompt del mentor. ⚠️ **12 ★ — es todo
+   lo que hay en evaluacion pedagogica open source; se usa sabiendo que es un piso, no un estandar.**
+
+**Entregable:** por cada decision, una fila con `(alumno, skill, p_antes, p_despues, accion, actor,
+instante)`. Es lo que una plataforma de auditoria pide y lo que ningun LMS emite solo. **6-8 semanas.**
+
+🔴 **Hueco declarado del pase:** la capa de **evaluacion** es el eslabon debil de las dos recetas —
+`pedagogy-benchmark` tiene 12 ★ y no hay alternativa open source con masa. Un encargo que prometa
+«calidad pedagogica auditada» esta prometiendo sobre un instrumento de 12 estrellas. Se dice.
+
+---
+
+---
+
+## 🆕 Patrones del pase 114 (2026-10-05) — `P365`–`P369`
+
+### 🆕 `P365` — una pre-registracion de reloj debe fijar un INSTANTE ABSOLUTO, no una distancia a un evento cuya fecha no se controla
+
+`P360` midio que la accion B del pase 112 era INEJECUTABLE porque pedia un intervalo de ≥24 h a un
+pase que corrio el mismo dia. La leccion que `P360` saco fue *«lo que fecha es el RELOJ»*, y es
+correcta pero incompleta: el pase 113 **re-escribio la misma accion contra «el proximo pase»**, que
+es otra distancia relativa, y este pase (114) corrio **1 h 02 m** despues ⇒ la prediccion fallo por
+tercera vez por la MISMA causa formal.
+
+**La forma correcta no es «≥24 h desde ahora» ni «al proximo pase», es un TIMESTAMP:**
+
+```
+MAL : «remedir con ≥24 h de intervalo»            (depende de cuando corra el siguiente)
+MAL : «que el proximo pase remida»                 (P360 en otro envase)
+BIEN: «evaluable por el primer pase que corra en o despues de 2026-10-06T10:48Z»
+```
+
+Una condicion absoluta es verificable por cualquier pase **sin saber nada de los demas**: lee su
+propio reloj y decide. Una relativa necesita un dato que el autor no tiene — **cuando correra otro**.
+Familia de `P358` (un pase no es unidad de tiempo), en el eje de la PRE-REGISTRACION y no de la
+medicion.
+
+### 🆕 `P366` — un control de existencia cuya respuesta es CONSTANTE no verifica nada, y el `403` uniforme es exactamente eso
+
+El encargo prescribe `curl -sI` para verificar que una URL existe antes de escribirla. Medido en este
+entorno con **denominador enumerado y control negativo en la misma corrida**: 6 repos reales y 1
+inventado ⇒ **7/7 devuelven `403`**.
+
+| canal | reales (6) | inventado (1) | varianza | discrimina |
+|---|---|---|---|---|
+| `curl -sI` | 403 | 403 | **0** | 🔴 **no** |
+| `WebFetch` | payload | `HTTP 404` | — | 🟢 **si** |
+
+**La regla:** un control se valida contra un **control negativo**, no contra la expectativa de que
+funcione. Si la respuesta al caso que DEBE fallar es igual a la del caso que debe pasar, el
+instrumento tiene poder discriminante cero, y un `403` leido como «no es 404, entonces existe»
+**fabrica** existencia. Es el modo de falla que dejo entrar a `Elgg/NoSuchRepoHere12345` en un arbol
+que lo marco correctamente como inventado: lo salvo la ETIQUETA humana, no el control.
+
+🔵 **Corolario de canal:** el pase 103 registro `WebFetch` **bloqueado** por egress en 4 de 4 dominios
+y este pase lo tiene **vivo** para `github.com`. El estado de canal es **INTERMITENTE y no heredable**:
+hay que re-medirlo cada pase, con su control negativo, antes de confiar en una columna.
+
+### 🆕 `P367` — un nombre propio inventado no se cae por ausencia; solo lo delata preguntar POR EL NOMBRE
+
+El barrido regional de LATAM devolvio una **«Ley Nahui»** mexicana como instrumento de IA en proceso.
+La consulta dirigida a esa cadena contesta que **no existe bajo ese nombre**, y devuelve los
+instrumentos reales (reforma del art. 73; `Ley Federal para el Desarrollo Etico, Soberano e Inclusivo
+de la IA`, `2026-07-24`).
+
+**Por que es peor que una fecha mal** (`P281`, el calendario del AI Act): una fecha falsa **choca**
+contra la fuente legal y se cae sola. Un nombre propio falso es **inbuscable**, y su ausencia de
+resultados se lee como *«tema poco cubierto»* y no como *«no existe»* — el silencio CONFIRMA al error
+en vez de refutarlo. **El unico control es preguntar por el nombre aislado** y exigir que la fuente lo
+reproduzca; si solo aparece en la respuesta que lo introdujo, no se publica.
+
+### 🆕 `P368` — la region de un proveedor no es la region de su mercado, y un barrido regional las colapsa por construccion
+
+`IGNITE Copilot` entro por la consulta *«AI educacion LATAM»* y es **EMEA de origen**: Sant Cugat del
+Valles, España, ronda de €500.000 en primavera de **2025**. Lo que es LATAM es su **alineacion
+curricular** (Nueva Escuela Mexicana, MEN, MINEDUC, CNEB).
+
+Preguntar «AI education en REGION» devuelve **vendedores que operan en** esa region, no vendedores
+**de** esa region, y colocar por el pais de la CONSULTA es el mismo error de clase que colocar por
+antroponimo (`P135`): se infiere la region de una señal que no la porta. **Se coloca por SEDE leida de
+primera mano**, y el mercado atendido se escribe aparte, en la prosa.
+
+🔵 **Y lo que el caso deja como activo:** alinearse al curriculo OFICIAL de cada pais es la barrera de
+entrada real en LATAM — trabajo de **localizacion**, no de modelo.
+
+### 🆕 `P369` — citar una sola casa cuando la dispersion entre casas supera el crecimiento proyectado es una decision editorial disfrazada de dato
+
+El marco de AI en educacion para 2026 tiene cuatro mediciones publicadas: USD **8,7 MM** (MarkWide),
+**10,6 MM** (Research and Markets), **11,4 MM** (Grand View), **12,3 MM** (HolonIQ) ⇒ **dispersion de
+1,4×** (+41 % de la mas baja a la mas alta) **para el mismo año**.
+
+Esa dispersion es **mayor que el crecimiento que cualquiera de las cuatro proyecta para un
+trimestre**, asi que el numero elegido **domina la conclusion**: una propuesta que dice «el mercado es
+de 12,3 MM» y otra que dice «8,7 MM» no discrepan en el dato, discrepan en la CASA, y ninguna de las
+dos lo declara. **Se cita el RANGO con las casas nombradas, o no se cita.** Preferir el segmento de
+menor dispersion cuando exista (aqui *AI tutors*: 2,7 MM en 2026 → 17,7 MM en 2033, CAGR 30,5 %).
+
+---
 
 ## 🆕 Patrones del pase 113 (2026-10-05) — `P360`–`P364` y la receta `R-113-PLATAFORMA-SOCIAL-CON-CESION-POR-RUTA`
 
