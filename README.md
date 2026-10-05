@@ -49,6 +49,9 @@ o la variable de entorno (regla de **P107**, pase 47):
 | ídem, el reparto | ¿cuantas son deuda documental de verdad? | `python3 origin.py` | 🔴 **15 ANUNCIADAS** · 🟢 3 `DEFINIDA-FUERA` · 🟢 3 `INSTRUMENTO` · **0** errores de numeracion |
 | **`p357-hint-layer-cession/`** | **la accion C del pase 111: la cesion de la capa de HINT de `OATutor-Content`, con la herencia al padre medida fila por fila y el CONTRAFACTUAL de la premisa** | `python3 test_p357.py` | 🟢 **24/24** *(nuevo en el pase 112; corre SIN el corpus)* |
 | ídem, el barrido sobre el corpus | ¿cede la capa que un tutor usa mas? | `python3 hint_layer.py RAIZ` | 🔴 **62,2 %** (hint) vs 🟢 **76,4 %** (problema) · **26.136 de 69.121 sin cesion** |
+| **`p370-gap-gate/`** | **la compuerta SIMETRICA que `p311` no cubria: un hueco DECLARADO es una afirmacion sobre el contenido propio, y por lo tanto falsable contra el indice propio — con el par de controles que lo hace un gate y no un contador de «CERO» (la oracion del pase 113, con su alcance puesto, tiene que salir OPUESTA al titular del 114, que lo solto)** | `python3 test_gap_gate.py` | 🟢 **27/27** *(nuevo en el pase 115)* |
+| ídem, el barrido de huecos del arbol | ¿cuantos huecos declarados contradice el indice propio? | `python3 gap_gate.py --sweep ../../..` | 🔴 **2 `CONTRADICHO`** · ⚠️ **27 `NO-CLAIM`** de **29** con region |
+| ídem, ubicacion vs mencion | ¿cuantos repos UBICA esta base en LATAM, contra el «CERO» que declaro 4 pases? | ídem | 🔴 **12 ubicados** · 5 solo mencionan · de 17 filas con «LATAM» |
 | `patterns-figure-audit/` | inventario de cifras de `patterns.md` y su instrumento | `python3 extract_figures.py --check` | **420** medidas *(383 → 420 en el pase 56, con P136)* |
 | `sebserver-mcp-gate/` | puerta MCP de SEB Server: sólo lecturas, `-32601` al resto | `python3 test_gate.py` | **37/37** |
 | `unitime-mcp-gate/` | puerta MCP de UniTime, con `hard_deny()` como piso | `python3 test_gate.py` | **46/46** ✅ *(total propio desde el pase 56; reproduce el conteo a mano del 55)* |
@@ -110,6 +113,48 @@ o la variable de entorno (regla de **P107**, pase 47):
 | ídem, Open edX por ref | ¿el veredicto `SIN-PROVEEDOR-DE-MODELO` aguanta una ref? | `sh sweep_platform_ref.sh` *(registrado, no ejecutado acá)* | 🔴 **`openai==0.28.1` DIRECTA** en `quince`/`redwood`/`sumac` · 🟢 ausente en `master` |
 | ídem, la replicación de la matriz del pase 90 | ¿la matriz de Moodle se sostiene remedida por otra mano? | ídem | 🟢 **6/6 refs EXACTO** (2→3→4→6→7→7) — primera cifra REPLICADA de esta base |
 
+
+🟢 **Pase 115 del 2026-10-05 — el tablero cierra 70/70 y el hallazgo es un defecto ESTRUCTURAL
+de esta base:** `Python 3.11.15`, **70 suites unicas** (64 `test_*.py` + 6 `test*.sh`), **0
+fallos**, ejecucion PERMITIDA por segundo pase consecutivo (`P361`). 🟢 **Una suite nueva**
+(`p370-gap-gate/` 27/27) y **ninguna preexistente se toco**.
+
+🔴 **`P370` — `p311` gatea lo que ENTRA desde el pase 100 y NADA gateaba lo que se declara
+AUSENTE.** Un hueco es una afirmacion sobre el contenido propio, igual que un alta. Medido: de
+**29** huecos declarados con region, **2 estan CONTRADICHOS** por filas de esta misma base y
+⚠️ **27 no traen marcador de alcance**. La instancia: «**CERO repositorios de origen LATAM**»,
+declarado cuatro pases seguidos, contra **12 repos UBICADOS en LATAM** en el indice propio —
+`LabSirius/TutorIA` entre ellos, **MIT**, Universidad Tecnologica de Pereira, financiado por el
+**SNCTI** colombiano y marcado **ACTIVO** por esta base.
+
+🆕 **`P371` — el calificador se cae y el numero sobrevive:** el pase 113 escribio el hueco con su
+alcance («*este canal no encuentra codigo de LATAM*») y nombro una pieza propia en la misma
+oracion; el **ledger** del 114 lo mantuvo y su **titular** lo solto. Una racha premia repetir el
+titular, no la condicion — y el gate los separa dentro del MISMO pase.
+
+🔴 **`P372` — el metodo de verificacion que prescribe el encargo es PEOR que ciego aqui:**
+`curl -sI github.com` emite **DOS** lineas de estado y `head -1` lee la del **proxy** ⇒ **`200`
+para un repo INVENTADO**. El origen da 403/403 (confirma `P366`). **Un canal ciego que devuelve el
+codigo de EXITO es peor que uno que devuelve error.** Lo que discrimina acá: `raw`, `git ls-remote`
+y `WebFetch`.
+
+🟢 **5 altas verificadas de payload, 4 de ellas LATAM**, y la mas fuerte tiene **0 estrellas**:
+`eai6/ai-tutor`, **MIT** con titular `World Bank Group and contributors`, modelo 5E, en PRODUCCION
+sobre Azure. 🆕 **`P374`: titular, dueño y dominio son tres ejes y aca no coinciden.**
+
+⚠️ **`P365` no es evaluable todavia** (pedia un pase en o despues de `2026-10-06T10:48Z`; este
+corrio `12:45Z` del 05) y **no se re-registra**.
+
+🔴 **Y `P359` volvio a romper `test_p351` AL PUBLICAR, por TERCER pase consecutivo — pero esta vez
+se arreglo la CAUSA y no la instancia: 🆕 `P376`, este arbol atribuye un pase con DOS portadores y
+el modulo reconocia UNO.** El otro es la linea `> **Pase N del FECHA:** …`, que es como los ocho
+`.md` atribuyen la mayor parte de su prosa. Al ser el encabezado `#` el unico marcador reconocido,
+una seccion nueva arriba **ANEXABA** la prosa de todos los pases viejos de mas abajo: en este pase
+puso las **385.407 ★** del pase **56** —una linea que dice «Pase 56 del 2026-10-03» en su propio
+texto— a nombre del 115. 🔵 **La linea ahora se atribuye a lo que ELLA MISMA declara**, con el
+control negativo que prohibe el arreglo obvio (los bloques van en orden DESCENDENTE, asi que
+tratarlas como APERTURAS de seccion atribuiria todo lo de abajo al pase mas VIEJO del bloque).
+`test_p351.py`: **31/31 → 36/36**.
 
 🟢 **Pase 112 del 2026-10-05 — el tablero cierra 69/69 y las 4 acciones pre-registradas
 corrieron:** `Python 3.11.15`, **69 suites unicas** (63 `test_*.py` + 6 `test*.sh`), **0 fallos**

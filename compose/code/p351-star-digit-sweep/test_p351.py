@@ -206,5 +206,47 @@ class ClasificadorESTRUCTURAL(unittest.TestCase):
         self.assertFalse(es_meta_mencion('| openclaw | 385.407 \u2605 |'))
 
 
+
+class P376DosPortadoresDeAtribucion(unittest.TestCase):
+    """🆕 `P376` (pase 115) - este arbol atribuye un pase con DOS portadores.
+
+    🔴 El modulo reconocia solo el encabezado `#`, y por eso `P359` se repitio TRES
+    pases seguidos: una seccion nueva arriba ANEXABA la prosa de los pases viejos de mas
+    abajo. En el pase 115 eso puso las «385.407 ★» del pase **56** a nombre del
+    115 - sobre una linea que dice «Pase 56 del 2026-10-03» en su propio texto.
+
+    🔵 El arreglo respeta la estructura del archivo y no el instrumento: la linea
+    se atribuye a lo que ELLA MISMA declara.
+    """
+
+    def test_la_linea_de_resumen_se_atribuye_A_SI_MISMA(self):
+        linea = ('> **Pase 56 del 2026-10-03:** cero repos nuevos y el barrido volvio con '
+                 'las cifras identicas (openclaw **385.407 ★**)')
+        self.assertEqual(_pase_de(99, [(1, 115)], linea), 56)
+
+    def test_sin_portador_de_linea_vale_el_encabezado(self):
+        self.assertEqual(_pase_de(99, [(1, 115)], 'prosa comun con 385.407 ★'), 115)
+
+    def test_NEGATIVE_un_bloque_de_lineas_NO_abre_seccion(self):
+        """🔴 El caso que prohibe el arreglo obvio.
+
+        Los bloques de lineas de resumen van en orden DESCENDENTE (115, 114, 113 ...), asi
+        que tratarlas como APERTURAS de seccion atribuiria todo lo de abajo al pase MAS
+        VIEJO del bloque. La linea se auto-atribuye y no abre nada.
+        """
+        vieja = '> **Pase 99 del 2026-10-04:** 7 altas fundacionales'
+        self.assertEqual(_pase_de(26, [(1, 115)], vieja), 99)
+        self.assertEqual(_pase_de(27, [(1, 115)], 'prosa de la seccion del 115'), 115)
+
+    def test_NEGATIVE_una_cita_del_titulo_en_prosa_no_atribuye(self):
+        self.assertIsNone(
+            _pase_de(5, [], 'el pase dejo escrito **Pase 56 del** adentro de la prosa'))
+
+    def test_el_arbol_real_ya_no_atribuye_al_115_lo_que_es_del_56(self):
+        malas = [h for h in HITS
+                 if h[3] == 115 and not (h[4] or (len(h) > 5 and h[5]))]
+        self.assertEqual(malas, [], 'ocurrencias publicadas a nombre del pase 115')
+
+
 if __name__ == '__main__':
     unittest.main(verbosity=2)

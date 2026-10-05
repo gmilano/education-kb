@@ -28,6 +28,22 @@ import collections, os, re
 RE_CIFRA = re.compile(r'[0-9]{1,3}[.,][0-9]{3}(?:\.[0-9]{3})* ?★')
 RE_ENCABEZADO_PASE = re.compile(r'pase (\d+)')
 
+# 🆕 `P376` (pase 115): este arbol atribuye un pase con DOS portadores, y este modulo
+# reconocia UNO. El otro es la linea de resumen `> **Pase N del FECHA:** ...`, que es como
+# los ocho `.md` atribuyen la mayor parte de su prosa — y que se AUTO-atribuye: cada linea
+# dice su propio pase y no abre una seccion, porque los bloques de esas lineas van en orden
+# DESCENDENTE (115, 114, 113 …) y tratarlos como aperturas invertiria todo lo de abajo.
+#
+# 🔴 El costo de la omision es exactamente la recurrencia de `P359`, tres pases seguidos:
+# al ser el encabezado `#` el unico marcador reconocido, una seccion nueva arriba ANEXABA
+# la prosa de todos los pases viejos que vinieran despues. En el pase 115 eso puso las
+# «385.407 ★» del pase **56** —una linea que dice «Pase 56 del 2026-10-03» en su propio
+# texto— a nombre del pase 115.
+#
+# 🔵 El arreglo respeta la estructura del archivo y no el instrumento (que es lo que `P359`
+# pedia): la linea se atribuye a lo que ELLA MISMA declara.
+RE_LINEA_DE_PASE = re.compile(r'^>\s*\*\*Pase (\d+) del ', re.IGNORECASE)
+
 ARCHIVOS = ('agents/top.md', 'agents/trending.md', 'repos/foundations.md', 'repos/trending.md',
             'verticals/solutions.md', 'intel/market.md', 'intel/trends.md',
             'compose/patterns.md')
@@ -56,7 +72,16 @@ def _limites_de_pase(lineas):
     return marcas
 
 
-def _pase_de(linea, marcas):
+def _pase_de(linea, marcas, texto=None):
+    """El pase al que pertenece una linea.
+
+    Precedencia: si la linea ES una linea de resumen de pase, se atribuye a SI MISMA
+    (`P376`); si no, al ultimo encabezado `#` con numero de pase que la precede.
+    """
+    if texto is not None:
+        m = RE_LINEA_DE_PASE.match(texto)
+        if m:
+            return int(m.group(1))
     p = None
     for ln, num in marcas:
         if ln <= linea:
@@ -135,7 +160,7 @@ def barrer(raiz, archivos=ARCHIVOS):
         marcas = _limites_de_pase(lineas)
         for i, l in enumerate(lineas, 1):
             for m in RE_CIFRA.finditer(l):
-                out.append((rel, i, m.group(0).strip(), _pase_de(i, marcas),
+                out.append((rel, i, m.group(0).strip(), _pase_de(i, marcas, lineas[i - 1]),
                             es_meta_mencion(l, m.start()), es_umbral(l, m.start())))
     return out
 

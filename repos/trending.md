@@ -7,6 +7,7 @@ updated: 2026-10-05
 # 📈 Repos trending — education
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
+> **Pase 115 del 2026-10-05:** 🟢 **El trending de la industria DEJA de estar vacio por el canal del CURRICULO, no por el generalista: las 4 consultas globales obligatorias volvieron a devolver el eje de *enseñar-sobre-IA* (`ai-agents-for-beginners`, `agents-from-scratch`, roadmaps) y no el de *IA-en-educacion* — mientras el ancla de curriculo en idioma local rindio una cohorte LATAM entera.** 🟢 **Altas con fecha de commit leida de clon shallow: `portabilis/i-educar` **2026-10-02** (717 ★, **547 forks** — ratio de fork **0,76**, firma de software que se DESPLIEGA por municipio y no que se mira) · `thiagoluzin/pemara-edu-mira` **2026-09-27** · `eai6/ai-tutor` **2026-08-20** · `yunger7/enem-api` **2025-12-14** (la API del banco de items del ENEM lleva ~10 meses sin tocarse, asi que NO trae el examen 2026).** 🔴 **`portabilis/i-educar` tiene rama por defecto **`2.12`**, no `main` ni `master`: leer su `LICENSE` de `master` —como hizo el primer intento de este pase— es leer una rama que NO es la por defecto (`P269`: el conjunto es propiedad del par *(repo, ref)*).** 🔵 **Canal, medido este pase y no heredado (`P366`): 🟢 `raw.githubusercontent.com` 200/404 DISCRIMINA · 🟢 `git ls-remote` sha/`fatal` DISCRIMINA · 🟢 `WebFetch` payload/404 DISCRIMINA (vivo, 2º pase seguido) · 🔴 `curl -sI github.com` y `api.github.com` **403/403**, y leido con `head -1` da **200 al repo inventado** (🆕 `P372`).** ⚠️ **Y una restriccion de acceso declarada: los tools `mcp__github__*` estan presentes pero la sesion esta acotada a `gmilano/*`, asi que la capa de API autenticada NO es un canal disponible para repos de terceros en esta corrida.**
 > **Pase 114 del 2026-10-05:** 🆕 **`openedx/edx-platform` RENOMBRO a `openedx/openedx-platform`** (8.2k ★, AGPL-3.0): la URL vieja redirige, asi que nada se rompe HOY, pero el `full_name` canonico cambio y un *pin* al viejo es deuda silenciosa que ningun 301 anuncia. 🟢 **4 foundations permisivas re-medidas de payload: `oppia` (Apache-2.0, 6.8k ★), `sakai` (ECL-2.0, 1.2k ★), `kolibri` (MIT, 1.1k ★), `pyBKT` (MIT, 281 ★).** 🔴 **Y el dato estructural con denominador: de 11 plataformas verticales medidas hoy, solo **4 son permisivas** y 7 son copyleft ⇒ en educacion elegir plataforma ES elegir licencia.** 🔵 **`kolibri` es la de mejor relacion licencia/encaje para contextos sin conectividad: MIT **y** *offline-first* por diseño.**
 > **Pase 113 del 2026-10-05:** 🔴 **El trending de la industria vuelve a estar vacio (barrido 42), y el motivo es NUEVO: el listado por topico que el pase 112 estreno con 5 altas devuelve ahora 19 de 20 candidatas YA PUBLICADAS. No se agoto el canal — se SATURO contra el inventario de esta propia base.** 🔵 **Eso refina `P281` en vez de repetirlo: el listado mide STOCK, no FLUJO, porque no esta ordenado por fecha; un archivo que se llama *trending* necesita un canal con reloj y este no lo tiene. Se declara como gap de METODO.** 🟢 **Lo que SI se movio esta en la capa de PLATAFORMA y lo trajo la consulta del encargo, no el topico: `Elgg/Elgg` (1.7k ★ ±50, 665 forks, PHP) con **0 menciones en 112 pases** ⇒ 🆕 `P364`, la cesion SEGMENTADA POR DIRECTORIO — `/mod` es GPL-2.0 unicamente y el resto es MIT o GPL-2.0 a eleccion, leido del payload de `LICENSE.txt` (`LICENSE` da 404, `P279` otra vez).** 🟢 **Primera serie de estrellas de este arbol con INSTANTE (`2026-10-05T10:48Z`) y no con fecha: 6 filas, las 6 sin movimiento.** 🔴 **Pero el enunciado de deriva no se publica ⇒ 🆕 `P360`: la accion pedia ≥24 h de intervalo a un pase que corre el mismo dia, asi que el intervalo solo se ACOTA a [0 h, 10 h 48 m].** 🔴 **Tablero NO medido: el entorno deniega la ejecucion del codigo del arbol (🆕 `P361`), que es el tercer eje de portabilidad y el unico que no puede publicar un numero falso.**
 > **Pase 112 del 2026-10-05:** 🟢 **El trending de la industria DEJA de estar vacio por primera vez en 41 barridos: 5 piezas permisivas con cesion leida del payload**, y el canal que las encontro fue el **listado por topico** (`github.com/topics/ai-tutor`), no la busqueda en prosa — que volvio a devolver el eje generalista (`P281`). 🆕 **`P355`: 4 suites del propio arbol no son portables entre `cwd`, y las 4 fallan RUIDOSAMENTE mientras la unica de ruta efimera pasaba en verde sin medir.** 🔴 **LATAM devolvio 0 repos y queda como gap INFORMADO (`P343`).**
@@ -14,6 +15,53 @@ updated: 2026-10-05
 > **Pase 110 del 2026-10-05:** 🔴 **Trending de la industria vacio por TRIGESIMONOVENA vez.** 🟢 **Lo que se mueve es el CANAL: `WebFetch` sobre `github.com` devuelve estrellas donde `curl` da 403, con control negativo en 404 — asi que la columna de estrellas de este arbol vuelve a existir, con resolucion de 3 cifras significativas.** 🔴 **Y lo primero que mide es un repo de 8 ★ sin licencia que el canal de busqueda presento junto a uno de 40,8 ★k.**
 > **Pase 107 del 2026-10-05:** 🔴 **Trending de la industria vacio por TRIGESIMOSEXTA vez: curriculo, catalogos, una bolsa de trabajo y dos generalistas (`microsoft/semantic-kernel` 27.470 ★, `NousResearch/hermes-agent` MIT), con las SEIS cifras del eje generalista identicas digito a digito a los pases 105 y 106 ⇒ informacion sobre el CANAL, no sobre la industria.** 🟢 **Lo que SI se movio es una capa de BINARIOS que este archivo nunca conto: 2.443 archivos de figura (~156 MiB, 1.326 imagenes distintas) en `CAHLR/OATutor-Content`, con la extension `.gif` falsa en 2.443 de 2.443 (`P332`).** 🔵 **`git ls-remote` da TRES refs, y una se llama `gpt-science-study`: la unica de este arbol cuyo nombre anuncia contenido sintetico.** 🔴 **Defecto propio corregido: los 49.481 JSON contra los 49.479 del pase 106 son los 6 caminos con bytes de control (U+007F/U+0080/U+0081) en el nombre del paso — la identidad de un paso NO es un slug seguro.**
 > **Pase 106 del 2026-10-05:** 🔴 **Trending de la industria vacio por TRIGESIMOQUINTA vez: el canal devuelve generalista o educativo-sobre-AI, no AI-para-educacion.** 🟢 **Lo que SI se movio esta en el eje de `ref` y no de repo: las ramas `1e` de 5 bundles de `openstax` contienen la UNICA cesion `CC BY 4.0` de 10 colecciones cuyas versiones vivas son `NC-SA` — cesion y vigencia apuntan en direcciones opuestas.** 🔵 **Canal nuevo calibrado: `git ls-remote` para enumerar refs (responde a repo real, falla a repo inventado), el unico de este arbol que contesta «que refs tiene este repo» con `api.github.com` en 403 — sin el, la accion A de este pase era imposible.**
+
+## 2026-10-05 — pase 115: el trending sale del vacío por el canal del currículo, no por el generalista
+
+🔴 **GitHub trending generalista vuelve vacío para la industria (barrido 44)**: las consultas
+obligatorias devuelven catálogos de *AI engineering* y cursos de agentes, no piezas de IA
+educativa. 🟢 **El canal que rindió, por segunda vez en la historia de esta base, es el ancla de
+currículo nacional en el idioma del país** — `BNCC`/`ENEM` en portugués y `SEP`/`CNEB`/`MINEDUC` en
+español. El pase 112 lo usó para APAC (Gaokao, 人教版) y acá cierra LATAM.
+
+### Fechas de commit, leídas de clon shallow (`--depth 1 --filter=blob:none`)
+
+| Repo | Último commit | Nota |
+|---|---|---|
+| `portabilis/i-educar` | **2026-10-02** | 🟢 activo. **547 forks / 717 ★ = ratio 0,76**: cada municipio forkea para desplegar |
+| `ayrtonmoura1/conectabncc` | 2026-10-02 | ya publicado; ver `P373` por la cifra que NO trae |
+| `thiagoluzin/pemara-edu-mira` | 2026-09-27 | ⚠️ 1 commit |
+| `madununes07/IA-na-escola` | 2026-09-21 | 🔴 rechazado: `index.html`+`style.css`+`script.js` sin descripción |
+| `eai6/ai-tutor` | 2026-08-20 | 🟢 en producción (Azure, Pulumi, GH Actions) |
+| `yunger7/enem-api` | **2025-12-14** | 🔴 ~10 meses sin tocarse ⇒ **no trae el examen 2026** |
+
+⚠️ **Y una cifra que NO se publica aunque el comando la imprimió:** el `rev-list --count` de un
+clon `--depth 1` devuelve **1** para todos, siempre. 🔵 **No es un conteo de commits y no se
+presenta como tal** — es el artefacto de la profundidad del clon (`P126`).
+
+### 🔬 Canal, medido este pase (`P249`/`P366`: el estado no se hereda)
+
+| Canal | Ancla buena | Ancla inventada | Veredicto |
+|---|---|---|---|
+| `raw.githubusercontent.com` | **200** | **404** | 🟢 **DISCRIMINA** |
+| `git ls-remote` | `sha` | `fatal` | 🟢 **DISCRIMINA** |
+| `WebFetch` | payload | `HTTP 404` limpio | 🟢 **DISCRIMINA** (vivo, 2º pase seguido) |
+| `curl -sI github.com` (origen) | **403** | **403** | 🔴 no discrimina (confirma `P366`) |
+| ídem, leído con `head -1` | **200** | **200** | 🔴 **afirma lo falso** — 🆕 `P372` |
+| `curl api.github.com` | **403** | **403** | 🔴 no discrimina |
+
+⚠️ **Restricción de acceso declarada:** los tools `mcp__github__*` están presentes en la sesión,
+pero su alcance está acotado a `gmilano/*`. **La capa de API autenticada no es un canal disponible
+para repos de terceros en esta corrida**, así que toda verificación de arriba salió de los tres
+canales que discriminan.
+
+### 🔴 Un cambio de rama por defecto que rompe un *pin*
+
+`portabilis/i-educar` tiene rama por defecto **`2.12`** — no `main`, no `master`. 🔵 El primer
+intento de este pase leyó su `LICENSE` de `master` y **acertó la licencia leyendo una rama que no
+es la por defecto**: funcionó por casualidad. `P269` ya lo dejó escrito (el conjunto es propiedad
+del par *(repo, ref)*), y acá la ref no es la que se asume por convención.
+
 
 ## 🗓️ 2026-10-05 (pase 114) — un *rename* silencioso en la capa de plataforma
 

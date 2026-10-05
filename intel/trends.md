@@ -7,6 +7,7 @@ updated: 2026-10-05
 # 📡 Tendencias — education
 
 > Ventana de investigación: septiembre 2026. Verificado 2026-09-30; el pase 11, el 2026-10-01.
+> **Pase 115 del 2026-10-05:** 🟢 **Tendencias 906–911, citadas una por una para que ninguna quede anunciada sin seccion (`P97`).** 🆕 **La que manda es **906**: `P370`, la compuerta simetrica — `p311` gatea lo que ENTRA desde el pase 100 y nada gateaba lo que se declara AUSENTE, asi que un hueco falso se re-publico como racha cuatro pases. 29 huecos con region → 2 contradichos, **27 sin alcance**.** 🆕 **907: `P371`, el calificador se cae y el numero sobrevive. 🆕 908: `P372`, un canal ciego que devuelve el codigo de EXITO es peor que uno que devuelve error. 🆕 909: `P373`, una cifra inventada adosada a un artefacto real. 🆕 910: `P374`, titular / dueño / dominio son tres ejes. 🔴 911: las estrellas no miden respaldo institucional — dos piezas de **0 ★** de este pase son, una, despliegue en produccion del **Banco Mundial**, y la otra, codigo financiado por el **SNCTI** de Colombia.**
 > **Pase 114 del 2026-10-05:** 🔴 **El marco de mercado 2026 se publica como RANGO y no como cifra, porque las cuatro casas discrepan 1,4×: USD 8,7 MM (MarkWide) · 10,6 MM (Research and Markets) · 11,4 MM (Grand View) · 12,3 MM (HolonIQ) para el MISMO año.** 🆕 **`P369` — citar una sola de esas cifras es una decision editorial disfrazada de dato: la dispersion (1,4×) es mayor que el crecimiento que cualquiera de ellas proyecta para un trimestre, asi que el numero elegido domina la conclusion. Se cita el rango con las cuatro casas nombradas, o no se cita.** 🟢 **El segmento con menos ruido es *AI tutors*: USD 2,1 MM (2025) → **2,7 MM (2026)** → **17,7 MM (2033)**, CAGR **30,5 %**.** 🟢 **Y el dato de intencion que mueve un pipeline: **83 %** de las instituciones declara plan de desplegar asistentes docentes AI en 2026.** 🔵 **La direccion del eje, consistente en las cuatro casas: de *generative* a **agentic** — automatizar lo administrativo (correccion, horarios, seguimiento) para liberar al docente a mentoria, mas «gemelos digitales» del alumno para hiper-personalizacion. Es exactamente la forma de los repos que esta base indexa.** 🔴 **Y la higiene que este pase agrega al eje de tendencias, porque no es un hecho de mercado sino de CANAL: el barrido devolvio un instrumento mexicano INEXISTENTE («Ley Nahui»), y lo delato preguntar por el nombre (`P367`). Una tendencia se sostiene con varias fuentes; un NOMBRE PROPIO hay que verificarlo por si mismo, porque no se cae por ausencia — no aparece nada y eso se lee como «poco cubierto», no como «no existe».**
 > **Pase 113 del 2026-10-05:** 🟢 **Tendencias 901–905, citadas una por una para que ninguna quede anunciada sin seccion (`P97`, y este pase midio el costo exacto de incumplirlo).** 🆕 **La que manda es **901**: tres de las cuatro acciones pre-registradas fueron INEJECUTABLES y las tres por motivos de clase distinta —permiso de ejecucion, imposibilidad temporal y corpus externo—, asi que el aporte del pase es una taxonomia de por que una pre-registracion puede no correrse, que es distinta de haber corrido y fallado.** 🆕 **`P361` (tendencia **902**) — la portabilidad de un control tiene por lo menos TRES ejes: contenedor (`P352`), directorio (`P355`) y **permiso** (`P361`); y el de permiso es el unico que NO puede publicar un numero falso, asi que es el modo de falla mas honesto y el mas incapacitante.** 🆕 **`P360` (tendencia **903**) — una pre-registracion puede pedir un intervalo de RELOJ mayor que la distancia al proximo pase: la accion escrita para corregir `P358` heredo su defecto en el sentido contrario.** 🔴 **Tendencia **904** — la deuda documental de esta base NO tiene dueño: 10 de 15 numeros NACIERON CITADOS y solo 4 fueron prometidos, asi que la prediccion que pedia ≥10 prometidos sale REFUTADA con su clausula de refutacion cumplida exacta.** 🆕 **`P364` (tendencia **905**) — la cesion puede estar SEGMENTADA POR DIRECTORIO: `Elgg` cede MIT en el nucleo y GPL-2.0 en `/mod`, asi que la frontera de contaminacion es una RUTA y no un repo — la primera vez que esta base lo mide sobre CODIGO y no sobre contenido.** 🟢 **Barrido regional 42: 4/4 regiones, 0 silencios y 0 hechos nuevos sobre 17 — segunda saturacion total en tres pases (`P287`).**
 > **Pase 112 del 2026-10-05:** 🆕 **Seis tendencias nuevas, citadas una por una para que ninguna quede anunciada sin seccion (la leccion de `P97`): **675**, **676**, **677**, **678**, **679** y **680**.** 🟢 **La que manda es **675**: los 40 ceros de trending de esta base no eran un hecho sobre la industria sino sobre el CANAL — la busqueda en prosa devuelve el eje generalista y el LISTADO POR TOPICO devolvio 20 repos de la industria, 5 con cesion permisiva.** 🆕 **Y **677** es la de severidad invertida: un fallo RUIDOSO y frecuente es menos peligroso que uno SILENCIOSO y raro, medido 4 contra 1 en el propio arbol.**
@@ -126,6 +127,114 @@ updated: 2026-10-05
 > (tendencia 29), se abre el **gap 20** y se registran dos advertencias de verificación: los agregadores de estrellas
 > están mal por ~2× y **un 403 de `curl` no es un 404**. Ver la nota de método del pase 12.
 > **Pase 11:** el Digital Omnibus es derecho vigente (tendencia 25), aparece la capa predictiva y está vacía (tendencia 26), y se corrige un error de método de diez pasadas sobre licencias permisivas (tendencia 27).
+
+### 906 · 🆕 `P370` — la compuerta simétrica: un hueco DECLARADO necesita el mismo gate que un ALTA
+
+`p311-duplicate-alta-gate/` existe desde el **pase 100** porque un alta estaba por publicarse sobre
+piezas que la base ya tenía. Contesta **«¿esto ya está acá?»** para lo que **entra**.
+
+🔴 **Nada contestaba la pregunta simétrica para lo que se declara AUSENTE.** Un hueco («LATAM:
+CERO repositorios») es una afirmación sobre el **contenido propio** —igual que un alta— y por lo
+tanto falsable contra el índice propio. Se publicaba sin control, y se re-publicaba como racha.
+
+**Medido** (`compose/code/p370-gap-gate/`, 🟢 **27/27**): de **29** huecos declarados con región,
+🔴 **2 están CONTRADICHOS** por filas de esta misma base y ⚠️ **27 no traen marcador de alcance**.
+🔵 **Los 27 son el resultado que manda:** sin alcance, un hueco no es auditable ni a favor ni en
+contra. Dos instancias, en archivos y ejes distintos:
+
+1. «**CERO repositorios de origen LATAM**» (4 pases) vs **12 repos ubicados en LATAM** en el
+   índice propio, `LabSirius/TutorIA` entre ellos — MIT, Universidad Tecnológica de Pereira,
+   financiado por el SNCTI colombiano, y marcado **ACTIVO** por esta base.
+2. El pase 114 nombró la capa de evaluación pedagógica como `pedagogy-benchmark` (**12 ★**),
+   mientras `repos/foundations.md:4262` trae `eth-lre/mathtutorbench` (**43 ★**, CC BY 4.0, ETH
+   Zurich + CU Boulder, EMNLP 2025 oral) **desde el pase 4**.
+
+### 907 · 🆕 `P371` — el CALIFICADOR se cae y el NÚMERO sobrevive, y la racha es el mecanismo
+
+El pase 113 escribió su hueco **con el alcance puesto**: «*no se publica como “LATAM no produce
+código” — se publica como lo que es: **este canal no encuentra código de LATAM**»*, y nombró una
+pieza LATAM propia en la misma oración. 🟢 **Así escrito, el hueco era verdadero.**
+
+El pase 114 conservó el número y soltó el alcance: «*la capa de CÓDIGO de LATAM sigue abierta*».
+🔴 **La misma cifra, sin la condición, es falsa.**
+
+🔵 **Y el mecanismo es el contador de racha.** «Nº pase consecutivo» premia repetir el **titular**,
+no la **condición**: cada repetición parece mejor evidenciada que la anterior y es menos precisa.
+⚠️ **El gate lo separa dentro del MISMO pase:** el **ledger** del 114 (`intel/market.md:179`)
+mantuvo el alcance y salió `SOSTENIDO`; su **titular** (`:11`) lo soltó y salió `CONTRADICHO`. El
+defecto no está en el ledger — está en el titular.
+
+### 908 · 🆕 `P372` — un canal ciego que devuelve el código de ÉXITO es peor que uno que devuelve error
+
+El encargo prescribe verificar cada URL con `curl -sI`. 🔴 **En este entorno ese método no sólo no
+discrimina: afirma lo falso.** `curl -sI https://github.com/…` emite **dos** líneas de estado —la
+del **proxy** (`HTTP/1.1 200 Connection Established`) y la del **origen** (`403 Forbidden`)—, así
+que leído con `head -1`, que es cómo se lee un `-I`, devuelve **`200` para un repo INVENTADO**
+(2/2, medidos lado a lado).
+
+🔵 **El pase 114 midió el mismo comando y reportó 403 (7/7).** No es contradicción: es que la
+cifra depende de **cuál de las dos líneas se lee**, y por lo tanto **la cantidad de líneas de
+estado de una respuesta es parte de la medición**. Familia de `P126`, en el eje del **lector
+posicional** y no del vocabulario: `head -1` es a un `-I` lo que un contador por `PASS` era a un
+total propio.
+
+🔴 **La consecuencia práctica:** un `403` delata que el canal está ciego; un `200` del proxy se
+parece exactamente a una verificación exitosa. **El modo de falla peligroso es el afirmativo.**
+
+### 909 · 🆕 `P373` — una CIFRA puede llegar inventada adosada a un artefacto REAL
+
+El barrido devolvió «*Conecta BNCC … las **1.517** habilidades curriculares de la BNCC …
+distribuido bajo licencia MIT*». El repo existe, es MIT, y 🔴 **no publica ese número en ninguna
+parte**: la cifra la produjo el **resumen de búsqueda**, no el artefacto.
+
+Y el daño era concreto: 1.517 contra las **1.721** aprendizajes que `bncc-dev/bncc-dados` sí
+declara **parecía** una contradicción medible entre dos piezas de la misma capa —exactamente la
+clase de hallazgo que esta base persigue (`P268`)—. 🟢 **El conflicto se disuelve al leer el
+artefacto: nunca hubo dos cifras, hubo una cifra y un resumen.**
+
+🔵 **Hermano numérico de `P367`** (nombre propio inventado, pase 114) y **más difícil de cazar**:
+un nombre falso se delata porque no existe nada detrás, mientras una cifra falsa viene con un repo
+real, una licencia real y una URL que responde 200. **Lo único que la delata es leer el artefacto
+buscando el número.**
+
+### 910 · 🆕 `P374` — titular, dueño y dominio son TRES ejes, y no coinciden
+
+`eai6/ai-tutor`, el alta más fuerte del pase, los tiene los tres distintos:
+
+| Eje | Valor |
+|---|---|
+| **Titular** de la licencia (leído del payload) | `Copyright (c) 2026 **World Bank Group** and contributors` |
+| **Dueño** del repo | `eai6` — una cuenta **personal** |
+| **Dominio** del despliegue productivo | `ai-tutor.wbg.**edwardamoah.com**` — un dominio **personal** |
+
+🔴 **Para un engagement eso no es trivia: es riesgo de continuidad.** El activo es del Banco
+Mundial, el repositorio depende de una cuenta individual y el servicio vivo cuelga del dominio de
+un desarrollador. 🔵 **Espejo de `P368`** (la región de un proveedor no es la de su mercado): acá
+lo que no coincide es **la propiedad con el alojamiento**, y la pregunta de *due diligence* que
+corresponde no es por la licencia —que es MIT y está limpia— sino por **quién controla el DNS**.
+
+🔵 **Y el mismo eje reubica una pieza vieja:** `AI-for-Education/pedagogy-benchmark` está
+construido sobre exámenes de habilitación docente **chilenos** (Agencia de la Calidad de la
+Educación, CPEIP/MINEDUC) pero **no es de propiedad chilena**. Sirve para **calibrar** una
+propuesta LATAM; **no** se puede presentar como capacidad local.
+
+### 911 · 🔴 Las estrellas no miden respaldo institucional, y este pase tiene dos contraejemplos de 0 ★
+
+| Pieza | ★ | Lo que la estrella no dice |
+|---|---|---|
+| `eai6/ai-tutor` | **0** | Equipo de educación del **Banco Mundial**; **en producción** sobre Azure con Pulumi IaC, GitHub Actions y PostgreSQL |
+| `LabSirius/TutorIA` | **0** | Financiado por el **SNCTI** de Colombia; Universidad Tecnológica de Pereira; integrado como XBlock de Open edX |
+
+🔵 **Y el corolario explica cuatro pases de hueco falso:** si tres de las piezas LATAM tienen 0 ★,
+cualquier canal ordenado por popularidad reporta «no hay código en LATAM» **con independencia de
+que lo haya**. El hueco era un artefacto de la **función de orden**.
+
+🟢 **El indicador que sí discriminó es otro: el RATIO DE FORK.** `portabilis/i-educar` tiene **547
+forks / 717 ★ = 0,76**, una firma que no se parece a nada de este árbol — y que en software de
+sector público significa que **cada municipio forkea para desplegar**. La estrella cuenta lectores;
+el fork, instalaciones. ⚠️ **Y su lado malo es el encargo:** 547 árboles divergentes sin ruta de
+actualización.
+
 
 ## 2026-10-05 — pase 114: el marco 2026 como rango, porque las cuatro casas discrepan 1,4x
 

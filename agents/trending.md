@@ -8,6 +8,7 @@ updated: 2026-10-05
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 > No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
+> **Pase 115 del 2026-10-05:** 🟢 **Barrido 44 (4/4 regiones, 0 silencios) y 5 ALTAS verificadas de payload, pero el hallazgo del pase no es un alta: es que esta base declaraba un hueco que su propio indice refuta.** 🆕 **`P370`/`P371` con instrumento (`p370-gap-gate/`, **27/27**): 29 huecos con region → **2 CONTRADICHOS**, **27 sin marcador de alcance**; y **12 repos UBICADOS en LATAM** contra el «CERO repositorios» declarado 4 pases seguidos.** 🟢 **Las altas: `eai6/ai-tutor` (MIT, titular **World Bank Group**, Seychelles, EMEA, produccion en Azure, **0 ★**) · `portabilis/i-educar` (**GPL-2.0**, 717 ★ / **547 forks**, Brasil, commit del **2026-10-02**, rama por defecto **`2.12`**) · `yunger7/enem-api` (**GPL-2.0**, 349 ★, Brasil, ultimo commit **2025-12-14**) · `Magnusvron/llm-benchmark-quality-index` (**MIT** codigo + **CC BY 4.0** dato, **Mexico** — CICATA-Queretaro, Instituto Politecnico Nacional) · `thiagoluzin/pemara-edu-mira` (MIT, **1 commit**, Brasil, LAN sin internet).** 🔴 **Y una candidata RECHAZADA con el motivo escrito: `madununes07/IA-na-escola` es `index.html` + `style.css` + `script.js` sin descripcion — el buscador la devolvio por el TEXTO DE LA LICENCIA, no por la pieza.** 🆕 **`P373` — una CIFRA puede llegar inventada adosada a un artefacto REAL: el resumen de busqueda atribuyo «1.517 habilidades» a `conectabncc`, que no publica ese numero. Hermano numerico de `P367`, y mas dificil de cazar porque el artefacto SI existe: el conflicto 1.517-vs-1.721 se disuelve antes de publicarse.** 🔵 **Tablero 70/70.**
 > **Pase 114 del 2026-10-05:** 🟢 **Primer intervalo de este arbol con los DOS extremos a RELOJ (`10:48Z` → `11:50Z` = 1 h 02 m): las 5 filas de banda `EXACTO` devuelven las 5 el MISMO entero ⇒ deriva = 0 ★ / 5 repos / 1 h 02 m, una tasa acotada por los dos lados y no un cero sin denominador.** 🔴 **Sigue sin testear la prediccion de ≥24 h ⇒ 🆕 `P365`: re-registrada contra un INSTANTE ABSOLUTO (`2026-10-06T10:48Z`) y no contra «el proximo pase», que es el defecto que `P360` nombro.** ⚠️ **Dos deltas fuera de la cohorte, sin intervalo porque su lectura previa esta fechada por DIA: `educhain` 389 → **388**, `canvas-mcp` 272 → **276**.** 🟢 **`DeepTutor` publica `v1.6.13` (2026.10.4), 40.8k ★, Apache-2.0.** 🔴 **0 altas: lo de este pase es RE-MEDICION, y se dice.**
 > **Pase 113 del 2026-10-05:** 🔴 **0 altas (barrido 35), cero ENUMERADO: 20 candidatas devueltas por el LISTADO → 19 frenadas por `P311` + 1 fuera de alcance (`mahseema/aibooks`, lista de libros) → 0 nuevas.** 🔵 **Y el reparto 19/20 es el dato: el mismo canal que el pase 112 estreno con 5 altas de golpe devuelve ahora el inventario de esta propia base — no se agoto, se SATURO.** 🟢 **Primera serie de estrellas con INSTANTE y no fecha (`2026-10-05T10:48Z`): 6 filas remedidas, las 6 sin movimiento (106, 105, 91, 72, 57 y `DeepTutor` 40.8k).** 🔴 **Pero el enunciado de deriva NO se publica, por segunda vez y por un motivo nuevo ⇒ 🆕 `P360`: la accion B pedia un intervalo de reloj ≥24 h a un pase que corre el MISMO dia que el que la escribio. El intervalo solo se ACOTA a [0 h, 10 h 48 m]. La accion fue escrita para corregir `P358` y heredo su defecto en el sentido contrario.** 🔴 **Acciones A y C NO MEDIBLES: el entorno deniega la EJECUCION del codigo del arbol ⇒ 🆕 `P361`, el tercer eje de portabilidad (contenedor `P352` · directorio `P355` · **permiso** `P361`) y el unico que no puede publicar un numero falso.** 🟢 **Accion D REFUTADA con su clausula de refutacion cumplida EXACTA: 4 prometidas contra ≥10 pedidas, y 10 de 15 NACIERON CITADAS.** 🆕 **`P362`: el instrumento que lo midio fallo su primera validacion por sensibilidad a MAYUSCULAS — leyo «el pase 5» de la prosa ignorando el encabezado `**Pase 100**`.**
 > **Pase 112 del 2026-10-05:** 🟢 **5 ALTAS PERMISIVAS (barrido 34) — la primera cifra distinta de cero en 34 barridos**, 4 MIT + 1 Apache-2.0, cada una con familia leida del payload y huella publicada. 🟢 **Y 3 de las 5 cierran parcialmente el hueco de codigo de APAC por ancla de CURRICULO NACIONAL (Gaokao, 人教版) — la forma de evidencia de `P245`, no el antroponimo que `P135` prohibe.** 🆕 **`P355`: la severidad de un fallo de portabilidad va al REVES de su frecuencia — 4 suites fallan ruidosamente por `cwd` asumido, 0 por ruta efimera, y la unica efimera (`P352`) pasaba en VERDE sin medir.** 🆕 **`P358`: «un pase» no es unidad de tiempo — los pases 111 y 112 corren el mismo dia, asi que la accion B remidio HORAS y el enunciado de deriva no se publica.**
@@ -15,6 +16,55 @@ updated: 2026-10-05
 > **Pase 110 del 2026-10-05:** 🔴 **0 altas permisivas (trigesimosegundo barrido), cero ENUMERADO: 6 candidatas → 4 ya publicadas (`P311`), 2 nuevas sin cesion.** 🟢 **Lo que SE MUEVE este pase no es el trending: es que las ESTRELLAS VUELVEN a ser medibles — `WebFetch` sobre `github.com` sirve 200 donde `curl` da 403, con control negativo en 404.** 🔴 **Y al volver, cobran: `OATutor` 264 ★ contra «~1,5k» publicado, y `open-tutor-ai-CE` BSD-3-Clause / 108 ★ contra «Apache-2.0 / ~600 ★».**
 > **Pase 107 del 2026-10-05:** 🔴 **0 altas permisivas (trigesimo barrido, 3 candidatas MEDIDAS del payload y las 3 con su bloqueo nombrado) y las TRES acciones pre-registradas corridas: A con la cota NO CERRADA y su clausula de atribucion FALSIFICADA, B CONFIRMADA, C CONFIRMADA en dos clausulas y FALSIFICADA en la tercera.** 🔴 **`P332`: la EXTENSION de un archivo de imagen no es su FORMATO — 2.443 de 2.443 `.gif` son PNG/JPEG/WEBP, y un barrido por extension habria dado «0 solapamiento» desde una premisa falsa.** 🔴 **`P334`: el titular de una FIGURA se resuelve por BYTES y vive en una obra DISTINTA de la que el item cita (36 pares leidos).** 🔴 **`P333`: `fa4e32e5e622` era la huella del archivo SIN su salto final — defecto de dato, no de upstream.** 🔴 **`P335`: tercera sub-clase de `P320` — lo denegado fue el LOTE, no la pieza nombrada.** 🟢 **Canal nuevo: `gitlab.com/-/raw`.**
 > **Pase 106 del 2026-10-05:** 🟢 **0 altas (vigesimonoveno barrido, 5 candidatas, las 5 frenadas por el gate de `P311`) y las TRES acciones pre-registradas corridas: A CONFIRMADA, B FALSIFICADA, C CONFIRMADA.** 🔴 **`P328`: la cesion de un OER se ESTRECHA entre ediciones — 10 de 10 colecciones con el mismo `collection-id` pasan de `CC BY 4.0` en `1e` a `CC BY-NC-SA 4.0` en `main`, y el slug cambia de nombre, que es por lo que esta base no lo veia.** 🔴 **El denominador se corrige de 13.371 a 82.492 unidades y aparece una capa sintetica de 6.886 unidades (`oer: openai`) sin cesion.** 🟢 **Canal nuevo: `git ls-remote` para enumerar refs — es el que abrio la accion A.**
+
+## 2026-10-05 — pase 115: barrido 44, 5 altas, y el hueco que el índice propio refuta
+
+🔵 **El barrido en orden, con el denominador enumerado antes de escribir (`P287`):** 4 consultas
+globales obligatorias + 4 regionales + 2 por ancla de currículo en idioma local = **10 consultas**,
+**18 candidatas** medidas, **9 frenadas por `P311`**, **1 rechazada con motivo**, **5 altas
+verificadas de payload**, **3 publicadas como existentes-sin-cesión**.
+
+🔴 **Las 4 consultas globales obligatorias volvieron a devolver el eje equivocado, y vale nombrarlo
+porque es estructural:** `top open source AI agents education 2026 github MIT` y
+`github trending education AI 2026` devuelven **enseñar-sobre-IA** (`microsoft/ai-agents-for-beginners`,
+`pguso/agents-from-scratch`, roadmaps de AI engineering) y **no IA-en-educación**. Son dos
+industrias distintas que comparten las palabras. 🟢 **El canal que rindió fue el ancla de
+currículo** (`BNCC`, `ENEM`, `SEP`, `CNEB`, `MINEDUC`) en portugués y español — la misma forma de
+evidencia de `P245` que cerró APAC en el pase 112.
+
+### Las 5 altas
+
+| Pieza | Licencia | ★ | Último commit | Región |
+|---|---|---|---|---|
+| `eai6/ai-tutor` | **MIT** ✅ titular `World Bank Group and contributors` | **0** | 2026-08-20 | **EMEA** (Seychelles) |
+| `portabilis/i-educar` | **GPL-2.0** 🔴 | 717 | **2026-10-02** | **LATAM** (Brasil) |
+| `yunger7/enem-api` | **GPL-2.0** 🔴 | 349 | 2025-12-14 | **LATAM** (Brasil) |
+| `Magnusvron/llm-benchmark-quality-index` | **MIT** ✅ + CC BY 4.0 | **0** | — | **LATAM** (México — IPN) |
+| `thiagoluzin/pemara-edu-mira` | **MIT** ✅ | **0** | 2026-09-27 | **LATAM** (Brasil) |
+
+🟢 **3 de las 5 son permisivas y 4 de las 5 son LATAM** — la región que esta base declaraba con
+cero repositorios.
+
+### 🔴 Lo que corrige al pase anterior
+
+1. **El hueco LATAM queda refutado por el índice propio** — 12 repos ubicados en LATAM, instrumento
+   nuevo `p370-gap-gate/` (**27/27**), 29 huecos con región → 2 contradichos y **27 sin alcance**
+   (`P370`, `P371`).
+2. **La capa de evaluación pedagógica estaba subdeclarada**: el pase 114 la nombró como
+   `pedagogy-benchmark` (12 ★) y esta base trae `eth-lre/mathtutorbench` desde el **pase 4**,
+   remedido hoy en **43 ★** (era 42) ⚠️ **sin intervalo de reloj, así que no es una tasa** (`P358`).
+3. **`curl -sI` no sólo está ciego acá: afirma lo falso** — `200` al repo inventado leyendo la
+   línea del proxy (`P372`).
+4. **Una cifra llegó inventada adosada a un artefacto real**: «1.517 habilidades» atribuidas a
+   `conectabncc`, que no publica ese número (`P373`).
+
+### ⚠️ `P365`, dicho y no re-registrado
+
+La predicción de deriva de estrellas del pase 114 pedía un pase **en o después de
+`2026-10-06T10:48Z`**. Este pase corrió a las **`2026-10-05T12:45Z`**: 🔴 **no es evaluable
+todavía**, y por la regla de `P365` **no se re-registra «al próximo pase»** — el instante absoluto
+queda como está.
+
 
 ## 🗓️ 2026-10-05 (pase 114, lectura `2026-10-05T11:50Z`) — primer intervalo con DOS extremos a reloj
 
