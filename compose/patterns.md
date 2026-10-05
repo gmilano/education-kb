@@ -8,6 +8,7 @@ updated: 2026-10-05
 
 > Recetas concretas: repos nombrados, licencias verificadas, wiring explícito y estimación.
 > Todos los repos citados fueron verificados vía WebFetch el 2026-09-30; los del pase 11, el 2026-10-01 (ver `agents/top.md`).
+> **Pase 104 del 2026-10-05:** 🟢 **El canal VOLVIO, y eso es `P320` confirmado en la direccion contraria: es un hecho de PERMISO.** El instrumento del pase 103 estaba intacto y le faltaba el derecho a correrlo; esta sesion **si** lo tiene. Medido con control negativo antes de usarlo (rama inventada, ruta inventada y repo inventado dan **404**; `main`/`master`/`HEAD` dan el **mismo** sha): `raw.githubusercontent.com` **200**, clon `--filter=blob:none` de terceros **OK**. 🔴 **Sigue apagado:** `api.github.com` **403**, y `openstax.org`, `creativecommons.org`, `arxiv.org`, `aclanthology.org` **bloqueados por egress** por `curl` **y** por el fetcher. 🟢 **Receta nueva `R-104-CAPA-DE-CONTENIDO`, armada con piezas probadas de este repo y declarando su propio hueco.** 🔴 **Y una correccion a una receta ya publicada: `R-102-PROCEDENCIA-DE-CORPUS` trataba `amber` y `ncte` como «`NC` hasta prueba en contrario» — medido, **no son `NC`: no tienen cesion**, que es MAS restrictivo, y la receta decia a su lector que podia hacer uso no comercial de material sobre el que nadie le concedio nada (`P324`).** 🟢 **La instruccion operativa de esa receta —*usar la libreria (MIT) y NO embarcar `data/`*— se CONFIRMA, y ahora se apoya en los tres corpus y no en uno.** 🔴 **`P323`: el borde entre capa de codigo y capa de contenido puede ser un **submodulo**, o sea otro repositorio — y entonces el `LICENSE` de la raiz del padre, el arbol sin contenido y el cero archivos de licencia de contenido son **tres lecturas ciertas que enganan juntas**.** 🔴 **`P322`: la cesion por item es un CAMPO y se puede llenar mal; el caso peor no es el campo vacio sino el que **parece lleno** — una URL que no es de licencia pasa cualquier compuerta que pregunte «¿hay algo?».** ⚠️ **Dos defectos de un instrumento de ESTE pase, encontrados por el instrumento mismo y registrados con su control: `E1` la comilla de `L'Hopital` que `xargs -I{}` se comia (dos filas FANTASMA con una ruta inexistente) y `E2` el codigo HTTP que no se miraba (el cuerpo `404: Not Found` entro al clasificador; **sobrevivio de casualidad** porque no parsea como JSON).** 🟢 **`p322` 10/10 + 2/2, `p324` construido, **55 suites pasan, 0 fallan**.** Ver **`P322`**–**`P325`** y la receta `R-104-CAPA-DE-CONTENIDO`.
 > **Pase 103 del 2026-10-05:** 🔴 **0 altas en tablas; lo que este pase deja es MÉTODO y una receta armada con piezas que este repo YA tiene probadas.** 🟢 **`P320`** — el canal de verificación es un hecho de **PERMISO**, no sólo de red: el instrumento puede estar intacto y faltar el derecho a correrlo, y los dos estados autorizan conclusiones distintas. 🟢 **`P321`** — un archivo append-only puede **sepultar un acierto bajo un error posterior**, y el espécimen es `intel/market.md` con las dos versiones del calendario del AI Act conviviendo. 🆕 **`R-103-DOS-RELOJES`** — receta de conformidad AI Act para un entregable educativo EMEA: **tramo 1** marcar lo que ya se entrega con `aiact-50-2-pack/` (art. 50, **vigente**, portador por dialecto porque SCORM 1.2 es `processContents="strict"` y un marcador no importado es **INVÁLIDO**, no tolerado); **tramo 2** construir el expediente de Anexo III con la ventana a favor, usando el eje A de `p317` como insumo del **FRIA**; **tramo 3** lo que NO hay que prometer — el `2027-12-02` es **condicional**. ⚠️ **Y la receta declara su propio hueco: esta base no tiene componente que produzca el FRIA ni registro conforme al art. 26.**
 > **Pase 101 del 2026-10-04:** 🆕 **Los patrones nuevos son `P312`–`P316`, y la receta es `R-101-OBSERVACION-PERMISIVA`.** 🔴 **`P312` es el que cambia qué garantiza un veredicto de uso comercial de esta base: la compuerta de `P250` se abría sobre `CC-BY-NC-4.0`, una familia cuyo NOMBRE dice NonCommercial — y la destapó el payload de un ALTA, no una fixture.** 🟢 **`P313` cierra `P237`: las cuatro copias inline rewireadas, en el orden que la deuda exigía (primero superconjunto, después rewiring), y con el hallazgo de que el rewiring ROMPIÓ el control que guardaba a `p206` porque extraía la función del TEXTO del archivo.** 🔴 **`P314` es el que evita suprimir trabajo real: la concesión puede vivir en el README sin archivo de licencia, y un barrido de payload la declara `NO-CESSION`.** 🔴 **`P315` es el que paga en una propuesta: un repo puede ser permisivo en el CÓDIGO y no comercial en los DATOS, así que el entregable es el método y la línea base, no el modelo.** 🔴 **`P316` es la pregunta de un renglón que hay que hacer antes de estimar: «¿de qué árbol partimos?» — la prensa de industria linkea un fork `AGPL-3.0` congelado en `v0.2.1` del `OpenMAIC` MIT que esta base ya tiene.** 🆕 **`R-101-OBSERVACION-PERMISIVA` es cotizable porque los tres eslabones de código están verificados por payload y son MIT, y porque la restricción que la acota —el corpus no comercial— queda FUERA del entregable con su razón dicha.**
 > **Pase 100 del 2026-10-04:** 🆕 **Los patrones nuevos son `P308`–`P311`, y las recetas son `R-100-HABLA-PERMISIVA` y `R-100-AUTOGRADING-PERMISIVO`.** 🔴 **`P308` es el que cambia qué garantiza un veredicto de licencia de esta base: el reflujo del texto —re-envolver un payload sin cambiar una palabra— movía la respuesta, en DOS reglas; la del Unlicense no perdía la familia en `UNCLASSIFIED` sino que INVERTÍA el veredicto comercial a `NONCOMMERCIAL-NOT-OSI` sobre el texto más permisivo que existe, y la de la ventana del bloque de título perdía la AGPL que `P288` había instalado porque contaba LÍNEAS.** 🟢 **`P309` es el residual declarado en vez de tapado: `holder_of` devuelve una LÍNEA, y una línea depende del reflujo por construcción.** 🔴 **`P310` es el que paga en una propuesta: una pieza puede ser permisiva y no ceder ninguna CAPACIDAD —`speechsuper/SpeechSuper-API-Samples` es MIT real sobre muestras de una API paga— y es el primer espécimen de esta base donde el engaño viene de una licencia CORRECTA.** 🔴 **`P311` es el control que faltaba y que este pase necesitó contra sí mismo: todos los controles de esta base auditan una afirmación que el pase HACE, y la de que un alta es NUEVA es implícita.** 🆕 **`R-100-HABLA-PERMISIVA` es cotizable porque los cinco eslabones están verificados por payload y cuatro de los cinco son permisivos; el quinto —el corpus— queda FUERA del entregable con su razón dicha.**
@@ -132,6 +133,122 @@ updated: 2026-10-05
 > **Pase 11:** +2 patrones — **P25** (riesgo de abandono conforme al Anexo III, la capa con presupuesto ya asignado y sin oferta open source) y **P26** (agente docente sobre la ontología curricular nacional ya publicada).
 > **Pase 27:** **+4 patrones y una corrección.** 🔴 **P51 queda con premisa falsa** —el conector MCP de Moodle **sí existe y es MIT**— y lo reemplazan **P54** (corrección y devolución sobre Moodle con **compuerta humana**, el último tramo del gap 6, con piezas que ya escriben), **P55** (el conector de **Open edX**, que es el único que de verdad no existe), **P56** (**SCORM** como formato de salida de la capa generativa: cero integración, offline) y **P57** (evidencia por MCP cotizada sobre lo que CaSS **realmente** expone — 6 de 61 operaciones, con insignias y autoría de marcos **fuera**).
 
+
+## 🆕 Patrones del pase 104 (2026-10-05) — `P322`–`P325` y la receta `R-104-CAPA-DE-CONTENIDO`
+
+### **P322** — la cesion por item es un CAMPO, y un campo se puede llenar MAL
+
+🔵 **Enunciado.** *Cuando una plataforma de contenido declara la licencia **por item**, la promesa
+en bloque del README y los campos del propio repo son **dos** afirmaciones, y la segunda puede
+falsificar a la primera. El estado peor no es el campo **vacio** sino el que **parece lleno**: una
+URL que no es de licencia pasa cualquier compuerta que pregunte «¿hay algo?» y no cede nada.*
+
+**Donde vive el control:** `compose/code/p322-content-item-license/` (`python3 test_classify.py` →
+**10/10**; `sh test_quoting.sh` → **2/2**).
+
+Medido sobre `CAHLR/OATutor-Content`, **1.216 de 13.371** problemas, muestreo sistematico:
+
+| clase | n | % |
+|---|---|---|
+| `CC-BY-4.0` | 920 | 75,7 % |
+| 🔴 `VACIA` | 235 | 19,3 % |
+| 🔴 `OTRO` (`CC4.0` 38, `openstax` 6) | 44 | 3,6 % |
+| 🔴 `URL-NO-LICENCIA` | 17 | 1,4 % |
+
+🔴 **Los 17 estan todos en el mismo curso y apuntan a PDFs de solucionarios de examen**; en **15 de
+17** el valor es **identico al campo `oer`** del mismo item: se copio la **procedencia** al campo de
+**cesion**. 🟢 **Dos muestras sistematicas independientes concuerdan** (n=406 y n=1.216).
+
+### **P323** — el borde de capa puede ser OTRO REPOSITORIO
+
+🔵 **Enunciado.** *El limite entre capa de codigo y capa de contenido puede no ser un directorio
+sino un **submodulo**. Entonces el `LICENSE` de la raiz del repo padre, su arbol **sin contenido** y
+su **cero** archivos de licencia de contenido son **tres lecturas ciertas que enganan juntas**.*
+
+🔵 **Es una topologia nueva** frente a `P315` (dato en subdirectorio del mismo repo) y `P317`
+(corpus vendoreado sin declaracion). 🔴 **Consecuencia de metodo:** un barrido de licencias que
+corre sobre un repo **no termina en su arbol** — tiene que leer `.gitmodules` y seguir cada
+submodulo, o declarar que no lo hizo.
+
+### **P324** — «sin cesion» es MAS restrictivo que `NC`, no menos
+
+🔵 **Enunciado.** *Tratar un corpus sin cesion como **`NC`** subestima la restriccion y suena
+prudente. `NC` **es** una licencia: concede uso no comercial y **se puede cumplir**. La **ausencia
+de cesion no concede nada** y no se puede cumplir. Una receta que escribe «NC hasta prueba en
+contrario» le entrega a su lector un permiso que nadie otorgo.*
+
+**Donde vive el control:** `compose/code/p324-corpus-upstream-cession/`.
+
+### **P325** — una cesion puede ser correcta, legible y NO alcanzar al dato
+
+🔵 **Enunciado.** *Un repo puede traer una cesion valida, permisiva y bien redactada que **no
+alcanza al dato**, porque el dato no esta en ese repo. Y cuando el titular distribuye el corpus por
+**formulario por usuario**, redistribuirlo publicamente no es un desajuste de licencia: **quita una
+compuerta de acceso que el titular instalo a proposito**.*
+
+🔴 **Especimen:** `ddemszky/classroom-transcript-analysis` declara `MIT (c) 2022 Dora Demszky`
+(1.068 B, impecable) sobre un arbol de **10 archivos sin una sola transcripcion**. El corpus NCTE
+viaja por formulario hacia Google Drive; los metadatos, por ICPSR.
+
+### ⚠️ Deriva de convencion, encontrada por el auditor de este repo al correrlo sobre lo nuevo
+
+🔴 **`pattern-citation-audit` reconoce una definicion escrita `### **P322** — …`, y NO una escrita
+con backticks `### \`P322\` — …`.** Los pases recientes derivaron hacia los backticks, asi que sus
+patrones quedan contados como **colgados**: citados en todas partes y definidos en ninguna, **sin
+que nada falle** —el auditor sale 0 igual, porque informa el total y no lo veta—.
+
+🟢 **Los cuatro patrones de este pase se escribieron en la convencion que el auditor reconoce**, y
+el contador vuelve a **37**, el mismo valor que antes de este pase: 286 definidos, 0 regresion.
+🔵 **No se reescriben los encabezados de pases anteriores** —son su registro, no el de este pase—
+pero queda dicho: **37 numeros colgados no son 37 patrones inexistentes, son en su mayoria
+patrones reales con el encabezado en una convencion que el instrumento no lee.** Un contador que
+nadie mira se vuelve decorativo, y esta base ya pago eso en `P126`.
+
+---
+
+---
+
+## 🧪 `R-104-CAPA-DE-CONTENIDO` — auditar la licencia del CONTENIDO de una plataforma antes de cotizarla
+
+**Para que sirve.** Un encargo educativo casi nunca arranca de cero: arranca de una plataforma open
+source **con contenido adentro**. La compuerta de licencia que esta base ya tenia mira el **codigo**.
+Esta receta mira el **contenido**, que es lo que el cliente va a publicar.
+
+**Cuando aplicarla.** Siempre que la plataforma candidata traiga material didactico, bancos de
+items, corpus o plantillas — o sea, casi siempre.
+
+| Paso | Que se hace | Con que pieza de este repo | Por que existe el paso |
+|---|---|---|---|
+| **1** | Leer `.gitmodules` y **seguir cada submodulo** | — | 🔴 `P323`: el contenido puede estar en **otro repo** y el padre se ve limpio |
+| **2** | **Enumerar** el arbol de cada repo (`--filter=blob:none --no-checkout`) | canal de `P275` | 🔴 `P319`: adivinar rutas da falsos negativos; solo enumerar sostiene una **ausencia** |
+| **3** | Clasificar la familia del `LICENSE` de **cada** repo | `lib/license_family.sh` (`P237`) | el control compartido, no un clasificador nuevo por pase |
+| **4** | Si la cesion es **por item**, barrer el campo y **tabular las clases** | `p322-content-item-license/` | 🔴 `P322`: el README promete en bloque y los campos dicen otra cosa |
+| **5** | Para cada corpus redistribuido, **resolver el upstream y leer SU cesion** | `p324-corpus-upstream-cession/` | 🔴 `P317`/`P325`: la cesion del repo no alcanza al dato que ese repo no creo |
+| **6** | Verificar **identidad** del corpus por nombres de archivo | `p324` | 🔵 `P306`/`P253`: «parece el mismo dataset» no es una medicion |
+| **7** | Emitir el veredicto **por capa**, no por repo | — | la fila «MIT» puede ser **correcta** y la entrega **inviable** |
+
+**Que entrega, concretamente.** Para `OATutor`: 🟢 **el codigo (MIT) sirve entero y el sistema es
+desplegable** (GitHub Pages, middleware LTI para Canvas). 🔴 **El `content-pool` NO se embarca tal
+cual**: se toman los cursos con **100 %** de etiquetado (`Elementary Algebra`, `Intermediate
+Algebra`, `College Physics`, `SJSU 1019S`), se **descartan** los 5 cursos con **0 %** y
+`Calculus Volume 1` (**1,3 %**), y el resto se sustituye por contenido del cliente — que es lo que
+el encargo real necesita de todos modos.
+
+Para `edu-convokit`: 🟢 **usar la libreria (MIT)**, 🔴 **no embarcar `data/`** — los **111**
+archivos quedan resueltos y **ninguno** es redistribuible comercialmente (29 `NC` + **74 sin
+cesion**).
+
+⚠️ **Lo que esta receta NO cubre, dicho en vez de callado:**
+
+- 🔴 **No valida el campo contra el titular.** Que un item **diga** `CC BY 4.0` no prueba que el
+  titular del libro **ceda** eso para ese problema. Cerrar eso exige un canal que este pase no tuvo
+  (`openstax.org`, 403) y **queda pre-registrado para el pase 105**.
+- 🔴 **No mide pistas ni andamios.** El barrido toca el JSON del **problema**; quedan **18.051**
+  JSON de `tutoring/` sin medir — **dos tercios** de la promesa del README.
+- 🔴 **No abre archivos comprimidos.** Los `.zip` de un repo de datos quedan como **supuesto
+  declarado**, no como medicion.
+
+---
 
 ## 🆕 Patrones del pase 103 (2026-10-05) — `P320`–`P321` y la receta `R-103-DOS-RELOJES`
 

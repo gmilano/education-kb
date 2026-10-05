@@ -1,0 +1,4 @@
+corpus	n_archivos	upstream	upstream_fuente	cesion_upstream	bytes	alcance_de_la_cesion	identidad	veredicto_para_entrega
+amber	45	laurenceholt/amber	docs/source/tutorial_amber.ipynb (1a mano)	SIN-CESION	0	-	45/45 nombres identicos a raw-transcripts/	NO-REDISTRIBUIBLE
+ncte	29	ddemszky/classroom-transcript-analysis	docs/source/tutorial_ncte.ipynb (1a mano)	MIT	1068	SOLO-CODIGO (el repo no contiene transcripciones)	NO-VERIFICABLE-POR-NOMBRE (el upstream no publica los archivos)	NO-REDISTRIBUIBLE
+talkmoves	29	SumnerLab/TalkMoves	pase 102	CC-BY-NC-SA-4.0	20849	CORPUS (LICENSE + README concuerdan)	29/29 nombres identicos a data/Subset 1/	NO-COMERCIAL

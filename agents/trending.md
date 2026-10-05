@@ -9,6 +9,79 @@ updated: 2026-10-05
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 > No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
 
+## 2026-10-05 — pase 104: el canal VUELVE, y las tres acciones diferidas se corren de una vez
+
+> **Frontmatter y region:** `Global`. Las senales regionales de este pase estan en
+> `intel/market.md` (barrido 33, cuatro regiones, 0 silencios).
+
+🟢 **El canal de verificacion volvio, y eso es `P320` confirmado en la direccion contraria.** El
+pase 103 lo registro DENEGADO y dejo tres acciones sin medir. El instrumento nunca estuvo roto:
+faltaba el **permiso**. Esta sesion lo tiene, y se midio **antes** de usarlo, con control negativo:
+
+| canal | pase 103 | pase 104 | control negativo |
+|---|---|---|---|
+| `raw.githubusercontent.com` (payload) | denegado | 🟢 **200** | rama, ruta y repo inventados → **404** los tres |
+| clon `--filter=blob:none` de terceros | denegado | 🟢 **OK** | — |
+| `api.github.com` | 403 | 🔴 **403** | — |
+| `openstax.org`, `creativecommons.org`, `arxiv.org`, `aclanthology.org` | bloqueados | 🔴 **bloqueados** (`curl` **y** fetcher) | — |
+
+🔵 **El control negativo no es ceremonia:** `main`, `master` y `HEAD` devolvian el MISMO archivo
+para un repo, que es justo la forma que tendria un canal que miente. Se verifico que los tres dan
+el **mismo sha** y que una rama inventada da **404** antes de apoyar una sola fila en este canal.
+
+### 🔴 0 altas de agente, y el cero es informativo
+
+El barrido global (`top open source AI agents education 2026 github MIT`, año **calculado**)
+devolvio por **vigesimoseptima** vez el eje generalista: openclaw, browser-use, Mem0, AutoGen,
+Flowise, dify, CrewAI, LangGraph. **0 piezas de la industria educativa** (`P281`).
+
+⚠️ **Y reaparecio el reclamo que el pase 103 ya habia rechazado: «Hermes Agent, +180.000 estrellas».**
+Se rechaza otra vez, por la misma razon y sin gastar canal en el: **inverificable por este canal e
+inverosimil**. Que un reclamo se repita no lo acerca a estar medido.
+
+### 🔴 `P324` — «NC hasta prueba en contrario» era la direccion segura y la CATEGORIA equivocada
+
+La deuda de los pases 102 y 103 (`amber` 45 archivos + `ncte` 29 = **74 de los 111** de
+`rosewang2008/edu-convokit`, fila **MIT** de este estante) queda **cerrada**.
+Instrumento: `compose/code/p324-corpus-upstream-cession/`.
+
+| corpus | n | upstream | cesion del titular | veredicto |
+|---|---|---|---|---|
+| `talkmoves` | 29 | `SumnerLab/TalkMoves` | `CC BY-NC-SA 4.0` (`LICENSE` **20.849 B**, al byte igual que el pase 102) | no comercial |
+| 🔴 `amber` | 45 | `laurenceholt/amber` | **NINGUNA** | **no redistribuible** |
+| 🔴 `ncte` | 29 | `ddemszky/classroom-transcript-analysis` | `MIT` — **solo codigo** | **no redistribuible** |
+
+🟢 **`amber`: ausencia ASERIDA por dos canales.** Arbol enumerado: **46** rutas, **0** archivos de
+licencia. Sonda de 7 nombres en la raiz: **404 en los 7**. Y el `README` del upstream, leido entero,
+no trae una linea de terminos — describe grabaciones de tutoria del XQ Institute (2022) con alumnos
+*«typically in 8th or 9th grade»*. 🟢 **Identidad 45/45**: los nombres de `data/amber/` y de
+`raw-transcripts/` son identicos, diferencia simetrica **0**.
+
+🔴 **`ncte` es el caso mas facil de leer mal, PORQUE su upstream si tiene un `LICENSE` impecable.**
+`MIT (c) 2022 Dora Demszky`, 1.068 B — sobre un repo de **10 archivos sin una sola transcripcion**.
+El MIT cubre *«the Software»*; el corpus se distribuye por **formulario por usuario** hacia Google
+Drive, y los metadatos por **ICPSR**. **`P325`**: *redistribuirlo publicamente no es un desajuste de
+licencia — quita una compuerta de acceso que el titular instalo a proposito.*
+
+🟢 **Confirma la cautela del pase 103:** el «CC BY 4.0» de NCTE venia de **agregador**; medido de
+primera mano, **el titular no lo declara en ninguna parte**. `P314` sostenido.
+
+🔵 **Los upstreams no se adivinaron del nombre del directorio** —eso habria sido el error de
+identidad de `P306`/`P253`—: se leyeron de `docs/source/tutorial_amber.ipynb` y
+`tutorial_ncte.ipynb`, que el propio redistribuidor publica y que enlazan cada dataset.
+
+### 🔴 Lo que esto le hace a la receta, que es lo que cambia una entrega
+
+**`R-102-PROCEDENCIA-DE-CORPUS` queda corregida.** Decia que `amber` y `ncte` se traten como `NC`
+*«que es la direccion segura»*. La direccion lo era; **la categoria no**: `NC` es una licencia que
+**se puede cumplir** (no vendas), y la **ausencia de cesion no concede nada**. La receta le estaba
+dando a su lector un permiso que nadie otorgo.
+
+🟢 **Su instruccion operativa —*usar la libreria (MIT) y NO embarcar `data/`*— se CONFIRMA**, y
+ahora descansa en los **tres** corpus y no en uno.
+
+---
+
 ## 2026-10-05 — pase 103: el canal de verificacion se apaga, y la base se descubre REGRESANDO sobre un acierto propio
 
 > **Frontmatter y region:** `Global`. Las senales regionales de este pase estan en

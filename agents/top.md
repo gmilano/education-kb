@@ -8,6 +8,7 @@ updated: 2026-10-05
 
 > Agentes y herramientas AI open source para educación. Foco: MIT / Apache 2.0 / BSD.
 > Verificado repo por repo vía WebFetch el 2026-09-30 (stars y licencia leídos de la página del repo).
+> **Pase 104 del 2026-10-05:** 🟢 **El canal VOLVIO, y eso es `P320` confirmado en la direccion contraria: es un hecho de PERMISO.** El instrumento del pase 103 estaba intacto y le faltaba el derecho a correrlo; esta sesion **si** lo tiene. Medido con control negativo antes de usarlo (rama inventada, ruta inventada y repo inventado dan **404**; `main`/`master`/`HEAD` dan el **mismo** sha): `raw.githubusercontent.com` **200**, clon `--filter=blob:none` de terceros **OK**. 🔴 **Sigue apagado:** `api.github.com` **403**, y `openstax.org`, `creativecommons.org`, `arxiv.org`, `aclanthology.org` **bloqueados por egress** por `curl` **y** por el fetcher. 🟢 **Con canal, las TRES acciones pre-registradas se corren: la de `p317` que llevaba DOS pases diferida, y las dos del pase 103.** 🔴 **La que manda es contra una fila de esta tabla, y corrige a la RECETA, no a la fila: los 111 archivos de `data/` de `rosewang2008/edu-convokit` quedan resueltos de punta a punta y **NINGUNO** es redistribuible en una entrega comercial — 29 son `NC` (`talkmoves`, ya medido en el pase 102) y **74 NO TIENEN CESION ALGUNA**.** 🔴 **`P324`: la receta del pase 102 los trataba como «`NC` hasta prueba en contrario»; la direccion era segura y la CATEGORIA equivocada — `NC` es una licencia que se puede CUMPLIR, la ausencia de cesion no concede nada.** 🟢 **`amber` (45): upstream `laurenceholt/amber` (XQ Institute), **0 archivos de licencia en 46 rutas enumeradas** y `README` sin una linea de terminos, aserido por DOS canales; identidad **45/45** nombres identicos.** 🔴 **`P325` — `ncte` (29) es el caso mas facil de leer mal PORQUE su upstream SI tiene un `LICENSE` impecable: `MIT (c) 2022 Dora Demszky`, 1.068 B… sobre un repo de **10 archivos que no contiene ninguna transcripcion**. El MIT cubre *«the Software»* y el corpus viaja por **formulario por usuario** hacia Google Drive: redistribuirlo no es un desajuste de licencia, **quita una compuerta de acceso que el titular instalo a proposito**.** 🟢 **Y confirma la cautela del pase 103: el «CC BY 4.0» de NCTE venia de agregador y el titular NO lo declara en ninguna parte (`P314`).** 🔵 **Los upstreams no se adivinaron del nombre del directorio: se leyeron de los notebooks del propio redistribuidor.** ⚠️ **0 altas de agente, y el cero es INFORMATIVO: el barrido global devolvio por VIGESIMOSEPTIMA vez el eje generalista (`P281`), con «Hermes Agent, +180.000 estrellas» reapareciendo — el mismo reclamo que el pase 103 rechazo por inverificable, y se rechaza otra vez.** Ver **`P322`**–**`P325`** y `compose/code/p324-corpus-upstream-cession/`.
 > **Pase 103 del 2026-10-05:** 🔴 **0 altas — y a diferencia del pase 102 el cero NO es una elección: el canal de verificación está APAGADO.** Clon sin blobs **DENEGADO por permisos de sesión**, `WebFetch` **bloqueado por egress en 4 de 4 dominios**, `WebSearch` único vivo ⇒ **0 licencias leídas de payload** (`P320`: *el canal de verificación es un hecho de PERMISO, no sólo de red; el instrumento puede estar intacto y faltar el derecho a correrlo*). 🔴 **La acción pre-registrada del pase 103 NO se corrió: ni confirmada ni falsificada, y queda re-registrada sin cambios** — el eje A de `p317` exige enumerar el árbol, y adivinar paths es el falso negativo que `P319` prohíbe. 🔴 **El hallazgo que manda es una REGRESIÓN de esta base (`P321`): el pase 101 tenía las dos fechas del AI Act bien y el pase 102 las colapsó en una falsa — séptima reproducción del error que los pases 100 y 101 estaban CONTANDO.** 🔵 **Pistas, publicadas como pistas y no como filas:** `OATutor` (MIT + contenido CC BY 4.0, sería el primer espécimen de `P315` que es PLATAFORMA) y una de IDENTIDAD contra esta tabla (el paper declara canónico `stanfordnlp/edu-convokit`; la tabla publica `rosewang2008/edu-convokit`). ⚠️ **`amber` y `ncte` siguen SIN resolver:** `ncte` avanza (Demszky y Hill 2022, 1.660 transcripciones, 317 docentes) pero el «CC BY 4.0» viene de **agregador**, no del titular — y `P314` ya pagó ese error.
 > **Pase 102 del 2026-10-04:** 🔴 **La acción pre-registrada del pase 101 se corrió y su predicción está FALSIFICADA en las dos cláusulas: `P315` era específico de `classroom_discourse_intelligence`, no la norma de la capa.** Sobre el denominador pre-registrado de **9 repos** (las 6 altas del pase 101 + las 3 piezas de habla del pase 14), las piezas con licencia de datos **distinta** de la del código, además de la ya conocida, son **0** —la predicción pedía **≥ 2**—, y de las **2** que declaran términos de datos **una conceda uso comercial EXPLÍCITO**, así que tampoco hay mayoría `NC`. 🔴 **Pero medir la predicción destapó que la PREGUNTA estaba mal planteada, y lo que había debajo es peor: `rosewang2008/edu-convokit` —fila de esta tabla, MIT, y la fila es CORRECTA para el código— REDISTRIBUYE 29 transcripciones del corpus TalkMoves, que su titular `SumnerLab` publica bajo `CC BY-NC-SA 4.0`, sin una sola línea sobre términos de datos.** 🟢 **La identidad del corpus está MEDIDA, no inferida: 29 de 29 nombres de archivo coinciden con `data/Subset 1/` del upstream, huella `Boats and Fish 4_Grade 4 .xlsx` incluida —con el espacio antes de la extensión— y el upstream declara la licencia por dos canales que concuerdan (`LICENSE` de 20.849 B + `README`).** 🔵 **Y el otro repo de la misma cohorte, `classroom_discourse_intelligence`, hace lo contrario y lo dice: declara la licencia NC y NO redistribuye —su `data/` tiene 0 archivos de payload, aserido—. Dos repos de la misma capa, el mismo corpus, posiciones opuestas: el que lo maneja mal es el que está en la tabla.** 🔴 **`P319`: el barrido de paths adivinados que este pase corrió PRIMERO publicó `edu-convokit` como «sin datos» —404 en `data/README.md` con 111 archivos de corpus adentro—; sólo enumerar el árbol (el canal de `P275`) lo ve.** 🟢 **`p317` 37/37, 53 suites pasan, 0 fallan.** Ver **`P317`**–**`P319`**.
 > **Pase 101 del 2026-10-04:** 🟢 **6 altas de agente, y abren una capa que esta base NO tenía: observación de aula y análisis del DISCURSO docente.** El eje lo eligió el barrido de mercado de este pase —*«education-specific platforms that embed pedagogical structure»* y el eje de gobernanza de Norteamérica, donde **Oklahoma y Maryland exigen supervisión humana y PROHÍBEN que la AI decida sobre un alumno**— y la capa que eso pide no es un tutor: es el instrumento que mira la clase y le devuelve evidencia al docente. 🟢 **El `grep` de control lo confirmó antes de buscar: `classroom observation` / `observación de aula` daba CERO ocurrencias en los ocho archivos.** 🔴 **El hallazgo que manda es de PROCEDENCIA y lo destapó el gate de `P311`: el barrido devolvió `wwyw4842-dot/OpenMAIC`, que la prensa de industria (aitoolly, aibase, careerflora) linkea como *«el proyecto OpenMAIC en GitHub»* — y es un FORK congelado en `v0.2.1` con licencia **AGPL-3.0**, mientras el upstream `THU-MAIC/OpenMAIC` que esta tabla ya tiene va en `v1.2.0-rc.1` y es **MIT**.** 🔵 **Los dos canales concuerdan en los dos repos (payload del `LICENSE` + `license` del `package.json`), así que no es ambigüedad: es que el enlace que publica la prensa cae un *minor* ANTES del relicenciamiento AGPL→MIT que esta base fechó en v0.3.0 (2026-06-28).** **Un equipo que arranca desde el link del artículo construye sobre copyleft creyendo que es permisivo, y la fila de esta tabla —correcta— se lo confirmaría.** 🔴 **Y el hallazgo de método es contra el control compartido: medir la licencia de un alta destapó que `commercial_use_ok` devolvía uso comercial PERMITIDO para `CC-BY-NC-4.0`, una familia cuyo NOMBRE dice NonCommercial** (`P312`). 🟢 **`lib/license_family.sh` 79/79 → 106/106; `p312` 21/21; `P237` CERRADO —las cuatro copias inline rewireadas— y 52 suites pasan, 0 fallan.** ⚠️ **1 de las 6 altas queda con región declarada y 5 sin ella por `P135`/`P261`, y se dice en vez de rellenarse.** Ver **`P312`**–**`P316`**.
@@ -272,6 +273,64 @@ updated: 2026-10-05
 > fila** —`lineage-skill`, con un vocabulario cerrado de 9 valores por afirmación, **4 de los 9 «esto lo produjo el
 > modelo»**— y **ninguna de las dos sabe de la otra**. Ver la capa nueva al final de este archivo, las tendencias
 > **180**–**182** y el patrón **P99**.
+
+## 🟢 Altas de agente: 0 — pero las TRES acciones pre-registradas se corren, y una corrige a una receta de esta base (pase 104 del 2026-10-05)
+
+### 🔬 El canal (`P247`), medido este pase y con control negativo
+
+🟢 **Volvio.** `raw.githubusercontent.com` **200**; clon `--filter=blob:none` de terceros **OK**.
+🔴 Siguen apagados `api.github.com` (**403**) y el egress hacia `openstax.org`,
+`creativecommons.org`, `arxiv.org` y `aclanthology.org`.
+
+🔵 **Antes de apoyar una fila:** rama inventada → **404**, ruta inventada → **404**, repo inventado
+→ **404**; `main`/`master`/`HEAD` → **mismo sha**. `P320` queda confirmado **en la direccion
+contraria**: el instrumento del pase 103 estaba intacto, faltaba el **derecho** a correrlo.
+
+### 🔴 Por que 0 altas, y por que este cero SI es informativo
+
+El barrido global (año **calculado**) devolvio por **vigesimoseptima** vez el eje generalista:
+openclaw, browser-use, Mem0, AutoGen, Flowise, dify, CrewAI, LangGraph, aider, Cline. **0 piezas de
+la industria educativa** (`P281`).
+
+⚠️ **Rechazo repetido, con su razon:** reaparecio *«Hermes Agent, +180.000 estrellas desde febrero
+de 2026»*, el mismo reclamo que el pase 103 rechazo. **Se rechaza otra vez** — inverificable por
+este canal e inverosimil. 🔵 **Que un reclamo se repita no lo acerca a estar medido**, y gastar
+canal en el seria el error que `P314` ya cobro.
+
+🟢 **Las dos piezas de la industria que el barrido SI devolvio son copyleft** (`LearnHouse`
+AGPL-3.0, `claude-education-skills` CC BY-SA 4.0) **y van a `verticals/solutions.md`**: no son
+agentes.
+
+### 🔴 La deuda de dos pases, cerrada: los 111 archivos de `edu-convokit`
+
+**Instrumento:** `compose/code/p324-corpus-upstream-cession/`. La fila de `rosewang2008/edu-convokit`
+en esta tabla dice **MIT** y **es correcta para el codigo**; lo que cambia es el veredicto de
+entrega sobre su `data/`.
+
+| corpus | n | upstream (leido de los notebooks del propio redistribuidor) | cesion del titular | veredicto |
+|---|---|---|---|---|
+| `talkmoves` | 29 | `SumnerLab/TalkMoves` | `CC BY-NC-SA 4.0` — `LICENSE` **20.849 B** + `README` | no comercial |
+| 🔴 `amber` | 45 | `laurenceholt/amber` (XQ Institute) | **NINGUNA** — 0 licencias en 46 rutas, 404 en 7 nombres, `README` sin terminos | **no redistribuible** |
+| 🔴 `ncte` | 29 | `ddemszky/classroom-transcript-analysis` | `MIT` 1.068 B — **solo codigo**, repo de 10 archivos sin transcripciones | **no redistribuible** |
+
+🟢 **El pase 102 se reproduce al byte** (20.849 B), que es el control positivo del instrumento:
+sin reproducir el positivo conocido, ninguno de los dos negativos nuevos valdria.
+
+🟢 **Identidad de `amber`: 45/45** nombres identicos, diferencia simetrica **0**.
+🔴 **Identidad de `ncte`: NO verificable por nombre** y se dice — el upstream no publica los
+archivos, asi que la identidad descansa en el enlace de primera mano del redistribuidor, no en una
+huella. **El veredicto no depende de eso**: se sostiene con que el titular no cede el corpus por
+ningun canal publico.
+
+### 🔴 Lo que esto le hace a `R-102-PROCEDENCIA-DE-CORPUS`
+
+La receta trataba `amber` y `ncte` como **`NC` hasta prueba en contrario**, *«la direccion segura»*.
+🟢 **La direccion lo era.** 🔴 **La categoria no** (`P324`): `NC` concede uso no comercial y **se
+puede cumplir**; la ausencia de cesion **no concede nada**. La receta le daba a su lector un permiso
+que nadie otorgo. 🟢 **Su instruccion operativa se CONFIRMA y se fortalece:** *usar la libreria
+(MIT), no embarcar `data/`* — ahora apoyada en los **tres** corpus.
+
+---
 
 ## 🔴 Altas de agente: 0 — y el cero NO es una eleccion este pase: el canal de verificacion esta APAGADO (pase 103 del 2026-10-05)
 

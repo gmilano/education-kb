@@ -7,6 +7,7 @@ updated: 2026-10-05
 # 📡 Tendencias — education
 
 > Ventana de investigación: septiembre 2026. Verificado 2026-09-30; el pase 11, el 2026-10-01.
+> **Pase 104 del 2026-10-05:** 🟢 **El canal VOLVIO, y eso es `P320` confirmado en la direccion contraria: es un hecho de PERMISO.** El instrumento del pase 103 estaba intacto y le faltaba el derecho a correrlo; esta sesion **si** lo tiene. Medido con control negativo antes de usarlo (rama inventada, ruta inventada y repo inventado dan **404**; `main`/`master`/`HEAD` dan el **mismo** sha): `raw.githubusercontent.com` **200**, clon `--filter=blob:none` de terceros **OK**. 🔴 **Sigue apagado:** `api.github.com` **403**, y `openstax.org`, `creativecommons.org`, `arxiv.org`, `aclanthology.org` **bloqueados por egress** por `curl` **y** por el fetcher. 🔴 **La tendencia que manda es de PROCEDENCIA y aplica a cualquier plataforma de contenido, no solo a esta: el material didactico open source declara su licencia **por item**, y un campo por item se puede llenar MAL. Medido sobre `OATutor-Content`: **1.216 items, 24,3 % NO lleva la cesion que el README promete para «all content»** — 19,3 % con el campo VACIO, 3,6 % con `CC4.0` (que no nombra clausulas: `CC BY 4.0` y `CC BY-NC-SA 4.0` son ambas «CC 4.0»), y 1,4 % con **una URL que no es de licencia**.** 🔵 **Y los vacios NO son ruido: se concentran por curso. **5 de 21 cursos con 0 %**, y `OpenStax: Calculus Volume 1` con **1,3 %** (74 de 75 vacios) mientras `Elementary Algebra` e `Intermediate Algebra` dan **100 %**.** ⚠️ **La explicacion mas probable —que `Calculus Volume 1` sea `CC BY-NC-SA 4.0` en el titular mientras los demas son `CC BY 4.0`— NO se publica como hecho: `openstax.org` da 403 por egress y lo unico que la sostiene son ediciones DERIVADAS y agregadores, que es exactamente el error que `P314` le costo a esta base. **Queda pre-registrada como accion del pase 105, con su prediccion escrita antes de correrla.** 🟢 **Lo de primera mano es la correlacion y alcanza para una regla de entrega: en una plataforma de contenido, la tasa de etiquetado por curso es un indicador de procedencia, y el curso peor etiquetado es el primero que hay que auditar.** 🔵 **Señal de mercado del barrido: el eje 2026 de los LMS open source es incorporar tutoria AI dentro de la plataforma (LearnHouse) en vez de agregarla por fuera — y la capa que crece es ERP+LMS unificado (OpenEduCat: 3 M+ usuarios, 90+ paises, 70+ modulos) contra LMS puro.** Ver **`P322`**–**`P325`**.
 > **Pase 103 del 2026-10-05:** 🔴 **Tendencias 823–834, y la que manda es de método y contra esta base: `P321`** — un archivo append-only puede **sepultar un acierto bajo un error posterior**, y `intel/market.md` tiene hoy las dos versiones del calendario del AI Act conviviendo (pase 101 correcta, pase 102 falsa) sin que nada lo detecte. 🔴 **Agravante: los pases 100 y 101 LLEVABAN EL CONTADOR de ese mismo error de canal — el pase 102 fue la séptima reproducción, desde adentro.** 🟢 **El calendario real, con la norma que lo produce: Reglamento (UE) 2026/1744** (*Digital Omnibus on AI*, DOUE 24/07/2026, en vigor 27/07/2026) — art. 50 **vigente 2026-08-02** (gracia hasta **2026-12-02**), Anexo III educativo **2027-12-02** y **CONDICIONAL**, Anexo I **2028-08-02**. 🟢 **`P320`: el canal de verificación es un hecho de PERMISO, no sólo de red** — y una predicción **no corrida no es una predicción falsificada.
 > **Pase 102 del 2026-10-04:** 🟢 **Trece tendencias nuevas, numeradas 810–822** (el pase 101 cerró en 809). 🔴 **La que manda es una PREDICCIÓN PROPIA FALSIFICADA en las dos cláusulas: el pase 101 afirmó que la licencia por capa (`P315`) era la NORMA de la capa de observación de aula, y sobre el denominador pre-registrado de 9 repos las piezas con licencia de datos distinta de la del código, además de la conocida, son 0 — la predicción pedía ≥ 2 — y de las 2 que declaran datos una concede uso comercial EXPLÍCITO, así que tampoco hay mayoría `NC`.** 🔵 **Pero medirla destapó que la PREGUNTA estaba mal planteada, y eso es `P317`: la pregunta de datos son DOS ejes ortogonales —¿redistribuye corpus? y ¿cede algo sobre él?— y un barrido que sólo compara licencias DECLARADAS da PERMITIDO sobre la celda peor, porque esa celda es silenciosa.** 🔴 **`P318`: `rosewang2008/edu-convokit` —fila MIT de esta base, correcta para el código— redistribuye 29 transcripciones de TalkMoves, que `SumnerLab` publica `CC BY-NC-SA 4.0`, sin declarar términos de datos; 29 de 29 nombres medidos contra el árbol del upstream.** 🔴 **`P319`: la ausencia de `data/README.md` no es ausencia de datos — 404 en el path adivinado, 111 archivos de corpus en el árbol enumerado.** 🟢 **Y una cota mal atribuida se corrige: «la licencia de `speechocean762` no es verificable» era del CANAL, no del repo.**
 > **Pase 101 del 2026-10-04:** 🟢 **Trece tendencias nuevas, numeradas 797–809** (el pase 100 cerró en 796). 🔴 **La que manda es sobre el control compartido y la encontró un payload de un ALTA, no una fixture: `commercial_use_ok` devolvía uso comercial PERMITIDO para `CC-BY-NC-4.0`, una familia cuyo NOMBRE dice NonCommercial.** 🔴 **797–799: dos defectos distintos en la misma rama — el ORDEN entre atributos ORTOGONALES perdía el `NC` de un `CC BY-NC-SA`, y la compuerta de `P250` tenía DETRÁS cuatro familias que no son OSI, así que se abría sobre justo las que existe para atrapar.** 🔵 **800: y la dirección del daño es la peor de las dos — `P308` perdía permiso sobre un texto permisivo (cuesta una oportunidad); esto INVENTA permiso sobre un texto que lo prohíbe en su propio nombre (cuesta el entregable).** 🟢 **802: `P237` CERRADO, y el orden importó: primero se hizo a la librería un superconjunto, después se rewirearon las cuatro copias — que es la condición que el pase 100 había declarado y que convertía al rewiring obvio en una pérdida de tres familias.** 🔴 **803: el rewiring rompió el control de `p206`, porque extraía la función del TEXTO del archivo con `sed` en vez de medir su comportamiento.** 🔴 **805: la licencia tiene un eje de CAPA — permisiva en el código y no comercial en los datos — y esta base la trataba como una respuesta por repo.** 🔴 **806: la concesión puede vivir en el README sin archivo de licencia, y el canal secundario la leyó de un BADGE de shields.io.** 🔴 **807: la prensa de industria linkea un fork AGPL congelado del repo MIT que esta base ya tiene.** 🔴 **809: el canal regulatorio no se degrada hacia el silencio sino hacia la CONFIANZA — sexta reproducción del AI Act, ahora con una fecha de entrada en vigor falsa y precisa.** Ver `compose/code/p312-nc-gate-inversion/` (**21/21**) y `lib/test_license_family.sh` (**106/106**).
@@ -116,6 +117,65 @@ updated: 2026-10-05
 > (tendencia 29), se abre el **gap 20** y se registran dos advertencias de verificación: los agregadores de estrellas
 > están mal por ~2× y **un 403 de `curl` no es un 404**. Ver la nota de método del pase 12.
 > **Pase 11:** el Digital Omnibus es derecho vigente (tendencia 25), aparece la capa predictiva y está vacía (tendencia 26), y se corrige un error de método de diez pasadas sobre licencias permisivas (tendencia 27).
+
+## 🟢 Tendencias 835–842 — pase 104 del 2026-10-05: el canal vuelve, y la licencia del CONTENIDO resulta un eje con numero
+
+### 835 — La cesion por item es un campo, y el 24,3 % esta mal llenado
+
+🔴 **Medido, no estimado:** `CAHLR/OATutor-Content` declara en su README *«all content […] under
+CC BY 4.0»* y, sobre **1.216** de sus **13.371** problemas (muestreo sistematico), **24,3 %** no
+lleva esa cesion: **19,3 %** campo **vacio**, **3,6 %** `CC4.0`/`openstax` sin nombrar clausulas,
+**1,4 %** una **URL que no es de licencia**. 🟢 Dos muestras independientes concuerdan (n=406,
+n=1.216). Ver **`P322`**.
+
+### 836 — El estado peor no es el campo vacio: es el que parece lleno
+
+🔴 Los **17** items `URL-NO-LICENCIA` apuntan a **PDFs de solucionarios de examen**, y en **15 de
+17** el valor es **identico al campo `oer`**: se copio la **procedencia** al campo de **cesion**. Un
+campo asi **pasa cualquier compuerta que pregunte «¿hay algo?»** y no concede nada (`P314`).
+
+### 837 — El borde de capa puede ser otro repositorio
+
+🔴 El contenido de `OATutor` entra por **submodulo** desde `CAHLR/OATutor-Content`. El repo padre
+muestra `LICENSE` **MIT**, arbol **sin contenido** y **cero** licencias de contenido: **tres
+lecturas ciertas que enganan juntas**. Ver **`P323`**.
+
+### 838 — «Sin cesion» es mas restrictivo que `NC`, y la diferencia es operativa
+
+🔴 `NC` **es** una licencia: se puede cumplir, y permite demo interna mientras se negocia. La
+**ausencia de cesion** no concede nada. 🔵 Para `amber` el titular a quien habria que pedirle
+permiso es el de **grabaciones de menores de 8º y 9º grado**. Ver **`P324`**.
+
+### 839 — Una cesion puede ser impecable y no alcanzar al dato
+
+🔴 `MIT (c) 2022 Dora Demszky`, 1.068 B, sobre un arbol de **10 archivos sin una sola
+transcripcion**. El corpus NCTE viaja por **formulario por usuario**: redistribuirlo **quita una
+compuerta de acceso** deliberada. Ver **`P325`**.
+
+### 840 — El etiquetado de contenido es un indicador de procedencia
+
+🟢 **Los vacios no son ruido: se concentran por curso.** **5 de 21** cursos con **0 %**, y
+`OpenStax: Calculus Volume 1` con **1,3 %** (74 de 75 vacios) mientras `Elementary` e `Intermediate
+Algebra` dan **100 %**. 🔵 **Regla de entrega que se sostiene sola:** en una plataforma de
+contenido, **la tasa de etiquetado por curso ordena la cola de auditoria**. ⚠️ La explicacion mas
+probable —que ese libro sea `CC BY-NC-SA 4.0` en el titular— **no se publica**: `openstax.org` da
+403 y solo la sostienen ediciones derivadas (`P314`). **Pre-registrada para el pase 105.**
+
+### 841 — Las plataformas LMS completas de este barrido son copyleft; lo permisivo son componentes
+
+🔴 `learnhouse/learnhouse` **AGPL-3.0** y `frappe/lms` **AGPL-3.0**, las dos leidas del payload.
+🔵 **No es ruido de muestreo sino la estructura economica de la capa:** quien publica un LMS entero
+usa copyleft fuerte para proteger su propio SaaS. **Consecuencia para APAC**, donde el eje declarado
+es soberania y autohospedaje: la bandera AGPL es un argumento **en contra** en esa region.
+
+### 842 — El canal de verificacion es un hecho de permiso, y se mide en las dos direcciones
+
+🟢 El pase 103 registro `P320` con el canal **apagado**; este pase lo confirma con el canal
+**encendido**, mismo instrumento. 🔵 **La leccion operativa: un pase no hereda la declaracion de
+canal del anterior — la vuelve a medir, y con control negativo.** Si no se hubiera medido, estas
+ocho tendencias no existirian y el pase habria repetido *«canal denegado»* por inercia.
+
+---
 
 ## 🔴 Tendencias 823–834 — pase 103 del 2026-10-05: el canal de verificacion se apaga, y la base se descubre REGRESANDO sobre un acierto propio
 

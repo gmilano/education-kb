@@ -8,6 +8,7 @@ updated: 2026-10-05
 
 > Bases sobre las cuales construir. Verificado repo por repo vía WebFetch el 2026-09-30 (capas del pase 10, el 2026-10-01).
 > Leer la columna **Licencia** antes de proponer: media KB de educación es GPL/AGPL, no permisiva.
+> **Pase 104 del 2026-10-05:** 🟢 **El canal VOLVIO, y eso es `P320` confirmado en la direccion contraria: es un hecho de PERMISO.** El instrumento del pase 103 estaba intacto y le faltaba el derecho a correrlo; esta sesion **si** lo tiene. Medido con control negativo antes de usarlo (rama inventada, ruta inventada y repo inventado dan **404**; `main`/`master`/`HEAD` dan el **mismo** sha): `raw.githubusercontent.com` **200**, clon `--filter=blob:none` de terceros **OK**. 🔴 **Sigue apagado:** `api.github.com` **403**, y `openstax.org`, `creativecommons.org`, `arxiv.org`, `aclanthology.org` **bloqueados por egress** por `curl` **y** por el fetcher. 🟢 **La prediccion pre-registrada de este archivo, NO MEDIDA en el pase 103 y re-registrada sin cambios, se corre y la accion C (`OATutor`) sale **CONFIRMADA en la forma y FALSIFICADA en la magnitud**.** 🔴 **Y el gate de `P311` evito el error que este pase estaba por cometer: `OATutor` **ya es una fila** de `agents/top.md` (MIT) desde antes — la pista del pase 103 proponia darlo de alta aca, y lo que falta no es la fila sino la **capa de contenido**.** 🟢 **Codigo: `MIT`, `LICENSE` 1.104 B, *(c) 2023 Zachary A. Pardos — CAHL research lab*, leido del payload.** 🔴 **`P323` — el borde de capa es un **SUBMODULO**, o sea OTRO REPOSITORIO: el contenido vive en `CAHLR/OATutor-Content`, y ese repo tiene **CERO archivos de licencia en 51.929 rutas enumeradas** (aserido, y confirmado por sonda de 7 nombres: 404 en los 7). Un barrido que lee el `LICENSE` de la raiz del padre ve **MIT**, ve un arbol **sin contenido** y ve **cero** licencias de contenido: **las tres lecturas son ciertas y las tres enganan**.** 🔵 **Topologia NUEVA frente a `P315` (dato en un subdirectorio del mismo repo) y `P317` (corpus vendoreado sin declaracion).** 🔴 **`P322` — y el contenido se contradice con su propio README: declara *«ALL content […] under CC BY 4.0»* y sus campos por item dicen otra cosa. Medidos **1.216 de 13.371** problemas (muestreo sistematico, cada 11º): **75,7 % `CC BY 4.0`, 19,3 % campo VACIO, 3,6 % `CC4.0`/`openstax` sin clausulas, 1,4 % una URL QUE NO ES DE LICENCIA** — y los 17 de esa ultima clase estan **todos** en un curso y apuntan a **PDFs de solucionarios de examen**, con **15 de 17** identicos al campo `oer` del mismo item: se copio la PROCEDENCIA al campo de CESION (`P314`).** 🟢 **Dos muestras sistematicas independientes concuerdan (n=406 y n=1.216).** ⚠️ **0 altas fundacionales: las dos piezas nuevas de la industria que el barrido devolvio son AGPL-3.0 y CC BY-SA 4.0 — ninguna permisiva — y van a `verticals/`.** Ver **`P322`**–**`P325`**.
 > **Pase 103 del 2026-10-05:** 🔴 **0 altas fundacionales por canal DENEGADO, no por falta de candidatas.** Este estante clasifica familias leyendo el **payload** del titular; con el clon sin blobs denegado por permisos y `WebFetch` bloqueado 4/4, **cualquier fila nueva sería una familia inferida** (`P320`). ⚠️ **La predicción pre-registrada queda NO MEDIDA y re-registrada sin cambios.** Lo único establecido: el orden de magnitud del denominador — **304** apariciones de URL de GitHub en este archivo y **419** en `agents/top.md`, **apariciones y NO slugs distintos** (deduplicar exige el canal que falta, y presentarlas como conteo de repos sería el error de denominador de `P289`). 🔵 **Pista del pase, por este estante y no por `agents/`:** `OATutor`, **código MIT + 5 semestres de material didáctico CC BY 4.0** — sería el eje de licencia por capa de `P315`/`P317` **sobre una PLATAFORMA desplegable** y no sobre un corpus de investigación, y la consecuencia comercial cambia: *un corpus `NC` limita un paper; material `CC BY` dentro de un producto limita el producto del cliente*.
 > **Pase 102 del 2026-10-04:** 🔴 **0 altas fundacionales, y el pase gasta su esfuerzo en la acción pre-registrada del 101, que sale FALSIFICADA — pero el instrumento que la falsifica encuentra algo peor sobre una fila de ESTE archivo.** `rosewang2008/edu-convokit` (fila del pase 101, **MIT**, y la licencia es **correcta para el código**) **redistribuye 29 transcripciones del corpus TalkMoves**, que su titular `SumnerLab` publica bajo **`CC BY-NC-SA 4.0`** — y `edu-convokit` **no declara una sola línea** sobre términos de datos. 🟢 **Identidad medida, no inferida: 29 de 29 nombres coinciden con `data/Subset 1/` del upstream, huella `Boats and Fish 4_Grade 4 .xlsx` incluida (con el espacio antes de la extensión), y el upstream declara la licencia por dos canales que concuerdan (`LICENSE` 20.849 B + `README`).** 🔵 **Vendorea TRES corpus: `amber` (45) + `ncte` (29) + `talkmoves` (29) + 3 `.zip` + `annotated_data.csv` = 111 archivos.** 🟢 **Y la capa de habla de este archivo gana una corrección de alcance: el límite *«no se puede verificar la licencia de `speechocean762`»* que los pases 14 y 100 dejaron escrito era una cota de DOS CANALES (`openslr.org` y `huggingface.co`, `000` los dos), no del repo: su `README` declara disponibilidad «for both commercial and non-commercial purposes», leída de primera mano.** 🔴 **Cesión válida y DÉBIL —el árbol enumerado tiene 0 archivos de licencia en 5.263 rutas, aserido— así que no se eleva a familia OSI ni sirve para una garantía contractual.** 🔴 **`P319`: la ausencia de `data/README.md` no es ausencia de datos; sólo enumerar el árbol (canal de `P275`) ve el corpus.** 🟢 **`p317` 37/37, 53 suites pasan, 0 fallan.** Ver **`P317`**–**`P319`**.
 > **Pase 101 del 2026-10-04:** 🟢 **3 altas fundacionales, y son una CAPA que este estante no tenía: el análisis del DISCURSO de aula — la librería, la herramienta de anotación y el modelo de referencia con su línea base.** `rosewang2008/edu-convokit` (**MIT**, 1.069 B, `Rose E. Wang` 2023, NAACL 2024) es el pipeline de tres módulos —preprocesar, anotar, analizar— sobre transcripciones de aula y tutoría; `EduNLP/EduCoder` (**MIT**, 1.068 B, `EduNLP Lab` 2026, ACL 2026) es la anotación en EQUIPO con video sincronizado y comparación humano–LLM; `devissaputra/classroom_discourse_intelligence` (**MIT** en código) trae la línea base medida (**macro-F1 0,5198** contra **0,1152** de mayoría sobre **175.129** enunciados docentes). 🔴 **Y la tercera es el espécimen de `P315`: es permisiva en el CÓDIGO y `CC BY-NC-SA 4.0` —NO COMERCIAL— en los DATOS, así que el método y la línea base se entregan y el modelo entrenado sobre ese corpus NO.** 🟢 **`P253`/`P306` otra vez, y esta vez el registro descartó a los dos candidatos en vez de elegir uno: el barrido devolvió `stanfordnlp/edu-convokit` (URL) y `EduNLP/edu-convokit` (título del mismo resultado), los dos sirven el payload, y `pypi.org` declara `Source: github.com/rosewang2008/edu-convokit` — un TERCERO.** 🔴 **El hallazgo de instrumento salió de medir el payload de datos de la tercera: la compuerta de uso comercial de esta base devolvía PERMITIDO para `CC-BY-NC-4.0`, una familia cuyo NOMBRE dice NonCommercial** (`P312`). 🟢 **`lib/license_family.sh` 79/79 → 106/106; `P237` CERRADO —las cuatro copias inline rewireadas, y primero se hizo a la librería un superconjunto con `BUSL`/`Elastic`/`PolyForm` como el pase 100 exigía—; 52 suites pasan, 0 fallan.** Ver **`P312`**–**`P316`**.
@@ -108,6 +109,81 @@ corre ése antes de escribir uno a mano** (tendencia **313**). 🟢 **Y el `gafa
 > y 5 en `schemas12/`, y contar sólo el primero es lo que hizo invisible el segundo dialecto de SCORM (**P106**).
 > **Pase 36 del 2026-10-02:** 🔵 **este pase no agrega repos: le pone FECHA a los que ya están, y la fecha cambia tres recomendaciones.** Se midió la capa PHP de evaluación y telemetría en Packagist —el único registro de los tres que entrega descargas en este entorno (`api.npmjs.org` y `pypistats.org` dan **403 a CONNECT**)— y el resultado está en `repos/trending.md`. **Lo que hay que saber antes de proponer desde este archivo:** 🔴 **la pieza xAPI más descargada de esta base, `rusticisoftware/tincan` (Apache-2.0, 6.178 desc./mes, 863.777 totales), no publica desde el 2022-11-02**, y ⚠️ **el único MIT de esa capa, `php-xapi/client`, está parado desde el 2021-03-24** con 825 desc./mes. 🔵 **La lectura es que en xAPI/PHP lo permisivo está quieto y lo vivo es copyleft**, así que la receta de telemetría se sostiene en **Ralph (MIT)** + **`lrsql` (Apache-2.0)** + **`learnmcp-xapi` (MIT)** y no en la capa PHP. 🟢 **Del lado de evaluación, lo activo es `oat-sa/extension-tao-testqti`** (**885 versiones**, release del **2026-09-30**) **y sigue siendo GPL-2.0-only**, mientras **lo permisivo es lo nuevo**: `@longsightgroup/qti3-cli` (**MIT**, 41 releases desde el 2026-05-21, último **2026-10-01**) con **cero dependencias de terceros** — sus 4 dependencias son todas `@longsightgroup/*` pinneadas a la misma versión exacta. **Su manifiesto MCP completo de 20 tools está escrito en `compose/patterns.md` (P76).** 🔴 **Y una corrección de catálogo: `oat-sa/qti-sdk` devuelve 404 en Packagist porque es el nombre del REPO — su paquete es `qtism/qtism`** (GPL-2.0-only, 218.212 descargas totales, 315 versiones). **Nombre de repo y nombre de paquete son identificadores distintos, y confundirlos produce un 404 que parece una ausencia** — pasó igual con `1edtech/oneroster`, `imsglobal/lti-1-3-php-library` y `packbackbooks/lti-1-3-php-library`, los tres **404**, que se anotan como *«no verificado en Packagist bajo ese nombre»* y **no** como inexistentes. ⚠️ **Acción pendiente que el pase 37 tiene asignada: este archivo nunca pasó por el control de *slugs* distintos ni por el de *backlink*** — los dos que en `agents/top.md` encontraron **un duplicado** y **dos colisiones** este mismo pase.
 > **Pase 11 del 2026-10-01:** aparece una licencia que las diez pasadas anteriores filtraban sin saberlo — **ECL-2.0**, con la que licencia todo Apereo (Sakai, Opencast, OpenLRW). Es Apache-2.0 con el alcance de patentes acotado, aprobada por OSI y FSF, y **es apta para construir arriba**. Ver la capa de analítica institucional, abajo.
+
+## 🟢 Altas fundacionales: 0 — y la prediccion que llevaba dos pases diferida se corre: CONFIRMADA en la forma, FALSIFICADA en la magnitud (pase 104 del 2026-10-05)
+
+### 🔬 El canal (`P247`), medido y no heredado
+
+🟢 `raw.githubusercontent.com` **200**, clon `--filter=blob:none` de terceros **OK**, los dos con
+control negativo (rama/ruta/repo inventados → **404** los tres). 🔴 `api.github.com` **403**;
+`openstax.org`, `creativecommons.org`, `arxiv.org`, `aclanthology.org` **bloqueados por egress**
+por `curl` **y** por el fetcher.
+
+### 🔴 El gate de `P311` evito el error que este pase estaba por cometer
+
+La pista del pase 103 proponia dar `OATutor` de alta **en este estante**. 🔴 **Ya es una fila de
+`agents/top.md`** (MIT), publicada desde antes. **No se da de alta por segunda vez.** 🔵 **Lo que
+faltaba no era la fila: era la capa de contenido** — y esa si es nueva.
+
+🟢 **Lo mismo con `frappe/lms`**, que el barrido devolvio como si fuera hallazgo y **ya estaba
+publicado**; de paso quedo medido que es **AGPL-3.0** (33.892 B, payload).
+
+### 🟢 La accion C, corrida: `OATutor` tiene el eje de capa, y el riesgo NO esta donde la pista decia
+
+**Instrumento:** `compose/code/p322-content-item-license/` (**10/10** + **2/2**).
+
+| | pre-registrado por el pase 103 | medido | veredicto |
+|---|---|---|---|
+| codigo **MIT** | si | 🟢 `LICENSE` **1.104 B**, *(c) 2023 Zachary A. Pardos — CAHL research lab* | **CONFIRMADA** |
+| contenido **CC BY 4.0** | si, en bloque | 🔴 **75,7 %** de los items; **24,3 % no** | **FALSIFICADA en la magnitud** |
+| es **plataforma**, no corpus | si | 🟢 desplegable en GitHub Pages, middleware LTI para Canvas | **CONFIRMADA** |
+
+🔴 **`P323` — el contenido esta en OTRO REPOSITORIO.** Entra por submodulo
+(`src/content-sources/oatutor` → `CAHLR/OATutor-Content`), y ese repo tiene **0 archivos de licencia
+en 51.929 rutas enumeradas**, aserido, mas sonda de 7 nombres con **404 en los 7**. Su unica cesion
+vive en el **README** y en el **campo por item**.
+
+🔴 **`P322` — y el README se contradice con los campos del propio repo.** Sobre **1.216** de
+**13.371** problemas: **920** `CC BY 4.0`, **235** campo **vacio**, **44** `CC4.0`/`openstax` sin
+clausulas, **17** una **URL que no es de licencia** —todos en un mismo curso, apuntando a PDFs de
+solucionarios, **15 de 17** identicos al campo `oer`—.
+
+🔵 **La pista suponia que el riesgo era el `CC BY` dentro del producto del cliente. `CC BY` es
+barato: se atribuye y listo. El riesgo medido es el 24,3 % del que no se sabe que se puede hacer.**
+
+### 🔴 La correlacion que SI es de primera mano, y la explicacion que NO se publica
+
+🟢 **Medido:** el etiquetado es **97–100 %** en los libros de OpenStax de algebra y estadistica, y
+**se derrumba** fuera de ahi — **5 de 21 cursos en 0 %**, y `OpenStax: Calculus Volume 1` en
+**1,3 %** (74 de 75 vacios). **Los vacios no son ruido: se concentran por procedencia.**
+
+🔴 **Lo que NO se publica como hecho:** que `Calculus Volume 1` sea `CC BY-NC-SA 4.0` en el titular
+mientras los demas son `CC BY 4.0`. `openstax.org` y `creativecommons.org` dan **403 por egress**
+por los dos canales, y lo unico que lo sostiene son **ediciones derivadas y agregadores** — el error
+exacto que `P314` ya le costo a esta base. **Se dice en vez de callarse, y no entra.**
+
+### 🔴 Accion pre-registrada para el pase 105, con su numero escrito ANTES de correrla
+
+**Accion:** leer, **del titular** (`openstax.org`), la licencia de los **7** libros que
+`OATutor-Content` nombra.
+
+**Prediccion falsable:** *`Calculus Volume 1` declarara una licencia **distinta** de `CC BY 4.0`
+—se espera `CC BY-NC-SA 4.0`— y sera **uno de a lo sumo dos** de los 7 en esa condicion.* Combinada
+con la tasa **ya medida** (1,3 %, la mas baja de los cursos OpenStax), sostendria que **el campo
+vacio es la huella de una procedencia que no es `CC BY 4.0`**.
+
+🔵 **Que la refuta:** que el titular declare `CC BY 4.0` para ese libro. Entonces la correlacion es
+**ruido**, el vacio es descuido de autoria, y `P322` se queda solo con la magnitud —que se sostiene
+sola—.
+
+⚠️ **Lo que NO puede pasar es rellenar con el canal secundario:** si el egress sigue cerrado, se
+dice *no se pudo correr*, como hizo el pase 96.
+
+**Segunda accion, mas barata:** resolver que significa **`CC4.0`** (38 items, cursos `Solid
+Foundations`). No nombra clausulas — `CC BY 4.0` y `CC BY-NC-SA 4.0` son ambas «CC 4.0».
+**Prediccion: los 38 salen de una sola plantilla de autoria y resuelven a una unica familia.**
+
+---
 
 ## 🔴 Altas fundacionales: 0 — el canal de payload esta DENEGADO, y una fila sin payload no es una fila (pase 103 del 2026-10-05)
 

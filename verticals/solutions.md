@@ -9,6 +9,7 @@ updated: 2026-10-05
 > Plataformas verticales reales, en producción, customizables con AI.
 > Modelo: partir de algo que ya funciona y que ya tiene los datos, y agregar la capa agéntica arriba.
 > Verificado vía WebFetch el 2026-09-30; las capas del pase 11, el 2026-10-01.
+> **Pase 104 del 2026-10-05:** 🟢 **El canal VOLVIO, y eso es `P320` confirmado en la direccion contraria: es un hecho de PERMISO.** El instrumento del pase 103 estaba intacto y le faltaba el derecho a correrlo; esta sesion **si** lo tiene. Medido con control negativo antes de usarlo (rama inventada, ruta inventada y repo inventado dan **404**; `main`/`master`/`HEAD` dan el **mismo** sha): `raw.githubusercontent.com` **200**, clon `--filter=blob:none` de terceros **OK**. 🔴 **Sigue apagado:** `api.github.com` **403**, y `openstax.org`, `creativecommons.org`, `arxiv.org`, `aclanthology.org` **bloqueados por egress** por `curl` **y** por el fetcher. 🟢 **+2 verticales, las primeras en varios pases, y las dos con la licencia leida del PAYLOAD y clasificada por el control compartido (`lib/license_family.sh`, `P237`).** 🔴 **Y las dos son COPYLEFT, que es el hallazgo del pase para este estante: `learnhouse/learnhouse` **AGPL-3.0** (34.522 B) y `GarethManning/claude-education-skills` **CC BY-SA 4.0** (1.229 B).** 🔵 **Ninguna de las dos entra en el foco MIT/Apache/BSD de esta base, y se publican igual CON la bandera puesta: un LMS AGPL que el cliente expone por red arrastra la clausula de red sobre sus propias modificaciones, y una libreria de skills `CC BY-SA` impone **share-alike sobre el material derivado**, que es justo lo que un estudio produce encima.** ⚠️ **`frappe/lms` NO entra: el gate de `P311` lo encontro ya publicado — y de paso queda medido que tambien es **AGPL-3.0** (33.892 B), leido del payload.** 🔵 **`claude-education-skills` declara 165 skills pedagogicas en 20 dominios y **acceso MCP hospedado ahora con token**: el camino libre es local/plugin, que es el que un estudio usaria de todos modos.** Ver **`P322`**–**`P325`**.
 > **Pase 103 del 2026-10-05:** 🔴 **0 verticales nuevas por canal DENEGADO** (clon sin blobs sin permiso, `WebFetch` bloqueado 4/4; `P320`), y el eje que este archivo gana es de **CALENDARIO: toda fila ya publicada tiene DOS relojes de AI Act, no uno.** 🟢 **Art. 50 (marcar contenido sintético) está VIGENTE desde `2026-08-02` con gracia hasta `2026-12-02`** — aplica a cualquier LMS o autograder de esta tabla que **genere** texto, consignas, feedback o cursos, y es justo lo que `aiact-50-2-pack/` de esta base ya marca sobre SCORM ya armado (**27/27**, **37/37** con `xmllint`). 🔴 **Anexo III (admisión, *scoring*, deserción, conducta en examen) se diferió al `2027-12-02` y es CONDICIONAL** — cotizarlo hoy como *«obligación inminente»* es incorrecto desde julio de 2026. 🔵 **Pistas sin verificar:** `OATutor` (MIT + contenido CC BY 4.0), **Moodle 5.1** (*toggle* de AI **por curso y por actividad** — que leído contra el art. 50 vuelve **finito** el inventario de lo que hay que marcar) y **Open edX** (*AI Assistant* dentro del perímetro).
 > **Pase 101 del 2026-10-04:** 🔴 **Verticales nuevas: 0 — y por primera vez el cero viene con el gate que lo PRUEBA en vez de con una impresión.** El barrido obligatorio del encargo (`open source platform education ERP CRM MIT Apache`) devolvió por vigesimoséptima vez el mismo eje generalista, y las 5 candidatas se pasaron por `p311` antes de redactar nada: **`openeducat/openeducat_erp`, `aureuserp/aureuserp`, `frappe/education`, `frappe/erpnext` y `apache/ofbiz` → 5 de 5 YA PUBLICADAS**, con archivo, línea y sección. 🔵 **Veintisiete pases con el mismo resultado es una propiedad del barrido: la consulta pide «plataforma + ERP/CRM + licencia» y eso describe el mercado generalista, no la vertical educativa — su cero es un dato y se mantiene por eso, pero el presupuesto de descubrimiento ya no se gasta esperando que rinda.** 🔴 **Lo que SÍ cambia en este archivo es una advertencia de PROCEDENCIA sobre una fila que ya tenía, y es accionable antes de cotizar:** este archivo nombra `OpenMAIC` (MIT, Tsinghua) como una de las dos únicas bases de tutor open source **permisivas y de escala**, y el barrido de este pase destapó que la prensa de industria linkea como *«el proyecto OpenMAIC en GitHub»* un **fork congelado en `v0.2.1` con `AGPL-3.0`** — un *minor* antes del relicenciamiento AGPL→MIT de v0.3.0. **La fila es correcta para el upstream `THU-MAIC/OpenMAIC`; el riesgo es que el slug que el cliente traiga no sea ése** (`P316`). 🟢 **Y la capa nueva del pase —observación de aula y análisis del discurso, 3 piezas permisivas— se monta SOBRE lo desplegado y no reemplaza nada: es la que convierte la grabación que el LMS ya guarda en evidencia para el docente** (ver `compose/patterns.md`, `R-101-OBSERVACION-PERMISIVA`). Ver **`P312`**–**`P316`**.
 > **Pase 100 del 2026-10-04:** 🟢 **2 verticales nuevas, y las dos llenan el hueco que el pase 5 dejó ABIERTO en la capa de autograding de este archivo: una plataforma desplegada cuya licencia SÍ se pueda construir encima.** `Submitty/Submitty` (**BSD-3-Clause**, `LICENSE.md` 1.542 B, **titular organizacional** `Submitty`, 2014-2026 — RPI/RCOS) y `autolab/Autolab` (**Apache-2.0**, `LICENSE` 11.324 B — CMU). 🔴 **Por qué importa: la fila que este archivo tiene en esa capa desde el pase 5 es `Autograder.io`, de la Universidad de Michigan, con ~5.000 alumnos por semestre y la licencia marcada «no declarada» — y este pase la volvió a medir en 7 nombres de archivo y SIGUE sin ceder nada.** 🔵 **Así que la capa deja de tener un hueco: lo desplegado-y-no-usable ahora tiene dos alternativas desplegadas Y permisivas, con ~5.000 alumnos/semestre cada una en su institución.** 🟢 **Y `autolab/Autolab` trae una clase de indicio REGIONAL nueva para esta base: su `README` declara el DESPLIEGUE por sede —Pittsburgh, Silicon Valley, Qatar y Rwanda— o sea que una plataforma coloca DOS regiones (North America y EMEA) por huella de operación y no por domicilio del titular, que es lo que `P135` prohíbe inferir.** 🔴 **`P311`: el pase casi publica como alta a `INGInious/INGInious` y a `eecs-autograder/autograder.io`, las dos ya en ESTE archivo desde los pases 67 y 5; el gate nuevo las frenó antes de escribir** (`p311`, **11/11**, 14 slugs → 5 ya publicados). 🟢 **`lib/license_family.sh` 62/62 → 79/79; 51 suites pasan, 0 fallan.** Ver **`P308`**–**`P311`**.
@@ -162,6 +163,82 @@ updated: 2026-10-05
 > **`qti3-pnp`**, que abren accesibilidad de evaluación como entregable auditable (**P72**). ⚠️ **Open edX cambia de
 > recomendación: proponer con presupuesto de mantenimiento (gap 70).** Ver la sección del pase 33, abajo.
 
+
+## 🟢 +2 verticales — y las DOS son copyleft, que es el hallazgo de este estante (pase 104 del 2026-10-05)
+
+### 🔬 El canal (`P247`), medido este pase y NO heredado
+
+🟢 **Volvio.** El pase 103 registro el canal **DENEGADO** y dejo tres acciones sin medir; `P320`
+decia que eso es un hecho de **permiso**, no solo de red. Esta sesion tiene el permiso.
+
+| canal | pase 103 | pase 104 |
+|---|---|---|
+| `raw.githubusercontent.com` (payload) | denegado | 🟢 **200** |
+| clon `--filter=blob:none` de terceros (arbol) | denegado | 🟢 **OK** |
+| `api.github.com` | 403 | 🔴 **403** |
+| `openstax.org`, `creativecommons.org`, `arxiv.org`, `aclanthology.org` | bloqueados | 🔴 **bloqueados** (`curl` y fetcher) |
+
+🔵 **Control negativo corrido ANTES de apoyar una fila:** rama inventada, ruta inventada y repo
+inventado dan **404** los tres; `main`, `master` y `HEAD` dan el **mismo sha**. Un canal que no
+discrimina no sostiene ningun negativo suyo.
+
+### 🟢 Las dos altas, con la licencia leida del PAYLOAD
+
+Clasificadas por el control compartido `lib/license_family.sh` (`P237` — no se reescribe un
+clasificador por pase).
+
+| Plataforma | Repo | Licencia | Bytes | Que es | Region |
+|---|---|---|---|---|---|
+| **LearnHouse** | https://github.com/learnhouse/learnhouse | 🔴 **AGPL-3.0** | 34.522 | LMS open source con editor de contenido por bloques estilo Notion, **tutoria AI integrada en la plataforma**, cursos, colecciones, asignaciones con seguimiento de entregas, foros y podcasts. Autohospedable. | Global |
+| **Education Agent Skills Library** | https://github.com/GarethManning/claude-education-skills | 🔴 **CC BY-SA 4.0** | 1.229 | **165 skills pedagogicas basadas en evidencia en 20 dominios**, pensadas para orquestacion por agente. Dominios 1–19 para docente y disenador; el 20 es el primero orientado al alumno. Corre local, como plugin, o por MCP. | Global |
+
+### 🔴 Por que la bandera de licencia es el dato, y no una nota al pie
+
+🔴 **Ninguna de las dos esta en el foco MIT/Apache/BSD de esta base**, y entran igual porque son
+reales y utiles — pero con la consecuencia escrita, que es lo que un estudio necesita antes de
+proponerlas:
+
+- **AGPL-3.0 (`LearnHouse`)** — la clausula de red alcanza al **uso por red**, no solo a la
+  distribucion. Un LMS que el cliente expone a sus alumnos **es** uso por red: las modificaciones
+  del cliente quedan alcanzadas. 🔵 **No lo descalifica** —un despliegue sin modificar el core, o un
+  cliente que acepte publicar sus cambios, es perfectamente viable— **pero cambia la conversacion de
+  contrato**, y descubrirlo despues de la propuesta es caro.
+- **CC BY-SA 4.0 (`claude-education-skills`)** — es licencia de **contenido**, no de codigo, y el
+  *share-alike* alcanza al **derivado**. Las skills son exactamente el material que un estudio
+  adapta: adaptarlas produce obra derivada, y la obra derivada **hereda `BY-SA`**.
+
+⚠️ **Y una advertencia de runtime, que no es detalle:** el acceso **MCP hospedado** de
+`claude-education-skills` **ahora exige token**; el camino libre es local/plugin. Una dependencia
+que cambia de regimen de acceso a mitad de un proyecto es riesgo de entrega.
+
+### ⚠️ `frappe/lms` NO es alta — y el gate lo atrapo
+
+🟢 **El gate de `P311` hizo su trabajo:** `frappe/lms` aparecio en el barrido como si fuera
+hallazgo, y **ya esta publicado en este archivo**. No se da de alta por segunda vez. 🔵 **De paso
+queda medido lo que no estaba: tambien es `AGPL-3.0`** (`license.txt`, 33.892 B, payload).
+
+🔵 **Patron de la capa, dicho con las tres juntas:** los LMS open source **desplegables y completos**
+de este barrido son **AGPL** (`LearnHouse`, `frappe/lms`), y la parte permisiva de la vertical vive
+en **componentes** (lo que este archivo ya tenia), no en plataformas enteras. **No es ruido de
+muestreo: es la estructura economica de la capa** — quien publica un LMS entero usa copyleft fuerte
+para proteger el SaaS propio.
+
+### 🔴 La pista de `OATutor` del pase 103 se RESOLVIO, y no como decia la pista
+
+La pista proponia `OATutor` como *«primera plataforma con el eje de licencia por capa»*. Medido
+(`compose/code/p322-content-item-license/`): **el eje existe, y el riesgo esta en el otro lado.**
+
+- 🟢 **Codigo `MIT`** (1.104 B), confirmado del payload.
+- 🔴 **El contenido no esta en el repo:** entra por **submodulo** desde `CAHLR/OATutor-Content`,
+  que tiene **0 archivos de licencia en 51.929 rutas enumeradas** (`P323`).
+- 🔴 **Y su README promete *«all content under CC BY 4.0»* mientras sus campos por item dicen otra
+  cosa:** sobre **1.216** problemas medidos, **24,3 %** no lleva esa cesion (`P322`).
+
+🔵 **La pista suponia que el riesgo era el `CC BY` —atribucion dentro del producto del cliente—.
+`CC BY` es barato: se atribuye y listo. El riesgo medido es el 24,3 % del que NO se sabe que se
+puede hacer.**
+
+---
 
 ## 🔴 Verticales nuevas: 0 — y el eje que este archivo gana es de CALENDARIO: todo lo desplegado aca tiene DOS relojes de AI Act, no uno (pase 103 del 2026-10-05)
 

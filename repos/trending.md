@@ -8,6 +8,55 @@ updated: 2026-10-05
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 
+## 2026-10-05 — pase 104: trending vuelve vacio por TRIGESIMOTERCERA vez, pero el canal de respaldo esta VIVO
+
+🟢 **A diferencia del pase 103, este pase SI tiene canal.** `raw.githubusercontent.com` **200** y el
+clon `--filter=blob:none` de repos de terceros **OK**, los dos medidos con control negativo antes de
+usarlos (rama/ruta/repo inventados → **404**). Sigue apagado `api.github.com` (**403**) y el egress
+hacia `openstax.org`, `creativecommons.org`, `arxiv.org` y `aclanthology.org`.
+
+🔴 **`github trending education AI 2026` (año calculado) volvio a dar el eje generalista: 0 repos de
+la industria educativa** (`P281`, trigesimotercera vez). 🟢 **Pero el barrido por VERTICAL
+—`open source platform education ERP SIS MIT Apache`— si devolvio piezas, y el canal permitio
+medirlas.**
+
+### 🔴 Las dos piezas nuevas de la industria son COPYLEFT, y eso es el hallazgo
+
+| repo | licencia (payload, clasificada por el control compartido) | bytes | que es |
+|---|---|---|---|
+| `learnhouse/learnhouse` | 🔴 **AGPL-3.0** | 34.522 | LMS con editor por bloques estilo Notion, tutoria AI integrada, asignaciones, foros |
+| `GarethManning/claude-education-skills` | 🔴 **CC BY-SA 4.0** | 1.229 | 165 skills pedagogicas en 20 dominios, orquestables por agente |
+| `frappe/lms` | 🔴 **AGPL-3.0** | 33.892 | LMS; **ya publicado** — no es alta, lo atrapo el gate de `P311` |
+
+🔵 **Ninguna entra en el foco MIT/Apache/BSD de esta base, y se publican igual CON la bandera.** Un
+LMS **AGPL** expuesto por red arrastra la clausula de red sobre las modificaciones del cliente; una
+libreria de skills **CC BY-SA** impone **share-alike sobre el derivado**, que es exactamente lo que
+un estudio produce encima. 🟢 **Van a `verticals/solutions.md`, no a este estante.**
+
+⚠️ **`claude-education-skills` cambio su acceso MCP hospedado a token**; el camino libre es
+local/plugin. Se registra porque una dependencia de runtime que cambia de regimen de acceso es
+riesgo de entrega, no detalle.
+
+### 🔴 `P323` — el borde de capa puede ser OTRO REPOSITORIO
+
+La accion C pre-registrada (`OATutor`) se corrio. Instrumento:
+`compose/code/p322-content-item-license/`.
+
+🔴 **El gate de `P311` evito el error que este pase estaba por cometer:** la pista del pase 103
+proponia dar `OATutor` de alta en `repos/foundations.md`, y **ya es una fila de `agents/top.md`**
+(MIT) desde antes. Lo que faltaba no era la fila: era la **capa de contenido**.
+
+🟢 **Codigo:** `MIT`, `LICENSE` 1.104 B, *(c) 2023 Zachary A. Pardos — CAHL research lab*.
+🔴 **Contenido:** no esta en ese repo. Entra por **submodulo** desde `CAHLR/OATutor-Content`, que
+tiene **0 archivos de licencia en 51.929 rutas enumeradas** (aserido; mas sonda de 7 nombres, 404
+en los 7). **Un barrido que lee el `LICENSE` de la raiz del padre ve MIT, ve un arbol sin contenido
+y ve cero licencias de contenido: las tres lecturas son ciertas y las tres enganan.**
+
+🔵 **Topologia nueva** frente a `P315` (dato en subdirectorio del mismo repo) y `P317` (corpus
+vendoreado sin declaracion).
+
+---
+
 ## 2026-10-05 — pase 103: GitHub trending vuelve vacio por TRIGESIMOSEGUNDA vez — y por PRIMERA vez el canal de respaldo tambien esta apagado
 
 🔴 **Este pase es el primero de la serie sin NINGUN canal de repos.** Los 31 pases anteriores
