@@ -1,7 +1,7 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-04
+updated: 2026-10-05
 ---
 
 # 🏭 Verticales de partida — Education
@@ -160,6 +160,46 @@ updated: 2026-10-04
 > versiones), así que lo permisivo (`qti3-*`, `instructure/qti`) es **lo único proponible** — con **`qti3-a11y`** y
 > **`qti3-pnp`**, que abren accesibilidad de evaluación como entregable auditable (**P72**). ⚠️ **Open edX cambia de
 > recomendación: proponer con presupuesto de mantenimiento (gap 70).** Ver la sección del pase 33, abajo.
+
+
+## 🔴 Verticales nuevas: 0 — y el eje que este archivo gana es de PROCEDENCIA DE DATOS, no de plataforma (pase 102 del 2026-10-04)
+
+### 🔬 El canal (`P247`), medido este pase
+
+`github.com` (web) · `api.github.com` · `codeload` → 🔴 **403** · `raw.githubusercontent.com` →
+🟢 **200 con payload** · `pypi.org` · `registry.npmjs.org` → 🟢 **200** ·
+`huggingface.co/api/datasets` · `openslr.org` · `arxiv.org` → 🔴 **000** · 🆕 clon
+`--filter=blob:none --no-checkout --depth 1` → 🟢 **funciona** (`P275`, el canal que **enumera**).
+
+### 🔴 Por qué 0, y por qué el cero de este archivo es el más barato de los ocho
+
+El barrido de verticales del encargo (`open source platform education ERP CRM MIT Apache LMS`)
+devolvió **exactamente el inventario que este archivo ya tiene**: Moodle, Open edX, Sakai, ILIAS,
+Canvas, Chamilo, OpenEduCat, Forma LMS. 🟢 **Ninguna plataforma nueva, y el dato plano que sí viaja:**
+la fuente del barrido declara **Moodle con más de 400 millones de usuarios y 150.000 sitios
+registrados**, y describe **Open edX** como *«originally from MIT and Harvard»*, AGPL, Python/Django.
+**Son cifras de la fuente, no mediciones de esta base**, y así quedan marcadas.
+
+### 🟢 El eje nuevo que este archivo necesita, y sale del hallazgo de `p317`
+
+🔵 **Una plataforma vertical no es sólo su licencia de código: es también lo que trae adentro.** El
+pase 102 midió que `rosewang2008/edu-convokit` redistribuye **111 archivos de corpus** bajo una cesión
+**MIT** que no cubre el corpus (`talkmoves` es **`CC BY-NC-SA 4.0`** del upstream `SumnerLab`), y que
+**ningún instrumento de esta base preguntaba por eso**: todos preguntaban por el archivo de licencia.
+
+🔴 **La pregunta que este archivo le debe a una venta, y que queda abierta:** de las plataformas
+inventariadas acá —que se despliegan **con datos adentro**: cursos de ejemplo, bancos de ítems,
+corpus de demo— **¿cuáles traen material que su propia licencia no cubre?** Un Moodle o un Open edX
+desplegado para un cliente arrastra lo que venga en su árbol. **Este pase no lo midió** y no se
+afirma nada sobre ellas; queda como la pregunta de la capa, con el instrumento (`p317`, eje A) ya
+escrito y probado para contestarla.
+
+🟢 **Lo que sí queda utilizable hoy:** el eje A de `p317` corre sobre cualquier slug
+(`redistributes_corpus`, umbral 20 archivos de payload bajo directorio de datos de primer nivel) y el
+eje B lee la cesión de datos del payload. **Es el control que faltaba antes de entregar una
+plataforma customizada**, y está en `compose/code/p317-data-license-layer/` con 37/37.
+
+---
 
 
 ## 🔴 Verticales nuevas: 0 — y el cero viene PROBADO por el gate, no afirmado (pase 101 del 2026-10-04)

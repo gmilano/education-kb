@@ -1,7 +1,7 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-04
+updated: 2026-10-05
 ---
 
 # 📚 Education KB
@@ -68,6 +68,8 @@ o la variable de entorno (regla de **P107**, pase 47):
 | **`p251-cohort-lineage/`** | **la compuerta de `P251`: que la paternidad NO se pueda afirmar desde la ausencia de menciones en el indice propio, con la afirmacion LITERAL del pase 82 como control negativo (debe salir `NO-CLAIM`)** | `python3 test_lineage.py` | 🟢 **26/26** *(nuevo en el pase 83)* |
 | ídem, el barrido real del cohorte | topologia por 3 canales (sha256 del `LICENSE`, titular vs dueño, `package.json`); **se niega a correr si el canal no discrimina** | `sh sweep_lineage.sh > rows.tsv && python3 lineage.py rows.tsv` | 🟢 **7 `DERIVATIVE-OF` · 6 `ORIGIN-CANDIDATE` · 4 `UNDETERMINED`** de 17 |
 | **`lib/`** (clasificador compartido) | **familia por bloque de título (`P171`) + el eje de uso comercial con su COMPUERTA OSI + la NEGATIVA explícita (`P299`) + invariancia al REFLUJO del texto (`P308`) + las familias CC COMPUESTAS y el cierre de la compuerta sobre `NonCommercial` (`P312`)** | `sh test_license_family.sh` | 🟢 **106/106** *(era **41/41** → **50/50** → **62/62** → **79/79**; `P312` agregó el eje que estaba VACÍO —ninguna de las 79 aserciones pasaba un payload de Creative Commons—, y con él las tres familias no-OSI que vivían sólo en la copia inline de `p170`: `BUSL`, `Elastic`, `PolyForm`)* |
+| **`p317-data-license-layer/`** | **los DOS ejes ortogonales de la pregunta de datos (`P317`): ¿el repo REDISTRIBUYE corpus? y ¿CEDE algo sobre él?** — con el control negativo que mide el falso negativo del instrumento viejo (`P319`: adivinar paths da 404 sobre un repo con 111 archivos de corpus adentro) | `python3 test_corpus_axis.py` | 🟢 **37/37** *(nuevo en el pase 102; falsifica la predicción del pase 101 y encuentra que `rosewang2008/edu-convokit` redistribuye 29 transcripciones de TalkMoves —`CC BY-NC-SA 4.0` del upstream `SumnerLab`— bajo su única cesión MIT)* |
+| ídem, el barrido real de la cohorte | enumera el árbol con un clon sin blobs (canal de `P275`), lee la cesión del payload y clasifica con `lib/` (`P237`); **se niega a correr si el canal no discrimina slugs** | `WORK=/tmp/t317 sh sweep_corpus.sh` | 🟢 **9 de 9 medidos**: 2 redistribuyen corpus, 1 `CORPUS-SIN-CESION`, 1 `CORPUS-CON-TERMINOS`, 1 `DATOS-DECLARADOS-DISTINTOS` (el positivo de `P315`), 6 `SIN-CORPUS` |
 | **`p312-nc-gate-inversion/`** | **que un payload `NonCommercial` responda PROHIBIDO y conserve su atributo, y que lo que SÍ permite uso comercial siga ALLOWED** | `sh test_nc_gate.sh` | 🟢 **21/21** *(nuevo en el pase 101; el espécimen no es una fixture: es la licencia del corpus TalkMoves tal como la declara `devissaputra/classroom_discourse_intelligence/data/README.md`)* |
 | `p308-phrase-anchor-sweep/` | la acción pre-registrada del pase 99: **3 de 18 anclas eran frase cruda**, y la del Unlicense **invierte** el veredicto comercial; más la **ventana** del bloque de título, que contaba LÍNEAS | `sh test_anchors.sh` | 🟢 **100/100** |
 | ídem, ¿dispara en el campo? | repair vs la función **superada verbatim** sobre 18 payloads reales tal como se publican | `sh field_check.sh` | 🟢 **0 de 18** mal clasificados (sin extrapolar, `P286`) |

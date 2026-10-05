@@ -1,0 +1,181 @@
+.gitignore
+.readthedocs.yaml
+LICENSE
+MANIFEST.in
+README.md
+assets/annotations.png
+assets/anonymized.png
+assets/full_logo.png
+assets/logo.png
+assets/logodds.png
+assets/main_figure.png
+assets/merged.png
+assets/not_anonymized.png
+assets/sentence_anonymized.png
+assets/talktime.png
+assets/talktime_quantitative.png
+assets/talktime_temporal.png
+assets/video.png
+data/.DS_Store
+data/amber.zip
+data/amber/4244.json
+data/amber/4245.json
+data/amber/4246.json
+data/amber/4254.json
+data/amber/4265.json
+data/amber/4275.json
+data/amber/4276.json
+data/amber/4279.json
+data/amber/4280.json
+data/amber/4282.json
+data/amber/4285.json
+data/amber/6172022NN.json
+data/amber/6212022AK.json
+data/amber/6222022IT.json
+data/amber/6232022DPG.json
+data/amber/6242022JZ.json
+data/amber/7112022AC.json
+data/amber/7112022EX.json
+data/amber/7122022BC.json
+data/amber/7122022ET.json
+data/amber/7122022VC.json
+data/amber/7122022ZW.json
+data/amber/7132022CG.json
+data/amber/7132022JH.json
+data/amber/7132022JR.json
+data/amber/7132022NI.json
+data/amber/7132022SM.json
+data/amber/7152022AH.json
+data/amber/7152022CL.json
+data/amber/7152022EOA-1.json
+data/amber/7152022EOA-2.json
+data/amber/7152022LZ.json
+data/amber/7152022MS.json
+data/amber/7152022SW.json
+data/amber/7182022RC.json
+data/amber/7212022AQ.json
+data/amber/JH.json
+data/amber/KL.json
+data/amber/x0446.json
+data/amber/x1035.json
+data/amber/x1666.json
+data/amber/x4432.json
+data/amber/x4680.json
+data/amber/x4695.json
+data/amber/x6160.json
+data/analyzers/4244.csv
+data/analyzers/4245.csv
+data/analyzers/4246.csv
+data/annotated_data.csv
+data/ncte.zip
+data/ncte/10.csv
+data/ncte/11.csv
+data/ncte/12.csv
+data/ncte/13.csv
+data/ncte/15.csv
+data/ncte/16.csv
+data/ncte/17.csv
+data/ncte/18.csv
+data/ncte/19.csv
+data/ncte/20.csv
+data/ncte/21.csv
+data/ncte/22.csv
+data/ncte/23.csv
+data/ncte/24.csv
+data/ncte/25.csv
+data/ncte/26.csv
+data/ncte/27.csv
+data/ncte/28.csv
+data/ncte/29.csv
+data/ncte/3.csv
+data/ncte/30.csv
+data/ncte/31.csv
+data/ncte/32.csv
+data/ncte/33.csv
+data/ncte/4.csv
+data/ncte/5.csv
+data/ncte/7.csv
+data/ncte/8.csv
+data/ncte/9.csv
+data/screencast/20.csv
+data/talkmoves.zip
+data/talkmoves/7th grade math.xlsx
+data/talkmoves/Boats and Fish 1_Grade 4.xlsx
+data/talkmoves/Boats and Fish 2_Grade 4.xlsx
+data/talkmoves/Boats and Fish 3_Grade 4.xlsx
+data/talkmoves/Boats and Fish 4_Grade 4 .xlsx
+data/talkmoves/Borko.TranscriptofWholeClassDebrief.xlsx
+data/talkmoves/CECILIO DIMAS pt 1.xlsx
+data/talkmoves/CECILIO DIMAS pt 2.xlsx
+data/talkmoves/CECILIO DIMAS pt 3.xlsx
+data/talkmoves/Comparing Fractions 1_Grade 4.xlsx
+data/talkmoves/Comparing Fractions 2_Grade 4.xlsx
+data/talkmoves/Comparing Fractions 3_Grade 4.xlsx
+data/talkmoves/Comparing Fractions 4_Grade 4.xlsx
+data/talkmoves/Comparing Fractions 5_Grade 4.xlsx
+data/talkmoves/Fraction as Number 1_Grade 4.xlsx
+data/talkmoves/Fraction as Number 2_Grade 4.xlsx
+data/talkmoves/Fraction as Number 3_Grade 4.xlsx
+data/talkmoves/Fraction as Number 4_Grade 4.xlsx
+data/talkmoves/Fraction as Number 5_Grade 4.xlsx
+data/talkmoves/Fraction as Number 6_Grade 4.xlsx
+data/talkmoves/Gang of Four_Grade 4.xlsx
+data/talkmoves/HILLARY LEWIS-WOLFSEN pt 2.xlsx
+data/talkmoves/HILLARY LEWIS-WOLFSEN pt 3.xlsx
+data/talkmoves/HILLARY LEWIS-WOLFSEN pt 4.xlsx
+data/talkmoves/HILLARY LEWIS-WOLFSEN pt 5.xlsx
+data/talkmoves/HILLARY LEWIS-WOLFSEN pt 6_.xlsx
+data/talkmoves/HILLARY LEWIS-WOLFSEN pt 7_.xlsx
+data/talkmoves/HILLARY LEWIS-WOLFSEN pt1.xlsx
+data/talkmoves/HILLARY LEWIS-WOLFSON pt 8.xlsx
+docs/Makefile
+docs/make.bat
+docs/requirements.txt
+docs/source/analyzer.rst
+docs/source/annotation.rst
+docs/source/conf.py
+docs/source/full_logo.png
+docs/source/index.rst
+docs/source/preprocessing.rst
+docs/source/tutorial_amber.ipynb
+docs/source/tutorial_analyzers.ipynb
+docs/source/tutorial_annotation.ipynb
+docs/source/tutorial_ncte.ipynb
+docs/source/tutorial_talkmoves.ipynb
+docs/source/tutorial_text_preprocessing.ipynb
+edu_convokit/__init__.py
+edu_convokit/analyzers/__init__.py
+edu_convokit/analyzers/analyzer.py
+edu_convokit/analyzers/gpt_conversation_analyzer.py
+edu_convokit/analyzers/lexical_analyzer.py
+edu_convokit/analyzers/qualitative_analyzer.py
+edu_convokit/analyzers/quantitative_analyzer.py
+edu_convokit/analyzers/temporal_analyzer.py
+edu_convokit/annotation/__init__.py
+edu_convokit/annotation/annotator.py
+edu_convokit/constants.py
+edu_convokit/preprocessors/__init__.py
+edu_convokit/preprocessors/text_preprocessor.py
+edu_convokit/preprocessors/token_preprocessor.py
+edu_convokit/prompts/conversation/class_clbm_bad_examples.txt
+edu_convokit/prompts/conversation/class_clbm_good_examples.txt
+edu_convokit/prompts/conversation/mqi_suggestions.txt
+edu_convokit/prompts/conversation/summarize.txt
+edu_convokit/uptake_utils.py
+edu_convokit/utils.py
+papers.md
+pyproject.toml
+setup.py
+tests/test_annotator_descriptive.py
+tests/test_annotator_hf.py
+tests/test_annotator_lexical.py
+tests/test_gpt_conversation_analyzer.py
+tests/test_text_preprocessor.py
+tests/test_token_preprocessor.py
+tests/test_utils.py
+tutorials/tutorial_amber.ipynb
+tutorials/tutorial_analyzers.ipynb
+tutorials/tutorial_annotation.ipynb
+tutorials/tutorial_ncte.ipynb
+tutorials/tutorial_talkmoves.ipynb
+tutorials/tutorial_text_preprocessing.ipynb

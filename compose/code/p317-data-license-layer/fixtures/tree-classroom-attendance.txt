@@ -1,0 +1,11 @@
+.gitignore
+LICENSE
+README.md
+app.py
+emotion.py
+emotion_times.csv
+haarcascade_frontalface_default.xml
+people_times.csv
+requirements.txt
+templates/index.html
+visualizacao.py

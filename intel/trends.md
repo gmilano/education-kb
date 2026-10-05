@@ -1,12 +1,13 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-04
+updated: 2026-10-05
 ---
 
 # 📡 Tendencias — education
 
 > Ventana de investigación: septiembre 2026. Verificado 2026-09-30; el pase 11, el 2026-10-01.
+> **Pase 102 del 2026-10-04:** 🟢 **Trece tendencias nuevas, numeradas 810–822** (el pase 101 cerró en 809). 🔴 **La que manda es una PREDICCIÓN PROPIA FALSIFICADA en las dos cláusulas: el pase 101 afirmó que la licencia por capa (`P315`) era la NORMA de la capa de observación de aula, y sobre el denominador pre-registrado de 9 repos las piezas con licencia de datos distinta de la del código, además de la conocida, son 0 — la predicción pedía ≥ 2 — y de las 2 que declaran datos una concede uso comercial EXPLÍCITO, así que tampoco hay mayoría `NC`.** 🔵 **Pero medirla destapó que la PREGUNTA estaba mal planteada, y eso es `P317`: la pregunta de datos son DOS ejes ortogonales —¿redistribuye corpus? y ¿cede algo sobre él?— y un barrido que sólo compara licencias DECLARADAS da PERMITIDO sobre la celda peor, porque esa celda es silenciosa.** 🔴 **`P318`: `rosewang2008/edu-convokit` —fila MIT de esta base, correcta para el código— redistribuye 29 transcripciones de TalkMoves, que `SumnerLab` publica `CC BY-NC-SA 4.0`, sin declarar términos de datos; 29 de 29 nombres medidos contra el árbol del upstream.** 🔴 **`P319`: la ausencia de `data/README.md` no es ausencia de datos — 404 en el path adivinado, 111 archivos de corpus en el árbol enumerado.** 🟢 **Y una cota mal atribuida se corrige: «la licencia de `speechocean762` no es verificable» era del CANAL, no del repo.**
 > **Pase 101 del 2026-10-04:** 🟢 **Trece tendencias nuevas, numeradas 797–809** (el pase 100 cerró en 796). 🔴 **La que manda es sobre el control compartido y la encontró un payload de un ALTA, no una fixture: `commercial_use_ok` devolvía uso comercial PERMITIDO para `CC-BY-NC-4.0`, una familia cuyo NOMBRE dice NonCommercial.** 🔴 **797–799: dos defectos distintos en la misma rama — el ORDEN entre atributos ORTOGONALES perdía el `NC` de un `CC BY-NC-SA`, y la compuerta de `P250` tenía DETRÁS cuatro familias que no son OSI, así que se abría sobre justo las que existe para atrapar.** 🔵 **800: y la dirección del daño es la peor de las dos — `P308` perdía permiso sobre un texto permisivo (cuesta una oportunidad); esto INVENTA permiso sobre un texto que lo prohíbe en su propio nombre (cuesta el entregable).** 🟢 **802: `P237` CERRADO, y el orden importó: primero se hizo a la librería un superconjunto, después se rewirearon las cuatro copias — que es la condición que el pase 100 había declarado y que convertía al rewiring obvio en una pérdida de tres familias.** 🔴 **803: el rewiring rompió el control de `p206`, porque extraía la función del TEXTO del archivo con `sed` en vez de medir su comportamiento.** 🔴 **805: la licencia tiene un eje de CAPA — permisiva en el código y no comercial en los datos — y esta base la trataba como una respuesta por repo.** 🔴 **806: la concesión puede vivir en el README sin archivo de licencia, y el canal secundario la leyó de un BADGE de shields.io.** 🔴 **807: la prensa de industria linkea un fork AGPL congelado del repo MIT que esta base ya tiene.** 🔴 **809: el canal regulatorio no se degrada hacia el silencio sino hacia la CONFIANZA — sexta reproducción del AI Act, ahora con una fecha de entrada en vigor falsa y precisa.** Ver `compose/code/p312-nc-gate-inversion/` (**21/21**) y `lib/test_license_family.sh` (**106/106**).
 > **Pase 100 del 2026-10-04:** 🟢 **Trece tendencias nuevas, numeradas 784–796** (el pase 99 cerró en 783). 🔴 **La que manda es sobre esta base y la encontró el propio pase antes de publicar: casi anuncia como capa NUEVA una capa que tiene desde el pase 14.** 🔴 **784–786: la acción pre-registrada del pase 99 está CONFIRMADA —3 de 18 anclas eran frase cruda— y el daño del Unlicense es peor que el de `P304`: no pierde la familia en `UNCLASSIFIED`, INVIERTE el veredicto comercial a `NONCOMMERCIAL-NOT-OSI` sobre el texto más permisivo que existe, porque la compuerta de `P250` está condicionada a «familia identificada» y al perderse la familia se ABRE.** 🔴 **787: y el control negativo de la suite falló sobre un ancla que NO es frase — una cuenta de LÍNEAS no es una propiedad del documento, es una propiedad de dónde caen sus saltos, y eso perdía la AGPL que `P288` instaló (`P171` por tercera vez).** 🟢 **789: fragilidad PROBADA no es defecto DISPARANDO: 0 de 18, y el reparto queda sin extrapolar.** 🔴 **791–792: `P311` — todos los controles de esta base auditan una afirmación que el pase HACE, y la de que un alta es NUEVA es implícita; lo implícito no lo audita nada.** 🟢 **793: el eje que rindió lo eligió el cuarto barrido obligatorio, el de MERCADO, que veintiocho pases leyeron como color de fondo.** 🔵 **796: y la pieza que más valor trae tiene la misma postura de método que esta base — invariantes falsables que VETAN.** Ver `compose/code/p308-phrase-anchor-sweep/` (**100/100**) y `compose/code/p311-duplicate-alta-gate/` (**11/11**).
 > **Pase 97 del 2026-10-04:** 🟢 **Nueve tendencias nuevas, numeradas 753–761** (el pase 96 cerró en 752). 🔴 **La que manda es la misma forma de defecto en DOS planos a la vez, y los dos son de esta base: lo que se construye y no se CONECTA no existe.** 🔴 **753: el pase 96 diagnosticó que el barrido manifiesto-consciente es ciego a Java/Maven (tendencia 750), escribió el lector correcto —`p289`, 11/11— y NO lo conectó: medido hoy, `PARSERS` seguía con cinco nombres y NADA fuera de `p289/` lo referenciaba, así que el hueco seguía abierto justo donde se producen los veredictos.** 🔴 **754: y el cableado OBVIO habría publicado una respuesta nueva y equivocada — con `artifactId` como identidad única, `kuali/kc` y `sakaiproject/sakai` salen `FOREIGN` siendo PROPIOS (2 de 6), y el peor es el de la licencia más consecuente del inventario (AGPL-3.0 §13 sobre un ERP universitario entregado como SaaS).** 🟢 **755: la identidad de un pom es el `groupId`, que es un namespace reverse-DNS que CODIFICA a la organización (`org.kuali.coeus` en `kuali/kc`) — y `ownership()` descartaba el segmento de organización del slug, que era el único que podía resolverlo.** 🟢 **757: con el cableado puesto, dos canales INDEPENDIENTES concuerdan — la declaración del manifiesto contra el payload del archivo de licencia: 6 de 6 `OWN`, 4 acuerdos exactos, 1 de familia (DSpace) y 0 contradicciones.** 🔴 **759: y en el plano de la prosa, CATORCE tendencias anunciadas y nunca escritas (706–711 del pase 91, 745–752 del pase 96), con el agravante de que el control que existe para atraparlas es CIEGO a la forma con que esta base las anuncia.** 🟢 **Las 745–752 quedan RECUPERADAS en este pase (su contenido existía en la nota de cabecera del 96); las 706–711 se declaran IRRECUPERABLES —ningún commit de la historia las definió— y no se inventan.** Ver `compose/code/p294-pom-in-production/` (**27/27**) y `compose/code/trend-backlink-audit/` (**31/31**).
@@ -114,6 +115,106 @@ updated: 2026-10-04
 > (tendencia 29), se abre el **gap 20** y se registran dos advertencias de verificación: los agregadores de estrellas
 > están mal por ~2× y **un 403 de `curl` no es un 404**. Ver la nota de método del pase 12.
 > **Pase 11:** el Digital Omnibus es derecho vigente (tendencia 25), aparece la capa predictiva y está vacía (tendencia 26), y se corrige un error de método de diez pasadas sobre licencias permisivas (tendencia 27).
+
+## 🟢 Tendencias 810–822 — pase 102 del 2026-10-04: la predicción propia falsificada, y la pregunta estaba mal planteada
+
+> ⚠️ **Nota de fecha, declarada:** las mediciones de este pase se tomaron el **2026-10-04** —y los
+> archivos de resultado llevan esa fecha— pero la publicación cayó del otro lado de la medianoche,
+> el **2026-10-05**. El pase se rotula por su fecha de **medición**, que es la que se puede auditar.
+
+**810 — Una predicción propia, falsificada en las DOS cláusulas, y la unidad pre-registrada es lo que
+permite leerlo.** El pase 101 afirmó que `P315` —*permisivo en el código, no comercial en los datos*—
+era **la norma** de la capa de observación de aula. Medido sobre el denominador pre-registrado de **9
+repos**: piezas con licencia de datos **distinta** de la del código, además de la conocida → **0**
+(pedía **≥ 2**); de las **2** que declaran términos de datos, **1** es `NC` y **1** concede comercial
+**explícito** → **no hay mayoría**. 🟢 **`P315` era específico de
+`classroom_discourse_intelligence`.** 🔵 **Y lo legible viene de que el pase 101 nombró la unidad y el
+denominador: una predicción sin unidad se puede declarar cumplida casi siempre.**
+
+**811 — La PREMISA cayó antes que la predicción, y es el error más instructivo de los dos.** La
+afirmación se apoyaba en *«toda pieza útil ahí necesita un corpus de aula»*. Medido: **7 de 9 piezas
+de la capa no traen corpus ninguno**; sólo **2 de 9** redistribuyen. 🔵 **El razonamiento era
+plausible y la base empírica no existía: las piezas útiles de esta capa consumen corpus en tiempo de
+entrenamiento ajeno o leen transcripciones del cliente, no las embarcan.**
+
+**812 — `P317`: la pregunta de datos de un repo son DOS preguntas ortogonales, y colapsarlas da
+PERMITIDO sobre el caso peor.** Eje **A**: ¿redistribuye corpus? Eje **B**: ¿cede algo sobre él? La
+matriz tiene cuatro celdas y la peor —**redistribuye y no cede**— es **silenciosa**: un barrido que
+compara *«licencia de datos declarada»* contra *«licencia de código»* no puede alcanzarla, porque no
+hay nada declarado que comparar. 🔵 **Es la forma general del defecto que `P310` nombró en el otro
+sentido: un instrumento que sólo ve declaraciones trata el silencio como conformidad.**
+
+**813 — `P318`: la cesión de un repo no alcanza a los datos que ese repo no creó.**
+`rosewang2008/edu-convokit` redistribuye **29 transcripciones** de TalkMoves (`data/talkmoves/*.xlsx`
++ `talkmoves.zip`) bajo su única cesión **`MIT © 2023 Rose E. Wang`**, y el titular del corpus,
+`SumnerLab/TalkMoves`, lo publica **`CC BY-NC-SA 4.0`** —`LICENSE` de **20.849 B** con el texto
+íntegro **más** el `README` que la nombra, **dos canales que concuerdan**—. 🔴 **La fila de esta base
+dice MIT y es CORRECTA para el código: el riesgo no está en la columna de licencia, está en lo que el
+repo trae adentro.**
+
+**814 — La identidad de un corpus vendored se MIDE por intersección de árboles, no se infiere del
+nombre de la carpeta.** **29 de 29** nombres de `data/talkmoves/` de `edu-convokit` están en
+`data/Subset 1/` del upstream, y la huella que lo cierra es
+`Boats and Fish 4_Grade 4 .xlsx` — **con el espacio antes de la extensión**, una colisión casi
+imposible por azar. 🟢 **Está aserida en la suite**, así que un pase futuro que vea el nombre cambiar
+lo nota.
+
+**815 — Dos repos de la misma capa pueden contradecirse sobre el MISMO corpus, y el que lo maneja mal
+es el que está en la tabla.** `classroom_discourse_intelligence` declara la licencia `NC` y **no**
+redistribuye —*«does not redistribute the source corpus»*, con **0** archivos de payload en su `data/`,
+aserido—; `edu-convokit`, más instalado y más citado, **sí** redistribuye. 🔵 **El cuidado con la
+procedencia no correlaciona con la adopción**, lo cual invierte la heurística cómoda de preferir la
+pieza más popular.
+
+**816 — `P319`: la ausencia de `data/README.md` no es ausencia de datos.** `edu-convokit` da **404**
+en `data/README.md`, `datasets/LICENSE`, `DATA_LICENSE` y todos los paths adivinados, y tiene **111
+archivos de corpus** bajo `data/`. 🔴 **El barrido de paths lo habría publicado «sin datos»: el falso
+negativo de `P314` —el que SUPRIME trabajo real— trasladado al eje de datos, y escondiendo justo la
+celda peor.**
+
+**817 — El arreglo de `P319` es de CANAL, y el canal ya existía en esta base desde el pase 93.** Un
+clon `--filter=blob:none --no-checkout --depth 1` **enumera** el árbol completo sin blobs, sin API y
+sin paginar: es `P275`, escrito para sostener la ausencia de AI en el núcleo de ILIAS, y **sirve igual
+para sostener la PRESENCIA de un corpus**. 🔵 **Un instrumento construido para una pregunta negativa
+contestó una pregunta positiva de otra capa: el valor de `compose/code/` es que los canales se
+reusan.**
+
+**818 — Un conteo de datos que no gatea por UBICACIÓN cuenta código como dato.** El primer censo de
+este pase dio **115** archivos de corpus en `edu-convokit`; el gateado da **111**. Los 4 de más son
+`edu_convokit/prompts/conversation/*.txt`: **plantillas de prompt**. 🟢 **La diferencia queda aserida
+(`C8`)** para que la inflación no vuelva, y el umbral (**20** archivos) se publica **con el conteo de
+cada repo al lado** para que el lector re-derive el veredicto.
+
+**819 — Una cota puede estar mal ATRIBUIDA, y eso es distinto de estar mal medida.** Los pases 14 y
+100 publicaron *«no se puede verificar la licencia de `speechocean762`»* tras recibir `000` de
+`openslr.org` y `huggingface.co`. 🔵 **La medición era correcta y la atribución no: la cota era de esos
+DOS CANALES, no del repo.** El `README` del repo se lee de primera mano y declara disponibilidad *«for
+both commercial and non-commercial purposes»*. 🟢 **La frase publicable cambia de «licencia no
+verificable» a «cesión declarada en el README, permisiva, sin archivo que la nombre».**
+
+**820 — Y esa cesión casi se publica INVERTIDA, por el defecto que `P308` ya había pagado.** La frase
+con la que el corpus **concede** contiene la subcadena *«non-commercial»*: un detector por token la
+clasifica `NC` y **prohíbe** el uso comercial del texto **más** permisivo del corpus. 🔴 **Es `P308`
+exacto, sobre otro payload y en otro eje, dentro de un módulo escrito el mismo día que se leyó la
+lección.** El orden de evaluación es el arreglo, aserido en `C5`.
+
+**821 — La procedencia de corpus dejó de ser higiene y pasó a ser posición de mercado, y lo dice el
+barrido regional del propio pase.** **EMEA**: el AI Act clasifica la AI educativa como **alto riesgo**
+con **pleno efecto en agosto de 2026**, y un sistema de alto riesgo debe documentar la gobernanza de
+sus datos de entrenamiento. **APAC**: Canberra endurece **gobernanza de AI y reglas de COPYRIGHT a la
+vez**. 🔵 **Las dos regiones están volviendo obligatoria la pregunta que este pase tuvo que inventarse
+el instrumento para contestar** — y en **North America**, donde no hay regulador que la pida (36 % del
+mercado global, sin equivalente a la FDA), la pide el **contrato**.
+
+**822 — El cero de altas de este pase es una ELECCIÓN declarada, no una sequía.** El encargo pide un
+mínimo de 5 agentes *«cuando existan»*; la tabla ya trae más de 200 filas y el esfuerzo se gastó en la
+deuda pre-registrada. 🔵 **Una fila de relleno en la tabla con la que un estudio cotiza es peor que un
+cero explicado**, y el barrido global devolvió por **vigesimoquinta** vez el eje generalista
+(`openclaw`, `browser-use`, `dify`, `AutoGen`, `Flowise`): **0 piezas de la industria educativa**
+(`P281`).
+
+---
+
 
 ## 🟢 Tendencias 797–809 — pase 101 del 2026-10-04: la compuerta se abría sobre las familias que existe para atrapar
 

@@ -1,0 +1,9 @@
+.github
+cmake
+docker
+egs
+misc
+scripts
+src
+tools
+windows

@@ -1,0 +1,13 @@
+== C1: compuerta de slug inventado ==
+slug falso RECHAZADO (el canal discrimina)
+
+slug	cohorte	licencia_codigo	archivos_corpus	terminos_datos	veredicto
+rosewang2008/edu-convokit	pase101-observacion	MIT	111	NINGUNO	CORPUS-SIN-CESION
+EduNLP/EduCoder	pase101-observacion	MIT	0	NINGUNO	SIN-CORPUS
+devissaputra/classroom_discourse_intelligence	pase101-observacion	MIT	0	CC-BY-NC-SA-4.0|comercial-PROHIBIDO@data/README.md	DATOS-DECLARADOS-DISTINTOS
+joaopdmol/Automated_Classroom_Attendance	pase101-observacion	MIT	0	NINGUNO	SIN-CORPUS
+yptheangel/attention-monitor	pase101-observacion	Apache-2.0	0	NINGUNO	SIN-CORPUS
+VedantGohel/Student-Eye	pase101-observacion	MIT-EN-README-SIN-ARCHIVO	0	NINGUNO	SIN-CORPUS
+Halleck45/OpenPronounce	pase14-habla	MIT	0	NINGUNO	SIN-CORPUS
+kaldi-asr/kaldi	pase14-habla	Apache-2.0	0	NINGUNO	SIN-CORPUS
+jimbozhang/speechocean762	pase14-habla	SIN-ARCHIVO-DE-LICENCIA	5245	DECLARADA-PERMISIVA-SIN-ARCHIVO|comercial-OK@README.md	CORPUS-CON-TERMINOS

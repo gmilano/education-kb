@@ -1,7 +1,7 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-04
+updated: 2026-10-05
 ---
 
 # 🧩 Patrones de composición — Education
@@ -130,6 +130,107 @@ updated: 2026-10-04
 > no existe en open source permisivo).
 > **Pase 11:** +2 patrones — **P25** (riesgo de abandono conforme al Anexo III, la capa con presupuesto ya asignado y sin oferta open source) y **P26** (agente docente sobre la ontología curricular nacional ya publicada).
 > **Pase 27:** **+4 patrones y una corrección.** 🔴 **P51 queda con premisa falsa** —el conector MCP de Moodle **sí existe y es MIT**— y lo reemplazan **P54** (corrección y devolución sobre Moodle con **compuerta humana**, el último tramo del gap 6, con piezas que ya escriben), **P55** (el conector de **Open edX**, que es el único que de verdad no existe), **P56** (**SCORM** como formato de salida de la capa generativa: cero integración, offline) y **P57** (evidencia por MCP cotizada sobre lo que CaSS **realmente** expone — 6 de 61 operaciones, con insignias y autoría de marcos **fuera**).
+
+
+## 🆕 Patrones del pase 102 (2026-10-04) — `P317`–`P319` y la receta `R-102-PROCEDENCIA-DE-CORPUS`
+
+### `P317` — la pregunta de datos son DOS preguntas ortogonales
+
+🔵 **Enunciado.** *La pregunta de datos de un repo son dos preguntas ortogonales —**¿redistribuye
+corpus?** y **¿cede algo sobre él?**— y un barrido que sólo compara licencias **declaradas** da
+PERMITIDO sobre la celda peor, porque esa celda es silenciosa.*
+
+| | **B: declara términos de datos** | **B: no declara** |
+|---|---|---|
+| **A: redistribuye corpus** | `CORPUS-CON-TERMINOS` | 🔴 **`CORPUS-SIN-CESION`** ← el caso peor |
+| **A: no redistribuye** | `DATOS-DECLARADOS-DISTINTOS` ← acá vive `P315` | `SIN-CORPUS` |
+
+🔴 **De dónde salió.** El pase 101 pre-registró que `P315` era la norma de la capa, con la unidad
+*«piezas con licencia de datos distinta de la del código»*. **Medir esa unidad sobre 9 repos la
+falsificó (0, pedía ≥ 2) y mostró que la unidad misma era el error:** sólo alcanza a los repos que
+declaran algo. **Instrumento:** `compose/code/p317-data-license-layer/`, **37/37**.
+
+### `P318` — la cesión de un repo no alcanza a los datos que ese repo no creó
+
+🔵 **Enunciado.** *Un repo permisivo puede redistribuir un corpus ajeno cuyo titular lo publica
+`NonCommercial`. La fila que dice «MIT» es correcta **para el código** y falsa como garantía del
+entregable; y el repo que lo maneja mal puede ser el más adoptado de su capa.*
+
+🔴 **El espécimen, medido de punta a punta:** `rosewang2008/edu-convokit` redistribuye **29
+transcripciones** de TalkMoves bajo `MIT © 2023 Rose E. Wang`, sin declarar términos de datos;
+`SumnerLab/TalkMoves` las publica **`CC BY-NC-SA 4.0`** (payload de **20.849 B** + `README`, dos
+canales que concuerdan); **29 de 29** nombres coinciden por intersección de árboles, huella
+`Boats and Fish 4_Grade 4 .xlsx` incluida. **Contraste en la misma cohorte:**
+`classroom_discourse_intelligence` declara `NC` y **no** redistribuye (**0** payload en su `data/`).
+
+### `P319` — la ausencia de `data/README.md` no es ausencia de datos
+
+🔵 **Enunciado.** *Un barrido de **paths adivinados** no sostiene «no hay datos». Para sostener una
+ausencia —o descubrir una presencia— hay que **ENUMERAR** el árbol.*
+
+🔴 **La evidencia es el error de este pase:** `edu-convokit` da **404** en `data/README.md` y en todos
+los paths candidatos, y tiene **111 archivos de corpus**. 🟢 **El arreglo es `P275`**: clon
+`--filter=blob:none --no-checkout --depth 1` + `git ls-tree -r`, el único canal que enumera con
+`github.com` y `api.github.com` en **403**. **El fracaso del instrumento viejo está aserido** (`C3`),
+no narrado.
+
+---
+
+### 🧩 `R-102-PROCEDENCIA-DE-CORPUS` — la compuerta que corre ANTES de entregar una pieza con datos adentro
+
+**Problema que resuelve.** Un estudio toma una pieza permisiva de esta base, la instala y usa los
+datos que vienen en el repo. Si esos datos son de un tercero que los licenció `NonCommercial`, el
+entregable **nace incumpliendo** y la columna de licencia de la tabla no lo avisa — es correcta.
+
+**Dónde aplica hoy, con fecha:** **EMEA**, donde el AI Act clasifica la AI educativa como **alto
+riesgo** con pleno efecto en **agosto de 2026** y exige documentar la gobernanza de los datos de
+entrenamiento; y **APAC**, donde Canberra endurece **gobernanza y copyright a la vez**. En **North
+America** no lo pide un regulador: lo pide el contrato.
+
+**Las piezas, todas ya medidas por esta base:**
+
+| Rol | Pieza | Licencia (payload) |
+|---|---|---|
+| eje A — enumerar el árbol | `compose/code/p317-data-license-layer/corpus_axis.py` + el canal de `p275` | el instrumento de esta KB |
+| eje B — leer la cesión de datos | ídem, `data_terms_in_text` (lee payload, **nunca** un badge: `P314`) | ídem |
+| familia de licencia del código | `compose/code/lib/license_family.sh` (`family_of`, **106/106**) | ídem, **no se inlinea** (`P237`) |
+| análisis del discurso, **sin** corpus adentro | [`devissaputra/classroom_discourse_intelligence`](https://github.com/devissaputra/classroom_discourse_intelligence) | **MIT** en el código; datos **`CC BY-NC-SA 4.0`** declarados y **no** redistribuidos |
+| librería base de conversación educativa | [`rosewang2008/edu-convokit`](https://github.com/rosewang2008/edu-convokit) | **MIT** ⚠️ **usar el CÓDIGO y descartar `data/`** |
+| evaluación de pronunciación, cadena permisiva entera | [`Halleck45/OpenPronounce`](https://github.com/Halleck45/OpenPronounce) + [`YuanGongND/gopt`](https://github.com/YuanGongND/gopt) + [`kaldi-asr/kaldi`](https://github.com/kaldi-asr/kaldi) | **MIT** + **BSD-3-Clause** + **Apache-2.0** |
+
+**Cómo se arma, y el orden importa:**
+
+```
+1. git clone --filter=blob:none --no-checkout --depth 1 <slug>   # enumerar, no adivinar (P319)
+   git ls-tree --name-only -r HEAD
+        │
+2.      ├─▶ eje A: redistributes_corpus(arbol)   # payload bajo dir de datos de 1er nivel, umbral 20
+        │        └─ 0 archivos  ──▶ SIN-CORPUS: la licencia del codigo alcanza. Seguir.
+        │        └─ >= 20       ──▶ hay corpus ajeno en juego. NO seguir sin el paso 3.
+        │
+3.      └─▶ eje B: data_terms_in_text(data/README.md | datasets/ | corpus/ | README.md)
+                 └─ NINGUNO ──▶ 🔴 CORPUS-SIN-CESION. Buscar el UPSTREAM del corpus y leer SU licencia.
+                                  Si es NC: entregar el CODIGO y re-entrenar/medir con datos del cliente.
+                 └─ declara ──▶ clasificar con lib/license_family.sh y comparar con la del codigo.
+                                  Si difieren: la mas restrictiva manda sobre el artefacto entrenado.
+        │
+4. Registrar las dos respuestas en el expediente del entregable, con el BYTE COUNT del payload
+   leido y la fecha. Es lo que un auditor del AI Act puede repetir.
+```
+
+🔴 **El paso 3 es el que este pase tuvo que inventar y el que no existía:** *buscar el upstream del
+corpus y leer SU licencia*. Sin él, `edu-convokit` pasa la compuerta —su `LICENSE` es MIT impecable—
+y el corpus `NonCommercial` viaja adentro.
+
+**Qué entrega, concretamente:** para `edu-convokit`, el veredicto correcto es **usar la librería
+(MIT) y NO embarcar `data/`**; los 111 archivos se reemplazan por transcripciones del cliente, que es
+lo que el encargo real necesita de todos modos. **El código sirve entero; el corpus de demo no viaja.**
+
+⚠️ **Límite declarado de la receta:** `amber` (45 archivos) y `ncte` (29) **no tienen procedencia
+resuelta** en este pase. La receta los trata como **`NC` hasta prueba en contrario**, que es la
+dirección segura, y el pase 103 tiene pre-registrado resolverlos.
+
+---
 
 
 ## 🆕 Patrones del pase 101 (2026-10-04) — `P312`–`P316` y `R-101-OBSERVACION-PERMISIVA`

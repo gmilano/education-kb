@@ -1,12 +1,43 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-04
+updated: 2026-10-05
 ---
 
 # 📈 Repos trending — education
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
+
+## 2026-10-04 — pase 102: GitHub trending vuelve vacío por TRIGESIMOPRIMERA vez, y el canal que rindió fue el ÁRBOL de los repos ya publicados
+
+🔬 **Canal (`P247`), medido este pase.** `github.com` (web) · `api.github.com` · `codeload` → 🔴 **403**.
+`raw.githubusercontent.com` → 🟢 **200**. `pypi.org` · `registry.npmjs.org` → 🟢 **200**.
+`huggingface.co/api/datasets` · `openslr.org` · `arxiv.org` → 🔴 **000**.
+🆕 clon `--filter=blob:none --no-checkout --depth 1` → 🟢 **funciona**.
+
+🔴 **`github trending education AI 2026` (año CALCULADO, no fijo) devolvió por trigesimoprimera vez
+el eje generalista:** repos de *aprender* AI (`ai-engineering-from-scratch`, *Neural Networks: Zero to
+Hero*, `awesome-llm`, listas de empleos AI/ML 2026) y **0 repos de la industria educativa**. Es
+`P281`, y el cero ya tiene denominador desde el pase 94: **se registra y no se vuelve a gastar un
+barrido en pedirle lo que no da.**
+
+🟢 **El canal que rindió este pase no es un buscador: es el ÁRBOL de los repos que esta base ya
+publica.** Enumerar `rosewang2008/edu-convokit` con un clon sin blobs devolvió **111 archivos de
+corpus** bajo `data/` —`amber` (45), `ncte` (29), `talkmoves` (29), tres `.zip` y
+`annotated_data.csv`— que **ningún barrido de licencias de esta base podía ver**, porque todos
+preguntaban por archivos de licencia y ninguno por **qué hay adentro del repo**.
+
+🔴 **Y lo que hay adentro contradice la licencia del repo:** `talkmoves` es el corpus de
+`SumnerLab/TalkMoves`, **`CC BY-NC-SA 4.0`** (payload de **20.849 B** + `README`, dos canales que
+concuerdan), redistribuido bajo una única cesión **MIT**. **29 de 29** nombres coinciden con
+`data/Subset 1/` del upstream, huella `Boats and Fish 4_Grade 4 .xlsx` incluida. Ver **`P317`**–**`P319`**.
+
+🔵 **La lección de canal, que es lo que este archivo existe para acumular:** *un repositorio que no
+aparece en ningún trending puede traer el hallazgo del pase si se lo ENUMERA en vez de buscarlo.* El
+trending lleva 31 pases sin dar nada; el árbol de las filas ya publicadas dio el hallazgo que manda.
+
+---
+
 
 ## 2026-10-04 — pase 101: GitHub trending vuelve vacío por TRIGÉSIMA vez, y el canal útil fue otra vez el de mercado
 
