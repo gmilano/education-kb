@@ -1,0 +1,10 @@
+slug	archivo	bytes_crudos	sha_crudo	bytes_norm	sha_norm	crlf	familia
+openstax/osbooks-introductory-statistics-bundle	LICENSE	21442	ab1a44bbba582526	21014	78442b480475e7ae	SI	CC BY-NC-SA 4.0
+openstax/osbooks-college-algebra-bundle	LICENSE	21013	8e63d319b3d085a7	21014	78442b480475e7ae	no	CC BY-NC-SA 4.0
+openstax/osbooks-calculus-bundle	LICENSE	21444	61288b08584b5130	21014	78442b480475e7ae	SI	CC BY-NC-SA 4.0
+openstax/osbooks-prealgebra-bundle	LICENSE	21442	ab1a44bbba582526	21014	78442b480475e7ae	SI	CC BY-NC-SA 4.0
+openstax/osbooks-biology-bundle	LICENSE	21442	ab1a44bbba582526	21014	78442b480475e7ae	SI	CC BY-NC-SA 4.0
+openstax/osbooks-university-physics-bundle	LICENSE	21013	8e63d319b3d085a7	21014	78442b480475e7ae	no	CC BY-NC-SA 4.0
+openstax/osbooks-college-physics-bundle	LICENSE	21442	ab1a44bbba582526	21014	78442b480475e7ae	SI	CC BY-NC-SA 4.0
+openstax/osbooks-physics	LICENSE	19104	0ff174546cbe3dd1	18707	38a27c0f017da132	SI	CC BY 4.0
+openstax/osbooks-statistics	LICENSE	18706	a706f01f512dcf99	18707	38a27c0f017da132	no	CC BY 4.0

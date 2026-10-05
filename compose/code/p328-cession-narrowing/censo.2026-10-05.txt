@@ -1,0 +1,68 @@
+JSON leidos: 49479
+
+=== UNIDADES DE CESION (el denominador, NOMBRADO) ===
+  tutoring :   69121
+  problema :   13371
+  TOTAL    :   82492
+
+=== VEREDICTO por capa ===
+    69118  ( 83.8 %)  [tutoring ] NO-CLAIM
+     8312  ( 10.1 %)  [problema ] CONTRADICE
+     2106  (  2.6 %)  [problema ] SIN-DECLARAR
+     1732  (  2.1 %)  [problema ] CORRECTO
+     1221  (  1.5 %)  [problema ] NO-CLAIM
+        3  (  0.0 %)  [tutoring ] SIN-DECLARAR
+
+=== VEREDICTO agregado ===
+    70339  ( 85.3 %)  NO-CLAIM
+     8312  ( 10.1 %)  CONTRADICE
+     2109  (  2.6 %)  SIN-DECLARAR
+     1732  (  2.1 %)  CORRECTO
+
+=== por obra citada: titular MEDIDO vs veredicto del item ===
+
+  calculus-volume-1   [titular cede: CC BY-NC-SA 4.0]   total 1015
+        1013  SIN-DECLARAR
+           2  CONTRADICE
+
+  college-algebra-2e   [titular cede: CC BY-NC-SA 4.0]   total 1939
+        1875  CONTRADICE
+          64  SIN-DECLARAR
+
+  college-physics-2e   [titular cede: CC BY-NC-SA 4.0]   total 265
+         264  CONTRADICE
+           1  SIN-DECLARAR
+
+  elementary-algebra-2e   [titular cede: CC BY-NC-SA 4.0]   total 2840
+        2650  CONTRADICE
+         190  SIN-DECLARAR
+
+  intermediate-algebra-2e   [titular cede: CC BY-NC-SA 4.0]   total 2063
+        2034  CONTRADICE
+          29  SIN-DECLARAR
+
+  introductory-statistics   [titular cede: CC BY 4.0]   total 1700
+        1684  CORRECTO
+          16  SIN-DECLARAR
+
+  physics   [titular cede: CC BY 4.0]   total 40
+          40  SIN-DECLARAR
+
+  precalculus   [titular cede: CC BY 4.0]   total 48
+          48  CORRECTO
+
+  precalculus-2e   [titular cede: CC BY-NC-SA 4.0]   total 1903
+        1306  CONTRADICE
+         543  SIN-DECLARAR
+          54  NO-CLAIM
+
+  university-physics-volume-1   [titular cede: CC BY-NC-SA 4.0]   total 394
+         213  SIN-DECLARAR
+         181  CONTRADICE
+
+=== capa SINTETICA (oer=openai): contenido generado, cesion declarada ===
+     4455  type=hint      cesion=(sin declarar)
+     2418  type=scaffold  cesion=(sin declarar)
+       10  type=?         cesion=(sin declarar)
+        3  type=?         cesion=CC BY 4.0
+  TOTAL sintetico: 6886

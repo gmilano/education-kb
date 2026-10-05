@@ -8,6 +8,7 @@ updated: 2026-10-05
 
 > Recetas concretas: repos nombrados, licencias verificadas, wiring explícito y estimación.
 > Todos los repos citados fueron verificados vía WebFetch el 2026-09-30; los del pase 11, el 2026-10-01 (ver `agents/top.md`).
+> **Pase 106 del 2026-10-05:** 🔴 **`P328` — la cesion de un OER es propiedad del par (coleccion, **ref**) y la identidad es el `collection-id`, no el slug: 10 de 10 colecciones estrechan de `CC BY 4.0` (`1e`) a `NC-SA` (`main`), y comparar por slug hace desaparecer el estrechamiento (`P289` en campo nuevo).** 🔴 **`P329` — una huella normalizada es identidad de TEXTO, no de FAMILIA (6 payloads `CC BY 4.0`, 2 huellas): la huella contesta «¿es el mismo archivo?», la familia «¿que permite?», y son dos instrumentos.** 🔴 **`P330` — cuando se mide una propiedad de BYTES el decodificador es parte del instrumento: `text=True` normalizaba los CRLF antes de hashear y lo delato una aritmetica, no un test rojo.** 🟢 **`P331` — el denominador son las unidades que DECLARAN: 82.492, no 13.371.** 🟢 **Dos recetas nuevas: auditoria de cesion de un corpus OER antes de cotizar (con su `.tsv` como entregable) y compuerta de marcado de contenido sintetico para EMEA, con el predicado ya auto-declarado en el dato.**
 > **Pase 105 del 2026-10-05:** 🆕 **Los patrones nuevos son `P326`, `P326-A` y `P327`, y la receta `R-105-CESION-CONTRA-TITULAR` INVIERTE a `R-104-CAPA-DE-CONTENIDO`.** 🔴 **`P326`: la cesion que un item AFIRMA no es la que su titular OTORGA, y la tasa de llenado del campo mide DILIGENCIA, no PERMISO** — censo de **13.371** problemas: **8.312 (62,2 %)** declaran `CC BY 4.0` contra un titular que cede `NC-SA`; **embarcable 4,4 %**. 🔵 **La ironia que lo prueba: el unico libro cuyo titular SI cede `CC BY 4.0` (`physics`) es el unico cuyos items dejan el campo VACIO.** 🟢 **`P326-A`: egress cerrado al sitio del titular no es cesion inalcanzable** — se leyo del payload de `openstax` en GitHub con `openstax.org` en **000**; lo que descalifica a un canal secundario **no es que sea otro canal, es que sea otro titular**. 🔴 **`P327`: los bytes y el `sha256` crudo de un archivo de licencia NO son identidad** (21.443 / 21.013 / 21.442 B = el mismo texto con CRLF / LF / CRLF-sin-salto; un unico `sha256` al normalizar) — **indicta las huellas que esta base publica desde el pase 66: los datos siguen bien, la huella no era huella.** 🔴 **Y `R-104` ordenaba la cola de auditoria por tasa de etiquetado: estaba al reves** — los cursos al **100 %** son los **100 % mal etiquetados**, y `Calculus Volume 1`, que `R-104` descartaba, es el que **miente menos**.
 > **Pase 104 del 2026-10-05:** 🟢 **El canal VOLVIO, y eso es `P320` confirmado en la direccion contraria: es un hecho de PERMISO.** El instrumento del pase 103 estaba intacto y le faltaba el derecho a correrlo; esta sesion **si** lo tiene. Medido con control negativo antes de usarlo (rama inventada, ruta inventada y repo inventado dan **404**; `main`/`master`/`HEAD` dan el **mismo** sha): `raw.githubusercontent.com` **200**, clon `--filter=blob:none` de terceros **OK**. 🔴 **Sigue apagado:** `api.github.com` **403**, y `openstax.org`, `creativecommons.org`, `arxiv.org`, `aclanthology.org` **bloqueados por egress** por `curl` **y** por el fetcher. 🟢 **Receta nueva `R-104-CAPA-DE-CONTENIDO`, armada con piezas probadas de este repo y declarando su propio hueco.** 🔴 **Y una correccion a una receta ya publicada: `R-102-PROCEDENCIA-DE-CORPUS` trataba `amber` y `ncte` como «`NC` hasta prueba en contrario» — medido, **no son `NC`: no tienen cesion**, que es MAS restrictivo, y la receta decia a su lector que podia hacer uso no comercial de material sobre el que nadie le concedio nada (`P324`).** 🟢 **La instruccion operativa de esa receta —*usar la libreria (MIT) y NO embarcar `data/`*— se CONFIRMA, y ahora se apoya en los tres corpus y no en uno.** 🔴 **`P323`: el borde entre capa de codigo y capa de contenido puede ser un **submodulo**, o sea otro repositorio — y entonces el `LICENSE` de la raiz del padre, el arbol sin contenido y el cero archivos de licencia de contenido son **tres lecturas ciertas que enganan juntas**.** 🔴 **`P322`: la cesion por item es un CAMPO y se puede llenar mal; el caso peor no es el campo vacio sino el que **parece lleno** — una URL que no es de licencia pasa cualquier compuerta que pregunte «¿hay algo?».** ⚠️ **Dos defectos de un instrumento de ESTE pase, encontrados por el instrumento mismo y registrados con su control: `E1` la comilla de `L'Hopital` que `xargs -I{}` se comia (dos filas FANTASMA con una ruta inexistente) y `E2` el codigo HTTP que no se miraba (el cuerpo `404: Not Found` entro al clasificador; **sobrevivio de casualidad** porque no parsea como JSON).** 🟢 **`p322` 10/10 + 2/2, `p324` construido, **55 suites pasan, 0 fallan**.** Ver **`P322`**–**`P325`** y la receta `R-104-CAPA-DE-CONTENIDO`.
 > **Pase 103 del 2026-10-05:** 🔴 **0 altas en tablas; lo que este pase deja es MÉTODO y una receta armada con piezas que este repo YA tiene probadas.** 🟢 **`P320`** — el canal de verificación es un hecho de **PERMISO**, no sólo de red: el instrumento puede estar intacto y faltar el derecho a correrlo, y los dos estados autorizan conclusiones distintas. 🟢 **`P321`** — un archivo append-only puede **sepultar un acierto bajo un error posterior**, y el espécimen es `intel/market.md` con las dos versiones del calendario del AI Act conviviendo. 🆕 **`R-103-DOS-RELOJES`** — receta de conformidad AI Act para un entregable educativo EMEA: **tramo 1** marcar lo que ya se entrega con `aiact-50-2-pack/` (art. 50, **vigente**, portador por dialecto porque SCORM 1.2 es `processContents="strict"` y un marcador no importado es **INVÁLIDO**, no tolerado); **tramo 2** construir el expediente de Anexo III con la ventana a favor, usando el eje A de `p317` como insumo del **FRIA**; **tramo 3** lo que NO hay que prometer — el `2027-12-02` es **condicional**. ⚠️ **Y la receta declara su propio hueco: esta base no tiene componente que produzca el FRIA ni registro conforme al art. 26.**
@@ -134,6 +135,178 @@ updated: 2026-10-05
 > **Pase 11:** +2 patrones — **P25** (riesgo de abandono conforme al Anexo III, la capa con presupuesto ya asignado y sin oferta open source) y **P26** (agente docente sobre la ontología curricular nacional ya publicada).
 > **Pase 27:** **+4 patrones y una corrección.** 🔴 **P51 queda con premisa falsa** —el conector MCP de Moodle **sí existe y es MIT**— y lo reemplazan **P54** (corrección y devolución sobre Moodle con **compuerta humana**, el último tramo del gap 6, con piezas que ya escriben), **P55** (el conector de **Open edX**, que es el único que de verdad no existe), **P56** (**SCORM** como formato de salida de la capa generativa: cero integración, offline) y **P57** (evidencia por MCP cotizada sobre lo que CaSS **realmente** expone — 6 de 61 operaciones, con insignias y autoría de marcos **fuera**).
 
+
+## 🆕 Patrones del pase 106 (2026-10-05) — `P328`, `P329` y la receta que ahora tiene que preguntar por la REF
+
+> **Frontmatter y region:** `Global`.
+
+### 🔴 `P328` — la cesion de un OER es propiedad del par (coleccion, **ref**), y la identidad es el `collection-id`
+
+**El patron.** Para decidir si un corpus educativo se puede embarcar, no alcanza leer la licencia
+del repositorio ni la del libro: hay que leer la del **`collection-id` en la `ref` que se va a
+usar**. 🟢 **Medido: 10 de 10 colecciones que existen con el mismo `collection-id` en dos refs
+pasan de `CC BY 4.0` (`1e`) a `CC BY-NC-SA 4.0` (`main`). Cero contraejemplos.**
+
+🔴 **Y el motivo por el que esto se escapa a cualquier barrido por nombre: el slug CAMBIA entre
+ediciones** (`precalculus` → `precalculus-2e`). Comparar por slug muestra dos obras distintas y el
+estrechamiento **desaparece**. Es `P289` en un campo nuevo: **el nombre no es el identificador.**
+
+**Como se corre, concreto:**
+
+```sh
+# 1) enumerar refs (api.github.com esta en 403; ls-remote DISCRIMINA)
+git ls-remote --heads https://github.com/openstax/osbooks-college-algebra-bundle
+
+# 2) que colecciones declara el bundle en cada ref, con su collection-id
+curl -s https://raw.githubusercontent.com/openstax/osbooks-college-algebra-bundle/1e/META-INF/books.xml
+
+# 3) la cesion de ESA coleccion en ESA ref
+curl -s https://raw.githubusercontent.com/openstax/osbooks-college-algebra-bundle/1e/collections/precalculus.collection.xml \
+  | grep -o 'md:license url="[^"]*"'
+```
+
+🔵 **El instrumento versionado:** `compose/code/p328-cession-narrowing/` — `sweep_osbooks.py`
+(barrido por atributo, **no** por orden de aparicion), `verdict.py` (el veredicto por item),
+`census.py` (el censo del arbol) y `test_verdict.py` → 🟢 **36/36**, con los controles negativos
+que importan: una coleccion que vive en **un solo** ref **no** estrecha nada, una cesion que **no
+cambia** no es estrechamiento, y de `NC-SA` a `CC BY` es **ampliacion**, no estrechamiento.
+
+### 🔴 `P329` — una huella normalizada es identidad de TEXTO, no de FAMILIA
+
+🟢 **`P327` queda confirmado:** un unico texto `CC BY-NC-SA 4.0` vive en **7** repos con **TRES**
+huellas crudas (`ab1a44bbba58` 21.442 B · `8e63d319b3d0` 21.013 B · `61288b08584b` 21.444 B) que
+**normalizadas colapsan a una** (`78442b480475e7ae`). **Familias: 52 de 52 identicas** a las
+publicadas — ningun dato cambio de familia.
+
+🔴 **Pero el arreglo no se puede sobre-leer:** **6** payloads de familia `CC BY 4.0` dan **DOS**
+huellas normalizadas (`38a27c0f017da132` ×5 · `f5b745ef98087f53` ×1), porque cinco llevan una
+linea final `https://choosealicense.com/licenses/cc-by-4.0/` y el sexto no. ⚠️ **Una familia, dos
+huellas. La pregunta de familia la contesta `lib/license_family.sh` por bloque de titulo (`P171`),
+nunca el `sha256`.**
+
+🔵 **Regla operativa:** la huella sirve para *«¿es el MISMO archivo?»*; la familia, para
+*«¿que permite?»*. **Son dos preguntas y no se responden con el mismo instrumento** — igual que
+`P265` encontro para la pregunta de region.
+
+### 🔴 `P330` — cuando se mide una propiedad de BYTES, el decodificador es parte del instrumento
+
+**Correccion que este pase se hace a si mismo.** La v1 del barrido de `P327` capturaba con
+`subprocess.run(..., text=True)`, que aplica *universal newlines* y convierte **CRLF → LF antes de
+hashear**. La columna *«bytes crudos»* **no era cruda**: daba **21.013 B** donde el archivo tiene
+**21.442 B** —exactamente las **429** terminaciones de linea— y reportaba **0 colapsos** en el
+cohorte donde el colapso es real.
+
+🔵 **Lo que lo delato no fue un test rojo ni una excepcion: fue una aritmetica que no cerraba**
+contra una medicion previa del mismo archivo hecha con `curl -o`, que si preserva bytes. Misma
+familia que `P319` (el falso negativo que no levanta error) y que el extractor de edicion del pase
+105 (perdia 9.326 de 12.332 items y lo delato la aritmetica).
+
+```python
+# MAL: text=True normaliza los CRLF antes de que los veas
+subprocess.run([...], capture_output=True, text=True)
+# BIEN: binario, y se normaliza EXPLICITAMENTE cuando corresponde
+subprocess.run([...], capture_output=True)          # sin text=True
+```
+
+### 🟢 `P331` — el denominador de una pregunta de cesion son las unidades que DECLARAN, no los archivos
+
+🔴 **La accion B pre-registrada se falsifico:** los JSON de `tutoring/` **si** traen `license`
+propio —**17.665** de 18.054, mas **863** anidados en `subHints`— asi que el arbol tiene
+**82.492** unidades de cesion y no **13.371**.
+
+| capa | unidades |
+|---|---|
+| problema | 13.371 |
+| `tutoring/` *hints* | 67.439 |
+| `tutoring/` *subHints* | 1.682 |
+| **TOTAL** | **82.492** |
+
+🔵 **Las 8.312 contradicciones son el 62,2 % de la capa de problema y el 10,1 % del arbol. Las dos
+son ciertas.** ⚠️ **Al citar cualquiera de las dos hay que nombrar el denominador en la misma
+frase** — `P126` y `P107` a la vez, y es la tercera vez que esta base lo aprende con un corpus
+distinto.
+
+### 🧩 P-NEW-1 — Receta: auditoria de cesion de un corpus OER antes de cotizar
+
+**Para que sirve.** Contestar *«¿se puede embarcar este corpus en una entrega comercial?»* con una
+cifra y no con una impresion. 🔵 **Corre en minutos y no necesita levantar ninguna plataforma.**
+
+**Las piezas, nombradas:**
+
+| pieza | repo / archivo | licencia | rol |
+|---|---|---|---|
+| enumerador de refs | `git ls-remote` | — | que ediciones existen |
+| lector de cesion del titular | `p328-cession-narrowing/sweep_osbooks.py` | MIT (esta KB) | cesion por `(coleccion, ref)` |
+| clasificador de familia | `compose/code/lib/license_family.sh` | MIT (esta KB) | familia por bloque de titulo (`P171`), 🟢 106/106 |
+| veredicto por item | `p328-cession-narrowing/verdict.py` | MIT (esta KB) | CORRECTO / CONTRADICE / SIN-DECLARAR / NO-CLAIM |
+| censo del arbol | `p328-cession-narrowing/census.py` | MIT (esta KB) | el reparto, con denominador nombrado |
+| gate de calibracion | `p249-channel-calibration/` | MIT (esta KB) | 🟢 20/20 — se niega a creer un negativo de canal no calibrado |
+
+**El wiring, en orden:**
+
+```sh
+# 0) CALIBRAR el canal. Sin esto ningun 404 significa nada (P249).
+python3 compose/code/p249-channel-calibration/test_calibrate.py     # 20/20
+
+# 1) enumerar el arbol del redistribuidor SIN bajar los blobs (P275)
+git clone --filter=blob:none --no-checkout https://github.com/CAHLR/OATutor-Content /tmp/oat
+cd /tmp/oat && git ls-tree -r --name-only HEAD | wc -l        # 51.929
+
+# 2) materializar solo la capa que se va a medir
+git sparse-checkout init --no-cone && git sparse-checkout set '/*/*' && git checkout HEAD
+
+# 3) leer la cesion del TITULAR por (coleccion, ref)
+cd compose/code/p328-cession-narrowing
+python3 sweep_osbooks.py osbooks-college-algebra-bundle osbooks-physics > cesion.tsv
+
+# 4) censar el arbol contra esa cesion y publicar el reparto CON denominador
+python3 census.py /tmp/oat
+```
+
+**Lo que devuelve, medido hoy sobre OATutor-Content:**
+
+| veredicto | unidades | % del arbol |
+|---|---|---|
+| 🔴 `CONTRADICE` (el item cede MAS de lo que su titular otorga) | **8.312** | 10,1 % |
+| 🟢 `CORRECTO` | **1.732** | 2,1 % |
+| 🟡 `SIN-DECLARAR` | **2.109** | 2,6 % |
+| ⚪ `NO-CLAIM` (sin titular medible, incluida la capa propia y la sintetica) | **70.339** | 85,3 % |
+
+🔵 **Estimacion:** 2–4 h de un senior para correrla sobre un corpus nuevo, la primera vez; menos de
+1 h las siguientes. **El entregable es el `.tsv` y el censo**, que es lo que un cliente puede
+llevar a su area legal — no un informe en prosa.
+
+⚠️ **Lo que esta receta NO contesta, y hay que decirlo al entregarla:** la capa de **imagenes**
+(2.443 `.gif` sin medir — accion A del pase 107) y las **12.999** unidades con `oer` vacio, que no
+son sinteticas ni atribuidas (accion B del pase 107).
+
+### 🧩 P-NEW-2 — Receta: compuerta de marcado para contenido sintetico en un LMS (EMEA, art. 50(2))
+
+🔴 **El especimen que la justifica ya tiene numero: 6.886** unidades de andamiaje pedagogico que
+declaran `oer: openai` y **no** traen cesion, dentro de un corpus que se carga en LMS.
+
+**Las piezas:**
+
+| pieza | de donde | estado medido |
+|---|---|---|
+| constructor del paquete marcado | `aiact-50-2-pack/` | 🟢 27/27 · **37/37** con `xmllint` contra los XSD de **ambos** dialectos SCORM |
+| mapeo de linaje → etiqueta | `aiact-50-2-marking/` | 🟢 23/23 |
+| medidor de exposicion | `aiact-50-2-exposure/` | 🟢 11/11 → 🔴 33 de 66 filas exponen |
+| detector de tramos | `aiact-50-2-spans/` | 🔴 **0 de 33** piezas emiten limites de tramo |
+| compuerta de borrador | `grading-draft-gate/` | 🟢 37/37 — el modelo redacta, la persona firma |
+
+**El wiring:** el campo `oer` del item es el **predicado de deteccion** (`oer == "openai"` ⇒
+sintetico), `aiact-50-2-marking/` lo mapea a etiqueta, `aiact-50-2-pack/` la emite en el manifiesto
+SCORM de los dos dialectos, y `grading-draft-gate/` impide que algo sintetico y sin marca llegue a
+una decision sobre un alumno.
+
+🟢 **Lo que hace a esta receta construible hoy:** el predicado **no hay que inventarlo** — el dato
+ya se auto-declara. ⚠️ **Y lo que falta, nombrado: `aiact-50-2-spans/` da 0 de 33**, asi que los
+**limites de tramo** (que parte exacta del texto es sintetica) **no** los emite ninguna pieza de
+este arbol todavia. Para un item cuyo `text` entero es del modelo, el tramo es trivial; para uno
+mixto, **no esta resuelto**.
+
+---
 
 ## 🆕 Patrones del pase 105 (2026-10-05) — `P326`, `P326-A`, `P327` y la receta `R-105-CESION-CONTRA-TITULAR`, que INVIERTE a `R-104`
 

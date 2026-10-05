@@ -54,6 +54,10 @@ o la variable de entorno (regla de **P107**, pase 47):
 | **`p289-maven-manifest/`** | **la licencia DECLARADA en un `pom.xml`, que el barrido de esta base no podía leer — con el control negativo de `P171` en versión XML: el pom de `kuali/kc` nombra la AGPL en un COMENTARIO** | `python3 test_maven_license.py` | **11/11** ✅ *(nuevo en el pase 96)* |
 | **`p294-pom-in-production/`** | **`pom.xml` cableado al camino de PRODUCCIÓN: el pase 96 escribió el lector y no lo conectó (`PARSERS` tenía 5 nombres, 0 referencias fuera de `p289/`) — con los negativos que mantienen `P280` cerrado y el defecto que el cableado obvio habría introducido (`artifactId` solo ⇒ `kuali/kc` y `sakai` salen `FOREIGN` siendo propios)** | `python3 test_wiring.py` | **27/27** ✅ *(nuevo en el pase 97)* |
 | ídem, el camino real | ídem contra los payloads de `raw.githubusercontent.com`, comparado con lo ya publicado | `sh sweep_pom_production.sh` | 🟢 **6/6 `OWN`, 4 acuerdos exactos, 0 contradicciones** |
+| **`p328-cession-narrowing/`** | **la cesion de un OER se ESTRECHA entre ediciones, y la identidad es el `collection-id` y NO el slug (`precalculus` → `precalculus-2e` hacia desaparecer el estrechamiento): 10 de 10 colecciones con el mismo id pasan de `CC BY 4.0` en `1e` a `CC BY-NC-SA 4.0` en `main`** | `python3 test_verdict.py` | **36/36** ✅ *(nuevo en el pase 106)* |
+| ídem, la cesion por `(coleccion, ref)` del titular | leida del payload, con calibracion de canal obligatoria | `python3 sweep_osbooks.py osbooks-college-algebra-bundle …` | 🔵 **36 filas** · 🔴 **10 estrechan** · 🟢 **2 de 22** permisivas en `main` |
+| ídem, el censo del redistribuidor | el denominador NOMBRADO: unidades que declaran cesion, no archivos | `python3 census.py /ruta/a/OATutor-Content` | 🔴 **8.312 CONTRADICE** · 🟢 1.732 CORRECTO · de **82.492** unidades |
+| ídem, `P327` re-expresado (accion C del pase 105) | huella cruda vs normalizada, capturando en BINARIO (`P330`) | `python3 sweep_norm.py slugs.openstax.txt` | 🟢 **familias 9/9 y 43/43 iguales** · 🔴 **2 colapsos**, uno de **7 miembros** con **3** huellas crudas |
 | **`suite-total-control/`** | **la regla de P126: un contador por vocabulario acierta en `PASS` y FALLA en `ok`; el lector del total propio acierta en los dos** | `python3 test_control.py` | **10/10** |
 | **`p183-nongithub-denominator/`** | **la capa de PAQUETE: que la pregunta de la DECLARACIÓN rechace los 7 tokens con FORMA de paquete que no lo son, y que el *build* por forma los acepte** | `python3 test_denominator.py` | **15/15** ✅ *(nuevo en el pase 66)* |
 | **`p184-holder-mismatch/`** | **el TITULAR de un archivo de licencia, y que el instrumento SE NIEGUE a contestar sin la familia en vez de publicar una frase del texto Apache o el copyright de la FSF** | `python3 test_holder.py` | **15/15** ✅ *(nuevo en el pase 66)* |
@@ -94,6 +98,35 @@ o la variable de entorno (regla de **P107**, pase 47):
 | ídem, Open edX por ref | ¿el veredicto `SIN-PROVEEDOR-DE-MODELO` aguanta una ref? | `sh sweep_platform_ref.sh` *(registrado, no ejecutado acá)* | 🔴 **`openai==0.28.1` DIRECTA** en `quince`/`redwood`/`sumac` · 🟢 ausente en `master` |
 | ídem, la replicación de la matriz del pase 90 | ¿la matriz de Moodle se sostiene remedida por otra mano? | ídem | 🟢 **6/6 refs EXACTO** (2→3→4→6→7→7) — primera cifra REPLICADA de esta base |
 
+
+🟢 **Pase 106 del 2026-10-05 — el tablero se re-verifico COMPLETO, y era la primera vez en varios
+pases que se pudo:** corrido aqui con `Python 3.11.15`, **58 suites unicas del arbol / 60
+invocaciones / 60 con codigo de salida 0 / 0 fallos**. 🔵 **La ejecucion estuvo NEGADA en los pases
+58, 67, 79, 80, 81, 84, 86, 89, 90 y 91**, lo que dejaba la columna «Hoy» *citada* y no *medida*;
+en este pase queda **afirmada como medida**. 🟢 **Mas la suite nueva del pase**
+(`p328-cession-narrowing/test_verdict.py`, **36/36**), y **ninguna preexistente se toco**.
+
+🔴 **Dos correcciones al instrumento con el que yo mismo conte, y las dos son `P126`:** mi bucle
+reporto **60** invocaciones porque recorrio `lib/` **dos veces** (via `*/` y explicita) — las
+suites **unicas** son **58**; y mi lector de totales leyo **`21443/21013`** como «total de
+aserciones» de `p326-titleholder-book-license/test_verdict.py`, que publica `TODO EN VERDE` y no un
+`N/N`: lo que el `grep` encontro fue un **conteo de BYTES** del propio archivo de datos. ⚠️ **Es
+exactamente lo que `suite-total-control/` existe para prohibir.**
+
+🔵 **Calibracion del canal, antes de creerle cualquier negativo (`P249`):** 🟢
+`raw.githubusercontent.com` **200** con **3** anclas buenas y **404** con archivo, rama y repo
+inventados → **DISCRIMINA**. 🟢 Clon `--filter=blob:none` y `sparse-checkout` **OK** (repo
+inventado → falla). 🆕 🟢 **`git ls-remote` DISCRIMINA** y es el canal que abrio la accion A.
+🔴 `curl -sI github.com` y `api.github.com` dan **403 a la buena Y a la inventada** → **NO
+DISCRIMINAN**, quinto pase que lo reconfirma. 🔴 `openstax.org` **000** — y no hizo falta
+(`P326-A`).
+
+⚠️ **Correccion de metodo sobre mi propia calibracion:** la primera ancla «buena» de este pase era
+una ruta **conjeturada** del titular y dio **404**. Eso no es un canal roto: es un ancla sin
+verificar (`P253`). Y la diferencia fue material — `osbooks-precalculus` **no existe**, pero
+`precalculus` **si se publica**, dentro de `osbooks-college-algebra-bundle`.
+
+---
 
 🔴 **Pase 91 del 2026-10-04 — el tablero TAMPOCO se re-verificó, y la columna «Hoy» sigue sin
 afirmarse como medida.** La ejecución de código del árbol estuvo **NEGADA** otra vez

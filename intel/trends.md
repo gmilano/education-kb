@@ -7,6 +7,7 @@ updated: 2026-10-05
 # 📡 Tendencias — education
 
 > Ventana de investigación: septiembre 2026. Verificado 2026-09-30; el pase 11, el 2026-10-01.
+> **Pase 106 del 2026-10-05:** 🟢 **Tendencias 851–858. Las tres acciones pre-registradas por el pase 105 se corrieron las tres: A CONFIRMADA, B FALSIFICADA, C CONFIRMADA.** 🔴 **La que manda es `P328`: la cesion de un OER se ESTRECHA entre ediciones, y la identidad que lo revela es el `collection-id`, no el slug — 10 de 10 colecciones del titular pasan de `CC BY 4.0` en `1e` a `CC BY-NC-SA 4.0` en `main`, cero contraejemplos; solo 2 de 22 colecciones vivas siguen permisivas.** 🟢 **La accion A resuelve las 1.748 que el pase 105 dejo SIN RESOLVER: las dos 1e declaran `CC BY 4.0` (dos lecturas concordantes del titular, control negativo 404), asi que los 1.732 items quedan CORRECTOS, el 62,2 % NO sube, y la lectura pasa a «el redistribuidor congelo una cesion que el titular estrecho».** 🔴 **La accion B falsifica su propia prediccion y cambia el DENOMINADOR: 17.665 de 18.054 JSON de `tutoring/` traen `license` propio ⇒ **82.492** unidades de cesion, no 13.371 — los porcentajes del pase 105 eran sobre el 16,2 % de la poblacion (las 8.312 contradicciones se replican exactas).** 🔴 **Hallazgo nuevo: 6.886 unidades declaran `oer: openai` con la cesion VACIA en 6.883 — contenido instruccional sintetico, auto-declarado, sin marca ni cesion, y cruza con los instrumentos de AI Act 50(2) que median 0 artefactos de marcado.** ⚠️ **`P329`, contra el arreglo de `P327`: una huella normalizada es identidad de TEXTO y no de FAMILIA (6 payloads `CC BY 4.0` dan 2 huellas).** 🔴 **Y dos correcciones propias: mi barrido v1 capturaba con `text=True` y normalizaba los CRLF ANTES de hashear (21.013 vs 21.442 B = las 429 terminaciones), y el `books.tsv` del pase 105 asigna la 2e a un curso cuyas 1.700 unidades citan la 1e.** 🟢 **Tablero re-verificado: 58 suites, 0 fallos (`Python 3.11.15`).** Ver **851**–**858**.
 > **Pase 105 del 2026-10-05:** 🔴 **La accion pre-registrada sale CONFIRMADA EN LA LETRA y FALSIFICADA EN LA MAGNITUD, al reves de lo previsto, y el hallazgo es grande: la cesion que un item AFIRMA no es la que su titular OTORGA.** Censo de los **13.371** problemas de `CAHLR/OATutor-Content` —no muestra— cruzando `license` contra `oer`: **8.312 items (62,2 %) declaran `CC BY 4.0` mientras el titular de la edicion que ellos mismos citan cede solo `NC-SA`**; **embarcable: 592 = 4,4 %**. 🟢 **Se midio con `openstax.org` en `000`, leyendo del titular por otro canal** (`openstax` en GitHub) — **`P326-A`: egress cerrado al sitio del titular no es cesion inalcanzable**. 🔴 **La licencia de OpenStax es POR LIBRO: 11 de 13 son `NC-SA`, y las 2 `CC BY 4.0` (`physics`, `statistics`) incluyen el unico libro que NINGUN item etiqueta.** 🔵 **La tasa de llenado mide diligencia, no permiso** — lo que **invierte** la receta `R-104`. 🔴 **`P327`: los bytes y el `sha256` crudo de un archivo de licencia no son identidad** (21.443 / 21.013 / 21.442 B = el mismo texto con CRLF / LF / CRLF-sin-salto). 🔴 **Y el calendario del AI Act vuelve mal por NOVENA vez**, ahora desde NA y LATAM. Ver las tendencias **843**–**850**.
 > **Pase 104 del 2026-10-05:** 🟢 **El canal VOLVIO, y eso es `P320` confirmado en la direccion contraria: es un hecho de PERMISO.** El instrumento del pase 103 estaba intacto y le faltaba el derecho a correrlo; esta sesion **si** lo tiene. Medido con control negativo antes de usarlo (rama inventada, ruta inventada y repo inventado dan **404**; `main`/`master`/`HEAD` dan el **mismo** sha): `raw.githubusercontent.com` **200**, clon `--filter=blob:none` de terceros **OK**. 🔴 **Sigue apagado:** `api.github.com` **403**, y `openstax.org`, `creativecommons.org`, `arxiv.org`, `aclanthology.org` **bloqueados por egress** por `curl` **y** por el fetcher. 🔴 **La tendencia que manda es de PROCEDENCIA y aplica a cualquier plataforma de contenido, no solo a esta: el material didactico open source declara su licencia **por item**, y un campo por item se puede llenar MAL. Medido sobre `OATutor-Content`: **1.216 items, 24,3 % NO lleva la cesion que el README promete para «all content»** — 19,3 % con el campo VACIO, 3,6 % con `CC4.0` (que no nombra clausulas: `CC BY 4.0` y `CC BY-NC-SA 4.0` son ambas «CC 4.0»), y 1,4 % con **una URL que no es de licencia**.** 🔵 **Y los vacios NO son ruido: se concentran por curso. **5 de 21 cursos con 0 %**, y `OpenStax: Calculus Volume 1` con **1,3 %** (74 de 75 vacios) mientras `Elementary Algebra` e `Intermediate Algebra` dan **100 %**.** ⚠️ **La explicacion mas probable —que `Calculus Volume 1` sea `CC BY-NC-SA 4.0` en el titular mientras los demas son `CC BY 4.0`— NO se publica como hecho: `openstax.org` da 403 por egress y lo unico que la sostiene son ediciones DERIVADAS y agregadores, que es exactamente el error que `P314` le costo a esta base. **Queda pre-registrada como accion del pase 105, con su prediccion escrita antes de correrla.** 🟢 **Lo de primera mano es la correlacion y alcanza para una regla de entrega: en una plataforma de contenido, la tasa de etiquetado por curso es un indicador de procedencia, y el curso peor etiquetado es el primero que hay que auditar.** 🔵 **Señal de mercado del barrido: el eje 2026 de los LMS open source es incorporar tutoria AI dentro de la plataforma (LearnHouse) en vez de agregarla por fuera — y la capa que crece es ERP+LMS unificado (OpenEduCat: 3 M+ usuarios, 90+ paises, 70+ modulos) contra LMS puro.** Ver **`P322`**–**`P325`**.
 > **Pase 103 del 2026-10-05:** 🔴 **Tendencias 823–834, y la que manda es de método y contra esta base: `P321`** — un archivo append-only puede **sepultar un acierto bajo un error posterior**, y `intel/market.md` tiene hoy las dos versiones del calendario del AI Act conviviendo (pase 101 correcta, pase 102 falsa) sin que nada lo detecte. 🔴 **Agravante: los pases 100 y 101 LLEVABAN EL CONTADOR de ese mismo error de canal — el pase 102 fue la séptima reproducción, desde adentro.** 🟢 **El calendario real, con la norma que lo produce: Reglamento (UE) 2026/1744** (*Digital Omnibus on AI*, DOUE 24/07/2026, en vigor 27/07/2026) — art. 50 **vigente 2026-08-02** (gracia hasta **2026-12-02**), Anexo III educativo **2027-12-02** y **CONDICIONAL**, Anexo I **2028-08-02**. 🟢 **`P320`: el canal de verificación es un hecho de PERMISO, no sólo de red** — y una predicción **no corrida no es una predicción falsificada.
@@ -118,6 +119,180 @@ updated: 2026-10-05
 > (tendencia 29), se abre el **gap 20** y se registran dos advertencias de verificación: los agregadores de estrellas
 > están mal por ~2× y **un 403 de `curl` no es un 404**. Ver la nota de método del pase 12.
 > **Pase 11:** el Digital Omnibus es derecho vigente (tendencia 25), aparece la capa predictiva y está vacía (tendencia 26), y se corrige un error de método de diez pasadas sobre licencias permisivas (tendencia 27).
+
+## 🟢 Tendencias 851–858 — pase 106 del 2026-10-05: la cesion de un OER se ESTRECHA entre ediciones, y la unidad que la mide no era la que esta base contaba
+
+> **Frontmatter y region:** `Global`. Las senales regionales de este pase estan en
+> `intel/market.md` (barrido **35**, cuatro regiones, 0 silencios).
+
+🔵 **Ocho tendencias, numeradas una por una: 851, 852, 853, 854, 855, 856, 857 y 858** — enumeradas
+asi a proposito, porque la forma *«numeradas 851–858»* devolvia **0** citas al auditor de
+*backlinks* (`P97`, corregido en el pase 97).
+
+### 851 — La cesion de un OER se ESTRECHA entre ediciones, y la identidad que lo revela es el `collection-id`, no el slug
+
+🟢 **Medido, no inferido, del payload del titular (`openstax` en GitHub), 36 filas:** de las
+**10** colecciones que existen con el **MISMO `collection-id`** en los dos refs del mismo
+repositorio, **10 de 10** pasan de **`CC BY 4.0`** en `1e` a **`CC BY-NC-SA 4.0`** en `main`.
+**Cero contraejemplos.**
+
+| `collection-id` | slug en `1e` | slug en `main` | `1e` | `main` |
+|---|---|---|---|---|
+| `col11562` | `introductory-statistics` | `introductory-statistics-2e` | 🟢 CC BY 4.0 | 🔴 CC BY-NC-SA 4.0 |
+| `col11667` | `precalculus` | `precalculus-2e` | 🟢 CC BY 4.0 | 🔴 CC BY-NC-SA 4.0 |
+| `col11759` | `college-algebra` | `college-algebra-2e` | 🟢 CC BY 4.0 | 🔴 CC BY-NC-SA 4.0 |
+| `col11758` | `algebra-and-trigonometry` | `algebra-and-trigonometry-2e` | 🟢 CC BY 4.0 | 🔴 CC BY-NC-SA 4.0 |
+| `col11776` | `introductory-business-statistics` | `introductory-business-statistics-2e` | 🟢 CC BY 4.0 | 🔴 CC BY-NC-SA 4.0 |
+| `col11406` | `college-physics` | `college-physics-2e` | 🟢 CC BY 4.0 | 🔴 CC BY-NC-SA 4.0 |
+| `col11844` | `college-physics-ap-courses` | `college-physics-ap-courses-2e` | 🟢 CC BY 4.0 | 🔴 CC BY-NC-SA 4.0 |
+| `col32026` | `college-algebra-coreq` | `college-algebra-corequisite-support-2e` | 🟢 CC BY 4.0 | 🔴 CC BY-NC-SA 4.0 |
+| `col11487` | `concepts-biology` | `concepts-biology` | 🟢 CC BY 4.0 | 🔴 CC BY-NC-SA 4.0 |
+| `col12078` | `biology-ap-courses` | `biology-ap-courses` | 🟢 CC BY 4.0 | 🔴 CC BY-NC-SA 4.0 |
+
+🔴 **Por que esta base no lo veia: el slug CAMBIA DE NOMBRE entre ediciones** (`precalculus` →
+`precalculus-2e`), asi que un barrido que compara por slug ve **dos obras distintas** y no ve
+ningun estrechamiento. **La identidad de una coleccion es su `collection-id`, que no cambia.**
+Es `P289` otra vez —el nombre no es el identificador— en un campo nuevo.
+
+🔵 **Y el reparto en `main` es el que decide un presupuesto: de las 22 colecciones medidas, solo
+2 son `CC BY 4.0`** (`physics` `col12081` y `statistics` `col30309`). Replica exacta, con
+denominador mayor, del *2 de 13* del pase 105.
+
+### 852 — Un campo de licencia por item puede estar CORRECTO y el riesgo seguir existiendo: lo que se congela es la cesion
+
+🟢 **La accion A pre-registrada por el pase 105 se corrio y su prediccion sale CONFIRMADA.** Las
+dos ediciones `1e` que **1.748 unidades citan** y que los *bundles* vivos ya no publican declaran
+**`CC BY 4.0`**, leidas del canal del **titular** con **dos lecturas concordantes cada una**
+(bloque de titulo del `LICENSE` + `md:license url` del `collection.xml`) y control negativo de
+ruta inventada en la misma rama → **404**.
+
+🔵 **Consecuencia exacta:** los **1.732** items que afirman `CC BY 4.0` sobre esas ediciones
+(**1.684** de `introductory-statistics` + **48** de `precalculus`) quedan **CORRECTOS**, el
+62,2 % de contradiccion del pase 105 **NO sube**, y la clausula de refutacion —*que la 1e tambien
+fuera NC-SA, con el total a 10.060 (75,2 %)*— **no se dispara**.
+
+🔴 **Y la lectura cambia a la peor de las dos, como la pre-registracion anticipo:** el defecto no
+es del redistribuidor equivocandose. El redistribuidor **congelo una cesion que el titular
+estrecho al relicenciar**. Un item puede tener el campo bien y aun asi apuntar a una edicion que
+ya no se publica con esos terminos — y eso **no se arregla corrigiendo el campo**.
+
+### 853 — El denominador de una pregunta de cesion no son los archivos ni los problemas: son las unidades que DECLARAN
+
+🔴 **La accion B pre-registrada sale FALSIFICADA, y en el eje que su propia clausula nombraba.**
+La prediccion decia que los JSON de `tutoring/` **no tienen campo `license` propio** y heredan del
+problema padre. Medido sobre los **18.054** materializados por `sparse-checkout`: **17.665 SI lo
+traen**, mas **863** archivos con un `license` anidado en `subHints`.
+
+🟢 **El censo de unidades, enumerado y no muestreado:**
+
+| capa | unidades que declaran cesion |
+|---|---|
+| problema | **13.371** |
+| `tutoring/` — *hints* | **67.439** |
+| `tutoring/` — *subHints* | **1.682** |
+| **TOTAL** | **82.492** |
+
+🔴 **Asi que los porcentajes del pase 105 se calcularon sobre 13.371 de 82.492 unidades: el
+16,2 % de la poblacion.** Las **8.312** contradicciones —cifra que este pase **replica exacta**
+con un instrumento escrito aparte— son el **62,2 %** de la capa de problema y el **10,1 %** del
+arbol. 🔵 **Las dos son ciertas y dicen cosas distintas, que es `P126` y `P107` a la vez: una
+cifra solo es una cifra con su denominador NOMBRADO.**
+
+### 854 — El contenido SINTETICO ya es una capa con numero propio, y entra sin cesion
+
+🔴 **Hallazgo nuevo, que ningun pase de esta base habia tocado: 6.886 unidades declaran
+`oer: "openai"`** —o sea, el dato dice de si mismo que lo genero un modelo— **y la cesion esta
+VACIA en 6.883 de ellas.**
+
+| capa | `type` | unidades | cesion declarada |
+|---|---|---|---|
+| `tutoring/` | `hint` | **4.455** | 🔴 vacia |
+| `tutoring/` | `scaffold` | **2.418** | 🔴 vacia |
+| problema | — | **13** | 🔴 vacia (10) · 🟡 `CC BY 4.0` (3) |
+
+🔵 **Las 3 que SI declaran son el caso mas interesante: ceden `CC BY 4.0` sobre texto que el
+propio campo atribuye a un modelo.**
+
+⚠️ **Y esto cruza con los instrumentos de AI Act 50(2) que este arbol ya tiene:** `aiact-50-2-spans/`
+mide **0 de 33** piezas emitiendo limites de tramo y `scan_marking.sh` mide **0 artefactos de
+marcado**. Ahora hay un especimen con **numero**: 6.886 unidades de contenido instruccional
+sintetico, auto-declaradas como tal en el dato, **sin marca y sin cesion**, dentro de un repo que
+en su README cede *«ALL content […] under CC BY 4.0»*.
+
+### 855 — Una huella normalizada es identidad de TEXTO, no de FAMILIA — la correccion de `P327` no se puede sobre-leer
+
+🟢 **La accion C pre-registrada se corrio y su prediccion sale CONFIRMADA: ningun dato cambia de
+familia; cambia la huella.** Re-expresadas **9 de 9** cesiones del cohorte OpenStax y **43** del
+cohorte de agentes: **las familias salen identicas** a las publicadas (30 MIT · 3 AGPL-3.0 ·
+2 BSD · 2 Apache-2.0 · 6 `UNCLASSIFIED` · 26 `NO-CLAIM`).
+
+🔴 **Y el colapso que `P327` predijo es mas grande de lo que el pase 105 pudo ver:** un unico
+texto `CC BY-NC-SA 4.0` se publica en **7 repos** del titular con **TRES huellas crudas
+distintas** —`ab1a44bbba58` (21.442 B, ×4), `8e63d319b3d0` (21.013 B, ×2) y `61288b08584b`
+(21.444 B, ×1)— que **normalizadas colapsan a una**: `78442b480475e7ae`.
+
+🔵 **Pero la guarda que este pase agrega es contra el arreglo mismo, y es `P329`:** **6** payloads
+de familia **`CC BY 4.0`** dan **DOS** huellas normalizadas distintas
+(`38a27c0f017da132` ×5 y `f5b745ef98087f53` ×1), porque cinco llevan una linea final
+`https://choosealicense.com/licenses/cc-by-4.0/` y el sexto no. **Una familia, dos huellas.**
+⚠️ **Normalizar el fin de linea arregla el falso DESDOBLE; no convierte la huella en un
+identificador de familia.** La familia la contesta el clasificador por bloque de titulo (`P171`),
+no el `sha256`.
+
+### 856 — Un capturador de texto puede NORMALIZAR lo que ibas a medir, y el defecto no levanta excepcion
+
+🔴 **Correccion que este pase se hace a si mismo antes de publicar, y es de la familia de `P319`:**
+la v1 del barrido de `P327` capturaba con `subprocess.run(..., text=True)`, que aplica
+*universal newlines* y convierte **CRLF → LF antes de hashear**. La columna *«bytes crudos»*
+**no era cruda**: para el `LICENSE` de 429 lineas daba **21.013 B** en vez de **21.442 B** —
+exactamente las **429** terminaciones de linea— o sea **borraba el fenomeno que el instrumento
+existe para medir**, y con `0` colapsos encontrados en el cohorte donde el colapso es real.
+
+🔵 **Lo que lo delato no fue una excepcion ni un test rojo: fue una aritmetica que no cerraba**
+contra una medicion anterior del mismo archivo hecha con `curl -o` (que si preserva bytes). Se
+captura en **binario** desde este pase. ⚠️ **La leccion viaja mas alla de este repo: cuando se
+mide una propiedad de BYTES, cualquier capa que decodifique a texto en el camino es parte del
+instrumento.**
+
+### 857 — El mapeo curso → coleccion puede sustituir la EDICION que el dato cita, y entonces el veredicto es sobre otro libro
+
+🔴 **Correccion al pase 105, en su propio instrumento:** `p326-titleholder-book-license/books.tsv`
+asigna al curso *«OpenStax: Introductory Stats»* la coleccion **`introductory-statistics-2e`**.
+🟢 **Medido sobre el arbol entero: 1.700 unidades citan `introductory-statistics` (la 1e) y CERO
+citan `introductory-statistics-2e`.**
+
+🔵 **Esa sustitucion es la razon por la que el pase 105 no pudo resolver las 1.748 y las dejo
+como «SIN RESOLVER»:** comparaba la cesion de la **2e** contra items que citan la **1e**. Un
+mapeo curso→coleccion escrito a mano es una **afirmacion**, y hay que medirla contra el campo
+`oer` del dato igual que cualquier otra.
+
+### 858 — Las cuatro regiones responden, y la divergencia 2026 ya no es de REGULACION sino de CAPACIDAD institucional
+
+🟢 **Barrido regional 35, 4 de 4 regiones con senal, 0 silencios.** Lo que cambia la lectura
+frente a los barridos anteriores es que las cuatro regiones ya **tienen** marco y lo que las
+separa es quien puede **cumplirlo**:
+
+- 🔵 **North America** — **134** proyectos de ley sobre AI en educacion en **31** estados en la
+  sesion 2026; **4** estados (Maryland, Idaho, Oklahoma, Virginia) exigen **guia estatal Y
+  politica distrital obligatoria**. 🔴 **Pero solo el 18 % de los docentes de escuela publica K-12
+  recibe guia escrita formal** — la norma existe y no baja al aula.
+- 🔵 **EMEA** — el **AI Act** clasifica como **alto riesgo** admision, evaluacion y correccion de
+  examenes; **desde el 2 de agosto de 2026** la AI Office y las autoridades nacionales
+  **aplican**. La mayoria de las instituciones sigue en *pilot-and-pre-compliance*.
+- 🔵 **APAC** — **Corea del Sur**: *Framework Act* en vigor el **22 de enero de 2026**;
+  **Vietnam**: Ley **134/2025/QH15** en vigor el **1 de marzo de 2026**; **Japon** mantiene el
+  modelo voluntario. Regulacion **divergente por pais**, no regional.
+- 🔵 **LATAM** — **79 %** del profesorado declara usar AI (18 puntos sobre la cifra global de
+  2025), **88 %** con enganche *«minimo a moderado»*, y **menos del 10 % de las instituciones**
+  tiene guia formal y capacidad para integrarla. **Peru** reglamento la Ley **31814**;
+  **Brasil** sigue con el **PL 2.338/2023**; **Uruguay** fue el primero de la region en firmar
+  el Convenio Marco del Consejo de Europa.
+
+⚠️ **La asimetria que importa para una propuesta: en LATAM el cuello de botella medido es
+institucional (guia y capacidad), no de adopcion docente** — es la region con mas uso declarado y
+menos marco interno para sostenerlo.
+
+---
 
 ## 🟢 Tendencias 843–850 — pase 105 del 2026-10-05: la cesion que un item AFIRMA no es la que su titular OTORGA, y la diferencia se mide
 

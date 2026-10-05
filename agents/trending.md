@@ -8,6 +8,127 @@ updated: 2026-10-05
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 > No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
+> **Pase 106 del 2026-10-05:** 🟢 **0 altas (vigesimonoveno barrido, 5 candidatas, las 5 frenadas por el gate de `P311`) y las TRES acciones pre-registradas corridas: A CONFIRMADA, B FALSIFICADA, C CONFIRMADA.** 🔴 **`P328`: la cesion de un OER se ESTRECHA entre ediciones — 10 de 10 colecciones con el mismo `collection-id` pasan de `CC BY 4.0` en `1e` a `CC BY-NC-SA 4.0` en `main`, y el slug cambia de nombre, que es por lo que esta base no lo veia.** 🔴 **El denominador se corrige de 13.371 a 82.492 unidades y aparece una capa sintetica de 6.886 unidades (`oer: openai`) sin cesion.** 🟢 **Canal nuevo: `git ls-remote` para enumerar refs — es el que abrio la accion A.**
+
+## 2026-10-05 — pase 106: 0 altas (vigesimonoveno barrido), las TRES acciones pre-registradas corridas, y la cesion resulta que se ESTRECHA
+
+> **Frontmatter y region:** `Global`. Las senales regionales de este pase estan en
+> `intel/market.md` (barrido **35**, cuatro regiones, 0 silencios).
+
+### 🔬 El canal, medido antes de cualquier veredicto (`P247`) — cuarta medicion consecutiva de `P320`
+
+| canal | pase 105 | pase 106 | control negativo |
+|---|---|---|---|
+| `raw.githubusercontent.com` (payload) | 🟢 200 | 🟢 **200** | 3 anclas buenas → 200; archivo, rama y repo inventados → **404** los tres |
+| clon `--filter=blob:none` (enumeracion, `P275`) | 🟢 OK | 🟢 **OK** | repo inventado → **falla**; `OATutor-Content` = **51.929** rutas, **replica el pase 105 al archivo** |
+| `sparse-checkout` sobre clon sin blobs | 🟢 OK | 🟢 **OK** | **18.054** archivos de `tutoring/` materializados, luego **49.479** JSON completos |
+| 🆕 `git ls-remote` (enumeracion de **refs**) | no usado | 🟢 **OK** | repo inventado → **falla** ⇒ **DISCRIMINA**. Es el canal que abrio la accion A |
+| `api.github.com` · `github.com` (web) | 🔴 403 | 🔴 **403** | un slug inventado da **403 tambien**: **NO discrimina**, quinto pase que lo reconfirma |
+| `openstax.org` | 🔴 000 | 🔴 **000** | egress cerrado — y **no hizo falta** (`P326-A`) |
+
+🔵 **Correccion de metodo sobre mi propio control:** la primera calibracion de este pase uso como
+*ancla buena* una ruta **conjeturada** del titular (`osbooks-introductory-statistics/main/README.md`)
+y dio **404**. Eso **no es un canal roto ni un repo ausente**: es un ancla sin verificar. Se
+recalibro con tres anclas que si existen. ⚠️ **`P253` otra vez: un 404 sobre un nombre
+conjeturado no afirma nada, ni del canal ni del repo.** Y en este pase la diferencia fue material
+— el repo `osbooks-precalculus` **no existe**, pero `precalculus` **si se publica**: vive dentro
+de `osbooks-college-algebra-bundle`.
+
+### 🟢 Las TRES acciones pre-registradas por el pase 105, corridas, con su veredicto
+
+| accion | prediccion escrita ANTES | medido | veredicto |
+|---|---|---|---|
+| **A** — cesion de `introductory-statistics` **1e** y `precalculus` **1e** desde un canal del **titular** | las dos declaran `CC BY 4.0` ⇒ los **1.732** items quedan CORRECTOS y el 62,2 % **no sube** | 🟢 **las dos declaran `CC BY 4.0`**, dos lecturas concordantes cada una, control negativo **404** | 🟢 **CONFIRMADA** |
+| **B** — los **18.054** JSON de `tutoring/` | **no** tienen `license` propio; el denominador sigue siendo **13.371** | 🔴 **17.665 SI lo traen** (+863 anidados en `subHints`) ⇒ **82.492** unidades | 🔴 **FALSIFICADA** |
+| **C** — `P327`: re-expresar las huellas crudas como normalizadas | ningun dato cambia de **familia**; cambia la **huella** | 🟢 **familias 9/9 y 43/43 identicas**; **2 colapsos**, uno de **7 miembros** con **3** huellas crudas | 🟢 **CONFIRMADA** |
+
+🔴 **Las tres juntas dicen algo que ninguna dice sola:** la accion A deja los items **bien**, la
+accion B dice que estaban contados sobre **el 16,2 % de la poblacion**, y la C dice que la huella
+con la que se comparaban **no era una huella**. 🔵 **El dato de fondo —8.312 contradicciones— se
+replica EXACTO con un instrumento escrito aparte**, asi que lo que se movio no es el hallazgo del
+pase 105 sino su **unidad**, su **alcance** y su **lectura**.
+
+### 🔴 Altas de agente: 0 — vigesimonoveno barrido, 5 candidatas evaluadas una por una
+
+Año **calculado** (`date -u +%Y` → **2026**). Las cuatro consultas globales del encargo mas el eje
+de tutoria/MCP.
+
+| candidata | por que NO entra | gate |
+|---|---|---|
+| `GarethManning/education-agent-skills` | **ya publicada** (`agents/top.md:4829` y 6 archivos mas) · licencia **`CC BY-SA`** leida del payload (1.230 B): **no permisiva** | 🔴 `P311` |
+| `mizcausevic-dev/mcp-ai-tutor` | **ya publicada** (`agents/trending.md:8619`) · **`AGPL-3.0`** leida del payload (34.523 B) | 🔴 `P311` |
+| `vishalsachdev/canvas-mcp` | **ya publicada** | 🔴 `P311` |
+| `HKUDS/DeepTutor` | **ya publicada** | 🔴 `P311` |
+| `ArnaudGuiovanna/tutor-mcp` | **ya publicada** | 🔴 `P311` |
+
+🟢 **El gate de `P311` freno 5 de 5 antes de escribir una fila** — y las dos unicas con tamano
+real de la vertical educativa en este barrido son **`CC BY-SA`** y **`AGPL-3.0`**: ninguna
+construible cerrada. ⚠️ **El cero es informativo, no vacio.**
+
+### 🔴 Lo que este pase mide y NO estaba medido: la capa sintetica
+
+| capa | unidades | cesion |
+|---|---|---|
+| `oer: openai`, `type: hint` | **4.455** | 🔴 vacia |
+| `oer: openai`, `type: scaffold` | **2.418** | 🔴 vacia |
+| `oer: openai`, capa de problema | **13** | 🔴 vacia (10) · 🟡 `CC BY 4.0` (3) |
+| **TOTAL sintetico auto-declarado** | **6.886** | — |
+
+🔵 **Las 13 de la capa de problema son la razon por la que dos conteos de este mismo pase difieren
+(6.873 vs 6.886): el primero solo recorria `tutoring/`.** Se deja escrito para que no se lea como
+una variante de grafia — **se midio, y variantes hay cero**.
+
+### ⚠️ Lo que queda SIN MEDIR, nombrado
+
+- 🔴 **Los 2.443 `.gif`** del mismo arbol: una imagen de tercero dentro de un item permisivo sigue
+  siendo un eje que esta base **no toco**.
+- 🔴 **Los 455 items de titular no resuelto** (`docs.google.com`, `drive.google.com`): exige abrir
+  cada documento y el egress a Google Docs **no se midio en este pase**.
+- 🔴 **Las 12.999 unidades de `tutoring/` con `oer` VACIO**: no son sinteticas ni atribuidas; son
+  **sin titular declarado**, y son la clase mas grande despues de `OATutor.io`.
+- 🔵 **Las 8 colecciones `1e` que ningun item cita** (`algebra-and-trigonometry`, `biology`,
+  `concepts-biology`, `college-physics`, `college-physics-ap-courses`,
+  `introductory-business-statistics`, `prealgebra`, `elementary-algebra`): su cesion esta medida
+  en este pase, pero **nadie la consume** — dato de cobertura, no de riesgo.
+
+### 🔴 Acciones pre-registradas para el pase 107, falsables, con su numero escrito ANTES de correrlas
+
+**Accion A — el eje de IMAGEN, acotado a 2.443 `.gif`.** Cruzar cada `.gif` del arbol contra el
+`oer` y el `license` del item que lo referencia, y contra la obra citada. El `collection.xml` del
+titular enumera sus propios `media/`, asi que la pregunta *«esta figura es del libro o la puso el
+redistribuidor?»* es **decidible por enumeracion**, no por inspeccion visual.
+
+**Prediccion falsable:** *la mayoria de los `.gif` NO aparece en el arbol `media/` de ninguna
+coleccion del titular, y por lo tanto son **del redistribuidor**; entonces la cesion de la
+imagen la otorga OATutor (que cede `CC BY 4.0` en su README) y **el eje de imagen no agrega
+contradicciones nuevas**. Cuantitativo: **menos del 20 %** de los 2.443 se encuentra en un
+`media/` del titular.*
+
+🔵 **Que la refuta:** que **mas del 20 %** aparezca en `media/` del titular. Entonces las figuras
+viajan con la cesion **del libro** —`NC-SA` para 20 de 22 colecciones— y hay una clase de
+contradiccion **en binarios**, que es peor de auditar que un campo de texto.
+
+⚠️ **Lo que NO puede pasar:** decidirlo por el nombre del archivo. `CNX_Stats_*.jpg` *parece* de
+OpenStax y `figure1.gif` *parece* propio, y **ninguna de las dos es una medicion** — es el error
+que `P314` ya pago (copiar la procedencia al campo de cesion).
+
+**Accion B, mas barata — las 12.999 unidades de `tutoring/` con `oer` vacio.** Ya estan
+enumeradas.
+
+**Prediccion falsable:** *el `oer` vacio **correlaciona con el problema padre**: si el problema
+cita OpenStax, sus hints vacios son derivados del libro y heredan `NC-SA`. Cuantitativo: **mas del
+60 %** de las 12.999 cuelga de un problema cuyo `oer` cita OpenStax ⇒ hay una clase de herencia
+**implicita** que el censo de este pase conto como `NO-CLAIM`.* 🔵 **Que la refuta:** que la
+mayoria cuelgue de problemas con `oer: OATutor.io` — entonces el vacio es autoria propia sin
+llenar y el `NO-CLAIM` de este pase es la lectura correcta.
+
+**Accion C — `P329` contra esta base.** Barrer los `.md` del arbol buscando toda afirmacion de
+identidad de licencia que se apoye en un `sha256` (crudo o normalizado) **sin** nombrar la familia
+al lado. **Prediccion: aparecen ≥3 afirmaciones de esa forma, y ninguna cambia de familia al
+remedirla** — el defecto es de **expresion**, no de dato. Si alguna cambia de familia, el hallazgo
+es mucho mas grave que un defecto de expresion.
+
+---
 
 ## 2026-10-05 — pase 105: 0 altas, vigesimoctavo barrido generalista, y la accion pre-registrada sale al REVES de lo previsto
 

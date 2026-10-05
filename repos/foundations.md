@@ -8,6 +8,7 @@ updated: 2026-10-05
 
 > Bases sobre las cuales construir. Verificado repo por repo vía WebFetch el 2026-09-30 (capas del pase 10, el 2026-10-01).
 > Leer la columna **Licencia** antes de proponer: media KB de educación es GPL/AGPL, no permisiva.
+> **Pase 106 del 2026-10-05:** 🔴 **`P328` — la cesion de este estante es propiedad del par (repo, **ref**), y las 9 altas del pase 104 se publicaron con UNA sola: de las 10 colecciones que existen con el MISMO `collection-id` en los dos refs, **10 de 10 ESTRECHAN** de `CC BY 4.0` (`1e`) a `CC BY-NC-SA 4.0` (`main`), cero contraejemplos; 22 colecciones medidas en `main`, solo 2 permisivas.** ⚠️ **No se veia porque el slug CAMBIA DE NOMBRE entre ediciones (`precalculus` → `precalculus-2e`): la identidad es el `collection-id` (`P289` en campo nuevo).** 🔵 **Y un repo dado por ausente existe con otro contenedor: `osbooks-precalculus` no existe, pero `precalculus` se publica DENTRO de `osbooks-college-algebra-bundle` — un libro no tiene por que tener repo propio (`P253`).** 🟢 **Accion C corrida y CONFIRMADA: familias 52/52 identicas; un texto `NC-SA` vive en 7 repos con TRES huellas crudas que colapsan a una.** 🔴 **`P329` contra ese mismo arreglo: la huella normalizada es identidad de TEXTO y no de FAMILIA (6 payloads `CC BY 4.0`, 2 huellas).** 🟢 **`P323` reconfirmado por enumeracion, con la trampa de subcadena medida (`grep -i licen` da 8 rutas, 0 licencias).**
 > **Pase 105 del 2026-10-05:** 🟢 **9 altas fundacionales, y son la capa que este estante nombraba sin tenerla: el CORPUS DE CONTENIDO del TITULAR, con su cesion leida libro por libro del payload.** Desde `P315` este archivo mide el eje «permisivo en codigo / CC en el contenido» **siempre desde el lado del redistribuidor**; nunca tuvo al titular, y sin titular un campo que dice `CC BY 4.0` no se contrasta con nada. 🟢 **OpenStax publica el payload de cada libro en la organizacion `openstax` de GitHub** —`<md:license>` por libro **mas** el `LICENSE` del *bundle*, dos lecturas concordantes— y ese canal estaba **vivo** con `openstax.org` en **000** (`P326-A`). 🔴 **El hallazgo que manda: la licencia de OpenStax es POR LIBRO.** **11 de los 13 libros medidos** son **`CC BY-NC-SA 4.0`** —**no embarcables en producto comercial**— y las dos `CC BY 4.0` son **`physics`** y **`statistics`**. 🔵 **`physics` es, ademas, el unico libro que `OATutor-Content` cita y que NINGUN item etiqueta:** el unico donde `CC BY 4.0` habria sido verdad es el unico donde nadie lo escribio. 🔴 **`P327`: los bytes y el `sha256` crudo de un archivo de licencia NO son identidad** — 21.443 / 21.013 / 21.442 B son **el mismo texto** con CRLF, LF y CRLF-sin-salto-final: un unico `sha256` al normalizar, lo que indicta las huellas que este estante publica desde el pase 66 (los datos siguen bien, la huella no era huella). Ver `compose/code/p326-titleholder-book-license/`.
 > **Pase 104 del 2026-10-05:** 🟢 **El canal VOLVIO, y eso es `P320` confirmado en la direccion contraria: es un hecho de PERMISO.** El instrumento del pase 103 estaba intacto y le faltaba el derecho a correrlo; esta sesion **si** lo tiene. Medido con control negativo antes de usarlo (rama inventada, ruta inventada y repo inventado dan **404**; `main`/`master`/`HEAD` dan el **mismo** sha): `raw.githubusercontent.com` **200**, clon `--filter=blob:none` de terceros **OK**. 🔴 **Sigue apagado:** `api.github.com` **403**, y `openstax.org`, `creativecommons.org`, `arxiv.org`, `aclanthology.org` **bloqueados por egress** por `curl` **y** por el fetcher. 🟢 **La prediccion pre-registrada de este archivo, NO MEDIDA en el pase 103 y re-registrada sin cambios, se corre y la accion C (`OATutor`) sale **CONFIRMADA en la forma y FALSIFICADA en la magnitud**.** 🔴 **Y el gate de `P311` evito el error que este pase estaba por cometer: `OATutor` **ya es una fila** de `agents/top.md` (MIT) desde antes — la pista del pase 103 proponia darlo de alta aca, y lo que falta no es la fila sino la **capa de contenido**.** 🟢 **Codigo: `MIT`, `LICENSE` 1.104 B, *(c) 2023 Zachary A. Pardos — CAHL research lab*, leido del payload.** 🔴 **`P323` — el borde de capa es un **SUBMODULO**, o sea OTRO REPOSITORIO: el contenido vive en `CAHLR/OATutor-Content`, y ese repo tiene **CERO archivos de licencia en 51.929 rutas enumeradas** (aserido, y confirmado por sonda de 7 nombres: 404 en los 7). Un barrido que lee el `LICENSE` de la raiz del padre ve **MIT**, ve un arbol **sin contenido** y ve **cero** licencias de contenido: **las tres lecturas son ciertas y las tres enganan**.** 🔵 **Topologia NUEVA frente a `P315` (dato en un subdirectorio del mismo repo) y `P317` (corpus vendoreado sin declaracion).** 🔴 **`P322` — y el contenido se contradice con su propio README: declara *«ALL content […] under CC BY 4.0»* y sus campos por item dicen otra cosa. Medidos **1.216 de 13.371** problemas (muestreo sistematico, cada 11º): **75,7 % `CC BY 4.0`, 19,3 % campo VACIO, 3,6 % `CC4.0`/`openstax` sin clausulas, 1,4 % una URL QUE NO ES DE LICENCIA** — y los 17 de esa ultima clase estan **todos** en un curso y apuntan a **PDFs de solucionarios de examen**, con **15 de 17** identicos al campo `oer` del mismo item: se copio la PROCEDENCIA al campo de CESION (`P314`).** 🟢 **Dos muestras sistematicas independientes concuerdan (n=406 y n=1.216).** ⚠️ **0 altas fundacionales: las dos piezas nuevas de la industria que el barrido devolvio son AGPL-3.0 y CC BY-SA 4.0 — ninguna permisiva — y van a `verticals/`.** Ver **`P322`**–**`P325`**.
 > **Pase 103 del 2026-10-05:** 🔴 **0 altas fundacionales por canal DENEGADO, no por falta de candidatas.** Este estante clasifica familias leyendo el **payload** del titular; con el clon sin blobs denegado por permisos y `WebFetch` bloqueado 4/4, **cualquier fila nueva sería una familia inferida** (`P320`). ⚠️ **La predicción pre-registrada queda NO MEDIDA y re-registrada sin cambios.** Lo único establecido: el orden de magnitud del denominador — **304** apariciones de URL de GitHub en este archivo y **419** en `agents/top.md`, **apariciones y NO slugs distintos** (deduplicar exige el canal que falta, y presentarlas como conteo de repos sería el error de denominador de `P289`). 🔵 **Pista del pase, por este estante y no por `agents/`:** `OATutor`, **código MIT + 5 semestres de material didáctico CC BY 4.0** — sería el eje de licencia por capa de `P315`/`P317` **sobre una PLATAFORMA desplegable** y no sobre un corpus de investigación, y la consecuencia comercial cambia: *un corpus `NC` limita un paper; material `CC BY` dentro de un producto limita el producto del cliente*.
@@ -110,6 +111,99 @@ corre ése antes de escribir uno a mano** (tendencia **313**). 🟢 **Y el `gafa
 > y 5 en `schemas12/`, y contar sólo el primero es lo que hizo invisible el segundo dialecto de SCORM (**P106**).
 > **Pase 36 del 2026-10-02:** 🔵 **este pase no agrega repos: le pone FECHA a los que ya están, y la fecha cambia tres recomendaciones.** Se midió la capa PHP de evaluación y telemetría en Packagist —el único registro de los tres que entrega descargas en este entorno (`api.npmjs.org` y `pypistats.org` dan **403 a CONNECT**)— y el resultado está en `repos/trending.md`. **Lo que hay que saber antes de proponer desde este archivo:** 🔴 **la pieza xAPI más descargada de esta base, `rusticisoftware/tincan` (Apache-2.0, 6.178 desc./mes, 863.777 totales), no publica desde el 2022-11-02**, y ⚠️ **el único MIT de esa capa, `php-xapi/client`, está parado desde el 2021-03-24** con 825 desc./mes. 🔵 **La lectura es que en xAPI/PHP lo permisivo está quieto y lo vivo es copyleft**, así que la receta de telemetría se sostiene en **Ralph (MIT)** + **`lrsql` (Apache-2.0)** + **`learnmcp-xapi` (MIT)** y no en la capa PHP. 🟢 **Del lado de evaluación, lo activo es `oat-sa/extension-tao-testqti`** (**885 versiones**, release del **2026-09-30**) **y sigue siendo GPL-2.0-only**, mientras **lo permisivo es lo nuevo**: `@longsightgroup/qti3-cli` (**MIT**, 41 releases desde el 2026-05-21, último **2026-10-01**) con **cero dependencias de terceros** — sus 4 dependencias son todas `@longsightgroup/*` pinneadas a la misma versión exacta. **Su manifiesto MCP completo de 20 tools está escrito en `compose/patterns.md` (P76).** 🔴 **Y una corrección de catálogo: `oat-sa/qti-sdk` devuelve 404 en Packagist porque es el nombre del REPO — su paquete es `qtism/qtism`** (GPL-2.0-only, 218.212 descargas totales, 315 versiones). **Nombre de repo y nombre de paquete son identificadores distintos, y confundirlos produce un 404 que parece una ausencia** — pasó igual con `1edtech/oneroster`, `imsglobal/lti-1-3-php-library` y `packbackbooks/lti-1-3-php-library`, los tres **404**, que se anotan como *«no verificado en Packagist bajo ese nombre»* y **no** como inexistentes. ⚠️ **Acción pendiente que el pase 37 tiene asignada: este archivo nunca pasó por el control de *slugs* distintos ni por el de *backlink*** — los dos que en `agents/top.md` encontraron **un duplicado** y **dos colisiones** este mismo pase.
 > **Pase 11 del 2026-10-01:** aparece una licencia que las diez pasadas anteriores filtraban sin saberlo — **ECL-2.0**, con la que licencia todo Apereo (Sakai, Opencast, OpenLRW). Es Apache-2.0 con el alcance de patentes acotado, aprobada por OSI y FSF, y **es apta para construir arriba**. Ver la capa de analítica institucional, abajo.
+
+## 🟢 Altas fundacionales: 0 — y la cesion de las 9 altas del pase 104 resulta POR REF, no por repo
+
+> **Frontmatter y region:** `Global`.
+
+### 🔬 El canal (`P247`), medido y no heredado
+
+🟢 `raw.githubusercontent.com` **200** con **3** anclas buenas y **404** con archivo, rama y repo
+inventados. 🟢 Clon `--filter=blob:none` **OK** (repo inventado → falla). 🟢 `sparse-checkout`
+**OK**. 🆕 🟢 **`git ls-remote` DISCRIMINA** y es el canal que abrio la accion A de este pase.
+🔴 `api.github.com` y `github.com` **403 a la buena Y a la inventada**: no discriminan.
+🔴 `openstax.org` **000** — y no hizo falta (`P326-A`).
+
+### 🔴 `P328` — la cesion de este estante es propiedad del par (repo, **ref**), y las 9 altas se publicaron con UNA sola
+
+Las **9 altas del pase 104** se dieron con su cesion leida del payload de `main`. 🟢 **Medido en
+este pase sobre los dos refs del mismo repo: la cesion NO es del repositorio, es de la
+coleccion-en-un-ref**, y cambia.
+
+| repo del titular | colecciones en `main` | cesion en `main` | colecciones en `1e` | cesion en `1e` |
+|---|---|---|---|---|
+| `osbooks-introductory-statistics-bundle` | 2 | 🔴 `CC BY-NC-SA 4.0` | 2 | 🟢 `CC BY 4.0` |
+| `osbooks-college-algebra-bundle` | 4 | 🔴 `CC BY-NC-SA 4.0` | 4 | 🟢 `CC BY 4.0` |
+| `osbooks-college-physics-bundle` | 2 | 🔴 `CC BY-NC-SA 4.0` | 2 | 🟢 `CC BY 4.0` |
+| `osbooks-prealgebra-bundle` | 3 | 🔴 `CC BY-NC-SA 4.0` | 3 | 🟢 `CC BY 4.0` |
+| `osbooks-biology-bundle` | 3 | 🔴 `CC BY-NC-SA 4.0` | 3 | 🟢 `CC BY 4.0` |
+| `osbooks-calculus-bundle` | 3 | 🔴 `CC BY-NC-SA 4.0` | — (sin rama `1e`) | — |
+| `osbooks-university-physics-bundle` | 3 | 🔴 `CC BY-NC-SA 4.0` | — (sin rama `1e`) | — |
+| `osbooks-physics` | 1 | 🟢 **`CC BY 4.0`** | — | — |
+| `osbooks-statistics` | 1 | 🟢 **`CC BY 4.0`** | — | — |
+
+🔵 **22 colecciones medidas en `main`, de las cuales 2 son `CC BY 4.0`.** 🔴 **Y de las 10 que
+existen con el MISMO `collection-id` en los dos refs, 10 de 10 ESTRECHAN** de `CC BY 4.0` a
+`CC BY-NC-SA 4.0`. **Cero contraejemplos.** La tabla de estrechamiento, coleccion por coleccion,
+esta en la tendencia **851**.
+
+⚠️ **Por que no se veia, y es `P289` en un campo nuevo: el slug cambia de nombre entre ediciones**
+(`precalculus` → `precalculus-2e`), asi que comparar por slug muestra dos obras distintas.
+**La identidad es el `collection-id`.**
+
+🔵 **Y un repo que esta base dio por ausente existe, con otro contenedor:** `osbooks-precalculus`
+**no existe** (`git ls-remote` falla, y el canal discrimina), pero `precalculus` **si se publica**
+— como `collections/precalculus.collection.xml` **dentro** de `osbooks-college-algebra-bundle`.
+**Un libro no tiene por que tener repo propio**, y asumir que lo tiene es el 404 conjeturado que
+`P253` prohibe convertir en ausencia.
+
+### 🟢 La accion C de este estante (`P327`), corrida — y la guarda que agrega es contra el arreglo
+
+🟢 **Prediccion CONFIRMADA: ningun dato cambia de familia; cambia la huella.** Re-expresadas las
+huellas de **43** repos del cohorte de agentes y **9** del cohorte OpenStax, con captura
+**binaria**: familias **identicas** a las publicadas (30 MIT · 3 AGPL-3.0 · 2 BSD · 2 Apache-2.0 ·
+6 `UNCLASSIFIED` · 26 `NO-CLAIM(sin archivo de licencia alcanzable)`).
+
+🔴 **El colapso es mas grande de lo que el pase 105 pudo ver:** un unico texto `CC BY-NC-SA 4.0`
+vive en **7** repos del titular con **TRES** huellas crudas distintas, que normalizadas colapsan
+a **una**.
+
+| huella cruda | bytes | repos | CRLF |
+|---|---|---|---|
+| `ab1a44bbba58` | 21.442 | 4 (`introductory-statistics-bundle`, `prealgebra-bundle`, `biology-bundle`, `college-physics-bundle`) | 🔴 SI |
+| `8e63d319b3d0` | 21.013 | 2 (`college-algebra-bundle`, `university-physics-bundle`) | 🟢 no |
+| `61288b08584b` | 21.444 | 1 (`calculus-bundle`) | 🔴 SI |
+| **normalizada** | **21.014** | **7 de 7** → `78442b480475e7ae` | — |
+
+🔴 **`P329`, y es contra el arreglo de `P327`: una huella normalizada es identidad de TEXTO, no de
+FAMILIA.** **6** payloads de familia `CC BY 4.0` dan **DOS** huellas normalizadas
+(`38a27c0f017da132` ×5, `f5b745ef98087f53` ×1) porque cinco llevan una linea final
+`https://choosealicense.com/licenses/cc-by-4.0/` y el sexto no. ⚠️ **Normalizar arregla el falso
+DESDOBLE por fin de linea; no autoriza a leer la huella como un identificador de familia** — eso
+lo contesta el clasificador por bloque de titulo (`P171`), y por eso la columna **Licencia** de
+este estante sigue saliendo de `lib/`, no del `sha256`.
+
+🔵 **Dato lateral, y es de procedencia:** esa linea final prueba que el titular bajo el texto de
+**choosealicense.com**. La huella no solo identifica el texto: delata **de donde se copio**.
+
+### 🔴 Correccion al instrumento del pase 105, en su propio archivo de datos
+
+`p326-titleholder-book-license/books.tsv` asigna al curso *«OpenStax: Introductory Stats»* la
+coleccion **`introductory-statistics-2e`**. 🟢 **Medido sobre el arbol entero: 1.700 unidades citan
+`introductory-statistics` (la 1e) y CERO citan `introductory-statistics-2e`.** 🔵 **Esa
+sustitucion de edicion es exactamente la razon por la que el pase 105 dejo 1.748 items «SIN
+RESOLVER»:** comparaba la cesion de la 2e contra items que citan la 1e. **Un mapeo escrito a mano
+es una afirmacion y se mide contra el campo `oer`.**
+
+### 🟢 `P323` reconfirmado por enumeracion independiente, con la trampa de subcadena incluida
+
+🟢 **`CAHLR/OATutor-Content` sigue con CERO archivos de licencia en 51.929 rutas enumeradas**
+(404 en `LICENSE`, `LICENSE.md`, `LICENSE.txt`). ⚠️ **Y un `grep -i licen` sobre el arbol devuelve
+8 rutas**, que al medirlas por **nombre base canonico** son **0** archivos de licencia: las 8 son
+el problema `13.1driverslicense`. **`P299` otra vez** — una subcadena no es un token, y acá habria
+producido *«8 archivos de licencia»* sobre un repo que no tiene ninguno.
+
+---
 
 ## 🟢 Altas fundacionales: 9 repos / 13 libros medidos — el CORPUS DE CONTENIDO del titular, con su cesion leida LIBRO POR LIBRO, que es la capa que este estante nombraba sin tenerla (pase 105 del 2026-10-05)
 

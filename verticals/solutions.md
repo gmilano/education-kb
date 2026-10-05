@@ -9,6 +9,7 @@ updated: 2026-10-05
 > Plataformas verticales reales, en producción, customizables con AI.
 > Modelo: partir de algo que ya funciona y que ya tiene los datos, y agregar la capa agéntica arriba.
 > Verificado vía WebFetch el 2026-09-30; las capas del pase 11, el 2026-10-01.
+> **Pase 106 del 2026-10-05:** 🔴 **0 altas (el canal devuelve el mismo conjunto que este estante ya publica, y confirma por fuente secundaria Moodle +400 M usuarios / ~150.000 sitios y Open edX +140 M alumnos / 196 paises bajo Axim).** 🔴 **El eje NUEVO cambia como se cotiza cualquier fila: la cesion del CONTENIDO es propiedad del par (coleccion, **ref**), no del repo — 10 de 10 colecciones estrechan de `CC BY 4.0` a `NC-SA` entre ediciones, y 20 de 22 colecciones vivas son `NC-SA`.** ⚠️ **Plataforma y contenido son licencias INDEPENDIENTES y la segunda es la que bloquea: Open edX se customiza cerrada bajo Apache-2.0 y el curso que corre adentro no se puede vender.** 🔴 **Y aparece una tercera capa que ninguna fila tenia: 6.886 unidades `oer: openai` (4.455 hints + 2.418 scaffolds) sin cesion, bajo un README que cede «ALL content under CC BY 4.0» en un arbol con 0 archivos de licencia.** 🟢 **Camino comercial medido: Open edX + `osbooks-physics` o `osbooks-statistics` (las 2 unicas `CC BY 4.0` de 22) + andamiaje propio.**
 > **Pase 105 del 2026-10-05:** 🔴 **0 verticales nuevas —el canal generalista redescubre `OpenEduCat` y nombra `.LRN`, las dos ya medidas— y el eje que este estante gana es el CONTENIDO que va DENTRO de la plataforma.** 🔵 **Una plataforma es un envase**, y el pase midio que el contenido **puede ceder menos que la plataforma que lo sirve**: `OATutor` es **MIT** y su codigo se embarca entero, pero su contenido entra por submodulo desde un repo con **0 archivos de licencia en 51.929 rutas**, y el **titular** de ese contenido —`openstax/osbooks-*`, **13 libros leidos del payload**— cede **`NC-SA` en 11 de 13**. 🔴 **De los 13.371 problemas del *content pool*, 592 (4,4 %) son embarcables en una entrega comercial.** 🔵 **Regla de estante, para TODAS las filas de este archivo: la licencia de la plataforma no dice nada de la del contenido** — Moodle (GPL-3.0) con contenido `CC BY` es mas entregable que OATutor (MIT) con contenido `NC`. 🟢 **Lo accionable: `physics` y `statistics` son los DOS libros de OpenStax `CC BY 4.0`** y los unicos embarcables. Ver `compose/code/p326-titleholder-book-license/` y la receta `R-105-CESION-CONTRA-TITULAR`.
 > **Pase 104 del 2026-10-05:** 🟢 **El canal VOLVIO, y eso es `P320` confirmado en la direccion contraria: es un hecho de PERMISO.** El instrumento del pase 103 estaba intacto y le faltaba el derecho a correrlo; esta sesion **si** lo tiene. Medido con control negativo antes de usarlo (rama inventada, ruta inventada y repo inventado dan **404**; `main`/`master`/`HEAD` dan el **mismo** sha): `raw.githubusercontent.com` **200**, clon `--filter=blob:none` de terceros **OK**. 🔴 **Sigue apagado:** `api.github.com` **403**, y `openstax.org`, `creativecommons.org`, `arxiv.org`, `aclanthology.org` **bloqueados por egress** por `curl` **y** por el fetcher. 🟢 **+2 verticales, las primeras en varios pases, y las dos con la licencia leida del PAYLOAD y clasificada por el control compartido (`lib/license_family.sh`, `P237`).** 🔴 **Y las dos son COPYLEFT, que es el hallazgo del pase para este estante: `learnhouse/learnhouse` **AGPL-3.0** (34.522 B) y `GarethManning/claude-education-skills` **CC BY-SA 4.0** (1.229 B).** 🔵 **Ninguna de las dos entra en el foco MIT/Apache/BSD de esta base, y se publican igual CON la bandera puesta: un LMS AGPL que el cliente expone por red arrastra la clausula de red sobre sus propias modificaciones, y una libreria de skills `CC BY-SA` impone **share-alike sobre el material derivado**, que es justo lo que un estudio produce encima.** ⚠️ **`frappe/lms` NO entra: el gate de `P311` lo encontro ya publicado — y de paso queda medido que tambien es **AGPL-3.0** (33.892 B), leido del payload.** 🔵 **`claude-education-skills` declara 165 skills pedagogicas en 20 dominios y **acceso MCP hospedado ahora con token**: el camino libre es local/plugin, que es el que un estudio usaria de todos modos.** Ver **`P322`**–**`P325`**.
 > **Pase 103 del 2026-10-05:** 🔴 **0 verticales nuevas por canal DENEGADO** (clon sin blobs sin permiso, `WebFetch` bloqueado 4/4; `P320`), y el eje que este archivo gana es de **CALENDARIO: toda fila ya publicada tiene DOS relojes de AI Act, no uno.** 🟢 **Art. 50 (marcar contenido sintético) está VIGENTE desde `2026-08-02` con gracia hasta `2026-12-02`** — aplica a cualquier LMS o autograder de esta tabla que **genere** texto, consignas, feedback o cursos, y es justo lo que `aiact-50-2-pack/` de esta base ya marca sobre SCORM ya armado (**27/27**, **37/37** con `xmllint`). 🔴 **Anexo III (admisión, *scoring*, deserción, conducta en examen) se diferió al `2027-12-02` y es CONDICIONAL** — cotizarlo hoy como *«obligación inminente»* es incorrecto desde julio de 2026. 🔵 **Pistas sin verificar:** `OATutor` (MIT + contenido CC BY 4.0), **Moodle 5.1** (*toggle* de AI **por curso y por actividad** — que leído contra el art. 50 vuelve **finito** el inventario de lo que hay que marcar) y **Open edX** (*AI Assistant* dentro del perímetro).
@@ -164,6 +165,75 @@ updated: 2026-10-05
 > **`qti3-pnp`**, que abren accesibilidad de evaluación como entregable auditable (**P72**). ⚠️ **Open edX cambia de
 > recomendación: proponer con presupuesto de mantenimiento (gap 70).** Ver la sección del pase 33, abajo.
 
+
+## 🔴 Verticales nuevas: 0 — y el eje que este estante gana es que la cesion del CONTENIDO depende de la REF, no del repo
+
+> **Frontmatter y region:** `Global`.
+
+### 🔵 Por que no hay altas, y el cero es una medicion
+
+Las consultas del encargo (`open source platform education LMS SIS MIT Apache`) devuelven el
+**mismo conjunto que este estante ya publica**: Moodle, Open edX, Canvas LMS, ILIAS, Sakai,
+Chamilo, OpenEduCat. 🟢 **Y confirman dos cifras de este estante por fuente secundaria:** Moodle
+con **+400 M** de usuarios y **~150.000** sitios registrados, **+2.000** plugins de comunidad y dos
+versiones *feature* al año mas ramas LTS; Open edX con **+140 M** de alumnos en **196** paises,
+hoy bajo **Axim Collaborative**.
+
+🔴 **Y confirman el reparto de licencia que decide una propuesta: Open edX es Apache-2.0** (permite
+modificacion propietaria), **Moodle y Chamilo son GPL**. Es el mismo eje que este estante mide
+desde el pase 11: **la capa de plataforma de educacion es mayoritariamente copyleft**, y la unica
+grande permisiva es Open edX.
+
+### 🔴 El eje nuevo, y cambia como se cotiza una customizacion sobre CUALQUIER fila de este estante
+
+🟢 **Medido en este pase:** la cesion del **contenido** que se carga en estas plataformas es
+propiedad del par **(coleccion, ref)**, no del repositorio. De las **10** colecciones de OpenStax
+que existen con el **mismo `collection-id`** en dos refs, **10 de 10** pasan de `CC BY 4.0` en
+`1e` a `CC BY-NC-SA 4.0` en `main`. **22** colecciones medidas en `main`, **2** permisivas.
+
+⚠️ **La consecuencia practica para este estante, y es nueva:** una customizacion de Moodle u
+Open edX se cotiza por la **plataforma** (GPL o Apache-2.0) **y** por el **contenido** (hoy
+`NC-SA` en 20 de 22 colecciones del corpus mas usado). 🔴 **Las dos licencias son independientes y
+la segunda es la que bloquea una entrega comercial** — la plataforma se puede customizar cerrada
+bajo Apache-2.0 y el curso que corre adentro **no se puede vender**.
+
+| capa | pregunta | donde se lee | hoy |
+|---|---|---|---|
+| plataforma | ¿puedo modificar y no publicar? | `LICENSE` del repo | 🟢 Open edX Apache-2.0 · 🔴 Moodle/Chamilo GPL |
+| contenido | ¿puedo vender el curso? | `md:license` del `collection.xml`, **por ref** | 🔴 20 de 22 colecciones `NC-SA` |
+| 🆕 contenido sintetico | ¿quien cede lo que genero un modelo? | campo `license` del item | 🔴 **6.886** unidades `oer: openai`, **sin cesion** |
+
+### 🔴 La capa sintetica, que ninguna fila de este estante tenia en cuenta
+
+🟢 **Medido sobre `CAHLR/OATutor-Content`, arbol enumerado completo (51.929 rutas, 49.479 JSON):**
+**6.886** unidades declaran `oer: "openai"` —el dato dice de si mismo que lo genero un modelo— y
+**6.883** tienen la cesion **vacia**. Son **4.455** *hints* y **2.418** *scaffolds*: andamiaje
+pedagogico, o sea **justo lo que una customizacion sobre estas plataformas reutiliza primero**.
+
+⚠️ **Y el redistribuidor cede, en su README, *«ALL content […] under CC BY 4.0»*** sobre un arbol
+que **no tiene ningun archivo de licencia** (confirmado por enumeracion: 0 de 51.929, mas 404 en
+los tres nombres canonicos). 🔴 **Asi que para la capa sintetica hay una cesion de REPOSITORIO que
+abarca contenido cuyo titular declarado es un modelo y cuyo campo de cesion esta vacio.** Esa es
+la clase de hueco que hay que resolver **antes** de firmar, no durante la auditoria.
+
+🔵 **Para EMEA cruza con una obligacion vigente:** el AI Act clasifica como alto riesgo la
+evaluacion de alumnos, y el art. 50(2) pide marcar contenido sintetico. Los instrumentos
+`aiact-50-2-pack/` (27/27, **37/37** con `xmllint`) y `aiact-50-2-marking/` (23/23) de esta KB
+construyen esa marca; `aiact-50-2-spans/` mide que **0 de 33** piezas la emiten hoy.
+
+### 🟢 Lo que este pase deja utilizable, concreto
+
+🔵 **Si la entrega es comercial**, el camino medido es: **Open edX** (Apache-2.0) como plataforma +
+**`openstax/osbooks-physics`** (`col12081`) o **`openstax/osbooks-statistics`** (`col30309`) como
+contenido —**las dos unicas colecciones vivas `CC BY 4.0` de 22 medidas**— y la capa de andamiaje
+**escrita de cero o con cesion explicita del proveedor**, nunca reutilizando las 6.886 unidades
+sin cesion.
+
+🔴 **Si la entrega reutiliza `OATutor-Content`**, entonces es `NC-SA` de hecho para 8.312 unidades
+y **sin determinar** para 6.886 mas: eso no es un riesgo que se mitigue con atribucion, es un
+limite de uso.
+
+---
 
 ## 🔴 Verticales nuevas: 0 — y el eje que este estante gana es el CONTENIDO que va DENTRO de la plataforma, que puede ser mas cerrado que la plataforma (pase 105 del 2026-10-05)
 

@@ -1,0 +1,9 @@
+openstax/osbooks-introductory-statistics-bundle
+openstax/osbooks-college-algebra-bundle
+openstax/osbooks-calculus-bundle
+openstax/osbooks-prealgebra-bundle
+openstax/osbooks-biology-bundle
+openstax/osbooks-university-physics-bundle
+openstax/osbooks-college-physics-bundle
+openstax/osbooks-physics
+openstax/osbooks-statistics

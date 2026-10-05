@@ -7,6 +7,63 @@ updated: 2026-10-05
 # 📈 Repos trending — education
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
+> **Pase 106 del 2026-10-05:** 🔴 **Trending de la industria vacio por TRIGESIMOQUINTA vez: el canal devuelve generalista o educativo-sobre-AI, no AI-para-educacion.** 🟢 **Lo que SI se movio esta en el eje de `ref` y no de repo: las ramas `1e` de 5 bundles de `openstax` contienen la UNICA cesion `CC BY 4.0` de 10 colecciones cuyas versiones vivas son `NC-SA` — cesion y vigencia apuntan en direcciones opuestas.** 🔵 **Canal nuevo calibrado: `git ls-remote` para enumerar refs (responde a repo real, falla a repo inventado), el unico de este arbol que contesta «que refs tiene este repo» con `api.github.com` en 403 — sin el, la accion A de este pase era imposible.**
+
+## 2026-10-05 — pase 106: trending vuelve vacio por TRIGESIMOQUINTA vez, y lo que se mueve es una REF vieja
+
+> **Frontmatter y region:** `Global`.
+
+### 🔴 Trending de la industria: 0 repos nuevos — trigesimoquinta vez
+
+Año **calculado** (`date -u +%Y` → **2026**). Las consultas de trending del encargo
+(`github trending education AI 2026`) devuelven, otra vez, **material generalista o educativo-sobre-AI
+en vez de AI-para-educacion**:
+
+| lo que devolvio el canal | por que NO es una fila de esta KB |
+|---|---|
+| `rasbt/LLMs-from-scratch` (~106k ★) | **ya publicada** · es material **para aprender LLMs**, no AI aplicada a educacion |
+| `jamwithai/production-agentic-rag-course` | curso de RAG: **educativo sobre AI**, eje saturado |
+| `caramaschiHG/awesome-ai-agents-2026` | lista *awesome*, no software |
+| `kouweizhu/agents-radar` (issues diarios) | agregador de tendencias generalista |
+| `ashishpatel26/500-AI-Agents-Projects` | catalogo de casos, no implementacion |
+
+🔵 **La distincion vuelve a ser la misma que esta base viene registrando: el trending de GitHub
+mide «AI» y la vertical educativa no aparece ahi.** El cero no es una falla del barrido; es la
+medicion.
+
+### 🟢 Lo que SI se movio, y no es una fila nueva: una rama de 2015 que decide un presupuesto de 2026
+
+🔴 **El movimiento de este pase es en el eje de `ref`, no en el de repo.** Las ramas `1e` de los
+*bundles* de `openstax` —que ningun barrido de trending mira, porque no son `main`— son las que
+contienen la **unica** cesion permisiva de 10 colecciones.
+
+| repo | ref | que contiene | cesion |
+|---|---|---|---|
+| `openstax/osbooks-introductory-statistics-bundle` | `1e` | `introductory-statistics` (`col11562`) + `introductory-business-statistics` (`col11776`) | 🟢 `CC BY 4.0` |
+| `openstax/osbooks-college-algebra-bundle` | `1e` | `precalculus` (`col11667`), `college-algebra` (`col11759`), `algebra-and-trigonometry` (`col11758`), `college-algebra-coreq` (`col32026`) | 🟢 `CC BY 4.0` |
+| `openstax/osbooks-college-physics-bundle` | `1e` | `college-physics` (`col11406`) + `college-physics-ap-courses` (`col11844`) | 🟢 `CC BY 4.0` |
+| `openstax/osbooks-prealgebra-bundle` | `1e` | `prealgebra` (`col11756`), `elementary-algebra` (`col12116`), `intermediate-algebra` (`col12119`) | 🟢 `CC BY 4.0` |
+| `openstax/osbooks-biology-bundle` | `1e` | `biology` (`col11448`), `concepts-biology` (`col11487`), `biology-ap-courses` (`col12078`) | 🟢 `CC BY 4.0` |
+
+⚠️ **Esto no es una recomendacion de usar la `1e`.** Es contenido **viejo** y el titular ya no lo
+publica en `main`. Lo que la tabla dice es que **la cesion y la vigencia apuntan en direcciones
+opuestas**, y que una propuesta que necesite uso comercial tiene que elegir una de las dos — o
+pagar una licencia.
+
+### 🔵 El eje que este estante no tenia: `git ls-remote` como canal de enumeracion de refs
+
+🟢 **Canal nuevo, calibrado:** `git ls-remote --heads --tags` sobre un repo real **responde**, y
+sobre un repo inventado **falla** ⇒ **DISCRIMINA**. 🔴 **Y es el unico canal de este arbol que
+contesta la pregunta «que refs tiene este repo»**, porque `api.github.com` esta en **403** desde
+el pase 85.
+
+🔵 **Sin ese canal la accion A de este pase era imposible:** la pre-registracion pedia *«repo
+archivado de la organizacion `openstax`, o `collection.xml` de una rama anterior»*, y no habia
+forma de **enumerar** las ramas. Con `ls-remote`, `refs/heads/1e` aparece en la primera consulta.
+⚠️ **Registrado como capacidad, no como fila:** un canal nuevo cambia que preguntas son
+decidibles, y esa es la clase de hallazgo que esta base paga mas caro cuando la olvida (`P266`).
+
+---
 
 ## 2026-10-05 — pase 105: trending vuelve vacio por TRIGESIMOCUARTA vez, y el canal de respaldo entrega 9 repos del TITULAR
 
