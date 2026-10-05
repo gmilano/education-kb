@@ -137,7 +137,7 @@ updated: 2026-10-05
 > **Pase 27:** **+4 patrones y una corrección.** 🔴 **P51 queda con premisa falsa** —el conector MCP de Moodle **sí existe y es MIT**— y lo reemplazan **P54** (corrección y devolución sobre Moodle con **compuerta humana**, el último tramo del gap 6, con piezas que ya escriben), **P55** (el conector de **Open edX**, que es el único que de verdad no existe), **P56** (**SCORM** como formato de salida de la capa generativa: cero integración, offline) y **P57** (evidencia por MCP cotizada sobre lo que CaSS **realmente** expone — 6 de 61 operaciones, con insignias y autoría de marcos **fuera**).
 
 
-## 🆕 Patrones del pase 108 (2026-10-05) — `P336`–`P340` y la receta `R-107-CAPA-MCP-SOBRE-LMS-ACREDITADO`
+## 🆕 Patrones del pase 108 (2026-10-05) — `P336`–`P341` y la receta `R-107-CAPA-MCP-SOBRE-LMS-ACREDITADO`
 
 ### `P336` — una prediccion es falsable cuando su INSTRUMENTO existe, no cuando esta bien escrita
 
@@ -171,19 +171,46 @@ assert corte_a == corte_b, f"MISMO universo, corte distinto: delta {corte_a - co
 🔵 **Regla operativa:** *el ultimo paso de un pase que publica mas de una tabla es cruzar las
 tablas entre si, no contra el mundo.*
 
-### `P338` — procedencia en texto libre: un extractor pierde OBRAS, no items
+### `P338` — procedencia en texto libre: un extractor pierde OBRAS, y SUB-CUENTA otras sin avisar
 
-**Que pasa.** `oer` es una URL escrita a mano con (al menos) dos formas, y los slugs de cada forma
-**no se solapan**. Un extractor de una sola forma pierde obras completas, en silencio.
+**Que pasa.** `oer` es una URL escrita a mano con **cuatro** formas medidas. Un extractor de una
+sola forma **pierde obras completas** (3 de las 8 nombradas solo aparecen por el enlace profundo) y
+—peor— **sub-cuenta** las que viven en dos formas: la obra *si* aparece en el censo, con menos
+items de los que tiene, y nada indica que falte nada.
+
+⚠️ **Y este patron se corrigio a si mismo dentro del mismo pase.** Con 694 unidades los conjuntos
+de slugs salian **disjuntos** y la primera version decia *«las formas parten el espacio»*. Con
+1.685 aparece `college-algebra-2e` en las dos. 🔵 **Una enumeracion parcial puede sostener una
+afirmacion que el censo refuta: la muestra se declara SIEMPRE, y la afirmacion fuerte espera.**
 
 **Control, y es el unico que sirve.** No afirmar una forma: **enumerar las formas primero**.
 
 ```python
 formas = collections.Counter(forma_de(u) for u in campo_libre)
 assert len(formas) == 1, f"el campo tiene {len(formas)} formas: {formas}"
-# si falla, el extractor se escribe para TODAS, y los slugs de cada forma se cruzan:
-assert slugs["details"] & slugs["pages"], "formas disjuntas ⇒ perder una pierde obras enteras"
+
+# Si falla —y fallo— el extractor se escribe para TODAS las formas, y despues se
+# cruzan los conjuntos de slugs, que es donde esta el dano silencioso:
+solo_una = slugs["pages"] - slugs["details"]      # obras que se PIERDEN enteras
+en_las_dos = slugs["pages"] & slugs["details"]    # obras que se SUB-CUENTAN
+assert not solo_una, f"perder esta forma pierde obras enteras: {solo_una}"
+assert not en_las_dos, f"estas obras quedan sub-contadas sin aviso: {en_las_dos}"
+
+# Y el caso que ningun extractor arregla (P341): titular sin obra.
+sin_obra = [u for u in campo_libre if forma_de(u)[0] == "openstax-SIN-OBRA"]
+assert not sin_obra, f"{len(sin_obra)} items nombran titular y NO obra ⇒ cesion no resoluble"
 ```
+
+### `P341` — un item puede nombrar al TITULAR y no a la OBRA, y entonces no hay cesion resoluble
+
+**Que pasa.** **9** unidades traen `oer = https://openstax.org` a secas. Hay titular, no hay obra;
+sin obra no hay **edicion**; y por `P328` la cesion **depende de la edicion**. 🔴 **No es un defecto
+de parseo: ningun patron lo arregla.** Es el piso de lo que se puede llegar a saber sobre la
+procedencia de ese activo desde su propio registro.
+
+🔵 **Regla operativa para una engagement:** *un item cuya procedencia no nombra la obra se trata
+como **sin cesion**, no como «cesion del titular». `P324` ya fijo la direccion: `NC` es una licencia
+que se puede cumplir, la ausencia de cesion no concede nada.*
 
 🔵 **Regla operativa para una engagement:** *si la procedencia de un activo viaja en un campo de
 texto libre, la auditoria de licencia es forense y cuesta lo que cuesta. Si viaja en un campo

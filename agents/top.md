@@ -8,7 +8,7 @@ updated: 2026-10-05
 
 > Agentes y herramientas AI open source para educación. Foco: MIT / Apache 2.0 / BSD.
 > Verificado repo por repo vía WebFetch el 2026-09-30 (stars y licencia leídos de la página del repo).
-> **Pase 108 del 2026-10-05:** 🟢 **5 altas permisivas, y rompen una racha de TREINTA barridos en cero** — las cinco leidas del PAYLOAD, no del nombre: `THU-MAIC/OpenMAIC` (**MIT**, `v1.2.0-rc.1` del 2026-10-04) 🔴 **con `packages/mathml2omml` en `LGPL-3.0-or-later` leido de SU PROPIO `package.json`: la licencia de la raiz no es la licencia del arbol**; `oaknational/oak-open-curriculum-ecosystem` (**MIT** en el codigo, 🔴 **OGL v3.0** en los datos de curriculo — `P315` otra vez); `Cicatriiz/openedu-mcp` (**MIT**); `davidlms/learnmcp-xapi` (**MIT**); y `54yyyu/school-mcp` (**MIT solo en el cuerpo del README, sin archivo** — `P314`). 🆕 **`P340` — el 404 de un archivo de licencia puede ser una ORTOGRAFIA y no una ausencia: `oak` cede en `LICENCE` y el barrido de esta base pide `LICENSE`; un pase que solo mirara `LICENSE` habria publicado «sin cesion» sobre un repo MIT.** 🔴 **La accion A pre-registrada NO se corrio: el clon del arbol del titular quedo DENEGADO por el clasificador de la sesion, y eso se declara en vez de callarse (`P335` sigue en pie, pero esta vez ni la pieza nombrada paso).** 🔴 **La accion B resulta NO CORRIBLE contra el artefacto al que su propia pre-registracion la mando (`P336`): `accion-a-b.2026-10-05.tsv` colapsa `oer` a DOS valores (`openstax`/`otro`) y el slug del libro —lo unico que separa una edicion `2e` de una `1e`, que es toda la pregunta— no esta en el archivo; las «825 ya enumeradas» no estan enumeradas ahi.** 🔴 **Y al ir a buscarlo aparece el hallazgo que manda: dos artefactos del MISMO pase, sobre el MISMO sha `1925dec`, se contradicen por exactamente 41 figuras en el corte openstax/no-openstax (**1.611/832** contra **1.570/873**, los dos suman 2.443), y la cifra que llego a la PROSA es la menor (`P337`).** 🔴 **La causa, medida y no supuesta: `oer` es TEXTO LIBRE con dos formas de URL —`/details/books/<slug>` y el enlace profundo `/books/<slug>/pages/…`— que en la muestra PARTEN el espacio de slugs sin solaparse, asi que un extractor afirmado sobre una sola forma no pierde items sueltos: pierde OBRAS ENTERAS. Y `precalculus` a secas existe en el corpus y NO esta en ninguna de las 10 filas del censo publicado (`P338`).** 🟢 **La accion C sale CONFIRMADA en su clausula de conteo: **17** pares (bytes, huella) publicados junto a un archivo de licencia, la prediccion pedia ≥10.** 🔴 **Y FALSIFICADA como instrumento (`P339`): el delta de 1 byte NO es diagnostico, porque `P327` (el archivo no trae salto final) y `P333` (`$(cat)` se lo come al medir) producen la MISMA firma — esta base ya publica `21.442` y `21.443` B del mismo texto por la primera causa.** 🟢 **Tablero re-verificado COMPLETO: 59 suites (53 Python + 6 shell), 0 fallos, 200 aserciones (`Python 3.11.15`).**
+> **Pase 108 del 2026-10-05:** 🟢 **5 altas permisivas, y rompen una racha de TREINTA barridos en cero** — las cinco leidas del PAYLOAD, no del nombre: `THU-MAIC/OpenMAIC` (**MIT**, `v1.2.0-rc.1` del 2026-10-04) 🔴 **con `packages/mathml2omml` en `LGPL-3.0-or-later` leido de SU PROPIO `package.json`: la licencia de la raiz no es la licencia del arbol**; `oaknational/oak-open-curriculum-ecosystem` (**MIT** en el codigo, 🔴 **OGL v3.0** en los datos de curriculo — `P315` otra vez); `Cicatriiz/openedu-mcp` (**MIT**); `davidlms/learnmcp-xapi` (**MIT**); y `54yyyu/school-mcp` (**MIT solo en el cuerpo del README, sin archivo** — `P314`). 🆕 **`P340` — el 404 de un archivo de licencia puede ser una ORTOGRAFIA y no una ausencia: `oak` cede en `LICENCE` y el barrido de esta base pide `LICENSE`; un pase que solo mirara `LICENSE` habria publicado «sin cesion» sobre un repo MIT.** 🔴 **La accion A pre-registrada NO se corrio: el clon del arbol del titular quedo DENEGADO por el clasificador de la sesion, y eso se declara en vez de callarse (`P335` sigue en pie, pero esta vez ni la pieza nombrada paso).** 🔴 **La accion B resulta NO CORRIBLE contra el artefacto al que su propia pre-registracion la mando (`P336`): `accion-a-b.2026-10-05.tsv` colapsa `oer` a DOS valores (`openstax`/`otro`) y el slug del libro —lo unico que separa una edicion `2e` de una `1e`, que es toda la pregunta— no esta en el archivo; las «825 ya enumeradas» no estan enumeradas ahi.** 🔴 **Y al ir a buscarlo aparece el hallazgo que manda: dos artefactos del MISMO pase, sobre el MISMO sha `1925dec`, se contradicen por exactamente 41 figuras en el corte openstax/no-openstax (**1.611/832** contra **1.570/873**, los dos suman 2.443), y la cifra que llego a la PROSA es la menor (`P337`).** 🔴 **La causa, medida y no supuesta: `oer` es TEXTO LIBRE con dos formas de URL —y al ampliar la muestra de 694 a **1.685** unidades resultaron **CUATRO**, dos de ellas invisibles para el patron inicial—, con solapamiento **PARCIAL** entre formas: un extractor afirmado sobre `/details/books/` pierde **3 obras completas** y ademas **SUB-CUENTA** una cuarta sin que nada avise. Y `precalculus` a secas existe en el corpus y NO esta en ninguna de las 10 filas del censo publicado (`P338`).** 🔴 **La version de este MISMO pase que decia «las dos formas PARTEN el espacio sin solaparse» quedo FALSIFICADA por su propia medicion ampliada, y se corrige en vez de dejarse.** 🆕 **`P341` — 9 unidades nombran al TITULAR y no a la OBRA: sin obra no hay edicion y sin edicion no hay cesion resoluble, con ningun extractor.** 🟢 **La accion C sale CONFIRMADA en su clausula de conteo: **17** pares (bytes, huella) publicados junto a un archivo de licencia, la prediccion pedia ≥10.** 🔴 **Y FALSIFICADA como instrumento (`P339`): el delta de 1 byte NO es diagnostico, porque `P327` (el archivo no trae salto final) y `P333` (`$(cat)` se lo come al medir) producen la MISMA firma — esta base ya publica `21.442` y `21.443` B del mismo texto por la primera causa.** 🟢 **Tablero re-verificado COMPLETO: 59 suites (53 Python + 6 shell), 0 fallos, 203 aserciones (`Python 3.11.15`).**
 
 > **Pase 107 del 2026-10-05:** 🔴 **0 altas permisivas — trigesimo barrido, 3 candidatas MEDIDAS del payload (no rechazadas por el nombre) y las 3 frenadas con su bloqueo nombrado pieza por pieza: `1111philo/learn` es **AGPL-3.0** con `package.json` **MUDO**, `oer/emacs-reveal` cede **por archivo** (REUSE: `GPL-3.0-or-later` + `CC BY-SA 4.0`) y `NousResearch/hermes-agent` es MIT pero **generalista**.** 🔴 **Lo que este pase le corrige a la fila `OATutor` es la capa que nadie habia abierto, y el hallazgo es de METODO: la EXTENSION de sus 2.443 archivos de figura es FALSA en 2.443 de 2.443 — ninguno es un GIF (1.358 PNG, 938 JPEG, 147 WEBP), asi que el barrido «por extension» que este pase iba a correr sobre el arbol del titular habria concluido «cero solapamiento» desde una premisa falsa (`P332`).** 🟢 **Medido por BYTES en cambio: 36 archivos del redistribuidor son byte-identicos a una figura del titular, y los 36 citan `introductory-statistics` mientras sus bytes se publican en `osbooks-statistics` (`col30309`) — el titular de una figura vive en una obra DISTINTA de la que el item cita (`P334`).** 🟢 **La accion B sale CONFIRMADA: 9.971 de 12.999 unidades con `oer` vacio (76,7 %) cuelgan de un problema que cita OpenStax.** 🔴 **Y la accion C corrige una cifra publicada de esta base: `fa4e32e5e622` no era deriva del upstream, era la huella del archivo SIN su salto final (`P333`).** 🟢 **Tablero re-verificado: 58 suites, 63 invocaciones, 0 fallos (`Python 3.11.15`).**
 > **Pase 106 del 2026-10-05:** 🔴 **0 altas — vigesimonoveno barrido, 5 candidatas, el gate de `P311` las freno a las 5 (las dos con sustancia propia son `CC BY-SA` y `AGPL-3.0`, ninguna permisiva).** 🔴 **Lo que el pase le corrige a esta tabla no es una fila sino el CONTENIDO de una: la fila `OATutor` dice «3 libros de OpenStax en JSON» y lo medido son 7 ediciones citadas, 82.492 unidades de cesion, 8.312 que CONTRADICEN a su titular y 6.883 de contenido sintetico sin cesion — el codigo MIT no esta en discusion.** 🟢 **La accion A convierte las 1.748 «SIN RESOLVER» del pase 105 en 1.732 CORRECTO: las dos ediciones `1e` si se cedieron `CC BY 4.0`, leidas del titular con dos lecturas concordantes.** 🔴 **Y la lectura que queda es peor: el redistribuidor congelo una cesion que el titular ESTRECHO (`P328`).** 🟢 **Tablero re-verificado COMPLETO: 58 suites unicas, 60 invocaciones, 0 fallos (`Python 3.11.15`) — la ejecucion estuvo negada en 10 pases anteriores.** ⚠️ **Con dos correcciones a mi propio contador (`P126`): conto `lib/` dos veces, y leyo un conteo de BYTES como total de aserciones.**
@@ -291,7 +291,7 @@ updated: 2026-10-05
 |---|---|---|---|
 | `raw.githubusercontent.com` (payload de licencia) | 🟢 200 | 🟢 **200** | repo inventado (`oaknational/repo-inventado-p108`) → **404** ⇒ **DISCRIMINA** |
 | clon `--filter=blob:none` de `CAHLR/OATutor-Content` | 🟢 OK | 🟢 **OK** | **replica el pase 107 al archivo**: sha `1925dec`, **51.929** rutas, **2.443** figuras |
-| `sparse-checkout` sobre ese clon | 🟢 OK | ⚠️ **INCOMPLETO** | materializo **694** de 12.999 unidades y no termino en el presupuesto del pase; lo medido se publica como **muestra declarada**, no como censo |
+| `sparse-checkout` sobre ese clon | 🟢 OK | ⚠️ **INCOMPLETO** | materializo **1.685** de 12.999 unidades y fue **detenido por limite de tiempo**; lo medido se publica como **muestra declarada**, no como censo. 🔴 **Y la ampliacion de 694 a 1.685 falsifico una afirmacion que este mismo pase ya habia publicado** — ver `P338` |
 | 🆕 clon de `openstax/osbooks-introductory-statistics-bundle` (**pieza nombrada**) | — | 🔴 **DENEGADO por el clasificador de la sesion** | 🔴 **`P335` no se sostiene en general**: el pase 107 concluyo que lo denegado era el LOTE y la pieza nombrada pasaba; este pase pidio **una** pieza, nombrada, y tambien fue denegada |
 | `api.github.com` · `github.com` (web) | 🔴 403 | ⚠️ **no usado para licencia** | las 5 licencias salen del payload; `github.com` solo se consulto para estrellas, y **esa cifra se marca como no confiable** (ver abajo) |
 | `openstax.org` | 🔴 000 | 🔴 **no alcanzado** | egress cerrado, septimo pase consecutivo |
@@ -388,40 +388,66 @@ numero honesto es `(488,6 − 36) / (1.570 − 415)` = **39,2 %**, y con el cort
 `452,6 / 1.196` = **37,9 %**. 🔵 **La conclusion cualitativa del pase 107 no se mueve** (sigue
 pidiendo mas del triple de la unica tasa medida); **el numero publicado si.**
 
-### 🔴 `P338` — la causa, medida: `oer` es TEXTO LIBRE y dos formas de URL parten el espacio de slugs
+### 🔴 `P338` — la causa, medida: `oer` es TEXTO LIBRE con CUATRO formas de URL, y una de ellas no nombra la obra
+
+⚠️ **Esta seccion se CORRIGE a si misma, y la correccion es del mismo pase.** La primera version
+midio **694** unidades, encontro los conjuntos de slugs **disjuntos** y publico que las dos formas
+*«PARTEN el espacio de slugs sin solaparse»*. Al terminar de materializar el arbol la muestra subio
+a **1.685** y 🔴 **esa afirmacion quedo FALSIFICADA por la propia medicion que la produjo**:
+`college-algebra-2e` aparece en las **dos** formas. **La particion era un artefacto del tamano de la
+muestra.** Lo que sigue es la cifra corregida; el reclamo fuerte se retira y queda el defendible.
 
 Leido del arbol `CAHLR/OATutor-Content` en el sha `1925dec` (el mismo del pase 107), sobre las
-**694** unidades que el `sparse-checkout` alcanzo a materializar — ⚠️ **muestra NO aleatoria**
-(orden alfabetico de directorio), declarada como tal y publicada en
-`compose/code/p336-figure-contradiction-delta/oer-shape.2026-10-05.tsv`:
+**1.685** de 12.999 unidades que el `sparse-checkout` alcanzo a materializar antes de detenerse por
+limite de tiempo — ⚠️ **muestra NO aleatoria** (orden alfabetico de directorio), declarada como tal
+y publicada en `compose/code/p336-figure-contradiction-delta/oer-shape.2026-10-05.tsv`:
 
 | forma de la URL en el campo libre `oer` | unidades | % de la muestra |
 |---|---|---|
-| `openstax.org/details/books/<slug>` | **514** | 74,1 % |
-| 🆕 `openstax.org/books/<slug>/pages/…` (**enlace profundo**) | **129** | **18,6 %** |
-| no-openstax (`OATutor.io` 30, `docs.google.com` 20, sin URL 1) | **51** | 7,3 % |
+| `openstax.org/details/books/<slug>` | **1.229** | 72,9 % |
+| `openstax.org/books/<slug>/pages/…` (**enlace profundo**) | **257** | 15,3 % |
+| no-openstax (`OATutor.io`, `docs.google.com`, sin URL) | **160** | 9,5 % |
+| 🆕 `openstax.org/books/<slug>` (**sin `/pages/`**) | **30** | 1,8 % |
+| 🆕 🔴 `openstax.org` **a secas — titular SIN obra** | **9** | 0,5 % |
 
-🔴 **Y los slugs que trae cada forma NO se solapan en una sola unidad:**
+🔴 **Son CUATRO formas, no dos**, y las dos nuevas aparecieron **solo** al ampliar la muestra. Un
+patron escrito contra las dos primeras clasifica mal a **39** unidades (**2,3 %**) en silencio.
 
-| forma | slugs vistos | unidades |
+🔴 **Y la cuarta forma es la peor, porque no es un problema de parseo: 9 unidades nombran al
+TITULAR y no nombran la OBRA.** Sin obra no hay edicion, y sin edicion **no hay cesion resoluble**
+(`P328`): ese item **no se puede auditar desde su propio campo con ningun extractor** (**`P341`**).
+
+**Lo que se sostiene medido, con solapamiento PARCIAL:**
+
+| forma | slugs vistos | obras alcanzables SOLO por esta forma |
 |---|---|---|
-| `details` | `elementary-algebra-2e` (252), `introductory-statistics` (117), `college-algebra-2e` (68), `intermediate-algebra-2e` (50), `calculus-volume-1` (27) | 514 |
-| `pages` | `precalculus-2e` (58), `university-physics-volume-1` (48), 🆕 **`precalculus`** (23) | 129 |
-| interseccion de los dos conjuntos de slugs | 🔴 **vacia** | — |
+| `details` (5 slugs) | `elementary-algebra-2e`, `introductory-statistics`, `college-algebra-2e`, `intermediate-algebra-2e`, `calculus-volume-1` | **4**: `calculus-volume-1`, `elementary-algebra-2e`, `intermediate-algebra-2e`, `introductory-statistics` |
+| `pages` (4 slugs) | `college-algebra-2e`, `precalculus-2e`, `university-physics-volume-1`, 🆕 `precalculus` | **3**: `precalculus`, `precalculus-2e`, `university-physics-volume-1` |
+| interseccion de los dos conjuntos | 🔴 **`college-algebra-2e`** — una, no cero | — |
 
-🔴 **Por eso un extractor afirmado sobre `/details/books/` no pierde items sueltos: pierde OBRAS
-ENTERAS.** En esta muestra perderia `precalculus-2e`, `university-physics-volume-1` y
-`precalculus` completas — tres obras, no una cola.
+🔴 **El reclamo corregido, y sigue siendo el que manda:** un extractor afirmado sobre
+`/details/books/` **no pierde una cola de items sueltos: pierde 3 obras completas**
+(`precalculus`, `precalculus-2e`, `university-physics-volume-1`) **y ademas SUB-CUENTA
+`college-algebra-2e`** — que es el caso mas dificil de detectar, porque la obra **si aparece** en el
+censo, aparece con menos items de los que tiene, y **nada indica que falte nada**.
 
-🔴 **Y `precalculus` a secas no esta en NINGUNA de las 10 filas del censo publicado por el pase
-107.** El censo lista `precalculus-2e`; la **primera edicion** no aparece. 🔴 **Eso importa
+🔴 **Y `precalculus` a secas sigue sin estar en NINGUNA de las 10 filas del censo publicado por el
+pase 107.** El censo lista `precalculus-2e`; la **primera edicion** no aparece. 🔴 **Eso importa
 exactamente por `P328`:** el titular cede `CC BY 4.0` en las refs `1e` y `CC BY-NC-SA 4.0` en
-`main`. Colapsar `precalculus` dentro de `precalculus-2e` —o dejarlo caer en `(no-openstax)`— no
-es un redondeo: **cambia la licencia que se le atribuye al activo.**
+`main`. Colapsar `precalculus` dentro de `precalculus-2e` —o dejarlo caer en `(no-openstax)`— no es
+un redondeo: **cambia la licencia que se le atribuye al activo.**
 
-🔵 **Hipotesis para el pase 109, escrita antes de medirla:** los 41 de `P337` son figuras cuyo
-`oer` usa una forma de URL que uno de los dos instrumentos resuelve y el otro no. **No esta
-probado** — probarlo pide el censo completo de las 12.999 unidades, que este pase no pudo materializar.
+🔵 **Hipotesis para el pase 109, escrita antes de medirla:** los 41 de `P337` son unidades cuyo
+`oer` usa una de las formas que uno de los dos instrumentos resuelve y el otro no — y ahora se sabe
+que hay **cuatro** formas y no dos, asi que la hipotesis tiene mas superficie de la que el pase 107
+podia ver. **No esta probado** — probarlo pide el censo completo de las 12.999 unidades, que este
+pase no pudo materializar.
+
+⚠️ **La leccion de metodo, y es contra este pase y no contra el 107:** las dos formas nuevas y la
+falsificacion de la disjuncion aparecieron **por ampliar la muestra de 694 a 1.685, sin canal nuevo
+y sin permiso nuevo**. 🔴 **Una enumeracion parcial no es una version pequena del censo: puede
+sostener una afirmacion que el censo refuta.** Publicar la cifra con la muestra declarada fue lo que
+permitio detectarlo; publicarla sin declararla la habria dejado en pie.
 
 ### 🟢 La accion C: CONFIRMADA en el conteo, y FALSIFICADA como instrumento (`P339`)
 
@@ -453,8 +479,8 @@ byte en el MISMO acto de medicion** — es lo unico que desempata.
 | suites Python ejecutadas una por una | **53** |
 | fallos | 🟢 **0** |
 | interprete | `Python 3.11.15` |
-| aserciones `self.assert*` en las suites Python | **200** (eran 170) |
-| suite nueva de este pase (`p336-figure-contradiction-delta/test_p336.py`) | 🟢 **23/23** |
+| aserciones `self.assert*` en las suites Python | **203** (eran 170) |
+| suite nueva de este pase (`p336-figure-contradiction-delta/test_p336.py`) | 🟢 **26/26** (eran 23 antes de la correccion de `P338`) |
 
 ⚠️ **Dos defectos de ESTE pase, encontrados por ESTE pase antes de publicar.** (1) La primera
 version de la suite nueva traia un guardia de `P332` que **se leia a si mismo** y se disparaba con

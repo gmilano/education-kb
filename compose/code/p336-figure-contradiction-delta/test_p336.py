@@ -53,10 +53,16 @@ CENSO_107 = {
 
 DETALLE = re.compile(r"openstax\.org/details/books/([a-z0-9-]+)")
 PAGINA = re.compile(r"openstax\.org/books/([a-z0-9-]+)/pages/")
+LIBRO = re.compile(r"openstax\.org/books/([a-z0-9-]+)/?\s*$")
 
 
 def forma_de(oer):
-    """Clasifica la forma de la URL. Devuelve (forma, slug)."""
+    """Clasifica la forma de la URL. Devuelve (forma, slug).
+
+    CUATRO formas, no dos. La cuarta —`openstax-SIN-OBRA`— es la peor: nombra al
+    titular y NO nombra la obra, asi que la edicion (y por `P328` la cesion) no
+    es resoluble desde el campo.
+    """
     if not oer:
         return "no-openstax", ""
     m = DETALLE.search(oer)
@@ -65,8 +71,11 @@ def forma_de(oer):
     m = PAGINA.search(oer)
     if m:
         return "pages", m.group(1)
+    m = LIBRO.search(oer)
+    if m:
+        return "books-sin-pages", m.group(1)
     if "openstax.org" in oer:
-        return "openstax-otra", ""
+        return "openstax-SIN-OBRA", ""
     return "no-openstax", ""
 
 
@@ -204,13 +213,47 @@ class TestP338LaCausaEsElTextoLibre(unittest.TestCase):
         n_pages = sum(1 for f in self.filas if f["forma_url"] == "pages")
         self.assertGreater(n_pages, 100)
 
-    def test_las_dos_formas_PARTEN_el_espacio_de_slugs(self):
-        """Ningun slug aparece en las dos formas: perder una forma pierde OBRAS."""
+    def test_control_positivo_forma_books_sin_pages(self):
+        """La TERCERA forma, que aparecio al ampliar la muestra."""
+        self.assertEqual(
+            forma_de("https://openstax.org/books/precalculus-2e"),
+            ("books-sin-pages", "precalculus-2e"),
+        )
+
+    def test_la_cuarta_forma_nombra_al_TITULAR_y_no_a_la_OBRA(self):
+        """`P341`: el peor caso — hay titular y no hay obra, asi que no hay edicion."""
+        for crudo in ("https://openstax.org", "https://openstax.org/"):
+            self.assertEqual(forma_de(crudo), ("openstax-SIN-OBRA", ""))
+
+    def test_las_formas_NO_parten_el_espacio_de_slugs(self):
+        """🔴 CORRECCION de este mismo pase, contra su propia publicacion.
+
+        Con 694 unidades los conjuntos de slugs salian DISJUNTOS y este pase
+        publico que las formas «PARTEN el espacio sin solaparse». Al ampliar la
+        muestra a 1.685 aparece `college-algebra-2e` en las DOS formas. La
+        afirmacion fuerte queda FALSIFICADA por la propia medicion que la hizo.
+        """
         det = {f["slug"] for f in self.filas if f["forma_url"] == "details" and f["slug"]}
         pag = {f["slug"] for f in self.filas if f["forma_url"] == "pages" and f["slug"]}
-        self.assertTrue(det)
-        self.assertTrue(pag)
-        self.assertEqual(det & pag, set())
+        self.assertTrue(det and pag)
+        self.assertEqual(det & pag, {"college-algebra-2e"})
+
+    def test_lo_que_SI_se_sostiene_hay_obras_alcanzables_por_UNA_sola_forma(self):
+        """El reclamo defendible: solapamiento PARCIAL, con obras exclusivas de cada forma."""
+        det = {f["slug"] for f in self.filas if f["forma_url"] == "details" and f["slug"]}
+        pag = {f["slug"] for f in self.filas if f["forma_url"] == "pages" and f["slug"]}
+        self.assertEqual(
+            pag - det, {"precalculus", "precalculus-2e", "university-physics-volume-1"}
+        )
+        self.assertEqual(
+            det - pag,
+            {
+                "calculus-volume-1",
+                "elementary-algebra-2e",
+                "intermediate-algebra-2e",
+                "introductory-statistics",
+            },
+        )
 
     def test_precalculus_a_secas_existe_y_NO_esta_en_ninguna_fila_del_censo_107(self):
         """Una obra entera del corpus que el censo publicado no tiene."""

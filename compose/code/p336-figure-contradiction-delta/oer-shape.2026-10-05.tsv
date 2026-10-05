@@ -1,5 +1,7 @@
 # P338 — forma de la URL en el campo libre `oer`, por problema
-# muestra NO aleatoria: los problemas que el sparse-checkout alcanzo a materializar (orden alfabetico)
+# muestra NO aleatoria: las 1685 unidades (de 12.999) que el sparse-checkout
+# alcanzo a materializar en orden alfabetico antes de detenerse por limite de tiempo.
+# CUATRO formas de URL, no dos: la correccion la hizo ampliar la muestra de 694 a 1.685.
 problema	forma_url	slug	license_del_item	figuras
 a005bd5real1	pages	precalculus	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
 a005bd5real10	pages	precalculus	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
@@ -695,3 +697,994 @@ a0f69c4conic11	details	college-algebra-2e	https://creativecommons.org/licenses/b
 a0f69c4conic12	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
 a0f69c4conic13	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
 a0f69c4conic14	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a0f69c4conic15	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a0f69c4conic16	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a0f69c4conic17	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a0f69c4conic18	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a0f69c4conic19	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a0f69c4conic2	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a0f69c4conic20	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a0f69c4conic21	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a0f69c4conic3	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a0f69c4conic4	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a0f69c4conic5	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a0f69c4conic6	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a0f69c4conic7	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a0f69c4conic8	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a0f69c4conic9	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a0f69c4conics1	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a0f69c4conics2	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a0f69c4conics3	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a0f69c4conics4	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a0f69c4conics5	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a0f69c4conics6	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a0f69c4conics7	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a0fd0bapolynomial1	books-sin-pages	precalculus-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a0fd0bapolynomial10	books-sin-pages	precalculus-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a0fd0bapolynomial11	books-sin-pages	precalculus-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a0fd0bapolynomial12	books-sin-pages	precalculus-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a0fd0bapolynomial13	books-sin-pages	precalculus-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a0fd0bapolynomial14	books-sin-pages	precalculus-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a0fd0bapolynomial15	books-sin-pages	precalculus-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a0fd0bapolynomial16	books-sin-pages	precalculus-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a0fd0bapolynomial17	books-sin-pages	precalculus-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a0fd0bapolynomial18	books-sin-pages	precalculus-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a0fd0bapolynomial19	books-sin-pages	precalculus-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a0fd0bapolynomial2	books-sin-pages	precalculus-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a0fd0bapolynomial20	books-sin-pages	precalculus-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a0fd0bapolynomial21	books-sin-pages	precalculus-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a0fd0bapolynomial22	books-sin-pages	precalculus-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a0fd0bapolynomial23	books-sin-pages	precalculus-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a0fd0bapolynomial24	books-sin-pages	precalculus-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a0fd0bapolynomial25	books-sin-pages	precalculus-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a0fd0bapolynomial26	books-sin-pages	precalculus-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a0fd0bapolynomial27	books-sin-pages	precalculus-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a0fd0bapolynomial28	books-sin-pages	precalculus-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a0fd0bapolynomial29	books-sin-pages	precalculus-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a0fd0bapolynomial3	books-sin-pages	precalculus-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a0fd0bapolynomial30	books-sin-pages	precalculus-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a0fd0bapolynomial4	books-sin-pages	precalculus-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a0fd0bapolynomial5	books-sin-pages	precalculus-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a0fd0bapolynomial6	books-sin-pages	precalculus-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a0fd0bapolynomial7	books-sin-pages	precalculus-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a0fd0bapolynomial8	books-sin-pages	precalculus-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a0fd0bapolynomial9	books-sin-pages	precalculus-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a104861trifactor1	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a104861trifactor10	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a104861trifactor11	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a104861trifactor12	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a104861trifactor13	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a104861trifactor14	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a104861trifactor15	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a104861trifactor16	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a104861trifactor17	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a104861trifactor18	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a104861trifactor19	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a104861trifactor2	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a104861trifactor20	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a104861trifactor21	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a104861trifactor22	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a104861trifactor23	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a104861trifactor24	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a104861trifactor25	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a104861trifactor26	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a104861trifactor27	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a104861trifactor28	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a104861trifactor29	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a104861trifactor3	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a104861trifactor30	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a104861trifactor4	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a104861trifactor5	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a104861trifactor6	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a104861trifactor7	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a104861trifactor8	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a104861trifactor9	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a106ef7vector1	pages	university-physics-volume-1	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a106ef7vector10	pages	university-physics-volume-1	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a106ef7vector11	pages	university-physics-volume-1	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a106ef7vector12	pages	university-physics-volume-1	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a106ef7vector13	pages	university-physics-volume-1	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a106ef7vector14	pages	university-physics-volume-1	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a106ef7vector15	pages	university-physics-volume-1	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a106ef7vector16	pages	university-physics-volume-1	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a106ef7vector17	pages	university-physics-volume-1	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a106ef7vector18	pages	university-physics-volume-1	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a106ef7vector19	pages	university-physics-volume-1	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a106ef7vector2	pages	university-physics-volume-1	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a106ef7vector20	pages	university-physics-volume-1	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a106ef7vector21	pages	university-physics-volume-1	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a106ef7vector22	pages	university-physics-volume-1	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a106ef7vector23	pages	university-physics-volume-1	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a106ef7vector24	pages	university-physics-volume-1	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a106ef7vector25	pages	university-physics-volume-1	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a106ef7vector26	pages	university-physics-volume-1	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a106ef7vector27	pages	university-physics-volume-1	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a106ef7vector28	pages	university-physics-volume-1	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a106ef7vector29	pages	university-physics-volume-1	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a106ef7vector3	pages	university-physics-volume-1	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a106ef7vector30	pages	university-physics-volume-1	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a106ef7vector31	pages	university-physics-volume-1	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a106ef7vector4	pages	university-physics-volume-1	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	1
+a106ef7vector41	pages	university-physics-volume-1	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	1
+a106ef7vector42	pages	university-physics-volume-1	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	1
+a106ef7vector5	pages	university-physics-volume-1	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a106ef7vector6	pages	university-physics-volume-1	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a106ef7vector7	pages	university-physics-volume-1	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a106ef7vector8	pages	university-physics-volume-1	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a106ef7vector9	pages	university-physics-volume-1	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a10b60arealnumbers1	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a10b60arealnumbers10	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a10b60arealnumbers13	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a10b60arealnumbers16	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a10b60arealnumbers17	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a10b60arealnumbers18	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a10b60arealnumbers19	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a10b60arealnumbers2	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a10b60arealnumbers20	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a10b60arealnumbers21	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a10b60arealnumbers22	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a10b60arealnumbers23	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a10b60arealnumbers24	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a10b60arealnumbers25	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a10b60arealnumbers26	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a10b60arealnumbers27	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a10b60arealnumbers28	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a10b60arealnumbers29	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a10b60arealnumbers3	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a10b60arealnumbers30	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a10b60arealnumbers4	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a10b60arealnumbers5	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a10b60arealnumbers6	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a10b60arealnumbers7	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a10b60arealnumbers8	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a10b60arealnumbers9	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1155e4row1	no-openstax		https://ds100.org/su26/assets/exams/fa25/fa25_mt1_sol.pdf	1
+a1155e4row10_p1	no-openstax		https://ds100.org/su26/assets/exams/fa25/fa25_mt1_sol.pdf	3
+a1155e4row10_p2	no-openstax		https://ds100.org/su26/assets/exams/fa25/fa25_mt1_sol.pdf	3
+a1155e4row2	no-openstax		https://ds100.org/su26/assets/exams/fa25/fa25_mt1_sol.pdf	1
+a1155e4row3_p1	no-openstax		https://ds100.org/su26/assets/exams/fa25/fa25_mt1_sol.pdf	1
+a1155e4row3_p2	no-openstax		https://ds100.org/su26/assets/exams/fa25/fa25_mt1_sol.pdf	4
+a1155e4row4	no-openstax		https://ds100.org/su26/assets/exams/fa25/fa25_mt1_sol.pdf	12
+a1155e4row5_p1	no-openstax		https://ds100.org/su26/assets/exams/fa25/fa25_mt1_sol.pdf	9
+a1155e4row5_p2	no-openstax		https://ds100.org/su26/assets/exams/fa25/fa25_mt1_sol.pdf	3
+a1155e4row6	no-openstax		https://ds100.org/su26/assets/exams/fa25/fa25_mt1_sol.pdf	5
+a1155e4row7_p1	no-openstax		https://ds100.org/su26/assets/exams/fa25/fa25_mt1_sol.pdf	9
+a1155e4row7_p2	no-openstax		https://ds100.org/su26/assets/exams/fa25/fa25_mt1_sol.pdf	5
+a1155e4row8	no-openstax		https://ds100.org/su26/assets/exams/fa25/fa25_mt1_sol.pdf	2
+a1155e4row9	no-openstax		https://ds100.org/su26/assets/exams/fa25/fa25_mt1_sol.pdf	2
+a11c719lang1	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a11c719lang10	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a11c719lang11	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a11c719lang12	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a11c719lang13	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a11c719lang14	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a11c719lang15	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a11c719lang16	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a11c719lang17	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a11c719lang18	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a11c719lang19	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a11c719lang2	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a11c719lang20	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a11c719lang21	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a11c719lang22	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a11c719lang23	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a11c719lang24	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a11c719lang25	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a11c719lang26	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a11c719lang27	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a11c719lang28	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a11c719lang29	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a11c719lang3	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a11c719lang30	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a11c719lang31	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a11c719lang32	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a11c719lang4	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a11c719lang5	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a11c719lang6	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a11c719lang7	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a11c719lang8	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a11c719lang9	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a11f6efA242-logsofquotients-P01	no-openstax		CC4.0	0
+a11f6efA242-logsofquotients-P02	no-openstax		CC4.0	0
+a11f6efA242-logsofquotients-P03	no-openstax		CC4.0	0
+a11f6efA242-logsofquotients-P04	no-openstax		CC4.0	0
+a11f6efA242-logsofquotients-P05	no-openstax		CC4.0	0
+a11f6efA242-logsofquotients-P06	no-openstax		CC4.0	0
+a11f6efA242-logsofquotients-P07	no-openstax		CC4.0	0
+a11f6efA242-logsofquotients-P08	no-openstax		CC4.0	0
+a11f6efA242-logsofquotients-P09	no-openstax		CC4.0	0
+a11f6efA242-logsofquotients-P10	no-openstax		CC4.0	0
+a11f6efA242-logsofquotients-P11	no-openstax		CC4.0	0
+a1268beother1	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1268beother10	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1268beother11	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1268beother12	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1268beother13	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1268beother14	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1268beother15	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1268beother16	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1268beother17	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1268beother18	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1268beother19	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1268beother2	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1268beother20	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1268beother21	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1268beother22	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1268beother23	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1268beother3	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1268beother4	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1268beother5	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1268beother6	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1268beother7	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1268beother8	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1268beother9	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1279cdpowers1	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1279cdpowers10	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1279cdpowers11	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1279cdpowers12	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1279cdpowers13	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1279cdpowers14	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1279cdpowers15	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1279cdpowers16	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1279cdpowers17	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1279cdpowers18	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1279cdpowers19	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1279cdpowers2	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1279cdpowers20	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1279cdpowers21	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1279cdpowers22	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1279cdpowers23	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1279cdpowers24	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1279cdpowers25	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1279cdpowers26	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1279cdpowers27	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1279cdpowers28	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1279cdpowers29	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1279cdpowers3	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1279cdpowers30	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1279cdpowers4	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1279cdpowers5	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1279cdpowers6	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1279cdpowers7	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1279cdpowers8	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1279cdpowers9	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a132811electro1	no-openstax		SIN-DECLARAR	0
+a132811electro10	no-openstax		SIN-DECLARAR	1
+a132811electro2	no-openstax		SIN-DECLARAR	0
+a132811electro3	no-openstax		SIN-DECLARAR	0
+a132811electro4	no-openstax		SIN-DECLARAR	0
+a132811electro5	no-openstax		SIN-DECLARAR	2
+a132811electro6	no-openstax		SIN-DECLARAR	1
+a132811electro7	no-openstax		SIN-DECLARAR	2
+a132811electro8	no-openstax		SIN-DECLARAR	1
+a132811electro9	no-openstax		SIN-DECLARAR	0
+a137dddgre1	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a137dddgre10	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a137dddgre11	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a137dddgre12	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a137dddgre13	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a137dddgre14	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a137dddgre15	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a137dddgre16	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a137dddgre17	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a137dddgre18	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a137dddgre19	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a137dddgre2	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a137dddgre20	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a137dddgre21	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a137dddgre22	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a137dddgre23	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a137dddgre24	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a137dddgre25	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a137dddgre26	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a137dddgre27	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a137dddgre28	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a137dddgre29	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a137dddgre3	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a137dddgre30	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a137dddgre4	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a137dddgre5	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a137dddgre6	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a137dddgre7	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a137dddgre8	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a137dddgre9	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1435ed10.4AIDS	details	introductory-statistics	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1435ed10.4biofeedback	details	introductory-statistics	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1435ed10.4bloodpressure	details	introductory-statistics	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1435ed10.4coach	details	introductory-statistics	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	2
+a1435ed10.4drugsP-value	details	introductory-statistics	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1435ed10.4golf	details	introductory-statistics	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	1
+a1435ed10.4hypnotism	details	introductory-statistics	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	1
+a14ffbcmodeling1	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a14ffbcmodeling11	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a14ffbcmodeling12	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a14ffbcmodeling14	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a14ffbcmodeling15	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a14ffbcmodeling16	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a14ffbcmodeling17	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a14ffbcmodeling18	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a14ffbcmodeling19	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a14ffbcmodeling2	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a14ffbcmodeling20	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a14ffbcmodeling21	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a14ffbcmodeling22	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a14ffbcmodeling23	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a14ffbcmodeling24	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a14ffbcmodeling25	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a14ffbcmodeling26	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a14ffbcmodeling27	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a14ffbcmodeling3	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a14ffbcmodeling4	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a14ffbcmodeling5	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a14ffbcmodeling6	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a14ffbcmodeling7	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a14ffbcmodeling8	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a14ffbcmodeling9	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a150a865.3anniversary1	details	introductory-statistics	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a150a865.3commuters1	details	introductory-statistics	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a150a865.3computer1	details	introductory-statistics	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	1
+a150a865.3highway1	details	introductory-statistics	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a150a865.3intro1	details	introductory-statistics	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a150a865.3intro2	details	introductory-statistics	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	3
+a150a865.3phone1	details	introductory-statistics	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a150a865.3police1	details	introductory-statistics	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	1
+a150a865.3repair1	details	introductory-statistics	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a150a865.3retire1	details	introductory-statistics	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a150a865.3runner1	details	introductory-statistics	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a150a865.3runningshoes1	details	introductory-statistics	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a150a865.3store1	details	introductory-statistics	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	1
+a150a865.3traveler1	details	introductory-statistics	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a152fa9CompletingSqr1	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a152fa9Square11	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a152fa9Square18	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a152fa9Square20	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a152fa9gaussian28	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a152fa9gaussian29	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a15666breview1	details	calculus-volume-1	SIN-DECLARAR	0
+a15666breview10	details	calculus-volume-1	SIN-DECLARAR	0
+a15666breview11	details	calculus-volume-1	SIN-DECLARAR	0
+a15666breview12	details	calculus-volume-1	SIN-DECLARAR	0
+a15666breview13	details	calculus-volume-1	SIN-DECLARAR	0
+a15666breview14	details	calculus-volume-1	SIN-DECLARAR	0
+a15666breview15	details	calculus-volume-1	SIN-DECLARAR	0
+a15666breview16	details	calculus-volume-1	SIN-DECLARAR	0
+a15666breview17	details	calculus-volume-1	SIN-DECLARAR	0
+a15666breview18	details	calculus-volume-1	SIN-DECLARAR	0
+a15666breview19	details	calculus-volume-1	SIN-DECLARAR	0
+a15666breview2	details	calculus-volume-1	SIN-DECLARAR	0
+a15666breview20	details	calculus-volume-1	SIN-DECLARAR	0
+a15666breview21	details	calculus-volume-1	SIN-DECLARAR	0
+a15666breview22	details	calculus-volume-1	SIN-DECLARAR	0
+a15666breview23	details	calculus-volume-1	SIN-DECLARAR	0
+a15666breview24	details	calculus-volume-1	SIN-DECLARAR	0
+a15666breview25	details	calculus-volume-1	SIN-DECLARAR	0
+a15666breview3	details	calculus-volume-1	SIN-DECLARAR	0
+a15666breview4	details	calculus-volume-1	SIN-DECLARAR	0
+a15666breview5	details	calculus-volume-1	SIN-DECLARAR	0
+a15666breview6	details	calculus-volume-1	SIN-DECLARAR	0
+a15666breview7	details	calculus-volume-1	SIN-DECLARAR	0
+a15666breview8	details	calculus-volume-1	SIN-DECLARAR	0
+a15666breview9	details	calculus-volume-1	SIN-DECLARAR	0
+a15cd07anov1	details	introductory-statistics	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	1
+a15cd07anov2	details	introductory-statistics	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	1
+a15cd07anov3	details	introductory-statistics	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	1
+a15cd07anov4	details	introductory-statistics	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	1
+a15cd07anov5	details	introductory-statistics	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	1
+a161552dividing1	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a161552dividing10	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a161552dividing3	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a161552dividing4	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a161552dividing5	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a161552dividing6	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a161552dividing7	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a161552dividing8	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a161552dividing9	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a161552dividingpoly1	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a161552dividingpoly10	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a161552dividingpoly2	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a161552dividingpoly3	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a161552dividingpoly4	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a161552dividingpoly5	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a161552dividingpoly6	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a161552dividingpoly7	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a161552dividingpoly8	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a161552dividingpoly9	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a161552divpoly1	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	1
+a161552divpoly10	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	1
+a161552divpoly11	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	1
+a161552divpoly12	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	1
+a161552divpoly13	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	1
+a161552divpoly14	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	1
+a161552divpoly15	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	1
+a161552divpoly16	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	1
+a161552divpoly17	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	1
+a161552divpoly18	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	1
+a161552divpoly19	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	1
+a161552divpoly2	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	1
+a161552divpoly20	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	1
+a161552divpoly21	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a161552divpoly22	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a161552divpoly23	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a161552divpoly24	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a161552divpoly25	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a161552divpoly26	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a161552divpoly27	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a161552divpoly28	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a161552divpoly29	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a161552divpoly3	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	3
+a161552divpoly30	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a161552divpoly4	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	1
+a161552divpoly5	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	1
+a161552divpoly6	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	2
+a161552poly1	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a161552poly10	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a161552poly2	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a161552poly3	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	7
+a161552poly4	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a161552poly5	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a161552poly6	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a161552poly7	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a161552poly8	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a161552poly9	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a16200bc2_1	no-openstax		SIN-DECLARAR	1
+a16200bc2_2	no-openstax		SIN-DECLARAR	1
+a16200bc2_3	no-openstax		SIN-DECLARAR	0
+a16200bc2_4	no-openstax		SIN-DECLARAR	4
+a16200bc2_5	no-openstax		SIN-DECLARAR	1
+a16200bc2_6	no-openstax		SIN-DECLARAR	0
+a16200bc2_7	no-openstax		SIN-DECLARAR	1
+a16200bc2_8	no-openstax		SIN-DECLARAR	1
+a16200bchemC1	no-openstax		SIN-DECLARAR	0
+a16200bchemC2	no-openstax		SIN-DECLARAR	0
+a16200bchemC3	no-openstax		SIN-DECLARAR	0
+a16200bchemC4	no-openstax		SIN-DECLARAR	0
+a16200bchemC5	no-openstax		SIN-DECLARAR	0
+a16200bchemC6	no-openstax		SIN-DECLARAR	1
+a16200bchemC7	no-openstax		SIN-DECLARAR	0
+a16200bchemC8	no-openstax		SIN-DECLARAR	0
+a16844emotion2d1	pages	university-physics-volume-1	SIN-DECLARAR	0
+a16844emotion2d10	pages	university-physics-volume-1	SIN-DECLARAR	0
+a16844emotion2d11	pages	university-physics-volume-1	SIN-DECLARAR	0
+a16844emotion2d12	pages	university-physics-volume-1	SIN-DECLARAR	0
+a16844emotion2d14	pages	university-physics-volume-1	SIN-DECLARAR	0
+a16844emotion2d15	pages	university-physics-volume-1	SIN-DECLARAR	0
+a16844emotion2d16	pages	university-physics-volume-1	SIN-DECLARAR	0
+a16844emotion2d17	pages	university-physics-volume-1	SIN-DECLARAR	0
+a16844emotion2d18	pages	university-physics-volume-1	SIN-DECLARAR	0
+a16844emotion2d19	pages	university-physics-volume-1	SIN-DECLARAR	0
+a16844emotion2d2	pages	university-physics-volume-1	SIN-DECLARAR	0
+a16844emotion2d20	pages	university-physics-volume-1	SIN-DECLARAR	0
+a16844emotion2d21	pages	university-physics-volume-1	SIN-DECLARAR	0
+a16844emotion2d22	pages	university-physics-volume-1	SIN-DECLARAR	0
+a16844emotion2d23	pages	university-physics-volume-1	SIN-DECLARAR	0
+a16844emotion2d24	pages	university-physics-volume-1	SIN-DECLARAR	0
+a16844emotion2d26	pages	university-physics-volume-1	SIN-DECLARAR	0
+a16844emotion2d27	pages	university-physics-volume-1	SIN-DECLARAR	0
+a16844emotion2d28	pages	university-physics-volume-1	SIN-DECLARAR	0
+a16844emotion2d29	pages	university-physics-volume-1	SIN-DECLARAR	0
+a16844emotion2d3	pages	university-physics-volume-1	SIN-DECLARAR	0
+a16844emotion2d30	pages	university-physics-volume-1	SIN-DECLARAR	0
+a16844emotion2d4	pages	university-physics-volume-1	SIN-DECLARAR	0
+a16844emotion2d5	pages	university-physics-volume-1	SIN-DECLARAR	0
+a16844emotion2d7	pages	university-physics-volume-1	SIN-DECLARAR	0
+a16844emotion2d8	pages	university-physics-volume-1	SIN-DECLARAR	0
+a16844emotion2d9	pages	university-physics-volume-1	SIN-DECLARAR	0
+a171b3arationals1	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a171b3arationals10	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a171b3arationals11	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a171b3arationals12	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a171b3arationals13	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a171b3arationals14	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a171b3arationals15	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a171b3arationals16	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a171b3arationals17	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a171b3arationals18	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a171b3arationals19	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a171b3arationals2	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a171b3arationals20	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a171b3arationals21	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a171b3arationals22	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a171b3arationals23	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a171b3arationals24	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a171b3arationals25	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a171b3arationals26	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a171b3arationals27	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a171b3arationals28	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a171b3arationals29	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a171b3arationals3	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a171b3arationals4	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a171b3arationals5	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a171b3arationals6	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a171b3arationals7	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a171b3arationals8	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a171b3arationals9	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1797b7chem10	no-openstax		SIN-DECLARAR	0
+a1797b7chem11	no-openstax		SIN-DECLARAR	0
+a1797b7chem12	no-openstax		SIN-DECLARAR	0
+a1797b7chem13	no-openstax		SIN-DECLARAR	0
+a1797b7chem14	no-openstax		SIN-DECLARAR	0
+a1797b7chem15	no-openstax		SIN-DECLARAR	1
+a1797b7chem16	no-openstax		SIN-DECLARAR	0
+a1797b7chem17	no-openstax		SIN-DECLARAR	0
+a1797b7chem18	no-openstax		SIN-DECLARAR	0
+a1797b7chem19	no-openstax		SIN-DECLARAR	1
+a1797b7chem2	no-openstax		SIN-DECLARAR	1
+a1797b7chem20	no-openstax		SIN-DECLARAR	4
+a1797b7chem21	no-openstax		SIN-DECLARAR	1
+a1797b7chem3	no-openstax		SIN-DECLARAR	1
+a1797b7chem4	no-openstax		SIN-DECLARAR	1
+a1797b7chem5	no-openstax		SIN-DECLARAR	1
+a1797b7chem6	no-openstax		SIN-DECLARAR	0
+a1797b7chem7	no-openstax		SIN-DECLARAR	0
+a1797b7chem8	no-openstax		SIN-DECLARAR	0
+a1797b7chem9	no-openstax		SIN-DECLARAR	0
+a17ac4finverse1	details	calculus-volume-1	SIN-DECLARAR	0
+a17ac4finverse10	details	calculus-volume-1	SIN-DECLARAR	0
+a17ac4finverse11	details	calculus-volume-1	SIN-DECLARAR	0
+a17ac4finverse12	details	calculus-volume-1	SIN-DECLARAR	0
+a17ac4finverse13	details	calculus-volume-1	SIN-DECLARAR	0
+a17ac4finverse14	details	calculus-volume-1	SIN-DECLARAR	0
+a17ac4finverse15	details	calculus-volume-1	SIN-DECLARAR	0
+a17ac4finverse16	details	calculus-volume-1	SIN-DECLARAR	0
+a17ac4finverse17	details	calculus-volume-1	SIN-DECLARAR	0
+a17ac4finverse18	details	calculus-volume-1	SIN-DECLARAR	0
+a17ac4finverse19	details	calculus-volume-1	SIN-DECLARAR	0
+a17ac4finverse2	details	calculus-volume-1	SIN-DECLARAR	0
+a17ac4finverse20	details	calculus-volume-1	SIN-DECLARAR	0
+a17ac4finverse21	details	calculus-volume-1	SIN-DECLARAR	0
+a17ac4finverse22	details	calculus-volume-1	SIN-DECLARAR	0
+a17ac4finverse23	details	calculus-volume-1	SIN-DECLARAR	0
+a17ac4finverse24	details	calculus-volume-1	SIN-DECLARAR	0
+a17ac4finverse25	details	calculus-volume-1	SIN-DECLARAR	0
+a17ac4finverse3	details	calculus-volume-1	SIN-DECLARAR	0
+a17ac4finverse4	details	calculus-volume-1	SIN-DECLARAR	0
+a17ac4finverse5	details	calculus-volume-1	SIN-DECLARAR	0
+a17ac4finverse6	details	calculus-volume-1	SIN-DECLARAR	0
+a17ac4finverse7	details	calculus-volume-1	SIN-DECLARAR	0
+a17ac4finverse8	details	calculus-volume-1	SIN-DECLARAR	0
+a17ac4finverse9	details	calculus-volume-1	SIN-DECLARAR	0
+a18455cprediction1	details	introductory-statistics	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a18455cprediction10	details	introductory-statistics	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	1
+a18455cprediction11	details	introductory-statistics	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	1
+a18455cprediction12	details	introductory-statistics	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	1
+a18455cprediction2	details	introductory-statistics	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a18455cprediction3	details	introductory-statistics	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a18455cprediction4	details	introductory-statistics	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	1
+a18455cprediction5	details	introductory-statistics	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	1
+a18455cprediction6	details	introductory-statistics	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	1
+a18455cprediction7	details	introductory-statistics	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	1
+a18455cprediction8	details	introductory-statistics	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	1
+a18455cprediction9	details	introductory-statistics	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	1
+a184b1aQuadratic1	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a184b1aQuadratic10	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a184b1aQuadratic11	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a184b1aQuadratic12	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a184b1aQuadratic13	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a184b1aQuadratic14	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a184b1aQuadratic15	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a184b1aQuadratic16	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a184b1aQuadratic17	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a184b1aQuadratic18	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a184b1aQuadratic19	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a184b1aQuadratic2	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a184b1aQuadratic20	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a184b1aQuadratic21	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a184b1aQuadratic22	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a184b1aQuadratic23	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a184b1aQuadratic24	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a184b1aQuadratic25	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a184b1aQuadratic26	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a184b1aQuadratic27	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a184b1aQuadratic28	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a184b1aQuadratic29	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a184b1aQuadratic3	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a184b1aQuadratic30	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a184b1aQuadratic4	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a184b1aQuadratic5	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a184b1aQuadratic6	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a184b1aQuadratic7	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a184b1aQuadratic8	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a184b1aQuadratic9	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a18a5a6slope1	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	1
+a18a5a6slope10	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	1
+a18a5a6slope11	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	1
+a18a5a6slope12	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	1
+a18a5a6slope13	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	1
+a18a5a6slope14	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	1
+a18a5a6slope15	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	1
+a18a5a6slope16	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	1
+a18a5a6slope17	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	1
+a18a5a6slope18	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	1
+a18a5a6slope19	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	1
+a18a5a6slope2	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	1
+a18a5a6slope20	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	1
+a18a5a6slope3	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	1
+a18a5a6slope4	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	1
+a18a5a6slope5	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	1
+a18a5a6slope6	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	1
+a18a5a6slope7	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	1
+a18a5a6slope8	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	1
+a18a5a6slope9	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	1
+a18ab21limits1	details	calculus-volume-1	SIN-DECLARAR	1
+a18ab21limits10	details	calculus-volume-1	SIN-DECLARAR	0
+a18ab21limits11	details	calculus-volume-1	SIN-DECLARAR	0
+a18ab21limits12	details	calculus-volume-1	SIN-DECLARAR	0
+a18ab21limits13	details	calculus-volume-1	SIN-DECLARAR	0
+a18ab21limits14	details	calculus-volume-1	SIN-DECLARAR	0
+a18ab21limits15	details	calculus-volume-1	SIN-DECLARAR	0
+a18ab21limits16	details	calculus-volume-1	SIN-DECLARAR	0
+a18ab21limits17	details	calculus-volume-1	SIN-DECLARAR	0
+a18ab21limits18	details	calculus-volume-1	SIN-DECLARAR	0
+a18ab21limits19	details	calculus-volume-1	SIN-DECLARAR	0
+a18ab21limits2	details	calculus-volume-1	SIN-DECLARAR	1
+a18ab21limits20	details	calculus-volume-1	SIN-DECLARAR	0
+a18ab21limits21	details	calculus-volume-1	SIN-DECLARAR	0
+a18ab21limits22	details	calculus-volume-1	SIN-DECLARAR	0
+a18ab21limits23	details	calculus-volume-1	SIN-DECLARAR	0
+a18ab21limits24	details	calculus-volume-1	SIN-DECLARAR	0
+a18ab21limits25	details	calculus-volume-1	SIN-DECLARAR	0
+a18ab21limits3	details	calculus-volume-1	SIN-DECLARAR	1
+a18ab21limits4	details	calculus-volume-1	SIN-DECLARAR	1
+a18ab21limits5	details	calculus-volume-1	SIN-DECLARAR	1
+a18ab21limits6	details	calculus-volume-1	SIN-DECLARAR	0
+a18ab21limits7	details	calculus-volume-1	SIN-DECLARAR	0
+a18ab21limits8	details	calculus-volume-1	SIN-DECLARAR	0
+a18ab21limits9	details	calculus-volume-1	SIN-DECLARAR	0
+a18d102geometric1	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a18d102geometric10	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a18d102geometric11	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a18d102geometric12	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a18d102geometric13	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a18d102geometric14	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a18d102geometric15	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a18d102geometric16	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a18d102geometric17	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a18d102geometric18	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a18d102geometric19	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a18d102geometric2	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a18d102geometric20	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a18d102geometric21	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a18d102geometric22	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a18d102geometric23	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a18d102geometric24	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a18d102geometric25	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a18d102geometric26	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a18d102geometric27	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a18d102geometric28	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a18d102geometric29	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a18d102geometric3	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a18d102geometric30	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a18d102geometric4	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a18d102geometric5	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a18d102geometric6	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a18d102geometric7	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a18d102geometric8	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a18d102geometric9	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a18dde9partfrac1	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a18dde9partfrac10	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a18dde9partfrac11	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a18dde9partfrac14	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a18dde9partfrac15	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a18dde9partfrac17	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a18dde9partfrac18	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a18dde9partfrac19	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a18dde9partfrac2	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a18dde9partfrac20	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a18dde9partfrac21	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a18dde9partfrac22	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a18dde9partfrac23	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a18dde9partfrac24	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a18dde9partfrac25	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a18dde9partfrac26	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a18dde9partfrac27	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a18dde9partfrac28	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a18dde9partfrac29	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a18dde9partfrac3	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a18dde9partfrac30	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a18dde9partfrac4	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a18dde9partfrac5	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a18dde9partfrac6	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a18dde9partfrac7	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a18dde9partfrac8	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a18dde9partfrac9	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a18dde9partfract12	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a18dde9partfract13	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a18e27bvariation1	pages	precalculus-2e	SIN-DECLARAR	0
+a18e27bvariation10	pages	precalculus-2e	SIN-DECLARAR	0
+a18e27bvariation11	pages	precalculus-2e	SIN-DECLARAR	0
+a18e27bvariation12	pages	precalculus-2e	SIN-DECLARAR	0
+a18e27bvariation13	pages	precalculus-2e	SIN-DECLARAR	0
+a18e27bvariation14	pages	precalculus-2e	SIN-DECLARAR	0
+a18e27bvariation15	pages	precalculus-2e	SIN-DECLARAR	0
+a18e27bvariation16	pages	precalculus-2e	SIN-DECLARAR	0
+a18e27bvariation17	pages	precalculus-2e	SIN-DECLARAR	0
+a18e27bvariation18	pages	precalculus-2e	SIN-DECLARAR	0
+a18e27bvariation19	pages	precalculus-2e	SIN-DECLARAR	0
+a18e27bvariation2	pages	precalculus-2e	SIN-DECLARAR	0
+a18e27bvariation20	pages	precalculus-2e	SIN-DECLARAR	0
+a18e27bvariation21	pages	precalculus-2e	SIN-DECLARAR	0
+a18e27bvariation22	pages	precalculus-2e	SIN-DECLARAR	0
+a18e27bvariation23	pages	precalculus-2e	SIN-DECLARAR	0
+a18e27bvariation24	pages	precalculus-2e	SIN-DECLARAR	0
+a18e27bvariation25	pages	precalculus-2e	SIN-DECLARAR	0
+a18e27bvariation26	pages	precalculus-2e	SIN-DECLARAR	0
+a18e27bvariation27	pages	precalculus-2e	SIN-DECLARAR	0
+a18e27bvariation28	pages	precalculus-2e	SIN-DECLARAR	0
+a18e27bvariation29	pages	precalculus-2e	SIN-DECLARAR	0
+a18e27bvariation3	pages	precalculus-2e	SIN-DECLARAR	0
+a18e27bvariation30	pages	precalculus-2e	SIN-DECLARAR	0
+a18e27bvariation4	pages	precalculus-2e	SIN-DECLARAR	0
+a18e27bvariation5	pages	precalculus-2e	SIN-DECLARAR	0
+a18e27bvariation6	pages	precalculus-2e	SIN-DECLARAR	0
+a18e27bvariation7	pages	precalculus-2e	SIN-DECLARAR	0
+a18e27bvariation8	pages	precalculus-2e	SIN-DECLARAR	0
+a18e27bvariation9	pages	precalculus-2e	SIN-DECLARAR	0
+a19b4c7A251-simplifylogexpressions-P01	no-openstax		CC4.0	0
+a19b4c7A251-simplifylogexpressions-P02	no-openstax		CC4.0	0
+a19b4c7A251-simplifylogexpressions-P03	no-openstax		CC4.0	0
+a19b4c7A251-simplifylogexpressions-P04	no-openstax		CC4.0	0
+a19b4c7A251-simplifylogexpressions-P05	no-openstax		CC4.0	0
+a19b4c7A251-simplifylogexpressions-P06	no-openstax		CC4.0	0
+a19b4c7A251-simplifylogexpressions-P07	no-openstax		CC4.0	0
+a19b4c7A251-simplifylogexpressions-P08	no-openstax		CC4.0	0
+a19b4c7A251-simplifylogexpressions-P09	no-openstax		CC4.0	0
+a19b4c7A251-simplifylogexpressions-P10	no-openstax		CC4.0	0
+a19d043polysq1	pages	college-algebra-2e	SIN-DECLARAR	0
+a19d043polysq10	openstax-SIN-OBRA		SIN-DECLARAR	0
+a19d043polysq11	openstax-SIN-OBRA		SIN-DECLARAR	0
+a19d043polysq12	openstax-SIN-OBRA		SIN-DECLARAR	0
+a19d043polysq13	openstax-SIN-OBRA		SIN-DECLARAR	0
+a19d043polysq14	openstax-SIN-OBRA		SIN-DECLARAR	0
+a19d043polysq15	openstax-SIN-OBRA		SIN-DECLARAR	0
+a19d043polysq2	pages	college-algebra-2e	SIN-DECLARAR	0
+a19d043polysq3	pages	college-algebra-2e	SIN-DECLARAR	0
+a19d043polysq4	pages	college-algebra-2e	SIN-DECLARAR	0
+a19d043polysq5	pages	college-algebra-2e	SIN-DECLARAR	0
+a19d043polysq6	pages	college-algebra-2e	SIN-DECLARAR	0
+a19d043polysq7	pages	college-algebra-2e	SIN-DECLARAR	0
+a19d043polysq8	pages	college-algebra-2e	SIN-DECLARAR	0
+a19d043polysq9	openstax-SIN-OBRA		SIN-DECLARAR	0
+a19dceanum1	no-openstax		https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a19dceanum2	no-openstax		https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a19dceanum3	no-openstax		https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a19dceanum4	no-openstax		https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1a1ee1measure1	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1a1ee1measure10	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1a1ee1measure11	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1a1ee1measure12	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1a1ee1measure13	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1a1ee1measure14	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1a1ee1measure15	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1a1ee1measure16	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1a1ee1measure17	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1a1ee1measure18	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1a1ee1measure19	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1a1ee1measure2	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1a1ee1measure20	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1a1ee1measure21	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1a1ee1measure22	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1a1ee1measure23	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1a1ee1measure24	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1a1ee1measure25	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1a1ee1measure26	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1a1ee1measure27	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1a1ee1measure28	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1a1ee1measure29	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1a1ee1measure3	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1a1ee1measure30	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1a1ee1measure4	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1a1ee1measure5	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1a1ee1measure6	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1a1ee1measure7	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1a1ee1measure8	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1a1ee1measure9	details	elementary-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1a538fpairs1	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1a538fpairs10	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1a538fpairs11	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1a538fpairs12	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1a538fpairs13	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1a538fpairs14	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1a538fpairs2	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1a538fpairs3	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1a538fpairs4	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1a538fpairs5	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1a538fpairs6	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1a538fpairs7	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1a538fpairs8	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1a538fpairs9	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1a538fsystems1	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1a538fsystems10	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1a538fsystems2	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1a538fsystems3	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1a538fsystems4	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1a538fsystems5	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1a538fsystems6	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1a538fsystems7	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1a538fsystems8	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1a538fsystems9	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1a7c70log1	pages	precalculus-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1a7c70log10	pages	precalculus-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1a7c70log11	pages	precalculus-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1a7c70log12	pages	precalculus-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1a7c70log13	pages	precalculus-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1a7c70log14	pages	precalculus-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1a7c70log15	pages	precalculus-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1a7c70log16	pages	precalculus-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1a7c70log17	pages	precalculus-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1a7c70log18	pages	precalculus-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1a7c70log19	pages	precalculus-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1a7c70log2	pages	precalculus-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1a7c70log20	pages	precalculus-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1a7c70log21	pages	precalculus-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1a7c70log22	pages	precalculus-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1a7c70log23	pages	precalculus-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1a7c70log24	pages	precalculus-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1a7c70log25	pages	precalculus-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1a7c70log26	pages	precalculus-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1a7c70log27	pages	precalculus-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1a7c70log28	pages	precalculus-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1a7c70log29	pages	precalculus-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1a7c70log3	pages	precalculus-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1a7c70log30	pages	precalculus-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1a7c70log4	pages	precalculus-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1a7c70log5	pages	precalculus-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1a7c70log6	pages	precalculus-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1a7c70log7	pages	precalculus-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1a7c70log8	pages	precalculus-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1a7c70log9	pages	precalculus-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1a9374graphExp1	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1a9374graphExp10	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1a9374graphExp11	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	2
+a1a9374graphExp12	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	2
+a1a9374graphExp13	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	2
+a1a9374graphExp14	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1a9374graphExp15	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1a9374graphExp2	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1a9374graphExp4	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1a9374graphExp5	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1a9374graphExp6	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1a9374graphExp7	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1a9374graphExp8	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1a9374graphExp9	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1b6be2stem1	details	introductory-statistics	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	1
+a1b6be2stem10	details	introductory-statistics	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	2
+a1b6be2stem11	details	introductory-statistics	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	2
+a1b6be2stem12	details	introductory-statistics	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	2
+a1b6be2stem13	details	introductory-statistics	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	2
+a1b6be2stem14	details	introductory-statistics	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	2
+a1b6be2stem15	details	introductory-statistics	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	2
+a1b6be2stem2	details	introductory-statistics	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	1
+a1b6be2stem3	details	introductory-statistics	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	1
+a1b6be2stem4	details	introductory-statistics	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	1
+a1b6be2stem5	details	introductory-statistics	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	1
+a1b6be2stem6	details	introductory-statistics	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	1
+a1b6be2stem7	details	introductory-statistics	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	1
+a1b6be2stem8	details	introductory-statistics	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	2
+a1b6be2stem9	details	introductory-statistics	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	2
+a1bb75eds100-fa19-final-Q12c	no-openstax		https://ds100.org/su26/past-exams/	0
+a1bb75eds100-fa19-final-Q5	no-openstax		https://ds100.org/su26/past-exams/	1
+a1bb75eds100-fa19-final-Q6	no-openstax		https://ds100.org/su26/past-exams/	0
+a1bb75eds100-fa19-final-Q7	no-openstax		https://ds100.org/su26/past-exams/	1
+a1bb75eds100-fa19-mt2-Q7	no-openstax		https://ds100.org/su26/past-exams/	0
+a1bb75eds100-fa20-final-Q9	no-openstax		https://ds100.org/su26/past-exams/	3
+a1bb75eds100-fa24-final-Q6a	no-openstax		https://ds100.org/su26/past-exams/	0
+a1bb75eds100-sp19-final-Q5a	no-openstax		https://ds100.org/su26/past-exams/	0
+a1bb75eds100-sp21-final-Q4a,Q4b,Q4c	no-openstax		https://ds100.org/su26/past-exams/	1
+a1bb75eds100-sp21-final-Q9	no-openstax		https://ds100.org/su26/past-exams/	6
+a1bb75eds100-sp24-final-Q8	no-openstax		https://ds100.org/su26/past-exams/	6
+a1bb75eds100-sp25-final-Q3e,Q3f	no-openstax		https://ds100.org/su26/past-exams/	0
+a1bb75eds100-su19-final-Q7	no-openstax		https://ds100.org/su26/past-exams/	0
+a1bb75eds100-su19-final-Q8	no-openstax		https://ds100.org/su26/past-exams/	2
+a1bb75eds100-su20-final-Q6	no-openstax		https://ds100.org/su26/past-exams/	0
+a1bb75eds100-su20-mt2-Q7	no-openstax		https://ds100.org/su26/past-exams/	2
+a1bb75eds100-su20-mt2-Q8	no-openstax		https://ds100.org/su26/past-exams/	0
+a1bb75eds100-su21-final-Q6	no-openstax		https://ds100.org/su26/past-exams/	0
+a1bb75eds100-su21-final-Q7	no-openstax		https://ds100.org/su26/past-exams/	5
+a1bb75eds100-su25-final-Q3a,Q3b,Q3c	no-openstax		https://ds100.org/su26/past-exams/	1
+a1c9712Sim1	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1c9712Sim10	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1c9712Sim11	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1c9712Sim12	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1c9712Sim13	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1c9712Sim14	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1c9712Sim15	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1c9712Sim2	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1c9712Sim3	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1c9712Sim4	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1c9712Sim5	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1c9712Sim6	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1c9712Sim7	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1c9712Sim8	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1c9712Sim9	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1cc0dcareas1	details	calculus-volume-1	SIN-DECLARAR	1
+a1cc0dcareas10	details	calculus-volume-1	SIN-DECLARAR	0
+a1cc0dcareas11	details	calculus-volume-1	SIN-DECLARAR	1
+a1cc0dcareas2	details	calculus-volume-1	SIN-DECLARAR	1
+a1cc0dcareas3	details	calculus-volume-1	SIN-DECLARAR	1
+a1cc0dcareas4	details	calculus-volume-1	SIN-DECLARAR	1
+a1cc0dcareas5	details	calculus-volume-1	SIN-DECLARAR	1
+a1cc0dcareas6	details	calculus-volume-1	SIN-DECLARAR	1
+a1cc0dcareas7	details	calculus-volume-1	SIN-DECLARAR	1
+a1cc0dcareas8	details	calculus-volume-1	SIN-DECLARAR	1
+a1cc0dcareas9	details	calculus-volume-1	SIN-DECLARAR	0
+a1dc8b2Rational13	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1dc8b2Rational14	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1def42clt1	details	introductory-statistics	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1def42clt10	details	introductory-statistics	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1def42clt11	details	introductory-statistics	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1def42clt12	details	introductory-statistics	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1def42clt13	details	introductory-statistics	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1def42clt14	details	introductory-statistics	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1def42clt15	details	introductory-statistics	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1def42clt2	details	introductory-statistics	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1def42clt3	details	introductory-statistics	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1def42clt4	details	introductory-statistics	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1def42clt5	details	introductory-statistics	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1def42clt6	details	introductory-statistics	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1def42clt7	details	introductory-statistics	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1def42clt8	details	introductory-statistics	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1def42clt9	details	introductory-statistics	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1ee7a8quadratics1	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1ee7a8quadratics10	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1ee7a8quadratics11	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1ee7a8quadratics12	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1ee7a8quadratics13	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1ee7a8quadratics14	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1ee7a8quadratics15	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1ee7a8quadratics16	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1ee7a8quadratics17	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1ee7a8quadratics18	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1ee7a8quadratics19	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1ee7a8quadratics2	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1ee7a8quadratics20	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1ee7a8quadratics21	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1ee7a8quadratics22	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1ee7a8quadratics23	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1ee7a8quadratics24	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1ee7a8quadratics25	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1ee7a8quadratics26	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1ee7a8quadratics27	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1ee7a8quadratics28	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1ee7a8quadratics29	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1ee7a8quadratics3	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1ee7a8quadratics30	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1ee7a8quadratics4	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1ee7a8quadratics5	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1ee7a8quadratics6	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1ee7a8quadratics7	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1ee7a8quadratics8	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1ee7a8quadratics9	details	intermediate-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1f0162sequences1	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1f0162sequences10	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	1
+a1f0162sequences11	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	1
+a1f0162sequences12	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	1
+a1f0162sequences13	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	1
+a1f0162sequences14	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	1
+a1f0162sequences15	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	1
+a1f0162sequences16	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1f0162sequences17	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1f0162sequences18	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1f0162sequences19	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1f0162sequences2	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	1
+a1f0162sequences20	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1f0162sequences21	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1f0162sequences22	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1f0162sequences23	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1f0162sequences24	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1f0162sequences25	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1f0162sequences26	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1f0162sequences27	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1f0162sequences28	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1f0162sequences29	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1f0162sequences3	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	1
+a1f0162sequences30	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1f0162sequences4	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	1
+a1f0162sequences5	openstax-SIN-OBRA		SIN-DECLARAR	1
+a1f0162sequences6	openstax-SIN-OBRA		SIN-DECLARAR	1
+a1f0162sequences7	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1f0162sequences8	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1f0162sequences9	details	college-algebra-2e	https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	1
+a1f1064rev1	no-openstax		https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	30
+a1f1064rev2	no-openstax		https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	1
+a1f1064rev3	no-openstax		https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0
+a1f1064rev4	no-openstax		https://creativecommons.org/licenses/by/4.0/ <CC BY 4.0>	0

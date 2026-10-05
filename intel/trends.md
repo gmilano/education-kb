@@ -121,7 +121,7 @@ updated: 2026-10-05
 > están mal por ~2× y **un 403 de `curl` no es un 404**. Ver la nota de método del pase 12.
 > **Pase 11:** el Digital Omnibus es derecho vigente (tendencia 25), aparece la capa predictiva y está vacía (tendencia 26), y se corrige un error de método de diez pasadas sobre licencias permisivas (tendencia 27).
 
-## 🟢 Tendencias 867–874 — pase 108 del 2026-10-05: la capa de INTEGRACION se mueve por fin, un 404 de licencia puede ser una ortografia, y dos artefactos del mismo pase se contradicen por 41 figuras
+## 🟢 Tendencias 867–874 (+873-bis, 873-ter) — pase 108 del 2026-10-05: la capa de INTEGRACION se mueve por fin, un 404 de licencia puede ser una ortografia, dos artefactos del mismo pase se contradicen por 41 figuras, y el pase se corrige a si mismo al ampliar su propia muestra
 
 **867. 🟢 Lo que se movio en educacion open source no es el tutor: es el conector.**
 Cinco altas permisivas cortan una racha de **treinta** barridos en cero, y **cuatro de las cinco
@@ -172,16 +172,33 @@ del 41:** el «~31 %» publicado es `488,6/1.570`, que ignora que 36 aciertos ya
 que las 415 figuras ya medidas no pueden aportar mas; el numero honesto es **39,2 %** (o **37,9 %**
 con el corte 1.611). 🔵 **La conclusion cualitativa no se mueve; el numero publicado si.**
 
-**873. 🔴 `P338` — cuando la procedencia es texto libre, un extractor no pierde items sueltos: pierde OBRAS ENTERAS.**
-El campo `oer` de `OATutor-Content` es **texto libre** con al menos dos formas de URL:
-`openstax.org/details/books/<slug>` (**514** unidades, 74,1 %) y el enlace profundo
-`openstax.org/books/<slug>/pages/…` (**129**, 18,6 %). 🔴 **Y los slugs de las dos formas no se
-solapan en una sola unidad.** Un extractor afirmado sobre `/details/books/` perderia completas
-`precalculus-2e`, `university-physics-volume-1` y `precalculus`. 🔴 **Y `precalculus` a secas no
-esta en ninguna de las 10 filas del censo publicado**, lo que importa exactamente por `P328`: el
-titular cede `CC BY 4.0` en `1e` y `CC BY-NC-SA 4.0` en `main`, asi que **colapsar la edicion
-cambia la licencia que se le atribuye al activo**. ⚠️ Muestra de **694** de 12.999 unidades,
-**no aleatoria**, declarada como tal.
+**873. 🔴 `P338` — cuando la procedencia es texto libre, un extractor pierde obras enteras y SUB-CUENTA otras sin avisar.**
+El campo `oer` de `OATutor-Content` es **texto libre** con **CUATRO** formas de URL, medidas sobre
+**1.685** de 12.999 unidades: `/details/books/<slug>` (**1.229**, 72,9 %), el enlace profundo
+`/books/<slug>/pages/…` (**257**, 15,3 %), no-openstax (**160**, 9,5 %), 🆕 `/books/<slug>` sin
+`/pages/` (**30**, 1,8 %) y 🆕 `openstax.org` **a secas** (**9**, 0,5 %). Un patron escrito contra
+las dos primeras formas clasifica mal **39** unidades (2,3 %) en silencio. 🔴 **Tres obras son
+alcanzables SOLO por el enlace profundo** (`precalculus`, `precalculus-2e`,
+`university-physics-volume-1`) **y `college-algebra-2e` aparece en las dos formas**, asi que un
+extractor de una sola forma la deja **sub-contada** — el caso mas dificil de detectar, porque la
+obra si aparece en el censo y nada indica que falte nada. 🔴 **Y `precalculus` a secas no esta en
+ninguna de las 10 filas del censo publicado**, lo que importa por `P328`: el titular cede
+`CC BY 4.0` en `1e` y `CC BY-NC-SA 4.0` en `main`, asi que **colapsar la edicion cambia la licencia
+que se le atribuye al activo**. ⚠️ **Muestra NO aleatoria, declarada.**
+
+**873-bis. 🔴 Correccion del pase 108 contra el pase 108, y la leccion es sobre las muestras.**
+La primera version de la tendencia 873 midio **694** unidades, encontro los conjuntos de slugs
+**disjuntos** y publico que las formas *«PARTEN el espacio sin solaparse»*. Ampliar la muestra a
+**1.685** —sin canal nuevo, sin permiso nuevo— **falsifico esa afirmacion** (`college-algebra-2e`
+esta en las dos) y **revelo dos formas de URL mas**. 🔵 **Una enumeracion parcial no es una version
+pequena del censo: puede sostener una afirmacion que el censo refuta.** Publicar la cifra **con la
+muestra declarada** fue lo que permitio detectarlo a tiempo.
+
+**873-ter. 🆕 `P341` — hay items que nombran al TITULAR y no a la OBRA, y esos no se auditan con ningun extractor.**
+**9** unidades traen `oer = https://openstax.org` a secas. Hay titular y no hay obra; sin obra no
+hay **edicion**; y sin edicion **no hay cesion resoluble** (`P328`). 🔵 **No es un defecto de
+parseo —ningun patron lo arregla— es un defecto del DATO**, y marca el piso de lo que la capa de
+contenido de esta base puede llegar a saber sobre su propia procedencia.
 
 **874. 🔴 `P339` — un delta de 1 byte no identifica el instrumento, porque esta base ya tiene DOS causas para el.**
 La accion C sale **confirmada en el conteo** (**17** pares *(bytes, huella)* publicados junto a un
