@@ -8,6 +8,7 @@ updated: 2026-10-05
 
 > Recetas concretas: repos nombrados, licencias verificadas, wiring explícito y estimación.
 > Todos los repos citados fueron verificados vía WebFetch el 2026-09-30; los del pase 11, el 2026-10-01 (ver `agents/top.md`).
+> **Pase 121 del 2026-10-05 (lectura `18:45Z`):** 🆕 **Receta `R-P121` — «la compuerta de cesión de expediente»: el LMS copyleft que NO se toca, la política permisiva que decide ANTES de responder, y el registro de divulgación que la auditoría pide.** Se arma con 4 piezas verificadas hoy del payload: [`Polycentric-Labs/regrails`](https://github.com/Polycentric-Labs/regrails) (Apache-2.0, 37 reglas de `34 CFR` 99 y 668 ancladas al texto literal, export **OSCAL 1.1.2**) + [`ashutoshrana/haystack-ferpa-filter`](https://github.com/ashutoshrana/haystack-ferpa-filter) (Apache-2.0, filtro de recuperación por identidad con `disclosure_record`) + [`Principled-Evolution/gopal`](https://github.com/Principled-Evolution/gopal) (Apache-2.0, Rego para EU AI Act/GDPR/NIST AI RMF/FERPA vía OPA) + **Moodle GPL-3.0 u Open edX AGPL-3.0 sin modificar**. 🟢 **La asimetría de licencias es el diseño, no un accidente: la obligación copyleft queda contenida en la plataforma y lo que Globant escribe vive del lado permisivo.** 🆕 **Paso obligatorio nuevo para toda receta de esta base que cite una licencia (`P398`): la familia se cita CON FECHA DE LECTURA, porque `snflwr.ai` re-licenció a propietario el 2026-09-18 y la ventana AGPL previa sólo vale para las copias de esa ventana.** 🆕 **Y paso obligatorio para toda receta que publique un censo propio (`P399`): medir DESPUÉS de escribir, o decir contra qué commit se midió.**
 > **Pase 120 del 2026-10-05 (lectura `17:45Z`):** 🆕 **Receta `R-P120-A` — «Expediente de corpus para un LMS que ya existe: probar, firmando, que el dato del alumno NO entró al entrenamiento»**, armada SÓLO con piezas cuya cesión se leyó por RUTA este pase: [`agentanywhere/shuddhi`](https://github.com/agentanywhere/shuddhi) (Apache-2.0, compuerta de procedencia + resumen del **art. 53(1)(d)**) + [`AKIVA-AI/toolkit-ml-provenance`](https://github.com/AKIVA-AI/toolkit-ml-provenance) (Apache-2.0, manifiesto firmado **Ed25519** + ML-BOM **CycloneDX 1.6**) + el LMS copyleft de la institución hablando por API, con la frontera de licencia donde esta base la pone desde el pase 117. 🟢 **Y trae su propia tabla de alcance por región, porque `P397` la hace medible: EMEA y APAC entran tal cual; North America y LATAM necesitan **un detector de regex** cada una, con el cero MEDIDO (8 identificadores probados, 0 aciertos).** 🆕 **Y un paso obligatorio nuevo para cualquier receta de esta base que cuente huellas: `P393` — consultar la lista de RETRACTACIONES antes de contar, porque el corpus append-only conserva los digests muertos y el censo los re-anima.**
 > **Pase 119 del 2026-10-05:** 🆕 **Receta `R-P119-A` — «FRIA del *deployer* educativo, versionado en el repo, sobre el LMS que la institución ya tiene»: `microsoft/agent-governance-toolkit` (**MIT**) para el expediente del art. 27, Moodle (GPL-3.0) o Elgg (núcleo MIT / `/mod` GPL-2.0, `P364`) como LMS, `toshieji/moodle-grading-mcp` (**MIT**) como compuerta de nota en BORRADOR —la supervisión humana del art. 26 vuelta código— y `contentauth/c2pa-rs` para la procedencia del art. 50(2).** 🟢 **El paso 1 es contestar su §3.6 («*Does the system affect access to education?*», «*Are admissions, grading, or assessment decisions involved?*»), porque esas dos respuestas deciden si el sistema es Anexo III y por lo tanto si el resto del plan cambia: en semana 1 es diseño, en el mes 6 es re-arquitectura.** 6-8 semanas. 🔴 **Lo que NO entrega: conformidad declarada — el art. 27 obliga al *deployer*, la institución firma su FRIA.** 🔵 **Y se vende al mismo cliente pero la autoriza otro —dirección o legal, no tecnología—: es la receta que abre la segunda conversación.**
 > **Pase 117 del 2026-10-05:** 🟢 **La receta nueva es **R-P117-A** y sale de la condición que `P380` dejó a la vista: cómo entregar un LMS cuando la cesión de la plataforma depende de si el archivo se COMPILA.** 🔴 **La frontera se decide en semana 1 y no al empaquetar: `pupilfirst` (APAC, `Pupilfirst Pvt. Ltd.`) deja `docs/` bajo **CC BY-SA 4.0**, así que la documentación derivada arrastra **share-alike** aunque el código sea MIT ⇒ la doc del cliente se escribe NUEVA o se acepta la obligación, y eso es una decisión de contrato, no de build.** 🟢 **Lo permisivo liso de la receta: `oompas/open-lms` (**MIT**, 1.070 B) como base cedible, `CAHLR/pyBKT` (**MIT**, 281 ★) como motor de *knowledge tracing* y `mitodl/open-learning-ai-tutor` (**MIT**) como capa de tutor — con la salvedad de `P374` escrita: su titular es **una persona** (`Romain Puech`), no el MIT, así que la diligencia de cesión se le pide a esa persona.** 🔵 **Y la compuerta de calidad usa lo que el estante ya tenía: `eth-lre/mathtutorbench` (CC BY 4.0) y `AI-for-Education/pedagogy-benchmark` (MIT).** ⚠️ **Ninguna receta de este pase usa `curl -sI` como control de existencia: medido **403/403** otra vez, con `200` del proxy en la primera línea (`P366`/`P372`).**
@@ -27,6 +28,91 @@ updated: 2026-10-05
 > **Pase 100 del 2026-10-04:** 🆕 **Los patrones nuevos son `P308`–`P311`, y las recetas son `R-100-HABLA-PERMISIVA` y `R-100-AUTOGRADING-PERMISIVO`.** 🔴 **`P308` es el que cambia qué garantiza un veredicto de licencia de esta base: el reflujo del texto —re-envolver un payload sin cambiar una palabra— movía la respuesta, en DOS reglas; la del Unlicense no perdía la familia en `UNCLASSIFIED` sino que INVERTÍA el veredicto comercial a `NONCOMMERCIAL-NOT-OSI` sobre el texto más permisivo que existe, y la de la ventana del bloque de título perdía la AGPL que `P288` había instalado porque contaba LÍNEAS.** 🟢 **`P309` es el residual declarado en vez de tapado: `holder_of` devuelve una LÍNEA, y una línea depende del reflujo por construcción.** 🔴 **`P310` es el que paga en una propuesta: una pieza puede ser permisiva y no ceder ninguna CAPACIDAD —`speechsuper/SpeechSuper-API-Samples` es MIT real sobre muestras de una API paga— y es el primer espécimen de esta base donde el engaño viene de una licencia CORRECTA.** 🔴 **`P311` es el control que faltaba y que este pase necesitó contra sí mismo: todos los controles de esta base auditan una afirmación que el pase HACE, y la de que un alta es NUEVA es implícita.** 🆕 **`R-100-HABLA-PERMISIVA` es cotizable porque los cinco eslabones están verificados por payload y cuatro de los cinco son permisivos; el quinto —el corpus— queda FUERA del entregable con su razón dicha.**
 > **Pase 97 del 2026-10-04:** 🆕 **Los patrones nuevos son `P294`, `P295`, `P296` y `P297`, y los cuatro salen de cablear una sola pieza.** 🔴 **`P294` es el que cambia cómo esta base se audita a sí misma: un control que no está en el camino por donde pasan los datos no es un control, es una demostración — el pase 96 diagnosticó la ceguera a Java/Maven, escribió el lector correcto (`p289`, 11/11) y no lo conectó, así que `PARSERS` siguió con cinco nombres y el hueco siguió abierto donde se producen los veredictos.** 🔴 **`P295` es el mismo defecto en la prosa: `trend-backlink-audit` existe desde el pase 49 para atrapar citas colgadas y era CIEGO a la forma con que esta base ANUNCIA sus tendencias («tendencias nuevas, numeradas 745–752» → 0 citas), así que catorce números quedaron sin sección sin que nada lo marcara; y de paso era lossy en castellano, porque aceptaba «a» como conector y no como marca de rango.** 🟢 **`P296` es el que paga en una entrega: el veredicto de licencia tiene DOS canales independientes —la declaración del manifiesto y el payload del archivo— y medidos sobre la capa Java/Maven concuerdan 4 de 4 exactos, 1 de familia, 0 contradicciones; el manifiesto CORROBORA y además es la única fuente donde no hay archivo (`kuali/kc`).** 🟢 **`P297` es la pieza técnica que lo hizo posible: en Maven la identidad de propiedad es el `groupId` —un namespace reverse-DNS que codifica a la organización— y el `<parent>` NO presta ni identidad ni licencia.** 🆕 **La receta nueva es `R-97-COMPRA-SOBERANA-APAC`, y es cotizable porque la condición de compra que la dispara quedó medida este pase: la soberanía decidirá la infraestructura de ~la mitad de las empresas de APAC.**
 
+
+## 🆕 Pase 121 del 2026-10-05 (lectura `18:45Z`) — `R-P121`: la compuerta de cesión de expediente, y dos pasos obligatorios nuevos para cualquier receta de esta base
+
+### 🍳 Receta `R-P121` — «asistente académico que no puede filtrar un expediente», con las 4 piezas nombradas
+
+**El requisito que cubre, dicho como lo pide un cliente:** *«queremos un asistente que responda preguntas de alumnos sobre su situación académica, y necesitamos poder probarle al auditor que no puede devolver el expediente de otro alumno ni decidir por sí mismo una cuestión de alto impacto».*
+
+🔬 **Las 4 piezas, con su cesión LEÍDA DEL PAYLOAD hoy `2026-10-05T18:45Z`** (`P398`: la familia se cita con fecha de lectura):
+
+| # | Pieza | Repo | Cesión medida | Rol en la receta |
+|---|---|---|---|---|
+| 1 | **Plataforma** | Moodle (**GPL-3.0**) u Open edX (**AGPL-3.0**) | ya registradas en este estante | 🔴 **NO se modifica.** Es la fuente de verdad del expediente y la obligación copyleft queda contenida acá |
+| 2 | **Filtro de recuperación** | `ashutoshrana/haystack-ferpa-filter` | 🟢 **Apache-2.0**, `main/LICENSE` **12.101 B**, `sha256:69ea67464cbf`, `Copyright 2026 Ashutosh Rana` | `FERPAMetadataFilter` recorta los `Document` por **identidad de alumno, institución y categoría autorizada ANTES** de construir el prompt, y devuelve `documents` **más** un `disclosure_record` |
+| 3 | **Compuerta de decisión** | `Polycentric-Labs/regrails` | 🟢 **Apache-2.0**, `main/LICENSE` **11.282 B**, `sha256:7269084894a7`, `Copyright 2026 Allen Byrd` | `regrails decide` devuelve un `GuardrailDecision` **tipado** con nivel de riesgo y **bandera de compuerta humana**, contra 37 reglas de `34 CFR` 99 Subparte D (FERPA) y 668 (Title IV) **ancladas al texto literal** |
+| 4 | **Política transversal** | `Principled-Evolution/gopal` | ⚠️ **Apache-2.0 prístino**, **11.357 B**, `sha256:c71d239df917`, titular **MUDO** | Árbol **Rego** consultado por **OPA** para las obligaciones que `regrails` no cubre: **EU AI Act**, **GDPR**, **NIST AI RMF** |
+
+**El cableado, en el orden en que corre una consulta:**
+
+```
+pregunta del alumno
+  │
+  ├─1─ autenticación de la APLICACIÓN (no la trae ninguna de las 4 piezas: ver límites)
+  │
+  ├─2─ recuperación en Haystack  →  FERPAMetadataFilter(documents, scopes)
+  │        └─ devuelve documents filtrados + disclosure_record  ──► persistir (paso 5)
+  │
+  ├─3─ regrails decide -q "<pregunta>" --topic <tema>
+  │        ├─ GuardrailDecision.risk_tier
+  │        └─ GuardrailDecision.human_gate == true  ──► NO se responde: va a persona
+  │
+  ├─4─ OPA / gopal: política de AI Act + GDPR (p. ej. divulgación del art. 50(2))
+  │
+  ├─5─ prompt builder  →  LLM  →  respuesta
+  │
+  └─6─ expediente: disclosure_record (paso 2) + procedencia encadenada por hash (regrails)
+          └─ regrails export oscal  ──► catálogo OSCAL 1.1.2 para el auditor
+```
+
+**La verificación, con la invocación publicada (regla de `P107`):**
+
+```bash
+pip install regrails
+regrails check faithfulness   # 37/37 reglas fieles al texto del CFR empaquetado
+regrails decide -q "I defaulted; am I eligible for aid?" \
+        --topic aid_status --aid-determination --in-default
+regrails export oscal         # catálogo OSCAL 1.1.2 de las 37 reglas
+```
+
+🟢 **Por qué esta receta es distinta de las que este estante ya tenía:** las recetas anteriores de cumplimiento cableaban la obligación **en código propio**. Acá la obligación llega **como dato anclado al texto normativo**, con una compuerta de fidelidad que verifica el anclaje y un export OSCAL que el auditor ya sabe leer. 🔵 **Y la asimetría de licencias es el diseño:** la plataforma copyleft no se toca, las tres piezas de política son **Apache-2.0**, y lo que Globant escribe y entrega vive del lado permisivo.
+
+### 🔴 Los límites de `R-P121`, dichos ANTES de que alguien la cotice
+
+| Límite | De quién es | Consecuencia para el presupuesto |
+|---|---|---|
+| **autenticación y *scopes* de confianza** | 🔴 **de la aplicación**, no de las piezas | `haystack-ferpa-filter` lo dice en su README: la aplicación debe autenticar, proveer *scopes* confiables y conectar **sólo** documentos filtrados al prompt builder |
+| **persistencia del `disclosure_record`** | 🔴 **de la aplicación** | el componente lo **emite**; guardarlo es trabajo a cotizar |
+| **clasificación «público»** | 🔴 depende de una **ingesta confiable** | si la ingesta marca mal, el filtro deja pasar |
+| **alcance normativo** | `regrails` es un **PoC**, y lo declara | codifica provisiones **seleccionadas**; no es producto de cumplimiento ni asesoría legal |
+| **tracción** | 🔴 **1 ★, 0 ★ y 8 ★** | **fork propio obligatorio**; ninguna entra como dependencia de un tercero |
+| **obligaciones no cubiertas** | 🔴 **LATAM y APAC** | de los 22 repos del eje, **0** implementan `LGPD`, `Ley 1581`, `CURP`, `CPF`, `RUT`, `CUIT` ni `DNI`. Portar el patrón es **agregar reglas al motor**, no escribir un motor |
+
+### 🆕 Paso obligatorio nuevo para TODA receta de esta base que cite una licencia (`P398`)
+
+> **La familia de licencia se cita con FECHA DE LECTURA.** No es una formalidad: `snflwr-ai/snflwr.ai` pasó de **AGPL-3.0** a **propietario** el **2026-09-18**, y su propio archivo declara irrevocable la ventana AGPL del **2026-02-27 al 2026-09-18**. 🔴 **«¿Globant puede construir sobre esto?» no tiene respuesta sin saber cuándo se obtuvo la copia:** una de agosto de 2026 es AGPL y sirve con sus obligaciones; un `git clone` de hoy es propietario y no sirve.
+
+🔵 **Y el control barato que lo detecta, porque el `grep` de familia NO lo detecta:** comparar el **tamaño** del archivo contra el del texto canónico de la familia que declara. Un archivo que dice «AGPL-3.0» y mide **2.833 B** contra los ~34 KB del texto completo **no contiene** la licencia que nombra. 🟢 **Cuando el tamaño contradice a la familia, manda el tamaño: el tamaño es una medición, la familia es una inferencia.**
+
+### 🆕 Paso obligatorio nuevo para TODA receta de esta base que publique un censo propio (`P399`)
+
+> **Un auto-censo se mide DESPUÉS de escribir las filas del pase, o se publica diciendo contra qué commit se midió.** `P394` publicó **15/46/125/186** en el pase 120; el árbol que ese pase commiteó mide **23/46/139/208**, y el **15/46/125/186** es exactamente el árbol del pase **119**. No es aritmética: es **orden de operaciones**.
+
+🔴 **Y el motivo por el que ningún control existente lo agarraba:** la columna `presente` **no se movió** (46 → 46). Es la única que un lector verifica a mano, porque es la que tiene nombres propios; el error vive entero en `ausente` (**+53 %**) y en `MUDO` (**+11 %**). 🟢 **Verificación reproducible, con la invocación:**
+
+```bash
+git show 8110153:agents/top.md | python3 holder_census.py /dev/stdin   # pase 119
+# el censo del arbol del pase 119 reproduce 15/46/125/186, lo que P394 publico
+```
+
+🔵 **Es la pareja de `P393`:** `P393` dice que un corpus *append-only* degrada el censo por su **historia** (re-anima lo retractado); `P399` dice que además lo publica **desfasado del presente**. Las dos juntas son el costo de método de esta base, y las dos tienen compuerta barata.
+
+### 🆕 Paso obligatorio nuevo para toda receta que identifique una pieza por su nombre (`P401`)
+
+> **El nombre no es identidad: resolver por el REGISTRO y por el repo, y seguir el puntero que el README declare.** `ashutoshrana/haystack-ferpa-filter` publica el paquete PyPI **`ferpa-haystack`** —invertido— y existe el repo homónimo del paquete, `ashutoshrana/ferpa-haystack`, como **puntero legado**. 🔴 **Buscar por el nombre del paquete entrega el repo muerto, y los dos existen: no es un *typo* que se note.**
+
+🔵 Es el espejo de `P390` (tres repos con un nombre, dos linajes) y refina `P253`: cuando registro y repo **no coinciden en el nombre**, «resolver primero por registro» no alcanza por sí solo.
 
 ## 🆕 Pase 120 del 2026-10-05 (lectura `17:45Z`) — la receta del expediente de corpus, y un paso obligatorio nuevo para toda receta que cuente huellas
 

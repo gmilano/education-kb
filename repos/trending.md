@@ -7,6 +7,7 @@ updated: 2026-10-05
 # 📈 Repos trending — education
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
+> **Pase 121 del 2026-10-05 (lectura `18:45Z`):** 🔴 **El canal generalista falla por QUINTA vez del mismo modo** (eje *enseñar-sobre-IA*: `openclaw` 385.407 ★, `browser-use`, `mem0`, `AutoGen`, `dify`, `Flowise`, `rohitg00/ai-engineering-from-scratch`, `pguso/agents-from-scratch`, `awesome-ai-agents-2026`) ⇒ **0 altas por oferta generalista.** 🟢 **Pero el trending de la industria NO queda vacío, y por un canal que este archivo no había usado: enumerar un TEMA DE OBLIGACIÓN de GitHub.** `github.com/topics/ferpa` + `/topics/ferpa-compliance` dan **22** repos, **21 ausentes** de este estante, **15 de los 18 medidos con titular fechado en 2026** y **★ máximo 8** ⇒ 🟢 **una cohorte recién nacida sin ganador**, que es un hecho de tendencia mucho más útil que una lista de repos con 50 k ★ que no son de la industria. 🔴 **Y el riesgo gemelo, dicho: una cohorte de 2026 con 0–8 ★ no tiene prueba de supervivencia.**
 > **Pase 120 del 2026-10-05 (lectura `17:45Z`):** 🔴 **El canal generalista falla por CUARTA vez del mismo modo (eje *enseñar-sobre-IA*: `rasbt/LLMs-from-scratch`, `pguso/agents-from-scratch`, `awesome-ai-agents-2026`, `500-AI-Agents-Projects`) ⇒ **0** repos trending de industria.** 🆕 **Y el hallazgo que manda le pega a ESTE archivo: `P392` — la tabla del trío `OpenTutor` de este archivo tiene **DOS** columnas de huella (`README.md` y `LICENSE`) y las dos se titulan de modo que un lector estructurado las tipa igual ⇒ el censo contó el MISMO trío como DOS racimos. Una huella no se identifica por su digest, sino por el par (ARCHIVO, digest).** 🆕 **`P393` — y el par `blackboard-mcp` de este archivo lo contó dos veces por otro motivo: `fa4e32e5e622` es una huella que `P333` **RETRACTÓ** y que este archivo, APPEND-ONLY por encargo, conserva escrita ⇒ un censo que lee el corpus RE-ANIMA lo retractado.** 🟢 **Instrumento nuevo `p391-structured-binding/`: el intervalo de `P385` se angosta de `[3, 22]` a `[5, 14]`, y el canónico por CONJUNTO de repos da **10**.** 🟢 **2 altas por la sonda de la OBLIGACIÓN, no por trending: `agentanywhere/shuddhi` (Apache-2.0, 2 ★) y `AKIVA-AI/toolkit-ml-provenance` (Apache-2.0, 1 ★).**
 > **Pase 119 del 2026-10-05:** 🔵 **Lo más valioso del pase llegó por el canal equivocado a propósito: la sonda era de obligación regulatoria y devolvió una COLISIÓN DE IDENTIDAD que el canal de repos no podía ver, porque sondeando por repo sólo se ve el que ya se tiene.** 🆕 **`P390` — tres `awesome-eu-ai-act`, dos linajes independientes; este estante publicaba el de **21 ★** y le faltaba el original de **110 ★**.** 🆕 **Trending como número de VERSIÓN por segunda vez en la serie: `HKUDS/DeepTutor` `v1.6.13` (`2026-10-04`), con **barajado de opciones para no exponer la respuesta** como la única línea del changelog con forma de requisito pedagógico. ⚠️ La página de *releases* NO muestra licencia.**
 > **Pase 118 del 2026-10-05 (lectura `15:58Z`):** 🔴 **El canal generalista falla por TERCERA vez del mismo modo y la regla ya está medida: las 4 consultas globales obligatorias devolvieron el eje *enseñar-sobre-IA* (listas de «mejores agentes 2026», `awesome-ai-agents-2026`, `500-AI-Agents-Projects`) y no el de *IA-en-educación*.** 🔴 **14/14 candidatas ya publicadas ⇒ 0 altas de repo, cero ENUMERADO.** 🟢 **Canal medido este pase y no heredado (`P366`): `WebFetch` → `github.com` **VIVO** (licencia + ★ leídas de `mazhar266/fedena` y `webtech-network/autograder`) · 🔴 `curl -sI github.com` **403** en 7/7 · 🔴 `curl` a sitios jurídicos **000** en 4/4 · 🔴 `WebFetch` a `allenandgledhill.com` y `globalpolicywatch.com` **EGRESS_BLOCKED por dominio**.** 🆕 **`P385` sobre este archivo también: el `sha256` de licencia que esta base usa como identidad **no identifica un repo** cuando la licencia es prístina — `c71d239df917` (Apache-2.0, 11.357 B) es el MISMO en un agente de África, un **ERP escolar** y un **autocorrector**, tres proyectos sin relación ⇒ **un *trending* de licencias permisivas se puede inflar sin forkear nada, simplemente eligiendo Apache-2.0.**** 🔵 **`webtech-network/autograder` (**61 ★**, Apache-2.0, rúbrica + sandbox + GitHub Actions) y `mazhar266/fedena` (**5 ★**, Apache-2.0, ERP de campus en Rails) quedan con ★ leídas de payload por primera vez.**
@@ -20,6 +21,51 @@ updated: 2026-10-05
 > **Pase 107 del 2026-10-05:** 🔴 **Trending de la industria vacio por TRIGESIMOSEXTA vez: curriculo, catalogos, una bolsa de trabajo y dos generalistas (`microsoft/semantic-kernel` 27.470 ★, `NousResearch/hermes-agent` MIT), con las SEIS cifras del eje generalista identicas digito a digito a los pases 105 y 106 ⇒ informacion sobre el CANAL, no sobre la industria.** 🟢 **Lo que SI se movio es una capa de BINARIOS que este archivo nunca conto: 2.443 archivos de figura (~156 MiB, 1.326 imagenes distintas) en `CAHLR/OATutor-Content`, con la extension `.gif` falsa en 2.443 de 2.443 (`P332`).** 🔵 **`git ls-remote` da TRES refs, y una se llama `gpt-science-study`: la unica de este arbol cuyo nombre anuncia contenido sintetico.** 🔴 **Defecto propio corregido: los 49.481 JSON contra los 49.479 del pase 106 son los 6 caminos con bytes de control (U+007F/U+0080/U+0081) en el nombre del paso — la identidad de un paso NO es un slug seguro.**
 > **Pase 106 del 2026-10-05:** 🔴 **Trending de la industria vacio por TRIGESIMOQUINTA vez: el canal devuelve generalista o educativo-sobre-AI, no AI-para-educacion.** 🟢 **Lo que SI se movio esta en el eje de `ref` y no de repo: las ramas `1e` de 5 bundles de `openstax` contienen la UNICA cesion `CC BY 4.0` de 10 colecciones cuyas versiones vivas son `NC-SA` — cesion y vigencia apuntan en direcciones opuestas.** 🔵 **Canal nuevo calibrado: `git ls-remote` para enumerar refs (responde a repo real, falla a repo inventado), el unico de este arbol que contesta «que refs tiene este repo» con `api.github.com` en 403 — sin el, la accion A de este pase era imposible.**
 
+
+## 🟢 2026-10-05 · Pase 121 (lectura `18:45Z`) — el trending de la industria sale del vacío por un canal nuevo: enumerar el TEMA de la obligación
+
+### 🔴 El canal generalista, 5.ª falla idéntica (enumerada)
+
+| Lo que devolvieron las 4 consultas globales obligatorias | Eje | ¿Alta? |
+|---|---|---|
+| `openclaw` **385.407 ★**, `browser-use`, `mem0`, `AutoGen`, `dify`, `Flowise` | agentes de **propósito general** | 🔴 no — no es de la industria |
+| `rohitg00/ai-engineering-from-scratch`, `pguso/agents-from-scratch`, `rasbt/LLMs-from-scratch` | **enseñar-sobre-IA** | 🔴 no — el eje invertido, 5.ª vez |
+| `awesome-ai-agents-2026`, `500-AI-Agents-Projects`, `2026-AI-College-Jobs` | **listas** | 🔴 no |
+| `OpenEduCat`, `CK-ERP` (consulta de plataformas verticales) | ERP educativo | 🔴 no — **ya publicados** |
+
+🔴 **0 altas.** La consulta que el encargo prescribe lleva cinco pases devolviendo el eje equivocado, y ya no es información nueva **que falle**: lo nuevo es con qué se la reemplaza.
+
+### 🟢 El canal que SÍ rindió: enumerar el tema de obligación como si fuera un trending
+
+🔬 **Denominador enumerado ANTES de contar (`P287`/`P311`):** `github.com/topics/ferpa` (**20** repos) + `github.com/topics/ferpa-compliance` (**2** repos) = **22**, leídos por WebFetch (el HTML de repo por `curl` da **403** del proxy, y `api.github.com` da **403** de sesión).
+
+| Medición | Cifra | Lectura |
+|---|---|---|
+| repos enumerados | **22** | el denominador |
+| **ausentes** de este estante | 🟢 **21** | el eje estaba **virgen**: no es una cosecha mal hecha, es una cosecha **no hecha** |
+| ya publicado | **1** — `mizcausevic-dev/mcp-ai-tutor` | la única intersección |
+| ★ **máximo** de la cohorte | 🔴 **8** (`Principled-Evolution/gopal`) | **no hay tracción que medir** |
+| repos con **0 ★** | **6 de 22** | — |
+| titular con año **2026** | **15 de los 18 cuyo payload se midió** | 🟢 **cohorte recién nacida** |
+| de los 22, con cesión **permisiva** medida en el payload | 🟢 **16** (11 MIT + 5 Apache-2.0) | lo que Globant puede usar |
+| **sin** cesión usable | **2** — `AI-EdTech-Sovereign-School-OS` (`P347`), `snflwr.ai` (propietario, `P398`) | el motivo, medido |
+| no medidos | **4** | 🔴 **se dice, no se rellena** |
+
+🟢 **Esto es un hecho de tendencia en el sentido fuerte, y es lo que este archivo existe para registrar:** el eje FERPA/`34 CFR` **no tiene ganador todavía**. Una pieza con 280 tests, `mypy --strict` limpio y export **OSCAL 1.1.2** (`Polycentric-Labs/regrails`, **1 ★**) compite hoy de igual a igual contra repos de 0 ★. En un eje con ganador eso es imposible.
+
+🔴 **Y el riesgo que viaja con la misma cifra, sin suavizar:** 0–8 ★ y titulares de 2026 significa **cohorte sin prueba de supervivencia**. Ninguno de los 21 entra en una entrega como dependencia de un tercero; entran con **fork propio** y con la lectura de licencia **fechada**, por lo que sigue.
+
+### 🆕 `P398` — un repo de esta cohorte ya cambió de licencia a mitad de año
+
+`snflwr-ai/snflwr.ai` se presenta como «K-12 safe AI tutoring platform — privacy-first, fully offline». 🔴 **Su `LICENSE` (2.833 B, `sha256:0f14d6b37818`) es PROPIETARIO con efecto 2026-09-18**, y nombra la ventana **AGPL-3.0 del 2026-02-27 al 2026-09-18** que declara irrevocable para las copias obtenidas dentro de ella.
+
+🔴 **Para este archivo —el que registra tendencia— la consecuencia es específica:** una columna de licencia **no es un atributo estable del repo**. Es una medición **con fecha**, y en una cohorte que nació en 2026 la probabilidad de re-licencia es la de un proyecto joven buscando modelo de negocio. 🟢 **Regla operativa que deja: al publicar una fila de esta cohorte, se publica la fecha de lectura junto con la familia** — y este estante ya lo hace, que es por qué el caso se detectó.
+
+### 🔵 Lo que este pase NO midió de trending, dicho en vez de callado (`P343`)
+
+- 🔴 **No se leyó `github.com/trending`**: el HTML de GitHub por `curl` da **403** del proxy de egreso y la *topic page* no tiene equivalente de «trending del día». Las ★ de arriba son **absolutas**, no deltas.
+- 🔴 **No hay deriva de ★ para la cohorte nueva**: es su primer punto en esta serie. La deriva se puede medir a partir del próximo pase.
+- ⏸️ **`P365` sigue sin correr:** su instante es **`2026-10-06T10:48Z`** y la lectura de hoy es **`2026-10-05T18:45Z`** ⇒ faltan **16 h 03 m**. 🔴 **El instante NO se re-basa** (4.ª herencia intacta).
 
 ## 🔴 2026-10-05 · Pase 120 (lectura `17:45Z`) — el canal falla por 4.ª vez, y el censo de huellas de este archivo se cuenta a sí mismo de más
 

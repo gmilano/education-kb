@@ -8,6 +8,7 @@ updated: 2026-10-05
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 > No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
+> **Pase 121 del 2026-10-05 (lectura `18:45Z`):** 🟢 **6 agentes nuevos, y lo que los hace *trending* no es la tracción — es la OBLIGACIÓN.** Ninguno pasa de **8 ★**; cuatro están entre 0 y 1 ★. 🔵 **Y eso es el dato de tendencia, no una excusa:** el tema `ferpa` de GitHub tiene **20 repos enumerados y 19 estaban ausentes de este estante**, con **titulares fechados en 2026** en 14 de ellos ⇒ es una cohorte **recién nacida**, no una cosecha que este estante no había mirado. 🆕 **`P398` — `snflwr.ai` re-licenció de AGPL-3.0 a propietario el 2026-09-18 y lo dice en su propio archivo: la cesión segmentada por INTERVALO DE FECHAS, tercer eje después del directorio (`P113`) y del estado de compilación (`P380`).** 🆕 **`P401` — `haystack-ferpa-filter` publica el paquete `ferpa-haystack` y existe el repo homónimo del paquete como puntero legado: un linaje con dos nombres, espejo de `P390`.**
 > **Pase 120 del 2026-10-05 (lectura `17:45Z`):** 🟢 **2 altas Apache-2.0, y las 2 llegaron por la SONDA DE LA OBLIGACIÓN y no por el canal de oferta: [`agentanywhere/shuddhi`](https://github.com/agentanywhere/shuddhi) (2 ★, emite el resumen del **art. 53(1)(d)** del AI Act) y [`AKIVA-AI/toolkit-ml-provenance`](https://github.com/AKIVA-AI/toolkit-ml-provenance) (1 ★, SBOM de ML firmado Ed25519 + CycloneDX 1.6).** 🔴 **El canal de oferta generalista falla por CUARTA vez del mismo modo: las 4 consultas globales devolvieron el eje *enseñar-sobre-IA* (cursos, *awesome lists*, agentes de código) y **0** altas de industria.** 🔴 **Y el cero se extiende al canal de INTEL: los 14 hechos regionales que trajeron las 4 sondas por región estaban los 14 ya publicados (`grep -ril`, uno por uno) ⇒ `P388` re-confirmado por su lado flaco, el agotamiento es de SONDA.** 🆕 **`P397` — la región de una herramienta de cumplimiento se lee de la OBLIGACIÓN que implementa: `shuddhi` queda en **EMEA + APAC** por los identificadores de su `pii.py` (IBAN · Aadhaar · PAN · `+91`), con **cero MEDIDO** para North America y LATAM (8 identificadores probados, 0 aciertos) — su autor sigue `NO UBICADO`, y son dos columnas distintas.** 🆕 **`P395` — las 2 altas trajeron un `LICENSE` de **11.358 B** que NO es el prístino de 11.357 B que esta base tenía: la diferencia es una línea en blanco **INICIAL**, los dos controles de dos puntas fallan, y la regla de off-by-one de `P333` da acá un **falso positivo**.**
 > **Pase 119 del 2026-10-05:** 🟢 **1 alta MIT con 6,4k ★ (`microsoft/agent-governance-toolkit`, plantilla FRIA del art. 27 con §3.6 «Right to Education» leída del archivo), 2 rechazos sin licencia, y 1 versión nueva de ayer: `HKUDS/DeepTutor` `v1.6.13` del `2026-10-04`.** 🔴 **Hueco de OFERTA declarado y no de sonda: el art. 31 de la *AI Basic Act* de Corea (vigente `2026-01-22`) exige etiquetar la salida generativa y **CERO** implementaciones open source lo cumplen. ⚠️ Y no se cierra con C2PA: C2PA resuelve procedencia firmada (art. 50(2) europeo), el art. 31(3) coreano pide marca PERCEPTIBLE por el usuario final.** ⏸️ **Sub-eje IMDA/*deployer*: 0 nuevo — `aiverify` y `moonshot` ya estaban.**
 > **Pase 118 del 2026-10-05 (lectura `15:57Z`):** 🔴 **0 altas, y el cero está ENUMERADO: el canal de oferta devolvió 14 candidatas y las 14 ya están publicadas en este estante ⇒ saturación medida, no silencio.** 🟢 **Las 4 acciones pre-registradas del pase 117 corridas: B y C CONFIRMADAS, D **REFUTADA** por su propia cláusula, A no evaluable (faltan 19 h 03 m para `2026-10-06T10:48Z`, **sin re-basar**).** 🆕 **`P385` — el conteo de colisiones de licencia no es un número sino un **INTERVALO `[3, 22]`**: el extractor anclado a URL se pierde el racimo MÁS GRANDE de la base (la familia de 8 forks de `vishalsachdev/canvas-mcp`, `sha256:5385a26e2face987`) porque esas filas nombran los forks como **handles pelados**; el permisivo infla ligando todo repo de la MISMA LÍNEA. Un binding cosechado de PROSA está sesgado por las dos puntas.** 🆕 **`P386` — el par (`sha256`, titular) que `P379` propuso como deduplicador **FUNDE proyectos ajenos**: `c71d239df917` (Apache-2.0 **prístina**, 11.357 B, titular ausente) liga **3 repos SIN relación** — `buriro-ezekia/mwalimulens-agent` (agente, EMEA/África) + `mazhar266/fedena` (**ERP escolar**, 5 ★) + `webtech-network/autograder` (**autocorrector**, 61 ★), los dos últimos verificados por `WebFetch` este pase. Con titular ausente el par es (constante, constante) ⇒ el deduplicador debe ABSTENERSE.** 🆕 **`P387` — control negativo de `P381`: Corea (*Framework Act*) y Singapur (marco agéntico IMDA) comparten `2026-01-22` y la fecha es **REAL en los dos** (Davos) ⇒ coincidencia de fecha NO es evidencia de fusión.** 🟢 **Hecho neto del barrido: 1 — la IMDA publicó un *Discussion Paper on Legal Responsibility for AI Agents* (mayo 2026, 7 casillas de cadena de valor), del que esta base tenía la FECHA (`2026-05-20`) y no el INSTRUMENTO.**
@@ -21,6 +22,59 @@ updated: 2026-10-05
 > **Pase 107 del 2026-10-05:** 🔴 **0 altas permisivas (trigesimo barrido, 3 candidatas MEDIDAS del payload y las 3 con su bloqueo nombrado) y las TRES acciones pre-registradas corridas: A con la cota NO CERRADA y su clausula de atribucion FALSIFICADA, B CONFIRMADA, C CONFIRMADA en dos clausulas y FALSIFICADA en la tercera.** 🔴 **`P332`: la EXTENSION de un archivo de imagen no es su FORMATO — 2.443 de 2.443 `.gif` son PNG/JPEG/WEBP, y un barrido por extension habria dado «0 solapamiento» desde una premisa falsa.** 🔴 **`P334`: el titular de una FIGURA se resuelve por BYTES y vive en una obra DISTINTA de la que el item cita (36 pares leidos).** 🔴 **`P333`: `fa4e32e5e622` era la huella del archivo SIN su salto final — defecto de dato, no de upstream.** 🔴 **`P335`: tercera sub-clase de `P320` — lo denegado fue el LOTE, no la pieza nombrada.** 🟢 **Canal nuevo: `gitlab.com/-/raw`.**
 > **Pase 106 del 2026-10-05:** 🟢 **0 altas (vigesimonoveno barrido, 5 candidatas, las 5 frenadas por el gate de `P311`) y las TRES acciones pre-registradas corridas: A CONFIRMADA, B FALSIFICADA, C CONFIRMADA.** 🔴 **`P328`: la cesion de un OER se ESTRECHA entre ediciones — 10 de 10 colecciones con el mismo `collection-id` pasan de `CC BY 4.0` en `1e` a `CC BY-NC-SA 4.0` en `main`, y el slug cambia de nombre, que es por lo que esta base no lo veia.** 🔴 **El denominador se corrige de 13.371 a 82.492 unidades y aparece una capa sintetica de 6.886 unidades (`oer: openai`) sin cesion.** 🟢 **Canal nuevo: `git ls-remote` para enumerar refs — es el que abrio la accion A.**
 
+
+## 🟢 2026-10-05 · Pase 121 (lectura `18:45Z`) — una cohorte FERPA recién nacida, y una re-licencia que cambia la respuesta según la fecha de la copia
+
+### 🆕 Los 6 agentes nuevos de la semana, con la cesión del payload y el canal declarado
+
+🔬 **Canal:** `api.github.com` **403** (sesión), HTML de `github.com` por `curl` **403** (proxy de egreso), `github.com/topics/*` por WebFetch **200** ⇒ **las ★ salen de la *topic page* y de ningún otro lugar**; `raw.githubusercontent.com` **200** ⇒ **la cesión sale del payload**.
+
+| Agente | Repo | Cesión medida en el payload | ★ | Región | Novedad |
+|---|---|---|---|---|---|
+| 🆕 **RegRails** | https://github.com/Polycentric-Labs/regrails | **Apache-2.0**, `main/LICENSE` **11.282 B**, `sha256:7269084894a7`, `Copyright 2026 Allen Byrd` | **1 ★** | **North America** | 37 reglas de **FERPA** (`34 CFR` 99 Subparte D) y **Title IV** (`34 CFR` 668) ancladas al texto literal del CFR, con export **OSCAL 1.1.2** y 280 tests |
+| 🆕 **ferpa-haystack** | https://github.com/ashutoshrana/haystack-ferpa-filter | **Apache-2.0**, `main/LICENSE` **12.101 B**, `sha256:69ea67464cbf`, `Copyright 2026 Ashutosh Rana` | **0 ★** | **North America** | filtro de recuperación por identidad de alumno **antes** del prompt, con `disclosure_record` para auditoría |
+| 🆕 **Canvas Toolbox** | https://github.com/chaz-clark/canvas-toolbox | **MIT**, `main/LICENSE` **1.072 B**, `sha256:0001d594b291`, `Copyright (c) 2025-2026 Chaz Clark` | **5 ★** | **North America** | Canvas LMS con IA **divulgada** y docente como autor; nacido en BYU-Idaho |
+| 🆕 **EDU AI Agent Suite** | https://github.com/virtualryder/edu-ai-agents | **MIT**, `main/LICENSE` **832 B**, `sha256:a4235882db48`, `Copyright (c) 2026 David Ryder` | **4 ★** | **North America** | 1 de 5 repos bajo **un** contrato de gobernanza versionado (**AGP v1.0**) revisable como una sola solución |
+| 🆕 **GOPAL** | https://github.com/Principled-Evolution/gopal | ⚠️ **Apache-2.0 PRÍSTINO**, `main/LICENSE` **11.357 B**, `sha256:c71d239df917`, titular **MUDO** ⇒ **0 bits de procedencia** | **8 ★** | **Global** | políticas **Rego** para EU AI Act + GDPR + NIST AI RMF + FERPA, README en 5 idiomas |
+| 🆕 **NAU AI Academic Advisor** | https://github.com/zhamanov-seabus/nau-ai-advisor | **Apache-2.0**, `master/LICENSE` **11.375 B**, `sha256:adec74ee5b6f`, `Copyright 2026 Azamat Zhamanov and North American University` | **1 ★** | **North America** | asesor académico auto-hospedable con procesamiento de transcripciones; ⚠️ rama por defecto `master` |
+
+### 🔵 La tendencia que estas 6 filas SÍ miden, y no es la tracción
+
+| Lo que se midió | Cifra | Lectura |
+|---|---|---|
+| repos enumerados en `github.com/topics/ferpa` + `/topics/ferpa-compliance` | **22** | el denominador, enumerado antes de contar (`P287`/`P311`) |
+| de ésos, **ausentes** de este estante | 🟢 **21** | el eje estaba **virgen**, no mal cosechado |
+| ★ máximo de la cohorte educativa | **8** (`gopal`) | 🔴 **no hay tracción que medir todavía** |
+| titulares con año **2026** en la línea de copyright | **15 de los 18 cuyo payload se midió** (4 de los 22 no se midieron, y se dice) | 🟢 **cohorte recién nacida** |
+| el único ya publicado | `mizcausevic-dev/mcp-ai-tutor` | 1 de 22 |
+
+🟢 **Para una práctica eso es mejor que una lista de repos con 50 k ★:** significa que el eje FERPA/`34 CFR` **no tiene todavía un ganador**, y que una pieza con 280 tests y export OSCAL (`regrails`) compite hoy contra repos de 0 ★. 🔴 **Y el riesgo gemelo, dicho:** una cohorte de 2026 con 0–8 ★ es una cohorte **sin prueba de supervivencia**. Ninguna de las 6 entra en una entrega como dependencia sin fork propio.
+
+### 🆕 `P398` — la re-licencia fechada: `snflwr.ai` deja de ser AGPL a mitad de 2026
+
+`snflwr-ai/snflwr.ai` aparecía en el tema como «K-12 safe AI tutoring platform — privacy-first, fully offline». 🔴 **Su `LICENSE` de 2.833 B es una licencia PROPIETARIA**, con efecto **2026-09-18**, que declara irrevocable la ventana **AGPL-3.0 del 2026-02-27 al 2026-09-18**.
+
+| Instrumento | Dice | ¿Acierta? |
+|---|---|---|
+| `grep -i "GNU AFFERO"` | `AGPL-3.0` | 🔴 **no** |
+| tamaño (2.833 B vs ~34 KB) | «esto no contiene AGPL» | 🟢 **sí**, y es la señal que destapa el error |
+| el texto | propietario desde 2026-09-18 | 🟢 **sí** |
+
+🔵 **Lo que la tendencia registra, que es el valor de este archivo:** un repo educativo *privacy-first* pasó de copyleft a propietario **en siete meses**. Para este estante eso convierte la columna de licencia en una medición **con fecha de validez**, no en un atributo permanente del repo. 🔴 **Y para una cotización: «¿se puede construir sobre esto?» no tiene respuesta sin la fecha de la copia.**
+
+### 🆕 `P401` — un linaje con dos nombres (espejo de `P390`)
+
+| Coordenada | Valor |
+|---|---|
+| repo mantenido | `ashutoshrana/haystack-ferpa-filter` |
+| paquete PyPI | `ferpa-haystack` — 🔴 **invertido** |
+| repo homónimo del paquete | `ashutoshrana/ferpa-haystack` — 🔴 **existe, es puntero legado** |
+
+🔴 **Buscar por el nombre del paquete lleva al repo muerto.** `P390` encontró **tres repos con un nombre y dos linajes**; `P401` encuentra **un linaje con dos nombres**, y la salida no es «resolver por registro» (`P253`) porque registro y repo **no coinciden**: hay que resolver por registro **y** seguir el puntero declarado en el README.
+
+### 🔴 El canal generalista, 5.ª falla idéntica
+
+`openclaw` (385.407 ★), `browser-use`, `mem0`, `AutoGen`, `dify`, `Flowise`, `rohitg00/ai-engineering-from-scratch`, `pguso/agents-from-scratch`, `awesome-ai-agents-2026`. 🔴 **0 altas.** El eje devuelto es *enseñar-sobre-IA*, no *IA-para-educación*, por quinta vez seguida. 🟢 **Las 6 altas de hoy no salieron de ahí: salieron de enumerar un tema de obligación.**
 
 ## 🟢 2026-10-05 · Pase 120 (lectura `17:45Z`) — 2 altas por la sonda de la obligación, y el canal de oferta falla por 4.ª vez igual
 

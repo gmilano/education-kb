@@ -8,6 +8,7 @@ updated: 2026-10-05
 
 > Plataformas verticales reales, en producción, customizables con AI.
 > Modelo: partir de algo que ya funciona y que ya tiene los datos, y agregar la capa agéntica arriba.
+> **Pase 121 del 2026-10-05 (lectura `18:45Z`):** 🔴 **0 plataformas verticales nuevas, con el cero ENUMERADO (6.º pase):** la consulta de plataformas devolvió `OpenEduCat` y `CK-ERP`, los dos ya publicados. 🟢 **Lo que las 3 altas de hoy agregan está DEBAJO de la plataforma y es una capa que este archivo no tenía: política-como-código consultable por la plataforma antes de responder.** 🆕 **`P402` — la fila de `openeducat/openeducat_erp` de este archivo lleva un titular que es el de la PLANTILLA LGPL (la FSF), no el del proyecto: se corrige por medición.** 🔴 **Y la fila de la capa ERP de frappe se corrige por RUTA: `frappe/education` no está «sin licencia» — tiene `develop/license.txt` de **19 bytes** que dice `License: GNU GPL V3` y nada más, que es `P347` en su forma más pura (nombra la licencia, no la contiene).**
 > **Pase 120 del 2026-10-05 (lectura `17:45Z`):** 🔴 **0 plataformas verticales nuevas, y el cero está ENUMERADO: la consulta de plataformas del encargo devolvió OpenEduCat (LGPL-3.0, 73+ módulos, sobre Odoo), ERPNext/Frappe, RosarioSIS y openSIS (GPL) — las 4 ya publicadas ⇒ la capa de plataforma de esta industria está SATURADA para esa sonda, por 5.º pase.** 🟢 **Lo que SÍ cambia en este archivo es la fila de `openedx/XBlock`, y la cambia una medición: su `master/LICENSE.TXT` de **11.358 B** (`cfc7749b96f6`) resulta ser una de **DOS** variantes prístinas legítimas de Apache-2.0 (`P395`), y es la ÚNICA de las 3 filas que este estante tenía en 11.358 B que de verdad lo era — las otras dos (`pelotech/xapi-lrs`, `yptheangel/attention-monitor`) miden 11.357 B y quedan corregidas.** 🆕 **`P397` aplicado a la capa de plataforma: las 2 altas de hoy NO son plataformas, son la capa de **procedencia de datos** que se monta DEBAJO de cualquiera de estas plataformas cuando la obligación es probar qué entró al entrenamiento — y una de ellas (`shuddhi`) queda ubicada en **EMEA + APAC** por los identificadores que su `pii.py` sabe redactar, con cero MEDIDO para North America y LATAM.**
 > **Pase 119 del 2026-10-05:** 🟢 **La fila del art. 27 de este archivo deja de ser sólo una FECHA: durante 61 pases registró «FRIA (art. 27) — `2027-12-02`» como obligación SIN implementación, y ahora tiene herramienta MIT —[`microsoft/agent-governance-toolkit`](https://github.com/microsoft/agent-governance-toolkit) (**6,4k ★**)— cuya plantilla FRIA trae **§3.6 «Right to Education»** preguntando por *acceso a la educación* y por *admisiones, calificación o evaluación*: los dos supuestos del Anexo III punto 3.** ⚠️ **Lo que NO es, antes de que alguien la cotice mal: no es plataforma vertical (no sustituye Moodle/OpenOLAT/Frappe/Elgg, es la capa de gobernanza ENCIMA) y no es conformidad declarada — el art. 27 obliga al *deployer*, así que **la institución firma su FRIA**, no el proveedor del template.** ⏸️ **El calendario NO se toca: el barrido devolvió el *Digital Omnibus* y coincide con lo verificado por tres canales en el pase 58.**
 > **Pase 117 del 2026-10-05:** 🟢 **Entran 2 plataformas y la que manda obliga a una decisión de arquitectura antes que de features: `pupilfirst/pupilfirst` (LMS de escuela asíncrona, titular `Pupilfirst Pvt. Ltd.`, **India/APAC**, rama por defecto `master`) tiene la cesión **SEGMENTADA POR ESTADO DE COMPILACIÓN** — JS de cliente MIT «*served directly or after being compiled, arranged, augmented, or combined*», **`docs/` CC BY-SA 4.0**, resto MIT (🆕 `P380`).** 🔴 **O sea: si el entregable incluye documentación derivada de `docs/`, hay obligación **share-alike** sobre esa capa, y el resumen «MIT» de la búsqueda la borraba.** 🟢 **La otra es `oompas/open-lms` (**MIT** 1.070 B, titular `Open-LMS Team`): cesión limpia y **0 ★**, se declara.** 🟢 **Y la corroboración que ordena el estante: `OpenEduCat` sigue siendo la vía ERP/SIS+CRM más completa (sobre **Odoo**, 300 módulos, 65 idiomas, 45 localizaciones, 3 M+ usuarios declarados).** 🔵 **`classroomio` re-confirmado AGPL-3.0 a `34.523 B` exactos y `frappe/lms` AGPL con la cesión en `license.txt` sobre `develop` — con esto el reparto del estante sigue siendo el dato que decide un engagement: elegir plataforma en educación ES elegir licencia.**
@@ -28,6 +29,59 @@ updated: 2026-10-05
 > **Pase 100 del 2026-10-04:** 🟢 **2 verticales nuevas, y las dos llenan el hueco que el pase 5 dejó ABIERTO en la capa de autograding de este archivo: una plataforma desplegada cuya licencia SÍ se pueda construir encima.** `Submitty/Submitty` (**BSD-3-Clause**, `LICENSE.md` 1.542 B, **titular organizacional** `Submitty`, 2014-2026 — RPI/RCOS) y `autolab/Autolab` (**Apache-2.0**, `LICENSE` 11.324 B — CMU). 🔴 **Por qué importa: la fila que este archivo tiene en esa capa desde el pase 5 es `Autograder.io`, de la Universidad de Michigan, con ~5.000 alumnos por semestre y la licencia marcada «no declarada» — y este pase la volvió a medir en 7 nombres de archivo y SIGUE sin ceder nada.** 🔵 **Así que la capa deja de tener un hueco: lo desplegado-y-no-usable ahora tiene dos alternativas desplegadas Y permisivas, con ~5.000 alumnos/semestre cada una en su institución.** 🟢 **Y `autolab/Autolab` trae una clase de indicio REGIONAL nueva para esta base: su `README` declara el DESPLIEGUE por sede —Pittsburgh, Silicon Valley, Qatar y Rwanda— o sea que una plataforma coloca DOS regiones (North America y EMEA) por huella de operación y no por domicilio del titular, que es lo que `P135` prohíbe inferir.** 🔴 **`P311`: el pase casi publica como alta a `INGInious/INGInious` y a `eecs-autograder/autograder.io`, las dos ya en ESTE archivo desde los pases 67 y 5; el gate nuevo las frenó antes de escribir** (`p311`, **11/11**, 14 slugs → 5 ya publicados). 🟢 **`lib/license_family.sh` 62/62 → 79/79; 51 suites pasan, 0 fallan.** Ver **`P308`**–**`P311`**.
 > **Pase 97 del 2026-10-04:** 🟢 **Sin filas nuevas, y a propósito: las seis plataformas Java/Maven que este pase midió YA están todas en este archivo. Lo que entra es el VEREDICTO DE LICENCIA de cada una leído por un segundo canal independiente —la declaración del `pom.xml`— y la capa Java/Maven de esta vertical era justo la que el barrido de esta base no podía leer** (**P294**).
 
+
+## 🔴 Pase 121 del 2026-10-05 (lectura `18:45Z`) — 0 plataformas nuevas con el cero enumerado, y la capa que se agrega va DEBAJO de la plataforma
+
+### 🔴 El cero de la capa de plataforma, enumerado (6.º pase)
+
+| Consulta corrida | Devolvió | Estado en este estante |
+|---|---|---|
+| `open source platform education ERP CRM MIT Apache` | **OpenEduCat** (sobre Odoo) | 🔴 **ya publicado** |
+| ídem | **CK-ERP** (módulos `ck-teacher`, `ck-student`, `ck-registrar`…) | 🔴 **ya publicado** |
+| ídem | «marco ERP open source» genérico (glosario de openeducat.org en 5 idiomas) | 🔴 **no es software**, es una página de glosario |
+
+🔴 **0 altas de plataforma.** El inventario de plataformas verticales de este archivo —Moodle, Open edX, Odoo/OpenEduCat, Elgg, Fedena, mentingo, Gibbon, frappe/education— **no se movió** este pase.
+
+### 🟢 La capa que las 3 altas de hoy agregan, y es DEBAJO de la plataforma
+
+🔵 **La distinción importa para cotizar, porque cambia dónde se integra:** las piezas de hoy **no compiten** con Moodle ni con Open edX. Se consultan **desde** ellos, antes de que la plataforma responda.
+
+| Pieza | Repo | Cesión del payload | Dónde se enchufa respecto de la plataforma |
+|---|---|---|---|
+| **RegRails** | https://github.com/Polycentric-Labs/regrails | **Apache-2.0**, `main/LICENSE` **11.282 B**, `sha256:7269084894a7`, `Copyright 2026 Allen Byrd` | **Debajo, como compuerta.** El LMS o el asistente consulta `regrails decide` **antes** de contestar y recibe un `GuardrailDecision` tipado con nivel de riesgo y bandera de compuerta humana. 37 reglas de `34 CFR` 99 (FERPA) y 668 (Title IV) ancladas al texto literal; procedencia encadenada por hash; export **OSCAL 1.1.2** |
+| **GOPAL** | https://github.com/Principled-Evolution/gopal | ⚠️ **Apache-2.0 prístino**, **11.357 B**, `sha256:c71d239df917`, titular **MUDO** ⇒ 0 bits de procedencia (`P386`/`P400`) | **Al costado del plano de control.** Políticas **Rego** para OPA: EU AI Act, GDPR, NIST AI RMF y FERPA en un árbol. La plataforma no lo importa: lo consulta por OPA |
+| **ferpa-haystack** | https://github.com/ashutoshrana/haystack-ferpa-filter | **Apache-2.0**, **12.101 B**, `sha256:69ea67464cbf`, `Copyright 2026 Ashutosh Rana` | **Dentro del pipeline de recuperación.** Filtra por identidad de alumno e institución **antes** de construir el prompt, y emite el `disclosure_record` que la plataforma persiste |
+
+🔴 **Lo que estas tres NO son, dicho antes de que alguien las cotice mal:** no son LMS, no son SIS, no son ERP y no reemplazan ninguna integración existente de este archivo. Son **la capa de política** que las verticales de este estante no tenían en forma permisiva y con tests.
+
+### 🔴 2 correcciones de dato propio de este archivo, las dos por MEDICIÓN
+
+**1) `openeducat/openeducat_erp` — el titular publicado es el de la PLANTILLA (`P402`).**
+
+| Lo medido hoy en el payload | Valor |
+|---|---|
+| ruta | `master/LICENSE` |
+| tamaño · huella | **8.241 B** · `sha256:528f84036800` |
+| familia | **LGPL** |
+| línea de copyright del archivo | 🔴 `Copyright (C) 2007 Free Software Foundation, Inc. <http://fsf.org/>` |
+
+🔴 **El titular del proyecto NO está en el archivo.** Un extractor que lea «la primera línea de copyright» devuelve **la FSF** — una lectura con cara de éxito que ningún control de «¿hay titular?» rechaza. Es peor que el caso prístino de Apache (`P386`), que al menos devuelve **nada**. La familia (**LGPL**) se sostiene; el **titular** no, y queda marcado.
+
+**2) `frappe/education` — no está «sin licencia»: el defecto era de RUTA, y lo que hay es `P347`.**
+
+| Repo | Ruta probada por este estante | Ruta REAL | Medición |
+|---|---|---|---|
+| `frappe/education` | `main`/`master` × `LICENSE`… ⇒ 🔴 **404** | 🟢 **`develop/license.txt`** | 🔴 **19 B**, `sha256:1fcecf395312` — el archivo entero es `License: GNU GPL V3` |
+| `frappe/erpnext` | ídem ⇒ 🔴 **404** | 🟢 **`develop/license.txt`** | 🟢 **35.149 B**, `sha256:3972dc9744f6` — **GPL-3.0** completa |
+
+🔴 **Dos defectos en uno, y los dos cuentan para una entrega:**
+
+1. **La rama por defecto es parte del canal.** frappe usa `develop`, no `main` ni `master`, y el nombre del archivo es minúscula. La lista de rutas de este estante falló **2 de 10** en la muestra de hoy (**20 %**) ⇒ **todo `SIN CESIÓN` publicado aquí hay que re-medirlo** (acción **L**).
+2. **La cesión del módulo educativo es por REFERENCIA, no por payload.** `frappe/education` hereda GPL-3.0 porque un archivo de 19 bytes la **nombra**; el texto que la constituye vive en **otro repo**. 🔴 **Un due-diligence que pida «el texto de la licencia en el repo que se integra» no lo encuentra**, y la respuesta correcta no es «no tiene licencia» sino «la tiene por referencia, y acá está el repo que la contiene».
+
+### 🔵 Consecuencia de arquitectura, que es lo que un encargo compra
+
+🟢 **Con las 3 piezas de hoy, este archivo puede por primera vez responder la pregunta de integración completa sobre una vertical copyleft:** Moodle (**GPL-3.0**) u Open edX (**AGPL-3.0**) como plataforma, y la compuerta de política **permisiva** al lado — `regrails` (Apache-2.0) consultado por HTTP o como paquete, `gopal` (Apache-2.0) vía OPA. 🔵 **La asimetría de licencias es la ventaja, no el problema:** la obligación copyleft queda contenida en la plataforma, que no se modifica, y lo que Globant escribe y entrega vive del lado permisivo. 🔴 **Y la advertencia que viaja con eso: `regrails` tiene 1 ★ y `gopal` 8 ★** — entran con fork propio, no como dependencia de un tercero.
 
 ## 🔴 Pase 120 del 2026-10-05 (lectura `17:45Z`) — 0 plataformas nuevas con el cero enumerado, y la fila de `XBlock` se corrige por medición
 

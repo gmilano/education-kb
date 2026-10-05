@@ -7,6 +7,7 @@ updated: 2026-10-05
 # 📡 Tendencias — education
 
 > Ventana de investigación: septiembre 2026. Verificado 2026-09-30; el pase 11, el 2026-10-01.
+> **Pase 121 del 2026-10-05 (lectura `18:45Z`):** 🟢 **Tendencias 927–932, citadas una por una** (el pase 120 cerró en 926). 🆕 **`P398` — la cesión puede estar segmentada por INTERVALO DE FECHAS: `snflwr.ai` re-licenció de AGPL-3.0 a propietario el 2026-09-18 y su propio archivo declara irrevocable la ventana 2026-02-27 → 2026-09-18. Tercer eje de segmentación después del directorio (`P113`) y del estado de compilación (`P380`), y el peor de los tres porque no se ve en el árbol: la pregunta «¿se puede construir sobre esto?» deja de tener respuesta sin la FECHA DE LA COPIA.** 🆕 **`P399` — un auto-censo publicado en el mismo pase que agrega filas mide el corpus PRE-ESCRITURA, y es un error de ORDEN, no de aritmética: el 15/46/125/186 de `P394` es el árbol del pase 119 y el commit del 120 mide 23/46/139/208. La columna `presente` no se movió (46→46), así que el control que un humano verifica a mano es justo el que no detecta nada.** 🆕 **`P402` — el boilerplate copyleft devuelve bits EQUIVOCADOS donde el prístino de Apache devuelve cero: la línea de copyright de GPL/LGPL es de la **FSF**, y una lectura con cara de éxito pasa cualquier compuerta de «¿hay titular?».** 🟢 **Y la tendencia de mercado del pase, que es la primera con DOS cifras opuestas sobre el mismo día: 18/18 saturado en el canal de intel regional, 10/10 virgen en el canal de obligación.**
 > **Pase 120 del 2026-10-05 (lectura `17:45Z`):** 🟢 **Tendencias 922–926, citadas una por una.** 🆕 **`P397` — la REGIÓN de una herramienta de cumplimiento se lee de la OBLIGACIÓN que implementa, no del domicilio de su autor: convierte la pila de filas `NO UBICADA` de este árbol en un atributo medible del payload, y de paso convierte un hueco regional en un presupuesto de un detector de regex.** 🆕 **`P393` — un corpus APPEND-ONLY conserva lo RETRACTADO, así que todo censo que lo lea RE-ANIMA mediciones muertas: la calidad del censo se degrada MONÓTONAMENTE con cada pase si no hay capa de retractaciones. Es la primera tendencia de este árbol que es un costo de su propio método.** 🆕 **`P395` — el prístino de Apache-2.0 circula en DOS variantes (11.357 / 11.358 B) que difieren en una línea en blanco INICIAL; la regla barata de off-by-one de `P333` les da un falso positivo, y lo que la salva son los controles de las DOS puntas.** 🔴 **Y la tendencia de canal: el barrido regional 48 devolvió 4/4 regiones, 0 silencios y **0 hechos netos** (14/14 ya publicados) ⇒ el agotamiento alcanzó al canal de INTEL, no sólo al de oferta.**
 > **Pase 119 del 2026-10-05:** 🟢 **Tendencias 918–921, y la del pase es de MÉTODO: 🆕 `P388` — la oferta open source de cumplimiento no es una curva, son TRES en estadios distintos al mismo tiempo (etiquetado generativo **vacía**, *testing* de gobernanza **saturada**, expediente FRIA **abriéndose**), y el estadio dice qué hacer: donde está vacía se CONSTRUYE, donde está saturada se INTEGRA, donde se abre se ADOPTA temprano.** 🟢 **Primera vez que el giro «de la experimentación a la gobernanza» que esta base escribe desde el pase 109 aparece como SOFTWARE PERMISIVO y no como afirmación de analista: plantilla FRIA MIT con 6,4k ★, y la AI Verify Foundation de 4 miembros premier a 90+ organizaciones.** 🔴 **Hueco de OFERTA vendible porque está vacío: el art. 31(3) coreano exige marca perceptible por el usuario final y no hay pieza OSS — y NO se cierra con C2PA, que cubre el art. 50(2) europeo.** 🔵 **Pre-registrado para el próximo pase, derivado de `P388` y falsable: sondear UNA obligación por consulta — art. 26 (registro del *deployer*) y prohibición de reconocimiento de EMOCIONES en centros educativos. Predicción: estadios DISTINTOS entre sí (art. 26 saturado, emociones vacía porque una prohibición no genera oferta). Si vuelven iguales, `P388` queda REFUTADA.**
 > **Pase 117 del 2026-10-05:** 🟢 **Tendencias 912–917, citadas una por una para que ninguna quede anunciada sin sección (`P97`).** 🆕 **La que manda es **917** y no es de educación: `P384` — la rotación de 12 industrias no avanza, y por eso este estante lleva ~24 pases/día desde el 2026-09-30 mientras las otras 11 industrias están congeladas desde ~2026-08-02. `rotation.json@main` dice `next: 8` desde el **2026-09-02**; el avance se commitea en una rama por sesión (**1.487** ramas `claude/*` en el origin) que nadie mergea. **Un contador guardado donde el escritor no puede escribir no es un contador: es una constante**, y el síntoma que lo delata no es un error sino la repetición EXITOSA.** 🆕 **912: `P379`, el fork con archivo propaga la cesión Y el titular ajeno ⇒ el doble conteo infla *cesiones verificadas*, que es peor que inflar afirmaciones porque pasa el control. 🆕 913: `P380`, la cesión segmentada por ESTADO DE COMPILACIÓN, eje que ningún escáner de rutas ve. 🆕 914: `P381`, dos instrumentos reales fusionados en un par falso — la unidad de verificación es la TUPLA, no el campo. 🆕 915: `P382`, el ancla `{year}` corre las fechas hacia hoy y acá corrió el 100 % de lo nuevo. 🆕 916: `P383`, el vocabulario cerrado se rompe un nivel abajo del que se estaba gateando.** ⚠️ **`P365` sigue NO evaluable (faltan 20 h 03 m) y se re-registra contra el mismo instante absoluto, sin re-basar.**
@@ -239,6 +240,78 @@ el fork, instalaciones. ⚠️ **Y su lado malo es el encargo:** 547 árboles di
 actualización.
 
 
+
+## 🟢 Pase 121 del 2026-10-05 (lectura `18:45Z`) — tendencias 927–932: la licencia con fecha de validez, el censo que mide un árbol que ya no existe, y dos cifras opuestas sobre el mismo mercado
+
+### 927 · 🆕 La licencia de un repo joven es una medición CON FECHA, no un atributo del repo (`P398`)
+
+`snflwr-ai/snflwr.ai` se publicita como plataforma de tutoría K-12 *privacy-first* y *fully offline*. Su `LICENSE` (**2.833 B**, `sha256:0f14d6b37818`, leído del payload) es **propietario con efecto 2026-09-18**, y declara que la ventana **AGPL-3.0 del 2026-02-27 al 2026-09-18** no puede revocarse **para las copias obtenidas dentro de ella**.
+
+| Lectura | Veredicto | ¿Acierta? |
+|---|---|---|
+| familia por palabra clave (`grep -i "GNU AFFERO"`) | `AGPL-3.0` | 🔴 **no** — es el instrumento que esta base usa, y acá falla |
+| **tamaño** (2.833 B vs ~34 KB del texto AGPL completo) | «esto no contiene AGPL» | 🟢 **sí**, y es la señal que destapa el error |
+| el texto | propietario desde 2026-09-18, con ventana AGPL irrevocable | 🟢 **sí** |
+
+🔵 **Por qué es tendencia y no anécdota:** la cohorte educativa de este eje nació en 2026 (**15 de los 18** repos cuyo payload se midió tienen titular fechado en 2026) y los proyectos jóvenes que buscan modelo de negocio re-licencian. 🔴 **La consecuencia práctica es nueva para este estante:** una fila de licencia sin fecha de lectura es inútil, y este estante publica la fecha — que es por qué el caso se detectó en vez de propagarse. 🟢 **Regla general que deja: cuando el TAMAÑO del archivo contradice la familia declarada, manda el tamaño, porque el tamaño es una medición y la familia es una inferencia.**
+
+### 928 · 🆕 Un auto-censo publicado en el mismo pase que escribe mide el corpus PRE-ESCRITURA (`P399`)
+
+`P394` publicó en el pase 120 el censo de titular del estante: **15 / 46 / 125 / 186**. Re-correr su propia invocación publicada sobre los dos árboles relevantes, con `git show` y no por inferencia:
+
+| Árbol | `ausente` | `presente` | `MUDO` | universo |
+|---|---|---|---|---|
+| `8110153` — commit del **pase 119** | 🟢 **15** | 🟢 **46** | 🟢 **125** | 🟢 **186** |
+| `195fe59` — commit del **pase 120**, donde la cifra se publicó | **23** | **46** | **139** | **208** |
+| **publicado por `P394`** | **15** | **46** | **125** | **186** |
+
+🔴 **La cifra publicada es, exactamente, el censo del árbol ANTERIOR.** Error de **orden de operaciones**: medir → escribir las 22 filas del pase → commitear con la cifra de antes. 🔴 **Y lo que lo hace invisible desde afuera: `presente` no se movió (46 → 46).** La única columna que un lector verifica a mano —la que tiene nombres propios— es precisamente la que no delata nada; el error vive entero en `ausente` (**+53 %**) y en `MUDO` (**+11 %**).
+
+🔵 **Por qué es tendencia de MÉTODO y no un descuido:** cualquier base que (a) publique censos de sí misma y (b) crezca en el mismo pase tiene este defecto **por construcción**, no por distracción. Es la pareja de `P393` (un corpus *append-only* conserva lo retractado y todo censo lo re-anima): `P393` dice que el censo se degrada con la **historia**, `P399` dice que además nace **desfasado del presente**. 🟢 **La compuerta es barata y hay dos:** medir **después** de escribir, o publicar **contra qué commit** se midió.
+
+### 929 · 🆕 El boilerplate copyleft devuelve bits EQUIVOCADOS, que es peor que devolver cero (`P402`)
+
+| Caso | Qué devuelve el extractor de titular | ¿Se nota? |
+|---|---|---|
+| prístino de Apache-2.0 (`P386`) | **nada** ⇒ MUDO | 🟡 **sí** — la compuerta se abstiene y queda escrito |
+| **boilerplate copyleft (GPL/LGPL)** | 🔴 **`Copyright (C) 2007 Free Software Foundation, Inc.`** | 🔴 **NO** — lectura con *cara de éxito* |
+| licencia modificada | el titular del proyecto | 🟢 correcto |
+
+Medido hoy en dos piezas que este estante ya publicaba: `GibbonEdu/core` (**LGPL**, 35.121 B, `sha256:93178a43d6d3`) y `openeducat/openeducat_erp` (**LGPL**, 8.241 B, `sha256:528f84036800`) — las dos devuelven **la FSF**. 🟢 **Y cierra el expediente de esos dos digests, que figuraban retractados sin causa escrita:** la causa es ésta.
+
+🔵 **La tendencia, dicha como propiedad del ecosistema y no de esta base:** el copyleft distribuye un texto **con el copyright de su redactor adentro**, y el permisivo distribuye una **plantilla con un hueco** para el del proyecto. Un escáner de procedencia hereda esa asimetría: falla **silenciosamente** en copyleft y **ruidosamente** en permisivo. 🔴 **Para una *due diligence* automatizada eso invierte la intuición:** el repo copyleft parece mejor documentado y está peor medido.
+
+### 930 · 🆕 Un linaje con dos nombres, espejo de tres nombres con dos linajes (`P401`)
+
+| Coordenada | Valor |
+|---|---|
+| repo mantenido | `ashutoshrana/haystack-ferpa-filter` |
+| paquete PyPI | `ferpa-haystack` — 🔴 **invertido** respecto del repo |
+| repo homónimo del paquete | `ashutoshrana/ferpa-haystack` — 🔴 **existe, es puntero legado** |
+
+🔴 **Buscar por el nombre del paquete entrega el repo muerto, y no por un *typo*: los dos existen.** `P390` encontró **tres repos con un nombre y dos linajes**; `P401` es el espejo. 🔵 **Y refina `P253` («identidad primero por registro»), que acá no alcanza:** registro y repo **no coinciden en el nombre**, así que la resolución necesita las dos coordenadas más el puntero que el README declara. 🟢 **La tendencia de fondo:** en un ecosistema donde el paquete se publica antes de que el repo se estabilice, el nombre deja de ser identidad y pasa a ser **un alias con historia**.
+
+### 931 · 🆕 La ruta y la rama son parte del canal, y un `SIN CESIÓN` vale lo que valga la lista de rutas
+
+La lista de rutas de este estante (`main`/`master` × `LICENSE`/`LICENSE.md`/`LICENSE.txt`/`COPYING`/`LICENCE`) **falló 2 de 10** en la muestra de hoy: frappe usa **`develop`** y **`license.txt`** en minúscula.
+
+| Repo | Medición real | Hallazgo |
+|---|---|---|
+| `frappe/erpnext` | `develop/license.txt`, **35.149 B**, `sha256:3972dc9744f6` | 🟢 **GPL-3.0** completa |
+| `frappe/education` | `develop/license.txt`, 🔴 **19 B**, `sha256:1fcecf395312` | 🔴 **`P347` en su forma más pura:** el archivo entero es `License: GNU GPL V3` |
+
+🔵 **Dos tendencias en una medición.** (1) **Un `SIN CESIÓN` publicado es una afirmación sobre el instrumento, no sobre el repo** — y este instrumento acaba de errar el **20 %** de su muestra. (2) 🆕 **La cesión por REFERENCIA existe y es distinta de la ausencia de cesión:** `frappe/education` hereda GPL-3.0 porque 19 bytes la **nombran**, y el texto que la constituye vive en **otro repo**. 🔴 **Una *due diligence* que pida «el texto de la licencia en el repo que se integra» no lo encuentra, y la respuesta correcta no es «no tiene licencia».**
+
+### 932 · 🟢 La tendencia de canal del pase: dos cifras OPUESTAS sobre el mismo mercado y el mismo día
+
+| Canal | Términos probados | Ya publicados | Ausentes | Lectura |
+|---|---|---|---|---|
+| **intel regional** (las 4 sondas del encargo, 4/4 regiones, 0 silencios) | 18 hechos | 🔴 **18** | **0** | 🔴 **saturado al 100 %** |
+| **obligación** (`Title IV`, `34 CFR`, `OSCAL`, `Haystack`, `NIST SP 800-53`, `BYU-Idaho`, `Aegis`, `AGP v1.0`, `Satisfactory Academic Progress`, `snflwr`) | 10 términos | **0** | 🟢 **10** | 🟢 **virgen al 100 %** |
+| **oferta generalista** (4 consultas globales obligatorias) | 5.ª falla idéntica: eje *enseñar-sobre-IA* | — | — | 🔴 **agotado** |
+| **tema de obligación de GitHub** (`topics/ferpa` + `topics/ferpa-compliance`) | 22 repos enumerados | **1** | 🟢 **21** | 🟢 **virgen al 95 %** |
+
+🟢 **Es la medición más fuerte que este árbol puede ofrecer hoy, y no es un hecho de mercado — es un hecho sobre la SONDA.** Cuatro canales, el mismo mercado, el mismo día, y resultados que van de 0 % a 100 % de novedad. 🔵 **Con esto `P388` (el agotamiento se mide por obligación, no por eje) queda confirmado por cuarta vez y además CUANTIFICADO.** 🟢 **Y el corolario que vale para cualquier industria de esta infraestructura, no sólo educación: el contenido regulatorio neto de este pase no vino de una noticia de regulación — vino de dentro de un paquete**, como el texto literal de `34 CFR` Partes 99 y 668 empaquetado con compuerta de fidelidad en `regrails`. 🔴 **La consecuencia operativa: cuando la sonda de noticias se satura, la siguiente sonda no es otra noticia — es el CÓDIGO que implementa la obligación.**
 
 ## 🟢 Pase 120 del 2026-10-05 (lectura `17:45Z`) — tendencias 922–926: la región se lee de la obligación, y el método de esta base paga su primer costo medido
 

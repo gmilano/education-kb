@@ -8,6 +8,7 @@ updated: 2026-10-05
 
 > Agentes y herramientas AI open source para educación. Foco: MIT / Apache 2.0 / BSD.
 > Verificado repo por repo vía WebFetch el 2026-09-30 (stars y licencia leídos de la página del repo).
+> **Pase 121 del 2026-10-05 (lectura `18:45Z`):** 🟢 **6 altas permisivas, y las 6 entraron por el eje de la OBLIGACIÓN — ninguna por «mejores agentes de educación 2026».** El canal generalista falla por **5.ª** vez del mismo modo y el canal de intel regional da **0 hechos netos** por **2.ª** vez, pero el eje FERPA/`34 CFR` estaba **casi virgen**: de los **22** repos enumerados en los dos temas de GitHub, **21 estaban ausentes de este estante**. 🆕 **`P398` — la cesión puede estar segmentada por INTERVALO DE FECHAS: `snflwr.ai` re-licenció a propietario el 2026-09-18 y su archivo nombra la ventana AGPL-3.0 (2026-02-27 → 2026-09-18) que NO puede revocar. Un lector que tipa la familia por palabra clave dice «AGPL-3.0» y se EQUIVOCA.** 🆕 **`P399` — un auto-censo publicado en el MISMO pase que agrega filas mide el corpus PRE-ESCRITURA: el 15/46/125/186 de `P394` es el árbol del pase 119, y el árbol que se commiteó mide 23/46/139/208. Reproducido con `git show`, no inferido.** 🆕 **`P400` — una fila con boilerplate prístino no es neutral: entra a un racimo YA RETRACTADO. `gopal` (11.357 B, `c71d239df917`) es el 3.er miembro de un racimo que ya ligaba `mwalimulens-agent` y `fedena`.** 🆕 **`P401` — nombre de repo ≠ nombre de paquete, y existe el repo homónimo del paquete como puntero legado.** 🆕 **`P402` — el boilerplate copyleft trae la línea de copyright de la **FSF**: el extractor no devuelve 0 bits como en el prístino de Apache, devuelve bits EQUIVOCADOS con cara de lectura exitosa.** Acciones: **E confirmada** (exactamente 2, en el borde de su cláusula) · **F confirmada** (20 vs 12) · **G confirmada** (6 de 10) · **H REFUTADA** (0 de 5) · **A NO corrida**, y se dice por qué.
 > **Pase 120 del 2026-10-05 (lectura `17:45Z`):** 🟢 **Las 2 acciones pre-registradas que quedaban vivas se corrieron y las 2 quedaron CONFIRMADAS por su propia cláusula; la acción A **NO** se corrió y se dice por qué (su instante es `2026-10-06T10:48Z`, faltan **17 h 03 m**, y `P365` prohíbe re-basarlo).** 🆕 **`P391` — leer el binding por CELDA/COLUMNA no cierra el intervalo de `P385`: lo angosta de `[3, 22]` a `[5, 14]` y el canónico por CONJUNTO de repos da **10**. Lo que queda de ancho ya no es la convención de escritura: es la HISTORIA del propio estante.** 🆕 **`P392` — una huella no se identifica por su digest: se identifica por el par (ARCHIVO, digest). El trío `OpenTutor` entró dos veces porque su tabla tiene dos columnas de huella — `README.md` y `LICENSE` — y el lector tipó las dos como «sha256».** 🆕 **`P393` — un archivo APPEND-ONLY conserva las mediciones RETRACTADAS, así que un censo que lee el corpus las RE-ANIMA: `fa4e32e5e622` sigue formando racimo aunque `P333` lo retractó.** 🆕 **`P394` — acción D: **15** filas con titular ausente explícito (pedía ≥5), pero la clase que manda es la MUDA: **125 de 186** (67,2 %), y para ésa la compuerta de `P386` **no tiene rama**.** 🆕 **`P395` — hay **DOS** variantes legítimas del boilerplate prístino de Apache-2.0 (**11.357 B** y **11.358 B**) y la diferencia es una línea en blanco **INICIAL**: los dos controles de dos puntas FALLAN, así que la regla de `P333` («difiere en 1 byte ⇒ artefacto de salto final») da aquí un FALSO POSITIVO.** 🆕 **`P396` — el disyunto `is_pristine` de `dedup_gate.py` está **MUERTO**: 0 de 80 combinaciones enumeradas cambian la decisión, y su tabla de tamaños además le falta la variante de 11.358 B.** 🆕 **`P397` — la REGIÓN de una herramienta de cumplimiento se lee de las OBLIGACIONES que implementa, no del domicilio de su autor: `shuddhi` es inubicable por autor y queda ubicada en **EMEA + APAC** por los identificadores que su `pii.py` sabe redactar, con un cero MEDIDO para North America y LATAM (8 identificadores probados, 0 aciertos).** 🟢 **2 altas Apache-2.0 verificadas por RUTA: [`agentanywhere/shuddhi`](https://github.com/agentanywhere/shuddhi) (2 ★) y [`AKIVA-AI/toolkit-ml-provenance`](https://github.com/AKIVA-AI/toolkit-ml-provenance) (1 ★).** 🔴 **2 correcciones de dato propio: `pelotech/xapi-lrs` y `yptheangel/attention-monitor` estaban publicados con **11.358 B** y miden **11.357 B**.** 🔴 **Cero ENUMERADO del canal del encargo: las 4 consultas globales devolvieron por 4.ª vez el eje *enseñar-sobre-IA*, y los **14** hechos regionales que trajeron las 4 sondas por región ya estaban los 14 publicados en este estante.**
 > **Pase 119 del 2026-10-05:** 🟢 **La acción que el pase 118 pre-registró se corrió y RINDIÓ: entrar por el eje de la OBLIGACIÓN regulatoria destapó software nuevo, pero sólo en 1 de sus 3 sub-ejes.** 🆕 **`P388` — el agotamiento no se mide por EJE, se mide por OBLIGACIÓN: etiquetado generativo (art. 31 Corea) = oferta OSS **vacía**; *testing* de gobernanza (AI Verify/IMDA) = **saturada**, los 2 repos ya estaban; expediente FRIA (art. 27) = **abriéndose**. Promediar las tres devuelve el número de ninguna.** 🆕 **`P389` — alta MIT verificada por ruta: [`microsoft/agent-governance-toolkit`](https://github.com/microsoft/agent-governance-toolkit) (**6,4k ★**, `LICENSE` leído), cuya `docs/compliance/fria-template.md` cita el art. 27 y tiene **§3.6 «Right to Education»** preguntando literal por *acceso a la educación* y por *admisiones, calificación o evaluación* — los DOS supuestos del Anexo III punto 3 que este estante cotiza desde el pase 58 sin tener herramienta.** 🔬 **Nota de método de la clase de `P160`: la lectura de la RAÍZ del repo dijo «no FRIA template present» y el archivo EXISTE ⇒ una lectura de raíz es un NEGATIVO DÉBIL; una afirmación sobre un ARCHIVO se verifica por RUTA.** 🔴 **2 rechazos medidos: `XCINDYZ/AFRIA` y `sabuhi-huseynli-grc/High-Risk-Deployer-FRIA-Governance-Toolkit.`, los dos vivos y los dos **sin archivo de licencia** ⇒ todos los derechos reservados, fuera del estante (se dejan escritos como negativos INFORMADOS, `P343`).**
 > **Pase 117 del 2026-10-05 (lectura `2026-10-05T14:45Z`):** 🟢 **7 filas nuevas de agente leídas del payload, y la cohorte entera tiene ★ de un dígito o cero — otra vez el sesgo de la función de orden del pase 115, no un hueco de oferta.** 🆕 **`P379` — el fork CON archivo: `krishna16-origin/ai-tutor` → `maxew6/ai-tutor-project` tienen `LICENSE` de **1.073 B** con el **MISMO `sha256:de8107bf9312862c`** ⇒ la cesión viajó al byte y con ella el TITULAR, así que el fork otorga **en nombre del upstream**. Espejo de `P377` (que midió el linaje SIN archivo) y con el signo del riesgo invertido: acá el doble conteo infla *cesiones verificadas*, no afirmaciones. Deduplicador = par (`sha256`, titular), no el repo.** 🆕 **`P380` — `pupilfirst/pupilfirst` segmenta la cesión por **ESTADO DE COMPILACIÓN** («*when served directly or after being compiled, arranged, augmented, or combined*») y no sólo por ruta como `Elgg`/`P364`; y su `docs/` es **CC BY-SA 4.0**, o sea share-alike que el resumen «MIT» de la búsqueda borró.** 🔴 **`VedShh/Tutor-AI`: README afirma MIT, `LICENSE`/`.md`/`.txt` los tres **404** ⇒ `P342` limpio, fuera del gate.** 🟢 **`mitodl/open-learning-ai-tutor` es MIT con titular **`Romain Puech`** (persona) bajo dueño `mitodl` ⇒ `P374`.** ⚠️ **`P365` NO evaluable (faltan 20 h 03 m) y se re-registra contra el mismo instante absoluto.** Ver **`P379`**–**`P384`**.
@@ -20,6 +21,187 @@ updated: 2026-10-05
 > **Pase 109 del 2026-10-05:** 🔴 **0 altas permisivas (trigesimoprimer barrido) y por primera vez la razon se MIDE en vez de declararse: las 5 candidatas que el canal devolvio (`DeepTutor`, `open-tutor-ai-CE`, `AITutorAgent`, Freelingo, Bloom) ya estaban las 5 en el arbol — 5 devueltas / 5 publicadas / 0 nuevas (`P311`, `P287`).** 🔴 **`P342` — un badge de licencia y una entrada de arbol del README son una AFIRMACION de cesion, no una cesion: `Javi111003/OlivIA-RAG`, publicado DOS veces por esta base como «sin licencia», afirma MIT en la linea 3 (badge hipervinculado a `LICENSE`) y en la linea 50 (su propio arbol de directorios), con el archivo en 404 en 20/20 sondas ⇒ FALSO NEGATIVO publicado, y una pieza LATAM recuperable por una gestion y no un descarte.** 🔸 **Accion B CONFIRMADA en su mitad fuerte (0 de 9 «sin licencia» tienen archivo) y DEBIL en la otra (el unico caso de ortografia, `openedx/XBlock`/`LICENSE.TXT`, ya lo tenia `P279`).** 🔴 **Accion C FALSIFICADA en sus dos clausulas, y lo que se cumple es la clausula de refutacion que el pase 108 escribio contra si mismo: 5 de 5 huellas son del archivo COMPLETO, 0 de 5 del archivo sin su ultimo byte, 5 de 5 terminan en `0a` ⇒ `P333` cerrado por ausencia medida.** 🔴 **`P343` — defecto de ESTE pase, y su primer diagnostico tambien estaba mal: un prefijo GOLOSO `^.*` sin frontera izquierda en la captura leyo el `35.121 B` publicado como `5.121 B` (no fue el cuantificador acotado, que solo captura bien), y POSIX ERE no da con que frenarlo porque `grep -E`/`sed -E` no tienen cuantificadores perezosos (`.*?` es goloso) ni *lookbehind*; la misma corrida dejo una fila cuyo «repo» es la RUTA `master/LICENSE.TXT`. Lo atrapo la huella y nada mas, y el enunciado lo corrigio la SUITE.** 🔴 **Accion A NO CORRIDA (tercer pase de deuda declarada) y `github.com` degradado a 403 ⇒ 0 estrellas medidas.**
 > **Pase 108 del 2026-10-05:** 🟢 **5 altas permisivas, y rompen una racha de TREINTA barridos en cero** — las cinco leidas del PAYLOAD, no del nombre: `THU-MAIC/OpenMAIC` (**MIT**, `v1.2.0-rc.1` del 2026-10-04) 🔴 **con `packages/mathml2omml` en `LGPL-3.0-or-later` leido de SU PROPIO `package.json`: la licencia de la raiz no es la licencia del arbol**; `oaknational/oak-open-curriculum-ecosystem` (**MIT** en el codigo, 🔴 **OGL v3.0** en los datos de curriculo — `P315` otra vez); `Cicatriiz/openedu-mcp` (**MIT**); `davidlms/learnmcp-xapi` (**MIT**); y `54yyyu/school-mcp` (**MIT solo en el cuerpo del README, sin archivo** — `P314`). 🆕 **`P340` — el 404 de un archivo de licencia puede ser una ORTOGRAFIA y no una ausencia: `oak` cede en `LICENCE` y el barrido de esta base pide `LICENSE`; un pase que solo mirara `LICENSE` habria publicado «sin cesion» sobre un repo MIT.** 🔴 **La accion A pre-registrada NO se corrio: el clon del arbol del titular quedo DENEGADO por el clasificador de la sesion, y eso se declara en vez de callarse (`P335` sigue en pie, pero esta vez ni la pieza nombrada paso).** 🔴 **La accion B resulta NO CORRIBLE contra el artefacto al que su propia pre-registracion la mando (`P336`): `accion-a-b.2026-10-05.tsv` colapsa `oer` a DOS valores (`openstax`/`otro`) y el slug del libro —lo unico que separa una edicion `2e` de una `1e`, que es toda la pregunta— no esta en el archivo; las «825 ya enumeradas» no estan enumeradas ahi.** 🔴 **Y al ir a buscarlo aparece el hallazgo que manda: dos artefactos del MISMO pase, sobre el MISMO sha `1925dec`, se contradicen por exactamente 41 figuras en el corte openstax/no-openstax (**1.611/832** contra **1.570/873**, los dos suman 2.443), y la cifra que llego a la PROSA es la menor (`P337`).** 🔴 **La causa, medida y no supuesta: `oer` es TEXTO LIBRE con dos formas de URL —y al ampliar la muestra de 694 a **1.685** unidades resultaron **CUATRO**, dos de ellas invisibles para el patron inicial—, con solapamiento **PARCIAL** entre formas: un extractor afirmado sobre `/details/books/` pierde **3 obras completas** y ademas **SUB-CUENTA** una cuarta sin que nada avise. Y `precalculus` a secas existe en el corpus y NO esta en ninguna de las 10 filas del censo publicado (`P338`).** 🔴 **La version de este MISMO pase que decia «las dos formas PARTEN el espacio sin solaparse» quedo FALSIFICADA por su propia medicion ampliada, y se corrige en vez de dejarse.** 🆕 **`P341` — 9 unidades nombran al TITULAR y no a la OBRA: sin obra no hay edicion y sin edicion no hay cesion resoluble, con ningun extractor.** 🟢 **La accion C sale CONFIRMADA en su clausula de conteo: **17** pares (bytes, huella) publicados junto a un archivo de licencia, la prediccion pedia ≥10.** 🔴 **Y FALSIFICADA como instrumento (`P339`): el delta de 1 byte NO es diagnostico, porque `P327` (el archivo no trae salto final) y `P333` (`$(cat)` se lo come al medir) producen la MISMA firma — esta base ya publica `21.442` y `21.443` B del mismo texto por la primera causa.** 🟢 **Tablero re-verificado COMPLETO: 59 suites (53 Python + 6 shell), 0 fallos, 203 aserciones (`Python 3.11.15`).**
 
+
+## 🟢 Pase 121 del 2026-10-05 (lectura `18:45Z`) — 6 altas por el eje de la obligación, y el auto-censo de este estante medía un corpus que ya no existía
+
+**Canal medido ESTE pase a las `2026-10-05T18:45Z`, no heredado (`P249`/`P366`):**
+
+| Canal | Estado | Consecuencia para lo que se publica abajo |
+|---|---|---|
+| `api.github.com` | 🔴 **403** — `GitHub access to this repository is not enabled for this session` | ★ y licencia **no** se leen de la API |
+| `github.com/<owner>/<repo>` por `curl` | 🔴 **403** del proxy de egreso | el HTML del repo **no** es canal este pase |
+| `github.com/topics/<tema>` por WebFetch | 🟢 **200** | **único** canal de ★ de este pase, y así se declara cada cifra |
+| `raw.githubusercontent.com` | 🟢 **200** | 🟢 **la cesión y el titular se leen del PAYLOAD**, que es lo que `P340` pide |
+
+🔵 **El reparto de canal de hoy invierte el del pase 120:** lo que está caído es la cara *social* del repo (★, forks, descripción) y lo que está vivo es la cara *legal* (el archivo). Para este estante es el reparto favorable: una fila se sostiene por su cesión, no por sus estrellas.
+
+### 🟢 Las 6 altas, con la cesión LEÍDA DEL PAYLOAD y la región leída de la OBLIGACIÓN (`P397`)
+
+| Agente | Repo | Cesión, medida en el payload | ★ (topic page) | Región | Qué hace, y por qué entra |
+|---|---|---|---|---|---|
+| 🆕 **RegRails** | https://github.com/Polycentric-Labs/regrails | 🟢 **Apache-2.0** — `main/LICENSE` **11.282 B**, `sha256:7269084894a7`, titular `Copyright 2026 Allen Byrd` ⇒ **NO prístino** (`P395`: el prístino mide 11.357/11.358 B) ⇒ la huella **sí** vale bits de procedencia | **1 ★** | **North America** — por `34 CFR`, no por domicilio | **La pieza más fuerte del pase.** *Policy-as-code* de **37 reglas legibles por máquina en 8 secciones**, cada una **anclada al texto literal del CFR** por una compuerta de fidelidad: **FERPA** (`34 CFR` Parte 99, Subparte D) + **Title IV** (`34 CFR` Parte 668: *Satisfactory Academic Progress* § 668.34 y elegibilidad § 668.32). Motor determinista que emite un `GuardrailDecision` **tipado** con nivel de riesgo y bandera de compuerta humana; procedencia **encadenada por hash**; corpus dorado de **22 escenarios** con matriz de cobertura; exporta catálogo **OSCAL 1.1.2**. Python 3.12+, `uv`, **280 tests**, `ruff` + `mypy --strict` limpios |
+| 🆕 **ferpa-haystack** | https://github.com/ashutoshrana/haystack-ferpa-filter | 🟢 **Apache-2.0** — `main/LICENSE` **12.101 B**, `sha256:69ea67464cbf`, titular `Copyright 2026 Ashutosh Rana` | **0 ★** | **North America** — por FERPA | Componentes **Haystack** que filtran documentos recuperados por identidad de alumno, institución y categoría autorizada **antes** de construir el prompt. `FERPAMetadataFilter` toma `Document`s y devuelve `documents` **más** un `disclosure_record` que la aplicación persiste. Cierra el hueco estructural que el README nombra: un pipeline RAG estándar puede devolverle a un alumno el expediente de otro |
+| 🆕 **Canvas Toolbox** | https://github.com/chaz-clark/canvas-toolbox | 🟢 **MIT** — `main/LICENSE` **1.072 B**, `sha256:0001d594b291`, titular `Copyright (c) 2025-2026 Chaz Clark` | **5 ★** | **North America** — por FERPA | Herramienta FERPA-safe para **Canvas LMS** con IA asistida y **divulgación explícita**: el docente queda autor de la nota y de cada palabra que el alumno lee. Construido en **BYU-Idaho**, sirve a cualquier institución con Canvas. Python 3.14+, CI verde |
+| 🆕 **EDU AI Agent Suite** | https://github.com/virtualryder/edu-ai-agents | 🟢 **MIT** — `main/LICENSE` **832 B**, `sha256:a4235882db48`, titular `Copyright (c) 2026 David Ryder` | **4 ★** | **North America** — por FERPA (K-12 y *higher-ed*) | Agentes **gobernados** para educación con enmascarado de PII de alumno y rastro de auditoría alineado a FERPA. 🔵 **Y el eje que le sirve a Globant más allá de educación:** es **1 de 5** repos que forman **una** solución revisable como una sola — la plataforma `aegis-ai-governance-platform-aws` (plano de control *deny-by-default*) más cuatro *packs* verticales (*life sciences*, gobierno estatal/local, *payer/provider*, educación), los cinco conformes a **un** contrato de gobernanza versionado, **AGP v1.0** |
+| 🆕 **GOPAL** | https://github.com/Principled-Evolution/gopal | ⚠️ **Apache-2.0** — `main/LICENSE` **11.357 B**, `sha256:c71d239df917`, titular 🔴 **MUDO en el payload** ⇒ **prístino** ⇒ **0 bits de procedencia (`P386`)**, y además **`P400`: el digest está RETRACTADO** | **8 ★** | **Global** — implementa obligaciones de **varias** regiones | Biblioteca de políticas **Rego** para cumplimiento de IA: **EU AI Act**, **GDPR**, **NIST AI RMF** y **FERPA** en un solo árbol, con README en 5 idiomas (en/zh/ja/ko/hi). Es la pieza *transversal* del pase: no es de educación, es de **obligación**, y FERPA es uno de sus cuatro ejes |
+| 🆕 **NAU AI Academic Advisor** | https://github.com/zhamanov-seabus/nau-ai-advisor | 🟢 **Apache-2.0** — `master/LICENSE` **11.375 B**, `sha256:adec74ee5b6f`, titular `Copyright 2026 Azamat Zhamanov and North American University` ⇒ **NO prístino** | **1 ★** | **North America** — por FERPA **y** por titular, que coinciden | Asesor académico **auto-hospedable**, primer módulo vivo de un ecosistema modular de agentes para *higher-ed*: login OTP, panel de admin, gestión de alumnos, **procesamiento de transcripciones**, base de conocimiento y panel de asesor. ⚠️ **Rama por defecto `master`, no `main`** — y eso importa, ver el falso negativo de abajo |
+
+### 🔵 La capa de abajo: 3 piezas MIT que no son agentes, y se dice qué son
+
+🔴 **No se publican como agentes porque no lo son**, y mezclarlas con las 6 de arriba sería exactamente el relleno que el encargo prohíbe:
+
+| Pieza | Repo | Cesión del payload | ★ | Qué es realmente |
+|---|---|---|---|---|
+| **record-bridge** | https://github.com/Krishita17/record-bridge | **MIT**, **1.079 B**, `sha256:5cd30b784eb7`, `Copyright (c) 2026 Krishita Sanjay Choksi` | **1 ★** | *Pipeline* de integridad de datos de expediente de alumno, dirigido por configuración, con validación y auditoría. **Infraestructura**, no agente |
+| **student-data-access-audit-stream** | https://github.com/mizcausevic-dev/student-data-access-audit-stream | **MIT**, **1.069 B**, `sha256:a5ed17e0b90a`, `Copyright (c) 2026 Miz Causevic` | **0 ★** | **Esquema** de eventos encadenados por hash para forzar consistencia de registro FERPA cuando una herramienta de IA toca expedientes. **Especificación**, no software corriendo |
+| **docsingest** | https://github.com/marc-shade/docsingest | **MIT**, **1.079 B**, `sha256:897ba55a1525`, `Copyright (c) 2025 DocIngest Contributors` | **5 ★** | Ingesta documental con protección PII/PHI y cobertura *HIPAA Safe Harbor*. **Global** y **no** específico de educación: entra como componente, no como vertical |
+
+⚠️ **Y una cuarta que es DOCUMENTACIÓN, dicho antes de que alguien la cotice como código:** `capetron/ferpa-compliance-checklist` (**MIT**, `main/LICENSE` **1.090 B**, `sha256:6e1303e3f61c`, `Copyright (c) 2026 Petronella Technology Group, Inc.`) es una **checklist de cumplimiento** de 26,8 KB — FERPA, excepción de *school official*, *directory information*, vendedores EdTech y el mapeo **FERPA → NIST SP 800-53** — revisada por última vez en **marzo de 2026**. 🔴 **★ NO LEÍDAS:** llegó por el canal de búsqueda, no por la *topic page*, y este pase no tiene otro canal de ★.
+
+### 🆕 `P398` — la cesión puede estar segmentada por INTERVALO DE FECHAS, y el lector por palabra clave se equivoca
+
+Este estante ya tenía la cesión segmentada **por directorio** (`P113`) y **por estado de compilación** (`P380`). 🆕 **`snflwr-ai/snflwr.ai` agrega el tercer eje, y es el peor de los tres porque no se ve en el árbol:**
+
+```
+snflwr.ai — Proprietary Software License
+Copyright (C) 2026 snflwr.ai. All rights reserved.
+Effective 2026-09-18.
+
+1. PRIOR RELEASES REMAIN UNDER AGPL-3.0
+   This software was published under the GNU Affero General Public License,
+   version 3, from 2026-02-27 until 2026-09-18. This license does not and
+   cannot revoke that grant. Any copy obtained while the AGPL-3.0 license was
+   in effect remains governed by AGPL-3.0 for that copy...
+```
+
+| Lectura | Veredicto | ¿Correcto? |
+|---|---|---|
+| familia por **palabra clave** (`grep -i "GNU AFFERO"`) | **AGPL-3.0** | 🔴 **NO.** Es el instrumento que esta base usa, y acá **falla** |
+| **tamaño** del archivo | **2.833 B** vs ~34 KB del texto AGPL-3.0 completo | 🟢 **la señal que destapa el error:** un archivo que *dice* AGPL y mide 2,8 KB no **contiene** AGPL |
+| **lectura del texto** | **propietario desde 2026-09-18**, con ventana AGPL-3.0 **irrevocable** para las copias de 2026-02-27 → 2026-09-18 | 🟢 **la única correcta** |
+
+🔴 **Consecuencia para un encargo, que es lo que vale:** la pregunta «¿Globant puede construir sobre esto?» **no tiene respuesta sin saber CUÁNDO se obtuvo la copia**. Una copia de agosto de 2026 es AGPL-3.0 y sirve con sus obligaciones; un `git clone` de hoy es propietario y no sirve. 🔵 **Y la regla de método que deja:** cuando el tamaño del archivo contradice a la familia declarada, manda el **tamaño**, porque el tamaño es una medición y la familia es una inferencia.
+
+### 🆕 `P400` — publicar una huella prístina no es neutral: engorda un racimo YA RETRACTADO
+
+`gopal` mide **11.357 B** / `sha256:c71d239df917`. 🔴 **Esa huella ya estaba en este estante, y retractada.** El censo de racimos, corrido hoy sobre los 8 archivos:
+
+| Digest | Repos que liga hoy | Estado del digest |
+|---|---|---|
+| `fa4e32e5e622` | **3** — `felipedias-ie/blackboard-mcp`, `agentanywhere/shuddhi`, `akiva-ai/toolkit-ml-provenance` | 🔴 **RETRACTADO por `P333`** (pase 107) |
+| `c71d239df917` | **2** — `buriro-ezekia/mwalimulens-agent`, `mazhar266/fedena` | 🔴 **retractado**, y 🆕 **`gopal` sería el 3.º** |
+
+🟢 **Y por eso la fila de `gopal` se publica con la huella marcada `0 bits de procedencia` en vez de omitirla.** Omitirla esconde el problema; publicarla sin marca **crea** un racimo falso de tres proyectos ajenos (una biblioteca Rego de cumplimiento, un agente docente keniano y un ERP escolar). La marca es lo que hace la fila usable.
+
+### 🆕 `P401` — nombre de repo ≠ nombre de paquete, y existe el homónimo como puntero legado
+
+| Qué se nombra | Valor | Trampa |
+|---|---|---|
+| repo **mantenido** | `ashutoshrana/haystack-ferpa-filter` | — |
+| paquete **PyPI** | `ferpa-haystack` | 🔴 **invertido** respecto del repo |
+| repo **homónimo del paquete** | `ashutoshrana/ferpa-haystack` | 🔴 **existe**, y es un **puntero de migración legado** |
+
+🔴 **Identificar el hallazgo por el nombre entrega el artefacto EQUIVOCADO**, y no por un *typo*: los dos repos existen y uno de los dos es el vivo. 🔵 **Es la clase de `P253` («identidad primero por registro») llegando por una ruta nueva:** acá el registro (PyPI) y el repo **no coinciden en el nombre**, así que la regla «resolver primero contra el registro» no alcanza — hay que resolver contra el registro **y** seguir el puntero que el README declara. Este estante ya tenía `P390` (tres repos con el mismo nombre, dos linajes); `P401` es su espejo: **un linaje con dos nombres.**
+
+### 🆕 `P402` — el boilerplate copyleft devuelve bits EQUIVOCADOS, que es peor que devolver cero
+
+De la acción **G** (abajo) sale un hallazgo que la acción no pedía. Al leer el titular del payload de 10 filas MUDAS, **2** devolvieron titular «presente» y el titular es **la Free Software Foundation**:
+
+| Repo | Familia | Línea de copyright leída del payload |
+|---|---|---|
+| `GibbonEdu/core` | **LGPL** (35.121 B, `sha256:93178a43d6d3`) | 🔴 `Copyright (C) 2007 Free Software Foundation, Inc.` |
+| `openeducat/openeducat_erp` | **LGPL** (8.241 B, `sha256:528f84036800`) | 🔴 `Copyright (C) 2007 Free Software Foundation, Inc.` |
+
+🔴 **La comparación con `P386` es la que importa, y ordena los tres casos por peligro:**
+
+| Caso | Qué devuelve el extractor | Peligro |
+|---|---|---|
+| prístino de Apache-2.0 (`P386`) | **nada** (MUDO) | 🟡 se nota: la compuerta se abstiene |
+| boilerplate **copyleft** (`P402`) | 🔴 **la FSF** | 🔴 **no se nota:** es una lectura con *cara de éxito* |
+| licencia **modificada** | el titular real | 🟢 correcto |
+
+🔵 **Y cierra el expediente de dos digests de la lista de retractaciones:** `93178a43d6d3` y `528f84036800` figuraban retractados sin que la causa estuviera escrita. La causa es ésta: se les había atribuido un titular que es el de la **plantilla**, no el del proyecto.
+
+### 📋 Las 5 acciones pre-registradas por el pase 120, con su cláusula al pie
+
+| Acción | Cláusula pre-registrada | Medido hoy | Veredicto |
+|---|---|---|---|
+| **A** — deriva de ★ (`P365`) | correr en o después de **`2026-10-06T10:48Z`** | lectura de hoy **`2026-10-05T18:45Z`** ⇒ faltan **16 h 03 m** | ⏸️ **NO corrida**, y el instante 🔴 **NO se re-basa** (4.ª herencia intacta) |
+| **E** — retractados que siguen formando racimo | **≥2** confirma · **exactamente 1** refuta | **2**: `fa4e32e5e622` (3 repos) y `c71d239df917` (2 repos) | 🟢 **CONFIRMADA**, y ⚠️ **en el borde exacto de su cláusula** |
+| **F** — columnas de huella cuyo encabezado no nombra el archivo | **≥3** confirma · **≤1** refuta | **20** que no lo nombran vs **12** que sí ⇒ **62,5 %** del total | 🟢 **CONFIRMADA con holgura** |
+| **G** — titular del payload en 10 filas MUDAS | **≥3 PRESENTE** confirma · **0** refuta | **6 de 10** con titular real; **+2** con titular de la **FSF** (`P402`); **2** no medibles por mi propia ruta | 🟢 **CONFIRMADA** ⇒ la tercera rama es **obligatoria** |
+| **H** — región-por-obligación en las filas `NO UBICADA` | **≥2 ubicadas** confirma · **0** refuta | **0 de 5** medibles traen identificador de obligación; 2 más no tienen README legible en `main`/`master` | 🔴 **REFUTADA** |
+
+### 🔴 La acción H, refutada, y lo que eso le quita a `P397`
+
+Las filas `NO UBICADA` de este estante, barridas por identificadores de obligación (`FERPA|COPPA|GDPR|AI Act|34 CFR|Title IV|LGPD|LOPD|APPI|PIPL|Ley 1581|UNESCO|NIST|ISO/IEC 42001|HIPAA`) **en el payload de su README**:
+
+| Fila `NO UBICADA` | Identificador de obligación hallado | ¿Queda ubicada? |
+|---|---|---|
+| `AKIVA-AI/toolkit-ml-provenance` | 🔴 ninguno | no |
+| `BlackyDrum/ai-tutor` | 🔴 ninguno | no |
+| `oompas/open-lms` | 🔴 ninguno | no |
+| `Ait0u5hi/canvas-scholar-mcp` | 🔴 ninguno | no |
+| `aurelio-labs/aiversity` | 🔴 ninguno | no |
+| `krishna16-origin/ai-tutor` · `maxew6/ai-tutor-project` | ⚠️ **no medible** — sin `README.md` en `main` ni en `master` | 🔴 **se dice, no se cuenta** |
+
+🔴 **`P397` queda con su alcance recortado, y escrito:** sirve para **herramientas de cumplimiento** —las que implementan una norma nombrada— y **no generaliza a tutores, LMS ni servidores MCP genéricos**, que son la mayoría de la pila `NO UBICADA`. 🔵 **La lectura útil del cero:** las 6 altas de hoy se ubicaron sin esfuerzo **porque son herramientas de obligación**; la pila `NO UBICADA` sigue sin ubicar **porque no implementa ninguna**. No es que falte el instrumento: es que esos repos **no tienen el atributo**. Y eso ya no es un hueco de este estante, es una propiedad del software.
+
+### 🔴 El cero del canal del encargo, ENUMERADO (`P370`)
+
+**Las 4 consultas globales obligatorias** devolvieron por **5.ª** vez consecutiva el eje *enseñar-sobre-IA*: `openclaw` (385.407 ★), `browser-use`, `mem0`, `AutoGen`, `dify`, `Flowise`, más cursos (`rohitg00/ai-engineering-from-scratch`, `pguso/agents-from-scratch`) y listas (`awesome-ai-agents-2026`). 🔴 **0 altas por el canal de oferta generalista** — y la consulta de plataformas verticales devolvió `OpenEduCat` y `CK-ERP`, los dos **ya publicados**.
+
+**Las 4 sondas por región respondieron las 4 — 0 silencios — y el cero está en el NUMERADOR:**
+
+| Región | Hechos devueltos | Ya publicados | Netos |
+|---|---|---|---|
+| **North America** | $951 M (2024) → $2.303,2 M (2029) al 15,9 %; 36 % de cuota; 86 % de alumnos; vacío regulatorio sin equivalente de la FDA; Colorado y Texas con requisitos parciales | 6 / 6 | 🔴 **0** |
+| **EMEA** | AI Act con efecto pleno desde agosto de 2026 y educación como alto riesgo; 94 % de organizaciones invertirá en formación de IA; conferencias de trabajo del Consejo de Europa | 3 / 3 | 🔴 **0** |
+| **APAC** | alianza **TCS + Pearson**; `Create+` de LearnUpon con sede en Sídney; 48 % de líderes de gobernanza; 57 % de organizaciones en Asia; OpenAI nombra responsable de política en ANZ | 5 / 5 | 🔴 **0** |
+| **LATAM** | 99 % de *startups* usan IA y 85 % de forma nativa; *working paper* de la UNU sobre educación superior en LAC; marco habilitante del BID; Ednova (Chile) | 4 / 4 | 🔴 **0** |
+
+🔵 **Lo que este cero agrega, y es distinto del cero del pase 120:** se midió **término por término** cuál canal está agotado y cuál no. Con `grep -ril` sobre los 8 archivos, los **18** hechos regionales estaban **los 18** publicados; los términos del eje de obligación —`Title IV`, `34 CFR`, `OSCAL`, `Haystack`, `NIST SP 800-53`, `BYU-Idaho`, `Aegis`, `AGP v1.0`, `Satisfactory Academic Progress`, `snflwr`— estaban **los 10 ausentes**. 🟢 **El agotamiento es de SONDA, y ahora con cifra: 18/18 saturado en intel, 10/10 virgen en obligación.** Y el contenido **regulatorio** neto del pase no entró por el canal de noticias: entró **dentro del software**, como el texto literal de `34 CFR` Partes 99 y 668 empaquetado en `regrails`.
+
+### 🔴 2 rechazos, con el motivo MEDIDO y no supuesto
+
+| Rechazado | Medición | Motivo |
+|---|---|---|
+| `Samielakkad/AI-EdTech-Sovereign-School-OS` | `main/LICENSE` **200**, **688 B**, `sha256:a663f268bd5c` | 🔴 **`P347` otra vez: el archivo EXISTE y no contiene una licencia.** Dice `All rights reserved` y **niega** explícitamente permiso para usar, copiar, modificar, distribuir **o entrenar modelos de ML**. Visible «para revisión y referencia». **Sin cesión ⇒ fuera**, y el 5 ★ no es el motivo |
+| `snflwr-ai/snflwr.ai` | `main/LICENSE` **200**, **2.833 B**, `sha256:0f14d6b37818` | 🔴 **Propietario desde 2026-09-18** (`P398`). La ventana AGPL-3.0 de 2026-02-27 → 2026-09-18 es irrevocable **para las copias de esa ventana**, y una copia de hoy **no** está en ella |
+
+🟢 **Y el rechazo de `AI-EdTech-Sovereign-School-OS` paga una deuda del pase 120.** Ese pase quiso verificar la obligación de *opt-out* de entrenamiento y **no pudo**: el «GitHub Opt-Out Registry», el archivo `.optout` y el estudio de la OSSF le dieron `EGRESS_BLOCKED` y quedaron fuera por canal. 🔵 **Hoy la misma obligación entra por otra puerta y con fuente primaria:** un `LICENSE` de 688 B leído del payload que **prohíbe entrenar modelos** en términos expresos. No valida ninguna de las tres afirmaciones del pase 120 —siguen sin verificar— pero sí convierte la obligación de una afirmación de tercero en **una medición de este estante**.
+
+### 🔬 El falso negativo que mi propio instrumento introdujo, dicho antes de usar sus cifras (`P160`)
+
+La acción **G** marcó `frappe/education` y `frappe/erpnext` como **`SIN-ARCHIVO-DE-LICENCIA`**. 🔴 **Es falso, y el defecto es de mi lista de rutas:** probé `main`/`master` × `LICENSE`/`LICENSE.md`/`LICENSE.txt`/`COPYING`/`LICENCE`, y frappe usa **`develop`** como rama por defecto y **`license.txt`** en minúscula.
+
+| Repo | Ruta real | Medición |
+|---|---|---|
+| `frappe/erpnext` | `develop/license.txt` | **35.149 B**, `sha256:3972dc9744f6` — **GNU GENERAL PUBLIC LICENSE** completa |
+| `frappe/education` | `develop/license.txt` | 🔴 **19 B**, `sha256:1fcecf395312` — el archivo entero es `License: GNU GPL V3` |
+
+🔴 **Y el segundo es `P347` en su forma más pura: 19 bytes que NOMBRAN una licencia sin contenerla.** Para una entrega: el módulo de educación de frappe hereda GPL-3.0 **por referencia**, y el texto que la constituye vive en otro repo. 🔵 **Dos consecuencias de método:** (1) las ★ de `nau-ai-advisor` se leyeron bien sólo porque se probó `master` tras `main` — la rama por defecto es parte del canal y se declara; (2) **un `SIN-ARCHIVO` de este estante vale lo que valga su lista de rutas**, y la mía acaba de fallar 2 de 10.
+
+### 🔴 2 suites de este estante estaban ROTAS antes de este pase, y son de la clase de `P399`
+
+El barrido completo de `compose/code/` da **69 de 71** suites en verde. 🔴 **Las 2 que fallan ya fallaban en `HEAD` (pase 120), y se verificó con `git stash` antes de atribuirlas a este pase:**
+
+| Suite | Afirma | Mide hoy | Estado en `HEAD` (pase 120) |
+|---|---|---|---|
+| `p351-star-digit-sweep` | una lista FIJA de cifras de ★ del corpus | 3 fallas; la primera es `385.407 ★` en `agents/top.md` | 🔴 **ya fallaba** (`exit 1`) |
+| `p356-citation-origin` | «hay **3** números definidos fuera de `patterns.md`» | 🔴 **26** | 🔴 **ya fallaba** (`exit 1`) |
+
+🔵 **Y lo que las explica es `P399` otra vez, en su forma más incómoda: son compuertas cuyo valor esperado es una MEDICIÓN del corpus.** Un corpus *append-only* que crece todos los pases las deja obsoletas **por construcción**, no por descuido — cada pase que escribe una cifra de ★ o define un número rompe la aserción que congeló la cuenta anterior. 🔴 **Una suite así no vigila el estante: lo retrata, y el retrato caduca al siguiente commit.** 🟢 **No se tocan en este pase y se dice por qué:** arreglarlas subiendo el número esperado las vuelve a romper en el pase 122, y la salida correcta es cambiar lo que afirman —de «son exactamente N» a una propiedad invariante—, que es trabajo de instrumento y queda pre-registrado como acción **M**.
+
+
+### 📌 Acciones pre-registradas para el próximo pase (con cláusula de refutación)
+
+- **A — `P365`, intacta, re-heredada SIN re-basar por 4.ª vez.** Evaluar deriva de ★ en el primer pase que corra en o después de **`2026-10-06T10:48Z`**. **Faltan 16 h 03 m.** 🔴 **El instante no se re-basa, y este pase deja constancia de que tampoco se re-basó hoy.**
+- **I — darle a `P399` su tamaño.** Re-correr **cada** auto-censo que este estante publicó (`P385`, `P391`, `P394`) contra el árbol de **su propio commit** y contra el del commit **anterior**. **Hipótesis:** **≥2 de 3** coinciden con el árbol ANTERIOR y no con el propio ⇒ el defecto de orden es sistémico y pide una compuerta de *medir-después-de-escribir*. **Refutada si** **0 o 1** coinciden con el anterior ⇒ `P394` fue un descuido de un pase y no una clase.
+- **J — poner a prueba `P402` fuera de las dos filas que lo destaparon.** Barrer todas las filas copyleft del estante (GPL/LGPL/AGPL) y contar a cuántas se les atribuyó un titular que es el de la **plantilla** (FSF) y no el del proyecto. **Hipótesis:** **≥3** ⇒ hay que re-escribir la columna de titular de la capa copyleft. **Refutada si** **≤1** ⇒ `GibbonEdu` y `OpenEduCat` son los dos únicos casos y se corrigen en sus filas.
+- **K — medir si `P401` tiene más casos, por el registro y no por el nombre.** Tomar las filas del estante que declaren paquete en PyPI o npm y comprobar cuántas tienen **nombre de paquete distinto del nombre de repo**. **Hipótesis:** **≥3** ⇒ la columna de identidad necesita las dos coordenadas (repo **y** registro). **Refutada si** **≤1** ⇒ `ferpa-haystack` es un caso aislado.
+- **L — arreglar la lista de rutas que falló 2 de 10 y re-medir los `SIN-ARCHIVO` del estante.** Agregar `develop` y los nombres en minúscula, y re-correr sobre **todas** las filas marcadas `SIN CESIÓN`/`SIN-ARCHIVO`. **Hipótesis:** **≥2** resultan tener archivo de licencia y la fila estaba mal. **Refutada si** **0** cambian ⇒ la lista vieja bastaba para el estante real y frappe era la excepción.
+- **M — convertir las 2 suites-retrato en suites de PROPIEDAD.** `p351-star-digit-sweep` y `p356-citation-origin` afirman cardinalidades congeladas del corpus y por eso caducan cada pase (`P399`). Re-escribir lo que afirman: en vez de «son exactamente **N**», una propiedad invariante (p. ej. «toda cifra de ★ tiene banda y fecha», «todo número citado en `patterns.md` tiene origen declarado»). **Hipótesis:** las 2 se pueden re-expresar como propiedad **sin perder** el defecto que cada una detectaba originalmente. **Refutada si** al menos **1** sólo detecta su defecto contando ⇒ entonces esa suite necesita re-congelar su número en cada pase, y hay que decirlo en su README en vez de dejarla roja.
 
 ## 🟢 Pase 120 del 2026-10-05 (lectura `17:45Z`) — las 2 acciones vivas corridas y confirmadas, y el ancho que queda del intervalo es HISTORIA, no convención
 
