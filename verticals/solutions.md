@@ -9,6 +9,7 @@ updated: 2026-10-05
 > Plataformas verticales reales, en producción, customizables con AI.
 > Modelo: partir de algo que ya funciona y que ya tiene los datos, y agregar la capa agéntica arriba.
 > Verificado vía WebFetch el 2026-09-30; las capas del pase 11, el 2026-10-01.
+> **Pase 105 del 2026-10-05:** 🔴 **0 verticales nuevas —el canal generalista redescubre `OpenEduCat` y nombra `.LRN`, las dos ya medidas— y el eje que este estante gana es el CONTENIDO que va DENTRO de la plataforma.** 🔵 **Una plataforma es un envase**, y el pase midio que el contenido **puede ceder menos que la plataforma que lo sirve**: `OATutor` es **MIT** y su codigo se embarca entero, pero su contenido entra por submodulo desde un repo con **0 archivos de licencia en 51.929 rutas**, y el **titular** de ese contenido —`openstax/osbooks-*`, **13 libros leidos del payload**— cede **`NC-SA` en 11 de 13**. 🔴 **De los 13.371 problemas del *content pool*, 592 (4,4 %) son embarcables en una entrega comercial.** 🔵 **Regla de estante, para TODAS las filas de este archivo: la licencia de la plataforma no dice nada de la del contenido** — Moodle (GPL-3.0) con contenido `CC BY` es mas entregable que OATutor (MIT) con contenido `NC`. 🟢 **Lo accionable: `physics` y `statistics` son los DOS libros de OpenStax `CC BY 4.0`** y los unicos embarcables. Ver `compose/code/p326-titleholder-book-license/` y la receta `R-105-CESION-CONTRA-TITULAR`.
 > **Pase 104 del 2026-10-05:** 🟢 **El canal VOLVIO, y eso es `P320` confirmado en la direccion contraria: es un hecho de PERMISO.** El instrumento del pase 103 estaba intacto y le faltaba el derecho a correrlo; esta sesion **si** lo tiene. Medido con control negativo antes de usarlo (rama inventada, ruta inventada y repo inventado dan **404**; `main`/`master`/`HEAD` dan el **mismo** sha): `raw.githubusercontent.com` **200**, clon `--filter=blob:none` de terceros **OK**. 🔴 **Sigue apagado:** `api.github.com` **403**, y `openstax.org`, `creativecommons.org`, `arxiv.org`, `aclanthology.org` **bloqueados por egress** por `curl` **y** por el fetcher. 🟢 **+2 verticales, las primeras en varios pases, y las dos con la licencia leida del PAYLOAD y clasificada por el control compartido (`lib/license_family.sh`, `P237`).** 🔴 **Y las dos son COPYLEFT, que es el hallazgo del pase para este estante: `learnhouse/learnhouse` **AGPL-3.0** (34.522 B) y `GarethManning/claude-education-skills` **CC BY-SA 4.0** (1.229 B).** 🔵 **Ninguna de las dos entra en el foco MIT/Apache/BSD de esta base, y se publican igual CON la bandera puesta: un LMS AGPL que el cliente expone por red arrastra la clausula de red sobre sus propias modificaciones, y una libreria de skills `CC BY-SA` impone **share-alike sobre el material derivado**, que es justo lo que un estudio produce encima.** ⚠️ **`frappe/lms` NO entra: el gate de `P311` lo encontro ya publicado — y de paso queda medido que tambien es **AGPL-3.0** (33.892 B), leido del payload.** 🔵 **`claude-education-skills` declara 165 skills pedagogicas en 20 dominios y **acceso MCP hospedado ahora con token**: el camino libre es local/plugin, que es el que un estudio usaria de todos modos.** Ver **`P322`**–**`P325`**.
 > **Pase 103 del 2026-10-05:** 🔴 **0 verticales nuevas por canal DENEGADO** (clon sin blobs sin permiso, `WebFetch` bloqueado 4/4; `P320`), y el eje que este archivo gana es de **CALENDARIO: toda fila ya publicada tiene DOS relojes de AI Act, no uno.** 🟢 **Art. 50 (marcar contenido sintético) está VIGENTE desde `2026-08-02` con gracia hasta `2026-12-02`** — aplica a cualquier LMS o autograder de esta tabla que **genere** texto, consignas, feedback o cursos, y es justo lo que `aiact-50-2-pack/` de esta base ya marca sobre SCORM ya armado (**27/27**, **37/37** con `xmllint`). 🔴 **Anexo III (admisión, *scoring*, deserción, conducta en examen) se diferió al `2027-12-02` y es CONDICIONAL** — cotizarlo hoy como *«obligación inminente»* es incorrecto desde julio de 2026. 🔵 **Pistas sin verificar:** `OATutor` (MIT + contenido CC BY 4.0), **Moodle 5.1** (*toggle* de AI **por curso y por actividad** — que leído contra el art. 50 vuelve **finito** el inventario de lo que hay que marcar) y **Open edX** (*AI Assistant* dentro del perímetro).
 > **Pase 101 del 2026-10-04:** 🔴 **Verticales nuevas: 0 — y por primera vez el cero viene con el gate que lo PRUEBA en vez de con una impresión.** El barrido obligatorio del encargo (`open source platform education ERP CRM MIT Apache`) devolvió por vigesimoséptima vez el mismo eje generalista, y las 5 candidatas se pasaron por `p311` antes de redactar nada: **`openeducat/openeducat_erp`, `aureuserp/aureuserp`, `frappe/education`, `frappe/erpnext` y `apache/ofbiz` → 5 de 5 YA PUBLICADAS**, con archivo, línea y sección. 🔵 **Veintisiete pases con el mismo resultado es una propiedad del barrido: la consulta pide «plataforma + ERP/CRM + licencia» y eso describe el mercado generalista, no la vertical educativa — su cero es un dato y se mantiene por eso, pero el presupuesto de descubrimiento ya no se gasta esperando que rinda.** 🔴 **Lo que SÍ cambia en este archivo es una advertencia de PROCEDENCIA sobre una fila que ya tenía, y es accionable antes de cotizar:** este archivo nombra `OpenMAIC` (MIT, Tsinghua) como una de las dos únicas bases de tutor open source **permisivas y de escala**, y el barrido de este pase destapó que la prensa de industria linkea como *«el proyecto OpenMAIC en GitHub»* un **fork congelado en `v0.2.1` con `AGPL-3.0`** — un *minor* antes del relicenciamiento AGPL→MIT de v0.3.0. **La fila es correcta para el upstream `THU-MAIC/OpenMAIC`; el riesgo es que el slug que el cliente traiga no sea ése** (`P316`). 🟢 **Y la capa nueva del pase —observación de aula y análisis del discurso, 3 piezas permisivas— se monta SOBRE lo desplegado y no reemplaza nada: es la que convierte la grabación que el LMS ya guarda en evidencia para el docente** (ver `compose/patterns.md`, `R-101-OBSERVACION-PERMISIVA`). Ver **`P312`**–**`P316`**.
@@ -163,6 +164,66 @@ updated: 2026-10-05
 > **`qti3-pnp`**, que abren accesibilidad de evaluación como entregable auditable (**P72**). ⚠️ **Open edX cambia de
 > recomendación: proponer con presupuesto de mantenimiento (gap 70).** Ver la sección del pase 33, abajo.
 
+
+## 🔴 Verticales nuevas: 0 — y el eje que este estante gana es el CONTENIDO que va DENTRO de la plataforma, que puede ser mas cerrado que la plataforma (pase 105 del 2026-10-05)
+
+### 🔬 El canal (`P247`), medido y no heredado
+
+🟢 `raw.githubusercontent.com` **200**; clon `--filter=blob:none` **OK**; 🆕 `sparse-checkout` **OK**.
+🔴 `api.github.com` **403**; `github.com` por `curl` **403**. 🔴 Egress **000**: `openstax.org`,
+`creativecommons.org`, `arxiv.org`, `aclanthology.org`, `unu.edu`, `coe.int`,
+`publications.iadb.org`, `unesco.org`. 🔵 Control negativo: rama/ruta/repo/`collection` inventados →
+**404** los cuatro.
+
+### 🔴 Por que 0 verticales, con las dos candidatas nombradas
+
+| candidata del barrido | por que NO entra |
+|---|---|
+| `OpenEduCat` (*«3M+ usuarios, 300 modulos, 65 idiomas»*, sobre **Odoo**) | 🔵 **ya esta en este estante desde el pase 2.** El canal la redescubre; **el redescubrimiento no es un alta** (`P310`, la leccion del pase 100) |
+| `.LRN` (*«originally developed at MIT»*) | 🔵 **ya medida:** `openacs/dotlrn`, **dotLRN 2.10.1**, `<release-date>2024-09-02</release-date>`. 🔴 **La frase del canal es de ORIGEN, no de licencia** — *«desarrollada en el MIT»* no es *«licencia MIT»*, y confundirlas es el error que `P314` cobra |
+
+🔵 **El cero es informativo:** este estante lleva **35 pases** sin que el canal generalista le
+aporte una plataforma que no tenga. Las altas de los ultimos pases vinieron todas de **buscar por
+artefacto del dominio**, no por la palabra `education`.
+
+### 🔴 El eje nuevo, y cambia como se cotiza una customizacion sobre cualquier fila de este estante
+
+Este archivo mide **plataformas**: Moodle, Open edX, Canvas, Kolibri, OpenEduCat, Sakai, ILIAS,
+OATutor. 🔵 **Una plataforma es un envase.** Lo que el cliente ve y lo que el regulador audita es el
+**contenido** que va adentro — y el pase 105 midio que **el contenido puede ceder MENOS que la
+plataforma que lo sirve**:
+
+| Capa | Pieza medida | Cesion | Consecuencia para una entrega comercial |
+|---|---|---|---|
+| plataforma | `OATutor` (`CAHLR/OATutor`) | 🟢 **MIT**, `LICENSE` 1.104 B | 🟢 **el codigo se embarca entero** |
+| contenido | `CAHLR/OATutor-Content` (submodulo) | 🔴 **0 archivos de licencia en 51.929 rutas**; cesion solo en el README y en un campo por item | ⚠️ depende del titular de cada item |
+| titular del contenido | `openstax/osbooks-*`, **13 libros leidos del payload** | 🔴 **11 `NC-SA`**, 🟢 **2 `CC BY 4.0`** (`physics`, `statistics`) | 🔴 **11 de 13 libros NO se pueden embarcar en producto comercial** |
+
+🔴 **Y el numero que lo cierra: de los 13.371 problemas del *content pool*, 592 (4,4 %) son
+embarcables.** **8.312 (62,2 %) declaran `CC BY 4.0` mientras el titular de la edicion que ellos
+mismos citan cede solo `NC-SA`.**
+
+### 🔵 La regla de estante que sale de esto, y aplica a TODAS las filas de este archivo
+
+🔵 **La licencia de la plataforma acota lo que se puede hacer con el software; no dice nada de lo
+que se puede hacer con los datos y el contenido que la plataforma trae.** Moodle (GPL-3.0) con
+contenido `CC BY` es mas entregable que OATutor (**MIT**) con contenido `NC`: **la bandera de la
+fila de arriba de este archivo no es el limite real de la entrega.**
+
+🔴 **Consecuencia operativa, concreta:** en toda propuesta que parta de una fila de este estante, la
+*due diligence* se corre **dos veces** — una sobre el repo de la plataforma y otra sobre **el
+titular de cada cuerpo de contenido que se embarque**, leyendo su payload y no su README. El
+instrumento esta construido: `compose/code/p326-titleholder-book-license/`, y la receta corregida es
+**`R-105-CESION-CONTRA-TITULAR`**.
+
+### 🟢 Lo accionable que este eje deja sobre la mesa, con nombre y numero
+
+🟢 **`physics` (col12081, `CC BY 4.0`, `LICENSE` 19.103 B) y `statistics` (col30309, `CC BY 4.0`,
+18.706 B) son los DOS libros de OpenStax que Globant puede embarcar en un producto comercial**,
+leidos del payload del titular y con control negativo corrido. Para todo lo demas de matematica y
+fisica de OpenStax, el contenido del cliente **tiene que ser del cliente**.
+
+---
 
 ## 🟢 +2 verticales — y las DOS son copyleft, que es el hallazgo de este estante (pase 104 del 2026-10-05)
 

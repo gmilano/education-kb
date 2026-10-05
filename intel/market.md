@@ -70,6 +70,149 @@ updated: 2026-10-05
 > **LATAM:** 🔵 el hallazgo del pase — **existe una capa MCP nacional brasileña de datos públicos, activa y MIT, y
 > educación es el único dominio grande que falta** (**gap 69**).
 
+## 🟢 Barrido regional 34: las cuatro regiones responden — y el calendario del AI Act vuelve MAL por NOVENA vez, ahora desde North America y LATAM (pase 105 del 2026-10-05)
+
+🟢 **Cuatro regiones, 0 silencios.** Año **calculado** (`date -u +%Y` → **2026**), no fijado.
+
+### 🔬 El canal (`P247`), declarado antes de cualquier veredicto
+
+🔴 **Las CUATRO fuentes primarias que el barrido devolvio estan fuera de alcance:** `unu.edu`,
+`unesco.org`, `publications.iadb.org` y `coe.int` dan **000 por egress**. 🔵 **Lo que eso permite y
+lo que no:** se puede registrar **que un documento existe, quien lo publica y cual es su unidad de
+medida** —eso vino en el resultado del barrido—, pero **no** sus cifras internas como hecho de
+primera mano. Se dice en vez de rellenarse (`P314`).
+
+### 🔴 El canal reincide por NOVENA vez, y `P321` lo sigue prediciendo
+
+El barrido de **North America** devolvio *«the EU AI Act, taking full effect in August 2026,
+classifies education AI as high-risk»* y el de **LATAM**, de forma independiente, *«Europe's AI Act
+regulatory framework entered into force progressively from August 2026»*.
+
+🔵 **Novena reproduccion en nueve pases, y por primera vez desde el par NA + LATAM** (el pase 104 lo
+tuvo desde NA + EMEA). **Dos pares de consultas no relacionadas reproducen el mismo error: es una
+propiedad del canal, no un desliz.** La prensa de industria no va a corregirlo.
+
+🟢 **La correccion de esta base se sostiene y NO se toca:**
+
+| Reloj | Que obliga | Fecha | Estado al 2026-10-05 |
+|---|---|---|---|
+| **Art. 50(2) — transparencia** | marcar contenido sintetico, informar al afectado | **2026-08-02**, gracia hasta **2026-12-02** | 🟢 **VIGENTE — la gracia vence en 2 meses** |
+| **Anexo III — alto riesgo educativo** | FRIA (art. 27), supervision humana y registro del *deployer* (art. 26) | **2027-12-02** | 🔴 **diferido y CONDICIONAL** |
+
+**Instrumento:** Reglamento (UE) **2026/1744** (*Digital Omnibus on AI*), DOUE 24/07/2026, en vigor
+27/07/2026. La prorroga esta **condicionada** a que la Comision confirme las normas armonizadas.
+
+### 🔴 Y un segundo defecto del canal, medido este pase: TRES cifras globales incompatibles en UN barrido
+
+| Cifra que devolvio el canal | Implica |
+|---|---|
+| USD **6,4 B** (2025) → **79,6 B** (2034), CAGR **31,35 %** | ×12,4 en 9 años |
+| USD **7,52 B** (2025) → **10,6 B** (2026), CAGR **40,9 %** | ×1,41 en **un** año |
+| la que esta base venia citando: **9,58 B** → **42,48 B** (2030), CAGR **41,5 %** | ×4,4 en 5 años |
+
+🔴 **Las tres no pueden ser del mismo mercado.** Difieren en **punto de partida** (6,4 / 7,52 / 9,58
+para años contiguos) y en **horizonte**, y ninguna publica su **alcance** —¿incluye LMS corporativo?
+¿hardware? ¿tutoria al consumidor?—. 🔵 **Regla que esta base ya tiene construida
+(`compose/code/market-triple-check/`) y que este barrido vuelve a justificar: una cifra de mercado
+sin alcance declarado no es una cifra, es un titular.** En una propuesta se cita **el alcance y la
+fuente**, o no se cita.
+
+### 🟢 Lo que cada region aporta este pase, y es NUEVO respecto del barrido 33
+
+| Region | Dato nuevo del barrido 34 |
+|---|---|
+| **North America** | 🆕 **OpenAI lanzo un programa educativo a nivel PAIS con 8 socios nacionales en el Q1 de 2026.** 🔵 Eso mueve el eje de compra de *distrito* a **acuerdo de infraestructura nacional**, que es un competidor distinto del que esta base venia modelando. 🔴 **Y el hueco que lo acompaña: solo el 10 % de las instituciones tiene lineamientos formales de AI y el 71 % de los docentes de EEUU no tiene formacion en AI.** NA sigue en **36 %** del mercado global y **41,7 %** del crecimiento |
+| **EMEA** | 🆕 **El Consejo de Europa realiza en OCTUBRE DE 2026 —este mes— su 2ª conferencia de trabajo sobre las dimensiones REGULATORIAS de la AI en educacion.** 🔵 Es un foro de *soft law* paneuropeo **distinto** del AI Act y con mas paises que la UE. 🆕 **Cumbre de Adopcion de AI del Reino Unido: £200 M+**, con un modelo de reparto explicito —**Estado como financiador, Big Tech (Cisco, IBM, BT, Rolls-Royce) como ejecutor, sindicatos como legitimador**—. 🔴 **38 % de las organizaciones EMEA todavia no empezo a pilotear**, contra **94 %** que declara intencion de invertir en formacion de AI: **la brecha intencion/ejecucion es el dato vendible de la region** |
+| **APAC** | 🆕 **El eje declarado de 2026 es SOBERANIA de AI** —*«AI sovereignty will set the pace for Asia Pacific in 2026»*—, lo que confirma la lectura del pase 104 y **refuerza la bandera AGPL como argumento EN CONTRA** en esta region. **48 %** de los lideres de gobernanza APAC pone adopcion de AI como prioridad top; **57 %** de las organizaciones de Asia ya la incorporo en al menos un area. 🆕 Movimientos de proveedor: **TCS + Pearson** (alianza plurianual de *AI learning*), **LearnUpon** (sede APAC en Sydney, autoria de cursos `Create+`), **NIIT MTS** (top-20 de desarrolladores de contenido). 🔴 **Marco todavia fragmentado por pais**, con las consultas de Singapur como plantilla |
+| **LATAM** | 🆕 **Existe un relevamiento academico regional con unidad institucional: el *working paper* de UNU/UNESCO sobre implementacion de AI en educacion superior de America Latina y el Caribe — 200 instituciones de 19 paises, relevadas entre agosto y octubre de 2025, en cinco dimensiones (enseñanza, investigacion, vinculacion, administracion y GOBERNANZA).** 🔵 **Es una unidad distinta de todo lo que esta base tenia para LATAM**, que venia midiendo **personas** (92 % de alumnos, 79 % de docentes). **Instituciones no es personas**, y la dimension de *gobernanza* es justo la que una propuesta necesita. 🔴 **Sus cifras internas NO se publican aca:** `unu.edu` y `unesco.org` dan **000**. 🆕 **BID: *An Enabling Regulatory Framework for AI in Latin America and the Caribbean*** (`publications.iadb.org`, **000**). Del lado de empresa: **99 %** de las startups LATAM usa AI y **85 %** la integra de forma nativa; **`Ednova` (Chile)** citada como caso edtech, 🔴 **sin repo publico localizado por este canal** |
+
+## Opportunities by region
+
+### North America
+
+🟢 **La oportunidad de este pase tiene nombre, numero y es nueva: AUDITORIA DE CESION DE CONTENIDO
+CONTRA EL TITULAR.** El pase 104 vendia *«auditoria de procedencia»*; el 105 midio que el problema
+no es la procedencia sino **la cesion afirmada contra la cesion otorgada**: **8.312 de 13.371 items
+(62,2 %)** de un *content pool* academico norteamericano **declaran `CC BY 4.0` mientras el titular
+de la edicion que ellos mismos citan cede solo `NC-SA`**, y **solo 4,4 % es embarcable**.
+
+🔴 **Por que es NA y no otra region:** los tres especimenes medidos son norteamericanos —`OATutor`
+(UC Berkeley), `OATutor-Content` (idem), `OpenStax` (Rice University)— y el comprador decide por
+**distrito o universidad, sin regulador sectorial**. 🆕 **Y el programa a nivel pais de OpenAI (8
+socios nacionales, Q1 2026) sube la apuesta:** cuando la compra pasa de distrito a acuerdo nacional,
+**la due diligence de contenido deja de ser un riesgo de un colegio y pasa a ser un riesgo de
+Estado**.
+
+**Entregable:** `R-105-CESION-CONTRA-TITULAR` corrida como *due diligence* previa a cualquier
+adopcion de plataforma + corpus, con `compose/code/p326-titleholder-book-license/` como instrumento
+y el TSV por edicion como anexo. 🟢 **El gancho comercial, concreto: `physics` y `statistics` son los
+dos unicos libros de OpenStax `CC BY 4.0` — hay una respuesta que no es «no».**
+
+### EMEA
+
+🟢 **La oportunidad inmediata sigue siendo el art. 50(2), que vence su gracia el 2026-12-02** —**dos
+meses**— y esta base ya tiene la pieza construida (`compose/code/aiact-50-2-pack/`).
+🔵 **La segunda sigue siendo la prohibicion de reconocimiento de emociones en aula, que YA rige.**
+
+🆕 **La tercera es de calendario y es de este mes: la 2ª conferencia de trabajo del Consejo de Europa
+sobre las dimensiones regulatorias de la AI en educacion, en octubre de 2026.** 🔵 **Es *soft law*
+paneuropeo, no AI Act**, y alcanza paises **fuera** de la UE: para un cliente EMEA no-UE es el unico
+marco educativo especifico que lo toca, y esta base no tenia registrado ese canal.
+
+🆕 **Y la cuarta sale de un numero, no de una ley: 38 % de las organizaciones EMEA no empezo a
+pilotear contra 94 % que declara intencion de invertir en formacion.** 🔵 **Ese hueco es un encargo
+de *enablement*, no de cumplimiento**, y el modelo del Reino Unido (£200 M+, Estado financia, Big
+Tech ejecuta, sindicatos legitiman) dice **exactamente en que silla se entra**: la de ejecutor.
+
+🔴 **La trampa a evitar, por novena vez: no cotizar el Anexo III como si venciera en agosto de 2026.**
+Esta diferido al **2027-12-02** y de forma **condicional**.
+
+### APAC
+
+🟢 **El eje de la region esta declarado por el propio canal y es SOBERANIA.** Eso ordena la
+propuesta entera: **autohospedaje, pesos y datos dentro de la jurisdiccion, y ninguna dependencia de
+API de un tercero** como condicion de entrada, no como diferencial.
+
+🔴 **La consecuencia de licencia es directa y esta base ya la midio: la bandera AGPL es un argumento
+EN CONTRA en APAC** —`learnhouse/learnhouse` y `frappe/lms` son AGPL-3.0—, porque un cliente que
+autohospeda y modifica para su jurisdiccion no quiere obligacion de publicacion. 🟢 **Lo permisivo
+que esta base tiene para esta region: `OATutor` (MIT), `Kolibri` (MIT, y pensado para operacion
+offline), los motores QTI permisivos del pase 99.**
+
+🆕 **Y el eje de contenido se vuelve mas duro aca que en ninguna otra region:** si el cliente exige
+soberania, **tambien la exige sobre el corpus**, y **11 de los 13 libros de OpenStax son `NC-SA`**.
+🔵 **Entregable APAC: una capa de contenido propia del cliente sobre plataforma permisiva**, con
+`physics` y `statistics` (`CC BY 4.0`) como semilla y el resto producido localmente — que es,
+ademas, el encargo mas grande de los tres.
+
+🔴 **Y el limite declarado: marco fragmentado por pais y sin horizonte de armonizacion.** Una
+propuesta regional APAC se cotiza **por jurisdiccion**, no por region.
+
+### LATAM
+
+🟢 **La oportunidad cambia de unidad este pase, y eso es lo valioso.** Esta base venia midiendo
+LATAM en **personas** (92 % de alumnos, 79 % de docentes). 🆕 **El relevamiento de UNU/UNESCO sobre
+educacion superior de America Latina y el Caribe mide INSTITUCIONES: 200, en 19 paises, en cinco
+dimensiones — y una de las cinco es GOBERNANZA.**
+
+🔵 **Por que importa para vender:** *«92 % de los alumnos usa AI»* describe un hecho consumado y no
+nombra comprador. *«200 instituciones de 19 paises evaluadas en su dimension de gobernanza»* nombra
+**la unidad que firma un contrato** y **el eje por el que lo firma**. 🟢 **El encargo es
+gobernanza de AI a nivel institucion** —politica de uso, trazabilidad, procedencia de contenido,
+evidencia de borrado—, y esta base ya tiene las piezas construidas para los cuatro.
+
+🔴 **Dicho con su limite, no rellenado:** las cifras internas de ese *working paper* y del marco
+regulatorio del BID **no se leyeron** — `unu.edu`, `unesco.org` y `publications.iadb.org` dan **000**
+por egress. **Lo que se registra es que existen, quien los publica y cual es su unidad.** Queda
+**pre-registrado**: leerlos en cuanto un canal los alcance, antes de citarlos en una propuesta.
+
+🔵 **Y el dato de empresa, que es el mismo canal que ya se venia usando:** **99 %** de las startups
+LATAM usa AI y **85 %** la integra de forma nativa — un mercado de integracion, no de evangelizacion.
+⚠️ **`Ednova` (Chile), citada como caso edtech regional, queda como PISTA: no se localizo repo
+publico por este canal.**
+
+---
+
 ## 🟢 Barrido regional 33: las cuatro regiones responden — y el calendario del AI Act vuelve MAL por OCTAVA vez, ahora por dos consultas a la vez (pase 104 del 2026-10-05)
 
 🟢 **Cuatro regiones, 0 silencios.** Año **calculado** (`date -u +%Y` → **2026**), no fijado.

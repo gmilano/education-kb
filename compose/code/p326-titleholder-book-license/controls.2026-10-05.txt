@@ -1,0 +1,15 @@
+--- C1: collection inventado en repo REAL -> debe ser NO-ALCANZABLE (404) ---
+calculus-volume-99: 404
+--- C2: repo inventado -> 404 ---
+osbooks-inventado-999: 404
+--- C3: el clasificador PUEDE devolver algo distinto de CC BY-NC-SA ---
+openstax/openstax-cms/main/LICENSE       primera linea: 
+openstax/os-webview/main/LICENSE         primera linea: 404: Not Found
+--- C4: main vs master vs HEAD deben dar el MISMO payload (sha256 del collection) ---
+  main   07bdea41e47e979d
+  master 07bdea41e47e979d
+  HEAD   07bdea41e47e979d
+--- C5: por que tres conteos de bytes distintos para la MISMA familia ---
+  osbooks-calculus-bundle            bytes=21443 lineas=429 sha256=ced5bed6eec9c127
+  osbooks-college-algebra-bundle     bytes=21013 lineas=429 sha256=8e63d319b3d085a7
+  osbooks-prealgebra-bundle          bytes=21442 lineas=429 sha256=ab1a44bbba582526

@@ -8,6 +8,7 @@ updated: 2026-10-05
 
 > Agentes y herramientas AI open source para educación. Foco: MIT / Apache 2.0 / BSD.
 > Verificado repo por repo vía WebFetch el 2026-09-30 (stars y licencia leídos de la página del repo).
+> **Pase 105 del 2026-10-05:** 🔴 **0 altas de agente —vigesimoctavo barrido consecutivo con el eje generalista— y el pase gasta su esfuerzo entero en la ACCION PRE-REGISTRADA, que sale CONFIRMADA EN LA LETRA y FALSIFICADA EN LA MAGNITUD, en la direccion que nadie previo.** La prediccion del pase 104 decia que `Calculus Volume 1` seria la **excepcion** `CC BY-NC-SA 4.0` entre libros `CC BY 4.0`, *«uno de a lo sumo dos de los 7»*. 🟢 **`Calculus Volume 1` ES `NC-SA`** —leido del titular—. 🔴 **Y lo son SIETE de las OCHO ediciones citadas que pudieron medirse — y ONCE de los TRECE libros que el titular publica.** La excepcion no era el `NC-SA`: **la excepcion es el unico libro `CC BY 4.0` que existe (`physics`), y es el unico que NINGUN item etiqueta.** 🟢 **La accion se corrio con `openstax.org` en `000`, y sin violar la prohibicion de usar canal secundario** (`P326-A`): el titular publica tambien en la organizacion `openstax` de GitHub, y ese canal estaba vivo. 🔴 **El hallazgo que manda, y es contra una fila de esta tabla:** censo de los **13.371** problemas de `CAHLR/OATutor-Content` —no muestra— cruzando el campo `license` contra el campo `oer`, que es **quien es el titular**: **8.312 items (62,2 %) declaran `CC BY 4.0` mientras el titular de la edicion que ellos mismos citan cede solo `NC-SA`**. **Embarcable en una entrega comercial: 592 items = 4,4 %.** 🔴 **Eso INVIERTE la receta `R-104-CAPA-DE-CONTENIDO` de esta base**, que mandaba embarcar los cursos con **100 %** de etiquetado: son exactamente los que estan **100 % mal etiquetados**. 🔵 **La tasa de llenado no mide permiso, mide la plantilla de autoria del curso** (`P326`). 🔴 **Y una correccion de metodo contra esta base entera (`P327`): el conteo de bytes y el `sha256` crudo de un archivo de licencia NO son identidad** — tres `LICENSE` del mismo titular dan 21.443 / 21.013 / 21.442 B y son **el mismo texto** con CRLF, LF y CRLF-sin-salto-final: un unico `sha256` al normalizar. Ver `compose/code/p326-titleholder-book-license/`, las tendencias **843**–**850** y los patrones **P326**–**P327**.
 > **Pase 104 del 2026-10-05:** 🟢 **El canal VOLVIO, y eso es `P320` confirmado en la direccion contraria: es un hecho de PERMISO.** El instrumento del pase 103 estaba intacto y le faltaba el derecho a correrlo; esta sesion **si** lo tiene. Medido con control negativo antes de usarlo (rama inventada, ruta inventada y repo inventado dan **404**; `main`/`master`/`HEAD` dan el **mismo** sha): `raw.githubusercontent.com` **200**, clon `--filter=blob:none` de terceros **OK**. 🔴 **Sigue apagado:** `api.github.com` **403**, y `openstax.org`, `creativecommons.org`, `arxiv.org`, `aclanthology.org` **bloqueados por egress** por `curl` **y** por el fetcher. 🟢 **Con canal, las TRES acciones pre-registradas se corren: la de `p317` que llevaba DOS pases diferida, y las dos del pase 103.** 🔴 **La que manda es contra una fila de esta tabla, y corrige a la RECETA, no a la fila: los 111 archivos de `data/` de `rosewang2008/edu-convokit` quedan resueltos de punta a punta y **NINGUNO** es redistribuible en una entrega comercial — 29 son `NC` (`talkmoves`, ya medido en el pase 102) y **74 NO TIENEN CESION ALGUNA**.** 🔴 **`P324`: la receta del pase 102 los trataba como «`NC` hasta prueba en contrario»; la direccion era segura y la CATEGORIA equivocada — `NC` es una licencia que se puede CUMPLIR, la ausencia de cesion no concede nada.** 🟢 **`amber` (45): upstream `laurenceholt/amber` (XQ Institute), **0 archivos de licencia en 46 rutas enumeradas** y `README` sin una linea de terminos, aserido por DOS canales; identidad **45/45** nombres identicos.** 🔴 **`P325` — `ncte` (29) es el caso mas facil de leer mal PORQUE su upstream SI tiene un `LICENSE` impecable: `MIT (c) 2022 Dora Demszky`, 1.068 B… sobre un repo de **10 archivos que no contiene ninguna transcripcion**. El MIT cubre *«the Software»* y el corpus viaja por **formulario por usuario** hacia Google Drive: redistribuirlo no es un desajuste de licencia, **quita una compuerta de acceso que el titular instalo a proposito**.** 🟢 **Y confirma la cautela del pase 103: el «CC BY 4.0» de NCTE venia de agregador y el titular NO lo declara en ninguna parte (`P314`).** 🔵 **Los upstreams no se adivinaron del nombre del directorio: se leyeron de los notebooks del propio redistribuidor.** ⚠️ **0 altas de agente, y el cero es INFORMATIVO: el barrido global devolvio por VIGESIMOSEPTIMA vez el eje generalista (`P281`), con «Hermes Agent, +180.000 estrellas» reapareciendo — el mismo reclamo que el pase 103 rechazo por inverificable, y se rechaza otra vez.** Ver **`P322`**–**`P325`** y `compose/code/p324-corpus-upstream-cession/`.
 > **Pase 103 del 2026-10-05:** 🔴 **0 altas — y a diferencia del pase 102 el cero NO es una elección: el canal de verificación está APAGADO.** Clon sin blobs **DENEGADO por permisos de sesión**, `WebFetch` **bloqueado por egress en 4 de 4 dominios**, `WebSearch` único vivo ⇒ **0 licencias leídas de payload** (`P320`: *el canal de verificación es un hecho de PERMISO, no sólo de red; el instrumento puede estar intacto y faltar el derecho a correrlo*). 🔴 **La acción pre-registrada del pase 103 NO se corrió: ni confirmada ni falsificada, y queda re-registrada sin cambios** — el eje A de `p317` exige enumerar el árbol, y adivinar paths es el falso negativo que `P319` prohíbe. 🔴 **El hallazgo que manda es una REGRESIÓN de esta base (`P321`): el pase 101 tenía las dos fechas del AI Act bien y el pase 102 las colapsó en una falsa — séptima reproducción del error que los pases 100 y 101 estaban CONTANDO.** 🔵 **Pistas, publicadas como pistas y no como filas:** `OATutor` (MIT + contenido CC BY 4.0, sería el primer espécimen de `P315` que es PLATAFORMA) y una de IDENTIDAD contra esta tabla (el paper declara canónico `stanfordnlp/edu-convokit`; la tabla publica `rosewang2008/edu-convokit`). ⚠️ **`amber` y `ncte` siguen SIN resolver:** `ncte` avanza (Demszky y Hill 2022, 1.660 transcripciones, 317 docentes) pero el «CC BY 4.0» viene de **agregador**, no del titular — y `P314` ya pagó ese error.
 > **Pase 102 del 2026-10-04:** 🔴 **La acción pre-registrada del pase 101 se corrió y su predicción está FALSIFICADA en las dos cláusulas: `P315` era específico de `classroom_discourse_intelligence`, no la norma de la capa.** Sobre el denominador pre-registrado de **9 repos** (las 6 altas del pase 101 + las 3 piezas de habla del pase 14), las piezas con licencia de datos **distinta** de la del código, además de la ya conocida, son **0** —la predicción pedía **≥ 2**—, y de las **2** que declaran términos de datos **una conceda uso comercial EXPLÍCITO**, así que tampoco hay mayoría `NC`. 🔴 **Pero medir la predicción destapó que la PREGUNTA estaba mal planteada, y lo que había debajo es peor: `rosewang2008/edu-convokit` —fila de esta tabla, MIT, y la fila es CORRECTA para el código— REDISTRIBUYE 29 transcripciones del corpus TalkMoves, que su titular `SumnerLab` publica bajo `CC BY-NC-SA 4.0`, sin una sola línea sobre términos de datos.** 🟢 **La identidad del corpus está MEDIDA, no inferida: 29 de 29 nombres de archivo coinciden con `data/Subset 1/` del upstream, huella `Boats and Fish 4_Grade 4 .xlsx` incluida —con el espacio antes de la extensión— y el upstream declara la licencia por dos canales que concuerdan (`LICENSE` de 20.849 B + `README`).** 🔵 **Y el otro repo de la misma cohorte, `classroom_discourse_intelligence`, hace lo contrario y lo dice: declara la licencia NC y NO redistribuye —su `data/` tiene 0 archivos de payload, aserido—. Dos repos de la misma capa, el mismo corpus, posiciones opuestas: el que lo maneja mal es el que está en la tabla.** 🔴 **`P319`: el barrido de paths adivinados que este pase corrió PRIMERO publicó `edu-convokit` como «sin datos» —404 en `data/README.md` con 111 archivos de corpus adentro—; sólo enumerar el árbol (el canal de `P275`) lo ve.** 🟢 **`p317` 37/37, 53 suites pasan, 0 fallan.** Ver **`P317`**–**`P319`**.
@@ -273,6 +274,151 @@ updated: 2026-10-05
 > fila** —`lineage-skill`, con un vocabulario cerrado de 9 valores por afirmación, **4 de los 9 «esto lo produjo el
 > modelo»**— y **ninguna de las dos sabe de la otra**. Ver la capa nueva al final de este archivo, las tendencias
 > **180**–**182** y el patrón **P99**.
+
+## 🔴 Altas de agente: 0 — y el pase entero se gasta en la ACCION PRE-REGISTRADA, que sale CONFIRMADA EN LA LETRA y FALSIFICADA EN LA MAGNITUD, al reves de lo previsto (pase 105 del 2026-10-05)
+
+### 🔬 El canal (`P247`), medido este pase y con control negativo ANTES de cualquier veredicto
+
+| Canal | Pase 104 | Pase 105 | Que habilita |
+|---|---|---|---|
+| `raw.githubusercontent.com` | 🟢 200 | 🟢 **200** | lectura de **payload** de primera mano |
+| clon `--filter=blob:none --no-checkout` | 🟢 OK | 🟢 **OK** | la **enumeracion** de arbol (`P275`), unico canal que sostiene una **ausencia** |
+| 🆕 `sparse-checkout` sobre el clon sin blobs | no usado | 🟢 **OK** | materializar **13.371** archivos sin bajar el repo entero: el censo deja de ser muestra |
+| `registry.npmjs.org` · `pypi.org` | 🟢 200 | 🟢 **200** | desempate de registro (`P306`) |
+| `api.github.com` | 🔴 403 | 🔴 **403** | sin estrellas, sin licencia declarada, sin fecha |
+| `github.com` (web, `curl`) | 🔴 403 | 🔴 **403** | el `curl -sI` del encargo sigue **muerto aca** |
+| `openstax.org` | 🔴 403 | 🔴 **000** | — |
+| `creativecommons.org` · `arxiv.org` · `aclanthology.org` | 🔴 bloqueados | 🔴 **000** | — |
+| 🆕 `unu.edu` · `coe.int` · `publications.iadb.org` · `unesco.org` | no medidos | 🔴 **000** | las cuatro fuentes primarias que el barrido regional devolvio este pase |
+
+🔵 **Control negativo, corrido antes de apoyar una sola fila:** rama inventada → **404**; ruta
+inventada → **404**; repo inventado → **404**; `collection` inventado en repo real → **404**;
+`main` / `master` / `HEAD` → **mismo `sha256`** del payload. El instrumento discrimina.
+
+### 🟢 La accion pre-registrada se CORRIO con `openstax.org` caido, y sin violar su propia prohibicion
+
+El pase 104 la dejo escrita con una clausula explicita: *«lo que NO puede pasar es rellenar con el
+canal secundario: si el egress sigue cerrado, se dice no se pudo correr»*.
+
+🔴 **`openstax.org` sigue cerrado.** 🟢 **Y la accion se corrio igual, porque el titular publica por
+DOS canales y solo uno estaba caido:** OpenStax mantiene el *payload* de cada libro en la
+organizacion **`openstax` de GitHub** (`osbooks-*`), y `raw.githubusercontent.com` esta vivo. Se leyo
+**del titular**, no de un agregador, con **dos lecturas independientes por libro** — el
+`<md:license>` del `collection.xml` del libro y el `LICENSE` de la raiz del *bundle* —, y las dos
+concuerdan en los **trece** libros medidos.
+
+**`P326-A`**: *«egress cerrado al sitio del titular» no es «la cesion del titular es inalcanzable».
+Lo que descalifica a un canal secundario no es que sea **otro canal**: es que sea **otro titular**.*
+Es la direccion complementaria de `P314`, y el pase que **hereda** la declaracion de canal del
+anterior se pierde el que esta vivo (`P320`, tercera medicion consecutiva).
+
+### 🔴 El veredicto de la prediccion, clausula por clausula
+
+| Clausula pre-registrada | Pedia | Medido | Veredicto |
+|---|---|---|---|
+| `Calculus Volume 1` declarara una licencia **distinta** de `CC BY 4.0` | si | 🟢 **`CC BY-NC-SA 4.0`**, `collection.xml` + `LICENSE` 21.443 B | **CONFIRMADA** |
+| …y sera **uno de a lo sumo dos** de los 7 en esa condicion | ≤ 2 | 🔴 de las **10** ediciones que los items citan, **8 son medibles** en el titular: **7 `NC-SA`** y **1 `CC BY 4.0`** | **FALSIFICADA** |
+| el vacio es *«la huella de una procedencia que no es `CC BY 4.0`»* | correlacion | 🔴 **no hay correlacion**: los libros con 100 % de llenado son `NC-SA` igual | **FALSIFICADA** |
+| 🆕 unidad: *«los **7** libros»* | 7 | 🔴 **10** ediciones distintas citadas por los items | **denominador equivocado** |
+
+🔵 **Y la segunda accion (`CC4.0`, 38 items) sale CONFIRMADA en la forma:** los items `CC4.0` de
+`Solid Foundations: Algebra` y `: Trigonometry` comparten `oer: https://OATutor.io` — **son autoria
+propia de OATutor**, salen de una sola plantilla. 🔴 **Pero la familia no resuelve:** `CC4.0` no
+nombra clausulas y el unico que podria desambiguar es OATutor, cuyo repo de contenido tiene **0
+archivos de licencia en 51.929 rutas**. 🟢 **Lo que si resuelve es lo que importa para entregar:
+donde OATutor ES el titular, el `CC BY 4.0` en bloque de su README **si** es una cesion suya.** Son
+**552 items, 4,1 %** — y son los unicos de los que el README puede hablar.
+
+### 🔴 El hallazgo que manda, y es contra la fila `OATutor` de esta tabla
+
+**Instrumento:** `compose/code/p326-titleholder-book-license/` (22 aserciones en verde, sin red).
+**Unidad:** el item. **Denominador: 13.371 problemas — CENSO, no muestra.**
+
+El pase 104 midio el campo `license` de **1.216** items y publico **24,3 % sin la cesion que el
+README promete**. 🟢 **Su muestreo queda VALIDADO por el censo** (76,4 / 19,0 / 3,4 / 1,2 % frente a
+75,7 / 19,3 / 3,6 / 1,4 %): el instrumento era sano. 🔴 **Lo que le faltaba no era precision — era
+el SEGUNDO CAMPO.** `oer` dice **quien es el titular**, y cruzado contra la cesion medida decide la
+entrega:
+
+| | n | % | veredicto |
+|---|---|---|---|
+| 🔴 **declara `CC BY 4.0`; el titular de la edicion que el item CITA cede `NC-SA`** | **8.312** | **62,2 %** | **contradice al titular** |
+| 🔴 no declara nada; el titular cede `NC-SA` | 2.104 | 15,7 % | no embarcable |
+| ⚠️ declara `CC BY 4.0` contra una edicion que el titular **ya no publica** | 1.748 | 13,1 % | **sin resolver, escape ABIERTO** |
+| ⚠️ titular no resuelto (`docs.google.com`, `drive.google.com`, `oer` ilegible) | 455 | 3,4 % | sin resolver |
+| 🔴 el campo de cesion lleva una **URL de procedencia** (`ds100.org`) | 160 | 1,2 % | sin cesion |
+| 🟢 **autoria propia de OATutor** (`oer: OATutor.io`) | 552 | 4,1 % | **embarcable** |
+| 🟢 el titular **SI** cede `CC BY 4.0` (`physics`) | 40 | 0,3 % | **embarcable** |
+
+🔴 **Embarcable en una entrega comercial: 592 items = 4,4 %.** No embarcable y **medido: 77,9 %**.
+Sin resolver y **declarado: 17,7 %**.
+
+### 🟢 El control positivo que vuelve publicable todo lo anterior
+
+Un barrido que solo sabe devolver `NC-SA` no mide nada. 🟢 **`physics` (col12081) declara
+`CC BY 4.0`** —*«Creative Commons Attribution License»*, `LICENSE` de 19.103 B— **en el mismo canal,
+con el mismo extractor y del mismo titular.** La licencia de OpenStax es **por libro, no por
+editorial**: citar *«OpenStax es CC BY»* es el atajo que este hallazgo refuta.
+
+### 🔵 Y la ironia esta medida, que es la prueba de que la tasa de llenado no mide permiso
+
+**`physics` es el UNICO libro cuyo titular SI cede `CC BY 4.0`, y sus 40 items son los UNICOS que
+dejan el campo VACIO.** `elementary-algebra-2e`, cuyo titular cede `NC-SA`, lo llena en **2.650 de
+2.840**. El campo no sigue la cesion: **sigue la plantilla de autoria del curso.**
+
+### 🔴 Lo que esto le hace a `R-104-CAPA-DE-CONTENIDO`: la invierte
+
+La receta del pase 104 mandaba **embarcar los cursos con 100 % de etiquetado** (`Elementary
+Algebra`, `Intermediate Algebra`, `College Physics`) y **descartar** los de 0 % y
+`Calculus Volume 1` (1,3 %).
+
+🔴 **Esta exactamente al reves.** `Elementary Algebra` es el **peor** curso para embarcar: **2.650 de
+2.840** items afirman una cesion que su titular no otorga, con el etiquetado mas prolijo de todo el
+*pool*. `Calculus Volume 1`, el curso que la receta descartaba, es el que **miente menos**: 1.010 de
+1.012 campos vacios. **Los dos son igual de inembarcables; uno de los dos lo dice.**
+
+🔵 **La clave de ordenamiento correcta no es la tasa de llenado sino el `oer` y la edicion citada.**
+La receta corregida es **`R-105-CESION-CONTRA-TITULAR`** en `compose/patterns.md`.
+
+### 🔴 El control que casi no se corrio y era obligatorio: la EDICION
+
+La hipotesis alternativa que habia que matar: *«los items dicen `CC BY 4.0` porque salieron de una
+edicion anterior que **si** lo era, y OpenStax relicencio despues»*. Se mata leyendo **el slug que el
+propio item cita**:
+
+🟢 **Para 10.416 items el escape esta CERRADO** — citan la **misma** edicion (`-2e`, o
+`calculus-volume-1`) cuyo `collection.xml` declara `NC-SA`.
+⚠️ **Para 1.748 items queda ABIERTO y se dice en vez de callarse** — citan
+`introductory-statistics` y `precalculus` **1e**, y la **enumeracion** de `collections/` de los dos
+*bundles* vivos muestra que el titular **ya no publica esas ediciones**. **Ausencia aserida por
+enumeracion, no por 404 de un nombre adivinado.** 🔴 **Que el titular ya no la publique no concede ni
+niega nada** — es el estado que `P324` obliga a no convertir en permiso.
+
+### 🔴 Un defecto de ESTE pase, encontrado por ESTE pase antes de publicar
+
+La primera version del extractor de edicion buscaba solo `openstax.org/books/<slug>` y resolvia
+**2.878** de **12.332** items. Los otros **9.326** usan `openstax.org/details/books/<slug>`:
+**tres cuartos del universo, perdidos en silencio.** 🔵 **Lo delato una aritmetica que no cerraba**
+—12.332 por host contra 2.878 por slug—, **no una excepcion**: es la familia `P171`/`P319`, y esta
+vez se cobro antes de la publicacion y no despues. El test fija la forma con el numero a la vista.
+
+### 🔴 Por que 0 altas, y por que este cero sigue siendo informativo
+
+Barrido global con el año **calculado** (`date -u +%Y` → **2026**), cuatro consultas. Devolvio por
+**vigesimoctava** vez el eje generalista: openclaw **385.407 ★**, dify **151.639**, browser-use
+**108.128**, Mem0 **62.735**, AutoGen **60.284**, Flowise **55.226**, mas Aider, Cline, CrewAI y
+LangGraph. **0 piezas de la industria educativa** (`P281`).
+
+⚠️ **Rechazo por TERCERA vez, con su razon:** reaparecio *«Hermes Agent, Nous Research, ~180.000 ★»*,
+rechazado en los pases 103 y 104. **Se rechaza otra vez** — es un agente **generalista**, no
+educativo, y la cifra es inverificable por este canal (`api.github.com` 403). 🔵 **Que un reclamo se
+repita no lo acerca a estar medido.**
+
+🟢 **Lo unico educativo del barrido son material didactico *sobre* AI** (`ai-engineering-from-scratch`,
+`free-ai-agents-resources`, `Awesome LLM Apps`) — la captura semantica que el pase 23 diagnostico y
+que sigue vigente **82 pases despues**.
+
+---
 
 ## 🟢 Altas de agente: 0 — pero las TRES acciones pre-registradas se corren, y una corrige a una receta de esta base (pase 104 del 2026-10-05)
 

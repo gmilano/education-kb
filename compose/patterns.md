@@ -8,6 +8,7 @@ updated: 2026-10-05
 
 > Recetas concretas: repos nombrados, licencias verificadas, wiring explícito y estimación.
 > Todos los repos citados fueron verificados vía WebFetch el 2026-09-30; los del pase 11, el 2026-10-01 (ver `agents/top.md`).
+> **Pase 105 del 2026-10-05:** 🆕 **Los patrones nuevos son `P326`, `P326-A` y `P327`, y la receta `R-105-CESION-CONTRA-TITULAR` INVIERTE a `R-104-CAPA-DE-CONTENIDO`.** 🔴 **`P326`: la cesion que un item AFIRMA no es la que su titular OTORGA, y la tasa de llenado del campo mide DILIGENCIA, no PERMISO** — censo de **13.371** problemas: **8.312 (62,2 %)** declaran `CC BY 4.0` contra un titular que cede `NC-SA`; **embarcable 4,4 %**. 🔵 **La ironia que lo prueba: el unico libro cuyo titular SI cede `CC BY 4.0` (`physics`) es el unico cuyos items dejan el campo VACIO.** 🟢 **`P326-A`: egress cerrado al sitio del titular no es cesion inalcanzable** — se leyo del payload de `openstax` en GitHub con `openstax.org` en **000**; lo que descalifica a un canal secundario **no es que sea otro canal, es que sea otro titular**. 🔴 **`P327`: los bytes y el `sha256` crudo de un archivo de licencia NO son identidad** (21.443 / 21.013 / 21.442 B = el mismo texto con CRLF / LF / CRLF-sin-salto; un unico `sha256` al normalizar) — **indicta las huellas que esta base publica desde el pase 66: los datos siguen bien, la huella no era huella.** 🔴 **Y `R-104` ordenaba la cola de auditoria por tasa de etiquetado: estaba al reves** — los cursos al **100 %** son los **100 % mal etiquetados**, y `Calculus Volume 1`, que `R-104` descartaba, es el que **miente menos**.
 > **Pase 104 del 2026-10-05:** 🟢 **El canal VOLVIO, y eso es `P320` confirmado en la direccion contraria: es un hecho de PERMISO.** El instrumento del pase 103 estaba intacto y le faltaba el derecho a correrlo; esta sesion **si** lo tiene. Medido con control negativo antes de usarlo (rama inventada, ruta inventada y repo inventado dan **404**; `main`/`master`/`HEAD` dan el **mismo** sha): `raw.githubusercontent.com` **200**, clon `--filter=blob:none` de terceros **OK**. 🔴 **Sigue apagado:** `api.github.com` **403**, y `openstax.org`, `creativecommons.org`, `arxiv.org`, `aclanthology.org` **bloqueados por egress** por `curl` **y** por el fetcher. 🟢 **Receta nueva `R-104-CAPA-DE-CONTENIDO`, armada con piezas probadas de este repo y declarando su propio hueco.** 🔴 **Y una correccion a una receta ya publicada: `R-102-PROCEDENCIA-DE-CORPUS` trataba `amber` y `ncte` como «`NC` hasta prueba en contrario» — medido, **no son `NC`: no tienen cesion**, que es MAS restrictivo, y la receta decia a su lector que podia hacer uso no comercial de material sobre el que nadie le concedio nada (`P324`).** 🟢 **La instruccion operativa de esa receta —*usar la libreria (MIT) y NO embarcar `data/`*— se CONFIRMA, y ahora se apoya en los tres corpus y no en uno.** 🔴 **`P323`: el borde entre capa de codigo y capa de contenido puede ser un **submodulo**, o sea otro repositorio — y entonces el `LICENSE` de la raiz del padre, el arbol sin contenido y el cero archivos de licencia de contenido son **tres lecturas ciertas que enganan juntas**.** 🔴 **`P322`: la cesion por item es un CAMPO y se puede llenar mal; el caso peor no es el campo vacio sino el que **parece lleno** — una URL que no es de licencia pasa cualquier compuerta que pregunte «¿hay algo?».** ⚠️ **Dos defectos de un instrumento de ESTE pase, encontrados por el instrumento mismo y registrados con su control: `E1` la comilla de `L'Hopital` que `xargs -I{}` se comia (dos filas FANTASMA con una ruta inexistente) y `E2` el codigo HTTP que no se miraba (el cuerpo `404: Not Found` entro al clasificador; **sobrevivio de casualidad** porque no parsea como JSON).** 🟢 **`p322` 10/10 + 2/2, `p324` construido, **55 suites pasan, 0 fallan**.** Ver **`P322`**–**`P325`** y la receta `R-104-CAPA-DE-CONTENIDO`.
 > **Pase 103 del 2026-10-05:** 🔴 **0 altas en tablas; lo que este pase deja es MÉTODO y una receta armada con piezas que este repo YA tiene probadas.** 🟢 **`P320`** — el canal de verificación es un hecho de **PERMISO**, no sólo de red: el instrumento puede estar intacto y faltar el derecho a correrlo, y los dos estados autorizan conclusiones distintas. 🟢 **`P321`** — un archivo append-only puede **sepultar un acierto bajo un error posterior**, y el espécimen es `intel/market.md` con las dos versiones del calendario del AI Act conviviendo. 🆕 **`R-103-DOS-RELOJES`** — receta de conformidad AI Act para un entregable educativo EMEA: **tramo 1** marcar lo que ya se entrega con `aiact-50-2-pack/` (art. 50, **vigente**, portador por dialecto porque SCORM 1.2 es `processContents="strict"` y un marcador no importado es **INVÁLIDO**, no tolerado); **tramo 2** construir el expediente de Anexo III con la ventana a favor, usando el eje A de `p317` como insumo del **FRIA**; **tramo 3** lo que NO hay que prometer — el `2027-12-02` es **condicional**. ⚠️ **Y la receta declara su propio hueco: esta base no tiene componente que produzca el FRIA ni registro conforme al art. 26.**
 > **Pase 101 del 2026-10-04:** 🆕 **Los patrones nuevos son `P312`–`P316`, y la receta es `R-101-OBSERVACION-PERMISIVA`.** 🔴 **`P312` es el que cambia qué garantiza un veredicto de uso comercial de esta base: la compuerta de `P250` se abría sobre `CC-BY-NC-4.0`, una familia cuyo NOMBRE dice NonCommercial — y la destapó el payload de un ALTA, no una fixture.** 🟢 **`P313` cierra `P237`: las cuatro copias inline rewireadas, en el orden que la deuda exigía (primero superconjunto, después rewiring), y con el hallazgo de que el rewiring ROMPIÓ el control que guardaba a `p206` porque extraía la función del TEXTO del archivo.** 🔴 **`P314` es el que evita suprimir trabajo real: la concesión puede vivir en el README sin archivo de licencia, y un barrido de payload la declara `NO-CESSION`.** 🔴 **`P315` es el que paga en una propuesta: un repo puede ser permisivo en el CÓDIGO y no comercial en los DATOS, así que el entregable es el método y la línea base, no el modelo.** 🔴 **`P316` es la pregunta de un renglón que hay que hacer antes de estimar: «¿de qué árbol partimos?» — la prensa de industria linkea un fork `AGPL-3.0` congelado en `v0.2.1` del `OpenMAIC` MIT que esta base ya tiene.** 🆕 **`R-101-OBSERVACION-PERMISIVA` es cotizable porque los tres eslabones de código están verificados por payload y son MIT, y porque la restricción que la acota —el corpus no comercial— queda FUERA del entregable con su razón dicha.**
@@ -133,6 +134,154 @@ updated: 2026-10-05
 > **Pase 11:** +2 patrones — **P25** (riesgo de abandono conforme al Anexo III, la capa con presupuesto ya asignado y sin oferta open source) y **P26** (agente docente sobre la ontología curricular nacional ya publicada).
 > **Pase 27:** **+4 patrones y una corrección.** 🔴 **P51 queda con premisa falsa** —el conector MCP de Moodle **sí existe y es MIT**— y lo reemplazan **P54** (corrección y devolución sobre Moodle con **compuerta humana**, el último tramo del gap 6, con piezas que ya escriben), **P55** (el conector de **Open edX**, que es el único que de verdad no existe), **P56** (**SCORM** como formato de salida de la capa generativa: cero integración, offline) y **P57** (evidencia por MCP cotizada sobre lo que CaSS **realmente** expone — 6 de 61 operaciones, con insignias y autoría de marcos **fuera**).
 
+
+## 🆕 Patrones del pase 105 (2026-10-05) — `P326`, `P326-A`, `P327` y la receta `R-105-CESION-CONTRA-TITULAR`, que INVIERTE a `R-104`
+
+> **Canal del pase (`P247`):** `raw.githubusercontent.com` 🟢 **200**; clon `--filter=blob:none`
+> 🟢 **OK**; 🆕 `sparse-checkout` sobre el clon sin blobs 🟢 **OK** — el canal que convierte una
+> muestra en un **censo**. 🔴 `api.github.com` **403**; `github.com` por `curl` **403** y **no
+> discrimina**. 🔴 **Egress 000:** `openstax.org`, `creativecommons.org`, `arxiv.org`,
+> `aclanthology.org`, `unu.edu`, `coe.int`, `publications.iadb.org`, `unesco.org`.
+> 🔵 **Control negativo corrido antes de apoyar una fila:** rama, ruta, repo y `collection`
+> inventados → **404** los cuatro; `main` / `master` / `HEAD` → **mismo `sha256`**.
+
+### **P326** — la cesion que un item AFIRMA no es la que su titular OTORGA, y la tasa de llenado mide DILIGENCIA, no PERMISO
+
+🔵 **Enunciado.** *Un campo de licencia por item es una **afirmacion del redistribuidor**, no una
+cesion. Su valor esta acotado por **si quien lo escribe es el titular** de ese item: donde lo es, el
+campo (y hasta una promesa en bloque del README) **si** cede; donde no lo es, **no puede ceder lo que
+no tiene**. Y la **tasa de llenado** del campo no mide permiso: mide la plantilla de autoria del
+curso — un `pool` con el campo lleno al 100 % sobre contenido de tercero esta **100 % equivocado con
+confianza**, que pasa cualquier compuerta que pregunte «¿hay algo?».*
+
+🟢 **Medido, censo de 13.371 problemas de `CAHLR/OATutor-Content`** (no muestra; arbol **enumerado**
+en 51.929 rutas y los problemas **materializados** por `sparse-checkout`):
+
+| | n | % | veredicto de entrega |
+|---|---|---|---|
+| 🔴 declara `CC BY 4.0`; el titular de la edicion citada cede `NC-SA` | **8.312** | **62,2 %** | **contradice al titular** |
+| 🔴 no declara; el titular cede `NC-SA` | 2.104 | 15,7 % | no embarcable |
+| ⚠️ declara `CC BY 4.0` contra una edicion que el titular **ya no publica** | 1.748 | 13,1 % | **sin resolver** |
+| ⚠️ titular no resuelto (Google Docs/Drive, `oer` ilegible) | 455 | 3,4 % | sin resolver |
+| 🔴 el campo de cesion lleva una **URL de procedencia** (`ds100.org`) | 160 | 1,2 % | sin cesion |
+| 🟢 autoria propia del redistribuidor (`oer: OATutor.io`) | 552 | 4,1 % | **embarcable** |
+| 🟢 el titular **si** cede `CC BY 4.0` (`physics`) | 40 | 0,3 % | **embarcable** |
+
+🔵 **La ironia que prueba el enunciado, medida:** `elementary-algebra-2e` (titular `NC-SA`) llena el
+campo en **2.650 de 2.840**; **`physics`, el unico libro cuyo titular SI cede `CC BY 4.0`, es el
+unico cuyos 40 items lo dejan VACIO.** **El unico lugar donde `CC BY 4.0` habria sido verdad es el
+unico donde nadie lo escribio.**
+
+🟢 **Como se verifica** (`compose/code/p326-titleholder-book-license/`, 22 aserciones en verde):
+`verdict.py` cruza `license` contra el **slug de edicion** extraido del `oer`, y lo contrasta con la
+cesion leida del payload del titular. 🔴 **El control obligatorio es la EDICION:** sin el, la
+hipotesis *«el item cita una edicion anterior que si era `CC BY`»* queda viva y el hallazgo entero se
+cae. Se mata leyendo **el slug que el propio item cita** — cerrado para 10.416 items, **abierto y
+declarado para 1.748**.
+
+### **P326-A** — «egress cerrado al sitio del titular» no es «la cesion del titular es inalcanzable»
+
+🔵 **Enunciado.** *Un titular puede publicar por **mas de un canal**. Que el sitio web este cerrado
+no vuelve inmedible su cesion si publica el **payload** en otra parte. Lo que descalifica a un canal
+secundario **no es que sea otro canal: es que sea otro titular** — la direccion complementaria de
+`P314`. Corolario operativo: **un pase que HEREDA la declaracion de canal del anterior se pierde el
+canal que esta vivo**, y `P247` por eso no es ceremonia.*
+
+🟢 **Medido.** `openstax.org` **000** por `curl` y por el fetcher — y la cesion de los 13 libros se
+leyo **del titular** en la organizacion `openstax` de GitHub, por `raw.githubusercontent.com`
+(**200**), con **dos lecturas independientes por libro** —`<md:license url=…>` del
+`collections/<slug>.collection.xml` y el `LICENSE` del *bundle*— **concordantes en los 13 casos**.
+
+🔴 **Y la cifra que justifica el patron:** con el canal heredado del pase 104, esta accion llevaba
+**un pase diferida** y la prediccion se habria quedado sin medir por segunda vez.
+
+### **P327** — el conteo de bytes y el `sha256` CRUDO no son identidad de un archivo de licencia
+
+🔵 **Enunciado.** *El tamaño en bytes y el `sha256` **crudo** de un archivo de licencia **no
+identifican el texto**: el mismo texto legal varia hasta **430 B** segun el fin de linea. La
+identidad es el `sha256` del texto **normalizado** (CRLF→LF, con salto final canonico).*
+
+🟢 **Medido.** Tres `LICENSE` del mismo titular: **21.443 B** (CRLF), **21.013 B** (LF) y
+**21.442 B** (CRLF sin salto final), **429 lineas cada uno** — y **un unico `sha256`
+`78442b480475e7ae…`** al normalizar.
+
+🔴 **Contra esta base, no contra un tercero.** Esta KB publica huellas de licencia como *«`LICENSE`
+20.849 B»* y `sha256` crudos **desde el pase 66**. 🟢 **Los datos siguen siendo correctos; la huella
+no era una huella:** dos repos con la misma licencia podian parecer distintos, y uno relicenciado
+podia parecer igual. **Accion C pre-registrada para el pase 106:** re-expresar esas huellas como
+`sha256` normalizado. **Prediccion: ningun dato cambia de familia; cambia la huella.** Si alguno
+cambia de familia, el problema es mucho mas grave que un defecto de huella.
+
+---
+
+## 🔴 `R-105-CESION-CONTRA-TITULAR` — la receta que INVIERTE a `R-104-CAPA-DE-CONTENIDO`
+
+**Que corrige, dicho sin rodeos.** `R-104` ordenaba la cola de auditoria por **tasa de etiquetado
+por curso** y mandaba: *«se toman los cursos con 100 % (`Elementary Algebra`, `Intermediate
+Algebra`, `College Physics`), se descartan los 5 cursos con 0 % y `Calculus Volume 1` (1,3 %)»*.
+
+🔴 **Esta exactamente al reves.** Medido contra el titular:
+
+| curso | tasa de llenado (`R-104`) | lo que `R-104` mandaba | 🔴 lo que el titular dice |
+|---|---|---|---|
+| `Elementary Algebra` | **100 %** | 🟢 embarcar | 🔴 **2.650 de 2.840 items afirman una cesion que el titular NO otorga** — el peor curso del *pool* |
+| `Intermediate Algebra` | **100 %** | 🟢 embarcar | 🔴 2.034 de 2.063, idem |
+| `College Physics` | **100 %** | 🟢 embarcar | 🔴 264 de 265, idem |
+| `Calculus Volume 1` | **1,3 %** | 🔴 descartar | ⚠️ igual de inembarcable (`NC-SA`), **pero 1.010 de 1.012 campos vacios: el que MIENTE MENOS** |
+
+🔵 **Los dos son igual de inembarcables; uno de los dos lo dice.** La tasa de llenado ordenaba la
+cola **al reves** porque no mide permiso.
+
+### La receta, con la clave de ordenamiento corregida
+
+**Clave de ordenamiento: el campo `oer` (quien es el titular) + la EDICION que el item cita.**
+Nunca la tasa de llenado.
+
+**Piezas, todas ya construidas y probadas en este repo:**
+
+| paso | pieza | que hace |
+|---|---|---|
+| 1 | `compose/code/p275-tree-enumeration/` + clon `--filter=blob:none` | **enumera** el arbol del corpus; es el unico canal que sostiene una **ausencia** |
+| 2 | `git sparse-checkout set --no-cone '/<pool>/*/*.json'` | materializa **solo** las unidades de cesion: el censo deja de ser muestra |
+| 3 | `compose/code/p326-titleholder-book-license/census_items.py` | cruza `license` × host de `oer` → **quien es el titular de cada item** |
+| 4 | `…/sweep_titleholder.sh` | lee la cesion **del payload del titular**, dos canales por obra |
+| 5 | `…/edition_control.py` | mata la escapatoria de **edicion** — sin esto el hallazgo no se publica |
+| 6 | `…/verdict.py` | emite los siete baldes y el **% embarcable** |
+| 7 | `compose/code/p243-frontmatter-coverage/` + `p239-table-integrity/` | el entregable sale con *frontmatter* valido y sin filas de encabezado |
+
+**Que entrega, concretamente.** Para `OATutor`: 🟢 **el codigo (MIT) sirve entero y el sistema es
+desplegable** (GitHub Pages, middleware LTI para Canvas). 🔴 **El `content-pool` NO se embarca: el
+4,4 % embarcable no sostiene un producto.** Se toman los **552** items de autoria propia de OATutor y
+los **40** de `physics`, se **siembra** con `physics` (col12081) y `statistics` (col30309), los dos
+`CC BY 4.0` leidos del payload, y **el resto lo produce el cliente** — que es lo que el encargo real
+necesita de todos modos, y ahora con el numero que lo justifica en vez de una corazonada.
+
+Para `edu-convokit`: 🟢 **usar la libreria (MIT)**, 🔴 **no embarcar `data/`** — los **111** archivos
+estan resueltos y **ninguno** es redistribuible comercialmente (29 `NC` + **74 sin cesion**).
+
+**Estimacion.** *Due diligence* de contenido sobre un corpus de ~13k unidades: **2–3 semanas** con los
+pasos 1–6 corridos (el instrumento existe; lo que lleva tiempo es resolver los titulares opacos).
+La **siembra** de contenido propio del cliente es el encargo grande y se cotiza por asignatura.
+
+⚠️ **Lo que esta receta NO cubre, dicho en vez de callado:**
+
+- 🔴 **1.748 items sin resolver** — citan `introductory-statistics` **1e** y `precalculus` **1e**, que
+  el titular **ya no publica** (ausencia **aserida por enumeracion** de `collections/`).
+  **Pre-registrado como accion A del pase 106.** 🔴 **Que el titular ya no publique una edicion no
+  concede ni niega nada** (`P324`).
+- 🔴 **No mide los 18.054 JSON de `tutoring/`** (pistas y andamios, **dos tercios** del arbol).
+  🔵 El pase 104 publico **18.051**; la enumeracion da **18.054**. **Accion B del pase 106**, con
+  prediccion escrita: *no tienen campo `license` propio y el denominador sigue siendo 13.371*.
+- 🔴 **No abre archivos comprimidos ni los 2.443 `.gif`**: una imagen de tercero dentro de un item
+  permisivo es un eje que esta base todavia no toco.
+- 🔴 **No resuelve los 455 items de titular opaco** (`docs.google.com`, `drive.google.com`, `oer`
+  ilegible): exige abrir cada documento, y ese egress **no se midio**.
+- 🔴 **Un riesgo de empaquetado, no de licencia, y conviene decirlo en la propuesta: 6 rutas del
+  `content-pool` llevan caracteres de control C1** (`\177`, `U+0080`, `U+0081`) **dentro de nombres
+  de directorio**, todas en el curso de Data100. **Rompen en Windows, en `zip` y en cualquier
+  *pipeline* que normalice nombres.**
+
+---
 
 ## 🆕 Patrones del pase 104 (2026-10-05) — `P322`–`P325` y la receta `R-104-CAPA-DE-CONTENIDO`
 

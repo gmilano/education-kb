@@ -8,6 +8,7 @@ updated: 2026-10-05
 
 > Bases sobre las cuales construir. Verificado repo por repo vía WebFetch el 2026-09-30 (capas del pase 10, el 2026-10-01).
 > Leer la columna **Licencia** antes de proponer: media KB de educación es GPL/AGPL, no permisiva.
+> **Pase 105 del 2026-10-05:** 🟢 **9 altas fundacionales, y son la capa que este estante nombraba sin tenerla: el CORPUS DE CONTENIDO del TITULAR, con su cesion leida libro por libro del payload.** Desde `P315` este archivo mide el eje «permisivo en codigo / CC en el contenido» **siempre desde el lado del redistribuidor**; nunca tuvo al titular, y sin titular un campo que dice `CC BY 4.0` no se contrasta con nada. 🟢 **OpenStax publica el payload de cada libro en la organizacion `openstax` de GitHub** —`<md:license>` por libro **mas** el `LICENSE` del *bundle*, dos lecturas concordantes— y ese canal estaba **vivo** con `openstax.org` en **000** (`P326-A`). 🔴 **El hallazgo que manda: la licencia de OpenStax es POR LIBRO.** **11 de los 13 libros medidos** son **`CC BY-NC-SA 4.0`** —**no embarcables en producto comercial**— y las dos `CC BY 4.0` son **`physics`** y **`statistics`**. 🔵 **`physics` es, ademas, el unico libro que `OATutor-Content` cita y que NINGUN item etiqueta:** el unico donde `CC BY 4.0` habria sido verdad es el unico donde nadie lo escribio. 🔴 **`P327`: los bytes y el `sha256` crudo de un archivo de licencia NO son identidad** — 21.443 / 21.013 / 21.442 B son **el mismo texto** con CRLF, LF y CRLF-sin-salto-final: un unico `sha256` al normalizar, lo que indicta las huellas que este estante publica desde el pase 66 (los datos siguen bien, la huella no era huella). Ver `compose/code/p326-titleholder-book-license/`.
 > **Pase 104 del 2026-10-05:** 🟢 **El canal VOLVIO, y eso es `P320` confirmado en la direccion contraria: es un hecho de PERMISO.** El instrumento del pase 103 estaba intacto y le faltaba el derecho a correrlo; esta sesion **si** lo tiene. Medido con control negativo antes de usarlo (rama inventada, ruta inventada y repo inventado dan **404**; `main`/`master`/`HEAD` dan el **mismo** sha): `raw.githubusercontent.com` **200**, clon `--filter=blob:none` de terceros **OK**. 🔴 **Sigue apagado:** `api.github.com` **403**, y `openstax.org`, `creativecommons.org`, `arxiv.org`, `aclanthology.org` **bloqueados por egress** por `curl` **y** por el fetcher. 🟢 **La prediccion pre-registrada de este archivo, NO MEDIDA en el pase 103 y re-registrada sin cambios, se corre y la accion C (`OATutor`) sale **CONFIRMADA en la forma y FALSIFICADA en la magnitud**.** 🔴 **Y el gate de `P311` evito el error que este pase estaba por cometer: `OATutor` **ya es una fila** de `agents/top.md` (MIT) desde antes — la pista del pase 103 proponia darlo de alta aca, y lo que falta no es la fila sino la **capa de contenido**.** 🟢 **Codigo: `MIT`, `LICENSE` 1.104 B, *(c) 2023 Zachary A. Pardos — CAHL research lab*, leido del payload.** 🔴 **`P323` — el borde de capa es un **SUBMODULO**, o sea OTRO REPOSITORIO: el contenido vive en `CAHLR/OATutor-Content`, y ese repo tiene **CERO archivos de licencia en 51.929 rutas enumeradas** (aserido, y confirmado por sonda de 7 nombres: 404 en los 7). Un barrido que lee el `LICENSE` de la raiz del padre ve **MIT**, ve un arbol **sin contenido** y ve **cero** licencias de contenido: **las tres lecturas son ciertas y las tres enganan**.** 🔵 **Topologia NUEVA frente a `P315` (dato en un subdirectorio del mismo repo) y `P317` (corpus vendoreado sin declaracion).** 🔴 **`P322` — y el contenido se contradice con su propio README: declara *«ALL content […] under CC BY 4.0»* y sus campos por item dicen otra cosa. Medidos **1.216 de 13.371** problemas (muestreo sistematico, cada 11º): **75,7 % `CC BY 4.0`, 19,3 % campo VACIO, 3,6 % `CC4.0`/`openstax` sin clausulas, 1,4 % una URL QUE NO ES DE LICENCIA** — y los 17 de esa ultima clase estan **todos** en un curso y apuntan a **PDFs de solucionarios de examen**, con **15 de 17** identicos al campo `oer` del mismo item: se copio la PROCEDENCIA al campo de CESION (`P314`).** 🟢 **Dos muestras sistematicas independientes concuerdan (n=406 y n=1.216).** ⚠️ **0 altas fundacionales: las dos piezas nuevas de la industria que el barrido devolvio son AGPL-3.0 y CC BY-SA 4.0 — ninguna permisiva — y van a `verticals/`.** Ver **`P322`**–**`P325`**.
 > **Pase 103 del 2026-10-05:** 🔴 **0 altas fundacionales por canal DENEGADO, no por falta de candidatas.** Este estante clasifica familias leyendo el **payload** del titular; con el clon sin blobs denegado por permisos y `WebFetch` bloqueado 4/4, **cualquier fila nueva sería una familia inferida** (`P320`). ⚠️ **La predicción pre-registrada queda NO MEDIDA y re-registrada sin cambios.** Lo único establecido: el orden de magnitud del denominador — **304** apariciones de URL de GitHub en este archivo y **419** en `agents/top.md`, **apariciones y NO slugs distintos** (deduplicar exige el canal que falta, y presentarlas como conteo de repos sería el error de denominador de `P289`). 🔵 **Pista del pase, por este estante y no por `agents/`:** `OATutor`, **código MIT + 5 semestres de material didáctico CC BY 4.0** — sería el eje de licencia por capa de `P315`/`P317` **sobre una PLATAFORMA desplegable** y no sobre un corpus de investigación, y la consecuencia comercial cambia: *un corpus `NC` limita un paper; material `CC BY` dentro de un producto limita el producto del cliente*.
 > **Pase 102 del 2026-10-04:** 🔴 **0 altas fundacionales, y el pase gasta su esfuerzo en la acción pre-registrada del 101, que sale FALSIFICADA — pero el instrumento que la falsifica encuentra algo peor sobre una fila de ESTE archivo.** `rosewang2008/edu-convokit` (fila del pase 101, **MIT**, y la licencia es **correcta para el código**) **redistribuye 29 transcripciones del corpus TalkMoves**, que su titular `SumnerLab` publica bajo **`CC BY-NC-SA 4.0`** — y `edu-convokit` **no declara una sola línea** sobre términos de datos. 🟢 **Identidad medida, no inferida: 29 de 29 nombres coinciden con `data/Subset 1/` del upstream, huella `Boats and Fish 4_Grade 4 .xlsx` incluida (con el espacio antes de la extensión), y el upstream declara la licencia por dos canales que concuerdan (`LICENSE` 20.849 B + `README`).** 🔵 **Vendorea TRES corpus: `amber` (45) + `ncte` (29) + `talkmoves` (29) + 3 `.zip` + `annotated_data.csv` = 111 archivos.** 🟢 **Y la capa de habla de este archivo gana una corrección de alcance: el límite *«no se puede verificar la licencia de `speechocean762`»* que los pases 14 y 100 dejaron escrito era una cota de DOS CANALES (`openslr.org` y `huggingface.co`, `000` los dos), no del repo: su `README` declara disponibilidad «for both commercial and non-commercial purposes», leída de primera mano.** 🔴 **Cesión válida y DÉBIL —el árbol enumerado tiene 0 archivos de licencia en 5.263 rutas, aserido— así que no se eleva a familia OSI ni sirve para una garantía contractual.** 🔴 **`P319`: la ausencia de `data/README.md` no es ausencia de datos; sólo enumerar el árbol (canal de `P275`) ve el corpus.** 🟢 **`p317` 37/37, 53 suites pasan, 0 fallan.** Ver **`P317`**–**`P319`**.
@@ -109,6 +110,124 @@ corre ése antes de escribir uno a mano** (tendencia **313**). 🟢 **Y el `gafa
 > y 5 en `schemas12/`, y contar sólo el primero es lo que hizo invisible el segundo dialecto de SCORM (**P106**).
 > **Pase 36 del 2026-10-02:** 🔵 **este pase no agrega repos: le pone FECHA a los que ya están, y la fecha cambia tres recomendaciones.** Se midió la capa PHP de evaluación y telemetría en Packagist —el único registro de los tres que entrega descargas en este entorno (`api.npmjs.org` y `pypistats.org` dan **403 a CONNECT**)— y el resultado está en `repos/trending.md`. **Lo que hay que saber antes de proponer desde este archivo:** 🔴 **la pieza xAPI más descargada de esta base, `rusticisoftware/tincan` (Apache-2.0, 6.178 desc./mes, 863.777 totales), no publica desde el 2022-11-02**, y ⚠️ **el único MIT de esa capa, `php-xapi/client`, está parado desde el 2021-03-24** con 825 desc./mes. 🔵 **La lectura es que en xAPI/PHP lo permisivo está quieto y lo vivo es copyleft**, así que la receta de telemetría se sostiene en **Ralph (MIT)** + **`lrsql` (Apache-2.0)** + **`learnmcp-xapi` (MIT)** y no en la capa PHP. 🟢 **Del lado de evaluación, lo activo es `oat-sa/extension-tao-testqti`** (**885 versiones**, release del **2026-09-30**) **y sigue siendo GPL-2.0-only**, mientras **lo permisivo es lo nuevo**: `@longsightgroup/qti3-cli` (**MIT**, 41 releases desde el 2026-05-21, último **2026-10-01**) con **cero dependencias de terceros** — sus 4 dependencias son todas `@longsightgroup/*` pinneadas a la misma versión exacta. **Su manifiesto MCP completo de 20 tools está escrito en `compose/patterns.md` (P76).** 🔴 **Y una corrección de catálogo: `oat-sa/qti-sdk` devuelve 404 en Packagist porque es el nombre del REPO — su paquete es `qtism/qtism`** (GPL-2.0-only, 218.212 descargas totales, 315 versiones). **Nombre de repo y nombre de paquete son identificadores distintos, y confundirlos produce un 404 que parece una ausencia** — pasó igual con `1edtech/oneroster`, `imsglobal/lti-1-3-php-library` y `packbackbooks/lti-1-3-php-library`, los tres **404**, que se anotan como *«no verificado en Packagist bajo ese nombre»* y **no** como inexistentes. ⚠️ **Acción pendiente que el pase 37 tiene asignada: este archivo nunca pasó por el control de *slugs* distintos ni por el de *backlink*** — los dos que en `agents/top.md` encontraron **un duplicado** y **dos colisiones** este mismo pase.
 > **Pase 11 del 2026-10-01:** aparece una licencia que las diez pasadas anteriores filtraban sin saberlo — **ECL-2.0**, con la que licencia todo Apereo (Sakai, Opencast, OpenLRW). Es Apache-2.0 con el alcance de patentes acotado, aprobada por OSI y FSF, y **es apta para construir arriba**. Ver la capa de analítica institucional, abajo.
+
+## 🟢 Altas fundacionales: 9 repos / 13 libros medidos — el CORPUS DE CONTENIDO del titular, con su cesion leida LIBRO POR LIBRO, que es la capa que este estante nombraba sin tenerla (pase 105 del 2026-10-05)
+
+### 🔬 El canal (`P247`), medido y no heredado — tercera medicion consecutiva de `P320`
+
+🟢 `raw.githubusercontent.com` **200**; clon `--filter=blob:none` **OK**; 🆕 `sparse-checkout` sobre
+el clon sin blobs **OK**. 🔴 `api.github.com` **403**; `github.com` por `curl` **403** (y **no
+discrimina**: un slug inventado tambien da 403). 🔴 **Egress cerrado:** `openstax.org`,
+`creativecommons.org`, `arxiv.org`, `aclanthology.org`, y 🆕 `unu.edu`, `coe.int`,
+`publications.iadb.org`, `unesco.org` — **000 los ocho**.
+
+🔵 **Control negativo antes de apoyar una fila:** rama, ruta, repo y `collection` inventados →
+**404** los cuatro; `main` / `master` / `HEAD` → **mismo `sha256`** del payload.
+
+### 🟢 Por que estas 9 entran por ESTE estante y no por `agents/` ni por `verticals/`
+
+Este archivo viene midiendo desde `P315` el eje **permisivo en codigo / CC en el contenido**, y lo
+midio **siempre desde el lado del redistribuidor**: `edu-convokit` (corpus vendoreado),
+`OATutor-Content` (campo por item). 🔴 **Nunca tuvo al TITULAR.** Sin el titular, un campo que dice
+`CC BY 4.0` no se puede contrastar con nada — y el pase 105 midio que **8.312 de 13.371** de esos
+campos **contradicen a su titular**.
+
+🟢 **OpenStax publica el payload de cada libro en la organizacion `openstax` de GitHub**, con la
+cesion **por libro** en un elemento legible por maquina (`<md:license url=…>` del
+`collections/<slug>.collection.xml`) **mas** el texto integro en el `LICENSE` de la raiz del
+*bundle*. **Dos lecturas independientes que concuerdan en los trece casos.** Eso es exactamente lo
+que este estante exige: **familia leida del payload del titular**, no inferida.
+
+### 🟢 Las 9 altas (13 libros), con la cesion leida del payload y el `collection-id` del titular
+
+| Repo | Libro (`slug` del titular) | `collection-id` | Cesion **leida del payload** | ¿Globant puede embarcar en producto comercial? |
+|---|---|---|---|---|
+| [`openstax/osbooks-physics`](https://github.com/openstax/osbooks-physics) | `physics` | `col12081` | 🟢 **CC BY 4.0** (*«Creative Commons Attribution License»*; `LICENSE` **19.103 B**) | 🟢 **SI** — atribucion y listo |
+| [`openstax/osbooks-calculus-bundle`](https://github.com/openstax/osbooks-calculus-bundle) | `calculus-volume-1` · `-2` · `-3` | `col11964` · `col11965` · `col11966` | 🔴 **CC BY-NC-SA 4.0** (`LICENSE` 21.443 B) | 🔴 **NO** — `NC` prohibe el uso comercial |
+| [`openstax/osbooks-college-algebra-bundle`](https://github.com/openstax/osbooks-college-algebra-bundle) | `college-algebra-2e` · `precalculus-2e` · `algebra-and-trigonometry-2e` · `college-algebra-corequisite-support-2e` | `col11759` · `col11667` · `col11758` · `col32026` | 🔴 **CC BY-NC-SA 4.0** (`LICENSE` 21.013 B) | 🔴 **NO** |
+| [`openstax/osbooks-prealgebra-bundle`](https://github.com/openstax/osbooks-prealgebra-bundle) | `prealgebra-2e` · `elementary-algebra-2e` · `intermediate-algebra-2e` | `col30939` · `col31130` · `col31234` | 🔴 **CC BY-NC-SA 4.0** (`LICENSE` 21.442 B) | 🔴 **NO** |
+| [`openstax/osbooks-university-physics-bundle`](https://github.com/openstax/osbooks-university-physics-bundle) | `university-physics-volume-1` · `-2` · `-3` | `col12031` · `col12074` · `col12067` | 🔴 **CC BY-NC-SA 4.0** (`LICENSE` 21.013 B) | 🔴 **NO** |
+| [`openstax/osbooks-college-physics`](https://github.com/openstax/osbooks-college-physics) | `college-physics-2e` · `college-physics-ap-courses-2e` | `col11406` · `col11844` | 🔴 **CC BY-NC-SA 4.0** (`LICENSE` 21.442 B) | 🔴 **NO** |
+| [`openstax/osbooks-introductory-statistics-bundle`](https://github.com/openstax/osbooks-introductory-statistics-bundle) | `introductory-statistics-2e` · `introductory-business-statistics-2e` | `col11562` · `col11776` | 🔴 **CC BY-NC-SA 4.0** (`LICENSE` 21.442 B) | 🔴 **NO** |
+| [`openstax/osbooks-statistics`](https://github.com/openstax/osbooks-statistics) | `statistics` | `col30309` | 🟢 **CC BY 4.0** (*«Creative Commons Attribution License»*; `LICENSE` **18.706 B**) | 🟢 **SI** |
+| [`openstax/osbooks-college-success`](https://github.com/openstax/osbooks-college-success) | `college-success-2e` · `college-success-concise` · `preparing-for-college-success` | — (sin `collection-id` en `books.xml`) | 🔴 **CC BY-NC-SA 4.0** — las **tres** leidas del `collection.xml` de cada libro | 🔴 **NO** |
+
+🔵 **Region declarada, no rellenada (`P135`/`P261`):** **North America** — OpenStax es de **Rice
+University** (Houston, Texas). La cesion no es regional, pero el titular si.
+
+🔵 **Control negativo de la tabla, dejado a la vista en `books.tsv`:** un `collection` **inventado**
+en un repo **real** (`osbooks-college-success/collections/college-success.collection.xml`) da
+**404 → `NO-ALCANZABLE`**, mientras el `LICENSE` de la raiz del mismo repo **si** se lee. 🔵 **Eso
+prueba que las dos lecturas son independientes y que un slug adivinado NO hereda en silencio la
+cesion del repo** — que es exactamente el modo en que esta tabla podria haber mentido.
+
+### 🟢 El hallazgo que vuelve utilizable toda la tabla: la licencia de OpenStax es POR LIBRO
+
+🔴 **Citar *«OpenStax es CC BY»* es falso para 11 de los 13 libros medidos.** 🟢 **Y citar *«OpenStax
+es NC-SA»* tambien seria falso: `physics` y `statistics` son `CC BY 4.0`, leidos en el mismo canal,
+con el mismo extractor, del mismo titular.** 🔵 **La consecuencia operativa es dura y simple: para
+cada libro de OER que entre a un producto hay que leer SU `collection.xml`.** Once de trece veces la
+respuesta va a ser *«no se puede embarcar comercialmente»*, y las dos veces que se puede son las que
+nadie espera.
+
+🔴 **Y una correccion que este pase se hizo a si mismo, antes de publicar.** La primera version de
+esta tabla daba `osbooks-statistics` como **`NC-SA`** y `osbooks-college-success` como *«no medida»*:
+la primera era una **inferencia por vecindad** —el resto del titular era `NC-SA`, asi que se dio por
+hecho— y salio **falsa** al medirla (`statistics` es **`CC BY 4.0`**). 🔵 **Es el error que este
+estante existe para no cometer, y la unica razon por la que no se publico es que se midieron las dos
+filas en vez de completarlas.** Las 13 filas de arriba estan **todas** leidas del payload.
+
+### 🔴 `P327` — los bytes y el `sha256` crudo NO son identidad de un archivo de licencia
+
+Tres `LICENSE` de esta misma tabla dan **21.443 / 21.013 / 21.442 B** y **429 lineas cada uno**. No
+son tres licencias: son **el mismo texto** con **CRLF**, con **LF**, y con **CRLF sin salto final**.
+Normalizando el fin de linea, los tres colapsan a un unico `sha256` **`78442b480475e7ae…`**.
+
+🔴 **Esto indicta una practica de esta base, no un dato:** desde el pase 66 este estante publica
+huellas de licencia como *«`LICENSE` 20.849 B»* y `sha256` **crudos**. **Los datos siguen siendo
+correctos; la huella no era una huella** — el mismo texto varia hasta **430 B** por un detalle de
+fin de linea, asi que dos repos con la misma licencia podian parecer distintos y uno relicenciado
+podia parecer igual. Desde este pase la identidad es el `sha256` del texto **normalizado**, y la
+re-expresion de las huellas viejas queda **pre-registrada como accion C del pase 106**.
+
+### 🟢 La accion pre-registrada de este estante, corrida y con las dos clausulas resueltas
+
+| clausula | pedia | medido | veredicto |
+|---|---|---|---|
+| leer la cesion de los libros **del titular** | si, y **sin** canal secundario | 🟢 **hecho**, del payload de `openstax` en GitHub, con `openstax.org` en **000** | **CORRIDA** |
+| `Calculus Volume 1` ≠ `CC BY 4.0` | si | 🟢 `CC BY-NC-SA 4.0`, dos canales concordantes | **CONFIRMADA** |
+| uno de a lo sumo **dos** de los 7 | ≤ 2 | 🔴 **8 de las 9 ediciones CITADAS** son `NC-SA`; **11 de 13** libros del titular | **FALSIFICADA** |
+| segunda accion: `CC4.0` (38 items) resuelve a **una** familia | si | 🟢 **una sola plantilla** (`oer: OATutor.io`, autoria propia) 🔴 **pero la familia no resuelve**: `CC4.0` no nombra clausulas | **CONFIRMADA en la forma** |
+| 🆕 unidad: *«los **7** libros»* | 7 | 🔴 **10** ediciones distintas citadas por los items | **denominador equivocado** |
+
+🔵 **El denominador equivocado tiene causa, y es reutilizable:** la pre-registracion conto
+**nombres de curso** (`courseName`) y la unidad correcta es la **edicion citada en el `oer`**. Un
+curso puede citar dos ediciones del mismo libro, y dos cursos pueden citar la misma. **`P289`
+otra vez, en un campo nuevo.**
+
+### 🔴 Accion pre-registrada para el pase 106, con su numero escrito ANTES de correrla
+
+**Accion:** leer, **de un canal del titular**, la cesion de `introductory-statistics` **1e** y
+`precalculus` **1e** — las dos ediciones que **1.748 items citan** y que los *bundles* vivos **ya no
+publican** (ausencia **aserida por enumeracion** de `collections/`, no por 404 de un nombre
+adivinado). Ruta esperada: repo archivado de la organizacion `openstax`, o `collection.xml` en una
+rama o *tag* anterior de los *bundles* vivos.
+
+**Prediccion falsable:** *las dos 1e declararan `CC BY 4.0`, y por lo tanto los **1.732** items que
+lo afirman quedaran **CORRECTOS**; el 62,2 % de contradiccion **no sube**, y la lectura cambia de
+«el redistribuidor se equivoco» a **«el redistribuidor congelo una cesion que el titular revoco al
+relicenciar la 2e»** — un riesgo distinto, y peor de explicar a un cliente, porque entonces el
+defecto no esta en OATutor sino en que **una cesion de OER puede estrecharse entre ediciones**.*
+
+🔵 **Que la refuta:** que la 1e tambien sea `NC-SA`. Entonces los 1.748 entran al balde de
+contradiccion, el total sube a **10.060 items (75,2 %)**, y `P326` se queda con la lectura simple
+—que se sostiene sola—.
+
+⚠️ **Lo que NO puede pasar es inferirla** de la 2e, de un agregador, o de que *«OpenStax es CC BY»*
+— que este pase acaba de medir falso para **11 de los 13** libros del titular. Si ningun canal del titular alcanza la 1e, se dice
+**no se pudo correr**, como hizo el pase 96.
+
+---
 
 ## 🟢 Altas fundacionales: 0 — y la prediccion que llevaba dos pases diferida se corre: CONFIRMADA en la forma, FALSIFICADA en la magnitud (pase 104 del 2026-10-05)
 

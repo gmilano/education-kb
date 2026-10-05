@@ -9,6 +9,129 @@ updated: 2026-10-05
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 > No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
 
+## 2026-10-05 — pase 105: 0 altas, vigesimoctavo barrido generalista, y la accion pre-registrada sale al REVES de lo previsto
+
+> **Frontmatter y region:** `Global`. Las senales regionales de este pase estan en
+> `intel/market.md` (barrido **34**, cuatro regiones, 0 silencios).
+
+### 🔬 El canal, medido antes de cualquier veredicto (`P247`) — tercera medicion consecutiva de `P320`
+
+| canal | pase 104 | pase 105 | control negativo |
+|---|---|---|---|
+| `raw.githubusercontent.com` (payload) | 🟢 200 | 🟢 **200** | rama, ruta, repo y `collection` inventados → **404** los cuatro |
+| clon `--filter=blob:none` (enumeracion, `P275`) | 🟢 OK | 🟢 **OK** | arbol de `OATutor-Content` = **51.929** rutas, **reproduce el pase 104 al archivo** |
+| 🆕 `sparse-checkout` sobre clon sin blobs | no usado | 🟢 **OK** | 13.371 archivos materializados sin bajar el repo entero |
+| `registry.npmjs.org` · `pypi.org` | 🟢 200 | 🟢 **200** | — |
+| `api.github.com` · `github.com` (web) | 🔴 403 | 🔴 **403** | un slug inventado tambien da 403: **no discrimina** |
+| `openstax.org` · `creativecommons.org` · `arxiv.org` · `aclanthology.org` | 🔴 bloqueados | 🔴 **000** | — |
+| 🆕 `unu.edu` · `coe.int` · `publications.iadb.org` · `unesco.org` | no medidos | 🔴 **000** | las 4 fuentes primarias del barrido regional 34 |
+
+🔵 **`main` / `master` / `HEAD` dan el mismo `sha256` del payload** — se verifico antes de apoyar una
+fila, porque un canal que devolviera lo mismo para cualquier rama tendria justo esa forma.
+
+### 🔴 Las 10 candidatas del barrido global, una por una — y ninguna entra
+
+Año **calculado** (`date -u +%Y` → **2026**). Cuatro consultas globales obligatorias.
+
+| candidata | cifra que trajo el canal | por que NO entra |
+|---|---|---|
+| `openclaw` | 385.407 ★ | agente **generalista**; ya registrado como eje saturado |
+| `dify` | 151.639 ★ | constructor de apps LLM, generalista |
+| `browser-use` | 108.128 ★ | automatizacion de navegador, generalista |
+| `Mem0` | 62.735 ★ | memoria de agente, generalista |
+| `AutoGen` | 60.284 ★ | **ya esta** en este archivo desde el pase 2 |
+| `Flowise` | 55.226 ★ | orquestador *no-code*, generalista |
+| `Aider` · `Cline` | — | agentes de **codigo** |
+| `CrewAI` · `LangGraph` | — | *frameworks* multiagente, generalistas |
+| `ai-engineering-from-scratch` | #1 de GitHub Trending, 2026-05-24 | **material didactico *sobre* AI**, no software que educa |
+| `free-ai-agents-resources` · `Awesome LLM Apps` | — | **listas curadas**, no agentes |
+| ⚠️ **`Hermes Agent`** (Nous Research) | *«~180.000 ★»* | 🔴 **RECHAZADO POR TERCERA VEZ** (pases 103, 104, 105): es generalista **y** la cifra es inverificable con `api.github.com` en 403 |
+
+🔵 **Vigesimoctavo barrido consecutivo con el mismo reparto.** Eso dejo de ser observacion hace
+mucho: es una **propiedad medida del canal** (`P281`). La captura semantica que el pase 23
+diagnostico —*«`education` en GitHub pertenece al material didactico sobre AI, no al software que
+educa»*— sigue vigente **82 pases despues**, y la cifra lo muestra: las dos acepciones comparten la
+palabra y la primera tiene **dos ordenes de magnitud mas de estrellas**.
+
+### 🔴 Donde SI estuvo el valor del pase: la accion pre-registrada, y sale invertida
+
+**Instrumento nuevo:** `compose/code/p326-titleholder-book-license/`.
+
+🟢 **Se corrio con `openstax.org` en `000`, y sin violar la prohibicion del pase 104 de usar canal
+secundario:** el titular publica **tambien** en la organizacion `openstax` de GitHub (`osbooks-*`), y
+ese canal estaba vivo. **Se leyo del titular, no de un agregador** (`P326-A`).
+
+| clausula pre-registrada | pedia | medido | veredicto |
+|---|---|---|---|
+| `Calculus Volume 1` ≠ `CC BY 4.0` | si | 🟢 `CC BY-NC-SA 4.0` | **CONFIRMADA** |
+| uno de a lo sumo **dos** de los 7 | ≤ 2 | 🔴 **7 de las 8** ediciones citadas medibles son `NC-SA`; **11 de 13** libros del titular | **FALSIFICADA** |
+| el vacio es huella de la procedencia | correlacion | 🔴 sin correlacion | **FALSIFICADA** |
+| unidad: *«los 7 libros»* | 7 | 🔴 **10** ediciones citadas | **denominador equivocado** |
+
+🔴 **Censo de los 13.371 problemas (no muestra): 8.312 items (62,2 %) declaran `CC BY 4.0` mientras
+el titular de la edicion que ellos mismos citan cede solo `NC-SA`. Embarcable: 592 = 4,4 %.**
+
+🟢 **Control positivo:** `physics` declara `CC BY 4.0` en el mismo canal y con el mismo extractor —
+la licencia de OpenStax es **por libro**, y el barrido **discrimina**.
+🔵 **Y es el unico libro que ningun item etiqueta:** sus 40 items dejan el campo **vacio**.
+
+### 🔵 Las PISTAS de agente del pase, publicadas como pistas y no como filas
+
+Ninguna se promueve: **sin lectura de payload que las respalde no hay fila** (`P247`).
+
+| pista | lo que el canal declara | estado |
+|---|---|---|
+| `TCS` + `Pearson` | alianza plurianual de *AI learning* para cerrar brechas de *skills* | 🔵 **no es open source** — se registra como movimiento de mercado, va a `intel/market.md` (APAC) |
+| `LearnUpon` | sede APAC nueva en Sydney, `Create+` de autoria de cursos con AI | 🔵 **producto propietario**; mismo destino |
+| `Ednova` (Chile) | citada como caso edtech disruptivo de LATAM 2026 | ⚠️ **sin repo publico localizado por este canal** — se declara como pista, no como pieza |
+
+### ⚠️ Lo que este pase NO pudo resolver, dicho en vez de callado
+
+- 🔴 **Los 18.054 JSON de `tutoring/`** (pistas y andamios, **dos tercios** del arbol de
+  `OATutor-Content`) siguen **sin medir**. 🔵 **Y el conteo publicado del pase 104 era 18.051**: la
+  enumeracion da **18.054**.
+- 🔴 **Los 455 items de titular no resuelto** (`docs.google.com`, `drive.google.com`, `oer`
+  ilegible): exige abrir cada documento, y el egress a Google Docs **no se midio**.
+- 🔴 **Los 2.443 `.gif`** del mismo arbol: una imagen de tercero dentro de un item permisivo es un
+  eje que esta base **todavia no toco**.
+- 🔴 **`introductory-statistics` 1e y `precalculus` 1e** (1.748 items): el titular **ya no las
+  publica**, aserido por **enumeracion** de `collections/`. **No se infiere su licencia en ninguna
+  direccion.**
+
+### 🔴 Acciones pre-registradas para el pase 106, falsables, con su numero escrito ANTES de correrlas
+
+**Accion A — el escape de edicion, acotado a 1.748 items.** Buscar la cesion de
+`introductory-statistics` **1e** y `precalculus` **1e** en un canal del **titular** (repo archivado
+de la organizacion `openstax`, o `collection.xml` de una rama/tag anterior de los *bundles* vivos).
+
+**Prediccion falsable:** *las dos ediciones 1e declararan `CC BY 4.0`, y por lo tanto los **1.732**
+items que lo afirman (1.684 + 48) quedaran **CORRECTOS** — con lo que el 62,2 % de este pase **no
+sube**, y la lectura cambia de «el redistribuidor se equivoco» a **«el redistribuidor congelo una
+cesion que el titular revoco al relicenciar la 2e»**, que es un riesgo distinto y peor de explicar
+a un cliente.*
+
+🔵 **Que la refuta:** que la 1e tambien sea `NC-SA`. Entonces los 1.748 entran al balde de
+contradiccion, el total sube a **10.060 items (75,2 %)** y `P326` se queda con la lectura simple.
+
+⚠️ **Lo que NO puede pasar:** inferirla de la 2e, de un agregador o de que *«OpenStax es CC BY»*.
+Si ningun canal del titular alcanza la 1e, se dice **no se pudo correr**, como hizo el pase 96.
+
+**Accion B, mas barata — los 18.054 `tutoring/`.** Ya estan enumerados y el `sparse-checkout` que
+este pase probo los materializa.
+
+**Prediccion falsable:** *los JSON de `tutoring/` **no tienen campo `license` propio** y heredan del
+problema padre; por lo tanto el reparto de cesion del arbol **no cambia** y el denominador que
+importa sigue siendo **13.371** y no 31.425.* 🔵 **Que la refuta:** que un `DefaultPathway.json`
+traiga su propio campo `license` — entonces hay **31.425** unidades de cesion, no 13.371, y los
+porcentajes de este pase son de la **sub-poblacion equivocada**.
+
+**Accion C — `P327` contra esta base.** Re-expresar como `sha256` **normalizado** las huellas de
+licencia que esta KB publico con `sha256` **crudo** y conteo de bytes desde el pase 66.
+**Prediccion: ningun dato cambia de familia; cambia la huella.** Si alguno cambia de familia, el
+hallazgo es mucho mas grave que un defecto de huella.
+
+---
+
 ## 2026-10-05 — pase 104: el canal VUELVE, y las tres acciones diferidas se corren de una vez
 
 > **Frontmatter y region:** `Global`. Las senales regionales de este pase estan en

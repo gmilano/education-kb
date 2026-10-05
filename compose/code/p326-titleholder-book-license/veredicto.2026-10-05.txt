@@ -1,0 +1,25 @@
+denominador (problemas): 13371
+
+  A_contradice_al_titular                        8312   62.2 %
+  B_no_declara_titular_NC                        2104   15.7 %
+  C_titular_SI_cede_BY                             40    0.3 %
+  D_edicion_no_publicada_escape_ABIERTA          1748   13.1 %
+  E_autoria_propia_de_OATutor                     552    4.1 %
+  F_campo_de_cesion_con_URL_de_procedencia        160    1.2 %
+  G_titular_no_resuelto                           455    3.4 %
+
+  EMBARCABLE en entrega comercial (titular cede BY o es OATutor): 592 = 4.4 %
+  NO embarcable, MEDIDO:                                          10416 = 77.9 %
+  SIN RESOLVER (declarado, no inferido):                          2363 = 17.7 %
+
+edicion citada por el item       cede el titular             n  dice BY   vacia
+elementary-algebra-2e            CC BY-NC-SA 4.0          2840     2650     190
+intermediate-algebra-2e          CC BY-NC-SA 4.0          2063     2034      29
+college-algebra-2e               CC BY-NC-SA 4.0          1939     1875      64
+precalculus-2e                   CC BY-NC-SA 4.0          1903     1306     543
+introductory-statistics          NO-PUBLICADA-POR-EL-TITULAR   1700     1684      16
+calculus-volume-1                CC BY-NC-SA 4.0          1012        2    1010
+university-physics-volume-1      CC BY-NC-SA 4.0           394      181     213
+college-physics-2e               CC BY-NC-SA 4.0           265      264       1
+precalculus                      NO-PUBLICADA-POR-EL-TITULAR     48       48       0
+physics                          CC BY 4.0                  40        0      40

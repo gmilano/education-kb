@@ -195,3 +195,32 @@ WORK=/tmp/t322 STEP=11 PAR=12 bash sweep_parallel.sh > result-step11.$(date +%F)
 - 🔴 **La licencia del campo no se valida contra el titular.** Que un item **diga** `CC BY 4.0` no
   prueba que OpenStax **ceda** eso para ese problema; es la accion pre-registrada de arriba.
 - 🟢 **El denominador es de items, no de repos** (`P289`): 13.371 problemas en **un** repo.
+
+---
+
+## 🟢 CORRIDA en el pase 105 del 2026-10-05 — y el resultado es al reves de lo que esta seccion predijo
+
+La accion pre-registrada de arriba **se corrio**. Instrumento:
+[`../p326-titleholder-book-license/`](../p326-titleholder-book-license/).
+
+| clausula pre-registrada aca | pedia | medido | veredicto |
+|---|---|---|---|
+| `Calculus Volume 1` ≠ `CC BY 4.0` en el titular | si | 🟢 **`CC BY-NC-SA 4.0`** | **CONFIRMADA** |
+| el **unico** o uno de a lo sumo **dos** de los 7 | ≤ 2 | 🔴 **7 de las 8** ediciones citadas medibles son `NC-SA`; **11 de 13** libros del titular | **FALSIFICADA** |
+| *«el campo vacio es la huella de una procedencia que no es `CC BY 4.0`»* | correlacion | 🔴 **no hay correlacion** | **FALSIFICADA** |
+| unidad: *«los **7** libros»* | 7 | 🔴 **10** ediciones distintas citadas por los items | **denominador equivocado** |
+| segunda accion: `CC4.0` resuelve a una sola familia | si | 🟢 **una sola plantilla** (`oer: OATutor.io`, autoria propia de OATutor) 🔴 **pero `CC4.0` no nombra clausulas, asi que la familia no resuelve** | **CONFIRMADA en la forma** |
+
+🟢 **Y la prohibicion se respeto:** `openstax.org` sigue en **000**, y la cesion **no** se tomo de
+agregadores. Se leyo del **payload del titular** en la organizacion `openstax` de GitHub
+(`osbooks-*`), que es **otro canal del MISMO titular** (`P326-A`).
+
+🟢 **El muestreo sistematico de este instrumento queda VALIDADO por el censo** de los 13.371
+problemas: **76,4 / 19,0 / 3,4 / 1,2 %** contra **75,7 / 19,3 / 3,6 / 1,4 %** con `STEP=11`.
+🔴 **Lo que le faltaba a este instrumento no era precision: era el segundo campo.** `oer` dice
+**quien es el titular**, y sin el, *«el campo dice `CC BY 4.0`»* no se puede contrastar con nada —
+**8.312 items (62,2 %) lo dicen contra un titular que cede `NC-SA`**. Ver **`P326`** y la receta
+**`R-105-CESION-CONTRA-TITULAR`**, que **invierte** a `R-104-CAPA-DE-CONTENIDO`.
+
+⚠️ **Correccion de conteo de este archivo:** publicaba **18.051** JSON de `tutoring/` sin medir; la
+enumeracion del arbol da **18.054**.

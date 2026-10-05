@@ -8,6 +8,68 @@ updated: 2026-10-05
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 
+## 2026-10-05 — pase 105: trending vuelve vacio por TRIGESIMOCUARTA vez, y el canal de respaldo entrega 9 repos del TITULAR
+
+🟢 **Canal medido, no heredado** (`P247`, tercera medicion consecutiva de `P320`):
+`raw.githubusercontent.com` **200**; clon `--filter=blob:none` **OK**; 🆕 **`sparse-checkout` sobre el
+clon sin blobs OK** — el canal nuevo de este pase, y el que convierte una muestra en un **censo**.
+🔴 `api.github.com` **403**, `github.com` por `curl` **403** (y **no discrimina**: un slug inventado
+tambien da 403). 🔴 Egress **000** a `openstax.org`, `creativecommons.org`, `arxiv.org`,
+`aclanthology.org`, `unu.edu`, `coe.int`, `publications.iadb.org`, `unesco.org`.
+
+🔵 **Control negativo antes de usarlo:** rama, ruta, repo y `collection` inventados → **404** los
+cuatro; `main` / `master` / `HEAD` → **mismo `sha256`**.
+
+### 🔴 El canal `github trending` vuelve vacio para esta industria — trigesimocuarta vez
+
+Año **calculado** (`date -u +%Y` → **2026**). `github trending education AI 2026` devolvio:
+
+| lo que devolvio | por que NO es un hallazgo de esta industria |
+|---|---|
+| `ai-engineering-from-scratch` (#1 de GitHub Trending, 2026-05-24) | **material didactico *sobre* AI** |
+| `Awesome LLM`, `Agents Towards Production`, `OpenAI Cookbook`, `LangChain` | **listas y frameworks generalistas** |
+| `DietrichGebert/ponytail` | *«hace que tu agente piense como el senior mas vago»* — **no educativo** |
+| `speedyapply/2026-AI-College-Jobs` | **bolsa de trabajo**, no software que educa |
+
+🔵 **`P281` otra vez, y ya con 34 mediciones:** el termino `education` en GitHub pertenece al
+material didactico **sobre** AI. No es un defecto de la consulta; es el estado del canal.
+
+### 🟢 Lo que SI entrego el canal de respaldo: 9 repos del titular, con licencia leida del payload
+
+El barrido por **artefacto del dominio** —la correccion que el pase 23 dejo escrita— apunto esta vez
+al **corpus de contenido**, y encontro que el titular de casi todo el OER de matematica y fisica de
+esta KB **publica su payload en GitHub**:
+
+| Repo | Libros | Licencia **leida del payload** |
+|---|---|---|
+| [`openstax/osbooks-physics`](https://github.com/openstax/osbooks-physics) | 1 | 🟢 **CC BY 4.0** (19.103 B) |
+| [`openstax/osbooks-statistics`](https://github.com/openstax/osbooks-statistics) | 1 | 🟢 **CC BY 4.0** (18.706 B) |
+| [`openstax/osbooks-calculus-bundle`](https://github.com/openstax/osbooks-calculus-bundle) | 3 | 🔴 CC BY-NC-SA 4.0 |
+| [`openstax/osbooks-college-algebra-bundle`](https://github.com/openstax/osbooks-college-algebra-bundle) | 4 | 🔴 CC BY-NC-SA 4.0 |
+| [`openstax/osbooks-prealgebra-bundle`](https://github.com/openstax/osbooks-prealgebra-bundle) | 3 | 🔴 CC BY-NC-SA 4.0 |
+| [`openstax/osbooks-university-physics-bundle`](https://github.com/openstax/osbooks-university-physics-bundle) | 3 | 🔴 CC BY-NC-SA 4.0 |
+| [`openstax/osbooks-college-physics`](https://github.com/openstax/osbooks-college-physics) | 2 | 🔴 CC BY-NC-SA 4.0 |
+| [`openstax/osbooks-introductory-statistics-bundle`](https://github.com/openstax/osbooks-introductory-statistics-bundle) | 2 | 🔴 CC BY-NC-SA 4.0 |
+| [`openstax/osbooks-college-success`](https://github.com/openstax/osbooks-college-success) | 3 | 🔴 CC BY-NC-SA 4.0 |
+
+**13 libros medidos uno por uno: 11 `NC-SA`, 2 `CC BY 4.0`.** Las filas viven en
+`repos/foundations.md`; el instrumento, en `compose/code/p326-titleholder-book-license/`.
+
+🔴 **Dos repos que `git ls-remote` NO encuentra, y la ausencia importa:**
+`openstax/osbooks-introductory-statistics` y `openstax/osbooks-precalculus` — las ediciones **1e**
+que **1.748 items de `OATutor-Content` citan**. La ausencia esta **aserida por enumeracion** de
+`collections/` en los *bundles* vivos (solo traen `-2e`), no por 404 de un nombre adivinado.
+
+### 🔴 No-hallazgos declarados de este pase, con su razon
+
+| candidata del barrido | estado |
+|---|---|
+| `OpenEduCat` (*«3M+ usuarios, 300 modulos, 65 idiomas»*, sobre Odoo) | **ya esta** en `verticals/solutions.md` desde el pase 2 — el canal la redescubre, no la agrega |
+| `.LRN` (*«originally developed at MIT»*) | **ya medida** por esta KB: `openacs/dotlrn` existe, **dotLRN 2.10.1**, `<release-date>2024-09-02</release-date>`. 🔵 **La frase del canal es de ORIGEN, no de licencia** — y el origen no es un permiso |
+| `Ednova` (Chile), `LearnUpon` (APAC), `TCS`+`Pearson` | 🔵 **movimientos de mercado, no repos**: van a `intel/market.md` por region. `Ednova` **sin repo publico localizado por este canal** |
+
+---
+
 ## 2026-10-05 — pase 104: trending vuelve vacio por TRIGESIMOTERCERA vez, pero el canal de respaldo esta VIVO
 
 🟢 **A diferencia del pase 103, este pase SI tiene canal.** `raw.githubusercontent.com` **200** y el

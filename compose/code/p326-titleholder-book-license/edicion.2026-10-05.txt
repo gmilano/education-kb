@@ -1,0 +1,14 @@
+slug citado por el ITEM                 CC-BY-4.0   VACIA   OTRO   total
+calculus-volume-1                               2    1010      0    1012
+college-algebra-2e                           1875      64      0    1939
+college-physics-2e                            264       1      0     265
+elementary-algebra-2e                        2650     190      0    2840
+intermediate-algebra-2e                      2034      29      0    2063
+introductory-statistics                      1684      16      0    1700
+physics                                         0      40      0      40
+precalculus                                    48       0      0      48
+precalculus-2e                               1306     543     54    1903
+university-physics-volume-1                   181     213      0     394
+TOTAL                                       10044                  12204
+
+ediciones distintas citadas por los items: 10

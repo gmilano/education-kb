@@ -7,6 +7,7 @@ updated: 2026-10-05
 # 📡 Tendencias — education
 
 > Ventana de investigación: septiembre 2026. Verificado 2026-09-30; el pase 11, el 2026-10-01.
+> **Pase 105 del 2026-10-05:** 🔴 **La accion pre-registrada sale CONFIRMADA EN LA LETRA y FALSIFICADA EN LA MAGNITUD, al reves de lo previsto, y el hallazgo es grande: la cesion que un item AFIRMA no es la que su titular OTORGA.** Censo de los **13.371** problemas de `CAHLR/OATutor-Content` —no muestra— cruzando `license` contra `oer`: **8.312 items (62,2 %) declaran `CC BY 4.0` mientras el titular de la edicion que ellos mismos citan cede solo `NC-SA`**; **embarcable: 592 = 4,4 %**. 🟢 **Se midio con `openstax.org` en `000`, leyendo del titular por otro canal** (`openstax` en GitHub) — **`P326-A`: egress cerrado al sitio del titular no es cesion inalcanzable**. 🔴 **La licencia de OpenStax es POR LIBRO: 11 de 13 son `NC-SA`, y las 2 `CC BY 4.0` (`physics`, `statistics`) incluyen el unico libro que NINGUN item etiqueta.** 🔵 **La tasa de llenado mide diligencia, no permiso** — lo que **invierte** la receta `R-104`. 🔴 **`P327`: los bytes y el `sha256` crudo de un archivo de licencia no son identidad** (21.443 / 21.013 / 21.442 B = el mismo texto con CRLF / LF / CRLF-sin-salto). 🔴 **Y el calendario del AI Act vuelve mal por NOVENA vez**, ahora desde NA y LATAM. Ver las tendencias **843**–**850**.
 > **Pase 104 del 2026-10-05:** 🟢 **El canal VOLVIO, y eso es `P320` confirmado en la direccion contraria: es un hecho de PERMISO.** El instrumento del pase 103 estaba intacto y le faltaba el derecho a correrlo; esta sesion **si** lo tiene. Medido con control negativo antes de usarlo (rama inventada, ruta inventada y repo inventado dan **404**; `main`/`master`/`HEAD` dan el **mismo** sha): `raw.githubusercontent.com` **200**, clon `--filter=blob:none` de terceros **OK**. 🔴 **Sigue apagado:** `api.github.com` **403**, y `openstax.org`, `creativecommons.org`, `arxiv.org`, `aclanthology.org` **bloqueados por egress** por `curl` **y** por el fetcher. 🔴 **La tendencia que manda es de PROCEDENCIA y aplica a cualquier plataforma de contenido, no solo a esta: el material didactico open source declara su licencia **por item**, y un campo por item se puede llenar MAL. Medido sobre `OATutor-Content`: **1.216 items, 24,3 % NO lleva la cesion que el README promete para «all content»** — 19,3 % con el campo VACIO, 3,6 % con `CC4.0` (que no nombra clausulas: `CC BY 4.0` y `CC BY-NC-SA 4.0` son ambas «CC 4.0»), y 1,4 % con **una URL que no es de licencia**.** 🔵 **Y los vacios NO son ruido: se concentran por curso. **5 de 21 cursos con 0 %**, y `OpenStax: Calculus Volume 1` con **1,3 %** (74 de 75 vacios) mientras `Elementary Algebra` e `Intermediate Algebra` dan **100 %**.** ⚠️ **La explicacion mas probable —que `Calculus Volume 1` sea `CC BY-NC-SA 4.0` en el titular mientras los demas son `CC BY 4.0`— NO se publica como hecho: `openstax.org` da 403 por egress y lo unico que la sostiene son ediciones DERIVADAS y agregadores, que es exactamente el error que `P314` le costo a esta base. **Queda pre-registrada como accion del pase 105, con su prediccion escrita antes de correrla.** 🟢 **Lo de primera mano es la correlacion y alcanza para una regla de entrega: en una plataforma de contenido, la tasa de etiquetado por curso es un indicador de procedencia, y el curso peor etiquetado es el primero que hay que auditar.** 🔵 **Señal de mercado del barrido: el eje 2026 de los LMS open source es incorporar tutoria AI dentro de la plataforma (LearnHouse) en vez de agregarla por fuera — y la capa que crece es ERP+LMS unificado (OpenEduCat: 3 M+ usuarios, 90+ paises, 70+ modulos) contra LMS puro.** Ver **`P322`**–**`P325`**.
 > **Pase 103 del 2026-10-05:** 🔴 **Tendencias 823–834, y la que manda es de método y contra esta base: `P321`** — un archivo append-only puede **sepultar un acierto bajo un error posterior**, y `intel/market.md` tiene hoy las dos versiones del calendario del AI Act conviviendo (pase 101 correcta, pase 102 falsa) sin que nada lo detecte. 🔴 **Agravante: los pases 100 y 101 LLEVABAN EL CONTADOR de ese mismo error de canal — el pase 102 fue la séptima reproducción, desde adentro.** 🟢 **El calendario real, con la norma que lo produce: Reglamento (UE) 2026/1744** (*Digital Omnibus on AI*, DOUE 24/07/2026, en vigor 27/07/2026) — art. 50 **vigente 2026-08-02** (gracia hasta **2026-12-02**), Anexo III educativo **2027-12-02** y **CONDICIONAL**, Anexo I **2028-08-02**. 🟢 **`P320`: el canal de verificación es un hecho de PERMISO, no sólo de red** — y una predicción **no corrida no es una predicción falsificada.
 > **Pase 102 del 2026-10-04:** 🟢 **Trece tendencias nuevas, numeradas 810–822** (el pase 101 cerró en 809). 🔴 **La que manda es una PREDICCIÓN PROPIA FALSIFICADA en las dos cláusulas: el pase 101 afirmó que la licencia por capa (`P315`) era la NORMA de la capa de observación de aula, y sobre el denominador pre-registrado de 9 repos las piezas con licencia de datos distinta de la del código, además de la conocida, son 0 — la predicción pedía ≥ 2 — y de las 2 que declaran datos una concede uso comercial EXPLÍCITO, así que tampoco hay mayoría `NC`.** 🔵 **Pero medirla destapó que la PREGUNTA estaba mal planteada, y eso es `P317`: la pregunta de datos son DOS ejes ortogonales —¿redistribuye corpus? y ¿cede algo sobre él?— y un barrido que sólo compara licencias DECLARADAS da PERMITIDO sobre la celda peor, porque esa celda es silenciosa.** 🔴 **`P318`: `rosewang2008/edu-convokit` —fila MIT de esta base, correcta para el código— redistribuye 29 transcripciones de TalkMoves, que `SumnerLab` publica `CC BY-NC-SA 4.0`, sin declarar términos de datos; 29 de 29 nombres medidos contra el árbol del upstream.** 🔴 **`P319`: la ausencia de `data/README.md` no es ausencia de datos — 404 en el path adivinado, 111 archivos de corpus en el árbol enumerado.** 🟢 **Y una cota mal atribuida se corrige: «la licencia de `speechocean762` no es verificable» era del CANAL, no del repo.**
@@ -117,6 +118,109 @@ updated: 2026-10-05
 > (tendencia 29), se abre el **gap 20** y se registran dos advertencias de verificación: los agregadores de estrellas
 > están mal por ~2× y **un 403 de `curl` no es un 404**. Ver la nota de método del pase 12.
 > **Pase 11:** el Digital Omnibus es derecho vigente (tendencia 25), aparece la capa predictiva y está vacía (tendencia 26), y se corrige un error de método de diez pasadas sobre licencias permisivas (tendencia 27).
+
+## 🟢 Tendencias 843–850 — pase 105 del 2026-10-05: la cesion que un item AFIRMA no es la que su titular OTORGA, y la diferencia se mide
+
+### 843 — Un campo de licencia por item es una AFIRMACION DEL REDISTRIBUIDOR, y se puede contrastar
+
+🔴 **Medido sobre el CENSO, no sobre muestra: 13.371 problemas de `CAHLR/OATutor-Content`.** El pase
+104 leyo el campo `license` y publico *«24,3 % no dice `CC BY 4.0`»*. 🟢 **Su muestreo queda
+validado por el censo** (76,4 / 19,0 / 3,4 / 1,2 % contra 75,7 / 19,3 / 3,6 / 1,4 %). 🔴 **Lo que le
+faltaba era el SEGUNDO campo:** `oer` dice **quien es el titular**, y cruzado contra la cesion leida
+del payload del titular, **8.312 items (62,2 %) declaran `CC BY 4.0` mientras el titular de la
+edicion que ellos mismos citan cede solo `CC BY-NC-SA 4.0`**.
+
+🔵 **Regla de entrega:** un campo de licencia por item **no es una cesion**: es una afirmacion, y su
+valor depende de **si quien la escribe es el titular**. Donde OATutor es el titular (552 items,
+`oer: OATutor.io`) su README **si** cede; donde no lo es, **no puede ceder lo que no tiene**.
+**Embarcable en una entrega comercial: 592 items = 4,4 %.** Ver **`P326`**.
+
+### 844 — La tasa de llenado de un campo mide DILIGENCIA, no PERMISO — y la ironia esta medida
+
+🔴 **`elementary-algebra-2e`, cuyo titular cede `NC-SA`, tiene el campo lleno en 2.650 de 2.840
+items (93,3 %): el etiquetado mas prolijo de todo el *pool*, y el mas confiadamente equivocado.**
+🟢 **`physics`, el unico libro cuyo titular SI cede `CC BY 4.0`, es el unico cuyos 40 items dejan el
+campo VACIO.**
+
+🔵 **El campo no sigue la cesion: sigue la plantilla de autoria del curso.** 🔴 **Consecuencia que
+invierte una receta de esta base:** `R-104-CAPA-DE-CONTENIDO` ordenaba la cola de auditoria por
+**tasa de llenado** y mandaba embarcar los cursos al **100 %**. Estaba exactamente al reves. La clave
+de ordenamiento correcta es **el `oer` y la edicion citada**.
+
+### 845 — La licencia de un corpus OER es POR LIBRO, no por editorial
+
+🔴 **13 libros de OpenStax leidos del payload del titular: 11 son `CC BY-NC-SA 4.0` y 2 son
+`CC BY 4.0`** (`physics`, col12081, `LICENSE` 19.103 B; `statistics`, col30309, 18.706 B).
+
+🔵 **Las dos generalizaciones comodas son falsas:** *«OpenStax es CC BY»* es falso para 11 de 13, y
+*«OpenStax es NC-SA»* es falso para 2. 🔴 **Para cada libro de OER que entre a un producto hay que
+leer SU `collection.xml`** — once de trece veces la respuesta va a ser *«no se puede embarcar
+comercialmente»*, y las dos que se puede son las que nadie espera. **El `NC` no es un detalle de
+atribucion: prohibe el uso comercial, que es el unico uso que un entregable de cliente tiene.**
+
+### 846 — «Egress cerrado al sitio del titular» NO es «la cesion del titular es inalcanzable»
+
+🟢 **`openstax.org` dio `000` y la cesion se leyo igual, del titular**: OpenStax publica el payload
+de cada libro en la organizacion **`openstax` de GitHub**, y `raw.githubusercontent.com` estaba
+**200**. **Dos lecturas independientes por libro** —`<md:license>` del `collection.xml` y `LICENSE`
+del *bundle*— concordantes en los 13 casos.
+
+🔵 **`P326-A`, y es la direccion complementaria de `P314`:** lo que descalifica a un canal secundario
+**no es que sea otro canal, es que sea otro titular**. 🔴 **Y la leccion operativa: un pase que
+hereda la declaracion de canal del anterior se pierde el canal que esta vivo.** El pase 104 declaro
+`openstax.org` bloqueado y cerro ahi; el 105 midio **otro canal del mismo titular** y corrio la
+accion que llevaba un pase diferida.
+
+### 847 — El conteo de bytes y el `sha256` CRUDO no son identidad de un archivo de licencia
+
+🔴 **Tres `LICENSE` del mismo titular: 21.443 / 21.013 / 21.442 B, 429 lineas cada uno.** No son tres
+licencias: son **el mismo texto** con **CRLF**, con **LF**, y con **CRLF sin salto final**.
+Normalizando el fin de linea, los tres dan un unico `sha256` **`78442b480475e7ae…`**.
+
+🔴 **Esto indicta una practica de esta base desde el pase 66**, que publica huellas como *«`LICENSE`
+20.849 B»* y `sha256` crudos. 🟢 **Los datos siguen siendo correctos; la huella no era una huella:**
+el mismo texto varia hasta **430 B** por fin de linea, asi que **dos repos con la misma licencia
+podian parecer distintos, y uno relicenciado podia parecer igual.** Desde este pase la identidad es
+el `sha256` del texto **normalizado**. Ver **`P327`**.
+
+### 848 — La licencia de la plataforma no dice nada de la licencia del contenido
+
+🔵 **Una plataforma es un envase.** `OATutor` es **MIT** y su codigo se embarca entero; su contenido
+entra por **submodulo** desde un repo con **0 archivos de licencia en 51.929 rutas**; y el titular
+de ese contenido cede **`NC-SA` en 11 de 13 libros**.
+
+🔴 **Consecuencia contraintuitiva y vendible: Moodle (GPL-3.0) con contenido `CC BY` es mas
+entregable que OATutor (MIT) con contenido `NC`.** La bandera de licencia de la fila de una KB de
+plataformas **no es el limite real de la entrega**, y la *due diligence* se corre **dos veces**: una
+sobre el repo de la plataforma, otra sobre **el titular de cada cuerpo de contenido**.
+
+### 849 — El calendario del AI Act vuelve mal por NOVENA vez, ahora desde North America y LATAM
+
+🔴 NA devolvio *«taking full effect in August 2026»*; LATAM, de forma independiente, *«entered into
+force progressively from August 2026»*. 🔵 **Nueve reproducciones en nueve pases, desde dos pares de
+consultas no relacionadas: es una propiedad del canal, no un desliz** (`P321`). La correccion de esta
+base no se toca: **art. 50(2) vigente desde 2026-08-02 con gracia al 2026-12-02**; **Anexo III
+diferido al 2027-12-02 y CONDICIONAL** (Reglamento UE **2026/1744**).
+
+🆕 **Y un segundo defecto del mismo canal, medido este pase: TRES cifras globales incompatibles en un
+solo barrido** — 6,4 B → 79,6 B (31,35 %), 7,52 B → 10,6 B (40,9 %), y la que esta base citaba,
+9,58 B → 42,48 B (41,5 %). 🔴 **Difieren en punto de partida para años contiguos y ninguna declara su
+alcance.** 🔵 **Una cifra de mercado sin alcance declarado no es una cifra, es un titular.**
+
+### 850 — En LATAM aparecio una unidad de medida nueva, y es la que firma contratos
+
+🔵 Esta base venia midiendo LATAM en **personas** (92 % de alumnos, 79 % de docentes). 🆕 **El
+*working paper* de UNU/UNESCO sobre educacion superior de America Latina y el Caribe mide
+INSTITUCIONES: 200, en 19 paises, relevadas agosto–octubre 2025, en cinco dimensiones — y una es
+GOBERNANZA.**
+
+🔵 **Por que cambia una propuesta:** *«92 % de los alumnos usa AI»* describe un hecho consumado y **no
+nombra comprador**; *«200 instituciones evaluadas en gobernanza»* nombra **la unidad que firma** y
+**el eje por el que firma**. 🔴 **Dicho con su limite:** `unu.edu`, `unesco.org` y
+`publications.iadb.org` dan **000** por egress — **se registra que existen, quien los publica y cual
+es su unidad; no sus cifras internas.**
+
+---
 
 ## 🟢 Tendencias 835–842 — pase 104 del 2026-10-05: el canal vuelve, y la licencia del CONTENIDO resulta un eje con numero
 
