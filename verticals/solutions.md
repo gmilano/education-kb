@@ -8,6 +8,7 @@ updated: 2026-10-05
 
 > Plataformas verticales reales, en producción, customizables con AI.
 > Modelo: partir de algo que ya funciona y que ya tiene los datos, y agregar la capa agéntica arriba.
+> **Pase 113 del 2026-10-05:** 🟢 **1 vertical nueva, y con ella la capa de plataforma gana su segunda pieza no-copyleft: `Elgg/Elgg` (1.7k ★ ±50 al `2026-10-05T10:48Z`, 665 forks, PHP) con **0 menciones en 112 pases** de este arbol.** 🆕 **`P364` — y no entra como una fila mas, entra como un EJE: la cesion esta SEGMENTADA POR DIRECTORIO, leida del payload de `master/LICENSE.txt` — *«Bundled plugins (the contents of the "/mod" directory) are available only under the GPLv2 license. The remainder of the project is available under either MIT or GPLv2»*.** 🔵 **Lo que eso le cambia a una COTIZACION: el nucleo se puede construir y cerrar encima (MIT a eleccion), pero empaquetar `/mod` arrastra GPL-2.0 ⇒ la frontera de contaminacion es una RUTA, no el repo, y la ficha de esta plataforma necesita DOS filas y no una. Un barrido de raiz habria publicado «MIT» o «GPL-2.0» y las dos habrian sido falsas.** 🔴 **Y `LICENSE` da 404 mientras `LICENSE.txt` da 200: `P279` en el repo donde mas caro sale — probar solo `LICENSE` habria descartado por «sin cesion» un nucleo permisivo.** 🔵 **El hueco de 112 pases es mas util que la fila: `Elgg` no es nuevo ni oscuro, es que este arbol busca *education/LMS/tutor* y `Elgg` se describe como *socially aware web applications*. La pieza estaba a una consulta de distancia y la consulta era la del encargo.** 🔴 **`formalms/formalms` (37 ★) medido y descartado por cesion, con el negativo declarado DEBIL: 2 sondas contra las 12 del estandar de este arbol.** ⚠️ **Region de `Elgg`: `sin region verificada` — el `LICENSE.txt` nombra `The MITRE Corporation` (EE. UU.) y `Curverider Ltd` (R. Unido), que es evidencia de titulares NA+EMEA pero de una lista de copyright de 2017, no una sede actual (`P135`).**
 > **Pase 112 del 2026-10-05:** 🟢 **La capa de plataforma deja de ser COPYLEFT 8 de 8: `Selleo/mentingo` (MIT, 91 ★, TypeScript, EMEA/Polonia) es el primer LMS self-hosted PERMISIVO que esta base mide.** El pase 90 habia medido 8 de 8 copyleft (Moodle GPL-3.0, Open edX AGPL-3.0, Sakai ECL, OpenEduCat LGPL-3.0…) y la capa quedaba `MEDIDA-Y-BLOQUEADA-POR-LICENCIA` para un entregable cerrado. ⚠️ **Con la cota dicha: 91 ★ y 28 forks no son dos decadas de Moodle — lo que compra es ausencia de friccion de licencia, no madurez.**
 > **Pase 111 del 2026-10-05:** 🔴 **0 verticales nuevas (trigesimo barrido): el canal devuelve las ya publicadas —OpenEduCat sobre Odoo, Open edX via Axim, Moodle, Chamilo, OpenOLAT, Fedena, ERPNext/Frappe Education— mas Sakai e ILIAS, que ya estan.** 🆕 **Lo que se agrega es la COTA con que se pueden citar sus cifras (`P349`/`P353`), y el testigo es la plataforma mas citada del estante: `moodle/moodle` renderiza **`7.5k` ★** — **DOS** cifras significativas, no tres, y el canal no distingue 7.450 de 7.550. Una ficha que publique un entero exacto publica una precision SIN canal que la sostenga, y en este estante las cifras grandes son la norma.** 🟢 **La licencia, en cambio, se lee del PAYLOAD y es firme: GPL-3.0 para Moodle, confirmada contra lo publicado.** 🔵 **Esa es la asimetria util del pase: la CESION de una plataforma es verificable al byte, su POPULARIDAD solo por magnitud — y para una decision de compra esta bien ordenado, porque lo que decide es la licencia.** 🔴 **Barrido regional 40: 15 hechos devueltos, 0 nuevos (`P287`) — el eje que sigue rindiendo es el de la PROCEDENCIA DEL ACTIVO, que es justo lo que una vertical tiene que contestar antes de entregarse con contenido adentro.**
 > Verificado vía WebFetch el 2026-09-30; las capas del pase 11, el 2026-10-01.
@@ -170,6 +171,120 @@ updated: 2026-10-05
 > **`qti3-pnp`**, que abren accesibilidad de evaluación como entregable auditable (**P72**). ⚠️ **Open edX cambia de
 > recomendación: proponer con presupuesto de mantenimiento (gap 70).** Ver la sección del pase 33, abajo.
 
+
+## 🟢 La capa de plataforma gana un EJE: la cesion segmentada por directorio (pase 113 del 2026-10-05)
+
+### 🔴 El estado que este pase cambia
+
+El pase 90 midio la capa de plataforma **copyleft 8 de 8**. El pase 112 la rompio con una pieza
+permisiva (`mentingo`, MIT). 🟢 **Este pase agrega la segunda, y trae un regimen que este estante no
+sabia describir: una sola plataforma con DOS cesiones, repartidas por RUTA.**
+
+---
+
+### 🟢 `Elgg/Elgg` — la pieza nueva, con la cesion leida del archivo
+
+| campo | valor |
+|---|---|
+| repo | [`Elgg/Elgg`](https://github.com/Elgg/Elgg) |
+| ★ | **1.7k** — banda `K-3CIFRAS`, cota **±50**, leido `2026-10-05T10:48Z` (`P349`, `P353`) |
+| forks | 665 |
+| lenguaje | PHP |
+| que es | *«an open source rapid development framework for socially aware web applications»* |
+| archivo de cesion | `master/LICENSE.txt` (**200**) — 🔴 `master/LICENSE` da **404** |
+| region | ⚠️ **sin region verificada** (indicio anotado abajo) |
+
+**Por que es una vertical de partida y no solo un repo:** trae como primitivas lo que una plataforma
+de aprendizaje **social** necesita y ni Moodle ni Open edX dan de fabrica — perfiles, grupos,
+cohortes, muro de actividad, notificaciones, sistema de plugins. 🔵 **Es la capa que todo piloto de
+*community learning* termina reimplementando arriba de un LMS que no la tiene.**
+
+#### 🆕 `P364` — la cesion segmentada por DIRECTORIO, y lo que le cambia a una cotizacion
+
+```
+Bundled plugins (the contents of the "/mod" directory) are available
+only under the GPLv2 license.
+
+The remainder of the project is available under either MIT or GPLv2.
+```
+
+| ruta | regimen | que se puede entregar |
+|---|---|---|
+| nucleo (todo menos `/mod`) | 🟢 **MIT** o GPL-2.0, **a eleccion del licenciatario** | 🟢 construir y **cerrar** encima |
+| `/mod` (plugins empaquetados) | 🔴 **GPL-2.0 unicamente** | 🔴 empaquetarlos **arrastra copyleft** |
+
+🔴 **La frontera de contaminacion es una RUTA, no el repo.** Es la primera fila de este estante cuya
+ficha **necesita dos lineas de licencia** para no mentir. Un barrido de raiz —el que este arbol usa
+para las otras ocho plataformas— habria resuelto una sola familia y habria publicado `MIT` (leyendo
+el segundo parrafo) o `GPL-2.0` (leyendo el primero), **y las dos descripciones son falsas**.
+
+🟢 **Es la leccion del pase 108 —*«la licencia de la RAIZ no es la licencia del ARBOL»*— medida por
+primera vez sobre una PLATAFORMA.** Hasta aca este arbol la tenia solo en capas de CONTENIDO
+(`P317` datos, `P322` items, `P324` corpus, `P328` estrechamiento entre ediciones). 🔵 **Que un repo
+de CODIGO la exhiba cambia a quien se le aplica el control:** el clasificador compartido (`P237`)
+resuelve **una familia por archivo**, y esta pieza exige **una familia por SUBARBOL**.
+
+🔵 **La consecuencia operativa, que es por lo que esta fila vale:** un *scoping* sobre `Elgg` tiene
+que decidir **antes de empezar** si usa los plugins empaquetados. Si los usa, el entregable es
+GPL-2.0 y la discusion de licencia con el cliente es otra. Si no los usa, el nucleo es MIT y no hay
+friccion — pero hay que reimplementar lo que esos plugins daban. **Es una decision de arquitectura
+con consecuencia de licencia, y se toma en la semana 1 o se paga en la ultima.**
+
+⚠️ **La cota, dicha como en toda ficha de este estante (`P349`):** 1.7k ★ está en la banda de **dos
+cifras**, asi que el canal no distingue 1.650 de 1.750. Y 1.7k ★ con 665 forks **no son las dos
+decadas de Moodle**: lo que compra esta pieza es una capa social con nucleo permisivo, no madurez de
+despliegue institucional.
+
+⚠️ **La region, con la FORMA de la evidencia y sin forzarla (`P135`):** el propio `LICENSE.txt`
+enumera titulares y entre las organizaciones nombra **The MITRE Corporation** (EE. UU.) y
+**Curverider Ltd** (R. Unido). Es evidencia de primera mano de una base de titulares **NA + EMEA**,
+pero es una lista de copyright **de 2017**, no una declaracion de sede actual. Se publica como
+*sin region verificada* con el indicio anotado, y **no** se le asigna una de las cinco.
+
+---
+
+### 🔴 `formalms/formalms` — medido y descartado, con el negativo declarado DEBIL
+
+| repo | ★ | sondas | resultado |
+|---|---|---|---|
+| [`formalms/formalms`](https://github.com/formalms/formalms) | **37** (banda `EXACTO`, 10:48Z) | **2** | 🔴 `LICENSE` 404 · `LICENSE.txt` 404 · sidebar sin licencia |
+
+Es un *«forma.lms mirror repository»* — un espejo cuyo original vive en `formalms.org`, con 26 forks.
+🔴 **Veredicto: sin cesion legible por este canal.**
+
+⚠️ **Y el negativo se publica como DEBIL, diciendo por que:** el estandar de este arbol para **negar**
+una cesion son **12 sondas** (2 ramas × 6 ortografias), fijado en el pase 112. Aca se corrieron **2**.
+🔵 **Con 2 sondas no se afirma ausencia** — y la fila de `Elgg`, en este mismo pase, es la prueba de
+lo que cuesta: ahi `LICENSE` daba 404 y la cesion estaba en `LICENSE.txt`. Queda como **candidata a
+re-sondear**, no como descarte firme.
+
+---
+
+### 🔵 El barrido obligatorio de plataformas, con su reparto
+
+Consulta del encargo: `open source platform education LMS ERP MIT Apache 2026`.
+
+| paso | cifra |
+|---|---|
+| plataformas devueltas | **9** |
+| ya publicadas, frenadas por `P311` (Open edX, Moodle, Sakai, OpenEduCat, Chamilo, ILIAS, OpenOLAT) | 🔴 **7** |
+| nuevas medidas | 🟢 **2** |
+| → **altas** | 🟢 **1** (`Elgg`) |
+| → descartadas por cesion | 🔴 **1** (`formaLMS`, negativo debil) |
+
+🟢 **El conjunto de partida de este estante queda asi en la capa de licencia:**
+
+| plataforma | cesion | ¿entregable cerrado? |
+|---|---|---|
+| Moodle | GPL-3.0 | 🔴 no |
+| Open edX (Axim) | AGPL-3.0 | 🔴 no |
+| Chamilo | GPL-3.0 | 🔴 no |
+| ILIAS | GPL | 🔴 no |
+| OpenEduCat (sobre Odoo) | LGPL-3.0 | ⚠️ con cuidado de *linking* |
+| Sakai (Apereo) | Apache-2.0 / ECL | 🟢 si |
+| OpenOLAT | Apache-2.0 | 🟢 si |
+| `Selleo/mentingo` (pase 112) | MIT | 🟢 si |
+| 🆕 **`Elgg/Elgg`** | **MIT** (nucleo) · **GPL-2.0** (`/mod`) | 🟢 **si, sin `/mod`** |
 
 ## 🟢 La capa de plataforma gana su primera pieza PERMISIVA (pase 112 del 2026-10-05)
 

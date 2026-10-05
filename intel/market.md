@@ -8,6 +8,7 @@ updated: 2026-10-05
 
 > Key players, market map y oportunidades por región.
 > Investigado 2026-09-30; el pase 11, el 2026-10-01. Las estimaciones de tamaño de mercado varían mucho entre firmas: se listan todas con su fuente en vez de elegir una.
+> **Pase 113 del 2026-10-05:** 🟢 **Barrido regional 42, cuatro regiones, 0 silencios, denominador ENUMERADO: 17 hechos sondeados con el `grep` de control ANTES de escribir, **17 ya publicados**, **0 nuevos** (`P287`).** 🔵 **Es la SEGUNDA saturacion total en tres pases (el 111 dio 0/15, el 112 dio 2/27, este 0/17), y ya no se lee como un accidente del canal: el eje de MARCO REGULATORIO de esta base esta saturado para consulta generalista en las cuatro regiones.** 🔴 **Los 17 que volvieron y ya estaban, nombrados: Corea `AI Basic Act` (vigente 2026-01-22, extraterritorial), Vietnam `Ley 134/2025/QH15` (2026-03-01), marco de **AI AGENTICA** de la IMDA de Singapur (2026-01-22), AI Act con el calendario corregido (`2027-12-02` stand-alone / `2028-08-02` empotrado), California `AB 1159`, Idaho `SB 1227`, Ohio (politica escrita obligatoria, jul-2026, 600+ distritos), Carolina del Norte `SB 1006` (US$ 10 M para Khanmigo), Colombia `CONPES 4144`, Chile (clasificacion por riesgo), encuesta DEC LATAM 2026 (92 % alumnos / 79 % docentes, 30.000+ respuestas, 29 instituciones, con Tec de Monterrey, `AIGEN` y `RIE360`), Microsoft+AFT, y el marco de mercado 2026.** 🔵 **La consecuencia de posicionamiento, que es lo unico que un barrido saturado todavia produce: lo que diferencia una propuesta por region ya no es citar el marco —esta publicado y lo cita cualquiera— sino poder decir **de que licencia cede el activo que se entrega ahi**. Y este pase da justo eso en la capa de plataforma: 🆕 `P364`, la cesion SEGMENTADA POR DIRECTORIO de `Elgg` (nucleo MIT, `/mod` GPL-2.0), que convierte una pregunta de licencia en una decision de arquitectura de semana 1.** 🔴 **Y el hueco que este pase tampoco cierra, declarado por tercer pase consecutivo: LATAM devuelve mercado, adopcion y regulacion y **CERO repositorios**. La capa de CODIGO de LATAM sigue abierta; APAC sigue siendo la unica con cierre parcial (3 piezas del pase 112 ancladas a curriculo nacional).**
 > **Pase 112 del 2026-10-05:** 🟢 **Barrido regional 41, cuatro regiones, 0 silencios, denominador ENUMERADO: 27 hechos sondeados con el `grep` de control ANTES de escribir, 25 ya publicados y **2 nuevos** (`P287`).** 🆕 **Los 2 nuevos son de dinero y de velocidad, no de marco: (a) Carolina del Norte defendio un *earmark* de **US$ 10 M** en la **SB 1006** para financiar Khanmigo a nivel estatal —esta base solo tenia Khanmigo en el piloto de Maryland (~4.350 alumnos), nunca una compra estatal—, y (b) **Corea del Sur fue el mayor salto del mundo en difusion de AI en el H2 2025, +4,8 pp**.** 🔵 **El resto confirma la saturacion de `P287` en la capa de marco regulatorio: AB 1159, SB 1227, Ohio, AASA, AI Verify, IndiaAI, SEA-LION, Sarvam, Ley 21.719 de Chile y la prohibicion de inferencia de emociones del AI Act ya estaban todos.** 🔴 **Y el hueco que este pase NO cierra y declara: LATAM devolvio mercado y regulacion y **CERO repositorios** — la capa de CODIGO de LATAM sigue abierta, mientras APAC cerro parcialmente la suya con 3 piezas permisivas ancladas a curriculo nacional.**
 > **Pase 111 del 2026-10-05:** 🟢 **Barrido regional 40, cuatro regiones, 0 silencios — y **0 hechos nuevos**, con el denominador ENUMERADO: 15 hechos devueltos, 15 ya publicados.** Vietnam (210 ocurrencias), `AI Basic Act` de Corea (44), AB 1159 (143), SB 1227 (75), Traffic Light de NYC (44), STUDENTS FIRST (21), Digital Omnibus (104), CENIA/Latam-GPT (41/37), Uruguay (59), Peru (73), CONPES (72), Observatorio UNESCO para LATAM (4), Ipsos Education Monitor (9), DEC LATAM (69). ⚠️ **La unica cadena con 0 ocurrencias fue «31 states», y es el MISMO hecho que «134 bills» en otra redaccion: no es un hueco y no se publica como tal.** 🔵 **Es `P287` en la capa regional: el eje esta SATURADO para consulta generalista y el contenido informativo del barrido es el cero mismo — hay que cambiar el EJE de la consulta, no concluir que las regiones estan quietas.** 🔴 **Y la consecuencia de posicionamiento: lo que diferencia una propuesta por region ya no es saber que regula cada region —eso esta publicado y cualquiera lo cita— sino poder decir DE QUE LICENCIA CEDE el activo que se entrega ahi, que es lo que ningun barrido de mercado contesta y es donde cayeron `P348`, `P349` y `P352` de este pase.** 🟢 **Las Opportunities by region siguen vigentes sin cambios; lo que se agrega es la COTA con que se pueden citar sus cifras de repo (`P349`: entero exacto solo por debajo de 1.000).**
 > **Pase 110 del 2026-10-05:** 🟢 **Barrido regional 39, cuatro regiones, 0 silencios — y lo que las separa este pase es el INSTRUMENTO DE POLITICA, no el marco ni el dinero: NA regula por ESTADO con mandato de politica distrital, APAC por LEY NACIONAL con fecha de vigencia, EMEA por reglamento supranacional en escalonado, y LATAM por ENCUESTA de adopcion sin estatuto educativo propio.** 🟢 **La racha del calendario SUPERADO del AI Act sigue CORTADA (segundo pase): el canal devuelve «escalonado 2026-2027» y «la mayoria de las escuelas en piloto y pre-cumplimiento, no en aplicacion plena», que es el calendario CORREGIDO por el pase 103 — `P321` deja de reproducirse.** 🔴 **Pero el canal recae en OTRO eje y hay que escribirlo: la consulta de LATAM devolvio una pagina de politica de SUDAFRICA (EMEA) y una de legislacion de NORTH AMERICA — contaminacion cruzada de region (`P247`), asi que un barrido «por region» no garantiza que lo devuelto SEA de la region.** 🔴 **Y una incoherencia aritmetica del canal, medida: «crecer USD 3.367,8 millones entre 2026 y 2030 al 45,0 % CAGR» es incompatible con «42,48 B en 2030» partiendo de ~11 B en 2026 — un incremento de 3,37 B no llega a 42 B. Las dos cifras salieron del MISMO barrido.** 🟢 **El rango 2026 se publica como RANGO y no como numero: **USD 8,7 B – 12,3 B** (Grand View 11,4 B; Research&Markets 7,52 B en 2025 → 10,6 B en 2026).** 🟢 **LATAM trae el unico dato duro NUEVO del pase, y es de adopcion: **92 % de estudiantes y 79 % de docentes** ya usan AI en educacion superior (DEC LATAM Survey 2026, con Tec de Monterrey), **94 %** de docentes esperan usarla, y **61 %** de estudiantes teme el mal uso de sus pares — la preocupacion de integridad es de PARES, no de institucion.**
@@ -75,6 +76,163 @@ updated: 2026-10-05
 > regulado — **STUDENTS FIRST Act of 2026**, marco de los estudiantes de los 50 estados (AASA, agosto 2026).
 > **LATAM:** 🔵 el hallazgo del pase — **existe una capa MCP nacional brasileña de datos públicos, activa y MIT, y
 > educación es el único dominio grande que falta** (**gap 69**).
+
+## 🟢 Barrido regional 42 (pase 113 del 2026-10-05) — 4/4 regiones, 0 silencios y 0 hechos nuevos sobre 17 sondeados: la saturacion deja de ser un accidente
+
+### 🔬 Nota de canal, antes de cualquier cifra (`P247`)
+
+Las cuatro consultas regionales del encargo corrieron con el año **CALCULADO** (`date -u +%Y` →
+**2026**) y las cuatro respondieron. 🟢 **0 silencios por cuarto pase consecutivo.**
+
+⚠️ **Y la contaminacion cruzada de region que el pase 110 midio VOLVIO a aparecer:** la consulta de
+LATAM devolvio, entre sus resultados, una pagina de **politica de Sudafrica** (EMEA) y una de
+**legislacion estatal de North America**. 🔵 **Un barrido «por region» no garantiza que lo devuelto
+SEA de la region** — se filtra a mano y se dice que se filtro.
+
+---
+
+### 🔴 La saturacion, MEDIDA con denominador enumerado (`P287`) y no declarada
+
+| paso | cifra |
+|---|---|
+| hechos regionales devueltos por las 4 consultas | **17** |
+| ya publicados en este arbol (verificado con `grep` de control **antes** de escribir) | 🔴 **17** |
+| **hechos nuevos** | 🔴 **0** |
+
+**Los 17, nombrados con su region, para que el cero sea auditable:**
+
+| hecho | region | estado |
+|---|---|---|
+| Corea del Sur — `AI Basic Act` vigente `2026-01-22`, extraterritorial | APAC | 🔴 publicado |
+| Vietnam — `Ley 134/2025/QH15` vigente `2026-03-01` | APAC | 🔴 publicado |
+| Singapur — marco IMDA de **AI AGENTICA**, `2026-01-22` | APAC | 🔴 publicado |
+| China — medidas de GenAI (consentimiento, etiquetado, calidad de dato) | APAC | 🔴 publicado |
+| AI Act — alto riesgo en acceso y evaluacion educativa | EMEA | 🔴 publicado |
+| AI Act — calendario `2027-12-02` (stand-alone) / `2028-08-02` (empotrado) | EMEA | 🔴 publicado |
+| UNESCO — guia de IA generativa en educacion | EMEA | 🔴 publicado |
+| California `AB 1159` — prohibe entrenar con datos de alumnos | North America | 🔴 publicado |
+| Idaho `SB 1227` — proteccion de datos en herramientas de IA escolar | North America | 🔴 publicado |
+| 134 proyectos de ley en 31 estados (2026) | North America | 🔴 publicado |
+| Ohio — politica de IA escrita obligatoria jul-2026, 600+ distritos | North America | 🔴 publicado |
+| Carolina del Norte `SB 1006` — US$ 10 M para Khanmigo | North America | 🔴 publicado |
+| Microsoft + AFT — estandar nacional de seguridad y privacidad | North America | 🔴 publicado |
+| Oklahoma y Maryland — supervision humana obligatoria | North America | 🔴 publicado |
+| Encuesta DEC LATAM 2026 — 92 % alumnos / 79 % docentes, 30.000+ respuestas, 29 instituciones, con Tec de Monterrey, `AIGEN`, `RIE360` | LATAM | 🔴 publicado |
+| Colombia — `CONPES 4144` (politica nacional de IA, presupuesto a 2030) | LATAM | 🔴 publicado |
+| Chile — clasificacion de usos de IA por riesgo | LATAM | 🔴 publicado |
+
+🔵 **Por que el cero vale mas este pase que el del 111:** aislado, un 0/15 es un accidente de
+consulta. **Tres pases seguidos (0/15 → 2/27 → 0/17) son una propiedad del eje.** El eje de MARCO
+REGULATORIO de esta base esta **saturado para consulta generalista en las cuatro regiones**, y el
+contenido informativo del barrido pasa a ser el cero mismo.
+
+🔴 **La lectura que NO corresponde:** «las regiones estan quietas». Lo medido es que **este canal, con
+esta consulta, ya no aporta** — no que no haya movimiento. Para volver a extraer senal hay que
+cambiar el **EJE** de la pregunta, no repetirla con mas insistencia.
+
+---
+
+### 🟢 Lo que SI produce senal este pase, y no es un hecho de mercado
+
+🔵 **El pase 111 escribio la consecuencia y este pase la cumple sin haberla buscado.** Decia: *«lo que
+diferencia una propuesta por region ya no es saber que regula cada region —eso esta publicado y
+cualquiera lo cita— sino poder decir DE QUE LICENCIA CEDE el activo que se entrega ahi»*.
+
+🆕 **`P364` es exactamente ese tipo de dato:** `Elgg/Elgg` (1.7k ★, 665 forks, PHP, **0 menciones en
+112 pases**) cede **MIT o GPL-2.0 a eleccion en el nucleo** y **GPL-2.0 unicamente en `/mod`**, leido
+del payload de `LICENSE.txt`.
+
+| pregunta de un cliente | lo que un barrido de mercado contesta | lo que `P364` contesta |
+|---|---|---|
+| ¿que regula mi region? | 🟢 todo, y esta publicado | — |
+| ¿puedo cerrar el entregable? | 🔴 nada | 🟢 **si, sin `/mod`** |
+| ¿cuando se decide? | 🔴 nada | 🟢 **semana 1, es arquitectura** |
+
+🔵 **Eso es lo que un barrido saturado todavia produce: no hechos nuevos, sino la confirmacion de
+donde hay que gastar el esfuerzo de medicion.**
+
+---
+
+## Opportunities by region
+
+### North America
+
+🟢 **El eje sigue siendo el MANDATO DE POLITICA DISTRITAL con dinero detras, y es el unico de las
+cuatro regiones donde hay fecha, presupuesto y obligacion juntos.**
+
+- **Ohio** obliga a cada distrito publico a tener **politica de IA escrita** con plazo **jul-2026**,
+  sobre **600+ distritos**. 🟢 **Es una ventana de servicio de gobernanza con fecha de cierre**: el
+  entregable no es un modelo, es politica, inventario de herramientas y evidencia de supervision.
+- **Carolina del Norte** (`SB 1006`) puso **US$ 10 M** para tutoria (Khanmigo) a escala estatal ⇒
+  **hay presupuesto estatal para tutoria**, no solo pilotos.
+- **California `AB 1159`** prohibe usar datos de alumnos para entrenar modelos, e **Idaho `SB 1227`**
+  exige protecciones de dato. 🔵 **Consecuencia tecnica directa:** arquitecturas de tutoria que
+  **no** reentrenan con datos del alumno (RAG sobre corpus cedido, memoria por cuenta y no por
+  modelo) son las unicas vendibles de entrada.
+- **Oklahoma y Maryland** exigen supervision humana y prohiben decisiones de alto impacto
+  automatizadas ⇒ el patron obligatorio es **borrador + liberacion humana**.
+- 🔴 **El riesgo del mercado:** 134 proyectos en 31 estados significa **fragmentacion**. Un producto
+  unico no cumple 31 regimenes; lo que escala es una **capa de politica configurable por estado**.
+
+### EMEA
+
+🟢 **El eje es el reglamento supranacional en escalonado, y el dato que mas cambia una propuesta es
+que el reloj se CORRIO.**
+
+- El **AI Act** clasifica como **alto riesgo** la IA de acceso y evaluacion educativa (admision,
+  evaluacion, correccion de examenes): gestion de riesgo, gobernanza de dato, supervision humana,
+  transparencia y evaluacion de conformidad **antes** del despliegue.
+- 🟢 **Calendario vigente: `2027-12-02`** para sistemas de alto riesgo **stand-alone** y
+  **`2028-08-02`** para los **empotrados** en productos regulados. 🔵 **La mayoria de las
+  instituciones esta en piloto y pre-cumplimiento, no en aplicacion plena** — lo cual es una
+  oportunidad de **preparacion**, no de remediacion de urgencia.
+- 🟢 **Y aca se concentra el valor de `P364`:** EMEA es la region con mas exigencia de
+  **residencia de dato** y de **soberania**, y por eso la que mas necesita piezas **auto-hospedadas
+  con cesion permisiva**. `Elgg` (nucleo MIT) y `mentingo` (MIT, Polonia) son las dos unicas piezas
+  de plataforma de este arbol que un integrador puede cerrar encima; Moodle/Open edX, no.
+- 🔵 Despliegues con **modelos de pesos abiertos** por residencia de dato siguen siendo el patron
+  dominante en los casos de consecuencia baja (chatbots de consulta a familias).
+
+### APAC
+
+🟢 **El eje es la LEY NACIONAL con fecha de vigencia — la region mas rapida y la mas heterogenea, y la
+unica donde un regulador ya nombro a los AGENTES como categoria.**
+
+- **Corea del Sur** — `AI Basic Act` vigente **`2026-01-22`**: transparencia, evaluacion de riesgo,
+  supervision humana y documentacion para sistemas de alto impacto, con periodo de gracia orientado
+  a guia durante 2026. ⚠️ **Extraterritorial.**
+- **Vietnam** — `Ley 134/2025/QH15` vigente **`2026-03-01`**, con etiquetado y transparencia.
+- 🟢 **Singapur** — marco de la **IMDA para IA AGENTICA**, **`2026-01-22`**. 🔵 **Es el instrumento
+  que mas le sirve a este arbol: un regulador pide por escrito exactamente lo que esta KB compone**
+  (agentes con supervision, trazabilidad y responsabilidad), asi que un entregable agentico tiene
+  ahi un **marco de referencia citable** en vez de un vacio.
+- **China** — medidas de GenAI con consentimiento, calidad de dato, etiquetado de contenido y
+  gestion de reclamos.
+- 🟢 **Y es la unica region con cierre parcial de la capa de CODIGO**: las 3 piezas permisivas del
+  pase 112 ancladas a **curriculo nacional** (Gaokao, 人教版) son evidencia de region por el
+  curriculo al que apuntan, no por el nombre del dueño (`P245`, no `P135`).
+- 🔴 **El riesgo:** cuatro regimenes con cuatro calendarios. Un despliegue multi-pais en APAC
+  necesita **nodos de politica por jurisdiccion**, no un unico *guardrail*.
+
+### LATAM
+
+🟢 **El eje es la ADOPCION MEDIDA — la region con mas uso real y menos estatuto educativo propio, y la
+asimetria es la oportunidad.**
+
+- 🟢 **Encuesta DEC LATAM 2026** (30.000+ respuestas, **29 instituciones**, con el Institute for the
+  Future of Education del **Tec de Monterrey**, `AIGEN` y `RIE360`): **92 % de estudiantes** y
+  **79 % de docentes** ya usan IA en educacion superior — contra 86 % global en 2024.
+- 🔴 **Pero `88 %` de los docentes reporta integracion «minima a moderada»** ⇒ **la brecha no es de
+  adopcion, es de integracion pedagogica.** 🔵 **Ese es el encargo mas vendible de la region, y no es
+  un modelo: es diseño instruccional, formacion docente y rediseño de evaluacion.** Vender
+  «adopcion» a LATAM es vender lo que ya tiene.
+- **Colombia** — `CONPES 4144`: politica nacional con acciones y presupuesto **a 2030**.
+  **Chile** — clasificacion de usos por riesgo con supervision atada a su futura autoridad de datos.
+- 🔴 **El hueco, declarado por TERCER pase consecutivo (`P343`):** LATAM devuelve mercado, adopcion y
+  regulacion y **CERO repositorios**. 🔵 **No se publica como «LATAM no produce codigo»** — se publica
+  como lo que es: **este canal no encuentra codigo de LATAM**, y las piezas LATAM que esta base si
+  tiene aparecieron por otras vias (`Javi111003/OlivIA-RAG`, recuperable por gestion de cesion
+  escrita segun `P342`/`P314`). **Para cerrar esta capa hay que cambiar de canal, no de conclusion.**
 
 ## 🟢 Barrido regional 41 (pase 112 del 2026-10-05) — 4/4 regiones, 0 silencios, y 2 hechos nuevos sobre 27 sondeados
 

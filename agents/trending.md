@@ -8,11 +8,167 @@ updated: 2026-10-05
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 > No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
+> **Pase 113 del 2026-10-05:** 🔴 **0 altas (barrido 35), cero ENUMERADO: 20 candidatas devueltas por el LISTADO → 19 frenadas por `P311` + 1 fuera de alcance (`mahseema/aibooks`, lista de libros) → 0 nuevas.** 🔵 **Y el reparto 19/20 es el dato: el mismo canal que el pase 112 estreno con 5 altas de golpe devuelve ahora el inventario de esta propia base — no se agoto, se SATURO.** 🟢 **Primera serie de estrellas con INSTANTE y no fecha (`2026-10-05T10:48Z`): 6 filas remedidas, las 6 sin movimiento (106, 105, 91, 72, 57 y `DeepTutor` 40.8k).** 🔴 **Pero el enunciado de deriva NO se publica, por segunda vez y por un motivo nuevo ⇒ 🆕 `P360`: la accion B pedia un intervalo de reloj ≥24 h a un pase que corre el MISMO dia que el que la escribio. El intervalo solo se ACOTA a [0 h, 10 h 48 m]. La accion fue escrita para corregir `P358` y heredo su defecto en el sentido contrario.** 🔴 **Acciones A y C NO MEDIBLES: el entorno deniega la EJECUCION del codigo del arbol ⇒ 🆕 `P361`, el tercer eje de portabilidad (contenedor `P352` · directorio `P355` · **permiso** `P361`) y el unico que no puede publicar un numero falso.** 🟢 **Accion D REFUTADA con su clausula de refutacion cumplida EXACTA: 4 prometidas contra ≥10 pedidas, y 10 de 15 NACIERON CITADAS.** 🆕 **`P362`: el instrumento que lo midio fallo su primera validacion por sensibilidad a MAYUSCULAS — leyo «el pase 5» de la prosa ignorando el encabezado `**Pase 100**`.**
 > **Pase 112 del 2026-10-05:** 🟢 **5 ALTAS PERMISIVAS (barrido 34) — la primera cifra distinta de cero en 34 barridos**, 4 MIT + 1 Apache-2.0, cada una con familia leida del payload y huella publicada. 🟢 **Y 3 de las 5 cierran parcialmente el hueco de codigo de APAC por ancla de CURRICULO NACIONAL (Gaokao, 人教版) — la forma de evidencia de `P245`, no el antroponimo que `P135` prohibe.** 🆕 **`P355`: la severidad de un fallo de portabilidad va al REVES de su frecuencia — 4 suites fallan ruidosamente por `cwd` asumido, 0 por ruta efimera, y la unica efimera (`P352`) pasaba en VERDE sin medir.** 🆕 **`P358`: «un pase» no es unidad de tiempo — los pases 111 y 112 corren el mismo dia, asi que la accion B remidio HORAS y el enunciado de deriva no se publica.**
 > **Pase 111 del 2026-10-05:** 🔴 **0 altas (barrido 33), cero ENUMERADO: 13 candidatas → 12 ya publicadas (`P311`), 1 nueva de OTRA industria (`OpenOSINT`).** 🆕 **Lo que se mueve es la COTA de la cifra que el pase 110 acababa de recuperar: `P349` — la resolucion del canal es una FUNCION ESCALON, no «3 cifras significativas». Debajo de 1.000 da el entero EXACTO (`264`, `107`); en 1.000-9.999 da solo DOS (`7.5k`, ±50). Peor error relativo al pie de la banda k (±5,0 %), peor absoluto arriba (±500).** 🆕 **Y la primera DERIVA medida: `open-tutor-ai-CE` 108 → **107 ★** en un pase, con `OATutor` en 265 (2026-09-30) → 264 → 264. En la banda EXACTO una cifra sin fecha no es un dato (`P353`), y lo que volvio medible la deriva fue una tabla de ESTE archivo que SI estaba fechada.** 🔴 **93 de las 262 ocurrencias de cifras con 4+ digitos exactos viven aca —el archivo mas cargado del arbol—, 0 posteriores al pase 110; pero el barrido cuenta la CITA igual que el DATO, asi que el conteo crudo sobreestima (`P351`).** 🔵 **Ruido de canal registrado y NO tomado como correccion: la busqueda reporta `openclaw` en ~362k contra los 385.407 publicados — ninguna de las dos tiene canal que la sostenga.**
 > **Pase 110 del 2026-10-05:** 🔴 **0 altas permisivas (trigesimosegundo barrido), cero ENUMERADO: 6 candidatas → 4 ya publicadas (`P311`), 2 nuevas sin cesion.** 🟢 **Lo que SE MUEVE este pase no es el trending: es que las ESTRELLAS VUELVEN a ser medibles — `WebFetch` sobre `github.com` sirve 200 donde `curl` da 403, con control negativo en 404.** 🔴 **Y al volver, cobran: `OATutor` 264 ★ contra «~1,5k» publicado, y `open-tutor-ai-CE` BSD-3-Clause / 108 ★ contra «Apache-2.0 / ~600 ★».**
 > **Pase 107 del 2026-10-05:** 🔴 **0 altas permisivas (trigesimo barrido, 3 candidatas MEDIDAS del payload y las 3 con su bloqueo nombrado) y las TRES acciones pre-registradas corridas: A con la cota NO CERRADA y su clausula de atribucion FALSIFICADA, B CONFIRMADA, C CONFIRMADA en dos clausulas y FALSIFICADA en la tercera.** 🔴 **`P332`: la EXTENSION de un archivo de imagen no es su FORMATO — 2.443 de 2.443 `.gif` son PNG/JPEG/WEBP, y un barrido por extension habria dado «0 solapamiento» desde una premisa falsa.** 🔴 **`P334`: el titular de una FIGURA se resuelve por BYTES y vive en una obra DISTINTA de la que el item cita (36 pares leidos).** 🔴 **`P333`: `fa4e32e5e622` era la huella del archivo SIN su salto final — defecto de dato, no de upstream.** 🔴 **`P335`: tercera sub-clase de `P320` — lo denegado fue el LOTE, no la pieza nombrada.** 🟢 **Canal nuevo: `gitlab.com/-/raw`.**
 > **Pase 106 del 2026-10-05:** 🟢 **0 altas (vigesimonoveno barrido, 5 candidatas, las 5 frenadas por el gate de `P311`) y las TRES acciones pre-registradas corridas: A CONFIRMADA, B FALSIFICADA, C CONFIRMADA.** 🔴 **`P328`: la cesion de un OER se ESTRECHA entre ediciones — 10 de 10 colecciones con el mismo `collection-id` pasan de `CC BY 4.0` en `1e` a `CC BY-NC-SA 4.0` en `main`, y el slug cambia de nombre, que es por lo que esta base no lo veia.** 🔴 **El denominador se corrige de 13.371 a 82.492 unidades y aparece una capa sintetica de 6.886 unidades (`oer: openai`) sin cesion.** 🟢 **Canal nuevo: `git ls-remote` para enumerar refs — es el que abrio la accion A.**
+
+## 2026-10-05 — pase 113: 0 altas (barrido 35), el canal que estreno 5 altas devuelve el inventario propio, y la primera serie de estrellas con INSTANTE
+
+### 🔴 El barrido de la semana: 0 altas, con el reparto escrito
+
+| paso | cifra |
+|---|---|
+| candidatas devueltas por `github.com/topics/ai-tutor` | **20** |
+| ya publicadas, frenadas por el gate de `P311` | 🔴 **19** |
+| fuera de alcance (no es agente ni herramienta componible) | 🔴 **1** |
+| medidas nuevas | **0** |
+| → **altas** | 🔴 **0** |
+
+**La fuera de alcance, nombrada:** [`mahseema/aibooks`](https://github.com/mahseema/aibooks) (91 ★)
+es una lista curada de libros. No se descarta por licencia ni por region — **no es componible**.
+
+🔵 **El dato del pase es el 19/20, y es sobre el CANAL.** El listado por topico fue el canal que el
+pase 112 estreno y con el que levanto **5 altas de golpe** tras 34 barridos en cero. Una semana
+despues el mismo canal, con la misma consulta, devuelve **las 5 altas del pase 112, las 2 que ese
+pase midio y descarto, y 12 mas ya publicadas.** 🔴 **No se agoto: se SATURO contra el inventario de
+esta propia base**, que es el mismo estado que el barrido regional reporta este pase con 17/17.
+
+🔵 **Y eso refina `P281` en vez de repetirlo:** la leccion publicada era *«el canal que encuentra la
+industria no es el mismo que la nombra»* (listado > prosa). Este pase agrega la segunda mitad: **el
+listado tampoco es inagotable** — una vez que la base lo cosecha, el listado se vuelve un espejo.
+Lo que un canal de listado mide bien es el STOCK; para el FLUJO hace falta ordenarlo por fecha, y
+este no lo esta.
+
+---
+
+### 🟢 Las 6 filas remedidas, con INSTANTE y no fecha — primera serie de reloj de este arbol
+
+Lectura del sidebar de `github.com` a **`2026-10-05T10:48Z`**:
+
+| repo | banda (`P349`) | pase 112 | **10:48Z** | Δ |
+|---|---|---|---|---|
+| [`flysheep-ai/education-skills`](https://github.com/flysheep-ai/education-skills) | `EXACTO` | 106 | **106** | 🔵 0 |
+| [`SimonsTang/feifei-companion`](https://github.com/SimonsTang/feifei-companion) | `EXACTO` | 105 | **105** | 🔵 0 |
+| [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | `EXACTO` | 91 | **91** | 🔵 0 |
+| [`codeXsidd/Studivexa`](https://github.com/codeXsidd/Studivexa) | `EXACTO` | 72 | **72** | 🔵 0 |
+| [`Zenglian990/AI_Tutor_Release`](https://github.com/Zenglian990/AI_Tutor_Release) | `EXACTO` | 57 | **57** | 🔵 0 |
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | `K-3CIFRAS` ±50 | 40.8k | **40.8k** | 🔵 0 |
+
+🟢 **Lo permanente de esta tabla no son los ceros: es la `Z`.** Todas las lecturas de estrellas
+anteriores de este arbol llevan una FECHA. Esta lleva un reloj, asi que **el intervalo al pase 114
+ya es computable** cualquiera sea el momento en que corra. La deuda que `P358` abrio se cierra por
+instrumento.
+
+🔴 **Y los ceros no se convierten en un enunciado de deriva, por dos razones medidas:** el intervalo
+esta acotado por arriba en **10 h 48 m** (menos de la mitad de las 24 h que la prediccion pedia), y
+la fila de `DeepTutor` esta en banda **±50**, donde un 0 no es informacion: podrian haberse movido
+49 estrellas sin que el canal lo muestre. **Solo 5 de las 6 filas aportan senal, y para un intervalo
+que nadie pre-registro.**
+
+---
+
+### 🆕 `P360` — una pre-registracion puede pedir un intervalo de RELOJ mayor que la distancia al proximo pase
+
+La accion B del pase 112 pedia: *remedir las 2 filas de la banda `EXACTO` nombrando la hora UTC*, y
+predecia que **con un intervalo declarado de ≥24 h, al menos 1 de las 2 se mueve en ±1**.
+
+```
+pase 112 →  fechado 2026-10-05          (DIA, sin hora)
+pase 113 →  leido  2026-10-05T10:48Z    (INSTANTE)
+            ⇒ intervalo ∈ [0 h, 10 h 48 m]   ⇒  jamas ≥ 24 h
+```
+
+🔴 **La prediccion es NO TESTEABLE, y no por el canal: por el calendario.** La accion fue escrita
+*para corregir* `P358` («un pase no es una unidad de tiempo») y **heredo el mismo defecto en el
+sentido contrario**: fijo una condicion de reloj sin saber cuando iba a correr el pase siguiente.
+Ninguna cantidad de cuidado en la ejecucion la salvaba.
+
+🔵 **La regla que queda, y es barata:** una pre-registracion puede pedir **que se mida el intervalo**;
+no puede pedir **que el intervalo tenga un tamaño** si no controla cuando corre el proximo pase. La
+primera es una obligacion de instrumento y se cumple siempre; la segunda es una apuesta sobre el
+planificador.
+
+---
+
+### 🆕 `P361` — el tercer eje de portabilidad, y el unico que no puede mentir
+
+Las acciones A y C murieron en el mismo punto: **este entorno deniega la ejecucion del codigo del
+propio arbol** (`[Code from External]`). El arbol esta intacto, el instrumento esta escrito y
+versionado, y lo que falta es **el derecho a correrlo**.
+
+| eje | hipotesis | que invalida | ¿puede publicar un numero falso? |
+|---|---|---|---|
+| contenedor | `P352` | una suite que pasa solo donde se escribio | 🔴 **si** — «21/21» en verde sin medir |
+| directorio (`cwd`) | `P355` | una suite que mide menos desde otra ruta | 🔴 **si** — `TOTAL-DEGRADADO` 14/15 |
+| **permiso** | 🆕 **`P361`** | **cualquier** suite | 🟢 **no** — no produce salida |
+
+🟢 **Es el modo de falla mas honesto de los tres y el mas incapacitante.** Un fallo de permiso no se
+degrada: no mide nada y lo dice. 🔴 **Pero deja a la accion A sin remedio posible en este entorno**,
+porque lo que pedia era *escribir el control que corre todo el tablero y falla si alguna suite no es
+portable* — un control que **solo se valida corriendolo**.
+
+⚠️ **Las 4 suites del `cwd` siguen rotas y este pase NO las parcha a ciegas** (`P286`): convertir una
+deuda MEDIDA en una deuda SUPUESTA es peor que dejarla anotada.
+
+---
+
+### 🟢 Accion D — REFUTADA, y la clausula de refutacion se cumple EXACTA
+
+Pedia **≥10** de las 15 colgadas `ANUNCIADA` explicitamente PROMETIDAS por el pase que las introdujo.
+
+| clase | cuantas |
+|---|---|
+| 🟢 **PROMETIDA** (`P127`, `P129`, `P130`, `P132`) | **4** |
+| 🔴 **NACIO CITADA** | 🔴 **10** |
+| 🆕 **INTRODUCIDA EN SITIO** (`P252`) | **1** |
+
+🔴 **REFUTADA (4 < 10).** 🟢 **Y el pase 112 habia escrito el enunciado correcto de antemano:** *«que
+≤5 lo hayan sido y las otras aparezcan ya citadas como doctrina establecida — y entonces el modo de
+falla no es una promesa incumplida sino un numero que NACIO CITADO»*. **4 ≤ 5, y las otras 10 son
+exactamente eso.**
+
+🔵 **Por que importa para la deuda:** una deuda PROMETIDA tiene dueño por pase y se salda en orden.
+**Una que nacio citada no tiene dueño** — no hay pase que prometiera nada. El remedio para 10 de 15
+no es escribir la seccion: es decidir si el numero merece acta o si debe **dejar de citarse**.
+
+🆕 **`P363` — y una de las 10 es peor que las otras nueve:** `P282` se cita declarando su UBICACION
+(*«en `intel/market.md`»*) y `P356` midio que ahi no esta. Una cita que afirma donde vive su
+definicion ofrece una procedencia **falsable** y nadie la falsa: se lee como verificacion ya hecha.
+Es `P342` (un badge es una afirmacion de cesion, no una cesion) trasladado de la licencia a la
+doctrina.
+
+---
+
+### 🆕 `P362` — el instrumento fallo su primera validacion por sensibilidad a MAYUSCULAS
+
+```
+regex:        /pase[ ]+[0-9]+/                              ← minuscula
+linea real:   > **Pase 100 del 2026-10-04:** … «el hueco que el pase 5 dejó ABIERTO» …
+                  ^^^^ NO matchea (encabezado)   ^^^^ SI matchea (prosa)
+```
+
+🔴 **Una regex minuscula sobre este arbol ve exactamente lo contrario de lo que busca:** ignora al
+AUTOR (encabezado `**Pase N**`, mayuscula) y se queda con el CITADO (`el pase N`, minuscula). Atribuyo
+`P135` al «pase 5». 🟢 **Arreglado** a marcador de registro (`^[>#]` + primer numero de la linea):
+**7 de las 15 cambiaron de origen**. Familia de `P288` (casefold) y `P354` (ortografia, no objeto);
+causa raiz compartida con `P359` (el atribuidor es POSICIONAL).
+
+---
+
+### 🔴 El silencio que importa, dicho explicitamente
+
+🔴 **LATAM: 0 repos, otra vez.** El hueco de codigo de LATAM que esta base declara abierto **sigue
+abierto**: ninguna de las 20 candidatas del listado tiene evidencia de primera mano de region LATAM,
+y el barrido regional aporto 0 hechos nuevos en las 4 regiones. Las 3 piezas de APAC del pase 112
+siguen siendo el unico cierre parcial de un hueco de codigo regional en este arbol.
+
+⚠️ **Y un gap de METODO, no de mundo:** el listado por topico **no esta ordenado por fecha**, asi que
+no distingue un repo nuevo de uno viejo con estrellas. Mientras ese sea el canal productivo, este
+archivo mide **stock** y no **flujo** — y un archivo que se llama *trending* deberia medir flujo.
+Se declara en vez de disimularlo.
 
 ## 2026-10-05 — pase 112: 5 altas permisivas (barrido 34), la primera cifra distinta de cero, y tres de ellas con region anclada a un CURRICULO NACIONAL
 

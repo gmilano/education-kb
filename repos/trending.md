@@ -7,11 +7,146 @@ updated: 2026-10-05
 # 📈 Repos trending — education
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
+> **Pase 113 del 2026-10-05:** 🔴 **El trending de la industria vuelve a estar vacio (barrido 42), y el motivo es NUEVO: el listado por topico que el pase 112 estreno con 5 altas devuelve ahora 19 de 20 candidatas YA PUBLICADAS. No se agoto el canal — se SATURO contra el inventario de esta propia base.** 🔵 **Eso refina `P281` en vez de repetirlo: el listado mide STOCK, no FLUJO, porque no esta ordenado por fecha; un archivo que se llama *trending* necesita un canal con reloj y este no lo tiene. Se declara como gap de METODO.** 🟢 **Lo que SI se movio esta en la capa de PLATAFORMA y lo trajo la consulta del encargo, no el topico: `Elgg/Elgg` (1.7k ★ ±50, 665 forks, PHP) con **0 menciones en 112 pases** ⇒ 🆕 `P364`, la cesion SEGMENTADA POR DIRECTORIO — `/mod` es GPL-2.0 unicamente y el resto es MIT o GPL-2.0 a eleccion, leido del payload de `LICENSE.txt` (`LICENSE` da 404, `P279` otra vez).** 🟢 **Primera serie de estrellas de este arbol con INSTANTE (`2026-10-05T10:48Z`) y no con fecha: 6 filas, las 6 sin movimiento.** 🔴 **Pero el enunciado de deriva no se publica ⇒ 🆕 `P360`: la accion pedia ≥24 h de intervalo a un pase que corre el mismo dia, asi que el intervalo solo se ACOTA a [0 h, 10 h 48 m].** 🔴 **Tablero NO medido: el entorno deniega la ejecucion del codigo del arbol (🆕 `P361`), que es el tercer eje de portabilidad y el unico que no puede publicar un numero falso.**
 > **Pase 112 del 2026-10-05:** 🟢 **El trending de la industria DEJA de estar vacio por primera vez en 41 barridos: 5 piezas permisivas con cesion leida del payload**, y el canal que las encontro fue el **listado por topico** (`github.com/topics/ai-tutor`), no la busqueda en prosa — que volvio a devolver el eje generalista (`P281`). 🆕 **`P355`: 4 suites del propio arbol no son portables entre `cwd`, y las 4 fallan RUIDOSAMENTE mientras la unica de ruta efimera pasaba en verde sin medir.** 🔴 **LATAM devolvio 0 repos y queda como gap INFORMADO (`P343`).**
 > **Pase 111 del 2026-10-05:** 🔴 **Trending de la industria vacio por CUADRAGESIMA vez:** catalogos, curriculo para ingenieros y el eje generalista; 12 de 13 candidatas ya publicadas (`P311`) y la unica nueva (`OpenOSINT`) es OSINT en terminal. 🆕 **El aporte es la COTA de la columna de estrellas de este archivo, medida por BANDA: `P349` — es un ESCALON, no «3 cifras significativas». Las filas chicas (la mayoria del inventario educativo) se pueden publicar con ENTERO EXACTO y fecha; las grandes NO, por mas que se vean tres digitos. La banda del millon se declara NO-MEDIDA (`P286`).** 🔴 **57 de las 265 ocurrencias de cifras con 4+ digitos viven aca, 0 posteriores al pase 110.** 🔴 **Y el tablero se midio DESDE EL CLON: el pase 110 publico «62 suites, 0 fallos» y en un clon nuevo era «65 y 1 fallo» — `test_p345.py` no se podia importar fuera de su contenedor por un censo en `/tmp` (`P352`); arreglada, el tablero real es **66 suites, 0 fallos**.**
 > **Pase 110 del 2026-10-05:** 🔴 **Trending de la industria vacio por TRIGESIMONOVENA vez.** 🟢 **Lo que se mueve es el CANAL: `WebFetch` sobre `github.com` devuelve estrellas donde `curl` da 403, con control negativo en 404 — asi que la columna de estrellas de este arbol vuelve a existir, con resolucion de 3 cifras significativas.** 🔴 **Y lo primero que mide es un repo de 8 ★ sin licencia que el canal de busqueda presento junto a uno de 40,8 ★k.**
 > **Pase 107 del 2026-10-05:** 🔴 **Trending de la industria vacio por TRIGESIMOSEXTA vez: curriculo, catalogos, una bolsa de trabajo y dos generalistas (`microsoft/semantic-kernel` 27.470 ★, `NousResearch/hermes-agent` MIT), con las SEIS cifras del eje generalista identicas digito a digito a los pases 105 y 106 ⇒ informacion sobre el CANAL, no sobre la industria.** 🟢 **Lo que SI se movio es una capa de BINARIOS que este archivo nunca conto: 2.443 archivos de figura (~156 MiB, 1.326 imagenes distintas) en `CAHLR/OATutor-Content`, con la extension `.gif` falsa en 2.443 de 2.443 (`P332`).** 🔵 **`git ls-remote` da TRES refs, y una se llama `gpt-science-study`: la unica de este arbol cuyo nombre anuncia contenido sintetico.** 🔴 **Defecto propio corregido: los 49.481 JSON contra los 49.479 del pase 106 son los 6 caminos con bytes de control (U+007F/U+0080/U+0081) en el nombre del paso — la identidad de un paso NO es un slug seguro.**
 > **Pase 106 del 2026-10-05:** 🔴 **Trending de la industria vacio por TRIGESIMOQUINTA vez: el canal devuelve generalista o educativo-sobre-AI, no AI-para-educacion.** 🟢 **Lo que SI se movio esta en el eje de `ref` y no de repo: las ramas `1e` de 5 bundles de `openstax` contienen la UNICA cesion `CC BY 4.0` de 10 colecciones cuyas versiones vivas son `NC-SA` — cesion y vigencia apuntan en direcciones opuestas.** 🔵 **Canal nuevo calibrado: `git ls-remote` para enumerar refs (responde a repo real, falla a repo inventado), el unico de este arbol que contesta «que refs tiene este repo» con `api.github.com` en 403 — sin el, la accion A de este pase era imposible.**
+
+## 2026-10-05 — pase 113: el trending vuelve a estar vacio, pero el motivo cambia — el canal que lo rompio en el 112 ahora devuelve el inventario propio
+
+### 🔴 El cero, con el reparto escrito
+
+| paso | cifra |
+|---|---|
+| candidatas devueltas por `github.com/topics/ai-tutor` | **20** |
+| ya publicadas, frenadas por el gate de `P311` | 🔴 **19** |
+| fuera de alcance (lista curada de libros, no componible) | 🔴 **1** — [`mahseema/aibooks`](https://github.com/mahseema/aibooks) |
+| **trending de la industria, piezas nuevas** | 🔴 **0** |
+
+**Las 19 frenadas, enumeradas (`P287`, `P293`)** — las 5 altas del pase 112, las 2 que ese pase midio
+y descarto, y 12 mas ya publicadas:
+
+| repo | ★ (listado) | estado en este arbol |
+|---|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 40.8k | publicado (Apache-2.0) |
+| [`Miaotofu01/Study-Mate`](https://github.com/Miaotofu01/Study-Mate) | 608 | publicado |
+| [`24kchengYe/human-skill-tree`](https://github.com/24kchengYe/human-skill-tree) | 563 | publicado |
+| [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) | 505 | publicado |
+| [`ZeKaiNie/universal-examprep-skill`](https://github.com/ZeKaiNie/universal-examprep-skill) | 300 | publicado |
+| [`karanb192/algo-sensei`](https://github.com/karanb192/algo-sensei) | 285 | publicado |
+| [`Li-Evan/Bloom`](https://github.com/Li-Evan/Bloom) | 281 | publicado |
+| [`SenmuuuuW/universal-diagnostic-tutor-skill`](https://github.com/SenmuuuuW/universal-diagnostic-tutor-skill) | 238 | publicado |
+| [`KeWang0622/kaogong-skill`](https://github.com/KeWang0622/kaogong-skill) | 156 | publicado |
+| [`artcc/freelingo`](https://github.com/artcc/freelingo) | 154 | publicado |
+| [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | 129 | publicado |
+| [`flysheep-ai/education-skills`](https://github.com/flysheep-ai/education-skills) | 106 | alta del pase 112 |
+| [`SimonsTang/feifei-companion`](https://github.com/SimonsTang/feifei-companion) | 105 | alta del pase 112 |
+| [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | 91 | alta del pase 112 |
+| [`ahmedEid1/lumen`](https://github.com/ahmedEid1/lumen) | 88 | publicado |
+| [`codeXsidd/Studivexa`](https://github.com/codeXsidd/Studivexa) | 72 | alta del pase 112 |
+| [`yh2072/edgameclaw`](https://github.com/yh2072/edgameclaw) | 71 | medido y descartado (AGPL-3.0) |
+| [`A-R007/Multi-Agent-Study-Assistant`](https://github.com/A-R007/Multi-Agent-Study-Assistant) | 61 | medido y descartado (sin cesion) |
+| [`Zenglian990/AI_Tutor_Release`](https://github.com/Zenglian990/AI_Tutor_Release) | 57 | alta del pase 112 |
+
+---
+
+### 🔵 El cero de este pase NO es el cero de los 41 anteriores, y la diferencia es el dato
+
+| barridos 1–41 | barrido 42 |
+|---|---|
+| el canal devolvia **otra industria** (generalistas, catalogos, curriculo para ingenieros) | el canal devuelve **esta industria** |
+| cero por **no encontrar** | 🔴 cero por **ya tenerlo todo** |
+| diagnostico: `P281`, el canal no nombra la industria | 🆕 diagnostico: **saturacion del listado** |
+
+🟢 **Eso refina `P281` en vez de repetirlo.** La leccion publicada era *«el canal que encuentra la
+industria no es el mismo que la nombra»* — listado > prosa. Este pase agrega la segunda mitad:
+**el listado tampoco es inagotable.** Una vez que la base lo cosecha (y el pase 112 lo cosecho
+entero), el listado se convierte en un **espejo** del inventario.
+
+🔴 **Y el gap de METODO que eso descubre, declarado en vez de disimulado (`P343`):** el listado por
+topico de GitHub **no esta ordenado por fecha**. Ordena por estrellas, asi que no distingue un repo
+nuevo de uno viejo con adopcion. 🔵 **Mientras ese sea el canal productivo, este archivo mide STOCK
+y no FLUJO — y un archivo que se llama *trending* deberia medir flujo.** Lo que haria falta es un
+canal con reloj (refs por fecha de creacion, o el *trending* propiamente dicho de GitHub); este
+arbol **no tiene** uno calibrado y por eso la fila queda abierta.
+
+---
+
+### 🟢 Lo que SI se movio, y lo trajo la consulta del ENCARGO, no el topico
+
+🟢 **`Elgg/Elgg` — 1.7k ★ (±50, `2026-10-05T10:48Z`), 665 forks, PHP, y CERO menciones en 112 pases
+de este arbol.** Lo devolvio el barrido obligatorio de plataformas
+(`open source platform education LMS ERP MIT Apache 2026`), no el topico `ai-tutor`.
+
+🆕 **`P364` — la cesion puede estar SEGMENTADA POR DIRECTORIO.** Del payload de `master/LICENSE.txt`:
+
+```
+Bundled plugins (the contents of the "/mod" directory) are available
+only under the GPLv2 license.
+
+The remainder of the project is available under either MIT or GPLv2.
+```
+
+| ruta | regimen |
+|---|---|
+| nucleo (todo menos `/mod`) | 🟢 **MIT** o GPL-2.0 **a eleccion** |
+| `/mod` | 🔴 **GPL-2.0 unicamente** |
+
+🔴 **La frontera de contaminacion es una RUTA, no el repo** — un barrido de raiz publica «MIT» o
+«GPL-2.0» y las dos son falsas. 🔴 **Y `LICENSE` da 404 mientras `LICENSE.txt` da 200:** `P279` otra
+vez, en el repo donde mas caro sale — un sondeo que probara solo `LICENSE` habria descartado por
+«sin cesion» un nucleo que es MIT.
+
+🔵 **Lo que el hueco dice del canal de este arbol, que es mas util que la fila:** `Elgg` no es nuevo
+ni oscuro. Este arbol no lo veia porque busca *education / LMS / tutor* y `Elgg` se describe como
+*«socially aware web applications»*. **La pieza estaba a una consulta de distancia, y la consulta era
+la del encargo.** Detalle completo en `repos/foundations.md` y `verticals/solutions.md`.
+
+---
+
+### 🟢 Primera serie de estrellas con INSTANTE, y el enunciado que NO se publica
+
+Las 6 filas remedidas a **`2026-10-05T10:48Z`** devuelven las 6 el mismo entero (106, 105, 91, 72,
+57, 40.8k). 🟢 **Lo permanente no son los ceros: es la `Z`** — el intervalo al pase 114 ya es
+computable.
+
+🔴 **Pero la prediccion de la accion B es NO TESTEABLE ⇒ 🆕 `P360`.** Pedia **≥24 h** de intervalo
+declarado; el pase 112 corrio el **2026-10-05** y esta lectura es del **2026-10-05T10:48Z**:
+
+```
+intervalo ∈ [0 h, 10 h 48 m]   ⇒  nunca ≥ 24 h
+```
+
+La accion fue escrita *para corregir* `P358` y heredo su defecto en el sentido contrario: fijo una
+condicion de reloj sin controlar cuando corre el pase siguiente. 🔵 **Una pre-registracion puede
+exigir que se MIDA el intervalo; no puede exigir que el intervalo TENGA un tamaño.**
+
+---
+
+### 🔴 El tablero de suites de este arbol: NO medido, y es un eje nuevo de portabilidad
+
+🔴 **`P361`** — el entorno deniega la **ejecucion** del codigo del arbol (`[Code from External]`).
+El arbol esta intacto y el instrumento esta versionado; falta el derecho a correrlo.
+
+| eje | hipotesis | ¿puede publicar un numero falso? |
+|---|---|---|
+| contenedor | `P352` | 🔴 si — «21/21» en verde sin medir |
+| directorio (`cwd`) | `P355` | 🔴 si — `TOTAL-DEGRADADO` 14/15 |
+| **permiso** | 🆕 **`P361`** | 🟢 **no** — no produce salida |
+
+⚠️ **Las 69/69 del pase 112 quedan como ultima medicion VALIDA y NO se re-afirman aca.** Las 4 suites
+rotas por `cwd` siguen rotas y no se parchan a ciegas (`P286`).
+
+---
+
+### 🔴 LATAM: 0 repos, dicho como gap INFORMADO
+
+🔴 **Ninguna de las 20 candidatas del listado tiene evidencia de primera mano de region LATAM**, y el
+barrido regional de este pase aporto **0 hechos nuevos** en las 4 regiones (17 sondeados, 17 ya
+publicados). El hueco de codigo de LATAM que esta base declara abierto **sigue abierto**; las 3
+piezas de APAC del pase 112 (ancla de curriculo) siguen siendo su unico cierre parcial.
 
 ## 2026-10-05 — pase 112: el trending de la industria deja de estar vacio por primera vez en 41 barridos, y el canal que lo rompio fue el LISTADO, no la busqueda
 

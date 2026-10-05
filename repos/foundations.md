@@ -8,6 +8,7 @@ updated: 2026-10-05
 
 > Bases sobre las cuales construir. Verificado repo por repo vía WebFetch el 2026-09-30 (capas del pase 10, el 2026-10-01).
 > Leer la columna **Licencia** antes de proponer: media KB de educación es GPL/AGPL, no permisiva.
+> **Pase 113 del 2026-10-05:** 🟢 **1 cimiento nuevo, y trae un EJE que este estante no tenia: `Elgg/Elgg` (1.7k ★ ±50 al `2026-10-05T10:48Z`, 665 forks, PHP) cede en DOS regimenes dentro del mismo repo, leido del payload — `LICENSE.txt` (200) dice textual *«Bundled plugins (the contents of the "/mod" directory) are available only under the GPLv2 license. The remainder of the project is available under either MIT or GPLv2»*.** 🆕 **`P364` — la cesion puede estar SEGMENTADA POR DIRECTORIO, y es la leccion «la licencia de la RAIZ no es la licencia del ARBOL» (pase 108) medida por primera vez sobre una PLATAFORMA y no sobre un corpus de contenido.** 🔵 **Lo que cambia para una entrega: el nucleo es MIT a eleccion del licenciatario, asi que se puede construir y cerrar encima; pero empaquetar `/mod` arrastra GPLv2 — la frontera de contaminacion es una RUTA, no el repo, y un barrido de raiz la habria publicado como «MIT» o como «GPL-2.0» y las dos habrian sido falsas.** 🔴 **Y el archivo se llama `LICENSE.txt`: `LICENSE` da 404, o sea `P279` (la ortografia del nombre) otra vez, en el repo que mas la necesitaba.** 🔴 **`formalms/formalms` (37 ★, espejo de `formalms.org`) MEDIDO Y DESCARTADO: sidebar sin licencia y `LICENSE`/`LICENSE.txt` 404 en `master` ⇒ sin cesion legible — ⚠️ con solo **2 sondas**, muy por debajo del estandar de 12 de este arbol, asi que es un negativo DEBIL y se publica como tal.** 🔴 **Acciones A y C de este estante NO MEDIBLES: el entorno deniega la ejecucion del codigo del arbol (`P361`), asi que el tablero NO se midio y las 69/69 del pase 112 quedan como ultima medicion valida, sin re-afirmarse.**
 > **Pase 112 del 2026-10-05:** 🟢 **5 cimientos permisivos nuevos, con la cesion leida del PAYLOAD y la huella publicada** — 4 MIT + 1 Apache-2.0. 🟢 **El que mas cambia la estanteria es `Selleo/mentingo` (MIT): un LMS self-hosted con mentor AI integrado, o sea la primera base de LMS PERMISIVA de esta KB — las ocho plataformas verticales medidas en el pase 90 eran COPYLEFT 8 de 8 (Moodle GPL-3.0, Open edX AGPL-3.0, Sakai/ERP incluidos).** 🔴 **Y una advertencia de datos que sale de la accion C: si se ingiere `OATutor-Content`, 26.136 de 69.121 unidades de hint (37,8 %) NO traen cesion, y asumir que el hint hereda la del problema padre sobre-declara la entregabilidad en 10,4 pp (`P357`).**
 > **Pase 111 del 2026-10-05:** 🔴 **0 altas fundacionales (trigesimo barrido, mismo conjunto: OpenEduCat, Open edX, Moodle, Chamilo, OpenOLAT, Fedena, ERPNext/Frappe, SchoolTool); 12 de 13 candidatas ya publicadas (`P311`) y la unica nueva (`OpenOSINT`) es de otra industria.** 🆕 **El aporte es que la columna de ESTRELLAS de este estante queda con cota por BANDA (`P349`): el canal es un ESCALON, no «3 cifras significativas». 🔵 **Y para este estante la consecuencia es FAVORABLE:** buena parte del inventario fundacional educativo vive por debajo de 1.000 ★ (los lectores QTI, los pilotos universitarios, `EduKTM`) y ahi el canal da el ENTERO EXACTO, asi que esas filas se pueden publicar con cifra verificable y FECHA (`P353`). ⚠️ **Y eso vuelve a este estante el que mas deuda tiene: la fila de `EduKTM` publica `265 ★ / 70 forks` SIN fecha, que es justo lo que `P353` pide no hacer en esta banda — se nombra como deuda y NO se corrige a ojo, porque no se re-midio.** Las grandes no: `moodle/moodle` renderiza `7.5k`, que son DOS cifras y ±50.** ⚠️ **Testigo re-leido: `moodle/moodle` → 7.5k ★ / 7.7k forks / GPL-3.0 — la licencia confirma lo publicado y la cifra NO es publicable como entero.** 🔴 **Y un defecto de reproducibilidad del codigo de este estante (`P352`): `test_p345.py` («21/21» del pase 110) no llega a IMPORTAR en un clon nuevo por un censo en `/tmp`; arreglada contra el artefacto versionado, reproduce 1.418/2.443 y 368 `OPENSTAX AUSENTE` digito a digito. Tablero real medido desde el clon: **66 suites, 0 fallos**.**
 > **Pase 110 del 2026-10-05:** 🔴 **0 altas fundacionales (vigesimonoveno barrido, mismo conjunto: OpenEduCat, Open edX, Moodle, Chamilo, OpenOLAT, Fedena, ERPNext/Frappe, SchoolTool).** 🟢 **El aporte es que el expediente de los 13 «sin licencia» queda CERRADO por el canal fuerte: arbol enumerado (`P275`), **9.886 rutas**, **0** archivos de cesion en cualquier profundidad y cualquier caja, con README alcanzable en 13 de 13 como testigo.** 🟢 **Y el instrumento esta VALIDADO contra dos respuestas que este arbol ya tenia: `1EdTech/openbadges-specification` → `ob_v3p0/license.md` (12.324 B, replica `P187` AL BYTE) y `dini-ag-kim` → CC BY-SA 4.0 en `lp-base.ttl:24` — las DOS invisibles para el sondeo de raiz.** 🔴 **`P187` ademas queda con denominador: no es UNA superficie de cesion, son CINCO en un mismo repo de especificacion.** 🔴 **Pero el arbol trae su propio error, medido: `dini-ag-kim/src/ontology/utils/owl2shacl/LICENSE` es **LGPL-3.0** (7.652 B, titular FSF) y pertenece a una herramienta EMPOTRADA — un barrido que tome el primer archivo hallado le pega copyleft de CODIGO a un repo cuyo entregable es DATO con atribucion.**
@@ -116,6 +117,136 @@ corre ése antes de escribir uno a mano** (tendencia **313**). 🟢 **Y el `gafa
 > y 5 en `schemas12/`, y contar sólo el primero es lo que hizo invisible el segundo dialecto de SCORM (**P106**).
 > **Pase 36 del 2026-10-02:** 🔵 **este pase no agrega repos: le pone FECHA a los que ya están, y la fecha cambia tres recomendaciones.** Se midió la capa PHP de evaluación y telemetría en Packagist —el único registro de los tres que entrega descargas en este entorno (`api.npmjs.org` y `pypistats.org` dan **403 a CONNECT**)— y el resultado está en `repos/trending.md`. **Lo que hay que saber antes de proponer desde este archivo:** 🔴 **la pieza xAPI más descargada de esta base, `rusticisoftware/tincan` (Apache-2.0, 6.178 desc./mes, 863.777 totales), no publica desde el 2022-11-02**, y ⚠️ **el único MIT de esa capa, `php-xapi/client`, está parado desde el 2021-03-24** con 825 desc./mes. 🔵 **La lectura es que en xAPI/PHP lo permisivo está quieto y lo vivo es copyleft**, así que la receta de telemetría se sostiene en **Ralph (MIT)** + **`lrsql` (Apache-2.0)** + **`learnmcp-xapi` (MIT)** y no en la capa PHP. 🟢 **Del lado de evaluación, lo activo es `oat-sa/extension-tao-testqti`** (**885 versiones**, release del **2026-09-30**) **y sigue siendo GPL-2.0-only**, mientras **lo permisivo es lo nuevo**: `@longsightgroup/qti3-cli` (**MIT**, 41 releases desde el 2026-05-21, último **2026-10-01**) con **cero dependencias de terceros** — sus 4 dependencias son todas `@longsightgroup/*` pinneadas a la misma versión exacta. **Su manifiesto MCP completo de 20 tools está escrito en `compose/patterns.md` (P76).** 🔴 **Y una corrección de catálogo: `oat-sa/qti-sdk` devuelve 404 en Packagist porque es el nombre del REPO — su paquete es `qtism/qtism`** (GPL-2.0-only, 218.212 descargas totales, 315 versiones). **Nombre de repo y nombre de paquete son identificadores distintos, y confundirlos produce un 404 que parece una ausencia** — pasó igual con `1edtech/oneroster`, `imsglobal/lti-1-3-php-library` y `packbackbooks/lti-1-3-php-library`, los tres **404**, que se anotan como *«no verificado en Packagist bajo ese nombre»* y **no** como inexistentes. ⚠️ **Acción pendiente que el pase 37 tiene asignada: este archivo nunca pasó por el control de *slugs* distintos ni por el de *backlink*** — los dos que en `agents/top.md` encontraron **un duplicado** y **dos colisiones** este mismo pase.
 > **Pase 11 del 2026-10-01:** aparece una licencia que las diez pasadas anteriores filtraban sin saberlo — **ECL-2.0**, con la que licencia todo Apereo (Sakai, Opencast, OpenLRW). Es Apache-2.0 con el alcance de patentes acotado, aprobada por OSI y FSF, y **es apta para construir arriba**. Ver la capa de analítica institucional, abajo.
+
+## 🟢 Cimientos del pase 113 (2026-10-05) — 1 alta, y el eje nuevo es que la cesion puede estar SEGMENTADA POR DIRECTORIO
+
+### 🔬 El canal y la forma de la medicion (`P247`, `P249`)
+
+| canal | estado | que habilita |
+|---|---|---|
+| `WebFetch` → `github.com` | 🟢 **200** | estrellas, forks, licencia del sidebar |
+| `raw.githubusercontent.com` | 🟢 **200** en `LICENSE.txt` · 🔴 **404** en `LICENSE` | leer la cesion del PAYLOAD |
+| `WebSearch` (`open source platform education LMS ERP MIT Apache 2026`) | 🟢 responde | el barrido obligatorio de plataformas |
+| **ejecucion de codigo del arbol** | 🔴 **DENEGADA** (`[Code from External]`) | — ⇒ tablero NO medido (`P361`) |
+
+---
+
+### 🟢 `Elgg/Elgg` — el alta, y por que es un eje y no una fila mas
+
+| campo | valor |
+|---|---|
+| repo | [`Elgg/Elgg`](https://github.com/Elgg/Elgg) |
+| ★ (`2026-10-05T10:48Z`) | **1.7k** — banda `K-3CIFRAS`, cota **±50** (`P349`) |
+| forks | 665 |
+| lenguaje | PHP |
+| cesion (payload) | **MIT o GPL-2.0 a eleccion** en el nucleo · **GPL-2.0 UNICAMENTE** en `/mod` |
+| archivo leido | `master/LICENSE.txt` — 🔴 `master/LICENSE` da **404** |
+| region | ⚠️ **sin region verificada de forma limpia** — ver nota abajo |
+
+**Que es:** *«an open source rapid development framework for socially aware web applications»* — un
+framework de red social con autenticacion, gestion de contenido, grupos y notificaciones, extensible
+por plugins. 🔵 **Por que entra a un estante de educacion:** es el cimiento clasico de las
+plataformas de aprendizaje SOCIAL (cohortes, grupos, actividad, perfiles), que es la capa que ni
+Moodle ni Open edX traen como primitiva y que todo piloto de *community learning* termina
+reimplementando.
+
+#### 🆕 `P364` — la cesion segmentada por DIRECTORIO
+
+El payload, textual:
+
+```
+Bundled plugins (the contents of the "/mod" directory) are available
+only under the GPLv2 license.
+
+The remainder of the project is available under either MIT or GPLv2.
+```
+
+| ruta | regimen | consecuencia para una entrega |
+|---|---|---|
+| nucleo (todo menos `/mod`) | 🟢 **MIT** o GPL-2.0, **a eleccion del licenciatario** | se construye y se cierra encima |
+| `/mod` (plugins empaquetados) | 🔴 **GPL-2.0 unicamente** | empaquetarlos **arrastra copyleft** |
+
+🔴 **La frontera de contaminacion es una RUTA, no un repo.** Un barrido de raiz que tome «el archivo
+de licencia» y resuelva una familia habria publicado `MIT` (si lee el segundo parrafo) o `GPL-2.0`
+(si lee el primero), y **las dos son falsas como descripcion del repo**. La descripcion verdadera
+necesita dos filas.
+
+🟢 **Es la leccion del pase 108 —*«la licencia de la RAIZ no es la licencia del ARBOL»*— medida por
+primera vez sobre una PLATAFORMA.** Hasta aca este arbol la tenia en capas de CONTENIDO (`P317`,
+`P322`, `P324`, `P328`: OER, hints, figuras, colecciones). 🔵 **Que un repo de CODIGO la exhiba
+cambia a quien hay que aplicarle el control:** el clasificador compartido (`P237`) resuelve UNA
+familia por archivo, y aca hace falta resolver **una familia por SUBARBOL**.
+
+🔴 **Y el nombre del archivo vuelve a decidir:** `LICENSE` → **404**, `LICENSE.txt` → **200**. Es
+`P279` exactamente, en el repo donde mas caro sale: un sondeo que probara solo `LICENSE` habria
+clasificado a `Elgg` como **sin cesion** y lo habria descartado, cuando su nucleo es MIT.
+
+⚠️ **La region, dicha con la FORMA de la evidencia y sin forzarla (`P135`):** el propio `LICENSE.txt`
+enumera titulares, y entre las organizaciones nombra **The MITRE Corporation** (EE. UU.) y
+**Curverider Ltd** (Reino Unido). Eso es evidencia de primera mano de una base de titulares
+**NA + EMEA**, pero es una lista de copyright de **2017**, no una declaracion de sede actual del
+proyecto. Se publica como *sin region verificada* con el indicio anotado, y **no** se le asigna una
+de las cinco.
+
+---
+
+### 🔴 `formalms/formalms` — medido y descartado, con el negativo declarado DEBIL
+
+| repo | ★ | sondas | resultado |
+|---|---|---|---|
+| [`formalms/formalms`](https://github.com/formalms/formalms) | **37** (`EXACTO`, 10:48Z) | **2** (`master/LICENSE`, `master/LICENSE.txt`) | 🔴 ambas **404**, sidebar **sin licencia** |
+
+🔴 **Veredicto: sin cesion LEGIBLE por este canal** — y es el conjunto de 26 forks de un *«forma.lms
+mirror repository»*, o sea un espejo cuyo original vive en `formalms.org`.
+
+⚠️ **El negativo se publica como DEBIL y se dice por que:** el estandar de este arbol para negar una
+cesion son **12 sondas** (2 ramas × 6 ortografias), establecido en el pase 112 contra
+`Multi-Agent-Study-Assistant`. Aca se corrieron **2**. 🔵 **Con 2 sondas no se puede afirmar
+ausencia** — justo la leccion de `P279` que la fila de `Elgg` acaba de cobrar en el mismo pase.
+Queda como **candidata a re-sondear**, no como descarte firme.
+
+---
+
+### 🔴 El barrido obligatorio de plataformas, corrido y con su cero enumerado
+
+Consulta del encargo: `open source platform education LMS ERP MIT Apache 2026`.
+
+| plataforma devuelta | ya en este arbol | licencia |
+|---|---|---|
+| Open edX (Axim Collaborative) | 🔴 si (13 archivos) | AGPL-3.0 |
+| Moodle | 🔴 si (21) | GPL-3.0 |
+| Sakai (Apereo) | 🔴 si (8) | Apache-2.0 |
+| OpenEduCat | 🔴 si (9) | LGPL-3.0 |
+| Chamilo | 🔴 si (10) | GPL-3.0 |
+| ILIAS | 🔴 si (12) | GPL |
+| OpenOLAT | 🔴 si (9) | Apache-2.0 |
+| **Elgg** | 🟢 **NO — 0 menciones en 112 pases** | 🆕 **MIT/GPL-2.0 segmentada** |
+| **formaLMS** | 🟢 **NO — 0 menciones en 112 pases** | 🔴 sin cesion legible (2 sondas) |
+
+| paso | cifra |
+|---|---|
+| plataformas devueltas por el barrido | **9** |
+| ya publicadas, frenadas por `P311` | 🔴 **7** |
+| nuevas medidas | 🟢 **2** |
+| → altas | 🟢 **1** (`Elgg`) |
+| → descartadas por cesion | 🔴 **1** (`formaLMS`, negativo debil) |
+
+🟢 **Y el cero de 112 pases es el dato que acompaña al alta:** `Elgg` tiene **1.7k ★ y 665 forks** y
+este arbol no lo habia nombrado **ni una vez** en 112 pases. 🔵 **No es un repo nuevo ni oscuro: es
+un hueco del CANAL de este arbol**, que busca «education/LMS/tutor» y por eso no ve un framework que
+se describe como *socially aware web applications*. La pieza estaba a una consulta de distancia y la
+consulta era la del encargo.
+
+---
+
+### 🔴 Lo que este estante NO midio este pase, dicho en vez de callado (`P343`)
+
+| deuda | estado |
+|---|---|
+| tablero de 69 suites | 🔴 **NO medido** — ejecucion denegada (`P361`); las 69/69 del pase 112 **no** se re-afirman |
+| 4 suites rotas por `cwd` | 🔴 **siguen rotas**, no parchadas a ciegas (`P286`) |
+| reparto de los 12.637 hints sin padre que ceda (accion C) | 🔴 **NO medido** — misma denegacion + corpus externo |
+| fila de `EduKTM` con `265 ★ / 70 forks` **sin fecha** | 🔴 **sigue sin fecha** — no se re-midio, no se corrige a ojo (`P353`) |
 
 ## 🟢 Cimientos del pase 112 (2026-10-05) — 5 altas permisivas, y la primera base de LMS permisiva de esta KB
 

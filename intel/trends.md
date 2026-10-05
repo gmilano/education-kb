@@ -7,6 +7,7 @@ updated: 2026-10-05
 # 📡 Tendencias — education
 
 > Ventana de investigación: septiembre 2026. Verificado 2026-09-30; el pase 11, el 2026-10-01.
+> **Pase 113 del 2026-10-05:** 🟢 **Tendencias 901–905, citadas una por una para que ninguna quede anunciada sin seccion (`P97`, y este pase midio el costo exacto de incumplirlo).** 🆕 **La que manda es **901**: tres de las cuatro acciones pre-registradas fueron INEJECUTABLES y las tres por motivos de clase distinta —permiso de ejecucion, imposibilidad temporal y corpus externo—, asi que el aporte del pase es una taxonomia de por que una pre-registracion puede no correrse, que es distinta de haber corrido y fallado.** 🆕 **`P361` (tendencia **902**) — la portabilidad de un control tiene por lo menos TRES ejes: contenedor (`P352`), directorio (`P355`) y **permiso** (`P361`); y el de permiso es el unico que NO puede publicar un numero falso, asi que es el modo de falla mas honesto y el mas incapacitante.** 🆕 **`P360` (tendencia **903**) — una pre-registracion puede pedir un intervalo de RELOJ mayor que la distancia al proximo pase: la accion escrita para corregir `P358` heredo su defecto en el sentido contrario.** 🔴 **Tendencia **904** — la deuda documental de esta base NO tiene dueño: 10 de 15 numeros NACIERON CITADOS y solo 4 fueron prometidos, asi que la prediccion que pedia ≥10 prometidos sale REFUTADA con su clausula de refutacion cumplida exacta.** 🆕 **`P364` (tendencia **905**) — la cesion puede estar SEGMENTADA POR DIRECTORIO: `Elgg` cede MIT en el nucleo y GPL-2.0 en `/mod`, asi que la frontera de contaminacion es una RUTA y no un repo — la primera vez que esta base lo mide sobre CODIGO y no sobre contenido.** 🟢 **Barrido regional 42: 4/4 regiones, 0 silencios y 0 hechos nuevos sobre 17 — segunda saturacion total en tres pases (`P287`).**
 > **Pase 112 del 2026-10-05:** 🆕 **Seis tendencias nuevas, citadas una por una para que ninguna quede anunciada sin seccion (la leccion de `P97`): **675**, **676**, **677**, **678**, **679** y **680**.** 🟢 **La que manda es **675**: los 40 ceros de trending de esta base no eran un hecho sobre la industria sino sobre el CANAL — la busqueda en prosa devuelve el eje generalista y el LISTADO POR TOPICO devolvio 20 repos de la industria, 5 con cesion permisiva.** 🆕 **Y **677** es la de severidad invertida: un fallo RUIDOSO y frecuente es menos peligroso que uno SILENCIOSO y raro, medido 4 contra 1 en el propio arbol.**
 > **Pase 111 del 2026-10-05:** 🟢 **Tendencias 891–900.** 🆕 **`P349` — una cota de precision declarada en «cifras significativas» miente en los extremos: el canal de estrellas es un ESCALON (0 / ±50 / ±50 / ±500), da el entero EXACTO debajo de 1.000 y solo DOS cifras en 1.000-9.999; el peor error relativo y el peor absoluto no viven en el mismo lugar.** 🆕 **`P353` — la precision que vuelve checkeable a una cifra es la misma que la hace envejecer: `open-tutor-ai-CE` 108 → 107 ★ en un pase, y lo que volvio medible la deriva fue una tabla que SI estaba fechada.** 🆕 **`P350` — la frontera de una accion hacia afuera esta ANTES del envio, y una pre-registracion puede ponerla en el eje equivocado: enumerar contacto de personas en repos de terceros ya es PII y fue denegado, asi que el resultado es un TERCERO que las dos ramas no admitian.** 🔴 **Y lo medible sin tocar dato personal alcanzo para decidir: 0 de 6 superficies de contacto legibles por maquina, con README 200 en 6/6 como testigo.** 🆕 **`P351` — un barrido por una cifra publicada no distingue el DATO de la CITA que lo refuta: el conteo crudo sobreestima, el defecto son 42 valores y 31 en region de catalogo. Forma INVERSA de `P344`.** 🔴 **`P348` — contar por ARCHIVO en vez de por UNIDAD sobresamplea lo que no cede: la tasa del corpus es 76,4 %, no 58,0 %; las mal cedidas cargan 25,0 % mas figuras/unidad y `NO-ES-CESION` carga 3,021. Usar 58,0 % como tasa del corpus subestima la entregabilidad en 18,4 pp.** 🟢 **Los 10.210 RESOLUBLE llevan UN solo identificador (`CC BY 4.0`) y las dos cubetas sucias estan separadas por lado: se negocia dos veces, no por item.** 🆕 **`P352` — una suite que pasa solo en el contenedor que la escribio es una memoria, no un control.** 🆕 **`P354` — un control que reconoce una ORTOGRAFIA y no un OBJETO falla EN SILENCIO y en la direccion peligrosa: el auditor de citas de patron reportaba 42 numeros DEFINIDOS como colgados y seguia en verde; arreglado, colgadas 63 → 21 y suite 8/8 → 15/15.** ⚠️ **Y las 21 que quedan se dejan como deuda ENUMERADA (la peor: `P135`, 84 citas en negrita y 0 definiciones), porque escribir hoy la seccion de un patron ajeno es fabricar doctrina (`P286`).** 🟢 **Barrido regional 40: 4/4 regiones, 0 silencios y 0 hechos nuevos — saturacion medida (`P287`).**
 > **Pase 110 del 2026-10-05:** 🟢 **Tendencias 883–890.** 🔴 **`P344` — una pre-registracion puede construir su denominador CONTRA su propia hipotesis: 0 de 13 afirman cesion, y las 6 que SI lo hacen estaban en las 9 filas que la pre-registracion excluyo.** 🟢 **`P320` en su forma mas filosa: el canal es propiedad del par (herramienta, destino) — `WebFetch` sirve `github.com` donde `curl` da 403, asi que las ESTRELLAS vuelven, con resolucion de 3 cifras significativas y dos cifras del catalogo refutadas.** 🟢 **`P337` CERRADO: el corte converge a 1.611/832 y las 41 de diferencia son un DOMINIO DESNUDO — nunca fue una contradiccion, era un predicado no dicho.** 🔴 **`P346` — y lo que cierra es que la pregunta no decidia nada: entregable sin gestion son 1.418 de 2.443 (58,0 %), con 368 figuras OPENSTAX que no ceden NADA y 175 NO-OPENSTAX con CC BY 4.0 impecable.** 🆕 **`P347` — un archivo de licencia puede EXISTIR y no contener licencia: `frappe/education` cede «GNU GPL V3» en 19 BYTES.** 🟢 **Barrido regional 39: 4/4 regiones, 0 silencios, y la racha del calendario superado del AI Act sigue cortada por segundo pase.**
@@ -124,6 +125,183 @@ updated: 2026-10-05
 > (tendencia 29), se abre el **gap 20** y se registran dos advertencias de verificación: los agregadores de estrellas
 > están mal por ~2× y **un 403 de `curl` no es un 404**. Ver la nota de método del pase 12.
 > **Pase 11:** el Digital Omnibus es derecho vigente (tendencia 25), aparece la capa predictiva y está vacía (tendencia 26), y se corrige un error de método de diez pasadas sobre licencias permisivas (tendencia 27).
+
+## 🟢 Tendencias 901–905 — pase 113 del 2026-10-05: tres acciones inejecutables por tres motivos distintos, el tercer eje de la portabilidad, y una deuda sin dueño
+
+### 901 · 🆕 Una pre-registracion que no se corre no es lo mismo que una que se corre y falla, y las clases de «no se corre» no son una sola
+
+De las cuatro acciones que el pase 112 pre-registro para este pase, **una se corrio** y **tres no**.
+Lo que hace util el pase no es el 1 de 4: es que **las tres razones son de clase distinta**, y
+ninguna es «no se encontro nada».
+
+| accion | por que no se corrio | clase |
+|---|---|---|
+| **A** (arreglar 4 suites + gate de portabilidad) | el entorno deniega **ejecutar** el codigo del arbol | 🔴 **permiso** |
+| **B** (remedir 2 filas con ≥24 h de intervalo) | el intervalo **no puede** llegar a 24 h desde el mismo dia | 🔴 **tiempo** |
+| **C** (repartir 12.637 hints por clase del padre) | misma denegacion **+** corpus externo de 49.479 JSON | 🔴 **permiso + alcance** |
+| **D** (clasificar 15 colgadas por origen) | 🟢 **corrida** — es lectura del arbol propio | 🟢 — |
+
+🔵 **Por que la distincion no es burocratica.** Un fallo de CANAL (`P320`) se arregla cambiando de
+herramienta. Un fallo de PERMISO no: el instrumento esta escrito, versionado y correcto, y lo que
+falta es el derecho a correrlo. Un fallo de TIEMPO no se arregla con ninguna herramienta ni con
+ningun permiso — **estaba determinado en el momento de escribir la prediccion**.
+
+🟢 **La regla que sale, y es de diseño de pre-registracion:** antes de escribir una accion, preguntar
+de que depende para poder correrse. Las acciones del pase 114 que este pase escribe **no dependen de
+ejecutar codigo del arbol ni de una condicion de reloj**, a proposito.
+
+🔴 **Y el patron que esto confirma sobre esta base:** las acciones que se corren con mas fiabilidad
+son las que **leen el arbol propio** (D se corrio; A, C no). Las que miden el mundo exterior o el
+comportamiento del propio codigo tienen una dependencia que la pre-registracion no controla.
+
+---
+
+### 902 · 🆕 `P361` — la portabilidad de un control tiene tres ejes, y el del permiso es el unico que no puede mentir
+
+Esta base descubrio la portabilidad por partes, y cada parte invalido un control distinto:
+
+| eje | hipotesis | que rompe | ¿publica un numero falso? |
+|---|---|---|---|
+| **contenedor** | `P352` | la suite pasa solo donde se escribio | 🔴 **si** — «21/21» en verde sin medir nada |
+| **directorio** (`cwd`) | `P355` | la suite mide menos desde otra ruta | 🔴 **si** — `TOTAL-DEGRADADO`, 14/15 |
+| **permiso** | 🆕 **`P361`** | **cualquier** suite, sin degradarse | 🟢 **no** — no produce salida |
+
+🟢 **El de permiso es el modo de falla mas honesto de los tres.** No se disfraza de medicion: no hay
+salida que confundir con un total. 🔴 **Y es el mas incapacitante**, porque la accion A pedia
+precisamente *escribir el control que corre todo el tablero y falla si alguna suite no es portable*
+— **un control que solo se valida corriendolo**.
+
+🔵 **La leccion generalizable, que vale fuera de este arbol:** un control cuya unica forma de
+validacion es la EJECUCION es inverificable en cualquier entorno restringido, y los entornos
+restringidos son exactamente los de produccion y los de auditoria de terceros. 🟢 **Un control que
+versiona su RESULTADO (un TSV, un fixture, una huella) es auditable por lectura** — que es por lo
+que los artefactos del pase 112 (`resultado.2026-10-05.tsv` y las huellas `sha256`) siguieron siendo
+utiles este pase mientras su codigo no se pudo correr.
+
+⚠️ **Consecuencia que se asume en vez de taparla (`P286`):** las 4 suites rotas por `cwd` **siguen
+rotas**. Parcharlas sin poder correrlas convertiria una deuda MEDIDA —4 suites, con su forma de
+fallo y lo que cada una pierde— en una deuda SUPUESTA, que es peor.
+
+---
+
+### 903 · 🆕 `P360` — una pre-registracion puede pedir un intervalo de reloj mayor que la distancia al proximo pase
+
+El pase 112 cerro `P358` («un pase no es una unidad de TIEMPO») y escribio la accion B para
+corregirlo: *remedir las 2 filas de la banda `EXACTO` nombrando la hora UTC*, prediciendo que **con un
+intervalo declarado de ≥24 h, al menos 1 de las 2 se mueve en ±1**.
+
+```
+pase 112 →  fechado 2026-10-05          (un DIA, sin hora)
+pase 113 →  leido  2026-10-05T10:48Z    (un INSTANTE)
+            ⇒ intervalo ∈ [0 h, 10 h 48 m]   ⇒  jamas ≥ 24 h
+```
+
+🔴 **La accion escrita para corregir `P358` heredo su defecto en el sentido contrario.** `P358` decia
+que un pase no mide tiempo; la accion B fijo una condicion **de tiempo** sin controlar **cuando iba a
+correr el pase siguiente**. Ninguna cantidad de cuidado en la ejecucion la salvaba: era inejecutable
+desde el momento en que se escribio.
+
+🟢 **La regla, y es barata de cumplir:** una pre-registracion puede exigir **que se MIDA** el
+intervalo; **no puede exigir que el intervalo tenga un tamaño** si no controla el planificador. La
+primera es una obligacion de instrumento y se cumple siempre; la segunda es una apuesta.
+
+🟢 **Lo que si quedo, y es permanente:** `2026-10-05T10:48Z` es el **primer instante nombrado** de
+este arbol. Las 6 filas remedidas devolvieron las 6 el mismo entero (106, 105, 91, 72, 57 y
+`DeepTutor` 40.8k), y aunque eso **no testea** la prediccion, deja el intervalo al pase 114
+**computable**. La deuda de `P358` se cierra por instrumento, no por enunciado.
+
+🔵 **Y por que los seis ceros no se convierten en un atajo:** la fila de `DeepTutor` esta en banda
+**±50**, donde un 0 **no es informacion** — podrian haberse movido 49 estrellas. Solo las 5 de banda
+`EXACTO` aportan senal, y para un intervalo que nadie pre-registro. Es `P353` aplicada contra el
+propio pase que la invoca.
+
+---
+
+### 904 · 🔴 Una deuda documental puede no tener DUEÑO, y entonces el remedio no es saldarla sino decidir si corresponde
+
+La accion D pedia, para las **15** colgadas de clase `ANUNCIADA`, localizar el pase que las cito
+primero y decidir si ese pase **PROMETIO** la seccion o solo la **USO**. Predijo **≥10 prometidas**.
+
+| clase | cuantas | quienes |
+|---|---|---|
+| 🟢 **PROMETIDA** (puntero explicito) | **4** | `P127`, `P129`, `P130`, `P132` |
+| 🔴 **NACIO CITADA** (doctrina sin acta) | 🔴 **10** | `P128`, `P133`, `P134`, `P135`, `P173`–`P175`, `P240`, `P282`, `P293` |
+| 🆕 **INTRODUCIDA EN SITIO** | **1** | `P252` |
+
+🔴 **REFUTADA: 4 contra ≥10.** 🟢 **Y la clausula de refutacion del pase 112 se cumple EXACTA** — habia
+escrito: *«que ≤5 lo hayan sido y las otras aparezcan ya citadas como doctrina establecida — y
+entonces el modo de falla no es una promesa incumplida sino un numero que NACIO CITADO»*. **4 ≤ 5, y
+las otras 10 son exactamente eso.** El autor de la prediccion equivocada habia escrito de antemano el
+enunciado correcto, que es el unico caso en que una refutacion no cuesta nada.
+
+🔵 **Lo que cambia, y es la unica razon de haberlo medido.** Una deuda **PROMETIDA** tiene dueño por
+pase: hay un acta, un orden natural y un compromiso que cumplir. **Una que nacio citada no tiene
+dueño**: ningun pase prometio nada, asi que no hay nada que cumplir. 🟢 **El remedio para 10 de 15 no
+es escribir la seccion: es decidir si el numero merece acta o si debe DEJAR DE CITARSE.** Son dos
+trabajos distintos y la pre-registracion los trataba como uno.
+
+🆕 **Y una de las 10 es peor que las otras nueve — `P363`:** `P282` se cita declarando su UBICACION
+(*«en `intel/market.md`»*) y `P356` midio que ahi **no esta definida**. 🔴 **Una cita que afirma donde
+vive su definicion es PEOR que una cita muda:** la muda no afirma nada; la ubicada ofrece una
+procedencia **falsable** y nadie la falsa, asi que se lee como una verificacion ya hecha. Es `P342`
+(un badge es una AFIRMACION de cesion, no una cesion) trasladado de la licencia a la doctrina.
+
+🆕 **Y el instrumento fallo su primera validacion — `P362`:**
+
+```
+regex:        /pase[ ]+[0-9]+/                              ← minuscula
+linea real:   > **Pase 100 del 2026-10-04:** … «el hueco que el pase 5 dejó ABIERTO» …
+                  ^^^^ NO matchea (el AUTOR)    ^^^^ SI matchea (el CITADO)
+```
+
+🔴 **Una regex minuscula sobre este arbol ve exactamente lo contrario de lo que busca**, porque el
+encabezado de registro es `**Pase N**` (mayuscula) y la referencia cruzada es `el pase N` (minuscula).
+Atribuyo `P135` al «pase 5». 🟢 Arreglado a marcador de registro (`^[>#]` + primer numero de la
+linea): **7 de las 15 cambiaron de origen**. Familia de `P288` (casefold) y `P354` (ortografia, no
+objeto), con la causa raiz de `P359` (el atribuidor es POSICIONAL).
+
+---
+
+### 905 · 🆕 `P364` — la cesion puede estar SEGMENTADA POR DIRECTORIO, y la frontera de contaminacion es una ruta
+
+[`Elgg/Elgg`](https://github.com/Elgg/Elgg) (1.7k ★ ±50, 665 forks, PHP) tiene **0 menciones en 112
+pases** de este arbol y lo devolvio la consulta obligatoria de plataformas del encargo. Su
+`master/LICENSE.txt` dice, textual:
+
+```
+Bundled plugins (the contents of the "/mod" directory) are available
+only under the GPLv2 license.
+
+The remainder of the project is available under either MIT or GPLv2.
+```
+
+| ruta | regimen | consecuencia |
+|---|---|---|
+| nucleo (todo menos `/mod`) | 🟢 **MIT** o GPL-2.0 **a eleccion** | se construye y se **cierra** encima |
+| `/mod` | 🔴 **GPL-2.0 unicamente** | empaquetarlo **arrastra copyleft** |
+
+🔴 **Un barrido de raiz publica «MIT» o «GPL-2.0» y las dos son falsas** como descripcion del repo.
+La descripcion verdadera necesita **dos filas**, y el clasificador compartido (`P237`) resuelve
+**una familia por archivo** cuando aca hace falta **una por SUBARBOL**.
+
+🟢 **Es la leccion del pase 108 —*«la licencia de la RAIZ no es la licencia del ARBOL»*— medida por
+primera vez sobre CODIGO.** Hasta aca esta base la tenia solo en capas de contenido: `P317` (datos),
+`P322` (items), `P324` (corpus), `P328` (estrechamiento entre ediciones). 🔵 **Que un repo de codigo
+la exhiba cambia a quien se le aplica el control.**
+
+🔵 **Y lo que vale para una cotizacion:** un *scoping* sobre `Elgg` decide **en la semana 1** si usa
+los plugins empaquetados. Con `/mod`, el entregable es GPL-2.0 y la conversacion de licencia con el
+cliente es otra. Sin `/mod`, el nucleo es MIT y no hay friccion, pero hay que reimplementar lo que
+esos plugins daban. **Es una decision de arquitectura con consecuencia de licencia: se toma al
+principio o se paga al final.**
+
+🔴 **Y el nombre del archivo volvio a decidir:** `LICENSE` da **404**, `LICENSE.txt` da **200**. Es
+`P279` en el repo donde mas caro sale — un sondeo que probara solo `LICENSE` habria descartado por
+«sin cesion» un nucleo que es MIT. 🔵 **El hueco de 112 pases no es sobre `Elgg`, es sobre el canal
+de esta base:** busca *education / LMS / tutor* y `Elgg` se describe como *«socially aware web
+applications»*. La pieza estaba a una consulta de distancia, y la consulta era la del encargo.
+
+---
 
 ### 891 · 🆕 `P349` — una cota de precision que se declara en «cifras significativas» miente en los extremos
 

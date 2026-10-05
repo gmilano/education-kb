@@ -8,6 +8,7 @@ updated: 2026-10-05
 
 > Recetas concretas: repos nombrados, licencias verificadas, wiring explícito y estimación.
 > Todos los repos citados fueron verificados vía WebFetch el 2026-09-30; los del pase 11, el 2026-10-01 (ver `agents/top.md`).
+> **Pase 113 del 2026-10-05:** 🆕 **Los patrones nuevos son `P360`–`P364` y la receta nueva es `R-113-PLATAFORMA-SOCIAL-CON-CESION-POR-RUTA` — la primera de esta base cuya compuerta de entrega se decide por un ARBOL DE DIRECTORIOS y no por un archivo de licencia.** 🆕 **`P360`: una pre-registracion puede pedir un intervalo de RELOJ mayor que la distancia al proximo pase — la accion escrita para corregir `P358` heredo su defecto en el sentido contrario y era inejecutable desde que se escribio. Una pre-registracion puede exigir que se MIDA el intervalo; no que el intervalo TENGA un tamaño.** 🆕 **`P361`: la portabilidad de un control tiene TRES ejes —contenedor (`P352`), directorio (`P355`) y PERMISO— y el de permiso es el unico que no puede publicar un numero falso, asi que es el modo de falla mas honesto y el mas incapacitante. Un control cuya unica validacion es la EJECUCION es inverificable en cualquier entorno restringido; uno que versiona su RESULTADO es auditable por lectura.** 🆕 **`P362`: un instrumento de ORIGEN sensible a MAYUSCULAS atribuye la autoria al CITADO en vez de al AUTOR — en este arbol el encabezado es `**Pase N**` y la referencia cruzada es `el pase N`, asi que una regex minuscula ve exactamente lo contrario de lo que busca. Familia de `P288`/`P354`, causa raiz de `P359`.** 🆕 **`P363`: una cita que declara la UBICACION de su definicion es PEOR que una cita muda — ofrece una procedencia falsable y nadie la falsa, asi que se lee como verificacion ya hecha. Es `P342` trasladado de la licencia a la doctrina.** 🆕 **`P364`: la cesion puede estar SEGMENTADA POR DIRECTORIO y la frontera de contaminacion es una RUTA, no un repo — el clasificador resuelve una familia por ARCHIVO cuando hace falta una por SUBARBOL.**
 > **Pase 112 del 2026-10-05:** 🆕 **Los patrones nuevos son `P355`, `P356`, `P357`, `P358` y `P359`, y la receta nueva es `R-112-TUTOR-PERMISIVO-CON-CESION-MEDIDA` — el primer tutor K-12 que esta base puede armar con cesion permisiva de punta a punta, con la trampa del corpus MEDIDA y presupuestada en vez de descubierta en produccion.** 🔴 **`P355`: la severidad de un fallo de portabilidad va al REVES de su frecuencia (4 ruidosos contra 1 silencioso), y una prediccion con forma de DISYUNCION se confirma sin decir cual rama la sostuvo.** 🔴 **`P356`: un auditor cuyo denominador de DEFINICIONES y de CITAS son conjuntos de archivos distintos FABRICA hallazgos — 6 de las 21 colgadas no eran deuda.** 🔴 **`P357`: la herencia entre capas de un corpus se mide fila por fila, no se deduce del agregado — 19,8 % de los hints divergen y la asimetria es 66 a 1.** 🔴 **`P358`: «un pase» no es una unidad de TIEMPO.**
 > **Pase 111 del 2026-10-05:** 🆕 **Los patrones nuevos son `P348`–`P354`, y la receta nueva es `R-111-CIFRA-CON-COTA-Y-FECHA` — como se publica una cifra de repo en esta base y como se cita en una propuesta.** 🔴 **`P348`: contar por ARCHIVO en vez de por UNIDAD sobresamplea lo que no cede — la tasa del corpus es 76,4 % y no 58,0 %, y el mecanismo esta medido (25,0 % mas figuras/unidad en lo mal cedido, 3,021 en `NO-ES-CESION`). Es `P344` en otra forma.** 🆕 **`P349`: una cota declarada en «cifras significativas» miente en los extremos — el canal es un ESCALON (0/±50/±50/±500), exacto debajo de 1.000 y de DOS cifras en 1.000-9.999.** 🆕 **`P350`: la frontera de una accion hacia afuera esta ANTES del envio; la pre-registracion la puso en «no mandar nada» y lo denegado fue ENUMERAR contacto de personas, asi que el resultado es un TERCERO que sus dos ramas no admitian.** 🆕 **`P351`: un barrido por una cifra publicada no distingue el DATO de la CITA que lo refuta — forma INVERSA de `P344`.** 🆕 **`P352`: una suite que pasa solo en el contenedor que la escribio es una memoria, no un control; el tablero se mide DESDE EL CLON.** 🆕 **`P354`: un control que reconoce una ORTOGRAFIA y no un OBJETO queda ciego cuando cambia la notacion — el auditor de citas de patron conocia cuatro convenciones de encabezado y no la quinta (el numero en CODIGO INLINE, la que `patterns.md` usa desde el pase ~95), asi que 42 numeros definidos (`P284`-`P287`, `P308`-`P319`, `P328`-`P353`) salian COLGADOS y el control seguia en verde. Arreglado como convencion `E`: colgadas 63 → 21, suite 8/8 → 15/15 con tres controles negativos. Misma familia que `P171`/`P288`/`P299`/`P304`.** ⚠️ **Las 21 que quedan son deuda real de pases viejos —la peor es `P135`, citada 84 veces en negrita y sin definicion— y NO se corrigen: escribir hoy la seccion de un patron que otro pase nombro es fabricar doctrina con un numero ajeno.** 🆕 **`P353`: la precision que vuelve checkeable a una cifra es la misma que la hace envejecer — en la banda EXACTO la cifra no se publica sin fecha.**
 > **Pase 110 del 2026-10-05:** 🆕 **Los patrones nuevos son `P344`, `P345`, `P346` y `P347`, y la receta nueva es `R-110-CESION-CON-TEXTO` — la compuerta de entrega que mide BYTES y no solo presencia de archivo.** 🔴 **`P344`: una pre-registracion puede construir su denominador CONTRA su hipotesis (0 de 13 por construccion, 6 de 9 en las excluidas).** 🟢 **`P345`/`P337` cerrado: el corte converge a 1.611/832 y las 41 son un DOMINIO DESNUDO.** 🔴 **`P346`: entregable sin gestion son 1.418 de 2.443 (58,0 %), y 368 figuras OPENSTAX no ceden NADA — procedencia y cesion son ejes independientes.** 🆕 **`P347`: `frappe/education` cede «GNU GPL V3» en 19 BYTES, sin texto, y es el unico defecto de la cadena que PASA todos los controles anteriores.**
@@ -140,6 +141,217 @@ updated: 2026-10-05
 > **Pase 11:** +2 patrones — **P25** (riesgo de abandono conforme al Anexo III, la capa con presupuesto ya asignado y sin oferta open source) y **P26** (agente docente sobre la ontología curricular nacional ya publicada).
 > **Pase 27:** **+4 patrones y una corrección.** 🔴 **P51 queda con premisa falsa** —el conector MCP de Moodle **sí existe y es MIT**— y lo reemplazan **P54** (corrección y devolución sobre Moodle con **compuerta humana**, el último tramo del gap 6, con piezas que ya escriben), **P55** (el conector de **Open edX**, que es el único que de verdad no existe), **P56** (**SCORM** como formato de salida de la capa generativa: cero integración, offline) y **P57** (evidencia por MCP cotizada sobre lo que CaSS **realmente** expone — 6 de 61 operaciones, con insignias y autoría de marcos **fuera**).
 
+
+## 🆕 Patrones del pase 113 (2026-10-05) — `P360`–`P364` y la receta `R-113-PLATAFORMA-SOCIAL-CON-CESION-POR-RUTA`
+
+### 🆕 `P360` — una pre-registracion puede pedir un intervalo de RELOJ mayor que la distancia al proximo pase
+
+**Enunciado.** Una accion pre-registrada que condiciona su veredicto a un intervalo de tiempo
+**minimo** es inejecutable si el pase que la corre arranca antes de ese intervalo — y eso **no lo
+controla quien escribe la accion**.
+
+**El caso que lo establece.** El pase 112 cerro `P358` («un pase no es una unidad de TIEMPO») y
+escribio la accion B para repararlo: *remedir las 2 filas de la banda `EXACTO` nombrando la hora
+UTC*, prediciendo que **con un intervalo declarado de ≥24 h, al menos 1 de las 2 se mueve en ±1**.
+
+```
+pase 112 →  fechado 2026-10-05          (un DIA, sin hora)
+pase 113 →  leido  2026-10-05T10:48Z    (un INSTANTE)
+            ⇒ intervalo ∈ [0 h, 10 h 48 m]   ⇒  jamas ≥ 24 h
+```
+
+🔴 **La accion escrita para corregir `P358` heredo su defecto en el sentido contrario:** `P358` decia
+que un pase no mide tiempo, y la accion B fijo una condicion **de tiempo** sin controlar cuando
+correria el pase siguiente.
+
+**La regla operativa.** 🟢 Una pre-registracion puede exigir **que se MIDA** el intervalo —obligacion
+de instrumento, se cumple siempre—. 🔴 **No puede exigir que el intervalo TENGA un tamaño**, que es
+una apuesta sobre el planificador.
+
+**Control negativo.** Un 0 en una banda con cota **no es** evidencia de estabilidad: `DeepTutor`
+devolvio `40.8k` en los dos pases y su banda es **±50**, asi que podrian haberse movido 49 estrellas.
+Solo las filas de banda `EXACTO` aportan senal de deriva (`P349`, `P353`).
+
+---
+
+### 🆕 `P361` — la portabilidad de un control tiene tres ejes, y el del PERMISO es el unico que no puede mentir
+
+**Enunciado.** Un control puede no medir por tres razones independientes, y solo dos de ellas
+producen una salida que se parece a una medicion.
+
+| eje | hipotesis | que rompe | ¿publica un numero falso? |
+|---|---|---|---|
+| **contenedor** | `P352` | la suite pasa solo donde se escribio | 🔴 **si** — «21/21» en verde sin medir |
+| **directorio** (`cwd`) | `P355` | la suite mide menos desde otra ruta | 🔴 **si** — `TOTAL-DEGRADADO` 14/15 |
+| **permiso** | 🆕 **`P361`** | **cualquier** suite, sin degradarse | 🟢 **no** — no hay salida |
+
+**El caso que lo establece.** Las acciones A y C del pase 112 murieron porque **este entorno deniega
+la ejecucion del codigo del propio arbol** (`[Code from External]`). El arbol estaba intacto, el
+instrumento escrito y versionado, y lo que faltaba era **el derecho a correrlo** — que no es `P320`
+(el canal es propiedad del par herramienta-destino), porque aca el destino es el arbol propio.
+
+🔴 **Por que incapacita mas que los otros dos:** la accion A pedia *escribir el control que corre todo
+el tablero y falla si alguna suite no es portable*. **Ese control solo se valida corriendolo.**
+
+**La regla de diseño que sale, y es la parte reutilizable.** 🟢 **Un control que versiona su
+RESULTADO —un TSV, un fixture, una huella `sha256`— es auditable por LECTURA en cualquier entorno.**
+Un control que solo existe como codigo ejecutable es inverificable exactamente en los entornos
+restringidos, que son los de produccion y los de auditoria de terceros. 🔵 **Prueba en vivo:**
+`resultado.2026-10-05.tsv` y las huellas del pase 112 siguieron siendo utiles este pase mientras su
+codigo no se pudo correr.
+
+**Control negativo.** No se parcha una suite que no se puede correr: convertir una deuda MEDIDA (4
+suites, con forma de fallo y lo que cada una pierde) en una deuda SUPUESTA es peor que dejarla
+anotada (`P286`).
+
+---
+
+### 🆕 `P362` — un instrumento de ORIGEN sensible a MAYUSCULAS atribuye la autoria al CITADO en vez de al AUTOR
+
+**Enunciado.** Cuando un arbol usa una caja para el **encabezado de registro** y otra para la
+**referencia cruzada**, un instrumento de atribucion insensible a esa diferencia invierte
+sistematicamente la autoria.
+
+**El caso que lo establece.** En este arbol el autor de un registro es `**Pase N del …**` (mayuscula,
+al inicio de linea) y la referencia cruzada en el cuerpo es `el pase N` (minuscula, en prosa):
+
+```
+regex:        /pase[ ]+[0-9]+/                              ← minuscula
+linea real:   > **Pase 100 del 2026-10-04:** … «el hueco que el pase 5 dejó ABIERTO» …
+                  ^^^^ NO matchea (el AUTOR)    ^^^^ SI matchea (el CITADO)
+```
+
+🔴 Atribuyo **`P135` al «pase 5»** — anacronico de entrada, que es lo que lo delato.
+
+**El arreglo, y por que no fue alargar una lista.** 🟢 Se cambio la **definicion de marcador**: una
+linea abre un registro solo si empieza en `>` o `#`, y se toma el **primer** numero de pase de esa
+linea. **Efecto medido: 7 de 15 cambiaron de origen.**
+
+**Familia.** `P288` (casefold) en el eje de la autoria y `P354` (el ancla reconoce una ORTOGRAFIA y no
+un OBJETO) en el eje del alcance. 🔴 **Causa raiz compartida con `P359`:** el atribuidor es
+**POSICIONAL**, asi que cualquier error en el marcador de seccion re-atribuye todo lo que cuelga
+debajo.
+
+⚠️ **Lo que el arreglo NO resolvio, y se publica como tal:** `P135` sigue dando «pase 5» despues de
+corregir la caja. Se deja como **origen no resuelto** y no se fuerza un numero — con la ironia de que
+`P135` es la hipotesis que prohibe inferir lo que no se midio.
+
+---
+
+### 🆕 `P363` — una cita que declara la UBICACION de su definicion es peor que una cita muda
+
+**Enunciado.** Una referencia que afirma **donde** vive su definicion ofrece una procedencia
+**falsable**; si nadie la verifica, se lee como una verificacion ya hecha y bloquea la duda que una
+cita muda habria dejado abierta.
+
+**El caso que lo establece.** `P282` se cita asi: *«politica y regulacion (`P282`, en
+`intel/market.md`)»*. 🔴 **`P356` barrio ese archivo con las regex del propio auditor y no hay
+definicion ahi.**
+
+| forma de la cita | que afirma | que invita a hacer |
+|---|---|---|
+| `(P282)` — muda | nada sobre su origen | 🟢 buscarla |
+| `(P282, en intel/market.md)` | 🔴 **una ubicacion concreta** | 🔴 **darla por verificada** |
+
+**Familia.** Es `P342` —un badge de licencia y una entrada de arbol del README son una **afirmacion**
+de cesion, no una cesion— **trasladado de la licencia a la doctrina**. La forma del error es
+identica: un puntero que parece evidencia y no lo es.
+
+**La regla operativa.** 🟢 Una cita con ubicacion necesita un control que la **verifique**, igual que
+`P342` obligo a leer el archivo en vez del badge. Sin ese control, **es preferible la cita muda**.
+
+---
+
+### 🆕 `P364` — la cesion puede estar SEGMENTADA POR DIRECTORIO, y la frontera de contaminacion es una ruta
+
+**Enunciado.** Un repo puede ceder en **dos regimenes distintos segun el subarbol**, y entonces
+«la licencia del repo» no existe como dato: hay una licencia **por ruta**.
+
+**El caso que lo establece.** [`Elgg/Elgg`](https://github.com/Elgg/Elgg) (1.7k ★ ±50 al
+`2026-10-05T10:48Z`, 665 forks, PHP), `master/LICENSE.txt`, textual:
+
+```
+Bundled plugins (the contents of the "/mod" directory) are available
+only under the GPLv2 license.
+
+The remainder of the project is available under either MIT or GPLv2.
+```
+
+| ruta | regimen | que se puede entregar |
+|---|---|---|
+| nucleo (todo menos `/mod`) | 🟢 **MIT** o GPL-2.0 **a eleccion** | 🟢 construir y **cerrar** encima |
+| `/mod` | 🔴 **GPL-2.0 unicamente** | 🔴 empaquetarlo **arrastra copyleft** |
+
+🔴 **Un barrido de raiz publica «MIT» o «GPL-2.0» y las dos son falsas.** El clasificador compartido
+(`P237`) resuelve **una familia por ARCHIVO**; esta pieza exige **una familia por SUBARBOL**.
+
+**Familia.** Es *«la licencia de la RAIZ no es la licencia del ARBOL»* (pase 108) medida por primera
+vez sobre **CODIGO** y no sobre contenido — hasta aca esta base solo la tenia en `P317` (datos),
+`P322` (items), `P324` (corpus) y `P328` (estrechamiento entre ediciones).
+
+🔴 **Y el nombre del archivo decide:** `LICENSE` → **404**, `LICENSE.txt` → **200**. `P279` en el repo
+donde mas caro sale: un sondeo que probara solo `LICENSE` habria descartado por «sin cesion» un
+nucleo que es MIT.
+
+---
+
+### 🧑‍🤝‍🧑 Receta `R-113-PLATAFORMA-SOCIAL-CON-CESION-POR-RUTA` — cohortes y aprendizaje social con nucleo permisivo, y la compuerta puesta en el arbol de directorios
+
+**El problema que resuelve.** Un cliente quiere **aprendizaje social** (cohortes, grupos, muro de
+actividad, perfiles, menciones, notificaciones) y quiere poder **cerrar el entregable**. Moodle
+(GPL-3.0) y Open edX (AGPL-3.0) no permiten lo segundo, y ninguno de los dos trae lo primero como
+primitiva: la capa social se reimplementa en cada piloto.
+
+**Las piezas, con su cesion leida del payload:**
+
+| capa | pieza | cesion | papel |
+|---|---|---|---|
+| plataforma social | [`Elgg/Elgg`](https://github.com/Elgg/Elgg) | 🟢 **MIT** (nucleo, **sin `/mod`**) | perfiles, grupos, cohortes, actividad, notificaciones |
+| LMS / cursos | [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | 🟢 **MIT** | cursos, inscripciones, mentor AI, *compliance* |
+| tutor | [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 **Apache-2.0** | tutoria con memoria y RAG |
+| orquestacion | `LangGraph` | 🟢 MIT | nodos de politica por jurisdiccion |
+| contenido | ⚠️ **ver `P328`/`P348`** | 🔴 mixta | **presupuestar la gestion, no asumirla** |
+
+**El *wiring*, en el orden en que importa:**
+
+1. 🔴 **Compuerta `P364`, y va PRIMERA — es la unica decision irreversible.** Antes de escribir una
+   linea: `git clone` de `Elgg` y **excluir `/mod` del arbol de build**. El nucleo queda MIT a
+   eleccion del licenciatario; si `/mod` entra al paquete, **todo el entregable es GPL-2.0** y la
+   conversacion comercial es otra. 🔵 **Se decide en la semana 1 o se paga en la ultima.**
+2. 🟢 **Verificar la cesion por SUBARBOL y no por repo** (`P364`): el control no es «¿que dice
+   `LICENSE`?» sino «¿que rutas entran al artefacto?». Un `find` del arbol empaquetado contra la
+   lista de rutas GPL-2.0, corrido en CI, es la forma auditable.
+3. 🟢 **Leer el archivo por su nombre REAL** (`P279`): probar `LICENSE`, `LICENSE.txt`, `LICENCE`,
+   `LICENSE.md`, `COPYING` y sus cajas. En esta pieza, `LICENSE` da 404 y la cesion esta en
+   `LICENSE.txt`.
+4. 🟢 **`mentingo` (MIT) para cursos, `Elgg` (nucleo MIT) para la capa social**, integrados por
+   identidad compartida. Las dos son permisivas, asi que la frontera de licencia del entregable la
+   fija **solo** el paso 1.
+5. 🟢 **`DeepTutor` (Apache-2.0) como tutor**, con la memoria por cuenta y **no** reentrenando con
+   datos de alumno — requisito duro en North America por `AB 1159` (California) y `SB 1227` (Idaho).
+6. 🟢 **Nodos de politica por jurisdiccion en `LangGraph`**: North America fragmenta en 31 estados,
+   APAC tiene cuatro calendarios nacionales (Corea `2026-01-22`, Vietnam `2026-03-01`, marco agentico
+   de la IMDA `2026-01-22`), EMEA corre al AI Act (`2027-12-02` / `2028-08-02`). **Un unico
+   *guardrail* no cumple los tres.**
+7. 🔴 **Borrador + liberacion humana en toda escritura con consecuencia** (nota, sancion, promocion):
+   Oklahoma y Maryland lo exigen y el AI Act clasifica la evaluacion educativa como **alto riesgo**.
+8. ⚠️ **Presupuestar la gestion de cesion del CONTENIDO como linea aparte** (`P328`, `P348`): si el
+   corpus es OER, la tasa de unidades sin cesion resoluble medida en este arbol es **76,4 %** por
+   unidad —no 58,0 %, que es por figura— y asumir herencia del padre sobre-declara la entregabilidad
+   en **10,4 pp** (`P357`).
+
+**Lo que esta receta NO resuelve, dicho en vez de callado (`P286`, `P343`):**
+
+- 🔴 **`Elgg` no tiene region verificada.** Su `LICENSE.txt` nombra `The MITRE Corporation` (EE. UU.)
+  y `Curverider Ltd` (R. Unido), pero es una lista de copyright **de 2017**, no una sede actual
+  (`P135`). Para un encargo con requisito de procedencia, **hay que pedirla por escrito**.
+- ⚠️ **1.7k ★ y 665 forks no son las dos decadas de Moodle.** Lo que compra esta pieza es **ausencia
+  de friccion de licencia en la capa social**, no madurez de despliegue institucional. Si el cliente
+  necesita certificaciones y ecosistema de integradores, Moodle sigue ganando — con GPL-3.0 encima.
+- 🔴 **El tablero de suites de este arbol no se pudo medir este pase** (`P361`), asi que los controles
+  de los pasos 2 y 3 se describen pero **no se verificaron corriendo** en esta corrida.
+
+---
 
 ## 🆕 Patrones del pase 112 (2026-10-05) — `P355`–`P358` y la receta `R-112-TUTOR-PERMISIVO-CON-CESION-MEDIDA`
 
