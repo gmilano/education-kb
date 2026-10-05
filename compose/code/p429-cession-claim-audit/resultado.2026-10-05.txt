@@ -1,0 +1,26 @@
+Corrida de P429 — pase 125 del 2026-10-05 (lectura 22:50Z)
+Fuente de las afirmaciones: un unico listicle «Best Open Source LMS 2026»
+devuelto por la consulta de plataformas de este estante (raccoongang.com/blog).
+Lectura de primera mano: sidebar «License» de github.com, via WebFetch (P418).
+
+plataforma     | afirmada por el listicle           | primera mano   | veredicto/riesgo
+---------------------------------------------------------------------------------------------------
+sakai          | ECL-2.0 «mas permisiva que GPL»    | ECL-2.0        | ACIERTO/COSMETICA
+               |                                    |                | la afirmacion coincide con el payload
+chamilo        | GPL v3                             | GPL-3.0        | ACIERTO/COSMETICA
+               |                                    |                | la afirmacion coincide con el payload
+formalms       | Apache-2.0 «la mas permisiva»      | NINGUNA        | REFUTADA/BLOQUEANTE
+               |                                    |                | se afirmo Apache-2.0 y el repo no declara cesion: no se puede usar
+open edx       | «free, open-source» (sin nombrarla) | AGPL-3.0       | OMITIDA/HOSPEDAJE
+               |                                    |                | no nombro la cesion y lo medido es AGPL-3.0 (RED)
+
+2 aciertos de 4. Y el reparto no es aleatorio:
+  - las 2 ACERTADAS son las 2 donde la licencia no cambia la entrega;
+  - las 2 FALLADAS son las 2 donde si la cambia (BLOQUEANTE y HOSPEDAJE).
+
+Suite: 12/12 (test_audit.py), con los 4 casos reales como fixtures.
+P430: la v1 de este instrumento comparaba CLASE contra conjunto de FAMILIAS
+('RED' in {'AGPL-3.0',...} = siempre False) y su suite paso 12/12 igual,
+porque una rama posterior daba el veredicto correcto por el motivo equivocado.
+La suite endurecida (exige que todo HOSPEDAJE/REFUTADA nombre el uso en red)
+RECHAZA 2 de 2 de esos casos de la v1.
