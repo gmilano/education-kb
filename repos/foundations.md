@@ -31,6 +31,48 @@ updated: 2026-10-05
 > **Pase 100 del 2026-10-04:** 🟢 **1 alta fundacional, y es la pieza que COMPLETA una capa que este archivo tenía a medias desde el pase 14: el MODELO de evaluación de pronunciación.** `YuanGongND/gopt` (**BSD-3-Clause**, `LICENSE` 1.517 B, titular `Yuan Gong`, 2022) es GOPT —ICASSP 2022, MIT & PAII—, el primer modelo que puntúa **múltiples aspectos** (exactitud, fluidez, prosodia) en **múltiples granularidades** (fonema, palabra, oración) a la vez, y es **SOTA sobre `speechocean762`**, que es justo el corpus que este archivo ya inventariaba. 🔴 **Pero el hallazgo del pase es contra esta base, y este archivo es la prueba: el pase estuvo a punto de publicar la capa de habla como NUEVA, y la «Capa de habla y lectura oral» está acá desde el pase 14** con `OpenPronounce`, `kaldi` y `speechocean762` — **incluido el hallazgo de que el corpus no trae archivo de licencia**, que el pase iba a anunciar. 🟢 **`P311`: ningún control de esta base preguntaba «¿esto ya está acá?» —todos auditan una afirmación que el pase HACE, y la de que un alta es NUEVA es implícita— así que el gate quedó escrito y corrido antes de publicar** (`p311`, **11/11**; 14 slugs → **5 ya publicados**, con archivo, línea y sección). 🔴 **La cadena permisiva de esta capa queda CERRADA como irresoluble desde acá, y es una corrección de alcance sobre el pase 14:** ese pase dejó *«pedir los términos a SpeechOcean por escrito»*, y este intentó la vía de **registro** con la que `P306` desempató `examplary/qti` vía npm — **`openslr.org` y `huggingface.co` dan los dos `000` por egreso bloqueado**. **Se puede construir el evaluador entero permisivo (`OpenPronounce` MIT + `gopt` BSD-3 + `kaldi` Apache-2.0) y NO se puede verificar la licencia del corpus contra el que todo el campo se mide.** 🔴 **Y `P308`: 3 de 18 anclas del control compartido eran frase cruda; la del Unlicense INVIERTE el veredicto comercial a `NONCOMMERCIAL-NOT-OSI`, y la ventana del bloque de título contaba LÍNEAS, lo que perdía la AGPL de `P288`.** 🟢 **`lib/license_family.sh` 62/62 → 79/79; 51 suites pasan, 0 fallan.** Ver **`P308`**–**`P311`**.
 > **Pase 99 del 2026-10-04:** 🟢 **7 altas fundacionales, y son DOS CAPAS que este estante no tenía: el ALMACÉN xAPI y la librería de ÍTEMS QTI.** El barrido obligatorio (`open source platform education ERP CRM MIT Apache`) devolvió por vigesimosexta vez el eje generalista (ERPNext/Frappe, Odoo, OFBiz, Huly, AureusERP) — **cero** piezas fundacionales educativas nuevas. 🟢 **Pero el EJE ROTADO que el pase 98 pre-registró sí rindió: 15 candidatas medidas → 9 licenciadas, 6 sin cesión**, y 7 de las 9 son repo fundacional. 🔵 **Lo que abren no es un tema nuevo sino la OTRA MITAD de dos temas que esta base tenía a medias: tenía el CLIENTE xAPI (`learnmcp-xapi`) y no el ALMACÉN; tenía REPRODUCTORES de ítems QTI (`qti3-item-player`, `pie-qti`) y no las librerías de GENERACIÓN y MIGRACIÓN.** 🔴 **`P304` — el ancla BSD del control compartido estaba escrita como FRASE CONTIGUA y perdía una familia PERMISIVA:** `instructure/QTIMigrationTool` es BSD-3-Clause real (University of Cambridge, 1.392 B) y volvía `UNCLASSIFIED`, porque su oración de concesión inserta *«of this software»* y *«(where applicable)»* dentro de la frase canónica. **Cuarto eje del mismo defecto** (`P171` cuerpo-vs-título, `P288` caja, `P299` palabra-vs-subcadena, `P304` frase-vs-tokens-ordenados). 🟢 **`lib/license_family.sh` 50/50 → 62/62** (3 controles negativos), **51 suites pasan, 0 fallan**. 🔴 **`P305` — `adlnet/xapi-lab` declara DOS familias en DOS payloads del mismo repo:** `LICENSE` dice **MIT** (titular `Tyler Mulligan`, 2015) y el `README` dice **Apache-2.0** (titular `Advanced Distributed Learning`, 2016) — **familia, titular y año discrepan a la vez**, y la obligación de atribución corre hacia una parte distinta según cuál gobierne. 🟢 **`P306` — `examplary/qti` ≡ `examplary-ai/qti`, byte-idénticos en 3 archivos, y el REGISTRO desempata:** `registry.npmjs.org/@examplary/qti` nombra `github.com/examplary/qti` como canónico y confirma `MIT` por un canal independiente del payload. Ver **`P304`**–**`P306`**.
 
+## 🟢 Pase 124 del 2026-10-05 (lectura `21:46Z`) — el cimiento que faltaba es el de INTEROPERABILIDAD, y vivía en una página que este estante nunca barrió
+
+### 🟢 El cimiento nuevo, con la cesión LEÍDA DEL PAYLOAD
+
+| repo | cesión (familia · bytes · `sha256`) | ★ (`21:46Z`) | por qué es CIMIENTO y no aplicación |
+|---|---|---|---|
+| https://github.com/OpenVidu/openvidu | 🟢 **Apache-2.0** PRÍSTINO · `master/LICENSE` **11.357 B** · `sha256:b40930bbcf80` | 2.100 ★ (banda `K-3CIFRAS`, ±50, `P349`) | **sustrato de tiempo real** (WebRTC) sobre LiveKit y mediasoup. Toda tutoría sincrónica, examen oral o clase con grabación se apoya en esta capa, y sin ella el camino es un SaaS con el audio del alumno adentro |
+| https://github.com/netless-io/flat | 🟢 **MIT** · `main/LICENSE` **1.062 B** · `sha256:8fa1566550df` | 6.400 ★ (banda `K-3CIFRAS`, ±50) | el **aula** armada sobre esa capa: pizarra, grabación, clientes Web/Windows/macOS. Es el repo permisivo más grande que este archivo midió en la capa sincrónica |
+
+### 🔵 La capa de interoperabilidad, ENUMERADA y todavía sin cesión medida
+
+`topics/lti` —la página por la que un agente AI se enchufa a un LMS que el cliente ya tiene— **nunca había sido barrida por este estante**. Lo que devolvió, con la ★ de primera mano y la cesión **pendiente**:
+
+| repo | ★ | qué resuelve |
+|---|---|---|
+| `dmitry-viskov/pylti1.3` | 138 ★ | *LTI 1.3 Advantage Tool* en Python — el camino corto para publicar un agente como *tool* LTI |
+| `packbackbooks/lti-1-3-php-library` | 53 ★ | lo mismo en PHP, orientado a certificación IMS |
+| `oat-sa/lib-lti1p3-core` | 37 ★ | núcleo LTI 1.3 como **plataforma** y como *tool* (de OAT, los de TAO) |
+| `INGInious/INGInious` | 243 ★ | evaluación automatizada de ejercicios **en sandbox** — la pieza de ejecución segura de código del alumno |
+| `ucfopen/UDOIT` | 116 ★ | inspección de **accesibilidad** del contenido del curso (University of Central Florida) |
+| `cerpus/Edlib` | 46 ★ | creación, almacenamiento y reutilización de recursos interactivos |
+| `ucfopen/Obojobo` · `ucfopen/Materia` | 72 ★ · 52 ★ | contenido de curso y apps embebibles para un LMS |
+| `WebPA/WebPA` | 37 ★ | evaluación **entre pares** |
+| `scollovati/awesome-lti` | 79 ★ | índice del estándar, útil como mapa de la capa |
+
+🔵 **Dos de esta página ya estaban en el árbol y el barrido los reconfirma por un canal distinto:** `jupyterhub/ltiauthenticator` (73 ★, BSD-3-Clause, ya en `verticals/solutions.md`) y `tsugiproject/tsugi` (375 ★, Apache-2.0, 10.272 B). 🔴 **Los otros 9 están enumerados, NO verificados** — el canal de payloads quedó denegado a mitad del pase (ver al pie). Se publican como **denominador** de la acción **W**, no como recomendación.
+
+🔵 **Por qué esta capa es la que faltaba.** Este archivo venía acumulando *plataformas* (Moodle, Open edX, Canvas) y *agentes*, y el hueco estaba en el medio: **el adaptador**. Las obligaciones que `intel/market.md` mide este pase —Ohio con fecha de julio de 2026, el AI Act en aplicación plena desde el 2 de agosto de 2026— se cumplen dentro del LMS instalado, así que el valor entregable casi nunca es una app nueva: es un *tool* LTI que se enchufa, registra y audita. Sin esta capa, el estante recomendaba piezas que no se podían conectar.
+
+### 🔴 Lo que NO cede, medido y no supuesto
+
+| repo | ★ | motivo medido |
+|---|---|---|
+| `OS4ED/openSIS-Classic` | 345 ★ | `README` **200** y **ningún** `LICENSE`/`LICENSE.md`/`LICENSE.txt`/`COPYING` en `main` ni `master` (8 sondas). Se describe como *«commercial grade»* SIS ⇒ clase de `P412`: sin archivo de cesión, el adjetivo comercial es la única señal y apunta a NO-OSI |
+| `gazpachu/hypatia` | 651 ★ | `README` **404** en `main` **y** `master` ⇒ rama por defecto distinta. 🔵 **No es un repo fantasma** y no cuenta como rechazo de oferta (`P413`) |
+
+### 🔴 El límite del pase, cuantificado
+
+Descarga **en lote** de payloads: **DENEGADA** por el clasificador de permisos de esta sesión tras 12 mediciones. **12 cesiones leídas · 71 netas sin leer.** El eje de cimientos queda con 2 altas medidas y 9 candidatas enumeradas; se dice el número en vez de presentar la enumeración como verificación.
+
+---
+
 ## 🟢 Pase 123 del 2026-10-05 (lectura `20:45Z`) — se rompe una racha de 30 barridos en cero, y el motivo es que el ancla estaba en la CAPA equivocada
 
 ### 🔴 Lo que fallaba, medido contra la historia de este archivo
@@ -6116,7 +6158,7 @@ Verificado repo por repo vía WebFetch el 2026-10-01:
 | https://github.com/aiverify-foundation/moonshot-cicd | **Apache-2.0** ✅ | 14 | 4 | **La versión que se opera, no la que se demuestra:** corre en CI/CD con Docker y S3. Cuatro categorías de riesgo: alucinación, contenido indeseable, divulgación de datos, vulnerabilidad adversaria. Python 3.12 |
 | https://github.com/aiverify-foundation/moonshot-ui | **Apache-2.0** ✅ | 12 | 7 | Informe **HTML con gráficos interactivos** + export JSON. Es la salida legible por un comité de ética o una inspección |
 | https://github.com/aiverify-foundation/aiverify-developer-tools | **Apache-2.0** ✅ | 9 | 6 | **El punto de extensión de código:** plantillas para plugins de test y algoritmos propios (v2.x) |
-| https://github.com/morganrcu/awesome-eu-ai-act | **CC0** ✅ | 21 | — | Lista curada de conformidad al AI Act. Útil como mapa: nombra Giskard (5.700 ★), DeepEval, PyRIT, Holistic AI (Apache-2.0), AI Act Companion (MIT), Regula (Apache-2.0 / EUPL-1.2), VerifyWise, AIR Blackbox, Venturalitica SDK, Inkog |
+| https://github.com/morganrcu/awesome-eu-ai-act | **CC0** ✅ | 21 | — | Lista curada de conformidad al AI Act. Útil como mapa: nombra Giskard (5.700 ★, banda `K-3CIFRAS`, ±50, `P349`; acción S del pase 124), DeepEval, PyRIT, Holistic AI (Apache-2.0), AI Act Companion (MIT), Regula (Apache-2.0 / EUPL-1.2), VerifyWise, AIR Blackbox, Venturalitica SDK, Inkog |
 
 ### 🔴 El hallazgo de esta capa es una ausencia, y está declarada por los propios catálogos
 

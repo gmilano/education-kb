@@ -1,0 +1,2 @@
+OK             declarado=645 post=655 delta_real=10 | cifra PRE con su delta publicado y verificado
+DESFASADO      declarado=645 post=655 delta_real=10 | P428: declara POST=645 y el censo posterior da 655

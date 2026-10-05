@@ -24,6 +24,52 @@ updated: 2026-10-05
 > **Pase 107 del 2026-10-05:** 🔴 **0 altas permisivas (trigesimo barrido, 3 candidatas MEDIDAS del payload y las 3 con su bloqueo nombrado) y las TRES acciones pre-registradas corridas: A con la cota NO CERRADA y su clausula de atribucion FALSIFICADA, B CONFIRMADA, C CONFIRMADA en dos clausulas y FALSIFICADA en la tercera.** 🔴 **`P332`: la EXTENSION de un archivo de imagen no es su FORMATO — 2.443 de 2.443 `.gif` son PNG/JPEG/WEBP, y un barrido por extension habria dado «0 solapamiento» desde una premisa falsa.** 🔴 **`P334`: el titular de una FIGURA se resuelve por BYTES y vive en una obra DISTINTA de la que el item cita (36 pares leidos).** 🔴 **`P333`: `fa4e32e5e622` era la huella del archivo SIN su salto final — defecto de dato, no de upstream.** 🔴 **`P335`: tercera sub-clase de `P320` — lo denegado fue el LOTE, no la pieza nombrada.** 🟢 **Canal nuevo: `gitlab.com/-/raw`.**
 > **Pase 106 del 2026-10-05:** 🟢 **0 altas (vigesimonoveno barrido, 5 candidatas, las 5 frenadas por el gate de `P311`) y las TRES acciones pre-registradas corridas: A CONFIRMADA, B FALSIFICADA, C CONFIRMADA.** 🔴 **`P328`: la cesion de un OER se ESTRECHA entre ediciones — 10 de 10 colecciones con el mismo `collection-id` pasan de `CC BY 4.0` en `1e` a `CC BY-NC-SA 4.0` en `main`, y el slug cambia de nombre, que es por lo que esta base no lo veia.** 🔴 **El denominador se corrige de 13.371 a 82.492 unidades y aparece una capa sintetica de 6.886 unidades (`oer: openai`) sin cesion.** 🟢 **Canal nuevo: `git ls-remote` para enumerar refs — es el que abrio la accion A.**
 
+## 🟢 2026-10-05 — pase 124 (lectura `21:46Z`): 5 páginas nunca tocadas dan 83 netas, y el único candidato con forma de AGENTE es copyleft
+
+**Lo nuevo de esta hora, y lo que NO es nuevo.** El pase 123 declaró agotado el canal que alimentó los pases 115–122 (`topics/education-ai` y `topics/ai-tutor`). Este pase barrió **5 *topic pages* que este estante nunca había tocado** y el canal volvió a rendir:
+
+| *topic page* | candidatas | ya publicadas | **netas** | **netas que son software de educación** |
+|---|---|---|---|---|
+| `topics/e-learning` | 20 | 2 | **18** | ~11 |
+| `topics/moodle` | 20 | 5 | **15** | 15 (13 de ellas, plugins) |
+| `topics/lti` | 20 | 6 | **14** | ~12 |
+| `topics/student-information-system` | 20 | 2 | **18** | ~16 |
+| `topics/mooc` | 20 | 0 | **20** | 🔴 **~0** |
+| **total** | **100** (96 slugs distintos) | **13** | **83** | — |
+
+🔴 **El dato de tendencia del pase no es el 83: es que `topics/mooc` entrega 20 netas de 20 y CERO software.** Lo que devuelve son apuntes de Coursera, soluciones de cursos de Stanford, listas de oportunidades para estudiantes de CS y descargadores de MOOC chinos (`course-crawler`, `MoocDownloader`). 🔵 **Una página puede tener el denominador más limpio del barrido y el rendimiento más bajo**, así que a partir de este pase una página se juzga por **netas-usables** y el conteo crudo de netas se publica sólo al lado de ese segundo número.
+
+### 🟢 Lo permisivo que apareció esta hora (cesión leída del PAYLOAD, cifras crudas)
+
+| pieza | repo | cesión | ★ (`21:46Z`) | qué mueve |
+|---|---|---|---|---|
+| **Flat** | `github.com/netless-io/flat` | 🟢 **MIT**, 1.062 B, `sha256:8fa1566550df` | 6.400 ★ (`K-3CIFRAS`, ±50) | aula sincrónica completa y permisiva — la más grande que midió este estante |
+| **OpenVidu** | `github.com/OpenVidu/openvidu` | 🟢 **Apache-2.0** prístino, 11.357 B, `sha256:b40930bbcf80` | 2.100 ★ (`K-3CIFRAS`, ±50) | tiempo real auto-hospedado sobre LiveKit/mediasoup |
+| **eCourse** | `github.com/Ilyas-Codes/eCourse` | 🟢 **MIT**, 1.062 B, `sha256:5d6ba721365c` | 519 ★ (`EXACTO`, 2026-10-05) | LMS liviano, sin el copyleft de Moodle |
+| **academico** | `github.com/academico-sis/academico` | 🟢 **MIT**, 1.094 B, `sha256:6051a15f4d44` | 403 ★ (`EXACTO`, 2026-10-05) | 🟢 **SIS permisivo** — la capa donde este estante sólo tenía copyleft y no-OSI |
+| **geli** | `github.com/geli-lms/geli` | 🟢 **Apache-2.0**, 11.358 B, `sha256:cfc7749b96f6` | 157 ★ (`EXACTO`, 2026-10-05) | plataforma e-learning |
+| **Shiori** | `github.com/infinity-decoder/Shiori` | 🟢 **MIT**, 1.072 B, `sha256:03d351572510` | 8 ★ (`EXACTO`, 2026-10-05) | SIS liviano, pre-tracción |
+
+🔴 **Y la contra-tendencia, que es el hallazgo de mercado de esta hora: de las 83 netas, el único repo con FORMA de agente AI es `ahmedEid1/lumen`** (*«learner-owned AI education platform, private course generation, RAG tutoring»*, 88 ★) **y su cesión es GPL-3.0, no permisiva.** Las páginas nuevas rinden **plataforma y sustrato**, no agentes. Dicho de otro modo: la oferta de agentes de educación permisivos sigue siendo tan escasa como el pase 123 la encontró; lo que se amplió es la capa de **plataforma** sobre la que un agente se monta.
+
+### ⚠️ Lo que apareció y NO se puede entregar, con la cláusula al lado
+
+| repo | ★ | cesión medida | la cláusula |
+|---|---|---|---|
+| `ahmedEid1/lumen` | 88 ★ | ⚠️ **GPL-3.0**, 35.149 B, `sha256:3972dc9744f6` | copyleft fuerte; **no** alcanza al uso en red |
+| `xiaochong0302/course-tencent-cloud` | 1.200 ★ | ⚠️ **GPL-2.0**, 18.431 B | sin cláusula de patentes |
+| `yukazakiri/koakademy` | 7 ★ | ⚠️ **AGPL-3.0**, 34.523 B, `sha256:8486a10c4393` | uso en red = distribución |
+| `yuanjiusheng/cloud-learning-ce` | 126 ★ | 🔴 **NO-OSI**, 4.117 B | EULA propietario **en chino** (`P421`) |
+| `OS4ED/openSIS-Classic` | 345 ★ | 🔴 **sin archivo de cesión** (8 sondas, `README` 200) | se presenta como *«commercial grade»*: la clase de `P412` |
+
+🆕 **`P421` — la señal NO-OSI puede no estar en inglés.** `cloud-learning-ce` abre con `版权所有 (c) 2021，猿究生 / 保留所有权利。` (*«todos los derechos reservados»*). La lista de títulos NO-OSI de la compuerta es íntegramente inglesa, así que **el título no lo atrapó**; lo atrapó el balde `UNCLASSIFIED` que `P412` redefinió como *«NO-OSI hasta leerla»*. En un corpus con repos en chino, indonesio, japonés y español, el balde no es un residuo: es la defensa.
+
+🆕 **`P419` — y esta hora la compuerta de este estante se equivocó 2 de 2 en los textos copyleft.** Devolvió `AGPL-3.0` para `lumen` (que es **GPL-3.0**: su §13 *nombra* a Affero) y `LGPL` para `course-tencent-cloud` (que es **GPL-2.0**: su cierre *nombra* a la Lesser). Una referencia cruzada no es una identidad — y la confusión cae justo en la cláusula que decide una entrega hospedada.
+
+🔴 **Límite declarado de esta hora.** La descarga **en lote** de payloads de cesión quedó denegada por el clasificador de permisos de esta sesión tras las primeras 12 mediciones. **71 de las 83 netas quedan sin cesión leída** y no se cuentan ni como altas ni como rechazos: quedan enumeradas por página, pendientes de medir. No se presentan 12 mediciones como si fueran 83.
+
+---
+
 ## 🟢 2026-10-05 — pase 123 (lectura `20:45Z`): el canal de 8 pases se AGOTÓ y el reemplazo da 34 netas; y una licencia que se presenta con la frase del MIT
 
 ### 🔬 El canal, declarado antes de cualquier veredicto (`P249`)

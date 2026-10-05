@@ -134,6 +134,65 @@ updated: 2026-10-05
 > están mal por ~2× y **un 403 de `curl` no es un 404**. Ver la nota de método del pase 12.
 > **Pase 11:** el Digital Omnibus es derecho vigente (tendencia 25), aparece la capa predictiva y está vacía (tendencia 26), y se corrige un error de método de diez pasadas sobre licencias permisivas (tendencia 27).
 
+## 🟢 Pase 124 del 2026-10-05 (lectura `21:46Z`) — 4 tendencias, y la del pase es que el reloj regulatorio de EMEA venció sin que cambiara ningún dato
+
+### 🟢 T1 — La tendencia más grande del pase no es un dato nuevo: es un TIEMPO VERBAL que cambió
+
+El **2 de agosto de 2026** —aplicación plena del AI Act (Reg. 2024/1689)— **ya pasó** a la lectura de este pase (`2026-10-05`). Este árbol tenía la fecha publicada desde varios pases; lo que no tenía es el **estado**:
+
+| dimensión | antes del 2026-08-02 | hoy |
+|---|---|---|
+| clasificación de alto riesgo de la IA que evalúa resultados de aprendizaje | prospectiva | 🔴 **vigente** |
+| *conformity assessment* previo al despliegue | entregable futuro | 🔴 **requisito exigible** |
+| institución sin expediente | «va con retraso» | 🔴 **en incumplimiento** |
+| deber de alfabetización en IA del personal | recomendación en preparación | 🔴 **obligación proporcional al rol** |
+
+🔵 **Por qué es una tendencia y no un recordatorio:** la brecha documentada entre expectativa regulatoria y preparación institucional deja de ser un riesgo a gestionar y pasa a ser un **pasivo presente**, y eso mueve la conversación comercial de *roadmap* a *remediación*. 🔵 Es `P382` («fecha corrida») operando sobre un dato que nadie tuvo que re-medir, y es la clase de movimiento que un barrido de hechos nuevos **no detecta por construcción**: las 4 consultas regionales de este pase devolvieron 20 de 22 hechos ya publicados y **ninguna** señaló esto.
+
+### 🟢 T2 — Las cuatro regiones piden el mismo activo y lo piden en cuatro documentos distintos
+
+Medido sobre los hechos de `intel/market.md` de este pase:
+
+| región | por dónde aprieta | el documento que se entrega |
+|---|---|---|
+| **North America** | mandato de **política y compras** (Ohio con fecha de jul-2026, Maryland con coordinadores y certificación de herramientas, Oklahoma antes de 2027-28) y ahora el **título del alumno** (Alabama) | política de distrito, expediente de certificación de herramienta, y currículo con evaluación |
+| **EMEA** | **expediente de conformidad**, ya exigible | *conformity assessment* + gobierno del dato y supervisión humana documentados |
+| **APAC** | **capacitación** (Singapur/SkillsFuture) y **etiquetado de la salida** (China, vigente sep-2025) | programa de formación · marcado y procedencia del contenido generado |
+| **LATAM** | **adopción sin gobernanza**: 92 % de alumnos y 79 % de docentes usan IA, >50 % de docentes en Chile y Brasil, y **<10 %** de instituciones con directrices formales y capacidad | marco institucional + formación que lo sostenga |
+
+🔵 **El activo común, y es el que este estante produce:** las cuatro piden poder decir **de qué licencia cede** el software que se instala. Ninguna consultora gana una de estas por saber qué regula la región —eso está publicado— y todas se ganan o se pierden en el expediente de la pieza.
+
+### 🔴 T3 — La capa más cercana al dato del alumno sigue llegando bajo copyleft, y este pase mide la PRIMERA excepción
+
+Tercera medición consecutiva del mismo patrón, ahora en la capa **SIS** (matrícula, notas, asistencia, datos personales):
+
+| pieza | ★ | cesión | qué permite |
+|---|---|---|---|
+| `canyongbs/advisingapp` | 338 ★ | 🔴 **Elastic 2.0** | *«no hosted or managed service»* ⇒ prohíbe la forma de entrega de una consultora |
+| `OS4ED/openSIS-Classic` | 345 ★ | 🔴 **sin archivo de cesión** | inusable; se presenta como *«commercial grade»* |
+| `yukazakiri/koakademy` | 7 ★ | ⚠️ **AGPL-3.0** | uso en red = distribución |
+| `ahmedEid1/lumen` — **el único candidato con forma de AGENTE de 83 netas** | 88 ★ | ⚠️ **GPL-3.0** | copyleft fuerte |
+| 🟢 `academico-sis/academico` | 403 ★ | 🟢 **MIT**, 1.094 B | 🟢 **customizar y entregar sin obligación recíproca** |
+
+🟢 **Y la excepción cambia el diseño de una propuesta, no sólo el catálogo.** Hasta este pase, tocar el sistema de registro del alumno obligaba a elegir entre heredar copyleft, firmar una licencia que prohíbe el servicio gestionado, o construir de cero. Con `academico` (**MIT**) y `Shiori` (**MIT**) hay un cuarto camino con la cesión **leída del payload**. ⚠️ La paridad funcional contra `rosariosis` o un SIS comercial queda **NO MEDIDA** (`P286`): se afirma la cesión, que es lo que gobierna la decisión, no la cobertura.
+
+### 🔵 T4 — El cumplimiento se ejecuta DENTRO del LMS instalado, y por eso la capa que faltaba era el adaptador
+
+Las obligaciones de T2 no se cumplen en una app nueva: se cumplen donde ya están los alumnos. Este pase barrió `topics/lti` —**nunca antes tocada por este estante**— y encontró la capa que conecta un agente AI a un LMS existente: `pylti1.3` (138 ★), `lti-1-3-php-library` (53 ★), `lib-lti1p3-core` (37 ★), `INGInious` (243 ★, ejecución en sandbox), `UDOIT` (116 ★, accesibilidad), `Edlib` (46 ★).
+
+🔵 **La consecuencia de posicionamiento:** un entregable que pide reemplazar el LMS compite contra una migración; un *tool* LTI que se enchufa, registra y audita compite contra nada. 🔴 **Y la cláusula:** de esos repos este pase midió la ★ de primera mano y **no** la cesión — el canal de payloads quedó denegado a mitad del pase. Quedan **enumerados como denominador** de la acción **W**, no recomendados.
+
+### 🔴 Las brechas declaradas de este pase, por región (y se declaran porque el silencio se lee como cobertura)
+
+| región | brecha, con el motivo |
+|---|---|
+| **North America** | el alcance del requisito de Alabama —qué cuenta como «instrucción en IA» dentro del curso de CS— **no** se midió en fuente primaria (canal generalista) |
+| **EMEA** | **0 hechos netos sobre 5 sondas**: la región está saturada para consulta generalista. Lo que se movió fue el reloj, no el dato |
+| **APAC** | presupuesto y número de docentes alcanzados por el programa de Singapur: **NO MEDIDOS**. Y sigue abierto el hueco ya registrado: ni el *AI Basic Act* coreano ni la ley vietnamita 134/2025/QH15 tienen software permisivo que las implemente |
+| **LATAM** | **0 hechos netos sobre 4 sondas**, segunda vez consecutiva. Las 4 afirmaciones devueltas ya estaban publicadas |
+
+---
+
 ## 🟢 Pase 123 del 2026-10-05 (lectura `20:45Z`) — 4 tendencias, y la del pase es de ESTRUCTURA: en educación la vía rápida al dato del cliente es la vía que entrega el código bajo copyleft
 
 ### 🔬 Nota de numeración de la serie, dicha antes de usar los números
@@ -5832,7 +5891,7 @@ el mismo canal, y el resultado es el peor número registrado. Verificado contra 
 | Biblioteca | Vertical | Licencia | Stars | Contenido |
 |---|---|---|---|---|
 | `K-Dense-AI/scientific-agent-skills` | Ciencia | **MIT** ✅ | **47.200** | 181 skills + 100+ bases de datos + 70+ workflows. Declara 160.000 científicos usuarios |
-| `virgiliojr94/book-to-skill` | Genérico | **MIT** ✅ | **33.200** | Pipeline documento → skill. **+6.300 ★ en 30 días** |
+| `virgiliojr94/book-to-skill` | Genérico | **MIT** ✅ | **33.200** (banda `K-2CIFRAS`, ±500, `P349`) | Pipeline documento → skill. **+6.300 ★ en 30 días** — 🆕 `P424`: DIFERENCIA de lecturas, no lectura; cota **propagada ±1.000**, no la banda de `P349` |
 | `GarethManning/education-agent-skills` | **Educación** | CC BY-SA 4.0 ⚠️ | **815** | 165 skills pedagógicas en 20 dominios |
 | `ZeKaiNie/universal-examprep-skill` | **Educación** | **MIT** ✅ | **299** | Tutor de examen con cita de página |
 
@@ -6125,7 +6184,7 @@ escala— aplicada a la autoría.
 | Capa | Pieza | Licencia | Señal de madurez |
 |---|---|---|---|
 | Watermark de texto | **SynthID-Text**, dentro de `huggingface/transformers` | **Apache-2.0** | En producción en Transformers; copyright HuggingFace + **Google DeepMind** |
-| Evaluación del watermark | **MarkLLM** | **Apache-2.0** | **1.100 ★**, 23+ algoritmos, 12 herramientas de evaluación, EMNLP 2024 Demo |
+| Evaluación del watermark | **MarkLLM** | **Apache-2.0** | **1.100 ★** (banda `K-3CIFRAS`, ±50, `P349`; acción S del pase 124), 23+ algoritmos, 12 herramientas de evaluación, EMNLP 2024 Demo |
 | Procedencia del artefacto | **c2pa-rs** / **c2pa-python** | **MIT *y* Apache-2.0** (dual) | **1.907 commits**; spec C2PA 2.4 con *CAWG identity assertion* |
 
 **Y en EMEA dejó de ser opcional.** El **Artículo 50** está en vigor desde el **2026-08-02**, y los sistemas de

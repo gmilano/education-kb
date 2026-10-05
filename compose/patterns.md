@@ -30,6 +30,76 @@ updated: 2026-10-05
 > **Pase 100 del 2026-10-04:** 🆕 **Los patrones nuevos son `P308`–`P311`, y las recetas son `R-100-HABLA-PERMISIVA` y `R-100-AUTOGRADING-PERMISIVO`.** 🔴 **`P308` es el que cambia qué garantiza un veredicto de licencia de esta base: el reflujo del texto —re-envolver un payload sin cambiar una palabra— movía la respuesta, en DOS reglas; la del Unlicense no perdía la familia en `UNCLASSIFIED` sino que INVERTÍA el veredicto comercial a `NONCOMMERCIAL-NOT-OSI` sobre el texto más permisivo que existe, y la de la ventana del bloque de título perdía la AGPL que `P288` había instalado porque contaba LÍNEAS.** 🟢 **`P309` es el residual declarado en vez de tapado: `holder_of` devuelve una LÍNEA, y una línea depende del reflujo por construcción.** 🔴 **`P310` es el que paga en una propuesta: una pieza puede ser permisiva y no ceder ninguna CAPACIDAD —`speechsuper/SpeechSuper-API-Samples` es MIT real sobre muestras de una API paga— y es el primer espécimen de esta base donde el engaño viene de una licencia CORRECTA.** 🔴 **`P311` es el control que faltaba y que este pase necesitó contra sí mismo: todos los controles de esta base auditan una afirmación que el pase HACE, y la de que un alta es NUEVA es implícita.** 🆕 **`R-100-HABLA-PERMISIVA` es cotizable porque los cinco eslabones están verificados por payload y cuatro de los cinco son permisivos; el quinto —el corpus— queda FUERA del entregable con su razón dicha.**
 > **Pase 97 del 2026-10-04:** 🆕 **Los patrones nuevos son `P294`, `P295`, `P296` y `P297`, y los cuatro salen de cablear una sola pieza.** 🔴 **`P294` es el que cambia cómo esta base se audita a sí misma: un control que no está en el camino por donde pasan los datos no es un control, es una demostración — el pase 96 diagnosticó la ceguera a Java/Maven, escribió el lector correcto (`p289`, 11/11) y no lo conectó, así que `PARSERS` siguió con cinco nombres y el hueco siguió abierto donde se producen los veredictos.** 🔴 **`P295` es el mismo defecto en la prosa: `trend-backlink-audit` existe desde el pase 49 para atrapar citas colgadas y era CIEGO a la forma con que esta base ANUNCIA sus tendencias («tendencias nuevas, numeradas 745–752» → 0 citas), así que catorce números quedaron sin sección sin que nada lo marcara; y de paso era lossy en castellano, porque aceptaba «a» como conector y no como marca de rango.** 🟢 **`P296` es el que paga en una entrega: el veredicto de licencia tiene DOS canales independientes —la declaración del manifiesto y el payload del archivo— y medidos sobre la capa Java/Maven concuerdan 4 de 4 exactos, 1 de familia, 0 contradicciones; el manifiesto CORROBORA y además es la única fuente donde no hay archivo (`kuali/kc`).** 🟢 **`P297` es la pieza técnica que lo hizo posible: en Maven la identidad de propiedad es el `groupId` —un namespace reverse-DNS que codifica a la organización— y el `<parent>` NO presta ni identidad ni licencia.** 🆕 **La receta nueva es `R-97-COMPRA-SOBERANA-APAC`, y es cotizable porque la condición de compra que la dispara quedó medida este pase: la soberanía decidirá la infraestructura de ~la mitad de las empresas de APAC.**
 
+## 🟢 Pase 124 del 2026-10-05 (lectura `21:46Z`) — 3 recetas armadas con las altas de este pase, y la primera existe porque el reloj del AI Act ya venció
+
+⚠️ **Regla de este archivo:** cada receta nombra **repos reales con la cesión leída del payload**, y las piezas sin cesión medida se marcan como tales. Las piezas que este pase enumeró pero no midió (`topics/lti`) van señaladas con 🔶 y **no** se cotizan.
+
+---
+
+### 🟢 P425 — Expediente de conformidad del AI Act para evaluación de aprendizaje, auto-hospedado (EMEA, 8–10 semanas)
+
+**Por qué ahora:** el AI Act está **en aplicación** desde el 2026-08-02 (ver `intel/trends.md`, T1). La IA que evalúa resultados de aprendizaje es **alto riesgo**, y el *conformity assessment* es **previo al despliegue**. Una institución con un tutor o un corrector ya en producción está en incumplimiento hoy, no mañana.
+
+**La pila, con la cesión medida:**
+
+| capa | pieza | cesión (leída del payload) | qué aporta al expediente |
+|---|---|---|---|
+| registro del alumno | [`academico-sis/academico`](https://github.com/academico-sis/academico) | 🟢 **MIT** · 1.094 B · `sha256:6051a15f4d44` | el dato personal queda en infraestructura del cliente; **sin** obligación recíproca sobre el código que se le entrega |
+| LMS | [`Ilyas-Codes/eCourse`](https://github.com/Ilyas-Codes/eCourse) | 🟢 **MIT** · 1.062 B · `sha256:5d6ba721365c` | curso y contenidos auto-hospedados; alternativa liviana a Moodle **sin heredar GPL** |
+| aula sincrónica | [`netless-io/flat`](https://github.com/netless-io/flat) | 🟢 **MIT** · 1.062 B · `sha256:8fa1566550df` | clase y grabación; la grabación es evidencia de supervisión humana |
+| tiempo real | [`OpenVidu/openvidu`](https://github.com/OpenVidu/openvidu) | 🟢 **Apache-2.0** prístino · 11.357 B · `sha256:b40930bbcf80` | WebRTC propio ⇒ el audio y video del alumno **no** salen a un SaaS: gobierno del dato, demostrable |
+| compuerta de cesión | `compose/code/p411-cession-identity-gate/` (este árbol) | — | el anexo del expediente que dice **de qué licencia cede cada pieza**, con tamaño, título y digest |
+| corrección con supervisión | `toshieji/moodle-grading-mcp` (ya en este árbol) | **MIT** | borradores **NO liberados** + firma docente antes de publicar nota ⇒ supervisión humana por **diseño**, no por política |
+
+**Cómo se cablean, en orden:**
+
+1. `academico` como sistema de registro; `eCourse` toma de él la matrícula por su API. **Ninguna de las dos obliga a abrir el código del cliente** — es el punto que el expediente tiene que poder afirmar.
+2. El tutor/corrector escribe **siempre** a borrador vía la compuerta de `moodle-grading-mcp`; la nota se libera **sólo** con firma docente registrada. Eso satisface «supervisión humana» con un artefacto, no con una declaración.
+3. `OpenVidu` detrás de `flat` para que la sesión sincrónica no dependa de un tercero; la grabación se archiva como evidencia.
+4. 🟢 **El entregable que cierra:** correr la compuerta de identidad de cesión sobre **todas** las dependencias y anexar la tabla (familia · bytes · `sha256` · título) al *conformity assessment*. 🔴 Y con `P419` puesta: la familia se lee del **encabezado con su versión**, porque un GPL-3.0 mal rotulado como AGPL-3.0 le cambia al cliente la cláusula de **uso en red**, que es justo la que decide si el despliegue hospedado es legal.
+
+⚠️ **Lo que esta receta NO resuelve:** la evaluación pedagógica del tutor. `inspect_ai` (**MIT**, 2.900 ★, banda `K-3CIFRAS`) es el sustrato donde se escribe esa prueba, y este árbol lleva varios pases registrando que **la prueba pedagógica open source no existe**.
+
+---
+
+### 🟢 P426 — SIS permisivo con capa AI para una institución LATAM (6–8 semanas)
+
+**Por qué ahora:** LATAM tiene **92 %** de alumnos y **79 %** de docentes usando IA y **<10 %** de instituciones con directrices formales y capacidad suficiente (UNESCO). La adopción ya pasó; falta la gobernanza. Y hasta este pase, tocar el sistema de registro obligaba a copyleft o a una licencia que prohíbe el servicio gestionado.
+
+| capa | pieza | cesión | por qué esta y no otra |
+|---|---|---|---|
+| SIS | [`academico-sis/academico`](https://github.com/academico-sis/academico) | 🟢 **MIT** · 1.094 B | 🟢 **el primer SIS permisivo de este árbol.** Laravel + Filament: pila común con la capa PHP de LTI |
+| SIS liviano (alternativa) | [`infinity-decoder/Shiori`](https://github.com/infinity-decoder/Shiori) | 🟢 **MIT** · 1.072 B | cuando el alcance es una sede y no una red; 8 ★, entra con fork propio |
+| LMS | [`geli-lms/geli`](https://github.com/geli-lms/geli) | 🟢 **Apache-2.0** · 11.358 B | cláusula de patentes explícita, que `eCourse` (MIT) no da |
+| marcado de la salida | [`THU-BPM/MarkLLM`](https://github.com/THU-BPM/MarkLLM) | **Apache-2.0** · 1.100 ★ (banda `K-3CIFRAS`, ±50) | probar que lo que el tutor genera se puede detectar — base del marco de integridad académica |
+
+**El cableado, y el orden importa:**
+
+1. `academico` primero, **vacío**: el marco de gobernanza se escribe sobre el modelo de datos real (quién ve qué expediente), no sobre un diagrama.
+2. La capa AI se enchufa **leyendo** de `academico` y escribiendo a borrador. Misma regla que `P425`: nada se publica al alumno sin firma.
+3. `MarkLLM` para medir robustez del marcado **antes** de prometer detectabilidad en el documento de política. 🔵 Es el orden que evita el error más común de esta capa: publicar una política de integridad que el stack no puede sostener.
+4. 🟢 **El entregable diferencial para LATAM no es el software: es el marco institucional + la formación**, y el software es lo que lo vuelve verificable. Poder decir *«estas 4 piezas son MIT/Apache y acá está el digest de cada licencia»* es exactamente lo que `<10 %` de las instituciones de la región hoy puede decir.
+
+⚠️ **Cláusula:** `academico` tiene 403 ★ (banda `EXACTO`) — tracción real pero chica, y su paridad funcional contra `rosariosis` (GPL) no se midió. Para una red grande, el camino sigue siendo `rosariosis` **con** la obligación copyleft escrita en la propuesta.
+
+---
+
+### 🔶 P427 — Agente AI enchufado al LMS que el cliente ya tiene (NA/EMEA, 4–6 semanas) — receta DECLARADA, piezas sin cesión medida
+
+**Por qué se escribe igual:** es la receta que las obligaciones de este pase piden (el cumplimiento se ejecuta **dentro** del LMS instalado: Ohio, Maryland, el AI Act), y el canal de enumeración la destapó este pase. 🔴 **Se marca entera con 🔶 porque la cesión de sus piezas NO se midió** — la descarga en lote de payloads quedó denegada a mitad del pase. **No se cotiza hasta correr la acción W.**
+
+| capa | pieza (★ de primera mano, cesión 🔶 **sin medir**) | qué resolvería |
+|---|---|---|
+| adaptador LTI (Python) | 🔶 [`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3) — 138 ★ | publicar el agente como *tool* LTI 1.3 Advantage: entra en Moodle/Canvas/Open edX sin migración |
+| adaptador LTI (PHP) | 🔶 [`oat-sa/lib-lti1p3-core`](https://github.com/oat-sa/lib-lti1p3-core) — 37 ★ · 🔶 [`packbackbooks/lti-1-3-php-library`](https://github.com/packbackbooks/lti-1-3-php-library) — 53 ★ | el camino certificable IMS, y la pila PHP de `academico` |
+| ejecución segura | 🔶 [`INGInious/INGInious`](https://github.com/INGInious/INGInious) — 243 ★ | correr código del alumno en sandbox: el requisito que un corrector automático no puede saltear |
+| accesibilidad | 🔶 [`ucfopen/UDOIT`](https://github.com/ucfopen/UDOIT) — 116 ★ | auditar el contenido del curso — exigencia de compras pública en NA y EMEA |
+| autenticación LTI ya verificada | 🟢 [`jupyterhub/ltiauthenticator`](https://github.com/jupyterhub/ltiauthenticator) — **BSD-3-Clause**, 73 ★ | 🟢 **la única pieza de esta receta con cesión ya publicada en este árbol**, y declara estar probada contra Open edX, Canvas y Moodle |
+
+🔵 **Lo que esta receta cambia si la acción W confirma las cesiones:** el entregable deja de competir contra una migración de LMS. Hoy se declara con el denominador enumerado (9 piezas) y **1 sola** cesión conocida, y se dice así en vez de presentarla como lista.
+
+---
+
 ## 🟢 Pase 123 del 2026-10-05 (lectura `20:45Z`) — 4 recetas armadas con las altas de este pase, y la primera existe para no heredar AGPL
 
 ### 🧩 `R-P123-A` — «Capa agéntica sobre el LMS que el cliente ya tiene, SIN heredar copyleft» (North America · EMEA)
@@ -12224,7 +12294,7 @@ origen no es un clasificador que se pueda optimizar en contra.
 | Rol | Pieza | Licencia | Señal |
 |---|---|---|---|
 | **Marcar el texto en generación** | **SynthID-Text** — `huggingface/transformers` → `src/transformers/generation/watermarking.py` | **Apache-2.0** ✅ | `SynthIDTextWatermarkLogitsProcessor`, `SynthIDTextWatermarkDetector`, `BayesianDetectorModel`. Copyright HuggingFace + Google DeepMind |
-| **Probar que el marcado aguanta** | [`THU-BPM/MarkLLM`](https://github.com/THU-BPM/MarkLLM) | **Apache-2.0** ✅ | **1.100 ★**, 23+ algoritmos, **12 herramientas** de detectabilidad/robustez/calidad. EMNLP 2024 Demo |
+| **Probar que el marcado aguanta** | [`THU-BPM/MarkLLM`](https://github.com/THU-BPM/MarkLLM) | **Apache-2.0** ✅ | **1.100 ★** (banda `K-3CIFRAS`, ±50, `P349`; acción S del pase 124), 23+ algoritmos, **12 herramientas** de detectabilidad/robustez/calidad. EMNLP 2024 Demo |
 | **Manifiesto de procedencia firmado** | [`contentauth/c2pa-rs`](https://github.com/contentauth/c2pa-rs) · [`c2pa-python`](https://github.com/contentauth/c2pa-python) | **MIT *y* Apache-2.0** (dual) ✅ | **1.907** / 344 commits. Spec **C2PA 2.4**, *CAWG identity assertion* |
 | **Entrada al LMS sin forkearlo** | [`1EdTech/lti-1-3-php-library`](https://github.com/1EdTech/lti-1-3-php-library) (ver **P21**) | **Apache-2.0** ✅ | Ya en esta KB desde el pase 9 |
 | **Registro de la evidencia** | LRS xAPI del pase 6 — `lrsql` / `Ralph` (ver **P15**) | Apache-2.0 / MIT ✅ | Ya en esta KB |
@@ -12772,7 +12842,7 @@ cliente cambia de modelo, y en 2026 el cliente cambia de modelo cada trimestre.
 | Ejecutor | `aiverify-foundation/moonshot` (353 ★) | **Apache-2.0** | *Benchmarking* + *red-teaming*: alucinación, contenido indeseable, **divulgación de dato del alumno**, vulnerabilidad adversaria |
 | Pipeline | `aiverify-foundation/moonshot-cicd` (14 ★) | **Apache-2.0** | La misma corrida dentro de CI/CD, con Docker y S3. **Es la pieza que vuelve el expediente reproducible** |
 | Mapeo regulatorio | `compl-ai/compl-ai` (211 ★) | **Apache-2.0** | 29 benchmarks sobre los **6 principios núcleo del EU AI Act**. La pieza del expediente europeo |
-| Sustrato de evals | `UKGovernmentBEIS/inspect_ai` (2.900 ★) | **MIT** | Donde se escribe la prueba pedagógica que no existe. 200+ evals pre-construidas, *model-graded* |
+| Sustrato de evals | `UKGovernmentBEIS/inspect_ai` (2.900 ★, banda `K-3CIFRAS`, ±50, `P349`; acción S del pase 124) | **MIT** | Donde se escribe la prueba pedagógica que no existe. 200+ evals pre-construidas, *model-graded* |
 | Extensión de datos | `aiverify-foundation/moonshot-data` (45 ★) | **Apache-2.0** | Donde entra el dataset educativo como *recipe* / *cookbook* |
 | Extensión de código | `aiverify-foundation/aiverify-developer-tools` (9 ★) | **Apache-2.0** | Donde entra el algoritmo de test propio |
 | Informe | `aiverify-foundation/moonshot-ui` (12 ★) | **Apache-2.0** | Salida **HTML con gráficos** + JSON: lo que lee un comité de ética o una inspección |

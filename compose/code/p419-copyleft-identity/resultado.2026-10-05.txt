@@ -1,0 +1,10 @@
+ahmedEid1__lumen                        35149B sha:3972dc9744f6 GPL-3.0      red=NO | encabezado: GENERAL PUBLIC LICENSE + Version 3 | cuerpo menciona AGPL
+xiaochong0302__course-tencent-cloud     18431B sha:189b1af95d66 GPL-2.0      red=NO | encabezado: GENERAL PUBLIC LICENSE + Version 2 | cuerpo menciona LGPL
+yukazakiri__koakademy                   34523B sha:8486a10c4393 AGPL-3.0     red=SI | encabezado nombra AFFERO
+geli-lms__geli                          11358B sha:cfc7749b96f6 Apache-2.0   red=NO | encabezado: APACHE LICENSE
+netless-io__flat                         1062B sha:8fa1566550df MIT          red=NO | encabezado: MIT LICENSE
+yuanjiusheng__cloud-learning-ce          4117B sha:3636529e0c67 UNCLASSIFIED red=NO | el encabezado no nombra una familia — tratar como NO-OSI (`P412`)
+OpenVidu__openvidu                      11357B sha:b40930bbcf80 Apache-2.0   red=NO | encabezado: APACHE LICENSE
+academico-sis__academico                 1094B sha:6051a15f4d44 MIT          red=NO | encabezado: MIT LICENSE
+Ilyas-Codes__eCourse                     1062B sha:5d6ba721365c MIT          red=NO | encabezado: MIT LICENSE
+infinity-decoder__Shiori                 1072B sha:03d351572510 MIT          red=NO | encabezado: MIT LICENSE

@@ -23,6 +23,53 @@ updated: 2026-10-05
 > **Pase 107 del 2026-10-05:** 🔴 **Trending de la industria vacio por TRIGESIMOSEXTA vez: curriculo, catalogos, una bolsa de trabajo y dos generalistas (`microsoft/semantic-kernel` 27.470 ★, `NousResearch/hermes-agent` MIT), con las SEIS cifras del eje generalista identicas digito a digito a los pases 105 y 106 ⇒ informacion sobre el CANAL, no sobre la industria.** 🟢 **Lo que SI se movio es una capa de BINARIOS que este archivo nunca conto: 2.443 archivos de figura (~156 MiB, 1.326 imagenes distintas) en `CAHLR/OATutor-Content`, con la extension `.gif` falsa en 2.443 de 2.443 (`P332`).** 🔵 **`git ls-remote` da TRES refs, y una se llama `gpt-science-study`: la unica de este arbol cuyo nombre anuncia contenido sintetico.** 🔴 **Defecto propio corregido: los 49.481 JSON contra los 49.479 del pase 106 son los 6 caminos con bytes de control (U+007F/U+0080/U+0081) en el nombre del paso — la identidad de un paso NO es un slug seguro.**
 > **Pase 106 del 2026-10-05:** 🔴 **Trending de la industria vacio por TRIGESIMOQUINTA vez: el canal devuelve generalista o educativo-sobre-AI, no AI-para-educacion.** 🟢 **Lo que SI se movio esta en el eje de `ref` y no de repo: las ramas `1e` de 5 bundles de `openstax` contienen la UNICA cesion `CC BY 4.0` de 10 colecciones cuyas versiones vivas son `NC-SA` — cesion y vigencia apuntan en direcciones opuestas.** 🔵 **Canal nuevo calibrado: `git ls-remote` para enumerar refs (responde a repo real, falla a repo inventado), el unico de este arbol que contesta «que refs tiene este repo» con `api.github.com` en 403 — sin el, la accion A de este pase era imposible.**
 
+## 🟢 2026-10-05 — pase 124 (lectura `21:46Z`): el canal generalista falla por 8.ª vez, y la *topic page* rinde 83 netas en 5 páginas nuevas
+
+### 🔬 Las 4 consultas del encargo, corridas y medidas una por una
+
+| consulta del encargo | qué devolvió | neto para este estante |
+|---|---|---|
+| `top open source AI agents education 2026 github MIT` | `LangGraph`, `CrewAI`, `AutoGen`, `Semantic Kernel`, `Pydantic AI`, `aider`, `Cline`, `microsoft/ai-agents-for-beginners`, `agents-from-scratch` | 🔴 **0 de educación.** **8.ª falla idéntica.** Devuelve frameworks genéricos y *cursos sobre* agentes, no agentes de educación |
+| `github trending education AI 2026` | los mismos listículos, más agregadores (`oosmetrics`, `fungies`, `alicelabs`) | 🔴 **0 netas** |
+| `open source platform education ERP CRM MIT Apache` | `openeducat.org` (artículo propio), nada de repos nuevos | 🔴 **0 netas** |
+| `AI education industry trends 2026` | 🟢 cifras de mercado y adopción (van a `intel/`) | 🟢 **útil para intel, 0 repos** |
+
+🔵 **El canal generalista llegó a 8 fallas idénticas, y a esta altura el dato es estructural, no de suerte.** Un listículo de *«mejores agentes open source»* está indexado por popularidad global, y la popularidad global de un agente de educación es baja contra `LangGraph`. **La *topic page* es el canal de esta industria**, y este pase lo confirma con el número más alto que registró el archivo.
+
+### 🟢 El trending real: 5 páginas que este estante NUNCA había barrido
+
+| *topic page* | candidatas | ya publicadas | **netas** |
+|---|---|---|---|
+| `topics/e-learning` | 20 | 2 | **18** |
+| `topics/moodle` | 20 | 5 | **15** |
+| `topics/lti` | 20 | 6 | **14** |
+| `topics/student-information-system` | 20 | 2 | **18** |
+| `topics/mooc` | 20 | 0 | **20** 🔴 *(y ~0 usables)* |
+| **total** | **100** (96 distintos) | **13** | **83** |
+
+Corpus publicado al abrir el pase: **645** slugs distintos.
+
+### 🟢 Los repos de interoperabilidad que la página `lti` destapó, y por qué son trending para una consultora
+
+`topics/lti` es la página que este estante debería haber barrido primero y nunca barrió: **LTI es el estándar por el que un agente AI se enchufa a un LMS que ya existe en el cliente.** Lo que devolvió, enumerado (cesión **pendiente** de medir — ver límite al pie):
+
+- `dmitry-viskov/pylti1.3` (138 ★) — *LTI 1.3 Advantage Tool*, y `pylti1.3-django-example` (31 ★) al lado
+- `jupyterhub/ltiauthenticator` (73 ★) — 🔵 **ya publicado** en `verticals/solutions.md` con BSD-3-Clause y 73 ★; el barrido lo reconfirma por un canal distinto
+- `packbackbooks/lti-1-3-php-library` (53 ★) y `oat-sa/lib-lti1p3-core` (37 ★) — las dos piezas PHP certificables IMS
+- `tsugiproject/tsugi` (375 ★) — consola de gestión de *tools* LTI; 🔵 ya en el corpus con Apache-2.0 10.272 B
+- `ucfopen/UDOIT` (116 ★) — inspección de **accesibilidad** de contenido, de la University of Central Florida; `Obojobo` (72 ★) y `Materia` (52 ★) de la misma casa
+- `cerpus/Edlib` (46 ★) — creación y reutilización de recursos interactivos
+- `INGInious/INGInious` (243 ★) — evaluación automatizada y **segura** de ejercicios (sandbox)
+- `scollovati/awesome-lti` (79 ★) — índice del estándar, útil como mapa
+
+🔵 **Por qué es trending y no catálogo:** las cinco obligaciones regionales que `intel/market.md` registra este pase (Ohio julio 2026, Maryland, Oklahoma 2027-28, el AI Act en aplicación plena desde el 2 de agosto de 2026, el etiquetado chino) se cumplen **dentro del LMS que el cliente ya tiene**, no en una app nueva. La capa LTI es por donde entra el cumplimiento.
+
+### 🔴 El límite de este pase, declarado y cuantificado
+
+La descarga **en lote** de payloads de cesión quedó **denegada por el clasificador de permisos de esta sesión** tras 12 mediciones. Consecuencia exacta: **12 cesiones leídas, 71 netas sin leer.** Los repos de la lista `lti` de arriba están **enumerados, no verificados** — se publican como denominador del próximo pase (acción **W**), no como recomendación. 🔵 `P413`/`P418`: `github.com` responde 403 a `curl` y 200 a WebFetch, así que la enumeración y la ★ sí son de primera mano; la **cesión** no.
+
+---
+
 ## 🟢 2026-10-05 — pase 123 (lectura `20:45Z`): las 4 consultas del encargo, y la primera cosecha en 31 barridos porque cambió el ANCLA
 
 ### 🔬 Denominador y canal, enumerados ANTES de escribir (`P287`/`P311`)
@@ -8274,7 +8321,7 @@ de cada repo el 2026-10-01:
 | Repo | Vertical | Licencia | Stars | Velocidad |
 |---|---|---|---|---|
 | https://github.com/K-Dense-AI/scientific-agent-skills | Ciencia | **MIT** ✅ | **47.200** | Lanzado en octubre de 2025; declara 160.000+ científicos usuarios |
-| https://github.com/virgiliojr94/book-to-skill | Genérico | **MIT** ✅ | **33.200** | **+6.300 ★ en 30 días** |
+| https://github.com/virgiliojr94/book-to-skill | Genérico | **MIT** ✅ | **33.200** (banda `K-2CIFRAS`, ±500, `P349`) | **+6.300 ★ en 30 días** — 🆕 `P424`: es una DIFERENCIA de lecturas, no una lectura, así que **no** lleva banda de `P349`; su cota es la **propagada** de dos lecturas `K-2CIFRAS` ⇒ **±1.000** |
 | https://github.com/GarethManning/education-agent-skills | **Educación** | CC BY-SA 4.0 ⚠️ | **815** | 149 commits, mantenimiento activo |
 | https://github.com/ZeKaiNie/universal-examprep-skill | **Educación** | **MIT** ✅ | **299** | — |
 

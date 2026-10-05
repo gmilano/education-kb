@@ -31,6 +31,49 @@ updated: 2026-10-05
 > **Pase 100 del 2026-10-04:** 🟢 **2 verticales nuevas, y las dos llenan el hueco que el pase 5 dejó ABIERTO en la capa de autograding de este archivo: una plataforma desplegada cuya licencia SÍ se pueda construir encima.** `Submitty/Submitty` (**BSD-3-Clause**, `LICENSE.md` 1.542 B, **titular organizacional** `Submitty`, 2014-2026 — RPI/RCOS) y `autolab/Autolab` (**Apache-2.0**, `LICENSE` 11.324 B — CMU). 🔴 **Por qué importa: la fila que este archivo tiene en esa capa desde el pase 5 es `Autograder.io`, de la Universidad de Michigan, con ~5.000 alumnos por semestre y la licencia marcada «no declarada» — y este pase la volvió a medir en 7 nombres de archivo y SIGUE sin ceder nada.** 🔵 **Así que la capa deja de tener un hueco: lo desplegado-y-no-usable ahora tiene dos alternativas desplegadas Y permisivas, con ~5.000 alumnos/semestre cada una en su institución.** 🟢 **Y `autolab/Autolab` trae una clase de indicio REGIONAL nueva para esta base: su `README` declara el DESPLIEGUE por sede —Pittsburgh, Silicon Valley, Qatar y Rwanda— o sea que una plataforma coloca DOS regiones (North America y EMEA) por huella de operación y no por domicilio del titular, que es lo que `P135` prohíbe inferir.** 🔴 **`P311`: el pase casi publica como alta a `INGInious/INGInious` y a `eecs-autograder/autograder.io`, las dos ya en ESTE archivo desde los pases 67 y 5; el gate nuevo las frenó antes de escribir** (`p311`, **11/11**, 14 slugs → 5 ya publicados). 🟢 **`lib/license_family.sh` 62/62 → 79/79; 51 suites pasan, 0 fallan.** Ver **`P308`**–**`P311`**.
 > **Pase 97 del 2026-10-04:** 🟢 **Sin filas nuevas, y a propósito: las seis plataformas Java/Maven que este pase midió YA están todas en este archivo. Lo que entra es el VEREDICTO DE LICENCIA de cada una leído por un segundo canal independiente —la declaración del `pom.xml`— y la capa Java/Maven de esta vertical era justo la que el barrido de esta base no podía leer** (**P294**).
 
+## 🟢 Pase 124 del 2026-10-05 (lectura `21:46Z`) — aparece la capa SIS, y por primera vez con una opción permisiva
+
+### 🟢 Plataformas verticales nuevas, con la cesión LEÍDA DEL PAYLOAD
+
+| plataforma | cesión (familia · bytes · `sha256`) | ★ (`21:46Z`) | capa | qué es, y para qué sirve en un *engagement* |
+|---|---|---|---|---|
+| **academico** | 🟢 **MIT** · `main/LICENSE` **1.094 B** · `sha256:6051a15f4d44` | 403 ★ (banda `EXACTO`, ±0; 2026-10-05) | **SIS** | gestión escolar en **Laravel + Filament** para instituciones chicas y medianas. 🟢 **El hallazgo de la capa: es el primer SIS PERMISIVO de este archivo** |
+| **Shiori** | 🟢 **MIT** · `main/LICENSE.txt` **1.072 B** · `sha256:03d351572510` | 8 ★ (banda `EXACTO`, ±0; 2026-10-05) | **SIS** | SIS liviano y moderno. Pre-tracción, y entra por la misma razón: opción permisiva en una capa que no la tenía |
+| **eCourse** | 🟢 **MIT** · `main/LICENSE` **1.062 B** · `sha256:5d6ba721365c` | 519 ★ (banda `EXACTO`, ±0; 2026-10-05) | **LMS liviano** | SPA auto-hospedada de creación y gestión de cursos: un piloto sin el peso ni el copyleft de Moodle |
+| **geli** | 🟢 **Apache-2.0** · `master/LICENSE` **11.358 B** · `sha256:cfc7749b96f6` | 157 ★ (banda `EXACTO`, ±0; 2026-10-05) | **LMS** | plataforma e-learning completa |
+| **Flat** | 🟢 **MIT** · `main/LICENSE` **1.062 B** · `sha256:8fa1566550df` | 6.400 ★ (banda `K-3CIFRAS`, ±50) | **aula sincrónica** | pizarra, grabación, clientes Web/Windows/macOS, sobre Agora |
+| **OpenVidu** | 🟢 **Apache-2.0** prístino · `master/LICENSE` **11.357 B** · `sha256:b40930bbcf80` | 2.100 ★ (banda `K-3CIFRAS`, ±50) | **sustrato de tiempo real** | WebRTC auto-hospedado sobre LiveKit y mediasoup |
+
+### 🟢 El hallazgo de capa: el SIS deja de ser una capa sólo copyleft/no-OSI
+
+Hasta este pase, la capa de **Student Information System** de este archivo tenía esta forma:
+
+| pieza | cesión | consecuencia para una entrega |
+|---|---|---|
+| `francoisjacquet/rosariosis` | GPL | copyleft |
+| `OS4ED/openSIS-Classic` (345 ★) | 🔴 **sin archivo de cesión**, y se presenta como *«commercial grade»* | inusable (`P412`) |
+| `canyongbs/advisingapp` (338 ★, pase 123) | 🔴 **Elastic License 2.0** | *«no hosted or managed service»* ⇒ prohíbe la forma en que una consultora entrega |
+| `yukazakiri/koakademy` (7 ★, este pase) | ⚠️ **AGPL-3.0**, 34.523 B | uso en red = distribución |
+| 🟢 **`academico-sis/academico`** (403 ★, este pase) | 🟢 **MIT**, 1.094 B | **se puede customizar y entregar sin obligación recíproca** |
+
+🔵 **Por qué importa más que el conteo.** El SIS es el sistema de registro del alumno: donde viven matrícula, notas, asistencia y los datos personales que las obligaciones de `intel/market.md` gobiernan. Un *engagement* que necesita tocar esa capa —y casi todos la tocan— tenía hasta hoy tres caminos malos: heredar copyleft, firmar con una licencia que prohíbe el servicio gestionado, o construir de cero. **`academico` es el primer cuarto camino que este archivo puede nombrar con la cesión leída del payload.** Su pila (Laravel + Filament) además es la misma de buena parte de la capa PHP de LTI, así que el adaptador no es un puente entre mundos.
+
+⚠️ **Y la cláusula que acota el entusiasmo:** 403 ★ en banda `EXACTO` es tracción real pero chica, y este archivo no midió su cobertura funcional contra `rosariosis` ni contra un SIS comercial. Lo que se afirma es la **cesión**, que es lo que gobierna la decisión; la paridad funcional queda **NO MEDIDA** (`P286`) y no se infiere del ★.
+
+### ⚠️ Las plataformas que aparecieron y no se pueden entregar, con la cláusula al lado
+
+| plataforma | ★ | cesión medida | la cláusula que decide |
+|---|---|---|---|
+| `xiaochong0302/course-tencent-cloud` — 在线教育平台 | 1.200 ★ | ⚠️ **GPL-2.0**, 18.431 B | copyleft, sin cláusula de patentes. 🆕 La compuerta de este estante la llamó `LGPL` y se equivocó: `P419` |
+| `yuanjiusheng/cloud-learning-ce` — 云学习系统 | 126 ★ | 🔴 **NO-OSI**, 4.117 B, `sha256:3636529e0c67` | EULA propietario **en chino**: `版权所有 … 保留所有权利` (*todos los derechos reservados*). `P421` |
+| `ahmedEid1/lumen` — plataforma AI de educación con tutoría RAG | 88 ★ | ⚠️ **GPL-3.0**, 35.149 B | 🔴 **el único candidato con forma de AGENTE de las 83 netas, y es copyleft** |
+
+🔵 **Es la tercera vez que este archivo mide lo mismo y ya no es anécdota: en educación, la pieza más cercana al dato del alumno llega bajo copyleft o bajo licencia *source-available*.** El pase 123 lo midió en los plugins de Moodle (herencia por *placement*) y en `advisingapp`/`leemons`; este pase lo mide en el SIS y en la única plataforma con AI de las páginas nuevas. La diferencia de este pase es que **por fin hay una excepción medida** (`academico`), y una excepción cambia el diseño de una propuesta: ya no hay que elegir entre heredar AGPL o construir de cero.
+
+🔴 **Límite del pase:** la descarga **en lote** de payloads quedó **denegada** por el clasificador de permisos de esta sesión tras 12 mediciones ⇒ **71 de las 83 netas sin cesión leída**, entre ellas 13 plugins de Moodle y 9 piezas LTI que quedan enumeradas como denominador de las acciones **W** y **V′**, no como recomendación.
+
+---
+
 ## 🟢 Pase 123 del 2026-10-05 (lectura `20:45Z`) — se rompe la racha de 7 ceros: 11 plataformas verticales nuevas, y la frontera del copyleft resulta ARQUITECTÓNICA
 
 ### 🔴 Por qué este archivo venía en cero, medido
@@ -4151,11 +4194,11 @@ plataforma de esta capa con más despliegue, licencia permisiva declarada y **ru
 
 | Plataforma | Licencia | URL | Stack | Cobertura | Nota |
 |---|---|---|---|---|---|
-| **JupyterHub** | **BSD-3-Clause** ✅ | https://github.com/jupyterhub/jupyterhub | Python | Entorno de cómputo aislado **por alumno**, en el navegador, para una cohorte entera | **8.300 ★.** Es la plataforma sobre la que se monta todo lo demás de esta fila |
-| **nbgrader** | **BSD-3-Clause** ✅ | https://github.com/jupyter/nbgrader | Python | Asignación, recolección, **autocorrección**, tramos de corrección **manual** y **tests ocultos**, con consolidación de notas | **1.400 ★. v0.9.6 del 2026-09-30.** Implementado desde 2014 en **UC Berkeley, Cal Poly, Universidad de Edimburgo** y **Aalto** |
+| **JupyterHub** | **BSD-3-Clause** ✅ | https://github.com/jupyterhub/jupyterhub | Python | Entorno de cómputo aislado **por alumno**, en el navegador, para una cohorte entera | **8.300 ★** (banda `K-3CIFRAS`, ±50, `P349`; acción S del pase 124)**.** Es la plataforma sobre la que se monta todo lo demás de esta fila |
+| **nbgrader** | **BSD-3-Clause** ✅ | https://github.com/jupyter/nbgrader | Python | Asignación, recolección, **autocorrección**, tramos de corrección **manual** y **tests ocultos**, con consolidación de notas | **1.400 ★** (banda `K-3CIFRAS`, ±50, `P349`; acción S del pase 124)**. v0.9.6 del 2026-09-30.** Implementado desde 2014 en **UC Berkeley, Cal Poly, Universidad de Edimburgo** y **Aalto** |
 | **otter-grader** | **BSD-3-Clause** ✅ | https://github.com/ucbds-infra/otter-grader | Python | Autocorrección de scripts Python y notebooks, con salida hacia varios LMS | **161 ★**, del **Data Science Education Program de UC Berkeley**. La opción cuando **no** se va a correr JupyterHub |
 | **ltiauthenticator** | **BSD-3-Clause** ✅ | https://github.com/jupyterhub/ltiauthenticator | Python | **LTI 1.3 y LTI 1.1** | **73 ★.** Declara estar probado contra **Open edX, Canvas y Moodle** — las tres plataformas de la tabla de arriba de este archivo |
-| **jupyter-ai** | **BSD-3-Clause** ✅ | https://github.com/jupyterlab/jupyter-ai | Python/TS | **La capa AI, y no hay que construirla** | **4.400 ★.** ACP + servidores MCP propios; autodetecta Claude, Codex, Copilot, Gemini, Goose, Kiro, Mistral Vibe y OpenCode |
+| **jupyter-ai** | **BSD-3-Clause** ✅ | https://github.com/jupyterlab/jupyter-ai | Python/TS | **La capa AI, y no hay que construirla** | **4.400 ★** (banda `K-3CIFRAS`, ±50, `P349`; acción S del pase 124)**.** ACP + servidores MCP propios; autodetecta Claude, Codex, Copilot, Gemini, Goose, Kiro, Mistral Vibe y OpenCode |
 
 **Por qué esto cambia la propuesta de esta capa.** El pase 5 dejó escrito que el ángulo AI correcto era «explicación y
 feedback formativo sobre tests que ya corrieron». **Ese ángulo sigue siendo el correcto, y ahora el lugar donde
