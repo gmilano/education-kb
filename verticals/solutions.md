@@ -9,6 +9,7 @@ updated: 2026-10-05
 > Plataformas verticales reales, en producción, customizables con AI.
 > Modelo: partir de algo que ya funciona y que ya tiene los datos, y agregar la capa agéntica arriba.
 > Verificado vía WebFetch el 2026-09-30; las capas del pase 11, el 2026-10-01.
+> **Pase 110 del 2026-10-05:** 🔴 **0 verticales nuevas (vigesimonoveno barrido): el canal devuelve OpenEduCat, Open edX, Moodle, Chamilo, OpenOLAT, Fedena, ERPNext/Frappe Education — las SIETE ya publicadas.** 🆕 **`P347` — y el aporte del pase es un espécimen de la clase que el pase 109 habia escrito como rama de refutacion sin encontrarla: «un archivo de licencia puede EXISTIR y no contener licencia». `frappe/education`, repo citado 106 veces por esta base, trae `license.txt` de **19 BYTES** cuyo contenido completo es `License: GNU GPL V3` (sin salto final), con el texto de la GPL en **404 en 5 rutas mas**; `frappe/erpnext`, MISMA organizacion y MISMO nombre de archivo, trae **35.149 B** con el texto entero.** 🔵 **Asi que la pregunta de compra cambia de «¿esta licenciado?» a «¿la licencia tiene TEXTO?», y para una redistribucion la consecuencia es concreta: el obligado a acompañar el texto de la GPL pasa a ser QUIEN ENTREGA, porque el upstream no lo incluye.** ⚠️ **Y un hueco INFORMADO: «SchoolTool» aparece en el barrido como SIS open source y NO tiene repositorio alcanzable — `schooltool/schooltool` y `SchoolTool/schooltool` dan 404 — asi que no entra como fila; se registra como ausencia medida y no como plataforma.**
 > **Pase 109 del 2026-10-05:** 🔴 **0 verticales nuevas (vigesimoctavo barrido): las SEIS plataformas devueltas —OpenEduCat sobre Odoo, Open edX via Axim Collaborative, Moodle, Chamilo, OpenOLAT (Apache-2.0) y Fedena (Apache-2.0)— estan las seis ya en este estante.** 🟢 **Unica cifra nueva, y entra como escala y no como alta: Open edX declara 140 M+ de alumnos.** 🟢 **La cesion de dos piezas se re-midio del payload y confirma lo publicado digito a digito: Gibbon GPL-3.0 (35.121 B, `93178a43d6d3`) y OpenEduCat (8.241 B, `528f84036800`) ⇒ la AI sigue yendo ENCIMA y por API, en proceso separado.** ⚠️ **`P343`: en este pase un extractor con prefijo GOLOSO y sin frontera izquierda en la captura leyo `35.121` como `5.121` y la huella fue lo unico que lo detecto — una cifra de bytes publicada SIN huella no es verificable.**
 > **Pase 107 del 2026-10-05:** 🔴 **0 altas (el barrido devuelve por vigesimoseptima vez el conjunto ya publicado, y cinco de nueve resultados son el glosario de OpenEduCat en cinco idiomas).** 🔴 **Rechazo nuevo, medido por FRESCURA y no por licencia: `CK-ERP` — 32 modulos con capa educativa completa (Teacher, Counsellor, Student, Applicant, Family, Registrar, Edu Administration) y el unico anuncio que el canal devuelve es de 2010.** 🔴 **El eje que este estante gana le cambia la cuenta a cualquier fila que se entregue con contenido OER: la capa de contenido trae BINARIOS sin cesion propia — 2.443 archivos de figura (~156 MiB, 1.326 imagenes distintas), extension `.gif` falsa en 2.443 de 2.443 (`P332`), y 825 colgando de un item que declara mas permiso del que su edicion otorga.** 🟢 **La pieza que lo resuelve por diseno es [`oer/emacs-reveal`](https://gitlab.com/oer/emacs-reveal) (EMEA): se copia el MODELO DE DATOS, no el binario — cede por archivo bajo REUSE (`GPL-3.0-or-later` + `CC BY-SA 4.0`).**
 > **Pase 106 del 2026-10-05:** 🔴 **0 altas (el canal devuelve el mismo conjunto que este estante ya publica, y confirma por fuente secundaria Moodle +400 M usuarios / ~150.000 sitios y Open edX +140 M alumnos / 196 paises bajo Axim).** 🔴 **El eje NUEVO cambia como se cotiza cualquier fila: la cesion del CONTENIDO es propiedad del par (coleccion, **ref**), no del repo — 10 de 10 colecciones estrechan de `CC BY 4.0` a `NC-SA` entre ediciones, y 20 de 22 colecciones vivas son `NC-SA`.** ⚠️ **Plataforma y contenido son licencias INDEPENDIENTES y la segunda es la que bloquea: Open edX se customiza cerrada bajo Apache-2.0 y el curso que corre adentro no se puede vender.** 🔴 **Y aparece una tercera capa que ninguna fila tenia: 6.886 unidades `oer: openai` (4.455 hints + 2.418 scaffolds) sin cesion, bajo un README que cede «ALL content under CC BY 4.0» en un arbol con 0 archivos de licencia.** 🟢 **Camino comercial medido: Open edX + `osbooks-physics` o `osbooks-statistics` (las 2 unicas `CC BY 4.0` de 22) + andamiaje propio.**
@@ -167,6 +168,97 @@ updated: 2026-10-05
 > **`qti3-pnp`**, que abren accesibilidad de evaluación como entregable auditable (**P72**). ⚠️ **Open edX cambia de
 > recomendación: proponer con presupuesto de mantenimiento (gap 70).** Ver la sección del pase 33, abajo.
 
+
+## 🔴 Verticales nuevas: 0 — vigesimonoveno barrido con el conjunto ya publicado, y el aporte es `P347`: un archivo de licencia que EXISTE y no contiene licencia (pase 110 del 2026-10-05)
+
+🔴 **0 altas.** El barrido (`open source platform education ERP CRM student information system MIT
+Apache`, año **CALCULADO** → **2026**) devolvio las **siete** plataformas que este estante ya
+publica: **OpenEduCat** (sobre Odoo), **Open edX**, **Moodle**, **Chamilo**, **OpenOLAT**,
+**Fedena** y **ERPNext / Frappe Education**. 🔵 **Dato de escala que entra sin ser alta:**
+OpenEduCat declara **73+ modulos integrados** sobre una sola plataforma (academico, servicios al
+estudiante, finanzas, operaciones), y Frappe empaqueta su modulo de educacion **con un LMS
+incluido**.
+
+### 🆕 `P347` — un archivo de licencia puede EXISTIR y no contener una licencia
+
+🔵 **El pase 109 escribio esta clase como rama de refutacion de su propia accion A** — *«que lo
+hagan ≥6 de 13, y entonces la pregunta de compra cambia de "esta licenciado" a "la licencia tiene
+TEXTO"»*. **La rama no disparo sobre los 13; el espécimen aparecio en este estante.**
+
+| repo | ruta | bytes | contenido | texto de la licencia |
+|---|---|---|---|---|
+| [`frappe/education`](https://github.com/frappe/education) | `master/license.txt` | 🔴 **19** | `License: GNU GPL V3` — **eso es todo**, sin salto final (`sha256 1fcecf395312`) | 🔴 **404 en `LICENSE`, `COPYING`, `LICENSE.txt`, `LICENSE.md`, `gpl-3.0.txt`** |
+| [`frappe/erpnext`](https://github.com/frappe/erpnext) | `develop/license.txt` | 🟢 **35.149** | el texto completo de la GPL-3.0 | 🟢 presente |
+
+🔴 **Misma organizacion, mismo nombre de archivo, dos cosas completamente distintas.** Un barrido
+que cuente *«¿existe un archivo de licencia?»* marca **ambos** como cedidos. Un barrido que lea el
+**payload** y **mida su tamaño** separa los dos casos. 🔵 **Es el eje que le faltaba a la cadena
+`P114`/`P279`/`P340`/`P342`:**
+
+| proposicion | que falla | como se detecta |
+|---|---|---|
+| `P340` | la **ortografia** del nombre (`LICENCE`, `LICENSE.TXT`) | ampliar la lista de nombres |
+| `P342` | la afirmacion esta en un **badge o arbol** y el archivo no existe | resolver la ruta afirmada |
+| `P314` | la afirmacion esta en la **prosa** del README | pedir el texto por escrito |
+| 🆕 **`P347`** | el **archivo existe y no trae el texto** | **medir los BYTES del payload** |
+
+⚠️ **Y `P347` es el mas peligroso de los cuatro, porque es el unico que pasa todos los controles
+anteriores:** la ruta canonica responde **200**, el nombre esta bien escrito, hay un identificador
+de familia legible y el clasificador de familia **acierta** (`GPL-3.0`). **Nada en la cadena de
+este arbol se dispara. Solo el tamaño lo delata.**
+
+### 🔵 La consecuencia para una entrega, que es lo que vale
+
+🔴 **`frappe/education` SI esta licenciado: la declaracion del titular es valida y la familia es
+GPL-3.0.** Lo que falta no es la cesion, es **el texto que la propia GPL obliga a acompañar**. Para
+una redistribucion de Globant eso se traduce en una regla y no en una advertencia:
+
+1. 🟢 **Se puede usar y redistribuir** — la cesion existe y es GPL-3.0.
+2. 🔴 **El obligado a incluir el texto completo de la GPL-3.0 en la entrega pasa a ser QUIEN
+   ENTREGA**, porque el upstream no lo trae. Copiar el repo tal cual **no** cumple.
+3. 🔸 **La version de la GPL hay que fijarla por escrito.** `«GNU GPL V3»` en 19 bytes no distingue
+   `GPL-3.0-only` de `GPL-3.0-or-later`, y la diferencia decide si un derivado puede migrar a una
+   version futura. 🔵 **Con el texto presente se lee de la cabecera; sin texto, es una pregunta
+   abierta al titular.**
+4. 🔴 **Y lo que NO cambia: sigue siendo copyleft.** El modulo de educacion de Frappe no es un punto
+   de partida para un derivado cerrado, con texto o sin texto.
+
+### ⚠️ Un hueco INFORMADO: «SchoolTool» no tiene repositorio alcanzable
+
+El barrido devolvio **SchoolTool** descrito como SIS open source (demografia, libro de
+calificaciones, seguimiento de competencias, asistencia, calendario, en Python). 🔴 **No entra como
+fila, porque no se pudo verificar un repositorio:**
+
+| slug probado | `master/README.md` |
+|---|---|
+| `schooltool/schooltool` | 🔴 **404** |
+| `SchoolTool/schooltool` | 🔴 **404** |
+
+🔵 **Se registra como ausencia MEDIDA y no como plataforma**, con los slugs que se probaron escritos
+para que el proximo pase no repita el mismo intento. ⚠️ **Es la distincion que `P306` instalo:
+«no verificado bajo ESE nombre» no es «inexistente»** — SchoolTool puede existir en otro alojamiento
+o bajo otro slug, y la via que queda es el registro de paquetes de Python, no GitHub.
+
+### 🟢 El conjunto de partida de este estante, con la cesion que se le conoce
+
+| plataforma | capa | cesion |
+|---|---|---|
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | ERP educativo sobre Odoo, **73+ modulos** | LGPL-3.0 (payload 8.241 B, `sha 528f84036800`) |
+| [`frappe/erpnext`](https://github.com/frappe/erpnext) | ERP con modulo de educacion + LMS | 🟢 **GPL-3.0 con texto completo** (35.149 B) |
+| [`frappe/education`](https://github.com/frappe/education) | modulo de educacion de Frappe | 🔴 **GPL-3.0 declarada en 19 B, SIN texto** (`P347`) |
+| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | LMS, **140 M+** alumnos declarados | AGPL-3.0 |
+| [`moodle/moodle`](https://github.com/moodle/moodle) | el LMS mas instalado | GPL-3.0 |
+| [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | LMS | GPL-3.0 |
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | LMS | Apache-2.0 |
+| Fedena | SIS/ERP escolar | Apache-2.0 |
+
+🔵 **La lectura de estante que este pase refuerza: la capa de plataforma educativa es COPYLEFT casi
+entera.** Las dos permisivas (OpenOLAT, Fedena) son las unicas sobre las que se construye un
+derivado cerrado; el resto se compone **al lado** —agente que habla con la plataforma por su API—
+y no **adentro**. 🔴 **Y `P347` agrega que ni siquiera basta con leer la familia: hay que verificar
+que el texto que la familia exige acompañar este realmente ahi.**
+
+---
 
 ## 🔴 Verticales nuevas: 0 — vigesimoctavo barrido que devuelve el conjunto ya publicado, y lo que el pase aporta es la CESION re-medida y una cifra de escala (pase 109 del 2026-10-05)
 

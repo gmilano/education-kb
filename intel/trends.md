@@ -7,6 +7,7 @@ updated: 2026-10-05
 # 📡 Tendencias — education
 
 > Ventana de investigación: septiembre 2026. Verificado 2026-09-30; el pase 11, el 2026-10-01.
+> **Pase 110 del 2026-10-05:** 🟢 **Tendencias 883–890.** 🔴 **`P344` — una pre-registracion puede construir su denominador CONTRA su propia hipotesis: 0 de 13 afirman cesion, y las 6 que SI lo hacen estaban en las 9 filas que la pre-registracion excluyo.** 🟢 **`P320` en su forma mas filosa: el canal es propiedad del par (herramienta, destino) — `WebFetch` sirve `github.com` donde `curl` da 403, asi que las ESTRELLAS vuelven, con resolucion de 3 cifras significativas y dos cifras del catalogo refutadas.** 🟢 **`P337` CERRADO: el corte converge a 1.611/832 y las 41 de diferencia son un DOMINIO DESNUDO — nunca fue una contradiccion, era un predicado no dicho.** 🔴 **`P346` — y lo que cierra es que la pregunta no decidia nada: entregable sin gestion son 1.418 de 2.443 (58,0 %), con 368 figuras OPENSTAX que no ceden NADA y 175 NO-OPENSTAX con CC BY 4.0 impecable.** 🆕 **`P347` — un archivo de licencia puede EXISTIR y no contener licencia: `frappe/education` cede «GNU GPL V3» en 19 BYTES.** 🟢 **Barrido regional 39: 4/4 regiones, 0 silencios, y la racha del calendario superado del AI Act sigue cortada por segundo pase.**
 > **Pase 109 del 2026-10-05:** 🟢 **Tendencias 875–882.** 🔴 **La racha de OCHO pases del calendario superado del AI Act se corta, y la condicionalidad del diferimiento corre al REVES: `2027-12-02` es un LIMITE EXTERIOR adelantable a 6 meses de aviso, no una fecha garantizada (tendencias 875–877).** 🔴 **`P342` — un badge de licencia y una entrada de arbol del README son una afirmacion de cesion, no una cesion, y esta base tenia el falso negativo publicado dos veces (tendencia 878).** 🔴 **`P343` — un prefijo GOLOSO sin frontera izquierda le roba los digitos de orden superior a un numero capturado (`35.121` → `5.121`), POSIX ERE no tiene con que frenarlo (ni cuantificadores perezosos ni *lookbehind*), y la huella es el UNICO campo que lo detecta; el primer diagnostico de este pase culpo a la causa equivocada y la refuto su propia suite (tendencia 879).** 🟢 **`P333` cerrado por ausencia medida: 5 de 5 huellas del archivo completo, 0 de 5 del archivo sin su ultimo byte (tendencia 880).** 🔴 **Saturacion del eje de agentes educativos medida: 5 devueltas, 5 publicadas, 0 nuevas (tendencia 881), y el canal de estrellas degradado a 403 (tendencia 882).**
 > **Pase 107 del 2026-10-05:** 🟢 **Tendencias 859–866.** 🔴 **`P332` — la EXTENSION de un archivo de imagen no es su FORMATO: 2.443 de 2.443 `.gif` de un corpus OER son PNG/JPEG/WEBP, y un barrido por extension entre dos arboles da «0 solapamiento» con varianza cero desde una premisa falsa (por `sha256` da 36).** 🔴 **`P334` — el titular de una FIGURA se resuelve por BYTES y vive en una obra DISTINTA de la que el item cita: los 36 pares citan `introductory-statistics` y sus bytes se publican en `osbooks-statistics`.** 🟢 **La herencia implicita de cesion EXISTE y es de 9.971 unidades (76,7 %), con la accion pre-registrada CONFIRMADA — y en 3.876 el padre tampoco declara nada.** 🔴 **`P333` — una huella tomada por sustitucion de comando no es la huella del archivo: `fa4e32e5e622` era el archivo MENOS su salto final.** 🔴 **`P335` — tercera sub-clase de `P320`: lo denegado fue la FORMA (lote) y no el derecho (pieza nombrada).** 🟢 **Barrido regional 36: las cuatro regiones tienen resuelto el dinero o la adopcion y NINGUNA la procedencia del activo.**
 > **Pase 106 del 2026-10-05:** 🟢 **Tendencias 851–858. Las tres acciones pre-registradas por el pase 105 se corrieron las tres: A CONFIRMADA, B FALSIFICADA, C CONFIRMADA.** 🔴 **La que manda es `P328`: la cesion de un OER se ESTRECHA entre ediciones, y la identidad que lo revela es el `collection-id`, no el slug — 10 de 10 colecciones del titular pasan de `CC BY 4.0` en `1e` a `CC BY-NC-SA 4.0` en `main`, cero contraejemplos; solo 2 de 22 colecciones vivas siguen permisivas.** 🟢 **La accion A resuelve las 1.748 que el pase 105 dejo SIN RESOLVER: las dos 1e declaran `CC BY 4.0` (dos lecturas concordantes del titular, control negativo 404), asi que los 1.732 items quedan CORRECTOS, el 62,2 % NO sube, y la lectura pasa a «el redistribuidor congelo una cesion que el titular estrecho».** 🔴 **La accion B falsifica su propia prediccion y cambia el DENOMINADOR: 17.665 de 18.054 JSON de `tutoring/` traen `license` propio ⇒ **82.492** unidades de cesion, no 13.371 — los porcentajes del pase 105 eran sobre el 16,2 % de la poblacion (las 8.312 contradicciones se replican exactas).** 🔴 **Hallazgo nuevo: 6.886 unidades declaran `oer: openai` con la cesion VACIA en 6.883 — contenido instruccional sintetico, auto-declarado, sin marca ni cesion, y cruza con los instrumentos de AI Act 50(2) que median 0 artefactos de marcado.** ⚠️ **`P329`, contra el arreglo de `P327`: una huella normalizada es identidad de TEXTO y no de FAMILIA (6 payloads `CC BY 4.0` dan 2 huellas).** 🔴 **Y dos correcciones propias: mi barrido v1 capturaba con `text=True` y normalizaba los CRLF ANTES de hashear (21.013 vs 21.442 B = las 429 terminaciones), y el `books.tsv` del pase 105 asigna la 2e a un curso cuyas 1.700 unidades citan la 1e.** 🟢 **Tablero re-verificado: 58 suites, 0 fallos (`Python 3.11.15`).** Ver **851**–**858**.
@@ -121,6 +122,154 @@ updated: 2026-10-05
 > (tendencia 29), se abre el **gap 20** y se registran dos advertencias de verificación: los agregadores de estrellas
 > están mal por ~2× y **un 403 de `curl` no es un 404**. Ver la nota de método del pase 12.
 > **Pase 11:** el Digital Omnibus es derecho vigente (tendencia 25), aparece la capa predictiva y está vacía (tendencia 26), y se corrige un error de método de diez pasadas sobre licencias permisivas (tendencia 27).
+
+## 🟢 Tendencias 883–890 — pase 110 del 2026-10-05: un denominador construido contra su hipotesis, el canal que es propiedad de la herramienta, `P337` cerrado por un dominio desnudo, y una licencia de 19 bytes
+
+### 883 · 🔴 Una pre-registracion puede construir su denominador CONTRA su propia hipotesis (`P344`)
+
+La accion A del pase 109 pedia: *de los **13** «sin licencia», ¿cuantos afirman cesion por badge o
+arbol sin archivo que la respalde?* Prediccion **≥2**. **Medido: 0 de 13.**
+
+🔴 **Pero los 13 son las filas `SILENT-3-LAYERS` del pase 66, y el pase 66 ya habia apartado con
+otras etiquetas —`README-BADGE`, `README-PROMISE-BROKEN`, `README-IDENTIFIER`,
+`README-CONTRADICTION`— exactamente a los repos que afirman.** Medido sobre las **9 excluidas**:
+**6 de 9** son `P342`.
+
+🔵 **Las dos ramas de refutacion de la misma pre-registracion disparan a la vez, sobre
+denominadores distintos** — y eso solo puede pasar si el denominador esta mal elegido. **La
+tendencia de metodo: una prediccion falsable tiene que declarar como se CONSTRUYO su denominador,
+no solo su tamaño.** Un denominador formado restando la clase que la hipotesis predice devuelve un
+cero que mide la resta, no el mundo.
+
+### 884 · 🔴 Para leer una AFIRMACION, el payload tiene MENOS recall que la pagina renderizada
+
+El instrumento de la accion A era de sintaxis Markdown y publico «silencio» sobre dos repos que el
+pase 66 habia visto bien. **El pase 66 tenia razon:** `NLP2CT/LLM-generated-Text-Detection` y
+`RadiantCrystal/SafeTutors` afirman MIT con **`<img src="…shields.io/badge/License-MIT…">`**, en
+HTML, no en Markdown; y `licensed under the **MIT License**` se perdia porque la clase de
+caracteres excluia el asterisco.
+
+🔵 **La tendencia es de eleccion de canal, y corre al reves de la regla de este arbol:** para leer
+una **cesion**, el payload le gana a la pagina. Para leer una **AFIRMACION de cesion**, la pagina
+le gana al payload — **porque la afirmacion vive en la presentacion.** Son dos preguntas distintas
+y quieren canales distintos. 🔴 **Un arbol que use un solo canal para las dos publica falsos
+negativos en una de ellas, y este arbol los publico en la segunda.**
+
+### 885 · 🟢 El canal es propiedad del par (herramienta, destino), no del dominio (`P320`)
+
+| destino | `curl` | `WebFetch` |
+|---|---|---|
+| `github.com/<repo>` | 🔴 **403** | 🟢 **200**, con estrellas, forks y licencia |
+| `github.com/<repo-inventado>` | 🔴 403 | 🟢 **404** ⇒ discrimina |
+
+🔴 **El pase 109 publico *«`github.com` degradado a 403 ⇒ 0 estrellas medidas»*: un enunciado sobre
+`curl`, publicado como enunciado sobre el DOMINIO.** 🔵 **La regla operativa que deja: un canal se
+declara muerto NOMBRANDO la herramienta con la que se probo, o no se declara.**
+
+🔵 **Y hay un motivo estructural, medido y no supuesto, por el que `curl` no las va a devolver:** el
+protocolo git sirve `commit`, `tree`, `blob` y `tag` — sobre `CAHLR/OATutor` enumera **3.944
+commits y 461.860 trees, y ningun objeto de la capa social**. **Las estrellas no son una propiedad
+del repositorio: son de la plataforma que lo aloja.**
+
+### 886 · ⚠️ Una cifra recuperada trae su RESOLUCION, y la resolucion es parte del dato
+
+`github.com` renderiza **«40,8k»**, no `40.823`: **3 cifras significativas.** 🔴 **Asi que las
+estrellas vuelven como MAGNITUD con canal nombrado, y los enteros exactos que esta base publicaba
+(«385.407 ★») no son reproducibles en este entorno.** 🔵 **Una cifra exacta de estrellas en este
+arbol es, a partir de este pase, una cifra sin canal** — y lo que corresponde no es borrarla sino
+marcarla con el instrumento que la produjo.
+
+🔴 **Y al volver, el canal cobra de inmediato:** `CAHLR/OATutor` tiene **264 ★** contra «~1,3k/~1,5k»
+publicado (**inflado ~5–6×**), y `Open-TutorAi/open-tutor-ai-CE` es **BSD-3-Clause con 108 ★**
+contra «Apache-2.0, ~600 ★» — **mal la licencia y mal el numero.** ⚠️ **La licencia es la que
+cuesta: Apache-2.0 concede patentes de forma explicita y BSD-3-Clause no.**
+
+### 887 · 🟢 `P337` CERRADO — y nunca fue una contradiccion, era un predicado no dicho
+
+Sobre el **mismo sha** (`1925dec…`) que los dos artefactos del pase 108 disputaban, el corte
+converge a **`OPENSTAX 1611` / `NO-OPENSTAX 832`**, como la pre-registracion predijo. **Y el
+mecanismo es un numero:**
+
+| forma de `oer` | figuras |
+|---|---|
+| `details-books` + `books-pages` | **1.570** ← el artefacto «menor» |
+| 🆕 `openstax-otro` — **dominio desnudo** (`https://openstax.org/`) | **41** |
+| **total** | **1.611** ← el artefacto «mayor» |
+
+🔵 **1.611 − 1.570 = 41, al uno. Los dos artefactos estaban aritmeticamente BIEN y contestaban
+preguntas distintas** — *«¿cuantas invocan a OpenStax?»* contra *«¿cuantas tienen procedencia
+OpenStax RESOLUBLE?»*. **La tendencia de metodo: antes de declarar que dos mediciones se
+contradicen, hay que verificar que compartan el PREDICADO. Tres pases trataron como contradiccion
+lo que era una ambigüedad de enunciado.**
+
+⚠️ **Y el denominador que la pre-registracion traia estaba mal: las unidades son 13.371, no
+12.999.**
+
+### 888 · 🔴 `P346` — la precision sobre una pregunta que no decide nada es GASTO
+
+Tres pases afinaron 1.611 contra 1.570. Medido el campo `license` de las mismas 2.443 figuras:
+
+| clase de cesion | figuras | % |
+|---|---|---|
+| 🟢 `RESOLUBLE` (`CC BY 4.0`) | **1.418** | **58,0 %** |
+| 🔴 `AUSENTE` | 586 | 24,0 % |
+| 🔴 `NO-ES-CESION` — una URL a un **PDF de EXAMEN** en el campo `license` | 293 | 12,0 % |
+| 🔸 `VERSION-SIN-VARIANTE` — `«CC4.0»`, y la 4.0 son **SEIS** licencias, **TRES** NonCommercial | 146 | 6,0 % |
+
+🔴 **El cruce es lo que mata al corte como proxy de licencia: 368 figuras estan del lado OPENSTAX y
+no ceden NADA, y 175 del lado NO-OPENSTAX ceden `CC BY 4.0` impecable.** 🔵 **Procedencia y cesion
+son ejes INDEPENDIENTES, medido en las dos direcciones.**
+
+⚠️ **La tendencia, y es la mas cara de este expediente: antes de medir con precision hay que
+preguntar que DECISION cambia con el resultado. Si la respuesta es «ninguna», la precision es
+gasto** — y aca el numero que decide un presupuesto (**1.418**) no era ninguno de los dos que se
+discutian.
+
+### 889 · 🆕 `P347` — un archivo de licencia puede EXISTIR y no contener una licencia
+
+| repo | ruta | bytes | que trae |
+|---|---|---|---|
+| `frappe/education` | `master/license.txt` | 🔴 **19** | `License: GNU GPL V3`, sin salto final — **y nada mas** |
+| `frappe/erpnext` | `develop/license.txt` | 🟢 **35.149** | el texto completo de la GPL-3.0 |
+
+🔴 **Misma organizacion, mismo nombre de archivo, dos cosas distintas** — y el texto de la GPL da
+**404 en 5 rutas mas** del primero. 🔵 **`P347` es el mas peligroso de la cadena
+`P340`/`P342`/`P314` porque es el unico que PASA todos los controles anteriores:** la ruta canonica
+responde 200, el nombre esta bien escrito, hay identificador de familia y el clasificador acierta.
+**Solo el TAMAÑO lo delata.**
+
+⚠️ **Consecuencia de entrega: la pieza SI esta licenciada, pero el obligado a acompañar el texto
+que la GPL exige pasa a ser QUIEN ENTREGA.** Y `«GNU GPL V3»` en 19 bytes **no distingue
+`GPL-3.0-only` de `GPL-3.0-or-later`**, que es lo que decide si un derivado puede migrar de version.
+
+### 890 · 🟢 Adopcion y regulacion estan DESACOPLADAS, y el signo se invierte entre regiones
+
+Barrido regional **39**, cuatro regiones, **0 silencios**:
+
+| region | instrumento dominante | dato del pase |
+|---|---|---|
+| **North America** | ley **ESTATAL** + mandato de politica **DISTRITAL** | 134 proyectos en 31 estados; **4 estados** (MD, ID, OK, VA) exigen politica distrital |
+| **EMEA** | reglamento supranacional en **ESCALONADO** | AI Act escalonado **2026-2027**, escuelas en piloto y pre-cumplimiento |
+| **APAC** | **LEY NACIONAL con fecha** | Corea **22-ene-2026**, Vietnam **1-mar-2026**, Australia Office of AI **jul-2026** |
+| **LATAM** | politica + **ENCUESTA**, sin estatuto educativo | **92 %** estudiantes / **79 %** docentes ya usan AI (DEC LATAM 2026) |
+
+🔴 **LATAM tiene 92 % de adopcion y ningun estatuto educativo de AI; EMEA tiene el estatuto mas
+desarrollado del mundo con las escuelas todavia en piloto.** 🔵 **Nadie deberia usar «madurez
+regulatoria» como proxy de «madurez de uso»: este barrido las mide corriendo en direcciones
+opuestas.**
+
+🟢 **La racha del calendario SUPERADO del AI Act sigue cortada — segundo pase** (`P321` deja de
+reproducirse). 🔴 **Pero el canal recae en otro eje: la consulta de LATAM devolvio una pagina de
+SUDAFRICA y una de NORTH AMERICA — contaminacion cruzada de region (`P247`), asi que un barrido
+«por region» no garantiza que lo devuelto SEA de la region.** 🔴 **Y una incoherencia aritmetica
+dentro de un solo barrido: «+3.367,8 M entre 2026 y 2030 al 45,0 %» no cierra con «42,48 B en 2030»
+partiendo de ~11 B.** **El rango 2026 se publica como rango: USD 8,7 B – 12,3 B.**
+
+🟢 **Lo unico que aparece en TRES regiones a la vez es la SUPERVISION HUMANA** (Oklahoma y Maryland
+la exigen, el AI Act la exige para alto riesgo, los marcos de APAC la nombran). 🔵 **Es, por lo
+tanto, el unico requisito que conviene construir UNA vez y reutilizar en las tres.**
+
+---
 
 ## 🔴 Tendencias 875–882 — pase 109 del 2026-10-05: la racha de ocho pases del AI Act se corta, la condicionalidad del diferimiento corre al reves, un badge de licencia produce un falso negativo publicado, y el instrumento que cazaba defectos de medicion tenia uno
 

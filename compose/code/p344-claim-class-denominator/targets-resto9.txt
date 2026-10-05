@@ -1,0 +1,9 @@
+NLP2CT/LLM-generated-Text-Detection
+RadiantCrystal/SafeTutors
+SabioTechTeam/Teacher-Hub
+dini-ag-kim/school-curriculum-pg
+eth-lre/mathtutorbench
+kaushal0494/AITutor-EvalKit
+kaushal0494/UnifyingAITutorEvaluation
+vilcaaguilerandrea-oss/carrera-lectora
+1EdTech/openbadges-specification

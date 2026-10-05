@@ -8,8 +8,65 @@ updated: 2026-10-05
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 > No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
+> **Pase 110 del 2026-10-05:** 🔴 **0 altas permisivas (trigesimosegundo barrido), cero ENUMERADO: 6 candidatas → 4 ya publicadas (`P311`), 2 nuevas sin cesion.** 🟢 **Lo que SE MUEVE este pase no es el trending: es que las ESTRELLAS VUELVEN a ser medibles — `WebFetch` sobre `github.com` sirve 200 donde `curl` da 403, con control negativo en 404.** 🔴 **Y al volver, cobran: `OATutor` 264 ★ contra «~1,5k» publicado, y `open-tutor-ai-CE` BSD-3-Clause / 108 ★ contra «Apache-2.0 / ~600 ★».**
 > **Pase 107 del 2026-10-05:** 🔴 **0 altas permisivas (trigesimo barrido, 3 candidatas MEDIDAS del payload y las 3 con su bloqueo nombrado) y las TRES acciones pre-registradas corridas: A con la cota NO CERRADA y su clausula de atribucion FALSIFICADA, B CONFIRMADA, C CONFIRMADA en dos clausulas y FALSIFICADA en la tercera.** 🔴 **`P332`: la EXTENSION de un archivo de imagen no es su FORMATO — 2.443 de 2.443 `.gif` son PNG/JPEG/WEBP, y un barrido por extension habria dado «0 solapamiento» desde una premisa falsa.** 🔴 **`P334`: el titular de una FIGURA se resuelve por BYTES y vive en una obra DISTINTA de la que el item cita (36 pares leidos).** 🔴 **`P333`: `fa4e32e5e622` era la huella del archivo SIN su salto final — defecto de dato, no de upstream.** 🔴 **`P335`: tercera sub-clase de `P320` — lo denegado fue el LOTE, no la pieza nombrada.** 🟢 **Canal nuevo: `gitlab.com/-/raw`.**
 > **Pase 106 del 2026-10-05:** 🟢 **0 altas (vigesimonoveno barrido, 5 candidatas, las 5 frenadas por el gate de `P311`) y las TRES acciones pre-registradas corridas: A CONFIRMADA, B FALSIFICADA, C CONFIRMADA.** 🔴 **`P328`: la cesion de un OER se ESTRECHA entre ediciones — 10 de 10 colecciones con el mismo `collection-id` pasan de `CC BY 4.0` en `1e` a `CC BY-NC-SA 4.0` en `main`, y el slug cambia de nombre, que es por lo que esta base no lo veia.** 🔴 **El denominador se corrige de 13.371 a 82.492 unidades y aparece una capa sintetica de 6.886 unidades (`oer: openai`) sin cesion.** 🟢 **Canal nuevo: `git ls-remote` para enumerar refs — es el que abrio la accion A.**
+
+## 2026-10-05 — pase 110: 0 altas (barrido 32), y lo que se mueve es que las ESTRELLAS vuelven a ser medibles — con una cota de resolucion y dos cifras del catalogo refutadas
+
+### 🔴 El barrido de la semana: 0 altas, con el reparto escrito
+
+| que devolvio el canal | cuantas | veredicto |
+|---|---|---|
+| eje generalista (`P281`, **trigesimosegunda** vez) | OpenClaw, CrewAI, LangChain, Dify, n8n, OpenHands, OpenCode | 🔴 no son de la industria |
+| ⚠️ «Hermes Agent» — **tercera** reaparicion | 1 | 🔴 **rechazado otra vez**: el mismo reclamo inverificable de los pases 103 y 104 |
+| eje educativo, ya en el arbol (gate `P311`) | 4 | 🔴 `DeepTutor` (27 citas), `OATutor` (47), `open-tutor-ai-CE` (14), `tutor-gpt` (13) |
+| eje educativo, **nuevas** | 2 | 🔴 `sumedhakoranga/TutorAI` y `tutornew/OpenTutor` — **0 de 10 sondas de licencia** cada una |
+
+🔵 **El cero no es vacio: 6 medidas, 4 frenadas por el gate de alta duplicada, 2 nuevas que no
+ceden nada.** Ninguna de las 2 afirma licencia por badge ni por arbol, asi que tampoco son `P342`
+recuperables.
+
+⚠️ **Y una nota sobre el canal de busqueda que conviene tener escrita:** devolvio en la misma frase,
+como proyectos «trending», a `HKUDS/DeepTutor` (**40,8k ★**) y a `tutornew/OpenTutor` (**8 ★, 1 fork,
+sin licencia**). **Un ranking de busqueda no es un ranking de adopcion.**
+
+### 🟢 El movimiento real del pase: el canal de estrellas vuelve
+
+| canal | `curl` | `WebFetch` |
+|---|---|---|
+| `github.com/<repo>` | 🔴 **403** | 🟢 **200** — estrellas, forks y licencia del sidebar |
+| `github.com/<repo-inventado>` | 🔴 403 | 🟢 **404** ⇒ **el canal discrimina** |
+| `api.github.com` | 🔴 403 | — |
+
+🔴 **El pase 109 habia publicado *«`github.com` degradado a 403 ⇒ 0 estrellas medidas»*: era un
+enunciado sobre `curl` publicado como enunciado sobre el DOMINIO.** 🔵 **`P320` en su forma mas
+filosa: el canal es propiedad del par (herramienta, destino), no del dominio.**
+
+⚠️ **La cota, que acompaña a toda cifra de aca en adelante: resolucion de 3 cifras significativas.**
+La pagina renderiza **«40,8k»**, no `40.823`. **Las estrellas vuelven como MAGNITUD con canal
+nombrado; los enteros exactos no son reproducibles en este entorno.**
+
+### 🔴 Lo que el canal recuperado refuta del catalogo
+
+| repo | publicado por esta base | 🟢 medido 2026-10-05 |
+|---|---|---|
+| `CAHLR/OATutor` | «~1,3k ★» / «~1,5k ★» | 🔴 **264 ★**, 156 forks — **inflado ~5–6×** |
+| `Open-TutorAi/open-tutor-ai-CE` | «Apache-2.0, ~600 ★» | 🔴 **BSD-3-Clause**, **108 ★**, 192 forks |
+| `HKUDS/DeepTutor` | «~24k ★» | 🟢 **40,8k ★**, 5,2k forks (crecimiento real) |
+| `THU-MAIC/OpenMAIC` | sin cifra | 🟢 **40,0k ★**, 6,2k forks, `v1.2.0-rc.1` (2026-10-04) |
+
+🔴 **El error de licencia de `open-tutor-ai-CE` es el que cuesta: Apache-2.0 concede patentes de
+forma EXPLICITA y BSD-3-Clause no.** Las dos son permisivas; la diferencia es exactamente lo que
+lee un area legal antes de firmar.
+
+🟢 **Las cuatro familias se leyeron del PAYLOAD** (`open-tutor-ai-CE` 1.531 B `sha 57c341d09920`;
+`OATutor` 1.105 B `sha 5baaaf977a28`, que **replica al pase 109 al byte**; `DeepTutor` 11.408 B;
+`OpenMAIC` 1.065 B `sha ba2525637432`) **y se cruzaron con el control compartido del arbol**
+(`lib/license_family.sh`, **106/106**), con el README de `OATutor` como control negativo
+(`UNCLASSIFIED`).
+
+---
 
 ## 2026-10-05 — pase 109: 0 altas y la razon se MIDE (5 candidatas devueltas, 5 ya publicadas), y el hallazgo es un falso negativo de licencia de esta propia base
 

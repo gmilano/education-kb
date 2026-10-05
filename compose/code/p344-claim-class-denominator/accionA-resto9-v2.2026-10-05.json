@@ -1,0 +1,214 @@
+[
+ {
+  "slug": "NLP2CT/LLM-generated-Text-Detection",
+  "hits": [],
+  "probes": 20,
+  "codes": {
+   "404": 20
+  },
+  "readme_ref": "main/README.md",
+  "readme_bytes": 40401,
+  "claims": {
+   "badge_md": [],
+   "badge_html": [
+    {
+     "alt": "License-MIT",
+     "src": "https://img.shields.io/badge/License-MIT-green.svg"
+    }
+   ],
+   "tree": [],
+   "prose": [],
+   "families": [
+    "MIT"
+   ]
+  },
+  "veredicto": "P342-AFIRMA-SIN-ARCHIVO"
+ },
+ {
+  "slug": "RadiantCrystal/SafeTutors",
+  "hits": [],
+  "probes": 20,
+  "codes": {
+   "404": 20
+  },
+  "readme_ref": "main/README.md",
+  "readme_bytes": 4609,
+  "claims": {
+   "badge_md": [],
+   "badge_html": [
+    {
+     "alt": "License",
+     "src": "https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge"
+    }
+   ],
+   "tree": [],
+   "prose": [
+    "licensed under the **MIT License"
+   ],
+   "families": [
+    "MIT"
+   ]
+  },
+  "veredicto": "P342-AFIRMA-SIN-ARCHIVO"
+ },
+ {
+  "slug": "SabioTechTeam/Teacher-Hub",
+  "hits": [],
+  "probes": 20,
+  "codes": {
+   "404": 20
+  },
+  "readme_ref": "main/README.md",
+  "readme_bytes": 15535,
+  "claims": {
+   "badge_md": [
+    {
+     "alt": "License: MIT",
+     "src": "https://img.shields.io/badge/License-MIT-yellow.svg",
+     "dest": "https://opensource.org/licenses/MIT",
+     "dest_is_path": true
+    }
+   ],
+   "badge_html": [],
+   "tree": [],
+   "prose": [],
+   "families": [
+    "MIT"
+   ]
+  },
+  "veredicto": "P342-AFIRMA-SIN-ARCHIVO"
+ },
+ {
+  "slug": "dini-ag-kim/school-curriculum-pg",
+  "hits": [],
+  "probes": 20,
+  "codes": {
+   "404": 20
+  },
+  "readme_ref": "main/README.md",
+  "readme_bytes": 136,
+  "claims": {
+   "badge_md": [],
+   "badge_html": [],
+   "tree": [],
+   "prose": [],
+   "families": []
+  },
+  "veredicto": "SILENCIO-CONFIRMADO"
+ },
+ {
+  "slug": "eth-lre/mathtutorbench",
+  "hits": [],
+  "probes": 20,
+  "codes": {
+   "404": 20
+  },
+  "readme_ref": "main/README.md",
+  "readme_bytes": 14935,
+  "claims": {
+   "badge_md": [
+    {
+     "alt": "License: CC BY 4.0",
+     "src": "https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg",
+     "dest": "https://creativecommons.org/licenses/by/4.0/deed.en",
+     "dest_is_path": true
+    }
+   ],
+   "badge_html": [],
+   "tree": [],
+   "prose": [],
+   "families": [
+    "CC-BY-4.0"
+   ]
+  },
+  "veredicto": "P342-AFIRMA-SIN-ARCHIVO"
+ },
+ {
+  "slug": "kaushal0494/AITutor-EvalKit",
+  "hits": [],
+  "probes": 20,
+  "codes": {
+   "404": 20
+  },
+  "readme_ref": "main/README.md",
+  "readme_bytes": 14451,
+  "claims": {
+   "badge_md": [
+    {
+     "alt": "License",
+     "src": "https://img.shields.io/badge/license-MIT-green.svg",
+     "dest": "LICENSE",
+     "dest_is_path": true
+    }
+   ],
+   "badge_html": [],
+   "tree": [],
+   "prose": [
+    "licensed under the MIT License"
+   ],
+   "families": [
+    "MIT"
+   ]
+  },
+  "veredicto": "P342-AFIRMA-SIN-ARCHIVO"
+ },
+ {
+  "slug": "kaushal0494/UnifyingAITutorEvaluation",
+  "hits": [],
+  "probes": 20,
+  "codes": {
+   "404": 20
+  },
+  "readme_ref": "main/README.md",
+  "readme_bytes": 9525,
+  "claims": {
+   "badge_md": [],
+   "badge_html": [
+    {
+     "alt": "",
+     "src": "https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey?style=for-the-badge"
+    }
+   ],
+   "tree": [],
+   "prose": [],
+   "families": []
+  },
+  "veredicto": "P342-AFIRMA-SIN-ARCHIVO"
+ },
+ {
+  "slug": "vilcaaguilerandrea-oss/carrera-lectora",
+  "hits": [],
+  "probes": 20,
+  "codes": {
+   "404": 20
+  },
+  "readme_ref": "main/README.md",
+  "readme_bytes": 4547,
+  "claims": {
+   "badge_md": [],
+   "badge_html": [],
+   "tree": [],
+   "prose": [],
+   "families": []
+  },
+  "veredicto": "SILENCIO-CONFIRMADO"
+ },
+ {
+  "slug": "1EdTech/openbadges-specification",
+  "hits": [],
+  "probes": 20,
+  "codes": {
+   "404": 20
+  },
+  "readme_ref": "main/README.md",
+  "readme_bytes": 2638,
+  "claims": {
+   "badge_md": [],
+   "badge_html": [],
+   "tree": [],
+   "prose": [],
+   "families": []
+  },
+  "veredicto": "SILENCIO-CONFIRMADO"
+ }
+]

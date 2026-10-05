@@ -1,0 +1,38 @@
+[
+ {
+  "slug": "sumedhakoranga/TutorAI",
+  "hits": [],
+  "probes": 20,
+  "codes": {
+   "404": 20
+  },
+  "readme_ref": "main/README.md",
+  "readme_bytes": 2013,
+  "claims": {
+   "badge_md": [],
+   "badge_html": [],
+   "tree": [],
+   "prose": [],
+   "families": []
+  },
+  "veredicto": "SILENCIO-CONFIRMADO"
+ },
+ {
+  "slug": "tutornew/OpenTutor",
+  "hits": [],
+  "probes": 20,
+  "codes": {
+   "404": 20
+  },
+  "readme_ref": "main/README.md",
+  "readme_bytes": 1509,
+  "claims": {
+   "badge_md": [],
+   "badge_html": [],
+   "tree": [],
+   "prose": [],
+   "families": []
+  },
+  "veredicto": "SILENCIO-CONFIRMADO"
+ }
+]

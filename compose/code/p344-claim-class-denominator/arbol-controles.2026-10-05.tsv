@@ -1,0 +1,5 @@
+slug	tree_files	licenseish_paths	n_licenseish	estado
+1EdTech/openbadges-specification	342	ob_v2p1/LICENSE-INPROGRESS.md;ob_v3p0/cert/terms.md;ob_v3p0/license.md;proposals/OBv3p0/license.md;proposals/a-template/license.md;	5	CEDE-FUERA-DE-RAIZ
+dini-ag-kim/school-curriculum-pg	144	src/ontology/utils/owl2shacl/LICENSE;src/sparql/terms.sparql;	2	CEDE-FUERA-DE-RAIZ
+SabioTechTeam/Teacher-Hub	132	-	0	SIN-ARCHIVO-EN-TODO-EL-ARBOL
+gmilano/repo-inventado-p110-control	-	-	-	CLON-FALLO

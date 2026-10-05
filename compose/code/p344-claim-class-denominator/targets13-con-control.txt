@@ -1,0 +1,14 @@
+100205ivan/EyeEP
+Nutlope/llamatutor
+UOC/java-lti-1.3-platform
+YL1N/EduGuardBench
+amosblomqvist/learn
+classifiedstudentkabir/Sign-Language-Interpreter
+dddanielliu/NCCU-Moodle-MCP
+jimbozhang/speechocean762
+jjbrophy47/machine_unlearning
+loyaniu/moodle-mcp
+novatrix-2030/SIH-2026
+yonatanlop/detectoria
+aiverify-foundation/LLM-Evals-Catalogue
+gmilano/repo-inventado-p110-control

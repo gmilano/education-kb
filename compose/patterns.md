@@ -8,6 +8,7 @@ updated: 2026-10-05
 
 > Recetas concretas: repos nombrados, licencias verificadas, wiring explícito y estimación.
 > Todos los repos citados fueron verificados vía WebFetch el 2026-09-30; los del pase 11, el 2026-10-01 (ver `agents/top.md`).
+> **Pase 110 del 2026-10-05:** 🆕 **Los patrones nuevos son `P344`, `P345`, `P346` y `P347`, y la receta nueva es `R-110-CESION-CON-TEXTO` — la compuerta de entrega que mide BYTES y no solo presencia de archivo.** 🔴 **`P344`: una pre-registracion puede construir su denominador CONTRA su hipotesis (0 de 13 por construccion, 6 de 9 en las excluidas).** 🟢 **`P345`/`P337` cerrado: el corte converge a 1.611/832 y las 41 son un DOMINIO DESNUDO.** 🔴 **`P346`: entregable sin gestion son 1.418 de 2.443 (58,0 %), y 368 figuras OPENSTAX no ceden NADA — procedencia y cesion son ejes independientes.** 🆕 **`P347`: `frappe/education` cede «GNU GPL V3» en 19 BYTES, sin texto, y es el unico defecto de la cadena que PASA todos los controles anteriores.**
 > **Pase 109 del 2026-10-05:** 🆕 **Los patrones nuevos son `P342` y `P343`, y la receta nueva es `R-109-CESION-RECUPERABLE`.** 🔴 **`P342`: un badge de licencia y/o una entrada del arbol de directorios que el README dibuja de si mismo son una AFIRMACION de cesion que apunta a una RUTA concreta — y cuando esa ruta da 404, el repo no es «sin licencia» (descarte) sino `P314` (cesion a pedir por escrito al titular, citando su propia afirmacion). Se distingue de `P340` (otra ortografia, la cesion existe) y de `P314` puro (palabra en el cuerpo, sin ruta).** 🔴 **`P343`: un prefijo GOLOSO `^.*` sin frontera izquierda en la captura le roba los digitos de orden superior al numero y deja un residuo PLAUSIBLE (`35.121 B` → `5.121 B`) — no es el cuantificador acotado, que solo captura bien, y POSIX ERE no da con que frenarlo porque `grep -E`/`sed -E` no tienen cuantificadores perezosos ni *lookbehind*. La misma corrida dejo una fila cuyo «repo» es una RUTA. El conteo de bytes y la huella son redundantes solo cuando los dos estan bien, y en cuanto uno se corrompe el otro es el unico detector.** 🔵 **La receta convierte la clasificacion binaria «licenciado / sin licencia» en una cola de TRES salidas, y la del medio es la unica del arbol donde una hora de gestion habilita un activo hoy bloqueado.**
 > **Pase 107 del 2026-10-05:** 🆕 **Los patrones nuevos son `P332`, `P333`, `P334` y `P335`, y la receta nueva es `R-106-PROCEDENCIA-DE-BINARIO`.** 🔴 **`P332` — cuando se comparan dos arboles por contenido el filtro es la FIRMA de bytes, nunca la extension: 2.443 de 2.443 `.gif` de un corpus OER son PNG/JPEG/WEBP y un barrido por extension da «0 solapamiento» con varianza cero desde una premisa falsa.** 🔴 **`P334` — el titular de un BINARIO se resuelve por huella de contenido y puede vivir en una obra que el item NO cita; y cuesta un cruce por arbol (22), no una inspeccion por item (2.443).** 🔴 **`P333` — una huella tomada por sustitucion de comando no es la huella del archivo, y una cifra de esta base lo era; la familia no se movio en 5 de 5 remediciones.** 🔴 **`P335` — tercera sub-clase de `P320`: lo denegado puede ser la FORMA de la operacion (lote) y no el derecho (pieza nombrada), asi que los denominadores se publican con lo que REALMENTE se abrio.**
 > **Pase 106 del 2026-10-05:** 🔴 **`P328` — la cesion de un OER es propiedad del par (coleccion, **ref**) y la identidad es el `collection-id`, no el slug: 10 de 10 colecciones estrechan de `CC BY 4.0` (`1e`) a `NC-SA` (`main`), y comparar por slug hace desaparecer el estrechamiento (`P289` en campo nuevo).** 🔴 **`P329` — una huella normalizada es identidad de TEXTO, no de FAMILIA (6 payloads `CC BY 4.0`, 2 huellas): la huella contesta «¿es el mismo archivo?», la familia «¿que permite?», y son dos instrumentos.** 🔴 **`P330` — cuando se mide una propiedad de BYTES el decodificador es parte del instrumento: `text=True` normalizaba los CRLF antes de hashear y lo delato una aritmetica, no un test rojo.** 🟢 **`P331` — el denominador son las unidades que DECLARAN: 82.492, no 13.371.** 🟢 **Dos recetas nuevas: auditoria de cesion de un corpus OER antes de cotizar (con su `.tsv` como entregable) y compuerta de marcado de contenido sintetico para EMEA, con el predicado ya auto-declarado en el dato.**
@@ -137,6 +138,188 @@ updated: 2026-10-05
 > **Pase 11:** +2 patrones — **P25** (riesgo de abandono conforme al Anexo III, la capa con presupuesto ya asignado y sin oferta open source) y **P26** (agente docente sobre la ontología curricular nacional ya publicada).
 > **Pase 27:** **+4 patrones y una corrección.** 🔴 **P51 queda con premisa falsa** —el conector MCP de Moodle **sí existe y es MIT**— y lo reemplazan **P54** (corrección y devolución sobre Moodle con **compuerta humana**, el último tramo del gap 6, con piezas que ya escriben), **P55** (el conector de **Open edX**, que es el único que de verdad no existe), **P56** (**SCORM** como formato de salida de la capa generativa: cero integración, offline) y **P57** (evidencia por MCP cotizada sobre lo que CaSS **realmente** expone — 6 de 61 operaciones, con insignias y autoría de marcos **fuera**).
 
+
+## 🆕 Patrones del pase 110 (2026-10-05) — `P344`, `P345`, `P346`, `P347` y la receta `R-110-CESION-CON-TEXTO`
+
+### 🔴 `P344` — un denominador puede estar construido CONTRA la hipotesis que se mide sobre el
+
+**El enunciado.** Una prediccion falsable declara su predicado, su cota y su denominador. 🔴 **No
+alcanza:** hay que declarar **como se CONSTRUYO el denominador**, porque un denominario formado
+restando la clase que la hipotesis predice devuelve un cero que **mide la resta y no el mundo**.
+
+**El caso, medido.** La accion A del pase 109 pregunto cuantos de los **13** «sin licencia» afirman
+cesion por badge o arbol. Los 13 son las filas `SILENT-3-LAYERS` del pase 66 — y el pase 66 **ya
+habia apartado, con etiquetas distintas, a los que afirman**: `README-BADGE`,
+`README-PROMISE-BROKEN`, `README-IDENTIFIER`, `README-IDENTIFIER-SCOPED`, `README-CONTRADICTION`.
+
+| denominador | `P342` hallados | que concluye |
+|---|---|---|
+| los **13** pre-registrados | 🔴 **0** | «`P342` es un espécimen, el catalogo esta sano» — **falso** |
+| las **9** que la pre-registracion excluyo | 🔴 **6** | **`P342` es una CLASE y hay 6 falsos negativos publicados** |
+
+🔵 **Las dos ramas de refutacion de la misma pre-registracion disparan a la vez.** Eso es la firma
+diagnostica del defecto: **si las dos ramas pueden ser verdaderas a la vez sobre poblaciones
+distintas, el denominador es la variable libre.**
+
+**El control que lo hubiera atrapado antes, y queda escrito:** antes de correr una prediccion sobre
+un subconjunto, **pedir la REGLA que lo formo** y preguntar si esa regla menciona el predicado que
+se va a medir. Si lo menciona —aunque sea con otras palabras— el denominador esta contaminado.
+
+### 🟢 `P345` — antes de declarar que dos mediciones se contradicen, verificar que compartan el PREDICADO
+
+**El caso.** `P337` vivio tres pases como *«dos artefactos del mismo pase, el mismo sha, se
+contradicen por 41 figuras»*. Materializado el corpus completo sobre el **mismo sha**
+(`1925decc91567faf6203bdb41b9d52b14891426f`):
+
+| forma de `oer` | figuras |
+|---|---|
+| `details-books` (`openstax.org/details/books/…`) | 1.392 |
+| `books-pages` (`openstax.org/books/…/pages/…`) | 178 |
+| **subtotal resoluble** | **1.570** |
+| 🆕 `openstax-otro` — `https://openstax.org/` **a secas** | **41** |
+| **total** | **1.611** |
+
+🔵 **1.611 − 1.570 = 41, al uno. Ninguno de los dos artefactos estaba mal.** Uno contaba *«figuras
+que invocan a OpenStax»* y el otro *«figuras con procedencia OpenStax RESOLUBLE»*. **No era una
+contradiccion: era un predicado no dicho.**
+
+⚠️ **Y las 41 son `P341` a nivel de figura, con cifra: nombran al EDITOR y no a la OBRA.** Sin obra
+no hay edicion, y sin edicion no hay cesion resoluble con ningun extractor.
+
+🔴 **Nota de canal que vale para cualquier tarea igual:** `git cat-file --batch` sobre un clon
+`--filter=blob:none` **no sirve** para materializar — los blobs no estan y `cat-file` los pide de a
+uno al remoto, que es como se perdieron los pases 108 y 109 sobre esta misma tarea. 🟢 **Lo que
+sirve: `git clone --depth 1` CON blobs — 711 MB, 20 segundos, 49.483 JSON.** **La deuda de tres
+pases no era de tiempo: era de eleccion de canal.** Un filtro que abarata enumerar el arbol
+**encarece leerlo**.
+
+### 🔴 `P346` — procedencia y cesion son ejes INDEPENDIENTES, y medir el equivocado es gasto
+
+| clase de cesion del campo `license` | figuras | % |
+|---|---|---|
+| 🟢 `RESOLUBLE` — `CC BY 4.0`, con variante y version | **1.418** | **58,0 %** |
+| 🔴 `AUSENTE` | 586 | 24,0 % |
+| 🔴 `NO-ES-CESION` — una URL a un **PDF de examen** de `ds100.org` | 293 | 12,0 % |
+| 🔸 `VERSION-SIN-VARIANTE` — `«CC4.0»` | 146 | 6,0 % |
+
+**El cruce, que es el aporte:**
+
+| lado | `RESOLUBLE` | `AUSENTE` | otras |
+|---|---|---|---|
+| `OPENSTAX` | 1.243 | 🔴 **368** | — |
+| `NO-OPENSTAX` | 🟢 **175** | 218 | 439 |
+
+🔴 **368 figuras del lado «bueno» no ceden NADA, y 175 del lado «malo» ceden impecable.** 🔵 **El
+corte que tres pases afinaron no responde la pregunta de entrega.** El numero que decide un
+presupuesto es **1.418 (58,0 %)**, y no era ninguno de los dos que se discutian.
+
+⚠️ **`«CC4.0»` merece su propia cubeta y no la cubeta de «CC BY 4.0»:** la version 4.0 son **SEIS**
+licencias (BY, BY-SA, BY-NC, BY-NC-SA, BY-ND, BY-NC-ND) y **TRES llevan NonCommercial**. **Nombrar
+la version no nombra la cesion**, y colapsarla a la mas permisiva de las seis es el error que
+`P324` ya pago en la direccion contraria.
+
+🔴 **Las 293 `NO-ES-CESION` son la trampa mas facil de pisar:** el campo `license` apunta a
+`fa25_mt1_sol.pdf`, `fa25_final_sol.pdf`, `sp25_mt.pdf`… **Eso es una FUENTE, no una licencia: no
+concede nada**, y lo apuntado son **examenes de curso**. La direccion segura es tratarlas como
+`AUSENTE`, nunca como «licencia desconocida pero probablemente abierta».
+
+### 🆕 `P347` — un archivo de licencia puede EXISTIR y no contener una licencia
+
+| repo | ruta | bytes | que trae |
+|---|---|---|---|
+| `frappe/education` | `master/license.txt` | 🔴 **19** | `License: GNU GPL V3`, sin salto final (`sha256 1fcecf395312`) |
+| `frappe/erpnext` | `develop/license.txt` | 🟢 **35.149** | el texto completo de la GPL-3.0 |
+
+🔴 **Misma organizacion, mismo nombre de archivo**, y el texto de la GPL en **404 en 5 rutas mas**
+del primero. 🔵 **Es el eslabon que le faltaba a la cadena, y el unico que pasa todos los controles
+anteriores:**
+
+| proposicion | que falla | como se detecta |
+|---|---|---|
+| `P340` | la **ortografia** del nombre | ampliar la lista de nombres |
+| `P342` | la afirmacion vive en un **badge o arbol**, sin archivo | resolver la ruta afirmada |
+| `P314` | la afirmacion vive en la **prosa** del README | pedir el texto por escrito |
+| 🆕 **`P347`** | **el archivo existe y no trae el texto** | **medir los BYTES** |
+
+⚠️ **Ruta 200, nombre bien escrito, identificador legible, clasificador de familia ACIERTA
+(`GPL-3.0`). Nada de la cadena se dispara. Solo el tamaño lo delata.**
+
+---
+
+### 🆕 Receta `R-110-CESION-CON-TEXTO` — la compuerta de entrega que mide bytes, no presencia
+
+**El problema que resuelve.** Toda compuerta de licencia de este arbol pregunta *«¿hay un archivo
+de cesion?»* y, desde `P250`, *«¿que familia es y permite uso comercial?»*. 🔴 **Ninguna pregunta
+si el archivo CONTIENE la licencia** — y `P347` muestra que un repo citado **106 veces** por esta
+base cede en **19 bytes**. Para una entrega con cliente, la diferencia no es cosmetica: las
+licencias copyleft **obligan a acompañar su texto**, y si el upstream no lo trae, **el obligado es
+quien entrega**.
+
+**Las piezas, todas ya en este arbol:**
+
+| rol | pieza | por que esta |
+|---|---|---|
+| sonda de payload | `raw.githubusercontent.com` + 10 nombres × 2 ramas | el canal, con control negativo **obligatorio** |
+| enumeracion de arbol | `compose/code/p344-claim-class-denominator/enumerate_trees.sh` | ve profundidad; el sondeo de raiz **subreporta** (2 de 2 controles) |
+| detector de afirmaciones | `compose/code/p344-claim-class-denominator/detect_claim.py` | badge **HTML y Markdown**, arbol, prosa con enfasis |
+| clasificador de familia | `compose/code/lib/license_family.sh` | el control compartido, **106/106** — no reescribirlo (`P237`) |
+| clase de cesion de un campo | `compose/code/p345-oer-four-forms/entregabilidad.py` | separa `RESOLUBLE` de version-sin-variante y de «no es cesion» |
+
+**El cableado, paso por paso:**
+
+1. **Enumerar el arbol** con clon `--filter=blob:none` + `git ls-tree -r`, **con repo inventado en
+   el mismo lote**. 🔴 **Sin control negativo, un 404 no se distingue de un canal caido** (`P320`).
+2. **Resolver cada candidato a archivo de cesion**, en cualquier profundidad y cualquier caja
+   (`LICENSE`, `LICENCE`, `LICENSE.TXT`, `COPYING`, `NOTICE`, `TERMS`…).
+3. 🆕 **Medir BYTES y `sha256` de cada uno, y aplicar la compuerta de TEXTO:**
+   - 🔴 **< 1.000 B con nombre de familia copyleft adentro** ⇒ **`P347`**: declara y no cede texto.
+   - 🔸 **< 1.000 B permisivo** ⇒ **plausible**: MIT real son ~1.050–1.100 B, BSD-3 ~1.500 B.
+     **Confirmar con el clasificador, no con el tamaño.**
+   - 🟢 **familia coherente entre tamaño y clasificador** ⇒ pasa.
+4. 🆕 **Atribuir cada archivo hallado en profundidad por su TITULAR y su RUTA, nunca por estar
+   dentro del repo.** 🔴 **`dini-ag-kim/src/ontology/utils/owl2shacl/LICENSE` es LGPL-3.0 con
+   titular FSF: es una herramienta EMPOTRADA, no la cesion del repo** (que es CC BY-SA 4.0 sobre
+   los datos, en el payload RDF). **Tres canales dieron tres respuestas para ese repo.**
+5. **Clasificar en cinco cubetas, no en dos** — y la quinta es la nueva:
+
+| cubeta | que significa | accion comercial |
+|---|---|---|
+| 🟢 `CEDE-CON-TEXTO` | archivo con el texto de su familia | entra, con bytes y huella |
+| 🔸 `CEDE-SIN-TEXTO` (**`P347`**) | declara familia, no trae texto | **entra, y QUIEN ENTREGA acompaña el texto**; fijar `only` vs `or-later` por escrito |
+| 🔸 `AFIRMA-SIN-ARCHIVO` (**`P342`**) | badge o arbol apuntan a una ruta inexistente | **pedir la cesion citando la afirmacion** — recuperable por gestion |
+| 🔸 `AFIRMA-EN-PROSA` (`P314`) | el README nombra una familia | pedir el texto por escrito |
+| 🔴 `SILENCIO-MEDIDO` | 0 archivos en el arbol **enumerado**, README alcanzable | fuera de entrega hasta cesion expresa |
+
+6. **Publicar el veredicto con su instrumento al lado.** 🔵 **`SILENCIO` de un sondeo de raiz no es
+   `SILENCIO-MEDIDO`:** es *«no cede en la raiz, con 10 nombres y 2 ramas»*. Solo el arbol
+   enumerado habilita la cubeta roja.
+
+**Lo que esta receta rinde, medido en este pase:** los **13** «sin licencia» pasan a
+`SILENCIO-MEDIDO` con **0 archivos en 9.886 rutas**; **6** piezas pasan de descarte a `P342`
+recuperable; **1** pieza fundacional (`frappe/education`) pasa de «GPL-3.0, listo» a
+`CEDE-SIN-TEXTO` con una obligacion concreta para el entregador; y **2** respuestas conocidas del
+propio arbol (`P187`, `P172`-semantic) **validan el instrumento** antes de confiar en el.
+
+⚠️ **Lo que esta receta NO resuelve:** la cesion de los **DATOS** cuando vive en el payload y no en
+un archivo (`dini-ag-kim` cede CC BY-SA 4.0 en `lp-base.ttl:24`, y ninguna lista de nombres lo ve).
+🔵 **Para esa capa sigue valiendo `P317`/`P153`: el archivo que declara la licencia del DATO no esta
+en la raiz, y hay que leer el payload semantico.**
+
+---
+
+### 🔵 Y una nota de integridad de corpus que cualquier tuberia de contenido deberia controlar
+
+🔴 **`content-pool/a89b247ds100-su19-final-Q6/steps/` tiene TRES directorios distintos** cuyos
+nombres se diferencian solo por un caracter de control empotrado — `\177` (U+007F), `\302\200`
+(U+0080) y `\302\201` (U+0081). `git ls-tree` los **cita**; con `-z` salen crudos y los tres se
+vuelven **indistinguibles**.
+
+🔵 **Es `P337` un piso mas abajo: tres unidades colapsan a un identificador en cuanto el canal
+normaliza.** ⚠️ **Cualquier tuberia que indexe contenido por nombre de directorio pierde dos de las
+tres sin que nada avise** — y el control es barato: **contar rutas con `-z` y comparar contra el
+conteo citado.** Si difieren, hay colapso de identidad.
+
+---
 
 ## 🆕 Patrones del pase 109 (2026-10-05) — `P342`, `P343` y la receta `R-109-CESION-RECUPERABLE`
 

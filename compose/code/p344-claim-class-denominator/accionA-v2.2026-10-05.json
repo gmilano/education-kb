@@ -1,0 +1,254 @@
+[
+ {
+  "slug": "100205ivan/EyeEP",
+  "hits": [],
+  "probes": 20,
+  "codes": {
+   "404": 20
+  },
+  "readme_ref": "main/README.md",
+  "readme_bytes": 4788,
+  "claims": {
+   "badge_md": [],
+   "badge_html": [],
+   "tree": [],
+   "prose": [],
+   "families": []
+  },
+  "veredicto": "SILENCIO-CONFIRMADO"
+ },
+ {
+  "slug": "Nutlope/llamatutor",
+  "hits": [],
+  "probes": 20,
+  "codes": {
+   "404": 20
+  },
+  "readme_ref": "main/README.md",
+  "readme_bytes": 1440,
+  "claims": {
+   "badge_md": [],
+   "badge_html": [],
+   "tree": [],
+   "prose": [],
+   "families": []
+  },
+  "veredicto": "SILENCIO-CONFIRMADO"
+ },
+ {
+  "slug": "UOC/java-lti-1.3-platform",
+  "hits": [],
+  "probes": 20,
+  "codes": {
+   "404": 20
+  },
+  "readme_ref": "master/README.md",
+  "readme_bytes": 703,
+  "claims": {
+   "badge_md": [],
+   "badge_html": [],
+   "tree": [],
+   "prose": [],
+   "families": []
+  },
+  "veredicto": "SILENCIO-CONFIRMADO"
+ },
+ {
+  "slug": "YL1N/EduGuardBench",
+  "hits": [],
+  "probes": 20,
+  "codes": {
+   "404": 20
+  },
+  "readme_ref": "master/readme.md",
+  "readme_bytes": 4919,
+  "claims": {
+   "badge_md": [],
+   "badge_html": [],
+   "tree": [],
+   "prose": [],
+   "families": []
+  },
+  "veredicto": "SILENCIO-CONFIRMADO"
+ },
+ {
+  "slug": "amosblomqvist/learn",
+  "hits": [],
+  "probes": 20,
+  "codes": {
+   "404": 20
+  },
+  "readme_ref": "main/README.md",
+  "readme_bytes": 2238,
+  "claims": {
+   "badge_md": [],
+   "badge_html": [],
+   "tree": [],
+   "prose": [],
+   "families": []
+  },
+  "veredicto": "SILENCIO-CONFIRMADO"
+ },
+ {
+  "slug": "classifiedstudentkabir/Sign-Language-Interpreter",
+  "hits": [],
+  "probes": 20,
+  "codes": {
+   "404": 20
+  },
+  "readme_ref": "main/README.md",
+  "readme_bytes": 2498,
+  "claims": {
+   "badge_md": [],
+   "badge_html": [],
+   "tree": [],
+   "prose": [],
+   "families": []
+  },
+  "veredicto": "SILENCIO-CONFIRMADO"
+ },
+ {
+  "slug": "dddanielliu/NCCU-Moodle-MCP",
+  "hits": [],
+  "probes": 20,
+  "codes": {
+   "404": 20
+  },
+  "readme_ref": "main/README.md",
+  "readme_bytes": 13392,
+  "claims": {
+   "badge_md": [],
+   "badge_html": [],
+   "tree": [],
+   "prose": [],
+   "families": []
+  },
+  "veredicto": "SILENCIO-CONFIRMADO"
+ },
+ {
+  "slug": "jimbozhang/speechocean762",
+  "hits": [],
+  "probes": 20,
+  "codes": {
+   "404": 20
+  },
+  "readme_ref": "main/README.md",
+  "readme_bytes": 12951,
+  "claims": {
+   "badge_md": [],
+   "badge_html": [],
+   "tree": [],
+   "prose": [],
+   "families": []
+  },
+  "veredicto": "SILENCIO-CONFIRMADO"
+ },
+ {
+  "slug": "jjbrophy47/machine_unlearning",
+  "hits": [],
+  "probes": 20,
+  "codes": {
+   "404": 20
+  },
+  "readme_ref": "master/README.md",
+  "readme_bytes": 241850,
+  "claims": {
+   "badge_md": [],
+   "badge_html": [],
+   "tree": [],
+   "prose": [],
+   "families": []
+  },
+  "veredicto": "SILENCIO-CONFIRMADO"
+ },
+ {
+  "slug": "loyaniu/moodle-mcp",
+  "hits": [],
+  "probes": 20,
+  "codes": {
+   "404": 20
+  },
+  "readme_ref": "main/README.md",
+  "readme_bytes": 3950,
+  "claims": {
+   "badge_md": [],
+   "badge_html": [],
+   "tree": [],
+   "prose": [],
+   "families": []
+  },
+  "veredicto": "SILENCIO-CONFIRMADO"
+ },
+ {
+  "slug": "novatrix-2030/SIH-2026",
+  "hits": [],
+  "probes": 20,
+  "codes": {
+   "404": 20
+  },
+  "readme_ref": "main/README.md",
+  "readme_bytes": 16221,
+  "claims": {
+   "badge_md": [],
+   "badge_html": [],
+   "tree": [],
+   "prose": [],
+   "families": []
+  },
+  "veredicto": "SILENCIO-CONFIRMADO"
+ },
+ {
+  "slug": "yonatanlop/detectoria",
+  "hits": [],
+  "probes": 20,
+  "codes": {
+   "404": 20
+  },
+  "readme_ref": "main/README.md",
+  "readme_bytes": 2995,
+  "claims": {
+   "badge_md": [],
+   "badge_html": [],
+   "tree": [],
+   "prose": [],
+   "families": []
+  },
+  "veredicto": "SILENCIO-CONFIRMADO"
+ },
+ {
+  "slug": "aiverify-foundation/LLM-Evals-Catalogue",
+  "hits": [],
+  "probes": 20,
+  "codes": {
+   "404": 20
+  },
+  "readme_ref": "main/README.md",
+  "readme_bytes": 26342,
+  "claims": {
+   "badge_md": [],
+   "badge_html": [],
+   "tree": [],
+   "prose": [],
+   "families": []
+  },
+  "veredicto": "SILENCIO-CONFIRMADO"
+ },
+ {
+  "slug": "gmilano/repo-inventado-p110-control",
+  "hits": [],
+  "probes": 20,
+  "codes": {
+   "404": 20
+  },
+  "readme_ref": "-",
+  "readme_bytes": 0,
+  "claims": {
+   "badge_md": [],
+   "badge_html": [],
+   "tree": [],
+   "prose": [],
+   "families": []
+  },
+  "veredicto": "INALCANZABLE"
+ }
+]

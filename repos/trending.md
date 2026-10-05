@@ -7,8 +7,58 @@ updated: 2026-10-05
 # 📈 Repos trending — education
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
+> **Pase 110 del 2026-10-05:** 🔴 **Trending de la industria vacio por TRIGESIMONOVENA vez.** 🟢 **Lo que se mueve es el CANAL: `WebFetch` sobre `github.com` devuelve estrellas donde `curl` da 403, con control negativo en 404 — asi que la columna de estrellas de este arbol vuelve a existir, con resolucion de 3 cifras significativas.** 🔴 **Y lo primero que mide es un repo de 8 ★ sin licencia que el canal de busqueda presento junto a uno de 40,8 ★k.**
 > **Pase 107 del 2026-10-05:** 🔴 **Trending de la industria vacio por TRIGESIMOSEXTA vez: curriculo, catalogos, una bolsa de trabajo y dos generalistas (`microsoft/semantic-kernel` 27.470 ★, `NousResearch/hermes-agent` MIT), con las SEIS cifras del eje generalista identicas digito a digito a los pases 105 y 106 ⇒ informacion sobre el CANAL, no sobre la industria.** 🟢 **Lo que SI se movio es una capa de BINARIOS que este archivo nunca conto: 2.443 archivos de figura (~156 MiB, 1.326 imagenes distintas) en `CAHLR/OATutor-Content`, con la extension `.gif` falsa en 2.443 de 2.443 (`P332`).** 🔵 **`git ls-remote` da TRES refs, y una se llama `gpt-science-study`: la unica de este arbol cuyo nombre anuncia contenido sintetico.** 🔴 **Defecto propio corregido: los 49.481 JSON contra los 49.479 del pase 106 son los 6 caminos con bytes de control (U+007F/U+0080/U+0081) en el nombre del paso — la identidad de un paso NO es un slug seguro.**
 > **Pase 106 del 2026-10-05:** 🔴 **Trending de la industria vacio por TRIGESIMOQUINTA vez: el canal devuelve generalista o educativo-sobre-AI, no AI-para-educacion.** 🟢 **Lo que SI se movio esta en el eje de `ref` y no de repo: las ramas `1e` de 5 bundles de `openstax` contienen la UNICA cesion `CC BY 4.0` de 10 colecciones cuyas versiones vivas son `NC-SA` — cesion y vigencia apuntan en direcciones opuestas.** 🔵 **Canal nuevo calibrado: `git ls-remote` para enumerar refs (responde a repo real, falla a repo inventado), el unico de este arbol que contesta «que refs tiene este repo» con `api.github.com` en 403 — sin el, la accion A de este pase era imposible.**
+
+## 2026-10-05 — pase 110: trending de la industria vacio (barrido 39), y el movimiento es de INSTRUMENTO: la columna de estrellas vuelve a ser medible
+
+### 🔴 El trending de la industria sigue vacio, por trigesimonovena vez
+
+El barrido con el año **CALCULADO** (`date -u +%Y` → **2026**) devolvio, otra vez, **el eje
+generalista y 0 repos de la industria educativa en el trending propiamente dicho** (`P281`). Lo
+devuelto fue: OpenClaw, CrewAI, LangChain, Dify, n8n, OpenHands, OpenCode, mas listas curadas de
+«mejores agentes open source».
+
+🔵 **La forma del cero es estable y vale registrarla como serie: treinta y nueve barridos, ningun
+repo de educacion en un trending general.** La capa educativa open source **existe** (este arbol
+publica mas de 90 filas) y **no aparece en ningun ranking de tendencia** — es un hecho sobre los
+rankings, no sobre la capa.
+
+### 🟢 El movimiento del pase: la medicion de popularidad vuelve a estar disponible
+
+| canal | repo real | repo inventado | veredicto |
+|---|---|---|---|
+| `curl` → `github.com` | 🔴 403 | 🔴 403 | **no discrimina** ⇒ inutil |
+| 🆕 `WebFetch` → `github.com` | 🟢 **200** con estrellas/forks/licencia | 🟢 **404** | **discrimina** ⇒ **utilizable** |
+| `api.github.com` | 🔴 403 | 🔴 403 | inutil |
+| `img.shields.io` · `repos.ecosyste.ms` | 🔴 **CONNECT 403** (egress) | — | inalcanzables |
+
+⚠️ **Resolucion: 3 cifras significativas** («40,8k», «8,2k»). **Este arbol deja de poder publicar
+enteros exactos de estrellas, y las publica como magnitud con el canal nombrado.**
+
+### 🟢 Primeras mediciones de la columna recuperada
+
+| repo | ★ | forks | licencia (sidebar) | licencia (payload) |
+|---|---|---|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | **40,8k** | 5,2k | Apache-2.0 | 🟢 Apache-2.0 (11.408 B) |
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | **40,0k** | 6,2k | MIT | 🟢 MIT (1.065 B, `sha ba2525637432`) |
+| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | **8,2k** | 4,4k | — | 🟢 alcanzable por `raw` |
+| [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | 🔴 **264** | 156 | MIT | 🟢 MIT (1.105 B, `sha 5baaaf977a28`) |
+| [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) | 🔴 **108** | 192 | BSD-3-Clause | 🔴 **BSD-3-Clause** (1.531 B) — publicado como Apache-2.0 |
+| [`tutornew/OpenTutor`](https://github.com/tutornew/OpenTutor) | 🔴 **8** | 1 | sin licencia | 🔴 **0 de 10 sondas** |
+
+🔴 **Dos cifras del catalogo quedan refutadas:** `OATutor` estaba publicado como «~1,3k/~1,5k ★» y
+tiene **264**; `open-tutor-ai-CE` como «Apache-2.0, ~600 ★» y es **BSD-3-Clause con 108**.
+
+🔵 **Y una observacion sobre el forks/stars que el dato nuevo permite hacer:**
+`open-tutor-ai-CE` tiene **mas forks que estrellas** (192 vs 108) y `OATutor` casi
+(156 vs 264). **En la capa educativa eso es señal de uso como BASE para desplegar, no de
+seguimiento** — es el perfil opuesto al de un proyecto generalista, donde las estrellas superan a
+los forks por uno o dos ordenes de magnitud. 🟢 **Para elegir un punto de partida, el ratio
+forks/estrellas dice mas que las estrellas**, y es una metrica que esta base no estaba usando.
+
+---
 
 ## 2026-10-05 — pase 109: el trending de la industria vuelve a estar vacio (barrido 38), y lo que se mueve es la capa REGULATORIA: la racha de ocho pases del AI Act se corta
 

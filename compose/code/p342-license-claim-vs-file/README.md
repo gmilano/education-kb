@@ -1,3 +1,9 @@
+---
+industry: education
+region: Global
+updated: 2026-10-05
+---
+
 # `P342` / `P343` — una afirmacion de licencia no es una cesion, y un prefijo goloso roba digitos
 
 Artefactos y suite del **pase 109 (2026-10-05)**. Las aserciones corren contra los TSV, no contra
