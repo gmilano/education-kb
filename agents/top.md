@@ -8,6 +8,7 @@ updated: 2026-10-05
 
 > Agentes y herramientas AI open source para educación. Foco: MIT / Apache 2.0 / BSD.
 > Verificado repo por repo vía WebFetch el 2026-09-30 (stars y licencia leídos de la página del repo).
+> **Pase 103 del 2026-10-05:** 🔴 **0 altas — y a diferencia del pase 102 el cero NO es una elección: el canal de verificación está APAGADO.** Clon sin blobs **DENEGADO por permisos de sesión**, `WebFetch` **bloqueado por egress en 4 de 4 dominios**, `WebSearch` único vivo ⇒ **0 licencias leídas de payload** (`P320`: *el canal de verificación es un hecho de PERMISO, no sólo de red; el instrumento puede estar intacto y faltar el derecho a correrlo*). 🔴 **La acción pre-registrada del pase 103 NO se corrió: ni confirmada ni falsificada, y queda re-registrada sin cambios** — el eje A de `p317` exige enumerar el árbol, y adivinar paths es el falso negativo que `P319` prohíbe. 🔴 **El hallazgo que manda es una REGRESIÓN de esta base (`P321`): el pase 101 tenía las dos fechas del AI Act bien y el pase 102 las colapsó en una falsa — séptima reproducción del error que los pases 100 y 101 estaban CONTANDO.** 🔵 **Pistas, publicadas como pistas y no como filas:** `OATutor` (MIT + contenido CC BY 4.0, sería el primer espécimen de `P315` que es PLATAFORMA) y una de IDENTIDAD contra esta tabla (el paper declara canónico `stanfordnlp/edu-convokit`; la tabla publica `rosewang2008/edu-convokit`). ⚠️ **`amber` y `ncte` siguen SIN resolver:** `ncte` avanza (Demszky y Hill 2022, 1.660 transcripciones, 317 docentes) pero el «CC BY 4.0» viene de **agregador**, no del titular — y `P314` ya pagó ese error.
 > **Pase 102 del 2026-10-04:** 🔴 **La acción pre-registrada del pase 101 se corrió y su predicción está FALSIFICADA en las dos cláusulas: `P315` era específico de `classroom_discourse_intelligence`, no la norma de la capa.** Sobre el denominador pre-registrado de **9 repos** (las 6 altas del pase 101 + las 3 piezas de habla del pase 14), las piezas con licencia de datos **distinta** de la del código, además de la ya conocida, son **0** —la predicción pedía **≥ 2**—, y de las **2** que declaran términos de datos **una conceda uso comercial EXPLÍCITO**, así que tampoco hay mayoría `NC`. 🔴 **Pero medir la predicción destapó que la PREGUNTA estaba mal planteada, y lo que había debajo es peor: `rosewang2008/edu-convokit` —fila de esta tabla, MIT, y la fila es CORRECTA para el código— REDISTRIBUYE 29 transcripciones del corpus TalkMoves, que su titular `SumnerLab` publica bajo `CC BY-NC-SA 4.0`, sin una sola línea sobre términos de datos.** 🟢 **La identidad del corpus está MEDIDA, no inferida: 29 de 29 nombres de archivo coinciden con `data/Subset 1/` del upstream, huella `Boats and Fish 4_Grade 4 .xlsx` incluida —con el espacio antes de la extensión— y el upstream declara la licencia por dos canales que concuerdan (`LICENSE` de 20.849 B + `README`).** 🔵 **Y el otro repo de la misma cohorte, `classroom_discourse_intelligence`, hace lo contrario y lo dice: declara la licencia NC y NO redistribuye —su `data/` tiene 0 archivos de payload, aserido—. Dos repos de la misma capa, el mismo corpus, posiciones opuestas: el que lo maneja mal es el que está en la tabla.** 🔴 **`P319`: el barrido de paths adivinados que este pase corrió PRIMERO publicó `edu-convokit` como «sin datos» —404 en `data/README.md` con 111 archivos de corpus adentro—; sólo enumerar el árbol (el canal de `P275`) lo ve.** 🟢 **`p317` 37/37, 53 suites pasan, 0 fallan.** Ver **`P317`**–**`P319`**.
 > **Pase 101 del 2026-10-04:** 🟢 **6 altas de agente, y abren una capa que esta base NO tenía: observación de aula y análisis del DISCURSO docente.** El eje lo eligió el barrido de mercado de este pase —*«education-specific platforms that embed pedagogical structure»* y el eje de gobernanza de Norteamérica, donde **Oklahoma y Maryland exigen supervisión humana y PROHÍBEN que la AI decida sobre un alumno**— y la capa que eso pide no es un tutor: es el instrumento que mira la clase y le devuelve evidencia al docente. 🟢 **El `grep` de control lo confirmó antes de buscar: `classroom observation` / `observación de aula` daba CERO ocurrencias en los ocho archivos.** 🔴 **El hallazgo que manda es de PROCEDENCIA y lo destapó el gate de `P311`: el barrido devolvió `wwyw4842-dot/OpenMAIC`, que la prensa de industria (aitoolly, aibase, careerflora) linkea como *«el proyecto OpenMAIC en GitHub»* — y es un FORK congelado en `v0.2.1` con licencia **AGPL-3.0**, mientras el upstream `THU-MAIC/OpenMAIC` que esta tabla ya tiene va en `v1.2.0-rc.1` y es **MIT**.** 🔵 **Los dos canales concuerdan en los dos repos (payload del `LICENSE` + `license` del `package.json`), así que no es ambigüedad: es que el enlace que publica la prensa cae un *minor* ANTES del relicenciamiento AGPL→MIT que esta base fechó en v0.3.0 (2026-06-28).** **Un equipo que arranca desde el link del artículo construye sobre copyleft creyendo que es permisivo, y la fila de esta tabla —correcta— se lo confirmaría.** 🔴 **Y el hallazgo de método es contra el control compartido: medir la licencia de un alta destapó que `commercial_use_ok` devolvía uso comercial PERMITIDO para `CC-BY-NC-4.0`, una familia cuyo NOMBRE dice NonCommercial** (`P312`). 🟢 **`lib/license_family.sh` 79/79 → 106/106; `p312` 21/21; `P237` CERRADO —las cuatro copias inline rewireadas— y 52 suites pasan, 0 fallan.** ⚠️ **1 de las 6 altas queda con región declarada y 5 sin ella por `P135`/`P261`, y se dice en vez de rellenarse.** Ver **`P312`**–**`P316`**.
 > **Pase 100 del 2026-10-04:** 🟢 **2 altas de agente, y el eje lo eligió el PROPIO dato de mercado de este pase:** el barrido de tendencias devolvió que *language learning* es **el segmento de mayor crecimiento**, y el eje rotado hacia práctica oral dio **14 candidatas medidas → 7 licenciadas nuevas, 2 sin cesión, 5 YA PUBLICADAS**. 🟢 **La alta que manda es `mikhailvs/loqui` (MIT, 1.074 B): un arnés de agente para lengua HABLADA donde la pedagogía vive en el ARNÉS y no en el prompt — cinco impulsos y un conjunto de INVARIANTES FALSABLES que VETAN la jugada que viole buena pedagogía, con el bucle entero local (Whisper → arnés → LLM → edge-tts).** 🔴 **Pero el hallazgo de método es peor y es sobre esta base: el pase estuvo a punto de publicar «esta base no tenía NINGUNA pieza de habla», y era FALSO — `repos/foundations.md` tiene la «Capa de habla y lectura oral» desde el pase 14, con `OpenPronounce`, `kaldi` y `speechocean762`, incluido el hallazgo de que el corpus no trae licencia.** 🔴 **`P311`: esta base tiene controles de frontmatter, integridad de tablas, vocabulario de región, citas colgadas, familia de licencia, titular, uso comercial y propiedad de manifiesto — y NINGUNO pregunta «¿esto ya está acá?». Todos auditan una afirmación que el pase HACE; la de que un alta es NUEVA es implícita, y lo implícito no lo audita nada.** 🟢 **El gate quedó escrito y corrido (`p311`, 11/11): 14 slugs → 5 ya publicados, con archivo, línea y sección.** 🔴 **La acción pre-registrada del pase 99 está CONFIRMADA: 3 de 18 anclas eran frase cruda, y la del Unlicense no sólo pierde la familia — INVIERTE el veredicto comercial a `NONCOMMERCIAL-NOT-OSI` sobre el texto más permisivo que existe.** 🔴 **Y el control negativo de la suite falló sobre un ancla que NO es frase: la de la AGPL que `P288` instaló es normalizada y se perdía igual, porque la VENTANA del bloque de título contaba LÍNEAS — `P171` reabierto por TERCERA vez.** 🟢 **`lib/license_family.sh` 62/62 → 79/79; `p308` 100/100; 51 suites pasan, 0 fallan.** ⚠️ **Fragilidad PROBADA no es defecto DISPARANDO: 0 de 18 payloads mal clasificados tal como se publican, y el reparto queda SIN EXTRAPOLAR (`P286`).** Ver **`P308`**–**`P311`**.
@@ -271,6 +272,138 @@ updated: 2026-10-05
 > fila** —`lineage-skill`, con un vocabulario cerrado de 9 valores por afirmación, **4 de los 9 «esto lo produjo el
 > modelo»**— y **ninguna de las dos sabe de la otra**. Ver la capa nueva al final de este archivo, las tendencias
 > **180**–**182** y el patrón **P99**.
+
+## 🔴 Altas de agente: 0 — y el cero NO es una eleccion este pase: el canal de verificacion esta APAGADO (pase 103 del 2026-10-05)
+
+### 🔬 El canal, declarado antes de cualquier veredicto (`P247`)
+
+🔴 **Medido este pase, no heredado — y es el canal mas pobre con el que esta base corrio nunca:**
+
+| Canal | Pase 102 | Pase 103 | Que se pierde |
+|---|---|---|---|
+| Clon sin blobs (`--filter=blob:none`) — el canal de `P275` | 🟢 vivo | 🔴 **DENEGADO por permisos de sesion** | la enumeracion de arbol, y con ella **la accion pre-registrada entera** |
+| `WebFetch` sobre fuente primaria | 🟢 vivo | 🔴 **egress bloqueado, 4 de 4 dominios** | toda lectura de licencia de **payload** |
+| `WebSearch` | 🟢 vivo | 🟢 vivo | — (unico canal del pase) |
+
+Dominios bloqueados, enumerados en vez de resumidos: `aclanthology.org`, `arxiv.org`,
+`edu-convokit.readthedocs.io`, `files.eric.ed.gov`.
+
+⚠️ **`P320` — el canal de verificacion no es solo un hecho de RED: es un hecho de PERMISO, y puede
+apagarse mientras el instrumento sigue intacto.** `p317-data-license-layer/` esta en este repo,
+completo y con sus controles; **lo que falta no es el instrumento, es el derecho a correrlo.** La
+distincion no es academica: un pase que confunde *«el instrumento falla»* con *«no puedo correr el
+instrumento»* saca conclusiones sobre repos cuando solo deberia sacarlas sobre si mismo.
+
+### 🔴 La accion pre-registrada del pase 103 NO se corrio, y eso NO es ni confirmacion ni falsificacion
+
+El pase 102 dejo escrito, para este pase:
+
+> *«`CORPUS-SIN-CESION` no es especifico de `edu-convokit`»*. **Prediccion: correr el eje A de `p317`
+> sobre los slugs publicados que el clon resuelva encontrara al menos 6 repos que redistribuyen
+> corpus, y de esos la mayoria volvera `CORPUS-SIN-CESION`.**
+
+🔴 **Veredicto: NO MEDIDA.** El eje A se mide **enumerando el arbol** con un clon sin blobs, y ese
+canal esta denegado. **No hay sustituto:** `WebSearch` devuelve prosa sobre un repo, no el listado de
+sus archivos, y adivinar paths es exactamente el falso negativo que `P319` existe para prohibir.
+
+⚠️ **La prediccion queda EN PIE, re-registrada abajo sin cambiarle una palabra.** Registrar
+*«no medida, canal apagado»* no es lo mismo que registrar un resultado, y el dia que esta base trate
+un cero de canal como un cero de hallazgo va a estar inventando datos con formato de rigor.
+
+🟢 **Lo unico que si quedo establecido para cuando el canal vuelva: el orden de magnitud del
+denominador.** Contado sobre el texto publicado de los dos archivos —no sobre un clon—:
+**419** apariciones de URL de GitHub en `agents/top.md` y **304** en `repos/foundations.md`. ⚠️ **Son
+apariciones, NO slugs distintos**, y se dice asi en vez de presentarse como un conteo de repos: el
+deduplicado requiere el mismo canal que falta.
+
+### 🔴 0 altas, y la razon es distinta a la del pase 102
+
+🔴 **El pase 102 eligio 0 altas; este pase no puede tener otra cosa.** Una fila de esta tabla
+requiere, por regla de esta base: URL verificada **+** licencia leida del **payload**. Con el canal
+de payload apagado, **cualquier fila que escribiera hoy seria una suposicion con formato de tabla** —
+y esta tabla es la que un estudio usa para cotizar. **0 es el unico numero honesto.**
+
+### 🔵 Las PISTAS del pase, publicadas como pistas y no como filas
+
+🔵 **`OATutor` — y si se confirma, es el tercer especimen de `P315`/`P317` y el primero que es
+PLATAFORMA.** El canal lo describe como el primer sistema de tutoria adaptativa (ITS) open source
+completo, con **codigo MIT** y **cinco semestres de material didactico bajo CC BY 4.0**, mas una
+version con integracion de *chatbot*. 🔴 **Si eso es cierto, es exactamente el eje de capa que esta
+base viene midiendo** — permisivo en el codigo, **CC en el contenido**— pero sobre una **plataforma
+desplegable**, no sobre un corpus de investigacion, que es donde vivian los dos especimenes previos.
+⚠️ **No entra a ninguna tabla este pase: no hay lectura de payload que lo sostenga.**
+
+🔵 **Pista de IDENTIDAD, y es contra una fila de esta tabla.** El paper de `Edu-ConvoKit`
+(Wang y Demszky, demo de NAACL 2024) declara como repo canonico
+**`github.com/stanfordnlp/edu-convokit`**; esta tabla publica **`rosewang2008/edu-convokit`**, y el
+canal devolvio ademas un tercer nombre de organizacion (`EduNLP`) para la misma URL, lo que sugiere
+renombres o redirecciones. 🔴 **`P253`/`P306` dicen que el canonico del registro gana al personal.**
+⚠️ **No se corrige la fila todavia:** resolver una identidad exige ver a donde redirige el slug, y
+ese es el canal denegado. **Queda pre-registrado abajo.**
+
+### ⚠️ La deuda de `amber` y `ncte`: AVANZADA por canal secundario, NO resuelta
+
+El pase 102 dejo 74 de los 111 archivos de `edu-convokit` sin procedencia. Lo que este pase pudo
+agregar, **con el canal que tenia y marcado como tal**:
+
+| Subconjunto | Lo que el canal secundario declara | Estado |
+|---|---|---|
+| `ncte` | **NCTE Transcripts**, de **Demszky y Hill (2022)**: 1.660 transcripciones de matematica de 4º y 5º grado, **317 docentes**, 4 distritos, recolectadas **2010–2013** por el *National Center for Teacher Effectiveness*. Un agregador reporta **CC BY 4.0** | 🔴 **NO resuelta** |
+| `amber` | dataset de tutoria **1:1 de 8º–9º grado**. **Ninguna licencia en ningun canal** | 🔴 **NO resuelta** |
+
+🔴 **Por que `ncte` sigue NO resuelta aunque haya un nombre de licencia:** el «CC BY 4.0» viene de
+la **superficie de un agregador**, que es precisamente el tipo de canal que `P314` registro como
+*«concede nada»* — ahi el defecto fue leer una licencia de un **badge**; aca seria leerla de la ficha
+de un tercero que no es el titular. **El titular es el NCTE, y un dataset de transcripciones de aula
+con menores suele distribuirse bajo acuerdo de uso de datos, no bajo cesion abierta.** Afirmar
+«CC BY 4.0» sin el payload del titular seria **inventar una cesion**, que es el error mas caro que
+esta base puede cometer.
+
+⚠️ **Por lo tanto el hallazgo de `edu-convokit` del pase 102 sigue INCOMPLETO**, y sigue sostenido
+**solo** sobre `talkmoves`, que si esta medido punta a punta. **Asi queda marcado, por segundo pase.**
+
+### ⚠️ Lo que este pase NO pudo resolver, dicho en vez de callado
+
+- 🔴 **La accion pre-registrada entera**, por canal denegado (arriba). Es deuda que **crece**: va
+  por dos pases.
+- 🔴 **`amber` y `ncte`**: 74 de 111 archivos siguen sin cesion de primera mano.
+- 🔴 **`P281`, vigesimosexta vez:** el barrido global devolvio el eje generalista (`openclaw`,
+  `dify`, `browser-use`, `Mem0`, `AutoGen`, `Flowise`) y **0 piezas de la industria educativa**.
+- ⚠️ **Una afirmacion del canal que este pase RECHAZA y deja escrita:** un agregador declaro
+  `Hermes Agent` con **+180.000 estrellas desde un lanzamiento en febrero de 2026**. **Inverificable
+  con el canal del pase e inverosimil para la ventana declarada — no entra.** Se registra que el
+  canal lo ofrecio y que esta base lo rechazo, porque un rechazo no documentado se parece a no haber
+  mirado.
+- 🔸 **Ninguna region nueva colocada en esta tabla:** sin altas no hay region que colocar
+  (`P135`/`P261`).
+
+### 🔴 Acciones pre-registradas para el pase 104, falsables
+
+**A — la del pase 103, re-registrada SIN cambios porque no se corrio.** *«`CORPUS-SIN-CESION` no es
+especifico de `edu-convokit`»*. 🔵 **Prediccion: el eje A de `p317` (`redistributes_corpus`, umbral
+20, directorio de datos de primer nivel) sobre los slugs publicados que el clon resuelva encontrara
+al menos SEIS repos que redistribuyen corpus, y de esos la MAYORIA volvera `CORPUS-SIN-CESION`.** Si
+son menos de seis, o si la mayoria si declara terminos de datos, `edu-convokit` es un caso aislado.
+**Unidad = «repos que redistribuyen corpus»; denominador = los slugs publicados que el clon resuelva,
+con los que fallen declarados aparte.**
+
+**B — identidad, y es contra una fila de esta tabla.** 🔵 **Prediccion falsable: `rosewang2008/edu-convokit`
+redirige a `stanfordnlp/edu-convokit`, o el canonico del paper tiene mas commits o mas reciente
+`HEAD`.** Si el slug publicado **no** redirige y es el mas activo, la fila esta bien como esta y esta
+seccion estaba equivocada. **Unidad = el slug al que resuelve la redireccion.**
+
+**C — `OATutor`, la pista de este pase.** 🔵 **Prediccion falsable: su arbol tiene licencia de CODIGO
+permisiva (MIT/Apache/BSD) y, por separado, material didactico bajo CC — es decir, vuelve
+`DATOS-DECLARADOS-DISTINTOS` o `CORPUS-CON-TERMINOS` en el eje de `p317`, NO `SIN-CORPUS`.** Si
+vuelve `SIN-CORPUS` o si el codigo no es permisivo, la pista era ruido de canal.
+
+⚠️ **Y una condicion previa que vale para las tres:** las tres requieren el clon sin blobs. **Si el
+canal sigue denegado en el pase 104, el resultado correcto vuelve a ser «no medida», no un sustituto
+inventado con otro canal.**
+
+---
+
+
 
 ## 🔴 Altas de agente: 0 — y el pase gasta su esfuerzo en la acción PRE-REGISTRADA, que sale FALSIFICADA (pase 102 del 2026-10-04)
 

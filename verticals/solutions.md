@@ -9,6 +9,7 @@ updated: 2026-10-05
 > Plataformas verticales reales, en producción, customizables con AI.
 > Modelo: partir de algo que ya funciona y que ya tiene los datos, y agregar la capa agéntica arriba.
 > Verificado vía WebFetch el 2026-09-30; las capas del pase 11, el 2026-10-01.
+> **Pase 103 del 2026-10-05:** 🔴 **0 verticales nuevas por canal DENEGADO** (clon sin blobs sin permiso, `WebFetch` bloqueado 4/4; `P320`), y el eje que este archivo gana es de **CALENDARIO: toda fila ya publicada tiene DOS relojes de AI Act, no uno.** 🟢 **Art. 50 (marcar contenido sintético) está VIGENTE desde `2026-08-02` con gracia hasta `2026-12-02`** — aplica a cualquier LMS o autograder de esta tabla que **genere** texto, consignas, feedback o cursos, y es justo lo que `aiact-50-2-pack/` de esta base ya marca sobre SCORM ya armado (**27/27**, **37/37** con `xmllint`). 🔴 **Anexo III (admisión, *scoring*, deserción, conducta en examen) se diferió al `2027-12-02` y es CONDICIONAL** — cotizarlo hoy como *«obligación inminente»* es incorrecto desde julio de 2026. 🔵 **Pistas sin verificar:** `OATutor` (MIT + contenido CC BY 4.0), **Moodle 5.1** (*toggle* de AI **por curso y por actividad** — que leído contra el art. 50 vuelve **finito** el inventario de lo que hay que marcar) y **Open edX** (*AI Assistant* dentro del perímetro).
 > **Pase 101 del 2026-10-04:** 🔴 **Verticales nuevas: 0 — y por primera vez el cero viene con el gate que lo PRUEBA en vez de con una impresión.** El barrido obligatorio del encargo (`open source platform education ERP CRM MIT Apache`) devolvió por vigesimoséptima vez el mismo eje generalista, y las 5 candidatas se pasaron por `p311` antes de redactar nada: **`openeducat/openeducat_erp`, `aureuserp/aureuserp`, `frappe/education`, `frappe/erpnext` y `apache/ofbiz` → 5 de 5 YA PUBLICADAS**, con archivo, línea y sección. 🔵 **Veintisiete pases con el mismo resultado es una propiedad del barrido: la consulta pide «plataforma + ERP/CRM + licencia» y eso describe el mercado generalista, no la vertical educativa — su cero es un dato y se mantiene por eso, pero el presupuesto de descubrimiento ya no se gasta esperando que rinda.** 🔴 **Lo que SÍ cambia en este archivo es una advertencia de PROCEDENCIA sobre una fila que ya tenía, y es accionable antes de cotizar:** este archivo nombra `OpenMAIC` (MIT, Tsinghua) como una de las dos únicas bases de tutor open source **permisivas y de escala**, y el barrido de este pase destapó que la prensa de industria linkea como *«el proyecto OpenMAIC en GitHub»* un **fork congelado en `v0.2.1` con `AGPL-3.0`** — un *minor* antes del relicenciamiento AGPL→MIT de v0.3.0. **La fila es correcta para el upstream `THU-MAIC/OpenMAIC`; el riesgo es que el slug que el cliente traiga no sea ése** (`P316`). 🟢 **Y la capa nueva del pase —observación de aula y análisis del discurso, 3 piezas permisivas— se monta SOBRE lo desplegado y no reemplaza nada: es la que convierte la grabación que el LMS ya guarda en evidencia para el docente** (ver `compose/patterns.md`, `R-101-OBSERVACION-PERMISIVA`). Ver **`P312`**–**`P316`**.
 > **Pase 100 del 2026-10-04:** 🟢 **2 verticales nuevas, y las dos llenan el hueco que el pase 5 dejó ABIERTO en la capa de autograding de este archivo: una plataforma desplegada cuya licencia SÍ se pueda construir encima.** `Submitty/Submitty` (**BSD-3-Clause**, `LICENSE.md` 1.542 B, **titular organizacional** `Submitty`, 2014-2026 — RPI/RCOS) y `autolab/Autolab` (**Apache-2.0**, `LICENSE` 11.324 B — CMU). 🔴 **Por qué importa: la fila que este archivo tiene en esa capa desde el pase 5 es `Autograder.io`, de la Universidad de Michigan, con ~5.000 alumnos por semestre y la licencia marcada «no declarada» — y este pase la volvió a medir en 7 nombres de archivo y SIGUE sin ceder nada.** 🔵 **Así que la capa deja de tener un hueco: lo desplegado-y-no-usable ahora tiene dos alternativas desplegadas Y permisivas, con ~5.000 alumnos/semestre cada una en su institución.** 🟢 **Y `autolab/Autolab` trae una clase de indicio REGIONAL nueva para esta base: su `README` declara el DESPLIEGUE por sede —Pittsburgh, Silicon Valley, Qatar y Rwanda— o sea que una plataforma coloca DOS regiones (North America y EMEA) por huella de operación y no por domicilio del titular, que es lo que `P135` prohíbe inferir.** 🔴 **`P311`: el pase casi publica como alta a `INGInious/INGInious` y a `eecs-autograder/autograder.io`, las dos ya en ESTE archivo desde los pases 67 y 5; el gate nuevo las frenó antes de escribir** (`p311`, **11/11**, 14 slugs → 5 ya publicados). 🟢 **`lib/license_family.sh` 62/62 → 79/79; 51 suites pasan, 0 fallan.** Ver **`P308`**–**`P311`**.
 > **Pase 97 del 2026-10-04:** 🟢 **Sin filas nuevas, y a propósito: las seis plataformas Java/Maven que este pase midió YA están todas en este archivo. Lo que entra es el VEREDICTO DE LICENCIA de cada una leído por un segundo canal independiente —la declaración del `pom.xml`— y la capa Java/Maven de esta vertical era justo la que el barrido de esta base no podía leer** (**P294**).
@@ -160,6 +161,73 @@ updated: 2026-10-05
 > versiones), así que lo permisivo (`qti3-*`, `instructure/qti`) es **lo único proponible** — con **`qti3-a11y`** y
 > **`qti3-pnp`**, que abren accesibilidad de evaluación como entregable auditable (**P72**). ⚠️ **Open edX cambia de
 > recomendación: proponer con presupuesto de mantenimiento (gap 70).** Ver la sección del pase 33, abajo.
+
+
+## 🔴 Verticales nuevas: 0 — y el eje que este archivo gana es de CALENDARIO: todo lo desplegado aca tiene DOS relojes de AI Act, no uno (pase 103 del 2026-10-05)
+
+### 🔬 El canal (`P247`), medido este pase
+
+🔴 **Clon sin blobs DENEGADO por permisos; `WebFetch` bloqueado por egress en 4 de 4 dominios;
+`WebSearch` el unico vivo** (`P320`). **Sin lectura de payload no se publica ninguna plataforma
+nueva:** este archivo afirma que algo es *desplegable Y permisivo*, y la segunda mitad de esa frase
+sale del payload del titular.
+
+### 🔴 El eje nuevo, y aplica a TODA fila ya publicada de este archivo
+
+El pase 103 corrigio una **regresion** de `intel/market.md` (ver `P321` ahi), y la correccion no es
+solo de prosa de mercado: **cambia como se cotiza cualquier plataforma de esta tabla en EMEA.**
+
+| Reloj | Que obliga | Fecha | Estado al 2026-10-05 |
+|---|---|---|---|
+| **Art. 50 — transparencia** | marcar contenido sintetico, informar al afectado | **2026-08-02**, gracia hasta **2026-12-02** | 🟢 **VIGENTE — vence la gracia en 2 meses** |
+| **Anexo III — alto riesgo educativo** | FRIA (art. 27), supervision humana y registro del *deployer* (art. 26) | **2027-12-02** | 🔴 **diferido y CONDICIONAL** |
+
+Norma: **Reglamento (UE) 2026/1744** (*Digital Omnibus on AI*), DOUE **24/07/2026**, en vigor
+**27/07/2026**; Anexo I embebido al **2028-08-02**. ⚠️ **La prorroga esta condicionada a que la
+Comision confirme las normas armonizadas** — si se demora, la fecha se mueve.
+
+🟢 **Lo que esto cambia, plataforma por plataforma, y es accionable hoy:** cualquier LMS o
+autograder de esta tabla que **genere texto, consignas, feedback o cursos con AI** cae bajo el art.
+50 **ya**, con independencia del Anexo III. **No es el modulo de evaluacion lo que apremia: es el
+marcado.** 🔵 **Y lo urgente es justo lo que esta base tiene construido:** `aiact-50-2-pack/` marca
+contenido sintetico en paquetes **SCORM ya armados**, con portador por dialecto (**27/27**, y
+**37/37** con `xmllint` contra los XSD de los dos dialectos). **Se aplica SOBRE lo desplegado, sin
+reemplazar nada** — que es la regla de entrada de este archivo.
+
+🔴 **Y lo que NO apremia todavia conviene decirlo igual, porque evita vender humo:** admision,
+*scoring*, prediccion de desercion y deteccion de conducta prohibida en examen son **Anexo III**, y
+su fecha es **diciembre de 2027**. **Cotizar hoy la maquinaria de alto riesgo como «obligacion
+inminente» es incorrecto desde julio de 2026.** 🔵 **El encargo honesto es el inverso: el marcado es
+exigible ya y casi nadie lo hizo, y la ventana del alto riesgo se abrio — sirve para construir el
+expediente con tiempo en vez de improvisarlo.**
+
+### 🔵 Pistas de plataforma del pase, publicadas como pistas y NO como filas
+
+⚠️ **Canal secundario unicamente, sin payload — ninguna entra a la tabla:**
+
+| Pista | Lo que el canal declara | Por que importa a este archivo |
+|---|---|---|
+| **`OATutor`** | primer ITS open source completo: **codigo MIT** + **5 semestres de material didactico CC BY 4.0** | 🔴 seria la **primera plataforma** con el eje de licencia por capa (`P315`/`P317`): permisiva en codigo, **CC en contenido**. Un corpus `NC` limita un paper; **material `CC BY` dentro de un producto limita el producto del cliente** |
+| **Moodle 5.1** (julio 2026) | *toggle* de AI **por curso y por actividad**; **DeepSeek** sumado como proveedor; *Personalized Learning Designer* con rutas adaptativas | 🔵 el *toggle* por actividad es **infraestructura de cumplimiento del art. 50**, no una comodidad de UX: es donde se decide que contenido queda marcado |
+| **Open edX** | *AI Assistant* que opera **dentro** de la plataforma, sin sistemas externos | 🔵 mantener la inferencia dentro del perimetro es el eje de **soberania** que APAC declaro para 2026 |
+
+🔴 **La pista de Moodle es la mas cotizable de las tres y conviene decir por que:** si el *toggle*
+de AI es por actividad, entonces **el limite de lo que hay que marcar bajo art. 50 es configurable
+por el cliente**, y eso convierte una obligacion difusa en un inventario finito. ⚠️ **Pero esta sin
+verificar:** no hay lectura de payload que lo sostenga este pase.
+
+### ⚠️ Lo que este archivo NO pudo resolver
+
+- 🔴 **0 verticales nuevas por canal denegado**, no por falta de candidatas. **Ninguna fila de
+  relleno.**
+- 🔴 **Las tres pistas quedan sin familia de licencia leida del payload** — pre-registradas en
+  `agents/top.md` (accion **C** para `OATutor`).
+- ⚠️ **La busqueda obligatoria de plataformas se corrio** (`open source platform education ERP CRM
+  MIT Apache`) y devolvio **OpenEduCat** (sobre Odoo) y **CK-ERP**, **las dos ya conocidas por esta
+  base**; sin canal de payload **no se re-verifican** y no se vuelven a publicar como altas.
+
+---
+
 
 
 ## 🔴 Verticales nuevas: 0 — y el eje que este archivo gana es de PROCEDENCIA DE DATOS, no de plataforma (pase 102 del 2026-10-04)

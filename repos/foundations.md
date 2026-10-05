@@ -8,6 +8,7 @@ updated: 2026-10-05
 
 > Bases sobre las cuales construir. Verificado repo por repo vía WebFetch el 2026-09-30 (capas del pase 10, el 2026-10-01).
 > Leer la columna **Licencia** antes de proponer: media KB de educación es GPL/AGPL, no permisiva.
+> **Pase 103 del 2026-10-05:** 🔴 **0 altas fundacionales por canal DENEGADO, no por falta de candidatas.** Este estante clasifica familias leyendo el **payload** del titular; con el clon sin blobs denegado por permisos y `WebFetch` bloqueado 4/4, **cualquier fila nueva sería una familia inferida** (`P320`). ⚠️ **La predicción pre-registrada queda NO MEDIDA y re-registrada sin cambios.** Lo único establecido: el orden de magnitud del denominador — **304** apariciones de URL de GitHub en este archivo y **419** en `agents/top.md`, **apariciones y NO slugs distintos** (deduplicar exige el canal que falta, y presentarlas como conteo de repos sería el error de denominador de `P289`). 🔵 **Pista del pase, por este estante y no por `agents/`:** `OATutor`, **código MIT + 5 semestres de material didáctico CC BY 4.0** — sería el eje de licencia por capa de `P315`/`P317` **sobre una PLATAFORMA desplegable** y no sobre un corpus de investigación, y la consecuencia comercial cambia: *un corpus `NC` limita un paper; material `CC BY` dentro de un producto limita el producto del cliente*.
 > **Pase 102 del 2026-10-04:** 🔴 **0 altas fundacionales, y el pase gasta su esfuerzo en la acción pre-registrada del 101, que sale FALSIFICADA — pero el instrumento que la falsifica encuentra algo peor sobre una fila de ESTE archivo.** `rosewang2008/edu-convokit` (fila del pase 101, **MIT**, y la licencia es **correcta para el código**) **redistribuye 29 transcripciones del corpus TalkMoves**, que su titular `SumnerLab` publica bajo **`CC BY-NC-SA 4.0`** — y `edu-convokit` **no declara una sola línea** sobre términos de datos. 🟢 **Identidad medida, no inferida: 29 de 29 nombres coinciden con `data/Subset 1/` del upstream, huella `Boats and Fish 4_Grade 4 .xlsx` incluida (con el espacio antes de la extensión), y el upstream declara la licencia por dos canales que concuerdan (`LICENSE` 20.849 B + `README`).** 🔵 **Vendorea TRES corpus: `amber` (45) + `ncte` (29) + `talkmoves` (29) + 3 `.zip` + `annotated_data.csv` = 111 archivos.** 🟢 **Y la capa de habla de este archivo gana una corrección de alcance: el límite *«no se puede verificar la licencia de `speechocean762`»* que los pases 14 y 100 dejaron escrito era una cota de DOS CANALES (`openslr.org` y `huggingface.co`, `000` los dos), no del repo: su `README` declara disponibilidad «for both commercial and non-commercial purposes», leída de primera mano.** 🔴 **Cesión válida y DÉBIL —el árbol enumerado tiene 0 archivos de licencia en 5.263 rutas, aserido— así que no se eleva a familia OSI ni sirve para una garantía contractual.** 🔴 **`P319`: la ausencia de `data/README.md` no es ausencia de datos; sólo enumerar el árbol (canal de `P275`) ve el corpus.** 🟢 **`p317` 37/37, 53 suites pasan, 0 fallan.** Ver **`P317`**–**`P319`**.
 > **Pase 101 del 2026-10-04:** 🟢 **3 altas fundacionales, y son una CAPA que este estante no tenía: el análisis del DISCURSO de aula — la librería, la herramienta de anotación y el modelo de referencia con su línea base.** `rosewang2008/edu-convokit` (**MIT**, 1.069 B, `Rose E. Wang` 2023, NAACL 2024) es el pipeline de tres módulos —preprocesar, anotar, analizar— sobre transcripciones de aula y tutoría; `EduNLP/EduCoder` (**MIT**, 1.068 B, `EduNLP Lab` 2026, ACL 2026) es la anotación en EQUIPO con video sincronizado y comparación humano–LLM; `devissaputra/classroom_discourse_intelligence` (**MIT** en código) trae la línea base medida (**macro-F1 0,5198** contra **0,1152** de mayoría sobre **175.129** enunciados docentes). 🔴 **Y la tercera es el espécimen de `P315`: es permisiva en el CÓDIGO y `CC BY-NC-SA 4.0` —NO COMERCIAL— en los DATOS, así que el método y la línea base se entregan y el modelo entrenado sobre ese corpus NO.** 🟢 **`P253`/`P306` otra vez, y esta vez el registro descartó a los dos candidatos en vez de elegir uno: el barrido devolvió `stanfordnlp/edu-convokit` (URL) y `EduNLP/edu-convokit` (título del mismo resultado), los dos sirven el payload, y `pypi.org` declara `Source: github.com/rosewang2008/edu-convokit` — un TERCERO.** 🔴 **El hallazgo de instrumento salió de medir el payload de datos de la tercera: la compuerta de uso comercial de esta base devolvía PERMITIDO para `CC-BY-NC-4.0`, una familia cuyo NOMBRE dice NonCommercial** (`P312`). 🟢 **`lib/license_family.sh` 79/79 → 106/106; `P237` CERRADO —las cuatro copias inline rewireadas, y primero se hizo a la librería un superconjunto con `BUSL`/`Elastic`/`PolyForm` como el pase 100 exigía—; 52 suites pasan, 0 fallan.** Ver **`P312`**–**`P316`**.
 > **Pase 100 del 2026-10-04:** 🟢 **1 alta fundacional, y es la pieza que COMPLETA una capa que este archivo tenía a medias desde el pase 14: el MODELO de evaluación de pronunciación.** `YuanGongND/gopt` (**BSD-3-Clause**, `LICENSE` 1.517 B, titular `Yuan Gong`, 2022) es GOPT —ICASSP 2022, MIT & PAII—, el primer modelo que puntúa **múltiples aspectos** (exactitud, fluidez, prosodia) en **múltiples granularidades** (fonema, palabra, oración) a la vez, y es **SOTA sobre `speechocean762`**, que es justo el corpus que este archivo ya inventariaba. 🔴 **Pero el hallazgo del pase es contra esta base, y este archivo es la prueba: el pase estuvo a punto de publicar la capa de habla como NUEVA, y la «Capa de habla y lectura oral» está acá desde el pase 14** con `OpenPronounce`, `kaldi` y `speechocean762` — **incluido el hallazgo de que el corpus no trae archivo de licencia**, que el pase iba a anunciar. 🟢 **`P311`: ningún control de esta base preguntaba «¿esto ya está acá?» —todos auditan una afirmación que el pase HACE, y la de que un alta es NUEVA es implícita— así que el gate quedó escrito y corrido antes de publicar** (`p311`, **11/11**; 14 slugs → **5 ya publicados**, con archivo, línea y sección). 🔴 **La cadena permisiva de esta capa queda CERRADA como irresoluble desde acá, y es una corrección de alcance sobre el pase 14:** ese pase dejó *«pedir los términos a SpeechOcean por escrito»*, y este intentó la vía de **registro** con la que `P306` desempató `examplary/qti` vía npm — **`openslr.org` y `huggingface.co` dan los dos `000` por egreso bloqueado**. **Se puede construir el evaluador entero permisivo (`OpenPronounce` MIT + `gopt` BSD-3 + `kaldi` Apache-2.0) y NO se puede verificar la licencia del corpus contra el que todo el campo se mide.** 🔴 **Y `P308`: 3 de 18 anclas del control compartido eran frase cruda; la del Unlicense INVIERTE el veredicto comercial a `NONCOMMERCIAL-NOT-OSI`, y la ventana del bloque de título contaba LÍNEAS, lo que perdía la AGPL de `P288`.** 🟢 **`lib/license_family.sh` 62/62 → 79/79; 51 suites pasan, 0 fallan.** Ver **`P308`**–**`P311`**.
@@ -107,6 +108,61 @@ corre ése antes de escribir uno a mano** (tendencia **313**). 🟢 **Y el `gafa
 > y 5 en `schemas12/`, y contar sólo el primero es lo que hizo invisible el segundo dialecto de SCORM (**P106**).
 > **Pase 36 del 2026-10-02:** 🔵 **este pase no agrega repos: le pone FECHA a los que ya están, y la fecha cambia tres recomendaciones.** Se midió la capa PHP de evaluación y telemetría en Packagist —el único registro de los tres que entrega descargas en este entorno (`api.npmjs.org` y `pypistats.org` dan **403 a CONNECT**)— y el resultado está en `repos/trending.md`. **Lo que hay que saber antes de proponer desde este archivo:** 🔴 **la pieza xAPI más descargada de esta base, `rusticisoftware/tincan` (Apache-2.0, 6.178 desc./mes, 863.777 totales), no publica desde el 2022-11-02**, y ⚠️ **el único MIT de esa capa, `php-xapi/client`, está parado desde el 2021-03-24** con 825 desc./mes. 🔵 **La lectura es que en xAPI/PHP lo permisivo está quieto y lo vivo es copyleft**, así que la receta de telemetría se sostiene en **Ralph (MIT)** + **`lrsql` (Apache-2.0)** + **`learnmcp-xapi` (MIT)** y no en la capa PHP. 🟢 **Del lado de evaluación, lo activo es `oat-sa/extension-tao-testqti`** (**885 versiones**, release del **2026-09-30**) **y sigue siendo GPL-2.0-only**, mientras **lo permisivo es lo nuevo**: `@longsightgroup/qti3-cli` (**MIT**, 41 releases desde el 2026-05-21, último **2026-10-01**) con **cero dependencias de terceros** — sus 4 dependencias son todas `@longsightgroup/*` pinneadas a la misma versión exacta. **Su manifiesto MCP completo de 20 tools está escrito en `compose/patterns.md` (P76).** 🔴 **Y una corrección de catálogo: `oat-sa/qti-sdk` devuelve 404 en Packagist porque es el nombre del REPO — su paquete es `qtism/qtism`** (GPL-2.0-only, 218.212 descargas totales, 315 versiones). **Nombre de repo y nombre de paquete son identificadores distintos, y confundirlos produce un 404 que parece una ausencia** — pasó igual con `1edtech/oneroster`, `imsglobal/lti-1-3-php-library` y `packbackbooks/lti-1-3-php-library`, los tres **404**, que se anotan como *«no verificado en Packagist bajo ese nombre»* y **no** como inexistentes. ⚠️ **Acción pendiente que el pase 37 tiene asignada: este archivo nunca pasó por el control de *slugs* distintos ni por el de *backlink*** — los dos que en `agents/top.md` encontraron **un duplicado** y **dos colisiones** este mismo pase.
 > **Pase 11 del 2026-10-01:** aparece una licencia que las diez pasadas anteriores filtraban sin saberlo — **ECL-2.0**, con la que licencia todo Apereo (Sakai, Opencast, OpenLRW). Es Apache-2.0 con el alcance de patentes acotado, aprobada por OSI y FSF, y **es apta para construir arriba**. Ver la capa de analítica institucional, abajo.
+
+## 🔴 Altas fundacionales: 0 — el canal de payload esta DENEGADO, y una fila sin payload no es una fila (pase 103 del 2026-10-05)
+
+### 🔬 El canal (`P247`), medido este pase — y es el mas pobre que esta base uso
+
+| Canal | Pase 102 | Pase 103 |
+|---|---|---|
+| Clon sin blobs (`--filter=blob:none`), canal de `P275` | 🟢 vivo | 🔴 **DENEGADO por permisos de sesion** |
+| `WebFetch` a fuente primaria | 🟢 vivo | 🔴 **egress bloqueado: `aclanthology.org`, `arxiv.org`, `edu-convokit.readthedocs.io`, `files.eric.ed.gov`** |
+| `WebSearch` | 🟢 vivo | 🟢 **unico vivo** |
+
+⚠️ **`P320`:** el instrumento de este estante (`lib/license_family.sh`, `p317-data-license-layer/`)
+esta **intacto**; lo que falta es el **derecho a correrlo**. **Este archivo clasifica familias leyendo
+el payload del titular — sin ese canal no hay alta posible, y el cero es la consecuencia correcta.**
+
+### 🔴 Por que 0, y por que este cero no se parece al del pase 102
+
+El pase 102 tambien publico 0, pero por **eleccion**: tenia canal y gasto el esfuerzo en la deuda
+pre-registrada. **Este pase no tiene la opcion.** La regla de este estante es: familia de licencia
+leida del **payload**, clasificada por el **control compartido**. 🔴 **Con el payload inalcanzable,
+cualquier fila nueva seria una familia *inferida*, y este archivo existe precisamente para no
+inferirlas.**
+
+### ⚠️ La prediccion pre-registrada de este archivo: NO MEDIDA
+
+El eje A de `p317` se mide **enumerando el arbol** con el clon sin blobs. Canal denegado ⇒ **ni
+confirmada ni falsificada**. ⚠️ **Re-registrada sin cambios para el pase 104.** Lo unico establecido:
+el orden de magnitud del denominador — **304** apariciones de URL de GitHub en este archivo, **419**
+en `agents/top.md`. **Apariciones, NO slugs distintos:** deduplicar exige el canal que falta, y
+presentarlas como conteo de repos seria el error de denominador que `P289` ya le costo a esta base.
+
+### 🔵 La pista fundacional del pase, publicada como pista
+
+🔵 **`OATutor` — si se confirma, entra por este estante y no por `agents/`.** El canal lo describe
+como el primer ITS (*intelligent tutoring system*) open source completo: **codigo MIT** mas **cinco
+semestres de material didactico bajo CC BY 4.0**, y una variante con integracion de *chatbot*.
+🔴 **La forma de su licencia es exactamente el eje que este archivo viene midiendo desde `P315`**
+—permisivo en codigo, **CC en el contenido**— **pero con una diferencia que importa para cotizar: los
+dos especimenes previos eran corpus de investigacion; este seria una PLATAFORMA desplegable.** Un
+corpus `NC` limita un paper; **material didactico `CC BY` dentro de un producto limita el producto**,
+y el limite se hereda al entregable del cliente.
+⚠️ **No entra a la tabla: sin lectura de payload no hay familia, y sin familia no hay fila.**
+Pre-registrada como accion **C** del pase 104.
+
+### 🔴 Y una pista de IDENTIDAD que toca a este estante tambien
+
+El paper de `Edu-ConvoKit` (Wang y Demszky, NAACL 2024 demo) declara canonico
+**`stanfordnlp/edu-convokit`**; el inventario publicado usa **`rosewang2008/edu-convokit`**, y el
+canal devolvio ademas `EduNLP` como organizacion para la misma URL. 🔴 **`P253`/`P306`: el canonico
+del registro gana al personal.** ⚠️ **No se corrige sin ver la redireccion**, y ese es el canal
+denegado. Pre-registrada como accion **B**.
+
+---
+
+
 
 ## 🔴 Altas fundacionales: 0 — y el pase corrige DOS filas de este archivo: una por los DATOS que trae adentro, otra por una cota mal atribuida (pase 102 del 2026-10-04)
 

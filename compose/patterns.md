@@ -8,6 +8,7 @@ updated: 2026-10-05
 
 > Recetas concretas: repos nombrados, licencias verificadas, wiring explícito y estimación.
 > Todos los repos citados fueron verificados vía WebFetch el 2026-09-30; los del pase 11, el 2026-10-01 (ver `agents/top.md`).
+> **Pase 103 del 2026-10-05:** 🔴 **0 altas en tablas; lo que este pase deja es MÉTODO y una receta armada con piezas que este repo YA tiene probadas.** 🟢 **`P320`** — el canal de verificación es un hecho de **PERMISO**, no sólo de red: el instrumento puede estar intacto y faltar el derecho a correrlo, y los dos estados autorizan conclusiones distintas. 🟢 **`P321`** — un archivo append-only puede **sepultar un acierto bajo un error posterior**, y el espécimen es `intel/market.md` con las dos versiones del calendario del AI Act conviviendo. 🆕 **`R-103-DOS-RELOJES`** — receta de conformidad AI Act para un entregable educativo EMEA: **tramo 1** marcar lo que ya se entrega con `aiact-50-2-pack/` (art. 50, **vigente**, portador por dialecto porque SCORM 1.2 es `processContents="strict"` y un marcador no importado es **INVÁLIDO**, no tolerado); **tramo 2** construir el expediente de Anexo III con la ventana a favor, usando el eje A de `p317` como insumo del **FRIA**; **tramo 3** lo que NO hay que prometer — el `2027-12-02` es **condicional**. ⚠️ **Y la receta declara su propio hueco: esta base no tiene componente que produzca el FRIA ni registro conforme al art. 26.**
 > **Pase 101 del 2026-10-04:** 🆕 **Los patrones nuevos son `P312`–`P316`, y la receta es `R-101-OBSERVACION-PERMISIVA`.** 🔴 **`P312` es el que cambia qué garantiza un veredicto de uso comercial de esta base: la compuerta de `P250` se abría sobre `CC-BY-NC-4.0`, una familia cuyo NOMBRE dice NonCommercial — y la destapó el payload de un ALTA, no una fixture.** 🟢 **`P313` cierra `P237`: las cuatro copias inline rewireadas, en el orden que la deuda exigía (primero superconjunto, después rewiring), y con el hallazgo de que el rewiring ROMPIÓ el control que guardaba a `p206` porque extraía la función del TEXTO del archivo.** 🔴 **`P314` es el que evita suprimir trabajo real: la concesión puede vivir en el README sin archivo de licencia, y un barrido de payload la declara `NO-CESSION`.** 🔴 **`P315` es el que paga en una propuesta: un repo puede ser permisivo en el CÓDIGO y no comercial en los DATOS, así que el entregable es el método y la línea base, no el modelo.** 🔴 **`P316` es la pregunta de un renglón que hay que hacer antes de estimar: «¿de qué árbol partimos?» — la prensa de industria linkea un fork `AGPL-3.0` congelado en `v0.2.1` del `OpenMAIC` MIT que esta base ya tiene.** 🆕 **`R-101-OBSERVACION-PERMISIVA` es cotizable porque los tres eslabones de código están verificados por payload y son MIT, y porque la restricción que la acota —el corpus no comercial— queda FUERA del entregable con su razón dicha.**
 > **Pase 100 del 2026-10-04:** 🆕 **Los patrones nuevos son `P308`–`P311`, y las recetas son `R-100-HABLA-PERMISIVA` y `R-100-AUTOGRADING-PERMISIVO`.** 🔴 **`P308` es el que cambia qué garantiza un veredicto de licencia de esta base: el reflujo del texto —re-envolver un payload sin cambiar una palabra— movía la respuesta, en DOS reglas; la del Unlicense no perdía la familia en `UNCLASSIFIED` sino que INVERTÍA el veredicto comercial a `NONCOMMERCIAL-NOT-OSI` sobre el texto más permisivo que existe, y la de la ventana del bloque de título perdía la AGPL que `P288` había instalado porque contaba LÍNEAS.** 🟢 **`P309` es el residual declarado en vez de tapado: `holder_of` devuelve una LÍNEA, y una línea depende del reflujo por construcción.** 🔴 **`P310` es el que paga en una propuesta: una pieza puede ser permisiva y no ceder ninguna CAPACIDAD —`speechsuper/SpeechSuper-API-Samples` es MIT real sobre muestras de una API paga— y es el primer espécimen de esta base donde el engaño viene de una licencia CORRECTA.** 🔴 **`P311` es el control que faltaba y que este pase necesitó contra sí mismo: todos los controles de esta base auditan una afirmación que el pase HACE, y la de que un alta es NUEVA es implícita.** 🆕 **`R-100-HABLA-PERMISIVA` es cotizable porque los cinco eslabones están verificados por payload y cuatro de los cinco son permisivos; el quinto —el corpus— queda FUERA del entregable con su razón dicha.**
 > **Pase 97 del 2026-10-04:** 🆕 **Los patrones nuevos son `P294`, `P295`, `P296` y `P297`, y los cuatro salen de cablear una sola pieza.** 🔴 **`P294` es el que cambia cómo esta base se audita a sí misma: un control que no está en el camino por donde pasan los datos no es un control, es una demostración — el pase 96 diagnosticó la ceguera a Java/Maven, escribió el lector correcto (`p289`, 11/11) y no lo conectó, así que `PARSERS` siguió con cinco nombres y el hueco siguió abierto donde se producen los veredictos.** 🔴 **`P295` es el mismo defecto en la prosa: `trend-backlink-audit` existe desde el pase 49 para atrapar citas colgadas y era CIEGO a la forma con que esta base ANUNCIA sus tendencias («tendencias nuevas, numeradas 745–752» → 0 citas), así que catorce números quedaron sin sección sin que nada lo marcara; y de paso era lossy en castellano, porque aceptaba «a» como conector y no como marca de rango.** 🟢 **`P296` es el que paga en una entrega: el veredicto de licencia tiene DOS canales independientes —la declaración del manifiesto y el payload del archivo— y medidos sobre la capa Java/Maven concuerdan 4 de 4 exactos, 1 de familia, 0 contradicciones; el manifiesto CORROBORA y además es la única fuente donde no hay archivo (`kuali/kc`).** 🟢 **`P297` es la pieza técnica que lo hizo posible: en Maven la identidad de propiedad es el `groupId` —un namespace reverse-DNS que codifica a la organización— y el `<parent>` NO presta ni identidad ni licencia.** 🆕 **La receta nueva es `R-97-COMPRA-SOBERANA-APAC`, y es cotizable porque la condición de compra que la dispara quedó medida este pase: la soberanía decidirá la infraestructura de ~la mitad de las empresas de APAC.**
@@ -130,6 +131,115 @@ updated: 2026-10-05
 > no existe en open source permisivo).
 > **Pase 11:** +2 patrones — **P25** (riesgo de abandono conforme al Anexo III, la capa con presupuesto ya asignado y sin oferta open source) y **P26** (agente docente sobre la ontología curricular nacional ya publicada).
 > **Pase 27:** **+4 patrones y una corrección.** 🔴 **P51 queda con premisa falsa** —el conector MCP de Moodle **sí existe y es MIT**— y lo reemplazan **P54** (corrección y devolución sobre Moodle con **compuerta humana**, el último tramo del gap 6, con piezas que ya escriben), **P55** (el conector de **Open edX**, que es el único que de verdad no existe), **P56** (**SCORM** como formato de salida de la capa generativa: cero integración, offline) y **P57** (evidencia por MCP cotizada sobre lo que CaSS **realmente** expone — 6 de 61 operaciones, con insignias y autoría de marcos **fuera**).
+
+
+## 🆕 Patrones del pase 103 (2026-10-05) — `P320`–`P321` y la receta `R-103-DOS-RELOJES`
+
+> **Canal del pase (`P247`):** clon sin blobs 🔴 **denegado por permisos**; `WebFetch` 🔴 **egress
+> bloqueado 4/4**; `WebSearch` 🟢 unico vivo. **0 altas en las tablas.** Lo que este pase deja es
+> **metodo** y **una receta que se arma con piezas que este repo YA tiene construidas y probadas.**
+
+### P320 — el canal de verificacion es un hecho de PERMISO, no solo de red
+
+Esta base venia midiendo el canal como disponibilidad de **red** (`403`, `404`, egress). Este pase
+agrega el eje que faltaba: **el instrumento puede estar intacto y el permiso para correrlo
+ausente.**
+
+🔴 **Por que importa y no es una excusa:** los dos estados se parecen desde adentro —en los dos el
+barrido no devuelve nada— **pero autorizan conclusiones distintas.** Si el instrumento falla, la
+conclusion es sobre el instrumento. Si falta el permiso, **la unica conclusion legitima es sobre el
+pase**, y cualquier afirmacion sobre los repos es inventada.
+
+🟢 **La regla operativa que queda:** antes de publicar un negativo, decidir **cual de los dos** es.
+Si es permiso ⇒ **«no medida»**, la prediccion se **re-registra sin cambios**, y **no se busca un
+canal sustituto de menor calidad** — porque un sustituto que no enumera el arbol reproduce `P319`, el
+falso negativo que oculta justo el caso peor.
+
+### P321 — un archivo append-only puede sepultar un acierto bajo un error posterior
+
+**Espécimen medido: `intel/market.md`.** El **pase 101** publico el calendario del AI Act correcto
+(art. 50 vigente `2026-08-02`; Anexo III `2027-12-02`). El **pase 102** publico *«entra en pleno
+efecto en agosto de 2026»*, que es **falso**. **Las dos secciones conviven en el archivo y nada lo
+detecto.**
+
+🔴 **El agravante:** los pases 100 y 101 **llevaban el contador** de cuantas veces el canal externo
+reproducia esa misma version superada (*«cuarta y quinta»*, *«sexta»*). **El pase 102 fue la septima, y
+la cometio la base que contaba.** ⚠️ **Vigilar un sesgo externo no da inmunidad a ese sesgo.**
+
+🟢 **El control que esta base no tiene y le corresponde** (candidato a `compose/code/` del pase
+104): una compuerta que, para cada **afirmacion fechada** (una fecha de norma, una version, un
+vencimiento), **compare la seccion mas nueva contra las anteriores del mismo archivo** y falle cuando
+dos pases afirman fechas distintas sobre el mismo hecho **sin que el mas nuevo cite al anterior**.
+**El historial ya tiene el dato; lo que falta es que la contradiccion haga ruido.**
+
+### 🆕 `R-103-DOS-RELOJES` — Receta: conformidad AI Act para un entregable educativo EMEA, con las piezas que esta base ya tiene
+
+**El problema que resuelve, dicho como lo trae un cliente:** *«el AI Act nos aplica, somos educacion,
+que hacemos y para cuando»*. 🔴 **La respuesta mal dada —la del pase 102— es «todo, ya». La bien dada
+distingue DOS relojes**, y de ahi sale el plan y el presupuesto.
+
+| | **Reloj 1 — art. 50 (transparencia)** | **Reloj 2 — Anexo III (alto riesgo)** |
+|---|---|---|
+| **Fecha** | **2026-08-02**, gracia hasta **2026-12-02** | **2027-12-02**, **condicional** |
+| **Que obliga** | marcar contenido sintetico; informar al afectado | FRIA (art. 27), supervision humana, registro (art. 26) |
+| **Que lo dispara** | que el sistema **genere** texto, consignas, feedback o cursos | admision, evaluacion, *scoring*, desercion, conducta en examen |
+| **Estado** | 🟢 exigible **ahora** | 🔴 ventana abierta |
+
+**Tramo 1 — marcar lo que ya se entrega (semanas 1–4, y es lo unico con fecha vencida encima).**
+
+1. **Inventariar la superficie generativa** sobre lo desplegado. Si la plataforma es **Moodle 5.1**,
+   el *toggle* de AI **por curso y por actividad** es el inventario: 🔵 **el limite configurable es el
+   limite de lo que hay que marcar**, y eso vuelve finito un requisito difuso. ⚠️ *Pista de canal
+   secundario — verificar el toggle contra el payload antes de cotizarlo.*
+2. **Marcar los paquetes que ya existen, sin tocar upstream:** `compose/code/aiact-50-2-pack/`, el
+   post-procesador que inyecta el marcador en el `<metadata>` de un manifiesto SCORM **ya
+   construido** (**27/27**; **37/37** con `xmllint` contra los XSD de los dos dialectos).
+   🔴 **Y usar el portador por dialecto, que es lo que el pase 47 pago aprender:** SCORM 1.2
+   (`imscp_rootv1p1p2.xsd`) tiene el comodin en **`processContents="strict"`**, asi que **un marcador
+   en un namespace no importado no es «tolerado»: es INVALIDO.** SCORM 2004 es `lax` y perdona.
+3. **Verificar la conformidad, no asumirla:** `xmllint` contra los dos esquemas empaquetados. **Un
+   marcado que rompe el manifiesto es peor que no marcar: bloquea la entrega.**
+
+**Tramo 2 — construir el expediente de alto riesgo con la ventana a favor (meses 2–12).**
+
+4. **Clasificar por funcion, no por comprador.** Las obligaciones del Anexo III se enganchan a **lo
+   que el sistema hace** — una universidad publica que corre tamizado de admision tiene deberes de
+   *deployer* igual que el proveedor que lo vende.
+5. **Procedencia de corpus como insumo del FRIA**, y aca se conecta el eje tecnico de esta base:
+   correr el **eje A de `p317`** (`redistributes_corpus`, umbral 20, directorio de datos de primer
+   nivel) sobre **toda pieza que entre al entregable**. 🔴 **Un `CORPUS-SIN-CESION` adentro de un
+   sistema de Anexo III es un hallazgo de FRIA, no una nota al pie**: el unico archivo de licencia del
+   arbol cubre material que **no es del titular que lo firma**. ⚠️ **Requiere el canal de clon — ver
+   `P320`.**
+6. **Registro y supervision humana desde el diseno** (art. 26). 🔵 **Precedentes utiles ya publicados
+   por esta base:** **Oklahoma** y **Maryland** prohiben que la AI decida sobre un alumno — la
+   supervision humana que EMEA exigira en 2027 **ya es requisito en Norteamerica**, asi que el mismo
+   componente sirve en dos regiones.
+
+**Tramo 3 — lo que NO hay que prometer.**
+
+7. ⚠️ **No vender el 2027-12-02 como piso firme:** esta **condicionado** a que la Comision confirme
+   las normas armonizadas. 🔴 **Y no vender la maquinaria de alto riesgo como «obligacion
+   inminente»**: desde julio de 2026 eso es incorrecto, y un cliente que lo verifique pierde la
+   confianza en todo lo demas del plan.
+
+**Piezas, con su estado declarado:**
+
+| Pieza | Que aporta | Estado |
+|---|---|---|
+| `compose/code/aiact-50-2-pack/` | marcado art. 50(2) sobre SCORM ya armado | 🟢 **construido y probado en este repo** |
+| `compose/code/p317-data-license-layer/` | eje de procedencia de corpus para el FRIA | 🟢 construido — 🔴 **canal denegado este pase** |
+| `compose/code/lib/license_family.sh` | clasificador de familia de licencia | 🟢 construido, control compartido |
+| Moodle 5.1 / Open edX | superficie generativa a inventariar y marcar | 🔵 **pista de canal secundario, sin verificar** |
+| `OATutor` | ITS; codigo MIT + contenido CC BY 4.0 | 🔵 **pista — pre-registrada (accion C del pase 104)** |
+
+⚠️ **Lo que esta receta NO cubre, dicho en vez de callado:** no hay en esta base ningun componente
+que produzca el **FRIA** como documento, ni registro de auditoria conforme al art. 26. **Los tramos 4
+y 6 son trabajo de consultoria con andamiaje a construir, no piezas que se descargan** — y cotizarlos
+como si existieran seria el mismo error de calendario al revés.
+
+---
+
 
 
 ## 🆕 Patrones del pase 102 (2026-10-04) — `P317`–`P319` y la receta `R-102-PROCEDENCIA-DE-CORPUS`

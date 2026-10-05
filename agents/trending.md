@@ -9,6 +9,89 @@ updated: 2026-10-05
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 > No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
 
+## 2026-10-05 — pase 103: el canal de verificacion se apaga, y la base se descubre REGRESANDO sobre un acierto propio
+
+> **Frontmatter y region:** `Global`. Las senales regionales de este pase estan en
+> `intel/market.md` (barrido 32, cuatro regiones, 0 silencios).
+
+🔴 **Altas: 0 — y a diferencia del pase 102, este cero no es una eleccion.** El canal que esta base
+usa para leer licencias de **payload** esta apagado, y una fila sin payload leido no es una fila.
+
+### 🔬 El canal, medido y no heredado (`P247`) — `P320`
+
+| Canal | Pase 102 | Pase 103 |
+|---|---|---|
+| Clon sin blobs (`P275`) | 🟢 vivo | 🔴 **DENEGADO por permisos** |
+| `WebFetch` a fuente primaria | 🟢 vivo | 🔴 **egress bloqueado 4/4** |
+| `WebSearch` | 🟢 vivo | 🟢 **unico vivo** |
+
+⚠️ **`P320`: el canal de verificacion es un hecho de PERMISO, no solo de red.** El instrumento
+`p317` esta intacto en este repo; **lo que falta es el derecho a correrlo.**
+
+### 🔴 El hallazgo que manda, y es una REGRESION de esta base (`P321`)
+
+🔴 **`intel/market.md` se contradice consigo mismo y nada lo detecto:** el **pase 101** publico las
+dos fechas del AI Act **bien** (art. 50 vigente `2026-08-02`; Anexo III `2027-12-02`) y el **pase
+102** las colapso en *«entra en pleno efecto en agosto de 2026»*, que es **falso**.
+
+🔴 **Y el agravante: los pases 100 y 101 estaban LLEVANDO LA CUENTA de ese mismo error de canal**
+—*«cuarta y quinta vez»*, *«sexta vez»*—. **El pase 102 es la septima reproduccion, y la cometio la
+base que llevaba el contador.** ⚠️ **Vigilar un sesgo externo y ser inmune a el son cosas
+distintas.**
+
+🟢 **Lo que este pase aporta y el 101 no tenia: el instrumento.** **Reglamento (UE) 2026/1744**
+(*Digital Omnibus on AI*), DOUE **24/07/2026**, en vigor **27/07/2026**: corre el Anexo III autonomo
+al **2027-12-02** y el Anexo I al **2028-08-02**, **condicionado** a que la Comision confirme las
+normas armonizadas. 🔴 **El pase 101 habia descartado como «falsa» la noticia de que un reglamento
+entro en vigor en julio de 2026 — que es justo el instrumento que explicaba su propia respuesta
+correcta.**
+
+🟢 **El codigo de esta base apuntaba al reloj correcto:** `aiact-50-2-pack/` implementa el art.
+50(2), **vigente**, con gracia hasta **`2026-12-02`** — dos meses.
+
+### 🔴 La accion pre-registrada: NO MEDIDA (ni confirmada ni falsificada)
+
+El eje A de `p317` se mide **enumerando el arbol**, y ese canal esta denegado. **No hay sustituto:**
+adivinar paths es el falso negativo que `P319` prohibe. ⚠️ **La prediccion queda en pie, re-registrada
+sin cambios.** Lo unico establecido para cuando el canal vuelva: **419** apariciones de URL de GitHub
+en `agents/top.md` y **304** en `repos/foundations.md` — **apariciones, no slugs distintos.**
+
+### 🔵 Las pistas, publicadas como pistas
+
+- 🔵 **`OATutor`**: ITS open source completo, **codigo MIT + material CC BY 4.0**. Seria el tercer
+  especimen de `P315`/`P317` y **el primero que es plataforma** y no corpus. Sin payload: **pista.**
+- 🔵 **Identidad**: el paper de `Edu-ConvoKit` declara canonico `stanfordnlp/edu-convokit`; la
+  tabla publica `rosewang2008/edu-convokit`. `P253`/`P306` favorecen al canonico. **Pre-registrado.**
+- 🔵 **Moodle 5.1** (julio 2026): *toggle* de AI por curso y por actividad, y **DeepSeek** sumado
+  como proveedor. **Open edX**: *AI Assistant* que opera dentro de la plataforma. **Canal secundario,
+  sin verificar.**
+
+### ⚠️ Lo que este pase NO pudo colocar, dicho en vez de callado
+
+- 🔴 **La accion pre-registrada**, por canal denegado. **Deuda de dos pases.**
+- 🔴 **`amber` y `ncte`**: 74 de 111 archivos sin cesion de primera mano. `ncte` **avanza** (NCTE
+  Transcripts, Demszky y Hill 2022, 1.660 transcripciones, 317 docentes, 2010–2013) pero el
+  «CC BY 4.0» viene de **agregador**, no del titular — y `P314` ya pago ese error. **No resuelta.**
+- 🔴 **`P281`, vigesimosexta vez:** eje generalista, **0 piezas educativas**.
+- ⚠️ **Rechazo documentado:** `Hermes Agent` con *«+180.000 estrellas desde febrero de 2026»*:
+  inverificable e inverosimil. **No entra**, y el rechazo queda escrito.
+
+### 🔴 Acciones pre-registradas para el pase 104, falsables
+
+**A** — re-registrada **sin cambios**: el eje A de `p317` encontrara **>= 6** repos que redistribuyen
+corpus y la **mayoria** volvera `CORPUS-SIN-CESION`. Unidad = *repos que redistribuyen corpus*;
+denominador = *slugs publicados que el clon resuelva*, los que fallen **declarados aparte**.
+**B** — `rosewang2008/edu-convokit` **redirige** a `stanfordnlp/edu-convokit` (o el canonico tiene
+`HEAD` mas reciente). Si no redirige y es el mas activo, la fila esta bien.
+**C** — `OATutor` vuelve `DATOS-DECLARADOS-DISTINTOS` o `CORPUS-CON-TERMINOS`, **no** `SIN-CORPUS`.
+
+⚠️ **Las tres requieren el clon sin blobs. Si sigue denegado, el resultado correcto es «no medida»,
+no un sustituto de otro canal.**
+
+---
+
+
+
 ## 2026-10-04 — pase 102: la predicción propia FALSIFICADA, y debajo un corpus `NonCommercial` dentro de una fila MIT
 
 🔬 **El canal, declarado antes de cualquier veredicto (`P247`), medido este pase y no heredado.**

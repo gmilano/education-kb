@@ -8,6 +8,65 @@ updated: 2026-10-05
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 
+## 2026-10-05 — pase 103: GitHub trending vuelve vacio por TRIGESIMOSEGUNDA vez — y por PRIMERA vez el canal de respaldo tambien esta apagado
+
+🔴 **Este pase es el primero de la serie sin NINGUN canal de repos.** Los 31 pases anteriores
+tenian al menos un canal de respaldo cuando *trending* volvia vacio — el arbol de los repos ya
+publicados (pase 102), el de mercado (101, 100), el registro de paquetes (99)—. **Este pase no tiene
+ninguno**, y la razon no es saturacion del tema: es **permiso**.
+
+### 🔬 El barrido obligatorio, con el ano CALCULADO, y su resultado
+
+Ano: `date +%Y` → **2026** (calculado, no fijado). Barridos corridos:
+
+| Consulta | Resultado |
+|---|---|
+| `github trending education AI 2026` | 🔴 **0 repos de la industria educativa** |
+| `top open source AI agents education 2026 github MIT` | 🔴 **0 piezas educativas** — eje generalista (`P281`, 26ª vez) |
+
+Lo que el barrido devolvio, y es material de **aprender-a-programar**, no de la industria educativa:
+`rohitg00/ai-engineering-from-scratch`, `speedyapply/2026-AI-College-Jobs` (5,2k★, 206 forks),
+`pguso/agents-from-scratch`, `avinash201199/free-ai-agents-resources`, y Karpathy
+*«Neural Networks: Zero to Hero»*. ⚠️ **Es el mismo falso positivo de dominio que esta serie viene
+registrando: «educacion» como TEMA de un repo para devs no es la industria educativa**, y un barrido
+que los cuente llena la tabla con material que ningun estudio puede cotizarle a una institucion.
+
+### 🔴 El canal de respaldo, y por que este pase no lo tiene
+
+| Canal de respaldo | Pases donde rindio | Estado en el 103 |
+|---|---|---|
+| Arbol de repos ya publicados (clon sin blobs) | 102 | 🔴 **DENEGADO por permisos** |
+| `WebFetch` a fuente primaria / registro | 99, 101 | 🔴 **egress bloqueado 4/4 dominios** |
+| Barrido de mercado | 100, 101, 102 | 🟢 vivo — **pero no devuelve repos**, devuelve mercado |
+
+⚠️ **`P320`:** el canal es un hecho de **permiso**, no solo de red. **Consecuencia para este archivo:
+0 repos nuevos, y el cero es de canal y no de tema.** La distincion importa porque un cero de
+saturacion dice *«no hay nada nuevo»* y un cero de canal dice *«no pude mirar»* — **y solo el primero
+es informacion sobre la industria.**
+
+### 🔵 Lo unico que este archivo puede registrar: cifras de canal, marcadas como SIN VERIFICAR
+
+El barrido generalista devolvio conteos de estrellas (`openclaw` 385.407, `dify` 151.639,
+`browser-use` 108.128, `Mem0` 62.735, `AutoGen` 60.284, `Flowise` 55.226). ⚠️ **No se publican como
+dato verificado**, por dos razones acumuladas: el canal de payload esta apagado **y** el registro de
+rotacion de esta infraestructura ya dejo escrito que conteos previos de estrellas venian **inflados
+por pipeline**. **Quedan como salida de canal.**
+
+🔴 **Y un rechazo documentado, porque un rechazo no escrito se parece a no haber mirado:** un
+agregador declaro `Hermes Agent` con **+180.000 estrellas desde un lanzamiento en febrero de 2026**.
+**Inverificable con el canal del pase, e inverosimil para la ventana declarada. No entra.**
+
+### ⚠️ Lo pendiente de este archivo, sin rellenar
+
+- 🔴 **La serie de estrellas sigue cortada** (se corto en el pase 98 por canal, no por saturacion) y
+  este pase **no la puede reanudar**.
+- 🔴 **0 repos nuevos**, por canal. **No se agrega ninguna fila de relleno.**
+- ⚠️ **Deuda de dos pases:** la accion pre-registrada del eje A de `p317` sigue sin correr.
+
+---
+
+
+
 ## 2026-10-04 — pase 102: GitHub trending vuelve vacío por TRIGESIMOPRIMERA vez, y el canal que rindió fue el ÁRBOL de los repos ya publicados
 
 🔬 **Canal (`P247`), medido este pase.** `github.com` (web) · `api.github.com` · `codeload` → 🔴 **403**.

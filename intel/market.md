@@ -8,6 +8,7 @@ updated: 2026-10-05
 
 > Key players, market map y oportunidades por región.
 > Investigado 2026-09-30; el pase 11, el 2026-10-01. Las estimaciones de tamaño de mercado varían mucho entre firmas: se listan todas con su fuente en vez de elegir una.
+> **Pase 103 del 2026-10-05:** 🔴 **Trigesimosegundo barrido regional (año CALCULADO: 2026), las cuatro regiones responden, 0 silencios — pero el pase corre con UN SOLO canal vivo (`WebSearch`): el clon sin blobs está DENEGADO por permisos y `WebFetch` bloqueado por egress en 4 de 4 dominios, así que **0 licencias leídas de payload y 0 altas** (`P320`).** 🔴 **El hallazgo que manda es una REGRESIÓN de esta base, no una novedad del mercado: el pase 101 tenía las DOS fechas del AI Act bien (art. 50 vigente `2026-08-02`; Anexo III `2027-12-02`) y el pase 102 las colapsó en *«entra en pleno efecto en agosto de 2026»*, que es FALSO — y es la **séptima** reproducción del error de canal que los pases 100 y 101 estaban CONTANDO (`P321`).** 🟢 **Este pase aporta el instrumento que el pase 101 no tenía: **Reglamento (UE) 2026/1744** (*Digital Omnibus on AI*), DOUE 24/07/2026, en vigor 27/07/2026, que corrió el Anexo III autónomo al **2027-12-02** — y la prórroga es **CONDICIONAL** a que la Comisión confirme las normas armonizadas.** 🟢 **El código de esta base apuntaba al reloj correcto: `aiact-50-2-pack/` implementa el art. 50(2), que SÍ está vigente y cuya gracia vence el `2026-12-02`.**
 > **Pase 102 del 2026-10-04:** 🟢 **Trigesimoprimer barrido regional (año CALCULADO: 2026), las cuatro regiones responden, 0 silencios.** 🔵 **Y el hallazgo regional de este pase es el que LIGA la medición técnica del pase con el mercado: la pregunta de PROCEDENCIA DE CORPUS, que el pase midió en `edu-convokit` (111 archivos de corpus bajo cesión MIT, con `talkmoves` siendo `CC BY-NC-SA 4.0` del upstream), es exactamente la que EMEA y APAC están volviendo obligatoria.** 🔴 **EMEA: el AI Act clasifica la AI educativa como ALTO RIESGO y entra en pleno efecto en agosto de 2026 — este mes—, y el Consejo de Europa convoca su 2ª conferencia de trabajo sobre las dimensiones regulatorias de la AI en educación para octubre de 2026.** 🔴 **APAC: Canberra está endureciendo gobernanza de AI Y REGLAS DE COPYRIGHT a la vez, y Singapur abrió consultas de uso responsable; el eje declarado de la región para 2026 es SOBERANÍA de AI.** 🟢 **Norteamérica va al revés y eso también es cotizable: 36 % del mercado global y un vacío regulatorio sin equivalente a la FDA, con Colorado y Texas agregando requisitos por pedazos.** 🟢 **LATAM gana la fuente que esta base le debía: el working paper de UNESCO IESALC mapea adopción de AI en 200 instituciones de educación superior de 19 países (relevamiento agosto–octubre 2025) en cinco dimensiones.** 🔵 **Tamaño de mercado, con la fuente al lado y sin elegir una: 7.520 M USD (2025) → 10.600 M USD (2026), CAGR 40,9 %, y 79.600 M USD a 2034 con CAGR 31,35 % para 2026–2034.**
 > **Pase 101 del 2026-10-04:** 🟢 **Trigésimo barrido regional (año CALCULADO: 2026), las cuatro regiones responden, 0 silencios.** 🔴 **El hallazgo que manda es del canal otra vez, y empeora: el AI Act se reprodujo mal por SEXTA vez, y esta vez el error es en DOS ejes a la vez — el barrido de EMEA no sólo repite «high-risk desde agosto de 2026» (cuando el Anexo III se difirió a `2027-12-02`), sino que afirma que *«the AI Act entered into force on 31 July 2026»*, y la entrada en vigor fue en 2024.** 🔵 **Seis reproducciones en seis pases, y ahora con un error nuevo encima: el canal no se degrada hacia el silencio, se degrada hacia la CONFIANZA — una fecha falsa y precisa es peor que una vaga** (`P281`). 🟢 **APAC aporta el dato más accionable del pase para un estudio de AI, y es nuevo: Singapur publicó el `2026-01-22`, vía IMDA, un marco específico para AI AGÉNTICA — el primer instrumento del mundo que regula agentes como categoría, justo lo que esta base compone.** 🟢 **APAC suma el calendario completo: Corea del Sur con su Framework Act vigente desde el `2026-01-22`, Vietnam desde el `2026-03-01`, y Australia con una Office of AI creada en julio de 2026 más estándares obligatorios para centros de datos de AI y un «digital duty of care».** 🟢 **LATAM aporta el denominador de adopción que la región no tenía con esta precisión: 92 % de los alumnos y 79 % de los docentes de educación superior ya usan AI, y 94 % de los docentes esperan usarla (Digital Education Council, LATAM 2026, con el Institute for the Future of Education del Tec de Monterrey).** 🔴 **Y el dato de LATAM que invierte la lectura optimista: 61 % de los alumnos teme el MAL uso de AI por parte de sus compañeros — la demanda de la región no es por más generación, es por INTEGRIDAD.** 🔴 **NA cuantifica el mosaico: 134 proyectos de ley sobre AI en educación en 31 estados este año, y dos estados —Oklahoma y Maryland— ya PROHÍBEN que la AI decida sobre un alumno: eso convierte «observar y fundamentar» en la única capa vendible, que es exactamente la que este pase agregó.** ⚠️ **Y una contradicción de tamaño de mercado que se publica SIN elegir: el barrido global da USD 7,52 MM (2025) → 10,6 MM (2026) al 40,9 % CAGR, mientras la cifra de NA que esta base ya tenía da 15,9 % CAGR — 2,6× de diferencia entre dos fuentes del mismo canal.** 🔴 **La región que NO se pudo colocar con una pieza es LATAM, otra vez: de las 6 altas, 1 queda en North America y 5 sin región por `P135`/`P261`.** Ver **`P312`**–**`P316`**.
 > **Pase 100 del 2026-10-04:** 🟢 **Vigesimonoveno barrido regional (año CALCULADO: 2026), las cuatro regiones responden, 0 silencios.** 🔴 **Y el hallazgo que manda es una REINCIDENCIA del canal, no del mercado: el canal secundario reprodujo la versión SUPERADA del AI Act por CUARTA y QUINTA vez — los barridos de HOY de North America («*taking full effect in August 2026, classifies education AI as high-risk*») y de LATAM («*cuyo marco entró en vigor progresivamente desde agosto de 2026*») siguen diciendo agosto de 2026 para el ALTO RIESGO, cuando el Anexo III se difirió a `2027-12-02` y lo vigente es el artículo 50.** 🔵 **Cinco reproducciones en cinco pases es una propiedad del canal, no un error: la prensa de industria NO va a corregir esto, así que la corrección de esta base hay que sostenerla contra fuente legal cada vez que se cotiza en EMEA** (`P281`). 🟢 **NA aporta el dato que vuelve accionable su vacío federal: los estados ya legislan en concreto —Colorado y Texas con requisitos parciales— sobre un mercado de USD 951 M (2024) → USD 2.303,2 M (2029) al 15,9 % CAGR y 36 % del global.** 🟢 **EMEA aporta un CALENDARIO que cae este mes: la 2ª conferencia de trabajo del Consejo de Europa sobre las dimensiones regulatorias de la AI en educación es en OCTUBRE de 2026, y el Consejo de Europa son 46 estados con un instrumento SEPARADO del AI Act.** 🟢 **APAC confirma su eje de soberanía con el número de gobernanza: 48 % de los líderes de gobernanza ponen la adopción de AI como prioridad estratégica 2026 y 57 % de las organizaciones de Asia ya la tienen en producción en al menos un área.** 🟢 **LATAM aporta el dato que invierte la lectura habitual de la región: es el TERCER mercado mundial de descargas de aplicaciones de AI generativa, con adopción empresarial por encima del 85 %.** 🔴 **Y la región que NO se pudo colocar con una PIEZA este pase es LATAM: de las 7 piezas nuevas, 3 quedan en North America, 1 en North America **y** EMEA por huella de despliegue, 1 en APAC y 2 sin región — cero en LATAM, y se dice en vez de dejarlo en silencio.** Ver **`P308`**–**`P311`**.
@@ -67,6 +68,148 @@ updated: 2026-10-05
 > regulado — **STUDENTS FIRST Act of 2026**, marco de los estudiantes de los 50 estados (AASA, agosto 2026).
 > **LATAM:** 🔵 el hallazgo del pase — **existe una capa MCP nacional brasileña de datos públicos, activa y MIT, y
 > educación es el único dominio grande que falta** (**gap 69**).
+
+## 🔴 Barrido regional 32: las cuatro regiones responden, y el hallazgo CORRIGE la seccion EMEA de este archivo — el AI Act educativo NO entra en vigor en agosto de 2026 (pase 103 del 2026-10-05)
+
+### 🔬 El canal, declarado antes de cualquier veredicto (`P247`)
+
+🔴 **Este pase corre con UN SOLO canal vivo, y es el mas pobre de los tres que esta base usaba.** Medido,
+no heredado:
+
+| Canal | Pase 102 | Pase 103 | Consecuencia |
+|---|---|---|---|
+| Clon sin blobs (`--filter=blob:none`), el canal de `P275` | 🟢 vivo | 🔴 **DENEGADO por permisos de sesion** | la accion pre-registrada **no se pudo correr** |
+| `WebFetch` sobre fuente primaria | 🟢 vivo | 🔴 **bloqueado por egress en 4 de 4 dominios** (`aclanthology.org`, `arxiv.org`, `edu-convokit.readthedocs.io`, `files.eric.ed.gov`) | ninguna licencia leida de payload |
+| `WebSearch` | 🟢 vivo | 🟢 **vivo** | **unico canal del pase** |
+
+⚠️ **`P320` — el canal de verificacion no es solo un hecho de RED: es un hecho de PERMISO, y puede
+apagarse mientras el instrumento sigue sano.** La diferencia importa porque cambia que se puede
+publicar: con el canal de payload apagado, **toda candidata de este pase es una PISTA y ninguna es una
+fila**. Esta base cotiza con sus tablas; una fila cuya licencia no se leyo del payload no es una fila,
+es una suposicion con formato de tabla.
+
+### 🔴 La correccion que manda, y NO es «la base se equivoco»: es una REGRESION
+
+Buscar la fecha del AI Act destapo algo peor que un dato viejo. **Este archivo tiene las dos fechas
+bien escritas en la seccion del pase 101, y el pase 102 las perdio.** Las dos secciones conviven hoy
+en el mismo archivo, diciendo cosas distintas:
+
+| Pase | Que publico este archivo sobre el alto riesgo educativo | Veredicto |
+|---|---|---|
+| **101** | tabla de dos relojes: *«Art. 50 vigente `2026-08-02`»* │ *«Anexo III: `2027-12-02`»* | 🟢 **CORRECTO** |
+| **102** | *«el AI Act … entra en pleno efecto en agosto de 2026 —este mes—»* | 🔴 **FALSO, y es un RETROCESO** |
+
+🔴 **Y el agravante lo aporta este mismo archivo: los pases 100 y 101 estaban LLEVANDO LA CUENTA
+de cuantas veces el canal secundario reproducia la version superada del AI Act** — *«por cuarta y
+quinta vez»* (pase 100), *«por sexta vez»* (pase 101)—. **El pase 102 publico esa misma version
+superada. Es la septima reproduccion del error, y la hizo la base que llevaba el contador.**
+⚠️ **Un contador de errores de canal no protege al que lo lleva.** Vigilar un sesgo en una fuente
+externa y ser inmune a ese sesgo son cosas distintas, y esta base acaba de medir la diferencia sobre
+si misma.
+
+🔴 **`P321` — una base que solo APENDE no tiene mecanismo para notar que un pase posterior
+contradijo el resultado CORRECTO de un pase anterior.** La contradiccion no genera ningun error: las
+dos secciones se quedan quietas, y **el lector le cree a la mas nueva**, que es justo la equivocada.
+⚠️ **Esto no es un defecto de un pase: es un defecto de la FORMA del archivo**, y afecta a los ocho.
+El historial sirve para auditar; tambien sirve para enterrar un acierto debajo de un error posterior.
+
+🟢 **Lo que este pase si agrega, y el pase 101 no tenia: el INSTRUMENTO que produce esas fechas.** El
+pase 101 publico las fechas correctas **sin la norma que las explica**. Es el **Digital Omnibus on
+AI** — **Reglamento (UE) 2026/1744**, DOUE **24 de julio de 2026**, en vigor **27 de julio de 2026**—
+el que movio el Anexo III autonomo del **2 de agosto de 2026** al **2 de diciembre de 2027** (y el
+Anexo I embebido al **2 de agosto de 2028**).
+
+🔴 **Y hay una ironia que conviene dejar escrita, porque es una leccion de canal:** el pase 101
+listo como *«falsa»* la afirmacion de prensa de que *«el reglamento entro en vigor en julio de
+2026»*. Leida sobre el **AI Act** esa afirmacion es falsa —el AI Act entro en vigor en 2024—, pero
+**si hay un reglamento que entro en vigor en julio de 2026: el Omnibus, que es exactamente el
+instrumento que produce la fecha de 2027 que el propio pase 101 publico.** ⚠️ **El pase 101 descarto
+como error el hecho que sostenia su propia respuesta.** Tener el resultado correcto no es tener el
+mecanismo, y sin el mecanismo el resultado no se puede defender ante un cliente ni sobrevivir al
+pase siguiente — que es, literalmente, lo que le paso.
+
+🟢 **El calendario, consolidado y con la norma al lado:**
+
+| Reloj | Que obliga | Fecha | Estado al 2026-10-05 |
+|---|---|---|---|
+| **Articulo 50 — transparencia** | marcado de contenido sintetico, informar al afectado | **2026-08-02**, gracia hasta **2026-12-02** | 🟢 **VIGENTE**, y la gracia vence en dos meses |
+| **Anexo III — alto riesgo educativo** | FRIA (art. 27), supervision humana y registro del *deployer* (art. 26) | **2027-12-02** | 🔴 **diferido y CONDICIONAL** |
+| **Anexo I — alto riesgo embebido** | idem, en producto regulado | **2028-08-02** | diferido |
+
+🟢 **El trabajo con codigo de esta base estaba apuntado al reloj correcto todo el tiempo.**
+`aiact-50-2-pack/` implementa el marcado del **articulo 50(2)**, que es el que **si** esta vigente.
+**La prosa de mercado del pase 102 erraba la fecha; el entregable no.**
+
+⚠️ **La prorroga no es una certeza vendible: es CONDICIONAL.** El 2 de diciembre de 2027 depende de
+que la Comision confirme las normas tecnicas armonizadas; si se demora, la fecha se mueve con ella.
+**Un plan que trate esa fecha como piso firme apuesta a un acto administrativo que no ocurrio.**
+
+### 🔵 Que cambia esto en una cotizacion EMEA, dicho sin adorno
+
+🟢 **Lo que hay que entregar HOY** es el marcado del articulo 50, que esta base ya construyo y probo.
+🔵 **Lo que hay que ESTADIFICAR**, con 16 meses mas de los que el pase 102 creia, es la maquinaria de
+alto riesgo: FRIA, supervision humana, registro. 🔴 **Y el argumento comercial se invierte respecto
+del pase 102:** ya no es *«corra, que es este mes»*; es *«el marcado es exigible ya y casi nadie lo
+hizo, y la ventana del alto riesgo se abrio — usela para construir el expediente en vez de
+improvisarlo en 2027»*. **La urgencia cambio de puerta, no desaparecio.**
+
+### 🔴 `P281`, por vigesimosexta vez: el barrido global devuelve el eje generalista
+
+Los dos barridos obligatorios del encargo (ano **calculado**, `date +%Y` → **2026**) volvieron a
+devolver el eje generalista y **0 piezas de la industria educativa**: `openclaw`, `dify`,
+`browser-use`, `Mem0`, `AutoGen`, `Flowise`.
+
+⚠️ **Las cifras de estrellas que el canal devolvio NO se publican como dato verificado**, y el motivo
+es doble: el canal de payload esta apagado este pase, y el propio registro de rotacion de esta
+infraestructura ya dejo escrito que conteos previos de estrellas venian **inflados por pipeline**. Se
+registran como **salida de canal, sin verificar**.
+
+🔴 **Y una afirmacion que este pase se NIEGA a publicar, que es informacion sobre el canal:** un
+agregador declaro un agente (`Hermes Agent`) con **mas de 180.000 estrellas desde un lanzamiento en
+febrero de 2026**. **No hay forma de verificarlo con el canal de este pase, la magnitud es
+inverosimil para la ventana declarada, y por lo tanto no entra.** Queda escrito que el canal lo
+ofrecio y que esta base lo rechazo.
+
+### ⚠️ Una desviacion ESTRUCTURAL de este archivo, declarada en vez de callada
+
+El encargo pide que las oportunidades vivan bajo **un solo** `## Opportunities by region`. 🔴 **Este
+archivo tiene 10**, uno por pase, acumulados por el patron append-only. **Este pase no agrego ninguno**
+— las senales regionales del barrido 32 estan en las secciones de arriba y la correccion de EMEA se
+aplico **sobre el bloque existente**, no en uno nuevo.
+
+🟢 **Auditado, y la parte que importa esta bien:** los **10** bloques tienen **las cuatro regiones
+presentes** (`North America`, `EMEA`, `APAC`, `LATAM`). **No hay ningun bloque LATAM-only**, que es lo
+que el encargo prohibe explicitamente, y el vocabulario de `region:` en el frontmatter de todo el repo
+es cerrado y valido (`Global` 77, `EMEA` 4, `North America` 1, `APAC` 1).
+
+⚠️ **Lo que si rompe:** 5 de los 10 bloques intercalan subsecciones `###` que **no son regiones**
+(«brechas declaradas», «lo que este barrido NO midio»). **Un compilador que tome todo `###` bajo ese
+`##` como region va a crear entidades basura** — es el mismo defecto de forma que el encargo advierte
+para `| Nombre | Repo | Licencia |`, pero una capa mas arriba. 🔴 **No se consolida en este pase:**
+fusionar 10 bloques repartidos en ~12.000 lineas destruiria el historial append-only que es la
+auditoria de esta base, y hacerlo sin canal de verificacion para re-chequear lo que se mueve seria
+imprudente. **Queda declarado como deuda de forma, con el conteo medido, para que el pase que lo
+arregle sepa exactamente que tamano tiene.**
+
+### 🔵 Tamano de mercado: las fuentes al lado, sin elegir una
+
+| Medida | Valor | Ventana |
+|---|---|---|
+| AI en educacion | **7.520 M USD → 10.600 M USD**, CAGR **40,9 %** | 2025 → 2026 |
+| AI en educacion | **79.600 M USD**, CAGR **31,35 %** | a 2034 (2026–2034) |
+| Tutores AI | **1.630 M USD (2024) → 7.990 M USD** | a 2030 |
+| Uso estudiantil declarado | **66 % (2024) → 92 % (2025)**; **~86 %** de estudiantes de superior usan AI como socio primario de investigacion | inicio de 2026 |
+
+⚠️ **Son estimaciones de consultoras distintas y no se reconcilian entre si** — el salto de 40,9 % y
+el de 31,35 % no describen la misma serie. Se publican **las dos con su fuente** porque elegir una
+seria inventar una precision que el canal no da.
+
+Segmentacion declarada por el canal: **nube 71,22 %** de cuota (2024), **K-12 45,62 %** de la
+adopcion, **STEM 34,78 %** de los ingresos, y **idiomas** como segmento de mayor crecimiento.
+
+---
+
+
 
 ## 🟢 Barrido regional 31: las cuatro responden, y por una vez el dato regional CONFIRMA la medición técnica del pase (pase 102 del 2026-10-04)
 
@@ -133,8 +276,16 @@ AI decida sobre un alumno— convierte un requisito disperso en un entregable. *
 
 ### EMEA
 
-🔴 **La oportunidad con fecha, y la fecha es ahora: el AI Act clasifica la AI educativa como ALTO
-RIESGO y entra en pleno efecto en agosto de 2026.** 🟢 **Lo que esta base ya tiene listo para eso es
+🔴 **CORREGIDO EN EL PASE 103 (2026-10-05): la oportunidad tiene DOS fechas, no una, y el pase 102
+las colapso — y la seccion del pase 101, mas abajo en este archivo, YA las tenia bien: es una
+REGRESION, no un dato viejo (`P321`).** El **Reglamento (UE) 2026/1744** (*Digital Omnibus on AI*, DOUE **24/07/2026**, en vigor
+**27/07/2026**) **corrio el alto riesgo del Anexo III —donde vive la AI educativa— del 2 de agosto de
+2026 al 2 de diciembre de 2027**, y esa prorroga es **condicional** a que la Comision confirme las
+normas armonizadas. 🟢 **Lo que SI es exigible desde el 2 de agosto de 2026 es la transparencia del
+articulo 50** — y es exactamente lo que `aiact-50-2-pack/` de esta base ya implementa y prueba.
+⚠️ **La frase del pase 102 que decia *«entra en pleno efecto en agosto de 2026»* queda retirada.**
+
+🟢 **Lo que esta base ya tiene listo para eso es
 inusualmente concreto:** el paquete de marcado del artículo **50(2)** (`aiact-50-2-pack/`, **27/27**, y
 **37/37** con conformidad real contra los XSD de los dos dialectos SCORM) **más** el eje de
 procedencia de corpus de este pase. 🔵 **Y el comprador está declarado:** **94 %** de las

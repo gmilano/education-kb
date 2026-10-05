@@ -7,6 +7,7 @@ updated: 2026-10-05
 # 📡 Tendencias — education
 
 > Ventana de investigación: septiembre 2026. Verificado 2026-09-30; el pase 11, el 2026-10-01.
+> **Pase 103 del 2026-10-05:** 🔴 **Tendencias 823–834, y la que manda es de método y contra esta base: `P321`** — un archivo append-only puede **sepultar un acierto bajo un error posterior**, y `intel/market.md` tiene hoy las dos versiones del calendario del AI Act conviviendo (pase 101 correcta, pase 102 falsa) sin que nada lo detecte. 🔴 **Agravante: los pases 100 y 101 LLEVABAN EL CONTADOR de ese mismo error de canal — el pase 102 fue la séptima reproducción, desde adentro.** 🟢 **El calendario real, con la norma que lo produce: Reglamento (UE) 2026/1744** (*Digital Omnibus on AI*, DOUE 24/07/2026, en vigor 27/07/2026) — art. 50 **vigente 2026-08-02** (gracia hasta **2026-12-02**), Anexo III educativo **2027-12-02** y **CONDICIONAL**, Anexo I **2028-08-02**. 🟢 **`P320`: el canal de verificación es un hecho de PERMISO, no sólo de red** — y una predicción **no corrida no es una predicción falsificada.
 > **Pase 102 del 2026-10-04:** 🟢 **Trece tendencias nuevas, numeradas 810–822** (el pase 101 cerró en 809). 🔴 **La que manda es una PREDICCIÓN PROPIA FALSIFICADA en las dos cláusulas: el pase 101 afirmó que la licencia por capa (`P315`) era la NORMA de la capa de observación de aula, y sobre el denominador pre-registrado de 9 repos las piezas con licencia de datos distinta de la del código, además de la conocida, son 0 — la predicción pedía ≥ 2 — y de las 2 que declaran datos una concede uso comercial EXPLÍCITO, así que tampoco hay mayoría `NC`.** 🔵 **Pero medirla destapó que la PREGUNTA estaba mal planteada, y eso es `P317`: la pregunta de datos son DOS ejes ortogonales —¿redistribuye corpus? y ¿cede algo sobre él?— y un barrido que sólo compara licencias DECLARADAS da PERMITIDO sobre la celda peor, porque esa celda es silenciosa.** 🔴 **`P318`: `rosewang2008/edu-convokit` —fila MIT de esta base, correcta para el código— redistribuye 29 transcripciones de TalkMoves, que `SumnerLab` publica `CC BY-NC-SA 4.0`, sin declarar términos de datos; 29 de 29 nombres medidos contra el árbol del upstream.** 🔴 **`P319`: la ausencia de `data/README.md` no es ausencia de datos — 404 en el path adivinado, 111 archivos de corpus en el árbol enumerado.** 🟢 **Y una cota mal atribuida se corrige: «la licencia de `speechocean762` no es verificable» era del CANAL, no del repo.**
 > **Pase 101 del 2026-10-04:** 🟢 **Trece tendencias nuevas, numeradas 797–809** (el pase 100 cerró en 796). 🔴 **La que manda es sobre el control compartido y la encontró un payload de un ALTA, no una fixture: `commercial_use_ok` devolvía uso comercial PERMITIDO para `CC-BY-NC-4.0`, una familia cuyo NOMBRE dice NonCommercial.** 🔴 **797–799: dos defectos distintos en la misma rama — el ORDEN entre atributos ORTOGONALES perdía el `NC` de un `CC BY-NC-SA`, y la compuerta de `P250` tenía DETRÁS cuatro familias que no son OSI, así que se abría sobre justo las que existe para atrapar.** 🔵 **800: y la dirección del daño es la peor de las dos — `P308` perdía permiso sobre un texto permisivo (cuesta una oportunidad); esto INVENTA permiso sobre un texto que lo prohíbe en su propio nombre (cuesta el entregable).** 🟢 **802: `P237` CERRADO, y el orden importó: primero se hizo a la librería un superconjunto, después se rewirearon las cuatro copias — que es la condición que el pase 100 había declarado y que convertía al rewiring obvio en una pérdida de tres familias.** 🔴 **803: el rewiring rompió el control de `p206`, porque extraía la función del TEXTO del archivo con `sed` en vez de medir su comportamiento.** 🔴 **805: la licencia tiene un eje de CAPA — permisiva en el código y no comercial en los datos — y esta base la trataba como una respuesta por repo.** 🔴 **806: la concesión puede vivir en el README sin archivo de licencia, y el canal secundario la leyó de un BADGE de shields.io.** 🔴 **807: la prensa de industria linkea un fork AGPL congelado del repo MIT que esta base ya tiene.** 🔴 **809: el canal regulatorio no se degrada hacia el silencio sino hacia la CONFIANZA — sexta reproducción del AI Act, ahora con una fecha de entrada en vigor falsa y precisa.** Ver `compose/code/p312-nc-gate-inversion/` (**21/21**) y `lib/test_license_family.sh` (**106/106**).
 > **Pase 100 del 2026-10-04:** 🟢 **Trece tendencias nuevas, numeradas 784–796** (el pase 99 cerró en 783). 🔴 **La que manda es sobre esta base y la encontró el propio pase antes de publicar: casi anuncia como capa NUEVA una capa que tiene desde el pase 14.** 🔴 **784–786: la acción pre-registrada del pase 99 está CONFIRMADA —3 de 18 anclas eran frase cruda— y el daño del Unlicense es peor que el de `P304`: no pierde la familia en `UNCLASSIFIED`, INVIERTE el veredicto comercial a `NONCOMMERCIAL-NOT-OSI` sobre el texto más permisivo que existe, porque la compuerta de `P250` está condicionada a «familia identificada» y al perderse la familia se ABRE.** 🔴 **787: y el control negativo de la suite falló sobre un ancla que NO es frase — una cuenta de LÍNEAS no es una propiedad del documento, es una propiedad de dónde caen sus saltos, y eso perdía la AGPL que `P288` instaló (`P171` por tercera vez).** 🟢 **789: fragilidad PROBADA no es defecto DISPARANDO: 0 de 18, y el reparto queda sin extrapolar.** 🔴 **791–792: `P311` — todos los controles de esta base auditan una afirmación que el pase HACE, y la de que un alta es NUEVA es implícita; lo implícito no lo audita nada.** 🟢 **793: el eje que rindió lo eligió el cuarto barrido obligatorio, el de MERCADO, que veintiocho pases leyeron como color de fondo.** 🔵 **796: y la pieza que más valor trae tiene la misma postura de método que esta base — invariantes falsables que VETAN.** Ver `compose/code/p308-phrase-anchor-sweep/` (**100/100**) y `compose/code/p311-duplicate-alta-gate/` (**11/11**).
@@ -115,6 +116,108 @@ updated: 2026-10-05
 > (tendencia 29), se abre el **gap 20** y se registran dos advertencias de verificación: los agregadores de estrellas
 > están mal por ~2× y **un 403 de `curl` no es un 404**. Ver la nota de método del pase 12.
 > **Pase 11:** el Digital Omnibus es derecho vigente (tendencia 25), aparece la capa predictiva y está vacía (tendencia 26), y se corrige un error de método de diez pasadas sobre licencias permisivas (tendencia 27).
+
+## 🔴 Tendencias 823–834 — pase 103 del 2026-10-05: el canal de verificacion se apaga, y la base se descubre REGRESANDO sobre un acierto propio
+
+> **Canal del pase (`P247`, medido):** clon sin blobs 🔴 **DENEGADO por permisos**; `WebFetch`
+> 🔴 **egress bloqueado 4/4** (`aclanthology.org`, `arxiv.org`, `edu-convokit.readthedocs.io`,
+> `files.eric.ed.gov`); `WebSearch` 🟢 **unico vivo**. **0 licencias leidas de payload ⇒ 0 altas.**
+
+### 🔴 823 — `P321`: un archivo que solo APENDE puede sepultar un acierto bajo un error posterior
+
+**La tendencia mas importante del pase es de metodo y es contra esta base.** `intel/market.md`
+contiene **las dos versiones** del calendario del AI Act: la correcta (pase 101) y la incorrecta
+(pase 102), **conviviendo**. Nada lo detecto. ⚠️ **El historial append-only sirve para auditar y
+tambien para enterrar: el lector le cree a la seccion mas nueva, que es la equivocada.**
+
+### 🔴 824 — un contador de errores de canal no protege al que lo lleva
+
+Los pases 100 y 101 **contaban** las veces que el canal secundario reproducia la version superada del
+AI Act (*«cuarta y quinta»*, *«sexta»*). **El pase 102 fue la septima — desde adentro.**
+⚠️ **Vigilar un sesgo y ser inmune a el son cosas distintas**, y esta base lo acaba de medir sobre si
+misma.
+
+### 🟢 825 — el calendario real del AI Act educativo, con la norma que lo produce
+
+**Reglamento (UE) 2026/1744** (*Digital Omnibus on AI*), DOUE **24/07/2026**, en vigor **27/07/2026**:
+
+| Reloj | Fecha | Estado al 2026-10-05 |
+|---|---|---|
+| Art. 50 — transparencia / marcado de contenido sintetico | **2026-08-02**, gracia hasta **2026-12-02** | 🟢 **vigente** |
+| Anexo III — alto riesgo educativo (FRIA art. 27, art. 26) | **2027-12-02** | 🔴 diferido, **condicional** |
+| Anexo I — alto riesgo embebido | **2028-08-02** | diferido |
+
+### ⚠️ 826 — la prorroga del alto riesgo es CONDICIONAL, y eso no se puede vender como piso firme
+
+El 2027-12-02 depende de que la **Comision confirme las normas tecnicas armonizadas**. Si se demora,
+**la fecha se mueve con ella.** 🔴 **Un plan de cliente que trate esa fecha como certeza apuesta a un
+acto administrativo que todavia no ocurrio.**
+
+### 🟢 827 — `P320`: el canal de verificacion es un hecho de PERMISO, no solo de red
+
+El instrumento `p317-data-license-layer/` esta **intacto** en este repo. **Lo que falta es el derecho
+a correrlo.** ⚠️ **Un pase que confunde *«el instrumento falla»* con *«no puedo correrlo»* saca
+conclusiones sobre repos cuando solo deberia sacarlas sobre si mismo.**
+
+### 🔴 828 — una prediccion no corrida NO es una prediccion falsificada
+
+El eje A de `p317` exige **enumerar el arbol**; sin ese canal el veredicto correcto es **«no
+medida»**. ⚠️ **El dia que esta base trate un cero de canal como un cero de hallazgo va a estar
+inventando datos con formato de rigor.** La prediccion queda **re-registrada sin cambios**.
+
+### 🔵 829 — el eje de licencia por capa se mueve de CORPUS a PLATAFORMA (pista)
+
+`OATutor`: **codigo MIT + 5 semestres de material didactico CC BY 4.0**. 🔴 **Si se confirma, cambia
+la consecuencia comercial del eje:** un corpus `NC` limita un **paper**; **material `CC BY` dentro de
+una plataforma limita el PRODUCTO del cliente**, y el limite se hereda al entregable. ⚠️ **Pista, no
+fila.**
+
+### 🔵 830 — el *toggle* de AI por actividad es infraestructura de CUMPLIMIENTO, no de UX
+
+**Moodle 5.1** (julio 2026) habilita activar/desactivar AI **por curso y por actividad**, y suma
+**DeepSeek** como proveedor. 🔵 **Leido contra el art. 50: si el limite de AI es configurable por
+actividad, el inventario de lo que hay que marcar deja de ser difuso y se vuelve finito.** Es la
+pista mas cotizable del pase. ⚠️ **Canal secundario, sin verificar.**
+
+### 🔴 831 — `P281`, vigesimosexta vez: el barrido global no alcanza a esta industria
+
+Eje generalista otra vez (`openclaw`, `dify`, `browser-use`, `Mem0`, `AutoGen`, `Flowise`): **0
+piezas de la industria educativa**. ⚠️ **Y el falso positivo de dominio reincide:** *trending*
+devuelve material de **aprender-a-programar** (`ai-engineering-from-scratch`, `2026-AI-College-Jobs`,
+Karpathy) que **no es la industria educativa** y que ningun estudio puede cotizarle a una
+institucion.
+
+### 🔴 832 — adopcion declarada vs. gobernanza instalada: la brecha es el encargo
+
+| Senal | Valor | Region |
+|---|---|---|
+| uso estudiantil declarado | **66 % (2024) → 92 % (2025)**; **~86 %** de superior usa AI como socio primario de investigacion | Global |
+| instituciones con guia formal de AI | 🔴 **10 %** | North America |
+| docentes sin formacion en AI | 🔴 **71 %** | North America |
+| organizaciones que aun no pilotean | 🔴 **38 %** | EMEA |
+| infraestructura insuficiente para datos en tiempo real | **49 %** | APAC |
+
+🟢 **El patron es consistente en las cuatro regiones: el uso corre muy por delante de la
+gobernanza.** 🔵 **Eso es exactamente lo cotizable, y no requiere convencer a nadie de adoptar AI.**
+
+### ⚠️ 833 — las estimaciones de mercado NO se reconcilian, y se publican las dos
+
+**7.520 M USD (2025) → 10.600 M USD (2026)** con CAGR **40,9 %**, y **79.600 M USD a 2034** con CAGR
+**31,35 %** para 2026–2034. Tutores AI: **1.630 M USD (2024) → 7.990 M USD (2030)**.
+⚠️ **El 40,9 % y el 31,35 % no describen la misma serie.** Se listan **las dos con su fuente**
+porque elegir una seria inventar una precision que el canal no da.
+
+### 🔴 834 — un rechazo documentado, porque un rechazo no escrito se parece a no haber mirado
+
+Un agregador declaro `Hermes Agent` con **+180.000 estrellas desde un lanzamiento en febrero de
+2026**. 🔴 **Inverificable con el canal del pase e inverosimil para la ventana declarada: NO entra.**
+⚠️ **Tambien quedan sin verificar los conteos de estrellas del eje generalista**, y hay motivo
+acumulado: el registro de rotacion de esta infraestructura ya dejo escrito que conteos previos venian
+**inflados por pipeline**.
+
+---
+
+
 
 ## 🟢 Tendencias 810–822 — pase 102 del 2026-10-04: la predicción propia falsificada, y la pregunta estaba mal planteada
 
