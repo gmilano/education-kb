@@ -43,6 +43,12 @@ o la variable de entorno (regla de **P107**, pase 47):
 | ídem, accion A y B del pase 106 | la cesion declarada de cada figura, y el padre de cada `oer` vacio | `python3 measure.py RAIZ` | 🔵 **2.443** figuras / **1.586** problemas · 🟢 **9.971 de 12.999 (76,7 %)** |
 | ídem, `P329` contra esta base (accion C) | afirmaciones de identidad de licencia apoyadas en un `sha256` **sin** nombrar la familia | `python3 sweep_sha_claims.py .` | 🔵 **27 en la forma correcta** · 🔴 **43 en la clase** (20 sobre un archivo de licencia) |
 | ídem, accion C segunda mitad | remedir la FAMILIA del payload de las huellas que esta base nombra | `sh remeasure_family.sh` | 🟢 **5 de 5 sin cambio de familia** · 🔴 **1 huella corregida** (`P333`) |
+| **`p355-cwd-portability/`** | **la accion A del pase 111: cada suite corrida desde su propio `cwd` Y desde uno ajeno, repartida por CAUSA (ruta efimera vs `cwd` asumido) y por FORMA del fallo (`CRASH` / `TOTAL-DEGRADADO` / `SILENCIOSO`)** | `python3 test_p355.py` | 🟢 **16/16** *(nuevo en el pase 112)* |
+| ídem, el barrido real del tablero | ¿cuantas suites no son portables entre `cwd`? | `python3 portability.py` | 🔴 **4 de 69** — 0 por ruta efimera, 4 por `cwd` asumido |
+| **`p356-citation-origin/`** | **la accion D del pase 111: las 21 citas colgadas de `P354` repartidas por ORIGEN, reusando las regex del propio auditor (`P237`) y cambiando solo el conjunto de archivos** | `python3 test_origin.py` | 🟢 **16/16** *(nuevo en el pase 112)* |
+| ídem, el reparto | ¿cuantas son deuda documental de verdad? | `python3 origin.py` | 🔴 **15 ANUNCIADAS** · 🟢 3 `DEFINIDA-FUERA` · 🟢 3 `INSTRUMENTO` · **0** errores de numeracion |
+| **`p357-hint-layer-cession/`** | **la accion C del pase 111: la cesion de la capa de HINT de `OATutor-Content`, con la herencia al padre medida fila por fila y el CONTRAFACTUAL de la premisa** | `python3 test_p357.py` | 🟢 **24/24** *(nuevo en el pase 112; corre SIN el corpus)* |
+| ídem, el barrido sobre el corpus | ¿cede la capa que un tutor usa mas? | `python3 hint_layer.py RAIZ` | 🔴 **62,2 %** (hint) vs 🟢 **76,4 %** (problema) · **26.136 de 69.121 sin cesion** |
 | `patterns-figure-audit/` | inventario de cifras de `patterns.md` y su instrumento | `python3 extract_figures.py --check` | **420** medidas *(383 → 420 en el pase 56, con P136)* |
 | `sebserver-mcp-gate/` | puerta MCP de SEB Server: sólo lecturas, `-32601` al resto | `python3 test_gate.py` | **37/37** |
 | `unitime-mcp-gate/` | puerta MCP de UniTime, con `hard_deny()` como piso | `python3 test_gate.py` | **46/46** ✅ *(total propio desde el pase 56; reproduce el conteo a mano del 55)* |
@@ -104,6 +110,29 @@ o la variable de entorno (regla de **P107**, pase 47):
 | ídem, Open edX por ref | ¿el veredicto `SIN-PROVEEDOR-DE-MODELO` aguanta una ref? | `sh sweep_platform_ref.sh` *(registrado, no ejecutado acá)* | 🔴 **`openai==0.28.1` DIRECTA** en `quince`/`redwood`/`sumac` · 🟢 ausente en `master` |
 | ídem, la replicación de la matriz del pase 90 | ¿la matriz de Moodle se sostiene remedida por otra mano? | ídem | 🟢 **6/6 refs EXACTO** (2→3→4→6→7→7) — primera cifra REPLICADA de esta base |
 
+
+🟢 **Pase 112 del 2026-10-05 — el tablero cierra 69/69 y las 4 acciones pre-registradas
+corrieron:** `Python 3.11.15`, **69 suites unicas** (63 `test_*.py` + 6 `test*.sh`), **0 fallos**
+desde el `cwd` propio. 🟢 **Tres suites nuevas** (`p355` 16/16, `p356` 16/16, `p357` 24/24) y
+**ninguna preexistente se toco**, salvo la que este pase ROMPIO al publicar y arreglo.
+
+🟢 **Las altas: 5 PERMISIVAS, la primera cifra distinta de cero en 34 barridos** — 4 MIT + 1
+Apache-2.0, cada una con la familia leida del payload y la huella publicada. **Y 3 de las 5 cierran
+parcialmente el hueco de codigo de APAC** por ancla de **CURRICULO NACIONAL** (Gaokao, 人教版), que
+es la forma de evidencia de `P245` y no el antroponimo que `P135` prohibe.
+
+🔴 **Veredictos: A CONFIRMADA** (4 ≥ 3, pero con el reparto 0/4 que desarma el mecanismo),
+**B REFUTADA** (las 2 filas devuelven el mismo entero — y el enunciado de deriva **no se publica**,
+`P358`), **C REFUTADA** (hint 62,2 % vs problema 76,4 %, −14,2 pp) y **D CONFIRMADA** (15 ≥ 14, con
+6 de las 21 que no eran deuda).
+
+🔴 **Y un defecto que encontro LA PUBLICACION, no el barrido:** el tablero dio **68/69** y la que
+fallaba era `test_p351.py`, rota por el acto de publicar este pase. `P359`, tres causas: el
+atribuidor de pase es **POSICIONAL** y en un archivo *newest-first* insertar arriba **re-atribuye**
+lo de abajo; un **UMBRAL** (`por debajo de 1.000 ★`) no es ni dato ni cita sino una **tercera
+clase**; y la suite afirmaba `pase_maximo == 111`, clavando el numero del pase que la escribio.
+⚠️ **Familia de `P352`/`P355` en un tercer eje: `P352` solo corria en su CONTENEDOR, `P355` en su
+DIRECTORIO, `P359` solo pasaba en su PASE.** Arreglada: **26/26 → 31/31**.
 
 🟢 **Pase 107 del 2026-10-05 — el tablero se re-verifico COMPLETO otra vez:** corrido aqui con
 `Python 3.11.15`, **58 suites unicas** (52 `test_*.py` + 6 `test*.sh`) **/ 63 invocaciones** (las 58

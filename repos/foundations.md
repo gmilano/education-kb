@@ -8,6 +8,7 @@ updated: 2026-10-05
 
 > Bases sobre las cuales construir. Verificado repo por repo vía WebFetch el 2026-09-30 (capas del pase 10, el 2026-10-01).
 > Leer la columna **Licencia** antes de proponer: media KB de educación es GPL/AGPL, no permisiva.
+> **Pase 112 del 2026-10-05:** 🟢 **5 cimientos permisivos nuevos, con la cesion leida del PAYLOAD y la huella publicada** — 4 MIT + 1 Apache-2.0. 🟢 **El que mas cambia la estanteria es `Selleo/mentingo` (MIT): un LMS self-hosted con mentor AI integrado, o sea la primera base de LMS PERMISIVA de esta KB — las ocho plataformas verticales medidas en el pase 90 eran COPYLEFT 8 de 8 (Moodle GPL-3.0, Open edX AGPL-3.0, Sakai/ERP incluidos).** 🔴 **Y una advertencia de datos que sale de la accion C: si se ingiere `OATutor-Content`, 26.136 de 69.121 unidades de hint (37,8 %) NO traen cesion, y asumir que el hint hereda la del problema padre sobre-declara la entregabilidad en 10,4 pp (`P357`).**
 > **Pase 111 del 2026-10-05:** 🔴 **0 altas fundacionales (trigesimo barrido, mismo conjunto: OpenEduCat, Open edX, Moodle, Chamilo, OpenOLAT, Fedena, ERPNext/Frappe, SchoolTool); 12 de 13 candidatas ya publicadas (`P311`) y la unica nueva (`OpenOSINT`) es de otra industria.** 🆕 **El aporte es que la columna de ESTRELLAS de este estante queda con cota por BANDA (`P349`): el canal es un ESCALON, no «3 cifras significativas». 🔵 **Y para este estante la consecuencia es FAVORABLE:** buena parte del inventario fundacional educativo vive por debajo de 1.000 ★ (los lectores QTI, los pilotos universitarios, `EduKTM`) y ahi el canal da el ENTERO EXACTO, asi que esas filas se pueden publicar con cifra verificable y FECHA (`P353`). ⚠️ **Y eso vuelve a este estante el que mas deuda tiene: la fila de `EduKTM` publica `265 ★ / 70 forks` SIN fecha, que es justo lo que `P353` pide no hacer en esta banda — se nombra como deuda y NO se corrige a ojo, porque no se re-midio.** Las grandes no: `moodle/moodle` renderiza `7.5k`, que son DOS cifras y ±50.** ⚠️ **Testigo re-leido: `moodle/moodle` → 7.5k ★ / 7.7k forks / GPL-3.0 — la licencia confirma lo publicado y la cifra NO es publicable como entero.** 🔴 **Y un defecto de reproducibilidad del codigo de este estante (`P352`): `test_p345.py` («21/21» del pase 110) no llega a IMPORTAR en un clon nuevo por un censo en `/tmp`; arreglada contra el artefacto versionado, reproduce 1.418/2.443 y 368 `OPENSTAX AUSENTE` digito a digito. Tablero real medido desde el clon: **66 suites, 0 fallos**.**
 > **Pase 110 del 2026-10-05:** 🔴 **0 altas fundacionales (vigesimonoveno barrido, mismo conjunto: OpenEduCat, Open edX, Moodle, Chamilo, OpenOLAT, Fedena, ERPNext/Frappe, SchoolTool).** 🟢 **El aporte es que el expediente de los 13 «sin licencia» queda CERRADO por el canal fuerte: arbol enumerado (`P275`), **9.886 rutas**, **0** archivos de cesion en cualquier profundidad y cualquier caja, con README alcanzable en 13 de 13 como testigo.** 🟢 **Y el instrumento esta VALIDADO contra dos respuestas que este arbol ya tenia: `1EdTech/openbadges-specification` → `ob_v3p0/license.md` (12.324 B, replica `P187` AL BYTE) y `dini-ag-kim` → CC BY-SA 4.0 en `lp-base.ttl:24` — las DOS invisibles para el sondeo de raiz.** 🔴 **`P187` ademas queda con denominador: no es UNA superficie de cesion, son CINCO en un mismo repo de especificacion.** 🔴 **Pero el arbol trae su propio error, medido: `dini-ag-kim/src/ontology/utils/owl2shacl/LICENSE` es **LGPL-3.0** (7.652 B, titular FSF) y pertenece a una herramienta EMPOTRADA — un barrido que tome el primer archivo hallado le pega copyleft de CODIGO a un repo cuyo entregable es DATO con atribucion.**
 > **Pase 109 del 2026-10-05:** 🔴 **0 altas fundacionales — el barrido devuelve por vigesimoctava vez el conjunto publicado (OpenEduCat, Open edX, Moodle, Chamilo, OpenOLAT, Fedena).** 🟢 **La cesion de este estante se RE-MIDIO del payload con 300 sondas (15 repos × 10 nombres × 2 ramas) y control negativo en 20/20 · 404: `openedx/XBlock` → Apache-2.0 en `master/LICENSE.TXT` (11.358 B, `cfc7749b96f6`, replica `P279`); `oak` → MIT en `LICENCE` (1.086 B, `02c5a8e84229`, replica `P340`); y las cifras publicadas de `gibbonedu/core` (35.121 B) y `openeducat_erp` (8.241 B) se confirman DIGITO A DIGITO contra su huella.** 🔴 **Y el estante tenia un falso negativo: `Javi111003/OlivIA-RAG` afirma MIT por badge y por arbol de README sin archivo que lo respalde (`P342`) ⇒ reclasificado de «descartable» a `P314`, cesion a pedir por escrito.** ⚠️ **El denominador vivo de «sin licencia» es 13, no 32: esta base ya corrigio esa cadena (32 → 22 → 13, pases 65–67, `P172`).**
@@ -115,6 +116,69 @@ corre ése antes de escribir uno a mano** (tendencia **313**). 🟢 **Y el `gafa
 > y 5 en `schemas12/`, y contar sólo el primero es lo que hizo invisible el segundo dialecto de SCORM (**P106**).
 > **Pase 36 del 2026-10-02:** 🔵 **este pase no agrega repos: le pone FECHA a los que ya están, y la fecha cambia tres recomendaciones.** Se midió la capa PHP de evaluación y telemetría en Packagist —el único registro de los tres que entrega descargas en este entorno (`api.npmjs.org` y `pypistats.org` dan **403 a CONNECT**)— y el resultado está en `repos/trending.md`. **Lo que hay que saber antes de proponer desde este archivo:** 🔴 **la pieza xAPI más descargada de esta base, `rusticisoftware/tincan` (Apache-2.0, 6.178 desc./mes, 863.777 totales), no publica desde el 2022-11-02**, y ⚠️ **el único MIT de esa capa, `php-xapi/client`, está parado desde el 2021-03-24** con 825 desc./mes. 🔵 **La lectura es que en xAPI/PHP lo permisivo está quieto y lo vivo es copyleft**, así que la receta de telemetría se sostiene en **Ralph (MIT)** + **`lrsql` (Apache-2.0)** + **`learnmcp-xapi` (MIT)** y no en la capa PHP. 🟢 **Del lado de evaluación, lo activo es `oat-sa/extension-tao-testqti`** (**885 versiones**, release del **2026-09-30**) **y sigue siendo GPL-2.0-only**, mientras **lo permisivo es lo nuevo**: `@longsightgroup/qti3-cli` (**MIT**, 41 releases desde el 2026-05-21, último **2026-10-01**) con **cero dependencias de terceros** — sus 4 dependencias son todas `@longsightgroup/*` pinneadas a la misma versión exacta. **Su manifiesto MCP completo de 20 tools está escrito en `compose/patterns.md` (P76).** 🔴 **Y una corrección de catálogo: `oat-sa/qti-sdk` devuelve 404 en Packagist porque es el nombre del REPO — su paquete es `qtism/qtism`** (GPL-2.0-only, 218.212 descargas totales, 315 versiones). **Nombre de repo y nombre de paquete son identificadores distintos, y confundirlos produce un 404 que parece una ausencia** — pasó igual con `1edtech/oneroster`, `imsglobal/lti-1-3-php-library` y `packbackbooks/lti-1-3-php-library`, los tres **404**, que se anotan como *«no verificado en Packagist bajo ese nombre»* y **no** como inexistentes. ⚠️ **Acción pendiente que el pase 37 tiene asignada: este archivo nunca pasó por el control de *slugs* distintos ni por el de *backlink*** — los dos que en `agents/top.md` encontraron **un duplicado** y **dos colisiones** este mismo pase.
 > **Pase 11 del 2026-10-01:** aparece una licencia que las diez pasadas anteriores filtraban sin saberlo — **ECL-2.0**, con la que licencia todo Apereo (Sakai, Opencast, OpenLRW). Es Apache-2.0 con el alcance de patentes acotado, aprobada por OSI y FSF, y **es apta para construir arriba**. Ver la capa de analítica institucional, abajo.
+
+## 🟢 Cimientos del pase 112 (2026-10-05) — 5 altas permisivas, y la primera base de LMS permisiva de esta KB
+
+### 🔬 El canal y la forma de la medicion (`P247`, `P249`)
+
+Cesion leida de `raw.githubusercontent.com` (**200** en 3 anclas buenas, **404** en 3 inventadas),
+familia resuelta por el **clasificador compartido** `compose/code/lib/license_family.sh`
+(**106/106**) y no por un lector propio (`P237`). Estrellas del sidebar de `github.com` por
+`WebFetch`, **fechadas** por estar en la banda `EXACTO` de `P349` (`P353`).
+
+| cimiento | repo | ref · archivo | familia del payload | bytes | sha256 | ★ 2026-10-05 |
+|---|---|---|---|---|---|---|
+| **Mentingo** | [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | `main/LICENSE` | 🟢 **MIT** | **1.062** | `ceb97717de1f` | **91** |
+| education-skills | [`flysheep-ai/education-skills`](https://github.com/flysheep-ai/education-skills) | `main/LICENSE` | 🟢 **MIT** | **1.068** | `23b91d7c0aef` | **106** |
+| FeiFei Companion | [`SimonsTang/feifei-companion`](https://github.com/SimonsTang/feifei-companion) | `main/LICENSE` | 🟢 **Apache-2.0** | **10.227** | `59a378bf23a0` | **105** |
+| Studivexa | [`codeXsidd/Studivexa`](https://github.com/codeXsidd/Studivexa) | `main/LICENSE` | 🟢 **MIT** | **1.068** | `58f77360830f` | **72** |
+| EduAgent | [`Zenglian990/AI_Tutor_Release`](https://github.com/Zenglian990/AI_Tutor_Release) | **`master`**`/LICENSE` | 🟢 **MIT** | **1.068** | `695941afdd1f` | **57** |
+
+⚠️ **`AI_Tutor_Release` cede en `master` y no en `main`.** Se anota porque un barrido que sondee
+solo `main` lo habria publicado como «sin licencia» — es el modo de falla de `P170` y la razon por
+la que el instrumento prueba **dos ramas × seis ortografias** antes de afirmar una ausencia.
+
+---
+
+### 🟢 `Selleo/mentingo` — por que es el cimiento que cambia la estanteria
+
+🔴 **El pase 90 midio la capa de plataforma y el resultado fue COPYLEFT 8 de 8, CERO permisivas:**
+GPL-3.0+ ×1, AGPL-3.0 ×2, GPL-3.0 ×4, LGPL-3.0 ×1 — Moodle, Open edX, Sakai y compañia. Para un
+entregable cerrado esa capa estaba **medida y bloqueada por licencia**, y la unica salida era
+construir el LMS o aceptar el copyleft.
+
+🟢 **`mentingo` es la primera pieza de ESA capa con cesion permisiva en esta base:** LMS
+self-hosted, **MIT**, con mentor AI integrado, posicionado explicitamente por su autor como
+alternativa a Moodle, Docebo y Open edX, y con foco en formacion corporativa, *onboarding* y
+*compliance* — que es exactamente el segmento de un *engagement* de Studios.
+
+⚠️ **Y con la cota dicha, porque 91 ★ no es Moodle:** 91 ★ y 28 forks contra un ecosistema de
+dos decadas. Lo que `mentingo` compra no es madurez: es **ausencia de friccion de licencia** en una
+capa donde esta base no tenia ninguna. **Una base permisiva chica y una copyleft grande son
+decisiones distintas, no una mejor que la otra** — y hasta este pase la primera opcion no existia.
+
+---
+
+### 🔴 Advertencia de DATOS sobre `CAHLR/OATutor-Content`, que sale de la accion C de este pase
+
+Corpus medido en `1925decc91567faf6203bdb41b9d52b14891426f` (**49.479** JSON, **82.492** unidades).
+
+| capa | unidades | `RESOLUBLE` | tasa | `license` vacio |
+|---|---|---|---|---|
+| problema | 13.371 | 10.210 | 🟢 **76,4 %** | 2.545 |
+| **hint** | **69.121** | **42.985** | 🔴 **62,2 %** | **26.136 (37,8 %)** |
+
+🔴 **No se puede asumir que el hint hereda la cesion de su problema padre.** Medido directo:
+**80,2 %** de los hints igualan al padre, y la divergencia es **asimetrica 66 a 1** — **13.499**
+hijos vacios con un padre que SI cede, contra **204** al revés. La cubeta de **contradiccion esta
+vacia**: cuando los dos declaran, declaran lo mismo ⇒ el defecto es **OMISION**, no conflicto.
+
+🔵 **La cifra que decide un presupuesto:** asumir la herencia sobre-declara la entregabilidad del
+material de tutoria en **+10,4 pp** (62,2 % → 72,6 % contrafactual). **La capa que un tutor AI usa
+mas —la de pistas— es la peor cedida del corpus**, y es la que hay que gestionar antes de prometer
+material propio sobre OATutor. Ver `P357` e instrumento en
+`compose/code/p357-hint-layer-cession/` (**24/24**, corre sin el corpus desde artefactos
+versionados).
 
 ## 🔴 Pase 111 (2026-10-05) — 0 altas fundacionales (barrido 30), y el aporte es que la columna de ESTRELLAS de este estante queda con cota por banda
 

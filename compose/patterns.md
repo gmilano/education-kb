@@ -8,6 +8,7 @@ updated: 2026-10-05
 
 > Recetas concretas: repos nombrados, licencias verificadas, wiring explícito y estimación.
 > Todos los repos citados fueron verificados vía WebFetch el 2026-09-30; los del pase 11, el 2026-10-01 (ver `agents/top.md`).
+> **Pase 112 del 2026-10-05:** 🆕 **Los patrones nuevos son `P355`, `P356`, `P357`, `P358` y `P359`, y la receta nueva es `R-112-TUTOR-PERMISIVO-CON-CESION-MEDIDA` — el primer tutor K-12 que esta base puede armar con cesion permisiva de punta a punta, con la trampa del corpus MEDIDA y presupuestada en vez de descubierta en produccion.** 🔴 **`P355`: la severidad de un fallo de portabilidad va al REVES de su frecuencia (4 ruidosos contra 1 silencioso), y una prediccion con forma de DISYUNCION se confirma sin decir cual rama la sostuvo.** 🔴 **`P356`: un auditor cuyo denominador de DEFINICIONES y de CITAS son conjuntos de archivos distintos FABRICA hallazgos — 6 de las 21 colgadas no eran deuda.** 🔴 **`P357`: la herencia entre capas de un corpus se mide fila por fila, no se deduce del agregado — 19,8 % de los hints divergen y la asimetria es 66 a 1.** 🔴 **`P358`: «un pase» no es una unidad de TIEMPO.**
 > **Pase 111 del 2026-10-05:** 🆕 **Los patrones nuevos son `P348`–`P354`, y la receta nueva es `R-111-CIFRA-CON-COTA-Y-FECHA` — como se publica una cifra de repo en esta base y como se cita en una propuesta.** 🔴 **`P348`: contar por ARCHIVO en vez de por UNIDAD sobresamplea lo que no cede — la tasa del corpus es 76,4 % y no 58,0 %, y el mecanismo esta medido (25,0 % mas figuras/unidad en lo mal cedido, 3,021 en `NO-ES-CESION`). Es `P344` en otra forma.** 🆕 **`P349`: una cota declarada en «cifras significativas» miente en los extremos — el canal es un ESCALON (0/±50/±50/±500), exacto debajo de 1.000 y de DOS cifras en 1.000-9.999.** 🆕 **`P350`: la frontera de una accion hacia afuera esta ANTES del envio; la pre-registracion la puso en «no mandar nada» y lo denegado fue ENUMERAR contacto de personas, asi que el resultado es un TERCERO que sus dos ramas no admitian.** 🆕 **`P351`: un barrido por una cifra publicada no distingue el DATO de la CITA que lo refuta — forma INVERSA de `P344`.** 🆕 **`P352`: una suite que pasa solo en el contenedor que la escribio es una memoria, no un control; el tablero se mide DESDE EL CLON.** 🆕 **`P354`: un control que reconoce una ORTOGRAFIA y no un OBJETO queda ciego cuando cambia la notacion — el auditor de citas de patron conocia cuatro convenciones de encabezado y no la quinta (el numero en CODIGO INLINE, la que `patterns.md` usa desde el pase ~95), asi que 42 numeros definidos (`P284`-`P287`, `P308`-`P319`, `P328`-`P353`) salian COLGADOS y el control seguia en verde. Arreglado como convencion `E`: colgadas 63 → 21, suite 8/8 → 15/15 con tres controles negativos. Misma familia que `P171`/`P288`/`P299`/`P304`.** ⚠️ **Las 21 que quedan son deuda real de pases viejos —la peor es `P135`, citada 84 veces en negrita y sin definicion— y NO se corrigen: escribir hoy la seccion de un patron que otro pase nombro es fabricar doctrina con un numero ajeno.** 🆕 **`P353`: la precision que vuelve checkeable a una cifra es la misma que la hace envejecer — en la banda EXACTO la cifra no se publica sin fecha.**
 > **Pase 110 del 2026-10-05:** 🆕 **Los patrones nuevos son `P344`, `P345`, `P346` y `P347`, y la receta nueva es `R-110-CESION-CON-TEXTO` — la compuerta de entrega que mide BYTES y no solo presencia de archivo.** 🔴 **`P344`: una pre-registracion puede construir su denominador CONTRA su hipotesis (0 de 13 por construccion, 6 de 9 en las excluidas).** 🟢 **`P345`/`P337` cerrado: el corte converge a 1.611/832 y las 41 son un DOMINIO DESNUDO.** 🔴 **`P346`: entregable sin gestion son 1.418 de 2.443 (58,0 %), y 368 figuras OPENSTAX no ceden NADA — procedencia y cesion son ejes independientes.** 🆕 **`P347`: `frappe/education` cede «GNU GPL V3» en 19 BYTES, sin texto, y es el unico defecto de la cadena que PASA todos los controles anteriores.**
 > **Pase 109 del 2026-10-05:** 🆕 **Los patrones nuevos son `P342` y `P343`, y la receta nueva es `R-109-CESION-RECUPERABLE`.** 🔴 **`P342`: un badge de licencia y/o una entrada del arbol de directorios que el README dibuja de si mismo son una AFIRMACION de cesion que apunta a una RUTA concreta — y cuando esa ruta da 404, el repo no es «sin licencia» (descarte) sino `P314` (cesion a pedir por escrito al titular, citando su propia afirmacion). Se distingue de `P340` (otra ortografia, la cesion existe) y de `P314` puro (palabra en el cuerpo, sin ruta).** 🔴 **`P343`: un prefijo GOLOSO `^.*` sin frontera izquierda en la captura le roba los digitos de orden superior al numero y deja un residuo PLAUSIBLE (`35.121 B` → `5.121 B`) — no es el cuantificador acotado, que solo captura bien, y POSIX ERE no da con que frenarlo porque `grep -E`/`sed -E` no tienen cuantificadores perezosos ni *lookbehind*. La misma corrida dejo una fila cuyo «repo» es una RUTA. El conteo de bytes y la huella son redundantes solo cuando los dos estan bien, y en cuanto uno se corrompe el otro es el unico detector.** 🔵 **La receta convierte la clasificacion binaria «licenciado / sin licencia» en una cola de TRES salidas, y la del medio es la unica del arbol donde una hora de gestion habilita un activo hoy bloqueado.**
@@ -139,6 +140,228 @@ updated: 2026-10-05
 > **Pase 11:** +2 patrones — **P25** (riesgo de abandono conforme al Anexo III, la capa con presupuesto ya asignado y sin oferta open source) y **P26** (agente docente sobre la ontología curricular nacional ya publicada).
 > **Pase 27:** **+4 patrones y una corrección.** 🔴 **P51 queda con premisa falsa** —el conector MCP de Moodle **sí existe y es MIT**— y lo reemplazan **P54** (corrección y devolución sobre Moodle con **compuerta humana**, el último tramo del gap 6, con piezas que ya escriben), **P55** (el conector de **Open edX**, que es el único que de verdad no existe), **P56** (**SCORM** como formato de salida de la capa generativa: cero integración, offline) y **P57** (evidencia por MCP cotizada sobre lo que CaSS **realmente** expone — 6 de 61 operaciones, con insignias y autoría de marcos **fuera**).
 
+
+## 🆕 Patrones del pase 112 (2026-10-05) — `P355`–`P358` y la receta `R-112-TUTOR-PERMISIVO-CON-CESION-MEDIDA`
+
+### 🆕 `P355` — la severidad de un fallo de portabilidad va al REVES de su frecuencia, y una prediccion disyuntiva se confirma sin decir cual rama la sostuvo
+
+**El patron.** Cuando se mide «cuantas suites fallan desde otro `cwd`», el total no sirve: hay que
+repartir por **forma del fallo**, porque las formas tienen severidades opuestas.
+
+| forma | como se ve | cuanto daño hace |
+|---|---|---|
+| `CRASH` | traceback, sin total | 🟢 poco — imposible de confundir con una medicion |
+| `TOTAL-DEGRADADO` | un `N/M` **bien formado y menor** | 🔴 mucho — **se parece a una medicion** |
+| `SILENCIOSO` | codigo 0, ni total ni traceback | 🔴 maximo — **publica verde sin medir** |
+
+**Medido en este arbol:** 4 suites fallan desde un `cwd` ajeno (2 `CRASH` + 2 `TOTAL-DEGRADADO`),
+**0** por ruta efimera. La unica de la clase efimera (`p345`, el especimen de `P352`) era
+`SILENCIOSO` y publicaba «21/21» en verde. **La clase de 4 miembros se delata; la de 1 mentia.**
+
+🔴 **El caso que define el patron:** `p183-nongithub-denominator` desde otro `cwd` reporta
+**«14/15 checks passed»** y la unica asercion que pierde es **su control negativo**. Una suite que
+desde el lugar equivocado deja de chequear su propia falsabilidad **y sigue publicando un total
+plausible** es peor que una que explota.
+
+⚠️ **Y el corolario de metodo, que es la mitad transferible:** la accion A estaba pre-registrada
+como **disyuncion** («≥3 fallan por ruta efimera **o** por `cwd` asumido»). Salio **CONFIRMADA con
+4**, y el reparto es **0 y 4**. Una disyuncion confirma sin decir cual rama la sostuvo; si las
+ramas tienen severidad opuesta, **el numero que la confirma no informa de ninguna**. **Se
+pre-registra el REPARTO, no el total.**
+
+**Como se aplica.** Resolver toda ruta de una suite contra `__file__` y **nunca** contra el `cwd`;
+correr el tablero desde un `cwd` ajeno como parte del tablero. ⚠️ **Y no asumir que «`cwd`
+asumido» significa «asume el suyo»:** `pattern-citation-audit/audit_patterns.py` falla **desde su
+propio directorio** y solo corre desde la raiz del repo — **dos contratos opuestos en el mismo
+arbol**.
+
+🟢 **Instrumento:** `compose/code/p355-cwd-portability/` (**16/16**).
+
+---
+
+### 🆕 `P356` — un auditor cuyo denominador de DEFINICIONES y de CITAS son conjuntos de archivos distintos FABRICA hallazgos
+
+**El patron.** Un control que cruza dos conjuntos tiene **dos** denominadores. Si no son el mismo
+universo, la diferencia aparece como hallazgo y no como defecto del control.
+
+**Medido.** `audit_patterns.definitions()` lee **un solo archivo** (`compose/patterns.md`) mientras
+`citations()` barre **todos** los `**/*.md` del arbol. Resultado: de las **21** citas que `P354`
+dejo como colgadas, **6 no eran deuda**:
+
+| clase | cuantas | quienes |
+|---|---|---|
+| **ANUNCIADA** (deuda documental real) | 🔴 **15** | `P127`–`P135`, `P173`–`P175`, `P240`, `P252`, `P282`, `P293` |
+| **DEFINIDA-FUERA** (seccion con la convencion del propio auditor, en otro archivo) | 🟢 **3** | `P245`, `P279`, `P281` |
+| **INSTRUMENTO** (codigo y README propios) | 🟢 **3** | `P239`, `P280`, `P283` |
+| **error de numeracion** | 🟢 **0** | — |
+
+🔵 **Es distinto del punto ciego de `P354`:** ahi el ancla no reconocia una **ortografia** (el numero
+en codigo inline). Aca el ancla es **correcta** y lo que esta mal es **el conjunto de archivos
+sobre el que se aplica**. `P354` es un defecto de ORTOGRAFIA; `P356` es de **ALCANCE**.
+
+🔵 **Familia del denominador, tercera forma en tres pases:** `P344` (el denominador formado
+restando la clase que la prediccion buscaba), `P351` (el que no distingue dato de cita) y esta. **El
+denominador decide que defectos son encontrables.**
+
+**Como se aplica.** Antes de creerle un hallazgo a un control que cruza dos conjuntos: **enumerar
+los dos universos y verificar que son el mismo**. Si no lo son, el control mide la diferencia de
+universos y no el defecto que busca.
+
+⚠️ **Y el control negativo obligatorio:** un encabezado que **MENCIONA** un numero no lo **DEFINE**.
+La primera medicion de este pase uso `[^0-9]*` antes del numero y leyo *«## Capa de escritura del
+lado DOCENTE — el agujero de P129, cerrado»* como definicion de `P129`; habria convertido **2 de 21**
+en falsos `DEFINIDA-FUERA`. El arreglo fue **reusar las regex del propio auditor** (`P237`) y
+cambiar **solo** el conjunto de archivos.
+
+🟢 **Instrumento:** `compose/code/p356-citation-origin/` (**16/16**).
+
+---
+
+### 🆕 `P357` — la herencia entre dos capas de un corpus se mide fila por fila; deducirla del agregado invierte el signo del error
+
+**El patron.** Cuando una capa hija parece heredar un atributo de su padre, **la herencia es una
+hipotesis**. Si el hijo tiene el campo **propio**, hay que leerlo y compararlo, no inferirlo.
+
+**Medido** sobre `CAHLR/OATutor-Content` en `1925decc91567faf6203bdb41b9d52b14891426f`
+(**49.479** JSON, **82.492** unidades = 13.371 problema + 69.121 hint):
+
+| relacion hint ↔ padre | unidades | % |
+|---|---|---|
+| igual al padre | 55.418 | **80,2 %** |
+| **hijo VACIO con padre que cede** | **13.499** | **19,5 %** |
+| hijo cede con padre vacio | 204 | 0,3 % |
+| **se contradicen** | **0** | **0,0 %** |
+
+🔵 **Tres hechos que solo aparecen fila por fila:** la herencia **no** es la identidad (80,2 %); la
+divergencia es **asimetrica 66 a 1** (el hijo deja caer, no agrega); y la cubeta de contradiccion
+esta **vacia** ⇒ el defecto es **OMISION** y se arregla **propagando**, no arbitrando.
+
+🔵 **Y un hecho de FORMA:** la capa de hint tiene vocabulario **BINARIO** —solo `RESOLUBLE` y
+`AUSENTE`—. Las otras tres clases (`VERSION-SIN-VARIANTE`, `NO-ES-CESION`, `NO-RECONOCIDO`) viven
+**solo** en la capa de problema. Las dos capas no son la misma pregunta con distinto `n`.
+
+**La consecuencia entregable:** hint **62,2 %** contra problema **76,4 %** (**−14,2 pp**), y
+**26.136 de 69.121 (37,8 %)** sin cesion alguna. **La capa que un tutor AI usa mas es la peor
+cedida del corpus.**
+
+🟢 **Instrumento:** `compose/code/p357-hint-layer-cession/` (**24/24**, corre sin el corpus desde
+artefactos versionados).
+
+---
+
+### 🆕 `P358` — «un pase» no es una unidad de TIEMPO: el numero de pase ordena los eventos pero no los espacia
+
+**El patron.** Un contador de pases es un **ordinal**. Usarlo como **intervalo** —«se movio en un
+pase», «la deriva es mas lenta que un pase»— produce enunciados que no se pueden checkear, porque
+dos pases pueden estar separados por una hora o por una semana y se escriben igual.
+
+**Medido.** La accion B remidio las 2 filas de la banda `EXACTO` y las 2 devolvieron el mismo
+entero (264 y 107). 🔴 **Pero los pases 111 y 112 corren los dos el 2026-10-05**, asi que el
+intervalo real son **horas**: «sin cambio» es indistinguible de «se midio dos veces el mismo dia»,
+y el enunciado de deriva que la refutacion autorizaba **no se publico**.
+
+> **Regla, complementaria de `P353` y mas angosta:** fechar por DIA alcanza para **datar** una
+> cifra; para afirmar una **DERIVA** hacen falta dos lecturas con intervalo **de reloj** declarado.
+> **Lo que fecha es el reloj, no el contador de pases.**
+
+🟢 **Lo que si se afirma:** la serie de `OATutor` (265 → 264 → 264 → 264) no tiene contradicciones
+⇒ el canal **reproduce** en la banda `EXACTO`. **Reproducibilidad si; tasa de deriva no.**
+
+---
+
+### 🆕 `P359` — en un archivo *newest-first* la POSICION no codifica la autoria, y un umbral no es una medicion
+
+**Como se encontro: publicando.** El tablero de este pase dio **68/69** y la unica que fallaba era
+`p351-star-digit-sweep/test_p351.py` — **rota por el acto de publicar el pase 112**, en dos
+aserciones y por dos causas distintas. Las dos son defectos reales y las dos se arreglaron.
+
+**(a) El atribuidor es POSICIONAL, y la posicion no es la autoria.** `_pase_de()` asigna una linea
+al encabezado de pase **mas cercano hacia arriba**. En un archivo *newest-first* —que es la
+convencion de los ocho `.md` de esta base— insertar la seccion del pase nuevo **arriba**
+**re-atribuye a ese pase todas las lineas que queden debajo** hasta el proximo encabezado. Asi, la
+tabla de bandas que escribio el pase 111 salio reportada como **defecto del pase 112**.
+
+🔵 **El limite queda DECLARADO en el instrumento en vez de tapado:** `posteriores_a()` documenta que
+no puede sostener sola un enunciado sobre **que pase** publico una cifra, y
+`atribucion_es_ambigua()` nombra la ventana afectada. ⚠️ **Un enunciado de autoria en un archivo
+*newest-first* necesita el `git blame`, no la posicion.**
+
+**(b) Una cifra puede ser el BORDE DE UNA BANDA, y eso no es ni dato ni cita.** `«por debajo de
+1.000 ★»` y `«1.000–9.999»` no son la medicion de ningun repo: son una **UNIDAD**. El clasificador
+de `P351` tenia dos clases —publicada y citada— y esta es una **tercera**. Con `es_umbral()` la rama
+de refutacion vuelve a **0** legitimamente, no por aflojar el ancla.
+
+🔴 **(c) Y la causa raiz de que fallara es de la familia de `P352`/`P355`, en un TERCER eje:** la
+suite afirmaba `pase_maximo == 111`, o sea **clavaba el numero del pase que la escribio**. Fallaba en
+el pase siguiente **por construccion**. `P352` era una suite que solo corria en su CONTENEDOR,
+`P355` una que solo corria en su DIRECTORIO, y `P359` una que solo pasaba en su **PASE**.
+
+> **Regla:** una asercion no puede fijar una propiedad del arbol que **crece con cada pase**
+> (el maximo, el total, la fecha mas nueva). Fija el **invariante** —*todo lo atribuido al maximo es
+> meta-mencion o umbral*— y deja que el valor se mueva.
+
+🟢 **Suite:** `26/26` → **`31/31`**, con los dos controles negativos que impiden que la clase nueva
+se coma el defecto que el instrumento existe para encontrar (`385.407 ★` desnudo en una celda de
+catalogo **sigue** siendo cifra publicada; una cita entre comillas latinas **no** se reclasifica como
+umbral).
+
+---
+
+### 🧑‍🏫 Receta `R-112-TUTOR-PERMISIVO-CON-CESION-MEDIDA` — tutor K-12 con cesion permisiva de punta a punta y la trampa del corpus presupuestada
+
+🟢 **Es la primera vez que esta base puede armar esta receta sin una pieza copyleft o sin cesion en
+el camino**, y la razon es `Selleo/mentingo`: hasta el pase 111 la capa de plataforma era
+**COPYLEFT 8 de 8** (pase 90).
+
+**Las piezas, todas con licencia leida del PAYLOAD y huella publicada:**
+
+| capa | pieza | licencia · huella | por que esta |
+|---|---|---|---|
+| plataforma / LMS | [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | **MIT** · 1.062 B · `ceb97717de1f` | LMS self-hosted con mentor AI; **unica base permisiva** de esta capa |
+| tutor RAG + contenido | [`Zenglian990/AI_Tutor_Release`](https://github.com/Zenglian990/AI_Tutor_Release) | **MIT** · 1.068 B · `695941afdd1f` | 39.114+ problemas en LanceDB, foto/voz, tablero para padres |
+| pedagogia como dato | [`flysheep-ai/education-skills`](https://github.com/flysheep-ai/education-skills) | **MIT** · 1.068 B · `23b91d7c0aef` | skills de tutoria por materia, metodo socratico declarado |
+| orquestacion multi-tutor | [`SimonsTang/feifei-companion`](https://github.com/SimonsTang/feifei-companion) | **Apache-2.0** · 10.227 B · `59a378bf23a0` | patron de **tres tutores especializados** + concesion EXPLICITA de patentes |
+| *mastery* / scheduling | [`CAHLR/pyBKT`](https://github.com/CAHLR/pyBKT) + [`open-spaced-repetition/py-fsrs`](https://github.com/open-spaced-repetition/py-fsrs) | **MIT** / **MIT** | BKT para dominio y FSRS para repaso: lo que a casi todo tutor LLM le falta |
+| abstraccion de proveedor | capa propia | — | ⚠️ **obligatoria**, ver abajo |
+
+**El wiring, explicito:**
+
+1. **`mentingo` es el caparazon:** matricula, roles, cursos, reportes. Es el unico componente con
+   modelo de usuario y auditoria, y es el que el cliente ve.
+2. **`AI_Tutor_Release` entra como servicio de tutoria** detras de `mentingo`, no como producto: se
+   le conserva el indice LanceDB y se le reemplaza el *frontend*. Su metodo socratico y su cuaderno
+   de errores son el nucleo del valor.
+3. **`education-skills` y el patron de `feifei-companion` definen la PEDAGOGIA como dato**: una
+   skill por materia, y un coordinador que rutea a la skill correcta. 🔵 **Que la pedagogia sea dato
+   y no codigo es lo que vuelve el entregable portable entre jurisdicciones** — ver la nota de
+   North America en `intel/market.md`: 134 proyectos en 31 estados ⇒ politica cableada no viaja.
+4. **`pyBKT` + `py-fsrs` cierran el lazo de dominio**: BKT estima mastery desde las secuencias de
+   resolucion, FSRS agenda el repaso. Sin esto el tutor conversa pero no **enseña en el tiempo**.
+5. **Capa de abstraccion de proveedor, por delante de todo lo demas.** ⚠️ **No es higiene, es
+   requisito de venta en APAC:** cada economia construye su modelo soberano (Sarvam, ILMU, Sahabat,
+   SEA-LION, HyperCLOVA X Think, Sarashina, TAIDE) y `compose/code/p257-provider-binding/` midio que
+   **0 de 69** piezas de esta base son `SWAPPABLE`. Lo que no se abstrae se recablea por cliente.
+
+🔴 **La trampa, MEDIDA y presupuestada — y es la mitad de la receta que importa:**
+
+> Si el contenido sale de `CAHLR/OATutor-Content`, **no se puede asumir que la pista hereda la
+> cesion de su problema**. Medido en este pase: **26.136 de 69.121 unidades de hint (37,8 %) no
+> traen cesion alguna**, y asumir la herencia **sobre-declara la entregabilidad en +10,4 pp**
+> (62,2 % real contra 72,6 % contrafactual). ⚠️ **La capa de pistas es la que un tutor usa mas y la
+> peor cedida del corpus.**
+
+**Que hacer con eso, concreto:** correr
+`python3 compose/code/p357-hint-layer-cession/hint_layer.py <ruta-al-corpus>` **antes** de
+comprometer material propio; tomar las **42.985** unidades `RESOLUBLE` como entregables sin gestion;
+y tratar las **13.499** cuyo padre SI cede como **recuperables por propagacion** (una gestion
+documental, no una re-autoria) y las **12.637** restantes como **bloqueadas** hasta que el titular
+las aclare.
+
+**Estimacion.** Caparazon + tutoria integrados: **6–8 semanas**. Pedagogia como dato con 3–5
+materias: **+3 semanas**. Abstraccion de proveedor: **+2 semanas** (y es la que evita el recableado
+por cliente). Auditoria de cesion del corpus: **2–3 dias** con el instrumento ya escrito.
+⚠️ **La gestion documental de las 13.499 recuperables no es tiempo de ingenieria y no se estima
+aca: es tiempo de un tercero.**
 
 ## 🆕 Patrones del pase 111 (2026-10-05) — `P348`–`P354` y la receta `R-111-CIFRA-CON-COTA-Y-FECHA`
 

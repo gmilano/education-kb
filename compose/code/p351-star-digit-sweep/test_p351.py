@@ -5,6 +5,7 @@ import os, sys, unittest
 HERE = os.path.dirname(os.path.abspath(__file__))
 RAIZ = os.path.abspath(os.path.join(HERE, '..', '..', '..'))
 sys.path.insert(0, HERE)
+import barrido as B
 from barrido import (RE_CIFRA, _limites_de_pase, _pase_de, barrer, es_meta_mencion,
                      posteriores_a, resumen)
 
@@ -61,13 +62,49 @@ class ElPuntoCiegoDelInstrumento(unittest.TestCase):
 
     def test_una_pre_registracion_atribuye_a_un_pase_FUTURO(self):
         """🔵 Nuance del atribuidor: un encabezado «Acciones pre-registradas para
-        el pase 111» hace que una linea caiga en un pase que todavia NO corrio.
-        Por eso la rama de refutacion se evalua EXCLUYENDO meta-menciones."""
-        self.assertEqual(R['pase_maximo'], 111)
-        futuras = [h for h in HITS if h[3] == 111]
+        el pase N» hace que una linea caiga en un pase que todavia NO corrio.
+        Por eso la rama de refutacion se evalua EXCLUYENDO meta-menciones.
+
+        🔴 `P359` (pase 112): la version del pase 111 afirmaba `pase_maximo == 111`,
+        o sea CLAVABA el numero del pase que la escribio, y por construccion fallaba en
+        el pase siguiente. Es la familia de `P352`/`P355` en un tercer eje: una suite
+        que solo pasa en el PASE que la escribio. El invariante no es el valor del
+        maximo —ese crece— sino que TODO lo atribuido al maximo sea meta-mencion o
+        umbral, que es lo que el docstring siempre quiso decir."""
+        self.assertIsNotNone(R['pase_maximo'])
+        self.assertGreaterEqual(R['pase_maximo'], 111)
+        futuras = B.atribucion_es_ambigua(HITS, R['pase_maximo'])
         self.assertTrue(futuras)
-        self.assertTrue(all(h[4] for h in futuras),
-                        'una ocurrencia atribuida al 111 que NO es meta-mencion')
+        for h in futuras:
+            self.assertTrue(h[4] or (len(h) > 5 and h[5]),
+                            'ocurrencia atribuida al pase %s que no es meta ni umbral: %r'
+                            % (R['pase_maximo'], h))
+
+
+class UmbralNoEsMedicion(unittest.TestCase):
+    """`P359` — el borde de una banda no es el dato de ningun repo."""
+
+    def test_por_debajo_de_mil_es_umbral(self):
+        self.assertTrue(B.es_umbral('vive por debajo de 1.000 ★', 20))
+
+    def test_celda_de_rango_es_umbral(self):
+        self.assertTrue(B.es_umbral('| `K-2CIFRAS` | 1.000–9.999 | `7.5k` |', 16))
+
+    def test_NEGATIVE_una_cifra_de_repo_NO_es_umbral(self):
+        """El control que impide que la clase nueva se coma el defecto que el
+        instrumento existe para encontrar: `385.407 ★` desnudo en una celda de
+        catalogo sigue siendo una cifra PUBLICADA."""
+        self.assertFalse(B.es_umbral('| OpenClaw | MIT | 385.407 ★ |', 20))
+
+    def test_NEGATIVE_una_cita_no_se_reclasifica_como_umbral(self):
+        self.assertFalse(B.es_umbral('el pase 110 citando «385.407 ★»', 22))
+
+    def test_el_umbral_queda_fuera_de_la_rama_de_refutacion(self):
+        """La consecuencia medida: con la clase nueva, `posteriores_a(110)` vuelve a 0.
+        Sin ella, la tabla de bandas de `P349` que escribio el pase 111 salia como
+        defecto del pase 112 por haber quedado debajo de una seccion nueva."""
+        self.assertEqual(B.posteriores_a(HITS, 110), [])
+        self.assertGreater(R['umbrales'], 0)
 
 
 class ClasificadorDeMetaMencion(unittest.TestCase):

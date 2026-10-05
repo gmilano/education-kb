@@ -7,10 +7,77 @@ updated: 2026-10-05
 # 📈 Repos trending — education
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
+> **Pase 112 del 2026-10-05:** 🟢 **El trending de la industria DEJA de estar vacio por primera vez en 41 barridos: 5 piezas permisivas con cesion leida del payload**, y el canal que las encontro fue el **listado por topico** (`github.com/topics/ai-tutor`), no la busqueda en prosa — que volvio a devolver el eje generalista (`P281`). 🆕 **`P355`: 4 suites del propio arbol no son portables entre `cwd`, y las 4 fallan RUIDOSAMENTE mientras la unica de ruta efimera pasaba en verde sin medir.** 🔴 **LATAM devolvio 0 repos y queda como gap INFORMADO (`P343`).**
 > **Pase 111 del 2026-10-05:** 🔴 **Trending de la industria vacio por CUADRAGESIMA vez:** catalogos, curriculo para ingenieros y el eje generalista; 12 de 13 candidatas ya publicadas (`P311`) y la unica nueva (`OpenOSINT`) es OSINT en terminal. 🆕 **El aporte es la COTA de la columna de estrellas de este archivo, medida por BANDA: `P349` — es un ESCALON, no «3 cifras significativas». Las filas chicas (la mayoria del inventario educativo) se pueden publicar con ENTERO EXACTO y fecha; las grandes NO, por mas que se vean tres digitos. La banda del millon se declara NO-MEDIDA (`P286`).** 🔴 **57 de las 265 ocurrencias de cifras con 4+ digitos viven aca, 0 posteriores al pase 110.** 🔴 **Y el tablero se midio DESDE EL CLON: el pase 110 publico «62 suites, 0 fallos» y en un clon nuevo era «65 y 1 fallo» — `test_p345.py` no se podia importar fuera de su contenedor por un censo en `/tmp` (`P352`); arreglada, el tablero real es **66 suites, 0 fallos**.**
 > **Pase 110 del 2026-10-05:** 🔴 **Trending de la industria vacio por TRIGESIMONOVENA vez.** 🟢 **Lo que se mueve es el CANAL: `WebFetch` sobre `github.com` devuelve estrellas donde `curl` da 403, con control negativo en 404 — asi que la columna de estrellas de este arbol vuelve a existir, con resolucion de 3 cifras significativas.** 🔴 **Y lo primero que mide es un repo de 8 ★ sin licencia que el canal de busqueda presento junto a uno de 40,8 ★k.**
 > **Pase 107 del 2026-10-05:** 🔴 **Trending de la industria vacio por TRIGESIMOSEXTA vez: curriculo, catalogos, una bolsa de trabajo y dos generalistas (`microsoft/semantic-kernel` 27.470 ★, `NousResearch/hermes-agent` MIT), con las SEIS cifras del eje generalista identicas digito a digito a los pases 105 y 106 ⇒ informacion sobre el CANAL, no sobre la industria.** 🟢 **Lo que SI se movio es una capa de BINARIOS que este archivo nunca conto: 2.443 archivos de figura (~156 MiB, 1.326 imagenes distintas) en `CAHLR/OATutor-Content`, con la extension `.gif` falsa en 2.443 de 2.443 (`P332`).** 🔵 **`git ls-remote` da TRES refs, y una se llama `gpt-science-study`: la unica de este arbol cuyo nombre anuncia contenido sintetico.** 🔴 **Defecto propio corregido: los 49.481 JSON contra los 49.479 del pase 106 son los 6 caminos con bytes de control (U+007F/U+0080/U+0081) en el nombre del paso — la identidad de un paso NO es un slug seguro.**
 > **Pase 106 del 2026-10-05:** 🔴 **Trending de la industria vacio por TRIGESIMOQUINTA vez: el canal devuelve generalista o educativo-sobre-AI, no AI-para-educacion.** 🟢 **Lo que SI se movio esta en el eje de `ref` y no de repo: las ramas `1e` de 5 bundles de `openstax` contienen la UNICA cesion `CC BY 4.0` de 10 colecciones cuyas versiones vivas son `NC-SA` — cesion y vigencia apuntan en direcciones opuestas.** 🔵 **Canal nuevo calibrado: `git ls-remote` para enumerar refs (responde a repo real, falla a repo inventado), el unico de este arbol que contesta «que refs tiene este repo» con `api.github.com` en 403 — sin el, la accion A de este pase era imposible.**
+
+## 2026-10-05 — pase 112: el trending de la industria deja de estar vacio por primera vez en 41 barridos, y el canal que lo rompio fue el LISTADO, no la busqueda
+
+### 🟢 El no-cero, con el reparto escrito
+
+Año **CALCULADO** (`date -u +%Y` → **2026**).
+
+🔴 **Las 40 veces anteriores el barrido devolvio catalogos** (`500-AI-Agents-Projects`,
+`awesome-ai-agents-2026`), **curriculo para enseñar AI** y el **eje generalista**, y esta base lo
+registro como vacio cada vez. 🟢 **Este pase el resultado cambia, y la causa es de CANAL y no de
+mercado:** la consulta en prosa siguio devolviendo generalistas, pero
+`github.com/topics/ai-tutor` por `WebFetch` (**200**) devolvio **20 repos de la industria con slug,
+estrellas y lenguaje**, de los cuales 7 eran nuevos para esta base y **5 traen cesion permisiva**.
+
+> **Lo que esto corrige de los 40 ceros anteriores:** no eran un hecho sobre la industria, eran un
+> hecho sobre **el canal que se estaba usando para mirarla**. El eje generalista no es lo que hay:
+> es lo que la busqueda en prosa devuelve. **Es `P281` otra vez, y por primera vez con su
+> alternativa medida al lado.**
+
+| pieza | repo | licencia | bytes · sha256 | ★ 2026-10-05 | lenguaje |
+|---|---|---|---|---|---|
+| education-skills | [`flysheep-ai/education-skills`](https://github.com/flysheep-ai/education-skills) | **MIT** | 1.068 · `23b91d7c0aef` | **106** | Shell / skills |
+| FeiFei Companion | [`SimonsTang/feifei-companion`](https://github.com/SimonsTang/feifei-companion) | **Apache-2.0** | 10.227 · `59a378bf23a0` | **105** | Python |
+| Mentingo | [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | **MIT** | 1.062 · `ceb97717de1f` | **91** | TypeScript |
+| Studivexa | [`codeXsidd/Studivexa`](https://github.com/codeXsidd/Studivexa) | **MIT** | 1.068 · `58f77360830f` | **72** | JavaScript |
+| EduAgent | [`Zenglian990/AI_Tutor_Release`](https://github.com/Zenglian990/AI_Tutor_Release) | **MIT** (`master`) | 1.068 · `695941afdd1f` | **57** | JavaScript |
+
+🔴 **Y las dos que el payload descarta, con el motivo medido:**
+
+| repo | ★ | medido | veredicto |
+|---|---|---|---|
+| [`yh2072/edgameclaw`](https://github.com/yh2072/edgameclaw) | **71** | `LICENSE` 200, 34.523 B, `8486a10c4393` → **AGPL-3.0** | 🔴 copyleft de red |
+| [`A-R007/Multi-Agent-Study-Assistant`](https://github.com/A-R007/Multi-Agent-Study-Assistant) | **61** | **12 sondas** 404 · README **200** (testigo de alcance) | 🔴 sin cesion |
+
+### 🔵 El resto del listado, registrado sin medir — para que el proximo pase no lo re-descubra
+
+Devueltas por el mismo canal y **ya publicadas** por esta base (gate de `P311`, 9 de 22):
+`HKUDS/DeepTutor` (40,8k ★), `Miaotofu01/Study-Mate` (607 ★), `24kchengYe/human-skill-tree`
+(563 ★), `ankimcp/anki-mcp-server` (505 ★), `ZeKaiNie/universal-examprep-skill` (300 ★),
+`karanb192/algo-sensei` (285 ★), `SenmuuuuW/universal-diagnostic-tutor-skill` (238 ★),
+`KeWang0622/kaogong-skill` (156 ★), `ahmedEid1/lumen` (88 ★), `plastic-labs/tutor-gpt` (930 ★,
+**GPL-3.0** — medida y descartada por licencia este pase).
+
+⚠️ **Las estrellas de esta lista salen del LISTADO POR TOPICO, no del sidebar de cada repo.** Son
+dos canales distintos y no se mezclan: las de la tabla de altas se releyeron **una por una** del
+sidebar. Se anota porque `P349` acoto la resolucion del sidebar y **no** la del listado.
+
+### 🆕 `P355` — el arbol propio tiene 4 suites que no son portables entre `cwd`
+
+| suite | desde su dir | desde `cwd` ajeno | forma |
+|---|---|---|---|
+| `p183-nongithub-denominator/test_denominator.py` | **15/15** | 🔴 **14/15** | `TOTAL-DEGRADADO` — pierde **su control negativo** |
+| `p184-holder-mismatch/test_holder.py` | **15/15** | 🔴 **11/15** | `TOTAL-DEGRADADO` — 4 fixtures |
+| `p251-cohort-lineage/test_lineage.py` | **26/26** | 🔴 crash | `FileNotFoundError: 'rows.tsv'` |
+| `sebserver-mcp-gate/test_gate.py` | **37/37** | 🔴 crash | `FileNotFoundError: 'operations.tsv'` |
+
+🟢 **0 por ruta efimera**, que era la clase que la pre-registracion buscaba: `P352` es un
+**especimen**. 🔴 **Y la severidad va al reves de la cantidad** — ver `P355`.
+
+### 🔴 LATAM: 0 repos, dicho como gap INFORMADO
+
+🔴 **Cero piezas de codigo educativo de LATAM en este pase, por ningun canal.** La consulta
+regional respondio con **mercado y regulacion** (adopcion de Brasil 76 % y Mexico 70 %, Ley de IA
+brasileña esperada en 2026, Ley 21.719 de Chile vigente el 2026-12-01) y **ningun repositorio**.
+⚠️ **Se registra explicitamente: el canal respondio y la capa de codigo es la que falta** (`P343`).
+Un cero en silencio seria indistinguible de no haber mirado.
 
 ## 2026-10-05 — pase 111: trending de la industria vacio por CUADRAGESIMA vez, y el aporte es que la COTA de la columna de estrellas queda medida por banda
 

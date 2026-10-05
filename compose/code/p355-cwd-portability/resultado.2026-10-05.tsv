@@ -1,0 +1,83 @@
+# raiz=/home/user/education-kb  suites=67  cwd-ajeno=/home/user
+suite	exit_propio	exit_ajeno	forma_ajeno	refs_efimeras
+compose/code/action-gap-crosscheck/test_crosscheck.py	0	0	-	0
+compose/code/aiact-50-2-exposure/test_exposure.py	0	0	-	0
+compose/code/aiact-50-2-marking/test_marking.py	0	0	-	0
+compose/code/aiact-50-2-pack/test_pack.py	0	0	-	0
+compose/code/description-drift-audit/test_audit.py	0	0	-	0
+compose/code/fork-lineage-audit/test_audit.py	0	0	-	0
+compose/code/grading-draft-gate/test_gate.py	0	0	-	0
+compose/code/lib/test_license_family.sh	0	0	-	0
+compose/code/lib/test_region.py	0	0	-	0
+compose/code/markingworkflow-read-before-write/test_read_before_write.py	0	0	-	0
+compose/code/mcp-allowlist-gateway/test_gateway.py	0	0	-	0
+compose/code/npm-surface-probe/test_probe.py	0	0	-	0
+compose/code/openedx-course-generator/test_plan.py	0	0	-	0
+compose/code/p172-payload-license-sweep/test_extract.py	0	0	-	0
+compose/code/p183-nongithub-denominator/test_denominator.py	0	1	TOTAL-DEGRADADO	0
+compose/code/p184-holder-mismatch/test_holder.py	0	1	TOTAL-DEGRADADO	0
+compose/code/p190-holder-package-layer/test_pkg_holder.py	0	0	-	0
+compose/code/p191-spec-license-sweep/test_classify.py	0	0	-	0
+compose/code/p206-erp-layer-license/test_family.py	0	0	-	0
+compose/code/p213-envelope-aad/test_envelope.py	0	0	-	0
+compose/code/p215-disclosure-axis/test_classify.py	0	0	-	0
+compose/code/p228-segmented-coverage/test_coverage.py	0	0	-	0
+compose/code/p238-fork-testsuite-contradiction/test_check_contract.py	0	0	-	0
+compose/code/p239-table-integrity/test_check_tables.py	0	0	-	0
+compose/code/p243-frontmatter-coverage/test_check_frontmatter.py	0	0	-	0
+compose/code/p249-channel-calibration/test_calibrate.py	0	0	-	0
+compose/code/p251-cohort-lineage/test_lineage.py	0	1	CRASH	0
+compose/code/p253-registry-first-identity/test_identity.py	0	0	-	0
+compose/code/p255-holder-shared-control/test_holder_of.sh	0	0	-	0
+compose/code/p257-provider-binding/test_binding.py	0	0	-	0
+compose/code/p262-mandate-level/test_classify.py	0	0	-	0
+compose/code/p265-region-contract/test_measure.py	0	0	-	0
+compose/code/p268-capability-surface/test_surface.py	0	0	-	0
+compose/code/p275-tree-enumeration/test_layout.py	0	0	-	0
+compose/code/p276-provider-allowlist/test_allowlist.py	0	0	-	0
+compose/code/p280-manifest-ownership/test_license_probe.py	0	0	-	0
+compose/code/p283-manifest-named-license/test_manifest_license.py	0	0	-	0
+compose/code/p284-deferral-adjacency/test_adjacency.py	0	0	-	0
+compose/code/p287-regional-saturation/test_measure.py	0	0	-	0
+compose/code/p288-agpl-casefold/test_casefold.sh	0	0	-	0
+compose/code/p289-maven-manifest/test_maven_license.py	0	0	-	0
+compose/code/p294-pom-in-production/test_wiring.py	0	0	-	0
+compose/code/p308-phrase-anchor-sweep/test_anchors.sh	0	0	-	0
+compose/code/p312-nc-gate-inversion/test_nc_gate.sh	0	0	-	0
+compose/code/p317-data-license-layer/test_corpus_axis.py	0	0	-	0
+compose/code/p322-content-item-license/test_classify.py	0	0	-	0
+compose/code/p322-content-item-license/test_quoting.sh	0	0	-	0
+compose/code/p326-titleholder-book-license/test_verdict.py	0	0	-	0
+compose/code/p328-cession-narrowing/test_verdict.py	0	0	-	0
+compose/code/p332-figure-layer/test_p332.py	0	0	-	0
+compose/code/p336-figure-contradiction-delta/test_p336.py	0	0	-	0
+compose/code/p342-license-claim-vs-file/test_p342.py	0	0	-	0
+compose/code/p344-claim-class-denominator/test_p344.py	0	0	-	0
+compose/code/p345-oer-four-forms/test_p345.py	0	0	-	1
+compose/code/p348-figure-weight-bias/test_p348.py	0	0	-	0
+compose/code/p349-star-resolution-band/test_p349.py	0	0	-	0
+compose/code/p350-contact-surface/test_p350.py	0	0	-	0
+compose/code/p351-star-digit-sweep/test_p351.py	0	0	-	0
+compose/code/p357-hint-layer-cession/test_p357.py	0	0	-	0
+compose/code/pattern-citation-audit/test_audit.py	0	0	-	0
+compose/code/patterns-figure-audit/test_crossref.py	0	0	-	0
+compose/code/proctoring-reach-audit/test_reach.py	0	0	-	0
+compose/code/registry-license-remeasure/test_anchor.py	0	0	-	0
+compose/code/sebserver-mcp-gate/test_gate.py	0	1	CRASH	0
+compose/code/suite-total-control/test_control.py	0	0	-	0
+compose/code/trend-backlink-audit/test_trends.py	0	0	-	0
+compose/code/unitime-mcp-gate/test_gate.py	0	0	-	0
+
+# === ACCION A, contra su prediccion ===
+# pedia: >=3 suites MAS que fallan o se saltan por ruta efimera o cwd asumido
+# medido: 4
+# veredicto: CONFIRMADA
+# --- el reparto por CAUSA, que la prediccion sumo en una sola cifra
+#   por cwd ASUMIDO : 4
+#   por ruta EFIMERA: 0  (suites que la nombran: 1)
+# --- y la FORMA del fallo, que decide la severidad
+#   compose/code/p183-nongithub-denominator/test_denominator.py TOTAL-DEGRADADO
+#   compose/code/p184-holder-mismatch/test_holder.py           TOTAL-DEGRADADO
+#   compose/code/p251-cohort-lineage/test_lineage.py           CRASH
+#   compose/code/sebserver-mcp-gate/test_gate.py               CRASH
+# ruta efimera nombrada en compose/code/p345-oer-four-forms/test_p345.py: 131

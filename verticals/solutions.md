@@ -8,6 +8,7 @@ updated: 2026-10-05
 
 > Plataformas verticales reales, en producción, customizables con AI.
 > Modelo: partir de algo que ya funciona y que ya tiene los datos, y agregar la capa agéntica arriba.
+> **Pase 112 del 2026-10-05:** 🟢 **La capa de plataforma deja de ser COPYLEFT 8 de 8: `Selleo/mentingo` (MIT, 91 ★, TypeScript, EMEA/Polonia) es el primer LMS self-hosted PERMISIVO que esta base mide.** El pase 90 habia medido 8 de 8 copyleft (Moodle GPL-3.0, Open edX AGPL-3.0, Sakai ECL, OpenEduCat LGPL-3.0…) y la capa quedaba `MEDIDA-Y-BLOQUEADA-POR-LICENCIA` para un entregable cerrado. ⚠️ **Con la cota dicha: 91 ★ y 28 forks no son dos decadas de Moodle — lo que compra es ausencia de friccion de licencia, no madurez.**
 > **Pase 111 del 2026-10-05:** 🔴 **0 verticales nuevas (trigesimo barrido): el canal devuelve las ya publicadas —OpenEduCat sobre Odoo, Open edX via Axim, Moodle, Chamilo, OpenOLAT, Fedena, ERPNext/Frappe Education— mas Sakai e ILIAS, que ya estan.** 🆕 **Lo que se agrega es la COTA con que se pueden citar sus cifras (`P349`/`P353`), y el testigo es la plataforma mas citada del estante: `moodle/moodle` renderiza **`7.5k` ★** — **DOS** cifras significativas, no tres, y el canal no distingue 7.450 de 7.550. Una ficha que publique un entero exacto publica una precision SIN canal que la sostenga, y en este estante las cifras grandes son la norma.** 🟢 **La licencia, en cambio, se lee del PAYLOAD y es firme: GPL-3.0 para Moodle, confirmada contra lo publicado.** 🔵 **Esa es la asimetria util del pase: la CESION de una plataforma es verificable al byte, su POPULARIDAD solo por magnitud — y para una decision de compra esta bien ordenado, porque lo que decide es la licencia.** 🔴 **Barrido regional 40: 15 hechos devueltos, 0 nuevos (`P287`) — el eje que sigue rindiendo es el de la PROCEDENCIA DEL ACTIVO, que es justo lo que una vertical tiene que contestar antes de entregarse con contenido adentro.**
 > Verificado vía WebFetch el 2026-09-30; las capas del pase 11, el 2026-10-01.
 > **Pase 110 del 2026-10-05:** 🔴 **0 verticales nuevas (vigesimonoveno barrido): el canal devuelve OpenEduCat, Open edX, Moodle, Chamilo, OpenOLAT, Fedena, ERPNext/Frappe Education — las SIETE ya publicadas.** 🆕 **`P347` — y el aporte del pase es un espécimen de la clase que el pase 109 habia escrito como rama de refutacion sin encontrarla: «un archivo de licencia puede EXISTIR y no contener licencia». `frappe/education`, repo citado 106 veces por esta base, trae `license.txt` de **19 BYTES** cuyo contenido completo es `License: GNU GPL V3` (sin salto final), con el texto de la GPL en **404 en 5 rutas mas**; `frappe/erpnext`, MISMA organizacion y MISMO nombre de archivo, trae **35.149 B** con el texto entero.** 🔵 **Asi que la pregunta de compra cambia de «¿esta licenciado?» a «¿la licencia tiene TEXTO?», y para una redistribucion la consecuencia es concreta: el obligado a acompañar el texto de la GPL pasa a ser QUIEN ENTREGA, porque el upstream no lo incluye.** ⚠️ **Y un hueco INFORMADO: «SchoolTool» aparece en el barrido como SIS open source y NO tiene repositorio alcanzable — `schooltool/schooltool` y `SchoolTool/schooltool` dan 404 — asi que no entra como fila; se registra como ausencia medida y no como plataforma.**
@@ -169,6 +170,61 @@ updated: 2026-10-05
 > **`qti3-pnp`**, que abren accesibilidad de evaluación como entregable auditable (**P72**). ⚠️ **Open edX cambia de
 > recomendación: proponer con presupuesto de mantenimiento (gap 70).** Ver la sección del pase 33, abajo.
 
+
+## 🟢 La capa de plataforma gana su primera pieza PERMISIVA (pase 112 del 2026-10-05)
+
+### 🔴 El estado que este pase cambia
+
+El **pase 90** midio la licencia de la capa de plataforma leyendola del payload, 8 de 8, y el
+resultado fue inequivoco:
+
+| familia | plataformas |
+|---|---|
+| GPL-3.0 / GPL-3.0+ | Moodle y otras 4 |
+| AGPL-3.0 | Open edX ×2 |
+| LGPL-3.0 | OpenEduCat (ERP educativo) |
+| **permisivas** | 🔴 **CERO** |
+
+🔵 **Para un entregable cerrado eso dejaba la capa en `MEDIDA-Y-BLOQUEADA-POR-LICENCIA`:** no es
+que no hubiera plataformas, es que **todas** obligaban a liberar el derivado o a negociar. La
+unica salida era construir el LMS o aceptar el copyleft.
+
+### 🟢 `Selleo/mentingo` — la pieza nueva, con la cesion leida del archivo
+
+| campo | valor |
+|---|---|
+| repo | [`Selleo/mentingo`](https://github.com/Selleo/mentingo) |
+| licencia | 🟢 **MIT** — `main/LICENSE`, **1.062 B**, `sha256 ceb97717de1f`, familia por el clasificador compartido (`P237`) |
+| estrellas | **91 ★** (sidebar de `github.com`, **2026-10-05**, banda `EXACTO` de `P349`) |
+| forks | 28 |
+| lenguaje | TypeScript |
+| region | **EMEA (Polonia)** — el perfil de la organizacion declara `Poland` y `selleo.com` |
+| que es | **LMS self-hosted con mentor AI integrado** |
+| posicionamiento declarado | alternativa a **Moodle, Docebo y Open edX** |
+| foco | formacion corporativa, *onboarding*, *compliance* |
+| antecedente del dueño | declara construir plataformas de aprendizaje **desde 2005** |
+
+🟢 **Por que importa para un *engagement*:** el segmento que `mentingo` nombra —corporativo,
+*onboarding*, *compliance*— es justo donde un cliente pide **marca propia y codigo cerrado**, que
+es lo que una AGPL de Open edX vuelve caro. Una base **MIT** en esa capa cambia la conversacion de
+«que licencia podemos aceptar» a «que construimos arriba».
+
+⚠️ **Y la cota, dicha en la misma tabla y no en una nota al pie:** **91 ★ / 28 forks** contra el
+ecosistema de dos decadas de Moodle. **Lo que `mentingo` compra es ausencia de friccion de
+licencia, no madurez.** Una base permisiva chica y una copyleft grande son **decisiones
+distintas**, no una mejor que la otra; lo que este pase cambia es que **la primera opcion ahora
+existe** y antes no.
+
+### 🔵 Las plataformas verticales de referencia, sin cambios este pase
+
+Moodle (GPL-3.0, 7,5k ★ banda `K-2CIFRAS`), Open edX (AGPL-3.0), Canvas LMS (AGPL-3.0),
+Sakai (ECL-2.0), Kolibri (MIT, *offline-first*), OpenEduCat (LGPL-3.0, ERP educativo),
+BigBlueButton (LGPL-3.0), H5P (MIT, contenido interactivo), UniTime y SEB Server
+(con sus puertas MCP probadas en `compose/code/`).
+
+⚠️ **`mentingo` NO reemplaza a ninguna de ellas en funcionalidad.** Entra como **base permisiva**
+de una capa que hasta hoy no tenia, y la comparacion honesta es por licencia y segmento, no por
+catalogo de features.
 
 ## 🔴 Pase 111 (2026-10-05) — 0 verticales nuevas (barrido 30), y lo que se agrega es la COTA con que se pueden citar sus cifras
 

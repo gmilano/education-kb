@@ -7,6 +7,7 @@ updated: 2026-10-05
 # 📡 Tendencias — education
 
 > Ventana de investigación: septiembre 2026. Verificado 2026-09-30; el pase 11, el 2026-10-01.
+> **Pase 112 del 2026-10-05:** 🆕 **Seis tendencias nuevas, citadas una por una para que ninguna quede anunciada sin seccion (la leccion de `P97`): **675**, **676**, **677**, **678**, **679** y **680**.** 🟢 **La que manda es **675**: los 40 ceros de trending de esta base no eran un hecho sobre la industria sino sobre el CANAL — la busqueda en prosa devuelve el eje generalista y el LISTADO POR TOPICO devolvio 20 repos de la industria, 5 con cesion permisiva.** 🆕 **Y **677** es la de severidad invertida: un fallo RUIDOSO y frecuente es menos peligroso que uno SILENCIOSO y raro, medido 4 contra 1 en el propio arbol.**
 > **Pase 111 del 2026-10-05:** 🟢 **Tendencias 891–900.** 🆕 **`P349` — una cota de precision declarada en «cifras significativas» miente en los extremos: el canal de estrellas es un ESCALON (0 / ±50 / ±50 / ±500), da el entero EXACTO debajo de 1.000 y solo DOS cifras en 1.000-9.999; el peor error relativo y el peor absoluto no viven en el mismo lugar.** 🆕 **`P353` — la precision que vuelve checkeable a una cifra es la misma que la hace envejecer: `open-tutor-ai-CE` 108 → 107 ★ en un pase, y lo que volvio medible la deriva fue una tabla que SI estaba fechada.** 🆕 **`P350` — la frontera de una accion hacia afuera esta ANTES del envio, y una pre-registracion puede ponerla en el eje equivocado: enumerar contacto de personas en repos de terceros ya es PII y fue denegado, asi que el resultado es un TERCERO que las dos ramas no admitian.** 🔴 **Y lo medible sin tocar dato personal alcanzo para decidir: 0 de 6 superficies de contacto legibles por maquina, con README 200 en 6/6 como testigo.** 🆕 **`P351` — un barrido por una cifra publicada no distingue el DATO de la CITA que lo refuta: el conteo crudo sobreestima, el defecto son 42 valores y 31 en region de catalogo. Forma INVERSA de `P344`.** 🔴 **`P348` — contar por ARCHIVO en vez de por UNIDAD sobresamplea lo que no cede: la tasa del corpus es 76,4 %, no 58,0 %; las mal cedidas cargan 25,0 % mas figuras/unidad y `NO-ES-CESION` carga 3,021. Usar 58,0 % como tasa del corpus subestima la entregabilidad en 18,4 pp.** 🟢 **Los 10.210 RESOLUBLE llevan UN solo identificador (`CC BY 4.0`) y las dos cubetas sucias estan separadas por lado: se negocia dos veces, no por item.** 🆕 **`P352` — una suite que pasa solo en el contenedor que la escribio es una memoria, no un control.** 🆕 **`P354` — un control que reconoce una ORTOGRAFIA y no un OBJETO falla EN SILENCIO y en la direccion peligrosa: el auditor de citas de patron reportaba 42 numeros DEFINIDOS como colgados y seguia en verde; arreglado, colgadas 63 → 21 y suite 8/8 → 15/15.** ⚠️ **Y las 21 que quedan se dejan como deuda ENUMERADA (la peor: `P135`, 84 citas en negrita y 0 definiciones), porque escribir hoy la seccion de un patron ajeno es fabricar doctrina (`P286`).** 🟢 **Barrido regional 40: 4/4 regiones, 0 silencios y 0 hechos nuevos — saturacion medida (`P287`).**
 > **Pase 110 del 2026-10-05:** 🟢 **Tendencias 883–890.** 🔴 **`P344` — una pre-registracion puede construir su denominador CONTRA su propia hipotesis: 0 de 13 afirman cesion, y las 6 que SI lo hacen estaban en las 9 filas que la pre-registracion excluyo.** 🟢 **`P320` en su forma mas filosa: el canal es propiedad del par (herramienta, destino) — `WebFetch` sirve `github.com` donde `curl` da 403, asi que las ESTRELLAS vuelven, con resolucion de 3 cifras significativas y dos cifras del catalogo refutadas.** 🟢 **`P337` CERRADO: el corte converge a 1.611/832 y las 41 de diferencia son un DOMINIO DESNUDO — nunca fue una contradiccion, era un predicado no dicho.** 🔴 **`P346` — y lo que cierra es que la pregunta no decidia nada: entregable sin gestion son 1.418 de 2.443 (58,0 %), con 368 figuras OPENSTAX que no ceden NADA y 175 NO-OPENSTAX con CC BY 4.0 impecable.** 🆕 **`P347` — un archivo de licencia puede EXISTIR y no contener licencia: `frappe/education` cede «GNU GPL V3» en 19 BYTES.** 🟢 **Barrido regional 39: 4/4 regiones, 0 silencios, y la racha del calendario superado del AI Act sigue cortada por segundo pase.**
 > **Pase 109 del 2026-10-05:** 🟢 **Tendencias 875–882.** 🔴 **La racha de OCHO pases del calendario superado del AI Act se corta, y la condicionalidad del diferimiento corre al REVES: `2027-12-02` es un LIMITE EXTERIOR adelantable a 6 meses de aviso, no una fecha garantizada (tendencias 875–877).** 🔴 **`P342` — un badge de licencia y una entrada de arbol del README son una afirmacion de cesion, no una cesion, y esta base tenia el falso negativo publicado dos veces (tendencia 878).** 🔴 **`P343` — un prefijo GOLOSO sin frontera izquierda le roba los digitos de orden superior a un numero capturado (`35.121` → `5.121`), POSIX ERE no tiene con que frenarlo (ni cuantificadores perezosos ni *lookbehind*), y la huella es el UNICO campo que lo detecta; el primer diagnostico de este pase culpo a la causa equivocada y la refuto su propia suite (tendencia 879).** 🟢 **`P333` cerrado por ausencia medida: 5 de 5 huellas del archivo completo, 0 de 5 del archivo sin su ultimo byte (tendencia 880).** 🔴 **Saturacion del eje de agentes educativos medida: 5 devueltas, 5 publicadas, 0 nuevas (tendencia 881), y el canal de estrellas degradado a 403 (tendencia 882).**
@@ -265,6 +266,162 @@ medicion. **Un tablero de suites se mide desde el clon, que es la unica forma en
 significa algo.**
 
 ---
+
+## 675. Un cero repetido 40 veces puede ser un hecho sobre el CANAL y no sobre el mundo, y la unica forma de saberlo es cambiar de canal con la misma pregunta (agregado en el pase 112 del 2026-10-05)
+
+🔴 **Esta base publico «trending de la industria vacio» CUARENTA veces consecutivas**, y cada vez
+con el reparto escrito: catalogos, curriculo para enseñar AI, y el eje generalista. La conclusion
+implicita —que no hay repos de AI-para-educacion con traccion— se volvio doctrina por repeticion.
+
+🟢 **Este pase hizo la MISMA pregunta por otro canal y el cero desaparecio.** La busqueda en prosa
+(`WebSearch`) siguio devolviendo OpenClaw, CrewAI, OpenHands y LangChain. El **listado por topico**
+(`github.com/topics/ai-tutor`, `WebFetch`, **200**) devolvio **20 repos de la industria** con slug,
+estrellas y lenguaje; **7 nuevos** para esta base y **5 con cesion permisiva** leida del payload.
+
+🔵 **La leccion no es que el canal viejo estuviera roto:** respondia 200 y devolvia contenido real.
+Devolvia **otra poblacion**. Una consulta en prosa a un motor de busqueda premia lo que la prosa del
+mundo menciona —y el mundo escribe sobre agentes generalistas—, mientras un indice por topico
+enumera lo que **se declara** de esa industria. **Son dos muestreos distintos de dos universos
+distintos, y uno de los dos no contenia la respuesta.**
+
+⚠️ **La regla operativa, y es incomoda:** un cero que se repite **no se vuelve mas cierto con la
+repeticion, se vuelve menos informativo**. A partir de la segunda o tercera vez, el contenido del
+cero deja de ser sobre el objeto y pasa a ser sobre el instrumento, y lo que corresponde es
+**cambiar el instrumento, no anotar el cero otra vez**. `P287` lo dijo para la saturacion regional;
+**675** lo extiende: *la saturacion de un canal se parece exactamente a la ausencia del objeto*.
+
+---
+
+## 676. La region de una pieza se puede evidenciar por el CURRICULO al que apunta, y es una clase de evidencia mas fuerte que el antroponimo y mas barata que la afiliacion (agregado en el pase 112 del 2026-10-05)
+
+🔴 **El hueco de codigo de APAC de esta base estaba DECLARADO Y ABIERTO desde el pase ~79**, y la
+razon escrita era correcta: las candidatas no traian pais ni institucion, y **de un antroponimo no
+se infiere region** (`P135`, con el falso positivo de «Italia» por subcadena de `Italicia` como
+precedente).
+
+🟢 **Tres de las cinco altas de este pase traen una evidencia de clase distinta: el CURRICULO
+NACIONAL al que el repo apunta.** `flysheep-ai/education-skills` declara objetivo **Gaokao (高考)**;
+`SimonsTang/feifei-companion` y `Zenglian990/AI_Tutor_Release` se sincronizan con **人教版**
+(People's Education Press, el editor del libro de texto nacional chino).
+
+🔵 **Por que es mas fuerte que el antroponimo:** un nombre es un rasgo de la persona y puede viajar
+a cualquier pais; **un curriculo nacional es una institucion nombrada, con jurisdiccion**. Un repo
+que indexa 39.114 problemas del curriculo chino de 1º a 9º no es «probablemente de China»: esta
+**atado** a China por su objeto. 🔵 **Y por que es mas barata que la afiliacion institucional:** no
+requiere que el autor publique donde trabaja — basta leer a que examen o a que libro le sirve.
+
+🟢 **Es la forma que `P245` establecio** cuando ligo una pieza a una rubrica de examen nacional de
+APAC, usada aca por primera vez para **cerrar parcialmente un hueco regional declarado**.
+
+⚠️ **Y con su limite dicho:** sirve cuando la pieza apunta a un curriculo **nacional**. No sirve
+para una pieza generica, y `codeXsidd/Studivexa` —README en ingles, ningun curriculo nombrado—
+entro **sin region** y no se le asigno ninguna.
+
+---
+
+## 677. Un modo de falla RUIDOSO y frecuente es menos peligroso que uno SILENCIOSO y raro, y contar los dos juntos oculta a los dos (agregado en el pase 112 del 2026-10-05)
+
+🔵 **Medido en el propio arbol de esta base, 4 contra 1:**
+
+| clase | miembros | como se manifiesta |
+|---|---|---|
+| `cwd` asumido | **4** | codigo 1, con traceback o con un total MENOR ⇒ **se delata** |
+| ruta efimera (`P352`) | **1** (preexistente, ya arreglada) | codigo 0 y **«21/21» en verde sin medir nada** ⇒ **mentia** |
+
+🔴 **La clase de 4 miembros es la benigna.** Un `FileNotFoundError` cuesta cinco minutos de
+diagnostico y no contamina ninguna conclusion. 🔴 **La de 1 miembro es la que hizo daño:** publico un
+total verde durante un pase entero, y ese total entro en el tablero como evidencia.
+
+🟢 **El caso intermedio es el que mas enseña, y tiene nombre propio en este pase:**
+`p183-nongithub-denominator` desde otro `cwd` publica **«14/15 checks passed»** —un total **bien
+formado**, que se parece a una medicion— y la unica asercion que pierde es **su control negativo**,
+el que prueba que el instrumento puede fallar. **Una suite que deja de chequear su propia
+falsabilidad y sigue publicando un total plausible es peor que una que explota.**
+
+⚠️ **La consecuencia para una pre-registracion:** una prediccion con forma de **disyuncion**
+(«≥3 fallan por A **o** por B») se confirma sin decir cual rama la sostuvo, y si A y B tienen
+severidades opuestas, el numero que la confirma **no informa de ninguna de las dos**. Hay que
+pre-registrar **el reparto**, no el total.
+
+---
+
+## 678. La herencia entre dos capas de un corpus es una HIPOTESIS que se mide fila por fila, no una identidad que se deduce del agregado (agregado en el pase 112 del 2026-10-05)
+
+🔴 **Esta base venia suponiendo desde el pase 107 que el *hint* de `OATutor-Content` hereda la
+cesion de su problema padre.** Era plausible: la jerarquia lo sugiere y el agregado no lo
+contradecia.
+
+🟢 **Medido directo, objeto por objeto —cada hint trae sus PROPIOS campos `oer` y `license`—, la
+herencia no es la identidad:**
+
+| relacion hint ↔ padre | unidades | % |
+|---|---|---|
+| igual al padre | 55.418 | **80,2 %** |
+| **hijo VACIO con padre que cede** | **13.499** | **19,5 %** |
+| hijo cede con padre vacio | 204 | 0,3 % |
+| **se contradicen** | **0** | **0,0 %** |
+
+🔵 **Y la divergencia es ASIMETRICA 66 a 1:** casi toda es el hijo **dejando caer** una cesion que
+el padre hizo, no el hijo agregando una. 🟢 **Con la cubeta de contradiccion VACIA**, que es lo que
+decide el remedio: cuando los dos declaran, declaran **lo mismo** ⇒ el defecto es **OMISION**, no
+conflicto, y se arregla propagando, no arbitrando.
+
+🔴 **El efecto sobre la cifra entregable:** la capa de hint da **62,2 %** de cesion resoluble contra
+el **76,4 %** de los problemas (**−14,2 pp**). **26.136 de 69.121 unidades de hint (37,8 %) no
+traen cesion alguna** y son *todos los derechos reservados* hasta que alguien las gestione.
+⚠️ **La capa que un tutor AI usa MAS —la de pistas— es la peor cedida del corpus.**
+
+---
+
+## 679. Una prediccion puede ser inalcanzable sobre su propia premisa, y eso se descubre midiendo el CONTRAFACTUAL y no el resultado (agregado en el pase 112 del 2026-10-05)
+
+La accion C del pase 111 predijo que la capa de *hint* quedaria **dentro de ±3 pp** del 76,4 % de
+los problemas, **«porque el hint hereda el `license` de su problema padre»**.
+
+🔴 **Fallo por dos motivos INDEPENDIENTES, y el segundo solo aparece al medir el contrafactual:**
+
+| medicion | valor | contra la banda de ±3 pp |
+|---|---|---|
+| observado | **62,2 %** | 🔴 **−14,2 pp** — falla |
+| **contrafactual: cada hint vacio toma la cesion de su padre** | **72,6 %** | 🔴 **−3,8 pp** — **sigue fallando** |
+| problemas (`P348`) | 76,4 % | — |
+
+🔵 **O sea: aun CONCEDIDA la premisa entera, la prediccion no se alcanzaba.** La herencia perfecta
+habria sumado **+7.212** unidades (+10,4 pp) y el residuo de **−3,8 pp** igual cae fuera de la
+banda. Ese residuo tiene mecanismo propio: **los padres que tampoco ceden** — un hint no puede
+heredar una cesion que arriba no existe.
+
+🟢 **La leccion de metodo:** cuando una prediccion falla, medir **solo** el resultado dice que
+fallo; medir **el contrafactual de su propia premisa** dice **si podia haber acertado**. Son
+diagnosticos distintos y llevan a remedios distintos: una premisa falsa se corrige, una banda mal
+elegida se re-calibra, y **aca las dos cosas estaban mal a la vez**.
+
+---
+
+## 680. El numero de pase ordena los eventos pero no los espacia, asi que no sirve como unidad de tiempo para una afirmacion de DERIVA (agregado en el pase 112 del 2026-10-05)
+
+🔴 **`P353` establecio —y con razon— que en la banda `EXACTO` una cifra de estrellas no se publica
+sin FECHA.** La accion B de este pase intento usar esa fecha para medir deriva: remedir en el pase
+112 lo que el 111 fecho, prediciendo que al menos 1 de 2 filas se moveria «dentro de un pase».
+
+🔴 **Las dos devolvieron el mismo entero (264 y 107), y el enunciado que la rama de refutacion
+autorizaba —*«la deriva es mas lenta que un pase»*— NO SE PUBLICA.** 🔵 **Los pases 111 y 112 corren
+los dos el 2026-10-05:** el intervalo remedido son **horas**, no un dia. «Sin cambio» sobre horas
+es **indistinguible** de haber medido dos veces la misma tarde, y de ahi no sale ninguna cota sobre
+la deriva diaria.
+
+🔵 **El defecto es de UNIDAD, no de medicion:** un numero de pase es un **ordinal** —dice que el 112
+viene despues del 111— y esta base lo venia usando como si fuera un **intervalo**. En una base
+donde varios pases caen el mismo dia, «un pase despues» puede ser una hora o una semana, y las dos
+cosas se escriben igual.
+
+> **Regla, mas angosta que `P353` y complementaria:** fechar por DIA alcanza para **datar** una
+> cifra; para afirmar una **DERIVA** hacen falta dos lecturas con un intervalo **de reloj**
+> declarado. Lo que fecha es el reloj, no el contador de pases.
+
+🟢 **Lo que si quedo medido, y se afirma:** la serie de `CAHLR/OATutor` tiene cuatro puntos
+(265 → 264 → 264 → 264) sin contradicciones, asi que el canal **reproduce** en la banda `EXACTO`.
+Lo que no hay es una tasa, y este pase no la inventa.
 
 ## 🟢 Tendencias 883–890 — pase 110 del 2026-10-05: un denominador construido contra su hipotesis, el canal que es propiedad de la herramienta, `P337` cerrado por un dominio desnudo, y una licencia de 19 bytes
 

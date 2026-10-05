@@ -97,6 +97,32 @@ def es_meta_mencion(texto, pos=None):
     return any(m.lower() in bajo for m in MARCAS_META)
 
 
+# 🆕 `P359` (pase 112): una TERCERA clase que ni el clasificador lexico ni el estructural
+# tenian. Una cifra puede aparecer como el BORDE DE UNA BANDA -«por debajo de 1.000 ★»,
+# «1.000-9.999»- y entonces no es el dato de ningun repo ni la cita de un dato: es una
+# UNIDAD. El barrido la contaba como cifra publicada y la atribuia a un repo inexistente.
+# Lo encontro la publicacion del pase 112: la tabla de bandas de `P349` que el pase 111
+# escribio quedo debajo de una seccion nueva y salio como «defecto del pase 112».
+MARCAS_UMBRAL = ('por debajo de', 'por encima de', 'banda', 'menos de', 'mas de',
+                 'arriba de', 'abajo de', 'umbral', 'cota')
+
+
+def es_umbral(texto, pos=None):
+    """La cifra es el BORDE de una banda, no la medicion de un repo.
+
+    Senal estructural: cae en una celda que declara un RANGO (`1.000-9.999`, `< 1.000`,
+    `>= 100.000`). Senal lexica: la linea habla de la banda y no de un repo.
+    """
+    bajo = texto.lower()
+    if any(m in bajo for m in MARCAS_UMBRAL):
+        return True
+    if pos is not None:
+        ventana = texto[max(0, pos - 12):pos + 24]
+        if re.search(r'[<>≥≤]\s*\d|\d[\.\d]*\s*[-–—]\s*\d', ventana):
+            return True
+    return False
+
+
 def barrer(raiz, archivos=ARCHIVOS):
     """-> lista de (archivo, linea, valor, pase, es_meta)."""
     out = []
@@ -110,7 +136,7 @@ def barrer(raiz, archivos=ARCHIVOS):
         for i, l in enumerate(lineas, 1):
             for m in RE_CIFRA.finditer(l):
                 out.append((rel, i, m.group(0).strip(), _pase_de(i, marcas),
-                            es_meta_mencion(l, m.start())))
+                            es_meta_mencion(l, m.start()), es_umbral(l, m.start())))
     return out
 
 
@@ -122,14 +148,33 @@ def resumen(hits):
         'por_archivo': collections.Counter(h[0] for h in hits),
         'en_catalogo': sum(1 for h in hits if h[3] is None),
         'meta_menciones': sum(1 for h in hits if h[4]),
+        'umbrales': sum(1 for h in hits if len(h) > 5 and h[5]),
         'pase_maximo': max((h[3] for h in hits if h[3] is not None), default=None),
     }
 
 
 def posteriores_a(hits, pase):
     """Las ramas de refutacion de la accion B: ocurrencias de un pase POSTERIOR,
-    excluidas las meta-menciones (que no son el dato)."""
-    return [h for h in hits if h[3] is not None and h[3] > pase and not h[4]]
+    excluidas las meta-menciones y los UMBRALES (que no son el dato de ningun repo).
+
+    ⚠️ LIMITE DECLARADO del atribuidor (`P359`, pase 112): `_pase_de` asigna por POSICION
+    -el encabezado de pase mas cercano hacia arriba-. En un archivo *newest-first* la
+    posicion NO codifica la autoria: insertar la seccion de un pase nuevo ARRIBA
+    re-atribuye a ese pase todas las lineas que queden debajo hasta el proximo
+    encabezado. Por eso esta funcion NO puede sostener sola un enunciado sobre QUE PASE
+    publico una cifra, y la suite prueba el limite en vez de taparlo.
+    """
+    return [h for h in hits if h[3] is not None and h[3] > pase
+            and not h[4] and not (len(h) > 5 and h[5])]
+
+
+def atribucion_es_ambigua(hits, pase):
+    """Las ocurrencias cuya atribucion a `pase` viene de la POSICION y no del texto.
+
+    Son las que caen en la ventana entre el encabezado mas nuevo y el siguiente: un
+    archivo *newest-first* las re-atribuye con cada publicacion.
+    """
+    return [h for h in hits if h[3] == pase]
 
 
 if __name__ == '__main__':

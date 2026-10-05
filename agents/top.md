@@ -8,6 +8,7 @@ updated: 2026-10-05
 
 > Agentes y herramientas AI open source para educación. Foco: MIT / Apache 2.0 / BSD.
 > Verificado repo por repo vía WebFetch el 2026-09-30 (stars y licencia leídos de la página del repo).
+> **Pase 112 del 2026-10-05:** 🟢 **5 ALTAS PERMISIVAS — la primera cifra distinta de cero en 34 barridos.** 4 MIT + 1 Apache-2.0, cada una con la familia leida del PAYLOAD por el clasificador compartido (`P237`) y la huella publicada: `flysheep-ai/education-skills` (MIT, 1.068 B, `23b91d7c0aef`), `SimonsTang/feifei-companion` (Apache-2.0, 10.227 B, `59a378bf23a0`), `Selleo/mentingo` (MIT, 1.062 B, `ceb97717de1f`), `codeXsidd/Studivexa` (MIT, 1.068 B, `58f77360830f`), `Zenglian990/AI_Tutor_Release` (MIT, 1.068 B, `695941afdd1f`, rama `master`). 🟢 **Y 3 de las 5 CIERRAN PARCIALMENTE el hueco de codigo de APAC que esta base declaro abierto, por la forma de evidencia que `P245` establecio y NO por antroponimo (`P135`): el ancla es un CURRICULO NACIONAL — Gaokao (高考) y 人教版 (People's Education Press) — que es un hecho del repo, no del nombre del dueño.** 🔴 **Accion A CONFIRMADA en la letra (4 ≥ 3) y el reparto la desarma: 0 por ruta EFIMERA y 4 por `cwd` ASUMIDO. `P352` queda como ESPECIMEN, no clase.** 🆕 **`P355`: y la severidad va al REVES de la cantidad — las 4 del `cwd` fallan RUIDOSAMENTE (2 `CRASH` + 2 `TOTAL-DEGRADADO`), mientras la unica de ruta efimera pasaba en VERDE publicando «21/21» sin medir nada. La clase de 4 miembros se delata; la de 1 mentia. Y lo que `p183` pierde desde otro `cwd` es EXACTAMENTE su control negativo: reporta 14/15 y deja de chequear su propia falsabilidad.** 🔴 **Accion C REFUTADA: la capa de hint da **62,2 %** contra el 76,4 % de los problemas (**−14,2 pp**, pedia ±3 pp).** 🆕 **`P357`: la herencia NO es la identidad, medida DIRECTO y no deducida del agregado — 80,2 % de los hints igualan al padre, y la divergencia es ASIMETRICA 66 a 1 (13.499 hijos VACIOS con padre que cede, contra 204 al reves), con la cubeta de CONTRADICCION vacia ⇒ es OMISION, no conflicto. Y el contrafactual mata la prediccion por segunda via independiente: aun CONCEDIDA la herencia entera, el residuo es **−3,8 pp** y la banda de ±3 pp igual falla. La prediccion era inalcanzable sobre su propia premisa.** 🟢 **Accion D CONFIRMADA (15 ≥ 14) con un TERCER resultado que la pre-registracion no admitia: 6 de las 21 NO son deuda documental — 3 estan definidas con la convencion del propio auditor en OTRO archivo (`P245`, `P279`, `P281`) y 3 tienen instrumento y README propios (`P239`, `P280`, `P283`).** 🆕 **`P356`: la causa es del instrumento que las conto — `definitions()` lee UN archivo y `citations()` barre TODOS, y esa asimetria de denominador FABRICA colgadas. Deuda real: 15, la peor `P135` (84 citas en negrita, 178 totales, 0 definiciones). La accion se detuvo en CLASIFICAR (`P286`).** 🔴 **Accion B REFUTADA en la letra —las 2 filas de la banda `EXACTO` devuelven el MISMO entero (264, 107)— y el enunciado que la refutacion autorizaba NO se publica.** 🆕 **`P358`: «un pase» no es una unidad de TIEMPO. Los pases 111 y 112 corren los dos el 2026-10-05, asi que el intervalo remedido son HORAS y no un dia; «la deriva es mas lenta que un pase» es indistinguible de «se midio dos veces el mismo dia». Fechar por pase no alcanza: lo que fecha es el RELOJ.** 🟢 **Tablero medido DESDE EL CLON: 69 suites unicas (63 Python + 6 shell), 0 fallos desde su propio `cwd`; `p355` 16/16, `p356` 16/16, `p357` 24/24, control compartido 106/106 y 79/79 — y las 3 nuevas pasan tambien desde un `cwd` ajeno, que es la regla que este pase descubre.** 🔴 **Y un defecto que ENCONTRO LA PUBLICACION de este pase: el tablero dio 68/69 y la que fallaba era `test_p351.py`, rota por el acto de publicar — `P359`, en tres causas: el atribuidor de pase es POSICIONAL y en un archivo *newest-first* insertar arriba RE-ATRIBUYE lo de abajo; un UMBRAL (`por debajo de 1.000 ★`) no es ni dato ni cita sino una tercera clase; y la suite afirmaba `pase_maximo == 111`, o sea clavaba el numero del pase que la escribio y fallaba en el siguiente POR CONSTRUCCION. Familia de `P352`/`P355` en un tercer eje: solo pasaba en su PASE. Arreglada, 26/26 → 31/31, y el tablero cierra 69/69.** Ver **`P355`**–**`P359`**.
 > **Pase 111 del 2026-10-05:** 🔴 **0 altas permisivas (trigesimotercer barrido), cero ENUMERADO: 13 candidatas medidas → 12 ya publicadas (`P311`) y 1 nueva de OTRA industria (`OpenOSINT`, agente de OSINT en terminal).** 🔴 **`P350` — la accion A sale NO MEDIBLE, y el hallazgo es que la FRONTERA estaba un paso antes de donde la pre-registracion la puso: ella se detuvo en «no mandar nada», y ENUMERAR un canal de contacto en repos de terceros ya es manejo de datos personales — DENEGADO por politica. Las dos ramas pre-registradas solo admitian numeros; el tercer resultado es que el numero no se obtiene aca, y callarlo lo dejaria indistinguible de un cero (`P343`).** 🟢 **Lo que SI se midio es estructura y decide igual: 120 sondas, README 200 en 6/6 (testigo de alcance) y `CODEOWNERS`/`CITATION.cff`/`.github/CODEOWNERS` en **0/6** ⇒ ninguna superficie de contacto LEGIBLE POR MAQUINA, la unica es prosa libre y el unico manifiesto tiene 69 B. `P342` queda recuperable en teoria y NI ENUMERABLE en este entorno — enunciado sobre el ENTORNO, no sobre los repos.** 🟢 **Accion B CONFIRMADA (265 ocurrencias al cierre del pase, 42 valores distintos, 8 archivos; 0 posteriores al pase 110), y `P351`: el barrido no distingue el DATO de la CITA que lo refuta — 20 de las 262 son CITAS, entre ellas el pase 110 citando «385.407 ★» para refutarla, asi que el conteo crudo SOBREESTIMA; el defecto son los 42 valores distintos y sobre todo las 31 de la region de CATALOGO. Forma INVERSA de `P344`.** ⚠️ **Y el barrido se midio sobre el arbol TAL COMO ESTE PASE LO DEJA: de las 265, 11 son de este pase y las 11 son CITAS — el conteo crudo NO es estable bajo su propia publicacion (262 antes de redactar la seccion, 265 al cerrarla), mientras los 42 valores distintos y las 31 de catalogo NO se movieron. La cifra que un pase publica tiene que ser INVARIANTE bajo el acto de publicarla, y de las tres solo dos lo son. Lo que obligo a cambiar el instrumento: su clasificador era LEXICO (una lista de palabras) y el texto de ESTE pase lo rompio —tres citas claras contadas como dato—, asi que la rama de refutacion disparo sobre el pase 111. El arreglo NO fue alargar la lista (eso es `P354`): la senal es ESTRUCTURAL —citada va entre «» o en codigo inline, publicada va desnuda o en celda de tabla— y la lexica queda secundaria. Suite 19/19 → 26/26.** 🔴 **Accion C REFUTADA por DOS motivos apilados: la tasa SUBE a 76,4 % (+18,4 pp, pedia caer por debajo de 58,0 %) y los dos numeros NO ERAN COMPARABLES —58,0 % cuenta FIGURAS, 76,4 % cuenta PROBLEMAS—. En la misma unidad: con figura 63,4 %, sin figura 78,1 %, corpus 76,4 %. `P348`: los 5,3 pp son forma del denominador y el mecanismo esta MEDIDO — las unidades mal cedidas cargan 25,0 % mas figuras/unidad y `NO-ES-CESION` carga 3,021, mas del doble. Usar 58,0 % como tasa del corpus subestima la entregabilidad en 18,4 pp.** 🆕 **`P349`: la cota del canal de estrellas es una FUNCION ESCALON, no «3 cifras significativas» — debajo de 1.000 es EXACTO (`264`, `107`) y en 1.000-9.999 son DOS cifras (`7.5k`, ±50); peor error relativo al pie de la banda k, peor absoluto arriba (±500).** 🆕 **`P353`: en la banda exacta la deriva se ve a 1 unidad, asi que ahi la cifra no se publica SIN FECHA — `open-tutor-ai-CE` 108 → **107** en un pase. Y el primer diagnostico de este pase estaba MAL y se corrige: la tabla de correccion publica 265 ★ bajo el encabezado «Real 2026-09-30», asi que **esta fechada y es correcta** — es lo que vuelve MEDIBLE la deriva y da una serie de tres puntos (265 → 264 → 264). El defecto era la FILA DE CATALOGO, con un `265` DESNUDO sin fecha ni canal (`P156`/`P47`), invisible para el barrido de la accion B porque 265 tiene TRES digitos. Queda fechada. La leccion sale al reves de lo que parecia: la tabla CON fecha sobrevivio al pase, la que no la tenia, no.** 🆕 **`P352`: una suite que pasa solo en el contenedor que la escribio no es un control — `test_p345.py` («21/21» del pase 110) NO IMPORTA en un clon nuevo por un default en `/tmp`; arreglada contra el artefacto versionado y reproduce 1.418/2.443 digito a digito.** 🟢 **Tablero medido DESDE EL CLON: 66 suites (60 Python + 6 shell), 0 fallos; `p348` 21/21, `p349` 21/21, `p350` 12/12, `p351` 26/26, control compartido 106/106 y 79/79.** 🆕 **`P354`: el control que audita a ESTE archivo era CIEGO a la notacion que este archivo usa — el auditor de citas de patron conocia cuatro convenciones de encabezado y no la quinta (numero en CODIGO INLINE, la de `patterns.md` desde el pase ~95), asi que reporto `P348`-`P353` como colgadas estando DEFINIDAS; 42 numeros afectados (`P284`-`P287`, `P308`-`P319`, `P328`-`P353`) y el control seguia EN VERDE. Arreglado: colgadas 63 → 21, definidos 288 → 330, suite 8/8 → 15/15 con tres controles negativos. Familia `P171`/`P288`/`P299`/`P304`.** ⚠️ **Las 21 restantes son deuda real de pases viejos (la peor: `P135`, 84 citas en negrita y 0 definiciones) y NO se corrigen — inventar la definicion de un patron ajeno es fabricar doctrina (`P286`).** 🟢 **Barrido regional 40: 4/4 regiones, 0 silencios y **0 hechos nuevos** — saturacion MEDIDA con el grep de control sobre 13 hechos devueltos (`P287`).** Ver **`P348`**–**`P354`**.
 > **Pase 110 del 2026-10-05:** 🔴 **0 altas permisivas (trigesimosegundo barrido), con el cero ENUMERADO: 6 candidatas medidas → 4 ya publicadas (`P311`) y 2 nuevas que no ceden nada (`sumedhakoranga/TutorAI`, `tutornew/OpenTutor`, 10 sondas cada una, README 200 como testigo).** 🔴 **`P344` — la accion A sale FALSIFICADA en su clausula principal (0 de 13, pedia ≥2) y el motivo es de CONSTRUCCION DEL DENOMINADOR: los 13 son las filas `SILENT-3-LAYERS` del pase 66, y el pase 66 ya habia apartado con otras etiquetas (`README-BADGE`, `README-PROMISE-BROKEN`, `README-IDENTIFIER`, `README-CONTRADICTION`) justo a los repos que SI afirman. Medido sobre las 9 que la pre-registracion EXCLUYO: 6 de 9 son `P342`. Las dos ramas de refutacion disparan a la vez, sobre denominadores distintos.** 🔴 **Y el instrumento de la accion A tenia DOS puntos ciegos propios: era de sintaxis Markdown y no veia los badges en HTML (`<img src="…shields.io/badge/License-MIT…">`, que es como afirman `NLP2CT` y `SafeTutors`), ni el nombre envuelto en `**enfasis**`. El pase 66 los habia visto porque leyo la pagina RENDERIZADA: el canal de PAYLOAD tiene MENOR recall para AFIRMACIONES, al reves que para cesiones.** 🟢 **Los 13 quedan cerrados por el canal fuerte: arbol enumerado (`P275`), 0 archivos de cesion en 9.886 rutas, y el instrumento PASA los dos controles de respuesta conocida que este arbol ya tenia (`1EdTech/openbadges-specification` → `ob_v3p0/license.md`, 12.324 B, replica `P187` AL BYTE y le corrige el denominador: son CINCO superficies de cesion, no una; `dini-ag-kim` → CC BY-SA 4.0 en `lp-base.ttl:24`) y FALLA con el repo inventado.** 🔴 **Pero el arbol introduce un error nuevo y medido: `dini-ag-kim/src/ontology/utils/owl2shacl/LICENSE` es **LGPL-3.0** (7.652 B, titular FSF) y es de una herramienta EMPOTRADA — tres canales, tres respuestas para UN repo, y un barrido de arbol que tome el primer archivo le pega copyleft de CODIGO a un repo cuyo entregable es DATO con atribucion.** 🟢 **Accion B REFUTADA, y por el mecanismo mas filoso de `P320` hasta ahora: el canal es propiedad de la HERRAMIENTA, no del dominio.** `curl` → `github.com` **403**; **`WebFetch` → `github.com` 200**, sirve estrellas, forks y licencia, y da **404 en repo inventado** (control negativo pasa). El pase 109 publico *«`github.com` degradado a 403 ⇒ 0 estrellas medidas»*, y eso era un enunciado sobre `curl` publicado como enunciado sobre el DOMINIO. ⚠️ **Con una cota: la resolucion es de 3 cifras significativas («40,8k»), asi que las estrellas vuelven como MAGNITUD con el canal nombrado, nunca como los enteros exactos que esta base publicaba.** 🔴 **Y el canal recuperado cobra de inmediato: `CAHLR/OATutor` tiene **264 ★** y esta base publico «~1,3k» y «~1,5k» (inflado ~5-6×); `Open-TutorAi/open-tutor-ai-CE` es **BSD-3-Clause** y **108 ★**, publicado como «Apache-2.0, ~600 ★» — mal la licencia Y las estrellas, y la licencia importa porque Apache-2.0 trae concesion EXPLICITA de patentes y BSD-3-Clause NO.** 🟢 **Accion C CONFIRMADA en la letra: el corte converge a **1.611/832**, y `P337` cierra con el mecanismo MEDIDO — las 41 de diferencia son la cuarta forma, un DOMINIO DESNUDO (`https://openstax.org/`), asi que nunca fue una contradiccion sino un PREDICADO NO DICHO.** 🔴 **`P346` — y lo que cierra es que la pregunta no decidia nada: medido el campo `license` de las 2.443 figuras, entregable sin gestion son **1.418** (58,0 %), con **368 figuras del lado OPENSTAX que no ceden NADA** y **175 del lado NO-OPENSTAX con `CC BY 4.0` impecable**. Procedencia y cesion son ejes INDEPENDIENTES, medido en las dos direcciones.** 🟢 **Tablero: 62 suites (56 Python + 6 shell), 0 fallos; `p344` 31/31, `p345` 21/21, control compartido 106/106 (`Python 3.11.15`).** Ver **`P344`**–**`P346`**.
 > **Pase 109 del 2026-10-05:** 🔴 **0 altas permisivas (trigesimoprimer barrido) y por primera vez la razon se MIDE en vez de declararse: las 5 candidatas que el canal devolvio (`DeepTutor`, `open-tutor-ai-CE`, `AITutorAgent`, Freelingo, Bloom) ya estaban las 5 en el arbol — 5 devueltas / 5 publicadas / 0 nuevas (`P311`, `P287`).** 🔴 **`P342` — un badge de licencia y una entrada de arbol del README son una AFIRMACION de cesion, no una cesion: `Javi111003/OlivIA-RAG`, publicado DOS veces por esta base como «sin licencia», afirma MIT en la linea 3 (badge hipervinculado a `LICENSE`) y en la linea 50 (su propio arbol de directorios), con el archivo en 404 en 20/20 sondas ⇒ FALSO NEGATIVO publicado, y una pieza LATAM recuperable por una gestion y no un descarte.** 🔸 **Accion B CONFIRMADA en su mitad fuerte (0 de 9 «sin licencia» tienen archivo) y DEBIL en la otra (el unico caso de ortografia, `openedx/XBlock`/`LICENSE.TXT`, ya lo tenia `P279`).** 🔴 **Accion C FALSIFICADA en sus dos clausulas, y lo que se cumple es la clausula de refutacion que el pase 108 escribio contra si mismo: 5 de 5 huellas son del archivo COMPLETO, 0 de 5 del archivo sin su ultimo byte, 5 de 5 terminan en `0a` ⇒ `P333` cerrado por ausencia medida.** 🔴 **`P343` — defecto de ESTE pase, y su primer diagnostico tambien estaba mal: un prefijo GOLOSO `^.*` sin frontera izquierda en la captura leyo el `35.121 B` publicado como `5.121 B` (no fue el cuantificador acotado, que solo captura bien), y POSIX ERE no da con que frenarlo porque `grep -E`/`sed -E` no tienen cuantificadores perezosos (`.*?` es goloso) ni *lookbehind*; la misma corrida dejo una fila cuyo «repo» es la RUTA `master/LICENSE.TXT`. Lo atrapo la huella y nada mas, y el enunciado lo corrigio la SUITE.** 🔴 **Accion A NO CORRIDA (tercer pase de deuda declarada) y `github.com` degradado a 403 ⇒ 0 estrellas medidas.**
@@ -281,6 +282,312 @@ updated: 2026-10-05
 > fila** —`lineage-skill`, con un vocabulario cerrado de 9 valores por afirmación, **4 de los 9 «esto lo produjo el
 > modelo»**— y **ninguna de las dos sabe de la otra**. Ver la capa nueva al final de este archivo, las tendencias
 > **180**–**182** y el patrón **P99**.
+
+## 🟢 Altas de agente: 5 PERMISIVAS — la primera cifra distinta de cero en 34 barridos, y 3 de ellas cierran parcialmente el hueco de APAC por ancla de CURRICULO (pase 112 del 2026-10-05)
+
+> **Frontmatter y region:** `Global` a nivel archivo. Las regiones por fila van evidenciadas abajo,
+> una por una, con la FORMA de la evidencia nombrada. Donde no hay evidencia de primera mano se
+> escribe `sin region verificada` y **no se inventa** (`P135`).
+
+### 🔬 El canal, declarado antes de cualquier veredicto (`P249`)
+
+| canal | estado en este pase | que habilita |
+|---|---|---|
+| `raw.githubusercontent.com` | 🟢 **200** en 3 anclas buenas · **404** en 3 inventadas (repo, rama y archivo) | leer la cesion del payload |
+| `WebFetch` → `github.com` | 🟢 **200** | estrellas, forks y licencia del sidebar |
+| `WebFetch` → `github.com/topics/…` | 🟢 **200** | el LISTADO por topico — **canal distinto del sidebar**, no se mezclan |
+| `git ls-remote` | 🟢 discrimina | enumerar refs |
+| clon `--filter=blob:none` + `sparse-checkout` | 🟢 **vivo** (49.479 JSON) | materializar el corpus de la accion C |
+| `curl` → `github.com` | 🔴 **403** | — |
+| `api.github.com` | 🔴 **403** | — |
+
+⚠️ **Una grieta del canal `ls-remote`, anotada porque cambia que se puede negar con el:** el repo
+inventado no da un 404 limpio sino `could not read Username for 'https://github.com'`. Eso
+**discrimina lo publico de lo no-legible**, no lo existente de lo inexistente: un repo PRIVADO
+produce la misma salida que uno que no existe. Sirve para afirmar presencia, **no** para negar
+existencia.
+
+🔴 **Y una cifra del canal de busqueda que NO se propaga:** el resumen de `WebSearch` atribuye a
+`OpenClaw` *«aproximadamente 362k estrellas»*, contra los **385.407** que el pase 110 midio del
+sidebar. Se registra como **defecto de canal** y no como dato — es `P281`/`P351` otra vez: el
+canal de prosa entrega cifras que no reproducen, y adoptarlas habria metido un tercer valor en
+circulacion.
+
+---
+
+### 🟢 Las 5 altas permisivas, con la cesion LEIDA DEL PAYLOAD y la familia del clasificador compartido
+
+Estrellas del sidebar de `github.com`, **fechadas 2026-10-05** — las cinco caen en la banda
+`EXACTO` de `P349` (< 1.000), donde la regla de `P353` obliga a la fecha.
+
+| pieza | repo | licencia (familia del payload) | bytes · sha256 | ★ 2026-10-05 | lenguaje | region y FORMA de la evidencia |
+|---|---|---|---|---|---|---|
+| education-skills | [`flysheep-ai/education-skills`](https://github.com/flysheep-ai/education-skills) | **MIT** | 1.068 · `23b91d7c0aef` | **106** | Shell / skills | **APAC** — ancla de CURRICULO NACIONAL: README integramente en chino y objetivo declarado **Gaokao (高考)** |
+| FeiFei Companion | [`SimonsTang/feifei-companion`](https://github.com/SimonsTang/feifei-companion) | **Apache-2.0** | 10.227 · `59a378bf23a0` | **105** | Python | **APAC** — pais declarado (China) + ancla **人教版** (People's Education Press) |
+| Mentingo | [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | **MIT** | 1.062 · `ceb97717de1f` | **91** | TypeScript | **EMEA** — perfil de la organizacion declara **`Poland`** y `selleo.com` (dato de primera mano, leido del perfil) |
+| Studivexa | [`codeXsidd/Studivexa`](https://github.com/codeXsidd/Studivexa) | **MIT** | 1.068 · `58f77360830f` | **72** | JavaScript | ⚠️ **sin region verificada** — README en ingles, ningun pais ni institucion declarados |
+| EduAgent | [`Zenglian990/AI_Tutor_Release`](https://github.com/Zenglian990/AI_Tutor_Release) | **MIT** (rama `master`) | 1.068 · `695941afdd1f` | **57** | JavaScript | **APAC** — `国内` declarado + ancla **人教版** K-9 |
+
+**Que hace cada una, en una linea:**
+
+- **`education-skills`** — coleccion de *Agent Skills* de tutoria por materia de secundaria china
+  (ciencias, letras, lengua, ingles), con metodo socratico declarado: guia en vez de dar la
+  respuesta. 21 forks.
+- **`feifei-companion`** — K12 con arquitectura de **tres tutores especializados** (coordinacion +
+  letras + STEM), mapa de red de conocimiento, tareas activas y canal de comunicacion con la
+  familia. 9 forks.
+- **`mentingo`** — **LMS self-hosted** con mentor AI integrado, posicionado explicitamente como
+  alternativa a Moodle, Docebo y Open edX; foco en formacion corporativa, *onboarding* y
+  *compliance*. El dueño declara construir plataformas de aprendizaje desde 2005. 28 forks.
+- **`Studivexa`** — espacio de productividad para estudiantes con mecanica gamificada, desglose de
+  tareas, sala de foco con tutoria y analitica de GPA. 1 fork.
+- **`AI_Tutor_Release`** (EduAgent) — tutor **RAG** para 1º-9º del curriculo chino con **39.114+
+  problemas indexados en LanceDB**, resolucion por foto, voz, mapa de aprendizaje gamificado y
+  tablero para padres; metodo socratico y modelo cognitivo por edad. 15 forks.
+
+---
+
+### 🔴 Las 2 candidatas que NO entran, con el motivo medido y no supuesto
+
+| repo | ★ 2026-10-05 | que devolvio el payload | veredicto |
+|---|---|---|---|
+| [`yh2072/edgameclaw`](https://github.com/yh2072/edgameclaw) | **71** | `main/LICENSE` **200**, 34.523 B, `8486a10c4393` → familia **AGPL-3.0** | 🔴 **COPYLEFT DE RED** — fuera de la estanteria permisiva |
+| [`A-R007/Multi-Agent-Study-Assistant`](https://github.com/A-R007/Multi-Agent-Study-Assistant) | **61** | **12 sondas** (2 ramas × 6 ortografias) **todas 404**; README **200** como testigo de alcance | 🔴 **SIN CESION** — *todos los derechos reservados* |
+
+🟢 **El control de `P288` disparo CORRECTAMENTE en el campo, y vale anotarlo:** el payload de
+`plastic-labs/tutor-gpt` (930 ★, 97 forks) menciona **«affero» 3 veces** y aun asi el clasificador
+compartido lo resuelve **`GPL-3.0`** y no `AGPL-3.0` — las menciones son del preambulo de la propia
+GPL. Es el caso que `p288-agpl-casefold/` existe para no errar, visto fuera de su fixture.
+
+⚠️ **`tutor-gpt` tampoco es alta:** `GPL-3.0` es copyleft. Entra al registro como **medida y
+descartada por licencia**, que es distinto de no haberla mirado.
+
+---
+
+### 🟢 El denominador del barrido 34, ENUMERADO (`P287`, `P311`)
+
+| paso | cifra |
+|---|---|
+| candidatas devueltas por el canal | **22** |
+| ya publicadas, frenadas por el gate de `P311` | **9** |
+| medidas nuevas | **7** |
+| → altas permisivas | 🟢 **5** |
+| → descartadas por copyleft | 🔴 **1** (`edgameclaw`, AGPL-3.0) |
+| → descartadas por ausencia de cesion | 🔴 **1** (`Multi-Agent-Study-Assistant`, 12 sondas) |
+
+🔵 **Y el eje generalista volvio a aparecer (`P281`, enesima vez):** la consulta global
+`top open source AI agents education 2026 github MIT` devolvio OpenClaw, CrewAI, OpenHands y
+LangChain — agentes de proposito general, no AI-para-educacion. Lo que produjo las 22 candidatas
+fue el **listado por topico** (`github.com/topics/ai-tutor`), no la busqueda en prosa. **El canal
+que encuentra la industria no es el mismo que la nombra.**
+
+---
+
+### 🆕 `P355` — una suite que lee por ruta RELATIVA mide menos desde otro `cwd` y lo ANUNCIA; la que lee un default EFIMERO mide menos y NO lo anuncia
+
+La accion A pre-registrada por el pase 111 pedia barrer `compose/code/` por rutas efimeras
+(`/tmp/`, `$TMPDIR`, `/var/tmp`) **y** correr cada suite desde un `cwd` ajeno, y predijo **≥3**
+suites mas que fallan o se saltan **por una de las dos causas**.
+
+| clausula | pedia | medido | veredicto |
+|---|---|---|---|
+| suites que fallan o se saltan desde otro `cwd` | **≥3** | 🟢 **4** | **CONFIRMADA** |
+| rama de refutacion «que sean 0 ⇒ `P352` es especimen» | — | 🔸 no dispara en la letra | …pero **se cumple por causa** |
+
+🔴 **El reparto por CAUSA desarma la cifra que la confirma:**
+
+| causa | suites |
+|---|---|
+| por ruta **EFIMERA** (la clase de `P352`) | 🟢 **0** |
+| por **`cwd` ASUMIDO** | 🔴 **4** |
+
+🔵 **O sea: la prediccion acerto el numero y erro el mecanismo.** Era una DISYUNCION, y una
+disyuncion confirma sin decir cual rama la sostuvo. La clase que la motivaba aporta **cero**:
+`p345` —el especimen de `P352`— nombra `/tmp` en su linea 131 y **pasa** desde los dos `cwd`,
+porque el pase 111 lo arreglo con un *skip* declarado. **`P352` es un especimen, no una clase.**
+
+🔴 **Y la severidad va al REVES de la cantidad, que es el hallazgo del pase:**
+
+| suite | exit propio | exit ajeno | forma del fallo | que se pierde |
+|---|---|---|---|---|
+| `p183-nongithub-denominator/test_denominator.py` | 0 | 1 | **TOTAL-DEGRADADO** | **14/15** — y la que cae es **su CONTROL NEGATIVO** |
+| `p184-holder-mismatch/test_holder.py` | 0 | 1 | **TOTAL-DEGRADADO** | **11/15** — 4 payloads reales de `fixtures/` |
+| `p251-cohort-lineage/test_lineage.py` | 0 | 1 | **CRASH** | todo: `FileNotFoundError: 'rows.tsv'` |
+| `sebserver-mcp-gate/test_gate.py` | 0 | 1 | **CRASH** | todo: `FileNotFoundError: 'operations.tsv'` |
+
+🟢 **Las 4 fallan RUIDOSAMENTE** (codigo 1, con traceback o con un total menor). 🔴 **La unica de la
+clase efimera fallaba en SILENCIO: `test_p345.py` publicaba «21/21» en verde mientras no media
+nada.** La clase de 4 miembros **se delata**; la de 1 miembro **mentia**. Contar las dos juntas
+—que es lo que la pre-registracion hizo— suma una clase ruidosa y grande con una silenciosa y
+chica, y el numero resultante no informa de ninguna.
+
+🔴 **El caso de `p183` es el mas filoso y merece su propia linea:** desde otro `cwd` reporta
+**«14/15 checks passed»**, un total **bien formado** que se parece a una medicion — y la unica
+asercion que pierde es la que prueba que **el instrumento puede fallar**. Una suite que desde el
+lugar equivocado deja de chequear su propia falsabilidad **y sigue publicando un total plausible**
+es peor que una que explota.
+
+⚠️ **Y una dependencia INVERSA, encontrada de paso y que el barrido de suites no veia:**
+`pattern-citation-audit/audit_patterns.py` —el instrumento, no su suite— **falla desde su propio
+directorio** (`no existe ./compose/patterns.md`) y solo corre desde la RAIZ del repo. «`cwd`
+asumido» no es «asume el suyo»: son **dos** contratos opuestos conviviendo en el mismo arbol.
+
+🟢 **Instrumento y suite:** `compose/code/p355-cwd-portability/` (**16/16**), con el control
+negativo que sostiene el hallazgo —que un `CRASH` que ademas imprime un `N/M` no se lea como
+`TOTAL-DEGRADADO`, porque si `shape()` mirara primero el total el reparto 2-2 se volveria 0-4— y
+el que impide marcar el ARREGLO como defecto (`tempfile.mkdtemp()` **no** se marca).
+
+---
+
+### 🆕 `P356` — un auditor cuyo denominador de DEFINICIONES y de CITAS son conjuntos de archivos distintos FABRICA hallazgos
+
+La accion D pedia repartir las **21** colgadas de `P354` por ORIGEN entre dos clases —
+**anunciada y nunca escrita** (`P295`/`P297`) o **error de numeracion** — y predijo **≥14** de la
+primera.
+
+| clase | cuantas | quienes |
+|---|---|---|
+| **ANUNCIADA** (deuda documental real) | 🔴 **15** | `P127`, `P128`, `P129`, `P130`, `P132`, `P133`, `P134`, `P135`, `P173`, `P174`, `P175`, `P240`, `P252`, `P282`, `P293` |
+| **DEFINIDA-FUERA** (seccion con la convencion del auditor, en otro archivo) | 🟢 **3** | `P245` (`agents/top.md`), `P279` (`repos/foundations.md`), `P281` (`agents/trending.md` + `intel/market.md`) |
+| **INSTRUMENTO** (codigo y README propios) | 🟢 **3** | `P239`, `P280`, `P283` |
+
+🟢 **CONFIRMADA en la letra: 15 ≥ 14.** 🔴 **Y con un TERCER resultado que la pre-registracion no
+admitia, igual que `P350` un pase antes: 6 de las 21 no son de ninguna de las dos clases, porque
+no son deuda.** El numero de errores de NUMERACION —la rama que habria hecho urgente a `P135`— es
+**0**: ninguna de las 21 es un dedazo.
+
+🔴 **La causa es del instrumento que las conto, y es estructural:** en
+`audit_patterns.py`, `definitions()` lee **un solo archivo** (`compose/patterns.md`) mientras
+`citations()` barre **todos** los `**/*.md` del arbol. Un numero definido con **la misma
+convencion de encabezado que el auditor ya reconoce**, pero en otro archivo, sale colgado y nada lo
+marca. **La asimetria de denominador no es un punto ciego de ortografia —el de `P354`— sino de
+ALCANCE:** el ancla era correcta y el conjunto sobre el que se aplicaba, no.
+
+🔵 **Familia:** `P344` (el denominador formado restando la clase que la prediccion buscaba),
+`P351` (el denominador que no distingue dato de cita) y ahora esta. **Tercera forma en tres pases
+en que el DENOMINADOR decide que defectos son encontrables.**
+
+⚠️ **La deuda real queda en 15 y NO se corrige en este pase, por `P286`:** inventar la definicion
+de un patron ajeno es fabricar doctrina. La peor sigue siendo **`P135` — 84 citas en negrita, 178
+en total, 0 definiciones** — y ahora se sabe que es deuda *documental* y no un error de numeracion,
+que es lo que la accion D existia para decidir.
+
+🟢 **Instrumento y suite:** `compose/code/p356-citation-origin/` (**16/16**). El control que
+importa es NEGATIVO: **un encabezado que MENCIONA un numero no lo DEFINE**. La primera medicion de
+este pase uso un `grep` con `[^0-9]*` antes del numero y leyo
+*«## Capa de escritura del lado DOCENTE — el agujero de P129, cerrado»* como definicion de `P129`:
+habria convertido **2 de las 21** en falsos `DEFINIDA-FUERA`. El arreglo fue **reusar las regex del
+propio auditor** (`P237`) y cambiar **solo** el conjunto de archivos.
+
+⚠️ **Y un control de este pase que estaba MAL escrito y se corrige antes de publicar:** afirmaba
+`142 not in WHERE` para probar que el barrido no se lee a si mismo. `P142` **si** esta definida, en
+`compose/patterns.md`, y legitimamente — es el control positivo del propio auditor. El control
+correcto no mira el NUMERO sino la **PROCEDENCIA**: que ninguno de los dos directorios de
+instrumento aporte una definicion. Es `P126` en su forma de siempre: el control medía otra cosa que
+la que decía.
+
+---
+
+### 🔴 `P358` — «un pase» no es una unidad de TIEMPO, y la accion B lo vuelve visible
+
+La accion B pedia remedir por el mismo canal las 2 filas de la banda `EXACTO` que el pase 111
+fecho, y predijo que **al menos 1 de 2** cambiaria en ±1 o mas **dentro de un pase**.
+
+| repo | 2026-09-30 | pase 110 | pase 111 | 🟢 pase 112 (2026-10-05) | banda |
+|---|---|---|---|---|---|
+| [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | 265 ★ | 264 ★ | 264 ★ | 🟢 **264 ★** (156 forks, MIT) | `EXACTO` |
+| [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) | — | 108 ★ | 107 ★ | 🟢 **107 ★** (192 forks, BSD-3-Clause) | `EXACTO` |
+
+🔴 **REFUTADA en la letra: las 2 devuelven el mismo entero.** 🔴 **Y el enunciado que la rama de
+refutacion autorizaba —*«la deriva en esta banda es mas lenta que un pase, fechar por pase
+alcanza»*— NO SE PUBLICA, porque el intervalo que se midio no es el que la pre-registracion creia
+estar midiendo.**
+
+🔵 **Los pases 111 y 112 corren los dos el 2026-10-05.** El intervalo remedido son **horas**, no un
+dia. Un resultado de «sin cambio» sobre horas es **indistinguible** de «se midio dos veces el mismo
+dia», y de ahi no sale ninguna cota sobre la deriva diaria.
+
+> **Regla que deja `P358`, y es la mitad que le faltaba a `P353`:** el numero de pase ordena los
+> eventos pero **no los espacia**. Una afirmacion sobre DERIVA necesita dos lecturas separadas por
+> un intervalo **de reloj** y declarado; «un pase despues» no lo es. `P353` acerto en pedir FECHA y
+> la fecha por dia **no basta** cuando varios pases caen en el mismo dia: lo que fecha es el reloj.
+
+🟢 **Lo que si queda medido, y es poco pero es cierto:** la serie de `OATutor` tiene cuatro puntos
+(265 → 264 → 264 → 264) y ninguna lectura contradice a la anterior; el canal es **reproducible** en
+la banda `EXACTO`. Lo que no hay es una tasa de deriva, y este pase **no la afirma**.
+
+---
+
+### 🔴 La capa de hint del corpus: `P357`, la accion C REFUTADA, y por que importa para un entregable
+
+Ver **`P357`** en `compose/patterns.md` y el instrumento en
+`compose/code/p357-hint-layer-cession/` (**24/24**, corpus `CAHLR/OATutor-Content` en
+`1925decc91567faf6203bdb41b9d52b14891426f`).
+
+| capa | unidades | `RESOLUBLE` | tasa | `license` vacio |
+|---|---|---|---|---|
+| problema | 13.371 | 10.210 | 🟢 **76,4 %** | 2.545 |
+| **hint** | **69.121** | **42.985** | 🔴 **62,2 %** | **26.136** |
+| TOTAL | **82.492** | | | |
+
+🔵 **El denominador de 82.492 del pase 106 queda REPRODUCIDO exactamente**, y de paso se replica la
+nota del pase 107: `git ls-tree` enumera **49.473** rutas y el arbol materializado tiene **49.479**
+archivos — la diferencia de **6** son los caminos con bytes de control en el nombre que `git` cita
+entre comillas. **Dos canales, dos cifras, y la diferencia explicada.**
+
+🔴 **Consecuencia de negocio, que es lo que esta fila le importa a un *engagement*:** si se ingiere
+`OATutor-Content` y se asume que el hint hereda la cesion de su problema, se **sobre-declara la
+entregabilidad del material de tutoria en 10,4 pp**. **26.136 de 69.121 unidades de hint
+(37,8 %) no traen cesion ninguna** y son *todos los derechos reservados* hasta que alguien las
+gestione. La capa que un tutor AI usa MAS —la de pistas— es la peor cedida del corpus.
+
+---
+
+### 🔴 Acciones pre-registradas para el pase 113, falsables, con su numero escrito ANTES de correrlas
+
+**Accion A — `P355` convertido en compuerta, en vez de en hallazgo.**
+Este pase midio 4 suites rotas por `cwd` asumido y **no las arreglo**. Arreglarlas es mecanico
+(resolver contra `__file__`); lo que no es mecanico es que no vuelvan. Escribir el control que
+corre **todo** el tablero desde un `cwd` ajeno y falla si alguna suite no es portable, y arreglar
+las 4.
+
+**Prediccion falsable:** *arreglar las 4 no rompe ninguna de las otras 65, y el tablero queda
+**69/69 desde los dos `cwd`**.* 🔵 **Que la refuta:** que al resolver contra `__file__` alguna
+suite **cambie su total propio** —y entonces esa suite estaba leyendo, desde su propio directorio,
+un archivo distinto del que cree leer, que es un defecto peor que el de portabilidad y hay que
+nombrarlo fila por fila.
+
+**Accion B — `P358` con un intervalo de RELOJ, no de pase.**
+Remedir las 2 filas de la banda `EXACTO` **nombrando la hora UTC** de cada lectura, y no volver a
+publicar un enunciado de deriva sin el intervalo declarado.
+
+**Prediccion falsable:** *con un intervalo declarado de **≥24 h**, al menos 1 de las 2 se mueve en
+±1.* 🔵 **Que la refuta:** que las 2 devuelvan el mismo entero con ≥24 h declaradas — y entonces la
+deriva en esta banda es **mas lenta que un dia**, que es un enunciado que `P353` quiso hacer y no
+podia.
+
+**Accion C — `P357` contra la capa que decide la entrega: el padre de los 26.136 hints sin cesion.**
+Este pase midio que 13.499 hints estan vacios con un padre que SI cede. Quedan
+**26.136 − 13.499 = 12.637** hints vacios cuyo padre **tampoco** cede. Medir su reparto por clase
+del padre (`AUSENTE`, `VERSION-SIN-VARIANTE`, `NO-ES-CESION`, `NO-RECONOCIDO`).
+
+**Prediccion falsable:** *de esos 12.637, **≥80 %** cuelgan de un padre `AUSENTE` —es decir, la
+omision se HEREDA— y no de un padre que cede algo no-resoluble.* 🔵 **Que la refuta:** que la
+mayoria cuelgue de `NO-ES-CESION` o `VERSION-SIN-VARIANTE`, y entonces el problema no es una
+omision propagada sino una cesion MAL FORMADA arriba, y el remedio es distinto: se arregla en el
+problema, no en el hint.
+
+**Accion D — las 15 anunciadas, contra el pase que las anuncio.**
+`P356` dejo 15 colgadas de clase ANUNCIADA y **no** escribio ninguna seccion (`P286`). Para cada
+una, localizar el pase que la cito por PRIMERA vez y determinar si ese pase **prometio** la seccion
+(«ver `P135` abajo», «los patrones `P127`–`P130`») o si solo la **uso** como si ya existiera.
+
+**Prediccion falsable:** *de las 15, **≥10** fueron PROMETIDAS explicitamente por el pase que las
+introdujo, y entonces la deuda tiene un dueño identificable por pase y se puede saldar en orden.*
+🔵 **Que la refuta:** que **≤5** lo hayan sido y las otras aparezcan ya citadas como doctrina
+establecida — y entonces el modo de falla no es una promesa incumplida sino un numero que **nacio
+citado**, que es la forma que `P354` encontro en la notacion y esta encontraria en la autoria.
+⚠️ **La accion se detiene en LOCALIZAR Y CLASIFICAR: sigue sin escribir secciones.**
 
 ## 🔴 Altas de agente: 0 permisivas — trigesimotercer barrido, y el aporte del pase es que la FRONTERA de una accion hacia afuera estaba un paso antes de donde la pre-registracion la puso (pase 111 del 2026-10-05)
 
@@ -6406,7 +6713,12 @@ se explica abajo, porque es la cuarta vez que esta KB se pelea con este número.
 | OATutor | https://github.com/CAHLR/OATutor | MIT | **264 ★** (medido 2026-10-05, banda `EXACTO` de `P349`; 265 ★ el 2026-09-30 ⇒ deriva de −1 en 5 dias, `P353`) | JavaScript | Intelligent Tutoring System con Bayesian Knowledge Tracing para estimar mastery. Deploy en dos clicks a GitHub Pages, A/B testing incorporado. 🔴 **«3 libros de contenido curado (OpenStax) en JSON» era la cifra equivocada y se corrige con lo medido en `CAHLR/OATutor-Content` (`main`, sha `1925dec`, pases 105–107): 51.929 rutas · 13.371 problemas · 69.121 unidades de hint (82.492 en total) · 10 obras de OpenStax citadas y 22 colecciones del titular medidas · 2.443 archivos de figura (~156 MiB) cuya extension `.gif` es falsa en 2.443 de 2.443 (`P332`).** El codigo MIT no esta en discusion; la capa de CONTENIDO cede aparte y se audita aparte (`P322`/`P328`/`P334`) | North America (CAHLR, UC Berkeley) |
 | Alvarmethod | https://github.com/vasanthsreeram/Alvarmethod | MIT ✅ | 160 | Shell/Markdown | **Pedagogía empaquetada como skill portable**, instalable con `npx skills add vasanthsreeram/Alvarmethod -g --all` en Claude Code, Codex, Grok, Pi, OpenCode y Cursor a la vez. Implementa un loop explícito de cuatro pasos: *probe* (MCQ calificado para ubicar el hueco), *plan* (DAG en Mermaid armado para ese alumno), *teach* (un solo paso de razonamiento por vez, con visuales opcionales) y *lock-in quiz* con remediación. **Sólo 4 commits:** es una especificación pedagógica, no un producto — y eso es justamente lo que la hace reusable. Ver la tendencia 9 en `intel/trends.md`. *Agregado en el pase 11* | Sin región declarada |
 | OpenTutor | https://github.com/zijinz456/OpenTutor | MIT | 127 | Python | Workspace de aprendizaje adaptativo block-based que corre local: subís material → notas, quizzes, flashcards y tutor adaptativo. FSRS + detección de carga cognitiva, 10+ providers LLM | Sin región verificada |
-| OpenTutorAI-CE | https://github.com/Open-TutorAi/open-tutor-ai-CE | BSD-3-Clause | 107 | Python | Plataforma de tutoría personalizada: multi-model, RAG local, interacción por voz y video, control de acceso por roles. PWA multilingüe (árabe, francés, inglés). Community Edition que sirve de base a una Enterprise Edition | **EMEA (Marruecos)** — el perfil de la organización declara `Morocco` y `opentutorai.com`. *Región cerrada en el pase 4* |
+| OpenTutorAI-CE | https://github.com/Open-TutorAi/open-tutor-ai-CE | BSD-3-Clause | **107 ★** (remedido 2026-10-05, banda `EXACTO` de `P349`; 108 ★ en el pase 110 ⇒ serie 108 → 107 → 107, `P353`/`P358`) | Python | Plataforma de tutoría personalizada: multi-model, RAG local, interacción por voz y video, control de acceso por roles. PWA multilingüe (árabe, francés, inglés). Community Edition que sirve de base a una Enterprise Edition | **EMEA (Marruecos)** — el perfil de la organización declara `Morocco` y `opentutorai.com`. *Región cerrada en el pase 4* |
+| education-skills | https://github.com/flysheep-ai/education-skills | MIT ✅ (`main:LICENSE`, 1.068 B, `sha 23b91d7c0aef`, pase 112) | **106 ★** (medido 2026-10-05, banda `EXACTO` de `P349`) | Shell / skills | Coleccion de **Agent Skills de tutoria por materia** de secundaria china (ciencias, letras, lengua, ingles, tecnologia), con metodo socratico declarado: guia el razonamiento en vez de dar la respuesta, mas soporte emocional y estrategia de examen. 21 forks | **APAC (China)** — ancla de **CURRICULO NACIONAL**: README integramente en chino y objetivo declarado **Gaokao (高考)**. *Region evidenciada por la institucion que nombra, no por antroponimo (`P245`, no `P135`). Alta del pase 112* |
+| FeiFei Companion | https://github.com/SimonsTang/feifei-companion | Apache-2.0 ✅ (`main:LICENSE`, 10.227 B, `sha 59a378bf23a0`, pase 112) | **105 ★** (medido 2026-10-05, banda `EXACTO` de `P349`) | Python | K12 con **arquitectura de tres tutores especializados** — coordinacion y plan (菲菲老师), letras (小菲学姐) y STEM (浩云学长) — con mapa de red de conocimiento, sincronizacion con el libro de texto, tareas asignadas por iniciativa del agente y canal de comunicacion con la familia. 9 forks | **APAC (China)** — pais declarado y ancla **人教版** (People's Education Press). *Alta del pase 112* |
+| Mentingo | https://github.com/Selleo/mentingo | MIT ✅ (`main:LICENSE`, 1.062 B, `sha ceb97717de1f`, pase 112) | **91 ★** (medido 2026-10-05, banda `EXACTO` de `P349`) | TypeScript | **LMS self-hosted con mentor AI integrado**, posicionado por su autor como alternativa a Moodle, Docebo y Open edX; foco en formacion corporativa, *onboarding* y *compliance*. El dueño declara construir plataformas de aprendizaje desde 2005. 28 forks | **EMEA (Polonia)** — el perfil de la organizacion declara `Poland` y `selleo.com`. *Dato de primera mano leido del perfil. Alta del pase 112* |
+| Studivexa | https://github.com/codeXsidd/Studivexa | MIT ✅ (`main:LICENSE`, 1.068 B, `sha 58f77360830f`, pase 112) | **72 ★** (medido 2026-10-05, banda `EXACTO` de `P349`) | JavaScript | Espacio de productividad para estudiantes con mecanica **gamificada**: desglose de tareas, sala de foco con tutoria integrada, seguimiento de habitos y analitica de GPA. 1 fork | ⚠️ **sin region verificada** — README en ingles, ningun pais ni institucion declarados en el repo ni en el perfil. *No se le asigna region (`P135`). Alta del pase 112* |
+| EduAgent | https://github.com/Zenglian990/AI_Tutor_Release | MIT ✅ (`master:LICENSE`, 1.068 B, `sha 695941afdd1f`, pase 112) | **57 ★** (medido 2026-10-05, banda `EXACTO` de `P349`) | JavaScript | Tutor **RAG** para 1º-9º del curriculo chino: **39.114+ problemas indexados en LanceDB**, resolucion por foto, interaccion por voz, mapa de aprendizaje gamificado, cuaderno de errores con variantes generadas y tablero para padres. Doble motor LLM y metodo socratico con modelo cognitivo por edad. 15 forks | **APAC (China)** — `国内` declarado y ancla **人教版** K-9. *Alta del pase 112* |
 | Aila (Oak AI Lesson Assistant) | https://github.com/oaknational/oak-ai-lesson-assistant | MIT | 35 | TypeScript | Asistente de **planificación de clases para docentes** de **Oak National Academy** (nonprofit educativa británica respaldada por el gobierno). Monorepo Turborepo: Next.js + Prisma/PostgreSQL con **pgvector**, entornos de producción y staging, versionado semántico. **1.188 commits** — es el único artefacto teacher-facing de esta KB que corre en producción real y publica su código. ⚠️ El repo declara que está *"intended primarily for internal use by Oak National Academy"*: úsese como **referencia de arquitectura**, no como base de producto (sin API estable ni soporte para terceros). *Agregado en el pase 5* | EMEA (Oak National Academy, Reino Unido) |
 | LinguaMCP | https://github.com/Marsmanleo/LinguaMCP | **Apache-2.0** ✅ (`main:LICENSE` → *«Apache License»*, `raw`, pase 51) | 1 | TypeScript | Protocolo de **currículo abierto para tutores de idiomas**: define el currículo como dato y deja que cualquier herramienta de AI lo conduzca, con práctica diaria en vez de lecciones cerradas. npm `lingua-mcp` **0.3.0**. ⚠️ **1 ★ y 0 forks: es una apuesta de diseño, no una pieza probada en producción** | n/d (sin señal de origen) |
 | mcp-geralearn | ⚠️ `geraservicesuk/mcp-geralearn` → 🔴 **404 por DOS canales** (`raw` en 6 ramas y `github.com`) · npm [`@gera-services/mcp-geralearn`](https://registry.npmjs.org/@gera-services/mcp-geralearn/latest) ⚠️ *(se enlaza el REGISTRO, que responde 200; `npmjs.com` da 403 por curl y por WebFetch y no se puede verificar)* | **MIT** ✅ 🔵 **texto medido en el TARBALL** (`package/LICENSE` → *«MIT License»*), porque el repo declarado no existe | n/d | TypeScript | Servidor MCP de la plataforma educativa **GeraLearn**: navegar cursos, matricularse en formaciones, seguir progreso y encontrar tutores en **50+ países**. 🔵 **Clase inversa a `@timadey/proctor`: el repositorio no responde y la licencia SÍ viaja en el artefacto que se instala** | EMEA (Reino Unido, por el titular `geraservicesuk`) |

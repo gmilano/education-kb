@@ -8,10 +8,91 @@ updated: 2026-10-05
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 > No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
+> **Pase 112 del 2026-10-05:** 🟢 **5 ALTAS PERMISIVAS (barrido 34) — la primera cifra distinta de cero en 34 barridos**, 4 MIT + 1 Apache-2.0, cada una con familia leida del payload y huella publicada. 🟢 **Y 3 de las 5 cierran parcialmente el hueco de codigo de APAC por ancla de CURRICULO NACIONAL (Gaokao, 人教版) — la forma de evidencia de `P245`, no el antroponimo que `P135` prohibe.** 🆕 **`P355`: la severidad de un fallo de portabilidad va al REVES de su frecuencia — 4 suites fallan ruidosamente por `cwd` asumido, 0 por ruta efimera, y la unica efimera (`P352`) pasaba en VERDE sin medir.** 🆕 **`P358`: «un pase» no es unidad de tiempo — los pases 111 y 112 corren el mismo dia, asi que la accion B remidio HORAS y el enunciado de deriva no se publica.**
 > **Pase 111 del 2026-10-05:** 🔴 **0 altas (barrido 33), cero ENUMERADO: 13 candidatas → 12 ya publicadas (`P311`), 1 nueva de OTRA industria (`OpenOSINT`).** 🆕 **Lo que se mueve es la COTA de la cifra que el pase 110 acababa de recuperar: `P349` — la resolucion del canal es una FUNCION ESCALON, no «3 cifras significativas». Debajo de 1.000 da el entero EXACTO (`264`, `107`); en 1.000-9.999 da solo DOS (`7.5k`, ±50). Peor error relativo al pie de la banda k (±5,0 %), peor absoluto arriba (±500).** 🆕 **Y la primera DERIVA medida: `open-tutor-ai-CE` 108 → **107 ★** en un pase, con `OATutor` en 265 (2026-09-30) → 264 → 264. En la banda EXACTO una cifra sin fecha no es un dato (`P353`), y lo que volvio medible la deriva fue una tabla de ESTE archivo que SI estaba fechada.** 🔴 **93 de las 262 ocurrencias de cifras con 4+ digitos exactos viven aca —el archivo mas cargado del arbol—, 0 posteriores al pase 110; pero el barrido cuenta la CITA igual que el DATO, asi que el conteo crudo sobreestima (`P351`).** 🔵 **Ruido de canal registrado y NO tomado como correccion: la busqueda reporta `openclaw` en ~362k contra los 385.407 publicados — ninguna de las dos tiene canal que la sostenga.**
 > **Pase 110 del 2026-10-05:** 🔴 **0 altas permisivas (trigesimosegundo barrido), cero ENUMERADO: 6 candidatas → 4 ya publicadas (`P311`), 2 nuevas sin cesion.** 🟢 **Lo que SE MUEVE este pase no es el trending: es que las ESTRELLAS VUELVEN a ser medibles — `WebFetch` sobre `github.com` sirve 200 donde `curl` da 403, con control negativo en 404.** 🔴 **Y al volver, cobran: `OATutor` 264 ★ contra «~1,5k» publicado, y `open-tutor-ai-CE` BSD-3-Clause / 108 ★ contra «Apache-2.0 / ~600 ★».**
 > **Pase 107 del 2026-10-05:** 🔴 **0 altas permisivas (trigesimo barrido, 3 candidatas MEDIDAS del payload y las 3 con su bloqueo nombrado) y las TRES acciones pre-registradas corridas: A con la cota NO CERRADA y su clausula de atribucion FALSIFICADA, B CONFIRMADA, C CONFIRMADA en dos clausulas y FALSIFICADA en la tercera.** 🔴 **`P332`: la EXTENSION de un archivo de imagen no es su FORMATO — 2.443 de 2.443 `.gif` son PNG/JPEG/WEBP, y un barrido por extension habria dado «0 solapamiento» desde una premisa falsa.** 🔴 **`P334`: el titular de una FIGURA se resuelve por BYTES y vive en una obra DISTINTA de la que el item cita (36 pares leidos).** 🔴 **`P333`: `fa4e32e5e622` era la huella del archivo SIN su salto final — defecto de dato, no de upstream.** 🔴 **`P335`: tercera sub-clase de `P320` — lo denegado fue el LOTE, no la pieza nombrada.** 🟢 **Canal nuevo: `gitlab.com/-/raw`.**
 > **Pase 106 del 2026-10-05:** 🟢 **0 altas (vigesimonoveno barrido, 5 candidatas, las 5 frenadas por el gate de `P311`) y las TRES acciones pre-registradas corridas: A CONFIRMADA, B FALSIFICADA, C CONFIRMADA.** 🔴 **`P328`: la cesion de un OER se ESTRECHA entre ediciones — 10 de 10 colecciones con el mismo `collection-id` pasan de `CC BY 4.0` en `1e` a `CC BY-NC-SA 4.0` en `main`, y el slug cambia de nombre, que es por lo que esta base no lo veia.** 🔴 **El denominador se corrige de 13.371 a 82.492 unidades y aparece una capa sintetica de 6.886 unidades (`oer: openai`) sin cesion.** 🟢 **Canal nuevo: `git ls-remote` para enumerar refs — es el que abrio la accion A.**
+
+## 2026-10-05 — pase 112: 5 altas permisivas (barrido 34), la primera cifra distinta de cero, y tres de ellas con region anclada a un CURRICULO NACIONAL
+
+### 🟢 El barrido de la semana: 5 altas, con el reparto escrito
+
+Año **CALCULADO** (`date -u +%Y` → **2026**). Consultas: `top open source AI agents education 2026
+github MIT`, `github trending education AI 2026 open source tutor repository`, y las cuatro
+regionales.
+
+🔵 **Lo que produjo las altas no fue la busqueda en prosa sino el LISTADO POR TOPICO**
+(`github.com/topics/ai-tutor`, canal `WebFetch`, **200**). La consulta global volvio a devolver el
+**eje generalista** (OpenClaw, CrewAI, OpenHands, LangChain), que es `P281` por enesima vez. **El
+canal que encuentra la industria no es el mismo que la nombra** — y esta vez la diferencia no fue
+de matiz: 22 candidatas contra 0.
+
+| paso del barrido 34 | cifra |
+|---|---|
+| candidatas devueltas | **22** |
+| frenadas por el gate de `P311` (ya publicadas) | **9** |
+| medidas nuevas | **7** |
+| 🟢 altas permisivas | **5** |
+| 🔴 copyleft, descartada | **1** (`yh2072/edgameclaw`, AGPL-3.0, 34.523 B) |
+| 🔴 sin cesion, descartada | **1** (`A-R007/Multi-Agent-Study-Assistant`, 12 sondas 404, README 200) |
+
+### 🟢 Las 5, con estrellas FECHADAS (banda `EXACTO` de `P349` ⇒ la fecha es obligatoria, `P353`)
+
+| repo | licencia | bytes · sha256 | ★ 2026-10-05 | region · evidencia |
+|---|---|---|---|---|
+| [`flysheep-ai/education-skills`](https://github.com/flysheep-ai/education-skills) | **MIT** | 1.068 · `23b91d7c0aef` | **106** | **APAC** · Gaokao (高考) |
+| [`SimonsTang/feifei-companion`](https://github.com/SimonsTang/feifei-companion) | **Apache-2.0** | 10.227 · `59a378bf23a0` | **105** | **APAC** · China declarado + 人教版 |
+| [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | **MIT** | 1.062 · `ceb97717de1f` | **91** | **EMEA** · perfil declara `Poland` |
+| [`codeXsidd/Studivexa`](https://github.com/codeXsidd/Studivexa) | **MIT** | 1.068 · `58f77360830f` | **72** | ⚠️ **sin region verificada** |
+| [`Zenglian990/AI_Tutor_Release`](https://github.com/Zenglian990/AI_Tutor_Release) | **MIT** (`master`) | 1.068 · `695941afdd1f` | **57** | **APAC** · `国内` + 人教版 K-9 |
+
+🟢 **Lo que cambia de verdad con estas 5, y no es la cifra:** el hueco de **codigo** de APAC estaba
+**DECLARADO Y ABIERTO** desde el pase ~79, y la razon escrita era que las piezas candidatas no
+traian region verificable y *«de un antroponimo NO se infiere region»* (`P135`). 🔵 **Tres de estas
+cinco traen una evidencia de clase distinta: el CURRICULO al que apuntan.** Gaokao y 人教版 son
+instituciones nombradas en el repo, no rasgos del nombre del dueño — la misma forma que `P245`
+establecio cuando ligo una pieza a una rubrica de examen nacional de APAC. **El hueco pasa de
+ABIERTO a PARCIALMENTE CERRADO, y la parte que cierra es la que tiene evidencia.**
+
+⚠️ **Lo que NO cierra:** `Studivexa` entra **sin region** y no se le asigna una. Y el hueco de
+**LATAM** sigue entero: ver abajo.
+
+### 🔴 El silencio que importa, dicho explicitamente: LATAM devolvio 0 repos
+
+🔴 **Ninguno de los canales devolvio una sola pieza de codigo educativo de LATAM en este pase.** La
+consulta regional en castellano (`AI educación LATAM América Latina 2026 adopción regulación Brasil
+México`) devolvio **mercado y regulacion** —adopcion de Brasil y Mexico, la Ley de IA brasileña, la
+Ley 21.719 de Chile— y **cero repositorios**.
+
+⚠️ **Se escribe como GAP INFORMADO y no se deja en silencio** (`P343`): el canal respondio, el
+contenido existe, y **lo que falta es la capa de codigo**, no la cobertura de la region. Un cero
+callado seria indistinguible de no haber buscado.
+
+### 🆕 `P355` — la severidad de un fallo de portabilidad va al REVES de su frecuencia
+
+| causa | suites | forma del fallo |
+|---|---|---|
+| `cwd` ASUMIDO | 🔴 **4** | 2 `CRASH` + 2 `TOTAL-DEGRADADO` — **ruidosas** |
+| ruta EFIMERA (`P352`) | 🟢 **0** nuevas | la unica preexistente pasaba **en verde sin medir** |
+
+🔴 **`p183-nongithub-denominator` es el caso que mas cuesta:** desde otro `cwd` publica
+**«14/15 checks passed»** —un total bien formado, que se parece a una medicion— y la unica asercion
+que pierde es **su control negativo**, el que prueba que el instrumento puede fallar. Ver `P355` en
+`compose/patterns.md` e instrumento en `compose/code/p355-cwd-portability/` (**16/16**).
+
+### 🔴 La deriva, remedida: las 2 filas de la banda `EXACTO` no se movieron — y el enunciado no se publica
+
+| repo | 2026-09-30 | pase 110 | pase 111 | 🟢 pase 112 |
+|---|---|---|---|---|
+| [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | 265 ★ | 264 ★ | 264 ★ | 🟢 **264 ★** |
+| [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) | — | 108 ★ | 107 ★ | 🟢 **107 ★** |
+
+🆕 **`P358`:** los pases 111 y 112 corren **el mismo dia**, asi que el intervalo remedido son
+**horas** y no un pase-como-dia. «Sin cambio» sobre horas no autoriza *«la deriva es mas lenta que
+un pase»*: es indistinguible de haber medido dos veces la misma tarde. **El numero de pase ordena
+los eventos pero no los espacia.** Lo que queda es que el canal **reproduce** en la banda `EXACTO`
+(serie de 4 puntos sin contradicciones), y eso si se afirma.
 
 ## 2026-10-05 — pase 111: 0 altas (barrido 33), y lo que se mueve es la COTA de la cifra que el pase 110 acababa de recuperar
 

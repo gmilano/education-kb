@@ -1,0 +1,27 @@
+=== EL REPARTO POR CAPA (unidades = todo dict con `license`) ===
+problema   RESOLUBLE  10210 /  13371 unidades =  76.4 %   (license vacio: 2545)
+hint       RESOLUBLE  42985 /  69121 unidades =  62.2 %   (license vacio: 26136)
+TOTAL      82492 unidades en 49479 archivos JSON
+
+--- problema
+      RESOLUBLE               10210
+      AUSENTE                  2545
+      VERSION-SIN-VARIANTE      402
+      NO-ES-CESION              160
+      NO-RECONOCIDO              54
+--- hint
+      RESOLUBLE               42985
+      AUSENTE                 26136
+
+=== ACCION C, contra su prediccion ===
+pedia:  tasa RESOLUBLE del hint DENTRO de +-3 pp de 76.4 % (problemas, P348)
+medido: 62.2 %  ->  delta -14.2 pp  ->  REFUTADA
+
+=== LA HIPOTESIS DEL MECANISMO, MEDIDA DIRECTO (no deducida del agregado) ===
+   IGUAL-AL-PADRE              55418  ( 80.2 %)
+   HIJO-VACIO-PADRE-CEDE       13499  ( 19.5 %)
+   HIJO-CEDE-PADRE-VACIO         204  (  0.3 %)
+   TOTAL hints comparados      69121
+
+La accion C decia «el hint HEREDA el license de su problema padre».
+Identico al padre: 80.2 % de los hints. La herencia NO es la identidad.
