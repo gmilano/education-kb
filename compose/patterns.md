@@ -137,6 +137,134 @@ updated: 2026-10-05
 > **Pase 27:** **+4 patrones y una corrección.** 🔴 **P51 queda con premisa falsa** —el conector MCP de Moodle **sí existe y es MIT**— y lo reemplazan **P54** (corrección y devolución sobre Moodle con **compuerta humana**, el último tramo del gap 6, con piezas que ya escriben), **P55** (el conector de **Open edX**, que es el único que de verdad no existe), **P56** (**SCORM** como formato de salida de la capa generativa: cero integración, offline) y **P57** (evidencia por MCP cotizada sobre lo que CaSS **realmente** expone — 6 de 61 operaciones, con insignias y autoría de marcos **fuera**).
 
 
+## 🆕 Patrones del pase 108 (2026-10-05) — `P336`–`P340` y la receta `R-107-CAPA-MCP-SOBRE-LMS-ACREDITADO`
+
+### `P336` — una prediccion es falsable cuando su INSTRUMENTO existe, no cuando esta bien escrita
+
+**Que pasa.** El pase 107 pre-registro una accion falsable y la apunto a un artefacto propio
+diciendo *«ya estan enumeradas»*. El artefacto no contenia la variable independiente.
+
+**Control que lo detecta, y es barato.** Antes de escribir una pre-registracion que apunte a un
+archivo, **medir el dominio de la columna que la prediccion va a usar**:
+
+```python
+vals = {fila[columna] for fila in filas}
+assert len(vals) > 2, f"{columna} es binaria: no separa lo que la prediccion separa ({vals})"
+```
+
+🔵 **Regla operativa:** *una pre-registracion nombra el archivo **y** la columna, y el pase que la
+escribe corre esa assert antes de publicarla.*
+
+### `P337` — dos artefactos del mismo pase pueden contradecirse, y la prosa se queda con uno
+
+**Que pasa.** `accion-a-b.tsv` y `interseccion-col30309.tsv`, del mismo pase y el mismo sha, dan
+**1.611/832** y **1.570/873** sobre el mismo corte. Los dos suman 2.443. La prosa publicada razono
+con **1.570** sin que nadie notara que el otro artefacto decia otra cosa.
+
+**Control.** Un pase que emite **dos** artefactos que comparten un total **tiene que cruzarlos**:
+
+```python
+assert total_a == total_b, "los dos cubren el mismo universo"
+assert corte_a == corte_b, f"MISMO universo, corte distinto: delta {corte_a - corte_b}"
+```
+
+🔵 **Regla operativa:** *el ultimo paso de un pase que publica mas de una tabla es cruzar las
+tablas entre si, no contra el mundo.*
+
+### `P338` — procedencia en texto libre: un extractor pierde OBRAS, no items
+
+**Que pasa.** `oer` es una URL escrita a mano con (al menos) dos formas, y los slugs de cada forma
+**no se solapan**. Un extractor de una sola forma pierde obras completas, en silencio.
+
+**Control, y es el unico que sirve.** No afirmar una forma: **enumerar las formas primero**.
+
+```python
+formas = collections.Counter(forma_de(u) for u in campo_libre)
+assert len(formas) == 1, f"el campo tiene {len(formas)} formas: {formas}"
+# si falla, el extractor se escribe para TODAS, y los slugs de cada forma se cruzan:
+assert slugs["details"] & slugs["pages"], "formas disjuntas ⇒ perder una pierde obras enteras"
+```
+
+🔵 **Regla operativa para una engagement:** *si la procedencia de un activo viaja en un campo de
+texto libre, la auditoria de licencia es forense y cuesta lo que cuesta. Si viaja en un campo
+tipado, es una consulta.* **Esa diferencia es el argumento de compra de la capa de curriculo
+cedido** (`oak`) frente a la capa de contenido redistribuido (`OATutor-Content`).
+
+### `P339` — un delta de 1 byte no es diagnostico: dos causas distintas dan la misma firma
+
+**`P327`** = el archivo no trae salto final. **`P333`** = `$(cat …)` se lo come al medir. **Las dos
+restan 1.** El desempate pide medir las dos huellas en el **mismo acto**:
+
+```bash
+sha256sum "$f" | cut -d' ' -f1                          # archivo completo
+head -c $(( $(stat -c%s "$f") - 1 )) "$f" | sha256sum   # sin el ultimo byte
+```
+
+🔵 **Regla operativa:** *una huella publicada va siempre con el metodo que la produjo, o no es una
+identidad: es un numero.*
+
+### `P340` — un 404 en `LICENSE` tiene TRES lecturas, y una es ortografica
+
+| lectura | espécimen de esta base | como se distingue |
+|---|---|---|
+| ortografia britanica | `oaknational/…` → `LICENCE` **200 MIT** | pedir `LICENCE` |
+| cesion en el README (`P314`) | `54yyyu/school-mcp` → `## License` = «MIT» | pedir `README.md` |
+| ausencia real | `laurenceholt/amber` → 0 archivos de licencia en 46 rutas | enumerar el arbol |
+
+🔵 **Regla operativa:** *el barrido pide `LICENSE`, `LICENCE`, `COPYING` **y** `README.md` antes de
+escribir «sin cesion». Un falso negativo de licencia es el error mas caro de un catalogo, porque
+descarta una pieza que si se podia usar.*
+
+---
+
+### 🧩 `R-107-CAPA-MCP-SOBRE-LMS-ACREDITADO` — la receta que el trending de este pase dicta
+
+**El problema que resuelve.** La institucion tiene un LMS acreditado (Canvas, Moodle, Open edX) que
+**no puede tocar** —por certificacion, por contrato o por regulacion— y un mandato de usar AI con
+supervision humana. Migrar la plataforma no esta sobre la mesa.
+
+**La forma.** No se reemplaza nada: se mete una capa MCP entre el agente y el sistema de registro.
+
+| capa | pieza nombrada | licencia (payload) | que aporta |
+|---|---|---|---|
+| sistema de registro | Canvas / **Moodle** / Open edX | GPL-3.0 / Apache-2.0 | queda **intacto y acreditado** |
+| conector al LMS | [`r-huijts/canvas-mcp`](https://github.com/r-huijts/canvas-mcp) (69 tools) · [`peancor/moodle-mcp-server`](https://github.com/peancor/moodle-mcp-server) | 🟢 MIT | lee cursos, tareas, rubricas; **escribe solo lo que la compuerta permita** |
+| registro de aprendizaje | [`davidlms/learnmcp-xapi`](https://github.com/davidlms/learnmcp-xapi) | 🟢 MIT | xAPI contra un LRS estandar: **la traza que el expediente de alto riesgo pide** |
+| fuente de contenido | [`Cicatriiz/openedu-mcp`](https://github.com/Cicatriiz/openedu-mcp) | 🟢 MIT | OpenLibrary + Wikipedia + arXiv con filtrado por nivel |
+| curriculo cedido (EMEA) | [`oaknational/oak-open-curriculum-ecosystem`](https://github.com/oaknational/oak-open-curriculum-ecosystem) | 🟢 MIT (codigo) · 🔴 OGL v3.0 (datos) | **37 herramientas** desde una OpenAPI unica: procedencia **tipada**, no texto libre |
+| generacion de clase (APAC) | [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | 🟢 MIT · 🔴 `mathml2omml` LGPL-3.0-or-later | diapositivas, quizzes y simulaciones server-side con PostgreSQL |
+| compuerta de politica | `mcp-allowlist-gateway` (ya en esta base) | — | **niega por defecto** toda decision de alto impacto; registra quien pidio que |
+
+**El wiring, y el orden importa.**
+
+1. **Primero la compuerta, no el agente.** `mcp-allowlist-gateway` delante de **todos** los
+   servidores MCP, con la particion lectura/escritura **por herramienta nombrada y no por verbo
+   HTTP** — esta base ya midio que el verbo no es la frontera de escritura (UniTime: un `GET`
+   ejecutaba un script del servidor).
+2. **Negar por defecto lo que la region prohibe.** En North America, Oklahoma y Maryland **prohiben
+   que la AI tome decisiones de alto impacto**: calificacion final, ubicacion, disciplina. Eso es
+   una **lista de denegacion en la compuerta**, no una guia en un PDF.
+3. **xAPI desde el primer dia.** Cada accion del agente deja un *statement* en el LRS. En EMEA eso
+   **es** el expediente de alto riesgo; en NA es la evidencia de supervision humana.
+4. **Contenido con cesion tipada.** Preferir `oak` (procedencia en campo) sobre contenido
+   redistribuido con `oer` en texto libre (`P338`). Si hay que usar el segundo, **auditar por bytes
+   y no por el campo** (`P334`).
+5. **`OpenMAIC` se compone por PAQUETE.** El nucleo MIT entra; `packages/mathml2omml`
+   (**LGPL-3.0-or-later**) entra solo como dependencia dinamica con su licencia respetada, o se
+   reemplaza. **Se decide antes de empezar, no en la auditoria.**
+
+**Estimacion.** 6–8 semanas para compuerta + un conector de LMS + xAPI con un piloto de un curso.
+**+3–4 semanas** por cada conector adicional. 🔵 **El entregable que se vende no es el agente: es la
+traza** — el dia que el regulador, el sindicato docente o una familia pregunte «quien decidio
+esto», la respuesta sale de una consulta al LRS y no de una reconstruccion.
+
+🔴 **Lo que esta receta NO cubre, dicho en vez de callado.** No hay en esta base ninguna pieza
+permisiva de **evaluacion u observabilidad de agentes educativos**: medir si el agente ayuda a
+aprender sigue sin tener componente open source. Es el hueco mas viejo del catalogo y esta receta
+lo hereda.
+
+---
+
 ## 🆕 Patrones del pase 107 (2026-10-05) — `P332`, `P333`, `P334`, `P335` y la receta `R-106-PROCEDENCIA-DE-BINARIO`
 
 > **Frontmatter y region:** `Global`.

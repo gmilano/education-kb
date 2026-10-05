@@ -8,6 +8,8 @@ updated: 2026-10-05
 
 > Agentes y herramientas AI open source para educación. Foco: MIT / Apache 2.0 / BSD.
 > Verificado repo por repo vía WebFetch el 2026-09-30 (stars y licencia leídos de la página del repo).
+> **Pase 108 del 2026-10-05:** 🟢 **5 altas permisivas, y rompen una racha de TREINTA barridos en cero** — las cinco leidas del PAYLOAD, no del nombre: `THU-MAIC/OpenMAIC` (**MIT**, `v1.2.0-rc.1` del 2026-10-04) 🔴 **con `packages/mathml2omml` en `LGPL-3.0-or-later` leido de SU PROPIO `package.json`: la licencia de la raiz no es la licencia del arbol**; `oaknational/oak-open-curriculum-ecosystem` (**MIT** en el codigo, 🔴 **OGL v3.0** en los datos de curriculo — `P315` otra vez); `Cicatriiz/openedu-mcp` (**MIT**); `davidlms/learnmcp-xapi` (**MIT**); y `54yyyu/school-mcp` (**MIT solo en el cuerpo del README, sin archivo** — `P314`). 🆕 **`P340` — el 404 de un archivo de licencia puede ser una ORTOGRAFIA y no una ausencia: `oak` cede en `LICENCE` y el barrido de esta base pide `LICENSE`; un pase que solo mirara `LICENSE` habria publicado «sin cesion» sobre un repo MIT.** 🔴 **La accion A pre-registrada NO se corrio: el clon del arbol del titular quedo DENEGADO por el clasificador de la sesion, y eso se declara en vez de callarse (`P335` sigue en pie, pero esta vez ni la pieza nombrada paso).** 🔴 **La accion B resulta NO CORRIBLE contra el artefacto al que su propia pre-registracion la mando (`P336`): `accion-a-b.2026-10-05.tsv` colapsa `oer` a DOS valores (`openstax`/`otro`) y el slug del libro —lo unico que separa una edicion `2e` de una `1e`, que es toda la pregunta— no esta en el archivo; las «825 ya enumeradas» no estan enumeradas ahi.** 🔴 **Y al ir a buscarlo aparece el hallazgo que manda: dos artefactos del MISMO pase, sobre el MISMO sha `1925dec`, se contradicen por exactamente 41 figuras en el corte openstax/no-openstax (**1.611/832** contra **1.570/873**, los dos suman 2.443), y la cifra que llego a la PROSA es la menor (`P337`).** 🔴 **La causa, medida y no supuesta: `oer` es TEXTO LIBRE con dos formas de URL —`/details/books/<slug>` y el enlace profundo `/books/<slug>/pages/…`— que en la muestra PARTEN el espacio de slugs sin solaparse, asi que un extractor afirmado sobre una sola forma no pierde items sueltos: pierde OBRAS ENTERAS. Y `precalculus` a secas existe en el corpus y NO esta en ninguna de las 10 filas del censo publicado (`P338`).** 🟢 **La accion C sale CONFIRMADA en su clausula de conteo: **17** pares (bytes, huella) publicados junto a un archivo de licencia, la prediccion pedia ≥10.** 🔴 **Y FALSIFICADA como instrumento (`P339`): el delta de 1 byte NO es diagnostico, porque `P327` (el archivo no trae salto final) y `P333` (`$(cat)` se lo come al medir) producen la MISMA firma — esta base ya publica `21.442` y `21.443` B del mismo texto por la primera causa.** 🟢 **Tablero re-verificado COMPLETO: 59 suites (53 Python + 6 shell), 0 fallos, 200 aserciones (`Python 3.11.15`).**
+
 > **Pase 107 del 2026-10-05:** 🔴 **0 altas permisivas — trigesimo barrido, 3 candidatas MEDIDAS del payload (no rechazadas por el nombre) y las 3 frenadas con su bloqueo nombrado pieza por pieza: `1111philo/learn` es **AGPL-3.0** con `package.json` **MUDO**, `oer/emacs-reveal` cede **por archivo** (REUSE: `GPL-3.0-or-later` + `CC BY-SA 4.0`) y `NousResearch/hermes-agent` es MIT pero **generalista**.** 🔴 **Lo que este pase le corrige a la fila `OATutor` es la capa que nadie habia abierto, y el hallazgo es de METODO: la EXTENSION de sus 2.443 archivos de figura es FALSA en 2.443 de 2.443 — ninguno es un GIF (1.358 PNG, 938 JPEG, 147 WEBP), asi que el barrido «por extension» que este pase iba a correr sobre el arbol del titular habria concluido «cero solapamiento» desde una premisa falsa (`P332`).** 🟢 **Medido por BYTES en cambio: 36 archivos del redistribuidor son byte-identicos a una figura del titular, y los 36 citan `introductory-statistics` mientras sus bytes se publican en `osbooks-statistics` (`col30309`) — el titular de una figura vive en una obra DISTINTA de la que el item cita (`P334`).** 🟢 **La accion B sale CONFIRMADA: 9.971 de 12.999 unidades con `oer` vacio (76,7 %) cuelgan de un problema que cita OpenStax.** 🔴 **Y la accion C corrige una cifra publicada de esta base: `fa4e32e5e622` no era deriva del upstream, era la huella del archivo SIN su salto final (`P333`).** 🟢 **Tablero re-verificado: 58 suites, 63 invocaciones, 0 fallos (`Python 3.11.15`).**
 > **Pase 106 del 2026-10-05:** 🔴 **0 altas — vigesimonoveno barrido, 5 candidatas, el gate de `P311` las freno a las 5 (las dos con sustancia propia son `CC BY-SA` y `AGPL-3.0`, ninguna permisiva).** 🔴 **Lo que el pase le corrige a esta tabla no es una fila sino el CONTENIDO de una: la fila `OATutor` dice «3 libros de OpenStax en JSON» y lo medido son 7 ediciones citadas, 82.492 unidades de cesion, 8.312 que CONTRADICEN a su titular y 6.883 de contenido sintetico sin cesion — el codigo MIT no esta en discusion.** 🟢 **La accion A convierte las 1.748 «SIN RESOLVER» del pase 105 en 1.732 CORRECTO: las dos ediciones `1e` si se cedieron `CC BY 4.0`, leidas del titular con dos lecturas concordantes.** 🔴 **Y la lectura que queda es peor: el redistribuidor congelo una cesion que el titular ESTRECHO (`P328`).** 🟢 **Tablero re-verificado COMPLETO: 58 suites unicas, 60 invocaciones, 0 fallos (`Python 3.11.15`) — la ejecucion estuvo negada en 10 pases anteriores.** ⚠️ **Con dos correcciones a mi propio contador (`P126`): conto `lib/` dos veces, y leyo un conteo de BYTES como total de aserciones.**
 > **Pase 105 del 2026-10-05:** 🔴 **0 altas de agente —vigesimoctavo barrido consecutivo con el eje generalista— y el pase gasta su esfuerzo entero en la ACCION PRE-REGISTRADA, que sale CONFIRMADA EN LA LETRA y FALSIFICADA EN LA MAGNITUD, en la direccion que nadie previo.** La prediccion del pase 104 decia que `Calculus Volume 1` seria la **excepcion** `CC BY-NC-SA 4.0` entre libros `CC BY 4.0`, *«uno de a lo sumo dos de los 7»*. 🟢 **`Calculus Volume 1` ES `NC-SA`** —leido del titular—. 🔴 **Y lo son SIETE de las OCHO ediciones citadas que pudieron medirse — y ONCE de los TRECE libros que el titular publica.** La excepcion no era el `NC-SA`: **la excepcion es el unico libro `CC BY 4.0` que existe (`physics`), y es el unico que NINGUN item etiqueta.** 🟢 **La accion se corrio con `openstax.org` en `000`, y sin violar la prohibicion de usar canal secundario** (`P326-A`): el titular publica tambien en la organizacion `openstax` de GitHub, y ese canal estaba vivo. 🔴 **El hallazgo que manda, y es contra una fila de esta tabla:** censo de los **13.371** problemas de `CAHLR/OATutor-Content` —no muestra— cruzando el campo `license` contra el campo `oer`, que es **quien es el titular**: **8.312 items (62,2 %) declaran `CC BY 4.0` mientras el titular de la edicion que ellos mismos citan cede solo `NC-SA`**. **Embarcable en una entrega comercial: 592 items = 4,4 %.** 🔴 **Eso INVIERTE la receta `R-104-CAPA-DE-CONTENIDO` de esta base**, que mandaba embarcar los cursos con **100 %** de etiquetado: son exactamente los que estan **100 % mal etiquetados**. 🔵 **La tasa de llenado no mide permiso, mide la plantilla de autoria del curso** (`P326`). 🔴 **Y una correccion de metodo contra esta base entera (`P327`): el conteo de bytes y el `sha256` crudo de un archivo de licencia NO son identidad** — tres `LICENSE` del mismo titular dan 21.443 / 21.013 / 21.442 B y son **el mismo texto** con CRLF, LF y CRLF-sin-salto-final: un unico `sha256` al normalizar. Ver `compose/code/p326-titleholder-book-license/`, las tendencias **843**–**850** y los patrones **P326**–**P327**.
@@ -276,6 +278,236 @@ updated: 2026-10-05
 > fila** —`lineage-skill`, con un vocabulario cerrado de 9 valores por afirmación, **4 de los 9 «esto lo produjo el
 > modelo»**— y **ninguna de las dos sabe de la otra**. Ver la capa nueva al final de este archivo, las tendencias
 > **180**–**182** y el patrón **P99**.
+
+## 🟢 Altas de agente: 5 permisivas — se corta una racha de 30 barridos en cero, y la accion pre-registrada se cae por donde nadie la miro: el ARTEFACTO al que la mandaron (pase 108 del 2026-10-05)
+
+> **Frontmatter y region:** `Global`. Las altas de este pase si traen region de primera mano
+> en dos casos (`THU-MAIC` → APAC; `oaknational` → EMEA) y **no** en los otros tres, que se
+> declaran sin region en vez de rellenarse (`P135` / `P261`).
+
+### 🔬 El canal, medido ANTES de cualquier veredicto — y este pase el canal CAMBIA de forma
+
+| canal | pase 107 | pase 108 | control negativo |
+|---|---|---|---|
+| `raw.githubusercontent.com` (payload de licencia) | 🟢 200 | 🟢 **200** | repo inventado (`oaknational/repo-inventado-p108`) → **404** ⇒ **DISCRIMINA** |
+| clon `--filter=blob:none` de `CAHLR/OATutor-Content` | 🟢 OK | 🟢 **OK** | **replica el pase 107 al archivo**: sha `1925dec`, **51.929** rutas, **2.443** figuras |
+| `sparse-checkout` sobre ese clon | 🟢 OK | ⚠️ **INCOMPLETO** | materializo **694** de 12.999 unidades y no termino en el presupuesto del pase; lo medido se publica como **muestra declarada**, no como censo |
+| 🆕 clon de `openstax/osbooks-introductory-statistics-bundle` (**pieza nombrada**) | — | 🔴 **DENEGADO por el clasificador de la sesion** | 🔴 **`P335` no se sostiene en general**: el pase 107 concluyo que lo denegado era el LOTE y la pieza nombrada pasaba; este pase pidio **una** pieza, nombrada, y tambien fue denegada |
+| `api.github.com` · `github.com` (web) | 🔴 403 | ⚠️ **no usado para licencia** | las 5 licencias salen del payload; `github.com` solo se consulto para estrellas, y **esa cifra se marca como no confiable** (ver abajo) |
+| `openstax.org` | 🔴 000 | 🔴 **no alcanzado** | egress cerrado, septimo pase consecutivo |
+
+🔴 **La correccion de metodo sobre el canal es contra el pase 107, no contra la sesion.** `P335`
+decia: *«lo denegado fue el LOTE, no la pieza»*. Sobre esa frase el pase 107 pre-registro la
+accion A. **Este pase pidio la pieza, una, nombrada, y la denegaron igual.** Entonces `P335` era
+una generalizacion de UNA observacion, y la accion que se apoyo en ella era **infalsable desde el
+momento en que se escribio**. Queda anotado: *un permiso observado una vez no es un permiso.*
+
+### 🟢 Las 5 altas, con la licencia leida del PAYLOAD y el bloqueo de cada una nombrado
+
+| Nombre | Repo | Licencia (leida del payload) | Stars | Lenguaje | Descripción | Origen (región) |
+|--------|------|------------------------------|-------|----------|-------------|-----------------|
+| OpenMAIC | https://github.com/THU-MAIC/OpenMAIC | 🟢 **MIT** (`LICENSE`, «Copyright (c) **2026** THU-MAIC») · 🔴 **y el arbol NO es MIT entero**: `packages/mathml2omml/package.json` declara `"license": "LGPL-3.0-or-later"` (`mathml2omml@0.5.0`), leido de SU manifiesto; el README lo dice con todas las letras — *«When redistributing the repository as a whole, the terms of each bundled package above apply to that package's files»* | ⚠️ **no confiable** (ver nota de estrellas) | TypeScript | **Aula multi-agente generada de punta a punta, y la pieza mas cercana a un producto que esta base haya dado de alta.** De un tema o un documento produce diapositivas, cuestionarios, simulaciones interactivas y actividades por proyecto, servidas por **docente y companeros AI** que hablan, dibujan en pizarra y discuten con el alumno. `v1.2.0-rc.1` del **2026-10-04** mueve la generacion del curso al servidor con persistencia PostgreSQL (antes vivia en el navegador). 🔵 **Para Globant el valor no es el demo: es que el lazo «genera → revisa → republica» ya esta cableado y es MIT.** | 🟢 **APAC** — Tsinghua (`THU-MAIC`, titular en el payload) |
+| Oak Open Curriculum Ecosystem | https://github.com/oaknational/oak-open-curriculum-ecosystem | 🟢 **MIT** en el codigo (`LICENCE`, «Copyright (c) **2024-present** Oak National Academy») · 🔴 **OGL v3.0** en los datos de curriculo (`LICENCE-DATA.md`) ⇒ **`P315`**: permisivo en codigo, licencia de gobierno en el dato | 8 | TypeScript | **Un curriculo nacional publicado como infraestructura AI-nativa, que es exactamente la forma que a esta base le faltaba.** Servidor MCP para ChatGPT/Claude/Copilot/Gemini + SDK TypeScript + busqueda semantica, **37 herramientas de curriculo** generadas desde una especificacion OpenAPI que es la unica fuente de verdad (el SDK, los validadores y las definiciones MCP salen de ahi). Integra la API de curriculo de Oak, la Oak Curriculum Ontology y el *Teaching and Learning Toolkit* de la EEF. 🔵 **El modelo de cesion por capas esta bien hecho y es citable como referencia.** | 🟢 **EMEA** — Reino Unido (Oak National Academy, titular en el payload) |
+| OpenEdu MCP | https://github.com/Cicatriiz/openedu-mcp | 🟢 **MIT** (`LICENSE`, «Copyright (c) **2025** OpenEdu MCP Team») | ⚠️ no medido | Python | Servidor MCP de **recursos educativos y planificacion de curriculo**: integra OpenLibrary, Wikipedia y arXiv con filtrado educativo y adecuacion por nivel. 🔵 **La capa de FUENTE que las piezas de tutoria de esta tabla consumen y ninguna trae.** | 🔴 sin region (`P261`: 0 senales de primera mano) |
+| learnmcp-xApi | https://github.com/davidlms/learnmcp-xapi | 🟢 **MIT** (`LICENSE`, «Copyright (c) **2025** David Romero») | ⚠️ no medido | Python | Puente MCP ↔ **xAPI**: deja que un agente lea y escriba registros de aprendizaje en un LRS estandar. 🔵 **Cae justo sobre el eje `p235-xapi-layer-axis` que esta base ya tiene abierto y no tenia pieza permisiva que lo ocupara.** | 🔴 sin region (`P261`) |
+| school-mcp | https://github.com/54yyyu/school-mcp | 🔸 **MIT en el cuerpo del README, SIN archivo de licencia** (`LICENSE` → **404**, `README.md` → seccion `## License` = «MIT») ⇒ **`P314`** | ⚠️ no medido | Python | Herramientas academicas via MCP contra **Canvas y Gradescope**: tareas, fechas, material. 🔴 **Se publica con la cesion marcada como DEBIL a proposito**: una palabra en un README es una concesion valida (`P314`) pero no es un texto de licencia, y para una entrega comercial eso se pide por escrito al titular. | 🔴 sin region (`P261`) |
+
+### 🆕 `P340` — el 404 de un archivo de licencia puede ser una ORTOGRAFIA, no una ausencia
+
+`oaknational/oak-open-curriculum-ecosystem` devolvio **404** en `LICENSE` y **200 MIT** en
+`LICENCE`. 🔴 **Las dos lecturas son del mismo repo, el mismo ref y el mismo pase**, y la primera
+es la que todos los barridos de payload de esta base hacen. Un pase que solo pidiera `LICENSE`
+habria publicado *«sin cesion»* sobre un repo cuyo codigo es MIT y cuyos datos son OGL v3.0 —
+el error mas caro posible en la direccion mas facil de cometer.
+
+⚠️ **Y el 404 por si solo no distingue las dos causas.** `54yyyu/school-mcp` tambien dio 404 en
+`LICENSE`, y ahi **si** no hay archivo: la cesion vive en el README (`P314`). Entonces un 404 en
+`LICENSE` tiene **al menos tres** lecturas —ortografia britanica, cesion en el README, ausencia
+real— y ninguna se decide sin abrir otra puerta. **El barrido de esta base tiene que pedir
+`LICENSE`, `LICENCE`, `COPYING` y el README antes de escribir «sin cesion».**
+
+### 🔴 Los descartes, con su razon — 3 de 8 candidatas no se publican
+
+| candidata | licencia leida del payload | por que no entra |
+|---|---|---|
+| `garethmanning/education-agent-skills` | `LICENSE` ⇒ **CC BY-SA 4.0**, «Copyright (c) 2026 Gareth Manning» | 🔴 **ShareAlike**: fuera del gate permisivo. Y es una biblioteca de **165 habilidades pedagogicas** (contenido), no codigo: la licencia elegida es coherente con lo que es, pero no es componible en una entrega comercial cerrada |
+| `classroomio/classroomio` | `LICENSE` ⇒ **AGPL-3.0** (titular en el preambulo FSF) | 🔴 **AGPL-3.0**: fuera del gate. 🟢 **Entra en `verticals/solutions.md` como plataforma**, donde la licencia se declara y no se esconde |
+| `oaknational/…` via `EngraphCode/open-curriculum-ecosystem` | no medido | ⚠️ **Es un espejo/fork del anterior.** No se da de alta por separado: `P311` (gate de alta duplicada). El canonico es `oaknational`, que es el titular |
+
+### 🔴 La accion A pre-registrada: NO CORRIDA, y el motivo se escribe
+
+El pase 107 mando medir `osbooks-introductory-statistics-bundle` *«con un clon nombrado»* para
+cerrar el denominador de la capa de imagen. 🔴 **El clon fue denegado por el clasificador de la
+sesion.** No se intento por otra via —ni por subagente, ni por otro host, ni por fetcher— porque
+la denegacion cubre el resultado y no el comando.
+
+🔵 **Lo que eso deja en pie y lo que tira:**
+
+- 🟢 Sigue en pie la cota del pase 107: **36 de 2.443** figuras (1,47 %) byte-identicas a `col30309`.
+- 🔴 **Se cae la premisa de la accion**, no su prediccion: `P335` afirmaba que la pieza nombrada
+  pasaba. No pasa. La prediccion queda **sin veredicto**, que no es lo mismo que no falsificada.
+- ⚠️ El denominador de la capa de imagen sigue **abierto**, y ahora se sabe que **no se puede
+  cerrar desde esta sesion**.
+
+### 🔴 La accion B: NO CORRIBLE contra su propio artefacto — `P336`
+
+La pre-registracion decia textualmente: *«Ya estan enumeradas en `accion-a-b.2026-10-05.tsv`»*.
+**No lo estan.** Medido sobre el archivo que el pase 107 commiteo:
+
+| lo que la accion B necesitaba | lo que el artefacto trae | veredicto |
+|---|---|---|
+| el **slug del libro** por figura, para separar `2e` de `1e` | la columna `oer_del_problema` tiene **exactamente dos valores**: `openstax` (1.611) y `otro` (832) | 🔴 **ausente** |
+| las **825** figuras de edicion `2e` «ya enumeradas» | filas cuyo `oer` termina en `-2e`: **0** | 🔴 **no enumeradas** |
+| cruzarlas contra la cesion que `P328` midio por coleccion | imposible sin el slug | 🔴 **no corrible** |
+| *(control negativo: el artefacto no es basura)* | la columna `familia_del_problema` **si** discrimina 3 valores (`CC BY 4.0` 1.418 / `SIN-DECLARAR` 586 / `NO-RESUELVE` 439) | 🟢 **el archivo es bueno, la pre-registracion era mala** |
+
+🔴 **El defecto no es del dato: es de la pre-registracion.** El pase 107 escribio una prediccion
+falsable y la apunto a un archivo que no contiene la variable independiente. **Una prediccion no
+es falsable por estar bien escrita: es falsable cuando el instrumento que la va a medir existe.**
+
+### 🔴 `P337` — dos artefactos del MISMO pase, sobre el MISMO sha, se contradicen por 41 figuras
+
+Al ir a buscar el slug que faltaba aparecio esto, que es peor que la accion que lo descubrio:
+
+| corte | `accion-a-b.2026-10-05.tsv` | `interseccion-col30309.2026-10-05.tsv` | delta |
+|---|---|---|---|
+| figuras que citan OpenStax | **1.611** | **1.570** (= 2.443 − 873) | 🔴 **41** |
+| figuras que NO citan OpenStax | **832** | **873** | 🔴 **41** |
+| total | **2.443** | **2.443** (las 10 filas suman exacto) | 🟢 0 |
+
+🔴 **No es un error de conteo —los dos cubren las 2.443— es una RECLASIFICACION de 41 figuras.**
+🔴 **Y la cifra que llego a la prosa publicada del pase 107 es la menor:** su clausula de
+falsabilidad razona sobre *«las 1.570 figuras de `oer` OpenStax»*. Si el corte correcto es 1.611,
+el umbral que esa clausula calcula se mueve.
+
+⚠️ **Correccion adicional al calculo de esa clausula, independiente del 41.** El pase 107 publico
+que para pasar el 20 % las obras sin medir *«tendrian que dar ~31 % cada una»*. Ese ~31 % es
+`488,6 / 1.570` — el total de aciertos requeridos dividido por **todas** las figuras OpenStax.
+Pero 36 aciertos ya estan en la mano y las 415 figuras ya medidas no pueden aportar mas: el
+numero honesto es `(488,6 − 36) / (1.570 − 415)` = **39,2 %**, y con el corte 1.611 es
+`452,6 / 1.196` = **37,9 %**. 🔵 **La conclusion cualitativa del pase 107 no se mueve** (sigue
+pidiendo mas del triple de la unica tasa medida); **el numero publicado si.**
+
+### 🔴 `P338` — la causa, medida: `oer` es TEXTO LIBRE y dos formas de URL parten el espacio de slugs
+
+Leido del arbol `CAHLR/OATutor-Content` en el sha `1925dec` (el mismo del pase 107), sobre las
+**694** unidades que el `sparse-checkout` alcanzo a materializar — ⚠️ **muestra NO aleatoria**
+(orden alfabetico de directorio), declarada como tal y publicada en
+`compose/code/p336-figure-contradiction-delta/oer-shape.2026-10-05.tsv`:
+
+| forma de la URL en el campo libre `oer` | unidades | % de la muestra |
+|---|---|---|
+| `openstax.org/details/books/<slug>` | **514** | 74,1 % |
+| 🆕 `openstax.org/books/<slug>/pages/…` (**enlace profundo**) | **129** | **18,6 %** |
+| no-openstax (`OATutor.io` 30, `docs.google.com` 20, sin URL 1) | **51** | 7,3 % |
+
+🔴 **Y los slugs que trae cada forma NO se solapan en una sola unidad:**
+
+| forma | slugs vistos | unidades |
+|---|---|---|
+| `details` | `elementary-algebra-2e` (252), `introductory-statistics` (117), `college-algebra-2e` (68), `intermediate-algebra-2e` (50), `calculus-volume-1` (27) | 514 |
+| `pages` | `precalculus-2e` (58), `university-physics-volume-1` (48), 🆕 **`precalculus`** (23) | 129 |
+| interseccion de los dos conjuntos de slugs | 🔴 **vacia** | — |
+
+🔴 **Por eso un extractor afirmado sobre `/details/books/` no pierde items sueltos: pierde OBRAS
+ENTERAS.** En esta muestra perderia `precalculus-2e`, `university-physics-volume-1` y
+`precalculus` completas — tres obras, no una cola.
+
+🔴 **Y `precalculus` a secas no esta en NINGUNA de las 10 filas del censo publicado por el pase
+107.** El censo lista `precalculus-2e`; la **primera edicion** no aparece. 🔴 **Eso importa
+exactamente por `P328`:** el titular cede `CC BY 4.0` en las refs `1e` y `CC BY-NC-SA 4.0` en
+`main`. Colapsar `precalculus` dentro de `precalculus-2e` —o dejarlo caer en `(no-openstax)`— no
+es un redondeo: **cambia la licencia que se le atribuye al activo.**
+
+🔵 **Hipotesis para el pase 109, escrita antes de medirla:** los 41 de `P337` son figuras cuyo
+`oer` usa una forma de URL que uno de los dos instrumentos resuelve y el otro no. **No esta
+probado** — probarlo pide el censo completo de las 12.999 unidades, que este pase no pudo materializar.
+
+### 🟢 La accion C: CONFIRMADA en el conteo, y FALSIFICADA como instrumento (`P339`)
+
+| clausula pre-registrada por el pase 107 | pedia | medido | veredicto |
+|---|---|---|---|
+| aparecen **≥10** pares (conteo de bytes, huella) de un archivo de licencia en los `.md` | ≥ 10 | 🟢 **17** (`agents/top.md` 12, `verticals/solutions.md` 3, `agents/trending.md` 2), **15** huellas distintas, **91** menciones de bytes de licencia en total | 🟢 **CONFIRMADA** |
+| entre **1 y 3** tienen el conteo de bytes exactamente 1 por debajo del payload | 1–3 | ⚠️ **NO MEDIDO**: remedir cada uno pide releer el payload de cada licencia, un barrido multi-repo que esta sesion no corrio | ⚠️ **sin veredicto** |
+| ninguno cambia de familia | 0 | ⚠️ **NO MEDIDO**, por lo mismo | ⚠️ **sin veredicto** |
+
+🔴 **Pero la clausula central se cae sola, sin red, y eso es `P339`: el delta de 1 byte NO es
+diagnostico.** Esta base ya documento **dos** causas distintas que producen la **misma** firma:
+
+- **`P327`** — el archivo **no trae salto final** (CRLF/LF/sin-salto): el pase 105 publico
+  `21.443` / `21.013` / `21.442` B del **mismo texto**, y esta base sigue publicando `21.442 B`
+  (×3) y `21.443 B` (×2) hoy.
+- **`P333`** — `$(cat …)` **se come el salto final al medir**, y la huella sale del archivo sin su
+  ultimo byte.
+
+🔴 **Las dos dan «1 byte menos». Entonces encontrar un delta de 1 no identifica el instrumento**,
+y la accion C, tal como quedo escrita, no podia distinguir lo que se propuso distinguir. **Para
+separarlas hay que comparar la huella del archivo COMPLETO contra la del archivo sin su ultimo
+byte en el MISMO acto de medicion** — es lo unico que desempata.
+
+### 🟢 El tablero, re-verificado COMPLETO en este pase
+
+| que se corrio | cifra |
+|---|---|
+| suites unicas (53 `test_*.py` + 6 `test*.sh`) | **59** |
+| suites Python ejecutadas una por una | **53** |
+| fallos | 🟢 **0** |
+| interprete | `Python 3.11.15` |
+| aserciones `self.assert*` en las suites Python | **200** (eran 170) |
+| suite nueva de este pase (`p336-figure-contradiction-delta/test_p336.py`) | 🟢 **23/23** |
+
+⚠️ **Dos defectos de ESTE pase, encontrados por ESTE pase antes de publicar.** (1) La primera
+version de la suite nueva traia un guardia de `P332` que **se leia a si mismo** y se disparaba con
+su propio literal `'.endswith(".gif")'`: un guardia escrito como barrido de su propio archivo
+fuente es un falso positivo garantizado. Ahora inspecciona el **codigo operativo**
+(`inspect.getsource` del clasificador + los dos patrones) y no el texto del archivo.
+(2) La primera version de la Accion B asumio que `oer_del_problema` traia el slug del libro; la
+suposicion se corrigio **midiendo la columna** (dio 2 valores) en vez de defendiendola.
+
+⚠️ **Y una cifra que este pase se niega a publicar como medida: las ESTRELLAS de `OpenMAIC`.** El
+unico canal disponible devolvio «40.000 ★ / 6.200 forks». 🔴 **El pase 107 ya documento que este
+mismo canal infla estrellas** («las cifras de pases anteriores estaban infladas por el pipeline»),
+y `api.github.com` sigue en 403, asi que no hay segunda lectura. **La licencia, el titular, la
+version y el paquete LGPL salen del payload y se publican; la estrella no se publica.**
+
+### 🔴 Acciones pre-registradas para el pase 109, falsables, con su numero escrito ANTES de correrlas
+
+**Accion A — cerrar `P337` por donde si se puede: el censo COMPLETO de formas de `oer`.**
+No pide el arbol del titular (denegado), pide terminar de materializar `CAHLR/OATutor-Content`,
+que si se clona. Clasificar las **12.999** unidades por forma de URL y por slug, y reproducir los
+dos cortes (1.611/832 y 1.570/873) desde un unico instrumento.
+
+**Prediccion falsable:** *los 41 de diferencia son unidades cuyo `oer` usa la forma de enlace
+profundo `/books/<slug>/pages/…` con un slug que el censo de 10 filas no lista —`precalculus` a
+secas entre ellos— y al clasificar con las dos formas juntas el corte converge a **1.611**, no a
+1.570.* 🔵 **Que la refuta:** que converja a 1.570 (y entonces el binario `openstax`/`otro`
+sobre-cuenta, probablemente por capturar la cadena `openstax` dentro de una URL que no es del
+titular); o que converja a un tercer numero (y entonces los DOS artefactos publicados estan mal y
+el denominador de riesgo de esta base hay que recalcularlo entero).
+
+**Accion B — `P340` contra el barrido de esta base.** Rebarrer los repos ya dados de alta pidiendo
+`LICENSE`, `LICENCE`, `COPYING` y `README.md`, y contar en cuantos la respuesta cambia respecto de
+lo publicado.
+
+**Prediccion falsable:** *aparece **al menos 1** repo mas, ademas de `oak`, cuya cesion esta en una
+ortografia o un archivo que el barrido no pedia; y **ninguno** de los que esta base declaro
+«sin cesion» resulta tener una licencia permisiva escondida en `LICENCE`.* 🔵 **Que la refuta:**
+que no aparezca ninguno (y entonces `oak` es un caso aislado y no una clase de defecto); o que
+aparezca uno declarado «sin cesion» que en realidad cede permisivo — y entonces esta base publico
+un falso negativo de licencia, que es el error mas grave de su catalogo.
+
+**Accion C — `P339` resuelto con el desempate que le falta.** Para cada uno de los **17** pares
+publicados con slug resoluble, medir en el MISMO acto: bytes del archivo completo, `sha256` del
+archivo completo, y `sha256` del archivo **sin su ultimo byte**.
+
+**Prediccion falsable:** *de los 17, **≥1** tiene su huella publicada igual a la del archivo SIN
+el ultimo byte (firma de `P333`, defecto del instrumento) y **≥1** tiene su huella igual a la del
+archivo completo mientras el conteo de bytes publicado difiere en 1 (firma de `P327`, propiedad
+del archivo) — o sea las dos causas aparecen las dos y la de 1 byte queda probada como NO
+diagnostica.* 🔵 **Que la refuta:** que las 17 huellas sean del archivo completo (y entonces
+`P333` fue un unico error de tipeo del pase 107 y no una clase de instrumento).
+
+---
 
 ## 🔴 Altas de agente: 0 permisivas — trigesimo barrido, 3 candidatas MEDIDAS del payload, y el pase se gasta en la capa de IMAGEN, donde el hallazgo es que la EXTENSION MIENTE (pase 107 del 2026-10-05)
 

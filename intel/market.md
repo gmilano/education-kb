@@ -72,6 +72,125 @@ updated: 2026-10-05
 > **LATAM:** 🔵 el hallazgo del pase — **existe una capa MCP nacional brasileña de datos públicos, activa y MIT, y
 > educación es el único dominio grande que falta** (**gap 69**).
 
+## 🟢 Barrido regional 37: las cuatro regiones responden (0 silencios) — y lo que las separa este pase es la DIRECCION de la curva docente (pase 108 del 2026-10-05)
+
+> **Vocabulario de region CERRADO:** `North America` · `EMEA` · `APAC` · `LATAM` · `Global`.
+> El pais va en la prosa, la region en el campo.
+
+### 📊 El marco global, medido
+
+| indicador | cifra | ventana |
+|---|---|---|
+| mercado AI en educacion | **USD 10,6 B** → **USD 42,48 B** (2030), **CAGR 41,5 %** | 2026 → 2030 |
+| valor que la AI generativa podria agregar al sector educativo global | **USD 200 B** | proyeccion |
+| alumnos que ya usan AI en sus estudios (16 paises) | **86 %** | 2026 |
+| penetracion institucional (universidades con uso significativo) | **45–50 %** (2024) → **78–82 %** (2026) | casi se duplica en 24 meses |
+
+🔵 **El dato que ordena el pase:** la adopcion de **alumnos** esta practicamente saturada (86 %) y
+la institucional se duplico, **pero la intencion docente se movio hacia abajo en la region mas
+grande del mercado**. La brecha ya no es de acceso: es de **mandato y de confianza del docente**.
+
+## Opportunities by region
+
+### North America
+
+**Lo medido.** Concentra el **38 %** del mercado AI-educacion (2025). En 2026 se introdujeron
+**134 proyectos de ley** sobre AI en educacion en **31 estados**, dentro de **+1.500** proyectos
+sobre AI en total. Piezas concretas: **California AB 1159** prohibe usar datos de alumnos para
+entrenar modelos; **Idaho SB 1227** exige protecciones de privacidad en herramientas con AI;
+**Oklahoma** y **Maryland** exigen supervision humana y **prohiben que la AI tome decisiones de
+alto impacto** sobre un alumno. **Cuatro estados** —Maryland, Idaho, Oklahoma, Virginia— exigen a
+la vez guia estatal **y** politica distrital obligatoria. **NYC Public Schools** publico en marzo
+de 2026 un *Traffic Light Framework* (permitido / con cautela / prohibido).
+
+🔴 **Y las dos cifras que hacen la oportunidad:** solo **18 %** de los docentes de K-12 publico
+recibe guia escrita formal sobre uso de AI, y la intencion docente de usar AI **cayo 9 puntos**,
+de **76 % (2025)** a **67 % (2026)** — **la mas baja de todas las regiones**.
+
+🔵 **Oportunidad para Globant.** No es una venta de tutor: es **gobernanza ejecutable**. El
+comprador es un distrito o un sistema estatal que tiene un mandato legal y **no tiene el
+instrumento**. La pieza que lo sirve es la capa MCP de este pase —
+[`54yyyu/school-mcp`](https://github.com/54yyyu/school-mcp) y
+[`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) sobre Canvas— con una
+**compuerta de politica** que registre quien pidio que, y que **niegue por defecto** las decisiones
+de alto impacto que OK y MD prohiben. 🔵 **La caida de 9 puntos en intencion docente dice que el
+producto tiene que reducir trabajo docente de forma verificable, no agregar una herramienta mas.**
+
+### EMEA
+
+**Lo medido.** El **EU AI Act** clasifica como **alto riesgo** la AI que decide acceso educativo,
+evalua resultados de aprendizaje o influye en la trayectoria de una persona — admision, evaluacion,
+correccion de examenes. La **obligacion de alfabetizacion en AI** rige **desde el 2 de febrero de
+2025** para toda organizacion que use sistemas de AI, **o sea para toda escuela**. La
+implementacion por fases corre hasta **2026-2027**, asi que la mayoria de las escuelas esta en
+**piloto y pre-cumplimiento**, no en fiscalizacion plena. La guia practica converge en: usar AI
+primero en administracion y apoyo docente, **humano en el lazo** en toda decision consecuente,
+documentar lo desplegado, y decir con claridad a alumnos y familias **que decide la AI y que decide
+una persona**.
+
+🔵 **Oportunidad para Globant.** La region premia **trazabilidad por diseno**, y este pase trae la
+pieza exacta: [`oaknational/oak-open-curriculum-ecosystem`](https://github.com/oaknational/oak-open-curriculum-ecosystem)
+—codigo **MIT**, datos **OGL v3.0**, 37 herramientas MCP generadas desde una OpenAPI unica— es un
+**curriculo nacional cedido con procedencia tipada**. 🔵 **Eso convierte la auditoria de licencia y
+de contenido de una consultoria forense en una consulta a un campo**, que es justo lo que un
+expediente de alto riesgo necesita. Entrega natural: apoyo docente y administracion con
+alfabetizacion AI incorporada, sobre contenido cuya cesion esta escrita.
+
+### APAC
+
+**Lo medido.** **China, India y Japon** dominan el mercado regional. Tres regimenes distintos
+conviven: **China** con marcos **obligatorios** (seis regulaciones vinculantes en cuatro anos,
+enmiendas a la Ley de Ciberseguridad **vigentes desde el 1 de enero de 2026**, **+50 estandares de
+AI** hacia 2026); **Japon** y parte de ASEAN con **guias voluntarias** (el Gabinete japones aprobo
+el **segundo Plan Basico de AI el 14 de julio de 2026**, documento de estrategia y no ley; la AI
+Promotion Act sigue siendo promocional); **Australia e India** con modelos **hibridos** — India
+senalo en julio de 2026 que podria legislar AI con enfoque basado en riesgo. **Japon y Corea del
+Sur** tienen proteccion de datos **especifica para AI en educacion** desde 2023, con **cifrado
+obligatorio** de datos de alumnos y sanciones por incumplimiento.
+
+🔵 **Oportunidad para Globant.** La region es **multi-jurisdiccional por definicion**, y el alta
+de este pase nace ahi: [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) (**MIT**,
+Tsinghua, `v1.2.0-rc.1` del 2026-10-04) ya movio la generacion de curso **al servidor con
+persistencia PostgreSQL**, que es exactamente la arquitectura que un mandato de residencia y
+cifrado de datos exige. 🔴 **Con la salvedad que hay que decidir antes de empezar:** el arbol
+empaqueta `packages/mathml2omml` en **LGPL-3.0-or-later**, asi que se compone **por paquete**.
+
+### LATAM
+
+**Lo medido.** LATAM adopta AI al **47 %**, **por encima del promedio global de 45 %**. **Brasil
+76 %** y **Mexico 70 %** lideran. Entre **70 % y 85 %** de los universitarios de la region ya uso
+AI en sus estudios; la digitalizacion previa (computadoras, bibliotecas digitales, plataformas) es
+lo que lo hizo posible en Mexico, Brasil, Argentina, Chile, Colombia y Peru. **Regulacion:** el
+Senado de Brasil aprobo **PL 2338/2023** en diciembre de 2024 —la propuesta mas completa de la
+region, con clasificacion por riesgo, obligaciones de transparencia, evaluacion de impacto
+algoritmico y registro nacional de sistemas de alto riesgo—, **pendiente en la Camara de Diputados
+y esperada en vigor en 2026**. 🔴 **Mexico no tiene regulacion ni capacidad institucional**: la
+transformacion avanza mas rapido que la capacidad de crear reglas. Para 2026 se esperan olas
+regulatorias en **Chile** (ley de AI en tramite), **Colombia** (lineamientos MinTIC), **Mexico**
+(directivas INAI) y **Argentina** (anteproyecto).
+
+🔵 **Oportunidad para Globant.** Es la region donde la **demanda existe y el marco todavia no
+cierra**, o sea la ventana para fijar el estandar de hecho. 🔴 **Y la ausencia confirmada que la
+define:** este barrido devolvio **0 repos de educacion con licencia publicados desde LATAM** — la
+region consume y adopta por encima del promedio global **pero no publica como repo cedido**. 🔵 **Eso
+es una oportunidad de posicionamiento, no un hueco de mercado:** una capa MCP en espanol y portugues
+sobre Moodle —el LMS dominante de la region— con la compuerta de politica preparada para PL
+2338/2023, **publicada con licencia permisiva**, pondria a Globant como el referente de la capa que
+nadie esta publicando. Pieza de arranque:
+[`peancor/moodle-mcp-server`](https://github.com/peancor/moodle-mcp-server) (ya en esta base) +
+[`davidlms/learnmcp-xapi`](https://github.com/davidlms/learnmcp-xapi) (**MIT**) para el registro de
+aprendizaje.
+
+### 🔵 Lo que el barrido 37 cambia respecto del 36
+
+| eje | barrido 36 | 🆕 barrido 37 |
+|---|---|---|
+| lo que separa a las regiones | el **dinero comprometido** | la **direccion de la curva docente**: NA cae 9 puntos en intencion docente mientras la adopcion institucional global se duplica |
+| de donde sale la pieza componible | ninguna (30 barridos en cero) | 🟢 **APAC** (`OpenMAIC`, Tsinghua) y **EMEA** (`oak`, Reino Unido) — **las dos regiones con regulacion mas dura son las que publicaron** |
+| LATAM | adopcion alta, marco en formacion | 🔴 **igual, y con la ausencia ahora medida**: 0 repos publicados con cesion. **Declarado, no inferido** |
+
+---
+
 ## 🟢 Barrido regional 36: las cuatro regiones responden (0 silencios) — y lo que las separa este pase es el DINERO COMPROMETIDO, no el marco
 
 > **Frontmatter y region:** el archivo declara `Global`; cada oportunidad lleva su region en el

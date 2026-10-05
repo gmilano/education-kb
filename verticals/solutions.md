@@ -167,6 +167,41 @@ updated: 2026-10-05
 > recomendación: proponer con presupuesto de mantenimiento (gap 70).** Ver la sección del pase 33, abajo.
 
 
+## 🟢 Verticales nuevas: 1 — y el eje que este estante gana es que un CURRICULO NACIONAL ya viene cedido y con servidor MCP (pase 108 del 2026-10-05)
+
+| Plataforma | Licencia (leida del payload) | Que es, y por que esta en este estante | Región |
+|---|---|---|---|
+| [`classroomio/classroomio`](https://github.com/classroomio/classroomio) | 🔴 **AGPL-3.0** (`LICENSE`, preambulo FSF canonico) | Plataforma de educacion open source orientada a **empresas** —cursos, cohortes, sitio publico— posicionada como alternativa a Moodle, Open edX, Thinkific y Teachable. 🔴 **AGPL-3.0: queda fuera del gate permisivo de `agents/top.md`, y en este estante se declara.** 🔵 **Para Globant es customizable como despliegue del cliente** (el cliente opera su propia instancia y la AGPL §13 se cumple publicando las modificaciones de esa instancia), **no** como componente embebido en un producto cerrado | 🔴 sin region verificada de primera mano (`P261`) |
+
+### 🆕 El eje nuevo de este estante: el CURRICULO como vertical cedida
+
+🔵 **Hasta este pase, este estante listaba plataformas (Moodle, Open edX, Canvas, Kolibri,
+OpenEduCat, BigBlueButton, H5P, Sakai) — o sea CONTENEDORES de contenido.** El alta de
+[`oaknational/oak-open-curriculum-ecosystem`](https://github.com/oaknational/oak-open-curriculum-ecosystem)
+(ver `repos/foundations.md`) abre otra cosa: **el contenido curricular en si, cedido por una agencia
+nacional, con servidor MCP y SDK encima.**
+
+| capa | ejemplo de esta base | quien cede | riesgo que trae |
+|---|---|---|---|
+| plataforma (contenedor) | Moodle (GPL-3.0), Open edX (Apache-2.0), Kolibri (MIT) | el proyecto | licencia del **software** |
+| 🆕 curriculo (contenido cedido) | **Oak Open Curriculum** — codigo **MIT**, datos **OGL v3.0** | una agencia publica | 🔴 licencia del **dato**, distinta de la del codigo (`P315`) |
+| contenido redistribuido | `OATutor-Content` sobre OpenStax | un redistribuidor | 🔴 la cesion del titular **se estrecha entre ediciones** (`P328`) y el titular de una figura **vive en otra obra** (`P334`) |
+
+🔴 **La leccion que este estante se lleva del pase es cuantitativa y viene de la capa de abajo:**
+en `OATutor-Content` —la capa de contenido que esta base ya tenia catalogada— **dos artefactos del
+mismo pase, sobre el mismo sha, se contradicen por 41 figuras** sobre quien es el titular, porque
+el campo que lo dice es **texto libre** con dos formas de URL (`P337`/`P338`). 🔵 **Oak hace lo
+contrario y por eso entra**: la cesion del dato esta en un archivo propio (`LICENCE-DATA.md`), la
+del codigo en otro (`LICENCE`), y la API tiene una especificacion OpenAPI unica de la que se
+generan SDK, validadores y herramientas MCP. **Cuando la procedencia es un campo tipado y no una
+URL escrita a mano, la auditoria de licencia deja de ser forense y pasa a ser una consulta.**
+
+⚠️ **Y la trampa de este estante, repetida porque sigue siendo la mas cara:** `oak` cede en
+**`LICENCE`** y devuelve **404** en `LICENSE` (**`P340`**). Si el inventario de verticales de una
+engagement se arma con un barrido de `LICENSE`, **Oak aparece como «sin cesion» siendo MIT**.
+
+---
+
 ## 🔴 Verticales nuevas: 0 — y el eje que este estante gana es que la capa de CONTENIDO que se le monta arriba trae BINARIOS sin cesion propia (pase 107 del 2026-10-05)
 
 > **Frontmatter y region:** `Global`. La unica pieza medida de este pase es **EMEA**; su region va

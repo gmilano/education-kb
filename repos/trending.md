@@ -10,6 +10,49 @@ updated: 2026-10-05
 > **Pase 107 del 2026-10-05:** 🔴 **Trending de la industria vacio por TRIGESIMOSEXTA vez: curriculo, catalogos, una bolsa de trabajo y dos generalistas (`microsoft/semantic-kernel` 27.470 ★, `NousResearch/hermes-agent` MIT), con las SEIS cifras del eje generalista identicas digito a digito a los pases 105 y 106 ⇒ informacion sobre el CANAL, no sobre la industria.** 🟢 **Lo que SI se movio es una capa de BINARIOS que este archivo nunca conto: 2.443 archivos de figura (~156 MiB, 1.326 imagenes distintas) en `CAHLR/OATutor-Content`, con la extension `.gif` falsa en 2.443 de 2.443 (`P332`).** 🔵 **`git ls-remote` da TRES refs, y una se llama `gpt-science-study`: la unica de este arbol cuyo nombre anuncia contenido sintetico.** 🔴 **Defecto propio corregido: los 49.481 JSON contra los 49.479 del pase 106 son los 6 caminos con bytes de control (U+007F/U+0080/U+0081) en el nombre del paso — la identidad de un paso NO es un slug seguro.**
 > **Pase 106 del 2026-10-05:** 🔴 **Trending de la industria vacio por TRIGESIMOQUINTA vez: el canal devuelve generalista o educativo-sobre-AI, no AI-para-educacion.** 🟢 **Lo que SI se movio esta en el eje de `ref` y no de repo: las ramas `1e` de 5 bundles de `openstax` contienen la UNICA cesion `CC BY 4.0` de 10 colecciones cuyas versiones vivas son `NC-SA` — cesion y vigencia apuntan en direcciones opuestas.** 🔵 **Canal nuevo calibrado: `git ls-remote` para enumerar refs (responde a repo real, falla a repo inventado), el unico de este arbol que contesta «que refs tiene este repo» con `api.github.com` en 403 — sin el, la accion A de este pase era imposible.**
 
+## 2026-10-05 — pase 108: el trending de la industria deja de estar vacio por primera vez en 37 barridos, y lo que se mueve es la capa de INTEGRACION
+
+🟢 **Se corta la racha.** Treinta y seis barridos consecutivos devolvieron «trending generalista,
+nada de educacion». Este pase devuelve **cinco repos de educacion con cesion leida del payload**, y
+la forma que tienen entre todos es mas informativa que cualquiera por separado.
+
+| Repo | Licencia (payload) | Movimiento medido |
+|---|---|---|
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | 🟢 MIT (🔴 + LGPL-3.0-or-later empaquetada) | `v1.2.0-rc.1` el **2026-10-04**; `v1.0.0` el 2026-08-27. Dos saltos de version en seis semanas, y el ultimo cambia la arquitectura (navegador → servidor + PostgreSQL) |
+| [`oaknational/oak-open-curriculum-ecosystem`](https://github.com/oaknational/oak-open-curriculum-ecosystem) | 🟢 MIT (🔴 datos OGL v3.0) | **8 ★ / 5 forks** — medido, no estimado. 🔵 **Un repo de 8 estrellas publicado por una agencia curricular nacional vale mas para esta base que uno de 40.000 publicado por un vendor**: el activo es el curriculo cedido, no la popularidad |
+| [`Cicatriiz/openedu-mcp`](https://github.com/Cicatriiz/openedu-mcp) | 🟢 MIT | capa de fuente: OpenLibrary + Wikipedia + arXiv con filtrado por nivel |
+| [`davidlms/learnmcp-xapi`](https://github.com/davidlms/learnmcp-xapi) | 🟢 MIT | MCP ↔ xAPI contra un LRS estandar |
+| [`54yyyu/school-mcp`](https://github.com/54yyyu/school-mcp) | 🔸 MIT solo en README (`P314`) | Canvas + Gradescope |
+
+### 🔵 La forma del movimiento, que es el hallazgo
+
+🟢 **Cuatro de los cinco son servidores MCP.** Ninguno es un modelo, ninguno es un framework de
+agente generalista, ninguno pide reemplazar el LMS. **Lo que se movio en educacion este pase es la
+capa que conecta un agente con los sistemas que la institucion ya tiene** — el LMS (Canvas), el LRS
+(xAPI), el curriculo (Oak), el catalogo (OpenLibrary/arXiv).
+
+🔵 **Para Globant eso cambia el punto de entrada de una engagement.** El patron de los pases
+anteriores era «traer un tutor open source y adaptarlo». El patron que el trending muestra ahora es
+«dejar el LMS donde esta y meter una capa MCP entre el agente y el sistema de registro». **Es mas
+barato, no migra datos de alumnos y no toca la plataforma acreditada** — que es justo lo que las
+tres regiones con regulacion dura (EMEA por el AI Act, North America por las leyes estatales, APAC
+por China) hacen mas facil de aprobar.
+
+### 🔴 Lo que sigue vacio, dicho en vez de callado
+
+- **0** repos de evaluacion/observabilidad de agentes educativos con licencia permisiva. Sigue
+  siendo el hueco mas viejo de esta base.
+- **0** movimiento en las piezas de tutoria adaptativa ya catalogadas (`DeepTutor`, `Educhain`,
+  `OATutor`, `OpenTutor`): ninguna publico version en esta ventana.
+- 🔴 **0 repos de educacion desde LATAM en este barrido.** No es que LATAM no adopte —adopta por
+  encima del promedio global, ver `intel/market.md`— **es que lo que produce no se publica como
+  repo con licencia**. Es una ausencia confirmada, no una falta de busqueda.
+- ⚠️ **Las estrellas de `OpenMAIC` no se publican.** El unico canal disponible devolvio «40.000 ★»
+  y es el mismo canal que el pase 107 documento inflando cifras; `api.github.com` sigue en **403**.
+  **La version, la licencia y el paquete LGPL salen del payload y se publican; la estrella no.**
+
+---
+
 ## 2026-10-05 — pase 107: trending de la industria vacio por TRIGESIMOSEXTA vez, y lo que se mueve es una CAPA DE BINARIOS que este archivo no habia contado
 
 > **Frontmatter y region:** `Global`.

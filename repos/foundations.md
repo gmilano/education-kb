@@ -113,6 +113,38 @@ corre ése antes de escribir uno a mano** (tendencia **313**). 🟢 **Y el `gafa
 > **Pase 36 del 2026-10-02:** 🔵 **este pase no agrega repos: le pone FECHA a los que ya están, y la fecha cambia tres recomendaciones.** Se midió la capa PHP de evaluación y telemetría en Packagist —el único registro de los tres que entrega descargas en este entorno (`api.npmjs.org` y `pypistats.org` dan **403 a CONNECT**)— y el resultado está en `repos/trending.md`. **Lo que hay que saber antes de proponer desde este archivo:** 🔴 **la pieza xAPI más descargada de esta base, `rusticisoftware/tincan` (Apache-2.0, 6.178 desc./mes, 863.777 totales), no publica desde el 2022-11-02**, y ⚠️ **el único MIT de esa capa, `php-xapi/client`, está parado desde el 2021-03-24** con 825 desc./mes. 🔵 **La lectura es que en xAPI/PHP lo permisivo está quieto y lo vivo es copyleft**, así que la receta de telemetría se sostiene en **Ralph (MIT)** + **`lrsql` (Apache-2.0)** + **`learnmcp-xapi` (MIT)** y no en la capa PHP. 🟢 **Del lado de evaluación, lo activo es `oat-sa/extension-tao-testqti`** (**885 versiones**, release del **2026-09-30**) **y sigue siendo GPL-2.0-only**, mientras **lo permisivo es lo nuevo**: `@longsightgroup/qti3-cli` (**MIT**, 41 releases desde el 2026-05-21, último **2026-10-01**) con **cero dependencias de terceros** — sus 4 dependencias son todas `@longsightgroup/*` pinneadas a la misma versión exacta. **Su manifiesto MCP completo de 20 tools está escrito en `compose/patterns.md` (P76).** 🔴 **Y una corrección de catálogo: `oat-sa/qti-sdk` devuelve 404 en Packagist porque es el nombre del REPO — su paquete es `qtism/qtism`** (GPL-2.0-only, 218.212 descargas totales, 315 versiones). **Nombre de repo y nombre de paquete son identificadores distintos, y confundirlos produce un 404 que parece una ausencia** — pasó igual con `1edtech/oneroster`, `imsglobal/lti-1-3-php-library` y `packbackbooks/lti-1-3-php-library`, los tres **404**, que se anotan como *«no verificado en Packagist bajo ese nombre»* y **no** como inexistentes. ⚠️ **Acción pendiente que el pase 37 tiene asignada: este archivo nunca pasó por el control de *slugs* distintos ni por el de *backlink*** — los dos que en `agents/top.md` encontraron **un duplicado** y **dos colisiones** este mismo pase.
 > **Pase 11 del 2026-10-01:** aparece una licencia que las diez pasadas anteriores filtraban sin saberlo — **ECL-2.0**, con la que licencia todo Apereo (Sakai, Opencast, OpenLRW). Es Apache-2.0 con el alcance de patentes acotado, aprobada por OSI y FSF, y **es apta para construir arriba**. Ver la capa de analítica institucional, abajo.
 
+## 🟢 Altas fundacionales: 2 — y las dos traen la misma leccion: la licencia de la RAIZ no es la licencia del ARBOL (pase 108 del 2026-10-05)
+
+| Repo | Familia (payload) | Bytes / archivo leido | Titular | Capa | Región |
+|---|---|---|---|---|---|
+| [`oaknational/oak-open-curriculum-ecosystem`](https://github.com/oaknational/oak-open-curriculum-ecosystem) | 🟢 **MIT** en el codigo · 🔴 **OGL v3.0** en los datos de curriculo | 🆕 La cesion vive en **`LICENCE`** (ortografia britanica) — `LICENSE` devuelve **404**. Titular «Copyright (c) **2024-present** Oak National Academy». Los datos ceden aparte en `LICENCE-DATA.md` | Oak National Academy (Reino Unido) | **curriculo nacional como infraestructura AI-nativa**: servidor MCP + SDK TypeScript + busqueda semantica, **37 herramientas** generadas desde una especificacion OpenAPI que es la unica fuente de verdad | **EMEA** |
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | 🟢 **MIT** en la raiz · 🔴 **LGPL-3.0-or-later** en `packages/mathml2omml` | `LICENSE` raiz = MIT, «Copyright (c) **2026** THU-MAIC». El paquete empaquetado declara su licencia en **su propio `package.json`** (`mathml2omml@0.5.0`), y el README lo confirma: *«the terms of each bundled package above apply to that package's files»* | Tsinghua (`THU-MAIC`) | **aula multi-agente de punta a punta**: de un tema o documento a diapositivas, cuestionarios, simulaciones y actividades, servidas por docente y companeros AI. `v1.2.0-rc.1` (2026-10-04) persiste el curso en PostgreSQL del lado del servidor | **APAC** |
+
+### 🔴 Lo que estas dos altas le corrigen al metodo de este estante
+
+| antes | 🟢 ahora, medido |
+|---|---|
+| la cesion de un repo se lee en `LICENSE` | 🔴 **y puede estar en `LICENCE`**: `oak` es MIT y devuelve **404** en la ruta que esta base barre. Un 404 en `LICENSE` tiene **tres** lecturas —ortografia, cesion en el README (`P314`), ausencia real— y ninguna se decide sin abrir otra puerta (**`P340`**) |
+| un repo permisivo se puede redistribuir entero | 🔴 **no si empaqueta arboles ajenos**: `OpenMAIC` es MIT y lleva `LGPL-3.0-or-later` adentro, **declarado por el propio proyecto**. La unidad de cesion no es el repo: es el paquete |
+| el campo `license` de un manifiesto confirma la raiz | 🟢 **y ademas delata la excepcion**: aca el `package.json` del sub-paquete es lo que descubre la LGPL. Extiende `P283` en la direccion util (en `1111philo/learn` el manifiesto estaba MUDO; aca **habla y contradice a la raiz**) |
+
+🔵 **Para una entrega comercial de Globant eso se traduce en una regla y no en una advertencia:**
+`OpenMAIC` se compone **por paquete**, no por repo — el nucleo MIT entra; `packages/mathml2omml`
+(conversion MathML → OOXML, o sea exportar formulas a Word/PowerPoint) entra **solo** como
+dependencia dinamica con su LGPL respetada, o se reemplaza. **Es una linea de trabajo, no un
+bloqueo**, y hay que decidirla antes de empezar y no en la auditoria.
+
+### ⚠️ Lo que este pase NO pudo resolver en este estante, dicho en vez de callado
+
+🔴 **El arbol del titular de OpenStax quedo fuera de alcance.** La accion pre-registrada por el
+pase 107 pedia clonar `openstax/osbooks-introductory-statistics-bundle` como **pieza nombrada**;
+el clon fue **denegado por el clasificador de la sesion**. El pase 107 habia concluido (`P335`)
+que la pieza nombrada pasaba y el lote no; **este pase pidio la pieza y tampoco paso**, asi que
+`P335` queda como generalizacion de una sola observacion. 🔵 **El denominador de la capa de imagen
+sigue abierto y ahora se sabe que no se cierra desde esta sesion** — ver `agents/top.md`.
+
+---
+
 ## 🟢 Altas fundacionales: 1 — y es la pieza que el hallazgo de este pase vuelve necesaria: la ATRIBUCION DE FIGURA legible por maquina (pase 107 del 2026-10-05)
 
 > **Frontmatter y region:** `Global`. La pieza de este pase es **EMEA**; la region de cada fila va

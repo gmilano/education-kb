@@ -11,6 +11,48 @@ updated: 2026-10-05
 > **Pase 107 del 2026-10-05:** 🔴 **0 altas permisivas (trigesimo barrido, 3 candidatas MEDIDAS del payload y las 3 con su bloqueo nombrado) y las TRES acciones pre-registradas corridas: A con la cota NO CERRADA y su clausula de atribucion FALSIFICADA, B CONFIRMADA, C CONFIRMADA en dos clausulas y FALSIFICADA en la tercera.** 🔴 **`P332`: la EXTENSION de un archivo de imagen no es su FORMATO — 2.443 de 2.443 `.gif` son PNG/JPEG/WEBP, y un barrido por extension habria dado «0 solapamiento» desde una premisa falsa.** 🔴 **`P334`: el titular de una FIGURA se resuelve por BYTES y vive en una obra DISTINTA de la que el item cita (36 pares leidos).** 🔴 **`P333`: `fa4e32e5e622` era la huella del archivo SIN su salto final — defecto de dato, no de upstream.** 🔴 **`P335`: tercera sub-clase de `P320` — lo denegado fue el LOTE, no la pieza nombrada.** 🟢 **Canal nuevo: `gitlab.com/-/raw`.**
 > **Pase 106 del 2026-10-05:** 🟢 **0 altas (vigesimonoveno barrido, 5 candidatas, las 5 frenadas por el gate de `P311`) y las TRES acciones pre-registradas corridas: A CONFIRMADA, B FALSIFICADA, C CONFIRMADA.** 🔴 **`P328`: la cesion de un OER se ESTRECHA entre ediciones — 10 de 10 colecciones con el mismo `collection-id` pasan de `CC BY 4.0` en `1e` a `CC BY-NC-SA 4.0` en `main`, y el slug cambia de nombre, que es por lo que esta base no lo veia.** 🔴 **El denominador se corrige de 13.371 a 82.492 unidades y aparece una capa sintetica de 6.886 unidades (`oer: openai`) sin cesion.** 🟢 **Canal nuevo: `git ls-remote` para enumerar refs — es el que abrio la accion A.**
 
+## 2026-10-05 — pase 108: 5 altas permisivas cortan una racha de 30, y la accion pre-registrada se cae por el ARTEFACTO al que la mandaron
+
+**Lo que se movio esta semana, medido del payload y no del titular de la nota:**
+
+| alta | licencia (payload) | que la hace trending |
+|---|---|---|
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | 🟢 **MIT** · 🔴 `packages/mathml2omml` = **LGPL-3.0-or-later** | `v1.2.0-rc.1` del **2026-10-04** — un dia antes de este pase. Mueve la generacion del curso del navegador al servidor con persistencia PostgreSQL: el salto de demo a producto |
+| [`oaknational/oak-open-curriculum-ecosystem`](https://github.com/oaknational/oak-open-curriculum-ecosystem) | 🟢 **MIT** (codigo) · 🔴 **OGL v3.0** (datos) | Un curriculo **nacional** (Reino Unido) publicado como servidor MCP + SDK, **37 herramientas** generadas desde una OpenAPI unica |
+| [`Cicatriiz/openedu-mcp`](https://github.com/Cicatriiz/openedu-mcp) | 🟢 **MIT** | La capa de FUENTE (OpenLibrary + Wikipedia + arXiv) con filtrado por nivel |
+| [`davidlms/learnmcp-xapi`](https://github.com/davidlms/learnmcp-xapi) | 🟢 **MIT** | Puente MCP ↔ **xAPI**: ocupa el eje `p235` que esta base tenia abierto y vacio |
+| [`54yyyu/school-mcp`](https://github.com/54yyyu/school-mcp) | 🔸 **MIT solo en el README** (`P314`) | Canvas + Gradescope via MCP |
+
+🔵 **La forma del movimiento, que es el dato y no la lista:** las cinco altas son **MCP o
+multi-agente**, ninguna es un modelo y ninguna es un framework generalista. Despues de treinta
+barridos devolviendo el eje generalista (`P281`), **lo que finalmente se movio en educacion fue la
+capa de INTEGRACION** — agentes que hablan con el LMS, con el LRS y con el curriculo que ya
+existen, no agentes que reemplazan la plataforma.
+
+**🔴 Lo que NO se movio, dicho en vez de callado:**
+
+- **0** altas de modelo o de tutor adaptativo nuevo. `DeepTutor`, `Educhain`, `OATutor` y
+  `OpenTutor` siguen siendo las piezas de tutoria de esta base y **ninguna publico version este
+  pase**.
+- **2 candidatas rechazadas por licencia y no por calidad**: `garethmanning/education-agent-skills`
+  (**CC BY-SA 4.0**, 165 habilidades pedagogicas — contenido, no codigo) y `classroomio/classroomio`
+  (**AGPL-3.0**, que pasa a `verticals/solutions.md`).
+- 🔴 **El barrido global volvio a devolver el eje generalista por trigesimoprimera vez**
+  (OpenClaw, DeepSeek Harness, Agent Zero, Hermes Agent). `NousResearch/hermes-agent` reaparecio y
+  se rechaza otra vez: es MIT, pero es generalista y pertenece a la KB de `technology`.
+
+**🆕 `P340`, y es de metodo contra el barrido de esta base:** `oak` devolvio **404 en `LICENSE`** y
+**200 MIT en `LICENCE`**. La ortografia britanica. 🔴 **Un barrido que solo pide `LICENSE` publica
+«sin cesion» sobre un repo permisivo**, que es el falso negativo mas caro del catalogo. Desde este
+pase el barrido pide `LICENSE`, `LICENCE`, `COPYING` **y** el README antes de escribir una ausencia.
+
+**🔴 Y el pase se gasta en lo que encontro al ir a correr su accion pre-registrada:** el artefacto
+`accion-a-b.2026-10-05.tsv` del pase 107 **no contiene la variable** que la accion B necesitaba
+(colapsa `oer` a `openstax`/`otro`), y los **dos** artefactos de ese pase se contradicen por
+exactamente **41 figuras** sobre el mismo sha. Detalle completo en `agents/top.md` (`P336`–`P339`).
+
+---
+
 ## 2026-10-05 — pase 107: 0 altas permisivas (trigesimo barrido, 3 candidatas MEDIDAS), la capa de IMAGEN abierta, y la EXTENSION resulta falsa en 2.443 de 2.443
 
 > **Frontmatter y region:** `Global`. Las senales regionales de este pase estan en

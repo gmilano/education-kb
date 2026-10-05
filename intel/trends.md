@@ -121,6 +121,79 @@ updated: 2026-10-05
 > están mal por ~2× y **un 403 de `curl` no es un 404**. Ver la nota de método del pase 12.
 > **Pase 11:** el Digital Omnibus es derecho vigente (tendencia 25), aparece la capa predictiva y está vacía (tendencia 26), y se corrige un error de método de diez pasadas sobre licencias permisivas (tendencia 27).
 
+## 🟢 Tendencias 867–874 — pase 108 del 2026-10-05: la capa de INTEGRACION se mueve por fin, un 404 de licencia puede ser una ortografia, y dos artefactos del mismo pase se contradicen por 41 figuras
+
+**867. 🟢 Lo que se movio en educacion open source no es el tutor: es el conector.**
+Cinco altas permisivas cortan una racha de **treinta** barridos en cero, y **cuatro de las cinco
+son servidores MCP** (`openedu-mcp`, `learnmcp-xapi`, `school-mcp`, y el ecosistema de `oak`).
+Ninguna es un modelo, ninguna es un framework generalista, ninguna pide reemplazar el LMS. 🔵 **El
+punto de entrada de una engagement se corre:** antes era «traer un tutor open source y adaptarlo»;
+ahora es «dejar el LMS acreditado donde esta y poner una capa MCP entre el agente y el sistema de
+registro». Es mas barato, no migra datos de alumnos y no toca la plataforma certificada.
+
+**868. 🟢 Las dos regiones con la regulacion mas dura son las que publicaron.**
+`THU-MAIC/OpenMAIC` sale de Tsinghua (**APAC**, donde China tiene seis regulaciones vinculantes y
+enmiendas de ciberseguridad vigentes desde el 1 de enero de 2026) y
+`oaknational/oak-open-curriculum-ecosystem` del Reino Unido (**EMEA**, bajo el EU AI Act que
+clasifica la evaluacion educativa como **alto riesgo**). 🔵 **La hipotesis que esto sugiere y que
+esta base no puede probar todavia:** el cumplimiento obligatorio **empuja** a publicar con cesion
+explicita, porque la trazabilidad deja de ser una virtud y pasa a ser un requisito del expediente.
+
+**869. 🆕 `P340` — un 404 en `LICENSE` puede ser una ORTOGRAFIA y no una ausencia.**
+`oak` devuelve **404** en `LICENSE` y **200 MIT** en **`LICENCE`**. Mismo repo, mismo ref, mismo
+pase. 🔴 **Un barrido que solo pide `LICENSE` publica «sin cesion» sobre un repo permisivo**, que
+es el falso negativo mas caro que puede cometer un catalogo de licencias. ⚠️ **Y el 404 solo no
+desempata:** `54yyyu/school-mcp` tambien dio 404 y ahi **si** no hay archivo — la cesion esta en el
+README (`P314`). **Tres lecturas para el mismo codigo de respuesta**, y ninguna se decide sin abrir
+otra puerta.
+
+**870. 🔴 La licencia de la RAIZ no es la licencia del ARBOL, y esta vez lo dice el propio proyecto.**
+`OpenMAIC` es **MIT** en la raiz y empaqueta `packages/mathml2omml` en **LGPL-3.0-or-later**,
+declarado en **su propio `package.json`** (`mathml2omml@0.5.0`) y confirmado por el README:
+*«When redistributing the repository as a whole, the terms of each bundled package above apply to
+that package's files»*. 🔵 **Extiende `P283` en la direccion util:** en `1111philo/learn` el
+manifiesto estaba **mudo** mientras el payload era AGPL; aca el manifiesto **habla y contradice a
+la raiz**. **La unidad de cesion no es el repo: es el paquete.**
+
+**871. 🔴 `P336` — una prediccion no es falsable por estar bien escrita, sino cuando el instrumento que la mide existe.**
+El pase 107 pre-registro una accion y la apunto a su propio artefacto, diciendo *«ya estan
+enumeradas»*. 🔴 **No lo estan:** `accion-a-b.2026-10-05.tsv` colapsa el campo `oer` a **dos
+valores** (`openstax` 1.611 / `otro` 832) y el slug del libro —la variable independiente, lo unico
+que separa una edicion `2e` de una `1e`— **no esta en el archivo**: filas que terminan en `-2e`,
+**0**. 🟢 **Control negativo: el artefacto no es basura**, su columna `familia_del_problema`
+discrimina tres valores. **El defecto es de la pre-registracion, no del dato.**
+
+**872. 🔴 `P337` — dos artefactos del MISMO pase, sobre el MISMO sha, se contradicen por 41 figuras.**
+Sobre `1925dec`, el corte openstax/no-openstax da **1.611/832** en un artefacto y **1.570/873** en
+el otro; los dos suman **2.443**. 🔴 **No es un error de conteo: es una reclasificacion.** Y **la
+cifra que llego a la prosa publicada es la menor** — la clausula de falsabilidad del pase 107
+razona sobre «las 1.570». ⚠️ **Con una correccion extra al calculo de esa clausula, independiente
+del 41:** el «~31 %» publicado es `488,6/1.570`, que ignora que 36 aciertos ya estan en la mano y
+que las 415 figuras ya medidas no pueden aportar mas; el numero honesto es **39,2 %** (o **37,9 %**
+con el corte 1.611). 🔵 **La conclusion cualitativa no se mueve; el numero publicado si.**
+
+**873. 🔴 `P338` — cuando la procedencia es texto libre, un extractor no pierde items sueltos: pierde OBRAS ENTERAS.**
+El campo `oer` de `OATutor-Content` es **texto libre** con al menos dos formas de URL:
+`openstax.org/details/books/<slug>` (**514** unidades, 74,1 %) y el enlace profundo
+`openstax.org/books/<slug>/pages/…` (**129**, 18,6 %). 🔴 **Y los slugs de las dos formas no se
+solapan en una sola unidad.** Un extractor afirmado sobre `/details/books/` perderia completas
+`precalculus-2e`, `university-physics-volume-1` y `precalculus`. 🔴 **Y `precalculus` a secas no
+esta en ninguna de las 10 filas del censo publicado**, lo que importa exactamente por `P328`: el
+titular cede `CC BY 4.0` en `1e` y `CC BY-NC-SA 4.0` en `main`, asi que **colapsar la edicion
+cambia la licencia que se le atribuye al activo**. ⚠️ Muestra de **694** de 12.999 unidades,
+**no aleatoria**, declarada como tal.
+
+**874. 🔴 `P339` — un delta de 1 byte no identifica el instrumento, porque esta base ya tiene DOS causas para el.**
+La accion C sale **confirmada en el conteo** (**17** pares *(bytes, huella)* publicados junto a un
+archivo de licencia, la prediccion pedia ≥10; **91** menciones de bytes en total, **15** huellas
+distintas) 🔴 **y falsificada como instrumento**: `P327` (el archivo **no trae salto final** — esta
+base publica `21.442` y `21.443` B del mismo texto) y `P333` (`$(cat …)` **se come el salto al
+medir**) producen **la misma firma de 1 byte**. 🔵 **El desempate que falta es medir, en el mismo
+acto, la huella del archivo completo y la del archivo sin su ultimo byte.** Pre-registrado para el
+pase 109.
+
+---
+
 ## 🟢 Tendencias 859–866 — pase 107 del 2026-10-05: la EXTENSION de un archivo miente, el titular de una figura vive en otra obra, y una huella publicada de esta base era de un archivo que no existe
 
 > **Frontmatter y region:** `Global`. Las senales regionales de este pase estan en
