@@ -8,6 +8,7 @@ updated: 2026-10-05
 
 > Recetas concretas: repos nombrados, licencias verificadas, wiring explícito y estimación.
 > Todos los repos citados fueron verificados vía WebFetch el 2026-09-30; los del pase 11, el 2026-10-01 (ver `agents/top.md`).
+> **Pase 123 del 2026-10-05 (lectura `20:45Z`):** 🧩 **4 recetas nuevas, y la primera existe para NO heredar AGPL: `R-P123-A` entra al LMS del cliente por LTI (`tsugi`, Apache-2.0) y devuelve el material por SCORM (`scorm-again`, MIT), con `instructional_agents` (MIT) en el medio — cero copyleft heredado, 6–8 semanas, y se dice qué NO resuelve.** `R-P123-B` evaluación accesible con el reloj del AI Act a **2027-12-02** (`get-it` Apache-2.0 + `relate` MIT). `R-P123-C` base **LATAM** en portugués (`menthor` Apache-2.0 + `pytogether` MIT) con el ancla CETS 225 de Uruguay. `R-P123-D` **compuerta de identidad de cesión**, construida y verificada: suite **7/7 🟢** y corrida contra los **12 payloads vivos** del pase — decide por **tamaño, título y limitaciones**, nunca por la etiqueta, y habría frenado las 3 piezas NO-OSI de alta tracción antes de la propuesta.
 > **Pase 122 del 2026-10-05 (lectura `19:45Z`):** 🟢 **3 recetas nuevas armadas con las altas de este pase, cada pieza con su cesión medida al lado: `P406` remediación de concepciones erróneas (labelbank MIT + lineage-skill + EduAssist + Claw-ED, 6-8 sem), `P407` riesgo de abandono DEFENDIBLE ante Oklahoma/Maryland/Anexo III (Student-Dropout MIT + RegRails + gopal + record-bridge, 8-10 sem), `P408` marcado del art. 50(2) que sirve a la UE Y al etiquetado chino con UN componente (las 4 suites `aiact-50-2-*`, las 4 verdes).** 🔴 **Cada receta declara qué NO resuelve: catálogo de concepciones por materia, sesgo del modelo de abandono, y las 4 obligaciones chinas que no son marcado.** ⚠️ **Advertencia transversal de diligencia (`P403`/`P404`): no preguntar «¿tiene LICENSE?» sino «¿cuántos bytes mide?»; no «¿quién es el titular?» sino «¿hay copyright que no sea la FSF ni el placeholder?».**
 > **Pase 121 del 2026-10-05 (lectura `18:45Z`):** 🆕 **Receta `R-P121` — «la compuerta de cesión de expediente»: el LMS copyleft que NO se toca, la política permisiva que decide ANTES de responder, y el registro de divulgación que la auditoría pide.** Se arma con 4 piezas verificadas hoy del payload: [`Polycentric-Labs/regrails`](https://github.com/Polycentric-Labs/regrails) (Apache-2.0, 37 reglas de `34 CFR` 99 y 668 ancladas al texto literal, export **OSCAL 1.1.2**) + [`ashutoshrana/haystack-ferpa-filter`](https://github.com/ashutoshrana/haystack-ferpa-filter) (Apache-2.0, filtro de recuperación por identidad con `disclosure_record`) + [`Principled-Evolution/gopal`](https://github.com/Principled-Evolution/gopal) (Apache-2.0, Rego para EU AI Act/GDPR/NIST AI RMF/FERPA vía OPA) + **Moodle GPL-3.0 u Open edX AGPL-3.0 sin modificar**. 🟢 **La asimetría de licencias es el diseño, no un accidente: la obligación copyleft queda contenida en la plataforma y lo que Globant escribe vive del lado permisivo.** 🆕 **Paso obligatorio nuevo para toda receta de esta base que cite una licencia (`P398`): la familia se cita CON FECHA DE LECTURA, porque `snflwr.ai` re-licenció a propietario el 2026-09-18 y la ventana AGPL previa sólo vale para las copias de esa ventana.** 🆕 **Y paso obligatorio para toda receta que publique un censo propio (`P399`): medir DESPUÉS de escribir, o decir contra qué commit se midió.**
 > **Pase 120 del 2026-10-05 (lectura `17:45Z`):** 🆕 **Receta `R-P120-A` — «Expediente de corpus para un LMS que ya existe: probar, firmando, que el dato del alumno NO entró al entrenamiento»**, armada SÓLO con piezas cuya cesión se leyó por RUTA este pase: [`agentanywhere/shuddhi`](https://github.com/agentanywhere/shuddhi) (Apache-2.0, compuerta de procedencia + resumen del **art. 53(1)(d)**) + [`AKIVA-AI/toolkit-ml-provenance`](https://github.com/AKIVA-AI/toolkit-ml-provenance) (Apache-2.0, manifiesto firmado **Ed25519** + ML-BOM **CycloneDX 1.6**) + el LMS copyleft de la institución hablando por API, con la frontera de licencia donde esta base la pone desde el pase 117. 🟢 **Y trae su propia tabla de alcance por región, porque `P397` la hace medible: EMEA y APAC entran tal cual; North America y LATAM necesitan **un detector de regex** cada una, con el cero MEDIDO (8 identificadores probados, 0 aciertos).** 🆕 **Y un paso obligatorio nuevo para cualquier receta de esta base que cuente huellas: `P393` — consultar la lista de RETRACTACIONES antes de contar, porque el corpus append-only conserva los digests muertos y el censo los re-anima.**
@@ -28,6 +29,78 @@ updated: 2026-10-05
 > **Pase 101 del 2026-10-04:** 🆕 **Los patrones nuevos son `P312`–`P316`, y la receta es `R-101-OBSERVACION-PERMISIVA`.** 🔴 **`P312` es el que cambia qué garantiza un veredicto de uso comercial de esta base: la compuerta de `P250` se abría sobre `CC-BY-NC-4.0`, una familia cuyo NOMBRE dice NonCommercial — y la destapó el payload de un ALTA, no una fixture.** 🟢 **`P313` cierra `P237`: las cuatro copias inline rewireadas, en el orden que la deuda exigía (primero superconjunto, después rewiring), y con el hallazgo de que el rewiring ROMPIÓ el control que guardaba a `p206` porque extraía la función del TEXTO del archivo.** 🔴 **`P314` es el que evita suprimir trabajo real: la concesión puede vivir en el README sin archivo de licencia, y un barrido de payload la declara `NO-CESSION`.** 🔴 **`P315` es el que paga en una propuesta: un repo puede ser permisivo en el CÓDIGO y no comercial en los DATOS, así que el entregable es el método y la línea base, no el modelo.** 🔴 **`P316` es la pregunta de un renglón que hay que hacer antes de estimar: «¿de qué árbol partimos?» — la prensa de industria linkea un fork `AGPL-3.0` congelado en `v0.2.1` del `OpenMAIC` MIT que esta base ya tiene.** 🆕 **`R-101-OBSERVACION-PERMISIVA` es cotizable porque los tres eslabones de código están verificados por payload y son MIT, y porque la restricción que la acota —el corpus no comercial— queda FUERA del entregable con su razón dicha.**
 > **Pase 100 del 2026-10-04:** 🆕 **Los patrones nuevos son `P308`–`P311`, y las recetas son `R-100-HABLA-PERMISIVA` y `R-100-AUTOGRADING-PERMISIVO`.** 🔴 **`P308` es el que cambia qué garantiza un veredicto de licencia de esta base: el reflujo del texto —re-envolver un payload sin cambiar una palabra— movía la respuesta, en DOS reglas; la del Unlicense no perdía la familia en `UNCLASSIFIED` sino que INVERTÍA el veredicto comercial a `NONCOMMERCIAL-NOT-OSI` sobre el texto más permisivo que existe, y la de la ventana del bloque de título perdía la AGPL que `P288` había instalado porque contaba LÍNEAS.** 🟢 **`P309` es el residual declarado en vez de tapado: `holder_of` devuelve una LÍNEA, y una línea depende del reflujo por construcción.** 🔴 **`P310` es el que paga en una propuesta: una pieza puede ser permisiva y no ceder ninguna CAPACIDAD —`speechsuper/SpeechSuper-API-Samples` es MIT real sobre muestras de una API paga— y es el primer espécimen de esta base donde el engaño viene de una licencia CORRECTA.** 🔴 **`P311` es el control que faltaba y que este pase necesitó contra sí mismo: todos los controles de esta base auditan una afirmación que el pase HACE, y la de que un alta es NUEVA es implícita.** 🆕 **`R-100-HABLA-PERMISIVA` es cotizable porque los cinco eslabones están verificados por payload y cuatro de los cinco son permisivos; el quinto —el corpus— queda FUERA del entregable con su razón dicha.**
 > **Pase 97 del 2026-10-04:** 🆕 **Los patrones nuevos son `P294`, `P295`, `P296` y `P297`, y los cuatro salen de cablear una sola pieza.** 🔴 **`P294` es el que cambia cómo esta base se audita a sí misma: un control que no está en el camino por donde pasan los datos no es un control, es una demostración — el pase 96 diagnosticó la ceguera a Java/Maven, escribió el lector correcto (`p289`, 11/11) y no lo conectó, así que `PARSERS` siguió con cinco nombres y el hueco siguió abierto donde se producen los veredictos.** 🔴 **`P295` es el mismo defecto en la prosa: `trend-backlink-audit` existe desde el pase 49 para atrapar citas colgadas y era CIEGO a la forma con que esta base ANUNCIA sus tendencias («tendencias nuevas, numeradas 745–752» → 0 citas), así que catorce números quedaron sin sección sin que nada lo marcara; y de paso era lossy en castellano, porque aceptaba «a» como conector y no como marca de rango.** 🟢 **`P296` es el que paga en una entrega: el veredicto de licencia tiene DOS canales independientes —la declaración del manifiesto y el payload del archivo— y medidos sobre la capa Java/Maven concuerdan 4 de 4 exactos, 1 de familia, 0 contradicciones; el manifiesto CORROBORA y además es la única fuente donde no hay archivo (`kuali/kc`).** 🟢 **`P297` es la pieza técnica que lo hizo posible: en Maven la identidad de propiedad es el `groupId` —un namespace reverse-DNS que codifica a la organización— y el `<parent>` NO presta ni identidad ni licencia.** 🆕 **La receta nueva es `R-97-COMPRA-SOBERANA-APAC`, y es cotizable porque la condición de compra que la dispara quedó medida este pase: la soberanía decidirá la infraestructura de ~la mitad de las empresas de APAC.**
+
+## 🟢 Pase 123 del 2026-10-05 (lectura `20:45Z`) — 4 recetas armadas con las altas de este pase, y la primera existe para no heredar AGPL
+
+### 🧩 `R-P123-A` — «Capa agéntica sobre el LMS que el cliente ya tiene, SIN heredar copyleft» (North America · EMEA)
+
+**El problema que resuelve, medido en este pase:** la vía rápida —escribir un plugin para el Moodle del cliente— entrega la capa propia bajo **AGPL**, porque Moodle es GPL. Este pase midió 4 de 4 plugins así. La vía permisiva es entrar por el **estándar**.
+
+**Las piezas, con la cesión leída del payload:**
+
+| rol | pieza | cesión verificada |
+|---|---|---|
+| puente hacia el LMS (LTI 1.3) | `github.com/tsugiproject/tsugi` | 🟢 **Apache-2.0**, 10.273 B, `sha256:73ba74dfaa52` |
+| generación del material | `github.com/DaRL-GenAI/instructional_agents` | 🟢 **MIT**, 1.067 B, `sha256:4e085d826a64` |
+| devolución del material al LMS | `github.com/jcputney/scorm-again` | 🟢 **MIT**, 1.072 B, `sha256:383b85b370e8` |
+| banco de pruebas propio (si no hay LMS de cliente) | `github.com/inducer/relate` · `github.com/AnubisLMS/Anubis` | 🟢 **MIT** (1.145 B · 1.083 B) |
+| compuerta de cesión en el *ingest* | `compose/code/p411-cession-identity-gate/` | suite **7/7 🟢** |
+
+**El wiring, explícito:**
+
+1. `tsugi` se registra en el LMS del cliente como **herramienta LTI 1.3** — queda *afuera* del árbol GPL: ni un archivo del LMS se modifica, así que no hay obra derivada.
+2. `tsugi` entrega al servicio propio el contexto del curso (roster, curso, rol) por *launch* LTI firmado.
+3. `instructional_agents` (MIT) toma ese contexto y genera sílabo, diapositivas y evaluación.
+4. `scorm-again` (MIT) **empaqueta la salida como SCORM** y la devuelve por el runtime estándar: cualquier LMS la consume (Moodle, Canvas, Sakai, Open edX) sin integración específica.
+5. `gate_cesion.py` corre en el *ingest* de toda dependencia nueva: rechaza por **tamaño, título y limitaciones**, no por la etiqueta.
+
+🟢 **Resultado de cesión:** 2 MIT + 1 Apache-2.0. **Cero copyleft heredado, y cero NO-OSI.**
+⏱️ **Estimación:** 6–8 semanas para el primer curso de punta a punta; el *launch* LTI y el empaquetado SCORM son las dos semanas de riesgo real.
+🔴 **Lo que NO resuelve:** si el cliente exige que la AI escriba *dentro* de Moodle (notas, calendario), el plugin vuelve a ser obligatorio y con él la AGPL. Eso es decisión de alcance, no de herramienta, y conviene tomarla antes de la propuesta.
+
+### 🧩 `R-P123-B` — «Evaluación accesible con el reloj del AI Act encima» (EMEA)
+
+**El reloj, ya publicado por este estante:** las obligaciones de alto riesgo del Anexo III —evaluación de resultados de aprendizaje, cribado de postulantes, monitoreo en exámenes— aplican desde **2027-12-02** (diferimiento del *Digital Omnibus*). No cambió el contenido de las obligaciones, sólo la fecha.
+
+| rol | pieza | cesión |
+|---|---|---|
+| capa de accesibilidad | `github.com/beltromatti/get-it` | 🟢 **Apache-2.0**, 11.359 B, `sha256:d0622ead9e49` — EMEA, GDG AI Hack Milan 2026 |
+| entorno de examen con control de tiempo | `github.com/inducer/relate` | 🟢 **MIT**, 1.145 B |
+| generación de ítems y rúbrica | `github.com/DaRL-GenAI/instructional_agents` | 🟢 **MIT**, 1.067 B |
+| expediente de conformidad | suites `compose/code/aiact-50-2-*` ya en este árbol | — |
+
+**Wiring:** `get-it` adelante como capa de presentación accesible (la pista *«Learn Different»* es justamente dificultades de aprendizaje); `relate` como entorno de evaluación; `instructional_agents` genera ítems **con rúbrica explícita**, que es lo que después se audita; cada decisión automatizada se registra con su insumo y su rúbrica, porque el Anexo III pide supervisión humana y trazabilidad, no ausencia de AI.
+⏱️ **8–10 semanas.** 🔵 La accesibilidad acá no es un extra: es la parte que hace defendible el sistema frente al requisito de no discriminación.
+
+### 🧩 `R-P123-C` — «Plataforma de programación en portugués con gobernanza de nivel tratado» (LATAM)
+
+| rol | pieza | cesión |
+|---|---|---|
+| plataforma base, en portugués | `github.com/menthorlabs/menthor` | 🟢 **Apache-2.0**, 11.337 B, `sha256:36d6788503b8` |
+| tutoría y generación de material | `github.com/DaRL-GenAI/instructional_agents` | 🟢 **MIT**, 1.067 B |
+| IDE colaborativo en el navegador | `github.com/SJRiz/pytogether` | 🟢 **MIT**, 1.073 B |
+| ancla normativa | Convenio Marco CoE sobre IA (**CETS 225**), firmado por **Uruguay** el 2025-09-02 | ⚠️ evidencia secundaria |
+
+**Wiring:** `menthor` aporta la base de producto **ya en portugués** (no traducida: su `README` y su dominio lo son), lo que elimina el mes de localización que suele costar un piloto en Brasil; `instructional_agents` genera trayectos y evaluaciones; `pytogether` da el laboratorio colaborativo sin instalar nada en las máquinas del alumno.
+🔵 **La parte de inteligencia, y es la que diferencia la propuesta:** en el resto de ALC la práctica va por delante de la norma (87% de instituciones usan AI, 26% tiene estrategia formal), así que la oferta es **gobernanza**. En Uruguay la norma va por delante, así que la oferta es **implementación conforme** al convenio. Mismo *stack*, dos propuestas distintas.
+⏱️ **6–8 semanas** para el piloto; las 2 cesiones son permisivas y el riesgo de licencia es nulo.
+
+### 🧩 `R-P123-D` — «Compuerta de identidad de cesión en el *ingest*» (Global, transversal)
+
+**Por qué es una receta y no una nota al pie:** este pase midió **3 piezas de alta tracción** que un barrido por estrellas y descripción habría recomendado, y que no se pueden entregar: `PageLM` (2.000 ★, se presenta con la frase MIT y exige reparto de ingresos), `advisingapp` (338 ★, Elastic 2.0, prohíbe el servicio gestionado) y `leemons` (292 ★, Fair code). Más **8 repos sin cesión alguna**, uno con 505 ★.
+
+**La pieza:** `compose/code/p411-cession-identity-gate/gate_cesion.py`, en este árbol, corriendo contra el payload y no contra la etiqueta.
+
+**Decide con tres señales, en este orden:**
+
+1. **TAMAÑO** — tres sub-clases bajo el piso, con nombre propio cada una (`P414`): **0 B** = no cede nada · **~3 B** = campo de metadata de paquete · **~19 B** = *nombra* una licencia sin otorgarla.
+2. **TÍTULO** — manda sobre cualquier frase del cuerpo (`P411`/`P412`): `community license`, `elastic license`, `fair code`, `business source`, `proprietary`, `all rights reserved`, …
+3. **LIMITACIONES** — `non-commercial`, `revenue sharing`, *«hosted or managed service»*: una concesión permisiva no las tiene.
+
+**Verificación, no promesa:** `test_gate.py` **7/7 🟢** (un caso por patología medida) y `barrido_pase123.sh` corrido contra los **12 payloads vivos** de este pase — los 3 NO-OSI salen `usable=NO`, los 5 permisivos `usable=SI`. 🔵 Los `sha256` coinciden dígito por dígito con los del verificador independiente escrito antes en el mismo pase: dos instrumentos, mismo payload, mismo digest.
+
+⏱️ **Media jornada** para enchufarla a un *ingest* existente. 🟢 **Es la receta con mejor relación costo/riesgo del pase:** media jornada contra el costo de descubrir en la semana 10 de un *engagement* que la pieza central prohíbe el modelo de entrega.
+
 
 ## 🟢 Pase 122 del 2026-10-05 (lectura `19:45Z`) — 3 recetas nuevas, armadas con las altas de ESTE pase y con la cesión de cada pieza al lado
 

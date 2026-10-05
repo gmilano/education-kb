@@ -1,0 +1,26 @@
+=== ACCION O v2: la clase POSITIVA por ETIQUETA DE BLOQUE y ENCABEZADO (`P415`) ===
+universo del barrido (toda ocurrencia)             297
+clase de la v1 (toda fila de datos) — EQUIVOCADA   114
+clase POSITIVA corregida                           13
+  sin banda                                        10
+  sin fecha                                        9
+
+clausula 1 — positiva < universo: 🟢 SI
+clausula 2 — se sostiene sin exclusiones: 🔴 NO
+
+VEREDICTO v2: REFUTADA
+
+=== la clase positiva, fila por fila (enumerada, no resumida) ===
+repos/foundations.md:6119  5.700 ★      banda=NO fecha=NO  « ## Capa de testing de conformidad y evaluación regulatoria — agregada  »
+repos/trending.md:66  5.200 ★      banda=SI fecha=SI  « ### 🟢 Los repos netos con cesión PERMISIVA, leída del payload »
+repos/trending.md:8277  6.300 ★      banda=NO fecha=NO  « ### 🔴 El hallazgo del pase, y es una comparación entre verticales »
+verticals/solutions.md:58  1.300 ★      banda=SI fecha=SI  « ### ⚠️ Plataformas COPYLEFT: reales y usables, con la obligación decla »
+verticals/solutions.md:4154  8.300 ★      banda=NO fecha=NO  « ### Ampliación del pase 13 del 2026-10-01 — la plataforma de esta capa »
+verticals/solutions.md:4155  1.400 ★      banda=NO fecha=SI  « ### Ampliación del pase 13 del 2026-10-01 — la plataforma de esta capa »
+verticals/solutions.md:4158  4.400 ★      banda=NO fecha=NO  « ### Ampliación del pase 13 del 2026-10-01 — la plataforma de esta capa »
+intel/market.md:10224  1.100 ★      banda=NO fecha=NO  « #### Agregado en el pase 15 del 2026-10-01 — la oferta del Artículo 50 »
+intel/trends.md:164  2.000 ★      banda=SI fecha=SI  « ### 🟢 Tendencia 938 — el *source-available* NO-OSI llegó a las platafo »
+intel/trends.md:5835  6.300 ★      banda=NO fecha=NO  « ## 28. La educación perdió el canal de distribución más barato de la i »
+intel/trends.md:6128  1.100 ★      banda=NO fecha=NO  « ## 37. La integridad se está moviendo de la detección a la procedencia »
+compose/patterns.md:12227  1.100 ★      banda=NO fecha=NO  « ### Las piezas, verificadas repo por repo vía WebFetch el 2026-10-01 »
+compose/patterns.md:12775  2.900 ★      banda=NO fecha=NO  « ### Las piezas, todas verificadas vía WebFetch en el pase 20 »

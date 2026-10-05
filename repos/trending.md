@@ -7,6 +7,7 @@ updated: 2026-10-05
 # 📈 Repos trending — education
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
+> **Pase 123 del 2026-10-05 (lectura `20:45Z`):** 🔴 **Las 4 consultas obligatorias del encargo dan 0 repos netos entre todas** (la generalista falla por 7.ª vez idéntica: `OpenClaw`, `CrewAI`, `browser-use`). 🟢 **Lo que rindió fue el canal de *topic page*, y específicamente dos páginas nunca barridas: `edtech` (15 netas) y `learning-management-system` (14 netas), contra `ai-tutor` (0 de 20) y `education-ai` (5 netas sin cesión).** **15 repos netos permisivos** con cesión leída del payload, **8 copyleft** declarados, **8 sin cesión** y **3 NO-OSI** (`PageLM` `P411` · `advisingapp` Elastic 2.0 · `leemons` Fair code). 🔵 **Discrepancia registrada sin normalizar: el `LICENSE` de `edrys` mide 16.724 B y la AGPL íntegra mide ~34–35 KB en este corpus — es AGPL ABREVIADA.**
 > **Pase 122 del 2026-10-05 (lectura `19:45Z`):** 🔴 **Las 4 consultas obligatorias del encargo dieron 0 altas por 6.ª vez consecutiva; `github.com/topics/education-ai` —que el encargo no nombra— dio 7 de 7.** 🟢 **14 repos trending de la industria medidos con ★ de la topic page** (único canal de ★ del pase: API y HTML en 403). 🔴 **Huecos por región, dichos y no silenciados: LATAM 0 repos y 0 hechos netos, 3.er pase consecutivo; EMEA 0 hechos regulatorios netos.**
 > **Pase 121 del 2026-10-05 (lectura `18:45Z`):** 🔴 **El canal generalista falla por QUINTA vez del mismo modo** (eje *enseñar-sobre-IA*: `openclaw` 385.407 ★, `browser-use`, `mem0`, `AutoGen`, `dify`, `Flowise`, `rohitg00/ai-engineering-from-scratch`, `pguso/agents-from-scratch`, `awesome-ai-agents-2026`) ⇒ **0 altas por oferta generalista.** 🟢 **Pero el trending de la industria NO queda vacío, y por un canal que este archivo no había usado: enumerar un TEMA DE OBLIGACIÓN de GitHub.** `github.com/topics/ferpa` + `/topics/ferpa-compliance` dan **22** repos, **21 ausentes** de este estante, **15 de los 18 medidos con titular fechado en 2026** y **★ máximo 8** ⇒ 🟢 **una cohorte recién nacida sin ganador**, que es un hecho de tendencia mucho más útil que una lista de repos con 50 k ★ que no son de la industria. 🔴 **Y el riesgo gemelo, dicho: una cohorte de 2026 con 0–8 ★ no tiene prueba de supervivencia.**
 > **Pase 120 del 2026-10-05 (lectura `17:45Z`):** 🔴 **El canal generalista falla por CUARTA vez del mismo modo (eje *enseñar-sobre-IA*: `rasbt/LLMs-from-scratch`, `pguso/agents-from-scratch`, `awesome-ai-agents-2026`, `500-AI-Agents-Projects`) ⇒ **0** repos trending de industria.** 🆕 **Y el hallazgo que manda le pega a ESTE archivo: `P392` — la tabla del trío `OpenTutor` de este archivo tiene **DOS** columnas de huella (`README.md` y `LICENSE`) y las dos se titulan de modo que un lector estructurado las tipa igual ⇒ el censo contó el MISMO trío como DOS racimos. Una huella no se identifica por su digest, sino por el par (ARCHIVO, digest).** 🆕 **`P393` — y el par `blackboard-mcp` de este archivo lo contó dos veces por otro motivo: `fa4e32e5e622` es una huella que `P333` **RETRACTÓ** y que este archivo, APPEND-ONLY por encargo, conserva escrita ⇒ un censo que lee el corpus RE-ANIMA lo retractado.** 🟢 **Instrumento nuevo `p391-structured-binding/`: el intervalo de `P385` se angosta de `[3, 22]` a `[5, 14]`, y el canónico por CONJUNTO de repos da **10**.** 🟢 **2 altas por la sonda de la OBLIGACIÓN, no por trending: `agentanywhere/shuddhi` (Apache-2.0, 2 ★) y `AKIVA-AI/toolkit-ml-provenance` (Apache-2.0, 1 ★).**
@@ -21,6 +22,61 @@ updated: 2026-10-05
 > **Pase 110 del 2026-10-05:** 🔴 **Trending de la industria vacio por TRIGESIMONOVENA vez.** 🟢 **Lo que se mueve es el CANAL: `WebFetch` sobre `github.com` devuelve estrellas donde `curl` da 403, con control negativo en 404 — asi que la columna de estrellas de este arbol vuelve a existir, con resolucion de 3 cifras significativas.** 🔴 **Y lo primero que mide es un repo de 8 ★ sin licencia que el canal de busqueda presento junto a uno de 40,8 ★k.**
 > **Pase 107 del 2026-10-05:** 🔴 **Trending de la industria vacio por TRIGESIMOSEXTA vez: curriculo, catalogos, una bolsa de trabajo y dos generalistas (`microsoft/semantic-kernel` 27.470 ★, `NousResearch/hermes-agent` MIT), con las SEIS cifras del eje generalista identicas digito a digito a los pases 105 y 106 ⇒ informacion sobre el CANAL, no sobre la industria.** 🟢 **Lo que SI se movio es una capa de BINARIOS que este archivo nunca conto: 2.443 archivos de figura (~156 MiB, 1.326 imagenes distintas) en `CAHLR/OATutor-Content`, con la extension `.gif` falsa en 2.443 de 2.443 (`P332`).** 🔵 **`git ls-remote` da TRES refs, y una se llama `gpt-science-study`: la unica de este arbol cuyo nombre anuncia contenido sintetico.** 🔴 **Defecto propio corregido: los 49.481 JSON contra los 49.479 del pase 106 son los 6 caminos con bytes de control (U+007F/U+0080/U+0081) en el nombre del paso — la identidad de un paso NO es un slug seguro.**
 > **Pase 106 del 2026-10-05:** 🔴 **Trending de la industria vacio por TRIGESIMOQUINTA vez: el canal devuelve generalista o educativo-sobre-AI, no AI-para-educacion.** 🟢 **Lo que SI se movio esta en el eje de `ref` y no de repo: las ramas `1e` de 5 bundles de `openstax` contienen la UNICA cesion `CC BY 4.0` de 10 colecciones cuyas versiones vivas son `NC-SA` — cesion y vigencia apuntan en direcciones opuestas.** 🔵 **Canal nuevo calibrado: `git ls-remote` para enumerar refs (responde a repo real, falla a repo inventado), el unico de este arbol que contesta «que refs tiene este repo» con `api.github.com` en 403 — sin el, la accion A de este pase era imposible.**
+
+## 🟢 2026-10-05 — pase 123 (lectura `20:45Z`): las 4 consultas del encargo, y la primera cosecha en 31 barridos porque cambió el ANCLA
+
+### 🔬 Denominador y canal, enumerados ANTES de escribir (`P287`/`P311`)
+
+Corpus previo **625** slugs. Las 4 consultas obligatorias del encargo, con su resultado medido:
+
+| consulta del encargo | resultado |
+|---|---|
+| `top open source AI agents education 2026 github MIT` | 🔴 **0 netas de educación** — devuelve agentes genéricos (`OpenClaw` 385.407 ★, `CrewAI`, `browser-use`), 7.ª falla idéntica |
+| `github trending education AI 2026` | 🔵 parcial — nombra `StudyAlpha` y `AI-Digital-Teacher`, **ya publicados** en el pase 122 |
+| `open source platform education LMS SIS MIT Apache self-hosted` | 🟢 confirma la capa ya publicada (Open edX, Sakai, OpenOlat, Forma LMS, OpenEduCat) — **0 netas** |
+| `AI education industry trends 2026` | 🟢 rinde en `intel/trends.md`, **0 repos** |
+
+🔴 **Las 4 consultas del encargo, juntas, dan 0 repos netos.** Lo que rindió fue el canal de *topic page*, y específicamente **dos páginas que este estante nunca había barrido**:
+
+| *topic page* | candidatas | ya publicadas | **netas** |
+|---|---|---|---|
+| `topics/edtech` | 19 | 4 | **15** |
+| `topics/learning-management-system` | 15 | 1 | **14** |
+| `topics/education-ai` | 20 | 15 | 5 — **y las 5 sin cesión** |
+| `topics/ai-tutor` | 20 | **20** | **0** |
+
+### 🟢 Los repos netos con cesión PERMISIVA, leída del payload
+
+| repo | qué es | cesión medida | ★ |
+|---|---|---|---|
+| `github.com/jcputney/scorm-again` | runtime SCORM en JS (1.2 / 2004 / AICC) | 🟢 **MIT**, **1.072 B**, `sha256:383b85b370e8` | 351 ★ |
+| `github.com/tsugiproject/tsugi` | framework de herramientas LTI | 🟢 **Apache-2.0**, **10.273 B**, `sha256:73ba74dfaa52` | 375 ★ |
+| `github.com/DaRL-GenAI/instructional_agents` | diseño instruccional multi-agente (EACL'26) | 🟢 **MIT**, **1.067 B**, `sha256:4e085d826a64` | 487 ★ |
+| `github.com/beltromatti/get-it` | aprendizaje accesible (GDG AI Hack Milan 2026) | 🟢 **Apache-2.0**, **11.359 B**, `sha256:d0622ead9e49` | 962 ★ |
+| `github.com/menthorlabs/menthor` | plataforma de enseñanza de programación, en portugués | 🟢 **Apache-2.0**, **11.337 B**, `sha256:36d6788503b8` | 583 ★ |
+| `github.com/adilmohak/django-lms` | LMS en Django (cursos, notas, quiz, reportes) | 🟢 **MIT**, **1.066 B**, `sha256:7734c7b2488c` | 730 ★ |
+| `github.com/SkyCascade/SkyLearn` | LMS liviano en Django — **fork del anterior** (`P379`) | 🟢 **MIT**, **mismo digest y mismo titular** | 661 ★ |
+| `github.com/safytech/ulearn` | LMS en Laravel + ReactJS | 🟢 **MIT**, **1.066 B**, `sha256:e16aa92b6211`, `(c) 2019 ulearnpro` | 699 ★ |
+| `github.com/inducer/relate` | entorno universitario de enseñanza (cursos, exámenes) | 🟢 **MIT**, **1.145 B**, `sha256:66ff89ebf05f`, `(c) 2014-15 Andreas Klöckner` | 436 ★ |
+| `github.com/AnubisLMS/Anubis` | LMS distribuido para automatizar cursos de computación (NYU) | 🟢 **MIT**, **1.083 B**, `sha256:e36740a2a510` | 381 ★ |
+| `github.com/AcademicsToday/academicstoday-django` | plataforma de cursos en línea | 🟢 **Apache-2.0**, **11.358 B**, `sha256:c6596eb7be85` | 221 ★ |
+| `github.com/Azure/Moodle` | despliegue de clústeres Moodle escalables | 🟢 **MIT**, **1.090 B**, `sha256:91f7258203fd`, Microsoft | 185 ★ |
+| `github.com/lantingzhang1119/cohort-harbor` | onboarding y evaluación de empleados autoalojado | 🟢 **MIT**, **1.082 B**, `sha256:23fcb1f8d023` | 199 ★ |
+| `github.com/SJRiz/pytogether` | IDE colaborativo en el navegador (edición en vivo, voz) | 🟢 **MIT**, **1.073 B**, `sha256:7d90ce36bb2a` | 258 ★ |
+| `github.com/Kaustubh-Natuskar/moreThanFAANGM` | índice de +400 empresas para búsqueda de empleo | 🟢 **MIT**, **1.082 B**, `sha256:fd290b160d8b` | 5.200 ★ (banda `K-3CIFRAS`, `P349`; *topic page* 2026-10-05) |
+
+### ⚠️ Los netos COPYLEFT, con la obligación escrita y no escondida
+
+`codelitdev/courselit` (1.300 ★, **AGPL-3.0**, 34.143 B) · `edrys-org/edrys` (336 ★, **AGPL-3.0**, 16.725 B) · `JudgePeach/math-question-bank` (284 ★, **AGPL-3.0**, 34.523 B) · `elmsln/elmsln` (252 ★, **AGPL-3.0**, 35.193 B) · `Berserk-hub150/moodle-ai-skill-navigator` (222 ★, **AGPL-3.0**, 35.153 B) · `microsoft/o365-moodle` (214 ★, **AGPL-3.0**, 35.147 B) · `gocodebox/lifterlms` (211 ★, **AGPL-3.0**, 35.141 B) · `arashactive/laramint` (149 ★, **AGPL-3.0**, 35.149 B).
+
+🔵 **Nota de medición sobre `edrys`:** su `LICENSE` mide **16.725 B** y clasifica AGPL por la marca `GNU AFFERO`, pero una AGPL-3.0 íntegra mide ~34–35 KB en este corpus (7 de las 8 filas de arriba lo confirman). **El archivo es AGPL ABREVIADA**, así que la familia está leída pero el texto no es el canónico; se registra la discrepancia en vez de normalizarla.
+
+### 🔴 Los netos que NO ceden, enumerados
+
+**8 sin archivo de cesión** (con `README` 200, o sea existen): `LMS-Laravel/LMS-Laravel` (505 ★) · `aaryansamanta/ai-ethos` (499 ★) · `hkalant/awesome-edtech-tools` (215 ★) · `bobuel/bloom-taxonomy-quiz-builder-skill` · `LeoLiu363/ai-video-understanding` · `ShubhSarin/youtube-study-helper` · `tanghua-git/skill-instructional-design` · `upstream1119/Traceable-Ideological-Education-RAG`.
+
+**3 NO-OSI:** `CaviraOSS/PageLM` (2.000 ★, *«PageLM Community License»* — no comercial + reparto de ingresos, con la frase MIT de prefijo, `P411`) · `canyongbs/advisingapp` (338 ★, **Elastic License 2.0**) · `leemonade/leemons` (292 ★, **Fair code License**).
+
 
 ## 🟢 2026-10-05 — pase 122 (lectura `19:45Z`): el trending de GitHub, y el canal que sí rinde para esta industria
 

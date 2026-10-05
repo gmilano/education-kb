@@ -8,6 +8,7 @@ updated: 2026-10-05
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 > No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
+> **Pase 123 del 2026-10-05 (lectura `20:45Z`):** 🔴 **La serie de ceros de los pases 118–121 NO era saturación del mercado: era saturación de DOS PÁGINAS.** `topics/ai-tutor` 0 netas de 20 · `topics/education-ai` 5 netas **sin cesión** · `topics/edtech` **15 netas** · `topics/learning-management-system` **14 netas**. 🟢 **2 altas permisivas** (`instructional_agents` MIT 1.066 B · `get-it` Apache-2.0 11.358 B) y **2 copyleft** (`moodle-ai-skill-navigator` · `math-question-bank`, AGPL). 🆕 **La tendencia que las filas miden: la capa de AI educativa nace copyleft por PLACEMENT — 4 de 4 plugins de host GPL salieron AGPL.** 🆕 **`P411`: `PageLM` (2.000 ★) se presenta con la frase del MIT y prohíbe el uso comercial.** 🔵 **Par de linaje: `SkyLearn` y `django-lms` comparten digest y titular — `P379` con *upstream* localizable sin la API, y el control negativo que `P386` pedía.**
 > **Pase 122 del 2026-10-05 (lectura `19:45Z`):** 🟢 **7 altas, las 7 por `github.com/topics/education-ai`; el canal generalista falla por 6.ª vez del mismo modo (0 altas).** Denominador completo: **20** filas enumeradas → **15** ausentes del estante → **7** ceden. 🔴 **9 rechazos medidos**, entre ellos una licencia **PROPIETARIA declarada** de un ecosistema cripto listada en una topic page educativa (`brahm-ai`, 21.119 B) y un **`LICENSE` de 0 bytes** (`P404`).
 > **Pase 121 del 2026-10-05 (lectura `18:45Z`):** 🟢 **6 agentes nuevos, y lo que los hace *trending* no es la tracción — es la OBLIGACIÓN.** Ninguno pasa de **8 ★**; cuatro están entre 0 y 1 ★. 🔵 **Y eso es el dato de tendencia, no una excusa:** el tema `ferpa` de GitHub tiene **20 repos enumerados y 19 estaban ausentes de este estante**, con **titulares fechados en 2026** en 14 de ellos ⇒ es una cohorte **recién nacida**, no una cosecha que este estante no había mirado. 🆕 **`P398` — `snflwr.ai` re-licenció de AGPL-3.0 a propietario el 2026-09-18 y lo dice en su propio archivo: la cesión segmentada por INTERVALO DE FECHAS, tercer eje después del directorio (`P113`) y del estado de compilación (`P380`).** 🆕 **`P401` — `haystack-ferpa-filter` publica el paquete `ferpa-haystack` y existe el repo homónimo del paquete como puntero legado: un linaje con dos nombres, espejo de `P390`.**
 > **Pase 120 del 2026-10-05 (lectura `17:45Z`):** 🟢 **2 altas Apache-2.0, y las 2 llegaron por la SONDA DE LA OBLIGACIÓN y no por el canal de oferta: [`agentanywhere/shuddhi`](https://github.com/agentanywhere/shuddhi) (2 ★, emite el resumen del **art. 53(1)(d)** del AI Act) y [`AKIVA-AI/toolkit-ml-provenance`](https://github.com/AKIVA-AI/toolkit-ml-provenance) (1 ★, SBOM de ML firmado Ed25519 + CycloneDX 1.6).** 🔴 **El canal de oferta generalista falla por CUARTA vez del mismo modo: las 4 consultas globales devolvieron el eje *enseñar-sobre-IA* (cursos, *awesome lists*, agentes de código) y **0** altas de industria.** 🔴 **Y el cero se extiende al canal de INTEL: los 14 hechos regionales que trajeron las 4 sondas por región estaban los 14 ya publicados (`grep -ril`, uno por uno) ⇒ `P388` re-confirmado por su lado flaco, el agotamiento es de SONDA.** 🆕 **`P397` — la región de una herramienta de cumplimiento se lee de la OBLIGACIÓN que implementa: `shuddhi` queda en **EMEA + APAC** por los identificadores de su `pii.py` (IBAN · Aadhaar · PAN · `+91`), con **cero MEDIDO** para North America y LATAM (8 identificadores probados, 0 aciertos) — su autor sigue `NO UBICADO`, y son dos columnas distintas.** 🆕 **`P395` — las 2 altas trajeron un `LICENSE` de **11.358 B** que NO es el prístino de 11.357 B que esta base tenía: la diferencia es una línea en blanco **INICIAL**, los dos controles de dos puntas fallan, y la regla de off-by-one de `P333` da acá un **falso positivo**.**
@@ -22,6 +23,55 @@ updated: 2026-10-05
 > **Pase 110 del 2026-10-05:** 🔴 **0 altas permisivas (trigesimosegundo barrido), cero ENUMERADO: 6 candidatas → 4 ya publicadas (`P311`), 2 nuevas sin cesion.** 🟢 **Lo que SE MUEVE este pase no es el trending: es que las ESTRELLAS VUELVEN a ser medibles — `WebFetch` sobre `github.com` sirve 200 donde `curl` da 403, con control negativo en 404.** 🔴 **Y al volver, cobran: `OATutor` 264 ★ contra «~1,5k» publicado, y `open-tutor-ai-CE` BSD-3-Clause / 108 ★ contra «Apache-2.0 / ~600 ★».**
 > **Pase 107 del 2026-10-05:** 🔴 **0 altas permisivas (trigesimo barrido, 3 candidatas MEDIDAS del payload y las 3 con su bloqueo nombrado) y las TRES acciones pre-registradas corridas: A con la cota NO CERRADA y su clausula de atribucion FALSIFICADA, B CONFIRMADA, C CONFIRMADA en dos clausulas y FALSIFICADA en la tercera.** 🔴 **`P332`: la EXTENSION de un archivo de imagen no es su FORMATO — 2.443 de 2.443 `.gif` son PNG/JPEG/WEBP, y un barrido por extension habria dado «0 solapamiento» desde una premisa falsa.** 🔴 **`P334`: el titular de una FIGURA se resuelve por BYTES y vive en una obra DISTINTA de la que el item cita (36 pares leidos).** 🔴 **`P333`: `fa4e32e5e622` era la huella del archivo SIN su salto final — defecto de dato, no de upstream.** 🔴 **`P335`: tercera sub-clase de `P320` — lo denegado fue el LOTE, no la pieza nombrada.** 🟢 **Canal nuevo: `gitlab.com/-/raw`.**
 > **Pase 106 del 2026-10-05:** 🟢 **0 altas (vigesimonoveno barrido, 5 candidatas, las 5 frenadas por el gate de `P311`) y las TRES acciones pre-registradas corridas: A CONFIRMADA, B FALSIFICADA, C CONFIRMADA.** 🔴 **`P328`: la cesion de un OER se ESTRECHA entre ediciones — 10 de 10 colecciones con el mismo `collection-id` pasan de `CC BY 4.0` en `1e` a `CC BY-NC-SA 4.0` en `main`, y el slug cambia de nombre, que es por lo que esta base no lo veia.** 🔴 **El denominador se corrige de 13.371 a 82.492 unidades y aparece una capa sintetica de 6.886 unidades (`oer: openai`) sin cesion.** 🟢 **Canal nuevo: `git ls-remote` para enumerar refs — es el que abrio la accion A.**
+
+## 🟢 2026-10-05 — pase 123 (lectura `20:45Z`): el canal de 8 pases se AGOTÓ y el reemplazo da 34 netas; y una licencia que se presenta con la frase del MIT
+
+### 🔬 El canal, declarado antes de cualquier veredicto (`P249`)
+
+| canal | resultado medido | nota |
+|---|---|---|
+| `topics/education-ai` | 20 candidatas → **5 netas**, y **las 5 sin cesión** | 🔴 **agotada**: 15 ya publicadas, residuo inusable |
+| `topics/ai-tutor` | 20 candidatas → **0 netas** | 🔴 **agotada por completo** |
+| `topics/edtech` | 19 candidatas → **15 netas** | 🟢 **canal nuevo**, nunca barrido por este estante |
+| `topics/learning-management-system` | 15 candidatas → **14 netas** | 🟢 **canal nuevo** |
+| canal generalista (listículos) | **0 altas** | 🔴 **7.ª falla idéntica**: devuelve `OpenClaw`, `CrewAI`, `browser-use` |
+| `api.github.com` | **403** (sesión) | ★ no verificables de primera mano; se atribuyen a la *topic page* a las `20:45Z` |
+| `github.com` HTML | **403** (proxy) | 🆕 `P413`: un 403 **no** es un 404 — la existencia se prueba por el payload |
+
+🔴 **Lo que este pase mide y los 8 anteriores no podían:** la serie de ceros de los pases 118–121 no era saturación del MERCADO, era saturación de **DOS PÁGINAS**. Barridas otras dos del mismo sitio, el mismo día y con el mismo instrumento, aparecen **29 netas utilizables**. Un cero de canal leído como cero de oferta es la lectura más cara que puede hacer este archivo, y estuvo a punto de hacerla cuatro veces.
+
+### 🟢 Las altas permisivas de la semana, con la cesión leída del PAYLOAD
+
+| agente | repo | cesión medida | ★ | región · evidencia |
+|---|---|---|---|---|
+| **Instructional Agents** — multi-agente de diseño instruccional (EACL'26): sílabo + diapositivas + evaluación | `github.com/DaRL-GenAI/instructional_agents` | 🟢 **MIT**, `main/LICENSE` **1.067 B**, `sha256:4e085d826a64`, `Copyright (c) 2025 DaRL-GenAI` | 487 ★ | **APAC** — `README` en chino |
+| **get-it** — aprendizaje accesible, pista «Learn Different» del GDG AI Hack Milan 2026 | `github.com/beltromatti/get-it` | 🟢 **Apache-2.0**, `main/LICENSE` **11.359 B**, `sha256:d0622ead9e49`, `Copyright 2026 Mattia Beltrami …` | 962 ★ | **EMEA** — `README` nombra `Milan`/`Italia` |
+
+### ⚠️ Las altas copyleft, con la obligación escrita
+
+| agente | repo | cesión | ★ |
+|---|---|---|---|
+| **Moodle AI Skill Navigator** — tutoría, cuestionarios, mapas mentales y RAG dentro de Moodle | `github.com/Berserk-hub150/moodle-ai-skill-navigator` | ⚠️ **AGPL-3.0**, **35.153 B**, `sha256:ebdc0e5b7005` | 222 ★ |
+| **math-question-bank** — banco de preguntas con LaTeX en vivo, resolución LLM y OCR de fórmulas | `github.com/JudgePeach/math-question-bank` | ⚠️ **AGPL-3.0**, **34.523 B**, `sha256:0d96a4ff68ad` | 284 ★ |
+
+### 🆕 La tendencia que estas filas SÍ miden: la capa de AI educativa nace copyleft por DÓNDE SE ENCHUFA
+
+4 de 4 piezas de este pase que se insertan en un host GPL salieron GPL/AGPL: `moodle-ai-skill-navigator` (AGPL), `microsoft/o365-moodle` (AGPL), `gocodebox/lifterlms` (AGPL), `arashactive/laramint` (AGPL). No es una preferencia de sus autores: **Moodle y WordPress son GPL, así que el plugin hereda.** Para una consultora la consecuencia es operativa y no filosófica: *la vía rápida —enchufarse al LMS que el cliente ya tiene— es exactamente la vía que entrega el código bajo copyleft.* La vía permisiva obliga a salir del plugin y entrar por el ESTÁNDAR (LTI, SCORM), que es lo que mide `repos/foundations.md` este mismo pase.
+
+### 🆕 Una licencia que se presenta con la frase del MIT y prohíbe lo contrario (`P411`)
+
+`CaviraOSS/PageLM` (2.000 ★) — *«versión comunitaria de NotebookLM»*, la candidata más atractiva del barrido por tracción. Su `LICENSE.md` **abre con la concesión MIT literal** y se titula **«PageLM Community License»**: uso **no comercial**, **reparto de ingresos** obligatorio antes de cualquier despliegue comercial, y una *Partial Use Clause* que declara Uso Comercial el empleo de **cualquier fragmento**. 🔴 **El clasificador de este estante la llamó `MIT`.** El delator era el tamaño: **8.563 B** contra ~1.070 B de un MIT real.
+
+### ⚪ Lo que se midió y NO cede — 11 piezas, con el motivo y no con silencio
+
+**8 existen (`README` 200) y no tienen archivo de cesión en `main` ni `master`:** `LMS-Laravel/LMS-Laravel` (505 ★) · `aaryansamanta/ai-ethos` (499 ★) · `hkalant/awesome-edtech-tools` (215 ★) · `bobuel/bloom-taxonomy-quiz-builder-skill` (2 ★) · `LeoLiu363/ai-video-understanding` (1 ★) · `ShubhSarin/youtube-study-helper` (1 ★) · `tanghua-git/skill-instructional-design` (1 ★) · `upstream1119/Traceable-Ideological-Education-RAG` (1 ★).
+
+**3 ceden bajo licencia NO-OSI:** `CaviraOSS/PageLM` (`P411`) · `canyongbs/advisingapp` (**Elastic License 2.0**: prohíbe el servicio gestionado) · `leemonade/leemons` (**«Fair code License»**).
+
+### 🔵 El par de linaje de la semana: una cesión idéntica al byte, con el titular del upstream
+
+`SkyCascade/SkyLearn` (661 ★) y `adilmohak/django-lms` (730 ★) publican el **mismo** `LICENSE`, `sha256:7734c7b2488c`, con el **mismo** titular `Copyright (c) 2023 Adil Mohak` — y el `README` de `SkyLearn` enlaza `adilmohak.github.io/dj-lms-starter`. 🟢 Es `P379` con *upstream* localizable **sin la API**, y el control negativo que `P386` pedía: cuando el titular es REAL (y no boilerplate), el par `(archivo, digest)` **discrimina** linaje en vez de fundir proyectos ajenos.
+
 
 ## 🟢 2026-10-05 — pase 122 (lectura `19:45Z`): lo nuevo de la semana entró por la *topic page*, y el canal generalista falló por 6.ª vez
 

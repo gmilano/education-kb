@@ -1,0 +1,35 @@
+=== ACCION O: la clase POSITIVA (★ que es el dato de una fila recomendada) ===
+universo del barrido (accion B, toda ocurrencia)   284
+clase POSITIVA (celda de fila de datos, no cita)   80
+  de ellas con BANDA y FECHA                       0
+  sin banda                                        80
+  sin fecha                                        78
+
+clausula 1 — la clase positiva es MENOR que el universo: 🟢 SI
+clausula 2 — la propiedad se sostiene SIN exclusiones: 🔴 NO
+
+VEREDICTO: REFUTADA
+
+=== reparto de la clase positiva por archivo ===
+agents/trending.md           36
+repos/trending.md            24
+intel/trends.md              8
+agents/top.md                6
+verticals/solutions.md       3
+repos/foundations.md         1
+intel/market.md              1
+compose/patterns.md          1
+
+=== primeras 12 de la clase positiva SIN banda ===
+agents/top.md:4653  385.407 ★  banda=False fecha=False
+agents/top.md:4653  151.639 ★  banda=False fecha=False
+agents/top.md:4653  108.128 ★  banda=False fecha=False
+agents/top.md:4653  62.735 ★  banda=False fecha=False
+agents/top.md:4653  60.284 ★  banda=False fecha=False
+agents/top.md:4653  55.226 ★  banda=False fecha=False
+agents/trending.md:1215  385.407 ★  banda=False fecha=False
+agents/trending.md:1216  151.639 ★  banda=False fecha=False
+agents/trending.md:1217  108.128 ★  banda=False fecha=False
+agents/trending.md:1218  62.735 ★  banda=False fecha=False
+agents/trending.md:1219  60.284 ★  banda=False fecha=False
+agents/trending.md:1220  55.226 ★  banda=False fecha=False

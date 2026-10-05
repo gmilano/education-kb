@@ -7,6 +7,7 @@ updated: 2026-10-05
 # 📡 Tendencias — education
 
 > Ventana de investigación: septiembre 2026. Verificado 2026-09-30; el pase 11, el 2026-10-01.
+> **Pase 123 del 2026-10-05 (lectura `20:45Z`):** 🟢 **Tendencias 937–940** (y se reservan los lugares **933–936** a las 4 que el pase 122 publicó sin número de serie, en vez de renumerarlas: el archivo es APPEND-ONLY). 🆕 **937 — la capa de AI educativa nace COPYLEFT por dónde se enchufa: 4 de 4 plugins de host GPL salieron AGPL, y el par `Azure/Moodle` (MIT, afuera) contra `o365-moodle` (AGPL, adentro) lo prueba con autor y destino controlados. La vía rápida al dato del cliente es la vía que entrega el código bajo copyleft.** 🆕 **938 — el *source-available* NO-OSI llegó al edtech de mayor tracción: Elastic 2.0, Fair code y una «Community License» que se presenta con la frase del MIT.** 🆕 **939 — el descubrimiento por «plataforma» está agotado (30 barridos en cero); el que rinde es por ESTÁNDAR.** 🆕 **940 — LATAM: el techo normativo pasa por encima de la práctica en exactamente un mercado (Uruguay, CETS 225).**
 > **Pase 122 del 2026-10-05 (lectura `19:45Z`):** 🟢 **Cuatro fuentes independientes dan la MISMA inflexión para 2026: «de la experimentación a la gobernanza», aceleración selectiva con foco en ética/transparencia/casos agénticos, y desplazamiento desde herramientas genéricas hacia plataformas hechas a propósito — que es exactamente lo que este estante mide desde el pase 58 (el eje que devuelve software es la OBLIGACIÓN, no «mejores agentes»).** 🟢 **Convergencia de ETIQUETADO: art. 50(2) de la UE (2026-12-02, NO diferido) + etiquetado chino + gracia coreana hasta enero de 2027 ⇒ un solo componente de marcado sirve a dos jurisdicciones, y las suites `aiact-50-2-*` ya lo implementan con tests.** 🔴 **Y los DOS relojes que no hay que confundir: Anexo III/art. 27 corre a 2027-12-02, el marcado del art. 50 corre a 2026-12-02 — mismo cliente, fechas distintas.** 🆕 **Tendencia 4: la diligencia de licencia es diferenciador real, porque el titular NO está donde todos lo buscan (0 de 26 filas copyleft lo tienen en el payload).**
 > **Pase 121 del 2026-10-05 (lectura `18:45Z`):** 🟢 **Tendencias 927–932, citadas una por una** (el pase 120 cerró en 926). 🆕 **`P398` — la cesión puede estar segmentada por INTERVALO DE FECHAS: `snflwr.ai` re-licenció de AGPL-3.0 a propietario el 2026-09-18 y su propio archivo declara irrevocable la ventana 2026-02-27 → 2026-09-18. Tercer eje de segmentación después del directorio (`P113`) y del estado de compilación (`P380`), y el peor de los tres porque no se ve en el árbol: la pregunta «¿se puede construir sobre esto?» deja de tener respuesta sin la FECHA DE LA COPIA.** 🆕 **`P399` — un auto-censo publicado en el mismo pase que agrega filas mide el corpus PRE-ESCRITURA, y es un error de ORDEN, no de aritmética: el 15/46/125/186 de `P394` es el árbol del pase 119 y el commit del 120 mide 23/46/139/208. La columna `presente` no se movió (46→46), así que el control que un humano verifica a mano es justo el que no detecta nada.** 🆕 **`P402` — el boilerplate copyleft devuelve bits EQUIVOCADOS donde el prístino de Apache devuelve cero: la línea de copyright de GPL/LGPL es de la **FSF**, y una lectura con cara de éxito pasa cualquier compuerta de «¿hay titular?».** 🟢 **Y la tendencia de mercado del pase, que es la primera con DOS cifras opuestas sobre el mismo día: 18/18 saturado en el canal de intel regional, 10/10 virgen en el canal de obligación.**
 > **Pase 120 del 2026-10-05 (lectura `17:45Z`):** 🟢 **Tendencias 922–926, citadas una por una.** 🆕 **`P397` — la REGIÓN de una herramienta de cumplimiento se lee de la OBLIGACIÓN que implementa, no del domicilio de su autor: convierte la pila de filas `NO UBICADA` de este árbol en un atributo medible del payload, y de paso convierte un hueco regional en un presupuesto de un detector de regex.** 🆕 **`P393` — un corpus APPEND-ONLY conserva lo RETRACTADO, así que todo censo que lo lea RE-ANIMA mediciones muertas: la calidad del censo se degrada MONÓTONAMENTE con cada pase si no hay capa de retractaciones. Es la primera tendencia de este árbol que es un costo de su propio método.** 🆕 **`P395` — el prístino de Apache-2.0 circula en DOS variantes (11.357 / 11.358 B) que difieren en una línea en blanco INICIAL; la regla barata de off-by-one de `P333` les da un falso positivo, y lo que la salva son los controles de las DOS puntas.** 🔴 **Y la tendencia de canal: el barrido regional 48 devolvió 4/4 regiones, 0 silencios y **0 hechos netos** (14/14 ya publicados) ⇒ el agotamiento alcanzó al canal de INTEL, no sólo al de oferta.**
@@ -132,6 +133,52 @@ updated: 2026-10-05
 > (tendencia 29), se abre el **gap 20** y se registran dos advertencias de verificación: los agregadores de estrellas
 > están mal por ~2× y **un 403 de `curl` no es un 404**. Ver la nota de método del pase 12.
 > **Pase 11:** el Digital Omnibus es derecho vigente (tendencia 25), aparece la capa predictiva y está vacía (tendencia 26), y se corrige un error de método de diez pasadas sobre licencias permisivas (tendencia 27).
+
+## 🟢 Pase 123 del 2026-10-05 (lectura `20:45Z`) — 4 tendencias, y la del pase es de ESTRUCTURA: en educación la vía rápida al dato del cliente es la vía que entrega el código bajo copyleft
+
+### 🔬 Nota de numeración de la serie, dicha antes de usar los números
+
+La serie global de este archivo llegó a **932** en el pase 121. El pase 122 publicó **4** tendencias rotuladas *«Tendencia 1…4»*, **sin número de serie**. Este archivo es APPEND-ONLY, así que esas 4 no se re-escriben ni se renumeran: se les **reservan los lugares 933–936** y este pase sigue en **937**. 🔵 Se deja escrito porque numerar desde 1 habría roto la serie en silencio, y numerar desde 933 habría pisado a las del pase 122.
+
+### 🟢 Tendencia 937 — la capa de AI educativa nace COPYLEFT por dónde se enchufa, y es una propiedad del ecosistema
+
+Medido este pase sobre 4 de 4 piezas que se insertan en un host GPL: `Berserk-hub150/moodle-ai-skill-navigator` (AGPL-3.0, 35.153 B), `microsoft/o365-moodle` (AGPL-3.0, 35.147 B), `gocodebox/lifterlms` (AGPL-3.0, 35.141 B), `arashactive/laramint` (AGPL-3.0, 35.149 B).
+
+No es una preferencia de sus autores: **Moodle y WordPress son GPL, así que el plugin hereda.** El par controlado que lo prueba es del mismo autor corporativo y el mismo LMS de destino:
+
+| | `Azure/Moodle` | `microsoft/o365-moodle` |
+|---|---|---|
+| cesión medida en el payload | 🟢 **MIT**, 1.090 B | ⚠️ **AGPL-3.0**, 35.147 B |
+| dónde corre | **afuera** de Moodle (*tooling*) | **adentro** (plugin) |
+
+🔵 **La consecuencia es comercial y no filosófica:** la ruta más rápida a los datos que el cliente ya tiene —un plugin en su LMS— es exactamente la ruta que obliga a liberar la capa propia. La ruta permisiva existe y es el **estándar de interoperabilidad**: LTI (`tsugi`, Apache-2.0) y SCORM (`scorm-again`, MIT). **La frontera del copyleft es arquitectónica, y por lo tanto elegible en la fase de diseño.**
+
+### 🟢 Tendencia 938 — el *source-available* NO-OSI llegó a las plataformas educativas, y entra por donde más atrae
+
+Tres familias NO-OSI distintas en un solo barrido de 34 candidatas netas, las tres en piezas de alta tracción:
+
+| licencia | pieza | ★ | lo que prohíbe |
+|---|---|---|---|
+| **Elastic License 2.0** | `canyongbs/advisingapp` — CRM de éxito estudiantil para *colleges* | 338 ★ | ofrecer el software como **servicio gestionado** |
+| **«Fair code License»** | `leemonade/leemons` — *Learning Experience Platform* | 292 ★ | el núcleo no es OSI |
+| **«PageLM Community License»** | `CaviraOSS/PageLM` — *NotebookLM* comunitario | 2.000 ★ (banda `K-3CIFRAS`, `P349`; *topic page* 2026-10-05) | uso comercial; exige **reparto de ingresos** |
+
+🔴 **Y la de 2.000 ★ se presenta con la frase de concesión del MIT literal** (`P411`), así que un clasificador por palabra clave la publica como permisiva. Para una consultora la tendencia se lee así: *el edtech open source de mayor tracción está adoptando licencias que permiten leer y auto-alojar, y prohíben precisamente el modelo de entrega de un integrador.* El único control es leer el **payload** —título, tamaño, sección de limitaciones— y no la etiqueta.
+
+### 🟢 Tendencia 939 — el descubrimiento por «plataforma» está agotado; el que rinde es por ESTÁNDAR
+
+Este estante registró **30 barridos consecutivos con 0 cimientos nuevos** (pases 93–122), siempre el mismo conjunto de 7 plataformas canónicas. No era saturación del mercado: era el ancla. Cambiada la consulta de *plataforma* a *runtime de interoperabilidad*, el mismo sitio y el mismo día devuelven 5 cimientos nuevos, 4 de ellos permisivos (`P416`).
+
+🔵 Lo mismo del lado del canal: `topics/ai-tutor` dio **0 netas de 20** y `topics/education-ai` dio **5 netas que no ceden nada**, mientras `topics/edtech` y `topics/learning-management-system` —nunca barridas— dieron **29 netas**. **Un cero de canal leído como cero de oferta es el error de inteligencia más caro de este archivo, y estuvo a punto de cometerse cuatro pases seguidos.**
+
+### 🟢 Tendencia 940 — LATAM: el techo normativo pasa por encima de la práctica en exactamente un mercado
+
+El corpus ya registra la brecha de la región: **87%** de las instituciones de educación superior de ALC usan AI en al menos un área, **79%** del profesorado la usa en su enseñanza, y sólo **26%** tiene estrategia formal (**<10%** con lineamientos suficientes). Lo neto de este pase es que **Uruguay firmó el Convenio Marco del Consejo de Europa sobre IA (CETS n.º 225) el 2 de septiembre de 2025**, primero de América Latina — un instrumento de nivel **tratado**, frente a los instrumentos blandos del resto de la región (Observatorio UNESCO, proyecto de ley de Brasil, marco de Chile, CONPES de Colombia).
+
+⚠️ Evidencia **secundaria y concordante** (4 fuentes); `coe.int` bloqueado por egreso, y **no se verificó la ratificación**, que no es lo mismo que la firma.
+
+🔵 **La inflexión que esto marca para la oferta regional:** en el resto de ALC la práctica va por delante de la norma, así que lo que falta es gobernanza; en Uruguay la norma va por delante, así que lo que falta es **implementación conforme**. Son dos ofertas distintas en la misma región, y hasta este pase el corpus las trataba como una.
+
 
 ### 906 · 🆕 `P370` — la compuerta simétrica: un hueco DECLARADO necesita el mismo gate que un ALTA
 

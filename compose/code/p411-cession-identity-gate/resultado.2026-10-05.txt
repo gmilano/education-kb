@@ -1,0 +1,12 @@
+DaRL-GenAI/instructional_agents                familia=MIT  usable=SI  1067 B  sha256:4e085d826a64
+beltromatti/get-it                             familia=Apache-2.0  usable=SI  11359 B  sha256:d0622ead9e49
+menthorlabs/menthor                            familia=Apache-2.0  usable=SI  11337 B  sha256:36d6788503b8
+jcputney/scorm-again                           familia=MIT  usable=SI  1072 B  sha256:383b85b370e8
+tsugiproject/tsugi                             familia=Apache-2.0  usable=SI  10273 B  sha256:73ba74dfaa52
+CaviraOSS/PageLM                               familia=NO-OSI (community license)  usable=NO  8563 B  sha256:c834209c5f33
+canyongbs/advisingapp                          familia=NO-OSI (elastic license)  usable=NO  3860 B  sha256:48255018b41f
+leemonade/leemons                              familia=NO-OSI (fair code)  usable=NO  10830 B  sha256:13220df1b64b
+Berserk-hub150/moodle-ai-skill-navigator       familia=AGPL-3.0  usable=NO  35153 B  sha256:ebdc0e5b7005
+JudgePeach/math-question-bank                  familia=AGPL-3.0  usable=NO  34523 B  sha256:0d96a4ff68ad
+adilmohak/django-lms                           familia=MIT  usable=SI  1066 B  sha256:7734c7b2488c
+SkyCascade/SkyLearn                            familia=MIT  usable=SI  1066 B  sha256:7734c7b2488c
