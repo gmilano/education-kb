@@ -19,6 +19,130 @@ updated: 2026-10-05
 > **Pase 108 del 2026-10-05:** 🟢 **5 altas permisivas, y rompen una racha de TREINTA barridos en cero** — las cinco leidas del PAYLOAD, no del nombre: `THU-MAIC/OpenMAIC` (**MIT**, `v1.2.0-rc.1` del 2026-10-04) 🔴 **con `packages/mathml2omml` en `LGPL-3.0-or-later` leido de SU PROPIO `package.json`: la licencia de la raiz no es la licencia del arbol**; `oaknational/oak-open-curriculum-ecosystem` (**MIT** en el codigo, 🔴 **OGL v3.0** en los datos de curriculo — `P315` otra vez); `Cicatriiz/openedu-mcp` (**MIT**); `davidlms/learnmcp-xapi` (**MIT**); y `54yyyu/school-mcp` (**MIT solo en el cuerpo del README, sin archivo** — `P314`). 🆕 **`P340` — el 404 de un archivo de licencia puede ser una ORTOGRAFIA y no una ausencia: `oak` cede en `LICENCE` y el barrido de esta base pide `LICENSE`; un pase que solo mirara `LICENSE` habria publicado «sin cesion» sobre un repo MIT.** 🔴 **La accion A pre-registrada NO se corrio: el clon del arbol del titular quedo DENEGADO por el clasificador de la sesion, y eso se declara en vez de callarse (`P335` sigue en pie, pero esta vez ni la pieza nombrada paso).** 🔴 **La accion B resulta NO CORRIBLE contra el artefacto al que su propia pre-registracion la mando (`P336`): `accion-a-b.2026-10-05.tsv` colapsa `oer` a DOS valores (`openstax`/`otro`) y el slug del libro —lo unico que separa una edicion `2e` de una `1e`, que es toda la pregunta— no esta en el archivo; las «825 ya enumeradas» no estan enumeradas ahi.** 🔴 **Y al ir a buscarlo aparece el hallazgo que manda: dos artefactos del MISMO pase, sobre el MISMO sha `1925dec`, se contradicen por exactamente 41 figuras en el corte openstax/no-openstax (**1.611/832** contra **1.570/873**, los dos suman 2.443), y la cifra que llego a la PROSA es la menor (`P337`).** 🔴 **La causa, medida y no supuesta: `oer` es TEXTO LIBRE con dos formas de URL —y al ampliar la muestra de 694 a **1.685** unidades resultaron **CUATRO**, dos de ellas invisibles para el patron inicial—, con solapamiento **PARCIAL** entre formas: un extractor afirmado sobre `/details/books/` pierde **3 obras completas** y ademas **SUB-CUENTA** una cuarta sin que nada avise. Y `precalculus` a secas existe en el corpus y NO esta en ninguna de las 10 filas del censo publicado (`P338`).** 🔴 **La version de este MISMO pase que decia «las dos formas PARTEN el espacio sin solaparse» quedo FALSIFICADA por su propia medicion ampliada, y se corrige en vez de dejarse.** 🆕 **`P341` — 9 unidades nombran al TITULAR y no a la OBRA: sin obra no hay edicion y sin edicion no hay cesion resoluble, con ningun extractor.** 🟢 **La accion C sale CONFIRMADA en su clausula de conteo: **17** pares (bytes, huella) publicados junto a un archivo de licencia, la prediccion pedia ≥10.** 🔴 **Y FALSIFICADA como instrumento (`P339`): el delta de 1 byte NO es diagnostico, porque `P327` (el archivo no trae salto final) y `P333` (`$(cat)` se lo come al medir) producen la MISMA firma — esta base ya publica `21.442` y `21.443` B del mismo texto por la primera causa.** 🟢 **Tablero re-verificado COMPLETO: 59 suites (53 Python + 6 shell), 0 fallos, 203 aserciones (`Python 3.11.15`).**
 
 
+## 🟢 Pase 118 del 2026-10-05 (lectura `15:56Z`) — las 4 acciones pre-registradas corridas: 2 confirmadas, 1 refutada, 1 no evaluable; y el deduplicador que el pase 117 propuso FUNDE repos ajenos
+
+🔬 **Este pase no trae filas nuevas y hay que decirlo primero.** El canal de oferta devolvió **14
+candidatas y las 14 ya están publicadas** en este estante (`Open-TutorAi`, `DeepTutor`,
+`freelingo`, `classroomio`, `Sakai`, `OpenEduCat`, `Chamilo`, `Canvas LMS`, `ILIAS`,
+`Study-Mate`, `toshieji/moodle-grading-mcp`, `vishalsachdev/canvas-mcp`,
+`CharlieCardenasToledo/mcp-canvas-server`, `DMontgomery40/mcp-canvas-lms`). **Altas: 0 — por
+saturación medida, no por silencio.** El aporte del pase son **dos instrumentos** y **cuatro
+veredictos pre-registrados**, uno de ellos contra la propia hipótesis del pase anterior.
+
+### 📋 Las 4 acciones del pase 117, con su cláusula cumplida al pie
+
+| Acción | Hipótesis escrita ANTES | Resultado medido | Veredicto |
+|---|---|---|---|
+| **A** — `P365` deriva de ★ | evaluable en el 1.er pase en/después de `2026-10-06T10:48Z` | **faltan 19 h 03 m** (ahora `15:56Z`) | ⚠️ **NO evaluable** — se re-registra contra **el mismo instante absoluto**, sin re-basar |
+| **B** — `P379` sobre el estante entero | **≥1** colisión además de `krishna16-origin`/`maxew6` | **≥2 más**: `cfb32038c0ba` y `c71d239df917` | 🟢 **CONFIRMADA** (no refutada) |
+| **C** — 2.º caso de `P380` | **0** (`pupilfirst` es el único) | **0** sobre el estante entero | 🟢 **CONFIRMADA** — sigue siendo nota, no columna |
+| **D** — control de `P382` sin ancla de año | la consulta sin año devuelve hechos más nuevos | devolvió hechos **2023-2025**, más VIEJOS | 🔴 **REFUTADA** por su propia cláusula |
+
+🔴 **La acción D se refuta y se deja refutada.** La cláusula del pase 117 decía: *«Refutada si la
+consulta sin año no devuelve hechos en promedio más nuevos ⇒ entonces la deriva no es del ancla y
+hay que buscarla en otra parte.»* Corrida sobre LATAM, la consulta sin ancla devolvió **PL
+2.338/2023, Uruguay 2025, Baker McKenzie 2025-10** — más viejos que los de la anclada. **La deriva
+de `P382` NO es atribuible al token del año.** Detalle del par en `intel/market.md`.
+
+### 🆕 `P385` — el conteo de colisiones no es un NÚMERO: es un INTERVALO, y lo fija la convención de escritura
+
+La acción B pedía deduplicar por el par (`sha256`, titular) **todas** las filas del estante que ya
+traen `sha256`. 🔬 **Se corrió, y el primer resultado estaba mal por una razón que importa más que
+el resultado:**
+
+| Extractor | Fingerprints con repo ligado | Racimos (≥2 repos distintos) |
+|---|---|---|
+| **Anclado a URL** (`github.com/owner/repo` en la misma línea) | 54 | **3** |
+| **Agnóstico de convención** (también `\`owner/repo\`` y handles sueltos) | 54 | **22** |
+| 🔬 **Vetado a mano, fila por fila** | 54 | 🟢 **4** |
+
+🔴 **El extractor anclado a URL se perdió el racimo MÁS GRANDE de esta base.** La familia de forks
+de `vishalsachdev/canvas-mcp` comparte `sha256:5385a26e2face987` (**MIT, 1.071 B**, titular
+`Copyright (c) 2025 Vishal Sachdev`) entre **8 miembros** — pero esas filas nombran a los forks
+como **handles pelados** (`\`sirdanielm\` · \`fdis111\` · \`BartMassey-upstream\` ·
+\`abr-Projects\` · \`lindsay-cheng\` · \`AmirF194\``), **no** como URLs. **Un extractor anclado a
+URL las ve como cero.**
+
+🔴 **Y el extractor permisivo falla al revés: liga todo repo nombrado en la MISMA LÍNEA.** En
+`de8107bf9312` metió `VedShh/Tutor-AI` y `pupilfirst/pupilfirst`, que sólo comparten el párrafo
+resumen del pase 117, no el archivo de licencia.
+
+🔵 **Conclusión, y es un cambio de método para esta base entera: un binding fingerprint→repo
+cosechado de PROSA está acotado por la convención de escritura por un lado y por la co-ocurrencia
+de línea por el otro. Las dos puntas son sesgo, en direcciones opuestas.** El número honesto es el
+**intervalo `[3, 22]`**, y el `3` de la acción B es un **PISO**, no una medición. Un deduplicador
+construido sobre el extractor anclado **no deduplicaría justo la familia de 8 que más lo necesita.**
+⇒ El binding tiene que leerse de un **campo estructurado (celda de tabla)**, no de una línea.
+Instrumento: `p385-binding-interval/`.
+
+### 🆕 `P386` — el par (`sha256`, titular) FUNDE proyectos ajenos cuando la licencia es prístina
+
+🔴 **El hallazgo que invalida el deduplicador que el propio `P379` propuso.** De los **4 racimos vetados a mano**, los
+que tienen **titular PRESENTE** son linaje de fork real. Pero `c71d239df917` **no**:
+
+| Repo | Licencia | Bytes | ★ | Qué es | Verificación |
+|---|---|---|---|---|---|
+| [`buriro-ezekia/mwalimulens-agent`](https://github.com/buriro-ezekia/mwalimulens-agent) | **Apache-2.0** prístina | **11.357** | 0 | Agente de evidencia longitudinal de aprendizaje, **EMEA (África)** | pase previo |
+| [`mazhar266/fedena`](https://github.com/mazhar266/fedena) | **Apache-2.0** prístina | **11.357** | **5** | **ERP escolar** Ruby on Rails (gestión de campus) | 🟢 `WebFetch` este pase |
+| [`webtech-network/autograder`](https://github.com/webtech-network/autograder) | **Apache-2.0** prístina | **11.357** | **61** | **Autocorrector** de entregas con rúbrica y sandbox + GitHub Actions | 🟢 `WebFetch` este pase |
+
+🔴 **Tres proyectos SIN relación alguna** —un agente de seguimiento docente, un ERP de campus y un
+autocorrector de código— **con el MISMO `sha256` de licencia.** Y la razón es estructural: el
+`LICENSE` de Apache-2.0 es un **boilerplate fijo de 11.357 B que NO lleva el nombre del titular
+adentro**. Esta base ya lo tenía etiquetado `NOT-APPLICABLE` por `P184` en los tres casos.
+
+🔵 **Por qué eso rompe el deduplicador:** si la licencia es prístina, el par (`sha256`, titular) se
+vuelve **(constante, constante)** — `c71d239df917` + `NOT-APPLICABLE` — así que **deduplicar por
+ese par fusiona en UNA entidad a todos los proyectos Apache-2.0 no emparentados del estante.** El
+mismo patrón aparece con GPL-3.0.
+
+🟢 **La corrección es una compuerta, y es de una línea: el par (`sha256`, titular) sólo transporta
+linaje cuando el titular está PRESENTE en el texto.** Con titular ausente, el fingerprint vale
+**0 bits de procedencia** y el deduplicador debe **abstenerse**, no fundir. Instrumento:
+`p386-pristine-dedup-gate/`.
+
+⚠️ **Y el alcance práctico, porque no es un detalle de contador:** Apache-2.0 es la licencia que el
+sector público de EMEA prefiere. En ese terreno **el fingerprint de licencia no prueba procedencia**
+— hay que probarla por árbol de archivos, no por hash del `LICENSE`.
+
+### 🟢 Corroboración re-medida, y se dice que NO es un alta
+
+- `c71d239df917` = **11.357 B** exactos en los 3 repos ⇒ es el boilerplate canónico de Apache-2.0,
+  no una coincidencia de 12 hex.
+- `johnswyou/autograder` **queda FUERA** del racimo: aparecía sólo por co-ocurrencia de línea con
+  `Ovsyanka83/autograder` (**GPL-3.0**). 🔵 **Se excluye y se dice**, que es el control de `P385`
+  aplicado al propio hallazgo de este pase.
+- El racimo `f7fe4d0adcbc` (`DaviPac/Classroom-mcp` + `Hefi002/tfg-mcp-moodle-server`) **también
+  se descarta**: `Hefi002` es GPL-3.0 de **35.187 B**, no coincide. **Co-ocurrencia, no binding.**
+
+### 🔴 El hueco de este pase, enunciado sobre el CANAL y no sobre las regiones (`P370`)
+
+🔴 **El canal de oferta open source de educación está AGOTADO para la consulta que esta base viene
+haciendo: 14/14 candidatas ya publicadas, 0 altas.** No es un vacío del mercado —es un vacío de
+**consulta**. Las 4 regiones rindieron **0 silencios** y **1 solo hecho neto** (el *Discussion
+Paper* de la IMDA, en `intel/market.md`). ⚠️ **Lo que falta no es más barrido con la misma sonda:
+es una sonda distinta.** Pre-registrado abajo como acción C.
+
+### 📌 Acciones pre-registradas para el próximo pase (con cláusula de refutación)
+
+- **A — `P365`, intacta y SIN re-basar.** Evaluar deriva de ★ en el primer pase que corra en o
+  después de `2026-10-06T10:48Z`. **Faltan 19 h 03 m.** No re-basar el instante.
+- **B — cerrar `P385` con un extractor ESTRUCTURADO.** Leer el binding fingerprint→repo de la
+  **celda de tabla** y no de la línea. **Hipótesis:** el conteo real cae **dentro de `[3, 22]`** y es
+  **≥4** (los 3 del piso más la familia de 8 de `5385a26e2face987`, que el extractor anclado no
+  ve). **Refutada si** el extractor estructurado devuelve **≤3** ⇒ entonces la familia de 8 no
+  comparte fingerprint y `P385` midió un artefacto de mi propio regex, no de la convención.
+- **C — probar que el agotamiento es de SONDA y no de mercado.** Correr **una** consulta cuyo eje
+  **no** sea «agente / repo / plataforma» sino **la obligación regulatoria** (p. ej. etiquetado de
+  salidas generativas de Corea, o la casilla de *deployer* de la IMDA). **Hipótesis:** devuelve
+  **≥1** pieza de software no publicada en este estante. **Refutada si** devuelve **0** ⇒ entonces
+  el agotamiento es del mercado y no de la sonda, y hay que dejar de pre-registrar barridos de
+  oferta.
+- **D — aplicar `P386` al estante entero.** Contar cuántas filas con `sha256` tienen titular
+  **ausente** (`NOT-APPLICABLE`). **Hipótesis:** son **≥5** ⇒ la compuerta de `P386` no es para un
+  caso, es para una fracción medible del estante. **Refutada si** son **≤2** ⇒ entonces el racimo
+  prístino es marginal y la compuerta puede ser una nota.
+
 ## 🟢 Pase 117 del 2026-10-05 (lectura `14:45Z`) — 7 filas nuevas, y el fork que copia la cesión al byte y con ella el titular ajeno
 
 **Canal, medido ESTE pase a las `2026-10-05T14:45Z` y no heredado (`P249`/`P366`), con control negativo en cada sonda** (`gmilano/this-repo-does-not-exist-zzq7`):

@@ -27,6 +27,59 @@ updated: 2026-10-05
 > **Pase 97 del 2026-10-04:** 🟢 **Sin filas nuevas, y a propósito: las seis plataformas Java/Maven que este pase midió YA están todas en este archivo. Lo que entra es el VEREDICTO DE LICENCIA de cada una leído por un segundo canal independiente —la declaración del `pom.xml`— y la capa Java/Maven de esta vertical era justo la que el barrido de esta base no podía leer** (**P294**).
 
 
+## 🟢 Pase 118 del 2026-10-05 (lectura `15:58Z`) — una plataforma vertical más con cesión leída, y la razón por la que su licencia NO prueba su procedencia
+
+### 🟢 `mazhar266/fedena` — ERP escolar Apache-2.0, ★ leídas por primera vez
+
+| Campo | Valor |
+|---|---|
+| **Repo** | [`mazhar266/fedena`](https://github.com/mazhar266/fedena) |
+| **Qué es** | **ERP escolar / gestión de campus** — *«the ideal solution for schools and campuses that want an easy means to manage all campus records»* |
+| **Stack** | **Ruby on Rails** |
+| **Licencia** | 🟢 **Apache-2.0**, `LICENSE.md` en rama **`master`**, **11.357 B**, `sha256:c71d239df917` |
+| **Titular** | ⚠️ **ausente por construcción** → `NOT-APPLICABLE` (`P184`) |
+| **★** | **5** (leídas de payload este pase, `WebFetch`) |
+| **Rol en el estante** | 🔵 **espejo** — es la capa SIS/ERP, el estrato que la región forkea para desplegar |
+
+🔵 **Por qué una pieza de 5 ★ merece fila en este archivo:** en educación el estrato que decide un
+proyecto no es el tutor, es el **SIS**. `fedena` es de la misma clase que `portabilis/i-educar`
+(**547 forks sobre 717 ★**) — software que se **clona por institución**, no que se mira. Y a
+diferencia de `i-educar` (**GPL-2.0**), `fedena` **es permisiva**, así que es construible por
+Globant sin obligación de reciprocidad.
+
+### 🟢 `webtech-network/autograder` — la capa de CORRECCIÓN, permisiva y con sandbox
+
+| Campo | Valor |
+|---|---|
+| **Repo** | [`webtech-network/autograder`](https://github.com/webtech-network/autograder) |
+| **Qué es** | **Autocorrector** de entregas de alumnos con generación de **reporte** y desglose de nota |
+| **Capacidades** | rúbrica configurable por el docente, **ejecución en sandbox seguro**, multi-lenguaje (web, APIs, programas de línea de comandos), **integración con GitHub Actions** |
+| **Licencia** | 🟢 **Apache-2.0**, **11.357 B**, `sha256:c71d239df917` · titular **ausente** → `NOT-APPLICABLE` |
+| **★** | **61** (leídas de payload este pase) |
+
+🔵 **Encaje concreto:** es la pieza que falta entre el MCP de notas (`toshieji/moodle-grading-mcp`,
+MIT, escribe **borradores NO liberados**) y la obligación de **supervisión humana** que Norteamérica
+está legislando. `autograder` **calcula y fundamenta**; el MCP **escribe el borrador**; el docente
+**libera**. Tres piezas, tres licencias permisivas, una compuerta humana.
+
+### 🔴 Pero su licencia NO prueba su procedencia (`P386`)
+
+🔴 **Las dos filas de arriba comparten `sha256` con un tercer repo que no tiene NADA que ver con
+ellas** (`buriro-ezekia/mwalimulens-agent`, un agente de evidencia longitudinal de África). Son
+**11.357 B de boilerplate Apache-2.0 sin titular adentro**. ⚠️ **Para este archivo, que compara
+plataformas que un cliente va a adoptar, la regla operativa es:** el hash del `LICENSE` responde
+*«¿qué licencia es?»* y **no** responde *«¿de quién viene?»*. En una *due diligence* de plataforma,
+la procedencia se prueba por **árbol de archivos y encabezados de fuente**.
+
+### 🟢 Inventario de plataformas: 0 altas, cero enumerado
+
+Las 8 plataformas que el barrido global devolvió —**Sakai** (Apereo, ECL-2.0), **OpenEduCat**
+(LGPL-3.0, el único que integra LMS + SIS + aranceles + app de familias en una sola base),
+**Chamilo** (GPL), **Canvas LMS** (AGPL-3.0), **ILIAS**, **Open TutorAI**, **DeepTutor**,
+**classroomio**— **ya están todas publicadas**. 🔵 **Y el dato que una propuesta usa sigue siendo el
+mismo: en educación la plataforma viene mayoritariamente en copyleft, así que la frontera de
+licencia se decide en la semana 1 del proyecto, no en el mes 6.**
+
 ## 🟢 Pase 117 del 2026-10-05 (lectura `14:45Z`) — 2 plataformas nuevas, y una cesión que depende de si el archivo se compila
 
 ### 🆕 `P380` — la cesión puede estar segmentada por ESTADO DE COMPILACIÓN, y eso ningún escáner de rutas lo ve

@@ -1,3 +1,9 @@
+---
+industry: education
+region: Global
+updated: 2026-10-05
+---
+
 # `p383-region-heading-gate` — gatear los ENCABEZADOS, que es donde el compilador infiere el tipo
 
 **Pase 117 del 2026-10-05.** Tercer gate de esta base: `p311` gatea **altas**, `p370-gap-gate` gatea

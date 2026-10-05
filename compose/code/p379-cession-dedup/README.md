@@ -1,3 +1,9 @@
+---
+industry: education
+region: Global
+updated: 2026-10-05
+---
+
 # `p379-cession-dedup` — deduplicar CESIONES por (sha256, titular), no por repo
 
 **Pase 117 del 2026-10-05.** Instrumento que `P377` pidió y `P379` hizo necesario.

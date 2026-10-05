@@ -238,6 +238,73 @@ actualización.
 
 
 
+## 🟢 Pase 118 del 2026-10-05 (lectura `16:00Z`) — la tendencia del año es de gobernanza, y APAC ya escribió quién paga cuando un agente se equivoca
+
+### 🆕 La tendencia que este pase agrega: RESPONSABILIDAD de agentes, nombrada por un regulador
+
+🟢 **Hecho neto del barrido (1 sobre 31 sondas): la IMDA de Singapur publicó en mayo de 2026 un
+*Discussion Paper on Legal Responsibility for AI Agents*.** Esta base ya registraba la **fecha** del
+evento (la actualización `2026-05-20` del marco de IA agéntica) pero tenía **0 menciones** del
+instrumento.
+
+🔵 **Por qué es una TENDENCIA y no una noticia regulatoria más:** es el primer documento de un
+regulador que reparte la responsabilidad **civil** de un agente a lo largo de una **cadena de valor
+nombrada**:
+
+> desarrollador del modelo · **proveedor de herramientas** · proveedor de plataforma ·
+> **proveedor del sistema** · *deployer* · usuario final · tercero afectado
+
+🔴 **Y traducido a educación, que es lo que este archivo tiene que hacer:** un tutor o corrector
+agéntico planifica, **usa herramientas** (MCP sobre Canvas o Moodle) y **escribe** en el expediente
+de un menor. En el reparto de la IMDA, quien entrega ese agente **no es el desarrollador del
+modelo**: es **«proveedor del sistema»** y con frecuencia también **«proveedor de herramientas»** —
+dos casillas distintas, con exposiciones distintas. 🔵 **El paper no es vinculante** (*«not a settled
+position at law»*) y evalúa doctrinas existentes —contrato, negligencia, *Rylands v Fletcher*,
+responsabilidad por producto, **derecho de agencia**— declarando sus dificultades: atribución de
+conocimiento e intención, previsibilidad, causalidad, estándar de diligencia.
+
+### 🔵 Las tres tendencias que el barrido global repitió, y convergen en lo mismo
+
+1. **De la EXPERIMENTACIÓN a la GOBERNANZA.** Políticas, límites de datos y supervisión pasan de
+   buena práctica a condición de adopción.
+2. **De la herramienta GENÉRICA a la plataforma ESPECÍFICA de educación** — nombrada como *«el
+   movimiento más definitorio de 2026»*.
+3. **Aceleración SELECTIVA.** Los sistemas educativos eligen dónde invertir y piden **valor
+   instruccional demostrable**, no cobertura.
+
+🟢 **Las tres empujan al mismo entregable, y esta base lo viene diciendo con otra frase: lo que
+escala es el EXPEDIENTE, no el modelo.** La novedad de este pase es que ahora hay una **casilla
+regulatoria** donde poner ese expediente.
+
+### 🔬 Adopción declarada, re-medida (sin novedad, y se dice)
+
+| Indicador | Valor |
+|---|---|
+| Docentes K-12 que usan chatbots con alumnos ≥ semanalmente | **53 %** |
+| Docentes que usan plataformas virtuales ≥ semanalmente | **80 %** |
+| Docentes que usan sistemas adaptativos ≥ semanalmente | **61 %** |
+| Alumnos de educación superior LATAM que usan IA | **92 %** (docentes **79 %**) |
+| Valor que la IA generativa podría agregar al sector | **USD 200 MM** |
+
+### 🆕 `P387` — y una tendencia de MÉTODO: dos instrumentos pueden compartir fecha sin ser el mismo hecho
+
+🔴 **`P381` (pase 117) cazó un par falso —el nombre de un instrumento con la fecha de otro—. Este
+pase encontró el caso espejo y el detector de `P381` lo marcaría MAL:** Corea del Sur (*Framework
+Act* en vigor) y Singapur (marco de IA agéntica publicado) **comparten `2026-01-22`, y la fecha es
+real en los dos** — el marco singapurense lo anunció la ministra **Josephine Teo** en el **WEF de
+Davos 2026**. 🔵 **Hay una razón estructural para que las fechas se agrupen: los reguladores
+cronometran los anuncios contra el mismo calendario internacional.** ⇒ **La coincidencia de fecha no
+es evidencia de fusión; la verificación tiene que ser por instrumento.**
+
+### 🔴 Lo que este pase NO encontró, declarado como hueco de SONDA y no de mercado
+
+**4/4 regiones sondeadas, 0 silencios, 30 de 31 hechos ya publicados.** 🔴 **Y el control adversario
+de la acción D confirmó la saturación en vez de romperla: la consulta sin ancla de año devolvió 5
+hechos LATAM más y los 5 ya estaban publicados.** ⚠️ **El agotamiento es de la SONDA —«agente /
+repo / plataforma»— no del mercado.** Pre-registrado para el próximo pase: entrar por el eje de la
+**obligación regulatoria** (etiquetado de salidas generativas de Corea, casilla de *deployer* de la
+IMDA) y ver si devuelve software que esta base no tenga.
+
 ## 🟢 Pase 117 del 2026-10-05 (lectura `14:45Z`) — tendencias 912–917, y la más cara no es de educación
 
 ### 🆕 Tendencia 912 — `P379`: el doble conteo que PASA el control es peor que el que lo falla

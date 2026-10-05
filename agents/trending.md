@@ -8,6 +8,7 @@ updated: 2026-10-05
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 > No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
+> **Pase 118 del 2026-10-05 (lectura `15:57Z`):** 🔴 **0 altas, y el cero está ENUMERADO: el canal de oferta devolvió 14 candidatas y las 14 ya están publicadas en este estante ⇒ saturación medida, no silencio.** 🟢 **Las 4 acciones pre-registradas del pase 117 corridas: B y C CONFIRMADAS, D **REFUTADA** por su propia cláusula, A no evaluable (faltan 19 h 03 m para `2026-10-06T10:48Z`, **sin re-basar**).** 🆕 **`P385` — el conteo de colisiones de licencia no es un número sino un **INTERVALO `[3, 22]`**: el extractor anclado a URL se pierde el racimo MÁS GRANDE de la base (la familia de 8 forks de `vishalsachdev/canvas-mcp`, `sha256:5385a26e2face987`) porque esas filas nombran los forks como **handles pelados**; el permisivo infla ligando todo repo de la MISMA LÍNEA. Un binding cosechado de PROSA está sesgado por las dos puntas.** 🆕 **`P386` — el par (`sha256`, titular) que `P379` propuso como deduplicador **FUNDE proyectos ajenos**: `c71d239df917` (Apache-2.0 **prístina**, 11.357 B, titular ausente) liga **3 repos SIN relación** — `buriro-ezekia/mwalimulens-agent` (agente, EMEA/África) + `mazhar266/fedena` (**ERP escolar**, 5 ★) + `webtech-network/autograder` (**autocorrector**, 61 ★), los dos últimos verificados por `WebFetch` este pase. Con titular ausente el par es (constante, constante) ⇒ el deduplicador debe ABSTENERSE.** 🆕 **`P387` — control negativo de `P381`: Corea (*Framework Act*) y Singapur (marco agéntico IMDA) comparten `2026-01-22` y la fecha es **REAL en los dos** (Davos) ⇒ coincidencia de fecha NO es evidencia de fusión.** 🟢 **Hecho neto del barrido: 1 — la IMDA publicó un *Discussion Paper on Legal Responsibility for AI Agents* (mayo 2026, 7 casillas de cadena de valor), del que esta base tenía la FECHA (`2026-05-20`) y no el INSTRUMENTO.**
 > **Pase 117 del 2026-10-05:** 🟢 **Barrido 46: 4/4 regiones, 0 silencios, denominador ENUMERADO con `grep` antes de escribir — 23 hechos sondeados, 20 ya publicados, 3 candidatos.** 🔴 **Y de los 3: **2 son reales con la fecha corrida ~2 años** (UK £4 M es del **2024-08-29**; TEQSA es del **2024-06-03**) y **1 se RECHAZA por fusión** ⇒ 🆕 `P382` (el ancla `{year}` premia páginas que MENCIONAN el año, no eventos ocurridos en él) y 🆕 `P381` (nombre de un instrumento + fecha de OTRO; las dos mitades reales, falso sólo el PAR).** 🟢 **7 filas nuevas de agente, todas de ★ de un dígito o cero.** 🆕 **`P379` con identidad criptográfica: fork y upstream con el MISMO `sha256` de licencia ⇒ 2 repos, 1 cesión, 1 titular.** 🔴 **LATAM devolvió **0 hechos nuevos sobre 7 sondas**: es hoy la región MÁS saturada de este estante, que es la segunda corrección consecutiva del relato del hueco LATAM (la primera fue `P370`).**
 > **Pase 115 del 2026-10-05:** 🟢 **Barrido 44 (4/4 regiones, 0 silencios) y 5 ALTAS verificadas de payload, pero el hallazgo del pase no es un alta: es que esta base declaraba un hueco que su propio indice refuta.** 🆕 **`P370`/`P371` con instrumento (`p370-gap-gate/`, **27/27**): 29 huecos con region → **2 CONTRADICHOS**, **27 sin marcador de alcance**; y **12 repos UBICADOS en LATAM** contra el «CERO repositorios» declarado 4 pases seguidos.** 🟢 **Las altas: `eai6/ai-tutor` (MIT, titular **World Bank Group**, Seychelles, EMEA, produccion en Azure, **0 ★**) · `portabilis/i-educar` (**GPL-2.0**, 717 ★ / **547 forks**, Brasil, commit del **2026-10-02**, rama por defecto **`2.12`**) · `yunger7/enem-api` (**GPL-2.0**, 349 ★, Brasil, ultimo commit **2025-12-14**) · `Magnusvron/llm-benchmark-quality-index` (**MIT** codigo + **CC BY 4.0** dato, **Mexico** — CICATA-Queretaro, Instituto Politecnico Nacional) · `thiagoluzin/pemara-edu-mira` (MIT, **1 commit**, Brasil, LAN sin internet).** 🔴 **Y una candidata RECHAZADA con el motivo escrito: `madununes07/IA-na-escola` es `index.html` + `style.css` + `script.js` sin descripcion — el buscador la devolvio por el TEXTO DE LA LICENCIA, no por la pieza.** 🆕 **`P373` — una CIFRA puede llegar inventada adosada a un artefacto REAL: el resumen de busqueda atribuyo «1.517 habilidades» a `conectabncc`, que no publica ese numero. Hermano numerico de `P367`, y mas dificil de cazar porque el artefacto SI existe: el conflicto 1.517-vs-1.721 se disuelve antes de publicarse.** 🔵 **Tablero 70/70.**
 > **Pase 114 del 2026-10-05:** 🟢 **Primer intervalo de este arbol con los DOS extremos a RELOJ (`10:48Z` → `11:50Z` = 1 h 02 m): las 5 filas de banda `EXACTO` devuelven las 5 el MISMO entero ⇒ deriva = 0 ★ / 5 repos / 1 h 02 m, una tasa acotada por los dos lados y no un cero sin denominador.** 🔴 **Sigue sin testear la prediccion de ≥24 h ⇒ 🆕 `P365`: re-registrada contra un INSTANTE ABSOLUTO (`2026-10-06T10:48Z`) y no contra «el proximo pase», que es el defecto que `P360` nombro.** ⚠️ **Dos deltas fuera de la cohorte, sin intervalo porque su lectura previa esta fechada por DIA: `educhain` 389 → **388**, `canvas-mcp` 272 → **276**.** 🟢 **`DeepTutor` publica `v1.6.13` (2026.10.4), 40.8k ★, Apache-2.0.** 🔴 **0 altas: lo de este pase es RE-MEDICION, y se dice.**
@@ -18,6 +19,51 @@ updated: 2026-10-05
 > **Pase 107 del 2026-10-05:** 🔴 **0 altas permisivas (trigesimo barrido, 3 candidatas MEDIDAS del payload y las 3 con su bloqueo nombrado) y las TRES acciones pre-registradas corridas: A con la cota NO CERRADA y su clausula de atribucion FALSIFICADA, B CONFIRMADA, C CONFIRMADA en dos clausulas y FALSIFICADA en la tercera.** 🔴 **`P332`: la EXTENSION de un archivo de imagen no es su FORMATO — 2.443 de 2.443 `.gif` son PNG/JPEG/WEBP, y un barrido por extension habria dado «0 solapamiento» desde una premisa falsa.** 🔴 **`P334`: el titular de una FIGURA se resuelve por BYTES y vive en una obra DISTINTA de la que el item cita (36 pares leidos).** 🔴 **`P333`: `fa4e32e5e622` era la huella del archivo SIN su salto final — defecto de dato, no de upstream.** 🔴 **`P335`: tercera sub-clase de `P320` — lo denegado fue el LOTE, no la pieza nombrada.** 🟢 **Canal nuevo: `gitlab.com/-/raw`.**
 > **Pase 106 del 2026-10-05:** 🟢 **0 altas (vigesimonoveno barrido, 5 candidatas, las 5 frenadas por el gate de `P311`) y las TRES acciones pre-registradas corridas: A CONFIRMADA, B FALSIFICADA, C CONFIRMADA.** 🔴 **`P328`: la cesion de un OER se ESTRECHA entre ediciones — 10 de 10 colecciones con el mismo `collection-id` pasan de `CC BY 4.0` en `1e` a `CC BY-NC-SA 4.0` en `main`, y el slug cambia de nombre, que es por lo que esta base no lo veia.** 🔴 **El denominador se corrige de 13.371 a 82.492 unidades y aparece una capa sintetica de 6.886 unidades (`oer: openai`) sin cesion.** 🟢 **Canal nuevo: `git ls-remote` para enumerar refs — es el que abrio la accion A.**
 
+
+## 2026-10-05 — pase 118: 0 altas enumeradas, y el deduplicador del pase anterior funde tres proyectos ajenos
+
+### 🔬 El canal, declarado antes de cualquier veredicto (`P249`)
+
+| Canal | Estado este pase | Evidencia |
+|---|---|---|
+| `WebSearch` | 🟢 **VIVO** | 9 consultas, 4 globales + 4 regionales + 1 control sin ancla |
+| `WebFetch` → `github.com` | 🟢 **VIVO** (4.º pase seguido) | licencia y ★ de `fedena` y `webtech-network/autograder` leídas |
+| `curl -sI github.com` | 🔴 **403** | 7/7 repos sondeados |
+| `curl` → sitios jurídicos | 🔴 **000** | 4/4 |
+| `WebFetch` → `allenandgledhill.com`, `globalpolicywatch.com` | 🔴 **EGRESS_BLOCKED por dominio** | la fuente primaria del hecho de APAC **no se alcanzó** |
+
+### 🔴 Altas: 0, con el denominador ENUMERADO (`P287`/`P311`)
+
+**14 candidatas devueltas por el canal → 14 ya publicadas → 0 altas.** Enumeradas para que el cero
+sea auditable: `Open-TutorAi/open-tutor-ai-CE`, `DeepTutor`, `freelingo`, `classroomio`,
+`Sakai`, `OpenEduCat`, `Chamilo`, `Canvas LMS`, `ILIAS`, `Study-Mate`,
+`toshieji/moodle-grading-mcp`, `vishalsachdev/canvas-mcp`,
+`CharlieCardenasToledo/mcp-canvas-server`, `DMontgomery40/mcp-canvas-lms`.
+
+🔵 **Y el dato de método: `sirdanielm/canvas-mcp` volvió a aparecer como si fuera novedad.** Ya
+estaba publicada y ya estaba marcada como **fork con el titular del upstream intacto**. **El canal
+no distingue fork de alta; esta base sí, y por eso el cero es correcto.**
+
+### 🟢 Lo que sí se movió: dos instrumentos y una refutación
+
+- 🆕 **`P385`** — el conteo de colisiones es el **intervalo `[3, 22]`**, con **4** vetados a mano. El `3` de la acción B es un
+  **piso** producido por un extractor anclado a URL que no ve los forks escritos como handles.
+- 🆕 **`P386`** — el par (`sha256`, titular) **no transporta linaje cuando el titular está
+  ausente**; con licencia prístina funde proyectos no emparentados. Compuerta: abstenerse.
+- 🆕 **`P387`** — coincidencia de fecha entre dos instrumentos **no** es fusión (Corea + Singapur,
+  `2026-01-22`, ambas reales, ambas cronometradas contra Davos).
+- 🔴 **Acción D REFUTADA** — la consulta sin ancla de año devolvió hechos **más viejos**
+  (2023-2025), no más nuevos. La deriva de `P382` no es del token del año.
+
+### 📌 Deriva de ★ en la banda EXACTA (`P353`), lo que se pudo leer
+
+| Repo | ★ este pase | Lectura previa | Δ |
+|---|---|---|---|
+| `webtech-network/autograder` | **61** | — (primera lectura de ★) | n/d |
+| `mazhar266/fedena` | **5** | — (primera lectura de ★) | n/d |
+
+⚠️ **`P365` sigue NO evaluable** y se re-registra contra **`2026-10-06T10:48Z`**, el mismo instante
+absoluto que fijó el pase 114. **Faltan 19 h 03 m.** No se re-basa.
 
 ## 2026-10-05 — pase 117: barrido 46, 7 filas nuevas, y los dos modos en que un hecho REAL llega falso
 

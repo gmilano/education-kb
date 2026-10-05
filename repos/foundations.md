@@ -27,6 +27,63 @@ updated: 2026-10-05
 > **Pase 99 del 2026-10-04:** 🟢 **7 altas fundacionales, y son DOS CAPAS que este estante no tenía: el ALMACÉN xAPI y la librería de ÍTEMS QTI.** El barrido obligatorio (`open source platform education ERP CRM MIT Apache`) devolvió por vigesimosexta vez el eje generalista (ERPNext/Frappe, Odoo, OFBiz, Huly, AureusERP) — **cero** piezas fundacionales educativas nuevas. 🟢 **Pero el EJE ROTADO que el pase 98 pre-registró sí rindió: 15 candidatas medidas → 9 licenciadas, 6 sin cesión**, y 7 de las 9 son repo fundacional. 🔵 **Lo que abren no es un tema nuevo sino la OTRA MITAD de dos temas que esta base tenía a medias: tenía el CLIENTE xAPI (`learnmcp-xapi`) y no el ALMACÉN; tenía REPRODUCTORES de ítems QTI (`qti3-item-player`, `pie-qti`) y no las librerías de GENERACIÓN y MIGRACIÓN.** 🔴 **`P304` — el ancla BSD del control compartido estaba escrita como FRASE CONTIGUA y perdía una familia PERMISIVA:** `instructure/QTIMigrationTool` es BSD-3-Clause real (University of Cambridge, 1.392 B) y volvía `UNCLASSIFIED`, porque su oración de concesión inserta *«of this software»* y *«(where applicable)»* dentro de la frase canónica. **Cuarto eje del mismo defecto** (`P171` cuerpo-vs-título, `P288` caja, `P299` palabra-vs-subcadena, `P304` frase-vs-tokens-ordenados). 🟢 **`lib/license_family.sh` 50/50 → 62/62** (3 controles negativos), **51 suites pasan, 0 fallan**. 🔴 **`P305` — `adlnet/xapi-lab` declara DOS familias en DOS payloads del mismo repo:** `LICENSE` dice **MIT** (titular `Tyler Mulligan`, 2015) y el `README` dice **Apache-2.0** (titular `Advanced Distributed Learning`, 2016) — **familia, titular y año discrepan a la vez**, y la obligación de atribución corre hacia una parte distinta según cuál gobierne. 🟢 **`P306` — `examplary/qti` ≡ `examplary-ai/qti`, byte-idénticos en 3 archivos, y el REGISTRO desempata:** `registry.npmjs.org/@examplary/qti` nombra `github.com/examplary/qti` como canónico y confirma `MIT` por un canal independiente del payload. Ver **`P304`**–**`P306`**.
 
 
+## 🟢 Pase 118 del 2026-10-05 (lectura `15:58Z`) — el `sha256` del `LICENSE` deja de servir como identidad de repo, y afecta a las filas Apache-2.0 de este archivo
+
+### 🔴 `P386` — con licencia prístina, el fingerprint vale 0 bits de procedencia
+
+Este archivo usa el `sha256` del archivo de licencia como prueba de cesión. 🔬 **Medido sobre el
+estante entero este pase: de 54 fingerprints, el extractor anclado da **3** racimos y el permisivo **22**; **vetados a mano fila por fila quedan 4** (≥2 repos con binding real).** Tres de
+esos racimos son **linaje de fork real** y tienen **titular presente en el texto**. Uno no:
+
+| `sha256` | Licencia | Bytes | Titular | Repos | Relación entre ellos |
+|---|---|---|---|---|---|
+| `c71d239df917` | **Apache-2.0** | **11.357** | 🔴 **ausente por construcción** → `NOT-APPLICABLE` | **3** | 🔴 **ninguna** |
+
+**Los tres repos, con lo que cada uno ES:**
+
+| Repo | ★ | Qué es | Región | Verificación |
+|---|---|---|---|---|
+| [`buriro-ezekia/mwalimulens-agent`](https://github.com/buriro-ezekia/mwalimulens-agent) | 0 | Agente de seguimiento **longitudinal** de evidencia de aprendizaje | **EMEA** (África) | pase previo |
+| [`mazhar266/fedena`](https://github.com/mazhar266/fedena) | **5** | **ERP escolar / gestión de campus** (Ruby on Rails) | Global | 🟢 `WebFetch` este pase |
+| [`webtech-network/autograder`](https://github.com/webtech-network/autograder) | **61** | **Autocorrector** de entregas: rúbrica configurable, sandbox, GitHub Actions, multi-lenguaje | Global | 🟢 `WebFetch` este pase |
+
+🔴 **Un agente docente, un ERP de campus y un autocorrector de código con el mismo `sha256`.** No
+hay fork, no hay linaje, no hay titular compartido: hay **un boilerplate de 11.357 B que Apache-2.0
+publica sin nombre adentro**. 🔵 **Consecuencia para este archivo: en las filas Apache-2.0 el
+fingerprint prueba *qué licencia es*, pero NO *de quién viene el código*.** La procedencia se prueba
+por árbol de archivos y encabezados, no por hash del `LICENSE`. Compuerta en
+`p386-pristine-dedup-gate/`.
+
+⚠️ **Y el alcance es mayor de lo que parece, porque toca la licencia preferida del comprador
+público de EMEA.** Cuando un pliego pide trazar procedencia de un componente Apache-2.0, el
+expediente no puede apoyarse en el hash de la licencia.
+
+### 🆕 `P385` — el censo de este archivo depende de la CONVENCIÓN con que se escribieron sus filas
+
+🔬 **El mismo censo, con dos extractores:**
+
+| Extractor | Fingerprints | Racimos |
+|---|---|---|
+| anclado a `github.com/owner/repo` | 54 | **3** |
+| agnóstico de convención (permisivo) | 54 | **22** |
+| 🔬 vetado a mano, fila por fila | 54 | 🟢 **4** |
+
+🔴 **El anclado a URL no ve la familia de 8 forks de `vishalsachdev/canvas-mcp`**
+(`sha256:5385a26e2face987`, MIT 1.071 B, titular `Copyright (c) 2025 Vishal Sachdev`) porque esas
+filas escriben los miembros como **handles pelados** (`\`sirdanielm\``, `\`fdis111\``,
+`\`BartMassey-upstream\``, `\`abr-Projects\``, `\`lindsay-cheng\``, `\`AmirF194\``) y no como
+URLs. 🔵 **Un auditor de este archivo mide la PROSA, no el DATO, mientras el binding no viva en una
+celda estructurada.** El número honesto es el intervalo **`[3, 22]`**, y lo vetado a mano son **4**.
+
+### 🟢 Re-medición, y se dice que NO son altas
+
+**0 altas de foundations este pase, con el cero enumerado:** las 14 candidatas del barrido global
+—`Sakai`, `OpenEduCat`, `Chamilo`, `Canvas LMS`, `ILIAS`, `Open-TutorAi`, `DeepTutor`,
+`freelingo`, `classroomio`, `Study-Mate` y las 4 piezas MCP— **ya están publicadas** en este
+estante. Se re-confirma el hecho estructural que el pase 114 midió y que sigue siendo el que más
+pesa en una decisión de arquitectura: **de las plataformas verticales medidas, la mayoría es
+copyleft ⇒ en educación, elegir plataforma ES elegir licencia.**
+
 ## 🟢 Pase 117 del 2026-10-05 (lectura `14:45Z`) — 2 cimientos permisivos, y la cesión que se segmenta por estado de COMPILACIÓN
 
 **Canal, medido ESTE pase a las `2026-10-05T14:45Z` y no heredado (`P249`/`P366`), con control negativo en cada sonda** (`gmilano/this-repo-does-not-exist-zzq7`):

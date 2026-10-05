@@ -7,6 +7,7 @@ updated: 2026-10-05
 # 📈 Repos trending — education
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
+> **Pase 118 del 2026-10-05 (lectura `15:58Z`):** 🔴 **El canal generalista falla por TERCERA vez del mismo modo y la regla ya está medida: las 4 consultas globales obligatorias devolvieron el eje *enseñar-sobre-IA* (listas de «mejores agentes 2026», `awesome-ai-agents-2026`, `500-AI-Agents-Projects`) y no el de *IA-en-educación*.** 🔴 **14/14 candidatas ya publicadas ⇒ 0 altas de repo, cero ENUMERADO.** 🟢 **Canal medido este pase y no heredado (`P366`): `WebFetch` → `github.com` **VIVO** (licencia + ★ leídas de `mazhar266/fedena` y `webtech-network/autograder`) · 🔴 `curl -sI github.com` **403** en 7/7 · 🔴 `curl` a sitios jurídicos **000** en 4/4 · 🔴 `WebFetch` a `allenandgledhill.com` y `globalpolicywatch.com` **EGRESS_BLOCKED por dominio**.** 🆕 **`P385` sobre este archivo también: el `sha256` de licencia que esta base usa como identidad **no identifica un repo** cuando la licencia es prístina — `c71d239df917` (Apache-2.0, 11.357 B) es el MISMO en un agente de África, un **ERP escolar** y un **autocorrector**, tres proyectos sin relación ⇒ **un *trending* de licencias permisivas se puede inflar sin forkear nada, simplemente eligiendo Apache-2.0.**** 🔵 **`webtech-network/autograder` (**61 ★**, Apache-2.0, rúbrica + sandbox + GitHub Actions) y `mazhar266/fedena` (**5 ★**, Apache-2.0, ERP de campus en Rails) quedan con ★ leídas de payload por primera vez.**
 > **Pase 117 del 2026-10-05:** 🔴 **El canal generalista vuelve a fallar del mismo modo y ya es medible como regla: las consultas globales obligatorias devolvieron el eje *enseñar-sobre-IA* (`ai-engineering-from-scratch`, `awesome-llm`, listas de empleos) y no el de *IA-en-educación* — mientras la consulta NOMINAL rindió 7 filas.** 🟢 **Canal medido este pase, no heredado: `raw.githubusercontent.com` **DISCRIMINA** · `git ls-remote --symref` **DISCRIMINA** y además devuelve la rama por defecto (el instrumento que `P269` pedía) · `WebFetch` **VIVO** (3.er pase) · 🔴 `curl -sI github.com` **403/403** con DOS líneas de estado y `200` del proxy en la primera (`P366` + `P372` juntos) · 🔴 `api.github.com` **403/403**.** 🟢 **Ramas por defecto que NO son `main`, leídas y no asumidas: `pupilfirst` → `master`, `frappe/lms` → `develop`, `openedx/openedx-platform` → `master` (404 en `main`).** 🆕 **`P379`: dos repos del linaje `ai-tutor` con `LICENSE` de `sha256` idéntico ⇒ el *trending* de licencias permisivas se puede inflar forkeando.**
 > **Pase 115 del 2026-10-05:** 🟢 **El trending de la industria DEJA de estar vacio por el canal del CURRICULO, no por el generalista: las 4 consultas globales obligatorias volvieron a devolver el eje de *enseñar-sobre-IA* (`ai-agents-for-beginners`, `agents-from-scratch`, roadmaps) y no el de *IA-en-educacion* — mientras el ancla de curriculo en idioma local rindio una cohorte LATAM entera.** 🟢 **Altas con fecha de commit leida de clon shallow: `portabilis/i-educar` **2026-10-02** (717 ★, **547 forks** — ratio de fork **0,76**, firma de software que se DESPLIEGA por municipio y no que se mira) · `thiagoluzin/pemara-edu-mira` **2026-09-27** · `eai6/ai-tutor` **2026-08-20** · `yunger7/enem-api` **2025-12-14** (la API del banco de items del ENEM lleva ~10 meses sin tocarse, asi que NO trae el examen 2026).** 🔴 **`portabilis/i-educar` tiene rama por defecto **`2.12`**, no `main` ni `master`: leer su `LICENSE` de `master` —como hizo el primer intento de este pase— es leer una rama que NO es la por defecto (`P269`: el conjunto es propiedad del par *(repo, ref)*).** 🔵 **Canal, medido este pase y no heredado (`P366`): 🟢 `raw.githubusercontent.com` 200/404 DISCRIMINA · 🟢 `git ls-remote` sha/`fatal` DISCRIMINA · 🟢 `WebFetch` payload/404 DISCRIMINA (vivo, 2º pase seguido) · 🔴 `curl -sI github.com` y `api.github.com` **403/403**, y leido con `head -1` da **200 al repo inventado** (🆕 `P372`).** ⚠️ **Y una restriccion de acceso declarada: los tools `mcp__github__*` estan presentes pero la sesion esta acotada a `gmilano/*`, asi que la capa de API autenticada NO es un canal disponible para repos de terceros en esta corrida.**
 > **Pase 114 del 2026-10-05:** 🆕 **`openedx/edx-platform` RENOMBRO a `openedx/openedx-platform`** (8.2k ★, AGPL-3.0): la URL vieja redirige, asi que nada se rompe HOY, pero el `full_name` canonico cambio y un *pin* al viejo es deuda silenciosa que ningun 301 anuncia. 🟢 **4 foundations permisivas re-medidas de payload: `oppia` (Apache-2.0, 6.8k ★), `sakai` (ECL-2.0, 1.2k ★), `kolibri` (MIT, 1.1k ★), `pyBKT` (MIT, 281 ★).** 🔴 **Y el dato estructural con denominador: de 11 plataformas verticales medidas hoy, solo **4 son permisivas** y 7 son copyleft ⇒ en educacion elegir plataforma ES elegir licencia.** 🔵 **`kolibri` es la de mejor relacion licencia/encaje para contextos sin conectividad: MIT **y** *offline-first* por diseño.**
@@ -17,6 +18,63 @@ updated: 2026-10-05
 > **Pase 107 del 2026-10-05:** 🔴 **Trending de la industria vacio por TRIGESIMOSEXTA vez: curriculo, catalogos, una bolsa de trabajo y dos generalistas (`microsoft/semantic-kernel` 27.470 ★, `NousResearch/hermes-agent` MIT), con las SEIS cifras del eje generalista identicas digito a digito a los pases 105 y 106 ⇒ informacion sobre el CANAL, no sobre la industria.** 🟢 **Lo que SI se movio es una capa de BINARIOS que este archivo nunca conto: 2.443 archivos de figura (~156 MiB, 1.326 imagenes distintas) en `CAHLR/OATutor-Content`, con la extension `.gif` falsa en 2.443 de 2.443 (`P332`).** 🔵 **`git ls-remote` da TRES refs, y una se llama `gpt-science-study`: la unica de este arbol cuyo nombre anuncia contenido sintetico.** 🔴 **Defecto propio corregido: los 49.481 JSON contra los 49.479 del pase 106 son los 6 caminos con bytes de control (U+007F/U+0080/U+0081) en el nombre del paso — la identidad de un paso NO es un slug seguro.**
 > **Pase 106 del 2026-10-05:** 🔴 **Trending de la industria vacio por TRIGESIMOQUINTA vez: el canal devuelve generalista o educativo-sobre-AI, no AI-para-educacion.** 🟢 **Lo que SI se movio esta en el eje de `ref` y no de repo: las ramas `1e` de 5 bundles de `openstax` contienen la UNICA cesion `CC BY 4.0` de 10 colecciones cuyas versiones vivas son `NC-SA` — cesion y vigencia apuntan en direcciones opuestas.** 🔵 **Canal nuevo calibrado: `git ls-remote` para enumerar refs (responde a repo real, falla a repo inventado), el unico de este arbol que contesta «que refs tiene este repo» con `api.github.com` en 403 — sin el, la accion A de este pase era imposible.**
 
+
+## 2026-10-05 — pase 118: el canal generalista falla por tercera vez igual, y el fingerprint de licencia deja de ser identidad
+
+### 🔬 Canal, medido este pase y no heredado (`P366`)
+
+| Canal | Resultado | Discrimina |
+|---|---|---|
+| `WebFetch` → `github.com` | payload con licencia y ★ | 🟢 **sí** |
+| `curl -sI github.com` | **403** en 7/7 repos | 🔴 no |
+| `curl -I` → eversheds / allenandgledhill / bakermckenzie / cms.law | **000** en 4/4 | 🔴 no |
+| `WebFetch` → `allenandgledhill.com`, `globalpolicywatch.com` | `EGRESS_BLOCKED` | 🔴 **bloqueado por dominio** |
+
+### 🔴 El fallo del canal generalista, por tercera vez y con la misma firma
+
+Las 4 consultas globales que el encargo fija devolvieron: listas de «10 mejores agentes open source
+2026», `ARUNAGIRINATHAN-K/awesome-ai-agents-2026`, `ashishpatel26/500-AI-Agents-Projects`,
+`OpenClaw`, `OpenHands`, `CrewAI`, `AI Agents for Beginners`. 🔵 **Todos son el eje
+*enseñar-sobre-IA* o agentes de propósito general — ninguno es *IA-en-educación*.** Es la misma
+firma que los pases 112, 113, 115 y 117 registraron. **Ya no es una observación: es el
+comportamiento esperado del canal, y el canal que rinde en este estante es el NOMINAL o el de
+TÓPICO, no el de prosa.**
+
+### 🔴 Altas de repo: 0, enumeradas
+
+14 candidatas → 14 ya publicadas. Incluye las 6 piezas MCP de LMS
+(`toshieji/moodle-grading-mcp`, `vishalsachdev/canvas-mcp`, `CharlieCardenasToledo/mcp-canvas-server`,
+`sirdanielm/canvas-mcp`, `a2br/moodle-mcp`, `DMontgomery40/mcp-canvas-lms`) y las 8 plataformas
+(`Open-TutorAi`, `DeepTutor`, `freelingo`, `classroomio`, `Sakai`, `OpenEduCat`, `Chamilo`,
+`ILIAS`).
+
+### 🆕 Lo que este pase le hace a ESTE archivo: el fingerprint deja de ser identidad (`P385`/`P386`)
+
+| `sha256` | Licencia | Bytes | Repos que lo comparten | ¿Linaje real? |
+|---|---|---|---|---|
+| `5385a26e2face987` | MIT | 1.071 | **8** (familia `canvas-mcp`, titular *Vishal Sachdev*) | 🟢 **sí** — fork real |
+| `cfb32038c0ba` | MIT | 1.080 | 2 (`RohanMuppa`/`sharziki` `purdue-mcp`) | 🟢 **sí** — fork real |
+| `de8107bf9312` | MIT | 1.073 | 2 (`krishna16-origin`/`maxew6`) | 🟢 **sí** — fork real |
+| `c71d239df917` | **Apache-2.0 prístina** | **11.357** | **3 SIN relación** | 🔴 **NO** — boilerplate |
+
+🔴 **La fila de abajo es la que rompe el método:** `buriro-ezekia/mwalimulens-agent` (agente de
+evidencia longitudinal, EMEA/África), [`mazhar266/fedena`](https://github.com/mazhar266/fedena)
+(**ERP escolar** Rails, **5 ★**, verificado por `WebFetch`) y
+[`webtech-network/autograder`](https://github.com/webtech-network/autograder) (**autocorrector**
+con rúbrica, sandbox y GitHub Actions, **61 ★**, verificado por `WebFetch`) **comparten el
+fingerprint y no comparten nada más.** El `LICENSE` de Apache-2.0 es un boilerplate fijo que **no
+lleva titular adentro**.
+
+🔵 **Consecuencia para un archivo que se llama *trending*: la cuota de «licencias permisivas» de
+este estante se puede inflar SIN forkear nada — basta con que varios proyectos no emparentados
+elijan Apache-2.0.** El indicador de permisividad por fingerprint hay que **contarlo por repo**, no
+por hash.
+
+### 🔵 Ramas y lecturas confirmadas, sin novedad
+
+Se re-confirma lo ya publicado y **se dice que es re-medición, no alta**: `pupilfirst` → `master`
+(y su `docs/` es **CC BY-SA 4.0**, share-alike), `frappe/lms` → `develop`,
+`openedx/openedx-platform` → `master`, `portabilis/i-educar` → `2.12`.
 
 ## 2026-10-05 — pase 117: el canal nominal rinde y el generalista no, y las ramas por defecto que no son `main`
 

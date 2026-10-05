@@ -26,6 +26,82 @@ updated: 2026-10-05
 > **Pase 97 del 2026-10-04:** 🆕 **Los patrones nuevos son `P294`, `P295`, `P296` y `P297`, y los cuatro salen de cablear una sola pieza.** 🔴 **`P294` es el que cambia cómo esta base se audita a sí misma: un control que no está en el camino por donde pasan los datos no es un control, es una demostración — el pase 96 diagnosticó la ceguera a Java/Maven, escribió el lector correcto (`p289`, 11/11) y no lo conectó, así que `PARSERS` siguió con cinco nombres y el hueco siguió abierto donde se producen los veredictos.** 🔴 **`P295` es el mismo defecto en la prosa: `trend-backlink-audit` existe desde el pase 49 para atrapar citas colgadas y era CIEGO a la forma con que esta base ANUNCIA sus tendencias («tendencias nuevas, numeradas 745–752» → 0 citas), así que catorce números quedaron sin sección sin que nada lo marcara; y de paso era lossy en castellano, porque aceptaba «a» como conector y no como marca de rango.** 🟢 **`P296` es el que paga en una entrega: el veredicto de licencia tiene DOS canales independientes —la declaración del manifiesto y el payload del archivo— y medidos sobre la capa Java/Maven concuerdan 4 de 4 exactos, 1 de familia, 0 contradicciones; el manifiesto CORROBORA y además es la única fuente donde no hay archivo (`kuali/kc`).** 🟢 **`P297` es la pieza técnica que lo hizo posible: en Maven la identidad de propiedad es el `groupId` —un namespace reverse-DNS que codifica a la organización— y el `<parent>` NO presta ni identidad ni licencia.** 🆕 **La receta nueva es `R-97-COMPRA-SOBERANA-APAC`, y es cotizable porque la condición de compra que la dispara quedó medida este pase: la soberanía decidirá la infraestructura de ~la mitad de las empresas de APAC.**
 
 
+## 🟢 Pase 118 del 2026-10-05 (lectura `16:00Z`) — dos recetas nuevas: la matriz de responsabilidad de la IMDA, y la compuerta que impide fundir repos ajenos
+
+### 🧩 `P118-A` — Corrección asistida con cadena de responsabilidad IMDA y liberación humana
+
+**Para qué sirve:** entregar corrección automática en una institución que está bajo (a) supervisión
+humana obligatoria tipo Norteamérica, (b) alto riesgo del AI Act en EMEA, o (c) el reparto de
+responsabilidad civil que la IMDA escribió para APAC — **con la misma arquitectura en los tres
+casos.**
+
+**Piezas, todas verificadas en este estante y todas permisivas:**
+
+| Capa | Repo | Licencia | Rol exacto |
+|---|---|---|---|
+| **Cálculo de nota** | [`webtech-network/autograder`](https://github.com/webtech-network/autograder) | **Apache-2.0** (61 ★) | Ejecuta la entrega en **sandbox**, aplica rúbrica del docente, emite **reporte con desglose** |
+| **Escritura en el LMS** | [`toshieji/moodle-grading-mcp`](https://github.com/toshieji/moodle-grading-mcp) | **MIT** (titular WACA, Japón) | Expone Moodle Web Services como I/O de corrección; **escribe borradores NO liberados** (7 tools) |
+| **Alternativa Canvas** | [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | **MIT** (titular *Vishal Sachdev*) | Misma capa sobre Canvas LMS |
+| **SIS / expediente** | [`mazhar266/fedena`](https://github.com/mazhar266/fedena) | **Apache-2.0** (5 ★) | ERP de campus (Rails) donde vive el registro institucional |
+
+**Cómo se cablea, y el orden importa:**
+
+1. `autograder` corre en CI (**GitHub Actions**) contra la entrega; **nunca** toca el LMS.
+2. Su reporte entra al MCP como **borrador**. 🔴 **El MCP escribe en estado NO liberado — esa es la
+   compuerta, y es de diseño, no de configuración.**
+3. **El docente libera.** La liberación es el único evento que cambia la nota visible.
+4. El expediente —entrada, rúbrica, salida, quién liberó, cuándo— se persiste junto al registro del
+   SIS.
+
+🟢 **La matriz de responsabilidad que se adjunta a la propuesta, con las casillas de la IMDA:**
+
+| Casilla IMDA | Quién es acá | Qué prueba el expediente |
+|---|---|---|
+| desarrollador del modelo | el proveedor del LLM | contrato de modelo, no de Globant |
+| **proveedor de herramientas** | 🔴 **Globant** (el MCP es la herramienta) | que la herramienta **no puede** publicar nota por sí sola |
+| **proveedor del sistema** | 🔴 **Globant** (la integración) | compuerta de liberación + traza por alumno |
+| *deployer* | la institución | que la supervisión docente ocurrió, con firma y hora |
+| usuario final | el docente | la decisión de liberar fue humana |
+| tercero afectado | el alumno / la familia | derecho a la traza y a la explicación de la nota |
+
+🔵 **Por qué esta tabla cierra ventas en tres regiones con un solo diseño:** Norteamérica exige
+supervisión humana y prohíbe decisión automática de alto impacto; EMEA clasifica la evaluación como
+alto riesgo y pide supervisión + trazabilidad; APAC pide saber **en qué casilla** cae cada actor.
+**La compuerta de liberación satisface a las tres.** ⚠️ Y con **AB 1159** de California vigente, el
+contrato tiene que decir además que el dato del alumno **no entrena** el modelo.
+
+**Esfuerzo estimado:** 6-8 semanas para un piloto de una facultad (MCP + `autograder` + expediente),
++3-4 semanas por cada LMS adicional.
+
+### 🧩 `P118-B` — Compuerta de procedencia: no deduplicar por fingerprint cuando la licencia es prístina
+
+**El defecto que previene, medido en esta base:** el par (`sha256` de licencia, titular) que el
+pase 117 propuso como deduplicador **funde proyectos sin relación**. `c71d239df917` (Apache-2.0,
+**11.357 B**, titular ausente) liga un agente docente de África, un **ERP escolar** y un
+**autocorrector**. Con titular ausente el par es **(constante, constante)**.
+
+**La receta, en 4 pasos y sin dependencias:**
+
+1. **Leer el `LICENSE` de la rama por defecto** — no de `main` asumido (`P269`: el conjunto es
+   propiedad del par *(repo, ref)*; `i-educar` → `2.12`, `pupilfirst` → `master`).
+2. **Detectar boilerplate prístino por tamaño y hash conocidos.** Apache-2.0 = **11.357 B**. Si
+   coincide ⇒ marcar `HOLDER-ABSENT`.
+3. 🔴 **Compuerta: si `HOLDER-ABSENT`, el deduplicador se ABSTIENE.** El fingerprint vale **0 bits
+   de procedencia**; no fusionar, no contar linaje, no inferir fork.
+4. **Si el titular está presente, deduplicar por el par (`sha256`, titular)** — ahí sí transporta
+   linaje (lo confirman las familias `canvas-mcp`, `purdue-mcp` y `ai-tutor`).
+
+⚠️ **Y el paso que `P385` agrega, porque sin él el censo miente:** leer el binding
+fingerprint→repo de una **celda estructurada**, no de la línea de prosa. Medido: extractor anclado
+a URL = **3 racimos**; permisivo = **22**; vetados a mano = **4**. **El número honesto es el intervalo `[3, 22]`**, y el
+extractor anclado **no deduplicaría la familia de 8 forks que más lo necesita**.
+
+**Dónde se usa en un engagement:** en la *due diligence* de licencias de la semana 1. 🔵 **Si el
+cliente opera en EMEA, donde el comprador público prefiere Apache-2.0, este paso no es opcional: es
+justo el terreno donde el hash del `LICENSE` no prueba nada.**
+
+**Instrumentos:** `p385-binding-interval/`, `p386-pristine-dedup-gate/`, `p387-shared-date-control/`.
+
 ## 🟢 Pase 117 del 2026-10-05 (lectura `14:45Z`) — `R-P117-A`: entregar un LMS cuando la cesión depende del estado de compilación
 
 ### 🧩 `R-P117-A` — LMS entregable con tutor AI, con la frontera de licencia decidida en semana 1
