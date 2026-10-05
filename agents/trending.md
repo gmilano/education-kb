@@ -8,6 +8,7 @@ updated: 2026-10-05
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 > No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
+> **Pase 119 del 2026-10-05:** 🟢 **1 alta MIT con 6,4k ★ (`microsoft/agent-governance-toolkit`, plantilla FRIA del art. 27 con §3.6 «Right to Education» leída del archivo), 2 rechazos sin licencia, y 1 versión nueva de ayer: `HKUDS/DeepTutor` `v1.6.13` del `2026-10-04`.** 🔴 **Hueco de OFERTA declarado y no de sonda: el art. 31 de la *AI Basic Act* de Corea (vigente `2026-01-22`) exige etiquetar la salida generativa y **CERO** implementaciones open source lo cumplen. ⚠️ Y no se cierra con C2PA: C2PA resuelve procedencia firmada (art. 50(2) europeo), el art. 31(3) coreano pide marca PERCEPTIBLE por el usuario final.** ⏸️ **Sub-eje IMDA/*deployer*: 0 nuevo — `aiverify` y `moonshot` ya estaban.**
 > **Pase 118 del 2026-10-05 (lectura `15:57Z`):** 🔴 **0 altas, y el cero está ENUMERADO: el canal de oferta devolvió 14 candidatas y las 14 ya están publicadas en este estante ⇒ saturación medida, no silencio.** 🟢 **Las 4 acciones pre-registradas del pase 117 corridas: B y C CONFIRMADAS, D **REFUTADA** por su propia cláusula, A no evaluable (faltan 19 h 03 m para `2026-10-06T10:48Z`, **sin re-basar**).** 🆕 **`P385` — el conteo de colisiones de licencia no es un número sino un **INTERVALO `[3, 22]`**: el extractor anclado a URL se pierde el racimo MÁS GRANDE de la base (la familia de 8 forks de `vishalsachdev/canvas-mcp`, `sha256:5385a26e2face987`) porque esas filas nombran los forks como **handles pelados**; el permisivo infla ligando todo repo de la MISMA LÍNEA. Un binding cosechado de PROSA está sesgado por las dos puntas.** 🆕 **`P386` — el par (`sha256`, titular) que `P379` propuso como deduplicador **FUNDE proyectos ajenos**: `c71d239df917` (Apache-2.0 **prístina**, 11.357 B, titular ausente) liga **3 repos SIN relación** — `buriro-ezekia/mwalimulens-agent` (agente, EMEA/África) + `mazhar266/fedena` (**ERP escolar**, 5 ★) + `webtech-network/autograder` (**autocorrector**, 61 ★), los dos últimos verificados por `WebFetch` este pase. Con titular ausente el par es (constante, constante) ⇒ el deduplicador debe ABSTENERSE.** 🆕 **`P387` — control negativo de `P381`: Corea (*Framework Act*) y Singapur (marco agéntico IMDA) comparten `2026-01-22` y la fecha es **REAL en los dos** (Davos) ⇒ coincidencia de fecha NO es evidencia de fusión.** 🟢 **Hecho neto del barrido: 1 — la IMDA publicó un *Discussion Paper on Legal Responsibility for AI Agents* (mayo 2026, 7 casillas de cadena de valor), del que esta base tenía la FECHA (`2026-05-20`) y no el INSTRUMENTO.**
 > **Pase 117 del 2026-10-05:** 🟢 **Barrido 46: 4/4 regiones, 0 silencios, denominador ENUMERADO con `grep` antes de escribir — 23 hechos sondeados, 20 ya publicados, 3 candidatos.** 🔴 **Y de los 3: **2 son reales con la fecha corrida ~2 años** (UK £4 M es del **2024-08-29**; TEQSA es del **2024-06-03**) y **1 se RECHAZA por fusión** ⇒ 🆕 `P382` (el ancla `{year}` premia páginas que MENCIONAN el año, no eventos ocurridos en él) y 🆕 `P381` (nombre de un instrumento + fecha de OTRO; las dos mitades reales, falso sólo el PAR).** 🟢 **7 filas nuevas de agente, todas de ★ de un dígito o cero.** 🆕 **`P379` con identidad criptográfica: fork y upstream con el MISMO `sha256` de licencia ⇒ 2 repos, 1 cesión, 1 titular.** 🔴 **LATAM devolvió **0 hechos nuevos sobre 7 sondas**: es hoy la región MÁS saturada de este estante, que es la segunda corrección consecutiva del relato del hueco LATAM (la primera fue `P370`).**
 > **Pase 115 del 2026-10-05:** 🟢 **Barrido 44 (4/4 regiones, 0 silencios) y 5 ALTAS verificadas de payload, pero el hallazgo del pase no es un alta: es que esta base declaraba un hueco que su propio indice refuta.** 🆕 **`P370`/`P371` con instrumento (`p370-gap-gate/`, **27/27**): 29 huecos con region → **2 CONTRADICHOS**, **27 sin marcador de alcance**; y **12 repos UBICADOS en LATAM** contra el «CERO repositorios» declarado 4 pases seguidos.** 🟢 **Las altas: `eai6/ai-tutor` (MIT, titular **World Bank Group**, Seychelles, EMEA, produccion en Azure, **0 ★**) · `portabilis/i-educar` (**GPL-2.0**, 717 ★ / **547 forks**, Brasil, commit del **2026-10-02**, rama por defecto **`2.12`**) · `yunger7/enem-api` (**GPL-2.0**, 349 ★, Brasil, ultimo commit **2025-12-14**) · `Magnusvron/llm-benchmark-quality-index` (**MIT** codigo + **CC BY 4.0** dato, **Mexico** — CICATA-Queretaro, Instituto Politecnico Nacional) · `thiagoluzin/pemara-edu-mira` (MIT, **1 commit**, Brasil, LAN sin internet).** 🔴 **Y una candidata RECHAZADA con el motivo escrito: `madununes07/IA-na-escola` es `index.html` + `style.css` + `script.js` sin descripcion — el buscador la devolvio por el TEXTO DE LA LICENCIA, no por la pieza.** 🆕 **`P373` — una CIFRA puede llegar inventada adosada a un artefacto REAL: el resumen de busqueda atribuyo «1.517 habilidades» a `conectabncc`, que no publica ese numero. Hermano numerico de `P367`, y mas dificil de cazar porque el artefacto SI existe: el conflicto 1.517-vs-1.721 se disuelve antes de publicarse.** 🔵 **Tablero 70/70.**
@@ -18,6 +19,62 @@ updated: 2026-10-05
 > **Pase 110 del 2026-10-05:** 🔴 **0 altas permisivas (trigesimosegundo barrido), cero ENUMERADO: 6 candidatas → 4 ya publicadas (`P311`), 2 nuevas sin cesion.** 🟢 **Lo que SE MUEVE este pase no es el trending: es que las ESTRELLAS VUELVEN a ser medibles — `WebFetch` sobre `github.com` sirve 200 donde `curl` da 403, con control negativo en 404.** 🔴 **Y al volver, cobran: `OATutor` 264 ★ contra «~1,5k» publicado, y `open-tutor-ai-CE` BSD-3-Clause / 108 ★ contra «Apache-2.0 / ~600 ★».**
 > **Pase 107 del 2026-10-05:** 🔴 **0 altas permisivas (trigesimo barrido, 3 candidatas MEDIDAS del payload y las 3 con su bloqueo nombrado) y las TRES acciones pre-registradas corridas: A con la cota NO CERRADA y su clausula de atribucion FALSIFICADA, B CONFIRMADA, C CONFIRMADA en dos clausulas y FALSIFICADA en la tercera.** 🔴 **`P332`: la EXTENSION de un archivo de imagen no es su FORMATO — 2.443 de 2.443 `.gif` son PNG/JPEG/WEBP, y un barrido por extension habria dado «0 solapamiento» desde una premisa falsa.** 🔴 **`P334`: el titular de una FIGURA se resuelve por BYTES y vive en una obra DISTINTA de la que el item cita (36 pares leidos).** 🔴 **`P333`: `fa4e32e5e622` era la huella del archivo SIN su salto final — defecto de dato, no de upstream.** 🔴 **`P335`: tercera sub-clase de `P320` — lo denegado fue el LOTE, no la pieza nombrada.** 🟢 **Canal nuevo: `gitlab.com/-/raw`.**
 > **Pase 106 del 2026-10-05:** 🟢 **0 altas (vigesimonoveno barrido, 5 candidatas, las 5 frenadas por el gate de `P311`) y las TRES acciones pre-registradas corridas: A CONFIRMADA, B FALSIFICADA, C CONFIRMADA.** 🔴 **`P328`: la cesion de un OER se ESTRECHA entre ediciones — 10 de 10 colecciones con el mismo `collection-id` pasan de `CC BY 4.0` en `1e` a `CC BY-NC-SA 4.0` en `main`, y el slug cambia de nombre, que es por lo que esta base no lo veia.** 🔴 **El denominador se corrige de 13.371 a 82.492 unidades y aparece una capa sintetica de 6.886 unidades (`oer: openai`) sin cesion.** 🟢 **Canal nuevo: `git ls-remote` para enumerar refs — es el que abrio la accion A.**
+
+
+## 2026-10-05 — pase 119: 1 alta MIT con 6,4k ★, 2 rechazos sin licencia, y el agotamiento que se mide por OBLIGACIÓN y no por eje
+
+🟢 **La acción que el pase 118 pre-registró se corrió y rindió.** Entrar por el eje de la **obligación
+regulatoria** en vez de por «agente / repo / plataforma» destapó software — **pero sólo en uno de sus
+tres sub-ejes**, y eso es el hallazgo de método del pase (`P388`).
+
+### 🆕 Alta de la semana — y cierra una obligación que este estante seguía desde el pase 58
+
+| Agente / herramienta | Repo | Licencia | ★ | Por qué entra ahora |
+|---|---|---|---|---|
+| **AI Agent Governance Toolkit** | [`microsoft/agent-governance-toolkit`](https://github.com/microsoft/agent-governance-toolkit) | 🟢 **MIT** (`LICENSE` leído: «*MIT License / Copyright (c) Microsoft Corporation.*») | **6,4k** | Trae la **plantilla FRIA del art. 27** con **§3.6 «Right to Education»** — y esa sección se leyó abriendo `docs/compliance/fria-template.md`, no inferida del README |
+
+🔵 **Las dos preguntas literales de su §3.6** —**«*Does the system affect access to education?*»** y
+**«*Are admissions, grading, or assessment decisions involved?*»**— son **los dos supuestos del Anexo
+III punto 3** que este estante cotiza desde el pase 58. **La obligación estaba anotada; la herramienta
+faltaba.** Declara además cubrir **10/10 del OWASP Agentic Top 10**, que es la otra mitad de lo que un
+*deployer* educativo tiene que poder mostrar.
+
+### 🔴 Los 2 rechazos, medidos y dejados por escrito
+
+| Repo | Licencia | ★ | Motivo del descarte |
+|---|---|---|---|
+| [`XCINDYZ/AFRIA`](https://github.com/XCINDYZ/AFRIA) | 🔴 **ninguna** | 0 | Automatiza partes del FRIA con LLM (Python) — **sin archivo de licencia ⇒ todos los derechos reservados** |
+| [`sabuhi-huseynli-grc/High-Risk-Deployer-FRIA-Governance-Toolkit.`](https://github.com/sabuhi-huseynli-grc/High-Risk-Deployer-FRIA-Governance-Toolkit.) | 🔴 **ninguna** | 0 | Plantillas art. 27 en Markdown, **sin licencia** y **sin mención de educación** |
+
+### 🔬 Lo que el pase NO encontró, declarado como hueco de OFERTA y no de sonda
+
+🔴 **Sub-eje «etiquetado de salida generativa» (art. 31 de la *AI Basic Act* de Corea, vigente
+`2026-01-22`): CERO implementaciones open source.** El canal devuelve la obligación con detalle
+—art. 31(1) avisar que el servicio es IA, 31(2) indicar salida generativa, 31(3) marcar contenido
+sintético indistinguible de lo real, con excepción para obra artística— y **declara explícitamente que
+no trae herramientas OSS**, sólo huecos de aplicación. ⚠️ **Este hueco es de OFERTA, no de sonda:** la
+obligación es específica, está vigente y es extraterritorial, y **nadie publicó todavía la pieza
+permisiva que la cumpla.** 🔵 Lo más cerca que tiene este estante es `contentauth/c2pa-rs` /
+`c2pa-python`, que resuelve **procedencia** (metadato firmado) y no **etiquetado visible para el
+usuario final**, que es lo que el art. 31(3) pide. ⇒ **Hueco anotado, con la distinción técnica
+incluida para que la próxima corrida no lo cierre con el repo equivocado.**
+
+⏸️ **Sub-eje «casilla de *deployer* / IMDA»: 0 nuevo.** Devolvió `aiverify` y `moonshot` de la
+AI Verify Foundation, **los dos ya en este estante**. La fundación pasó de 4 miembros premier (Google,
+IBM, Microsoft, Salesforce) a **90+ organizaciones**; es contexto de tracción, no un repo nuevo.
+
+### 🆕 Versión nueva de una pieza que este estante ya tenía — y es de ayer
+
+**`HKUDS/DeepTutor` publicó `v1.6.13` el `2026-10-04`**, un día antes de este pase. Changelog leído de
+la página de *releases*: audio de lectura en voz alta con premio por quiz en *Immersive Reading*; marcas
+y notas con *timestamp* en *Immersive Watching*; práctica directa desde banco de preguntas con
+**barajado de opciones para no exponer la respuesta**; modelo de visión independiente con caché para
+descripción de imágenes; parseo en nube con **MinerU** para PDFs sobredimensionados; *timeout* de
+síntesis configurable con **DashScope Qwen-Audio y Qwen3 TTS**; **Requesty, API Route y FutureInfra**
+como proveedores LLM nuevos; **polaco** como idioma de interfaz. 🔵 **El barajado de opciones es la
+única línea del changelog con forma de requisito pedagógico y no de infraestructura** — es mitigación
+de fuga de respuesta, que es el eje de integridad que LATAM viene pidiendo (61 % de alumnos teme el
+mal uso de sus pares).
 
 
 ## 2026-10-05 — pase 118: 0 altas enumeradas, y el deduplicador del pase anterior funde tres proyectos ajenos

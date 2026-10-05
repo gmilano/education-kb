@@ -7,6 +7,7 @@ updated: 2026-10-05
 # 📡 Tendencias — education
 
 > Ventana de investigación: septiembre 2026. Verificado 2026-09-30; el pase 11, el 2026-10-01.
+> **Pase 119 del 2026-10-05:** 🟢 **Tendencias 918–921, y la del pase es de MÉTODO: 🆕 `P388` — la oferta open source de cumplimiento no es una curva, son TRES en estadios distintos al mismo tiempo (etiquetado generativo **vacía**, *testing* de gobernanza **saturada**, expediente FRIA **abriéndose**), y el estadio dice qué hacer: donde está vacía se CONSTRUYE, donde está saturada se INTEGRA, donde se abre se ADOPTA temprano.** 🟢 **Primera vez que el giro «de la experimentación a la gobernanza» que esta base escribe desde el pase 109 aparece como SOFTWARE PERMISIVO y no como afirmación de analista: plantilla FRIA MIT con 6,4k ★, y la AI Verify Foundation de 4 miembros premier a 90+ organizaciones.** 🔴 **Hueco de OFERTA vendible porque está vacío: el art. 31(3) coreano exige marca perceptible por el usuario final y no hay pieza OSS — y NO se cierra con C2PA, que cubre el art. 50(2) europeo.** 🔵 **Pre-registrado para el próximo pase, derivado de `P388` y falsable: sondear UNA obligación por consulta — art. 26 (registro del *deployer*) y prohibición de reconocimiento de EMOCIONES en centros educativos. Predicción: estadios DISTINTOS entre sí (art. 26 saturado, emociones vacía porque una prohibición no genera oferta). Si vuelven iguales, `P388` queda REFUTADA.**
 > **Pase 117 del 2026-10-05:** 🟢 **Tendencias 912–917, citadas una por una para que ninguna quede anunciada sin sección (`P97`).** 🆕 **La que manda es **917** y no es de educación: `P384` — la rotación de 12 industrias no avanza, y por eso este estante lleva ~24 pases/día desde el 2026-09-30 mientras las otras 11 industrias están congeladas desde ~2026-08-02. `rotation.json@main` dice `next: 8` desde el **2026-09-02**; el avance se commitea en una rama por sesión (**1.487** ramas `claude/*` en el origin) que nadie mergea. **Un contador guardado donde el escritor no puede escribir no es un contador: es una constante**, y el síntoma que lo delata no es un error sino la repetición EXITOSA.** 🆕 **912: `P379`, el fork con archivo propaga la cesión Y el titular ajeno ⇒ el doble conteo infla *cesiones verificadas*, que es peor que inflar afirmaciones porque pasa el control. 🆕 913: `P380`, la cesión segmentada por ESTADO DE COMPILACIÓN, eje que ningún escáner de rutas ve. 🆕 914: `P381`, dos instrumentos reales fusionados en un par falso — la unidad de verificación es la TUPLA, no el campo. 🆕 915: `P382`, el ancla `{year}` corre las fechas hacia hoy y acá corrió el 100 % de lo nuevo. 🆕 916: `P383`, el vocabulario cerrado se rompe un nivel abajo del que se estaba gateando.** ⚠️ **`P365` sigue NO evaluable (faltan 20 h 03 m) y se re-registra contra el mismo instante absoluto, sin re-basar.**
 > **Pase 115 del 2026-10-05:** 🟢 **Tendencias 906–911, citadas una por una para que ninguna quede anunciada sin seccion (`P97`).** 🆕 **La que manda es **906**: `P370`, la compuerta simetrica — `p311` gatea lo que ENTRA desde el pase 100 y nada gateaba lo que se declara AUSENTE, asi que un hueco falso se re-publico como racha cuatro pases. 29 huecos con region → 2 contradichos, **27 sin alcance**.** 🆕 **907: `P371`, el calificador se cae y el numero sobrevive. 🆕 908: `P372`, un canal ciego que devuelve el codigo de EXITO es peor que uno que devuelve error. 🆕 909: `P373`, una cifra inventada adosada a un artefacto real. 🆕 910: `P374`, titular / dueño / dominio son tres ejes. 🔴 911: las estrellas no miden respaldo institucional — dos piezas de **0 ★** de este pase son, una, despliegue en produccion del **Banco Mundial**, y la otra, codigo financiado por el **SNCTI** de Colombia.**
 > **Pase 114 del 2026-10-05:** 🔴 **El marco de mercado 2026 se publica como RANGO y no como cifra, porque las cuatro casas discrepan 1,4×: USD 8,7 MM (MarkWide) · 10,6 MM (Research and Markets) · 11,4 MM (Grand View) · 12,3 MM (HolonIQ) para el MISMO año.** 🆕 **`P369` — citar una sola de esas cifras es una decision editorial disfrazada de dato: la dispersion (1,4×) es mayor que el crecimiento que cualquiera de ellas proyecta para un trimestre, asi que el numero elegido domina la conclusion. Se cita el rango con las cuatro casas nombradas, o no se cita.** 🟢 **El segmento con menos ruido es *AI tutors*: USD 2,1 MM (2025) → **2,7 MM (2026)** → **17,7 MM (2033)**, CAGR **30,5 %**.** 🟢 **Y el dato de intencion que mueve un pipeline: **83 %** de las instituciones declara plan de desplegar asistentes docentes AI en 2026.** 🔵 **La direccion del eje, consistente en las cuatro casas: de *generative* a **agentic** — automatizar lo administrativo (correccion, horarios, seguimiento) para liberar al docente a mentoria, mas «gemelos digitales» del alumno para hiper-personalizacion. Es exactamente la forma de los repos que esta base indexa.** 🔴 **Y la higiene que este pase agrega al eje de tendencias, porque no es un hecho de mercado sino de CANAL: el barrido devolvio un instrumento mexicano INEXISTENTE («Ley Nahui»), y lo delato preguntar por el nombre (`P367`). Una tendencia se sostiene con varias fuentes; un NOMBRE PROPIO hay que verificarlo por si mismo, porque no se cae por ausencia — no aparece nada y eso se lee como «poco cubierto», no como «no existe».**
@@ -236,6 +237,78 @@ sector público significa que **cada municipio forkea para desplegar**. La estre
 el fork, instalaciones. ⚠️ **Y su lado malo es el encargo:** 547 árboles divergentes sin ruta de
 actualización.
 
+
+
+## 🟢 Pase 119 del 2026-10-05 (lectura `16:53Z`) — tendencias 918–921: el agotamiento se mide por OBLIGACIÓN, y la oferta OSS de cumplimiento está partida en tres curvas
+
+### 918 · 🆕 `P388` — cada obligación regulatoria tiene su propia curva de oferta open source, y promediarlas devuelve el número de ninguna
+
+El pase 118 pre-registró entrar por el eje de la **obligación** en vez de por «agente / repo /
+plataforma». 🟢 **Se corrió y el resultado no es binario:**
+
+| Obligación sondeada | Instrumento | Oferta OSS encontrada |
+|---|---|---|
+| Etiquetado de salida generativa | **Art. 31, *AI Basic Act*** de Corea (vigente `2026-01-22`) | 🔴 **vacía** — 0 implementaciones |
+| Prueba / *testing* de gobernanza | **AI Verify** + **Model AI Governance Framework for Agentic AI** de la IMDA (ene-2026) | ⏸️ **saturada** — `aiverify`, `moonshot`, ya en esta base |
+| Expediente FRIA del *deployer* | **Art. 27 AI Act** (`2027-12-02`, diferido y condicional) | 🟢 **abriéndose** — 1 pieza MIT con 6,4k ★ y 2 sin licencia |
+
+🔵 **La forma general, que sirve fuera de educación:** «¿está saturado el eje regulatorio?» es una
+pregunta mal planteada. **Las tres curvas están en tres estadios distintos al mismo tiempo**, y el
+estadio predice qué conviene hacer: donde está vacía se CONSTRUYE (y hay ventaja de primer movedor
+sobre una obligación vigente), donde está saturada se INTEGRA, donde se está abriendo se ADOPTA
+temprano. 🔴 **Un barrido que pregunta por «el eje» y promedia habría devuelto «hay algo» y perdido
+las tres decisiones.**
+
+### 919 · 🆕 La tendencia de mercado que las tres curvas dibujan juntas: el producto de 2026 es el EXPEDIENTE, y ya tiene repo
+
+Esta base viene escribiendo desde el pase 109 que el giro de 2026 es **de la experimentación a la
+gobernanza**. 🟢 **Este pase es la primera vez que ese giro aparece como SOFTWARE PERMISIVO y no como
+afirmación de analista:** `microsoft/agent-governance-toolkit` (**MIT**, **6,4k ★**) trae la plantilla
+FRIA del art. 27 **con sección de educación adentro**, y la AI Verify Foundation pasó de 4 miembros
+premier a **90+ organizaciones**. 🔵 **Lo que eso significa para cotizar: el expediente de cumplimiento
+dejó de ser entregable artesanal de consultoría y pasó a ser artefacto versionado.** El valor se mueve
+de *redactar el documento* a **conectarlo con el sistema que audita** — que es trabajo de integración,
+no de redacción, y es donde un estudio compite con ventaja.
+
+### 920 · 🔴 El hueco de OFERTA del pase, y es vendible precisamente porque está vacío
+
+**Corea exige etiquetado de salida generativa desde el `2026-01-22`, con alcance extraterritorial, y no
+hay pieza open source que lo cumpla.** ⚠️ **Y la distinción técnica que impide cerrarlo con lo que ya
+hay:** C2PA (`contentauth/c2pa-rs`, `c2pa-python`, en esta base) resuelve **procedencia firmada en el
+metadato** → art. 50(2) europeo. El **art. 31(3) coreano** pide **marca perceptible por el usuario
+final**: para contenido en servicio basta símbolo de UI, logo o aviso previo; para contenido
+**exportado** exige *watermark* humano-legible **o** metadato máquina-legible **con guía de texto o
+audio**. 🔵 **Dos obligaciones, un archivo, y la pieza que existe cubre una.** ⇒ **Hueco declarado como
+de OFERTA (nadie lo publicó), no de sonda (sí se buscó).** Para un cliente con alumnos en Corea,
+**ésta es la capa que hoy se construye a medida o no existe.**
+
+### 921 · 🆕 `P390` — el nombre no identifica al proyecto, y en la familia CC0 la licencia tampoco identifica al titular
+
+Tres repos `awesome-eu-ai-act`, **dos linajes independientes**, los tres CC0; esta base tenía el de
+**21 ★** y le faltaba el original de **110 ★**. 🔵 **La tendencia de método: `P386` mostró que el
+fingerprint de licencia no identifica al titular en Apache-2.0 (licencia estándar, titular fuera del
+archivo). CC0 lo rompe un grado más, y por DISEÑO: una renuncia de derechos no tiene titular a quien
+nombrar dentro del texto.** ⇒ **El par (`sha256`, titular) que el pase 117 propuso como deduplicador
+falla en toda la familia de renuncias.** 🟢 **Y el discriminador que sí funcionó es el más barato que
+hay: la DESCRIPCIÓN** — distinta entre los dos originales, idéntica entre fork y padre. Ver detalle en
+`repos/foundations.md`.
+
+### 🔴 Lo que este pase NO encontró, y la pre-registración para el próximo
+
+**4/4 regiones sondeadas, 0 silencios.** 🔴 **EMEA: 0 hechos netos nuevos** — el *Digital Omnibus*
+volvió y coincide con lo registrado en el pase 58, así que el eje regulatorio europeo sigue saturado
+para consulta generalista. 🟢 **Lo nuevo del pase vino del eje de obligación (software) y de la
+colisión de identidad, no del barrido de mercado.**
+
+🔵 **Pre-registrado para el próximo pase, derivado de `P388` y no de una intuición:** sondear **una
+obligación por consulta** en vez de «el eje», empezando por las dos que este pase dejó sin medir —
+**registro del *deployer* del art. 26** y **prohibición de reconocimiento de EMOCIONES en centros
+educativos** (ya vigente, y la única prohibición *per se* que toca a educación). ⚠️ **Predicción
+falsable, para que el próximo pase pueda refutarla:** si `P388` es correcta, esas dos curvas estarán en
+estadios DISTINTOS entre sí — se espera **art. 26 saturado** (es registro, lo cubren herramientas de
+inventario que esta base ya tiene) y **prohibición de emociones vacía** (es una prohibición, y una
+prohibición no genera oferta de herramienta: genera ausencia de producto). 🔴 **Si las dos vuelven
+iguales, `P388` queda refutada** y el agotamiento sí es por eje.
 
 
 ## 🟢 Pase 118 del 2026-10-05 (lectura `16:00Z`) — la tendencia del año es de gobernanza, y APAC ya escribió quién paga cuando un agente se equivoca

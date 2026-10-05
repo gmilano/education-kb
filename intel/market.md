@@ -8,6 +8,7 @@ updated: 2026-10-05
 
 > Key players, market map y oportunidades por región.
 > Investigado 2026-09-30; el pase 11, el 2026-10-01. Las estimaciones de tamaño de mercado varían mucho entre firmas: se listan todas con su fuente en vez de elegir una.
+> **Pase 119 del 2026-10-05:** 🟢 **Barrido regional 47: 4/4 regiones, 0 silencios, denominador ENUMERADO antes de escribir — 19 hechos sondeados, 15 ya publicados, 3 netos nuevos, 1 rechazado por ser el mismo hecho en otra redacción.** 🔴 **Y el dato que manda para leer este pase: el hallazgo más valioso NO salió de las 4 consultas regionales, salió de la consulta por OBLIGACIÓN que el pase 118 pre-registró ⇒ el barrido de mercado por región está saturado y el de obligación no (`P388`).** 🟢 **APAC: la soberanía pasó de discurso a INVENTARIO con siete modelos nacionales nombrados (Sarvam/IN, ILMU/MY, Sahabat/ID, SEA-LION/SG, HyperCLOVA X Think/KR, NTT Sarashina/JP, TAIDE/TW); India 38,9 % CAGR; Singapur 60,9 % de difusión.** 🟢 **LATAM con las DOS puntas medidas: **+50 % de docentes de Chile y Brasil ya usa IA** y **<10 % de instituciones tiene guías formales y capacidad** ⇒ la adopción ocurrió por abajo y la gobernanza no existe por arriba, que es demanda de expediente.** ⚠️ **Dos cifras que NO se fusionan: ILIA Chile 70,56/Brasil 67,39 de este barrido contra Brasil 65,89/Chile 63,19/Uruguay 62,21 del registro previo (ediciones distintas, `P381`); y en NA, 60 % de docentes con «alguna herramienta de IA» NO es el 53 % de «chatbots con alumnos» — distinto denominador, se citan las dos (`P369`).** 🟢 **Sexto pase sin reproducir el calendario SUPERADO del AI Act: `P321` sigue sin reproducirse.**
 > **Pase 117 del 2026-10-05:** 🔴 **El hallazgo de este archivo es un defecto de su propio FORMATO, y lo encontró un instrumento: 🆕 `P383` — el encargo pide **un** `## Opportunities by region` y hay **27**, pero el daño no está en el 27 sino en el NIVEL: **24 encabezados `###` fuera de vocabulario** son hermanos sintácticos de las regiones, así que un compilador que lea «todo `###` bajo ese `##` es una región» produce **28 entidades y 24 son basura** (una se llama `🔴 Brechas declaradas de este pase, por región`, otra tiene ~180 caracteres).** 🔵 **Y la prueba en miniatura está en el propio listado: `por región` y `por region` aparecen **1 vez cada una** ⇒ dos cubos para un concepto, que es el daño que el encargo describe para `region:` ocurriendo un nivel más abajo, donde nada lo gateaba.** 🟢 **Lo que SÍ está bien y cuesta más: las 4 regiones aparecen en **27/27** bloques, **0** secciones sólo-LATAM, y `region:` es `Global` en los 8 archivos, dentro del vocabulario cerrado.** 🟢 **Barrido 46: 23 hechos sondeados, **20 ya publicados**, 3 candidatos → 2 reales con fecha corrida (`P382`) y 1 rechazado por fusión (`P381`).** 🔴 **LATAM: **0 hechos nuevos sobre 7 sondas** ⇒ es hoy la región MÁS saturada de este estante, segunda corrección consecutiva del relato del hueco LATAM.** 🟢 **Reparto regional nuevo: NA **3,68 MM (2026) → 32 MM (2030)**, **36 %** del global; EMEA **2,64 MM → 8,0 MM**, CAGR **31,9 %**.**
 > **Pase 115 del 2026-10-05:** 🔴 **El hueco LATAM que este archivo declaro cuatro pases seguidos queda REFUTADO por el indice de esta misma base, con instrumento: 🆕 `P370` (`p370-gap-gate/`, **27/27**) mide **29** huecos declarados con region → **2 CONTRADICHOS** y **27 SIN MARCADOR DE ALCANCE**, y el piso de filas que lo refutan es **12 repos UBICADOS en LATAM** (17 filas nombran LATAM; 5 solo la mencionan).** 🆕 **`P371` — el calificador se cae y el numero sobrevive: el pase 113 escribio «*este canal no encuentra codigo de LATAM*» y nombro una pieza propia en la misma oracion; el **ledger** del 114 conservo el alcance y su **titular** lo solto. El defecto no esta en el ledger: esta en el titular, y el gate los separa dentro del MISMO pase.** 🔵 **La reformulacion que corresponde, y que cambia el encargo: LATAM no tiene un hueco de PRODUCCION, tiene un hueco de CESION — 4 de 8 piezas medidas no traen archivo de licencia, 2 son GPL-2.0 y 3 permisivas. Conseguir cesion escrita es trabajo negociable; producir la capa desde cero no.** 🟢 **Barrido regional 44: 4/4 regiones, 0 silencios.** 🔴 **Y el marco 2026 gana una QUINTA casa que cae FUERA del rango de `P369`: USD **6,4 MM** en 2025 → **79,6 MM** en 2034 (31,35 % CAGR). Con `P369` (8,7 / 10,6 / 11,4 / 12,3 MM para 2026) la dispersion deja de ser 1,4× y el rango sigue siendo la unica forma honesta de citarlo.**
 > **Pase 114 del 2026-10-05:** 🟢 **Barrido regional 43: 4/4 regiones responden, 0 silencios, denominador ENUMERADO con `grep` de control ANTES de escribir — 17 hechos sondeados, 15 ya publicados, **2 candidatos a nuevos**, y de esos 2 **uno queda REFUTADO y el otro RE-UBICADO de region**. Hechos netos nuevos: 2, los dos de instrumento mexicano.** 🔴 **El hallazgo que manda es un error de canal cazado ANTES de publicarse: el barrido de LATAM devolvio una **«Ley Nahui»** mexicana como instrumento en proceso. Consulta dirigida a esa cadena: **no existe bajo ese nombre** («the search did not return specific results about "Ley Nahui" by that exact name»). 🆕 **`P367` — un nombre PROPIO inventado es mas peligroso que una fecha mal: una fecha falsa se cae contra fuente legal, pero un nombre propio falso es inbuscable y por lo tanto **no se puede falsar por ausencia**; solo lo delata preguntar POR EL NOMBRE.** No se publica como hecho. Familia de `P281`, en el eje del nombre y no del calendario.** 🟢 **Y la consulta que lo refuto devolvio los instrumentos REALES, los dos con 0 ocurrencias en esta base:** iniciativa de **abril de 2026** (Camara de Diputados) para reformar el **articulo 73 constitucional** y facultar al Congreso a legislar IA; y la **`Ley Federal para el Desarrollo Etico, Soberano e Inclusivo de la IA`**, presentada el **`2026-07-24`**, que crea un **Consejo Nacional de IA** (organismo descentralizado) y una 🆕 **`Plataforma Nacional de Auditoria Algoritmica`**. 🔵 **Esa Plataforma es el unico hallazgo del pase con forma de ENCARGO y no de contexto: un mandato estatal de auditoria algoritmica es demanda de servicio, no marco a citar.** 🔴 **El segundo candidato se RE-UBICA y la correccion es de region, que es justo el error que el encargo pide no cometer: `IGNITE Copilot` entro por el barrido de LATAM, y es **EMEA de origen** — Sant Cugat del Valles, España, ronda de **€500.000 en primavera de 2025** (no 2026), +14.000 docentes desde 2024. Lo que es LATAM es su ALINEACION CURRICULAR: Nueva Escuela Mexicana (MX), Lineamientos MEN (CO), Bases Curriculares MINEDUC (CL), CNEB (PE).** 🆕 **`P368` — la region de un proveedor no es la region de su mercado, y un barrido regional las COLAPSA por construccion: preguntar «AI education LATAM» devuelve vendedores EMEA con clientes LATAM. Colocar por el pais de la consulta es como colocar por antroponimo (`P135`) — hay que leer la SEDE.** 🟢 **Y el patron que si es replicable: alinearse al curriculo OFICIAL de cada pais es la barrera de entrada real en LATAM, y es un trabajo de localizacion, no de modelo.** 🔴 **Hueco declarado por CUARTO pase consecutivo: LATAM devuelve mercado, adopcion, regulacion y ahora dos instrumentos nuevos — y **CERO repositorios**. La capa de CODIGO de LATAM sigue abierta.**
@@ -24,6 +25,80 @@ updated: 2026-10-05
 > **Pase 101 del 2026-10-04:** 🟢 **Trigésimo barrido regional (año CALCULADO: 2026), las cuatro regiones responden, 0 silencios.** 🔴 **El hallazgo que manda es del canal otra vez, y empeora: el AI Act se reprodujo mal por SEXTA vez, y esta vez el error es en DOS ejes a la vez — el barrido de EMEA no sólo repite «high-risk desde agosto de 2026» (cuando el Anexo III se difirió a `2027-12-02`), sino que afirma que *«the AI Act entered into force on 31 July 2026»*, y la entrada en vigor fue en 2024.** 🔵 **Seis reproducciones en seis pases, y ahora con un error nuevo encima: el canal no se degrada hacia el silencio, se degrada hacia la CONFIANZA — una fecha falsa y precisa es peor que una vaga** (`P281`). 🟢 **APAC aporta el dato más accionable del pase para un estudio de AI, y es nuevo: Singapur publicó el `2026-01-22`, vía IMDA, un marco específico para AI AGÉNTICA — el primer instrumento del mundo que regula agentes como categoría, justo lo que esta base compone.** 🟢 **APAC suma el calendario completo: Corea del Sur con su Framework Act vigente desde el `2026-01-22`, Vietnam desde el `2026-03-01`, y Australia con una Office of AI creada en julio de 2026 más estándares obligatorios para centros de datos de AI y un «digital duty of care».** 🟢 **LATAM aporta el denominador de adopción que la región no tenía con esta precisión: 92 % de los alumnos y 79 % de los docentes de educación superior ya usan AI, y 94 % de los docentes esperan usarla (Digital Education Council, LATAM 2026, con el Institute for the Future of Education del Tec de Monterrey).** 🔴 **Y el dato de LATAM que invierte la lectura optimista: 61 % de los alumnos teme el MAL uso de AI por parte de sus compañeros — la demanda de la región no es por más generación, es por INTEGRIDAD.** 🔴 **NA cuantifica el mosaico: 134 proyectos de ley sobre AI en educación en 31 estados este año, y dos estados —Oklahoma y Maryland— ya PROHÍBEN que la AI decida sobre un alumno: eso convierte «observar y fundamentar» en la única capa vendible, que es exactamente la que este pase agregó.** ⚠️ **Y una contradicción de tamaño de mercado que se publica SIN elegir: el barrido global da USD 7,52 MM (2025) → 10,6 MM (2026) al 40,9 % CAGR, mientras la cifra de NA que esta base ya tenía da 15,9 % CAGR — 2,6× de diferencia entre dos fuentes del mismo canal.** 🔴 **La región que NO se pudo colocar con una pieza es LATAM, otra vez: de las 6 altas, 1 queda en North America y 5 sin región por `P135`/`P261`.** Ver **`P312`**–**`P316`**.
 > **Pase 100 del 2026-10-04:** 🟢 **Vigesimonoveno barrido regional (año CALCULADO: 2026), las cuatro regiones responden, 0 silencios.** 🔴 **Y el hallazgo que manda es una REINCIDENCIA del canal, no del mercado: el canal secundario reprodujo la versión SUPERADA del AI Act por CUARTA y QUINTA vez — los barridos de HOY de North America («*taking full effect in August 2026, classifies education AI as high-risk*») y de LATAM («*cuyo marco entró en vigor progresivamente desde agosto de 2026*») siguen diciendo agosto de 2026 para el ALTO RIESGO, cuando el Anexo III se difirió a `2027-12-02` y lo vigente es el artículo 50.** 🔵 **Cinco reproducciones en cinco pases es una propiedad del canal, no un error: la prensa de industria NO va a corregir esto, así que la corrección de esta base hay que sostenerla contra fuente legal cada vez que se cotiza en EMEA** (`P281`). 🟢 **NA aporta el dato que vuelve accionable su vacío federal: los estados ya legislan en concreto —Colorado y Texas con requisitos parciales— sobre un mercado de USD 951 M (2024) → USD 2.303,2 M (2029) al 15,9 % CAGR y 36 % del global.** 🟢 **EMEA aporta un CALENDARIO que cae este mes: la 2ª conferencia de trabajo del Consejo de Europa sobre las dimensiones regulatorias de la AI en educación es en OCTUBRE de 2026, y el Consejo de Europa son 46 estados con un instrumento SEPARADO del AI Act.** 🟢 **APAC confirma su eje de soberanía con el número de gobernanza: 48 % de los líderes de gobernanza ponen la adopción de AI como prioridad estratégica 2026 y 57 % de las organizaciones de Asia ya la tienen en producción en al menos un área.** 🟢 **LATAM aporta el dato que invierte la lectura habitual de la región: es el TERCER mercado mundial de descargas de aplicaciones de AI generativa, con adopción empresarial por encima del 85 %.** 🔴 **Y la región que NO se pudo colocar con una PIEZA este pase es LATAM: de las 7 piezas nuevas, 3 quedan en North America, 1 en North America **y** EMEA por huella de despliegue, 1 en APAC y 2 sin región — cero en LATAM, y se dice en vez de dejarlo en silencio.** Ver **`P308`**–**`P311`**.
 > **Pase 97 del 2026-10-04:** 🔴 **Vigesimosexto barrido regional (año CALCULADO: 2026) y el hallazgo que manda es del CANAL, no del mercado: la declaración de canal de esta base sólo se había medido sobre hosts de GitHub, y medida sobre hosts cualesquiera el egreso está BLOQUEADO —`unu.edu`, `coe.int`, `unesco.org` y `example.com` dan `000`/`EGRESS_BLOCKED` por `curl` y por el fetcher— así que TODA la inteligencia regional de este archivo viene del canal secundario y sus fuentes primarias quedan NOMBRADAS y marcadas 🔸 SIN VERIFICAR, una por una.** 🟢 **Las cuatro regiones respondieron, 0 silencios, 7 hechos nuevos.** 🟢 **EMEA aporta el hallazgo regional: el Consejo de Europa —46 estados, instrumento SEPARADO del AI Act— convoca su 2ª conferencia de trabajo sobre las dimensiones regulatorias de la AI en educación, o sea que el perímetro regulatorio de un cliente educativo en EMEA no termina en la UE.** 🟢 **APAC confirma el eje que el pase 95 pre-registró: la soberanía decidirá la infraestructura de ~la mitad de las empresas de la región, lo que convierte la pregunta de compra en «quién procesa datos de alumnos y dónde» y favorece justo la capa permisiva auto-hospedable que este pase confirmó por dos canales (UniTime, OpenOLAT, Sakai, DSpace).** 🟢 **LATAM aporta un DENOMINADOR primario: 200 instituciones de educación superior en 19 países, relevadas ago–oct 2025 (working paper de UNU/UNESCO).** 🔴 **NA cuantifica su hueco de gobernanza: 10 % de instituciones con guías formales contra 71 % de docentes sin formación, sobre un vacío regulatorio federal.** 🔴 **Y el canal secundario reprodujo la versión SUPERADA del AI Act por TERCERA vez (NA y LATAM): sigue diciendo agosto de 2026 para el alto riesgo cuando el Anexo III se difirió a `2027-12-02` y lo vigente es el artículo 50.**
+
+
+## 🟢 Pase 119 del 2026-10-05 (lectura `16:53Z`) — barrido regional 47: 4/4 regiones, 0 silencios; y el hecho neto NO vino del barrido de mercado sino del eje de la OBLIGACIÓN
+
+### 🔬 Nota de canal, antes de cualquier cifra (`P249`)
+
+Todo lo de abajo viene de **canal secundario** (`WebSearch`). El egreso directo a `github.com` por
+`curl` devolvió **403 en 5 de 5** sondas, así que las verificaciones de repo de este pase se hicieron
+por **lectura de página** (el canal que los pases 115-118 ya usaban), **no** por API. 🟢 **Las
+licencias que este pase afirma se leyeron del ARCHIVO `LICENSE`, por ruta explícita.**
+
+### 🔬 Denominador del barrido, enumerado ANTES de escribir (`P287`/`P311`)
+
+**19 hechos regionales sondeados sobre 4 regiones. 15 ya publicados. 4 candidatos nuevos, de los cuales
+3 entran y 1 se rechaza por ser el mismo hecho en otra redacción.**
+
+🔴 **Y el dato que importa para leer este pase: el hecho más valioso NO salió de las 4 consultas
+regionales.** Salió de la consulta por **obligación regulatoria** que el pase 118 pre-registró, que
+devolvió **software** (`P389`) y una **corrección de identidad de repo** (`P390`). ⇒ 🔵 **El barrido de
+mercado por región está saturado y el de obligación no: son dos ejes con dos curvas, que es `P388`.**
+
+### 🆕 Los 3 hechos regionales netos, y por qué estos y no otros
+
+**1. 🟢 APAC — el pipeline de modelos SOBERANOS, completo y por país.** Esta base tenía `SEA-LION` (SG) y
+`Sarvam` (IN) suelos desde el pase 112. El barrido los devuelve ahora como **política regional
+sistemática, con siete países nombrados**: **Sarvam AI** (India), **ILMU** (Malasia), **Sahabat AI**
+(Indonesia), **SEA-LION** (Singapur), **HyperCLOVA X Think** (Corea del Sur), **NTT Sarashina** (Japón),
+**TAIDE** (Taiwán). 🔵 **El hecho nuevo no es ningún modelo: es que son SIETE y que la soberanía dejó de
+ser discurso para ser inventario.** Para educación eso decide dónde se procesa el dato del alumno, que
+es la pregunta de compra de la región.
+**India** es además el mercado de IA de mayor crecimiento de APAC — **38,9 % CAGR**, con la **IndiaAI
+Mission** y ~**2,6 M de graduados STEM/año**. **Singapur** lidera difusión con **60,9 %** de adultos en
+edad laboral. **Japón** mantiene gobernanza **voluntaria y de mano liviana**.
+
+**2. 🟢 LATAM — la brecha entre USO DOCENTE y CAPACIDAD INSTITUCIONAL, ahora con las dos puntas
+medidas.** **Más del 50 % de los docentes de Chile y Brasil ya usa herramientas de IA**, y **menos del
+10 % de las instituciones de la región tiene guías formales y capacidad suficiente** para integrarla con
+criterio. 🔵 **Ésa es la oportunidad de la región dicha como número y no como impresión: la adopción ya
+ocurrió por abajo y la gobernanza no existe por arriba.** Adopción país: **Brasil 76 %**, **México
+70 %**. La **UNESCO** lanzó el **Observatorio de IA en Educación para América Latina** en la **CEPAL,
+Santiago** (abril 2026) — ya estaba en esta base, se re-confirma.
+
+⚠️ **Y una cifra que NO se sobreescribe, porque es de OTRO índice:** este barrido da el **ILIA** con
+**Chile 70,56 / 100** y **Brasil 67,39**; esta base tiene registrado **Brasil 65,89 / Chile 63,19 /
+Uruguay 62,21** de un barrido anterior. 🔴 **No se elige una ni se promedia: son ediciones o
+metodologías distintas del índice, y el error de fusionarlas es exactamente `P381`** (el nombre de un
+instrumento con la cifra de otro). **Se publican las dos, cada una con su barrido.** Lo que **sí** es
+estable en las dos lecturas: **Chile y Brasil arriba, Uruguay tercero.**
+
+**3. 🟢 North America — una métrica de uso docente que NO es la que esta base tenía, y la diferencia es
+el DENOMINADOR.** El barrido da **60 % de los docentes K-12 de EE. UU. usó herramientas de IA en el
+ciclo 2024-2025** y **32 % al menos semanalmente**. 🔴 **Esta base tiene «53 % de docentes K-12 usa
+chatbots CON ALUMNOS al menos semanalmente».** ⚠️ **No son el mismo hecho y no se reemplaza uno por
+otro: «cualquier herramienta de IA» ⊃ «chatbots con alumnos», y los períodos difieren.** 🔵 **Es la
+lección de `P369` en el eje de la adopción y no del tamaño de mercado: dos cifras del mismo fenómeno con
+denominadores distintos se citan las dos con su denominador, o se citan mal.** Se agrega como métrica
+**distinta**, no como corrección.
+
+### 🔴 El hecho rechazado, y el motivo
+
+**«134 proyectos de ley en 31 estados» volvió otra vez** — ya está publicado en la sección canónica de
+North America. ⏸️ **No es hueco ni novedad: es la misma medición en su tercera redacción.** Igual que el
+**STUDENTS FIRST Act of 2026** y el ***earmark* de US$ 10 M de Carolina del Norte para Khanmigo**, los
+dos ya registrados (pases 111 y 112). 🔵 **Enumerar lo que volvió repetido es lo que hace falsable la
+afirmación «0 hechos nuevos»** (`P287`).
+
+### ⏸️ EMEA: 0 hechos netos, y la coincidencia que confirma el registro de esta base
+
+El barrido devolvió el ***Digital Omnibus*** y **coincide con lo que esta base verificó por tres canales
+en el pase 58**: **Reglamento (UE) 2026/1744**, alto riesgo autónomo del Anexo III —educación incluida—
+diferido al **`2027-12-02`**. ⚠️ **Discrepancia menor, anotada y NO reescrita:** la fuente secundaria
+dice «en vigor el **27 de julio de 2026**»; esta base tiene **DOUE 24/07/2026, en vigor 27/07/2026**.
+**Son compatibles** (publicación vs. entrada en vigor) y el registro propio es el más preciso. 🟢 **Sexto
+pase consecutivo sin reproducción del calendario SUPERADO del AI Act: `P321` sigue sin reproducirse.**
 
 
 ## 🟢 Pase 118 del 2026-10-05 (lectura `15:55Z`) — el barrido sin ancla de año NO rinde más nuevo, y el único hecho neto del pase es un instrumento de RESPONSABILIDAD
@@ -148,6 +223,11 @@ por coincidencia entre dos. Instrumento nuevo: `p387-shared-date-control/`.
   verificada en esta base: `toshieji/moodle-grading-mcp` (**MIT**), que escribe **borradores NO
   liberados** por diseño. Con **AB 1159** vigente, el expediente de que el dato del alumno **no**
   entrena el modelo se diseña en semana 1, no se audita en el mes 6.
+- 🆕 **Adopción docente con DOS denominadores que NO se pueden fusionar (pase 119):** **60 %** de los
+  docentes K-12 de EE. UU. usó **alguna herramienta de IA** en el ciclo 2024-2025, **32 %** al menos
+  semanalmente; y **53 %** usa **chatbots CON ALUMNOS** al menos semanalmente (registro previo). ⚠️
+  **«Cualquier herramienta» ⊃ «chatbots con alumnos»: se citan las dos con su denominador o se citan
+  mal** (`P369` en el eje de adopción, no del tamaño de mercado).
 
 ### EMEA
 
@@ -165,6 +245,12 @@ por coincidencia entre dos. Instrumento nuevo: `p387-shared-date-control/`.
   permanentemente listo**. ⚠️ Y con `P386` de este pase: en EMEA, donde Apache-2.0 es la licencia
   preferida del sector público, **el fingerprint de licencia no identifica al titular** — la
   procedencia se prueba por otra vía o no se prueba.
+- 🆕 **Y desde el pase 119 la obligación del art. 27 tiene HERRAMIENTA, no sólo fecha:**
+  [`microsoft/agent-governance-toolkit`](https://github.com/microsoft/agent-governance-toolkit)
+  (**MIT**, **6,4k ★**) trae plantilla **FRIA** con **§3.6 «Right to Education»** que pregunta, literal,
+  por *acceso a la educación* y por *admisiones, calificación o evaluación* — **los dos supuestos del
+  Anexo III punto 3**. 🔵 **Eso mueve el entregable de «redactar el expediente» a «versionarlo junto al
+  código que audita», que es integración y no consultoría de texto** (`P389`, receta `R-P119-A`).
 
 ### APAC
 
@@ -184,6 +270,16 @@ por coincidencia entre dos. Instrumento nuevo: `p387-shared-date-control/`.
   responsabilidad de un AGENTE.** Eso convierte una pregunta de contrato en una pregunta
   contestable: en qué casilla de la IMDA cae el entregable. Vendible como **matriz de
   responsabilidad por casilla**, con la compuerta de escritura medida en el código.
+- 🆕 **Soberanía como INVENTARIO y no como discurso (pase 119): siete modelos nacionales nombrados** —
+  **Sarvam AI** (IN), **ILMU** (MY), **Sahabat AI** (ID), **SEA-LION** (SG), **HyperCLOVA X Think** (KR),
+  **NTT Sarashina** (JP), **TAIDE** (TW). **India** es el mercado de IA de mayor crecimiento de APAC
+  (**38,9 % CAGR**, IndiaAI Mission, ~2,6 M graduados STEM/año); **Singapur** lidera difusión con
+  **60,9 %** de adultos en edad laboral; **Japón**, gobernanza voluntaria.
+- 🔴 **Hueco de OFERTA ubicado acá, y es vendible porque está vacío:** el **art. 31(3)** de la
+  *AI Basic Act* de Corea (vigente `2026-01-22`, extraterritorial) exige **marca perceptible por el
+  usuario final** en salida generativa, y **no existe pieza open source que lo cumpla**. ⚠️ **C2PA
+  resuelve el art. 50(2) europeo (procedencia firmada), NO el art. 31(3) coreano.** Para un cliente con
+  alumnos en Corea, esa capa **hoy se construye a medida**.
 
 ### LATAM
 
@@ -202,6 +298,15 @@ por coincidencia entre dos. Instrumento nuevo: `p387-shared-date-control/`.
   municipal**, que es la pieza que la región forkea para desplegar: `portabilis/i-educar` tiene
   **547 forks sobre 717 ★**. ⚠️ Frontera de licencia en semana 1: `i-educar` y `enem-api` son
   **GPL-2.0**, no permisivas.
+- 🆕 **La brecha de la región, con las DOS puntas medidas (pase 119): más del 50 % de los docentes de
+  Chile y Brasil ya usa IA, y menos del 10 % de las instituciones tiene guías formales y capacidad para
+  integrarla con criterio.** Adopción país: **Brasil 76 %**, **México 70 %**. 🔵 **La adopción ya ocurrió
+  por abajo y la gobernanza no existe por arriba: eso es demanda de expediente, que es exactamente lo
+  que `R-P119-A` entrega.**
+- ⚠️ **Cifra que NO se sobreescribe:** este barrido da **ILIA Chile 70,56 / Brasil 67,39**; esta base
+  tenía **Brasil 65,89 / Chile 63,19 / Uruguay 62,21**. **Ediciones o metodologías distintas ⇒ se
+  publican las dos con su barrido, no se promedian** (`P381`). Estable en ambas: **Chile y Brasil
+  arriba, Uruguay tercero.**
 
 ### Global
 
@@ -216,6 +321,14 @@ por coincidencia entre dos. Instrumento nuevo: `p387-shared-date-control/`.
 - 🔵 **Y el giro de 2026 que el barrido nombra tres veces: el movimiento es de la EXPERIMENTACIÓN a
   la GOBERNANZA, y de la herramienta genérica a la plataforma específica de educación.** Eso
   favorece exactamente el entregable que esta base sabe construir: **el expediente, no el modelo.**
+- 🆕 **Y en el pase 119 ese giro deja de ser afirmación de analista y aparece como SOFTWARE PERMISIVO:**
+  una plantilla **FRIA MIT con 6,4k ★** y la **AI Verify Foundation pasando de 4 miembros premier a 90+
+  organizaciones**. 🔵 **El expediente de cumplimiento dejó de ser entregable artesanal y pasó a ser
+  artefacto versionado** (`P389`).
+- 🔬 **Regla de sondeo que sale de este pase (`P388`): la oferta open source de cumplimiento NO es una
+  curva, son tres** — etiquetado generativo **vacía**, *testing* de gobernanza **saturada**, expediente
+  FRIA **abriéndose**. ⇒ **Donde está vacía se construye, donde está saturada se integra, donde se abre
+  se adopta temprano.** Preguntar por «el eje regulatorio» promedia las tres y no sirve para decidir.
 
 ## 🟢 Pase 117 del 2026-10-05 (lectura `14:45Z`) — el formato de este archivo falla un nivel más abajo de donde se lo estaba gateando
 

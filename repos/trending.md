@@ -7,6 +7,7 @@ updated: 2026-10-05
 # 📈 Repos trending — education
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
+> **Pase 119 del 2026-10-05:** 🔵 **Lo más valioso del pase llegó por el canal equivocado a propósito: la sonda era de obligación regulatoria y devolvió una COLISIÓN DE IDENTIDAD que el canal de repos no podía ver, porque sondeando por repo sólo se ve el que ya se tiene.** 🆕 **`P390` — tres `awesome-eu-ai-act`, dos linajes independientes; este estante publicaba el de **21 ★** y le faltaba el original de **110 ★**.** 🆕 **Trending como número de VERSIÓN por segunda vez en la serie: `HKUDS/DeepTutor` `v1.6.13` (`2026-10-04`), con **barajado de opciones para no exponer la respuesta** como la única línea del changelog con forma de requisito pedagógico. ⚠️ La página de *releases* NO muestra licencia.**
 > **Pase 118 del 2026-10-05 (lectura `15:58Z`):** 🔴 **El canal generalista falla por TERCERA vez del mismo modo y la regla ya está medida: las 4 consultas globales obligatorias devolvieron el eje *enseñar-sobre-IA* (listas de «mejores agentes 2026», `awesome-ai-agents-2026`, `500-AI-Agents-Projects`) y no el de *IA-en-educación*.** 🔴 **14/14 candidatas ya publicadas ⇒ 0 altas de repo, cero ENUMERADO.** 🟢 **Canal medido este pase y no heredado (`P366`): `WebFetch` → `github.com` **VIVO** (licencia + ★ leídas de `mazhar266/fedena` y `webtech-network/autograder`) · 🔴 `curl -sI github.com` **403** en 7/7 · 🔴 `curl` a sitios jurídicos **000** en 4/4 · 🔴 `WebFetch` a `allenandgledhill.com` y `globalpolicywatch.com` **EGRESS_BLOCKED por dominio**.** 🆕 **`P385` sobre este archivo también: el `sha256` de licencia que esta base usa como identidad **no identifica un repo** cuando la licencia es prístina — `c71d239df917` (Apache-2.0, 11.357 B) es el MISMO en un agente de África, un **ERP escolar** y un **autocorrector**, tres proyectos sin relación ⇒ **un *trending* de licencias permisivas se puede inflar sin forkear nada, simplemente eligiendo Apache-2.0.**** 🔵 **`webtech-network/autograder` (**61 ★**, Apache-2.0, rúbrica + sandbox + GitHub Actions) y `mazhar266/fedena` (**5 ★**, Apache-2.0, ERP de campus en Rails) quedan con ★ leídas de payload por primera vez.**
 > **Pase 117 del 2026-10-05:** 🔴 **El canal generalista vuelve a fallar del mismo modo y ya es medible como regla: las consultas globales obligatorias devolvieron el eje *enseñar-sobre-IA* (`ai-engineering-from-scratch`, `awesome-llm`, listas de empleos) y no el de *IA-en-educación* — mientras la consulta NOMINAL rindió 7 filas.** 🟢 **Canal medido este pase, no heredado: `raw.githubusercontent.com` **DISCRIMINA** · `git ls-remote --symref` **DISCRIMINA** y además devuelve la rama por defecto (el instrumento que `P269` pedía) · `WebFetch` **VIVO** (3.er pase) · 🔴 `curl -sI github.com` **403/403** con DOS líneas de estado y `200` del proxy en la primera (`P366` + `P372` juntos) · 🔴 `api.github.com` **403/403**.** 🟢 **Ramas por defecto que NO son `main`, leídas y no asumidas: `pupilfirst` → `master`, `frappe/lms` → `develop`, `openedx/openedx-platform` → `master` (404 en `main`).** 🆕 **`P379`: dos repos del linaje `ai-tutor` con `LICENSE` de `sha256` idéntico ⇒ el *trending* de licencias permisivas se puede inflar forkeando.**
 > **Pase 115 del 2026-10-05:** 🟢 **El trending de la industria DEJA de estar vacio por el canal del CURRICULO, no por el generalista: las 4 consultas globales obligatorias volvieron a devolver el eje de *enseñar-sobre-IA* (`ai-agents-for-beginners`, `agents-from-scratch`, roadmaps) y no el de *IA-en-educacion* — mientras el ancla de curriculo en idioma local rindio una cohorte LATAM entera.** 🟢 **Altas con fecha de commit leida de clon shallow: `portabilis/i-educar` **2026-10-02** (717 ★, **547 forks** — ratio de fork **0,76**, firma de software que se DESPLIEGA por municipio y no que se mira) · `thiagoluzin/pemara-edu-mira` **2026-09-27** · `eai6/ai-tutor` **2026-08-20** · `yunger7/enem-api` **2025-12-14** (la API del banco de items del ENEM lleva ~10 meses sin tocarse, asi que NO trae el examen 2026).** 🔴 **`portabilis/i-educar` tiene rama por defecto **`2.12`**, no `main` ni `master`: leer su `LICENSE` de `master` —como hizo el primer intento de este pase— es leer una rama que NO es la por defecto (`P269`: el conjunto es propiedad del par *(repo, ref)*).** 🔵 **Canal, medido este pase y no heredado (`P366`): 🟢 `raw.githubusercontent.com` 200/404 DISCRIMINA · 🟢 `git ls-remote` sha/`fatal` DISCRIMINA · 🟢 `WebFetch` payload/404 DISCRIMINA (vivo, 2º pase seguido) · 🔴 `curl -sI github.com` y `api.github.com` **403/403**, y leido con `head -1` da **200 al repo inventado** (🆕 `P372`).** ⚠️ **Y una restriccion de acceso declarada: los tools `mcp__github__*` estan presentes pero la sesion esta acotada a `gmilano/*`, asi que la capa de API autenticada NO es un canal disponible para repos de terceros en esta corrida.**
@@ -17,6 +18,50 @@ updated: 2026-10-05
 > **Pase 110 del 2026-10-05:** 🔴 **Trending de la industria vacio por TRIGESIMONOVENA vez.** 🟢 **Lo que se mueve es el CANAL: `WebFetch` sobre `github.com` devuelve estrellas donde `curl` da 403, con control negativo en 404 — asi que la columna de estrellas de este arbol vuelve a existir, con resolucion de 3 cifras significativas.** 🔴 **Y lo primero que mide es un repo de 8 ★ sin licencia que el canal de busqueda presento junto a uno de 40,8 ★k.**
 > **Pase 107 del 2026-10-05:** 🔴 **Trending de la industria vacio por TRIGESIMOSEXTA vez: curriculo, catalogos, una bolsa de trabajo y dos generalistas (`microsoft/semantic-kernel` 27.470 ★, `NousResearch/hermes-agent` MIT), con las SEIS cifras del eje generalista identicas digito a digito a los pases 105 y 106 ⇒ informacion sobre el CANAL, no sobre la industria.** 🟢 **Lo que SI se movio es una capa de BINARIOS que este archivo nunca conto: 2.443 archivos de figura (~156 MiB, 1.326 imagenes distintas) en `CAHLR/OATutor-Content`, con la extension `.gif` falsa en 2.443 de 2.443 (`P332`).** 🔵 **`git ls-remote` da TRES refs, y una se llama `gpt-science-study`: la unica de este arbol cuyo nombre anuncia contenido sintetico.** 🔴 **Defecto propio corregido: los 49.481 JSON contra los 49.479 del pase 106 son los 6 caminos con bytes de control (U+007F/U+0080/U+0081) en el nombre del paso — la identidad de un paso NO es un slug seguro.**
 > **Pase 106 del 2026-10-05:** 🔴 **Trending de la industria vacio por TRIGESIMOQUINTA vez: el canal devuelve generalista o educativo-sobre-AI, no AI-para-educacion.** 🟢 **Lo que SI se movio esta en el eje de `ref` y no de repo: las ramas `1e` de 5 bundles de `openstax` contienen la UNICA cesion `CC BY 4.0` de 10 colecciones cuyas versiones vivas son `NC-SA` — cesion y vigencia apuntan en direcciones opuestas.** 🔵 **Canal nuevo calibrado: `git ls-remote` para enumerar refs (responde a repo real, falla a repo inventado), el unico de este arbol que contesta «que refs tiene este repo» con `api.github.com` en 403 — sin el, la accion A de este pase era imposible.**
+
+
+## 2026-10-05 — pase 119: el canal de MERCADO entregó una corrección de IDENTIDAD de repo, que es lo que el canal de repos no había podido
+
+🔵 **Lo más valioso de este pase llegó por el canal equivocado a propósito.** La sonda era de
+obligación regulatoria (FRIA / art. 27, ver `agents/trending.md`), y lo que devolvió además del
+software fue **una colisión de nombre de tres repos** que este archivo no podía ver sondeando por
+repo, porque **sondeando por repo sólo se ve el que ya se tiene**.
+
+### 🆕 Trending por COLISIÓN: tres `awesome-eu-ai-act`, dos linajes independientes (`P390`)
+
+| Dueño | ¿Fork? | Upstream | Licencia | ★ | Titular |
+|---|---|---|---|---|---|
+| `morganrcu/awesome-eu-ai-act` | NO | — | CC0 | **21** | — |
+| 🆕 `GenAI-Gurus/awesome-eu-ai-act` | NO | — | CC0-1.0 | 🟢 **110** | **Carlos Hernandez** |
+| `mlx-cassio/awesome-eu-ai-act` | **SÍ** | `GenAI-Gurus/...` | CC0 | 0 | — |
+
+🔴 **Este estante publicaba el de 21 ★ y le faltaba el de 110 ★, y no son padre e hijo: son
+independientes con el mismo nombre.** Detalle completo y la consecuencia para el deduplicador en
+`repos/foundations.md` (`P390`). 🔵 **La regla que sale para este archivo: el trending por NOMBRE no
+distingue linajes, y el ★ de un nombre no es el ★ del proyecto que uno tiene.** El discriminador
+barato fue la **descripción** — distinta entre los dos originales, idéntica entre fork y padre.
+
+### 🆕 Versión nueva, de ayer: `HKUDS/DeepTutor` `v1.6.13` (`2026-10-04`)
+
+Es el segundo pase de esta serie en que **el trending es un número de VERSIÓN y no un repo** (el 116
+ya lo fue). Changelog verificado en la página de *releases*: *read-aloud* natural con premio por quiz,
+marcas con *timestamp* en *Immersive Watching*, **barajado de opciones en Guided Learning para no
+exponer la respuesta**, modelo de visión independiente con caché, **MinerU** en nube para PDFs
+sobredimensionados, *timeout* de síntesis configurable, **DashScope Qwen-Audio / Qwen3 TTS**,
+**Requesty + API Route + FutureInfra** como proveedores LLM, **polaco** en la interfaz, y recuperación
+de chat sobre transcripciones completas. ⚠️ **La página de *releases* NO muestra licencia** — la de
+este repo hay que leerla del repo, no del *release*.
+
+### 🔴 Hueco de OFERTA declarado, con la distinción técnica para que no se cierre mal
+
+**Art. 31 de la *AI Basic Act* de Corea (vigente `2026-01-22`) exige etiquetar la salida generativa y
+marcar el contenido sintético indistinguible de lo real. Implementaciones open source encontradas:
+CERO.** ⚠️ **Y la trampa está en lo que este archivo YA tiene:** `contentauth/c2pa-rs` y
+`c2pa-python` resuelven **procedencia criptográfica** (manifiesto firmado en el metadato), que es la
+obligación del **art. 50(2) europeo**; el art. 31(3) coreano pide **marca legible por el usuario
+final** (símbolo de UI, logo, aviso) para contenido en servicio, y **watermark humano-legible o
+metadato máquina-legible con guía de texto/audio** para contenido exportado. 🔵 **Son dos obligaciones
+distintas sobre el mismo archivo, y C2PA cubre una.** ⇒ **No cerrar este hueco con C2PA.**
 
 
 ## 2026-10-05 — pase 118: el canal generalista falla por tercera vez igual, y el fingerprint de licencia deja de ser identidad
