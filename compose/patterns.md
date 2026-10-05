@@ -8,6 +8,7 @@ updated: 2026-10-05
 
 > Recetas concretas: repos nombrados, licencias verificadas, wiring explícito y estimación.
 > Todos los repos citados fueron verificados vía WebFetch el 2026-09-30; los del pase 11, el 2026-10-01 (ver `agents/top.md`).
+> **Pase 109 del 2026-10-05:** 🆕 **Los patrones nuevos son `P342` y `P343`, y la receta nueva es `R-109-CESION-RECUPERABLE`.** 🔴 **`P342`: un badge de licencia y/o una entrada del arbol de directorios que el README dibuja de si mismo son una AFIRMACION de cesion que apunta a una RUTA concreta — y cuando esa ruta da 404, el repo no es «sin licencia» (descarte) sino `P314` (cesion a pedir por escrito al titular, citando su propia afirmacion). Se distingue de `P340` (otra ortografia, la cesion existe) y de `P314` puro (palabra en el cuerpo, sin ruta).** 🔴 **`P343`: un prefijo GOLOSO `^.*` sin frontera izquierda en la captura le roba los digitos de orden superior al numero y deja un residuo PLAUSIBLE (`35.121 B` → `5.121 B`) — no es el cuantificador acotado, que solo captura bien, y POSIX ERE no da con que frenarlo porque `grep -E`/`sed -E` no tienen cuantificadores perezosos ni *lookbehind*. La misma corrida dejo una fila cuyo «repo» es una RUTA. El conteo de bytes y la huella son redundantes solo cuando los dos estan bien, y en cuanto uno se corrompe el otro es el unico detector.** 🔵 **La receta convierte la clasificacion binaria «licenciado / sin licencia» en una cola de TRES salidas, y la del medio es la unica del arbol donde una hora de gestion habilita un activo hoy bloqueado.**
 > **Pase 107 del 2026-10-05:** 🆕 **Los patrones nuevos son `P332`, `P333`, `P334` y `P335`, y la receta nueva es `R-106-PROCEDENCIA-DE-BINARIO`.** 🔴 **`P332` — cuando se comparan dos arboles por contenido el filtro es la FIRMA de bytes, nunca la extension: 2.443 de 2.443 `.gif` de un corpus OER son PNG/JPEG/WEBP y un barrido por extension da «0 solapamiento» con varianza cero desde una premisa falsa.** 🔴 **`P334` — el titular de un BINARIO se resuelve por huella de contenido y puede vivir en una obra que el item NO cita; y cuesta un cruce por arbol (22), no una inspeccion por item (2.443).** 🔴 **`P333` — una huella tomada por sustitucion de comando no es la huella del archivo, y una cifra de esta base lo era; la familia no se movio en 5 de 5 remediciones.** 🔴 **`P335` — tercera sub-clase de `P320`: lo denegado puede ser la FORMA de la operacion (lote) y no el derecho (pieza nombrada), asi que los denominadores se publican con lo que REALMENTE se abrio.**
 > **Pase 106 del 2026-10-05:** 🔴 **`P328` — la cesion de un OER es propiedad del par (coleccion, **ref**) y la identidad es el `collection-id`, no el slug: 10 de 10 colecciones estrechan de `CC BY 4.0` (`1e`) a `NC-SA` (`main`), y comparar por slug hace desaparecer el estrechamiento (`P289` en campo nuevo).** 🔴 **`P329` — una huella normalizada es identidad de TEXTO, no de FAMILIA (6 payloads `CC BY 4.0`, 2 huellas): la huella contesta «¿es el mismo archivo?», la familia «¿que permite?», y son dos instrumentos.** 🔴 **`P330` — cuando se mide una propiedad de BYTES el decodificador es parte del instrumento: `text=True` normalizaba los CRLF antes de hashear y lo delato una aritmetica, no un test rojo.** 🟢 **`P331` — el denominador son las unidades que DECLARAN: 82.492, no 13.371.** 🟢 **Dos recetas nuevas: auditoria de cesion de un corpus OER antes de cotizar (con su `.tsv` como entregable) y compuerta de marcado de contenido sintetico para EMEA, con el predicado ya auto-declarado en el dato.**
 > **Pase 105 del 2026-10-05:** 🆕 **Los patrones nuevos son `P326`, `P326-A` y `P327`, y la receta `R-105-CESION-CONTRA-TITULAR` INVIERTE a `R-104-CAPA-DE-CONTENIDO`.** 🔴 **`P326`: la cesion que un item AFIRMA no es la que su titular OTORGA, y la tasa de llenado del campo mide DILIGENCIA, no PERMISO** — censo de **13.371** problemas: **8.312 (62,2 %)** declaran `CC BY 4.0` contra un titular que cede `NC-SA`; **embarcable 4,4 %**. 🔵 **La ironia que lo prueba: el unico libro cuyo titular SI cede `CC BY 4.0` (`physics`) es el unico cuyos items dejan el campo VACIO.** 🟢 **`P326-A`: egress cerrado al sitio del titular no es cesion inalcanzable** — se leyo del payload de `openstax` en GitHub con `openstax.org` en **000**; lo que descalifica a un canal secundario **no es que sea otro canal, es que sea otro titular**. 🔴 **`P327`: los bytes y el `sha256` crudo de un archivo de licencia NO son identidad** (21.443 / 21.013 / 21.442 B = el mismo texto con CRLF / LF / CRLF-sin-salto; un unico `sha256` al normalizar) — **indicta las huellas que esta base publica desde el pase 66: los datos siguen bien, la huella no era huella.** 🔴 **Y `R-104` ordenaba la cola de auditoria por tasa de etiquetado: estaba al reves** — los cursos al **100 %** son los **100 % mal etiquetados**, y `Calculus Volume 1`, que `R-104` descartaba, es el que **miente menos**.
@@ -136,6 +137,144 @@ updated: 2026-10-05
 > **Pase 11:** +2 patrones — **P25** (riesgo de abandono conforme al Anexo III, la capa con presupuesto ya asignado y sin oferta open source) y **P26** (agente docente sobre la ontología curricular nacional ya publicada).
 > **Pase 27:** **+4 patrones y una corrección.** 🔴 **P51 queda con premisa falsa** —el conector MCP de Moodle **sí existe y es MIT**— y lo reemplazan **P54** (corrección y devolución sobre Moodle con **compuerta humana**, el último tramo del gap 6, con piezas que ya escriben), **P55** (el conector de **Open edX**, que es el único que de verdad no existe), **P56** (**SCORM** como formato de salida de la capa generativa: cero integración, offline) y **P57** (evidencia por MCP cotizada sobre lo que CaSS **realmente** expone — 6 de 61 operaciones, con insignias y autoría de marcos **fuera**).
 
+
+## 🆕 Patrones del pase 109 (2026-10-05) — `P342`, `P343` y la receta `R-109-CESION-RECUPERABLE`
+
+### `P342` — un badge de licencia y una entrada de arbol en el README son una AFIRMACION de cesion, no una cesion
+
+🔴 **El enunciado:** *un repo puede afirmar una licencia en su README —por badge, por entrada de
+arbol de directorios, o por las dos— sin que exista el archivo al que apunta. Y cuanto mejor
+documentada esta la afirmacion, mas convincente es el falso negativo que produce en cualquiera de
+las dos direcciones: quien mira el badge concluye «licenciado», quien mira el archivo concluye
+«sin licencia», y los dos publican una afirmacion incompleta.*
+
+**El caso que lo abrio** (medido en el pase 109):
+
+| donde | payload — `Javi111003/OlivIA-RAG`, `main/README.md`, 5.785 B, `sha256:f4be1a6367c6` |
+|---|---|
+| linea 3 | `[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)` — badge con **hipervinculo relativo** a `LICENSE` |
+| linea 50 | `├── LICENSE                  # Licencia del proyecto` — **el arbol de directorios que el README dibuja de si mismo** |
+| archivo | 🔴 **404 en 20/20 sondas** (`LICENSE LICENCE COPYING LICENSE.md LICENCE.md LICENSE.txt LICENSE.TXT COPYING.txt LICENCE.txt` × `{main, master}`), con `README.md` → 200 como testigo de alcance |
+
+**Como se distingue de sus vecinos** — los tres son casos distintos y piden acciones distintas:
+
+| patron | donde esta la cesion | que hacer |
+|---|---|---|
+| **`P340`** | en un archivo con **otra ortografia** (`LICENCE`, `LICENSE.TXT`) | 🟢 **ampliar la lista de nombres**: la cesion existe y es valida |
+| **`P314`** | como **palabra en el cuerpo** del README, sin archivo | 🔸 **pedir el texto por escrito**: es concesion valida, no texto de licencia |
+| 🆕 **`P342`** | como **badge y/o entrada de arbol** que apunta a una **RUTA concreta** que no existe | 🔸 **pedir la cesion por escrito al titular**, citando su propia afirmacion. **El autor ya declaro su intencion dos veces: es una pieza recuperable por una gestion, no un descarte** |
+
+🔵 **El discriminador operativo:** `P342` se detecta pidiendo el `README.md` **y** resolviendo cada
+ruta que el README afirme. Un barrido que solo pide archivos de licencia lo clasifica «sin
+licencia»; uno que solo lee badges lo clasifica «MIT». **Hay que correr los dos y comparar.**
+
+### `P343` — un prefijo GOLOSO le roba los digitos de orden superior a un numero capturado, y POSIX ERE no te da con que frenarlo
+
+🔴 **El enunciado:** *en una sustitucion con prefijo `^.*`, el motor consume todo lo que puede y
+retrocede solo lo minimo para que el resto encaje. Si el grupo de captura no tiene frontera por la
+izquierda, el prefijo se queda con los primeros digitos del numero y la captura devuelve la COLA —
+que sigue pareciendo un valor valido del mismo tipo. No falla, no avisa, y el residuo es
+plausible.*
+
+**El caso, y es un defecto de este pase contra si mismo** — reproducible en una linea:
+
+```
+$ echo "bytes 35.121 B tail" | sed -E 's/^.*([0-9]{1,3}[.,][0-9]{3}) B.*$/[\1]/'
+[5.121]
+```
+
+🔴 **30.000 bytes de menos, y `5.121 B` es un tamaño perfectamente creible para un archivo de
+licencia.**
+
+⚠️ **Y la causa NO es la que parece.** La primera version de este patron acuso al cuantificador
+acotado `{1,3}`, y eso **esta mal, medido**: por si sola, la expresion captura el numero entero.
+
+```
+$ python3 -c "import re; print(re.search(r'[0-9]{1,3}[.,][0-9]{3}', '35.121 B').group(0))"
+35.121
+```
+
+🔵 **La causa es el prefijo goloso mas la ausencia de frontera izquierda en la captura.** `[0-9]{1,3}`
+se satisface con **un** digito, asi que al motor le alcanza con cederle `5` y quedarse el `3`.
+
+**Las dos propiedades de POSIX ERE que lo vuelven una trampa, las dos verificadas en este pase:**
+
+| propiedad de `grep -E` / `sed -E` | verificacion | consecuencia |
+|---|---|---|
+| 🔴 **no hay cuantificadores perezosos** | `echo "aXbXc" \| sed -E 's/^.*?X/[LAZY]/'` → `[LAZY]c` ⇒ `.*?` consumio `aXbX`, o sea fue **goloso** | un patron escrito pensando en PCRE encaja un tramo **distinto y mas largo**, en silencio. Lo mismo vale para `{0,N}?` |
+| 🔴 **no hay *lookbehind*** | `sed -E 's/^.*((?<![0-9])[0-9]{1,3}…/…/'` → `sed: Invalid preceding regular expression` | 🔵 **la correccion NO puede ser una asercion de frontera**: hay que anclar por el separador (`[0-9]+([.,][0-9]{3})*`) o hacer la extraccion en una herramienta con PCRE (`grep -P`, Python) |
+
+🔴 **Y la MISMA corrida produjo una segunda instancia de la misma clase, que conviene mostrar porque
+no es un numero:**
+
+```
+master/LICENSE.TXT	1.086	02c5a8e84229      ← el campo «repo» es una RUTA, no un slug
+```
+
+🔵 El patron de slug (`[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+`) tambien encaja en un camino de archivo, y
+sin frontera el prefijo goloso lo deja aterrizar ahi. **Un extractor sin disciplina de frontera no
+produce un error: produce filas plausibles.**
+
+🟢 **Lo que atrapo las DOS:** la huella. `93178a43d6d3` coincidio **exacto** con el archivo medido
+de 35.121 B, y eso es **imposible** si el archivo fuera 30 KB mas chico. 🔴 **Sin la huella, este
+pase habria publicado una «correccion» a una cifra que estaba bien en las 7 partes donde esta base
+la afirma.**
+
+🔵 **La regla que deja, y vale para todo este arbol:** *el conteo de bytes y la huella son
+redundantes SOLO cuando los dos estan bien; en cuanto uno se corrompe, el otro es el unico
+detector. Toda cifra que esta base publique con su huella al lado es auditable; toda cifra que
+publique sola, no.*
+
+⚠️ **Y la leccion de orden superior, porque el caso es ironico y la ironia es el dato:** la accion
+que produjo este defecto existia **para desempatar dos causas de un delta de 1 byte**. El defecto
+que aparecio fue del propio instrumento de la accion, y era de 30.000 bytes. 🔵 **Un instrumento
+calibrado para detectar errores pequeños no detecta los grandes: la magnitud que un control busca
+es, ella misma, una suposicion que hay que controlar.** 🔴 **Y la primera version de ESTE patron
+culpo a la causa equivocada hasta que la suite la refuto — un enunciado de patron tambien se
+mide.**
+
+### 🆕 Receta `R-109-CESION-RECUPERABLE` — convertir un «sin licencia» en un activo cotizable
+
+**El problema que resuelve.** Este arbol tiene **13** piezas clasificadas «sin licencia» (cifra ya
+corregida por esta base en la cadena 32 → 22 → 13, pases 65–67, `P172`). Clasificadas asi, las 13
+estan fuera de cualquier entrega. 🔵 **Pero `P342` muestra que al menos una de ellas no es un repo
+sin licencia: es un repo cuyo autor YA declaro MIT dos veces y no subio el archivo.** Esa distincion
+vale dinero, porque la segunda se arregla con un correo.
+
+**Las piezas, todas ya en este arbol:**
+
+| rol | pieza | cesion |
+|---|---|---|
+| sonda de payload | `raw.githubusercontent.com` + lista de **10** nombres × **2** ramas | canal, con control negativo obligatorio |
+| detector de afirmacion | el `README.md` del propio repo (badge + arbol de directorios) | — |
+| modelo de cesion por capas, como referencia a citar | [`oaknational/oak-open-curriculum-ecosystem`](https://github.com/oaknational/oak-open-curriculum-ecosystem) | 🟢 **MIT** (codigo) + **OGL v3.0** (datos) |
+| instrumento de marcado, para lo que SI se puede entregar ya | `compose/code/aiact-50-2-pack/` (art. 50(2), suite propia) | de este arbol |
+
+**El cableado, paso por paso:**
+
+1. **Barrer** los 13 pidiendo las 10 ortografias × 2 ramas **y** el `README.md`. 🔴 **Con repo
+   inventado en el mismo lote**: sin control negativo, un 404 no se distingue de un canal caido.
+2. **Resolver cada ruta que el README afirme.** Un badge `[![License](…)](LICENSE)` es una ruta
+   relativa: se pide. Una entrada `├── LICENSE` del arbol dibujado es una afirmacion: se pide.
+3. **Clasificar en tres cubetas, no en dos:**
+   - 🟢 **cede** (archivo con texto) → entra al catalogo con bytes **y huella**, por `P343`.
+   - 🔸 **afirma sin texto** (`P314` / `P342`) → **lista de gestion**: se le pide la cesion por
+     escrito al titular, **citando su propia afirmacion**, que es el argumento mas barato que
+     existe.
+   - 🔴 **no afirma nada** → descarte, con la ausencia **medida** (n sondas, testigo de alcance).
+4. **Para la cubeta del medio, priorizar por region y por encargo.** `OlivIA-RAG` es LATAM con
+   señal de primera mano: si el encargo es LATAM, esa gestion vale mas que diez repos genericos.
+5. **Lo que se entrega mientras la gestion corre** no depende de la cesion del repo: el marcado del
+   art. 50(2) sobre el contenido que el cliente ya genera, cuya gracia vence el **`2026-12-02`**.
+
+🔵 **Por que la receta cierra para Globant:** no pide un repo nuevo ni un modelo nuevo. Convierte
+una clasificacion binaria («licenciado / sin licencia») en una **cola de trabajo con tres salidas**,
+y la del medio es la unica del arbol donde una hora de gestion puede habilitar un activo que hoy
+esta bloqueado. 🔴 **Y la cota, dicha: una afirmacion de licencia NO es una licencia. La gestion
+puede fallar, y hasta que el titular ceda por escrito la pieza sigue fuera de una entrega
+comercial.**
+
+---
 
 ## 🆕 Patrones del pase 108 (2026-10-05) — `P336`–`P341` y la receta `R-107-CAPA-MCP-SOBRE-LMS-ACREDITADO`
 

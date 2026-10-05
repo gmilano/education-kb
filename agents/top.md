@@ -8,6 +8,7 @@ updated: 2026-10-05
 
 > Agentes y herramientas AI open source para educación. Foco: MIT / Apache 2.0 / BSD.
 > Verificado repo por repo vía WebFetch el 2026-09-30 (stars y licencia leídos de la página del repo).
+> **Pase 109 del 2026-10-05:** 🔴 **0 altas permisivas (trigesimoprimer barrido) y por primera vez la razon se MIDE en vez de declararse: las 5 candidatas que el canal devolvio (`DeepTutor`, `open-tutor-ai-CE`, `AITutorAgent`, Freelingo, Bloom) ya estaban las 5 en el arbol — 5 devueltas / 5 publicadas / 0 nuevas (`P311`, `P287`).** 🔴 **`P342` — un badge de licencia y una entrada de arbol del README son una AFIRMACION de cesion, no una cesion: `Javi111003/OlivIA-RAG`, publicado DOS veces por esta base como «sin licencia», afirma MIT en la linea 3 (badge hipervinculado a `LICENSE`) y en la linea 50 (su propio arbol de directorios), con el archivo en 404 en 20/20 sondas ⇒ FALSO NEGATIVO publicado, y una pieza LATAM recuperable por una gestion y no un descarte.** 🔸 **Accion B CONFIRMADA en su mitad fuerte (0 de 9 «sin licencia» tienen archivo) y DEBIL en la otra (el unico caso de ortografia, `openedx/XBlock`/`LICENSE.TXT`, ya lo tenia `P279`).** 🔴 **Accion C FALSIFICADA en sus dos clausulas, y lo que se cumple es la clausula de refutacion que el pase 108 escribio contra si mismo: 5 de 5 huellas son del archivo COMPLETO, 0 de 5 del archivo sin su ultimo byte, 5 de 5 terminan en `0a` ⇒ `P333` cerrado por ausencia medida.** 🔴 **`P343` — defecto de ESTE pase, y su primer diagnostico tambien estaba mal: un prefijo GOLOSO `^.*` sin frontera izquierda en la captura leyo el `35.121 B` publicado como `5.121 B` (no fue el cuantificador acotado, que solo captura bien), y POSIX ERE no da con que frenarlo porque `grep -E`/`sed -E` no tienen cuantificadores perezosos (`.*?` es goloso) ni *lookbehind*; la misma corrida dejo una fila cuyo «repo» es la RUTA `master/LICENSE.TXT`. Lo atrapo la huella y nada mas, y el enunciado lo corrigio la SUITE.** 🔴 **Accion A NO CORRIDA (tercer pase de deuda declarada) y `github.com` degradado a 403 ⇒ 0 estrellas medidas.**
 > **Pase 108 del 2026-10-05:** 🟢 **5 altas permisivas, y rompen una racha de TREINTA barridos en cero** — las cinco leidas del PAYLOAD, no del nombre: `THU-MAIC/OpenMAIC` (**MIT**, `v1.2.0-rc.1` del 2026-10-04) 🔴 **con `packages/mathml2omml` en `LGPL-3.0-or-later` leido de SU PROPIO `package.json`: la licencia de la raiz no es la licencia del arbol**; `oaknational/oak-open-curriculum-ecosystem` (**MIT** en el codigo, 🔴 **OGL v3.0** en los datos de curriculo — `P315` otra vez); `Cicatriiz/openedu-mcp` (**MIT**); `davidlms/learnmcp-xapi` (**MIT**); y `54yyyu/school-mcp` (**MIT solo en el cuerpo del README, sin archivo** — `P314`). 🆕 **`P340` — el 404 de un archivo de licencia puede ser una ORTOGRAFIA y no una ausencia: `oak` cede en `LICENCE` y el barrido de esta base pide `LICENSE`; un pase que solo mirara `LICENSE` habria publicado «sin cesion» sobre un repo MIT.** 🔴 **La accion A pre-registrada NO se corrio: el clon del arbol del titular quedo DENEGADO por el clasificador de la sesion, y eso se declara en vez de callarse (`P335` sigue en pie, pero esta vez ni la pieza nombrada paso).** 🔴 **La accion B resulta NO CORRIBLE contra el artefacto al que su propia pre-registracion la mando (`P336`): `accion-a-b.2026-10-05.tsv` colapsa `oer` a DOS valores (`openstax`/`otro`) y el slug del libro —lo unico que separa una edicion `2e` de una `1e`, que es toda la pregunta— no esta en el archivo; las «825 ya enumeradas» no estan enumeradas ahi.** 🔴 **Y al ir a buscarlo aparece el hallazgo que manda: dos artefactos del MISMO pase, sobre el MISMO sha `1925dec`, se contradicen por exactamente 41 figuras en el corte openstax/no-openstax (**1.611/832** contra **1.570/873**, los dos suman 2.443), y la cifra que llego a la PROSA es la menor (`P337`).** 🔴 **La causa, medida y no supuesta: `oer` es TEXTO LIBRE con dos formas de URL —y al ampliar la muestra de 694 a **1.685** unidades resultaron **CUATRO**, dos de ellas invisibles para el patron inicial—, con solapamiento **PARCIAL** entre formas: un extractor afirmado sobre `/details/books/` pierde **3 obras completas** y ademas **SUB-CUENTA** una cuarta sin que nada avise. Y `precalculus` a secas existe en el corpus y NO esta en ninguna de las 10 filas del censo publicado (`P338`).** 🔴 **La version de este MISMO pase que decia «las dos formas PARTEN el espacio sin solaparse» quedo FALSIFICADA por su propia medicion ampliada, y se corrige en vez de dejarse.** 🆕 **`P341` — 9 unidades nombran al TITULAR y no a la OBRA: sin obra no hay edicion y sin edicion no hay cesion resoluble, con ningun extractor.** 🟢 **La accion C sale CONFIRMADA en su clausula de conteo: **17** pares (bytes, huella) publicados junto a un archivo de licencia, la prediccion pedia ≥10.** 🔴 **Y FALSIFICADA como instrumento (`P339`): el delta de 1 byte NO es diagnostico, porque `P327` (el archivo no trae salto final) y `P333` (`$(cat)` se lo come al medir) producen la MISMA firma — esta base ya publica `21.442` y `21.443` B del mismo texto por la primera causa.** 🟢 **Tablero re-verificado COMPLETO: 59 suites (53 Python + 6 shell), 0 fallos, 203 aserciones (`Python 3.11.15`).**
 
 > **Pase 107 del 2026-10-05:** 🔴 **0 altas permisivas — trigesimo barrido, 3 candidatas MEDIDAS del payload (no rechazadas por el nombre) y las 3 frenadas con su bloqueo nombrado pieza por pieza: `1111philo/learn` es **AGPL-3.0** con `package.json` **MUDO**, `oer/emacs-reveal` cede **por archivo** (REUSE: `GPL-3.0-or-later` + `CC BY-SA 4.0`) y `NousResearch/hermes-agent` es MIT pero **generalista**.** 🔴 **Lo que este pase le corrige a la fila `OATutor` es la capa que nadie habia abierto, y el hallazgo es de METODO: la EXTENSION de sus 2.443 archivos de figura es FALSA en 2.443 de 2.443 — ninguno es un GIF (1.358 PNG, 938 JPEG, 147 WEBP), asi que el barrido «por extension» que este pase iba a correr sobre el arbol del titular habria concluido «cero solapamiento» desde una premisa falsa (`P332`).** 🟢 **Medido por BYTES en cambio: 36 archivos del redistribuidor son byte-identicos a una figura del titular, y los 36 citan `introductory-statistics` mientras sus bytes se publican en `osbooks-statistics` (`col30309`) — el titular de una figura vive en una obra DISTINTA de la que el item cita (`P334`).** 🟢 **La accion B sale CONFIRMADA: 9.971 de 12.999 unidades con `oer` vacio (76,7 %) cuelgan de un problema que cita OpenStax.** 🔴 **Y la accion C corrige una cifra publicada de esta base: `fa4e32e5e622` no era deriva del upstream, era la huella del archivo SIN su salto final (`P333`).** 🟢 **Tablero re-verificado: 58 suites, 63 invocaciones, 0 fallos (`Python 3.11.15`).**
@@ -278,6 +279,240 @@ updated: 2026-10-05
 > fila** —`lineage-skill`, con un vocabulario cerrado de 9 valores por afirmación, **4 de los 9 «esto lo produjo el
 > modelo»**— y **ninguna de las dos sabe de la otra**. Ver la capa nueva al final de este archivo, las tendencias
 > **180**–**182** y el patrón **P99**.
+
+## 🔴 Altas de agente: 0 permisivas — trigesimoprimer barrido, y la razon se MIDE en vez de declararse: las 5 candidatas que el canal devolvio ya estaban las 5 en el arbol (pase 109 del 2026-10-05)
+
+> **Frontmatter y region:** `Global`. Las señales regionales de este pase estan en
+> [`intel/market.md`](../intel/market.md), bajo `## Opportunities by region`.
+
+🔴 **0 altas, y por primera vez en la racha el barrido de agentes NO devolvio candidatas nuevas que
+medir: devolvio candidatas que esta base ya tiene.** El barrido educativo especifico
+(`github trending education AI 2026 open source tutoring agent LMS`) rindio cinco piezas, y las
+cinco dan coincidencia en el arbol publicado **antes** de este pase:
+
+| candidata devuelta por el canal | archivos del arbol que ya la citan | veredicto |
+|---|---|---|
+| `HKUDS/DeepTutor` | **11** | 🔴 ya publicada — `P311` (gate de alta duplicada) |
+| `Open-TutorAi/open-tutor-ai-CE` | **6** | 🔴 ya publicada — `P311` |
+| `Ebimsv/AITutorAgent` | **3** | 🔴 ya publicada — `P311` |
+| Freelingo | **6** | 🔴 ya publicada — `P311` |
+| Bloom | **7** | 🔴 ya publicada — `P311` |
+
+🔵 **Eso es informacion distinta del silencio, y distinta tambien de «0 altas por canal muerto»:**
+el canal esta vivo, discrimina (ver tablero), y lo que devuelve es el conjunto que este estante ya
+publico. **La saturacion del eje de agentes educativos queda MEDIDA con denominador enumerado
+(5 devueltas / 5 ya publicadas / 0 nuevas), no declarada** — que es la disciplina que `P287` pide.
+
+### 🔴 `P342` — un badge de licencia y una entrada en el arbol del README NO son una cesion, y esta base tenia un FALSO NEGATIVO publicado DOS veces
+
+Este es el hallazgo que manda del pase, y es **contra el catalogo de esta base**.
+
+`Javi111003/OlivIA-RAG` esta publicado **dos veces** como *«sin licencia»*
+([`agents/trending.md`](trending.md) linea 11314, [`intel/trends.md`](../intel/trends.md) linea 5391).
+Medido del payload en este pase, el repo **afirma MIT en DOS lugares de su propio README**:
+
+| donde | texto leido del payload (`main/README.md`, 5.785 B, `sha256:f4be1a6367c6`) |
+|---|---|
+| linea 3 | `[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)` — badge **MIT** con hipervinculo **relativo a `LICENSE`** |
+| linea 50 | `├── LICENSE                  # Licencia del proyecto` — el **arbol de directorios que el README dibuja de si mismo** declara el archivo |
+
+🔴 **Y el archivo no existe: 20 sondas en 404** (10 nombres × 2 ramas), con el control de
+alcanzabilidad en verde (`README.md` → 200 en las dos ramas):
+
+```
+LICENSE LICENCE COPYING LICENSE.md LICENCE.md LICENSE.txt LICENSE.TXT COPYING.txt LICENCE.txt
+  × {main, master}  ⇒  20/20 · 404
+```
+
+🔵 **Por que importa y no es un detalle de catalogo.** *«Sin licencia»* es correcto sobre el
+**ARCHIVO** e incompleto sobre la **AFIRMACION**, y para un encargo comercial esa diferencia decide
+la accion:
+
+- *«sin licencia»* ⇒ se descarta la pieza y no se vuelve a mirar.
+- *«afirma MIT, sin texto»* ⇒ es un caso **`P314`**: la cesion **se pide por escrito al titular
+  nombrado**, porque hay un autor que ya declaro su intencion dos veces. Es una pieza
+  **recuperable por una gestion**, no un descarte.
+
+🔴 **`P342`, escrito para el barrido de esta base:** *un badge de licencia y una entrada de arbol en
+el README son una AFIRMACION de cesion, no una cesion — y cuanto mejor documentada esta la
+afirmacion, mas convincente es el falso negativo que produce.* El discriminador no es el nombre del
+archivo (eso es `P340`) ni la palabra en el cuerpo (eso es `P314`): es que **el README apunta a una
+RUTA concreta y su propio arbol jura que esta ahi.**
+
+⚠️ **Y la region: es una pieza LATAM colocable, con señal de primera mano.** El README esta en
+español y dice, con todas las letras, *«los examenes de ingreso a la universidad cubana»*,
+*«estudiantes cubanos»* y *«el curriculo educativo cubano»* — eso es señal de primera mano en el
+payload, no inferencia de nombre (`P261` satisfecho). 🔴 **Es, entonces, exactamente la clase de
+activo que esta base viene declarando que no encuentra en LATAM — y su bloqueo no es tecnico ni
+regional: es de cesion.**
+
+### 🟢 La accion B pre-registrada: CONFIRMADA en su mitad fuerte, y la mitad debil se confirma por un caso que esta base YA TENIA
+
+| clausula pre-registrada por el pase 108 | pedia | medido | veredicto |
+|---|---|---|---|
+| aparece **≥1** repo mas, ademas de `oak`, cuya cesion esta en una ortografia que el barrido no pedia | ≥ 1 | 🔸 **1: `openedx/XBlock` → `master/LICENSE.TXT` = Apache-2.0** (11.358 B, `sha256:cfc7749b96f6`) | 🔸 **CONFIRMADA en la letra, DEBIL en el espiritu**: es el caso que `P279` ya habia resuelto, o sea una **replicacion**, no una instancia nueva |
+| **ninguno** de los declarados «sin cesion» resulta tener una licencia permisiva escondida | 0 | 🟢 **0 de 9** — ninguno de los 9 declarados «sin licencia» tiene **ningun** archivo de licencia en 10 nombres × 2 ramas | 🟢 **CONFIRMADA** |
+| *(control negativo: el canal discrimina)* | 404 a repo inventado | 🟢 **20/20 · 404** para `gmilano/repo-inventado-p109-control` | 🟢 **el canal DISCRIMINA** |
+
+🔵 **El barrido completo: 300 sondas** (15 repos × 10 nombres × 2 ramas), artefacto
+`p340.2026-10-05.tsv`. 🟢 **`oak` replica al byte:** `main/LICENCE` y `master/LICENCE` → **MIT**,
+**1.086 B**, `sha256:02c5a8e84229`, identicos en las dos ramas.
+
+🔴 **Pero la mitad «confirmada» hay que leerla con su limite dicho: no aparecio NINGUNA ortografia
+nueva.** La prediccion del pase 108 queria saber si `oak` era un caso aislado o una clase de
+defecto; medido contra este conjunto de 15, **el unico otro caso es uno que esta base ya habia
+corregido**, asi que la pregunta sigue **sin cerrar** y el denominador (15 repos) es demasiado
+chico para cerrarla. **No se publica como «clase de defecto confirmada».**
+
+### 🔴 La accion C pre-registrada: FALSIFICADA — y la dispara su PROPIA clausula de refutacion
+
+| clausula pre-registrada por el pase 108 | pedia | medido (5 payloads alcanzables) | veredicto |
+|---|---|---|---|
+| **≥1** con huella publicada igual a la del archivo SIN su ultimo byte (firma de `P333`) | ≥ 1 | 🔴 **0 de 5** | 🔴 **FALSIFICADA** |
+| **≥1** con huella del archivo completo y conteo de bytes que difiere en 1 (firma de `P327`) | ≥ 1 | 🔴 **0 de 5** — los 5 conteos publicados coinciden **exacto** con lo medido | 🔴 **FALSIFICADA** |
+| *(clausula de refutacion que el pase 108 escribio)* | «que las 17 huellas sean del archivo completo» | 🟢 **5 de 5 son del archivo COMPLETO** | 🟢 **es esta la que se cumple** |
+
+Medicion en **un mismo acto** (bytes, `sha256` del archivo completo, `sha256` del archivo sin su
+ultimo byte, y el ultimo byte), artefacto `actionC.2026-10-05.tsv`:
+
+| repo · ruta | bytes | `sha256` completo | `sha256` sin ultimo byte | ultimo byte |
+|---|---|---|---|---|
+| `gibbonedu/core` · `v30.0.00/LICENSE` | **35.121** | 🟢 **`93178a43d6d3`** = publicado | `0ba1ab6217c2` | `0a` |
+| `openeducat/openeducat_erp` · `master/LICENSE` | **8.241** | 🟢 **`528f84036800`** = publicado | `8f4ce028f93d` | `0a` |
+| `oaknational/…-ecosystem` · `main/LICENCE` | **1.086** | 🟢 `02c5a8e84229` = publicado | `e90b3e1c8e94` | `0a` |
+| `openedx/XBlock` · `master/LICENSE.TXT` | **11.358** | `cfc7749b96f6` | `58d1e17ffe51` | `0a` |
+| `CAHLR/OATutor` · `main/LICENSE` | **1.105** | `5baaaf977a28` | `38f54651686e` | `0a` |
+
+🟢 **Los cinco terminan en `0a`**, o sea **traen** su salto final. 🔵 **Entonces la causa `P327`
+(archivo sin salto final) no esta presente en esta muestra, y la causa `P333` (el instrumento se
+come el salto al medir) tampoco:** las huellas publicadas por esta base para `gibbonedu/core` y
+`openeducat/openeducat_erp` son las del **archivo completo**, digito a digito.
+
+🔵 **El veredicto que corresponde, y es el que el pase 108 pre-escribio:** `P333` fue **un error
+puntual del pase 107 y no una clase de instrumento**. 🔴 **Lo que NO se puede concluir es que el
+delta de 1 byte sea diagnostico: `P339` sigue en pie como advertencia** (dos causas distintas
+producen la misma firma), pero **este pase no encontro ninguna de las dos en los pares publicados
+que pudo alcanzar**, y por lo tanto el expediente queda **cerrado por ausencia medida**, no por
+confirmacion.
+
+⚠️ **Cota declarada:** se alcanzaron **5** payloads, no los **17** pares que la accion nombraba.
+Los 12 restantes no tienen el par (repo, ruta) resoluble desde la prosa publicada sin releer repo
+por repo, que es un barrido multi-repo que esta sesion no corrio. **5 de 17 es la muestra, y se
+declara como muestra.**
+
+### 🔴 `P343` — un defecto de ESTE pase, encontrado por la suite de ESTE pase, y su primer diagnostico tambien estaba mal
+
+🔴 **Casi se publico una «correccion» a una cifra que estaba bien en las 7 partes donde esta base
+la afirma.** El extractor que armo la lista de pares (bytes, huella) devolvio
+`gibbonedu/core → 5.121 B` donde el arbol publica **`35.121 B`**. Reproducible en una linea:
+
+```
+$ echo "bytes 35.121 B tail" | sed -E 's/^.*([0-9]{1,3}[.,][0-9]{3}) B.*$/[\1]/'
+[5.121]
+```
+
+⚠️ **Y el primer diagnostico de este pase fue EQUIVOCADO, lo cual se dice porque lo corrigio la
+suite y no una relectura.** Se acuso al cuantificador acotado `{1,3}`; medido, esa expresion sola
+captura el numero entero (`35.121`). 🔵 **La causa real es el prefijo GOLOSO `^.*` mas la ausencia
+de frontera izquierda en la captura:** `[0-9]{1,3}` se satisface con un digito, asi que al motor le
+alcanza con cederle el `5` y quedarse el `3`.
+
+🔴 **Dos propiedades de POSIX ERE lo vuelven una trampa, las dos verificadas aqui:** `grep -E` /
+`sed -E` **no tienen cuantificadores perezosos** (`.*?` sobre `aXbXc` consume `aXbX`: es goloso) y
+**no tienen *lookbehind*** (`(?<![0-9])` es rechazado de plano). 🔵 **Entonces la correccion no es
+una asercion de frontera: hay que anclar por el separador o extraer con PCRE.**
+
+🔴 **La misma corrida dio una segunda instancia de la clase, y no es un numero:** una fila cuyo
+campo «repo» es `master/LICENSE.TXT` — una **ruta**, no un slug —, porque el patron de slug tambien
+encaja en un camino de archivo. **Un extractor sin disciplina de frontera no produce un error:
+produce filas plausibles.**
+
+🟢 **Lo que atrapo las dos fue la HUELLA y nada mas:** `93178a43d6d3` coincidio exacto con el
+archivo medido de 35.121 B, imposible si fuera 30 KB mas chico. 🔵 **La huella no es redundante con
+el conteo de bytes: es el unico campo que detecta una transcripcion truncada del otro.** 🔴 **Y la
+ironia es el dato: la accion C existia para decidir si un delta de bytes delataba un defecto de
+instrumento — y el defecto que aparecio fue del instrumento de la accion C, con un delta de
+30.000.**
+
+### 🟢 El tablero de canales, con control negativo
+
+| canal | pase 108 | pase 109 | control negativo |
+|---|---|---|---|
+| `raw.githubusercontent.com` (payload de licencia) | 🟢 200 | 🟢 **200** | repo inventado (`gmilano/repo-inventado-p109-control`) → **20/20 · 404** ⇒ **DISCRIMINA** |
+| `api.github.com` | 🔴 403 | 🔴 **403** | — |
+| `github.com` (pagina del repo) | ⚠️ solo estrellas | 🔴 **403** | 🔴 **se degrado respecto del pase 108**: ya no sirve ni para estrellas ⇒ **0 cifras de estrellas medidas en este pase** |
+| `openstax.org` | 🔴 000 | 🔴 **000 / ERR** | egress cerrado, **octavo** pase consecutivo |
+| `WebSearch` | 🟢 vivo | 🟢 **vivo**, 8 consultas, 0 silencios | — |
+
+### 🟢 El tablero, re-verificado COMPLETO en este pase
+
+| que se corrio | cifra |
+|---|---|
+| suites unicas (54 `test_*.py` + 6 `test*.sh`) | **60** |
+| suites Python ejecutadas una por una | **54** |
+| suites shell ejecutadas | **6** |
+| fallos | 🟢 **0** |
+| interprete | `Python 3.11.15` |
+| aserciones `self.assert*` en las suites Python | **252** (eran 203) |
+| suite nueva de este pase (`p342-license-claim-vs-file/test_p342.py`) | 🟢 **32/32** (49 aserciones) |
+
+⚠️ **Y un hallazgo de METODO sobre el propio tablero, que este pase encontro por equivocarse al
+correrlo:** la primera corrida dio **4 fallos** —`p183-nongithub-denominator`, `p184-holder-mismatch`,
+`p251-cohort-lineage` y `sebserver-mcp-gate`— y **ninguno era un fallo real**. 🔴 **Esas suites
+abren sus artefactos por ruta RELATIVA (`rows.tsv`, `operations.tsv`), asi que solo pasan si el
+intérprete corre con el directorio de la suite como `cwd`.** Corridas desde la raiz del repo,
+fallan por `FileNotFoundError`.
+
+🔵 **La consecuencia para quien audite esta base:** *«el tablero esta en verde»* es una afirmacion
+sobre un **procedimiento de corrida**, no solo sobre el codigo — y el procedimiento hay que
+escribirlo. 🟢 **Solo 32 de las 54 suites resuelven sus rutas con `__file__` y son indiferentes al
+`cwd`; las otras 22 no.** 🔵 **La suite nueva de este pase usa `os.path.dirname(os.path.abspath(__file__))`
+a proposito**, para que no dependa de donde se la invoque.
+
+### 🔴 Accion A: NO CORRIDA, y se declara en vez de callarse
+
+La accion A pedia terminar de materializar `CAHLR/OATutor-Content` (las 12.999 unidades) para
+cerrar `P337`. 🔴 **No se corrio: el pase 108 ya la dejo detenida por limite de tiempo con 1.685 de
+12.999, y este pase gasto su presupuesto de canal en las acciones B y C, que eran acotadas y
+cerraban.** ⚠️ **Es deuda que crece y va por tercer pase: `P337` (los 41 de diferencia entre dos
+artefactos del mismo pase) sigue ABIERTO y el denominador de riesgo de esta base sigue sin
+recalcular.** 🔵 **Se repre-registra abajo, con la cota de tiempo dicha por adelantado.**
+
+### 🔴 Acciones pre-registradas para el pase 110, falsables
+
+**Accion A — `P342` contra el catalogo entero, que es donde duele.**
+Rebarrer los repos que esta base declara «sin licencia» / «sin cesion» pidiendo el `README.md` y
+contando en cuantos hay un **badge de licencia** o una **entrada de arbol** que afirme una cesion
+que el archivo no respalda. 🔵 **Denominador: los **13** «sin licencia» que quedan vivos** — no los
+32 de la cifra original, que esta base ya corrigio en la cadena **32 → 22 → 13** (pases 65, 66 y
+67, `P172`). **Usar 32 seria citar una cifra que este arbol ya refuto.**
+
+**Prediccion falsable:** *de los 13, **≥2** afirman una licencia por badge o por arbol de README
+sin archivo que la respalde — o sea `OlivIA-RAG` no es un caso aislado sino una clase, y esta base
+tiene **≥2** falsos negativos publicados.* 🔵 **Que la refuta:** que sea **0 o 1** (y entonces
+`P342` es un espécimen y el catalogo esta sano); o que lo hagan **≥6** de 13 (y entonces el defecto
+no es del catalogo sino del ecosistema, y la pregunta de compra cambia de «esta licenciado» a «la
+licencia tiene TEXTO»).
+
+**Accion B — la cifra de estrellas, que este pase perdio.**
+`github.com` paso de ⚠️ a 🔴 403 entre el pase 108 y este. Probar si existe **algun** canal de este
+arbol que devuelva un conteo de estrellas verificable (`gitlab.com/-/raw` no sirve para GitHub;
+quedan los espejos y los registros de paquete).
+
+**Prediccion falsable:** *no hay ninguno, y la consecuencia es que esta base debe dejar de publicar
+estrellas como medidas a partir del pase 110 y marcarlas `NO MEDIBLE` por clase de entorno.*
+🔵 **Que la refuta:** que aparezca un canal que responda a repo real y falle a repo inventado — y
+entonces las estrellas vuelven, con su control negativo al lado.
+
+**Accion C — `P337`, por tercera vez, y con la cota escrita ANTES.**
+Materializar `CAHLR/OATutor-Content` en **lotes de 2.000 unidades**, guardando el parcial de cada
+lote, para que un limite de tiempo deje una muestra **acumulable** en vez de perder la corrida.
+
+**Prediccion falsable:** *al clasificar por las **cuatro** formas de URL juntas, el corte converge
+a **1.611** y no a 1.570.* 🔵 **Que la refuta:** que converja a 1.570, o a un tercer numero — y en
+ese caso los DOS artefactos publicados estan mal, como el pase 108 ya dijo.
+
+---
 
 ## 🟢 Altas de agente: 5 permisivas — se corta una racha de 30 barridos en cero, y la accion pre-registrada se cae por donde nadie la miro: el ARTEFACTO al que la mandaron (pase 108 del 2026-10-05)
 

@@ -8,6 +8,7 @@ updated: 2026-10-05
 
 > Key players, market map y oportunidades por región.
 > Investigado 2026-09-30; el pase 11, el 2026-10-01. Las estimaciones de tamaño de mercado varían mucho entre firmas: se listan todas con su fuente en vez de elegir una.
+> **Pase 109 del 2026-10-05:** 🟢 **Barrido regional 38, cuatro regiones, 0 silencios, y la saturacion MEDIDA con denominador enumerado: 27 hechos devueltos, 23 ya publicados, 4 nuevos (`P287`).** 🔴 **El hallazgo que manda es doble y va contra esta base: (1) la racha de OCHO pases en que el canal reproducia el calendario SUPERADO del AI Act SE CORTA — dos consultas independientes devuelven `2027-12-02`, una nombrando a educacion, con 9 fuentes concordantes y la aprobacion del Consejo fechada el `2026-06-29` ⇒ la afirmacion del pase 100 («la prensa de industria NO va a corregir esto») queda FALSIFICADA, y el guion de correccion automatica pasa a ser el que PUEDE INTRODUCIR el error; (2) la condicionalidad del diferimiento corre al REVES de lo publicado: `2027-12-02` es un LIMITE EXTERIOR que la Comision puede ADELANTAR a 6 meses de confirmar las normas, no una fecha garantizada ⇒ no se vende un plan con fecha, se vende un expediente permanentemente listo.** 🟢 **El reloj que cierra la venta sigue siendo el art. 50(2), con gracia hasta el `2026-12-02`, DOS MESES.** 🟢 **Unico hecho regional nuevo: la *Agenda Nacional de IA 2024–2030* de Mexico, presentada en el Senado — primer instrumento mexicano de nivel nacional en este archivo.** 🔴 **NA y APAC dan 0 hechos nuevos: el eje de legislacion estatal esta agotado para este canal.**
 > **Pase 107 del 2026-10-05:** 🟢 **Barrido regional 36, cuatro regiones, 0 silencios — y lo que las separa este pase es el DINERO COMPROMETIDO: Norteamerica con $169 M a *responsible AI* en superior y un programa de OpenAI con OCHO socios nacionales (Q1 2026); EMEA con £200 M+ de la primera AI Adoption Summit del Reino Unido y la 2ª conferencia del Consejo de Europa sobre regulacion de AI en educacion en octubre; APAC con la soberania determinando la infraestructura de ~la mitad de sus empresas y Canberra endureciendo copyright; LATAM con un working paper de 200 instituciones en 19 paises y el marco HABILITANTE del BID.** 🔴 **Y el rango de mercado se ABRE en vez de cerrarse: $42,48 B a 2030, $79,6 B a 2034 y $100,21 B a 2035 son tres curvas distintas; el CAGR de Norteamerica (15,9 %) es menos de la mitad del global (31-41 %). Se publica como contradiccion, no como promedio.** 🟢 **El hallazgo que une a las cuatro: todas tienen resuelto el dinero o la adopcion y NINGUNA la PROCEDENCIA DEL ACTIVO — primera vez en 36 barridos que el mismo hueco aparece en las cuatro.** 🔴 **Egress a las seis fuentes primarias medido en este pase: 000 las seis, con control positivo en verde ⇒ todo lo de abajo es fuente SECUNDARIA.**
 > **Pase 106 del 2026-10-05:** 🟢 **Barrido regional 35, cuatro regiones, 0 silencios — y la lectura cambia: en 2026 las cuatro TIENEN marco y lo que las separa es quien puede CUMPLIRLO.** 🔵 **NA: 134 bills en 31 estados, pero 18 % de docentes con guia escrita. EMEA: AI Act aplicando desde el 2026-08-02, instituciones en pre-compliance. APAC: divergente por pais (Corea 2026-01-22, Vietnam 2026-03-01, Japon voluntario). LATAM: 79 % de uso docente y <10 % de instituciones con guia y capacidad.** 🔴 **El gap de APAC de esta KB queda NOMBRADO: 0 repos permisivos de procedencia APAC para la vertical, y es hueco de la KB, no del mundo.** ⚠️ **Mercado 2026 con dispersion del 31 % entre firmas ($8,7–11,4 B); el subsegmento *AI tutors* en $2,7 B es la capa donde esta KB tiene instrumentos corriendo.** 🔴 **Y la asimetria de riesgo que vale para las cuatro regiones: 20 de 22 colecciones vivas de OpenStax son `NC-SA`, no `CC BY` — una entrega comercial toca ese limite en cualquier region.**
 > **Pase 104 del 2026-10-05:** 🟢 **Trigesimotercer barrido regional (año CALCULADO: 2026), las cuatro regiones responden, 0 silencios.** 🔴 **Y el hallazgo de canal es una REINCIDENCIA que `P321` predijo: el calendario SUPERADO del AI Act volvio por OCTAVA vez, y esta vez por DOS consultas independientes a la vez — la de North America (*«the EU AI Act, taking full effect in August 2026, classifies education AI as high-risk»*) y la de EMEA (*«the Act itself will become generally applicable two years later, in August 2026»*).** 🟢 **La correccion de esta base se sostiene y NO se toca: **Reglamento (UE) 2026/1744** (*Digital Omnibus on AI*), DOUE 24/07/2026, en vigor 27/07/2026, corre el Anexo III autonomo al **2027-12-02** (Anexo I al **2028-08-02**), CONDICIONADO a que la Comision confirme las normas armonizadas; lo vigente HOY es el **art. 50(2)**, con gracia hasta el **2026-12-02**.** 🔵 **Ocho reproducciones en ocho pases es una propiedad estable del canal secundario, no un error puntual: cotizar en EMEA exige sostener la fecha contra fuente legal CADA vez (`P281`).** 🟢 **EMEA aporta ademas el dato operativo: la prohibicion de **reconocimiento de emociones en centros educativos** ya rige, y el eje de 2026 paso de *bloquear y detectar* a **desplegar, gobernar y revisar**.** 🟢 **APAC: mercado USD 591,6 M (2024) → USD 1.848,1 M (2029), CAGR **20,9 %**, la region de mayor crecimiento; marco legislativo FRAGMENTADO por pais (Singapur con guias maduras, China contra abuso algoritmico, India por via penal existente) y 48 % de los lideres de gobernanza con la adopcion de AI como prioridad 2026.** 🟢 **North America: USD 951 M (2024) → USD 2.303,2 M (2029), CAGR **15,9 %**, **36 %** del mercado global, y el vacio regulatorio federal sigue —sin equivalente a la FDA para edtech— con Colorado y Texas por pedazos.** 🟢 **LATAM: **92 %** de alumnos y **79 %** de docentes de educacion superior ya usan AI y **94 %** de los docentes esperan usarla (Digital Education Council LATAM 2026); adopcion regional **47 %** contra **45 %** global; Chile lidera con Politica Nacional de IA desde 2021 y ley en discusion, Brasil y Colombia con estrategias nacionales **sin** regulacion sectorial educativa; UNESCO IESALC con relevamiento de 200 instituciones en 19 paises.** 🔴 **La asimetria que decide un encargo: LATAM tiene la adopcion mas alta y la regulacion sectorial mas fina — demanda de gobernanza sin marco que la ordene.** Ver **`P322`**–**`P325`**.
@@ -71,6 +72,196 @@ updated: 2026-10-05
 > regulado — **STUDENTS FIRST Act of 2026**, marco de los estudiantes de los 50 estados (AASA, agosto 2026).
 > **LATAM:** 🔵 el hallazgo del pase — **existe una capa MCP nacional brasileña de datos públicos, activa y MIT, y
 > educación es el único dominio grande que falta** (**gap 69**).
+
+## 🔴 Barrido regional 38: las cuatro regiones responden (0 silencios) — y el hallazgo que manda es que la racha de OCHO pases del calendario SUPERADO del AI Act SE CORTA, y la condicionalidad del diferimiento corre al REVES de lo que esta base publico (pase 109 del 2026-10-05)
+
+> **Año CALCULADO en tiempo de corrida: 2026.** No fijado en el prompt ni heredado de un pase
+> anterior. Las cuatro consultas regionales obligatorias se corrieron, mas cuatro globales.
+
+### 🟢 La saturacion, MEDIDA con denominador enumerado (`P287`) y no declarada
+
+| eje | hechos devueltos | ya publicados en el arbol | NUEVOS |
+|---|---|---|---|
+| North America | 7 | 7 | **0** |
+| EMEA | 3 | 3 | **0** |
+| APAC | 5 | 5 | **0** |
+| LATAM | 6 | 5 | 🟢 **1** |
+| globales (verticales + tendencias) | 6 | 3 | 🟢 **3** |
+| **total** | **27** | **23** | 🟢 **4** |
+
+🔵 **Cada token se verifico por `grep` archivo por archivo contra el arbol publicado ANTES de
+escribir esta linea.** Los 23 ya publicados incluyen: 134 proyectos de ley en 31 estados,
+California AB 1159, Idaho SB 1227, Maryland S.B. 720, el cuarteto con politica distrital
+obligatoria, el marco de los alumnos de los 50 estados, el 38 % de participacion de NA,
+Reglamento (UE) 2026/1744, el diferimiento a 2027-12-02, la prohibicion de reconocimiento de
+emociones, la mision IndiaAI, el 38,9 % de CAGR de India, los USD 102.000 M de APAC, los
+USD 735.000 M a 2030, las normas de proteccion de datos de Japon y Corea, el 65 % de consumidores
+LATAM, el sandbox de la ANPD, el PL 2.338/2023, el CONPES de Colombia, los 13 de 19 paises sin AI
+temprana en la escuela, el 6,1 pp de Khan Academy, el 72 % de la OCDE y Axim Collaborative.
+
+### 🔴 EMEA — el hallazgo del pase, y es de DOBLE filo contra esta base
+
+**1) La racha de OCHO se corta.** Esta base venia contando, pase por pase, que el canal secundario
+reproducia el calendario **SUPERADO** del AI Act (*«high-risk desde agosto de 2026»*), y el pase 100
+lo escribio como propiedad estable: *«la prensa de industria NO va a corregir esto»*.
+
+🟢 **Este pase mide lo contrario, y por DOS consultas independientes:**
+
+| consulta | lo que devolvio sobre el alto riesgo educativo |
+|---|---|
+| `AI education EMEA Europe 2026 adoption regulation AI Act players` | *«in July 2026 as part of the AI Omnibus the EU postponed the compliance deadline for most standalone high-risk AI systems, **including those used in education**, hiring, and law enforcement, **to 2 December 2027**»* |
+| `EU AI Act high-risk education Annex III compliance deadline December 2027 postponed` | *«pushed from August 2, 2026, to **December 2, 2027**»*, con **9** fuentes concordantes y la aprobacion del Consejo fechada el **2026-06-29** |
+
+🔵 **O sea: el canal sirvio el calendario CORREGIDO, sin que se lo pidiera con la respuesta dentro
+de la pregunta en la primera consulta, y nombrando a educacion explicitamente.** 🔴 **La afirmacion
+de esta base queda FALSIFICADA: no es una propiedad estable del canal.** ⚠️ **Y la consecuencia
+operativa se INVIERTE: hasta el pase 108, el consultor llegaba a la reunion asumiendo que el
+cliente EMEA traeria la fecha equivocada. A partir de este pase esa asuncion es la que puede
+introducir el error** — si el cliente trae `2027-12-02` y el consultor lo «corrige» con el guion
+viejo, el que se equivoca es el consultor.
+
+**2) La condicionalidad corre al REVES de lo que este archivo publico, y esto es una CORRECCION
+de posicion regulatoria, no un matiz.** Esta base publico el diferimiento como
+*«**CONDICIONADO** a que la Comision confirme las normas armonizadas»* — redactado asi, se lee
+como una condicion que **sostiene o retrasa** la prorroga.
+
+🔴 **Medido, el mecanismo apunta en la direccion opuesta:** *«a conditional trigger that the
+Commission can **pull the deadline forward** to six months after it formally concludes that the
+necessary standards, common specifications, or guidance are in place, meaning **December 2027 is an
+outer limit, not a guarantee**»*.
+
+| | lo que esta base publico | lo que se midio en este pase |
+|---|---|---|
+| naturaleza de `2027-12-02` | fecha diferida, condicionada a confirmacion | 🔴 **LIMITE EXTERIOR** (*outer limit*) |
+| que hace la confirmacion de normas | sostiene la prorroga | 🔴 **ADELANTA la fecha**, a 6 meses de la conclusion formal |
+| planificacion que habilita | «≈14 meses de aire» | 🔴 **ninguna holgura garantizada**: la fecha puede moverse **antes** con 6 meses de aviso |
+
+🔵 **Para un encargo, eso cambia el entregable.** No se vende «un plan con vencimiento en diciembre
+de 2027»; se vende **un expediente que pueda estar listo 6 meses despues de un anuncio de la
+Comision que nadie controla**. 🔵 **El reloj que de verdad gobierna la propuesta sigue siendo el del
+art. 50(2), cuya gracia vence el `2026-12-02` — en DOS MESES desde este pase** — y esta base ya
+tiene ese instrumento con suite (`compose/code/aiact-50-2-pack/`).
+
+⚠️ **Cota de fuente, por trigesimoctava vez:** `eur-lex.europa.eu` y los dominios institucionales
+siguen bloqueados por egress, asi que esto es **secundaria concordante** (9 fuentes) y **no**
+lectura del texto consolidado. 🔵 **La peticion correcta sigue siendo organizativa: una lectura del
+Reglamento hecha fuera de esta red.**
+
+### 🟢 LATAM — el unico hecho regional nuevo del pase, y es de instrumento de politica
+
+🟢 **Mexico: la *Agenda Nacional de IA 2024–2030*, presentada en el Senado**, con una Estrategia de
+Inteligencia Artificial de enfoque multisectorial. 🔵 **Verificado ABSENTE del arbol antes de
+escribirlo** (`grep` en los 8 archivos publicados). Es el primer instrumento **mexicano** de nivel
+nacional que entra a este archivo: hasta ahora Mexico figuraba como *«reglas sectoriales a
+velocidades distintas»*, sin documento nombrado.
+
+🔴 **Y el resto de LATAM confirma lo ya publicado, con el mapa fragmentandose mas, no menos:** el
+PL 2.338/2023 de Brasil (enfoque por riesgo), el sandbox regulatorio de la ANPD **vigente hasta
+diciembre de 2026**, el marco de Chile, el CONPES de Colombia y las reglas sectoriales de Mexico
+**avanzan a velocidades distintas**. 🔵 **Brasil lidera en madurez y regulacion; Mexico sigue en
+comportamiento del consumidor.** 🔴 **Y la tijera de la region se sostiene: 65 % de los consumidores
+ya usa AI, y 13 de los 19 paises de America Latina y el Caribe NO enseñan adopcion temprana de AI
+en la escuela** — adopcion por arriba, formacion por abajo, *«un cuello de botella en la formacion
+avanzada que limita la capacidad de la region de producir sus propias soluciones»*.
+
+### 🟢 North America — 0 hechos nuevos, y la saturacion es el dato
+
+🔴 **Las 7 señales devueltas estaban las 7 publicadas** (134 proyectos / 31 estados; AB 1159 de
+California prohibiendo entrenar modelos con datos de alumnos; SB 1227 de Idaho; S.B. 720 de
+Maryland con desarrollo profesional docente; Idaho, Oklahoma, Virginia y Maryland como el cuarteto
+que exige politica distrital; el marco nacional de los alumnos de los 50 estados via AASA; 38 % del
+mercado en 2025; 18 % de docentes con guia escrita). 🔵 **Cuatro pases con saturacion medida en NA
+dicen que el eje *legislacion estatal* esta agotado para este canal, y que repetir la consulta
+literalmente otra vez es gasto, no rigor** (`P287`).
+
+### 🟢 APAC — 0 hechos nuevos, con el mismo veredicto
+
+Las 5 señales (dominio de China/India/Japon; India con legislacion dedicada señalada en julio de
+2026 y modelo basado en riesgo; IndiaAI Mission con 38,9 % de CAGR; USD 102.000 M en 2025 →
+USD 735.000 M a 2030 al ~34,5 %; Japon y Corea con proteccion de datos especifica para AI
+educativa) estaban **todas** publicadas.
+
+---
+
+## Opportunities by region
+
+> 🔵 **Una sola seccion, con una subseccion por region.** Las cuatro se escriben siempre, y cuando
+> una region no rinde se dice que no rindio — un hueco declarado es informacion, el silencio se
+> confunde con cobertura.
+
+### North America
+
+- 🔴 **La oportunidad que este pase deja mas clara es de TRAZA, y la nombra una fuente del barrido
+  global:** *«si un alumno impugna una nota generada por AI, la institucion necesita registros que
+  muestren que considero el agente y por que»*. 🔵 **Eso es exactamente la capa «observar y
+  fundamentar» que esta base ya identifico como la unica vendible donde Oklahoma y Maryland
+  **prohiben** que la AI decida sobre un alumno.** Entregable: el expediente de decision, no el
+  tutor.
+- 🟢 **El comprador esta nombrado y no es un mandato federal:** el distrito o la institucion, con
+  supervision externa minima (no hay equivalente a la FDA para edtech). **Ciclo de venta por
+  distrito, no por pais.**
+- 🔴 **La brecha sigue cuantificada y es de GOBIERNO, no de adopcion:** 134 proyectos de ley en 31
+  estados contra **18 %** de docentes con guia escrita. 🔵 **Se legisla mucho y se instruye poco:
+  el producto es la instruccion.**
+
+### EMEA
+
+- 🔴 **La oportunidad cambia de forma en este pase y conviene decirlo primero:** con `2027-12-02`
+  medido como **limite exterior adelantable a 6 meses de aviso**, lo vendible **no** es un plan con
+  fecha. Es un **expediente permanentemente listo** — gestion de riesgo, documentacion tecnica,
+  supervision humana y monitoreo post-mercado— que pueda presentarse cuando la Comision concluya.
+- 🟢 **El reloj corto es el que cierra la venta: art. 50(2), gracia hasta el `2026-12-02`, dos
+  meses.** Esta base tiene el instrumento corriendo con suite (`aiact-50-2-pack/`): es lo unico de
+  este arbol que se cotiza **contra una fecha vigente** y no contra una futura.
+- 🟢 **Activo permisivo colocable y verificado en este pase:**
+  `oaknational/oak-open-curriculum-ecosystem` — **MIT** en el codigo (`LICENCE`, 1.086 B,
+  `sha256:02c5a8e84229`, replicado al byte) con **OGL v3.0** en los datos. 🔵 **Un curriculo
+  nacional del Reino Unido, ya cedido y ya servido por MCP: el modelo de cesion por capas es
+  citable como referencia ante un ministerio.**
+- ⚠️ **Y el perimetro no termina en la UE:** el Consejo de Europa son 46 estados con instrumento
+  separado del AI Act.
+
+### APAC
+
+- 🟢 **El activo permisivo mas cercano a un producto que esta base tiene es de esta region:**
+  `THU-MAIC/OpenMAIC` (**MIT**, Tsinghua), con el lazo *genera → revisa → republica* ya cableado.
+  🔴 **Con la trampa de licencia dicha: `packages/mathml2omml` es `LGPL-3.0-or-later` leido de su
+  propio manifiesto — la licencia de la raiz no es la licencia del arbol (`P315`).** Para una
+  entrega cerrada, ese paquete se aisla o se reemplaza.
+- 🟢 **Singapur (IMDA, `2026-01-22`) es el unico regulador del mundo que trata la AI AGENTICA como
+  categoria** — pide por escrito donde vive la compuerta, quien autoriza una escritura y si queda
+  traza. 🔵 **Eso vuelve la escalera de `P207` un argumento presentable, no una opinion de
+  arquitectura.** ⚠️ **Es guia, no reglamento con sancion.**
+- 🟢 **La pregunta de compra de la region es soberania:** quien procesa datos de alumnos y donde.
+  🔵 **Eso favorece justo la capa permisiva auto-hospedable (OpenOLAT, Sakai, DSpace, UniTime).**
+- 🟢 **India es el mercado de mayor crecimiento (38,9 % CAGR, IndiaAI Mission)** y en julio de 2026
+  señalo legislacion dedicada con modelo por riesgo: **ventana para entrar antes del marco.**
+
+### LATAM
+
+- 🔴 **La asimetria que decide un encargo sigue en pie y es la mejor fundada de este archivo:** la
+  region tiene la adopcion mas alta medida (92 % de alumnos y 79 % de docentes en superior; 65 % de
+  consumidores) y la regulacion sectorial educativa mas fina. 🔵 **Demanda de gobernanza sin marco
+  que la ordene — y la gobernanza es servicio, no licencia.**
+- 🔵 **Y el comprador esta nombrado por el dato de demanda: el area academica, no compliance.**
+  El 61 % de los alumnos teme el mal uso de AI **por parte de sus pares**: lo que la region pide no
+  es mas generacion, es **integridad**.
+- 🆕 **Instrumento nuevo de este pase para cotizar en Mexico:** la *Agenda Nacional de IA
+  2024–2030* presentada en el Senado, de enfoque multisectorial. **Es el primer documento mexicano
+  de nivel nacional que este archivo puede nombrar.**
+- 🔴 **El hueco estructural, con su numero:** **13 de 19** paises de America Latina y el Caribe no
+  enseñan adopcion temprana de AI en la escuela, con cuello de botella en formacion avanzada.
+  🔵 **Eso es un mercado de CAPACITACION docente e institucional, que es servicio puro y no
+  depende de ninguna cesion.**
+- 🔴 **Y el hallazgo de este pase que es, a la vez, la frustracion de la region:**
+  `Javi111003/OlivIA-RAG` es una pieza LATAM **colocable con señal de primera mano** (tutor de
+  ingreso a la universidad cubana, en español, curriculo cubano nombrado en el README) — y su
+  bloqueo **no es tecnico ni regional: es de cesion.** Afirma MIT por badge y por arbol de README,
+  y el archivo de licencia **no existe** (20/20 sondas en 404). 🔵 **Accion concreta y barata:
+  pedirle la cesion por escrito al titular. Es una pieza recuperable por una gestion, no un
+  descarte** (`P342`, `P314`).
+
+---
 
 ## 🟢 Barrido regional 37: las cuatro regiones responden (0 silencios) — y lo que las separa este pase es la DIRECCION de la curva docente (pase 108 del 2026-10-05)
 

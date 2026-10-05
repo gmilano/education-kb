@@ -1,0 +1,15 @@
+alfredang/ai4kids
+alfredang/ai-mms
+dddanielliu/NCCU-Moodle-MCP
+ASEpochs/ai-digital-teacher
+speechace/speechace-api-samples
+moarshy/mcp-tutor
+IMSGlobal/openbadges-specification
+edeleastar/tutor
+ANTONIOALGMAR/StudyAgent
+Javi111003/OlivIA-RAG
+kuali/student
+openedx/XBlock
+oaknational/oak-open-curriculum-ecosystem
+54yyyu/school-mcp
+gmilano/repo-inventado-p109-control

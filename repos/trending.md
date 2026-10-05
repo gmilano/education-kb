@@ -10,6 +10,59 @@ updated: 2026-10-05
 > **Pase 107 del 2026-10-05:** 🔴 **Trending de la industria vacio por TRIGESIMOSEXTA vez: curriculo, catalogos, una bolsa de trabajo y dos generalistas (`microsoft/semantic-kernel` 27.470 ★, `NousResearch/hermes-agent` MIT), con las SEIS cifras del eje generalista identicas digito a digito a los pases 105 y 106 ⇒ informacion sobre el CANAL, no sobre la industria.** 🟢 **Lo que SI se movio es una capa de BINARIOS que este archivo nunca conto: 2.443 archivos de figura (~156 MiB, 1.326 imagenes distintas) en `CAHLR/OATutor-Content`, con la extension `.gif` falsa en 2.443 de 2.443 (`P332`).** 🔵 **`git ls-remote` da TRES refs, y una se llama `gpt-science-study`: la unica de este arbol cuyo nombre anuncia contenido sintetico.** 🔴 **Defecto propio corregido: los 49.481 JSON contra los 49.479 del pase 106 son los 6 caminos con bytes de control (U+007F/U+0080/U+0081) en el nombre del paso — la identidad de un paso NO es un slug seguro.**
 > **Pase 106 del 2026-10-05:** 🔴 **Trending de la industria vacio por TRIGESIMOQUINTA vez: el canal devuelve generalista o educativo-sobre-AI, no AI-para-educacion.** 🟢 **Lo que SI se movio esta en el eje de `ref` y no de repo: las ramas `1e` de 5 bundles de `openstax` contienen la UNICA cesion `CC BY 4.0` de 10 colecciones cuyas versiones vivas son `NC-SA` — cesion y vigencia apuntan en direcciones opuestas.** 🔵 **Canal nuevo calibrado: `git ls-remote` para enumerar refs (responde a repo real, falla a repo inventado), el unico de este arbol que contesta «que refs tiene este repo» con `api.github.com` en 403 — sin el, la accion A de este pase era imposible.**
 
+## 2026-10-05 — pase 109: el trending de la industria vuelve a estar vacio (barrido 38), y lo que se mueve es la capa REGULATORIA: la racha de ocho pases del AI Act se corta
+
+🔴 **Trending de la industria vacio por trigesimoctava vez, y el conjunto devuelto es el ya
+publicado:** OpenEduCat (sobre Odoo), Open edX (Axim Collaborative), Moodle (400 M+ usuarios),
+Chamilo, OpenOLAT (Apache-2.0), Fedena (Apache-2.0). 🔵 **Seis devueltas, seis ya en el arbol, cero
+nuevas** — saturacion medida, no declarada.
+
+🟢 **Las dos unicas cifras nuevas del barrido global, y entran como escala y no como alta:**
+
+| cifra | fuente del barrido | estado en el arbol |
+|---|---|---|
+| **Open edX: 140 M+ alumnos** | barrido de plataformas | 🟢 **ausente antes de este pase** |
+| **Khan Academy: >15 millones de hilos de tutoria** (denominador de la mejora de 6,1 pp en *next-item correctness*) | barrido de tendencias | 🟢 **ausente** — el 6,1 pp ya estaba en 9 archivos, **el denominador no** |
+
+🔵 **Y el segundo importa mas que el primero: una mejora de 6,1 pp sin denominador es una
+anecdota; con 15 millones de hilos es un resultado.** Esta base tenia el efecto publicado nueve
+veces y le faltaba la unica cifra que lo hace citable.
+
+### 🔴 Lo que de verdad se movio esta semana no es un repo: es el CALENDARIO, y corta una racha de ocho pases
+
+🔴 **Esta base venia contando, pase por pase, que el canal secundario reproducia el calendario
+SUPERADO del AI Act. El pase 100 lo escribio como propiedad estable: *«la prensa de industria NO va
+a corregir esto»*. Este pase lo FALSIFICA por dos consultas independientes:**
+
+| consulta | lo devuelto |
+|---|---|
+| `AI education EMEA Europe 2026 …` | *«the EU postponed the compliance deadline for most standalone high-risk AI systems, **including those used in education** … **to 2 December 2027**»* |
+| `EU AI Act high-risk education Annex III … December 2027 postponed` | *«pushed from August 2, 2026, to **December 2, 2027**»*, **9** fuentes concordantes, aprobacion del Consejo el **2026-06-29** |
+
+🔴 **Y la correccion de fondo, que es de posicion regulatoria de esta base y no del canal:
+`2027-12-02` es un **LIMITE EXTERIOR**, no una fecha garantizada.** La Comision puede **adelantarla**
+a 6 meses de concluir formalmente que las normas estan en su lugar. 🔵 **Esta base lo publicaba como
+*«condicionado a que la Comision confirme las normas armonizadas»*, que se lee al reves.**
+
+🔵 **Consecuencia para el estante de repos:** lo que se cotiza no es una plataforma con fecha de
+cumplimiento, es un **expediente permanentemente listo** sobre ella. 🟢 **Y el reloj corto sigue
+siendo el art. 50(2), con gracia hasta el `2026-12-02` — dos meses desde este pase**, para el cual
+este arbol ya tiene instrumento con suite (`compose/code/aiact-50-2-pack/`).
+
+### 🟢 La cesion de este estante, re-medida del payload (300 sondas, con control negativo)
+
+| repo | ruta que cede | familia | bytes | `sha256` |
+|---|---|---|---|---|
+| `openedx/XBlock` | `master/LICENSE.TXT` | 🟢 **Apache-2.0** | 11.358 | `cfc7749b96f6` |
+| `oaknational/oak-open-curriculum-ecosystem` | `main/LICENCE` + `master/LICENCE` | 🟢 **MIT** | 1.086 | `02c5a8e84229` |
+| `gibbonedu/core` | `v30.0.00/LICENSE` | 🔴 **GPL-3.0** | 35.121 | `93178a43d6d3` |
+| `openeducat/openeducat_erp` | `master/LICENSE` | — | 8.241 | `528f84036800` |
+| `CAHLR/OATutor` | `main/LICENSE` | — | 1.105 | `5baaaf977a28` |
+
+🟢 **Control negativo `gmilano/repo-inventado-p109-control` → 20/20 · 404: el canal DISCRIMINA.**
+🔴 **`github.com` (pagina del repo) se degrado a 403 entre el pase 108 y este ⇒ 0 cifras de
+estrellas medidas en este pase.**
+
 ## 2026-10-05 — pase 108: el trending de la industria deja de estar vacio por primera vez en 37 barridos, y lo que se mueve es la capa de INTEGRACION
 
 🟢 **Se corta la racha.** Treinta y seis barridos consecutivos devolvieron «trending generalista,

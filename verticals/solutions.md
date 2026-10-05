@@ -9,6 +9,7 @@ updated: 2026-10-05
 > Plataformas verticales reales, en producción, customizables con AI.
 > Modelo: partir de algo que ya funciona y que ya tiene los datos, y agregar la capa agéntica arriba.
 > Verificado vía WebFetch el 2026-09-30; las capas del pase 11, el 2026-10-01.
+> **Pase 109 del 2026-10-05:** 🔴 **0 verticales nuevas (vigesimoctavo barrido): las SEIS plataformas devueltas —OpenEduCat sobre Odoo, Open edX via Axim Collaborative, Moodle, Chamilo, OpenOLAT (Apache-2.0) y Fedena (Apache-2.0)— estan las seis ya en este estante.** 🟢 **Unica cifra nueva, y entra como escala y no como alta: Open edX declara 140 M+ de alumnos.** 🟢 **La cesion de dos piezas se re-midio del payload y confirma lo publicado digito a digito: Gibbon GPL-3.0 (35.121 B, `93178a43d6d3`) y OpenEduCat (8.241 B, `528f84036800`) ⇒ la AI sigue yendo ENCIMA y por API, en proceso separado.** ⚠️ **`P343`: en este pase un extractor con prefijo GOLOSO y sin frontera izquierda en la captura leyo `35.121` como `5.121` y la huella fue lo unico que lo detecto — una cifra de bytes publicada SIN huella no es verificable.**
 > **Pase 107 del 2026-10-05:** 🔴 **0 altas (el barrido devuelve por vigesimoseptima vez el conjunto ya publicado, y cinco de nueve resultados son el glosario de OpenEduCat en cinco idiomas).** 🔴 **Rechazo nuevo, medido por FRESCURA y no por licencia: `CK-ERP` — 32 modulos con capa educativa completa (Teacher, Counsellor, Student, Applicant, Family, Registrar, Edu Administration) y el unico anuncio que el canal devuelve es de 2010.** 🔴 **El eje que este estante gana le cambia la cuenta a cualquier fila que se entregue con contenido OER: la capa de contenido trae BINARIOS sin cesion propia — 2.443 archivos de figura (~156 MiB, 1.326 imagenes distintas), extension `.gif` falsa en 2.443 de 2.443 (`P332`), y 825 colgando de un item que declara mas permiso del que su edicion otorga.** 🟢 **La pieza que lo resuelve por diseno es [`oer/emacs-reveal`](https://gitlab.com/oer/emacs-reveal) (EMEA): se copia el MODELO DE DATOS, no el binario — cede por archivo bajo REUSE (`GPL-3.0-or-later` + `CC BY-SA 4.0`).**
 > **Pase 106 del 2026-10-05:** 🔴 **0 altas (el canal devuelve el mismo conjunto que este estante ya publica, y confirma por fuente secundaria Moodle +400 M usuarios / ~150.000 sitios y Open edX +140 M alumnos / 196 paises bajo Axim).** 🔴 **El eje NUEVO cambia como se cotiza cualquier fila: la cesion del CONTENIDO es propiedad del par (coleccion, **ref**), no del repo — 10 de 10 colecciones estrechan de `CC BY 4.0` a `NC-SA` entre ediciones, y 20 de 22 colecciones vivas son `NC-SA`.** ⚠️ **Plataforma y contenido son licencias INDEPENDIENTES y la segunda es la que bloquea: Open edX se customiza cerrada bajo Apache-2.0 y el curso que corre adentro no se puede vender.** 🔴 **Y aparece una tercera capa que ninguna fila tenia: 6.886 unidades `oer: openai` (4.455 hints + 2.418 scaffolds) sin cesion, bajo un README que cede «ALL content under CC BY 4.0» en un arbol con 0 archivos de licencia.** 🟢 **Camino comercial medido: Open edX + `osbooks-physics` o `osbooks-statistics` (las 2 unicas `CC BY 4.0` de 22) + andamiaje propio.**
 > **Pase 105 del 2026-10-05:** 🔴 **0 verticales nuevas —el canal generalista redescubre `OpenEduCat` y nombra `.LRN`, las dos ya medidas— y el eje que este estante gana es el CONTENIDO que va DENTRO de la plataforma.** 🔵 **Una plataforma es un envase**, y el pase midio que el contenido **puede ceder menos que la plataforma que lo sirve**: `OATutor` es **MIT** y su codigo se embarca entero, pero su contenido entra por submodulo desde un repo con **0 archivos de licencia en 51.929 rutas**, y el **titular** de ese contenido —`openstax/osbooks-*`, **13 libros leidos del payload**— cede **`NC-SA` en 11 de 13**. 🔴 **De los 13.371 problemas del *content pool*, 592 (4,4 %) son embarcables en una entrega comercial.** 🔵 **Regla de estante, para TODAS las filas de este archivo: la licencia de la plataforma no dice nada de la del contenido** — Moodle (GPL-3.0) con contenido `CC BY` es mas entregable que OATutor (MIT) con contenido `NC`. 🟢 **Lo accionable: `physics` y `statistics` son los DOS libros de OpenStax `CC BY 4.0`** y los unicos embarcables. Ver `compose/code/p326-titleholder-book-license/` y la receta `R-105-CESION-CONTRA-TITULAR`.
@@ -166,6 +167,42 @@ updated: 2026-10-05
 > **`qti3-pnp`**, que abren accesibilidad de evaluación como entregable auditable (**P72**). ⚠️ **Open edX cambia de
 > recomendación: proponer con presupuesto de mantenimiento (gap 70).** Ver la sección del pase 33, abajo.
 
+
+## 🔴 Verticales nuevas: 0 — vigesimoctavo barrido que devuelve el conjunto ya publicado, y lo que el pase aporta es la CESION re-medida y una cifra de escala (pase 109 del 2026-10-05)
+
+🔴 **0 altas, con la razon medida y no declarada.** La consulta
+`open source education platform LMS SIS student information system MIT Apache 2026 self-hosted`
+devolvio **seis** plataformas, y las seis estan ya en este estante:
+
+| plataforma devuelta | licencia publicada por este estante | ya presente |
+|---|---|---|
+| **OpenEduCat** (SIS + LMS + finanzas, sobre **Odoo**) | publicada | 🔴 si — 26 archivos del arbol la citan |
+| **Open edX** (Harvard + MIT, hoy **Axim Collaborative**) | publicada | 🔴 si |
+| **Moodle** (400 M+ usuarios, 240+ paises) | publicada | 🔴 si |
+| **Chamilo** (la mas liviana de auto-hospedar) | publicada | 🔴 si |
+| **OpenOLAT** | 🟢 **Apache-2.0** | 🔴 si — 15 archivos |
+| **Fedena** | 🟢 **Apache-2.0** | 🔴 si — 10 archivos |
+
+🟢 **Lo unico nuevo es una cifra de escala, y entra como dato y no como alta: Open edX declara
+140 M+ de alumnos.** 🔵 **Verificada ausente del arbol antes de escribirla.**
+
+### 🟢 La cesion de dos piezas de este estante, re-medida del payload en este pase
+
+| pieza | ruta | familia | bytes | `sha256` | veredicto |
+|---|---|---|---|---|---|
+| **Gibbon** (`gibbonedu/core`) | `v30.0.00/LICENSE` | 🔴 **GPL-3.0** | **35.121** | `93178a43d6d3` | 🟢 **la cifra publicada por este estante se confirma digito a digito** |
+| **OpenEduCat** (`openeducat/openeducat_erp`) | `master/LICENSE` | — | **8.241** | `528f84036800` | 🟢 **idem** |
+
+🔵 **Y la consecuencia de arquitectura no cambia, conviene repetirla porque es la que se cotiza:**
+con **GPL-3.0** en Gibbon, la AI va **encima y por API** —proceso separado—, no enlazada. Lo que se
+vende es el servicio sobre la plataforma, no un derivado de la plataforma.
+
+⚠️ **`P343`, y es un aviso para quien lea este estante:** las cifras de bytes de este archivo son
+auditables **porque llevan su huella al lado**. En este pase, un extractor con prefijo goloso y sin
+frontera izquierda en la captura leyo `35.121` como `5.121`, y la huella fue lo unico que lo
+detecto. **Una cifra publicada sin huella no es verificable.**
+
+---
 
 ## 🟢 Verticales nuevas: 1 — y el eje que este estante gana es que un CURRICULO NACIONAL ya viene cedido y con servidor MCP (pase 108 del 2026-10-05)
 

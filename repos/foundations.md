@@ -8,6 +8,7 @@ updated: 2026-10-05
 
 > Bases sobre las cuales construir. Verificado repo por repo vía WebFetch el 2026-09-30 (capas del pase 10, el 2026-10-01).
 > Leer la columna **Licencia** antes de proponer: media KB de educación es GPL/AGPL, no permisiva.
+> **Pase 109 del 2026-10-05:** 🔴 **0 altas fundacionales — el barrido devuelve por vigesimoctava vez el conjunto publicado (OpenEduCat, Open edX, Moodle, Chamilo, OpenOLAT, Fedena).** 🟢 **La cesion de este estante se RE-MIDIO del payload con 300 sondas (15 repos × 10 nombres × 2 ramas) y control negativo en 20/20 · 404: `openedx/XBlock` → Apache-2.0 en `master/LICENSE.TXT` (11.358 B, `cfc7749b96f6`, replica `P279`); `oak` → MIT en `LICENCE` (1.086 B, `02c5a8e84229`, replica `P340`); y las cifras publicadas de `gibbonedu/core` (35.121 B) y `openeducat_erp` (8.241 B) se confirman DIGITO A DIGITO contra su huella.** 🔴 **Y el estante tenia un falso negativo: `Javi111003/OlivIA-RAG` afirma MIT por badge y por arbol de README sin archivo que lo respalde (`P342`) ⇒ reclasificado de «descartable» a `P314`, cesion a pedir por escrito.** ⚠️ **El denominador vivo de «sin licencia» es 13, no 32: esta base ya corrigio esa cadena (32 → 22 → 13, pases 65–67, `P172`).**
 > **Pase 107 del 2026-10-05:** 🟢 **1 alta fundacional, y es la pieza que el hallazgo de este pase vuelve necesaria: [`oer/emacs-reveal`](https://gitlab.com/oer/emacs-reveal) (EMEA, GitLab) emite la atribucion de CADA figura en forma legible por maquina (RDFa) desde metadatos por archivo — cede **por archivo** bajo REUSE (`GPL-3.0-or-later` + `CC BY-SA 4.0`), asi que entra por su DISENO y no por su binario.** 🔴 **`P332` — regla nueva para este estante: cuando dos arboles se comparan por contenido el filtro es la FIRMA de bytes, nunca la extension: 2.443 de 2.443 `.gif` del corpus son PNG/JPEG/WEBP y un filtro por extension da «0 solapamiento» desde una premisa falsa (por `sha256` da 36).** 🔴 **`P334` — la procedencia de un binario no esta en el repo que su `oer` nombra: los 36 pares citan `introductory-statistics` y viven en `osbooks-statistics`.** 🔴 **Rechazo medido por FRESCURA, no por licencia: `CK-ERP` (32 modulos, capa educativa completa) cuyo ultimo anuncio del canal es de 2010.**
 > **Pase 106 del 2026-10-05:** 🔴 **`P328` — la cesion de este estante es propiedad del par (repo, **ref**), y las 9 altas del pase 104 se publicaron con UNA sola: de las 10 colecciones que existen con el MISMO `collection-id` en los dos refs, **10 de 10 ESTRECHAN** de `CC BY 4.0` (`1e`) a `CC BY-NC-SA 4.0` (`main`), cero contraejemplos; 22 colecciones medidas en `main`, solo 2 permisivas.** ⚠️ **No se veia porque el slug CAMBIA DE NOMBRE entre ediciones (`precalculus` → `precalculus-2e`): la identidad es el `collection-id` (`P289` en campo nuevo).** 🔵 **Y un repo dado por ausente existe con otro contenedor: `osbooks-precalculus` no existe, pero `precalculus` se publica DENTRO de `osbooks-college-algebra-bundle` — un libro no tiene por que tener repo propio (`P253`).** 🟢 **Accion C corrida y CONFIRMADA: familias 52/52 identicas; un texto `NC-SA` vive en 7 repos con TRES huellas crudas que colapsan a una.** 🔴 **`P329` contra ese mismo arreglo: la huella normalizada es identidad de TEXTO y no de FAMILIA (6 payloads `CC BY 4.0`, 2 huellas).** 🟢 **`P323` reconfirmado por enumeracion, con la trampa de subcadena medida (`grep -i licen` da 8 rutas, 0 licencias).**
 > **Pase 105 del 2026-10-05:** 🟢 **9 altas fundacionales, y son la capa que este estante nombraba sin tenerla: el CORPUS DE CONTENIDO del TITULAR, con su cesion leida libro por libro del payload.** Desde `P315` este archivo mide el eje «permisivo en codigo / CC en el contenido» **siempre desde el lado del redistribuidor**; nunca tuvo al titular, y sin titular un campo que dice `CC BY 4.0` no se contrasta con nada. 🟢 **OpenStax publica el payload de cada libro en la organizacion `openstax` de GitHub** —`<md:license>` por libro **mas** el `LICENSE` del *bundle*, dos lecturas concordantes— y ese canal estaba **vivo** con `openstax.org` en **000** (`P326-A`). 🔴 **El hallazgo que manda: la licencia de OpenStax es POR LIBRO.** **11 de los 13 libros medidos** son **`CC BY-NC-SA 4.0`** —**no embarcables en producto comercial**— y las dos `CC BY 4.0` son **`physics`** y **`statistics`**. 🔵 **`physics` es, ademas, el unico libro que `OATutor-Content` cita y que NINGUN item etiqueta:** el unico donde `CC BY 4.0` habria sido verdad es el unico donde nadie lo escribio. 🔴 **`P327`: los bytes y el `sha256` crudo de un archivo de licencia NO son identidad** — 21.443 / 21.013 / 21.442 B son **el mismo texto** con CRLF, LF y CRLF-sin-salto-final: un unico `sha256` al normalizar, lo que indicta las huellas que este estante publica desde el pase 66 (los datos siguen bien, la huella no era huella). Ver `compose/code/p326-titleholder-book-license/`.
@@ -112,6 +113,52 @@ corre ése antes de escribir uno a mano** (tendencia **313**). 🟢 **Y el `gafa
 > y 5 en `schemas12/`, y contar sólo el primero es lo que hizo invisible el segundo dialecto de SCORM (**P106**).
 > **Pase 36 del 2026-10-02:** 🔵 **este pase no agrega repos: le pone FECHA a los que ya están, y la fecha cambia tres recomendaciones.** Se midió la capa PHP de evaluación y telemetría en Packagist —el único registro de los tres que entrega descargas en este entorno (`api.npmjs.org` y `pypistats.org` dan **403 a CONNECT**)— y el resultado está en `repos/trending.md`. **Lo que hay que saber antes de proponer desde este archivo:** 🔴 **la pieza xAPI más descargada de esta base, `rusticisoftware/tincan` (Apache-2.0, 6.178 desc./mes, 863.777 totales), no publica desde el 2022-11-02**, y ⚠️ **el único MIT de esa capa, `php-xapi/client`, está parado desde el 2021-03-24** con 825 desc./mes. 🔵 **La lectura es que en xAPI/PHP lo permisivo está quieto y lo vivo es copyleft**, así que la receta de telemetría se sostiene en **Ralph (MIT)** + **`lrsql` (Apache-2.0)** + **`learnmcp-xapi` (MIT)** y no en la capa PHP. 🟢 **Del lado de evaluación, lo activo es `oat-sa/extension-tao-testqti`** (**885 versiones**, release del **2026-09-30**) **y sigue siendo GPL-2.0-only**, mientras **lo permisivo es lo nuevo**: `@longsightgroup/qti3-cli` (**MIT**, 41 releases desde el 2026-05-21, último **2026-10-01**) con **cero dependencias de terceros** — sus 4 dependencias son todas `@longsightgroup/*` pinneadas a la misma versión exacta. **Su manifiesto MCP completo de 20 tools está escrito en `compose/patterns.md` (P76).** 🔴 **Y una corrección de catálogo: `oat-sa/qti-sdk` devuelve 404 en Packagist porque es el nombre del REPO — su paquete es `qtism/qtism`** (GPL-2.0-only, 218.212 descargas totales, 315 versiones). **Nombre de repo y nombre de paquete son identificadores distintos, y confundirlos produce un 404 que parece una ausencia** — pasó igual con `1edtech/oneroster`, `imsglobal/lti-1-3-php-library` y `packbackbooks/lti-1-3-php-library`, los tres **404**, que se anotan como *«no verificado en Packagist bajo ese nombre»* y **no** como inexistentes. ⚠️ **Acción pendiente que el pase 37 tiene asignada: este archivo nunca pasó por el control de *slugs* distintos ni por el de *backlink*** — los dos que en `agents/top.md` encontraron **un duplicado** y **dos colisiones** este mismo pase.
 > **Pase 11 del 2026-10-01:** aparece una licencia que las diez pasadas anteriores filtraban sin saberlo — **ECL-2.0**, con la que licencia todo Apereo (Sakai, Opencast, OpenLRW). Es Apache-2.0 con el alcance de patentes acotado, aprobada por OSI y FSF, y **es apta para construir arriba**. Ver la capa de analítica institucional, abajo.
+
+## 🔴 Altas fundacionales: 0 — y el pase gasta su esfuerzo en RE-VERIFICAR la cesion de este estante, donde encuentra un falso negativo propio (pase 109 del 2026-10-05)
+
+🔴 **0 altas, y la razon se mide: el barrido de plataformas devolvio por vigesimoctava vez el
+conjunto que este estante ya publica** — OpenEduCat (sobre Odoo), Open edX (Axim Collaborative),
+Moodle, Chamilo, OpenOLAT (Apache-2.0), Fedena (Apache-2.0). 🔵 **Dos tokens del barrido global
+son nuevos y entran como dato de escala, no como alta:** Open edX declara **140 M+** de alumnos, y
+Khan Academy declara **>15 millones** de hilos de tutoria como denominador de su mejora de 6,1 pp.
+
+### 🟢 La cesion de este estante, RE-MEDIDA del payload en este pase (`P340` + control negativo)
+
+Barrido de **300 sondas** (15 repos × 10 nombres de archivo × 2 ramas) contra
+`raw.githubusercontent.com`, con repo inventado como control negativo. Artefacto:
+`p340.2026-10-05.tsv`.
+
+| repo | ruta que CEDE | familia leida del payload | bytes | `sha256` | nota |
+|---|---|---|---|---|---|
+| `openedx/XBlock` | `master/LICENSE.TXT` | 🟢 **Apache-2.0** | **11.358** | `cfc7749b96f6` | 🟢 **replica `P279` al byte**: la extension en MAYUSCULAS es lo que escondia la cesion |
+| `oaknational/oak-open-curriculum-ecosystem` | `main/LICENCE` **y** `master/LICENCE` | 🟢 **MIT** | **1.086** | `02c5a8e84229` | 🟢 **replica `P340`**: cede en `LICENCE`, no en `LICENSE`; identico en las dos ramas |
+| `gibbonedu/core` | `v30.0.00/LICENSE` | 🔴 **GPL-3.0** | **35.121** | `93178a43d6d3` | 🟢 **confirma la cifra publicada digito a digito** — ver `P343` |
+| `openeducat/openeducat_erp` | `master/LICENSE` | — (publicado) | **8.241** | `528f84036800` | 🟢 **confirma la cifra publicada digito a digito** |
+| `CAHLR/OATutor` | `main/LICENSE` | — | **1.105** | `5baaaf977a28` | medido en este pase |
+
+🟢 **Control negativo: `gmilano/repo-inventado-p109-control` → 20/20 · 404.** El canal **discrimina**,
+asi que un 404 de este barrido es una ausencia y no un canal caido.
+
+### 🔴 Y el falso negativo que este estante tenia publicado
+
+🔴 **De los 9 repos que esta base declara «sin licencia» y que este pase re-barrio, 0 tienen archivo
+de licencia** — la clausula se confirma. ⚠️ **Pero uno de ellos AFIRMA una cesion que el archivo no
+respalda**, y eso es `P342`:
+
+| repo | lo publicado | lo medido |
+|---|---|---|
+| `Javi111003/OlivIA-RAG` | 🔴 *«sin licencia»* (dos veces) | 🔸 **afirma MIT en DOS lugares del README** — badge hipervinculado a `LICENSE` + su propio arbol de directorios (`├── LICENSE  # Licencia del proyecto`) — con **20/20 sondas en 404** |
+
+🔵 **Reclasificado: de «descartable» a `P314` — cesion declarada sin texto, que se pide por escrito
+al titular nombrado.** 🔵 **Y es una pieza LATAM con señal de primera mano** (tutor de ingreso a la
+universidad cubana, curriculo cubano nombrado en el payload).
+
+⚠️ **El denominador correcto de este expediente es 13, no 32:** esta base ya corrigio esa cifra en
+la cadena **32 → 22 → 13** (pases 65, 66 y 67, `P172`). **Los 9 re-barridos aqui son una muestra de
+esos 13, y se declara como muestra.** Queda pre-registrado en
+[`agents/top.md`](../agents/top.md) el barrido de los 13.
+
+---
 
 ## 🟢 Altas fundacionales: 2 — y las dos traen la misma leccion: la licencia de la RAIZ no es la licencia del ARBOL (pase 108 del 2026-10-05)
 

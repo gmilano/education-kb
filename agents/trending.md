@@ -11,6 +11,67 @@ updated: 2026-10-05
 > **Pase 107 del 2026-10-05:** 🔴 **0 altas permisivas (trigesimo barrido, 3 candidatas MEDIDAS del payload y las 3 con su bloqueo nombrado) y las TRES acciones pre-registradas corridas: A con la cota NO CERRADA y su clausula de atribucion FALSIFICADA, B CONFIRMADA, C CONFIRMADA en dos clausulas y FALSIFICADA en la tercera.** 🔴 **`P332`: la EXTENSION de un archivo de imagen no es su FORMATO — 2.443 de 2.443 `.gif` son PNG/JPEG/WEBP, y un barrido por extension habria dado «0 solapamiento» desde una premisa falsa.** 🔴 **`P334`: el titular de una FIGURA se resuelve por BYTES y vive en una obra DISTINTA de la que el item cita (36 pares leidos).** 🔴 **`P333`: `fa4e32e5e622` era la huella del archivo SIN su salto final — defecto de dato, no de upstream.** 🔴 **`P335`: tercera sub-clase de `P320` — lo denegado fue el LOTE, no la pieza nombrada.** 🟢 **Canal nuevo: `gitlab.com/-/raw`.**
 > **Pase 106 del 2026-10-05:** 🟢 **0 altas (vigesimonoveno barrido, 5 candidatas, las 5 frenadas por el gate de `P311`) y las TRES acciones pre-registradas corridas: A CONFIRMADA, B FALSIFICADA, C CONFIRMADA.** 🔴 **`P328`: la cesion de un OER se ESTRECHA entre ediciones — 10 de 10 colecciones con el mismo `collection-id` pasan de `CC BY 4.0` en `1e` a `CC BY-NC-SA 4.0` en `main`, y el slug cambia de nombre, que es por lo que esta base no lo veia.** 🔴 **El denominador se corrige de 13.371 a 82.492 unidades y aparece una capa sintetica de 6.886 unidades (`oer: openai`) sin cesion.** 🟢 **Canal nuevo: `git ls-remote` para enumerar refs — es el que abrio la accion A.**
 
+## 2026-10-05 — pase 109: 0 altas y la razon se MIDE (5 candidatas devueltas, 5 ya publicadas), y el hallazgo es un falso negativo de licencia de esta propia base
+
+🔴 **0 altas permisivas — trigesimoprimer barrido.** Pero esta vez el barrido **no** devolvio
+candidatas nuevas que medir: devolvio **el conjunto que este archivo ya publica**, y eso se mide
+con denominador enumerado en vez de declararse.
+
+| candidata devuelta por el canal | archivos del arbol que ya la citan | veredicto |
+|---|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | **11** | 🔴 `P311` — alta duplicada |
+| [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) | **6** | 🔴 `P311` |
+| [`Ebimsv/AITutorAgent`](https://github.com/Ebimsv/AITutorAgent) | **3** | 🔴 `P311` |
+| Freelingo | **6** | 🔴 `P311` |
+| Bloom | **7** | 🔴 `P311` |
+
+🔵 **5 devueltas / 5 ya publicadas / 0 nuevas.** El canal esta **vivo y discrimina** (control
+negativo en 404), asi que esto es saturacion medida del eje, no silencio ni canal caido.
+
+**Lo que SI se movio esta semana, y no es un repo nuevo: es la CESION de uno que este archivo ya
+tenia mal clasificado.**
+
+🔴 **`P342` — `Javi111003/OlivIA-RAG`, publicado en ESTE archivo (linea 11314) como «sin licencia»,
+afirma MIT en DOS lugares de su propio README:**
+
+| donde | payload leido (`main/README.md`, 5.785 B, `sha256:f4be1a6367c6`) |
+|---|---|
+| linea 3 | `[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)` |
+| linea 50 | `├── LICENSE                  # Licencia del proyecto` — **el arbol que el README dibuja de si mismo** |
+
+🔴 **Y el archivo no existe: 20/20 sondas en 404** (10 nombres × 2 ramas), con `README.md` → 200 en
+las dos ramas como testigo de alcance.
+
+🔵 **Por que es trending y no un detalle de catalogo:** cambia la **accion**. *«Sin licencia»* se
+descarta; *«afirma MIT sin texto»* es un caso `P314` y **la cesion se pide por escrito al titular
+nombrado**. 🟢 **Es una pieza LATAM recuperable por una gestion** — tutor de ingreso a la
+universidad cubana, con el curriculo cubano nombrado en el payload (señal de region de primera
+mano, `P261` satisfecho). 🔴 **Y es exactamente la clase de activo que esta base venia declarando
+que no encuentra en LATAM: su bloqueo no es tecnico ni regional, es de cesion.**
+
+**Las tres acciones pre-registradas por el pase 108, corridas:**
+
+| accion | veredicto |
+|---|---|
+| **A** (censo completo de formas de `oer`) | 🔴 **NO CORRIDA** — el presupuesto de canal se gasto en B y C, que eran acotadas y cerraban. **Deuda que va por tercer pase y se declara** |
+| **B** (`P340`: re-barrido de ortografias de licencia) | 🔸 **CONFIRMADA en su mitad fuerte** (0 de 9 «sin licencia» tienen archivo) y **DEBIL en la otra**: el unico caso de ortografia es `openedx/XBlock`/`LICENSE.TXT`, que `P279` ya habia resuelto ⇒ **replicacion, no instancia nueva** |
+| **C** (`P339`: desempate de la huella) | 🔴 **FALSIFICADA en sus dos clausulas** — y la que se cumple es la **clausula de refutacion** que el pase 108 escribio contra si mismo: **5 de 5** huellas son del archivo **completo**, **0 de 5** del archivo sin su ultimo byte, **5 de 5** terminan en `0a` |
+
+🔴 **Y un defecto de ESTE pase, encontrado por la SUITE de este pase (`P343`):** el extractor que
+armo los pares (bytes, huella) leyo el `35.121 B` publicado como `5.121 B` — casi se publico una
+«correccion» a una cifra que estaba bien en las 7 partes donde esta base la afirma. ⚠️ **Y el
+primer diagnostico estaba mal:** se acuso al cuantificador acotado, y medido esa expresion captura
+el numero entero. 🔵 **La causa es el prefijo GOLOSO `^.*` sin frontera izquierda en la captura, y
+POSIX ERE no da con que frenarlo: `sed -E` no tiene cuantificadores perezosos (`.*?` sobre `aXbXc`
+consume `aXbX`) ni *lookbehind* (`(?<!…)` es rechazado).** 🔴 **La misma corrida dejo una fila cuyo
+campo «repo» es la RUTA `master/LICENSE.TXT`: la misma clase, sin numeros.** 🟢 **Lo atrapo la
+huella y nada mas.** 🔵 **La ironia es el dato: el instrumento escrito para cazar defectos de
+medicion de 1 byte tenia uno de 30.000.**
+
+⚠️ **Cifras de estrellas en este pase: CERO.** `github.com` paso de ⚠️ a 🔴 **403** entre el pase 108
+y este, y `api.github.com` sigue en 403. **Se publica la ausencia en vez de la cifra inflada que el
+pase 107 ya documento.**
+
 ## 2026-10-05 — pase 108: 5 altas permisivas cortan una racha de 30, y la accion pre-registrada se cae por el ARTEFACTO al que la mandaron
 
 **Lo que se movio esta semana, medido del payload y no del titular de la nota:**
