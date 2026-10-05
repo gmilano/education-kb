@@ -24,6 +24,144 @@ updated: 2026-10-05
 > **Pase 100 del 2026-10-04:** 🟢 **Vigesimonoveno barrido regional (año CALCULADO: 2026), las cuatro regiones responden, 0 silencios.** 🔴 **Y el hallazgo que manda es una REINCIDENCIA del canal, no del mercado: el canal secundario reprodujo la versión SUPERADA del AI Act por CUARTA y QUINTA vez — los barridos de HOY de North America («*taking full effect in August 2026, classifies education AI as high-risk*») y de LATAM («*cuyo marco entró en vigor progresivamente desde agosto de 2026*») siguen diciendo agosto de 2026 para el ALTO RIESGO, cuando el Anexo III se difirió a `2027-12-02` y lo vigente es el artículo 50.** 🔵 **Cinco reproducciones en cinco pases es una propiedad del canal, no un error: la prensa de industria NO va a corregir esto, así que la corrección de esta base hay que sostenerla contra fuente legal cada vez que se cotiza en EMEA** (`P281`). 🟢 **NA aporta el dato que vuelve accionable su vacío federal: los estados ya legislan en concreto —Colorado y Texas con requisitos parciales— sobre un mercado de USD 951 M (2024) → USD 2.303,2 M (2029) al 15,9 % CAGR y 36 % del global.** 🟢 **EMEA aporta un CALENDARIO que cae este mes: la 2ª conferencia de trabajo del Consejo de Europa sobre las dimensiones regulatorias de la AI en educación es en OCTUBRE de 2026, y el Consejo de Europa son 46 estados con un instrumento SEPARADO del AI Act.** 🟢 **APAC confirma su eje de soberanía con el número de gobernanza: 48 % de los líderes de gobernanza ponen la adopción de AI como prioridad estratégica 2026 y 57 % de las organizaciones de Asia ya la tienen en producción en al menos un área.** 🟢 **LATAM aporta el dato que invierte la lectura habitual de la región: es el TERCER mercado mundial de descargas de aplicaciones de AI generativa, con adopción empresarial por encima del 85 %.** 🔴 **Y la región que NO se pudo colocar con una PIEZA este pase es LATAM: de las 7 piezas nuevas, 3 quedan en North America, 1 en North America **y** EMEA por huella de despliegue, 1 en APAC y 2 sin región — cero en LATAM, y se dice en vez de dejarlo en silencio.** Ver **`P308`**–**`P311`**.
 > **Pase 97 del 2026-10-04:** 🔴 **Vigesimosexto barrido regional (año CALCULADO: 2026) y el hallazgo que manda es del CANAL, no del mercado: la declaración de canal de esta base sólo se había medido sobre hosts de GitHub, y medida sobre hosts cualesquiera el egreso está BLOQUEADO —`unu.edu`, `coe.int`, `unesco.org` y `example.com` dan `000`/`EGRESS_BLOCKED` por `curl` y por el fetcher— así que TODA la inteligencia regional de este archivo viene del canal secundario y sus fuentes primarias quedan NOMBRADAS y marcadas 🔸 SIN VERIFICAR, una por una.** 🟢 **Las cuatro regiones respondieron, 0 silencios, 7 hechos nuevos.** 🟢 **EMEA aporta el hallazgo regional: el Consejo de Europa —46 estados, instrumento SEPARADO del AI Act— convoca su 2ª conferencia de trabajo sobre las dimensiones regulatorias de la AI en educación, o sea que el perímetro regulatorio de un cliente educativo en EMEA no termina en la UE.** 🟢 **APAC confirma el eje que el pase 95 pre-registró: la soberanía decidirá la infraestructura de ~la mitad de las empresas de la región, lo que convierte la pregunta de compra en «quién procesa datos de alumnos y dónde» y favorece justo la capa permisiva auto-hospedable que este pase confirmó por dos canales (UniTime, OpenOLAT, Sakai, DSpace).** 🟢 **LATAM aporta un DENOMINADOR primario: 200 instituciones de educación superior en 19 países, relevadas ago–oct 2025 (working paper de UNU/UNESCO).** 🔴 **NA cuantifica su hueco de gobernanza: 10 % de instituciones con guías formales contra 71 % de docentes sin formación, sobre un vacío regulatorio federal.** 🔴 **Y el canal secundario reprodujo la versión SUPERADA del AI Act por TERCERA vez (NA y LATAM): sigue diciendo agosto de 2026 para el alto riesgo cuando el Anexo III se difirió a `2027-12-02` y lo vigente es el artículo 50.**
 
+
+## 🟢 Barrido regional 45 (pase 116 del 2026-10-05) — 4/4 regiones, 0 silencios, y DOS trayectorias de mercado que no son la misma curva
+
+**Las cuatro regiones devolvieron hecho relevante. Ningún silencio que declarar este pase.** Lo que
+sí hay que declarar es un **conflicto de trayectoria** y una **fuente secundaria que contradice, por
+imprecisión, el registro legal que esta base ya tenía.**
+
+### 🔴 El conflicto de trayectoria, con las tres curvas puestas una al lado de la otra
+
+| Fuente / registro | Ancla | Destino | CAGR | Nota |
+|---|---|---|---|---|
+| Registro de esta base (ciclos 2–3) | $10,6 B (2026) | **$42,48 B (2030)** | **41,5 %** | 4 años de horizonte |
+| Barrido de este pase | $7,52 B (2025) → **$10,6 B (2026)** | **$79,6 B (2034)** | **31,35 %** (2026–2034) | 8 años de horizonte |
+| Barrido de este pase — **North America** | **$951 M (2024)** | **$2.303,2 M (2029)** | 🔴 **15,9 %** | MarketsandMarkets |
+
+🟢 **Las dos primeras CONCUERDAN en el ancla de 2026 ($10,6 B) y discrepan en el EXPONENTE**, que es
+la forma benigna del conflicto: el punto de partida está corroborado por dos casas y lo que cambia
+es la pendiente a horizonte largo. 🔴 **La tercera es el problema: 15,9 % para North America contra
+31–41 % global es una brecha que NO se cierra con «la región crece menos».** North America es, según
+el mismo barrido, **36 % de la cuota de adopción global**; una región que pesa 36 % no puede crecer
+al 16 % mientras el total crece al 41 % sin que el resto crezca a tasas que ninguna fuente publica.
+
+🔵 **Diagnóstico, y es de UNIDAD, no de aritmética — familia de `P348`:** las tres curvas no miden
+lo mismo. «AI in education» global incluye el gasto en plataformas de consumo y *upskilling*
+corporativo; el corte regional de MarketsandMarkets es institucional. 🔴 **Consecuencia operativa
+directa: NO se cita una CAGR global para dimensionar una oportunidad regional, y no se cita una sola
+cifra de mercado sin su horizonte y su casa.** Esta base publica las tres y el conflicto.
+
+### ⚠️ La fuente secundaria que contradice al registro legal de esta base — y PIERDE
+
+El barrido regional devolvió, en dos de las cuatro consultas: *«el AI Act entra en pleno efecto en
+**agosto de 2026** y clasifica la IA educativa como alto riesgo»*. 🔴 **Esta base NO adopta ese
+enunciado, porque su propio registro está sostenido contra el texto legal y es más fino:** lo
+vigente HOY es el **art. 50(2)** con gracia hasta el **`2026-12-02`**, y el **Anexo III** autónomo
+—el que trae la calificación de alto riesgo para educación— corrió al **`2027-12-02`** por el
+*Digital Omnibus*, como **límite exterior condicionado** a que la Comisión confirme las normas
+armonizadas, con facultad de **ADELANTARLO**.
+
+🔵 **Se registra el conflicto en vez de resolverlo por antigüedad:** «agosto de 2026» es la fecha de
+una etapa del calendario del AI Act repetida por agregadores como si fuera la fecha de TODO el
+reglamento. 🔴 **Y el costo de creerle es asimétrico y concreto: un plan construido sobre «agosto de
+2026» da por cerrada en el pasado una obligación cuya gracia vence el `2026-12-02` —dentro de dos
+meses— y pone en 2026 una calificación de alto riesgo que el Omnibus movió a 2027.** Se equivoca en
+las dos direcciones a la vez. **Prevalece el registro de esta base.**
+
+## Opportunities by region
+
+### North America
+
+- **Lo nuevo de este pase:** 🟢 **OpenAI lanzó un programa educativo de nivel PAÍS con 8 socios
+  nacionales en el Q1 de 2026** ⇒ aparece un competidor que negocia con MINISTERIOS, no con
+  instituciones, y eso cambia el interlocutor de una propuesta.
+- **Cuota y tasa, con la salvedad de arriba:** **36 % de la adopción global**; mercado regional
+  **$951 M (2024) → $2.303,2 M (2029)**, CAGR **15,9 %** — cifra institucional, NO comparable con
+  las CAGR globales.
+- **Regulación:** sigue **fragmentada por estado** (el barrido vuelve a nombrar Colorado y Texas
+  como requisitos parciales), sin estándar federal vinculante.
+- **Oportunidad Globant:** frente a un competidor que entra por acuerdo nacional, la capa vendible
+  es la que un acuerdo nacional no entrega: **integración con el LMS que la institución YA tiene** y
+  el expediente de trazabilidad por alumno. La tabla de `repos/foundations.md` de este pase da la
+  capa MCP sobre Canvas con cesión MIT verificada en los dos lados, lectura y escritura.
+
+### EMEA
+
+- **Calendario:** se mantiene el registro legal de esta base (art. 50(2) → `2026-12-02`; Anexo III
+  → `2027-12-02`, adelantable), **no** el «agosto de 2026» del barrido. Prohibición de
+  reconocimiento de **emociones** en centros educativos: ya vigente.
+- **Lo nuevo de este pase:** 🟢 **El Consejo de Europa convoca su 2ª conferencia de trabajo sobre
+  las dimensiones REGULATORIAS de la IA en educación para octubre de 2026** ⇒ hay una mesa
+  normativa abierta y fechada, distinta del AI Act y específica de educación.
+- **Dinero público con currículo asociado:** el **AI Adoption Summit** del Reino Unido comprometió
+  **£200 M+**, con **Skills England** fijando el marco curricular y socios de ejecución (Cisco,
+  IBM, BT, Rolls-Royce) ⇒ **el marco de competencias lo fija el Estado y la ejecución se licita.**
+- **Demanda declarada:** CompTIA mide **94 %** de organizaciones al menos «algo probables» de
+  invertir en formación específica en IA en 2026. QS publica el **Europe EdTech 200+** de 2026.
+- **Oportunidad Globant:** entregar contra el marco de **Skills England** —mapear currículo a
+  competencias y emitir evidencia— y tener el expediente del art. 50(2) **permanentemente listo**,
+  no con fecha. Soberanía del dato: el proveedor `ollama` del núcleo de Moodle (uno de los 7
+  medidos este pase) permite que el *prompt* del alumno no salga de la institución.
+
+### APAC
+
+- **Prioridad declarada:** **48 %** de los líderes de gobernanza de APAC ponen la adopción de IA
+  como prioridad estratégica máxima para 2026; **57 %** de las organizaciones de Asia ya la
+  incorporaron en ≥1 área; **70 %** citan la transformación digital con sus riesgos de IA como el
+  tema más urgente de agenda de directorio para 2026.
+- **La forma de la regulación, y es distinta de EMEA:** no hay reglamento transversal; hay
+  **expectativas de aseguramiento y uso responsable** que avanzan por consulta sectorial (el
+  barrido nombra las consultas de **Singapur** sobre IA en instituciones financieras:
+  transparencia, rendición de cuentas, supervisión del riesgo). 🔵 **El eje que ordena la región es
+  la SOBERANÍA de IA**, no una ley de IA.
+- **Movimiento comercial del canal:** LearnUpon abrió sede en **Sídney** y lanzó **Create+** de
+  autoría de cursos con IA; **TCS y Pearson** anunciaron una alianza plurianual de aprendizaje con
+  IA para cerrar brechas de competencias con retorno demostrable.
+- **Activo open source UBICADO acá, con licencia verificada:** `toshieji/moodle-grading-mcp`,
+  **MIT**, titular **WACA (Japón)** leído del payload.
+- **Oportunidad Globant:** multi-jurisdicción con **política por nodo** y despliegue soberano. El
+  diferencial no es saber qué regula cada país —eso se cita— sino **de qué licencia cede el activo
+  que se entrega**, que es lo que esta base mide y ningún barrido de mercado contesta.
+
+### LATAM
+
+- **Lo nuevo de este pase, y es una FUENTE PRIMARIA:** 🟢 **working paper de la UNU/UNESCO sobre
+  implementación de IA en la educación superior de América Latina y el Caribe, construido sobre una
+  encuesta regional a 200 instituciones de educación superior en 19 países**, relevada entre
+  **agosto y octubre de 2025**, con cinco dimensiones: enseñanza y aprendizaje, investigación,
+  vinculación con el medio, administración y **gobernanza**.
+  🔵 **Por qué vale más que una cifra de mercado: da un INSTRUMENTO con dimensiones y denominador
+  —200 instituciones, 19 países— contra el cual una propuesta puede posicionar a un cliente, en vez
+  de una CAGR que no dice dónde está parada la institución.**
+- **Marco regulatorio:** el BID publica *An Enabling Regulatory Framework for AI in LAC*. El propio
+  barrido señala el riesgo real de la región: **fragmentación normativa** —países con marcos
+  distintos o inexistentes— que complica la operación transfronteriza.
+- **Adopción:** **99 %** de las startups LATAM usan alguna solución de IA en su operación interna y
+  **85 %** la integran de forma nativa en su producto. En edtech el barrido nombra **Ednova (Chile)**.
+- **Activos open source UBICADOS acá:** 🔴 **esta base NO declara vacío de código LATAM, y no puede:**
+  `P370` midió **12 repos UBICADOS en LATAM** en su propio índice contra el «CERO repositorios»
+  declarado cuatro pases seguidos, y el pase 115 incorporó cuatro piezas LATAM más
+  (`portabilis/i-educar`, `yunger7/enem-api`, `Magnusvron/llm-benchmark-quality-index`,
+  `thiagoluzin/pemara-edu-mira`).
+- **Oportunidad Globant:** entrar por el **ANCLA DE CURRÍCULO** (BNCC, ENEM) y por el **SIS
+  municipal**, que es la pieza que la región forkea para desplegar — `i-educar` tiene **547 forks
+  sobre 717 ★**, firma de software que se clona por municipio. ⚠️ Con la frontera de licencia
+  decidida en semana 1: `i-educar` y `enem-api` son **GPL-2.0**, no permisivas.
+
+### Global
+
+- **Mercado:** $7,52 B (2025) → **$10,6 B (2026)**, CAGR 40,9 %. Destino en disputa: **$42,48 B
+  (2030)** al 41,5 % *vs* **$79,6 B (2034)** al 31,35 % — ver el conflicto de trayectoria arriba.
+- **Uso declarado por alumnos:** **66 % (2024) → 92 % (2025)**, y **86 %** de los estudiantes de
+  educación superior usando IA como socio principal de investigación al inicio de 2026.
+- **Composición:** nube **71,22 %** de cuota (2024); **K-12 45,62 %** de la adopción; **STEM
+  34,78 %** de los ingresos, con **aprendizaje de idiomas como el segmento de mayor crecimiento
+  después de STEM**.
+- 🔵 **Lo que esa composición le dice a una propuesta:** con K-12 en 45,62 % y la prohibición de
+  reconocimiento de emociones ya vigente en EMEA, el segmento más grande es también el de mayor
+  carga de protección de menores. **El entregable que escala es el expediente, no el modelo.**
+
 ## 🟢 Barrido regional 44 (pase 115 del 2026-10-05) — 4/4 regiones, 0 silencios, y el hueco que este archivo declaraba queda refutado por su propio índice
 
 ### 🔴 Lo primero, porque es un defecto de este archivo y no del mercado (`P370`/`P371`)

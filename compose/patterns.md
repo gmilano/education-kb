@@ -24,6 +24,85 @@ updated: 2026-10-05
 > **Pase 100 del 2026-10-04:** 🆕 **Los patrones nuevos son `P308`–`P311`, y las recetas son `R-100-HABLA-PERMISIVA` y `R-100-AUTOGRADING-PERMISIVO`.** 🔴 **`P308` es el que cambia qué garantiza un veredicto de licencia de esta base: el reflujo del texto —re-envolver un payload sin cambiar una palabra— movía la respuesta, en DOS reglas; la del Unlicense no perdía la familia en `UNCLASSIFIED` sino que INVERTÍA el veredicto comercial a `NONCOMMERCIAL-NOT-OSI` sobre el texto más permisivo que existe, y la de la ventana del bloque de título perdía la AGPL que `P288` había instalado porque contaba LÍNEAS.** 🟢 **`P309` es el residual declarado en vez de tapado: `holder_of` devuelve una LÍNEA, y una línea depende del reflujo por construcción.** 🔴 **`P310` es el que paga en una propuesta: una pieza puede ser permisiva y no ceder ninguna CAPACIDAD —`speechsuper/SpeechSuper-API-Samples` es MIT real sobre muestras de una API paga— y es el primer espécimen de esta base donde el engaño viene de una licencia CORRECTA.** 🔴 **`P311` es el control que faltaba y que este pase necesitó contra sí mismo: todos los controles de esta base auditan una afirmación que el pase HACE, y la de que un alta es NUEVA es implícita.** 🆕 **`R-100-HABLA-PERMISIVA` es cotizable porque los cinco eslabones están verificados por payload y cuatro de los cinco son permisivos; el quinto —el corpus— queda FUERA del entregable con su razón dicha.**
 > **Pase 97 del 2026-10-04:** 🆕 **Los patrones nuevos son `P294`, `P295`, `P296` y `P297`, y los cuatro salen de cablear una sola pieza.** 🔴 **`P294` es el que cambia cómo esta base se audita a sí misma: un control que no está en el camino por donde pasan los datos no es un control, es una demostración — el pase 96 diagnosticó la ceguera a Java/Maven, escribió el lector correcto (`p289`, 11/11) y no lo conectó, así que `PARSERS` siguió con cinco nombres y el hueco siguió abierto donde se producen los veredictos.** 🔴 **`P295` es el mismo defecto en la prosa: `trend-backlink-audit` existe desde el pase 49 para atrapar citas colgadas y era CIEGO a la forma con que esta base ANUNCIA sus tendencias («tendencias nuevas, numeradas 745–752» → 0 citas), así que catorce números quedaron sin sección sin que nada lo marcara; y de paso era lossy en castellano, porque aceptaba «a» como conector y no como marca de rango.** 🟢 **`P296` es el que paga en una entrega: el veredicto de licencia tiene DOS canales independientes —la declaración del manifiesto y el payload del archivo— y medidos sobre la capa Java/Maven concuerdan 4 de 4 exactos, 1 de familia, 0 contradicciones; el manifiesto CORROBORA y además es la única fuente donde no hay archivo (`kuali/kc`).** 🟢 **`P297` es la pieza técnica que lo hizo posible: en Maven la identidad de propiedad es el `groupId` —un namespace reverse-DNS que codifica a la organización— y el `<parent>` NO presta ni identidad ni licencia.** 🆕 **La receta nueva es `R-97-COMPRA-SOBERANA-APAC`, y es cotizable porque la condición de compra que la dispara quedó medida este pase: la soberanía decidirá la infraestructura de ~la mitad de las empresas de APAC.**
 
+
+## 🍳 Receta `P378` — «Copiloto de corrección sobre el LMS que la institución YA tiene, con la nota como BORRADOR y el expediente de supresión incluido»
+
+**Por qué esta receta y no otra:** este pase midió que la capa MCP sobre LMS está cubierta **de los
+dos lados con MIT** (lectura del alumno y escritura del docente) y que la capa de IA del núcleo de
+Moodle **dejó de moverse** a través de 5.3rc1 → 5.3 estable → 6.0dev. 🔵 **Las dos condiciones que
+faltaban para comprometer una entrega con fecha se cumplen a la vez, y es la primera vez que esta
+base puede decirlo con medición.** 🔴 **Y el problema duro de un copiloto de corrección no es la
+calidad de la nota: es que una nota escrita por un LLM directo al libro de calificaciones es una
+DECISIÓN AUTOMATIZADA sobre una persona. La receta resuelve eso con arquitectura, no con prompt.**
+
+### Las piezas, cada una con su cesión leída del payload
+
+| Capa | Pieza | Licencia (payload) | De qué lado de la frontera |
+|---|---|---|---|
+| **Escritura docente, Moodle** | `toshieji/moodle-grading-mcp` — https://github.com/toshieji/moodle-grading-mcp | **MIT** ✅ — 1.120 B, titular *WACA + Toshiaki Ejiri* | 🟢 **Adentro, y es el CORAZÓN de la receta**: 7 tools, el LLM decide la nota pero el servidor **sólo escribe borradores NO publicados**, con las reglas forzadas **del lado servidor**. **APAC (Japón)** por titular organizacional |
+| **Escritura docente, Canvas** | `bruchris/canvas-lms-mcp` — https://github.com/bruchris/canvas-lms-mcp | **MIT** ✅ — 1.070 B | 🟢 **Adentro**. Notas, comentarios, rúbricas, *gradebook history*, auditoría de accesibilidad. Es el equivalente Canvas del anterior |
+| **Lectura del alumno** | `Ait0u5hi/canvas-scholar-mcp` — https://github.com/Ait0u5hi/canvas-scholar-mcp | **MIT** ✅ — 1.065 B, `sha256 d1bf3f0175f3` | 🟢 **Adentro**. 🆕 **Alta de este pase.** Cierra el lado alumno: qué vence, cómo voy, qué me perdí — **sólo lectura**, que es la única forma en que el alumno debe tocar esta capa |
+| **Modelo sin salida de datos** | `public/ai/provider/ollama` del núcleo de Moodle | plataforma **GPL-3.0** 🔴 | 🔴 **Afuera** (se consume por *web services*), 🟢 **pero habilita adentro lo que importa**: 1 de los **7** proveedores medidos, y el único con el que el *prompt* del alumno **no sale de la institución** |
+| **Superficie de supresión** | `public/ai/classes/privacy/provider.php` (`core_ai`) | plataforma **GPL-3.0** 🔴 | 🟡 **No se linkea: se APUNTA.** **806 líneas, 3 `delete_records_list`, 6 tablas —`prompt` y `generatedcontent` entre ellas—**, re-verificado sobre 6.0dev. Es donde aterriza la obligación de borrado |
+| **Remediación tras la nota** | `CAHLR/OATutor` — https://github.com/CAHLR/OATutor | **MIT** ✅ | 🟢 **Adentro**. **264 ★ / 156 forks a `2026-10-05`**. BKT con selección de ítem por habilidad más débil: convierte una nota en un siguiente paso |
+| **Trazado de dominio** | `CAHLR/pyBKT` — https://github.com/CAHLR/pyBKT | **MIT** ✅ | 🟢 **Adentro**. Mantiene la probabilidad de dominio por concepto entre entregas |
+| **Marcado art. 50(2)** | `compose/code/aiact-50-2-marking/` + `-pack/` + `-spans/` + `-exposure/` de este árbol | instrumentos propios | 🟢 **Adentro**. El feedback generado que ve el alumno es contenido sintético: se marca, se empaqueta y se mide la exposición |
+
+🔴 **Excluidas, nombradas, y no por calidad:** `CreveXTech/canvas-lms-mcp` es técnicamente la pieza
+mejor pensada del lote —**34 tools, todas GET con `readOnlyHint`**, imposible de usar para escribir—
+y queda **AFUERA porque no cede nada** (30 rutas enumeradas, 0 archivos de licencia, `license`
+ausente del `package.json`). `shakyanaitik0-bot/Agentic_AI_Tutor` y su upstream quedan afuera por
+**`P377`**: 2 nodos, 24 sondas, 0 cesiones, 2 afirmaciones de MIT.
+
+### El cableado, en orden
+
+1. **Semana 1 — la frontera, antes de escribir código.** Moodle/Open edX se consumen por *web
+   services*; **nada del entregable linkea GPL/AGPL**. Los tres MCP (MIT) son el único código que se
+   escribe y se entrega. 🔵 Misma forma que `P375` paso 1: una pregunta de licencia resuelta como
+   arquitectura y no como nota al pie.
+2. **La nota nace BORRADOR, y la regla vive en el servidor.** Se adopta el diseño de
+   `moodle-grading-mcp` **también del lado Canvas**: `bruchris/canvas-lms-mcp` tiene tools de
+   escritura directa, así que se envuelve para que el camino a `gradebook` pase por un estado no
+   publicado. 🔴 **La regla NO puede vivir en el prompt: un prompt es una sugerencia y lo que hace
+   falta es una compuerta. Por eso la pieza de referencia es la que ya la puso del lado servidor.**
+3. **Modelo adentro de la institución.** Proveedor `ollama` del núcleo. El *prompt* del alumno y el
+   texto corregido no cruzan hacia un tercero ⇒ se evita de entrada el punto exacto que los **7
+   shims de privacidad** de Moodle existen para declarar: que el dato **sale**.
+4. **Dominio y siguiente paso.** `pyBKT` mantiene la probabilidad de dominio por concepto;
+   `OATutor` selecciona el ítem que ataca la habilidad más débil. 🔵 **Esto es lo que separa un
+   copiloto de corrección de un corrector: la nota entra a un lazo, no a una planilla.**
+5. **Marcado y expediente.** Todo feedback generado se marca por los instrumentos `aiact-50-2-*`
+   de este árbol. 🔴 **Con la fecha que manda: la gracia del art. 50(2) vence el `2026-12-02` —dos
+   meses—, y el Anexo III corrió al `2027-12-02` como límite exterior ADELANTABLE. No se vende un
+   plan con fecha: se vende un expediente permanentemente listo.**
+6. **Supresión, apuntada y probada.** El procedimiento de DSAR apunta a `core_ai` (6 tablas,
+   `prompt` y `generatedcontent` incluidas) y se **prueba** que el borrado alcanza el borrador no
+   publicado, que es el registro que esta receta crea de más.
+
+### Por qué el riesgo de plataforma es BAJO, y está medido
+
+🟢 **Dos releases menores y una apertura de serie mayor (5.3rc1 → 5.3 → `6.0dev Build 20261005`) sin
+mover ni el número de proveedores (7) ni la plantilla de privacidad (806 líneas, 3
+`delete_records_list`) ni la ruta del *webroot* (`public/`).** ⇒ el expediente de cumplimiento que
+esta receta produce no se rehace en el próximo release. **Es la justificación medida de poder
+comprometer una fecha**, y es lo que esta receta tiene y `P375` no podía tener.
+
+### Lo que esta receta NO resuelve, declarado
+
+- 🔴 **No hay evaluación de calidad de corrección.** `mathtutorbench` y `pedagogy-benchmark` (en
+  `P375`) miden si un tutor **enseña**; **ninguna pieza medida por esta base evalúa si una nota
+  generada por LLM concuerda con la de un docente.** Es el hueco más grande de esta receta y se
+  escribe en vez de taparse con una métrica prestada.
+- 🔴 **Las dos altas MIT de este pase salen NO UBICADAS** (`canvas-scholar-mcp` sólo tiene handle —
+  `P135` prohíbe ubicar por antropónimo; `aiversity` declara «MSc» sin país). Para una entrega que
+  exija procedencia del proveedor, eso es una gestión pendiente, no un dato.
+- ⚠️ **`aiversity` NO es dependencia de esta receta.** Su propio README se declara proyecto
+  individual de MSc en desarrollo activo; entra al árbol como **diseño de referencia** de
+  planificación jerárquica (DHATN) y mensajería entre agentes (NIACL), nada más.
+- 🔴 **El lado Canvas no trae la compuerta puesta.** `moodle-grading-mcp` la tiene del lado servidor
+  por diseño del titular; en Canvas hay que **construirla**, y eso es trabajo del entregable, no una
+  pieza que se descarga.
+
 ## 🍳 Receta `P375` — «Tutor alineado al currículo oficial LATAM, con la frontera de licencia decidida en semana 1»
 
 **Por qué esta receta y no otra:** el pase 115 midió que la capa LATAM **existe y no cede** (4 de 8

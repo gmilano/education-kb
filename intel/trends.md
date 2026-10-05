@@ -236,6 +236,55 @@ el fork, instalaciones. ⚠️ **Y su lado malo es el encargo:** 547 árboles di
 actualización.
 
 
+
+## 2026-10-05 — pase 116: la IA de LMS se estabilizó como ARQUITECTURA, y ahí es donde hay que mirar
+
+**Tendencia 1 — la capa de IA del LMS dejó de moverse, y eso es la noticia.**
+Moodle cruzó de **5.3rc1** a **5.3 estable** y abrió **`6.0dev (Build: 20261005)`**, y a través de
+ese salto la arquitectura de IA quedó **idéntica**: exactamente **7 proveedores**
+(`anthropic`, `awsbedrock`, `azureai`, `deepseek`, `gemini`, `ollama`, `openai`), el *webroot* en
+`public/`, y la plantilla de privacidad `core_ai` en **806 líneas con 3 `delete_records_list`**.
+🔵 **Lo que esto cambia en una decisión: durante 2025 la capa de IA de los LMS era un blanco móvil y
+la recomendación prudente era esperar. Medido a través de dos releases menores y una apertura de
+serie mayor, ya no se mueve ⇒ se puede comprometer un expediente de cumplimiento con fecha.**
+
+**Tendencia 2 — las dos casas de mercado ya no discrepan en el ANCLA, sino en el EXPONENTE.**
+Las dos trayectorias de este pase coinciden en **$10,6 B para 2026** y se separan después:
+**$42,48 B (2030) al 41,5 %** contra **$79,6 B (2034) al 31,35 %**. 🟢 **Para 2026 la cifra está
+corroborada por dos casas independientes y se puede citar.** 🔴 **A horizonte 2030+ no, y el corte
+regional de North America (**15,9 %** CAGR) es irreconciliable con cualquiera de las dos, porque
+mide gasto institucional y no el agregado — ver `intel/market.md`.**
+
+**Tendencia 3 — el techo de adopción por el lado del alumno ya se alcanzó; el cuello pasó a la institución.**
+**66 % (2024) → 92 % (2025)** de uso declarado, y **86 %** de estudiantes de educación superior
+usando IA como socio principal de investigación al inicio de 2026. 🔵 **Una curva que llega a 92 %
+no tiene margen para seguir siendo la noticia. Lo que queda por resolver no es si el alumno usa IA,
+sino si la institución puede DEMOSTRAR cómo se usó** — y eso es gobernanza, trazabilidad y
+expediente, que es la capa donde el open source de esta base tiene algo que ofrecer.
+
+**Tendencia 4 — la regulación educativa se bifurca en TRES formas, no en «más o menos estricta».**
+EMEA: reglamento transversal con fechas (art. 50(2) → `2026-12-02`; Anexo III → `2027-12-02`) y una
+mesa específica de educación abierta por el Consejo de Europa para **octubre de 2026**.
+North America: **fragmentación estatal** sin estándar federal, y un competidor —OpenAI— entrando por
+**acuerdo de nivel país con 8 socios nacionales** en el Q1 de 2026. APAC: sin ley transversal,
+expectativas por **consulta sectorial** y **soberanía** como eje ordenador. LATAM: marcos
+**distintos o inexistentes** entre países, con el BID publicando un marco habilitante y la UNU/UNESCO
+midiendo 200 instituciones en 19 países. 🔵 **Un discurso regulatorio único no sirve en las cuatro;
+lo que sí viaja es el expediente de cesión del activo entregado.**
+
+**Tendencia 5 — el dinero público llega con currículo adosado.**
+El **£200 M+** del Reino Unido viene con **Skills England** fijando el marco de competencias; el
+Dept. of Education de EE.UU. prioriza IA en sus *discretionary grants*. 🔵 **Deja de ser una venta
+de capacidad y pasa a ser una entrega contra un marco de competencias ajeno: lo que se licita es
+mapear currículo a competencias y EMITIR EVIDENCIA.**
+
+**Tendencia 6 — la afirmación de licencia se multiplica más rápido que la licencia.**
+`P377` de este pase: en un linaje de fork de 2 nodos hay **2 afirmaciones de MIT y 0 cesiones**,
+porque forkear copia el `README` que afirma y no puede copiar el `LICENSE` que no existe. 🔴 **Con
+autoría agéntica —5 de las 6 ramas del repo medido son `claude/project-thread-*`— el volumen de
+repos crece rápido y la proporción que CEDE de verdad no tiene por qué crecer con él. El conteo de
+repos que «dicen MIT» se vuelve una métrica cada vez peor.**
+
 ## 2026-10-05 — pase 114: el marco 2026 como rango, porque las cuatro casas discrepan 1,4x
 
 ### 📈 El marco 2026, como rango (4 casas, misma ventana)

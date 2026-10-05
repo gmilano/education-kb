@@ -25,6 +25,66 @@ updated: 2026-10-05
 > **Pase 100 del 2026-10-04:** 🟢 **2 verticales nuevas, y las dos llenan el hueco que el pase 5 dejó ABIERTO en la capa de autograding de este archivo: una plataforma desplegada cuya licencia SÍ se pueda construir encima.** `Submitty/Submitty` (**BSD-3-Clause**, `LICENSE.md` 1.542 B, **titular organizacional** `Submitty`, 2014-2026 — RPI/RCOS) y `autolab/Autolab` (**Apache-2.0**, `LICENSE` 11.324 B — CMU). 🔴 **Por qué importa: la fila que este archivo tiene en esa capa desde el pase 5 es `Autograder.io`, de la Universidad de Michigan, con ~5.000 alumnos por semestre y la licencia marcada «no declarada» — y este pase la volvió a medir en 7 nombres de archivo y SIGUE sin ceder nada.** 🔵 **Así que la capa deja de tener un hueco: lo desplegado-y-no-usable ahora tiene dos alternativas desplegadas Y permisivas, con ~5.000 alumnos/semestre cada una en su institución.** 🟢 **Y `autolab/Autolab` trae una clase de indicio REGIONAL nueva para esta base: su `README` declara el DESPLIEGUE por sede —Pittsburgh, Silicon Valley, Qatar y Rwanda— o sea que una plataforma coloca DOS regiones (North America y EMEA) por huella de operación y no por domicilio del titular, que es lo que `P135` prohíbe inferir.** 🔴 **`P311`: el pase casi publica como alta a `INGInious/INGInious` y a `eecs-autograder/autograder.io`, las dos ya en ESTE archivo desde los pases 67 y 5; el gate nuevo las frenó antes de escribir** (`p311`, **11/11**, 14 slugs → 5 ya publicados). 🟢 **`lib/license_family.sh` 62/62 → 79/79; 51 suites pasan, 0 fallan.** Ver **`P308`**–**`P311`**.
 > **Pase 97 del 2026-10-04:** 🟢 **Sin filas nuevas, y a propósito: las seis plataformas Java/Maven que este pase midió YA están todas en este archivo. Lo que entra es el VEREDICTO DE LICENCIA de cada una leído por un segundo canal independiente —la declaración del `pom.xml`— y la capa Java/Maven de esta vertical era justo la que el barrido de esta base no podía leer** (**P294**).
 
+
+## 🏫 Moodle cruzó a la serie 6.0 y la arquitectura de IA que esta base auditó en el pase 19 SOBREVIVIÓ intacta (pase 116 del 2026-10-05)
+
+**Todo lo de esta sección sale del PAYLOAD del repo.** `docs.moodle.org` devuelve **000** desde este
+contenedor, así que el sitio no fue canal; se leyó `raw.githubusercontent.com` sobre
+`moodle/moodle`, con `git ls-remote` para fijar el `sha`.
+
+### 🟢 La versión, con el `sha` y el build fechados
+
+| Qué | Medición (2026-10-05) | Registro anterior de esta base |
+|---|---|---|
+| `refs/heads/main` | **`f20534726a59a4b64d168bc4a70fc9518251613e`** | `85af0b5` = **5.3rc1** (pase 19) |
+| `public/version.php` → `$release` | **`'6.0dev (Build: 20261005)'`** | 5.3rc1 |
+| Rama estable más alta | **`MOODLE_503_STABLE`** (existe) | 5.3 estaba en **rc1** |
+
+🟢 **Dos hechos, no uno: la 5.3 SALIÓ estable (ya no es rc1) y `main` abrió la serie 6.0dev, con
+build fechado HOY (`20261005`).** 🔵 **Y confirma el hallazgo de ruta del pase 19 a través de un
+salto de versión MAYOR: el *webroot* sigue en `public/`.** `version.php` en la raíz devuelve un
+cuerpo de **14 B** cuyo contenido literal es `404: Not Found`. ⚠️ **Nota de instrumento de este
+pase: medir el TAMAÑO del cuerpo sin mirar el código HTTP hace pasar un 404 por un archivo de 14 B.
+La sonda correcta lee `%{http_code}` primero; lo mismo que `P319` en otra capa.**
+
+### 🟢 La capa de proveedores de IA, re-contada sobre 6.0dev — el **7** del pase 19 se sostiene
+
+| Proveedor | `public/ai/provider/<p>/version.php` |
+|---|---|
+| `anthropic`, `awsbedrock`, `azureai`, `deepseek`, `gemini`, `ollama`, `openai` | 🟢 **200** (7 de 7) |
+| `mistral`, `vertexai`, `cohere` | 🔴 **404** (sondeados como control, ausentes) |
+
+🟢 **Exactamente 7, los mismos 7 que el pase 19 enumeró.** 🔵 **Y esto corrige por incompleta a la
+fuente secundaria de este pase, que atribuye a Moodle 5.2 «integración con Gemini y Amazon
+Bedrock»: es cierto y son 2 de 7.** Quien planifique sobre la nota de prensa cree que hay dos
+opciones de proveedor; el payload dice que hay siete, **y que `ollama` está entre ellas**, que es la
+única que permite una entrega sin que el *prompt* del alumno salga de la institución.
+
+### 🟢 La plantilla de borrado, re-verificada
+
+`public/ai/classes/privacy/provider.php` → **200**, **806 líneas**, **3** llamadas a
+`delete_records_list`. 🟢 **El pase 19 la describió como «~800 líneas, 6 tablas, con
+`delete_records_list` de verdad» y la medición sobre 6.0dev la REPRODUCE.** ⇒ la superficie de
+DSAR/supresión de la capa de IA de Moodle es estable a través de 5.1 → 5.2 → 5.3 → 6.0dev, y es
+donde se apoya cualquier expediente de cumplimiento que esta base recomiende.
+
+🔵 **Lo que esto vale para una propuesta:** el riesgo de «la plataforma cambia y hay que rehacer el
+expediente» está MEDIDO en esta capa y es bajo — dos releases menores y una apertura de serie mayor
+sin mover ni el número de proveedores ni la plantilla de privacidad.
+
+### 🟢 Open edX — la forma de la extensibilidad de IA, dicha como arquitectura
+
+**Open edX NO publica un producto de IA de primera parte.** Lo que hay es el **AI Extensibility
+Framework**: arquitectura **modular de plugins** open source, más **XBlocks** orientados a IA que
+desarrolla la comunidad, más integraciones propias de cada proveedor de servicios. ⇒ **la capa de IA
+se ELIGE y se integra, no viene puesta.**
+
+🔵 **La comparación que decide una recomendación, y es de FORMA, no de calidad:** Moodle trae la
+capa de IA en el núcleo con 7 proveedores y una plantilla de privacidad de 806 líneas que esta base
+ya auditó; Open edX deja la capa abierta y el integrador la trae. Para una entrega con requisito de
+expediente de cumplimiento **con fecha**, el primero parte de más arriba; para una entrega que deba
+usar un modelo propio o un proveedor no listado, el segundo no pelea contra el núcleo.
+
 ## 🏫 La vertical LATAM que faltaba es un SIS, no un LMS (pase 115)
 
 | Plataforma | Repo | Licencia | ★ / forks | Región | Qué cubre |

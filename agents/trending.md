@@ -17,6 +17,66 @@ updated: 2026-10-05
 > **Pase 107 del 2026-10-05:** 🔴 **0 altas permisivas (trigesimo barrido, 3 candidatas MEDIDAS del payload y las 3 con su bloqueo nombrado) y las TRES acciones pre-registradas corridas: A con la cota NO CERRADA y su clausula de atribucion FALSIFICADA, B CONFIRMADA, C CONFIRMADA en dos clausulas y FALSIFICADA en la tercera.** 🔴 **`P332`: la EXTENSION de un archivo de imagen no es su FORMATO — 2.443 de 2.443 `.gif` son PNG/JPEG/WEBP, y un barrido por extension habria dado «0 solapamiento» desde una premisa falsa.** 🔴 **`P334`: el titular de una FIGURA se resuelve por BYTES y vive en una obra DISTINTA de la que el item cita (36 pares leidos).** 🔴 **`P333`: `fa4e32e5e622` era la huella del archivo SIN su salto final — defecto de dato, no de upstream.** 🔴 **`P335`: tercera sub-clase de `P320` — lo denegado fue el LOTE, no la pieza nombrada.** 🟢 **Canal nuevo: `gitlab.com/-/raw`.**
 > **Pase 106 del 2026-10-05:** 🟢 **0 altas (vigesimonoveno barrido, 5 candidatas, las 5 frenadas por el gate de `P311`) y las TRES acciones pre-registradas corridas: A CONFIRMADA, B FALSIFICADA, C CONFIRMADA.** 🔴 **`P328`: la cesion de un OER se ESTRECHA entre ediciones — 10 de 10 colecciones con el mismo `collection-id` pasan de `CC BY 4.0` en `1e` a `CC BY-NC-SA 4.0` en `main`, y el slug cambia de nombre, que es por lo que esta base no lo veia.** 🔴 **El denominador se corrige de 13.371 a 82.492 unidades y aparece una capa sintetica de 6.886 unidades (`oer: openai`) sin cesion.** 🟢 **Canal nuevo: `git ls-remote` para enumerar refs — es el que abrio la accion A.**
 
+
+## 2026-10-05 — pase 116: 2 altas MIT, 2 rechazos medidos, y el fork que duplica la afirmación sin duplicar la licencia
+
+🟢 **Barrido 45: 4/4 regiones, 0 silencios.** 🟢 **2 altas permisivas leídas del payload:**
+`Ait0u5hi/canvas-scholar-mcp` (**MIT**, 1.065 B, `sha256 d1bf3f0175f3`, 0 ★ / 0 forks, MCP de Canvas
+del lado ALUMNO, 11 ramas vivas con 6 `fix/*` de defecto nombrado) y `aurelio-labs/aiversity`
+(**MIT**, 1.072 B, `sha256 e7e168fbf490`, 11 ★ / 2 forks, multiagente `Iris`/`Stratos`/agentes de
+tarea dinámicos, planificación **DHATN**, mensajería **NIACL**, sobre **ARCANE**).
+⚠️ **Las 2 salen NO UBICADAS y se declara: una sólo tiene handle (`P135` prohíbe ubicar por
+antropónimo), la otra declara «programa de MSc» sin universidad ni país.**
+
+🔴 **2 rechazos, con el árbol enumerado y no por silencio:** `CreveXTech/canvas-lms-mcp` —pieza
+buena (34 tools, 11 áreas, **todas GET con `readOnlyHint`**, commit del 2026-09-29)— con **30
+archivos enumerados por clon `--filter=blob:none` y 0 de licencia**, `package.json` de 10 claves con
+`license` **AUSENTE**, y la palabra `MIT` sola en el §License del README ⇒ **`P314`**, mientras la
+página renderizada reporta «License: MIT» sin salvedad. Y `shakyanaitik0-bot/Agentic_AI_Tutor`
+—6 agentes, SM-2, RAG híbrido vectorial+BM25, grafo de conocimiento— cuyo README promete
+«*see [LICENSE] for details*» sobre un archivo **404 en 12 sondas**.
+
+🆕 **`P377` — el hallazgo del pase, y es asimétrico:** `Agentic_AI_Tutor` es un FORK, así que se
+midió el upstream (`adityasarade/Agentic_AI_Tutor`), que es donde `P342` dejó la cesión «recuperable
+por una gestión». **El upstream tampoco cede: 12 sondas más, 0 hits, y afirma MIT por badge
+`shields.io` en HTML.** Linaje de **2 nodos, 24 sondas, 0 cesiones, 2 afirmaciones**. 🔴 **El
+mecanismo: forkear copia el `README` —un archivo— y con él la afirmación; no copia el `LICENSE`
+porque no hay ninguno. El fork MANUFACTURA una segunda afirmación de aspecto independiente del
+MISMO permiso inexistente, y un auditor que cuente «repos que afirman MIT» duplica por fork mientras
+las cesiones reales siguen en cero.** ⚠️ **Y 5 de las 6 ramas del fork son `claude/project-thread-*`:
+la pieza es de autoría agéntica, lo que hace del volumen un problema estructural y no una anécdota.**
+
+🟢 **Deriva de estrellas, cuarto punto:** `CAHLR/OATutor` **264 ★** / 156 forks / MIT a `2026-10-05`
+⇒ serie 265 → 264 → 264 → **264**. **`P353` describe un EVENTO, no una tendencia:** la banda exacta
+se movió una sola vez en cuatro mediciones.
+
+🔴 **Hueco de canal declarado, y enunciado sobre el CANAL (`P370`):** de 4 candidatas nuevas, 2 ceden
+y **las 2 que ceden salen sin región** ⇒ **este pase aportó 0 repos nuevos UBICADOS**. La causa está
+medida: la consulta por **tópico** (`MCP`, `tutoring system`, `adaptive learning`) devuelve piezas
+sin afiliación declarada; la consulta por **ancla de currículo** (`BNCC`, `ENEM`, `SNCTI`, `CoS`)
+devuelve piezas ubicadas por construcción. **No se declara vacío regional alguno.**
+
+⚠️ **Deuda de convención que este pase hereda y declara: el pase 115 NO dejó acciones
+pre-registradas para el 116** —la última pre-registración del árbol es «para el pase 114», escrita
+por el 113— así que este pase no tuvo predicción ajena que falsar, y lo dice en vez de inventarse una
+retroactivamente. Las de abajo quedan escritas ANTES de correrse.
+
+### 🔴 Acciones pre-registradas para el pase 117, falsables, con su número escrito ANTES de correrlas
+
+1. **`P377` a escala de corpus.** Enumerar los repos del árbol marcados «sin cesión» que sean FORK y
+   medir su upstream. **Predicción: ≥1 caso donde el upstream SÍ cede** ⇒ falso negativo publicado y
+   pieza recuperable. **Cláusula de refutación: si 0 de los forks medidos tienen upstream que cede,
+   `P377` sube de «mecanismo observado en 1 linaje» a propiedad de la capa, y `P342` pierde su
+   «recuperable por una gestión» como expectativa por defecto.**
+2. **Estabilidad de la capa de IA de Moodle.** Re-medir `public/ai/provider/*` y el conteo de líneas
+   de `public/ai/classes/privacy/provider.php` sobre `main`. **Predicción: siguen 7 proveedores y el
+   archivo se mantiene en 806 ± 20 líneas.** **Refutación: si aparece un 8º proveedor o el archivo
+   se mueve >20 líneas, la «estabilidad medida» de la tendencia 1 de `intel/trends.md` queda
+   acotada a la ventana 5.3→6.0dev y no se cita como propiedad general.**
+3. **La cota de la banda exacta de estrellas.** Re-medir `OATutor` y `open-tutor-ai-CE`.
+   **Predicción: `OATutor` sigue en 264 ± 2.** **Refutación: si se mueve >2, `P353` vuelve a ser
+   tendencia y no evento, y la serie de cuatro puntos de este pase queda mal leída.**
+
 ## 2026-10-05 — pase 115: barrido 44, 5 altas, y el hueco que el índice propio refuta
 
 🔵 **El barrido en orden, con el denominador enumerado antes de escribir (`P287`):** 4 consultas

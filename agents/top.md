@@ -17,6 +17,125 @@ updated: 2026-10-05
 > **Pase 109 del 2026-10-05:** 🔴 **0 altas permisivas (trigesimoprimer barrido) y por primera vez la razon se MIDE en vez de declararse: las 5 candidatas que el canal devolvio (`DeepTutor`, `open-tutor-ai-CE`, `AITutorAgent`, Freelingo, Bloom) ya estaban las 5 en el arbol — 5 devueltas / 5 publicadas / 0 nuevas (`P311`, `P287`).** 🔴 **`P342` — un badge de licencia y una entrada de arbol del README son una AFIRMACION de cesion, no una cesion: `Javi111003/OlivIA-RAG`, publicado DOS veces por esta base como «sin licencia», afirma MIT en la linea 3 (badge hipervinculado a `LICENSE`) y en la linea 50 (su propio arbol de directorios), con el archivo en 404 en 20/20 sondas ⇒ FALSO NEGATIVO publicado, y una pieza LATAM recuperable por una gestion y no un descarte.** 🔸 **Accion B CONFIRMADA en su mitad fuerte (0 de 9 «sin licencia» tienen archivo) y DEBIL en la otra (el unico caso de ortografia, `openedx/XBlock`/`LICENSE.TXT`, ya lo tenia `P279`).** 🔴 **Accion C FALSIFICADA en sus dos clausulas, y lo que se cumple es la clausula de refutacion que el pase 108 escribio contra si mismo: 5 de 5 huellas son del archivo COMPLETO, 0 de 5 del archivo sin su ultimo byte, 5 de 5 terminan en `0a` ⇒ `P333` cerrado por ausencia medida.** 🔴 **`P343` — defecto de ESTE pase, y su primer diagnostico tambien estaba mal: un prefijo GOLOSO `^.*` sin frontera izquierda en la captura leyo el `35.121 B` publicado como `5.121 B` (no fue el cuantificador acotado, que solo captura bien), y POSIX ERE no da con que frenarlo porque `grep -E`/`sed -E` no tienen cuantificadores perezosos (`.*?` es goloso) ni *lookbehind*; la misma corrida dejo una fila cuyo «repo» es la RUTA `master/LICENSE.TXT`. Lo atrapo la huella y nada mas, y el enunciado lo corrigio la SUITE.** 🔴 **Accion A NO CORRIDA (tercer pase de deuda declarada) y `github.com` degradado a 403 ⇒ 0 estrellas medidas.**
 > **Pase 108 del 2026-10-05:** 🟢 **5 altas permisivas, y rompen una racha de TREINTA barridos en cero** — las cinco leidas del PAYLOAD, no del nombre: `THU-MAIC/OpenMAIC` (**MIT**, `v1.2.0-rc.1` del 2026-10-04) 🔴 **con `packages/mathml2omml` en `LGPL-3.0-or-later` leido de SU PROPIO `package.json`: la licencia de la raiz no es la licencia del arbol**; `oaknational/oak-open-curriculum-ecosystem` (**MIT** en el codigo, 🔴 **OGL v3.0** en los datos de curriculo — `P315` otra vez); `Cicatriiz/openedu-mcp` (**MIT**); `davidlms/learnmcp-xapi` (**MIT**); y `54yyyu/school-mcp` (**MIT solo en el cuerpo del README, sin archivo** — `P314`). 🆕 **`P340` — el 404 de un archivo de licencia puede ser una ORTOGRAFIA y no una ausencia: `oak` cede en `LICENCE` y el barrido de esta base pide `LICENSE`; un pase que solo mirara `LICENSE` habria publicado «sin cesion» sobre un repo MIT.** 🔴 **La accion A pre-registrada NO se corrio: el clon del arbol del titular quedo DENEGADO por el clasificador de la sesion, y eso se declara en vez de callarse (`P335` sigue en pie, pero esta vez ni la pieza nombrada paso).** 🔴 **La accion B resulta NO CORRIBLE contra el artefacto al que su propia pre-registracion la mando (`P336`): `accion-a-b.2026-10-05.tsv` colapsa `oer` a DOS valores (`openstax`/`otro`) y el slug del libro —lo unico que separa una edicion `2e` de una `1e`, que es toda la pregunta— no esta en el archivo; las «825 ya enumeradas» no estan enumeradas ahi.** 🔴 **Y al ir a buscarlo aparece el hallazgo que manda: dos artefactos del MISMO pase, sobre el MISMO sha `1925dec`, se contradicen por exactamente 41 figuras en el corte openstax/no-openstax (**1.611/832** contra **1.570/873**, los dos suman 2.443), y la cifra que llego a la PROSA es la menor (`P337`).** 🔴 **La causa, medida y no supuesta: `oer` es TEXTO LIBRE con dos formas de URL —y al ampliar la muestra de 694 a **1.685** unidades resultaron **CUATRO**, dos de ellas invisibles para el patron inicial—, con solapamiento **PARCIAL** entre formas: un extractor afirmado sobre `/details/books/` pierde **3 obras completas** y ademas **SUB-CUENTA** una cuarta sin que nada avise. Y `precalculus` a secas existe en el corpus y NO esta en ninguna de las 10 filas del censo publicado (`P338`).** 🔴 **La version de este MISMO pase que decia «las dos formas PARTEN el espacio sin solaparse» quedo FALSIFICADA por su propia medicion ampliada, y se corrige en vez de dejarse.** 🆕 **`P341` — 9 unidades nombran al TITULAR y no a la OBRA: sin obra no hay edicion y sin edicion no hay cesion resoluble, con ningun extractor.** 🟢 **La accion C sale CONFIRMADA en su clausula de conteo: **17** pares (bytes, huella) publicados junto a un archivo de licencia, la prediccion pedia ≥10.** 🔴 **Y FALSIFICADA como instrumento (`P339`): el delta de 1 byte NO es diagnostico, porque `P327` (el archivo no trae salto final) y `P333` (`$(cat)` se lo come al medir) producen la MISMA firma — esta base ya publica `21.442` y `21.443` B del mismo texto por la primera causa.** 🟢 **Tablero re-verificado COMPLETO: 59 suites (53 Python + 6 shell), 0 fallos, 203 aserciones (`Python 3.11.15`).**
 
+
+## 🟢 Pase 116 del 2026-10-05 — 2 altas permisivas, 2 rechazos medidos, y `P377`: el fork propaga la AFIRMACIÓN pero no hay archivo que propague la CESIÓN
+
+**Canal, medido este pase ANTES de cualquier veredicto (`P249`/`P366`), con control negativo:**
+🟢 `raw.githubusercontent.com` → **200** con ancla buena (`CAHLR/OATutor` en `main` y `master`),
+**404** con repo inventado (`gmilano/this-repo-does-not-exist-xyz99`, 2 ramas) ⇒ **DISCRIMINA**.
+🟢 `git ls-remote` → `sha` para el real (`939eb0e30d8a`), `fatal: could not read Username` para el
+inventado ⇒ **DISCRIMINA**. 🟢 `git clone --depth 1 --filter=blob:none --no-checkout` de terceros
+**OK** ⇒ el árbol se puede ENUMERAR (canal de `P275`). 🟢 `WebFetch` sobre `github.com` → **200**
+con estrellas, forks y licencia. 🔴 `curl -sI github.com` y `api.github.com`: **403** a los dos.
+🔴 **`arxiv.org` sigue BLOQUEADO por egress** (`EGRESS_BLOCKED` explícito del fetcher) — cuarto
+canal confirmado apagado desde el pase 104, y por eso el paper de Open TutorAI se cita por su
+metadato y no por su texto. ⚠️ `docs.moodle.org` → **000** (sin resolución desde este contenedor),
+así que **toda** afirmación de versión de Moodle de este pase sale del PAYLOAD del repo, no del sitio.
+
+### 🟢 Las 2 altas permisivas, con la cesión LEÍDA DEL PAYLOAD
+
+| Pieza | Repo | Licencia (del payload) | ★ / forks | Región | Qué es, y por qué entra |
+|---|---|---|---|---|---|
+| **Canvas Scholar MCP** | https://github.com/Ait0u5hi/canvas-scholar-mcp | **MIT** ✅ — `main/LICENSE` **200**, **1.065 B**, `sha256 d1bf3f0175f3`, titular «*Copyright (c) 2026 Ait0u5hi*» | **0** / **0** | ⚠️ **NO UBICADA** | Servidor **MCP** para Canvas LMS del lado **ALUMNO**: qué vence, cómo voy, qué me perdí. TypeScript. `HEAD` `0832c8c11823`. 🔵 **Lo que la hace útil no son las estrellas (0) sino la DISCIPLINA de ramas**: 11 ramas vivas, 4 de ellas `dependabot/npm_and_yarn/*` y 6 `fix/*` con nombre de defecto concreto (`fix/result-caps-course-files-403`, `fix/rubric-fencing-planner-notes`, `fix/graded-discussion-assignment-bloat`) ⇒ hay mantenimiento REAL detrás de un contador en cero |
+| **AIversity** | https://github.com/aurelio-labs/aiversity | **MIT** ✅ — `main/LICENSE` **200**, **1.072 B**, `sha256 e7e168fbf490`, titular «*Copyright (c) 2024 Aurelio AI Labs*» | **11** / **2** | ⚠️ **NO UBICADA** | Sistema multiagente de aprendizaje adaptativo con **tres tipos de agente**: `Iris` (interacción y coordinación del pedido), `Stratos` (planificación de tareas y reparto de recursos) y **agentes de tarea creados DINÁMICAMENTE** por objetivo de aprendizaje. Planificación por **DHATN** (*Dynamic Hierarchical Adaptive Task Network*), mensajería asíncrona por **NIACL**, sobre el marco **ARCANE**. 🔵 **Entra como DISEÑO de referencia, no como dependencia**: el propio README lo declara «*individual project … under active development as part of an MSc program*» |
+
+🔴 **Las dos salen NO UBICADAS, y eso se escribe en vez de rellenarse.** `canvas-scholar-mcp` no
+declara afiliación alguna y su único identificador es un **antropónimo/handle**, que es exactamente
+lo que `P135` prohíbe usar para ubicar. `aiversity` declara «programa de MSc» **sin nombrar
+universidad ni país**, y `aurelio.ai` devuelve **000** desde este contenedor, así que no hay segundo
+canal. 🔵 **Contraste con el pase 115, que ubicó `BQAI` en LATAM por AFILIACIÓN DECLARADA en la
+página (`CICATA-Querétaro, IPN`) y no por el nombre del titular: ese es el estándar, y estas dos no
+lo alcanzan.** Ver el hueco de canal al final de esta sección.
+
+### 🔴 Los 2 rechazos, con el motivo MEDIDO y el árbol ENUMERADO
+
+**1. `CreveXTech/canvas-lms-mcp` — `P314` confirmado con el canal más fuerte que existe acá.**
+Existe: `HEAD` `c89b3fb79301`, último commit **2026-09-29 15:42:52 -0700**, rama por defecto
+**`main`** (verificada por coincidencia de `sha` contra `ls-remote --heads`, no supuesta). Es una
+pieza REAL y buena: **34 herramientas en 11 áreas**, y **todas GET con `readOnlyHint`** — el README
+lo declara en la línea 7: «*Nothing here can submit, post, or delete*». 🔴 **Y no cede nada:**
+
+- **12 sondas** de licencia (2 ramas × 6 ortografías: `LICENSE`, `LICENSE.md`, `LICENSE.txt`,
+  `license`, `LICENCE`, `COPYING`) ⇒ **0 hits**.
+- **Árbol ENUMERADO por clon `--filter=blob:none`: 30 archivos, y `grep -iE 'licen|copying|notice'`
+  devuelve NINGUNO.** No es una ortografía que se nos escapó (`P340`): no hay archivo.
+- `package.json` **200**, **10 claves** (`dependencies`, `description`, `devDependencies`, `engines`,
+  `main`, `name`, `packageManager`, `scripts`, `type`, `version`) y el campo **`license` AUSENTE**.
+- La única cesión es **prosa**: `README.md` línea **243** `## License`, línea **245** `MIT`. Tres
+  letras, sin texto de licencia, sin titular y sin año.
+
+🔴 **El agregado de este pase sobre `P314` es el CANAL que lo contradice: `WebFetch` sobre la página
+renderizada reporta «License: MIT» con confianza y sin salvedad.** Un pase que leyera sólo la página
+publicaría MIT; el árbol enumerado dice que no hay a qué agarrarse. 🔵 **Y la dirección importa: es
+el INVERSO de `P344`, donde el canal de payload tenía MENOR recall que la página para las
+AFIRMACIONES. Acá la página tiene mayor recall para la afirmación y recall FALSO para la cesión.**
+
+**2. `shakyanaitik0-bot/Agentic_AI_Tutor` — `P342` confirmado, y extendido a la LINEA DE FORK.**
+Existe: `HEAD` `cc1f1940f419`, rama por defecto `main`. Pieza sustantiva: **6 agentes
+especializados** (orquestador con clasificación de intención, planificador, generador de quiz
+adaptativo, feedback, flashcards con **SM-2**, conversación), RAG **híbrido** (vectorial + BM25),
+grafo de conocimiento, *fallback* a búsqueda web y recuperación unificada con citas. Python.
+⚠️ **Y 5 de sus 6 ramas son `claude/project-thread-*`: la pieza es de autoría agéntica**, lo que la
+hace interesante como objeto y no cambia nada de la licencia. 🔴 **No cede:**
+
+- README: «*MIT License - see [LICENSE] for details*» ⇒ un **PUNTERO** a un archivo que no existe.
+  **12 sondas** ⇒ **0 hits**.
+- 🔴 **Es un FORK** (`adityasarade/Agentic_AI_Tutor`), así que se midió el upstream, que es donde
+  `P342` dijo que la cesión era «recuperable por una gestión». **Upstream: `HEAD` `bc6fcebdf582`,
+  README 200, 12 sondas ⇒ 0 hits.** Y afirma MIT por **badge `shields.io` en HTML** en su línea 10
+  (`<img src="…badge/License-MIT-yellow.svg">`), que es la forma que `P344` midió como invisible
+  para un barrido de sintaxis Markdown.
+- **Linaje de 2 nodos, 24 sondas en total, 0 cesiones**, y **2 afirmaciones de MIT** por dos
+  mecanismos distintos (puntero en prosa abajo, badge HTML arriba).
+
+### 🆕 `P377` — el fork propaga la AFIRMACIÓN porque es un archivo; no propaga la CESIÓN porque no hay archivo que copiar
+
+`P342` estableció que un badge o una entrada de árbol son una AFIRMACIÓN y no una cesión, y la dejó
+«recuperable por una gestión» — pedirle al titular upstream que agregue el archivo. 🔴 **Este pase
+mide el PISO de esa recuperación y encuentra que puede no haber contraparte: cuando el upstream
+tampoco cede, no hay a quién pedirle nada, y el linaje entero es inejecutable.**
+
+🆕 **Pero el mecanismo nuevo es más filoso que el piso, y es ASIMÉTRICO.** Forkear copia el
+`README.md` —un archivo— y con él viaja la afirmación de MIT. Forkear **no** copia el `LICENSE`,
+porque no existe. ⇒ **El fork MANUFACTURA una segunda afirmación, de aspecto independiente, del
+MISMO permiso inexistente.** Dos repos, dos titulares aparentes, dos redacciones distintas (prosa /
+badge HTML), **una sola ausencia**. 🔴 **La consecuencia operativa: un auditor que cuente «cuántos
+repos del corpus afirman MIT» DUPLICA por cada fork, y la confianza sube con el conteo mientras el
+denominador de cesiones reales sigue en cero.** La métrica correcta no es cuántos nodos afirman,
+sino **cuántos archivos de cesión DISTINTOS existen en el linaje** — acá, uno de cada dos repos
+afirma y **0 de 2** ceden.
+
+🔵 **Familia:** `P314` (MIT sólo en el cuerpo del README, sin archivo), `P342` (badge y árbol no son
+cesión), `P344` (el canal de payload no ve los badges HTML), `P283` (manifiesto y payload
+discrepan). `P377` es el eje que faltaba: **la propagación por COPIA**.
+
+### 🟢 Deriva de estrellas en la banda EXACTA (`P353`), cuarto punto de la serie
+
+`P349` midió que debajo de 1.000 el canal es exacto y `P353` que ahí la deriva se ve a 1 unidad y
+por eso la cifra no se publica sin fecha. La serie de `CAHLR/OATutor`, re-medida a **2026-10-05**:
+
+| Repo | 2026-09-30 | pase 110 | pase 113 | **pase 116 (2026-10-05)** | Licencia | Veredicto |
+|---|---|---|---|---|---|---|
+| [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | 265 ★ | 264 ★ | 264 ★ | 🟢 **264 ★** · 156 forks | **MIT** | **ESTABLE en 264 por tercera medición** — la deriva 265→264 no se repitió |
+
+🔵 **El contenido informativo es el cero:** una serie de cuatro puntos en la banda exacta que se
+mueve **una sola vez** dice que `P353` describe un evento, no una tendencia, y que una cifra de esta
+banda citada con fecha aguanta razonablemente una semana. Forks **156** y licencia **MIT**
+re-confirmados en el mismo canal y en la misma lectura.
+
+### 🔴 El hueco de CANAL de este pase, enunciado sobre el canal y NO sobre las regiones (`P370`)
+
+**De 4 candidatas nuevas medidas, 2 ceden y las 2 que ceden salen NO UBICADAS.** ⇒ **este pase
+aportó 0 repos nuevos UBICADOS en región.** 🔴 **Y eso se escribe así, como propiedad del canal de
+este pase, NO como «no hay repos de tal región»:** `P370` midió que esta base declaró «CERO
+repositorios de origen LATAM» durante cuatro pases contra **12 repos UBICADOS en LATAM** en su
+propio índice, y el pase 115 agregó cinco altas de las cuales cuatro eran LATAM. 🔵 **El alcance
+exacto del hueco: la consulta por TÓPICO (`MCP`, `tutoring system`, `adaptive learning`) devuelve
+piezas que no declaran afiliación, mientras la consulta por ANCLA DE CURRÍCULO (`BNCC`, `ENEM`,
+`SNCTI`, `CoS`) devuelve piezas ubicadas por construcción — es la misma lección del pase 115, y este
+pase la vuelve a tocar desde el lado que falla.** La acción correctiva es cambiar el EJE de la
+consulta, no declarar un vacío regional.
+
 ## 🟢 Pase 115 del 2026-10-05 — las 5 altas, con la familia leída del payload y la huella publicada
 
 **Canal, medido este pase y no heredado (`P249`/`P366`):** 🟢 `raw.githubusercontent.com` **200**

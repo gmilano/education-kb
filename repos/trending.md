@@ -16,6 +16,43 @@ updated: 2026-10-05
 > **Pase 107 del 2026-10-05:** 🔴 **Trending de la industria vacio por TRIGESIMOSEXTA vez: curriculo, catalogos, una bolsa de trabajo y dos generalistas (`microsoft/semantic-kernel` 27.470 ★, `NousResearch/hermes-agent` MIT), con las SEIS cifras del eje generalista identicas digito a digito a los pases 105 y 106 ⇒ informacion sobre el CANAL, no sobre la industria.** 🟢 **Lo que SI se movio es una capa de BINARIOS que este archivo nunca conto: 2.443 archivos de figura (~156 MiB, 1.326 imagenes distintas) en `CAHLR/OATutor-Content`, con la extension `.gif` falsa en 2.443 de 2.443 (`P332`).** 🔵 **`git ls-remote` da TRES refs, y una se llama `gpt-science-study`: la unica de este arbol cuyo nombre anuncia contenido sintetico.** 🔴 **Defecto propio corregido: los 49.481 JSON contra los 49.479 del pase 106 son los 6 caminos con bytes de control (U+007F/U+0080/U+0081) en el nombre del paso — la identidad de un paso NO es un slug seguro.**
 > **Pase 106 del 2026-10-05:** 🔴 **Trending de la industria vacio por TRIGESIMOQUINTA vez: el canal devuelve generalista o educativo-sobre-AI, no AI-para-educacion.** 🟢 **Lo que SI se movio esta en el eje de `ref` y no de repo: las ramas `1e` de 5 bundles de `openstax` contienen la UNICA cesion `CC BY 4.0` de 10 colecciones cuyas versiones vivas son `NC-SA` — cesion y vigencia apuntan en direcciones opuestas.** 🔵 **Canal nuevo calibrado: `git ls-remote` para enumerar refs (responde a repo real, falla a repo inventado), el unico de este arbol que contesta «que refs tiene este repo» con `api.github.com` en 403 — sin el, la accion A de este pase era imposible.**
 
+
+## 2026-10-05 — pase 116: el trending de este pase es un número de VERSIÓN, no un repo
+
+🟢 **`moodle/moodle` cruzó de serie.** `refs/heads/main` = **`f20534726a59a4b64d168bc4a70fc9518251613e`**,
+y `public/version.php` declara **`$release = '6.0dev (Build: 20261005)'`** — build fechado el día de
+este pase. Además existe ya **`MOODLE_503_STABLE`**: la 5.3 salió estable, cuando el último registro
+de esta base (pase 19) la tenía en **5.3rc1** (`85af0b5`). 🔵 **Dos saltos en un solo registro, los
+dos leídos del payload porque `docs.moodle.org` devuelve 000 desde este contenedor.**
+
+🟢 **Y lo que NO se movió es el hallazgo:** a través de 5.3rc1 → 5.3 estable → 6.0dev, la capa de IA
+del núcleo mantiene **exactamente 7 proveedores** (`anthropic`, `awsbedrock`, `azureai`, `deepseek`,
+`gemini`, `ollama`, `openai`; `mistral`/`vertexai`/`cohere` sondeados como control y **404**), el
+*webroot* en **`public/`**, y `public/ai/classes/privacy/provider.php` en **806 líneas con 3
+`delete_records_list`**. ⇒ **la auditoría del pase 19 sobrevive un salto de serie mayor.**
+
+⚠️ **Nota de instrumento de este pase:** `version.php` en la RAÍZ devuelve un cuerpo de **14 B** cuyo
+contenido literal es `404: Not Found`. Una sonda que mida el tamaño del cuerpo sin leer
+`%{http_code}` publica «archivo de 14 B» donde hay un 404. **Familia de `P319`.**
+
+🔴 **Capa MCP sobre LMS — altas y bajas del pase:** alta `Ait0u5hi/canvas-scholar-mcp` (**MIT**,
+1.065 B, lado alumno, sólo lectura). Baja `CreveXTech/canvas-lms-mcp` (**34 tools, 11 áreas, todas
+GET con `readOnlyHint`** — y **0 archivos de licencia en 30 rutas enumeradas**, `license` ausente del
+`package.json`). 🟢 **Re-verificadas del payload, las dos ya publicadas que sostienen la capa:**
+`bruchris/canvas-lms-mcp` (**MIT**, 1.070 B) del lado escritura y `toshieji/moodle-grading-mcp`
+(**MIT**, 1.120 B, titular **WACA (Japón)** ⇒ **APAC** por titular organizacional, no por antropónimo).
+
+⚠️ **El eje generalista volvió a saturar, por vigésimo-noveno barrido (`P281`).** La consulta global
+de agentes devolvió openclaw, browser-use, Mem0, AutoGen, Flowise y dify — ninguno educativo — y
+**reapareció «Hermes Agent, +180.000 ★»**, el mismo reclamo que los pases 103 y 104 rechazaron por
+inverificable. **Se rechaza por tercera vez.** 🔵 **El cero del canal generalista es informativo: la
+señal educativa no está ahí, y hay que cambiar el EJE de la consulta.**
+
+🔴 **`arxiv.org` sigue bloqueado por egress** (`EGRESS_BLOCKED` explícito del fetcher). El paper de
+**Open TutorAI** (`arXiv:2602.07176`, enviado **2026-02-06**, autores El Hajji · Ait Baha · Dakir ·
+Fadili · Es-Saady) se registra por **metadato**, con su repo ya publicado por esta base
+(`Open-TutorAi/open-tutor-ai-CE`, **BSD-3-Clause**, 107 ★). **No se cita su texto porque no se pudo leer.**
+
 ## 2026-10-05 — pase 115: el trending sale del vacío por el canal del currículo, no por el generalista
 
 🔴 **GitHub trending generalista vuelve vacío para la industria (barrido 44)**: las consultas
