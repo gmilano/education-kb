@@ -7,8 +7,81 @@ updated: 2026-10-05
 # 📈 Repos trending — education
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
+> **Pase 107 del 2026-10-05:** 🔴 **Trending de la industria vacio por TRIGESIMOSEXTA vez: curriculo, catalogos, una bolsa de trabajo y dos generalistas (`microsoft/semantic-kernel` 27.470 ★, `NousResearch/hermes-agent` MIT), con las SEIS cifras del eje generalista identicas digito a digito a los pases 105 y 106 ⇒ informacion sobre el CANAL, no sobre la industria.** 🟢 **Lo que SI se movio es una capa de BINARIOS que este archivo nunca conto: 2.443 archivos de figura (~156 MiB, 1.326 imagenes distintas) en `CAHLR/OATutor-Content`, con la extension `.gif` falsa en 2.443 de 2.443 (`P332`).** 🔵 **`git ls-remote` da TRES refs, y una se llama `gpt-science-study`: la unica de este arbol cuyo nombre anuncia contenido sintetico.** 🔴 **Defecto propio corregido: los 49.481 JSON contra los 49.479 del pase 106 son los 6 caminos con bytes de control (U+007F/U+0080/U+0081) en el nombre del paso — la identidad de un paso NO es un slug seguro.**
 > **Pase 106 del 2026-10-05:** 🔴 **Trending de la industria vacio por TRIGESIMOQUINTA vez: el canal devuelve generalista o educativo-sobre-AI, no AI-para-educacion.** 🟢 **Lo que SI se movio esta en el eje de `ref` y no de repo: las ramas `1e` de 5 bundles de `openstax` contienen la UNICA cesion `CC BY 4.0` de 10 colecciones cuyas versiones vivas son `NC-SA` — cesion y vigencia apuntan en direcciones opuestas.** 🔵 **Canal nuevo calibrado: `git ls-remote` para enumerar refs (responde a repo real, falla a repo inventado), el unico de este arbol que contesta «que refs tiene este repo» con `api.github.com` en 403 — sin el, la accion A de este pase era imposible.**
 
+## 2026-10-05 — pase 107: trending de la industria vacio por TRIGESIMOSEXTA vez, y lo que se mueve es una CAPA DE BINARIOS que este archivo no habia contado
+
+> **Frontmatter y region:** `Global`.
+
+### 🔴 El trending, con el cero enumerado (`P293`)
+
+Ano **CALCULADO** (`date -u +%Y` → **2026**). `github trending education AI 2026` devolvio por
+**trigesimosexta** vez material que no es software de la industria educativa:
+
+| lo que el canal devolvio | clase | veredicto |
+|---|---|---|
+| `rohitg00/ai-engineering-from-scratch` (nº 1 de *programming examples*, nº 1 de GitHub Trending el 2026-05-24) | **curriculo** para formar ingenieros de AI | 🔴 rechazo de clase ya registrada |
+| `karpathy/nn-zero-to-hero` | **curriculo** | 🔴 rechazo re-registrado |
+| «AI Engineering Hub», «Awesome LLM» | **catalogo** | 🔴 rechazo re-registrado |
+| `speedyapply/2026-AI-College-Jobs` (**5,2 k ★**, 206 forks) | **bolsa de trabajo** | 🔴 rechazo re-registrado |
+| `microsoft/semantic-kernel` (**27.470 ★**) | **generalista** | 🔴 KB de `technology` |
+| `NousResearch/hermes-agent` | **generalista**, MIT medido del payload (**1.070 B**, © 2025) | 🔴 KB de `technology` |
+
+🔴 **Y las seis cifras de estrellas del eje generalista son IDENTICAS digito a digito a las de los
+pases 105 y 106** (openclaw **385.407 ★**, dify **151.639 ★**, browser-use **108.128 ★**, Mem0
+**62.735 ★**, AutoGen **60.284 ★**, Flowise **55.226 ★**). ⚠️ **Tercer pase con varianza CERO: eso
+es informacion sobre el canal (respuesta cacheada), no sobre la industria.** 🔴 **Ninguna estrella
+fue verificable: `api.github.com` y `github.com` dan **403**, y un slug inventado tambien ⇒ el canal
+no discrimina (sexto pase).**
+
+🔵 **Una contradiccion del canal, registrada porque es medible contra el payload:** sobre
+`NousResearch/hermes-agent` una fuente dice *«180.000+ ★ desde su lanzamiento en febrero de 2026,
+el marco OSS de mas rapido crecimiento de 2026»* y otra dice *«211k ★»*; el `LICENSE` del propio
+repo fecha el copyright en **2025**. **Ninguna de las tres cifras se puede cerrar con el canal de
+hoy** (`P253`).
+
+### 🟢 Lo que SI se movio, y es una capa de BINARIOS que este archivo nunca conto
+
+| la capa de figura de `CAHLR/OATutor-Content` (`main`, sha `1925dec`) | cifra |
+|---|---|
+| archivos de figura | **2.443** |
+| imagenes **distintas** por `sha256` de contenido | **1.326** ⇒ **1.117** repeticiones (45,7 %) |
+| la imagen mas repetida | **26** apariciones |
+| peso | **164.119.470 B** (~**156 MiB**), de **1.148 B** a **1.937.018 B** |
+| formato REAL | **1.358 PNG** · **938 JPEG** · **147 WEBP** · 🔴 **0 GIF** |
+| cumplimiento de la extension `.gif` | 🔴 **0 de 2.443 (0,0 %)** |
+| problemas que las poseen | **1.586** |
+| nombres | `figure1.gif` ×**1.586** · `figure2.gif` ×341 · `figure3.gif` ×180 · … · `figure12.gif` ×5 |
+
+🔴 **`P332`: la extension de un archivo de imagen no es su formato, y aca es falsa en el 100 % de
+los casos.** 🔵 **Importa para el trending de este archivo porque una capa de 156 MiB de binarios
+sin cesion propia es un activo que ningun barrido de «repos trending» iba a ver: no esta en las
+estrellas, esta en el arbol.**
+
+### 🔴 La ref que se mueve: `git ls-remote` sobre el mismo repo da TRES
+
+| ref | sha | que es |
+|---|---|---|
+| `refs/heads/main` | `1925dec…` | la rama medida por los pases 105–107 |
+| `refs/heads/gpt-science-study` | `8d7085e…` | 🔵 **rama de estudio con contenido generado**: el nombre la declara |
+| `refs/heads/merge-resolve` | `da4a9a7…` | rama de resolucion |
+
+🔵 **`gpt-science-study` es la unica ref de este arbol cuyo NOMBRE anuncia contenido sintetico, y la
+capa sintetica que el pase 106 midio (`oer: openai`, **6.886** unidades sin cesion) esta en
+`main`.** ⚠️ **Queda sin medir si las dos coinciden: es un eje nuevo, no una conclusion.**
+
+### 🔴 Un defecto de ESTE pase, encontrado por ESTE pase antes de publicar
+
+🔴 **El `sparse-checkout` de este pase materializo 49.481 JSON donde el pase 106 reporto 49.479.**
+La diferencia **no** es el canal: son los **6** caminos que `git` cita entre comillas porque llevan
+bytes de control en el nombre del paso — `…final-Q6\177`, `…final-Q6\302\200`,
+`…final-Q6\302\201` (**U+007F**, **U+0080**, **U+0081**), los tres bajo el mismo problema
+`a89b247ds100-su19-final-Q6`. ⚠️ **La identidad de un paso de este corpus NO es un slug seguro:
+cualquier instrumento que la pase por un glob de shell o una columna de TSV sin citar la va a
+partir, y el conteo va a diferir en 2 o en 6 segun donde se corte.**
+
+---
 ## 2026-10-05 — pase 106: trending vuelve vacio por TRIGESIMOQUINTA vez, y lo que se mueve es una REF vieja
 
 > **Frontmatter y region:** `Global`.

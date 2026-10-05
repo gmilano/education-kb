@@ -37,6 +37,12 @@ o la variable de entorno (regla de **P107**, pase 47):
 | `aiact-50-2-spans/` | ¿alguna pieza expuesta emite límites de tramo? | `sh scan_spans.sh` | 🔴 **0 de 33** |
 | `aiact-50-2-exposure/` | ¿cuántas filas ponen contenido sintético delante de alguien? (el **reparto**, leído de `rows.tsv`) | `python3 test_exposure.py` | **11/11** → 🔴 **33 de 66 (50 %)**, corregido en el pase 56 |
 | ídem, los **artefactos** de marcado en el árbol clonado de las 33 expuestas | lo que `scan_marking.sh` mide de verdad — **no** produce la cifra del reparto | `sh scan_marking.sh` | **0** artefactos de marcado / 15 de procedencia |
+| **`p332-figure-layer/`** | **la capa de BINARIOS de un corpus OER: el formato REAL por firma de bytes (`P332`), el titular de una figura por `sha256` con el acierto desglosado por obra citada (`P334`), y de que problema cuelga una unidad con `oer` vacio** | `python3 test_p332.py` | 🟢 **27/27** *(nuevo en el pase 107)* |
+| ídem, el censo de formato | ¿cumple un archivo la extension que lleva? | `python3 sniff_format.py RAIZ --ext .gif` | 🔴 **GIF 0 de 2.443 (0,0 %)** — 1.358 PNG · 938 JPEG · 147 WEBP |
+| ídem, el cruce por BYTES | ¿que figura del redistribuidor es del titular, y de QUE obra? | `python3 intersect_media.py RAIZ DIR_MEDIA` | 🔴 **36 de 2.443 (1,47 %)**, y **36/36 en una sola obra** (control positivo y negativo en la misma salida) |
+| ídem, accion A y B del pase 106 | la cesion declarada de cada figura, y el padre de cada `oer` vacio | `python3 measure.py RAIZ` | 🔵 **2.443** figuras / **1.586** problemas · 🟢 **9.971 de 12.999 (76,7 %)** |
+| ídem, `P329` contra esta base (accion C) | afirmaciones de identidad de licencia apoyadas en un `sha256` **sin** nombrar la familia | `python3 sweep_sha_claims.py .` | 🔵 **27 en la forma correcta** · 🔴 **43 en la clase** (20 sobre un archivo de licencia) |
+| ídem, accion C segunda mitad | remedir la FAMILIA del payload de las huellas que esta base nombra | `sh remeasure_family.sh` | 🟢 **5 de 5 sin cambio de familia** · 🔴 **1 huella corregida** (`P333`) |
 | `patterns-figure-audit/` | inventario de cifras de `patterns.md` y su instrumento | `python3 extract_figures.py --check` | **420** medidas *(383 → 420 en el pase 56, con P136)* |
 | `sebserver-mcp-gate/` | puerta MCP de SEB Server: sólo lecturas, `-32601` al resto | `python3 test_gate.py` | **37/37** |
 | `unitime-mcp-gate/` | puerta MCP de UniTime, con `hard_deny()` como piso | `python3 test_gate.py` | **46/46** ✅ *(total propio desde el pase 56; reproduce el conteo a mano del 55)* |
@@ -98,6 +104,21 @@ o la variable de entorno (regla de **P107**, pase 47):
 | ídem, Open edX por ref | ¿el veredicto `SIN-PROVEEDOR-DE-MODELO` aguanta una ref? | `sh sweep_platform_ref.sh` *(registrado, no ejecutado acá)* | 🔴 **`openai==0.28.1` DIRECTA** en `quince`/`redwood`/`sumac` · 🟢 ausente en `master` |
 | ídem, la replicación de la matriz del pase 90 | ¿la matriz de Moodle se sostiene remedida por otra mano? | ídem | 🟢 **6/6 refs EXACTO** (2→3→4→6→7→7) — primera cifra REPLICADA de esta base |
 
+
+🟢 **Pase 107 del 2026-10-05 — el tablero se re-verifico COMPLETO otra vez:** corrido aqui con
+`Python 3.11.15`, **58 suites unicas** (52 `test_*.py` + 6 `test*.sh`) **/ 63 invocaciones** (las 58
+suites + los 5 `scan_*.sh`) **/ 63 con codigo de salida 0 / 0 fallos**, mas **170** aserciones
+`self.assert*` contadas en las 52 suites Python. 🟢 **Mas la suite nueva del pase**
+(`p332-figure-layer/test_p332.py`, **27/27**), y **ninguna preexistente se toco**.
+
+⚠️ **Y una correccion a mi propio conteo, que es `P126` por tercer pase consecutivo:** el primer
+bucle de este pase reporto «58 invocaciones» porque pidio a `find` los predicados `-name '*.sh'` y
+`-name 'test*'` **juntos**, y asi vio **6** de los **65** `.sh` del arbol. 🔵 **El total honesto
+separa las dos cifras: 58 suites unicas y 63 invocaciones.** 🔴 **Segunda correccion, del mismo
+pase y antes de publicar: `sparse-checkout` materializo 49.481 JSON donde el pase 106 reporto
+49.479 — la diferencia son los 6 caminos que `git` cita entre comillas porque llevan bytes de
+control en el nombre del paso (`U+007F`, `U+0080`, `U+0081`), los tres bajo el problema
+`a89b247ds100-su19-final-Q6`. La identidad de un paso de ese corpus NO es un slug seguro.**
 
 🟢 **Pase 106 del 2026-10-05 — el tablero se re-verifico COMPLETO, y era la primera vez en varios
 pases que se pudo:** corrido aqui con `Python 3.11.15`, **58 suites unicas del arbol / 60

@@ -8,6 +8,7 @@ updated: 2026-10-05
 
 > Recetas concretas: repos nombrados, licencias verificadas, wiring explícito y estimación.
 > Todos los repos citados fueron verificados vía WebFetch el 2026-09-30; los del pase 11, el 2026-10-01 (ver `agents/top.md`).
+> **Pase 107 del 2026-10-05:** 🆕 **Los patrones nuevos son `P332`, `P333`, `P334` y `P335`, y la receta nueva es `R-106-PROCEDENCIA-DE-BINARIO`.** 🔴 **`P332` — cuando se comparan dos arboles por contenido el filtro es la FIRMA de bytes, nunca la extension: 2.443 de 2.443 `.gif` de un corpus OER son PNG/JPEG/WEBP y un barrido por extension da «0 solapamiento» con varianza cero desde una premisa falsa.** 🔴 **`P334` — el titular de un BINARIO se resuelve por huella de contenido y puede vivir en una obra que el item NO cita; y cuesta un cruce por arbol (22), no una inspeccion por item (2.443).** 🔴 **`P333` — una huella tomada por sustitucion de comando no es la huella del archivo, y una cifra de esta base lo era; la familia no se movio en 5 de 5 remediciones.** 🔴 **`P335` — tercera sub-clase de `P320`: lo denegado puede ser la FORMA de la operacion (lote) y no el derecho (pieza nombrada), asi que los denominadores se publican con lo que REALMENTE se abrio.**
 > **Pase 106 del 2026-10-05:** 🔴 **`P328` — la cesion de un OER es propiedad del par (coleccion, **ref**) y la identidad es el `collection-id`, no el slug: 10 de 10 colecciones estrechan de `CC BY 4.0` (`1e`) a `NC-SA` (`main`), y comparar por slug hace desaparecer el estrechamiento (`P289` en campo nuevo).** 🔴 **`P329` — una huella normalizada es identidad de TEXTO, no de FAMILIA (6 payloads `CC BY 4.0`, 2 huellas): la huella contesta «¿es el mismo archivo?», la familia «¿que permite?», y son dos instrumentos.** 🔴 **`P330` — cuando se mide una propiedad de BYTES el decodificador es parte del instrumento: `text=True` normalizaba los CRLF antes de hashear y lo delato una aritmetica, no un test rojo.** 🟢 **`P331` — el denominador son las unidades que DECLARAN: 82.492, no 13.371.** 🟢 **Dos recetas nuevas: auditoria de cesion de un corpus OER antes de cotizar (con su `.tsv` como entregable) y compuerta de marcado de contenido sintetico para EMEA, con el predicado ya auto-declarado en el dato.**
 > **Pase 105 del 2026-10-05:** 🆕 **Los patrones nuevos son `P326`, `P326-A` y `P327`, y la receta `R-105-CESION-CONTRA-TITULAR` INVIERTE a `R-104-CAPA-DE-CONTENIDO`.** 🔴 **`P326`: la cesion que un item AFIRMA no es la que su titular OTORGA, y la tasa de llenado del campo mide DILIGENCIA, no PERMISO** — censo de **13.371** problemas: **8.312 (62,2 %)** declaran `CC BY 4.0` contra un titular que cede `NC-SA`; **embarcable 4,4 %**. 🔵 **La ironia que lo prueba: el unico libro cuyo titular SI cede `CC BY 4.0` (`physics`) es el unico cuyos items dejan el campo VACIO.** 🟢 **`P326-A`: egress cerrado al sitio del titular no es cesion inalcanzable** — se leyo del payload de `openstax` en GitHub con `openstax.org` en **000**; lo que descalifica a un canal secundario **no es que sea otro canal, es que sea otro titular**. 🔴 **`P327`: los bytes y el `sha256` crudo de un archivo de licencia NO son identidad** (21.443 / 21.013 / 21.442 B = el mismo texto con CRLF / LF / CRLF-sin-salto; un unico `sha256` al normalizar) — **indicta las huellas que esta base publica desde el pase 66: los datos siguen bien, la huella no era huella.** 🔴 **Y `R-104` ordenaba la cola de auditoria por tasa de etiquetado: estaba al reves** — los cursos al **100 %** son los **100 % mal etiquetados**, y `Calculus Volume 1`, que `R-104` descartaba, es el que **miente menos**.
 > **Pase 104 del 2026-10-05:** 🟢 **El canal VOLVIO, y eso es `P320` confirmado en la direccion contraria: es un hecho de PERMISO.** El instrumento del pase 103 estaba intacto y le faltaba el derecho a correrlo; esta sesion **si** lo tiene. Medido con control negativo antes de usarlo (rama inventada, ruta inventada y repo inventado dan **404**; `main`/`master`/`HEAD` dan el **mismo** sha): `raw.githubusercontent.com` **200**, clon `--filter=blob:none` de terceros **OK**. 🔴 **Sigue apagado:** `api.github.com` **403**, y `openstax.org`, `creativecommons.org`, `arxiv.org`, `aclanthology.org` **bloqueados por egress** por `curl` **y** por el fetcher. 🟢 **Receta nueva `R-104-CAPA-DE-CONTENIDO`, armada con piezas probadas de este repo y declarando su propio hueco.** 🔴 **Y una correccion a una receta ya publicada: `R-102-PROCEDENCIA-DE-CORPUS` trataba `amber` y `ncte` como «`NC` hasta prueba en contrario» — medido, **no son `NC`: no tienen cesion**, que es MAS restrictivo, y la receta decia a su lector que podia hacer uso no comercial de material sobre el que nadie le concedio nada (`P324`).** 🟢 **La instruccion operativa de esa receta —*usar la libreria (MIT) y NO embarcar `data/`*— se CONFIRMA, y ahora se apoya en los tres corpus y no en uno.** 🔴 **`P323`: el borde entre capa de codigo y capa de contenido puede ser un **submodulo**, o sea otro repositorio — y entonces el `LICENSE` de la raiz del padre, el arbol sin contenido y el cero archivos de licencia de contenido son **tres lecturas ciertas que enganan juntas**.** 🔴 **`P322`: la cesion por item es un CAMPO y se puede llenar mal; el caso peor no es el campo vacio sino el que **parece lleno** — una URL que no es de licencia pasa cualquier compuerta que pregunte «¿hay algo?».** ⚠️ **Dos defectos de un instrumento de ESTE pase, encontrados por el instrumento mismo y registrados con su control: `E1` la comilla de `L'Hopital` que `xargs -I{}` se comia (dos filas FANTASMA con una ruta inexistente) y `E2` el codigo HTTP que no se miraba (el cuerpo `404: Not Found` entro al clasificador; **sobrevivio de casualidad** porque no parsea como JSON).** 🟢 **`p322` 10/10 + 2/2, `p324` construido, **55 suites pasan, 0 fallan**.** Ver **`P322`**–**`P325`** y la receta `R-104-CAPA-DE-CONTENIDO`.
@@ -136,6 +137,194 @@ updated: 2026-10-05
 > **Pase 27:** **+4 patrones y una corrección.** 🔴 **P51 queda con premisa falsa** —el conector MCP de Moodle **sí existe y es MIT**— y lo reemplazan **P54** (corrección y devolución sobre Moodle con **compuerta humana**, el último tramo del gap 6, con piezas que ya escriben), **P55** (el conector de **Open edX**, que es el único que de verdad no existe), **P56** (**SCORM** como formato de salida de la capa generativa: cero integración, offline) y **P57** (evidencia por MCP cotizada sobre lo que CaSS **realmente** expone — 6 de 61 operaciones, con insignias y autoría de marcos **fuera**).
 
 
+## 🆕 Patrones del pase 107 (2026-10-05) — `P332`, `P333`, `P334`, `P335` y la receta `R-106-PROCEDENCIA-DE-BINARIO`
+
+> **Frontmatter y region:** `Global`.
+
+### 🔴 `P332` — la EXTENSION de un archivo no es su FORMATO: cuando se comparan dos arboles por contenido, el filtro es la FIRMA
+
+**El patron.** Antes de cruzar dos arboles de activos —el del redistribuidor y el del titular— no se
+filtra por extension. Se lee la **firma de bytes** de cada archivo. 🟢 **Medido: los 2.443 archivos
+`.gif` de `CAHLR/OATutor-Content` (`main`, sha `1925dec`) son 1.358 PNG, 938 JPEG y 147 WEBP —
+**0 GIF**, 0,0 % de cumplimiento de su propia extension.**
+
+🔴 **Por que es un patron y no una anecdota:** el `media/` de la coleccion del titular que este pase
+pudo abrir (`col30309`, `osbooks-statistics`) tiene **706** archivos (499 JPEG, 206 PNG, 1 `OLE/CFB`
+— `Thumbs.db`) y **cero GIF**. **Un barrido por extension devuelve «0 solapamiento» con varianza
+cero, y la premisa es falsa. Por `sha256` de contenido devuelve 36.**
+
+**Como se corre, concreto:**
+
+```sh
+# MAL: decide por el nombre
+find content-pool -name '*.gif' | wc -l            # 2.443 "GIF" que no son GIF
+
+# BIEN: decide por la firma (el instrumento esta en compose/code/p332-figure-layer/)
+python3 compose/code/p332-figure-layer/sniff_format.py /ruta/al/arbol --ext .gif
+# -> GIF 0 (0,0 %) · PNG 1.358 · JPEG 938 · WEBP 147
+```
+
+⚠️ **Control obligatorio antes de creerle al sniffer: `RIFF` solo NO es WEBP** (un WAV tambien
+empieza con `RIFF`); se exigen las **dos** anclas (`RIFF` en 0 y `WEBP` en 8). Esta en la suite,
+`test_webp_exige_las_DOS_anclas`.
+
+### 🔴 `P334` — el titular de un BINARIO se resuelve por huella de contenido, nunca por el campo que el item declara
+
+**El patron.** La procedencia de una figura, un audio o un video dentro de un corpus educativo **no
+esta en el item que lo usa**. Se resuelve cruzando su `sha256` contra **todos** los arboles del
+titular, y el resultado puede caer en una obra que el item **no cita**.
+
+🟢 **Medido, con control positivo y negativo en la MISMA tabla:**
+
+| obra que el item CITA en su `oer` | figuras | byte-identicas a `col30309` | % |
+|---|---|---|---|
+| `introductory-statistics` | 415 | **36** | **8,67 %** |
+| las otras 9 clases de `oer` | 2.028 | **0** | 0,00 % |
+| **TOTAL** | **2.443** | **36** | **1,47 %** |
+
+🔴 **Los 36 aciertos citan `introductory-statistics` y sus bytes se publican en `osbooks-statistics`
+(`col30309`): el repo que el `oer` nombra es el arbol EQUIVOCADO.** 🔵 **Aqui el veredicto sale
+benigno porque `col30309` es una de las dos unicas colecciones permisivas que `P328` midio en
+`main`, asi que la cesion de la figura y la que el item declara coinciden. La regla, no.**
+
+**Consecuencia de cotizacion:** una auditoria de procedencia de binarios cuesta **un cruce por
+(arbol del titular × arbol del redistribuidor)**, no uno por item. Con 22 colecciones del titular y
+1.326 imagenes distintas son **22 cruces**, no 2.443 inspecciones.
+
+### 🔴 `P333` — una huella tomada por SUSTITUCION DE COMANDO no es la huella del archivo
+
+**El patron.** Toda huella que esta base publique se toma **del archivo**, en binario, con su ultimo
+byte. `$(cat f)` y `"$(curl …)"` recortan los saltos finales: la huella que sale **no es** la del
+archivo que el canal sirve.
+
+🟢 **Reproducido al byte sobre el payload de hoy (`bibo242/blackboard-mcp`, `LICENSE`):**
+
+| forma de hashear | bytes | `sha256` (12) |
+|---|---|---|
+| crudo, tal como lo sirve el canal | **1.084** | `d65abf96e389` |
+| 🔴 `$(cat archivo)` | **1.083** | 🔴 **`fa4e32e5e622`** ← la cifra que esta base publicaba |
+| `head -c 1083` (control: quitar el **ultimo** byte) | 1.083 | **`fa4e32e5e622`** |
+| CRLF (control de direccion — el defecto de `P330`) | — | `7a4881ce89c8` |
+| quitar el **primer** byte (control: no es «un byte cualquiera») | 1.083 | `d5f986675965` |
+
+⚠️ **Regla de lectura, barata y falsable: una huella publicada cuyo conteo de bytes difiere del
+payload en EXACTAMENTE 1 es artefacto de salto final, no deriva del upstream. Se remide antes de
+escribir una palabra sobre el upstream.** 🟢 **Y la cota de lo que el defecto NO toca: la FAMILIA no
+se movio en 5 de 5 remediciones** (`vishalsachdev/canvas-mcp` MIT · los dos `blackboard-mcp` MIT ·
+`OpenEMIS/core` GPL · `buriro-ezekia/mwalimulens-agent` Apache-2.0), **y la identidad que la huella
+sostenia sigue en pie con la huella corregida.**
+
+**Como se corre, concreto:**
+
+```sh
+# MAL: la sustitucion de comando recorta el \n final
+sha=$(printf '%s' "$(cat LICENSE)" | sha256sum)    # huella de un archivo que no existe
+
+# BIEN: en binario, con su conteo de bytes al lado, crudo Y normalizado
+curl -sf "$RAW/$slug/$ref/LICENSE" -o lic
+printf '%s %s %s\n' "$(wc -c < lic)" \
+  "$(sha256sum lic | cut -c1-16)" "$(tr -d '\r' < lic | sha256sum | cut -c1-16)"
+```
+
+⚠️ **Cota del instrumento que mide `P329`, medida en el mismo pase que lo estrena:** re-corrido
+**despues** de escribir el pase 107, el barrido pasa de 87/27/43 a **88/30/44**, y la unica linea
+que el pase agrego a la clase es **el bloque de codigo de arriba** — el `$(cat LICENSE)` con el que
+este patron muestra la forma MALA. 🔴 **Un ejemplo de lo que NO hay que hacer no es una afirmacion
+de identidad: la regla no distingue prosa de cerca de codigo, y se publica con esa cota.**
+🔵 **Por eso la cifra del pase se midio contra el arbol de `HEAD`, antes de escribir una linea.**
+
+### 🔴 `P335` — el canal puede estar VIVO, el derecho CONCEDIDO, y lo denegado ser la FORMA de la operacion
+
+**El patron.** `P320` decia que el canal de verificacion es un hecho de permiso y no solo de red.
+🟢 **Este pase mide una tercera sub-clase: es tambien un hecho de FORMA.** Un clon
+`--filter=blob:none` de `openstax/osbooks-statistics` pedido **por su nombre** corrio; el **mismo**
+clon repetido en un bucle sobre una lista de 9 slugs se **DENEGO**.
+
+| sub-clase de `P320` | pase que la midio | que estaba roto |
+|---|---|---|
+| **red** | 103 | egress cerrado en 4 de 4 dominios |
+| **permiso de sesion** | 103 → 104 | el instrumento intacto y sin derecho a correrlo |
+| 🆕 **forma de la operacion** | **107** | el lote denegado, la pieza nombrada concedida |
+
+⚠️ **Consecuencia operativa, no retorica: cuando una medicion necesita N arboles remotos, se piden
+de a uno y por su nombre, y el resultado se publica con el denominador que REALMENTE se abrio.**
+🔵 **Este pase abrio 1 de 22 y lo dice en vez de extrapolar.**
+
+### 🆕 `R-106-PROCEDENCIA-DE-BINARIO` — auditar la capa de activos de un corpus OER antes de cotizar su reuso
+
+**Cuando.** El cliente quiere montar contenido OER (OpenStax, OER Commons, un banco propio) sobre
+una plataforma —Moodle, Open edX, Canvas, ILIAS, Chamilo— y la propuesta tiene que decir **que se
+puede embarcar en un producto comercial**.
+
+**Por que hace falta aparte de `R-104-CAPA-DE-CONTENIDO`.** `R-104` audita el campo `license` de
+cada item. 🔴 **Este pase midio que eso deja afuera 2.443 archivos (~156 MiB) cuya cesion no esta
+en ningun campo del item.**
+
+**Las piezas, nombradas, con su licencia leida del payload:**
+
+| pieza | licencia (payload) | que aporta a la receta |
+|---|---|---|
+| `compose/code/p332-figure-layer/sniff_format.py` | 🟢 de esta base | el censo de formato por **firma** (`P332`) |
+| `compose/code/p332-figure-layer/intersect_media.py` | 🟢 de esta base | el cruce por `sha256` **por obra citada** (`P334`), con control positivo y negativo en la misma salida |
+| `compose/code/p328-cession-narrowing/sweep_osbooks.py` | 🟢 de esta base | la cesion del titular por `(coleccion, ref)` (`P328`) |
+| `compose/code/lib/license_family.sh` | 🟢 de esta base | la familia por **bloque de titulo** (`P171`), nunca por el `sha` (`P329`) |
+| [`oer/emacs-reveal`](https://gitlab.com/oer/emacs-reveal) | 🔴 **REUSE por archivo**: `GPL-3.0-or-later` + `CC BY-SA 4.0` | 🟢 **el MODELO DE DATOS** de atribucion por figura (RDFa + prosa). **Se copia el modelo, no el codigo** |
+| `git` ≥ 2.27 (`--filter=blob:none`, `sparse-checkout`, `ls-remote`) | 🟢 GPL-2.0 (herramienta, no se embarca) | enumeracion del arbol sin bajar blobs (`P275`) |
+
+**El wiring, en el orden en que hay que correrlo:**
+
+```sh
+# 0) CALIBRAR el canal antes de cualquier veredicto (P249). Si no discrimina, se sale con NO-CLAIM.
+curl -s -o /dev/null -w '%{http_code}\n' "$RAW/$org/$repo/$ref/README.md"       # espera 200
+curl -s -o /dev/null -w '%{http_code}\n' "$RAW/$org/$repo/$ref/NO-EXISTE"       # espera 404
+
+# 1) enumerar el arbol del redistribuidor SIN bajar blobs
+git clone --filter=blob:none --no-checkout --single-branch --branch "$ref" "$url" corpus
+git -C corpus ls-tree -r --name-only HEAD > paths.txt
+
+# 2) materializar solo lo que se va a medir
+printf '/*.json\n/content-pool/**/*.json\n/content-pool/**/figures/*\n' \
+  > corpus/.git/info/sparse-checkout
+git -C corpus sparse-checkout init --no-cone && git -C corpus checkout "$ref"
+
+# 3) censo de FORMATO por firma  (P332: nunca por extension)
+python3 compose/code/p332-figure-layer/sniff_format.py corpus --ext .gif
+
+# 4) cesion que DECLARA cada item, y de que obra  (P322 + P328)
+python3 compose/code/p332-figure-layer/measure.py corpus > declarado.tsv
+
+# 5) una obra del titular POR VEZ y POR SU NOMBRE  (P335: el lote se deniega)
+git clone --filter=blob:none --no-checkout --single-branch --branch main \
+  https://github.com/openstax/osbooks-introductory-statistics-bundle tit
+printf '/**/media/*\n' > tit/.git/info/sparse-checkout
+git -C tit sparse-checkout init --no-cone && git -C tit checkout main
+
+# 6) el cruce por BYTES, con el acierto desglosado POR OBRA CITADA  (P334)
+python3 compose/code/p332-figure-layer/intersect_media.py corpus tit/media
+```
+
+**La salida que la propuesta necesita, y es una tabla de cuatro clases:**
+
+| clase del activo | que se puede hacer | lo medido en el corpus de referencia |
+|---|---|---|
+| 🟢 byte-identico a un `media/` del titular cuya coleccion cede **permisivo** en la ref citada | **embarcable**, con atribucion al titular | **36** archivos (`col30309`, `CC BY 4.0`) |
+| 🔴 byte-identico a un `media/` cuya coleccion **estrecho** a `NC-SA` | 🔴 **no embarcable cerrado** | **sin medir**: 21 de 22 colecciones (`P335`) |
+| 🔴 colgado de un item que cita una edicion **`2e`** y declara `CC BY 4.0` | 🔴 **contradiccion: el item declara mas de lo que su edicion otorga** | **825** archivos |
+| 🔵 sin coincidencia en ningun arbol del titular | del **redistribuidor** ⇒ se rige por SU cesion (OATutor cede `CC BY 4.0` en su README) | **2.407** como piso, con 1 de 22 arboles abiertos |
+
+**Estimacion, medida en este pase y no estimada:** `measure.py` corre en **1,6 s** sobre 49.481 JSON
+e `intersect_media.py` en **0,9 s** sobre 2.443 binarios con el arbol en cache (el costo de computo
+es la primera lectura de los ~156 MiB, no el hash). 🔵 **El costo real es de CANAL, no de computo:
+un clon nombrado por obra del titular.** Con 22 colecciones, **22 clones** ⇒ medio dia de trabajo mas la espera del canal, para
+una respuesta que hoy ninguna de las cuatro regiones del barrido 36 tiene.
+
+⚠️ **Lo que esta receta NO contesta, y hay que decirlo en la propuesta:** una figura **re-codificada**
+(mismo dibujo, otro formato) **no** es byte-identica y esta receta la cuenta como «del
+redistribuidor». 🔴 **La identidad perceptual (p. ej. un hash perceptual) es una capa distinta y
+esta base no la midio.** 🔵 **Las 1.117 repeticiones de este corpus (2.443 archivos → 1.326 imagenes
+distintas) sugieren que el eje vale la pena; el que lo quiera cerrar tiene que medirlo.**
+
+---
 ## 🆕 Patrones del pase 106 (2026-10-05) — `P328`, `P329` y la receta que ahora tiene que preguntar por la REF
 
 > **Frontmatter y region:** `Global`.

@@ -1,0 +1,51 @@
+titular: /tmp/claude-0/-home-user-globant-kb/ad32be58-fed6-547c-988f-7b9662836979/scratchpad/osx/osbooks-statistics/media — 706 archivos, 677 imagenes distintas
+obra citada por el item           figuras  byte-identicas       %
+(no-openstax)                         873               0   0.00%
+introductory-statistics               415              36   8.67%
+elementary-algebra-2e                 348               0   0.00%
+calculus-volume-1                     237               0   0.00%
+intermediate-algebra-2e               226               0   0.00%
+college-algebra-2e                    173               0   0.00%
+precalculus-2e                        134               0   0.00%
+college-physics-2e                     26               0   0.00%
+physics                                 8               0   0.00%
+university-physics-volume-1             3               0   0.00%
+TOTAL                                2443              36   1.47%
+
+pares (item, figura, obra citada, archivo del titular, sha256):
+  a1435ed10.4coach	figure1.gif	introductory-statistics	fig-ch10_05_02.jpg	dd3480a848679405
+  a150a865.3computer1	figure1.gif	introductory-statistics	fig-ch05_04_04N.jpg	85d1e9c4762a9ad7
+  a150a865.3police1	figure1.gif	introductory-statistics	CNX_Stats_C05_M04_006N.jpg	9d92815dfcdaaae4
+  a150a865.3store1	figure1.gif	introductory-statistics	CNX_Stats_C05_M04_001.jpg	447d6bda73c8ce3f
+  a29d75aclt1	figure1.gif	introductory-statistics	fig-ch07_03_01.jpg	0f6c3d6410495870
+  a39def5good13	figure2.gif	introductory-statistics	fig-ch11_04_01.jpg	b3b819e0bc9daa71
+  a3acaad9.3baker1	figure1.gif	introductory-statistics	fig-ch09_07_01N.jpg	665c4990bc2186c1
+  a4e19abfacts9	figure1.gif	introductory-statistics	CNX_Stats_C11_M03_item001.jpg	daef54f58ea47384
+  a5a11cdclt1	figure1.gif	introductory-statistics	fig-ch07_03_01.jpg	0f6c3d6410495870
+  a5c984cfdist1	figure2.gif	introductory-statistics	CNX_Stats_C13_M04_001.jpg	4ad23185c1b77699
+  a5c984cfdist2	figure2.gif	introductory-statistics	fig-ch13_04_02N.jpg	a9c0542be583ef5a
+  a7811e5normal1	figure1.gif	introductory-statistics	fig-ch06_04_01.jpg	1cfdb146917cd49c
+  a7811e5normal13	figure1.gif	introductory-statistics	CNX_Stats_C06_M03_003a.jpg	2bf859b0aa5db0e1
+  a7811e5normal4	figure1.gif	introductory-statistics	fig-ch06_05_02.jpg	041b1b4132bdaacb
+  a7811e5normal6	figure1.gif	introductory-statistics	fig-ch06_05_03.jpg	4d34226398de4a92
+  a7811e5normal7	figure1.gif	introductory-statistics	fig-ch06_05_04N.jpg	efb97b883c98d56d
+  a79a53dgood13	figure2.gif	introductory-statistics	fig-ch11_04_01.jpg	b3b819e0bc9daa71
+  a82acbdstat9	figure1.gif	introductory-statistics	CNX_Stats_C01_M05_001.jpg	2c298c303db1da0d
+  a8802f1std16	figure2.gif	introductory-statistics	CNX_Stats_C10_M02_001anno.jpg	d5df2af50fb8934f
+  a8802f1std7	figure1.gif	introductory-statistics	CNX_Stats_C10_M02_001anno.jpg	d5df2af50fb8934f
+  a883d8f5.3computer1	figure1.gif	introductory-statistics	fig-ch05_04_04N.jpg	85d1e9c4762a9ad7
+  a883d8f5.3police1	figure1.gif	introductory-statistics	CNX_Stats_C05_M04_006N.jpg	9d92815dfcdaaae4
+  a883d8f5.3store1	figure1.gif	introductory-statistics	CNX_Stats_C05_M04_001.jpg	447d6bda73c8ce3f
+  a88bf5afacts9	figure1.gif	introductory-statistics	CNX_Stats_C11_M03_item001.jpg	daef54f58ea47384
+  a9d3aa3stat9	figure1.gif	introductory-statistics	CNX_Stats_C01_M05_001.jpg	2c298c303db1da0d
+  aaa465efdist1	figure2.gif	introductory-statistics	CNX_Stats_C13_M04_001.jpg	4ad23185c1b77699
+  aaa465efdist2	figure2.gif	introductory-statistics	fig-ch13_04_02N.jpg	a9c0542be583ef5a
+  aab36429.3baker1	figure1.gif	introductory-statistics	fig-ch09_07_01N.jpg	665c4990bc2186c1
+  aac97ednormal1	figure1.gif	introductory-statistics	fig-ch06_04_01.jpg	1cfdb146917cd49c
+  aac97ednormal13	figure1.gif	introductory-statistics	CNX_Stats_C06_M03_003a.jpg	2bf859b0aa5db0e1
+  aac97ednormal4	figure1.gif	introductory-statistics	fig-ch06_05_02.jpg	041b1b4132bdaacb
+  aac97ednormal6	figure1.gif	introductory-statistics	fig-ch06_05_03.jpg	4d34226398de4a92
+  aac97ednormal7	figure1.gif	introductory-statistics	fig-ch06_05_04N.jpg	efb97b883c98d56d
+  ab2e2b210.4coach	figure1.gif	introductory-statistics	fig-ch10_05_02.jpg	dd3480a848679405
+  ac22d42std16	figure2.gif	introductory-statistics	CNX_Stats_C10_M02_001anno.jpg	d5df2af50fb8934f
+  ac22d42std7	figure1.gif	introductory-statistics	CNX_Stats_C10_M02_001anno.jpg	d5df2af50fb8934f

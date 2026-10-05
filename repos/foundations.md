@@ -8,6 +8,7 @@ updated: 2026-10-05
 
 > Bases sobre las cuales construir. Verificado repo por repo vía WebFetch el 2026-09-30 (capas del pase 10, el 2026-10-01).
 > Leer la columna **Licencia** antes de proponer: media KB de educación es GPL/AGPL, no permisiva.
+> **Pase 107 del 2026-10-05:** 🟢 **1 alta fundacional, y es la pieza que el hallazgo de este pase vuelve necesaria: [`oer/emacs-reveal`](https://gitlab.com/oer/emacs-reveal) (EMEA, GitLab) emite la atribucion de CADA figura en forma legible por maquina (RDFa) desde metadatos por archivo — cede **por archivo** bajo REUSE (`GPL-3.0-or-later` + `CC BY-SA 4.0`), asi que entra por su DISENO y no por su binario.** 🔴 **`P332` — regla nueva para este estante: cuando dos arboles se comparan por contenido el filtro es la FIRMA de bytes, nunca la extension: 2.443 de 2.443 `.gif` del corpus son PNG/JPEG/WEBP y un filtro por extension da «0 solapamiento» desde una premisa falsa (por `sha256` da 36).** 🔴 **`P334` — la procedencia de un binario no esta en el repo que su `oer` nombra: los 36 pares citan `introductory-statistics` y viven en `osbooks-statistics`.** 🔴 **Rechazo medido por FRESCURA, no por licencia: `CK-ERP` (32 modulos, capa educativa completa) cuyo ultimo anuncio del canal es de 2010.**
 > **Pase 106 del 2026-10-05:** 🔴 **`P328` — la cesion de este estante es propiedad del par (repo, **ref**), y las 9 altas del pase 104 se publicaron con UNA sola: de las 10 colecciones que existen con el MISMO `collection-id` en los dos refs, **10 de 10 ESTRECHAN** de `CC BY 4.0` (`1e`) a `CC BY-NC-SA 4.0` (`main`), cero contraejemplos; 22 colecciones medidas en `main`, solo 2 permisivas.** ⚠️ **No se veia porque el slug CAMBIA DE NOMBRE entre ediciones (`precalculus` → `precalculus-2e`): la identidad es el `collection-id` (`P289` en campo nuevo).** 🔵 **Y un repo dado por ausente existe con otro contenedor: `osbooks-precalculus` no existe, pero `precalculus` se publica DENTRO de `osbooks-college-algebra-bundle` — un libro no tiene por que tener repo propio (`P253`).** 🟢 **Accion C corrida y CONFIRMADA: familias 52/52 identicas; un texto `NC-SA` vive en 7 repos con TRES huellas crudas que colapsan a una.** 🔴 **`P329` contra ese mismo arreglo: la huella normalizada es identidad de TEXTO y no de FAMILIA (6 payloads `CC BY 4.0`, 2 huellas).** 🟢 **`P323` reconfirmado por enumeracion, con la trampa de subcadena medida (`grep -i licen` da 8 rutas, 0 licencias).**
 > **Pase 105 del 2026-10-05:** 🟢 **9 altas fundacionales, y son la capa que este estante nombraba sin tenerla: el CORPUS DE CONTENIDO del TITULAR, con su cesion leida libro por libro del payload.** Desde `P315` este archivo mide el eje «permisivo en codigo / CC en el contenido» **siempre desde el lado del redistribuidor**; nunca tuvo al titular, y sin titular un campo que dice `CC BY 4.0` no se contrasta con nada. 🟢 **OpenStax publica el payload de cada libro en la organizacion `openstax` de GitHub** —`<md:license>` por libro **mas** el `LICENSE` del *bundle*, dos lecturas concordantes— y ese canal estaba **vivo** con `openstax.org` en **000** (`P326-A`). 🔴 **El hallazgo que manda: la licencia de OpenStax es POR LIBRO.** **11 de los 13 libros medidos** son **`CC BY-NC-SA 4.0`** —**no embarcables en producto comercial**— y las dos `CC BY 4.0` son **`physics`** y **`statistics`**. 🔵 **`physics` es, ademas, el unico libro que `OATutor-Content` cita y que NINGUN item etiqueta:** el unico donde `CC BY 4.0` habria sido verdad es el unico donde nadie lo escribio. 🔴 **`P327`: los bytes y el `sha256` crudo de un archivo de licencia NO son identidad** — 21.443 / 21.013 / 21.442 B son **el mismo texto** con CRLF, LF y CRLF-sin-salto-final: un unico `sha256` al normalizar, lo que indicta las huellas que este estante publica desde el pase 66 (los datos siguen bien, la huella no era huella). Ver `compose/code/p326-titleholder-book-license/`.
 > **Pase 104 del 2026-10-05:** 🟢 **El canal VOLVIO, y eso es `P320` confirmado en la direccion contraria: es un hecho de PERMISO.** El instrumento del pase 103 estaba intacto y le faltaba el derecho a correrlo; esta sesion **si** lo tiene. Medido con control negativo antes de usarlo (rama inventada, ruta inventada y repo inventado dan **404**; `main`/`master`/`HEAD` dan el **mismo** sha): `raw.githubusercontent.com` **200**, clon `--filter=blob:none` de terceros **OK**. 🔴 **Sigue apagado:** `api.github.com` **403**, y `openstax.org`, `creativecommons.org`, `arxiv.org`, `aclanthology.org` **bloqueados por egress** por `curl` **y** por el fetcher. 🟢 **La prediccion pre-registrada de este archivo, NO MEDIDA en el pase 103 y re-registrada sin cambios, se corre y la accion C (`OATutor`) sale **CONFIRMADA en la forma y FALSIFICADA en la magnitud**.** 🔴 **Y el gate de `P311` evito el error que este pase estaba por cometer: `OATutor` **ya es una fila** de `agents/top.md` (MIT) desde antes — la pista del pase 103 proponia darlo de alta aca, y lo que falta no es la fila sino la **capa de contenido**.** 🟢 **Codigo: `MIT`, `LICENSE` 1.104 B, *(c) 2023 Zachary A. Pardos — CAHL research lab*, leido del payload.** 🔴 **`P323` — el borde de capa es un **SUBMODULO**, o sea OTRO REPOSITORIO: el contenido vive en `CAHLR/OATutor-Content`, y ese repo tiene **CERO archivos de licencia en 51.929 rutas enumeradas** (aserido, y confirmado por sonda de 7 nombres: 404 en los 7). Un barrido que lee el `LICENSE` de la raiz del padre ve **MIT**, ve un arbol **sin contenido** y ve **cero** licencias de contenido: **las tres lecturas son ciertas y las tres enganan**.** 🔵 **Topologia NUEVA frente a `P315` (dato en un subdirectorio del mismo repo) y `P317` (corpus vendoreado sin declaracion).** 🔴 **`P322` — y el contenido se contradice con su propio README: declara *«ALL content […] under CC BY 4.0»* y sus campos por item dicen otra cosa. Medidos **1.216 de 13.371** problemas (muestreo sistematico, cada 11º): **75,7 % `CC BY 4.0`, 19,3 % campo VACIO, 3,6 % `CC4.0`/`openstax` sin clausulas, 1,4 % una URL QUE NO ES DE LICENCIA** — y los 17 de esa ultima clase estan **todos** en un curso y apuntan a **PDFs de solucionarios de examen**, con **15 de 17** identicos al campo `oer` del mismo item: se copio la PROCEDENCIA al campo de CESION (`P314`).** 🟢 **Dos muestras sistematicas independientes concuerdan (n=406 y n=1.216).** ⚠️ **0 altas fundacionales: las dos piezas nuevas de la industria que el barrido devolvio son AGPL-3.0 y CC BY-SA 4.0 — ninguna permisiva — y van a `verticals/`.** Ver **`P322`**–**`P325`**.
@@ -112,6 +113,68 @@ corre ése antes de escribir uno a mano** (tendencia **313**). 🟢 **Y el `gafa
 > **Pase 36 del 2026-10-02:** 🔵 **este pase no agrega repos: le pone FECHA a los que ya están, y la fecha cambia tres recomendaciones.** Se midió la capa PHP de evaluación y telemetría en Packagist —el único registro de los tres que entrega descargas en este entorno (`api.npmjs.org` y `pypistats.org` dan **403 a CONNECT**)— y el resultado está en `repos/trending.md`. **Lo que hay que saber antes de proponer desde este archivo:** 🔴 **la pieza xAPI más descargada de esta base, `rusticisoftware/tincan` (Apache-2.0, 6.178 desc./mes, 863.777 totales), no publica desde el 2022-11-02**, y ⚠️ **el único MIT de esa capa, `php-xapi/client`, está parado desde el 2021-03-24** con 825 desc./mes. 🔵 **La lectura es que en xAPI/PHP lo permisivo está quieto y lo vivo es copyleft**, así que la receta de telemetría se sostiene en **Ralph (MIT)** + **`lrsql` (Apache-2.0)** + **`learnmcp-xapi` (MIT)** y no en la capa PHP. 🟢 **Del lado de evaluación, lo activo es `oat-sa/extension-tao-testqti`** (**885 versiones**, release del **2026-09-30**) **y sigue siendo GPL-2.0-only**, mientras **lo permisivo es lo nuevo**: `@longsightgroup/qti3-cli` (**MIT**, 41 releases desde el 2026-05-21, último **2026-10-01**) con **cero dependencias de terceros** — sus 4 dependencias son todas `@longsightgroup/*` pinneadas a la misma versión exacta. **Su manifiesto MCP completo de 20 tools está escrito en `compose/patterns.md` (P76).** 🔴 **Y una corrección de catálogo: `oat-sa/qti-sdk` devuelve 404 en Packagist porque es el nombre del REPO — su paquete es `qtism/qtism`** (GPL-2.0-only, 218.212 descargas totales, 315 versiones). **Nombre de repo y nombre de paquete son identificadores distintos, y confundirlos produce un 404 que parece una ausencia** — pasó igual con `1edtech/oneroster`, `imsglobal/lti-1-3-php-library` y `packbackbooks/lti-1-3-php-library`, los tres **404**, que se anotan como *«no verificado en Packagist bajo ese nombre»* y **no** como inexistentes. ⚠️ **Acción pendiente que el pase 37 tiene asignada: este archivo nunca pasó por el control de *slugs* distintos ni por el de *backlink*** — los dos que en `agents/top.md` encontraron **un duplicado** y **dos colisiones** este mismo pase.
 > **Pase 11 del 2026-10-01:** aparece una licencia que las diez pasadas anteriores filtraban sin saberlo — **ECL-2.0**, con la que licencia todo Apereo (Sakai, Opencast, OpenLRW). Es Apache-2.0 con el alcance de patentes acotado, aprobada por OSI y FSF, y **es apta para construir arriba**. Ver la capa de analítica institucional, abajo.
 
+## 🟢 Altas fundacionales: 1 — y es la pieza que el hallazgo de este pase vuelve necesaria: la ATRIBUCION DE FIGURA legible por maquina (pase 107 del 2026-10-05)
+
+> **Frontmatter y region:** `Global`. La pieza de este pase es **EMEA**; la region de cada fila va
+> en su columna, en el vocabulario **cerrado**.
+
+### 🔬 El canal (`P247`), medido y no heredado
+
+🟢 `raw.githubusercontent.com` **200** con 3 anclas buenas y **404** con archivo, rama y repo
+inventados ⇒ **discrimina**. 🟢 Clon `--filter=blob:none` **OK** (`OATutor-Content` = **51.929**
+rutas, replica el pase 106 al archivo; repo inventado → falla). 🟢 `sparse-checkout` **OK**
+(**49.481** JSON + **2.443** figuras). 🟢 `git ls-remote` **OK** (**3** refs).
+🆕 🟢 **`gitlab.com/<org>/<repo>/-/raw/<ref>/<ruta>` DISCRIMINA** y es el canal que midio el alta
+de este pase (`LICENSES/GPL-3.0-or-later.txt` → **200**, `REUSE.toml` → **404**).
+🔴 `api.github.com` y `github.com` **403 a la buena Y a la inventada**: no discriminan, sexto pase.
+🔴 `openstax.org` **000**. 🔴 🆕 **El clon EN LOTE de 9 repos del titular quedo DENEGADO por el
+clasificador de la sesion, mientras el mismo clon pedido como pieza nombrada paso** (`P335`).
+
+### 🟢 El alta, con su cesion leida del payload — y con su bloqueo dicho en la misma fila
+
+| Repo | Familia (payload) | Bytes | Titular | Capa | Región |
+|---|---|---|---|---|---|
+| [`oer/emacs-reveal`](https://gitlab.com/oer/emacs-reveal) | 🔴 **REUSE multi-licencia**: `GPL-3.0-or-later` (codigo) + `CC BY-SA 4.0` (contenido), **cedidos POR ARCHIVO** | `LICENSE` **517 B** — y no es una cesion: es el **aviso** REUSE. Las cesiones estan en `LICENSES/GPL-3.0-or-later.txt` (**200**) y `LICENSES/CC-BY-SA-4.0.txt` (**200**); `REUSE.toml` **404** | proyecto `oer` (GitLab), origen Univ. Münster | **atribucion de OER**: genera la declaracion de atribucion de cada figura en forma legible por **maquina (RDFa)** y por humano, desde un archivo de metadatos por figura | **EMEA** |
+
+🔴 **Por que entra a este estante y no a `agents/top.md`:** no es un agente ni se puede embarcar
+cerrado —el codigo es copyleft y el contenido `BY-SA`—. 🟢 **Entra porque es la UNICA pieza que
+esta base ha medido que resuelve, por diseno, el problema que el pase 107 acaba de descubrir
+midiendo: que la procedencia de una FIGURA no viaja con el item que la usa** (`P334`). ⚠️ **Para
+una entrega de Globant el valor es el DISENO, no el binario: el metadato por figura y la emision
+RDFa se reimplementan permisivos; lo que no hay que volver a inventar es el modelo de datos.**
+
+### 🔴 `P332` — la lectura que este estante tiene que incorporar ANTES de comparar dos arboles
+
+🔴 **Medido en el arbol del redistribuidor: 2.443 de 2.443 archivos con extension `.gif` NO son
+GIF** (1.358 PNG · 938 JPEG · 147 WEBP; **0** GIF, **0,0 %** de cumplimiento). 🔴 **Y el `media/`
+de la unica coleccion del titular que este pase pudo abrir (`col30309`, `osbooks-statistics`) tiene
+**706** archivos —499 JPEG, 206 PNG, 1 `OLE/CFB` (`Thumbs.db`)— y **cero** GIF.**
+
+🔵 **Por que esto es una regla de estante y no una curiosidad:** un filtro por extension entre esos
+dos arboles devuelve **0 solapamiento con varianza cero**, y la premisa es falsa. **Por `sha256` de
+contenido devuelve 36 archivos (1,47 %), concentrados 36/36 en una sola obra citada.**
+⚠️ **Regla: cuando una fila de este estante se compare con otra por contenido, el filtro es la
+FIRMA de bytes. La extension es metadato del redistribuidor.**
+
+### 🔴 Lo que esto le corrige a `R-104-CAPA-DE-CONTENIDO` y a la columna «Cesion» de este estante
+
+| antes | 🟢 ahora, medido |
+|---|---|
+| la cesion de un corpus se audita por el campo `license` de sus items | **y por la FIRMA de sus binarios**: la capa de figura de `OATutor-Content` son **2.443** archivos (~**156 MiB**, **1.326** imagenes distintas) y su cesion **no** esta en el campo del item |
+| la procedencia de un activo se busca en el repo que su `oer` nombra | 🔴 **los 36 pares byte-identicos citan `introductory-statistics` y viven en `osbooks-statistics`**: el repo que el `oer` nombra es el arbol **equivocado** |
+| el riesgo se cuenta por item | 🔴 **825 archivos de figura** cuelgan de un item que cita una edicion **`2e`** —estrechada a `CC BY-NC-SA 4.0` por `P328`— y declara `CC BY 4.0` |
+
+### 🔴 El barrido obligatorio de plataformas, corrido y con su cero enumerado
+
+Ano **CALCULADO** (`date -u +%Y` → **2026**). `open source platform education ERP CRM MIT Apache`
+devolvio por **vigesimoseptima** vez el catalogo que este estante ya publica: **OpenEduCat** (sobre
+el framework ERP open source), glosarios del mismo sitio en 5 idiomas, un directorio de CRM
+permisivos, y **CK-ERP** — 32 modulos con capa educativa (Teacher, Counsellor, Student, Applicant,
+Family, Registrar, Edu Administration). 🔴 **CK-ERP no entra: el unico anuncio que el canal
+devuelve es de **2010** (v0.30.1, conector Drupal 6.17) y no hay payload de cesion leido.** ⚠️ **Se
+registra como rechazo medido por FRESCURA, no por licencia, para no volver a pagarlo.**
+
+---
 ## 🟢 Altas fundacionales: 0 — y la cesion de las 9 altas del pase 104 resulta POR REF, no por repo
 
 > **Frontmatter y region:** `Global`.

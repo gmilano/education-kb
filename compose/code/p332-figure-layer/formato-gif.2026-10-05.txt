@@ -1,0 +1,8 @@
+arbol      : /tmp/claude-0/-home-user-globant-kb/ad32be58-fed6-547c-988f-7b9662836979/scratchpad/OATutor-Content
+filtro     : .gif
+archivos   : 2443
+  PNG                          1358   55.6%   ej: content-pool/a132811electro6/figures/figure1.gif
+  JPEG                          938   38.4%   ej: content-pool/afaf721inequalities12/figures/figure1.gif
+  WEBP                          147    6.0%   ej: content-pool/a33da99volumes8/figures/figure1.gif
+
+la extension .gif promete GIF: lo cumplen 0/2443 (0.0%)

@@ -9,6 +9,7 @@ updated: 2026-10-05
 > Plataformas verticales reales, en producción, customizables con AI.
 > Modelo: partir de algo que ya funciona y que ya tiene los datos, y agregar la capa agéntica arriba.
 > Verificado vía WebFetch el 2026-09-30; las capas del pase 11, el 2026-10-01.
+> **Pase 107 del 2026-10-05:** 🔴 **0 altas (el barrido devuelve por vigesimoseptima vez el conjunto ya publicado, y cinco de nueve resultados son el glosario de OpenEduCat en cinco idiomas).** 🔴 **Rechazo nuevo, medido por FRESCURA y no por licencia: `CK-ERP` — 32 modulos con capa educativa completa (Teacher, Counsellor, Student, Applicant, Family, Registrar, Edu Administration) y el unico anuncio que el canal devuelve es de 2010.** 🔴 **El eje que este estante gana le cambia la cuenta a cualquier fila que se entregue con contenido OER: la capa de contenido trae BINARIOS sin cesion propia — 2.443 archivos de figura (~156 MiB, 1.326 imagenes distintas), extension `.gif` falsa en 2.443 de 2.443 (`P332`), y 825 colgando de un item que declara mas permiso del que su edicion otorga.** 🟢 **La pieza que lo resuelve por diseno es [`oer/emacs-reveal`](https://gitlab.com/oer/emacs-reveal) (EMEA): se copia el MODELO DE DATOS, no el binario — cede por archivo bajo REUSE (`GPL-3.0-or-later` + `CC BY-SA 4.0`).**
 > **Pase 106 del 2026-10-05:** 🔴 **0 altas (el canal devuelve el mismo conjunto que este estante ya publica, y confirma por fuente secundaria Moodle +400 M usuarios / ~150.000 sitios y Open edX +140 M alumnos / 196 paises bajo Axim).** 🔴 **El eje NUEVO cambia como se cotiza cualquier fila: la cesion del CONTENIDO es propiedad del par (coleccion, **ref**), no del repo — 10 de 10 colecciones estrechan de `CC BY 4.0` a `NC-SA` entre ediciones, y 20 de 22 colecciones vivas son `NC-SA`.** ⚠️ **Plataforma y contenido son licencias INDEPENDIENTES y la segunda es la que bloquea: Open edX se customiza cerrada bajo Apache-2.0 y el curso que corre adentro no se puede vender.** 🔴 **Y aparece una tercera capa que ninguna fila tenia: 6.886 unidades `oer: openai` (4.455 hints + 2.418 scaffolds) sin cesion, bajo un README que cede «ALL content under CC BY 4.0» en un arbol con 0 archivos de licencia.** 🟢 **Camino comercial medido: Open edX + `osbooks-physics` o `osbooks-statistics` (las 2 unicas `CC BY 4.0` de 22) + andamiaje propio.**
 > **Pase 105 del 2026-10-05:** 🔴 **0 verticales nuevas —el canal generalista redescubre `OpenEduCat` y nombra `.LRN`, las dos ya medidas— y el eje que este estante gana es el CONTENIDO que va DENTRO de la plataforma.** 🔵 **Una plataforma es un envase**, y el pase midio que el contenido **puede ceder menos que la plataforma que lo sirve**: `OATutor` es **MIT** y su codigo se embarca entero, pero su contenido entra por submodulo desde un repo con **0 archivos de licencia en 51.929 rutas**, y el **titular** de ese contenido —`openstax/osbooks-*`, **13 libros leidos del payload**— cede **`NC-SA` en 11 de 13**. 🔴 **De los 13.371 problemas del *content pool*, 592 (4,4 %) son embarcables en una entrega comercial.** 🔵 **Regla de estante, para TODAS las filas de este archivo: la licencia de la plataforma no dice nada de la del contenido** — Moodle (GPL-3.0) con contenido `CC BY` es mas entregable que OATutor (MIT) con contenido `NC`. 🟢 **Lo accionable: `physics` y `statistics` son los DOS libros de OpenStax `CC BY 4.0`** y los unicos embarcables. Ver `compose/code/p326-titleholder-book-license/` y la receta `R-105-CESION-CONTRA-TITULAR`.
 > **Pase 104 del 2026-10-05:** 🟢 **El canal VOLVIO, y eso es `P320` confirmado en la direccion contraria: es un hecho de PERMISO.** El instrumento del pase 103 estaba intacto y le faltaba el derecho a correrlo; esta sesion **si** lo tiene. Medido con control negativo antes de usarlo (rama inventada, ruta inventada y repo inventado dan **404**; `main`/`master`/`HEAD` dan el **mismo** sha): `raw.githubusercontent.com` **200**, clon `--filter=blob:none` de terceros **OK**. 🔴 **Sigue apagado:** `api.github.com` **403**, y `openstax.org`, `creativecommons.org`, `arxiv.org`, `aclanthology.org` **bloqueados por egress** por `curl` **y** por el fetcher. 🟢 **+2 verticales, las primeras en varios pases, y las dos con la licencia leida del PAYLOAD y clasificada por el control compartido (`lib/license_family.sh`, `P237`).** 🔴 **Y las dos son COPYLEFT, que es el hallazgo del pase para este estante: `learnhouse/learnhouse` **AGPL-3.0** (34.522 B) y `GarethManning/claude-education-skills` **CC BY-SA 4.0** (1.229 B).** 🔵 **Ninguna de las dos entra en el foco MIT/Apache/BSD de esta base, y se publican igual CON la bandera puesta: un LMS AGPL que el cliente expone por red arrastra la clausula de red sobre sus propias modificaciones, y una libreria de skills `CC BY-SA` impone **share-alike sobre el material derivado**, que es justo lo que un estudio produce encima.** ⚠️ **`frappe/lms` NO entra: el gate de `P311` lo encontro ya publicado — y de paso queda medido que tambien es **AGPL-3.0** (33.892 B), leido del payload.** 🔵 **`claude-education-skills` declara 165 skills pedagogicas en 20 dominios y **acceso MCP hospedado ahora con token**: el camino libre es local/plugin, que es el que un estudio usaria de todos modos.** Ver **`P322`**–**`P325`**.
@@ -166,6 +167,67 @@ updated: 2026-10-05
 > recomendación: proponer con presupuesto de mantenimiento (gap 70).** Ver la sección del pase 33, abajo.
 
 
+## 🔴 Verticales nuevas: 0 — y el eje que este estante gana es que la capa de CONTENIDO que se le monta arriba trae BINARIOS sin cesion propia (pase 107 del 2026-10-05)
+
+> **Frontmatter y region:** `Global`. La unica pieza medida de este pase es **EMEA**; su region va
+> en la columna, en el vocabulario **cerrado**.
+
+### 🔵 Por que no hay altas, y el cero es una medicion
+
+Ano **CALCULADO** (`date -u +%Y` → **2026**). `open source platform education ERP CRM MIT Apache`
+devolvio por **vigesimoseptima** vez el conjunto que este estante ya publica, y lo devolvio
+mayormente a traves del **glosario de OpenEduCat en 5 idiomas** (`es`, `fr`, `ar`, `zh`, `pt-BR`) —
+🔵 **que es una senal sobre el canal: cinco URLs del mismo sitio ocupando cinco de nueve
+resultados.**
+
+| lo que devolvio | ya en este estante | veredicto |
+|---|---|---|
+| **OpenEduCat** (ERP educativo sobre framework ERP open source: ORM, web framework, motor de reportes, modelo de seguridad heredados) | 🟢 si | re-confirmado, sin alta |
+| directorio de **CRM permisivos** (`openalternative.co/tags/crm-platform`) | 🔵 catalogo | 🔴 no es una plataforma educativa |
+| **CK-ERP** — 32 modulos con capa educativa COMPLETA (`Teacher`, `Counsellor`, `Student`, `Applicant`, `Family`, `Registrar`, `Edu Administration`) | 🔴 no | 🔴 **rechazo medido por FRESCURA, no por licencia: el unico anuncio que el canal devuelve es de 2010 (v0.30.1, conector Drupal 6.17) y no hay payload de cesion leido** |
+| una tesis sobre una plataforma ERP **como entorno de practica** docente (Univ. de Jaén) | 🔴 no | 🔴 es un paper, no software |
+
+⚠️ **CK-ERP se registra como rechazo para no volver a pagarlo: la capa educativa que nombra es
+exactamente la que este estante busca, y el problema es la frescura. Si un pase futuro encuentra
+su repositorio vivo con payload de cesion, es un alta legitima.**
+
+### 🔴 El eje nuevo, y le cambia la cuenta a CUALQUIER fila de este estante que se entregue con contenido OER
+
+Este estante vende *«partir de algo que ya funciona y agregar la capa agentica arriba»*. 🔴 **El
+pase 107 midio que la capa de CONTENIDO que se monta arriba trae un activo que ninguna fila de
+aqui contabiliza: BINARIOS.**
+
+| medido en `CAHLR/OATutor-Content` (`main`, sha `1925dec`) | cifra |
+|---|---|
+| archivos de figura | **2.443** (~**156 MiB**) |
+| imagenes **distintas** por `sha256` | **1.326** (⇒ 1.117 repeticiones) |
+| formato REAL | 1.358 PNG · 938 JPEG · 147 WEBP · 🔴 **0 GIF** |
+| cumplimiento de la extension `.gif` | 🔴 **0 de 2.443** |
+| figuras cuyo item cita una edicion **`2e`** (estrechada a `CC BY-NC-SA 4.0` por `P328`) y declara `CC BY 4.0` | 🔴 **825** |
+| figuras byte-identicas a un `media/` del titular, en **1** de 22 colecciones medibles | **36** (**1,47 %**), y los 36 **en una obra que el item no cita** |
+
+🔴 **Consecuencia para una propuesta sobre Moodle, Open edX, Canvas, ILIAS o Chamilo: importar un
+paquete de contenido OER a la plataforma importa TAMBIEN su capa de imagenes, y la cesion de esa
+capa no esta en el campo `license` del item.** ⚠️ **Dos reglas que salen medidas, no opinadas:**
+
+1. 🔴 **No filtrar por extension al auditar la capa de imagen** (`P332`): en este corpus la
+   extension es falsa en el 100 % de los casos, y un filtro por extension da «0 solapamiento» con
+   varianza cero.
+2. 🔴 **No buscar la procedencia de una figura en el repo que su item cita** (`P334`): los 36 pares
+   byte-identicos citan `introductory-statistics` y sus bytes se publican en `osbooks-statistics`.
+
+### 🟢 La pieza que resuelve esto por diseno, y su licencia dicha en la misma linea
+
+| Plataforma | Licencia (payload) | Bytes | Titular | Qué agrega | Región |
+|---|---|---|---|---|---|
+| [`oer/emacs-reveal`](https://gitlab.com/oer/emacs-reveal) | 🔴 **REUSE multi-licencia, POR ARCHIVO**: `GPL-3.0-or-later` (codigo) + `CC BY-SA 4.0` (contenido) | `LICENSE` **517 B** = el **aviso** REUSE, no una cesion; `LICENSES/GPL-3.0-or-later.txt` **200** · `LICENSES/CC-BY-SA-4.0.txt` **200** · `REUSE.toml` **404** | proyecto `oer` (GitLab), origen Univ. Münster | 🟢 **el metadato de atribucion POR FIGURA, emitido en RDFa (maquina) y en prosa (humano)** — el unico diseno medido por esta base que ata una imagen a su titular | **EMEA** |
+
+⚠️ **No se recomienda embarcarlo: el codigo es copyleft y el contenido `BY-SA`. Se recomienda
+copiar su MODELO DE DATOS** —un archivo de metadatos por figura, con titular, obra, edicion y
+cesion— **y reimplementar la emision permisiva.** 🔵 **Lo que no hay que volver a inventar es el
+modelo; lo que hay que escribir es el emisor.**
+
+---
 ## 🔴 Verticales nuevas: 0 — y el eje que este estante gana es que la cesion del CONTENIDO depende de la REF, no del repo
 
 > **Frontmatter y region:** `Global`.

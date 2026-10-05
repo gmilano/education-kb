@@ -7,6 +7,7 @@ updated: 2026-10-05
 # 📡 Tendencias — education
 
 > Ventana de investigación: septiembre 2026. Verificado 2026-09-30; el pase 11, el 2026-10-01.
+> **Pase 107 del 2026-10-05:** 🟢 **Tendencias 859–866.** 🔴 **`P332` — la EXTENSION de un archivo de imagen no es su FORMATO: 2.443 de 2.443 `.gif` de un corpus OER son PNG/JPEG/WEBP, y un barrido por extension entre dos arboles da «0 solapamiento» con varianza cero desde una premisa falsa (por `sha256` da 36).** 🔴 **`P334` — el titular de una FIGURA se resuelve por BYTES y vive en una obra DISTINTA de la que el item cita: los 36 pares citan `introductory-statistics` y sus bytes se publican en `osbooks-statistics`.** 🟢 **La herencia implicita de cesion EXISTE y es de 9.971 unidades (76,7 %), con la accion pre-registrada CONFIRMADA — y en 3.876 el padre tampoco declara nada.** 🔴 **`P333` — una huella tomada por sustitucion de comando no es la huella del archivo: `fa4e32e5e622` era el archivo MENOS su salto final.** 🔴 **`P335` — tercera sub-clase de `P320`: lo denegado fue la FORMA (lote) y no el derecho (pieza nombrada).** 🟢 **Barrido regional 36: las cuatro regiones tienen resuelto el dinero o la adopcion y NINGUNA la procedencia del activo.**
 > **Pase 106 del 2026-10-05:** 🟢 **Tendencias 851–858. Las tres acciones pre-registradas por el pase 105 se corrieron las tres: A CONFIRMADA, B FALSIFICADA, C CONFIRMADA.** 🔴 **La que manda es `P328`: la cesion de un OER se ESTRECHA entre ediciones, y la identidad que lo revela es el `collection-id`, no el slug — 10 de 10 colecciones del titular pasan de `CC BY 4.0` en `1e` a `CC BY-NC-SA 4.0` en `main`, cero contraejemplos; solo 2 de 22 colecciones vivas siguen permisivas.** 🟢 **La accion A resuelve las 1.748 que el pase 105 dejo SIN RESOLVER: las dos 1e declaran `CC BY 4.0` (dos lecturas concordantes del titular, control negativo 404), asi que los 1.732 items quedan CORRECTOS, el 62,2 % NO sube, y la lectura pasa a «el redistribuidor congelo una cesion que el titular estrecho».** 🔴 **La accion B falsifica su propia prediccion y cambia el DENOMINADOR: 17.665 de 18.054 JSON de `tutoring/` traen `license` propio ⇒ **82.492** unidades de cesion, no 13.371 — los porcentajes del pase 105 eran sobre el 16,2 % de la poblacion (las 8.312 contradicciones se replican exactas).** 🔴 **Hallazgo nuevo: 6.886 unidades declaran `oer: openai` con la cesion VACIA en 6.883 — contenido instruccional sintetico, auto-declarado, sin marca ni cesion, y cruza con los instrumentos de AI Act 50(2) que median 0 artefactos de marcado.** ⚠️ **`P329`, contra el arreglo de `P327`: una huella normalizada es identidad de TEXTO y no de FAMILIA (6 payloads `CC BY 4.0` dan 2 huellas).** 🔴 **Y dos correcciones propias: mi barrido v1 capturaba con `text=True` y normalizaba los CRLF ANTES de hashear (21.013 vs 21.442 B = las 429 terminaciones), y el `books.tsv` del pase 105 asigna la 2e a un curso cuyas 1.700 unidades citan la 1e.** 🟢 **Tablero re-verificado: 58 suites, 0 fallos (`Python 3.11.15`).** Ver **851**–**858**.
 > **Pase 105 del 2026-10-05:** 🔴 **La accion pre-registrada sale CONFIRMADA EN LA LETRA y FALSIFICADA EN LA MAGNITUD, al reves de lo previsto, y el hallazgo es grande: la cesion que un item AFIRMA no es la que su titular OTORGA.** Censo de los **13.371** problemas de `CAHLR/OATutor-Content` —no muestra— cruzando `license` contra `oer`: **8.312 items (62,2 %) declaran `CC BY 4.0` mientras el titular de la edicion que ellos mismos citan cede solo `NC-SA`**; **embarcable: 592 = 4,4 %**. 🟢 **Se midio con `openstax.org` en `000`, leyendo del titular por otro canal** (`openstax` en GitHub) — **`P326-A`: egress cerrado al sitio del titular no es cesion inalcanzable**. 🔴 **La licencia de OpenStax es POR LIBRO: 11 de 13 son `NC-SA`, y las 2 `CC BY 4.0` (`physics`, `statistics`) incluyen el unico libro que NINGUN item etiqueta.** 🔵 **La tasa de llenado mide diligencia, no permiso** — lo que **invierte** la receta `R-104`. 🔴 **`P327`: los bytes y el `sha256` crudo de un archivo de licencia no son identidad** (21.443 / 21.013 / 21.442 B = el mismo texto con CRLF / LF / CRLF-sin-salto). 🔴 **Y el calendario del AI Act vuelve mal por NOVENA vez**, ahora desde NA y LATAM. Ver las tendencias **843**–**850**.
 > **Pase 104 del 2026-10-05:** 🟢 **El canal VOLVIO, y eso es `P320` confirmado en la direccion contraria: es un hecho de PERMISO.** El instrumento del pase 103 estaba intacto y le faltaba el derecho a correrlo; esta sesion **si** lo tiene. Medido con control negativo antes de usarlo (rama inventada, ruta inventada y repo inventado dan **404**; `main`/`master`/`HEAD` dan el **mismo** sha): `raw.githubusercontent.com` **200**, clon `--filter=blob:none` de terceros **OK**. 🔴 **Sigue apagado:** `api.github.com` **403**, y `openstax.org`, `creativecommons.org`, `arxiv.org`, `aclanthology.org` **bloqueados por egress** por `curl` **y** por el fetcher. 🔴 **La tendencia que manda es de PROCEDENCIA y aplica a cualquier plataforma de contenido, no solo a esta: el material didactico open source declara su licencia **por item**, y un campo por item se puede llenar MAL. Medido sobre `OATutor-Content`: **1.216 items, 24,3 % NO lleva la cesion que el README promete para «all content»** — 19,3 % con el campo VACIO, 3,6 % con `CC4.0` (que no nombra clausulas: `CC BY 4.0` y `CC BY-NC-SA 4.0` son ambas «CC 4.0»), y 1,4 % con **una URL que no es de licencia**.** 🔵 **Y los vacios NO son ruido: se concentran por curso. **5 de 21 cursos con 0 %**, y `OpenStax: Calculus Volume 1` con **1,3 %** (74 de 75 vacios) mientras `Elementary Algebra` e `Intermediate Algebra` dan **100 %**.** ⚠️ **La explicacion mas probable —que `Calculus Volume 1` sea `CC BY-NC-SA 4.0` en el titular mientras los demas son `CC BY 4.0`— NO se publica como hecho: `openstax.org` da 403 por egress y lo unico que la sostiene son ediciones DERIVADAS y agregadores, que es exactamente el error que `P314` le costo a esta base. **Queda pre-registrada como accion del pase 105, con su prediccion escrita antes de correrla.** 🟢 **Lo de primera mano es la correlacion y alcanza para una regla de entrega: en una plataforma de contenido, la tasa de etiquetado por curso es un indicador de procedencia, y el curso peor etiquetado es el primero que hay que auditar.** 🔵 **Señal de mercado del barrido: el eje 2026 de los LMS open source es incorporar tutoria AI dentro de la plataforma (LearnHouse) en vez de agregarla por fuera — y la capa que crece es ERP+LMS unificado (OpenEduCat: 3 M+ usuarios, 90+ paises, 70+ modulos) contra LMS puro.** Ver **`P322`**–**`P325`**.
@@ -120,6 +121,139 @@ updated: 2026-10-05
 > están mal por ~2× y **un 403 de `curl` no es un 404**. Ver la nota de método del pase 12.
 > **Pase 11:** el Digital Omnibus es derecho vigente (tendencia 25), aparece la capa predictiva y está vacía (tendencia 26), y se corrige un error de método de diez pasadas sobre licencias permisivas (tendencia 27).
 
+## 🟢 Tendencias 859–866 — pase 107 del 2026-10-05: la EXTENSION de un archivo miente, el titular de una figura vive en otra obra, y una huella publicada de esta base era de un archivo que no existe
+
+> **Frontmatter y region:** `Global`. Las senales regionales de este pase estan en
+> `intel/market.md` (barrido **36**, cuatro regiones, **0 silencios**).
+
+🔵 **Ocho tendencias, numeradas una por una: 859, 860, 861, 862, 863, 864, 865 y 866** — enumeradas
+asi a proposito, porque la forma *«numeradas 859–866»* devolvia **0** citas al auditor de
+*backlinks* (`P97`, corregido en el pase 97).
+
+### 859 — `P332`: la EXTENSION de un archivo de imagen no es su FORMATO, y en un corpus OER real es falsa en el 100 % de los casos
+
+🟢 **Medido por firma de bytes sobre los 2.443 archivos de figura de `CAHLR/OATutor-Content`
+(`main`, sha `1925dec`):**
+
+| lo que la ruta promete | lo que dicen los bytes | archivos | % |
+|---|---|---|---|
+| `.gif` ⇒ GIF | **GIF** | 🔴 **0** | **0,0 %** |
+| `.gif` ⇒ GIF | PNG (`89 50 4E 47 0D 0A 1A 0A`) | **1.358** | 55,6 % |
+| `.gif` ⇒ GIF | JPEG (`FF D8 FF`) | **938** | 38,4 % |
+| `.gif` ⇒ GIF | WEBP (`RIFF`…`WEBP`) | **147** | 6,0 % |
+
+🔴 **La consecuencia es de instrumento, no de curiosidad: el `media/` de la coleccion del titular
+que este pase pudo abrir (`col30309`) tiene 706 archivos y CERO GIF, asi que un barrido «por
+extension» entre los dos arboles devuelve 0 solapamiento con varianza cero — desde una premisa
+falsa. Por `sha256` de contenido devuelve 36.** ⚠️ **Regla: cuando se comparan dos arboles por
+contenido, el filtro es la FIRMA. La extension es metadato del redistribuidor.**
+
+### 860 — `P334`: el titular de una FIGURA se resuelve por BYTES, y puede vivir en una obra DISTINTA de la que el item cita
+
+| obra que el item CITA | figuras | byte-identicas a `col30309` | % |
+|---|---|---|---|
+| (`oer` no-OpenStax) | 873 | **0** | 0,00 % |
+| `introductory-statistics` | 415 | **36** | **8,67 %** |
+| las otras 8 obras citadas | 1.155 | **0** | 0,00 % |
+| **TOTAL** | **2.443** | **36** | **1,47 %** |
+
+🟢 **La tabla es su propio control: la obra que corresponde acierta y las nueve restantes dan
+CERO — el instrumento no empareja ruido.** 🔴 **Y los 36 aciertos son unanimes: los 36 items citan
+`introductory-statistics` y los bytes de sus figuras se publican en `osbooks-statistics`
+(`col30309`).** 🔵 **Benigno en este caso, porque `col30309` es una de las dos unicas colecciones
+permisivas que el pase 106 midio en `main`. Grave como regla: una auditoria que abra el repo que el
+`oer` del item nombra mira el arbol EQUIVOCADO.**
+
+### 861 — Hay una capa de ACTIVO BINARIO en un corpus OER que ningun barrido de licencia de esta base contaba
+
+| la capa de figura, medida | cifra |
+|---|---|
+| archivos | **2.443** (~**156 MiB**: **164.119.470 B**, de 1.148 B a 1.937.018 B) |
+| imagenes **distintas** por `sha256` | **1.326** ⇒ **1.117** repeticiones (**45,7 %**) |
+| la imagen mas repetida | **26** apariciones |
+| problemas que las poseen | **1.586** de 13.371 |
+| cesion que declara el problema que las posee | `CC BY 4.0` **1.418** · `SIN-DECLARAR` **586** · `NO-RESUELVE` **439** |
+
+🔴 **Y la celda que decide una entrega: 825 archivos de figura cuelgan de un item que cita una
+edicion `2e` —la que `P328` midio estrechada a `CC BY-NC-SA 4.0`— y declara `CC BY 4.0`.**
+🔵 **Si la cesion se resolviera por IMAGEN y no por archivo, el denominador de riesgo baja 45,7 %
+de entrada: es la pregunta mas barata que esta capa deja abierta.**
+
+### 862 — La herencia implicita de cesion EXISTE y es de 9.971 unidades, pero en 3.876 el padre tampoco declara nada
+
+🟢 **La accion pre-registrada del pase 106 sale CONFIRMADA: 9.971 de las 12.999 unidades de
+`tutoring/` con `oer` vacio (76,7 %) cuelgan de un problema que cita OpenStax**, contra el umbral
+pre-registrado de 60 %.
+
+| clase del problema PADRE | familia que el padre declara | unidades | % |
+|---|---|---|---|
+| cita OpenStax | `CC BY 4.0` | **5.879** | 45,2 % |
+| cita OpenStax | 🔴 **SIN-DECLARAR** | **3.876** | 29,8 % |
+| otro `oer` | `NO-RESUELVE` | 1.836 | 14,1 % |
+| otro `oer` | `CC BY 4.0` | 692 | 5,3 % |
+| otro `oer` | `SIN-DECLARAR` | 500 | 3,8 % |
+| cita OpenStax | `NO-RESUELVE` | 216 | 1,7 % |
+
+🔴 **La sub-clase que el censo del pase 106 no separaba es la segunda mas grande y la peor: 3.876
+unidades vacias cuyo padre cita OpenStax y tampoco declara cesion. Ahi la herencia implicita no
+resuelve nada — el hijo esta vacio y el padre tambien.** 🟢 **El denominador se replica con un
+instrumento escrito de cero: 13.371 problemas + 69.121 unidades de hint = **82.492**, la cifra del
+pase 106 al digito.**
+
+### 863 — `P333`: una huella tomada por SUSTITUCION DE COMANDO no es la huella del archivo, y esta base publicaba una
+
+| forma de hashear el mismo `LICENSE` (`bibo242/blackboard-mcp`) | bytes | `sha256` (12) |
+|---|---|---|
+| crudo, tal como lo sirve el canal | **1.084** | `d65abf96e389` |
+| 🔴 `$(cat archivo)` — sustitucion de comando | **1.083** | 🔴 **`fa4e32e5e622`** ← lo publicado |
+| `head -c 1083` (control: quitar el ultimo byte) | 1.083 | **`fa4e32e5e622`** |
+| CRLF (control de direccion, el defecto de `P330`) | — | `7a4881ce89c8` |
+| quitar el **primer** byte (control: no es «un byte cualquiera») | 1.083 | `d5f986675965` |
+
+🔴 **El ultimo byte del archivo es `\n` y la sustitucion de comando de la shell lo recorta: la
+huella publicada era la del archivo MENOS su salto final, y viola la forma canonica que `P327` ya
+exige en esta base.** ⚠️ **Regla barata y falsable: una huella publicada cuyo conteo de bytes
+difiere del payload en EXACTAMENTE 1 es artefacto de salto final, no deriva del upstream.**
+🟢 **Lo que la huella sostenia sigue en pie —los dos `blackboard-mcp` son el mismo archivo byte a
+byte— y la FAMILIA no se movio en 5 de 5 remediciones** (MIT, MIT, MIT, GPL, Apache-2.0).
+
+### 864 — `P335`: el canal de verificacion puede estar vivo, el derecho concedido, y lo DENEGADO ser la FORMA de la operacion
+
+🔴 **Tercera sub-clase de `P320`, medida en este pase:** un clon `--filter=blob:none` de
+`openstax/osbooks-statistics`, pedido **por su nombre**, corrio sin friccion; el **mismo** clon
+repetido en un bucle sobre una lista de 9 slugs se **DENEGO**. 🔵 **Las dos primeras sub-clases
+eran de RED (pase 103: egress) y de PERMISO DE SESION (pase 104: el derecho a correr el clon). Esta
+es de FORMA: lote contra pieza nombrada.** ⚠️ **Consecuencia dicha y no extrapolada: el denominador
+del titular de este pase quedo en 1 coleccion de 22, y la accion A del pase 108 lo retoma una obra
+por vez y por su nombre.**
+
+### 865 — El dinero comprometido se vuelve el eje que separa a las cuatro regiones, y el hueco es el MISMO en las cuatro
+
+| region | el compromiso fechado en este barrido | el hueco |
+|---|---|---|
+| **North America** | **$169 M** a *responsible AI* en superior (Q1 2026) + programa educativo de OpenAI con **8 socios nacionales** | marco partido en 51 jurisdicciones |
+| **EMEA** | **£200 M+** de la 1ª AI Adoption Summit del Reino Unido (Cisco, IBM, BT, Rolls-Royce; **Skills England** fija el curriculo) + 2ª conferencia del Consejo de Europa sobre regulacion de AI en educacion en **octubre** | **38 %** sin empezar a pilotear contra **94 %** de intencion |
+| **APAC** | soberania determinando la infraestructura de **~50 %** de las empresas; **LearnUpon** abre HQ en Sydney con *Create+*; **TCS + Pearson** alianza plurianual | **Canberra endurece copyright** sin instrumento de procedencia |
+| **LATAM** | *working paper* de septiembre de 2026 con **200** instituciones en **19** paises y **5** dimensiones; marco **HABILITANTE** del BID; **99 %/85 %** de adopcion en startups | ningun marco comun |
+
+🟢 **Y la tendencia que ninguna region dice sola: las cuatro tienen resuelto el DINERO o la
+ADOPCION, y ninguna tiene resuelta la PROCEDENCIA DEL ACTIVO.** 🔵 **Primera vez en 36 barridos
+regionales que el mismo hueco aparece en las cuatro — y es el hueco que los instrumentos de este
+pase miden.**
+
+### 866 — El rango de mercado se ABRE en vez de cerrarse, y el CAGR regional contradice al global
+
+🔴 **Tres horizontes irreconciliables sobre el mismo mercado, de tres casas:** **$42,48 B a 2030**,
+**$79,6 B a 2034** y **$100,21 B a 2035**. 🔴 **Y el subtotal de Norteamerica —$951 M (2024) →
+$2.303,2 M (2029), CAGR 15,9 %— es menos de la MITAD del CAGR global que las mismas casas publican
+(31-41 %).** ⚠️ **O el crecimiento esta casi todo fuera de Norteamerica, o las dos cifras no miden
+lo mismo. Esta base no puede cerrarlo con el canal de hoy y lo deja escrito como CONTRADICCION, no
+como promedio.** 🟢 **Lo que si se puede usar sin elegir casa son las cifras de ADOPCION:** uso
+estudiantil **66 % (2024) → 92 % (2025)**, **86 %** en superior al arrancar 2026, **K-12 = 45,62 %**
+de la adopcion, **STEM = 34,78 %** de los ingresos, **cloud = 71,22 %** del despliegue, y
+*language learning* como segmento de mayor crecimiento.
+
+---
 ## 🟢 Tendencias 851–858 — pase 106 del 2026-10-05: la cesion de un OER se ESTRECHA entre ediciones, y la unidad que la mide no era la que esta base contaba
 
 > **Frontmatter y region:** `Global`. Las senales regionales de este pase estan en

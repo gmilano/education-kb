@@ -1,0 +1,6 @@
+arbol      : /tmp/claude-0/-home-user-globant-kb/ad32be58-fed6-547c-988f-7b9662836979/scratchpad/osx/osbooks-statistics/media
+filtro     : (todas las extensiones)
+archivos   : 706
+  JPEG                          499   70.7%   ej: CNX-Stats_Review_Exercises_fig001.jpg
+  PNG                           206   29.2%   ej: 12.png
+  OLE/CFB                         1    0.1%   ej: Thumbs.db

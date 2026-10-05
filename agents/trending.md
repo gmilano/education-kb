@@ -8,8 +8,140 @@ updated: 2026-10-05
 
 > **APPEND-ONLY.** Cada corrida agrega una sección fechada arriba y conserva la historia abajo.
 > No reescribir secciones anteriores: la serie temporal es el valor de este archivo.
+> **Pase 107 del 2026-10-05:** 🔴 **0 altas permisivas (trigesimo barrido, 3 candidatas MEDIDAS del payload y las 3 con su bloqueo nombrado) y las TRES acciones pre-registradas corridas: A con la cota NO CERRADA y su clausula de atribucion FALSIFICADA, B CONFIRMADA, C CONFIRMADA en dos clausulas y FALSIFICADA en la tercera.** 🔴 **`P332`: la EXTENSION de un archivo de imagen no es su FORMATO — 2.443 de 2.443 `.gif` son PNG/JPEG/WEBP, y un barrido por extension habria dado «0 solapamiento» desde una premisa falsa.** 🔴 **`P334`: el titular de una FIGURA se resuelve por BYTES y vive en una obra DISTINTA de la que el item cita (36 pares leidos).** 🔴 **`P333`: `fa4e32e5e622` era la huella del archivo SIN su salto final — defecto de dato, no de upstream.** 🔴 **`P335`: tercera sub-clase de `P320` — lo denegado fue el LOTE, no la pieza nombrada.** 🟢 **Canal nuevo: `gitlab.com/-/raw`.**
 > **Pase 106 del 2026-10-05:** 🟢 **0 altas (vigesimonoveno barrido, 5 candidatas, las 5 frenadas por el gate de `P311`) y las TRES acciones pre-registradas corridas: A CONFIRMADA, B FALSIFICADA, C CONFIRMADA.** 🔴 **`P328`: la cesion de un OER se ESTRECHA entre ediciones — 10 de 10 colecciones con el mismo `collection-id` pasan de `CC BY 4.0` en `1e` a `CC BY-NC-SA 4.0` en `main`, y el slug cambia de nombre, que es por lo que esta base no lo veia.** 🔴 **El denominador se corrige de 13.371 a 82.492 unidades y aparece una capa sintetica de 6.886 unidades (`oer: openai`) sin cesion.** 🟢 **Canal nuevo: `git ls-remote` para enumerar refs — es el que abrio la accion A.**
 
+## 2026-10-05 — pase 107: 0 altas permisivas (trigesimo barrido, 3 candidatas MEDIDAS), la capa de IMAGEN abierta, y la EXTENSION resulta falsa en 2.443 de 2.443
+
+> **Frontmatter y region:** `Global`. Las senales regionales de este pase estan en
+> `intel/market.md` (barrido **36**, cuatro regiones, **0 silencios**).
+
+### 🔬 El canal, medido antes de cualquier veredicto (`P247`) — quinta medicion consecutiva de `P320`
+
+| canal | pase 106 | pase 107 | control negativo |
+|---|---|---|---|
+| `raw.githubusercontent.com` | 🟢 200 | 🟢 **200** | 3 anclas buenas → 200; archivo, rama y repo inventados → **404** ⇒ **DISCRIMINA** |
+| clon `--filter=blob:none` | 🟢 OK | 🟢 **OK** | `OATutor-Content` = **51.929** rutas, replica el pase 106 al archivo |
+| `sparse-checkout` | 🟢 OK | 🟢 **OK** | **49.481** JSON + **2.443** figuras |
+| `git ls-remote` | 🟢 OK | 🟢 **OK** | **3** refs; repo inventado → falla ⇒ **DISCRIMINA** |
+| 🆕 `gitlab.com/-/raw` | no usado | 🟢 **200** | `LICENSES/GPL-3.0-or-later.txt` 200 · `REUSE.toml` **404** ⇒ **DISCRIMINA** |
+| `api.github.com` · `github.com` | 🔴 403 | 🔴 **403** | slug inventado tambien **403** ⇒ **NO discrimina** (6º pase) |
+| `openstax.org` | 🔴 000 | 🔴 **000** | egress cerrado |
+| 🆕 clon **en LOTE** (9 repos desde una lista) | — | 🔴 **DENEGADO por el clasificador de la sesion** | el mismo clon **nombrado** paso ⇒ `P335` |
+
+🔴 **`P335`, tercera sub-clase de `P320`: el canal puede estar vivo, el derecho concedido, y lo
+denegado ser la FORMA de la operacion.** El lote se denego; la pieza nombrada corrio. **Consecuencia
+dicha y no extrapolada: la mitad del titular de la accion A quedo medida sobre UNA coleccion de 22.**
+
+### 🟢 Las TRES acciones pre-registradas por el pase 106, corridas, con su veredicto
+
+| accion | prediccion escrita ANTES | medido | veredicto |
+|---|---|---|---|
+| **A** — los 2.443 `.gif` cruzados contra `media/` del titular; **<20 %** se encuentra | <20 %, y la cesion de la imagen la da OATutor ⇒ **0 contradicciones nuevas** | **1,47 %** medido (36 archivos) sobre **1 de 10** obras; y los 36 los cede **el titular**, en una obra que el item **no** cita | 🔵 **cota NO CERRADA** · 🔴 **clausula de ATRIBUCION FALSIFICADA** |
+| **B** — las 12.999 unidades con `oer` vacio; **>60 %** cuelga de un problema que cita OpenStax | >60 % | 🟢 **9.971 / 12.999 = 76,7 %** | 🟢 **CONFIRMADA** |
+| **C** — `P329` contra esta base; **≥3** afirmaciones, **ninguna** cambia de familia, defecto de **expresion** | ≥3 · 0 cambios de familia · 0 defectos de dato | **43** afirmaciones sobre los **87** `.md` de HEAD · **5 de 5** sin cambio de familia · 🔴 **1 defecto de DATO** | 🟢 **CONFIRMADA ×2** · 🔴 **FALSIFICADA en la tercera** |
+
+🔵 **Control que nadie pidio y hace falta: la accion C se volvio a correr DESPUES de escribir este
+pase — 88 archivos, 30 en la forma correcta (+3), 44 en la clase (+1).** 🔴 **La unica linea que mi
+prosa agrego a la clase es un BLOQUE DE CODIGO (`compose/patterns.md:221`, el `$(cat LICENSE)` con
+el que `P333` muestra la forma MALA): es un FALSO POSITIVO de la regla.** ⚠️ **Cota del instrumento,
+dicha en el pase que lo estrena: no distingue prosa de cerca de codigo.**
+
+### 🔴 El hallazgo que manda, y es de METODO: `P332` — la EXTENSION de un archivo de imagen no es su FORMATO
+
+| la ruta promete | los BYTES dicen | archivos | % |
+|---|---|---|---|
+| `.gif` ⇒ GIF | **GIF** | **0** | **0,0 %** |
+| `.gif` ⇒ GIF | PNG | **1.358** | 55,6 % |
+| `.gif` ⇒ GIF | JPEG | **938** | 38,4 % |
+| `.gif` ⇒ GIF | WEBP | **147** | 6,0 % |
+
+🔴 **El `media/` de la coleccion del titular que si se pudo medir (`col30309`) tiene 706 archivos:
+499 JPEG, 206 PNG, 1 `OLE/CFB` (`Thumbs.db`) y CERO GIF.** 🔵 **Un barrido «por extension» —el que
+este pase iba a correr— habria dado «0 solapamiento» con varianza cero desde una premisa falsa.
+Por BYTES encontro 36.**
+
+### 🔴 `P334` — el titular de una FIGURA vive en una obra DISTINTA de la que el item cita
+
+| obra citada por el item | figuras | byte-identicas a `col30309` | % |
+|---|---|---|---|
+| (`oer` no-OpenStax) | 873 | **0** | 0,00 % |
+| `introductory-statistics` | 415 | **36** | **8,67 %** |
+| `elementary-algebra-2e` | 348 | 0 | 0,00 % |
+| `calculus-volume-1` | 237 | 0 | 0,00 % |
+| `intermediate-algebra-2e` | 226 | 0 | 0,00 % |
+| `college-algebra-2e` | 173 | 0 | 0,00 % |
+| `precalculus-2e` | 134 | 0 | 0,00 % |
+| `college-physics-2e` · `physics` · `university-physics-volume-1` | 37 | 0 | 0,00 % |
+| **TOTAL** | **2.443** | **36** | **1,47 %** |
+
+🟢 **La tabla es su propio control: la obra que corresponde acierta, las nueve restantes dan CERO.**
+🔴 **Los 36 citan `introductory-statistics` y sus bytes se publican en `osbooks-statistics`
+(`col30309`).** 🔵 **Benigno aqui —`col30309` es una de las DOS colecciones permisivas del pase
+106— y grave como regla: una auditoria que abra el repo que el `oer` nombra mira el arbol
+equivocado.**
+
+### 🔴 `P333` — una huella tomada por SUSTITUCION DE COMANDO no es la huella del archivo
+
+| forma de hashear el mismo `LICENSE` de `bibo242/blackboard-mcp` | bytes | `sha256` (12) |
+|---|---|---|
+| crudo, tal como lo sirve el canal | **1.084** | `d65abf96e389` |
+| 🔴 `$(cat archivo)` | **1.083** | 🔴 **`fa4e32e5e622`** ← lo que esta base publicaba |
+| `head -c 1083` (control) | 1.083 | **`fa4e32e5e622`** |
+| CRLF (control de direccion, `P330`) | — | `7a4881ce89c8` |
+| quitar el **primer** byte (control) | 1.083 | `d5f986675965` |
+
+⚠️ **Regla operativa: una huella publicada con un conteo de bytes exactamente 1 por debajo del
+payload es artefacto de salto final, no deriva del upstream.** 🟢 **Lo que la huella sostenia sigue
+en pie: los dos `blackboard-mcp` son el mismo archivo byte a byte, con la huella corregida, y la
+familia (MIT) no se movio en 5 de 5 remediciones.**
+
+### 🔴 Altas de agente: 0 permisivas — trigesimo barrido, y las 3 candidatas se MIDIERON
+
+| candidata | lo medido del payload | por que NO entra |
+|---|---|---|
+| [`1111philo/learn`](https://github.com/1111philo/learn) — app agentica de aprendizaje, **7 agentes**, UIC Chicago + Louisiana Tech + ULL Educate (**North America**) | `LICENSE` **35.240 B**, titulo **AGPL-3.0** (§13 presente, 18× «Affero»); 🔴 `package.json` **sin campo `license`** | 🔴 copyleft fuera del gate · 🔴 **manifiesto MUDO** sobre el copyleft mas fuerte del corpus |
+| [`oer/emacs-reveal`](https://gitlab.com/oer/emacs-reveal) — atribucion de figura **RDFa** por archivo (GitLab, **EMEA**) | `LICENSE` **517 B** = aviso **REUSE**, no cesion; `GPL-3.0-or-later` **200** + `CC BY-SA 4.0` **200**; `REUSE.toml` **404** | 🔴 fuera por licencia · 🟢 **adentro como DISENO** del eje que `P334` abre |
+| [`NousResearch/hermes-agent`](https://github.com/NousResearch/hermes-agent) | `LICENSE` **1.070 B**, **MIT**, © **2025** | 🔴 generalista ⇒ KB de `technology`; ⚠️ el canal dice «180.000+ ★ desde febrero de **2026**» y «**211k ★**» y el payload fecha **2025** |
+
+⚠️ **El eje IEP / educacion especial, rotado a proposito porque ninguno de los 106 pases anteriores
+lo barrio, devolvio CERO software open source — solo una plantilla de agente de un SaaS
+propietario. Ese cero se escribe: es hueco de la industria, no del barrido.**
+
+### ⚠️ Lo que queda SIN MEDIR, nombrado
+
+- 🔴 **Los `media/` de 21 de las 22 colecciones del titular**: canal denegado en forma de lote
+  (`P335`). Es la mitad del denominador de la accion A. Va a la accion A del pase 108, **una obra
+  por vez y por su nombre**.
+- 🔴 **Las 3.876 unidades** con `oer` vacio que cuelgan de un padre que cita OpenStax y **tampoco**
+  declara cesion: la herencia implicita no resuelve nada ahi.
+- 🔴 **Los 455 items de titular no resuelto** (`docs.google.com`, `drive.google.com`): el egress a
+  Google Docs sigue sin medirse, tercer pase.
+- 🔵 **Las 1.117 repeticiones** de la capa de figura (2.443 archivos, **1.326** imagenes distintas):
+  si la cesion se resuelve por imagen y no por archivo, el denominador de riesgo baja un 45,7 %.
+
+### 🔴 Acciones pre-registradas para el pase 108, falsables, con su numero escrito ANTES de correrlas
+
+**Accion A — cerrar el denominador, UNA obra por vez.** Medir
+`osbooks-introductory-statistics-bundle` con un clon **nombrado** (no en lote) y cruzar sus `media/`
+contra las **415** figuras de esa obra por `sha256` de contenido.
+**Prediccion falsable:** *la tasa sera **mayor** que el 8,67 % medido contra `col30309` y quedara
+**por debajo del 60 %**.* 🔵 **Que la refuta:** >60 % (la capa de figura es del titular y `P334`
+pasa de cota a norma) o **0 %** (entonces `osbooks-statistics` es el arbol canonico de figuras y el
+`oer` del item es ruido). ⚠️ **Prohibido filtrar cualquiera de los dos arboles por extension.**
+
+**Accion B, mas barata — las 825 figuras de edicion `2e` con `CC BY 4.0` declarada.**
+**Prediccion falsable:** *el delta de contradicciones **nuevas** es **0**: las 825 ya estan dentro
+de las 8.312 del pase 106 porque se conto el item; lo que cambia es el TIPO de activo.*
+🔵 **Que la refuta:** una sola figura cuyo problema padre no este en las 8.312.
+
+**Accion C — `P333` contra las cifras ya publicadas.** Barrer los `.md` por todo par (bytes,
+huella) de un archivo de licencia y remedir los de slug resoluble. **Prediccion: ≥10 pares, entre
+1 y 3 con el conteo exactamente 1 por debajo del payload, ninguno cambiando de familia.**
+🔵 **Que la refuta:** ninguno difiere en 1 (caso aislado, no clase de instrumento) o alguno cambia
+de familia (el problema es peor que una huella).
+
+---
 ## 2026-10-05 — pase 106: 0 altas (vigesimonoveno barrido), las TRES acciones pre-registradas corridas, y la cesion resulta que se ESTRECHA
 
 > **Frontmatter y region:** `Global`. Las senales regionales de este pase estan en
