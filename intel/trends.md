@@ -315,6 +315,45 @@ about a project. **A withdrawal needs a stronger probe than an addition**, becau
 a wrong addition wastes a probe and a wrong withdrawal destroys knowledge and is
 believed.
 
+## 16. US state law has converged on one testable rule: human judgment is final
+
+Fifteen trends in, the single most useful thing about the 134 AI-in-education bills
+across 31 US states is **how little they disagree on the core requirement.** Read
+by mechanism rather than by state, the 2026 statutes converge on a sentence you can
+build against:
+
+| State | Instrument | The operative requirement |
+|---|---|---|
+| Idaho | **SB 1227**, Generative AI in Education Act | statutory test: **"human judgment remains the final authority"**; AI may not replace human teachers |
+| Oklahoma | **SB 1734** | AI only **under educator supervision with human review**; barred from high-stakes decisions; **annual parent disclosure** |
+| Maryland | **AI Ready Schools Act** | human oversight; all **24** districts adopt aligned policies within **120 days** of MSDE guidance |
+| Ohio | **HB 96** (2025–27 budget) | first state to **mandate** a written district AI policy — deadline **1 July 2026, now passed** |
+| California | **AB 1159** (CALPIPA, signed 10 Sep 2026) | **identifiable student data may not train generative AI**; higher-ed provisions from **1 July 2027** |
+
+**Why this is a trend and not a list.** Four different legislatures, drafting
+independently, landed on **teacher-in-the-loop plus no-high-stakes-automation** —
+the *same* requirement the EU AI Act imposes on Annex III education systems, the
+*same* one Beijing enforces by barring primary pupils from independent generative-AI
+use, and the *same* one trend 7 identifies as the regulated frontier. **A single
+oversight architecture now satisfies the EU, five-plus US states and China.** That
+is the strongest reuse argument in this KB: build the gate once, sell it in every
+region.
+
+**And the statutes are buying more than compliance.** Idaho mandates **AI literacy
+standards and educator training**; Oklahoma requires **annual parent disclosure**;
+Ohio's districts are **past** their policy deadline and therefore in the
+implement-and-audit phase. These are **enablement and recurring-reporting lines**,
+not one-off policy documents — the same shape as the UAE's teacher-training mandate
+in trend 13.
+
+**What to build, concretely.** The gate is the product:
+`WAITING_REVIEW`-style approval before any graded or published artefact, an
+immutable evidence trail per decision, cohort-based capability tiering, and a
+disclosure report generator. [littlecookie0722/AI-Teaching-Agent](https://github.com/littlecookie0722/AI-Teaching-Agent)
+(MIT) is the **only permissive reference implementation** of that shape this KB has
+found — 0★ and unproven, so read it and re-implement rather than pin it. Pattern
+P11 assembles the production version.
+
 ## Regional notes where the trend diverges
 
 - **North America:** adoption is broad (60% of K-12 teachers) and the binding
@@ -367,6 +406,46 @@ believed.
   regulatory map fragmenting country by country rather than converging.
 
 ## Declared gaps this pass
+
+**Updated in the fourth pass of 2026-10-06.** Channels new to this KB this pass:
+paper-to-repository tracing, a GitHub-organisation sweep, and a
+Spanish/Portuguese-language search. Four of the gaps below changed state.
+
+- **RESOLVED-IN-PART: lesson generation is no longer a gap at all.**
+  [THU-MAIC/OpenMAIC](https://github.com/THU-MAIC/OpenMAIC) (**MIT, 40.0k★,
+  Tsinghua**) generates complete lessons — slides, quizzes, HTML simulations, PBL
+  scenes — with server-side PostgreSQL-backed persistence. This KB spent three
+  passes recording the 404 of a `-Brasil`-suffixed fork of this project as evidence
+  of absence. **Check the upstream of a name before recording a gap.**
+- **NARROWED: Africa has a code shelf.** `AI-for-Education` (5 of 6 repos MIT) is
+  built for **Sierra Leone's MBSSE** and **Uganda**. At 1–12★ it is research-grade,
+  so the gap becomes *small and specific* rather than *empty*. Teacher capability
+  is still the binding constraint.
+- **NARROWED: the gated-grading architecture has a permissive reference
+  implementation.** `littlecookie0722/AI-Teaching-Agent` (MIT) implements the
+  `WAITING_REVIEW` gate, sandboxed grading with evidence, and answer-stripped
+  candidate views. **0★, no releases** — so the gap moves from "unbuilt" to
+  "**not built at production maturity**". Re-implement, do not pin.
+- **STILL OPEN, and now the firmest finding in this KB: no LATAM-origin permissive
+  education project.** The gap **lost its strongest piece of evidence** this pass
+  (`OpenMAIC-Brasil` was never Brazilian) and **survived anyway** on a
+  Spanish/Portuguese-language search that returned zero LATAM-origin projects.
+  Four independent channels agree.
+- **STILL OPEN: no India-, Japan-, Korea- or ASEAN-origin permissive education
+  project**, searched by jurisdiction name this pass. OpenMAIC **widens** the China
+  lead rather than closing this. And still **no education layer on any APAC
+  sovereign model** (Sarvam, SEA-LION, Sahabat AI, ILMU, HyperCLOVA X Think,
+  BharatGen, Fugaku-LLM, NTT Sarashina).
+- **NEW, precisely sized: no shippable permissive evaluator of tutoring quality.**
+  `AITutor-EvalKit` (EACL 2026) is the only published instrument for scoring
+  *tutoring* rather than answers — **MI** (Mistake Identification), **ML** (Mistake
+  Location), **PG** (Providing Guidance), **AC** (Actionability) — and it has **no
+  `LICENSE` payload**. `AI-for-Education/pedagogy-benchmark` (MIT, 12★) closes only
+  the adjacent half: it scores **models against exam questions, not live tutor
+  dialogue**. The evaluation gap is now split, and only the model-selection half is
+  closed.
+- **Still no open source EU AI Act compliance toolkit specific to education** —
+  re-searched this pass, nothing found.
 
 - **NARROWED (third pass, 2026-10-06): a permissive automated grader exists, for
   corporate L&D only.** `Selleo/mentingo` (MIT) grades open-ended behavioural and

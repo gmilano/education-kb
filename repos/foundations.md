@@ -67,6 +67,33 @@ three-name allowlist throws away. The allowlist for an education engagement is:
 **MIT, Apache-2.0, BSD (2/3-clause), ECL-2.0, PostgreSQL License, ISC** — and read
 the payload for carve-outs before trusting any of them.
 
+## Added in the fourth pass of 2026-10-06
+
+Channels new to this KB: **paper-to-repository tracing** (arXiv, ACL Anthology)
+and a **GitHub-organisation sweep**. Licences read from each repository's own
+`LICENSE` payload via `raw.githubusercontent.com`.
+
+| Repo | Licence (read from payload) | ★ | Role in a build |
+|---|---|---|---|
+| [THU-MAIC/OpenMAIC](https://github.com/THU-MAIC/OpenMAIC) | **MIT** (`LICENSE`, © 2026 THU-MAIC) | **40.0k** | **The content-generation spine.** Tsinghua's Open Multi-Agent Interactive Classroom: topic or document → slides, quizzes, HTML simulations and PBL scenes, delivered by AI teacher + AI classmate agents with TTS and a shared whiteboard; exports PPTX and interactive HTML. v1.2.0-rc.1 (2026-10-04) is **server-first with PostgreSQL persistence**, so generation survives a closed tab or restart. TypeScript / Next.js / React. |
+| [AI-for-Education/fabdata-llm](https://github.com/AI-for-Education/fabdata-llm) | **MIT** (`LICENSE`) | 9 | Multi-provider LLM interface and chatbot management. A small, readable alternative to a heavyweight gateway when the deployment has to stay auditable. Python. |
+| [AI-for-Education/fabdata-parsedoc](https://github.com/AI-for-Education/fabdata-parsedoc) | **MIT** (`LICENSE`) | 2 | Document text extraction, parsing and summarisation — the ingest stage ahead of any content pipeline. Python. Pair with or compare against `opendatalab/MinerU` already on this shelf. |
+| [AI-for-Education/pedagogy-benchmark](https://github.com/AI-for-Education/pedagogy-benchmark) | **MIT** (`LICENSE`) | 12 | **Model-selection instrument.** Scores LLMs on *pedagogical knowledge* using teacher-qualification exam questions, rather than on task accuracy. The only thing on this shelf that answers "which model should teach this?" with evidence. Python. |
+| [AI-for-Education/voice-ai-evaluation-framework](https://github.com/AI-for-Education/voice-ai-evaluation-framework) | **MIT** (`LICENSE`) | 1 | Evaluation harness for **voice** interfaces — the modality that binds where literacy, device cost or bandwidth do. Python. |
+
+**Star counts, stated plainly.** OpenMAIC is a flagship at 40.0k★. The four
+`AI-for-Education` libraries are **1–12★ research-grade code** and should be read
+and vendored deliberately, not pinned as if they were maintained infrastructure.
+They are listed because this KB had **no permissive entry at all** for pedagogical
+model selection or voice evaluation, and because they are the **first
+Africa-placed repositories it has recorded** — the organisation's work is built
+for **Sierra Leone's MBSSE** and for **Uganda** (Luganda).
+
+**One sibling in that organisation is not usable:**
+[`Luganda-linguistic-benchmarks`](https://github.com/AI-for-Education/Luganda-linguistic-benchmarks)
+has **no `LICENSE` payload** (`README.md` 200, `LICENSE` 404). Five MIT siblings do
+not license the sixth.
+
 ## Teaching-content repos (for enablement, not for production)
 
 | Repo | License (read from payload) | Note |
@@ -153,4 +180,28 @@ Repo *location* needs the same care: `apereo/opencast` is a **404**, and the liv
 repository is `opencast/opencast` (ECL-2.0). An org-renamed project will fail a
 reachability probe while the project itself is perfectly healthy — re-probe the
 name before recording a gap. The converse also happens: `planejaia/OpenMAIC-Brasil`
-is a confident search result for a repository that genuinely does not exist.
+is a confident search result for a repository that genuinely does not exist —
+**re-probed on 2026-10-06 it still 404s on all four** candidate branches (`main`,
+`master`, `develop`, `v1.0.0`).
+
+**Two rules added in the fourth pass of 2026-10-06, because that last example was
+read wrongly for three passes.**
+
+1. **A 404 on a suffixed name obliges you to query the base name before you record
+   a gap.** `OpenMAIC-Brasil` is absent; **`OpenMAIC` is not.** The upstream is
+   [THU-MAIC/OpenMAIC](https://github.com/THU-MAIC/OpenMAIC) — **MIT, 40.0k★,
+   Tsinghua University** — now the largest permissive asset in this KB and listed
+   on the core shelf above. This KB carried the absence as evidence through three
+   passes while a forty-thousand-star implementation of the same idea sat one query
+   away.
+2. **A repository name is not a provenance claim.** `-Brasil`, `-India`, `-LATAM`
+   are strings an author typed. Attribute region from the **owner account, the
+   commit history or the README** — never from the slug. The no-LATAM-origin gap
+   was partly argued from this filename; it has since been re-established on
+   channels that do not depend on one, including a Spanish/Portuguese-language
+   search (see `agents/top.md`).
+
+**And sweep the organisation behind any interesting repository.** Topic pages rank
+by stars, so they structurally hide small orgs: the `AI-for-Education` sweep in the
+same pass returned six repositories, five MIT, that no topic page had ever shown
+this KB — and they are the only Africa-placed code it holds.

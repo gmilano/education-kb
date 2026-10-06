@@ -448,6 +448,118 @@ with in-region inference and a human-approval gate on certification paths.
 
 ---
 
+## P11 — Gated lesson generation (one oversight gate, sold in every region)
+
+Added in the fourth pass of 2026-10-06. This is the pattern that **trend 16**
+argues is the highest-reuse build in this KB: four US state legislatures, the EU
+AI Act and Beijing all converge on *teacher-in-the-loop plus
+no-high-stakes-automation*, so the gate is built once and sold everywhere.
+
+**Use when:** the client has to produce teaching or assessment material at volume
+**and** has a statutory human-oversight obligation. That is now the default, not
+the exception — Idaho (SB 1227, *"human judgment remains the final authority"*),
+Oklahoma (SB 1734, educator supervision + annual parent disclosure), Maryland (AI
+Ready Schools Act, 24 districts / 120 days), Ohio (HB 96, deadline **passed**
+1 July 2026, so districts are in implement-and-audit), the EU AI Act Annex III, and
+China's bar on primary pupils using generative AI independently.
+
+**Outcome:** generated lessons and assessments that **cannot reach a student or a
+gradebook** without a named human approving them, with an evidence trail per
+decision and a disclosure report the client can file.
+
+**Wiring:**
+1. **Generate with OpenMAIC, self-hosted from a reviewed fork.**
+   [THU-MAIC/OpenMAIC](https://github.com/THU-MAIC/OpenMAIC) (**MIT, 40.0k★**,
+   Tsinghua) turns a document or topic into slides, quizzes, HTML simulations and
+   PBL scenes. **Pin v1.2.0 or later specifically**: that line is server-first with
+   PostgreSQL persistence, so a generation is a **durable job** rather than a
+   browser session — which is the only reason a review queue can be bolted on
+   without rewriting its execution model. Point inference at whatever model the
+   client's data-residency posture permits.
+2. **Take the gate design from AI-Teaching-Agent, and re-implement it.**
+   [littlecookie0722/AI-Teaching-Agent](https://github.com/littlecookie0722/AI-Teaching-Agent)
+   (MIT) is the only permissive implementation of this shape in this KB, and it
+   is **0★ with no releases — read it, do not pin it.** Take four things: the
+   **`WAITING_REVIEW` task state** that blocks publication, the **JSON-Schema-validated
+   DSL** for lab/exam/grading artefacts, **sandboxed grading execution that emits
+   evidence**, and the **candidate-facing view that strips answers and internal
+   grading references**. That last one is the detail teams forget and leak on.
+3. **Make the gate unskippable at the type level.**
+   [pydantic/pydantic-ai](https://github.com/pydantic/pydantic-ai) (MIT): every
+   publishable artefact carries non-optional `approved_by`, `approved_at` and
+   `source_reference`. An unapproved artefact should fail to **construct**, not
+   fail review. Typed boundaries are what turn a policy into a build error.
+4. **Choose the generating model on pedagogical evidence, not vibes.**
+   [AI-for-Education/pedagogy-benchmark](https://github.com/AI-for-Education/pedagogy-benchmark)
+   (MIT) — see **P12**. Record the score in the engagement's decision log; it is
+   the cheapest defensible answer to "why this model?"
+5. **Trace every generation and every approval.**
+   [langfuse/langfuse](https://github.com/langfuse/langfuse) (MIT — **excluding
+   `ee/`, `web/src/ee/` and `worker/src/ee/`**, which carry a separate enterprise
+   licence; stay out of those paths). The trace is the Annex III technical
+   documentation and the Oklahoma parent-disclosure evidence, from one store.
+6. **Deliver into the LMS the client already runs** via the Canvas or Moodle MCP
+   servers in `agents/top.md` — **probing each one's `LICENSE` payload first**, as
+   three of seven in this KB turned out unusable.
+7. **Where you cannot host the generator, export instead.** OpenMAIC emits **PPTX
+   and interactive HTML**, so a buyer who will not run a Chinese-origin application
+   can still take the artefact. Generate in Globant's environment, gate it, hand
+   over the deck.
+
+**Effort:** 6–8 weeks for a gated pipeline on one subject and one grade band;
+10–12 weeks with multi-cohort capability tiering (compose with **P9**).
+
+**Why this beats competing with Khanmigo.** North Carolina is spending **$10M+
+recurring, sole-sourced** on Khanmigo (SB 1006). The tutor is bought; the
+**oversight, integration and evidence layer around it is not**, and every statute
+above requires one. Sell the gate, not the tutor.
+
+## P12 — Pedagogy-aware model selection and tutor evaluation
+
+Added in the fourth pass of 2026-10-06. Short, cheap, and it answers a question
+clients ask in week one that this KB previously could not answer with evidence:
+**"which model should teach?"**
+
+**Use when:** scoping any tutoring or content build, and whenever a client asks you
+to justify a model choice — or when a regulator asks how tutoring quality is
+measured.
+
+**Outcome:** a defensible model choice backed by pedagogical measurement rather
+than general-purpose benchmarks, plus a repeatable harness for scoring tutor
+behaviour as the deployment evolves.
+
+**Wiring:**
+1. **Score candidate models on pedagogical knowledge, not task accuracy.**
+   [AI-for-Education/pedagogy-benchmark](https://github.com/AI-for-Education/pedagogy-benchmark)
+   (**MIT**, 12★) evaluates models against **real teacher-qualification exam
+   questions**. A model that tops a reasoning leaderboard can still not know how to
+   teach, and this is the only instrument in this KB that distinguishes the two.
+2. **Score the deployed tutor's *dialogue* on a rubric you re-implement yourself.**
+   The one published scheme for this is `AITutor-EvalKit` (EACL 2026):
+   **MI** (Mistake Identification), **ML** (Mistake Location), **PG** (Providing
+   Guidance), **AC** (Actionability). **Re-implement the four dimensions; do not
+   vendor the code** — its paper claims MIT but the repository has **no `LICENSE`
+   payload on either branch**, which leaves it legally unlicensed. The rubric is
+   published research and free to apply; the code is not safe to ship.
+   Filing an issue upstream asking for a `LICENSE` is a cheap, high-value
+   contribution — do it at the start of the engagement and the blocker may clear
+   before delivery.
+3. **Evaluate the voice path separately where it is the primary modality.**
+   [AI-for-Education/voice-ai-evaluation-framework](https://github.com/AI-for-Education/voice-ai-evaluation-framework)
+   (MIT) — relevant wherever literacy, device cost or bandwidth binds, which is the
+   **LATAM offline-first (P5)** and **African** context rather than the EMEA one.
+4. **Run it as a regression gate, not a one-off.** Wire both scores into CI over a
+   fixed dialogue set and trace with Langfuse (MIT, minus the `ee/` paths). A model
+   or prompt change that lowers PG or AC should **fail the build**; otherwise
+   tutoring quality silently decays and nobody can date the regression.
+
+**Effort:** 1–2 weeks as a scoping add-on; 3–4 weeks to run as a standing CI gate.
+
+**Caveat, stated plainly:** these are **1–12★ research-grade repositories**. Vendor
+them deliberately, read the code before trusting a score, and expect to maintain
+your fork. They are in this KB because they are the only permissive options that
+exist for these two functions — not because they are robust.
+
 ## Pattern selection
 
 | Situation | Pattern |
@@ -468,6 +580,12 @@ with in-region inference and a human-approval gate on certification paths.
 | Corporate **L&D** buyer who wants to own the platform | **P10** (fork Mentingo, MIT) — explicitly *not* P1 |
 | Academic institution, however L&D-shaped the ask sounds | P1; Mentingo is a component donor here, not a platform |
 | Needs spaced repetition / retention reached by an agent | `ankimcp/anki-mcp-server` (MIT, 53 tools) inside P1, or OpenTutor (MIT) for FSRS 4.5 built in |
+| US district or state with a 2026 AI statute (ID, OK, MD, OH, CA) | **P11** — one oversight gate satisfies all five, the EU Annex III and Beijing |
+| Needs whole lessons generated, not just tutoring dialogue | **P11** (OpenMAIC, MIT, 40.0k★ — pin v1.2.0+ for durable server-side jobs) |
+| Competing against an incumbent AI tutor already bought (e.g. Khanmigo) | **P11** — sell the oversight, integration and evidence layer, not a rival tutor |
+| Client asks "which model should teach?" or must justify a model choice | **P12** (`pedagogy-benchmark`, MIT) — 1–2 weeks as a scoping add-on |
+| Tutoring quality must be measured or must not silently regress | **P12** — re-implement the MI/ML/PG/AC rubric; `AITutor-EvalKit` code is unlicensed |
+| Voice is the primary modality (low literacy, low bandwidth, Africa) | **P12** step 3 + **P5** |
 
 ## Anti-patterns
 

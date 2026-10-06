@@ -58,24 +58,72 @@ against whichever LMS the client already runs.
 
 ### North America
 
-- **Largest regional share: 36% of the global market, $3.68B in 2026**, projected
-  to reach $32B by 2030.
+- **Largest regional share: 36% of the global market, $3.68B in 2026.** The 2030
+  figure is **disputed and must be quoted as a range** — see the sizing conflict
+  immediately below.
+- **SIZING CONFLICT, flagged in the fourth pass of 2026-10-06 — do not quote
+  "$32B by 2030" unqualified.** Earlier passes of this KB recorded NA 2030 at
+  **$32B**. A second source puts NA at **$3.68B (2026) → $10.8B (2030), 31.1%
+  CAGR**. The two cannot both be right, and **the lower one is the more internally
+  consistent**: this KB's own global row is $42.48B in 2030, and 36% of that is
+  ~$15.3B, so a $32B North America would be **~75% of the entire global market** —
+  contradicting the 36% share asserted in the same breath. $10.8B implies NA share
+  *falling* to ~25% by 2030, which is consistent with the KB's EMEA finding that
+  mature markets grow below the global rate.
+  **How to use it:** quote **$3.68B for 2026** (both sources agree) and give 2030
+  as **$10.8B–$32B, source-dependent**, naming the uncertainty. The primary
+  source could not be re-read this pass — `grandviewresearch.com` is blocked by
+  this environment's egress proxy — so the conflict is **recorded, not resolved**.
+  Same treatment this KB already applies to MEA.
 - Adoption is already broad: **60% of US K-12 teachers used AI tools in the
   2024–25 school year; 32% used them at least weekly.** The sale is no longer
   "should you use AI" — it is governance, procurement and integration.
 - **Regulation is the demand driver.** 134 AI-in-education bills introduced
   across 31 states in 2026. Concretely:
-  - California **AB 1159** prohibits using student data to train AI models.
-  - **Oklahoma and Maryland** require human oversight and bar AI from making
-    high-stakes decisions about students.
-  - **Ohio** mandated that every public district have a written AI policy by a
-    July 2026 deadline.
+  - California **AB 1159** — the **Learner Personal Information Protection Act
+    (CALPIPA)**, **signed by Governor Newsom on 10 September 2026**. Bars
+    companies from using **identifiable** student data to train generative AI or
+    build AI systems, and extends protection to **reproductive-health and
+    immigration** records. **Its higher-education provisions begin 1 July 2027** —
+    a dated, known-in-advance procurement trigger for every university vendor in
+    the state. Put it in the pipeline now.
+  - Idaho **SB 1227** — the **Generative Artificial Intelligence in Education
+    Act**, and it is much more than a data-privacy bill. It requires a **statewide
+    K-12 AI framework**, local district policies, **AI literacy standards and
+    educator training**, data-privacy requirements for AI tools, and it
+    **prohibits AI from replacing human teachers** — the statute's own test is
+    that **"human judgment remains the final authority."** The training mandate is
+    a **billable enablement line**, not just a constraint.
+  - Oklahoma **SB 1734** — AI permitted **only under educator supervision with
+    human review**, barred from high-stakes decisions, state guidance plus
+    district policies required, and **annual disclosure to parents**. That last
+    item is a recurring reporting obligation, which means a recurring deliverable.
+  - Maryland **Artificial Intelligence Ready Schools Act** — all **24** local
+    districts must adopt aligned policies within **120 days of MSDE releasing its
+    guidance**. Note the shape: a **rolling deadline keyed to a state
+    publication**, not a fixed calendar date, so the buying window opens when MSDE
+    publishes.
+  - **Ohio HB 96** (the 2025–2027 operating budget) — **the first state to mandate
+    AI frameworks in every public K-12 district.** DEW published its model policy
+    by **31 December 2025**; every district had to adopt a written AI policy by
+    **1 July 2026**. **That deadline has now passed**, so Ohio's 600+ districts are
+    no longer buying policy documents — they are in the **implement-and-audit**
+    phase, which is the more valuable engagement and the one with no incumbent.
   - **Georgia and Mississippi** require computer science credits including AI
     instruction from the late 2020s.
   - **New York City DOE** issued guidance in March 2026 built on a "Traffic
     Light Framework," informed by Google and OpenAI.
-  - **North Carolina** committed $10M to fund Khanmigo across participating
-    districts — evidence that states will buy AI tutoring directly.
+  - **North Carolina SB 1006** — the **K-12 Innovation and Transformation Act**,
+    which creates an **AI Academic Support Program** letting public school units
+    contract with Khan Academy for **Khanmigo in grades 6–12**. Two details change
+    how you read it: the money is **more than $10M in *recurring* state funding**,
+    not a one-off pilot, and it was **directed to a single vendor without
+    competitive bidding** (defended publicly by sponsor Senator Michael Lee,
+    R-New Hanover, in June 2026). **Read-across:** states will fund AI tutoring as
+    a standing line item, and a sole-source award of that size invites both
+    procurement challenges and copycat RFPs in neighbouring states. The opening is
+    the **integration, oversight and evidence layer around** such a contract — not
+    competing with the tutor itself.
 - **Opportunity:** policy-to-implementation work. Districts now have mandates and
   no capability. Offer: AI policy implementation, a human-oversight gate wired
   into the grade path, student-data-boundary architecture (AB 1159 means
@@ -105,15 +153,33 @@ against whichever LMS the client already runs.
 
 **Third pass (2026-10-06) — channel saturated, nothing net new.** The North America
 query was re-run and returned the same facts already recorded above: 36% share /
-$3.68B in 2026 → $32B by 2030; 60% of K-12 teachers using AI in 2024–25 with 32%
-weekly; 134 bills across 31 states; California AB 1159 and Idaho SB 1227 on student
-data; Oklahoma and Maryland human-oversight requirements; Ohio's July 2026 policy
-deadline; North Carolina's $10M Khanmigo earmark; the AASA student framework from
-all 50 states (created at America's Youth AI Festival in July 2026). **Stating this
-explicitly rather than leaving silence:** the North America picture in this KB is
-saturated for the open-web channel. Further depth needs a different instrument —
-state procurement portals, district RFPs, or the state guidance trackers directly —
-not another general search.
+$3.68B in 2026 (2030 **disputed: $10.8B–$32B**, see the sizing conflict above);
+60% of K-12 teachers using AI in 2024–25 with 32% weekly; 134 bills across 31
+states; California AB 1159 and Idaho SB 1227; Oklahoma and Maryland human-oversight
+requirements; Ohio's July 2026 policy deadline; North Carolina's $10M Khanmigo
+earmark; the AASA student framework from all 50 states (created at America's Youth
+AI Festival in July 2026).
+
+**The "saturated" verdict recorded here in the third pass was premature, and the
+fourth pass of 2026-10-06 withdraws it.** That pass claimed the open-web channel
+was exhausted for North America and that only procurement portals and state
+trackers could add depth. Re-running general searches returned **materially more
+per bill** without touching a single procurement portal: a **statute name and
+signing date** for AB 1159 plus a **1 July 2027 higher-education trigger** nobody
+had recorded; Idaho SB 1227's real scope (**an AI-literacy and educator-training
+mandate with a "human judgment is final" test**, not a privacy bill); a **bill
+number** for Oklahoma (**SB 1734**) and its **annual parent-disclosure**
+obligation; Maryland's **24 districts / 120-day rolling** mechanism; Ohio's
+**HB 96** vehicle and the fact its deadline is now **past**; and North Carolina's
+funding being **recurring and sole-sourced**.
+
+**The lesson is about the claim, not the region.** "Saturated" conflated *no new
+entities* with *no new information*. The entity list barely moved; the
+**mechanisms, dates and bill numbers** — which are what make a finding sellable —
+were mostly absent. Before declaring a channel exhausted, ask whether the next
+pass would add **rows** or **precision**, and treat the second as worth a pass on
+its own. Procurement portals and state trackers remain the right instrument for
+going deeper still.
 
 ### EMEA
 
@@ -165,6 +231,26 @@ not another general search.
 
 **New in the third pass (2026-10-06):**
 
+- **NARROWED (fourth pass, 2026-10-06): Africa now has a code shelf, and it is
+  ministry-engaged.** Every earlier pass recorded "no deployed open source African
+  education AI shelf to recommend from." That is no longer accurate.
+  [`AI-for-Education`](https://github.com/AI-for-Education) is a GitHub
+  organisation whose mission is to democratise AI in education across **low- and
+  middle-income countries**, and — unusually for anything on this shelf — its work
+  is **placed in named countries**: a lesson-plan parser built for **Sierra
+  Leone's MBSSE** (Ministry of Basic and Senior Secondary Education) and
+  **Luganda linguistic benchmarks** for **Uganda**. Five of its six repositories
+  are **MIT by payload** (`pedagogy-benchmark` 12★, `fabdata-llm` 9★,
+  `edu-qurating` 3★, `fabdata-parsedoc` 2★, `voice-ai-evaluation-framework` 1★);
+  the sixth is unlicensed. See `repos/foundations.md`.
+  **Size it honestly: 1–12★ is research-grade code, not a product shelf.** The
+  finding is not "Africa is served" — it is that the entry point is **specific,
+  permissive and already connected to a ministry**, which is a far better place to
+  start a conversation than greenfield. It also supplies the two capabilities the
+  continent's constraints actually demand and that this KB had no entry for
+  anywhere: **voice-interface evaluation** (where literacy and device cost bind)
+  and **local-language benchmarking** (Luganda). Teacher capability remains the
+  binding constraint, unchanged.
 - **Europe now has a growth curve, not just a 2026 number: $2.64B in 2026 →
   $8.0B by 2030 at 31.9% CAGR.** Note what that means — Europe is growing
   *materially slower* than the global 41.5% CAGR, so its 25% share of the market
@@ -305,6 +391,29 @@ not another general search.
   without a national framework in force**, both working on one. A single APAC
   compliance story does not exist, and "APAC-ready" is not a claim you can make.
 
+- **Supply side, fourth pass of 2026-10-06: APAC is now the region that *exports*
+  education AI.** Every other region in this KB is a buyer. APAC publishes — and
+  the pass added **Tsinghua University's
+  [THU-MAIC/OpenMAIC](https://github.com/THU-MAIC/OpenMAIC) (MIT, 40.0k★,
+  v1.2.0-rc.1 2026-10-04)**, now **the largest permissively licensed asset in this
+  KB**: document-or-topic → a full generated lesson (slides, quizzes, HTML
+  simulations, PBL scenes) taught by AI teacher *and* AI classmate agents, with
+  PostgreSQL-backed server-side generation.
+  **Two consequences.** First, the **China-plus-Hong-Kong concentration gets
+  sharper, not softer**: a 40k★ flagship from Tsinghua sits alongside DeepTutor
+  (HKUDS, 40.8k★), while **no India-, Japan-, Korea- or ASEAN-origin permissive
+  education project** has surfaced in any channel — searched by name this pass.
+  "APAC-ready" remains a claim you cannot make; the regulatory map (Korea
+  22 Jan 2026, Vietnam 1 Mar 2026, Japan voluntary, India and Australia with no
+  national framework in force) and the supply map **both** fracture along national
+  lines.
+  Second, for every other region the practical consequence is the same: **the
+  default starting point for a lesson-generation build is now Chinese-origin code
+  under MIT.** That is fine legally and a live question for a public-sector buyer
+  in EMEA or North America — so the **provenance conversation, data-residency
+  posture and a reviewed fork** belong in the first week of the engagement, not
+  the last.
+
 ### LATAM
 
 - **Teacher adoption is ahead of institutional readiness, sharply.** In Chile and
@@ -392,6 +501,26 @@ not another general search.
 - **The regional pioneer set is consistent across sources:** Chile, Brazil and
   Uruguay, on data availability, governance frameworks and infrastructure — with
   **Chile the standout through CENIA**, the national AI centre behind Latam-GPT.
+- **The supply side is still empty, and the fourth pass of 2026-10-06 both
+  weakened and re-established that claim.** LATAM demand is the best-shaped in this
+  KB; **indigenous open-source supply remains zero.** Two updates:
+  **(1) The gap's strongest single piece of evidence has been withdrawn as
+  unsound.** Three passes cited `planejaia/OpenMAIC-Brasil` — a "Brazil-origin
+  multi-agent classroom" that 404s — as lead evidence. The upstream is
+  **Tsinghua's [THU-MAIC/OpenMAIC](https://github.com/THU-MAIC/OpenMAIC), MIT,
+  40.0k★**. The name was never Brazilian, so it was never evidence about LATAM. **A
+  `-Brasil` suffix is a string an author typed, not a provenance claim.**
+  **(2) The gap survives anyway, on a channel that does not depend on a filename.**
+  The same pass searched in **Spanish and Portuguese** — a language channel no
+  earlier pass had used — and returned **zero LATAM-origin projects**. Four
+  independent channels now agree. A finding that outlives the removal of its best
+  evidence is the firmest kind in this KB.
+  **Commercially:** the region buys and adapts rather than publishes, so a LATAM
+  engagement starts from **Chinese, US and European permissive code plus
+  localisation**, and there is no local community to co-develop with. The
+  Portuguese/Spanish localisation layer over OpenMAIC is an **unclaimed, concretely
+  sized build** — and the one place where contributing upstream would make Globant
+  the originating voice in a vacuum it has now confirmed four times.
 
 ## Cross-region read
 
@@ -466,3 +595,18 @@ layer — which is pattern P9 in `compose/patterns.md`.
 | **Uruguay is the first LATAM signatory of the Council of Europe AI Framework Convention** (2025) | the cheapest bridgehead for reusing EMEA compliance IP in LATAM — an interoperable governance vocabulary |
 | North America channel **saturated — no net new findings**, explicitly stated | further depth needs procurement portals and state trackers, not another general search |
 | The permissive open source layer went from "DeepTutor plus fragments" to **~30 verified projects incl. a full MIT LMS** | the differentiator moves from *finding* the parts to **composing, licensing and governing** them |
+
+## What changed in the fourth pass of 2026-10-06
+
+Channels new to this KB this pass: **paper-to-repository tracing** (arXiv / ACL
+Anthology), a **GitHub-organisation sweep**, and a **Spanish/Portuguese-language
+search**. Two of the five findings below are **corrections to this KB's own
+claims**, which is the point of recording them.
+
+| Finding | So what |
+|---|---|
+| **OpenMAIC is Tsinghua's, MIT, 40.0k★** — and `OpenMAIC-Brasil`, cited for three passes as evidence of a missing LATAM project, was a **fork-shaped name**, not a Brazilian project (re-probed: 404 on all four branches) | the **largest permissive asset in this KB** arrives, and the lesson-generation starting point for every region becomes **Chinese-origin MIT code**. Put provenance and data residency in week one. And **never attribute a region from a repository slug** |
+| **NA 2030 sizing is disputed: $10.8B vs the $32B this KB recorded.** $32B would make NA ~75% of the KB's own global 2030 figure while the same page asserts a 36% share | **quote $3.68B for 2026 and 2030 as a range**, naming the uncertainty. Internal consistency favours the lower figure. Primary source unreachable — conflict recorded, not resolved |
+| The third pass called North America **"saturated"**; re-running general searches added **statute names, bill numbers, mechanisms and dates** on six states — incl. **CA AB 1159's 1 July 2027 higher-ed trigger**, Idaho SB 1227 as an **AI-literacy and teacher-training mandate**, Oklahoma **SB 1734's annual parent disclosure**, Maryland's **24 districts / 120-day rolling** clock, **Ohio HB 96's deadline now past**, and NC's funding being **recurring and sole-sourced** | **"saturated" conflated no-new-entities with no-new-information.** Precision is what makes a finding sellable, and it was mostly missing. Ohio's 600+ districts are now in **implement-and-audit**, which is the better engagement |
+| **Africa gets its first code shelf: `AI-for-Education`**, 5 of 6 repos MIT, built for **Sierra Leone's MBSSE** and **Uganda** (Luganda) — plus the only **voice-evaluation** and **pedagogical model-selection** tooling in this KB | Africa stops being greenfield-with-nothing and becomes **greenfield with a specific, permissive, ministry-connected entry point**. At 1–12★ it is research-grade: a conversation starter, not a product shelf |
+| **A fourth licence failure mode: the grant that exists only in the paper.** `AITutor-EvalKit` (peer-reviewed EACL 2026, "released under an MIT license") has **no `LICENSE` payload on either branch**. Separately, **Open TutorAI** calls itself open source and is **CC BY-NC-SA 4.0** | **a peer-reviewed licence claim is evidence of intent, never of rights.** Probe the payload. Re-implement `AITutor-EvalKit`'s MI/ML/PG/AC rubric rather than vendoring it, and **file an issue asking for a `LICENSE`** — the cheapest high-value upstream contribution available here |

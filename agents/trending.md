@@ -8,6 +8,98 @@ updated: 2026-10-06
 
 > **Append-only.** Newest dated section on top; history preserved below.
 
+## 2026-10-06 — fourth pass: a 40k★ MIT classroom nobody here had seen, and a gap argued from a filename
+
+Channel changed again. The first three passes of today swept GitHub **topic pages**
+and a **stars-sorted search**. This pass used two channels new to this KB:
+**tracing academic papers back to their repositories** (arXiv, ACL Anthology demo
+track) and **sweeping a GitHub organisation** rather than a topic. Every licence
+below was read from the repository's own `LICENSE` payload via
+`raw.githubusercontent.com`.
+
+Both headline findings are **corrections of this KB's reasoning**, not new discoveries.
+
+### Finding 1 — the biggest asset in this KB was one query away for three passes
+
+[THU-MAIC/OpenMAIC](https://github.com/THU-MAIC/OpenMAIC) — *Open Multi-Agent
+Interactive Classroom*, **MIT (`LICENSE`, © 2026 THU-MAIC), 40.0k★, Tsinghua
+University, v1.2.0-rc.1 (2026-10-04), TypeScript.**
+
+It generates a **whole lesson** from a topic or an uploaded document: slides,
+quizzes, HTML simulations and project-based-learning scenes, taught by an AI
+teacher agent alongside **AI classmate agents** on a shared whiteboard with
+speech synthesis. Exports PPTX and interactive HTML. The v1.2.0 line moves to a
+**server-first architecture with PostgreSQL persistence**, so generation survives
+a closed tab or a server restart — the difference between a demo and something a
+district can run. It also exposes itself to **agent workbenches (OpenClaw)**, so a
+teacher can generate a classroom from a chat client.
+
+**Why it was missed, and the lesson.** This KB recorded
+`planejaia/OpenMAIC-Brasil` as a 404 three passes running and used it as evidence
+for a missing-LATAM gap. **Nobody searched for the upstream of the name.** A 404
+on a fork is a fact about that fork; it says nothing about the project. Re-probed
+this pass, the Brazilian repo is still **404 on all four** candidate branches
+(`main`, `master`, `develop`, `v1.0.0`) — and the real project has forty thousand
+stars.
+
+**And the `-Brasil` suffix was never evidence of anything.** A repository name is a
+string its author chose. Provenance comes from the owner, the commits or the
+README — never the slug. Part of this KB's firmest regional gap was argued from a
+filename.
+
+### Finding 2 — the first Africa-placed repositories in this KB
+
+[`AI-for-Education`](https://github.com/AI-for-Education) is a GitHub organisation
+whose mission is to **democratise access to AI in education in low- and
+middle-income countries**, and unlike almost everything else on this shelf its
+work is **placed in named countries**: a lesson-plan parser for **Sierra Leone's
+MBSSE** (Ministry of Basic and Senior Secondary Education) and **Luganda
+linguistic benchmarks** for **Uganda**.
+
+| Repo | Licence (payload) | ★ | Function |
+|---|---|---|---|
+| [pedagogy-benchmark](https://github.com/AI-for-Education/pedagogy-benchmark) | **MIT** | 12 | Scores LLMs on **pedagogical knowledge** using teacher-qualification exam questions |
+| [fabdata-llm](https://github.com/AI-for-Education/fabdata-llm) | **MIT** | 9 | Multi-provider LLM interface + chatbot management |
+| [edu-qurating](https://github.com/AI-for-Education/edu-qurating) | **MIT** | 3 | Educational content curation / quality rating |
+| [fabdata-parsedoc](https://github.com/AI-for-Education/fabdata-parsedoc) | **MIT** | 2 | Document extraction, parsing, summarisation |
+| [voice-ai-evaluation-framework](https://github.com/AI-for-Education/voice-ai-evaluation-framework) | **MIT** | 1 | Evaluation harness for **voice** AI |
+| [Luganda-linguistic-benchmarks](https://github.com/AI-for-Education/Luganda-linguistic-benchmarks) | **NONE** — `LICENSE` 404, `README.md` 200 | — | Luganda benchmarks. **Not shippable.** |
+
+**1–12★ is research-grade code, and that is the honest label.** It earns its place
+because this KB had **no entry at all** for pedagogical model selection or voice
+evaluation, and because Africa had been recorded for three passes as greenfield
+with nothing to recommend. That is no longer true — it is now *small*, which is a
+different and more useful finding.
+
+**Five MIT siblings do not license the sixth.** `Luganda-linguistic-benchmarks`
+has no payload. Probe per repo, even inside an organisation that looks uniform.
+
+### Finding 3 — the licence that exists only in the paper
+
+A **fourth failure mode** for this catalogue, after the unlicensed repo, the
+AGPL-plus-paid-tier side-car and the unenforceable prose grant.
+
+[kaushal0494/AITutor-EvalKit](https://github.com/kaushal0494/AITutor-EvalKit) is
+presented in a **peer-reviewed EACL 2026 demo paper** as "the first open-access,
+open-source model for pedagogical quality evaluation of AI tutor responses,
+released under an **MIT** license". Probed directly: `README.md` returns **200** on
+`main` and `master`; `LICENSE`, `LICENSE.md`, `LICENSE.txt` and `COPYING` all
+**404 on both**. The repository is real, the paper is real, and **the grant is in
+the PDF rather than in the repository** — which leaves it legally unlicensed.
+
+Its four-dimension framework is still worth having, because it is the only
+published scheme here for scoring *tutoring* rather than answers: **MI** (Mistake
+Identification), **ML** (Mistake Location), **PG** (Providing Guidance), **AC**
+(Actionability). **Re-implement the rubric; do not vendor the code.** Opening an
+issue asking for a `LICENSE` file is the cheapest high-value upstream contribution
+available to this KB right now.
+
+Same pass, same lesson from the other direction: **Open TutorAI** (arXiv
+2602.07176), described in its own abstract as "an open-source platform", is
+**CC BY-NC-SA 4.0** — non-commercial *and* share-alike, unusable in any client
+engagement under any architecture. **"Open source" in an abstract is not a
+licence.**
+
 ## 2026-10-06 — third pass: the `ai-tutor` channel, and a WITHDRAWAL that was itself wrong
 
 The first two passes of today swept the `education-ai` topic and the Canvas/Moodle

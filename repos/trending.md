@@ -8,6 +8,69 @@ updated: 2026-10-06
 
 > **Append-only.** Newest dated section on top; history preserved below.
 
+## 2026-10-06 — fourth pass: the 404 that was hiding a 40k★ upstream
+
+The third pass went after the **Kuali** consortium and found a single body whose
+products carry three different licences. This pass changed channel twice over —
+**paper-to-repository tracing** (arXiv / ACL Anthology) and a **GitHub-organisation
+sweep** — and the result is one very large repository plus a methodology fix that
+invalidates part of how this KB has been reasoning about regional gaps.
+
+### The repository
+
+| Repo | Licence (read from payload) | ★ | Why it belongs on the foundations shelf |
+|---|---|---|---|
+| [THU-MAIC/OpenMAIC](https://github.com/THU-MAIC/OpenMAIC) | **MIT** (`LICENSE`, © 2026 THU-MAIC) | **40.0k** | Tsinghua's *Open Multi-Agent Interactive Classroom*. Document-or-topic → generated lesson (slides, quizzes, HTML simulations, PBL scenes) delivered by AI teacher and AI classmate agents over a whiteboard with TTS; exports PPTX and interactive HTML. **v1.2.0-rc.1 (2026-10-04) is server-first with PostgreSQL persistence**, so a generation survives a closed tab or a restart. Exposed to agent workbenches (OpenClaw). TypeScript / Next.js / React. |
+
+It is now **the largest permissively licensed asset in this KB** and the only one
+that produces a *complete lesson artefact* rather than a tutoring dialogue. Note
+the architectural consequence: because generation is server-side and persisted, it
+is the first thing on this shelf you can put behind a review queue without
+rebuilding its execution model — which is what `compose/patterns.md` P10 does with it.
+
+### The methodology fix, which matters more than the row
+
+`repos/foundations.md` has ended, for three passes, with this sentence:
+
+> The converse also happens: `planejaia/OpenMAIC-Brasil` is a confident search
+> result for a repository that genuinely does not exist.
+
+**That sentence is true and the conclusion drawn from it was wrong.** Re-probed
+this pass, the Brazilian repository is still **404 across all four** candidate
+branches (`main`, `master`, `develop`, `v1.0.0`) — so it genuinely does not exist.
+But this KB treated that absence as evidence in the **no-LATAM-origin-education-agent**
+gap, and the name it 404'd on is a **fork-shaped variant of a Chinese project with
+forty thousand stars**.
+
+Two rules, added to the method note in `repos/foundations.md`:
+
+1. **A 404 on a suffixed name obliges you to search for the base name.** `X-Brasil`
+   returning 404 tells you about `X-Brasil`. Query `X` before you record a gap.
+2. **A repository name is not a provenance claim.** `-Brasil`, `-India`, `-LATAM`
+   are strings an author typed. Attribute a region from the **owner account, the
+   commit history or the README** — never from the slug. This KB's firmest regional
+   finding was partly argued from a filename, and it has now been re-established
+   on channels that do not depend on one (see `agents/trending.md`, same date).
+
+### Organisation-sweep yield: `AI-for-Education`
+
+Sweeping an **organisation** instead of a topic surfaced six repositories no topic
+page had shown, five of them **MIT by payload** — `pedagogy-benchmark` (12★),
+`fabdata-llm` (9★), `edu-qurating` (3★), `fabdata-parsedoc` (2★),
+`voice-ai-evaluation-framework` (1★) — and one, `Luganda-linguistic-benchmarks`,
+with **no `LICENSE` payload at all**.
+
+Two durable lessons:
+
+- **Topic pages systematically hide small organisations.** None of these six
+  carries enough stars to rank on a topic page, yet together they are the only
+  permissive tooling this KB has for **pedagogical model selection** and **voice
+  evaluation**, and the only repositories it has that are **placed in named African
+  countries** (Sierra Leone's MBSSE, Uganda). Add "sweep the org behind any
+  interesting repo" to the channel list.
+- **Licence uniformity inside an org is an assumption, not a fact.** Five MIT
+  siblings did not license the sixth.
+
 ## 2026-10-06 — third pass: the Kuali estate, and one consortium with THREE different licences
 
 The second pass of today opened the administrative shelf (SIS and education ERP).

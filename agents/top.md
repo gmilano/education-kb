@@ -19,11 +19,15 @@ carrying a stale or inferred number.
 
 ## Agents and tools
 
-**31 rows, all verified.** The 12 recorded in the morning pass of 2026-10-06, 2
-added in the second pass, and **17 added in the third pass** from the `ai-tutor`
-GitHub topic page and a stars-sorted repository search — two channels no earlier
-pass of this KB had used. One of the 17, OpenTutor, is a **reinstatement** of an
-entry this KB wrongly withdrew earlier the same day; see the corrections section.
+**36 rows, all verified.** The 12 recorded in the morning pass of 2026-10-06, 2
+added in the second pass, **17 added in the third pass** from the `ai-tutor`
+GitHub topic page and a stars-sorted repository search, and **5 added in the
+fourth pass** by tracing academic papers to their repositories and sweeping a
+GitHub organisation — four distinct channels, each new to this KB when it was
+used. One of the 17, OpenTutor, is a **reinstatement** of an entry this KB wrongly
+withdrew earlier the same day; see the corrections section. The fourth pass added
+the largest single asset in this KB (**OpenMAIC, MIT, 40.0k★**) and the first
+**Africa-placed** repositories it has ever recorded.
 
 The third-pass rows sit in their own table below the core shelf, because most of
 them are **Agent Skills rather than applications** and that distinction decides how
@@ -98,6 +102,56 @@ catalogue now has three entries: **no licence file at all**
 (`OS4ED/openSIS-Classic` at `docs/License.txt`, `frappe/*` at lowercase
 `license.txt`), and **prose that imitates a grant** (the two rows above).
 
+### Added in the fourth pass of 2026-10-06 — the OpenMAIC upstream, and the first Africa-placed shelf
+
+**New channel this pass: paper-to-repository tracing** (arXiv and the ACL
+Anthology demo track) plus a **GitHub-organisation sweep**. Neither had been used
+by any earlier pass of this KB. Both licence columns below were read from the
+repository's own `LICENSE` payload via `raw.githubusercontent.com` on 2026-10-06.
+
+The headline is not a new discovery — it is the **resolution of a gap this KB has
+carried through three passes**. See the corrections section.
+
+| Agent | Repo | License (read from payload) | ★ (2026-10-06) | What it does |
+|---|---|---|---|---|
+| OpenMAIC | [THU-MAIC/OpenMAIC](https://github.com/THU-MAIC/OpenMAIC) | **MIT** (`LICENSE`, © 2026 THU-MAIC) | **40.0k** | Open Multi-Agent Interactive Classroom, from **Tsinghua University**. Turns a topic or an uploaded document into a generated lesson in one click: slides, quizzes, HTML simulations and project-based-learning scenes, delivered by AI teacher *and* AI classmate agents over a shared whiteboard with text-to-speech. Exports PPTX and interactive HTML. v1.2.0-rc.1 (2026-10-04) moves to a **server-first architecture with PostgreSQL persistence**, so a course generation survives a closed browser tab or a server restart. Integrates with agent workbenches (OpenClaw), so a classroom can be generated from a chat client or an IDE. TypeScript / Next.js / React. |
+| AI-Teaching-Agent | [littlecookie0722/AI-Teaching-Agent](https://github.com/littlecookie0722/AI-Teaching-Agent) | **MIT** (`LICENSE`, © 2026 littlecookie) | **0** | Turns Markdown teaching sources into **linked lab, exam and grading artefacts** through a structured DSL validated against JSON Schema. Three properties matter more than its star count: a **`WAITING_REVIEW` human-approval gate** before anything is published, **sandboxed grading execution with evidence generation**, and a **candidate-facing exam preview that strips answers and internal grading references**. CLI/JSON plus an MCP server; local-first, offline demo needs no API key. Python. |
+| pedagogy-benchmark | [AI-for-Education/pedagogy-benchmark](https://github.com/AI-for-Education/pedagogy-benchmark) | **MIT** (`LICENSE`) | 12 | Benchmarks the **pedagogical knowledge** of LLMs using real **teacher-qualification exam questions** — not task accuracy, but whether the model knows how to teach. Python. The only pedagogy-specific model-selection instrument on this shelf. |
+| edu-qurating | [AI-for-Education/edu-qurating](https://github.com/AI-for-Education/edu-qurating) | **MIT** (`LICENSE`) | 3 | Educational content curation / quality-rating tooling. Python. |
+| voice-ai-evaluation-framework | [AI-for-Education/voice-ai-evaluation-framework](https://github.com/AI-for-Education/voice-ai-evaluation-framework) | **MIT** (`LICENSE`) | 1 | Evaluation harness for **voice-based** AI systems — the modality that matters where literacy and device constraints bind. Python. |
+
+**Read the star counts honestly.** OpenMAIC at 40.0k is a flagship. The other four
+are **1–12★ research-grade code**. They earn their rows because they are the only
+permissive assets this KB has found for *pedagogical model selection*, *voice
+evaluation* and *gated grading* — three functions the shelf had no entry for at
+all. Treat `AI-Teaching-Agent` (0★, no releases) as a **reference architecture to
+read and re-implement**, not a dependency to pin.
+
+#### Why `AI-for-Education` is the most strategically placed find in this KB
+
+It is a GitHub organisation whose stated mission is to **democratise access to AI
+in education in low- and middle-income countries**, and its repositories are
+**placed in named countries**: a lesson-plan parser built for **Sierra Leone's
+MBSSE** (Ministry of Basic and Senior Secondary Education), and
+**Luganda linguistic benchmarks** for **Uganda**. Through three passes this KB
+recorded Africa as "almost entirely uncovered, greenfield, no deployed open source
+African education AI shelf to recommend from." **That gap is now narrowed to a
+specific, MIT-licensed, ministry-engaged starting point** — small, but real and
+placed. See `intel/market.md`.
+
+#### Licence flags from this pass — two assets you cannot ship
+
+| Asset | Claim | What the payload actually says |
+|---|---|---|
+| [kaushal0494/AITutor-EvalKit](https://github.com/kaushal0494/AITutor-EvalKit) | Its **EACL 2026 demo paper** describes it as "the first open-access, open-source model for pedagogical quality evaluation of AI tutor responses, released under an **MIT** license" | **No `LICENSE` payload exists.** `README.md` returns 200 on both `main` and `master`; `LICENSE`, `LICENSE.md`, `LICENSE.txt` and `COPYING` all **404 on both branches**. The repository is real and the paper is peer-reviewed, but **the grant is in the PDF, not in the repo** — so it is legally unlicensed, which is the worst state for client work. Its evaluation framework (MI = Mistake Identification, ML = Mistake Location, PG = Providing Guidance, AC = Actionability) is worth re-implementing; the code is not worth shipping until a `LICENSE` lands. **Ask the author to add one** — this is a cheap, high-value upstream contribution. |
+| Open TutorAI (arXiv 2602.07176) | "An open-source platform for personalised and immersive learning with generative AI" — LLM tutoring with customisable 3D avatars | **CC BY-NC-SA 4.0** — **non-commercial and share-alike.** Not usable in a client engagement at all, under any architecture. "Open source" in a paper abstract is not a licence. |
+| [AI-for-Education/Luganda-linguistic-benchmarks](https://github.com/AI-for-Education/Luganda-linguistic-benchmarks) | sits in an organisation whose other five repos are all MIT | **No `LICENSE` payload** (`README.md` 200, `LICENSE` 404). **Per-repo probing is not optional even inside a uniformly-licensed org** — five MIT siblings do not license the sixth. |
+
+**This is the fourth distinct failure mode the catalogue has recorded**, after the
+unlicensed repo, the AGPL-plus-paid-tier side-car and the unenforceable prose
+grant: **the licence that exists only in the paper.** A peer-reviewed claim of MIT
+is evidence about intent, never about rights.
+
 ## The education MCP shelf — a side-car is permissive by choice, not by construction
 
 The licence-boundary note below says an external MCP side-car keeps its permissive
@@ -163,6 +217,33 @@ side-car. This drives pattern P1 in `compose/patterns.md`.
 
 ## Corrections to earlier passes
 
+- **RESOLVED: `OpenMAIC-Brasil` was a phantom, and the real OpenMAIC is a
+  40.0k★ MIT project from Tsinghua.** Through three passes this KB recorded
+  [planejaia/OpenMAIC-Brasil](https://github.com/planejaia/OpenMAIC-Brasil) as "a
+  confident search result for a repository that genuinely does not exist" and used
+  it as the lead evidence for the **no-LATAM-origin-education-agent** gap. Both
+  halves of that now have a better answer.
+
+  **Re-probed 2026-10-06 (fourth pass), the Brazilian repo is still gone:**
+  `README.md` and `LICENSE` return **404 on all four** candidate branches
+  (`main`, `master`, `develop`, `v1.0.0`). That claim stands, now on a fourth
+  independent probe.
+
+  **But the name was never Brazilian.** The upstream is
+  [THU-MAIC/OpenMAIC](https://github.com/THU-MAIC/OpenMAIC) — *Open Multi-Agent
+  Interactive Classroom* — **MIT, 40.0k★, from Tsinghua University**, v1.2.0-rc.1
+  dated 2026-10-04. The "Brazil-origin multi-agent classroom with a v1.0.0
+  release" that search results kept asserting was almost certainly a **vanished
+  fork or mirror of a Chinese project**, mis-attributed by its `-Brasil` suffix.
+
+  **Two lessons, and the second is the expensive one.** First: when a probe 404s,
+  search for the *upstream of the name* before recording a gap — this KB spent
+  three passes treating an absence as evidence while a 40k★ MIT implementation of
+  the same thing sat one query away. Second: **a repository name is not a
+  provenance claim.** A `-Brasil`, `-India` or `-LATAM` suffix is a string an
+  author chose; regional attribution has to come from the owner, the commit
+  history or the README, never from the slug. This KB's LATAM gap was argued
+  partly from a suffix.
 - **AutoGen is no longer a starting point.** [microsoft/autogen](https://github.com/microsoft/autogen)
   (61.3k★) is explicitly in **maintenance mode**: *"AutoGen is now in maintenance
   mode. It will not receive new features or enhancements and is community managed
@@ -214,6 +295,40 @@ side-car. This drives pattern P1 in `compose/patterns.md`.
 
 An informed gap is information; silence looks exactly like coverage.
 
+- **NARROWED AGAIN (fourth pass, 2026-10-06): the gated-grading architecture now
+  has a permissive reference implementation — with 0 stars.**
+  [littlecookie0722/AI-Teaching-Agent](https://github.com/littlecookie0722/AI-Teaching-Agent)
+  (MIT) implements exactly the shape every regulator in this KB demands: a
+  `WAITING_REVIEW` human-approval gate, sandboxed grading with evidence output,
+  and an answer-stripped candidate view. **What is still missing is adoption, not
+  design** — 0★, no releases, one author. So the gap changes character: it is no
+  longer "nobody has built this", it is **"nobody has built this at production
+  maturity"**. Read it, re-implement the gate, do not pin it.
+- **NEW GAP, precisely sized (fourth pass): pedagogical evaluation is published but
+  unlicensed.** `AITutor-EvalKit` (EACL 2026) is the one purpose-built instrument
+  for scoring *tutoring quality* rather than answer accuracy, and it has **no
+  `LICENSE` payload**. There is therefore **no shippable permissive tutor-quality
+  evaluator** on this shelf. `AI-for-Education/pedagogy-benchmark` (MIT, 12★)
+  covers the adjacent question — which model knows how to teach — but it scores
+  **models against exam questions, not live tutor dialogue**. The evaluation gap
+  is now split in two, and only the model-selection half is closed.
+- **STILL OPEN after a fourth channel: no LATAM-origin permissive education
+  project.** This pass searched in Spanish and Portuguese (`Brazil Mexico Chile
+  open source educación IA agente github repositorio tutor 2026 MIT`) — a
+  **language channel no earlier pass had used** — and returned **zero
+  LATAM-origin projects**; the results were the same China-, India- and
+  US-origin repositories already recorded. Four independent channels (the
+  `education-ai` topic, the `ai-tutor` topic, a stars-sorted search, and now a
+  Spanish/Portuguese-language search) agree. **And the single strongest piece of
+  evidence for this gap has been withdrawn as unsound** — `OpenMAIC-Brasil` was a
+  name, not a Brazilian project (see corrections). The gap survives its own best
+  evidence being removed, which is what makes it the firmest finding in this KB.
+- **No India-, Japan-, Korea- or ASEAN-origin permissive education project —
+  unchanged, and now searched by name.** This pass queried those four
+  jurisdictions explicitly and surfaced only China/Hong-Kong-origin assets plus
+  the US- and Europe-origin research code above. OpenMAIC (Tsinghua) **widens the
+  China lead rather than closing this gap**: the APAC shelf is still
+  China-plus-Hong-Kong, now with a 40k★ flagship at its centre.
 - **NARROWED on 2026-10-06 (third pass): a permissive auto-grader exists, but not
   a standalone academic one.** Every earlier pass recorded a flat "no permissive
   open source auto-grader exists". That claim is now too broad.

@@ -173,6 +173,59 @@ first in the documentation, so the optimistic reading is the one that sticks.
 parked. Permissive-but-parked is a real category: fine to vendor and fork, wrong to
 present to a client as a living upstream. Recorded as qualified, not recommended.
 
+## OpenMAIC — a permissive platform that generates the course, not just the tutoring
+
+Added in the fourth pass of 2026-10-06. Every other platform on this shelf is a
+**container** for content a human authored (Moodle, Canvas, Open edX, Mentingo).
+[THU-MAIC/OpenMAIC](https://github.com/THU-MAIC/OpenMAIC) is the first entry that
+**produces the content itself**, which puts it in a different column of the
+selection table rather than in competition with the LMSs.
+
+### Verified specification
+
+| Axis | Value (read 2026-10-06) |
+|---|---|
+| Repo | [THU-MAIC/OpenMAIC](https://github.com/THU-MAIC/OpenMAIC) |
+| Licence | **MIT**, read from the `LICENSE` payload (© 2026 THU-MAIC) |
+| Stars | **40.0k** — the largest permissive asset in this KB |
+| Origin | **Tsinghua University** (THU-MAIC) |
+| Version | **v1.2.0-rc.1**, pre-release, 2026-10-04 |
+| Stack | TypeScript, Next.js, React, **PostgreSQL** |
+| Input | a topic description, or an uploaded document |
+| Output | slides, quizzes, interactive **HTML simulations**, project-based-learning scenes; **exports PPTX and interactive HTML** |
+| Delivery | **AI teacher agent + AI classmate agents**, shared whiteboard, text-to-speech |
+| Integration | exposed to agent workbenches (OpenClaw) — generate a classroom from a chat client or IDE |
+
+### Why the v1.2.0 architecture change is the part that matters commercially
+
+v1.2.0 moves generation **server-first with PostgreSQL persistence**, so a course
+build **survives a closed browser tab or a server restart.** Everything else on
+the agent shelf in this KB generates in-session.
+
+Three consequences:
+
+1. **It is the only generator here you can put behind a review queue without
+   rebuilding its execution model.** A durable server-side job is already the right
+   shape for the `WAITING_REVIEW` gate that trend 16 and the EU AI Act both
+   require. Pattern **P11** does exactly this.
+2. **PPTX and HTML export means the artefact outlives the platform.** A district
+   that will not host a Chinese-origin application can still take the deck. That
+   makes a **generate-then-export** engagement viable where a deployment is not.
+3. **It composes with, rather than replaces, the LMS shelf.** OpenMAIC authors;
+   Moodle, Canvas or Open edX deliver and record. Wire them with the MCP servers
+   already catalogued in `agents/top.md`.
+
+### The one thing to settle in week one
+
+**It is MIT, and it is Chinese-origin.** The licence is clean and permissive —
+there is no legal obstacle. But a public-sector buyer in EMEA or North America
+will ask about provenance and data residency, and the honest answer is that
+**generation is server-side**, so where that server runs is a decision, not a
+default. Self-host it, pin a **reviewed fork**, and point inference at whatever
+model the client's data-residency posture allows (the KB's sovereign and local
+inference options apply unchanged). Raise this yourself in week one; do not let a
+procurement reviewer raise it in week eight.
+
 ## AI integration surfaces, by strategy
 
 Two ways to put AI on a platform, with different license outcomes:
@@ -207,3 +260,6 @@ anything Globant intends to reuse across engagements.
 | is a corporate L&D / onboarding / compliance-training buyer | **Mentingo (MIT)** — fork it, white-label it, resell it; no copyleft to route around |
 | needs permissive higher-ed middleware / workflow | Kuali Rice (**ECL-2.0**) at `KualiCo/rice` — permissive, but in maintenance mode |
 | needs spaced-repetition / retention mechanics reached by an agent | `ankimcp/anki-mcp-server` (MIT, 53 tools) over Anki, or OpenTutor (MIT) for FSRS built in |
+| needs a whole course generated from documents, not just a tutor | **OpenMAIC (MIT, 40.0k★)** — self-host a reviewed fork; put the gate of pattern P11 in front of it |
+| needs generated teaching material but cannot host the generator | **OpenMAIC's PPTX / interactive-HTML export** — generate outside, deliver the artefact in the client's own LMS |
+| needs to choose *which model* should teach | [`AI-for-Education/pedagogy-benchmark`](https://github.com/AI-for-Education/pedagogy-benchmark) (MIT) — scores pedagogical knowledge, not task accuracy |
