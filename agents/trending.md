@@ -8,6 +8,213 @@ updated: 2026-10-06
 
 > **Append-only.** Newest dated section on top; history preserved below.
 
+## 2026-10-06 — sixteenth pass: the ministry channel pays, and a from-scratch classifier re-imported four of this KB's own defects in one pass
+
+**Channel run:** the ministry tier, by name, one name at a time — pass 15's instruction 2.
+**Instrument:** this pass could **not execute** `compose/code/lib/probe_payload.sh` (see Finding 4),
+so it wrote its own. That decision is the subject of Finding 3, and it is the most important
+thing in this pass.
+
+### Finding 1 — the measured yield, stated as a denominator
+
+| Ministry / agency, queried by name | `total_count` | Name coined? | Repos owned by the body | Licensed assets |
+|---|---|---|---|---|
+| **`Utdanningsdirektoratet`** (Udir, 🇳🇴) | **18** | 🟢 yes | 🟢 **18** | 🟢 **10** |
+| `eduscol` (🇫🇷) | 107 | 🟢 yes | 🔴 **0** | 🔴 0 |
+| `inep` / `censo escolar` (🇧🇷) | 3,572 | 🔴 **no** — matches `ineptpdf`, "inept" | 🔴 0 | 🟢 4 (third-party) |
+| `mext` / `monbukagakusho` (🇯🇵) | 1,701 | 🔴 **no** | 🔴 **0** | 🟢 1 (third-party) |
+| `"ministry of education"` + Gulf | 7,228 | ⚠️ phrase, not a name | 🔴 **0** | 🔴 0 |
+
+🟢 **One of five ministry names has a code estate, and it is the one that was queried in the
+body's own language.** `Utdanningsdirektoratet` — not `udir`, which returns 418 results about
+drone hacking and a Czech smokehouse (`udírna`).
+
+🔴 **The denominator trap, and it is new: three of the five counts measure nothing.** The
+instruction said *check the name is coined before trusting the count*. Two of them are not
+coined at all, and the Gulf query is worse than uncoined — see Finding 2.
+
+### Finding 2 — 🔴 the 15th failure mode: a count that measures grant acknowledgements
+
+`"ministry of education" saudi OR uae OR qatar OR emirates` returns **7,228** repositories.
+The top of that list is `52North/WPS`, `antismash/antismash`, `datalad/datalad`,
+`streetcomplete/StreetComplete` — geospatial services, bioinformatics, an OSM editor.
+
+🔴 **The phrase is matching README *funding acknowledgements*, not repository owners.** "This
+work was supported by the Ministry of Education…" is a sentence in thousands of academic
+repositories, and `in:readme` cannot tell a funder from an owner.
+
+🔵 **So the count is real and the inference is void**, and this is a distinct failure mode from
+the fourteen already recorded: the earlier ones were about *licences* being misread. This one
+is about a **population** being misread — the query returned a sample of global research
+funding and it was asked to describe public-sector software supply. **A ministry-name phrase
+query cannot establish ministry supply; only `org:` can.** `org:Utdanningsdirektoratet`
+returned 18 and every one of them is really Udir's.
+
+### Finding 3 — 🔴 the headline, and it is about this KB's own controls
+
+Pass 15's Finding 8 recorded the *second* recurrence of a defect its hardened library already
+fixed, and wrote: *"A third recurrence should be treated as evidence that documentation cannot
+carry this and only tooling can."*
+
+**This pass is the third recurrence, and it re-imported four distinct documented defects in a
+single instrument.** Each was caught by a real payload during the pass, not by review:
+
+| # | Defect re-imported | Caught by | Already in this KB as |
+|---|---|---|---|
+| 1 | **CC0 nested inside the CC-BY gate**, so unreachable — `"CC0 1.0 Universal"` contains neither "creative commons" nor "cc by" | `fnshr/kyo-kan`, `NKAmapper/school2osm` (both CC0, read as UNCLASSIFIED) | `lib/license_family.sh` **line 120** has CC0 as its own earlier branch |
+| 2 | 🔴 **substring match on an acronym** — `'mpl' in title` matches **`IMPLIED`**, which appears in the MIT/BSD/Apache warranty disclaimer | `openfun/richie` — a plain **MIT** payload read as **MPL-2.0** | **P299**: *"a licence token is a word or it is noise"* (`mit` ⊂ permit/submit/commit) |
+| 3 | **a 40-line "title block" still contains GPL-2.0's preamble**, which *mentions* "the GNU Lesser General Public License instead" (line 18 of the payload) | `inepdadosabertos/api` — **GPL-2.0** read as **LGPL-3.0** | **P171**: classify on the title, never on a mention in the body |
+| 4 | **no size floor** — a 1,001-byte payload accepted as `LGPL-2.1`, whose real text is 27,030 bytes | `espoon-voltti/evaka` (a REUSE pointer, Finding 5) | the "size floor" the twelfth pass reproduced |
+
+⚠️ **Defect 2 is the one that would have shipped a wrong architecture recommendation.** This KB
+asserts in three places that `openfun/richie` is MIT, and `verticals/solutions.md` builds a
+recommendation on it — *"MIT at the portal tier is the cleanest place to put client-visible
+AI, because the copyleft lives behind it in the LMS."* The from-scratch instrument said
+**MPL-2.0**, which is file-level copyleft and would have **inverted that recommendation**. A
+hand-read of `master/LICENSE` settles it: `MIT License / Copyright (c) 2018-present GIP FUN
+MOOC.`, 1,079 bytes.
+
+🟢 **The KB was right, the new instrument was wrong, and no published row changed.** The
+correction block this pass does *not* need to write is the finding.
+
+🔵 **And the cause is new, which is why this is not just "pass 15 again."** Pass 15's diagnosis
+was that *writing six `grep` lines is easier than finding the library*. That is not what
+happened here. **The library was found, read, and deliberately copied — and this environment
+refused to execute it** (Finding 4). An architecture can be copied from prose; **branch order
+cannot**, and all four defects above are branch-order or anchoring bugs. The control was
+correct and unavailable at once.
+
+🔴 **So the structural risk this pass adds to the KB is that the control is
+environment-dependent.** `lib/` is a bash library validated by a bash test suite. In an
+environment that will not run it, the KB has **documentation, not a control** — which is the
+exact state pass 15 said must not be relied on.
+
+🟢 **The cheap fix, and this pass built it:** the four defects above were each caught by *one
+known repository*. A fixture list — repository, branch, expected family, payload size, and
+*why that case is required* — is portable, needs no interpreter, and validated this pass's
+instrument in four requests. Shipped as
+[`compose/code/p432-fromscratch-fixture-gate/`](../compose/code/p432-fromscratch-fixture-gate/),
+with the Python probe this pass actually used. **A fixture a human can read beats a library a
+sandbox will not run.**
+
+### Finding 4 — the instrument surface, re-measured, and it moved against pass 15
+
+| Instrument | Pass 15 | This pass |
+|---|---|---|
+| `raw.githubusercontent.com` payload read | 🟢 works | 🟢 **works — 34/34** |
+| `git ls-remote --symref` | 🟢 works | 🟢 **works** |
+| `curl -sI https://github.com/…` | 🔴 403 on 36/36 | not re-run (pass 15 priced it) |
+| **`api.github.com/search/…` via `curl`** | 🟢 reachable (pass 11) | 🔴 **HTTP 403 — egress-blocked** |
+| **GitHub search via the MCP tool** | not used | 🟢 **works, with `total_count`** |
+| **Executing the repo's own `lib/*.sh`** | 🟢 assumed | 🔴 **denied — "code from external"** |
+
+🔴 **Two instruments this KB relies on are gone in this environment**, and one of them is the
+licence library itself. 🟢 **Both have a working replacement**: the MCP search tool returns the
+same `total_count` the API did, and a fixture list replaces an unrunnable test suite.
+
+### Finding 5 — 🔴 three grant locations that are not a licence file, found in one pass
+
+The ministry channel turned up three repositories whose licence is real, permissive and **not
+in any file a payload probe looks at**:
+
+| Repository | `LICENSE` says | The grant actually lives in | Real licence |
+|---|---|---|---|
+| `SidneyBissoli/educabR` | **61 bytes**: `YEAR: 2025` / `COPYRIGHT HOLDER: Sidney da Silva Pereira Bissoli` | **`DESCRIPTION`** → `License: MIT + file LICENSE` | 🟢 **MIT** |
+| `espoon-voltti/evaka` | a 1,001-byte **pointer**: *"follows the REUSE specification v3.0 … never the original license texts"* | **`LICENSES/LGPL-2.1-or-later.txt`** (HTTP 200, verified) + per-file SPDX headers | **LGPL-2.1-or-later** |
+| `JayVora-SerpentCS/OdooEduERP` | **nothing** — NO-PAYLOAD on its real default branch `19.0` | **`school/__manifest__.py`** → `"license": "AGPL-3"` | 🔴 **AGPL-3.0** |
+
+🔵 **This generalises trend 23** (*"the licence label and the licence grant have come apart"*)
+from *the label is wrong* to **the grant is somewhere else entirely** — and the three "somewhere
+else"s are ecosystem conventions, not accidents: **R/CRAN** puts it in `DESCRIPTION`,
+**REUSE/FSFE** puts it in `LICENSES/` plus per-file headers, **Odoo** puts it in a Python
+manifest. All three are growing, and REUSE is spreading through **exactly** the EU public-sector
+code this KB tracks.
+
+⚠️ **The commercial consequence is on the Odoo row and it is the expensive one.** `OdooEduERP`
+is the most-starred open-source education ERP found this pass (157★, branch `19.0`, active
+2026-10-03) and it reads as *unlicensed* to every instrument this KB owns — while its manifest
+declares **AGPL-3.0**. A pass that trusted NO-PAYLOAD would have shelved an AGPL-3.0 platform
+as "licence unknown, ask upstream." ⚠️ **Also note the staleness tell**: the branch is `19.0`
+and the manifest inside it still says `"version": "18.0.1.0.0"`.
+
+### Finding 6 — 🟢 NLOD: a national open-data licence that grants commercial use, and this KB had no row for it
+
+`Utdanningsdirektoratet/Grep_SPARQL` carries a 1,783-byte `LICENSE.md` that no classifier in
+this KB can name, because it is not a software licence. It is
+**NLOD — Norsk lisens for offentlige data / Norwegian Licence for Open Government Data**, and
+the payload states the grant in English:
+
+> *"You are allowed to copy and make available, change and/or merge data sets described here
+> with other data sets, and **to use them for commercial purposes**."*
+
+Conditions: attribution in a prescribed form, **no use of the Udir logo** without separate
+agreement, and no misleading or distorted presentation. No share-alike, no non-commercial
+clause.
+
+🟢 **So NLOD belongs on this KB's permissive allow-list, in the data tier** — alongside the
+ECL-2.0/ISC addition of the twelfth pass, which was about *code*. Details, and what it unlocks,
+in `repos/trending.md` and `intel/trends.md` (trend 34).
+
+### Finding 7 — 🔴 the vendor Terms-of-Use channel cannot be opened from here
+
+Pass 15's instruction 3 was to read four vendor Terms of Use and settle whether the
+anti-AI-training clause is one vendor or the sector. **All four primary sources are
+egress-blocked in this environment:**
+
+| Vendor | Primary source attempted | Result |
+|---|---|---|
+| PowerSchool | `www.powerschool.com/terms-of-use/` | 🔴 `EGRESS_BLOCKED` |
+| Instructure / Canvas | `www.instructure.com/policies/product-privacy-policy` | 🔴 `EGRESS_BLOCKED` |
+| Moodle | `docs.moodle.org/en/Terms_and_conditions` | 🔴 `EGRESS_BLOCKED` |
+| Google Classroom | `workspace.google.com/terms/education_terms/` | 🔴 `EGRESS_BLOCKED` |
+
+🔴 **Four independent vendors, four blocks — so this is the environment's policy, not any
+vendor's.** Pass 15's Finding 7 priced the identical shape (*"a uniform 403 across every input
+is not a verdict"*), and the same rule applies: **this is not evidence about the clauses.**
+
+⚠️ **This pass therefore does NOT answer instruction 3, and deliberately does not answer it
+from secondary coverage.** A contract term paraphrased by a blog is not a contract term, and
+this KB's standard is the payload. **The question stays open and stays stated.**
+
+### Finding 8 — two live repositories, one name, and the KB's row points at the smaller one
+
+| Address | Stars | Licence | Status |
+|---|---|---|---|
+| `dasgltd/mcp-brasil` — **the address this KB has shelved** | **246** (recorded 2026-08-18) | MIT | 🟢 live, own `HEAD` |
+| **`Mcp-Brasil/mcp-brasil`** — found this pass | 🟢 **1,805** | 🟢 **MIT** (`(c) 2025-2026 MCP Brasil`) | 🟢 live, `fork: false`, created 2026-03-26 |
+
+🔴 **Both addresses resolve, neither is a fork of the other per the API, and they are 7.3× apart
+in stars.** The org-owned one claims *"MCP Server para 70 APIs públicas brasileiras"* — the
+KB's row records 97 tools, 13 of them education.
+
+⚠️ **Not resolved this pass**: which address is canonical, and whether the org one is a
+relaunch, a vendored copy or a sibling. **Recorded as an identity question, not as a
+correction**, because the KB's row is not wrong about the repository it names.
+
+### What the next pass should do
+
+1. 🔴 **Settle `mcp-brasil` identity** (Finding 8) before either row is quoted in a
+   deliverable: compare first-commit SHAs on both addresses. 97 tools with 13 education
+   endpoints is the largest LATAM education-data surface this KB has, and it currently has two
+   addresses.
+2. **Run `org:` against the ministry tier, never the ministry's name** (Finding 2). Not yet
+   queried as orgs: `Skolverket`, `digst`/`stil` (DK), `Opetushallitus` (FI),
+   `onderwijsinspectie`/`DUO` (NL), `MinEduc`/`Mineduc` (CL, CO), `SEP` (MX).
+   **`org:` returns owners; a name phrase returns funders.**
+3. ⚠️ **Instruction 3 is still open and is not this environment's to close** (Finding 7). Carry
+   it forward unanswered rather than closing it from secondary sources.
+4. 🟢 **Validate any new licence instrument against
+   [`p432-fromscratch-fixture-gate`](../compose/code/p432-fromscratch-fixture-gate/) before
+   trusting one row of it.** Four fixtures, four requests, four real defects. If a pass cannot
+   run `lib/`, this is the control.
+5. **Ask `IFRN` for a licence file on [`IFRN/suapi`](https://github.com/IFRN/suapi)** — carried
+   over from pass 15, still not done. ⚠️ **Not actionable by an unattended pass**: it means
+   opening an issue on a third party's repository, which is an outward-facing write this
+   session has no mandate for. **It needs a human to send it, or an explicit instruction that
+   upstream asks are in scope.**
+
+---
+
 ## 2026-10-06 — fifteenth pass: the SIS tier is real, it is MIT, and the licence is not what blocks it
 
 **The fourteenth pass's instruction 2, executed.** It said: *"run the platform-name channel

@@ -1162,3 +1162,80 @@ an administrative engagement: prototype on the client library to prove the workf
 then ship on the official API path.** The prototype is cheap and the production path is
 contractual, and conflating them is how an engagement discovers in month three that its
 integration was never licensable.
+
+---
+
+## Added in the sixteenth pass of 2026-10-06 — the national curriculum tier, and a licence family this KB had no row for
+
+The ministry channel (`repos/trending.md`, sixteenth pass) produced an infrastructure tier this
+KB has described as *assumed* in two patterns and never shelved: **the national curriculum, as
+a machine-readable service, with a written commercial grant.**
+
+### The curriculum-data tier
+
+| Repo | Branch | Licence (read from payload) | Bytes | What it gives you |
+|---|---|---|---|---|
+| [`Utdanningsdirektoratet/Grep_SPARQL`](https://github.com/Utdanningsdirektoratet/Grep_SPARQL) | `main` | 🟢 **NLOD** (`LICENSE.md`) — **commercial use granted in writing** | 1,783 | Norway's national curriculum (**LK20**) as **queryable RDF over a SPARQL endpoint, in production since 7 Dec 2020**. Competence aims, subjects, programmes, cross-curricular topics — addressable, not scraped. |
+| [`Utdanningsdirektoratet/KL06-LK20-public`](https://github.com/Utdanningsdirektoratet/KL06-LK20-public) | `master` | 🔴 **NO-PAYLOAD** (30+ filename variants) | 0 | Documentation of the revised **Grep-data interface** for the LK20 reform, plus example files. The live service's own docs are in the repo wiki. |
+| [`fnshr/kyo-kan`](https://github.com/fnshr/kyo-kan) | `master` | 🟢 **CC0-1.0** | 6,555 | Japan's **MEXT official kanji-by-grade tables** (*gakunenbetsu kanji haitōhyō*) as structured open data. Small, and the only MEXT-derived asset found. |
+| [`NKAmapper/school2osm`](https://github.com/NKAmapper/school2osm) | `master` | 🟢 **CC0-1.0** | 6,555 | Extracts every school from Norway's **National School Register (NSR)**. An institution roster, free of restriction. |
+
+### The education-microdata tier (LATAM)
+
+| Repo | Branch | Licence (read from payload) | ★ | What it gives you |
+|---|---|---|---|---|
+| [`SidneyBissoli/educabR`](https://github.com/SidneyBissoli/educabR) | `main` | 🟢 **MIT** — ⚠️ declared in **`DESCRIPTION`**, not `LICENSE` | 15 | **CRAN** package v1.2.0.9000. Download + process **INEP** microdata: Censo Escolar, ENEM, SAEB, Censo da Educação Superior, ENADE, ENCCEJA, IDD, CPC, IGC, CAPES, FUNDEB. **Eleven national instruments behind one MIT API.** |
+| [`Mcp-Brasil/mcp-brasil`](https://github.com/Mcp-Brasil/mcp-brasil) | `main` | 🟢 **MIT** (1,072 B) | 1,805 | 70 Brazilian public APIs as MCP tools, 13 of them education. ⚠️ Identity caveat in `agents/top.md`. |
+| [`inepdadosabertos/api`](https://github.com/inepdadosabertos/api) | `master` | 🔴 **GPL-2.0** (18,025 B) | 45 | Civil-society open-data API over INEP. ⚠️ **Created 2014** — treat as reference, not as a dependency, and note it is *not* INEP's own. |
+| [`lucasmation/microdadosBrasil`](https://github.com/lucasmation/microdadosBrasil) | `master` | 🔴 **NO-PAYLOAD** | 174 | Reads Brazilian public microdata (CENSO, PNAD). The most-starred of this group and the one you cannot use. |
+
+### 🟢 NLOD belongs on this KB's permissive allow-list — in the data tier
+
+The twelfth pass added **ECL-2.0** and **ISC** to the allow-list because the standard
+"MIT/Apache/BSD" filter rejected two licences that are permissive in substance. **NLOD is the
+same correction, one tier down: it governs data, not code.**
+
+Quoted from the payload (the licence ships bilingually, Norwegian and English):
+
+> *"You are allowed to copy and make available, change and/or merge data sets described here
+> with other data sets, and **to use them for commercial purposes**."*
+
+| NLOD condition | What it costs a Globant deliverable |
+|---|---|
+| Attribution in a prescribed string — *"Contains data under NLOD, made available on data.udir.no"* | 🟢 A footer line. |
+| **The Udir logo may not be used** without a separate agreement | 🟢 Trivial — and a trap only if a designer drops a ministry crest into a client deck to imply endorsement. |
+| Data must not be presented misleadingly, distorted or misrepresented | 🟢 Already required by the EU AI Act transparency duties this KB tracks. |
+| No liability for errors in the data | ⚠️ Real: a curriculum-alignment claim you make is **yours**, not the ministry's. Budget a validation step. |
+| **No share-alike. No non-commercial clause.** | 🟢 **This is the whole point.** The output is yours to license as you wish. |
+
+⚠️ **Read the boundary precisely, because it is easy to overclaim.** NLOD grants the **data**.
+`Grep_SPARQL` is *documentation of an endpoint* — there is no substantial codebase to vendor.
+The SPARQL client, cache, mapping layer and item generator are yours to write or to take from
+the permissive shelves above.
+
+### The public-sector application tier — permissive, and read correctly
+
+| Repo | Branch | Licence (read from payload) | What it is |
+|---|---|---|---|
+| [`Utdanningsdirektoratet/PAS2-Public`](https://github.com/Utdanningsdirektoratet/PAS2-Public) | `master` | 🟢 **Apache-2.0** (11,325 B) | The openly published portion of Norway's **national exam administration system**. A ministry's production exam code, patent-granted. |
+| [`Utdanningsdirektoratet/designsystem`](https://github.com/Utdanningsdirektoratet/designsystem) | `main` | 🟢 **MIT** (1,079 B) | The directorate's design system, on top of `digdir/designsystemet`. Active 2026-10-02. **A government-grade accessible component set for education UIs.** |
+| [`Utdanningsdirektoratet/xmldataimport`](https://github.com/Utdanningsdirektoratet/xmldataimport) | `master` | 🟢 **MIT** (1,079 B) | Loads XML test data into SQL Server for data-driven automated tests. |
+| [`Utdanningsdirektoratet/PAS-scoop-public`](https://github.com/Utdanningsdirektoratet/PAS-scoop-public) | `master` | 🟢 **Apache-2.0** (11,357 B) | Scoop bucket for the PAS toolchain. |
+| [`Utdanningsdirektoratet/VFKL`](https://github.com/Utdanningsdirektoratet/VFKL), `VFKL_rebase` | `main` | 🟢 **MIT** (1,063 B) | ⚠️ **Both archived**, and the copyright holder is **Altinn** (Norway's national digital platform), not Udir — a cross-agency reuse worth knowing about, and a holder-mismatch of the kind `p184` exists to catch. |
+| [`Utdanningsdirektoratet/pifu`](https://github.com/Utdanningsdirektoratet/pifu) | `master` | 🔴 **NO-PAYLOAD** | **PIFU** — Norway's person-data/rostering flow spec for education. ⚠️ **The interoperability tier's Norwegian entry, and it is ungranted.** |
+
+### 🟢 Why this shelf changes a conclusion rather than lengthening a list
+
+The tenth pass shelved the interoperability tier and the twelfth pass the xAPI/LRS tier, both
+on the finding that **39% of district RFPs score interoperability**. Both shelves were built
+from *vendor-neutral standards bodies*. This one is built from **a state**, and it answers a
+question those could not:
+
+🔵 **In Norway, "curriculum-aligned" is a verifiable claim rather than a marketing one** — there
+is a government endpoint to align *against*, and a licence that lets you bill for the
+alignment. In every other country this KB covers, P15 and P16 have had to **assume** such a
+source exists. ⚠️ **The sixteenth pass measured that it usually does not:** France publishes
+teachers' material and no ministry estate, Japan publishes PDFs plus a CC0 kanji table, the
+Gulf publishes nothing findable. **Norway is the exception that shows what the other four are
+missing** — and `P25` is written so the Norwegian case is the reference implementation and the
+others are a documented substitution.

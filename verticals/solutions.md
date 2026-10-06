@@ -1063,3 +1063,103 @@ byte-order mark) — `OS4ED/openSIS-Classic`. No filename ladder in this KB woul
 it. **It was found by reading the README's own licence link**, which is a better instrument
 than guessing filenames: it is one request, it is authoritative, and the maintainer wrote it
 on purpose. Add it to the method ahead of the ladder.
+
+---
+
+## Added in the sixteenth pass of 2026-10-06 — the education-ERP shelf, and the grant that was hiding in a Python manifest
+
+The mandatory vertical query (`open source platform education ERP CRM MIT Apache student
+information system`) **passed for the first time in this KB's history** — it named platforms
+instead of returning tutorials. Every candidate below was probed on its real default branch on
+2026-10-06.
+
+### The platforms, with their licences read correctly
+
+| Platform | Repo | Branch | Licence (payload-verified) | ★ | What it is |
+|---|---|---|---|---|---|
+| 🟢 **Joanie** | [`openfun/joanie`](https://github.com/openfun/joanie) | `main` | 🟢 **MIT** (1,086 B, *"(c) 2021 France Université Numérique"*) | 30 | A **headless education ERP**: course enrolment/subscription, **payment**, and **certificate delivery**. From the same state-backed org as Richie. |
+| 🟢 **eVaka** | [`espoon-voltti/evaka`](https://github.com/espoon-voltti/evaka) | `master` | **LGPL-2.1-or-later** — ⚠️ via **`LICENSES/`**, not `LICENSE` | 58 | **Finland's early-childhood-education ERP**, in production for the City of Espoo. Kotlin. Enrolment, placement, fee decisions, daily attendance. |
+| 🟢 **treVaka** | [`Tampere/trevaka`](https://github.com/Tampere/trevaka) | `main` | **LGPL-2.1** (27,030 B — the full text) | 2 | eVaka adapted for the **City of Tampere**. Active 2026-10-06. 🔵 **Its existence is the finding: eVaka is a multi-municipality platform, not one city's internal tool.** |
+| 🔴 **OdooEduERP** | [`JayVora-SerpentCS/OdooEduERP`](https://github.com/JayVora-SerpentCS/OdooEduERP) | `19.0` | 🔴 **AGPL-3.0** — ⚠️ declared in **`school/__manifest__.py`**, top level is NO-PAYLOAD | **157** | The most-starred open-source education ERP found this pass. Admissions, attendance, exams, library, transport, fees — on **Odoo**. Active 2026-10-03. |
+| 🔴 **CybroOdoo EducationalERP** | [`CybroOdoo/EducationalERP`](https://github.com/CybroOdoo/EducationalERP) | `16.0` | 🔴 **GPL-3.0** (35,147 B) | 16 | A second Odoo education suite. Branch pinned to Odoo 16. |
+| ⚠️ **Frappe edu** | [`nguyentrieu210/edu`](https://github.com/nguyentrieu210/edu) | `main` | 🟢 **MIT** (`license.txt`, 1,069 B) | 6 | Education ERP as a **Frappe app + Vue 3 SPA**. ⚠️ Self-described **"(demo)"**, created 2026-06-20 — a starting point, not a platform. |
+
+### ⚠️ Read this before anyone proposes "the Odoo education ERP" to a client
+
+**`OdooEduERP` reads as unlicensed to every instrument this KB owns, and it is AGPL-3.0.**
+
+Its real default branch is `19.0` — neither `main` nor `master` — and there is **no licence
+payload at the top level** on it. A probe returns NO-PAYLOAD, which in this KB's conventions
+means *"ask upstream."* The grant is one directory down, in the Odoo module manifest:
+
+    # school/__manifest__.py
+    "license": "AGPL-3",
+
+🔴 **This is the expensive direction to be wrong in.** A NO-PAYLOAD verdict invites a team to
+proceed while an upstream ask is pending; the truth is a **network-copyleft** licence that
+reaches any hosted deliverable built on it. 157★ and active last week means somebody *will*
+propose it.
+
+⚠️ **A staleness tell in the same file:** the branch is `19.0` and the manifest inside it still
+declares `"version": "18.0.1.0.0"`. Verify which Odoo release it actually targets before
+sizing any engagement.
+
+🔵 **Generalised:** this is the third non-`LICENSE` grant location found in one pass (R's
+`DESCRIPTION`, REUSE's `LICENSES/`, Odoo's `__manifest__.py`). **In the Odoo ecosystem the
+module manifest is the licence of record, and the repository root is often silent.** Any
+Odoo-based row in this KB must be probed at the module level.
+
+### 🟢 Joanie is the row that changes the platform menu
+
+This KB's existing shortcut says **MIT at the portal tier is the cleanest place to put
+client-visible AI, because the copyleft lives behind it in the LMS** — the Richie
+recommendation. Joanie extends that from *presentation* to **transaction**:
+
+| Tier | Permissive option | Licence |
+|---|---|---|
+| Portal / catalogue | [`openfun/richie`](https://github.com/openfun/richie) | 🟢 **MIT** |
+| **Enrolment, payment, certificates** | **[`openfun/joanie`](https://github.com/openfun/joanie)** | 🟢 **MIT** |
+| LMS / delivery | Open edX (AGPL core, 🟢 **Apache-2.0 plugin SDK**) or Moodle (GPL-3.0) | copyleft |
+
+🔵 **So the whole commercially sensitive surface — catalogue, checkout, credential — can be MIT,
+with copyleft confined to course delivery.** Both halves come from **France Université
+Numérique**, so they are designed to compose, and both are state-backed rather than
+venture-backed. ⚠️ **Joanie is 30★ and issue-heavy (61 open)**: treat it as a solid foundation
+to fork, not a turnkey product, and read `payment` integration code before promising a date.
+
+### 🟢 eVaka — and why LGPL-2.1 is a *different* answer from LGPL-3.0 here
+
+The page already argues that **LGPL-3.0 is the middle path** for administrative platforms:
+link against it, keep your own modules proprietary, publish changes to the library itself.
+eVaka is **LGPL-2.1-or-later**, which lands in the same architectural place — but note what
+eVaka actually is:
+
+* 🟢 **A production national-scale ECEC system.** Espoo is Finland's second-largest city, and
+  **Tampere runs a derivative** — so the platform has survived being adapted by a second
+  municipality, the single hardest test of a public-sector codebase.
+* 🟢 **Early childhood is a tier this KB's platform shelf did not cover at all.** Every other
+  platform here is K-12, higher-ed or L&D. Placement queues, fee decisions by income, daily
+  attendance and statutory child-ratio compliance are a genuinely different domain.
+* ⚠️ **The licence is not in `LICENSE`.** eVaka follows the **REUSE specification v3.0**: the
+  1,001-byte `LICENSE` is a *pointer* that says, verbatim, *"never the original license
+  texts"*, and the grant lives in `LICENSES/LGPL-2.1-or-later.txt` (verified, HTTP 200) plus
+  per-file SPDX headers. A payload probe reads NO-GRANT or guesses from prose. **REUSE is an
+  FSFE standard and is spreading through EU public-sector code — expect this shape again in
+  exactly the region this matters for.**
+
+⚠️ **AI integration point, stated honestly:** eVaka is an administrative system holding data
+about **small children**. Under the EU AI Act the attractive automations here — placement
+prioritisation, fee determination — are decisions about access to a public service for a
+protected group. 🔵 **The defensible AI layer is assistive**: demand forecasting for placement
+capacity, caseworker drafting with a human decision gate, anomaly review on attendance. **Not
+automated placement.** Pattern `P11` (one oversight gate) is the shape; `P13` sets the
+compliance profile.
+
+### Platform selection shortcut — sixteenth-pass additions
+
+| If the client is… | Take | Licence reality |
+|---|---|---|
+| A **European municipality running early-childhood education** | 🟢 **eVaka** (+ treVaka as the adaptation precedent) | LGPL-2.1-or-later — link, don't fork the core; grant is in `LICENSES/` |
+| Selling **courses** and needing catalogue + checkout + certificates | 🟢 **Richie + Joanie** | 🟢 **MIT both** — the commercial surface is clean |
+| Asking for **"the Odoo education ERP"** | ⚠️ **OdooEduERP, with the AGPL-3.0 conversation first** | 🔴 AGPL-3.0, declared in the module manifest — network copyleft reaches a hosted deliverable |
+| A **Norwegian** institution needing curriculum alignment | 🟢 **Grep SPARQL endpoint** (`repos/foundations.md`) | 🟢 **NLOD — commercial use granted** |

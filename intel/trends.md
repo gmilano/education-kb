@@ -2170,3 +2170,179 @@ has had to qualify.
 ungranted: `3121n/nor-data-udir-mcp` (Udir, Norway) and `DistrictAPI/districtapi-mcp` (US
 school districts by address). A fourth registry entry, `lockinplanner/lock-in`, **does not
 resolve at all** — the registry indexes addresses it does not verify.
+
+---
+
+## 34. National open-data licences are the permissive tier for curriculum — and they grant commercial use
+
+The permissive allow-list in this KB has been a **software** list: MIT, Apache-2.0, BSD, plus
+ECL-2.0 and ISC added in the twelfth pass. The sixteenth pass found the tier below it, and the
+licence that governs it is not a software licence at all.
+
+[`Utdanningsdirektoratet/Grep_SPARQL`](https://github.com/Utdanningsdirektoratet/Grep_SPARQL)
+publishes Norway's national curriculum (**LK20**) as **queryable RDF over a SPARQL endpoint, in
+production since 7 December 2020**, under **NLOD** — *Norsk lisens for offentlige data* /
+Norwegian Licence for Open Government Data. The payload states the grant in English:
+
+> *"You are allowed to copy and make available, change and/or merge data sets described here
+> with other data sets, and **to use them for commercial purposes**."*
+
+Conditions: attribution in a prescribed string, **no use of the ministry's logo** without
+separate agreement, no misleading or distorted presentation, and no liability for data errors.
+**No share-alike. No non-commercial clause.**
+
+🔵 **Why this is a trend and not a single row.** Every pattern in this KB that aligns content to
+a curriculum (`P9`, `P15`, `P16`, `P19`) has had to *assume* a lawful, authoritative,
+machine-readable source of curriculum truth. In Norway that assumption is now a citation. The
+same shape — a national open-data licence over a government education dataset — exists wherever
+a state publishes under NLOD, the UK OGL, France's Licence Ouverte, or a CC-BY equivalent.
+
+⚠️ **And the trend has a hard edge: the licence covers the *data*, not the code.** `Grep_SPARQL`
+is documentation of an endpoint; there is no platform to vendor. Teams must read "NLOD" as *you
+may build and bill on this data*, never as *here is a system*.
+
+🔴 **The counter-measurement, which is why this is a trend with a narrow footprint.** Of five
+education ministries queried by name this pass, **one** has a code estate at all. France
+publishes teachers' personal class material and no ministry repositories; Japan publishes
+documents plus a CC0 kanji table; the Gulf query returned 7,228 results and **zero** ministry
+repositories. **The permissive curriculum tier is real, verifiable and commercially
+unencumbered — in a minority of countries.**
+
+## 35. The grant has left the licence file — and three ecosystems moved it somewhere different
+
+Trend 23 recorded that *the licence label and the licence grant have come apart*: GitHub's
+label disagreed with the payload, so the rule became **read the payload**. The sixteenth pass
+found the next step, and it breaks that rule's assumption that there *is* a payload to read.
+
+**Three repositories in one pass, three different places the grant actually lives:**
+
+| Ecosystem | Repository | `LICENSE` contains | The grant is in | Real licence |
+|---|---|---|---|---|
+| **R / CRAN** | `SidneyBissoli/educabR` | **61 bytes**: `YEAR:` and `COPYRIGHT HOLDER:` — a template fill-in, no grant text | **`DESCRIPTION`** → `License: MIT + file LICENSE` | 🟢 **MIT** |
+| **REUSE / FSFE** | `espoon-voltti/evaka` | a pointer stating *"never the original license texts"* | **`LICENSES/LGPL-2.1-or-later.txt`** + per-file SPDX headers | **LGPL-2.1-or-later** |
+| **Odoo** | `JayVora-SerpentCS/OdooEduERP` | **nothing** — NO-PAYLOAD on its real default branch `19.0` | **`school/__manifest__.py`** → `"license": "AGPL-3"` | 🔴 **AGPL-3.0** |
+
+🔴 **The consequence is that NO-PAYLOAD has stopped meaning "unlicensed."** In this KB's
+conventions NO-PAYLOAD means *ask upstream*, and an upstream ask is a reason to proceed while
+waiting. For an Odoo module that reading is **backwards**: the quiet root conceals
+**network copyleft** that reaches any hosted deliverable. `OdooEduERP` is 157★ and was active
+last week, so the misread is likely rather than hypothetical.
+
+🔵 **The rule this replaces trend 23's with:** *read the payload* becomes **read the payload,
+then read the ecosystem's manifest.** Concretely — `DESCRIPTION` for R, `LICENSES/` plus SPDX
+headers for REUSE, `__manifest__.py` for Odoo, and by extension `package.json`, `pyproject.toml`
+and `pom.xml`, which this KB already probes in `p289`/`p294`.
+
+⚠️ **REUSE deserves separate attention because of *where* it is spreading.** It is an FSFE
+standard adopted by European public-sector and publicly funded projects — **precisely the
+population this KB's EMEA sections are built on.** Expect the pointer-file shape again, and
+expect a naive probe to return either NO-GRANT or a family guessed from prose. Both are wrong,
+and the second is worse because it looks like an answer.
+
+## 36. A control that cannot be executed is documentation — and this is now measured, not argued
+
+This KB has built real controls for licence classification: `lib/license_family.sh` (41/41
+regression tests) and `lib/probe_payload.sh`. `lib/README.md` states the rule — **source them,
+do not rewrite them** — and records its own violations: pass 77 rewrote the classifier and
+re-imported P171; pass 15 rewrote the probe loop and re-imported the GPL-§6 defect. Pass 15
+concluded: *"A third recurrence should be treated as evidence that documentation cannot carry
+this and only tooling can."*
+
+**The sixteenth pass is the third recurrence, and it re-imported four documented defects in a
+single instrument:** CC0 nested unreachably inside a CC-BY gate; a substring match in which
+**`IMPLIED` contains `mpl`**, so a plain MIT payload classified as MPL-2.0; a 40-line "title
+block" wide enough to include GPL-2.0's preamble, which *mentions* the Lesser GPL; and no size
+floor, so a 1,001-byte pointer was accepted as a 27,030-byte licence.
+
+🔵 **But the cause is new, and it is the finding.** The earlier diagnosis was laziness — writing
+six `grep` lines is easier than finding the library. That is not what happened here. **The
+library was located, read, and deliberately copied; the environment refused to execute it**
+("code from external"). An architecture can be copied from prose. **Branch order cannot** — and
+all four defects are branch-order or anchoring bugs.
+
+🔴 **So the generalisable claim is about control design, not diligence: a control implemented as
+executable code in one language, validated by a test suite in that same language, is only a
+control in environments that will run it.** Elsewhere it degrades silently into prose — and
+prose is what pass 15 said must not be relied upon.
+
+🟢 **What survives environment loss is a fixture: an input, an expected output, and a stated
+reason the case is required.** Four real repositories caught all four defects in four requests,
+with no interpreter and no trust. Shipped as
+`compose/code/p432-fromscratch-fixture-gate/`.
+
+⚠️ **The coverage lesson is pass 15's, restated and now sharper.** An instrument validated only
+on the family you care about scores 100% while broken. The required fixture here is
+**`openfun/richie`, a plain MIT repository** — because MIT is the family everyone tests, and the
+defect corrupted exactly that family. Worse, this KB *builds an architecture recommendation* on
+richie being MIT (*"MIT at the portal tier is the cleanest place to put client-visible AI"*),
+so the defect would have **inverted a published recommendation** rather than merely mislabelling
+a row.
+
+🔵 **And the fourth fixture's pass condition is refusing to answer.** `evaka` must return
+UNCLASSIFIED. An instrument that names `LGPL-2.1` there is wrong *even though that is the right
+licence*, because it read prose instead of a grant. **A control must distinguish knowing from
+guessing right.**
+
+## 37. Where a state publishes education software, it ships the substrate and leaves the agent to the market
+
+Two ministry estates are now shelved in this KB — the **UK Department for Education** (MIT,
+ninth pass) and **Norway's Utdanningsdirektoratet** (sixteenth pass) — and independently they
+produced the same shape.
+
+Udir's 18 repositories: a curriculum SPARQL service (**NLOD**), the open portion of the national
+**exam administration** system (**Apache-2.0**), a **design system** (**MIT**), a person-data
+**rostering** spec (ungranted), test tooling and shared CI (**MIT**/ungranted), and **two
+maintained Moodle plugins** (GPL-3.0 — one of them an abandoned plugin the directorate picked
+up, on default branch `MOODLE_405_STABLE`).
+
+🔴 **No tutor. No assessment model. No agent of any kind.** Across both estates, in two
+countries.
+
+🟢 **Read commercially, that is a better finding than a gap.** The state has already paid for
+and permissively licensed the parts no vendor can differentiate on — authoritative curriculum
+data, exam administration, accessible components, rostering semantics — and **the layer a studio
+sells is the layer the state does not build.**
+
+⚠️ **With a caveat that is itself a pattern.** In both estates **the highest-value assets are the
+ungranted ones**: Udir's `KL06-LK20-public` (the curriculum interface) and `pifu` (the
+rostering spec) are **NO-PAYLOAD against 30+ filename variants on their real default branches**.
+🔵 **A ministry's publishing instinct outruns its licensing process** — which makes the upstream
+licence ask (a one-commit change) the single highest-leverage, lowest-cost action available
+against a public-sector estate.
+
+---
+
+## Declared gaps — sixteenth pass, 2026-10-06
+
+Searched this pass, not found, stated so the absence is informative rather than silent.
+
+1. 🔴 **No education ministry publishes an AI agent.** Searched: `org:Utdanningsdirektoratet`
+   (18 repos, all 18 probed), `eduscol` (107), `mext`/`monbukagakusho` (1,701),
+   `inep`/`censo escolar` (3,572), `"ministry of education"` + Gulf (7,228). **Zero
+   ministry-published tutoring, grading or assessment agents.** Substrate yes; agents no.
+2. 🔴 **France has no ministry code estate.** `eduscol` returns individual teachers' class
+   material. The one real asset, `VictorNain26/tomai-curriculum` (**a RAG index over the French
+   national curriculum**), is **ungranted**. ⚠️ **Falsifiable by**: an `org:` query against
+   `education.gouv.fr`-affiliated organisations, which this pass did not run.
+3. 🔴 **No Gulf ministry repository was found, and the count that suggests otherwise is void.**
+   7,228 results match README **funding acknowledgements** ("supported by the Ministry of
+   Education"), not owners. ⚠️ **This gap is about a channel, not the world** — a lesson this KB
+   has now had to learn twice. **Only `org:` can settle it.**
+4. 🔴 **The four-vendor anti-AI-training question is still open after two passes.** PowerSchool,
+   Instructure/Canvas, Google Classroom and Moodle hosting Terms of Use are **all four
+   egress-blocked** in this environment. ⚠️ **It remains unestablished whether the clause the
+   fifteenth pass read in Infinite Campus's ToU is one vendor's or the sector's**, and this KB
+   must not say "the sector" until four payloads are read.
+5. 🔴 **No public-sector xAPI profile is usable yet.** `KS-AVT/avt` — Norwegian municipal-sector
+   (**KS**) xAPI statements for *"Aktivitetsdata for vurdering og tilpassing"* — is
+   **NO-PAYLOAD** on its default branch `AVT2`. The xAPI/LRS tier (twelfth pass) still has
+   **no government reference implementation**. ⚠️ Worth one more probe on other branches before
+   being treated as settled.
+6. 🔴 **`mcp-brasil` identity is unresolved.** Two live addresses, same name, both MIT,
+   **246★ vs 1,805★**, neither reported as a fork of the other. ⚠️ **Nothing should be quoted
+   from either in a deliverable until first-commit SHAs are compared** — pin a commit, not a
+   name.
+7. ⚠️ **Carried over unclosed from the fifteenth pass, and not closeable by an unattended run:**
+   the licence ask on [`IFRN/suapi`](https://github.com/IFRN/suapi). It requires opening an
+   issue on a third party's repository — an outward-facing write with no mandate here.
+   **It needs a human, or an explicit instruction that upstream asks are in scope.**

@@ -1,0 +1,13 @@
+# p432 — THE FROM-SCRATCH FIXTURE GATE.
+# Four real repositories.  Each one catches a defect that THIS KB had already documented and
+# that pass 16 re-imported anyway, in a classifier it wrote from scratch because this
+# environment refused to execute compose/code/lib/probe_payload.sh ("code from external").
+#
+# Run ANY new licence instrument against these four BEFORE trusting one row of it.
+# 4 repositories, 4 requests, 4 real defects.  Measured 2026-10-06.
+#
+# repo <TAB> branch <TAB> expected_family <TAB> payload_bytes <TAB> why this case is REQUIRED
+openfun/richie	master	MIT	1079	P299 / SUBSTRING. The warranty disclaimer contains "IMPLIED", which contains the substring "mpl". Any classifier testing `'mpl' in text` calls this MIT payload MPL-2.0 -- and this KB builds an architecture recommendation on richie being MIT, so the defect inverts a published recommendation. A licence token is a WORD or it is noise.
+inepdadosabertos/api	master	GPL-2.0	18025	P171 / MENTION-NOT-TITLE. Line 18 of this GPL-2.0 payload reads "the GNU Lesser General Public License instead." A 40-line "title block" still contains the PREAMBLE, so an LGPL test that runs before the GPL test wins on a mention. Decide the family on the NAME LINE (first ~3 non-empty lines), never on a preamble.
+fnshr/kyo-kan	master	CC0-1.0	6555	CC0 BRANCH ORDER. The string "CC0 1.0 Universal" contains neither "creative commons" nor "cc by", so CC0 nested INSIDE a CC-BY gate is unreachable. lib/license_family.sh:120 has CC0 as its own EARLIER branch. Copying an architecture from prose does not copy its branch order.
+espoon-voltti/evaka	master	UNCLASSIFIED	1001	SIZE FLOOR + REUSE. This 1001-byte file is a REUSE-spec POINTER, not a grant: the real text is LICENSES/LGPL-2.1-or-later.txt. A full LGPL-2.1 is 27030 bytes (cf. Tampere/trevaka). Any family whose canonical text is long must be rejected in a short file. UNCLASSIFIED is the CORRECT answer here -- refusing to guess is the pass condition.

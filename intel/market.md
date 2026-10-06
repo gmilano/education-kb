@@ -3282,3 +3282,181 @@ America adopting AI by 2029**.
 3. ⚠️ **A regional figure and a global figure from different houses do not divide.** The trap
    above is not hypothetical arithmetic — it is the single easiest way to produce a
    confidently wrong slide from this file's own contents.
+
+---
+
+## What changed in the sixteenth pass of 2026-10-06
+
+### Global market figures, re-read this pass
+
+| Metric | Value | Source basis |
+|---|---|---|
+| AI-in-education market, 2025 → 2026 | **$7.52B → $10.6B** | TBRC-lineage global report; implies **~40.9%** y/y |
+| AI-in-education, 2025 → 2034 | **$6.4B → $79.6B**, **31.35%** CAGR (2026–2034) | a second house, different base year |
+| Student AI use, 2024 → 2025 | **66% → 92%** | multi-country survey series |
+| Higher-ed students using AI as primary research/brainstorming partner, start of 2026 | **86%** | same series, 16 countries |
+| Cloud delivery share | **71.22%** (2024) | segment split |
+| North America share of global market | **36%** | regional split |
+| North America, 2024 → 2029 | **$951M → $2,303.2M**, **15.9%** CAGR | MarketsandMarkets geography series |
+
+🔴 **The arithmetic trap the fifteenth pass named applies to this table and must be restated,
+because two of these rows invite exactly the error it warns about.** The global row
+($7.52B → $10.6B, ~41%) and the North America row ($951M → $2,303.2M, 15.9%) are **different
+quantities from different houses on different base years**, and North America's $951M is **12.6%
+of the global $7.52B** while the same source calls North America **36%** of the market. These
+cannot both be true of the same denominator.
+
+🔵 **So use them exactly as the fifteenth pass's rule says and no further:** the geography series
+for **region-against-region** comparison only, the global series for trajectory only, and
+**never** a regional CAGR inside a global narrative. ⚠️ **Do not put the 36% and the $951M in
+the same slide.**
+
+### Supply-side finding of this pass, stated commercially
+
+🟢 **One of five education ministries queried publishes a code estate, and where a ministry
+publishes, it publishes the *substrate* and leaves the agent to the market.** Norway's Udir
+ships 18 repositories — a curriculum SPARQL service (**NLOD, commercial use granted**), an
+exam-administration system (**Apache-2.0**), a design system (**MIT**), two maintained Moodle
+plugins (GPL-3.0) — and **no agent, no tutor, no assessment model**.
+
+🔵 **That division of labour is the commercial opening, and it is cleaner than a gap.** The
+state has already paid for the part nobody can sell (authoritative curriculum data, exam
+administration, accessible components) and has explicitly licensed it for commercial reuse.
+**What is unbuilt is the layer a studio sells.**
+
+### 🔴 The instrument note that constrains this pass's own market claims
+
+Four vendor Terms of Use (PowerSchool, Instructure/Canvas, Google Classroom, Moodle hosting)
+were to be read this pass to settle whether the **anti-AI-training clause is one vendor or the
+sector** — the open question behind this file's North America read. **All four primary sources
+are egress-blocked in this environment** (`agents/trending.md`, Finding 7).
+
+⚠️ **So the North America section's procurement thesis still rests on the single Infinite Campus
+ToU the fifteenth pass read directly, and this pass could neither widen nor narrow it.** It is
+**not** established that the clause is sector-wide. The honest statement for a client
+conversation is: *one named vendor's terms forbid it in writing, and the others have not been
+read.* **Do not generalise it to "the sector" in a deck.**
+
+### Opportunities by region — sixteenth-pass additions
+
+#### North America
+
+🔴 **No new supply found this pass, and the one question that would move the North American
+read could not be asked** (the four-vendor ToU channel, above). The procurement-plus-integration
+thesis is unchanged and now explicitly **under-evidenced**: one vendor's terms, not four.
+
+🟢 **The actionable consequence is a scoping line, not a new offer.** Any North American K-12
+proposal should carry a named, dated ToU citation for *that district's* SIS vendor rather than a
+sector claim — and a studio that produces one in week one is doing something its competitors
+measurably are not. ⚠️ **Treat "AI training is prohibited" as a per-vendor fact to be verified,
+and price the verification.**
+
+#### EMEA
+
+🟢 **The strongest finding of this pass is European and it is a licence, not a repository.**
+Norway's national curriculum is a **production SPARQL endpoint under NLOD**, whose text grants
+commercial use, modification and merging with other datasets, subject only to attribution, a
+logo restriction and a no-misrepresentation clause.
+
+🔵 **This converts "curriculum-aligned" from a marketing claim into a verifiable one in a named
+market** — and `P15`/`P16`/`P25` can cite a grant rather than assume one. Norway is small; the
+**reference architecture is the asset**, and it ports to any country that publishes curriculum
+data under a national open-data licence.
+
+🟢 **Second EMEA finding — a platform tier this KB did not cover: early-childhood education.**
+eVaka (Espoo, **LGPL-2.1-or-later**) is in production and **Tampere runs a derivative**, proving
+it survives municipal adaptation. Placement queues, income-based fee decisions and statutory
+child-ratio compliance are a distinct domain with a distinct buyer (municipalities, not
+schools). ⚠️ **And a distinct risk**: AI decisions here concern access to a public service for
+small children — assistive only, with a human gate (`P11`).
+
+🟢 **Third: the commercial surface of course sales can be all-MIT in EMEA.** Richie (MIT) +
+Joanie (MIT), both from France Université Numérique, cover catalogue, enrolment, **payment** and
+**certificates**, leaving copyleft confined to LMS delivery.
+
+🔴 **Measured EMEA gap:** France publishes **no ministry code estate** — `eduscol` returns 107
+repositories of individual teachers' class material. The nearest asset,
+`VictorNain26/tomai-curriculum` (a **RAG index over the French national curriculum**), is
+**ungranted**. ⚠️ **So the Norwegian pattern does not currently port to France**, and a French
+engagement must budget for curriculum ingestion from documents.
+
+⚠️ **Regulatory note:** the Council of Europe convened its **2nd Working Conference on the
+regulatory dimensions of AI in education in October 2026** — European education regulation is
+being drafted by an education-sector body, not only by the AI Act's horizontal machinery.
+🔵 Consistent with trend 11 (*a regulator wrote the agent governance first*); worth tracking as
+a source of education-specific obligations.
+
+#### APAC
+
+🔴 **Japan's MEXT publishes no code estate.** 1,701 results for `mext`/`monbukagakusho` and the
+only MEXT-derived asset is `fnshr/kyo-kan` — the official **kanji-by-grade tables as CC0 data**,
+6★.
+
+🔵 **The commercial read, and it is a real contrast rather than an absence:** Japan's curriculum
+mandate is published as **documents**, Norway's as a **queryable service**. This KB already
+ships a Japanese Course-of-Study gate (`compose/code/jp-cos-curriculum-gate`) — the sixteenth
+pass explains *why* that instrument has to exist: **there is no endpoint to align against, so
+alignment must be built and evidenced.** That is billable work in Japan and a free lookup in
+Norway, and the same proposal cannot be priced the same way in both.
+
+⚠️ **Governance context re-confirmed:** **48%** of APAC governance leaders name AI adoption a top
+2026 priority and **57%** of Asian organisations have AI in at least one operational area, while
+**AI sovereignty is expected to shape infrastructure choices for roughly half of APAC firms** —
+which continues to favour the on-prem/sovereign inference stack (`P4`, `P15`).
+
+🔴 **No new APAC education repository was found this pass.** The Gulf query
+(`"ministry of education"` + Saudi/UAE/Qatar/Emirates, **7,228** results) returned **zero**
+ministry-owned repositories: the phrase matches README **funding acknowledgements**. ⚠️ **That
+7,228 is not evidence of Gulf supply and must not be cited as market activity.**
+
+#### LATAM
+
+🟢 **Brazil gained the cleanest legal route into national education microdata that this KB has
+recorded.** [`SidneyBissoli/educabR`](https://github.com/SidneyBissoli/educabR) — **MIT, on
+CRAN** — wraps **eleven** INEP instruments: Censo Escolar, ENEM, SAEB, Censo da Educação
+Superior, ENADE, ENCCEJA, IDD, CPC, IGC, CAPES and FUNDEB.
+
+🔵 **Why that is a commercial fact and not a data-science curiosity:** Brazilian public-education
+engagements are **evidence-driven** (dropout prediction, equity analysis, resource allocation),
+and the binding constraint has been lawful, reproducible access to the microdata — not models.
+A **CRAN-published MIT** package is auditable, versioned and quotable in a proposal.
+⚠️ **Bus factor of one**: a single named individual maintains it (and also the UNESCO UIS MCP
+server) — pin a version and budget to carry it if needed.
+
+🟢 **And the tooling layer is MIT too:** `Mcp-Brasil/mcp-brasil` exposes 70 Brazilian public APIs
+as MCP tools, **13 of them education**, at 1,805★. ⚠️ **Two live addresses share that name**
+(the other at 246★) — pin a commit, not a name, until identity is settled.
+
+⚠️ **Regional context, and it cuts against the optimism above.** A **UNESCO/UNU working paper**
+surveyed **200 higher-education institutions across 19 LAC countries** (Aug–Oct 2025) on AI
+across teaching, research, community engagement, administration and governance — the first
+instrument of its kind for the region, and a citable baseline for an institutional engagement.
+Alongside it: LATAM is the **third-largest market worldwide for generative-AI app downloads**
+while having the least access to capital, and regulatory fragmentation across the region
+**raises cross-border delivery cost** (Brazil has a framework, Mexico has no AI law).
+
+🔵 **The LATAM shape is therefore unchanged and now better evidenced: demand and consumer
+adoption are high, institutional capacity and capital are low.** The sellable engagement is
+**productionisation** (`P21`) — and this pass adds the legal data layer (`educabR`) that
+pattern was missing. ⚠️ **Note against the fifteenth pass's geography instrument, which found
+LATAM its slowest-growing region:** slow *market* growth with high *adoption* is a
+capacity-gap signature, not a demand problem, and it is the argument for selling delivery
+capability rather than licences.
+
+### The method note, stated plainly
+
+🔴 **This pass's licence instrument was wrong four times before it was right, and the KB's own
+control could not be run.** Executing `compose/code/lib/*.sh` was denied in this environment, so
+the classifier was re-derived from the library's documented architecture — and re-derivation
+re-imported four already-documented defects, one of which (reading a plain **MIT** payload as
+**MPL-2.0**, because `IMPLIED` contains `mpl`) would have **inverted a published architecture
+recommendation** in `verticals/solutions.md`.
+
+🟢 **No published row changed, and the reason is that the fixtures were real repositories rather
+than review.** Every one of the four defects was caught by a specific payload during the pass.
+That gate is now shipped as `compose/code/p432-fromscratch-fixture-gate/`.
+
+🔵 **The market-facing lesson is the one to carry into a client conversation about diligence:**
+this KB's licence figures are only as good as the instrument that read them, and **the instrument
+must be validated against inputs chosen to break it, not against the answers you expect.** An
+instrument tested only on MIT repositories scores 100% while calling MIT repositories MPL-2.0.

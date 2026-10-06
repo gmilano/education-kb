@@ -8,6 +8,125 @@ updated: 2026-10-06
 
 > **Append-only.** Newest dated section on top; history preserved below.
 
+## 2026-10-06 — sixteenth pass: the mandatory queries fail for the twelfth time, and a ministry estate answers in its own language
+
+### The mandatory queries, run with the year **computed** (2026), not hardcoded
+
+`$(date +%Y)` → **2026**. All four run globally, then the four regional ones.
+
+| Mandatory query | Verdict | What actually came back |
+|---|---|---|
+| `top open source AI agents education 2026 github MIT` | 🔴 **fail (12th time)** | `openclaw` 385,407★, `browser-use` 108,128★, `Mem0`, `AutoGen`, `dify` — generalist agent frameworks. **Zero education-specific results.** |
+| `github trending education AI 2026` | 🔴 **fail** | `ai-engineering-from-scratch`, Karpathy's *Zero to Hero*, `2026-AI-College-Jobs`. **The query returns "learning AI", never "AI for learning".** |
+| `open source platform education ERP CRM MIT Apache student information system` | 🟢 **partial pass** | **OpenEduCat** (Odoo-based education ERP, 300 modules / 65 languages) and **.LRN** (MIT-originated LMS). First time this query has named a platform. |
+| `AI education industry trends 2026` | 🟢 pass (market only) | AI-in-education **$7.52B (2025) → $10.6B (2026)**; student AI use **66% (2024) → 92% (2025)**; cloud delivery **71.22%** share. |
+
+🔴 **The two agent/repo queries have now failed twelve consecutive times for the same
+structural reason**, and it is worth stating once more because it is a permanent property of
+the instruction, not a bad week: **"AI education" is a homonym.** The open internet reads it as
+*teaching people AI*; this KB means *AI applied to education*. The generalist query is
+answering a different question correctly.
+
+🟢 **The channel that works, confirmed for the third consecutive pass, is a proper noun** — a
+platform's name, a standard's name, or (this pass) **a ministry's name in its own language**.
+
+### 🟢 The channel that yielded: a national directorate, queried as `Utdanningsdirektoratet`
+
+`org:Utdanningsdirektoratet` → **18 repositories**, all genuinely owned by the Norwegian
+Directorate for Education and Training. Every payload read from `raw.githubusercontent.com` on
+its **real default branch** (`git ls-remote --symref`), 2026-10-06.
+
+| Repository | Branch | Licence (payload-verified) | Bytes | ★ | What it is |
+|---|---|---|---|---|---|
+| [`Utdanningsdirektoratet/Grep_SPARQL`](https://github.com/Utdanningsdirektoratet/Grep_SPARQL) | `main` | 🟢 **NLOD** (`LICENSE.md`) — **commercial use granted** | 1,783 | 0 | 🔴 **The headline.** Documentation of Grep's **SPARQL endpoint, in production since 7 Dec 2020** — the Norwegian national curriculum as queryable RDF. |
+| [`Utdanningsdirektoratet/KL06-LK20-public`](https://github.com/Utdanningsdirektoratet/KL06-LK20-public) | `master` | 🔴 **NO-PAYLOAD** (30+ filename variants) | 0 | 9 | The revised **Grep-data interface** for the LK20 curriculum reform. Docs + example files; the live service is documented in its wiki. |
+| [`Utdanningsdirektoratet/PAS2-Public`](https://github.com/Utdanningsdirektoratet/PAS2-Public) | `master` | 🟢 **Apache-2.0** | 11,325 | 8 | *"Kode for PAS som er åpent tilgjengelig"* — the openly published part of Norway's **exam administration system**. |
+| [`Utdanningsdirektoratet/designsystem`](https://github.com/Utdanningsdirektoratet/designsystem) | `main` | 🟢 **MIT** (`(c) 2025 Utdanningsdirektoratet`) | 1,079 | 12 | The directorate's **design system**, built on `digdir/designsystemet`. Active 2026-10-02. |
+| [`Utdanningsdirektoratet/pifu`](https://github.com/Utdanningsdirektoratet/pifu) | `master` | 🔴 **NO-PAYLOAD** | 0 | 10 | **PIFU** — *Personrelatert informasjonsflyt i utdanning*: Norway's **person-data / rostering flow** spec for education. |
+| [`Utdanningsdirektoratet/PAS-scoop-public`](https://github.com/Utdanningsdirektoratet/PAS-scoop-public) | `master` | 🟢 **Apache-2.0** | 11,357 | 0 | Scoop bucket for the PAS project. |
+| [`Utdanningsdirektoratet/VFKL`](https://github.com/Utdanningsdirektoratet/VFKL) + `VFKL_rebase` | `main` | 🟢 **MIT** (`(c) 2021 Altinn`) | 1,063 | 1 | ⚠️ **both archived.** Copyright is **Altinn**, Norway's national digital platform — not Udir. |
+| [`Utdanningsdirektoratet/xmldataimport`](https://github.com/Utdanningsdirektoratet/xmldataimport) | `master` | 🟢 **MIT** (`(c) 2017 Utdanningsdirektoratet`) | 1,079 | 0 | Test-data loader for SQL Server, for data-driven automated tests. |
+| [`Utdanningsdirektoratet/moodle-block_hero`](https://github.com/Utdanningsdirektoratet/moodle-block_hero) | `main` | **GPL-3.0** | 35,148 | 0 | 🟢 **A ministry maintaining Moodle plugins.** Created 2026-09-03 — new. GPL-3.0 is correct: Moodle's licence is inherited. |
+| [`Utdanningsdirektoratet/moodle-mod_adobeconnect_maintained`](https://github.com/Utdanningsdirektoratet/moodle-mod_adobeconnect_maintained) | `MOODLE_405_STABLE` | **GPL-3.0** | 35,147 | 0 | ⚠️ **default branch is neither `main` nor `master`.** Adobe Connect / Moodle integration, *"maintained"* — Udir picked up an abandoned plugin. |
+| `Grep-komponenter`, `sammenlignfrontend`, `ns4180`, `digilaer-autotest`, `dit-e2e-playwright`, `dit-github-actions`, `laeremiddelkatalogen-rfc` | mixed | 🔴 **NO-PAYLOAD ×7** | 0 | 0–3 | Component library, comparison frontend, NS4180 standard, Playwright E2E suite, shared CI actions, a learning-materials-catalogue RFC. |
+
+**Estate shape: 18 repositories → 10 with a grant → 🟢 4 MIT + 🟢 2 Apache-2.0 + 2 GPL-3.0
+(Moodle, inherited) + 🟢 1 NLOD + 🔴 8 ungranted.**
+
+🟢 **This is the second ministry estate this KB has shelved, and like the UK DfE estate it is
+permissive.** Two directorates, two countries, independently: **MIT and Apache-2.0**. The
+"ministry tier" is no longer a single observation.
+
+🔴 **And the two highest-value assets in it are the two without a software grant.** `KL06-LK20-public`
+(the curriculum interface) and `pifu` (the rostering spec) are both NO-PAYLOAD against 30+
+filename variants on their real default branch. **The capability is published; the grant is
+not** — this KB's oldest recurring shape, now measured in a third country.
+
+### 🟢 Why `Grep_SPARQL` is the most commercially useful row of this pass
+
+NLOD's own text, quoted from the payload: *"You are allowed to copy and make available, change
+and/or merge data sets … and **to use them for commercial purposes**."* Conditions are
+attribution in a prescribed string, **no use of the Udir logo** without separate agreement, and
+no misleading presentation.
+
+🔵 **So a Globant deliverable may query the Norwegian national curriculum, cache it, reshape it,
+and bill for the result** — which is precisely the permission that `P15` (curriculum-aligned
+item generation under a sovereignty constraint) and `P16` (the all-MIT national/state stack)
+have had to assume in every other country. **Here it is in writing.** New pattern `P25` wires
+it up in `compose/patterns.md`.
+
+⚠️ **Read the boundary correctly: NLOD grants the DATA, not the code.** The repository is
+documentation of an endpoint. The SPARQL client, the caching layer and the item generator are
+yours to write or to take from the permissive shelf.
+
+### 🟢 The LATAM rows the uncoined `inep` query yielded anyway
+
+`inep` is **not** a coined name (it matches `ineptpdf`), so its 3,572 is noise — but the
+sample contained four real assets:
+
+| Repository | Branch | Licence (payload-verified) | ★ | What it is |
+|---|---|---|---|---|
+| [`Mcp-Brasil/mcp-brasil`](https://github.com/Mcp-Brasil/mcp-brasil) | `main` | 🟢 **MIT** (`(c) 2025-2026 MCP Brasil`) | 🟢 **1,805** | **MCP server for 70 Brazilian public APIs**, Python/FastMCP. ⚠️ See `agents/trending.md` Finding 8 — **two live addresses**, this one 7.3× the stars of the one this KB shelved. |
+| [`SidneyBissoli/educabR`](https://github.com/SidneyBissoli/educabR) | `main` | 🟢 **MIT** — ⚠️ via **`DESCRIPTION`**, not `LICENSE` | 15 | **CRAN** package, v1.2.0.9000. Downloads and processes INEP microdata: **Censo Escolar, ENEM, SAEB, Censo da Educação Superior, ENADE, ENCCEJA, IDD, CPC, IGC, CAPES, FUNDEB**. Created 2026-01-26. |
+| [`unb-mds/2025-2-InfoSchool`](https://github.com/unb-mds/2025-2-InfoSchool) | `main` | 🟢 **MIT** (`(c) 2025 MDS`) | 2 | Universidade de Brasília course project: a data portal over the **censo escolar da educação básica**. |
+| [`inepdadosabertos/api`](https://github.com/inepdadosabertos/api) | `master` | 🔴 **GPL-2.0** (18,025 B) | 45 | *"API de dados abertos para o INEP"* — ⚠️ **created 2014**, and a civil-society project, not INEP's. |
+
+🟢 **`educabR` is the find.** A **CRAN-published, MIT** package covering eleven INEP instruments
+is the cleanest legal route into Brazilian education microdata this KB has recorded — and its
+licence is invisible to a payload probe (`agents/trending.md` Finding 5).
+
+### Measured negatives, stated so the next pass does not re-probe
+
+| Probe | Result |
+|---|---|
+| `eduscol` (🇫🇷) — 107 results | 🔴 **zero ministry-owned repositories.** Individual teachers' class material (`mots-frequents`, `Terminale-Spe-Maths`, DNB revision sets). ⚠️ One to watch: `VictorNain26/tomai-curriculum`, *"Index RAG de TomIA — l'index des programmes du collège"* — a **RAG index of the French national curriculum**, NO-PAYLOAD. |
+| `mext` / `monbukagakusho` (🇯🇵) — 1,701 results | 🔴 **zero ministry estate.** Only [`fnshr/kyo-kan`](https://github.com/fnshr/kyo-kan) — 🟢 **CC0-1.0**, 6★ — datatables of *gakunenbetsu kanji haitōhyō* (**MEXT's official kanji-by-grade tables**) as open data. |
+| `"ministry of education"` + Gulf — 7,228 results | 🔴 **zero.** The phrase matches README **funding acknowledgements**; see `agents/trending.md` Finding 2. |
+| `lucasmation/microdadosBrasil` (174★, R, reads CENSO) | 🔴 **NO-PAYLOAD** |
+| `KS-AVT/avt` (branch `AVT2`) | 🔴 **NO-PAYLOAD.** ⚠️ Worth a later look anyway: Norwegian municipal-sector (**KS**) **xAPI** statements for *"Aktivitetsdata for vurdering og tilpassing"* — a national xAPI profile, which the twelfth pass's xAPI/LRS tier has no public-sector example of. |
+| [`NKAmapper/school2osm`](https://github.com/NKAmapper/school2osm) | 🟢 **CC0-1.0** — extracts schools from Norway's **National School Register (NSR)**. |
+
+### 🟢 Infrastructure added this pass — a fixture gate, because the library would not run
+
+[`compose/code/p432-fromscratch-fixture-gate/`](../compose/code/p432-fromscratch-fixture-gate/):
+four repositories, their real branches, expected families and payload sizes, plus *why each
+case is required*. It caught **four** separate defects in this pass's own classifier in four
+requests. Full account in `agents/trending.md` Finding 3 — **this pass could not execute
+`lib/probe_payload.sh` at all**, so the library's protection had to be re-derived, and
+re-deriving it failed four times.
+
+### What the next pass should do
+
+1. 🟢 **Query the ministry tier with `org:`, not with the ministry's name** — the one change
+   that turns this channel from noise into an estate. Unqueried: `Skolverket`, `Opetushallitus`
+   (FI), `DUO` (NL), `stil` (DK), `MinEduc` (CL/CO), `SEP` (MX).
+2. **Probe `KS-AVT/avt` properly** for a payload on other branches — a government xAPI profile
+   would close a named hole in the xAPI tier.
+3. **Resolve the two `mcp-brasil` addresses** before either is quoted.
+4. 🔴 **Validate any new licence instrument against `p432` first.** Four requests.
+
+---
+
 ## 2026-10-06 — fifteenth pass: the mandatory queries fail for the eleventh time, and the registry census is finished properly
 
 ### The mandatory queries, run with the year **computed** (2026), not hardcoded

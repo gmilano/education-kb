@@ -2136,3 +2136,47 @@ those false positives — and once filtered by hand, **13 of 16 carried a payloa
 MIT**. It also reached **three regions the platform-name channel missed in the same pass**
 (Australia, Norway, EU-regulated tutoring). **Run both channels; they fail differently.** The
 platform channel finds institutions; the registry finds products.
+
+---
+
+## Added in the sixteenth pass of 2026-10-06 — one agent-adjacent row, and the honest count
+
+The channel this pass ran was the **ministry tier** (`agents/trending.md`, Finding 1). It is a
+good channel for **data, specs and platforms** and a poor one for agents: a directorate
+publishes a curriculum API, not a tutor.
+
+**So this pass adds one row, and says so rather than padding the table.**
+
+| Name | Repo | Licence (payload-verified) | ★ | Region | Description |
+|---|---|---|---|---|---|
+| **MCP Brasil** | [`Mcp-Brasil/mcp-brasil`](https://github.com/Mcp-Brasil/mcp-brasil) (`main`) | 🟢 **MIT** (`LICENSE`, 1,072 B, *"(c) 2025-2026 MCP Brasil"*) | 🟢 **1,805** | **LATAM** (BR) | MCP server over **70 Brazilian public-sector APIs** (Python / FastMCP), **13 of its endpoints education**. The largest education-data tool surface placed in LATAM in this KB. ⚠️ **Identity unresolved — read the warning below before quoting it.** |
+
+⚠️ **The identity warning, and it is why this row carries a caveat instead of a recommendation.**
+This KB already shelves [`dasgltd/mcp-brasil`](https://github.com/dasgltd/mcp-brasil) — **MIT,
+246★, recorded 2026-08-18, 97 tools, 13 of education**. Both addresses resolve, each has its own
+`HEAD`, the GitHub API reports neither as a fork of the other, and they are **7.3× apart in
+stars**. Until first-commit SHAs are compared, **which address is canonical is unknown**, and a
+client deliverable should pin a commit rather than a name.
+
+### What this pass searched for and did not find — stated as a gap, not as silence
+
+| Looked for | Where | Result |
+|---|---|---|
+| A ministry-published **tutoring or assessment agent** | 5 ministry names; `org:Utdanningsdirektoratet` (18 repos, all read) | 🔴 **none.** Udir publishes a curriculum endpoint, an exam-admin system, a design system, two Moodle plugins and CI tooling. **No agent.** |
+| A **French** curriculum agent | `eduscol`, 107 results | 🔴 **none licensed.** ⚠️ One real candidate: `VictorNain26/tomai-curriculum` — *"Index RAG de TomIA — l'index des programmes du collège"*, a **RAG index over the French national curriculum**, **NO-PAYLOAD**. The nearest thing to a French curriculum agent in this KB, and it is ungranted. |
+| A **Japanese** curriculum agent | `mext`, `monbukagakusho`, 1,701 results | 🔴 **none.** Only MEXT's kanji-by-grade tables as CC0 data (`fnshr/kyo-kan`). |
+| A **Gulf** ministry agent | `"ministry of education"` + Gulf, 7,228 results | 🔴 **none** — and the count is void (it matches funding acknowledgements). |
+
+🔵 **The shape across four regions is one finding: where a ministry publishes, it publishes the
+substrate and leaves the agent to the market.** That is a sales fact, not a disappointment —
+`P25` in `compose/patterns.md` is built on exactly that division of labour.
+
+### 🟢 A connection worth recording: one LATAM author, two permissive education-data assets
+
+[`SidneyBissoli/uis-mcp-server`](https://github.com/SidneyBissoli/uis-mcp-server) (MIT, UNESCO
+UIS statistics with pinned releases and full provenance) is already on the MCP shelf above.
+The same author published [`SidneyBissoli/educabR`](https://github.com/SidneyBissoli/educabR)
+— **MIT, on CRAN**, covering eleven INEP instruments (Censo Escolar, ENEM, SAEB, ENADE, CAPES,
+FUNDEB and more). 🟢 **One identifiable individual is supplying both the global and the
+Brazilian education-statistics access layer, permissively.** ⚠️ Which is also a
+**bus-factor-of-one** note for anything built on either.

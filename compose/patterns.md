@@ -2537,3 +2537,139 @@ the browser extension `infinitecampus-mcp` uses to lift a session token from a l
 — is evidence that an install base wants agent access its vendor does not yet sell.
 **That is a product opportunity to raise with the vendor, and an anti-pattern to decline in
 client delivery.**
+
+---
+
+## P25 — Curriculum alignment against a government endpoint (EMEA, Norway shape — and the substitution for everywhere else)
+
+**The problem every other curriculum pattern in this file has had to assume away.** `P9`, `P15`,
+`P16` and `P19` all generate or align content "to the national curriculum" — and each one
+quietly assumes a lawful, authoritative, machine-readable source of curriculum truth exists.
+The sixteenth pass measured that assumption across five ministries: **it holds in one of them.**
+
+In Norway it holds *completely*, and with a written commercial grant.
+
+### Components (every licence payload-verified 2026-10-06)
+
+| Role | Component | Licence |
+|---|---|---|
+| **Curriculum source of truth** | [`Utdanningsdirektoratet/Grep_SPARQL`](https://github.com/Utdanningsdirektoratet/Grep_SPARQL) — Grep SPARQL endpoint, Norway's **LK20** curriculum as RDF, **in production since 2020-12-07** | 🟢 **NLOD** — *"you are allowed to … use them for commercial purposes"* |
+| Curriculum interface docs | [`Utdanningsdirektoratet/KL06-LK20-public`](https://github.com/Utdanningsdirektoratet/KL06-LK20-public) (wiki is the live reference) | 🔴 **ungranted** — read it, do not vendor it |
+| Institution roster | [`NKAmapper/school2osm`](https://github.com/NKAmapper/school2osm) — every school in Norway's National School Register | 🟢 **CC0-1.0** |
+| UI components | [`Utdanningsdirektoratet/designsystem`](https://github.com/Utdanningsdirektoratet/designsystem) | 🟢 **MIT** |
+| Orchestration | LangGraph | 🟢 MIT |
+| Local/sovereign inference | Ollama / vLLM | 🟢 MIT / Apache-2.0 |
+| Vector + cache | Qdrant | 🟢 Apache-2.0 |
+| Delivery surface | Moodle plugin (GPL-3.0, in-tree) **or** an MCP side-car (MIT, external) | see `P1` |
+| Oversight gate | `P11` gated-generation gate | — |
+
+### Wiring
+
+1. **Pin the curriculum, do not live-query it.** Pull the LK20 competence aims, subjects,
+   programme structures and cross-curricular topics from the Grep SPARQL endpoint **once per
+   release**, and store the result with the query, the retrieval date and a content hash.
+   🔵 **NLOD permits copying and reshaping, so a pinned local copy is licensed — and a pinned
+   copy is the only way a tutor's alignment claim is reproducible three months later.**
+2. **Materialise competence aims as addressable entities**, each carrying its official Grep
+   identifier. The identifier is the whole point: it is what makes "aligned to LK20 aim
+   *X*" checkable by someone who does not trust you.
+3. **Index into Qdrant** keyed by competence-aim identifier, not by free text. Alignment is a
+   join on an identifier, never an embedding similarity score.
+4. **Generation runs through `P11`'s gate**: the model proposes items, each item must cite at
+   least one competence-aim identifier that exists in the pinned snapshot, and **an item citing
+   an unknown identifier is rejected mechanically, not reviewed.**
+5. **Attribution is a build artefact.** Emit the NLOD string — *"Contains data under NLOD, made
+   available on data.udir.no"* — into the UI footer and into the export metadata. ⚠️ **No Udir
+   logo anywhere**, including slides.
+6. **Teacher review before publication** (`P11`), with the citation visible in the review UI so
+   the reviewer checks the *aim*, not the prose.
+
+### Deliverables
+
+* A pinned, hashed, dated curriculum snapshot plus the SPARQL queries that produced it.
+* An item bank in which **every item cites a real competence-aim identifier**.
+* A rejection log: items the identifier gate refused, which is the evidence the gate runs.
+* An NLOD attribution and logo-restriction compliance note.
+* ⚠️ **A data-liability note**: NLOD disclaims accuracy, so the alignment claim is *yours*.
+  Budget a sampling validation and say who signs it.
+
+### ⚠️ Three warnings that are the point of this pattern
+
+1. 🔴 **Do not port this pattern by analogy.** It works because a *specific* state publishes a
+   *specific* endpoint under a *specific* licence. France: **no ministry estate** (the one
+   curriculum RAG index found is ungranted). Japan: **documents only** — which is exactly why
+   `compose/code/jp-cos-curriculum-gate` had to be built. The Gulf: nothing findable.
+   🔵 **So in most countries the substitution is: ingest curriculum documents, build the
+   alignment index yourself, and evidence it** — billable work in Japan, a free lookup in
+   Norway. **The same proposal cannot be priced the same way in both.**
+2. ⚠️ **NLOD grants the data, not a system.** `Grep_SPARQL` is endpoint documentation. There is
+   no platform here; the client, cache, mapper and generator are yours.
+3. ⚠️ **`KL06-LK20-public` and `pifu` are ungranted.** Use them as specifications to read, never
+   as code to ship. 🟢 **And ask**: a ministry adding a `LICENSE` file is a one-commit change,
+   and it is the highest-leverage upstream request in this KB.
+
+---
+
+## P26 — Early-childhood administration with an assistive-only AI layer (EMEA, municipal)
+
+**A platform tier this file had no pattern for, and a buyer it had no shape for.** Every other
+platform pattern here targets K-12, higher education or enterprise L&D. Early-childhood
+education (ECEC) is bought by **municipalities**, runs on placement queues and income-based fee
+decisions, and is subject to statutory child-ratio compliance.
+
+🟢 **And it has a production open-source platform, adapted by a second city** — which is the
+hardest test a public-sector codebase can pass.
+
+### Components
+
+| Role | Component | Licence |
+|---|---|---|
+| **ECEC platform** | [`espoon-voltti/evaka`](https://github.com/espoon-voltti/evaka) — in production for the **City of Espoo** (Kotlin) | **LGPL-2.1-or-later** — ⚠️ grant is in **`LICENSES/`**, not `LICENSE` (REUSE spec v3.0) |
+| **Adaptation precedent** | [`Tampere/trevaka`](https://github.com/Tampere/trevaka) — the same platform for the **City of Tampere**, active 2026-10-06 | **LGPL-2.1** (full 27,030-byte text) |
+| Forecasting / analytics | your own module, **linked** against eVaka | 🟢 your licence — see wiring step 1 |
+| Orchestration | LangGraph | 🟢 MIT |
+| Oversight gate | `P11` | — |
+| Compliance profile | `P13` (EU AI Act education profile) | — |
+
+### Wiring
+
+1. **Link, do not fork the core — this is the licence doing architecture.** LGPL-2.1-or-later
+   means modifications *to eVaka's own files* must be published, while **your separate modules
+   linking against it may stay proprietary**. 🔵 Same middle path this page already argues for
+   LGPL-3.0 platforms: **put client-specific value in new modules, contribute core fixes back.**
+   ⚠️ **eVaka is REUSE-compliant, so check per-file SPDX headers before assuming every file is
+   LGPL** — the repository's default is LGPL-2.1-or-later, not a guarantee about each file.
+2. **Read `trevaka` before you quote a timeline.** It is the only existing evidence of what
+   adapting eVaka to a second municipality actually costs, and it is a real, current repository
+   rather than a vendor estimate.
+3. **Build the AI layer on capacity, not on eligibility.** Demand forecasting for placement
+   capacity, staffing projections against statutory child ratios, anomaly review on attendance
+   records, and caseworker drafting assistance.
+4. **Every output is a draft with a named human decision-maker** (`P11`). The gate here is not
+   a formality: it is the compliance position.
+5. **Run `P13`'s profile** and document the determination.
+
+### Deliverables
+
+* A linked analytics/forecasting module with its own licence boundary documented file-by-file.
+* A forecasting model with its training window, inputs and error characteristics stated.
+* An oversight-gate record: every AI-touched decision, its human decision-maker, timestamp.
+* A `P13` AI Act determination for each AI-touched function.
+* ⚠️ A REUSE/SPDX licence inventory of the files you touched — produced by reading
+  `LICENSES/` and per-file headers, **not** by reading `LICENSE`.
+
+### ⚠️ Warnings
+
+1. 🔴 **Do not automate placement or fee determination.** These are decisions about access to a
+   public service for **small children** — a protected group under the most scrutiny of any
+   population in this KB. Automating them is the one thing that converts a municipal reference
+   client into a regulatory incident. **Assistive only, human decides, and say so in the
+   proposal before the client asks.**
+2. ⚠️ **The grant is not where your tooling looks.** eVaka's 1,001-byte `LICENSE` states
+   verbatim that it contains *"never the original license texts"*. A probe reads NO-GRANT or
+   guesses from prose; the real text is `LICENSES/LGPL-2.1-or-later.txt`. 🔵 **Validate any
+   licence instrument against `compose/code/p432-fromscratch-fixture-gate/` first — `evaka` is
+   fixture 4 there precisely because the correct answer is "I don't know from this file."**
+3. ⚠️ **Child data is the most sensitive category this KB touches.** GDPR, national ECEC law and
+   municipal data-protection officers all apply before the AI Act does. Scope the DPO
+   conversation into week one.
