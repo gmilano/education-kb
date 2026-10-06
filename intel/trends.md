@@ -2110,11 +2110,20 @@ Searched this pass; stated so they can be falsified rather than left as silence.
    above 2★), `"arbor mis"` 7 (nothing above 0★), `"capita sims" school` **0**. Against the
    strongest government MIT estate in this KB. **A clean build opportunity, stated as a gap
    rather than as an absence of evidence.**
-3. 🔴 **No Japan-, Korea-, Australia- or India-placed SIS integration asset was found.**
-   India's `diksha` is a name collision returning 2,864 irrelevant repositories;
-   `samarth ugc` returned 0. The Australia probe (`sentral compass school australia api`)
-   was OR'd and therefore weak — **re-run one name at a time before trusting this gap.**
-   The entire APAC tier found this pass is one Taiwanese university.
+3. ⚠️ **Restated mid-pass, because this pass falsified its own first version.** The gap
+   was first written as *"no Japan-, Korea-, Australia- or India-placed SIS integration asset
+   was found"*. The **Australia half was wrong**: the MCP Registry channel, run later in the
+   same pass, returned
+   [`EquateItAu/classquill-mcp`](https://github.com/EquateItAu/classquill-mcp) — **MIT,
+   payload-verified, Australian** (ClassQuill tutoring-business data, read-only by design).
+   🔵 **The first version was true of the platform-name channel and false of the world**,
+   which is precisely the error this pass corrected in the fourteenth pass's work — reproduced
+   here within hours, and caught only because a second channel was run.
+   **Corrected gap: no Japan-, Korea- or India-placed asset was found.** India's `diksha` is
+   a name collision returning 2,864 irrelevant repositories and `samarth ugc` returned 0;
+   `sentral compass school australia api` was OR'd and is not evidence of anything.
+   🟢 **The standing rule this produces: never write a gap from one channel.** Name the
+   channel in the gap, or run a second one before publishing it.
 4. ⚠️ **The ministry tier is still unmeasured.** Skolverket (SE) is shelved from the
    fourteenth pass, but Udir (NO), Eduscol (FR), INEP/Censo Escolar (BR), MEXT (JP) and the
    Gulf ministries were not queried by name. **This is the fourteenth pass's instruction 2
@@ -2135,3 +2144,29 @@ Searched this pass; stated so they can be falsified rather than left as silence.
    **README's own licence link**. `OS4ED/openSIS-Classic` keeps its GPL-2.0 text at
    `docs/License.txt` — mixed case, in a subdirectory, with a byte-order mark — which no
    filename ladder in this KB would have found. The README said where it was, in one request.
+
+## Addendum to the fifteenth pass — the registry channel, and what it does to two claims
+
+🟢 **The MCP Registry is low-density and high-precision, and it fails differently from the
+platform-name channel.** ~160 education-matching servers in a 17,000+-name index (under 1%),
+most of them false positives on words like *exam*, *canvas* and *education* used outside
+education — and then **13 of 16 hand-filtered addresses carried a licence payload, 12 of them
+MIT**. Rows in `agents/top.md`.
+
+🔵 **It reached three regions the platform channel missed in the same pass**: Australia
+(`EquateItAu/classquill-mcp`, MIT), Norway (`MartinSA04/ntnu-mcp`, MIT) and EU-regulated
+tutoring (`Cogniledger/cogniledger-mcp-makuri`, MIT — *"EU-compliant AI tutoring platform for
+immigrant children"*, the most regulated user group in this KB). **Run both channels. The
+platform channel finds institutions; the registry finds products.**
+
+⚠️ **And it qualifies the fourteenth pass's "the hole is K-12 administration".**
+[`Eason0in/classdojo-mcp`](https://github.com/Eason0in/classdojo-mcp) (MIT) imports and
+verifies ClassDojo rosters, and ClassDojo's K-12 install base is very large. It is unofficial
+and roster-scoped, so the *administration* claim survives in substance — **but the tier was
+not empty when it was called empty**, and that is now the second claim of that pass this one
+has had to qualify.
+
+🟢 **Two addresses the fourteenth pass left as "not read" are now read**, and both are
+ungranted: `3121n/nor-data-udir-mcp` (Udir, Norway) and `DistrictAPI/districtapi-mcp` (US
+school districts by address). A fourth registry entry, `lockinplanner/lock-in`, **does not
+resolve at all** — the registry indexes addresses it does not verify.

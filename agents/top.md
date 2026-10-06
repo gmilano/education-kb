@@ -2075,3 +2075,64 @@ more data points for a rule this KB already has.
    That stands, with one amendment: **1 in 44 this pass sat at the British spelling.** Carry
    `LICENCE` as a second probe — it is one extra request — and leave the other eleven variants
    off the census, exactly as that pass instructed.
+
+### Added later in the fifteenth pass — the MCP Registry channel, filtered, and it closes two of this pass's own gaps
+
+Instruction 1 (*"finish the MCP Registry census"*) was run with the retry fix described in
+`repos/trending.md`. The census itself is a channel-economics finding and lives there. **What
+belongs here are the rows**, because once the index is filtered the channel is high-precision:
+**13 of 16 probed addresses carry a licence payload, 12 of them MIT.**
+
+All rows below were probed with the new shared harness
+(`compose/code/lib/probe_payload.sh`), which resolves the real default branch first and
+classifies with `lib/license_family.sh`.
+
+| Repo | ★ | Licence (payload) | Region | What it is |
+|---|---|---|---|---|
+| [`JohannsenLum/canvas-api-mcp`](https://github.com/JohannsenLum/canvas-api-mcp) | 3 / **13 forks** | **MIT** (1,069 B) | Global | 16 curated student tools **plus a gateway to all 1,116 Canvas API endpoints** |
+| [`Smartoire/paxaver-mcp`](https://github.com/Smartoire/paxaver-mcp) | 0 | **Apache-2.0** (11,344 B) | Global | School-community platform adapter — **streamable HTTP + OAuth 2.1**, capability-scoped |
+| [`KSAklfszf921/skolverket-mcp`](https://github.com/KSAklfszf921/skolverket-mcp) | 0 | **MIT** (1,092 B) | **EMEA** (SE) | Skolverket open APIs — curriculum, school units, **adult education**. The *second* permissive Skolverket server in this KB |
+| [`MartinSA04/ntnu-mcp`](https://github.com/MartinSA04/ntnu-mcp) | 0 | **MIT** (1,076 B) | **EMEA** (NO) | NTNU course data on Cloudflare Workers — timetables, grade statistics, conflict checks |
+| [`Cogniledger/cogniledger-mcp-makuri`](https://github.com/Cogniledger/cogniledger-mcp-makuri) | 0 | **MIT** (1,084 B) | **EMEA** (EU) | ⚠️ **"EU-compliant AI tutoring platform for immigrant children"** — the most regulated user group in this KB, permissively licensed |
+| [`EquateItAu/classquill-mcp`](https://github.com/EquateItAu/classquill-mcp) | 0 | **MIT** (1,077 B) | **APAC** (AU) 🆕 | ClassQuill tutoring-business data — **read-only by design** (sessions, students, tutors, invoices, reports) |
+| [`Eason0in/classdojo-mcp`](https://github.com/Eason0in/classdojo-mcp) | 0 | **MIT** (1,065 B) | **North America** | ⚠️ ClassDojo roster import/verify, **unofficial, local-first** — a **K-12** asset |
+| [`SidneyBissoli/uis-mcp-server`](https://github.com/SidneyBissoli/uis-mcp-server) | 0 | **MIT** (`LICENSE.md`, 1,079 B) | Global | UNESCO UIS statistics **with full provenance and pinned releases** |
+| [`Lilly-Tech-Collab/ai-school-mcp`](https://github.com/Lilly-Tech-Collab/ai-school-mcp) | 0 | **MIT** (1,404 B) | Global | 550+ free AI course tracks / 21,000+ lessons, **answers cite a real lesson** |
+| [`CSOAI-ORG/education-ai-mcp`](https://github.com/CSOAI-ORG/education-ai-mcp) | 0 | **MIT** (1,068 B) | Global | Lesson-plan + quiz generation |
+| [`CSOAI-ORG/quiz-generator-ai-mcp`](https://github.com/CSOAI-ORG/quiz-generator-ai-mcp) | 0 | **MIT** (1,080 B) | Global | Quiz generation + answer validation |
+| [`CSOAI-ORG/flashcard-ai-mcp`](https://github.com/CSOAI-ORG/flashcard-ai-mcp) | 0 | **MIT** (1,080 B) | Global | Flashcards + **spaced repetition** |
+
+**Measured and ungranted from the same filter** — including **two addresses the fourteenth
+pass listed as "not read", now read:**
+
+| Repo | Verdict |
+|---|---|
+| [`3121n/nor-data-udir-mcp`](https://github.com/3121n/nor-data-udir-mcp) | 🔴 **no payload** on `master`. Udir (Norway) registry data. *Pass 14 left this "not read" — it is now read.* |
+| [`DistrictAPI/districtapi-mcp`](https://github.com/DistrictAPI/districtapi-mcp) | 🔴 **no payload** on `main`. US public school districts by address — enrolment, demographics, boundaries. *Also "not read" in pass 14.* |
+| [`Capmus-Team/supost-mcp`](https://github.com/Capmus-Team/supost-mcp) | 🔴 **no payload** on `master`. Stanford student marketplace. |
+| `lockinplanner/lock-in` | 🔴 **does not resolve** — `ls-remote` returns nothing. A registry entry pointing at an address that is not there. |
+
+### 🟢 Two gaps this pass declared, and then closed in the same pass
+
+This matters more than the rows, because it is a check on this KB's own method.
+
+1. 🔴 **Declared gap 3 of this pass said: *"no Japan-, Korea-, Australia- or India-placed SIS
+   integration asset was found."* The Australia half is now wrong.**
+   [`EquateItAu/classquill-mcp`](https://github.com/EquateItAu/classquill-mcp) is MIT,
+   payload-verified, and Australian. 🔵 **The gap was true of the platform-name channel and
+   false of the world** — exactly the error Finding 1 of this pass corrected in the
+   fourteenth pass's work, reproduced here within hours. **A single-channel gap is a
+   statement about that channel.** The gap is restated correctly in `intel/trends.md`:
+   Japan, Korea and India remain unfound; **Australia is found.**
+2. ⚠️ **The fourteenth pass's "the hole is K-12 administration" needs the same qualification.**
+   [`Eason0in/classdojo-mcp`](https://github.com/Eason0in/classdojo-mcp) (MIT) is a K-12
+   classroom asset, and ClassDojo reaches a very large K-12 install base. It is unofficial
+   and roster-scoped, so the *administration* claim survives in substance — but the tier is
+   not empty, and it was not empty when it was called empty.
+
+🔵 **The channel lesson, stated for the next pass.** The registry is **low-density and
+high-precision**: ~160 education-matching servers in a 17,000+-name index (under 1%), most of
+those false positives — and once filtered by hand, **13 of 16 carried a payload and 12 were
+MIT**. It also reached **three regions the platform-name channel missed in the same pass**
+(Australia, Norway, EU-regulated tutoring). **Run both channels; they fail differently.** The
+platform channel finds institutions; the registry finds products.

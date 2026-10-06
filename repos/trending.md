@@ -8,6 +8,175 @@ updated: 2026-10-06
 
 > **Append-only.** Newest dated section on top; history preserved below.
 
+## 2026-10-06 — fifteenth pass: the mandatory queries fail for the eleventh time, and the registry census is finished properly
+
+### The mandatory queries, run with the year **computed** (2026), not hardcoded
+
+| Query | Result |
+|---|---|
+| `top open source AI agents education 2026 github MIT` | 🔴 **Generalist layer, verbatim the same set as the fourteenth pass**: openclaw (385,407★), dify (151,639★), browser-use (108,128★), Mem0 (62,735★), AutoGen (60,284★), Flowise (55,226★), plus Hermes Agent, aider, Cline, CrewAI, LangGraph. **Zero education-specific repositories.** |
+| `github trending education AI 2026` | ⚠️ **Learning-resource layer, already inventoried**: `rohitg00/ai-engineering-from-scratch` (#1 on Trending, 24 May 2026), `speedyapply/2026-AI-College-Jobs` (5.2k★), Karpathy's *Zero to Hero*, D2L, Semantic Kernel (27,470★). **Zero education-platform repositories.** |
+| `open source platform education ERP CRM MIT Apache` | ⚠️ **OpenEduCat on Odoo again, plus generic MIT CRM / AGPL ERP, plus CK-ERP** — whose newest cited release is still **2010**. Identical to the fourteenth pass's result. |
+| `AI education industry trends 2026` | ⚠️ **Figures only, and every one of them already in `intel/market.md`**: $7.52B (2025) → $10.6B (2026) → $42.48B (2030); the rival $6.4B → $79.6B at 31.35%; 71.22% cloud / 45.62% K-12 / 34.78% STEM; student usage 66% → 92%. |
+
+🔵 **Marginal yield of the generalist channel for *repositories*: ZERO for the eleventh
+consecutive pass**, and the sixteenth for the infrastructure query. 🔴 **This pass the market
+query paid nothing new either** — all four figures were already published here. The fourteenth
+pass called the market query *"the only one of the four that pays"*; on this pass it did not.
+**Run the set to witness a regime change, not to discover.**
+
+### 🟢 The channel that yielded: the platform's own name, pointed at the SIS/MIS tier
+
+Full measurement in `agents/trending.md` (fifteenth pass) and all rows with licences in
+`agents/top.md`. **44 addresses probed, 36 carried, 82% payload rate, 24 permissive, seven
+countries.** Plus the structural finding in `verticals/solutions.md`: **zero permissive SIS
+platforms exist**, which is why all of that permissive supply is client-side.
+
+| Repo | ★ | Licence (payload) | Country |
+|---|---|---|---|
+| [`SapuSeven/BetterUntis`](https://github.com/SapuSeven/BetterUntis) | **300** | GPL-3.0 | DE/AT |
+| [`bain3/pronotepy`](https://github.com/bain3/pronotepy) | **241** | **MIT** | FR |
+| [`SchoolUtils/WebUntis`](https://github.com/SchoolUtils/WebUntis) | **214** | 🔴 none | DE/AT |
+| [`Litarvan/pronote-api`](https://github.com/Litarvan/pronote-api) | 192 | 🔴 none | FR |
+| [`JonasJoKuJonas/homeassistant-WebUntis`](https://github.com/JonasJoKuJonas/homeassistant-WebUntis) | 148 | **MIT** | DE/AT |
+| [`elisaado/somtoday-api-docs`](https://github.com/elisaado/somtoday-api-docs) | 87 | 🔴 none | NL |
+| [`aquario-ufpb/aquario`](https://github.com/aquario-ufpb/aquario) | 84 | **MIT** | BR |
+| [`python-webuntis/python-webuntis`](https://github.com/python-webuntis/python-webuntis) | 81 | **BSD-2-Clause** | DE/AT |
+| [`luthierycosta/ConsertandoHorariosSIGAA`](https://github.com/luthierycosta/ConsertandoHorariosSIGAA) | 75 | **MIT** | BR |
+| [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | **644** | GPL-2.0 | platform |
+| [`GibbonEdu/core`](https://github.com/GibbonEdu/core) | **634** | GPL-3.0 | platform |
+| [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) | **345** | GPL-2.0 (`docs/License.txt`) | platform |
+
+*(Full 36-row table, placed by country, in `agents/top.md`.)*
+
+### 🔴 Finding: the MCP Registry census, finished — and the fourteenth pass's number was 21% of the walk
+
+Instruction 1 was *"finish the MCP Registry census — the page loop stopped at page 313 (31,300
+records, 11,505 unique servers) when a request came back empty. Resume from the last cursor
+and state the real index size."*
+
+**Step 1 — reproduce the failure.** A cursor walk (not page numbers) terminated the same way at
+a different place: empty response after **142 requests / 14,100 records**.
+
+**Step 2 — test the terminator.** Re-requesting the exact cursor that "ended" the walk:
+
+| Attempt | Result |
+|---|---|
+| 1 | 🔴 **100 servers** + a valid `nextCursor` |
+| 2 | 🔴 **100 servers** |
+| 3 | 🔴 **100 servers** |
+
+**Step 3 — re-walk with a 4× retry on empty.** The decisive measurement:
+
+| Metric | Value |
+|---|---|
+| Requests | **900** |
+| Records read | **90,000** |
+| Unique server names | **24,644** |
+| Versions per name | 3.65 |
+| 🔴 **Empty responses encountered** | **8** |
+| 🟢 **Recovered by retry** | **8 — every single one** |
+| Genuine end-of-index reached | 🔴 **none.** The walk stopped at **our own 900-request safety cap** |
+
+🔴 **Eight empty responses in 900 requests, and all eight were transient. Not one was the end
+of the index.** A walk that treats the first empty page as end-of-index therefore stops at a
+uniformly random point. That is what happened at page 313, and at request 142.
+
+🔴 **The cost, measured exactly:** within the first 14,100 records — where the no-retry walk
+stopped — the index yields **5,184 unique server names**. The retry walk reached **24,644**.
+**The unretried walk captured 21% of what the identical walk reaches with four lines of retry
+logic.**
+
+⚠️ **So the fourteenth pass's "31,300 records → 11,505 unique servers" must not be carried
+forward as the index size, and neither must 90,000 / 24,644.** Both are floors. The honest
+statement: **the registry holds at least 24,644 unique servers across at least 90,000 version
+records, and this method cannot establish the ceiling** — the stop is always an operator
+choice, never an observation.
+
+🟢 **The method fix, which is the durable part:** retry the same cursor up to four times with
+a short sleep before concluding end-of-index. **An empty page in a paginated API is a fault
+until proven otherwise.**
+
+### 🟢 And the census paid in rows, which was not expected
+
+| Measure | Value |
+|---|---|
+| Unique servers in the index | 24,644 |
+| Matching education terms on a word boundary | **200 (0.81%)** |
+| …of those, carrying a GitHub repository URL | 129 |
+| …carrying **no** repository URL at all | 71 |
+| Hand-filtered and probed this pass | 16 |
+| 🟢 **Carried a licence payload** | **13 (12 MIT · 1 Apache-2.0)** |
+
+🔵 **The registry is low-density and high-precision: under 1% of a 24,644-name index matches
+education at all, and most of those are false positives** — *exam* (notary prep), *canvas*
+(drawing surfaces, "TeamAgent Canvas"), *education* (financial literacy, UN SDG indicators).
+**Once filtered by hand, 13 of 16 carried a payload.**
+
+🟢 **And it reached three regions the platform-name channel missed in the same pass:**
+[`EquateItAu/classquill-mcp`](https://github.com/EquateItAu/classquill-mcp) (MIT, **Australia**
+— which falsified a gap this pass had already declared),
+[`MartinSA04/ntnu-mcp`](https://github.com/MartinSA04/ntnu-mcp) (MIT, **Norway**) and
+[`Cogniledger/cogniledger-mcp-makuri`](https://github.com/Cogniledger/cogniledger-mcp-makuri)
+(MIT, **EU-compliant AI tutoring for immigrant children**). Also
+[`JohannsenLum/canvas-api-mcp`](https://github.com/JohannsenLum/canvas-api-mcp) (MIT, a
+gateway to **all 1,116 Canvas API endpoints**, 13 forks on 3★) and
+[`Smartoire/paxaver-mcp`](https://github.com/Smartoire/paxaver-mcp) (**Apache-2.0**, OAuth 2.1,
+capability-scoped). Rows in `agents/top.md`.
+
+⚠️ **Two addresses the fourteenth pass left as "not read" are now read, and both are
+ungranted**: `3121n/nor-data-udir-mcp` (Udir, Norway) and `DistrictAPI/districtapi-mcp` (US
+school districts). And one registry entry, `lockinplanner/lock-in`, **does not resolve at
+all** — the registry indexes addresses it does not verify.
+
+🔵 **Run both channels; they fail differently. The platform channel finds institutions. The
+registry finds products.**
+
+### 🟢 Infrastructure added this pass — the shared probe loop
+
+`compose/code/lib/probe_payload.sh` (+ `test_probe_payload.sh`, **12/12**). This pass wrote
+its own `curl`+`grep` loop, did not source `lib/license_family.sh`, and re-imported a defect
+this KB had already measured and fixed — GPL-3.0 §6 contains the word *"noncommercially"*, so
+four GPL/AGPL payloads came back as Creative Commons/NonCommercial. **The family question had
+a control; the loop around it did not, so every pass still rebuilt the loop and re-chose the
+classifier while doing it.** The new file is that loop, and it closes three traps measured on
+real repositories this pass:
+
+1. 🔴 **The default branch is not `main`/`master`** — `GibbonEdu/core` → `v31.0.00`,
+   `portabilis/i-educar` → `2.12`, `francoisjacquet/rosariosis` → `mobile`: **three of the
+   five highest-starred open SIS platforms in existence.**
+2. 🔴 **The licence can live in a mixed-case subdirectory** — `OS4ED/openSIS-Classic` keeps
+   GPL-2.0 at `docs/License.txt`, found via **the README's own link**, which is now tried
+   before any filename ladder.
+3. 🟢 **British spelling** — `LICENCE` paid 1 in 44 this pass, against the full 20-name ladder's
+   0 in 98 last pass.
+
+🟢 **Plus a verdict that is not an absence: `DECLARED-NOT-GRANTED`.** A README that points at
+a licence file that is not there is a maintainer who *believes* they granted — measured on
+[`DMontgomery40/mcp-canvas-lms`](https://github.com/DMontgomery40/mcp-canvas-lms) (**103★**,
+*"MIT License - see [LICENSE] file for details"*, **no such file**). That is a one-commit
+upstream ask, and reporting it as bare silence loses the distinction.
+
+### What the next pass should do
+
+1. **Read four vendor Terms of Use and settle whether the anti-AI-training clause is one
+   vendor or the sector**: PowerSchool, Instructure/Canvas, Google Classroom, Moodle hosting.
+   This pass has **one** verified instance (Infinite Campus) and that is not a trend yet.
+   ⚠️ `infinitecampus.com` is egress-blocked here, so the one instance is quoted from the
+   repository's README — **re-read it from an unblocked network and date it.**
+2. **Run the platform channel against the ministry tier**, which this pass still did not
+   reach: Udir (NO), Eduscol (FR), INEP/Censo Escolar (BR), MEXT (JP), the Gulf ministries.
+   **Check the name is a coined word before trusting a count** — `diksha` returned 2,864
+   repositories and none of them were the platform.
+3. **Ask `IFRN` for a licence file on [`IFRN/suapi`](https://github.com/IFRN/suapi)** (28★) —
+   a federal institute's own client library for the SIS it operates, ungranted, while an
+   individual's client for the same system is MIT. One commit.
+4. **Use `lib/probe_payload.sh`. Do not write another probe loop.** This pass is the second
+   recorded instance of a pass re-importing a solved defect by rebuilding the plumbing; a
+   third should be read as proof that only tooling can carry this.
+
+---
+
 ## 2026-10-06 — fourteenth pass: the generalist query fails for the tenth time, and a new index opens with three traps in it
 
 ### The mandatory queries, run with the year **computed** (2026), not hardcoded

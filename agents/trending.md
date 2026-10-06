@@ -116,11 +116,25 @@ what happened at request 142. **Neither pass measured the index; both measured w
 connection hiccuped.**
 
 🟢 **The fix is four lines: retry the same cursor up to 4× with a short sleep before
-concluding end-of-index.** With retries in place the walk ran past both previous stopping
-points, and the resumed census is reported in `repos/trending.md` (fifteenth pass).
+concluding end-of-index.** Re-walked that way:
 
-⚠️ **The instruction's "11,505 unique servers" should not be carried forward as the index
-size.** It was derived from a truncated walk.
+| Metric | Value |
+|---|---|
+| Requests | **900** |
+| Records | **90,000** |
+| Unique server names | **24,644** |
+| 🔴 Empty responses | **8** |
+| 🟢 Recovered by retry | **8 — all of them** |
+| Genuine end-of-index | 🔴 **never reached** — stopped at our own 900-request cap |
+
+🔴 **Eight empty pages in 900 requests, all eight transient, none of them the end.** And the
+cost is measurable exactly: within the first 14,100 records — where the no-retry walk stopped
+— the index yields **5,184 unique names**. The retry walk reached **24,644**. **The unretried
+walk captured 21% of what the identical walk reaches with retries.**
+
+⚠️ **So neither "11,505 unique servers" nor this pass's 24,644 is the index size. Both are
+floors**, because the stop is an operator's choice rather than an observation. Full census,
+and the 13 licensed education rows it yielded, in `repos/trending.md` (fifteenth pass).
 
 ### Finding 7 — `curl -sI` on github.com is a dead instrument in this environment
 
@@ -196,8 +210,12 @@ a correction block.
    reach**: Skolverket is shelved, but Udir (NO), DfE (UK, estate already shelved), Eduscol
    (FR), INEP/Censo Escolar (BR), MEXT (JP) and the Gulf ministries were not queried by name.
    Query one name at a time and **check the name is coined before trusting the count.**
-3. **Finish the registry census with the retry fix** and publish the real index size. The
-   walk is resumable from any cursor.
+3. ✅ **Done in this pass** — the registry census was finished with the retry fix (900
+   requests, 90,000 records, 24,644 unique names, 8 transient empties all recovered) and it
+   yielded **13 licensed education rows, 12 of them MIT**, three of which are placed in
+   regions the platform channel missed. **Next: read four vendor Terms of Use** (PowerSchool,
+   Instructure/Canvas, Google Classroom, Moodle hosting) and settle whether the
+   anti-AI-training clause is one vendor or the sector.
 4. **Do not re-run `curl -sI` against github.com here.** Finding 7 priced it.
 
 ---
