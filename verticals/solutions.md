@@ -177,7 +177,7 @@ licensed.
 | Kolibri Studio | [learningequality/studio](https://github.com/learningequality/studio) | **MIT** (`master/LICENSE`, Foundation for Learning Equality) | Curriculum authoring and channel curation for Kolibri |
 | Kolibri for Android | [learningequality/kolibri-installer-android](https://github.com/learningequality/kolibri-installer-android) | **MIT** (`master/LICENSE`, © 2023) | The 2 GB-RAM delivery target of RNF-04 |
 | **EduFlow** | [caiuc/equipo-19-haCAIthon-2026](https://github.com/caiuc/equipo-19-haCAIthon-2026) | **MIT** (© 2026 CAi UC — **holder flagged**, see `agents/top.md`) | **Not a platform — a readable reference implementation** of the offline-sync pattern, 41 commits |
-| RACHEL | *path unresolved* | **Unknown — not established** | Cited by EduFlow as prior art alongside Kolibri. **No file resolved on any probe** (`rachelproject/rachelplus`, `rachelproject/RACHELPlus`, `rachelproject/rachel`, `worldpossible/rachelplus` × `main`/`master`), so the canonical location was **not** established and no licence claim is made. Recorded so the next pass starts from the project's own site, not from a guessed repository path |
+| RACHEL | [rachelproject/contentshell](https://github.com/rachelproject/contentshell) | **CC BY-SA-NC — README only, no payload** | **RESOLVED in the ninth pass, and it is NOT shippable.** The org is `rachelproject`; `contentshell` *is* the RACHEL CMS. No licence payload across 8 filenames × 2 branches; the README declares *"Creative Commons - BY, SA, NC"* — a content licence over PHP software, carrying **NonCommercial**. Cite as prior art, never ship. See the ninth-pass section below |
 
 All three Learning Equality licences were **re-confirmed from payload this
 pass**.
@@ -531,3 +531,93 @@ cannot vendor. Here the content licence is **right**, because the artefact reall
 is content. **Judge the licence against the artefact, not against a preference
 ordering of licences.** A reading list under CC BY is well licensed; an
 evaluation harness under CC BY is mis-licensed. Same licence, opposite verdict.
+
+## Added in the ninth pass of 2026-10-06 — RACHEL closed, and a ministry's estate as the public-sector reference
+
+### RACHEL, resolved: the answer is NonCommercial
+
+The eighth pass left RACHEL as *"path unresolved, no licence claim made."*
+Starting from the project rather than a guessed path, the org is
+**`rachelproject`** and the verdict is settled:
+
+| System | Repo | Payload probe | Stated grant | Verdict |
+|---|---|---|---|---|
+| **RACHEL** (the CMS) | [rachelproject/contentshell](https://github.com/rachelproject/contentshell) | **none** — `LICENSE{,.md,.txt}`, `LICENCE{,.md,.txt}`, `COPYING`, `COPYRIGHT` × `main`/`master` | README: *"Creative Commons - BY, SA, NC"* | ❌ **NonCommercial on the software — not shippable** |
+| RACHEL module template | [rachelproject/module-template](https://github.com/rachelproject/module-template) | **none** — same sweep | none found | ❌ no grant |
+
+`contentshell` is RACHEL itself: *"The RACHEL Content Management System"*, the PHP
+that serves and manages content on RACHEL devices (as of 2024, chiefly RACHEL 5).
+Its only grant statement is a **content licence applied to software, carrying
+NonCommercial**, with no payload to weigh against it.
+
+**Why this is a platform finding and not just a licence note.** RACHEL's README
+names its own dependency set: ZIM modules need **Kiwix**, and other modules need
+**KA-Lite**, **Kolibri** or **Moodle**. So RACHEL is a *shell* over software this
+page already shelves — and the shell is the one layer you cannot ship. Underneath
+it, payload-verified this pass: `kiwix/kiwix-tools`, `kiwix/libkiwix` and
+`kiwix/kiwix-android` are **GPL-3.0**, `openzim/libzim` is **GPL-2.0**, and
+`learningequality/kolibri` is **MIT**.
+
+**The selection rule the eighth pass wrote is unchanged, and now it has a
+reason.** Kolibri was recommended on an absence of evidence about RACHEL; it is
+now recommended on evidence. **Ship Kolibri. Cite RACHEL as prior art for
+offline delivery in the proposal, and never as a component.** If offline
+Wikipedia-class content is in scope, run **Kiwix as a separate process behind an
+HTTP boundary** — the same side-car reasoning this page applies to MCP — so the
+GPL obligation stays with Kiwix and off the client's codebase.
+
+### The public-sector reference estate — UK Department for Education, MIT
+
+New tier on this page. `DFE-Digital` is the UK Department for Education's
+engineering org, and it operates **live national education services** in the open
+under MIT (licences read from payload; full table and star counts in
+`repos/foundations.md`):
+
+| Service | Repo | Licence | What it is |
+|---|---|---|---|
+| Apply for teacher training | [DFE-Digital/apply-for-teacher-training](https://github.com/DFE-Digital/apply-for-teacher-training) | **MIT** | The national ITT application service |
+| Teaching Vacancies | [DFE-Digital/teaching-vacancies](https://github.com/DFE-Digital/teaching-vacancies) | **MIT** | National teaching job-listing service |
+| Publish teacher training | [DFE-Digital/publish-teacher-training](https://github.com/DFE-Digital/publish-teacher-training) | **MIT** | Provider course publishing + candidate discovery |
+| Register trainee teachers | [DFE-Digital/register-trainee-teachers](https://github.com/DFE-Digital/register-trainee-teachers) | **MIT** | Trainee registration for ITT placements |
+| GIAS | [DFE-Digital/get-information-about-schools](https://github.com/DFE-Digital/get-information-about-schools) | **MIT** | The authoritative national schools register |
+| Benchmarking & insights | [DFE-Digital/education-benchmarking-and-insights](https://github.com/DFE-Digital/education-benchmarking-and-insights) | **MIT** | School-to-peer-group metric comparison |
+
+**Where this sits in the platform menu.** It is **not an LMS and not an SIS** —
+it is the **administrative and workflow tier** of a national education system:
+recruitment, registration, course publication, school registry, benchmarking.
+Nothing here replaces Moodle, Kolibri, OpenEduCat or Kuali. What it provides is a
+**reference estate**: a working, readable, permissively licensed implementation
+of education workflow at country scale, maintained by a state.
+
+**Three concrete uses in an engagement:**
+
+1. **Public-sector proposals in EMEA.** The ministry question is always *"can we
+   own, audit and exit this?"*. An MIT licence from a peer ministry is the
+   strongest available answer, and it is a precedent rather than an argument.
+2. **Domain models you will meet anyway.** GIAS and the ITT services encode the
+   UK schools and teacher-training data model. Any UK engagement integrates with
+   these; here they are, readable and reusable.
+3. **The grounding layer for a reporting agent.**
+   `education-benchmarking-and-insights` already does peer-group comparison —
+   the data tier under any "how is my school performing" question, which is the
+   natural thing to put an agent in front of.
+
+**The asymmetry to lead with.** The DfE's administrative tier is production-grade
+and MIT; its **AI** tier is five prototypes at **0–1★ with no licence payload**
+(`rsd-ai-libs`, `sts-ai-support`, `ai-briefing-tool-prototype`,
+`rsd-common-ai-services` — see `repos/foundations.md` for the rejections). One of
+them, `rsd-ai-libs`, describes *"building and evaluating Azure AI Foundry agents
+with guardrails, Azure AI Search, and **MCP server support**"* — a ministry
+independently arriving at this KB's MCP side-car pattern, and leaving it
+unlicensed at zero stars.
+
+So the public-sector pitch is not *"you need a platform."* They built one. It is:
+**"your administrative layer is a licensed national asset and your AI layer is
+unlicensed prototypes — let us build the second on top of the first, under a
+licence you already use."**
+
+**Star-count warning specific to this tier.** These repositories sit at **5–38★**
+because government services are *consumed*, not forked. On this page that is the
+one place where low stars do **not** indicate low maturity — the opposite of the
+reading this KB applies everywhere else, and the opposite of the trap in
+`agents/top.md` where a 72★ repository turned out to be the ungranted one.

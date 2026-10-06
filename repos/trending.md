@@ -8,6 +8,172 @@ updated: 2026-10-06
 
 > **Append-only.** Newest dated section on top; history preserved below.
 
+## 2026-10-06 — ninth pass: a ministry's MIT estate, a NonCommercial shell, and the word "licence" spelled the other way
+
+Channels this pass: the **funder and procurement channel** (philanthropic RFPs,
+state education-agency rubrics, district solicitations — the channel the eighth
+pass declared necessary and had never swept) and its government twin, the
+**education-ministry engineering organisation**. Licences read from each
+repository's own payload via `raw.githubusercontent.com`.
+
+**36 licence probes resolved; 7 repositories returned no payload under either
+the American or the British spelling.** `github.com` HTML is **403** to `curl`
+through this proxy but reachable via `WebFetch`, which is how every star count
+and every zero-result below was measured.
+
+**Tier warning.** The repository rows below are **Tier 1 (payload-verified).**
+Every funder, dollar figure and procurement fact in this pass is **Tier 2
+(corroborated search summaries only)** — 14 of the hosts carrying the primary
+documents are **EGRESS_BLOCKED**, including `k12-ai-infrastructure.org`,
+`digitalpromise.org`, `unu.edu`, `arxiv.org` and `cosn.org`. See
+`agents/trending.md`, this pass, for the full tiering statement.
+
+### Net new to the shelf — the UK Department for Education's MIT estate (7 repos)
+
+`DFE-Digital` is the UK Department for Education's engineering organisation, and
+it publishes **live national education services** under MIT. This KB has swept
+hackathons, universities, ministries by name, funding bodies and GitHub topic
+pages across nine passes; it had **never swept a ministry's own engineering
+org**.
+
+| Repo | Licence (payload) | ★ | Role |
+|---|---|---|---|
+| [DFE-Digital/apply-for-teacher-training](https://github.com/DFE-Digital/apply-for-teacher-training) | **MIT** (`main/LICENCE`) | 38 | National teacher-training application service (Ruby) |
+| [DFE-Digital/teaching-vacancies](https://github.com/DFE-Digital/teaching-vacancies) | **MIT** (`main/LICENSE`) | 27 | National teaching job-listing service (Ruby) |
+| [DFE-Digital/get-into-teaching-app](https://github.com/DFE-Digital/get-into-teaching-app) | **MIT** (`master/LICENCE`) | 25 | Get Into Teaching recruitment site (Ruby) |
+| [DFE-Digital/publish-teacher-training](https://github.com/DFE-Digital/publish-teacher-training) | **MIT** (`main/LICENSE`) | 12 | Course publishing + candidate discovery (Ruby) |
+| [DFE-Digital/register-trainee-teachers](https://github.com/DFE-Digital/register-trainee-teachers) | **MIT** (`main/LICENCE`) | 12 | Trainee registration for ITT placements (Ruby) |
+| [DFE-Digital/get-information-about-schools](https://github.com/DFE-Digital/get-information-about-schools) | **MIT** (`main/LICENCE`) | 9 | GIAS — national schools register (C#) |
+| [DFE-Digital/education-benchmarking-and-insights](https://github.com/DFE-Digital/education-benchmarking-and-insights) | **MIT** (`main/LICENSE`) | 5 | School-to-peer metric comparison (C#) |
+
+**What this shelf is, and is not.** It is **administrative and workflow
+software** — applications, registration, vacancies, school registers,
+benchmarking — at production scale, under MIT, maintained by a state. It is
+**not AI**, and it closes no AI gap in this KB. Its value is as a **reference
+estate**: a government-grade, permissively licensed set of education services
+whose data models (GIAS, trainee registration, course publishing) are the
+schemas an EMEA engagement will have to integrate with anyway.
+
+**Rejected from the same organisation — and the pattern repeats:**
+
+- `DFE-Digital/gias-query-tool` — **17★**, SQL, *"the easiest way to write
+  advanced queries against the GIAS database"*, **no licence payload.** The most
+  immediately useful tool in the org is the ungranted one. Sixth consecutive
+  pass in which the most-reached-for asset of a sweep has no grant.
+- `DFE-Digital/rsd-ai-libs` — **0★**, **no payload** — *".NET library for
+  building and evaluating Azure AI Foundry agents with guardrails, Azure AI
+  Search, and **MCP server support**."* Recorded because a national education
+  ministry building an MCP agent library corroborates this KB's trend 4 from an
+  unexpected direction. Unusable as code; citable as a signal.
+- `DFE-Digital/sts-ai-support` (1★), `DFE-Digital/ai-briefing-tool-prototype`
+  (0★), `DFE-Digital/rsd-common-ai-services` (0★) — **no licence shown** on the
+  org listing; not payload-probed individually. The DfE's **AI** tier is
+  prototype-grade and unlicensed while its **administrative** tier is production
+  MIT. That asymmetry is the strategic read.
+
+### Resolved — the RACHEL question, and the answer is NonCommercial
+
+The eighth pass probed four candidate paths × two branches for RACHEL, got
+nothing, and recorded the path as **not established**, with an instruction to
+start from the project's own site. Done — the org is **`rachelproject`**:
+
+| Repo | Payload probe | Stated grant | Verdict |
+|---|---|---|---|
+| [rachelproject/contentshell](https://github.com/rachelproject/contentshell) | **none** — 8 filenames × 2 branches, incl. `LICENCE*` and `COPYRIGHT` | README: *"Creative Commons - BY, SA, NC"* | ❌ **NonCommercial on the CMS code — not shippable** |
+| [rachelproject/module-template](https://github.com/rachelproject/module-template) | **none** — same sweep | none | ❌ no grant |
+
+`contentshell` is RACHEL itself — "The RACHEL Content Management System", the
+PHP that serves and manages content on RACHEL devices (as of 2024, primarily
+RACHEL 5). Its README declares a **content licence over software**, with
+**NonCommercial**, and there is **no payload at all** to weigh against it.
+
+**The dependency layer below it, payload-verified, is copyleft:**
+
+| Repo | Payload | Licence |
+|---|---|---|
+| `kiwix/kiwix-tools` | `main/COPYING` | **GPL-3.0** |
+| `kiwix/libkiwix` | `main/COPYING` | **GPL-3.0** |
+| `kiwix/kiwix-android` | `main/COPYING` | **GPL-3.0** |
+| `openzim/libzim` | `main/COPYING` | **GPL-2.0** |
+| `learningequality/kolibri` | `develop/LICENSE` | **MIT** ✅ re-confirmed |
+
+RACHEL's own README names its dependencies: ZIM modules require **Kiwix**,
+others require **KA-Lite**, **Kolibri** or **Moodle**. The offline content stack
+is therefore **a NonCommercial shell over a GPL ZIM layer over an MIT
+platform** — and the permissive platform is at the bottom, where this KB already
+put it. **Kolibri stays the recommendation; RACHEL becomes a citation.**
+
+### Net new — permissive proctoring, which this KB said did not exist
+
+A licence-filtered sweep (`exam proctoring license:mit`) returns **204
+repositories**, refuting a gap the seventh pass declared and the eighth carried
+forward unchanged. Four, payload-verified:
+
+| Repo | Licence (payload) | ★ |
+|---|---|---|
+| [AarambhDevHub/exam-cheating-detection](https://github.com/AarambhDevHub/exam-cheating-detection) | **MIT** (`main/LICENSE`) | 47 |
+| [vincenzo-afk/Proctored-MCQ-Exam-Platform](https://github.com/vincenzo-afk/Proctored-MCQ-Exam-Platform) | **MIT** (`main/LICENSE`) | 36 |
+| [hemantkarekar/MyProctorAI](https://github.com/hemantkarekar/MyProctorAI) | **MIT** (`main/LICENSE`) | 22 |
+| [RakeshBabuGajula/Exam_Intellect](https://github.com/RakeshBabuGajula/Exam_Intellect) | **MIT** (`master/LICENSE`) | 18 |
+
+**Rejected:** [lebmatter/exampro](https://github.com/lebmatter/exampro) — **72★**,
+*Proctored Exams for Frappe Framework*, the highest-starred hit and the only
+framework-grade implementation, **no payload** across 8 filenames × 2 branches.
+
+Maturity caveat, stated because the rows are small: this set tops out at **47★**,
+all four are individual-scale, and **none has an institutional maintainer.** The
+refuted gap is *existence*; the surviving gap is *maturity*.
+
+### Not found this pass — recorded so the next pass does not re-probe
+
+- **`KB-TutorBench` — 0 repositories on GitHub** (measured 6 Oct 2026). The
+  Stanford grantee's dataset is funded and not yet public.
+- **`learningequality` org filtered on `benchmark` — 0 repositories.** The
+  Learning Equality science-misconceptions benchmark is funded and not yet
+  public.
+- **`National-Tutoring-Observatory` — org exists, no code.** Two repos; the
+  substantive one is
+  `National-Tutoring-Observatory/National-Tutoring-Observatory.github.io` (HTML
+  website, **0★, no payload**). Also found: `PeperoJo/cornell-national-tutoring-observatory`
+  (HTML, 0★, no licence shown, last updated Dec 2025) — not the official org.
+- **`tutoring quality evaluation benchmark license:apache-2.0` — 0
+  repositories.** The licence-filtered measurement behind this KB's oldest
+  declared gap.
+- **SciEval and EduEVAL-DB — no repository found.** Both surfaced as arXiv
+  preprints (`2604.25472`, `2602.15531`); `arxiv.org` is **EGRESS_BLOCKED** and
+  a name sweep returned **no matching repository**. Leads, not findings.
+- **Ungranted education benchmarks, confirmed to exist and excluded:**
+  [AI-EDU-LAB/E-EVAL](https://github.com/AI-EDU-LAB/E-EVAL) (**33★**, Chinese
+  K12 LLM education evaluation benchmark), `ubco-db/LLM_education_benchmark`
+  (2★), `OpenEduTech/EduPerf` (6★, last updated Nov 2022) — **none has a licence
+  payload** under either spelling.
+- **Vendor filings — not swept.** Of the three sub-channels the eighth pass
+  named, district RFPs and state procurement portals were swept this pass;
+  **vendor filings were not.** Distinct channel, still open.
+
+### The method finding of this pass — the probe set had a spelling bug for nine passes
+
+**Three of the six MIT grants on the DfE shelf live in a file named `LICENCE`.**
+
+**And the check was already written down.** Pattern **P22**'s gate (eighth pass)
+lists `LICENCE` in check 1 — but every recorded sweep, the eighth pass's own
+34-target probe included, enumerates only `LICENSE`, `LICENSE.md`,
+`LICENSE.txt`, `COPYING` and `license.txt`. **The gate had it; the sweeps did
+not run it.** A documented check that no pass executes is not a check.
+
+Run with the old filename set, this pass would have written up
+`apply-for-teacher-training` (38★), `get-into-teaching-app` (25★),
+`register-trainee-teachers` (12★) and `get-information-about-schools` (9★) as
+**four more ungranted government repositories**, and drawn a conclusion about
+ministries that publish code without licensing it. **All four are MIT.**
+
+Every negative result in this pass was therefore re-run against `LICENCE`,
+`LICENCE.md`, `LICENCE.txt` and `COPYRIGHT` before being recorded. All seven
+no-payload findings above survived that re-probe. **The probe set is corrected
+from this pass forward; earlier passes' regional "ungranted" conclusions were
+produced by a query that could not have found a British-spelled grant and
+should be treated as suspect until re-probed.**
+
 ## 2026-10-06 — eighth pass: a 20-repository LATAM cohort created in one day, and the venue that never licensed four editions
 
 Channels this pass: the **institutional-event channel** (a university hackathon

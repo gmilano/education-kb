@@ -770,6 +770,117 @@ sponsored clause should name the **authors** as holders — a one-line differenc
 between a channel that produces usable assets and one that produces flagged
 ones.
 
+## 25. Permissive licensing has become a funding condition, and philanthropy is now the supply mechanism
+
+For nine passes this KB has treated the permissive shelf as something that either
+*exists* or *does not* — an organic output of universities, hackathons,
+ministries and individuals, to be swept and graded. A different mechanism is now
+operating: **a funder is buying the shelf into existence, and making the licence
+a condition of the money.**
+
+**The instrument.** The **K-12 AI Infrastructure Program** — **$26M**,
+multi-year, led by **Digital Promise** with **Learning Data Insights**,
+**DrivenData**, the **Massive Data Institute at Georgetown University** and
+**Catalyst @ Penn GSE**, funded by the **Gates Foundation**, which also runs
+proposal review and award monitoring. Launched 3 Nov 2025; first cycle open
+4 Feb 2026.
+
+**The condition.** All funded developments must be released under a licence **at
+least as permissive as CC-BY-4.0 (content) or Apache-2.0 (code/models)** — with
+**Apache-2.0** recommended for software and code *including evaluations, models
+and applications*, and **CC-BY** for datasets and knowledge products.
+
+**The volume already committed:** **twelve named projects** — four in cohort 1
+(29 Jun 2026: Learning Equality on science misconceptions; Princeton on
+simulated student models; National Tutoring Observatory / Cornell on ASR
+leaderboards for education; Stanford's KB-TutorBench for formative assessment)
+and **eight** in cohort 2 (21 Sept 2026, formative assessment plus math,
+literacy and writing, outputs stated to be openly licensed) — plus the separate
+**EDU AI** award of **up to $8M** for open-source K-12 math tutoring model(s),
+closed 31 Jul 2026, work from Nov 2026 over 30–36 months.
+
+**Why this is a trend and not a news item.** Three structural consequences:
+
+1. **The arrival of permissive assets becomes predictable.** Organic open source
+   gives you a shelf you discover; a funded programme gives you a **pipeline with
+   owners and dates.** For the first time this KB can tell a client *when* a
+   missing capability is expected rather than only that it is missing.
+2. **Apache-2.0 becomes the default licence of the education AI commons,
+   displacing MIT.** This KB's shelves are MIT-dominant because individuals and
+   universities default to MIT. A funder specifying Apache-2.0 for *models,
+   evaluations and applications* pushes the new layer toward Apache-2.0 — which
+   brings an explicit patent grant, a material improvement for client work, and
+   a licence-compatibility question nobody has to solve because both are
+   permissive.
+3. **It inverts where the gaps are.** The capabilities being funded are precisely
+   the ones organic open source failed to produce: **evaluation, benchmarks,
+   datasets, formative assessment, ASR for education.** These are expensive,
+   unglamorous, require real data access, and have no individual-contributor
+   path — which is exactly why this KB kept finding them absent for nine passes.
+
+**The honest counterweight, measured:** **nothing has shipped.** `KB-TutorBench`
+→ **0 repositories**; `learningequality` filtered on `benchmark` → **0
+repositories**; the National Tutoring Observatory's org holds a website at 0★
+with no licence payload. **Funded is not shipped**, and the correct posture is
+architectural readiness (**P23**), not waiting.
+
+⚠️ **Tier 2.** `k12-ai-infrastructure.org` and `digitalpromise.org` are
+**EGRESS_BLOCKED** here; **no RFP or announcement was read.** Figures are
+corroborated across independent search summaries. Confirm before client use.
+
+## 26. In the US the procurement rubric, not the regulator, is now the specification
+
+Trend 16 recorded that US state law had converged on one testable rule: **human
+judgment is final.** That is a *constraint*. What a vendor actually has to
+satisfy is a **scored rubric**, and 2026 is the year those rubrics became
+mandatory, standardised and dated.
+
+**The mechanism:**
+
+- **Maryland SB 720** (effective **1 Jun 2026**): the state department publishes
+  guidance **and an AI-tool evaluation rubric**; every local school system must
+  adopt an aligned policy **within 120 days** and designate an **AI
+  coordinator**. Reported as **24 districts** on the clock for **Fall 2026**.
+- **Vermont** (**23 Jan 2026**): a rubric scoring **educational value, data
+  privacy, usability and accessibility, cost, scalability, vendor reputation and
+  age restrictions.**
+- **Idaho, Maryland, Alabama**: statutory **capability assessments**,
+  **pre-training verification**, and a **prohibition on vendors training models
+  on student records** — now standard contract language.
+- **CoSN, *U.S. State of EdTech 2026*: 39% of districts score interoperability in
+  their RFP rubrics.**
+
+**Three reasons this changes delivery, not just sales:**
+
+1. **Interoperability is now a scored criterion, which retro-justifies trend 4.**
+   This KB argued MCP/LTI side-cars on engineering grounds. In two of five
+   district procurements, that architecture **wins points**. An LTI + MCP
+   side-car (**P1**) is not merely clean — it is the shape the rubric rewards.
+2. **"Prohibit training on student records" is an architecture constraint, and a
+   familiar one.** It forces either a no-training contractual guarantee or
+   inference you control. That is the **sovereign/on-prem** stack of trend 6 and
+   pattern **P4** — arriving in North America through procurement law rather than
+   through data-protection law as it did in the EU.
+3. **The rubrics' own gap is the differentiator.** Most reportedly do **not**
+   require **auditable interaction records**, **disclosure of how outputs are
+   generated**, or **evidence of bias/accuracy/reliability evaluation.** Ship
+   those three and you exceed every published rubric — and they are, nearly
+   exactly, the artefacts the **EU AI Act education profile** already compels
+   (**P13**). **One evidence pack, two regions.** That is the first genuine
+   cross-region reuse this KB has identified on the compliance axis, and it runs
+   from EMEA into North America rather than the other way round.
+
+**The demand signal underneath it** is concrete: **NJSBA RFP 2026-02** (virtual
+tutoring, with optional **outcomes-based contracting**) and **New Mexico PED RFP
+27-92400-00002** (statewide high-impact tutoring for reading and math under
+**House Bill 2**, SY2026-27 the first implementation year). Districts and states
+are buying tutoring at scale, on rubrics, with outcome clauses.
+
+⚠️ **Tier 2.** `cosn.org`, `marylandpublicschools.org`, `njsba.org`,
+`web.ped.nm.gov`, `excelined.org` and `marketbrief.edweek.org` are all
+**EGRESS_BLOCKED** here; **no rubric or RFP document was read.** Confirm each
+statutory citation before client use.
+
 ## Regional notes where the trend diverges
 
 - **North America:** adoption is broad (60% of K-12 teachers) and the binding
@@ -1030,3 +1141,62 @@ Spanish/Portuguese-language search. Four of the gaps below changed state.
   is not a probe question.** Whether a student federation's template copyright
   validly covers code written by independent teams during an event is a matter
   for counsel. Recorded as a legal open item, not as a licence finding.
+
+## Declared gaps — ninth pass, 2026-10-06
+
+- **Trend 7's tooling gap is funded, not filled.** Assessment remains the
+  regulated frontier with no permissive tooling *today* — measured this pass as
+  **0 repositories** for `tutoring quality evaluation benchmark
+  license:apache-2.0`. What changed is that **three or more of the twelve funded
+  projects under trend 25 target exactly this**, through 2027. Recorded as a dated
+  gap rather than renumbering trend 7.
+- **The proctoring claim in this KB was wrong, and trend 7 should not be read as
+  supporting it.** The seventh pass declared *"no permissive open-source exam
+  proctoring agent"*; the eighth carried it unchanged. **204 MIT-licensed
+  repositories match**, four payload-verified at 18–47★. The surviving claim is
+  **maturity**, not existence — and the one framework-grade implementation
+  (`lebmatter/exampro`, 72★) is **ungranted**. See `agents/top.md`, ninth pass.
+- **Trend 21 still needs splitting, and the eighth pass's note stands
+  unactioned.** *Capability* is at least four regions; **redistributable**
+  capability is still two. This pass adds a fourth datapoint in the same shape
+  from a new region — `AI-EDU-LAB/E-EVAL` (33★, Chinese K12 LLM education
+  evaluation benchmark, **no licence payload**) — so the pattern is now recorded
+  in **MEA, LATAM and APAC**. Left as a declared gap for a second consecutive
+  pass rather than silently renumbered.
+- **No primary funder or procurement document was read.** Fourteen hosts are
+  **EGRESS_BLOCKED**: `k12-ai-infrastructure.org`, `digitalpromise.org`,
+  `unu.edu`, `arxiv.org`, `cosn.org`, `marylandpublicschools.org`, `njsba.org`,
+  `web.ped.nm.gov`, `excelined.org`, `marketbrief.edweek.org`,
+  `edtechinnovationhub.com`, `www2.fundsforngos.org`, `en.wikipedia.org`,
+  `rachel.worldpossible.org` (and `rachel.core2learn.org`). **Trends 25 and 26
+  rest entirely on corroborated search summaries.** This is the largest block of
+  Tier 2 material this KB has admitted to its durable files; it is labelled as
+  such in every table, and it should be the first thing the next pass tries to
+  upgrade if egress changes.
+- **Seven of cohort 2's eight grantees are unnamed.** Announced 21 Sept 2026;
+  only **MMSA & TERC** surfaced. Each unnamed award is an Apache-2.0-or-better
+  artefact with a named owner landing inside twelve months — **the single
+  highest-value lookup available to the next pass.**
+- **Vendor filings remain unswept.** The eighth pass named three North America
+  sub-channels: district RFPs ✅, state procurement portals ✅, **vendor filings
+  ❌**. Earnings calls, S-1s and 10-Ks of listed edtech vendors are a distinct
+  channel and would speak to consolidation and pricing, which no channel in this
+  KB currently covers.
+- **EMEA and APAC general queries have now failed twice consecutively.** Both
+  returned enterprise AI-governance material, not education. The
+  **ministry-engineering-org** channel that produced the UK DfE estate this pass
+  is the obvious replacement for both and has not been run outside the UK.
+  Recorded as exhausted channels, not as regional stability.
+- **SciEval and EduEVAL-DB are leads, not findings.** `arxiv.org/pdf/2604.25472`
+  and `arxiv.org/pdf/2602.15531` are EGRESS_BLOCKED and a GitHub name sweep
+  returned **no repository** for either. Both are directly on the evaluation gap
+  and should be re-probed when arXiv is reachable.
+- **This KB's licence probe had a spelling bug for nine passes — and the fix was
+  already written down.** Pattern **P22**'s gate lists `LICENCE`; **no recorded
+  sweep ever ran it**, and **three of six UK ministry MIT grants use it.** Every
+  negative result in this pass was re-run against the British spellings and
+  survived, but **earlier passes' "ungranted" verdicts on Commonwealth, MEA and
+  ministry-adjacent repositories were produced by a query that could not have
+  found a British-spelled grant** and are unconfirmed until re-probed. This is
+  the seventh instance of the probe-vocabulary failure mode and the first that
+  invalidates prior conclusions rather than merely missing new ones.

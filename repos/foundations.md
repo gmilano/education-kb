@@ -419,6 +419,125 @@ afterthought — and note that `vosk-api` (Apache-2.0) plus `speechbrain`
 (Apache-2.0) give you a permissive *pipeline* into which licensed data can be
 dropped the moment it exists.
 
+## Added in the ninth pass of 2026-10-06 — a ministry's MIT estate, and the offline stack's real licence shape
+
+Channel: the **funder and procurement channel** and its government twin, the
+**education-ministry engineering organisation**. Nine passes had swept
+hackathons, universities, ministries *by name*, funding bodies, GitHub topic
+pages and academic papers. **None had swept a ministry's own GitHub org.**
+
+### The UK Department for Education estate — government-grade, production, MIT
+
+`DFE-Digital` is the UK Department for Education's engineering org. It runs
+**live national education services** in the open, under MIT. Licences read from
+payload:
+
+| Repo | Licence | ★ | Lang | Role |
+|---|---|---|---|---|
+| [DFE-Digital/apply-for-teacher-training](https://github.com/DFE-Digital/apply-for-teacher-training) | **MIT** (`main/LICENCE`) | 38 | Ruby | The national service for applying to teacher-training courses |
+| [DFE-Digital/teaching-vacancies](https://github.com/DFE-Digital/teaching-vacancies) | **MIT** (`main/LICENSE`) | 27 | Ruby | National teaching job-listing service |
+| [DFE-Digital/get-into-teaching-app](https://github.com/DFE-Digital/get-into-teaching-app) | **MIT** (`master/LICENCE`) | 25 | Ruby | Teacher-recruitment site and candidate journey |
+| [DFE-Digital/publish-teacher-training](https://github.com/DFE-Digital/publish-teacher-training) | **MIT** (`main/LICENSE`) | 12 | Ruby | Provider course publishing + candidate discovery |
+| [DFE-Digital/register-trainee-teachers](https://github.com/DFE-Digital/register-trainee-teachers) | **MIT** (`main/LICENCE`) | 12 | Ruby | Trainee registration for initial-teacher-training placements |
+| [DFE-Digital/get-information-about-schools](https://github.com/DFE-Digital/get-information-about-schools) | **MIT** (`main/LICENCE`) | 9 | C# | GIAS — the national schools register |
+| [DFE-Digital/education-benchmarking-and-insights](https://github.com/DFE-Digital/education-benchmarking-and-insights) | **MIT** (`main/LICENSE`) | 5 | C# | Compares one school's metrics against similar institutions |
+
+### What this estate is good for, stated precisely
+
+**It is administrative software, not AI, and it closes no AI gap in this KB.**
+Taken for what it is, it is the first thing of its kind on these shelves:
+
+1. **Reference architecture for education workflow at national scale.** Five of
+   the seven are Ruby services that have run a country's teacher pipeline.
+   For an EMEA public-sector engagement, *"here is how a ministry built this, and
+   you may read and reuse the code"* is a stronger opening than a vendor demo.
+2. **Schemas you will have to integrate with anyway.** GIAS is the UK's
+   authoritative schools register; `register-trainee-teachers` and
+   `publish-teacher-training` encode the ITT domain model. Any UK education
+   engagement meets these data structures eventually — and here they are, MIT.
+3. **A benchmarking component with the right shape.**
+   `education-benchmarking-and-insights` does school-to-peer-group comparison —
+   the data layer under any "how is my school doing" analytic, and the natural
+   grounding source for a reporting agent.
+4. **Procurement credibility.** An MIT licence from a ministry is the cleanest
+   possible answer to the public-sector question *"can we actually own and audit
+   this?"*
+
+**What it is not:** none of it is AI, none of it is a tutor, and its star counts
+(5–38★) reflect government repos that are consumed as services rather than
+forked. **Do not read low stars as low maturity here** — these are production
+systems for a national education system. It is the one place in this KB where
+the star signal is actively misleading in the *opposite* direction to usual.
+
+### ⚠️ The licence-filename warning that changes this KB's method
+
+**Four of these seven grants are in a file spelled `LICENCE`.** Pattern **P22**'s
+gate lists that spelling; **no recorded sweep in this KB has ever run it.** Every
+probe set written down across nine passes — `LICENSE`, `LICENSE.md`,
+`LICENSE.txt`, `COPYING`, `license.txt` — **matches none of these four files.** With the old set,
+`apply-for-teacher-training`, `get-into-teaching-app`,
+`register-trainee-teachers` and `get-information-about-schools` would all have
+been recorded as **ungranted**. They are MIT.
+
+**The probe set is now `LICENSE{,.md,.txt}`, `LICENCE{,.md,.txt}`, `COPYING`,
+`COPYRIGHT`, `license.txt`, both branches.** Any earlier pass's "no grant"
+verdict on a Commonwealth, MEA or ministry-adjacent repository should be treated
+as **unconfirmed until re-probed** — those are exactly the repositories that
+spell it the British way.
+
+### Measured rejections from the same organisation
+
+| Repo | ★ | Why rejected |
+|---|---|---|
+| `DFE-Digital/gias-query-tool` | 17 | **No licence payload.** The SQL query layer over GIAS — the most immediately useful tool in the org, and ungranted. Sixth pass running in which the most-reached-for asset of a sweep has no grant |
+| `DFE-Digital/rsd-ai-libs` | 0 | **No payload.** *".NET library for building and evaluating Azure AI Foundry agents with guardrails, Azure AI Search, and MCP server support"* — a ministry building MCP agent tooling, which corroborates trend 4; unusable as code, citable as a signal |
+| `DFE-Digital/sts-ai-support` | 1 | No licence shown on the org listing; not individually payload-probed |
+| `DFE-Digital/ai-briefing-tool-prototype` | 0 | Non-production prototype; no licence shown |
+| `DFE-Digital/rsd-common-ai-services` | 0 | Provisioning scaffolding; no licence shown |
+
+**The asymmetry is the strategic finding:** the DfE's **administrative** tier is
+production-grade and MIT; its **AI** tier is prototype-grade and unlicensed. A
+consultancy's opening in EMEA public-sector education is therefore *not* "you
+need a platform" — they built one — but **"your AI layer is five unlicensed
+prototypes at zero stars, and your administrative layer is a licensed national
+asset; let us build the first on top of the second."**
+
+### The offline delivery stack, licence shape corrected
+
+The eighth pass built the offline-first tier around Kolibri and EduFlow but could
+not resolve RACHEL. Resolved this pass, and the stack's licensing is not what the
+page implied:
+
+| Repo | Payload | Licence | Usable? |
+|---|---|---|---|
+| [learningequality/kolibri](https://github.com/learningequality/kolibri) | `develop/LICENSE` | **MIT** | ✅ re-confirmed — the platform answer |
+| [kiwix/kiwix-tools](https://github.com/kiwix/kiwix-tools) | `main/COPYING` | **GPL-3.0** | ⚠️ copyleft — see below |
+| [kiwix/libkiwix](https://github.com/kiwix/libkiwix) | `main/COPYING` | **GPL-3.0** | ⚠️ copyleft |
+| [kiwix/kiwix-android](https://github.com/kiwix/kiwix-android) | `main/COPYING` | **GPL-3.0** | ⚠️ copyleft |
+| [openzim/libzim](https://github.com/openzim/libzim) | `main/COPYING` | **GPL-2.0** | ⚠️ copyleft, and GPL-2.0 ≠ GPL-3.0 for compatibility |
+| [rachelproject/contentshell](https://github.com/rachelproject/contentshell) | **none** | README: *"Creative Commons - BY, SA, NC"* | ❌ **NonCommercial — do not ship** |
+
+**Three warnings on that table:**
+
+1. **RACHEL is out.** `contentshell` *is* RACHEL — the PHP CMS that serves
+   content on RACHEL devices — and its only licence statement is a **content
+   licence with NonCommercial, applied to software**, with no payload to weigh
+   against it. Creative Commons advises against CC for software; either reading
+   (unlicensed, or NC) stops a commercial deliverable. **Cite RACHEL as prior
+   art for offline delivery; ship Kolibri.**
+2. **The ZIM layer is GPL, and that is an architecture decision, not a
+   footnote.** Offline Wikipedia/Wikibooks content ships as ZIM, and the entire
+   reference implementation — `libzim` (GPL-2.0), `libkiwix`, `kiwix-tools`,
+   `kiwix-android` (GPL-3.0) — is copyleft. You may deploy it; you may not
+   statically link it into a proprietary client deliverable without taking the
+   obligation. **Keep Kiwix as a separate process behind an HTTP boundary** —
+   exactly the side-car reasoning this KB already applies to MCP — and the
+   client's own code stays unencumbered.
+3. **GPL-2.0 and GPL-3.0 in one dependency tree** (`libzim` vs `libkiwix`) is a
+   combination to raise with counsel if anything is being linked rather than
+   invoked. Process separation makes the question moot, which is a second reason
+   for the side-car.
+
 ## Teaching-content repos (for enablement, not for production)
 
 | Repo | License (read from payload) | Note |

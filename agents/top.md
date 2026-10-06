@@ -19,7 +19,7 @@ carrying a stale or inferred number.
 
 ## Agents and tools
 
-**43 rows, all verified.** The 12 recorded in the morning pass of 2026-10-06, 2
+**47 rows, all verified.** The 12 recorded in the morning pass of 2026-10-06, 2
 added in the second pass, **17 added in the third pass** from the `ai-tutor`
 GitHub topic page and a stars-sorted repository search, and **5 added in the
 fourth pass** by tracing academic papers to their repositories and sweeping a
@@ -419,6 +419,51 @@ now the one real Arabic-language education agent is unlicensed too. **The MEA ga
 is not an interest gap and not a build gap — it is a licensing-hygiene gap**, and
 that is the cheapest kind to close. Three `LICENSE` files would change the
 regional answer.
+
+### Added in the ninth pass of 2026-10-06 — permissive proctoring, a gap this KB asserted for two passes
+
+Channel: the **funder and procurement channel**, and a **licence-filtered
+re-probe** of a gap the seventh pass declared and the eighth carried forward
+explicitly marked *"not re-probed."* It was re-probed. **It was wrong.**
+
+A search for `exam proctoring license:mit` returns **204 repositories**. Four,
+licence read from payload:
+
+| Agent / tool | Repo | Licence | ★ | What it does |
+|---|---|---|---|---|
+| exam-cheating-detection | [AarambhDevHub/exam-cheating-detection](https://github.com/AarambhDevHub/exam-cheating-detection) | **MIT** (`main/LICENSE`) | 47 | Computer-vision detection of suspicious exam behaviour: eye-movement tracking and face detection |
+| Proctored-MCQ-Exam-Platform | [vincenzo-afk/Proctored-MCQ-Exam-Platform](https://github.com/vincenzo-afk/Proctored-MCQ-Exam-Platform) | **MIT** (`main/LICENSE`) | 36 | Browser-based MCQ exam platform with camera monitoring and certificate generation |
+| MyProctorAI | [hemantkarekar/MyProctorAI](https://github.com/hemantkarekar/MyProctorAI) | **MIT** (`main/LICENSE`) | 22 | Flask portal: AI anti-cheating proctoring and invigilation system |
+| Exam_Intellect | [RakeshBabuGajula/Exam_Intellect](https://github.com/RakeshBabuGajula/Exam_Intellect) | **MIT** (`master/LICENSE`) | 18 | Live exam observation dashboard; CV + speech recognition with automated feedback |
+
+#### Read this shelf at its real size
+
+**Existence is refuted; maturity is not.** The set tops out at **47★**, all four
+are individual- or student-scale projects, **none has an institutional
+maintainer**, and the only framework-grade implementation in the sweep —
+[lebmatter/exampro](https://github.com/lebmatter/exampro), **72★**, *Proctored
+Exams for Frappe Framework* — has **no licence payload** across 8 filenames × 2
+branches. That is the sixth consecutive pass in which the most-adopted asset of
+a sweep turned out to be the ungranted one.
+
+**So the claim to make to a client is narrow and true:** a permissive proctoring
+core exists and can be vendored and hardened, but there is no permissive
+proctoring *product*, and anything client-facing is a build on top of a 20–50★
+starting point. **Do not quote these as production components.** And before
+proctoring enters any proposal, read the regional constraint: proctoring is
+biometric processing, which puts it in scope for Annex III in the EU, for the
+state-level rules in the US recorded in `intel/market.md`, and for age-gating in
+the UAE/China shape of pattern P9.
+
+#### Measured rejections from the same sweep
+
+| Repo | ★ | Why rejected |
+|---|---|---|
+| [lebmatter/exampro](https://github.com/lebmatter/exampro) | 72 | **No licence payload** — `LICENSE{,.md,.txt}`, `COPYING`, `LICENCE{,.md,.txt}`, `COPYRIGHT` × `main`/`master` all 404 |
+| [AI-EDU-LAB/E-EVAL](https://github.com/AI-EDU-LAB/E-EVAL) | 33 | **No payload.** Chinese K12 LLM education-evaluation benchmark — APAC's own evaluation asset, ungranted |
+| `ubco-db/LLM_education_benchmark` | 2 | **No payload** |
+| `OpenEduTech/EduPerf` | 6 | **No payload**; last updated November 2022 |
+| `National-Tutoring-Observatory/National-Tutoring-Observatory.github.io` | 0 | **No payload** — and it is a *funded grantee's* only substantive repo (see gap updates below) |
 
 ## The education MCP shelf — a side-car is permissive by choice, not by construction
 
@@ -918,3 +963,106 @@ about `caiuc`'s inherited holder, and it says nothing at all about the
 label-versus-grant gap that makes Latam-GPT look open. Eight passes of
 "read it from the payload" bought real accuracy and has now been shown to have a
 ceiling.
+
+## Gap updates from the ninth pass of 2026-10-06
+
+Channel: the **funder and procurement channel** — philanthropic RFPs, state
+education-agency procurement rubrics, district solicitations — which the eighth
+pass declared necessary and which this KB had never swept. Plus the
+**education-ministry engineering org** as its government twin.
+
+**Evidence tiering applies to this block.** Repository and licence facts are
+**Tier 1 (payload-verified)**. Every funder, dollar and procurement fact is
+**Tier 2 (corroborated search summaries)** — 14 of the hosts carrying the primary
+documents are **EGRESS_BLOCKED** here, including `k12-ai-infrastructure.org`,
+`digitalpromise.org`, `unu.edu`, `arxiv.org` and `cosn.org`. **No RFP document
+was read.** Confirm before any client deliverable.
+
+| Gap as recorded above | State after the ninth pass |
+|---|---|
+| "No permissive open-source exam proctoring agent" (seventh pass, carried unchanged through the eighth) | **REFUTED on existence, RESIZED to maturity.** 204 MIT-licensed repositories match; **four verified from payload** (47★/36★/22★/18★ — see the shelf above). The framework-grade one, `lebmatter/exampro` (72★), is **ungranted**. The true gap is **no permissive proctoring agent at production maturity** |
+| "No shippable permissive evaluator of tutoring quality" (fourth pass; re-declared in the eighth) | **STILL OPEN TODAY — and now funded, dated and licence-floored.** Measured: `tutoring quality evaluation benchmark license:apache-2.0` returns **0 repositories** (6 Oct 2026). But the **$26M K-12 AI Infrastructure Program** (Digital Promise + Gates Foundation) has **twelve named funded projects** under a floor of **"at least as permissive as CC-BY-4.0 (content) or Apache-2.0 (code/models)"**, and at least three land directly on this gap. **The gap now has an arrival window (2027), not just an absence** |
+| "The oral reading fluency agent does not exist" (sixth pass) | **UNCHANGED today, and specifically funded.** Cohort 1 of the programme includes **National Tutoring Observatory / Cornell University** (PI Allison Koenecke) — *"Open Leaderboards for Benchmarking Automated Speech Recognition in Educational Contexts"*, 6–12 months from 29 Jun 2026. Measured: the org has **no code** — two repos, the substantive one a website at **0★ with no payload** |
+| "RACHEL — repository path not established" (eighth pass) | **RESOLVED, and the verdict is: not shippable.** The org is **`rachelproject`**; `contentshell` **is** the RACHEL CMS. **No licence payload** across 8 filenames × 2 branches; the README's only grant statement is **"Creative Commons - BY, SA, NC"** — a **content licence applied to PHP software, with NonCommercial.** Kolibri (**MIT**, re-confirmed from payload) remains the platform answer; RACHEL is prior art to cite, not code to ship |
+| "MEA/LATAM/APAC: built, published, benchmarked, ungranted" (seventh and eighth passes) | **Now confirmed in a third region from a fourth channel.** `AI-EDU-LAB/E-EVAL` (**33★**, Chinese K12 education evaluation benchmark) has **no payload**. The failure mode is not regional — it is what unfunded published work looks like everywhere |
+| "North America's general-language channel is saturated; the next trend must come from district RFPs, state procurement portals or vendor filings" (eighth pass) | **TWO OF THREE SWEPT, and the channel paid immediately** — see `intel/market.md` (North America) for the procurement rubrics and `intel/trends.md` trends 25–26. **Vendor filings remain unswept** and are a distinct channel |
+
+### The headline: this KB's oldest gap is being bought
+
+**The K-12 AI Infrastructure Program** — **$26M**, multi-year, led by **Digital
+Promise** with **Learning Data Insights**, **DrivenData**, the **Massive Data
+Institute at Georgetown** and **Catalyst @ Penn GSE**; funded by the **Gates
+Foundation**, which manages review and monitoring directly. Launched **3 Nov
+2025**, first cycle opened **4 Feb 2026**.
+
+Its licence condition is the reason it belongs in this file:
+
+> All funded developments must be released under a licence **at least as
+> permissive as CC-BY-4.0 (content) or Apache-2.0 (code/models)** — with
+> **Apache-2.0** recommended for software and code *including evaluations, models
+> and applications*, and **CC-BY** for datasets and knowledge products.
+
+**Twelve projects are already funded.** Cohort 1 (29 Jun 2026): **Learning
+Equality** (science-misconception benchmark), **Princeton** (simulated student
+models), **National Tutoring Observatory / Cornell** (ASR leaderboards for
+education), **Stanford** (KB-TutorBench, multimodal formative-assessment
+dataset). Cohort 2 (21 Sept 2026): **eight** awards focused on **formative
+assessment** plus math, literacy and writing, outputs stated to be **openly
+licensed**; one named at Tier 2 — **MMSA & TERC** (*A Multimodal Dataset for
+AI-Enhanced Formative Assessment*).
+
+Separately, the **EDU AI** RFP — **up to $8M**, one award, closed **31 Jul
+2026**, work from **Nov 2026** over 30–36 months — funds open-source
+education-specific model(s) for **K-12 math tutoring as effective as human
+experts**.
+
+**One grantee is already this KB's recommendation. Learning Equality maintains
+Kolibri** (`learningequality/kolibri`, **MIT**), the offline-first platform the
+eighth pass selected. The organisation holding this KB's platform answer is now
+funded to produce an openly-licensed benchmark — **a named partnership lead with
+an existing permissive track record**, not a cold approach.
+
+### A new declared gap: the funded pipeline is not a shelf yet
+
+**Nothing from the twelve funded projects is publicly available.** Measured on
+6 Oct 2026: `KB-TutorBench` → **0 repositories**; `learningequality` filtered on
+`benchmark` → **0 repositories**; the National Tutoring Observatory org → a
+website at 0★ with no payload.
+
+So the engagement line changes shape without closing: **"the permissive
+evaluation layer is funded and lands through 2027; today you build the harness,
+and you design it so Apache-2.0 benchmarks drop in as they ship."** Pattern
+**P23** in `compose/patterns.md` is that design. The highest-value single lookup
+for the next pass is **the seven unnamed cohort-2 grantees** — each is an
+Apache-2.0-or-better artefact with a named owner arriving inside twelve months.
+
+### The method note for this pass — the probe set had a spelling bug
+
+**Three of the six MIT grants on the new DfE shelf are in a file named
+`LICENCE`**, the British spelling.
+
+**The precise failure is worse than a missing filename: the check existed and was
+never run.** Pattern **P22**'s licence gate, written in the eighth pass, *does*
+list `LICENCE` in check 1. But every sweep this KB has recorded — including the
+eighth pass's own 34-target probe — enumerates only `LICENSE`, `LICENSE.md`,
+`LICENSE.txt`, `COPYING` and `license.txt`. **The gate documented the British
+spelling; the sweeps never executed it.**
+
+With the old set, this pass would have recorded
+`DFE-Digital/apply-for-teacher-training` (38★),
+`get-into-teaching-app` (25★), `register-trainee-teachers` (12★) and
+`get-information-about-schools` (9★) as **four ungranted government
+repositories**, and written another paragraph about ministries that publish code
+without licensing it. **All four are MIT.**
+
+That is the **seventh** instance of one failure mode: wrong channel → wrong layer
+→ wrong noun → wrong file type → wrong scope → wrong assumption that a payload
+exists at all (RACHEL) → **wrong spelling**. Every one produced a false negative
+that read as a regional or categorical absence.
+
+**Two corrections follow.** The probe set now includes `LICENCE`, `LICENCE.md`,
+`LICENCE.txt` and `COPYRIGHT`; every negative in this pass was re-run against
+them and all seven survived. And **earlier passes' "ungranted" conclusions were
+produced by a query that could not have found a British-spelled grant** — they
+are suspect until re-probed, which matters most for the MEA, Commonwealth and
+ministry-adjacent repositories where that spelling is the norm.

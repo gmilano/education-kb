@@ -1204,6 +1204,178 @@ one has a live failure attached:
   holders, not the organiser** — CAi UC's own template got that wrong and
   flagged all 20 of its outputs at check 3.
 
+## P23 — The benchmark-ready evaluation harness (build the socket before the plug exists)
+
+**Added in the ninth pass of 2026-10-06.** This pattern exists because of a fact
+no earlier pass could state: **the permissive evaluation layer this KB has
+declared missing since its fourth pass is funded, dated and licence-floored** —
+and **has not shipped.**
+
+**Use it when:** a client needs to evidence that its tutoring or assessment AI
+works — for a procurement rubric, an EU Annex III file, a board, or a ministry —
+and you have found (correctly) that **no Apache-2.0 tutoring-quality evaluator
+exists today.** Measured 6 Oct 2026: `tutoring quality evaluation benchmark
+license:apache-2.0` → **0 repositories.**
+
+**The strategy:** do not build an evaluator and do not wait for one. **Build the
+socket.** Twelve funded projects under a floor of *"at least as permissive as
+CC-BY-4.0 (content) or Apache-2.0 (code/models)"* land through 2027; the
+engineering job today is a harness whose benchmark layer is a swappable adapter,
+so each one drops in as it publishes.
+
+### Components
+
+| Layer | Component | Licence | Status |
+|---|---|---|---|
+| Harness + adapter interface | **client-owned**, written Apache-2.0 to match the incoming layer | Apache-2.0 | you build this |
+| Human quality gate (today's substitute for an automated one) | **TutorIA `RNF-09`** — pedagogical review by **≥2 subject-expert teachers per subject before launch** ([LabSirius/TutorIA](https://github.com/LabSirius/TutorIA)) | **MIT** | ✅ citable now |
+| Speech scoring, where oral fluency is in scope | [k2-fsa/sherpa-onnx](https://github.com/k2-fsa/sherpa-onnx) | **Apache-2.0** (`master/LICENSE`, payload-verified) | ✅ now |
+| Content + curriculum grounding | [learningequality/kolibri](https://github.com/learningequality/kolibri) + [studio](https://github.com/learningequality/studio) | **MIT** | ✅ now |
+| Interaction log (the artefact rubrics omit and regulators want) | client-owned, append-only | Apache-2.0 | you build this |
+| **Benchmark slot 1** — science misconceptions in free-form responses | **Learning Equality** (PI Jamie Alexandre) | ≥ Apache-2.0 / CC-BY by grant condition | ⏳ funded 29 Jun 2026, 6–12 mo |
+| **Benchmark slot 2** — multimodal formative assessment (**KB-TutorBench**) | **Stanford** (PI Hariharan Subramonyam) | ≥ Apache-2.0 / CC-BY | ⏳ funded, **0 repositories** today |
+| **Benchmark slot 3** — ASR leaderboards for education | **National Tutoring Observatory / Cornell** (PI Allison Koenecke) | ≥ Apache-2.0 / CC-BY | ⏳ funded; org has a website, **no code** |
+| **Benchmark slot 4** — multimodal formative-assessment dataset | **MMSA & TERC** (Heidi Cian, Ibrahim Dahlstrom-Hakki) | openly licensed per programme | ⏳ funded 21 Sept 2026 |
+| Simulated learners for regression testing | **Princeton** (PI Tammy Kwan) — simulated student models | ≥ Apache-2.0 | ⏳ funded |
+
+### Wiring
+
+1. **Define one adapter interface** — `(items, model_under_test) → per-item
+   scores + aggregate + provenance`. Every slot above is a dataset plus a scoring
+   rule; an adapter that accepts both is all the abstraction needed. Resist a
+   framework.
+2. **Implement the human gate first, and ship it.** TutorIA's RNF-09 is MIT,
+   citable, and the only pedagogical quality protocol in this KB. Two
+   subject-expert teachers per subject, reviewing before launch, with sign-off
+   recorded. **This is the deliverable that satisfies "human judgment is final"**
+   (trend 16) and the oversight columns of the Maryland and Vermont rubrics.
+3. **Stand up the interaction log on day one.** Append-only, per-turn, with model
+   version, prompt provenance and the grounding documents cited. It costs little
+   at the start and is unreconstructible later — and it is the artefact **no
+   published US rubric requires and the EU profile does** (**P13**).
+4. **Write one reference adapter against a public education benchmark you can
+   legally use, to prove the socket works.** Do **not** use
+   [AI-EDU-LAB/E-EVAL](https://github.com/AI-EDU-LAB/E-EVAL) (33★, Chinese K12
+   education evaluation) as a dependency — **it has no licence payload.** Read it
+   for its criteria design, implement your own items, keep your implementation.
+5. **Pin the slots in the architecture document by name, owner and expected
+   window.** This is the part clients value: the gap is attributed and dated, not
+   hidden.
+6. **Re-probe the slots each quarter** with P22's gate before vendoring anything
+   that lands. A grant condition is a promise about the licence; the **payload is
+   still the proof**, and a funder's floor does not exempt a repository from
+   checks 2 and 3 (asset scope and holder).
+
+### Deliverables
+
+- An Apache-2.0 harness with a documented adapter interface and one working
+  reference adapter.
+- A signed RNF-09-style pedagogical review record per subject.
+- An append-only interaction log with provenance, plus a short output-generation
+  disclosure.
+- A **dated gap register**: each benchmark slot, its funded owner, its expected
+  window, and what the harness does in the meantime.
+
+### ⚠️ Three warnings that are the point of this pattern
+
+1. **Do not present the funded pipeline as an existing shelf.** Nothing has
+   shipped: `KB-TutorBench` → **0 repositories**, `learningequality` filtered on
+   `benchmark` → **0 repositories**, the Cornell grantee's org → a website at 0★
+   with no payload. Say *funded and expected*, never *available*.
+2. **Every funder fact here is Tier 2.** `k12-ai-infrastructure.org` and
+   `digitalpromise.org` are EGRESS_BLOCKED in this environment; **no RFP was
+   read.** Confirm the licence floor against the primary document before it
+   appears in a contract — the whole pattern rests on that one clause.
+3. **Apache-2.0, not MIT, is the target licence for your harness.** The incoming
+   layer is Apache-2.0 by grant condition. Matching it keeps combination trivial
+   and gives the client the patent grant MIT lacks — the one case on this page
+   where this KB recommends Apache-2.0 over MIT for new code.
+
+## P24 — Procurement-rubric-ready delivery (North America, and the artefact pack that also clears the EU)
+
+**Added in the ninth pass of 2026-10-06.** In the US the binding specification is
+no longer only the statute — it is the **state-mandated evaluation rubric** the
+district scores you against.
+
+**Use it when:** the client is a US district, charter network, state agency or a
+vendor selling into one — especially in **Maryland** (SB 720, effective 1 Jun
+2026: state rubric, local policy within **120 days**, a designated **AI
+coordinator**, ~24 districts on the clock for Fall 2026), **Vermont** (rubric of
+23 Jan 2026), or **Idaho** / **Alabama** (statutory capability assessments and
+pre-training verification).
+
+**The insight:** the rubrics converge on seven criteria — educational value, data
+privacy, usability and accessibility, cost, scalability, vendor reputation, age
+restrictions — and they **omit** three things: an auditable interaction record,
+disclosure of how outputs are generated, and evidence of bias/accuracy/
+reliability evaluation. **Ship the omitted three and you exceed every published
+rubric, pre-empt its next revision, and produce most of an EU Annex III file at
+the same time.**
+
+### Components
+
+| Need | Component | Licence |
+|---|---|---|
+| Integration that *scores points* (39% of districts rubric-score interoperability) | **LTI + MCP side-car** per **P1** — no fork of the LMS | permissive by construction |
+| No vendor training on student records (Idaho / Maryland / Alabama) | **self-hosted inference**, the sovereign stack of **P4** | — |
+| Accessibility evidence | WCAG audit against the rubric's own accessibility criterion | — |
+| Human-final decisions | **TutorIA RNF-09** review protocol ([LabSirius/TutorIA](https://github.com/LabSirius/TutorIA)) | **MIT** |
+| Evaluation evidence | **P23** harness + dated gap register | Apache-2.0 |
+| Offline/equity criterion, where present | [learningequality/kolibri](https://github.com/learningequality/kolibri) | **MIT** |
+| Proctoring, **only if** explicitly required | [AarambhDevHub/exam-cheating-detection](https://github.com/AarambhDevHub/exam-cheating-detection) (47★) or [vincenzo-afk/Proctored-MCQ-Exam-Platform](https://github.com/vincenzo-afk/Proctored-MCQ-Exam-Platform) (36★) | **MIT**, payload-verified |
+
+### Wiring
+
+1. **Obtain the actual rubric before designing.** Maryland's is state-published;
+   Vermont's is in its January guidance. **Build the deliverable's evidence index
+   as a one-to-one map onto the rubric's rows** — a reviewer scoring your bid
+   should never have to search.
+2. **Satisfy "no training on student records" architecturally, not
+   contractually.** A contractual promise is a clause someone must trust;
+   self-hosted inference (**P4**) is a fact they can inspect. Where a hosted model
+   is unavoidable, isolate it behind the side-car so student records never cross
+   the boundary, and document the boundary.
+3. **Integrate via LTI + MCP (P1), never by forking the LMS.** This is now worth
+   points, not just maintenance savings.
+4. **Add the three missing artefacts** — interaction audit log,
+   output-generation disclosure, bias/accuracy/reliability evaluation report (from
+   **P23**). Name them in the bid as *exceeding* the rubric.
+5. **Name the AI coordinator's workflow.** Maryland requires a designated
+   coordinator; a tool that produces a report that person can actually file is
+   differentiated from one that produces a dashboard they must interpret.
+6. **Reuse the pack in EMEA.** The three omitted artefacts are substantially the
+   Annex III evidence of **P13**. Build once, file in both regions — and note the
+   direction of travel: **this is the first cross-region compliance reuse in this
+   KB that runs from EMEA into North America**, because the EU profile is the
+   stricter parent.
+7. **Where proctoring is required, scope it carefully.** The MIT proctoring
+   options are **18–47★ individual-scale projects**, not products: vendor the
+   core, harden it, own it. Do **not** use `lebmatter/exampro` (72★, the
+   framework-grade one) — **no licence payload**. And proctoring is biometric
+   processing: it pulls the deliverable into Annex III in the EU and into the
+   age-restriction row of the Vermont rubric.
+
+### Deliverables
+
+- A rubric-indexed evidence pack, one section per rubric row.
+- An architecture note showing where student records do and do not travel.
+- Interaction audit log, output-generation disclosure, evaluation report.
+- A licence register (**P22** output) for every component, with probe dates.
+
+### ⚠️ Warnings
+
+- **Every statutory and rubric fact in this pattern is Tier 2.**
+  `marylandpublicschools.org`, `cosn.org`, `njsba.org`, `web.ped.nm.gov` and
+  `excelined.org` are **EGRESS_BLOCKED** here; **no rubric and no RFP was read.**
+  Confirm each citation — *especially effective dates and the 120-day clock* —
+  against the primary document before it enters a bid.
+- **Rubrics are state-specific and moving.** Do not generalise Maryland's to a
+  neighbouring state. The *pattern* generalises; the rows do not.
+- **Outcomes-based contracting is appearing in tutoring solicitations** (NJSBA RFP
+  2026-02). If an outcome clause is in scope, the **P23** harness stops being a
+  compliance artefact and becomes the instrument your payment depends on — price
+  and staff it accordingly.
+
 ## Pattern selection
 
 | Situation | Pattern |
@@ -1213,6 +1385,9 @@ one has a live failure attached:
 | Must justify mastery/progression decisions | P3 |
 | EU client, assessment in scope | P4 (P1 for the integration) |
 | Connectivity/budget constrained, equity mandate | P5 |
+| Client must evidence that its tutoring AI works, and no permissive evaluator exists yet | **P23** |
+| US district / state agency bid, or selling into one | **P24** (with P1 for integration, P4 for inference) |
+| Any repository about to become a dependency | **P22**, always |
 | Client staff must own it afterwards | P6, alongside any other |
 | Pain is administrative, no committed SIS yet | **P7** (module on LGPL-3.0 OpenEduCat) |
 | Pain is administrative, SIS already committed | P1's side-car shape — Gibbon/RosarioSIS/openSIS are all copyleft |

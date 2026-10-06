@@ -8,6 +8,343 @@ updated: 2026-10-06
 
 > **Append-only.** Newest dated section on top; history preserved below.
 
+## 2026-10-06 — ninth pass: the money arrived before the code, and it arrived with a licence floor
+
+Channel new to this KB this pass: **the funder and procurement channel** —
+philanthropic RFPs, state education-agency procurement rubrics and district
+solicitations. This is not a channel the KB chose at random. The eighth pass
+declared it:
+
+> *"North America's general-language channel is saturated. Four consecutive
+> passes, identical facts. The next North America trend must come from district
+> RFP language, state education-agency procurement portals, or vendor filings —
+> **none of which this KB has ever swept.**"*
+
+It was swept this pass, and it returned the single most consequential finding
+in nine passes: **the gap this KB has carried open since its fourth pass is
+funded, dated, and carries a mandatory Apache-2.0 licence floor.**
+
+**Verification tiering — read this before citing anything below.** This pass
+produced findings at **two different evidence tiers**, and they are not
+interchangeable:
+
+- **Tier 1 — payload-verified.** Every licence in the tables below was read
+  from the repository's own licence file via `raw.githubusercontent.com`.
+  **36 licence probes resolved; 7 repositories returned no payload under either
+  spelling.** These are facts.
+- **Tier 2 — search-summary only.** Every funder and procurement fact is
+  **Tier 2**. Of the hosts that carry the primary documents,
+  **14 are EGRESS_BLOCKED** in this environment: `k12-ai-infrastructure.org`,
+  `digitalpromise.org`, `unu.edu`, `arxiv.org`, `cosn.org`,
+  `marylandpublicschools.org`, `njsba.org`, `web.ped.nm.gov`,
+  `excelined.org`, `marketbrief.edweek.org`, `edtechinnovationhub.com`,
+  `www2.fundsforngos.org`, `en.wikipedia.org` and `rachel.worldpossible.org`
+  (plus `rachel.core2learn.org`). **No RFP document was read.** The figures
+  below are consistent across two or more independent search summaries, which
+  is corroboration, not verification. **Confirm every dollar figure, date and
+  licence clause against the primary document before it enters a client
+  deliverable.**
+
+Channel note: `github.com` HTML returns **403** to `curl` through this proxy
+(unchanged across nine passes) but **is reachable via `WebFetch`**, which is how
+every count and every zero-result below was measured. `raw.githubusercontent.com`
+serves both.
+
+### Finding 1 — the oldest gap in this KB is funded: $26M, twelve named projects, Apache-2.0 or better
+
+**The K-12 AI Infrastructure Program** — a **$26 million multi-year**
+initiative led by **Digital Promise**, with core partners **Learning Data
+Insights**, **DrivenData**, the **Massive Data Institute at Georgetown
+University** and **Catalyst @ Penn GSE**. Funded by the **Gates Foundation**,
+which also manages proposal review and award monitoring directly. Announced
+**3 November 2025**; first grant cycle opened **4 February 2026**.
+
+The part that matters to this KB is the **licence condition**, not the money:
+
+> All funded developments must be released under a licence **at least as
+> permissive as CC-BY-4.0 (content) or Apache-2.0 (code/models)**. The programme
+> recommends **CC-BY** for datasets and knowledge products and **Apache-2.0**
+> for software and code — *including evaluations, models and applications*.
+
+Two open RFPs sit under it:
+
+| RFP | Size | Scope | Timeline |
+|---|---|---|---|
+| **Open Source AI Model for Tutoring ("EDU AI")** | **up to $8M**, one award expected | Open-source, education-specific AI model(s) + supporting research, to make **K-12 math tutoring as effective as human experts** | Released **1 Jun 2026**; proposals closed **31 Jul 2026**; work begins **Nov 2026**; 30–36 months |
+| **Teaching & Learning (T&L) Benchmarks and Datasets** | not established at Tier 2 | **Three** distinct, standalone open-source **K-12 instructional data corpora** plus an **AI benchmark** for adaptive learning use cases | Open; dates not established |
+
+**Twelve funded projects are already named.** Cohort 1 (**29 June 2026**), four
+awards, 6–12 months:
+
+| Grantee | Lead | Project |
+|---|---|---|
+| **Learning Equality** | Jamie Alexandre | A Benchmark for AI Identification of **Science Misconceptions** in Free-Form Student Responses |
+| **Princeton University** | Tammy Kwan | Pipeline for Training **Simulated Student Models** with Reduced Human Data |
+| **National Tutoring Observatory / Cornell University** | Allison Koenecke | **Open Leaderboards for Benchmarking ASR** in Educational Contexts |
+| **Stanford University** | Hariharan Subramonyam | **KB-TutorBench**: A Multimodal Knowledge-Building Dataset for AI-Enabled **Formative Assessment** |
+
+Cohort 2 (**21 September 2026**), **eight** awards, 6–12 months, prioritising
+**formative assessment** and deepening investment in **math, literacy and
+writing**; the programme states the outputs **"will be openly licensed and
+freely available for use across the education field."** One is named at Tier 2:
+**Maine Mathematics & Science Alliance (MMSA) & TERC** (Heidi Cian, Ibrahim
+Dahlstrom-Hakki) — *A Multimodal Dataset for AI-Enhanced Formative Assessment*.
+
+**Why this is the finding of the pass.** For five passes this KB has recorded,
+in these words, *"no shippable permissive evaluator of tutoring quality."* It
+has been an absence with no explanation and no end date. It now has both: the
+absence is being bought, by a named funder, on a published schedule, under a
+licence floor this KB can actually ship. **Two of the twelve projects land
+exactly on gaps this KB declared independently** — Cornell's ASR leaderboards on
+the sixth pass's *"oral reading fluency agent does not exist"*, and
+Stanford's/MMSA's formative-assessment datasets on the fourth pass's evaluator
+gap.
+
+And one grantee is already on this KB's shelves: **Learning Equality is the
+maintainer of Kolibri** (`learningequality/kolibri`, **MIT**, re-confirmed from
+payload this pass), which the eighth pass made the platform answer for
+offline-first delivery. **The same organisation that owns this KB's offline
+platform is now funded to produce an openly-licensed benchmark.** That is a
+named partnership lead with a permissive track record, not a cold approach.
+
+### Finding 2 — funded is not shipped, and the measurement says so
+
+The honest counterweight to Finding 1, measured this pass:
+
+| Probe | Result (6 Oct 2026) |
+|---|---|
+| `tutoring quality evaluation benchmark license:apache-2.0` | **0 repositories** |
+| `KB-TutorBench` | **0 repositories** |
+| `learningequality` org, filtered on `benchmark` | **0 repositories** |
+| `National-Tutoring-Observatory` org | **2 repos**, best is a **website**, 0★, **no licence payload** |
+
+The National Tutoring Observatory — a *funded grantee* — has a GitHub
+organisation whose only substantive repository is
+`National-Tutoring-Observatory/National-Tutoring-Observatory.github.io`, an HTML
+site at **0★ with no licence payload under either spelling**.
+
+**So the gap does not close this pass. It acquires a date.** The engagement line
+changes from *"this does not exist"* to: **"the permissive evaluator layer is
+funded and lands through 2027; today you build the harness, and you design it to
+swap in Apache-2.0 benchmarks as they land."** That is a materially different
+conversation with a client, and it is the first time this KB can have it.
+
+### Finding 3 — the proctoring gap is false, and it has been false for two passes
+
+The seventh pass declared **"no permissive open-source exam proctoring agent."**
+The eighth pass carried it forward unchanged, explicitly marked *"not
+re-probed."* It was re-probed this pass. **It is wrong.**
+
+A licence-filtered search (`exam proctoring license:mit`) returns **204
+repositories**. Four, verified from payload:
+
+| Repo | Licence (payload) | ★ | What it is |
+|---|---|---|---|
+| [AarambhDevHub/exam-cheating-detection](https://github.com/AarambhDevHub/exam-cheating-detection) | **MIT** (`main/LICENSE`) | 47 | Computer-vision detection of suspicious exam behaviour — eye-movement and face detection |
+| [vincenzo-afk/Proctored-MCQ-Exam-Platform](https://github.com/vincenzo-afk/Proctored-MCQ-Exam-Platform) | **MIT** (`main/LICENSE`) | 36 | Browser-based MCQ platform with camera monitoring and certificate generation |
+| [hemantkarekar/MyProctorAI](https://github.com/hemantkarekar/MyProctorAI) | **MIT** (`main/LICENSE`) | 22 | Flask portal: AI anti-cheating proctoring and invigilation |
+| [RakeshBabuGajula/Exam_Intellect](https://github.com/RakeshBabuGajula/Exam_Intellect) | **MIT** (`master/LICENSE`) | 18 | Live exam observation dashboard, CV + speech recognition, automated feedback |
+
+**Measured rejection, and it is the loudest repository in the set:**
+[lebmatter/exampro](https://github.com/lebmatter/exampro) — **72★**, *Proctored
+Exams for Frappe Framework*, the **highest-starred** result and the only one
+with a real framework behind it — has **no licence payload** under `LICENSE`,
+`LICENSE.md`, `LICENSE.txt`, `COPYING`, `LICENCE`, `LICENCE.md`, `LICENCE.txt`
+or `COPYRIGHT`, on either branch. **The pattern this KB has now seen in six
+consecutive passes holds again: the most adopted asset in a sweep is the one
+without a grant.**
+
+**The gap, restated so it is true.** Not *"no permissive proctoring agent"* —
+there are four. The accurate claim is **no permissive proctoring agent at
+production maturity**: the set tops out at 47★, every one of the four is
+student- or individual-scale, none has an institutional maintainer, and the
+only framework-grade implementation is ungranted. **That is the same reframing
+the eighth pass applied to LATAM** — origin and licence refuted, maturity
+surviving — which is now twice in two passes that this KB's gap language was
+one qualifier too strong.
+
+### Finding 4 — RACHEL: path established, and the answer is that you cannot ship it
+
+The eighth pass probed RACHEL across four candidate paths × two branches, got
+nothing, and recorded *"path not established; the next pass should start from
+the project's own site rather than a guessed path."*
+
+Started from the project, and the path is **`github.com/rachelproject`**:
+
+| Repo | Payload | Stated grant | Verdict |
+|---|---|---|---|
+| [rachelproject/contentshell](https://github.com/rachelproject/contentshell) | **none** (8 filenames × 2 branches) | README: *"Creative Commons - BY, SA, NC"* | ❌ **NonCommercial — not shippable** |
+| [rachelproject/module-template](https://github.com/rachelproject/module-template) | **none** (same sweep) | none found | ❌ no grant |
+
+`contentshell` **is** RACHEL — "The RACHEL Content Management System", the PHP
+that serves and manages content on RACHEL devices. And its only licence
+statement, in the README, is **CC BY-SA-NC**.
+
+**This is a new failure mode, and it is the inverse of the eighth pass's
+`Llamacha` trap.** `Llamacha` served a *correct permissive payload* over
+*non-commercial data*. RACHEL serves **no payload at all**, and declares a
+**content licence over software** — CC BY-NC-SA applied to a PHP application.
+Creative Commons itself advises against using its licences for software. The
+practical reading is the one that binds: **NonCommercial, on the code, with no
+payload to argue with.** A reviewer who requires a `LICENSE` file concludes
+"unlicensed, ask the maintainer"; a reviewer who reads the README concludes
+"NonCommercial, walk away." **Both stop you, and the second is correct.**
+
+**The layer underneath, payload-verified, and it is copyleft:**
+
+| Repo | Payload | Licence |
+|---|---|---|
+| `kiwix/kiwix-tools` | `main/COPYING` | **GPL-3.0** |
+| `kiwix/libkiwix` | `main/COPYING` | **GPL-3.0** |
+| `kiwix/kiwix-android` | `main/COPYING` | **GPL-3.0** |
+| `openzim/libzim` | `main/COPYING` | **GPL-2.0** |
+| `learningequality/kolibri` | `develop/LICENSE` | **MIT** ✅ re-confirmed |
+
+RACHEL's README names its own dependencies: ZIM modules need **Kiwix**, and
+other modules need **KA-Lite**, **Kolibri** or **Moodle**. So the offline
+content stack is **a NonCommercial shell over a GPL ZIM layer over an MIT
+platform** — and the MIT platform at the bottom is the one this KB already
+recommends.
+
+**Architecture conclusion, unchanged but now for a stated reason: Kolibri is the
+platform answer. RACHEL is prior art you cite in a proposal, not code you
+ship.** The eighth pass reached the right recommendation from an *absence of
+evidence*; this pass reaches it from evidence.
+
+### Finding 5 — a new EMEA vein: the UK Department for Education ships national services under MIT
+
+The funder channel has a government twin that this KB has never swept:
+**education ministries' own engineering organisations.** `DFE-Digital` is the UK
+Department for Education's GitHub org, and it publishes **live national
+services** under MIT. Payload-verified this pass:
+
+| Repo | Licence (payload) | ★ | What it is |
+|---|---|---|---|
+| [DFE-Digital/apply-for-teacher-training](https://github.com/DFE-Digital/apply-for-teacher-training) | **MIT** (`main/LICENCE`) | 38 | The national service for applying to teacher-training courses |
+| [DFE-Digital/teaching-vacancies](https://github.com/DFE-Digital/teaching-vacancies) | **MIT** (`main/LICENSE`) | 27 | National teaching job-listing service |
+| [DFE-Digital/get-into-teaching-app](https://github.com/DFE-Digital/get-into-teaching-app) | **MIT** (`master/LICENCE`) | 25 | The DfE's Get Into Teaching recruitment site |
+| [DFE-Digital/publish-teacher-training](https://github.com/DFE-Digital/publish-teacher-training) | **MIT** (`main/LICENSE`) | 12 | Provider course publishing + candidate discovery |
+| [DFE-Digital/register-trainee-teachers](https://github.com/DFE-Digital/register-trainee-teachers) | **MIT** (`main/LICENCE`) | 12 | Trainee registration for ITT placements |
+| [DFE-Digital/get-information-about-schools](https://github.com/DFE-Digital/get-information-about-schools) | **MIT** (`main/LICENCE`) | 9 | GIAS — the national schools register |
+| [DFE-Digital/education-benchmarking-and-insights](https://github.com/DFE-Digital/education-benchmarking-and-insights) | **MIT** (`main/LICENSE`) | 5 | Compares a school's metrics against similar institutions |
+
+**Measured rejections from the same org:**
+
+- `DFE-Digital/gias-query-tool` — **17★**, the query layer over GIAS, **no
+  licence payload**. Again: inside one organisation, the *tool people actually
+  reach for* is the ungranted one.
+- `DFE-Digital/rsd-ai-libs` — **0★**, **no payload**. Worth naming anyway for
+  what it describes: *".NET library for building and evaluating Azure AI Foundry
+  agents with guardrails, Azure AI Search, and **MCP server support**."* A
+  national education ministry building an **MCP**-based agent library is direct
+  corroboration of this KB's trend 4 — and it is unlicensed and unstarred.
+
+**Read this shelf honestly.** These are **administrative and workflow services,
+not AI** — recruitment, registration, vacancies, school data. They do not close
+any AI gap. What they change is the EMEA engagement posture: there is now a
+**production-grade, MIT, government-origin education estate** to point at,
+maintained by a ministry, in a region this KB had characterised through the
+compliance clock and a licensing-hygiene problem. And the DfE's *actual* AI
+repositories are unlicensed and at 0–1★ — **the ministry's permissive estate is
+its administrative tier; its AI tier is neither permissive nor mature.** That
+asymmetry is the finding, and it is a precise opening for a consultancy.
+
+### Finding 6 — the seventh probe-vocabulary failure mode: the spelling
+
+**Three of the six MIT grants above are in a file named `LICENCE`, not
+`LICENSE`.**
+
+Nine passes of this KB have probed `LICENSE`, `LICENSE.md`, `LICENSE.txt`,
+`COPYING` and `license.txt`. **None of those five matches `LICENCE`.** Run
+against `DFE-Digital` with the old filename set, this pass would have recorded
+`apply-for-teacher-training` (38★), `get-into-teaching-app` (25★),
+`register-trainee-teachers` (12★) and `get-information-about-schools` (9★) as
+**four more ungranted government repositories** — and would have written another
+paragraph about ministries that publish code without licensing it. **All four
+are MIT.**
+
+This is the **seventh** instance of one failure mode in this KB:
+
+1. wrong **channel** (generalist search, nine consecutive failures)
+2. wrong **layer** (sixth pass — probing agents, not substrate)
+3. wrong **noun** (seventh pass)
+4. wrong **file type** (eighth pass — `docs/`, not code)
+5. wrong **scope** (eighth pass — `Llamacha`: licence correct, asset wrong)
+6. wrong **assumption that a payload exists** (this pass — RACHEL declares in README only)
+7. wrong **spelling** (this pass — `LICENCE`)
+
+**Every single one was a false negative that read as a regional or categorical
+absence.** The KB's probe set is corrected to include British spellings from
+this pass forward. The deeper lesson is the one the eighth pass started: *the
+payload channel is not ground truth* — and this pass shows it is not even a
+stable *query*.
+
+### Finding 7 — APAC's education-evaluation asset exists and is ungranted
+
+From the benchmark sweep: [AI-EDU-LAB/E-EVAL](https://github.com/AI-EDU-LAB/E-EVAL)
+— **33★**, *"Official github repo for E-Eval, a Chinese K12 education evaluation
+benchmark for LLMs"*, Python. **No licence payload** under either spelling.
+
+This is the same shape as MEA's Arabic tutor (seventh pass) and LATAM's
+indigenous-language layer (eighth pass): **built, published, benchmarked,
+ungranted.** It is now the pattern in **three** regions, and it is the single
+most common reason this KB cannot ship a regional asset. Also rejected from the
+same sweep: `ubco-db/LLM_education_benchmark` (2★) and `OpenEduTech/EduPerf`
+(6★, last updated November 2022) — **neither has a payload.**
+
+### Declared gaps — searched this pass, nothing found
+
+- **No Apache-2.0 tutoring-quality evaluator exists today.** Measured as
+  **0 repositories**, with the licence filter applied, on 6 Oct 2026. Open
+  since the fourth pass; now with a denominator and an expected arrival window
+  (2027, via the twelve funded projects) instead of an assertion.
+- **No primary funder document was read.** All 14 hosts carrying the RFPs,
+  grantee announcements, state guidance and the UNESCO paper are
+  **EGRESS_BLOCKED**. Every funder and procurement figure in this pass is
+  **Tier 2**. This is the largest single block of unverified material this KB
+  has ever accepted into its durable files, and it is labelled as such
+  everywhere it appears.
+- **Cohort 2's remaining seven grantees are not named.** Eight awards were made
+  on 21 Sept 2026; one (MMSA & TERC) surfaced. The other seven are a known,
+  addressable gap for the next pass — and the single highest-value lookup in
+  this KB right now, because each is an Apache-2.0-or-better artefact with a
+  named owner arriving inside 12 months.
+- **SciEval and EduEVAL-DB were surfaced and not verified.**
+  `arxiv.org/pdf/2604.25472` (*SciEval: A Benchmark for Automatic Evaluation of
+  K-12 Science Instructional Materials*) and `arxiv.org/pdf/2602.15531`
+  (*EduEVAL-DB: A Role-Based Dataset for Pedagogical Risk Evaluation in
+  Educational Explanations*) are both **EGRESS_BLOCKED**, and a GitHub sweep
+  found **no repository** under either name. Recorded as leads, not findings —
+  this KB's own rule: a search hit is not a repository.
+- **No vendor filings were swept.** The eighth pass named three sub-channels:
+  district RFPs ✅, state procurement portals ✅, **vendor filings ❌**. The
+  third is untouched and is a distinct channel, not a variant of the other two.
+
+### What this pass says about method
+
+Nine passes have been spent asking *what exists*. This pass asked **who is
+paying for what does not exist yet**, and that question had a better answer than
+any repository sweep in this KB's history: a $26M programme, twelve named
+projects, a mandatory Apache-2.0 floor, and two of the awards landing precisely
+on gaps this KB had derived independently from code sweeps. **The supply channel
+and the demand channel return different information, and this KB had only ever
+swept supply.**
+
+The cost of the new channel is honest and large: **it is Tier 2 throughout.**
+Fourteen blocked hosts mean this pass's headline findings rest on corroborated
+search summaries rather than primary documents — a standard the KB spent eight
+passes refusing to accept for licences. The resolution is not to discard the
+findings but to **tier them explicitly**, which is what every table above does.
+A funded pipeline known at Tier 2 is worth more to an engagement than a silent
+gap known at Tier 1, provided nobody mistakes which is which.
+
+And the self-inflicted finding is Finding 6. The KB's verification method — the
+thing it has been proudest of for eight passes — **silently manufactured false
+negatives for nine passes because it never tried the British spelling of the
+word "licence".** Six failure modes before this one were about looking in the
+wrong place. This one was about not knowing how the thing you are looking for is
+spelled.
+
 ## 2026-10-06 — eighth pass: in LATAM the licence label and the licence grant disagree, in both directions
 
 Channel new to this KB this pass: **the `docs/` directory, and the
