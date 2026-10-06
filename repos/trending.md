@@ -8,6 +8,81 @@ updated: 2026-10-06
 
 > **Append-only.** Newest dated section on top; history preserved below.
 
+## 2026-10-06 — third pass: the Kuali estate, and one consortium with THREE different licences
+
+The second pass of today opened the administrative shelf (SIS and education ERP).
+This pass went after the one institutional-grade option that shelf was missing —
+the **Kuali** consortium, formed in 2004 with an Andrew W. Mellon Foundation grant
+and backed by more than two dozen universities — and found something more useful
+than a repo: **a single consortium whose products carry three different licences,
+so "is Kuali open source?" has no single answer.** Every licence below was read
+from the repository's own payload via `raw.githubusercontent.com` on 2026-10-06.
+
+### The Kuali estate, licence read from payload
+
+| Repo | Product | Licence (read from payload) | Status |
+|---|---|---|---|
+| [KualiCo/rice](https://github.com/KualiCo/rice) | Kuali Rice — application-development framework and middleware for higher education | **ECL-2.0** (`LICENSE.txt`) — **permissive** | 4★, 12 forks, Java. **Maintenance mode**: its own README states it "does continue to be maintained from the perspective of security, bug fixes, and minor enhancements while its replacements are being developed." |
+| [kuali/rice](https://github.com/kuali/rice) | same, older location | **ECL-2.0** (`LICENSE.txt`) | **DEPRECATED** — first line of its README: *"This repository is DEPRECATED - see https://github.com/KualiCo/rice for latest Kuali Rice code"*. Pin `KualiCo/rice`. |
+| [kuali/kfs](https://github.com/kuali/kfs) | Kuali Financial System | **AGPL-3.0** (`LICENSE`) | Network copyleft. Not the same licence as Rice. |
+| [kuali/kc](https://github.com/kuali/kc) | Kuali Coeus — research administration | **AGPL-3.0** (`license.txt`, lowercase) | Network copyleft, **and** the lowercase-`license.txt` probe trap this KB already recorded for `frappe/lms` and `frappe/erpnext`. Third live instance. |
+| `kuali/student`, `KualiCo/student`, `kuali/coeus` | Kuali Student (the SIS) | — | **Not reachable.** `README.md` returns 404 on all three candidate paths. The SIS this KB went looking for is not where its name suggests. |
+
+### Why this is the finding and not just three rows
+
+**ECL-2.0 appears on the education shelf in two unrelated places, and both times
+it is the permissive escape hatch.** Sakai (`sakaiproject/sakai`) and Opencast
+(`opencast/opencast`) were already recorded as ECL-2.0; Kuali Rice makes three.
+The Educational Community License is the Apache-2.0 text with the patent grant
+narrowed to education, which means **ECL-2.0 is permissive and this KB should
+treat it exactly as it treats Apache-2.0.** Any licence filter built for an
+education engagement that allowlists only `MIT/Apache-2.0/BSD` will reject three
+genuinely permissive higher-education platforms. Add ECL-2.0 to the allowlist.
+
+**But a consortium is not a licence.** "Kuali is ECL-2.0" is true of Rice and
+false of KFS and Coeus. The diligence unit is the **repository**, never the
+foundation, the vendor or the brand. Same lesson as `frappe/lms` (AGPL) sitting
+beside `frappe/erpnext` (GPL) under one org — now with a permissive/copyleft split
+*inside* one consortium, which is the harder version to spot because the
+permissive member is the one you meet first in the docs.
+
+**And read the maintenance banner before the licence.** Rice is the permissive
+option here and it is in maintenance mode with "replacements being developed".
+Permissive-but-parked is a real category: fine to vendor and fork, wrong to
+present to a client as a living upstream. Recorded as *qualified*, not
+recommended.
+
+### New foundational candidate: the Mentingo stack is the EMEA sovereign shopping list
+
+[Selleo/mentingo](https://github.com/Selleo/mentingo) (**MIT**, 91★, 29 forks,
+TypeScript, Poland-origin) earns a mention in *this* file, not just in
+`verticals/solutions.md`, because its declared dependency set is a worked example
+of the stack this KB's P4 pattern keeps assembling by hand:
+
+| Layer | What Mentingo uses | Note |
+|---|---|---|
+| Retrieval | **PostgreSQL 16 + pgvector** | no separate vector database; one less component to host in-region |
+| AI calls | Vercel AI SDK + OpenAI, LangChain | the swappable layer — replace with Ollama/vLLM for a residency deployment |
+| Observability | **Langfuse** | per-call cost, latency and output tracing. This is the Annex III audit artefact, already wired |
+| Real-time voice | **LiveKit** | role-play and spoken practice |
+| Runtime | Node.js 22+, Redis, S3-compatible storage | |
+| Interop | **SCORM 1.2 export**, OpenAPI/Swagger with a generated typed client, CSV/XLSX bulk import-export | SCORM export is what lets it feed an incumbent LMS instead of replacing it |
+
+The pattern to copy: **pgvector instead of a separate vector store, and Langfuse
+tracing from day one.** Both reduce the component count of a sovereign deployment,
+and the second one produces the evidence the high-risk regimes ask for as a side
+effect of ordinary operation rather than as a compliance project.
+
+### Channel note
+
+The ERP/CRM query from the standing brief (`open source platform education ERP CRM
+MIT Apache`) returned **OpenEduCat's own glossary pages in eight languages** plus
+one Linux.com article — a near-total failure, and the eight-language repetition is
+a single site's SEO surface, not eight findings. The one useful lead in it was the
+Linux.com mention of the Kuali Foundation, which is where this entire section came
+from. Worth recording: a failing channel can still carry one name worth chasing,
+so read the low-ranked organic result before discarding the query.
+
 ## 2026-10-06 — second pass: the administrative shelf (SIS / education ERP)
 
 The morning pass covered the *learning* platform shelf (Moodle, Open edX, Canvas,

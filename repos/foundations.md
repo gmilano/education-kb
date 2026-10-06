@@ -12,7 +12,8 @@ Licenses read from each repo's own `LICENSE` payload on 2026-10-06.
 
 ## Core stack
 
-15 rows, all verified this pass.
+15 rows, all verified on 2026-10-06. Four further infrastructure rows were added in
+the third pass of the same day — see the section below.
 
 | Repo | License (read from payload) | Layer | Why it matters for an education engagement |
 |---|---|---|---|
@@ -31,6 +32,40 @@ Licenses read from each repo's own `LICENSE` payload on 2026-10-06.
 | [IMSGlobal/LTI-Tool-Provider-Library-PHP](https://github.com/IMSGlobal/LTI-Tool-Provider-Library-PHP) | Apache-2.0 (`LICENSE`) | LMS integration | LTI tool-provider implementation. The permissive doorway into a copyleft LMS — see the license-boundary note in `agents/top.md`. |
 | [1EdTech/openbadges-validator-core](https://github.com/1EdTech/openbadges-validator-core) | Apache-2.0 (`LICENSE`) | credentialing | Open Badges validation. Relevant to the skills-economy trend: competency claims a third party can verify. |
 | [opencast/opencast](https://github.com/opencast/opencast) | ECL-2.0 (`LICENSE`) | lecture capture | Video capture, processing and delivery for universities. ECL-2.0 is an Apache-2.0 derivative, so it is **permissive** — the recorded-lecture corpus it produces is the natural input to the P2 ingestion pipeline. |
+
+## Added in the third pass of 2026-10-06
+
+Four infrastructure rows, each probed this pass. Three of them exist because
+`Selleo/mentingo` (MIT) demonstrated a leaner sovereign stack than the one this KB
+had been assembling by hand — see `verticals/solutions.md`.
+
+| Repo | Licence (read from payload) | Layer | Why it matters for an education engagement |
+|---|---|---|---|
+| [pgvector/pgvector](https://github.com/pgvector/pgvector) | **PostgreSQL License** (`LICENSE`) — permissive, BSD-like | retrieval | Vector similarity search **inside PostgreSQL**. Removes a whole component from a sovereign deployment: no separate vector database to host, secure, back up and keep in-region. Where this KB previously reached for a dedicated vector store, reach for this first. |
+| [langfuse/langfuse](https://github.com/langfuse/langfuse) | **MIT, with a carve-out** (`LICENSE`) — see the warning below | LLM observability | Traces every model call with cost, latency and the actual output. In a high-risk education deployment this is the **audit trail produced as a by-product of normal operation**, rather than as a separate compliance project. The single highest-leverage addition to every pattern in this KB. |
+| [livekit/livekit](https://github.com/livekit/livekit) | **Apache-2.0** (`LICENSE`) | real-time voice | WebRTC infrastructure for spoken practice, oral assessment and role-play. The permissive path to voice tutoring, which is otherwise a proprietary-API-shaped problem. |
+| [KualiCo/rice](https://github.com/KualiCo/rice) | **ECL-2.0** (`LICENSE.txt`) — permissive | higher-ed middleware | Application framework, workflow and eDocLite document routing built for and by the higher-education community. Java, 4★, 12 forks. **In maintenance mode** by its own README — vendor and fork it, do not present it as a living upstream. Full estate breakdown in `verticals/solutions.md`. |
+
+### Two licence warnings on the rows above
+
+**Langfuse is MIT *except* its `ee/` directories, and the copyright holder is now
+ClickHouse, Inc.** The `LICENSE` payload is explicit: content under `ee/`,
+`web/src/ee/` and `worker/src/ee/` is governed by a separate enterprise licence at
+`ee/LICENSE`; everything outside those paths is MIT Expat. The copyright line reads
+**"Copyright (c) 2023-2026 ClickHouse, Inc."** Two consequences: a repo-level "MIT"
+badge is **not** sufficient diligence on an open-core project — the carve-out is by
+*directory*, so the probe has to read the payload and the paths, not the badge. And
+the copyright holder on a dependency can change under you between passes, which
+nothing in a licence probe will flag. Build against the MIT paths, exclude `ee/`
+from any vendored copy, and record the holder as well as the licence.
+
+**pgvector is under the PostgreSQL License, not MIT, Apache-2.0 or BSD by name.**
+It is permissive and BSD-like, and a naive allowlist that string-matches
+`MIT|Apache|BSD` will reject it. Together with ECL-2.0 (Sakai, Opencast, Kuali
+Rice) that is **four** genuinely permissive licences this KB relies on that a
+three-name allowlist throws away. The allowlist for an education engagement is:
+**MIT, Apache-2.0, BSD (2/3-clause), ECL-2.0, PostgreSQL License, ISC** — and read
+the payload for carve-outs before trusting any of them.
 
 ## Teaching-content repos (for enablement, not for production)
 
@@ -60,6 +95,16 @@ Recording these saves the next pass the probe.
 | [csmediapro/moodle-mcp-server](https://github.com/csmediapro/moodle-mcp-server) | AGPL-3.0 **plus** a paid premium-plugin tier. Legally usable, commercially the worst shape on the shelf for reusable studio IP. |
 | [planejaia/OpenMAIC-Brasil](https://github.com/planejaia/OpenMAIC-Brasil) | **404 — does not exist.** Surfaced by search as a Brazil-origin multi-agent classroom, v1.0.0 "released 2026-08-27". Every file 404s on four branches and the repo page returns HTTP 404. Recorded so the next pass does not chase it again. |
 | [frappe/erpnext](https://github.com/frappe/erpnext) | GPL-3.0 at `license.txt` (lowercase) — usable, but listed here because it shares `frappe/lms`'s probe trap: `LICENSE` returns 404. |
+| [kuali/kfs](https://github.com/kuali/kfs) | **AGPL-3.0** (`LICENSE`). Kuali Financial System. Same consortium as the permissive Kuali Rice — the licence is per repository, not per foundation. |
+| [kuali/kc](https://github.com/kuali/kc) | **AGPL-3.0** (`license.txt`, lowercase). Kuali Coeus research administration. Third live instance of the lowercase-`license.txt` probe trap, after `frappe/lms` and `frappe/erpnext`. |
+| [kuali/rice](https://github.com/kuali/rice) | Correct licence (ECL-2.0) but **DEPRECATED** by its own README, which points to `KualiCo/rice`. Pin the KualiCo location. |
+| `kuali/student`, `KualiCo/student`, `kuali/coeus` | **Not reachable** — `README.md` 404s on all three. Kuali Student (the SIS) is not at the path its name implies; recorded so the next pass does not re-probe these. |
+| [24kchengYe/human-skill-tree](https://github.com/24kchengYe/human-skill-tree) | **AGPL-3.0**, 563★. Competency skill tree, K-12 to career. Reference for competency-graph design only. |
+| [artcc/freelingo](https://github.com/artcc/freelingo) | **AGPL-3.0**, 156★. Self-hosted AI language learning. |
+| [ahmedEid1/lumen](https://github.com/ahmedEid1/lumen) | **GPL**, 88★. Learner-owned course generation. |
+| [yh2072/edgameclaw](https://github.com/yh2072/edgameclaw) | **AGPL-3.0**, 71★. Game-based course conversion. |
+| [A-R007/Multi-Agent-Study-Assistant](https://github.com/A-R007/Multi-Agent-Study-Assistant) | **Unlicensed**, 61★. Its README's licence section reads only *"This project is open source and available for educational purposes"* — prose that imitates a grant. No licence, no holder, no redistribution right. |
+| [idoforgod/Vibe-learning-AgenticWorkflow](https://github.com/idoforgod/Vibe-learning-AgenticWorkflow) | **Unlicensed**, 24★. No `LICENSE` and no licence mention anywhere in the README. |
 
 ## Method note
 
@@ -85,6 +130,24 @@ failure modes now have a live example. Only after step 3 fails is "unlicensed"
 a finding: that is how `DMontgomery40/mcp-canvas-lms`, `loyaniu/moodle-mcp` and
 `tutornew/OpenTutor` were confirmed above, each checked against eight filename
 variants on three branches *and* its README.
+
+**A fourth axis, added 2026-10-06 (third pass): the OWNER.** A 404 or an
+unlicensed verdict on `owner/name` is evidence about *that owner's repository
+only* — never about the project. The second pass of 2026-10-06 withdrew this KB's
+OpenTutor entry after probing `tutornew/OpenTutor` (8★, unlicensed) and the real
+project was `zijinz456/OpenTutor` (**MIT, 130★, FSRS 4.5, 12 blocks, LOOM knowledge
+graph**) all along. Every other probe lesson in this file guards against a false
+*positive*; that one was a **false negative that deleted a true finding**, which is
+the more expensive direction because the result is a confident denial rather than a
+wasted probe. So: **before withdrawing an entry, enumerate the owners publishing
+under that project name.** A withdrawal needs a stronger probe than an addition.
+
+**A fifth axis: the DIRECTORY.** An open-core project can be permissive at the root
+and proprietary in a subtree. `langfuse/langfuse` is MIT except `ee/`,
+`web/src/ee/` and `worker/src/ee/`, which carry a separate enterprise licence — and
+its copyright holder is now ClickHouse, Inc. A repo-level licence badge cannot
+express that. Read the payload, note the carve-out paths, and record the copyright
+holder alongside the licence so a change of holder between passes is visible.
 
 Repo *location* needs the same care: `apereo/opencast` is a **404**, and the live
 repository is `opencast/opencast` (ECL-2.0). An org-renamed project will fail a

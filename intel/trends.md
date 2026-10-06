@@ -98,6 +98,23 @@ The honest position with a client: automate item generation and feedback, keep
 scoring human-gated, and use an explainable mastery model where a number has to
 be justified.
 
+**Amended in the third pass of 2026-10-06 — the tooling half of this trend is no
+longer true as stated.** [Selleo/mentingo](https://github.com/Selleo/mentingo)
+(**MIT**, read from payload, 91★) grades open-ended behavioural and
+problem-solving answers automatically and returns actionable feedback, and traces
+every model call through Langfuse. So a permissive auto-grader exists — for
+**corporate L&D**, not for academic assessment, and with no rubric or curriculum
+alignment. Three things follow:
+
+1. **The build-vs-adopt answer changed for L&D work.** You no longer start an
+   enterprise training grader from scratch.
+2. **The compliance answer did not change at all.** Annex III, the Oklahoma and
+   Maryland statutes and Korea's high-impact classification are indifferent to
+   licence. The human gate on consequential scores stays.
+3. **Say both sentences to the client in that order.** A client who hears only
+   "an open source auto-grader exists" will hear "we can drop the review step",
+   and that is the one misreading of this KB that creates real liability.
+
 ## 8. Skills economy and verifiable competency
 
 Real-time skills visibility, adaptive training and competency frameworks gained
@@ -162,6 +179,35 @@ it distils videos, PDFs, transcripts and notes into **source-backed teacher Agen
 Skills**, preserving source attribution, extracting the instructor's methodology
 and ordering practice tasks progressively.
 
+**Measured in the third pass of 2026-10-06, and it is now the majority shape.**
+The `ai-tutor` topic sweep returned a skills cluster that no earlier pass had seen,
+all MIT, all read from payload: **universal-examprep-skill (300★)** with
+cross-session memory and citation-sourced answers; **algo-sensei (285★)** for
+DSA mentoring; **universal-diagnostic-tutor-skill (238★)**, diagnosis-first for
+STEM and CS; **kaogong-skill (156★)** with authority citations for Chinese
+civil-service exams; **flysheep-ai/education-skills (106★)**, the first skill
+**pack** rather than a single skill; plus feynman-tutor, anything-to-course and
+Scientific-learning-skills. Of the 17 permissive projects added this pass, **eight
+are skills and only nine are applications.**
+
+Three signals worth separating out:
+
+- **A pack is emerging as the distribution unit above the skill.** `education-skills`
+  bundles teaching-and-learning skills as a collection — the shape an institution
+  would actually publish, and the shape a studio would actually sell.
+- **Citations and cross-session memory are the differentiators, not the prompt.**
+  The two highest-starred skills both carry provenance (citation-sourced,
+  authority citations) and one carries memory across sessions. That is exactly what
+  the high-risk regimes ask for, arrived at by the market rather than by the
+  regulator.
+- **Diagnosis-first is the pedagogically strongest pattern on the shelf.**
+  `universal-diagnostic-tutor-skill` and `Scientific-learning-skills` both establish
+  the misconception before explaining, and `feynman-tutor` inverts the roles so the
+  learner teaches the AI. These reach for what OATutor's Bayesian Knowledge Tracing
+  does, without the statistical machinery — cheaper to build, weaker to defend.
+  Use the skill shape for formative work and the BKT shape where a number must be
+  justified.
+
 Why this matters commercially: a skill is portable across the 40+ clients that
 speak MCP, which makes an institution's *pedagogy* — its methodology, its
 sequencing, its worked examples — the reusable asset rather than the application
@@ -169,6 +215,105 @@ wrapped around it. Source-backed matters just as much: a skill that carries
 provenance back to the instructor's own materials is defensible in a way a
 fine-tune is not, and provenance is what the high-risk regimes ask for. Expect
 "turn our course into agent skills" to become a recognisable engagement shape.
+
+## 13. Curriculum mandates have become the demand driver — and they specify the architecture
+
+New in the third pass of 2026-10-06, and the most actionable trend added today.
+Two jurisdictions have moved past guidance to **compulsory AI instruction with
+published specifics**:
+
+- **UAE** — Cabinet decision **May 2025**, mandatory AI from **Kindergarten (age 4)
+  to Grade 12**, from the **2025–26 academic year**, delivered **inside an existing
+  subject** (Computing, Creative Design and Innovation) **without extending school
+  hours**, by **specially trained teachers**, across **seven areas**: foundational
+  concepts, data and algorithms, software use, ethical awareness, real-world
+  applications, innovation and project design, and policies and community
+  engagement.
+- **China, at provincial level** — **Beijing**: at least **8 hours of AI lessons a
+  year** in every primary and secondary school from **1 September 2025**, compulsory
+  from age six. **Guangdong**: **6 hours a year** in lower grades rising to **one
+  hour a fortnight in grades 10 and 11**. The sequence runs from voice-recognition
+  basics through machine learning and **misinformation detection** to applied
+  projects.
+
+**Why this is a different kind of trend from trend 2 (governance).** Governance
+constrains how you deploy. A mandate **creates a budgeted obligation to deliver
+content and train teachers** — it is a procurement trigger, not a compliance cost.
+The UAE design makes that explicit: the material goes inside an existing subject
+with no extra hours, so what is being bought is **integrated curriculum content and
+teacher enablement**, which is services work, not a licence sale.
+
+**And the mandates hand you the two hardest design requirements as inputs.** Beijing
+**bars primary-school pupils from independent generative-AI use** and **prohibits
+teachers from substituting AI for their core instructional duties.** Those are not
+policy footnotes; they are system requirements:
+
+- **age-gated capability** — younger cohorts get teacher-mediated AI only, enforced
+  by the system and not by guidance;
+- **enforced teacher-in-the-loop** — the teacher's role is structurally protected,
+  not advisory.
+
+This is the strictest formulation of human oversight anywhere in this KB, and it is
+therefore the most useful one to build to: **a design that satisfies Beijing
+satisfies EU Annex III, the Oklahoma and Maryland statutes, Korea's high-impact
+classification and Singapore's agentic framework.** Note also that two of the UAE's
+seven areas — ethical awareness, and policies and community engagement — are
+governance and civics rather than technique, so a curriculum pipeline must produce
+**age-appropriate ethics and policy material**, not only exercises. Pattern P9 in
+`compose/patterns.md` builds to all of it.
+
+## 14. The permissive shelf stopped being thin, so the differentiator moved
+
+Three passes on 2026-10-06 took the permissive education open source layer from
+"DeepTutor plus fragments" to roughly **30 verified projects**, including a full
+**MIT** AI-native LMS (Mentingo), a 506★ MCP server, a local-first adaptive
+workspace with FSRS and a knowledge graph (OpenTutor), and a skills cluster at
+100–300★. Earlier passes of this KB described the AI layer as thin and the platform
+layer as copyleft, and concluded that the defensible position was the permissive
+side-car. **The side-car conclusion survives; the "thin layer" premise does not.**
+
+What changes in the pitch: the scarce thing is no longer *knowing which repos
+exist* — a client can read a listicle. The scarce things are now
+
+1. **composition** — wiring a specific set of these parts into something that
+   serves one institution's pedagogy;
+2. **licence diligence** — this pass alone rejected six projects totalling 963★ for
+   AGPL, GPL or no licence at all, including two whose only licence statement was
+   unenforceable prose;
+3. **governance** — the audit trail, the oversight gate, the age gating, the
+   provenance.
+
+None of the three is available off a shelf, and all three are services.
+
+## 15. Permissive is a bigger set than "MIT, Apache, BSD" — and open core hides inside directories
+
+A practical trend with a direct commercial cost, measured this pass.
+
+**The allowlist is wrong if it has three names on it.** The education shelf depends
+on at least six permissive licences: MIT, Apache-2.0, BSD, **ECL-2.0** (the
+Apache-2.0 text with the patent grant narrowed to education — Sakai, Opencast and
+Kuali Rice all use it), **the PostgreSQL License** (pgvector), and ISC. A filter
+that string-matches `MIT|Apache|BSD` rejects **four genuinely permissive
+higher-education components**. Fix the filter, not the finding.
+
+**And a repo-level licence is no longer a sufficient reading.**
+`langfuse/langfuse` is MIT *except* its `ee/`, `web/src/ee/` and `worker/src/ee/`
+directories, which carry a separate enterprise licence — a **by-directory**
+carve-out that no badge can express. Its copyright line now reads **ClickHouse,
+Inc.**, so the holder changed between passes while the licence string did not. Two
+additions to the probe discipline: read the carve-out **paths**, and record the
+**copyright holder** alongside the licence so a change of ownership is visible next
+pass.
+
+**The flip side, and the harder lesson, is about withdrawals.** Everything above
+guards against a false positive. The second pass of 2026-10-06 produced the
+opposite error: it withdrew this KB's OpenTutor entry after probing
+`tutornew/OpenTutor` (8★, unlicensed) when the real project was
+`zijinz456/OpenTutor` (**MIT, 130★, FSRS 4.5, 12 blocks, LOOM knowledge graph**).
+A 404 or an unlicensed verdict is evidence about **one owner's repository**, never
+about a project. **A withdrawal needs a stronger probe than an addition**, because
+a wrong addition wastes a probe and a wrong withdrawal destroys knowledge and is
+believed.
 
 ## Regional notes where the trend diverges
 
@@ -181,6 +326,32 @@ fine-tune is not, and provenance is what the high-risk regimes ask for. Expect
   assessment last. The region is $2.64B in 2026 and the K-12 integration leaders
   are Finland, Estonia and the Netherlands — small digitally mature states, not the
   large economies. Africa is in this bucket and is greenfield.
+- **EMEA, third pass:** Europe is **$2.64B (2026) → $8.0B (2030) at 31.9% CAGR** —
+  *slower* than the 41.5% global rate, so it is the compliance-depth market rather
+  than the growth market. **Middle East & Africa is sized at last: $0.56B (2026) →
+  $1.6B (2030), 34.3% CAGR**, though a second source puts the UAE alone at $7.4M
+  (2024) → $21M (2029), so quote MEA as a range. MEA runs on **strategies, not
+  statutes** — Saudi Arabia, the UAE, Egypt, Nigeria, Kenya, Rwanda, Morocco and
+  South Africa all have national AI strategies and none has a binding AI law — and
+  the **UAE's compulsory KG→Grade 12 AI curriculum** is the region's clearest
+  procurement trigger.
+- **APAC, third pass:** the regional shelf is the **strongest** permissive shelf in
+  this KB, not the weakest — StudyMate (MIT, 624★), kaogong-skill (MIT, 156★),
+  feifei-companion (Apache-2.0, 105★) and AI_Tutor_Release (MIT, 57★, aligned to
+  the Chinese grade 1–9 curriculum) are all China-origin, and DeepTutor is Hong
+  Kong. What is genuinely absent is an education layer on a **sovereign** model, and
+  any India-, Japan-, Korea- or ASEAN-origin permissive education project at all.
+  Scale: **~530M K-12 students in Asia**; adoption 65–75% (2025) → 80–90% (2026).
+  Law per country: Korea 22 Jan 2026, **Vietnam 1 Mar 2026 (SEA's first)**, Japan
+  deliberately voluntary, **India and Australia with no national framework in
+  force**.
+- **LATAM, third pass:** **87% of institutions use AI, 26% have a formal AI
+  strategy**; **72% of faculty are positive about AI against 57% globally.** An
+  enthusiasm-rich, governance-poor market — the easiest region in this KB to sell
+  governance into and the hardest to sell adoption into. **Uruguay is the first
+  LATAM signatory of the Council of Europe's AI Framework Convention (2025)**,
+  which makes it the cheapest bridgehead for reusing EMEA compliance artefacts in
+  the region.
 - **APAC:** sovereign models everywhere; an education agent layer nowhere — and
   now sovereign *inferencing platforms* too, so the hosting gap is closing while
   the pedagogy gap stays open. Singapore leads on agentic governance, Korea
@@ -197,10 +368,18 @@ fine-tune is not, and provenance is what the high-risk regimes ask for. Expect
 
 ## Declared gaps this pass
 
-- No permissive open source automated grading/assessment agent.
+- **NARROWED (third pass, 2026-10-06): a permissive automated grader exists, for
+  corporate L&D only.** `Selleo/mentingo` (MIT) grades open-ended behavioural and
+  problem-solving answers automatically with Langfuse tracing over it. Still
+  missing: a standalone permissive grader for **academic** assessment, and anything
+  rubric- or curriculum-aligned for K-12 or higher-ed exams. The oversight
+  requirement is unchanged — see trend 7.
 - No open source EU AI Act compliance toolkit specific to education.
-- No LATAM-origin open source education agent project — **re-probed with
-  evidence this pass.** `planejaia/OpenMAIC-Brasil`, surfaced by search as a
+- No LATAM-origin open source education agent project — **now confirmed across
+  three independent channels.** The third pass of 2026-10-06 added the `ai-tutor`
+  topic page and a stars-sorted education search: 30 repositories read, 17 net new,
+  **zero LATAM-origin.** This is the most firmly established gap in this KB.
+  Earlier evidence, retained: `planejaia/OpenMAIC-Brasil`, surfaced by search as a
   Brazil-origin multi-agent classroom with a v1.0.0 release, returns **HTTP 404**;
   every file 404s across four branches. The `education-ai` GitHub topic contains
   no LATAM-origin project at all (its long tail is Chinese, Indian and German, and
@@ -215,5 +394,24 @@ fine-tune is not, and provenance is what the high-risk regimes ask for. Expect
   the shelf generally.** Of seven education MCP servers probed, three are
   unusable (two unlicensed, one AGPL + paid tier). The education open source
   shelf is thinner than its star counts imply.
-- No APAC-origin education agent layer on top of the region's sovereign models
-  (`panaversity/learn-agentic-ai` is curriculum, not a product).
+- **PARTLY REFUTED (third pass, 2026-10-06): APAC-origin education agents exist in
+  volume.** The earlier claim that `panaversity/learn-agentic-ai` was the only
+  APAC-origin asset was an artefact of sweeping one topic page. StudyMate (MIT,
+  **624★**), kaogong-skill (MIT, 156★), feifei-companion (Apache-2.0, 105★) and
+  AI_Tutor_Release (MIT, 57★, Chinese grade 1–9 curriculum-aligned) are all
+  China-origin and permissive; DeepTutor is Hong Kong. **What survives:** no
+  education layer on an APAC **sovereign** model (Sarvam, SEA-LION, Sahabat AI,
+  ILMU, HyperCLOVA X Think, BharatGen, Fugaku-LLM, NTT Sarashina), and **no India-,
+  Japan-, Korea- or ASEAN-origin permissive education project found in any channel.**
+  The APAC shelf is China-plus-Hong-Kong.
+- **No curriculum-aligned permissive content pipeline for the UAE's seven-area
+  mandate** — searched this pass, nothing found. `Zenglian990/AI_Tutor_Release`
+  (MIT) is aligned to the Chinese grade 1–9 curriculum and is the only
+  curriculum-aligned permissive tutor on the shelf; there is **no equivalent for
+  the UAE framework**, and two of its seven areas are ethics and policy rather than
+  technique. That is a specific, sized, uncontested build opportunity.
+- **No open source age-gating or capability-tiering component for education.**
+  Beijing bars primary pupils from independent generative-AI use and China
+  prohibits teachers from substituting AI for core instruction; nothing on the
+  permissive shelf implements cohort-based capability tiering. Pattern P9 assembles
+  it from general-purpose parts, as pattern P4 does for Annex III.

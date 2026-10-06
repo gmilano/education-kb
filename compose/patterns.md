@@ -286,6 +286,168 @@ because the pipeline is reused and only the corpus changes.
 
 ---
 
+## P9 — Curriculum-mandate delivery with age-gated capability (UAE / China shape)
+
+Added in the third pass of 2026-10-06. This is the only pattern in this KB driven
+by a **funded obligation** rather than by a constraint, and the only one where the
+regulator has specified the access-control model for you.
+
+**Use when:** a ministry or provincial authority has made AI instruction
+compulsory and the institution has to deliver curriculum-aligned material and
+trained teachers against a deadline. Live today in the **UAE** (Cabinet, May 2025 —
+KG to Grade 12 from the 2025–26 school year, seven content areas, inside an
+existing subject with no added school hours, specially trained teachers) and in
+**China at provincial level** (Beijing: ≥8 hours a year in every primary and
+secondary school from 1 September 2025; Guangdong: 6 hours a year in lower grades
+rising to one hour a fortnight in grades 10–11).
+
+**Outcome:** curriculum-aligned content across the mandated areas, a teacher
+enablement track, and a system that **structurally cannot** give a younger cohort
+unmediated generative AI.
+
+**Wiring:**
+1. **Ingest the official curriculum framework first, not the textbooks.**
+   [opendatalab/MinerU](https://github.com/opendatalab/MinerU) (Apache-2.0) over
+   the ministry's published framework — for the UAE, the seven areas: foundational
+   concepts, data and algorithms, software use, ethical awareness, real-world
+   applications, innovation and project design, and policies and community
+   engagement. The framework is the schema everything else is checked against.
+2. **Generate against the framework, with the area as a required field.**
+   [satvik314/educhain](https://github.com/satvik314/educhain) (MIT) for items,
+   lesson plans and flashcards;
+   [pydantic/pydantic-ai](https://github.com/pydantic/pydantic-ai) (MIT) to make
+   `curriculum_area`, `grade_band` and `source_reference` **non-optional** on every
+   generated artefact. An item that cannot name its area and grade band is not
+   deliverable, and a typed boundary is what makes that a build error rather than a
+   review finding.
+3. **Produce the ethics and civics material deliberately.** Two of the UAE's seven
+   areas — ethical awareness, and policies and community engagement — are not
+   technique. Generic AI-literacy content does not cover them, and they need
+   age-appropriate treatment per grade band. Budget for them as their own content
+   stream; this is the part a competitor's pipeline will skip.
+4. **Build the age gate as a routing layer, not a prompt instruction.**
+   [langchain-ai/langgraph](https://github.com/langchain-ai/langgraph) (MIT) with
+   the cohort's grade band as graph state, and **distinct graphs per band**:
+   - primary → **no independent generative-AI path exists in the graph.** The pupil
+     reaches teacher-mediated and pre-generated material only. Beijing bars
+     independent generative-AI use by primary pupils, so this must be a structural
+     absence, not a refusal the model is asked to perform;
+   - secondary lower → generated content with teacher review before release;
+   - secondary upper → interactive tutoring, still with the teacher as approver on
+     anything that lands in a grade.
+   A capability tier the system cannot exceed is auditable; a system prompt asking
+   it not to is not. **No permissive component implements this** — see the declared
+   gap in `intel/trends.md` — so it is yours to build, and it is the reusable part.
+5. **Protect the teacher's role in the design.** China prohibits teachers from
+   substituting AI for core instructional duties, so the teacher-facing surface is
+   preparation, differentiation and review — never autonomous delivery to the class.
+   [JuneYaooo/lineage-skill](https://github.com/JuneYaooo/lineage-skill)
+   (Apache-2.0) to turn the ministry framework and the teacher's own materials into
+   source-backed skills is the right shape here: it amplifies the teacher's method
+   instead of replacing it.
+6. **Run inference in-country.** [ollama/ollama](https://github.com/ollama/ollama)
+   (MIT) or vLLM. For the UAE and China alike, assume the student-data boundary is
+   non-negotiable and that this is also what makes the deployment affordable at
+   provincial scale.
+7. **Trace everything.** [langfuse/langfuse](https://github.com/langfuse/langfuse)
+   (MIT outside `ee/`) on every call. The mandate will be inspected, and per-call
+   cost, latency and output is the evidence. Exclude `ee/` from any vendored copy.
+8. **Deliver the teacher track as a product, not a slide deck.** The UAE mandate
+   funds "specially trained teachers".
+   [microsoft/ai-agents-for-beginners](https://github.com/microsoft/ai-agents-for-beginners)
+   (MIT) and [huggingface/agents-course](https://github.com/huggingface/agents-course)
+   (Apache-2.0) as the base; localise it and map each module to the mandated areas
+   so the client can evidence coverage.
+
+**Why this order:** the framework in step 1 is what makes steps 2 and 3 auditable,
+and the graph topology in step 4 is what makes the age restriction a property of
+the system rather than a promise about it. Reverse steps 4 and 2 — generate first,
+gate later — and you end up filtering outputs at runtime, which is both weaker and
+harder to evidence.
+
+**Watch:** the mandates are **provincial in China**, so hour counts and grade
+boundaries differ between Beijing and Guangdong. Parameterise the hour allocation
+and the grade bands; do not hard-code one province's numbers. And verify the
+current framework text with the client's ministry contact — a curriculum mandate is
+revised more often than a statute.
+
+**Reuse:** build this once and it satisfies the oversight requirements of EU AI Act
+Annex III, the Oklahoma and Maryland human-oversight statutes, Korea's high-impact
+classification and Singapore's IMDA agentic framework, because **Beijing's
+restriction is the strictest of them.** The age-gating layer is the genuinely novel
+asset — nothing permissive implements it.
+**Effort:** 10–14 weeks for one grade band across the mandated areas, plus 3–4
+weeks per additional band once the graph topology exists.
+
+---
+
+## P10 — Enterprise L&D on a permissive platform (fork it, brand it, resell it)
+
+Added in the third pass of 2026-10-06. Every other platform pattern in this KB
+assumes the platform is copyleft and routes around it. This one does not, and the
+commercial shape is different as a result.
+
+**Use when:** the client is a corporate L&D, onboarding or compliance-training
+buyer — not an academic institution — and wants a platform they own rather than a
+per-seat subscription.
+
+**Outcome:** a white-labelled, self-hosted, AI-native LMS. Globant's extensions are
+MIT, the platform is MIT, and **the deliverable is the whole product** rather than a
+side-car attached to someone else's.
+
+**Wiring:**
+1. **Fork [Selleo/mentingo](https://github.com/Selleo/mentingo) (MIT).** 91★, 29
+   forks, TypeScript, maintained by Selleo (Poland). Its README states the intent
+   directly: *"MIT — modify, white-label and resell, no copyleft obligation."* There
+   is no copyleft to architect around, so **do not build a side-car here** — that is
+   P1's answer to a problem this platform does not have.
+2. **Keep its stack and extend it.** PostgreSQL 16 +
+   [pgvector/pgvector](https://github.com/pgvector/pgvector) (PostgreSQL License)
+   for retrieval, Redis, S3-compatible storage, Node.js 22+. One database, no
+   separate vector store.
+3. **Swap the model layer for residency.** It ships Vercel AI SDK + OpenAI and
+   LangChain; replace with [ollama/ollama](https://github.com/ollama/ollama) (MIT)
+   or vLLM where the client's data cannot leave. This is the one substitution the
+   architecture expects.
+4. **Keep Langfuse and treat it as the compliance artefact.**
+   [langfuse/langfuse](https://github.com/langfuse/langfuse) is already wired in and
+   traces every call's cost, latency and output. Exclude `ee/`, `web/src/ee/` and
+   `worker/src/ee/` from the vendored copy — those directories are **not** MIT.
+5. **Use the automated grading where it belongs, and gate it where it does not.**
+   Mentingo grades open-ended behavioural and problem-solving answers automatically
+   with actionable feedback. For formative practice, ship it. For anything that
+   gates certification, promotion, pay or a regulatory qualification, **put a human
+   approval checkpoint in front of it** — the licence changed, the oversight
+   obligation did not.
+6. **Lean on the voice layer for compliance training.**
+   [livekit/livekit](https://github.com/livekit/livekit) (Apache-2.0) under
+   Mentingo's AI mentor runs real-time role-play for sales, compliance and
+   customer-support scenarios and scores the attempt. Role-play with a scored
+   transcript is a far better compliance-evidence artefact than a completion tick.
+7. **Integrate rather than replace, via SCORM 1.2 export.** Mentingo exports SCORM
+   1.2 and ships an OpenAPI/Swagger spec with a generated typed client. When the
+   client already runs an incumbent LMS, author in Mentingo and **feed** the
+   incumbent — a much easier sale than a platform migration.
+8. **Multi-tenancy is already there.** It is multi-tenant and white-label out of the
+   box, which is what makes one build serviceable across several client brands.
+
+**Why this order:** step 1 is the whole pattern. The instinct this KB has trained —
+never touch the platform, always build the side-car — is correct against Moodle,
+Canvas and Open edX and **wrong here**, and following it costs integration depth
+for no legal benefit.
+
+**Watch:** Mentingo is an **L&D** product. No LTI 1.3, no SIS integration, no
+gradebook semantics for credit-bearing courses, no institutional reporting; SCORM
+1.2 is the L&D interchange format, not an academic one. **Do not sell it to a
+university as a platform** — there it is a reference implementation and a component
+donor. Also note it is 91★ and single-company-maintained: budget for carrying your
+own fork, and read the upstream commit history before committing a client to it.
+
+**Effort:** 6–8 weeks to a branded pilot with the model layer swapped; 10–12 weeks
+with in-region inference and a human-approval gate on certification paths.
+
+---
+
 ## Pattern selection
 
 | Situation | Pattern |
@@ -301,13 +463,50 @@ because the pipeline is reused and only the corpus changes.
 | Differentiator is *how they teach*, locked in recordings and senior staff | **P8** |
 | LATAM higher ed: adoption already universal, integration shallow | **P8** for depth, P6 for faculty capability |
 | Singapore/APAC agentic-governance requirement in scope | any pattern, built to the IMDA four dimensions (see `intel/trends.md` §11) |
+| Ministry/province has **mandated** AI instruction (UAE, Beijing, Guangdong) | **P9** — the only pattern driven by a funded obligation rather than a constraint |
+| Cohort includes primary-age pupils, or China is in scope | **P9**, for the age-gating graph specifically — a prompt instruction will not do |
+| Corporate **L&D** buyer who wants to own the platform | **P10** (fork Mentingo, MIT) — explicitly *not* P1 |
+| Academic institution, however L&D-shaped the ask sounds | P1; Mentingo is a component donor here, not a platform |
+| Needs spaced repetition / retention reached by an agent | `ankimcp/anki-mcp-server` (MIT, 53 tools) inside P1, or OpenTutor (MIT) for FSRS 4.5 built in |
 
 ## Anti-patterns
 
 - **Writing an in-tree LMS plugin for reusable IP.** It inherits GPL-3.0/AGPL-3.0.
   Use P1.
-- **Promising autonomous grading.** No permissive auto-grader exists, and three
-  regulatory regimes require human oversight on consequential decisions.
+- **Promising autonomous grading.** Amended 2026-10-06: a permissive auto-grader
+  now *does* exist — `Selleo/mentingo` (MIT) grades open-ended behavioural and
+  problem-solving answers — but **only for corporate L&D**, with no academic,
+  rubric- or curriculum-aligned grader on the shelf, and the oversight obligation
+  is unchanged. Annex III, the Oklahoma and Maryland statutes and Korea's
+  high-impact classification are indifferent to licence. Keep the human gate on
+  any consequential score, and when you tell a client the grader exists, tell them
+  the gate stays in the same breath.
+- **Building a side-car against a permissive platform.** Against Mentingo (MIT)
+  there is no copyleft to route around, and the side-car reflex costs integration
+  depth for no legal benefit. Use P10 and fork it. The mirror of the OpenEduCat
+  anti-pattern below.
+- **Enforcing an age restriction with a system prompt.** Beijing bars primary
+  pupils from independent generative-AI use. A refusal the model is asked to
+  perform is not a control; a graph with no generative path for that cohort is.
+  Use P9 step 4.
+- **Withdrawing a KB entry on a single-owner probe.** The second pass of
+  2026-10-06 removed OpenTutor after probing `tutornew/OpenTutor` (8★, unlicensed)
+  when the real project was `zijinz456/OpenTutor` (MIT, 130★, FSRS 4.5, 12 blocks,
+  LOOM knowledge graph). A 404 is evidence about one owner's repository, never
+  about a project. Enumerate owners before withdrawing — a withdrawal needs a
+  stronger probe than an addition.
+- **Allowlisting only `MIT / Apache-2.0 / BSD`.** That filter rejects Sakai,
+  Opencast and Kuali Rice (all **ECL-2.0**, the Apache-2.0 text with an
+  education-narrowed patent grant) and pgvector (**PostgreSQL License**) — four
+  genuinely permissive components. Allowlist MIT, Apache-2.0, BSD, ECL-2.0,
+  PostgreSQL License and ISC.
+- **Trusting a repo-level licence badge on an open-core project.**
+  `langfuse/langfuse` is MIT *except* `ee/`, `web/src/ee/` and `worker/src/ee/`,
+  and its copyright holder is now ClickHouse, Inc. Read the carve-out paths and
+  record the holder, then exclude those directories from any vendored copy.
+- **Reading "Kuali is ECL-2.0" off the brand.** True of Kuali Rice, false of Kuali
+  Financial System and Kuali Coeus (both AGPL-3.0). The diligence unit is the
+  repository, never the foundation or the vendor.
 - **Specifying AutoGen.** Maintenance mode; `LICENSE` at HEAD is CC-BY-4.0.
 - **Taking `frappe/lms` as MIT.** It is AGPL-3.0 at `license.txt`; the comparison
   blogs are wrong.

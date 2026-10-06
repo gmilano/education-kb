@@ -31,10 +31,23 @@ Google for Education, Microsoft Education. These own the buyer relationship.
 (AGPL-3.0), Kolibri (MIT), Oppia (Apache-2.0). See `verticals/solutions.md`.
 
 **Open source AI layer.** DeepTutor (Apache-2.0, 40.8k★) is the only
-education-native agent project with real gravity. Below it: OATutor (MIT, the
-auditable mastery model), Educhain (MIT, content generation), canvas-mcp and
-moodle-mcp-server (MIT, integration). General frameworks — MAF, smolagents,
-LangGraph, pydantic-ai, all MIT/Apache-2.0 — supply the rest.
+education-native agent project with real gravity. Below it, and substantially
+re-measured in the third pass of 2026-10-06: **StudyMate** (MIT, 624★, China),
+**anki-mcp-server** (MIT, 506★, 53 tools — the largest education MCP server),
+**OpenTutor** (MIT, 130★, FSRS 4.5 + knowledge graph + local-first), **Mentingo**
+(MIT, 91★, the first permissive AI-native LMS), OATutor (MIT, the auditable mastery
+model), Educhain (MIT, content generation), canvas-mcp and moodle-mcp-server (MIT,
+integration), plus a cluster of MIT **Agent Skills** at 100–300★
+(universal-examprep-skill, algo-sensei, universal-diagnostic-tutor-skill,
+kaogong-skill, education-skills). General frameworks — MAF, smolagents, LangGraph,
+pydantic-ai, all MIT/Apache-2.0 — supply the rest.
+
+**The layer is no longer thin, and that changes the pitch.** Three passes on
+2026-10-06 took the permissive education shelf from "DeepTutor plus fragments" to
+roughly 30 verified permissive projects, including a full MIT LMS. The
+differentiator is shifting from *finding* the open source parts to **composing,
+licensing and governing** them — which is also the part a client cannot do from a
+listicle.
 
 **Where Globant fits.** The platform layer is copyleft and the AI layer is thin.
 The reusable, defensible position is the **permissive side-car**: agent services
@@ -90,6 +103,18 @@ against whichever LMS the client already runs.
   schools** (via AASA). Student-body buy-in is becoming part of the procurement
   conversation; cite the framework in proposals rather than being surprised by it.
 
+**Third pass (2026-10-06) — channel saturated, nothing net new.** The North America
+query was re-run and returned the same facts already recorded above: 36% share /
+$3.68B in 2026 → $32B by 2030; 60% of K-12 teachers using AI in 2024–25 with 32%
+weekly; 134 bills across 31 states; California AB 1159 and Idaho SB 1227 on student
+data; Oklahoma and Maryland human-oversight requirements; Ohio's July 2026 policy
+deadline; North Carolina's $10M Khanmigo earmark; the AASA student framework from
+all 50 states (created at America's Youth AI Festival in July 2026). **Stating this
+explicitly rather than leaving silence:** the North America picture in this KB is
+saturated for the open-web channel. Further depth needs a different instrument —
+state procurement portals, district RFPs, or the state guidance trackers directly —
+not another general search.
+
 ### EMEA
 
 - **The EU AI Act is the whole conversation.** AI used in education access and
@@ -137,6 +162,50 @@ against whichever LMS the client already runs.
   agent (research, not a product shelf). Africa is a genuine greenfield in the
   EMEA bucket: policy forming, almost no deployed open source education AI, and
   teacher capability the binding constraint.
+
+**New in the third pass (2026-10-06):**
+
+- **Europe now has a growth curve, not just a 2026 number: $2.64B in 2026 →
+  $8.0B by 2030 at 31.9% CAGR.** Note what that means — Europe is growing
+  *materially slower* than the global 41.5% CAGR, so its 25% share of the market
+  shrinks over the forecast period. The AI Act is both the demand driver and the
+  brake, and a regional plan should assume Europe is the **compliance-depth**
+  market rather than the growth market.
+- **Middle East & Africa is sized for the first time in this KB: $0.56B in 2026 →
+  $1.6B by 2030 at 34.3% CAGR** — small in absolute terms, and growing faster than
+  Europe. Africa stops being a declared gap and becomes a sized opportunity.
+- **Two sources disagree about MEA by two orders of magnitude, and the honest
+  answer is a range.** Against the $0.56B regional figure, MarketsandMarkets sizes
+  the **UAE** AI-in-education market at **$7.4M in 2024 → $21M by 2029 (19.1%
+  CAGR)** and "Rest of Middle East" at 18.9% CAGR. A region cannot be $560M while
+  its most advanced country is $7.4M, so the two are not reconcilable: they are
+  almost certainly measuring different scopes (platform spend vs total AI-adjacent
+  education technology). **Quote MEA as a range and name the uncertainty** rather
+  than picking the flattering number — a client who checks will find the other one.
+- **MEA has AI strategies, not AI statutes.** Saudi Arabia, the UAE, Egypt,
+  Nigeria, Kenya, Rwanda, Morocco and South Africa all have published national AI
+  strategies, and **none has an AI-specific binding statute yet.** That is the
+  mirror image of the EU engagement: in Europe you sell conformity against a law
+  that exists; in MEA you sell governance design *before* the law arrives, which is
+  a shorter sales cycle and a weaker procurement trigger. Price and sequence
+  accordingly.
+- **The UAE has mandated AI in every public school, and this is the single most
+  concrete demand signal in the region.** Approved by **Cabinet decision in May
+  2025**, mandatory AI runs from **Kindergarten (age 4) to Grade 12** starting in
+  the **2025–26 academic year**. The design details are the commercially useful
+  part:
+  - it is **woven into an existing subject** (Computing, Creative Design and
+    Innovation) **without extending school hours** — so the deliverable is
+    integrated curriculum material, not a new timetable slot;
+  - it is taught by **specially trained teachers** — teacher enablement is funded
+    and mandatory, not discretionary;
+  - it is organised around **seven areas**: foundational concepts; data and
+    algorithms; software use; **ethical awareness**; real-world applications;
+    innovation and project design; and **policies and community engagement**.
+  Two of the seven areas are governance and civics rather than technique, which
+  means the content pipeline has to produce age-appropriate *ethics and policy*
+  material, not only technical exercises. See the new pattern P9 in
+  `compose/patterns.md`.
 
 ### APAC
 
@@ -199,6 +268,43 @@ against whichever LMS the client already runs.
   unchanged and widening: the models and now the hosting exist; the education
   agent layer does not.
 
+**New in the third pass (2026-10-06):**
+
+- **The scale number this KB was missing: approximately 530 million K-12 students
+  in Asia (2024).** Every per-learner cost, licence and inference decision changes
+  shape at that denominator. It is also the reason offline-capable and
+  small-model deployments matter in APAC and not only in LATAM.
+- **Regional AI adoption is projected to move from 65–75% in 2025 to 80–90% in
+  2026.** Adoption is not the constraint anywhere in APAC.
+- **China's AI-education mandate is provincial, specific, and includes a
+  restriction that directly constrains the architecture.** Earlier passes recorded
+  China as having a "compulsory national AI curriculum"; probed precisely, the
+  mandates are issued at provincial level:
+  - **Beijing:** every primary and secondary school must deliver **at least 8 hours
+    of AI lessons per year**, from **1 September 2025** — compulsory from age six.
+  - **Guangdong:** **6 hours annually** in lower grades, rising to **one hour a
+    fortnight in grades 10 and 11**.
+  - The curriculum progresses from voice-recognition basics in early grades to
+    machine learning, **misinformation detection** and applied projects by high
+    school.
+  - **Primary-school pupils are barred from independent generative-AI use, and
+    teachers are prohibited from substituting AI for their core instructional
+    duties.**
+  That last point is a build requirement, not a policy footnote: a compliant K-12
+  deployment in China needs **age-gated capability** (younger cohorts get
+  teacher-mediated AI only) and a teacher-in-the-loop design that is enforced by the
+  system rather than by guidance. It is also the strictest form of the
+  human-oversight requirement that EMEA and North America express more loosely, so
+  **a design that satisfies Beijing satisfies the others**. Pattern P9 in
+  `compose/patterns.md` builds to it.
+- **Regulatory posture, stated per country rather than per region:** Korea's
+  Framework Act in force **22 January 2026**; **Vietnam's Law No. 134/2025/QH15 in
+  force 1 March 2026 — Southeast Asia's first dedicated AI law**; China the most
+  assertive regulator while also leading on deployment; **Japan deliberately
+  light-touch and voluntary** to favour innovation; **India and Australia still
+  without a national framework in force**, both working on one. A single APAC
+  compliance story does not exist, and "APAC-ready" is not a claim you can make.
+
 ### LATAM
 
 - **Teacher adoption is ahead of institutional readiness, sharply.** In Chile and
@@ -258,6 +364,35 @@ against whichever LMS the client already runs.
   institutional guidelines raises misuse risk and leaves staff uncertain about
   acceptable use. Governance is the entry engagement; the platform work follows.
 
+**New in the third pass (2026-10-06):**
+
+- **The governance gap now has an institutional number, and it is the sharpest
+  single statistic in this KB: 87% of LATAM higher-education institutions use AI in
+  at least one area of their activities, and only 26% have a formal AI strategy.**
+  Earlier passes carried "fewer than 10% have formal guidelines and sufficient
+  capacity", which is a different and stricter measure. Use both and say which is
+  which: **87/26** is the strategy gap, **>50% of teachers in Chile and Brazil vs
+  <10% of institutions ready** is the capability gap. The second is the harder
+  problem and the longer engagement.
+- **LATAM faculty are measurably more positive about AI than the global average:
+  72% report "positive" or "very positive" views, against 57% globally.** Combined
+  with 79% of faculty using AI in teaching — **18 points above the global figure
+  recorded in 2025** — the region is an *enthusiasm-rich, governance-poor* market.
+  That is an unusual and favourable shape: the resistance that slows EMEA
+  engagements is largely absent, and what is missing is structure.
+- **Uruguay became the first Latin American country to sign the Council of Europe's
+  Framework Convention on Artificial Intelligence and Human Rights, Democracy and
+  the Rule of Law (2025).** This matters more than its market size: a Council of
+  Europe convention signatory is committing to a governance vocabulary that is
+  **interoperable with the EU's**, so compliance artefacts built for an EU AI Act
+  engagement transfer to Uruguay with far less rework than to Brazil's PL 2.338 or
+  Mexico's sectoral rules. Uruguay is small (62.21, third in the region's global
+  top-50 placings) and is now the **cheapest bridgehead for reusing EMEA
+  compliance IP in LATAM.**
+- **The regional pioneer set is consistent across sources:** Chile, Brazil and
+  Uruguay, on data availability, governance frameworks and infrastructure — with
+  **Chile the standout through CENIA**, the national AI centre behind Latam-GPT.
+
 ## Cross-region read
 
 Two patterns hold in every region, which makes them safe to build once and sell
@@ -281,7 +416,25 @@ four times:
    ask for. **Use the Singapore framework as the build checklist in every region**,
    because it is the most specific and the most agent-aware of the four.
 
-The deliverable that satisfies all three is the same side-car. Build it once.
+4. **Curriculum mandates are now a funded demand driver, and they come with
+   architectural constraints.** Two jurisdictions have made AI instruction
+   compulsory with published specifics: the **UAE** (Cabinet, May 2025 — KG to
+   Grade 12 from the 2025–26 school year, seven content areas, woven into an
+   existing subject without extra school hours, specially trained teachers) and
+   **China at provincial level** (Beijing: ≥8 hours a year for every primary and
+   secondary school from 1 September 2025; Guangdong: 6 hours in lower grades
+   rising to an hour a fortnight in grades 10–11). This is different in kind from
+   the regulation in points 1 and 2: a mandate creates a **budgeted obligation to
+   deliver content and train teachers**, not merely a constraint on how you deploy.
+   It also hands you the two hardest requirements for free as design inputs:
+   **age-gated capability** (Beijing bars primary pupils from independent
+   generative-AI use) and **enforced teacher-in-the-loop** (teachers may not
+   substitute AI for core instruction). Build to the mandate and the oversight
+   obligations in points 1 and 2 are largely discharged as a side effect.
+
+The deliverable that satisfies the first three is the same side-car. Build it once.
+The fourth needs one more thing on top — a curriculum-alignment and age-gating
+layer — which is pattern P9 in `compose/patterns.md`.
 
 ## What changed in this pass — read this if you read nothing else
 
@@ -297,3 +450,19 @@ The deliverable that satisfies all three is the same side-car. Build it once.
 | **Africa** enters the KB: South Africa draft national AI policy, GenAITEd Ghana | genuine EMEA greenfield; teacher capability is the constraint |
 | Several popular education **MCP servers are unlicensed** (see `agents/top.md`) | a licence probe belongs in the engagement's first week |
 | **OpenEduCat is LGPL-3.0** — proprietary modules permitted | on the admin side, a module is a viable commercial shape, not only a side-car |
+
+## What changed in the third pass of 2026-10-06
+
+| Finding | So what |
+|---|---|
+| **UAE: AI compulsory KG→Grade 12** from 2025–26 (Cabinet May 2025), 7 content areas, inside an existing subject, trained teachers | a budgeted content-and-enablement mandate, not just a constraint. Two of the seven areas are ethics and policy, so the pipeline must produce governance material too |
+| **China: Beijing ≥8 h/year from 1 Sep 2025; Guangdong 6 h → 1 h/fortnight (grades 10–11)**; primary pupils barred from independent generative-AI use; teachers may not substitute AI for core instruction | **age-gated capability and enforced teacher-in-the-loop are build requirements.** Satisfy Beijing and you satisfy EMEA/NA oversight |
+| Europe: **$2.64B (2026) → $8.0B (2030), 31.9% CAGR** — slower than the 41.5% global rate | Europe is the compliance-depth market, not the growth market; its share shrinks over the forecast |
+| **MEA sized for the first time: $0.56B (2026) → $1.6B (2030), 34.3% CAGR** — but a second source puts the **UAE** at $7.4M (2024) → $21M (2029) | irreconcilable scopes. **Quote MEA as a range and name the uncertainty** |
+| MEA: Saudi, UAE, Egypt, Nigeria, Kenya, Rwanda, Morocco, South Africa all have AI **strategies, none has a binding AI statute** | mirror image of the EU sale: governance design *before* the law, shorter cycle, weaker procurement trigger |
+| APAC: **~530M K-12 students** (2024); adoption 65–75% (2025) → 80–90% (2026) | the denominator that makes small-model and offline deployment an APAC concern, not only a LATAM one |
+| APAC law, per country: Korea 22 Jan 2026 · **Vietnam 1 Mar 2026, SEA's first** · Japan deliberately voluntary · **India and Australia still have no national framework in force** | "APAC-ready" is not a claim you can make |
+| LATAM: **87% of institutions use AI, 26% have a formal AI strategy**; **72% of faculty positive vs 57% globally** | enthusiasm-rich, governance-poor — the most favourable shape for a governance-led engagement in this KB |
+| **Uruguay is the first LATAM signatory of the Council of Europe AI Framework Convention** (2025) | the cheapest bridgehead for reusing EMEA compliance IP in LATAM — an interoperable governance vocabulary |
+| North America channel **saturated — no net new findings**, explicitly stated | further depth needs procurement portals and state trackers, not another general search |
+| The permissive open source layer went from "DeepTutor plus fragments" to **~30 verified projects incl. a full MIT LMS** | the differentiator moves from *finding* the parts to **composing, licensing and governing** them |

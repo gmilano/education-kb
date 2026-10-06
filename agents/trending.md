@@ -8,6 +8,165 @@ updated: 2026-10-06
 
 > **Append-only.** Newest dated section on top; history preserved below.
 
+## 2026-10-06 — third pass: the `ai-tutor` channel, and a WITHDRAWAL that was itself wrong
+
+The first two passes of today swept the `education-ai` topic and the Canvas/Moodle
+MCP servers. This pass changed channel: the **`ai-tutor` GitHub topic page** and a
+**stars-sorted repository search**, read 2026-10-06. Both were new to this KB, and
+between them they returned **17 permissively licensed projects that no previous
+pass of this KB had recorded** — including four above 250★. Every licence below was
+read from the repository's own `LICENSE` payload via `raw.githubusercontent.com`.
+
+Two of the three most important findings of this pass are corrections of *this
+KB's own claims*, not new discoveries.
+
+### Correction 1 — OpenTutor is real, MIT and 130★. The morning pass withdrew the wrong repository.
+
+This is the most important line in this pass, because the error it fixes is one
+this KB *introduced* today.
+
+Cycle 3 recorded **"OpenTutor (MIT, ~900★, FSRS6 + KG + 12 blocks)"**. The second
+pass of 2026-10-06 withdrew that entry after probing
+[tutornew/OpenTutor](https://github.com/tutornew/OpenTutor) — 8★, 5 commits,
+unlicensed — and concluded the project was a name collision with OATutor.
+
+**That withdrawal was wrong.** The project cycle 3 meant is
+[zijinz456/OpenTutor](https://github.com/zijinz456/OpenTutor), and probed directly
+this pass it is:
+
+| Axis | Verified value (2026-10-06) |
+|---|---|
+| Licence | **MIT**, read from `LICENSE` payload |
+| Stars / forks | **130★ / 27 forks** |
+| Language | Python (FastAPI backend + Next.js frontend) |
+| Architecture | **12 composable learning blocks** — notes, quiz, flashcards, knowledge graph, study plan, analytics |
+| Scheduling | **FSRS 4.5** free spaced-repetition scheduler; tracks forgetting and issues proactive review |
+| Knowledge model | **LOOM** concept-mastery and prerequisite graph (experimental), generates learning paths |
+| Deployment | **Local-first** — runs entirely on the user's machine, no cloud transmission required, 10+ LLM providers, **defaults to Ollama** |
+
+Cycle 3 was right about the architecture — *12 blocks, knowledge graph, FSRS, MIT*
+all check out — and wrong only about the star count (~900 claimed, 130 actual) and
+the FSRS version (6 claimed, 4.5 actual). **OpenTutor is hereby reinstated** in
+`agents/top.md`.
+
+**The methodological lesson is the valuable part, and it is new to this KB.** Every
+licence-probe lesson recorded here so far has been about *false positives* — a repo
+that looks licensed and is not (`DMontgomery40/mcp-canvas-lms`), or looks MIT and is
+AGPL (`frappe/lms`). This is the opposite failure, and it is more expensive:
+**probing the wrong owner for the right project name destroyed a true finding.** A
+404 or an unlicensed result on `owner/name` is evidence about *that owner's repo
+only* — never about the project. Before withdrawing an entry, search the project
+name and enumerate the owners; `OpenTutor` resolves to at least three distinct
+projects (`zijinz456/OpenTutor` MIT 130★, `tutornew/OpenTutor` unlicensed 8★, and
+the unrelated Open TutorAI arXiv work). A withdrawal needs a *stronger* probe than
+an addition, because it deletes knowledge rather than adding it.
+
+### Correction 2 — a permissive open source auto-grader DOES exist. The standing gap claim was too broad.
+
+Every pass of this KB has recorded "no permissive open source auto-grader exists."
+[Selleo/mentingo](https://github.com/Selleo/mentingo) — **MIT**, read from payload,
+91★, 29 forks, TypeScript — states in its own README: *"Grade open-ended answers
+without an L&D queue. Behavioural and problem-solving tasks are analysed
+automatically and returned with actionable feedback."*
+
+So the claim as written is now false and is narrowed, not deleted:
+
+- **What exists:** automated grading of open-ended behavioural and problem-solving
+  tasks, MIT-licensed, inside a full self-hosted LMS aimed at **corporate L&D**,
+  with every model call traced through **Langfuse** (cost, latency and the actual
+  mentor output are inspectable).
+- **What still does not exist:** a standalone permissive grader for *academic*
+  assessment, and nothing changes the regulatory position. EU AI Act Annex III, the
+  Oklahoma and Maryland oversight statutes and Korea's high-impact classification
+  do not care what licence the grader carries. **Keep the human gate on any
+  consequential score.** What changed is the build-vs-buy answer, not the oversight
+  answer — and Langfuse tracing is itself an Annex III-shaped artefact.
+
+Full platform entry in `verticals/solutions.md`; this is also the first **MIT**
+end-to-end LMS in this KB alongside Kolibri.
+
+### Correction 3 — the MCP shelf was defined by LMS vendor name, so the biggest one was invisible
+
+The second pass swept "every Canvas and Moodle MCP server that surfaces in search"
+and crowned `vishalsachdev/canvas-mcp` (278★) the shelf leader. But the shelf was
+scoped by *vendor name*, and the highest-starred education MCP server in existence
+is not a Canvas or Moodle server at all:
+
+| Repo | ★ (2026-10-06) | Licence (read from payload) | Tools | Note |
+|---|---|---|---|---|
+| [ankimcp/anki-mcp-server](https://github.com/ankimcp/anki-mcp-server) | **506** (38 forks) | **MIT** (`LICENSE`) | **53** — 42 essential + 11 GUI | v0.27.0 (beta), TypeScript. Lets an agent present cards, explain concepts and create/edit notes *during* a study session. Requires the Anki desktop app **plus the AnkiConnect plugin** — the hard dependency to plan around. |
+
+It is **1.8× the stars of canvas-mcp** and was missed because it sits on the
+*retention* layer rather than the LMS layer. Note the licence asymmetry this
+creates: Anki itself is **AGPL-3.0**, and its MCP side-car is **MIT** — the
+side-car boundary holding exactly as `agents/top.md` predicts, now on a second
+platform family. **Scope the next MCP sweep by learning *function* — LMS, SIS,
+retention, assessment, library, proctoring — not by vendor name.**
+
+### New verified agents and skills — 17 rows, licence read from payload
+
+Sorted by stars as displayed on 2026-10-06. None of these appeared in any earlier
+pass of this KB.
+
+| Project | Repo | Licence (payload) | ★ | What it does |
+|---|---|---|---|---|
+| StudyMate | [Miaotofu01/Study-Mate](https://github.com/Miaotofu01/Study-Mate) | MIT (`LICENSE`) | 624 | Chinese-language AI study partner for maths and CS (linear algebra, calculus, probability, C++, Python, ML, DL) on a "learn with doing" principle: plans, explains, sets projects. Python. Ships a DeepSeek harness and an Antigravity multi-agent plugin. The maintainer's README openly documents a vibe-coded origin and a manual file-by-file rewrite in progress — read it before adopting. |
+| anki-mcp-server | [ankimcp/anki-mcp-server](https://github.com/ankimcp/anki-mcp-server) | MIT (`LICENSE`) | 506 | 53-tool MCP server for Anki (see above). TypeScript, v0.27.0 beta. |
+| universal-examprep-skill | [ZeKaiNie/universal-examprep-skill](https://github.com/ZeKaiNie/universal-examprep-skill) | MIT (`LICENSE`) | 300 | "Exam Cram Coach" Agent Skill with **cross-session memory** and **citation-sourced** answers. Python. |
+| algo-sensei | [karanb192/algo-sensei](https://github.com/karanb192/algo-sensei) | MIT (`LICENSE`) | 285 | LeetCode / data-structures-and-algorithms mentor packaged for Claude Code and claude.ai. The clearest example of CS-education pedagogy shipped as a skill rather than an app. |
+| universal-diagnostic-tutor-skill | [SenmuuuuW/universal-diagnostic-tutor-skill](https://github.com/SenmuuuuW/universal-diagnostic-tutor-skill) | MIT (`LICENSE`) | 238 | **Diagnosis-first** tutor skill for STEM and CS: establishes what the learner has misunderstood before explaining. Pedagogically the most interesting shape on this list. |
+| kaogong-skill | [KeWang0622/kaogong-skill](https://github.com/KeWang0622/kaogong-skill) | MIT (`LICENSE`) | 156 | Chinese civil-service exam tutoring skill with **authority citations** — high-stakes exam prep with provenance attached. |
+| OpenTutor | [zijinz456/OpenTutor](https://github.com/zijinz456/OpenTutor) | MIT (`LICENSE`) | 130 | Block-based local-first adaptive learning workspace: 12 blocks, FSRS 4.5, LOOM knowledge graph, Ollama default. **Reinstated this pass** — see Correction 1. |
+| education-skills | [flysheep-ai/education-skills](https://github.com/flysheep-ai/education-skills) | MIT (`LICENSE`) | 106 | A *collection* of Claude Code Skills for teaching and learning support. Shell. The first skill **pack** (rather than single skill) found in education. |
+| feifei-companion | [SimonsTang/feifei-companion](https://github.com/SimonsTang/feifei-companion) | Apache-2.0 (`LICENSE`) | 105 | "Trinity K12 AI Education System" for Chinese students. Permissive, China-origin, K-12 scope. |
+| mentingo | [Selleo/mentingo](https://github.com/Selleo/mentingo) | MIT (`LICENSE`) | 91 | Self-hosted AI-mentor LMS for enterprise L&D — see Correction 2 and `verticals/solutions.md`. TypeScript, Poland-origin (EMEA). |
+| Studivexa | [codeXsidd/Studivexa](https://github.com/codeXsidd/Studivexa) | MIT (`LICENSE`) | 72 | AI productivity workspace for students and developers. JavaScript. |
+| AI_Tutor_Release | [Zenglian990/AI_Tutor_Release](https://github.com/Zenglian990/AI_Tutor_Release) | MIT (`LICENSE`) | 57 | Open-source **RAG** AI tutor for K-9 education, adapted to the Chinese grade 1–9 curriculum. JavaScript. A rare curriculum-*aligned* permissive tutor. |
+| civil-ai | [zhangl1001/civil-ai](https://github.com/zhangl1001/civil-ai) | MIT (`LICENSE`) | 43 | **Local-first adaptive tutoring agent foundation reference implementation** for iOS and Web, with a civil-service-exam application on top. TypeScript. Explicitly a reference architecture, which is why it earns a row at 43★. |
+| ai-tutor-app | [towardsai/ai-tutor-app](https://github.com/towardsai/ai-tutor-app) | Apache-2.0 (`LICENSE`) | 31 | Agentic-RAG tutor for applied AI/LLM/RAG/Python: a **LangGraph agent with FastAPI + Next.js**, grounded in a curated course and library. The closest thing to a production-shaped reference for P2-style retrieval tutoring. |
+| feynman-tutor | [koukekoukej-glitch/feynman-tutor](https://github.com/koukekoukej-glitch/feynman-tutor) | MIT (`LICENSE`) | 29 | Skill that inverts the roles — **the learner teaches the AI** (Feynman technique) to expose gaps. Python. |
+| anything-to-course | [lowwwbank/anything-to-course](https://github.com/lowwwbank/anything-to-course) | MIT (`LICENSE`) | 18 | Universal skill turning any material into a **learning-science-based** self-study course with retrieval practice and spaced repetition. |
+| nanobot-study | [WangyiNTU/nanobot-study](https://github.com/WangyiNTU/nanobot-study) | MIT (`LICENSE`) | 18 | Guided 3-day study plan built on nanobot (~3k lines of Python) with a Socratic tutor. Useful as an enablement asset: small enough to read end-to-end. |
+| Scientific-learning-skills | [hwl668/Scientific-learning-skills-](https://github.com/hwl668/Scientific-learning-skills-) | MIT (`LICENSE`) | 15 | Diagnosis-first skills that turn an assistant "from answer machine into learning tutor". |
+
+### Measured rejections — 5 projects, licence read from payload
+
+Recording these saves the next pass the probe, and three of them are high-star.
+
+| Repo | ★ | Licence (payload) | Verdict |
+|---|---|---|---|
+| [24kchengYe/human-skill-tree](https://github.com/24kchengYe/human-skill-tree) | 563 | **AGPL-3.0** (`LICENSE`) | Reject for reusable IP. "AI-powered skill tree for lifelong human learning, 30+ skills K-12 to career" — the second-highest-starred find of this pass and network-copyleft. Fine as a reference for competency-graph design. |
+| [artcc/freelingo](https://github.com/artcc/freelingo) | 156 | **AGPL-3.0** (`LICENSE`) | Reject for reusable IP. Self-hosted AI language-learning platform, local or cloud LLMs. |
+| [ahmedEid1/lumen](https://github.com/ahmedEid1/lumen) | 88 | **GPL** (`LICENSE`) | Reject for reusable IP. "Learner-owned" platform that builds a private course in about a minute. Note the architecture idea, not the code. |
+| [yh2072/edgameclaw](https://github.com/yh2072/edgameclaw) | 71 | **AGPL-3.0** (`LICENSE`) | Reject for reusable IP. Converts learning material into a game-based course. |
+| [A-R007/Multi-Agent-Study-Assistant](https://github.com/A-R007/Multi-Agent-Study-Assistant) | 61 | **NONE** | **Do not use.** 6 specialised agents, adaptive roadmaps, quizzes, RAG — and no `LICENSE` at root. Its README's licence section reads, in full: *"This project is open source and available for educational purposes."* |
+| [idoforgod/Vibe-learning-AgenticWorkflow](https://github.com/idoforgod/Vibe-learning-AgenticWorkflow) | 24 | **NONE** | **Do not use.** 21-step Socratic-tutor agentic workflow. No `LICENSE` at root and **no mention of a licence anywhere in the README** — it does not even make the unenforceable claim above. |
+
+**"Open source and available for educational purposes" is not a licence**, and it is
+a worse trap than silence because it reads like permission. It names no licence, no
+copyright holder and no grant to modify or redistribute, and "for educational
+purposes" would be a *restriction* on commercial use if it were enforceable. Default
+copyright applies: all rights reserved. This is a new entry in this KB's failure-mode
+catalogue, alongside "no `LICENSE` file at all" and "licence hidden in a
+subdirectory".
+
+### Channel finding: the generalist "best open source AI agents" channel failed again
+
+Searched `top open source AI agents education 2026 github MIT` globally. It returned
+OpenClaw, OpenCode, OpenHands, CrewAI, Agent Zero and Hermes Agent — **general-purpose
+coding and assistant agents, not one education project**. That is the same failure
+this KB's history records repeatedly for the generalist channel. The channels that
+actually yield for this industry, in order of this pass's net return:
+
+1. **GitHub topic pages** (`ai-tutor` this pass, `education-ai` previously) — 20 rows read, 17 net new;
+2. **stars-sorted repository search** on an education phrase — overlapping but surfaced `lumen`, `civil-ai` and `towardsai/ai-tutor-app`;
+3. generalist "best agents" listicles — **zero** education findings, fourth consecutive failure.
+
+Note also that `github.com/topics/*` returns **HTTP 403 to `curl`** from this
+environment but is readable through the fetch tool, while `api.github.com` is 403 on
+both. Licence payloads on `raw.githubusercontent.com` are reachable by `curl`. That
+is the working instrument split for the next pass.
+
 ## 2026-10-06 — second pass: licence sweep of the education MCP shelf
 
 The morning pass established that MCP side-cars keep their permissive licence

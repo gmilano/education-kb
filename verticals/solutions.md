@@ -26,8 +26,9 @@ does not).
 | Sakai | [sakaiproject/sakai](https://github.com/sakaiproject/sakai) | **ECL-2.0** (`LICENSE`) | Higher-ed collaboration and learning environment. Educational Community License 2.0 is an Apache-2.0 derivative — **permissive**, and the only copyleft-free option among the traditional big LMSs. Underrated for this reason. |
 | ILIAS | [ILIAS-eLearning/ILIAS](https://github.com/ILIAS-eLearning/ILIAS) | GPL-3.0 (`LICENSE`) | Strong in German-speaking Europe, workplace training and SCORM-heavy compliance training. |
 | Frappe LMS | [frappe/lms](https://github.com/frappe/lms) | **AGPL-3.0** (`license.txt`) | Modern, fast to deploy via Docker. **Commonly mis-reported as MIT** by LMS comparison articles — it is AGPL-3.0. Verified at `license.txt`; `LICENSE` is a 404, which is how the error spreads. |
-| Kolibri | [LearningEquality/kolibri](https://github.com/LearningEquality/kolibri) | **MIT** (`LICENSE`) | Offline-first platform for teaching without internet. **The only fully permissive end-to-end platform on this shelf.** Default choice for low-connectivity, low-budget and equity-driven deployments. |
+| Kolibri | [LearningEquality/kolibri](https://github.com/LearningEquality/kolibri) | **MIT** (`LICENSE`) | Offline-first platform for teaching without internet. Default choice for low-connectivity, low-budget and equity-driven deployments. *(Earlier passes called this "the only fully permissive end-to-end platform on this shelf" — no longer true: see Mentingo below, MIT, and Oppia, Apache-2.0.)* |
 | Oppia | [oppia/oppia](https://github.com/oppia/oppia) | **Apache-2.0** (`LICENSE`) | Authoring and delivery of interactive lessons with misconception handling built into the pedagogy. Permissive, and designed for learners with limited educational resources. |
+| Mentingo | [Selleo/mentingo](https://github.com/Selleo/mentingo) | **MIT** (`LICENSE`) | **Added third pass, 2026-10-06 — and it changes the shape of this shelf.** Self-hosted, multi-tenant, white-label LMS with a **built-in AI mentor**, built for corporate L&D, onboarding and compliance rather than academic use. 91★, 29 forks, TypeScript, maintained by Selleo (Poland). The second fully permissive end-to-end platform here and **the only AI-native one**. |
 
 ## Content, assessment and delivery components
 
@@ -80,6 +81,98 @@ OpenEduCat's own files and you are in LGPL territory for those files. Keep the
 module separate, talk to it through documented interfaces, and the proprietary
 part stays proprietary.
 
+## Mentingo — the first MIT, AI-native LMS on this shelf, and what it breaks
+
+Added in the third pass of 2026-10-06. Licence read from payload: **MIT**. It
+deserves its own section because three of this KB's standing positions have to be
+restated around it.
+
+### Verified specification
+
+| Axis | Value (2026-10-06) |
+|---|---|
+| Licence | **MIT**, read from `LICENSE`. Its own README states the intent plainly: *"MIT - modify, white-label and resell, no copyleft obligation"* |
+| Scale | 91★, 29 forks, TypeScript |
+| Maintainer | **Selleo** (Poland) — a product engineering company, building learning platforms since 2005. EMEA-origin |
+| Target | Corporate L&D, employee onboarding, compliance training — **not** academic |
+| Tenancy | Multi-tenant, white-label |
+| AI | Voice **and** chat AI mentor running real-time role-play for sales, compliance and customer-support scenarios, **scored automatically**; automated grading of open-ended behavioural and problem-solving answers with actionable feedback; AI-assisted course generation from existing documentation |
+| AI stack | Vercel AI SDK + OpenAI, LangChain, **pgvector** retrieval, **LiveKit** real-time voice, **Langfuse** tracing of every model call |
+| LMS core | Course catalogues, lesson delivery, enrolment, learner progression, role-based access (admin / content creator / learner), group-based course-access inheritance, completion records, per-learner analytics, certificates with expiry and recertification |
+| Interop | **SCORM 1.2 export**, OpenAPI/Swagger with a generated typed client, CSV and XLSX bulk import/export |
+| Runtime | Node.js 22+, PostgreSQL 16 + pgvector, Redis, S3-compatible storage. One-click CloudFormation deployment from AWS Marketplace |
+
+### What it breaks, and what it does not
+
+**1. The licence menu on the platform layer is no longer "copyleft or side-car."**
+This KB's central architectural finding — AI built inside a copyleft LMS inherits
+that LMS's licence, so prefer the permissive side-car — was derived from Moodle
+(GPL-3.0), Canvas and Open edX (AGPL-3.0). Against Mentingo there is no copyleft to
+route around: you can fork the platform itself, extend it in TypeScript, brand it
+and **resell** it. For an enterprise L&D engagement that is a different commercial
+shape from everything else on this shelf, and a stronger one than the side-car,
+because the deliverable is the whole product rather than an attachment to someone
+else's.
+
+**2. The "no permissive auto-grader" gap is narrowed, not closed.** Mentingo grades
+open-ended behavioural and problem-solving answers automatically, under MIT. It
+does **not** supply a rubric- or curriculum-aligned academic grader, and it changes
+nothing about oversight: EU AI Act Annex III, the Oklahoma and Maryland statutes
+and Korea's high-impact classification are indifferent to the licence. Keep the
+human gate on consequential scores. See the narrowed gap statement in
+`agents/top.md`.
+
+**3. It is an L&D product, so do not mis-sell it into academia.** No SIS
+integration, no LTI 1.3, no gradebook semantics for credit-bearing courses, no
+institutional reporting. It exports **SCORM 1.2**, which is the L&D interchange
+format, not an academic one. The honest framing: *for a corporate client,
+Mentingo is a candidate platform; for a university, it is a reference
+implementation and a component donor.*
+
+### What to take from it even when you do not deploy it
+
+Two engineering choices generalise to every pattern in this KB:
+
+- **pgvector inside PostgreSQL instead of a separate vector database.** One fewer
+  component to host, secure and keep in-region — which matters most in exactly the
+  EMEA residency and LATAM cost scenarios where the component budget is tightest.
+- **Langfuse tracing from day one.** Per-call cost, latency and actual model output,
+  inspectable. This is an EU AI Act Annex III-shaped audit artefact produced as a
+  by-product of normal operation rather than assembled as a compliance project.
+  Wire it into the side-car patterns too.
+
+## The Kuali estate — one higher-ed consortium, three different licences
+
+Added in the third pass of 2026-10-06. The admin shelf above was missing the
+institutional-grade higher-education option, so this pass probed **Kuali** (formed
+2004 on an Andrew W. Mellon Foundation grant, backed by 24+ universities).
+
+| Repo | Product | Licence (read from payload) | Status |
+|---|---|---|---|
+| [KualiCo/rice](https://github.com/KualiCo/rice) | Kuali Rice — higher-ed application framework and middleware | **ECL-2.0** (`LICENSE.txt`) — **permissive** | 4★, 12 forks, Java. **Maintenance mode** by its own README: maintained for "security, bug fixes, and minor enhancements while its replacements are being developed" |
+| [kuali/rice](https://github.com/kuali/rice) | same, older location | **ECL-2.0** (`LICENSE.txt`) | **DEPRECATED** — its README's first line points to `KualiCo/rice`. Pin the KualiCo location |
+| [kuali/kfs](https://github.com/kuali/kfs) | Kuali Financial System | **AGPL-3.0** (`LICENSE`) | network copyleft |
+| [kuali/kc](https://github.com/kuali/kc) | Kuali Coeus — research administration | **AGPL-3.0** (`license.txt`, lowercase) | network copyleft, **and** the lowercase-`license.txt` trap again |
+| `kuali/student`, `KualiCo/student`, `kuali/coeus` | Kuali Student (the SIS) | — | **not reachable**: `README.md` 404s on all three. The SIS is not at the path its name implies |
+
+**Two usable conclusions.**
+
+**ECL-2.0 belongs on your permissive allowlist.** It is the Apache-2.0 text with
+the patent grant narrowed to education, and it now appears three times on this
+shelf — Sakai, Opencast and Kuali Rice. A licence filter that allowlists only
+`MIT / Apache-2.0 / BSD` will **reject three genuinely permissive higher-education
+platforms.** Fix the filter, not the finding.
+
+**A consortium is not a licence.** "Kuali is ECL-2.0" is true of Rice and false of
+KFS and Coeus. The diligence unit is the repository — never the foundation, the
+vendor or the brand. This is the `frappe/lms` (AGPL) beside `frappe/erpnext` (GPL)
+lesson, now in its harder form: here the **permissive** member is the one you meet
+first in the documentation, so the optimistic reading is the one that sticks.
+
+**And read the maintenance banner before the licence.** Rice is permissive *and*
+parked. Permissive-but-parked is a real category: fine to vendor and fork, wrong to
+present to a client as a living upstream. Recorded as qualified, not recommended.
+
 ## AI integration surfaces, by strategy
 
 Two ways to put AI on a platform, with different license outcomes:
@@ -111,3 +204,6 @@ anything Globant intends to reuse across engagements.
 | needs admin/SIS automation (admissions, fees, exams) | OpenEduCat (LGPL-3.0) — and a proprietary module is a legitimate shape here |
 | needs admin automation with zero copyleft exposure | Apache OFBiz (Apache-2.0) |
 | is Spanish-first K-12 public sector needing an SIS | RosarioSIS (GPL-2.0) — note GPL-2.0, not 3.0 |
+| is a corporate L&D / onboarding / compliance-training buyer | **Mentingo (MIT)** — fork it, white-label it, resell it; no copyleft to route around |
+| needs permissive higher-ed middleware / workflow | Kuali Rice (**ECL-2.0**) at `KualiCo/rice` — permissive, but in maintenance mode |
+| needs spaced-repetition / retention mechanics reached by an agent | `ankimcp/anki-mcp-server` (MIT, 53 tools) over Anki, or OpenTutor (MIT) for FSRS built in |
