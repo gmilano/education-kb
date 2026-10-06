@@ -145,6 +145,103 @@ card**.
 engagement is scoped.** A repository-level licence check on `sealion` returns
 nothing, and a studio that stops there will have cleared nothing at all.
 
+## Added in the sixth pass of 2026-10-06 — the speech and language substrate
+
+Every tutor elsewhere in this KB is, by default, **mute and monolingual**. This
+shelf is the layer that fixes that, and before this pass the KB had **no entry for
+it at all**. Licences read from each repository's own `LICENSE` payload via
+`raw.githubusercontent.com` on 2026-10-06; star/fork/commit counts read from the
+repository page. Discovery narrative in `agents/trending.md`, sixth pass.
+
+### Speech — recognition, synthesis, diarization
+
+| Repo | Licence (payload) | ★ / commits | Role |
+|---|---|---|---|
+| [k2-fsa/sherpa-onnx](https://github.com/k2-fsa/sherpa-onnx) | **Apache-2.0** (`master/LICENSE`) | **15.1k** / 2,092 | **The headline addition.** STT **+** TTS **+** speaker diarization **+** VAD in one permissive tree, running **with no Internet connection** on Android, iOS, HarmonyOS, Raspberry Pi, RISC-V and x86 servers, with bindings for 12 languages. Replaces four dependencies with one and is the component the offline-first pattern was missing |
+| [SYSTRAN/faster-whisper](https://github.com/SYSTRAN/faster-whisper) | **MIT** (`master/LICENSE`) | 25.7k / 267 | **The ASR to deploy.** CTranslate2 reimplementation of Whisper — faster, lower memory, same weights |
+| [openai/whisper](https://github.com/openai/whisper) | **MIT** (`main/LICENSE`) | **110k** / 171 | The reference implementation and the accuracy baseline to quote |
+| [m-bain/whisperX](https://github.com/m-bain/whisperX) | **BSD** (`main/LICENSE`) | — | **Word-level timestamps** plus diarization. The timestamps are what turn a transcript into a *fluency measure* — see P17 |
+| [speechbrain/speechbrain](https://github.com/speechbrain/speechbrain) | **Apache-2.0** (`main/LICENSE`) | 11.9k / **10,611** | PyTorch toolkit: 200+ training recipes over 40+ datasets, 20 speech and text tasks. The bridge when a language needs a model trained rather than downloaded |
+| [espnet/espnet](https://github.com/espnet/espnet) | **Apache-2.0** (`master/LICENSE`) | 10.0k / **27,378** | End-to-end speech toolkit with the deepest recipe archive here. First stop for a language nothing off-the-shelf covers |
+| [huggingface/parler-tts](https://github.com/huggingface/parler-tts) | **Apache-2.0** (`main/LICENSE`) | 5.6k / 199 | Prompt-controllable TTS — the voice is described in text, so register can be tuned per age group without retraining |
+| [NVIDIA/NeMo](https://github.com/NVIDIA/NeMo) | **Apache-2.0** (`main/LICENSE`) | — | Full speech + LLM training stack where GPUs are available |
+| [pytorch/audio](https://github.com/pytorch/audio) | **BSD** (`main/LICENSE`) | — | Audio primitives underneath the above |
+| [idiap/coqui-ai-TTS](https://github.com/idiap/coqui-ai-TTS) | **MPL-2.0** (`main/LICENSE.txt`) | 2.3k / **5,309** | Voice cloning and XTTS-class synthesis, **actively maintained** at Idiap Research Institute (Switzerland). PyPI `coqui-tts`. **Use this, not the 46.1k★ original** — see the warnings below |
+
+### Language — translation and local-language models, placed by region
+
+| Repo | Licence (payload) | ★ / commits | Region | Coverage |
+|---|---|---|---|---|
+| [AI4Bharat/IndicTrans2](https://github.com/AI4Bharat/IndicTrans2) | **MIT** (`main/LICENSE`) | 478 / 124 | APAC | Translation across **all 22 scheduled Indian languages**, with script unification across Devanagari, Perso-Arabic and others |
+| [AI4Bharat/Indic-TTS](https://github.com/AI4Bharat/Indic-TTS) | **MIT** (`master/LICENSE.txt`) | 406 / 58 | APAC | TTS in **13** languages: Assamese, Bengali, Bodo, Gujarati, Hindi, Kannada, Malayalam, Manipuri, Marathi, Odia, Rajasthani, Tamil, Telugu |
+| [AI4Bharat/IndicWav2Vec](https://github.com/AI4Bharat/IndicWav2Vec) | **MIT** (`main/LICENSE`) | 121 / 131 | APAC | ASR pretrained on **40** Indian languages; fine-tuned for Bengali, Gujarati, Hindi, Marathi, Nepali, Odia, Tamil, Telugu, Sinhala, plus Kannada and Malayalam |
+| [AI4Bharat/IndicLLMSuite](https://github.com/AI4Bharat/IndicLLMSuite) | **MIT** (`master/LICENSE`) | — | APAC | Data and recipe suite for building Indic LLMs |
+| [AI4Bharat/Shoonya](https://github.com/AI4Bharat/Shoonya) | **MIT** (`master/LICENSE`) | 72 / 69 | APAC | *"Open source platform to annotate and label data at scale."* The **human-in-the-loop stage** every pattern in this KB specifies, and the only shelved tool that implements it |
+| [SunbirdAI/salt](https://github.com/SunbirdAI/salt) | **Apache-2.0** (`main/LICENSE`) | 15 / 303 | EMEA | **Uganda.** Translation (~25k sentences), ASR (~5k) and **studio-recorded TTS data (~5k, professional voice actors)** across English (Ugandan/Kenyan accents), **Luganda, Swahili, Ateso, Lugbara, Acholi, Runyankole**. Two AfricaNLP papers |
+| [masakhane-io/masakhane-mt](https://github.com/masakhane-io/masakhane-mt) | **MIT** (`master/LICENSE`) | 327 / 645 | EMEA | **Africa-wide.** Machine translation from a 1,000-participant, 30-country community. **226 forks against 327 stars** — a deployment signal, not a vanity one |
+| [masakhane-io/masakhane-ner](https://github.com/masakhane-io/masakhane-ner) | **Apache-2.0** (`main/LICENSE`) | — | EMEA | Named-entity recognition for African languages |
+| [Polygl0t/Polygl0t](https://github.com/Polygl0t/Polygl0t) | **Apache-2.0** (`main/LICENSE`) | 27 / 379 | EMEA | **University of Bonn** Polyglot initiative. LLM training/eval foundry, FineWeb-2 pipeline, "support for thousands of languages." Home of **Tucano 2** (0.5–3.7B Portuguese, arXiv 2603.03543) |
+| [Nkluge-correa/Tucano](https://github.com/Nkluge-correa/Tucano) | **Apache-2.0** (`main/LICENSE`) | 86 / 29 | LATAM *(origin)* | Portuguese-native open LLM suite, peer-reviewed in *Patterns* ([10.1016/j.patter.2025.101325](https://doi.org/10.1016/j.patter.2025.101325)). **Archived 2026-02-24** — still usable, no longer developed. Successor is the Bonn-hosted row above |
+
+### Five licence warnings on the rows above — read before selecting any of them
+
+**1. Piper relicensed, and the permissive version is frozen.**
+[rhasspy/piper](https://github.com/rhasspy/piper) is **MIT** (`master/LICENSE.md`,
+© 2022 Michael Hansen), 11.3k★ — and **archived read-only since 2025-10-06**, its
+notice pointing to [OHF-Voice/piper1-gpl](https://github.com/OHF-Voice/piper1-gpl),
+which is **GPL-3.0** (`main/COPYING`). Piper is the offline-TTS default of Home
+Assistant and NVDA and runs on a Pi 4, so it is the natural reach for low-cost
+classroom voice. **There is no option that is both permissive and maintained.**
+Deliberately **not shelved above**: use `sherpa-onnx` (Apache-2.0) or
+`idiap/coqui-ai-TTS` (MPL-2.0) instead, and reach for Piper only with the
+frozen-vs-copyleft trade made explicitly and in writing.
+
+**2. The 46.1k★ Coqui repository is not the live one.**
+[coqui-ai/TTS](https://github.com/coqui-ai/TTS) is **MPL-2.0** and **unmaintained**
+— the company wound down. The Idiap fork shelved above has **5,309 commits against
+the original's 4,668**. Depend on the fork; cite the original only for history.
+
+**3. SeamlessM4T is non-commercial — a hard reject.**
+[facebookresearch/seamless_communication](https://github.com/facebookresearch/seamless_communication)
+carries **Attribution-NonCommercial 4.0 International** in `main/LICENSE`. It is
+the first result for "open source multilingual speech" and **cannot be used in
+billable work**. Compose Whisper (MIT) + IndicTrans2 (MIT), or sherpa-onnx
+(Apache-2.0), to reach the same capability.
+
+**4. SEA-LION has no repository-level grant, by design.**
+[aisingapore/sea-lion](https://github.com/aisingapore/sea-lion) has **no `LICENSE`
+payload** (3 branches × 6 filenames probed). Its README states the terms *"may
+vary depending on the underlying base model's restrictions"* — Llama-derived
+variants may carry Meta's commercial restrictions — and directs you to each
+HuggingFace **model card**. **The licence is a property of the checkpoint, not the
+project**, so an APAC engagement must review it per model file and **re-review on
+every checkpoint change**. Not shelved as a dependency for this reason.
+
+**5. An unlicensed catalogue is still unlicensed.**
+[AI4Bharat/indicnlp_catalog](https://github.com/AI4Bharat/indicnlp_catalog) has
+**no `LICENSE` payload** despite five MIT siblings in the same organisation. Use
+it to *find* resources; probe every resource it names. (Same shape as
+`AI-for-Education/Luganda-linguistic-benchmarks` in the fourth pass — and note
+that `SunbirdAI/salt` above is the **Apache-2.0 answer to that specific
+rejection**, covering Luganda and five more Ugandan languages.)
+
+### Why this shelf changes the architecture, not just the feature list
+
+Three consequences worth stating, because they are not obvious from the table:
+
+- **Voice stops being a proprietary-API-shaped problem.** `sherpa-onnx` alone
+  delivers STT, TTS, diarization and VAD under Apache-2.0 on embedded hardware.
+  Spoken practice, oral assessment and role-play become deployable where there is
+  no connectivity and no per-token budget.
+- **Mother-tongue instruction becomes a permissive capability in two regions.**
+  India (22 languages, MIT) and Uganda/Africa (6 Ugandan languages Apache-2.0,
+  plus Masakhane's continental MT, MIT) can be served from the shelf. **Elsewhere
+  it cannot** — see the regional honesty note in `intel/market.md`.
+- **Masakhane licenses three repositories three ways** — MIT, Apache-2.0 and GPL
+  inside one owner. The fourth pass's rule was "five MIT siblings do not license
+  the sixth." The stronger rule: **sibling licences need not even share a
+  class.** Probe every repository, every time.
+
 ## Teaching-content repos (for enablement, not for production)
 
 | Repo | License (read from payload) | Note |

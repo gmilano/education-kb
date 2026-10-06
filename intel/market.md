@@ -13,6 +13,23 @@ updated: 2026-10-06
 | AI in education market, 2025 | $7.52B | Research and Markets, AI in Education Market Report 2026 |
 | AI in education market, 2026 | $10.6B | same; 40.9% CAGR 2025→2026 |
 | Projected 2030 | $42.48B | 41.5% CAGR |
+| Alternative long-range series, 2025 | $6.4B | A second house's base year — **lower than the $7.52B above for the same year** |
+| Alternative long-range series, 2034 | $79.6B | 31.35% CAGR 2026–2034, same house |
+
+**Two incompatible series, re-checked in the sixth pass of 2026-10-06.** One house
+puts 2025 at **$7.52B** growing at ~41% CAGR to **$42.48B by 2030**; another puts
+2025 at **$6.4B** growing at **31.35%** to **$79.6B by 2034**. They disagree on the
+base year by **$1.1B** and on the growth rate by **ten points**. **Quote one series
+with its source attached, or quote the direction only.** A deck that mixes the
+$6.4B base with the 41% CAGR is producing a number nobody published.
+
+**Segment splits worth quoting** (single-source, so attribute them): cloud-based
+delivery held **71.22%** share in 2024; **K-12 is 45.62%** of total adoption; STEM
+captured **34.78%** of revenue; and **language learning is the fastest-growing
+segment** — which is the segment the sixth pass's language and speech shelf serves
+directly. Student AI usage is reported rising from **66% in 2024 to 92% in 2025**,
+with ~**86% of higher-education students** using AI as a primary research and
+brainstorming partner entering 2026.
 
 Growth is real but the composition is shifting: the defining movement of 2026 is
 **away from generic AI tools and toward platforms purpose-built for education**,
@@ -219,6 +236,41 @@ oversight proposal. It also converges on the same "human judgment is final" test
 this KB records as the one testable rule US state law has settled on.
 
 
+
+#### Sixth pass, 2026-10-06 — the voice and language layer
+
+**Market position re-read this pass.** North America was **$951M in 2024** heading
+to **$2,303.2M by 2029 (15.9% CAGR)** on one house's numbers, and is quoted
+elsewhere as **41.7% of the global opportunity** with a **45% CAGR for 2025–2030**
+— a spread wide enough that only the direction is safe to quote. It leads regional
+adoption at **36% share**; **66% of students** use ChatGPT; and **AI literacy is
+LinkedIn's #1 skill for 2026, carrying a 56% wage premium**.
+
+**The regulatory asymmetry is the sales point.** Education AI here operates in a
+**relative regulatory vacuum — there is no FDA equivalent for educational
+technology**, and adoption decisions sit with individual districts and
+universities with minimal external oversight. State law is piecemeal (Colorado,
+Texas). Meanwhile the **EU AI Act takes full effect in August 2026** and
+classifies education AI as high-risk. **A North American client selling into
+Europe inherits the stricter regime**, so build to P13 and sell the compliance
+posture as a feature rather than waiting for a US mandate.
+
+**What this pass opens here:**
+
+- **Oral reading fluency (P17) is the strongest single opportunity in this
+  region.** US literacy screening is a large, mandated, recurring spend and
+  **every system doing it is proprietary** — FLORA, Literably (IES-funded),
+  Amplify Text Reading Online, SoapBox Labs, none with a public repository. The
+  permissive components are now all shelved and a **public dataset with a
+  published baseline** exists. An open, auditable WCPM assessor with teacher
+  override satisfies the "human judgment is final" rule US state law has converged
+  on (trend 16) and has no open competitor.
+- **Spanish-language instruction is now servable from permissive components.**
+  The English-language-learner population is the region's largest underserved
+  segment, and `sherpa-onnx` (Apache-2.0) plus `idiap/coqui-ai-TTS` (MPL-2.0)
+  cover Spanish speech in and out, on-premises, with no student audio leaving the
+  district — which is also the FERPA-friendly architecture.
+
 ### EMEA
 
 - **The EU AI Act is the whole conversation.** AI used in education access and
@@ -393,6 +445,44 @@ Annex III point 3 profile is the billable piece and it is days of work, not
 months. Pattern **P13**.
 
 
+
+#### Sixth pass, 2026-10-06 — the voice and language layer
+
+**The regulatory clock is the demand driver, confirmed again.** The **EU AI Act
+takes full effect in August 2026**, with education AI classified **high-risk** and
+a four-tier risk structure (unacceptable / high / limited / minimal). The
+**Council of Europe** convened its **2nd working conference on the regulatory
+dimensions of AI in education in October 2026**, so the standards conversation is
+live rather than settled. The **UK's AI Adoption Summit committed £200m+** with
+Cisco, IBM, BT and Rolls-Royce as delivery partners. **94% of organisations** are
+at least somewhat likely to invest in AI-specific training in 2026 — while **38%
+of EMEA organisations have yet to begin piloting** anything. That split is the
+addressable market: funded intent, no implementation.
+
+**What this pass opens here:**
+
+- **Africa has a permissive language layer for the first time.**
+  [SunbirdAI/salt](https://github.com/SunbirdAI/salt) (**Apache-2.0**) ships
+  translation, ASR and **studio-recorded TTS by professional voice actors** across
+  **Luganda, Swahili, Ateso, Lugbara, Acholi and Runyankole**, and
+  [masakhane-mt](https://github.com/masakhane-io/masakhane-mt) (**MIT**) carries
+  continental MT from a 30-country community. The fourth pass had to **reject**
+  this KB's only Uganda-placed asset for having no licence; **the Apache-2.0
+  sibling covers six languages**. Mother-tongue delivery in East Africa is now a
+  shelf capability.
+- **Two of the layer's maintainers are in EMEA, which matters for sovereignty
+  conversations.** The live Coqui TTS fork is maintained at the **Idiap Research
+  Institute (Switzerland)**; **Tucano 2** is developed under the **University of
+  Bonn** Polyglot initiative (Apache-2.0). A client who must point at a European
+  maintainer for a core dependency can.
+- **Voice plus sovereignty is now one answer, not two.** `sherpa-onnx`
+  (Apache-2.0) runs STT, TTS, diarization and VAD with **no Internet connection**,
+  so spoken assessment can be offered with data residency guaranteed by
+  architecture rather than by contract — the P4 posture, extended to voice.
+- **Watch the Piper licence trap in public-sector bids.** The permissive Piper is
+  **archived**; the maintained one is **GPL-3.0**. A procurement that forbids
+  copyleft and a technical spec that names Piper are in silent conflict.
+
 ### APAC
 
 - **Largest absolute AI market: ~USD 102B as of March 2026** (all sectors, not
@@ -560,6 +650,40 @@ scale with no public repositories — while the LMS beneath Codaveri,
 [Coursemology](https://github.com/Coursemology/coursemology2), is **MIT with
 15,802 commits**. See `verticals/solutions.md`.
 
+
+
+#### Sixth pass, 2026-10-06 — the voice and language layer
+
+**Adoption is high and governance is lagging, by the region's own accounting.**
+**48% of APAC governance leaders** make AI adoption a top strategic priority for
+2026 and **57% of organisations in Asia** already run AI in one or more areas,
+while **49% cite insufficient infrastructure for real-time data processing** as
+the barrier. **AI sovereignty will shape infrastructure choices for roughly half
+of APAC firms**, and regulators are moving (Singapore's consultations on AI use in
+financial institutions are the template for transparency and accountability
+expectations). Named commercial movement in education: **LearnUpon** opened a
+Sydney HQ with Create+ AI course authoring; **NIIT MTS** made Training Industry's
+Top 20 custom content developers for 2026 on AI-led design; **TCS and Pearson**
+announced a multi-year AI learning alliance.
+
+**What this pass opens here — and APAC now splits cleanly in two.**
+
+- **India: the only all-MIT national stack in this KB (P16).** Sunbird (**MIT**,
+  38,046 commits, deployed as **DIKSHA**, a recognised **Digital Public Good**,
+  18+ languages, NCERT/CBSE/SCERT) plus AI4Bharat's **MIT** layer — translation
+  across **all 22 scheduled languages**, TTS in 13, ASR pretrained on 40, and the
+  Shoonya annotation platform for the teacher-review gate. **Platform, language,
+  orchestration and review, every component MIT.** In a public procurement that
+  removes the licence conversation entirely, and it directly answers the
+  sovereignty concern half the region reports.
+- **ASEAN: the licence is per checkpoint, and that is a billable service.**
+  [SEA-LION](https://github.com/aisingapore/sea-lion) has **no repository-level
+  licence**; its grant is deferred to each HuggingFace **model card** because terms
+  vary with the base model (Llama-derived variants may carry Meta's commercial
+  restrictions). Combined with the fifth pass's finding that ASEAN's ministry-scale
+  products are closed while the LMS beneath them is MIT, the position is:
+  **integration surfaces are permissive, model rights are not.** Offer
+  per-checkpoint licence review as a recurring engagement line, not a one-off gate.
 
 ### LATAM
 
@@ -739,6 +863,52 @@ built it. That is a partnership lead, a validation of the P1 shape, and the sing
 most concrete LATAM entry point this KB has ever recorded. **Do not fork it.**
 
 
+
+#### Sixth pass, 2026-10-06 — the voice and language layer
+
+**Adoption is genuinely high; the constraint is capital and infrastructure, not
+appetite.** Latin America is the **third-largest market worldwide for generative
+AI application downloads** despite less access to capital. **99% of LATAM startups
+use AI in internal operations and 85% integrate it natively** into their main
+product, while **fewer than 25% build their own models** — OpenAI (89%), Gemini
+and Claude dominate integrations, with **edtech named among the most disruptive
+sectors** (Ednova cited). For higher education specifically, **UNESCO IESALC**
+surveyed **200 institutions across 19 countries between August and October 2025**
+over five dimensions — teaching and learning, research, community engagement,
+administration and governance — which is the most credible regional baseline
+available and worth citing directly in proposals.
+
+**Regulation is fragmented and that cuts both ways.** Multiple countries operate
+under differing or absent frameworks, with the IADB arguing for an enabling
+regional framework; the **EU AI Act's progressive entry from August 2026** is
+becoming the de facto reference for cross-border operators. Fragmentation creates
+opportunity and **normative inconsistency risk** for anything sold across borders.
+
+**What this pass opens here:**
+
+- **Offline voice tutoring is deliverable in Spanish and Portuguese today
+  (P18).** `sherpa-onnx` (**Apache-2.0**) supplies STT, TTS, diarization and VAD
+  on a Pi, a low-end laptop or an Android tablet **with no connectivity**, on top
+  of Kolibri (**MIT**). Given that <25% of the region's players build their own
+  models and the dominant pattern is a paid API call, **a voice tutor with no
+  per-token cost and no connectivity requirement is a genuine differentiator**, not
+  a parity feature.
+- **The Portuguese-language asset is still Apache-2.0 — but it is no longer
+  LATAM-maintained, and the KB should say so.**
+  [Tucano](https://github.com/Nkluge-correa/Tucano) was Brazil-origin, Apache-2.0
+  and peer-reviewed in *Patterns*; it was **archived on 2026-02-24**. **Tucano 2**
+  (0.5–3.7B, Apache-2.0) continues under the **University of Bonn** Polyglot
+  initiative. The model remains usable for a Brazil engagement; **the maintainer,
+  funding and roadmap are now European.** "LATAM-origin" was true of Tucano 1 and
+  is not true of Tucano 2 — do not carry the old label forward.
+- **The pattern across two passes is consistent: LATAM demand is real, LATAM
+  supply of permissive assets is not.** The fifth pass found the region's first
+  permissive education project (Colombia's TutorIA, MIT) to be **a README and a
+  licence with no code**; this pass finds its Portuguese model archived and
+  succeeded from Germany. **The regional opportunity is to be the builder**, with
+  SALT (Uganda) as the worked example of how a region built its own corpus and
+  licensed it properly.
+
 ## Cross-region read
 
 Two patterns hold in every region, which makes them safe to build once and sell
@@ -853,3 +1023,52 @@ regional gap this KB has stated most confidently was produced by sweeping topic
 pages and star-sorted searches — both of which rank by adoption, and neither of
 which can surface a new, unstarred, institutionally-backed project. Three such
 projects existed the whole time. One query shape found all three.
+
+## What changed in the sixth pass of 2026-10-06
+
+The pass swept the **speech and low-resource-language substrate** rather than
+education products — a layer that had **zero** entries in this KB. 26 repositories
+probed, 26 resolved, every licence read from its own `LICENSE` payload.
+
+**Four things changed in the commercial picture:**
+
+1. **Voice stopped being a proprietary dependency.** `k2-fsa/sherpa-onnx`
+   (**Apache-2.0**, 15.1k★) delivers STT, TTS, diarization and VAD in one
+   permissive tree **with no Internet connection**, on phones, Raspberry Pi and
+   RISC-V. Spoken practice and oral assessment reprice from a recurring
+   per-token cost to a one-off build on hardware the client already owns.
+2. **Mother-tongue delivery is a two-region capability.** India (AI4Bharat, all
+   **MIT**, 22 scheduled languages) and East Africa (`SunbirdAI/salt`,
+   **Apache-2.0**, six Ugandan languages with studio TTS; Masakhane, **MIT**).
+   **Everywhere else the permissive layer does not exist** — which makes corpus
+   building a fundable first phase rather than a blocker.
+3. **India is the only all-MIT national stack in this KB.** Sunbird (**MIT**,
+   38,046 commits, **DIKSHA**, Digital Public Good) plus the AI4Bharat layer plus
+   MIT orchestration — see **P16**. In public procurement this removes the licence
+   conversation entirely.
+4. **The highest-volume assessment task in primary education has no open
+   implementation.** Oral reading fluency is owned by closed products with no
+   public repositories, while the permissive components and a **public dataset
+   with a published baseline** both now exist — **P17**.
+
+**Three named rejections, recorded so they are not re-proposed:**
+`facebookresearch/seamless_communication` is **CC BY-NC-4.0** (non-commercial);
+`rhasspy/piper` is **MIT but archived**, its maintained successor **GPL-3.0**;
+`aisingapore/sea-lion` has **no repository-level licence**, deferring the grant to
+each model card.
+
+**And one correction to this KB's own regional labelling.** Tucano, recorded as a
+Brazil-origin Apache-2.0 asset, was **archived 2026-02-24**; its successor Tucano 2
+is developed at the **University of Bonn**. The model is still usable for Brazil
+work, but **its maintainership moved to EMEA** and the KB should not keep calling
+it LATAM-origin.
+
+### The method note, stated plainly
+
+The fifth pass learned that **low star counts hide real assets**. This pass found
+the inverse: **high star counts hid dead ones.** On this shelf, 46.1k★ Coqui is
+abandoned while its 2.3k★ Idiap fork has **641 more commits**; 11.3k★ Piper is
+frozen. The fields that carried the signal were **archive status, the successor
+notice, and commit count** — none of them popularity.
+
+**Check whether a repository is alive before checking how popular it is.**

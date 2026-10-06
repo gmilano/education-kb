@@ -458,6 +458,107 @@ school, university or edtech vendor actually has to evidence. That is a
 **profile on an MIT base**, contributable upstream, and it is days of work.
 Pattern **P13**.
 
+## 20. Voice became a permissive capability — while its two best-known assets relicensed away
+
+Added sixth pass, 2026-10-06.
+
+Spoken interaction has been the one education capability that forced a
+proprietary dependency. Oral practice, pronunciation feedback, role-play,
+accessibility for pre-literate and low-literacy learners — all of it routed to a
+paid speech API, which in turn meant per-token cost, a connectivity requirement
+and student audio leaving the institution. **That is no longer true, and the
+reason is one component.**
+
+[k2-fsa/sherpa-onnx](https://github.com/k2-fsa/sherpa-onnx) — **Apache-2.0,
+15.1k★, 2,092 commits** — provides speech-to-text, text-to-speech, speaker
+diarization and voice-activity detection **in a single permissive tree that runs
+with no Internet connection** on Android, iOS, HarmonyOS, Raspberry Pi, RISC-V and
+x86. Four capabilities, one licence, embedded-class hardware.
+
+**The same trend has a trap inside it, and it caught the obvious choice.** The
+best-known offline TTS in education and accessibility is Piper — adopted by Home
+Assistant and NVDA, fast on a Pi 4. [rhasspy/piper](https://github.com/rhasspy/piper)
+is **MIT** and has been **archived read-only since 2025-10-06**; development moved
+to [OHF-Voice/piper1-gpl](https://github.com/OHF-Voice/piper1-gpl), which is
+**GPL-3.0**. **The permissive version is frozen and the maintained version is
+copyleft.** Separately, Coqui TTS — 46.1k★, MPL-2.0 — is **unmaintained upstream**
+after the company wound down, while the [Idiap fork](https://github.com/idiap/coqui-ai-TTS)
+at 2.3k★ carries **5,309 commits against the original's 4,668**. And
+**SeamlessM4T**, the first result for "open source multilingual speech", is
+**CC BY-NC-4.0** — unusable in billable work.
+
+**What this means for how the shelf is read.** On an immature shelf, stars find
+the live projects. On this one they point at a frozen repository, an abandoned
+one, and a non-commercial licence. **The fields that carry the signal are archive
+status, the successor notice and the commit count on the fork** — and the fork
+with 5% of the stars is the one to depend on.
+
+**The commercial consequence** is that voice moves from a line item with a
+recurring per-token cost to a one-off build on hardware the client already owns.
+That reprices every spoken-practice and oral-assessment proposal, and it is the
+component that completes the offline-first pattern (**P18**).
+
+## 21. Mother-tongue AI is a two-region capability, not a global one — and the gap is the opportunity
+
+Added sixth pass, 2026-10-06.
+
+"Multilingual" in education AI usually means the handful of languages a frontier
+model happens to serve well. Asked instead **which teaching languages have a
+permissive, self-hostable layer**, the honest answer is narrow and uneven.
+
+**Where it exists:**
+
+- **India — broad, MIT, one institution.** AI4Bharat (IIT Madras) ships
+  translation across **all 22 scheduled Indian languages**
+  ([IndicTrans2](https://github.com/AI4Bharat/IndicTrans2)), TTS in **13**
+  ([Indic-TTS](https://github.com/AI4Bharat/Indic-TTS)), ASR pretrained on **40**
+  ([IndicWav2Vec](https://github.com/AI4Bharat/IndicWav2Vec)), and the annotation
+  platform to curate it all ([Shoonya](https://github.com/AI4Bharat/Shoonya)) —
+  **every one MIT**. Paired with Sunbird (MIT), a full national stack is
+  permissive end to end (**P16**).
+- **Uganda and Africa — small, Apache-2.0/MIT, and better than it looks.**
+  [SunbirdAI/salt](https://github.com/SunbirdAI/salt) (**Apache-2.0**) ships
+  translation, ASR and **studio-recorded TTS by professional voice actors** across
+  Luganda, Swahili, Ateso, Lugbara, Acholi and Runyankole;
+  [masakhane-mt](https://github.com/masakhane-io/masakhane-mt) (**MIT**) carries
+  continental MT from a 1,000-participant, 30-country community.
+- **Portuguese — permissive, but it moved.** Tucano (Apache-2.0, peer-reviewed in
+  *Patterns*) was Brazil-origin and is **archived since 2026-02-24**; **Tucano 2**
+  continues under the **University of Bonn** [Polygl0t](https://github.com/Polygl0t/Polygl0t)
+  initiative (Apache-2.0).
+
+**Where it does not exist:** essentially everywhere else. Most of the world's
+teaching languages have **no permissive, self-hostable speech or translation
+layer** — and in ASEAN the nearest thing,
+[SEA-LION](https://github.com/aisingapore/sea-lion), **has no repository-level
+licence at all**: its grant is deferred to each HuggingFace model card because
+terms vary with the base model, so "SEA-LION is MIT" is not a sentence anyone can
+truthfully say.
+
+**Three consequences for how engagements are scoped.**
+
+1. **Check the language before promising the capability.** Mother-tongue delivery
+   is deliverable from the shelf in two regions. Elsewhere the honest scope begins
+   with **data collection**, and SALT is the worked example of doing that
+   properly — six languages, studio recordings, two peer-reviewed papers,
+   Apache-2.0.
+2. **The gap is the differentiator, not the disqualifier.** A client whose
+   language has no permissive layer has no off-the-shelf competitor either.
+   Building the corpus is a defensible, fundable first phase — and it is the kind
+   of work ministries and development funders pay for directly.
+3. **Licence review in APAC is per checkpoint and recurring.** Where the grant
+   lives on the model card, it must be re-read every time the checkpoint changes.
+   Budget it as a standing task, not a one-time gate.
+
+**And the sharpest instance of the gap is an application, not a language.** Oral
+reading fluency — the highest-volume literacy measurement in primary education —
+has **no permissive implementation anywhere**: FLORA, Literably, Amplify Text
+Reading Online and SoapBox Labs are all closed, with no public repository. The
+components are all now permissive and shelved, and a **public dataset with a
+published accuracy baseline** exists (Ghana ORF Dataset; Whisper V2 at 10.3% WER,
+*IJAIED* [10.1007/s40593-024-00435-9](https://doi.org/10.1007/s40593-024-00435-9)).
+That is an open category with no open competitor — wired up as **P17**.
+
 ## Regional notes where the trend diverges
 
 - **North America:** adoption is broad (60% of K-12 teachers) and the binding

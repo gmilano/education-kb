@@ -780,6 +780,149 @@ as having **no curriculum-aligned permissive pipeline at all** — or any LATAM
 ministry, where **P6** should precede it (see `intel/market.md`: 87% of LAC
 institutions use AI and only 26% have a strategy for it).
 
+## P16 — The all-MIT national/state stack (APAC, India shape)
+
+Added sixth pass, 2026-10-06. **The only pattern in this KB whose every component
+is MIT** — platform, language layer, orchestration and review tool. That matters
+because it removes the licence conversation from a public-sector procurement
+entirely.
+
+**When to propose it:** a ministry, state education department or large public
+system in India or an Indic-language market, where curriculum alignment and
+multilingual delivery are requirements rather than features.
+
+| Layer | Component | Licence (payload) |
+|---|---|---|
+| Platform | [Sunbird-Ed/SunbirdEd-portal](https://github.com/Sunbird-Ed/SunbirdEd-portal) | **MIT** (`master/LICENSE`) |
+| Deployment | [project-sunbird/sunbird-devops](https://github.com/project-sunbird/sunbird-devops) | **MIT** |
+| Translation | [AI4Bharat/IndicTrans2](https://github.com/AI4Bharat/IndicTrans2) | **MIT** (`main/LICENSE`) |
+| Speech out | [AI4Bharat/Indic-TTS](https://github.com/AI4Bharat/Indic-TTS) | **MIT** (`master/LICENSE.txt`) |
+| Speech in | [AI4Bharat/IndicWav2Vec](https://github.com/AI4Bharat/IndicWav2Vec) | **MIT** (`main/LICENSE`) |
+| Teacher review | [AI4Bharat/Shoonya](https://github.com/AI4Bharat/Shoonya) | **MIT** (`master/LICENSE`) |
+| Orchestration | [langchain-ai/langgraph](https://github.com/langchain-ai/langgraph) | **MIT** |
+| Typed outputs | [pydantic/pydantic-ai](https://github.com/pydantic/pydantic-ai) | **MIT** |
+| Inference | [ollama/ollama](https://github.com/ollama/ollama) | **MIT** |
+| Lesson generation | [microsoft/shiksha-copilot](https://github.com/microsoft/shiksha-copilot) | **MIT** — India-built, teacher-side, human-curated by design |
+
+**Wiring.** Sunbird is the system of record and the delivery surface; do not fork
+it. Lesson generation runs as a side-car on the Shiksha Copilot shape — curriculum
+→ grade → subject → chapter, producing lesson plans, examples, activities and
+assessments. LangGraph orchestrates with checkpoints as the audit trail;
+pydantic-ai schema-checks every generated item so a malformed assessment cannot
+reach a learner. **Shoonya is the mandatory gate**: no generated item publishes
+to Sunbird without a named teacher's approval recorded against it. IndicTrans2
+translates the approved artefact into the 18+ languages Sunbird already serves;
+Indic-TTS voices it; IndicWav2Vec takes spoken answers back. Ollama keeps all
+inference inside the ministry's own infrastructure.
+
+**Sequence:** Sunbird + DevOps stand-up (4–5 wk, the real cost — 100+
+micro-services) → generation side-car and schema contracts (3 wk) → Shoonya review
+loop with named approvers (2 wk) → language layer, two languages first (3 wk) →
+remaining languages (1 wk each, parallel). **12–14 weeks** to a reviewed,
+multilingual pilot.
+
+**Say this in the pitch:** every line of this stack is MIT, so there is no
+copyleft obligation, no per-seat licence and no vendor in the critical path — and
+the platform is already a recognised **Digital Public Good** running at national
+scale. **Do not propose this outside Indic markets:** NCERT/CBSE/SCERT alignment
+is embedded, and undoing it costs more than starting from Coursemology.
+
+## P17 — Oral reading fluency assessment (the open category with no open competitor)
+
+Added sixth pass, 2026-10-06. This is the one pattern here that builds into a
+**declared void**: oral reading fluency (ORF) is the highest-volume literacy
+measurement in primary education and **every system doing it is proprietary** —
+FLORA, Literably, Amplify Text Reading Online, SoapBox Labs, none with a public
+repository. The permissive components all now exist.
+
+**The measurement:** a child reads a grade-levelled passage aloud; the system
+returns **words correct per minute (WCPM)**, accuracy, and a per-word error list a
+teacher can inspect.
+
+| Stage | Component | Licence (payload) | Why this one |
+|---|---|---|---|
+| Transcript | [SYSTRAN/faster-whisper](https://github.com/SYSTRAN/faster-whisper) | **MIT** (`master/LICENSE`) | CTranslate2 build — faster and lighter than reference Whisper, same weights |
+| Word timings | [m-bain/whisperX](https://github.com/m-bain/whisperX) | **BSD** (`main/LICENSE`) | **The load-bearing choice.** WCPM is a rate, so it is uncomputable without word-level timestamps |
+| Offline variant | [k2-fsa/sherpa-onnx](https://github.com/k2-fsa/sherpa-onnx) | **Apache-2.0** (`master/LICENSE`) | Same measurement on a tablet or Pi with **no connectivity**, where the assessment is most needed |
+| Alignment/scoring | your code | — | Align transcript against the known passage; classify omissions, insertions, substitutions, self-corrections |
+| Evidence trail | [langfuse/langfuse](https://github.com/langfuse/langfuse) | **MIT** (with carve-out) | Every scored attempt traceable — an assessment decision must be defensible |
+| Teacher override | [AI4Bharat/Shoonya](https://github.com/AI4Bharat/Shoonya) | **MIT** | Human adjudication of disputed words; the scores it corrects become your eval set |
+
+**Wiring.** The passage is known in advance, which makes this far more tractable
+than open transcription: you are doing **forced alignment against a reference
+text**, not open-vocabulary ASR. faster-whisper produces the transcript, whisperX
+attaches word-level timestamps, your aligner diffs transcript against reference
+and emits WCPM plus a typed error list. **The teacher's judgment is final** — the
+system proposes a score and a teacher confirms or overrides it, which is also what
+keeps it on the right side of US state law (trend 16) and the EU AI Act's
+human-oversight requirement for education (trend 17; P13).
+
+**Evaluate against a public baseline, and say the number.** The **Ghana ORF
+Dataset** is publicly available — 130 students aged 9–18, original passages, audio
+and human transcriptions — and the published baseline is **Whisper V2 at 10.3%
+WER** on Ghanaian students reading aloud (*IJAIED*,
+[10.1007/s40593-024-00435-9](https://doi.org/10.1007/s40593-024-00435-9)). Report
+agreement with human raters, not WER alone: the client cares whether the system
+and a trained rater assign the same WCPM.
+
+**Sequence:** aligner and WCPM scorer against the Ghana dataset (3 wk) →
+human-agreement evaluation and error taxonomy (2 wk) → teacher override UI and
+Langfuse trail (2 wk) → offline build on sherpa-onnx (2 wk) → classroom pilot
+(3 wk). **10–12 weeks** to a measured, reviewable assessor.
+
+**Two warnings.** Accented and child speech is where ASR degrades most, so **the
+evaluation is the deliverable** — a fluency score nobody has validated against
+human raters is worse than no score. And ORF is **high-stakes assessment**: in the
+EU this is Annex III point 3 territory, so run it through P13 before it touches a
+real pupil.
+
+## P18 — Offline voice tutoring (P5 with a voice, LATAM and low-connectivity)
+
+Added sixth pass, 2026-10-06. **Supersedes the voice question left open in P5.**
+P5 established offline-first delivery as an equity requirement; it had no
+permissive way to make the tutor speak or listen. It does now.
+
+| Layer | Component | Licence (payload) |
+|---|---|---|
+| Platform | [LearningEquality/kolibri](https://github.com/LearningEquality/kolibri) | **MIT** (`LICENSE`) |
+| Content pipeline | [LearningEquality/ricecooker](https://github.com/LearningEquality/ricecooker) | **MIT** |
+| **Voice, all of it** | [k2-fsa/sherpa-onnx](https://github.com/k2-fsa/sherpa-onnx) | **Apache-2.0** (`master/LICENSE`) |
+| Higher-quality TTS | [idiap/coqui-ai-TTS](https://github.com/idiap/coqui-ai-TTS) | **MPL-2.0** (`main/LICENSE.txt`) — the **live fork**, not `coqui-ai/TTS` |
+| Local inference | [ollama/ollama](https://github.com/ollama/ollama) | **MIT** |
+| Local retrieval | [pgvector/pgvector](https://github.com/pgvector/pgvector) | PostgreSQL Licence — permissive |
+| Portuguese model | [Polygl0t/Polygl0t](https://github.com/Polygl0t/Polygl0t) / Tucano 2 | **Apache-2.0** (`main/LICENSE`) |
+
+**Wiring.** Kolibri serves content on a classroom server with no internet;
+ricecooker packages the curriculum into channels. **sherpa-onnx provides STT, TTS,
+diarization and VAD from a single Apache-2.0 dependency** on the same box — a Pi,
+a low-end laptop or an Android tablet — so a learner speaks, is transcribed, gets a
+spoken reply, and nothing leaves the room. Ollama runs the tutor model locally;
+pgvector keeps retrieval in the Postgres instance already there, with no separate
+vector store to host. For Brazil, Tucano 2 (Apache-2.0, 0.5–3.7B) is the
+Portuguese-native option and the small sizes are the point on this hardware.
+
+**Why sherpa-onnx and not Piper.** Piper is the better-known offline TTS and the
+obvious reach — **and [rhasspy/piper](https://github.com/rhasspy/piper) (MIT) has
+been archived read-only since 2025-10-06**, with development moved to
+[OHF-Voice/piper1-gpl](https://github.com/OHF-Voice/piper1-gpl) under **GPL-3.0**.
+Frozen or copyleft, no third option. sherpa-onnx is Apache-2.0, maintained
+(2,092 commits), and covers three more capabilities besides. If a client
+specifically wants Piper voices, make the frozen-vs-GPL trade explicit in writing
+before committing.
+
+**Sequence:** Kolibri + content channels (2 wk) → local inference and retrieval
+(2 wk) → sherpa-onnx voice loop with push-to-talk and VAD (3 wk) → language/model
+selection and pedagogical tuning (2 wk) → offline-hardware field pilot (3 wk).
+**10–12 weeks.**
+
+**The honest regional caveat.** For Spanish and Portuguese this works today. For
+most of the world's teaching languages **it does not** — the permissive language
+layer exists for Indic languages (MIT) and six Ugandan languages plus Masakhane's
+continental MT (Apache-2.0/MIT), and essentially nowhere else. Check the target
+language against `repos/foundations.md` **before** promising mother-tongue
+delivery; where it is missing, the honest scope is data collection first, and
+`SunbirdAI/salt` is the model for how that was done well.
+
 ## Pattern selection
 
 | Situation | Pattern |

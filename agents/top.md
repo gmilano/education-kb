@@ -258,6 +258,66 @@ that ASEAN's mature education AI is closed and its substrate is MIT** — which 
 much better commercial position than the gap this KB had recorded.
 
 
+### Added in the sixth pass of 2026-10-06 — no new agents, and the layer that unblocks a whole class of them
+
+**State the negative first: this pass added no new education agent to the table
+above.** It swept the **speech and low-resource-language substrate** instead — 26
+repositories probed, 26 resolved — and that shelf lives in
+`repos/foundations.md`, not here, because none of it is an agent.
+
+What it changes for this file is **what the agents above can now be composed
+into.** Every tutor in the table is text-only and English-first by default. With
+the sixth-pass shelf, three agent shapes stop being blocked on a proprietary API:
+
+- **The speaking tutor.** [k2-fsa/sherpa-onnx](https://github.com/k2-fsa/sherpa-onnx)
+  (**Apache-2.0**, 15.1k★) delivers STT, TTS, diarization and VAD **in one
+  permissive tree, with no Internet connection**, on Android, iOS, Raspberry Pi
+  and RISC-V. Voice tutoring on classroom-grade hardware is now a permissive
+  build, not a vendor dependency.
+- **The mother-tongue tutor, in two regions only.** India via
+  [IndicTrans2](https://github.com/AI4Bharat/IndicTrans2) (**MIT**, 22 scheduled
+  languages), [Indic-TTS](https://github.com/AI4Bharat/Indic-TTS) (**MIT**, 13
+  languages) and [IndicWav2Vec](https://github.com/AI4Bharat/IndicWav2Vec)
+  (**MIT**, ASR); Uganda and Africa via [SunbirdAI/salt](https://github.com/SunbirdAI/salt)
+  (**Apache-2.0**, studio-recorded TTS in six Ugandan languages) and
+  [masakhane-mt](https://github.com/masakhane-io/masakhane-mt) (**MIT**).
+  **Outside those two, the permissive language layer does not exist** — see
+  `intel/market.md`.
+- **The human-in-the-loop stage, finally with a tool.** Every pattern in this KB
+  specifies teacher review; [AI4Bharat/Shoonya](https://github.com/AI4Bharat/Shoonya)
+  (**MIT**) is the first shelved implementation of it — *"an open source platform
+  to annotate and label data at scale."*
+
+**Three traps on that shelf are recorded here because they will be proposed as
+agent components.** Full write-ups in `repos/foundations.md`:
+
+| Component | Why it gets refused |
+|---|---|
+| [rhasspy/piper](https://github.com/rhasspy/piper) | **MIT** but **archived read-only 2025-10-06**; development moved to [OHF-Voice/piper1-gpl](https://github.com/OHF-Voice/piper1-gpl), which is **GPL-3.0**. The obvious offline-TTS pick is **either frozen or copyleft, never both permissive and maintained** |
+| [facebookresearch/seamless_communication](https://github.com/facebookresearch/seamless_communication) | **CC BY-NC-4.0** in `main/LICENSE` — **non-commercial. Hard reject** for anything billable, and it is the top result for "open source multilingual speech" |
+| [aisingapore/sea-lion](https://github.com/aisingapore/sea-lion) | **No `LICENSE` payload at all.** Its README defers the grant to each HuggingFace **model card** because terms *"may vary depending on the underlying base model's restrictions"*. **A sixth licence failure mode: the licence belongs to the checkpoint, not the project** |
+
+### Declared gap, sixth pass — the oral reading fluency agent does not exist
+
+Searched specifically for a permissive **oral reading fluency** assessor — a child
+reads aloud, the system returns words-correct-per-minute. It is the
+highest-volume literacy measurement in primary education and the most natural
+application of the shelf above.
+
+**Nothing permissive was found.** The category is entirely proprietary: **FLORA**,
+**Literably** (IES-funded), Amplify **Text Reading Online**, **SoapBox Labs** — no
+public repository for any of them; an Italian ASR fluency app implementing the
+Cornoldi MT battery exists only as a paper. What *is* public is the **Ghana ORF
+Dataset** — 130 students aged 9–18, passages, audio and human transcriptions, with
+**Whisper V2 measured at 10.3% WER** on Ghanaian students reading aloud (*IJAIED*,
+[10.1007/s40593-024-00435-9](https://doi.org/10.1007/s40593-024-00435-9)).
+
+**This is the sharpest build opportunity in the KB:** permissive components all
+present ([whisperX](https://github.com/m-bain/whisperX), BSD, for the word-level
+timestamps that make fluency measurable; [faster-whisper](https://github.com/SYSTRAN/faster-whisper),
+MIT, for the transcript), a public dataset, a published accuracy baseline to beat,
+and no open competitor. Wired up as **P17** in `compose/patterns.md`.
+
 ## The education MCP shelf — a side-car is permissive by choice, not by construction
 
 The licence-boundary note below says an external MCP side-car keeps its permissive

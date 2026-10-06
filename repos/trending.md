@@ -8,6 +8,97 @@ updated: 2026-10-06
 
 > **Append-only.** Newest dated section on top; history preserved below.
 
+## 2026-10-06 — sixth pass: a 38,046-commit MIT platform this KB found and then forgot to shelve
+
+Companion to the sixth pass in `agents/trending.md`, which sweeps the speech and
+low-resource-language substrate. This section records the **repo-level** findings:
+one filing failure of this KB's own, and the deployment signals on the new shelf.
+
+### Finding 1 — Sunbird was found in an earlier pass and never reached the durable files
+
+Grepping this KB for `Sunbird` before this pass returned **ten hits, every one of
+them inside the append-only trend history** — and **zero** in `agents/top.md`,
+`repos/foundations.md` or `verticals/solutions.md`.
+
+[Sunbird-Ed/SunbirdEd-portal](https://github.com/Sunbird-Ed/SunbirdEd-portal) —
+**MIT (`master/LICENSE`), 41★, 317 forks, 38,046 commits**, not archived.
+
+What it is, verified: the web portal of **Sunbird**, built by the **EkStep
+Foundation**, the platform under India's **DIKSHA** — recognised as a **Digital
+Public Good** by the Digital Public Goods Alliance, supporting **18+ languages**
+and the **NCERT, CBSE and SCERT** curricula, with its own README stating the
+mission to *"improve learning outcomes for 200 million children across India."*
+Sunbird ships **100+ micro-services** as building blocks.
+
+**The finding is about this KB, not about Sunbird.** A pass found a national-scale
+MIT learning platform with a 38,046-commit history, wrote it into a trend log, and
+the next five passes rebuilt the shelf files without it — so every engagement that
+read `verticals/solutions.md` saw Moodle, Open edX, Canvas and Coursemology and
+**not** the one platform on the list that is both MIT and running at
+nine-figure learner scale.
+
+**Trend files are a journal; shelf files are the product.** A finding that lands
+only in the journal has not been delivered. Promoted to `verticals/solutions.md`
+this pass. **When a pass finds a platform, the same pass must shelve it.**
+
+Its ratios also restate the lesson an earlier pass drew from this very repo:
+**41★ against 317 forks and 38,046 commits** — a **7.7× forks-to-stars** inversion.
+Nobody stars infrastructure they are busy deploying.
+
+### Finding 2 — deployment signals on the speech shelf, where stars actively mislead
+
+Full verification table in `agents/trending.md` Finding 9. The ranking that
+matters here is **commits and liveness**, not stars:
+
+| Repo | Licence (payload) | ★ | Commits | Liveness read |
+|---|---|---|---|---|
+| [espnet/espnet](https://github.com/espnet/espnet) | Apache-2.0 | 10.0k | **27,378** | Deepest recipe archive on the shelf |
+| [speechbrain/speechbrain](https://github.com/speechbrain/speechbrain) | Apache-2.0 | 11.9k | **10,611** | 200+ recipes, 40+ datasets, 20 tasks |
+| [idiap/coqui-ai-TTS](https://github.com/idiap/coqui-ai-TTS) | MPL-2.0 | 2.3k | **5,309** | ✅ The live fork — **641 more commits than the 46.1k★ original** |
+| [coqui-ai/TTS](https://github.com/coqui-ai/TTS) | MPL-2.0 | **46.1k** | 4,668 | ⚠️ Upstream unmaintained; company wound down |
+| [k2-fsa/sherpa-onnx](https://github.com/k2-fsa/sherpa-onnx) | Apache-2.0 | 15.1k | 2,092 | ✅ Offline STT+TTS+diarization+VAD in one tree |
+| [rhasspy/piper](https://github.com/rhasspy/piper) | **MIT** | 11.3k | 365 | ❌ **Archived read-only 2025-10-06** |
+| [OHF-Voice/piper1-gpl](https://github.com/OHF-Voice/piper1-gpl) | **GPL-3.0** | 5.8k | 293 | Live, but copyleft — and seeking maintainers |
+| [SYSTRAN/faster-whisper](https://github.com/SYSTRAN/faster-whisper) | MIT | 25.7k | 267 | ✅ The Whisper build to actually deploy |
+| [openai/whisper](https://github.com/openai/whisper) | MIT | **110k** | 171 | Reference implementation; low commit rate is maturity, not death |
+
+**Read this column pair together.** The two highest star counts after Whisper —
+46.1k and 11.3k — are an abandoned project and a frozen one. The fork with 5% of
+its parent's stars has more commits than its parent. **On a mature substrate
+shelf, stars are a historical record and commits plus archive status are the
+current state.**
+
+### Finding 3 — GitHub's trending feed, checked again, still has no education in it
+
+Queried `github trending education AI 2026` and the generic agent-ranking feeds.
+The returns were, as in the fourth and fifth passes, **general-purpose agent
+infrastructure and SEO listicles**: openclaw (385,407★), dify (151,639★),
+browser-use (108,128★), Mem0 (62,735★), AutoGen (60,284★), Flowise (55,226★),
+Semantic Kernel (27,470★), plus learn-to-build-AI repositories
+(`ai-engineering-from-scratch`, Karpathy's *Zero to Hero*, D2L) which are
+**AI-education content, not education-sector software**.
+
+**Recorded as a stable negative, now across three consecutive passes.** Education
+does not surface in star-ordered trending feeds, and the KB should stop spending
+query budget there. Every genuine finding in the last three passes came from a
+*targeted* channel: paper-to-repo tracing, organisation sweeps, institution-first
+search, forks/stars inversion, and this pass's substrate-first sweep. The trending
+feed is checked to keep the negative honest, not because it is expected to yield.
+
+### Finding 4 — the vertical-platform query returns the same two platforms, and one is a 2010 mailing list
+
+Ran the standing `open source platform education ERP CRM MIT Apache` sweep.
+Returns: **OpenEduCat** (already shelved — LGPL-3.0, Odoo-based, inheriting
+accounting/HR/CRM and adding student/course/academic modules) and **CK-ERP**, a
+32-module accounting/education/MRP/ERP/CRM system whose freshest result was a
+**Drupal mailing-list post from July 2010**.
+
+**No new permissive education ERP found.** The honest read: this niche is
+**LGPL/AGPL-shaped** — OpenEduCat (LGPL-3.0), Kuali KFS and Coeus (AGPL-3.0),
+Fedena, RosarioSIS — and the permissive options remain the **side-car** route
+(pattern P7 for the module case, P1 for the integration case) rather than a
+permissive ERP core. Re-confirmed, not re-opened.
+
 ## 2026-10-06 — fifth pass: a 15,802-commit MIT LMS, an MIT compliance toolkit, and a trending feed with no education in it
 
 Channel new to this KB this pass: **institution-first search** (funding body,

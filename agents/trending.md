@@ -8,6 +8,238 @@ updated: 2026-10-06
 
 > **Append-only.** Newest dated section on top; history preserved below.
 
+## 2026-10-06 — sixth pass: the voice layer, where two of the best-known assets relicensed out from under you
+
+Channel new to this KB this pass: **substrate-first search** — sweeping the
+**speech and low-resource-language layer** rather than education products. The
+reason to look there is that every tutor in this KB is mute and monolingual by
+default, and the layer that fixes that had **zero entries**: `IndicTrans2`,
+`Masakhane`, `Piper`, `Vosk`, `Coqui`, `espnet` and `SpeechBrain` were each
+mentioned **zero times** across the whole KB before this pass.
+
+Every licence below was read from the repository's own `LICENSE` payload via
+`raw.githubusercontent.com`; every star/fork/commit count was read from the
+repository page. **26 repositories probed, 26 resolved.**
+
+### Finding 1 — Piper relicensed from MIT to GPL, and the MIT version is frozen
+
+This is the single most consequential thing in this pass.
+
+| Repo | Licence (payload) | ★ / forks / commits | State |
+|---|---|---|---|
+| [rhasspy/piper](https://github.com/rhasspy/piper) | **MIT** (`master/LICENSE.md`, © 2022 Michael Hansen) | **11.3k** / 1.1k / 365 | **Archived, read-only since 2025-10-06.** Its own notice: *"Development has moved: https://github.com/OHF-Voice/piper1-gpl"* |
+| [OHF-Voice/piper1-gpl](https://github.com/OHF-Voice/piper1-gpl) | **GPL-3.0** (`main/COPYING`) | 5.8k / 557 / 293 | Live, maintained by the Open Home Foundation. README states it is **seeking maintainers** |
+
+Piper is the default offline neural TTS of the accessibility world — adopted by
+**Home Assistant and NVDA**, and fast enough for a Raspberry Pi 4, which is
+exactly the hardware class in this KB's offline-first pattern (P5). So the
+obvious reach for "give the tutor a voice with no cloud and no per-token cost"
+lands on a repository that is **either frozen or copyleft, and never both
+permissive and maintained**.
+
+**For client work this is a fork in the road, not a footnote.** Ship the MIT
+version and you ship code that receives no security fixes. Take the maintained
+version and GPL-3.0 reaches your distribution. Neither is wrong; **choosing
+without knowing is.** The option that keeps both properties is Finding 2.
+
+### Finding 2 — sherpa-onnx is the permissive escape, and it is the biggest thing on this shelf
+
+[k2-fsa/sherpa-onnx](https://github.com/k2-fsa/sherpa-onnx) — **Apache-2.0
+(`master/LICENSE`), 15.1k★, 1.7k forks, 2,092 commits.**
+
+Its own description: *"Speech-to-text, text-to-speech, speaker diarization,
+speech enhancement, source separation, and VAD using next-gen Kaldi with
+onnxruntime **without Internet connection**. Support embedded systems, Android,
+iOS, HarmonyOS, Raspberry Pi, RISC-V, … websocket server/client, support 12
+programming languages."*
+
+**It replaces four components with one permissive dependency.** STT, TTS,
+diarization and VAD in a single Apache-2.0 tree that runs on a phone, a Pi or a
+RISC-V board with no network. For the offline-first equity deployment this KB has
+recommended since its second pass, this is the component that was missing — and
+it sidesteps the Piper dilemma entirely.
+
+### Finding 3 — a sixth licence failure mode: the grant deferred to the artefact
+
+This KB has catalogued five ways a licence fails. Here is a sixth, and it is the
+most slippery yet, because the project is **candid** about it.
+
+[aisingapore/sea-lion](https://github.com/aisingapore/sea-lion) — **no `LICENSE`
+payload** (probed 3 branches × 6 filenames). Its README §Licensing says SEA-LION
+releases *"embrace an open-source ethos under the MIT license **as much as
+possible**; however, the exact licensing terms **may vary depending on the
+underlying base model's restrictions**"* — Llama-derived variants may carry
+Meta's commercial restrictions, Gemma variants different terms — and instructs
+you to *"always refer to the Hugging Face model card of each specific SEA-LION
+model."*
+
+**The sixth failure mode: there is no repository-level grant to read, by design.
+The licence is a property of each checkpoint, not of the project.** This is
+honest and it is still unusable as a blanket answer: "SEA-LION is MIT" is a
+sentence no one can truthfully say. In APAC engagements, **the licence review
+must be per model file, and it must be re-done every time the checkpoint
+changes.** Budget it as a recurring task, not a one-off gate.
+
+### Finding 4 — Africa: the Luganda asset this KB could not ship has a licensed sibling
+
+The fourth pass recorded `AI-for-Education/Luganda-linguistic-benchmarks` as
+**no payload, not shippable** — the only Uganda-placed asset in the KB, and
+legally unusable.
+
+[SunbirdAI/salt](https://github.com/SunbirdAI/salt) — **Apache-2.0
+(`main/LICENSE`), 15★, 16 forks, 303 commits.** Sunbird African Language
+Technology, Makerere-adjacent Ugandan research. It ships **translation data for
+~25,000 sentences** across English, **Luganda, Swahili, Ateso, Lugbara, Acholi
+and Runyankole**; **ASR data** (~5,000 sentences, multiple speakers, Ugandan-accented
+English plus five local languages); and **TTS data** (~5,000 sentences read by
+**professional voice actors in a studio**) — with two peer-reviewed AfricaNLP
+papers behind it.
+
+**The gap was never Luganda. It was the licence on one repository.** A
+studio-recorded TTS corpus under Apache-2.0 is a materially better asset than the
+benchmark set this KB had to reject, and it covers five more languages. Probe the
+neighbours of anything you reject on licence grounds.
+
+### Finding 5 — one organisation, three different licences
+
+| Repo | Licence (payload) | ★ / forks / commits |
+|---|---|---|
+| [masakhane-io/masakhane-mt](https://github.com/masakhane-io/masakhane-mt) | **MIT** (`master/LICENSE`) | 327 / 226 / 645 |
+| [masakhane-io/masakhane-ner](https://github.com/masakhane-io/masakhane-ner) | **Apache-2.0** (`main/LICENSE`) | — |
+| [masakhane-io/lafand-mt](https://github.com/masakhane-io/lafand-mt) | **GPL** (`main/LICENSE`) | — |
+
+Masakhane is a 1,000-participant, 30-country grassroots community — *"We build
+together"* in isiZulu — and the **forks exceed two-thirds of the stars** on
+`masakhane-mt` (226/327), the deployment signal an earlier pass learned to read.
+
+Three repositories, three licence classes, one owner. The fourth pass's lesson
+was "five MIT siblings do not license the sixth." **This is the stronger version:
+sibling licences are not even drawn from the same class.**
+
+### Finding 6 — SeamlessM4T is non-commercial, so the obvious answer is the wrong one
+
+[facebookresearch/seamless_communication](https://github.com/facebookresearch/seamless_communication)
+— `main/LICENSE` payload reads **"Attribution-NonCommercial 4.0 International"**.
+
+SeamlessM4T is the best-known multilingual speech-to-speech translation system
+and the first thing a search for "open source multilingual speech" returns.
+**CC BY-NC-4.0 makes it unusable in anything Globant bills for.** Record it as a
+named reject so no one re-proposes it: the permissive route to the same
+capability is Whisper (MIT) + IndicTrans2 (MIT) or sherpa-onnx (Apache-2.0),
+composed.
+
+### Finding 7 — LATAM: the region's own asset was archived, and its successor left
+
+The fifth pass found `LabSirius/TutorIA` (Colombia, MIT, 0★, unbuilt) and called
+the LATAM gap "a build gap with an address." The language layer tells the same
+story one step later:
+
+| Repo | Licence (payload) | ★ / forks / commits | State |
+|---|---|---|---|
+| [Nkluge-correa/Tucano](https://github.com/Nkluge-correa/Tucano) | **Apache-2.0** (`main/LICENSE`) | 86 / 10 / 29 | **Archived 2026-02-24.** Published in *Patterns* (Cell Press), [10.1016/j.patter.2025.101325](https://doi.org/10.1016/j.patter.2025.101325); arXiv 2411.07854 |
+| [Polygl0t/Polygl0t](https://github.com/Polygl0t/Polygl0t) | **Apache-2.0** (`main/LICENSE`) | 27 / 6 / 379 | Live successor. **University of Bonn** Polyglot initiative — LLM training/eval foundry, FineWeb-2 pipeline, "support for thousands of languages" |
+
+Tucano was the Portuguese-native open LLM suite — Brazil-origin research,
+Apache-2.0, peer-reviewed. **Tucano 2** (arXiv 2603.03543, 0.5–3.7B, continually
+pretrained from Qwen3 bases) is the successor, and it is developed under a
+**Bonn-hosted** initiative publishing to the `Polygl0t` HuggingFace org.
+
+**State this carefully, because it is the honest version of a regional finding.**
+Portuguese-language open modelling did not die; it **relocated to EMEA**. The
+asset is still Apache-2.0 and still usable for a Brazil engagement — but the
+maintainer, the funding and the roadmap are now European. "LATAM-origin" was true
+of Tucano 1 and is not true of Tucano 2, and a KB that filters by region needs to
+say so rather than carry the old label forward.
+
+### Finding 8 — APAC: India's substrate is MIT, broad, and curriculum-adjacent
+
+AI4Bharat (IIT Madras) is the densest permissive language shelf found in any
+region this pass. **Every row's licence read from payload:**
+
+| Repo | Licence (payload) | ★ / forks / commits | Coverage |
+|---|---|---|---|
+| [AI4Bharat/IndicTrans2](https://github.com/AI4Bharat/IndicTrans2) | **MIT** (`main/LICENSE`) | 478 / 133 / 124 | Translation across **all 22 scheduled Indian languages**; Devanagari, Perso-Arabic and more via script unification |
+| [AI4Bharat/Indic-TTS](https://github.com/AI4Bharat/Indic-TTS) | **MIT** (`master/LICENSE.txt`) | 406 / 92 / 58 | TTS in **13 languages**: Assamese, Bengali, Bodo, Gujarati, Hindi, Kannada, Malayalam, Manipuri, Marathi, Odia, Rajasthani, Tamil, Telugu |
+| [AI4Bharat/IndicWav2Vec](https://github.com/AI4Bharat/IndicWav2Vec) | **MIT** (`main/LICENSE`) | 121 / 40 / 131 | ASR pretrained on **40** Indian languages, fine-tuned for 9 (Bengali, Gujarati, Hindi, Marathi, Nepali, Odia, Tamil, Telugu, Sinhala) + Kannada, Malayalam |
+| [AI4Bharat/IndicLLMSuite](https://github.com/AI4Bharat/IndicLLMSuite) | **MIT** (`master/LICENSE`) | — | Data/recipe suite for Indic LLMs |
+| [AI4Bharat/Shoonya](https://github.com/AI4Bharat/Shoonya) | **MIT** (`master/LICENSE`) | 72 / 20 / 69 | *"Open source platform to annotate and label data at scale"* — the human-in-the-loop stage every pattern in this KB specifies |
+| [AI4Bharat/indicnlp_catalog](https://github.com/AI4Bharat/indicnlp_catalog) | **NO PAYLOAD** — probed 3 branches × 6 filenames | — | Index of Indic NLP resources. **The catalogue is unlicensed; each item it indexes still needs its own probe** |
+
+MT, TTS, ASR **and** the annotation tool, all MIT, from one institution. Set
+against Finding 3, APAC splits cleanly: **India's substrate is permissive and
+readable; ASEAN's is per-checkpoint and must be reviewed model by model.**
+
+### Finding 9 — the general speech shelf, with the two traps marked
+
+| Repo | Licence (payload) | ★ / forks / commits | Use |
+|---|---|---|---|
+| [openai/whisper](https://github.com/openai/whisper) | **MIT** (`main/LICENSE`) | **110k** / 13.3k / 171 | The ASR baseline |
+| [SYSTRAN/faster-whisper](https://github.com/SYSTRAN/faster-whisper) | **MIT** (`master/LICENSE`) | 25.7k / 2.1k / 267 | CTranslate2 reimplementation — faster, less memory. The one to deploy |
+| [m-bain/whisperX](https://github.com/m-bain/whisperX) | **BSD** (`main/LICENSE`) | — | Word-level timestamps + diarization. Timestamps are what make a reading-fluency measure possible |
+| [k2-fsa/sherpa-onnx](https://github.com/k2-fsa/sherpa-onnx) | **Apache-2.0** (`master/LICENSE`) | **15.1k** / 1.7k / 2,092 | Offline STT+TTS+diarization+VAD, embedded-class. See Finding 2 |
+| [speechbrain/speechbrain](https://github.com/speechbrain/speechbrain) | **Apache-2.0** (`main/LICENSE`) | 11.9k / 1.7k / **10,611** | PyTorch toolkit, 200+ recipes over 40+ datasets, 20 tasks. The research-to-production bridge |
+| [espnet/espnet](https://github.com/espnet/espnet) | **Apache-2.0** (`master/LICENSE`) | 10.0k / 2.4k / **27,378** | End-to-end speech toolkit; deepest recipe archive for a new language |
+| [huggingface/parler-tts](https://github.com/huggingface/parler-tts) | **Apache-2.0** (`main/LICENSE`) | 5.6k / 586 / 199 | Prompt-controllable TTS — voice described in text |
+| [NVIDIA/NeMo](https://github.com/NVIDIA/NeMo) | **Apache-2.0** (`main/LICENSE`) | — | Full speech+LLM training stack where GPUs exist |
+| [pytorch/audio](https://github.com/pytorch/audio) | **BSD** (`main/LICENSE`) | — | Primitives |
+| [coqui-ai/TTS](https://github.com/coqui-ai/TTS) | **MPL-2.0** (`main/LICENSE.txt`) | **46.1k** / 6.2k / 4,668 | ⚠️ **Upstream unmaintained** — the company wound down. 46k★ is historical, not health |
+| [idiap/coqui-ai-TTS](https://github.com/idiap/coqui-ai-TTS) | **MPL-2.0** (`main/LICENSE.txt`) | 2.3k / 293 / **5,309** | ✅ **The live fork**, Idiap Research Institute (Switzerland). Its README: *"Fork of the original, unmaintained repository."* v0.27.0, PyPI `coqui-tts`. **More commits than the 46k★ original** |
+| [facebookresearch/seamless_communication](https://github.com/facebookresearch/seamless_communication) | **CC BY-NC-4.0** (`main/LICENSE`) | — | ❌ **Reject** — non-commercial. See Finding 6 |
+
+**Two of the three most-starred rows here are the wrong pick.** Coqui at 46.1k★
+is abandoned while its 2.3k★ fork has 641 more commits; Piper at 11.3k★ is
+frozen. **Stars record where attention went, not where the code lives now** — and
+on this shelf the signal that separates them is the commit count on the fork.
+
+### Declared gap — oral reading fluency has no permissive implementation
+
+Searched specifically for an open-source **oral reading fluency (ORF)** assessor:
+a child reads aloud, the system computes words-correct-per-minute. It is the
+highest-volume literacy measurement in primary education and the most obvious
+application of this entire shelf.
+
+**Nothing permissive exists.** What exists:
+
+- **FLORA**, **Literably** (IES-funded prototype), Amplify **Text Reading Online**, **SoapBox Labs** — all **proprietary products**, no public repository.
+- An Italian ASR fluency web app implementing the Cornoldi MT battery — **described in a paper, no repository located**.
+- **The Ghana ORF Dataset** — *publicly available*: 130 students aged 9–18, original passages, audio and human transcriptions, with **Whisper V2 measured at 10.3% WER** on Ghanaian students reading aloud (Springer, *IJAIED*, [10.1007/s40593-024-00435-9](https://doi.org/10.1007/s40593-024-00435-9)).
+
+**This is the clearest build opportunity the KB has recorded.** The components are
+all permissive and all now on the shelf — whisperX (BSD) for word-level
+timestamps, faster-whisper (MIT) or sherpa-onnx (Apache-2.0) for the transcript,
+a public dataset with a published accuracy baseline to evaluate against — and
+the category is owned entirely by closed products. See **P17**.
+
+### Declared gap — OpenBibleTTS: a 2026 corpus with no repository found
+
+**OpenBibleTTS** (arXiv [2606.09553](https://arxiv.org/abs/2606.09553), June 2026)
+is a large-scale TTS benchmark over **37 underrepresented languages**, derived
+from the CC BY-SA Open Bible platform, with processed datasets, alignments and
+trained models stated to be open-sourced. Its predecessor **BibleTTS** is on
+OpenSLR as resource 129.
+
+**No GitHub repository was located for OpenBibleTTS, so it gets no table row.**
+Two cautions if it is chased later: the source corpus is **CC BY-SA**, i.e.
+**share-alike**, which is a live question for a fine-tuned derivative and should
+not be waved through as "commercial-friendly"; and scripture-derived speech
+carries a **register and domain mismatch** with classroom material that its own
+paper measures (no single system dominates in- vs out-of-domain).
+
+### What this pass says about method
+
+The fifth pass's lesson was *change the channel when a gap persists*. This pass
+changed the **layer** instead of the channel — searching the substrate under the
+products rather than the products — and the layer that had **zero** mentions in
+this KB turned out to hold a 15.1k★ Apache-2.0 component that resolves the
+offline-voice problem outright.
+
+And it found the inverse of the fifth pass's lesson about star-ordered discovery.
+There, low stars hid real assets. Here, **high stars hid dead ones**: 46.1k★
+abandoned, 11.3k★ frozen. The reliable reads were **archive status, the successor
+notice, and commit count on the fork** — three fields, none of which is
+popularity. **Check whether a repository is still alive before checking how
+popular it is.**
+
 ## 2026-10-06 — fifth pass: three regional gaps refuted in one pass, all of them at 0★
 
 Channel new to this KB this pass: **institution-first search** — querying by

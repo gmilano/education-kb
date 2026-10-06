@@ -30,6 +30,7 @@ does not).
 | Oppia | [oppia/oppia](https://github.com/oppia/oppia) | **Apache-2.0** (`LICENSE`) | Authoring and delivery of interactive lessons with misconception handling built into the pedagogy. Permissive, and designed for learners with limited educational resources. |
 | Mentingo | [Selleo/mentingo](https://github.com/Selleo/mentingo) | **MIT** (`LICENSE`) | **Added third pass, 2026-10-06 — and it changes the shape of this shelf.** Self-hosted, multi-tenant, white-label LMS with a **built-in AI mentor**, built for corporate L&D, onboarding and compliance rather than academic use. 91★, 29 forks, TypeScript, maintained by Selleo (Poland). The second fully permissive end-to-end platform here and **the only AI-native one**. |
 | Coursemology | [Coursemology/coursemology2](https://github.com/Coursemology/coursemology2) | **MIT** (`master/LICENSE`, © 2023 Coursemology.org) | **Added fifth pass, 2026-10-06.** NUS-origin gamified LMS — Rails 8 API, React client, Keycloak auth, **15,802 commits**, 158★, 78 forks. "Currently supported by the AI Centre for Educational Technologies" and the host platform for Singapore's **Codaveri** AI programming tutor. The **third** fully permissive end-to-end platform here, the only one with a decade-scale commit history, and the strongest fit for **CS and programming teaching in higher education**. Read the concentration-risk note below before proposing it. |
+| Sunbird | [Sunbird-Ed/SunbirdEd-portal](https://github.com/Sunbird-Ed/SunbirdEd-portal) | **MIT** (`master/LICENSE`) | **Added sixth pass, 2026-10-06 — found in an earlier pass and never shelved here.** EkStep Foundation's platform, deployed as India's **DIKSHA** national school platform and recognised a **Digital Public Good**. **41★ / 317 forks / 38,046 commits** — a 7.7x forks-to-stars inversion. 18+ languages, NCERT/CBSE/SCERT curricula, 100+ micro-services. The **fourth** fully permissive end-to-end platform here and **the only one proven at nine-figure learner scale**; its 100+ services are the operational cost. Full entry at the end of this file. |
 
 ## Content, assessment and delivery components
 
@@ -337,3 +338,60 @@ Two things follow:
    anywhere in this KB. Pattern **P8** (course materials → Agent Skills) is the
    closest thing here, and it stops short of letting a non-technical educator
    author and publish one.
+
+## Sunbird — the fourth permissive platform, and the only one at nine-figure scale
+
+Promoted to this file in the sixth pass of 2026-10-06. **It was found in an
+earlier pass, recorded in `repos/trending.md`, and never shelved here** — so five
+rebuilds of this file presented Moodle, Open edX, Canvas, Mentingo, OpenMAIC and
+Coursemology without it. The filing failure is written up in `repos/trending.md`,
+sixth pass, Finding 1.
+
+### Verified specification
+
+| Field | Value |
+|---|---|
+| Repo | [Sunbird-Ed/SunbirdEd-portal](https://github.com/Sunbird-Ed/SunbirdEd-portal) |
+| Licence | **MIT**, read from `master/LICENSE` |
+| Signals | **41★ · 317 forks · 38,046 commits** · not archived |
+| Built by | **EkStep Foundation** (India) |
+| Deployed as | **DIKSHA** — India's national school-education platform, run with NCERT/CIET |
+| Status | **Digital Public Good**, recognised by the Digital Public Goods Alliance |
+| Scale | README mission: *"improve learning outcomes for 200 million children across India"* |
+| Localisation | **18+ languages**; **NCERT, CBSE and SCERT** curricula |
+| Architecture | **100+ micro-services** offered as building blocks, not a monolith |
+
+### Why it belongs on the shortlist
+
+**It is the only platform on this shelf that is simultaneously MIT and proven at
+national scale.** Coursemology's 15,802 commits made it this KB's "permissive LMS
+with real history"; Sunbird has **38,046** and a deployment measured in hundreds
+of millions of learners. For a ministry, state or large-system engagement, that
+combination — permissive licence, DPG status, curriculum alignment already built,
+multilingual by construction — is the strongest commercial position in this file.
+
+**The forks-to-stars inversion is the signal to read.** 41 stars against **317
+forks** is **7.7×**, the pattern an earlier pass established for infrastructure
+that people deploy rather than admire. Judged on stars, Sunbird looks like a
+hobby project; judged on forks and commits, it is the most-deployed platform here.
+
+**It pairs directly with the sixth pass's language shelf.** Sunbird is already
+18-language; `AI4Bharat/IndicTrans2` (MIT, 22 scheduled languages),
+`Indic-TTS` (MIT, 13 languages) and `IndicWav2Vec` (MIT, ASR) are all MIT and all
+from IIT Madras. **A Sunbird deployment and its language layer can be assembled
+entirely from MIT components** — the only place in this KB where that is true of a
+whole stack. See `repos/foundations.md` and pattern **P16**.
+
+### The risks, stated plainly
+
+- **The micro-service count is the cost.** 100+ services is an operations
+  commitment, not a convenience. Scope the DevOps work explicitly; the
+  `project-sunbird/sunbird-devops` repository (MIT, 62★ / 392 forks) exists
+  precisely because this is the hard part.
+- **It is built around Indian curricular structures.** NCERT/CBSE/SCERT alignment
+  is a feature in APAC and **work to be undone** elsewhere. Do not propose it for a
+  North America or EMEA engagement as a drop-in; propose Coursemology or Mentingo
+  there.
+- **41 stars means a thin public community relative to its scale.** Expect
+  institutional documentation and ministry-grade deployment guides rather than
+  Stack Overflow answers. Budget for reading source.
