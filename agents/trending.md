@@ -8,6 +8,172 @@ updated: 2026-10-06
 
 > **Append-only.** Newest dated section on top; history preserved below.
 
+## 2026-10-06 — nineteenth pass: the deadline moved and the duty did not, and this KB's own correction never reached the trend that quotes it
+
+**Channel new to this KB this pass: the regulatory-citation channel** — sweeping for
+implementations of **the exact technical standard a binding rule names** (WCAG 2.1 AA, WCAG 2.2 AA,
+**EN 301 549**, **PDF/UA**) rather than by topic, star count, funder, ministry, institution,
+function, licence scope, platform name, language, MCP registry or conformance register. Seventh
+channel used. Full rows and licence provenance in `agents/top.md`; the engine tier in
+`repos/foundations.md`.
+
+### 🔴 Finding 1 — trend 39 regressed against trend 17, in the same file, and the stale row is the quotable one
+
+`intel/trends.md` trend 39 ("The regulation stopped being forthcoming and started being in force")
+carried, in its headline table: **`EU AI Act, high-risk obligations | 🔴 Apply from August 2026 —
+in force now`**. That is **wrong**, and this KB already knew it: **trend 17**, in the same file,
+records **Regulation (EU) 2026/1744** (*Digital Omnibus on AI*) — Parliament **16 June 2026**,
+Council **29 June 2026**, signature **8 July 2026**, OJ **24 July 2026**, in force **27 July 2026**,
+CELEX **32026R1744** — deferring **Annex III stand-alone high-risk from 2026-08-02 to 2027-12-02**
+and Annex I embedded to **2028-08-02**. Independently re-verified this pass against four law-firm
+and standards-body readings.
+
+🔵 **The failure is propagation, not research.** Trend 17 opens with *"This supersedes the August
+2026 dates used in trend 2 and pattern P4"* — it enumerated the places it had to reach, and a
+**later** pass then wrote trend 39 and reintroduced the error. A correction that names its
+dependents cannot cover assertions written after it.
+
+⚠️ **And it was the worst place to leave stale, because trend 39 is a summary table.** A proposal
+writer quotes the table, not the twenty-two paragraphs in this file that have the dates right.
+**Both stale assertions are corrected in place this pass** — the trend 39 row, and the
+seventeenth-pass EMEA paragraph in `intel/market.md` that read *"they are in force as this is
+written, not forthcoming"*.
+
+🟢 **The commercially important half, stated the way it should be said to a client:** the
+**transparency** duties of Article 50 **are** in force, from **2026-08-02**, and the Omnibus did
+**not** defer them. What moved is the **high-risk** set where education lives (Annex III, point 3:
+admissions and access, evaluation of learning outcomes, level placement, and monitoring for
+prohibited behaviour during tests). ⚠️ **"The AI Act takes full effect in August 2026" is false in
+both directions** — it over-claims the high-risk duty and under-claims the labelling duty.
+
+### 🔴 Finding 2 — in 2026 the deadline moved in three of four regions, and the standard moved in none
+
+This is the pass's thesis, and it reframes the compliance offer.
+
+| Region | The 2026 instrument | What happened in 2026 | The technical standard |
+|---|---|---|---|
+| **North America** | DOJ rule under **ADA Title II** (published 2024-04-24) | 🔴 **Interim Final Rule, 2026-04-20**: deadlines extended **one year** — **2027-04-26** for public entities serving ≥50,000, **2028-04-26** for <50,000 and special districts. DOJ's own commentary: it had *"overestimated the capabilities (whether staffing or technology) of covered entities to comply… in the time frames provided"* | **WCAG 2.1 Level AA — unchanged** |
+| **EMEA** | **EU AI Act** Annex III §3 | 🔴 Deferred **2026-08-02 → 2027-12-02** (Reg. (EU) 2026/1744) | Conformity duties unchanged |
+| **EMEA** | **European Accessibility Act** (Dir. (EU) 2019/882), in force since **2025-06-28** | ⚠️ **No deadline moved — but as of 2026-07-20 no version of EN 301 549 had been cited in the Official Journal under the EAA at all.** The draft that would do it, **v4.1.0 (November 2025)**, was still in combined Public Enquiry and Vote, running to **August 2026** | **EN 301 549** ≈ WCAG 2.1 AA for web content |
+| **APAC** | No cliff — standing mandates | 🟢 **Nothing moved, because nothing was pending.** India: **RPwD Act 2016** + **GIGW 3.0**, WCAG 2.1 AA, government portals including education. Japan: **JIS X 8341-3:2016** ≈ WCAG 2.0 AA, **mandatory** for government, encouraged for private. Australia: **AHRC guidance (April 2025)** affirming **WCAG 2.2 AA** as the minimum under the 1992 Disability Discrimination Act, plus the DTA **Digital Experience Policy** for new government services | WCAG 2.0 AA → 2.2 AA depending on country |
+| **LATAM** | 🔴 **No accessibility deadline found in any market** | The driver is a **programme**, not a rule: UNICEF's **Accessible Digital Textbooks** initiative | Universal Design for Learning, not a conformance standard |
+
+🔵 **What this does to the offer.** A compliance sprint sells against a date. **Three of these dates
+moved in 2026 and the obligations behind them did not**, so the sprint pitch is now the weakest
+version of this engagement — and in North America it is actively wrong-footed: a district that
+budgeted for April 2026 has already been told it has until 2027. 🟢 **The offer that survives the
+extension is remediation *capacity*** — an estate inventory, a per-criterion manual-review queue,
+a regression baseline, and a repeatable pipeline — because the backlog is the same size either way
+and the extension exists precisely because buyers could not staff it. ⚠️ **Never build a proposal's
+urgency on a date a regulator has already moved once.**
+
+### ⚠️ Finding 3 — the EMEA gap that is not a deadline: no cited standard means no presumption of conformity
+
+The EAA has been in force since **2025-06-28**. A harmonised standard cited in the Official Journal
+is what gives a supplier a **presumption of conformity** — and as of the reading above, **none has
+been cited under the EAA**.
+
+🔴 **So in EMEA the obligation is live and the safe harbour is not.** ⚠️ **The practical consequence
+for a delivery contract:** conformance cannot be discharged by pointing at a standard number, so
+the deliverable has to be **evidence** — which criteria were tested, by which engine and version,
+which were resolved by human judgement, and which remain undetermined. 🟢 **That is exactly the
+artefact [`tomaszboloz/WCAG-Accessibility-Skills`](https://github.com/tomaszboloz/WCAG-Accessibility-Skills)
+(MIT, 10★) produces and the big engines do not**, and it is why a 10★ repository is on this KB's
+shelf next to a 76.8k★ one.
+
+### 🟢 Finding 4 — the permissive conformance-engine tier exists, and nineteen passes never recorded it
+
+Six engines, all payload-verified 2026-10-06, none previously in this KB. Full rows in
+`repos/foundations.md`.
+
+| Repo | Licence (payload) | ★ / forks | Why it is here |
+|---|---|---|---|
+| [IBMa/equal-access](https://github.com/IBMa/equal-access) | **Apache-2.0** | 780 / 108 | **9 packages**: rule engine, browser extension, Node CLI, **Java**, Cypress, Karma, Vitest, rule server, React report. The only **Apache-2.0** engine with CI integrations *and* a JVM binding |
+| [GoogleChrome/lighthouse](https://github.com/GoogleChrome/lighthouse) | **Apache-2.0** | 30.9k / 9.8k | Runs locally, no data leaves the machine; CLI and Node module |
+| [microsoft/accessibility-insights-web](https://github.com/microsoft/accessibility-insights-web) | **MIT** | 955 / 182 | TypeScript; guided assessment workflows, not just a scan |
+| [tesseract-ocr/tesseract](https://github.com/tesseract-ocr/tesseract) | **Apache-2.0** | 76.8k / 10.8k | **100+ languages**, outputs **hOCR, ALTO, PAGE** and PDF — the OCR step for scanned textbooks |
+| [dequelabs/axe-core](https://github.com/dequelabs/axe-core) | ⚠️ **MPL-2.0** | 7.6k / 954 | WCAG 2.0/2.1/2.2, A/AA/AAA. **The engine inside every MIT a11y agent in this KB** |
+| [ocrmypdf/OCRmyPDF](https://github.com/ocrmypdf/OCRmyPDF) | ⚠️ **MPL-2.0** | 34.9k / 2.4k | Text layer + PDF/A on scanned PDFs. **Not** tagged PDF/UA |
+
+🔵 **The shape of the tier is the finding: the *testing* layer is permissive and the *assistive
+application* layer is copyleft.** Everything a studio needs to **measure and remediate** an estate
+is Apache-2.0 or MIT (with two MPL-2.0 engines usable unmodified). Everything an end user **runs**
+— AAC boards, screen readers — is GPL, AGPL or LGPL: `cboard-org/cboard` **GPL-3.0** (759★),
+`asterics/AsTeRICS-Grid` **AGPL-3.0** (124★/65, AsTeRICS Foundation + UAS Technikum Wien, funded by
+the City of Vienna — EMEA-placed), `pa11y/pa11y` **LGPL-3.0**, `nvaccess/nvda` **GPL-2.0-or-later
+with two exceptions** (⚠️ in `master/copying.txt`, outside every shortlist filename). 🟢 **This is
+good news, not bad:** the billable work is remediation of the client's own estate, and that is
+precisely the half that is permissive. ⚠️ **Do not propose forking the AT application.**
+
+### 🔴 Finding 5 — a new failure mode: a complete MIT grant over a capability that is not in the repository
+
+[`WCAG-Compliance/wcagc-mcp`](https://github.com/WCAG-Compliance/wcagc-mcp) — **MIT**, 0★ — is by
+its own README a *"thin, stateless adapter"* with *"no scan logic"*, forwarding a bearer token to
+the hosted **wcagc.com** API where *"all authentication, entitlements, quotas, and scan
+orchestration live"*. It needs an `mcp:scan` key from a wcagc account, quota-limited below the paid
+tiers.
+
+⚠️ **The six failure modes this KB already catalogues are all failures of the grant. This is a
+valid grant over absent code — and payload-reading marks it green.** The method gains one step:
+**after the licence passes, read the README for an API base URL, a bearer token or an account
+requirement.** Detail in `agents/top.md`.
+
+### ⚠️ Finding 6 — an eighth *declared and ungranted*, and the rendered page contradicted the payload
+
+[`AccessLint/skills`](https://github.com/AccessLint/skills) (**103★ / 15**) has genuinely strong
+content — five skills implementing **WCAG-EM** with pass/fail/**undetermined** per criterion,
+`file:line` source mapping, and regression diffing. Its README's final two lines are `## License`
+then `MIT`. There is **no licence file**: probed 10 filenames across `main` and `master`, and no
+`package.json`. 🔴 **MIT obliges you to retain a copyright notice and no holder is named anywhere**,
+so the stated grant cannot be complied with as written.
+
+🟢 **And the instrument note that matters more than the row:** a rendered-page read of this same
+repository reported *"License: MIT"*. The payload says there is no licence file. **One repository,
+two answers, and the payload is the one that would survive a client's legal review** — which is
+the entire justification for this KB's verification rule, demonstrated rather than argued.
+
+### ⚠️ Finding 7 — the licence that grants the client and excludes the integrator
+
+[`sign/translate`](https://github.com/sign/translate) (sign.mt, now *"Rylo Translate"*) is **not
+OSI-licensed**. Its `LICENSE.md` tiers the grant **by type of legal entity**: individuals,
+non-profits and **educational institutions** free; **for-profit commercial organisations need a
+separate licence**. 🔴 **The university may run it; Globant may not ship it.** Every earlier failure
+mode asks *"is there a grant?"* — this one asks **"is there a grant for *us*?"**, and a
+permissive-licence filter answers neither, because the file is not an OSI licence at all. The
+licence column in this KB should be read as two: the grant to the **client**, and the grant to the
+**integrator**.
+
+### Declared gaps — searched this pass, found nothing, written down so silence is not mistaken for coverage
+
+1. 🔴 **No permissive PDF/UA remediation engine.** veraPDF **validates** (dual GPL/MPL, and its
+   licence files are named `LICENSE.GPL` / `LICENSE.MPL`, outside every
+   shortlist filename — present on `master`, absent from `main`); OCRmyPDF adds a text
+   layer (MPL-2.0) but **not** structural tagging. Courseware is PDFs and both Title II and the EAA
+   cover documents. **Price the tagging as labour.**
+2. 🔴 **No permissive software references EN 301 549** except the MIT-over-SaaS adapter above.
+3. 🔴 **No repository behind the UNICEF ADT programme**, including **Uruguay's AI-led ADT prototype
+   (2025)**. Searched by programme, by country and by Brazil's PNLD. See `intel/market.md`, LATAM.
+4. 🔴 **No permissive sign-language education asset** — the one known stack is entity-tiered.
+5. ⚠️ **Carried over unclosed for a fourth consecutive pass:** the four-vendor anti-AI-training ToU
+   reads (**EGRESS_BLOCKED**) and the licence ask on [`IFRN/suapi`](https://github.com/IFRN/suapi)
+   (an outward-facing write on a third party's repository, with no mandate here). **Both still need
+   a human.** This pass adds a sixth such item: a `LICENSE` request to `AccessLint` — same
+   constraint, not sent.
+
+### The method note for this pass
+
+🟢 **The rule tells you what to search for.** *"Accessibility"* is a topic and returns blogs;
+**WCAG 2.2 AA**, **EN 301 549** and **PDF/UA** are proper nouns and return software. Fifteenth
+consecutive pass in which every new row came from a proper noun rather than from *"AI education"*,
+and the second — after pass 18's QTI — where the proper noun was **a standard named in a binding
+rule**. ⚠️ **Instrument:** `api.github.com` **403** and `github.com` HTML **403** through this
+proxy, both re-confirmed; `raw.githubusercontent.com` is reachable, so licences are first-hand and
+star counts are rendered-page reads. 🔵 **One instruction for the next pass, scoped so it is
+executable unattended:** take the **three APAC standards named in Finding 2** (GIGW 3.0,
+JIS X 8341-3, the DTA Digital Experience Policy) and sweep each as a proper noun. This pass placed
+them as *regulation*; nobody has yet asked whether any of them has an implementation, and APAC is
+where this KB's permissive supply is thinnest.
+
 ## 2026-10-06 — eighteenth pass: the one standard this KB never swept is the only one with a *certified* permissive implementation — and a fork nearly entered the shelf again
 
 **Channel new to this KB this pass: the standards-body conformance register** — searching by

@@ -1281,3 +1281,54 @@ overwhelmingly permissive**, and they sit exactly at the seam §34 identified �
 IP lives at the plugin seam of copyleft platforms, not beside them.* **You will not get a permissive
 LMS. You can get a permissive, certified assessment tier and a permissive metadata layer to bolt
 onto the copyleft one you inherit.**
+
+## Added in the nineteenth pass of 2026-10-06 — the assistive-technology tier, and the licence verdict that applies to all of it
+
+This page exists for **real systems a client already runs or could run, that AI can be layered
+onto**. The assistive-technology estate qualifies on both counts and was never on it: these are the
+applications a disabled learner actually operates, they are deployed in schools today, and three of
+the four are customisable. Licences read from each repository's own payload on
+`raw.githubusercontent.com`, 2026-10-06; counts from the rendered page the same day.
+
+### The tier
+
+| Platform | Repo | Licence (read from payload) | ★ / forks | What it is, and where it sits |
+|---|---|---|---|---|
+| **Cboard** | [cboard-org/cboard](https://github.com/cboard-org/cboard) | 🔴 **GPL-3.0** (`master/LICENSE.txt`) | **759** | AAC communication board with symbols and text-to-speech, browser-based PWA. **33 languages, 3,400+ Mulberry symbols.** Backed by **UNICEF's Office of Innovation and Microsoft**; © Assistive Technology LLC. Used for cerebral palsy, intellectual disability and autism. 🟢 **The reference AAC deployment in LATAM and the one a ministry will already have heard of.** |
+| **AsTeRICS Grid** | [asterics/AsTeRICS-Grid](https://github.com/asterics/AsTeRICS-Grid) | 🔴 **AGPL-3.0** (`master/LICENSE`) | **124 / 65** | AAC app with **offline support**, flexible input (switch, eye-gaze, touch), multilingual TTS, media and smart-home control. JavaScript. **AsTeRICS Foundation + UAS Technikum Wien, funded by the City of Vienna (2018–2025).** 🟢 **EMEA-placed, EU-funded, and offline-capable** — the shape a European municipal tender asks for. ⚠️ **AGPL-3.0: network use triggers source disclosure.** |
+| **NVDA** | [nvaccess/nvda](https://github.com/nvaccess/nvda) | 🔴 **GPL-2.0-or-later, with two stated exceptions** (⚠️ `master/copying.txt`) | not read this pass | The dominant free screen reader on Windows, and therefore **the client against which a remediated LMS is actually tested**. ⚠️ **Licence filename note:** `copying.txt` is outside every shortlist this KB probes (`LICENSE*`, `LICENCE`, `COPYING`), so an 11-filename sweep over `main`/`master` reports NVDA as **ungranted** unless lowercase `copying.txt` is in the list. **Add it.** |
+| **veraPDF** | [veraPDF/veraPDF-library](https://github.com/veraPDF/veraPDF-library) | 🔴 **Dual GPL / MPL** (`LICENSE.GPL` + `LICENSE.MPL`) | not read this pass | The reference **PDF/A and PDF/UA validator**. ⚠️ **Both licence files are named outside every shortlist this KB probes** — `LICENSE.GPL` and `LICENSE.MPL`, present on `master` and on `integration`, absent from `main` — so an 11-filename sweep calls it ungranted while the grant is in the repository root. 🟡 **Invoke it as a CLI, do not vendor it** — then the dual licence stays outside the deliverable. |
+
+### 🔴 The verdict that applies to every row above — do not propose forking any of them
+
+**All four are copyleft, and that is not an accident of this sample.** Searched this pass by
+standard, by assistive-technology topic, by AAC, by screen reader and by sign language: **no
+permissive end-user assistive application was found in education.** The one apparent exception,
+[`sign/translate`](https://github.com/sign/translate), is worse than copyleft — a **non-OSI,
+entity-tiered licence** that grants educational institutions free use and **requires a separate
+commercial licence for for-profit organisations**, i.e. the client is granted and the integrator is
+not (`agents/top.md`).
+
+🟢 **What to do instead, and it is the better business anyway.** The AT applications are the
+*client's* deployment, not the studio's product. The permissive work sits **around** them:
+
+1. **Remediate the estate they read.** An LMS, its course content, its PDFs and its ePubs have to
+   be navigable by NVDA and by Cboard's switch input. That remediation pipeline is **Apache-2.0 and
+   MIT** end to end (`repos/foundations.md`), and it is the deliverable in `compose/patterns.md` P36.
+2. **Integrate, don't fork.** Cboard and AsTeRICS Grid both export and import board sets; an
+   AI layer that *generates* symbol boards from a lesson plan and hands them over as data touches
+   no GPL code. ⚠️ **Generating data for a GPL application does not make your generator GPL.
+   Linking into it does.** Keep the boundary at the file format.
+3. **Test against them.** NVDA is free and scriptable, so "verified with NVDA" is an evidence line
+   a studio can produce at no licence cost — and it is the line that distinguishes a real
+   conformance claim from a scanner report.
+
+### Platform selection shortcut — nineteenth-pass additions
+
+| If the client needs… | Take | Why |
+|---|---|---|
+| An AAC deployment a LATAM ministry will recognise | **Cboard** (GPL-3.0), unforked | UNICEF/Microsoft backing, 33 languages, PWA — deploy and configure, build the AI layer outside it |
+| An AAC deployment for a European municipal tender | **AsTeRICS Grid** (AGPL-3.0), unforked | EU-funded, offline-capable, alternative input methods. ⚠️ AGPL on network use |
+| To prove a remediated LMS actually works for a blind student | **NVDA** (GPL-2.0+) as a *test client* | Free, scriptable, and the screen reader the user actually has |
+| To validate that a PDF is genuinely PDF/UA | **veraPDF** as a *CLI*, not a dependency | Dual-licensed; invoking it keeps the obligation out of the deliverable |
+| **To produce** an accessible tagged PDF | 🔴 **Nothing permissive exists** | Searched and not found. Price the tagging as human labour (`repos/foundations.md`) |

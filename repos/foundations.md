@@ -1375,3 +1375,63 @@ for education standards**, so Python *is* served for **metadata and curriculum v
 🟢 **The hole is LTI-shaped, not Python-shaped — and that makes the contribution opening cheaper,
 not smaller.** It is one protocol, with a procurement-scored buyer already attached (39% of US
 districts score interoperability in the RFP rubric). Corrected in place in `intel/trends.md` §28.
+
+## Added in the nineteenth pass of 2026-10-06 — the conformance-engine tier, which nineteen passes never recorded
+
+**Channel: the regulatory-citation channel** — sweeping for implementations of the exact technical
+standard a binding rule names (WCAG 2.1 AA, WCAG 2.2 AA, EN 301 549, PDF/UA) rather than by topic.
+Every licence below was read from the repository's own payload on `raw.githubusercontent.com` on
+2026-10-06, across `main` / `master` / `develop` and 7–11 filename variants. Star and fork counts
+were read from the rendered repository page the same day (`api.github.com` is 403 here).
+
+**Why these belong in *foundations* and not in trending:** none of them is new, none is
+education-specific, and that is the point — they are the deterministic substrate that every
+accessibility claim in a client deliverable has to rest on, and this KB's accessibility work so far
+recorded the **agent** layer (`Community-Access/accessibility-agents`, MIT) without the engines
+underneath it. An agent that reports WCAG findings with no engine beneath it is producing an
+opinion, not evidence.
+
+### The permissive engines — Apache-2.0 and MIT
+
+| Repo | Licence (read from payload) | ★ / forks | What it gives you |
+|---|---|---|---|
+| [IBMa/equal-access](https://github.com/IBMa/equal-access) | **Apache-2.0** (`master/LICENSE`) | **780 / 108** | IBM Equal Access Accessibility Checker. **Nine packages** in one repo: `accessibility-checker-engine` (the rules), `accessibility-checker` (Node), `accessibility-checker-extension` (browser devtools), **`java-accessibility-checker`**, `cypress-accessibility-checker`, `karma-accessibility-checker`, `vitest-accessibility-checker`, `rule-server`, `report-react`. JavaScript. 🟢 **The pick when the deliverable must run in the client's CI**, and the only engine here with a **JVM** binding — which matters on a Java LMS estate. |
+| [GoogleChrome/lighthouse](https://github.com/GoogleChrome/lighthouse) | **Apache-2.0** (`main/LICENSE`) | **30.9k / 9.8k** | Audits pages for accessibility alongside performance and best practices. **Runs locally and sends nothing to a remote server** — which is what makes it quotable under an EMEA data-residency clause. CLI, Node module, or Chrome DevTools. 🟡 Its a11y category is axe-core-derived and deliberately partial: a gate, not an audit. |
+| [microsoft/accessibility-insights-web](https://github.com/microsoft/accessibility-insights-web) | **MIT** (`main/LICENSE`, © Microsoft Corporation) | **955 / 182** | Chrome/Edge extension for assessing web accessibility. TypeScript. 🟢 **The differentiator is the guided assessment workflow** — it walks a human through the criteria a scanner cannot decide, which is the half of a conformance claim that automation cannot produce. |
+| [tesseract-ocr/tesseract](https://github.com/tesseract-ocr/tesseract) | **Apache-2.0** (`main/LICENSE`) | **76.8k / 10.8k** | OCR engine, **100+ languages**, LSTM line recogniser. Outputs plain text, **hOCR**, **ALTO**, **PAGE**, PDF and text-only PDF. 🟢 **The entry point for scanned textbooks** — and the structured output formats are what make a downstream tagging step possible at all. ⚠️ Latest tagged release on the page is **5.0.0 (2021-11-30)** while development continues on `main`; pin a distribution package rather than the tag. |
+
+### The weak-copyleft engines — usable, with two obligations
+
+| Repo | Licence (read from payload) | ★ / forks | The obligation |
+|---|---|---|---|
+| [dequelabs/axe-core](https://github.com/dequelabs/axe-core) | ⚠️ **MPL-2.0** (`master/LICENSE`) | **7.6k / 954** | Accessibility engine for automated web UI testing; **WCAG 2.0, 2.1 and 2.2 at A, AA and AAA**, multi-locale, 5,586 commits on `develop`. 🟢 **MPL-2.0 is file-level copyleft: using it unmodified as a dependency does not reach the studio's own files.** ⚠️ **Two things do bite** — it must appear in the client's SBOM with its licence, and **editing a rule file puts that file under MPL-2.0 with source-disclosure attached**. Tune through configuration, never by patching rules. 🔵 **This is the engine inside every MIT accessibility agent in this KB** (`accessibility-agents` declares `@axe-core/cli`; `a11ymcp` declares `axe-core` and `@axe-core/puppeteer` at runtime), so the inheritance is not optional — it is the shelf. |
+| [ocrmypdf/OCRmyPDF](https://github.com/ocrmypdf/OCRmyPDF) | ⚠️ **MPL-2.0** (`main/LICENSE`) | **34.9k / 2.4k** | Adds an OCR text layer to scanned PDFs, deskews, and emits **PDF/A**. Python; Linux/macOS/Windows/FreeBSD. Wraps Tesseract. 🟢 Same file-level reasoning as axe-core — invoke it as a tool and nothing propagates. 🔴 **Read the limit precisely: a searchable PDF is not an accessible PDF.** It produces no tags, no reading order and no structure, so it does **not** satisfy PDF/UA. |
+
+### 🔴 The gap this tier makes visible — validation is served, remediation is not
+
+| Need | Permissive option | Status |
+|---|---|---|
+| Scan web content against WCAG | equal-access (Apache-2.0), axe-core (MPL-2.0), Lighthouse (Apache-2.0) | 🟢 **Well served** |
+| Guide the manual half of a claim | accessibility-insights-web (MIT) | 🟢 Served |
+| OCR a scanned textbook | Tesseract (Apache-2.0) | 🟢 Served |
+| Make a scanned PDF searchable | OCRmyPDF (MPL-2.0) | 🟡 Served, and **not the same thing** as accessible |
+| **Validate PDF/UA** | [veraPDF/veraPDF-library](https://github.com/veraPDF/veraPDF-library) | 🔴 **Dual GPL / MPL** — `LICENSE.GPL` and `LICENSE.MPL`, ⚠️ **filenames outside every shortlist this KB probes** (present on `master` and `integration`, absent from `main`), so an 11-filename sweep reports it ungranted while the grant is in the root |
+| **Produce tagged, accessible PDF/UA** | — | 🔴 **Nothing permissive found.** Searched PDF/UA remediation, tagged PDF, structure tagging, accessible PDF generation |
+| Reference the **EN 301 549** clause set | — | 🔴 **Nothing** except an MIT adapter to a paid API (`agents/top.md`) |
+
+🔵 **The rule this yields for a proposal:** everything up to *"here is a per-criterion finding with
+evidence"* can be built on Apache-2.0 and MIT with two MPL-2.0 tools invoked unmodified. Everything
+past *"and here is the remediated PDF"* is **human labour on a copyleft validator**. ⚠️ **Scope and
+price the document estate separately from the web estate.** They look like one deliverable in a
+statement of work and they are not.
+
+### 🟢 Why this shelf changes a conclusion rather than lengthening a list
+
+This KB has recorded, across several passes, that permissive education supply collects at the
+*edges* of platforms it may not fork. The conformance tier is the clearest instance yet and it
+inverts the usual complaint: **the measuring layer is permissive and the end-user application layer
+is copyleft** (`cboard` GPL-3.0, `AsTeRICS-Grid` AGPL-3.0, `pa11y` LGPL-3.0, `nvda` GPL-2.0+ in
+`copying.txt` — see `verticals/solutions.md`). 🟢 **Since the billable work is remediating the
+client's own estate rather than shipping an assistive application, the half a studio needs is the
+half that is permissive.** That is a better position than this KB has been able to report for any
+other tier in education, and it is worth stating plainly in a capability deck.

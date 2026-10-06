@@ -8,6 +8,71 @@ updated: 2026-10-06
 
 > **Append-only.** Newest dated section on top; history preserved below.
 
+## 2026-10-06 — nineteenth pass: the standard named in the rule is a proper noun, and it returns six engines this KB never had
+
+### The mandatory queries, run with the year **computed** (2026), not hardcoded
+
+| Query | Result |
+|---|---|
+| `top open source AI agents education 2026 github MIT` | 🔴 Generalist frameworks again — OpenClaw (385k★), browser-use (108k★), Mem0 (62.7k★), AutoGen (60.3k★), Dify (151.6k★), plus a "Hermes Agent" claim this KB has not verified and does not record. **Zero education-specific repositories. Fifteenth consecutive pass.** |
+| `github trending education AI 2026` | 🔴 `rohitg00/ai-engineering-from-scratch`, *AI Engineering Hub*, *Awesome LLM*, `speedyapply/2026-AI-College-Jobs` (5.2k★) — **courses about AI and job lists, not software for education.** The homonym again |
+| `open source platform education LMS SIS MIT Apache 2026` | 🟡 Returns the shelf this KB already holds — Moodle (**400M+ users, 150k sites**), Open edX, Sakai, ILIAS, Chamilo, OpenEduCat. **No new platform.** One usable datum: a 2026 Global Market Insights figure of **31% lower TCO** for open-source LMS adopters |
+| `AI education industry trends 2026` | 🟡 Market figures only (see `intel/market.md`): **$7.52B (2025) → $10.6B (2026)**, 40.9% CAGR, K-12 **45.62%** of adoption, STEM **34.78%** of revenue, language learning fastest-growing, cloud **71.22%** share (2024) |
+| **`open source WCAG 2.2 AA / EN 301 549 / PDF-UA engine Apache MIT`** | 🟢 **The pass's entire yield — six engines and five agents, none previously in this KB.** Below |
+
+🔵 **Sixteenth pass of the same diagnosis, and it is a property of the query, not of the world:**
+*"AI education"* is a homonym and the open web answers the other sense of it. **Every repository
+added in the last seven passes came from a proper noun** — a standard, an agency, a platform, a
+ministry. Pass 18's proper noun was **QTI**. This pass's were **WCAG 2.2 AA**, **EN 301 549** and
+**PDF/UA**, and the reason they worked is that *a binding rule names them*: read the obligation,
+take the standard it cites, sweep for that string.
+
+### 🟢 The conformance-engine tier — payload-verified 2026-10-06, full rows in `repos/foundations.md`
+
+| Repo | Licence (payload) | ★ / forks | Note |
+|---|---|---|---|
+| [IBMa/equal-access](https://github.com/IBMa/equal-access) | **Apache-2.0** | 780 / 108 | 9 packages incl. **Java**, Cypress, Karma, Vitest, Node CLI |
+| [GoogleChrome/lighthouse](https://github.com/GoogleChrome/lighthouse) | **Apache-2.0** | 30.9k / 9.8k | Local-only execution — quotable under a data-residency clause |
+| [microsoft/accessibility-insights-web](https://github.com/microsoft/accessibility-insights-web) | **MIT** | 955 / 182 | **Guided manual assessment**, not just a scan |
+| [tesseract-ocr/tesseract](https://github.com/tesseract-ocr/tesseract) | **Apache-2.0** | 76.8k / 10.8k | 100+ languages; **hOCR / ALTO / PAGE** output |
+| [dequelabs/axe-core](https://github.com/dequelabs/axe-core) | ⚠️ **MPL-2.0** | 7.6k / 954 | WCAG 2.0/2.1/2.2 A–AAA. **The engine inside every MIT a11y agent here** |
+| [ocrmypdf/OCRmyPDF](https://github.com/ocrmypdf/OCRmyPDF) | ⚠️ **MPL-2.0** | 34.9k / 2.4k | Text layer + PDF/A. 🔴 **Not** tagged PDF/UA |
+
+### 🟢 The agent tier found alongside it — full rows and warnings in `agents/top.md`
+
+| Repo | Licence (payload) | ★ / forks | Note |
+|---|---|---|---|
+| [Community-Access/accessibility-agents](https://github.com/Community-Access/accessibility-agents) | **MIT** | **421 / 49** | **Re-read this pass**: v7.0.3, 11 agents, **39 MCP tools**, WCAG 2.2 AA, covers **PDF and ePub** and Office. This KB held it as a repository; it is now also on the agent shelf |
+| [ronantakizawa/a11ymcp](https://github.com/ronantakizawa/a11ymcp) | **MIT** | 92 / 18 | 6 tools, axe-core + Puppeteer, **no account, no API key** |
+| [tomaszboloz/WCAG-Accessibility-Skills](https://github.com/tomaszboloz/WCAG-Accessibility-Skills) | **MIT** | **10 / 2** | **All 86 active WCAG 2.2 criteria**, rules classed automated / semi-automated / manual, **zero production dependencies**, per-criterion **manual-review queue** |
+| [shawnmcb/claude-a11y-skills](https://github.com/shawnmcb/claude-a11y-skills) | **MIT** | not read | ⚠️ Licence on **`master`** — `main` 404s for every filename |
+| [AccessLint/skills](https://github.com/AccessLint/skills) | 🔴 **Declared and ungranted** | 103 / 15 | README says `MIT`; **no licence file, no copyright holder** (10 filenames × 2 branches) |
+| [WCAG-Compliance/wcagc-mcp](https://github.com/WCAG-Compliance/wcagc-mcp) | ⚠️ **MIT over a paid API** | 0 / 0 | **New failure mode** — valid grant, absent capability. Needs an `mcp:scan` key from wcagc.com |
+
+### 🔵 The finding that matters more than any single row
+
+**The tier splits by what the software is for, and the split runs the opposite way to every other
+tier in this KB.** The **measuring** layer — scan, audit, OCR, CI gate — is **Apache-2.0 and MIT**,
+with two MPL-2.0 engines safely invokable unmodified. The **assistive application** layer — what a
+disabled learner actually operates — is **uniformly copyleft**: `cboard-org/cboard` GPL-3.0 (759★),
+`asterics/AsTeRICS-Grid` AGPL-3.0 (124★/65, Vienna), `pa11y/pa11y` LGPL-3.0, `nvaccess/nvda`
+GPL-2.0-or-later with two exceptions (⚠️ `master/copying.txt`), `veraPDF` dual GPL/MPL on the
+licence files named `LICENSE.GPL` / `LICENSE.MPL`, outside every
+shortlist filename.
+
+🟢 **Since a studio's billable work here is remediating the client's own estate rather than shipping
+an AAC app, the half it needs is the permissive half.** ⚠️ **And the corollary that belongs in every
+proposal: do not offer to fork the assistive application.**
+
+### ⚠️ Two instrument notes
+
+1. `api.github.com` **403** and `github.com` HTML **403** through this environment's proxy, both
+   re-confirmed this pass. `raw.githubusercontent.com` is reachable, so **licences are first-hand**
+   and star counts are rendered-page reads.
+2. 🔴 **The two disagreed once, and the disagreement is the argument for the method.** A
+   rendered-page read reported `AccessLint/skills` as *"License: MIT"*; the payload shows **no
+   licence file on either branch**. The payload is the answer that survives a client's legal review.
+
 ## 2026-10-06 — eighteenth pass: a certified MIT assessment tier, a national agency's metadata layer, and two state estates that publish something other than code
 
 ### The mandatory queries, run with the year **computed** (2026), not hardcoded

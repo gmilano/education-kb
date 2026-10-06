@@ -2978,3 +2978,100 @@ teaching staff, graduates — and there is **nothing to fork from the state**.
 4. ⚠️ **This pattern is specified from Chile and Mexico only.** Colombia, Brazil, Peru and Argentina
    were **not** probed this pass. The CKAN-first design is what makes the untested regions cheap to
    add — it is not evidence that they are the same.
+
+## P36 — The accessible-courseware remediation line (North America Title II shape; ports to EMEA under the EAA and to APAC unchanged)
+
+**Added in the nineteenth pass of 2026-10-06.** The first pattern in this KB whose trigger is an
+**accessibility** obligation rather than an AI one, and the first whose entire toolchain is
+permissive while its *outcome* depends on priced human labour. Read `repos/foundations.md` (engine
+tier) and `agents/top.md` (agent tier) before scoping it.
+
+**The buyer and the trigger.** A public school district, community college or public university in
+the United States, covered by the **DOJ rule under ADA Title II** (published 2024-04-24, technical
+standard **WCAG 2.1 Level AA**). ⚠️ **The date is the thing most proposals will get wrong:** the DOJ
+**Interim Final Rule of 2026-04-20** extended compliance to **2027-04-26** for entities serving
+≥50,000 people and **2028-04-26** for smaller entities and special districts — DOJ's own reason
+being that it had *"overestimated the capabilities (whether staffing or technology) of covered
+entities to comply."* 🔵 **Sell the capacity, not the date.** The backlog did not shrink; the buyer
+was simply told it has another year, and the extension is documentary evidence that the buyer
+cannot staff this alone.
+
+### Components (every licence read from the repository's own payload, 2026-10-06)
+
+| Role | Component | Licence | Why this one |
+|---|---|---|---|
+| Deterministic web scan, in CI | [IBMa/equal-access](https://github.com/IBMa/equal-access) | **Apache-2.0** | 9 packages: Node CLI, Cypress, Karma, Vitest and **Java** bindings — it runs inside the client's existing pipeline, including a JVM LMS |
+| Second opinion / gate | [GoogleChrome/lighthouse](https://github.com/GoogleChrome/lighthouse) | **Apache-2.0** | Local-only execution, so it is quotable under a data-residency clause |
+| The criterion ledger | [tomaszboloz/WCAG-Accessibility-Skills](https://github.com/tomaszboloz/WCAG-Accessibility-Skills) | **MIT** | **All 86 active WCAG 2.2 criteria**, each classed automated / semi-automated / **manual**, with a per-criterion manual queue and **zero production dependencies**. This is the component that makes the deliverable an audit rather than a scan |
+| Guided human assessment | [microsoft/accessibility-insights-web](https://github.com/microsoft/accessibility-insights-web) | **MIT** | Walks a human through what no engine can decide |
+| Agent orchestration | [Community-Access/accessibility-agents](https://github.com/Community-Access/accessibility-agents) | **MIT** (engine: axe-core, **MPL-2.0**) | v7.0.3, 11 agents, **39 MCP tools**, WCAG 2.2 AA, and it reaches **Office documents, PDF and ePub** — where courseware lives |
+| Agent scan tool, no account | [ronantakizawa/a11ymcp](https://github.com/ronantakizawa/a11ymcp) | **MIT** (engine: axe-core, **MPL-2.0**) | 6 tools, `npx`, no API key — the fallback when the client forbids a vendor account |
+| OCR for scanned material | [tesseract-ocr/tesseract](https://github.com/tesseract-ocr/tesseract) | **Apache-2.0** | 100+ languages, and **hOCR / ALTO / PAGE** output that a tagging step can consume |
+| Searchable-PDF pass | [ocrmypdf/OCRmyPDF](https://github.com/ocrmypdf/OCRmyPDF) | ⚠️ **MPL-2.0** | Text layer + PDF/A. 🔴 **Searchable ≠ accessible** — see warning 2 |
+| PDF/UA validation | [veraPDF](https://github.com/veraPDF/veraPDF-library) | 🔴 **Dual GPL/MPL** (`LICENSE.GPL` / `LICENSE.MPL`) | **Invoke as a CLI only** |
+| Captions and audio description | [`whisper.cpp`](https://github.com/ggml-org/whisper.cpp) + [rhasspy/piper](https://github.com/rhasspy/piper) | **MIT** + **MIT** | Already on this KB's shelf. Title II's final rule covers **captioning and audio description**; both run on-premise, which is what an education-records clause requires |
+| Screen-reader verification | [nvaccess/nvda](https://github.com/nvaccess/nvda) | GPL-2.0+ — **as a test client** | Free and scriptable; "verified with NVDA" costs nothing and is the line a scanner report cannot produce |
+
+### Wiring
+
+1. **Inventory before anything else.** Crawl the estate and classify by *artefact type*, not by
+   page: LMS pages, PDFs, ePubs, Office documents, video. ⚠️ **The four have different standards,
+   different tools and different unit costs; a single "pages remediated" number is how this
+   engagement loses money.**
+2. **Gate the web tier in CI.** `equal-access` Node CLI (or its Cypress/Vitest binding) on every
+   build, Lighthouse as a second opinion. Fail the build on new violations only — a legacy estate
+   will never pass from a standing start, and a permanently red gate gets switched off.
+3. **Open the criterion ledger.** Initialise `WCAG-Accessibility-Skills` over the estate. It
+   partitions the 86 WCAG 2.2 criteria into automated, semi-automated and manual. 🟢 **The manual
+   partition is the quote**: it is the labour nobody can automate away, enumerated per criterion
+   before the contract is signed rather than discovered in month three.
+4. **Run the agent layer over documents, not pages.** `accessibility-agents` via MCP across the
+   Office/PDF/ePub corpus. Its 39 tools produce findings with locations; the agent **triages and
+   drafts fixes**, it does not certify.
+5. **Scanned material:** Tesseract → structured output (hOCR/ALTO) → OCRmyPDF for a searchable
+   PDF/A → **human tagging** → veraPDF CLI to validate PDF/UA. 🔴 **Step four is a person.** There is
+   no permissive engine that produces tagged, structurally accessible PDF (searched this pass).
+6. **Media:** `whisper.cpp` for captions, human correction pass, `piper` for audio description
+   tracks. On-premise throughout.
+7. **Verify, then claim.** `accessibility-insights-web` for the guided human assessment, NVDA for a
+   real screen-reader run, then a conformance report that states **pass / fail / undetermined per
+   criterion** — WCAG-EM's own vocabulary.
+
+### Deliverables
+
+- An estate inventory partitioned by artefact type, with a unit cost per type.
+- A CI gate the client owns, on Apache-2.0 components, running in their pipeline.
+- **A per-criterion ledger** with the automated / semi-automated / manual split made explicit, and
+  the manual queue sized in hours.
+- Remediated web tier, remediated document tier, captioned and described media.
+- A conformance report in pass / fail / **undetermined** form, naming engine versions and dates.
+- An SBOM listing **axe-core (MPL-2.0)**, **OCRmyPDF (MPL-2.0)** and every Apache-2.0/MIT component.
+- A regression baseline so the next content upload does not undo the work.
+
+### ⚠️ Five warnings that are the point of this pattern
+
+1. **Never claim "compliant" from a tool.** Automated testing finds a fraction of barriers. Every
+   component here says so in its own README — `WCAG-Accessibility-Skills` encodes it as data, and
+   even the MIT-over-SaaS adapter this KB rejected ships a coverage disclaimer in every response.
+   🔴 **A conformance claim is a human's signature over an engine's evidence.** Say "WCAG 2.1 AA
+   conformance claim, supported by X and verified by Y", never "we ran a scanner and it is green".
+2. **A searchable PDF is not an accessible PDF.** OCRmyPDF gives you text and PDF/A; **PDF/UA needs
+   tags, reading order and structure**, and nothing permissive produces them. ⚠️ **If a proposal
+   implies the document estate is automatable, it has mispriced the largest line item in the job.**
+3. **MPL-2.0 is fine until someone edits a rule file.** axe-core and OCRmyPDF are **file-level**
+   copyleft: unmodified use does not reach the studio's code. **Patching an axe-core rule puts that
+   file under MPL-2.0 with source disclosure.** Tune through configuration, and put both in the SBOM.
+4. **Do not fork the assistive application.** Cboard is GPL-3.0, AsTeRICS Grid is AGPL-3.0, NVDA is
+   GPL-2.0+. Integrate at the **file-format** boundary — generate board sets as data, test against
+   NVDA — and no obligation reaches the deliverable (`verticals/solutions.md`).
+5. **Do not demo sign-language translation on `sign/translate`.** Its licence is **non-OSI and
+   entity-tiered**: free for educational institutions, **separate commercial licence required for
+   for-profit organisations**. The client may run it; **the studio may not deliver it.**
+
+### 🔵 Porting the pattern
+
+| Region | What changes | What does not |
+|---|---|---|
+| **EMEA** | The trigger becomes the **European Accessibility Act** (in force **2025-06-28**) and the standard becomes **EN 301 549**. ⚠️ **As of 2026-07-20 no EN 301 549 version had been cited in the Official Journal under the EAA** (v4.1.0 of Nov 2025 still in Public Enquiry and Vote to Aug 2026), **so there is no presumption of conformity to lean on** — which makes the per-criterion evidence ledger *more* valuable, not less. 🔴 **No permissive tool maps findings to EN 301 549 clauses**; the mapping is a studio artefact, and it is reusable IP | The toolchain. EN 301 549 is substantially WCAG 2.1 AA for web content |
+| **APAC** | The trigger is a standing mandate, not a deadline: **India** RPwD Act 2016 + **GIGW 3.0** (WCAG 2.1 AA, government portals including education); **Japan** **JIS X 8341-3:2016** ≈ WCAG 2.0 AA, mandatory for government; **Australia** AHRC guidance (April 2025) affirming **WCAG 2.2 AA** under the 1992 DDA, plus the DTA Digital Experience Policy. ⚠️ **Three countries, three WCAG versions — the ledger must be configurable by target version** | Everything else |
+| **LATAM** | 🔴 **There is no accessibility deadline to sell against.** The demand driver is a programme — UNICEF's **Accessible Digital Textbooks** — and the economics are the pitch: a conventional accessible textbook takes **6–9 months and up to USD 50,000 per title**, Paraguay has embedded ADTs in national inclusive-education policy, **Uruguay produced the world's first AI-led ADT prototype in 2025**, and Brazil's **PNLD** reaches **40M+ students**. 🟢 **Here the deliverable is the production line itself**, benchmarked against that 6–9-month baseline | The document pipeline (steps 5–6), which *is* the ADT production problem |

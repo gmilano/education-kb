@@ -2408,7 +2408,7 @@ present tense in three regions simultaneously**, and the dates are specific:
 
 | Instrument | Status read this pass | What it binds |
 |---|---|---|
-| **EU AI Act**, high-risk obligations | 🔴 **Apply from August 2026 — in force now** | Education **access and assessment** — admissions, student evaluation, exam scoring — are high-risk: risk management, data governance, human oversight, transparency, conformity assessment **before** deployment |
+| **EU AI Act**, high-risk obligations | ⚠️ **CORRECTED in the nineteenth pass of 2026-10-06. This row read "Apply from August 2026 — in force now" and that is wrong.** Regulation (EU) 2026/1744 (*Digital Omnibus on AI*, CELEX 32026R1744, OJ 24 July 2026, in force 27 July 2026) deferred **Annex III stand-alone high-risk from 2026-08-02 to 2027-12-02**, and Annex I embedded to 2028-08-02. What *is* in force since **2026-08-02** is the AI Act's general application including **Article 50 transparency**, which the Omnibus did **not** defer. See trend 17, which held the correct dates before this row was written. | Education **access and assessment** — admissions, student evaluation, exam scoring, and monitoring for prohibited behaviour during tests (Annex III, point 3) — are high-risk: risk management, data governance, human oversight, transparency, conformity assessment **before** deployment. **The duty is unchanged; only its start date moved.** |
 | **Vietnam, Law on Artificial Intelligence** | 🔴 **In force 2026-03-01** | Six high-risk sectors **including education**, naming **automated assessment and behavioural monitoring** |
 | **South Korea, AI Basic Act** | 🔴 **In force 2026-01-22** | Comprehensive statute with enforcement teeth |
 | **Taiwan, AI Basic Act** | Passed December 2025 | Comprehensive statute |
@@ -2625,3 +2625,76 @@ Searched or probed this pass, not resolved, stated so the absence is informative
    run:** the four-vendor anti-AI-training ToU reads (egress-blocked) and the licence ask on
    [`IFRN/suapi`](https://github.com/IFRN/suapi) (an outward-facing write on a third party's
    repository, with no mandate here). **Both need a human or an explicit instruction.**
+
+## 45. The deadline moved and the duty did not — and in 2026 that happened in three regions at once
+
+**Added in the nineteenth pass of 2026-10-06. This is the counterpart to trend 39, whose headline
+row this pass had to correct.**
+
+Trend 39 recorded that education-AI regulation had stopped being forthcoming and started being in
+force. 🔵 **The 2026 update is narrower and more useful: the dates slipped, the obligations did
+not.** Three of four regions had a 2026 compliance cliff in education; three of those cliffs moved
+during 2026, and no technical standard behind any of them changed.
+
+| Region | Instrument | 2026 movement | Standard |
+|---|---|---|---|
+| **North America** | DOJ rule under **ADA Title II** (2024-04-24) | 🔴 **Interim Final Rule 2026-04-20**: **2026-04-24 → 2027-04-26** (entities ≥50,000) and **2028-04-26** (<50,000, special districts). DOJ had *"overestimated the capabilities (whether staffing or technology) of covered entities"* | **WCAG 2.1 AA — unchanged** |
+| **EMEA** | **EU AI Act**, Annex III §3 (education) | 🔴 **2026-08-02 → 2027-12-02** (Reg. (EU) 2026/1744, CELEX 32026R1744, in force 2026-07-27). Annex I embedded → 2028-08-02 | Conformity duties unchanged |
+| **EMEA** | **European Accessibility Act**, in force 2025-06-28 | ⚠️ **No movement, and no safe harbour either**: as of 2026-07-20 **no EN 301 549 version had been cited in the Official Journal under the EAA**; v4.1.0 (Nov 2025) still in Public Enquiry and Vote to Aug 2026 | **EN 301 549** — cited nowhere, so **no presumption of conformity** |
+| **APAC** | Standing mandates | 🟢 **Nothing moved because nothing was pending** — India RPwD 2016 + **GIGW 3.0**; Japan **JIS X 8341-3:2016**, mandatory for government; Australia **AHRC April 2025** affirming WCAG 2.2 AA under the 1992 DDA + DTA Digital Experience Policy | **Three countries, three WCAG versions** |
+| **LATAM** | 🔴 **No accessibility deadline in any market** | Demand is programme-driven: UNICEF **Accessible Digital Textbooks** | Universal Design for Learning |
+
+### 🔵 Why this is a trend and not a news item
+
+**Because it changes what the buyer is buying.** While a deadline is approaching, the product is a
+*sprint*: scope it, hit the date, leave. Once the regulator has moved the date — and in North
+America stated in writing that it did so because covered entities **could not staff the work** —
+the sprint pitch collapses and what remains is **capacity**: an estate inventory, a per-criterion
+manual queue sized in hours, a CI gate the client owns, and a regression baseline. 🟢 **The backlog
+is identical; only the urgency narrative is gone.** And the extension is the strongest available
+evidence that the buyer cannot do it alone, so the capacity sale is *better* evidenced than the
+sprint ever was.
+
+⚠️ **The failure mode to avoid is now the obvious one:** a proposal whose urgency rests on a date
+the regulator has already moved once tells the buyer the author has not read the rule since 2024.
+
+### 🔴 The second-order trend: an extension does not relieve a duty, and two regions prove it differently
+
+- **North America:** the obligation to provide equal digital access *remains fully in force* under
+  the ADA. Only the technical-standard compliance date moved. A district sued today is not defended
+  by the 2027 date.
+- **EMEA:** the EAA has bound suppliers since **2025-06-28** with **no harmonised standard cited**,
+  which is the mirror image — the duty is live and the *safe harbour* is the thing that is missing.
+  🟢 **So conformance has to be evidenced rather than asserted:** per criterion, with engine and
+  version named, and with **undetermined** as a legitimate third verdict (WCAG-EM's own vocabulary).
+
+🔵 **Both regions therefore reward the same artefact — a per-criterion evidence ledger — and they
+reward it for opposite reasons.** That convergence is why **P36** is written once and ported, rather
+than built twice.
+
+### 🟢 The supply fact that makes the trend actionable
+
+The toolchain for this work is permissive and nineteen passes of this KB never recorded it:
+`IBMa/equal-access` (**Apache-2.0**, 780★), `GoogleChrome/lighthouse` (**Apache-2.0**, 30.9k★),
+`microsoft/accessibility-insights-web` (**MIT**, 955★), `tesseract-ocr/tesseract` (**Apache-2.0**,
+76.8k★), with `dequelabs/axe-core` and `ocrmypdf/OCRmyPDF` (**MPL-2.0**) usable unmodified, and an
+agent tier at `Community-Access/accessibility-agents` (**MIT**, 421★, 39 MCP tools over PDF/ePub
+and Office), `ronantakizawa/a11ymcp` (**MIT**) and `tomaszboloz/WCAG-Accessibility-Skills` (**MIT**,
+10★ — the per-criterion ledger).
+
+⚠️ **With one hard limit that decides the commercial shape: no permissive engine produces tagged
+PDF/UA.** veraPDF validates (dual GPL/MPL, licence files named `LICENSE.GPL` / `LICENSE.MPL`, outside every shortlist filename); OCRmyPDF
+makes PDFs *searchable*, which is a different thing. **Courseware is PDFs, both Title II and the
+EAA cover documents, so the document estate is the largest line item and the least automatable.**
+🔵 **That is the trend's sharpest commercial consequence: the regulation is automatable on the web
+tier and human on the document tier, and a single blended rate for both is a mispriced contract.**
+
+### 🔵 And the inversion worth remembering
+
+In every other tier this KB has measured, permissive supply sits at the edges of platforms nobody
+may fork. **Here it is the measuring layer that is permissive and the end-user application layer
+that is copyleft** — Cboard **GPL-3.0**, AsTeRICS Grid **AGPL-3.0**, NVDA **GPL-2.0+**, pa11y
+**LGPL-3.0**. 🟢 **Since the billable work is remediating the client's estate rather than shipping
+an assistive application, the half a studio needs is the permissive half.** ⚠️ **And the proposal
+rule that follows: never offer to fork the assistive application — integrate at the file-format
+boundary and test against it.**

@@ -2274,3 +2274,145 @@ Those are shelved where they belong — `repos/foundations.md` and `verticals/so
 ⚠️ **The star counts and licences in the tables above were not re-read this pass.** They carry the
 2026-10-06 readings recorded by the passes that took them. A cell saying *not read this pass* in an
 earlier section still means exactly that.
+
+## Added in the nineteenth pass of 2026-10-06 — the conformance-agent tier, and a permissive licence over an absent capability
+
+**Channel new to this KB this pass: the regulatory-citation channel.** Earlier passes swept by
+topic, star count, funder, ministry, institution, function, licence scope, platform name, language,
+the MCP Registry and (pass 18) standards-body conformance registers. This pass swept for
+implementations of **the exact technical standard a binding rule names** — WCAG 2.1 AA (what the US
+DOJ Title II rule cites), WCAG 2.2 AA, EN 301 549 (what the European Accessibility Act points at)
+and PDF/UA. Seven channels have now been used.
+
+Every licence below was read from the repository's own payload on `raw.githubusercontent.com` on
+2026-10-06, over `main`, `master` and `develop` and 7–11 filename variants each. `api.github.com`
+is 403 from this environment (re-confirmed this pass), so star and fork counts were read from the
+rendered repository page the same day.
+
+### The agent rows — WCAG conformance as an agent capability
+
+| Agent | Repo | Licence (read from payload) | ★ / forks | What it does |
+|---|---|---|---|---|
+| A11y MCP | [ronantakizawa/a11ymcp](https://github.com/ronantakizawa/a11ymcp) | **MIT** (`main/LICENSE`, © 2025 Ronan Takizawa) | 92 / 18 | **6 tools** — `test_accessibility`, `test_html_string`, `get_rules`, `check_color_contrast`, `check_aria_attributes`, `check_orientation_lock`. TypeScript. Engine is **axe-core + `@axe-core/puppeteer`**, declared as runtime dependencies in `package.json`. **No account, no API key** — `npx` and it runs. The permissive default for deterministic WCAG scanning from inside an agent. |
+| WCAG Accessibility Skills | [tomaszboloz/WCAG-Accessibility-Skills](https://github.com/tomaszboloz/WCAG-Accessibility-Skills) | **MIT** (`main/LICENSE`, © 2026 Tomasz Bołoz) | 10 / 2 | Audit CLI **and** agent skill. **All 86 active WCAG 2.2 success criteria and 78 of WCAG 2.1**, levels A/AA/AAA, rules classified **automated / semi-automated / manual**. Node 20+, **no production dependencies**. Canonical JSON findings by severity. 🟢 **The only asset found this pass that encodes the automated/manual boundary as data** and keeps a per-criterion **manual-review queue** — its README refuses to let a zero-finding report be read as conformance. At 10★ no star-sorted sweep would ever surface it. |
+| claude-a11y-skills | [shawnmcb/claude-a11y-skills](https://github.com/shawnmcb/claude-a11y-skills) | **MIT** (`master/LICENSE`, © 2026 Shawn McBurnie) | not read this pass | Skills-shaped successor to the author's own MCP server. ⚠️ **Default branch is `master`, not `main`** — `main` returns 404 for every licence filename, so a `main`-only probe reports this repository as ungranted. Its README names `a11ymcp` above as the free default engine. |
+
+🔵 **Read with the row this KB already holds:** [`Community-Access/accessibility-agents`](https://github.com/Community-Access/accessibility-agents)
+(**MIT**, `main/LICENSE`, © 2026 Taylor Arndt) is **421★ / 49 forks** as read this pass, v**7.0.3**,
+with **11 specialist agents and 39 MCP scanner tools** covering web files, **Office documents, PDF
+and ePub** (where courseware actually lives), Markdown and Python, across Claude Code, Codex,
+Copilot, Gemini CLI, Claude Desktop and Antigravity. It was recorded in `repos/trending.md` as a
+repository; **it belongs on the agent shelf**, and this pass puts it there.
+
+### ⚠️ The supply-chain fact under all four rows — MIT skin, MPL-2.0 engine
+
+Read from `package.json` payloads this pass:
+
+- `accessibility-agents` declares **`@axe-core/cli` ^4.13.0**, and its README states the 39 MCP
+  tools are *"axe-core, Office, PDF…"* — axe-core is the engine.
+- `a11ymcp` declares **`axe-core` ^4.6.0** and **`@axe-core/puppeteer`** as *runtime* dependencies.
+
+[`dequelabs/axe-core`](https://github.com/dequelabs/axe-core) is **MPL-2.0** (`master/LICENSE`),
+not permissive-unconditional. 🟢 **Using it unmodified as a dependency is fine** — MPL-2.0 is
+**file-level** copyleft, so it does not reach the studio's own files. ⚠️ **Two obligations that do
+bite:** axe-core must appear in the client's SBOM with its licence, and **editing an axe-core rule
+file puts that file under MPL-2.0**, source-disclosure included. So every MIT accessibility agent
+in this KB inherits an MPL-2.0 engine. **Tune rules through configuration, never by patching the
+rule files.** The one exception on this shelf is `WCAG-Accessibility-Skills`, which has **no
+production dependencies at all** — which is why a 10★ repository earns a row next to a 421★ one.
+
+### 🔴 The 15th failure mode in this KB's catalogue — a permissive licence over an absent capability
+
+| Repo | ★ / forks | Licence (payload) | Verdict |
+|---|---|---|---|
+| [WCAG-Compliance/wcagc-mcp](https://github.com/WCAG-Compliance/wcagc-mcp) | **0 / 0** | **MIT** (`main/LICENSE`, © 2026 Pavel Charkasau) | 🔴 **Do not shelve as reusable IP.** The licence is real and the capability is not in the repository. Its own README: a *"thin, stateless adapter"* that *"holds no database, no scan logic"* and forwards the caller's bearer token to the hosted **wcagc.com** API, where *"all authentication, entitlements, quotas, and scan orchestration live"*. Running it needs an `mcp:scan` key minted from a wcagc account, **daily-quota-limited on Free/Starter, unlimited on Pro/Agency**. |
+
+**Why this is a new failure mode and not an old one.** This KB's catalogue already holds *no
+licence file* (`DMontgomery40/mcp-canvas-lms`), *a licence outside the root* (`OS4ED/openSIS-Classic`,
+`frappe/*`), *prose that imitates a grant* (`A-R007/Multi-Agent-Study-Assistant`), *declared and
+ungranted*, *a case-sensitive filename*, and *a bespoke "Community License"*. All six are failures
+**of the grant**. This one is a **complete, valid MIT grant over code that cannot do the job
+alone** — and the KB's own verification method, reading the `LICENSE` payload, marks it green.
+⚠️ **Add one step to the method: after the licence passes, read the README for an API base URL, a
+bearer token or an account requirement.** A permissive adapter to a paid service is a procurement
+line item wearing an open-source badge.
+
+🟡 **It is still worth recording, for one reason:** it is the **only** repository found this pass
+whose description names **EN 301 549 and PDF/UA** — the European standard and the document standard.
+The permissive shelf references WCAG and nothing else (see the declared gap below).
+
+### Measured this pass and not usable — recorded so the next pass does not re-probe
+
+| Repo | ★ / forks | Licence as measured | Verdict |
+|---|---|---|---|
+| [AccessLint/skills](https://github.com/AccessLint/skills) | **103 / 15** | ⚠️ **Declared and ungranted.** README lines 142–144 read `## License` then `MIT`, and there is **no licence file** — probed `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `LICENCE`, `License`, `license.md`, `MIT-LICENSE`, `LICENSE-MIT.txt`, `.github/LICENSE`, `docs/LICENSE` on **both** `main` and `master`. No `package.json` either. | 🔴 **Ask before use.** Content is strong — five skills (`accessibility-scan` against the live DOM with `file:line` source mapping, `accessibility-inspect` for keyboard/focus/reflow, `accessibility-audit` implementing **WCAG-EM** with pass/fail/**undetermined** per criterion, `accessibility-fix`, `accessibility-diff` for regression baselines). ⚠️ **But MIT requires that a copyright notice be retained, and no holder is named anywhere**, so the grant cannot be complied with as written. One `LICENSE` file from the maintainer fixes it; until then it is an eighth instance of *declared and ungranted*. |
+| [shawnmcb/a11y-mcp-server](https://github.com/shawnmcb/a11y-mcp-server) | **0 / 0** | **MIT** (`main/LICENSE`, © 2026 Shawn McBurnie) | 🟡 **Granted, superseded by its own author.** Five tools (WCAG 2.2 criteria lookup, HTML pattern check, fix suggestion, component documentation, audit summary). Its README names `claude-a11y-skills` as *"the skills-based successor for day-to-day accessibility work"* and keeps this repo *"as working evidence"*. Take the successor. |
+| [sign/translate](https://github.com/sign/translate) | not read this pass | 🔴 **Non-OSI, dual-tier** (`master/LICENSE.md`) | **See the warning below — this is the shape to learn.** |
+
+### ⚠️ A licence axis new to this KB — education-granted, integrator-excluded
+
+[`sign/translate`](https://github.com/sign/translate) (the sign-language translation stack, now
+presented as **"Rylo Translate"**) carries no OSI licence. Its `LICENSE.md`, read this pass, splits
+the grant **by the type of legal entity using it**:
+
+> *"Individuals, non-profit organizations, and educational institutions are permitted to use
+> `Rylo Translate` for sign language translation without charge, while a separate license is
+> required for for-profit commercial organizations."*
+
+🔴 **For a Globant engagement this is the worst possible shape, and it is worse than copyleft.**
+AGPL-3.0 at least lets the studio build and ship under a known obligation. Here **the university
+is granted and the integrator is not**: the client may run it for free, and the moment Globant
+builds it into a delivery it needs a separately negotiated commercial licence. ⚠️ **A proposal
+that demos sign-language translation on this stack is quoting software the studio has no right to
+deliver.** Every prior failure mode in this KB asks *"is there a grant?"*. This one asks **"is
+there a grant for *us*?"** — and a permissive-licence filter answers neither, because the file
+is not an OSI licence at all.
+
+🔵 **The consequence for the catalogue:** the licence column needs to be read as *two* columns —
+the grant to the **client** and the grant to the **integrator**. For OSI licences they are the
+same. For entity-tiered licences they are not, and this is the first one this KB has measured.
+
+### Declared gaps — searched this pass, nothing found
+
+1. 🔴 **No permissive PDF/UA remediation engine exists.** This matters more than any row above,
+   because courseware is PDFs and **both** the US Title II rule and the EAA cover electronic
+   documents. What was measured: [`veraPDF/veraPDF-library`](https://github.com/veraPDF/veraPDF-library)
+   **validates** PDF/UA but is **dual GPL / MPL** (`LICENSE.GPL` + `LICENSE.MPL`, present on
+   **`master`** and on the `integration` branch and ⚠️ **absent from `main`**) — a **filename**
+   instance of the KB's licence-discovery failure mode: `LICENSE.GPL` and `LICENSE.MPL` are outside
+   every shortlist this KB probes, so an 11-filename sweep reports the repository as ungranted
+   while the grant is sitting in the root; [`ocrmypdf/OCRmyPDF`](https://github.com/ocrmypdf/OCRmyPDF)
+   (**MPL-2.0**, 34.9k★) adds a searchable text layer and PDF/A output but **does not produce
+   tagged, structurally accessible PDF/UA**. Searched: PDF/UA remediation, tagged PDF, structure
+   tagging, accessible PDF generation. 🔵 **Validation is permissive-adjacent and remediation is
+   absent** — so the deliverable is a human-in-the-loop tagging workflow, and it should be priced
+   as labour, not automated away in a slide.
+2. 🔴 **No permissive implementation anywhere names EN 301 549**, except the MIT adapter to a paid
+   service above. The engines name WCAG. **The European standard has no permissive software
+   referencing it** — which is sharper than it sounds, because EN 301 549 is largely WCAG 2.1 AA
+   for web content, so the tools are *usable* in EMEA; what is missing is anything that maps
+   findings to the clauses an EMEA auditor will actually cite.
+3. 🔴 **No open-source asset found behind the UNICEF Accessible Digital Textbooks programme**,
+   including the **AI-led ADT prototype Uruguay produced in 2025**. Searched by programme name, by
+   country (Paraguay, Uruguay, Brazil) and by the Brazilian PNLD. It is a **programme, not a
+   shelf** — see `intel/market.md`, LATAM, where it is the largest unserved opportunity in this file.
+4. 🔴 **No permissive sign-language education asset.** The one well-known stack is the entity-tiered
+   licence above. Searched sign language, AAC and assistive-communication repositories; everything
+   usable is copyleft (`verticals/solutions.md`).
+
+### The method note for this pass
+
+🟢 **The channel worked, and the reason is worth keeping:** *"accessibility"* is a topic and returns
+blog posts; **WCAG 2.2 AA, EN 301 549 and PDF/UA are proper nouns** and return software. This is the
+fifteenth consecutive pass in which every new row came from a proper noun rather than from
+*"AI education"*, and the second (after pass 18's QTI) where the proper noun was **a standard named
+in a rule**. 🔵 **The generalisable instruction: read the obligation, take the standard it cites,
+and sweep for that string.** The rule tells you what to search for.
+
+⚠️ **One instrument failure to record:** `github.com` HTML returns **403** through this
+environment's proxy for every repository page, so all star and fork counts this pass came through
+`WebFetch`, and licence facts came from `raw.githubusercontent.com`, which is **not** blocked.
+Where the two disagreed, the payload won — and they **did** disagree once: a rendered-page read
+reported `AccessLint/skills` as *"License: MIT"* while the repository contains no licence file at
+all. **That is the whole argument for this KB's payload-reading rule, demonstrated in a single
+repository.**
