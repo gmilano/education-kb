@@ -395,3 +395,74 @@ whole stack. See `repos/foundations.md` and pattern **P16**.
 - **41 stars means a thin public community relative to its scale.** Expect
   institutional documentation and ministry-grade deployment guides rather than
   Stack Overflow answers. Budget for reading source.
+
+## Added in the seventh pass of 2026-10-06 — the Fedena question, closed properly
+
+Earlier passes left this open, and it is worth closing because **Fedena is one of
+the names a client will raise** when asked about open source school ERP: a
+secondary source calls `projectfedena/fedena` *"the official GitHub repository"*
+and attributes **Apache-2.0** to it, while the probe of that owner returned
+nothing. This pass enumerated the owners.
+
+| Owner | Does the tree resolve? | Licence payload |
+|---|---|---|
+| `projectfedena/fedena` — the "official" org per the secondary source | **No.** 404 on `README.md`/`readme.md` and on five licence filenames, across `main` and `master` | None readable |
+| [`foradian/fedena`](https://github.com/foradian/fedena) — **Foradian, the vendor that built Fedena** | **Yes.** `README.md` 404s on every branch, but `master/config/routes.rb` and `master/Gemfile` return **200** — the Rails tree is there | **None.** 7 licence filenames probed across 8 branches |
+| [`mazhar266/fedena`](https://github.com/mazhar266/fedena) — mirror, 5★ | **Yes**, on `master` only (`main` 404s) | **Apache-2.0 at `master/LICENSE.md`** — and `master/LICENSE` is **404** — plus `master/NOTICE`: *"Fedena — Copyright 2011 Foradian Technologies Private Limited"* |
+
+**The answer, and it is more favourable than the earlier passes could show.** The
+grant is **Apache-2.0 and it is the vendor's own**: the `NOTICE` file in the
+mirror names **Foradian Technologies Private Limited** as the copyright holder,
+and Apache-2.0 §4(d) is precisely the clause that requires that NOTICE to travel
+with redistributions. So this is not a third party attaching a licence to someone
+else's code — **it is Foradian's Apache-2.0 release, preserved in a mirror while
+the vendor's own current GitHub org no longer carries the file.**
+
+**What to do with it.** Fedena is usable under Apache-2.0. Vendor
+`mazhar266/fedena@master`, record the commit SHA, and **keep copies of both
+`LICENSE.md` and `NOTICE`** as read — the NOTICE is the part that makes the
+provenance argument, and Apache-2.0 obliges you to carry it anyway. For a
+*greenfield* engagement still prefer
+[OpenEduCat](https://github.com/openeducat/openeducat_erp) (LGPL-3.0, 73+
+modules): not because Fedena's licence is weak, but because an actively
+maintained platform with a live upstream beats a 2011-era Rails codebase whose
+grant survives only in a mirror. Choose Fedena when a client is already on it.
+
+### Two method notes, and the first one is a correction to this pass
+
+**1. A one-filename probe produces a false negative.** This pass initially read
+`master/LICENSE` for the mirror, got **404**, and briefly concluded the grant had
+gone. It had not — it is at **`LICENSE.md`**. The KB's standing discipline is a
+filename *sweep* (this pass used 6–9 names across 2–8 branches) and the moment it
+was shortcut to a single `curl`, it produced exactly the kind of confident
+denial the third pass's `OpenTutor` correction warned about. **A 404 on one
+filename is evidence about that filename.** Recorded here rather than quietly
+fixed, because the near-miss is the useful part.
+
+**2. Enumerate owners in both directions.** The third pass learned that a 404 on
+one owner is not evidence about a project — a wrong withdrawal destroyed a true
+finding. Fedena shows the same enumeration cutting the other way: **the "official"
+org and the original vendor both carry no grant, and the mirror carries the
+vendor's own.** Both errors come from treating `owner/name` as the project.
+Enumerate the owners, read the NOTICE, then decide.
+
+## The OER content layer — one row, and the licence is correct for the artefact
+
+Net new to this KB in the seventh pass.
+
+| Asset | Licence (payload) | ★ | Use |
+|---|---|---|---|
+| [EbookFoundation/free-programming-books](https://github.com/EbookFoundation/free-programming-books) | **CC BY 4.0** (`main/LICENSE`, "Attribution 4.0 International") | ~392k | A curated index of free programming books and courses across many languages. **Content for enablement (P6), cited — never a dependency** |
+
+**Why it is shelved here rather than rejected.** CC BY 4.0 is attribution-only:
+no non-commercial clause, no share-alike. The *material* is therefore usable in a
+commercial curriculum provided attribution travels with it. It is not a software
+licence — and there is no software here to license, only a reading list.
+
+**The contrast worth keeping.** This KB's fifth pass found that pedagogy
+evaluation is *"published as research and licensed as content"* and treated that
+as a defect — correctly, because a benchmark harness under CC BY-SA is code you
+cannot vendor. Here the content licence is **right**, because the artefact really
+is content. **Judge the licence against the artefact, not against a preference
+ordering of licences.** A reading list under CC BY is well licensed; an
+evaluation harness under CC BY is mis-licensed. Same licence, opposite verdict.

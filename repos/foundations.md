@@ -237,10 +237,87 @@ Three consequences worth stating, because they are not obvious from the table:
   India (22 languages, MIT) and Uganda/Africa (6 Ugandan languages Apache-2.0,
   plus Masakhane's continental MT, MIT) can be served from the shelf. **Elsewhere
   it cannot** — see the regional honesty note in `intel/market.md`.
+  **⚠️ SUPERSEDED by the seventh pass of 2026-10-06: it is at least three
+  regions.** ASEAN has a permissive layer across **Vietnamese, Thai, Malay and
+  Indonesian** — `underthesea` (Apache-2.0, 1.8k★), `pythainlp` (Apache-2.0,
+  1.2k★, 6,649 commits), `malaya` + `malaya-speech` (both MIT) and `nusa-crowd`
+  (Apache-2.0, 143 datasets). See the seventh-pass section below. The sixth pass
+  reached "two regions" by searching for sovereign **models** and finding
+  SEA-LION unlicensed; the toolkits were one query away in another language.
 - **Masakhane licenses three repositories three ways** — MIT, Apache-2.0 and GPL
   inside one owner. The fourth pass's rule was "five MIT siblings do not license
   the sixth." The stronger rule: **sibling licences need not even share a
   class.** Probe every repository, every time.
+
+## Added in the seventh pass of 2026-10-06 — the ASEAN language substrate, and trend 21 falsified
+
+**Channel new to this KB this pass: native-language search.** Earlier passes
+searched in English and, in the fourth pass, Spanish and Portuguese. This pass
+searched in **Japanese, Korean, Arabic and Bahasa/Thai/Vietnamese**. The sixth
+pass had closed with a clean, falsifiable claim — *"mother-tongue AI is a
+two-region capability"*, India and Africa, with ASEAN explicitly named as the
+place where *"the nearest thing, SEA-LION, has no repository-level licence at
+all."*
+
+**That claim is wrong, and this is the shelf that falsifies it.** ASEAN has a
+permissive, self-hostable language layer covering **five languages across four
+countries**, most of it Apache-2.0, some of it with more commits than anything
+on the India shelf. It was invisible to six passes because **SEA-LION is a
+sovereign *model* and these are language *toolkits*** — a different noun, and
+nobody had searched for the noun.
+
+Licences read from each repository's own `LICENSE` payload via
+`raw.githubusercontent.com` on 2026-10-06; star/fork/commit counts read from the
+repository page the same day. **13 repositories probed, 13 resolved.**
+
+### Language — ASEAN, placed by country
+
+| Repo | Licence (payload) | ★ / forks / commits | Country | Coverage |
+|---|---|---|---|---|
+| [undertheseanlp/underthesea](https://github.com/undertheseanlp/underthesea) | **Apache-2.0** (`main/LICENSE`) | **1.8k** / 307 / 1,276 | **Vietnam** | The largest asset on this shelf. 13 Vietnamese tasks — sentence segmentation, text normalization, **diacritics restoration**, word segmentation, POS, chunking, NER, classification, sentiment, language detection, dependency parsing, translation and TTS. **v9.3.0 rebranded the project to an "Open-source Agentic AI Toolkit"** with multi-provider agent support (OpenAI, Azure OpenAI, Anthropic Claude, Google Gemini) layered over the Vietnamese NLP core |
+| [PyThaiNLP/pythainlp](https://github.com/PyThaiNLP/pythainlp) | **Apache-2.0** (`main/LICENSE`) | **1.2k** / 304 / **6,649** | **Thailand** | *"Thai natural language processing in Python."* Sentence, word and **subword** tokenization — the hard problem in a script with no spaces — plus POS tagging, romanization and **IPA transliteration**, spelling correction, soundex, collation, number-to-text, and a `thainlp` CLI. v5.3.8, Python 3.9+, self-declared **"Project Status: Active."** The deepest commit history of any language toolkit in this KB outside the general speech shelf |
+| [malaysia-ai/malaya](https://github.com/malaysia-ai/malaya) | **MIT** (`master/LICENSE`, © 2018 huseinzol05) | 530 / 141 / 961 | **Malaysia** | *"Natural-Language-Toolkit library for bahasa Malaysia, powered by PyTorch."* NER with a named-entity framework, POS, sentiment, emotion, subjectivity, language detection and normalization. Pretrained models on HuggingFace (`mesolitica`); docs at `malaya.readthedocs.io` |
+| [malaysia-ai/malaya-speech](https://github.com/malaysia-ai/malaya-speech) | **MIT** (`master/LICENSE`, © 2020 HUSEIN ZOLKEPLI) | 291 / 51 / 755 | **Malaysia** | *"Speech-Toolkit library for Malaysian language, powered by PyTorch."* The **only ASEAN-placed permissive speech toolkit** found; ships a `malay_vits` TTS path. Pair with `sherpa-onnx` for the offline runtime |
+| [IndoNLP/nusa-crowd](https://github.com/IndoNLP/nusa-crowd) | **Apache-2.0** (`master/LICENSE`) | 292 / 64 / 992 | **Indonesia** | *"A collaborative project to collect datasets in Indonesian languages."* **143 registered datasets** behind standardized dataloaders, built by a credited multi-institution consortium; paper *NusaCrowd: Open Source Initiative for Indonesian NLP Resources* ([arXiv:2212.09648](https://arxiv.org/abs/2212.09648)). Contributors earn **co-authorship by contribution points** — a governance model worth copying for a ministry corpus engagement |
+| [indobenchmark/indonlu](https://github.com/indobenchmark/indonlu) | **Apache-2.0** (`master/LICENSE`) | — (not read this pass) | **Indonesia** | Indonesian natural-language-understanding benchmark — the evaluation half of the row above |
+
+### Read this shelf honestly — three qualifications
+
+- **None of it is education-specific.** Exactly like AI4Bharat on the India
+  shelf, these are general-purpose language toolkits. They make a mother-tongue
+  tutor *possible*; they do not make one. The pedagogy layer is still yours to
+  build, which is the opportunity (**P19**).
+- **Only one covers speech.** `malaya-speech` is the single ASEAN-placed
+  permissive speech toolkit here. Thai, Vietnamese and Indonesian have the
+  **text** layer and no local **voice** layer, so spoken practice in those three
+  languages routes through the general shelf — `sherpa-onnx` (Apache-2.0) or
+  Whisper/faster-whisper (MIT) — and must be accuracy-tested per language rather
+  than assumed.
+- **Two of these are corpora-and-recipes, not runtimes.** `nusa-crowd` and
+  `indonlu` give you data and evaluation; they are not something you deploy. Size
+  the engagement accordingly.
+
+### One more licence warning, and the first measured counter-example to it
+
+[malaysia-ai/malaysian-dataset](https://github.com/malaysia-ai/malaysian-dataset)
+— **no `LICENSE` payload** (2 branches × 6 filenames probed), and at **345★** it
+is the organisation's **second most-starred repository**, ahead of
+`malaya-speech`. Its two code siblings are both MIT. **Not shelved. Not
+shippable.**
+
+This is the **second time this KB has found the pattern in the same shape**: the
+sixth pass recorded `AI4Bharat/indicnlp_catalog` as unlicensed among five MIT
+siblings. Two independent organisations, two regions, and in both the repository
+without a grant is the **data/catalogue** one while the **code** repositories are
+permissive. A tempting rule follows — *the data layer is where the grant goes
+missing* — and this pass **measured its counter-example in the same sweep**:
+`IndoNLP/nusa-crowd` is a dataset hub of 143 corpora and it is **Apache-2.0**.
+
+**So state it as a prior, not a law: on a data or catalogue repository, assume no
+grant until the payload says otherwise — and probe it, because one in three
+cedes.** The operational rule is unchanged and now carries three instances
+instead of one: **probe every repository, every time, and probe the dataset
+sibling separately from the code.**
 
 ## Teaching-content repos (for enablement, not for production)
 

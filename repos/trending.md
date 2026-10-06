@@ -8,6 +8,135 @@ updated: 2026-10-06
 
 > **Append-only.** Newest dated section on top; history preserved below.
 
+## 2026-10-06 — seventh pass: the week's fastest-growing education repo has no licence, and a third owner closes the Fedena question
+
+Channels this pass: **native-language search** (Japanese, Korean, Arabic,
+Bahasa/Thai/Vietnamese — new to this KB), the **GitHub weekly trending** feed,
+and a **function-scoped MCP sweep** of assessment/grading and proctoring. Agent
+findings are in `agents/trending.md`; this file carries the repository and
+platform layer.
+
+Licences read from each repository's own `LICENSE` payload via
+`raw.githubusercontent.com`; counts from the repository page. **`curl` to
+`github.com` returned 403 on 7/7 attempts** and `api.github.com` is unreachable,
+so **no number in this section comes from the API.**
+
+### Net new to the shelf — the ASEAN language substrate (6 repos)
+
+Full table, with coverage and the licence warnings, in `repos/foundations.md`.
+Summary of what landed:
+
+| Repo | Licence (payload) | ★ / commits | Country |
+|---|---|---|---|
+| [undertheseanlp/underthesea](https://github.com/undertheseanlp/underthesea) | **Apache-2.0** (`main/LICENSE`) | **1.8k** / 1,276 | Vietnam |
+| [PyThaiNLP/pythainlp](https://github.com/PyThaiNLP/pythainlp) | **Apache-2.0** (`main/LICENSE`) | **1.2k** / **6,649** | Thailand |
+| [malaysia-ai/malaya](https://github.com/malaysia-ai/malaya) | **MIT** (`master/LICENSE`) | 530 / 961 | Malaysia |
+| [IndoNLP/nusa-crowd](https://github.com/IndoNLP/nusa-crowd) | **Apache-2.0** (`master/LICENSE`) | 292 / 992 | Indonesia |
+| [malaysia-ai/malaya-speech](https://github.com/malaysia-ai/malaya-speech) | **MIT** (`master/LICENSE`) | 291 / 755 | Malaysia |
+| [indobenchmark/indonlu](https://github.com/indobenchmark/indonlu) | **Apache-2.0** (`master/LICENSE`) | — | Indonesia |
+
+`pythainlp` carries **6,649 commits** — more than every AI4Bharat repository in
+this KB put together — and `underthesea`'s **v9.3.0 rebranded it from a
+Vietnamese NLP library to an "Open-source Agentic AI Toolkit"** with
+multi-provider agent support over the NLP core. That is an **ASEAN-origin,
+Apache-2.0, agent-shaped toolkit at 1.8k★**, which is worth setting against the
+fifth pass's conclusion that *"ASEAN's mature education AI is closed."* It is not
+education-specific — but it is open, agentic, regional and permissive, and the
+fifth pass had nothing in that quadrant.
+
+### Rejected — and the first of them is the loudest repository of the week
+
+| Repo | Signal | Licence (payload) | Verdict |
+|---|---|---|---|
+| [cs341-illinois/coursebook](https://github.com/cs341-illinois/coursebook) | **~1,626★ gained in one week** — the highest-velocity education repository seen in any pass of this KB | **NONE** (2 branches × 6 filenames) | **Do not use.** An open systems-programming textbook from **UIUC**. A university's own course text, trending hard, with no grant attached |
+| [781991937/TOFAN-AI-2026](https://github.com/781991937/TOFAN-AI-2026) | the only substantial Arabic-language education agent found in 7 passes | **NONE** | **Do not use.** Full write-up in `agents/trending.md`, Finding 4 |
+| [biswal-prem-5677/Autonomous-Exam-Proctoring-Grading-Agent](https://github.com/biswal-prem-5677/Autonomous-Exam-Proctoring-Grading-Agent) | the one candidate on the proctoring shelf | **NONE** | **Do not use.** Local, explainable, human-gated — the right design, no grant |
+| [malaysia-ai/malaysian-dataset](https://github.com/malaysia-ai/malaysian-dataset) | **345★**, the org's 2nd most-starred repo, ahead of `malaya-speech` | **NONE** | **Not shippable.** Its two code siblings are both MIT |
+
+**Four rejections, all the same failure mode: no `LICENSE` payload.** Not a
+copyleft surprise, not a non-commercial clause, not a self-contradicting badge —
+just absence. Across seven passes this KB has catalogued six exotic ways a
+licence fails, and the plain missing file still outnumbers all of them.
+
+**And the `coursebook` row is the one to internalise.** It is the fastest-growing
+education repository of the week, from a major university's own course, and it
+cannot legally ship in a client deliverable. **Trending velocity carries no
+information about rights.** This KB has already learned that stars do not measure
+health (sixth pass: 46.1k★ abandoned, 11.3k★ frozen). The seventh pass's addition:
+**stars do not measure usability either.** Probe the payload before reading the
+star count, both times.
+
+### Resolved — the Fedena question, and the grant is the vendor's own
+
+Earlier passes left this open. A secondary source called
+`projectfedena/fedena` *"the official GitHub repository"* of Fedena and
+attributed **Apache-2.0** to it; that owner's tree would not resolve — **404 on
+`README.md` and on five licence filenames across `main` and `master`** — so the
+attribution could not be confirmed by that channel. This pass enumerated the
+remaining owners.
+
+| Owner | Tree resolves? | Licence payload |
+|---|---|---|
+| `projectfedena/fedena` ("official" per the secondary source) | **No** — 404 on README and 5 licence filenames, both branches | None readable |
+| [`foradian/fedena`](https://github.com/foradian/fedena) — **the vendor that built Fedena** | **Yes** — `README.md` 404s on every branch, but `master/config/routes.rb` and `master/Gemfile` return **200** | **None.** 7 licence filenames × 8 branches probed |
+| [`mazhar266/fedena`](https://github.com/mazhar266/fedena) — mirror, 5★ | **Yes**, `master` only (`main` 404s) | **Apache-2.0 at `master/LICENSE.md`** (`master/LICENSE` is **404**), plus `master/NOTICE`: *"Fedena — Copyright 2011 Foradian Technologies Private Limited"* |
+
+**The answer is better than "a mirror happens to carry a licence."** The `NOTICE`
+names **Foradian Technologies Private Limited** — the vendor — as copyright
+holder, and Apache-2.0 §4(d) is the clause that requires that NOTICE to travel
+with redistributions. **This is the vendor's own Apache-2.0 release, preserved in
+a mirror, while the vendor's current GitHub org no longer carries the file.**
+Fedena is usable; vendor `mazhar266/fedena@master` and keep both `LICENSE.md` and
+`NOTICE`. Full recommendation in `verticals/solutions.md`.
+
+**And this pass nearly got it wrong, in the direction this KB has warned about.**
+The first read here was a single `curl` of `master/LICENSE`, which returned
+**404**. Had that been written up, this file would now carry a confident denial of
+a grant that exists one filename away at `LICENSE.md` — the same failure mode as
+the third pass's `OpenTutor` withdrawal, which deleted a true finding on the
+strength of one owner's 404. **A 404 on one filename is evidence about that
+filename.** The discipline that catches it is the filename *sweep* (6–9 names × 2–8
+branches), and the moment it is shortcut, the shortcut is what produces the error.
+**Recorded rather than quietly fixed, because the near-miss is the reusable part.**
+
+### The maintenance finding — this KB's shelves had fallen behind its own logs
+
+The sixth pass of this file recorded *"a 38,046-commit MIT platform this KB found
+and then forgot to shelve."* **It has happened again, in `agents/top.md`, and
+this time it also produced a false gap:** five verified education MCP servers
+written into `agents/trending.md` by earlier passes had never reached the shelf
+table, and one of them — `toshieji/moodle-grading-mcp`, **MIT, © 2026 Web
+Analytics Consultants Association (WACA) and Toshiaki Ejiri, Japan** — refutes a
+"no Japan-origin permissive education project" gap that `agents/top.md` was still
+asserting.
+
+**Two instances in two passes makes it structural, not careless.** An
+append-only log is the right structure for provenance and the wrong one for
+answers. The rule added this pass: **a pass is finished when the shelf, the gap
+list, the trends file and the patterns agree with the log — not when the log
+entry is written.** This pass ran that consistency sweep and it found two
+contradictions in one file, both fixable by `grep` and neither requiring a
+search.
+
+### Content layer — one row, correctly classified
+
+[EbookFoundation/free-programming-books](https://github.com/EbookFoundation/free-programming-books)
+— **CC BY 4.0** (`main/LICENSE`, "Attribution 4.0 International"), and at
+**~392k★** it is one of the most-starred repositories on GitHub. Net new to this
+KB.
+
+**Shelved as content, not as code, and the distinction is the whole point.**
+CC BY 4.0 is attribution-only, with no non-commercial and no share-alike clause,
+so the *material* is usable in a commercial curriculum provided attribution is
+carried. It is not a software licence and there is no software here to license —
+it is a curated index. **Use it as an OER source for enablement work (P6) and
+cite it; never list it as a dependency.** This KB's fifth pass recorded that
+pedagogy-evaluation research is *"published as research and licensed as
+content"* and treated that as a defect. Here the content licence is the correct
+one for the artefact, which is the useful contrast: **CC BY on a reading list is
+right; CC BY on a benchmark harness is a defect.** Judge the licence against the
+artefact, not against a preference ordering.
+
 ## 2026-10-06 — sixth pass: a 38,046-commit MIT platform this KB found and then forgot to shelve
 
 Companion to the sixth pass in `agents/trending.md`, which sweeps the speech and

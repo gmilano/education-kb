@@ -8,6 +8,214 @@ updated: 2026-10-06
 
 > **Append-only.** Newest dated section on top; history preserved below.
 
+## 2026-10-06 — seventh pass: a gap this KB had already refuted, and the region it kept asserting was empty
+
+Channel new to this KB this pass: **native-language search.** Earlier passes
+searched in English, and the fourth pass added Spanish and Portuguese. This pass
+searched in **Japanese, Korean, Arabic, and Bahasa/Thai/Vietnamese** — four
+language families whose education-AI output had never been queried in its own
+language.
+
+Every licence below was read from the repository's own `LICENSE` payload via
+`raw.githubusercontent.com`; every star/fork/commit count was read from the
+repository page. **18 repositories probed, 18 resolved.** `github.com` HTML
+returns **403** through this environment's proxy for `curl` (7/7 attempts) and
+`api.github.com` is unreachable, so counts come from `WebFetch` and **every
+licence from the payload channel** — unchanged from the sixth pass.
+
+### Finding 1 — trend 21 was a clean, falsifiable claim, and it is false
+
+The sixth pass closed with trend 21: *"Mother-tongue AI is a two-region
+capability, not a global one"* — India and Africa — and named ASEAN as the
+counter-case, since *"the nearest thing, SEA-LION, has no repository-level
+licence at all."*
+
+**ASEAN has a permissive language layer in five languages across four countries.**
+
+| Repo | Licence (payload) | ★ / forks / commits | Country |
+|---|---|---|---|
+| [undertheseanlp/underthesea](https://github.com/undertheseanlp/underthesea) | **Apache-2.0** (`main/LICENSE`) | **1.8k** / 307 / 1,276 | Vietnam |
+| [PyThaiNLP/pythainlp](https://github.com/PyThaiNLP/pythainlp) | **Apache-2.0** (`main/LICENSE`) | **1.2k** / 304 / **6,649** | Thailand |
+| [malaysia-ai/malaya](https://github.com/malaysia-ai/malaya) | **MIT** (`master/LICENSE`, © 2018 huseinzol05) | 530 / 141 / 961 | Malaysia |
+| [IndoNLP/nusa-crowd](https://github.com/IndoNLP/nusa-crowd) | **Apache-2.0** (`master/LICENSE`) | 292 / 64 / 992 | Indonesia |
+| [malaysia-ai/malaya-speech](https://github.com/malaysia-ai/malaya-speech) | **MIT** (`master/LICENSE`, © 2020 HUSEIN ZOLKEPLI) | 291 / 51 / 755 | Malaysia |
+| [indobenchmark/indonlu](https://github.com/indobenchmark/indonlu) | **Apache-2.0** (`master/LICENSE`) | — | Indonesia |
+
+`pythainlp` alone has **6,649 commits** — more than every AI4Bharat repository in
+this KB combined. It is not a fringe shelf; it was simply never looked for.
+
+**Why six passes missed it, precisely.** The sixth pass asked *"which teaching
+languages have a permissive self-hostable layer?"* and went looking for
+**sovereign models**. It found SEA-LION, correctly determined it has no
+repository-level grant, and recorded the region as empty. But the thing that
+makes a mother-tongue tutor possible in Thai is **not a sovereign LLM — it is a
+tokenizer**, because Thai has no spaces between words. The noun was wrong, and a
+wrong noun returns a confident zero.
+
+**The lesson, and it is the sharpest methodological one in this KB:** a declared
+gap inherits the *vocabulary* of the search that failed to fill it. Three
+regional gaps have now been refuted by changing the channel (fifth pass), the
+layer (sixth pass) and the **noun** (this pass) — and **not one** was ever
+refuted by searching the original channel harder. Full shelf in
+`repos/foundations.md`.
+
+### Finding 2 — the Japan gap was refuted by this KB, several passes ago, and `agents/top.md` kept asserting it
+
+This is the finding that should change how passes are run.
+
+[toshieji/moodle-grading-mcp](https://github.com/toshieji/moodle-grading-mcp) —
+**MIT**, read from `main/LICENSE` this pass, © 2026 **Web Analytics Consultants
+Association (WACA) and Toshiaki Ejiri**. WACA is a named Japanese professional
+body; the tree carries a Japanese operations manual, `OPERATIONS-ja.md`. **It is
+a Japan-origin, institutionally-held, payload-verified MIT education asset**, and
+it was probed and written into *this file* by an earlier pass.
+
+Meanwhile `agents/top.md` carried, in its declared-gaps section: *"No India-,
+Japan-, Korea- or ASEAN-origin permissive education project — unchanged, and now
+searched by name."* India and ASEAN had been refuted in the fifth pass and
+corrected in a table at the **end** of that file while the **bullet** stayed.
+Japan had been refuted here and never propagated at all.
+
+**All four clauses of that bullet were false, and the evidence for three of them
+was already inside this repository.** No search was required — a `grep` would
+have done it.
+
+**So this pass adds a rule about maintenance rather than discovery: a pass is not
+finished when the trending entry is written. It is finished when the shelf, the
+gap list, the trends file and the patterns agree with it.** An append-only log is
+the right structure for *provenance* and the wrong one for *answers*: nobody
+scoping a client engagement reads 13,000 lines of history, they open
+`agents/top.md`. `repos/trending.md` named the same failure one pass earlier —
+*"a 38,046-commit MIT platform this KB found and then forgot to shelve"* — so
+this is the **second** instance, which makes it a pattern and not an accident.
+
+Five verified MCP servers recorded here by earlier passes and never shelved are
+now in the `agents/top.md` table, each re-probed from payload this pass rather
+than trusted from history: `tutor-mcp` (MIT, 43★, Go, BKT + FSRS + misconception
+memory), `gradescope-mcp` (MIT, 8★, 39 tools), `moodle-grading-mcp` (MIT, Japan),
+`student-progress-tracker` (MIT) and `54yyyu/school-mcp` — which re-probed to
+**no payload**, confirming the earlier flag independently.
+
+### Finding 3 — Korea: the first permissive asset in seven passes, and it is not an agent
+
+[yongsoojoo/esd2026-agent-workflow](https://github.com/yongsoojoo/esd2026-agent-workflow)
+— **MIT for code, CC BY 4.0 for documentation** (payload, © 2026 Yongsoo Joo),
+**0★ / 0 forks / 4 commits**, static HTML on GitHub Pages. An AI-agent
+configuration-management tutorial for *임베디드시스템설계 2026-2* (Embedded Systems
+Design) at **Kookmin University**, Seoul, written by the instructor together with
+an AI coding agent.
+
+**Report it at its real size.** It closes "no Korea-origin permissive education
+*asset*" and leaves "no Korea-origin permissive education *agent*" exactly where
+it was. The distinction is kept rather than smoothed because Korea is the
+jurisdiction with the **AI Framework Act in force since 22 January 2026** — the
+widest gap in this KB between regulatory maturity and open supply.
+
+One thing worth copying: the **split grant**, MIT for code and CC BY 4.0 for
+prose. That is the correct licensing shape for a teaching artefact, and almost
+nothing on this KB's teaching-content shelf gets it right.
+
+### Finding 4 — Arabic: a real agent, no grant, and the MEA gap changes character
+
+[781991937/TOFAN-AI-2026](https://github.com/781991937/TOFAN-AI-2026) —
+*"مساعد تعليمي ذكي"*: ingests lesson files, extracts and analyses their content,
+and generates summaries and interactive tests. FastAPI backend, installable
+PWA/Web-App front end, and its README is explicit that it is a platform and
+**not** a Telegram bot. It is the most substantial Arabic-language education
+agent found in any pass of this KB.
+
+**No `LICENSE` payload** — 2 branches × 6 filenames.
+
+**Set it against what this KB already holds for MEA:** the fourth pass's
+`AI-for-Education` organisation (MIT, ministry-engaged in Sierra Leone) is
+research-grade at **1–12★**; `AI-for-Education/Luganda-linguistic-benchmarks` is
+**unlicensed**; `SunbirdAI/salt` (Apache-2.0) is real but is a **corpus**, not a
+product. Add an unlicensed Arabic agent and the regional picture resolves:
+
+**MEA is the only region in this KB with zero shippable permissive education
+assets, and the binding constraint is not interest, funding or capability — it is
+licensing hygiene.** Three `LICENSE` files would change the regional answer.
+That is the cheapest high-value upstream contribution available anywhere in this
+industry, and it is cheaper than the pedagogy-evaluation asks the fourth and
+fifth passes identified.
+
+### Finding 5 — the proctoring shelf was swept, and it is empty of anything licensed
+
+The third pass left an instruction: *"scope the next sweep by learning function,
+not by vendor name — LMS, SIS, retention, assessment, library, proctoring,
+video."* This pass swept **assessment/grading** (which produced the five shelved
+rows in Finding 2) and **proctoring**, which produced one candidate and no usable
+code:
+
+[biswal-prem-5677/Autonomous-Exam-Proctoring-Grading-Agent](https://github.com/biswal-prem-5677/Autonomous-Exam-Proctoring-Grading-Agent)
+— *"A fully local, mathematics-driven AI exam system for autonomous proctoring,
+explainable cheating-risk prediction, automated grading and student performance
+analysis — with no external AI APIs."* **No `LICENSE` payload.**
+
+**The description is the regulatory answer and the grant is missing.** Local,
+mathematics-driven and explainable is precisely the only shape of proctoring that
+is sellable under EU Annex III point 3 or Vietnam's Decree 33 — and the category
+has no licensed open competitor. Declared as a gap in `agents/top.md`, ranked
+second to **P17** as a build opportunity.
+
+### Finding 6 — Vietnam's education rules landed in a decree, not the law, and they are stricter than Annex III in one specific way
+
+This KB already recorded Vietnam's **Law No. 134/2025/QH15** and its 1 March 2026
+effective date. What it did not have is the instrument that makes the law
+operational for education.
+
+**Decree 33**, signed **2026-06-30**, in force **2026-08-15**, lists **46
+high-risk AI systems** across six sectors. **Three are in education:**
+
+1. AI providing **self-learning content from uncontrolled data sources**
+2. AI that **automatically evaluates results and ranks learners**
+3. AI that **monitors and analyses learner behaviour using biometric data**
+
+Obligations: the risk level must be **reported to the Ministry of Science and
+Technology before use**; a **conformity assessment** is required before
+deployment and maintained throughout it; some designated systems must be assessed
+by a **registered or recognised conformity assessment body**, while others may be
+**self-assessed** by the provider. Transition: education systems already in
+operation — grouped with healthcare and banking — have until **2027-09-01**; all
+other existing high-risk systems until **2027-03-01**.
+
+**Category 1 has no equivalent in EU Annex III point 3, and it is the one that
+hits this KB hardest.** Annex III regulates education AI by the **decision** it
+makes about a learner — admission, evaluation of outcomes, placement, exam
+monitoring. Vietnam additionally regulates a tutor by the **provenance of its
+corpus**: an AI that generates self-study content from uncontrolled sources is
+high-risk *even if it makes no decision about anyone*. **That is a direct hit on
+the default architecture in this KB** — every RAG tutor in `agents/top.md` and
+pattern **P2**'s ingestion pipeline are in scope in Vietnam on corpus grounds
+alone. Conversely, Vietnam's behaviour-monitoring trigger is **narrower** than the
+EU's: it is qualified to **biometric** data, so non-biometric engagement
+analytics sit outside category 3.
+
+**Provenance caveat, stated plainly.** Every legal-publisher domain carrying this
+decree is **EGRESS_BLOCKED** in this environment (`allenandgledhill.com`,
+`vietnam-briefing.com`, `vietnamnews.vn`, `thuvienphapluat.vn`, `vietanlaw.com`,
+`ed.events` — 6/6 refused), so **the primary text was not reached.** The three
+education categories are recorded from **two independently-phrased searches whose
+summaries agreed on all three**, across five secondary outlets. The biometric
+qualifier on category 3 appeared in only one of the two. **Confirm against the
+decree text before putting any of this in a client deliverable.** Wired into
+**P20**.
+
+### What this pass says about method
+
+Three passes have now refuted a regional gap, each by changing something
+different: the **channel** (fifth — institution-first), the **layer** (sixth —
+substrate rather than product), and the **noun** (seventh — toolkit rather than
+model). **None was refuted by running the original search harder.** When a gap
+survives a second probe, the probe is the thing to change, not the depth.
+
+And the cheapest correction of the pass cost one `grep`. **Two of three
+corrections here were this KB disagreeing with itself** — a shelf that had not
+caught up with its own log. The discovery channels are working well enough that
+**internal consistency is now the binding constraint on this KB's accuracy**, not
+coverage. A pass that only appends grows contradictions at exactly the rate it
+grows findings.
+
 ## 2026-10-06 — sixth pass: the voice layer, where two of the best-known assets relicensed out from under you
 
 Channel new to this KB this pass: **substrate-first search** — sweeping the

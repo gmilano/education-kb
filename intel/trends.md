@@ -498,9 +498,45 @@ recurring per-token cost to a one-off build on hardware the client already owns.
 That reprices every spoken-practice and oral-assessment proposal, and it is the
 component that completes the offline-first pattern (**P18**).
 
-## 21. Mother-tongue AI is a two-region capability, not a global one — and the gap is the opportunity
+## 21. Mother-tongue AI is a three-region capability — and the two-region version of this trend was wrong
 
-Added sixth pass, 2026-10-06.
+Added sixth pass, 2026-10-06. **Revised in the seventh pass of 2026-10-06: the
+headline claim was "two regions" and it is false.** ASEAN has a permissive,
+self-hostable language layer in **five languages across four countries**, found
+by searching in Bahasa, Thai and Vietnamese rather than in English:
+
+| Repo | Licence (payload) | ★ / commits | Country |
+|---|---|---|---|
+| [undertheseanlp/underthesea](https://github.com/undertheseanlp/underthesea) | **Apache-2.0** | **1.8k** / 1,276 | Vietnam |
+| [PyThaiNLP/pythainlp](https://github.com/PyThaiNLP/pythainlp) | **Apache-2.0** | **1.2k** / **6,649** | Thailand |
+| [malaysia-ai/malaya](https://github.com/malaysia-ai/malaya) | **MIT** | 530 / 961 | Malaysia |
+| [IndoNLP/nusa-crowd](https://github.com/IndoNLP/nusa-crowd) | **Apache-2.0** | 292 / 992 | Indonesia |
+| [malaysia-ai/malaya-speech](https://github.com/malaysia-ai/malaya-speech) | **MIT** | 291 / 755 | Malaysia |
+
+**Why the sixth pass got it wrong, because the error is reusable.** It asked
+which languages have a permissive layer and went looking for **sovereign
+models** — found SEA-LION, correctly established it has no repository-level
+grant, and recorded the region as empty. But what makes a Thai tutor possible is
+not a sovereign LLM, it is a **tokenizer**: Thai has no spaces between words.
+**The gap was an artefact of the noun, not of the region.** Three regional gaps
+in this KB have now been refuted by changing the channel, the layer and the noun
+— and none by searching the original channel harder.
+
+**Two qualifications that keep this honest.** None of the ASEAN shelf is
+education-specific — like AI4Bharat, these are general toolkits that make a
+mother-tongue tutor possible without making one. And only **one** of them covers
+speech (`malaya-speech`), so spoken practice in Thai, Vietnamese and Indonesian
+routes through the general shelf (`sherpa-onnx`, Whisper) and must be
+accuracy-tested per language rather than assumed.
+
+**What survives of the original trend, and it is still the commercially useful
+part:** most of the world's teaching languages still have no permissive
+self-hostable layer, the gap is a differentiator rather than a disqualifier, and
+corpus-building is fundable first-phase work that ministries and development
+funders pay for directly. The count moved from two regions to three. The argument
+did not change.
+
+**Original sixth-pass text follows, retained so the correction is legible.**
 
 "Multilingual" in education AI usually means the handful of languages a frontier
 model happens to serve well. Asked instead **which teaching languages have a
@@ -558,6 +594,74 @@ components are all now permissive and shelved, and a **public dataset with a
 published accuracy baseline** exists (Ghana ORF Dataset; Whisper V2 at 10.3% WER,
 *IJAIED* [10.1007/s40593-024-00435-9](https://doi.org/10.1007/s40593-024-00435-9)).
 That is an open category with no open competitor — wired up as **P17**.
+
+## 22. Regulation has started pricing the *corpus*, not just the decision
+
+Added seventh pass, 2026-10-06.
+
+Every education-AI compliance regime this KB has tracked regulates by the
+**decision an AI makes about a learner**. EU AI Act **Annex III point 3**:
+admission and access, evaluation of learning outcomes, level placement, exam or
+behaviour monitoring. The Oklahoma and Maryland statutes: human judgment must be
+final on consequential decisions. Korea's AI Framework Act: high-impact systems
+need oversight and documentation. All decision-shaped.
+
+**Vietnam has added a second axis, and it regulates the tutor by where its
+content came from.**
+
+**Decree 33**, signed **2026-06-30**, in force **2026-08-15**, implements Law No.
+134/2025/QH15 and lists **46 high-risk AI systems** across six sectors. Three are
+in education:
+
+1. AI providing **self-learning content from uncontrolled data sources**
+2. AI that **automatically evaluates results and ranks learners**
+3. AI that **monitors and analyses learner behaviour using biometric data**
+
+Categories 2 and 3 are Annex III in different words. **Category 1 has no
+European equivalent, and it is the one that reaches the default architecture in
+this KB.** An AI that generates self-study material from an uncurated corpus is
+high-risk *even when it makes no decision about any learner at all*. A RAG tutor
+that only ever explains things — no grading, no ranking, no monitoring — is in
+scope in Vietnam on **corpus provenance alone**.
+
+Obligations: report the risk level to the **Ministry of Science and Technology
+before use**; **conformity assessment** before deployment and maintained
+throughout; designated systems assessed by a **registered or recognised body**,
+others **self-assessed** by the provider. Transition: education systems already
+operating — grouped with healthcare and banking — have until **2027-09-01**;
+everything else high-risk until **2027-03-01**.
+
+**Three consequences.**
+
+- **The ingestion pipeline becomes a compliance artefact.** Pattern **P2**
+  (curriculum ingestion → item bank) and every RAG tutor on the shelf need a
+  **source manifest** — what was ingested, from where, under what rights, reviewed
+  by whom — not as good practice but as the evidence a conformity assessment
+  consumes. This is the same gate `microsoft/shiksha-copilot` built as a human
+  curator step and `CurriculumCraft-AI` argued for with synthetic generation; both
+  now have a regulator asking for it. Wired up as **P20**.
+- **One trigger is narrower than the EU's, and that is worth money.** Vietnam
+  qualifies behaviour monitoring to **biometric** data. Non-biometric engagement
+  analytics — time on task, attempt counts, mastery curves — sit **outside**
+  category 3, where the EU's "behaviour monitoring" arguably captures them.
+  Analytics-heavy products can be scoped more aggressively in Vietnam than in the
+  EU, which is the first instance in this KB of an APAC regime being *looser* than
+  Annex III on a specific axis.
+- **"Curated corpus" stops being a quality claim and becomes a licence to
+  operate.** The commercial read: in Vietnam the defensible tutor is the one that
+  can name its sources. That favours exactly the curriculum-aligned, ministry-
+  reviewed ingestion shape this KB already recommends, and it disfavours the
+  general-purpose "upload anything" assistant.
+
+**Provenance caveat, and it matters here more than anywhere else in this file.**
+Every legal-publisher domain carrying Decree 33 is **EGRESS_BLOCKED** in this
+environment — `allenandgledhill.com`, `vietnam-briefing.com`, `vietnamnews.vn`,
+`thuvienphapluat.vn`, `vietanlaw.com` and `ed.events`, **6/6 refused** — so **the
+primary text was not read.** The three education categories come from **two
+independently-phrased searches whose summaries agreed on all three**, across five
+secondary outlets; the **biometric** qualifier on category 3 appeared in only one
+of the two. **Verify against the decree before this reaches a client
+deliverable**, and treat the biometric narrowing as the least-confirmed element.
 
 ## Regional notes where the trend diverges
 

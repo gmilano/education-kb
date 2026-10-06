@@ -918,10 +918,159 @@ selection and pedagogical tuning (2 wk) → offline-hardware field pilot (3 wk).
 **The honest regional caveat.** For Spanish and Portuguese this works today. For
 most of the world's teaching languages **it does not** — the permissive language
 layer exists for Indic languages (MIT) and six Ugandan languages plus Masakhane's
-continental MT (Apache-2.0/MIT), and essentially nowhere else. Check the target
+continental MT (Apache-2.0/MIT), **and, added in the seventh pass, ASEAN:
+Vietnamese, Thai, Malay and Indonesian (Apache-2.0/MIT — see P19)**. Outside
+those three regions, essentially nowhere. Check the target
 language against `repos/foundations.md` **before** promising mother-tongue
 delivery; where it is missing, the honest scope is data collection first, and
 `SunbirdAI/salt` is the model for how that was done well.
+
+## P19 — ASEAN mother-tongue tutor on an all-permissive national stack
+
+Added seventh pass, 2026-10-06. **This pattern did not exist before this pass
+because the KB believed its language layer did not exist.** The sixth pass
+recorded ASEAN as having no permissive self-hostable language layer, having
+searched for sovereign models and correctly found
+[SEA-LION](https://github.com/aisingapore/sea-lion) carrying no repository-level
+grant. Searching for **toolkits** instead returns a full shelf.
+
+**Every layer below is MIT or Apache-2.0, read from payload on 2026-10-06.**
+
+| Layer | Component | Licence (payload) |
+|---|---|---|
+| LMS substrate | [Coursemology/coursemology2](https://github.com/Coursemology/coursemology2) | **MIT** (`master/LICENSE`) — NUS-origin, 15,802 commits |
+| Pedagogy engine | [ArnaudGuiovanna/tutor-mcp](https://github.com/ArnaudGuiovanna/tutor-mcp) | **MIT** (`main/LICENSE`) — BKT + FSRS + prerequisites + misconceptions |
+| **Language — Vietnamese** | [undertheseanlp/underthesea](https://github.com/undertheseanlp/underthesea) | **Apache-2.0** (`main/LICENSE`) — 1.8k★, 13 tasks incl. diacritics restoration |
+| **Language — Thai** | [PyThaiNLP/pythainlp](https://github.com/PyThaiNLP/pythainlp) | **Apache-2.0** (`main/LICENSE`) — 1.2k★, 6,649 commits, subword tokenization |
+| **Language — Malay** | [malaysia-ai/malaya](https://github.com/malaysia-ai/malaya) | **MIT** (`master/LICENSE`) |
+| **Voice — Malay only** | [malaysia-ai/malaya-speech](https://github.com/malaysia-ai/malaya-speech) | **MIT** (`master/LICENSE`) |
+| **Language — Indonesian** | [IndoNLP/nusa-crowd](https://github.com/IndoNLP/nusa-crowd) | **Apache-2.0** (`master/LICENSE`) — 143 datasets |
+| Voice runtime (all other languages) | [k2-fsa/sherpa-onnx](https://github.com/k2-fsa/sherpa-onnx) | **Apache-2.0** (`master/LICENSE`) |
+| Local inference | [ollama/ollama](https://github.com/ollama/ollama) | **MIT** |
+| Human review stage | [AI4Bharat/Shoonya](https://github.com/AI4Bharat/Shoonya) | **MIT** (`master/LICENSE`) |
+
+**Wiring.** Coursemology holds courses, submissions and roster and is the system
+of record. `tutor-mcp` runs as an **external MCP side-car** — the licence
+boundary from `agents/top.md` applies here as everywhere: the pedagogy stays MIT
+because it never enters the LMS tree — and owns mastery state (BKT), review
+scheduling (FSRS) and the prerequisite graph. The **language toolkit for the
+target country sits in front of the model**, doing the work a frontier model does
+badly in these languages: `pythainlp` tokenizes Thai (which has no spaces between
+words, so this is not optional); `underthesea` restores diacritics and segments
+Vietnamese; `malaya` normalizes and tags Malay. Ollama serves the tutor model
+locally. For spoken practice, **Malay routes through `malaya-speech`; everything
+else routes through `sherpa-onnx`** and must be accuracy-tested per language.
+Shoonya is the annotation and review stage for the curriculum corpus — which in
+Vietnam is also a compliance artefact, see **P20**.
+
+**Why this is the clearest build-and-own opportunity in APAC outside India.**
+The fifth pass established that ASEAN's operationally mature education AI is
+**closed** — AICET's Codaveri, Softmark and ScholAIstic run at ministry scale
+with no public repository — over an **MIT substrate**. Add the language shelf and
+the asymmetry is unusually favourable: **the LMS layer is MIT, the language layer
+is Apache-2.0/MIT, and the national-language pedagogy layer is unbuilt by anyone,
+open or closed.** There is no incumbent to displace and no licence to negotiate.
+
+**Sequence:** Coursemology deployment and roster integration (3 wk) → `tutor-mcp`
+side-car wired over LTI/MCP with mastery state (3 wk) → language toolkit
+integration and per-language quality evaluation (3 wk) → curriculum corpus
+ingestion through Shoonya review (3 wk) → voice layer, Malay first (2 wk) →
+classroom pilot (3 wk). **15–17 weeks.**
+
+**Three honest constraints — state all three in the proposal.**
+
+1. **None of the language shelf is education-specific.** These are general
+   toolkits, exactly like AI4Bharat. They make a mother-tongue tutor possible;
+   the pedagogy is yours to build. That is the opportunity and also the cost.
+2. **Voice is Malay-only on the regional shelf.** Thai, Vietnamese and Indonesian
+   have the text layer and no local permissive voice layer. Do not promise spoken
+   practice in those three until `sherpa-onnx` or Whisper has been measured on
+   the target language with real learner audio.
+3. **`nusa-crowd` and `indonlu` are corpora and benchmarks, not runtimes.** For
+   Indonesian the shelf gives you data and evaluation, not a deployable
+   component. Scope Indonesian as a heavier build than Thai or Vietnamese.
+
+**Do not use `malaysia-ai/malaysian-dataset`** (345★, the organisation's second
+most-starred repo) — **no `LICENSE` payload**, while both its code siblings are
+MIT. And do not treat SEA-LION as a blanket-licensed option: its grant lives on
+each HuggingFace **model card**, so licence review there is **per checkpoint and
+recurring**.
+
+## P20 — The corpus-provenance gate (Vietnam Decree 33, and the artefact every regime now wants)
+
+Added seventh pass, 2026-10-06. **P13 is the EU AI Act education profile, built
+around the *decision* an AI makes about a learner. This pattern covers the axis
+P13 does not have: the *provenance of the corpus*.**
+
+**The rule that creates it.** Vietnam's **Decree 33** (signed 2026-06-30, in
+force 2026-08-15), implementing Law No. 134/2025/QH15, lists 46 high-risk AI
+systems across six sectors. Its **first** education category is AI providing
+**self-learning content from uncontrolled data sources** — so a RAG tutor is
+high-risk **even if it grades nothing, ranks nobody and monitors no one**. EU
+Annex III point 3 has no equivalent category. **This reaches the default
+architecture in this KB directly:** every RAG tutor in `agents/top.md`, and the
+ingestion pipeline in **P2**, are in scope in Vietnam on corpus grounds alone.
+
+| Layer | Component | Licence (payload) |
+|---|---|---|
+| Ingestion + item generation | **P2** pipeline as built | — |
+| Human curation gate | [AI4Bharat/Shoonya](https://github.com/AI4Bharat/Shoonya) | **MIT** (`master/LICENSE`) |
+| Grading human-gate reference | [toshieji/moodle-grading-mcp](https://github.com/toshieji/moodle-grading-mcp) | **MIT** (`main/LICENSE`) — writes `readyforreview`, never releases |
+| Risk-tier classification + checklist | [AbdelStark/eu-ai-act-toolkit](https://github.com/AbdelStark/eu-ai-act-toolkit) | **MIT** — six tiers, 61 conformity items, CLI + SDK |
+| Model-call trace | Langfuse (as used by [Selleo/mentingo](https://github.com/Selleo/mentingo), **MIT**) | per Langfuse terms — check before shipping |
+| Signed provenance | C2PA tooling as recorded in `intel/trends.md` | per implementation |
+
+**The deliverable is a source manifest, and it is billable.** For every document
+in the tutor's corpus, record: **what** was ingested (hash and version), **from
+where** (URI, publisher, retrieval date), **under what rights** (licence or
+permission, with the payload read rather than the badge), **who reviewed it**
+(named human, timestamp, approve/reject), and **which generated artefacts derive
+from it** (so a withdrawn source can be traced forward to every item it
+produced). Shoonya is the only shelved permissive implementation of the review
+stage; the rest is schema and plumbing.
+
+**Wiring.** P2 ingests as before, but nothing enters the retrieval index until it
+carries a manifest row with a review decision — **fail-closed, on the pattern
+`moodle-grading-mcp` uses for grades**: writes require an explicit enable flag
+*and* a non-empty allowlist, and every attempt, denial and success is appended to
+an audit log. Generated items inherit their sources' manifest IDs, so a
+conformity assessor can ask "where did this question come from?" and get an
+answer without a code reading. The `eu-ai-act-toolkit` CLI produces the risk-tier
+classification and checklist artefacts; run it in CI so the compliance evidence
+regenerates with the corpus rather than being assembled once before an audit.
+
+**What it buys you in each region — this is the reason to build it once.**
+
+| Region | What the manifest satisfies |
+|---|---|
+| **APAC** | Vietnam Decree 33 category 1 directly — the conformity assessment consumes exactly this. Report the risk level to the **Ministry of Science and Technology before use**; assessment before deployment and **maintained throughout** |
+| **EMEA** | EU Annex III point 3 data-governance and technical-documentation obligations under P13, and the copyright question every ministry engagement asks in week one |
+| **North America** | California **AB 1159** — student data must not train models — is a provenance question in the other direction, and the same manifest answers it |
+| **LATAM** | The governance deficit is the measured regional opportunity: **87% of institutions using AI, 26% with a formal strategy, under 10% with formal guidelines.** This is the artefact that closes that gap, and it sells without any regulation compelling it |
+
+**Sequence:** manifest schema and rights-capture fields (1 wk) → Shoonya review
+loop with named reviewers (2 wk) → fail-closed index gate with audit log (2 wk) →
+forward-tracing from source to generated item (2 wk) → `eu-ai-act-toolkit` run
+wired into CI (1 wk) → conformity-assessment dry run against Decree 33's three
+education categories (2 wk). **10 weeks**, and it is reusable across every
+subsequent engagement in the practice.
+
+**Two things to get right.**
+
+- **Vietnam's biometric narrowing is an opportunity, not a loophole to lean on.**
+  Decree 33 category 3 is qualified to behaviour monitoring **using biometric
+  data**, so non-biometric analytics — time on task, attempt counts, mastery
+  curves — sit outside it, unlike the EU's broader "behaviour monitoring". Scope
+  analytics more freely in Vietnam **and** keep the human gate on consequential
+  scores regardless: category 2 still captures automated evaluation and ranking.
+- ⚠️ **Verify Decree 33 against its own text before this reaches a client.**
+  Every legal-publisher domain carrying it is **EGRESS_BLOCKED** in this
+  environment (6/6 refused). The three education categories here come from **two
+  independently-phrased searches that agreed on all three**; the **biometric**
+  qualifier appeared in only one of the two and is the least-confirmed element in
+  this pattern. The *engineering* is sound whatever the decree says in detail —
+  a source manifest is required by EMEA and useful in all four regions — but do
+  not quote the categories as law without reading the law.
 
 ## Pattern selection
 
@@ -958,6 +1107,21 @@ delivery; where it is missing, the honest scope is data collection first, and
 | Client asks whether generated items infringe the curriculum body's copyright | **P15** step 2 — reuse CurriculumCraft AI's argument even if you reuse none of its code |
 | Teacher-side artefacts (lesson plans, question banks) rather than a student tutor | **P15** step 1 (`microsoft/shiksha-copilot`, MIT) — not P1 |
 | LATAM higher ed, and you are choosing where to start | **P6 first** — 87% of LAC institutions use AI, 26% have a strategy; the gap is governance, not technology |
+| India or a state/national programme wanting an end-to-end permissive stack | **P16** — AI4Bharat (MIT) + Sunbird (MIT); permissive from language layer to platform |
+| Primary literacy, oral reading fluency, or "measure whether the child can read" | **P17** — the only category in this KB with permissive components, a public dataset, a published baseline and **no open competitor** |
+| Offline/low-connectivity **and** the tutor must speak or listen | **P18** — `sherpa-onnx` (Apache-2.0) gives STT+TTS+diarization+VAD in one dependency; **not** Piper |
+| ASEAN institution wanting a tutor in Vietnamese, Thai, Malay or Indonesian | **P19** — MIT LMS substrate, Apache-2.0/MIT language shelf, pedagogy layer unbuilt by anyone open or closed |
+| Spoken practice in Thai, Vietnamese or Indonesian specifically | **P19 constraint 2** — only Malay has a regional permissive voice toolkit; measure `sherpa-onnx` on real learner audio before promising |
+| **Vietnam in scope, at all** | **P20** — Decree 33 makes a RAG tutor high-risk on **corpus provenance alone**, even with no grading, ranking or monitoring |
+| Client asks "where did this generated question come from?" | **P20** — the source manifest, with forward tracing from source to item |
+| Any engagement that ingests client or curriculum content into a tutor | **P20** alongside **P2** — build the manifest once, it satisfies Vietnam, EMEA Annex III, California AB 1159 and the LATAM governance gap |
+
+**Index consistency note (seventh pass, 2026-10-06):** this table was missing
+**P16, P17 and P18** — three patterns written by earlier passes and never indexed
+here. They are added above with P19 and P20. This is the same failure the seventh
+pass found in `agents/top.md` and that `repos/trending.md` recorded in the sixth:
+**a finding written into one surface and not propagated to the one a reader
+opens.** Checking the index against the pattern headings is now part of a pass.
 
 ## Anti-patterns
 

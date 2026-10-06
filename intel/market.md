@@ -271,6 +271,35 @@ posture as a feature rather than waiting for a US mandate.
   cover Spanish speech in and out, on-premises, with no student audio leaving the
   district — which is also the FERPA-friendly architecture.
 
+#### Seventh pass of 2026-10-06 — the federal bill, and a trending repo you cannot ship
+
+**Net new to this file: there is now federal legislation moving.** The **House
+Education Committee advanced the K-12 AI Literacy and Readiness Act of 2026
+(H.R. 8747)**, which would amend the Elementary and Secondary Education Act to
+let schools **spend federal funds on AI curriculum and literacy programmes**.
+This KB had the state-level picture in detail (134 bills across 31 states;
+California AB 1159 barring student data from model training; Idaho SB 1227;
+Oklahoma and Maryland requiring human oversight; North Carolina's $10M Khanmigo
+earmark) and nothing at the federal level.
+
+**Why it matters more than most bills: it is a funding authorisation, not a
+restriction.** Every other instrument this KB tracks for North America
+*constrains* deployment. This one would create a **federal budget line for
+exactly the enablement work Globant already sells** — teacher and student AI
+literacy, curriculum integration — on top of the state procurement pipelines
+already funded. It has advanced from committee only; treat it as pipeline
+intelligence, not as a closed sale.
+
+**A procurement caution from the repository side of this pass.**
+[cs341-illinois/coursebook](https://github.com/cs341-illinois/coursebook) — an
+open systems-programming textbook from **UIUC** — gained **~1,626★ in one week**,
+the fastest-growing education repository seen in any pass of this KB, and it has
+**no `LICENSE` payload**. North American higher-ed clients will bring
+repositories like this to the table as "open" course material. **Trending
+velocity, institutional provenance and the word "open" are all orthogonal to
+whether rights were granted.** Probe before promising, and expect to have this
+conversation with a university client who believes their own repo is usable.
+
 ### EMEA
 
 - **The EU AI Act is the whole conversation.** AI used in education access and
@@ -483,6 +512,46 @@ addressable market: funded intent, no implementation.
   **archived**; the maintained one is **GPL-3.0**. A procurement that forbids
   copyleft and a technical spec that names Piper are in silent conflict.
 
+#### Seventh pass of 2026-10-06 — MEA's constraint is licensing hygiene, not capability
+
+This KB has recorded MEA as its thinnest region through four passes. The seventh
+pass searched **in Arabic** — a channel never used before — and the result
+sharpens the diagnosis rather than changing the size.
+
+[781991937/TOFAN-AI-2026](https://github.com/781991937/TOFAN-AI-2026) is the most
+substantial Arabic-language education agent found in seven passes: ingests lesson
+files, extracts and analyses content, generates summaries and interactive tests;
+FastAPI backend, installable PWA front end. **It has no `LICENSE` payload.**
+
+Set against the rest of the MEA shelf:
+
+| Asset | State |
+|---|---|
+| `AI-for-Education` org (MIT — Sierra Leone MBSSE lesson-plan parser, Uganda) | Real, ministry-engaged, and **1–12★ research-grade code** |
+| `AI-for-Education/Luganda-linguistic-benchmarks` | **Unlicensed** |
+| [`SunbirdAI/salt`](https://github.com/SunbirdAI/salt) (Apache-2.0) | Real and usable — but a **corpus**, not a product |
+| `781991937/TOFAN-AI-2026` (Arabic) | Real, well-shaped, **unlicensed** |
+
+**MEA is the only region in this KB with zero shippable permissive education
+assets, and the binding constraint is not interest, funding or capability — it is
+licensing hygiene.** Two of the four rows above are good work with no grant
+attached.
+
+**Why this is good news commercially.** A capability gap takes a year to close
+and a funding gap is not Globant's to close. **A licensing gap closes with three
+`LICENSE` files**, and asking for one is a free, high-visibility upstream
+contribution that creates a relationship with the maintainer — in two cases, a
+maintainer already working with an education ministry. This is now the cheapest
+high-value upstream action identified anywhere in this KB, ahead of the
+pedagogy-evaluation asks from the fourth and fifth passes.
+
+**Market context for sizing:** MEA is **$0.56B in 2026 growing at 34.3% CAGR to
+$1.6B by 2030** — the fastest-growing and smallest regional market here — with
+the **UAE** one of only two jurisdictions worldwide running a compulsory national
+AI curriculum, and Egypt, Morocco and Jordan building capacity through
+public–private partnerships. The demand is funded and the open supply is
+unlicensed, which is an unusually favourable asymmetry for a services business.
+
 ### APAC
 
 - **Largest absolute AI market: ~USD 102B as of March 2026** (all sectors, not
@@ -684,6 +753,73 @@ announced a multi-year AI learning alliance.
   products are closed while the LMS beneath them is MIT, the position is:
   **integration surfaces are permissive, model rights are not.** Offer
   per-checkpoint licence review as a recurring engagement line, not a one-off gate.
+
+#### Seventh pass of 2026-10-06 — Vietnam's education rules, and the ASEAN language shelf that exists
+
+**Vietnam: Decree 33 is the instrument that makes Law 134/2025/QH15 operational
+for education, and this KB did not have it.** Signed **2026-06-30**, in force
+**2026-08-15**; lists **46 high-risk AI systems** across six sectors, **three of
+them in education**:
+
+| # | Education high-risk category | EU Annex III point 3 equivalent? |
+|---|---|---|
+| 1 | AI providing **self-learning content from uncontrolled data sources** | **No equivalent.** Regulates the tutor by **corpus provenance**, not by any decision it makes |
+| 2 | AI that **automatically evaluates results and ranks learners** | Yes — evaluation of learning outcomes, level placement |
+| 3 | AI that **monitors and analyses learner behaviour using biometric data** | Partly — Annex III covers exam/behaviour monitoring **without** the biometric qualifier, so Vietnam is **narrower** here |
+
+Obligations: **report the risk level to the Ministry of Science and Technology
+before use**; **conformity assessment** before deployment and maintained
+throughout; designated systems assessed by a **registered or recognised
+conformity assessment body**, others **self-assessed** by the provider.
+Transition: education systems already in operation — grouped with **healthcare
+and banking** — have until **2027-09-01**; all other existing high-risk systems
+until **2027-03-01**.
+
+**Commercial read, three points.**
+
+- **Category 1 is the one to price into every Vietnam proposal.** A RAG tutor
+  that only explains — no grading, no ranking, no monitoring — is **still
+  high-risk** if its corpus is uncurated. The deliverable that answers it is a
+  **source manifest** (what was ingested, from where, under what rights, reviewed
+  by whom), which is billable work and is also the artefact a conformity
+  assessment consumes. See **P20**.
+- **The 2027-09-01 education transition is a defined sales window.** Education,
+  healthcare and banking got the **longest** runway of any sector, so incumbent
+  deployments have ~11 months beyond the general deadline to be brought into
+  conformity. That is remediation work with a statutory date on it.
+- **Vietnam is looser than the EU on analytics.** Because category 3 is qualified
+  to **biometric** data, non-biometric engagement analytics — time on task,
+  attempt counts, mastery curves — sit outside it. **First instance in this KB of
+  an APAC regime being less restrictive than Annex III on a specific axis**, and
+  it favours analytics-led products.
+
+⚠️ **Provenance:** every legal-publisher domain carrying this decree is
+**EGRESS_BLOCKED** here (6/6 refused: `allenandgledhill.com`,
+`vietnam-briefing.com`, `vietnamnews.vn`, `thuvienphapluat.vn`, `vietanlaw.com`,
+`ed.events`). The three categories are recorded from **two independently-phrased
+searches that agreed on all three**; the biometric qualifier appeared in only
+one. **Confirm against the decree text before using this in a deliverable.**
+
+**The ASEAN language substrate exists, and the sixth pass said it did not.** This
+KB recorded ASEAN as having no permissive language layer because it searched for
+sovereign models and found [SEA-LION unlicensed](https://github.com/aisingapore/sea-lion).
+Searching in Bahasa, Thai and Vietnamese returns a real shelf — **Vietnamese
+`underthesea` (Apache-2.0, 1.8k★), Thai `pythainlp` (Apache-2.0, 1.2k★, 6,649
+commits), Malay `malaya` + `malaya-speech` (both MIT), Indonesian `nusa-crowd`
+(Apache-2.0, 143 datasets)**. Full shelf in `repos/foundations.md`.
+
+**What that changes for an ASEAN engagement.** The fifth pass's finding was that
+ASEAN's mature education AI is **closed** (AICET's Codaveri, Softmark,
+ScholAIstic) over an **MIT substrate** (`Coursemology/coursemology2`) — a good
+commercial position. Add the language shelf and the position improves again: the
+**LMS substrate is MIT, the language substrate is Apache-2.0/MIT, and the
+pedagogy layer in a national language is unbuilt by anyone, open or closed.**
+That is the clearest build-and-own opportunity in APAC outside India. **P19.**
+
+**Caveat on the opportunity, so it is not oversold:** only `malaya-speech` covers
+voice. Thai, Vietnamese and Indonesian have text-layer coverage only, so spoken
+practice in those languages routes through `sherpa-onnx` or Whisper and needs
+per-language accuracy testing before it is promised.
 
 ### LATAM
 
@@ -909,6 +1045,47 @@ opportunity and **normative inconsistency risk** for anything sold across border
   SALT (Uganda) as the worked example of how a region built its own corpus and
   licensed it properly.
 
+#### Seventh pass of 2026-10-06 — declared: no new LATAM code, and the reason is the channel
+
+**Stated explicitly, because silence looks exactly like coverage.** This pass's
+new channel was **native-language search**, and the languages added were
+**Japanese, Korean, Arabic, Bahasa, Thai and Vietnamese**. **Spanish and
+Portuguese were not re-run**, because the fourth pass had already used that
+channel and the seventh pass's purpose was to open an unused one.
+
+**So this pass contributes no new LATAM repository, and that is a scope decision
+rather than a measurement.** It is not evidence for or against the LATAM gap.
+The state of the region is unchanged from the sixth pass and should be quoted
+from there:
+
+- [`LabSirius/TutorIA`](https://github.com/LabSirius/TutorIA) — MIT, Universidad
+  Tecnológica de Pereira, Colombia, SNCTI-funded, specifies this KB's **P1**
+  architecture, and **every code path in its own documented tree 404s**. A
+  partnership lead and an existence proof; **never a fork target**.
+- [`Nkluge-correa/Tucano`](https://github.com/Nkluge-correa/Tucano) — Apache-2.0,
+  Portuguese-native, peer-reviewed in *Patterns*, **archived 2026-02-24**;
+  Tucano 2 continues under the **Bonn-hosted** Polygl0t initiative. Portuguese
+  open modelling did not die, it **relocated to EMEA**.
+- Earlier passes located **12 repositories in LATAM** against a "zero
+  repositories" claim this KB had carried for four passes, and the fifth pass
+  recorded LATAM as the **most saturated** region on the intel axis — 7 probes,
+  0 new facts.
+
+**The actionable read is unchanged and worth repeating, because it is the
+commercial one.** LATAM demand is measured and large — **79% of faculty using
+AI**, **87% of institutions** using it in at least one area, and only **26% with
+a formal AI strategy**, with fewer than **10% of institutions** holding formal
+guidelines. **The regional opportunity is governance, localisation and
+deployment, not upstream code** — and the governance deficit is now the
+best-evidenced commercial fact about the region in this KB.
+
+**For the next pass:** the LATAM channel to open is **not** another
+Spanish-language repository search, which has been run twice and saturated. It is
+the one this pass used for APAC — **search the language substrate**, for the
+indigenous and regional languages (Guaraní, Quechua, Nahuatl, Aymara) that a
+ministry engagement would actually ask about. That noun has never been queried
+for LATAM, and in APAC changing exactly that noun falsified a standing gap.
+
 ## Cross-region read
 
 Two patterns hold in every region, which makes them safe to build once and sell
@@ -1072,3 +1249,36 @@ frozen. The fields that carried the signal were **archive status, the successor
 notice, and commit count** — none of them popularity.
 
 **Check whether a repository is alive before checking how popular it is.**
+
+## What changed in the seventh pass of 2026-10-06
+
+New channel: **native-language search** (Japanese, Korean, Arabic,
+Bahasa/Thai/Vietnamese), plus a **function-scoped MCP sweep** and a
+**consistency audit** of the shelves against the trending logs. **18
+repositories probed, 18 resolved**; every licence from payload.
+
+| Finding | Why it matters |
+|---|---|
+| **Vietnam's Decree 33** (signed 2026-06-30, in force 2026-08-15): 46 high-risk systems, **3 in education** | Category 1 — *self-learning content from uncontrolled data sources* — **regulates the corpus, not the decision**. No Annex III equivalent. Every RAG tutor in this KB is in scope in Vietnam on provenance alone ⇒ **P20** |
+| Vietnam's behaviour-monitoring trigger is qualified to **biometric** data | **First APAC regime in this KB that is *looser* than Annex III** on a specific axis. Non-biometric analytics sit outside it |
+| Education's Decree 33 transition runs to **2027-09-01** (with healthcare and banking) | The **longest** runway of any sector — a remediation window with a statutory date |
+| **ASEAN has a permissive language shelf**: Vietnamese, Thai, Malay ×2, Indonesian ×2 | **Falsifies trend 21's "two-region" claim.** Combined with MIT `coursemology2`, ASEAN now has an MIT LMS substrate **and** an Apache-2.0/MIT language substrate under an unbuilt pedagogy layer ⇒ **P19** |
+| **MEA's constraint is licensing hygiene, not capability** — the one real Arabic education agent is unlicensed | Turns the region's weakest finding into the **cheapest** one to act on: three `LICENSE` files change the regional answer |
+| **H.R. 8747** advanced from House committee — federal funds for AI curriculum and literacy | The only **funding** instrument among the North American rules this KB tracks; everything else constrains |
+| **Japan gap refuted — by this KB, passes ago.** `toshieji/moodle-grading-mcp` (MIT, © WACA + Toshiaki Ejiri) | `agents/top.md` asserted a gap its own trending log had already disproved. **Internal consistency, not coverage, is now the binding constraint on this KB's accuracy** |
+| **Korea's first permissive education asset** — `yongsoojoo/esd2026-agent-workflow` (MIT + CC BY 4.0, Kookmin University) | Course material, not an agent. The **agent** gap stands, against an AI Framework Act in force since 22 Jan 2026 |
+| **No licensed open proctoring agent exists** — the one candidate has no payload | A regulated category (Annex III point 3; Decree 33 category 3) with **no open competitor** |
+| **No new LATAM code this pass, and the reason is declared** | The channel opened was non-Iberian by design. Not evidence about the LATAM gap either way |
+
+### The method note, stated plainly
+
+Three passes have now refuted a regional gap, each by changing a different thing:
+the **channel** (fifth — institution-first), the **layer** (sixth — substrate
+rather than product), and the **noun** (seventh — toolkit rather than sovereign
+model). **Not one was refuted by running the original search harder.** When a
+gap survives its second probe, change the probe.
+
+And the cheapest two corrections of this pass required no search at all — they
+were this KB disagreeing with itself, found with `grep`. **A pass is finished
+when the shelf, the gap list, the trends file and the patterns agree with the
+log, not when the log entry is written.**

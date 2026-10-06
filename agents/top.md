@@ -318,6 +318,72 @@ timestamps that make fluency measurable; [faster-whisper](https://github.com/SYS
 MIT, for the transcript), a public dataset, a published accuracy baseline to beat,
 and no open competitor. Wired up as **P17** in `compose/patterns.md`.
 
+### Added in the seventh pass of 2026-10-06 — a shelving audit, and the first Korea-origin permissive asset
+
+**Channel new to this KB this pass: native-language search** (Japanese, Korean,
+Arabic, Bahasa/Thai/Vietnamese). Earlier passes searched English, then Spanish
+and Portuguese. The language substrate it turned up is in
+`repos/foundations.md`; what it changes *here* is smaller and more awkward.
+
+**The awkward part first: this file was behind its own trending log.** Five
+permissive education MCP servers had been probed and verified by earlier passes
+and recorded in `agents/trending.md` — and **never added to the shelf table
+below**, which was still the Canvas/Moodle/Anki set. They are now in it, each
+re-probed from payload this pass rather than trusted from history. One of them,
+`toshieji/moodle-grading-mcp`, **refutes a gap this file was still asserting two
+sections above** (see the gap updates at the end).
+
+**The lesson is a maintenance one, and it has now bitten twice.** `repos/trending.md`
+recorded the same failure in the sixth pass — *"a 38,046-commit MIT platform this
+KB found and then forgot to shelve."* A finding recorded only in an append-only
+log is **discoverable but not usable**: nobody scoping an engagement reads 13,000
+lines of pass history. **A pass is not finished when the trending entry is
+written; it is finished when the shelf, the gap list and the patterns agree with
+it.** This pass added a consistency sweep across those four surfaces, and it
+found two contradictions in this file alone.
+
+#### The Korea finding, stated at its real size
+
+[yongsoojoo/esd2026-agent-workflow](https://github.com/yongsoojoo/esd2026-agent-workflow)
+— **MIT for code, CC BY 4.0 for documentation** (`main/LICENSE` read from
+payload, © 2026 Yongsoo Joo), **0★ / 0 forks / 4 commits**, HTML static site.
+Course material for *임베디드시스템설계 2026-2* (Embedded Systems Design) at
+**Kookmin University**, Seoul: an AI-agent configuration-management tutorial
+covering git, AI tooling and Raspberry Pi setup, written by the instructor
+jointly with an AI coding agent.
+
+**This is the first Korea-origin permissive education asset in seven passes, and
+it is not an agent.** It is an enablement artefact — the same category as the
+Microsoft and Hugging Face courses, at 1/10,000th the scale. Recording it
+honestly:
+
+- **Closed:** "no Korea-origin permissive education *asset*." One exists, from a
+  named university, with a clean dual grant.
+- **Still open:** "no Korea-origin permissive education *agent*." Nothing
+  changed. And Korea is the jurisdiction with the **AI Framework Act in force
+  since 22 January 2026**, so the mismatch between regulatory maturity and open
+  supply is the widest of any market in this KB.
+- **Worth noting for enablement work:** the **code/docs split grant** (MIT + CC
+  BY 4.0) is the correct licensing shape for a teaching artefact, and almost
+  nothing else in this KB's teaching-content shelf gets it right.
+
+#### Measured rejections from the native-language sweep
+
+| Candidate | Channel | Why it is not in a table |
+|---|---|---|
+| [781991937/TOFAN-AI-2026](https://github.com/781991937/TOFAN-AI-2026) | Arabic | **No `LICENSE` payload** (2 branches × 6 filenames). The most substantial Arabic-language education agent found in any pass — *"مساعد تعليمي ذكي"*, ingests lesson files, extracts and analyses content, generates summaries and interactive tests; FastAPI backend with a PWA/Web-App front end, explicitly not a Telegram bot. **Real, well-shaped, and legally unusable.** The single highest-value upstream ask in this KB right now |
+| [biswal-prem-5677/Autonomous-Exam-Proctoring-Grading-Agent](https://github.com/biswal-prem-5677/Autonomous-Exam-Proctoring-Grading-Agent) | function-scoped (proctoring + grading) | **No `LICENSE` payload.** *"A fully local, mathematics-driven AI exam system for autonomous proctoring, explainable cheating-risk prediction, automated grading and student performance analysis — with no external AI APIs."* Fully local and explainable is exactly the shape Annex III and Vietnam's Decree 33 reward. No grant, no row |
+| [cs341-illinois/coursebook](https://github.com/cs341-illinois/coursebook) | GitHub weekly trending | **No `LICENSE` payload.** An open systems-programming textbook from **UIUC** that gained **~1,626★ in one week** — the highest-velocity education repository seen in any pass of this KB. A university's own trending course text, with no grant attached |
+
+**The Arabic result is the one to act on, and it is a regional finding.** MEA is
+the only region in this KB with **zero shippable permissive education assets**:
+the fourth pass's Africa shelf (`AI-for-Education`, MIT, Sierra Leone and Uganda)
+is research-grade at 1–12★, `Luganda-linguistic-benchmarks` is unlicensed, and
+now the one real Arabic-language education agent is unlicensed too. **The MEA gap
+is not an interest gap and not a build gap — it is a licensing-hygiene gap**, and
+that is the cheapest kind to close. Three `LICENSE` files would change the
+regional answer.
+
 ## The education MCP shelf — a side-car is permissive by choice, not by construction
 
 The licence-boundary note below says an external MCP side-car keeps its permissive
@@ -335,6 +401,11 @@ and Moodle MCP server that surfaces in search was probed on 2026-10-06:
 | [CharlieCardenasToledo/mcp-canvas-server](https://github.com/CharlieCardenasToledo/mcp-canvas-server) | 0 | MIT (`LICENSE@main`) | Usable, unproven. README claims 117 tools / 21 categories while the repo description says 51 — its own numbers disagree. |
 | [Jawadh-Salih/moodle-mcp-server](https://github.com/Jawadh-Salih/moodle-mcp-server) | 0 | MIT (`LICENSE@main`) | Usable, unproven. Only Go implementation found. |
 | [ankimcp/anki-mcp-server](https://github.com/ankimcp/anki-mcp-server) | **506** | MIT (`LICENSE`) | **The biggest one, and it is not an LMS server.** 53 tools (42 essential + 11 GUI), v0.27.0 beta, TypeScript. Added third pass 2026-10-06. Needs the Anki desktop app **plus AnkiConnect**. |
+| [ArnaudGuiovanna/tutor-mcp](https://github.com/ArnaudGuiovanna/tutor-mcp) | 43 | MIT (`main/LICENSE`, © 2026 Arnaud Guiovanna) | **The pedagogy engine as a side-car — the most architecturally significant row in this table.** Go, v0.6.1, 456 commits, 6 forks. Its own description: *"An open-source MCP server that turns any LLM into an Intelligent Tutoring System. 50 years of cognitive science, MIT licensed."* Implements **BKT** mastery estimation, **FSRS** spaced repetition, prerequisite-based paths, assessment-evidence tracking, misconception memory and session narrative, exposed through `get_next_activity` / `record_interaction`. **Added to this shelf in the seventh pass — see below.** |
+| [Yuanpeng-Li/gradescope-mcp](https://github.com/Yuanpeng-Li/gradescope-mcp) | 8 | MIT (`main/LICENSE`, © 2026 Yuanpeng Li) | **The only MCP over a real production grading system.** Python, 82 commits, 6 forks. **39 tools** (24 read-only, 11 write-enabled, 4 local-cache), 3 resources, 7 prompts: batch grading with preview-first safety, rubric CRUD, answer-group clustering, regrade review, extension management, Canvas/Brightspace gradebook export. Small, and the strategic point is the direction — **orchestrate the proprietary incumbent, do not promise to replace it.** |
+| [toshieji/moodle-grading-mcp](https://github.com/toshieji/moodle-grading-mcp) | 0 | MIT (`main/LICENSE`, © 2026 **Web Analytics Consultants Association (WACA)** and Toshiaki Ejiri) | **The human-gate reference implementation, and the row that refutes this KB's Japan gap.** 9 tools, Python, stdio. Its own description: *"The LLM client decides the grades; this server only fetches submissions and writes grades as unreleased drafts."* Writes `workflowstate=readyforreview` and **never releases a grade**; writes require `MOODLE_ALLOW_WRITE=1` **and** a non-empty `MOODLE_WRITE_COURSE_ALLOWLIST` (empty list = fail-closed, no write); every attempt, denial and success appended to a **JSONL audit log**; AI-disclosure footer appended if missing; draft state means **no student notification**. |
+| [woodstocksoftware/student-progress-tracker](https://github.com/woodstocksoftware/student-progress-tracker) | — (not read this pass) | MIT (`main/LICENSE`, © 2026 Jim Williams) | Learning-analytics side-car: learner profiles and enrolments, assessment results, **mastery computed per topic**, learning-gap detection, focus-area recommendation, question-level telemetry. The analytics stage P3 specifies. |
+| [54yyyu/school-mcp](https://github.com/54yyyu/school-mcp) | — | **NONE** — MIT claimed in the README only | **Do not use as-is.** Canvas **and** Gradescope in a single server, which is the shape a student-facing agent actually wants. **Independently re-probed this pass: no `LICENSE` payload on 2 branches × 6 filenames**, confirming an earlier pass's flag. The README's "MIT" is not a grant. **Cheapest high-value upstream contribution on this shelf: ask for a `LICENSE` file.** |
 
 **The shelf above was scoped wrong, and the third pass of 2026-10-06 proves it.**
 It was assembled by sweeping *Canvas and Moodle* MCP servers — a scope defined by
@@ -350,6 +421,17 @@ permissive licence across an AGPL host exactly as it does across GPL-3.0 Moodle.
 **Scope the next sweep by learning *function*, not by vendor name:** LMS, SIS,
 retention and spaced repetition, assessment, library, proctoring, video. Each is a
 separate MCP shelf and this KB has now swept two of them.
+
+**Seventh pass of 2026-10-06 — that instruction was carried out, and the table
+above grew by five rows.** Sweeping by function rather than vendor name returned
+the **tutoring-engine** function (`tutor-mcp`), the **grading** function
+(`gradescope-mcp`, `moodle-grading-mcp`) and the **analytics** function
+(`student-progress-tracker`) — three shelves no vendor-name sweep could have
+reached, because none of those servers is named after an LMS. **Four of the five
+are MIT from payload; the fifth claims MIT in a README and has no grant.** Still
+unswept: **library** and **video**. And the function with the sharpest commercial
+edge, **proctoring**, was swept and came back empty of anything licensed — see
+the new declared gap at the end of this file.
 
 **An unlicensed repo is worse than a copyleft one.** AGPL-3.0 is a constraint you
 can architect around. No licence at all means default copyright — all rights
@@ -490,7 +572,13 @@ An informed gap is information; silence looks exactly like coverage.
   name, not a Brazilian project (see corrections). The gap survives its own best
   evidence being removed, which is what makes it the firmest finding in this KB.
 - **No India-, Japan-, Korea- or ASEAN-origin permissive education project —
-  unchanged, and now searched by name.** This pass queried those four
+  unchanged, and now searched by name.**
+  **⚠️ ALL FOUR CLAUSES NOW SUPERSEDED. India and ASEAN were refuted in the
+  fifth pass (table at the end of this file); Japan and Korea in the seventh.**
+  This bullet is left standing because it was wrong on all four and the shape of
+  the error is worth keeping: every refutation came from a **new channel**, never
+  from a deeper sweep of the old one.
+  Original text follows. This pass queried those four
   jurisdictions explicitly and surfaced only China/Hong-Kong-origin assets plus
   the US- and Europe-origin research code above. OpenMAIC (Tsinghua) **widens the
   China lead rather than closing this gap**: the APAC shelf is still
@@ -625,3 +713,47 @@ re-implement the harness, and do not vendor any of the four.** The cheapest
 high-value upstream contribution available in this industry remains unchanged
 and now applies to three repositories instead of one: **file an issue asking for
 a `LICENSE` file.**
+
+## Gap updates from the seventh pass of 2026-10-06
+
+The native-language channel and a consistency sweep of this file against
+`agents/trending.md`. **Two of the three corrections below are this file
+disagreeing with its own trending log, not new research** — which is the finding.
+
+| Gap as recorded above | State after the seventh pass |
+|---|---|
+| "No **Japan**-origin permissive education project found in any channel" | **REFUTED, and it was already refuted before this pass ran.** [toshieji/moodle-grading-mcp](https://github.com/toshieji/moodle-grading-mcp) is **MIT**, read from payload, © 2026 **Web Analytics Consultants Association (WACA)** and Toshiaki Ejiri — a named Japanese professional body, with a Japanese operations manual (`OPERATIONS-ja.md`) in-tree. It was probed and recorded in `agents/trending.md` by an earlier pass. **This file kept asserting the gap for several passes after its own KB had disproved it.** |
+| "No **Korea**-origin permissive education project found in any channel" | **REFUTED on assets, STILL OPEN on agents.** [yongsoojoo/esd2026-agent-workflow](https://github.com/yongsoojoo/esd2026-agent-workflow) — MIT code + CC BY 4.0 docs, **Kookmin University**, 0★ / 4 commits — is course material, not an agent. See the seventh-pass section above for why the distinction is kept rather than smoothed over |
+| "Mother-tongue AI is a **two-region** capability" (`intel/trends.md` trend 21, sixth pass) | **FALSIFIED. It is at least three.** ASEAN has a permissive language layer across **Vietnamese, Thai, Malay and Indonesian** — see `repos/foundations.md`, seventh pass. The sixth pass searched for sovereign **models** (and correctly found SEA-LION unlicensed); it never searched for language **toolkits** |
+| "No shippable permissive evaluator of tutoring quality" (fourth pass) | **STILL OPEN, and unchanged.** `tutor-mcp` (MIT, 43★) is now shelved and implements BKT + FSRS + misconception memory, but it **drives** tutoring; it does not **score** it. The four pedagogy-evaluation instruments remain licensed as content or not licensed at all |
+| "No LATAM-origin permissive education project" | **Unchanged this pass** — the native-language channel added Japanese, Korean, Arabic and Bahasa/Thai/Vietnamese, not Spanish or Portuguese, which the fourth pass had already used. `LabSirius/TutorIA` (MIT, Colombia, every code path 404) remains the state of the art |
+
+### A new declared gap, from the function-scoped channel
+
+**There is no permissive open-source exam proctoring agent.** This pass searched
+the proctoring-plus-grading function directly — the one function-scoped shelf
+the third pass had flagged as unswept — and the single substantial candidate,
+[biswal-prem-5677/Autonomous-Exam-Proctoring-Grading-Agent](https://github.com/biswal-prem-5677/Autonomous-Exam-Proctoring-Grading-Agent),
+has **no `LICENSE` payload**. The shelf otherwise holds only **Safe Exam Browser**
+(recorded in `repos/trending.md`), which is a lockdown browser rather than an
+agent.
+
+**This gap now has a regulatory edge that makes it commercially sharp.**
+Vietnam's **Decree 33** (in force 2026-08-15) classifies AI that *"monitors and
+analyses learner behaviour with biometric data"* as high-risk, and EU Annex III
+point 3 covers exam and behaviour monitoring. So the only category of proctoring
+that is sellable in either regime is one whose decisions are **local, explainable
+and human-gated** — which is precisely what the unlicensed candidate above
+describes itself as being. **The design is right, the grant is missing, and no
+competitor holds the space.** Ranked second to P17 (oral reading fluency) as a
+build opportunity.
+
+### The method note for this pass
+
+The fifth pass's lesson was *change the channel when a gap persists*. The sixth
+pass's was *change the layer*. This pass adds a third, and it is not about
+discovery at all: **audit the shelf against the log before searching for anything
+new.** Two of this pass's three corrections cost nothing but a `grep` — the
+evidence was already in the tree, written by an earlier pass, and contradicted by
+the file a reader would actually open. **A KB that only grows forward accumulates
+contradictions at exactly the rate it accumulates findings.**
